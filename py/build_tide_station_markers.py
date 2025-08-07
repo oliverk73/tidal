@@ -1,9 +1,7 @@
 import os
-import re
 import unicodedata
-import html
-import json
 
+# Liste der Eingabedateien
 input_files = [
     "harmonics/harmonics-dwf-20241229-free.txt",
     "harmonics/harmonics-dwf-20100529-nonfree.txt",
@@ -11,94 +9,91 @@ input_files = [
     "harmonics/harmonics-2004-06-14_no_us_no_dupes2.txt",
     "harmonics/harmonics_old_no_us_no_dupes3.txt",
     "harmonics/harmonics_pierre_lavergne_v10_add.txt",
-    # Weitere Dateien bei Bedarf ergänzen
 ]
 
-output_dir = "static/js"
-output_file = os.path.join(output_dir, "leaflet_markers.js")
-marker_count = 0
+output_file = "static/js/leaflet_markers.js"
 
-umlaut_map = {
-    "ä": "ae", "ö": "oe", "ü": "ue",
-    "Ä": "Ae", "Ö": "Oe", "Ü": "Ue",
-    "ß": "ss"
-}
+def escape_js_string(s):
+    return s.replace("\\", "\\\\").replace("'", "\\'").replace('"', '\\"')
 
-def normalize_filename(name: str) -> str:
-    for umlaut, replacement in umlaut_map.items():
-        name = name.replace(umlaut, replacement)
-    name = unicodedata.normalize("NFKD", name)
-    name = "".join(c for c in name if not unicodedata.combining(c))
-    name = name.encode("ascii", "ignore").decode("ascii")
-    name = re.sub(r"[ ,]+", "_", name)
-    name = re.sub(r"_+", "_", name)
-    return name.strip("_")
+def normalize_filename(s):
+    nfkd_form = unicodedata.normalize("NFKD", s)
+    return "".join([c for c in nfkd_form if not unicodedata.combining(c)]).replace(" ", "_").replace(",", "_")
 
-def escape_js_string(s: str) -> str:
-    return s.replace("\\", "\\\\").replace("'", "\\'")
+def extract_blocks(lines):
+    blocks = []
+    current_block = []
+    for line in lines:
+        if line.strip() == "" or line.strip().startswith("#"):
+            current_block.append(line)
+        else:
+            # Start Infobereich (3 Zeilen)
+            current_block.append(line)  # Ortsname
+            current_block.append(next(lines))  # UTC
+            current_block.append(next(lines))  # Referenzhöhe
 
-def parse_block(block, source_file):
-    global marker_count
-    lat = lon = name = None
+            # Constituents
+            while True:
+                try:
+                    next_line = next(lines)
+                except StopIteration:
+                    break
+                if next_line.strip().startswith("#") and next_line.strip() != "#":
+                    break
+                current_block.append(next_line)
 
-    for line in block:
-        if line.startswith("# !latitude:"):
-            lat = line.split(":", 1)[1].strip()
-        elif line.startswith("# !longitude:"):
-            lon = line.split(":", 1)[1].strip()
-        elif not line.startswith("#") and name is None:
-            name = line.strip()
+            blocks.append(current_block)
+            current_block = [next_line] if next_line.strip().startswith("#") else []
 
-    if lat and lon and name:
-        safe_name = normalize_filename(name)
-        js_original = escape_js_string(name)
-        js_safe = escape_js_string(safe_name)
-
-        popup_html = (
-            f"<b>{html.escape(name)}</b><br>"
-            f"<small>📂 {os.path.basename(source_file)}</small><br>"
-            f"<a href='#' onclick=\"generateAndOpen('{js_original}', '{js_safe}')\">🌊 Vorhersage anzeigen</a>"
-        )
-
-        marker_code = (
-            f"var marker{marker_count} = L.marker([{lat}, {lon}]).addTo(markers);\n"
-            f"marker{marker_count}.bindPopup({json.dumps(popup_html)});\n"
-        )
-        marker_count += 1
-        return marker_code
-    return None
+    return blocks
 
 def main():
-    os.makedirs(output_dir, exist_ok=True)
-    all_markers = ["// Automatisch generiert", "var markers = L.layerGroup();\n"]
+    total_markers = 0
+    with open(output_file, "w", encoding="utf-8") as out:
+        out.write("// Automatisch generiert\n")
+        out.write("var markers = L.layerGroup();\n\n")
 
-    for input_file in input_files:
-        print(f"🔍 Verarbeite Datei: {input_file}")
-        with open(input_file, "r", encoding="iso-8859-1") as f:
-            lines = f.readlines()
+        for input_file in input_files:
+            print(f"🔍 Verarbeite Datei: {input_file}")
+            with open(input_file, "r", encoding="iso-8859-1") as f:
+                lines = iter(f.readlines())
 
-        block = []
-        for line in lines:
-            if line.startswith("# BEGIN HOT COMMENTS"):
-                if block:
-                    marker = parse_block(block, input_file)
-                    if marker:
-                        all_markers.append(marker)
-                block = [line]
-            else:
-                block.append(line)
+            blocks = extract_blocks(lines)
 
-        if block:
-            marker = parse_block(block, input_file)
-            if marker:
-                all_markers.append(marker)
+            for block in blocks:
+                try:
+                    comments = [line for line in block if line.strip().startswith("#")]
+                    name_line = block[len(comments)].strip()
+                    lat_line = next((line for line in comments if "!latitude" in line), None)
+                    lon_line = next((line for line in comments if "!longitude" in line), None)
 
-    all_markers.append("// Ende")
+                    if not lat_line or not lon_line:
+                        continue
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        f.write("\n".join(all_markers))
+                    lat = lat_line.split(":", 1)[1].strip()
+                    lon = lon_line.split(":", 1)[1].strip()
 
-    print(f"✅ Total markers generated: {marker_count}")
+                    station_display = name_line.split(" - READ")[0].strip()
+                    station_js = escape_js_string(station_display)
+                    station_file = normalize_filename(station_display)
+                    source_file = os.path.basename(input_file)
+
+                    popup_html = (
+                        f"<b>{station_display}</b><br>"
+                        f"<small><i>{source_file}</i></small><br>"
+                        f"<a href='#' onclick=\"generateAndOpen('{station_js}', '{station_file}'); return false;\">🌊 Vorhersage anzeigen</a>"
+                    )
+
+                    marker_code = f"L.marker([{lat}, {lon}]).bindPopup('{popup_html}').addTo(markers);\n"
+                    out.write(marker_code)
+                    total_markers += 1
+                except Exception as e:
+                    print(f"⚠️ Fehler bei Block in Datei {input_file}: {e}")
+                    continue
+
+        out.write("\n// Ende\n")
+
+    print(f"✅ Total markers generated: {total_markers}")
 
 if __name__ == "__main__":
     main()
