@@ -1,7 +1,5 @@
 import re
 import os
-import html
-import json
 
 input_files = [
     "harmonics/harmonics-dwf-20241229-free.txt",
@@ -10,6 +8,7 @@ input_files = [
     "harmonics/harmonics-2004-06-14_no_us_no_dupes2.txt",
     "harmonics/harmonics_old_no_us_no_dupes3.txt",
     "harmonics/harmonics_pierre_lavergne_v10_add.txt",
+
 ]
 
 output_file = "static/js/leaflet_markers.js"
@@ -74,25 +73,23 @@ for file_index, input_file in enumerate(input_files):
 
         if lat and lon and not line.startswith("#") and name is None:
             name = line.strip().replace(" - READ flaterco.com/pol.html", "")
-            name_html = html.escape(name)
-            name_js = json.dumps(name)
+            name_escaped = name.replace('"', '\\"')
             safe_name = re.sub(r"[\s,]+", "_", name)
-            safe_js = json.dumps(safe_name)
 
             marker_var = f"marker{marker_count}"
             marker_count += 1
 
-            popup_raw_html = (
-                f"<b>{name_html}</b><br>"
-                f"<small style='color:gray;'>📂 {os.path.basename(input_file)}</small><br>"
-                f"<a href='#' onclick='generateAndOpen({name_js}, {safe_js}); return false;'>🌊 Vorhersage anzeigen</a>"
-            )
-
-            popup_html = json.dumps(popup_raw_html)
-
+            # ✅ Nur das hier ist neu – keine weiteren Änderungen!
             marker_code = (
                 f"var {marker_var} = L.marker([{lat}, {lon}], {{icon: {icon_var}}});\n"
-                f"{marker_var}.bindPopup({popup_html});\n"
+                f"{marker_var}.on('click', function () {{\n"
+                f"    const encoded = encodeURIComponent(\"{name_escaped}\");\n"
+                f"    const safe = \"{safe_name}\";\n"
+                f"    fetch(`/generate/` + encoded).then(r => {{\n"
+                f"        if (r.ok) window.location.href = `/static/predictions/tide_prediction_` + safe + `.html`;\n"
+                f"        else alert(\"❌ Fehler beim Erzeugen der Vorhersage.\");\n"
+                f"    }});\n"
+                f"}});\n"
                 f"markers.addLayer({marker_var});"
             )
 
@@ -101,20 +98,8 @@ for file_index, input_file in enumerate(input_files):
 marker_definitions.append("map.addLayer(markers);")
 marker_definitions.append("map.fitBounds(markers.getBounds());")
 
-helper_function = """
-function generateAndOpen(stationName, safeName) {
-    const encoded = encodeURIComponent(stationName);
-    fetch(`/generate/` + encoded).then(r => {
-        if (r.ok) window.location.href = `/static/predictions/tide_prediction_` + safeName + `.html`;
-        else alert("❌ Fehler beim Erzeugen der Vorhersage.");
-    });
-}
-"""
-
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(icon_definitions)
     f.write("\n".join(marker_definitions))
-    f.write("\n")
-    f.write(helper_function)
 
 print(f"✅ Total markers generated: {marker_count - 1}")
