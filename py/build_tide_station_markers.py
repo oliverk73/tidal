@@ -1,5 +1,12 @@
 import re
 import os
+import unicodedata
+
+def normalize_filename(name: str) -> str:
+    name = unicodedata.normalize('NFKD', name)
+    name = name.encode('ascii', 'ignore').decode('ascii')
+    name = re.sub(r"[\s,]+", "_", name)
+    return name
 
 input_files = [
     "harmonics/harmonics-dwf-20241229-free.txt",
@@ -74,7 +81,7 @@ for file_index, input_file in enumerate(input_files):
         if lat and lon and not line.startswith("#") and name is None:
             name = line.strip().replace(" - READ flaterco.com/pol.html", "")
             name_escaped = name.replace('"', '\\"')
-            safe_name = re.sub(r"[\s,]+", "_", name)
+            safe_name = normalize_filename(name)
 
             js_name = name.replace("\\", "\\\\").replace("'", "\\'")
             
