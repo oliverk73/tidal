@@ -107,7 +107,13 @@ for file_index, input_file in enumerate(input_files):
             marker_definitions.append(marker_code)
 
 marker_definitions.append("map.addLayer(markers);")
-marker_definitions.append("map.fitBounds(markers.getBounds());")
+# marker_definitions.append("map.fitBounds(markers.getBounds());")
+
+marker_definitions.append("""
+if (!localStorage.getItem('mapView')) {
+  map.fitBounds(markers.getBounds());
+}
+""")
 
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(icon_definitions)
