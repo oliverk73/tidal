@@ -3,7 +3,7 @@ import re
 import unicodedata
 import subprocess
 from datetime import datetime
-from flask import Flask, render_template_string, send_file, abort
+from flask import Flask, render_template, render_template_string, abort
 from urllib.parse import unquote
 
 app = Flask(__name__)
@@ -31,7 +31,7 @@ if os.path.exists("normalized_station_names.txt"):
 
 @app.route("/")
 def index():
-    return send_file("static/index.html")
+    return render_template("index.html")
 
 @app.route("/generate/<station>")
 def generate_tide_prediction(station):
