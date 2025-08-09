@@ -31,7 +31,15 @@ if os.path.exists("normalized_station_names.txt"):
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    with open("normalized_station_names.txt", encoding="utf-8") as f:
+        station_names = []
+        for line in f:
+            if " → " in line:
+                orig, _ = line.strip().split(" → ", 1)
+                station_names.append(orig)
+            elif line.strip():
+                station_names.append(line.strip())
+    return render_template("index.html", station_names=station_names)
 
 @app.route("/generate/<station>")
 def generate_tide_prediction(station):
@@ -77,6 +85,14 @@ def generate_tide_prediction(station):
             f.write(raw.decode("iso-8859-1"))
         print(f"✅ SVG-Datei konvertiert: {svg_path}")
 
+        # Zusätzlich: tide -l "Station" -m a
+        try:
+            meta_cmd = ["tide", "-l", decoded_station, "-m", "a"]
+            meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True)
+            meta_info = meta_result.stdout.strip()
+        except subprocess.CalledProcessError as e:
+            meta_info = f"❌ Fehler bei 'tide -m a': {e.stderr.strip()}"
+
         # HTML-Datei erzeugen
         with open(TEMPLATE_PATH, encoding="utf-8") as f:
             template = f.read()
@@ -84,7 +100,8 @@ def generate_tide_prediction(station):
         html = render_template_string(template,
                                       station=decoded_station,
                                       original_name=station,
-                                      svg_url=svg_url)
+                                      svg_url=svg_url,
+                                      meta_info=meta_info)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html)
         print(f"✅ HTML-Seite erzeugt: {html_path}")

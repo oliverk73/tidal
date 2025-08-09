@@ -88,13 +88,16 @@ for file_index, input_file in enumerate(input_files):
             marker_var = f"marker{marker_count}"
             marker_count += 1
 
+            source_file = os.path.basename(input_file)
+
             popup_html = (
                 f"<b>{name}</b><br>"
                 f"<a href='#' onclick=\\\""
                 f"fetch('/generate/' + encodeURIComponent('{js_name}')).then(r => {{"
                 f"  if (r.ok) window.location.href = '/static/predictions/tide_prediction_{safe_name}.html';"
                 f"  else alert('❌ Fehler beim Erzeugen der Vorhersage.');"
-                f"}}); return false;\\\">🌊 Vorhersage anzeigen</a>"
+                f"}}); return false;\\\">🌊 Vorhersage anzeigen</a><br>"
+                f"📄 Aus Datei: {source_file}"
             )
             
             marker_code = (

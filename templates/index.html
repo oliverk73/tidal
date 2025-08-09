@@ -37,13 +37,6 @@
 
 <div id="map" style="height: 730px;"></div>
 
-
-
-
-
-
-<p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     console.log("🌍 DOM geladen. Initialisiere Leaflet-Karte...");
@@ -78,15 +71,24 @@
     }
 
     map.on('moveend', saveMapView);
-    window.map = map;
 
-    // Marker-Script nachträglich als Script-Tag einfügen (erst wenn map vorhanden ist)
-    const script = document.createElement('script');
-    script.src = '/static/js/leaflet_markers.js';
-    document.body.appendChild(script);
+    window.map = map;
   });
 </script>
 
+
+<script src="/static/js/leaflet_markers.js"></script>
+
+<script>
+  setTimeout(function () {
+    if (typeof markers !== 'undefined' && typeof map !== 'undefined') {
+      map.addLayer(markers);
+      
+    }
+  }, 100);
+</script>
+
+<p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
 </main>
 <footer>
 <script>
