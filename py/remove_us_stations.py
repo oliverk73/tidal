@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 # === Einstellungen ===
-INPUT_FILE = harmonics-2004-06-14.txt  # oder anderer Dateiname
+INPUT_FILE = HARMONICS_NO_US.txt  # oder anderer Dateiname
 ENCODING = iso-8859-1
 
 # === US-Erkennungsregeln ===
