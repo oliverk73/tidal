@@ -3,7 +3,7 @@ import re
 import unicodedata
 import subprocess
 from datetime import datetime
-from flask import Flask, render_template, render_template_string, abort
+from flask import Flask, render_template, render_template_string, abort, jsonify, url_for
 from urllib.parse import unquote
 
 app = Flask(__name__)
@@ -106,7 +106,10 @@ def generate_tide_prediction(station):
             f.write(html)
         print(f"✅ HTML-Seite erzeugt: {html_path}")
 
-        return "OK"
+        # Final-URL als JSON an den Client zurückgeben
+        rel_path = os.path.join("predictions", html_filename)
+        final_url = url_for('static', filename=rel_path)
+        return jsonify(url=final_url)
 
     except subprocess.CalledProcessError as e:
         print("❌ Fehler beim Aufruf von tide:")
