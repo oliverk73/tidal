@@ -29,8 +29,36 @@ from scipy.signal import argrelextrema
 
 from generate_germany_harmonics_175 import (
     CONSTITUENTS_175,
-    read_header_from_template,
 )
+
+
+def read_header_from_template(template_path):
+    """Read header from template file including all comments until first station data."""
+    with open(template_path, 'r', encoding='latin-1') as f:
+        lines = f.readlines()
+
+    header_lines = []
+    end_count = 0
+
+    for line in lines:
+        stripped = line.strip()
+
+        if stripped == '*END*':
+            end_count += 1
+            header_lines.append(line.rstrip())
+            continue
+
+        # After the last *END* (node factors), include remaining comments
+        # but stop at the first non-comment, non-empty line (= first station)
+        if end_count >= 2:
+            if stripped.startswith('#') or stripped == '':
+                header_lines.append(line.rstrip())
+            else:
+                break
+        else:
+            header_lines.append(line.rstrip())
+
+    return '\n'.join(header_lines)
 
 # ── Paths ─────────────────────────────────────────────────────────────
 
