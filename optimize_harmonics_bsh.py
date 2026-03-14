@@ -519,6 +519,7 @@ def main():
 
             result = minimize(
                 cost_fn, x0, method='Powell',
+                bounds=bounds,
                 options={'maxiter': 3000, 'ftol': 0.01}
             )
 

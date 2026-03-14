@@ -10,7 +10,7 @@ import numpy as np
 from datetime import datetime, timedelta
 from pathlib import Path
 
-TCD_FILE = Path("/home/oliver/harmonics_working/harmonics_utide_germany_optimized.tcd")
+TCD_FILE = Path("/home/oliver/harmonics_working/harmonics_utide_germany_2026-03-11_filtered.tcd")
 BSH_DIR = Path("/home/oliver/harmonics_working_help/BSH")
 
 os.environ['HFILE_PATH'] = str(TCD_FILE)
@@ -98,22 +98,25 @@ def get_xtide_predictions(station_name, start_date, end_date):
         if not line or line.startswith('Indexing') or '°' in line:
             continue
         # Format: "2026-01-28  1:28 AM CET   4.00 meters  Low Tide"
+        #     or: "2026-07-15  3:45 PM CEST  4.12 meters  High Tide"
         m = re.match(
-            r'(\d{4}-\d{2}-\d{2})\s+(\d{1,2}:\d{2}\s+[AP]M)\s+\w+\s+([\d.]+)\s+meters\s+(High|Low)\s+Tide',
+            r'(\d{4}-\d{2}-\d{2})\s+(\d{1,2}:\d{2}\s+[AP]M)\s+(CES?T)\s+([\d.]+)\s+meters\s+(High|Low)\s+Tide',
             line
         )
         if m:
             date_str = m.group(1)
             time_str = m.group(2)
-            height = float(m.group(3))
-            tide_type = 'HW' if m.group(4) == 'High' else 'NW'
+            tz_label = m.group(3)
+            height = float(m.group(4))
+            tide_type = 'HW' if m.group(5) == 'High' else 'NW'
 
-            dt_mez = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %I:%M %p")
-            dt_utc = dt_mez - timedelta(hours=1)
+            dt_local = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %I:%M %p")
+            utc_offset = 2 if tz_label == 'CEST' else 1
+            dt_utc = dt_local - timedelta(hours=utc_offset)
 
             predictions.append({
                 'datetime_utc': dt_utc,
-                'datetime_mez': dt_mez,
+                'datetime_mez': dt_local,
                 'height_pnp': height,
                 'type': tide_type,
             })
