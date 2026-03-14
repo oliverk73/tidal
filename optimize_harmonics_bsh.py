@@ -162,23 +162,67 @@ def match_checkpoint_to_bsh(checkpoint_name, bsh_stations):
     return None
 
 
+# ── V0 / Node Factor Tables ──────────────────────────────────────────
+
+def parse_v0_and_f(template_path, year=2026):
+    """Parse equilibrium arguments (V0) and node factors (f) from harmonics header.
+
+    Returns: (v0_dict, f_dict) with constituent name -> value for the given year.
+    V0 is in degrees, f is dimensionless.
+    """
+    with open(template_path, 'rb') as fh:
+        lines = fh.readlines()
+
+    year_idx = year - 1700
+    end_count = 0
+    eq_start = nf_start = None
+
+    for i, line in enumerate(lines):
+        text = line.decode('latin-1').strip()
+        if text == '*END*':
+            end_count += 1
+        if text == '401' and end_count == 0 and eq_start is None:
+            eq_start = i + 1
+        if text == '401' and end_count == 1 and nf_start is None:
+            nf_start = i + 1
+
+    def parse_table(start):
+        result = {}
+        current_name = None
+        values = []
+        for i in range(start, len(lines)):
+            text = lines[i].decode('latin-1').strip()
+            if text == '*END*':
+                if current_name and len(values) > year_idx:
+                    result[current_name] = values[year_idx]
+                break
+            parts = text.split()
+            try:
+                float(parts[0])
+                values.extend([float(v) for v in parts])
+            except ValueError:
+                if current_name and len(values) > year_idx:
+                    result[current_name] = values[year_idx]
+                current_name = parts[0]
+                values = []
+        return result
+
+    return parse_table(eq_start), parse_table(nf_start)
+
+
 # ── Harmonic Reconstruction ──────────────────────────────────────────
 
-def reconstruct_tide(times_hours, mean, constituents):
-    """Reconstruct tide from harmonic constants.
+# Global V0 and f tables (loaded once)
+_V0_TABLE = None
+_F_TABLE = None
 
-    times_hours: array of hours since epoch
-    mean: mean water level
-    constituents: list of (speed_deg_per_hour, amplitude, phase_deg)
-    """
-    h = np.full(len(times_hours), mean)
-    for speed, amp, phase in constituents:
-        if amp < 1e-6:
-            continue
-        omega = np.radians(speed)
-        phi = np.radians(phase)
-        h += amp * np.cos(omega * times_hours - phi)
-    return h
+
+def get_v0_f():
+    """Get V0 and f tables, loading them on first call."""
+    global _V0_TABLE, _F_TABLE
+    if _V0_TABLE is None:
+        _V0_TABLE, _F_TABLE = parse_v0_and_f(TEMPLATE_PATH, year=2026)
+    return _V0_TABLE, _F_TABLE
 
 
 def find_hw_nw(times_dt, heights, min_dist=30):
@@ -299,17 +343,26 @@ def build_optimization(checkpoint, bsh_preds):
 
     x0 = np.array(x0)
 
+    # Get V0 and f tables for proper XTide reconstruction
+    v0_table, f_table = get_v0_f()
+
     # Precompute fixed constituent contributions at all window points
+    # Using correct XTide formula: f * A * cos(ω*t + V0 - κ')
     opt_set = set(opt_indices)
     fixed_contrib = np.zeros(len(all_times_hours))
     for i, c in enumerate(constituents):
         if i not in opt_set and c['amplitude'] > 0:
+            name = c['name']
             omega = np.radians(c['speed'])
-            phi = np.radians(c['phase'])
-            fixed_contrib += c['amplitude'] * np.cos(omega * all_times_hours - phi)
+            v0 = np.radians(v0_table.get(name, 0.0))
+            fn = f_table.get(name, 1.0)
+            kappa = np.radians(c['phase'])
+            fixed_contrib += fn * c['amplitude'] * np.cos(omega * all_times_hours + v0 - kappa)
 
-    # Precompute omega arrays for optimizable constituents
+    # Precompute omega, V0, f arrays for optimizable constituents
     opt_omegas = [np.radians(constituents[idx]['speed']) for idx in opt_indices]
+    opt_v0s = [np.radians(v0_table.get(constituents[idx]['name'], 0.0)) for idx in opt_indices]
+    opt_fns = [f_table.get(constituents[idx]['name'], 1.0) for idx in opt_indices]
 
     # Precompute BSH types and heights as arrays for vectorized cost
     bsh_heights = np.array([b['height_pnp'] for b in bsh_preds])
@@ -323,19 +376,21 @@ def build_optimization(checkpoint, bsh_preds):
     def cost_function(x):
         h = fixed_contrib + (original_mean + x[0])
 
-        # Add optimizable constituents — vectorized
+        # Add optimizable constituents — using XTide formula: f * A * cos(ω*t + V0 - κ')
         xi = 1
         for k, (idx, otype) in enumerate(zip(opt_indices, opt_types)):
             omega = opt_omegas[k]
+            v0 = opt_v0s[k]
+            fn = opt_fns[k]
             if otype == 'shallow':
                 amp = opt_orig_amps[k] * x[xi]
-                phi = np.radians(opt_orig_phases[k] + x[xi + 1])
+                kappa = np.radians(opt_orig_phases[k] + x[xi + 1])
                 xi += 2
             else:
                 amp = opt_orig_amps[k]
-                phi = np.radians(opt_orig_phases[k] + x[xi])
+                kappa = np.radians(opt_orig_phases[k] + x[xi])
                 xi += 1
-            h = h + amp * np.cos(omega * all_times_hours - phi)
+            h = h + fn * amp * np.cos(omega * all_times_hours + v0 - kappa)
 
         # Reshape to (n_events, n_window) for vectorized extremum search
         h_2d = h.reshape(n_events, n_window)
@@ -535,6 +590,7 @@ def main():
             n_win = int(2 * window_half / dt_step) + 1
             win_offsets = np.linspace(-window_half, window_half, n_win)
 
+            v0_table, f_table = get_v0_f()
             hw_diffs = []
             nw_diffs = []
             for bsh_ev in hw_nw:
@@ -544,9 +600,12 @@ def main():
                 for c in opt_result['constituents']:
                     if c['amplitude'] < 1e-6:
                         continue
+                    name = c['name']
                     omega = np.radians(c['speed'])
-                    phi = np.radians(c['phase'])
-                    h_win += c['amplitude'] * np.cos(omega * t_win - phi)
+                    v0 = np.radians(v0_table.get(name, 0.0))
+                    fn = f_table.get(name, 1.0)
+                    kappa = np.radians(c['phase'])
+                    h_win += fn * c['amplitude'] * np.cos(omega * t_win + v0 - kappa)
 
                 if bsh_ev['type'] == 'HW':
                     ext_h = np.max(h_win)
