@@ -331,12 +331,12 @@ def build_optimization(checkpoint, bsh_preds):
 
     # Build parameter vector
     x0 = [0.0]  # mean offset
-    bounds = [(-0.5, 0.5)]
+    bounds = [(-0.15, 0.15)]
 
     for idx, otype in zip(opt_indices, opt_types):
         if otype == 'shallow':
             x0.extend([1.0, 0.0])
-            bounds.extend([(0.0, 5.0), (-180.0, 180.0)])
+            bounds.extend([(0.3, 3.0), (-45.0, 45.0)])
         elif otype == 'major_phase':
             x0.append(0.0)
             bounds.append((-MAX_PHASE_ADJ, MAX_PHASE_ADJ))
