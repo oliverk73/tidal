@@ -10,7 +10,7 @@ import numpy as np
 from datetime import datetime, timedelta
 from pathlib import Path
 
-TCD_FILE = Path("/home/oliver/harmonics_working/harmonics_utide_germany_z0corrected.tcd")
+TCD_FILE = Path("/home/oliver/harmonics_working/harmonics_utide_germany_2026-03-15_z0corrected.tcd")
 BSH_DIR = Path("/home/oliver/harmonics_working_help/BSH")
 
 os.environ['HFILE_PATH'] = str(TCD_FILE)

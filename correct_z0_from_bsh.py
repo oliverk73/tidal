@@ -19,8 +19,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import shutil
 
-FILTERED_TXT = Path("/home/oliver/harmonics_working/harmonics_utide_germany_2026-03-11_filtered.txt")
-OUTPUT_TXT = Path("/home/oliver/harmonics_working/harmonics_utide_germany_z0corrected.txt")
+FILTERED_TXT = Path("/home/oliver/harmonics_working/harmonics_utide_germany_2026-03-15.txt")
+OUTPUT_TXT = Path("/home/oliver/harmonics_working/harmonics_utide_germany_2026-03-15_z0corrected.txt")
 OUTPUT_TCD = OUTPUT_TXT.with_suffix(".tcd")
 BSH_DIR = Path("/home/oliver/harmonics_working_help/BSH")
 
