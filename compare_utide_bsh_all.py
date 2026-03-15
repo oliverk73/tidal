@@ -10,7 +10,7 @@ import numpy as np
 from datetime import datetime, timedelta
 from pathlib import Path
 
-TCD_FILE = Path("/home/oliver/harmonics_working/harmonics_utide_germany_2026-03-11_filtered.tcd")
+TCD_FILE = Path("/home/oliver/harmonics_working/harmonics_utide_germany_z0corrected.tcd")
 BSH_DIR = Path("/home/oliver/harmonics_working_help/BSH")
 
 os.environ['HFILE_PATH'] = str(TCD_FILE)
@@ -213,7 +213,7 @@ def match_events(bsh_preds, xt_preds, max_hours=3):
 
 def main():
     print("=" * 85)
-    print("Comparison: XTide (UTide TCD) vs BSH Official Predictions — Full Year 2026")
+    print("Comparison: XTide (UTide TCD) vs BSH Official Predictions — January 2026")
     print("=" * 85)
 
     # Get XTide stations
@@ -237,6 +237,9 @@ def main():
         if not bsh_name or not bsh_preds:
             continue
 
+        # Filter BSH predictions to January only
+        bsh_preds = [p for p in bsh_preds if p['datetime_utc'].month == 1]
+
         xt_match = find_xtide_match(bsh_name, xtide_stations)
         if xt_match:
             matched_pairs.append((bsh_name, xt_match, bsh_preds, bsh_file.name))
@@ -254,7 +257,7 @@ def main():
     print(f"{'='*85}")
 
     start = datetime(2026, 1, 1)
-    end = datetime(2027, 1, 1)
+    end = datetime(2026, 2, 1)
 
     all_station_results = []
 
