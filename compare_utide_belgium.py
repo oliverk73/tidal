@@ -74,15 +74,14 @@ def fetch_hwlw(ts_id, start, end):
 
     events = []
     if data and len(data) > 0:
+        from dateutil import parser as dateparser
+        from datetime import timezone
         for row in data[0].get('data', []):
             if row[1] is not None:
-                # Parse timestamp (CET/CEST with timezone)
                 ts_str = row[0]
-                # Convert to UTC
-                from dateutil import parser as dateparser
                 dt = dateparser.parse(ts_str)
-                dt_utc = dt.astimezone(tz=None).replace(tzinfo=None)
-                # Actually just store as-is for comparison
+                # Convert to UTC (waterinfo returns CET/CEST with tz offset)
+                dt_utc = dt.astimezone(timezone.utc).replace(tzinfo=None)
                 events.append({
                     'time_str': ts_str,
                     'time_utc': dt_utc,
@@ -112,10 +111,11 @@ def fetch_astro_timeseries(ts_id, start, end):
     levels = []
     if data and len(data) > 0:
         from dateutil import parser as dateparser
+        from datetime import timezone
         for row in data[0].get('data', []):
             if row[1] is not None:
                 dt = dateparser.parse(row[0])
-                dt_utc = dt.astimezone(tz=None).replace(tzinfo=None)
+                dt_utc = dt.astimezone(timezone.utc).replace(tzinfo=None)
                 times.append(dt_utc)
                 levels.append(float(row[1]))
     return np.array(times), np.array(levels)
