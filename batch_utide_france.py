@@ -23,7 +23,8 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-CSV_DIR = Path("/home/oliver/water_levels/France_SHOM")
+NPZ_DIR = Path("/home/oliver/water_levels/France_SHOM/npz")
+CSV_DIR = Path("/home/oliver/water_levels/France_SHOM")  # fallback for old CSVs
 CATALOG_PATH = CSV_DIR / "_station_catalog.json"
 TEMPLATE_PATH = Path("/home/oliver/harmonics_working/harmonics-dwf-20070318_no_us_no_dupes.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics_working/harmonics_utide_france.txt")
@@ -75,23 +76,25 @@ def get_coast(lat, lon):
         return 'Atlantique'
 
 
-def load_csv(csv_path, use_last_n_years=None):
-    """Load SHOM CSV (time, waterlevel_m)."""
-    df = pd.read_csv(csv_path, parse_dates=['time'], index_col='time')
-    col = [c for c in df.columns if 'waterlevel' in c.lower()][0]
-    df = df.rename(columns={col: 'level'})
-    df = df.dropna(subset=['level'])
+def load_npz(npz_path, use_last_n_years=None):
+    """Load SHOM NPZ (datetimes_utc, levels_m)."""
+    d = np.load(npz_path, allow_pickle=True)
+    datetimes = d['datetimes_utc']
+    levels = d['levels_m'].astype(np.float64)
 
-    if len(df) == 0:
-        return None, None
+    # Convert datetime64 to Python datetime
+    datetimes_py = datetimes.astype('datetime64[s]').astype(datetime)
 
     if use_last_n_years is not None:
-        cutoff = df.index[-1] - pd.Timedelta(days=use_last_n_years * 365.25)
-        df = df[df.index >= cutoff]
+        cutoff = datetimes_py[-1] - pd.Timedelta(days=use_last_n_years * 365.25)
+        mask = datetimes_py >= cutoff
+        datetimes_py = datetimes_py[mask]
+        levels = levels[mask]
 
-    datetimes_utc = df.index.to_pydatetime()
-    levels_m = df['level'].values.astype(np.float64)
-    return np.array(datetimes_utc), levels_m
+    if len(datetimes_py) == 0:
+        return None, None
+
+    return np.array(datetimes_py), levels
 
 
 def analyze_station(station):
@@ -107,13 +110,13 @@ def analyze_station(station):
         print(f"  ✓ Checkpoint ({yrs:.1f}J, R²={result['r_squared']:.4f})")
         return result
 
-    csv_path = CSV_DIR / f"{sid}.csv"
-    if not csv_path.exists():
-        print(f"  ✗ Keine CSV-Datei")
+    npz_path = NPZ_DIR / f"{sid}.npz"
+    if not npz_path.exists():
+        print(f"  ✗ Keine NPZ-Datei")
         return None
 
     t0 = time.time()
-    datetimes_utc, levels = load_csv(csv_path, use_last_n_years=USE_LAST_N_YEARS)
+    datetimes_utc, levels = load_npz(npz_path, use_last_n_years=USE_LAST_N_YEARS)
 
     if datetimes_utc is None or len(datetimes_utc) < 2000:
         n = 0 if datetimes_utc is None else len(datetimes_utc)
@@ -262,16 +265,22 @@ def format_station_block(result):
 def main():
     CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
 
-    with open(CATALOG_PATH) as f:
-        all_stations = json.load(f)
-
-    # Only stations that have CSV files
+    # Discover stations from NPZ files
     available = []
-    for s in all_stations:
-        csv_path = CSV_DIR / f"{s['shom_id']}.csv"
-        if csv_path.exists():
-            s['_coast'] = get_coast(float(s['latitude']), float(s['longitude']))
-            available.append(s)
+    for npz_path in sorted(NPZ_DIR.glob("*.npz")):
+        d = np.load(npz_path, allow_pickle=True)
+        sid = str(d['station_id'])
+        name = str(d['name'])
+        lat = float(d['latitude'])
+        lon = float(d['longitude'])
+        s = {
+            'shom_id': sid,
+            'name': name,
+            'latitude': lat,
+            'longitude': lon,
+        }
+        s['_coast'] = get_coast(lat, lon)
+        available.append(s)
 
     # Sort by coast, then name
     available.sort(key=lambda s: (s['_coast'], s['name']))
