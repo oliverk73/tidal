@@ -76,24 +76,31 @@ def get_coast(lat, lon):
         return 'Atlantique'
 
 
-def load_npz(npz_path, use_last_n_years=None):
-    """Load SHOM NPZ (datetimes_utc, levels_m)."""
+def load_npz(npz_path, use_last_n_years=None, max_obs=1500000):
+    """Load SHOM NPZ (datetimes_utc, levels_m). Downsample if too many obs."""
     d = np.load(npz_path, allow_pickle=True)
-    datetimes = d['datetimes_utc']
+    datetimes = d['datetimes_utc'].astype('datetime64[s]')
     levels = d['levels_m'].astype(np.float64)
 
-    # Convert datetime64 to Python datetime
-    datetimes_py = datetimes.astype('datetime64[s]').astype(datetime)
-
+    # Filter by time BEFORE converting to Python datetime (saves memory)
     if use_last_n_years is not None:
-        cutoff = datetimes_py[-1] - pd.Timedelta(days=use_last_n_years * 365.25)
-        mask = datetimes_py >= cutoff
-        datetimes_py = datetimes_py[mask]
+        cutoff = datetimes[-1] - np.timedelta64(int(use_last_n_years * 365.25), 'D')
+        mask = datetimes >= cutoff
+        datetimes = datetimes[mask]
         levels = levels[mask]
 
-    if len(datetimes_py) == 0:
+    # Downsample to ~10-min intervals if too many observations
+    if len(datetimes) > max_obs:
+        step = len(datetimes) // max_obs + 1
+        datetimes = datetimes[::step]
+        levels = levels[::step]
+        print(f" [downsampled ×{step}]", end='', flush=True)
+
+    if len(datetimes) == 0:
         return None, None
 
+    # Convert to Python datetime
+    datetimes_py = datetimes.astype(datetime)
     return np.array(datetimes_py), levels
 
 
@@ -309,9 +316,13 @@ def main():
         if result is not None:
             results.append(result)
 
-    # Write harmonics file (only R² >= MIN_R_SQUARED)
-    good_results = [r for r in results if r['r_squared'] >= MIN_R_SQUARED]
-    skipped = [r for r in results if r['r_squared'] < MIN_R_SQUARED]
+    # Write harmonics file (only R² >= MIN_R_SQUARED and >= 1 year of data)
+    MIN_YEARS = 1.0
+    good_results = [r for r in results
+                    if r['r_squared'] >= MIN_R_SQUARED
+                    and r['n_obs'] / (6 * 24 * 365.25) >= MIN_YEARS
+                    and r['m2_amp'] < 20.0]  # filter unrealistic amplitudes
+    skipped = [r for r in results if r not in good_results]
 
     if skipped:
         print(f"\n\nHerausgefiltert (R² < {MIN_R_SQUARED}):")
