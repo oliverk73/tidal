@@ -4,12 +4,13 @@
  * with directional arrows showing wave propagation.
  *
  * Performance optimizations:
- * - Render at half resolution, CSS-upscale (4x fewer pixels)
- * - Precomputed Mercator projection (no per-pixel Leaflet API calls)
- * - Uint32Array single-write per pixel
- * - 2048-entry LUT for instant color lookup (0.05m precision)
- * - Frame render cache (skip re-render if viewport unchanged)
- * - Direction arrows drawn at fixed pixel intervals
+ * - Adaptive render scale (half-res at low zoom, full at high zoom)
+ * - Precomputed lat array (one Leaflet call per row, not per pixel)
+ * - Uint32Array single-write per pixel via 2048-entry color LUT
+ * - 3601-entry sin/cos LUT for direction interpolation (no trig in loop)
+ * - Batched arrow path rendering (single stroke + single fill call)
+ * - Per-frame ImageData cache for instant frame switching during animation
+ * - requestAnimationFrame for smooth playback
  */
 
 // --- Color scale: wave height (m) → [R, G, B, A] ---
@@ -27,12 +28,11 @@ const WAVE_COLORS = [
   [15.0, 120, 0, 120, 235]
 ];
 
-// Build a 2048-entry LUT: index = wave height in cm / 5 → 0..2047 covers 0..102m
-// Stored as packed ABGR uint32 for direct pixel write
+// Color LUT: index = wave height in cm / 5 → 0..2047 covers 0..102m
 const WAVE_LUT32 = new Uint32Array(2048);
-(function buildLUT() {
+(function buildColorLUT() {
   for (let i = 0; i < 2048; i++) {
-    const hm = i * 0.05; // height in meters
+    const hm = i * 0.05;
     let r = 0, g = 0, b = 0, a = 0;
     for (let j = 0; j < WAVE_COLORS.length - 1; j++) {
       const s0 = WAVE_COLORS[j], s1 = WAVE_COLORS[j + 1];
@@ -49,8 +49,19 @@ const WAVE_LUT32 = new Uint32Array(2048);
       const s = WAVE_COLORS[WAVE_COLORS.length - 1];
       r = s[1]; g = s[2]; b = s[3]; a = s[4];
     }
-    // Pack as ABGR for little-endian Uint32Array on ImageData
     WAVE_LUT32[i] = ((a & 0xFF) << 24) | ((b & 0xFF) << 16) | ((g & 0xFF) << 8) | (r & 0xFF);
+  }
+})();
+
+// Direction sin/cos LUT: 3601 entries for 0..360.0° in 0.1° steps
+// Eliminates all trig calls from the arrow render loop
+const DIR_SIN = new Float32Array(3601);
+const DIR_COS = new Float32Array(3601);
+(function buildDirLUT() {
+  const toRad = Math.PI / 1800;
+  for (let i = 0; i <= 3600; i++) {
+    DIR_SIN[i] = Math.sin(i * toRad);
+    DIR_COS[i] = Math.cos(i * toRad);
   }
 })();
 
@@ -59,18 +70,26 @@ class WaveCanvasLayer {
   constructor(map) {
     this.map = map;
     this.meta = null;
-    this.gridCache = {};    // height grids
-    this.dirCache = {};     // direction grids
+    this.gridCache = {};
+    this.dirCache = {};
     this.canvas = null;
     this.arrowCanvas = null;
     this.currentFrame = 0;
     this.frames = [];
     this.animTimer = null;
-    this.animDelay = 1000;
+    this.animDelay = 800;
     this.active = false;
     this.hasDirection = false;
     this._renderViewKey = '';
-    this._onMoveEnd = () => { if (this.active) this._renderViewKey = ''; this.render(); };
+    // Per-frame render cache: viewKey → { heightImgData, arrowImgData }
+    this._frameRenderCache = {};
+    this._onMoveEnd = () => {
+      if (this.active) {
+        this._renderViewKey = '';
+        this._frameRenderCache = {};
+        this.render();
+      }
+    };
   }
 
   async loadMeta(url) {
@@ -78,14 +97,13 @@ class WaveCanvasLayer {
     this.meta = await resp.json();
     this.frames = this.meta.frames;
     this.hasDirection = !!this.meta.hasDirection;
-    // Cache-bust suffix derived from generation timestamp
     this._cacheBust = this.meta.generated ? '?t=' + encodeURIComponent(this.meta.generated) : '';
     return this.meta;
   }
 
   _heightFile(frameIdx) {
     const f = this.frames[frameIdx];
-    return f.height || f.file; // support old ("file") and new ("height") format
+    return f.height || f.file;
   }
 
   async loadGrid(frameIdx) {
@@ -120,7 +138,6 @@ class WaveCanvasLayer {
     if (this.active) return;
     this.active = true;
 
-    // Height color canvas
     const canvas = L.DomUtil.create('canvas');
     canvas.style.position = 'absolute';
     canvas.style.pointerEvents = 'none';
@@ -128,7 +145,6 @@ class WaveCanvasLayer {
     canvas.style.imageRendering = 'auto';
     this.canvas = canvas;
 
-    // Arrow overlay canvas (full resolution for crisp arrows)
     const arrowCanvas = L.DomUtil.create('canvas');
     arrowCanvas.style.position = 'absolute';
     arrowCanvas.style.pointerEvents = 'none';
@@ -147,23 +163,20 @@ class WaveCanvasLayer {
     this.active = false;
     this.stopAnim();
     this.map.off('moveend zoomend resize', this._onMoveEnd);
-    if (this.canvas && this.canvas.parentNode) {
-      this.canvas.parentNode.removeChild(this.canvas);
-    }
-    if (this.arrowCanvas && this.arrowCanvas.parentNode) {
-      this.arrowCanvas.parentNode.removeChild(this.arrowCanvas);
-    }
+    if (this.canvas && this.canvas.parentNode) this.canvas.parentNode.removeChild(this.canvas);
+    if (this.arrowCanvas && this.arrowCanvas.parentNode) this.arrowCanvas.parentNode.removeChild(this.arrowCanvas);
     this.canvas = null;
     this.arrowCanvas = null;
+    this._frameRenderCache = {};
   }
 
   async showFrame(idx) {
     if (!this.active || !this.frames.length) return;
     idx = ((idx % this.frames.length) + this.frames.length) % this.frames.length;
     this.currentFrame = idx;
-    this._renderViewKey = '';
     await this.loadGrid(idx);
     if (this.hasDirection) await this.loadDir(idx);
+    this._renderViewKey = '';
     this.render();
     this.updateUI();
   }
@@ -178,21 +191,59 @@ class WaveCanvasLayer {
     const bounds = map.getBounds();
     const zoom = map.getZoom();
 
-    const viewKey = this.currentFrame + '|' + zoom + '|' +
+    // Position canvases
+    const topLeft = map.containerPointToLayerPoint([0, 0]);
+
+    // Check frame render cache (same viewport → just blit cached ImageData)
+    const baseViewKey = zoom + '|' +
       bounds.getNorth().toFixed(4) + ',' + bounds.getWest().toFixed(4) + ',' +
       bounds.getSouth().toFixed(4) + ',' + bounds.getEast().toFixed(4) + '|' +
       size.x + 'x' + size.y;
-    if (viewKey === this._renderViewKey) return;
-    this._renderViewKey = viewKey;
+    const frameKey = this.currentFrame + '|' + baseViewKey;
 
-    this._renderHeight(grid, size, bounds, zoom);
-    this._renderArrows(grid, size, bounds, zoom);
+    if (frameKey === this._renderViewKey) return;
+    this._renderViewKey = frameKey;
+
+    const cached = this._frameRenderCache[this.currentFrame];
+    if (cached && cached.viewKey === baseViewKey) {
+      // Instant blit from cache
+      const canvas = this.canvas;
+      canvas.width = cached.hw;
+      canvas.height = cached.hh;
+      canvas.style.width = size.x + 'px';
+      canvas.style.height = size.y + 'px';
+      L.DomUtil.setPosition(canvas, topLeft);
+      canvas.getContext('2d').putImageData(cached.heightImg, 0, 0);
+
+      if (cached.arrowImg && this.arrowCanvas) {
+        const ac = this.arrowCanvas;
+        ac.width = size.x;
+        ac.height = size.y;
+        ac.style.width = size.x + 'px';
+        ac.style.height = size.y + 'px';
+        L.DomUtil.setPosition(ac, topLeft);
+        ac.getContext('2d').putImageData(cached.arrowImg, 0, 0);
+      }
+      return;
+    }
+
+    // Full render
+    const heightImg = this._renderHeight(grid, size, bounds, zoom, topLeft);
+    const arrowImg = this._renderArrows(grid, size, bounds, zoom, topLeft);
+
+    // Cache for animation reuse
+    const scale = zoom >= 5 ? 1.0 : 0.5;
+    this._frameRenderCache[this.currentFrame] = {
+      viewKey: baseViewKey,
+      heightImg: heightImg,
+      hw: Math.ceil(size.x * scale),
+      hh: Math.ceil(size.y * scale),
+      arrowImg: arrowImg
+    };
   }
 
-  _renderHeight(grid, size, bounds, zoom) {
+  _renderHeight(grid, size, bounds, zoom, topLeft) {
     const map = this.map;
-    // At higher zoom levels, render at full resolution to show grid detail.
-    // Below zoom 5 the grid cells are sub-pixel anyway, so half-res saves CPU.
     const scale = zoom >= 5 ? 1.0 : 0.5;
     const rw = Math.ceil(size.x * scale);
     const rh = Math.ceil(size.y * scale);
@@ -202,8 +253,6 @@ class WaveCanvasLayer {
     canvas.height = rh;
     canvas.style.width = size.x + 'px';
     canvas.style.height = size.y + 'px';
-
-    const topLeft = map.containerPointToLayerPoint([0, 0]);
     L.DomUtil.setPosition(canvas, topLeft);
 
     const ctx = canvas.getContext('2d');
@@ -213,19 +262,28 @@ class WaveCanvasLayer {
     const g = this.meta.grid;
     const gnx = g.nx;
     const gny = g.ny;
+    const la1 = g.la1, lo1 = g.lo1, dx = g.dx, dy = g.dy;
 
     const west = bounds.getWest();
-    const east = bounds.getEast();
-    const lonSpan = east - west;
+    const lonSpan = bounds.getEast() - west;
+    const invRw = lonSpan / rw;
+
+    // Precompute lat → grid Y for each render row (avoids Leaflet call in inner loop)
+    const rowGy = new Float32Array(rh);
+    const rowValid = new Uint8Array(rh);
+    for (let py = 0; py < rh; py++) {
+      const lat = map.containerPointToLatLng([0, py / scale]).lat;
+      if (lat > 90 || lat < -90) continue;
+      const gy = (la1 - lat) / dy;
+      if (gy < 0 || gy >= gny - 1) continue;
+      rowGy[py] = gy;
+      rowValid[py] = 1;
+    }
 
     for (let py = 0; py < rh; py++) {
-      const containerY = py / scale;
-      const lat = map.containerPointToLatLng([0, containerY]).lat;
-      if (lat > 90 || lat < -90) continue;
+      if (!rowValid[py]) continue;
 
-      const gy = (g.la1 - lat) / g.dy;
-      if (gy < 0 || gy >= gny - 1) continue;
-
+      const gy = rowGy[py];
       const gy0 = gy | 0;
       const gy1 = gy0 + 1 < gny ? gy0 + 1 : gy0;
       const fy = gy - gy0;
@@ -236,10 +294,10 @@ class WaveCanvasLayer {
       const rowOff = py * rw;
 
       for (let px = 0; px < rw; px++) {
-        let lon = west + (px / rw) * lonSpan;
+        let lon = west + px * invRw;
         lon = ((lon % 360) + 360) % 360;
 
-        const gx = (lon - g.lo1) / g.dx;
+        const gx = (lon - lo1) / dx;
         if (gx < 0) continue;
 
         const gx0 = gx | 0;
@@ -263,11 +321,12 @@ class WaveCanvasLayer {
     }
 
     ctx.putImageData(imgData, 0, 0);
+    return imgData;
   }
 
-  _renderArrows(grid, size, bounds, zoom) {
+  _renderArrows(grid, size, bounds, zoom, topLeft) {
     const dirGrid = this.dirCache[this.currentFrame];
-    if (!dirGrid || !this.arrowCanvas) return;
+    if (!dirGrid || !this.arrowCanvas) return null;
 
     const map = this.map;
     const canvas = this.arrowCanvas;
@@ -275,34 +334,39 @@ class WaveCanvasLayer {
     canvas.height = size.y;
     canvas.style.width = size.x + 'px';
     canvas.style.height = size.y + 'px';
-
-    const topLeft = map.containerPointToLayerPoint([0, 0]);
     L.DomUtil.setPosition(canvas, topLeft);
 
     const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, size.x, size.y);
 
     const g = this.meta.grid;
     const gnx = g.nx;
     const gny = g.ny;
+    const la1 = g.la1, lo1 = g.lo1, dx = g.dx, dy = g.dy;
 
     const west = bounds.getWest();
-    const east = bounds.getEast();
-    const lonSpan = east - west;
+    const lonSpan = bounds.getEast() - west;
 
-    // Arrow spacing adapts to zoom: closer at higher zoom
     const spacing = Math.max(30, Math.min(60, 200 / Math.pow(2, zoom - 4)));
     const arrowLen = spacing * 0.35;
+    const headAngle = 0.45;
+    const cosHA = Math.cos(headAngle);
+    const sinHA = Math.sin(headAngle);
 
+    // Batch all shafts into one path, all heads into another
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
     ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
     ctx.lineWidth = 1.5;
 
-    for (let py = spacing / 2; py < size.y; py += spacing) {
+    // Shaft path
+    ctx.beginPath();
+    // Collect arrowhead vertices for a second batched path
+    const heads = [];
+
+    for (let py = spacing * 0.5; py < size.y; py += spacing) {
       const lat = map.containerPointToLatLng([0, py]).lat;
       if (lat > 90 || lat < -90) continue;
 
-      const gy = (g.la1 - lat) / g.dy;
+      const gy = (la1 - lat) / dy;
       if (gy < 0 || gy >= gny - 1) continue;
       const gy0 = gy | 0;
       const gy1 = gy0 + 1 < gny ? gy0 + 1 : gy0;
@@ -311,108 +375,114 @@ class WaveCanvasLayer {
       const row0 = gy0 * gnx;
       const row1 = gy1 * gnx;
 
-      for (let px = spacing / 2; px < size.x; px += spacing) {
+      for (let px = spacing * 0.5; px < size.x; px += spacing) {
         let lon = west + (px / size.x) * lonSpan;
         lon = ((lon % 360) + 360) % 360;
 
-        const gx = (lon - g.lo1) / g.dx;
+        const gx = (lon - lo1) / dx;
         if (gx < 0) continue;
         const gx0 = gx | 0;
         const gx1 = (gx0 + 1) % gnx;
         const fx = gx - gx0;
         const fx1 = 1 - fx;
 
-        // Check wave height at this point (skip if too small)
         const hVal = grid[row0 + gx0] * fx1 * fy1 +
                      grid[row0 + gx1] * fx  * fy1 +
                      grid[row1 + gx0] * fx1 * fy +
                      grid[row1 + gx1] * fx  * fy;
-        if (hVal < 30) continue; // < 0.3m — no arrow
+        if (hVal < 30) continue;
 
-        // Bilinear interpolation of direction (in 0.1° units)
-        const d00 = dirGrid[row0 + gx0];
-        const d01 = dirGrid[row0 + gx1];
-        const d10 = dirGrid[row1 + gx0];
-        const d11 = dirGrid[row1 + gx1];
+        // Direction interpolation via LUT (no trig in loop)
+        const d00 = Math.min(dirGrid[row0 + gx0], 3600);
+        const d01 = Math.min(dirGrid[row0 + gx1], 3600);
+        const d10 = Math.min(dirGrid[row1 + gx0], 3600);
+        const d11 = Math.min(dirGrid[row1 + gx1], 3600);
 
-        // Handle angle wraparound (e.g., 350° vs 10°)
-        // Convert to sin/cos, interpolate, convert back
-        const toRad = Math.PI / 1800; // 0.1° units → radians
-        const sinD = Math.sin(d00 * toRad) * fx1 * fy1 +
-                     Math.sin(d01 * toRad) * fx  * fy1 +
-                     Math.sin(d10 * toRad) * fx1 * fy +
-                     Math.sin(d11 * toRad) * fx  * fy;
-        const cosD = Math.cos(d00 * toRad) * fx1 * fy1 +
-                     Math.cos(d01 * toRad) * fx  * fy1 +
-                     Math.cos(d10 * toRad) * fx1 * fy +
-                     Math.cos(d11 * toRad) * fx  * fy;
+        const sinD = DIR_SIN[d00] * fx1 * fy1 +
+                     DIR_SIN[d01] * fx  * fy1 +
+                     DIR_SIN[d10] * fx1 * fy +
+                     DIR_SIN[d11] * fx  * fy;
+        const cosD = DIR_COS[d00] * fx1 * fy1 +
+                     DIR_COS[d01] * fx  * fy1 +
+                     DIR_COS[d10] * fx1 * fy +
+                     DIR_COS[d11] * fx  * fy;
 
-        // Direction the waves are coming FROM (meteorological convention)
-        // We want to show where waves travel TO, so add 180°
+        // atan2 is unavoidable for the final angle, but only once per arrow
         const dirRad = Math.atan2(sinD, cosD) + Math.PI;
 
-        // Scale arrow by wave height (0.3m→small, 8m+→full)
-        const hMeters = hVal / 100;
-        const scaleFactor = Math.min(1.0, Math.max(0.4, hMeters / 4));
+        const scaleFactor = Math.min(1.0, Math.max(0.4, hVal / 400));
         const len = arrowLen * scaleFactor;
 
-        // Arrow direction: dirRad is compass bearing (0=N, clockwise)
-        // On screen: dx = sin(bearing), dy = -cos(bearing)
-        const dx = Math.sin(dirRad) * len;
-        const dy = -Math.cos(dirRad) * len;
+        const adx = Math.sin(dirRad) * len;
+        const ady = -Math.cos(dirRad) * len;
 
-        // Draw arrow shaft
-        const x0 = px - dx * 0.5;
-        const y0 = py - dy * 0.5;
-        const x1 = px + dx * 0.5;
-        const y1 = py + dy * 0.5;
+        const x0 = px - adx * 0.5;
+        const y0 = py - ady * 0.5;
+        const x1 = px + adx * 0.5;
+        const y1 = py + ady * 0.5;
 
-        ctx.beginPath();
+        // Shaft
         ctx.moveTo(x0, y0);
         ctx.lineTo(x1, y1);
-        ctx.stroke();
 
-        // Draw arrowhead
+        // Arrowhead vertices (precompute with rotation matrix instead of atan2+cos+sin)
         const headLen = len * 0.35;
-        const headAngle = 0.45;
-        const angle = Math.atan2(dy, dx);
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(
-          x1 - headLen * Math.cos(angle - headAngle),
-          y1 - headLen * Math.sin(angle - headAngle)
+        // Normalize direction vector
+        const invLen = 1.0 / (len || 1);
+        const ux = adx * invLen;
+        const uy = ady * invLen;
+        // Rotate ±headAngle using precomputed cos/sin of headAngle
+        // Left wing: rotate (ux, uy) by -headAngle
+        const lx = ux * cosHA + uy * sinHA;
+        const ly = -ux * sinHA + uy * cosHA;
+        // Right wing: rotate (ux, uy) by +headAngle
+        const rx = ux * cosHA - uy * sinHA;
+        const ry = ux * sinHA + uy * cosHA;
+
+        heads.push(
+          x1, y1,
+          x1 - lx * headLen, y1 - ly * headLen,
+          x1 - rx * headLen, y1 - ry * headLen
         );
-        ctx.lineTo(
-          x1 - headLen * Math.cos(angle + headAngle),
-          y1 - headLen * Math.sin(angle + headAngle)
-        );
-        ctx.closePath();
-        ctx.fill();
       }
     }
+    ctx.stroke();
+
+    // Batch-render all arrowheads
+    ctx.beginPath();
+    for (let i = 0; i < heads.length; i += 6) {
+      ctx.moveTo(heads[i], heads[i + 1]);
+      ctx.lineTo(heads[i + 2], heads[i + 3]);
+      ctx.lineTo(heads[i + 4], heads[i + 5]);
+      ctx.closePath();
+    }
+    ctx.fill();
+
+    // Capture for cache
+    return ctx.getImageData(0, 0, size.x, size.y);
   }
 
   // --- Animation ---
   playAnim() {
     if (this.animTimer) return;
     this.animTimer = true;
-    this._animStep();
+    this._lastAnimTime = 0;
+    this._animRAF = requestAnimationFrame((t) => this._animStep(t));
   }
 
-  _animStep() {
+  _animStep(timestamp) {
     if (!this.animTimer) return;
-    this.showFrame(this.currentFrame + 1).then(() => {
-      if (this.animTimer) {
-        this.animTimer = setTimeout(() => this._animStep(), this.animDelay);
-      }
-    });
+    if (timestamp - this._lastAnimTime >= this.animDelay) {
+      this._lastAnimTime = timestamp;
+      this.showFrame(this.currentFrame + 1);
+    }
+    this._animRAF = requestAnimationFrame((t) => this._animStep(t));
   }
 
   stopAnim() {
-    if (this.animTimer && this.animTimer !== true) {
-      clearTimeout(this.animTimer);
-    }
+    if (this._animRAF) cancelAnimationFrame(this._animRAF);
     this.animTimer = null;
+    this._animRAF = null;
   }
 
   toggleAnim() {
