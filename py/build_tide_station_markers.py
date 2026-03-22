@@ -6,6 +6,7 @@ import unicodedata
 def normalize_filename(name: str) -> str:
     name = unicodedata.normalize('NFKD', name)
     name = name.encode('ascii', 'ignore').decode('ascii')
+    name = re.sub(r"['\\\\/]", "", name)
     name = re.sub(r"[\s,]+", "_", name)
     return name
 
@@ -110,7 +111,7 @@ for file_index, input_file in enumerate(input_files):
             name_escaped = name.replace('"', '\\"')
             safe_name = normalize_filename(name)
 
-            js_name = name.replace("\\", "\\\\").replace("'", "\\'")
+            js_name = name.replace("\\", "\\\\").replace("'", "\\\\x27")
             
             marker_var = f"marker{marker_count}"
             marker_count += 1

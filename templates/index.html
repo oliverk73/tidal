@@ -12,6 +12,7 @@
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="/static/js/suche.js" defer></script>
 <script src="/static/js/wave_layer.js" defer></script>
+<script src="/static/js/precip_layer.js" defer></script>
 
 <title>TideWise - Tide predictions &amp; forecasts</title>
 </head>
@@ -59,15 +60,6 @@
     const basemap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
-
-    // --- DWD Radar (Deutschland) ---
-    const dwdRadar = L.tileLayer.wms('https://maps.dwd.de/geoserver/dwd/wms?', {
-      layers: 'dwd:RX-Produkt',
-      transparent: true,
-      format: 'image/png',
-      opacity: 0.6,
-      attribution: '© DWD'
-    });
 
     // --- RainViewer Radar-Animation (letzte 2h, alle 10 Min) ---
     const RADAR_OPACITY = 0.6;
@@ -195,10 +187,192 @@
     // Alle 5 Min neu laden wenn aktiv
     setInterval(function () { if (rvActive) rvLoadApi(); }, 5 * 60 * 1000);
 
-    // Layer-Control
-    window._radarControl = L.control.layers(null, {
-      'Regenradar Deutschland (DWD)': dwdRadar
-    }, { collapsed: false, position: 'topright' }).addTo(map);
+    // Layer-Control (DWD static layer removed — replaced by Nowcast animation below)
+
+    // --- DWD Radar Nowcast Animation (Deutschland, -30min..+2h, 5-min steps) ---
+    let ncFrames = [];
+    let ncPosition = 0;
+    let ncTimer = null;
+    let ncLayerCache = {};
+    let ncCurrentLayer = null;
+    let ncLoading = false;
+    let ncActive = false;
+
+    function ncBuildFrames() {
+      // Generate time steps: -30min (past) to +120min (forecast), every 5min
+      const now = new Date();
+      // Round down to nearest 5 minutes
+      now.setMinutes(Math.floor(now.getMinutes() / 5) * 5, 0, 0);
+      const frames = [];
+      for (let m = -30; m <= 120; m += 5) {
+        const t = new Date(now.getTime() + m * 60000);
+        frames.push({
+          time: t.toISOString().replace(/\.\d{3}Z$/, '.000Z'),
+          offset: m,
+          isForecast: m > 0
+        });
+      }
+      return frames;
+    }
+
+    function ncFormatLabel(frame) {
+      const d = new Date(frame.time);
+      const dateStr = d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' });
+      const timeStr = d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+      const tag = frame.isForecast ? ' (Vorhersage)' : '';
+      return dateStr + ' ' + timeStr + tag;
+    }
+
+    function ncCreateLayer(frame) {
+      return L.tileLayer.wms('https://maps.dwd.de/geoserver/dwd/wms?', {
+        layers: 'dwd:Niederschlagsradar',
+        transparent: true,
+        format: 'image/png',
+        time: frame.time,
+        opacity: 0.001,
+        maxZoom: 18,
+        zIndex: 1001
+      });
+    }
+
+    function ncShowFrame(pos) {
+      if (ncLoading || ncFrames.length === 0) return;
+      pos = ((pos % ncFrames.length) + ncFrames.length) % ncFrames.length;
+      const frame = ncFrames[pos];
+
+      const tsEl = document.getElementById('nc-timestamp');
+      if (tsEl) tsEl.textContent = ncFormatLabel(frame);
+      // Highlight forecast frames
+      if (tsEl) tsEl.style.color = frame.isForecast ? '#e07000' : '#333';
+
+      const progEl = document.getElementById('nc-progress');
+      if (progEl) progEl.value = pos;
+
+      const oldLayer = ncCurrentLayer;
+
+      if (ncLayerCache[pos]) {
+        if (oldLayer) oldLayer.setOpacity(0);
+        ncLayerCache[pos].setOpacity(0.7);
+        ncCurrentLayer = ncLayerCache[pos];
+        ncPosition = pos;
+        if (ncTimer !== null) ncTimer = setTimeout(ncPlay, 600);
+        return;
+      }
+
+      ncLoading = true;
+      const newLayer = ncCreateLayer(frame);
+      newLayer.on('load', function () {
+        newLayer.setOpacity(0.7);
+        if (oldLayer) oldLayer.setOpacity(0);
+        ncLayerCache[pos] = newLayer;
+        ncCurrentLayer = newLayer;
+        ncPosition = pos;
+        ncLoading = false;
+        if (ncTimer !== null) ncTimer = setTimeout(ncPlay, 600);
+      });
+      newLayer.addTo(map);
+    }
+
+    function ncPlay() {
+      ncTimer = true;
+      document.getElementById('nc-play-btn').textContent = '\u23F8';
+      ncShowFrame(ncPosition + 1);
+    }
+
+    function ncStop() {
+      if (ncTimer !== null && ncTimer !== false) {
+        clearTimeout(ncTimer);
+        ncTimer = null;
+        document.getElementById('nc-play-btn').textContent = '\u25B6';
+        return true;
+      }
+      return false;
+    }
+
+    function ncPlayStop() { if (!ncStop()) ncPlay(); }
+
+    function ncClearCache() {
+      ncStop();
+      for (var p in ncLayerCache) { map.removeLayer(ncLayerCache[p]); }
+      ncLayerCache = {};
+      ncCurrentLayer = null;
+    }
+
+    function ncToggle(on) {
+      ncActive = on;
+      const panel = document.getElementById('nc-controls');
+      if (on) {
+        panel.style.display = 'flex';
+        ncFrames = ncBuildFrames();
+        const progEl = document.getElementById('nc-progress');
+        if (progEl) { progEl.max = ncFrames.length - 1; progEl.value = 0; }
+        // Start at "now" (offset=0, index 6 for -30min start)
+        const nowIdx = ncFrames.findIndex(f => f.offset === 0);
+        ncShowFrame(nowIdx >= 0 ? nowIdx : 0);
+      } else {
+        panel.style.display = 'none';
+        ncClearCache();
+      }
+    }
+
+    // Refresh frames every 5 min
+    setInterval(function () {
+      if (ncActive) {
+        ncClearCache();
+        ncFrames = ncBuildFrames();
+        const progEl = document.getElementById('nc-progress');
+        if (progEl) { progEl.max = ncFrames.length - 1; }
+        const nowIdx = ncFrames.findIndex(f => f.offset === 0);
+        ncShowFrame(nowIdx >= 0 ? nowIdx : 0);
+      }
+    }, 5 * 60 * 1000);
+
+    // --- Nowcast Control Panel ---
+    const NowcastControl = L.Control.extend({
+      options: { position: 'bottomleft' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar');
+        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;margin-bottom:8px;';
+        container.innerHTML =
+          '<div style="margin-bottom:6px;font-weight:bold;">' +
+            '<label style="cursor:pointer;">' +
+              '<input type="checkbox" id="nc-toggle" style="margin-right:5px;">Radar-Nowcast DE (-30min..+2h)' +
+            '</label>' +
+          '</div>' +
+          '<div id="nc-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
+            '<div style="display:flex;align-items:center;gap:8px;">' +
+              '<button id="nc-prev-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
+              '<button id="nc-play-btn" style="font-size:18px;cursor:pointer;border:none;background:none;padding:2px 8px;">\u25B6</button>' +
+              '<button id="nc-next-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23ED</button>' +
+            '</div>' +
+            '<span id="nc-timestamp" style="min-width:180px;text-align:center;font-weight:bold;font-size:12px;">--</span>' +
+            '<input type="range" id="nc-progress" min="0" max="30" value="0" style="width:180px;cursor:pointer;">' +
+            '<div style="font-size:10px;color:#888;">Quelle: DWD Niederschlagsradar (1km)</div>' +
+          '</div>';
+
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+
+        setTimeout(function () {
+          document.getElementById('nc-toggle').addEventListener('change', function () {
+            ncToggle(this.checked);
+          });
+          document.getElementById('nc-play-btn').addEventListener('click', ncPlayStop);
+          document.getElementById('nc-prev-btn').addEventListener('click', function () {
+            ncStop(); ncShowFrame(ncPosition - 1);
+          });
+          document.getElementById('nc-next-btn').addEventListener('click', function () {
+            ncStop(); ncShowFrame(ncPosition + 1);
+          });
+          document.getElementById('nc-progress').addEventListener('input', function () {
+            ncStop(); ncShowFrame(parseInt(this.value));
+          });
+        }, 0);
+
+        return container;
+      }
+    });
+    new NowcastControl().addTo(map);
 
     // --- Radar-Animation Controls (Custom Leaflet Control) ---
     const RadarControl = L.Control.extend({
@@ -322,6 +496,83 @@
       }
     });
     new WaveControl().addTo(map);
+
+    // --- Precipitation Forecast Layer (Canvas) ---
+    const precipLayer = new PrecipCanvasLayer(map);
+
+    const PrecipControl = L.Control.extend({
+      options: { position: 'bottomleft' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar');
+        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;';
+        container.innerHTML =
+          '<div style="margin-bottom:6px;font-weight:bold;">' +
+            '<label style="cursor:pointer;">' +
+              '<input type="checkbox" id="pr-toggle" style="margin-right:5px;">Niederschlagsvorhersage (GFS)' +
+            '</label>' +
+          '</div>' +
+          '<div id="pr-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
+            '<div id="pr-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="pr-player" style="display:none;">' +
+              '<div style="display:flex;align-items:center;gap:8px;">' +
+                '<button id="pr-prev-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
+                '<button id="pr-play-btn" style="font-size:18px;cursor:pointer;border:none;background:none;padding:2px 8px;">\u25B6</button>' +
+                '<button id="pr-next-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23ED</button>' +
+                '<span id="pr-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
+              '</div>' +
+              '<input type="range" id="pr-progress" min="0" max="7" value="0" style="width:180px;cursor:pointer;">' +
+              '<div style="display:flex;gap:2px;align-items:center;font-size:11px;margin-top:2px;">' +
+                '<span style="background:linear-gradient(to right,#78c8ff,#3c96ff,#1464f0,#28c828,#c8e600,#ffc800,#ff7800,#e61e1e,#aa0078);width:140px;height:10px;border-radius:3px;display:inline-block;"></span>' +
+                '<span>0.2 - 64+ mm/h</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+
+        setTimeout(function () {
+          document.getElementById('pr-toggle').addEventListener('change', async function () {
+            if (this.checked) {
+              document.getElementById('pr-controls').style.display = 'flex';
+              document.getElementById('pr-loading').style.display = 'block';
+              document.getElementById('pr-player').style.display = 'none';
+              try {
+                await precipLayer.loadMeta('/static/precip/precip_meta.json');
+                await precipLayer.preloadAll();
+                const progEl = document.getElementById('pr-progress');
+                progEl.max = precipLayer.frames.length - 1;
+                progEl.value = 0;
+                document.getElementById('pr-loading').style.display = 'none';
+                document.getElementById('pr-player').style.display = 'block';
+                precipLayer.activate();
+              } catch (e) {
+                document.getElementById('pr-loading').textContent = 'Fehler beim Laden!';
+                console.error('Precip layer error:', e);
+              }
+            } else {
+              document.getElementById('pr-controls').style.display = 'none';
+              precipLayer.deactivate();
+            }
+          });
+          document.getElementById('pr-play-btn').addEventListener('click', function () {
+            precipLayer.toggleAnim();
+          });
+          document.getElementById('pr-prev-btn').addEventListener('click', function () {
+            precipLayer.stopAnim(); precipLayer.showFrame(precipLayer.currentFrame - 1);
+          });
+          document.getElementById('pr-next-btn').addEventListener('click', function () {
+            precipLayer.stopAnim(); precipLayer.showFrame(precipLayer.currentFrame + 1);
+          });
+          document.getElementById('pr-progress').addEventListener('input', function () {
+            precipLayer.stopAnim(); precipLayer.showFrame(parseInt(this.value));
+          });
+        }, 0);
+
+        return container;
+      }
+    });
+    new PrecipControl().addTo(map);
 
     function saveMapView() {
       const center = map.getCenter();
