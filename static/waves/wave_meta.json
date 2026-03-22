@@ -1,0 +1,72 @@
+{
+  "date": "20260322",
+  "cycle": "00",
+  "generated": "2026-03-22T10:59:01.082767+00:00",
+  "grid": {
+    "nx": 360,
+    "ny": 181,
+    "la1": 90.0,
+    "la2": -90.0,
+    "lo1": 0.0,
+    "lo2": 359.0,
+    "dx": 1.0,
+    "dy": 1.0
+  },
+  "hasDirection": true,
+  "frames": [
+    {
+      "height": "wave_f000.bin",
+      "hour": 0,
+      "label": "+0h",
+      "direction": "wdir_f000.bin"
+    },
+    {
+      "height": "wave_f003.bin",
+      "hour": 3,
+      "label": "+3h",
+      "direction": "wdir_f003.bin"
+    },
+    {
+      "height": "wave_f006.bin",
+      "hour": 6,
+      "label": "+6h",
+      "direction": "wdir_f006.bin"
+    },
+    {
+      "height": "wave_f009.bin",
+      "hour": 9,
+      "label": "+9h",
+      "direction": "wdir_f009.bin"
+    },
+    {
+      "height": "wave_f012.bin",
+      "hour": 12,
+      "label": "+12h",
+      "direction": "wdir_f012.bin"
+    },
+    {
+      "height": "wave_f015.bin",
+      "hour": 15,
+      "label": "+15h",
+      "direction": "wdir_f015.bin"
+    },
+    {
+      "height": "wave_f018.bin",
+      "hour": 18,
+      "label": "+18h",
+      "direction": "wdir_f018.bin"
+    },
+    {
+      "height": "wave_f021.bin",
+      "hour": 21,
+      "label": "+21h",
+      "direction": "wdir_f021.bin"
+    },
+    {
+      "height": "wave_f024.bin",
+      "hour": 24,
+      "label": "+24h",
+      "direction": "wdir_f024.bin"
+    }
+  ]
+}

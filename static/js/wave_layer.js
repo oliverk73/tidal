@@ -1,7 +1,7 @@
 /**
- * WaveCanvasLayer — Leaflet Canvas overlay for scalar wave height grids.
- * Renders GFS-Wave binary data (uint16 LE, values in cm) as a smooth
- * color-interpolated overlay, similar to Windy.com's wave layer.
+ * WaveCanvasLayer — Leaflet Canvas overlay for wave height + direction grids.
+ * Renders GFS-Wave binary data as a smooth color-interpolated overlay
+ * with directional arrows showing wave propagation.
  *
  * Performance optimizations:
  * - Render at half resolution, CSS-upscale (4x fewer pixels)
@@ -9,6 +9,7 @@
  * - Uint32Array single-write per pixel
  * - 2048-entry LUT for instant color lookup (0.05m precision)
  * - Frame render cache (skip re-render if viewport unchanged)
+ * - Direction arrows drawn at fixed pixel intervals
  */
 
 // --- Color scale: wave height (m) → [R, G, B, A] ---
@@ -58,14 +59,17 @@ class WaveCanvasLayer {
   constructor(map) {
     this.map = map;
     this.meta = null;
-    this.gridCache = {};
+    this.gridCache = {};    // height grids
+    this.dirCache = {};     // direction grids
     this.canvas = null;
+    this.arrowCanvas = null;
     this.currentFrame = 0;
     this.frames = [];
     this.animTimer = null;
     this.animDelay = 1000;
     this.active = false;
-    this._renderViewKey = '';  // cache key: frame+bounds+zoom
+    this.hasDirection = false;
+    this._renderViewKey = '';
     this._onMoveEnd = () => { if (this.active) this._renderViewKey = ''; this.render(); };
   }
 
@@ -73,32 +77,66 @@ class WaveCanvasLayer {
     const resp = await fetch(url);
     this.meta = await resp.json();
     this.frames = this.meta.frames;
+    this.hasDirection = !!this.meta.hasDirection;
     return this.meta;
+  }
+
+  _heightFile(frameIdx) {
+    const f = this.frames[frameIdx];
+    return f.height || f.file; // support old ("file") and new ("height") format
   }
 
   async loadGrid(frameIdx) {
     if (this.gridCache[frameIdx]) return this.gridCache[frameIdx];
-    const resp = await fetch('/static/waves/' + this.frames[frameIdx].file);
+    const resp = await fetch('/static/waves/' + this._heightFile(frameIdx));
     const buf = await resp.arrayBuffer();
     this.gridCache[frameIdx] = new Uint16Array(buf);
     return this.gridCache[frameIdx];
   }
 
+  async loadDir(frameIdx) {
+    if (this.dirCache[frameIdx]) return this.dirCache[frameIdx];
+    const f = this.frames[frameIdx];
+    if (!f.direction) return null;
+    const resp = await fetch('/static/waves/' + f.direction);
+    const buf = await resp.arrayBuffer();
+    this.dirCache[frameIdx] = new Uint16Array(buf);
+    return this.dirCache[frameIdx];
+  }
+
   async preloadAll() {
-    await Promise.all(this.frames.map((_, i) => this.loadGrid(i)));
+    const promises = this.frames.map((_, i) => this.loadGrid(i));
+    if (this.hasDirection) {
+      this.frames.forEach((f, i) => {
+        if (f.direction) promises.push(this.loadDir(i));
+      });
+    }
+    await Promise.all(promises);
   }
 
   activate() {
     if (this.active) return;
     this.active = true;
 
+    // Height color canvas
     const canvas = L.DomUtil.create('canvas');
     canvas.style.position = 'absolute';
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '450';
     canvas.style.imageRendering = 'auto';
     this.canvas = canvas;
-    this.map.getContainer().querySelector('.leaflet-overlay-pane').appendChild(canvas);
+
+    // Arrow overlay canvas (full resolution for crisp arrows)
+    const arrowCanvas = L.DomUtil.create('canvas');
+    arrowCanvas.style.position = 'absolute';
+    arrowCanvas.style.pointerEvents = 'none';
+    arrowCanvas.style.zIndex = '451';
+    this.arrowCanvas = arrowCanvas;
+
+    const pane = this.map.getContainer().querySelector('.leaflet-overlay-pane');
+    pane.appendChild(canvas);
+    pane.appendChild(arrowCanvas);
+
     this.map.on('moveend zoomend resize', this._onMoveEnd);
     this.showFrame(this.currentFrame);
   }
@@ -110,15 +148,20 @@ class WaveCanvasLayer {
     if (this.canvas && this.canvas.parentNode) {
       this.canvas.parentNode.removeChild(this.canvas);
     }
+    if (this.arrowCanvas && this.arrowCanvas.parentNode) {
+      this.arrowCanvas.parentNode.removeChild(this.arrowCanvas);
+    }
     this.canvas = null;
+    this.arrowCanvas = null;
   }
 
   async showFrame(idx) {
     if (!this.active || !this.frames.length) return;
     idx = ((idx % this.frames.length) + this.frames.length) % this.frames.length;
     this.currentFrame = idx;
-    this._renderViewKey = ''; // invalidate cache
+    this._renderViewKey = '';
     await this.loadGrid(idx);
+    if (this.hasDirection) await this.loadDir(idx);
     this.render();
     this.updateUI();
   }
@@ -133,7 +176,6 @@ class WaveCanvasLayer {
     const bounds = map.getBounds();
     const zoom = map.getZoom();
 
-    // Cache check: skip render if nothing changed
     const viewKey = this.currentFrame + '|' + zoom + '|' +
       bounds.getNorth().toFixed(4) + ',' + bounds.getWest().toFixed(4) + ',' +
       bounds.getSouth().toFixed(4) + ',' + bounds.getEast().toFixed(4) + '|' +
@@ -141,7 +183,12 @@ class WaveCanvasLayer {
     if (viewKey === this._renderViewKey) return;
     this._renderViewKey = viewKey;
 
-    // Render at half resolution for performance
+    this._renderHeight(grid, size, bounds, zoom);
+    this._renderArrows(grid, size, bounds, zoom);
+  }
+
+  _renderHeight(grid, size, bounds, zoom) {
+    const map = this.map;
     const scale = 0.5;
     const rw = Math.ceil(size.x * scale);
     const rh = Math.ceil(size.y * scale);
@@ -149,7 +196,6 @@ class WaveCanvasLayer {
     const canvas = this.canvas;
     canvas.width = rw;
     canvas.height = rh;
-    // CSS scales it back up to full map size
     canvas.style.width = size.x + 'px';
     canvas.style.height = size.y + 'px';
 
@@ -164,42 +210,31 @@ class WaveCanvasLayer {
     const gnx = g.nx;
     const gny = g.ny;
 
-    // Precompute projection: map pixel → lat/lon using only corner points
-    // Mercator Y is non-linear, so we compute lat per row via Leaflet's projection
-    // but lon is linear per row (big win: only 1 Leaflet call per row instead of per pixel)
     const west = bounds.getWest();
     const east = bounds.getEast();
     const lonSpan = east - west;
 
     for (let py = 0; py < rh; py++) {
-      // Convert render-pixel Y to container Y, then to lat
       const containerY = py / scale;
       const lat = map.containerPointToLatLng([0, containerY]).lat;
       if (lat > 90 || lat < -90) continue;
 
-      // Grid Y index (float)
       const gy = (g.la1 - lat) / g.dy;
       if (gy < 0 || gy >= gny - 1) continue;
 
-      const gy0 = gy | 0; // floor
+      const gy0 = gy | 0;
       const gy1 = gy0 + 1 < gny ? gy0 + 1 : gy0;
       const fy = gy - gy0;
       const fy1 = 1 - fy;
 
-      // Row offsets in grid
       const row0 = gy0 * gnx;
       const row1 = gy1 * gnx;
-
-      // Lon is linear across the row
       const rowOff = py * rw;
 
       for (let px = 0; px < rw; px++) {
-        // Linear lon interpolation
         let lon = west + (px / rw) * lonSpan;
-        // Normalize to 0-360
         lon = ((lon % 360) + 360) % 360;
 
-        // Grid X index
         const gx = (lon - g.lo1) / g.dx;
         if (gx < 0) continue;
 
@@ -208,15 +243,13 @@ class WaveCanvasLayer {
         const fx = gx - gx0;
         const fx1 = 1 - fx;
 
-        // Bilinear interpolation
         const val = grid[row0 + gx0] * fx1 * fy1 +
                     grid[row0 + gx1] * fx  * fy1 +
                     grid[row1 + gx0] * fx1 * fy +
                     grid[row1 + gx1] * fx  * fy;
 
-        if (val < 30) continue; // < 0.3m skip
+        if (val < 30) continue;
 
-        // LUT index: val is in cm, LUT step = 5cm → index = val/5
         const lutIdx = Math.min(2047, (val / 5) | 0);
         const color32 = WAVE_LUT32[lutIdx];
         if (color32 === 0) continue;
@@ -226,6 +259,133 @@ class WaveCanvasLayer {
     }
 
     ctx.putImageData(imgData, 0, 0);
+  }
+
+  _renderArrows(grid, size, bounds, zoom) {
+    const dirGrid = this.dirCache[this.currentFrame];
+    if (!dirGrid || !this.arrowCanvas) return;
+
+    const map = this.map;
+    const canvas = this.arrowCanvas;
+    canvas.width = size.x;
+    canvas.height = size.y;
+    canvas.style.width = size.x + 'px';
+    canvas.style.height = size.y + 'px';
+
+    const topLeft = map.containerPointToLayerPoint([0, 0]);
+    L.DomUtil.setPosition(canvas, topLeft);
+
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, size.x, size.y);
+
+    const g = this.meta.grid;
+    const gnx = g.nx;
+    const gny = g.ny;
+
+    const west = bounds.getWest();
+    const east = bounds.getEast();
+    const lonSpan = east - west;
+
+    // Arrow spacing adapts to zoom: closer at higher zoom
+    const spacing = Math.max(30, Math.min(60, 200 / Math.pow(2, zoom - 4)));
+    const arrowLen = spacing * 0.35;
+
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+    ctx.lineWidth = 1.5;
+
+    for (let py = spacing / 2; py < size.y; py += spacing) {
+      const lat = map.containerPointToLatLng([0, py]).lat;
+      if (lat > 90 || lat < -90) continue;
+
+      const gy = (g.la1 - lat) / g.dy;
+      if (gy < 0 || gy >= gny - 1) continue;
+      const gy0 = gy | 0;
+      const gy1 = gy0 + 1 < gny ? gy0 + 1 : gy0;
+      const fy = gy - gy0;
+      const fy1 = 1 - fy;
+      const row0 = gy0 * gnx;
+      const row1 = gy1 * gnx;
+
+      for (let px = spacing / 2; px < size.x; px += spacing) {
+        let lon = west + (px / size.x) * lonSpan;
+        lon = ((lon % 360) + 360) % 360;
+
+        const gx = (lon - g.lo1) / g.dx;
+        if (gx < 0) continue;
+        const gx0 = gx | 0;
+        const gx1 = (gx0 + 1) % gnx;
+        const fx = gx - gx0;
+        const fx1 = 1 - fx;
+
+        // Check wave height at this point (skip if too small)
+        const hVal = grid[row0 + gx0] * fx1 * fy1 +
+                     grid[row0 + gx1] * fx  * fy1 +
+                     grid[row1 + gx0] * fx1 * fy +
+                     grid[row1 + gx1] * fx  * fy;
+        if (hVal < 30) continue; // < 0.3m — no arrow
+
+        // Bilinear interpolation of direction (in 0.1° units)
+        const d00 = dirGrid[row0 + gx0];
+        const d01 = dirGrid[row0 + gx1];
+        const d10 = dirGrid[row1 + gx0];
+        const d11 = dirGrid[row1 + gx1];
+
+        // Handle angle wraparound (e.g., 350° vs 10°)
+        // Convert to sin/cos, interpolate, convert back
+        const toRad = Math.PI / 1800; // 0.1° units → radians
+        const sinD = Math.sin(d00 * toRad) * fx1 * fy1 +
+                     Math.sin(d01 * toRad) * fx  * fy1 +
+                     Math.sin(d10 * toRad) * fx1 * fy +
+                     Math.sin(d11 * toRad) * fx  * fy;
+        const cosD = Math.cos(d00 * toRad) * fx1 * fy1 +
+                     Math.cos(d01 * toRad) * fx  * fy1 +
+                     Math.cos(d10 * toRad) * fx1 * fy +
+                     Math.cos(d11 * toRad) * fx  * fy;
+
+        // Direction the waves are coming FROM (meteorological convention)
+        // We want to show where waves travel TO, so add 180°
+        const dirRad = Math.atan2(sinD, cosD) + Math.PI;
+
+        // Scale arrow by wave height (0.3m→small, 8m+→full)
+        const hMeters = hVal / 100;
+        const scaleFactor = Math.min(1.0, Math.max(0.4, hMeters / 4));
+        const len = arrowLen * scaleFactor;
+
+        // Arrow direction: dirRad is compass bearing (0=N, clockwise)
+        // On screen: dx = sin(bearing), dy = -cos(bearing)
+        const dx = Math.sin(dirRad) * len;
+        const dy = -Math.cos(dirRad) * len;
+
+        // Draw arrow shaft
+        const x0 = px - dx * 0.5;
+        const y0 = py - dy * 0.5;
+        const x1 = px + dx * 0.5;
+        const y1 = py + dy * 0.5;
+
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(x1, y1);
+        ctx.stroke();
+
+        // Draw arrowhead
+        const headLen = len * 0.35;
+        const headAngle = 0.45;
+        const angle = Math.atan2(dy, dx);
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(
+          x1 - headLen * Math.cos(angle - headAngle),
+          y1 - headLen * Math.sin(angle - headAngle)
+        );
+        ctx.lineTo(
+          x1 - headLen * Math.cos(angle + headAngle),
+          y1 - headLen * Math.sin(angle + headAngle)
+        );
+        ctx.closePath();
+        ctx.fill();
+      }
+    }
   }
 
   // --- Animation ---
