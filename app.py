@@ -29,17 +29,23 @@ if os.path.exists("normalized_station_names.txt"):
                 orig, norm = line.strip().split(" = ", 1)
                 normalized[orig] = norm
 
+def load_station_names():
+    """Extract station names from the generated leaflet_markers.js file."""
+    markers_path = os.path.join("static", "js", "leaflet_markers.js")
+    names = []
+    if os.path.exists(markers_path):
+        with open(markers_path, encoding="utf-8") as f:
+            for line in f:
+                m = re.search(r'<b>([^<]+)</b>', line)
+                if m:
+                    names.append(m.group(1))
+    return names
+
+_station_names = load_station_names()
+
 @app.route("/")
 def index():
-    with open("normalized_station_names.txt", encoding="utf-8") as f:
-        station_names = []
-        for line in f:
-            if " = " in line:
-                orig, _ = line.strip().split(" = ", 1)
-                station_names.append(orig)
-            elif line.strip():
-                station_names.append(line.strip())
-    return render_template("index.html", station_names=station_names)
+    return render_template("index.html", station_names=_station_names)
 
 @app.route("/generate/<station>")
 def generate_tide_prediction(station):
