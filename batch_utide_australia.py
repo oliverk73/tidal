@@ -223,8 +223,8 @@ def format_station_block(result):
     lines.append(f"# !longitude: {lon:.6f}")
     lines.append(f"# !latitude: {lat:.6f}")
 
-    lines.append(f"{name}, Denmark")
-    lines.append(f"+01:00 :Australia/Sydney")
+    lines.append(f"{name}, Australia")
+    lines.append(f"+10:00 :Australia/Sydney")
     lines.append(f"{result['mean']:.4f} meters")
 
     for c in result['constituents']:
