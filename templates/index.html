@@ -341,13 +341,15 @@
 </script>
 
 
+<script>
+  var stationNames = {{ station_names | tojson }};
+</script>
 <script src="/static/js/leaflet_markers.js"></script>
 
 <script>
   setTimeout(function () {
     if (typeof markers !== 'undefined' && typeof map !== 'undefined') {
       map.addLayer(markers);
-      
     }
   }, 100);
 </script>

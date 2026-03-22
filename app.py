@@ -25,8 +25,8 @@ normalized = {}
 if os.path.exists("normalized_station_names.txt"):
     with open("normalized_station_names.txt", encoding="utf-8") as f:
         for line in f:
-            if " → " in line:
-                orig, norm = line.strip().split(" → ", 1)
+            if " = " in line:
+                orig, norm = line.strip().split(" = ", 1)
                 normalized[orig] = norm
 
 @app.route("/")
@@ -34,8 +34,8 @@ def index():
     with open("normalized_station_names.txt", encoding="utf-8") as f:
         station_names = []
         for line in f:
-            if " → " in line:
-                orig, _ = line.strip().split(" → ", 1)
+            if " = " in line:
+                orig, _ = line.strip().split(" = ", 1)
                 station_names.append(orig)
             elif line.strip():
                 station_names.append(line.strip())

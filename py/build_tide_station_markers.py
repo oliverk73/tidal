@@ -1,5 +1,6 @@
 import re
 import os
+import glob
 import unicodedata
 
 def normalize_filename(name: str) -> str:
@@ -8,17 +9,43 @@ def normalize_filename(name: str) -> str:
     name = re.sub(r"[\s,]+", "_", name)
     return name
 
-input_files = [
-    "harmonics/harmonics-dwf-20241229-free.txt",
-    "harmonics/harmonics-dwf-20100529-nonfree.txt",
-    "harmonics/harmonics-dwf-20070318_no_us_no_dupes.txt",
-    "harmonics/harmonics-2004-06-14_no_us_no_dupes2.txt",
-    "harmonics/harmonics_old_no_us_no_dupes3.txt",
-    "harmonics/harmonics_pierre_lavergne_v10_add.txt",
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+HARMONICS_DIRS = [
+    os.path.join(PROJECT_ROOT, "harmonics"),
 ]
 
-output_file = "static/js/leaflet_markers.js"
+EXCLUDE_PATTERNS = [
+    "*template*",
+    "*restored_check*",
+    "*bak*",
+]
+
+def find_harmonics_files():
+    """Scan directories for valid XTide harmonics .txt files."""
+    files = []
+    for d in HARMONICS_DIRS:
+        if not os.path.isdir(d):
+            continue
+        for path in sorted(glob.glob(os.path.join(d, "*.txt"))):
+            basename = os.path.basename(path)
+            if any(glob.fnmatch.fnmatch(basename, pat) for pat in EXCLUDE_PATTERNS):
+                continue
+            try:
+                with open(path, "r", encoding="iso-8859-1") as f:
+                    head = f.read(4096)
+                if "WITHOUT ANY WARRANTY" in head:
+                    files.append(path)
+            except (OSError, UnicodeDecodeError):
+                continue
+    return files
+
+input_files = find_harmonics_files()
+print(f"Gefunden: {len(input_files)} Harmonics-Dateien")
+for f in input_files:
+    print(f"  {f}")
+
+output_file = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers.js")
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
 marker_count = 1
