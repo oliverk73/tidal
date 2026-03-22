@@ -27,8 +27,7 @@
 <nav class="topnav">
 <a href="/help/">Help</a>
 <a href="/about/">About</a>
-<input id="search" name="search" type="search" placeholder="Search for locations"/>
-<button type="submit">Search</button>
+<button id="search-trigger" type="button">Search for locations</button>
 </nav>
 </header>
 <main>
@@ -37,7 +36,6 @@
 <p id="description">Accurate tide predictions &amp; charts with low (ebbing) &amp; high tides (flooding) for sailors, surfers, fishermen and watersports enthusiasts. Tide charts for ports, harbors, surfspots and other coastal locations. 🌊</p>
 
 <div id="map" style="height: 730px;"></div>
-<div id="search-results" style="display:none;"></div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -362,5 +360,17 @@
       console.log(5 + 6);
     </script>
 </footer>
+
+<!-- Search Modal Overlay -->
+<div id="search-modal" class="search-modal">
+  <div class="search-modal-content">
+    <div class="search-modal-header">
+      <input id="search-modal-input" type="text" placeholder="Search for tide stations..." autocomplete="off" />
+      <button id="search-modal-close" type="button">&times;</button>
+    </div>
+    <div id="search-modal-results" class="search-modal-results"></div>
+  </div>
+</div>
+
 </body>
 </html>

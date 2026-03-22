@@ -1,46 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var searchInput = document.getElementById("search") || document.getElementById("station-search");
-  var searchButton = document.querySelector("button[type='submit']");
-  var resultsContainer = document.getElementById("search-results");
+  var trigger = document.getElementById("search-trigger");
+  var modal = document.getElementById("search-modal");
+  var input = document.getElementById("search-modal-input");
+  var closeBtn = document.getElementById("search-modal-close");
+  var resultsEl = document.getElementById("search-modal-results");
 
-  if (!searchInput || !searchButton) return;
+  if (!trigger || !modal || !input) return;
 
   var names = (typeof stationNames !== 'undefined') ? stationNames : [];
 
-  // --- Autocomplete dropdown (quick hints while typing) ---
-  var acContainer = document.createElement("div");
-  acContainer.classList.add("autocomplete-suggestions");
-  searchInput.parentNode.style.position = "relative";
-  searchInput.parentNode.appendChild(acContainer);
+  // --- Open / Close ---
+  function openModal() {
+    modal.classList.add("open");
+    input.value = "";
+    resultsEl.innerHTML = "";
+    // Small delay so the CSS transition starts before focus
+    setTimeout(function () { input.focus(); }, 50);
+  }
 
-  searchInput.addEventListener("input", function () {
-    var val = this.value.trim().toLowerCase();
-    acContainer.innerHTML = "";
-    if (!val || val.length < 2) return;
+  function closeModal() {
+    modal.classList.remove("open");
+    input.value = "";
+    resultsEl.innerHTML = "";
+  }
 
-    var matches = filterStations(val).slice(0, 8);
-    matches.forEach(function (m) {
-      var div = document.createElement("div");
-      div.textContent = m;
-      div.addEventListener("click", function () {
-        searchInput.value = m;
-        acContainer.innerHTML = "";
-        generatePrediction(m);
-      });
-      acContainer.appendChild(div);
-    });
+  trigger.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close on backdrop click
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) closeModal();
   });
 
-  document.addEventListener("click", function (e) {
-    if (!searchInput.contains(e.target) && !acContainer.contains(e.target)) {
-      acContainer.innerHTML = "";
-    }
+  // Close on Escape
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
   });
 
-  // --- Search: filter and display results ---
+  // --- Filtering ---
   function filterStations(query) {
     var q = query.toLowerCase();
-    // Exact start matches first, then contains
     var startsWith = [];
     var contains = [];
     for (var i = 0; i < names.length; i++) {
@@ -51,68 +50,101 @@ document.addEventListener("DOMContentLoaded", function () {
     return startsWith.concat(contains);
   }
 
-  function showResults(query) {
-    if (!query) return;
-    acContainer.innerHTML = "";
+  // --- Parse station name into name + location parts ---
+  function parseName(full) {
+    // e.g. "Crisfield, Little Annemessex River, Chesapeake Bay, Maryland"
+    // → name: "Crisfield", detail: "Little Annemessex River, Chesapeake Bay, Maryland"
+    var idx = full.indexOf(", ");
+    if (idx > 0) {
+      return { name: full.slice(0, idx), detail: full.slice(idx + 2) };
+    }
+    return { name: full, detail: "" };
+  }
 
-    // Exact match → go directly
-    var exact = names.find(function (n) {
-      return n.toLowerCase() === query.toLowerCase();
-    });
-    if (exact) {
-      generatePrediction(exact);
+  // --- Render results ---
+  function renderResults(query) {
+    var q = query.trim();
+    if (q.length < 1) {
+      resultsEl.innerHTML = '<div class="search-modal-hint">Type to search across ' +
+        names.length + ' tide stations</div>';
       return;
     }
 
-    var matches = filterStations(query);
+    var matches = filterStations(q);
 
     if (matches.length === 0) {
-      resultsContainer.style.display = "block";
-      resultsContainer.innerHTML =
-        '<div class="search-results-header">No stations found for "' +
-        escapeHtml(query) + '"</div>';
+      resultsEl.innerHTML = '<div class="search-modal-empty">No stations found for "' +
+        escapeHtml(q) + '"</div>';
       return;
     }
 
-    if (matches.length === 1) {
-      generatePrediction(matches[0]);
-      return;
+    // Limit displayed results for performance
+    var showMax = 100;
+    var limited = matches.slice(0, showMax);
+    var html = '<div class="search-modal-count">' + matches.length + ' results</div>';
+
+    limited.forEach(function (full) {
+      var p = parseName(full);
+      html += '<div class="search-modal-item" data-station="' + escapeHtml(full) + '">' +
+        '<span class="search-modal-item-name">' + highlightMatch(p.name, q) + '</span>' +
+        (p.detail ? '<span class="search-modal-item-detail">' + highlightMatch(p.detail, q) + '</span>' : '') +
+        '</div>';
+    });
+
+    if (matches.length > showMax) {
+      html += '<div class="search-modal-more">... and ' +
+        (matches.length - showMax) + ' more results</div>';
     }
 
-    // Show results list
-    var html = '<div class="search-results-header">' +
-      matches.length + ' stations matching "' + escapeHtml(query) + '"' +
-      '<span class="search-results-close" title="Close">&times;</span></div>' +
-      '<div class="search-results-list">';
+    resultsEl.innerHTML = html;
 
-    matches.forEach(function (name) {
-      html += '<div class="search-result-item" data-station="' +
-        escapeHtml(name) + '">' + highlightMatch(name, query) + '</div>';
-    });
-    html += '</div>';
-
-    resultsContainer.innerHTML = html;
-    resultsContainer.style.display = "block";
-
-    // Close button
-    resultsContainer.querySelector(".search-results-close").addEventListener("click", function () {
-      resultsContainer.style.display = "none";
-    });
-
-    // Click on result → generate prediction
-    resultsContainer.querySelectorAll(".search-result-item").forEach(function (el) {
+    // Click handlers
+    resultsEl.querySelectorAll(".search-modal-item").forEach(function (el) {
       el.addEventListener("click", function () {
         var station = this.getAttribute("data-station");
-        searchInput.value = station;
         generatePrediction(station);
       });
     });
   }
 
+  // --- Debounced input ---
+  var debounceTimer = null;
+  input.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function () {
+      renderResults(input.value);
+    }, 120);
+  });
+
+  // Enter → pick first result or exact match
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      var q = input.value.trim();
+      if (!q) return;
+
+      // Exact match?
+      var exact = names.find(function (n) {
+        return n.toLowerCase() === q.toLowerCase();
+      });
+      if (exact) {
+        generatePrediction(exact);
+        return;
+      }
+
+      // Otherwise pick first result
+      var first = resultsEl.querySelector(".search-modal-item");
+      if (first) {
+        generatePrediction(first.getAttribute("data-station"));
+      }
+    }
+  });
+
+  // --- Generate prediction ---
   function generatePrediction(station) {
-    resultsContainer.style.display = "none";
-    searchButton.disabled = true;
-    searchButton.textContent = "...";
+    // Show loading state in modal
+    resultsEl.innerHTML = '<div class="search-modal-loading">Generating prediction for ' +
+      escapeHtml(station) + '...</div>';
 
     fetch('/generate/' + encodeURIComponent(station))
       .then(function (r) {
@@ -123,14 +155,12 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = data.url;
       })
       .catch(function (err) {
-        alert("Error generating prediction: " + err.message);
-      })
-      .finally(function () {
-        searchButton.disabled = false;
-        searchButton.textContent = "Search";
+        resultsEl.innerHTML = '<div class="search-modal-empty">Error: ' +
+          escapeHtml(err.message) + '</div>';
       });
   }
 
+  // --- Helpers ---
   function escapeHtml(s) {
     var d = document.createElement("div");
     d.textContent = s;
@@ -141,20 +171,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var idx = text.toLowerCase().indexOf(query.toLowerCase());
     if (idx < 0) return escapeHtml(text);
     return escapeHtml(text.slice(0, idx)) +
-      '<b>' + escapeHtml(text.slice(idx, idx + query.length)) + '</b>' +
+      '<mark>' + escapeHtml(text.slice(idx, idx + query.length)) + '</mark>' +
       escapeHtml(text.slice(idx + query.length));
   }
 
-  // --- Event handlers ---
-  searchButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    showResults(searchInput.value.trim());
-  });
-
-  searchInput.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      showResults(searchInput.value.trim());
-    }
-  });
+  // Show hint on open
+  renderResults("");
 });
