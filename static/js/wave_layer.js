@@ -74,10 +74,12 @@ class WaveCanvasLayer {
   }
 
   async loadMeta(url) {
-    const resp = await fetch(url);
+    const resp = await fetch(url + '?t=' + Date.now());
     this.meta = await resp.json();
     this.frames = this.meta.frames;
     this.hasDirection = !!this.meta.hasDirection;
+    // Cache-bust suffix derived from generation timestamp
+    this._cacheBust = this.meta.generated ? '?t=' + encodeURIComponent(this.meta.generated) : '';
     return this.meta;
   }
 
@@ -88,7 +90,7 @@ class WaveCanvasLayer {
 
   async loadGrid(frameIdx) {
     if (this.gridCache[frameIdx]) return this.gridCache[frameIdx];
-    const resp = await fetch('/static/waves/' + this._heightFile(frameIdx));
+    const resp = await fetch('/static/waves/' + this._heightFile(frameIdx) + (this._cacheBust || ''));
     const buf = await resp.arrayBuffer();
     this.gridCache[frameIdx] = new Uint16Array(buf);
     return this.gridCache[frameIdx];
@@ -98,7 +100,7 @@ class WaveCanvasLayer {
     if (this.dirCache[frameIdx]) return this.dirCache[frameIdx];
     const f = this.frames[frameIdx];
     if (!f.direction) return null;
-    const resp = await fetch('/static/waves/' + f.direction);
+    const resp = await fetch('/static/waves/' + f.direction + (this._cacheBust || ''));
     const buf = await resp.arrayBuffer();
     this.dirCache[frameIdx] = new Uint16Array(buf);
     return this.dirCache[frameIdx];
@@ -189,7 +191,9 @@ class WaveCanvasLayer {
 
   _renderHeight(grid, size, bounds, zoom) {
     const map = this.map;
-    const scale = 0.5;
+    // At higher zoom levels, render at full resolution to show grid detail.
+    // Below zoom 5 the grid cells are sub-pixel anyway, so half-res saves CPU.
+    const scale = zoom >= 5 ? 1.0 : 0.5;
     const rw = Math.ceil(size.x * scale);
     const rh = Math.ceil(size.y * scale);
 
