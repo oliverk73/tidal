@@ -107,7 +107,8 @@ def generate_tide_prediction(station):
                                       station=decoded_station,
                                       original_name=station,
                                       svg_url=svg_url,
-                                      meta_info=meta_info)
+                                      meta_info=meta_info,
+                                      station_names=_station_names)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html)
         print(f"✅ HTML-Seite erzeugt: {html_path}")

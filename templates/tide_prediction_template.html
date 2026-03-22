@@ -5,11 +5,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="/static/css/styles.css" rel="stylesheet"/>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
-<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<link href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" rel="stylesheet"/>
-<link href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" rel="stylesheet"/>
-<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="/static/js/suche.js" defer></script>
 
 <title>TideWise - Tide predictions &amp; forecasts {{ original_name }}</title>
@@ -20,8 +15,7 @@
 <nav class="topnav">
 <a href="/help/">Help</a>
 <a href="/about/">About</a>
-<input id="search" name="search" type="search" placeholder="Search for locations"/>
-<button type="submit">Search</button>
+<button id="search-trigger" type="button">Search for locations</button>
 </nav>
 </header>
 <main>
@@ -37,9 +31,22 @@
 <p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
 </main>
 <footer>
-<script>
-      console.log(5 + 6);
-    </script>
 </footer>
+
+<script>
+  var stationNames = {{ station_names | tojson }};
+</script>
+
+<!-- Search Modal Overlay -->
+<div id="search-modal" class="search-modal">
+  <div class="search-modal-content">
+    <div class="search-modal-header">
+      <input id="search-modal-input" type="text" placeholder="Search for tide stations..." autocomplete="off" />
+      <button id="search-modal-close" type="button">&times;</button>
+    </div>
+    <div id="search-modal-results" class="search-modal-results"></div>
+  </div>
+</div>
+
 </body>
 </html>
