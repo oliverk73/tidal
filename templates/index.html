@@ -40,11 +40,31 @@
     const map = L.map('map', {
       worldCopyJump: true,
       maxBoundsViscosity: 1.0,
-      maxBounds: [[-90, -180], [90, 180]]
+      maxBounds: [[-90, -180], [90, 180]],
+      zoomControl: false
     }).setView(
       savedView && savedView.center ? savedView.center : defaultLatLng,
       savedView && typeof savedView.zoom === 'number' ? savedView.zoom : defaultZoom
     );
+
+    // --- Locate button (above zoom) ---
+    const LocateControl = L.Control.extend({
+      options: { position: 'bottomleft' },
+      onAdd: function () {
+        const btn = L.DomUtil.create('div', 'leaflet-bar');
+        btn.innerHTML = '<a href="#" title="Mein Standort" style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;font-size:18px;text-decoration:none;color:#333;">&#x2316;</a>';
+        L.DomEvent.disableClickPropagation(btn);
+        btn.querySelector('a').addEventListener('click', function (e) {
+          e.preventDefault();
+          map.locate({ setView: true, maxZoom: 12 });
+        });
+        return btn;
+      }
+    });
+    new LocateControl().addTo(map);
+
+    // Zoom buttons bottom-left
+    L.control.zoom({ position: 'bottomleft' }).addTo(map);
 
     const basemap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
@@ -336,10 +356,10 @@
 
     // --- Nowcast Control Panel ---
     const NowcastControl = L.Control.extend({
-      options: { position: 'bottomleft' },
+      options: { position: 'topright' },
       onAdd: function () {
         const container = L.DomUtil.create('div', 'leaflet-bar');
-        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;margin-bottom:8px;';
+        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;';
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
@@ -379,11 +399,9 @@
         return container;
       }
     });
-    new NowcastControl().addTo(map);
-
     // --- Radar-Animation Controls (Custom Leaflet Control) ---
     const RadarControl = L.Control.extend({
-      options: { position: 'bottomright' },
+      options: { position: 'topright' },
       onAdd: function () {
         const container = L.DomUtil.create('div', 'leaflet-bar');
         container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;';
@@ -425,16 +443,14 @@
         return container;
       }
     });
-    new RadarControl().addTo(map);
-
     // --- Wave Forecast Layer (Canvas) ---
     const waveLayer = new WaveCanvasLayer(map);
 
     const WaveControl = L.Control.extend({
-      options: { position: 'bottomright' },
+      options: { position: 'topright' },
       onAdd: function () {
         const container = L.DomUtil.create('div', 'leaflet-bar');
-        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;margin-bottom:8px;';
+        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;';
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
@@ -502,13 +518,11 @@
         return container;
       }
     });
-    new WaveControl().addTo(map);
-
     // --- Precipitation Forecast Layer (Canvas) ---
     const precipLayer = new PrecipCanvasLayer(map);
 
     const PrecipControl = L.Control.extend({
-      options: { position: 'bottomleft' },
+      options: { position: 'topright' },
       onAdd: function () {
         const container = L.DomUtil.create('div', 'leaflet-bar');
         container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;';
@@ -579,8 +593,6 @@
         return container;
       }
     });
-    new PrecipControl().addTo(map);
-
     // --- Sea Surface Temperature Layer ---
     // Two modes: NASA GIBS WMTS tiles (MUR 1km, high quality) or local OISST Canvas
     const sstLayer = new SSTCanvasLayer(map);
@@ -627,7 +639,7 @@
       options: { position: 'topright' },
       onAdd: function () {
         const container = L.DomUtil.create('div', 'leaflet-bar');
-        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;margin-top:8px;';
+        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;';
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
@@ -702,7 +714,12 @@
         return container;
       }
     });
-    new SSTControl().addTo(map);
+    // --- Add overlay controls alphabetically (top to bottom) ---
+    new PrecipControl().addTo(map);    // Niederschlagsvorhersage
+    new NowcastControl().addTo(map);   // Radar-Nowcast DE+NL
+    new RadarControl().addTo(map);     // Regenradar Animation
+    new SSTControl().addTo(map);       // Wassertemperatur (SST)
+    new WaveControl().addTo(map);      // Wellenvorhersage (GFS-Wave)
 
     function saveMapView() {
       const center = map.getCenter();
