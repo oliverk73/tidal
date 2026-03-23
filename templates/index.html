@@ -593,8 +593,47 @@
     });
     new PrecipControl().addTo(map);
 
-    // --- Sea Surface Temperature Layer (Canvas) ---
+    // --- Sea Surface Temperature Layer ---
+    // Two modes: NASA GIBS WMTS tiles (MUR 1km, high quality) or local OISST Canvas
     const sstLayer = new SSTCanvasLayer(map);
+    let sstGibsLayer = null;
+    let sstMode = 'gibs'; // 'gibs' or 'oisst'
+
+    function sstGibsActivate() {
+      if (sstGibsLayer) return;
+      // NASA GIBS WMTS — MUR SST 1km, pre-rendered tiles, max zoom 7
+      sstGibsLayer = L.tileLayer(
+        'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/GHRSST_L4_MUR_Sea_Surface_Temperature/default/{time}/GoogleMapsCompatible_Level7/{z}/{y}/{x}.png',
+        {
+          time: '',  // empty = latest available
+          tileSize: 256,
+          maxNativeZoom: 7,
+          maxZoom: 18,
+          opacity: 0.7,
+          zIndex: 449,
+          attribution: 'SST: NASA GIBS / JPL MUR'
+        }
+      );
+      sstGibsLayer.addTo(map);
+    }
+
+    function sstGibsDeactivate() {
+      if (sstGibsLayer) {
+        map.removeLayer(sstGibsLayer);
+        sstGibsLayer = null;
+      }
+    }
+
+    async function sstOisstActivate() {
+      await sstLayer.loadMeta('/static/sst/sst_meta.json');
+      await sstLayer.loadGrid();
+      sstLayer.activate();
+    }
+
+    function sstDeactivateAll() {
+      sstGibsDeactivate();
+      sstLayer.deactivate();
+    }
 
     const SSTControl = L.Control.extend({
       options: { position: 'topright' },
@@ -604,16 +643,22 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="sst-toggle" style="margin-right:5px;">Wassertemperatur (NOAA OISST)' +
+              '<input type="checkbox" id="sst-toggle" style="margin-right:5px;">Wassertemperatur (SST)' +
             '</label>' +
           '</div>' +
           '<div id="sst-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
-            '<div id="sst-loading" style="color:#888;">Lade Daten...</div>' +
-            '<div id="sst-info" style="display:none;">' +
-              '<span id="sst-date" style="font-weight:bold;font-size:12px;">--</span>' +
-              '<div style="display:flex;gap:2px;align-items:center;font-size:11px;margin-top:4px;">' +
-                '<span style="background:linear-gradient(to right,#8caae6,#3c64c8,#1e8cd2,#00b4c8,#1ec390,#64d250,#c8d71e,#f0aa0a,#f06e14,#d2281e,#a01450);width:140px;height:10px;border-radius:3px;display:inline-block;"></span>' +
-                '<span>-2 - 34 °C</span>' +
+            '<div id="sst-loading" style="color:#888;display:none;">Lade Daten...</div>' +
+            '<div id="sst-info">' +
+              '<div style="display:flex;gap:6px;margin-bottom:4px;">' +
+                '<label style="cursor:pointer;font-size:12px;">' +
+                  '<input type="radio" name="sst-source" value="gibs" checked style="margin-right:3px;">MUR 1km (NASA)' +
+                '</label>' +
+                '<label style="cursor:pointer;font-size:12px;">' +
+                  '<input type="radio" name="sst-source" value="oisst" style="margin-right:3px;">OISST (lokal)' +
+                '</label>' +
+              '</div>' +
+              '<div style="display:flex;gap:2px;align-items:center;font-size:11px;">' +
+                '<img id="sst-legend" src="https://gibs.earthdata.nasa.gov/legends/GHRSST_Sea_Surface_Temperature_H.svg" style="width:140px;height:auto;" alt="SST Farbskala">' +
               '</div>' +
             '</div>' +
           '</div>';
@@ -625,23 +670,44 @@
           document.getElementById('sst-toggle').addEventListener('change', async function () {
             if (this.checked) {
               document.getElementById('sst-controls').style.display = 'flex';
-              document.getElementById('sst-loading').style.display = 'block';
-              document.getElementById('sst-info').style.display = 'none';
               try {
-                await sstLayer.loadMeta('/static/sst/sst_meta.json');
-                await sstLayer.loadGrid();
-                document.getElementById('sst-loading').style.display = 'none';
-                document.getElementById('sst-info').style.display = 'block';
-                document.getElementById('sst-date').textContent = sstLayer.getDateLabel();
-                sstLayer.activate();
+                if (sstMode === 'gibs') {
+                  sstGibsActivate();
+                } else {
+                  document.getElementById('sst-loading').style.display = 'block';
+                  await sstOisstActivate();
+                  document.getElementById('sst-loading').style.display = 'none';
+                }
               } catch (e) {
                 document.getElementById('sst-loading').textContent = 'Fehler beim Laden!';
                 console.error('SST layer error:', e);
               }
             } else {
               document.getElementById('sst-controls').style.display = 'none';
-              sstLayer.deactivate();
+              sstDeactivateAll();
             }
+          });
+
+          document.querySelectorAll('input[name="sst-source"]').forEach(function (radio) {
+            radio.addEventListener('change', async function () {
+              sstMode = this.value;
+              // Only switch if the main toggle is on
+              if (!document.getElementById('sst-toggle').checked) return;
+              sstDeactivateAll();
+              try {
+                if (sstMode === 'gibs') {
+                  document.getElementById('sst-loading').style.display = 'none';
+                  sstGibsActivate();
+                } else {
+                  document.getElementById('sst-loading').style.display = 'block';
+                  await sstOisstActivate();
+                  document.getElementById('sst-loading').style.display = 'none';
+                }
+              } catch (e) {
+                document.getElementById('sst-loading').textContent = 'Fehler beim Laden!';
+                console.error('SST source switch error:', e);
+              }
+            });
           });
         }, 0);
 
