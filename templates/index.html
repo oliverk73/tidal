@@ -467,10 +467,6 @@
                 '<span id="wv-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
               '</div>' +
               '<input type="range" id="wv-progress" min="0" max="8" value="0" style="width:180px;cursor:pointer;">' +
-              '<div style="display:flex;gap:2px;align-items:center;font-size:11px;margin-top:2px;">' +
-                '<span style="background:linear-gradient(to right,#0a28a0,#0078d2,#00bea8,#3cc83c,#d2d200,#eb9600,#d2281e,#960050);width:140px;height:10px;border-radius:3px;display:inline-block;"></span>' +
-                '<span>0.5 - 8+ m</span>' +
-              '</div>' +
             '</div>' +
           '</div>';
 
@@ -542,10 +538,6 @@
                 '<span id="pr-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
               '</div>' +
               '<input type="range" id="pr-progress" min="0" max="7" value="0" style="width:180px;cursor:pointer;">' +
-              '<div style="display:flex;gap:2px;align-items:center;font-size:11px;margin-top:2px;">' +
-                '<span style="background:linear-gradient(to right,#78c8ff,#3c96ff,#1464f0,#28c828,#c8e600,#ffc800,#ff7800,#e61e1e,#aa0078);width:140px;height:10px;border-radius:3px;display:inline-block;"></span>' +
-                '<span>0.2 - 64+ mm/h</span>' +
-              '</div>' +
             '</div>' +
           '</div>';
 
@@ -657,9 +649,6 @@
                   '<input type="radio" name="sst-source" value="oisst" style="margin-right:3px;">OISST (lokal)' +
                 '</label>' +
               '</div>' +
-              '<div style="display:flex;gap:2px;align-items:center;font-size:11px;">' +
-                '<img id="sst-legend" src="https://gibs.earthdata.nasa.gov/legends/GHRSST_Sea_Surface_Temperature_H.svg" style="width:140px;height:auto;" alt="SST Farbskala">' +
-              '</div>' +
             '</div>' +
           '</div>';
 
@@ -723,6 +712,58 @@
       { id: 'wv-toggle',  off: function () { document.getElementById('wv-controls').style.display = 'none'; waveLayer.deactivate(); } }
     ];
 
+    // --- Vertical color legend (shown next to active overlay) ---
+    const legendData = {
+      'pr-toggle': {
+        gradient: 'linear-gradient(to top,#78c8ff,#3c96ff,#1464f0,#28c828,#c8e600,#ffc800,#ff7800,#e61e1e,#aa0078)',
+        min: '0.2', max: '64+', unit: 'mm/h'
+      },
+      'nc-toggle': {
+        gradient: 'linear-gradient(to top,#009900,#33cc33,#ffff00,#ffcc00,#ff6600,#ff0000,#cc0000)',
+        min: '0', max: '100+', unit: 'mm/h'
+      },
+      'rv-toggle': {
+        gradient: 'linear-gradient(to top,#009900,#33cc33,#ffff00,#ffcc00,#ff6600,#ff0000,#cc0000)',
+        min: '0', max: '100+', unit: 'mm/h'
+      },
+      'sst-toggle': {
+        gradient: 'linear-gradient(to top,#04008c,#0000dc,#0058ff,#00c4ff,#00ffc4,#fce83a,#ff7800,#ff0000,#960000)',
+        min: '-2', max: '35', unit: '\u00B0C'
+      },
+      'wv-toggle': {
+        gradient: 'linear-gradient(to top,#0a28a0,#0078d2,#00bea8,#3cc83c,#d2d200,#eb9600,#d2281e,#960050)',
+        min: '0.5', max: '8+', unit: 'm'
+      }
+    };
+
+    // Legend element is a fixed-position div next to the topright controls
+    (function () {
+      var el = document.createElement('div');
+      el.id = 'overlay-legend';
+      el.innerHTML =
+        '<span id="legend-max"></span>' +
+        '<div id="legend-bar"></div>' +
+        '<span id="legend-min"></span>' +
+        '<span id="legend-unit"></span>';
+      document.getElementById('map').appendChild(el);
+    })();
+
+    function showLegend(toggleId) {
+      var el = document.getElementById('overlay-legend');
+      var data = legendData[toggleId];
+      if (!el || !data) { if (el) el.style.display = 'none'; return; }
+      document.getElementById('legend-bar').style.background = data.gradient;
+      document.getElementById('legend-max').textContent = data.max;
+      document.getElementById('legend-min').textContent = data.min;
+      document.getElementById('legend-unit').textContent = data.unit;
+      el.style.display = 'block';
+    }
+
+    function hideLegend() {
+      var el = document.getElementById('overlay-legend');
+      if (el) el.style.display = 'none';
+    }
+
     function deactivateOtherOverlays(activeId) {
       overlayDefs.forEach(function (def) {
         if (def.id !== activeId) {
@@ -742,13 +783,18 @@
     new SSTControl().addTo(map);       // Wassertemperatur (SST)
     new WaveControl().addTo(map);      // Wellenvorhersage (GFS-Wave)
 
-    // Wire up mutual exclusion after controls are in the DOM
+    // Wire up mutual exclusion + legend after controls are in the DOM
     setTimeout(function () {
       overlayDefs.forEach(function (def) {
         var cb = document.getElementById(def.id);
         if (cb) {
           cb.addEventListener('change', function () {
-            if (this.checked) deactivateOtherOverlays(def.id);
+            if (this.checked) {
+              deactivateOtherOverlays(def.id);
+              showLegend(def.id);
+            } else {
+              hideLegend();
+            }
           });
         }
       });
