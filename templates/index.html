@@ -680,6 +680,8 @@
           document.querySelectorAll('input[name="sst-source"]').forEach(function (radio) {
             radio.addEventListener('change', async function () {
               sstMode = this.value;
+              // Update legend for new SST source
+              if (document.getElementById('sst-toggle').checked) showLegend('sst-toggle');
               // Only switch if the main toggle is on
               if (!document.getElementById('sst-toggle').checked) return;
               sstDeactivateAll();
@@ -726,9 +728,13 @@
         gradient: 'linear-gradient(to top,#88ffee,#00cc00,#009900,#ffff00,#ffcc00,#ff6600,#ff0000,#cc0000,#aa00ff,#ffffff)',
         min: '0.5', max: '50+', unit: 'mm/h'
       },
-      'sst-toggle': {
-        gradient: 'linear-gradient(to top,#04008c,#0000dc,#0058ff,#00c4ff,#00ffc4,#fce83a,#ff7800,#ff0000,#960000)',
-        min: '-2', max: '35', unit: '\u00B0C'
+      'sst-toggle-gibs': {
+        gradient: 'linear-gradient(to top,#2B001A,#550249,#7A0677,#49095E,#1E104D,#1F2E76,#214EA1,#287BCB,#30AAF5,#1EA35D,#78D300,#F8F500,#FFB400,#FA6D00,#E03E00,#B01B00,#6B0200)',
+        min: '-2', max: '32', unit: '\u00B0C'
+      },
+      'sst-toggle-oisst': {
+        gradient: 'linear-gradient(to top,#c8dcff,#8caae6,#3c64c8,#1e8cd2,#00b4c8,#1ec391,#64d250,#c8d71e,#f0aa0a,#f06e14,#d22828,#a01450)',
+        min: '-2', max: '34', unit: '\u00B0C'
       },
       'wv-toggle': {
         gradient: 'linear-gradient(to top,#0a28a0,#0078d2,#00bea8,#3cc83c,#d2d200,#eb9600,#d2281e,#960050)',
@@ -750,7 +756,11 @@
 
     function showLegend(toggleId) {
       var el = document.getElementById('overlay-legend');
-      var data = legendData[toggleId];
+      var key = toggleId;
+      if (toggleId === 'sst-toggle') {
+        key = 'sst-toggle-' + sstMode;
+      }
+      var data = legendData[key] || legendData[toggleId];
       if (!el || !data) { if (el) el.style.display = 'none'; return; }
       document.getElementById('legend-bar').style.background = data.gradient;
       document.getElementById('legend-max').textContent = data.max;
