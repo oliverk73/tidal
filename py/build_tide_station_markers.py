@@ -1,7 +1,11 @@
 import re
 import os
 import glob
+import subprocess
 import unicodedata
+
+TCD_DIR = "/usr/share/xtide"
+
 
 def normalize_filename(name: str) -> str:
     name = unicodedata.normalize('NFKD', name)
@@ -10,144 +14,95 @@ def normalize_filename(name: str) -> str:
     name = re.sub(r"[\s,]+", "_", name)
     return name
 
+
+def get_stations_from_tcd(tcd_path):
+    """Parse station list from a single TCD file via tide command."""
+    env = os.environ.copy()
+    env["HFILE_PATH"] = tcd_path
+    result = subprocess.run(
+        ["tide", "-m", "l", "-tw", "200"],
+        capture_output=True, text=True, env=env
+    )
+    output = result.stdout or result.stderr
+    stations = []
+    pattern = re.compile(
+        r'^(.+?)\s{2,}(Ref|Sub)\s+([\d.]+)°\s*([NS]),\s*([\d.]+)°\s*([EW])$'
+    )
+    for line in output.splitlines():
+        if line.startswith("Indexing ") or line.startswith("Location list") or not line.strip():
+            continue
+        m = pattern.match(line)
+        if not m:
+            continue
+        name, stype, lat, ns, lon, ew = m.groups()
+        lat = float(lat) * (1 if ns == 'N' else -1)
+        lon = float(lon) * (1 if ew == 'E' else -1)
+        stations.append((name.strip(), stype, lat, lon))
+    return stations
+
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-HARMONICS_DIRS = [
-    os.path.join(PROJECT_ROOT, "harmonics"),
-]
+tcd_files = sorted(glob.glob(os.path.join(TCD_DIR, "*.tcd")))
+print(f"Gefunden: {len(tcd_files)} TCD-Dateien in {TCD_DIR}")
 
-EXCLUDE_PATTERNS = [
-    "*template*",
-    "*restored_check*",
-    "*bak*",
-]
+all_stations = []
+for tcd_file in tcd_files:
+    basename = os.path.basename(tcd_file)
+    stations = get_stations_from_tcd(tcd_file)
+    print(f"  {basename}: {len(stations)} Stationen")
+    for s in stations:
+        all_stations.append((*s, basename))
 
-def find_harmonics_files():
-    """Scan directories for valid XTide harmonics .txt files."""
-    files = []
-    for d in HARMONICS_DIRS:
-        if not os.path.isdir(d):
-            continue
-        for path in sorted(glob.glob(os.path.join(d, "*.txt"))):
-            basename = os.path.basename(path)
-            if any(glob.fnmatch.fnmatch(basename, pat) for pat in EXCLUDE_PATTERNS):
-                continue
-            try:
-                with open(path, "r", encoding="iso-8859-1") as f:
-                    head = f.read(4096)
-                if "WITHOUT ANY WARRANTY" in head:
-                    files.append(path)
-            except (OSError, UnicodeDecodeError):
-                continue
-    return files
-
-input_files = find_harmonics_files()
-print(f"Gefunden: {len(input_files)} Harmonics-Dateien")
-for f in input_files:
-    print(f"  {f}")
+print(f"Gesamt: {len(all_stations)} Stationen")
 
 output_file = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers.js")
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
-marker_count = 1
-marker_definitions = []
-
-icon_colors = [
-    "red", "blue", "green", "orange", "yellow",
-    "violet", "grey", "black", "gold", "pink"
-]
-
-icon_definitions = ""
-icon_template = """
-var icon_{idx} = new L.Icon({{
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-{color}.png',
+icon_definition = """
+var tideIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   shadowSize: [41, 41]
-}});
+});
 """
 
-marker_definitions.append("var markers = L.markerClusterGroup();")
+lines = ["var markers = L.markerClusterGroup();"]
 
-for file_index, input_file in enumerate(input_files):
-    try:
-        with open(input_file, "r", encoding="iso-8859-1") as f:
-            lines = f.readlines()
-    except FileNotFoundError:
-        continue
+for i, (name, stype, lat, lon, source_file) in enumerate(all_stations, 1):
+    safe_name = normalize_filename(name)
+    display_name = name.replace('"', '&quot;')
+    js_name = name.replace("\\", "\\\\").replace("'", "\\x27").replace('"', "\\x22")
 
-    color = icon_colors[file_index % len(icon_colors)]
-    icon_var = f"icon_{file_index + 1}"
-    icon_definitions += icon_template.format(idx=file_index + 1, color=color)
+    popup_html = (
+        f"<b>{display_name}</b><br>"
+        f"<a href=\\\"#\\\" onclick=\\\""
+        f"fetch('/generate/' + encodeURIComponent('{js_name}')).then(r => {{"
+        f"  if (r.ok) window.location.href = '/static/predictions/tide_prediction_{safe_name}.html';"
+        f"  else alert('Fehler beim Erzeugen der Vorhersage.');"
+        f"}}); return false;\\\">🌊 Vorhersage anzeigen</a><br>"
+        f"📄 Aus Datei: {source_file}"
+    )
 
-    inside_block = False
-    lat = lon = name = None
+    marker_var = f"m{i}"
+    lines.append(
+        f'var {marker_var} = L.marker([{lat}, {lon}], {{icon: tideIcon}});'
+    )
+    lines.append(f'{marker_var}.bindPopup("{popup_html}");')
+    lines.append(f"markers.addLayer({marker_var});")
 
-    for i in range(len(lines)):
-        line = lines[i].strip()
-
-        if not inside_block:
-            if "WITHOUT ANY WARRANTY" in line:
-                inside_block = True
-            continue
-
-        if line.startswith("# BEGIN HOT COMMENTS"):
-            lat = lon = name = None
-            for j in range(i, i + 15):
-                lat_match = re.search(r"#\s*!latitude:\s*([-+]?[0-9]*\.?[0-9]+)", lines[j])
-                lon_match = re.search(r"#\s*!longitude:\s*([-+]?[0-9]*\.?[0-9]+)", lines[j])
-                if lat_match:
-                    lat = lat_match.group(1)
-                if lon_match:
-                    lon = lon_match.group(1)
-                if lat and lon:
-                    break
-            continue
-
-        if lat and lon and not line.startswith("#") and name is None:
-            name = line.strip().replace(" - READ flaterco.com/pol.html", "")
-            name_escaped = name.replace('"', '\\"')
-            safe_name = normalize_filename(name)
-
-            js_name = name.replace("\\", "\\\\").replace("'", "\\\\x27")
-            
-            marker_var = f"marker{marker_count}"
-            marker_count += 1
-
-            source_file = os.path.basename(input_file)
-
-            popup_html = (
-                f"<b>{name}</b><br>"
-                f"<a href='#' onclick=\\\""
-                f"fetch('/generate/' + encodeURIComponent('{js_name}')).then(r => {{"
-                f"  if (r.ok) window.location.href = '/static/predictions/tide_prediction_{safe_name}.html';"
-                f"  else alert('❌ Fehler beim Erzeugen der Vorhersage.');"
-                f"}}); return false;\\\">🌊 Vorhersage anzeigen</a><br>"
-                f"📄 Aus Datei: {source_file}"
-            )
-            
-            marker_code = (
-                f"var {marker_var} = L.marker([{lat}, {lon}], {{icon: {icon_var}}});\n"
-                f'{marker_var}.bindPopup("{popup_html}");\n'
-                f"markers.addLayer({marker_var});"
-            )
-
-
-            marker_definitions.append(marker_code)
-
-marker_definitions.append("map.addLayer(markers);")
-# marker_definitions.append("map.fitBounds(markers.getBounds());")
-
-marker_definitions.append("""
+lines.append("map.addLayer(markers);")
+lines.append("""
 if (!localStorage.getItem('mapView')) {
   map.fitBounds(markers.getBounds());
 }
 """)
 
 with open(output_file, "w", encoding="utf-8") as f:
-    f.write(icon_definitions)
-    f.write("\n".join(marker_definitions))
+    f.write(icon_definition)
+    f.write("\n".join(lines))
 
-print(f"✅ Total markers generated: {marker_count - 1}")
+print(f"Fertig: {len(all_stations)} Marker in {output_file}")
