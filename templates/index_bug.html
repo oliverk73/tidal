@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/static/css/styles.css" rel="stylesheet"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" rel="stylesheet"/>
+<link href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" rel="stylesheet"/>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="/static/js/suche.js" defer></script>
+
+<title>TideWise - Tide predictions &amp; forecasts</title>
+</head>
+<body>
+<script>
+  if (window.performance && performance.getEntriesByType("navigation")[0].type === "back_forward") {
+    console.log("↩️ Zurück-Navigation erkannt – Seite wird neu geladen.");
+    location.reload();
+  }
+</script>
+<header>
+<a href="/"><img alt="TideWise Home" id="logo" src="/static/images/tide_wise.svg"/></a>
+<nav class="topnav">
+<a href="/help/">Help</a>
+<a href="/about/">About</a>
+<input id="search" name="search" type="search" placeholder="Search for locations"/>
+<button type="submit">Search</button>
+</nav>
+</header>
+<main>
+<h1>TideWise - Tide predictions &amp; forecasts</h1>
+<h2>Tide calendars with high and low tides times as well as tide curves</h2>
+<p id="description">Accurate tide predictions &amp; charts with low (ebbing) &amp; high tides (flooding) for sailors, surfers, fishermen and watersports enthusiasts. Tide charts for ports, harbors, surfspots and other coastal locations. 🌊</p>
+
+<div id="map" style="height: 730px;"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log("🌍 DOM geladen. Initialisiere Leaflet-Karte...");
+
+    const savedView = JSON.parse(localStorage.getItem('mapView'));
+    console.log("📦 localStorage mapView:", savedView);
+
+    const defaultLatLng = [44.9672, -103.7715];
+    const defaultZoom = 4;
+
+    const map = L.map('map', {
+      worldCopyJump: true,
+      maxBoundsViscosity: 1.0,
+      maxBounds: [[-90, -180], [90, 180]]
+    }).setView(
+      savedView && savedView.center ? savedView.center : defaultLatLng,
+      savedView && typeof savedView.zoom === 'number' ? savedView.zoom : defaultZoom
+    );
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    function saveMapView() {
+      const center = map.getCenter();
+      const zoom = map.getZoom();
+      console.log("💾 Speichere Kartensicht:", center, zoom);
+      localStorage.setItem('mapView', JSON.stringify({
+        center: [center.lat, center.lng],
+        zoom: zoom
+      }));
+    }
+
+    map.on('moveend', saveMapView);
+    window.map = map;
+
+    // Marker-Script dynamisch nachladen
+    const script = document.createElement('script');
+    script.src = '/static/js/leaflet_markers.js';
+    script.onload = function () {
+      if (typeof markers !== 'undefined' && typeof map !== 'undefined') {
+        map.addLayer(markers);
+      } else {
+        console.warn("❗ Marker oder Map nicht definiert");
+      }
+    };
+    document.body.appendChild(script);
+  });
+</script>
+
+
+
+
+<p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
+</main>
+<footer>
+<script>
+      console.log(5 + 6);
+    </script>
+</footer>
+</body>
+</html>

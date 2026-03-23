@@ -20,8 +20,8 @@ import urllib.request
 from pathlib import Path
 from collections import defaultdict
 
-INPUT_PATH = Path("/home/oliver/harmonics_working/harmonics_ticon4_worldwide.txt")
-OUTPUT_PATH = Path("/home/oliver/harmonics_working/harmonics_ticon4_worldwide_edited.txt")
+INPUT_PATH = Path("/home/oliver/harmonics/ticon/harmonics_ticon4_worldwide.txt")
+OUTPUT_PATH = Path("/home/oliver/harmonics/ticon/harmonics_ticon4_worldwide_edited.txt")
 
 GEONAMES_USER = "oliver_k73"
 MIN_M2_AMPLITUDE = 0.01  # meters
@@ -41,23 +41,23 @@ US_COUNTRIES = {
 
 # Reference harmonics files with proper station names
 REF_FILES = [
-    "/home/oliver/harmonics/harmonics-dwf-20251228-free.txt",
-    "/home/oliver/harmonics_edited/harmonics-dwf-20241229-free.txt",
-    "/home/oliver/harmonics_edited/harmonics_old_no_us_no_dupes3.txt",
-    "/home/oliver/harmonics_edited/harmonics_pierre_lavergne_v10_no_dupes4.txt",
-    "/home/oliver/harmonics_edited/harmonics-dwf-20100529-nonfree.txt",
-    "/home/oliver/harmonics_edited/harmonics-dwf-20070318_no_us_no_dupes.txt",
-    "/home/oliver/harmonics_edited/harmonics-2004-06-14_no_us_no_dupes2.txt",
-    "/home/oliver/harmonics_edited/harmonics_pierre_lavergne_v9_europe_no_us_no_dupes5.txt",
-    "/home/oliver/harmonics_working/harmonics_utide_australia.txt",
-    "/home/oliver/harmonics_working/harmonics_utide_france.txt",
-    "/home/oliver/harmonics_working/harmonics_utide_denmark.txt",
-    "/home/oliver/harmonics_working/harmonics_utide_netherlands.txt",
-    "/home/oliver/harmonics_working/harmonics_utide_uk_bodc.txt",
-    "/home/oliver/harmonics_working/harmonics_utide_ireland.txt",
-    "/home/oliver/harmonics_working/harmonics_utide_germany_z0corrected.txt",
-    "/home/oliver/harmonics_working/harmonics_utide_canada_all.txt",
-    "/home/oliver/harmonics_working/harmonics_puertos_spain.txt",
+    "/home/oliver/harmonics/classic/harmonics-dwf-20251228-free.txt",
+    "/home/oliver/harmonics/classic/harmonics-dwf-20241229-free.txt",
+    "/home/oliver/harmonics/classic/harmonics_old_no_us_no_dupes3.txt",
+    "/home/oliver/harmonics/classic/harmonics_pierre_lavergne_v10_no_dupes4.txt",
+    "/home/oliver/harmonics/classic/harmonics-dwf-20100529-nonfree.txt",
+    "/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt",
+    "/home/oliver/harmonics/classic/harmonics-2004-06-14_no_us_no_dupes2.txt",
+    "/home/oliver/harmonics/classic/harmonics_pierre_lavergne_v9_europe_no_us_no_dupes5.txt",
+    "/home/oliver/harmonics/utide/harmonics_utide_australia.txt",
+    "/home/oliver/harmonics/utide/harmonics_utide_france.txt",
+    "/home/oliver/harmonics/utide/harmonics_utide_denmark.txt",
+    "/home/oliver/harmonics/utide/harmonics_utide_netherlands.txt",
+    "/home/oliver/harmonics/utide/harmonics_utide_uk_bodc.txt",
+    "/home/oliver/harmonics/utide/harmonics_utide_ireland.txt",
+    "/home/oliver/harmonics/utide/harmonics_utide_germany_z0corrected.txt",
+    "/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt",
+    "/home/oliver/harmonics/ihm/harmonics_puertos_spain.txt",
 ]
 
 # Manual fixes for German stations not in Pegelonline or with wrong names

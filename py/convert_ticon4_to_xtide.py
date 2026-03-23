@@ -22,8 +22,8 @@ sys.path.insert(0, '/home/oliver/py')
 from generate_germany_harmonics_175 import CONSTITUENTS_175
 
 TICON4_CSV = Path("/tmp/ticon4_stations.csv")
-TEMPLATE_PATH = Path("/home/oliver/harmonics_working/harmonics_template.txt")
-OUTPUT_PATH = Path("/home/oliver/harmonics_working/harmonics_ticon4_worldwide.txt")
+TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_template.txt")
+OUTPUT_PATH = Path("/home/oliver/harmonics/ticon/harmonics_ticon4_worldwide.txt")
 
 # Minimum years of observations to include
 MIN_YEARS = 5

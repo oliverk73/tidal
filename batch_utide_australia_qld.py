@@ -21,9 +21,9 @@ from generate_germany_harmonics_175 import (
 )
 
 NPZ_DIR = Path("/home/oliver/water_levels/Australia_QLD/npz")
-TEMPLATE_PATH = Path("/home/oliver/harmonics_working/harmonics-dwf-20070318_no_us_no_dupes.txt")
-OUTPUT_PATH = Path("/home/oliver/harmonics_working/harmonics_utide_australia_qld.txt")
-CHECKPOINT_DIR = Path("/home/oliver/harmonics_working/checkpoints_au_qld")
+TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt")
+OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_australia_qld.txt")
+CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_au_qld")
 
 USE_LAST_N_YEARS = 19
 MIN_R_SQUARED = 0.60

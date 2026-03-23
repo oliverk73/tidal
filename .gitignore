@@ -1,0 +1,50 @@
+# Generated marker file (rebuilt from TCD)
+static/js/leaflet_markers.js
+
+# Python
+__pycache__/
+*.pyc
+
+# Binary / large files
+*.pkl
+*.tcd
+*.ods
+*.pdf
+*.bin
+*.idx
+*.grib2
+*.npz
+*.zip
+*.webp
+
+# Harmonics: checkpoints, backups, help data
+harmonics/utide/checkpoints*/
+harmonics/utide/bak/
+harmonics/utide/harmonics_utide_lat/
+harmonics/utide/batch_utide.log
+harmonics/help/
+
+# Windows Zone.Identifier metadata
+*:Zone.Identifier
+*:com.dropbox.attrs
+
+# System / editor
+.cache/
+.local/
+.config/
+.ssh/
+.claude/
+.claude.json
+.claude.json.backup
+.landscape/
+*.swp
+*.swo
+*~
+
+# Data directories (not harmonics)
+water_levels/
+static/predictions/
+static/precip/
+static/images/
+static/waves/*.idx
+static/sst/
