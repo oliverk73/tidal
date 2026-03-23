@@ -13,6 +13,7 @@
 <script src="/static/js/suche.js" defer></script>
 <script src="/static/js/wave_layer.js" defer></script>
 <script src="/static/js/precip_layer.js" defer></script>
+<script src="/static/js/sst_layer.js" defer></script>
 
 <title>TideWise - Tide predictions &amp; forecasts</title>
 </head>
@@ -189,19 +190,17 @@
 
     // Layer-Control (DWD static layer removed — replaced by Nowcast animation below)
 
-    // --- DWD Radar Nowcast Animation (Deutschland, -30min..+2h, 5-min steps) ---
+    // --- Radar Nowcast Animation (DWD Deutschland + KNMI Niederlande, -30min..+2h, 5-min steps) ---
     let ncFrames = [];
     let ncPosition = 0;
     let ncTimer = null;
-    let ncLayerCache = {};
-    let ncCurrentLayer = null;
+    let ncLayerCache = {};       // pos -> [dwdLayer, knmiLayer]
+    let ncCurrentLayers = null;  // array of active layers
     let ncLoading = false;
     let ncActive = false;
 
     function ncBuildFrames() {
-      // Generate time steps: -30min (past) to +120min (forecast), every 5min
       const now = new Date();
-      // Round down to nearest 5 minutes
       now.setMinutes(Math.floor(now.getMinutes() / 5) * 5, 0, 0);
       const frames = [];
       for (let m = -30; m <= 120; m += 5) {
@@ -223,8 +222,8 @@
       return dateStr + ' ' + timeStr + tag;
     }
 
-    function ncCreateLayer(frame) {
-      return L.tileLayer.wms('https://maps.dwd.de/geoserver/dwd/wms?', {
+    function ncCreateLayers(frame) {
+      var dwd = L.tileLayer.wms('https://maps.dwd.de/geoserver/dwd/wms?', {
         layers: 'dwd:Niederschlagsradar',
         transparent: true,
         format: 'image/png',
@@ -233,6 +232,21 @@
         maxZoom: 18,
         zIndex: 1001
       });
+      var knmi = L.tileLayer.wms('https://anonymous.api.dataplatform.knmi.nl/wms/adaguc-server?DATASET=radar_forecast_2.0&SERVICE=WMS', {
+        layers: 'precipitation_nowcast',
+        transparent: true,
+        format: 'image/png',
+        time: frame.time,
+        opacity: 0.001,
+        maxZoom: 18,
+        zIndex: 1001
+      });
+      return [dwd, knmi];
+    }
+
+    function ncSetOpacity(layers, op) {
+      if (!layers) return;
+      for (var i = 0; i < layers.length; i++) layers[i].setOpacity(op);
     }
 
     function ncShowFrame(pos) {
@@ -242,35 +256,40 @@
 
       const tsEl = document.getElementById('nc-timestamp');
       if (tsEl) tsEl.textContent = ncFormatLabel(frame);
-      // Highlight forecast frames
       if (tsEl) tsEl.style.color = frame.isForecast ? '#e07000' : '#333';
 
       const progEl = document.getElementById('nc-progress');
       if (progEl) progEl.value = pos;
 
-      const oldLayer = ncCurrentLayer;
+      const oldLayers = ncCurrentLayers;
 
       if (ncLayerCache[pos]) {
-        if (oldLayer) oldLayer.setOpacity(0);
-        ncLayerCache[pos].setOpacity(0.7);
-        ncCurrentLayer = ncLayerCache[pos];
+        ncSetOpacity(oldLayers, 0);
+        ncSetOpacity(ncLayerCache[pos], 0.7);
+        ncCurrentLayers = ncLayerCache[pos];
         ncPosition = pos;
         if (ncTimer !== null) ncTimer = setTimeout(ncPlay, 600);
         return;
       }
 
       ncLoading = true;
-      const newLayer = ncCreateLayer(frame);
-      newLayer.on('load', function () {
-        newLayer.setOpacity(0.7);
-        if (oldLayer) oldLayer.setOpacity(0);
-        ncLayerCache[pos] = newLayer;
-        ncCurrentLayer = newLayer;
+      const newLayers = ncCreateLayers(frame);
+      var loadCount = 0;
+      function onLayerLoad() {
+        loadCount++;
+        if (loadCount < newLayers.length) return;
+        ncSetOpacity(newLayers, 0.7);
+        ncSetOpacity(oldLayers, 0);
+        ncLayerCache[pos] = newLayers;
+        ncCurrentLayers = newLayers;
         ncPosition = pos;
         ncLoading = false;
         if (ncTimer !== null) ncTimer = setTimeout(ncPlay, 600);
-      });
-      newLayer.addTo(map);
+      }
+      for (var i = 0; i < newLayers.length; i++) {
+        newLayers[i].on('load', onLayerLoad);
+        newLayers[i].addTo(map);
+      }
     }
 
     function ncPlay() {
@@ -293,9 +312,11 @@
 
     function ncClearCache() {
       ncStop();
-      for (var p in ncLayerCache) { map.removeLayer(ncLayerCache[p]); }
+      for (var p in ncLayerCache) {
+        for (var i = 0; i < ncLayerCache[p].length; i++) map.removeLayer(ncLayerCache[p][i]);
+      }
       ncLayerCache = {};
-      ncCurrentLayer = null;
+      ncCurrentLayers = null;
     }
 
     function ncToggle(on) {
@@ -306,7 +327,6 @@
         ncFrames = ncBuildFrames();
         const progEl = document.getElementById('nc-progress');
         if (progEl) { progEl.max = ncFrames.length - 1; progEl.value = 0; }
-        // Start at "now" (offset=0, index 6 for -30min start)
         const nowIdx = ncFrames.findIndex(f => f.offset === 0);
         ncShowFrame(nowIdx >= 0 ? nowIdx : 0);
       } else {
@@ -315,7 +335,6 @@
       }
     }
 
-    // Refresh frames every 5 min
     setInterval(function () {
       if (ncActive) {
         ncClearCache();
@@ -336,7 +355,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="nc-toggle" style="margin-right:5px;">Radar-Nowcast DE (-30min..+2h)' +
+              '<input type="checkbox" id="nc-toggle" style="margin-right:5px;">Radar-Nowcast DE+NL (-30min..+2h)' +
             '</label>' +
           '</div>' +
           '<div id="nc-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -347,7 +366,7 @@
             '</div>' +
             '<span id="nc-timestamp" style="min-width:180px;text-align:center;font-weight:bold;font-size:12px;">--</span>' +
             '<input type="range" id="nc-progress" min="0" max="30" value="0" style="width:180px;cursor:pointer;">' +
-            '<div style="font-size:10px;color:#888;">Quelle: DWD Niederschlagsradar (1km)</div>' +
+            '<div style="font-size:10px;color:#888;">Quellen: DWD (1km) + KNMI (1km)</div>' +
           '</div>';
 
         L.DomEvent.disableClickPropagation(container);
@@ -573,6 +592,63 @@
       }
     });
     new PrecipControl().addTo(map);
+
+    // --- Sea Surface Temperature Layer (Canvas) ---
+    const sstLayer = new SSTCanvasLayer(map);
+
+    const SSTControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar');
+        container.style.cssText = 'background:#fff;padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3);user-select:none;margin-top:8px;';
+        container.innerHTML =
+          '<div style="margin-bottom:6px;font-weight:bold;">' +
+            '<label style="cursor:pointer;">' +
+              '<input type="checkbox" id="sst-toggle" style="margin-right:5px;">Wassertemperatur (NOAA OISST)' +
+            '</label>' +
+          '</div>' +
+          '<div id="sst-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
+            '<div id="sst-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="sst-info" style="display:none;">' +
+              '<span id="sst-date" style="font-weight:bold;font-size:12px;">--</span>' +
+              '<div style="display:flex;gap:2px;align-items:center;font-size:11px;margin-top:4px;">' +
+                '<span style="background:linear-gradient(to right,#8caae6,#3c64c8,#1e8cd2,#00b4c8,#1ec390,#64d250,#c8d71e,#f0aa0a,#f06e14,#d2281e,#a01450);width:140px;height:10px;border-radius:3px;display:inline-block;"></span>' +
+                '<span>-2 - 34 °C</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+
+        setTimeout(function () {
+          document.getElementById('sst-toggle').addEventListener('change', async function () {
+            if (this.checked) {
+              document.getElementById('sst-controls').style.display = 'flex';
+              document.getElementById('sst-loading').style.display = 'block';
+              document.getElementById('sst-info').style.display = 'none';
+              try {
+                await sstLayer.loadMeta('/static/sst/sst_meta.json');
+                await sstLayer.loadGrid();
+                document.getElementById('sst-loading').style.display = 'none';
+                document.getElementById('sst-info').style.display = 'block';
+                document.getElementById('sst-date').textContent = sstLayer.getDateLabel();
+                sstLayer.activate();
+              } catch (e) {
+                document.getElementById('sst-loading').textContent = 'Fehler beim Laden!';
+                console.error('SST layer error:', e);
+              }
+            } else {
+              document.getElementById('sst-controls').style.display = 'none';
+              sstLayer.deactivate();
+            }
+          });
+        }, 0);
+
+        return container;
+      }
+    });
+    new SSTControl().addTo(map);
 
     function saveMapView() {
       const center = map.getCenter();
