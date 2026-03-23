@@ -20,24 +20,12 @@
 <body>
 <script>
   if (window.performance && performance.getEntriesByType("navigation")[0].type === "back_forward") {
-    console.log("↩️ Zurück-Navigation erkannt – Seite wird neu geladen.");
     location.reload();
   }
 </script>
-<header>
-<a href="/"><img alt="TideWise Home" id="logo" src="/static/images/tide_wise.svg"/></a>
-<nav class="topnav">
-<a href="/help/">Help</a>
-<a href="/about/">About</a>
-<button id="search-trigger" type="button">Search for locations</button>
-</nav>
-</header>
-<main>
-<h1>TideWise - Tide predictions &amp; forecasts</h1>
-<h2>Tide calendars with high and low tides times as well as tide curves</h2>
-<p id="description">Accurate tide predictions &amp; charts with low (ebbing) &amp; high tides (flooding) for sailors, surfers, fishermen and watersports enthusiasts. Tide charts for ports, harbors, surfspots and other coastal locations. 🌊</p>
 
-<div id="map" style="height: 730px;"></div>
+<div id="map"></div>
+<button id="search-trigger" type="button">Search for locations</button>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -746,13 +734,6 @@
   }, 100);
 </script>
 
-<p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
-</main>
-<footer>
-<script>
-      console.log(5 + 6);
-    </script>
-</footer>
 
 <!-- Search Modal Overlay -->
 <div id="search-modal" class="search-modal">
