@@ -714,12 +714,45 @@
         return container;
       }
     });
+    // --- Mutual exclusion: only one overlay at a time ---
+    const overlayDefs = [
+      { id: 'pr-toggle',  off: function () { document.getElementById('pr-controls').style.display = 'none'; precipLayer.deactivate(); } },
+      { id: 'nc-toggle',  off: function () { document.getElementById('nc-controls').style.display = 'none'; ncClearCache(); ncActive = false; } },
+      { id: 'rv-toggle',  off: function () { document.getElementById('rv-controls').style.display = 'none'; rvStop(); rvClearCache(); rvActive = false; } },
+      { id: 'sst-toggle', off: function () { document.getElementById('sst-controls').style.display = 'none'; sstDeactivateAll(); } },
+      { id: 'wv-toggle',  off: function () { document.getElementById('wv-controls').style.display = 'none'; waveLayer.deactivate(); } }
+    ];
+
+    function deactivateOtherOverlays(activeId) {
+      overlayDefs.forEach(function (def) {
+        if (def.id !== activeId) {
+          var cb = document.getElementById(def.id);
+          if (cb && cb.checked) {
+            cb.checked = false;
+            def.off();
+          }
+        }
+      });
+    }
+
     // --- Add overlay controls alphabetically (top to bottom) ---
     new PrecipControl().addTo(map);    // Niederschlagsvorhersage
     new NowcastControl().addTo(map);   // Radar-Nowcast DE+NL
     new RadarControl().addTo(map);     // Regenradar Animation
     new SSTControl().addTo(map);       // Wassertemperatur (SST)
     new WaveControl().addTo(map);      // Wellenvorhersage (GFS-Wave)
+
+    // Wire up mutual exclusion after controls are in the DOM
+    setTimeout(function () {
+      overlayDefs.forEach(function (def) {
+        var cb = document.getElementById(def.id);
+        if (cb) {
+          cb.addEventListener('change', function () {
+            if (this.checked) deactivateOtherOverlays(def.id);
+          });
+        }
+      });
+    }, 0);
 
     function saveMapView() {
       const center = map.getCenter();
