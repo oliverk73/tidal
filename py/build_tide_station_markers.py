@@ -61,8 +61,8 @@ os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
 icon_definition = """
 var tideIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconUrl: '/static/images/marker-icon-blue.png',
+  shadowUrl: '/static/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -70,7 +70,8 @@ var tideIcon = new L.Icon({
 });
 """
 
-lines = ["var markers = L.markerClusterGroup();"]
+lines = ["var stationCoords = {};"]
+lines.append("var markers = L.markerClusterGroup();")
 
 for i, (name, stype, lat, lon, source_file) in enumerate(all_stations, 1):
     safe_name = normalize_filename(name)
@@ -88,6 +89,9 @@ for i, (name, stype, lat, lon, source_file) in enumerate(all_stations, 1):
     )
 
     marker_var = f"m{i}"
+    # Add to stationCoords lookup for search-to-map zoom
+    coord_key = name.replace("\\", "\\\\").replace("'", "\\'")
+    lines.append(f"stationCoords['{coord_key}'] = [{lat}, {lon}];")
     lines.append(
         f'var {marker_var} = L.marker([{lat}, {lon}], {{icon: tideIcon}});'
     )

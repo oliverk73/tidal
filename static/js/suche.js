@@ -83,11 +83,24 @@ document.addEventListener("DOMContentLoaded", function () {
     var limited = matches.slice(0, showMax);
     var html = '<div class="search-modal-count">' + matches.length + ' results</div>';
 
+    var hasCoords = (typeof stationCoords !== 'undefined');
+
     limited.forEach(function (full) {
       var p = parseName(full);
+      var mapBtn = '';
+      if (hasCoords && stationCoords[full]) {
+        mapBtn = '<button class="search-modal-map-btn" data-station-map="' + escapeHtml(full) + '" title="Auf Karte zeigen">' +
+          '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+          '<path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/>' +
+          '<circle cx="12" cy="10" r="3"/>' +
+          '</svg></button>';
+      }
       html += '<div class="search-modal-item" data-station="' + escapeHtml(full) + '">' +
+        '<div class="search-modal-item-text">' +
         '<span class="search-modal-item-name">' + highlightMatch(p.name, q) + '</span>' +
         (p.detail ? '<span class="search-modal-item-detail">' + highlightMatch(p.detail, q) + '</span>' : '') +
+        '</div>' +
+        mapBtn +
         '</div>';
     });
 
@@ -98,7 +111,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     resultsEl.innerHTML = html;
 
-    // Click handlers
+    // Click handler: map button → zoom to station
+    resultsEl.querySelectorAll(".search-modal-map-btn").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var station = this.getAttribute("data-station-map");
+        var coords = stationCoords[station];
+        if (coords && window.map) {
+          closeModal();
+          window.map.setView(coords, 11);
+          // Open the marker popup
+          if (typeof markers !== 'undefined') {
+            markers.eachLayer(function (layer) {
+              var ll = layer.getLatLng();
+              if (Math.abs(ll.lat - coords[0]) < 0.0001 && Math.abs(ll.lng - coords[1]) < 0.0001) {
+                // Spiderfied clusters need a small delay
+                setTimeout(function () { layer.openPopup(); }, 300);
+              }
+            });
+          }
+        }
+      });
+    });
+
+    // Click handler: item text → generate prediction
     resultsEl.querySelectorAll(".search-modal-item").forEach(function (el) {
       el.addEventListener("click", function () {
         var station = this.getAttribute("data-station");

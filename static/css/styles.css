@@ -177,7 +177,8 @@ html, body {
 
 .search-modal-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   padding: 10px 16px;
   cursor: pointer;
   border-bottom: 1px solid #f0f0f0;
@@ -185,6 +186,31 @@ html, body {
 }
 .search-modal-item:hover {
   background-color: #e3f2fd;
+}
+.search-modal-item-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.search-modal-map-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #1976d2;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+.search-modal-map-btn:hover {
+  background: #1976d2;
+  color: #fff;
 }
 
 .search-modal-item-name {
