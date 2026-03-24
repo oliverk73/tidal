@@ -47,12 +47,17 @@ tcd_files = sorted(glob.glob(os.path.join(TCD_DIR, "*.tcd")))
 print(f"Gefunden: {len(tcd_files)} TCD-Dateien in {TCD_DIR}")
 
 all_stations = []
+seen_names = set()
 for tcd_file in tcd_files:
     basename = os.path.basename(tcd_file)
     stations = get_stations_from_tcd(tcd_file)
-    print(f"  {basename}: {len(stations)} Stationen")
+    added = 0
     for s in stations:
-        all_stations.append((*s, basename))
+        if s[0] not in seen_names:
+            seen_names.add(s[0])
+            all_stations.append((*s, basename))
+            added += 1
+    print(f"  {basename}: {len(stations)} Stationen ({len(stations) - added} Duplikate übersprungen)")
 
 print(f"Gesamt: {len(all_stations)} Stationen")
 
