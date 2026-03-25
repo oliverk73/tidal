@@ -61,6 +61,71 @@ def rebuild_tcd(txt_path, tcd_basename):
     subprocess.run(["build_tide_db", tcd_path, txt_path], check=True)
 
 
+def rename_station_in_txt(txt_path, old_name, new_name):
+    """Rename a station in a harmonics .txt file (ISO-8859-1)."""
+    with open(txt_path, "r", encoding="iso-8859-1") as f:
+        lines = f.readlines()
+
+    found = False
+    for i, line in enumerate(lines):
+        stripped = line.rstrip("\n").rstrip("\r")
+        if stripped == old_name:
+            lines[i] = new_name + "\n"
+            found = True
+            break
+
+    if not found:
+        return False
+
+    with open(txt_path, "w", encoding="iso-8859-1") as f:
+        f.writelines(lines)
+    return True
+
+
+def rename_station_in_markers_js(old_name, new_name):
+    """Rename a station in leaflet_markers.js — update all references."""
+    with open(MARKERS_JS, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    old_escaped = re.escape(old_name)
+    new_display = new_name.replace('"', '&quot;')
+    new_js = new_name.replace("\\", "\\\\").replace("'", "\\x27").replace('"', "\\x22")
+    new_coord_key = new_name.replace("\\", "\\\\").replace("'", "\\'")
+    old_coord_key = old_name.replace("\\", "\\\\").replace("'", "\\'")
+    old_safe = normalize_filename(old_name)
+    new_safe = normalize_filename(new_name)
+
+    # stationCoords['Old'] → stationCoords['New']
+    content = content.replace(
+        f"stationCoords['{old_coord_key}']",
+        f"stationCoords['{new_coord_key}']"
+    )
+    # stationSources['Old'] → stationSources['New']
+    content = content.replace(
+        f"stationSources['{old_coord_key}']",
+        f"stationSources['{new_coord_key}']"
+    )
+    # Popup: <b>Old</b> → <b>New</b>
+    content = content.replace(
+        f"<b>{old_name.replace(chr(34), '&quot;')}</b>",
+        f"<b>{new_display}</b>"
+    )
+    # Popup: encodeURIComponent('Old') → encodeURIComponent('New')
+    old_js = old_name.replace("\\", "\\\\").replace("'", "\\x27").replace('"', "\\x22")
+    content = content.replace(
+        f"encodeURIComponent('{old_js}')",
+        f"encodeURIComponent('{new_js}')"
+    )
+    # Popup: tide_prediction_OldSafe.html → tide_prediction_NewSafe.html
+    content = content.replace(
+        f"tide_prediction_{old_safe}.html",
+        f"tide_prediction_{new_safe}.html"
+    )
+
+    with open(MARKERS_JS, "w", encoding="utf-8") as f:
+        f.write(content)
+
+
 def update_markers_js(station_name, new_lat, new_lon):
     """Update coordinates for a station directly in leaflet_markers.js."""
     with open(MARKERS_JS, "r", encoding="utf-8") as f:
@@ -233,6 +298,43 @@ def update_coordinates():
 
     except Exception as e:
         print(f"❌ Fehler beim Aktualisieren der Koordinaten: {e}")
+        return jsonify(error=str(e)), 500
+
+
+@app.route("/update_station_name", methods=["POST"])
+def update_station_name():
+    try:
+        data = request.get_json()
+        old_name = data.get("old_name")
+        new_name = data.get("new_name", "").strip()
+        tcd_file = data.get("source")
+
+        if not old_name or not new_name or not tcd_file:
+            return jsonify(error="old_name, new_name und source sind Pflichtfelder"), 400
+
+        if old_name == new_name:
+            return jsonify(error="Name ist unverändert"), 400
+
+        # Quelldatei finden
+        txt_path = find_txt_for_tcd(tcd_file)
+        if not txt_path:
+            return jsonify(error=f"Keine .txt-Datei gefunden für {tcd_file}"), 404
+
+        # Name in .txt aktualisieren
+        if not rename_station_in_txt(txt_path, old_name, new_name):
+            return jsonify(error=f"Station '{old_name}' nicht in {txt_path} gefunden"), 404
+
+        # TCD neu kompilieren
+        rebuild_tcd(txt_path, tcd_file)
+
+        # Marker-JS aktualisieren
+        rename_station_in_markers_js(old_name, new_name)
+
+        print(f"✅ Station umbenannt: '{old_name}' → '{new_name}' (in {txt_path})")
+        return jsonify(ok=True, new_name=new_name)
+
+    except Exception as e:
+        print(f"❌ Fehler beim Umbenennen: {e}")
         return jsonify(error=str(e)), 500
 
 

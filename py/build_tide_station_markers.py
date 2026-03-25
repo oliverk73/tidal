@@ -92,7 +92,8 @@ for i, (name, stype, lat, lon, source_file) in enumerate(all_stations, 1):
         f"  if (r.ok) window.location.href = '/static/predictions/tide_prediction_{safe_name}.html';"
         f"  else alert('Fehler beim Erzeugen der Vorhersage.');"
         f"}}); return false;\\\">🌊 Vorhersage anzeigen</a><br>"
-        f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Position korrigieren</a><br>"
+        f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Position korrigieren</a> "
+        f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Name ändern</a><br>"
         f"<small>📄 {source_file}</small>"
     )
 

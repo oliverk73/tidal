@@ -1033,6 +1033,63 @@
       markers.addLayer(targetMarker);
     });
   }
+
+  // --- Station umbenennen ---
+  function renameStation(linkEl) {
+    var popup = linkEl.closest('.leaflet-popup');
+    if (!popup) return;
+    var targetMarker = null;
+    markers.eachLayer(function (layer) {
+      if (layer.getPopup && layer.getPopup() && layer.getPopup().isOpen()) {
+        targetMarker = layer;
+      }
+    });
+    if (!targetMarker) return;
+
+    var popupContent = targetMarker.getPopup().getContent();
+    var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
+    var oldName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
+    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
+    var sourceFile = srcMatch ? srcMatch[1] : '';
+
+    var newName = prompt('Stationsname ändern:\n\nDatei: ' + sourceFile, oldName);
+    if (!newName || newName.trim() === '' || newName.trim() === oldName) return;
+    newName = newName.trim();
+
+    fetch('/update_station_name', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        old_name: oldName,
+        new_name: newName,
+        source: sourceFile
+      })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.ok) {
+        alert('Name gespeichert: ' + data.new_name);
+        // Popup-Inhalt aktualisieren
+        var updatedContent = popupContent
+          .replace('<b>' + oldName.replace(/"/g, '&quot;') + '</b>', '<b>' + data.new_name.replace(/"/g, '&quot;') + '</b>');
+        targetMarker.getPopup().setContent(updatedContent);
+        // stationCoords aktualisieren
+        if (typeof stationCoords !== 'undefined' && stationCoords[oldName]) {
+          stationCoords[data.new_name] = stationCoords[oldName];
+          delete stationCoords[oldName];
+        }
+        if (typeof stationSources !== 'undefined' && stationSources[oldName]) {
+          stationSources[data.new_name] = stationSources[oldName];
+          delete stationSources[oldName];
+        }
+      } else {
+        alert('Fehler: ' + (data.error || 'Unbekannt'));
+      }
+    })
+    .catch(function (err) {
+      alert('Netzwerkfehler: ' + err);
+    });
+  }
 </script>
 
 <!-- Search Modal Overlay -->
