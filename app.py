@@ -3,7 +3,8 @@ import re
 import unicodedata
 import subprocess
 from datetime import datetime
-from flask import Flask, render_template, render_template_string, abort, jsonify, url_for
+import glob
+from flask import Flask, render_template, render_template_string, abort, jsonify, url_for, request
 from urllib.parse import unquote
 
 app = Flask(__name__)
@@ -12,6 +13,79 @@ app = Flask(__name__)
 PREDICTIONS_DIR = "static/predictions"
 IMAGES_DIR = "static/images"
 TEMPLATE_PATH = "templates/tide_prediction_template.html"
+HARMONICS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "harmonics")
+TCD_DIR = "/usr/share/xtide"
+MARKERS_JS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "js", "leaflet_markers.js")
+
+
+def find_txt_for_tcd(tcd_basename):
+    """Map a TCD filename (e.g. harmonics-dwf-20070318_mod.tcd) to its .txt source."""
+    stem = os.path.splitext(tcd_basename)[0]  # e.g. harmonics-dwf-20070318_mod
+    for subdir in ["classic", "utide", "ticon", "ihm"]:
+        txt_path = os.path.join(HARMONICS_DIR, subdir, stem + ".txt")
+        if os.path.exists(txt_path):
+            return txt_path
+    return None
+
+
+def update_coords_in_txt(txt_path, station_name, new_lat, new_lon):
+    """Update latitude/longitude for a station in a harmonics .txt file (ISO-8859-1)."""
+    with open(txt_path, "r", encoding="iso-8859-1") as f:
+        lines = f.readlines()
+
+    # Find the station name line, then look backwards for # !latitude: and # !longitude:
+    found = False
+    for i, line in enumerate(lines):
+        stripped = line.rstrip("\n").rstrip("\r")
+        if stripped == station_name:
+            # Search backwards for the coordinate comments
+            for j in range(i - 1, max(i - 20, -1), -1):
+                if lines[j].startswith("# !latitude:"):
+                    lines[j] = f"# !latitude: {new_lat:.4f}\n"
+                elif lines[j].startswith("# !longitude:"):
+                    lines[j] = f"# !longitude: {new_lon:.4f}\n"
+            found = True
+            break
+
+    if not found:
+        return False
+
+    with open(txt_path, "w", encoding="iso-8859-1") as f:
+        f.writelines(lines)
+    return True
+
+
+def rebuild_tcd(txt_path, tcd_basename):
+    """Recompile a harmonics .txt file to .tcd."""
+    tcd_path = os.path.join(TCD_DIR, tcd_basename)
+    subprocess.run(["build_tide_db", tcd_path, txt_path], check=True)
+
+
+def update_markers_js(station_name, new_lat, new_lon):
+    """Update coordinates for a station directly in leaflet_markers.js."""
+    with open(MARKERS_JS, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Escape station name for use in regex
+    escaped = re.escape(station_name)
+
+    # Update stationCoords['Name'] = [lat, lon];
+    content = re.sub(
+        rf"(stationCoords\['{escaped}'\] = \[)[^\]]+(\];)",
+        rf"\g<1>{new_lat}, {new_lon}\2",
+        content
+    )
+    # Update L.marker([lat, lon], ...) — match the line that has the station popup right after
+    # The marker line is always directly before the bindPopup line containing the station name
+    content = re.sub(
+        rf"(var m\d+ = L\.marker\()(\[[^\]]+\])(.*\n[^\n]*{escaped})",
+        rf"\g<1>[{new_lat}, {new_lon}]\3",
+        content
+    )
+
+    with open(MARKERS_JS, "w", encoding="utf-8") as f:
+        f.write(content)
+
 
 # Unicode-Normalisierung + ASCII + Ersetzung für Dateinamen
 def normalize_filename(name: str) -> str:
@@ -126,6 +200,41 @@ def generate_tide_prediction(station):
     except Exception as e:
         print(f"❌ Unerwarteter Fehler: {e}")
         return "Interner Fehler", 500
+
+@app.route("/update_coordinates", methods=["POST"])
+def update_coordinates():
+    try:
+        data = request.get_json()
+        station = data.get("station")
+        new_lat = float(data.get("lat"))
+        new_lon = float(data.get("lon"))
+        tcd_file = data.get("source")
+
+        if not station or not tcd_file:
+            return jsonify(error="station und source sind Pflichtfelder"), 400
+
+        # Quelldatei finden
+        txt_path = find_txt_for_tcd(tcd_file)
+        if not txt_path:
+            return jsonify(error=f"Keine .txt-Datei gefunden für {tcd_file}"), 404
+
+        # Koordinaten in .txt aktualisieren
+        if not update_coords_in_txt(txt_path, station, new_lat, new_lon):
+            return jsonify(error=f"Station '{station}' nicht in {txt_path} gefunden"), 404
+
+        # TCD neu kompilieren
+        rebuild_tcd(txt_path, tcd_file)
+
+        # Marker-JS aktualisieren
+        update_markers_js(station, new_lat, new_lon)
+
+        print(f"✅ Koordinaten aktualisiert: {station} → {new_lat:.4f}, {new_lon:.4f} (in {txt_path})")
+        return jsonify(ok=True, lat=new_lat, lon=new_lon)
+
+    except Exception as e:
+        print(f"❌ Fehler beim Aktualisieren der Koordinaten: {e}")
+        return jsonify(error=str(e)), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)

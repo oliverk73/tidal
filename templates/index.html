@@ -66,6 +66,7 @@
 
     // Zoom buttons bottom-left
     L.control.zoom({ position: 'bottomleft' }).addTo(map);
+    L.control.scale({ metric: true, imperial: false, position: 'bottomleft' }).addTo(map);
 
     // --- Basemap: OSM (Standard) + CARTO Voyager (dezent, für Overlays) ---
     const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -947,8 +948,92 @@
       map.addLayer(markers);
     }
   }, 100);
-</script>
 
+  // --- Marker-Drag zum Korrigieren von Koordinaten ---
+  function enableDrag(linkEl) {
+    // Finde den Marker, der zu diesem Popup gehört
+    var popup = linkEl.closest('.leaflet-popup');
+    if (!popup) return;
+    var targetMarker = null;
+    markers.eachLayer(function (layer) {
+      if (layer.getPopup && layer.getPopup() && layer.getPopup().isOpen()) {
+        targetMarker = layer;
+      }
+    });
+    if (!targetMarker) return;
+
+    var oldLatLng = targetMarker.getLatLng();
+    var popupContent = targetMarker.getPopup().getContent();
+    // Station-Name aus dem Popup extrahieren (<b>Name</b>)
+    var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
+    var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
+    // Quelldatei extrahieren (📄 filename.tcd)
+    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
+    var sourceFile = srcMatch ? srcMatch[1] : '';
+
+    targetMarker.closePopup();
+
+    // Marker aus dem Cluster entfernen, einzeln auf Karte setzen und draggbar machen
+    markers.removeLayer(targetMarker);
+    targetMarker.options.draggable = true;
+    if (targetMarker.dragging) targetMarker.dragging.enable();
+    targetMarker.addTo(map);
+
+    // Visuelles Feedback
+    targetMarker.bindTooltip('Ziehe mich an die richtige Position!', {permanent: true, direction: 'top'});
+    targetMarker.openTooltip();
+
+    targetMarker.once('dragend', function () {
+      var newLatLng = targetMarker.getLatLng();
+      targetMarker.unbindTooltip();
+
+      var msg = 'Koordinaten ändern?\n\n' +
+        'Alt: ' + oldLatLng.lat.toFixed(4) + ', ' + oldLatLng.lng.toFixed(4) + '\n' +
+        'Neu: ' + newLatLng.lat.toFixed(4) + ', ' + newLatLng.lng.toFixed(4) + '\n\n' +
+        'Station: ' + stationName + '\nDatei: ' + sourceFile;
+
+      if (confirm(msg)) {
+        // An Backend senden
+        fetch('/update_coordinates', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            station: stationName,
+            lat: Math.round(newLatLng.lat * 10000) / 10000,
+            lon: Math.round(newLatLng.lng * 10000) / 10000,
+            source: sourceFile
+          })
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data.ok) {
+            alert('Koordinaten gespeichert!');
+            // stationCoords aktualisieren
+            if (typeof stationCoords !== 'undefined') {
+              stationCoords[stationName] = [data.lat, data.lon];
+            }
+          } else {
+            alert('Fehler: ' + (data.error || 'Unbekannt'));
+            targetMarker.setLatLng(oldLatLng);
+          }
+        })
+        .catch(function (err) {
+          alert('Netzwerkfehler: ' + err);
+          targetMarker.setLatLng(oldLatLng);
+        });
+      } else {
+        // Abbrechen: zurück an alte Position
+        targetMarker.setLatLng(oldLatLng);
+      }
+
+      // Marker zurück in den Cluster
+      map.removeLayer(targetMarker);
+      targetMarker.options.draggable = false;
+      if (targetMarker.dragging) targetMarker.dragging.disable();
+      markers.addLayer(targetMarker);
+    });
+  }
+</script>
 
 <!-- Search Modal Overlay -->
 <div id="search-modal" class="search-modal">

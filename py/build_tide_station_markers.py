@@ -47,14 +47,20 @@ tcd_files = sorted(glob.glob(os.path.join(TCD_DIR, "*.tcd")))
 print(f"Gefunden: {len(tcd_files)} TCD-Dateien in {TCD_DIR}")
 
 all_stations = []
+seen = set()
 for tcd_file in tcd_files:
     basename = os.path.basename(tcd_file)
     stations = get_stations_from_tcd(tcd_file)
-    for s in stations:
-        all_stations.append((*s, basename))
-    print(f"  {basename}: {len(stations)} Stationen")
+    count = 0
+    for name, stype, lat, lon in stations:
+        key = (name, round(lat, 4), round(lon, 4))
+        if key not in seen:
+            seen.add(key)
+            all_stations.append((name, stype, lat, lon, basename))
+            count += 1
+    print(f"  {basename}: {count} Stationen ({len(stations)} in TCD)")
 
-print(f"Gesamt: {len(all_stations)} Stationen")
+print(f"Gesamt: {len(all_stations)} Stationen (nach Deduplizierung)")
 
 output_file = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers.js")
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
@@ -71,6 +77,7 @@ var tideIcon = new L.Icon({
 """
 
 lines = ["var stationCoords = {};"]
+lines.append("var stationSources = {};")
 lines.append("var markers = L.markerClusterGroup();")
 
 for i, (name, stype, lat, lon, source_file) in enumerate(all_stations, 1):
@@ -85,13 +92,15 @@ for i, (name, stype, lat, lon, source_file) in enumerate(all_stations, 1):
         f"  if (r.ok) window.location.href = '/static/predictions/tide_prediction_{safe_name}.html';"
         f"  else alert('Fehler beim Erzeugen der Vorhersage.');"
         f"}}); return false;\\\">🌊 Vorhersage anzeigen</a><br>"
-        f"📄 Aus Datei: {source_file}"
+        f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Position korrigieren</a><br>"
+        f"<small>📄 {source_file}</small>"
     )
 
     marker_var = f"m{i}"
     # Add to stationCoords lookup for search-to-map zoom
     coord_key = name.replace("\\", "\\\\").replace("'", "\\'")
     lines.append(f"stationCoords['{coord_key}'] = [{lat}, {lon}];")
+    lines.append(f"stationSources['{coord_key}'] = '{source_file}';")
     lines.append(
         f'var {marker_var} = L.marker([{lat}, {lon}], {{icon: tideIcon}});'
     )
