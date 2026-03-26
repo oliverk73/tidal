@@ -14953,6 +14953,38 @@ MNUS2
 0.8046 0.8219 0.8609 0.9186 0.9881 1.0602 1.1256 1.1769 1.2096 1.2211
 1.2109
 *END*
+#
+# ------------- End congen output -------------
+#
+# Harmonic constants.
+#
+# First line:  name of location
+# Second line:  time meridian [whitespace] tzfile
+# Third line:  DATUM [whitespace] units
+# Remaining lines:  identifier [whitespace] amplitude [whitespace] epoch
+#
+# The DATUM is the mean lower low water or equivalent constant for
+# calibrating the tide height.
+#
+# The time meridian takes the format [-]HH:MM and is hours east of
+# Greenwich.  For most data sets calibrated to Local Standard Time,
+# this is your time zone displacement in the _winter_.  Do not include
+# Daylight Savings Time!  If a data set is calibrated to GMT / UTC,
+# the meridian should be set to 0:00.
+#
+# The tzfile is a reference to a file in the zoneinfo directory as
+# described in the man page for tzset.
+#
+# Epoch is "modified" or "adapted" epoch in degrees, also known as
+# Kappa Prime.
+#
+# The constituent identifiers are for readability only.  XTide assumes
+# that they are in the same order as defined above.
+#
+# These data sets are distributed in the hope that they will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
 # Harmonic constants derived from BOM ABSLMP hourly observation data
 # using UTide (v0.3.1) with 166237 observations
 # from 2007-01-01 to 2025-12-31
