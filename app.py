@@ -1,5 +1,6 @@
 import os
 import re
+import tempfile
 import unicodedata
 import subprocess
 from datetime import datetime
@@ -50,8 +51,15 @@ def update_coords_in_txt(txt_path, station_name, new_lat, new_lon):
     if not found:
         return False
 
-    with open(txt_path, "w", encoding="iso-8859-1") as f:
-        f.writelines(lines)
+    # Atomic write: temp file + rename to prevent truncation
+    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(txt_path), suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="iso-8859-1") as f:
+            f.writelines(lines)
+        os.replace(tmp, txt_path)
+    except:
+        os.unlink(tmp)
+        raise
     return True
 
 
@@ -106,8 +114,15 @@ def delete_station_from_txt(txt_path, station_name):
     # Delete the block
     del lines[block_start:block_end]
 
-    with open(txt_path, "w", encoding="iso-8859-1") as f:
-        f.writelines(lines)
+    # Atomic write: temp file + rename to prevent truncation
+    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(txt_path), suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="iso-8859-1") as f:
+            f.writelines(lines)
+        os.replace(tmp, txt_path)
+    except:
+        os.unlink(tmp)
+        raise
     return True
 
 
@@ -166,8 +181,15 @@ def rename_station_in_txt(txt_path, old_name, new_name):
     if not found:
         return False
 
-    with open(txt_path, "w", encoding="iso-8859-1") as f:
-        f.writelines(lines)
+    # Atomic write: temp file + rename to prevent truncation
+    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(txt_path), suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="iso-8859-1") as f:
+            f.writelines(lines)
+        os.replace(tmp, txt_path)
+    except:
+        os.unlink(tmp)
+        raise
     return True
 
 
