@@ -1,10 +1,15 @@
 import re
 import os
 import glob
-import subprocess
 import unicodedata
 
 TCD_DIR = "/usr/share/xtide"
+HARMONICS_DIRS = [
+    "harmonics/classic",
+    "harmonics/ihm",
+    "harmonics/utide",
+    "harmonics/ticon",
+]
 
 
 def normalize_filename(name: str) -> str:
@@ -15,30 +20,34 @@ def normalize_filename(name: str) -> str:
     return name
 
 
-def get_stations_from_tcd(tcd_path):
-    """Parse station list from a single TCD file via tide command."""
-    env = os.environ.copy()
-    env["HFILE_PATH"] = tcd_path
-    result = subprocess.run(
-        ["tide", "-m", "l", "-tw", "200"],
-        capture_output=True, text=True, env=env
-    )
-    output = result.stdout or result.stderr
+def get_stations_from_txt(txt_path):
+    """Parse station list directly from a harmonics TXT file."""
     stations = []
-    pattern = re.compile(
-        r'^(.+?)\s{2,}(Ref|Sub)\s+([\d.]+)°\s*([NS]),\s*([\d.]+)°\s*([EW])$'
-    )
-    for line in output.splitlines():
-        if line.startswith("Indexing ") or line.startswith("Location list") or not line.strip():
-            continue
-        m = pattern.match(line)
-        if not m:
-            continue
-        name, stype, lat, ns, lon, ew = m.groups()
-        lat = float(lat) * (1 if ns == 'N' else -1)
-        lon = float(lon) * (1 if ew == 'E' else -1)
-        stations.append((name.strip(), stype, lat, lon))
+    with open(txt_path, 'r', encoding='iso-8859-1') as f:
+        lines = f.readlines()
+
+    lat = lon = None
+    for line in lines:
+        line = line.rstrip()
+        if line.startswith('# !latitude:'):
+            lat = float(line.split(':', 1)[1].strip())
+        elif line.startswith('# !longitude:'):
+            lon = float(line.split(':', 1)[1].strip())
+        elif not line.startswith('#') and line.strip() and lat is not None and lon is not None:
+            stations.append((line.strip(), lat, lon))
+            lat = lon = None
     return stations
+
+
+def find_txt_for_tcd(tcd_basename):
+    """Find the TXT source file for a given TCD basename."""
+    txt_name = tcd_basename.replace('.tcd', '.txt')
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for hdir in HARMONICS_DIRS:
+        txt_path = os.path.join(project_root, hdir, txt_name)
+        if os.path.exists(txt_path):
+            return txt_path
+    return None
 
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,15 +59,18 @@ all_stations = []
 seen = set()
 for tcd_file in tcd_files:
     basename = os.path.basename(tcd_file)
-    stations = get_stations_from_tcd(tcd_file)
+    txt_path = find_txt_for_tcd(basename)
+    if not txt_path:
+        print(f"  {basename}: ÜBERSPRUNGEN (keine TXT-Datei gefunden)")
+        continue
+    stations = get_stations_from_txt(txt_path)
     count = 0
-    for name, stype, lat, lon in stations:
-        key = (name, round(lat, 4), round(lon, 4))
-        if key not in seen:
-            seen.add(key)
-            all_stations.append((name, stype, lat, lon, basename))
+    for name, lat, lon in stations:
+        if name not in seen:
+            seen.add(name)
+            all_stations.append((name, lat, lon, basename))
             count += 1
-    print(f"  {basename}: {count} Stationen ({len(stations)} in TCD)")
+    print(f"  {basename}: {count} neue Stationen ({len(stations)} in TXT)")
 
 print(f"Gesamt: {len(all_stations)} Stationen (nach Deduplizierung)")
 
@@ -80,7 +92,7 @@ lines = ["var stationCoords = {};"]
 lines.append("var stationSources = {};")
 lines.append("var markers = L.markerClusterGroup();")
 
-for i, (name, stype, lat, lon, source_file) in enumerate(all_stations, 1):
+for i, (name, lat, lon, source_file) in enumerate(all_stations, 1):
     safe_name = normalize_filename(name)
     display_name = name.replace('"', '&quot;')
     js_name = name.replace("\\", "\\\\").replace("'", "\\x27").replace('"', "\\x22")
@@ -93,12 +105,12 @@ for i, (name, stype, lat, lon, source_file) in enumerate(all_stations, 1):
         f"  else alert('Fehler beim Erzeugen der Vorhersage.');"
         f"}}); return false;\\\">🌊 Vorhersage anzeigen</a><br>"
         f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Position korrigieren</a> "
-        f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Name ändern</a><br>"
+        f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Name ändern</a> "
+        f"<a href=\\\"#\\\" onclick=\\\"deleteStation(this); return false;\\\">🗑️ Löschen</a><br>"
         f"<small>📄 {source_file}</small>"
     )
 
     marker_var = f"m{i}"
-    # Add to stationCoords lookup for search-to-map zoom
     coord_key = name.replace("\\", "\\\\").replace("'", "\\'")
     lines.append(f"stationCoords['{coord_key}'] = [{lat}, {lon}];")
     lines.append(f"stationSources['{coord_key}'] = '{source_file}';")

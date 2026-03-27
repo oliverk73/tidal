@@ -1090,6 +1090,59 @@
       alert('Netzwerkfehler: ' + err);
     });
   }
+
+  // --- Station löschen ---
+  function deleteStation(linkEl) {
+    var popup = linkEl.closest('.leaflet-popup');
+    if (!popup) return;
+    var targetMarker = null;
+    markers.eachLayer(function (layer) {
+      if (layer.getPopup && layer.getPopup() && layer.getPopup().isOpen()) {
+        targetMarker = layer;
+      }
+    });
+    if (!targetMarker) return;
+
+    var popupContent = targetMarker.getPopup().getContent();
+    var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
+    var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
+    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
+    var sourceFile = srcMatch ? srcMatch[1] : '';
+
+    var latlng = targetMarker.getLatLng();
+    if (!confirm('Station wirklich löschen?\n\n' +
+        'Station: ' + stationName + '\n' +
+        'Position: ' + latlng.lat.toFixed(4) + ', ' + latlng.lng.toFixed(4) + '\n' +
+        'Datei: ' + sourceFile + '\n\n' +
+        'Diese Aktion kann nicht rückgängig gemacht werden!')) {
+      return;
+    }
+
+    fetch('/delete_station', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        station: stationName,
+        source: sourceFile
+      })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.ok) {
+        alert('Station gelöscht: ' + stationName);
+        // Marker von der Karte entfernen
+        markers.removeLayer(targetMarker);
+        // Aus lokalen Lookup-Tabellen entfernen
+        if (typeof stationCoords !== 'undefined') delete stationCoords[stationName];
+        if (typeof stationSources !== 'undefined') delete stationSources[stationName];
+      } else {
+        alert('Fehler: ' + (data.error || 'Unbekannt'));
+      }
+    })
+    .catch(function (err) {
+      alert('Netzwerkfehler: ' + err);
+    });
+  }
 </script>
 
 <!-- Search Modal Overlay -->

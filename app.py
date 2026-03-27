@@ -61,6 +61,95 @@ def rebuild_tcd(txt_path, tcd_basename):
     subprocess.run(["build_tide_db", tcd_path, txt_path], check=True)
 
 
+def get_num_constituents(txt_path):
+    """Read the number of constituents from the harmonics file header."""
+    with open(txt_path, "r", encoding="iso-8859-1") as f:
+        prev_line = ""
+        for line in f:
+            if prev_line.strip() == "# Number of constituents":
+                return int(line.strip())
+            prev_line = line
+    return None
+
+
+def delete_station_from_txt(txt_path, station_name):
+    """Delete a station and its entire data block from a harmonics .txt file."""
+    num_constituents = get_num_constituents(txt_path)
+    if num_constituents is None:
+        return False
+
+    with open(txt_path, "r", encoding="iso-8859-1") as f:
+        lines = f.readlines()
+
+    # Find the station name line
+    name_idx = None
+    for i, line in enumerate(lines):
+        if line.rstrip("\n").rstrip("\r") == station_name:
+            name_idx = i
+            break
+
+    if name_idx is None:
+        return False
+
+    # Block end: name line + 2 info lines + N constituent lines
+    block_end = name_idx + 3 + num_constituents
+
+    # Block start: scan backwards over comment lines (#) and blank lines
+    block_start = name_idx
+    for j in range(name_idx - 1, -1, -1):
+        stripped = lines[j].strip()
+        if stripped == "" or stripped.startswith("#"):
+            block_start = j
+        else:
+            break
+
+    # Delete the block
+    del lines[block_start:block_end]
+
+    with open(txt_path, "w", encoding="iso-8859-1") as f:
+        f.writelines(lines)
+    return True
+
+
+def delete_station_from_markers_js(station_name):
+    """Remove a station from leaflet_markers.js."""
+    with open(MARKERS_JS, "r", encoding="utf-8") as f:
+        js_lines = f.readlines()
+
+    coord_key = station_name.replace("\\", "\\\\").replace("'", "\\'")
+
+    # Find and remove the 5 lines belonging to this station:
+    # stationCoords['Name'] = ...;
+    # stationSources['Name'] = ...;
+    # var mN = L.marker(...);
+    # mN.bindPopup("...");
+    # markers.addLayer(mN);
+    indices_to_remove = set()
+    for i, line in enumerate(js_lines):
+        if f"stationCoords['{coord_key}']" in line:
+            indices_to_remove.add(i)
+        elif f"stationSources['{coord_key}']" in line:
+            indices_to_remove.add(i)
+        elif f"<b>{station_name.replace(chr(34), '&quot;')}</b>" in line:
+            # This is the bindPopup line — also remove the marker and addLayer lines
+            indices_to_remove.add(i)
+            # The L.marker line is directly before
+            if i > 0:
+                indices_to_remove.add(i - 1)
+            # The markers.addLayer line is directly after
+            if i + 1 < len(js_lines):
+                indices_to_remove.add(i + 1)
+
+    if not indices_to_remove:
+        return False
+
+    js_lines = [line for i, line in enumerate(js_lines) if i not in indices_to_remove]
+
+    with open(MARKERS_JS, "w", encoding="utf-8") as f:
+        f.writelines(js_lines)
+    return True
+
+
 def rename_station_in_txt(txt_path, old_name, new_name):
     """Rename a station in a harmonics .txt file (ISO-8859-1)."""
     with open(txt_path, "r", encoding="iso-8859-1") as f:
@@ -335,6 +424,39 @@ def update_station_name():
 
     except Exception as e:
         print(f"❌ Fehler beim Umbenennen: {e}")
+        return jsonify(error=str(e)), 500
+
+
+@app.route("/delete_station", methods=["POST"])
+def delete_station():
+    try:
+        data = request.get_json()
+        station = data.get("station")
+        tcd_file = data.get("source")
+
+        if not station or not tcd_file:
+            return jsonify(error="station und source sind Pflichtfelder"), 400
+
+        # Quelldatei finden
+        txt_path = find_txt_for_tcd(tcd_file)
+        if not txt_path:
+            return jsonify(error=f"Keine .txt-Datei gefunden für {tcd_file}"), 404
+
+        # Station aus .txt löschen
+        if not delete_station_from_txt(txt_path, station):
+            return jsonify(error=f"Station '{station}' nicht in {txt_path} gefunden"), 404
+
+        # TCD neu kompilieren
+        rebuild_tcd(txt_path, tcd_file)
+
+        # Marker aus JS entfernen
+        delete_station_from_markers_js(station)
+
+        print(f"🗑️ Station gelöscht: '{station}' (aus {txt_path})")
+        return jsonify(ok=True)
+
+    except Exception as e:
+        print(f"❌ Fehler beim Löschen: {e}")
         return jsonify(error=str(e)), 500
 
 
