@@ -700,10 +700,10 @@ stationSources['Hull (King George Dock), England, United Kingdom'] = 'harmonics-
 var m138 = L.marker([53.7402, -0.2728], {icon: tideIcon});
 m138.bindPopup("<b>Hull (King George Dock), England, United Kingdom</b><br><a href=\"#\" onclick=\"fetch('/generate/' + encodeURIComponent('Hull (King George Dock), England, United Kingdom')).then(r => {  if (r.ok) window.location.href = '/static/predictions/tide_prediction_Hull_(King_George_Dock)_England_United_Kingdom.html';  else alert('Fehler beim Erzeugen der Vorhersage.');}); return false;\">🌊 Vorhersage anzeigen</a><br><a href=\"#\" onclick=\"enableDrag(this); return false;\">📍 Position korrigieren</a> <a href=\"#\" onclick=\"renameStation(this); return false;\">✏️ Name ändern</a> <a href=\"#\" onclick=\"deleteStation(this); return false;\">🗑️ Löschen</a><br><small>📄 harmonics-1997-05-25_mod.tcd</small>");
 markers.addLayer(m138);
-stationCoords['Huludao, Taiwan'] = [23.0833, 120.9833];
-stationSources['Huludao, Taiwan'] = 'harmonics-1997-05-25_mod.tcd';
-var m139 = L.marker([23.0833, 120.9833], {icon: tideIcon});
-m139.bindPopup("<b>Huludao, Taiwan</b><br><a href=\"#\" onclick=\"fetch('/generate/' + encodeURIComponent('Huludao, Taiwan')).then(r => {  if (r.ok) window.location.href = '/static/predictions/tide_prediction_Huludao_Taiwan.html';  else alert('Fehler beim Erzeugen der Vorhersage.');}); return false;\">🌊 Vorhersage anzeigen</a><br><a href=\"#\" onclick=\"enableDrag(this); return false;\">📍 Position korrigieren</a> <a href=\"#\" onclick=\"renameStation(this); return false;\">✏️ Name ändern</a> <a href=\"#\" onclick=\"deleteStation(this); return false;\">🗑️ Löschen</a><br><small>📄 harmonics-1997-05-25_mod.tcd</small>");
+stationCoords['Huludao, Liaoning, China'] = [40.7095, 120.9926];
+stationSources['Huludao, Liaoning, China'] = 'harmonics-1997-05-25_mod.tcd';
+var m139 = L.marker([40.7095, 120.9926], {icon: tideIcon});
+m139.bindPopup("<b>Huludao, Liaoning, China</b><br><a href=\"#\" onclick=\"fetch('/generate/' + encodeURIComponent('Huludao, Liaoning, China')).then(r => {  if (r.ok) window.location.href = '/static/predictions/tide_prediction_Huludao_Liaoning_China.html';  else alert('Fehler beim Erzeugen der Vorhersage.');}); return false;\">🌊 Vorhersage anzeigen</a><br><a href=\"#\" onclick=\"enableDrag(this); return false;\">📍 Position korrigieren</a> <a href=\"#\" onclick=\"renameStation(this); return false;\">✏️ Name ändern</a> <a href=\"#\" onclick=\"deleteStation(this); return false;\">🗑️ Löschen</a><br><small>📄 harmonics-1997-05-25_mod.tcd</small>");
 markers.addLayer(m139);
 stationCoords['Ibo, Moçambique'] = [-12.3457, 40.5808];
 stationSources['Ibo, Moçambique'] = 'harmonics-1997-05-25_mod.tcd';
