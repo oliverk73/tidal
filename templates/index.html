@@ -488,6 +488,9 @@
                 '<span id="wv-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
               '</div>' +
               '<input type="range" id="wv-progress" min="0" max="8" value="0" style="width:180px;cursor:pointer;">' +
+              '<label id="wv-particle-label" style="display:none;cursor:pointer;margin-top:4px;font-size:12px;color:#444;">' +
+                '<input type="checkbox" id="wv-particle-toggle" style="margin-right:4px;">Wellenrichtung animiert (Partikel)' +
+              '</label>' +
             '</div>' +
           '</div>';
 
@@ -508,6 +511,9 @@
                 progEl.value = 0;
                 document.getElementById('wv-loading').style.display = 'none';
                 document.getElementById('wv-player').style.display = 'block';
+                if (waveLayer.hasDirection) {
+                  document.getElementById('wv-particle-label').style.display = '';
+                }
                 waveLayer.activate();
               } catch (e) {
                 document.getElementById('wv-loading').textContent = 'Fehler beim Laden!';
@@ -515,6 +521,8 @@
               }
             } else {
               document.getElementById('wv-controls').style.display = 'none';
+              document.getElementById('wv-particle-toggle').checked = false;
+              document.getElementById('wv-particle-label').style.display = 'none';
               waveLayer.deactivate();
             }
           });
@@ -529,6 +537,9 @@
           });
           document.getElementById('wv-progress').addEventListener('input', function () {
             waveLayer.stopAnim(); waveLayer.showFrame(parseInt(this.value));
+          });
+          document.getElementById('wv-particle-toggle').addEventListener('change', function () {
+            waveLayer.setParticlesEnabled(this.checked);
           });
         }, 0);
 

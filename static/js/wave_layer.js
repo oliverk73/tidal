@@ -74,12 +74,18 @@ class WaveCanvasLayer {
     this.dirCache = {};
     this.canvas = null;
     this.arrowCanvas = null;
+    this.particleCanvas = null;
     this.currentFrame = 0;
     this.frames = [];
     this.animTimer = null;
     this.animDelay = 800;
     this.active = false;
     this.hasDirection = false;
+    this.particlesEnabled = false;
+    this._particleRAF = null;
+    this._particles = [];
+    this._particleCount = 4000;
+    this._particleFadeCanvas = null;
     this._renderViewKey = '';
     // Per-frame render cache: viewKey → { heightImgData, arrowImgData }
     this._frameRenderCache = {};
@@ -88,6 +94,7 @@ class WaveCanvasLayer {
         this._renderViewKey = '';
         this._frameRenderCache = {};
         this.render();
+        if (this.particlesEnabled) this._resetParticles();
       }
     };
   }
@@ -151,9 +158,17 @@ class WaveCanvasLayer {
     arrowCanvas.style.zIndex = '451';
     this.arrowCanvas = arrowCanvas;
 
+    const particleCanvas = L.DomUtil.create('canvas');
+    particleCanvas.style.position = 'absolute';
+    particleCanvas.style.pointerEvents = 'none';
+    particleCanvas.style.zIndex = '452';
+    particleCanvas.style.display = this.particlesEnabled ? '' : 'none';
+    this.particleCanvas = particleCanvas;
+
     const pane = this.map.getContainer().querySelector('.leaflet-overlay-pane');
     pane.appendChild(canvas);
     pane.appendChild(arrowCanvas);
+    pane.appendChild(particleCanvas);
 
     this.map.on('moveend zoomend resize', this._onMoveEnd);
     this.showFrame(this.currentFrame);
@@ -162,11 +177,15 @@ class WaveCanvasLayer {
   deactivate() {
     this.active = false;
     this.stopAnim();
+    this._stopParticles();
     this.map.off('moveend zoomend resize', this._onMoveEnd);
     if (this.canvas && this.canvas.parentNode) this.canvas.parentNode.removeChild(this.canvas);
     if (this.arrowCanvas && this.arrowCanvas.parentNode) this.arrowCanvas.parentNode.removeChild(this.arrowCanvas);
+    if (this.particleCanvas && this.particleCanvas.parentNode) this.particleCanvas.parentNode.removeChild(this.particleCanvas);
     this.canvas = null;
     this.arrowCanvas = null;
+    this.particleCanvas = null;
+    this._particleFadeCanvas = null;
     this._frameRenderCache = {};
   }
 
@@ -460,6 +479,196 @@ class WaveCanvasLayer {
 
     // Capture for cache
     return ctx.getImageData(0, 0, size.x, size.y);
+  }
+
+  // --- Particle animation ---
+  setParticlesEnabled(enabled) {
+    this.particlesEnabled = enabled;
+    if (this.particleCanvas) {
+      this.particleCanvas.style.display = enabled ? '' : 'none';
+    }
+    if (this.arrowCanvas) {
+      this.arrowCanvas.style.display = enabled ? 'none' : '';
+    }
+    if (enabled && this.active && this.hasDirection) {
+      this._resetParticles();
+      this._startParticles();
+    } else {
+      this._stopParticles();
+    }
+  }
+
+  _resetParticles() {
+    if (!this.particleCanvas || !this.active) return;
+    const size = this.map.getSize();
+    const topLeft = this.map.containerPointToLayerPoint([0, 0]);
+
+    this.particleCanvas.width = size.x;
+    this.particleCanvas.height = size.y;
+    this.particleCanvas.style.width = size.x + 'px';
+    this.particleCanvas.style.height = size.y + 'px';
+    L.DomUtil.setPosition(this.particleCanvas, topLeft);
+
+    // Create fade canvas (used for trail effect)
+    this._particleFadeCanvas = document.createElement('canvas');
+    this._particleFadeCanvas.width = size.x;
+    this._particleFadeCanvas.height = size.y;
+
+    // Spawn particles at random screen positions
+    this._particles = [];
+    for (let i = 0; i < this._particleCount; i++) {
+      this._particles.push(this._spawnParticle(size, true));
+    }
+  }
+
+  _spawnParticle(size, randomAge) {
+    return {
+      x: Math.random() * size.x,
+      y: Math.random() * size.y,
+      age: randomAge ? Math.floor(Math.random() * 80) : 0,
+      maxAge: 60 + Math.floor(Math.random() * 40)
+    };
+  }
+
+  _sampleDirection(px, py) {
+    // Sample wave direction + height at screen pixel position
+    const grid = this.gridCache[this.currentFrame];
+    const dirGrid = this.dirCache[this.currentFrame];
+    if (!grid || !dirGrid || !this.meta) return null;
+
+    const map = this.map;
+    const latlng = map.containerPointToLatLng([px, py]);
+    const lat = latlng.lat;
+    const lon = ((latlng.lng % 360) + 360) % 360;
+
+    if (lat > 90 || lat < -90) return null;
+
+    const g = this.meta.grid;
+    const gy = (g.la1 - lat) / g.dy;
+    if (gy < 0 || gy >= g.ny - 1) return null;
+    const gx = (lon - g.lo1) / g.dx;
+    if (gx < 0) return null;
+
+    const gx0 = gx | 0;
+    const gx1 = (gx0 + 1) % g.nx;
+    const gy0 = gy | 0;
+    const gy1 = gy0 + 1 < g.ny ? gy0 + 1 : gy0;
+    const fx = gx - gx0;
+    const fx1 = 1 - fx;
+    const fy = gy - gy0;
+    const fy1 = 1 - fy;
+
+    const row0 = gy0 * g.nx;
+    const row1 = gy1 * g.nx;
+
+    const hVal = grid[row0 + gx0] * fx1 * fy1 +
+                 grid[row0 + gx1] * fx  * fy1 +
+                 grid[row1 + gx0] * fx1 * fy +
+                 grid[row1 + gx1] * fx  * fy;
+    if (hVal < 30) return null;
+
+    const d00 = Math.min(dirGrid[row0 + gx0], 3600);
+    const d01 = Math.min(dirGrid[row0 + gx1], 3600);
+    const d10 = Math.min(dirGrid[row1 + gx0], 3600);
+    const d11 = Math.min(dirGrid[row1 + gx1], 3600);
+
+    const sinD = DIR_SIN[d00] * fx1 * fy1 +
+                 DIR_SIN[d01] * fx  * fy1 +
+                 DIR_SIN[d10] * fx1 * fy +
+                 DIR_SIN[d11] * fx  * fy;
+    const cosD = DIR_COS[d00] * fx1 * fy1 +
+                 DIR_COS[d01] * fx  * fy1 +
+                 DIR_COS[d10] * fx1 * fy +
+                 DIR_COS[d11] * fx  * fy;
+
+    const dirRad = Math.atan2(sinD, cosD) + Math.PI;
+    const speed = Math.min(1.0, Math.max(0.3, hVal / 400));
+
+    return {
+      dx: Math.sin(dirRad) * speed,
+      dy: -Math.cos(dirRad) * speed
+    };
+  }
+
+  _startParticles() {
+    if (this._particleRAF) return;
+    this._particleLastTime = 0;
+    const step = (timestamp) => {
+      if (!this._particleRAF) return;
+      if (timestamp - this._particleLastTime >= 30) {
+        this._particleLastTime = timestamp;
+        this._tickParticles();
+      }
+      this._particleRAF = requestAnimationFrame(step);
+    };
+    this._particleRAF = requestAnimationFrame(step);
+  }
+
+  _stopParticles() {
+    if (this._particleRAF) cancelAnimationFrame(this._particleRAF);
+    this._particleRAF = null;
+    if (this.particleCanvas) {
+      const ctx = this.particleCanvas.getContext('2d');
+      ctx.clearRect(0, 0, this.particleCanvas.width, this.particleCanvas.height);
+    }
+  }
+
+  _tickParticles() {
+    const pc = this.particleCanvas;
+    const fc = this._particleFadeCanvas;
+    if (!pc || !fc || !this.active || !this.particlesEnabled) return;
+
+    const w = pc.width;
+    const h = pc.height;
+    if (w === 0 || h === 0) return;
+
+    const size = this.map.getSize();
+    const ctx = pc.getContext('2d');
+    const fctx = fc.getContext('2d');
+
+    // Fade: copy current particle canvas to fade canvas, then draw back with transparency
+    fctx.clearRect(0, 0, w, h);
+    fctx.drawImage(pc, 0, 0);
+
+    ctx.clearRect(0, 0, w, h);
+    ctx.globalAlpha = 0.90;
+    ctx.drawImage(fc, 0, 0);
+    ctx.globalAlpha = 1.0;
+
+    // Move and draw particles
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+    const speedScale = 1.8;
+    const particles = this._particles;
+
+    ctx.beginPath();
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.age++;
+
+      if (p.age >= p.maxAge || p.x < 0 || p.x >= w || p.y < 0 || p.y >= h) {
+        particles[i] = this._spawnParticle(size, false);
+        continue;
+      }
+
+      const dir = this._sampleDirection(p.x, p.y);
+      if (!dir) {
+        // Over land or no data — respawn
+        particles[i] = this._spawnParticle(size, false);
+        continue;
+      }
+
+      const oldX = p.x;
+      const oldY = p.y;
+      p.x += dir.dx * speedScale;
+      p.y += dir.dy * speedScale;
+
+      // Draw as short line segment for motion blur effect
+      ctx.moveTo(oldX, oldY);
+      ctx.lineTo(p.x, p.y);
+    }
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
   }
 
   // --- Animation ---
