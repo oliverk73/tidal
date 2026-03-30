@@ -5,7 +5,7 @@ import unicodedata
 import subprocess
 from datetime import datetime, timedelta
 import glob
-from flask import Flask, render_template, render_template_string, abort, jsonify, url_for, request
+from flask import Flask, render_template, render_template_string, abort, jsonify, url_for, request, send_from_directory
 from urllib.parse import unquote
 
 app = Flask(__name__)
@@ -297,6 +297,10 @@ _station_names = load_station_names()
 @app.route("/")
 def index():
     return render_template("index.html", station_names=_station_names)
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory("static", "favicon.ico", mimetype="image/x-icon")
 
 @app.route("/generate/<station>")
 def generate_tide_prediction(station):
