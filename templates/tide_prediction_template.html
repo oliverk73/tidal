@@ -8,12 +8,28 @@
 <style>
 html, body { overflow: auto; height: auto; }
 main { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
-main img { max-width: 100%; height: auto; }
-.station-meta { margin: 0; padding: 0; }
-.station-meta div { display: flex; flex-wrap: wrap; border-bottom: 1px solid #eee; padding: 4px 0; }
-.station-meta dt { font-weight: bold; min-width: 130px; margin: 0; }
-.station-meta dd { margin: 0; flex: 1; }
-#tide_text { white-space: pre-wrap; word-break: break-word; font-size: 0.9em; }
+main img { width: 100%; height: auto; }
+.station-meta { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 32px; }
+.station-meta .meta-item { display: flex; border-bottom: 1px solid #eee; padding: 4px 0; width: 100%; }
+.station-meta dt { font-weight: bold; min-width: 120px; margin: 0; }
+.station-meta dd { margin: 0; }
+@media (min-width: 768px) {
+  .station-meta .meta-item { width: calc(50% - 16px); }
+}
+@media (min-width: 1100px) {
+  .station-meta .meta-item { width: calc(33.3% - 22px); }
+}
+.tide-table { border-collapse: collapse; font-size: 0.95em; }
+.tide-table td { padding: 5px 10px; white-space: nowrap; }
+.tide-table .date-cell { font-weight: bold; }
+.tide-table .icon-cell { text-align: center; width: 24px; font-family: serif; font-size: 1.1em; }
+.tide-table .value-cell { text-align: right; }
+.tide-table tr.row-tide { background: #eee; }
+.tide-table tr.row-astro { background: #fff; }
+.tide-table tr.day-start td { border-top: 2px solid #ccc; }
+@media (max-width: 500px) {
+  .tide-table td { padding: 3px 4px; font-size: 0.85em; }
+}
 </style>
 <script src="/static/js/suche.js" defer></script>
 
@@ -31,13 +47,23 @@ main img { max-width: 100%; height: auto; }
 <h3 style="page-break-before:always;">{{ original_name }}</h3>
 <dl class="station-meta">
 {% for key, val in meta_info %}
-  <div><dt>{{ key }}</dt><dd>{{ val }}</dd></div>
+  <div class="meta-item"><dt>{{ key }}</dt><dd>{{ val }}</dd></div>
 {% endfor %}
 </dl>
 <p><img src="{{ svg_url }}" alt="Tide prediction graph {{ station }}" id="Tide prediction curve"></p>
 
 <h3>Tide times</h3>
-<pre id="tide_text">{{ tide_text }}</pre>
+<table class="tide-table">
+{% for row in tide_rows %}
+  <tr class="row-{{ row.row_type }}{% if row.date %} day-start{% endif %}">
+    <td class="date-cell">{{ row.date }}</td>
+    <td class="time-cell">{{ row.time }}</td>
+    <td class="icon-cell">{{ row.icon }}</td>
+    <td class="type-cell">{{ row.type }}</td>
+    <td class="value-cell">{{ row.value }}</td>
+  </tr>
+{% endfor %}
+</table>
 
 <p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
 </main>

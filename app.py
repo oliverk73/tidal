@@ -364,12 +364,70 @@ def generate_tide_prediction(station):
                 "-b", current_date,
                 "-e", end_date,
                 "-f", "t",
-                "-m", "p"
+                "-m", "p",
+                "-df", "%Y-%m-%d",
+                "-tf", "%H:%M",
+                "-em", "x"
             ]
             text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True)
-            tide_text = text_result.stdout.strip()
+            tide_rows = []
+            last_date = None
+            for line in text_result.stdout.strip().splitlines()[2:]:  # skip header
+                line = line.strip()
+                if not line:
+                    continue
+                # Format: "2026-03-30 05:43   2.08 meters  Low Tide"
+                # or:     "2026-03-30 05:56   Moonset"
+                parts = line.split(None, 2)
+                if len(parts) < 3:
+                    continue
+                date_str = parts[0]
+                time_str = parts[1]
+                rest = parts[2].strip()
+                # Determine event type
+                is_tide = 'High Tide' in rest or 'Low Tide' in rest
+                is_sun = rest in ('Sunrise', 'Sunset')
+                is_moon = rest in ('Moonrise', 'Moonset', 'New Moon',
+                                   'First Quarter', 'Full Moon', 'Last Quarter')
+                # Show date only on first row of each day
+                show_date = date_str != last_date
+                last_date = date_str
+                # Parse tide value and type
+                if is_tide:
+                    val_parts = rest.rsplit('  ', 1)
+                    if len(val_parts) == 2:
+                        value = val_parts[0].strip()
+                        tide_type = val_parts[1].strip()
+                    else:
+                        value = ''
+                        tide_type = rest
+                else:
+                    value = ''
+                    tide_type = rest
+                row_type = 'tide' if is_tide else 'astro'
+                icons = {
+                    'High Tide': '\u25b2',      # ▲
+                    'Low Tide': '\u25bc',        # ▼
+                    'Sunrise': '\u2600',         # ☀
+                    'Sunset': '\u25cb',          # ○
+                    'Moonrise': '\u263d',        # ☽
+                    'Moonset': '\u263e',         # ☾
+                    'New Moon': '\u25cf',        # ●
+                    'First Quarter': '\u25d0',   # ◐
+                    'Full Moon': '\u25cb',       # ○
+                    'Last Quarter': '\u25d1',    # ◑
+                }
+                icon = icons.get(tide_type, '')
+                tide_rows.append({
+                    'date': date_str if show_date else '',
+                    'time': time_str,
+                    'value': value,
+                    'type': tide_type,
+                    'icon': icon,
+                    'row_type': row_type
+                })
         except subprocess.CalledProcessError as e:
-            tide_text = f"❌ Fehler bei Textvorhersage: {e.stderr.strip()}"
+            tide_rows = []
 
         # HTML-Datei erzeugen
         with open(TEMPLATE_PATH, encoding="utf-8") as f:
@@ -380,7 +438,7 @@ def generate_tide_prediction(station):
                                       original_name=station,
                                       svg_url=svg_url,
                                       meta_info=meta_info,
-                                      tide_text=tide_text,
+                                      tide_rows=tide_rows,
                                       station_names=_station_names)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html)
