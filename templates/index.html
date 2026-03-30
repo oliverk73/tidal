@@ -5,6 +5,34 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="/static/css/styles.css" rel="stylesheet"/>
+<style>
+.leaflet-control-layers,
+.leaflet-control-zoom,
+.leaflet-control-scale,
+.leaflet-bar {
+  background: rgba(255,255,255,0.25) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+.leaflet-control-layers {
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2) !important;
+  padding: 8px 10px !important;
+}
+.leaflet-control-layers-overlays label {
+  color: #333;
+}
+.leaflet-control-zoom a,
+.leaflet-bar a {
+  background: transparent !important;
+  color: #333 !important;
+}
+.leaflet-control-scale-line {
+  background: rgba(255,255,255,0.4) !important;
+  backdrop-filter: blur(4px) !important;
+}
+</style>
 <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <link href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" rel="stylesheet"/>
@@ -62,11 +90,10 @@
         return btn;
       }
     });
-    new LocateControl().addTo(map);
-
-    // Zoom buttons bottom-left
-    L.control.zoom({ position: 'bottomleft' }).addTo(map);
+    // Bottom-left: scale (bottom), zoom (middle), locate (top)
     L.control.scale({ metric: true, imperial: false, position: 'bottomleft' }).addTo(map);
+    L.control.zoom({ position: 'bottomleft' }).addTo(map);
+    new LocateControl().addTo(map);
 
     // --- Basemap: OSM (Standard) + CARTO Voyager (dezent, für Overlays) ---
     const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
