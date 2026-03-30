@@ -987,17 +987,32 @@
     }
   }, 100);
 
+  // Hilfsfunktion: offenen Marker in allen Cluster-Gruppen finden
+  function findOpenPopupMarker() {
+    var found = null;
+    markers.eachLayer(function (group) {
+      if (found) return;
+      if (group.eachLayer) {
+        group.eachLayer(function (layer) {
+          if (found) return;
+          if (layer.getPopup && layer.getPopup() && layer.getPopup().isOpen()) {
+            found = { marker: layer, group: group };
+          }
+        });
+      }
+    });
+    return found;
+  }
+
   // --- Marker-Drag zum Korrigieren von Koordinaten ---
   function enableDrag(linkEl) {
     // Finde den Marker, der zu diesem Popup gehört
     var popup = linkEl.closest('.leaflet-popup');
     if (!popup) return;
-    var targetMarker = null;
-    markers.eachLayer(function (layer) {
-      if (layer.getPopup && layer.getPopup() && layer.getPopup().isOpen()) {
-        targetMarker = layer;
-      }
-    });
+    var result = findOpenPopupMarker();
+    if (!result) return;
+    var targetMarker = result.marker;
+    var parentGroup = result.group;
     if (!targetMarker) return;
 
     var oldLatLng = targetMarker.getLatLng();
@@ -1012,7 +1027,7 @@
     targetMarker.closePopup();
 
     // Marker aus dem Cluster entfernen, einzeln auf Karte setzen und draggbar machen
-    markers.removeLayer(targetMarker);
+    parentGroup.removeLayer(targetMarker);
     targetMarker.options.draggable = true;
     if (targetMarker.dragging) targetMarker.dragging.enable();
     targetMarker.addTo(map);
@@ -1068,7 +1083,7 @@
       map.removeLayer(targetMarker);
       targetMarker.options.draggable = false;
       if (targetMarker.dragging) targetMarker.dragging.disable();
-      markers.addLayer(targetMarker);
+      parentGroup.addLayer(targetMarker);
     });
   }
 
@@ -1076,13 +1091,9 @@
   function renameStation(linkEl) {
     var popup = linkEl.closest('.leaflet-popup');
     if (!popup) return;
-    var targetMarker = null;
-    markers.eachLayer(function (layer) {
-      if (layer.getPopup && layer.getPopup() && layer.getPopup().isOpen()) {
-        targetMarker = layer;
-      }
-    });
-    if (!targetMarker) return;
+    var result = findOpenPopupMarker();
+    if (!result) return;
+    var targetMarker = result.marker;
 
     var popupContent = targetMarker.getPopup().getContent();
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
@@ -1133,13 +1144,10 @@
   function deleteStation(linkEl) {
     var popup = linkEl.closest('.leaflet-popup');
     if (!popup) return;
-    var targetMarker = null;
-    markers.eachLayer(function (layer) {
-      if (layer.getPopup && layer.getPopup() && layer.getPopup().isOpen()) {
-        targetMarker = layer;
-      }
-    });
-    if (!targetMarker) return;
+    var result = findOpenPopupMarker();
+    if (!result) return;
+    var targetMarker = result.marker;
+    var parentGroup = result.group;
 
     var popupContent = targetMarker.getPopup().getContent();
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
@@ -1169,7 +1177,7 @@
       if (data.ok) {
         alert('Station gelöscht: ' + stationName);
         // Marker von der Karte entfernen
-        markers.removeLayer(targetMarker);
+        parentGroup.removeLayer(targetMarker);
         // Aus lokalen Lookup-Tabellen entfernen
         if (typeof stationCoords !== 'undefined') delete stationCoords[stationName];
         if (typeof stationSources !== 'undefined') delete stationSources[stationName];
