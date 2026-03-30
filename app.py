@@ -3,7 +3,7 @@ import re
 import tempfile
 import unicodedata
 import subprocess
-from datetime import datetime
+from datetime import datetime, timedelta
 import glob
 from flask import Flask, render_template, render_template_string, abort, jsonify, url_for, request
 from urllib.parse import unquote
@@ -342,13 +342,34 @@ def generate_tide_prediction(station):
             f.write(raw.decode("iso-8859-1"))
         print(f"✅ SVG-Datei konvertiert: {svg_path}")
 
-        # Zusätzlich: tide -l "Station" -m a
+        # Zusätzlich: tide -l "Station" -m a → als Key-Value-Liste
         try:
             meta_cmd = ["tide", "-l", decoded_station, "-m", "a"]
             meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True)
-            meta_info = meta_result.stdout.strip()
+            meta_rows = []
+            for line in meta_result.stdout.strip().splitlines():
+                key = line[:14].strip()
+                val = line[14:].strip()
+                if key:
+                    meta_rows.append((key, val))
+            meta_info = meta_rows
         except subprocess.CalledProcessError as e:
-            meta_info = f"❌ Fehler bei 'tide -m a': {e.stderr.strip()}"
+            meta_info = []
+
+        # Textvorhersage: tide -l "Station" -b ... -e ... -f t -m p
+        try:
+            end_date = (datetime.now() + timedelta(days=5)).strftime("%Y-%m-%d %H:%M")
+            text_cmd = [
+                "tide", "-l", decoded_station,
+                "-b", current_date,
+                "-e", end_date,
+                "-f", "t",
+                "-m", "p"
+            ]
+            text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True)
+            tide_text = text_result.stdout.strip()
+        except subprocess.CalledProcessError as e:
+            tide_text = f"❌ Fehler bei Textvorhersage: {e.stderr.strip()}"
 
         # HTML-Datei erzeugen
         with open(TEMPLATE_PATH, encoding="utf-8") as f:
@@ -359,6 +380,7 @@ def generate_tide_prediction(station):
                                       original_name=station,
                                       svg_url=svg_url,
                                       meta_info=meta_info,
+                                      tide_text=tide_text,
                                       station_names=_station_names)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html)

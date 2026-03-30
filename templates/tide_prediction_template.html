@@ -5,6 +5,16 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="/static/css/styles.css" rel="stylesheet"/>
+<style>
+html, body { overflow: auto; height: auto; }
+main { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+main img { max-width: 100%; height: auto; }
+.station-meta { margin: 0; padding: 0; }
+.station-meta div { display: flex; flex-wrap: wrap; border-bottom: 1px solid #eee; padding: 4px 0; }
+.station-meta dt { font-weight: bold; min-width: 130px; margin: 0; }
+.station-meta dd { margin: 0; flex: 1; }
+#tide_text { white-space: pre-wrap; word-break: break-word; font-size: 0.9em; }
+</style>
 <script src="/static/js/suche.js" defer></script>
 
 <title>Tide predictions &amp; forecasts {{ original_name }}</title>
@@ -19,9 +29,15 @@
 <h1>Tide prediction & forecast {{ original_name }}</h1>
 <h2>Tide calendars with high and low tides times as well as tide curves</h2> 
 <h3 style="page-break-before:always;">{{ original_name }}</h3>
-<pre>{{ meta_info | e | safe }}</pre>
+<dl class="station-meta">
+{% for key, val in meta_info %}
+  <div><dt>{{ key }}</dt><dd>{{ val }}</dd></div>
+{% endfor %}
+</dl>
 <p><img src="{{ svg_url }}" alt="Tide prediction graph {{ station }}" id="Tide prediction curve"></p>
 
+<h3>Tide times</h3>
+<pre id="tide_text">{{ tide_text }}</pre>
 
 <p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
 </main>

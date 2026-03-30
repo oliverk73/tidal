@@ -2,6 +2,7 @@ import re
 import os
 import glob
 import unicodedata
+from urllib.parse import quote
 
 TCD_DIR = "/usr/share/xtide"
 HARMONICS_DIRS = [
@@ -95,12 +96,12 @@ lines.append("var markers = L.markerClusterGroup();")
 for i, (name, lat, lon, source_file) in enumerate(all_stations, 1):
     safe_name = normalize_filename(name)
     display_name = name.replace('"', '&quot;')
-    js_name = name.replace("\\", "\\\\").replace("'", "\\x27").replace('"', "\\x22")
+    uri_name = quote(name, safe='')
 
     popup_html = (
         f"<b>{display_name}</b><br>"
         f"<a href=\\\"#\\\" onclick=\\\""
-        f"fetch('/generate/' + encodeURIComponent('{js_name}')).then(r => {{"
+        f"fetch('/generate/{uri_name}').then(r => {{"
         f"  if (r.ok) window.location.href = '/static/predictions/tide_prediction_{safe_name}.html';"
         f"  else alert('Fehler beim Erzeugen der Vorhersage.');"
         f"}}); return false;\\\">🌊 Vorhersage anzeigen</a><br>"
@@ -120,12 +121,12 @@ for i, (name, lat, lon, source_file) in enumerate(all_stations, 1):
     lines.append(f'{marker_var}.bindPopup("{popup_html}");')
     lines.append(f"markers.addLayer({marker_var});")
 
-lines.append("map.addLayer(markers);")
-lines.append("""
-if (!localStorage.getItem('mapView')) {
-  map.fitBounds(markers.getBounds());
-}
-""")
+lines.append("""document.addEventListener('DOMContentLoaded', function() {
+  map.addLayer(markers);
+  if (!localStorage.getItem('mapView')) {
+    map.fitBounds(markers.getBounds());
+  }
+});""")
 
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(icon_definition)
