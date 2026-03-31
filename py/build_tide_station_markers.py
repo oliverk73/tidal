@@ -87,6 +87,16 @@ for tcd_file in tcd_files:
 name_counter = Counter(name for name, _, _, _, _ in all_stations)
 duplicate_names = {name for name, count in name_counter.items() if count > 1}
 
+# Offset duplicate markers slightly so they don't overlap exactly (~11m per step)
+OFFSET_STEP = 0.0001
+dup_seen = {}
+for i, (name, lat, lon, source, is_current) in enumerate(all_stations):
+    if name in duplicate_names:
+        idx = dup_seen.get(name, 0)
+        dup_seen[name] = idx + 1
+        if idx > 0:
+            all_stations[i] = (name, lat + OFFSET_STEP * idx, lon, source, is_current)
+
 print(f"Gesamt: {len(all_stations)} Stationen ({len(duplicate_names)} Namen mehrfach)")
 
 output_file = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers.js")
