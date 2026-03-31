@@ -43,6 +43,8 @@
 <script src="/static/js/precip_layer.js" defer></script>
 <script src="/static/js/sst_layer.js" defer></script>
 <script src="/static/js/nowcast_layer.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
 
 <title>Tide predictions &amp; forecasts</title>
 </head>
@@ -573,6 +575,154 @@
         return container;
       }
     });
+    // --- Ocean Currents Layer (leaflet-velocity) ---
+    var ocVelocityLayer = null;
+    var ocMeta = null;
+    var ocFrames = [];
+    var ocCurrentFrame = 0;
+    var ocAnimTimer = null;
+    var ocDataCache = {};
+
+    async function ocLoadMeta() {
+      var resp = await fetch('/static/ocean_currents/ocean_currents_meta.json?t=' + Date.now());
+      ocMeta = await resp.json();
+      ocFrames = ocMeta.frames;
+      return ocMeta;
+    }
+
+    async function ocLoadFrame(idx) {
+      if (ocDataCache[idx]) return ocDataCache[idx];
+      var resp = await fetch('/static/ocean_currents/' + ocFrames[idx].file + '?t=' + (ocMeta.generated || Date.now()));
+      ocDataCache[idx] = await resp.json();
+      return ocDataCache[idx];
+    }
+
+    async function ocPreloadAll() {
+      await Promise.all(ocFrames.map(function (_, i) { return ocLoadFrame(i); }));
+    }
+
+    async function ocShowFrame(idx) {
+      idx = ((idx % ocFrames.length) + ocFrames.length) % ocFrames.length;
+      ocCurrentFrame = idx;
+      var data = await ocLoadFrame(idx);
+      if (ocVelocityLayer) {
+        ocVelocityLayer.setData(data);
+      } else {
+        ocVelocityLayer = L.velocityLayer({
+          displayValues: true,
+          displayOptions: {
+            velocityType: 'Meeresstr\u00f6mung',
+            position: 'bottomleft',
+            emptyString: 'Keine Str\u00f6mungsdaten',
+            speedUnit: 'ms',
+            directionString: 'Richtung',
+            speedString: 'Geschw.'
+          },
+          data: data,
+          maxVelocity: 1.5,
+          velocityScale: 0.08,
+          opacity: 0.92,
+          particleAge: 60,
+          lineWidth: 1.8,
+          particleMultiplier: 1/200,
+          colorScale: ['#3af', '#0af', '#09c', '#07b', '#058', '#036'],
+        });
+        ocVelocityLayer.addTo(map);
+      }
+      var el = document.getElementById('oc-label');
+      if (el) el.textContent = ocFrames[idx].label;
+      var prog = document.getElementById('oc-progress');
+      if (prog) prog.value = idx;
+    }
+
+    function ocDeactivate() {
+      ocStopAnim();
+      if (ocVelocityLayer) { map.removeLayer(ocVelocityLayer); ocVelocityLayer = null; }
+    }
+
+    function ocPlayAnim() {
+      if (ocAnimTimer) return;
+      document.getElementById('oc-play-btn').textContent = '\u23F8';
+      ocAnimTimer = setInterval(function () {
+        ocShowFrame(ocCurrentFrame + 1);
+      }, 1200);
+    }
+
+    function ocStopAnim() {
+      if (ocAnimTimer) { clearInterval(ocAnimTimer); ocAnimTimer = null; }
+      var btn = document.getElementById('oc-play-btn');
+      if (btn) btn.textContent = '\u25B6';
+    }
+
+    function ocToggleAnim() { ocAnimTimer ? ocStopAnim() : ocPlayAnim(); }
+
+    const OceanCurrentControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar');
+        container.style.cssText = 'background:rgba(255,255,255,0.25);padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.2);user-select:none;backdrop-filter:blur(4px);';
+        container.innerHTML =
+          '<div style="margin-bottom:6px;font-weight:bold;">' +
+            '<label style="cursor:pointer;">' +
+              '<input type="checkbox" id="oc-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 12 C8 8, 12 16, 16 12 S24 8, 20 12" stroke="#0af" stroke-width="2.5" fill="none" stroke-linecap="round"/><polygon points="18,10 22,12 18,14" fill="#0af"/></svg>Meeresstr\u00f6mung (HYCOM)' +
+            '</label>' +
+          '</div>' +
+          '<div id="oc-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
+            '<div id="oc-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="oc-player" style="display:none;">' +
+              '<div style="display:flex;align-items:center;gap:8px;">' +
+                '<button id="oc-prev-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
+                '<button id="oc-play-btn" style="font-size:18px;cursor:pointer;border:none;background:none;padding:2px 8px;">\u25B6</button>' +
+                '<button id="oc-next-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23ED</button>' +
+                '<span id="oc-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
+              '</div>' +
+              '<input type="range" id="oc-progress" min="0" max="0" value="0" style="width:180px;cursor:pointer;">' +
+            '</div>' +
+          '</div>';
+
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+
+        setTimeout(function () {
+          document.getElementById('oc-toggle').addEventListener('change', async function () {
+            if (this.checked) {
+              deactivateOtherOverlays('oc-toggle');
+              document.getElementById('oc-controls').style.display = 'flex';
+              document.getElementById('oc-loading').style.display = 'block';
+              document.getElementById('oc-player').style.display = 'none';
+              try {
+                await ocLoadMeta();
+                await ocPreloadAll();
+                document.getElementById('oc-progress').max = ocFrames.length - 1;
+                document.getElementById('oc-loading').style.display = 'none';
+                document.getElementById('oc-player').style.display = 'block';
+                await ocShowFrame(0);
+                showLegend('oc-toggle');
+              } catch (e) {
+                document.getElementById('oc-loading').textContent = 'Fehler beim Laden!';
+                console.error('Ocean current layer error:', e);
+              }
+            } else {
+              document.getElementById('oc-controls').style.display = 'none';
+              ocDeactivate();
+            }
+          });
+          document.getElementById('oc-play-btn').addEventListener('click', function () { ocToggleAnim(); });
+          document.getElementById('oc-prev-btn').addEventListener('click', function () {
+            ocStopAnim(); ocShowFrame(ocCurrentFrame - 1);
+          });
+          document.getElementById('oc-next-btn').addEventListener('click', function () {
+            ocStopAnim(); ocShowFrame(ocCurrentFrame + 1);
+          });
+          document.getElementById('oc-progress').addEventListener('input', function () {
+            ocStopAnim(); ocShowFrame(parseInt(this.value));
+          });
+        }, 0);
+
+        return container;
+      }
+    });
+
     // --- Precipitation Forecast Layer (Canvas) ---
     const precipLayer = new PrecipCanvasLayer(map);
 
@@ -852,7 +1002,8 @@
       { id: 'nc-toggle',  off: function () { document.getElementById('nc-controls').style.display = 'none'; ncClearCache(); ncActive = false; } },
       { id: 'rv-toggle',  off: function () { document.getElementById('rv-controls').style.display = 'none'; rvStop(); rvClearCache(); rvActive = false; } },
       { id: 'sst-toggle', off: function () { document.getElementById('sst-controls').style.display = 'none'; sstDeactivateAll(); } },
-      { id: 'wv-toggle',  off: function () { document.getElementById('wv-controls').style.display = 'none'; waveLayer.deactivate(); } }
+      { id: 'wv-toggle',  off: function () { document.getElementById('wv-controls').style.display = 'none'; waveLayer.deactivate(); } },
+      { id: 'oc-toggle',  off: function () { document.getElementById('oc-controls').style.display = 'none'; ocDeactivate(); } }
     ];
 
     // --- Vertical color legend (shown next to active overlay) ---
@@ -884,6 +1035,10 @@
       'wv-toggle': {
         gradient: 'linear-gradient(to top,#0a28a0,#0078d2,#00bea8,#3cc83c,#d2d200,#eb9600,#d2281e,#960050)',
         min: '0.5', max: '8+', unit: 'm'
+      },
+      'oc-toggle': {
+        gradient: 'linear-gradient(to top,#036,#058,#07b,#09c,#0af,#3af)',
+        min: '0.0', max: '1.5+', unit: 'm/s'
       }
     };
 
@@ -937,6 +1092,7 @@
     new NowcastControl().addTo(map);   // Radar-Nowcast DE+NL
     new RadarControl().addTo(map);     // Regenradar Animation
     new SSTControl().addTo(map);       // Wassertemperatur (SST)
+    new OceanCurrentControl().addTo(map); // Meeresströmung (HYCOM)
     new WaveControl().addTo(map);      // Wellenvorhersage (GFS-Wave)
 
     // Wire up mutual exclusion + legend after controls are in the DOM
