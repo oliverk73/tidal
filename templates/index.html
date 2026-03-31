@@ -42,6 +42,7 @@
 <script src="/static/js/wave_layer.js" defer></script>
 <script src="/static/js/precip_layer.js" defer></script>
 <script src="/static/js/sst_layer.js" defer></script>
+<script src="/static/js/tide_layer.js" defer></script>
 <script src="/static/js/nowcast_layer.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
@@ -493,6 +494,78 @@
         return container;
       }
     });
+    // --- Tide Forecast Layer (FES2022 Canvas) ---
+    const tideLayer = new TideCanvasLayer(map);
+
+    const TideControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar');
+        container.style.cssText = 'background:rgba(255,255,255,0.25);padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.2);user-select:none;backdrop-filter:blur(4px);';
+        container.innerHTML =
+          '<div style="margin-bottom:6px;font-weight:bold;">' +
+            '<label style="cursor:pointer;">' +
+              '<input type="checkbox" id="td-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M3 17c2-4 4-1 6-5s2-6 4-2 4 1 5 5" stroke="#555" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="#999" stroke-width="1" stroke-dasharray="3 2"/></svg>Gezeitenvorhersage (FES2022)' +
+            '</label>' +
+          '</div>' +
+          '<div id="td-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
+            '<div id="td-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="td-player" style="display:none;">' +
+              '<div style="display:flex;align-items:center;gap:8px;">' +
+                '<button id="td-prev" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
+                '<button id="td-play" style="font-size:18px;cursor:pointer;border:none;background:none;padding:2px 8px;">\u25B6</button>' +
+                '<button id="td-next" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23ED</button>' +
+                '<span id="td-time" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
+              '</div>' +
+              '<input type="range" id="td-range" min="0" max="24" value="0" style="width:180px;cursor:pointer;">' +
+            '</div>' +
+          '</div>';
+
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+
+        setTimeout(function () {
+          document.getElementById('td-toggle').addEventListener('change', async function () {
+            if (this.checked) {
+              document.getElementById('td-controls').style.display = 'flex';
+              document.getElementById('td-loading').style.display = 'block';
+              document.getElementById('td-player').style.display = 'none';
+              try {
+                await tideLayer.loadMeta('/static/tides/tide_meta.json');
+                await tideLayer.preloadAll();
+                const rangeEl = document.getElementById('td-range');
+                rangeEl.max = tideLayer.frames.length - 1;
+                rangeEl.value = 0;
+                document.getElementById('td-loading').style.display = 'none';
+                document.getElementById('td-player').style.display = 'block';
+                tideLayer.activate();
+              } catch (e) {
+                document.getElementById('td-loading').textContent = 'Fehler beim Laden!';
+                console.error('Tide layer error:', e);
+              }
+            } else {
+              document.getElementById('td-controls').style.display = 'none';
+              tideLayer.deactivate();
+            }
+          });
+          document.getElementById('td-play').addEventListener('click', function () {
+            tideLayer.toggleAnim();
+          });
+          document.getElementById('td-prev').addEventListener('click', function () {
+            tideLayer.stopAnim(); tideLayer.showFrame(tideLayer.currentFrame - 1);
+          });
+          document.getElementById('td-next').addEventListener('click', function () {
+            tideLayer.stopAnim(); tideLayer.showFrame(tideLayer.currentFrame + 1);
+          });
+          document.getElementById('td-range').addEventListener('input', function () {
+            tideLayer.stopAnim(); tideLayer.showFrame(parseInt(this.value));
+          });
+        }, 0);
+
+        return container;
+      }
+    });
+
     // --- Wave Forecast Layer (Canvas) ---
     const waveLayer = new WaveCanvasLayer(map);
 
@@ -1041,6 +1114,7 @@
       { id: 'rv-toggle',  off: function () { document.getElementById('rv-controls').style.display = 'none'; rvStop(); rvClearCache(); rvActive = false; } },
       { id: 'sst-toggle', off: function () { document.getElementById('sst-controls').style.display = 'none'; sstDeactivateAll(); } },
       { id: 'wv-toggle',  off: function () { document.getElementById('wv-controls').style.display = 'none'; waveLayer.deactivate(); } },
+      { id: 'td-toggle',  off: function () { document.getElementById('td-controls').style.display = 'none'; tideLayer.deactivate(); } },
       { id: 'oc-toggle',  off: function () { document.getElementById('oc-controls').style.display = 'none'; ocDeactivate(); } }
     ];
 
@@ -1073,6 +1147,10 @@
       'wv-toggle': {
         gradient: 'linear-gradient(to top,#0a28a0,#0078d2,#00bea8,#3cc83c,#d2d200,#eb9600,#d2281e,#960050)',
         min: '0.5', max: '8+', unit: 'm'
+      },
+      'td-toggle': {
+        gradient: 'linear-gradient(to top,#141450,#1e32a0,#2864c8,#50a0dc,#8cc8eb,#dce1e6,#ebc38c,#dc9b50,#c86428,#aa281e,#640f0f)',
+        min: '-8', max: '+8', unit: 'm'
       },
       'oc-toggle': {
         gradient: 'linear-gradient(to top,#036,#058,#07b,#09c,#0af,#3af)',
@@ -1131,6 +1209,7 @@
     new RadarControl().addTo(map);     // Regenradar Animation
     new SSTControl().addTo(map);       // Wassertemperatur (SST)
     new OceanCurrentControl().addTo(map); // Meeresströmung (HYCOM)
+    new TideControl().addTo(map);      // Gezeitenvorhersage (FES2022)
     new WaveControl().addTo(map);      // Wellenvorhersage (GFS-Wave)
 
     // Wire up mutual exclusion + legend after controls are in the DOM
