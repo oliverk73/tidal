@@ -1,0 +1,33 @@
+/* Suchfeld-Styling */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#search {
+  padding: 8px 36px 8px 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-button {
+  position: absolute;
+  right: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+#search-button:hover {
+  color: #000;
+}
+
+#suggestions li:hover {
+  background-color: #f0f0f0;
+}
