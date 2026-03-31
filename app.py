@@ -263,13 +263,28 @@ def update_markers_js(station_name, new_lat, new_lon):
         f.write(content)
 
 
-# Unicode-Normalisierung + ASCII + Ersetzung für Dateinamen
+TRANSLITERATION = {
+    # German
+    'ä': 'ae', 'ö': 'oe', 'ü': 'ue', 'ß': 'ss',
+    'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue',
+    # Scandinavian
+    'ø': 'oe', 'Ø': 'Oe', 'å': 'aa', 'Å': 'Aa', 'æ': 'ae', 'Æ': 'Ae',
+    # Polish
+    'ł': 'l', 'Ł': 'L',
+    # Icelandic
+    'ð': 'd', 'Ð': 'D', 'þ': 'th', 'Þ': 'Th',
+}
+
+
+# Unicode-Normalisierung + Transliteration + ASCII für Dateinamen/URLs
 def normalize_filename(name: str) -> str:
+    for char, repl in TRANSLITERATION.items():
+        name = name.replace(char, repl)
     name = unicodedata.normalize('NFKD', name)
     name = name.encode('ascii', 'ignore').decode('ascii')
     name = re.sub(r"['\\\\/]", "", name)
     name = re.sub(r"[\s,]+", "_", name)
-    return name
+    return name.lower()
 
 # Optional: Mapping aus Datei laden
 normalized = {}

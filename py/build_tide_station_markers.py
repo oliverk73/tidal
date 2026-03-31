@@ -14,12 +14,27 @@ HARMONICS_DIRS = [
 ]
 
 
+TRANSLITERATION = {
+    # German
+    'ä': 'ae', 'ö': 'oe', 'ü': 'ue', 'ß': 'ss',
+    'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue',
+    # Scandinavian
+    'ø': 'oe', 'Ø': 'Oe', 'å': 'aa', 'Å': 'Aa', 'æ': 'ae', 'Æ': 'Ae',
+    # Polish
+    'ł': 'l', 'Ł': 'L',
+    # Icelandic
+    'ð': 'd', 'Ð': 'D', 'þ': 'th', 'Þ': 'Th',
+}
+
+
 def normalize_filename(name: str) -> str:
+    for char, repl in TRANSLITERATION.items():
+        name = name.replace(char, repl)
     name = unicodedata.normalize('NFKD', name)
     name = name.encode('ascii', 'ignore').decode('ascii')
     name = re.sub(r"['\\\\/]", "", name)
     name = re.sub(r"[\s,]+", "_", name)
-    return name
+    return name.lower()
 
 
 def get_stations_from_txt(txt_path):
