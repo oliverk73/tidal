@@ -582,6 +582,8 @@
     var ocCurrentFrame = 0;
     var ocAnimTimer = null;
     var ocDataCache = {};
+    var ocCacheKeys = [];     // LRU order for cache eviction
+    var OC_CACHE_MAX = 6;     // keep at most 6 frames in memory
 
     async function ocLoadMeta() {
       var resp = await fetch('/static/ocean_currents/ocean_currents_meta.json?t=' + Date.now());
@@ -593,12 +595,23 @@
     async function ocLoadFrame(idx) {
       if (ocDataCache[idx]) return ocDataCache[idx];
       var resp = await fetch('/static/ocean_currents/' + ocFrames[idx].file + '?t=' + (ocMeta.generated || Date.now()));
-      ocDataCache[idx] = await resp.json();
-      return ocDataCache[idx];
+      var data = await resp.json();
+      // Evict oldest cached frame if over limit
+      if (ocCacheKeys.length >= OC_CACHE_MAX) {
+        var old = ocCacheKeys.shift();
+        delete ocDataCache[old];
+      }
+      ocDataCache[idx] = data;
+      ocCacheKeys.push(idx);
+      return data;
     }
 
-    async function ocPreloadAll() {
-      await Promise.all(ocFrames.map(function (_, i) { return ocLoadFrame(i); }));
+    function ocPrefetchNext(idx) {
+      // Prefetch next frame in background
+      var next = (idx + 1) % ocFrames.length;
+      if (!ocDataCache[next]) {
+        ocLoadFrame(next);
+      }
     }
 
     async function ocShowFrame(idx) {
@@ -622,22 +635,48 @@
           maxVelocity: 1.5,
           velocityScale: 0.08,
           opacity: 0.92,
-          particleAge: 60,
-          lineWidth: 1.8,
-          particleMultiplier: 1/200,
+          particleAge: 40,
+          lineWidth: 1.5,
+          particleMultiplier: 1/350,
           colorScale: ['#3af', '#0af', '#09c', '#07b', '#058', '#036'],
         });
         ocVelocityLayer.addTo(map);
+        // Smooth hide/show during pan/zoom
+        if (ocVelocityLayer._canvasLayer && ocVelocityLayer._canvasLayer._canvas) {
+          ocVelocityLayer._canvasLayer._canvas.style.transition = 'opacity 0.15s ease-out';
+        }
+        map.on('dragstart movestart zoomstart', ocHide);
+        map.on('moveend zoomend', ocShow);
       }
       var el = document.getElementById('oc-label');
       if (el) el.textContent = ocFrames[idx].label;
       var prog = document.getElementById('oc-progress');
       if (prog) prog.value = idx;
+      ocPrefetchNext(idx);
     }
 
     function ocDeactivate() {
       ocStopAnim();
+      map.off('dragstart movestart zoomstart', ocHide);
+      map.off('moveend zoomend', ocShow);
+      if (ocHideTimer) { clearTimeout(ocHideTimer); ocHideTimer = null; }
       if (ocVelocityLayer) { map.removeLayer(ocVelocityLayer); ocVelocityLayer = null; }
+      ocDataCache = {};
+      ocCacheKeys = [];
+    }
+
+    var ocHideTimer = null;
+    function ocHide() {
+      if (ocHideTimer) { clearTimeout(ocHideTimer); ocHideTimer = null; }
+      var el = ocVelocityLayer && ocVelocityLayer._canvasLayer && ocVelocityLayer._canvasLayer._canvas;
+      if (el) el.style.opacity = '0';
+    }
+
+    function ocShow() {
+      var el = ocVelocityLayer && ocVelocityLayer._canvasLayer && ocVelocityLayer._canvasLayer._canvas;
+      if (!el) return;
+      // Short delay so the layer has time to redraw at new position
+      ocHideTimer = setTimeout(function () { el.style.opacity = '1'; }, 180);
     }
 
     function ocPlayAnim() {
@@ -645,7 +684,7 @@
       document.getElementById('oc-play-btn').textContent = '\u23F8';
       ocAnimTimer = setInterval(function () {
         ocShowFrame(ocCurrentFrame + 1);
-      }, 1200);
+      }, 1500);
     }
 
     function ocStopAnim() {
@@ -692,7 +731,6 @@
               document.getElementById('oc-player').style.display = 'none';
               try {
                 await ocLoadMeta();
-                await ocPreloadAll();
                 document.getElementById('oc-progress').max = ocFrames.length - 1;
                 document.getElementById('oc-loading').style.display = 'none';
                 document.getElementById('oc-player').style.display = 'block';
