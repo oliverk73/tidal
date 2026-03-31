@@ -81,7 +81,7 @@
       options: { position: 'bottomleft' },
       onAdd: function () {
         const btn = L.DomUtil.create('div', 'leaflet-bar');
-        btn.innerHTML = '<a href="#" title="Mein Standort" style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;font-size:18px;text-decoration:none;color:#333;">&#x2316;</a>';
+        btn.innerHTML = '<a href="#" title="Mein Standort" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;font-size:18px;text-decoration:none;color:#333;">&#x2316;</a>';
         L.DomEvent.disableClickPropagation(btn);
         btn.querySelector('a').addEventListener('click', function (e) {
           e.preventDefault();

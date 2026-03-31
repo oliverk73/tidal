@@ -137,18 +137,18 @@ icon_definition = ""
 
 lines = ["var stationCoords = {};"]
 lines.append("var stationSources = {};")
-# Create a cluster group per source group
+# Create separate cluster groups per source group for tide and current
 group_names = list(SOURCE_GROUPS.keys()) + ['Sonstige']
 group_colors = {g: SOURCE_GROUPS[g]['color'] for g in SOURCE_GROUPS}
 group_colors['Sonstige'] = '#999999'
 for g in group_names:
     var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
-    lines.append(f"var grp_{var_name} = L.markerClusterGroup();")
+    lines.append(f"var grp_{var_name}_tide = L.markerClusterGroup();")
+    lines.append(f"var grp_{var_name}_current = L.markerClusterGroup();")
 lines.append("var markers = L.featureGroup();")  # master group for fitBounds
-lines.append("var allTideMarkers = [];")
-lines.append("var allCurrentMarkers = [];")
 
-group_counts = {}
+group_tide_counts = {}
+group_current_counts = {}
 tide_count = 0
 current_count = 0
 for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
@@ -180,8 +180,7 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     )
 
     group_name, color = get_group_for_source(source_file)
-    group_counts[group_name] = group_counts.get(group_name, 0) + 1
-    grp_var = "grp_" + re.sub(r'[^a-zA-Z0-9]', '_', group_name)
+    grp_base = "grp_" + re.sub(r'[^a-zA-Z0-9]', '_', group_name)
     marker_var = f"m{i}"
     coord_key = name.replace("\\", "\\\\").replace("'", "\\'")
     lines.append(f"stationCoords['{coord_key}'] = [{lat}, {lon}];")
@@ -190,6 +189,8 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     sw = 3  # stroke width
     if is_current:
         current_count += 1
+        group_current_counts[group_name] = group_current_counts.get(group_name, 0) + 1
+        grp_var = f"{grp_base}_current"
         # horizontal double arrow ↔
         svg = (f'<svg width="{sz}" height="{sz}" viewBox="0 0 {sz} {sz}" xmlns="http://www.w3.org/2000/svg">'
                f'<line x1="2" y1="{sz//2}" x2="{sz-2}" y2="{sz//2}" stroke="{color}" stroke-width="{sw}" stroke-linecap="round"/>'
@@ -199,9 +200,10 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
         lines.append(
             f'var {marker_var} = L.marker([{lat}, {lon}], {{icon: L.divIcon({{html:\'{svg}\', className:"", iconSize:[{sz},{sz}], iconAnchor:[{sz//2},{sz//2}], popupAnchor:[0,-{sz//2}]}})}});'
         )
-        lines.append(f"allCurrentMarkers.push({marker_var});")
     else:
         tide_count += 1
+        group_tide_counts[group_name] = group_tide_counts.get(group_name, 0) + 1
+        grp_var = f"{grp_base}_tide"
         # vertical double arrow ↕
         svg = (f'<svg width="{sz}" height="{sz}" viewBox="0 0 {sz} {sz}" xmlns="http://www.w3.org/2000/svg">'
                f'<line x1="{sz//2}" y1="2" x2="{sz//2}" y2="{sz-2}" stroke="{color}" stroke-width="{sw}" stroke-linecap="round"/>'
@@ -211,64 +213,120 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
         lines.append(
             f'var {marker_var} = L.marker([{lat}, {lon}], {{icon: L.divIcon({{html:\'{svg}\', className:"", iconSize:[{sz},{sz}], iconAnchor:[{sz//2},{sz//2}], popupAnchor:[0,-{sz//2}]}})}});'
         )
-        lines.append(f"allTideMarkers.push({marker_var});")
     lines.append(f'{marker_var}.bindPopup("{popup_html}");')
     lines.append(f"{grp_var}.addLayer({marker_var});")
 
-# Build the DOMContentLoaded block with layer control
+# Build the DOMContentLoaded block with hierarchical layer control
 ctrl_lines = ["document.addEventListener('DOMContentLoaded', function() {"]
-ctrl_lines.append("  var overlays = {};")
+
+# Add all groups to map and master featureGroup
 for g in group_names:
-    count = group_counts.get(g, 0)
-    if count == 0:
+    var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
+    tc = group_tide_counts.get(g, 0)
+    cc = group_current_counts.get(g, 0)
+    if tc > 0:
+        ctrl_lines.append(f"  map.addLayer(grp_{var_name}_tide);")
+        ctrl_lines.append(f"  markers.addLayer(grp_{var_name}_tide);")
+    if cc > 0:
+        ctrl_lines.append(f"  map.addLayer(grp_{var_name}_current);")
+        ctrl_lines.append(f"  markers.addLayer(grp_{var_name}_current);")
+
+# Collect group info for tide and current sections
+tide_groups_js = []
+for g in group_names:
+    tc = group_tide_counts.get(g, 0)
+    if tc == 0:
         continue
     var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
     color = group_colors[g]
-    ctrl_lines.append(
-        f'  overlays[\'<span style="display:inline-block;width:12px;height:12px;'
-        f'border-radius:50%;background:{color};margin-right:6px;vertical-align:middle;'
-        f'border:1px solid #fff;"></span>{g} ({count})\'] = grp_{var_name};'
-    )
-    ctrl_lines.append(f"  map.addLayer(grp_{var_name});")
-    ctrl_lines.append(f"  markers.addLayer(grp_{var_name});")
-ctrl_lines.append("  L.control.layers(null, overlays, {position:'bottomright', collapsed:false}).addTo(map);")
-# Master toggle control for tide/current
+    tide_groups_js.append(f"{{name:'{g}',count:{tc},color:'{color}',layer:grp_{var_name}_tide}}")
+
+current_groups_js = []
+for g in group_names:
+    cc = group_current_counts.get(g, 0)
+    if cc == 0:
+        continue
+    var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
+    color = group_colors[g]
+    current_groups_js.append(f"{{name:'{g}',count:{cc},color:'{color}',layer:grp_{var_name}_current}}")
+
+tide_svg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="9" y1="2" x2="9" y2="16" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 9,2 13,5" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="5,13 9,16 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+current_svg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="2" y1="9" x2="16" y2="9" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 2,9 5,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="13,5 16,9 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+
 ctrl_lines.append(f"""
-  var tidesVisible = true;
-  var currentsVisible = true;
-  var MasterToggle = L.Control.extend({{
+  var tideGroups = [{','.join(tide_groups_js)}];
+  var currentGroups = [{','.join(current_groups_js)}];
+
+  var StationControl = L.Control.extend({{
     options: {{ position: 'bottomright' }},
     onAdd: function() {{
       var div = L.DomUtil.create('div', 'leaflet-bar');
-      div.style.cssText = 'background:rgba(255,255,255,0.25);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:8px 10px;font-size:13px;font-family:sans-serif;cursor:default;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.2);';
-      div.innerHTML =
-        '<label style="display:flex;align-items:center;cursor:pointer;margin-bottom:4px;font-weight:bold;">' +
-        '<input type="checkbox" id="toggle-tides" checked style="margin-right:6px;">' +
-        '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="9" y1="2" x2="9" y2="16" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 9,2 13,5" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="5,13 9,16 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        ' Tides ({tide_count})</label>' +
-        '<label style="display:flex;align-items:center;cursor:pointer;font-weight:bold;">' +
-        '<input type="checkbox" id="toggle-currents" checked style="margin-right:6px;">' +
-        '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="2" y1="9" x2="16" y2="9" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 2,9 5,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="13,5 16,9 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        ' Currents ({current_count})</label>';
+      div.style.cssText = 'background:rgba(255,255,255,0.25);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:8px 10px;font-size:13px;font-family:sans-serif;cursor:default;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.2);max-height:60vh;overflow-y:auto;';
       L.DomEvent.disableClickPropagation(div);
-      div.querySelector('#toggle-tides').addEventListener('change', function() {{
-        tidesVisible = this.checked;
-        allTideMarkers.forEach(function(m) {{
-          if (tidesVisible) m.setStyle ? m.setStyle({{opacity:1,fillOpacity:0.85}}) : (m._icon && (m._icon.style.display=''));
-          else m.setStyle ? m.setStyle({{opacity:0,fillOpacity:0}}) : (m._icon && (m._icon.style.display='none'));
+      L.DomEvent.disableScrollPropagation(div);
+
+      function dot(color) {{
+        return '<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:'+color+';margin-right:5px;vertical-align:middle;border:1px solid #fff;"></span>';
+      }}
+
+      function buildSection(masterLabel, masterSvg, groups, idPrefix) {{
+        var html = '<label style="display:flex;align-items:center;cursor:pointer;font-weight:bold;margin-bottom:2px;">' +
+          '<input type="checkbox" data-master="'+idPrefix+'" checked style="margin-right:6px;">' +
+          masterSvg + ' ' + masterLabel + '</label>';
+        for (var i = 0; i < groups.length; i++) {{
+          var g = groups[i];
+          html += '<label style="display:flex;align-items:center;cursor:pointer;margin-left:22px;margin-bottom:1px;">' +
+            '<input type="checkbox" data-group="'+idPrefix+'-'+i+'" checked style="margin-right:5px;">' +
+            dot(g.color) + g.name + ' (' + g.count + ')</label>';
+        }}
+        return html;
+      }}
+
+      var html = buildSection('Tides ({tide_count})', '{tide_svg}', tideGroups, 'tide');
+      html += '<div style="border-top:1px solid rgba(0,0,0,0.15);margin:5px 0;"></div>';
+      html += buildSection('Currents ({current_count})', '{current_svg}', currentGroups, 'current');
+      div.innerHTML = html;
+
+      // Master toggle handler
+      function setupMaster(idPrefix, groups) {{
+        var master = div.querySelector('[data-master="'+idPrefix+'"]');
+        var subs = [];
+        for (var i = 0; i < groups.length; i++) {{
+          subs.push(div.querySelector('[data-group="'+idPrefix+'-'+i+'"]'));
+        }}
+        master.addEventListener('change', function() {{
+          var on = this.checked;
+          for (var i = 0; i < groups.length; i++) {{
+            subs[i].checked = on;
+            if (on) map.addLayer(groups[i].layer);
+            else map.removeLayer(groups[i].layer);
+          }}
         }});
-      }});
-      div.querySelector('#toggle-currents').addEventListener('change', function() {{
-        currentsVisible = this.checked;
-        allCurrentMarkers.forEach(function(m) {{
-          if (currentsVisible) {{ if(m._icon) m._icon.style.display=''; }}
-          else {{ if(m._icon) m._icon.style.display='none'; }}
-        }});
-      }});
+        for (var i = 0; i < groups.length; i++) {{
+          (function(idx) {{
+            subs[idx].addEventListener('change', function() {{
+              if (this.checked) map.addLayer(groups[idx].layer);
+              else map.removeLayer(groups[idx].layer);
+              // Update master checkbox state
+              var allOn = true, allOff = true;
+              for (var j = 0; j < subs.length; j++) {{
+                if (subs[j].checked) allOff = false;
+                else allOn = false;
+              }}
+              master.checked = allOn;
+              master.indeterminate = !allOn && !allOff;
+            }});
+          }})(i);
+        }}
+      }}
+
+      setupMaster('tide', tideGroups);
+      setupMaster('current', currentGroups);
+
       return div;
     }}
   }});
-  new MasterToggle().addTo(map);
+  new StationControl().addTo(map);
 """)
 ctrl_lines.append("  if (!localStorage.getItem('mapView')) {")
 ctrl_lines.append("    map.fitBounds(markers.getBounds());")
