@@ -309,6 +309,23 @@ def load_station_names():
 
 _station_names = load_station_names()
 
+def to_slug(name):
+    """Convert station name to SEO-friendly slug: 'Douala, Cameroon' → 'douala-cameroon'."""
+    slug = name
+    for char, repl in TRANSLITERATION.items():
+        slug = slug.replace(char, repl)
+    slug = unicodedata.normalize('NFKD', slug)
+    slug = slug.encode('ascii', 'ignore').decode('ascii')
+    slug = re.sub(r"['\\\\/]", "", slug)
+    slug = re.sub(r"[^a-zA-Z0-9]+", "-", slug)
+    slug = slug.strip("-").lower()
+    return slug
+
+# Reverse lookup: slug → original station name
+_slug_to_station = {}
+for _name in _station_names:
+    _slug_to_station[to_slug(_name)] = _name
+
 @app.route("/")
 def index():
     return render_template("index.html", station_names=_station_names)
@@ -317,173 +334,229 @@ def index():
 def favicon():
     return send_from_directory("static", "favicon.ico", mimetype="image/x-icon")
 
+def _resolve_station(station, source=None):
+    """Decode station name and compute safe filenames + source suffix."""
+    decoded_station = unquote(station)
+    safe_station = normalized.get(decoded_station, normalize_filename(decoded_station))
+    if source:
+        skey = source.replace('.tcd', '')
+        skey = re.sub(r'^harmonics[-_]', '', skey)
+        skey = skey.replace('_mod', '')
+        safe_station = safe_station + '__' + skey
+    svg_filename = f"tide_prediction_{safe_station}.svg"
+    html_filename = f"tide_prediction_{safe_station}.html"
+    return decoded_station, safe_station, svg_filename, html_filename
+
+
+def _is_fresh_today(filepath):
+    """Check if file exists and was last modified today."""
+    if not os.path.exists(filepath):
+        return False
+    mtime = datetime.fromtimestamp(os.path.getmtime(filepath))
+    return mtime.date() == datetime.now().date()
+
+
+def _generate_prediction(decoded_station, station_raw, source, svg_filename, html_filename):
+    """Generate SVG + HTML prediction files. Returns html_path."""
+    svg_path = os.path.join(IMAGES_DIR, svg_filename)
+    html_path = os.path.join(PREDICTIONS_DIR, html_filename)
+
+    os.makedirs(PREDICTIONS_DIR, exist_ok=True)
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+
+    if os.path.exists(svg_path):
+        os.remove(svg_path)
+        print(f"🗑️ Alte SVG-Datei gelöscht: {svg_path}")
+
+    # Set HFILE_PATH to specific TCD file if source is specified
+    env = None
+    if source:
+        tcd_path = os.path.join('/usr/share/xtide', source)
+        if os.path.exists(tcd_path):
+            env = os.environ.copy()
+            env['HFILE_PATH'] = tcd_path
+
+    current_date = datetime.now().strftime("%Y-%m-%d 00:00")
+    cmd = [
+        "tide",
+        "-l", decoded_station,
+        "-b", current_date,
+        "-f", "v",
+        "-m", "g",
+        "-o", svg_path
+    ]
+
+    print("➤ Aufruf von tide:")
+    print(" ", " ".join(cmd))
+
+    subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
+    print("✅ tide wurde erfolgreich ausgeführt.")
+
+    # Konvertierung der SVG-Kodierung
+    with open(svg_path, "rb") as f:
+        raw = f.read()
+    with open(svg_path, "w", encoding="utf-8") as f:
+        f.write(raw.decode("iso-8859-1"))
+    print(f"✅ SVG-Datei konvertiert: {svg_path}")
+
+    # Zusätzlich: tide -l "Station" -m a → als Key-Value-Liste
+    try:
+        meta_cmd = ["tide", "-l", decoded_station, "-m", "a"]
+        meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True, env=env)
+        meta_rows = []
+        for line in meta_result.stdout.strip().splitlines():
+            key = line[:14].strip()
+            val = line[14:].strip()
+            if key:
+                meta_rows.append((key, val))
+        meta_info = meta_rows
+    except subprocess.CalledProcessError:
+        meta_info = []
+
+    # Textvorhersage: tide -l "Station" -b ... -e ... -f t -m p
+    try:
+        end_date = (datetime.now() + timedelta(days=5)).strftime("%Y-%m-%d %H:%M")
+        text_cmd = [
+            "tide", "-l", decoded_station,
+            "-b", current_date,
+            "-e", end_date,
+            "-f", "t",
+            "-m", "p",
+            "-df", "%Y-%m-%d",
+            "-tf", "%H:%M",
+            "-em", "x"
+        ]
+        text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True, env=env)
+        tide_rows = []
+        last_date = None
+        for line in text_result.stdout.strip().splitlines()[2:]:  # skip header
+            line = line.strip()
+            if not line:
+                continue
+            # Format: "2026-03-30 05:43   2.08 meters  Low Tide"
+            # or:     "2026-03-30 05:56   Moonset"
+            parts = line.split(None, 2)
+            if len(parts) < 3:
+                continue
+            date_str = parts[0]
+            time_str = parts[1]
+            rest = parts[2].strip()
+            # Determine event type
+            is_tide = 'High Tide' in rest or 'Low Tide' in rest
+            is_sun = rest in ('Sunrise', 'Sunset')
+            is_moon = rest in ('Moonrise', 'Moonset', 'New Moon',
+                               'First Quarter', 'Full Moon', 'Last Quarter')
+            # Show date only on first row of each day
+            show_date = date_str != last_date
+            last_date = date_str
+            # Parse tide value and type
+            if is_tide:
+                val_parts = rest.rsplit('  ', 1)
+                if len(val_parts) == 2:
+                    value = val_parts[0].strip()
+                    tide_type = val_parts[1].strip()
+                else:
+                    value = ''
+                    tide_type = rest
+            else:
+                value = ''
+                tide_type = rest
+            row_type = 'tide' if is_tide else 'astro'
+            icons = {
+                'High Tide': '\u25b2',      # ▲
+                'Low Tide': '\u25bc',        # ▼
+                'Sunrise': '\u2600',         # ☀
+                'Sunset': '\u25cb',          # ○
+                'Moonrise': '\u263d',        # ☽
+                'Moonset': '\u263e',         # ☾
+                'New Moon': '\u25cf',        # ●
+                'First Quarter': '\u25d0',   # ◐
+                'Full Moon': '\u25cb',       # ○
+                'Last Quarter': '\u25d1',    # ◑
+            }
+            icon = icons.get(tide_type, '')
+            tide_rows.append({
+                'date': date_str if show_date else '',
+                'time': time_str,
+                'value': value,
+                'type': tide_type,
+                'icon': icon,
+                'row_type': row_type
+            })
+    except subprocess.CalledProcessError:
+        tide_rows = []
+
+    # HTML-Datei erzeugen
+    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+        template = f.read()
+    svg_url = f"/static/images/{svg_filename}"
+    html = render_template_string(template,
+                                  station=decoded_station,
+                                  original_name=station_raw,
+                                  svg_url=svg_url,
+                                  meta_info=meta_info,
+                                  tide_rows=tide_rows,
+                                  station_names=_station_names)
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"✅ HTML-Seite erzeugt: {html_path}")
+    return html_path
+
+
+@app.route("/prediction/<slug>")
+def show_prediction(slug):
+    """Serve a prediction page, regenerating if stale (not from today)."""
+    try:
+        source = request.args.get('source')
+
+        # Resolve slug to original station name
+        station_name = _slug_to_station.get(slug)
+        if not station_name:
+            return "Station nicht gefunden.", 404
+
+        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station_name, source)
+        html_path = os.path.join(PREDICTIONS_DIR, html_filename)
+
+        if not _is_fresh_today(html_path):
+            print(f"➤ Prediction veraltet oder nicht vorhanden: {decoded_station}")
+            _generate_prediction(decoded_station, station_name, source, svg_filename, html_filename)
+        else:
+            print(f"➤ Prediction aktuell (Cache-Hit): {decoded_station}")
+
+        with open(html_path, encoding="utf-8") as f:
+            return f.read()
+
+    except subprocess.CalledProcessError as e:
+        print("❌ Fehler beim Aufruf von tide:")
+        print(e.stderr)
+        return "Fehler beim Erzeugen der Vorhersage.", 500
+    except Exception as e:
+        print(f"❌ Unerwarteter Fehler: {e}")
+        return "Interner Fehler", 500
+
+
 @app.route("/generate/<station>")
 def generate_tide_prediction(station):
     try:
-        decoded_station = unquote(station)
         source = request.args.get('source')
-        safe_station = normalized.get(decoded_station, normalize_filename(decoded_station))
-
-        # Add source suffix for disambiguation when source is specified
-        if source:
-            skey = source.replace('.tcd', '')
-            skey = re.sub(r'^harmonics[-_]', '', skey)
-            skey = skey.replace('_mod', '')
-            safe_station = safe_station + '__' + skey
+        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station, source)
 
         print(f"➤ Angeforderte Station: {decoded_station}")
         print(f"➤ Normalisierter Dateiname: {safe_station}")
         if source:
             print(f"➤ Quelle: {source}")
 
-        svg_filename = f"tide_prediction_{safe_station}.svg"
-        html_filename = f"tide_prediction_{safe_station}.html"
-        svg_path = os.path.join(IMAGES_DIR, svg_filename)
         html_path = os.path.join(PREDICTIONS_DIR, html_filename)
 
-        os.makedirs(PREDICTIONS_DIR, exist_ok=True)
-        os.makedirs(IMAGES_DIR, exist_ok=True)
+        if not _is_fresh_today(html_path):
+            _generate_prediction(decoded_station, station, source, svg_filename, html_filename)
+        else:
+            print(f"➤ Prediction aktuell (Cache-Hit): {decoded_station}")
 
-        if os.path.exists(svg_path):
-            os.remove(svg_path)
-            print(f"🗑️ Alte SVG-Datei gelöscht: {svg_path}")
-
-        # Set HFILE_PATH to specific TCD file if source is specified
-        env = None
-        if source:
-            tcd_path = os.path.join('/usr/share/xtide', source)
-            if os.path.exists(tcd_path):
-                env = os.environ.copy()
-                env['HFILE_PATH'] = tcd_path
-
-        current_date = datetime.now().strftime("%Y-%m-%d 00:00")
-        cmd = [
-            "tide",
-            "-l", decoded_station,
-            "-b", current_date,
-            "-f", "v",
-            "-m", "g",
-            "-o", svg_path
-        ]
-
-        print("➤ Aufruf von tide:")
-        print(" ", " ".join(cmd))
-
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
-        print("✅ tide wurde erfolgreich ausgeführt.")
-
-        # Konvertierung der SVG-Kodierung
-        with open(svg_path, "rb") as f:
-            raw = f.read()
-        with open(svg_path, "w", encoding="utf-8") as f:
-            f.write(raw.decode("iso-8859-1"))
-        print(f"✅ SVG-Datei konvertiert: {svg_path}")
-
-        # Zusätzlich: tide -l "Station" -m a → als Key-Value-Liste
-        try:
-            meta_cmd = ["tide", "-l", decoded_station, "-m", "a"]
-            meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True, env=env)
-            meta_rows = []
-            for line in meta_result.stdout.strip().splitlines():
-                key = line[:14].strip()
-                val = line[14:].strip()
-                if key:
-                    meta_rows.append((key, val))
-            meta_info = meta_rows
-        except subprocess.CalledProcessError as e:
-            meta_info = []
-
-        # Textvorhersage: tide -l "Station" -b ... -e ... -f t -m p
-        try:
-            end_date = (datetime.now() + timedelta(days=5)).strftime("%Y-%m-%d %H:%M")
-            text_cmd = [
-                "tide", "-l", decoded_station,
-                "-b", current_date,
-                "-e", end_date,
-                "-f", "t",
-                "-m", "p",
-                "-df", "%Y-%m-%d",
-                "-tf", "%H:%M",
-                "-em", "x"
-            ]
-            text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True, env=env)
-            tide_rows = []
-            last_date = None
-            for line in text_result.stdout.strip().splitlines()[2:]:  # skip header
-                line = line.strip()
-                if not line:
-                    continue
-                # Format: "2026-03-30 05:43   2.08 meters  Low Tide"
-                # or:     "2026-03-30 05:56   Moonset"
-                parts = line.split(None, 2)
-                if len(parts) < 3:
-                    continue
-                date_str = parts[0]
-                time_str = parts[1]
-                rest = parts[2].strip()
-                # Determine event type
-                is_tide = 'High Tide' in rest or 'Low Tide' in rest
-                is_sun = rest in ('Sunrise', 'Sunset')
-                is_moon = rest in ('Moonrise', 'Moonset', 'New Moon',
-                                   'First Quarter', 'Full Moon', 'Last Quarter')
-                # Show date only on first row of each day
-                show_date = date_str != last_date
-                last_date = date_str
-                # Parse tide value and type
-                if is_tide:
-                    val_parts = rest.rsplit('  ', 1)
-                    if len(val_parts) == 2:
-                        value = val_parts[0].strip()
-                        tide_type = val_parts[1].strip()
-                    else:
-                        value = ''
-                        tide_type = rest
-                else:
-                    value = ''
-                    tide_type = rest
-                row_type = 'tide' if is_tide else 'astro'
-                icons = {
-                    'High Tide': '\u25b2',      # ▲
-                    'Low Tide': '\u25bc',        # ▼
-                    'Sunrise': '\u2600',         # ☀
-                    'Sunset': '\u25cb',          # ○
-                    'Moonrise': '\u263d',        # ☽
-                    'Moonset': '\u263e',         # ☾
-                    'New Moon': '\u25cf',        # ●
-                    'First Quarter': '\u25d0',   # ◐
-                    'Full Moon': '\u25cb',       # ○
-                    'Last Quarter': '\u25d1',    # ◑
-                }
-                icon = icons.get(tide_type, '')
-                tide_rows.append({
-                    'date': date_str if show_date else '',
-                    'time': time_str,
-                    'value': value,
-                    'type': tide_type,
-                    'icon': icon,
-                    'row_type': row_type
-                })
-        except subprocess.CalledProcessError as e:
-            tide_rows = []
-
-        # HTML-Datei erzeugen
-        with open(TEMPLATE_PATH, encoding="utf-8") as f:
-            template = f.read()
-        svg_url = f"/static/images/{svg_filename}"
-        html = render_template_string(template,
-                                      station=decoded_station,
-                                      original_name=station,
-                                      svg_url=svg_url,
-                                      meta_info=meta_info,
-                                      tide_rows=tide_rows,
-                                      station_names=_station_names)
-        with open(html_path, "w", encoding="utf-8") as f:
-            f.write(html)
-        print(f"✅ HTML-Seite erzeugt: {html_path}")
-
-        # Final-URL als JSON an den Client zurückgeben
-        rel_path = os.path.join("predictions", html_filename)
-        final_url = url_for('static', filename=rel_path)
+        # URL zur dynamischen Route zurückgeben
+        source_param = f"?source={source}" if source else ""
+        slug = to_slug(decoded_station)
+        final_url = f"/prediction/{slug}{source_param}"
         return jsonify(url=final_url)
 
     except subprocess.CalledProcessError as e:

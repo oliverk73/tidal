@@ -37,6 +37,19 @@ def normalize_filename(name: str) -> str:
     return name.lower()
 
 
+def to_slug(name: str) -> str:
+    """Convert station name to SEO-friendly slug: 'Douala, Cameroon' → 'douala-cameroon'."""
+    slug = name
+    for char, repl in TRANSLITERATION.items():
+        slug = slug.replace(char, repl)
+    slug = unicodedata.normalize('NFKD', slug)
+    slug = slug.encode('ascii', 'ignore').decode('ascii')
+    slug = re.sub(r"['\\\\/]", "", slug)
+    slug = re.sub(r"[^a-zA-Z0-9]+", "-", slug)
+    slug = slug.strip("-").lower()
+    return slug
+
+
 def get_stations_from_txt(txt_path):
     """Parse station list directly from a harmonics TXT file.
     Returns list of (name, lat, lon, is_current) tuples."""
@@ -172,22 +185,18 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     uri_name = quote(name, safe='')
 
     # For duplicate station names: add source suffix to filename and pass source in URL
+    slug = to_slug(name)
     if name in duplicate_names:
         skey = source_key(source_file)
         safe_name_full = safe_name + '__' + skey
-        fetch_url = f'/generate/{uri_name}?source={source_file}'
+        prediction_url = f'/prediction/{slug}?source={source_file}'
     else:
         safe_name_full = safe_name
-        fetch_url = f'/generate/{uri_name}'
+        prediction_url = f'/prediction/{slug}'
 
     popup_html = (
         f"<b>{display_name}</b><br>"
-        f"<a href=\\\"#\\\" onclick=\\\""
-        f"fetch('{fetch_url}').then(function(r){{"
-        f"if(!r.ok)throw 'err';return r.json();"
-        f"}}).then(function(d){{window.location.href=d.url;}})"
-        f".catch(function(){{alert('Fehler beim Erzeugen der Vorhersage.');}});"
-        f" return false;\\\">🌊 Vorhersage anzeigen</a><br>"
+        f"<a href=\\\"{prediction_url}\\\">🌊 Vorhersage anzeigen</a><br>"
         f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Position korrigieren</a> "
         f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Name ändern</a> "
         f"<a href=\\\"#\\\" onclick=\\\"deleteStation(this); return false;\\\">🗑️ Löschen</a><br>"
