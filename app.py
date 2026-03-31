@@ -306,10 +306,20 @@ def favicon():
 def generate_tide_prediction(station):
     try:
         decoded_station = unquote(station)
+        source = request.args.get('source')
         safe_station = normalized.get(decoded_station, normalize_filename(decoded_station))
+
+        # Add source suffix for disambiguation when source is specified
+        if source:
+            skey = source.replace('.tcd', '')
+            skey = re.sub(r'^harmonics[-_]', '', skey)
+            skey = skey.replace('_mod', '')
+            safe_station = safe_station + '__' + skey
 
         print(f"➤ Angeforderte Station: {decoded_station}")
         print(f"➤ Normalisierter Dateiname: {safe_station}")
+        if source:
+            print(f"➤ Quelle: {source}")
 
         svg_filename = f"tide_prediction_{safe_station}.svg"
         html_filename = f"tide_prediction_{safe_station}.html"
@@ -322,6 +332,14 @@ def generate_tide_prediction(station):
         if os.path.exists(svg_path):
             os.remove(svg_path)
             print(f"🗑️ Alte SVG-Datei gelöscht: {svg_path}")
+
+        # Set HFILE_PATH to specific TCD file if source is specified
+        env = None
+        if source:
+            tcd_path = os.path.join('/usr/share/xtide', source)
+            if os.path.exists(tcd_path):
+                env = os.environ.copy()
+                env['HFILE_PATH'] = tcd_path
 
         current_date = datetime.now().strftime("%Y-%m-%d 00:00")
         cmd = [
@@ -336,7 +354,7 @@ def generate_tide_prediction(station):
         print("➤ Aufruf von tide:")
         print(" ", " ".join(cmd))
 
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
         print("✅ tide wurde erfolgreich ausgeführt.")
 
         # Konvertierung der SVG-Kodierung
@@ -349,7 +367,7 @@ def generate_tide_prediction(station):
         # Zusätzlich: tide -l "Station" -m a → als Key-Value-Liste
         try:
             meta_cmd = ["tide", "-l", decoded_station, "-m", "a"]
-            meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True)
+            meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True, env=env)
             meta_rows = []
             for line in meta_result.stdout.strip().splitlines():
                 key = line[:14].strip()
@@ -373,7 +391,7 @@ def generate_tide_prediction(station):
                 "-tf", "%H:%M",
                 "-em", "x"
             ]
-            text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True)
+            text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True, env=env)
             tide_rows = []
             last_date = None
             for line in text_result.stdout.strip().splitlines()[2:]:  # skip header

@@ -2,7 +2,7 @@ import re
 import os
 import glob
 import unicodedata
-from collections import OrderedDict
+from collections import OrderedDict, Counter
 from urllib.parse import quote
 
 TCD_DIR = "/usr/share/xtide"
@@ -47,6 +47,14 @@ def get_stations_from_txt(txt_path):
     return stations
 
 
+def source_key(tcd_basename):
+    """Short key from TCD filename for URL/filename disambiguation."""
+    key = tcd_basename.replace('.tcd', '')
+    key = re.sub(r'^harmonics[-_]', '', key)
+    key = key.replace('_mod', '')
+    return key
+
+
 def find_txt_for_tcd(tcd_basename):
     """Find the TXT source file for a given TCD basename."""
     txt_name = tcd_basename.replace('.tcd', '.txt')
@@ -64,7 +72,6 @@ tcd_files = sorted(glob.glob(os.path.join(TCD_DIR, "*.tcd")))
 print(f"Gefunden: {len(tcd_files)} TCD-Dateien in {TCD_DIR}")
 
 all_stations = []
-seen = set()
 for tcd_file in tcd_files:
     basename = os.path.basename(tcd_file)
     txt_path = find_txt_for_tcd(basename)
@@ -72,15 +79,15 @@ for tcd_file in tcd_files:
         print(f"  {basename}: ÜBERSPRUNGEN (keine TXT-Datei gefunden)")
         continue
     stations = get_stations_from_txt(txt_path)
-    count = 0
     for name, lat, lon, is_current in stations:
-        if name not in seen:
-            seen.add(name)
-            all_stations.append((name, lat, lon, basename, is_current))
-            count += 1
-    print(f"  {basename}: {count} neue Stationen ({len(stations)} in TXT)")
+        all_stations.append((name, lat, lon, basename, is_current))
+    print(f"  {basename}: {len(stations)} Stationen")
 
-print(f"Gesamt: {len(all_stations)} Stationen (nach Deduplizierung)")
+# Identify station names that appear in multiple TCD files
+name_counter = Counter(name for name, _, _, _, _ in all_stations)
+duplicate_names = {name for name, count in name_counter.items() if count > 1}
+
+print(f"Gesamt: {len(all_stations)} Stationen ({len(duplicate_names)} Namen mehrfach)")
 
 output_file = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers.js")
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
@@ -139,13 +146,23 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     display_name = name.replace('"', '&quot;')
     uri_name = quote(name, safe='')
 
+    # For duplicate station names: add source suffix to filename and pass source in URL
+    if name in duplicate_names:
+        skey = source_key(source_file)
+        safe_name_full = safe_name + '__' + skey
+        fetch_url = f'/generate/{uri_name}?source={source_file}'
+    else:
+        safe_name_full = safe_name
+        fetch_url = f'/generate/{uri_name}'
+
     popup_html = (
         f"<b>{display_name}</b><br>"
         f"<a href=\\\"#\\\" onclick=\\\""
-        f"fetch('/generate/{uri_name}').then(r => {{"
-        f"  if (r.ok) window.location.href = '/static/predictions/tide_prediction_{safe_name}.html';"
-        f"  else alert('Fehler beim Erzeugen der Vorhersage.');"
-        f"}}); return false;\\\">🌊 Vorhersage anzeigen</a><br>"
+        f"fetch('{fetch_url}').then(function(r){{"
+        f"if(!r.ok)throw 'err';return r.json();"
+        f"}}).then(function(d){{window.location.href=d.url;}})"
+        f".catch(function(){{alert('Fehler beim Erzeugen der Vorhersage.');}});"
+        f" return false;\\\">🌊 Vorhersage anzeigen</a><br>"
         f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Position korrigieren</a> "
         f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Name ändern</a> "
         f"<a href=\\\"#\\\" onclick=\\\"deleteStation(this); return false;\\\">🗑️ Löschen</a><br>"
