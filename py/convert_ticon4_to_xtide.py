@@ -9,7 +9,9 @@ For duplicate locations (same station from multiple sources),
 picks the record with the longest observation period.
 
 Amplitudes in TICON-4 are in cm, converted to meters for XTide.
-Phases in TICON-4 are Greenwich phase lag in degrees (same as XTide).
+Phases in TICON-4 are nominally Greenwich phase lag, but contain a
+local-time offset from the GESLA-4 analysis. The meridian must match
+the station's timezone to compensate for this offset.
 """
 import csv
 import sys
@@ -52,19 +54,16 @@ for i, (name, speed) in enumerate(CONSTITUENTS_175):
     XTIDE_CONSTITS[name] = (i, speed)
 
 
-def get_timezone_from_lon(lon):
-    """Approximate timezone offset from longitude."""
-    offset_hours = round(lon / 15.0)
-    offset_hours = max(-12, min(12, offset_hours))
-    h = abs(offset_hours)
-    m = 0
-    sign = '+' if offset_hours >= 0 else '-'
-    return f"{sign}{h:02d}:{m:02d}"
-
-
 def get_timezone_name(lat, lon, country):
-    """Get approximate timezone name. Returns offset string for most."""
-    # Some well-known mappings
+    """Get timezone meridian and name.
+
+    The meridian must match the timezone of the original measurement data,
+    because TICON-4/GESLA-4 phases contain a local-time offset from the
+    original analysis. The meridian compensates for this offset in XTide's
+    prediction formula: h = cos(speed*(UTC + meridian) + V0 + u - phase).
+
+    Returns (meridian_offset, timezone_name) tuple.
+    """
     tz_map = {
         'DEU': ('+01:00', 'Europe/Berlin'),
         'GBR': ('+00:00', 'Europe/London'),
@@ -92,14 +91,13 @@ def get_timezone_name(lat, lon, country):
         'BRA': ('-03:00', 'America/Sao_Paulo'),
         'ARG': ('-03:00', 'America/Buenos_Aires'),
         'CHL': ('-04:00', 'America/Santiago'),
-        'MEX': ('-06:00', 'America/Mexico_City'),
         'ZAF': ('+02:00', 'Africa/Johannesburg'),
     }
 
     # Australia by longitude
     if country == 'AUS':
         if lon < 115:
-            return '+06:30', 'Indian/Cocos'  # Cocos Islands
+            return '+06:30', 'Indian/Cocos'
         elif lon < 129:
             return '+08:00', 'Australia/Perth'
         elif lon < 138:
@@ -124,12 +122,29 @@ def get_timezone_name(lat, lon, country):
         else:
             return '-03:30', 'America/St_Johns'
 
+    # Mexico: meridian always -06:00 because GESLA-4 analyzed all Mexican
+    # stations with UTC-6 (Mexico City) timestamps. The meridian compensates
+    # for this in XTide's prediction formula. Only the timezone name varies
+    # for correct local time display.
+    if country == 'MEX':
+        if lon < -113:
+            return '-06:00', 'America/Tijuana'
+        elif lon < -107 and lat > 27:
+            return '-06:00', 'America/Hermosillo'
+        elif lon < -107 and lat <= 27:
+            return '-06:00', 'America/Mazatlan'
+        else:
+            return '-06:00', 'America/Mexico_City'
+
     if country in tz_map:
         return tz_map[country]
 
     # Fallback: derive from longitude
-    offset = get_timezone_from_lon(lon)
-    return offset, f'Etc/GMT{offset}'
+    offset_hours = round(lon / 15.0)
+    offset_hours = max(-12, min(12, offset_hours))
+    h = abs(offset_hours)
+    sign = '+' if offset_hours >= 0 else '-'
+    return f"{sign}{h:02d}:00", f'Etc/GMT{sign}{h}'
 
 
 def get_country_name(code):
