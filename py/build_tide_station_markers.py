@@ -111,19 +111,9 @@ for tcd_file in tcd_files:
         all_stations.append((name, lat, lon, basename, is_current))
     print(f"  {basename}: {len(stations)} Stationen")
 
-# Identify station names that appear in multiple TCD files
+# Names appearing in multiple TCD files need source suffix in URLs
 name_counter = Counter(name for name, _, _, _, _ in all_stations)
 duplicate_names = {name for name, count in name_counter.items() if count > 1}
-
-# Offset duplicate markers slightly so they don't overlap exactly (~11m per step)
-OFFSET_STEP = 0.0001
-dup_seen = {}
-for i, (name, lat, lon, source, is_current) in enumerate(all_stations):
-    if name in duplicate_names:
-        idx = dup_seen.get(name, 0)
-        dup_seen[name] = idx + 1
-        if idx > 0:
-            all_stations[i] = (name, lat + OFFSET_STEP * idx, lon, source, is_current)
 
 print(f"Gesamt: {len(all_stations)} Stationen ({len(duplicate_names)} Namen mehrfach)")
 
@@ -165,14 +155,18 @@ icon_definition = ""
 
 lines = ["var stationCoords = {};"]
 lines.append("var stationSources = {};")
-# Create separate cluster groups per source group for tide and current
+# Single cluster group for all tide markers and one for all current markers
+# This ensures overlapping stations from different sources get spiderfied together
 group_names = list(SOURCE_GROUPS.keys()) + ['Sonstige']
 group_colors = {g: SOURCE_GROUPS[g]['color'] for g in SOURCE_GROUPS}
 group_colors['Sonstige'] = '#999999'
+lines.append("var grp_all_tide = L.markerClusterGroup();")
+lines.append("var grp_all_current = L.markerClusterGroup();")
+# Arrays of markers per source group for layer control toggling
 for g in group_names:
     var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
-    lines.append(f"var grp_{var_name}_tide = L.markerClusterGroup();")
-    lines.append(f"var grp_{var_name}_current = L.markerClusterGroup();")
+    lines.append(f"var src_{var_name}_tide = [];")
+    lines.append(f"var src_{var_name}_current = [];")
 lines.append("var markers = L.featureGroup();")  # master group for fitBounds
 
 group_tide_counts = {}
@@ -204,7 +198,7 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     )
 
     group_name, color = get_group_for_source(source_file)
-    grp_base = "grp_" + re.sub(r'[^a-zA-Z0-9]', '_', group_name)
+    src_var_name = re.sub(r'[^a-zA-Z0-9]', '_', group_name)
     marker_var = f"m{i}"
     coord_key = name.replace("\\", "\\\\").replace("'", "\\'")
     lines.append(f"stationCoords['{coord_key}'] = [{lat}, {lon}];")
@@ -214,7 +208,7 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     if is_current:
         current_count += 1
         group_current_counts[group_name] = group_current_counts.get(group_name, 0) + 1
-        grp_var = f"{grp_base}_current"
+        grp_var = "grp_all_current"
         # horizontal double arrow ↔
         svg = (f'<svg width="{sz}" height="{sz}" viewBox="0 0 {sz} {sz}" xmlns="http://www.w3.org/2000/svg">'
                f'<line x1="2" y1="{sz//2}" x2="{sz-2}" y2="{sz//2}" stroke="{color}" stroke-width="{sw}" stroke-linecap="round"/>'
@@ -227,7 +221,7 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     else:
         tide_count += 1
         group_tide_counts[group_name] = group_tide_counts.get(group_name, 0) + 1
-        grp_var = f"{grp_base}_tide"
+        grp_var = "grp_all_tide"
         # vertical double arrow ↕
         svg = (f'<svg width="{sz}" height="{sz}" viewBox="0 0 {sz} {sz}" xmlns="http://www.w3.org/2000/svg">'
                f'<line x1="{sz//2}" y1="2" x2="{sz//2}" y2="{sz-2}" stroke="{color}" stroke-width="{sw}" stroke-linecap="round"/>'
@@ -239,21 +233,17 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
         )
     lines.append(f'{marker_var}.bindPopup("{popup_html}");')
     lines.append(f"{grp_var}.addLayer({marker_var});")
+    src_type = "current" if is_current else "tide"
+    lines.append(f"src_{src_var_name}_{src_type}.push({marker_var});")
 
 # Build the DOMContentLoaded block with hierarchical layer control
 ctrl_lines = ["document.addEventListener('DOMContentLoaded', function() {"]
 
-# Add all groups to map and master featureGroup
-for g in group_names:
-    var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
-    tc = group_tide_counts.get(g, 0)
-    cc = group_current_counts.get(g, 0)
-    if tc > 0:
-        ctrl_lines.append(f"  map.addLayer(grp_{var_name}_tide);")
-        ctrl_lines.append(f"  markers.addLayer(grp_{var_name}_tide);")
-    if cc > 0:
-        ctrl_lines.append(f"  map.addLayer(grp_{var_name}_current);")
-        ctrl_lines.append(f"  markers.addLayer(grp_{var_name}_current);")
+# Add the two cluster groups to map
+ctrl_lines.append("  map.addLayer(grp_all_tide);")
+ctrl_lines.append("  markers.addLayer(grp_all_tide);")
+ctrl_lines.append("  map.addLayer(grp_all_current);")
+ctrl_lines.append("  markers.addLayer(grp_all_current);")
 
 # Collect group info for tide and current sections
 tide_groups_js = []
@@ -263,7 +253,7 @@ for g in group_names:
         continue
     var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
     color = group_colors[g]
-    tide_groups_js.append(f"{{name:'{g}',count:{tc},color:'{color}',layer:grp_{var_name}_tide}}")
+    tide_groups_js.append(f"{{name:'{g}',count:{tc},color:'{color}',markers:src_{var_name}_tide,cluster:grp_all_tide}}")
 
 current_groups_js = []
 for g in group_names:
@@ -272,7 +262,7 @@ for g in group_names:
         continue
     var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
     color = group_colors[g]
-    current_groups_js.append(f"{{name:'{g}',count:{cc},color:'{color}',layer:grp_{var_name}_current}}")
+    current_groups_js.append(f"{{name:'{g}',count:{cc},color:'{color}',markers:src_{var_name}_current,cluster:grp_all_current}}")
 
 tide_svg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="9" y1="2" x2="9" y2="16" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 9,2 13,5" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="5,13 9,16 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 current_svg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="2" y1="9" x2="16" y2="9" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 2,9 5,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="13,5 16,9 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -311,6 +301,14 @@ ctrl_lines.append(f"""
       html += buildSection('Currents ({current_count})', '{current_svg}', currentGroups, 'current');
       div.innerHTML = html;
 
+      function toggleGroup(g, on) {{
+        var arr = g.markers, cl = g.cluster;
+        for (var j = 0; j < arr.length; j++) {{
+          if (on) cl.addLayer(arr[j]);
+          else cl.removeLayer(arr[j]);
+        }}
+      }}
+
       // Master toggle handler
       function setupMaster(idPrefix, groups) {{
         var master = div.querySelector('[data-master="'+idPrefix+'"]');
@@ -322,15 +320,13 @@ ctrl_lines.append(f"""
           var on = this.checked;
           for (var i = 0; i < groups.length; i++) {{
             subs[i].checked = on;
-            if (on) map.addLayer(groups[i].layer);
-            else map.removeLayer(groups[i].layer);
+            toggleGroup(groups[i], on);
           }}
         }});
         for (var i = 0; i < groups.length; i++) {{
           (function(idx) {{
             subs[idx].addEventListener('change', function() {{
-              if (this.checked) map.addLayer(groups[idx].layer);
-              else map.removeLayer(groups[idx].layer);
+              toggleGroup(groups[idx], this.checked);
               // Update master checkbox state
               var allOn = true, allOff = true;
               for (var j = 0; j < subs.length; j++) {{
