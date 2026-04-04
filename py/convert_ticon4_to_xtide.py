@@ -94,6 +94,12 @@ def get_timezone_name(lat, lon, country):
         'ZAF': ('+02:00', 'Africa/Johannesburg'),
     }
 
+    # Peru: meridian +00:00 because GESLA-4 analyzed UHSLC data in UTC.
+    # Phases are pure Greenwich phases, no local-time offset.
+    # Verified against DHN Peru (dhn.mil.pe) official tide tables.
+    if country == 'PER':
+        return '+00:00', 'America/Lima'
+
     # Australia by longitude
     if country == 'AUS':
         if lon < 115:
@@ -144,7 +150,9 @@ def get_timezone_name(lat, lon, country):
     offset_hours = max(-12, min(12, offset_hours))
     h = abs(offset_hours)
     sign = '+' if offset_hours >= 0 else '-'
-    return f"{sign}{h:02d}:00", f'Etc/GMT{sign}{h}'
+    # POSIX Etc/GMT zones have INVERTED signs: Etc/GMT+5 = UTC-5
+    posix_sign = '-' if offset_hours >= 0 else '+'
+    return f"{sign}{h:02d}:00", f'Etc/GMT{posix_sign}{h}'
 
 
 def get_country_name(code):
