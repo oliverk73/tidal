@@ -54,7 +54,7 @@ for i, (name, speed) in enumerate(CONSTITUENTS_175):
     XTIDE_CONSTITS[name] = (i, speed)
 
 
-def get_timezone_name(lat, lon, country):
+def get_timezone_name(lat, lon, country, source=''):
     """Get timezone meridian and name.
 
     The meridian must match the timezone of the original measurement data,
@@ -62,8 +62,17 @@ def get_timezone_name(lat, lon, country):
     original analysis. The meridian compensates for this offset in XTide's
     prediction formula: h = cos(speed*(UTC + meridian) + V0 + u - phase).
 
+    UHSLC data (uhslc_rq/uhslc_fd) was analyzed in UTC by GESLA-4, so
+    phases are pure Greenwich phases → meridian must be +00:00.
+    Verified empirically against official sources: Peru/DHN, Singapore/MPA,
+    Malaysia/UHSLC obs, Japan/UHSLC obs (2026-04-04).
+
     Returns (meridian_offset, timezone_name) tuple.
     """
+    # UHSLC stations: data analyzed in UTC → Greenwich phases → meridian +00:00
+    if 'uhslc_rq' in source or 'uhslc_fd' in source:
+        tz_name = _get_display_timezone(lat, lon, country)
+        return '+00:00', tz_name
     tz_map = {
         'DEU': ('+01:00', 'Europe/Berlin'),
         'GBR': ('+00:00', 'Europe/London'),
@@ -146,13 +155,81 @@ def get_timezone_name(lat, lon, country):
         return tz_map[country]
 
     # Fallback: derive from longitude
+    tz_name = _get_display_timezone(lat, lon, country)
     offset_hours = round(lon / 15.0)
     offset_hours = max(-12, min(12, offset_hours))
     h = abs(offset_hours)
     sign = '+' if offset_hours >= 0 else '-'
-    # POSIX Etc/GMT zones have INVERTED signs: Etc/GMT+5 = UTC-5
+    return f"{sign}{h:02d}:00", tz_name
+
+
+def _get_display_timezone(lat, lon, country):
+    """Get IANA timezone name for display purposes (no meridian)."""
+    display_tz = {
+        'DEU': 'Europe/Berlin', 'GBR': 'Europe/London', 'FRA': 'Europe/Paris',
+        'NLD': 'Europe/Amsterdam', 'BEL': 'Europe/Brussels', 'ESP': 'Europe/Madrid',
+        'PRT': 'Europe/Lisbon', 'ITA': 'Europe/Rome', 'GRC': 'Europe/Athens',
+        'TUR': 'Europe/Istanbul', 'NOR': 'Europe/Oslo', 'SWE': 'Europe/Stockholm',
+        'FIN': 'Europe/Helsinki', 'DNK': 'Europe/Copenhagen', 'IRL': 'Europe/Dublin',
+        'ISL': 'Atlantic/Reykjavik', 'JPN': 'Asia/Tokyo', 'KOR': 'Asia/Seoul',
+        'CHN': 'Asia/Shanghai', 'TWN': 'Asia/Taipei', 'IND': 'Asia/Kolkata',
+        'THA': 'Asia/Bangkok', 'NZL': 'Pacific/Auckland', 'BRA': 'America/Sao_Paulo',
+        'ARG': 'America/Buenos_Aires', 'CHL': 'America/Santiago',
+        'ZAF': 'Africa/Johannesburg', 'PER': 'America/Lima',
+        'MYS': 'Asia/Kuala_Lumpur', 'SGP': 'Asia/Singapore',
+        'IDN': 'Asia/Jakarta', 'PHL': 'Asia/Manila', 'VNM': 'Asia/Ho_Chi_Minh',
+        'BGD': 'Asia/Dhaka', 'MMR': 'Asia/Yangon', 'LKA': 'Asia/Colombo',
+        'PAK': 'Asia/Karachi', 'OMN': 'Asia/Muscat', 'IRN': 'Asia/Tehran',
+        'BHR': 'Asia/Bahrain', 'YEM': 'Asia/Aden', 'COL': 'America/Bogota',
+        'ECU': 'America/Guayaquil', 'VEN': 'America/Caracas',
+        'PAN': 'America/Panama', 'CRI': 'America/Costa_Rica',
+        'GTM': 'America/Guatemala', 'HND': 'America/Tegucigalpa',
+        'CUB': 'America/Havana', 'JAM': 'America/Jamaica',
+        'HTI': 'America/Port-au-Prince', 'DOM': 'America/Santo_Domingo',
+        'TTO': 'America/Port_of_Spain', 'BHS': 'America/Nassau',
+        'PNG': 'Pacific/Port_Moresby', 'FJI': 'Pacific/Fiji',
+        'TON': 'Pacific/Tongatapu', 'WSM': 'Pacific/Apia',
+        'KIR': 'Pacific/Tarawa', 'SLB': 'Pacific/Guadalcanal',
+        'COK': 'Pacific/Rarotonga', 'NIU': 'Pacific/Niue',
+        'NRU': 'Pacific/Nauru', 'TUV': 'Pacific/Funafuti',
+        'KEN': 'Africa/Nairobi', 'TZA': 'Africa/Dar_es_Salaam',
+        'MOZ': 'Africa/Maputo', 'MDG': 'Indian/Antananarivo',
+        'MUS': 'Indian/Mauritius', 'ATA': 'Antarctica/McMurdo',
+        'RUS': 'Europe/Moscow', 'POL': 'Europe/Warsaw',
+        'EST': 'Europe/Tallinn', 'BGR': 'Europe/Sofia',
+        'HRV': 'Europe/Zagreb', 'EGY': 'Africa/Cairo',
+        'SEN': 'Africa/Dakar', 'GHA': 'Africa/Accra',
+        'NGA': 'Africa/Lagos', 'AGO': 'Africa/Luanda',
+    }
+    if country in display_tz:
+        return display_tz[country]
+
+    # Australia/Canada/Mexico: use longitude-based logic
+    if country == 'AUS':
+        if lon < 115: return 'Indian/Cocos'
+        elif lon < 129: return 'Australia/Perth'
+        elif lon < 138: return 'Australia/Darwin'
+        elif lon < 141: return 'Australia/Adelaide'
+        elif lon < 152 and lat < -39: return 'Australia/Hobart'
+        elif lon < 152: return 'Australia/Sydney'
+        else: return 'Australia/Brisbane'
+    if country == 'CAN':
+        if lon < -120: return 'America/Vancouver'
+        elif lon < -90: return 'America/Winnipeg'
+        elif lon < -60: return 'America/Halifax'
+        else: return 'America/St_Johns'
+    if country == 'MEX':
+        if lon < -113: return 'America/Tijuana'
+        elif lon < -107 and lat > 27: return 'America/Hermosillo'
+        elif lon < -107: return 'America/Mazatlan'
+        else: return 'America/Mexico_City'
+
+    # Final fallback: Etc/GMT with POSIX inverted signs
+    offset_hours = round(lon / 15.0)
+    offset_hours = max(-12, min(12, offset_hours))
+    h = abs(offset_hours)
     posix_sign = '-' if offset_hours >= 0 else '+'
-    return f"{sign}{h:02d}:00", f'Etc/GMT{posix_sign}{h}'
+    return f'Etc/GMT{posix_sign}{h}'
 
 
 def get_country_name(code):
@@ -344,7 +421,7 @@ def main():
             country_name = get_country_name(country_code)
             lat = s['lat']
             lon = s['lon']
-            tz_offset, tz_name = get_timezone_name(lat, lon, country_code)
+            tz_offset, tz_name = get_timezone_name(lat, lon, country_code, source=name)
 
             # Build constituent values for all 175 XTide constituents
             constit_values = []
