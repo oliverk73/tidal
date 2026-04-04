@@ -90,7 +90,7 @@ def get_timezone_name(lat, lon, country, source=''):
         'DNK': ('+01:00', 'Europe/Copenhagen'),
         'IRL': ('+00:00', 'Europe/Dublin'),
         'ISL': ('+00:00', 'Atlantic/Reykjavik'),
-        'JPN': ('+09:00', 'Asia/Tokyo'),
+        'JPN': ('+00:00', 'Asia/Tokyo'),
         'KOR': ('+09:00', 'Asia/Seoul'),
         'CHN': ('+08:00', 'Asia/Shanghai'),
         'TWN': ('+08:00', 'Asia/Taipei'),
