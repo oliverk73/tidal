@@ -126,16 +126,18 @@ def get_timezone_name(lat, lon, country, source=''):
         else:
             return '+10:00', 'Australia/Brisbane'
 
-    # Canada by longitude
+    # Canada: meridian always +00:00 because TICON4/GESLA-4 phases are true
+    # Greenwich phases for Canadian MEDS stations. Only the timezone name
+    # varies for correct local time display.
     if country == 'CAN':
         if lon < -120:
-            return '-08:00', 'America/Vancouver'
+            return '+00:00', 'America/Vancouver'
         elif lon < -90:
-            return '-06:00', 'America/Winnipeg'
+            return '+00:00', 'America/Winnipeg'
         elif lon < -60:
-            return '-04:00', 'America/Halifax'
+            return '+00:00', 'America/Halifax'
         else:
-            return '-03:30', 'America/St_Johns'
+            return '+00:00', 'America/St_Johns'
 
     # Mexico: meridian always -06:00 because GESLA-4 analyzed all Mexican
     # stations with UTC-6 (Mexico City) timestamps. The meridian compensates
