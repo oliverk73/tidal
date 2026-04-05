@@ -140,8 +140,8 @@ def format_station_block(station, results, data):
     tz_offset = station['tz_offset']
     iana_tz = station['iana_tz']
 
-    # Uruguay uses UTC-3 permanently (no DST since 2015)
-    meridian = f"{tz_offset:+03d}:00"
+    # Phases are Greenwich (UTC input to UTide) → meridian +00:00
+    meridian = "+00:00"
 
     lines = []
     lines.append(f"# Harmonic constants derived from DINAGUA sea level data")
