@@ -104,8 +104,8 @@ def find_xtide_match(utide_name, utide_speed):
     return None, None
 
 
-def load_csv_water_levels(csv_path, max_years=19.0):
-    """Load up to max_years of data (one nodal cycle), taking the most recent window."""
+def load_csv_water_levels(csv_path, max_years=10.0):
+    """Load up to max_years of data, taking the most recent window."""
     df = pd.read_csv(csv_path)
     times = pd.to_datetime(df['time'], utc=True)
     levels = df['waterlevel_m'].values
@@ -181,10 +181,18 @@ def harmonic_analysis_utide(datetimes_utc, levels, lat):
             })
 
     try:
-        reconstruction = utide.reconstruct(datetimes_utc, coef, verbose=False)
-        residuals = levels - reconstruction['h']
+        # Reconstruct on a subset to save memory (last 2 years)
+        max_recon = 2 * 365 * 24
+        if len(datetimes_utc) > max_recon:
+            recon_t = datetimes_utc[-max_recon:]
+            recon_l = levels[-max_recon:]
+        else:
+            recon_t = datetimes_utc
+            recon_l = levels
+        reconstruction = utide.reconstruct(recon_t, coef, verbose=False)
+        residuals = recon_l - reconstruction['h']
         ss_res = np.sum(residuals**2)
-        ss_tot = np.sum((levels - np.mean(levels))**2)
+        ss_tot = np.sum((recon_l - np.mean(recon_l))**2)
         results['r_squared'] = 1 - ss_res / ss_tot if ss_tot > 0 else 0
         results['rms_error'] = np.sqrt(np.mean(residuals**2))
     except:
