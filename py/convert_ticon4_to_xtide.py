@@ -69,10 +69,19 @@ def get_timezone_name(lat, lon, country, source=''):
 
     Returns (meridian_offset, timezone_name) tuple.
     """
-    # UHSLC stations: data analyzed in UTC → Greenwich phases → meridian +00:00
-    if 'uhslc_rq' in source or 'uhslc_fd' in source:
+    # Sources with Greenwich phases (data analyzed in UTC) → meridian +00:00
+    # UHSLC: verified for Peru, Singapore, Malaysia, Japan, Canada, Norway
+    # MEDS (Canada): verified against CHS official predictions
+    # JODC (Japan): verified by phase comparison with Classic harmonics
+    # REFMAR (France): verified against Kartverket/SHOM (-63 min error with +01:00)
+    # NHS (Norway): verified against Kartverket (-62 min error with +01:00)
+    greenwich_sources = ('uhslc_rq', 'uhslc_fd', 'refmar', 'nhs')
+    if any(s in source for s in greenwich_sources):
         tz_name = _get_display_timezone(lat, lon, country)
         return '+00:00', tz_name
+    # Norwegian CMEMS stations: also Greenwich (same national data as NHS)
+    if 'cmems' in source and country == 'NOR':
+        return '+00:00', 'Europe/Oslo'
     tz_map = {
         'DEU': ('+01:00', 'Europe/Berlin'),
         'GBR': ('+00:00', 'Europe/London'),
