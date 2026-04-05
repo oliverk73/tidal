@@ -37,13 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
   });
 
+  // --- Accent-insensitive normalization ---
+  function normalize(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
   // --- Filtering ---
   function filterStations(query) {
-    var q = query.toLowerCase();
+    var q = normalize(query);
     var startsWith = [];
     var contains = [];
     for (var i = 0; i < names.length; i++) {
-      var lower = names[i].toLowerCase();
+      var lower = normalize(names[i]);
       if (lower.startsWith(q)) startsWith.push(names[i]);
       else if (lower.includes(q)) contains.push(names[i]);
     }
@@ -161,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Exact match?
       var exact = names.find(function (n) {
-        return n.toLowerCase() === q.toLowerCase();
+        return normalize(n) === normalize(q);
       });
       if (exact) {
         generatePrediction(exact);
@@ -204,11 +209,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function highlightMatch(text, query) {
-    var idx = text.toLowerCase().indexOf(query.toLowerCase());
+    var nText = normalize(text);
+    var nQuery = normalize(query);
+    var idx = nText.indexOf(nQuery);
     if (idx < 0) return escapeHtml(text);
+    var matchLen = nQuery.length;
     return escapeHtml(text.slice(0, idx)) +
-      '<mark>' + escapeHtml(text.slice(idx, idx + query.length)) + '</mark>' +
-      escapeHtml(text.slice(idx + query.length));
+      '<mark>' + escapeHtml(text.slice(idx, idx + matchLen)) + '</mark>' +
+      escapeHtml(text.slice(idx + matchLen));
   }
 
   // Show hint on open
