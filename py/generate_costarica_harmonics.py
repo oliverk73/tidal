@@ -25,14 +25,9 @@ UHSLC_STATIONS = [
     {'uhslc_id': 268, 'name': 'Limon',           'lat': 10.000, 'lon': -83.033, 'water': 'Caribbean Sea'},
 ]
 
-IOC_STATIONS = [
-    {'ioc_code': 'golf', 'name': 'Golfito',           'lat': 8.6362,  'lon': -83.1671, 'water': 'Pacific Ocean',
-     'start': datetime(2025, 5, 1), 'end': datetime(2026, 4, 6)},
-    {'ioc_code': 'flam', 'name': 'Flamingo Marina',   'lat': 10.4411, 'lon': -85.7888, 'water': 'Pacific Ocean',
-     'start': datetime(2025, 8, 1), 'end': datetime(2026, 4, 6)},
-    {'ioc_code': 'cuaj', 'name': 'Cuajiniquil',       'lat': 10.9520, 'lon': -85.7099, 'water': 'Pacific Ocean',
-     'start': datetime(2025, 10, 1), 'end': datetime(2026, 4, 6)},
-]
+# IOC stations (golf, flam, cuaj) excluded: radar sensors have 0.1m quantization
+# and signal clipping at high water, making harmonic analysis unreliable (M2 ≈ 0.003m).
+IOC_STATIONS = []
 
 CONSTITUENTS_175 = [
     ('J1', 15.5854433), ('K1', 15.0410686), ('K2', 30.0821373), ('L2', 29.5284789),
