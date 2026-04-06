@@ -190,6 +190,19 @@ def load_ioc_csv(csv_path):
     df = pd.read_csv(csv_path)
     df['time'] = pd.to_datetime(df['time'], utc=True)
     df = df.dropna(subset=['waterlevel_m'])
+    # Remove obvious outliers: first clip absurd values, then iterative sigma-clip
+    v = df['waterlevel_m']
+    # Step 1: Remove values beyond physical plausibility (>20m or <-20m)
+    df = df[(v > -20) & (v < 20)].copy()
+    # Step 2: Iterative 3-sigma clipping (2 rounds)
+    for _ in range(2):
+        v = df['waterlevel_m']
+        mu, sigma = v.mean(), v.std()
+        df = df[(v > mu - 4*sigma) & (v < mu + 4*sigma)].copy()
+    n_before = len(pd.read_csv(csv_path))
+    n_after = len(df)
+    if n_before > n_after:
+        print(f"  Outliers removed: {n_before - n_after} ({100*(n_before-n_after)/n_before:.1f}%)")
     # Resample to hourly to keep memory manageable for UTide
     df = df.set_index('time')
     df = df.resample('1h').mean().dropna()
