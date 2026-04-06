@@ -12,12 +12,30 @@ import utide
 
 # ── Station definitions ──────────────────────────────────────────────
 UHSLC_STATIONS = [
-    {'uhslc_id': '723a', 'name': 'Lagos', 'country': 'Portugal',
-     'lat': 37.0988, 'lon': -8.6668, 'water': 'Atlantic Ocean',
-     'csv': '/home/oliver/water_levels/Portugal_UHSLC/h723a_lagos.csv'},
+    {'uhslc_id': '209', 'name': 'Cascais', 'country': 'Portugal',
+     'lat': 38.6932, 'lon': -9.4154, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_UHSLC/h209_cascais.csv'},
+    {'uhslc_id': '210', 'name': 'Santa Cruz', 'country': 'Flores, Açores, Portugal',
+     'lat': 39.4533, 'lon': -31.1133, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_UHSLC/h210_flores_santa_cruz.csv'},
+    {'uhslc_id': '211', 'name': 'Ponta Delgada', 'country': 'São Miguel, Açores, Portugal',
+     'lat': 37.7350, 'lon': -25.6700, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_UHSLC/h211_ponta_delgada.csv'},
     {'uhslc_id': '212a', 'name': 'Horta', 'country': 'Faial, Açores, Portugal',
      'lat': 38.5326, 'lon': -28.6244, 'water': 'Atlantic Ocean',
      'csv': '/home/oliver/water_levels/Portugal_UHSLC/h212a_horta.csv'},
+    {'uhslc_id': '213a', 'name': 'Lajes das Flores', 'country': 'Flores, Açores, Portugal',
+     'lat': 39.3783, 'lon': -31.1700, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_UHSLC/h213a_flores_lajes.csv'},
+    {'uhslc_id': '215a', 'name': 'Angra do Heroísmo', 'country': 'Terceira, Açores, Portugal',
+     'lat': 38.6500, 'lon': -27.2167, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_UHSLC/h215a_angra_do_heroismo.csv'},
+    {'uhslc_id': '218', 'name': 'Funchal', 'country': 'Madeira, Portugal',
+     'lat': 32.6447, 'lon': -16.9064, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_UHSLC/h218_funchal.csv'},
+    {'uhslc_id': '723a', 'name': 'Lagos', 'country': 'Portugal',
+     'lat': 37.0988, 'lon': -8.6668, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_UHSLC/h723a_lagos.csv'},
 ]
 
 IOC_STATIONS = [
