@@ -81,7 +81,7 @@ def get_tide_events(station_name, source_tcd, start_date, end_date):
     env['HFILE_PATH'] = source_tcd
 
     try:
-        result = subprocess.run(cmd, capture_output=True, timeout=30)
+        result = subprocess.run(cmd, capture_output=True, timeout=30, env=env)
         if result.returncode != 0:
             return None
         try:
