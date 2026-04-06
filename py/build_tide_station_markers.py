@@ -141,7 +141,8 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_denmark.tcd',
                             'harmonics_utide_australia.tcd',
                             'harmonics_utide_australia_qld.tcd',
-                            'harmonics_utide_australia_uhslc.tcd']}),
+                            'harmonics_utide_australia_uhslc.tcd',
+                            'harmonics_utide_portugal.tcd']}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
 ])
 
