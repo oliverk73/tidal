@@ -177,7 +177,7 @@ def find_station_in_source(station_name, lat, lon, source_tcd, dhn_num=None, src
     stations = get_station_list(source_tcd)
 
     best_name = None
-    best_dist = 0.15  # max 0.15 degrees
+    best_dist = 0.006  # max ~670 meters
 
     for sname, slat, slon in stations:
         dist = math.sqrt((slat - lat)**2 + (slon - lon)**2)
