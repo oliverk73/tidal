@@ -38,6 +38,24 @@ UHSLC_STATIONS = [
      'csv': '/home/oliver/water_levels/Portugal_UHSLC/h723a_lagos.csv'},
 ]
 
+CMEMS_STATIONS = [
+    {'cmems_id': 'VianaDoCasteloTG', 'name': 'Viana do Castelo', 'country': 'Portugal',
+     'lat': 41.6850, 'lon': -8.8396, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_CMEMS/VianaDoCasteloTG.csv'},
+    {'cmems_id': 'LeixoesTG', 'name': 'Leixões', 'country': 'Portugal',
+     'lat': 41.1867, 'lon': -8.7045, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_CMEMS/LeixoesTG.csv'},
+    {'cmems_id': 'NazareTG', 'name': 'Nazaré', 'country': 'Portugal',
+     'lat': 39.5860, 'lon': -9.0740, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_CMEMS/NazareTG.csv'},
+    {'cmems_id': 'PenicheTG', 'name': 'Peniche', 'country': 'Portugal',
+     'lat': 39.3540, 'lon': -9.3670, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_CMEMS/PenicheTG.csv'},
+    {'cmems_id': 'SinesTG', 'name': 'Sines', 'country': 'Portugal',
+     'lat': 37.9490, 'lon': -8.8880, 'water': 'Atlantic Ocean',
+     'csv': '/home/oliver/water_levels/Portugal_CMEMS/SinesTG.csv'},
+]
+
 IOC_STATIONS = [
     {'ioc_code': 'albu', 'name': 'Albufeira', 'country': 'Portugal',
      'lat': 37.0825, 'lon': -8.2604, 'water': 'Atlantic Ocean',
@@ -269,6 +287,9 @@ def format_station_block(station, results, data, source_label):
     if 'uhslc_id' in station:
         lines.append(f"# source: Derived from UHSLC data with UTide harmonic analysis")
         lines.append(f"# station_id_context: UHSLC-{station['uhslc_id']}")
+    elif 'cmems_id' in station:
+        lines.append(f"# source: Derived from CMEMS data with UTide harmonic analysis")
+        lines.append(f"# station_id_context: CMEMS-{station['cmems_id']}")
     else:
         lines.append(f"# source: Derived from IOC data with UTide harmonic analysis")
         lines.append(f"# station_id_context: IOC-{station['ioc_code']}")
@@ -369,6 +390,44 @@ def main():
         processed += 1
         if 'Lagos' in name:
             lagos_done = True
+
+    # ── CMEMS stations ───────────────────────────────────────────────
+    print(f"\n{'='*40}")
+    print("CMEMS Stations")
+    print(f"{'='*40}")
+
+    for station in CMEMS_STATIONS:
+        sid = station['cmems_id']
+        name = station['name']
+        print(f"\n[CMEMS-{sid}] {name}...")
+
+        csv_path = Path(station['csv'])
+        if not csv_path.exists():
+            print(f"  NO DATA FILE: {csv_path}")
+            failed += 1
+            continue
+
+        # CMEMS data is hourly, same format as IOC (datetime_utc, level_m)
+        data = load_ioc_csv(csv_path)
+        if data is None:
+            failed += 1
+            continue
+
+        print(f"  {data['n_obs']} obs ({data['years']:.1f}y) from {data['start_time'].strftime('%Y-%m-%d')} to {data['end_time'].strftime('%Y-%m-%d')}")
+        print(f"  Running UTide...", end='', flush=True)
+
+        results = harmonic_analysis_utide(data['datetimes_utc'], data['levels'], station['lat'])
+        if results is None:
+            print(" FAILED")
+            failed += 1
+            continue
+
+        m2 = next((c['amplitude'] for c in results['constituents'] if c['name'] == 'M2'), 0)
+        print(f" OK (R²={results['r_squared']:.3f}, M2={m2:.3f}m, constit={results['n_analyzed']})")
+
+        block = format_station_block(station, results, data, "CMEMS sea level data")
+        station_blocks.append(block)
+        processed += 1
 
     # ── IOC stations ─────────────────────────────────────────────────
     print(f"\n{'='*40}")
