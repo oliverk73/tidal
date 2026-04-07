@@ -115,7 +115,24 @@ for tcd_file in tcd_files:
 name_counter = Counter(name for name, _, _, _, _ in all_stations)
 duplicate_names = {name for name, count in name_counter.items() if count > 1}
 
-print(f"Gesamt: {len(all_stations)} Stationen ({len(duplicate_names)} Namen mehrfach)")
+# Also detect slug collisions: different names that produce the same URL slug
+slug_to_names = {}
+for name, _, _, _, _ in all_stations:
+    slug = to_slug(name)
+    if slug not in slug_to_names:
+        slug_to_names[slug] = set()
+    slug_to_names[slug].add(name)
+duplicate_slugs = {slug for slug, names in slug_to_names.items() if len(names) > 1}
+# Add all names with colliding slugs to duplicate_names
+for slug in duplicate_slugs:
+    duplicate_names.update(slug_to_names[slug])
+# Also add names that appear multiple times (same slug from same name in different TCDs)
+slug_counter = Counter(to_slug(name) for name, _, _, _, _ in all_stations)
+for name, _, _, _, _ in all_stations:
+    if slug_counter[to_slug(name)] > 1:
+        duplicate_names.add(name)
+
+print(f"Gesamt: {len(all_stations)} Stationen ({len(duplicate_names)} Namen mehrfach/Slug-Kollisionen)")
 
 output_file = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers.js")
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
@@ -136,6 +153,7 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_belgium.tcd',
                             'harmonics_utide_canada_all.tcd',
                             'harmonics_utide_uk_bodc.tcd',
+                            'harmonics_utide_uk_cmems.tcd',
                             'harmonics_utide_ireland.tcd',
                             'harmonics_utide_uk_ireland.tcd',
                             'harmonics_utide_denmark.tcd',
@@ -143,7 +161,32 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_australia_qld.tcd',
                             'harmonics_utide_australia_uhslc.tcd',
                             'harmonics_utide_portugal.tcd',
-                            'harmonics_utide_norway.tcd']}),
+                            'harmonics_utide_norway.tcd',
+                            'harmonics_utide_india.tcd',
+                            'harmonics_utide_chile.tcd',
+                            'harmonics_utide_mexico.tcd',
+                            'harmonics_utide_new_zealand.tcd',
+                            'harmonics_utide_south_africa.tcd',
+                            'harmonics_utide_brazil.tcd',
+                            'harmonics_utide_brazil_dhn.tcd',
+                            'harmonics_utide_argentina.tcd',
+                            'harmonics_utide_colombia.tcd',
+                            'harmonics_utide_peru.tcd',
+                            'harmonics_utide_morocco.tcd',
+                            'harmonics_utide_jordan.tcd',
+                            'harmonics_utide_panama.tcd',
+                            'harmonics_utide_nicaragua.tcd',
+                            'harmonics_utide_elsalvador.tcd',
+                            'harmonics_utide_caribbean.tcd',
+                            'harmonics_utide_abc.tcd',
+                            'harmonics_utide_antigua.tcd',
+                            'harmonics_utide_barbados.tcd',
+                            'harmonics_utide_bvi.tcd',
+                            'harmonics_utide_cayman.tcd',
+                            'harmonics_utide_montserrat.tcd',
+                            'harmonics_utide_stkitts.tcd',
+                            'harmonics_utide_stvincent.tcd',
+                            ]}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
 ])
 
