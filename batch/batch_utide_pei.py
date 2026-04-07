@@ -29,7 +29,6 @@ from generate_germany_harmonics_175 import (
 
 # --- Directories ---
 PEI_DIR = Path("/home/oliver/water_levels/Canada_IWLS_PEI")
-IWLS_DIR = Path("/home/oliver/water_levels/Canada_IWLS")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_pei.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_pei")
@@ -37,16 +36,16 @@ CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_pei")
 # PEI stations with their metadata
 # code, name, lat, lon, data_type ('wlo' or 'wlp'), csv_file
 PEI_STATIONS = [
-    # Active stations with WLO observations
-    ('01700', 'Charlottetown', 46.2301, -63.1222, 'wlo', None),  # from Canada_IWLS
-    ('01650', 'Souris', 46.3496, -62.2518, 'wlo', '01650_Souris_wlo.csv'),
-    ('01680', 'Wood Islands', 45.9529, -62.7494, 'wlo', '01680_Wood_Islands_wlo.csv'),
-    # Stations with WLP predictions only — reverse-engineer CHS harmonics
+    # All stations use WLP (CHS predictions) for consistent, high-quality harmonics.
+    # CHS predictions are based on decades of data — better than our short WLO series.
+    ('01650', 'Souris', 46.3496, -62.2518, 'wlp', '01650_Souris_wlp.csv'),
     ('01660', 'Georgetown Harbour', 46.1795, -62.5316, 'wlp', '01660_Georgetown_wlp.csv'),
     ('01662', 'Montague', 46.1647, -62.6463, 'wlp', '01662_Montague_wlp.csv'),
     ('01665', 'Graham Pond', 46.0960, -62.4537, 'wlp', '01665_Graham_Pond_wlp.csv'),
     ('01670', 'Murray Harbour', 46.0055, -62.5235, 'wlp', '01670_Murray_Harbour_wlp.csv'),
+    ('01680', 'Wood Islands', 45.9529, -62.7494, 'wlp', '01680_Wood_Islands_wlp.csv'),
     ('01690', 'Prim Point', 46.0562, -63.0302, 'wlp', '01690_Prim_Point_wlp.csv'),
+    ('01700', 'Charlottetown', 46.2301, -63.1222, 'wlp', '01700_Charlottetown_wlp.csv'),
     ('01710', 'Canoe Cove', 46.1492, -63.3037, 'wlp', '01710_Canoe_Cove_wlp.csv'),
     ('01715', 'Victoria', 46.2126, -63.4895, 'wlp', '01715_Victoria,_PEI_wlp.csv'),
     ('01725', 'Port Borden', 46.2461, -63.7007, 'wlp', '01725_Port_Borden_wlp.csv'),
@@ -117,11 +116,7 @@ def analyze_station(code, name, lat, lon, data_type, csv_file):
         return result
 
     # Find CSV file
-    if csv_file is None:
-        # Charlottetown from main Canada_IWLS dir
-        csv_path = IWLS_DIR / f"{code}_Charlottetown.csv"
-    else:
-        csv_path = PEI_DIR / csv_file
+    csv_path = PEI_DIR / csv_file
 
     if not csv_path.exists():
         print(f"  ✗ CSV nicht gefunden: {csv_path}")
