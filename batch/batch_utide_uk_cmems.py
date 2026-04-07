@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
 """
-UTide harmonic analysis for UK tide stations using BODC 15-min data.
-Data is in ACD (Admiralty Chart Datum) = LAT.
-Checkpoint/resume per station.
+UTide harmonic analysis for UK CCO tide stations from CMEMS NOOS data.
+NetCDF hourly sea level data, checkpoint/resume per station.
 """
 import sys
 sys.path.insert(0, '/home/oliver/py')
 
 import os
-import re
 import numpy as np
 import pandas as pd
 from datetime import datetime
 from pathlib import Path
 import time
 import pickle
+import xarray as xr
 import utide
 
 from generate_germany_harmonics_175 import (
@@ -23,10 +22,10 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_DIR = Path("/home/oliver/water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd")
+DATA_DIR = Path("/home/oliver/water_levels/UK_CMEMS")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
-OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_uk_bodc.txt")
-CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_uk_bodc")
+OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_uk_cmems.txt")
+CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_uk_cmems")
 
 CONSTIT_93 = [
     'J1', 'K1', 'O1', 'OO1', 'P1', 'Q1', '2Q1', 'RHO1', 'ALP1', 'BET1',
@@ -46,142 +45,84 @@ CONSTIT_93 = [
     'H1', 'H2', 'S1',
 ]
 
-# UK regions by approximate location
-def get_region(name, lat, lon):
-    if lat > 56.5:
-        return 'Scotland'
-    elif lon < -4.5 and lat < 53.5:
-        return 'Wales'
-    elif lon < -5.5 and lat > 54:
-        return 'Northern Ireland'
-    elif name in ['Port Erin']:
-        return 'Isle of Man'
-    elif name in ['St. Helier (Jersey)']:
-        return 'Channel Islands'
-    elif name in ["St. Mary's"]:
-        return 'Isles of Scilly'
+# Station definitions: CMEMS station ID, display name, lat, lon
+# Minimum ~2 years of data required for meaningful analysis
+STATIONS = [
+    {'cmems_id': 'ArunPlatformTG',          'name': 'Arun Platform (Littlehampton)', 'lat': 50.7698, 'lon': -0.4922, 'region': 'England'},
+    {'cmems_id': 'BrightonTG',              'name': 'Brighton',              'lat': 50.8118, 'lon': -0.1013, 'region': 'England'},
+    {'cmems_id': 'ExmouthTG',               'name': 'Exmouth',              'lat': 50.6174, 'lon': -3.4236, 'region': 'England'},
+    {'cmems_id': 'HastingsPierTG',          'name': 'Hastings',             'lat': 50.8509, 'lon':  0.5729, 'region': 'England'},
+    {'cmems_id': 'HerneBayTG',              'name': 'Herne Bay',            'lat': 51.3820, 'lon':  1.1156, 'region': 'England'},
+    {'cmems_id': 'LymingtonTG',             'name': 'Lymington',            'lat': 50.7403, 'lon': -1.5071, 'region': 'England'},
+    {'cmems_id': 'PortIsaacTG',             'name': 'Port Isaac',           'lat': 50.5942, 'lon': -4.8344, 'region': 'England'},
+    {'cmems_id': 'SandownPierTG',           'name': 'Sandown',              'lat': 50.6511, 'lon': -1.1532, 'region': 'England'},
+    {'cmems_id': 'ScarboroughTG',           'name': 'Scarborough',          'lat': 54.2825, 'lon': -0.3903, 'region': 'England'},
+    {'cmems_id': 'SecondSevernCrossingTG',  'name': 'Second Severn Crossing', 'lat': 51.5701, 'lon': -2.7000, 'region': 'England'},
+    {'cmems_id': 'SwanagePierTG',           'name': 'Swanage',              'lat': 50.6093, 'lon': -1.9492, 'region': 'England'},
+    {'cmems_id': 'TeignbridgePierTG',       'name': 'Teignmouth',           'lat': 50.5439, 'lon': -3.4921, 'region': 'England'},
+    {'cmems_id': 'WhitbyHarbourTG',         'name': 'Whitby Harbour',       'lat': 54.4886, 'lon': -0.6146, 'region': 'England'},
+]
+
+
+def load_cmems_netcdf(station):
+    """Load CMEMS NetCDF hourly sea level data."""
+    pattern = f"NO_TS_TG_{station['cmems_id']}_60minute.nc"
+    filepath = DATA_DIR / pattern
+
+    if not filepath.exists():
+        print(f"  Datei nicht gefunden: {filepath}")
+        return None, None
+
+    ds = xr.open_dataset(filepath)
+
+    # Get sea level variable (SLEV or WATERLEVEL)
+    if 'SLEV' in ds:
+        slev = ds['SLEV']
+    elif 'WATERLEVEL' in ds:
+        slev = ds['WATERLEVEL']
     else:
-        return 'England'
-
-
-def discover_stations():
-    """Scan data directory and group files by station."""
-    stations = {}
-    for f in sorted(os.listdir(DATA_DIR)):
-        if f.endswith('.txt') and ':' not in f:
-            m = re.match(r'(\d{4})([A-Z]+)\.txt', f)
-            if m:
-                year, code = m.groups()
-                if code not in stations:
-                    with open(DATA_DIR / f) as fh:
-                        header_lines = [fh.readline() for _ in range(9)]
-                    name = header_lines[1].split(':', 1)[1].strip()
-                    lat = float(header_lines[2].split(':', 1)[1].strip())
-                    lon = float(header_lines[3].split(':', 1)[1].strip())
-                    stations[code] = {
-                        'name': name, 'lat': lat, 'lon': lon,
-                        'code': code, 'files': [],
-                        'region': get_region(name, lat, lon),
-                    }
-                stations[code]['files'].append(f)
-    return stations
-
-
-def load_bodc_files(file_list):
-    """Load and concatenate BODC text files into arrays.
-
-    Detects and removes years with datum offset jumps by comparing
-    per-file means against the overall median.
-    """
-    # First pass: load each file separately to detect datum jumps
-    file_data = []
-    for fname in sorted(file_list):
-        filepath = DATA_DIR / fname
-        times = []
-        levels = []
-        with open(filepath) as f:
-            for line in f:
-                m = re.match(r'\s*\d+\)\s+(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})\s+([\d.]+)', line)
-                if m:
-                    try:
-                        times.append(pd.Timestamp(m.group(1)))
-                        levels.append(float(m.group(2)))
-                    except (ValueError, IndexError):
-                        pass
-        if levels:
-            file_data.append({
-                'fname': fname,
-                'times': times,
-                'levels': levels,
-                'mean': np.mean(levels),
-                'std': np.std(levels),
-            })
-
-    if not file_data:
+        print(f"  Keine Sea-Level-Variable gefunden in {filepath}")
+        ds.close()
         return None, None
 
-    # Detect datum jumps: use median of per-file means as reference
-    all_means = [fd['mean'] for fd in file_data]
-    median_mean = np.median(all_means)
-    # Also get the typical std (median of stds)
-    median_std = np.median([fd['std'] for fd in file_data])
+    times = ds['TIME'].values
+    levels = slev.values.flatten()
+    ds.close()
 
-    # Filter out files where mean deviates more than 2x the typical std
-    threshold = max(2.0 * median_std, 0.5)  # at least 0.5m tolerance
-    good_files = []
-    skipped = []
-    for fd in file_data:
-        offset = abs(fd['mean'] - median_mean)
-        if offset > threshold:
-            skipped.append(fd['fname'])
-        else:
-            good_files.append(fd)
+    # Remove NaN
+    mask = ~np.isnan(levels)
+    times = times[mask]
+    levels = levels[mask]
 
-    if skipped:
-        print(f" [{len(skipped)} Dateien übersprungen: Datum-Offset]", end='', flush=True)
-
-    if not good_files:
+    if len(times) < 2000:
+        print(f"  Zu wenig Daten ({len(times)} Werte)")
         return None, None
 
-    # Combine good files
-    all_times = []
-    all_levels = []
-    for fd in good_files:
-        all_times.extend(fd['times'])
-        all_levels.extend(fd['levels'])
-
-    df = pd.DataFrame({'time': all_times, 'level': all_levels})
-    df = df.drop_duplicates(subset='time').sort_values('time')
-
-    datetimes = df['time'].values.astype('datetime64[ns]')
-    datetimes_py = pd.to_datetime(datetimes).to_pydatetime()
-    levels = df['level'].values.astype(np.float64)
-
-    return np.array(datetimes_py), levels
+    # Convert to Python datetime
+    datetimes = pd.to_datetime(times).to_pydatetime()
+    return np.array(datetimes), levels.astype(np.float64)
 
 
 def analyze_station(station):
-    """Run UTide analysis for one BODC station."""
-    code = station['code']
-    checkpoint_file = CHECKPOINT_DIR / f"{code}.pkl"
+    """Run UTide analysis for one CMEMS station."""
+    cmems_id = station['cmems_id']
+    checkpoint_file = CHECKPOINT_DIR / f"{cmems_id}.pkl"
 
     if checkpoint_file.exists():
         with open(checkpoint_file, 'rb') as f:
             result = pickle.load(f)
-        yrs = result['n_obs'] / (4 * 24 * 365.25)
+        yrs = result['n_obs'] / (24 * 365.25)
         print(f"  ✓ Checkpoint ({yrs:.1f}J, R²={result['r_squared']:.4f})")
         return result
 
     t0 = time.time()
-    datetimes_utc, levels = load_bodc_files(station['files'])
+    datetimes_utc, levels = load_cmems_netcdf(station)
 
-    if datetimes_utc is None or len(datetimes_utc) < 2000:
-        n = 0 if datetimes_utc is None else len(datetimes_utc)
-        print(f"  ✗ Zu wenig Daten ({n} Werte)")
+    if datetimes_utc is None:
         return None
 
     lat = station['lat']
-    years = len(datetimes_utc) / (4 * 24 * 365.25)
+    years = len(datetimes_utc) / (24 * 365.25)
     print(f"  UTide solve ({len(datetimes_utc)} Beob., {years:.1f}J, lat={lat:.2f})...",
           end='', flush=True)
 
@@ -287,7 +228,7 @@ def format_station_block(result):
     region = station.get('region', 'England')
 
     lines = []
-    lines.append(f"# Harmonic constants derived from BODC 15-min sea level data")
+    lines.append(f"# Harmonic constants derived from CMEMS NOOS hourly sea level data")
     lines.append(f"# using UTide (v{utide.__version__}) with {result['n_obs']} observations")
     lines.append(f"# from {result['start_time'].strftime('%Y-%m-%d')} to {result['end_time'].strftime('%Y-%m-%d')}")
     lines.append(f"# R^2 = {result['r_squared']:.4f}, RMS error = {result['rms_error']:.4f} m")
@@ -297,11 +238,11 @@ def format_station_block(result):
     lines.append(f"# BEGIN HOT COMMENTS")
     lines.append(f"# country: United Kingdom")
     lines.append(f"# region: {region}")
-    lines.append(f"# source: Derived from BODC NTGN data with UTide harmonic analysis")
-    lines.append(f"# station_id_context: BODC-{station['code']}")
+    lines.append(f"# source: Derived from CMEMS NOOS data with UTide harmonic analysis")
+    lines.append(f"# station_id_context: CMEMS-{station['cmems_id']}")
     lines.append(f"# date_imported: {datetime.now().strftime('%Y%m%d')}")
-    lines.append(f"# datum: ACD")
-    lines.append(f"# confidence: 9")
+    lines.append(f"# datum: unspecified")
+    lines.append(f"# confidence: 7")
     lines.append(f"# !units: meters")
     lines.append(f"# !longitude: {lon:.6f}")
     lines.append(f"# !latitude: {lat:.6f}")
@@ -322,36 +263,18 @@ def format_station_block(result):
 def main():
     CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
 
-    stations = discover_stations()
-
-    # Sort by region, then name
-    sorted_codes = sorted(stations.keys(),
-                         key=lambda c: (stations[c]['region'], stations[c]['name']))
-
     print("=" * 70)
-    print("UTide Harmonic Analysis — BODC UK Tide Gauge Network")
-    print("15-min data, ACD datum, 2007–2024")
+    print("UTide Harmonic Analysis — UK CCO Stations (CMEMS NOOS)")
+    print("Hourly data, UTC")
     print("=" * 70)
-    print(f"Stationen: {len(stations)}")
+    print(f"Stationen: {len(STATIONS)}")
     print()
 
     results = []
-    current_region = None
 
-    for i, code in enumerate(sorted_codes):
-        station = stations[code]
-        region = station['region']
-
-        if region != current_region:
-            current_region = region
-            print(f"\n{'━'*70}")
-            print(f"  {region}")
-            print(f"{'━'*70}")
-
-        n_files = len(station['files'])
-        years_range = sorted([int(f[:4]) for f in station['files']])
-        print(f"\n[{i+1}/{len(stations)}] {code} | {station['name']} "
-              f"({n_files} Dateien, {years_range[0]}-{years_range[-1]})")
+    for i, station in enumerate(STATIONS):
+        print(f"\n[{i+1}/{len(STATIONS)}] {station['cmems_id']} | {station['name']} "
+              f"({station['lat']:.4f}, {station['lon']:.4f})")
 
         result = analyze_station(station)
         if result is not None:
@@ -376,12 +299,12 @@ def main():
         print(f"\n\n{'='*70}")
         print("ZUSAMMENFASSUNG")
         print(f"{'='*70}")
-        print(f"{'Station':<30s} {'Region':<18s} {'Jahre':>6s} {'R²':>7s} {'RMS':>7s} {'M2':>7s} {'K1':>7s}")
-        print(f"{'─'*30} {'─'*18} {'─'*6} {'─'*7} {'─'*7} {'─'*7} {'─'*7}")
+        print(f"{'Station':<35s} {'Jahre':>6s} {'R²':>7s} {'RMS':>7s} {'M2':>7s} {'K1':>7s}")
+        print(f"{'─'*35} {'─'*6} {'─'*7} {'─'*7} {'─'*7} {'─'*7}")
 
         for r in results:
-            years = r['n_obs'] / (4 * 24 * 365.25)
-            print(f"{r['station']['name']:<30s} {r['station']['region']:<18s} {years:>5.1f}  "
+            years = r['n_obs'] / (24 * 365.25)
+            print(f"{r['station']['name']:<35s} {years:>5.1f}  "
                   f"{r['r_squared']:>6.4f}  {r['rms_error']:>6.4f}  "
                   f"{r['m2_amp']:>6.4f}  {r['k1_amp']:>6.4f}")
 
