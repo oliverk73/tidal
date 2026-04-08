@@ -1360,6 +1360,83 @@
     });
   }
 
+  // --- Koordinaten manuell eingeben ---
+  function setCoordinatesManual(linkEl) {
+    var popup = linkEl.closest('.leaflet-popup');
+    if (!popup) return;
+    var result = findOpenPopupMarker();
+    if (!result) return;
+    var targetMarker = result.marker;
+    var parentGroup = result.group;
+    if (!targetMarker) return;
+
+    var oldLatLng = targetMarker.getLatLng();
+    var popupContent = targetMarker.getPopup().getContent();
+    var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
+    var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
+    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
+    var sourceFile = srcMatch ? srcMatch[1] : '';
+
+    var currentCoords = oldLatLng.lat.toFixed(4) + ', ' + oldLatLng.lng.toFixed(4);
+    var input = prompt(
+      'Neue Koordinaten eingeben (Lat, Lon):\n\n' +
+      'Station: ' + stationName + '\n' +
+      'Aktuell: ' + currentCoords,
+      currentCoords
+    );
+    if (!input) return;
+
+    var parts = input.split(',');
+    if (parts.length !== 2) {
+      alert('Ungültiges Format. Bitte "Lat, Lon" eingeben (z.B. 53.5500, 9.9700)');
+      return;
+    }
+    var newLat = parseFloat(parts[0].trim());
+    var newLon = parseFloat(parts[1].trim());
+    if (isNaN(newLat) || isNaN(newLon) || newLat < -90 || newLat > 90 || newLon < -180 || newLon > 180) {
+      alert('Ungültige Koordinaten. Lat: -90..90, Lon: -180..180');
+      return;
+    }
+    newLat = Math.round(newLat * 10000) / 10000;
+    newLon = Math.round(newLon * 10000) / 10000;
+
+    var msg = 'Koordinaten ändern?\n\n' +
+      'Alt: ' + oldLatLng.lat.toFixed(4) + ', ' + oldLatLng.lng.toFixed(4) + '\n' +
+      'Neu: ' + newLat.toFixed(4) + ', ' + newLon.toFixed(4) + '\n\n' +
+      'Station: ' + stationName + '\nDatei: ' + sourceFile;
+
+    if (!confirm(msg)) return;
+
+    fetch('/update_coordinates', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        station: stationName,
+        lat: newLat,
+        lon: newLon,
+        source: sourceFile
+      })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.ok) {
+        alert('Koordinaten gespeichert!');
+        targetMarker.setLatLng([data.lat, data.lon]);
+        // Marker im Cluster neu positionieren
+        parentGroup.removeLayer(targetMarker);
+        parentGroup.addLayer(targetMarker);
+        if (typeof stationCoords !== 'undefined') {
+          stationCoords[stationName] = [data.lat, data.lon];
+        }
+      } else {
+        alert('Fehler: ' + (data.error || 'Unbekannt'));
+      }
+    })
+    .catch(function (err) {
+      alert('Netzwerkfehler: ' + err);
+    });
+  }
+
   // --- Station umbenennen ---
   function renameStation(linkEl) {
     var popup = linkEl.closest('.leaflet-popup');

@@ -186,6 +186,8 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_montserrat.tcd',
                             'harmonics_utide_stkitts.tcd',
                             'harmonics_utide_stvincent.tcd',
+                            'harmonics_utide_pei.tcd',
+                            'harmonics_utide_nb.tcd',
                             ]}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
 ])
@@ -237,6 +239,7 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
         f"<b>{display_name}</b><br>"
         f"<a href=\\\"{prediction_url}\\\">🌊 Vorhersage anzeigen</a><br>"
         f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Position korrigieren</a> "
+        f"<a href=\\\"#\\\" onclick=\\\"setCoordinatesManual(this); return false;\\\">📍 Koordinaten eingeben</a><br>"
         f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Name ändern</a> "
         f"<a href=\\\"#\\\" onclick=\\\"deleteStation(this); return false;\\\">🗑️ Löschen</a><br>"
         f"<small>📄 {source_file}</small>"
