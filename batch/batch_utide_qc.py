@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-UTide harmonic analysis for Newfoundland and Labrador tide stations.
+UTide harmonic analysis for Québec tide stations.
 Uses WLP (CHS predictions) data — reverse-engineering CHS harmonics.
-Identical method to PEI, NB, NS, QC.
+Identical method to PEI (batch_utide_pei.py) and NB (batch_utide_nb.py).
 """
 import sys
 sys.path.insert(0, '/home/oliver/py')
@@ -24,10 +24,10 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-NL_DIR = Path("/home/oliver/water_levels/Canada_IWLS_NL")
+QC_DIR = Path("/home/oliver/water_levels/Canada_IWLS_QC")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt")
-OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_nl.txt")
-CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_nl")
+OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_qc.txt")
+CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_qc")
 
 CONSTIT_93 = [
     'J1', 'K1', 'O1', 'OO1', 'P1', 'Q1', '2Q1', 'RHO1', 'ALP1', 'BET1',
@@ -209,7 +209,7 @@ def format_station_block(result):
     lines.append(f"# {name}")
     lines.append(f"# BEGIN HOT COMMENTS")
     lines.append(f"# country: Canada")
-    lines.append(f"# province: Newfoundland and Labrador")
+    lines.append(f"# province: Québec")
     lines.append(f"# source: Derived from CHS tide predictions (reverse-engineered) with UTide harmonic analysis")
     lines.append(f"# station_id_context: CHS-{code}")
     lines.append(f"# date_imported: {datetime.now().strftime('%Y%m%d')}")
@@ -219,7 +219,7 @@ def format_station_block(result):
     lines.append(f"# !longitude: {lon:.6f}")
     lines.append(f"# !latitude: {lat:.6f}")
 
-    lines.append(f"{name}, Newfoundland and Labrador, Canada")
+    lines.append(f"{name}, Québec, Canada")
     lines.append(f"+00:00 :UTC")
     lines.append(f"{result['mean']:.4f} meters")
 
@@ -236,15 +236,15 @@ def main():
     CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
 
     # Load station catalog
-    with open(NL_DIR / '_nl_stations.json') as f:
+    with open(QC_DIR / '_qc_stations.json') as f:
         catalog = json.load(f)
     catalog_by_code = {s['code']: s for s in catalog}
 
     # Find all WLP CSV files
-    wlp_files = sorted(glob.glob(str(NL_DIR / '*_wlp.csv')))
+    wlp_files = sorted(glob.glob(str(QC_DIR / '*_wlp.csv')))
 
     print("=" * 70)
-    print("UTide Harmonic Analysis — Newfoundland and Labrador (CHS WLP)")
+    print("UTide Harmonic Analysis — Québec (CHS WLP)")
     print("=" * 70)
     print(f"WLP-Dateien gefunden: {len(wlp_files)}")
     print()
@@ -275,18 +275,10 @@ def main():
         header = read_header_from_template(TEMPLATE_PATH)
         print(f"\n\n{'='*70}")
         print(f"Schreibe Harmonics-Datei: {OUTPUT_PATH.name}")
-        # Transliteration for characters outside ISO-8859-1
-        TRANSLIT = {'\u1e35': 'k', '\u1e34': 'K'}  # ḵ→k, Ḵ→K
         with open(OUTPUT_PATH, 'w', encoding='iso-8859-1') as f:
             f.write(header)
             f.write('\n')
             for result in results:
-                name = result['name']
-                for src, dst in TRANSLIT.items():
-                    name = name.replace(src, dst)
-                if name != result['name']:
-                    print(f"  WARNUNG: '{result['name']}' → '{name}' (transliteriert)")
-                    result['name'] = name
                 block = format_station_block(result)
                 f.write(block)
                 f.write('\n')

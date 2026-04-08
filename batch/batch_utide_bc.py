@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-UTide harmonic analysis for Newfoundland and Labrador tide stations.
+UTide harmonic analysis for British Columbia tide stations.
 Uses WLP (CHS predictions) data — reverse-engineering CHS harmonics.
 Identical method to PEI, NB, NS, QC.
 """
@@ -24,10 +24,10 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-NL_DIR = Path("/home/oliver/water_levels/Canada_IWLS_NL")
+BC_DIR = Path("/home/oliver/water_levels/Canada_IWLS_BC")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt")
-OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_nl.txt")
-CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_nl")
+OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_bc.txt")
+CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_bc")
 
 CONSTIT_93 = [
     'J1', 'K1', 'O1', 'OO1', 'P1', 'Q1', '2Q1', 'RHO1', 'ALP1', 'BET1',
@@ -209,7 +209,7 @@ def format_station_block(result):
     lines.append(f"# {name}")
     lines.append(f"# BEGIN HOT COMMENTS")
     lines.append(f"# country: Canada")
-    lines.append(f"# province: Newfoundland and Labrador")
+    lines.append(f"# province: British Columbia")
     lines.append(f"# source: Derived from CHS tide predictions (reverse-engineered) with UTide harmonic analysis")
     lines.append(f"# station_id_context: CHS-{code}")
     lines.append(f"# date_imported: {datetime.now().strftime('%Y%m%d')}")
@@ -219,7 +219,7 @@ def format_station_block(result):
     lines.append(f"# !longitude: {lon:.6f}")
     lines.append(f"# !latitude: {lat:.6f}")
 
-    lines.append(f"{name}, Newfoundland and Labrador, Canada")
+    lines.append(f"{name}, British Columbia, Canada")
     lines.append(f"+00:00 :UTC")
     lines.append(f"{result['mean']:.4f} meters")
 
@@ -236,15 +236,15 @@ def main():
     CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
 
     # Load station catalog
-    with open(NL_DIR / '_nl_stations.json') as f:
+    with open(BC_DIR / '_bc_stations.json') as f:
         catalog = json.load(f)
     catalog_by_code = {s['code']: s for s in catalog}
 
     # Find all WLP CSV files
-    wlp_files = sorted(glob.glob(str(NL_DIR / '*_wlp.csv')))
+    wlp_files = sorted(glob.glob(str(BC_DIR / '*_wlp.csv')))
 
     print("=" * 70)
-    print("UTide Harmonic Analysis — Newfoundland and Labrador (CHS WLP)")
+    print("UTide Harmonic Analysis — British Columbia (CHS WLP)")
     print("=" * 70)
     print(f"WLP-Dateien gefunden: {len(wlp_files)}")
     print()
