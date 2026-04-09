@@ -8455,7 +8455,6 @@ var m1405 = L.marker([58.7033, -157.25], {icon: L.divIcon({html:'<svg width="18"
 m1405.bindPopup("<b>Kvichak Bay (off Naknek River entrance), Alaska Current</b><br><a href=\"/prediction/kvichak-bay-off-naknek-river-entrance-alaska-current\">🌊 Vorhersage anzeigen</a><br><a href=\"#\" onclick=\"enableDrag(this); return false;\">📍 Position korrigieren</a> <a href=\"#\" onclick=\"setCoordinatesManual(this); return false;\">📍 Koordinaten eingeben</a><br><a href=\"#\" onclick=\"renameStation(this); return false;\">✏️ Name ändern</a> <a href=\"#\" onclick=\"deleteStation(this); return false;\">🗑️ Löschen</a><br><small>📄 harmonics-2004-06-14_mod.tcd</small>");
 grp_all_current.addLayer(m1405);
 src_Classic_2004_current.push(m1405);
-src_Classic_2004_tide.push(m1406);
 stationCoords['Kwinitsa Creek, British Columbia (2), Canada'] = [54.2167, -129.5833];
 stationSources['Kwinitsa Creek, British Columbia (2), Canada'] = 'harmonics-2004-06-14_mod.tcd';
 var m1407 = L.marker([54.2167, -129.5833], {icon: L.divIcon({html:'<svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><line x1="9" y1="2" x2="9" y2="16" stroke="#4CAF50" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 9,2 13,5" fill="none" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="5,13 9,16 13,13" fill="none" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>', className:"", iconSize:[18,18], iconAnchor:[9,9], popupAnchor:[0,-9]})});
