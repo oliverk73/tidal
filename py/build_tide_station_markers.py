@@ -155,6 +155,7 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_canada_qc.tcd',
                             'harmonics_utide_pei.tcd',
                             'harmonics_utide_taiwan_cwa.tcd',
+                            'harmonics_utide_hongkong_hko.tcd',
                             ]}),
     ('UTide SL',        {'color': '#E57373', 'files': [
                             'harmonics_utide_germany_z0corrected.tcd',
