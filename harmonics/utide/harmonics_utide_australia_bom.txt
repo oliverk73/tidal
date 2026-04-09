@@ -20515,8 +20515,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 145.200000
-# !latitude: -15.433300
+# !longitude: 145.1984
+# !latitude: -15.4349
 Endeavour River North, Queensland, Australia
 +00:00 :UTC
 1.0057 meters
@@ -21697,8 +21697,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 153.100000
-# !latitude: -27.350000
+# !longitude: 153.1330
+# !latitude: -27.3626
 Serpentine Creek, Queensland, Australia
 +00:00 :UTC
 0.9971 meters
@@ -24851,7 +24851,7 @@ x 0 0
 # !units: meters
 # !longitude: 151.883300
 # !latitude: -24.166700
-Round Hill Head, Queensland, Australia
+Round Hill Head (Seventeen Seventy), Queensland, Australia
 +00:00 :UTC
 1.4888 meters
 J1              0.0114  18.83
@@ -37457,8 +37457,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 138.500000
-# !latitude: -34.966700
+# !longitude: 138.5080
+# !latitude: -34.9806
 Glenelg, South Australia, Australia
 +00:00 :UTC
 1.2861 meters
@@ -40412,8 +40412,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 138.516700
-# !latitude: -35.033300
+# !longitude: 138.5121
+# !latitude: -35.0175
 Brighton, South Australia, Australia
 +00:00 :UTC
 1.1691 meters
@@ -65628,8 +65628,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 152.383333
-# !latitude: -24.766667
+# !longitude: 152.3856
+# !latitude: -24.7624
 Bundaberg (Burnett Heads), Queensland, Australia
 +00:00 :UTC
 1.8117 meters
@@ -71341,8 +71341,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 145.766667
-# !latitude: -16.983333
+# !longitude: 145.7704
+# !latitude: -16.9893
 Swallows Landing, Queensland, Australia
 +00:00 :UTC
 1.8058 meters
@@ -86789,6 +86789,600 @@ NO3             0.0009  144.64
 x 0 0
 x 0 0
 N4              0.0003  28.34
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from BOM tidal stream predictions (reverse-engineered)
+# using UTide (v0.3.1) with cosine-interpolated data
+# 8390 events -> 105116 interpolated points
+# from 2024-12-31 to 2027-12-31
+# R^2 = 0.9796, RMS error = 0.2903 knots
+# Constituents analyzed: 68
+#
+# Hammond Rock, Queensland, Australia Current
+# BEGIN HOT COMMENTS
+# country: Australia
+# state: Queensland
+# source: BOM tidal stream predictions, UTide analysis
+# station_id_context: BOM-QLD-TS001
+# date_imported: 20260409
+# datum: n/a
+# station_type: current
+# confidence: 7
+# !units: knots
+# !longitude: 142.216700
+# !latitude: -10.500000
+Hammond Rock, Queensland, Australia Current
++00:00 :UTC
+0.0226 knots
+J1              0.0317  320.76
+K1              0.5686  23.81
+K2              0.3349  268.15
+L2              0.1504  277.20
+x 0 0
+M2              2.3524  262.39
+M3              0.0291  345.62
+M4              0.1251  214.39
+M6              0.1608  62.18
+M8              0.0043  78.73
+N2              0.5767  246.87
+2N2             0.0638  215.19
+O1              0.4688  334.68
+OO1             0.0051  212.33
+P1              0.0987  359.54
+Q1              0.0579  314.42
+2Q1             0.0254  257.42
+R2              0.0366  166.27
+x 0 0
+S2              1.0099  271.13
+S4              0.0239  229.29
+x 0 0
+T2              0.1108  244.71
+LDA2            0.0885  255.54
+MU2             0.0659  145.46
+NU2             0.1218  245.67
+RHO1            0.0057  319.38
+MK3             0.0983  321.41
+x 0 0
+MN4             0.0475  215.20
+MS4             0.1197  207.40
+2SM2            0.0200  131.39
+MF              0.0059  286.19
+MSF             0.2900  28.32
+MM              0.1722  6.97
+x 0 0
+SSA             0.1481  273.87
+SA-IOS          0.4751  26.21
+x 0 0
+S1-IOS          0.1601  81.67
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.1044  205.77
+2MK6            0.0997  79.56
+x 0 0
+2MN6            0.1207  46.03
+2MS6            0.2727  73.20
+x 0 0
+2SK5            0.0133  96.33
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+3MS4            0.0450  128.35
+x 0 0
+ALP1            0.0028  320.64
+BET1            0.0028  126.61
+CHI1            0.0050  12.68
+H1              0.0125  120.47
+H2              0.0091  19.94
+x 0 0
+ETA2            0.0030  296.54
+x 0 0
+UPS1            0.0013  151.81
+x 0 0
+x 0 0
+MK4             0.0271  119.09
+MKS2            0.0055  239.45
+x 0 0
+EPS2            0.0683  93.36
+MO3             0.0824  272.50
+x 0 0
+TAU1            0.0067  190.65
+x 0 0
+MSK6            0.0658  93.96
+MSM             0.0085  191.27
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0531  56.62
+OP2             0.0089  241.19
+x 0 0
+PHI1            0.0016  315.20
+x 0 0
+PI1             0.0040  269.56
+x 0 0
+PSI1            0.0013  307.75
+x 0 0
+x 0 0
+SIG1            0.0059  109.29
+SK3             0.0085  89.33
+x 0 0
+SN4             0.0319  195.26
+x 0 0
+SO1             0.1205  280.20
+SO3             0.0136  214.07
+THE1            0.0023  9.42
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0102  61.23
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO3             0.0042  124.57
+x 0 0
+x 0 0
+N4              0.0203  215.45
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from BOM tidal stream predictions (reverse-engineered)
+# using UTide (v0.3.1) with cosine-interpolated data
+# 8463 events -> 105102 interpolated points
+# from 2024-12-31 to 2027-12-31
+# R^2 = 0.9878, RMS error = 0.0529 knots
+# Constituents analyzed: 68
+#
+# Oom Shoal - Mackay, Queensland, Australia Current
+# BEGIN HOT COMMENTS
+# country: Australia
+# state: Queensland
+# source: BOM tidal stream predictions, UTide analysis
+# station_id_context: BOM-QLD-TS006
+# date_imported: 20260409
+# datum: n/a
+# station_type: current
+# confidence: 7
+# !units: knots
+# !longitude: 149.283300
+# !latitude: -21.050000
+Oom Shoal - Mackay, Queensland, Australia Current
++00:00 :UTC
+-0.0023 knots
+J1              0.0016  266.74
+K1              0.0355  31.35
+K2              0.0905  88.66
+L2              0.0422  95.56
+x 0 0
+M2              0.5936  101.67
+M3              0.0054  155.13
+M4              0.0120  321.54
+M6              0.0619  301.15
+M8              0.0024  160.73
+N2              0.1329  93.84
+2N2             0.0189  141.06
+O1              0.0204  11.30
+OO1             0.0023  28.26
+P1              0.0025  101.19
+Q1              0.0040  330.59
+2Q1             0.0049  222.02
+R2              0.0001  127.38
+x 0 0
+S2              0.2529  101.96
+S4              0.0010  154.99
+x 0 0
+T2              0.0155  106.63
+LDA2            0.0114  97.56
+MU2             0.0180  92.98
+NU2             0.0266  93.76
+RHO1            0.0002  347.94
+MK3             0.0052  143.19
+x 0 0
+MN4             0.0066  271.08
+MS4             0.0142  315.50
+2SM2            0.0181  256.11
+MF              0.0262  75.73
+MSF             0.0113  204.30
+MM              0.0085  321.63
+x 0 0
+SSA             0.0277  247.84
+SA-IOS          0.0001  102.97
+x 0 0
+S1-IOS          0.0008  235.65
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0100  243.74
+2MK6            0.0322  278.21
+x 0 0
+2MN6            0.0399  293.68
+2MS6            0.0844  300.10
+x 0 0
+2SK5            0.0009  29.38
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+3MS4            0.0036  326.41
+x 0 0
+ALP1            0.0002  156.28
+BET1            0.0001  112.87
+CHI1            0.0001  132.08
+H1              0.0002  283.53
+H2              0.0004  328.65
+x 0 0
+ETA2            0.0009  93.11
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+MK4             0.0053  313.02
+MKS2            0.0573  53.85
+x 0 0
+EPS2            0.0116  246.15
+MO3             0.0078  343.71
+x 0 0
+TAU1            0.0037  105.46
+x 0 0
+MSK6            0.0143  288.13
+MSM             0.0005  183.19
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0030  41.65
+OP2             0.0438  343.44
+x 0 0
+PHI1            0.0019  270.10
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SIG1            0.0004  176.54
+SK3             0.0006  335.59
+x 0 0
+SN4             0.0022  290.50
+x 0 0
+SO1             0.0065  198.35
+SO3             0.0067  289.63
+THE1            0.0001  13.38
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0002  152.42
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO3             0.0008  186.60
+x 0 0
+x 0 0
+N4              0.0026  255.05
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from BOM tidal stream predictions (reverse-engineered)
+# using UTide (v0.3.1) with cosine-interpolated data
+# 8461 events -> 105103 interpolated points
+# from 2024-12-31 to 2027-12-31
+# R^2 = 0.9830, RMS error = 0.3282 knots
+# Constituents analyzed: 68
+#
+# The Rip, Victoria, Australia Current
+# BEGIN HOT COMMENTS
+# country: Australia
+# state: Victoria
+# source: BOM tidal stream predictions, UTide analysis
+# station_id_context: BOM-VIC-TS001
+# date_imported: 20260409
+# datum: n/a
+# station_type: current
+# confidence: 7
+# !units: knots
+# !longitude: 144.630700
+# !latitude: -38.298400
+The Rip, Victoria, Australia Current
++00:00 :UTC
+-0.3494 knots
+J1              0.0214  272.81
+K1              0.7014  248.96
+K2              0.2079  148.19
+L2              0.2477  65.12
+x 0 0
+M2              3.2555  33.36
+M3              0.0234  326.40
+M4              0.2390  192.57
+M6              0.3691  96.44
+M8              0.0271  130.88
+N2              0.5507  351.63
+2N2             0.0763  283.79
+O1              0.4464  229.98
+OO1             0.0171  280.65
+P1              0.2166  225.07
+Q1              0.1081  225.94
+2Q1             0.0182  184.06
+R2              0.0133  131.66
+x 0 0
+S2              0.8249  157.92
+S4              0.0126  51.05
+x 0 0
+T2              0.0559  162.86
+LDA2            0.0940  76.92
+MU2             0.1822  58.29
+NU2             0.1383  337.97
+RHO1            0.0179  215.75
+MK3             0.1313  66.65
+x 0 0
+MN4             0.1003  156.68
+MS4             0.0505  1.54
+2SM2            0.0445  103.47
+MF              0.0302  332.86
+MSF             0.0820  299.91
+MM              0.0466  227.54
+x 0 0
+SSA             0.0109  98.42
+SA-IOS          0.0200  185.25
+x 0 0
+S1-IOS          0.0489  149.09
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.2404  275.32
+2MK6            0.0582  192.20
+x 0 0
+2MN6            0.1881  52.05
+2MS6            0.3110  216.36
+x 0 0
+2SK5            0.0049  357.42
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+3MS4            0.0232  191.07
+x 0 0
+ALP1            0.0017  97.34
+BET1            0.0055  150.99
+CHI1            0.0104  217.57
+H1              0.0251  256.27
+H2              0.0050  188.13
+x 0 0
+ETA2            0.0059  42.01
+x 0 0
+UPS1            0.0022  116.58
+x 0 0
+x 0 0
+MK4             0.0479  290.17
+MKS2            0.0097  110.91
+x 0 0
+EPS2            0.0477  17.38
+MO3             0.1497  38.45
+x 0 0
+TAU1            0.0485  308.08
+x 0 0
+MSK6            0.0216  300.46
+MSM             0.0042  131.69
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0343  301.80
+OP2             0.0100  327.24
+x 0 0
+PHI1            0.0151  284.08
+x 0 0
+PI1             0.0073  261.41
+x 0 0
+PSI1            0.0018  32.28
+x 0 0
+x 0 0
+SIG1            0.0329  220.72
+SK3             0.0593  200.96
+x 0 0
+SN4             0.0031  28.74
+x 0 0
+SO1             0.0460  168.36
+SO3             0.0637  162.87
+THE1            0.0146  300.08
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0145  97.69
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO3             0.0569  8.51
+x 0 0
+x 0 0
+N4              0.0215  58.34
 x 0 0
 x 0 0
 x 0 0
