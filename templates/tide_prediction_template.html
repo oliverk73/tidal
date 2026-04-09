@@ -33,7 +33,11 @@ main img { width: 100%; height: auto; }
 </style>
 <script src="/static/js/suche.js" defer></script>
 
+{% if is_current %}
+<title>Current predictions &amp; forecasts {{ original_name }}</title>
+{% else %}
 <title>Tide predictions &amp; forecasts {{ original_name }}</title>
+{% endif %}
 </head>
 <body>
 <header style="max-width: 1200px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 12px;">
@@ -42,18 +46,28 @@ main img { width: 100%; height: auto; }
 </header>
 <main>
 
+{% if is_current %}
+<p id="description">Accurate tidal current predictions &amp; charts with flood &amp; ebb currents, slack water times and current velocities for sailors, fishermen and watersports enthusiasts. Current charts for straits, channels and other coastal locations.</p>
+<h1>Current prediction & forecast {{ original_name }}</h1>
+<h2>Current calendars with flood and ebb times, slack water and current velocities</h2>
+{% else %}
 <p id="description">Accurate tide predictions &amp; charts with low (ebbing) &amp; high tides (flooding) for sailors, surfers, fishermen and watersports enthusiasts. Tide charts for ports, harbors, surfspots and other coastal locations. 🌊</p>
 <h1>Tide prediction & forecast {{ original_name }}</h1>
-<h2>Tide calendars with high and low tides times as well as tide curves</h2> 
+<h2>Tide calendars with high and low tides times as well as tide curves</h2>
+{% endif %}
 <h3 style="page-break-before:always;">{{ original_name }}</h3>
 <dl class="station-meta">
 {% for key, val in meta_info %}
   <div class="meta-item"><dt>{{ key }}</dt><dd>{{ val }}</dd></div>
 {% endfor %}
 </dl>
+{% if is_current %}
+<p><img src="{{ svg_url }}" alt="Current prediction graph {{ station }}" id="Current prediction curve"></p>
+<h3>Current times</h3>
+{% else %}
 <p><img src="{{ svg_url }}" alt="Tide prediction graph {{ station }}" id="Tide prediction curve"></p>
-
 <h3>Tide times</h3>
+{% endif %}
 <table class="tide-table">
 {% for row in tide_rows %}
   <tr class="row-{{ row.row_type }}{% if row.date %} day-start{% endif %}">
@@ -66,7 +80,11 @@ main img { width: 100%; height: auto; }
 {% endfor %}
 </table>
 
+{% if is_current %}
+<p id="tide_prediction">Tidal current prediction involves forecasting the speed and direction of water flow based on the predictable movements of the earth, moon, and sun. These predictions are crucial for navigation, fishing, and marine operations. While astronomical factors are predictable, actual currents can be influenced by weather conditions like wind and storm surge, causing deviations from the predicted currents.</p>
+{% else %}
 <p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
+{% endif %}
 </main>
 <footer>
 </footer>

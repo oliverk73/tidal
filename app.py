@@ -443,14 +443,17 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
             rest = parts[2].strip()
             # Determine event type
             is_tide = 'High Tide' in rest or 'Low Tide' in rest
+            is_current = ('Max Flood' in rest or 'Max Ebb' in rest or
+                          'Min Flood' in rest or 'Min Ebb' in rest or
+                          'Slack, Flood Begins' in rest or 'Slack, Ebb Begins' in rest)
             is_sun = rest in ('Sunrise', 'Sunset')
             is_moon = rest in ('Moonrise', 'Moonset', 'New Moon',
                                'First Quarter', 'Full Moon', 'Last Quarter')
             # Show date only on first row of each day
             show_date = date_str != last_date
             last_date = date_str
-            # Parse tide value and type
-            if is_tide:
+            # Parse tide/current value and type
+            if is_tide or is_current:
                 val_parts = rest.rsplit('  ', 1)
                 if len(val_parts) == 2:
                     value = val_parts[0].strip()
@@ -461,18 +464,24 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
             else:
                 value = ''
                 tide_type = rest
-            row_type = 'tide' if is_tide else 'astro'
+            row_type = 'tide' if (is_tide or is_current) else 'astro'
             icons = {
-                'High Tide': '\u25b2',      # ▲
-                'Low Tide': '\u25bc',        # ▼
-                'Sunrise': '\u2600',         # ☀
-                'Sunset': '\u25cb',          # ○
-                'Moonrise': '\u263d',        # ☽
-                'Moonset': '\u263e',         # ☾
-                'New Moon': '\u25cf',        # ●
-                'First Quarter': '\u25d0',   # ◐
-                'Full Moon': '\u25cb',       # ○
-                'Last Quarter': '\u25d1',    # ◑
+                'High Tide': '\u25b2',              # ▲
+                'Low Tide': '\u25bc',               # ▼
+                'Max Flood': '\u27a1',              # ➡
+                'Max Ebb': '\u2b05',                # ⬅
+                'Min Flood': '\u27a1',              # ➡
+                'Min Ebb': '\u2b05',                # ⬅
+                'Slack, Flood Begins': '\u23f8',    # ⏸
+                'Slack, Ebb Begins': '\u23f8',      # ⏸
+                'Sunrise': '\u2600',                # ☀
+                'Sunset': '\u25cb',                 # ○
+                'Moonrise': '\u263d',               # ☽
+                'Moonset': '\u263e',                # ☾
+                'New Moon': '\u25cf',               # ●
+                'First Quarter': '\u25d0',          # ◐
+                'Full Moon': '\u25cb',              # ○
+                'Last Quarter': '\u25d1',           # ◑
             }
             icon = icons.get(tide_type, '')
             tide_rows.append({
@@ -487,6 +496,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         tide_rows = []
 
     # HTML-Datei erzeugen
+    is_current_station = decoded_station.rstrip().endswith('Current')
     with open(TEMPLATE_PATH, encoding="utf-8") as f:
         template = f.read()
     svg_url = f"/static/images/{svg_filename}"
@@ -496,6 +506,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                                   svg_url=svg_url,
                                   meta_info=meta_info,
                                   tide_rows=tide_rows,
+                                  is_current=is_current_station,
                                   station_names=_station_names)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
