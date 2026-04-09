@@ -146,12 +146,20 @@ SOURCE_GROUPS = OrderedDict([
     ('TICON4',          {'color': '#FF9800', 'files': ['harmonics_ticon4_worldwide.tcd']}),
     ('Lavergne',        {'color': '#E91E63', 'files': ['harmonics-pierre-lavergne-v10_mod.tcd',
                                                         'harmonics-pierre-lavergne-v9-europe_mod.tcd']}),
-    ('UTide',           {'color': '#F44336', 'files': [
+    ('UTide TC',        {'color': '#F44336', 'files': [
+                            'harmonics_utide_australia_bom.tcd',
+                            'harmonics_utide_canada_all.tcd',
+                            'harmonics_utide_canada_bc.tcd',
+                            'harmonics_utide_canada_nb.tcd',
+                            'harmonics_utide_canada_nl.tcd',
+                            'harmonics_utide_canada_qc.tcd',
+                            'harmonics_utide_pei.tcd',
+                            ]}),
+    ('UTide SL',        {'color': '#E57373', 'files': [
                             'harmonics_utide_germany_z0corrected.tcd',
                             'harmonics_utide_netherlands.tcd',
                             'harmonics_utide_france.tcd',
                             'harmonics_utide_belgium.tcd',
-                            'harmonics_utide_canada_all.tcd',
                             'harmonics_utide_uk_bodc.tcd',
                             'harmonics_utide_uk_cmems.tcd',
                             'harmonics_utide_ireland.tcd',
@@ -186,8 +194,6 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_montserrat.tcd',
                             'harmonics_utide_stkitts.tcd',
                             'harmonics_utide_stvincent.tcd',
-                            'harmonics_utide_pei.tcd',
-                            'harmonics_utide_nb.tcd',
                             ]}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
 ])
