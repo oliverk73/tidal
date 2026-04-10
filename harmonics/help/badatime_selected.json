@@ -1,0 +1,618 @@
+[
+  {
+    "idx": 1,
+    "name": "부산",
+    "lat": 35.1033314,
+    "lon": 129.0396733,
+    "region": "South",
+    "name_en": "Busan"
+  },
+  {
+    "idx": 5,
+    "name": "가덕도",
+    "lat": 35.0166666666667,
+    "lon": 128.816666666667,
+    "region": "South",
+    "name_en": "Gadeokdo"
+  },
+  {
+    "idx": 6,
+    "name": "진해",
+    "lat": 35.15,
+    "lon": 128.65,
+    "region": "South",
+    "name_en": "Jinhae"
+  },
+  {
+    "idx": 8,
+    "name": "마산",
+    "lat": 35.216667,
+    "lon": 128.583333333333,
+    "region": "South",
+    "name_en": "Masan"
+  },
+  {
+    "idx": 13,
+    "name": "통영죽도",
+    "lat": 34.9,
+    "lon": 128.616666666667,
+    "region": "South",
+    "name_en": "Tongyeong Jukdo"
+  },
+  {
+    "idx": 25,
+    "name": "통영",
+    "lat": 34.833333,
+    "lon": 128.433333333333,
+    "region": "South",
+    "name_en": "Tongyeong"
+  },
+  {
+    "idx": 31,
+    "name": "삼천포",
+    "lat": 34.9166666666667,
+    "lon": 128.066666666667,
+    "region": "South",
+    "name_en": "Samcheonpo"
+  },
+  {
+    "idx": 33,
+    "name": "진도",
+    "lat": 34.4030254,
+    "lon": 126.3077783,
+    "region": "West",
+    "name_en": "Jindo"
+  },
+  {
+    "idx": 39,
+    "name": "광양",
+    "lat": 34.9,
+    "lon": 127.75,
+    "region": "South",
+    "name_en": "Gwangyang"
+  },
+  {
+    "idx": 41,
+    "name": "여수",
+    "lat": 34.75,
+    "lon": 127.766667,
+    "region": "South",
+    "name_en": "Yeosu"
+  },
+  {
+    "idx": 51,
+    "name": "거문도",
+    "lat": 34.033333333333,
+    "lon": 127.31666666667,
+    "region": "South",
+    "name_en": "Geomundo"
+  },
+  {
+    "idx": 60,
+    "name": "완도",
+    "lat": 34.3166666666667,
+    "lon": 126.766666666667,
+    "region": "South",
+    "name_en": "Wando"
+  },
+  {
+    "idx": 66,
+    "name": "추자도",
+    "lat": 33.9666666666667,
+    "lon": 126.3,
+    "region": "Jeju",
+    "name_en": "Chujado"
+  },
+  {
+    "idx": 67,
+    "name": "제주",
+    "lat": 33.5333333333333,
+    "lon": 126.55,
+    "region": "Jeju",
+    "name_en": "Jeju"
+  },
+  {
+    "idx": 71,
+    "name": "성산포",
+    "lat": 33.466667,
+    "lon": 126.933333,
+    "region": "Jeju",
+    "name_en": "Seongsan"
+  },
+  {
+    "idx": 72,
+    "name": "서귀포",
+    "lat": 33.2333333333333,
+    "lon": 126.566666666667,
+    "region": "Jeju",
+    "name_en": "Seogwipo"
+  },
+  {
+    "idx": 73,
+    "name": "모슬포",
+    "lat": 33.21666,
+    "lon": 126.25,
+    "region": "Jeju",
+    "name_en": "Moseulpo"
+  },
+  {
+    "idx": 84,
+    "name": "진도수품",
+    "lat": 34.383333,
+    "lon": 126.316667,
+    "region": "West",
+    "name_en": "Jindo Supum"
+  },
+  {
+    "idx": 91,
+    "name": "흑산도",
+    "lat": 34.683333,
+    "lon": 125.433333,
+    "region": "West",
+    "name_en": "Heuksando"
+  },
+  {
+    "idx": 105,
+    "name": "목포",
+    "lat": 34.7833333333333,
+    "lon": 126.383333333333,
+    "region": "West",
+    "name_en": "Mokpo"
+  },
+  {
+    "idx": 111,
+    "name": "영광",
+    "lat": 35.433333,
+    "lon": 126.416666666667,
+    "region": "West",
+    "name_en": "Yeonggwang"
+  },
+  {
+    "idx": 112,
+    "name": "위도",
+    "lat": 35.6166666666667,
+    "lon": 126.3,
+    "region": "West",
+    "name_en": "Wido"
+  },
+  {
+    "idx": 117,
+    "name": "군산연도항",
+    "lat": 36.0833333333333,
+    "lon": 126.45,
+    "region": "West",
+    "name_en": "Gunsan Yeondo"
+  },
+  {
+    "idx": 119,
+    "name": "군산내항",
+    "lat": 36.0,
+    "lon": 126.716666666667,
+    "region": "West",
+    "name_en": "Gunsan Inner Harbor"
+  },
+  {
+    "idx": 120,
+    "name": "군산외항",
+    "lat": 35.983333,
+    "lon": 126.566667,
+    "region": "West",
+    "name_en": "Gunsan Outer Harbor"
+  },
+  {
+    "idx": 122,
+    "name": "군산죽도",
+    "lat": 36.0333333333333,
+    "lon": 126.533333333333,
+    "region": "West",
+    "name_en": "Gunsan Jukdo"
+  },
+  {
+    "idx": 123,
+    "name": "서천마량",
+    "lat": 36.133333,
+    "lon": 126.5,
+    "region": "West",
+    "name_en": "Seocheon Maryang"
+  },
+  {
+    "idx": 126,
+    "name": "대천항",
+    "lat": 36.3333333333333,
+    "lon": 126.516667,
+    "region": "West",
+    "name_en": "Daecheon Harbor"
+  },
+  {
+    "idx": 127,
+    "name": "보령",
+    "lat": 36.4,
+    "lon": 126.483333333333,
+    "region": "West",
+    "name_en": "Boryeong"
+  },
+  {
+    "idx": 132,
+    "name": "안흥신진도",
+    "lat": 36.6666666666667,
+    "lon": 126.133333333333,
+    "region": "West",
+    "name_en": "Anheung Sinjindo"
+  },
+  {
+    "idx": 139,
+    "name": "굴업도",
+    "lat": 37.2,
+    "lon": 126.0,
+    "region": "West",
+    "name_en": "Guleopdo"
+  },
+  {
+    "idx": 141,
+    "name": "덕적도진리",
+    "lat": 37.233333,
+    "lon": 126.15,
+    "region": "West",
+    "name_en": "Deokjeokdo Jinri"
+  },
+  {
+    "idx": 142,
+    "name": "덕적도북리",
+    "lat": 37.25,
+    "lon": 126.116667,
+    "region": "West",
+    "name_en": "Deokjeokdo Bukri"
+  },
+  {
+    "idx": 145,
+    "name": "대산",
+    "lat": 37.0,
+    "lon": 126.35,
+    "region": "West",
+    "name_en": "Daesan"
+  },
+  {
+    "idx": 149,
+    "name": "평택",
+    "lat": 37.0,
+    "lon": 126.783333333333,
+    "region": "West",
+    "name_en": "Pyeongtaek"
+  },
+  {
+    "idx": 151,
+    "name": "영흥도",
+    "lat": 37.233333,
+    "lon": 126.433333,
+    "region": "West",
+    "name_en": "Yeongheungdo"
+  },
+  {
+    "idx": 157,
+    "name": "안산탄도",
+    "lat": 37.2,
+    "lon": 126.65,
+    "region": "West",
+    "name_en": "Ansan Tando"
+  },
+  {
+    "idx": 158,
+    "name": "인천",
+    "lat": 37.466667,
+    "lon": 126.6,
+    "region": "West",
+    "name_en": "Incheon"
+  },
+  {
+    "idx": 159,
+    "name": "영종도",
+    "lat": 37.45,
+    "lon": 126.366667,
+    "region": "West",
+    "name_en": "Yeongjongdo"
+  },
+  {
+    "idx": 163,
+    "name": "강화외포",
+    "lat": 37.7,
+    "lon": 126.366667,
+    "region": "West",
+    "name_en": "Ganghwa Oepo"
+  },
+  {
+    "idx": 166,
+    "name": "강화대교",
+    "lat": 37.7333333333333,
+    "lon": 126.516666666667,
+    "region": "West",
+    "name_en": "Ganghwa Bridge"
+  },
+  {
+    "idx": 177,
+    "name": "대청도",
+    "lat": 37.833333,
+    "lon": 124.716666666667,
+    "region": "West",
+    "name_en": "Daecheongdo"
+  },
+  {
+    "idx": 184,
+    "name": "군산1부두",
+    "lat": 35.966667,
+    "lon": 126.616667,
+    "region": "West",
+    "name_en": "Gunsan Wharf 1"
+  },
+  {
+    "idx": 192,
+    "name": "속초",
+    "lat": 38.2,
+    "lon": 128.6,
+    "region": "East",
+    "name_en": "Sokcho"
+  },
+  {
+    "idx": 195,
+    "name": "묵호",
+    "lat": 37.55,
+    "lon": 129.116666666667,
+    "region": "East",
+    "name_en": "Mukho"
+  },
+  {
+    "idx": 196,
+    "name": "동해항",
+    "lat": 37.5,
+    "lon": 129.15,
+    "region": "East",
+    "name_en": "Donghae Harbor"
+  },
+  {
+    "idx": 199,
+    "name": "울릉도저동",
+    "lat": 37.483333,
+    "lon": 130.916666666667,
+    "region": "East",
+    "name_en": "Ulleungdo Jeodong"
+  },
+  {
+    "idx": 208,
+    "name": "포항",
+    "lat": 36.05,
+    "lon": 129.383333,
+    "region": "East",
+    "name_en": "Pohang"
+  },
+  {
+    "idx": 214,
+    "name": "울산",
+    "lat": 35.5,
+    "lon": 129.383333333333,
+    "region": "East",
+    "name_en": "Ulsan"
+  },
+  {
+    "idx": 220,
+    "name": "고흥발포",
+    "lat": 34.48333333333,
+    "lon": 127.35,
+    "region": "South",
+    "name_en": "Goheung Balpo"
+  },
+  {
+    "idx": 223,
+    "name": "영종대교",
+    "lat": 37.55,
+    "lon": 126.6,
+    "region": "West",
+    "name_en": "Yeongjong Bridge"
+  },
+  {
+    "idx": 224,
+    "name": "속초등표",
+    "lat": 38.199444,
+    "lon": 128.613056,
+    "region": "East",
+    "name_en": "Sokcho Lighthouse"
+  },
+  {
+    "idx": 231,
+    "name": "태안",
+    "lat": 36.916667,
+    "lon": 126.238611,
+    "region": "West",
+    "name_en": "Taean"
+  },
+  {
+    "idx": 232,
+    "name": "인천송도",
+    "lat": 37.333333,
+    "lon": 126.583333,
+    "region": "West",
+    "name_en": "Incheon Songdo"
+  },
+  {
+    "idx": 233,
+    "name": "부산신항",
+    "lat": 35.083333,
+    "lon": 128.783333,
+    "region": "South",
+    "name_en": "Busan New Port"
+  },
+  {
+    "idx": 235,
+    "name": "고흥우도",
+    "lat": 34.716667,
+    "lon": 127.3,
+    "region": "South",
+    "name_en": "Goheung Udo"
+  },
+  {
+    "idx": 249,
+    "name": "통영홍도",
+    "lat": 34.533333,
+    "lon": 128.733333,
+    "region": "South",
+    "name_en": "Tongyeong Hongdo"
+  },
+  {
+    "idx": 268,
+    "name": "여수연도항",
+    "lat": 34.433333,
+    "lon": 127.8,
+    "region": "South",
+    "name_en": "Yeosu Yeondo"
+  },
+  {
+    "idx": 292,
+    "name": "고흥방조제",
+    "lat": 34.65,
+    "lon": 127.2,
+    "region": "South",
+    "name_en": "Goheung Seawall"
+  },
+  {
+    "idx": 391,
+    "name": "진해동섬",
+    "lat": 35.0953783,
+    "lon": 128.721837,
+    "region": "South",
+    "name_en": "Jinhae Dongseom"
+  },
+  {
+    "idx": 400,
+    "name": "삼천포신항",
+    "lat": 34.933333,
+    "lon": 128.083333,
+    "region": "South",
+    "name_en": "Samcheonpo New Port"
+  },
+  {
+    "idx": 413,
+    "name": "완도사동항",
+    "lat": 34.333333,
+    "lon": 127.083333,
+    "region": "South",
+    "name_en": "Wando Sadong"
+  },
+  {
+    "idx": 437,
+    "name": "평택동부두",
+    "lat": 36.966667,
+    "lon": 126.833333,
+    "region": "West",
+    "name_en": "Pyeongtaek East Wharf"
+  },
+  {
+    "idx": 491,
+    "name": "고흥금진항",
+    "lat": 34.483333,
+    "lon": 127.116667,
+    "region": "South",
+    "name_en": "Goheung Geumjin"
+  },
+  {
+    "idx": 512,
+    "name": "진도옥도",
+    "lat": 34.35,
+    "lon": 126.016667,
+    "region": "West",
+    "name_en": "Jindo Okdo"
+  },
+  {
+    "idx": 515,
+    "name": "흑산도사리",
+    "lat": 34.65,
+    "lon": 125.416667,
+    "region": "West",
+    "name_en": "Heuksando Sari"
+  },
+  {
+    "idx": 516,
+    "name": "목포북항",
+    "lat": 34.8,
+    "lon": 126.366667,
+    "region": "West",
+    "name_en": "Mokpo North Harbor"
+  },
+  {
+    "idx": 529,
+    "name": "속초대포항",
+    "lat": 38.166667,
+    "lon": 128.616667,
+    "region": "East",
+    "name_en": "Sokcho Daepo"
+  },
+  {
+    "idx": 560,
+    "name": "목포신항",
+    "lat": 34.75,
+    "lon": 126.366666667,
+    "region": "West",
+    "name_en": "Mokpo New Harbor"
+  },
+  {
+    "idx": 684,
+    "name": "완도(씨월드)방파제",
+    "lat": 34.324835,
+    "lon": 126.752981,
+    "region": "South",
+    "name_en": "Wando Seaworld Breakwater"
+  },
+  {
+    "idx": 831,
+    "name": "여수구항",
+    "lat": 34.732689,
+    "lon": 127.733371,
+    "region": "South",
+    "name_en": "Yeosu Old Harbor"
+  },
+  {
+    "idx": 888,
+    "name": "여수신항방파제",
+    "lat": 34.750737,
+    "lon": 127.761198,
+    "region": "South",
+    "name_en": "Yeosu New Harbor Breakwater"
+  },
+  {
+    "idx": 969,
+    "name": "삼천포방파제",
+    "lat": 34.92296,
+    "lon": 128.070539,
+    "region": "South",
+    "name_en": "Samcheonpo Breakwater"
+  },
+  {
+    "idx": 1229,
+    "name": "진도항",
+    "lat": 34.375517,
+    "lon": 126.132564,
+    "region": "West",
+    "name_en": "Jindo Harbor"
+  },
+  {
+    "idx": 1408,
+    "name": "안흥방파제",
+    "lat": 36.67665,
+    "lon": 126.156154,
+    "region": "West",
+    "name_en": "Anheung Breakwater"
+  },
+  {
+    "idx": 1410,
+    "name": "안흥항",
+    "lat": 36.683468,
+    "lon": 126.132876,
+    "region": "West",
+    "name_en": "Anheung Harbor"
+  },
+  {
+    "idx": 1420,
+    "name": "강화하리",
+    "lat": 37.733333333333,
+    "lon": 126.2833333333,
+    "region": "West",
+    "name_en": "Ganghwa Hari"
+  }
+]
