@@ -42,7 +42,6 @@ REGIONS = {
     'Tilbury': ('England', 'United Kingdom'),
     'Swansea': ('Wales', 'United Kingdom'),
     'Birkenhead (Alfred Dock)': ('England', 'United Kingdom'),
-    'Liverpool (Gladstone Dock)': ('England', 'United Kingdom'),
     'Douglas': ('Isle of Man', ''),
     'Belfast': ('Northern Ireland', 'United Kingdom'),
 }

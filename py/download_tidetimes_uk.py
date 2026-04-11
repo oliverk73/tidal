@@ -57,11 +57,6 @@ STATIONS = [
         'lat': 53.3917, 'lon': -3.0208,
     },
     {
-        'slug': 'liverpool-gladstone-dock',
-        'name': 'Liverpool (Gladstone Dock)',
-        'lat': 53.4497, 'lon': -3.0180,
-    },
-    {
         'slug': 'douglas',
         'name': 'Douglas',
         'lat': 54.1500, 'lon': -4.4670,
