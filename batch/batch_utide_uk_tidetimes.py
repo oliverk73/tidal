@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-UTide harmonic analysis for UK tide stations.
+UTide harmonic analysis for UK/Ireland tide stations.
 Uses HW/LW predictions from tidetimes.co.uk.
 Cosine-interpolates HW/LW to 15-min time series, then runs UTide.
 
@@ -33,19 +33,6 @@ CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_uk_tidetimes")
 
 UK_TZ = ZoneInfo('Europe/London')
 
-# Region mapping for nice output names
-REGIONS = {
-    'Rosyth': ('Scotland', 'United Kingdom'),
-    'Dunbar': ('Scotland', 'United Kingdom'),
-    'Walton-on-the-Naze': ('England', 'United Kingdom'),
-    'Southend': ('England', 'United Kingdom'),
-    'Tilbury': ('England', 'United Kingdom'),
-    'Swansea': ('Wales', 'United Kingdom'),
-    'Birkenhead (Alfred Dock)': ('England', 'United Kingdom'),
-    'Douglas': ('Isle of Man', ''),
-    'Belfast': ('Northern Ireland', 'United Kingdom'),
-}
-
 # 67 constituents (from predictions, not observations)
 CONSTIT_67 = [
     'K1', 'O1', 'P1', 'Q1', 'J1', 'OO1', '2Q1', 'RHO1',
@@ -65,6 +52,127 @@ CONSTIT_67 = [
     '2MK5', '2SK5',
     '2MK6', 'MSK6',
 ]
+
+
+def classify_location(name, lat, lon):
+    """Determine region and country from coordinates and name."""
+    # Ireland (Republic) — roughly west of ~6°W and south of ~55.4°N,
+    # plus specific Irish names
+    irish_indicators = [
+        'harbour, ireland', 'port, ireland', ', ireland',
+        'cobh', 'cork', 'galway', 'limerick', 'waterford', 'wexford',
+        'killybegs', 'sligo', 'ballyglass', 'westport', 'fenit',
+        'dingle', 'bantry', 'kinsale', 'dunmore east', 'arklow',
+        'wicklow', 'howth', 'dun laoghaire', 'dublin', 'drogheda',
+        'dundalk', 'courtown', 'rosslare', 'kilmore', 'dungarvan',
+        'youghal', 'ballycotton', 'ringaskiddy', 'castletownshend',
+        'schull', 'crookhaven', 'castletown bearhaven', 'kenmare',
+        'cromane', 'knights town', 'ballinskelligs', 'portmagee',
+        'kilrush', 'tarbert island', 'foynes', 'shannon',
+        'rossaveel', 'clifden', 'roundstone', 'inishmore',
+        'liscannor', 'kilbaha', 'carrigaholt',
+        'rathmullan', 'fanad', 'downings', 'burtonport',
+        'mullaghmore', 'killala', 'blacksod', 'clare island',
+        'belmullet', 'newport', 'inishbofin',
+    ]
+    name_lower = name.lower()
+
+    # Channel Islands
+    if any(x in name_lower for x in ['jersey', 'guernsey', 'alderney',
+                                       'st. helier', 'st. peter port',
+                                       'braye', 'sark', 'maseline',
+                                       'bouley bay', 'st. catherine',
+                                       'ecrehou', 'minquiers']):
+        return 'Channel Islands', ''
+
+    # Isle of Man
+    if any(x in name_lower for x in ['isle of man']) or \
+       (name in ['Douglas', 'Peel', 'Ramsey', 'Port Erin', 'Port St. Mary',
+                  'Calf Sound'] and 54.0 < lat < 54.5 and -5.0 < lon < -4.0):
+        return 'Isle of Man', ''
+
+    # Northern Ireland — east of ~6°W, north of ~54°N, specific areas
+    if lat > 54.0 and lon > -8.5 and lon < -5.0:
+        ni_names = ['belfast', 'bangor', 'carrickfergus', 'larne', 'warrenpoint',
+                     'newry', 'kilkeel', 'newcastle', 'ardglass', 'killough',
+                     'strangford', 'portavogie', 'donaghadee', 'killard',
+                     'cranfield', 'greenore', 'soldiers point',
+                     'portrush', 'coleraine', 'ballycastle', 'cushendun',
+                     'red bay', 'londonderry', 'lisahally', 'culmore',
+                     'moville', 'warren lighthouse']
+        if any(x in name_lower for x in ni_names):
+            return 'Northern Ireland', 'United Kingdom'
+
+    # Republic of Ireland — extensive check
+    if any(x in name_lower for x in irish_indicators):
+        return '', 'Ireland'
+
+    # Coordinate-based Ireland check: west of ~6°W, below ~55.4°N
+    if lon < -6.0 and lat < 55.4 and lat > 51.0:
+        return '', 'Ireland'
+    # East coast Ireland: specific longitude range
+    if lon < -5.5 and lat > 52.0 and lat < 54.5:
+        return '', 'Ireland'
+
+    # Scotland — north of ~55.8°N (mainland), or specific islands
+    scotland_names = ['orkney', 'shetland', 'lerwick', 'kirkwall', 'stromness',
+                      'stornoway', 'ullapool', 'oban', 'tobermory', 'mallaig',
+                      'portree', 'kyle of lochalsh', 'inverness', 'wick',
+                      'aberdeen', 'dundee', 'leith', 'grangemouth', 'rosyth',
+                      'dunbar', 'eyemouth', 'montrose', 'arbroath', 'perth',
+                      'stirling', 'greenock', 'glasgow', 'helensburgh',
+                      'millport', 'campbeltown', 'islay', 'port ellen',
+                      'craighouse', 'scalasaig', 'loch maddy', 'leverburgh',
+                      'castle bay', 'barra', 'kinlochbervie', 'scrabster',
+                      'fraserburgh', 'peterhead', 'buckie', 'banff',
+                      'nairn', 'cromarty', 'golspie', 'helmsdale',
+                      'fair isle', 'foula', 'sullom voe', 'burra',
+                      'granton', 'kirkcaldy', 'methil', 'anstruther',
+                      'alloa', 'kincardine', 'burntisland',
+                      'portpatrick', 'stranraer', 'girvan', 'ayr', 'troon',
+                      'irvine', 'ardrossan', 'drummore', 'lossiemouth',
+                      'burghead', 'whitehills', 'stonehaven',
+                      'fortrose', 'invergordon', 'dingwall', 'portmahomack',
+                      'meikle ferry', 'duncansby', 'muckle skerry',
+                      'corpach', 'corran', 'loch eil', 'loch leven',
+                      'fort belan', 'faslane', 'garelochhead', 'rhu',
+                      'bowling', 'clydebank', 'port glasgow',
+                      'rothesay', 'wemyss bay', 'tighnabruaich',
+                      'lochgoilhead', 'arrochar', 'coulport',
+                      'brodick', 'lamlash', 'loch ranza',
+                      'isle of whithorn', 'port william', 'garlieston',
+                      'kirkcudbright', 'hestan', 'southerness', 'annan',
+                      'cockenzie', 'fidra']
+    if any(x in name_lower for x in scotland_names):
+        return 'Scotland', 'United Kingdom'
+    if lat > 55.8 and lon > -8.0 and lon < 0:
+        return 'Scotland', 'United Kingdom'
+
+    # Wales
+    wales_names = ['swansea', 'cardiff', 'newport', 'barry', 'mumbles',
+                   'milford haven', 'fishguard', 'aberystwyth', 'barmouth',
+                   'pwllheli', 'holyhead', 'llandudno', 'conwy', 'beaumaris',
+                   'menai', 'caernarfon', 'porthmadog', 'aberdovey',
+                   'new quay', 'aberporth', 'cardigan', 'tenby', 'pembroke',
+                   'neyland', 'haverfordwest', 'porthcawl', 'port talbot',
+                   'chepstow', 'colwyn bay', 'amlwch', 'cemaes',
+                   'trefor', 'criccieth', 'bardsey', 'aberdaron',
+                   'st. tudwal', 'porth dinllaen', 'porth ysgaden',
+                   'moelfre', 'trearddur', 'porth trecastell',
+                   'llanddwyn', 'fort belan', 'port dinorwic',
+                   'connah', 'mostyn', 'burry port', 'llanelli',
+                   'ferryside', 'carmarthen', 'river neath',
+                   'dale roads', 'solva', 'ramsey sound', 'porthgain',
+                   'little haven', 'martin', 'skomer', 'stackpole',
+                   'black tar', 'sudbrook', 'flat holm']
+    if any(x in name_lower for x in wales_names):
+        return 'Wales', 'United Kingdom'
+    # Wales by coordinates (roughly)
+    if lat > 51.3 and lat < 53.5 and lon < -2.5 and lon > -5.5:
+        return 'Wales', 'United Kingdom'
+
+    # Default: England, United Kingdom
+    return 'England', 'United Kingdom'
 
 
 def cosine_interpolate(hw_lw_utc, target_interval_min=15):
@@ -289,15 +397,18 @@ def format_station_block(result):
     lat = result['lat']
     lon = result['lon']
 
-    region_info = REGIONS.get(name, ('', 'United Kingdom'))
-    region, country = region_info
+    region, country = classify_location(name, lat, lon)
 
     if region and country:
         location = f"{name}, {region}, {country}"
+    elif country:
+        location = f"{name}, {country}"
     elif region:
         location = f"{name}, {region}"
     else:
         location = f"{name}, United Kingdom"
+
+    country_field = country if country else region
 
     lines = []
     lines.append(f"# Harmonic constants derived from tidetimes.co.uk HW/LW predictions")
@@ -309,7 +420,7 @@ def format_station_block(result):
     lines.append(f"#")
     lines.append(f"# {location}")
     lines.append(f"# BEGIN HOT COMMENTS")
-    lines.append(f"# country: {country if country else region}")
+    lines.append(f"# country: {country_field}")
     lines.append(f"# source: Derived from tidetimes.co.uk HW/LW predictions with UTide")
     lines.append(f"# date_imported: {datetime.now().strftime('%Y%m%d')}")
     lines.append(f"# datum: approximate chart datum")
@@ -337,19 +448,22 @@ def main():
     header = read_header_from_template(TEMPLATE_PATH)
 
     json_files = sorted(DATA_DIR.glob("*.json"))
+    # Exclude metadata files
+    json_files = [f for f in json_files if f.name != 'missing_stations.json']
+
     if not json_files:
         print("Keine JSON-Dateien gefunden!")
         return
 
     print("=" * 70)
-    print("UTide Harmonic Analysis -- UK (tidetimes.co.uk)")
+    print("UTide Harmonic Analysis -- UK/Ireland (tidetimes.co.uk)")
     print("=" * 70)
     print(f"Stationen: {len(json_files)}")
     print()
 
     results = []
     for i, json_path in enumerate(json_files):
-        print(f"[{i+1:2d}/{len(json_files)}] {json_path.stem}")
+        print(f"[{i+1:3d}/{len(json_files)}] {json_path.stem}")
         result = analyze_station(json_path)
         if result:
             results.append(result)
@@ -368,8 +482,20 @@ def main():
     print(f"{'='*70}")
     print(f"Ergebnis: {len(results)} Stationen -> {OUTPUT_PATH}")
     print()
+
+    # Summary by country
+    countries = {}
     for r in results:
-        print(f"  {r['name']:30s}  R²={r['r_squared']:.4f}  "
+        region, country = classify_location(r['name'], r['lat'], r['lon'])
+        key = country if country else region
+        countries[key] = countries.get(key, 0) + 1
+
+    for c, n in sorted(countries.items(), key=lambda x: -x[1]):
+        print(f"  {c}: {n} Stationen")
+    print()
+
+    for r in results:
+        print(f"  {r['name']:40s}  R²={r['r_squared']:.4f}  "
               f"M2={r['m2_amp']:.4f}m  K1={r['k1_amp']:.4f}m  "
               f"RMS={r['rms_error']:.4f}m")
 
