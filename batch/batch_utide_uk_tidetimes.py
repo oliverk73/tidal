@@ -18,6 +18,7 @@ from zoneinfo import ZoneInfo
 import time as timer
 import pickle
 import gc
+import requests
 import utide
 
 from generate_germany_harmonics_175 import (
@@ -54,124 +55,113 @@ CONSTIT_67 = [
 ]
 
 
+NOMINATIM_CACHE_PATH = Path("/home/oliver/harmonics/help/nominatim_uk_cache.json")
+
+# Region mapping from Nominatim address fields to our classification
+_REGION_MAP = {
+    'Scotland': ('Scotland', 'United Kingdom'),
+    'Wales': ('Wales', 'United Kingdom'),
+    'England': ('England', 'United Kingdom'),
+    'Northern Ireland': ('Northern Ireland', 'United Kingdom'),
+    'Jersey': ('Channel Islands', ''),
+    'Guernsey': ('Channel Islands', ''),
+    'Alderney': ('Channel Islands', ''),
+    'Sark': ('Channel Islands', ''),
+    'Isle of Man': ('Isle of Man', ''),
+}
+
+_nominatim_cache = {}
+
+
+def _load_nominatim_cache():
+    """Load cached Nominatim results from disk."""
+    global _nominatim_cache
+    if NOMINATIM_CACHE_PATH.exists():
+        with open(NOMINATIM_CACHE_PATH) as f:
+            _nominatim_cache = json.load(f)
+        print(f"  Nominatim-Cache: {len(_nominatim_cache)} Eintraege geladen")
+
+
+def _save_nominatim_cache():
+    """Save Nominatim cache to disk."""
+    NOMINATIM_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(NOMINATIM_CACHE_PATH, 'w') as f:
+        json.dump(_nominatim_cache, f, indent=2)
+
+
+def _nominatim_reverse(lat, lon):
+    """Reverse geocode via Nominatim, with caching and rate limiting."""
+    key = f"{lat:.4f},{lon:.4f}"
+    if key in _nominatim_cache:
+        return _nominatim_cache[key]
+
+    try:
+        resp = requests.get(
+            'https://nominatim.openstreetmap.org/reverse',
+            params={'lat': lat, 'lon': lon, 'format': 'json', 'zoom': 10,
+                    'accept-language': 'en'},
+            headers={'User-Agent': 'TideHarmonics/1.0 (oliver@example.com)'},
+            timeout=10,
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            addr = data.get('address', {})
+            result = {
+                'country': addr.get('country', ''),
+                'state': addr.get('state', ''),
+                'county': addr.get('county', ''),
+                'territory': addr.get('territory', ''),
+                'country_code': addr.get('country_code', ''),
+            }
+            _nominatim_cache[key] = result
+            # Rate limit: max 1 req/sec per Nominatim policy
+            timer.sleep(1.1)
+            return result
+    except Exception as e:
+        print(f"  Nominatim-Fehler fuer {lat},{lon}: {e}")
+
+    return None
+
+
 def classify_location(name, lat, lon):
-    """Determine region and country from coordinates and name."""
-    # Ireland (Republic) — roughly west of ~6°W and south of ~55.4°N,
-    # plus specific Irish names
-    irish_indicators = [
-        'harbour, ireland', 'port, ireland', ', ireland',
-        'cobh', 'cork', 'galway', 'limerick', 'waterford', 'wexford',
-        'killybegs', 'sligo', 'ballyglass', 'westport', 'fenit',
-        'dingle', 'bantry', 'kinsale', 'dunmore east', 'arklow',
-        'wicklow', 'howth', 'dun laoghaire', 'dublin', 'drogheda',
-        'dundalk', 'courtown', 'rosslare', 'kilmore', 'dungarvan',
-        'youghal', 'ballycotton', 'ringaskiddy', 'castletownshend',
-        'schull', 'crookhaven', 'castletown bearhaven', 'kenmare',
-        'cromane', 'knights town', 'ballinskelligs', 'portmagee',
-        'kilrush', 'tarbert island', 'foynes', 'shannon',
-        'rossaveel', 'clifden', 'roundstone', 'inishmore',
-        'liscannor', 'kilbaha', 'carrigaholt',
-        'rathmullan', 'fanad', 'downings', 'burtonport',
-        'mullaghmore', 'killala', 'blacksod', 'clare island',
-        'belmullet', 'newport', 'inishbofin',
-    ]
-    name_lower = name.lower()
+    """Determine region and country using Nominatim reverse geocoding."""
+    result = _nominatim_reverse(lat, lon)
+    if result:
+        country = result.get('country', '')
+        state = result.get('state', '')
+        territory = result.get('territory', '')
+        country_code = result.get('country_code', '')
 
-    # Channel Islands
-    if any(x in name_lower for x in ['jersey', 'guernsey', 'alderney',
-                                       'st. helier', 'st. peter port',
-                                       'braye', 'sark', 'maseline',
-                                       'bouley bay', 'st. catherine',
-                                       'ecrehou', 'minquiers']):
-        return 'Channel Islands', ''
+        # Ireland (Republic)
+        if country_code == 'ie' or country == 'Ireland':
+            return '', 'Ireland'
 
-    # Isle of Man
-    if any(x in name_lower for x in ['isle of man']) or \
-       (name in ['Douglas', 'Peel', 'Ramsey', 'Port Erin', 'Port St. Mary',
-                  'Calf Sound'] and 54.0 < lat < 54.5 and -5.0 < lon < -4.0):
-        return 'Isle of Man', ''
+        # Channel Islands (Crown Dependencies — separate country codes)
+        if country_code in ('je', 'gg') or country in ('Jersey', 'Guernsey'):
+            return 'Channel Islands', ''
 
-    # Northern Ireland — east of ~6°W, north of ~54°N, specific areas
-    if lat > 54.0 and lon > -8.5 and lon < -5.0:
-        ni_names = ['belfast', 'bangor', 'carrickfergus', 'larne', 'warrenpoint',
-                     'newry', 'kilkeel', 'newcastle', 'ardglass', 'killough',
-                     'strangford', 'portavogie', 'donaghadee', 'killard',
-                     'cranfield', 'greenore', 'soldiers point',
-                     'portrush', 'coleraine', 'ballycastle', 'cushendun',
-                     'red bay', 'londonderry', 'lisahally', 'culmore',
-                     'moville', 'warren lighthouse']
-        if any(x in name_lower for x in ni_names):
-            return 'Northern Ireland', 'United Kingdom'
+        # Isle of Man
+        if country_code == 'im' or country == 'Isle of Man':
+            return 'Isle of Man', ''
 
-    # Republic of Ireland — extensive check
-    if any(x in name_lower for x in irish_indicators):
-        return '', 'Ireland'
+        # UK constituent countries
+        if state in _REGION_MAP:
+            return _REGION_MAP[state]
 
-    # Coordinate-based Ireland check: west of ~6°W, below ~55.4°N
+        # Some Nominatim results use 'territory' for Crown Dependencies
+        if territory in _REGION_MAP:
+            return _REGION_MAP[territory]
+
+        # UK but state not recognized — try country name
+        if country_code == 'gb':
+            # Default to England if we can't determine the region
+            return 'England', 'United Kingdom'
+
+    # Nominatim failed — fallback to simple coordinate heuristic
     if lon < -6.0 and lat < 55.4 and lat > 51.0:
         return '', 'Ireland'
-    # East coast Ireland: specific longitude range
-    if lon < -5.5 and lat > 52.0 and lat < 54.5:
-        return '', 'Ireland'
-
-    # Scotland — north of ~55.8°N (mainland), or specific islands
-    scotland_names = ['orkney', 'shetland', 'lerwick', 'kirkwall', 'stromness',
-                      'stornoway', 'ullapool', 'oban', 'tobermory', 'mallaig',
-                      'portree', 'kyle of lochalsh', 'inverness', 'wick',
-                      'aberdeen', 'dundee', 'leith', 'grangemouth', 'rosyth',
-                      'dunbar', 'eyemouth', 'montrose', 'arbroath', 'perth',
-                      'stirling', 'greenock', 'glasgow', 'helensburgh',
-                      'millport', 'campbeltown', 'islay', 'port ellen',
-                      'craighouse', 'scalasaig', 'loch maddy', 'leverburgh',
-                      'castle bay', 'barra', 'kinlochbervie', 'scrabster',
-                      'fraserburgh', 'peterhead', 'buckie', 'banff',
-                      'nairn', 'cromarty', 'golspie', 'helmsdale',
-                      'fair isle', 'foula', 'sullom voe', 'burra',
-                      'granton', 'kirkcaldy', 'methil', 'anstruther',
-                      'alloa', 'kincardine', 'burntisland',
-                      'portpatrick', 'stranraer', 'girvan', 'ayr', 'troon',
-                      'irvine', 'ardrossan', 'drummore', 'lossiemouth',
-                      'burghead', 'whitehills', 'stonehaven',
-                      'fortrose', 'invergordon', 'dingwall', 'portmahomack',
-                      'meikle ferry', 'duncansby', 'muckle skerry',
-                      'corpach', 'corran', 'loch eil', 'loch leven',
-                      'fort belan', 'faslane', 'garelochhead', 'rhu',
-                      'bowling', 'clydebank', 'port glasgow',
-                      'rothesay', 'wemyss bay', 'tighnabruaich',
-                      'lochgoilhead', 'arrochar', 'coulport',
-                      'brodick', 'lamlash', 'loch ranza',
-                      'isle of whithorn', 'port william', 'garlieston',
-                      'kirkcudbright', 'hestan', 'southerness', 'annan',
-                      'cockenzie', 'fidra']
-    if any(x in name_lower for x in scotland_names):
+    if lat > 55.8:
         return 'Scotland', 'United Kingdom'
-    if lat > 55.8 and lon > -8.0 and lon < 0:
-        return 'Scotland', 'United Kingdom'
-
-    # Wales
-    wales_names = ['swansea', 'cardiff', 'newport', 'barry', 'mumbles',
-                   'milford haven', 'fishguard', 'aberystwyth', 'barmouth',
-                   'pwllheli', 'holyhead', 'llandudno', 'conwy', 'beaumaris',
-                   'menai', 'caernarfon', 'porthmadog', 'aberdovey',
-                   'new quay', 'aberporth', 'cardigan', 'tenby', 'pembroke',
-                   'neyland', 'haverfordwest', 'porthcawl', 'port talbot',
-                   'chepstow', 'colwyn bay', 'amlwch', 'cemaes',
-                   'trefor', 'criccieth', 'bardsey', 'aberdaron',
-                   'st. tudwal', 'porth dinllaen', 'porth ysgaden',
-                   'moelfre', 'trearddur', 'porth trecastell',
-                   'llanddwyn', 'fort belan', 'port dinorwic',
-                   'connah', 'mostyn', 'burry port', 'llanelli',
-                   'ferryside', 'carmarthen', 'river neath',
-                   'dale roads', 'solva', 'ramsey sound', 'porthgain',
-                   'little haven', 'martin', 'skomer', 'stackpole',
-                   'black tar', 'sudbrook', 'flat holm']
-    if any(x in name_lower for x in wales_names):
-        return 'Wales', 'United Kingdom'
-    # Wales by coordinates (roughly)
-    if lat > 51.3 and lat < 53.5 and lon < -2.5 and lon > -5.5:
-        return 'Wales', 'United Kingdom'
-
-    # Default: England, United Kingdom
     return 'England', 'United Kingdom'
 
 
@@ -455,6 +445,8 @@ def main():
         print("Keine JSON-Dateien gefunden!")
         return
 
+    _load_nominatim_cache()
+
     print("=" * 70)
     print("UTide Harmonic Analysis -- UK/Ireland (tidetimes.co.uk)")
     print("=" * 70)
@@ -475,7 +467,10 @@ def main():
         print("Keine Ergebnisse!")
         return
 
+    print("Klassifiziere Standorte via Nominatim...")
     blocks = [format_station_block(r) for r in results]
+    _save_nominatim_cache()
+
     output = header + '\n' + '\n'.join(blocks) + '\n'
     OUTPUT_PATH.write_text(output, encoding='iso-8859-1')
 
