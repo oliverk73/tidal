@@ -157,6 +157,11 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_taiwan_cwa.tcd',
                             'harmonics_utide_hongkong_hko.tcd',
                             'harmonics_utide_spain_ihm.tcd',
+                            'harmonics_utide_canada_ns.tcd',
+                            'harmonics_utide_korea.tcd',
+                            'harmonics_utide_philippines_namria.tcd',
+                            'harmonics_utide_uk_tidetimes.tcd',
+                            'harmonics_utide_thailand.tcd',
                             ]}),
     ('UTide SL',        {'color': '#E57373', 'files': [
                             'harmonics_utide_germany_z0corrected.tcd',
@@ -197,6 +202,10 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_montserrat.tcd',
                             'harmonics_utide_stkitts.tcd',
                             'harmonics_utide_stvincent.tcd',
+                            'harmonics_utide_indonesia.tcd',
+                            'harmonics_utide_philippines.tcd',
+                            'harmonics_utide_vietnam.tcd',
+                            'harmonics_utide_sudan.tcd',
                             ]}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
 ])

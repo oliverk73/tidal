@@ -449,7 +449,7 @@ def main():
 
     json_files = sorted(DATA_DIR.glob("*.json"))
     # Exclude metadata files
-    json_files = [f for f in json_files if f.name != 'missing_stations.json']
+    json_files = [f for f in json_files if f.name not in ('missing_stations.json', 'download_progress.json')]
 
     if not json_files:
         print("Keine JSON-Dateien gefunden!")
