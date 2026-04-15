@@ -1327,6 +1327,8 @@
             station: stationName,
             lat: Math.round(newLatLng.lat * 10000) / 10000,
             lon: Math.round(newLatLng.lng * 10000) / 10000,
+            old_lat: oldLatLng.lat,
+            old_lon: oldLatLng.lng,
             source: sourceFile
           })
         })
@@ -1414,6 +1416,8 @@
         station: stationName,
         lat: newLat,
         lon: newLon,
+        old_lat: oldLatLng.lat,
+        old_lon: oldLatLng.lng,
         source: sourceFile
       })
     })
@@ -1455,12 +1459,15 @@
     if (!newName || newName.trim() === '' || newName.trim() === oldName) return;
     newName = newName.trim();
 
+    var markerLatLng = targetMarker.getLatLng();
     fetch('/update_station_name', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         old_name: oldName,
         new_name: newName,
+        old_lat: markerLatLng.lat,
+        old_lon: markerLatLng.lng,
         source: sourceFile
       })
     })
@@ -1519,6 +1526,8 @@
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         station: stationName,
+        old_lat: latlng.lat,
+        old_lon: latlng.lng,
         source: sourceFile
       })
     })

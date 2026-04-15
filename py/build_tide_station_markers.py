@@ -152,6 +152,7 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_canada_bc.tcd',
                             'harmonics_utide_canada_nb.tcd',
                             'harmonics_utide_canada_nl.tcd',
+                            'harmonics_utide_canada_on.tcd',
                             'harmonics_utide_canada_qc.tcd',
                             'harmonics_utide_pei.tcd',
                             'harmonics_utide_taiwan_cwa.tcd',
@@ -206,6 +207,9 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_philippines.tcd',
                             'harmonics_utide_vietnam.tcd',
                             'harmonics_utide_sudan.tcd',
+                            'harmonics_utide_oman.tcd',
+                            'harmonics_utide_iran.tcd',
+                            'harmonics_utide_japan.tcd',
                             ]}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
 ])

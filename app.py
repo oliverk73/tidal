@@ -29,27 +29,55 @@ def find_txt_for_tcd(tcd_basename):
     return None
 
 
-def update_coords_in_txt(txt_path, station_name, new_lat, new_lon):
+def _find_station_line(lines, station_name, expected_lat=None, expected_lon=None):
+    """Return index of the name line matching station_name.
+
+    Without expected_lat/lon: returns the first match (legacy behavior).
+    With expected_lat/lon: returns the name-match whose # !latitude: /
+    # !longitude: comments are closest to the expected coordinates. This
+    disambiguates duplicate names even when marker coords were rounded or
+    perturbed by the cluster layer.
+    """
+    candidates = []
+    for i, line in enumerate(lines):
+        if line.rstrip("\n").rstrip("\r") != station_name:
+            continue
+        if expected_lat is None or expected_lon is None:
+            return i
+        lat = lon = None
+        for j in range(i - 1, max(i - 30, -1), -1):
+            s = lines[j]
+            if lat is None and s.startswith("# !latitude:"):
+                try: lat = float(s.split(":", 1)[1].strip())
+                except ValueError: pass
+            elif lon is None and s.startswith("# !longitude:"):
+                try: lon = float(s.split(":", 1)[1].strip())
+                except ValueError: pass
+            if lat is not None and lon is not None:
+                break
+        if lat is not None and lon is not None:
+            d2 = (lat - expected_lat) ** 2 + (lon - expected_lon) ** 2
+            candidates.append((d2, i))
+    if not candidates:
+        return None
+    candidates.sort()
+    return candidates[0][1]
+
+
+def update_coords_in_txt(txt_path, station_name, new_lat, new_lon,
+                         expected_lat=None, expected_lon=None):
     """Update latitude/longitude for a station in a harmonics .txt file (ISO-8859-1)."""
     with open(txt_path, "r", encoding="iso-8859-1") as f:
         lines = f.readlines()
 
-    # Find the station name line, then look backwards for # !latitude: and # !longitude:
-    found = False
-    for i, line in enumerate(lines):
-        stripped = line.rstrip("\n").rstrip("\r")
-        if stripped == station_name:
-            # Search backwards for the coordinate comments
-            for j in range(i - 1, max(i - 20, -1), -1):
-                if lines[j].startswith("# !latitude:"):
-                    lines[j] = f"# !latitude: {new_lat:.4f}\n"
-                elif lines[j].startswith("# !longitude:"):
-                    lines[j] = f"# !longitude: {new_lon:.4f}\n"
-            found = True
-            break
-
-    if not found:
+    i = _find_station_line(lines, station_name, expected_lat, expected_lon)
+    if i is None:
         return False
+    for j in range(i - 1, max(i - 30, -1), -1):
+        if lines[j].startswith("# !latitude:"):
+            lines[j] = f"# !latitude: {new_lat:.4f}\n"
+        elif lines[j].startswith("# !longitude:"):
+            lines[j] = f"# !longitude: {new_lon:.4f}\n"
 
     # Atomic write: temp file + rename to prevent truncation
     fd, tmp = tempfile.mkstemp(dir=os.path.dirname(txt_path), suffix=".tmp")
@@ -80,7 +108,8 @@ def get_num_constituents(txt_path):
     return None
 
 
-def delete_station_from_txt(txt_path, station_name):
+def delete_station_from_txt(txt_path, station_name,
+                            expected_lat=None, expected_lon=None):
     """Delete a station and its entire data block from a harmonics .txt file."""
     num_constituents = get_num_constituents(txt_path)
     if num_constituents is None:
@@ -89,13 +118,7 @@ def delete_station_from_txt(txt_path, station_name):
     with open(txt_path, "r", encoding="iso-8859-1") as f:
         lines = f.readlines()
 
-    # Find the station name line
-    name_idx = None
-    for i, line in enumerate(lines):
-        if line.rstrip("\n").rstrip("\r") == station_name:
-            name_idx = i
-            break
-
+    name_idx = _find_station_line(lines, station_name, expected_lat, expected_lon)
     if name_idx is None:
         return False
 
@@ -165,21 +188,16 @@ def delete_station_from_markers_js(station_name):
     return True
 
 
-def rename_station_in_txt(txt_path, old_name, new_name):
+def rename_station_in_txt(txt_path, old_name, new_name,
+                          expected_lat=None, expected_lon=None):
     """Rename a station in a harmonics .txt file (ISO-8859-1)."""
     with open(txt_path, "r", encoding="iso-8859-1") as f:
         lines = f.readlines()
 
-    found = False
-    for i, line in enumerate(lines):
-        stripped = line.rstrip("\n").rstrip("\r")
-        if stripped == old_name:
-            lines[i] = new_name + "\n"
-            found = True
-            break
-
-    if not found:
+    i = _find_station_line(lines, old_name, expected_lat, expected_lon)
+    if i is None:
         return False
+    lines[i] = new_name + "\n"
 
     # Atomic write: temp file + rename to prevent truncation
     fd, tmp = tempfile.mkstemp(dir=os.path.dirname(txt_path), suffix=".tmp")
@@ -586,6 +604,10 @@ def update_coordinates():
         new_lat = float(data.get("lat"))
         new_lon = float(data.get("lon"))
         tcd_file = data.get("source")
+        old_lat = data.get("old_lat")
+        old_lon = data.get("old_lon")
+        old_lat = float(old_lat) if old_lat is not None else None
+        old_lon = float(old_lon) if old_lon is not None else None
 
         if not station or not tcd_file:
             return jsonify(error="station und source sind Pflichtfelder"), 400
@@ -595,8 +617,10 @@ def update_coordinates():
         if not txt_path:
             return jsonify(error=f"Keine .txt-Datei gefunden für {tcd_file}"), 404
 
+        print(f"DEBUG /update_coordinates: station={station!r} old=({old_lat},{old_lon}) new=({new_lat},{new_lon}) file={tcd_file}")
         # Koordinaten in .txt aktualisieren
-        if not update_coords_in_txt(txt_path, station, new_lat, new_lon):
+        if not update_coords_in_txt(txt_path, station, new_lat, new_lon,
+                                    expected_lat=old_lat, expected_lon=old_lon):
             return jsonify(error=f"Station '{station}' nicht in {txt_path} gefunden"), 404
 
         # TCD neu kompilieren
@@ -620,6 +644,10 @@ def update_station_name():
         old_name = data.get("old_name")
         new_name = data.get("new_name", "").strip()
         tcd_file = data.get("source")
+        old_lat = data.get("old_lat")
+        old_lon = data.get("old_lon")
+        old_lat = float(old_lat) if old_lat is not None else None
+        old_lon = float(old_lon) if old_lon is not None else None
 
         if not old_name or not new_name or not tcd_file:
             return jsonify(error="old_name, new_name und source sind Pflichtfelder"), 400
@@ -632,8 +660,10 @@ def update_station_name():
         if not txt_path:
             return jsonify(error=f"Keine .txt-Datei gefunden für {tcd_file}"), 404
 
+        print(f"DEBUG /update_station_name: old_name={old_name!r} new_name={new_name!r} old=({old_lat},{old_lon}) file={tcd_file}")
         # Name in .txt aktualisieren
-        if not rename_station_in_txt(txt_path, old_name, new_name):
+        if not rename_station_in_txt(txt_path, old_name, new_name,
+                                     expected_lat=old_lat, expected_lon=old_lon):
             return jsonify(error=f"Station '{old_name}' nicht in {txt_path} gefunden"), 404
 
         # TCD neu kompilieren
@@ -656,6 +686,10 @@ def delete_station():
         data = request.get_json()
         station = data.get("station")
         tcd_file = data.get("source")
+        old_lat = data.get("old_lat")
+        old_lon = data.get("old_lon")
+        old_lat = float(old_lat) if old_lat is not None else None
+        old_lon = float(old_lon) if old_lon is not None else None
 
         if not station or not tcd_file:
             return jsonify(error="station und source sind Pflichtfelder"), 400
@@ -666,7 +700,8 @@ def delete_station():
             return jsonify(error=f"Keine .txt-Datei gefunden für {tcd_file}"), 404
 
         # Station aus .txt löschen
-        if not delete_station_from_txt(txt_path, station):
+        if not delete_station_from_txt(txt_path, station,
+                                       expected_lat=old_lat, expected_lon=old_lon):
             return jsonify(error=f"Station '{station}' nicht in {txt_path} gefunden"), 404
 
         # TCD neu kompilieren
