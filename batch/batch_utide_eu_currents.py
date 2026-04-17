@@ -42,6 +42,7 @@ COUNTRY_LABEL = {
     'Spain_Atlantic': 'Spain',
     'Spain_Med': 'Spain',
     'UK': 'United Kingdom',
+    'Australia_IMOS': 'Australia',
 }
 
 CONSTIT_67 = [
