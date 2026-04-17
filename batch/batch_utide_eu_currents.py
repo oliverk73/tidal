@@ -43,6 +43,7 @@ COUNTRY_LABEL = {
     'Spain_Med': 'Spain',
     'UK': 'United Kingdom',
     'Australia_IMOS': 'Australia',
+    'South_Africa_SAEON': 'South Africa',
 }
 
 CONSTIT_67 = [
@@ -161,10 +162,18 @@ def analyze(code, meta, csv_path, checkpoint_dir):
     return result
 
 
-def fmt_block(r, country_label):
+SOURCE_BY_DIR = {
+    'Australia_IMOS':     ('IMOS ANMN hourly velocity, UTide analysis', 'IMOS'),
+    'South_Africa_SAEON': ('SAEON DEA-MIMS hourly ADCP, UTide analysis', 'SAEON'),
+}
+
+
+def fmt_block(r, country_label, country_dir=None):
+    source_line, id_prefix = SOURCE_BY_DIR.get(
+        country_dir, ('CMEMS in-situ, UTide analysis', 'CMEMS'))
     name = r['name']
     L = []
-    L.append(f"# Harmonic constants derived from CMEMS in-situ currents")
+    L.append(f"# Harmonic constants derived from {source_line.split(',')[0]}")
     L.append(f"# (UTide v{utide.__version__}, principal-axis projection)")
     L.append(f"# {r['n_obs']} samples")
     L.append(f"# from {r['start_time'].strftime('%Y-%m-%d')} to {r['end_time'].strftime('%Y-%m-%d')}")
@@ -175,8 +184,8 @@ def fmt_block(r, country_label):
     L.append(f"# {name}, {country_label} Current")
     L.append(f"# BEGIN HOT COMMENTS")
     L.append(f"# country: {country_label}")
-    L.append(f"# source: CMEMS in-situ, UTide analysis")
-    L.append(f"# station_id_context: CMEMS-{r['code']}")
+    L.append(f"# source: {source_line}")
+    L.append(f"# station_id_context: {id_prefix}-{r['code']}")
     L.append(f"# datum: n/a")
     L.append(f"# station_type: current")
     L.append(f"# major_axis_deg_true: {r['axis_deg']:.1f}")
@@ -244,7 +253,7 @@ def process_country(country_dir, force=False):
         with open(out_path, 'w', encoding='iso-8859-1') as f:
             f.write(h); f.write('\n')
             for r in results:
-                f.write(fmt_block(r, label)); f.write('\n')
+                f.write(fmt_block(r, label, country_dir)); f.write('\n')
         print(f"  -> {out_path.name} ({len(results)} stations)")
     if errors:
         print(f"  {len(errors)} without result: {errors}")

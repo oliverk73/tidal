@@ -177,6 +177,7 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_france.tcd',
                             'harmonics_utide_belgium.tcd',
                             'harmonics_utide_australia_imos_currents.tcd',
+                            'harmonics_utide_south_africa_saeon_currents.tcd',
                             'harmonics_utide_belgium_currents.tcd',
                             'harmonics_utide_denmark_currents.tcd',
                             'harmonics_utide_france_atlantic_currents.tcd',
