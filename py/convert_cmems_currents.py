@@ -37,10 +37,10 @@ COUNTRY_BBOXES = [
     ('Denmark',         54.00, 58.00,   7.20,  13.50),
     ('France_Channel',  48.80, 51.20,  -2.00,   2.80),
     ('France_Atlantic', 43.30, 48.80,  -5.20,  -1.00),    # excludes Santander/Bilbao (ES)
-    ('France_Med',      42.30, 44.00,   3.00,  10.00),    # mainland + Corsica, above ES Catalonia
-    ('UK',              49.00, 61.00, -10.00,   2.00),
-    ('Ireland',         51.00, 56.00, -11.50,  -5.50),
-    ('Norway',          57.00, 72.00,   4.00,  32.00),
+    ('France_Med',      42.00, 44.00,   3.00,  10.00),    # mainland + Corsica + Golfe du Lion (incl. LION buoy)
+    ('Ireland',         51.00, 56.00, -11.50,  -5.50),    # before UK so Irish west coast (SmartBay) wins
+    ('Norway',          55.00, 72.00,   1.70,  32.00),    # extended west+south to catch Norwegian North Sea oil
+    ('UK',              49.00, 61.00, -10.00,   1.70),    # lon_max tightened to leave NO sector for Norway
     ('Sweden',          55.00, 66.50,  10.50,  24.50),
     ('Finland',         59.00, 66.00,  19.00,  29.00),
     ('Estonia',         57.50, 60.00,  21.00,  28.50),
@@ -50,6 +50,7 @@ COUNTRY_BBOXES = [
     ('Spain_Atlantic',  42.00, 44.50, -10.50,  -1.75),    # Cantabrian + Galicia offshore
     ('Spain_Med',       35.80, 42.30,  -6.00,   4.50),    # Balearics to 4.5E
     ('Portugal',        35.00, 42.30, -10.50,  -6.00),
+    ('Portugal_Offshore', 30.00, 42.00, -32.00, -13.00), # Azores + Madeira + EEZ (K276 etc.)
     ('Italy',           36.00, 46.00,   6.00,  19.50),
     ('Croatia',         42.00, 46.00,  13.00,  20.00),
     ('Slovenia',        45.00, 46.00,  13.00,  14.50),
