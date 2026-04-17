@@ -240,7 +240,7 @@ def download_platform(pc, pdata):
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     # build regex anchored on platform position between 3rd '_' and optional _YYYYMM
     safe_pc = _PLATFORM_SAFE_RE.sub('.', pc)  # dot-escape any weird chars
-    regex = rf'.*_{safe_pc}(_\d{{6}})?\.nc$'
+    regex = rf'.*_TS_MO_{safe_pc}(_\d{{6}})?\.nc$'
     any_ok = False
     errors = []
     for key in pdata['products']:
@@ -248,6 +248,7 @@ def download_platform(pc, pdata):
         cmd = [
             'copernicusmarine', 'get',
             '-i', ds_id,
+            '--dataset-part', 'history',
             '--regex', regex,
             '-o', str(RAW_DIR),
             '--no-directories',
