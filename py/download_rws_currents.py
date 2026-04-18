@@ -67,6 +67,8 @@ def download_station(code, shd_df, rtg_df, start, end, output_dir):
             print(" -", end='', flush=True)
             continue
         s.columns = ['speed']; r.columns = ['direction']
+        s = s[~s.index.duplicated(keep='first')]
+        r = r[~r.index.duplicated(keep='first')]
         m = s.join(r, how='inner')
         del s, r; gc.collect()
         if m.empty:

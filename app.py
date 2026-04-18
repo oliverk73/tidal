@@ -150,38 +150,82 @@ def delete_station_from_txt(txt_path, station_name,
 
 
 def delete_station_from_markers_js(station_name):
-    """Remove a station from leaflet_markers.js."""
+    """Remove a station from leaflet_markers.js and decrement group counts.
+
+    The generator writes 6 lines per station:
+      stationCoords['Name'] = ...;
+      stationSources['Name'] = ...;
+      var mN = L.marker(...);
+      mN.bindPopup("<b>Name</b>...");
+      grp_all_tide.addLayer(mN);         (or grp_all_current)
+      src_<Group>_tide.push(mN);         (or _current)
+    """
     with open(MARKERS_JS, "r", encoding="utf-8") as f:
         js_lines = f.readlines()
 
     coord_key = station_name.replace("\\", "\\\\").replace("'", "\\'")
+    display_name = station_name.replace('"', '&quot;')
 
-    # Find and remove the 5 lines belonging to this station:
-    # stationCoords['Name'] = ...;
-    # stationSources['Name'] = ...;
-    # var mN = L.marker(...);
-    # mN.bindPopup("...");
-    # markers.addLayer(mN);
     indices_to_remove = set()
+    # Per src_var count: tide/current station deletions attributed to each group
+    deletions_per_src = {}
     for i, line in enumerate(js_lines):
         if f"stationCoords['{coord_key}']" in line:
             indices_to_remove.add(i)
         elif f"stationSources['{coord_key}']" in line:
             indices_to_remove.add(i)
-        elif f"<b>{station_name.replace(chr(34), '&quot;')}</b>" in line:
-            # This is the bindPopup line — also remove the marker and addLayer lines
+        elif f"<b>{display_name}</b>" in line:
             indices_to_remove.add(i)
-            # The L.marker line is directly before
             if i > 0:
-                indices_to_remove.add(i - 1)
-            # The markers.addLayer line is directly after
+                indices_to_remove.add(i - 1)  # var mN = L.marker(...)
             if i + 1 < len(js_lines):
-                indices_to_remove.add(i + 1)
+                indices_to_remove.add(i + 1)  # grp_all_*.addLayer(mN)
+            if i + 2 < len(js_lines):
+                indices_to_remove.add(i + 2)  # src_*.push(mN)
+                m = re.match(r"(src_\w+_(?:tide|current))\.push\(",
+                             js_lines[i + 2].strip())
+                if m:
+                    deletions_per_src[m.group(1)] = \
+                        deletions_per_src.get(m.group(1), 0) + 1
 
     if not indices_to_remove:
         return False
 
-    js_lines = [line for i, line in enumerate(js_lines) if i not in indices_to_remove]
+    js_lines = [ln for idx, ln in enumerate(js_lines)
+                if idx not in indices_to_remove]
+
+    # Decrement group counts in tideGroups/currentGroups and the header totals
+    tide_deletions = sum(n for s, n in deletions_per_src.items()
+                         if s.endswith("_tide"))
+    current_deletions = sum(n for s, n in deletions_per_src.items()
+                            if s.endswith("_current"))
+
+    for src_var, n in deletions_per_src.items():
+        count_pattern = re.compile(
+            r"(count:)(\d+)([^}]*?markers:" + re.escape(src_var) + r"\b)"
+        )
+        for idx, line in enumerate(js_lines):
+            if f"markers:{src_var}," in line:
+                js_lines[idx] = count_pattern.sub(
+                    lambda m: f"{m.group(1)}{int(m.group(2)) - n}{m.group(3)}",
+                    line,
+                    count=1,
+                )
+                break
+
+    for header, n in (("Tides", tide_deletions), ("Currents", current_deletions)):
+        if n == 0:
+            continue
+        header_pattern = re.compile(rf"buildSection\('{header} \((\d+)\)")
+        for idx, line in enumerate(js_lines):
+            m = header_pattern.search(line)
+            if m:
+                js_lines[idx] = line.replace(
+                    f"{header} ({m.group(1)})",
+                    f"{header} ({int(m.group(1)) - n})",
+                    1,
+                )
+                break
 
     with open(MARKERS_JS, "w", encoding="utf-8") as f:
         f.writelines(js_lines)
@@ -256,29 +300,35 @@ def rename_station_in_markers_js(old_name, new_name):
 
 
 def update_markers_js(station_name, new_lat, new_lon):
-    """Update coordinates for a station directly in leaflet_markers.js."""
+    """Update coordinates for a station directly in leaflet_markers.js.
+
+    Generator writes 6 lines per station; we update line N (stationCoords)
+    and line N+2 (var mX = L.marker([lat, lon], ...)). Strictly line-based
+    so a regex can never accidentally cross station boundaries.
+    """
     with open(MARKERS_JS, "r", encoding="utf-8") as f:
-        content = f.read()
+        js_lines = f.readlines()
 
-    # Escape station name for use in regex
-    escaped = re.escape(station_name)
+    coord_key = station_name.replace("\\", "\\\\").replace("'", "\\'")
+    needle = f"stationCoords['{coord_key}'] = ["
 
-    # Update stationCoords['Name'] = [lat, lon];
-    content = re.sub(
-        rf"(stationCoords\['{escaped}'\] = \[)[^\]]+(\];)",
-        rf"\g<1>{new_lat}, {new_lon}\2",
-        content
-    )
-    # Update L.marker([lat, lon], ...) — match the line that has the station popup right after
-    # The marker line is always directly before the bindPopup line containing the station name
-    content = re.sub(
-        rf"(var m\d+ = L\.marker\()(\[[^\]]+\])(.*\n[^\n]*{escaped})",
-        rf"\g<1>[{new_lat}, {new_lon}]\3",
-        content
-    )
+    updated = False
+    for i, line in enumerate(js_lines):
+        if not line.startswith(needle):
+            continue
+        js_lines[i] = f"{needle}{new_lat}, {new_lon}];\n"
+        if i + 2 < len(js_lines):
+            js_lines[i + 2] = re.sub(
+                r"(L\.marker\()\[[^\]]+\]",
+                rf"\g<1>[{new_lat}, {new_lon}]",
+                js_lines[i + 2],
+                count=1,
+            )
+        updated = True
 
-    with open(MARKERS_JS, "w", encoding="utf-8") as f:
-        f.write(content)
+    if updated:
+        with open(MARKERS_JS, "w", encoding="utf-8") as f:
+            f.writelines(js_lines)
 
 
 TRANSLITERATION = {
