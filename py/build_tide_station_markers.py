@@ -219,6 +219,7 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_caribbean.tcd',
                             'harmonics_utide_caribbean_uhslc.tcd',
                             'harmonics_utide_bd_mm_mg_mz.tcd',
+                            'harmonics_utide_egypt.tcd',
                             'harmonics_utide_abc.tcd',
                             'harmonics_utide_antigua.tcd',
                             'harmonics_utide_barbados.tcd',
