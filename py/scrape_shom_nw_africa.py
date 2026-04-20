@@ -299,7 +299,7 @@ def main():
         block = format_station_block(st, res, len(times), times[0], times[-1])
         blocks[st['country']].append(block)
 
-    # Step 4: write harmonics files
+    # Step 4: write harmonics files (intermediate — merged below)
     for country, path in [('Morocco', out_ma), ('Tunisia', out_tn)]:
         bs = blocks[country]
         if not bs:
@@ -309,6 +309,11 @@ def main():
             for b in bs:
                 f.write(b + '\n')
         print(f"\nWrote {len(bs)} station(s) → {path}")
+
+    # Consolidate into harmonics_utide_shom.txt (deletes per-country files)
+    print('\nmerging into single harmonics_utide_shom.txt …')
+    import subprocess
+    subprocess.run(['python3', '/home/oliver/py/merge_shom_harmonics.py'], check=True)
 
 
 if __name__ == '__main__':

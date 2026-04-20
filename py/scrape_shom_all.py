@@ -274,7 +274,7 @@ def main():
         blocks_by_region.setdefault(st['_region'], []).append(block)
         time.sleep(INTER_STATION_SLEEP)
 
-    # Write out per-region harmonics files
+    # Write out per-region harmonics files (intermediate — merged below)
     for region, bs in blocks_by_region.items():
         path = Path(f'/home/oliver/harmonics/utide/harmonics_utide_{region}_shom.txt')
         with open(path, 'w', encoding='latin-1') as f:
@@ -282,6 +282,11 @@ def main():
             for b in bs:
                 f.write(b + '\n')
         print(f'\nWrote {len(bs)} station(s) → {path}', flush=True)
+
+    # Consolidate into harmonics_utide_shom.txt (deletes per-region files)
+    print('\nmerging into single harmonics_utide_shom.txt …', flush=True)
+    import subprocess
+    subprocess.run(['python3', '/home/oliver/py/merge_shom_harmonics.py'], check=True)
 
 
 if __name__ == '__main__':
