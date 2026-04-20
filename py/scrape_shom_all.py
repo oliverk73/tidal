@@ -169,8 +169,12 @@ def water_body_of(pays, lat):
 
 
 def main():
+    import sys
     template = Path('/home/oliver/harmonics/template/harmonics_template.txt')
-    candidates = json.loads(Path('/home/oliver/harmonics/help/shom_candidates.json').read_text())
+    input_path = Path(sys.argv[1]) if len(sys.argv) > 1 \
+        else Path('/home/oliver/harmonics/help/shom_candidates.json')
+    print(f'input: {input_path}', flush=True)
+    candidates = json.loads(input_path.read_text())
     stations = candidates['NEW'] + candidates['ONLY_1997']
     print(f'total candidates: {len(stations)}', flush=True)
 

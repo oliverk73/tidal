@@ -168,8 +168,8 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_uk_tidetimes.tcd',
                             'harmonics_utide_thailand.tcd',
                             'harmonics_utide_canada_currents_predicted.tcd',
-                            'harmonics_utide_shom.tcd',
                             ]}),
+    ('SHOM',            {'color': '#3F51B5', 'files': ['harmonics_utide_shom.tcd']}),
     ('UTide SL',        {'color': '#E57373', 'files': [
                             'harmonics_utide_germany_z0corrected.tcd',
                             'harmonics_utide_germany_currents.tcd',
