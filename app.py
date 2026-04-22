@@ -402,7 +402,7 @@ def index():
 def favicon():
     return send_from_directory("static", "favicon.ico", mimetype="image/x-icon")
 
-def _resolve_station(station, source=None):
+def _resolve_station(station, source=None, utc=False):
     """Decode station name and compute safe filenames + source suffix."""
     decoded_station = unquote(station)
     safe_station = normalized.get(decoded_station, normalize_filename(decoded_station))
@@ -411,6 +411,8 @@ def _resolve_station(station, source=None):
         skey = re.sub(r'^harmonics[-_]', '', skey)
         skey = skey.replace('_mod', '')
         safe_station = safe_station + '__' + skey
+    if utc:
+        safe_station = safe_station + '__utc'
     svg_filename = f"tide_prediction_{safe_station}.svg"
     html_filename = f"tide_prediction_{safe_station}.html"
     return decoded_station, safe_station, svg_filename, html_filename
@@ -424,7 +426,7 @@ def _is_fresh_today(filepath):
     return mtime.date() == datetime.now().date()
 
 
-def _generate_prediction(decoded_station, station_raw, source, svg_filename, html_filename):
+def _generate_prediction(decoded_station, station_raw, source, svg_filename, html_filename, utc=False):
     """Generate SVG + HTML prediction files. Returns html_path."""
     svg_path = os.path.join(IMAGES_DIR, svg_filename)
     html_path = os.path.join(PREDICTIONS_DIR, html_filename)
@@ -444,6 +446,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
             env = os.environ.copy()
             env['HFILE_PATH'] = tcd_path
 
+    tz_flag = ["-z"] if utc else []
     current_date = datetime.now().strftime("%Y-%m-%d 00:00")
     cmd = [
         "tide",
@@ -451,7 +454,8 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         "-b", current_date,
         "-f", "v",
         "-m", "g",
-        "-o", svg_path
+        "-o", svg_path,
+        *tz_flag,
     ]
 
     print("➤ Aufruf von tide:")
@@ -469,7 +473,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
 
     # Zusätzlich: tide -l "Station" -m a → als Key-Value-Liste
     try:
-        meta_cmd = ["tide", "-l", decoded_station, "-m", "a"]
+        meta_cmd = ["tide", "-l", decoded_station, "-m", "a", *tz_flag]
         meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True, env=env)
         meta_rows = []
         for line in meta_result.stdout.strip().splitlines():
@@ -492,7 +496,8 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
             "-m", "p",
             "-df", "%Y-%m-%d",
             "-tf", "%H:%M",
-            "-em", "x"
+            "-em", "x",
+            *tz_flag,
         ]
         text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True, env=env)
         tide_rows = []
@@ -575,7 +580,9 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                                   meta_info=meta_info,
                                   tide_rows=tide_rows,
                                   is_current=is_current_station,
-                                  station_names=_station_names)
+                                  station_names=_station_names,
+                                  utc=utc,
+                                  src=source)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ HTML-Seite erzeugt: {html_path}")
@@ -587,18 +594,19 @@ def show_prediction(slug):
     """Serve a prediction page, regenerating if stale (not from today)."""
     try:
         source = request.args.get('source')
+        utc = request.args.get('utc') == '1'
 
         # Resolve slug to original station name
         station_name = _slug_to_station.get(slug)
         if not station_name:
             return "Station nicht gefunden.", 404
 
-        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station_name, source)
+        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station_name, source, utc)
         html_path = os.path.join(PREDICTIONS_DIR, html_filename)
 
         if not _is_fresh_today(html_path):
             print(f"➤ Prediction veraltet oder nicht vorhanden: {decoded_station}")
-            _generate_prediction(decoded_station, station_name, source, svg_filename, html_filename)
+            _generate_prediction(decoded_station, station_name, source, svg_filename, html_filename, utc=utc)
         else:
             print(f"➤ Prediction aktuell (Cache-Hit): {decoded_station}")
 
@@ -618,7 +626,8 @@ def show_prediction(slug):
 def generate_tide_prediction(station):
     try:
         source = request.args.get('source')
-        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station, source)
+        utc = request.args.get('utc') == '1'
+        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station, source, utc)
 
         print(f"➤ Angeforderte Station: {decoded_station}")
         print(f"➤ Normalisierter Dateiname: {safe_station}")
@@ -628,14 +637,17 @@ def generate_tide_prediction(station):
         html_path = os.path.join(PREDICTIONS_DIR, html_filename)
 
         if not _is_fresh_today(html_path):
-            _generate_prediction(decoded_station, station, source, svg_filename, html_filename)
+            _generate_prediction(decoded_station, station, source, svg_filename, html_filename, utc=utc)
         else:
             print(f"➤ Prediction aktuell (Cache-Hit): {decoded_station}")
 
         # URL zur dynamischen Route zurückgeben
-        source_param = f"?source={source}" if source else ""
+        params = []
+        if source: params.append(f"source={source}")
+        if utc: params.append("utc=1")
+        query = ("?" + "&".join(params)) if params else ""
         slug = to_slug(decoded_station)
-        final_url = f"/prediction/{slug}{source_param}"
+        final_url = f"/prediction/{slug}{query}"
         return jsonify(url=final_url)
 
     except subprocess.CalledProcessError as e:

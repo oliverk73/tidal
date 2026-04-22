@@ -43,6 +43,18 @@ main img { width: 100%; height: auto; }
 <header style="max-width: 1200px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 12px;">
 <a href="/" title="Back to map" style="text-decoration: none; font-size: 1.4em;">&#x2302;</a>
 <button id="search-trigger" type="button">Search for locations</button>
+{% set local_url = request.path ~ (('?source=' ~ src) if src else '') %}
+{% set utc_url = request.path ~ (('?source=' ~ src ~ '&utc=1') if src else '?utc=1') %}
+<span class="tz-toggle" style="margin-left: auto; font-size: 0.95em;">
+  Times:
+  {% if utc %}
+    <a href="{{ local_url }}">Local</a> |
+    <strong>UTC</strong>
+  {% else %}
+    <strong>Local</strong> |
+    <a href="{{ utc_url }}">UTC</a>
+  {% endif %}
+</span>
 </header>
 <main>
 
