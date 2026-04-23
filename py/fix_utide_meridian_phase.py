@@ -58,7 +58,7 @@ def parse_meridian(line):
     return offset
 
 
-def fix_file(path, force_offset=None, replace_meridian_name=None, new_meridian_line=None, only_sources=None):
+def fix_file(path, force_offset=None, replace_meridian_name=None, new_meridian_line=None, only_sources=None, exclude_names=None):
     """
     Fix meridian/phase in a UTide harmonics file.
 
@@ -66,6 +66,8 @@ def fix_file(path, force_offset=None, replace_meridian_name=None, new_meridian_l
     replace_meridian_name: if set, replace the meridian line text (e.g. to correct bogus TZ names).
     only_sources: if set (list of substrings), only fix station blocks whose header
                   contains one of these source substrings. Other blocks stay untouched.
+    exclude_names: if set (list of substrings), skip station blocks whose station name
+                   line contains one of these substrings (e.g. station already correct).
     """
     raw = Path(path).read_bytes().decode('iso-8859-1')
     lines = raw.split('\n')
@@ -109,6 +111,20 @@ def fix_file(path, force_offset=None, replace_meridian_name=None, new_meridian_l
             if only_sources is not None:
                 if not any(src in block_header for src in only_sources):
                     # Skip this station
+                    out_lines.append(line)
+                    i += 1
+                    n_stations_skipped += 1
+                    continue
+
+            # Decide whether to skip based on station-name exclusion
+            if exclude_names is not None:
+                # Find station name line (prev non-comment non-empty)
+                station_name = ''
+                for j in range(i-1, max(0, i-30), -1):
+                    if not lines[j].startswith('#') and lines[j].strip():
+                        station_name = lines[j]
+                        break
+                if any(excl in station_name for excl in exclude_names):
                     out_lines.append(line)
                     i += 1
                     n_stations_skipped += 1
