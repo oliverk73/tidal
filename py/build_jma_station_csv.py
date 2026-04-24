@@ -10,12 +10,15 @@ URL = "https://www.data.jma.go.jp/kaiyou/db/tide/suisan/station.php"
 OUT = Path("/tmp/jma_stations_romanized_final.csv")
 
 # Common place-name overrides: long-vowel 'ou'→'o', 'uu'→'u', standard spellings.
+# Kanji that pykakasi maps to a Japanese given name instead of the local place
+# reading must be listed here explicitly (e.g. 日明 → Akira vs Hiagari).
 OVERRIDES = {
     '東京': 'Tokyo', '大阪': 'Osaka', '京都': 'Kyoto', '神戸': 'Kobe',
     '横浜': 'Yokohama', '名古屋': 'Nagoya', '福岡': 'Fukuoka',
     '札幌': 'Sapporo', '仙台': 'Sendai', '広島': 'Hiroshima',
     '那覇': 'Naha', '鹿児島': 'Kagoshima', '長崎': 'Nagasaki',
     '大阪': 'Osaka', '神戸': 'Kobe', '小樽': 'Otaru',
+    '日明': 'Hiagari',
 }
 
 
