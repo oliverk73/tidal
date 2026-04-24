@@ -19,6 +19,7 @@ OVERRIDES = {
     '那覇': 'Naha', '鹿児島': 'Kagoshima', '長崎': 'Nagasaki',
     '大阪': 'Osaka', '神戸': 'Kobe', '小樽': 'Otaru',
     '日明': 'Hiagari',
+    '苅田': 'Kanda',
 }
 
 
