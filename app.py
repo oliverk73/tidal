@@ -40,7 +40,7 @@ def _find_station_line(lines, station_name, expected_lat=None, expected_lon=None
     """
     candidates = []
     for i, line in enumerate(lines):
-        if line.rstrip("\n").rstrip("\r") != station_name:
+        if line.rstrip() != station_name:
             continue
         if expected_lat is None or expected_lon is None:
             return i
