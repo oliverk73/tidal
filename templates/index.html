@@ -1262,6 +1262,18 @@
 
   // Hilfsfunktion: offenen Marker in allen Cluster-Gruppen finden
   function findOpenPopupMarker() {
+    // Erst direkt am offenen Popup nachsehen (zuverlässig auch bei Spider-Cluster)
+    var openPopup = map._popup;
+    if (openPopup && openPopup._source && openPopup._source.getLatLng) {
+      var src = openPopup._source;
+      var foundGroup = null;
+      markers.eachLayer(function (group) {
+        if (foundGroup) return;
+        if (group.hasLayer && group.hasLayer(src)) foundGroup = group;
+      });
+      return { marker: src, group: foundGroup };
+    }
+    // Fallback: alle Marker durchsuchen
     var found = null;
     markers.eachLayer(function (group) {
       if (found) return;
@@ -1427,8 +1439,10 @@
         alert('Koordinaten gespeichert!');
         targetMarker.setLatLng([data.lat, data.lon]);
         // Marker im Cluster neu positionieren
-        parentGroup.removeLayer(targetMarker);
-        parentGroup.addLayer(targetMarker);
+        if (parentGroup) {
+          parentGroup.removeLayer(targetMarker);
+          parentGroup.addLayer(targetMarker);
+        }
         if (typeof stationCoords !== 'undefined') {
           stationCoords[stationName] = [data.lat, data.lon];
         }
@@ -1536,7 +1550,8 @@
       if (data.ok) {
         alert('Station gelöscht: ' + stationName);
         // Marker von der Karte entfernen
-        parentGroup.removeLayer(targetMarker);
+        if (parentGroup) parentGroup.removeLayer(targetMarker);
+        else map.removeLayer(targetMarker);
         // Aus lokalen Lookup-Tabellen entfernen
         if (typeof stationCoords !== 'undefined') delete stationCoords[stationName];
         if (typeof stationSources !== 'undefined') delete stationSources[stationName];
