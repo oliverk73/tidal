@@ -240,6 +240,10 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_oman.tcd',
                             'harmonics_utide_iran.tcd',
                             'harmonics_utide_japan.tcd',
+                            'harmonics_utide_cameroon_angola.tcd',
+                            'harmonics_utide_trinidad_tobago.tcd',
+                            'harmonics_utide_venezuela.tcd',
+                            'harmonics_utide_westafrica.tcd',
                             ]}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
 ])
@@ -248,6 +252,10 @@ def get_group_for_source(source_file):
     for group_name, info in SOURCE_GROUPS.items():
         if source_file in info['files']:
             return group_name, info['color']
+    # Fallback: alle UTide-Dateien gehören zu UTide SL, nicht zu "Sonstige"
+    if source_file.startswith('harmonics_utide_'):
+        info = SOURCE_GROUPS['UTide SL']
+        return 'UTide SL', info['color']
     return 'Sonstige', '#999999'
 
 icon_definition = ""
