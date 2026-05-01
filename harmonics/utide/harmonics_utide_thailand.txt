@@ -14998,6 +14998,12 @@ MNUS2
 # date_imported: 20260413
 # datum: station datum (UHSLC)
 # confidence: 9
+# uhslc_id: 328
+# ssc_id: SSC-kola
+# gloss_id: 39
+# psmsl_id: 174
+# sonel_gps_id: 2086
+# sonel_tg_id: 2448
 # !units: meters
 # !longitude: 99.817200
 # !latitude: 11.795300
@@ -15195,6 +15201,10 @@ x 0 0
 # date_imported: 20260413
 # datum: station datum (UHSLC)
 # confidence: 9
+# uhslc_id: 118
+# ssc_id: SSC-komi
+# ioc_code: komi
+# ptwc_code: komi
 # !units: meters
 # !longitude: 97.6373
 # !latitude: 8.5712
@@ -15392,6 +15402,13 @@ x 0 0
 # date_imported: 20260413
 # datum: station datum (UHSLC)
 # confidence: 9
+# uhslc_id: 148
+# ssc_id: SSC-kota
+# ioc_code: kota
+# gloss_id: 42
+# psmsl_id: 2230, 446
+# ptwc_code: kota
+# sonel_tg_id: 2807
 # !units: meters
 # !longitude: 98.4216
 # !latitude: 7.8338
@@ -17744,6 +17761,8 @@ x 0 0
 # date_imported: 20260413
 # datum: LLW (Lowest Low Water)
 # confidence: 8
+# ssc_id: SSC-komak
+# psmsl_id: 1792
 # !units: meters
 # !longitude: 99.2533
 # !latitude: 10.4494

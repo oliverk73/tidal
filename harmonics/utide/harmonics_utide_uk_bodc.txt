@@ -14997,6 +14997,10 @@ MNUS2
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: JER
+# ssc_id: SSC-jers
+# ioc_code: jers
+# psmsl_id: 1795, 494, 694
 # !units: meters
 # !longitude: -2.116670
 # !latitude: 49.183330
@@ -15193,6 +15197,7 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: AVO
 # !units: meters
 # !longitude: -2.714970
 # !latitude: 51.510890
@@ -15389,6 +15394,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: BAR
+# ssc_id: SSC-barm
+# ioc_code: barm
+# psmsl_id: 1771
 # !units: meters
 # !longitude: -4.045170
 # !latitude: 52.719060
@@ -15585,6 +15594,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: BOU
+# ssc_id: SSC-bour
+# ioc_code: bour
+# psmsl_id: 1878
 # !units: meters
 # !longitude: -1.874860
 # !latitude: 50.714330
@@ -15781,6 +15794,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: CRO
+# ssc_id: SSC-crom
+# ioc_code: crom
+# psmsl_id: 1632
+# sonel_gps_id: 3245
+# sonel_tg_id: 3244
 # !units: meters
 # !longitude: 1.301640
 # !latitude: 52.934360
@@ -15977,6 +15996,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: DEV
+# ssc_id: SSC-plym
+# ioc_code: plym
+# psmsl_id: 982
+# sonel_gps_id: 3259
+# sonel_tg_id: 3258
 # !units: meters
 # !longitude: -4.185250
 # !latitude: 50.368390
@@ -16173,6 +16198,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: DOV
+# ssc_id: SSC-dove
+# ioc_code: dove
+# psmsl_id: 255
+# sonel_gps_id: 2013
+# sonel_tg_id: 2385
 # !units: meters
 # !longitude: 1.3225
 # !latitude: 51.1144
@@ -16369,6 +16400,7 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: FEL
 # !units: meters
 # !longitude: 1.3466
 # !latitude: 51.9577
@@ -16565,6 +16597,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: HAR
+# ssc_id: SSC-harw
+# ioc_code: harw
+# psmsl_id: 214, 742
 # !units: meters
 # !longitude: 1.2921
 # !latitude: 51.9479
@@ -16761,6 +16797,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: HEY
+# ssc_id: SSC-heys
+# ioc_code: heys
+# psmsl_id: 936
 # !units: meters
 # !longitude: -2.920420
 # !latitude: 54.031670
@@ -16957,6 +16997,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: HIN
+# ssc_id: SSC-hink
+# ioc_code: hink
+# psmsl_id: 1758
 # !units: meters
 # !longitude: -3.134330
 # !latitude: 51.215250
@@ -17153,6 +17197,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: ILF
+# ssc_id: SSC-ilfa
+# ioc_code: ilfa
+# psmsl_id: 1214
 # !units: meters
 # !longitude: -4.110940
 # !latitude: 51.210970
@@ -17349,6 +17397,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: IMM
+# ssc_id: SSC-immi
+# ioc_code: immi
+# psmsl_id: 286
 # !units: meters
 # !longitude: -0.1875
 # !latitude: 53.6304
@@ -17545,6 +17597,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: LEI
+# ssc_id: SSC-leit
+# ioc_code: leit
+# psmsl_id: 1526, 802
+# sonel_gps_id: 3248
+# sonel_tg_id: 3246, 3247
 # !units: meters
 # !longitude: -3.181690
 # !latitude: 55.989830
@@ -17741,6 +17799,13 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: LIV
+# ssc_id: SSC-livp
+# ioc_code: live, live2
+# psmsl_id: 15, 1774, 765
+# ptwc_code: livp, tpol
+# sonel_gps_id: 2026
+# sonel_tg_id: 2160, 2736, 2756
 # !units: meters
 # !longitude: -3.018000
 # !latitude: 53.449690
@@ -17937,6 +18002,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: LLA
+# ssc_id: SSC-llan
+# ioc_code: llan
+# psmsl_id: 1504, 1854
 # !units: meters
 # !longitude: -3.825220
 # !latitude: 53.331670
@@ -18133,6 +18202,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: LOW
+# ssc_id: SSC-lowe
+# ioc_code: lowe
+# psmsl_id: 754
+# sonel_gps_id: 2027
+# sonel_tg_id: 2343
 # !units: meters
 # !longitude: 1.7502
 # !latitude: 52.4731
@@ -18329,6 +18404,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: MIL
+# ssc_id: SSC-mill
+# ioc_code: mill
+# psmsl_id: 755
 # !units: meters
 # !longitude: -4.9063
 # !latitude: 55.7498
@@ -18525,6 +18604,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: MUM
+# ssc_id: SSC-mumb
+# ioc_code: mumb
+# psmsl_id: 1732
 # !units: meters
 # !longitude: -3.975440
 # !latitude: 51.570000
@@ -18721,6 +18804,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: NHA
+# ssc_id: SSC-nhav
+# ioc_code: nhav
+# psmsl_id: 1548
 # !units: meters
 # !longitude: 0.057030
 # !latitude: 50.781780
@@ -18917,6 +19004,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: NPO
+# ssc_id: SSC-npor
+# ioc_code: npor
+# psmsl_id: 1832
 # !units: meters
 # !longitude: -2.987440
 # !latitude: 51.550000
@@ -19113,6 +19204,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: NSH
+# ssc_id: SSC-nshi
+# ioc_code: nshi
+# psmsl_id: 533, 95
+# sonel_gps_id: 2427, 764
+# sonel_tg_id: 2186
 # !units: meters
 # !longitude: -1.439780
 # !latitude: 55.007440
@@ -19309,6 +19406,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: PTB
+# ssc_id: SSC-avon
+# ioc_code: avon
+# psmsl_id: 2011, 257
 # !units: meters
 # !longitude: -2.728480
 # !latitude: 51.500020
@@ -19505,6 +19606,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: POR
+# ssc_id: SSC-porp
+# ioc_code: porp
+# psmsl_id: 1215
 # !units: meters
 # !longitude: -5.120030
 # !latitude: 54.842560
@@ -19701,6 +19806,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: PTM
+# ssc_id: SSC-ptmt
+# ioc_code: ptmt
+# psmsl_id: 350
+# sonel_gps_id: 2011
+# sonel_tg_id: 2342
 # !units: meters
 # !longitude: -1.111750
 # !latitude: 50.802560
@@ -19897,6 +20008,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: SHE
+# ssc_id: SSC-shee
+# ioc_code: shee, shee2
+# psmsl_id: 3, 334
+# sonel_gps_id: 3263, 841
+# sonel_tg_id: 2187, 2748, 3262
 # !units: meters
 # !longitude: 0.743060
 # !latitude: 51.442230
@@ -20093,6 +20210,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: WEY
+# ssc_id: SSC-weym
+# ioc_code: weym
+# psmsl_id: 1773, 2283, 251
+# sonel_gps_id: 3261
+# sonel_tg_id: 3260
 # !units: meters
 # !longitude: -2.447940
 # !latitude: 50.608500
@@ -20289,6 +20412,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: WHI
+# ssc_id: SSC-whit
+# ioc_code: whit
+# psmsl_id: 1505
 # !units: meters
 # !longitude: -0.614170
 # !latitude: 54.490080
@@ -20485,6 +20612,9 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: IOM
+# ssc_id: SSC-pter
+# psmsl_id: 1793
 # !units: meters
 # !longitude: -4.768060
 # !latitude: 54.085390
@@ -20681,6 +20811,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: BAN
+# ssc_id: SSC-bang
+# ioc_code: bang
+# psmsl_id: 1856
 # !units: meters
 # !longitude: -5.669470
 # !latitude: 54.664750
@@ -20877,6 +21011,9 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: ISL
+# ssc_id: SSC-islaj
+# psmsl_id: 1772
 # !units: meters
 # !longitude: -6.190060
 # !latitude: 55.627420
@@ -21073,6 +21210,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: PRU
+# ssc_id: SSC-prus
+# ioc_code: prus
+# psmsl_id: 1867
 # !units: meters
 # !longitude: -6.656830
 # !latitude: 55.206780
@@ -21269,6 +21410,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: ABE
+# ssc_id: SSC-abed
+# ioc_code: abed
+# psmsl_id: 21, 361
+# sonel_gps_id: 617
+# sonel_tg_id: 2185, 2735
 # !units: meters
 # !longitude: -2.0802
 # !latitude: 57.1440
@@ -21465,6 +21612,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: KIN
+# ssc_id: SSC-kinl
+# ioc_code: kinl
+# psmsl_id: 1775
+# sonel_gps_id: 3250
+# sonel_tg_id: 3249
 # !units: meters
 # !longitude: -5.050360
 # !latitude: 58.456610
@@ -21661,6 +21814,14 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: LER
+# ssc_id: SSC-lerw
+# ioc_code: lerw, lerw2
+# gloss_id: 236
+# psmsl_id: 830
+# uhslc_id: 293
+# sonel_gps_id: 1907
+# sonel_tg_id: 2188
 # !units: meters
 # !longitude: -1.140310
 # !latitude: 60.154030
@@ -21857,6 +22018,14 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: STO
+# ssc_id: SSC-stor
+# ioc_code: stor, stor2
+# gloss_id: 238
+# psmsl_id: 314
+# uhslc_id: 295
+# sonel_gps_id: 1908
+# sonel_tg_id: 2189
 # !units: meters
 # !longitude: -6.388890
 # !latitude: 58.207110
@@ -22053,6 +22222,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: TOB
+# ssc_id: SSC-tobe
+# ioc_code: tobe
+# psmsl_id: 1491
 # !units: meters
 # !longitude: -6.064220
 # !latitude: 56.623110
@@ -22249,6 +22422,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: ULL
+# ssc_id: SSC-ulla
+# ioc_code: ulla
+# psmsl_id: 1112
+# sonel_gps_id: 3252
+# sonel_tg_id: 3251
 # !units: meters
 # !longitude: -5.157890
 # !latitude: 57.895250
@@ -22445,6 +22624,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: WIC
+# ssc_id: SSC-wick
+# ioc_code: wick
+# psmsl_id: 1109
 # !units: meters
 # !longitude: -3.086310
 # !latitude: 58.440970
@@ -22641,6 +22824,10 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: FIS
+# ssc_id: SSC-fish
+# ioc_code: fish
+# psmsl_id: 1731, 939
 # !units: meters
 # !longitude: -4.9837
 # !latitude: 52.0133
@@ -22837,6 +23024,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: HOL
+# ssc_id: SSC-holy
+# ioc_code: holy, holy2, holyt
+# psmsl_id: 5
+# sonel_gps_id: 3241
+# sonel_tg_id: 3242
 # !units: meters
 # !longitude: -4.6204
 # !latitude: 53.3140
@@ -23033,6 +23226,7 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: MHA
 # !units: meters
 # !longitude: -5.014290
 # !latitude: 51.702230
@@ -23229,6 +23423,14 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: NEW
+# ssc_id: SSC-newl
+# ioc_code: newl, newl2, newl3
+# gloss_id: 241
+# psmsl_id: 202
+# uhslc_id: 294
+# sonel_gps_id: 753
+# sonel_tg_id: 2184
 # !units: meters
 # !longitude: -5.542830
 # !latitude: 50.103000
@@ -23425,6 +23627,12 @@ x 0 0
 # date_imported: 20260407
 # datum: ACD
 # confidence: 9
+# bodc_code: STM
+# ssc_id: SSC-stmr
+# ioc_code: stmr
+# psmsl_id: 1855
+# sonel_gps_id: 3257
+# sonel_tg_id: 3256
 # !units: meters
 # !longitude: -6.316420
 # !latitude: 49.918470

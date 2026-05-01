@@ -14997,6 +14997,11 @@ MNUS2
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 737
+# ssc_id: SSC-sana
+# ioc_code: sana
+# psmsl_id: 2116
+# ptwc_code: sana
 # !units: meters
 # !longitude: -81.702000
 # !latitude: 12.568000
@@ -15193,6 +15198,11 @@ x 0 0
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 738
+# ssc_id: SSC-sama
+# ioc_code: sama, sama2
+# ptwc_code: sam2, sama
+# sonel_gps_id: 3071
 # !units: meters
 # !longitude: -74.2215
 # !latitude: 11.2352
@@ -15389,6 +15399,13 @@ x 0 0
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: cart
+# ssc_id: SSC-cart
+# gloss_id: 207
+# psmsl_id: 1848, 572
+# uhslc_id: 265
+# sonel_gps_id: 925
+# sonel_tg_id: 2282
 # !units: meters
 # !longitude: -75.5471
 # !latitude: 10.3907
@@ -15585,6 +15602,8 @@ x 0 0
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: inav, inav2
+# ssc_id: SSC-inav
 # !units: meters
 # !longitude: -75.750300
 # !latitude: 10.180600
@@ -15781,6 +15800,14 @@ x 0 0
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: buve, buve2, buve3
+# ssc_id: SSC-buve
+# gloss_id: 170
+# psmsl_id: 456
+# uhslc_id: 85
+# ptwc_code: buve
+# sonel_gps_id: 2046
+# sonel_tg_id: 2393
 # !units: meters
 # !longitude: -77.0814
 # !latitude: 3.8910

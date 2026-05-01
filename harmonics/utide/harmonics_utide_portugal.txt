@@ -14997,6 +14997,13 @@ MNUS2
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 209
+# ssc_id: SSC-casc
+# ioc_code: casc
+# gloss_id: 246
+# psmsl_id: 2201, 52
+# sonel_gps_id: 648
+# sonel_tg_id: 2274
 # !units: meters
 # !longitude: -9.4154
 # !latitude: 38.6932
@@ -15193,6 +15200,12 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 210, 213
+# ssc_id: SSC-santf
+# gloss_id: 244
+# psmsl_id: 2171, 843
+# sonel_gps_id: 2924
+# sonel_tg_id: 2880
 # !units: meters
 # !longitude: -31.1133
 # !latitude: 39.4533
@@ -15389,6 +15402,14 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 211
+# ssc_id: SSC-pdas
+# ioc_code: pdas
+# gloss_id: 245
+# psmsl_id: 1885, 258
+# ptwc_code: pdas
+# sonel_gps_id: 811
+# sonel_tg_id: 1982
 # !units: meters
 # !longitude: -25.6700
 # !latitude: 37.7350
@@ -15585,6 +15606,9 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 212
+# ssc_id: SSC-hort
+# psmsl_id: 156
 # !units: meters
 # !longitude: -28.6244
 # !latitude: 38.5326
@@ -15781,6 +15805,7 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 213a
 # !units: meters
 # !longitude: -31.1700
 # !latitude: 39.3783
@@ -15977,6 +16002,7 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 215a
 # !units: meters
 # !longitude: -27.2167
 # !latitude: 38.6500
@@ -16173,6 +16199,12 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 218
+# ssc_id: SSC-func
+# gloss_id: 250
+# psmsl_id: 1030, 2024, 2340
+# sonel_gps_id: 1901
+# sonel_tg_id: 2102, 2788
 # !units: meters
 # !longitude: -16.9064
 # !latitude: 32.6447
@@ -16369,6 +16401,12 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 723
+# ssc_id: SSC-lgos
+# ioc_code: lgos
+# psmsl_id: 162
+# sonel_gps_id: 720
+# sonel_tg_id: 2275
 # !units: meters
 # !longitude: -8.6668
 # !latitude: 37.0988
@@ -16565,6 +16603,9 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# cmems_code: VianaDoCasteloTG
+# ssc_id: SSC-vian
+# psmsl_id: 1482, 1606
 # !units: meters
 # !longitude: -8.8396
 # !latitude: 41.6850
@@ -16761,6 +16802,11 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# cmems_code: LeixoesTG
+# ssc_id: SSC-leix
+# psmsl_id: 2163, 791
+# sonel_gps_id: 3145
+# sonel_tg_id: 3144
 # !units: meters
 # !longitude: -8.7045
 # !latitude: 41.1867
@@ -16957,6 +17003,7 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# cmems_code: NazareTG
 # !units: meters
 # !longitude: -9.0740
 # !latitude: 39.5860
@@ -17153,6 +17200,7 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# cmems_code: PenicheTG
 # !units: meters
 # !longitude: -9.3670
 # !latitude: 39.3540
@@ -17349,6 +17397,9 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# cmems_code: SinesTG
+# ssc_id: SSC-sine
+# psmsl_id: 1456
 # !units: meters
 # !longitude: -8.8880
 # !latitude: 37.9490
@@ -17545,6 +17596,9 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: albu
+# ssc_id: SSC-albu
+# ptwc_code: albu
 # !units: meters
 # !longitude: -8.2604
 # !latitude: 37.0825
@@ -17741,6 +17795,8 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: arri
+# ssc_id: SSC-arri
 # !units: meters
 # !longitude: -8.8694
 # !latitude: 37.2956
@@ -17937,6 +17993,9 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: sagr
+# ssc_id: SSC-sagr
+# ptwc_code: sagr
 # !units: meters
 # !longitude: -8.9282
 # !latitude: 37.0104
@@ -18133,6 +18192,8 @@ x 0 0
 # date_imported: 20260407
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: posa
+# ssc_id: SSC-posa
 # !units: meters
 # !longitude: -16.3149
 # !latitude: 33.0597

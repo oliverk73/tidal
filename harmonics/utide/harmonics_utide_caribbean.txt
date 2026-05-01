@@ -14997,6 +14997,10 @@ MNUS2
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 270, 271
+# ssc_id: SSC-lero
+# ioc_code: lero
+# ptwc_code: lero
 # !units: meters
 # !longitude: -61.063600
 # !latitude: 14.601900
@@ -15193,6 +15197,13 @@ x 0 0
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# uhslc_id: 272
+# ssc_id: SSC-pnea
+# ioc_code: ptpt, ptpt2
+# psmsl_id: 1784
+# ptwc_code: ptpt
+# sonel_gps_id: 2502, 3099
+# sonel_tg_id: 1823
 # !units: meters
 # !longitude: -61.531400
 # !latitude: 16.224400
@@ -15389,6 +15400,9 @@ x 0 0
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: desh
+# ssc_id: SSC-desh
+# ptwc_code: desh
 # !units: meters
 # !longitude: -61.795900
 # !latitude: 16.305300
@@ -15585,6 +15599,9 @@ x 0 0
 # date_imported: 20260406
 # datum: Mean Sea Level
 # confidence: 7
+# ioc_code: prec
+# ssc_id: SSC-prec
+# ptwc_code: prec
 # !units: meters
 # !longitude: -61.226600
 # !latitude: 14.807600

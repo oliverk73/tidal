@@ -14997,6 +14997,7 @@ MNUS2
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: CLK
 # !units: meters
 # !longitude: 113.945300
 # !latitude: 22.320000
@@ -15193,6 +15194,7 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: CCH
 # !units: meters
 # !longitude: 114.023100
 # !latitude: 22.214400
@@ -15389,6 +15391,9 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: CMW
+# ssc_id: SSC-chimh
+# psmsl_id: 987
 # !units: meters
 # !longitude: 114.000000
 # !latitude: 22.239400
@@ -15585,6 +15590,9 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: KLW
+# ssc_id: SSC-kolaf
+# psmsl_id: 1689
 # !units: meters
 # !longitude: 114.360800
 # !latitude: 22.458600
@@ -15781,6 +15789,7 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: KCT
 # !units: meters
 # !longitude: 114.122200
 # !latitude: 22.323600
@@ -15977,6 +15986,11 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: LOP
+# ssc_id: SSC-loko
+# psmsl_id: 1685
+# sonel_gps_id: 3572
+# sonel_tg_id: 3571
 # !units: meters
 # !longitude: 114.001700
 # !latitude: 22.361400
@@ -16173,6 +16187,7 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: MWC
 # !units: meters
 # !longitude: 114.071400
 # !latitude: 22.363900
@@ -16369,6 +16384,15 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: QUB
+# ssc_id: SSC-quar
+# ioc_code: quar
+# gloss_id: 77
+# psmsl_id: 1674, 1693, 1891, 333
+# uhslc_id: 329
+# ptwc_code: quar
+# sonel_gps_id: 2089, 3214
+# sonel_tg_id: 2451, 2747, 2784
 # !units: meters
 # !longitude: 114.213300
 # !latitude: 22.291100
@@ -16565,6 +16589,13 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: SPW
+# ssc_id: SSC-shek
+# ioc_code: shek
+# psmsl_id: 1902
+# ptwc_code: shek
+# sonel_gps_id: 2090, 3570
+# sonel_tg_id: 2452
 # !units: meters
 # !longitude: 113.894400
 # !latitude: 22.220300
@@ -16761,6 +16792,7 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: TAO
 # !units: meters
 # !longitude: 113.863800
 # !latitude: 22.253500
@@ -16957,6 +16989,7 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: TMW
 # !units: meters
 # !longitude: 114.288600
 # !latitude: 22.269700
@@ -17153,6 +17186,9 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: TPK
+# ssc_id: SSC-taip
+# psmsl_id: 1034
 # !units: meters
 # !longitude: 114.183900
 # !latitude: 22.442500
@@ -17349,6 +17385,9 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: TBT
+# ssc_id: SSC-tsim
+# psmsl_id: 1366
 # !units: meters
 # !longitude: 114.013100
 # !latitude: 22.487200
@@ -17545,6 +17584,9 @@ x 0 0
 # date_imported: 20260409
 # datum: Chart Datum
 # confidence: 8
+# hko_code: WAG
+# ssc_id: SSC-wagl
+# psmsl_id: 1698
 # !units: meters
 # !longitude: 114.302800
 # !latitude: 22.183300
