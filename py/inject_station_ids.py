@@ -265,6 +265,13 @@ def collect_new_ids(block, ssc_idx):
     if prefix in INTL_PREFIXES and rest:
         new_kv[INTL_PREFIXES[prefix]] = rest
 
+    # 3b) DWF-2025 NOAA pattern: station_id_context = "NOS" (generic) +
+    #     a separate "station_id: <num>" line carries the actual NOAA id.
+    if prefix == "NOS":
+        sid = block["kv"].get("station_id", "").strip()
+        if sid:
+            new_kv["noaa_station_id"] = sid
+
     # 4) Geographic fallback for SSC if no direct match
     if rec is None and not math.isnan(block["lat"]):
         best = None

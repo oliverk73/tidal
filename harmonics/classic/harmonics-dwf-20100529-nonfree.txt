@@ -15011,6 +15011,9 @@ MNUS2
 # months_on_station: 40
 # last_date_on_station: 20070831
 # confidence: 10
+# ssc_id: SSC-harw
+# ioc_code: harw
+# psmsl_id: 214, 742
 # !units: meters
 # !longitude: 1.2921
 # !latitude: 51.9479
@@ -15401,6 +15404,9 @@ x 0 0
 # months_on_station: 48
 # last_date_on_station: 20021231
 # confidence: 10
+# ssc_id: SSC-harl
+# ioc_code: harl
+# psmsl_id: 25
 # !units: meters
 # !longitude: 5.4167
 # !latitude: 53.1667
@@ -15596,6 +15602,8 @@ x 0 0
 # months_on_station: 48
 # last_date_on_station: 20021231
 # confidence: 10
+# ssc_id: SSC-hari
+# psmsl_id: 1837
 # !units: meters
 # !longitude: 3.8667
 # !latitude: 51.8667
@@ -16571,6 +16579,8 @@ x 0 0
 # months_on_station: 48
 # last_date_on_station: 20021231
 # confidence: 10
+# ssc_id: SSC-room
+# psmsl_id: 1551
 # !units: meters
 # !longitude: 3.6667
 # !latitude: 51.6167
@@ -17156,6 +17166,11 @@ x 0 0
 # months_on_station: 48
 # last_date_on_station: 20021231
 # confidence: 10
+# ssc_id: SSC-westq
+# ioc_code: ters
+# psmsl_id: 236
+# sonel_gps_id: 2035
+# sonel_tg_id: 2234
 # !units: meters
 # !longitude: 5.2201
 # !latitude: 53.3630
@@ -17357,6 +17372,8 @@ x 0 0
 # months_on_station: 115
 # last_date_on_station: 20050801
 # confidence: 10
+# ssc_id: SSC-rivi
+# psmsl_id: 1213
 # !units: meters
 # !longitude: -64.3803
 # !latitude: 48.9970
@@ -17567,6 +17584,9 @@ x 0 0
 # months_on_station: 228
 # last_date_on_station: 20041231
 # confidence: 10
+# ssc_id: SSC-fish
+# ioc_code: fish
+# psmsl_id: 1731, 939
 # !units: meters
 # !longitude: -4.9837
 # !latitude: 52.0133
@@ -17777,6 +17797,9 @@ x 0 0
 # months_on_station: 228
 # last_date_on_station: 20041231
 # confidence: 10
+# ssc_id: SSC-heys
+# ioc_code: heys
+# psmsl_id: 936
 # !units: meters
 # !longitude: -2.9204
 # !latitude: 54.0317
@@ -17987,6 +18010,9 @@ x 0 0
 # months_on_station: 228
 # last_date_on_station: 20041231
 # confidence: 10
+# ssc_id: SSC-immi
+# ioc_code: immi
+# psmsl_id: 286
 # !units: meters
 # !longitude: -0.1875
 # !latitude: 53.6305
@@ -18197,6 +18223,12 @@ x 0 0
 # months_on_station: 157
 # last_date_on_station: 20041231
 # confidence: 10
+# ssc_id: SSC-livp
+# ioc_code: live, live2
+# psmsl_id: 15, 1774, 765
+# ptwc_code: livp, tpol
+# sonel_gps_id: 2026
+# sonel_tg_id: 2160, 2736, 2756
 # !units: meters
 # !longitude: -3.0180
 # !latitude: 53.4497
@@ -18608,6 +18640,9 @@ x 0 0
 # months_on_station: 194
 # last_date_on_station: 20041231
 # confidence: 10
+# ssc_id: SSC-mumb
+# ioc_code: mumb
+# psmsl_id: 1732
 # !units: meters
 # !longitude: -3.9754
 # !latitude: 51.5700
@@ -18818,6 +18853,9 @@ x 0 0
 # months_on_station: 141
 # last_date_on_station: 20041231
 # confidence: 10
+# ssc_id: SSC-npor
+# ioc_code: npor
+# psmsl_id: 1832
 # !units: meters
 # !longitude: -2.9874
 # !latitude: 51.5500
@@ -19028,6 +19066,11 @@ x 0 0
 # months_on_station: 228
 # last_date_on_station: 20041231
 # confidence: 10
+# ssc_id: SSC-nshi
+# ioc_code: nshi
+# psmsl_id: 533, 95
+# sonel_gps_id: 2427, 764
+# sonel_tg_id: 2186
 # !units: meters
 # !longitude: -1.4398
 # !latitude: 55.0074
@@ -19238,6 +19281,9 @@ x 0 0
 # months_on_station: 114
 # last_date_on_station: 20041229
 # confidence: 10
+# ssc_id: SSC-prus
+# ioc_code: prus
+# psmsl_id: 1867
 # !units: meters
 # !longitude: -6.6570
 # !latitude: 55.2068
@@ -19448,6 +19494,9 @@ x 0 0
 # months_on_station: 225
 # last_date_on_station: 20041117
 # confidence: 10
+# ssc_id: SSC-whit
+# ioc_code: whit
+# psmsl_id: 1505
 # !units: meters
 # !longitude: -0.6142
 # !latitude: 54.4901
@@ -19850,6 +19899,8 @@ x 0 0
 # months_on_station: 115
 # last_date_on_station: 20050801
 # confidence: 10
+# ssc_id: SSC-sept
+# psmsl_id: 1322
 # !units: meters
 # !longitude: -66.3849
 # !latitude: 50.2003
@@ -20051,6 +20102,8 @@ x 0 0
 # months_on_station: 115
 # last_date_on_station: 20050801
 # confidence: 10
+# ssc_id: SSC-stfr
+# psmsl_id: 999
 # !units: meters
 # !longitude: -70.8085
 # !latitude: 46.9959
@@ -20252,6 +20305,8 @@ x 0 0
 # months_on_station: 115
 # last_date_on_station: 20050801
 # confidence: 10
+# ssc_id: SSC-desc
+# psmsl_id: 201
 # !units: meters
 # !longitude: -72.1055
 # !latitude: 46.5609

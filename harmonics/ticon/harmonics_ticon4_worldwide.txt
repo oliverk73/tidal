@@ -14997,6 +14997,9 @@ MNUS2
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-ales
+# ioc_code: ales
+# psmsl_id: 509
 # !units: meters
 # !longitude: 6.151946
 # !latitude: 62.469414
@@ -15193,6 +15196,9 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-aarh
+# ioc_code: aarh
+# psmsl_id: 76
 # !units: meters
 # !longitude: 10.216700
 # !latitude: 56.150002
@@ -15389,6 +15395,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-abas
+# ioc_code: abas
+# gloss_id: 327
+# psmsl_id: 1104
+# uhslc_id: 347
+# ptwc_code: abas
+# sonel_gps_id: 797
+# sonel_tg_id: 2107
 # !units: meters
 # !longitude: 144.2858
 # !latitude: 44.0195
@@ -15585,6 +15599,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-abed
+# ioc_code: abed
+# psmsl_id: 21, 361
+# sonel_gps_id: 617
+# sonel_tg_id: 2185, 2735
 # !units: meters
 # !longitude: -2.080222
 # !latitude: 57.144028
@@ -15781,6 +15800,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-abid
+# gloss_id: 257
+# psmsl_id: 1313, 1558
+# uhslc_id: 230
+# sonel_tg_id: 2882
 # !units: meters
 # !longitude: -4.0025
 # !latitude: 5.2515
@@ -15977,6 +16001,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-abur
+# ioc_code: abur
+# gloss_id: 82
+# psmsl_id: 814
+# uhslc_id: 354
+# ptwc_code: abur
+# sonel_gps_id: 806
+# sonel_tg_id: 2209
 # !units: meters
 # !longitude: 131.4095
 # !latitude: 31.5770
@@ -16173,6 +16205,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-aburr
+# psmsl_id: 130
+# sonel_gps_id: 779
+# sonel_tg_id: 2210
 # !units: meters
 # !longitude: 139.615500
 # !latitude: 35.160000
@@ -16957,6 +16993,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-aden
+# ioc_code: aden
+# gloss_id: 3
+# psmsl_id: 44
+# uhslc_id: 172
+# ptwc_code: aden
+# sonel_tg_id: 2790
 # !units: meters
 # !longitude: 44.975000
 # !latitude: 12.788000
@@ -17153,6 +17196,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-ajac
+# ioc_code: ajac, ajac2
+# psmsl_id: 1929
+# ptwc_code: ajac
+# sonel_gps_id: 3197, 619
+# sonel_tg_id: 1719
 # !units: meters
 # !longitude: 8.762850
 # !latitude: 41.922798
@@ -17741,6 +17790,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-akun
+# psmsl_id: 1265
+# sonel_gps_id: 794
+# sonel_tg_id: 2119
 # !units: meters
 # !longitude: 130.191117
 # !latitude: 32.017500
@@ -18133,6 +18186,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-alba
+# psmsl_id: 957, 965
+# sonel_gps_id: 3236
+# sonel_tg_id: 3235
 # !units: meters
 # !longitude: 117.892600
 # !latitude: -35.033700
@@ -18330,6 +18387,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-aler
+# ioc_code: aler
+# gloss_id: 333
+# psmsl_id: 1110
+# uhslc_id: 836
+# sonel_gps_id: 625
+# sonel_tg_id: 2108
 # !units: meters
 # !longitude: -62.3036
 # !latitude: 82.4939
@@ -18723,6 +18787,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of the Alexandria Harbour Tide Gauge   
 # confidence: 7
+# ssc_id: SSC-alex
+# ioc_code: alex, alex1, alex2, alex3
+# gloss_id: 349
+# psmsl_id: 2088, 503
+# uhslc_id: 807
+# ptwc_code: alex
+# sonel_gps_id: 2006, 933
+# sonel_tg_id: 2206, 3010
 # !units: meters
 # !longitude: 29.9189
 # !latitude: 31.2143
@@ -19115,6 +19187,11 @@ x 0 0
 # date_imported: 20260322
 # datum: tide gauge zero with respect to NP1
 # confidence: 7
+# ssc_id: SSC-alic
+# ioc_code: alac1, alac2
+# psmsl_id: 208, 960
+# sonel_gps_id: 620
+# sonel_tg_id: 2212, 2744
 # !units: meters
 # !longitude: -0.477877
 # !latitude: 38.338271
@@ -19507,6 +19584,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-alot
+# gloss_id: 63
+# psmsl_id: 1607, 1616
+# uhslc_id: 69
+# sonel_tg_id: 2819
 # !units: meters
 # !longitude: 150.4536
 # !latitude: -10.3175
@@ -20291,6 +20373,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ambo
+# ioc_code: ambon
+# gloss_id: 68
+# psmsl_id: 1815, 347
+# uhslc_id: 133
+# ptwc_code: ambo
+# sonel_gps_id: 3216
+# sonel_tg_id: 2821
 # !units: meters
 # !longitude: 128.1800
 # !latitude: -3.6904
@@ -20684,6 +20774,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-amma
+# ioc_code: tasw
+# gloss_id: 228
+# psmsl_id: 1765
+# uhslc_id: 297
+# sonel_gps_id: 2207
+# sonel_tg_id: 2483
 # !units: meters
 # !longitude: -37.6257
 # !latitude: 65.6140
@@ -21077,6 +21174,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-anca
+# ioc_code: AN15
+# psmsl_id: 101, 2098
+# sonel_gps_id: 3153
+# sonel_tg_id: 3151, 3152
 # !units: meters
 # !longitude: 13.506517
 # !latitude: 43.624767
@@ -21273,6 +21375,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ande
+# ioc_code: ande
+# gloss_id: 322
+# psmsl_id: 425
+# uhslc_id: 800
+# sonel_gps_id: 3573
+# sonel_tg_id: 2263
 # !units: meters
 # !longitude: 16.1348
 # !latitude: 69.3261
@@ -21665,6 +21774,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-angr
+# psmsl_id: 380
+# uhslc_id: 215
+# sonel_gps_id: 2504
+# sonel_tg_id: 2505
 # !units: meters
 # !longitude: -27.240000
 # !latitude: 38.650000
@@ -22057,6 +22171,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-anto
+# ioc_code: anto, anto2
+# gloss_id: 174
+# psmsl_id: 510, 511
+# uhslc_id: 80
+# ptwc_code: anto
+# sonel_gps_id: 2608
+# sonel_tg_id: 2607, 2753
 # !units: meters
 # !longitude: -70.4048
 # !latitude: -23.6542
@@ -22841,6 +22963,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-aomo
+# psmsl_id: 1092
 # !units: meters
 # !longitude: 140.763883
 # !latitude: 40.835283
@@ -23037,6 +23161,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-upol
+# ioc_code: upol
+# psmsl_id: 1840, 743
+# uhslc_id: 401
+# ptwc_code: apia, upol
+# sonel_gps_id: 831
+# sonel_tg_id: 2168
 # !units: meters
 # !longitude: -171.761300
 # !latitude: -13.826800
@@ -23430,6 +23561,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-aric
+# ioc_code: aric, aric2, enap
+# psmsl_id: 1554, 618
+# uhslc_id: 83
+# ptwc_code: aric
+# sonel_gps_id: 2610, 3159
+# sonel_tg_id: 2609
 # !units: meters
 # !Sa, longitude: -70.3235
 # !latitude: -18.4693
@@ -24018,6 +24156,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-asam
+# psmsl_id: 721
+# sonel_gps_id: 774
+# sonel_tg_id: 2305
 # !units: meters
 # !longitude: 140.859167
 # !latitude: 40.897500
@@ -24214,6 +24356,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ascen
+# ioc_code: ascen
+# gloss_id: 263
+# psmsl_id: 1831
+# uhslc_id: 291
+# ptwc_code: ascn
+# sonel_gps_id: 630
+# sonel_tg_id: 1971
 # !units: meters
 # !longitude: -14.417000
 # !latitude: -7.917000
@@ -24802,6 +24952,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-audi
+# ioc_code: audi, audi2
+# psmsl_id: 2366
+# ptwc_code: audi
 # !units: meters
 # !longitude: -4.537583
 # !latitude: 48.021550
@@ -25586,6 +25740,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-awas
+# psmsl_id: 1093
 # !units: meters
 # !longitude: 139.255000
 # !latitude: 38.467783
@@ -25978,6 +26134,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-ayuk
+# psmsl_id: 131
 # !units: meters
 # !longitude: 141.505283
 # !latitude: 38.296667
@@ -26567,6 +26725,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-baie
+# psmsl_id: 1218
+# sonel_gps_id: 3054
+# sonel_tg_id: 3053
 # !units: meters
 # !longitude: -68.1310
 # !latitude: 49.2313
@@ -26763,6 +26925,9 @@ x 0 0
 # date_imported: 20260322
 # datum: TGZ 73.88 cm below mean sea level 
 # confidence: 7
+# ssc_id: SSC-baka
+# ioc_code: baka
+# psmsl_id: 353
 # !units: meters
 # !longitude: 14.533000
 # !latitude: 45.300000
@@ -27155,6 +27320,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-balb
+# gloss_id: 168
+# psmsl_id: 163
+# uhslc_id: 302
+# sonel_tg_id: 2855
 # !units: meters
 # !longitude: -79.5718
 # !latitude: 8.9650
@@ -28135,6 +28305,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Malin Head
 # confidence: 7
+# ssc_id: SSC-ball
+# ioc_code: ball
 # !units: meters
 # !longitude: -9.8911
 # !latitude: 54.2531
@@ -28331,6 +28503,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-balt
+# ioc_code: balt
+# gloss_id: 169
+# psmsl_id: 1226, 1645
+# uhslc_id: 3
+# ptwc_code: balt
 # !units: meters
 # !longitude: -90.2853
 # !latitude: -0.4367
@@ -28528,6 +28706,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-bamf
+# ioc_code: bamf
+# psmsl_id: 1242
+# uhslc_id: 541
+# sonel_gps_id: 3023
+# sonel_tg_id: 3022
 # !units: meters
 # !longitude: -125.1358
 # !latitude: 48.8360
@@ -29117,6 +29301,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-bang
+# ioc_code: bang
+# psmsl_id: 1856
 # !units: meters
 # !longitude: -5.6695
 # !latitude: 54.6647
@@ -29510,6 +29697,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-barm
+# ioc_code: barm
+# psmsl_id: 1771
 # !units: meters
 # !longitude: -4.0451
 # !latitude: 52.7190
@@ -29706,6 +29896,11 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-bars
+# ioc_code: bars
+# psmsl_id: 2109
+# sonel_gps_id: 2077
+# sonel_tg_id: 2327
 # !units: meters
 # !longitude: 12.903300
 # !latitude: 55.756400
@@ -29902,6 +30097,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-prat
+# ioc_code: prat, prat3
+# gloss_id: 189
+# psmsl_id: 1603
+# uhslc_id: 730
+# ptwc_code: pra2, prat
+# sonel_tg_id: 2862
 # !units: meters
 # !longitude: -59.667000
 # !latitude: -62.483000
@@ -30491,6 +30693,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-bati
+# psmsl_id: 144
 # !units: meters
 # !longitude: -72.2458
 # !latitude: 46.5003
@@ -30884,6 +31088,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-beca
+# psmsl_id: 1798
 # !units: meters
 # !longitude: -72.3795
 # !latitude: 46.4003
@@ -31277,6 +31483,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-beih
+# psmsl_id: 1408
+# uhslc_id: 636
 # !units: meters
 # !longitude: 109.083000
 # !latitude: 21.483000
@@ -31474,6 +31683,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-bell
+# ioc_code: bbbc
+# psmsl_id: 984
+# sonel_gps_id: 3209
+# sonel_tg_id: 3208
 # !units: meters
 # !longitude: -128.1425
 # !latitude: 52.1631
@@ -32652,6 +32866,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-berg
+# ioc_code: berg
+# psmsl_id: 58
+# sonel_gps_id: 4432
+# sonel_tg_id: 3763
 # !units: meters
 # !longitude: 5.320487
 # !latitude: 60.398046
@@ -33240,6 +33459,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-bmda
+# ioc_code: bbst, bbst2, bmda, bmda2, bmsg
+# gloss_id: 221
+# psmsl_id: 368, 4, 886
+# uhslc_id: 259
+# ptwc_code: bmda, bmsg
+# sonel_gps_id: 641
+# sonel_tg_id: 2215
 # !units: meters
 # !longitude: -64.703000
 # !latitude: 32.373000
@@ -33436,6 +33663,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-brem
+# psmsl_id: 124, 625
+# sonel_gps_id: 2518
+# sonel_tg_id: 2517
 # !units: meters
 # !longitude: 8.569179
 # !latitude: 53.546511
@@ -33828,6 +34059,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-bitu
+# ioc_code: bitu
+# gloss_id: 69
+# psmsl_id: 1709, 308
+# uhslc_id: 33
+# ptwc_code: bitg
+# sonel_gps_id: 3215, 3405
+# sonel_tg_id: 2822
 # !units: meters
 # !longitude: 125.1903
 # !latitude: 1.4388
@@ -34024,6 +34263,8 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-blkw
+# ioc_code: blkw
 # !units: meters
 # !longitude: 3.116380
 # !latitude: 51.310501
@@ -34612,6 +34853,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-bodo
+# ioc_code: bodo
+# psmsl_id: 562
 # !units: meters
 # !longitude: 14.399770
 # !latitude: 67.292330
@@ -35004,6 +35248,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Harbour Local Datum
 # confidence: 7
+# ssc_id: SSC-bonz
+# ioc_code: bon2
+# psmsl_id: 1809
 # !units: meters
 # !longitude: -6.3381
 # !latitude: 36.8024
@@ -35985,6 +36232,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-bourc
+# sonel_tg_id: 3495
 # !units: meters
 # !longitude: -1.177822
 # !latitude: 45.853406
@@ -36181,6 +36430,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-bour
+# ioc_code: bour
+# psmsl_id: 1878
 # !units: meters
 # !longitude: -1.874861
 # !latitude: 50.714333
@@ -37358,6 +37610,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-bris
+# gloss_id: 58
+# psmsl_id: 822, 851
+# uhslc_id: 331
+# sonel_gps_id: 3217, 3218
+# sonel_tg_id: 2815
 # !units: meters
 # !longitude: 153.171900
 # !latitude: -27.360800
@@ -37554,6 +37812,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-brof
+# ioc_code: brof
+# psmsl_id: 2395
 # !units: meters
 # !longitude: 11.404700
 # !latitude: 58.336100
@@ -37946,6 +38207,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Normal Amsterdam Level
 # confidence: 7
+# ssc_id: SSC-brou
+# psmsl_id: 1507, 36
 # !units: meters
 # !longitude: 3.903034
 # !latitude: 51.738429
@@ -38926,6 +39189,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-buve
+# ioc_code: buve, buve2, buve3
+# gloss_id: 170
+# psmsl_id: 456
+# uhslc_id: 85
+# ptwc_code: buve
+# sonel_gps_id: 2046
+# sonel_tg_id: 2393
 # !units: meters
 # !longitude: -77.0814
 # !latitude: 3.8910
@@ -39318,6 +39589,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-bull
+# ioc_code: bull, will
+# psmsl_id: 2346
+# uhslc_id: 878
+# ptwc_code: bull
 # !units: meters
 # !longitude: -69.020000
 # !latitude: 12.187000
@@ -39514,6 +39790,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-bunb
+# psmsl_id: 1042, 834
 # !units: meters
 # !longitude: 115.660000
 # !latitude: -33.323400
@@ -39710,6 +39988,8 @@ x 0 0
 # date_imported: 20260322
 # datum: geodetic datum
 # confidence: 7
+# ssc_id: SSC-bourk
+# psmsl_id: 317
 # !units: meters
 # !longitude: 27.479000
 # !latitude: 42.487999
@@ -40494,6 +40774,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-cabo
+# ioc_code: cabo
+# gloss_id: 161
+# psmsl_id: 1355
+# uhslc_id: 34
+# ptwc_code: cabo
+# sonel_tg_id: 2851
 # !units: meters
 # !longitude: -109.9070
 # !latitude: 22.8792
@@ -41082,6 +41369,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-cald
+# ioc_code: cald, cald2
+# psmsl_id: 1512, 619
+# uhslc_id: 88
+# ptwc_code: cald
 # !units: meters
 # !longitude: -70.8248
 # !latitude: -27.0646
@@ -41278,6 +41570,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-call
+# ioc_code: call
+# gloss_id: 173
+# psmsl_id: 1274, 480, 629, 739
+# uhslc_id: 93
+# ptwc_code: call
+# sonel_gps_id: 2049
+# sonel_tg_id: 2120
 # !units: meters
 # !longitude: -77.1667
 # !latitude: -12.0689
@@ -41475,6 +41775,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-camb
+# psmsl_id: 1132
 # !units: meters
 # !longitude: -105.070000
 # !latitude: 69.120000
@@ -41869,6 +42171,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-capa
+# psmsl_id: 1143, 2031
 # !units: meters
 # !longitude: -61.8573
 # !latitude: 47.3790
@@ -42262,6 +42566,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-capew
+# psmsl_id: 1288
 # !units: meters
 # !longitude: -64.7757
 # !latitude: 45.2899
@@ -42655,6 +42961,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-capex
+# psmsl_id: 1282
 # !units: meters
 # !longitude: -124.6670
 # !latitude: 70.1500
@@ -42851,6 +43159,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-capen
+# psmsl_id: 1763
+# sonel_gps_id: 2706
+# sonel_tg_id: 2705
 # !units: meters
 # !longitude: 163.183333
 # !latitude: -77.033333
@@ -43244,6 +43556,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-cape
+# psmsl_id: 1195, 866
+# uhslc_id: 704
+# sonel_tg_id: 3127
 # !units: meters
 # !longitude: 18.433000
 # !latitude: -33.900000
@@ -43636,6 +43952,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-cfrt
+# ioc_code: CF06
+# psmsl_id: 2076
+# ptwc_code: cafo
 # !units: meters
 # !longitude: 8.309453
 # !latitude: 39.147969
@@ -44028,6 +44348,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-casc
+# ioc_code: casc
+# gloss_id: 246
+# psmsl_id: 2201, 52
+# uhslc_id: 209
+# sonel_gps_id: 648
+# sonel_tg_id: 2274
 # !units: meters
 # !longitude: -9.417000
 # !latitude: 38.692000
@@ -44224,6 +44551,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-case
+# gloss_id: 278
+# psmsl_id: 1886
+# uhslc_id: 130
+# sonel_gps_id: 647
+# sonel_tg_id: 2199
 # !units: meters
 # !longitude: 110.533000
 # !latitude: -66.283000
@@ -44616,6 +44949,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-cebu
+# psmsl_id: 394
+# uhslc_id: 379
 # !units: meters
 # !longitude: 123.9161
 # !latitude: 10.3005
@@ -44812,6 +45148,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-cedr
+# ioc_code: cedr
+# psmsl_id: 1430
+# uhslc_id: 305
+# ptwc_code: cedr
 # !units: meters
 # !longitude: -115.1831
 # !latitude: 28.0960
@@ -45008,6 +45349,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-chen
+# gloss_id: 293
+# psmsl_id: 1592
+# uhslc_id: 320
+# sonel_gps_id: 2640
+# sonel_tg_id: 2639
 # !units: meters
 # !longitude: 103.187000
 # !latitude: 5.265000
@@ -45204,6 +45551,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-cent
+# ioc_code: cent, cent2
+# psmsl_id: 2207
+# ptwc_code: cent
+# sonel_gps_id: 3196
+# sonel_tg_id: 3176
 # !units: meters
 # !longitude: 9.349833
 # !latitude: 42.965775
@@ -45400,6 +45753,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ceut
+# ioc_code: ceut, ceut1, ceut2
+# gloss_id: 249
+# psmsl_id: 1316, 1416, 1485, 1517, 498
+# uhslc_id: 207
+# sonel_gps_id: 1922, 650
+# sonel_tg_id: 2213
 # !units: meters
 # !longitude: -5.3150
 # !latitude: 35.8916
@@ -45596,6 +45956,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-chab
+# ioc_code: chab
+# gloss_id: 337
+# psmsl_id: 1881, 2228
+# uhslc_id: 915
+# ptwc_code: chab
+# sonel_tg_id: 2902
 # !units: meters
 # !longitude: 60.6009
 # !latitude: 25.2956
@@ -45988,6 +46355,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-cham
+# ioc_code: prch
+# psmsl_id: 1201
+# uhslc_id: 670
 # !units: meters
 # !longitude: -91.9203
 # !latitude: 14.2944
@@ -46577,6 +46948,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-chst
+# ioc_code: chst
+# ptwc_code: chst
 # !units: meters
 # !longitude: 171.433889
 # !latitude: -41.903333
@@ -46774,6 +47148,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-charf
+# psmsl_id: 427
 # !units: meters
 # !longitude: -63.1220
 # !latitude: 46.2301
@@ -46970,6 +47346,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-wait
+# ioc_code: wait
+# gloss_id: 128
+# psmsl_id: 1920
+# uhslc_id: 79
+# ptwc_code: wait
+# sonel_gps_id: 1992, 652
+# sonel_tg_id: 1973
 # !units: meters
 # !longitude: -176.562000
 # !latitude: -43.947000
@@ -47166,6 +47550,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-cher
+# ioc_code: cher, cher2
+# psmsl_id: 467
+# ptwc_code: cher
+# sonel_gps_id: 3182, 3183, 3535
+# sonel_tg_id: 1748
 # !units: knots
 # !longitude: -1.635508
 # !latitude: 49.651447
@@ -47362,6 +47752,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-tiba
+# psmsl_id: 1063
 # !units: meters
 # !longitude: 140.0456
 # !latitude: 35.5680
@@ -48342,6 +48734,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-xmas
+# ioc_code: xmas
+# gloss_id: 146
+# psmsl_id: 1371, 801
+# uhslc_id: 11
+# ptwc_code: xmas
+# sonel_tg_id: 2848
 # !units: meters
 # !longitude: -157.4714
 # !latitude: 1.9823
@@ -48538,6 +48937,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-chrs
+# ioc_code: chrs, ffcj
+# gloss_id: 47
+# psmsl_id: 1010
+# uhslc_id: 170
+# ptwc_code: chrs
+# sonel_gps_id: 2929
+# sonel_tg_id: 2811
 # !units: meters
 # !longitude: 105.667000
 # !latitude: -10.417000
@@ -48931,6 +49338,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-cibo
+# sonel_tg_id: 3497
 # !units: meters
 # !longitude: -1.6640
 # !latitude: 43.3848
@@ -49911,6 +50320,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-coat
+# psmsl_id: 692
 # !units: meters
 # !longitude: -94.411667
 # !latitude: 18.143333
@@ -50107,6 +50518,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-coch
+# ioc_code: coch
+# gloss_id: 32
+# psmsl_id: 438
+# uhslc_id: 174
+# ptwc_code: coch
+# sonel_gps_id: 2067
+# sonel_tg_id: 2438
 # !units: meters
 # !longitude: 76.2629
 # !latitude: 9.9699
@@ -50303,6 +50722,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-cocos
+# ioc_code: cocos
+# uhslc_id: 392
+# ptwc_code: coco
 # !units: meters
 # !longitude: -87.048000
 # !latitude: 5.557000
@@ -52265,6 +52688,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-crom
+# ioc_code: crom
+# psmsl_id: 1632
+# sonel_gps_id: 3245
+# sonel_tg_id: 3244
 # !units: meters
 # !longitude: 1.301639
 # !latitude: 52.934194
@@ -52657,6 +53085,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-crtn
+# ioc_code: CR08
+# psmsl_id: 2077
+# sonel_gps_id: 3057
+# sonel_tg_id: 3056
 # !units: meters
 # !longitude: 17.137056
 # !latitude: 39.083581
@@ -52853,6 +53286,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-croz
+# gloss_id: 21
+# psmsl_id: 1873
+# uhslc_id: 178
+# sonel_gps_id: 3452
+# sonel_tg_id: 1752
 # !units: meters
 # !longitude: 51.870000
 # !latitude: -46.425000
@@ -53245,6 +53684,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-curri
+# ioc_code: curri
+# psmsl_id: 2173
+# uhslc_id: 654
+# ptwc_code: curi
 # !units: meters
 # !longitude: 120.4880
 # !latitude: 17.9880
@@ -53441,6 +53885,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dage
+# psmsl_id: 1046
+# sonel_gps_id: 2524
+# sonel_tg_id: 2525
 # !units: meters
 # !longitude: 8.688007
 # !latitude: 54.732197
@@ -53833,6 +54281,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dakar
+# ioc_code: dakar
+# gloss_id: 253
+# psmsl_id: 1726, 1816, 1994, 1995, 1996, 476, 932
+# uhslc_id: 223
+# ptwc_code: daka
+# sonel_gps_id: 2734, 661
+# sonel_tg_id: 2202, 2782
 # !units: meters
 # !longitude: -17.420000
 # !latitude: 14.677000
@@ -54030,6 +54486,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-dalh
+# psmsl_id: 1358
 # !units: meters
 # !longitude: -66.3777
 # !latitude: 48.0720
@@ -54422,6 +54880,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dare
+# psmsl_id: 1694
+# uhslc_id: 102
 # !units: meters
 # !longitude: 39.288000
 # !latitude: -6.820000
@@ -55010,6 +55471,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-davi
+# gloss_id: 277
+# psmsl_id: 1847
+# uhslc_id: 173
+# sonel_gps_id: 663
+# sonel_tg_id: 2299
 # !units: meters
 # !longitude: 77.967000
 # !latitude: -68.450000
@@ -55206,6 +55673,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-dlpr
+# ioc_code: dlpr
+# psmsl_id: 2277
 # !units: meters
 # !longitude: 1.409230
 # !latitude: 51.223780
@@ -55598,6 +56068,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Normal Amsterdam Level
 # confidence: 7
+# ssc_id: SSC-delf
+# ioc_code: delf
+# psmsl_id: 24
 # !units: knots
 # !longitude: 6.933123
 # !latitude: 53.326353
@@ -55794,6 +56267,9 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-denh
+# ioc_code: denh
+# psmsl_id: 23
 # !units: meters
 # !longitude: 4.7450
 # !latitude: 52.9644
@@ -56774,6 +57250,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dieg
+# gloss_id: 180
+# psmsl_id: 1785
+# uhslc_id: 599
 # !units: meters
 # !longitude: -68.7145
 # !latitude: -56.5207
@@ -56971,6 +57451,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-digb
+# psmsl_id: 1230
 # !units: meters
 # !longitude: -65.7536
 # !latitude: 44.6267
@@ -57363,6 +57845,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-djib
+# ioc_code: djib
+# gloss_id: 2
+# psmsl_id: 1291, 2225
+# uhslc_id: 119
+# ptwc_code: bout
+# sonel_tg_id: 1995
 # !units: meters
 # !longitude: 43.140000
 # !latitude: 11.608000
@@ -57559,6 +58048,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dong
+# psmsl_id: 1407
+# uhslc_id: 637
 # !units: meters
 # !longitude: 108.617000
 # !latitude: 19.100000
@@ -57755,6 +58247,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-dove
+# ioc_code: dove
+# psmsl_id: 255
+# sonel_gps_id: 2013
+# sonel_tg_id: 2385
 # !units: meters
 # !longitude: 1.322528
 # !latitude: 51.114389
@@ -58343,6 +58840,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Malin Ordnance Datum
 # confidence: 7
+# ssc_id: SSC-dubla
+# psmsl_id: 432
+# sonel_gps_id: 2577
+# sonel_tg_id: 2578
 # !units: meters
 # !longitude: -6.221700
 # !latitude: 53.345700
@@ -58539,6 +59040,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dukt
+# sonel_gps_id: 2521, 2523
+# sonel_tg_id: 2522
 # !units: meters
 # !longitude: 6.926950
 # !latitude: 53.435147
@@ -59323,6 +59827,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dwat
+# sonel_gps_id: 2514
+# sonel_tg_id: 2513
 # !units: meters
 # !longitude: 8.308579
 # !latitude: 53.720212
@@ -59519,6 +60026,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dzao
+# ioc_code: dzao, dzao2
+# gloss_id: 96
+# psmsl_id: 1642
+# uhslc_id: 155
+# ptwc_code: dzao
+# sonel_gps_id: 3428
+# sonel_tg_id: 1903
 # !units: meters
 # !longitude: 45.257000
 # !latitude: -12.780000
@@ -60107,6 +60622,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-east
+# ioc_code: east, east2
+# gloss_id: 137
+# psmsl_id: 1272, 1462, 884
+# uhslc_id: 22
+# ptwc_code: east
+# sonel_gps_id: 669, 703
+# sonel_tg_id: 1975, 2769
 # !units: meters
 # !longitude: -109.4394
 # !latitude: -27.1548
@@ -60499,6 +61022,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-eden
+# psmsl_id: 833, 853
 # !units: meters
 # !longitude: 149.908300
 # !latitude: -37.071200
@@ -61087,6 +61612,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-elpo
+# ioc_code: elpo
+# uhslc_id: 739
+# ptwc_code: elpo
 # !units: meters
 # !longitude: -78.9492
 # !latitude: 9.5582
@@ -62263,6 +62792,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-esas
+# psmsl_id: 1605
 # !units: meters
 # !longitude: 140.125550
 # !latitude: 41.870550
@@ -62655,6 +63186,11 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-esbj
+# ioc_code: esbj
+# psmsl_id: 80
+# sonel_gps_id: 2062, 3003
+# sonel_tg_id: 2241
 # !units: meters
 # !longitude: 8.433300
 # !latitude: 55.466700
@@ -62851,6 +63387,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-esme
+# ioc_code: esme
+# psmsl_id: 1498
+# uhslc_id: 98
+# ptwc_code: esme
+# sonel_gps_id: 2048
+# sonel_tg_id: 2147
 # !units: meters
 # !longitude: -79.6467
 # !latitude: 0.9908
@@ -63834,6 +64377,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-stch
+# psmsl_id: 1864, 2353
 # !units: meters
 # !longitude: -71.1980
 # !latitude: 46.8250
@@ -64030,6 +64575,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Normal Amsterdam Level
 # confidence: 7
+# ssc_id: SSC-euro
+# ioc_code: euro
 # !units: meters
 # !longitude: 3.276389
 # !latitude: 51.998611
@@ -64423,6 +64970,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-exmo
+# psmsl_id: 1762
+# sonel_gps_id: 3234
+# sonel_tg_id: 3233
 # !units: meters
 # !longitude: 114.140900
 # !latitude: -21.954900
@@ -65207,6 +65758,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-falk
+# ioc_code: falk
+# psmsl_id: 2387
 # !units: meters
 # !longitude: 12.489500
 # !latitude: 56.892000
@@ -65600,6 +66154,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-fann
+# psmsl_id: 1361, 1741, 1990
+# uhslc_id: 12
 # !units: meters
 # !longitude: -159.387000
 # !latitude: 3.907000
@@ -65796,6 +66353,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-vern
+# ioc_code: ver1, vern
+# gloss_id: 188
+# psmsl_id: 913
+# uhslc_id: 700
+# ptwc_code: vern
+# sonel_gps_id: 2659
+# sonel_tg_id: 2658
 # !units: meters
 # !longitude: -64.267000
 # !latitude: -65.250000
@@ -66776,6 +67341,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Harbour Local Datum
 # confidence: 7
+# ssc_id: SSC-ferl
+# ioc_code: fer1
+# psmsl_id: 2052, 2053
+# ptwc_code: fer1
 # !units: meters
 # !longitude: -8.3254
 # !latitude: 43.4631
@@ -67953,6 +68522,8 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-flnt
+# ioc_code: fli16, fli7
 # !units: meters
 # !longitude: 12.844500
 # !latitude: 55.589400
@@ -69131,6 +69702,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-fosm
+# ioc_code: fosm, fosm2
+# psmsl_id: 2234, 969
+# sonel_gps_id: 3540
+# sonel_tg_id: 3163
 # !units: meters
 # !longitude: 4.892935
 # !latitude: 43.404935
@@ -69327,6 +69903,9 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-fred
+# ioc_code: fred
+# psmsl_id: 81
 # !units: meters
 # !longitude: 9.7555
 # !latitude: 55.5598
@@ -69720,6 +70299,9 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-fredg
+# ioc_code: freh
+# psmsl_id: 91
 # !units: meters
 # !longitude: 10.566700
 # !latitude: 57.433300
@@ -70112,6 +70694,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-fuka
+# ioc_code: fuka
+# psmsl_id: 121, 1317
+# ptwc_code: fuka
 # !units: meters
 # !longitude: 139.926383
 # !latitude: 40.647217
@@ -70308,6 +70894,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-fuku
+# psmsl_id: 1101
 # !units: meters
 # !longitude: 128.849450
 # !latitude: 32.696117
@@ -70505,6 +71093,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-fulf
+# psmsl_id: 688
 # !units: meters
 # !longitude: -123.4510
 # !latitude: 48.7690
@@ -70701,6 +71291,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-fong
+# ioc_code: fong
+# gloss_id: 121
+# psmsl_id: 1452, 1839
+# uhslc_id: 25
+# ptwc_code: fong
+# sonel_gps_id: 865
+# sonel_tg_id: 2167
 # !units: meters
 # !longitude: 179.195200
 # !latitude: -8.502500
@@ -70897,6 +71495,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-func
+# gloss_id: 250
+# psmsl_id: 1030, 2024, 2340
+# uhslc_id: 218
+# sonel_gps_id: 1901
+# sonel_tg_id: 2102, 2788
 # !units: meters
 # !longitude: -16.913000
 # !latitude: 32.643000
@@ -71289,6 +71893,11 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-fyns
+# ioc_code: fyns
+# psmsl_id: 1197
+# sonel_gps_id: 3577
+# sonel_tg_id: 3576
 # !units: meters
 # !longitude: 9.9856
 # !latitude: 54.9953
@@ -71682,6 +72291,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Malin Ordnance Datum
 # confidence: 7
+# ssc_id: SSC-galw
+# psmsl_id: 1083, 2474
 # !units: meters
 # !longitude: -9.048000
 # !latitude: 53.269000
@@ -71878,6 +72489,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ganm
+# ioc_code: ganm
+# gloss_id: 27
+# psmsl_id: 1025, 1707
+# uhslc_id: 109
+# ptwc_code: ganm
+# sonel_gps_id: 3412
+# sonel_tg_id: 2801
 # !units: meters
 # !longitude: 73.1520
 # !latitude: -0.6878
@@ -72074,6 +72693,10 @@ x 0 0
 # date_imported: 20260322
 # datum: BHS77
 # confidence: 7
+# ssc_id: SSC-gdan
+# psmsl_id: 64
+# sonel_gps_id: 3372
+# sonel_tg_id: 3371
 # !units: meters
 # !longitude: 18.698099
 # !latitude: 54.399700
@@ -72270,6 +72893,12 @@ x 0 0
 # date_imported: 20260322
 # datum: LN (Local Datum)   
 # confidence: 7
+# ssc_id: SSC-geds
+# ioc_code: geds
+# psmsl_id: 120
+# uhslc_id: 837
+# sonel_gps_id: 2063
+# sonel_tg_id: 2229
 # !units: meters
 # !longitude: 11.9275
 # !latitude: 54.5713
@@ -72662,6 +73291,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-genv
+# ioc_code: GE25
+# psmsl_id: 2090, 59
+# ptwc_code: genv
+# sonel_gps_id: 678
+# sonel_tg_id: 2250
 # !units: meters
 # !longitude: 8.925517
 # !latitude: 44.410128
@@ -72858,6 +73493,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-gera
+# ioc_code: gpab
+# psmsl_id: 1031, 1043
 # !units: meters
 # !longitude: 114.601900
 # !latitude: -28.776000
@@ -73250,6 +73888,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-giba
+# gloss_id: 276
+# psmsl_id: 563
+# uhslc_id: 244
+# sonel_tg_id: 2889
 # !units: meters
 # !longitude: -76.1279
 # !latitude: 21.1076
@@ -74230,6 +74873,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-gold
+# ioc_code: gcsb
+# psmsl_id: 1465, 1704, 1722
+# sonel_gps_id: 3230
+# sonel_tg_id: 3229
 # !units: meters
 # !longitude: 153.4172
 # !latitude: -27.9499
@@ -74427,6 +75075,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-goldf
+# psmsl_id: 1827
 # !units: meters
 # !longitude: -126.1260
 # !latitude: 49.6790
@@ -74623,6 +75273,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Harbour Local Datum
 # confidence: 7
+# ssc_id: SSC-lago
+# ioc_code: lago
+# psmsl_id: 2065
+# ptwc_code: lago
 # !units: meters
 # !longitude: -17.1082
 # !latitude: 28.0878
@@ -75015,6 +75669,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-good
+# psmsl_id: 1368
 # !units: meters
 # !longitude: 142.148600
 # !latitude: -10.563900
@@ -75603,6 +76259,13 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-goto
+# ioc_code: goto
+# gloss_id: 233
+# psmsl_id: 1236, 74
+# uhslc_id: 819
+# sonel_gps_id: 2079
+# sonel_tg_id: 2328, 2738
 # !units: meters
 # !longitude: 11.790600
 # !latitude: 57.684700
@@ -75799,6 +76462,9 @@ x 0 0
 # date_imported: 20260322
 # datum: BSCD2000
 # confidence: 7
+# ssc_id: SSC-goag
+# ioc_code: goag
+# psmsl_id: 2393
 # !units: meters
 # !longitude: 12.010000
 # !latitude: 57.789700
@@ -75995,6 +76661,9 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-goer
+# ioc_code: goer
+# psmsl_id: 2391
 # !units: meters
 # !longitude: 11.9085
 # !latitude: 57.6915
@@ -77172,6 +77841,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-gronx
+# psmsl_id: 387
 # !units: meters
 # !longitude: -72.0388
 # !latitude: 46.5853
@@ -77369,6 +78040,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-gros
+# psmsl_id: 1572
 # !units: meters
 # !longitude: -69.5137
 # !latitude: 47.9275
@@ -77958,6 +78631,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-isla
+# gloss_id: 160
+# psmsl_id: 1413, 1991
+# uhslc_id: 36
+# sonel_gps_id: 2295
+# sonel_tg_id: 2296
 # !units: meters
 # !longitude: -118.2912
 # !latitude: 28.8820
@@ -79134,6 +79813,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-haik
+# psmsl_id: 1428
+# uhslc_id: 638
 # !units: meters
 # !longitude: 110.2802
 # !latitude: 20.0234
@@ -79330,6 +80012,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-haka
+# psmsl_id: 1094
 # !units: meters
 # !longitude: 130.407783
 # !latitude: 33.618617
@@ -79526,6 +80210,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-hako
+# ioc_code: hako
+# gloss_id: 88
+# psmsl_id: 671, 813
+# uhslc_id: 364
+# ptwc_code: hako
+# sonel_gps_id: 799
+# sonel_tg_id: 2312, 2755
 # !units: meters
 # !longitude: 140.7247
 # !latitude: 41.7817
@@ -79722,6 +80414,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-hayp
+# psmsl_id: 1246, 1256
 # !units: meters
 # !longitude: 149.300000
 # !latitude: -21.280000
@@ -80115,6 +80809,8 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-halm
+# ioc_code: halm
 # !units: meters
 # !longitude: 12.835800
 # !latitude: 56.648800
@@ -80311,6 +81007,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-hmda
+# ioc_code: hmda
+# gloss_id: 326
+# psmsl_id: 143, 1585, 94
+# uhslc_id: 348
+# ptwc_code: hmda
+# sonel_gps_id: 804
+# sonel_tg_id: 2150, 2740
 # !units: meters
 # !longitude: 132.0661
 # !latitude: 34.8972
@@ -80507,6 +81211,10 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-hami
+# psmsl_id: 315
+# sonel_gps_id: 2587
+# sonel_tg_id: 2586
 # !units: meters
 # !longitude: 27.179199
 # !latitude: 60.562801
@@ -80703,6 +81411,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-hamm
+# ioc_code: hamm
+# psmsl_id: 758
 # !units: meters
 # !longitude: 23.6787
 # !latitude: 70.6648
@@ -80899,6 +81610,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-hana
+# ioc_code: hana
+# psmsl_id: 139, 1442
+# ptwc_code: hana
 # !units: meters
 # !longitude: 145.567783
 # !latitude: 43.278050
@@ -81095,6 +81810,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-hani
+# ioc_code: hani
+# psmsl_id: 1779, 2184
+# uhslc_id: 117
+# ptwc_code: hani
 # !units: meters
 # !longitude: 73.1733
 # !latitude: 6.7676
@@ -81291,6 +82011,8 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-hank
+# psmsl_id: 71
 # !units: meters
 # !longitude: 22.976601
 # !latitude: 59.822899
@@ -81487,6 +82209,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Normal Amsterdam Level
 # confidence: 7
+# ssc_id: SSC-stel
+# psmsl_id: 1331
 # !units: meters
 # !longitude: 4.044840
 # !latitude: 51.829224
@@ -81683,6 +82407,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Normal Amsterdam Level
 # confidence: 7
+# ssc_id: SSC-harl
+# ioc_code: harl
+# psmsl_id: 25
 # !units: knots
 # !longitude: 5.409342
 # !latitude: 53.175632
@@ -81880,6 +82607,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-harr
+# psmsl_id: 176
 # !units: meters
 # !longitude: -59.4760
 # !latitude: 50.4963
@@ -82076,6 +82805,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-hars
+# ioc_code: hars
+# psmsl_id: 681
 # !units: meters
 # !longitude: 16.548236
 # !latitude: 68.801261
@@ -82468,6 +83200,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-harw
+# ioc_code: harw
+# psmsl_id: 214, 742
 # !units: meters
 # !longitude: 1.292056
 # !latitude: 51.948000
@@ -82664,6 +83399,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-hasp
+# ioc_code: hasp
+# psmsl_id: 2413
 # !units: meters
 # !longitude: 0.572830
 # !latitude: 50.850880
@@ -83253,6 +83991,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-hayp
+# psmsl_id: 1246, 1256
 # !units: meters
 # !longitude: 149.303300
 # !latitude: -21.268300
@@ -84037,6 +84777,9 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-heim
+# ioc_code: heim
+# psmsl_id: 313
 # !units: meters
 # !longitude: 9.101504
 # !latitude: 63.425224
@@ -84233,6 +84976,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-helgz
+# ioc_code: helgz
+# psmsl_id: 1113
 # !units: meters
 # !longitude: 9.856379
 # !latitude: 58.995212
@@ -84429,6 +85175,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-helg
+# ioc_code: helg
+# psmsl_id: 660, 713
+# sonel_gps_id: 3545, 691
+# sonel_tg_id: 2260
 # !units: meters
 # !longitude: 7.890804
 # !latitude: 54.180523
@@ -84625,6 +85376,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-hebo
+# ioc_code: hels
+# psmsl_id: 2386
 # !units: meters
 # !longitude: 12.687400
 # !latitude: 56.044600
@@ -85213,6 +85967,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-hbay
+# ioc_code: hbay
+# psmsl_id: 2276
 # !units: meters
 # !longitude: 1.1156
 # !latitude: 51.3820
@@ -85801,6 +86558,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-hink
+# ioc_code: hink
+# psmsl_id: 1758
 # !units: meters
 # !longitude: -3.1343
 # !latitude: 51.2153
@@ -86389,6 +87149,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-hiro
+# psmsl_id: 1451
+# uhslc_id: 134
 # !units: meters
 # !longitude: 89.4622
 # !latitude: 21.8174
@@ -86585,6 +87348,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-hirom
+# psmsl_id: 1028
 # !units: meters
 # !longitude: 132.464717
 # !latitude: 34.353050
@@ -86781,6 +87546,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-hiva
+# ioc_code: hiva
+# psmsl_id: 1466, 2240
+# uhslc_id: 17
+# ptwc_code: hiva
+# sonel_tg_id: 3409
 # !units: meters
 # !longitude: -139.034117
 # !latitude: -9.804823
@@ -87173,6 +87944,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Normal Amsterdam Level
 # confidence: 7
+# ssc_id: SSC-hoek
+# ioc_code: hoek
+# psmsl_id: 22
 # !units: knots
 # !longitude: 4.119881
 # !latitude: 51.977572
@@ -87957,6 +88731,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-holy
+# ioc_code: holy, holy2, holyt
+# psmsl_id: 5
+# sonel_gps_id: 3241
+# sonel_tg_id: 3242
 # !units: meters
 # !longitude: -4.620417
 # !latitude: 53.313944
@@ -88349,6 +89128,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-quar
+# ioc_code: quar
+# gloss_id: 77
+# psmsl_id: 1674, 1693, 1891, 333
+# uhslc_id: 329
+# ptwc_code: quar
+# sonel_gps_id: 2089, 3214
+# sonel_tg_id: 2451, 2747, 2784
 # !units: meters
 # !longitude: 114.2133
 # !latitude: 22.2910
@@ -88545,6 +89332,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-solo
+# ioc_code: solo
+# gloss_id: 66
+# psmsl_id: 1373, 1667, 1861, 885
+# uhslc_id: 9
+# ptwc_code: honb, honi
+# sonel_gps_id: 2054
+# sonel_tg_id: 2133, 2772
 # !units: meters
 # !longitude: 159.957000
 # !latitude: -9.425000
@@ -88741,6 +89536,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-homm
+# psmsl_id: 1418
 # !units: meters
 # !longitude: 139.6666
 # !latitude: 35.4340
@@ -88937,6 +89734,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-honn
+# ioc_code: honn
+# psmsl_id: 1267
+# uhslc_id: 801
+# sonel_gps_id: 2091
+# sonel_tg_id: 2453
 # !units: meters
 # !longitude: 25.9727
 # !latitude: 70.9803
@@ -89329,6 +90132,10 @@ x 0 0
 # date_imported: 20260322
 # datum: LN (Local Datum)   
 # confidence: 7
+# ssc_id: SSC-hornm
+# ioc_code: hornb
+# psmsl_id: 119
+# uhslc_id: 838
 # !units: meters
 # !longitude: 12.4599
 # !latitude: 56.0956
@@ -90113,6 +90920,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-horn
+# ioc_code: horn
+# sonel_gps_id: 2001, 2002, 3552
+# sonel_tg_id: 2261
 # !units: meters
 # !longitude: 8.297005
 # !latitude: 54.759788
@@ -90309,6 +91120,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-huahi
+# ioc_code: huahi
+# ptwc_code: huah
+# sonel_tg_id: 3172
 # !units: meters
 # !longitude: -151.032446
 # !latitude: -16.721563
@@ -91877,6 +92692,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-iaix
+# ioc_code: iaix
+# psmsl_id: 2236
+# sonel_gps_id: 3005
+# sonel_tg_id: 3004
 # !units: meters
 # !longitude: -1.174341
 # !latitude: 46.007357
@@ -92270,6 +93090,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-rous
+# ioc_code: rous, rous2
+# psmsl_id: 2367
+# sonel_tg_id: 3175
 # !units: meters
 # !longitude: 8.935240
 # !latitude: 42.639600
@@ -92466,6 +93290,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-stpa
+# ioc_code: stpa
+# gloss_id: 24
+# psmsl_id: 1863
+# uhslc_id: 179
+# sonel_gps_id: 3093
+# sonel_tg_id: 1837
 # !units: meters
 # !longitude: 77.530603
 # !latitude: -38.714296
@@ -92662,6 +93493,13 @@ x 0 0
 # date_imported: 20260322
 # datum: chart datum
 # confidence: 7
+# ssc_id: SSC-iler
+# ioc_code: iler, iler2
+# psmsl_id: 2012
+# uhslc_id: 850, 851
+# ptwc_code: iler
+# sonel_gps_id: 3414, 714
+# sonel_tg_id: 1867, 3173
 # !units: meters
 # !longitude: -52.5869
 # !latitude: 5.2845
@@ -92858,6 +93696,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-ilet
+# psmsl_id: 2243
+# sonel_tg_id: 3174
 # !units: meters
 # !longitude: -52.190483
 # !latitude: 4.893783
@@ -93054,6 +93895,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-ilfa
+# ioc_code: ilfa
+# psmsl_id: 1214
 # !units: meters
 # !longitude: -4.1109
 # !latitude: 51.2110
@@ -93250,6 +94094,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ilul
+# psmsl_id: 1820
+# uhslc_id: 298
 # !units: meters
 # !longitude: -51.0960
 # !latitude: 69.2222
@@ -93446,6 +94293,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-immi
+# ioc_code: immi
+# psmsl_id: 286
 # !units: meters
 # !longitude: -0.187528
 # !latitude: 53.630417
@@ -93642,6 +94492,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-impr
+# ioc_code: IM01, im02, im02a
+# psmsl_id: 108, 2078
+# ptwc_code: im02
 # !units: meters
 # !longitude: 8.018864
 # !latitude: 43.878339
@@ -94428,6 +95282,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-inou
+# psmsl_id: 1283
 # !units: meters
 # !longitude: -78.1015
 # !latitude: 58.4459
@@ -94624,6 +95480,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-trab
+# ioc_code: trab
+# psmsl_id: 1927, 800
+# sonel_gps_id: 859
+# sonel_tg_id: 2219
 # !units: meters
 # !longitude: 39.744484
 # !latitude: 41.001949
@@ -96194,6 +97055,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-itea
+# ioc_code: itea
+# ptwc_code: itea
 # !units: meters
 # !longitude: 22.422779
 # !latitude: 38.430351
@@ -96586,6 +97450,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-scor
+# ioc_code: scor
+# gloss_id: 315
+# psmsl_id: 2168
+# uhslc_id: 809
+# sonel_gps_id: 1926
+# sonel_tg_id: 2341
 # !units: meters
 # !longitude: -21.9625
 # !latitude: 70.4836
@@ -97370,6 +98241,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-izuh
+# psmsl_id: 1586, 661
 # !units: meters
 # !longitude: 129.2911
 # !latitude: 34.1975
@@ -97958,6 +98831,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-jack
+# ioc_code: jack, JBTT
+# psmsl_id: 1882
+# uhslc_id: 403
+# ptwc_code: jack, jbay
 # !units: meters
 # !longitude: 168.615600
 # !latitude: -43.972800
@@ -98154,6 +99032,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-koli
+# ioc_code: koli, koli2
+# psmsl_id: 1601, 283, 309
+# uhslc_id: 161
+# ptwc_code: koli
 # !units: meters
 # !longitude: 106.8908
 # !latitude: -6.1068
@@ -98350,6 +99233,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-jask
+# ioc_code: jask, jask2
+# psmsl_id: 1899
+# uhslc_id: 126
+# ptwc_code: jask
+# sonel_gps_id: 2565
+# sonel_tg_id: 2564
 # !units: meters
 # !longitude: 57.7661
 # !latitude: 25.6460
@@ -98742,6 +99632,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-joho
+# uhslc_id: 321
+# sonel_tg_id: 2645
 # !units: meters
 # !longitude: 103.7922
 # !latitude: 1.4630
@@ -98938,6 +99831,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-jolo
+# gloss_id: 70
+# psmsl_id: 260
+# uhslc_id: 373
+# sonel_tg_id: 2823
 # !units: meters
 # !longitude: 121.0009
 # !latitude: 6.0583
@@ -99134,6 +100032,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-juan
+# ioc_code: juan, juan2
+# gloss_id: 176
+# psmsl_id: 1461, 1644, 1664, 904
+# uhslc_id: 21
+# ptwc_code: juan
+# sonel_tg_id: 2856
 # !units: meters
 # !longitude: -78.829881
 # !latitude: -33.636017
@@ -99722,6 +100627,9 @@ x 0 0
 # date_imported: 20260322
 # datum: BSCD2000
 # confidence: 7
+# ssc_id: SSC-jute
+# ioc_code: jute
+# psmsl_id: 2380
 # !units: meters
 # !longitude: 16.324800
 # !latitude: 58.634201
@@ -100310,6 +101218,9 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-kabe
+# ioc_code: kabe
+# psmsl_id: 45
 # !units: meters
 # !longitude: 14.482149
 # !latitude: 68.212639
@@ -100506,6 +101417,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kago
+# psmsl_id: 1319, 868
 # !units: meters
 # !longitude: 130.564717
 # !latitude: 31.592500
@@ -100898,6 +101811,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kait
+# ioc_code: kait
+# ptwc_code: kait
 # !units: meters
 # !longitude: 173.702778
 # !latitude: -42.412778
@@ -101094,6 +102010,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kain
+# psmsl_id: 701
+# sonel_gps_id: 788
+# sonel_tg_id: 2309, 2757
 # !units: meters
 # !longitude: 135.191383
 # !latitude: 34.144167
@@ -102270,6 +103190,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kant
+# ioc_code: kant
+# gloss_id: 145
+# psmsl_id: 1329, 575
+# uhslc_id: 13
+# ptwc_code: kant
+# sonel_tg_id: 2847
 # !units: meters
 # !longitude: -171.7161
 # !latitude: -2.7747
@@ -102466,6 +103393,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kaoh
+# ioc_code: tkao
+# psmsl_id: 1356, 152
+# uhslc_id: 340
 # !units: meters
 # !longitude: 120.2883
 # !latitude: 22.6144
@@ -102858,6 +103789,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kara
+# ioc_code: kara
+# gloss_id: 30
+# psmsl_id: 204
+# uhslc_id: 147
+# ptwc_code: kara
+# sonel_tg_id: 2802
 # !units: meters
 # !longitude: 66.9716
 # !latitude: 24.8030
@@ -103446,6 +104384,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kari
+# psmsl_id: 1318
+# sonel_gps_id: 792
+# sonel_tg_id: 2123
 # !units: meters
 # !longitude: 129.849167
 # !latitude: 33.473050
@@ -104034,6 +104976,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kash
+# psmsl_id: 753
+# sonel_gps_id: 781
+# sonel_tg_id: 2307
 # !units: meters
 # !longitude: 138.508617
 # !latitude: 37.356667
@@ -104230,6 +105176,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-kaso
+# ioc_code: kaso
+# ptwc_code: kaso
 # !units: meters
 # !longitude: 26.921841
 # !latitude: 35.418598
@@ -104622,6 +105571,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kats
+# psmsl_id: 1191
+# sonel_gps_id: 778
+# sonel_tg_id: 2115
 # !units: meters
 # !longitude: 140.249450
 # !latitude: 35.129450
@@ -105210,6 +106163,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kawaq
+# psmsl_id: 1516
 # !units: meters
 # !longitude: 139.7761
 # !latitude: 35.5035
@@ -105406,6 +106361,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-keel
+# ioc_code: tkee
+# psmsl_id: 153, 545
+# uhslc_id: 341
 # !units: meters
 # !longitude: 121.7522
 # !latitude: 25.1550
@@ -105994,6 +106953,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-keli
+# psmsl_id: 1593
+# uhslc_id: 141
+# sonel_gps_id: 3375
+# sonel_tg_id: 3376
 # !units: meters
 # !longitude: 102.1524
 # !latitude: 2.2141
@@ -106191,6 +107155,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-kels
+# psmsl_id: 1826
 # !units: meters
 # !longitude: -125.9610
 # !latitude: 50.3980
@@ -106584,6 +107550,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tanjo
+# ioc_code: tanjo
+# gloss_id: 44
+# psmsl_id: 1183, 1534, 1746, 248, 724
+# uhslc_id: 327, 337, 699
+# ptwc_code: tanp
+# sonel_gps_id: 765
+# sonel_tg_id: 2121, 2785, 2786, 2809
 # !units: meters
 # !longitude: 103.8521
 # !latitude: 1.2615
@@ -106780,6 +107754,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kerg
+# ioc_code: kerg, kerg2
+# gloss_id: 23
+# psmsl_id: 1849
+# uhslc_id: 180
+# ptwc_code: kerg
+# sonel_gps_id: 3211, 3386, 710
+# sonel_tg_id: 1780
 # !units: meters
 # !longitude: 70.2191
 # !latitude: -49.3521
@@ -106976,6 +107958,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-khal
+# uhslc_id: 135
 # !units: meters
 # !longitude: 91.8203
 # !latitude: 22.2687
@@ -107368,6 +108352,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kielp
+# psmsl_id: 789
+# sonel_gps_id: 2025, 2956
+# sonel_tg_id: 2563
 # !units: meters
 # !longitude: 10.157042
 # !latitude: 54.372083
@@ -107761,6 +108749,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified Common Datum 
 # confidence: 7
+# ssc_id: SSC-kepo
+# ioc_code: kepo, kepo1
+# gloss_id: 187
+# psmsl_id: 896
+# ptwc_code: kepo
+# sonel_gps_id: 3411
+# sonel_tg_id: 2861
 # !units: meters
 # !longitude: -36.496800
 # !latitude: -54.283300
@@ -108154,6 +109149,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-kinl
+# ioc_code: kinl
+# psmsl_id: 1775
+# sonel_gps_id: 3250
+# sonel_tg_id: 3249
 # !units: meters
 # !longitude: -5.050222
 # !latitude: 58.456694
@@ -108742,6 +109742,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-klag
+# ioc_code: klag
+# psmsl_id: 330
 # !units: meters
 # !longitude: 12.893600
 # !latitude: 55.522200
@@ -109134,6 +110137,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-knys
+# psmsl_id: 950
+# uhslc_id: 186
 # !units: meters
 # !longitude: 23.0441
 # !latitude: -34.0426
@@ -109526,6 +110532,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kota
+# ioc_code: kota
+# gloss_id: 42
+# psmsl_id: 2230, 446
+# uhslc_id: 148
+# ptwc_code: kota
+# sonel_tg_id: 2807
 # !units: meters
 # !longitude: 98.4216
 # !latitude: 7.8338
@@ -109722,6 +110735,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kobe
+# psmsl_id: 1790, 846
 # !units: meters
 # !longitude: 135.190283
 # !latitude: 34.682217
@@ -109918,6 +110933,11 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-kbhv
+# ioc_code: kobe
+# psmsl_id: 82
+# sonel_gps_id: 644
+# sonel_tg_id: 2242
 # !units: meters
 # !longitude: 12.600000
 # !latitude: 55.700001
@@ -110114,6 +111134,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-koch
+# psmsl_id: 1184, 1540, 1567, 628
 # !units: meters
 # !longitude: 133.569167
 # !latitude: 33.499167
@@ -110702,6 +111724,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-koma
+# psmsl_id: 809
 # !units: meters
 # !longitude: 134.587783
 # !latitude: 34.009167
@@ -111290,6 +112314,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-gbit
+# ioc_code: gbit
+# ptwc_code: gbit
 # !units: meters
 # !longitude: 175.489167
 # !latitude: -36.189167
@@ -111486,6 +112513,9 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-korsd
+# ioc_code: korso
+# psmsl_id: 113
 # !units: meters
 # !longitude: 11.133300
 # !latitude: 55.333302
@@ -111682,6 +112712,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kose
+# psmsl_id: 1448
 # !units: meters
 # !longitude: 14.000819
 # !latitude: 54.060377
@@ -111878,6 +112910,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kotak
+# psmsl_id: 1733
+# uhslc_id: 386
+# sonel_gps_id: 2634, 3205
+# sonel_tg_id: 2633
 # !units: meters
 # !longitude: 116.0746
 # !latitude: 5.9883
@@ -112074,6 +113111,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kozu
+# psmsl_id: 1061
 # !units: meters
 # !longitude: 139.131667
 # !latitude: 34.209167
@@ -112662,6 +113701,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-kris
+# ioc_code: kris
+# psmsl_id: 682
 # !units: meters
 # !longitude: 7.734352
 # !latitude: 63.113859
@@ -113250,6 +114292,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kuan
+# psmsl_id: 1589
+# uhslc_id: 322
 # !units: meters
 # !longitude: 103.430000
 # !latitude: 3.975000
@@ -113446,6 +114491,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kuch
+# psmsl_id: 1386
 # !units: meters
 # !longitude: 130.195283
 # !latitude: 32.605283
@@ -114035,6 +115082,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kuku
+# psmsl_id: 1677
+# uhslc_id: 325
 # !units: meters
 # !longitude: 103.4411
 # !latitude: 1.3249
@@ -114623,6 +115673,11 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-kungr
+# ioc_code: kungr
+# psmsl_id: 2113
+# sonel_gps_id: 2953
+# sonel_tg_id: 2952
 # !units: meters
 # !longitude: 11.127200
 # !latitude: 58.996700
@@ -114819,6 +115874,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-kure
+# psmsl_id: 1023, 1209, 1320, 749
+# sonel_gps_id: 791
+# sonel_tg_id: 2124
 # !units: meters
 # !longitude: 133.243333
 # !latitude: 33.333617
@@ -115407,6 +116466,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kusm
+# ioc_code: kusm
+# gloss_id: 85
+# psmsl_id: 134
+# uhslc_id: 353
+# ptwc_code: kusm
+# sonel_gps_id: 803
+# sonel_tg_id: 2314
 # !units: meters
 # !longitude: 135.7733
 # !latitude: 33.4758
@@ -116388,6 +117455,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-litt
+# gloss_id: 153
+# psmsl_id: 1822
+# uhslc_id: 705
 # !units: meters
 # !longitude: -96.9498
 # !latitude: 75.3833
@@ -116584,6 +117655,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-figu
+# ioc_code: figu, figu2
+# psmsl_id: 2232
+# ptwc_code: figu
+# sonel_gps_id: 3194, 3541
+# sonel_tg_id: 3165
 # !units: meters
 # !longitude: 6.934940
 # !latitude: 43.483500
@@ -116780,6 +117857,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lagu
+# gloss_id: 328
+# psmsl_id: 705
+# uhslc_id: 247
+# sonel_tg_id: 2900
 # !units: meters
 # !longitude: -66.9315
 # !latitude: 10.6041
@@ -116976,6 +118058,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lali
+# ioc_code: lali
+# gloss_id: 172
+# psmsl_id: 2348, 544, 555
+# uhslc_id: 91
+# ptwc_code: lali
+# sonel_gps_id: 2082, 3510
+# sonel_tg_id: 2444, 2445
 # !units: meters
 # !longitude: -80.9060
 # !latitude: -2.2179
@@ -117564,6 +118654,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-laun
+# ioc_code: laun
+# psmsl_id: 2223, 558, 740
+# uhslc_id: 86
+# ptwc_code: laun
 # !units: meters
 # !longitude: -87.8309
 # !latitude: 13.3394
@@ -118545,6 +119640,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-lake
+# psmsl_id: 1379, 1380
 # !units: meters
 # !longitude: 147.973100
 # !latitude: -37.885200
@@ -118937,6 +120034,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lamu
+# ioc_code: lamu
+# psmsl_id: 1872, 1985, 2198
+# uhslc_id: 149
+# ptwc_code: lamu
 # !units: meters
 # !longitude: 40.9024
 # !latitude: -2.2667
@@ -119918,6 +121020,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-laoh
+# gloss_id: 79
+# psmsl_id: 1513, 723
+# uhslc_id: 630, 631
+# sonel_tg_id: 2829
 # !units: meters
 # !longitude: 121.683000
 # !latitude: 38.867000
@@ -120115,6 +121222,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-lark
+# psmsl_id: 1044
 # !units: meters
 # !longitude: -58.3791
 # !latitude: 49.0959
@@ -120507,6 +121616,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-levu
+# ioc_code: levu
+# psmsl_id: 1805
+# uhslc_id: 402
+# ptwc_code: laut, levu
+# sonel_gps_id: 723
+# sonel_tg_id: 2165
 # !units: meters
 # !longitude: 177.438100
 # !latitude: -17.605300
@@ -120704,6 +121820,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-queb
+# psmsl_id: 173
 # !units: meters
 # !longitude: -71.1578
 # !latitude: 46.8325
@@ -120900,6 +122018,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-laza
+# ioc_code: laza, laza2
+# ptwc_code: laza
+# sonel_gps_id: 2285
+# sonel_tg_id: 2286
 # !units: meters
 # !longitude: -102.178333
 # !latitude: 17.940000
@@ -121292,6 +122415,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-lecy
+# ioc_code: lecy
+# psmsl_id: 1921
+# sonel_gps_id: 3190
+# sonel_tg_id: 1793
 # !units: meters
 # !longitude: -2.895167
 # !latitude: 47.542676
@@ -121488,6 +122616,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-leha
+# ioc_code: leha, leha2
+# psmsl_id: 453
+# ptwc_code: leha
+# sonel_gps_id: 3429, 3538
+# sonel_tg_id: 1794
 # !units: meters
 # !longitude: 0.105980
 # !latitude: 49.481892
@@ -121684,6 +122818,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-lero
+# ioc_code: lero
+# uhslc_id: 270, 271
+# ptwc_code: lero
 # !units: meters
 # !longitude: -60.9369
 # !latitude: 14.6793
@@ -122076,6 +123214,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lega
+# ioc_code: lega
+# gloss_id: 72
+# psmsl_id: 522
+# uhslc_id: 371
+# ptwc_code: lega
+# sonel_gps_id: 3503
+# sonel_tg_id: 2825
 # !units: meters
 # !longitude: 123.7580
 # !latitude: 13.1461
@@ -122468,6 +123614,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-leit
+# ioc_code: leit
+# psmsl_id: 1526, 802
+# sonel_gps_id: 3248
+# sonel_tg_id: 3246, 3247
 # !units: meters
 # !longitude: -3.181694
 # !latitude: 55.989833
@@ -122664,6 +123815,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-leix
+# psmsl_id: 2163, 791
+# sonel_gps_id: 3145
+# sonel_tg_id: 3144
 # !units: meters
 # !longitude: -8.704500
 # !latitude: 41.186699
@@ -122860,6 +124015,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lemba
+# ioc_code: lemba
+# uhslc_id: 419
+# ptwc_code: lemb, lobk
 # !units: meters
 # !longitude: 116.0721
 # !latitude: -8.7308
@@ -123056,6 +124215,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-lerw
+# ioc_code: lerw, lerw2
+# gloss_id: 236
+# psmsl_id: 830
+# uhslc_id: 293
+# sonel_gps_id: 1907
+# sonel_tg_id: 2188
 # !units: meters
 # !longitude: -1.140306
 # !latitude: 60.154028
@@ -123448,6 +124614,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lian
+# psmsl_id: 1405
+# uhslc_id: 639
 # !units: meters
 # !longitude: 119.4156
 # !latitude: 34.7496
@@ -124233,6 +125402,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-list
+# psmsl_id: 1047
 # !units: meters
 # !longitude: 8.441405
 # !latitude: 55.018268
@@ -124823,6 +125994,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-livp
+# ioc_code: live, live2
+# psmsl_id: 15, 1774, 765
+# ptwc_code: livp, tpol
+# sonel_gps_id: 2026
+# sonel_tg_id: 2160, 2736, 2756
 # !units: meters
 # !longitude: -3.0180
 # !latitude: 53.4497
@@ -125019,6 +126196,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-llan
+# ioc_code: llan
+# psmsl_id: 1504, 1854
 # !units: meters
 # !longitude: -3.825222
 # !latitude: 53.331667
@@ -125215,6 +126395,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lobi
+# gloss_id: 262
+# psmsl_id: 1314
+# uhslc_id: 237
+# sonel_tg_id: 2884
 # !units: meters
 # !longitude: 13.558000
 # !latitude: -12.333000
@@ -125411,6 +126596,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lobo
+# ioc_code: lobo2, lobos
+# psmsl_id: 1552
+# uhslc_id: 84
+# ptwc_code: lobo
 # !units: meters
 # !longitude: -80.7194
 # !latitude: -6.9513
@@ -125607,6 +126797,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-lomb
+# ioc_code: lomb
+# gloss_id: 331
+# psmsl_id: 1860
+# uhslc_id: 400, 65
+# ptwc_code: lomb
+# sonel_gps_id: 816
+# sonel_tg_id: 2152
 # !units: meters
 # !longitude: 147.3746
 # !latitude: -2.0416
@@ -126195,6 +127393,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lott
+# ioc_code: lott
+# ptwc_code: lott
 # !units: meters
 # !longitude: 178.158611
 # !latitude: -37.550000
@@ -126784,6 +127985,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-lowh
+# psmsl_id: 2071
 # !units: meters
 # !longitude: 146.794700
 # !latitude: -41.065100
@@ -126981,6 +128184,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-lowen
+# psmsl_id: 1349
+# sonel_gps_id: 3034
+# sonel_tg_id: 3033
 # !units: meters
 # !longitude: -64.8852
 # !latitude: 47.0822
@@ -127177,6 +128384,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-lowe
+# ioc_code: lowe
+# psmsl_id: 754
+# sonel_gps_id: 2027
+# sonel_tg_id: 2343
 # !units: meters
 # !longitude: 1.750250
 # !latitude: 52.473083
@@ -127373,6 +128585,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kiel
+# ioc_code: kiel
 # !units: meters
 # !longitude: 10.273262
 # !latitude: 54.499585
@@ -127569,6 +128783,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-luba
+# ioc_code: luba
+# psmsl_id: 2355
+# uhslc_id: 655
+# ptwc_code: luba
 # !units: meters
 # !longitude: 120.2018
 # !latitude: 13.8160
@@ -127765,6 +128984,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-luci
+# psmsl_id: 1630
 # !units: meters
 # !longitude: 146.3860
 # !latitude: -18.5220
@@ -127961,6 +129182,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lude
+# psmsl_id: 911
+# uhslc_id: 702
 # !units: meters
 # !longitude: 15.150000
 # !latitude: -26.650000
@@ -128353,6 +129577,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-peng
+# gloss_id: 43
+# psmsl_id: 1594
+# uhslc_id: 143
+# sonel_tg_id: 2808
 # !units: meters
 # !longitude: 100.6130
 # !latitude: 4.2381
@@ -128549,6 +129778,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-lusi
+# gloss_id: 283
+# psmsl_id: 979
+# uhslc_id: 633
+# sonel_tg_id: 2891
 # !units: meters
 # !longitude: 121.6031
 # !latitude: 32.1016
@@ -128745,6 +129979,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-lymg
+# ioc_code: lymg
+# psmsl_id: 2281
 # !units: meters
 # !longitude: -1.507140
 # !latitude: 50.740300
@@ -129529,6 +130766,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-maca
+# psmsl_id: 269
+# uhslc_id: 338
+# sonel_gps_id: 3569
+# sonel_tg_id: 3568
 # !units: meters
 # !longitude: 113.550000
 # !latitude: 22.167000
@@ -130117,6 +131359,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mada
+# psmsl_id: 1254, 1618
+# uhslc_id: 66
 # !units: meters
 # !longitude: 145.8002
 # !latitude: -5.2084
@@ -130313,6 +131558,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-maisa
+# psmsl_id: 1089
+# uhslc_id: 356
 # !units: meters
 # !longitude: 137.6089
 # !latitude: 34.6820
@@ -130901,6 +132149,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-make
+# ioc_code: make
+# gloss_id: 354
+# psmsl_id: 2368
+# uhslc_id: 454
+# ptwc_code: make
+# sonel_gps_id: 3417
+# sonel_tg_id: 3416
 # !units: meters
 # !longitude: -143.569212
 # !latitude: -16.626998
@@ -131097,6 +132353,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-maku
+# psmsl_id: 1142, 1235
 # !units: meters
 # !longitude: 130.2930
 # !latitude: 31.2678
@@ -131293,6 +132551,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-male
+# ioc_code: male, Male2
+# psmsl_id: 1743, 1744, 1753
+# uhslc_id: 108
+# ptwc_code: male
+# sonel_gps_id: 2985, 3536, 729
+# sonel_tg_id: 1978
 # !units: meters
 # !longitude: 73.5167
 # !latitude: 4.1782
@@ -131489,6 +132754,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-male
+# ioc_code: male, Male2
+# psmsl_id: 1743, 1744, 1753
+# uhslc_id: 108
+# ptwc_code: male
+# sonel_gps_id: 2985, 3536, 729
+# sonel_tg_id: 1978
 # !units: meters
 # !longitude: 73.527000
 # !latitude: 4.190000
@@ -131685,6 +132957,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-malm
+# ioc_code: maha
+# psmsl_id: 2114, 2385
 # !units: meters
 # !longitude: 13.000000
 # !latitude: 55.616700
@@ -131881,6 +133156,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-malm
+# ioc_code: maha
+# psmsl_id: 2114, 2385
 # !units: meters
 # !longitude: 12.997300
 # !latitude: 55.613600
@@ -132077,6 +133355,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-malo
+# ioc_code: malo
+# psmsl_id: 486
+# uhslc_id: 802
 # !units: meters
 # !longitude: 5.1133
 # !latitude: 61.9338
@@ -132665,6 +133947,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mani
+# ioc_code: mani
+# gloss_id: 73
+# psmsl_id: 145
+# uhslc_id: 370
+# ptwc_code: mani
+# sonel_gps_id: 3064, 3238, 3591, 815
+# sonel_tg_id: 1979
 # !units: meters
 # !longitude: 120.968000
 # !latitude: 14.585000
@@ -132861,6 +134151,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-manta
+# ioc_code: mant
 # !units: meters
 # !longitude: -80.7218
 # !latitude: -0.9310
@@ -133057,6 +134349,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mnkt
+# ioc_code: mnkt
+# ptwc_code: mnkt
 # !units: meters
 # !longitude: 174.511389
 # !latitude: -37.046111
@@ -133253,6 +134548,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-manu
+# psmsl_id: 1609, 1619
 # !units: meters
 # !longitude: 147.2697
 # !latitude: -2.0191
@@ -133645,6 +134942,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mapuw
+# psmsl_id: 986
 # !units: meters
 # !longitude: 32.570000
 # !latitude: -25.975000
@@ -133841,6 +135140,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-plat
+# ioc_code: plat, plat2
+# gloss_id: 192
+# psmsl_id: 177, 1852, 819, 857
+# uhslc_id: 729
+# ptwc_code: plat
+# sonel_gps_id: 2051, 937
+# sonel_tg_id: 2369, 2758
 # !units: meters
 # !longitude: -57.5315
 # !latitude: -38.0358
@@ -134037,6 +135344,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-mare
+# ioc_code: mare, mare2
+# psmsl_id: 2239
+# ptwc_code: mare
+# sonel_tg_id: 3168
 # !units: meters
 # !longitude: 167.877100
 # !latitude: -21.547800
@@ -134233,6 +135545,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-marin
+# psmsl_id: 55
 # !units: meters
 # !longitude: 11.238860
 # !latitude: 54.496622
@@ -134429,6 +135743,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Harbour Local Datum
 # confidence: 7
+# ssc_id: SSC-mari
+# ioc_code: mari
+# psmsl_id: 2181
 # !units: meters
 # !longitude: -8.691100
 # !latitude: 42.406101
@@ -134625,6 +135942,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mais
+# ioc_code: mais, mais2
+# gloss_id: 20
+# uhslc_id: 920
+# ptwc_code: mais
+# sonel_gps_id: 2016
+# sonel_tg_id: 1980
 # !units: meters
 # !longitude: 37.867000
 # !latitude: -46.867000
@@ -134821,6 +136145,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-marsd
+# uhslc_id: 398
 # !units: meters
 # !longitude: 174.500000
 # !latitude: -35.833000
@@ -135213,6 +136539,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-mstd
+# ioc_code: mard
+# psmsl_id: 2394
 # !units: meters
 # !longitude: 11.573200
 # !latitude: 57.888000
@@ -135409,6 +136738,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-masi
+# ioc_code: masi, masi2
+# psmsl_id: 1887
+# uhslc_id: 113
+# ptwc_code: masi
 # !units: meters
 # !longitude: 58.872000
 # !latitude: 20.687000
@@ -135605,6 +136939,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mata
+# ioc_code: mata, mata2
+# psmsl_id: 2188, 458
+# uhslc_id: 94
+# ptwc_code: mata
 # !units: meters
 # !longitude: -72.1086
 # !latitude: -17.001
@@ -135801,6 +137140,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-matav
+# psmsl_id: 854
 # !units: meters
 # !longitude: -149.4972
 # !latitude: -17.5073
@@ -136586,6 +137927,11 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-frot
+# ioc_code: frot
+# psmsl_id: 2271
+# sonel_gps_id: 2949
+# sonel_tg_id: 2948
 # !units: meters
 # !longitude: 8.665231
 # !latitude: 63.869331
@@ -136782,6 +138128,8 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-mavh
+# ioc_code: mavh
 # !units: meters
 # !longitude: 11.707500
 # !latitude: 57.672300
@@ -136978,6 +138326,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-maws
+# gloss_id: 22
+# psmsl_id: 1814
+# uhslc_id: 177
+# sonel_gps_id: 738
+# sonel_tg_id: 2198
 # !units: meters
 # !longitude: 62.867000
 # !latitude: -67.600000
@@ -137370,6 +138724,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-will
+# psmsl_id: 1170, 93
 # !units: meters
 # !longitude: 144.916500
 # !latitude: -37.865700
@@ -137566,6 +138922,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mellv
+# psmsl_id: 1987
+# sonel_gps_id: 2534
+# sonel_tg_id: 2533
 # !units: meters
 # !longitude: 8.093437
 # !latitude: 53.773295
@@ -137958,6 +139318,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mera
+# ioc_code: mera
+# gloss_id: 86
+# psmsl_id: 359
+# uhslc_id: 352
+# ptwc_code: mera
+# sonel_gps_id: 801
+# sonel_tg_id: 2313
 # !units: meters
 # !longitude: 139.8250
 # !latitude: 34.9189
@@ -138154,6 +139522,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mess
+# ioc_code: ME13
+# psmsl_id: 115, 2081
+# sonel_gps_id: 3441
+# sonel_tg_id: 3439, 3440
 # !units: meters
 # !longitude: 15.563514
 # !latitude: 38.196314
@@ -139332,6 +140705,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-miku
+# psmsl_id: 1190
+# sonel_gps_id: 783
+# sonel_tg_id: 2114
 # !units: meters
 # !longitude: 136.148883
 # !latitude: 36.254450
@@ -139724,6 +141101,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-mill
+# ioc_code: mill
+# psmsl_id: 755
 # !units: meters
 # !longitude: -4.906333
 # !latitude: 55.749806
@@ -139920,6 +141300,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-minas
+# psmsl_id: 1494
+# uhslc_id: 182
+# sonel_gps_id: 2485, 2559, 633
+# sonel_tg_id: 2146
 # !units: meters
 # !longitude: 50.600000
 # !latitude: 26.233000
@@ -140312,6 +141697,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mins
+# ioc_code: mins
+# gloss_id: 104
+# psmsl_id: 1875
+# uhslc_id: 49
+# ptwc_code: mins
+# sonel_gps_id: 2489, 2837
+# sonel_tg_id: 2836
 # !units: meters
 # !longitude: 153.9779
 # !latitude: 24.2811
@@ -140508,6 +141901,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-mini
+# ioc_code: mini
+# gloss_id: 29
+# psmsl_id: 1050
+# uhslc_id: 153
+# ptwc_code: mini
+# sonel_gps_id: 2068
+# sonel_tg_id: 2439
 # !units: meters
 # !longitude: 73.0530
 # !latitude: 8.2824
@@ -140704,6 +142105,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-miri
+# psmsl_id: 1819
+# uhslc_id: 388
+# sonel_gps_id: 2642
+# sonel_tg_id: 2641
 # !units: meters
 # !longitude: 113.9689
 # !latitude: 4.3833
@@ -140900,6 +142306,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-misu
+# psmsl_id: 810
 # !units: meters
 # !longitude: 130.4514
 # !latitude: 32.6231
@@ -141096,6 +142504,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-miya
+# psmsl_id: 1060
+# uhslc_id: 357
 # !units: meters
 # !longitude: 139.480833
 # !latitude: 34.067217
@@ -141880,6 +143291,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-moca
+# psmsl_id: 1315
+# uhslc_id: 238
 # !units: meters
 # !longitude: 12.1462
 # !latitude: -15.1929
@@ -142076,6 +143490,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-mozi
+# psmsl_id: 912
 # !units: meters
 # !longitude: 130.957617
 # !latitude: 33.945183
@@ -142272,6 +143688,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-momb
+# ioc_code: momb
+# gloss_id: 8
+# psmsl_id: 2183, 370
+# uhslc_id: 101
+# ptwc_code: momb
+# sonel_tg_id: 2794, 3583
 # !units: meters
 # !longitude: 39.6573
 # !latitude: -4.0701
@@ -142468,6 +143891,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-monc
+# ioc_code: monc, monc2
+# psmsl_id: 149, 788
+# sonel_gps_id: 3195
+# sonel_tg_id: 1807, 3198
 # !units: meters
 # !longitude: 7.421497
 # !latitude: 43.728847
@@ -142664,6 +144092,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-monb
+# psmsl_id: 1470, 772
 # !units: meters
 # !longitude: 143.3583
 # !latitude: 44.3542
@@ -143056,6 +144486,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-mora
+# psmsl_id: 1862
 # !units: meters
 # !longitude: -4.008778
 # !latitude: 57.599167
@@ -143840,6 +145272,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-moss
+# psmsl_id: 910
+# uhslc_id: 185
 # !units: meters
 # !longitude: 22.1452
 # !latitude: -34.1767
@@ -144232,6 +145667,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-moul
+# ioc_code: moul
+# gloss_id: 141
+# psmsl_id: 2266, 747
+# uhslc_id: 906
+# ptwc_code: moul
+# sonel_tg_id: 2845
 # !units: meters
 # !longitude: 97.6180
 # !latitude: 16.4830
@@ -144428,6 +145870,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-mour
+# psmsl_id: 1629, 1659
 # !units: meters
 # !longitude: 146.1211
 # !latitude: -17.6016
@@ -144624,6 +146068,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-muro
+# psmsl_id: 1194
 # !units: meters
 # !longitude: 140.9507
 # !latitude: 42.3452
@@ -144820,6 +146266,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-muroz
+# psmsl_id: 1390
 # !units: meters
 # !longitude: 134.164450
 # !latitude: 33.266383
@@ -145016,6 +146464,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-musc
+# ioc_code: mus2, musc, musc3
+# psmsl_id: 1716, 2185
+# uhslc_id: 110
+# ptwc_code: mus2, musc
 # !units: meters
 # !longitude: 58.565000
 # !latitude: 23.628000
@@ -145408,6 +146861,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-nagas
+# ioc_code: naga
+# gloss_id: 83
+# psmsl_id: 1100, 141
+# uhslc_id: 362
+# ptwc_code: naga
+# sonel_gps_id: 805
+# sonel_tg_id: 2105
 # !units: meters
 # !longitude: 129.8661
 # !latitude: 32.7350
@@ -145604,6 +147065,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-nago
+# psmsl_id: 1488, 860
 # !units: meters
 # !longitude: 136.880833
 # !latitude: 35.091383
@@ -145800,6 +147263,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-naha
+# ioc_code: naha
+# gloss_id: 81
+# psmsl_id: 1151
+# uhslc_id: 355
+# ptwc_code: naha
+# sonel_gps_id: 807
+# sonel_tg_id: 2111
 # !units: meters
 # !longitude: 127.6653
 # !latitude: 26.2133
@@ -145997,6 +147468,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-nain
+# ioc_code: nain
+# gloss_id: 224
+# psmsl_id: 1029
+# uhslc_id: 833
+# sonel_gps_id: 748
+# sonel_tg_id: 2101
 # !units: meters
 # !longitude: -61.6850
 # !latitude: 56.5432
@@ -146193,6 +147671,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-naka
+# psmsl_id: 1105
+# uhslc_id: 345
 # !units: meters
 # !longitude: 129.8478
 # !latitude: 29.8420
@@ -147175,6 +148656,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-naos
+# psmsl_id: 1783, 581
+# uhslc_id: 300
 # !units: meters
 # !longitude: -79.5329
 # !latitude: 8.9173
@@ -147371,6 +148855,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-napt
+# ioc_code: napt
+# psmsl_id: 1750
+# uhslc_id: 668
+# ptwc_code: napt
 # !units: meters
 # !longitude: 176.917000
 # !latitude: -39.483000
@@ -147567,6 +149056,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-napo
+# ioc_code: NA23
+# psmsl_id: 105, 129, 1531, 1535, 1611, 2092
+# ptwc_code: napo
+# sonel_gps_id: 3471
+# sonel_tg_id: 3468, 3469, 3470
 # !units: meters
 # !longitude: 14.269194
 # !latitude: 40.841406
@@ -147763,6 +149258,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-turt
+# psmsl_id: 1749
 # !units: meters
 # !longitude: 142.243800
 # !latitude: -10.504800
@@ -148155,6 +149652,9 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-narv
+# ioc_code: narv
+# psmsl_id: 312
 # !units: meters
 # !longitude: 17.425758
 # !latitude: 68.428284
@@ -148351,6 +149851,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-naur
+# ioc_code: naur, nauu
+# gloss_id: 114
+# psmsl_id: 1374, 1844
+# uhslc_id: 4
+# ptwc_code: nauu
+# sonel_gps_id: 750
+# sonel_tg_id: 2134, 2773
 # !units: meters
 # !longitude: 166.910000
 # !latitude: -0.532000
@@ -148939,6 +150447,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-nels
+# psmsl_id: 787
+# uhslc_id: 77
 # !units: meters
 # !longitude: 173.267000
 # !latitude: -41.267000
@@ -149528,6 +151039,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-neuv
+# psmsl_id: 192
 # !units: meters
 # !longitude: -71.5713
 # !latitude: 46.6962
@@ -149725,6 +151238,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-neww
+# psmsl_id: 1245
 # !units: meters
 # !longitude: -122.910000
 # !latitude: 49.200000
@@ -150117,6 +151632,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-nhav
+# ioc_code: nhav
+# psmsl_id: 1548
 # !units: meters
 # !longitude: 0.057028
 # !latitude: 50.781778
@@ -150313,6 +151831,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-npor
+# ioc_code: npor
+# psmsl_id: 1832
 # !units: meters
 # !longitude: -2.9874
 # !latitude: 51.5500
@@ -150705,6 +152226,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-nezu
+# psmsl_id: 752
+# sonel_gps_id: 776
+# sonel_tg_id: 2306
 # !units: meters
 # !longitude: 139.546117
 # !latitude: 38.563333
@@ -150901,6 +152426,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-nice
+# ioc_code: nice, nice2
+# psmsl_id: 1468
+# ptwc_code: nice
+# sonel_gps_id: 2014, 3542
+# sonel_tg_id: 1813
 # !units: meters
 # !longitude: 7.285257
 # !latitude: 43.695508
@@ -151097,6 +152628,9 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-nieu
+# ioc_code: nieu
+# psmsl_id: 489
 # !units: meters
 # !longitude: 2.728056
 # !latitude: 51.150555
@@ -151685,6 +153219,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-nish
+# psmsl_id: 1096
+# uhslc_id: 363
 # !units: meters
 # !longitude: 130.9922
 # !latitude: 30.7350
@@ -151881,6 +153418,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-kielp
+# psmsl_id: 789
+# sonel_gps_id: 2025, 2956
+# sonel_tg_id: 2563
 # !units: meters
 # !longitude: 10.140122
 # !latitude: 54.367331
@@ -152861,6 +154402,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ncpt
+# ioc_code: ncpt
+# ptwc_code: ncpt
 # !units: meters
 # !longitude: 173.048611
 # !latitude: -34.414722
@@ -153646,6 +155190,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-nosy
+# gloss_id: 15
+# psmsl_id: 1712, 926
+# uhslc_id: 150
+# sonel_tg_id: 2799
 # !units: meters
 # !longitude: 48.3000
 # !latitude: -13.4030
@@ -153842,6 +155391,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-noto
+# ioc_code: noto
+# ptwc_code: noto
 # !units: meters
 # !longitude: 137.155300
 # !latitude: 37.500800
@@ -154430,6 +155982,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-nkfa
+# ioc_code: nkfa, nkfa2
+# gloss_id: 125
+# psmsl_id: 1770, 1842
+# uhslc_id: 38
+# ptwc_code: nkf2, nkfa
+# sonel_gps_id: 894
+# sonel_tg_id: 2170
 # !units: meters
 # !longitude: -175.1967
 # !latitude: -21.1303
@@ -154626,6 +156186,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-godt
+# ioc_code: nuk1, nuuk
+# gloss_id: 225
+# psmsl_id: 915
+# uhslc_id: 820
+# sonel_gps_id: 3584
+# sonel_tg_id: 2877
 # !units: meters
 # !longitude: -51.720000
 # !latitude: 64.172000
@@ -154822,6 +156389,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-nyal
+# ioc_code: nyal
+# gloss_id: 345
+# psmsl_id: 1421
+# uhslc_id: 823
+# sonel_gps_id: 4222, 4471, 766, 767
+# sonel_tg_id: 2139
 # !units: meters
 # !longitude: 11.938000
 # !latitude: 78.938000
@@ -155608,6 +157182,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-odom
+# psmsl_id: 1097
 # !units: meters
 # !longitude: 130.689167
 # !latitude: 31.023617
@@ -156000,6 +157576,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-ogaj
+# psmsl_id: 1264
+# sonel_gps_id: 775
+# sonel_tg_id: 2118
 # !units: meters
 # !longitude: 139.7050
 # !latitude: 39.9445
@@ -156196,6 +157776,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-ogij
+# psmsl_id: 1344
+# sonel_gps_id: 780
+# sonel_tg_id: 2127
 # !units: meters
 # !longitude: 138.2811
 # !latitude: 37.8147
@@ -156588,6 +158172,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-okad
+# psmsl_id: 1091
 # !units: meters
 # !longitude: 139.391383
 # !latitude: 34.789450
@@ -156784,6 +158370,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-okin
+# psmsl_id: 1388
+# sonel_gps_id: 795
+# sonel_tg_id: 2135
 # !units: meters
 # !longitude: 127.824717
 # !latitude: 26.179450
@@ -156980,6 +158570,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-okus
+# psmsl_id: 1853
+# sonel_gps_id: 773
+# sonel_tg_id: 2171
 # !units: meters
 # !longitude: 139.489450
 # !latitude: 42.078617
@@ -157568,6 +159162,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-omin
+# psmsl_id: 679
 # !units: meters
 # !longitude: 141.145000
 # !latitude: 41.256383
@@ -157764,6 +159360,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-onah
+# psmsl_id: 635
 # !units: meters
 # !longitude: 140.891950
 # !latitude: 36.937500
@@ -157960,6 +159558,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-onis
+# psmsl_id: 1026
+# sonel_gps_id: 787
+# sonel_tg_id: 2099
 # !units: meters
 # !longitude: 136.823883
 # !latitude: 34.903617
@@ -158156,6 +159758,10 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-onsa
+# ioc_code: onsa
+# psmsl_id: 2331
+# sonel_gps_id: 770
 # !units: meters
 # !longitude: 11.919000
 # !latitude: 57.392000
@@ -158352,6 +159958,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-onsl
+# psmsl_id: 1631, 1660
 # !units: meters
 # !longitude: 115.131500
 # !latitude: -21.649700
@@ -158548,6 +160156,11 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-oste
+# ioc_code: oste, oste1
+# psmsl_id: 413
+# sonel_gps_id: 4795
+# sonel_tg_id: 2987
 # !units: meters
 # !longitude: 2.927000
 # !latitude: 51.234001
@@ -159332,6 +160945,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-osak
+# psmsl_id: 1099
 # !units: meters
 # !longitude: 135.4328
 # !latitude: 34.6581
@@ -159528,6 +161143,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-osca
+# ioc_code: osca
+# psmsl_id: 33
 # !units: meters
 # !longitude: 10.604861
 # !latitude: 59.678073
@@ -159920,6 +161538,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-oslo
+# ioc_code: oslo
+# psmsl_id: 62
+# sonel_gps_id: 2613
+# sonel_tg_id: 2611, 2612
 # !units: meters
 # !longitude: 10.734510
 # !latitude: 59.908559
@@ -161096,6 +162719,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-oura
+# psmsl_id: 1102
 # !units: meters
 # !longitude: 130.220550
 # !latitude: 32.976667
@@ -161292,6 +162917,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-owas
+# psmsl_id: 1146
 # !units: meters
 # !longitude: 136.207217
 # !latitude: 34.076383
@@ -162469,6 +164096,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-plrm
+# ioc_code: PA07
+# psmsl_id: 107, 2093
+# ptwc_code: pa07
 # !units: meters
 # !longitude: 13.371331
 # !latitude: 38.121411
@@ -162665,6 +164296,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-plnu
+# ioc_code: PL14
+# psmsl_id: 2082
+# sonel_gps_id: 3581
+# sonel_tg_id: 3580
 # !units: meters
 # !longitude: 15.275292
 # !latitude: 40.029911
@@ -162861,6 +164497,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Harbour Local Datum
 # confidence: 7
+# ssc_id: SSC-palm
+# ioc_code: palm
+# psmsl_id: 1087, 1892, 2061
+# sonel_gps_id: 731
+# sonel_tg_id: 2192, 2764, 3559
 # !units: meters
 # !longitude: 2.637500
 # !latitude: 39.560299
@@ -163057,6 +164698,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-plma
+# ioc_code: palm1
+# gloss_id: 329
+# psmsl_id: 1914
+# uhslc_id: 235
+# ptwc_code: palm
+# sonel_gps_id: 3597, 851
+# sonel_tg_id: 1987
 # !units: meters
 # !longitude: -22.9819
 # !latitude: 16.7528
@@ -163844,6 +165493,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-patr
+# psmsl_id: 1152
+# sonel_gps_id: 892
+# sonel_tg_id: 2112
 # !units: meters
 # !longitude: -123.4508
 # !latitude: 48.6535
@@ -164628,6 +166281,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pemba
+# ioc_code: pemba
+# gloss_id: 11
+# psmsl_id: 1298, 2227
+# uhslc_id: 192
+# ptwc_code: pemb
+# sonel_gps_id: 2957
+# sonel_tg_id: 2796
 # !units: meters
 # !longitude: 40.488000
 # !latitude: -12.967000
@@ -164824,6 +166485,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pena
+# psmsl_id: 1595
+# uhslc_id: 144
+# sonel_gps_id: 2636
+# sonel_tg_id: 2635
 # !units: meters
 # !longitude: 100.3462
 # !latitude: 5.4220
@@ -166197,6 +167863,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pisco
+# ioc_code: pisc2, pisco
 # !units: meters
 # !longitude: -76.25194
 # !latitude: -13.8194
@@ -167373,6 +169041,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-plim
+# ioc_code: plim
 # !units: meters
 # !longitude: 27.857500
 # !latitude: 35.927299
@@ -167570,6 +169240,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-poinh
+# psmsl_id: 193
 # !units: meters
 # !longitude: -123.2539
 # !latitude: 49.3375
@@ -167962,6 +169634,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-plons
+# psmsl_id: 1014, 301
 # !units: meters
 # !longitude: 144.613900
 # !latitude: -38.291900
@@ -168552,6 +170226,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-poins
+# psmsl_id: 1332, 2362
 # !units: meters
 # !longitude: -61.3629
 # !latitude: 45.5954
@@ -168749,6 +170425,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-poin
+# psmsl_id: 138, 1597
+# sonel_gps_id: 3317
+# sonel_tg_id: 3315, 3316
 # !units: meters
 # !longitude: -68.4732
 # !latitude: 48.5192
@@ -169535,6 +171215,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pntn
+# ioc_code: pntn
+# gloss_id: 261
+# psmsl_id: 2038, 938
+# uhslc_id: 234
+# ptwc_code: ptno
+# sonel_tg_id: 2883
 # !units: meters
 # !longitude: 11.8381
 # !latitude: -4.7797
@@ -169732,6 +171419,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-poinx
+# psmsl_id: 1138
 # !units: meters
 # !longitude: -64.8301
 # !latitude: 46.9628
@@ -169928,6 +171617,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pdas
+# ioc_code: pdas
+# gloss_id: 245
+# psmsl_id: 1885, 258
+# uhslc_id: 211
+# ptwc_code: pdas
+# sonel_gps_id: 811
+# sonel_tg_id: 1982
 # !units: meters
 # !longitude: -25.673000
 # !latitude: 37.735000
@@ -170713,6 +172410,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-ptaf
+# psmsl_id: 1392
 # !units: meters
 # !longitude: -70.8689
 # !latitude: 48.3338
@@ -170909,6 +172608,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-ptam
+# psmsl_id: 2072
 # !units: meters
 # !longitude: 150.866700
 # !latitude: -23.585000
@@ -171106,6 +172807,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-portj
+# psmsl_id: 392
+# uhslc_id: 273
 # !units: meters
 # !longitude: -59.1387
 # !latitude: 47.5801
@@ -171302,6 +173006,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-port
+# ioc_code: port, port2
+# psmsl_id: 1915, 459
+# ptwc_code: porb
+# sonel_tg_id: 1825
 # !units: meters
 # !longitude: -1.061555
 # !latitude: 45.568480
@@ -171891,6 +173600,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-ptdg
+# psmsl_id: 1471, 1479
 # !units: meters
 # !longitude: 145.4603
 # !latitude: -16.4820
@@ -172284,6 +173995,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-islaj
+# psmsl_id: 1772
 # !units: meters
 # !longitude: -6.189917
 # !latitude: 55.627583
@@ -172480,6 +174193,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-pter
+# psmsl_id: 1793
 # !units: meters
 # !longitude: -4.768056
 # !latitude: 54.085222
@@ -172676,6 +174391,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-ptfe
+# ioc_code: ptfe, ptfe2
+# psmsl_id: 2233
+# ptwc_code: ptfe
+# sonel_tg_id: 3164
 # !units: meters
 # !longitude: 6.717606
 # !latitude: 43.359072
@@ -172872,6 +174592,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-ptgi
+# psmsl_id: 1550
 # !units: meters
 # !longitude: 137.768300
 # !latitude: -35.021800
@@ -173069,6 +174791,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-portf
+# ioc_code: phbc
+# psmsl_id: 1071
+# ptwc_code: phbc
+# sonel_gps_id: 3207
+# sonel_tg_id: 3206
 # !units: meters
 # !longitude: -127.4890
 # !latitude: 50.7220
@@ -173265,6 +174993,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-ptln
+# ioc_code: ptln, ptln2
+# psmsl_id: 2336
+# ptwc_code: ptln
+# sonel_tg_id: 3383
 # !units: meters
 # !longitude: 3.064097
 # !latitude: 43.014705
@@ -173461,6 +175194,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-ptlc
+# psmsl_id: 1076, 230
 # !units: meters
 # !longitude: 135.870100
 # !latitude: -34.715900
@@ -173657,6 +175392,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptlu
+# ioc_code: ptlu
+# gloss_id: 18
+# psmsl_id: 1673, 477
+# uhslc_id: 103
+# ptwc_code: ptlu
+# sonel_gps_id: 2350
+# sonel_tg_id: 2351
 # !units: meters
 # !longitude: 57.495000
 # !latitude: -20.155000
@@ -174245,6 +175988,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptno
+# psmsl_id: 836
+# uhslc_id: 701
 # !units: meters
 # !longitude: 16.8669
 # !latitude: -29.2497
@@ -174441,6 +176187,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-ptpi
+# psmsl_id: 1168, 216
 # !units: meters
 # !longitude: 138.011700
 # !latitude: -33.177600
@@ -174638,6 +176386,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-porta
+# psmsl_id: 842
 # !units: meters
 # !longitude: -124.4206
 # !latitude: 48.5549
@@ -174834,6 +176584,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptro
+# ioc_code: ptro
+# gloss_id: 210
+# psmsl_id: 2003, 744
+# uhslc_id: 782
+# ptwc_code: ptro
+# sonel_gps_id: 2719, 3018
+# sonel_tg_id: 2718
 # !units: meters
 # !longitude: -76.8447
 # !latitude: 17.9348
@@ -175031,6 +176789,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-portm
+# psmsl_id: 137
 # !units: meters
 # !longitude: -72.6193
 # !latitude: 46.2725
@@ -175620,6 +177380,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-tudy
+# ioc_code: tudy
+# psmsl_id: 1247
+# sonel_gps_id: 3178
+# sonel_tg_id: 3160
 # !units: meters
 # !longitude: -3.445852
 # !latitude: 47.644274
@@ -176012,6 +177777,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pvic
+# psmsl_id: 1017, 1692
 # !units: meters
 # !longitude: 55.458000
 # !latitude: -4.622000
@@ -176208,6 +177975,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-vanu
+# ioc_code: vanu
+# gloss_id: 348
+# psmsl_id: 1464, 1841
+# uhslc_id: 46
+# ptwc_code: porv, vanu
+# sonel_gps_id: 3369, 874
+# sonel_tg_id: 2169
 # !units: meters
 # !longitude: 168.300000
 # !latitude: -17.767000
@@ -176404,6 +178179,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-ptwe
+# psmsl_id: 1463
 # !units: meters
 # !longitude: 146.4666
 # !latitude: -38.7017
@@ -176600,6 +178377,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-avon
+# ioc_code: avon
+# psmsl_id: 2011, 257
 # !units: meters
 # !longitude: -2.728400
 # !latitude: 51.500000
@@ -176796,6 +178576,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptsp
+# ioc_code: ptsp
+# gloss_id: 203
+# psmsl_id: 415
+# uhslc_id: 248
+# ptwc_code: ptsp
+# sonel_gps_id: 3512
+# sonel_tg_id: 2870
 # !units: meters
 # !longitude: -61.517000
 # !latitude: 10.650000
@@ -176992,6 +178780,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-ptis
+# ioc_code: ptis
+# psmsl_id: 2284
 # !units: meters
 # !longitude: -4.834405
 # !latitude: 50.594177
@@ -177189,6 +178980,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-portp
+# psmsl_id: 951
 # !units: meters
 # !longitude: -71.8772
 # !latitude: 46.6812
@@ -177385,6 +179178,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-peit
+# ioc_code: PE09, PE21
+# psmsl_id: 2083
 # !units: meters
 # !longitude: 13.526844
 # !latitude: 37.285756
@@ -177777,6 +179573,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-porp
+# ioc_code: porp
+# psmsl_id: 1215
 # !units: meters
 # !longitude: -5.120028
 # !latitude: 54.842556
@@ -177973,6 +179772,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-ptmt
+# ioc_code: ptmt
+# psmsl_id: 350
+# sonel_gps_id: 2011
+# sonel_tg_id: 2342
 # !units: meters
 # !longitude: -1.111250
 # !latitude: 50.802194
@@ -178169,6 +179973,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptpr
+# ioc_code: ptpr
+# gloss_id: 209
+# psmsl_id: 2345, 583
+# uhslc_id: 799
+# ptwc_code: ptpr
+# sonel_gps_id: 2717
+# sonel_tg_id: 2716
 # !units: meters
 # !longitude: -72.3499
 # !latitude: 18.5499
@@ -178758,6 +180570,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-prig
+# ioc_code: prgi, prig
+# psmsl_id: 2197
+# uhslc_id: 125
+# ptwc_code: prgi, prig
 # !units: meters
 # !longitude: 111.7299
 # !latitude: -8.2889
@@ -178955,6 +180772,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-prin
+# ioc_code: prin, prin2
+# gloss_id: 155
+# psmsl_id: 167
+# uhslc_id: 540
+# sonel_gps_id: 2020
+# sonel_tg_id: 2248
 # !units: meters
 # !longitude: -130.3245
 # !latitude: 54.3170
@@ -179543,6 +181367,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-laru
+# ioc_code: laru2
+# gloss_id: 339
+# psmsl_id: 1846
+# uhslc_id: 111, 121
+# ptwc_code: laru
+# sonel_gps_id: 3407, 838
+# sonel_tg_id: 1977
 # !units: meters
 # !longitude: 55.5310
 # !latitude: -4.6744
@@ -179739,6 +181571,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptan
+# ioc_code: ptan, ptan2
+# gloss_id: 164
+# psmsl_id: 1015
+# uhslc_id: 672
+# ptwc_code: ptan
+# sonel_gps_id: 2960
+# sonel_tg_id: 2852
 # !units: meters
 # !longitude: -96.4914
 # !latitude: 15.6656
@@ -180327,6 +182167,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptco
+# ioc_code: pcor
+# psmsl_id: 557
+# uhslc_id: 780
+# ptwc_code: pcor
 # !units: meters
 # !longitude: -87.9408
 # !latitude: 15.8390
@@ -180523,6 +182368,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-dese
+# ioc_code: dese
+# gloss_id: 190
+# psmsl_id: 185
+# uhslc_id: 286
+# ptwc_code: dese
+# sonel_gps_id: 2050, 3567, 946
+# sonel_tg_id: 2562
 # !units: meters
 # !longitude: -65.91469444
 # !latitude: -47.75357778
@@ -180719,6 +182572,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-madry
+# ioc_code: madry
+# gloss_id: 191
+# psmsl_id: 2305, 501
+# uhslc_id: 731
+# ptwc_code: madr
+# sonel_gps_id: 924
+# sonel_tg_id: 2339
 # !units: meters
 # !longitude: -65.030000
 # !latitude: -42.763000
@@ -180915,6 +182776,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pmon
+# ioc_code: pmon, pmon2
+# gloss_id: 178
+# psmsl_id: 472
+# uhslc_id: 684
+# ptwc_code: pmon
+# sonel_tg_id: 2858
 # !units: meters
 # !longitude: -72.9607
 # !latitude: -41.4851
@@ -181111,6 +182979,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptpl
+# ioc_code: ptpl
+# psmsl_id: 2343, 577
+# uhslc_id: 777
+# ptwc_code: ppla
+# sonel_gps_id: 3556
+# sonel_tg_id: 3555
 # !units: meters
 # !longitude: -70.7008
 # !latitude: 19.8014
@@ -181307,6 +183182,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-desea
+# psmsl_id: 207
+# uhslc_id: 380
 # !units: meters
 # !longitude: 118.7358
 # !latitude: 9.7449
@@ -181503,6 +183381,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptqu
+# uhslc_id: 301
 # !units: meters
 # !longitude: -90.785000
 # !latitude: 13.922000
@@ -181699,6 +183579,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pwil
+# ioc_code: pwil, pwil2
+# psmsl_id: 1122
+# uhslc_id: 287
+# ptwc_code: pwil
 # !units: meters
 # !longitude: -67.6082
 # !latitude: -54.9326
@@ -181895,6 +183780,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-ptca
+# ioc_code: ptca
+# psmsl_id: 2342
+# uhslc_id: 776
+# ptwc_code: pcan
+# sonel_gps_id: 3558
+# sonel_tg_id: 3557
 # !units: meters
 # !longitude: -68.380000
 # !latitude: 18.500000
@@ -182091,6 +183983,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-punt
+# ioc_code: punt
+# psmsl_id: 1287, 464
+# uhslc_id: 396
+# ptwc_code: punt
+# sonel_gps_id: 2661
+# sonel_tg_id: 2660
 # !units: meters
 # !longitude: -84.8304
 # !latitude: 9.9697
@@ -182483,6 +184382,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-puyt
+# ioc_code: puyt
+# ptwc_code: puyt
 # !units: meters
 # !longitude: 166.583333
 # !latitude: -46.083333
@@ -182875,6 +184777,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-qaqo
+# ioc_code: qaqo
+# gloss_id: 344
+# psmsl_id: 1782, 2170
+# uhslc_id: 299
+# sonel_gps_id: 821
+# sonel_tg_id: 2317
 # !units: meters
 # !longitude: -46.033000
 # !latitude: 60.717000
@@ -183269,6 +185178,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-quee
+# ioc_code: qcbc
+# psmsl_id: 829
+# ptwc_code: qcbc
 # !units: meters
 # !longitude: -132.0720
 # !latitude: 53.2520
@@ -183465,6 +185378,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-queev
+# psmsl_id: 1776
 # !units: meters
 # !longitude: 144.6640
 # !latitude: -38.2715
@@ -183661,6 +185576,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-quepo
+# ioc_code: quepo
+# gloss_id: 167
+# psmsl_id: 2189, 844
+# uhslc_id: 87
+# ptwc_code: quep
+# sonel_tg_id: 2854
 # !units: meters
 # !longitude: -84.167000
 # !latitude: 9.400000
@@ -183857,6 +185779,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-quin
+# ioc_code: quin
+# gloss_id: 75
+# psmsl_id: 1449, 2267
+# uhslc_id: 381
+# ptwc_code: quin
+# sonel_tg_id: 2826
 # !units: meters
 # !longitude: 109.2513
 # !latitude: 13.7680
@@ -184053,6 +185982,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-quin
+# ioc_code: quin
+# gloss_id: 75
+# psmsl_id: 1449, 2267
+# uhslc_id: 381
+# ptwc_code: quin
+# sonel_tg_id: 2826
 # !units: meters
 # !longitude: 109.255000
 # !latitude: 13.775000
@@ -184249,6 +186185,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-raba
+# ioc_code: raba
+# gloss_id: 65
+# psmsl_id: 1164, 1185
+# uhslc_id: 10
+# ptwc_code: raba
+# sonel_tg_id: 2820
 # !units: meters
 # !longitude: 152.1738
 # !latitude: -4.2006
@@ -184837,6 +186780,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-rangi
+# ioc_code: rangi
+# gloss_id: 355
+# psmsl_id: 2216
+# uhslc_id: 455
+# ptwc_code: rang
+# sonel_gps_id: 2269
+# sonel_tg_id: 2259
 # !units: meters
 # !longitude: -147.706021
 # !latitude: -14.945817
@@ -185622,6 +187573,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-reyk
+# ioc_code: reyk
+# gloss_id: 229
+# psmsl_id: 638
+# uhslc_id: 288
+# ptwc_code: reyk
+# sonel_gps_id: 828
+# sonel_tg_id: 1984
 # !units: meters
 # !longitude: -21.939890
 # !latitude: 64.150581
@@ -186210,6 +188169,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-rich
+# psmsl_id: 1443
+# uhslc_id: 188
+# sonel_gps_id: 826
+# sonel_tg_id: 2200
 # !units: meters
 # !longitude: 32.083000
 # !latitude: -28.800000
@@ -186406,6 +188370,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-riki
+# ioc_code: gamb, riki
+# gloss_id: 138
+# psmsl_id: 1253, 2370
+# uhslc_id: 16
+# ptwc_code: gamb, riki
+# sonel_gps_id: 2015, 3418
+# sonel_tg_id: 1985, 3410
 # !units: meters
 # !longitude: -134.968900
 # !latitude: -23.117767
@@ -186798,6 +188770,11 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-ring
+# ioc_code: ring
+# psmsl_id: 2111
+# sonel_gps_id: 2951
+# sonel_tg_id: 2950
 # !units: meters
 # !longitude: 12.112500
 # !latitude: 57.249700
@@ -187191,6 +189168,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-rivir
+# psmsl_id: 1284
 # !units: meters
 # !longitude: -69.5718
 # !latitude: 47.8468
@@ -187387,6 +189366,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-anzio
+# ioc_code: AZ42
+# psmsl_id: 2136
 # !units: meters
 # !longitude: 12.634800
 # !latitude: 41.446899
@@ -187583,6 +189565,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-barii
+# ioc_code: BA05
+# psmsl_id: 2075
 # !units: meters
 # !longitude: 16.865999
 # !latitude: 41.140202
@@ -187779,6 +189764,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-cagl
+# ioc_code: CA02
+# psmsl_id: 104, 2089
+# ptwc_code: cagl
+# sonel_gps_id: 2412, 3575, 645
+# sonel_tg_id: 2252
 # !units: meters
 # !longitude: 9.114300
 # !latitude: 39.210201
@@ -187975,6 +189966,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-catn
+# ioc_code: CT03
+# psmsl_id: 102, 2094
+# ptwc_code: cata
+# sonel_gps_id: 2253
+# sonel_tg_id: 2251
 # !units: meters
 # !longitude: 15.093800
 # !latitude: 37.498100
@@ -188171,6 +190168,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-civi
+# ioc_code: CI20
+# psmsl_id: 106, 2091
+# ptwc_code: ci20
+# sonel_gps_id: 2256
+# sonel_tg_id: 2255
 # !units: meters
 # !longitude: 11.789700
 # !latitude: 42.094002
@@ -188367,6 +190370,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-gata
+# ioc_code: GA37
+# psmsl_id: 2137
 # !units: meters
 # !longitude: 13.589700
 # !latitude: 41.209999
@@ -188563,6 +190569,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-gino
+# ioc_code: GI20
+# psmsl_id: 2138
 # !units: meters
 # !longitude: 15.193300
 # !latitude: 38.784000
@@ -188759,6 +190768,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-itit
+# ioc_code: IT45
+# psmsl_id: 2248
 # !units: meters
 # !longitude: 15.501600
 # !latitude: 42.118900
@@ -188955,6 +190967,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-lmpd
+# ioc_code: LA23
+# psmsl_id: 2079
+# ptwc_code: lamp
+# sonel_gps_id: 722
+# sonel_tg_id: 2226
 # !units: meters
 # !longitude: 12.604400
 # !latitude: 35.499901
@@ -189151,6 +191169,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-lasp
+# ioc_code: LA38
+# psmsl_id: 2139
+# sonel_gps_id: 3436
+# sonel_tg_id: 3435
 # !units: meters
 # !longitude: 9.857600
 # !latitude: 44.096600
@@ -189347,6 +191370,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-lirn
+# ioc_code: LI11
+# psmsl_id: 110, 2080
 # !units: meters
 # !longitude: 10.299300
 # !latitude: 43.546299
@@ -189543,6 +191569,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-mdic
+# ioc_code: MC41
+# psmsl_id: 2140
+# sonel_gps_id: 3438
+# sonel_tg_id: 3437
 # !units: meters
 # !longitude: 10.238300
 # !latitude: 42.742599
@@ -189739,6 +191770,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-orta
+# ioc_code: OR24
+# psmsl_id: 2097, 972
 # !units: meters
 # !longitude: 14.414900
 # !latitude: 42.355900
@@ -189935,6 +191969,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-otro
+# ioc_code: OT15
+# psmsl_id: 2096, 990
+# ptwc_code: otra
+# sonel_gps_id: 3444
+# sonel_tg_id: 3442, 3443
 # !units: meters
 # !longitude: 18.497101
 # !latitude: 40.147202
@@ -190131,6 +192171,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-ponz
+# ioc_code: PO40
+# psmsl_id: 2141
+# ptwc_code: po40
 # !units: meters
 # !longitude: 12.965600
 # !latitude: 40.895199
@@ -190327,6 +192371,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-ptts
+# ioc_code: PT17
+# psmsl_id: 2084
 # !units: meters
 # !longitude: 8.403900
 # !latitude: 40.842201
@@ -190523,6 +192570,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-ravn
+# ioc_code: RA10
+# psmsl_id: 100, 2085, 2361
 # !units: meters
 # !longitude: 12.282700
 # !latitude: 44.492100
@@ -190719,6 +192769,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-rcit
+# ioc_code: RC09
+# psmsl_id: 2142, 670
+# sonel_gps_id: 3150
+# sonel_tg_id: 3148, 3149
 # !units: meters
 # !longitude: 15.648900
 # !latitude: 38.121700
@@ -190915,6 +192970,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-salrn
+# ioc_code: SA16
+# psmsl_id: 2086
 # !units: meters
 # !longitude: 14.750800
 # !latitude: 40.676601
@@ -191111,6 +193169,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-sbdt
+# ioc_code: SB36
+# psmsl_id: 2143
+# sonel_gps_id: 3446
+# sonel_tg_id: 3445
 # !units: meters
 # !longitude: 13.889800
 # !latitude: 42.955101
@@ -191307,6 +193370,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-scia
+# ioc_code: SC43
+# psmsl_id: 2047, 2224
 # !units: meters
 # !longitude: 13.0779
 # !latitude: 37.5043
@@ -191896,6 +193962,9 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-rodb
+# ioc_code: rodb
+# psmsl_id: 762
 # !units: meters
 # !longitude: 11.350000
 # !latitude: 54.650002
@@ -192092,6 +194161,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-rodr
+# ioc_code: rodr
+# gloss_id: 19
+# psmsl_id: 1672
+# uhslc_id: 105
+# ptwc_code: rodr
+# sonel_gps_id: 2558
+# sonel_tg_id: 2557
 # !units: meters
 # !longitude: 63.4202
 # !latitude: -19.6809
@@ -192680,6 +194757,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-rorv
+# ioc_code: rorv
+# gloss_id: 234
+# psmsl_id: 1241
+# uhslc_id: 803
+# sonel_gps_id: 3561
+# sonel_tg_id: 2879
 # !units: meters
 # !longitude: 11.2409
 # !latitude: 64.8612
@@ -193073,6 +195157,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-rose
+# ioc_code: rose
+# psmsl_id: 2344
+# uhslc_id: 786
+# ptwc_code: rose
 # !units: meters
 # !longitude: -61.3907
 # !latitude: 15.2984
@@ -193857,6 +195946,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-roth
+# ioc_code: rothe
+# gloss_id: 342
+# psmsl_id: 1931
+# uhslc_id: 832
+# ptwc_code: roth
+# sonel_gps_id: 2007
+# sonel_tg_id: 1991
 # !units: meters
 # !longitude: -68.133000
 # !latitude: -67.567000
@@ -195427,6 +197524,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sade
+# ioc_code: sade, sadp
+# uhslc_id: 417
+# ptwc_code: sadp
+# sonel_gps_id: 2943
+# sonel_tg_id: 2942
 # !units: meters
 # !longitude: 110.7979
 # !latitude: -8.1912
@@ -195623,6 +197726,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-sado
+# ioc_code: sado
+# ptwc_code: sado
 # !units: meters
 # !longitude: 138.5172
 # !latitude: 38.3186
@@ -196015,6 +198121,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-saig
+# ioc_code: saig
+# psmsl_id: 1095
+# ptwc_code: saig
 # !units: meters
 # !longitude: 133.331117
 # !latitude: 36.201383
@@ -196211,6 +198321,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-poinq
+# psmsl_id: 1078, 2332
+# sonel_tg_id: 3477
 # !units: meters
 # !longitude: -2.246350
 # !latitude: 47.140383
@@ -196407,6 +198520,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-scoa
+# ioc_code: scoa, scoa2
+# psmsl_id: 469
+# ptwc_code: scoa
+# sonel_gps_id: 835
+# sonel_tg_id: 1836
 # !units: meters
 # !longitude: -1.681620
 # !latitude: 43.395240
@@ -196801,6 +198920,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-stje
+# psmsl_id: 1223
 # !units: meters
 # !longitude: -70.2743
 # !latitude: 47.2161
@@ -196998,6 +199119,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-stjoe
+# psmsl_id: 1244
 # !units: meters
 # !longitude: -70.3653
 # !latitude: 47.4488
@@ -197194,6 +199317,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-stmt
+# ioc_code: stmt
+# ptwc_code: stmt
 # !units: meters
 # !longitude: -63.085434
 # !latitude: 18.083330
@@ -197391,6 +199517,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-stea
+# psmsl_id: 1199
 # !units: meters
 # !longitude: -66.4858
 # !latitude: 49.1340
@@ -197587,6 +199715,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-saka
+# psmsl_id: 811
 # !units: meters
 # !longitude: 133.243050
 # !latitude: 35.547783
@@ -197979,6 +200109,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sala
+# ioc_code: sala
+# gloss_id: 4
+# psmsl_id: 1754
+# uhslc_id: 114
+# ptwc_code: sala
+# sonel_tg_id: 2791
 # !units: meters
 # !longitude: 54.007000
 # !latitude: 16.935000
@@ -198371,6 +200508,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sali
+# ioc_code: sali, sali2
+# psmsl_id: 689
+# uhslc_id: 394
+# ptwc_code: sali
+# sonel_gps_id: 2287, 3546
+# sonel_tg_id: 2288
 # !units: meters
 # !longitude: -95.203333
 # !latitude: 16.170278
@@ -198960,6 +201104,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-salv
+# ioc_code: salv, Salv2, salv3
+# gloss_id: 334
+# psmsl_id: 578
+# uhslc_id: 708
+# ptwc_code: salv
+# sonel_gps_id: 2034, 2657, 3084
+# sonel_tg_id: 2345
 # !units: meters
 # !longitude: -38.5159
 # !latitude: -12.9650
@@ -199156,6 +201308,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sana
+# ioc_code: sana
+# psmsl_id: 2116
+# uhslc_id: 737
+# ptwc_code: sana
 # !units: meters
 # !longitude: -81.7020
 # !latitude: 12.5680
@@ -199352,6 +201509,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sanc
+# psmsl_id: 1221
+# uhslc_id: 674
 # !units: meters
 # !longitude: -112.1203
 # !latitude: 24.7874
@@ -199744,6 +201904,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sanf
+# ioc_code: sanf, sanf3
+# gloss_id: 177
+# psmsl_id: 1751
+# uhslc_id: 35
+# ptwc_code: sanf
+# sonel_tg_id: 2857
 # !units: meters
 # !longitude: -80.108548
 # !latitude: -26.292215
@@ -199940,6 +202107,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sanjo
+# psmsl_id: 1983, 777, 973
+# uhslc_id: 675
 # !units: meters
 # !longitude: -90.833000
 # !latitude: 13.917000
@@ -200136,6 +202306,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sjua
+# ioc_code: sjua2, sjuan
+# ptwc_code: sjua
 # !units: meters
 # !longitude: -75.16027
 # !latitude: -15.35527
@@ -200528,6 +202701,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sanda
+# psmsl_id: 1834
+# uhslc_id: 389
+# sonel_gps_id: 2648
+# sonel_tg_id: 2647
 # !units: meters
 # !longitude: 118.0842
 # !latitude: 5.8164
@@ -200724,6 +202902,9 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-sandn
+# ioc_code: Sandn
+# psmsl_id: 2398
 # !units: meters
 # !longitude: 5.746613
 # !latitude: 58.868233
@@ -200920,6 +203101,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-sdpr
+# ioc_code: sdpr
+# psmsl_id: 2278
 # !units: meters
 # !longitude: -1.153170
 # !latitude: 50.651120
@@ -201116,6 +203300,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sant
+# ioc_code: sant
+# psmsl_id: 1472
+# uhslc_id: 30
+# ptwc_code: sant
+# sonel_gps_id: 677, 679
+# sonel_tg_id: 1996, 2776
 # !units: meters
 # !longitude: -90.3130
 # !latitude: -0.7485
@@ -201312,6 +203503,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sama
+# ioc_code: sama, sama2
+# uhslc_id: 738
+# ptwc_code: sam2, sama
+# sonel_gps_id: 3071
 # !units: meters
 # !longitude: -74.2215
 # !latitude: 11.2352
@@ -201508,6 +203704,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-saot
+# ioc_code: saot
+# gloss_id: 260
+# psmsl_id: 1665, 2245
+# uhslc_id: 225
+# sonel_gps_id: 1932
+# sonel_tg_id: 1864
 # !units: meters
 # !longitude: 6.737000
 # !latitude: 0.348000
@@ -202097,6 +204300,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-saum
+# ioc_code: saum
+# psmsl_id: 2274
+# uhslc_id: 420
+# ptwc_code: saum
 # !units: meters
 # !longitude: 131.2905
 # !latitude: -7.9828
@@ -202294,6 +204502,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-sava
+# psmsl_id: 1280
 # !units: meters
 # !longitude: -56.7004
 # !latitude: 51.3327
@@ -202490,6 +204700,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-scarl
+# psmsl_id: 2417, 946
 # !units: meters
 # !longitude: -0.390270
 # !latitude: 54.282480
@@ -203862,6 +206074,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-scot
+# gloss_id: 134
+# psmsl_id: 2029
+# uhslc_id: 663
+# sonel_gps_id: 740
+# sonel_tg_id: 2103
 # !units: meters
 # !longitude: 166.767000
 # !latitude: -77.850000
@@ -204255,6 +206473,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sedi
+# psmsl_id: 1702
+# uhslc_id: 324
 # !units: meters
 # !longitude: 104.1151
 # !latitude: 1.9305
@@ -204843,6 +207064,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-sete
+# ioc_code: sete, sete2
+# psmsl_id: 958
+# ptwc_code: sete
+# sonel_gps_id: 1905
+# sonel_tg_id: 1847
 # !units: meters
 # !longitude: 3.699105
 # !latitude: 43.397633
@@ -205235,6 +207462,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-sscr
+# ioc_code: sscr
+# psmsl_id: 2285
 # !units: meters
 # !longitude: -2.699983
 # !latitude: 51.574267
@@ -205431,6 +207661,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Harbour Local Datum
 # confidence: 7
+# ssc_id: SSC-sevl
+# ioc_code: sev2
+# psmsl_id: 2357
 # !units: meters
 # !longitude: -6.007700
 # !latitude: 37.318501
@@ -205627,6 +207860,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-shan
+# psmsl_id: 1406
+# uhslc_id: 641
 # !units: meters
 # !longitude: 115.3479
 # !latitude: 22.7581
@@ -206020,6 +208256,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-shee
+# ioc_code: shee, shee2
+# psmsl_id: 3, 334
+# sonel_gps_id: 3263, 841
+# sonel_tg_id: 2187, 2748, 3262
 # !units: meters
 # !longitude: 0.7431
 # !latitude: 51.4422
@@ -206216,6 +208457,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-siba
+# psmsl_id: 952
 # !units: meters
 # !longitude: 139.753617
 # !latitude: 35.636950
@@ -206804,6 +209047,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-shime
+# psmsl_id: 808
 # !units: meters
 # !longitude: 138.517500
 # !latitude: 35.011667
@@ -207392,6 +209637,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-shir
+# psmsl_id: 1150
 # !units: meters
 # !longitude: 135.375283
 # !latitude: 33.683617
@@ -207784,6 +210031,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-shut
+# psmsl_id: 1569, 1575
 # !units: meters
 # !longitude: 148.7882
 # !latitude: -20.2921
@@ -207980,6 +210229,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sibo
+# ioc_code: sib2, sibo
+# psmsl_id: 1752, 356
+# uhslc_id: 122
+# ptwc_code: sib2, sibo
 # !units: meters
 # !longitude: 98.767000
 # !latitude: 1.750000
@@ -208569,6 +210823,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sitin
+# ioc_code: sitin
+# gloss_id: 268
+# psmsl_id: 826
+# uhslc_id: 221
+# ptwc_code: sitn
+# sonel_gps_id: 842
+# sonel_tg_id: 2201
 # !units: meters
 # !longitude: 18.4366
 # !latitude: -34.1866
@@ -208961,6 +211223,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-sine
+# psmsl_id: 1456
 # !units: meters
 # !longitude: -8.887999
 # !latitude: 37.949001
@@ -209157,6 +211421,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sisi
+# psmsl_id: 1781
+# uhslc_id: 296
 # !units: meters
 # !longitude: -53.6761
 # !latitude: 66.9417
@@ -209745,6 +212012,11 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-skan
+# ioc_code: skan
+# psmsl_id: 2108
+# sonel_gps_id: 2076
+# sonel_tg_id: 2329
 # !units: meters
 # !longitude: 12.829400
 # !latitude: 55.416700
@@ -210137,6 +212409,9 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# ssc_id: SSC-slip
+# ioc_code: slip
+# psmsl_id: 98
 # !units: meters
 # !longitude: 10.8253
 # !latitude: 55.2878
@@ -210333,6 +212608,12 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-smog
+# ioc_code: smog
+# psmsl_id: 179, 97
+# uhslc_id: 818
+# sonel_gps_id: 2080
+# sonel_tg_id: 2326, 2741
 # !units: meters
 # !longitude: 11.217800
 # !latitude: 58.353600
@@ -210725,6 +213006,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-sole
+# ioc_code: sole, sole2
+# psmsl_id: 2208
+# sonel_gps_id: 3210
+# sonel_tg_id: 3177
 # !units: meters
 # !longitude: 9.403830
 # !latitude: 41.856856
@@ -210921,6 +213207,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-soma
+# psmsl_id: 1345
+# sonel_gps_id: 777
+# sonel_tg_id: 2128
 # !units: meters
 # !longitude: 140.961667
 # !latitude: 37.830550
@@ -211511,6 +213801,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-sook
+# psmsl_id: 921
 # !units: meters
 # !longitude: -123.7260
 # !latitude: 48.3694
@@ -212688,6 +214980,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sthl
+# ioc_code: sthl, sthl2
+# gloss_id: 264
+# psmsl_id: 1845
+# uhslc_id: 292
+# ptwc_code: sthl
+# sonel_gps_id: 2576
+# sonel_tg_id: 1986
 # !units: meters
 # !longitude: -5.717000
 # !latitude: -15.917000
@@ -213081,6 +215381,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-stmr
+# ioc_code: stmr
+# psmsl_id: 1855
+# sonel_gps_id: 3257
+# sonel_tg_id: 3256
 # !units: meters
 # !longitude: -6.3164
 # !latitude: 49.9185
@@ -213669,6 +215974,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-stav
+# ioc_code: stav
+# psmsl_id: 47
+# sonel_gps_id: 846
+# sonel_tg_id: 2265
 # !units: meters
 # !longitude: 5.730121
 # !latitude: 58.974339
@@ -214061,6 +216371,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-stens
+# ioc_code: sten
+# psmsl_id: 2112
 # !units: meters
 # !longitude: 11.832500
 # !latitude: 58.093300
@@ -214257,6 +216570,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-jers
+# ioc_code: jers
+# psmsl_id: 1795, 494, 694
 # !units: meters
 # !longitude: -2.116700
 # !latitude: 49.183300
@@ -214453,6 +216769,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-stor
+# ioc_code: stor, stor2
+# gloss_id: 238
+# psmsl_id: 314
+# uhslc_id: 295
+# sonel_gps_id: 1908
+# sonel_tg_id: 2189
 # !units: meters
 # !longitude: -6.3889
 # !latitude: 58.2072
@@ -215237,6 +217560,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-stmb
+# ioc_code: ST44
+# psmsl_id: 2247
 # !units: meters
 # !longitude: 15.251625
 # !latitude: 38.817481
@@ -215629,6 +217955,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-sumt
+# ioc_code: sumt
+# psmsl_id: 247, 259
+# uhslc_id: 667
+# ptwc_code: sumt
+# sonel_gps_id: 922
+# sonel_tg_id: 2335, 3222
 # !units: meters
 # !longitude: 172.772222
 # !latitude: -43.570556
@@ -215825,6 +218158,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-sumo
+# psmsl_id: 1098
 # !units: meters
 # !longitude: 134.901117
 # !latitude: 34.346667
@@ -216609,6 +218944,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-viti
+# ioc_code: viti
+# gloss_id: 122
+# psmsl_id: 1327, 2356, 976
+# uhslc_id: 18
+# ptwc_code: suva, viti
+# sonel_gps_id: 849
+# sonel_tg_id: 2216
 # !units: meters
 # !longitude: 178.423600
 # !latitude: -18.134200
@@ -216805,6 +219148,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-swpr
+# ioc_code: swpr
+# psmsl_id: 2279
 # !units: meters
 # !longitude: -1.949180
 # !latitude: 50.609350
@@ -217001,6 +219347,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-sydn
+# gloss_id: 57
+# psmsl_id: 1173, 196, 197, 549, 65
+# uhslc_id: 333
+# sonel_gps_id: 2405, 3380, 3381, 3382
+# sonel_tg_id: 2403, 2404
 # !units: meters
 # !longitude: 151.225800
 # !latitude: -33.854700
@@ -217393,6 +219745,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-syow
+# ioc_code: syow
+# gloss_id: 95
+# psmsl_id: 1396
+# uhslc_id: 127
+# ptwc_code: syow
+# sonel_gps_id: 850
+# sonel_tg_id: 2000
 # !units: meters
 # !longitude: 39.600000
 # !latitude: -69.000000
@@ -217786,6 +220146,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-tado
+# psmsl_id: 1219
 # !units: meters
 # !longitude: -69.7143
 # !latitude: 48.1379
@@ -217982,6 +220344,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-tago
+# psmsl_id: 1437
+# sonel_gps_id: 785
+# sonel_tg_id: 2141
 # !units: meters
 # !longitude: 138.763883
 # !latitude: 34.807217
@@ -218178,6 +220544,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-taji
+# psmsl_id: 1148
+# sonel_gps_id: 789
+# sonel_tg_id: 2110
 # !units: meters
 # !longitude: 134.316117
 # !latitude: 35.593617
@@ -218374,6 +220744,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-taka
+# psmsl_id: 1789, 847
 # !units: meters
 # !longitude: 134.056950
 # !latitude: 34.351383
@@ -218570,6 +220942,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tako
+# ioc_code: tako, tkdi
+# gloss_id: 335
+# psmsl_id: 331
+# uhslc_id: 231
+# ptwc_code: tako, tkdi
+# sonel_gps_id: 2037, 3514
+# sonel_tg_id: 2346
 # !units: meters
 # !longitude: -1.7450
 # !latitude: 4.8825
@@ -218766,6 +221146,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tala
+# ioc_code: tala, tala2
+# psmsl_id: 2186, 475
+# uhslc_id: 92
+# ptwc_code: tala
 # !units: meters
 # !longitude: -81.2828
 # !latitude: -4.5752
@@ -219355,6 +221740,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-tgud
+# ioc_code: tang
+# psmsl_id: 2390
 # !units: meters
 # !longitude: 11.872200
 # !latitude: 57.682100
@@ -219551,6 +221939,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tjls
+# ioc_code: tjls, tlbji
+# uhslc_id: 416
+# ptwc_code: tlbj
+# sonel_gps_id: 2941
+# sonel_tg_id: 2940
 # !units: meters
 # !longitude: 105.6599
 # !latitude: -6.4803
@@ -219747,6 +222141,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-tann
+# psmsl_id: 817
 # !units: meters
 # !longitude: 135.178050
 # !latitude: 34.338883
@@ -220139,6 +222535,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-tapp
+# psmsl_id: 1587
 # !units: meters
 # !longitude: 140.381383
 # !latitude: 41.242500
@@ -220335,6 +222733,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-taran
+# ioc_code: TPTT
+# psmsl_id: 996
+# uhslc_id: 76
+# ptwc_code: tptt
+# sonel_gps_id: 2947
+# sonel_tg_id: 2946
 # !units: meters
 # !longitude: 174.033000
 # !latitude: -39.050000
@@ -220531,6 +222936,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-trnt
+# ioc_code: TA18, tara1
+# psmsl_id: 103, 2095
 # !units: meters
 # !longitude: 17.223764
 # !latitude: 40.475603
@@ -220923,6 +223331,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-tara
+# ioc_code: tara
+# gloss_id: 113
+# psmsl_id: 1381, 1579, 1739, 1804
+# uhslc_id: 2
+# ptwc_code: beti, kiri
+# sonel_gps_id: 711
+# sonel_tg_id: 1972, 2774, 2781
 # !units: meters
 # !longitude: 172.933000
 # !latitude: 1.365100
@@ -221315,6 +223731,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tawa
+# psmsl_id: 1734
+# uhslc_id: 385
+# sonel_gps_id: 2650
+# sonel_tg_id: 2649
 # !units: meters
 # !longitude: 117.8845
 # !latitude: 4.2409
@@ -221511,6 +223932,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-tnpr
+# ioc_code: tnpr
 # !units: meters
 # !longitude: -3.492130
 # !latitude: 50.543880
@@ -221707,6 +224130,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tekn
+# psmsl_id: 1580
+# uhslc_id: 137
 # !units: meters
 # !longitude: 92.3108
 # !latitude: 20.8708
@@ -222492,6 +224918,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-thes
+# ioc_code: thes
+# psmsl_id: 373
+# sonel_gps_id: 2574, 2575
+# sonel_tg_id: 2573
 # !units: meters
 # !longitude: 22.910000
 # !latitude: 40.630001
@@ -222884,6 +225315,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-thio
+# ioc_code: thio, Thio2
+# psmsl_id: 1538
+# ptwc_code: thio
+# sonel_gps_id: 3564
+# sonel_tg_id: 3563
 # !units: meters
 # !longitude: 166.241528
 # !latitude: -21.613806
@@ -223080,6 +225517,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-thul
+# ioc_code: thul
+# gloss_id: 343
+# psmsl_id: 2169
+# uhslc_id: 808
+# sonel_gps_id: 2228, 853, 854
+# sonel_tg_id: 2004
 # !units: meters
 # !longitude: -68.8709
 # !latitude: 76.5441
@@ -223472,6 +225916,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tima
+# psmsl_id: 998
+# uhslc_id: 665
 # !units: meters
 # !longitude: 171.250000
 # !latitude: -44.383000
@@ -223864,6 +226311,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tiom
+# psmsl_id: 1678
+# uhslc_id: 323
 # !units: meters
 # !longitude: 104.1383
 # !latitude: 2.8073
@@ -224256,6 +226706,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-tobe
+# ioc_code: tobe
+# psmsl_id: 1491
 # !units: meters
 # !longitude: -6.064222
 # !latitude: 56.623111
@@ -224452,6 +226905,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-tobi
+# psmsl_id: 1866
+# sonel_gps_id: 616
+# sonel_tg_id: 2172
 # !units: meters
 # !longitude: 139.547783
 # !latitude: 39.185550
@@ -224649,6 +227106,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tofi
+# ioc_code: tfbc, tofi
+# gloss_id: 156
+# psmsl_id: 165
+# uhslc_id: 542
+# ptwc_code: tfbc
+# sonel_gps_id: 2038, 866
+# sonel_tg_id: 2249
 # !units: meters
 # !longitude: -125.9130
 # !latitude: 49.1540
@@ -225237,6 +227702,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-toku
+# psmsl_id: 1210, 669
 # !units: meters
 # !longitude: 131.802783
 # !latitude: 34.040833
@@ -226609,6 +229076,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-toul
+# ioc_code: toul, toul2
+# psmsl_id: 980
+# ptwc_code: toul
+# sonel_tg_id: 1852
 # !units: meters
 # !longitude: 5.913060
 # !latitude: 43.117220
@@ -226805,6 +229277,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-toya
+# ioc_code: toya
+# gloss_id: 325
+# psmsl_id: 1389
+# uhslc_id: 349
+# ptwc_code: toya
+# sonel_gps_id: 802
+# sonel_tg_id: 2136
 # !units: meters
 # !longitude: 137.233000
 # !latitude: 36.767000
@@ -227001,6 +229481,8 @@ x 0 0
 # date_imported: 20260322
 # datum: PNP
 # confidence: 7
+# ssc_id: SSC-trav
+# psmsl_id: 13
 # !units: meters
 # !longitude: 10.872182
 # !latitude: 53.958024
@@ -227197,6 +229679,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-treg
+# ioc_code: treg
+# gloss_id: 321
+# psmsl_id: 302
+# uhslc_id: 804
+# sonel_gps_id: 2036
+# sonel_tg_id: 2262
 # !units: meters
 # !longitude: 7.554759
 # !latitude: 58.006377
@@ -227393,6 +229882,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-trst
+# ioc_code: TR22
+# gloss_id: 340
+# psmsl_id: 154, 2099
+# uhslc_id: 829
+# sonel_gps_id: 2042
+# sonel_tg_id: 2254, 3447
 # !units: meters
 # !longitude: 13.760000
 # !latitude: 45.647000
@@ -227786,6 +230282,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-troi
+# psmsl_id: 126
 # !units: meters
 # !longitude: -72.5392
 # !latitude: 46.3405
@@ -227982,6 +230480,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-trom
+# ioc_code: trom
+# psmsl_id: 680
+# sonel_gps_id: 861, 862
+# sonel_tg_id: 2224
 # !units: meters
 # !longitude: 18.954790
 # !latitude: 69.646110
@@ -228178,6 +230681,11 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-tron
+# ioc_code: tron
+# psmsl_id: 1748, 34
+# sonel_gps_id: 860
+# sonel_tg_id: 2266, 2778
 # !units: meters
 # !longitude: 10.391669
 # !latitude: 63.436485
@@ -228375,6 +230883,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-tsaw
+# psmsl_id: 1341
 # !units: meters
 # !longitude: -123.1293
 # !latitude: 49.0068
@@ -229159,6 +231669,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-tubua
+# ioc_code: tubua
+# gloss_id: 356
+# psmsl_id: 2217
+# uhslc_id: 456
+# ptwc_code: tubu
+# sonel_gps_id: 2268
+# sonel_tg_id: 2258
 # !units: meters
 # !longitude: -149.4755
 # !latitude: -23.341768
@@ -229355,6 +231873,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tubua
+# ioc_code: tubua
+# gloss_id: 356
+# psmsl_id: 2217
+# uhslc_id: 456
+# ptwc_code: tubu
+# sonel_gps_id: 2268
+# sonel_tg_id: 2258
 # !units: meters
 # !longitude: -149.4755
 # !latitude: -23.3418
@@ -229551,6 +232077,14 @@ x 0 0
 # date_imported: 20260322
 # datum: chart datum
 # confidence: 7
+# ssc_id: SSC-tubua
+# ioc_code: tubua
+# gloss_id: 356
+# psmsl_id: 2217
+# uhslc_id: 456
+# ptwc_code: tubu
+# sonel_gps_id: 2268
+# sonel_tg_id: 2258
 # !units: meters
 # !longitude: -149.475540
 # !latitude: -23.341770
@@ -229944,6 +232478,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-tumc
+# ioc_code: tumc, tumc2
+# gloss_id: 171
+# psmsl_id: 639
+# uhslc_id: 303
+# ptwc_code: tumc
+# sonel_gps_id: 2047
+# sonel_tg_id: 2394
 # !units: meters
 # !longitude: -78.7287
 # !latitude: 1.8199
@@ -230337,6 +232879,10 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-turk
+# psmsl_id: 239
+# sonel_gps_id: 2591
+# sonel_tg_id: 2590
 # !units: meters
 # !longitude: 22.100500
 # !latitude: 60.428299
@@ -230925,6 +233471,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-uchi
+# psmsl_id: 407
 # !units: meters
 # !longitude: 138.890283
 # !latitude: 35.017217
@@ -231514,6 +234062,9 @@ x 0 0
 # date_imported: 20260322
 # datum: BSCD2000
 # confidence: 7
+# ssc_id: SSC-udde
+# ioc_code: udde
+# psmsl_id: 2360
 # !units: meters
 # !longitude: 11.894800
 # !latitude: 58.347500
@@ -231906,6 +234457,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-ulla
+# ioc_code: ulla
+# psmsl_id: 1112
+# sonel_gps_id: 3252
+# sonel_tg_id: 3251
 # !units: meters
 # !longitude: -5.158056
 # !latitude: 57.895250
@@ -232691,6 +235247,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-unoj
+# psmsl_id: 812
 # !units: meters
 # !longitude: 133.9489
 # !latitude: 34.4880
@@ -233084,6 +235642,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-urag
+# psmsl_id: 1090
+# sonel_gps_id: 3021
+# sonel_tg_id: 3020
 # !units: meters
 # !longitude: 135.896383
 # !latitude: 33.558333
@@ -233280,6 +235842,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-urak
+# psmsl_id: 1296, 869
 # !units: meters
 # !longitude: 142.7667
 # !latitude: 42.1667
@@ -233672,6 +236236,10 @@ x 0 0
 # date_imported: 20260322
 # datum: BHS77
 # confidence: 7
+# ssc_id: SSC-ustkw
+# psmsl_id: 182, 644
+# sonel_gps_id: 2602
+# sonel_tg_id: 2601
 # !units: meters
 # !longitude: 16.853800
 # !latitude: 54.588001
@@ -233868,6 +236436,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-uwaj
+# psmsl_id: 1212, 461
 # !units: meters
 # !longitude: 132.551117
 # !latitude: 33.227217
@@ -234064,6 +236634,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero Hydrographique
 # confidence: 7
+# ssc_id: SSC-vair
+# ioc_code: vair
+# psmsl_id: 2242
+# ptwc_code: vair
+# sonel_gps_id: 3243
+# sonel_tg_id: 3171
 # !units: meters
 # !longitude: -149.295000
 # !latitude: -17.805900
@@ -234260,6 +236836,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-puert
+# ioc_code: puer2, puert
+# psmsl_id: 1360
+# uhslc_id: 393
+# sonel_gps_id: 1883
+# sonel_tg_id: 2130
 # !units: meters
 # !longitude: -105.2435
 # !latitude: 20.6583
@@ -234456,6 +237038,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-valp
+# ioc_code: sho2, valp, valp2, valp3
+# gloss_id: 175
+# psmsl_id: 1553, 1648, 499
+# uhslc_id: 81
+# ptwc_code: valp
+# sonel_gps_id: 3101, 873
+# sonel_tg_id: 2156
 # !units: meters
 # !longitude: -71.6279
 # !latitude: -33.0275
@@ -234849,6 +237439,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-varb
+# ioc_code: varb
+# psmsl_id: 2388, 73
 # !units: meters
 # !longitude: 12.216700
 # !latitude: 57.100000
@@ -235045,6 +237638,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-vard
+# ioc_code: vard
+# gloss_id: 323
+# psmsl_id: 46, 524
+# uhslc_id: 805
+# sonel_gps_id: 3565, 875
+# sonel_tg_id: 2264
 # !units: meters
 # !longitude: 31.1044
 # !latitude: 70.3745
@@ -235241,6 +237841,8 @@ x 0 0
 # date_imported: 20260322
 # datum: geodetic datum
 # confidence: 7
+# ssc_id: SSC-varn
+# psmsl_id: 318
 # !units: meters
 # !longitude: 27.910999
 # !latitude: 43.192001
@@ -235829,6 +238431,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-veni
+# ioc_code: VE19
+# psmsl_id: 168, 2100, 218, 39, 87
+# sonel_gps_id: 2271, 3154, 876
+# sonel_tg_id: 2221, 2273, 2737, 2739
 # !units: meters
 # !longitude: 12.425700
 # !latitude: 45.418800
@@ -236025,6 +238632,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-vera
+# ioc_code: vera, vera2
+# gloss_id: 212
+# psmsl_id: 702
+# uhslc_id: 250
+# ptwc_code: vera
+# sonel_gps_id: 2955
+# sonel_tg_id: 2872
 # !units: meters
 # !longitude: -96.1308
 # !latitude: 19.2007
@@ -236221,6 +238836,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum
 # confidence: 7
+# ssc_id: SSC-vian
+# psmsl_id: 1482, 1606
 # !units: meters
 # !longitude: -8.839600
 # !latitude: 41.685001
@@ -236417,6 +239034,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-vict
+# psmsl_id: 1069, 1077
 # !units: meters
 # !longitude: 138.635400
 # !latitude: -35.562500
@@ -236614,6 +239233,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-pbbc
+# ioc_code: pbbc, vibc
+# psmsl_id: 166
+# uhslc_id: 543
+# ptwc_code: pbbc, vibc
+# sonel_gps_id: 621
+# sonel_tg_id: 2211
 # !units: meters
 # !longitude: -123.3708
 # !latitude: 48.4244
@@ -237006,6 +239632,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-vies
+# ioc_code: VI12
+# psmsl_id: 2087
 # !units: meters
 # !longitude: 16.177011
 # !latitude: 41.888083
@@ -237202,6 +239831,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-vikew
+# ioc_code: vikew
+# psmsl_id: 2110
 # !units: meters
 # !longitude: 12.579200
 # !latitude: 56.142200
@@ -237398,6 +240030,9 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-vike
+# ioc_code: vike
+# psmsl_id: 1759
 # !units: meters
 # !longitude: 10.949769
 # !latitude: 59.036045
@@ -237594,6 +240229,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-ving
+# ioc_code: vin2
+# psmsl_id: 2389
 # !units: meters
 # !longitude: 11.607600
 # !latitude: 57.631700
@@ -237790,6 +240428,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-vish
+# ioc_code: vish
+# gloss_id: 35
+# psmsl_id: 414
+# uhslc_id: 157
+# ptwc_code: vish
+# sonel_gps_id: 2085
+# sonel_tg_id: 2447
 # !units: meters
 # !longitude: 83.2885
 # !latitude: 17.6886
@@ -238182,6 +240828,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-vung
+# ioc_code: vung
+# psmsl_id: 1495, 2268
+# uhslc_id: 383
+# ptwc_code: vtau
 # !units: meters
 # !longitude: 107.072000
 # !latitude: 10.340000
@@ -238967,6 +241618,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-waji
+# psmsl_id: 132
+# sonel_gps_id: 782
+# sonel_tg_id: 2308
 # !units: meters
 # !longitude: 136.900550
 # !latitude: 37.405833
@@ -239163,6 +241818,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-wakah
+# psmsl_id: 816
 # !units: meters
 # !longitude: 135.145550
 # !latitude: 34.221667
@@ -239359,6 +242016,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-waka
+# ioc_code: waka
+# gloss_id: 324
+# psmsl_id: 1103
+# uhslc_id: 360
+# ptwc_code: waka
+# sonel_gps_id: 796
+# sonel_tg_id: 2106
 # !units: meters
 # !longitude: 141.6853
 # !latitude: 45.4078
@@ -239555,6 +242220,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-wlro
+# psmsl_id: 1420, 1429, 383
 # !units: meters
 # !longitude: 137.615200
 # !latitude: -33.926000
@@ -239751,6 +242418,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-walvi
+# ioc_code: walvi
+# gloss_id: 314
+# psmsl_id: 914
+# uhslc_id: 220
+# ptwc_code: walv
+# sonel_tg_id: 2899
 # !units: meters
 # !longitude: 14.500000
 # !latitude: -22.950000
@@ -240339,6 +243013,11 @@ x 0 0
 # date_imported: 20260322
 # datum: PNP
 # confidence: 7
+# ssc_id: SSC-warn
+# ioc_code: warn
+# psmsl_id: 11, 53
+# sonel_gps_id: 880
+# sonel_tg_id: 2222
 # !units: meters
 # !longitude: 12.103388
 # !latitude: 54.169731
@@ -240927,6 +243606,14 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-wlgt
+# ioc_code: wlgt
+# gloss_id: 101
+# psmsl_id: 221, 500
+# uhslc_id: 71
+# ptwc_code: wlgt
+# sonel_gps_id: 3239, 3286, 898, 923
+# sonel_tg_id: 2338, 2752
 # !units: meters
 # !longitude: 174.783000
 # !latitude: -41.283000
@@ -241515,6 +244202,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Ordnance Datum Newlyn (ODN)
 # confidence: 7
+# ssc_id: SSC-wbhb
+# ioc_code: wbhb
+# psmsl_id: 2282
 # !units: meters
 # !longitude: -2.764110
 # !latitude: 50.708880
@@ -241711,6 +244401,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-westb
+# psmsl_id: 1778
 # !units: meters
 # !longitude: 144.755200
 # !latitude: -38.194400
@@ -241908,6 +244600,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-westa
+# psmsl_id: 1278
 # !units: meters
 # !longitude: -56.7040
 # !latitude: 51.5949
@@ -242104,6 +244798,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum / Lowest Astronomical Tide
 # confidence: 7
+# ssc_id: SSC-ston
+# psmsl_id: 1033, 1041
+# sonel_gps_id: 3009
+# sonel_tg_id: 3008
 # !units: meters
 # !longitude: 145.2233
 # !latitude: -38.3730
@@ -242889,6 +245587,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-weym
+# ioc_code: weym
+# psmsl_id: 1773, 2283, 251
+# sonel_gps_id: 3261
+# sonel_tg_id: 3260
 # !units: meters
 # !longitude: -2.447944
 # !latitude: 50.608500
@@ -243870,6 +246573,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum (ACD) 
 # confidence: 7
+# ssc_id: SSC-wick
+# ioc_code: wick
+# psmsl_id: 1109
 # !units: meters
 # !longitude: -3.086389
 # !latitude: 58.440972
@@ -244264,6 +246970,11 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-wint
+# ioc_code: whbc, wint
+# psmsl_id: 1799
+# sonel_gps_id: 697
+# sonel_tg_id: 2164
 # !units: meters
 # !longitude: -128.0290
 # !latitude: 50.5130
@@ -244460,6 +247171,8 @@ x 0 0
 # date_imported: 20260322
 # datum: SNN76 / Kronstadt
 # confidence: 7
+# ssc_id: SSC-wism
+# psmsl_id: 54, 8
 # !units: meters
 # !longitude: 11.458060
 # !latitude: 53.898830
@@ -244852,6 +247565,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Tide Gauge Zero 
 # confidence: 7
+# ssc_id: SSC-wlad
+# psmsl_id: 645
+# sonel_gps_id: 2041
+# sonel_tg_id: 2348
 # !units: meters
 # !longitude: 18.418600
 # !latitude: 54.796700
@@ -245048,6 +247765,9 @@ x 0 0
 # date_imported: 20260322
 # datum: Admiralty Chart Datum
 # confidence: 7
+# ssc_id: SSC-work
+# ioc_code: work
+# psmsl_id: 1794
 # !units: meters
 # !longitude: -3.5673
 # !latitude: 54.6507
@@ -245244,6 +247964,12 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-xiam
+# gloss_id: 247
+# psmsl_id: 727
+# uhslc_id: 376
+# sonel_gps_id: 2087
+# sonel_tg_id: 2449
 # !units: meters
 # !longitude: 118.067000
 # !latitude: 24.450000
@@ -245440,6 +248166,10 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-yaiz
+# psmsl_id: 1438
+# sonel_gps_id: 786
+# sonel_tg_id: 2142
 # !units: meters
 # !longitude: 138.327500
 # !latitude: 34.870550
@@ -245833,6 +248563,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-yarm
+# psmsl_id: 1158
 # !units: meters
 # !longitude: -66.1249
 # !latitude: 43.8323
@@ -246225,6 +248957,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Zero of Tide Height
 # confidence: 7
+# ssc_id: SSC-yoko
+# psmsl_id: 722
 # !units: meters
 # !longitude: 139.651383
 # !latitude: 35.288050
@@ -247009,6 +249743,9 @@ x 0 0
 # date_imported: 20260322
 # datum: RH 2000 (Swedish National Height System 2000)
 # confidence: 7
+# ssc_id: SSC-ysta
+# ioc_code: ysta
+# psmsl_id: 72
 # !units: meters
 # !longitude: 13.816700
 # !latitude: 55.416700
@@ -247205,6 +249942,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Unknown
 # confidence: 7
+# ssc_id: SSC-zkth
+# ioc_code: zkth
 # !units: meters
 # !longitude: 20.905199
 # !latitude: 37.781422
@@ -247598,6 +250337,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Chart Datum (CD)
 # confidence: 7
+# ssc_id: SSC-zeba
+# psmsl_id: 1828
 # !units: meters
 # !longitude: -126.8460
 # !latitude: 49.9790
@@ -247794,6 +250535,11 @@ x 0 0
 # date_imported: 20260322
 # datum: MSL
 # confidence: 7
+# ssc_id: SSC-zeeb
+# ioc_code: zldw
+# psmsl_id: 470
+# sonel_gps_id: 2990
+# sonel_tg_id: 2989
 # !units: meters
 # !longitude: 3.200000
 # !latitude: 51.346001
@@ -247990,6 +250736,13 @@ x 0 0
 # date_imported: 20260322
 # datum: Unspecified
 # confidence: 7
+# ssc_id: SSC-zhap
+# ioc_code: zhap
+# gloss_id: 78
+# psmsl_id: 933
+# uhslc_id: 635
+# ptwc_code: zhap
+# sonel_tg_id: 2828
 # !units: meters
 # !longitude: 111.8302
 # !latitude: 21.5832
@@ -248186,6 +250939,8 @@ x 0 0
 # date_imported: 20260322
 # datum: Normal Amsterdam Level
 # confidence: 7
+# ssc_id: SSC-zier
+# psmsl_id: 35
 # !units: meters
 # !longitude: 3.910813
 # !latitude: 51.642157
