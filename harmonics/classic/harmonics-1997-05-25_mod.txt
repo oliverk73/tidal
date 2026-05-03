@@ -2058,6 +2058,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: AGADIR
 # !units: meters
 # !longitude: -9.6378
 # !latitude: 30.4208
@@ -3862,6 +3863,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# bodc_code: AVO
 # !units: feet
 # !longitude: -2.7151
 # !latitude: 51.5108
@@ -3982,6 +3984,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ihm_code: 32
 # !units: meters
 # !longitude: -7.4050
 # !latitude: 37.2117
@@ -7576,6 +7579,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: BOLAMA
 # !units: meters
 # !longitude: -15.4710
 # !latitude: 11.5788
@@ -7819,6 +7823,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ioc_code: mumb
+# psmsl_id: 1732
+# ssc_id: SSC-mumb
 # !units: meters
 # !longitude: 72.8188
 # !latitude: 18.9045
@@ -8060,6 +8067,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: BUBAQUE
 # !units: meters
 # !longitude: -15.8265
 # !latitude: 11.2996
@@ -9987,6 +9995,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1383
+# shom_code: ANTIFER
+# ssc_id: SSC-antil
 # !units: meters
 # !longitude: 0.1500
 # !latitude: 49.6500
@@ -10347,6 +10358,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 902
+# shom_code: CASABLANCA
+# ssc_id: SSC-casa
 # !units: meters
 # !longitude: -7.61685
 # !latitude: 33.60725
@@ -10470,6 +10484,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 902
+# shom_code: CASABLANCA
+# ssc_id: SSC-casa
 # !units: meters
 # !longitude: -7.6166
 # !latitude: 33.6070
@@ -10954,6 +10971,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 67
+# psmsl_id: 1066
+# ssc_id: SSC-jeju
 # !units: meters
 # !longitude: 126.5431
 # !latitude: 33.5275
@@ -11314,6 +11334,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 6
+# psmsl_id: 970
+# ssc_id: SSC-chin
 # !units: meters
 # !longitude: 128.64211
 # !latitude: 35.14541
@@ -11554,6 +11577,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ihm_code: 39
 # !units: meters
 # !longitude: -6.4333
 # !latitude: 36.7500
@@ -12154,6 +12178,10 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 255
+# psmsl_id: 1477
+# shom_code: CONAKRY
+# ssc_id: SSC-cona
 # !units: meters
 # !longitude: -13.7154
 # !latitude: 9.5024
@@ -12274,6 +12302,10 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ioc_code: coqu, coqu2
+# psmsl_id: 977
+# ptwc_code: coqu
+# ssc_id: SSC-coqu
 # !units: meters
 # !longitude: -71.3355
 # !latitude: -29.9508
@@ -12754,6 +12786,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: DEAUVILLE
 # !units: meters
 # !longitude: 0.0794
 # !latitude: 49.3655
@@ -12994,6 +13027,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: ANTSIRANANA
 # !units: meters
 # !longitude: 49.2886
 # !latitude: -12.2672
@@ -13114,6 +13148,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: DJOGUE
 # !units: meters
 # !longitude: -16.7419
 # !latitude: 12.5706
@@ -13357,6 +13392,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: DOUALA
 # !units: meters
 # !longitude: 9.6760
 # !latitude: 4.0408
@@ -13477,6 +13513,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: DOUALA
 # !units: meters
 # !longitude: 9.6760
 # !latitude: 4.0408
@@ -13717,6 +13754,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 117
+# ssc_id: SSC-dund
 # !units: meters
 # !longitude: -2.9509
 # !latitude: 56.4624
@@ -13952,6 +13991,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# chs_id: 05040
 # !units: meters
 # !longitude: -94.0588
 # !latitude: 61.1113
@@ -15273,6 +15313,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# chs_id: 07820
 # !units: meters
 # !longitude: -123.5041
 # !latitude: 49.4007
@@ -16953,6 +16994,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 156
+# ssc_id: SSC-hort
+# uhslc_id: 212
 # !units: meters
 # !longitude: -28.6243
 # !latitude: 38.5326
@@ -17911,6 +17955,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 158
 # !units: meters
 # !longitude: 126.5833
 # !latitude: 37.4667
@@ -18274,6 +18319,10 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ioc_code: iqui, iqui2
+# psmsl_id: 1963, 2261
+# ptwc_code: iqui
+# ssc_id: SSC-iqui
 # !units: meters
 # !longitude: -70.1478
 # !latitude: -20.2045
@@ -19961,6 +20010,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1273
+# ssc_id: SSC-karw
 # !units: meters
 # !longitude: 74.1116
 # !latitude: 14.7984
@@ -20205,6 +20256,12 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 8
+# ioc_code: momb
+# psmsl_id: 2183, 370
+# ptwc_code: momb
+# ssc_id: SSC-momb
+# uhslc_id: 101
 # !units: meters
 # !longitude: 39.6573
 # !latitude: -4.0700
@@ -22011,6 +22068,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ioc_code: leit
+# psmsl_id: 1526, 802
+# ssc_id: SSC-leit
 # !units: meters
 # !longitude: -3.1817
 # !latitude: 55.9898
@@ -22251,6 +22311,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: LIBREVILLE
 # !units: meters
 # !longitude: 9.4332
 # !latitude: 0.4011
@@ -22493,6 +22554,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ihm_code: 31
 # !units: meters
 # !longitude: -9.1333
 # !latitude: 38.7000
@@ -23214,6 +23276,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1342
+# ssc_id: SSC-luan
+# uhslc_id: 236
 # !units: meters
 # !longitude: 13.2345
 # !latitude: -8.7861
@@ -23454,6 +23519,11 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 34
+# ioc_code: chenn
+# psmsl_id: 205
+# ptwc_code: chen
+# ssc_id: SSC-chenn
 # !units: meters
 # !longitude: 80.3000
 # !latitude: 13.1000
@@ -23574,6 +23644,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# cwa_code: 1356
+# ioc_code: tpen
+# ssc_id: SSC-tpen
 # !units: meters
 # !longitude: 119.5783
 # !latitude: 23.5619
@@ -24177,6 +24250,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1423, 696
+# ssc_id: SSC-mang
 # !units: meters
 # !longitude: 74.8345
 # !latitude: 12.8492
@@ -24417,6 +24492,11 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 281
+# ioc_code: marm
+# psmsl_id: 1249
+# ptwc_code: marm
+# ssc_id: SSC-marm
 # !units: meters
 # !longitude: 73.7946
 # !latitude: 15.4157
@@ -25742,6 +25822,12 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 29
+# ioc_code: mini
+# psmsl_id: 1050
+# ptwc_code: mini
+# ssc_id: SSC-mini
+# uhslc_id: 153
 # !units: meters
 # !longitude: 73.0530
 # !latitude: 8.2824
@@ -25982,6 +26068,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# jma_code: MM
 # !units: meters
 # !longitude: 133.7370
 # !latitude: 34.5164
@@ -26465,6 +26552,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 105
+# psmsl_id: 954
+# ssc_id: SSC-mokp
 # !units: meters
 # !longitude: 126.3833
 # !latitude: 34.7833
@@ -27305,6 +27395,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 195
+# psmsl_id: 1108
+# ssc_id: SSC-mukh
 # !units: meters
 # !longitude: 129.1167
 # !latitude: 37.5500
@@ -27905,6 +27998,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1308
+# ssc_id: SSC-nagaa
 # !units: meters
 # !longitude: 79.8512
 # !latitude: 10.7649
@@ -28025,6 +28120,12 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 81
+# ioc_code: naha
+# psmsl_id: 1151
+# ptwc_code: naha
+# ssc_id: SSC-naha
+# uhslc_id: 355
 # !units: meters
 # !longitude: 127.6653
 # !latitude: 26.2133
@@ -28273,6 +28374,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# bom_id: QLD-TP205
 # !units: meters
 # !longitude: 146.5000
 # !latitude: -17.5333
@@ -28873,6 +28975,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: NOUADHIBOU
 # !units: meters
 # !longitude: -17.0425
 # !latitude: 20.9047
@@ -28993,6 +29096,12 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 125
+# ioc_code: nkfa, nkfa2
+# psmsl_id: 1770, 1842
+# ptwc_code: nkf2, nkfa
+# ssc_id: SSC-nkfa
+# uhslc_id: 38
 # !units: meters
 # !longitude: -175.1967
 # !latitude: -21.1303
@@ -29113,6 +29222,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# linz_station_id: 1164
 # !units: meters
 # !longitude: 170.9667
 # !latitude: -45.1000
@@ -29593,6 +29703,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1395
+# ssc_id: SSC-okha
 # !units: meters
 # !longitude: 69.0798
 # !latitude: 22.4688
@@ -30313,6 +30425,10 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ioc_code: para, para1
+# psmsl_id: 2161
+# ptwc_code: para
+# ssc_id: SSC-para
 # !units: meters
 # !longitude: 86.6788
 # !latitude: 20.2681
@@ -30684,6 +30800,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# bom_id: QLD-TP204
 # !units: meters
 # !longitude: 146.4167
 # !latitude: -17.4833
@@ -31044,6 +31161,11 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 93
+# ioc_code: petr
+# psmsl_id: 824
+# ptwc_code: petr
+# ssc_id: SSC-petr
 # !units: meters
 # !longitude: 158.6477
 # !latitude: 53.0164
@@ -31524,6 +31646,12 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 38
+# ioc_code: ptbl
+# psmsl_id: 206
+# ptwc_code: ptbl
+# ssc_id: SSC-ptbl
+# uhslc_id: 908
 # !units: meters
 # !longitude: 92.7662
 # !latitude: 11.6813
@@ -32488,6 +32616,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1609, 1619
+# ssc_id: SSC-manu
 # !units: meters
 # !longitude: 147.2697
 # !latitude: -2.0191
@@ -32608,6 +32738,12 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 23
+# ioc_code: kerg, kerg2
+# psmsl_id: 1849
+# ptwc_code: kerg
+# ssc_id: SSC-kerg
+# uhslc_id: 180
 # !units: meters
 # !longitude: 70.2191
 # !latitude: -49.3521
@@ -32728,6 +32864,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# chs_id: 02010
 # !units: meters
 # !longitude: -65.0373
 # !latitude: 47.1771
@@ -32851,6 +32988,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1769, 536
+# ssc_id: SSC-ptog
+# uhslc_id: 216
 # !units: meters
 # !longitude: -24.9932
 # !latitude: 16.8868
@@ -35371,6 +35511,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: RABAT
 # !units: meters
 # !longitude: -6.8362
 # !latitude: 34.0357
@@ -36451,6 +36592,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1074
+# ssc_id: SSC-rosy
 # !units: meters
 # !longitude: -3.4447
 # !latitude: 56.0188
@@ -36571,6 +36714,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ihm_code: 40
 # !units: meters
 # !longitude: -6.3500
 # !latitude: 36.6167
@@ -36931,6 +37075,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# chs_id: 00905
 # !units: meters
 # !longitude: -52.7025
 # !latitude: 47.5670
@@ -37051,6 +37196,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: SAINT_LOUIS
 # !units: meters
 # !longitude: -16.5100
 # !latitude: 16.0263
@@ -37171,6 +37317,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 31
 # !units: meters
 # !longitude: 128.0667
 # !latitude: 34.9333
@@ -37891,6 +38038,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# namria_code: SF
+# psmsl_id: 548
+# ssc_id: SSC-sanfw
 # !units: meters
 # !longitude: 120.2947
 # !latitude: 16.6104
@@ -38126,6 +38276,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# chs_id: 07594
 # !units: meters
 # !longitude: -123.3012
 # !latitude: 49.1046
@@ -39326,6 +39477,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: SFAX
 # !units: meters
 # !longitude: 10.7742
 # !latitude: 34.7276
@@ -40046,6 +40198,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1008
+# ssc_id: SSC-shorq
 # !units: meters
 # !longitude: -0.2486
 # !latitude: 50.8298
@@ -41369,6 +41523,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1668
+# ssc_id: SSC-sull
 # !units: meters
 # !longitude: -1.2998
 # !latitude: 60.4597
@@ -42689,6 +42845,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 91
+# psmsl_id: 1489, 2254
+# ssc_id: SSC-daeh
 # !units: meters
 # !longitude: 125.4333
 # !latitude: 34.6833
@@ -43171,6 +43330,10 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ioc_code: talc, talc2
+# psmsl_id: 571
+# ptwc_code: talc
+# ssc_id: SSC-talc
 # !units: meters
 # !longitude: -73.1061
 # !latitude: -36.7008
@@ -43291,6 +43454,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: TAMAJARUSH
 # !units: meters
 # !longitude: -10.0627
 # !latitude: 29.5505
@@ -43411,6 +43575,10 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ioc_code: toam2
+# ptwc_code: toam
+# shom_code: TOAMASINA
+# ssc_id: SSC-toama
 # !units: meters
 # !longitude: 49.4267
 # !latitude: -18.1600
@@ -43651,6 +43819,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ihm_code: 52
 # !units: meters
 # !longitude: -5.8033
 # !latitude: 35.7883
@@ -44251,6 +44420,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 25
+# psmsl_id: 1446
+# ssc_id: SSC-tong
 # !units: meters
 # !longitude: 128.4167
 # !latitude: 34.8333
@@ -44611,6 +44783,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# chs_id: 06485
 # !units: meters
 # !longitude: -132.9944
 # !latitude: 69.4382
@@ -44731,6 +44904,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: TOLIARA
 # !units: meters
 # !longitude: 43.6631
 # !latitude: -23.3613
@@ -45094,6 +45268,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 214
+# psmsl_id: 997
+# ssc_id: SSC-ulsa
 # !units: meters
 # !longitude: 129.3873
 # !latitude: 35.5018
@@ -45454,6 +45631,10 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# gloss_id: 31
+# ioc_code: verav
+# psmsl_id: 770
+# ssc_id: SSC-verav
 # !units: meters
 # !longitude: 70.3704
 # !latitude: 20.8996
@@ -45934,6 +46115,7 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# shom_code: DAKHLA
 # !units: meters
 # !longitude: -15.9410
 # !latitude: 23.6615
@@ -46054,6 +46236,8 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# psmsl_id: 1224, 2307, 666
+# ssc_id: SSC-walt
 # !units: meters
 # !longitude: 1.2741
 # !latitude: 51.8456
@@ -46174,6 +46358,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 60
+# psmsl_id: 1568
+# ssc_id: SSC-wand
 # !units: meters
 # !longitude: 126.7500
 # !latitude: 34.3167
@@ -47500,6 +47687,9 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# khoa_code: 41
+# psmsl_id: 1155
+# ssc_id: SSC-yeos
 # !units: meters
 # !longitude: 127.7667
 # !latitude: 34.7333
@@ -48220,6 +48410,11 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: Mean Lower Low Water
 # confidence: 10
+# ioc_code: iler, iler2
+# psmsl_id: 2012
+# ptwc_code: iler
+# ssc_id: SSC-iler
+# uhslc_id: 850, 851
 # !units: meters
 # !longitude: -52.5869
 # !latitude: 5.2845
