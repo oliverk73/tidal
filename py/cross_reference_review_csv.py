@@ -43,8 +43,17 @@ def main():
     fields = ["file", "target_name", "target_lat", "target_lon",
               "rank", "candidate_name", "candidate_src",
               "dist_km", "sim", "ids", "accept"]
-    with open(OUT, "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fields)
+    # Komma als Dezimaltrennzeichen + Semikolon als Feldtrennzeichen,
+    # damit Excel-DE die Zahlen korrekt anzeigt (sonst liest es 0.544 als 544).
+    for r in rows:
+        if isinstance(r["dist_km"], (int, float)):
+            r["dist_km"] = f"{r['dist_km']:.3f}".replace(".", ",")
+        if isinstance(r["sim"], (int, float)):
+            r["sim"] = f"{r['sim']:.3f}".replace(".", ",")
+        r["target_lat"] = r["target_lat"].replace(".", ",")
+        r["target_lon"] = r["target_lon"].replace(".", ",")
+    with open(OUT, "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields, delimiter=";")
         w.writeheader()
         w.writerows(rows)
 
