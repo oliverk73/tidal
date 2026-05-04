@@ -34,12 +34,14 @@ CACHE_DIR = Path("/home/oliver/harmonics/help/niwa_cache")
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 THROTTLE_SECONDS = 6.5  # 100 calls / 600s; small safety margin
 
-# Stations to skip: 17 NZ Standard Ports already covered by UHSLC observations.
+# NZ Standard Ports already covered by UHSLC observations / TICON-4.
 # These are the "main" NZ ports; their LINZ rows have ref_stn = '-'.
+# Picton, Onehunga, Port Taranaki, Dunedin: NOT in UHSLC observations after
+# all — these are filled in via NIWA. Don't skip them.
 SKIP_NZ_STANDARD = {
     "Auckland", "Wellington", "Tauranga", "Gisborne", "Napier", "Bluff",
-    "Marsden Point", "Westport", "Nelson", "Picton", "Lyttelton", "Timaru",
-    "Port Chalmers", "Onehunga", "Port Taranaki", "Dunedin",
+    "Marsden Point", "Westport", "Nelson", "Lyttelton", "Timaru",
+    "Port Chalmers",
     # Also UHSLC-only stations not in LINZ standard list but potential overlap:
     "Wanganui", "Jackson Bay", "Chatham Island",
 }
@@ -550,7 +552,11 @@ def main():
     elif args.linz_id:
         row = load_linz_row(args.linz_id)
         country = country_for(row)
-        process_station(row, api_key, args.years, country=country, dry_run=args.dry)
+        result = process_station(row, api_key, args.years, country=country, dry_run=args.dry)
+        if result is not None and not args.dry:
+            block, r2, rms, full_name = result
+            append_to_staging(block)
+            print(f"  -> appended to {STAGING_PATH}")
     else:
         sys.exit("Provide --linz-id or --all")
 
