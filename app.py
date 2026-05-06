@@ -363,19 +363,42 @@ if os.path.exists("normalized_station_names.txt"):
                 orig, norm = line.strip().split(" = ", 1)
                 normalized[orig] = norm
 
-def load_station_names():
-    """Extract station names from the generated leaflet_markers.js file."""
-    markers_path = os.path.join("static", "js", "leaflet_markers.js")
-    names = []
-    if os.path.exists(markers_path):
-        with open(markers_path, encoding="utf-8") as f:
-            for line in f:
-                m = re.search(r'<b>([^<]+)</b>', line)
-                if m:
-                    names.append(m.group(1))
-    return names
+COUNTRY_BY_SOURCE = {
+    'harmonics-dwf-20251228-free.tcd': 'USA',
+}
 
-_station_names = load_station_names()
+
+def display_name_for(name, source_file):
+    """Append country suffix for sources that lack it in the harmonics file
+    (e.g. DWF-2025 US stations). Display-only — original name unchanged."""
+    if not source_file:
+        return name
+    country = COUNTRY_BY_SOURCE.get(source_file)
+    if country and not name.endswith(f", {country}"):
+        return f"{name}, {country}"
+    return name
+
+
+def load_station_data():
+    """Read stationCoords + stationSources from leaflet_markers.js.
+    Returns dict: {original_name: source_file}."""
+    markers_path = os.path.join("static", "js", "leaflet_markers.js")
+    sources = {}
+    if not os.path.exists(markers_path):
+        return sources
+    coord_re = re.compile(r"stationCoords\['(.+?)'\]\s*=")
+    source_re = re.compile(r"stationSources\['(.+?)'\]\s*=\s*'([^']+)'")
+    with open(markers_path, encoding="utf-8") as f:
+        for line in f:
+            m = source_re.search(line)
+            if m:
+                sources[m.group(1)] = m.group(2)
+    return sources
+
+
+_station_data = load_station_data()
+# Display names (with USA suffix where applicable) for autocomplete/index
+_station_names = [display_name_for(n, s) for n, s in _station_data.items()]
 
 def to_slug(name):
     """Convert station name to SEO-friendly slug: 'Douala, Cameroon' → 'douala-cameroon'."""
@@ -389,10 +412,15 @@ def to_slug(name):
     slug = slug.strip("-").lower()
     return slug
 
-# Reverse lookup: slug → original station name
+# Reverse lookup: slug → original station name (used for tide CLI)
+# Slug is computed from the *display* name so URLs match what the user sees,
+# but the lookup returns the original name to keep tide -l working.
 _slug_to_station = {}
-for _name in _station_names:
-    _slug_to_station[to_slug(_name)] = _name
+for _orig, _src in _station_data.items():
+    _disp = display_name_for(_orig, _src)
+    _slug_to_station[to_slug(_disp)] = _orig
+    # Also accept the original-name slug as fallback (back-compat for old bookmarks)
+    _slug_to_station.setdefault(to_slug(_orig), _orig)
 
 @app.route("/")
 def index():
@@ -573,9 +601,12 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     with open(TEMPLATE_PATH, encoding="utf-8") as f:
         template = f.read()
     svg_url = f"/static/images/{svg_filename}"
+    # Display name appends e.g. ", USA" for DWF-2025 stations (SEO + UX),
+    # while decoded_station / station_raw stay clean for tide CLI lookups.
+    display_station = display_name_for(decoded_station, source)
     html = render_template_string(template,
-                                  station=decoded_station,
-                                  original_name=station_raw,
+                                  station=display_station,
+                                  original_name=display_station,
                                   svg_url=svg_url,
                                   meta_info=meta_info,
                                   tide_rows=tide_rows,
@@ -600,6 +631,11 @@ def show_prediction(slug):
         station_name = _slug_to_station.get(slug)
         if not station_name:
             return "Station nicht gefunden.", 404
+        # Source fallback: if URL didn't include ?source=, pick it from
+        # the marker file. Needed so display_name_for can append ", USA"
+        # (for DWF-2025 stations) on the prediction page.
+        if not source:
+            source = _station_data.get(station_name)
 
         decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station_name, source, utc)
         html_path = os.path.join(PREDICTIONS_DIR, html_filename)

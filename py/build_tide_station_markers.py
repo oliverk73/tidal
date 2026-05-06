@@ -258,6 +258,21 @@ def get_group_for_source(source_file):
         return 'UTide SL', info['color']
     return 'Sonstige', '#999999'
 
+
+COUNTRY_BY_SOURCE = {
+    'harmonics-dwf-20251228-free.tcd': 'USA',
+}
+
+
+def display_name_for(name, source_file):
+    """Append country suffix for sources that lack it in the harmonics file
+    (e.g. DWF-2025 US stations). Display-only — original station name in the
+    .txt/.tcd is unchanged."""
+    country = COUNTRY_BY_SOURCE.get(source_file)
+    if country and not name.endswith(f", {country}"):
+        return f"{name}, {country}"
+    return name
+
 icon_definition = ""
 
 lines = ["var stationCoords = {};"]
@@ -282,11 +297,14 @@ tide_count = 0
 current_count = 0
 for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     safe_name = normalize_filename(name)
-    display_name = name.replace('"', '&quot;')
+    display_name_raw = display_name_for(name, source_file)
+    display_name = display_name_raw.replace('"', '&quot;')
     uri_name = quote(name, safe='')
 
-    # For duplicate station names: add source suffix to filename and pass source in URL
-    slug = to_slug(name)
+    # Slug uses the *display* name so URLs include the country suffix
+    # (better SEO). Server resolves slug back via _slug_to_station which
+    # also accepts the original-name slug for backwards-compat.
+    slug = to_slug(display_name_raw)
     if name in duplicate_names:
         skey = source_key(source_file)
         safe_name_full = safe_name + '__' + skey
