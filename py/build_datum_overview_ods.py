@@ -30,12 +30,19 @@ ROOT = Path("/home/oliver/harmonics")
 #   'block' = read from `# country:` line in HOT COMMENTS block
 #   'name'  = parse from last comma-separated token in station name
 #   'fixed=<X>' = always X (e.g. DWF-2025 has no country marker → 'USA')
+#
+# Edit-policy (see harmonics/help/datum_overview_summary.md):
+#   - Files marked [EXTERNAL] receive upstream updates; do NOT modify them
+#     in datum-cleanup steps. They are listed here for awareness only.
+#   - Files marked [CONTROLLED] are managed by us and may be edited.
 SOURCES = [
+    # [CONTROLLED]
     (ROOT / "ticon" / "harmonics_ticon4_worldwide.txt", "TICON-4", "block"),
     (ROOT / "utide" / "harmonics_utide_observations.txt", "UTide observations", "block"),
     (ROOT / "utide" / "harmonics_utide_tidetables.txt", "UTide tidetables", "block"),
     (ROOT / "utide" / "harmonics_utide_currents.txt", "UTide currents", "block"),
     (ROOT / "ihm" / "harmonics_puertos_spain.txt", "IHM Puertos Spain", "fixed=Spain"),
+    # [EXTERNAL] — receive upstream updates, do not edit in cleanup steps
     (ROOT / "classic" / "harmonics-1997-05-25_mod.txt", "Classic 1997", "name"),
     (ROOT / "classic" / "harmonics-2004-06-14_mod.txt", "Classic 2004", "name"),
     (ROOT / "classic" / "harmonics-dwf-20070318_mod.txt", "DWF 2007", "name"),
