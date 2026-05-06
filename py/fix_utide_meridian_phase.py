@@ -105,7 +105,7 @@ def fix_file(path, force_offset=None, replace_meridian_name=None, new_meridian_l
                 else:
                     break
             # Simpler: just find prev block header comments up to blank line
-            block_header = '\n'.join(lines[max(0, i - 20):i + 1])
+            block_header = '\n'.join(lines[max(0, i - 50):i + 1])
 
             # Decide whether to fix based on source filter
             if only_sources is not None:

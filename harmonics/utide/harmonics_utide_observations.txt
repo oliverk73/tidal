@@ -72542,7 +72542,7 @@ x 0 0
 #
 # Sainte-Marie, Ile de la Réunion
 # BEGIN HOT COMMENTS
-# country: France
+# country: Réunion
 # coast: Méditerranée
 # source: Derived from SHOM REFMAR observed data with UTide harmonic analysis
 # station_id_context: SHOM-832
@@ -72558,7 +72558,7 @@ x 0 0
 # !units: meters
 # !longitude: 55.536904
 # !latitude: -20.892808
-Sainte-Marie, La Réunion
+Sainte-Marie, Réunion
 +01:00 :Europe/Paris
 0.5872 meters
 J1                0.0024  107.98
@@ -219366,9 +219366,9 @@ x 0 0
 # sonel_tg_id: 1973
 # utide: pts=87660 period=2004-12-03..2016-02-15 r2=0.8273 rms=0.1098m const=67
 # !units: meters
-# !longitude: -176.562000
-# !latitude: -43.947000
-Chatham Island, Chatham Islands, New Zealand
+# !longitude: -176.5612
+# !latitude: -43.9463
+Waitangi, Chatham Islands, New Zealand
 +00:00 :UTC
 1.8867 meters
 J1              0.0020  40.88
@@ -233536,8 +233536,8 @@ x 0 0
 # sonel_tg_id: 2880
 # utide: pts=87660 period=1986-09-23..2009-11-24 r2=0.8994 rms=0.1007m const=67
 # !units: meters
-# !longitude: -31.1133
-# !latitude: 39.4533
+# !longitude: -31.1263
+# !latitude: 39.4512
 Santa Cruz, Flores, Açores, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -233736,7 +233736,7 @@ x 0 0
 # sonel_tg_id: 1982
 # utide: pts=87660 period=2015-11-17..2026-02-28 r2=0.9593 rms=0.0769m const=67
 # !units: meters
-# !longitude: -25.6700
+# !longitude: -25.6717
 # !latitude: 37.7350
 Ponta Delgada, São Miguel, Açores, Portugal
 +00:00 :UTC
@@ -233931,8 +233931,8 @@ x 0 0
 # psmsl_id: 156
 # utide: pts=19102 period=1984-01-01..1986-06-30 r2=0.9523 rms=0.0716m const=67
 # !units: meters
-# !longitude: -28.6244
-# !latitude: 38.5326
+# !longitude: -28.6214
+# !latitude: 38.5339
 Horta, Faial, Açores, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -234124,7 +234124,7 @@ x 0 0
 # uhslc_id: 213a
 # utide: pts=70073 period=2006-01-01..2013-12-31 r2=0.9117 rms=0.0892m const=67
 # !units: meters
-# !longitude: -31.1700
+# !longitude: -31.1686
 # !latitude: 39.3783
 Lajes das Flores, Flores, Açores, Portugal
 +00:00 :UTC
@@ -234317,8 +234317,8 @@ x 0 0
 # uhslc_id: 215a
 # utide: pts=45156 period=1957-07-04..1962-08-28 r2=0.9546 rms=0.0781m const=67
 # !units: meters
-# !longitude: -27.2167
-# !latitude: 38.6500
+# !longitude: -27.2217
+# !latitude: 38.6497
 Angra do Heroísmo, Terceira, Açores, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -234515,7 +234515,7 @@ x 0 0
 # sonel_tg_id: 2102, 2788
 # utide: pts=87660 period=2002-06-28..2012-12-31 r2=0.9862 rms=0.0647m const=67
 # !units: meters
-# !longitude: -16.9064
+# !longitude: -16.9109
 # !latitude: 32.6447
 Funchal, Madeira, Portugal
 +00:00 :UTC
@@ -256293,9 +256293,9 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Abidjan, Cote d'Ivoire
+# Abidjan, Ivory Coast
 # BEGIN HOT COMMENTS
-# country: Cote d'Ivoire
+# country: Ivory Coast
 # water_body: Atlantic Ocean
 # source: Derived from UHSLC data with UTide harmonic analysis
 # station_id_context: UHSLC-230a
@@ -256311,7 +256311,7 @@ x 0 0
 # !units: meters
 # !longitude: -4.002500
 # !latitude: 5.251500
-Abidjan, Cote d'Ivoire
+Abidjan, Ivory Coast
 +00:00 :UTC
 0.0000 meters
 J1              0.0034  39.55
@@ -257076,3 +257076,988 @@ x 0 0
 x 0 0
 x 0 0
 #
+# Harmonic constants derived from CMEMS in-situ sea level observations
+# using UTide (v0.3.1) with 42202 observations
+# from 2019-11-01 to 2024-11-05
+# R^2 = 0.5474, RMS error = 0.0723 m
+# Constituents analyzed: 68
+#
+# Cartagena, Spain
+# BEGIN HOT COMMENTS
+# country: Spain
+# water_body: Mediterranean Sea
+# source: Derived from CMEMS PdE-REDMAR data with UTide harmonic analysis
+# station_id_context: CMEMS-CARTAGENA
+# date_imported: 20260506
+# datum: Mean Sea Level
+# confidence: 6
+# cmems_code: CARTAGENA
+# network: PdE-REDMAR
+# utide: pts=42202 period=2019-11-01..2024-11-05 r2=0.5474 rms=0.0723m const=68
+# !units: meters
+# !longitude: -0.9738
+# !latitude: 37.5967
+Cartagena, Spain
++00:00 :UTC
+0.1789 meters
+J1              0.0013  167.94
+K1              0.0374  157.88
+K2              0.0048  76.12
+L2              0.0009  92.50
+x 0 0
+M2              0.0444  59.61
+M3              0.0021  173.26
+M4              0.0065  163.35
+M6              0.0006  273.53
+M8              0.0001  224.43
+N2              0.0084  44.72
+2N2             0.0012  22.29
+O1              0.0215  109.82
+OO1             0.0005  142.58
+P1              0.0123  152.03
+Q1              0.0021  67.09
+2Q1             0.0002  4.03
+R2              0.0002  102.52
+S1              0.0099  274.24
+S2              0.0193  80.81
+S4              0.0003  105.54
+x 0 0
+T2              0.0010  59.70
+LDA2            0.0001  85.97
+MU2             0.0015  24.49
+NU2             0.0014  53.44
+RHO1            0.0003  20.71
+MK3             0.0003  157.66
+x 0 0
+MN4             0.0024  121.27
+MS4             0.0049  228.92
+x 0 0
+MF              0.0031  299.93
+MSF             0.0059  130.58
+MM              0.0041  168.60
+SA              0.0839  242.91
+SSA             0.0261  89.79
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0002  160.29
+2MK6            0.0002  312.31
+x 0 0
+2MN6            0.0003  248.56
+2MS6            0.0007  337.79
+x 0 0
+2SK5            0.0001  71.03
+2SM6            0.0002  356.33
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0003  178.93
+BET1            0.0003  196.31
+CHI1            0.0003  123.06
+H1              0.0006  81.32
+H2              0.0003  341.17
+x 0 0
+ETA2            0.0004  104.30
+x 0 0
+UPS1            0.0003  164.01
+x 0 0
+x 0 0
+MK4             0.0014  223.33
+MKS2            0.0001  50.08
+x 0 0
+EPS2            0.0003  54.52
+MO3             0.0009  249.03
+x 0 0
+TAU1            0.0003  232.70
+x 0 0
+MSK6            0.0001  0.34
+MSM             0.0070  224.49
+MSN2            0.0002  134.36
+x 0 0
+x 0 0
+NO1             0.0021  130.66
+x 0 0
+OQ2             0.0003  333.86
+PHI1            0.0012  198.76
+x 0 0
+PI1             0.0012  136.97
+x 0 0
+PSI1            0.0018  290.33
+x 0 0
+SIG1            0.0004  302.29
+SK3             0.0008  123.19
+SK4             0.0003  19.07
+SN4             0.0006  167.27
+SO1             0.0005  95.66
+SO3             0.0002  279.44
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from CMEMS in-situ sea level observations
+# using UTide (v0.3.1) with 1375 observations
+# from 2020-01-01 to 2020-02-29
+# R^2 = 0.2930, RMS error = 0.0586 m
+# Constituents analyzed: 35
+#
+# Sant Antoni de Portmany, Ibiza, Baleares, Spain
+# BEGIN HOT COMMENTS
+# country: Spain
+# water_body: Mediterranean Sea (Balearic Islands)
+# source: Derived from CMEMS SOCIB data with UTide harmonic analysis
+# station_id_context: CMEMS-SANT-ANTONI
+# date_imported: 20260506
+# datum: Mean Sea Level
+# confidence: 6
+# cmems_code: SANT-ANTONI
+# network: SOCIB
+# utide: pts=1375 period=2020-01-01..2020-02-29 r2=0.2930 rms=0.0586m const=35
+# !units: meters
+# !longitude: 1.2988
+# !latitude: 38.9771
+Sant Antoni de Portmany, Ibiza, Baleares, Spain
++00:00 :UTC
+-0.0810 meters
+J1              0.0002  248.24
+K1              0.0438  183.09
+x 0 0
+L2              0.0012  262.00
+x 0 0
+M2              0.0232  200.40
+M3              0.0012  185.40
+M4              0.0023  346.88
+M6              0.0002  198.33
+M8              0.0002  179.51
+N2              0.0052  193.78
+x 0 0
+O1              0.0206  94.57
+OO1             0.0016  289.93
+x 0 0
+Q1              0.0028  96.81
+2Q1             0.0022  252.51
+x 0 0
+x 0 0
+S2              0.0068  226.53
+S4              0.0007  316.18
+x 0 0
+x 0 0
+x 0 0
+MU2             0.0016  120.48
+x 0 0
+x 0 0
+MK3             0.0005  25.55
+x 0 0
+MN4             0.0005  298.98
+MS4             0.0009  75.15
+x 0 0
+x 0 0
+MSF             0.0079  62.24
+MM              0.0164  46.48
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0001  357.63
+x 0 0
+x 0 0
+2MN6            0.0004  249.39
+2MS6            0.0003  304.82
+x 0 0
+2SK5            0.0002  3.61
+2SM6            0.0002  357.97
+3MK7            0.0005  110.58
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0022  265.29
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ETA2            0.0014  303.29
+x 0 0
+UPS1            0.0021  215.94
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+EPS2            0.0003  35.09
+MO3             0.0010  166.38
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0036  143.33
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SK3             0.0021  141.38
+x 0 0
+SN4             0.0005  2.74
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from CMEMS in-situ sea level observations
+# using UTide (v0.3.1) with 67604 observations
+# from 2011-06-16 to 2020-02-29
+# R^2 = 0.4450, RMS error = 0.0880 m
+# Constituents analyzed: 68
+#
+# Andratx, Mallorca, Baleares, Spain
+# BEGIN HOT COMMENTS
+# country: Spain
+# water_body: Mediterranean Sea (Balearic Islands)
+# source: Derived from CMEMS SOCIB data with UTide harmonic analysis
+# station_id_context: CMEMS-ANDRATX
+# date_imported: 20260506
+# datum: Mean Sea Level
+# confidence: 6
+# cmems_code: ANDRATX
+# network: SOCIB
+# utide: pts=67604 period=2011-06-16..2020-02-29 r2=0.4450 rms=0.0880m const=68
+# !units: meters
+# !longitude: 2.3785
+# !latitude: 39.5442
+Andratx, Mallorca, Baleares, Spain
++00:00 :UTC
+-0.0819 meters
+J1              0.0014  187.30
+K1              0.0366  167.05
+K2              0.0036  220.85
+L2              0.0008  217.63
+x 0 0
+M2              0.0321  204.56
+M3              0.0013  164.50
+M4              0.0028  334.07
+M6              0.0001  256.55
+M8              0.0001  27.28
+N2              0.0069  191.28
+2N2             0.0011  181.49
+O1              0.0216  103.59
+OO1             0.0002  189.74
+P1              0.0120  161.75
+Q1              0.0027  54.65
+2Q1             0.0005  288.81
+R2              0.0002  295.75
+S1              0.0038  238.19
+S2              0.0117  225.44
+S4              0.0001  303.90
+x 0 0
+T2              0.0003  226.57
+LDA2            0.0003  233.00
+MU2             0.0011  164.14
+NU2             0.0012  204.57
+RHO1            0.0010  81.91
+MK3             0.0001  261.54
+x 0 0
+MN4             0.0011  296.63
+MS4             0.0017  38.36
+x 0 0
+MF              0.0035  357.61
+MSF             0.0007  34.78
+MM              0.0037  33.49
+SA              0.0937  247.62
+SSA             0.0246  31.34
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK6            0.0001  277.46
+x 0 0
+2MN6            0.0001  269.14
+2MS6            0.0002  317.08
+x 0 0
+x 0 0
+2SM6            0.0001  56.33
+3MK7            0.0001  25.42
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0004  253.82
+BET1            0.0006  110.29
+CHI1            0.0004  153.36
+H1              0.0002  71.83
+H2              0.0003  61.56
+x 0 0
+ETA2            0.0002  298.92
+x 0 0
+UPS1            0.0005  200.34
+x 0 0
+x 0 0
+MK4             0.0004  49.89
+MKS2            0.0002  103.59
+x 0 0
+EPS2            0.0003  130.03
+MO3             0.0010  226.05
+x 0 0
+TAU1            0.0002  33.72
+x 0 0
+x 0 0
+MSM             0.0017  306.54
+MSN2            0.0001  44.52
+x 0 0
+x 0 0
+NO1             0.0023  136.38
+x 0 0
+OQ2             0.0003  177.95
+PHI1            0.0010  181.57
+x 0 0
+PI1             0.0018  124.11
+x 0 0
+PSI1            0.0018  268.79
+x 0 0
+SIG1            0.0002  324.15
+SK3             0.0009  119.44
+SK4             0.0002  264.90
+SN4             0.0003  0.27
+SO1             0.0004  80.72
+SO3             0.0002  279.94
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from CMEMS in-situ sea level observations
+# using UTide (v0.3.1) with 12880 observations
+# from 2015-01-01 to 2016-11-27
+# R^2 = 0.5703, RMS error = 0.0775 m
+# Constituents analyzed: 68
+#
+# Pollença, Mallorca, Baleares, Spain
+# BEGIN HOT COMMENTS
+# country: Spain
+# water_body: Mediterranean Sea (Balearic Islands)
+# source: Derived from CMEMS SOCIB data with UTide harmonic analysis
+# station_id_context: CMEMS-POLLENSA
+# date_imported: 20260506
+# datum: Mean Sea Level
+# confidence: 6
+# cmems_code: POLLENSA
+# network: SOCIB
+# utide: pts=12880 period=2015-01-01..2016-11-27 r2=0.5703 rms=0.0775m const=68
+# !units: meters
+# !longitude: 3.0885
+# !latitude: 39.9046
+Pollença, Mallorca, Baleares, Spain
++00:00 :UTC
+-0.1302 meters
+J1              0.0019  185.57
+K1              0.0363  169.06
+K2              0.0051  230.66
+L2              0.0012  221.83
+x 0 0
+M2              0.0470  216.49
+M3              0.0011  170.74
+M4              0.0050  341.43
+M6              0.0002  183.41
+M8              0.0001  51.70
+N2              0.0100  202.71
+2N2             0.0014  192.21
+O1              0.0224  105.77
+OO1             0.0005  41.93
+P1              0.0127  160.61
+Q1              0.0039  61.12
+2Q1             0.0013  337.71
+R2              0.0004  180.89
+S1              0.0048  234.87
+S2              0.0167  240.86
+S4              0.0003  246.59
+x 0 0
+T2              0.0007  284.36
+LDA2            0.0003  217.01
+MU2             0.0018  190.88
+NU2             0.0016  207.65
+RHO1            0.0005  23.30
+x 0 0
+x 0 0
+MN4             0.0021  298.83
+MS4             0.0031  42.98
+x 0 0
+MF              0.0032  248.34
+MSF             0.0075  226.66
+MM              0.0019  332.77
+SA              0.1028  244.42
+SSA             0.0347  39.76
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0001  341.07
+2MK6            0.0001  333.76
+x 0 0
+x 0 0
+2MS6            0.0002  147.51
+x 0 0
+2SK5            0.0001  145.22
+2SM6            0.0001  357.23
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0006  290.21
+BET1            0.0010  181.15
+CHI1            0.0006  185.84
+H1              0.0006  15.85
+H2              0.0004  204.23
+x 0 0
+ETA2            0.0004  247.66
+x 0 0
+UPS1            0.0012  175.42
+x 0 0
+x 0 0
+MK4             0.0008  59.01
+MKS2            0.0004  69.62
+x 0 0
+EPS2            0.0007  177.01
+MO3             0.0013  232.97
+x 0 0
+TAU1            0.0003  60.00
+x 0 0
+MSK6            0.0001  224.10
+MSM             0.0101  89.96
+MSN2            0.0001  38.77
+x 0 0
+x 0 0
+NO1             0.0018  175.91
+x 0 0
+OQ2             0.0005  189.89
+PHI1            0.0010  194.23
+x 0 0
+PI1             0.0019  98.73
+x 0 0
+PSI1            0.0021  262.74
+x 0 0
+SIG1            0.0003  285.80
+SK3             0.0008  158.81
+SK4             0.0006  256.45
+SN4             0.0005  346.16
+SO1             0.0016  140.68
+SO3             0.0005  263.09
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from CMEMS in-situ sea level observations
+# using UTide (v0.3.1) with 1431 observations
+# from 2020-01-01 to 2020-02-29
+# R^2 = 0.3405, RMS error = 0.0568 m
+# Constituents analyzed: 35
+#
+# Sa Rapita, Mallorca, Baleares, Spain
+# BEGIN HOT COMMENTS
+# country: Spain
+# water_body: Mediterranean Sea (Balearic Islands)
+# source: Derived from CMEMS SOCIB data with UTide harmonic analysis
+# station_id_context: CMEMS-SA-RAPITA
+# date_imported: 20260506
+# datum: Mean Sea Level
+# confidence: 6
+# cmems_code: SA-RAPITA
+# network: SOCIB
+# utide: pts=1431 period=2020-01-01..2020-02-29 r2=0.3405 rms=0.0568m const=35
+# !units: meters
+# !longitude: 2.9533
+# !latitude: 39.3603
+Sa Rapita, Mallorca, Baleares, Spain
++00:00 :UTC
+-0.2212 meters
+J1              0.0015  151.08
+K1              0.0447  186.78
+x 0 0
+L2              0.0006  251.98
+x 0 0
+M2              0.0296  215.22
+M3              0.0014  174.35
+M4              0.0019  356.32
+M6              0.0003  253.37
+M8              0.0003  267.88
+N2              0.0059  212.52
+x 0 0
+O1              0.0187  97.87
+OO1             0.0008  263.68
+x 0 0
+Q1              0.0042  110.63
+2Q1             0.0016  151.93
+x 0 0
+x 0 0
+S2              0.0098  248.22
+S4              0.0003  279.36
+x 0 0
+x 0 0
+x 0 0
+MU2             0.0015  139.53
+x 0 0
+x 0 0
+MK3             0.0004  75.62
+x 0 0
+MN4             0.0008  290.35
+MS4             0.0006  46.36
+x 0 0
+x 0 0
+MSF             0.0075  228.56
+MM              0.0177  330.03
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0004  107.42
+x 0 0
+x 0 0
+2MN6            0.0006  246.72
+2MS6            0.0003  213.14
+x 0 0
+2SK5            0.0003  13.26
+2SM6            0.0003  26.91
+3MK7            0.0003  113.97
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0012  254.17
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ETA2            0.0012  287.84
+x 0 0
+UPS1            0.0019  218.27
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+EPS2            0.0003  320.62
+MO3             0.0008  161.09
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0030  145.55
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SK3             0.0015  162.60
+x 0 0
+SN4             0.0007  7.80
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
