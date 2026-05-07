@@ -15393,7 +15393,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: abashiri-347a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-abas
 # ioc_code: abas
@@ -15798,7 +15798,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: abidjanridi-230a-civ-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-abid
 # gloss_id: 257
@@ -15999,7 +15999,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: aburatsu-354a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-abur
 # ioc_code: abur
@@ -16403,14 +16403,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: acajutla-082a-slv-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -89.8366
 # !latitude: 13.5855
 Acajutla, El Salvador
 +00:00 :America/El_Salvador
-0.0000 meters
+1.4766 meters
 J1              0.0071  101.53
 K1              0.0989  94.71
 K2              0.0362  305.20
@@ -16599,14 +16599,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: acapulco_gro-316a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -99.9090
 # !latitude: 16.8406
 Acapulco (Puerto), Guerrero, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+1.0012 meters
 J1              0.0068  323.80
 K1              0.1168  325.16
 K2              0.0224  247.75
@@ -16795,14 +16795,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: acapulco_gro-316c-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -99.852000
 # !latitude: 16.842000
 Acapulco (Icacos), Guerrero, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+1.0012 meters
 J1              0.0065  325.37
 K1              0.1188  325.20
 K2              0.0225  245.86
@@ -17988,14 +17988,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: akyab_sittwe-907-mmr-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 92.9034
 # !latitude: 20.1405
 Sittwe (Akyab), Myanmar
 +00:00 :Asia/Yangon
-0.0000 meters
+3.3423 meters
 J1              0.0067  254.09
 K1              0.1280  250.05
 K2              0.0937  119.42
@@ -19582,7 +19582,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: alotau-069a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: LAT
 # confidence: 7
 # ssc_id: SSC-alot
 # gloss_id: 63
@@ -19594,7 +19594,7 @@ x 0 0
 # !latitude: -10.3175
 Alotau, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+0.7932 meters
 J1              0.0142  67.56
 K1              0.2633  48.85
 K2              0.0237  210.27
@@ -20371,7 +20371,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ambon-133-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-ambo
 # ioc_code: ambon
@@ -20386,7 +20386,7 @@ x 0 0
 # !latitude: -3.6904
 Ambon, Maluku, Indonesia
 +00:00 :Asia/Jayapura
-0.0000 meters
+1.5873 meters
 J1              0.0167  209.32
 K1              0.3001  190.06
 K2              0.0498  186.12
@@ -21373,7 +21373,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: andenes-800-nor-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-ande
 # ioc_code: ande
@@ -21387,7 +21387,7 @@ x 0 0
 # !latitude: 69.3261
 Andenes, Norway
 +00:00 :Europe/Oslo
-0.0000 meters
+1.3771 meters
 J1              0.0030  237.33
 K1              0.0645  191.92
 K2              0.0639  18.82
@@ -21576,14 +21576,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: anewa_bay-048a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # !units: meters
 # !longitude: 155.5436
 # !latitude: -6.1838
 Anewa Bay, Bougainville, Solomon Islands
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+0.8800 meters
 J1              0.0107  78.27
 K1              0.2107  55.06
 K2              0.0615  154.38
@@ -21772,7 +21772,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: angra_heroismo-215b-prt-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-angr
 # psmsl_id: 380
@@ -24754,14 +24754,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: auckland-070a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 174.7669
 # !latitude: -36.8429
 Auckland, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.8196 meters
 J1              0.0046  19.46
 K1              0.0711  355.43
 K2              0.0438  265.42
@@ -27122,14 +27122,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: bakea-9510063-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.316107
 # !latitude: 53.986027
 Bake A, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.1762 meters
 J1              0.0022  166.60
 K1              0.0723  45.25
 K2              0.0972  72.00
@@ -27318,7 +27318,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: balboa-302-pan-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-balb
 # gloss_id: 168
@@ -27330,7 +27330,7 @@ x 0 0
 # !latitude: 8.9650
 Balboa, Panama
 +00:00 :America/Panama
-0.0000 meters
+4.3099 meters
 J1              0.0101  82.85
 K1              0.1362  62.09
 K2              0.1314  300.49
@@ -32276,14 +32276,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: benoa-163-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 115.210000
 # !latitude: -8.745000
 Benoa, Bali, Indonesia
 +00:00 :Asia/Makassar
-0.0000 meters
+0.9764 meters
 J1              0.0135  197.18
 K1              0.2554  176.46
 K2              0.1030  104.43
@@ -33661,7 +33661,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: bhvalterleuchtturm-4990010-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-brem
 # psmsl_id: 124, 625
@@ -33672,7 +33672,7 @@ x 0 0
 # !latitude: 53.546511
 Bremerhaven Alter Leuchtturm (Weser), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.2260 meters
 J1              0.0029  186.97
 K1              0.0718  51.78
 K2              0.1141  80.42
@@ -34057,7 +34057,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: bitung-033a-idn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-bitu
 # ioc_code: bitu
@@ -34072,7 +34072,7 @@ x 0 0
 # !latitude: 1.4388
 Bitung, Sulawesi, Indonesia
 +00:00 :Asia/Jayapura
-0.0000 meters
+1.5633 meters
 J1              0.0100  155.45
 K1              0.2085  134.01
 K2              0.0693  307.31
@@ -34459,14 +34459,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: bluff-072-nzl-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 168.3454
 # !latitude: -46.5977
 Bluff, Southland, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.8121 meters
 J1              0.0010  353.76
 K1              0.0179  310.44
 K2              0.0483  62.11
@@ -34655,14 +34655,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: boat_cove-rbct-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 177.900000
 # !latitude: -29.283333
 Boat Cove, New Zealand
 +12:00 :Pacific/Auckland
-0.0000 meters
+-0.0001 meters
 J1              0.0031  242.93
 K1              0.0499  223.38
 K2              0.0181  276.25
@@ -35642,14 +35642,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: borgfeld-4940010-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.895455
 # !latitude: 53.135477
 Borgfeld (Wümme), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+6.3173 meters
 J1              0.0020  339.46
 K1              0.0265  173.76
 K2              0.0319  277.46
@@ -35838,14 +35838,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: borkumsdstrand-9340030-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 6.662107
 # !latitude: 53.578415
 Borkum Südstrand, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+4.9814 meters
 J1              0.0015  123.72
 K1              0.0703  29.84
 K2              0.0742  23.50
@@ -38599,14 +38599,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: brunsbttelmpm-5970094-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.149845
 # !latitude: 53.889399
 Brunsbüttel, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.1677 meters
 J1              0.0054  198.81
 K1              0.0712  74.47
 K2              0.0846  104.29
@@ -38991,14 +38991,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: bsum-9510095-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.860158
 # !latitude: 54.123381
 Büsum, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0336 meters
 J1              0.0027  197.63
 K1              0.0712  57.51
 K2              0.1125  94.51
@@ -39187,7 +39187,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: buenaventura-085a-col-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-buve
 # ioc_code: buve, buve2, buve3
@@ -39202,7 +39202,7 @@ x 0 0
 # !latitude: 3.8910
 Buenaventura, Colombia
 +00:00 :America/Bogota
-0.0000 meters
+2.7550 meters
 J1              0.0086  91.20
 K1              0.1149  62.69
 K2              0.1044  310.46
@@ -39391,14 +39391,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: buenos_aires-285a-arg-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # !units: meters
 # !longitude: -58.3988
 # !latitude: -34.5609
 Buenos Aires (Club de Pescadores), Argentina
 +00:00 :America/Buenos_Aires
-0.0000 meters
+0.7897 meters
 J1              0.0028  340.29
 K1              0.0826  77.76
 K2              0.0201  36.74
@@ -39587,7 +39587,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: bullen_bay-878-cuw-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-bull
 # ioc_code: bull, will
@@ -39599,7 +39599,7 @@ x 0 0
 # !latitude: 12.187000
 Bullenbaai, Curaçao
 +00:00 :America/Curacao
-0.0000 meters
+4.1427 meters
 J1              0.0057  234.77
 K1              0.0964  236.81
 K2              0.0012  72.43
@@ -40772,7 +40772,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cabo_san_lucas-034-mex-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-cabo
 # ioc_code: cabo
@@ -40786,7 +40786,7 @@ x 0 0
 # !latitude: 22.8792
 Cabo San Lucas, Baja California Sur, Mexico
 +00:00 :America/Mazatlan
-0.0000 meters
+1.8356 meters
 J1              0.0115  10.44
 K1              0.2214  4.03
 K2              0.0667  280.11
@@ -41568,7 +41568,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: callao-093b-per-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-call
 # ioc_code: call
@@ -41583,7 +41583,7 @@ x 0 0
 # !latitude: -12.0689
 Callao (La Punta), Peru
 +00:00 :America/Lima
-0.0000 meters
+1.0587 meters
 J1              0.0080  60.76
 K1              0.1460  28.44
 K2              0.0255  332.21
@@ -43554,7 +43554,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cape_town-704a-zaf-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-cape
 # psmsl_id: 1195, 866
@@ -43565,7 +43565,7 @@ x 0 0
 # !latitude: -33.900000
 Cape Town, South Africa
 +00:00 :Africa/Johannesburg
-0.0000 meters
+1.0165 meters
 J1              0.0046  134.06
 K1              0.0577  109.58
 K2              0.0613  51.71
@@ -44150,14 +44150,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cartagena-265a-col-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -75.5470
 # !latitude: 10.3905
 Cartagena de Indias, Colombia
 +00:00 :America/Bogota
-0.0000 meters
+0.4640 meters
 J1              0.0058  237.84
 K1              0.0972  240.89
 K2              0.0050  36.53
@@ -44346,7 +44346,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cascais-209a-prt-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-casc
 # ioc_code: casc
@@ -44947,7 +44947,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cebu-379a-phl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-cebu
 # psmsl_id: 394
@@ -44957,7 +44957,7 @@ x 0 0
 # !latitude: 10.3005
 Cebu, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+1.8000 meters
 J1              0.0123  228.27
 K1              0.3101  204.89
 K2              0.0711  128.98
@@ -45146,7 +45146,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cedros-305a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-cedr
 # ioc_code: cedr
@@ -45158,7 +45158,7 @@ x 0 0
 # !latitude: 28.0960
 Isla de Cedros, Mexico
 -06:00 :America/Tijuana
-0.0000 meters
+1.5269 meters
 J1              0.0161  32.32
 K1              0.3034  22.64
 K2              0.0713  298.71
@@ -45751,7 +45751,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ceuta-207-esp-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-ceut
 # ioc_code: ceut, ceut1, ceut2
@@ -45765,7 +45765,7 @@ x 0 0
 # !latitude: 35.8916
 Ceuta, Spain
 +00:00 :Europe/Madrid
-0.0000 meters
+0.6452 meters
 J1              0.0003  253.21
 K1              0.0378  143.11
 K2              0.0345  66.46
@@ -45954,7 +45954,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: chabahar-915-irn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (UHSLC)
 # confidence: 7
 # ssc_id: SSC-chab
 # ioc_code: chab
@@ -45968,7 +45968,7 @@ x 0 0
 # !latitude: 25.2956
 Chabahar, Iran
 +00:00 :Asia/Tehran
-0.0000 meters
+1.6158 meters
 J1              0.0238  347.59
 K1              0.3986  338.62
 K2              0.0692  179.94
@@ -46750,14 +46750,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: charchanga-138a-bgd-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 91.0654
 # !latitude: 22.2259
 Charchenga, Bangladesh
 +00:00 :Asia/Dhaka
-0.0000 meters
+2.1304 meters
 J1              0.0035  327.26
 K1              0.1267  304.20
 K2              0.0989  264.27
@@ -46946,7 +46946,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: charleston-chst-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-chst
 # ioc_code: chst
@@ -46956,7 +46956,7 @@ x 0 0
 # !latitude: -41.9033
 Charleston, New Zealand
 +12:00 :Pacific/Auckland
-0.0000 meters
+-0.0000 meters
 J1              0.0021  191.89
 K1              0.0222  181.89
 K2              0.0757  336.72
@@ -47344,7 +47344,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: chatham-079a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-wait
 # ioc_code: wait
@@ -47359,7 +47359,7 @@ x 0 0
 # !latitude: -43.9463
 Waitangi, Chatham Island, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.8867 meters
 J1              0.0019  50.12
 K1              0.0471  72.40
 K2              0.0085  32.06
@@ -47948,7 +47948,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: chichijima-047-jpn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # !units: meters
 # !longitude: 142.1947
@@ -48144,14 +48144,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: chittagong-124-bgd-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 91.8209
 # !latitude: 22.2417
 Chittagong, Bangladesh
 +00:00 :Asia/Dhaka
-0.0000 meters
+3.4917 meters
 J1              0.0065  309.70
 K1              0.1888  277.08
 K2              0.1803  227.22
@@ -48732,7 +48732,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: christmas-011b-aus-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: LAT
 # confidence: 7
 # ssc_id: SSC-xmas
 # ioc_code: xmas
@@ -48746,7 +48746,7 @@ x 0 0
 # !latitude: 1.9823
 Kiritimati (Christmas Island), Kiribati
 +00:00 :Pacific/Kiritimati
-0.0000 meters
+0.7645 meters
 J1              0.0050  239.28
 K1              0.0816  214.45
 K2              0.0222  86.87
@@ -48935,7 +48935,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: christmas-170a-kir-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-chrs
 # ioc_code: chrs, ffcj
@@ -48950,7 +48950,7 @@ x 0 0
 # !latitude: -10.417000
 Christmas Island, Australia
 +00:00 :Indian/Christmas
-0.0000 meters
+0.9281 meters
 J1              0.0104  176.33
 K1              0.1797  160.55
 K2              0.0457  68.43
@@ -49140,14 +49140,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: churchill-274-can-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # !units: meters
 # !longitude: -94.1919
 # !latitude: 58.7734
 Churchill, Manitoba, Canada
 +00:00 :America/Winnipeg
-0.0000 meters
+2.3670 meters
 J1              0.0024  22.79
 K1              0.0834  308.07
 K2              0.1286  94.42
@@ -49534,14 +49534,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cilacap-162a-idn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 109.017000
 # !latitude: -7.752000
 Cilacap, Java, Indonesia
 +00:00 :Asia/Jakarta
-0.0000 meters
+3.4744 meters
 J1              0.0110  178.85
 K1              0.1878  166.29
 K2              0.0663  81.95
@@ -49730,14 +49730,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ciudad_del_carmen-403-mex-unam_hist
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -91.8318
 # !latitude: 18.6318
 Ciudad Del Carmen (Sector Naval), Campeche, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+1.5209 meters
 J1              0.0042  207.46
 K1              0.1086  228.60
 K2              0.0042  85.50
@@ -49926,14 +49926,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ciudad_del_carmen-779a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -91.8433
 # !latitude: 18.6432
 Ciudad del Carmen (Faro Atalaya), Campeche, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+1.5209 meters
 J1              0.0043  208.72
 K1              0.1086  228.56
 K2              0.0043  84.37
@@ -50720,7 +50720,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cocos_island-392-cri-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-cocos
 # ioc_code: cocos
@@ -50731,7 +50731,7 @@ x 0 0
 # !latitude: 5.557000
 Cocos Island, Costa Rica
 +00:00 :America/Costa_Rica
-0.0000 meters
+1.8376 meters
 J1              0.0070  86.12
 K1              0.0908  65.01
 K2              0.0590  289.83
@@ -52098,14 +52098,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: coxs_bazaar-136a-bgd-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 91.9695
 # !latitude: 21.4511
 Cox's Bazar, Bangladesh
 +00:00 :Asia/Dhaka
-0.0000 meters
+2.0801 meters
 J1              0.0039  262.21
 K1              0.1065  266.73
 K2              0.1010  174.46
@@ -52294,14 +52294,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cranz-5950070-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.791526
 # !latitude: 53.535935
 Cranz (Elbe), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.3116 meters
 J1              0.0059  251.79
 K1              0.0706  120.54
 K2              0.0942  205.83
@@ -52490,14 +52490,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: cristobal-266-pan-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -79.9147
 # !latitude: 9.3552
 Colón, Panama
 +00:00 :America/Panama
-0.0000 meters
+0.7071 meters
 J1              0.0060  235.54
 K1              0.1012  240.87
 K2              0.0043  344.94
@@ -53682,7 +53682,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: currimao-654-phl-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-curri
 # ioc_code: curri
@@ -53694,7 +53694,7 @@ x 0 0
 # !latitude: 17.9880
 Currimao, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+0.9211 meters
 J1              0.0064  203.85
 K1              0.1971  198.05
 K2              0.0093  359.81
@@ -54279,7 +54279,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: dakar-223-sen-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-dakar
 # ioc_code: dakar
@@ -54878,7 +54878,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: dar_es_salaam-102a-tza-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-dare
 # psmsl_id: 1694
@@ -54888,7 +54888,7 @@ x 0 0
 # !latitude: -6.820000
 Dar Es Salaam, Tanzania
 +00:00 :Africa/Dar_es_Salaam
-0.0000 meters
+2.4600 meters
 J1              0.0111  356.28
 K1              0.1747  357.10
 K2              0.1379  61.53
@@ -55273,14 +55273,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: davao-372-phl-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 125.6629
 # !latitude: 7.1537
 Davao, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+2.9937 meters
 J1              0.0070  114.91
 K1              0.1245  97.73
 K2              0.0815  318.56
@@ -59038,7 +59038,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: dukegat-3990020-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: NAP
 # confidence: 7
 # ssc_id: SSC-dukt
 # sonel_gps_id: 2521, 2523
@@ -59048,7 +59048,7 @@ x 0 0
 # !latitude: 53.435147
 Dukegat (Ems), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+0.0820 meters
 J1              0.0017  138.59
 K1              0.0716  42.09
 K2              0.0839  50.32
@@ -59629,14 +59629,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: durban-181-zaf-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 31.0529
 # !latitude: -29.8713
 Durban, South Africa
 +00:00 :Africa/Johannesburg
-0.0000 meters
+1.1581 meters
 J1              0.0041  174.73
 K1              0.0526  145.68
 K2              0.0888  72.39
@@ -59825,7 +59825,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: dwarsgat-9460020-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-dwat
 # sonel_gps_id: 2514
@@ -59835,7 +59835,7 @@ x 0 0
 # !latitude: 53.720212
 Dwarsgat (Weser), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+4.9188 meters
 J1              0.0022  172.40
 K1              0.0711  51.24
 K2              0.1058  85.69
@@ -60620,7 +60620,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: easter-022-chl-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-east
 # ioc_code: east, east2
@@ -60635,7 +60635,7 @@ x 0 0
 # !latitude: -27.1548
 Hanga Roa, Isla de Pascua (Easter), Chile
 +00:00 :America/Santiago
-0.0000 meters
+0.4572 meters
 J1              0.0045  33.52
 K1              0.0807  15.73
 K2              0.0227  237.62
@@ -61414,14 +61414,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: eidersperrwerkbp-9520081-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.849580
 # !latitude: 54.265865
 Eider-Sperrwerk BP, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0515 meters
 J1              0.0042  176.24
 K1              0.0640  53.23
 K2              0.0761  104.51
@@ -61610,7 +61610,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: el_porvenir-739-pan-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-elpo
 # ioc_code: elpo
@@ -61621,7 +61621,7 @@ x 0 0
 # !latitude: 9.5582
 El Porvenir, Panama
 +00:00 :America/Panama
-0.0000 meters
+0.3921 meters
 J1              0.0061  235.11
 K1              0.1004  239.46
 K2              0.0043  354.29
@@ -61810,14 +61810,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: elmshornhafen-5970022-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.653889
 # !latitude: 53.752179
 Elmshorn Hafen (Krückau), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.9086 meters
 J1              0.0068  235.73
 K1              0.0531  137.67
 K2              0.0451  210.76
@@ -62202,14 +62202,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: emdenneueseeschleuse-3970010-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: LAT
 # confidence: 7
 # !units: meters
 # !longitude: 7.187131
 # !latitude: 53.338312
 Emden Neue Seeschleuse (Ems), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+2.4900 meters
 J1              0.0023  181.53
 K1              0.0737  55.45
 K2              0.0960  74.37
@@ -62594,14 +62594,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ensenada-317a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -116.6178
 # !latitude: 31.8483
 Ensenada, Baja California Norte, Mexico (3)
 -06:00 :America/Tijuana
-0.0000 meters
+1.6235 meters
 J1              0.0173  37.45
 K1              0.3226  25.87
 K2              0.0609  306.29
@@ -63588,14 +63588,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: esperanza-601-arg-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -56.995000
 # !latitude: -63.395000
 Esperanza (Hope Bay, Antarctica), Argentina
 +00:00 :America/Buenos_Aires
-0.0000 meters
+3.8127 meters
 J1              0.0139  52.01
 K1              0.3725  53.78
 K2              0.1153  314.65
@@ -64178,14 +64178,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: esteinneressperrwerkbp-5950081-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.776501
 # !latitude: 53.532825
 Este Inneres Sperrwerk BP, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.3948 meters
 J1              0.0057  294.81
 K1              0.0499  118.03
 K2              0.0918  205.95
@@ -65560,14 +65560,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: fahrenholzup-5940060-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 10.315488
 # !latitude: 53.360313
 Fahrenholz UP (Ilmenau), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+6.4207 meters
 J1              0.0066  308.49
 K1              0.0503  178.58
 K2              0.0512  282.91
@@ -67932,14 +67932,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: fishing_rock-rfrt-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 177.900000
 # !latitude: -29.250000
 Fishing Rock, New Zealand
 +12:00 :Pacific/Auckland
-0.0000 meters
+-0.0000 meters
 J1              0.0065  221.46
 K1              0.0490  216.30
 K2              0.0128  280.03
@@ -68718,7 +68718,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: flores_lajes-213a-prt-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -31.1686
@@ -68914,7 +68914,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: flores_santa_cruz-210-prt-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -31.1263
@@ -70496,14 +70496,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: friedrichstadtstrassenbrcke-9520060-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.095699
 # !latitude: 54.370116
 Friedrichstadt Strassenbrücke (Eider), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.1363 meters
 J1              0.0069  215.16
 K1              0.0494  103.52
 K2              0.0655  173.60
@@ -71493,7 +71493,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: funchal-218b-prt-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-func
 # gloss_id: 250
@@ -73886,7 +73886,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: gibara-244a-cub-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-giba
 # gloss_id: 276
@@ -73898,7 +73898,7 @@ x 0 0
 # !latitude: 21.1076
 Gibara, Cuba
 +00:00 :America/Havana
-0.0000 meters
+1.0038 meters
 J1              0.0044  213.30
 K1              0.0842  204.46
 K2              0.0102  33.79
@@ -74283,14 +74283,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: gisborne-078b-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 178.033000
 # !latitude: -38.683000
 Gisborne, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.2764 meters
 J1              0.0029  7.15
 K1              0.0421  335.99
 K2              0.0085  228.60
@@ -76858,14 +76858,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: grauerortreede-5970026-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.495942
 # !latitude: 53.680707
 Grauerort Reede (Elbe), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.4131 meters
 J1              0.0063  225.37
 K1              0.0708  110.20
 K2              0.0838  178.43
@@ -78433,14 +78433,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: grosseweserbrcke-4910050-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.804665
 # !latitude: 53.074594
 Grosse Weserbrücke, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.3979 meters
 J1              0.0041  222.89
 K1              0.0665  100.49
 K2              0.1163  175.93
@@ -78629,7 +78629,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: guadalupe-036a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-isla
 # gloss_id: 160
@@ -78642,7 +78642,7 @@ x 0 0
 # !latitude: 28.8820
 Isla Guadalupe, Baja California Norte, Mexico
 -06:00 :America/Tijuana
-0.0000 meters
+2.0734 meters
 J1              0.0168  33.74
 K1              0.2932  23.54
 K2              0.0592  297.63
@@ -78831,14 +78831,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: guantanamo_bay-251a-cub-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: -75.1512
 # !latitude: 19.9176
 Guantanamo, Cuba
 +00:00 :America/Havana
-0.0000 meters
+0.7290 meters
 J1              0.0046  217.34
 K1              0.0656  219.51
 K2              0.0118  37.00
@@ -79027,14 +79027,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: guaymas-397a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -110.8822
 # !latitude: 27.9211
 Guaymas, Sonora, Mexico
 -06:00 :America/Hermosillo
-0.0000 meters
+2.5188 meters
 J1              0.0149  4.03
 K1              0.2796  0.61
 K2              0.0315  316.58
@@ -80208,7 +80208,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: hakodate-364a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-hako
 # ioc_code: hako
@@ -80611,14 +80611,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: halifax-275-can-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: LLWLT
 # confidence: 7
 # !units: meters
 # !longitude: -63.5837
 # !latitude: 44.6591
 Halifax, Nova Scotia, Canada
 +00:00 :America/Halifax
-0.0000 meters
+1.0486 meters
 J1              0.0055  134.35
 K1              0.1036  122.06
 K2              0.0384  19.91
@@ -81005,7 +81005,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: hamada-348-jpn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-hmda
 # ioc_code: hmda
@@ -84187,14 +84187,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: hechthausen-5980030-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.253883
 # !latitude: 53.642089
 Hechthausen (Oste), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.4962 meters
 J1              0.0046  264.06
 K1              0.0446  135.49
 K2              0.0447  196.36
@@ -85173,7 +85173,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: helgolandbinnenhafen-9510070-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: LAT
 # confidence: 7
 # ssc_id: SSC-helg
 # ioc_code: helg
@@ -85185,7 +85185,7 @@ x 0 0
 # !latitude: 54.180523
 Helgoland Binnenhafen, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+1.8900 meters
 J1              0.0016  154.23
 K1              0.0670  46.50
 K2              0.0781  69.61
@@ -85769,14 +85769,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: herbrumhafendamm-3770030-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 7.317939
 # !latitude: 53.043415
 Herbrum Hafendamm (Dortmund-Ems-Kanal), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.5475 meters
 J1              0.0074  208.42
 K1              0.0647  92.85
 K2              0.0868  146.14
@@ -87147,7 +87147,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: hiron_point-134a-bgd-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-hiro
 # psmsl_id: 1451
@@ -87157,7 +87157,7 @@ x 0 0
 # !latitude: 21.8174
 Hiron Point, Bangladesh
 +00:00 :Asia/Dhaka
-0.0000 meters
+1.8428 meters
 J1              0.0070  271.82
 K1              0.1334  268.03
 K2              0.1001  158.15
@@ -89732,7 +89732,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: honningsvag-801-nor-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-honn
 # ioc_code: honn
@@ -89745,7 +89745,7 @@ x 0 0
 # !latitude: 70.9803
 Honningsvåg, Norway
 +00:00 :Europe/Oslo
-0.0000 meters
+1.7185 meters
 J1              0.0054  259.26
 K1              0.0930  230.37
 K2              0.0723  90.52
@@ -89934,14 +89934,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: hooksielplate-9430020-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.149528
 # !latitude: 53.670735
 Hooksielplate (Jade), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+4.9870 meters
 J1              0.0021  173.71
 K1              0.0709  53.39
 K2              0.1064  87.36
@@ -90330,7 +90330,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: hosojima-358a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # !units: meters
 # !longitude: 131.6695
@@ -90918,7 +90918,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: hrnum-9570050-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-horn
 # ioc_code: horn
@@ -90929,7 +90929,7 @@ x 0 0
 # !latitude: 54.759788
 Hörnum, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0717 meters
 J1              0.0029  186.74
 K1              0.0631  58.53
 K2              0.0623  93.38
@@ -91514,14 +91514,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: huntebrck-4960070-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.448375
 # !latitude: 53.201799
 Huntebrück, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.4288 meters
 J1              0.0044  225.25
 K1              0.0621  97.00
 K2              0.0948  159.07
@@ -91710,14 +91710,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: husum-9530020-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.025856
 # !latitude: 54.473942
 Husum (Speerwerk), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0722 meters
 J1              0.0048  213.73
 K1              0.0720  75.19
 K2              0.1124  126.20
@@ -95083,14 +95083,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: inhambane-900-moz-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 35.3767
 # !latitude: -23.8681
 Inhambane, Mozambique
 +00:00 :Africa/Maputo
-0.0000 meters
+6.2033 meters
 J1              0.0030  185.16
 K1              0.0190  143.55
 K2              0.1157  117.45
@@ -96269,7 +96269,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ishigaki-365-jpn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # !units: meters
 # !longitude: 124.1636
@@ -97651,14 +97651,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: itzehoehafen-5970042-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.500595
 # !latitude: 53.924459
 Itzehoe Hafen (Stör), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.4015 meters
 J1              0.0053  248.54
 K1              0.0574  135.65
 K2              0.0590  207.42
@@ -99030,7 +99030,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: jakarta-161a-idn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-koli
 # ioc_code: koli, koli2
@@ -99042,7 +99042,7 @@ x 0 0
 # !latitude: -6.1068
 Jakarta (Port), Java, Indonesia
 +00:00 :Asia/Jakarta
-0.0000 meters
+2.0513 meters
 J1              0.0149  79.82
 K1              0.2569  34.47
 K2              0.0189  53.31
@@ -99231,7 +99231,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: jask-126-irn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (UHSLC)
 # confidence: 7
 # ssc_id: SSC-jask
 # ioc_code: jask, jask2
@@ -99245,7 +99245,7 @@ x 0 0
 # !latitude: 25.6460
 Jask, Iran
 +00:00 :Asia/Tehran
-0.0000 meters
+2.1786 meters
 J1              0.0234  351.09
 K1              0.3996  340.86
 K2              0.0723  184.29
@@ -99829,7 +99829,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: jolo-373a-phl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-jolo
 # gloss_id: 70
@@ -99841,7 +99841,7 @@ x 0 0
 # !latitude: 6.0583
 Jolo, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+2.0065 meters
 J1              0.0090  208.00
 K1              0.2521  194.37
 K2              0.0315  35.61
@@ -101809,7 +101809,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: kaikoura-kait-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-kait
 # ioc_code: kait
@@ -101819,7 +101819,7 @@ x 0 0
 # !latitude: -42.412778
 Kaikoura, New Zealand
 +12:00 :Pacific/Auckland
-0.0000 meters
+-0.0000 meters
 J1              0.0012  164.53
 K1              0.0353  94.56
 K2              0.0099  118.09
@@ -103188,7 +103188,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: kanton-013-kir-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: LAT
 # confidence: 7
 # ssc_id: SSC-kant
 # ioc_code: kant
@@ -103202,7 +103202,7 @@ x 0 0
 # !latitude: -2.7747
 Kanton, Kiribati
 +00:00 :Pacific/Enderbury
-0.0000 meters
+1.1326 meters
 J1              0.0011  184.05
 K1              0.0257  127.69
 K2              0.0374  176.42
@@ -103391,7 +103391,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: kaohsiung-340a-chn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-kaoh
 # ioc_code: tkao
@@ -103402,7 +103402,7 @@ x 0 0
 # !latitude: 22.6144
 Kaohsiung, Taiwan
 +00:00 :Asia/Shanghai
-0.0000 meters
+0.7815 meters
 J1              0.0067  172.55
 K1              0.1730  166.20
 K2              0.0183  357.32
@@ -103787,7 +103787,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: karachi-147-pak-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-kara
 # ioc_code: kara
@@ -103801,7 +103801,7 @@ x 0 0
 # !latitude: 24.8030
 Karachi, Pakistan
 +00:00 :Asia/Karachi
-0.0000 meters
+1.8487 meters
 J1              0.0244  350.40
 K1              0.4010  337.38
 K2              0.0864  181.89
@@ -105965,14 +105965,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: kavieng-068a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 150.7903
 # !latitude: -2.5816
 Kavieng, New Ireland, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+0.9082 meters
 J1              0.0106  76.72
 K1              0.2225  59.93
 K2              0.0356  149.40
@@ -106359,7 +106359,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: keelung-341-twn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-keel
 # ioc_code: tkee
@@ -106370,7 +106370,7 @@ x 0 0
 # !latitude: 25.1550
 Keelung, Taiwan
 +00:00 :Asia/Taipei
-0.0000 meters
+0.9610 meters
 J1              0.0097  124.45
 K1              0.1869  107.01
 K2              0.0142  32.09
@@ -106755,14 +106755,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: kelang-140a-mys-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # !units: meters
 # !longitude: 101.3885
 # !latitude: 2.9990
 Pelabuhan Klang, Malaysia
 +00:00 :Asia/Kuala_Lumpur
-0.0000 meters
+2.9100 meters
 J1              0.0266  306.28
 K1              0.1884  264.48
 K2              0.1934  319.77
@@ -107752,7 +107752,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: kerguelen-180a-fra-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-kerg
 # ioc_code: kerg, kerg2
@@ -107767,7 +107767,7 @@ x 0 0
 # !latitude: -49.3521
 Port-aux-Francais, Kerguelen Islands (1)
 +00:00 :Indian/Kerguelen
-0.0000 meters
+1.2000 meters
 J1              0.0049  175.92
 K1              0.0787  151.44
 K2              0.0597  227.48
@@ -107956,7 +107956,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: khal_10-135a-bgd-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-khal
 # uhslc_id: 135
@@ -107965,7 +107965,7 @@ x 0 0
 # !latitude: 22.2687
 Chittagong (Dry Dock, Kharnapuli River), Bangladesh
 +00:00 :Asia/Dhaka
-0.0000 meters
+2.4192 meters
 J1              0.0057  342.55
 K1              0.1796  282.79
 K2              0.1522  235.90
@@ -108154,14 +108154,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: khepupara-139a-bgd-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 90.2187
 # !latitude: 21.9844
 Khepupara, Bangladesh
 +00:00 :Asia/Dhaka
-0.0000 meters
+2.3291 meters
 J1              0.0056  285.97
 K1              0.1310  278.95
 K2              0.1085  178.66
@@ -109939,14 +109939,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: knysna-186-zaf-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 23.050000
 # !latitude: -34.083000
 Knysna (The Heads), South Africa
 +00:00 :Africa/Johannesburg
-0.0000 meters
+1.1392 meters
 J1              0.0054  169.80
 K1              0.0640  144.35
 K2              0.0760  73.96
@@ -110135,7 +110135,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: knysna-186a-zaf-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-knys
 # psmsl_id: 950
@@ -110145,7 +110145,7 @@ x 0 0
 # !latitude: -34.0426
 Knysna, South Africa
 +00:00 :Africa/Johannesburg
-0.0000 meters
+1.1392 meters
 J1              0.0054  169.90
 K1              0.0640  144.35
 K2              0.0759  73.90
@@ -110334,14 +110334,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ko_lak-328-tha-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (UHSLC)
 # confidence: 7
 # !units: meters
 # !longitude: 99.817000
 # !latitude: 11.795000
 Ko Lak, Prachuap Khiri Khan, Thailand
 +00:00 :Asia/Bangkok
-0.0000 meters
+2.6563 meters
 J1              0.0213  109.27
 K1              0.5063  61.05
 K2              0.0073  317.82
@@ -110530,7 +110530,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ko_taphao_noi-148-tha-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (UHSLC)
 # confidence: 7
 # ssc_id: SSC-kota
 # ioc_code: kota
@@ -110544,7 +110544,7 @@ x 0 0
 # !latitude: 7.8338
 Ko Taphao Noi, Phuket, Thailand
 +00:00 :Asia/Bangkok
-0.0000 meters
+2.3865 meters
 J1              0.0082  233.67
 K1              0.1307  224.89
 K2              0.1127  130.76
@@ -112312,7 +112312,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: korotiti_bay-gbit-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-gbit
 # ioc_code: gbit
@@ -112322,7 +112322,7 @@ x 0 0
 # !latitude: -36.1895
 Korotiti Bay, New Zealand
 +12:00 :Pacific/Auckland
-0.0000 meters
+-0.0000 meters
 J1              0.0068  260.42
 K1              0.0486  161.09
 K2              0.0179  234.43
@@ -113307,14 +113307,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: krautsandreede-5970031-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.392312
 # !latitude: 53.756276
 Krautsand Reede (Elbe), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.2455 meters
 J1              0.0065  220.51
 K1              0.0707  105.10
 K2              0.0801  165.51
@@ -113503,14 +113503,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: krckausperrwerkbp-5970023-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.526955
 # !latitude: 53.716258
 Krückau-Sperrwerk BP, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.2330 meters
 J1              0.0044  241.22
 K1              0.0659  109.32
 K2              0.0780  180.88
@@ -116464,7 +116464,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: kushimoto-353a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-kusm
 # ioc_code: kusm
@@ -116668,7 +116668,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: kushiro-350a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # !units: meters
 # !longitude: 144.3714
@@ -117453,7 +117453,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: l_cornwallis_i-705a-can-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: LLWLT
 # confidence: 7
 # ssc_id: SSC-litt
 # gloss_id: 153
@@ -117464,7 +117464,7 @@ x 0 0
 # !latitude: 75.3833
 Little Cornwallis, Nunavut, Canada
 +00:00 :America/Winnipeg
-0.0000 meters
+0.9229 meters
 J1              0.0052  21.97
 K1              0.1445  354.48
 K2              0.0441  239.37
@@ -117855,7 +117855,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: la_guaira-247a-ven-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-lagu
 # gloss_id: 328
@@ -118260,14 +118260,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: la_paz-671-mex-unam_hist
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -110.333333
 # !latitude: 24.266667
 La Paz (Puerto Pichilingue), Baja California Sur, Mexico
 -06:00 :America/Mazatlan
-0.0000 meters
+1.8017 meters
 J1              0.0121  22.05
 K1              0.2503  9.42
 K2              0.0587  298.73
@@ -118456,14 +118456,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: la_paz-671a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -110.331389
 # !latitude: 24.151944
 La Paz (Cuarta Zona Naval), Baja California Sur, Mexico
 -06:00 :America/Mazatlan
-0.0000 meters
+1.8017 meters
 J1              0.0121  22.05
 K1              0.2503  9.42
 K2              0.0587  298.74
@@ -119050,14 +119050,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lae-067a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 146.9870
 # !latitude: -6.7425
 Lae, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+1.3013 meters
 J1              0.0126  71.53
 K1              0.2481  53.83
 K2              0.0299  177.24
@@ -119246,7 +119246,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lagos-233a-nga-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 3.3840
@@ -119442,7 +119442,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lagos-233c-nga-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 3.3974
@@ -120032,7 +120032,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lamu-149-ken-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-lamu
 # ioc_code: lamu
@@ -120044,7 +120044,7 @@ x 0 0
 # !latitude: -2.2667
 Lamu, Kenya
 +00:00 :Africa/Nairobi
-0.0000 meters
+2.3420 meters
 J1              0.0128  13.47
 K1              0.1984  359.27
 K2              0.1316  70.83
@@ -123016,14 +123016,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ledasperrwerkup-3880050-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 7.474064
 # !latitude: 53.215068
 Ledasperrwerk UP, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.1447 meters
 J1              0.0053  171.34
 K1              0.0719  61.05
 K2              0.0907  83.89
@@ -123212,7 +123212,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: legaspi-371-phl-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-lega
 # ioc_code: lega
@@ -123227,7 +123227,7 @@ x 0 0
 # !latitude: 13.1461
 Legaspi, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+2.0344 meters
 J1              0.0089  94.21
 K1              0.1608  78.77
 K2              0.0631  311.80
@@ -124013,7 +124013,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lembar-419-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-lemba
 # ioc_code: lemba
@@ -124024,7 +124024,7 @@ x 0 0
 # !latitude: -8.7308
 Pelabuhan Lembar, Lombok, Indonesia
 +00:00 :Asia/Makassar
-0.0000 meters
+2.6929 meters
 J1              0.0157  208.72
 K1              0.3394  183.22
 K2              0.0445  92.87
@@ -124416,14 +124416,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lhort-5960010-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.633355
 # !latitude: 53.571574
 Lühort (Elbe), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.2730 meters
 J1              0.0057  245.57
 K1              0.0700  116.14
 K2              0.0859  195.48
@@ -125204,14 +125204,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: limon-268-cri-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -83.033000
 # !latitude: 10.000000
 Limon, Costa Rica
 +00:00 :America/Costa_Rica
-0.0000 meters
+0.5596 meters
 J1              0.0060  233.83
 K1              0.1003  238.75
 K2              0.0048  319.89
@@ -125400,7 +125400,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: listaufsylt-9570070-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-list
 # psmsl_id: 1047
@@ -125409,7 +125409,7 @@ x 0 0
 # !latitude: 55.018268
 List auf Sylt, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0930 meters
 J1              0.0019  234.24
 K1              0.0555  82.76
 K2              0.0521  143.40
@@ -126393,7 +126393,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lobito-237a-ago-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-lobi
 # gloss_id: 262
@@ -126594,7 +126594,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lobos_de_afuera-084a-per-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-lobo
 # ioc_code: lobo2, lobos
@@ -126606,7 +126606,7 @@ x 0 0
 # !latitude: -6.9513
 Lobos De Afuera, Peru
 +00:00 :America/Lima
-0.0000 meters
+1.1361 meters
 J1              0.0078  63.91
 K1              0.1270  30.34
 K2              0.0404  296.98
@@ -127195,14 +127195,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: loreto-319-mex-unam_hist
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -111.340000
 # !latitude: 26.015000
 Loreto, Baja California Sur, Mexico
 -06:00 :America/Mazatlan
-0.0000 meters
+1.6775 meters
 J1              0.0145  9.87
 K1              0.2633  4.39
 K2              0.0371  293.14
@@ -127391,7 +127391,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lottin_point-lott-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-lott
 # ioc_code: lott
@@ -127401,7 +127401,7 @@ x 0 0
 # !latitude: -37.550000
 Lottin Point, New Zealand
 +12:00 :Pacific/Auckland
-0.0000 meters
+-0.0000 meters
 J1              0.0045  204.57
 K1              0.0592  172.83
 K2              0.0199  246.79
@@ -128781,7 +128781,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lubang-655-phl-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-luba
 # ioc_code: luba
@@ -128793,7 +128793,7 @@ x 0 0
 # !latitude: 13.8160
 Tilik, Lubang, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+0.9209 meters
 J1              0.0095  206.81
 K1              0.2858  195.94
 K2              0.0180  96.59
@@ -130176,14 +130176,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: lyttelton-667a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 172.7219
 # !latitude: -43.6056
 Lyttelton, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.4978 meters
 J1              0.0027  307.68
 K1              0.0464  273.31
 K2              0.0191  119.85
@@ -131357,7 +131357,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: madang-066a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-mada
 # psmsl_id: 1254, 1618
@@ -131367,7 +131367,7 @@ x 0 0
 # !latitude: -5.2084
 Madang Harbour, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+1.3796 meters
 J1              0.0126  74.84
 K1              0.2436  59.22
 K2              0.0162  166.87
@@ -131556,7 +131556,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: maisaka-356a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-maisa
 # psmsl_id: 1089
@@ -133353,7 +133353,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: maloy-802-nor-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-malo
 # ioc_code: malo
@@ -133364,7 +133364,7 @@ x 0 0
 # !latitude: 61.9338
 Måløy, Norway
 +00:00 :Europe/Oslo
-0.0000 meters
+1.2321 meters
 J1              0.0023  201.40
 K1              0.0492  151.44
 K2              0.0563  320.67
@@ -133945,7 +133945,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: manila-370a-phl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-mani
 # ioc_code: mani
@@ -133960,7 +133960,7 @@ x 0 0
 # !latitude: 14.585000
 Manila, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+2.5067 meters
 J1              0.0098  211.02
 K1              0.2997  199.50
 K2              0.0208  87.74
@@ -134546,7 +134546,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: manus-065a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-manu
 # psmsl_id: 1609, 1619
@@ -134555,7 +134555,7 @@ x 0 0
 # !latitude: -2.0191
 Seeadler Harbor, Manus, Admiralty Islands, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+0.5000 meters
 J1              0.0118  76.15
 K1              0.2341  61.66
 K2              0.0141  147.41
@@ -134744,14 +134744,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: manzanillo-395a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -104.3178
 # !latitude: 19.0556
 Manzanillo, Colima, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+3.8731 meters
 J1              0.0088  168.64
 K1              0.1628  165.51
 K2              0.0497  88.68
@@ -134940,7 +134940,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: maputo-190b-moz-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-mapuw
 # psmsl_id: 986
@@ -134949,7 +134949,7 @@ x 0 0
 # !latitude: -25.975000
 Maputo, Moçambique
 +00:00 :Africa/Maputo
-0.0000 meters
+2.0536 meters
 J1              0.0050  201.81
 K1              0.0390  170.22
 K2              0.1523  98.06
@@ -135138,7 +135138,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: mar_del_plata-729-arg-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-plat
 # ioc_code: plat, plat2
@@ -135153,7 +135153,7 @@ x 0 0
 # !latitude: -38.0358
 Mar del Plata, Argentina
 +00:00 :America/Buenos_Aires
-0.0000 meters
+3.2327 meters
 J1              0.0008  290.91
 K1              0.1635  169.18
 K2              0.0194  24.51
@@ -136143,7 +136143,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: marsden_point-398a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-marsd
 # uhslc_id: 398
@@ -136152,7 +136152,7 @@ x 0 0
 # !latitude: -35.8346
 Marsden Point, Northland, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.6714 meters
 J1              0.0047  19.13
 K1              0.0723  359.73
 K2              0.0339  267.99
@@ -136736,7 +136736,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: masirah-113-omn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (UHSLC)
 # confidence: 7
 # ssc_id: SSC-masi
 # ioc_code: masi, masi2
@@ -136748,7 +136748,7 @@ x 0 0
 # !latitude: 20.687000
 Masirah, Oman
 +00:00 :Asia/Muscat
-0.0000 meters
+1.4683 meters
 J1              0.0243  0.55
 K1              0.4022  346.21
 K2              0.0633  190.57
@@ -136937,7 +136937,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: matarani-094b-per-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-mata
 # ioc_code: mata, mata2
@@ -136949,7 +136949,7 @@ x 0 0
 # !latitude: -17.001
 Matarani, Peru
 +00:00 :America/Lima
-0.0000 meters
+2.1489 meters
 J1              0.0083  62.71
 K1              0.1577  32.71
 K2              0.0294  35.19
@@ -139316,7 +139316,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: mera-352a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-mera
 # ioc_code: mera
@@ -139721,14 +139721,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: meulaboh-914-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 96.1318
 # !latitude: 4.1272
 Meulaboh, Sumatra, Indonesia
 +00:00 :Asia/Jakarta
-0.0000 meters
+1.8571 meters
 J1              0.0058  199.40
 K1              0.0849  195.83
 K2              0.0221  37.13
@@ -141695,7 +141695,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: minamitorishima-049a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-mins
 # ioc_code: mins
@@ -141710,7 +141710,7 @@ x 0 0
 # !latitude: 24.2811
 Minamitorishima, Tokyo, Japan
 +00:00 :Asia/Tokyo
-0.3500 meters
+0.3200 meters
 J1              0.0045  60.00
 K1              0.0987  43.39
 K2              0.0133  187.74
@@ -141899,7 +141899,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: minicoy-153-ind-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-mini
 # ioc_code: mini
@@ -141914,7 +141914,7 @@ x 0 0
 # !latitude: 8.2824
 Minicoy Island, Lakshadweep, India
 +00:00 :Asia/Kolkata
-0.0000 meters
+0.9700 meters
 J1              0.0111  8.23
 K1              0.1988  330.70
 K2              0.0259  230.86
@@ -143289,7 +143289,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: mocamedes-238a-ago-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-moca
 # psmsl_id: 1315
@@ -143686,7 +143686,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: mombasa-101-ken-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-momb
 # ioc_code: momb
@@ -143700,7 +143700,7 @@ x 0 0
 # !latitude: -4.0701
 Mombasa (Kilindini Harbour), Kenya
 +00:00 :Africa/Nairobi
-0.0000 meters
+1.8500 meters
 J1              0.0122  4.50
 K1              0.1897  355.19
 K2              0.1400  62.45
@@ -145270,7 +145270,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: mossel_bay-185-zaf-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-moss
 # psmsl_id: 910
@@ -145280,7 +145280,7 @@ x 0 0
 # !latitude: -34.1767
 Mossel Bay, South Africa
 +00:00 :Africa/Johannesburg
-0.0000 meters
+1.2621 meters
 J1              0.0058  162.28
 K1              0.0722  136.93
 K2              0.0830  62.30
@@ -145665,7 +145665,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: moulmein-906-mmr-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-moul
 # ioc_code: moul
@@ -145679,7 +145679,7 @@ x 0 0
 # !latitude: 16.4830
 Mawlamyaing (Thanlwin River), Myanmar
 +00:00 :Asia/Yangon
-0.0000 meters
+2.8318 meters
 J1              0.0050  350.34
 K1              0.1444  297.23
 K2              0.1283  307.89
@@ -146462,7 +146462,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: muscat-110-omn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (UHSLC)
 # confidence: 7
 # ssc_id: SSC-musc
 # ioc_code: mus2, musc, musc3
@@ -146474,7 +146474,7 @@ x 0 0
 # !latitude: 23.628000
 Muscat, Oman
 +00:00 :Asia/Muscat
-0.0000 meters
+4.5837 meters
 J1              0.0233  354.37
 K1              0.3922  341.18
 K2              0.0671  185.12
@@ -146859,7 +146859,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nagasaki-362a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-nagas
 # ioc_code: naga
@@ -147261,7 +147261,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: naha-355-jpn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-naha
 # ioc_code: naha
@@ -147466,7 +147466,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nain-833a-can-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: LLWLT
 # confidence: 7
 # ssc_id: SSC-nain
 # ioc_code: nain
@@ -147480,7 +147480,7 @@ x 0 0
 # !latitude: 56.5432
 Nain, Labrador, Canada
 +00:00 :America/Halifax
-0.0000 meters
+1.3943 meters
 J1              0.0036  176.53
 K1              0.0949  189.17
 K2              0.0757  0.02
@@ -147669,7 +147669,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nakano_shima-345a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-naka
 # psmsl_id: 1105
@@ -148853,7 +148853,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: napier-668a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-napt
 # ioc_code: napt
@@ -148865,7 +148865,7 @@ x 0 0
 # !latitude: -39.483000
 Napier, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.0397 meters
 J1              0.0022  349.46
 K1              0.0314  297.91
 K2              0.0065  207.46
@@ -150249,7 +150249,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: naze-359a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # !units: meters
 # !longitude: 129.498000
@@ -150445,7 +150445,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nelson-077a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-nels
 # psmsl_id: 787
@@ -150455,7 +150455,7 @@ x 0 0
 # !latitude: -41.2618
 Nelson, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+2.4591 meters
 J1              0.0041  25.84
 K1              0.0561  4.36
 K2              0.1154  319.96
@@ -153217,7 +153217,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nishinoomote-363-jpn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-nish
 # psmsl_id: 1096
@@ -153616,14 +153616,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nordenham-4970040-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.488052
 # !latitude: 53.464497
 Nordenham (Weser), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0735 meters
 J1              0.0028  188.82
 K1              0.0712  55.88
 K2              0.1184  89.36
@@ -153812,14 +153812,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: norderneyriffgat-9360010-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 7.158526
 # !latitude: 53.698067
 Norderney Riffgat, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+4.9744 meters
 J1              0.0021  139.37
 K1              0.0685  36.78
 K2              0.0789  42.96
@@ -154008,14 +154008,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nordfeldoberwasser-9520040-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.140747
 # !latitude: 54.340377
 Nordfeld Oberwasser (Eider), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.2335 meters
 J1              0.0002  106.06
 K1              0.0082  169.30
 K2              0.0025  243.40
@@ -154400,7 +154400,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: north_cape_otou-ncpt-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-ncpt
 # ioc_code: ncpt
@@ -155188,7 +155188,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nosy_be-150a-mdg-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-nosy
 # gloss_id: 15
@@ -155200,7 +155200,7 @@ x 0 0
 # !latitude: -13.4030
 Nosy Be, Madagascar
 +00:00 :Indian/Antananarivo
-0.0000 meters
+2.2172 meters
 J1              0.0091  8.50
 K1              0.1450  5.76
 K2              0.1578  61.11
@@ -155588,7 +155588,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nouakchott-806-mrt-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -16.0373
@@ -155980,7 +155980,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nukualofa-038-ton-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-nkfa
 # ioc_code: nkfa, nkfa2
@@ -155995,7 +155995,7 @@ x 0 0
 # !latitude: -21.1303
 Nuku'alofa, Tonga
 +00:00 :Pacific/Tongatapu
-0.0000 meters
+0.7600 meters
 J1              0.0038  55.70
 K1              0.0661  50.98
 K2              0.0146  213.59
@@ -156184,7 +156184,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nuuk_godthaab-820-dnk-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-godt
 # ioc_code: nuk1, nuuk
@@ -156198,7 +156198,7 @@ x 0 0
 # !latitude: 64.172000
 Nuuk, Greenland
 +00:00 :Europe/Copenhagen
-0.0000 meters
+1.9810 meters
 J1              0.0069  181.28
 K1              0.1861  172.69
 K2              0.1428  330.30
@@ -156387,7 +156387,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: nylesund-823a-nor-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-nyal
 # ioc_code: nyal
@@ -156401,7 +156401,7 @@ x 0 0
 # !latitude: 78.938000
 Ny-Ålesund, Spitsbergen, Norway
 +00:00 :Europe/Oslo
-0.0000 meters
+0.8388 meters
 J1              0.0027  276.20
 K1              0.0631  248.25
 K2              0.0487  47.03
@@ -157378,7 +157378,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ofunato-351-jpn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # !units: meters
 # !longitude: 141.7533
@@ -161737,14 +161737,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: osteriffmpm-5970096-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.032710
 # !latitude: 53.857957
 Osteriff MPM (Elbe), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.2736 meters
 J1              0.0055  184.44
 K1              0.0704  68.65
 K2              0.0817  96.74
@@ -162325,14 +162325,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: otterndorfmpm-5990011-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.871779
 # !latitude: 53.836957
 Otterndorf MPM (Elbe), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.1132 meters
 J1              0.0055  193.38
 K1              0.0710  77.72
 K2              0.0842  116.06
@@ -163310,14 +163310,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: owenga-chit-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -176.3675
 # !latitude: -44.0240
 Owenga, Chatham, Island, New Zealand
 +12:00 :Pacific/Auckland
-0.0000 meters
+-0.0000 meters
 J1              0.0017  182.36
 K1              0.0194  50.56
 K2              0.0045  102.08
@@ -164696,7 +164696,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: palmeira-235-cpv-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-plma
 # ioc_code: palm1
@@ -164711,7 +164711,7 @@ x 0 0
 # !latitude: 16.7528
 Palmeira, Sal, Cape Verde
 +00:00 :Atlantic/Cape_Verde
-0.0000 meters
+1.5441 meters
 J1              0.0022  15.06
 K1              0.0506  350.90
 K2              0.0345  316.95
@@ -166083,14 +166083,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: pellwormanleger-9550021-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.703050
 # !latitude: 54.502583
 Pellworm Anleger, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0114 meters
 J1              0.0030  209.87
 K1              0.0662  65.94
 K2              0.0995  114.14
@@ -166279,7 +166279,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: pemba-192-moz-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-pemba
 # ioc_code: pemba
@@ -166294,7 +166294,7 @@ x 0 0
 # !latitude: -12.967000
 Pemba, Moçambique
 +00:00 :Africa/Maputo
-0.0000 meters
+2.3306 meters
 J1              0.0068  4.13
 K1              0.1264  0.14
 K2              0.1660  68.57
@@ -167665,14 +167665,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: pinnausperrwerkbp-5970018-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 9.558755
 # !latitude: 53.671162
 Pinnau-Sperrwerk BP, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.3987 meters
 J1              0.0048  244.94
 K1              0.0653  112.53
 K2              0.0786  184.34
@@ -169436,7 +169436,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: point_fortin-728a-tto-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -61.6889
@@ -171213,7 +171213,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: pointe_noire-234a-cog-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-pntn
 # ioc_code: pntn
@@ -171227,7 +171227,7 @@ x 0 0
 # !latitude: -4.7833
 Pointe-Noire, Republic of the Congo
 +00:00 :Africa/Brazzaville
-0.0000 meters
+0.9603 meters
 J1              0.0048  29.90
 K1              0.0946  0.54
 K2              0.0471  107.61
@@ -171615,7 +171615,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ponta_delgada-211-prt-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-pdas
 # ioc_code: pdas
@@ -173205,14 +173205,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: port_chalmers-669a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 170.6241
 # !latitude: -45.8147
 Port Chalmers, Otago, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.1859 meters
 J1              0.0012  340.12
 K1              0.0271  269.20
 K2              0.0321  96.13
@@ -175790,14 +175790,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: port_moresby-064a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 147.1454
 # !latitude: -9.4767
 Port Moresby, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+1.8217 meters
 J1              0.0155  58.26
 K1              0.2776  43.86
 K2              0.0803  306.70
@@ -175986,7 +175986,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: port_nolloth-701-zaf-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-ptno
 # psmsl_id: 836
@@ -175996,7 +175996,7 @@ x 0 0
 # !latitude: -29.2497
 Port Nolloth, South Africa (1)
 +00:00 :Africa/Johannesburg
-0.0000 meters
+1.1783 meters
 J1              0.0049  113.86
 K1              0.0540  91.72
 K2              0.0654  46.61
@@ -176582,7 +176582,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: port_royal-782a-jam-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-ptro
 # ioc_code: ptro
@@ -176597,7 +176597,7 @@ x 0 0
 # !latitude: 17.9348
 Port Royal, Jamaica
 +00:00 :America/Jamaica
-0.0000 meters
+0.4939 meters
 J1              0.0047  229.04
 K1              0.0697  238.28
 K2              0.0061  24.09
@@ -178574,7 +178574,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: portf_spain-248a-tto-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-ptsp
 # ioc_code: ptsp
@@ -180568,7 +180568,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: prigi-125-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-prig
 # ioc_code: prgi, prig
@@ -180580,7 +180580,7 @@ x 0 0
 # !latitude: -8.2889
 Prigi, Java, Indonesia
 +00:00 :Asia/Jakarta
-0.0000 meters
+1.4283 meters
 J1              0.0123  180.52
 K1              0.2197  168.18
 K2              0.0880  93.11
@@ -180770,7 +180770,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: prince_rupert-540-can-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: LLWLT
 # confidence: 7
 # ssc_id: SSC-prin
 # ioc_code: prin, prin2
@@ -180784,7 +180784,7 @@ x 0 0
 # !latitude: 54.3170
 Prince Rupert, British Columbia, Canada
 +00:00 :America/Vancouver
-0.0000 meters
+3.8490 meters
 J1              0.0278  273.10
 K1              0.5110  259.78
 K2              0.1751  291.61
@@ -180973,14 +180973,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: progreso_yuc-721b-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -89.6662
 # !latitude: 21.3030
 Progreso, Yucatán, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+1.3360 meters
 J1              0.0096  216.73
 K1              0.1794  210.43
 K2              0.0020  96.47
@@ -182366,7 +182366,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: puerto_deseado-286-arg-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-dese
 # ioc_code: dese
@@ -182381,7 +182381,7 @@ x 0 0
 # !latitude: -47.75357778
 Puerto Deseado, Argentina
 +00:00 :America/Buenos_Aires
-0.0000 meters
+3.2054 meters
 J1              0.0060  273.19
 K1              0.2407  204.62
 K2              0.0970  192.47
@@ -182570,7 +182570,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: puerto_madryn-731-arg-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-madry
 # ioc_code: madry
@@ -182585,7 +182585,7 @@ x 0 0
 # !latitude: -42.763000
 Puerto Madryn, Argentina
 +00:00 :America/Buenos_Aires
-0.0000 meters
+3.7120 meters
 J1              0.0036  13.11
 K1              0.1829  310.04
 K2              0.1211  33.53
@@ -183180,7 +183180,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: puerto_princesa-380a-phl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-desea
 # psmsl_id: 207
@@ -183190,7 +183190,7 @@ x 0 0
 # !latitude: 9.7449
 Puerto Princesa, Palawan, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+1.8295 meters
 J1              0.0140  223.74
 K1              0.3437  200.17
 K2              0.0491  109.27
@@ -183981,7 +183981,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: puntarenas-396a-cri-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-punt
 # ioc_code: punt
@@ -183995,7 +183995,7 @@ x 0 0
 # !latitude: 9.9697
 Punta Arenas, Costa Rica
 +00:00 :America/Costa_Rica
-0.0000 meters
+1.3929 meters
 J1              0.0080  88.24
 K1              0.1047  74.67
 K2              0.0670  300.31
@@ -184775,7 +184775,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: qaqortoq-299-dnk-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-qaqo
 # ioc_code: qaqo
@@ -184789,7 +184789,7 @@ x 0 0
 # !latitude: 60.717000
 Qaqortoq, Denmark
 +00:00 :Europe/Copenhagen
-0.0000 meters
+1.2190 meters
 J1              0.0067  163.17
 K1              0.1609  157.73
 K2              0.0935  302.49
@@ -185574,7 +185574,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: quepos-087a-cri-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-quepo
 # ioc_code: quepo
@@ -185588,7 +185588,7 @@ x 0 0
 # !latitude: 9.400000
 Quepos, Costa Rica
 +00:00 :America/Costa_Rica
-0.0000 meters
+0.1165 meters
 J1              0.0080  87.15
 K1              0.1048  71.61
 K2              0.0596  296.67
@@ -185777,7 +185777,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: qui_nhon-381-vnm-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-quin
 # ioc_code: quin
@@ -185791,7 +185791,7 @@ x 0 0
 # !latitude: 13.7680
 Quy Nhon (Thi Nai Port), Vietnam
 +00:00 :Asia/Ho_Chi_Minh
-0.0000 meters
+1.4470 meters
 J1              0.0117  212.21
 K1              0.3282  192.90
 K2              0.0208  114.06
@@ -186183,7 +186183,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: rabaul-010a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-raba
 # ioc_code: raba
@@ -186197,7 +186197,7 @@ x 0 0
 # !latitude: -4.2006
 Rabaul, New Britain, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+0.7884 meters
 J1              0.0130  73.42
 K1              0.2406  54.68
 K2              0.0247  161.63
@@ -188167,7 +188167,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: richards_bay-188-zaf-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-rich
 # psmsl_id: 1443
@@ -188179,7 +188179,7 @@ x 0 0
 # !latitude: -28.800000
 Richards Bay, South Africa
 +00:00 :Africa/Johannesburg
-0.0000 meters
+1.2303 meters
 J1              0.0041  180.46
 K1              0.0483  149.83
 K2              0.0964  76.42
@@ -193567,14 +193567,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: robbensdsteert-9460010-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.446187
 # !latitude: 53.640790
 Robbensüddsteert (Weser), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+4.9726 meters
 J1              0.0023  186.33
 K1              0.0712  60.29
 K2              0.1095  99.23
@@ -194755,7 +194755,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: rorvik-803-nor-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-rorv
 # ioc_code: rorv
@@ -194769,7 +194769,7 @@ x 0 0
 # !latitude: 64.8612
 Rørvik, Norway
 +00:00 :Europe/Oslo
-0.0000 meters
+1.5522 meters
 J1              0.0036  214.36
 K1              0.0735  168.68
 K2              0.0773  344.74
@@ -197129,14 +197129,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: sabang-123-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 95.3169
 # !latitude: 5.8879
 Sabang (Pulau Weh), Indonesia (1)
 +00:00 :Asia/Jakarta
-0.0000 meters
+1.1170 meters
 J1              0.0066  215.00
 K1              0.1037  215.48
 K2              0.0664  119.97
@@ -200107,7 +200107,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: salalah-114-omn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (UHSLC)
 # confidence: 7
 # ssc_id: SSC-sala
 # ioc_code: sala
@@ -200121,7 +200121,7 @@ x 0 0
 # !latitude: 16.935000
 Salalah, Oman
 +00:00 :Asia/Muscat
-0.0000 meters
+2.1132 meters
 J1              0.0224  356.06
 K1              0.3626  344.11
 K2              0.0338  161.00
@@ -200310,14 +200310,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: saldahna_bay-703-zaf-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 17.950000
 # !latitude: -33.017000
 Saldahna, South Africa
 +00:00 :Africa/Johannesburg
-0.0000 meters
+1.0937 meters
 J1              0.0050  129.14
 K1              0.0566  105.79
 K2              0.0622  47.95
@@ -200506,7 +200506,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: salina_cruz-394-mex-unam_hist
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-sali
 # ioc_code: sali, sali2
@@ -200520,7 +200520,7 @@ x 0 0
 # !latitude: 16.170278
 Salina Cruz (Puerto), Oaxaca, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+1.3671 meters
 J1              0.0068  297.25
 K1              0.1020  297.65
 K2              0.0157  158.58
@@ -200709,14 +200709,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: salina_cruz-394a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -95.203000
 # !latitude: 16.160000
 Salina Cruz (Faro), Oaxaca, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+1.3671 meters
 J1              0.0068  297.35
 K1              0.1022  297.59
 K2              0.0158  158.57
@@ -201306,7 +201306,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: san_andres-737a-col-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-sana
 # ioc_code: sana
@@ -201318,7 +201318,7 @@ x 0 0
 # !latitude: 12.5680
 San Andrés, Colombia
 +00:00 :America/Bogota
-0.0000 meters
+1.1137 meters
 J1              0.0042  226.83
 K1              0.0897  230.29
 K2              0.0032  325.71
@@ -201507,7 +201507,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: san_carlos-674a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-sanc
 # psmsl_id: 1221
@@ -201517,7 +201517,7 @@ x 0 0
 # !latitude: 24.7874
 San Carlos, Baja California Sur, Mexico (3)
 -06:00 :America/Mazatlan
-0.0000 meters
+1.8843 meters
 J1              0.0120  31.11
 K1              0.2689  17.36
 K2              0.0839  298.68
@@ -201706,14 +201706,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: san_felipe-307a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # !units: meters
 # !longitude: -114.8310
 # !latitude: 31.0256
 San Felipe, Baja California Norte (2), Mexico
 -06:00 :America/Tijuana
-0.0000 meters
+2.1000 meters
 J1              0.0178  26.23
 K1              0.4028  21.88
 K2              0.2576  121.09
@@ -202503,14 +202503,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: san_quintin-308-mex-unam_hist
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -115.9870
 # !latitude: 30.4364
 San Quintin (Campo La Chorera), Mexico
 -06:00 :America/Tijuana
-0.0000 meters
+1.8696 meters
 J1              0.0153  75.12
 K1              0.3130  50.72
 K2              0.0711  354.62
@@ -203501,7 +203501,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: santa_marta-738-col-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-sama
 # ioc_code: sama, sama2
@@ -203513,7 +203513,7 @@ x 0 0
 # !latitude: 11.2352
 Santa Marta, Colombia
 +00:00 :America/Bogota
-0.0000 meters
+1.3940 meters
 J1              0.0057  235.96
 K1              0.0962  239.99
 K2              0.0051  31.12
@@ -204298,7 +204298,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: saumlaki-420-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-saum
 # ioc_code: saum
@@ -204310,7 +204310,7 @@ x 0 0
 # !latitude: -7.9828
 Saumlaki, Yamdena, Indonesia
 +00:00 :Asia/Jayapura
-0.0000 meters
+1.1855 meters
 J1              0.0156  218.70
 K1              0.2823  196.50
 K2              0.0629  202.48
@@ -204896,14 +204896,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: scharhrn-9510060-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.463551
 # !latitude: 53.968643
 Scharhörn, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+4.9747 meters
 J1              0.0019  173.43
 K1              0.0721  48.20
 K2              0.1017  78.09
@@ -205288,14 +205288,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: schillig-9430030-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.047995
 # !latitude: 53.700578
 Schillig (Jade), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0311 meters
 J1              0.0018  162.66
 K1              0.0704  50.31
 K2              0.1028  80.93
@@ -206072,7 +206072,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: scott_base-663a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-scot
 # gloss_id: 134
@@ -206085,7 +206085,7 @@ x 0 0
 # !latitude: -77.850000
 Ross Island, Antarctica
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.9311 meters
 J1              0.0104  212.52
 K1              0.2456  207.46
 K2              0.0138  301.18
@@ -207264,14 +207264,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: settlement_point-257-bhs-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: -78.9912
 # !latitude: 26.7025
 Settlement Point, Grand Bahama Island, Bahamas
 +00:00 :America/Nassau
-0.0000 meters
+1.1239 meters
 J1              0.0026  239.84
 K1              0.0660  222.15
 K2              0.0137  79.32
@@ -210227,7 +210227,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: sibolga-122-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-sibo
 # ioc_code: sib2, sibo
@@ -210239,7 +210239,7 @@ x 0 0
 # !latitude: 1.750000
 Sibolga, Indonesia
 +00:00 :Asia/Jakarta
-0.0000 meters
+1.7939 meters
 J1              0.0067  183.39
 K1              0.1039  183.04
 K2              0.0367  10.37
@@ -212808,14 +212808,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: socorro-090-mex-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -110.9492
 # !latitude: 18.7258
 Isla Socorro, Revillagigedo Islands, Mexico
 +00:00 :America/Mazatlan
-0.0000 meters
+1.8007 meters
 J1              0.0093  14.30
 K1              0.1859  9.95
 K2              0.0610  279.21
@@ -215183,14 +215183,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: st_johns-276a-can-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # !units: meters
 # !longitude: -52.7025
 # !latitude: 47.5670
 St. John's, Newfoundland, Canada
 +00:00 :America/St_Johns
-0.0000 meters
+0.7800 meters
 J1              0.0040  147.34
 K1              0.0776  161.68
 K2              0.0416  358.43
@@ -217757,14 +217757,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: subic_bay-382-phl-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 120.252000
 # !latitude: 14.765000
 Subic, Philippines
 +00:00 :Asia/Manila
-0.0000 meters
+1.2164 meters
 J1              0.0093  212.97
 K1              0.2839  197.03
 K2              0.0177  84.24
@@ -217953,7 +217953,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: sumner-sumt-nzl-ttw
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-sumt
 # ioc_code: sumt
@@ -218550,14 +218550,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: surabaya-160a-idn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 112.725000
 # !latitude: -7.208000
 Surabaya, Java, Indonesia
 +00:00 :Asia/Jakarta
-0.0000 meters
+1.5551 meters
 J1              0.0218  253.29
 K1              0.4659  205.78
 K2              0.0627  123.70
@@ -220940,7 +220940,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: takoradi-231-gha-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-tako
 # ioc_code: tako, tkdi
@@ -221144,7 +221144,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: talara-092b-per-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-tala
 # ioc_code: tala, tala2
@@ -221156,7 +221156,7 @@ x 0 0
 # !latitude: -4.5752
 Talara, Peru
 +00:00 :America/Lima
-0.0000 meters
+1.4823 meters
 J1              0.0077  67.88
 K1              0.1175  35.83
 K2              0.0490  292.02
@@ -221937,7 +221937,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: tanjung_lesung-416-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-tjls
 # ioc_code: tjls, tlbji
@@ -221950,7 +221950,7 @@ x 0 0
 # !latitude: -6.4803
 Tanjung Lesung, Java, Indonesia
 +00:00 :Asia/Jakarta
-0.0000 meters
+3.2734 meters
 J1              0.0083  163.79
 K1              0.1362  150.52
 K2              0.0368  56.33
@@ -222731,7 +222731,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: taranaki-076a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-taran
 # ioc_code: TPTT
@@ -222745,7 +222745,7 @@ x 0 0
 # !latitude: -39.0562
 Taranaki, Taranaki, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+2.0313 meters
 J1              0.0046  26.22
 K1              0.0607  11.90
 K2              0.0938  310.89
@@ -223533,14 +223533,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: tauranga-073a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 176.183000
 # !latitude: -37.650000
 Tauranga, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.1471 meters
 J1              0.0037  24.55
 K1              0.0542  359.77
 K2              0.0205  266.85
@@ -224128,7 +224128,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: teknaf-137a-bgd-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-tekn
 # psmsl_id: 1580
@@ -224138,7 +224138,7 @@ x 0 0
 # !latitude: 20.8708
 Teknaf, Bangladesh
 +00:00 :Asia/Dhaka
-0.0000 meters
+2.5033 meters
 J1              0.0070  247.28
 K1              0.1478  251.70
 K2              0.1329  131.06
@@ -225515,7 +225515,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: thule_pituffik-808-dnk-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MLLW
 # confidence: 7
 # ssc_id: SSC-thul
 # ioc_code: thul
@@ -225529,7 +225529,7 @@ x 0 0
 # !latitude: 76.5441
 Pituffik Space Base, Greenland
 +00:00 :Europe/Copenhagen
-0.0000 meters
+1.4760 meters
 J1              0.0159  277.16
 K1              0.3426  254.29
 K2              0.0874  134.91
@@ -225914,7 +225914,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: timaru-665a-nzl-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-tima
 # psmsl_id: 998
@@ -225924,7 +225924,7 @@ x 0 0
 # !latitude: -44.3941
 Timaru Harbour, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.5248 meters
 J1              0.0018  325.52
 K1              0.0303  270.62
 K2              0.0308  80.50
@@ -227104,7 +227104,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: tofino-542-can-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: LLWLT
 # confidence: 7
 # ssc_id: SSC-tofi
 # ioc_code: tfbc, tofi
@@ -227119,7 +227119,7 @@ x 0 0
 # !latitude: 49.1540
 Tofino, British Columbia, Canada
 +00:00 :America/Vancouver
-0.0000 meters
+2.0899 meters
 J1              0.0220  252.51
 K1              0.3888  241.30
 K2              0.0769  262.53
@@ -228486,14 +228486,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: topolobampo-676-mex-unam_hist
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -109.056667
 # !latitude: 25.586667
 Topolobampo, Sinaloa, Mexico
 -06:00 :America/Mazatlan
-0.0000 meters
+1.6589 meters
 J1              0.0114  30.42
 K1              0.2557  12.09
 K2              0.0673  319.79
@@ -229275,7 +229275,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: toyama-349a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-toya
 # ioc_code: toya
@@ -231871,7 +231871,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: tubuai-456-fra-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: ZH
 # confidence: 7
 # ssc_id: SSC-tubua
 # ioc_code: tubua
@@ -236038,14 +236038,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ushuaia-600-arg-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: -68.2948
 # !latitude: -54.8062
 Ushuaia, Argentina
 +00:00 :America/Buenos_Aires
-0.0000 meters
+3.3318 meters
 J1              0.0066  138.82
 K1              0.1981  103.72
 K2              0.0190  235.57
@@ -236834,7 +236834,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: vallarta-393a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-puert
 # ioc_code: puer2, puert
@@ -236847,7 +236847,7 @@ x 0 0
 # !latitude: 20.6583
 Puerto Vallarta, Jalisco, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+2.2301 meters
 J1              0.0089  7.29
 K1              0.1756  1.69
 K2              0.0621  287.44
@@ -237636,7 +237636,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: vardo-805-nor-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-vard
 # ioc_code: vard
@@ -237650,7 +237650,7 @@ x 0 0
 # !latitude: 70.3745
 Vardø, Norway
 +00:00 :Europe/Oslo
-0.0000 meters
+1.9768 meters
 J1              0.0066  278.16
 K1              0.1216  252.63
 K2              0.0803  145.56
@@ -238630,7 +238630,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: veracruz_ver-250a-mex-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-vera
 # ioc_code: vera, vera2
@@ -238645,7 +238645,7 @@ x 0 0
 # !latitude: 19.2007
 Veracruz, Veracruz, Mexico
 -06:00 :America/Mexico_City
-0.0000 meters
+1.0284 meters
 J1              0.0082  201.41
 K1              0.1502  198.63
 K2              0.0061  62.39
@@ -239231,7 +239231,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: victoria_bc-543a-can-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: LLWLT
 # confidence: 7
 # ssc_id: SSC-pbbc
 # ioc_code: pbbc, vibc
@@ -239245,7 +239245,7 @@ x 0 0
 # !latitude: 48.4244
 Victoria Harbour, British Columbia, Canada
 +00:00 :America/Vancouver
-0.0000 meters
+1.9116 meters
 J1              0.0314  291.25
 K1              0.6357  269.52
 K2              0.0195  340.73
@@ -240826,7 +240826,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: vung_tau-383-vnm-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # ssc_id: SSC-vung
 # ioc_code: vung
@@ -240838,7 +240838,7 @@ x 0 0
 # !latitude: 10.340000
 Vung Tau, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
-0.0000 meters
+2.7165 meters
 J1              0.0220  240.47
 K1              0.5948  206.64
 K2              0.0942  239.86
@@ -241420,14 +241420,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: waikelo-418-idn-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum
 # confidence: 7
 # !units: meters
 # !longitude: 119.2291
 # !latitude: -9.3853
 Waikelo, Sumba, Indonesia
 +00:00 :Asia/Makassar
-0.0000 meters
+3.6058 meters
 J1              0.0114  200.12
 K1              0.2476  171.45
 K2              0.1118  116.42
@@ -242014,7 +242014,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: wakkanai-360a-jpn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: station datum (JMA)
 # confidence: 7
 # ssc_id: SSC-waka
 # ioc_code: waka
@@ -242619,14 +242619,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: wangeroogenord-9420030-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 7.930104
 # !latitude: 53.807885
 Wangerooge Nord (Jade), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0009 meters
 J1              0.0018  147.84
 K1              0.0707  40.82
 K2              0.0943  61.99
@@ -242815,14 +242815,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: wangeroogewest-9420040-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 7.868833
 # !latitude: 53.777821
 Wangerooge West (Jade), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0398 meters
 J1              0.0017  162.13
 K1              0.0694  45.30
 K2              0.0925  67.20
@@ -243604,7 +243604,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: wellington-071-nzl-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # ssc_id: SSC-wlgt
 # ioc_code: wlgt
@@ -243619,7 +243619,7 @@ x 0 0
 # !latitude: -41.2843
 Wellington, Wellington, New Zealand
 +00:00 :Pacific/Auckland
-0.0000 meters
+1.1734 meters
 J1              0.0016  343.21
 K1              0.0252  268.16
 K2              0.0100  23.36
@@ -244004,14 +244004,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: weserwehruw-4910040-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.855848
 # !latitude: 53.061745
 Weserwehr UW, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.7436 meters
 J1              0.0042  222.60
 K1              0.0650  101.82
 K2              0.1131  177.84
@@ -245193,14 +245193,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: wewak-063a-png-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 143.6476
 # !latitude: -3.5685
 Wewak, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
-0.0000 meters
+1.0520 meters
 J1              0.0119  77.65
 K1              0.2395  63.24
 K2              0.0042  289.99
@@ -245983,14 +245983,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: whvaltervorhafen-9440020-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.146071
 # !latitude: 53.516048
 Wilhelmshaven Alter Vorhafen (Jade), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0184 meters
 J1              0.0024  185.31
 K1              0.0726  58.14
 K2              0.1214  94.14
@@ -246179,14 +246179,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: whvneuervorhafen-9440030-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.161665
 # !latitude: 53.531857
 Wilhelmshaven Neuer Vorhafen (Jade), Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+4.9887 meters
 J1              0.0023  183.95
 K1              0.0718  56.46
 K2              0.1178  92.74
@@ -247367,14 +247367,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: wittdn-9570010-deu-wsv
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 8.384926
 # !latitude: 54.633440
 Wittdün, Germany
 +01:00 :Europe/Berlin
-0.0000 meters
+5.0418 meters
 J1              0.0027  197.56
 K1              0.0664  66.18
 K2              0.0818  114.54
@@ -247962,7 +247962,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: xiamen-376a-chn-uhslc_rq
 # date_imported: 20260322
-# datum: Unknown
+# datum: CD
 # confidence: 7
 # ssc_id: SSC-xiam
 # gloss_id: 247
@@ -247975,7 +247975,7 @@ x 0 0
 # !latitude: 24.450000
 Xiamen, China
 +00:00 :Asia/Shanghai
-0.0000 meters
+3.5225 meters
 J1              0.0160  186.83
 K1              0.3390  160.52
 K2              0.1523  159.90
@@ -250138,14 +250138,14 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: zanzibar-151-tza-uhslc_fd
 # date_imported: 20260322
-# datum: Unknown
+# datum: MSL
 # confidence: 7
 # !units: meters
 # !longitude: 39.1916
 # !latitude: -6.1572
 Zanzibar City, Tanzania
 +00:00 :Africa/Dar_es_Salaam
-0.0000 meters
+2.0992 meters
 J1              0.0120  4.19
 K1              0.1843  356.10
 K2              0.1666  61.50
