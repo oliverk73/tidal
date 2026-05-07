@@ -39,11 +39,33 @@ REAL_DATA_SOURCES = {"TICON-4", "UTide-obs"}
 
 APPROX_RE = re.compile(r"\s*\(approx\.\)\s*$")
 
+# Synonym normalisation — same canonical form Step 1 already enforces
+# in our [CONTROLLED] files. Donors from classic_original/ predate that
+# pass and use verbose names, so we normalise on transfer.
+DATUM_NORMALIZE = {
+    "Mean Lower Low Water":       "MLLW",
+    "Mean Sea Level":             "MSL",
+    "Lowest Astronomical Tide":   "LAT",
+    "Chart Datum":                "CD",
+    "Chart Datum (CD)":           "CD",
+    "Admiralty Chart Datum":      "ACD",
+    "Admiralty Chart Datum (ACD)":"ACD",
+    "Normal Amsterdam Level":     "NAP",
+    "Zero Hydrographique":        "ZH",
+    "Zéro Hydrographique":        "ZH",
+    "Lower Low Water Large Tide": "LLWLT",
+    "Zero of Tide Height":        "ZTH",
+}
+
 
 def promote(datum: str, recipient_source: str) -> str:
     if recipient_source in REAL_DATA_SOURCES:
         return APPROX_RE.sub("", datum)
     return datum
+
+
+def normalize(datum: str) -> str:
+    return DATUM_NORMALIZE.get(datum.strip(), datum)
 
 
 def feet_to_m(x: float) -> float: return x * 0.3048
@@ -67,34 +89,56 @@ class FilePatcher:
         self.lines = raw.split("\n")
         self.changes = 0
 
-    def find_station_block(self, station_name: str) -> tuple[int, int] | None:
-        """Return (datum_line_idx, z0_line_idx) of first matching station,
-        or None.  Searches HOT-COMMENTS-block followed by a name line that
-        equals station_name."""
-        # Walk forward; when we hit a "# BEGIN HOT COMMENTS", track until
-        # the station-name line.
+    def find_station_block(self, station_name: str,
+                           target_lat: float | None = None,
+                           target_lon: float | None = None) -> tuple[int, int] | None:
+        """Return (datum_line_idx, z0_line_idx) of first matching station.
+        If target_lat/lon supplied, prefer the station-block whose
+        `# !latitude:` / `# !longitude:` are closest (within 0.01°)."""
         in_block = False
         datum_idx = None
+        block_lat = None
+        block_lon = None
+        candidates = []   # (datum_idx, z0_idx, lat, lon)
         for i, ln in enumerate(self.lines):
             if ln.startswith("# BEGIN HOT COMMENTS"):
                 in_block = True
                 datum_idx = None
+                block_lat = None
+                block_lon = None
                 continue
             if in_block:
                 if ln.startswith("# datum:"):
                     datum_idx = i
+                elif ln.startswith("# !latitude:"):
+                    try: block_lat = float(ln.split(":", 1)[1].strip())
+                    except ValueError: pass
+                elif ln.startswith("# !longitude:"):
+                    try: block_lon = float(ln.split(":", 1)[1].strip())
+                    except ValueError: pass
                 if (re.match(r"^[A-Za-zÀ-ÿ]", ln) and not ln.startswith("#")
                         and i + 2 < len(self.lines)
                         and re.match(r"^[+\-]?\d{1,2}:\d{2}", self.lines[i+1])):
                     if ln.strip() == station_name:
-                        z0_idx = i + 2
-                        return (datum_idx, z0_idx)
+                        candidates.append((datum_idx, i + 2, block_lat, block_lon))
                     in_block = False
                     datum_idx = None
-        return None
+                    block_lat = None
+                    block_lon = None
+        if not candidates:
+            return None
+        if target_lat is not None and target_lon is not None and len(candidates) > 1:
+            candidates.sort(key=lambda c: (
+                999 if c[2] is None or c[3] is None
+                else abs(c[2] - target_lat) + abs(c[3] - target_lon)
+            ))
+        return candidates[0][0], candidates[0][1]
 
-    def apply(self, station_name: str, new_datum: str, new_z0: float, new_unit: str):
-        loc = self.find_station_block(station_name)
+    def apply(self, station_name: str, new_datum: str, new_z0: float,
+              new_unit: str,
+              target_lat: float | None = None,
+              target_lon: float | None = None):
+        loc = self.find_station_block(station_name, target_lat, target_lon)
         if loc is None:
             print(f"  ⚠ not found in {self.path.name}: {station_name!r}")
             return False
@@ -154,14 +198,25 @@ def main():
         if key in EXCLUDE:
             skipped.append((r["unk_name"], r["unk_source"], "manual exclusion"))
             continue
-        donor_datum = r["donor_datum"]
+        # Skip recipients in donor-only files (classic_original/*).
+        if r["unk_source"] not in SOURCE_TO_PATH:
+            skipped.append((r["unk_name"], r["unk_source"], "donor-only file (read-only)"))
+            continue
+        donor_datum = normalize(r["donor_datum"])
         promoted_datum = promote(donor_datum, r["unk_source"])
         if promoted_datum != donor_datum:
             promoted[(donor_datum, promoted_datum)] += 1
 
         # Donor Z₀ is given in METERS in the TSV (we converted at extraction time).
         donor_z0_m = float(r["donor_z0_m"])
-        plan_by_source[r["unk_source"]].append((r["unk_name"], promoted_datum, donor_z0_m, "meters"))
+        try:
+            recip_lat = float(r["unk_lat"]) if r["unk_lat"] else None
+            recip_lon = float(r["unk_lon"]) if r["unk_lon"] else None
+        except ValueError:
+            recip_lat = recip_lon = None
+        plan_by_source[r["unk_source"]].append(
+            (r["unk_name"], promoted_datum, donor_z0_m, "meters", recip_lat, recip_lon)
+        )
         accepted_kinds[kind] += 1
 
     # Summary
@@ -187,10 +242,10 @@ def main():
         for src, items in plan_by_source.items():
             path = SOURCE_TO_PATH[src]
             patcher = FilePatcher(path)
-            for name, datum, z0_m, unit in items:
+            for name, datum, z0_m, unit, lat, lon in items:
                 # FilePatcher needs (datum, z0, donor_unit) — donor unit is "meters"
                 # because TSV always reports donor_z0_m in meters.
-                patcher.apply(name, datum, z0_m, unit)
+                patcher.apply(name, datum, z0_m, unit, lat, lon)
             patcher.save()
             print(f"    {src:14s} {patcher.changes} stations rewritten in {path.name}")
     else:

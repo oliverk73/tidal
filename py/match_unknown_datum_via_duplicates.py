@@ -39,6 +39,11 @@ FILES = [
     (ROOT / "classic" / "harmonics-dwf-20251228-free.txt",               "DWF-2025",           "fixed=USA"),
     (ROOT / "classic" / "harmonics-pierre-lavergne-v10_mod.txt",         "Lavergne-v10",       "name"),
     (ROOT / "classic" / "harmonics-pierre-lavergne-v9-europe_mod.txt",   "Lavergne-v9",        "name"),
+    # Originals (donor-only): big pool of pre-dedupe stations.
+    (ROOT / "classic_original" / "harmonics-1997-05-25.txt",             "Classic-1997-orig",  "name"),
+    (ROOT / "classic_original" / "harmonics-2004-06-14.txt",             "Classic-2004-orig",  "name"),
+    (ROOT / "classic_original" / "harmonics-dwf-20070318.txt",           "DWF-2007-orig",      "name"),
+    (ROOT / "classic_original" / "harmonics-dwf-20100529-nonfree.txt",   "DWF-2010-orig",      "name"),
 ]
 
 US_STATES = {
