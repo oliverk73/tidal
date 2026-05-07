@@ -32,9 +32,13 @@ ROOT = Path("/home/oliver/harmonics")
 #   'fixed=<X>' = always X (e.g. DWF-2025 has no country marker → 'USA')
 #
 # Edit-policy (see harmonics/help/datum_overview_summary.md):
-#   - Files marked [EXTERNAL] receive upstream updates; do NOT modify them
-#     in datum-cleanup steps. They are listed here for awareness only.
-#   - Files marked [CONTROLLED] are managed by us and may be edited.
+#   - [EXTERNAL]   — Upstream may publish new versions. Do NOT modify;
+#                    re-import on update. Currently: only DWF-2025.
+#   - [STATIC]     — Upstream is dormant for >15 years (DWF 2010-nonfree).
+#                    No update expected; editable with care, no merge churn.
+#   - [CONTROLLED] — Maintained by us. Includes all `*_mod.txt` files
+#                    (the `_mod` suffix marks them as locally adjusted) and
+#                    our own UTide / TICON-4 / IHM imports.
 SOURCES = [
     # [CONTROLLED]
     (ROOT / "ticon" / "harmonics_ticon4_worldwide.txt", "TICON-4", "block"),
@@ -42,14 +46,15 @@ SOURCES = [
     (ROOT / "utide" / "harmonics_utide_tidetables.txt", "UTide tidetables", "block"),
     (ROOT / "utide" / "harmonics_utide_currents.txt", "UTide currents", "block"),
     (ROOT / "ihm" / "harmonics_puertos_spain.txt", "IHM Puertos Spain", "fixed=Spain"),
-    # [EXTERNAL] — receive upstream updates, do not edit in cleanup steps
     (ROOT / "classic" / "harmonics-1997-05-25_mod.txt", "Classic 1997", "name"),
     (ROOT / "classic" / "harmonics-2004-06-14_mod.txt", "Classic 2004", "name"),
     (ROOT / "classic" / "harmonics-dwf-20070318_mod.txt", "DWF 2007", "name"),
-    (ROOT / "classic" / "harmonics-dwf-20100529-nonfree.txt", "DWF 2010", "name"),
-    (ROOT / "classic" / "harmonics-dwf-20251228-free.txt", "DWF 2025", "fixed=USA"),
     (ROOT / "classic" / "harmonics-pierre-lavergne-v10_mod.txt", "Lavergne v10", "name"),
     (ROOT / "classic" / "harmonics-pierre-lavergne-v9-europe_mod.txt", "Lavergne v9", "name"),
+    # [STATIC] — upstream dormant since 2010
+    (ROOT / "classic" / "harmonics-dwf-20100529-nonfree.txt", "DWF 2010", "name"),
+    # [EXTERNAL] — NOAA / David Flater publishes updates; do NOT edit
+    (ROOT / "classic" / "harmonics-dwf-20251228-free.txt", "DWF 2025", "fixed=USA"),
 ]
 
 
