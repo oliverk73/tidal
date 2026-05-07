@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script to remove duplicate stations from HARMONICS_NO_US_no_us.txt that already exist
-in the newer file harmonics-dwf-20100529-nonfree.txt.
+in the newer file harmonics-dwf-20100529-nonfree_mod.txt.
 
 Duplicate criteria:
 1. Exact match of location name line
@@ -398,7 +398,7 @@ def is_duplicate(station1, station2):
 
 def main():
     base_dir = '/home/oliver/harmonics'
-    new_file = os.path.join(base_dir, 'harmonics-dwf-20100529-nonfree.txt')
+    new_file = os.path.join(base_dir, 'harmonics-dwf-20100529-nonfree_mod.txt')
     old_file = os.path.join(base_dir, 'HARMONICS_NO_US_no_us.txt')
     output_file = os.path.join(base_dir, 'HARMONICS_NO_US_no_us_no_dupes.txt')
     csv_file = os.path.join(base_dir, 'deleted_stations_2010.csv')

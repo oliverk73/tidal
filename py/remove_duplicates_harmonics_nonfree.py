@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Remove duplicate locations from HARMONICS_NO_US_no_us.txt that already exist
-in the newer harmonics-dwf-20100529-nonfree.txt file.
+in the newer harmonics-dwf-20100529-nonfree_mod.txt file.
 
 Duplicate criteria:
 1. Exact match of location name line
@@ -17,7 +17,7 @@ import math
 from difflib import SequenceMatcher
 
 # Files
-NEWER_FILE = "original/harmonics-dwf-20100529-nonfree.txt"
+NEWER_FILE = "original/harmonics-dwf-20100529-nonfree_mod.txt"
 OLDER_FILE = "harmonics/HARMONICS_NO_US_no_us.txt"
 OUTPUT_FILE = "harmonics/HARMONICS_NO_US_no_us_no_dupes.txt"
 DELETED_CSV = "deleted_duplicates.csv"
@@ -231,7 +231,7 @@ def is_duplicate(old_loc, new_locations):
     return False, None
 
 def main():
-    print("Parsing newer file (harmonics-dwf-20100529-nonfree.txt)...")
+    print("Parsing newer file (harmonics-dwf-20100529-nonfree_mod.txt)...")
     _, new_locations = parse_harmonics_file(NEWER_FILE, NUM_CONSTITUENTS_NEW)
     print(f"  Found {len(new_locations)} locations")
 

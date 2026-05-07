@@ -30,7 +30,7 @@ FILES = [
     ROOT / "classic" / "harmonics-1997-05-25_mod.txt",
     ROOT / "classic" / "harmonics-2004-06-14_mod.txt",
     ROOT / "classic" / "harmonics-dwf-20070318_mod.txt",
-    ROOT / "classic" / "harmonics-dwf-20100529-nonfree.txt",
+    ROOT / "classic" / "harmonics-dwf-20100529-nonfree_mod.txt",
     ROOT / "classic" / "harmonics-dwf-20251228-free.txt",
 ]
 

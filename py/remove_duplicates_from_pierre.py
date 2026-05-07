@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Vergleicht harmonics-dwf-20100529-nonfree.txt mit harmonics_pierre_lavergne_v10.txt
+Vergleicht harmonics-dwf-20100529-nonfree_mod.txt mit harmonics_pierre_lavergne_v10.txt
 und entfernt Duplikate aus letzterer.
 """
 
@@ -210,7 +210,7 @@ def normalize_station_name(name):
 
 
 def main():
-    dwf_file = '/home/oliver/harmonics/harmonics-dwf-20100529-nonfree.txt'
+    dwf_file = '/home/oliver/harmonics/harmonics-dwf-20100529-nonfree_mod.txt'
     pierre_file = '/home/oliver/harmonics/harmonics_pierre_lavergne_v10.txt'
     output_file = '/home/oliver/harmonics/harmonics_pierre_lavergne_v10_no_dupes1.txt'
     deleted_csv = '/home/oliver/harmonics/deleted_stations_pierre_v10.csv'

@@ -45,7 +45,7 @@ REF_SOURCES = [
     ('UTide AU',  'harmonics_utide_australia.tcd'),
     ('UTide AU2', 'harmonics_utide_australia_qld.tcd'),
     ('UTide AU3', 'harmonics_utide_australia_uhslc.tcd'),
-    ('DWF 2010',  'harmonics-dwf-20100529-nonfree.tcd'),
+    ('DWF 2010',  'harmonics-dwf-20100529-nonfree_mod.tcd'),
     ('DWF 2007',  'harmonics-dwf-20070318_mod.tcd'),
     ('TICON4',    'harmonics_ticon4_worldwide.tcd'),
 ]

@@ -32,7 +32,7 @@ harmonics_files = [
     'harmonics-2004-06-14_no_us_no_dupes2.txt',
     'harmonics-dwf-20241229-free.txt',
     'harmonics_old_no_us_no_dupes3.txt',
-    'harmonics-dwf-20100529-nonfree.txt',
+    'harmonics-dwf-20100529-nonfree_mod.txt',
     'harmonics-dwf-20070318_no_us_no_dupes.txt',
     'harmonics_pierre_lavergne_v10_no_dupes4.txt',
     'harmonics_pierre_lavergne_v9_europe_no_us_no_dupes5.txt',

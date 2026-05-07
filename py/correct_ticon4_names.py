@@ -45,7 +45,7 @@ REF_FILES = [
     "/home/oliver/harmonics/classic/harmonics-dwf-20241229-free.txt",
     "/home/oliver/harmonics/classic/harmonics_old_no_us_no_dupes3.txt",
     "/home/oliver/harmonics/classic/harmonics_pierre_lavergne_v10_no_dupes4.txt",
-    "/home/oliver/harmonics/classic/harmonics-dwf-20100529-nonfree.txt",
+    "/home/oliver/harmonics/classic/harmonics-dwf-20100529-nonfree_mod.txt",
     "/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt",
     "/home/oliver/harmonics/classic/harmonics-2004-06-14_no_us_no_dupes2.txt",
     "/home/oliver/harmonics/classic/harmonics_pierre_lavergne_v9_europe_no_us_no_dupes5.txt",

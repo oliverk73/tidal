@@ -45,7 +45,7 @@ harmonics_files = [
     'harmonics-2004-06-14_no_us_no_dupes2.txt',
     'harmonics-dwf-20241229-free.txt',
     'harmonics_old_no_us_no_dupes3.txt',
-    'harmonics-dwf-20100529-nonfree.txt'
+    'harmonics-dwf-20100529-nonfree_mod.txt'
 ]
 
 # Search for "Nicht gefunden" stations

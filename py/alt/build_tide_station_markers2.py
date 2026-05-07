@@ -3,7 +3,7 @@ import unicodedata
 
 INPUT_FILES = [
     "harmonics/harmonics-dwf-20241229-free.txt",
-    "harmonics/harmonics-dwf-20100529-nonfree.txt",
+    "harmonics/harmonics-dwf-20100529-nonfree_mod.txt",
     "harmonics/harmonics-dwf-20070318_no_us_no_dupes.txt",
     "harmonics/harmonics-2004-06-14_no_us_no_dupes2.txt",
     "harmonics/harmonics_old_no_us_no_dupes3.txt",

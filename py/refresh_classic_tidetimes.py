@@ -12,7 +12,7 @@ from pathlib import Path
 
 CLASSIC_FILES = [
     Path("/home/oliver/harmonics/classic/harmonics-1997-05-25_mod.txt"),
-    Path("/home/oliver/harmonics/classic/harmonics-dwf-20100529-nonfree.txt"),
+    Path("/home/oliver/harmonics/classic/harmonics-dwf-20100529-nonfree_mod.txt"),
 ]
 UK_DIR = Path("/home/oliver/water_levels/UK_tidetimes")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_uk_tidetimes")

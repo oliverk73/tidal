@@ -139,7 +139,7 @@ os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
 SOURCE_GROUPS = OrderedDict([
     ('DWF 2025',        {'color': '#2196F3', 'files': ['harmonics-dwf-20251228-free.tcd']}),
-    ('DWF 2010',        {'color': '#607D8B', 'files': ['harmonics-dwf-20100529-nonfree.tcd']}),
+    ('DWF 2010',        {'color': '#607D8B', 'files': ['harmonics-dwf-20100529-nonfree_mod.tcd']}),
     ('DWF 2007',        {'color': '#795548', 'files': ['harmonics-dwf-20070318_mod.tcd']}),
     ('Classic 2004',    {'color': '#4CAF50', 'files': ['harmonics-2004-06-14_mod.tcd']}),
     ('Classic 1997',    {'color': '#9C27B0', 'files': ['harmonics-1997-05-25_mod.tcd']}),

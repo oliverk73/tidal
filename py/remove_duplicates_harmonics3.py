@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script to remove duplicate stations from HARMONICS_NO_US_no_us.txt that already exist
-in the newer file harmonics-dwf-20100529-nonfree.txt.
+in the newer file harmonics-dwf-20100529-nonfree_mod.txt.
 
 Duplicate criteria:
 1. Exact match of location name line
