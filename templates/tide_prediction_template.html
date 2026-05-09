@@ -81,6 +81,28 @@ main img { width: 100%; height: auto; }
   {% endif %}
 </span>
 </header>
+{# Breadcrumb: Home > Stations > {country} > {station} #}
+{% set _name_parts = original_name.split(',') %}
+{% set _country = _name_parts[-1].strip() if _name_parts else '' %}
+<nav aria-label="Breadcrumb" style="max-width:1200px;margin:0 auto;padding:0 16px 6px;font-size:0.85em;color:#666;">
+  <a href="/" style="color:#0066cc;text-decoration:none;">Home</a>
+  &rsaquo; <a href="/stations/" style="color:#0066cc;text-decoration:none;">Stations</a>
+  {% if _country %}&rsaquo; <a href="/stations/#{{ _country|lower|replace(' ','-')|replace('.','') }}" style="color:#0066cc;text-decoration:none;">{{ _country }}</a>{% endif %}
+  &rsaquo; <span aria-current="page">{{ original_name }}</span>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"{{ request.url_root.rstrip('/') }}/"},
+    {"@type":"ListItem","position":2,"name":"Stations","item":"{{ request.url_root.rstrip('/') }}/stations/"}{% if _country %},
+    {"@type":"ListItem","position":3,"name":"{{ _country }}","item":"{{ request.url_root.rstrip('/') }}/stations/#{{ _country|lower|replace(' ','-')|replace('.','') }}"},
+    {"@type":"ListItem","position":4,"name":"{{ original_name }}","item":"{{ request.url_root.rstrip('/') }}{{ request.path }}"}
+    {% else %},{"@type":"ListItem","position":3,"name":"{{ original_name }}","item":"{{ request.url_root.rstrip('/') }}{{ request.path }}"}{% endif %}
+  ]
+}
+</script>
 <main>
 
 {% if is_current %}

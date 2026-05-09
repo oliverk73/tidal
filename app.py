@@ -381,22 +381,27 @@ def display_name_for(name, source_file):
 
 def load_station_data():
     """Read stationCoords + stationSources from leaflet_markers.js.
-    Returns dict: {original_name: source_file}."""
+    Returns (sources_dict, coords_dict)."""
     markers_path = os.path.join("static", "js", "leaflet_markers.js")
     sources = {}
+    coords = {}
     if not os.path.exists(markers_path):
-        return sources
-    coord_re = re.compile(r"stationCoords\['(.+?)'\]\s*=")
+        return sources, coords
+    coord_re = re.compile(r"stationCoords\['(.+?)'\]\s*=\s*\[(-?\d+\.?\d*),\s*(-?\d+\.?\d*)\]")
     source_re = re.compile(r"stationSources\['(.+?)'\]\s*=\s*'([^']+)'")
     with open(markers_path, encoding="utf-8") as f:
         for line in f:
             m = source_re.search(line)
             if m:
                 sources[m.group(1)] = m.group(2)
-    return sources
+                continue
+            m = coord_re.search(line)
+            if m:
+                coords[m.group(1)] = (float(m.group(2)), float(m.group(3)))
+    return sources, coords
 
 
-_station_data = load_station_data()
+_station_data, _station_coords = load_station_data()
 # Display names (with USA suffix where applicable) for autocomplete/index
 _station_names = [display_name_for(n, s) for n, s in _station_data.items()]
 
@@ -445,6 +450,64 @@ def robots_txt():
     return body, 200, {"Content-Type": "text/plain; charset=utf-8"}
 
 
+@app.route("/stations/")
+def stations_index():
+    """Crawler-friendly HTML list of all stations grouped by country.
+    Provides internal linking from the JS-only map index to all prediction pages."""
+    by_country = {}
+    seen_slugs = set()
+    for slug, orig_name in _slug_to_station.items():
+        if slug in seen_slugs:
+            continue
+        seen_slugs.add(slug)
+        # Country = last comma-separated part of station name
+        parts = [p.strip() for p in orig_name.split(",")]
+        country = parts[-1] if parts else "Unknown"
+        disp = display_name_for(orig_name, _station_data.get(orig_name))
+        by_country.setdefault(country, []).append((disp, slug))
+    for c in by_country:
+        by_country[c].sort(key=lambda x: x[0].lower())
+    countries = sorted(by_country.keys(), key=str.lower)
+    total = sum(len(v) for v in by_country.values())
+    base = request.url_root.rstrip("/")
+    parts = [
+        '<!DOCTYPE html><html lang="en"><head>',
+        '<meta charset="utf-8"/>',
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>',
+        f'<title>All tide stations ({total}) — Tide predictions &amp; forecasts</title>',
+        f'<meta name="description" content="Complete index of all {total} tide and current stations grouped by country. Browse high and low tide times, tide curves and forecasts for every station."/>',
+        f'<link rel="canonical" href="{base}/stations/"/>',
+        '<style>body{font-family:sans-serif;max-width:1200px;margin:0 auto;padding:20px;color:#333;}',
+        'h1{margin-bottom:0.3em;}h2{margin-top:1.5em;border-bottom:1px solid #ddd;padding-bottom:4px;}',
+        'nav.toc{column-count:4;column-gap:18px;font-size:0.92em;margin:1em 0;}',
+        'nav.toc a{display:block;text-decoration:none;color:#0066cc;padding:1px 0;}',
+        'ul.stations{column-count:3;column-gap:18px;list-style:none;padding:0;font-size:0.9em;}',
+        'ul.stations li{break-inside:avoid;padding:1px 0;}',
+        'ul.stations a{text-decoration:none;color:#0066cc;}',
+        '@media (max-width:700px){nav.toc{column-count:2;}ul.stations{column-count:1;}}',
+        'a.back{display:inline-block;margin-bottom:1em;color:#0066cc;text-decoration:none;}',
+        '</style></head><body>',
+        '<a class="back" href="/">&larr; Back to interactive map</a>',
+        f'<h1>All tide stations ({total})</h1>',
+        f'<p>Complete index of {total} tide and current stations across {len(countries)} countries, '
+        'sorted alphabetically. Click any station for high/low tide times, tide curves and forecasts.</p>',
+        '<nav class="toc" aria-label="Countries"><strong>Countries:</strong>',
+    ]
+    for c in countries:
+        anchor = re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
+        parts.append(f'<a href="#{anchor}">{c} ({len(by_country[c])})</a>')
+    parts.append('</nav>')
+    for c in countries:
+        anchor = re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
+        parts.append(f'<h2 id="{anchor}">{c}</h2>')
+        parts.append('<ul class="stations">')
+        for disp, slug in by_country[c]:
+            parts.append(f'<li><a href="/prediction/{slug}">{disp}</a></li>')
+        parts.append('</ul>')
+    parts.append('</body></html>')
+    return "\n".join(parts), 200, {"Content-Type": "text/html; charset=utf-8"}
+
+
 @app.route("/sitemap.xml")
 def sitemap_xml():
     base = request.url_root.rstrip("/")
@@ -453,6 +516,8 @@ def sitemap_xml():
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     parts.append(f"<url><loc>{base}/</loc><lastmod>{today}</lastmod>"
                  f"<changefreq>daily</changefreq><priority>1.0</priority></url>")
+    parts.append(f"<url><loc>{base}/stations/</loc><lastmod>{today}</lastmod>"
+                 f"<changefreq>weekly</changefreq><priority>0.8</priority></url>")
     seen = set()
     for slug in _slug_to_station:
         if slug in seen:
@@ -639,6 +704,9 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     # Display name appends e.g. ", USA" for DWF-2025 stations (SEO + UX),
     # while decoded_station / station_raw stay clean for tide CLI lookups.
     display_station = display_name_for(decoded_station, source)
+    coords = _station_coords.get(station_raw) or _station_coords.get(decoded_station)
+    lat = coords[0] if coords else None
+    lon = coords[1] if coords else None
     html = render_template_string(template,
                                   station=display_station,
                                   original_name=display_station,
@@ -648,7 +716,9 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                                   is_current=is_current_station,
                                   station_names=_station_names,
                                   utc=utc,
-                                  src=source)
+                                  src=source,
+                                  latitude=lat,
+                                  longitude=lon)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ HTML-Seite erzeugt: {html_path}")

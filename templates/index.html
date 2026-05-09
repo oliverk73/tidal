@@ -79,6 +79,21 @@
 <div id="map"></div>
 <button id="search-trigger" type="button">Search for locations</button>
 
+<noscript>
+  <div style="max-width:1200px;margin:20px auto;padding:0 16px;">
+    <h1>Tide predictions and forecasts for over 3000 stations worldwide</h1>
+    <p>Browse high and low tide times, tide curves, current velocities, sea
+       surface temperature, wave forecasts, precipitation and weather radar
+       overlays for thousands of harbours, bays and tide gauges around the
+       globe. Data sources include UKHO Admiralty (ACD), CHS Canada (LLWLT),
+       SHOM France (ZH), DHN Brazil (CD Marinha), AHO Australia (LAT), KHOA
+       Korea (ALLW), SHN Argentina (CD), and many other national hydrographic
+       offices.</p>
+    <p>The interactive map requires JavaScript. For a non-interactive list of
+       stations see the <a href="/stations/">complete stations index</a>.</p>
+  </div>
+</noscript>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     console.log("🌍 DOM geladen. Initialisiere Leaflet-Karte...");
@@ -1595,6 +1610,12 @@
     <div id="search-modal-results" class="search-modal-results"></div>
   </div>
 </div>
+
+<footer style="position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.85);backdrop-filter:blur(4px);padding:6px 14px;font-size:0.78em;color:#333;text-align:center;z-index:500;border-top:1px solid #ddd;">
+  Tide predictions for 3000+ stations &middot;
+  <a href="/stations/" style="color:#0066cc;text-decoration:none;">Browse all stations</a> &middot;
+  Data: UKHO, NOAA, SHOM, DHN, CHS, AHO &amp; other hydrographic offices
+</footer>
 
 </body>
 </html>
