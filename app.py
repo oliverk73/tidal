@@ -450,62 +450,252 @@ def robots_txt():
     return body, 200, {"Content-Type": "text/plain; charset=utf-8"}
 
 
+_US_STATES = {
+    "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+    "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa",
+    "Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan",
+    "Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
+    "New Hampshire","New Jersey","New Mexico","New York","North Carolina",
+    "North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island",
+    "South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont",
+    "Virginia","Washington","West Virginia","Wisconsin","Wyoming",
+    "Puerto Rico","Guam","American Samoa","U.S. Virgin Islands",
+    "Northern Mariana Islands",
+    "Maryland/Delaware",  # combined regions seen in DWF
+}
+
+# Curated list of countries / dependencies as they appear in our station names
+_COUNTRIES = {
+    "Albania","Algeria","Angola","Anguilla","Antigua and Barbuda","Argentina",
+    "Aruba","Australia","Bahamas","Bahrain","Bangladesh","Barbados","Belgium",
+    "Belize","Benin","Bermuda","Brazil","British Virgin Islands","Brunei",
+    "Bulgaria","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands",
+    "Chile","China","Colombia","Comoros","Cook Islands","Costa Rica",
+    "Croatia","Cuba","Cyprus","Denmark","Djibouti","Dominica","Dominican Republic",
+    "Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia",
+    "Falkland Islands","Faroe Islands","Federated States of Micronesia","Fiji",
+    "Finland","France","French Guiana","French Polynesia","Gabon","Gambia",
+    "Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe",
+    "Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti",
+    "Honduras","Hong Kong","Iceland","India","Indonesia","Iran","Iraq","Ireland",
+    "Isle of Man","Israel","Italy","Ivory Coast","Jamaica","Japan","Jersey",
+    "Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Laos","Latvia","Lebanon",
+    "Liberia","Libya","Lithuania","Macau","Madagascar","Malaysia","Maldives",
+    "Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte",
+    "Mexico","Monaco","Montenegro","Montserrat","Morocco","Mozambique","Myanmar",
+    "Namibia","Nauru","Netherlands","Netherlands Antilles","New Caledonia",
+    "New Zealand","Nicaragua","Nigeria","Niue","North Korea","Norway","Oman",
+    "Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru",
+    "Philippines","Pitcairn Islands","Poland","Portugal","Puerto Rico","Qatar",
+    "Republic of the Congo","Reunion","Romania","Russia","Saint Barthelemy",
+    "Saint Helena","Saint Kitts and Nevis","Saint Lucia","Saint Martin",
+    "Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa",
+    "Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles",
+    "Sierra Leone","Singapore","Slovenia","Solomon Islands","Somalia",
+    "South Africa","South Georgia","South Korea","Spain","Sri Lanka","Sudan",
+    "Suriname","Sweden","Syria","Taiwan","Tanzania","Thailand","Togo","Tokelau",
+    "Tonga","Trinidad and Tobago","Tunisia","Turkey","Turks and Caicos Islands",
+    "Tuvalu","Ukraine","United Arab Emirates","United Kingdom","Uruguay","USA",
+    "United States","Vanuatu","Venezuela","Vietnam","Wallis and Futuna",
+    "Yemen","Zimbabwe",
+    # Antarctic and special
+    "Antarctica","Australian Antarctic Territory","British Antarctic Territory",
+    "Channel Islands","Crozet Islands","Kerguelen Islands","Macquarie Island",
+    "Tristan da Cunha","Tahiti","Wallis","Île Futuna",
+}
+
+_COUNTRY_ALIASES = {
+    "United States": "USA",
+    "México": "Mexico",
+    "Moçambique": "Mozambique",
+    "Brasil": "Brazil",
+    "España": "Spain",
+    "Türkiye": "Turkey",
+    "Türkei": "Turkey",
+    "Côte d'Ivoire": "Ivory Coast",
+    "Kerguelen": "Kerguelen Islands",
+    "Edinburgh of the Seven Seas": "Tristan da Cunha",
+    "Tristan da Cunha Island": "Tristan da Cunha",
+    "Tristan Da Cunha": "Tristan da Cunha",
+    "Curaçao": "Curacao",
+    "Curacao": "Curacao",
+    "Îles Éparses": "French Scattered Islands",
+    "Western Sahara": "Western Sahara",
+    "Samoa Islands": "Samoa",
+    "Wallis": "Wallis and Futuna",
+    "Île Futuna": "Wallis and Futuna",
+    "Greater Sunda Islands": "Indonesia",
+    "Crozet Islands": "Crozet Islands",
+    # Variants found in actual data
+    "Hawaii": "USA",
+    "Newfoundland Canada": "Canada",
+    "Newfoundland  Canada": "Canada",
+    "Okayama Japan": "Japan",
+    "Réunion": "Reunion",
+    "Saint-Pierre-et-Miquelon": "Saint Pierre and Miquelon",
+    "Caribbean Netherlands": "Netherlands",
+    "Bonaire": "Netherlands",
+    "Ascension Island": "Saint Helena",
+    "St. Helena": "Saint Helena",
+    "F.S.M.": "Federated States of Micronesia",
+    "Micronesia": "Federated States of Micronesia",
+    "Confederated States of Micronesia": "Federated States of Micronesia",
+    "Caroline Islands": "Federated States of Micronesia",
+    "Torres Strait": "Australia",
+    "Tuamotu Archipelago": "French Polynesia",
+    "Tuamoto Atoll": "French Polynesia",  # typo in source
+    "French Polyneisa": "French Polynesia",  # typo in source
+    "Gambier Islands": "French Polynesia",
+    "São Tomé and Príncipe": "Sao Tome and Principe",
+    "Îles Anglo-Normandes": "Channel Islands",
+    "Archipel Crozet": "Crozet Islands",
+    "Tongatapu": "Tonga",
+}
+# Add the alias targets to _COUNTRIES (so they round-trip)
+_COUNTRIES |= set(_COUNTRY_ALIASES.values())
+
+
+def _country_for_name(name):
+    """Heuristic: extract canonical country from station name.
+    Walks comma-separated parts right-to-left, strips noise suffixes,
+    also tries content inside parentheses (e.g. "Oahu (Hawaii)" → Hawaii)."""
+    if not name:
+        return None
+    parts = [p.strip() for p in name.split(",")]
+    for part in reversed(parts):
+        # Strip noise suffixes:
+        cleaned = part
+        cleaned = re.sub(r"\s+\(expired [^)]+\)$", "", cleaned)
+        cleaned = re.sub(r"\s+\(\d+\)$", "", cleaned)
+        cleaned = re.sub(r"\s+Currents?$", "", cleaned)
+        cleaned = cleaned.strip()
+        # Direct match
+        for cand in [cleaned] + re.findall(r"\(([^)]+)\)", cleaned) + [re.sub(r"\s*\([^)]*\)", "", cleaned).strip()]:
+            cand = cand.strip()
+            if not cand: continue
+            if cand in _US_STATES:
+                return "USA"
+            if cand in _COUNTRY_ALIASES:
+                return _COUNTRY_ALIASES[cand]
+            if cand in _COUNTRIES:
+                return cand
+    return None
+
+
+def _is_currents_station(name, source):
+    """True if this is a tidal currents station (not heights)."""
+    if source and "currents" in source.lower():
+        return True
+    if name and re.search(r"\bCurrents?\b", name):
+        return True
+    return False
+
+
 @app.route("/stations/")
 def stations_index():
-    """Crawler-friendly HTML list of all stations grouped by country.
-    Provides internal linking from the JS-only map index to all prediction pages."""
+    """Crawler-friendly HTML list of all tide stations grouped by country.
+    Provides internal linking from the JS-only map to all prediction pages.
+    Currents stations are listed in a separate section."""
     by_country = {}
+    currents_by_country = {}
+    other_tides = []
+    other_currents = []
     seen_slugs = set()
     for slug, orig_name in _slug_to_station.items():
         if slug in seen_slugs:
             continue
         seen_slugs.add(slug)
-        # Country = last comma-separated part of station name
-        parts = [p.strip() for p in orig_name.split(",")]
-        country = parts[-1] if parts else "Unknown"
-        disp = display_name_for(orig_name, _station_data.get(orig_name))
-        by_country.setdefault(country, []).append((disp, slug))
+        src = _station_data.get(orig_name)
+        disp = display_name_for(orig_name, src)
+        country = _country_for_name(disp) or _country_for_name(orig_name)
+        is_curr = _is_currents_station(orig_name, src)
+        if is_curr:
+            (currents_by_country.setdefault(country, []) if country else other_currents).append((disp, slug))
+        else:
+            (by_country.setdefault(country, []) if country else other_tides).append((disp, slug))
     for c in by_country:
         by_country[c].sort(key=lambda x: x[0].lower())
+    for c in currents_by_country:
+        currents_by_country[c].sort(key=lambda x: x[0].lower())
+    other_tides.sort(key=lambda x: x[0].lower())
+    other_currents.sort(key=lambda x: x[0].lower())
+
     countries = sorted(by_country.keys(), key=str.lower)
-    total = sum(len(v) for v in by_country.values())
+    curr_countries = sorted(currents_by_country.keys(), key=str.lower)
+    n_tides = sum(len(v) for v in by_country.values()) + len(other_tides)
+    n_currents = sum(len(v) for v in currents_by_country.values()) + len(other_currents)
     base = request.url_root.rstrip("/")
-    parts = [
+
+    out = [
         '<!DOCTYPE html><html lang="en"><head>',
         '<meta charset="utf-8"/>',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>',
-        f'<title>All tide stations ({total}) — Tide predictions &amp; forecasts</title>',
-        f'<meta name="description" content="Complete index of all {total} tide and current stations grouped by country. Browse high and low tide times, tide curves and forecasts for every station."/>',
+        f'<title>All tide stations ({n_tides}) — Tide predictions &amp; forecasts</title>',
+        f'<meta name="description" content="Index of {n_tides} tide stations across {len(countries)} countries plus {n_currents} current stations. High and low tide times, tide curves and forecasts."/>',
         f'<link rel="canonical" href="{base}/stations/"/>',
         '<style>body{font-family:sans-serif;max-width:1200px;margin:0 auto;padding:20px;color:#333;}',
         'h1{margin-bottom:0.3em;}h2{margin-top:1.5em;border-bottom:1px solid #ddd;padding-bottom:4px;}',
-        'nav.toc{column-count:4;column-gap:18px;font-size:0.92em;margin:1em 0;}',
+        'nav.toc{column-count:4;column-gap:18px;font-size:0.92em;margin:0.5em 0 1.5em;}',
         'nav.toc a{display:block;text-decoration:none;color:#0066cc;padding:1px 0;}',
         'ul.stations{column-count:3;column-gap:18px;list-style:none;padding:0;font-size:0.9em;}',
         'ul.stations li{break-inside:avoid;padding:1px 0;}',
         'ul.stations a{text-decoration:none;color:#0066cc;}',
+        '.section-toggle{display:block;margin:2em 0 1em;padding:8px 14px;background:#f0f0f0;border-radius:4px;color:#333;text-decoration:none;font-weight:bold;}',
         '@media (max-width:700px){nav.toc{column-count:2;}ul.stations{column-count:1;}}',
         'a.back{display:inline-block;margin-bottom:1em;color:#0066cc;text-decoration:none;}',
         '</style></head><body>',
         '<a class="back" href="/">&larr; Back to interactive map</a>',
-        f'<h1>All tide stations ({total})</h1>',
-        f'<p>Complete index of {total} tide and current stations across {len(countries)} countries, '
-        'sorted alphabetically. Click any station for high/low tide times, tide curves and forecasts.</p>',
-        '<nav class="toc" aria-label="Countries"><strong>Countries:</strong>',
+        f'<h1>Tide stations ({n_tides})</h1>',
+        f'<p>Index of {n_tides} tide stations across {len(countries)} countries, sorted alphabetically. '
+        f'Click any station for high/low tide times, tide curves and forecasts. '
+        f'<a href="#currents">Tidal currents ({n_currents})</a> are listed below.</p>',
+        '<nav class="toc" aria-label="Countries (tides)"><strong>Tide stations by country:</strong>',
     ]
     for c in countries:
-        anchor = re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
-        parts.append(f'<a href="#{anchor}">{c} ({len(by_country[c])})</a>')
-    parts.append('</nav>')
+        anchor = "tides-" + re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
+        out.append(f'<a href="#{anchor}">{c} ({len(by_country[c])})</a>')
+    if other_tides:
+        out.append(f'<a href="#tides-other">Other / unmapped ({len(other_tides)})</a>')
+    out.append('</nav>')
     for c in countries:
-        anchor = re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
-        parts.append(f'<h2 id="{anchor}">{c}</h2>')
-        parts.append('<ul class="stations">')
+        anchor = "tides-" + re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
+        out.append(f'<h2 id="{anchor}">{c}</h2>')
+        out.append('<ul class="stations">')
         for disp, slug in by_country[c]:
-            parts.append(f'<li><a href="/prediction/{slug}">{disp}</a></li>')
-        parts.append('</ul>')
-    parts.append('</body></html>')
-    return "\n".join(parts), 200, {"Content-Type": "text/html; charset=utf-8"}
+            out.append(f'<li><a href="/prediction/{slug}">{disp}</a></li>')
+        out.append('</ul>')
+    if other_tides:
+        out.append('<h2 id="tides-other">Other / unmapped</h2>')
+        out.append('<ul class="stations">')
+        for disp, slug in other_tides:
+            out.append(f'<li><a href="/prediction/{slug}">{disp}</a></li>')
+        out.append('</ul>')
+
+    # Currents section
+    out.append(f'<h2 id="currents" style="margin-top:3em;">Tidal currents ({n_currents})</h2>')
+    out.append('<nav class="toc" aria-label="Countries (currents)">')
+    for c in curr_countries:
+        anchor = "currents-" + re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
+        out.append(f'<a href="#{anchor}">{c} ({len(currents_by_country[c])})</a>')
+    if other_currents:
+        out.append(f'<a href="#currents-other">Other / unmapped ({len(other_currents)})</a>')
+    out.append('</nav>')
+    for c in curr_countries:
+        anchor = "currents-" + re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
+        out.append(f'<h3 id="{anchor}">{c}</h3>')
+        out.append('<ul class="stations">')
+        for disp, slug in currents_by_country[c]:
+            out.append(f'<li><a href="/prediction/{slug}">{disp}</a></li>')
+        out.append('</ul>')
+    if other_currents:
+        out.append('<h3 id="currents-other">Other / unmapped</h3>')
+        out.append('<ul class="stations">')
+        for disp, slug in other_currents:
+            out.append(f'<li><a href="/prediction/{slug}">{disp}</a></li>')
+        out.append('</ul>')
+
+    out.append('</body></html>')
+    return "\n".join(out), 200, {"Content-Type": "text/html; charset=utf-8"}
 
 
 @app.route("/sitemap.xml")
