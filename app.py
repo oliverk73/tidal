@@ -27,8 +27,9 @@ except ImportError:
     pass  # Compression optional; install via `pip install flask-compress`
 
 # Direktories
-PREDICTIONS_DIR = "static/predictions"
-IMAGES_DIR = "static/images"
+PREDICTIONS_DIR = "static/predictions"  # generated HTML + SVG (täglich purgen)
+IMAGES_DIR = "static/images"  # permanente Assets (Logos, Marker-Icons, Geo-Daten)
+SVG_DIR = PREDICTIONS_DIR  # generated tide grafiks (gleicher Lifecycle wie HTML)
 TEMPLATE_PATH = "templates/tide_prediction_template.html"
 HARMONICS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "harmonics")
 TCD_DIR = "/usr/share/xtide"
@@ -760,13 +761,41 @@ def _is_fresh_today(filepath):
     return mtime.date() == datetime.now().date()
 
 
+_last_purge_date = None  # tracks date of last successful purge
+
+def _purge_stale_predictions(force=False):
+    """Delete prediction HTMLs and SVGs not modified today.
+    Called lazily on first prediction request per day (cheap if already purged).
+    Tide grafiks are date-anchored (start = today), so yesterday's are stale."""
+    global _last_purge_date
+    today = datetime.now().date()
+    if not force and _last_purge_date == today:
+        return 0
+    n_purged = 0
+    for d, pattern in [(PREDICTIONS_DIR, "tide_prediction_*.html"),
+                       (SVG_DIR, "tide_prediction_*.svg")]:
+        if not os.path.isdir(d):
+            continue
+        for f in glob.glob(os.path.join(d, pattern)):
+            try:
+                mtime_date = datetime.fromtimestamp(os.path.getmtime(f)).date()
+                if mtime_date < today:
+                    os.remove(f)
+                    n_purged += 1
+            except OSError:
+                pass
+    _last_purge_date = today
+    if n_purged:
+        print(f"🗑️ Purged {n_purged} stale prediction asset(s) from previous day(s)")
+    return n_purged
+
+
 def _generate_prediction(decoded_station, station_raw, source, svg_filename, html_filename, utc=False):
     """Generate SVG + HTML prediction files. Returns html_path."""
-    svg_path = os.path.join(IMAGES_DIR, svg_filename)
+    svg_path = os.path.join(SVG_DIR, svg_filename)
     html_path = os.path.join(PREDICTIONS_DIR, html_filename)
 
     os.makedirs(PREDICTIONS_DIR, exist_ok=True)
-    os.makedirs(IMAGES_DIR, exist_ok=True)
 
     if os.path.exists(svg_path):
         os.remove(svg_path)
@@ -923,7 +952,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     is_current_station = decoded_station.rstrip().endswith('Current')
     with open(TEMPLATE_PATH, encoding="utf-8") as f:
         template = f.read()
-    svg_url = f"/static/images/{svg_filename}"
+    svg_url = f"/static/predictions/{svg_filename}"
     # Display name appends e.g. ", USA" for DWF-2025 stations (SEO + UX),
     # while decoded_station / station_raw stay clean for tide CLI lookups.
     display_station = display_name_for(decoded_station, source)
@@ -952,6 +981,10 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
 def show_prediction(slug):
     """Serve a prediction page, regenerating if stale (not from today)."""
     try:
+        # Daily housekeeping: drop yesterday's cached HTMLs and SVGs.
+        # Cheap (no-op) after first request of the day.
+        _purge_stale_predictions()
+
         source = request.args.get('source')
         utc = request.args.get('utc') == '1'
 
@@ -1145,4 +1178,6 @@ def delete_station():
 
 
 if __name__ == "__main__":
+    # Startup housekeeping: drop any stale tide HTMLs/SVGs from previous days
+    _purge_stale_predictions(force=True)
     app.run(debug=True)
