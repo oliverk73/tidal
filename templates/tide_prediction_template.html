@@ -129,12 +129,14 @@ main img { width: 100%; height: auto; }
 {% if is_current %}
 <p><img src="{{ svg_url }}"
         alt="Current prediction curve for {{ original_name }} — flood and ebb current speeds, slack water times. See table below for exact times and current velocities."
+        title="Current prediction curve for {{ original_name }}"
         id="Current prediction curve"
         width="960" height="312" loading="eager" decoding="async"></p>
 <h3>Current times</h3>
 {% else %}
 <p><img src="{{ svg_url }}"
         alt="Tide prediction curve for {{ original_name }} — high and low tide times. Heights are referenced to chart datum. See table below for exact times and water levels."
+        title="Tide prediction curve for {{ original_name }}"
         id="Tide prediction curve"
         width="960" height="312" loading="eager" decoding="async"></p>
 <h3>Tide times</h3>
