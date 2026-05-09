@@ -312,6 +312,18 @@ STATIONS = [
             2026: '18 - ARQUIP\u00c9LAGO DE FERNANDO DE NORONHA 64 - 66.pdf',
         },
     },
+    # DHN 19 (Porto do Recife \u2014 geographisch zwischen Cabedelo und Suape)
+    {
+        'dhn': 19,
+        'name': 'Recife (Porto), Pernambuco, Brazil',
+        'lat': -8.0567, 'lon': -34.8667,
+        'state': 'Pernambuco', 'utc_offset': 3,
+        'pdfs': {
+            2024: '24_-_porto_do_recife_2024_ok.pdf',
+            2025: '24 - PORTO DO RECIFE -PE - 80-82.pdf',
+            2026: '24 - PORTO DO RECIFE - 82 - 84.pdf',
+        },
+    },
     # DHN 25
     {
         'dhn': 25,
