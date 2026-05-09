@@ -178,10 +178,15 @@ main img { width: 100%; height: auto; }
 {% endif %}
 
 {% if nearby %}
+{% set _max_dist = nearby[-1][2] %}
 <section aria-labelledby="nearby-stations-heading" style="margin-top:2em;padding-top:1em;border-top:1px solid #eee;">
   <h3 id="nearby-stations-heading">Nearby tide stations</h3>
   <p style="font-size:0.9em;color:#666;margin:0.3em 0 1em;">
-    Other stations within ~300&nbsp;km of {{ original_name }}, sorted by distance.
+    {% if _max_dist <= 300 %}
+      Other stations within ~300&nbsp;km of {{ original_name }}, sorted by distance.
+    {% else %}
+      The {{ nearby|length }} nearest stations to {{ original_name }} (this is a remote location, the closest are over {{ '%.0f'|format(nearby[0][2]) }}&nbsp;km away).
+    {% endif %}
   </p>
   <ul style="list-style:none;padding:0;column-count:2;column-gap:24px;font-size:0.95em;">
     {% for disp, slug, dist in nearby %}
