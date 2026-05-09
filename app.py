@@ -430,6 +430,41 @@ def index():
 def favicon():
     return send_from_directory("static", "favicon.ico", mimetype="image/x-icon")
 
+
+@app.route("/robots.txt")
+def robots_txt():
+    body = (
+        "User-agent: *\n"
+        "Allow: /\n"
+        "Disallow: /generate/\n"
+        "Disallow: /update_coordinates\n"
+        "Disallow: /update_station_name\n"
+        "Disallow: /delete_station\n"
+        f"Sitemap: {request.url_root.rstrip('/')}/sitemap.xml\n"
+    )
+    return body, 200, {"Content-Type": "text/plain; charset=utf-8"}
+
+
+@app.route("/sitemap.xml")
+def sitemap_xml():
+    base = request.url_root.rstrip("/")
+    today = datetime.now().date().isoformat()
+    parts = ['<?xml version="1.0" encoding="UTF-8"?>',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    parts.append(f"<url><loc>{base}/</loc><lastmod>{today}</lastmod>"
+                 f"<changefreq>daily</changefreq><priority>1.0</priority></url>")
+    seen = set()
+    for slug in _slug_to_station:
+        if slug in seen:
+            continue
+        seen.add(slug)
+        parts.append(f"<url><loc>{base}/prediction/{slug}</loc>"
+                     f"<lastmod>{today}</lastmod><changefreq>daily</changefreq>"
+                     f"<priority>0.7</priority></url>")
+    parts.append("</urlset>")
+    return "\n".join(parts), 200, {"Content-Type": "application/xml; charset=utf-8"}
+
+
 def _resolve_station(station, source=None, utc=False):
     """Decode station name and compute safe filenames + source suffix."""
     decoded_station = unquote(station)

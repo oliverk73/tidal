@@ -47,7 +47,27 @@
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
 
-<title>Tide predictions &amp; forecasts</title>
+<title>Tide predictions &amp; forecasts — interactive global tide map</title>
+<meta name="description" content="Interactive map with tide predictions and forecasts for over 3000 stations worldwide. High and low tide times, tide curves, weather and current overlays."/>
+<link rel="canonical" href="{{ request.url_root.rstrip('/') }}/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Tide predictions &amp; forecasts — interactive global tide map"/>
+<meta property="og:description" content="Tide predictions and forecasts for over 3000 stations worldwide. High and low tide times, tide curves, weather and current overlays."/>
+<meta property="og:url" content="{{ request.url_root.rstrip('/') }}/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Tide predictions &amp; forecasts"/>
+<meta name="twitter:description" content="Interactive map with tide predictions for over 3000 stations worldwide."/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Tide predictions & forecasts",
+  "description": "Interactive map with tide predictions and forecasts for over 3000 stations worldwide.",
+  "applicationCategory": "TravelApplication",
+  "url": "{{ request.url_root.rstrip('/') }}/",
+  "operatingSystem": "Web"
+}
+</script>
 </head>
 <body>
 <script>

@@ -35,8 +35,33 @@ main img { width: 100%; height: auto; }
 
 {% if is_current %}
 <title>Current predictions &amp; forecasts {{ original_name }}</title>
+<meta name="description" content="Current predictions and forecasts for {{ original_name }}: flood and ebb times, slack water and current velocities."/>
+<meta property="og:title" content="Current predictions &amp; forecasts {{ original_name }}"/>
+<meta property="og:description" content="Flood and ebb times, slack water and current velocities for {{ original_name }}."/>
 {% else %}
 <title>Tide predictions &amp; forecasts {{ original_name }}</title>
+<meta name="description" content="Tide predictions and forecasts for {{ original_name }}: high and low tide times as well as tide curves."/>
+<meta property="og:title" content="Tide predictions &amp; forecasts {{ original_name }}"/>
+<meta property="og:description" content="High and low tide times as well as tide curves for {{ original_name }}."/>
+{% endif %}
+<link rel="canonical" href="{{ request.url_root.rstrip('/') }}{{ request.path }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="{{ request.url_root.rstrip('/') }}{{ request.path }}"/>
+<meta name="twitter:card" content="summary"/>
+{% if latitude is defined and longitude is defined %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": "{{ original_name }}",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ latitude }},
+    "longitude": {{ longitude }}
+  },
+  "url": "{{ request.url_root.rstrip('/') }}{{ request.path }}"
+}
+</script>
 {% endif %}
 </head>
 <body>
