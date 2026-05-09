@@ -798,12 +798,29 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
     print("✅ tide wurde erfolgreich ausgeführt.")
 
-    # Konvertierung der SVG-Kodierung
+    # Konvertierung der SVG-Kodierung + Inject <title> für Accessibility/SEO
     with open(svg_path, "rb") as f:
-        raw = f.read()
+        svg_text = f.read().decode("iso-8859-1")
+    is_curr_for_title = decoded_station.rstrip().endswith("Current")
+    title_text = (
+        f"Current prediction curve for {decoded_station}"
+        if is_curr_for_title else
+        f"Tide prediction curve for {decoded_station}"
+    )
+    # Escape XML special chars in title
+    title_safe = (title_text.replace("&", "&amp;")
+                              .replace("<", "&lt;")
+                              .replace(">", "&gt;"))
+    # Inject <title> as first child of <svg> (only if not already present)
+    if "<title>" not in svg_text[:500]:
+        svg_text = re.sub(
+            r"(<svg[^>]*>)",
+            r"\1<title>" + title_safe + r"</title>",
+            svg_text, count=1,
+        )
     with open(svg_path, "w", encoding="utf-8") as f:
-        f.write(raw.decode("iso-8859-1"))
-    print(f"✅ SVG-Datei konvertiert: {svg_path}")
+        f.write(svg_text)
+    print(f"✅ SVG-Datei konvertiert + Title injiziert: {svg_path}")
 
     # Zusätzlich: tide -l "Station" -m a → als Key-Value-Liste
     try:
