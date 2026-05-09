@@ -176,6 +176,23 @@ main img { width: 100%; height: auto; }
 {% else %}
 <p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
 {% endif %}
+
+{% if nearby %}
+<section aria-labelledby="nearby-stations-heading" style="margin-top:2em;padding-top:1em;border-top:1px solid #eee;">
+  <h3 id="nearby-stations-heading">Nearby tide stations</h3>
+  <p style="font-size:0.9em;color:#666;margin:0.3em 0 1em;">
+    Other stations within ~300&nbsp;km of {{ original_name }}, sorted by distance.
+  </p>
+  <ul style="list-style:none;padding:0;column-count:2;column-gap:24px;font-size:0.95em;">
+    {% for disp, slug, dist in nearby %}
+    <li style="break-inside:avoid;padding:3px 0;">
+      <a href="/prediction/{{ slug }}" style="color:#0066cc;text-decoration:none;">{{ disp }}</a>
+      <span style="color:#888;font-size:0.85em;"> · {{ '%.0f'|format(dist) }}&nbsp;km</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
 </main>
 <footer>
 </footer>

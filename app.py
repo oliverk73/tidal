@@ -763,6 +763,51 @@ def _is_fresh_today(filepath):
 
 _last_purge_date = None  # tracks date of last successful purge
 
+
+# Pre-compute (slug, lat, lon, display_name) for nearest-station lookup.
+# Built once at module load; query is O(N) per request (~11k entries → <10ms).
+# Dedup: one entry per unique display_name (a station may have multiple slugs).
+_station_index = []
+_seen_disp_for_index = set()
+for _orig, _src in _station_data.items():
+    _coords = _station_coords.get(_orig)
+    if not _coords:
+        continue
+    _disp = display_name_for(_orig, _src)
+    if _disp in _seen_disp_for_index:
+        continue
+    _seen_disp_for_index.add(_disp)
+    _slug = to_slug(_disp)
+    _station_index.append((_slug, _coords[0], _coords[1], _disp))
+
+
+def _nearest_stations(slug, lat, lon, k=8, max_km=300):
+    """Return up to k nearest stations to (lat, lon), sorted by distance.
+    Excludes the query station itself by slug. Filters to <= max_km
+    (drops if 0 results within that radius — fall back to global k)."""
+    import math
+    rlat = math.radians(lat)
+    cos_lat = math.cos(rlat)
+    sin_lat = math.sin(rlat)
+    out = []
+    R = 6371.0  # km
+    for s_slug, s_lat, s_lon, s_disp in _station_index:
+        if s_slug == slug:
+            continue
+        # Haversine
+        dlat = math.radians(s_lat - lat)
+        dlon = math.radians(s_lon - lon)
+        a = math.sin(dlat / 2) ** 2 + cos_lat * math.cos(math.radians(s_lat)) * math.sin(dlon / 2) ** 2
+        if a >= 1: a = 1
+        d = 2 * R * math.asin(math.sqrt(a))
+        out.append((d, s_disp, s_slug))
+    out.sort(key=lambda x: x[0])
+    within = [(disp, slg, dist) for dist, disp, slg in out[:k] if dist <= max_km]
+    if within:
+        return within
+    # Fall back: top-k regardless of distance (very remote stations)
+    return [(disp, slg, dist) for dist, disp, slg in out[:k]]
+
 def _purge_stale_predictions(force=False):
     """Delete prediction HTMLs and SVGs not modified today.
     Called lazily on first prediction request per day (cheap if already purged).
@@ -959,6 +1004,14 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     coords = _station_coords.get(station_raw) or _station_coords.get(decoded_station)
     lat = coords[0] if coords else None
     lon = coords[1] if coords else None
+    nearby = []
+    if lat is not None and lon is not None:
+        # Nearest other stations within 300 km (or top-8 if remote)
+        try:
+            this_slug = to_slug(display_station)
+            nearby = _nearest_stations(this_slug, lat, lon, k=8, max_km=300)
+        except Exception as e:
+            print(f"⚠️ Nearby-stations error: {e}")
     html = render_template_string(template,
                                   station=display_station,
                                   original_name=display_station,
@@ -970,7 +1023,8 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                                   utc=utc,
                                   src=source,
                                   latitude=lat,
-                                  longitude=lon)
+                                  longitude=lon,
+                                  nearby=nearby)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ HTML-Seite erzeugt: {html_path}")
