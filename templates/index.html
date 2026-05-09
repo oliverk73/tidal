@@ -131,7 +131,7 @@
       options: { position: 'bottomleft' },
       onAdd: function () {
         const btn = L.DomUtil.create('div', 'leaflet-bar');
-        btn.innerHTML = '<a href="#" title="Mein Standort" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;font-size:18px;text-decoration:none;color:#333;">&#x2316;</a>';
+        btn.innerHTML = '<a href="#" title="My location" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;font-size:18px;text-decoration:none;color:#333;">&#x2316;</a>';
         L.DomEvent.disableClickPropagation(btn);
         btn.querySelector('a').addEventListener('click', function (e) {
           e.preventDefault();
@@ -324,7 +324,7 @@
       const d = new Date(frame.time);
       const dateStr = d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' });
       const timeStr = d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-      const tag = frame.isForecast ? ' (Vorhersage)' : '';
+      const tag = frame.isForecast ? ' (Forecast)' : '';
       return dateStr + ' ' + timeStr + tag;
     }
 
@@ -556,7 +556,7 @@
             '</label>' +
           '</div>' +
           '<div id="td-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
-            '<div id="td-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="td-loading" style="color:#888;">Loading data...</div>' +
             '<div id="td-player" style="display:none;">' +
               '<div style="display:flex;align-items:center;gap:8px;">' +
                 '<button id="td-prev" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
@@ -587,7 +587,7 @@
                 document.getElementById('td-player').style.display = 'block';
                 tideLayer.activate();
               } catch (e) {
-                document.getElementById('td-loading').textContent = 'Fehler beim Laden!';
+                document.getElementById('td-loading').textContent = 'Error loading!';
                 console.error('Tide layer error:', e);
               }
             } else {
@@ -628,7 +628,7 @@
             '</label>' +
           '</div>' +
           '<div id="wv-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
-            '<div id="wv-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="wv-loading" style="color:#888;">Loading data...</div>' +
             '<div id="wv-player" style="display:none;">' +
               '<div style="display:flex;align-items:center;gap:8px;">' +
                 '<button id="wv-prev-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
@@ -665,7 +665,7 @@
                 }
                 waveLayer.activate();
               } catch (e) {
-                document.getElementById('wv-loading').textContent = 'Fehler beim Laden!';
+                document.getElementById('wv-loading').textContent = 'Error loading!';
                 console.error('Wave layer error:', e);
               }
             } else {
@@ -827,7 +827,7 @@
             '</label>' +
           '</div>' +
           '<div id="oc-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
-            '<div id="oc-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="oc-loading" style="color:#888;">Loading data...</div>' +
             '<div id="oc-player" style="display:none;">' +
               '<div style="display:flex;align-items:center;gap:8px;">' +
                 '<button id="oc-prev-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
@@ -857,7 +857,7 @@
                 await ocShowFrame(0);
                 showLegend('oc-toggle');
               } catch (e) {
-                document.getElementById('oc-loading').textContent = 'Fehler beim Laden!';
+                document.getElementById('oc-loading').textContent = 'Error loading!';
                 console.error('Ocean current layer error:', e);
               }
             } else {
@@ -896,7 +896,7 @@
             '</label>' +
           '</div>' +
           '<div id="pr-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
-            '<div id="pr-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="pr-loading" style="color:#888;">Loading data...</div>' +
             '<div id="pr-player" style="display:none;">' +
               '<div style="display:flex;align-items:center;gap:8px;">' +
                 '<button id="pr-prev-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
@@ -927,7 +927,7 @@
                 document.getElementById('pr-player').style.display = 'block';
                 precipLayer.activate();
               } catch (e) {
-                document.getElementById('pr-loading').textContent = 'Fehler beim Laden!';
+                document.getElementById('pr-loading').textContent = 'Error loading!';
                 console.error('Precip layer error:', e);
               }
             } else {
@@ -960,7 +960,7 @@
       nowcastLayer.deactivate();
       nowcastLayer.clearRegions();
       document.getElementById('nf-loading').style.display = 'block';
-      document.getElementById('nf-loading').textContent = 'Lade Daten...';
+      document.getElementById('nf-loading').textContent = 'Loading data...';
       document.getElementById('nf-player').style.display = 'none';
       try {
         await Promise.all(NF_REGIONS.map(function (r) {
@@ -973,7 +973,7 @@
         document.getElementById('nf-player').style.display = 'block';
         nowcastLayer.activate();
       } catch (e) {
-        document.getElementById('nf-loading').textContent = 'Fehler beim Laden';
+        document.getElementById('nf-loading').textContent = 'Error loading';
         console.error('Nowcast load error:', e);
       }
     }
@@ -990,7 +990,7 @@
             '</label>' +
           '</div>' +
           '<div id="nf-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
-            '<div id="nf-loading" style="color:#888;">Lade Daten...</div>' +
+            '<div id="nf-loading" style="color:#888;">Loading data...</div>' +
             '<div id="nf-player" style="display:none;">' +
               '<div style="display:flex;align-items:center;gap:8px;">' +
                 '<button id="nf-prev-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">\u23EE</button>' +
@@ -1087,7 +1087,7 @@
             '</label>' +
           '</div>' +
           '<div id="sst-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
-            '<div id="sst-loading" style="color:#888;display:none;">Lade Daten...</div>' +
+            '<div id="sst-loading" style="color:#888;display:none;">Loading data...</div>' +
             '<div id="sst-info">' +
               '<div style="display:flex;gap:6px;margin-bottom:4px;">' +
                 '<label style="cursor:pointer;font-size:12px;">' +
@@ -1116,7 +1116,7 @@
                   document.getElementById('sst-loading').style.display = 'none';
                 }
               } catch (e) {
-                document.getElementById('sst-loading').textContent = 'Fehler beim Laden!';
+                document.getElementById('sst-loading').textContent = 'Error loading!';
                 console.error('SST layer error:', e);
               }
             } else {
@@ -1143,7 +1143,7 @@
                   document.getElementById('sst-loading').style.display = 'none';
                 }
               } catch (e) {
-                document.getElementById('sst-loading').textContent = 'Fehler beim Laden!';
+                document.getElementById('sst-loading').textContent = 'Error loading!';
                 console.error('SST source switch error:', e);
               }
             });
@@ -1390,17 +1390,17 @@
     targetMarker.addTo(map);
 
     // Visuelles Feedback
-    targetMarker.bindTooltip('Ziehe mich an die richtige Position!', {permanent: true, direction: 'top'});
+    targetMarker.bindTooltip('Drag me to the correct position!', {permanent: true, direction: 'top'});
     targetMarker.openTooltip();
 
     targetMarker.once('dragend', function () {
       var newLatLng = targetMarker.getLatLng();
       targetMarker.unbindTooltip();
 
-      var msg = 'Koordinaten ändern?\n\n' +
+      var msg = 'Update coordinates?\n\n' +
         'Alt: ' + oldLatLng.lat.toFixed(4) + ', ' + oldLatLng.lng.toFixed(4) + '\n' +
         'Neu: ' + newLatLng.lat.toFixed(4) + ', ' + newLatLng.lng.toFixed(4) + '\n\n' +
-        'Station: ' + stationName + '\nDatei: ' + sourceFile;
+        'Station: ' + stationName + '\nFile: ' + sourceFile;
 
       if (confirm(msg)) {
         // An Backend senden
@@ -1419,18 +1419,18 @@
         .then(function (r) { return r.json(); })
         .then(function (data) {
           if (data.ok) {
-            alert('Koordinaten gespeichert!');
+            alert('Coordinates saved!');
             // stationCoords aktualisieren
             if (typeof stationCoords !== 'undefined') {
               stationCoords[stationName] = [data.lat, data.lon];
             }
           } else {
-            alert('Fehler: ' + (data.error || 'Unbekannt'));
+            alert('Error: ' + (data.error || 'Unknown'));
             targetMarker.setLatLng(oldLatLng);
           }
         })
         .catch(function (err) {
-          alert('Netzwerkfehler: ' + err);
+          alert('Network error: ' + err);
           targetMarker.setLatLng(oldLatLng);
         });
       } else {
@@ -1465,7 +1465,7 @@
 
     var currentCoords = oldLatLng.lat.toFixed(4) + ', ' + oldLatLng.lng.toFixed(4);
     var input = prompt(
-      'Neue Koordinaten eingeben (Lat, Lon):\n\n' +
+      'Enter new coordinates (Lat, Lon):\n\n' +
       'Station: ' + stationName + '\n' +
       'Aktuell: ' + currentCoords,
       currentCoords
@@ -1474,22 +1474,22 @@
 
     var parts = input.split(',');
     if (parts.length !== 2) {
-      alert('Ungültiges Format. Bitte "Lat, Lon" eingeben (z.B. 53.5500, 9.9700)');
+      alert('Invalid format. Please enter "Lat, Lon" (e.g. 53.5500, 9.9700)');
       return;
     }
     var newLat = parseFloat(parts[0].trim());
     var newLon = parseFloat(parts[1].trim());
     if (isNaN(newLat) || isNaN(newLon) || newLat < -90 || newLat > 90 || newLon < -180 || newLon > 180) {
-      alert('Ungültige Koordinaten. Lat: -90..90, Lon: -180..180');
+      alert('Invalid coordinates. Lat: -90..90, Lon: -180..180');
       return;
     }
     newLat = Math.round(newLat * 10000) / 10000;
     newLon = Math.round(newLon * 10000) / 10000;
 
-    var msg = 'Koordinaten ändern?\n\n' +
+    var msg = 'Update coordinates?\n\n' +
       'Alt: ' + oldLatLng.lat.toFixed(4) + ', ' + oldLatLng.lng.toFixed(4) + '\n' +
       'Neu: ' + newLat.toFixed(4) + ', ' + newLon.toFixed(4) + '\n\n' +
-      'Station: ' + stationName + '\nDatei: ' + sourceFile;
+      'Station: ' + stationName + '\nFile: ' + sourceFile;
 
     if (!confirm(msg)) return;
 
@@ -1508,7 +1508,7 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       if (data.ok) {
-        alert('Koordinaten gespeichert!');
+        alert('Coordinates saved!');
         targetMarker.setLatLng([data.lat, data.lon]);
         // Marker im Cluster neu positionieren
         if (parentGroup) {
@@ -1519,11 +1519,11 @@
           stationCoords[stationName] = [data.lat, data.lon];
         }
       } else {
-        alert('Fehler: ' + (data.error || 'Unbekannt'));
+        alert('Error: ' + (data.error || 'Unknown'));
       }
     })
     .catch(function (err) {
-      alert('Netzwerkfehler: ' + err);
+      alert('Network error: ' + err);
     });
   }
 
@@ -1541,7 +1541,7 @@
     var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
     var sourceFile = srcMatch ? srcMatch[1] : '';
 
-    var newName = prompt('Stationsname ändern:\n\nDatei: ' + sourceFile, oldName);
+    var newName = prompt('Rename station:\n\nFile: ' + sourceFile, oldName);
     if (!newName || newName.trim() === '' || newName.trim() === oldName) return;
     newName = newName.trim();
 
@@ -1560,7 +1560,7 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       if (data.ok) {
-        alert('Name gespeichert: ' + data.new_name);
+        alert('Name saved: ' + data.new_name);
         // Popup-Inhalt aktualisieren
         var updatedContent = popupContent
           .replace('<b>' + oldName.replace(/"/g, '&quot;') + '</b>', '<b>' + data.new_name.replace(/"/g, '&quot;') + '</b>');
@@ -1575,11 +1575,11 @@
           delete stationSources[oldName];
         }
       } else {
-        alert('Fehler: ' + (data.error || 'Unbekannt'));
+        alert('Error: ' + (data.error || 'Unknown'));
       }
     })
     .catch(function (err) {
-      alert('Netzwerkfehler: ' + err);
+      alert('Network error: ' + err);
     });
   }
 
@@ -1599,10 +1599,10 @@
     var sourceFile = srcMatch ? srcMatch[1] : '';
 
     var latlng = targetMarker.getLatLng();
-    if (!confirm('Station wirklich löschen?\n\n' +
+    if (!confirm('Really delete station?\n\n' +
         'Station: ' + stationName + '\n' +
         'Position: ' + latlng.lat.toFixed(4) + ', ' + latlng.lng.toFixed(4) + '\n' +
-        'Datei: ' + sourceFile + '\n\n' +
+        'File: ' + sourceFile + '\n\n' +
         'Diese Aktion kann nicht rückgängig gemacht werden!')) {
       return;
     }
@@ -1620,7 +1620,7 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       if (data.ok) {
-        alert('Station gelöscht: ' + stationName);
+        alert('Station deleted: ' + stationName);
         // Marker von der Karte entfernen
         if (parentGroup) parentGroup.removeLayer(targetMarker);
         else map.removeLayer(targetMarker);
@@ -1628,11 +1628,11 @@
         if (typeof stationCoords !== 'undefined') delete stationCoords[stationName];
         if (typeof stationSources !== 'undefined') delete stationSources[stationName];
       } else {
-        alert('Fehler: ' + (data.error || 'Unbekannt'));
+        alert('Error: ' + (data.error || 'Unknown'));
       }
     })
     .catch(function (err) {
-      alert('Netzwerkfehler: ' + err);
+      alert('Network error: ' + err);
     });
   }
 </script>

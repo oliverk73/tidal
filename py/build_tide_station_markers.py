@@ -315,11 +315,11 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
 
     popup_html = (
         f"<b>{display_name}</b><br>"
-        f"<a href=\\\"{prediction_url}\\\">🌊 Vorhersage anzeigen</a><br>"
-        f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Position korrigieren</a> "
-        f"<a href=\\\"#\\\" onclick=\\\"setCoordinatesManual(this); return false;\\\">📍 Koordinaten eingeben</a><br>"
-        f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Name ändern</a> "
-        f"<a href=\\\"#\\\" onclick=\\\"deleteStation(this); return false;\\\">🗑️ Löschen</a><br>"
+        f"<a href=\\\"{prediction_url}\\\">🌊 Show prediction</a><br>"
+        f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Correct position</a> "
+        f"<a href=\\\"#\\\" onclick=\\\"setCoordinatesManual(this); return false;\\\">📍 Enter coordinates</a><br>"
+        f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Rename</a> "
+        f"<a href=\\\"#\\\" onclick=\\\"deleteStation(this); return false;\\\">🗑️ Delete</a><br>"
         f"<small>📄 {source_file}</small>"
     )
 

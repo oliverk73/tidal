@@ -318,7 +318,7 @@ class NowcastCanvasLayer {
     var timeStr = d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
     var offset = frame.offset_min;
     var tag = '';
-    if (offset > 0) tag = ' (Vorhersage +' + offset + 'min)';
+    if (offset > 0) tag = ' (Forecast +' + offset + 'min)';
     else if (offset < 0) tag = ' (' + offset + 'min)';
     else tag = ' (jetzt)';
     return dateStr + ' ' + timeStr + tag;
