@@ -1286,14 +1286,39 @@
 <script>
   var stationNames = {{ station_names | tojson }};
 </script>
-<script src="/static/js/leaflet_markers.js"></script>
+<script>
+  // On-demand loading of leaflet_markers.js (17.8 MB, 12685 markers).
+  // Map renders interactive immediately; markers are injected after first paint
+  // via requestIdleCallback (or 200ms fallback). Saves ~2-4s on initial load.
+  (function loadStationMarkers() {
+    function inject() {
+      if (window.__leafletMarkersInjected) return;
+      window.__leafletMarkersInjected = true;
+      var s = document.createElement('script');
+      s.src = '/static/js/leaflet_markers.js';
+      s.onload = function () {
+        if (typeof markers !== 'undefined' && typeof map !== 'undefined') {
+          map.addLayer(markers);
+        }
+      };
+      document.body.appendChild(s);
+    }
+    function start() {
+      if (window.requestIdleCallback) {
+        requestIdleCallback(inject, { timeout: 1500 });
+      } else {
+        setTimeout(inject, 200);
+      }
+    }
+    if (window.map) start();
+    else if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', start);
+    } else {
+      start();
+    }
+  })();</script>
 
 <script>
-  setTimeout(function () {
-    if (typeof markers !== 'undefined' && typeof map !== 'undefined') {
-      map.addLayer(markers);
-    }
-  }, 100);
 
   // Hilfsfunktion: offenen Marker in allen Cluster-Gruppen finden
   function findOpenPopupMarker() {

@@ -76137,7 +76137,7 @@ var m12685 = L.marker([37.1928, -7.4128], {icon: L.divIcon({html:'<svg width="18
 m12685.bindPopup("<b>Vila Real de Santo António, Portugal</b><br><a href=\"/prediction/vila-real-de-santo-antonio-portugal?source=harmonics_utide_tidetables.tcd\">🌊 Vorhersage anzeigen</a><br><a href=\"#\" onclick=\"enableDrag(this); return false;\">📍 Position korrigieren</a> <a href=\"#\" onclick=\"setCoordinatesManual(this); return false;\">📍 Koordinaten eingeben</a><br><a href=\"#\" onclick=\"renameStation(this); return false;\">✏️ Name ändern</a> <a href=\"#\" onclick=\"deleteStation(this); return false;\">🗑️ Löschen</a><br><small>📄 harmonics_utide_tidetables.tcd</small>");
 grp_all_tide.addLayer(m12685);
 src_UTide_SL_tide.push(m12685);
-document.addEventListener('DOMContentLoaded', function() {
+function _initLeafletMarkersControl() {
   map.addLayer(grp_all_tide);
   markers.addLayer(grp_all_tide);
   map.addLayer(grp_all_current);
@@ -76226,4 +76226,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!localStorage.getItem('mapView')) {
     map.fitBounds(markers.getBounds());
   }
-});
+}
+// Auto-init: run now if DOM ready, else wait for DOMContentLoaded.
+// Allows the file to be loaded synchronously (head/body) OR injected
+// dynamically after page load (on-demand mode).
+if (typeof map !== 'undefined') {
+  // Map already initialised — run immediately (typical for dynamic injection)
+  _initLeafletMarkersControl();
+} else if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', _initLeafletMarkersControl);
+} else {
+  // DOM ready but map not yet — defer one tick to let inline init complete
+  setTimeout(_initLeafletMarkersControl, 0);
+}

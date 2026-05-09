@@ -362,8 +362,11 @@ for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
     src_type = "current" if is_current else "tide"
     lines.append(f"src_{src_var_name}_{src_type}.push({marker_var});")
 
-# Build the DOMContentLoaded block with hierarchical layer control
-ctrl_lines = ["document.addEventListener('DOMContentLoaded', function() {"]
+# Build the init block with hierarchical layer control.
+# Wrapped in a named function so it can run either via DOMContentLoaded
+# (sync <script src=...> in head/body) OR be invoked immediately after
+# dynamic script injection (on-demand mode in templates/index.html).
+ctrl_lines = ["function _initLeafletMarkersControl() {"]
 
 # Add the two cluster groups to map
 ctrl_lines.append("  map.addLayer(grp_all_tide);")
@@ -477,7 +480,15 @@ ctrl_lines.append(f"""
 ctrl_lines.append("  if (!localStorage.getItem('mapView')) {")
 ctrl_lines.append("    map.fitBounds(markers.getBounds());")
 ctrl_lines.append("  }")
-ctrl_lines.append("});")
+ctrl_lines.append("}")
+# Auto-init: works for both sync include and dynamic post-load injection
+ctrl_lines.append("if (typeof map !== 'undefined') {")
+ctrl_lines.append("  _initLeafletMarkersControl();")
+ctrl_lines.append("} else if (document.readyState === 'loading') {")
+ctrl_lines.append("  document.addEventListener('DOMContentLoaded', _initLeafletMarkersControl);")
+ctrl_lines.append("} else {")
+ctrl_lines.append("  setTimeout(_initLeafletMarkersControl, 0);")
+ctrl_lines.append("}")
 lines.append("\n".join(ctrl_lines))
 
 with open(output_file, "w", encoding="utf-8") as f:
