@@ -10,6 +10,22 @@ from urllib.parse import unquote
 
 app = Flask(__name__)
 
+# Compress text responses (HTML, JSON, JS, CSS, XML, SVG) with brotli/gzip.
+# leaflet_markers.js (17.8 MB) drops to ~3 MB gzipped, ~2 MB brotli.
+try:
+    from flask_compress import Compress
+    app.config["COMPRESS_MIMETYPES"] = [
+        "text/html", "text/css", "text/xml", "text/plain",
+        "text/javascript",  # Flask sends static .js as text/javascript
+        "application/json", "application/javascript", "application/xml",
+        "image/svg+xml",
+    ]
+    app.config["COMPRESS_MIN_SIZE"] = 500
+    app.config["COMPRESS_LEVEL"] = 6
+    Compress(app)
+except ImportError:
+    pass  # Compression optional; install via `pip install flask-compress`
+
 # Direktories
 PREDICTIONS_DIR = "static/predictions"
 IMAGES_DIR = "static/images"
