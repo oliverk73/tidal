@@ -1,5 +1,6 @@
 import os
 import re
+import json
 import tempfile
 import unicodedata
 import subprocess
@@ -397,24 +398,22 @@ def display_name_for(name, source_file):
 
 
 def load_station_data():
-    """Read stationCoords + stationSources from leaflet_markers.js.
+    """Read station name → source/coords pairs from leaflet_markers_data.json.
     Returns (sources_dict, coords_dict)."""
-    markers_path = os.path.join("static", "js", "leaflet_markers.js")
+    json_path = os.path.join("static", "js", "leaflet_markers_data.json")
     sources = {}
     coords = {}
-    if not os.path.exists(markers_path):
+    if not os.path.exists(json_path):
         return sources, coords
-    coord_re = re.compile(r"stationCoords\['(.+?)'\]\s*=\s*\[(-?\d+\.?\d*),\s*(-?\d+\.?\d*)\]")
-    source_re = re.compile(r"stationSources\['(.+?)'\]\s*=\s*'([^']+)'")
-    with open(markers_path, encoding="utf-8") as f:
-        for line in f:
-            m = source_re.search(line)
-            if m:
-                sources[m.group(1)] = m.group(2)
-                continue
-            m = coord_re.search(line)
-            if m:
-                coords[m.group(1)] = (float(m.group(2)), float(m.group(3)))
+    with open(json_path, encoding="utf-8") as f:
+        data = json.load(f)
+    for s in data.get("stations", []):
+        # Row format: [displayName, lat, lon, source, groupIdx, isCurrent,
+        #              slug, needsSource, origName]
+        lat, lon, source = s[1], s[2], s[3]
+        orig_name = s[8] if len(s) > 8 else s[0]
+        sources[orig_name] = source
+        coords[orig_name] = (float(lat), float(lon))
     return sources, coords
 
 

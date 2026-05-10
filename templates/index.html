@@ -1299,20 +1299,15 @@
   var stationNames = {{ station_names | tojson }};
 </script>
 <script>
-  // On-demand loading of leaflet_markers.js (17.8 MB, 12685 markers).
-  // Map renders interactive immediately; markers are injected after first paint
-  // via requestIdleCallback (or 200ms fallback). Saves ~2-4s on initial load.
+  // Loader fetches /static/js/leaflet_markers_data.json (~2.3 MB JSON) and
+  // builds markers in idle-time batches. The loader itself adds the cluster
+  // groups to the map once all chunks are processed.
   (function loadStationMarkers() {
     function inject() {
       if (window.__leafletMarkersInjected) return;
       window.__leafletMarkersInjected = true;
       var s = document.createElement('script');
       s.src = '/static/js/leaflet_markers.js';
-      s.onload = function () {
-        if (typeof markers !== 'undefined' && typeof map !== 'undefined') {
-          map.addLayer(markers);
-        }
-      };
       document.body.appendChild(s);
     }
     function start() {

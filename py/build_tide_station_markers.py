@@ -1,9 +1,21 @@
+"""Build marker data for the Leaflet map.
+
+Output:
+  static/js/leaflet_markers_data.json  — columnar marker data (groups + stations)
+  static/js/leaflet_markers.js         — small loader (fetch JSON, build markers
+                                          chunked via requestIdleCallback)
+
+The big-payload split is a SEO/perf win: the browser parses JSON ~10x faster
+than equivalent JS code, and the loader spreads marker creation across idle
+slots so the main thread stays responsive.
+"""
+
+import json
 import re
 import os
 import glob
 import unicodedata
 from collections import OrderedDict, Counter
-from urllib.parse import quote
 
 TCD_DIR = "/usr/share/xtide"
 HARMONICS_DIRS = [
@@ -15,14 +27,10 @@ HARMONICS_DIRS = [
 
 
 TRANSLITERATION = {
-    # German
     'ä': 'ae', 'ö': 'oe', 'ü': 'ue', 'ß': 'ss',
     'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue',
-    # Scandinavian
     'ø': 'oe', 'Ø': 'Oe', 'å': 'aa', 'Å': 'Aa', 'æ': 'ae', 'Æ': 'Ae',
-    # Polish
     'ł': 'l', 'Ł': 'L',
-    # Icelandic
     'ð': 'd', 'Ð': 'D', 'þ': 'th', 'Þ': 'Th',
 }
 
@@ -75,16 +83,7 @@ def get_stations_from_txt(txt_path):
     return stations
 
 
-def source_key(tcd_basename):
-    """Short key from TCD filename for URL/filename disambiguation."""
-    key = tcd_basename.replace('.tcd', '')
-    key = re.sub(r'^harmonics[-_]', '', key)
-    key = key.replace('_mod', '')
-    return key
-
-
 def find_txt_for_tcd(tcd_basename):
-    """Find the TXT source file for a given TCD basename."""
     txt_name = tcd_basename.replace('.tcd', '.txt')
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     for hdir in HARMONICS_DIRS:
@@ -115,27 +114,19 @@ for tcd_file in tcd_files:
 name_counter = Counter(name for name, _, _, _, _ in all_stations)
 duplicate_names = {name for name, count in name_counter.items() if count > 1}
 
-# Also detect slug collisions: different names that produce the same URL slug
 slug_to_names = {}
 for name, _, _, _, _ in all_stations:
     slug = to_slug(name)
-    if slug not in slug_to_names:
-        slug_to_names[slug] = set()
-    slug_to_names[slug].add(name)
+    slug_to_names.setdefault(slug, set()).add(name)
 duplicate_slugs = {slug for slug, names in slug_to_names.items() if len(names) > 1}
-# Add all names with colliding slugs to duplicate_names
 for slug in duplicate_slugs:
     duplicate_names.update(slug_to_names[slug])
-# Also add names that appear multiple times (same slug from same name in different TCDs)
 slug_counter = Counter(to_slug(name) for name, _, _, _, _ in all_stations)
 for name, _, _, _, _ in all_stations:
     if slug_counter[to_slug(name)] > 1:
         duplicate_names.add(name)
 
 print(f"Gesamt: {len(all_stations)} Stationen ({len(duplicate_names)} Namen mehrfach/Slug-Kollisionen)")
-
-output_file = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers.js")
-os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
 SOURCE_GROUPS = OrderedDict([
     ('DWF 2025',        {'color': '#2196F3', 'files': ['harmonics-dwf-20251228-free.tcd']}),
@@ -248,15 +239,20 @@ SOURCE_GROUPS = OrderedDict([
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
 ])
 
+# Group order: predefined + Sonstige fallback
+GROUP_NAMES = list(SOURCE_GROUPS.keys()) + ['Sonstige']
+GROUP_COLOR = {g: SOURCE_GROUPS[g]['color'] for g in SOURCE_GROUPS}
+GROUP_COLOR['Sonstige'] = '#999999'
+GROUP_INDEX = {g: i for i, g in enumerate(GROUP_NAMES)}
+
+
 def get_group_for_source(source_file):
     for group_name, info in SOURCE_GROUPS.items():
         if source_file in info['files']:
-            return group_name, info['color']
-    # Fallback: alle UTide-Dateien gehören zu UTide SL, nicht zu "Sonstige"
+            return group_name
     if source_file.startswith('harmonics_utide_'):
-        info = SOURCE_GROUPS['UTide SL']
-        return 'UTide SL', info['color']
-    return 'Sonstige', '#999999'
+        return 'UTide SL'
+    return 'Sonstige'
 
 
 COUNTRY_BY_SOURCE = {
@@ -265,234 +261,307 @@ COUNTRY_BY_SOURCE = {
 
 
 def display_name_for(name, source_file):
-    """Append country suffix for sources that lack it in the harmonics file
-    (e.g. DWF-2025 US stations). Display-only — original station name in the
-    .txt/.tcd is unchanged."""
+    """Append country suffix for sources that lack it."""
     country = COUNTRY_BY_SOURCE.get(source_file)
     if country and not name.endswith(f", {country}"):
         return f"{name}, {country}"
     return name
 
-icon_definition = ""
 
-lines = ["var stationCoords = {};"]
-lines.append("var stationSources = {};")
-# Single cluster group for all tide markers and one for all current markers
-# This ensures overlapping stations from different sources get spiderfied together
-group_names = list(SOURCE_GROUPS.keys()) + ['Sonstige']
-group_colors = {g: SOURCE_GROUPS[g]['color'] for g in SOURCE_GROUPS}
-group_colors['Sonstige'] = '#999999'
-lines.append("var grp_all_tide = L.markerClusterGroup();")
-lines.append("var grp_all_current = L.markerClusterGroup();")
-# Arrays of markers per source group for layer control toggling
-for g in group_names:
-    var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
-    lines.append(f"var src_{var_name}_tide = [];")
-    lines.append(f"var src_{var_name}_current = [];")
-lines.append("var markers = L.featureGroup();")  # master group for fitBounds
-
-group_tide_counts = {}
-group_current_counts = {}
-tide_count = 0
-current_count = 0
-for i, (name, lat, lon, source_file, is_current) in enumerate(all_stations, 1):
-    safe_name = normalize_filename(name)
+# Build columnar JSON payload
+station_rows = []
+for name, lat, lon, source_file, is_current in all_stations:
     display_name_raw = display_name_for(name, source_file)
-    display_name = display_name_raw.replace('"', '&quot;')
-    uri_name = quote(name, safe='')
-
-    # Slug uses the *display* name so URLs include the country suffix
-    # (better SEO). Server resolves slug back via _slug_to_station which
-    # also accepts the original-name slug for backwards-compat.
     slug = to_slug(display_name_raw)
-    if name in duplicate_names:
-        skey = source_key(source_file)
-        safe_name_full = safe_name + '__' + skey
-        prediction_url = f'/prediction/{slug}?source={source_file}'
-    else:
-        safe_name_full = safe_name
-        prediction_url = f'/prediction/{slug}'
+    needs_source = name in duplicate_names
+    group_name = get_group_for_source(source_file)
+    group_idx = GROUP_INDEX[group_name]
+    # Round coords to ~5m precision (5 decimals) — saves bytes vs full precision
+    station_rows.append([
+        display_name_raw,
+        round(lat, 5),
+        round(lon, 5),
+        source_file,
+        group_idx,
+        1 if is_current else 0,
+        slug,
+        1 if needs_source else 0,
+        name,  # original name (key for stationCoords/stationSources globals)
+    ])
 
-    popup_html = (
-        f"<b>{display_name}</b><br>"
-        f"<a href=\\\"{prediction_url}\\\">🌊 Show prediction</a><br>"
-        f"<a href=\\\"#\\\" onclick=\\\"enableDrag(this); return false;\\\">📍 Correct position</a> "
-        f"<a href=\\\"#\\\" onclick=\\\"setCoordinatesManual(this); return false;\\\">📍 Enter coordinates</a><br>"
-        f"<a href=\\\"#\\\" onclick=\\\"renameStation(this); return false;\\\">✏️ Rename</a> "
-        f"<a href=\\\"#\\\" onclick=\\\"deleteStation(this); return false;\\\">🗑️ Delete</a><br>"
-        f"<small>📄 {source_file}</small>"
-    )
+payload = {
+    "version": 1,
+    "groups": [{"name": g, "color": GROUP_COLOR[g]} for g in GROUP_NAMES],
+    "stations": station_rows,
+}
 
-    group_name, color = get_group_for_source(source_file)
-    src_var_name = re.sub(r'[^a-zA-Z0-9]', '_', group_name)
-    marker_var = f"m{i}"
-    coord_key = name.replace("\\", "\\\\").replace("'", "\\'")
-    lines.append(f"stationCoords['{coord_key}'] = [{lat}, {lon}];")
-    lines.append(f"stationSources['{coord_key}'] = '{source_file}';")
-    sz = 18
-    sw = 3  # stroke width
-    if is_current:
-        current_count += 1
-        group_current_counts[group_name] = group_current_counts.get(group_name, 0) + 1
-        grp_var = "grp_all_current"
-        # horizontal double arrow ↔
-        svg = (f'<svg width="{sz}" height="{sz}" viewBox="0 0 {sz} {sz}" xmlns="http://www.w3.org/2000/svg">'
-               f'<line x1="2" y1="{sz//2}" x2="{sz-2}" y2="{sz//2}" stroke="{color}" stroke-width="{sw}" stroke-linecap="round"/>'
-               f'<polyline points="5,{sz//2-4} 2,{sz//2} 5,{sz//2+4}" fill="none" stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"/>'
-               f'<polyline points="{sz-5},{sz//2-4} {sz-2},{sz//2} {sz-5},{sz//2+4}" fill="none" stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"/>'
-               f'</svg>')
-        lines.append(
-            f'var {marker_var} = L.marker([{lat}, {lon}], {{icon: L.divIcon({{html:\'{svg}\', className:"", iconSize:[{sz},{sz}], iconAnchor:[{sz//2},{sz//2}], popupAnchor:[0,-{sz//2}]}})}});'
-        )
-    else:
-        tide_count += 1
-        group_tide_counts[group_name] = group_tide_counts.get(group_name, 0) + 1
-        grp_var = "grp_all_tide"
-        # vertical double arrow ↕
-        svg = (f'<svg width="{sz}" height="{sz}" viewBox="0 0 {sz} {sz}" xmlns="http://www.w3.org/2000/svg">'
-               f'<line x1="{sz//2}" y1="2" x2="{sz//2}" y2="{sz-2}" stroke="{color}" stroke-width="{sw}" stroke-linecap="round"/>'
-               f'<polyline points="{sz//2-4},5 {sz//2},2 {sz//2+4},5" fill="none" stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"/>'
-               f'<polyline points="{sz//2-4},{sz-5} {sz//2},{sz-2} {sz//2+4},{sz-5}" fill="none" stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"/>'
-               f'</svg>')
-        lines.append(
-            f'var {marker_var} = L.marker([{lat}, {lon}], {{icon: L.divIcon({{html:\'{svg}\', className:"", iconSize:[{sz},{sz}], iconAnchor:[{sz//2},{sz//2}], popupAnchor:[0,-{sz//2}]}})}});'
-        )
-    lines.append(f'{marker_var}.bindPopup("{popup_html}");')
-    lines.append(f"{grp_var}.addLayer({marker_var});")
-    src_type = "current" if is_current else "tide"
-    lines.append(f"src_{src_var_name}_{src_type}.push({marker_var});")
+json_path = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers_data.json")
+os.makedirs(os.path.dirname(json_path), exist_ok=True)
+with open(json_path, "w", encoding="utf-8") as f:
+    json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
 
-# Build the init block with hierarchical layer control.
-# Wrapped in a named function so it can run either via DOMContentLoaded
-# (sync <script src=...> in head/body) OR be invoked immediately after
-# dynamic script injection (on-demand mode in templates/index.html).
-ctrl_lines = ["function _initLeafletMarkersControl() {"]
+# Loader JS (small, static — does the heavy lifting client-side, chunked)
+LOADER_JS = r"""// Auto-generated by py/build_tide_station_markers.py — do not edit by hand.
+// Loads marker data from /static/js/leaflet_markers_data.json and builds
+// markers in idle-time batches so the main thread stays responsive.
+(function () {
+  var DATA_URL = '/static/js/leaflet_markers_data.json';
+  var BATCH_SIZE = 500;
 
-# Add the two cluster groups to map
-ctrl_lines.append("  map.addLayer(grp_all_tide);")
-ctrl_lines.append("  markers.addLayer(grp_all_tide);")
-ctrl_lines.append("  map.addLayer(grp_all_current);")
-ctrl_lines.append("  markers.addLayer(grp_all_current);")
+  function start() {
+    fetch(DATA_URL)
+      .then(function (r) { return r.json(); })
+      .then(buildAll)
+      .catch(function (err) { console.error('Marker load failed:', err); });
+  }
 
-# Collect group info for tide and current sections
-tide_groups_js = []
-for g in group_names:
-    tc = group_tide_counts.get(g, 0)
-    if tc == 0:
-        continue
-    var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
-    color = group_colors[g]
-    tide_groups_js.append(f"{{name:'{g}',count:{tc},color:'{color}',markers:src_{var_name}_tide,cluster:grp_all_tide}}")
+  function tideSvg(color) {
+    return '<svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">' +
+      '<line x1="9" y1="2" x2="9" y2="16" stroke="' + color + '" stroke-width="3" stroke-linecap="round"/>' +
+      '<polyline points="5,5 9,2 13,5" fill="none" stroke="' + color + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<polyline points="5,13 9,16 13,13" fill="none" stroke="' + color + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '</svg>';
+  }
+  function currentSvg(color) {
+    return '<svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">' +
+      '<line x1="2" y1="9" x2="16" y2="9" stroke="' + color + '" stroke-width="3" stroke-linecap="round"/>' +
+      '<polyline points="5,5 2,9 5,13" fill="none" stroke="' + color + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<polyline points="13,5 16,9 13,13" fill="none" stroke="' + color + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '</svg>';
+  }
+  function makeIcon(html) {
+    return L.divIcon({ html: html, className: '', iconSize: [18, 18], iconAnchor: [9, 9], popupAnchor: [0, -9] });
+  }
 
-current_groups_js = []
-for g in group_names:
-    cc = group_current_counts.get(g, 0)
-    if cc == 0:
-        continue
-    var_name = re.sub(r'[^a-zA-Z0-9]', '_', g)
-    color = group_colors[g]
-    current_groups_js.append(f"{{name:'{g}',count:{cc},color:'{color}',markers:src_{var_name}_current,cluster:grp_all_current}}")
+  function popupContent(layer) {
+    var d = layer.options.sd;
+    return '<b>' + d.n + '</b><br>' +
+      '<a href="' + d.u + '">🌊 Show prediction</a><br>' +
+      '<a href="#" onclick="enableDrag(this); return false;">📍 Correct position</a> ' +
+      '<a href="#" onclick="setCoordinatesManual(this); return false;">📍 Enter coordinates</a><br>' +
+      '<a href="#" onclick="renameStation(this); return false;">✏️ Rename</a> ' +
+      '<a href="#" onclick="deleteStation(this); return false;">🗑️ Delete</a><br>' +
+      '<small>📄 ' + d.s + '</small>';
+  }
 
-tide_svg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="9" y1="2" x2="9" y2="16" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 9,2 13,5" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="5,13 9,16 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-current_svg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="2" y1="9" x2="16" y2="9" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 2,9 5,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="13,5 16,9 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  function buildAll(data) {
+    var groups = data.groups;
+    var stations = data.stations;
 
-ctrl_lines.append(f"""
-  var tideGroups = [{','.join(tide_groups_js)}];
-  var currentGroups = [{','.join(current_groups_js)}];
+    // Pre-build one icon per (groupIdx, isCurrent). Shared by all markers.
+    var tideIcons = [], currentIcons = [];
+    for (var gi = 0; gi < groups.length; gi++) {
+      tideIcons.push(makeIcon(tideSvg(groups[gi].color)));
+      currentIcons.push(makeIcon(currentSvg(groups[gi].color)));
+    }
 
-  var StationControl = L.Control.extend({{
-    options: {{ position: 'bottomright' }},
-    onAdd: function() {{
-      var div = L.DomUtil.create('div', 'leaflet-bar');
-      div.style.cssText = 'background:rgba(255,255,255,0.25);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:8px 10px;font-size:13px;font-family:sans-serif;cursor:default;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.2);max-height:60vh;overflow-y:auto;';
-      L.DomEvent.disableClickPropagation(div);
-      L.DomEvent.disableScrollPropagation(div);
+    // Globals expected by templates/index.html and other scripts.
+    window.stationCoords = {};
+    window.stationSources = {};
+    window.grp_all_tide = L.markerClusterGroup();
+    window.grp_all_current = L.markerClusterGroup();
+    window.markers = L.featureGroup();
+    // Per-group marker arrays (used by the layer control toggle).
+    var srcMarkers = []; // srcMarkers[groupIdx] = { tide: [], current: [] }
+    var tideCounts = [], currentCounts = [];
+    for (var i = 0; i < groups.length; i++) {
+      srcMarkers.push({ tide: [], current: [] });
+      tideCounts.push(0);
+      currentCounts.push(0);
+    }
 
-      function dot(color) {{
-        return '<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:'+color+';margin-right:5px;vertical-align:middle;border:1px solid #fff;"></span>';
-      }}
+    var idx = 0;
+    var total = stations.length;
 
-      function buildSection(masterLabel, masterSvg, groups, idPrefix) {{
-        var html = '<label style="display:flex;align-items:center;cursor:pointer;font-weight:bold;margin-bottom:2px;">' +
-          '<input type="checkbox" data-master="'+idPrefix+'" checked style="margin-right:6px;">' +
-          masterSvg + ' ' + masterLabel + '</label>';
-        for (var i = 0; i < groups.length; i++) {{
-          var g = groups[i];
-          html += '<label style="display:flex;align-items:center;cursor:pointer;margin-left:22px;margin-bottom:1px;">' +
-            '<input type="checkbox" data-group="'+idPrefix+'-'+i+'" checked style="margin-right:5px;">' +
-            dot(g.color) + g.name + ' (' + g.count + ')</label>';
-        }}
-        return html;
-      }}
+    function step(deadline) {
+      var end = Math.min(idx + BATCH_SIZE, total);
+      for (; idx < end; idx++) {
+        var s = stations[idx];
+        // [displayName, lat, lon, source, groupIdx, isCurrent, slug, needsSource, origName]
+        var displayName = s[0], lat = s[1], lon = s[2], source = s[3];
+        var gi = s[4], isCurrent = s[5] === 1, slug = s[6], needsSource = s[7] === 1, origName = s[8];
 
-      var html = buildSection('Tides ({tide_count})', '{tide_svg}', tideGroups, 'tide');
-      html += '<div style="border-top:1px solid rgba(0,0,0,0.15);margin:5px 0;"></div>';
-      html += buildSection('Currents ({current_count})', '{current_svg}', currentGroups, 'current');
-      div.innerHTML = html;
+        var url = needsSource
+          ? '/prediction/' + slug + '?source=' + source
+          : '/prediction/' + slug;
 
-      function toggleGroup(g, on) {{
-        var arr = g.markers, cl = g.cluster;
-        for (var j = 0; j < arr.length; j++) {{
-          if (on) cl.addLayer(arr[j]);
-          else cl.removeLayer(arr[j]);
-        }}
-      }}
+        var icon = isCurrent ? currentIcons[gi] : tideIcons[gi];
+        var m = L.marker([lat, lon], {
+          icon: icon,
+          sd: { n: displayName, u: url, s: source }
+        });
+        m.bindPopup(popupContent);
 
-      // Master toggle handler
-      function setupMaster(idPrefix, groups) {{
-        var master = div.querySelector('[data-master="'+idPrefix+'"]');
-        var subs = [];
-        for (var i = 0; i < groups.length; i++) {{
-          subs.push(div.querySelector('[data-group="'+idPrefix+'-'+i+'"]'));
-        }}
-        master.addEventListener('change', function() {{
-          var on = this.checked;
-          for (var i = 0; i < groups.length; i++) {{
-            subs[i].checked = on;
-            toggleGroup(groups[i], on);
-          }}
-        }});
-        for (var i = 0; i < groups.length; i++) {{
-          (function(idx) {{
-            subs[idx].addEventListener('change', function() {{
-              toggleGroup(groups[idx], this.checked);
-              // Update master checkbox state
-              var allOn = true, allOff = true;
-              for (var j = 0; j < subs.length; j++) {{
-                if (subs[j].checked) allOff = false;
-                else allOn = false;
-              }}
-              master.checked = allOn;
-              master.indeterminate = !allOn && !allOff;
-            }});
-          }})(i);
-        }}
-      }}
+        if (isCurrent) {
+          window.grp_all_current.addLayer(m);
+          srcMarkers[gi].current.push(m);
+          currentCounts[gi]++;
+        } else {
+          window.grp_all_tide.addLayer(m);
+          srcMarkers[gi].tide.push(m);
+          tideCounts[gi]++;
+        }
+        window.stationCoords[origName] = [lat, lon];
+        window.stationSources[origName] = source;
+      }
 
-      setupMaster('tide', tideGroups);
-      setupMaster('current', currentGroups);
+      if (idx < total) {
+        scheduleNext(step);
+      } else {
+        finalize(groups, srcMarkers, tideCounts, currentCounts);
+      }
+    }
 
-      return div;
-    }}
-  }});
-  new StationControl().addTo(map);
-""")
-ctrl_lines.append("  if (!localStorage.getItem('mapView')) {")
-ctrl_lines.append("    map.fitBounds(markers.getBounds());")
-ctrl_lines.append("  }")
-ctrl_lines.append("}")
-# Auto-init: works for both sync include and dynamic post-load injection
-ctrl_lines.append("if (typeof map !== 'undefined') {")
-ctrl_lines.append("  _initLeafletMarkersControl();")
-ctrl_lines.append("} else if (document.readyState === 'loading') {")
-ctrl_lines.append("  document.addEventListener('DOMContentLoaded', _initLeafletMarkersControl);")
-ctrl_lines.append("} else {")
-ctrl_lines.append("  setTimeout(_initLeafletMarkersControl, 0);")
-ctrl_lines.append("}")
-lines.append("\n".join(ctrl_lines))
+    scheduleNext(step);
+  }
 
-with open(output_file, "w", encoding="utf-8") as f:
-    f.write(icon_definition)
-    f.write("\n".join(lines))
+  function scheduleNext(fn) {
+    if (window.requestIdleCallback) {
+      requestIdleCallback(fn, { timeout: 500 });
+    } else {
+      setTimeout(fn, 0);
+    }
+  }
 
-print(f"Fertig: {len(all_stations)} Marker in {output_file}")
+  function finalize(groups, srcMarkers, tideCounts, currentCounts) {
+    if (typeof map === 'undefined') {
+      // Map not yet initialized — defer.
+      setTimeout(function () { finalize(groups, srcMarkers, tideCounts, currentCounts); }, 50);
+      return;
+    }
+
+    map.addLayer(grp_all_tide);
+    markers.addLayer(grp_all_tide);
+    map.addLayer(grp_all_current);
+    markers.addLayer(grp_all_current);
+
+    var tideTotal = 0, currentTotal = 0;
+    for (var i = 0; i < groups.length; i++) {
+      tideTotal += tideCounts[i];
+      currentTotal += currentCounts[i];
+    }
+
+    var tideGroups = [], currentGroups = [];
+    for (var j = 0; j < groups.length; j++) {
+      if (tideCounts[j] > 0) {
+        tideGroups.push({
+          name: groups[j].name, count: tideCounts[j], color: groups[j].color,
+          markers: srcMarkers[j].tide, cluster: grp_all_tide
+        });
+      }
+      if (currentCounts[j] > 0) {
+        currentGroups.push({
+          name: groups[j].name, count: currentCounts[j], color: groups[j].color,
+          markers: srcMarkers[j].current, cluster: grp_all_current
+        });
+      }
+    }
+
+    addStationControl(tideGroups, currentGroups, tideTotal, currentTotal);
+
+    if (!localStorage.getItem('mapView')) {
+      try { map.fitBounds(markers.getBounds()); } catch (e) { /* empty */ }
+    }
+  }
+
+  function addStationControl(tideGroups, currentGroups, tideTotal, currentTotal) {
+    var tideHeaderSvg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="9" y1="2" x2="9" y2="16" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 9,2 13,5" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="5,13 9,16 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var currentHeaderSvg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:middle;margin-right:4px;"><line x1="2" y1="9" x2="16" y2="9" stroke="#333" stroke-width="3" stroke-linecap="round"/><polyline points="5,5 2,9 5,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="13,5 16,9 13,13" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+    var StationControl = L.Control.extend({
+      options: { position: 'bottomright' },
+      onAdd: function () {
+        var div = L.DomUtil.create('div', 'leaflet-bar');
+        div.style.cssText = 'background:rgba(255,255,255,0.25);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:8px 10px;font-size:13px;font-family:sans-serif;cursor:default;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.2);max-height:60vh;overflow-y:auto;';
+        L.DomEvent.disableClickPropagation(div);
+        L.DomEvent.disableScrollPropagation(div);
+
+        function dot(color) {
+          return '<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:' + color + ';margin-right:5px;vertical-align:middle;border:1px solid #fff;"></span>';
+        }
+
+        function buildSection(masterLabel, masterSvg, groups, idPrefix) {
+          var html = '<label style="display:flex;align-items:center;cursor:pointer;font-weight:bold;margin-bottom:2px;">' +
+            '<input type="checkbox" data-master="' + idPrefix + '" checked style="margin-right:6px;">' +
+            masterSvg + ' ' + masterLabel + '</label>';
+          for (var i = 0; i < groups.length; i++) {
+            var g = groups[i];
+            html += '<label style="display:flex;align-items:center;cursor:pointer;margin-left:22px;margin-bottom:1px;">' +
+              '<input type="checkbox" data-group="' + idPrefix + '-' + i + '" checked style="margin-right:5px;">' +
+              dot(g.color) + g.name + ' (' + g.count + ')</label>';
+          }
+          return html;
+        }
+
+        var html = buildSection('Tides (' + tideTotal + ')', tideHeaderSvg, tideGroups, 'tide');
+        html += '<div style="border-top:1px solid rgba(0,0,0,0.15);margin:5px 0;"></div>';
+        html += buildSection('Currents (' + currentTotal + ')', currentHeaderSvg, currentGroups, 'current');
+        div.innerHTML = html;
+
+        function toggleGroup(g, on) {
+          var arr = g.markers, cl = g.cluster;
+          for (var j = 0; j < arr.length; j++) {
+            if (on) cl.addLayer(arr[j]);
+            else cl.removeLayer(arr[j]);
+          }
+        }
+
+        function setupMaster(idPrefix, groups) {
+          var master = div.querySelector('[data-master="' + idPrefix + '"]');
+          var subs = [];
+          for (var i = 0; i < groups.length; i++) {
+            subs.push(div.querySelector('[data-group="' + idPrefix + '-' + i + '"]'));
+          }
+          master.addEventListener('change', function () {
+            var on = this.checked;
+            for (var i = 0; i < groups.length; i++) {
+              subs[i].checked = on;
+              toggleGroup(groups[i], on);
+            }
+          });
+          for (var i = 0; i < groups.length; i++) {
+            (function (idx) {
+              subs[idx].addEventListener('change', function () {
+                toggleGroup(groups[idx], this.checked);
+                var allOn = true, allOff = true;
+                for (var j = 0; j < subs.length; j++) {
+                  if (subs[j].checked) allOff = false;
+                  else allOn = false;
+                }
+                master.checked = allOn;
+                master.indeterminate = !allOn && !allOff;
+              });
+            })(i);
+          }
+        }
+
+        setupMaster('tide', tideGroups);
+        setupMaster('current', currentGroups);
+
+        return div;
+      }
+    });
+    new StationControl().addTo(map);
+  }
+
+  // Entry point — wait until the map is set up, then start.
+  if (typeof map !== 'undefined') {
+    start();
+  } else if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+})();
+"""
+
+loader_path = os.path.join(PROJECT_ROOT, "static", "js", "leaflet_markers.js")
+with open(loader_path, "w", encoding="utf-8") as f:
+    f.write(LOADER_JS)
+
+json_size = os.path.getsize(json_path)
+loader_size = os.path.getsize(loader_path)
+print(f"Fertig:")
+print(f"  {len(all_stations)} Stationen")
+print(f"  {json_path}  ({json_size/1024:.1f} KiB)")
+print(f"  {loader_path}  ({loader_size/1024:.1f} KiB)")
