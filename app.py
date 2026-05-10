@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import hashlib
 import tempfile
 import unicodedata
 import subprocess
@@ -443,6 +444,18 @@ for _orig, _src in _station_data.items():
     # Also accept the original-name slug as fallback (back-compat for old bookmarks)
     _slug_to_station.setdefault(to_slug(_orig), _orig)
 
+# Station -> sea/ocean lookup (built by py/build_station_seas.py from IHO Sea Areas).
+# Used in SEO copy when xtide's water_body comment is unavailable.
+_STATION_SEAS = {}
+_seas_path = os.path.join("harmonics", "help", "station_seas.json")
+if os.path.exists(_seas_path):
+    try:
+        with open(_seas_path, encoding="utf-8") as f:
+            _STATION_SEAS = json.load(f)
+        print(f"🌊 Loaded {len(_STATION_SEAS)} station-to-sea mappings")
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"⚠️ Could not load station_seas.json: {e}")
+
 @app.route("/")
 def index():
     return render_template("index.html", station_names=_station_names)
@@ -605,6 +618,416 @@ def _is_currents_station(name, source):
     if name and re.search(r"\bCurrents?\b", name):
         return True
     return False
+
+
+# Subdivisions per country used as the middle breadcrumb tier.
+# Match is exact against the second-to-last comma part (after trailing "(N)" cleanup).
+_COUNTRY_SUBDIVISIONS = {
+    "USA": _US_STATES,
+    "United Kingdom": {"England", "Scotland", "Wales", "Northern Ireland"},
+    "Canada": {
+        "British Columbia", "Alberta", "Saskatchewan", "Manitoba", "Ontario",
+        "Québec", "Quebec", "New Brunswick", "Nova Scotia",
+        "Prince Edward Island", "Newfoundland", "Labrador",
+        "Newfoundland and Labrador", "Yukon", "Northwest Territories",
+        "Nunavut",
+    },
+    "Australia": {
+        "Queensland", "Western Australia", "Northern Territory",
+        "South Australia", "Victoria", "New South Wales", "Tasmania",
+        "Australian Capital Territory",
+    },
+    "Mexico": {
+        "Baja California", "Baja California Sur", "Baja California Norte",
+        "Sonora", "Sinaloa", "Nayarit", "Jalisco", "Colima", "Michoacán",
+        "Guerrero", "Oaxaca", "Chiapas", "Veracruz", "Tabasco", "Campeche",
+        "Yucatan", "Yucatán", "Quintana Roo", "Tamaulipas",
+    },
+    "Brazil": {
+        "Amapá", "Pará", "Maranhão", "Piauí", "Ceará", "Rio Grande do Norte",
+        "Paraíba", "Pernambuco", "Alagoas", "Sergipe", "Bahia",
+        "Espírito Santo", "Rio de Janeiro", "São Paulo", "Sao Paulo",
+        "Paraná", "Santa Catarina", "Rio Grande do Sul",
+    },
+    "India": {
+        "Gujarat", "Maharashtra", "Goa", "Karnataka", "Kerala", "Tamil Nadu",
+        "Andhra Pradesh", "Odisha", "West Bengal", "Lakshadweep",
+        "Andaman and Nicobar", "Andaman Islands", "Daman and Diu",
+        "Puducherry",
+    },
+    "Japan": {
+        "Hokkaido", "Aomori", "Iwate", "Miyagi", "Akita", "Yamagata",
+        "Fukushima", "Ibaraki", "Tochigi", "Gunma", "Saitama", "Chiba",
+        "Tokyo", "Kanagawa", "Niigata", "Toyama", "Ishikawa", "Fukui",
+        "Yamanashi", "Nagano", "Gifu", "Shizuoka", "Aichi", "Mie",
+        "Shiga", "Kyoto", "Osaka", "Hyogo", "Nara", "Wakayama",
+        "Tottori", "Shimane", "Okayama", "Hiroshima", "Yamaguchi",
+        "Tokushima", "Kagawa", "Ehime", "Kochi", "Fukuoka", "Saga",
+        "Nagasaki", "Kumamoto", "Oita", "Miyazaki", "Kagoshima", "Okinawa",
+    },
+    "Indonesia": {
+        "Java", "Sumatra", "Sulawesi", "Borneo", "Maluku", "Bali", "Lombok",
+        "New Guinea", "Irian Jaya",
+    },
+    "Spain": {"Islas Canarias", "Baleares", "Ceuta", "Melilla"},
+    "China": {"Hong Kong"},
+    "Russia": {"Kuril Islands", "Sakhalin", "Kamchatka"},
+}
+
+
+def _breadcrumb_parts(name, is_current):
+    """Split a station's display name into (country, state, station_short).
+
+    Builds a clean hierarchy for breadcrumbs so the chain reads
+    Country → State → Station instead of repeating the country in the
+    final segment. Examples:
+      "Harney Channel ..., Washington, USA"            → ("USA", "Washington", "Harney Channel ...")
+      "Aberystwyth, Wales, United Kingdom"             → ("United Kingdom", "Wales", "Aberystwyth")
+      "Admiralty Inlet, Washington Current"            → ("USA", "Washington", "Admiralty Inlet")
+      "Active Pass, British Columbia, Canada Current"  → ("Canada", "British Columbia", "Active Pass")
+      "Doha, Qatar"                                    → ("Qatar", None, "Doha")
+    Returns (None, None, name) if the country cannot be identified."""
+    if not name:
+        return None, None, name
+    work = name
+    if is_current:
+        m = re.search(r"\s+Currents?(\s*\([^)]*\))?\s*$", work)
+        if m:
+            work = work[:m.start()].rstrip()
+    parts = [p.strip() for p in work.split(",") if p.strip()]
+    if not parts:
+        return None, None, name
+    last = parts[-1]
+    country = None
+    state = None
+    short_parts = parts
+    if last in _US_STATES:
+        country = "USA"
+        state = last
+        short_parts = parts[:-1]
+    elif last in _COUNTRY_ALIASES:
+        country = _COUNTRY_ALIASES[last]
+        short_parts = parts[:-1]
+    elif last in _COUNTRIES:
+        country = last
+        short_parts = parts[:-1]
+    else:
+        return None, None, work
+    # Country-specific subdivision (state/province/region) in second-to-last
+    if country and state is None and short_parts:
+        subs = _COUNTRY_SUBDIVISIONS.get(country)
+        if subs:
+            cand = short_parts[-1]
+            cand_clean = re.sub(r"\s*\([^)]*\)\s*$", "", cand).strip()
+            if cand in subs:
+                state = cand
+                short_parts = short_parts[:-1]
+            elif cand_clean and cand_clean in subs:
+                state = cand_clean
+                short_parts = short_parts[:-1]
+    short = ", ".join(short_parts) if short_parts else work
+    return country, state, short
+
+
+# SEO intro/outro templates. Variation breaks duplicate-content signals across
+# the ~12k prediction pages. {place} resolves to a phrase like "at <station> on
+# the <water_body>" or "for <station> in <country>"; {station} is the bare name.
+_SEO_INTROS_TIDE = [
+    "Accurate tide predictions and tide charts {place} — high and low tide times for the next seven days. Useful for sailors, anglers, surfers and anyone planning coastal activities.",
+    "Tide times {place}: predicted high water and low water for the coming week, with continuous tidal curves derived from harmonic analysis. Updated daily.",
+    "Plan your day {place} with seven-day tide predictions. High tide, low tide and the full water-level curve for boating, fishing and beach trips alike.",
+    "Seven-day high and low tide forecast {place}. Tide curves are referenced to chart datum and refreshed daily for navigation, watersports and harbour planning.",
+    "{station} tide times — predicted high and low water for the next week. Astronomically derived water-level curve, useful for sailing, fishing and coastal exploration.",
+]
+_SEO_INTROS_CURRENT = [
+    "Tidal current predictions {place} — flood and ebb times, slack water and peak velocities for the next seven days. Essential for navigation in straits, channels and tidal passages.",
+    "Flood and ebb currents {place}: predicted slack-water times and peak velocities for the coming week. Useful for sailors, kayakers and dive-trip planning.",
+    "{station} tidal currents — predicted flood, ebb and slack-water times across seven days, derived from harmonic analysis of measured flow.",
+    "Plan your passage {place} with seven-day current predictions. Slack water, peak flood and peak ebb for safe navigation through tidal passes.",
+    "Predicted tidal currents {place} for the next week — direction, peak speed and slack times, refreshed daily.",
+]
+_SEO_OUTROS_TIDE = [
+    "Tide prediction relies on the gravitational interaction of Earth, Moon and Sun. Astronomical contributions are highly predictable, but real water levels can deviate from forecast due to wind, atmospheric pressure and storm surge. Treat these predictions as planning information, not as a substitute for official tide tables in commercial navigation.",
+    "The forecast on this page is derived from harmonic analysis of historical observations or official tide tables. Astronomical tides repeat predictably for years; meteorological effects (wind, pressure, surge) can shift heights and timing. Always cross-check with official sources where safety-critical.",
+    "Tides are driven mainly by lunar and solar gravity and follow predictable harmonic cycles. The seven-day forecast above is purely astronomical — actual conditions also depend on weather and on local hydrodynamics, which are not modelled here.",
+    "These tide forecasts combine astronomical components — primarily lunar and solar — into a continuous water-level curve. Local effects such as prolonged offshore winds, low atmospheric pressure or river discharge can offset the forecast, so cross-check with on-site readings if conditions matter.",
+    "Tidal predictions on this page are computed from harmonic constituents fitted to historical water-level data. Real-world deviations from the predicted curve are caused by meteorological forcing (wind, pressure) and by hydrodynamic effects in shallow or restricted basins.",
+]
+_SEO_OUTROS_CURRENT = [
+    "Tidal current prediction follows the same astronomical principles as tide-height forecasting, applied to flow rather than elevation. Real currents can be modified by wind-driven flow, river discharge and density gradients, so values shown here should be treated as a planning baseline.",
+    "Flood and ebb cycles repeat predictably with the moon and sun, but local current speeds also depend on wind, freshwater inflow and basin geometry. Use these forecasts for planning, not for safety-critical timing.",
+    "These current predictions are derived from harmonic analysis of measured flow data. The forecast captures astronomical periodicity; actual flow can deviate due to wind stress, freshwater inflow and storm conditions.",
+    "Tidal currents follow a predictable astronomical cycle, but real flow speeds and slack times can shift in response to weather. Treat these forecasts as planning information rather than instantaneous truth.",
+    "Slack water, flood and ebb times above are astronomical predictions. In real conditions, prolonged wind or significant freshwater inflow can advance or delay timing and modify peak speeds.",
+]
+
+
+def _seo_paragraphs(station_short, country, is_current, water_body):
+    """Pick deterministic intro + outro paragraphs for a prediction page.
+
+    Selection is hashed on the station name + tide/current flag, so the same
+    station always renders the same text (stable for caching/SEO) but the 12k+
+    pages collectively show 5 distinct templates per type instead of one.
+    """
+    if not station_short:
+        station_short = ""
+    seed = (station_short + ("|c" if is_current else "|t")).encode("utf-8")
+    h = hashlib.md5(seed).digest()
+    intro_idx = int.from_bytes(h[0:4], "big")
+    outro_idx = int.from_bytes(h[4:8], "big")
+
+    if water_body:
+        place = f"at {station_short} on the {water_body}" if station_short else f"on the {water_body}"
+    elif country:
+        place = f"for {station_short} in {country}" if station_short else f"in {country}"
+    else:
+        place = f"for {station_short}" if station_short else ""
+
+    intros = _SEO_INTROS_CURRENT if is_current else _SEO_INTROS_TIDE
+    outros = _SEO_OUTROS_CURRENT if is_current else _SEO_OUTROS_TIDE
+    intro = intros[intro_idx % len(intros)].format(place=place, station=station_short)
+    outro = outros[outro_idx % len(outros)].format(place=place, station=station_short)
+    return intro, outro
+
+
+_DATUM_EXPANSIONS = {
+    "MSL":     "Mean Sea Level",
+    "MLW":     "Mean Low Water",
+    "MLLW":    "Mean Lower Low Water",
+    "MHW":     "Mean High Water",
+    "MHHW":    "Mean Higher High Water",
+    "MLWS":    "Mean Low Water Springs",
+    "MHWS":    "Mean High Water Springs",
+    "MLWN":    "Mean Low Water Neaps",
+    "MHWN":    "Mean High Water Neaps",
+    "LWS":     "Low Water Springs",
+    "HWS":     "High Water Springs",
+    "LAT":     "Lowest Astronomical Tide",
+    "HAT":     "Highest Astronomical Tide",
+    "CD":      "Chart Datum",
+    "ACD":     "Admiralty Chart Datum",
+    "ZH":      "Zéro Hydrographique",
+    "LLWLT":   "Lowest Low Water Lunar Tide",
+    "ISLW":    "Indian Spring Low Water",
+    "NHN":     "Normalhöhennull",
+    "NN":      "Normal Null",
+    "NGVD":    "National Geodetic Vertical Datum",
+    "NAVD":    "North American Vertical Datum",
+    "NAVD88":  "North American Vertical Datum 1988",
+    "IGLD":    "International Great Lakes Datum",
+    "IGLD85":  "International Great Lakes Datum 1985",
+    "PMSL":    "Permanent Service for Mean Sea Level",
+}
+
+
+def _expand_datum(val):
+    """Expand a datum abbreviation like 'MSL' to 'Mean Sea Level (MSL)'.
+
+    Handles two forms:
+      'MSL'             -> 'Mean Sea Level (MSL)'
+      'ACD (approx.)'   -> 'Admiralty Chart Datum (ACD, approx.)'
+    Unknown abbreviations and values with non-trivial extra content are
+    returned unchanged."""
+    if not val:
+        return val
+    v = val.strip()
+    m = re.match(r"^([A-Za-z0-9]+)\s*\(([^)]+)\)\s*$", v)
+    if m:
+        abbr, qual = m.group(1), m.group(2).strip()
+        full = _DATUM_EXPANSIONS.get(abbr)
+        if full:
+            return f"{full} ({abbr}, {qual})"
+        return v
+    if "(" in v:
+        return v
+    full = _DATUM_EXPANSIONS.get(v)
+    return f"{full} ({v})" if full else val
+
+
+_TIDAL_RANGE_PHRASINGS = [
+    "The typical tidal range here is about {rng} {unit}.",
+    "Mean tidal range at this location is around {rng} {unit}.",
+    "Expect an average tidal range of roughly {rng} {unit}.",
+    "The average difference between high and low water is approximately {rng} {unit}.",
+]
+
+
+def _tidal_range_sentence(tide_rows, station_short, is_current):
+    """Mean tidal range derived from the 7-day prediction.
+
+    Returns a short SEO sentence (deterministically phrased per station) or
+    None if no usable data, or for tidal currents (range doesn't apply)."""
+    if is_current:
+        return None
+    highs, lows, unit = [], [], None
+    for r in tide_rows:
+        if r.get("row_type") != "tide":
+            continue
+        m = re.match(r"^(-?\d+(?:\.\d+)?)\s+(\w+)", (r.get("value") or "").strip())
+        if not m:
+            continue
+        val = float(m.group(1))
+        if unit is None:
+            unit = m.group(2)
+        t = r.get("type", "")
+        if "High Tide" in t:
+            highs.append(val)
+        elif "Low Tide" in t:
+            lows.append(val)
+    if len(highs) < 3 or len(lows) < 3:
+        return None
+    rng = (sum(highs) / len(highs)) - (sum(lows) / len(lows))
+    if rng <= 0.05:
+        return None
+    unit_short = "m" if unit and unit.lower().startswith("meter") else (
+        "ft" if unit and unit.lower() in {"foot", "feet"} else unit or "")
+    rng_str = f"{rng:.1f}"
+    seed = ((station_short or "") + "|range").encode("utf-8")
+    idx = int.from_bytes(hashlib.md5(seed).digest()[:4], "big")
+    return _TIDAL_RANGE_PHRASINGS[idx % len(_TIDAL_RANGE_PHRASINGS)].format(
+        rng=rng_str, unit=unit_short)
+
+
+def _build_faq_items(tide_rows, station_short, country, water_body, lat, lon, datum, is_current):
+    """Build 3-4 datadriven FAQ items per page (rendered visibly + as JSON-LD).
+
+    For tide stations: today's HW/LW times, typical range, location, methodology.
+    For currents:      today's slack water, peak flood/ebb over week, location,
+                       methodology.
+
+    Returns a list of {"q": str, "a": str} dicts. Empty if station_short is
+    missing or no usable data could be extracted."""
+    items = []
+    if not station_short:
+        return items
+    today_str = datetime.now().strftime("%Y-%m-%d")
+
+    today_high, today_low, today_slack = [], [], []
+    week_max_flood = None  # (abs_value, raw_value_str)
+    week_max_ebb = None
+    week_highs, week_lows = [], []
+    unit = None
+    last_date = None
+    for r in tide_rows:
+        d = r.get("date")
+        if d:
+            last_date = d
+        if r.get("row_type") != "tide":
+            continue
+        t = r.get("type", "")
+        time = r.get("time", "")
+        value = (r.get("value") or "").strip()
+        is_today = (last_date == today_str)
+        m = re.match(r"^(-?\d+(?:\.\d+)?)\s+(\w+)", value)
+        num = float(m.group(1)) if m else None
+        if m and unit is None:
+            unit = m.group(2)
+        if "High Tide" in t:
+            if is_today:
+                today_high.append((time, value))
+            if num is not None:
+                week_highs.append(num)
+        elif "Low Tide" in t:
+            if is_today:
+                today_low.append((time, value))
+            if num is not None:
+                week_lows.append(num)
+        elif "Slack" in t:
+            if is_today:
+                # "Slack, Flood Begins" -> "flood beginning"
+                begins = "flood beginning" if "Flood Begins" in t else (
+                    "ebb beginning" if "Ebb Begins" in t else "slack water")
+                today_slack.append((time, begins))
+        elif "Max Flood" in t and num is not None:
+            if week_max_flood is None or abs(num) > week_max_flood[0]:
+                week_max_flood = (abs(num), value)
+        elif "Max Ebb" in t and num is not None:
+            if week_max_ebb is None or abs(num) > week_max_ebb[0]:
+                week_max_ebb = (abs(num), value)
+
+    if not is_current:
+        # Q1: Today's tide times
+        parts = []
+        if today_high:
+            parts.append("high tides at " + ", ".join(f"{t} ({v})" for t, v in today_high))
+        if today_low:
+            parts.append("low tides at " + ", ".join(f"{t} ({v})" for t, v in today_low))
+        if parts:
+            heights_clause = f", with heights above {datum}" if datum else ""
+            items.append({
+                "q": f"What are today's tide times at {station_short}?",
+                "a": f"Today at {station_short}: {' and '.join(parts)}{heights_clause}.",
+            })
+        # Q2: Typical tidal range (data-derived)
+        if len(week_highs) >= 3 and len(week_lows) >= 3:
+            rng = (sum(week_highs)/len(week_highs)) - (sum(week_lows)/len(week_lows))
+            if rng > 0.05:
+                u = "m" if unit and unit.lower().startswith("meter") else (
+                    "ft" if unit and unit.lower() in {"foot", "feet"} else (unit or ""))
+                items.append({
+                    "q": f"What is the typical tidal range at {station_short}?",
+                    "a": (f"The typical tidal range at {station_short} is approximately "
+                          f"{rng:.1f} {u}, calculated from the mean difference between "
+                          f"high and low water in the seven-day forecast."),
+                })
+    else:
+        # Currents Q1: Today's slack water times
+        if today_slack:
+            slack_str = ", ".join(f"{t} ({lbl})" for t, lbl in today_slack)
+            items.append({
+                "q": f"What are today's slack water times at {station_short}?",
+                "a": f"Today at {station_short}: slack water at {slack_str}.",
+            })
+        # Currents Q2: Peak flood/ebb over the week
+        peaks = []
+        if week_max_flood:
+            peaks.append(f"peak flood of {week_max_flood[1]}")
+        if week_max_ebb:
+            peaks.append(f"peak ebb of {week_max_ebb[1]}")
+        if peaks:
+            items.append({
+                "q": f"What are the maximum current speeds at {station_short}?",
+                "a": (f"Over the next seven days at {station_short}: "
+                      + " and ".join(peaks) + "."),
+            })
+
+    # Q3 (common): Location
+    if lat is not None and lon is not None:
+        ns = "N" if lat >= 0 else "S"
+        ew = "E" if lon >= 0 else "W"
+        coord = f"{abs(lat):.4f}°{ns}, {abs(lon):.4f}°{ew}"
+        loc = station_short + " is located"
+        if country:
+            loc += f" in {country}"
+        if water_body:
+            loc += f" on the {water_body}"
+        loc += f" at coordinates {coord}."
+        items.append({
+            "q": f"Where is {station_short} located?",
+            "a": loc,
+        })
+
+    # Q4 (common): Methodology
+    if is_current:
+        items.append({
+            "q": "How are these tidal current predictions calculated?",
+            "a": ("Predictions are derived from harmonic analysis of historical "
+                  "current measurements, modelling the astronomical components "
+                  "driven by lunar and solar gravity. Actual flow speeds can deviate "
+                  "from the forecast due to wind, freshwater inflow and other local "
+                  "hydrodynamic effects."),
+        })
+    else:
+        items.append({
+            "q": "How are these tide predictions calculated?",
+            "a": ("Predictions are derived from harmonic analysis of historical "
+                  "water-level observations or official tide tables, modelling the "
+                  "astronomical components driven by lunar and solar gravity. "
+                  "Actual water levels can deviate from the forecast due to wind, "
+                  "atmospheric pressure and storm surge."),
+        })
+
+    return items
 
 
 @app.route("/stations/")
@@ -855,10 +1278,14 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
 
     tz_flag = ["-z"] if utc else []
     current_date = datetime.now().strftime("%Y-%m-%d 00:00")
+    end_date = (datetime.now() + timedelta(days=7)).strftime("%Y-%m-%d %H:%M")
+    # xtide -m g ignoriert -e; Zeitspanne wird über -gw (pixels-per-hour fest) gesteuert.
+    # gw=3200 deckt ~7 Tage ab (heute + 6.5 Tage) bei xtide-nativer Schrift­größe.
     cmd = [
         "tide",
         "-l", decoded_station,
         "-b", current_date,
+        "-gw", "3200",
         "-f", "v",
         "-m", "g",
         "-o", svg_path,
@@ -896,22 +1323,36 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     print(f"✅ SVG-Datei konvertiert + Title injiziert: {svg_path}")
 
     # Zusätzlich: tide -l "Station" -m a → als Key-Value-Liste
+    # Mehrzeilige Comments werden zusätzlich strukturiert ausgewertet (water_body etc.)
+    meta_extras = {}
     try:
         meta_cmd = ["tide", "-l", decoded_station, "-m", "a", *tz_flag]
         meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True, env=env)
         meta_rows = []
+        comment_lines = []
+        last_key = None
         for line in meta_result.stdout.strip().splitlines():
             key = line[:14].strip()
             val = line[14:].strip()
             if key:
+                if key == "Datum":
+                    val = _expand_datum(val)
                 meta_rows.append((key, val))
+                last_key = key
+                if key == "Comments" and val:
+                    comment_lines.append(val)
+            elif last_key == "Comments" and val:
+                comment_lines.append(val)
+        for c in comment_lines:
+            m = re.match(r"^([a-z][a-z_]*)\s*:\s*(.+)$", c)
+            if m:
+                meta_extras[m.group(1)] = m.group(2).strip()
         meta_info = meta_rows
     except subprocess.CalledProcessError:
         meta_info = []
 
     # Textvorhersage: tide -l "Station" -b ... -e ... -f t -m p
     try:
-        end_date = (datetime.now() + timedelta(days=5)).strftime("%Y-%m-%d %H:%M")
         text_cmd = [
             "tide", "-l", decoded_station,
             "-b", current_date,
@@ -1003,14 +1444,34 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     coords = _station_coords.get(station_raw) or _station_coords.get(decoded_station)
     lat = coords[0] if coords else None
     lon = coords[1] if coords else None
+    this_slug = to_slug(display_station)
     nearby = []
     if lat is not None and lon is not None:
         # Nearest other stations within 300 km (or top-8 if remote)
         try:
-            this_slug = to_slug(display_station)
             nearby = _nearest_stations(this_slug, lat, lon, k=8, max_km=300)
         except Exception as e:
             print(f"⚠️ Nearby-stations error: {e}")
+    bc_country, bc_state, bc_station = _breadcrumb_parts(display_station, is_current_station)
+    # Prefer xtide's curated water_body; fall back to IHO Sea Areas lookup by slug.
+    water_body = meta_extras.get("water_body") or _STATION_SEAS.get(this_slug)
+    seo_intro, seo_outro = _seo_paragraphs(
+        bc_station or display_station,
+        bc_country,
+        is_current_station,
+        water_body,
+    )
+    seo_range = _tidal_range_sentence(tide_rows, bc_station or display_station, is_current_station)
+    _datum_value = next((v for k, v in meta_info if k == "Datum"), None)
+    faq_items = _build_faq_items(
+        tide_rows,
+        bc_station or display_station,
+        bc_country,
+        water_body,
+        lat, lon,
+        _datum_value,
+        is_current_station,
+    )
     html = render_template_string(template,
                                   station=display_station,
                                   original_name=display_station,
@@ -1023,7 +1484,15 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                                   src=source,
                                   latitude=lat,
                                   longitude=lon,
-                                  nearby=nearby)
+                                  nearby=nearby,
+                                  bc_country=bc_country,
+                                  bc_state=bc_state,
+                                  bc_station=bc_station,
+                                  seo_intro=seo_intro,
+                                  seo_outro=seo_outro,
+                                  seo_range=seo_range,
+                                  faq_items=faq_items,
+                                  water_body=water_body)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ HTML-Seite erzeugt: {html_path}")

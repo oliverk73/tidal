@@ -66,6 +66,27 @@ document.addEventListener("DOMContentLoaded", function () {
     return { name: full, detail: "" };
   }
 
+  // --- Type badges (match map-marker iconography) ---
+  // Vertical double arrow ↕ for tide stations, horizontal double arrow ↔ for currents.
+  var CURRENT_RE = /\s+Currents?(\s*\([^)]*\))?\s*$/;
+  var TIDE_ICON_SVG =
+    '<svg width="12" height="12" viewBox="0 0 18 18" aria-hidden="true">' +
+    '<line x1="9" y1="2" x2="9" y2="16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>' +
+    '<polyline points="5,5 9,2 13,5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<polyline points="5,13 9,16 13,13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '</svg>';
+  var CURRENT_ICON_SVG =
+    '<svg width="12" height="12" viewBox="0 0 18 18" aria-hidden="true">' +
+    '<line x1="2" y1="9" x2="16" y2="9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>' +
+    '<polyline points="5,5 2,9 5,13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<polyline points="13,5 16,9 13,13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '</svg>';
+  function typeBadge(isCurrent) {
+    return '<span class="search-modal-type-badge ' + (isCurrent ? 'type-current' : 'type-tide') + '">' +
+      (isCurrent ? CURRENT_ICON_SVG + ' Current' : TIDE_ICON_SVG + ' Tide') +
+      '</span>';
+  }
+
   // --- Render results ---
   function renderResults(query) {
     var q = query.trim();
@@ -91,7 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var hasCoords = (typeof stationCoords !== 'undefined');
 
     limited.forEach(function (full) {
-      var p = parseName(full);
+      var isCurrent = CURRENT_RE.test(full);
+      // Strip trailing " Current[..]" for cleaner display; data-station keeps full name.
+      var displayFull = isCurrent ? full.replace(CURRENT_RE, '') : full;
+      var p = parseName(displayFull);
       var mapBtn = '';
       if (hasCoords && stationCoords[full]) {
         mapBtn = '<button class="search-modal-map-btn" data-station-map="' + escapeHtml(full) + '" title="Auf Karte zeigen">' +
@@ -105,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
         '<span class="search-modal-item-name">' + highlightMatch(p.name, q) + '</span>' +
         (p.detail ? '<span class="search-modal-item-detail">' + highlightMatch(p.detail, q) + '</span>' : '') +
         '</div>' +
+        typeBadge(isCurrent) +
         mapBtn +
         '</div>';
     });

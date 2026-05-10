@@ -36,6 +36,37 @@ main img { width: 100%; height: auto; }
 @media (max-width: 500px) {
   .tide-table td { padding: 3px 4px; font-size: 0.85em; }
 }
+/* Override map-page search overlay: keep button in header flow on prediction pages */
+header #search-trigger {
+  position: static;
+  transform: none;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  width: auto;
+  flex: 0 1 280px;
+}
+.crumb-home { text-decoration: none; }
+.crumb-home .home-glyph { font-size: 1em; line-height: 1; margin-right: 3px; }
+.faq-section { margin-top: 2em; padding-top: 1em; border-top: 1px solid #eee; }
+.faq-section > h3 { margin: 0 0 0.5em; }
+.faq-item { margin-bottom: 1em; }
+.faq-item h4 { margin: 0; font-size: 1em; color: #333; }
+.faq-item p { margin: 0.2em 0 0; color: #555; line-height: 1.45; }
+/* 7-day tide graphic: SVG is ~3200px wide at xtide-native text size.
+   Always horizontally scrollable; on narrow viewports more scroll, on wide less. */
+.tide-svg-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -16px;
+  padding: 0 16px;
+}
+.tide-svg-wrap img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: auto;
+}
 </style>
 <script src="/static/js/suche.js" defer></script>
 
@@ -51,16 +82,17 @@ main img { width: 100%; height: auto; }
   {% set _coord_str = '%.4f°%s, %.4f°%s'|format(latitude|abs, _ns, longitude|abs, _ew) %}
 {% endif %}
 {% set _datum = meta_dict.get('Datum') or meta_dict.get('Datum:') %}
+{% set _wb = ' on the ' ~ water_body if water_body else '' %}
 {% if is_current %}
 <title>Current predictions &amp; forecasts — {{ original_name }}</title>
-<meta name="description" content="Current predictions for {{ original_name }}{% if _coord_str %} ({{ _coord_str }}){% endif %}. Flood and ebb times, slack water and peak current velocities. Updated daily."/>
+<meta name="description" content="Tidal current predictions for {{ original_name }}{{ _wb }}{% if _coord_str %} ({{ _coord_str }}){% endif %}. Flood and ebb times, slack water and peak current velocities. Updated daily."/>
 <meta property="og:title" content="Current predictions — {{ original_name }}"/>
-<meta property="og:description" content="Flood and ebb current times, slack water and peak velocities for {{ original_name }}{% if _coord_str %} ({{ _coord_str }}){% endif %}."/>
+<meta property="og:description" content="Flood and ebb current times, slack water and peak velocities for {{ original_name }}{{ _wb }}{% if _coord_str %} ({{ _coord_str }}){% endif %}."/>
 {% else %}
 <title>Tide predictions &amp; forecasts — {{ original_name }}</title>
-<meta name="description" content="Tide predictions for {{ original_name }}{% if _coord_str %} ({{ _coord_str }}){% endif %}. High and low tide times, tide curves{% if _datum %} above {{ _datum }}{% endif %}. Updated daily."/>
+<meta name="description" content="Tide predictions for {{ original_name }}{{ _wb }}{% if _coord_str %} ({{ _coord_str }}){% endif %}. High and low tide times, tide curves{% if _datum %} above {{ _datum }}{% endif %}. Updated daily."/>
 <meta property="og:title" content="Tide predictions — {{ original_name }}"/>
-<meta property="og:description" content="High and low tide times and tide curves for {{ original_name }}{% if _coord_str %} ({{ _coord_str }}){% endif %}{% if _datum %}, heights above {{ _datum }}{% endif %}."/>
+<meta property="og:description" content="High and low tide times and tide curves for {{ original_name }}{{ _wb }}{% if _coord_str %} ({{ _coord_str }}){% endif %}{% if _datum %}, heights above {{ _datum }}{% endif %}."/>
 {% endif %}
 <link rel="canonical" href="{{ request.url_root.rstrip('/') }}{{ request.path }}"/>
 <meta property="og:type" content="website"/>
@@ -90,7 +122,6 @@ main img { width: 100%; height: auto; }
 </head>
 <body>
 <header style="max-width: 1200px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 12px;">
-<a href="/" title="Back to map" style="text-decoration: none; font-size: 1.4em;">&#x2302;</a>
 <button id="search-trigger" type="button">Search for locations</button>
 {% set local_url = request.path ~ (('?source=' ~ src) if src else '') %}
 {% set utc_url = request.path ~ (('?source=' ~ src ~ '&utc=1') if src else '?utc=1') %}
@@ -105,58 +136,64 @@ main img { width: 100%; height: auto; }
   {% endif %}
 </span>
 </header>
-{# Breadcrumb: Home > Stations > {country} > {station} #}
-{% set _name_parts = original_name.split(',') %}
-{% set _country = _name_parts[-1].strip() if _name_parts else '' %}
+{# Breadcrumb: ⌂ Home > {country} > {state}? > {station_short} #}
+{% set _country_anchor = (bc_country|lower|replace(' ','-')|replace('.','')) if bc_country else '' %}
 <nav aria-label="Breadcrumb" style="max-width:1200px;margin:0 auto;padding:0 16px 6px;font-size:0.85em;color:#666;">
-  <a href="/" style="color:#0066cc;text-decoration:none;">Home</a>
-  &rsaquo; <a href="/stations/" style="color:#0066cc;text-decoration:none;">Stations</a>
-  {% if _country %}&rsaquo; <a href="/stations/#{{ _country|lower|replace(' ','-')|replace('.','') }}" style="color:#0066cc;text-decoration:none;">{{ _country }}</a>{% endif %}
-  &rsaquo; <span aria-current="page">{{ original_name }}</span>
+  <a href="/" class="crumb-home" style="color:#0066cc;" title="Back to map"><span class="home-glyph" aria-hidden="true">&#x2302;</span>Home</a>
+  {% if bc_country %}&rsaquo; <a href="/stations/#{{ _country_anchor }}" style="color:#0066cc;text-decoration:none;">{{ bc_country }}</a>{% endif %}
+  {% if bc_state %}&rsaquo; <span style="color:#666;">{{ bc_state }}</span>{% endif %}
+  &rsaquo; <span aria-current="page">{{ bc_station or original_name }}</span>
 </nav>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"{{ request.url_root.rstrip('/') }}/"},
-    {"@type":"ListItem","position":2,"name":"Stations","item":"{{ request.url_root.rstrip('/') }}/stations/"}{% if _country %},
-    {"@type":"ListItem","position":3,"name":"{{ _country }}","item":"{{ request.url_root.rstrip('/') }}/stations/#{{ _country|lower|replace(' ','-')|replace('.','') }}"},
-    {"@type":"ListItem","position":4,"name":"{{ original_name }}","item":"{{ request.url_root.rstrip('/') }}{{ request.path }}"}
-    {% else %},{"@type":"ListItem","position":3,"name":"{{ original_name }}","item":"{{ request.url_root.rstrip('/') }}{{ request.path }}"}{% endif %}
+    {"@type":"ListItem","position":1,"name":"Home","item":"{{ request.url_root.rstrip('/') }}/"}
+    {%- set _pos = namespace(n=1) -%}
+    {%- if bc_country -%}
+      {%- set _pos.n = _pos.n + 1 -%}
+    ,{"@type":"ListItem","position":{{ _pos.n }},"name":"{{ bc_country }}","item":"{{ request.url_root.rstrip('/') }}/stations/#{{ _country_anchor }}"}
+    {%- endif -%}
+    {%- if bc_state -%}
+      {%- set _pos.n = _pos.n + 1 -%}
+    ,{"@type":"ListItem","position":{{ _pos.n }},"name":"{{ bc_state }}"}
+    {%- endif -%}
+    {%- set _pos.n = _pos.n + 1 -%}
+    ,{"@type":"ListItem","position":{{ _pos.n }},"name":"{{ bc_station or original_name }}","item":"{{ request.url_root.rstrip('/') }}{{ request.path }}"}
   ]
 }
 </script>
 <main>
 
 {% if is_current %}
-<p id="description">Accurate tidal current predictions &amp; charts with flood &amp; ebb currents, slack water times and current velocities for sailors, fishermen and watersports enthusiasts. Current charts for straits, channels and other coastal locations.</p>
+<p id="description">{{ seo_intro }}{% if seo_range %} {{ seo_range }}{% endif %}</p>
 <h1>Current prediction & forecast {{ original_name }}</h1>
-<h2>Current calendars with flood and ebb times, slack water and current velocities</h2>
+<h2>7-day flood, ebb and slack-water forecast{% if water_body %} on the {{ water_body }}{% endif %}</h2>
 {% else %}
-<p id="description">Accurate tide predictions &amp; charts with low (ebbing) &amp; high tides (flooding) for sailors, surfers, fishermen and watersports enthusiasts. Tide charts for ports, harbors, surfspots and other coastal locations. 🌊</p>
+<p id="description">{{ seo_intro }}{% if seo_range %} {{ seo_range }}{% endif %}</p>
 <h1>Tide prediction & forecast {{ original_name }}</h1>
-<h2>Tide calendars with high and low tides times as well as tide curves</h2>
+<h2>7-day high and low tide forecast{% if water_body %} on the {{ water_body }}{% endif %}{% if _datum %}, heights above {{ _datum }}{% endif %}</h2>
 {% endif %}
-<h3 style="page-break-before:always;">{{ original_name }}</h3>
+<h3 style="page-break-before:always;">Station details</h3>
 <dl class="station-meta">
 {% for key, val in meta_info %}
   <div class="meta-item"><dt>{{ key }}</dt><dd>{{ val }}</dd></div>
 {% endfor %}
 </dl>
 {% if is_current %}
-<p><img src="{{ svg_url }}"
-        alt="Current prediction curve for {{ original_name }} — flood and ebb current speeds, slack water times. See table below for exact times and current velocities."
+<div class="tide-svg-wrap"><img src="{{ svg_url }}"
+        alt="7-day tidal current forecast for {{ original_name }}{{ _wb }} — flood and ebb speeds, slack water times. See table below for exact times and current velocities."
         title="Current prediction curve for {{ original_name }}"
         id="Current prediction curve"
-        width="960" height="312" loading="eager" decoding="async"></p>
+        width="3200" height="312" loading="eager" decoding="async"></div>
 <h3>Current times</h3>
 {% else %}
-<p><img src="{{ svg_url }}"
-        alt="Tide prediction curve for {{ original_name }} — high and low tide times. Heights are referenced to chart datum. See table below for exact times and water levels."
+<div class="tide-svg-wrap"><img src="{{ svg_url }}"
+        alt="7-day tide forecast for {{ original_name }}{{ _wb }} — high and low tide times{% if _datum %}, heights above {{ _datum }}{% endif %}. See table below for exact times and water levels."
         title="Tide prediction curve for {{ original_name }}"
         id="Tide prediction curve"
-        width="960" height="312" loading="eager" decoding="async"></p>
+        width="3200" height="312" loading="eager" decoding="async"></div>
 <h3>Tide times</h3>
 {% endif %}
 <table class="tide-table">
@@ -171,10 +208,34 @@ main img { width: 100%; height: auto; }
 {% endfor %}
 </table>
 
-{% if is_current %}
-<p id="tide_prediction">Tidal current prediction involves forecasting the speed and direction of water flow based on the predictable movements of the earth, moon, and sun. These predictions are crucial for navigation, fishing, and marine operations. While astronomical factors are predictable, actual currents can be influenced by weather conditions like wind and storm surge, causing deviations from the predicted currents.</p>
-{% else %}
-<p id="tide_prediction">Tide prediction involves forecasting water levels based on the predictable movements of the earth, moon, and sun. These predictions are crucial for various activities, especially those related to navigation, water sports, and coastal management. While astronomical factors are predictable, actual water levels can be influenced by weather conditions like wind and atmospheric pressure, causing deviations from the predicted tides.</p>
+<p id="tide_prediction">{{ seo_outro }}</p>
+
+{% if faq_items %}
+<section aria-labelledby="faq-heading" class="faq-section">
+  <h3 id="faq-heading">Frequently asked questions</h3>
+  {% for item in faq_items %}
+  <div class="faq-item">
+    <h4 class="faq-q">{{ item.q }}</h4>
+    <p class="faq-a">{{ item.a }}</p>
+  </div>
+  {% endfor %}
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faq_items %}
+    {%- if not loop.first -%},{%- endif %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | tojson }},
+      "acceptedAnswer": {"@type": "Answer", "text": {{ item.a | tojson }}}
+    }
+    {%- endfor %}
+  ]
+}
+</script>
 {% endif %}
 
 {% if nearby %}

@@ -193,6 +193,24 @@ html, body {
   flex: 1;
   min-width: 0;
 }
+.search-modal-type-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+.search-modal-type-badge svg { display: block; }
+.search-modal-type-badge.type-tide    { background: #e0f2fe; color: #075985; }
+.search-modal-type-badge.type-current { background: #fef3c7; color: #92400e; }
 .search-modal-map-btn {
   flex-shrink: 0;
   display: flex;
