@@ -1110,12 +1110,27 @@ def stations_index():
         '.section-toggle{display:block;margin:2em 0 1em;padding:8px 14px;background:#f0f0f0;border-radius:4px;color:#333;text-decoration:none;font-weight:bold;}',
         '@media (max-width:700px){nav.toc{column-count:2;}ul.stations{column-count:1;}}',
         'a.back{display:inline-block;margin-bottom:1em;color:#0066cc;text-decoration:none;}',
+        'nav.header-links{margin-bottom:1em;display:flex;gap:18px;flex-wrap:wrap;font-size:0.95em;}',
+        'nav.header-links a{color:#0066cc;text-decoration:none;}',
+        '.learn-cta{margin:1.5em 0;padding:14px 18px;background:#eaf6f7;border-left:4px solid #169ca5;border-radius:4px;font-size:0.95em;}',
+        '.learn-cta a{color:#0066cc;text-decoration:none;font-weight:500;}',
         '</style></head><body>',
-        '<a class="back" href="/">&larr; Back to interactive map</a>',
+        '<nav class="header-links" aria-label="Site navigation">',
+        '<a href="/">&larr; Back to interactive map</a>',
+        '<a href="/learn/">Learn about tides &rarr;</a>',
+        '</nav>',
         f'<h1>Tide stations ({n_tides})</h1>',
         f'<p>Index of {n_tides} tide stations across {len(countries)} countries, sorted alphabetically. '
         f'Click any station for high/low tide times, tide curves and forecasts. '
         f'<a href="#currents">Tidal currents ({n_currents})</a> are listed below.</p>',
+        '<aside class="learn-cta">',
+        '  <strong>New to tides?</strong> Read our short articles on '
+        '  <a href="/learn/how-tides-work/">how tides work</a>, '
+        '  <a href="/learn/how-predictions-are-made/">how predictions are made</a>, '
+        '  <a href="/learn/largest-tidal-ranges/">the world&rsquo;s largest tidal ranges</a> '
+        '  and <a href="/learn/strongest-currents/">strongest tidal currents</a> &mdash; or browse the full '
+        '  <a href="/learn/">Learn hub</a>.',
+        '</aside>',
         '<nav class="toc" aria-label="Countries (tides)"><strong>Tide stations by country:</strong>',
     ]
     for c in countries:
