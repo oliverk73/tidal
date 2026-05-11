@@ -1375,6 +1375,9 @@
 
     var oldLatLng = targetMarker.getLatLng();
     var popupContent = targetMarker.getPopup().getContent();
+    // Popup-content can be a string OR a function (since the JSON-loader
+    // refactor in 81dac57 binds popupContent as a function). Materialise it.
+    if (typeof popupContent === 'function') popupContent = popupContent(targetMarker);
     // Station-Name aus dem Popup extrahieren (<b>Name</b>)
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
     var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
@@ -1459,6 +1462,9 @@
 
     var oldLatLng = targetMarker.getLatLng();
     var popupContent = targetMarker.getPopup().getContent();
+    // Popup-content can be a string OR a function (since the JSON-loader
+    // refactor in 81dac57 binds popupContent as a function). Materialise it.
+    if (typeof popupContent === 'function') popupContent = popupContent(targetMarker);
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
     var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
     var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
@@ -1537,6 +1543,9 @@
     var targetMarker = result.marker;
 
     var popupContent = targetMarker.getPopup().getContent();
+    // Popup-content can be a string OR a function (since the JSON-loader
+    // refactor in 81dac57 binds popupContent as a function). Materialise it.
+    if (typeof popupContent === 'function') popupContent = popupContent(targetMarker);
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
     var oldName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
     var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
@@ -1594,6 +1603,9 @@
     var parentGroup = result.group;
 
     var popupContent = targetMarker.getPopup().getContent();
+    // Popup-content can be a string OR a function (since the JSON-loader
+    // refactor in 81dac57 binds popupContent as a function). Materialise it.
+    if (typeof popupContent === 'function') popupContent = popupContent(targetMarker);
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
     var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
     var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
