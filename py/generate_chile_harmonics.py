@@ -55,6 +55,19 @@ STATIONS = [
 
 DATA_DIR = Path('/tmp/ioc_chile')
 
+# Stations already in harmonics_utide_observations.txt — skip to avoid duplicate work.
+# (Per user instruction 2026-05-11: don't reprocess stations already covered by UTide.)
+SKIP_EXISTING_UTIDE = {
+    'iqui',  # Iquique
+    'coqu',  # Coquimbo
+    'sano',  # San Antonio
+    'talc',  # Talcahuano
+    'corr',  # Corral
+    'ancu',  # Ancud
+    'pcha',  # Puerto Chacabuco
+    'ptar',  # Punta Arenas
+}
+
 
 def load_ioc_csv(csv_path, max_years=10.0):
     """Load hourly IOC data from CSV."""
@@ -134,16 +147,19 @@ def format_station_block(station, results, data):
 
 
 def main():
-    output_path = Path('harmonics/utide/harmonics_utide_chile.txt')
-    template_path = Path('harmonics/utide/harmonics_utide_south_africa.txt')
+    output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_chile.txt')
+    template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_observations.txt')
 
     header = read_header_from_template(template_path)
-    header = header.replace('South Africa', 'Chile').replace('UHSLC', 'IOC/SHOA')
 
     blocks = []
     for station in STATIONS:
         code = station['code']
         name = station['name']
+
+        if code in SKIP_EXISTING_UTIDE:
+            print(f"\n--- Skipping {name} ({code}): already in UTide observations ---")
+            continue
 
         # Find CSV file
         csv_candidates = list(DATA_DIR.glob(f"{code}_*.csv"))
