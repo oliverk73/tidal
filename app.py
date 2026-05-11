@@ -493,6 +493,18 @@ def favicon():
     return send_from_directory("static", "favicon.ico", mimetype="image/x-icon")
 
 
+@app.route("/sw.js")
+def service_worker():
+    """Serve the Service Worker from site root so its scope is '/'.
+    Browsers restrict SW scope to the path the file is served from;
+    /static/sw.js could only control /static/* — not what we want."""
+    resp = send_from_directory("static", "sw.js", mimetype="application/javascript")
+    # The browser caches sw.js itself; force a max-age of 0 so updates
+    # propagate on the next page load.
+    resp.headers["Cache-Control"] = "no-cache, max-age=0"
+    return resp
+
+
 @app.route("/robots.txt")
 def robots_txt():
     body = (
@@ -1100,6 +1112,9 @@ def stations_index():
         f'<title>All tide stations ({n_tides}) — Tide predictions &amp; forecasts</title>',
         f'<meta name="description" content="Index of {n_tides} tide stations across {len(countries)} countries plus {n_currents} current stations. High and low tide times, tide curves and forecasts."/>',
         f'<link rel="canonical" href="{base}/stations/"/>',
+        '<link rel="manifest" href="/static/manifest.webmanifest"/>',
+        '<meta name="theme-color" content="#169ca5"/>',
+        '<script src="/static/js/pwa.js" defer></script>',
         '<style>body{font-family:sans-serif;max-width:1200px;margin:0 auto;padding:20px;color:#333;}',
         'h1{margin-bottom:0.3em;}h2{margin-top:1.5em;border-bottom:1px solid #ddd;padding-bottom:4px;}',
         'nav.toc{column-count:4;column-gap:18px;font-size:0.92em;margin:0.5em 0 1.5em;}',

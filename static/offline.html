@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Offline — Tide predictions</title>
+<meta name="theme-color" content="#169ca5"/>
+<link rel="manifest" href="/static/manifest.webmanifest"/>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; font-family: system-ui, -apple-system, sans-serif; background: #f7fbfc; color: #222; }
+  .wrap { max-width: 480px; margin: 0 auto; padding: 60px 24px; text-align: center; }
+  .wave { font-size: 64px; margin-bottom: 12px; }
+  h1 { margin: 0 0 12px; color: #169ca5; font-size: 1.6em; }
+  p { margin: 0.6em 0; line-height: 1.55; color: #444; }
+  .btn { display: inline-block; margin-top: 22px; padding: 10px 22px; background: #169ca5; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; }
+  .btn:hover { background: #117a82; }
+  .hint { margin-top: 28px; font-size: 0.9em; color: #666; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="wave" aria-hidden="true">&#x1F30A;</div>
+  <h1>You&rsquo;re offline</h1>
+  <p>This page couldn&rsquo;t be loaded because there&rsquo;s no
+     internet connection &mdash; and we haven&rsquo;t cached it yet.</p>
+  <p>Stations you&rsquo;ve already visited today are still available
+     from cache.</p>
+  <a href="/" class="btn">Try the map</a>
+  <p class="hint">When you&rsquo;re back online, refresh to get the
+     latest predictions.</p>
+</div>
+<script>
+  // Try to reload as soon as the network comes back.
+  window.addEventListener('online', () => { location.reload(); });
+</script>
+</body>
+</html>
