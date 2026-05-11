@@ -9,11 +9,13 @@
  * deleted on activate.
  */
 
-const CACHE_VERSION  = 'v1';
-const SHELL_CACHE    = `tides-shell-${CACHE_VERSION}`;
-const PAGES_CACHE    = `tides-pages-${CACHE_VERSION}`;
-const TILES_CACHE    = `tides-tiles-${CACHE_VERSION}`;
-const TILES_MAX      = 400;  // approx. one zoom level of world coverage
+const CACHE_VERSION   = 'v2';
+const SHELL_CACHE     = `tides-shell-${CACHE_VERSION}`;
+const PAGES_CACHE     = `tides-pages-${CACHE_VERSION}`;
+const TILES_CACHE     = `tides-tiles-${CACHE_VERSION}`;
+const TILES_MAX       = 1500;  // ~ a full session of pans and zooms
+const TRIM_EVERY      = 50;    // run LRU trim once every N puts, not per-put
+let   tilePutCounter  = 0;
 
 const SHELL_ASSETS = [
   '/',
@@ -119,18 +121,28 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Map tiles: cache-first, opportunistic background update
+  // Map tiles: pure cache-first. Tiles are immutable for our purposes
+  // (OSM/Carto/etc. update them rarely and we don't care about sub-yearly
+  // freshness). Only hit the network on cache miss. LRU-trim batched
+  // every TRIM_EVERY puts to avoid quadratic main-thread work during pans.
   if (isTileRequest(url)) {
     event.respondWith(
       caches.open(TILES_CACHE).then(async (cache) => {
         const cached = await cache.match(req);
-        const networkFetch = fetch(req).then((resp) => {
+        if (cached) return cached;
+        try {
+          const resp = await fetch(req);
           if (resp && (resp.ok || resp.type === 'opaque')) {
-            cache.put(req, resp.clone()).then(() => trimCache(TILES_CACHE, TILES_MAX));
+            await cache.put(req, resp.clone());
+            tilePutCounter++;
+            if (tilePutCounter % TRIM_EVERY === 0) {
+              trimCache(TILES_CACHE, TILES_MAX);  // fire-and-forget
+            }
           }
           return resp;
-        }).catch(() => cached);  // offline → cached
-        return cached || networkFetch;
+        } catch (_) {
+          return new Response('', { status: 504, statusText: 'Tile offline' });
+        }
       })
     );
     return;
