@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="manifest" href="/static/manifest.webmanifest"/>
+<meta name="theme-color" content="#169ca5"/>
+<link rel="apple-touch-icon" href="/static/icon-192.png"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="Tides"/>
+<link href="/static/css/styles.css" rel="stylesheet"/>
+<style>
+html, body { overflow: auto; height: auto; }
+main { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+header #search-trigger { position: static; transform: none; top: auto; left: auto; min-width: 0; width: auto; flex: 0 1 280px; }
+.crumb-home { text-decoration: none; }
+.crumb-home .home-glyph { font-size: 1em; line-height: 1; margin-right: 3px; }
+.learn-intro { color: #444; font-size: 1.05em; line-height: 1.55; }
+.learn-category { margin-top: 2em; padding-top: 1em; border-top: 1px solid #eee; }
+.learn-category > h2 { margin: 0 0 0.7em; color: #169ca5; font-size: 1.25em; }
+.learn-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 720px) { .learn-grid { grid-template-columns: 1fr 1fr; } }
+.learn-card { padding: 14px 16px; border: 1px solid #e5e5e5; border-radius: 8px; background: #fafafa; transition: background 0.12s; }
+.learn-card:hover { background: #f1f7f8; }
+.learn-card h3 { margin: 0 0 0.3em; font-size: 1.05em; }
+.learn-card h3 a { color: #0066cc; text-decoration: none; }
+.learn-card p { margin: 0; color: #555; line-height: 1.45; font-size: 0.95em; }
+</style>
+<script src="/static/js/suche.js" defer></script>
+<title>Learn about tides — how they work, prediction, currents</title>
+<meta name="description" content="Plain-language articles on how tides work, how predictions are made, where the largest tidal ranges and strongest currents are, and what tide tables can and can't do."/>
+<link rel="canonical" href="{{ request.url_root.rstrip('/') }}/learn/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Learn about tides — how they work, prediction, currents"/>
+<meta property="og:description" content="Plain-language articles on how tides work, how predictions are made, and what they can and can't tell you."/>
+<meta property="og:url" content="{{ request.url_root.rstrip('/') }}/learn/"/>
+<meta property="og:image" content="{{ request.url_root.rstrip('/') }}/static/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="Tide predictions"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ request.url_root.rstrip('/') }}/static/og-image.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Learn about tides",
+  "url": "{{ request.url_root.rstrip('/') }}/learn/",
+  "description": "Plain-language articles on how tides work, how predictions are made, where the largest tidal ranges and strongest currents are, and what tide tables can and can't do."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"{{ request.url_root.rstrip('/') }}/"},
+    {"@type":"ListItem","position":2,"name":"Learn","item":"{{ request.url_root.rstrip('/') }}/learn/"}
+  ]
+}
+</script>
+</head>
+<body>
+<header style="max-width: 1100px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 12px;">
+<button id="search-trigger" type="button">Search for locations</button>
+</header>
+<nav aria-label="Breadcrumb" style="max-width:1100px;margin:0 auto;padding:0 16px 6px;font-size:0.85em;color:#666;">
+  <a href="/" class="crumb-home" style="color:#0066cc;" title="Back to map"><span class="home-glyph" aria-hidden="true">&#x2302;</span>Home</a>
+  &rsaquo; <span aria-current="page">Learn</span>
+</nav>
+<main>
+<h1>Learn about tides</h1>
+<p class="learn-intro">
+  Tides shape every coastline on Earth, but most of us only meet them at
+  the beach. These short articles cover the physics, the records, how
+  predictions actually work, and what they can &mdash; and can&rsquo;t
+  &mdash; tell you. Written for curious non-specialists.
+</p>
+
+{% for cat_id, cat_title in categories %}
+{% set items = articles_by_category[cat_id] %}
+{% if items %}
+<section class="learn-category" aria-labelledby="cat-{{ cat_id }}">
+  <h2 id="cat-{{ cat_id }}">{{ cat_title }}</h2>
+  <div class="learn-grid">
+    {% for a in items %}
+    <article class="learn-card">
+      <h3><a href="/learn/{{ a.slug }}/">{{ a.title }}</a></h3>
+      <p>{{ a.summary }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+</main>
+
+<script>
+  var stationNames = {{ station_names | tojson }};
+</script>
+
+<div id="search-modal" class="search-modal">
+  <div class="search-modal-content">
+    <div class="search-modal-header">
+      <input id="search-modal-input" type="text" placeholder="Search for tide stations..." autocomplete="off" />
+      <button id="search-modal-close" type="button">&times;</button>
+    </div>
+    <div id="search-modal-results" class="search-modal-results"></div>
+  </div>
+</div>
+
+</body>
+</html>

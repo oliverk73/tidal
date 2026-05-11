@@ -460,6 +460,34 @@ if os.path.exists(_seas_path):
 def index():
     return render_template("index.html", station_names=_station_names)
 
+
+@app.route("/learn/")
+def learn_hub():
+    from py.learn_content import ARTICLES_BY_CATEGORY, CATEGORIES
+    return render_template(
+        "learn_hub.html",
+        categories=CATEGORIES,
+        articles_by_category=ARTICLES_BY_CATEGORY,
+        station_names=_station_names,
+    )
+
+
+@app.route("/learn/<slug>/")
+@app.route("/learn/<slug>")
+def learn_article(slug):
+    from py.learn_content import SLUG_INDEX
+    article = SLUG_INDEX.get(slug)
+    if not article:
+        abort(404)
+    related = [SLUG_INDEX[s] for s in article.get("related", []) if s in SLUG_INDEX]
+    return render_template(
+        "learn_article.html",
+        article=article,
+        related=related,
+        station_names=_station_names,
+    )
+
+
 @app.route("/favicon.ico")
 def favicon():
     return send_from_directory("static", "favicon.ico", mimetype="image/x-icon")
@@ -1147,6 +1175,14 @@ def sitemap_xml():
                  f"<changefreq>daily</changefreq><priority>1.0</priority></url>")
     parts.append(f"<url><loc>{base}/stations/</loc><lastmod>{today}</lastmod>"
                  f"<changefreq>weekly</changefreq><priority>0.8</priority></url>")
+    # Learn articles (FAQ-style content pages)
+    from py.learn_content import ARTICLES as _LEARN_ARTICLES
+    parts.append(f"<url><loc>{base}/learn/</loc><lastmod>{today}</lastmod>"
+                 f"<changefreq>monthly</changefreq><priority>0.7</priority></url>")
+    for _a in _LEARN_ARTICLES:
+        parts.append(f"<url><loc>{base}/learn/{_a['slug']}/</loc>"
+                     f"<lastmod>{today}</lastmod><changefreq>monthly</changefreq>"
+                     f"<priority>0.6</priority></url>")
     seen = set()
     for slug in _slug_to_station:
         if slug in seen:
