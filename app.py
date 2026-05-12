@@ -1079,11 +1079,16 @@ def stations_index():
     currents_by_country = {}
     other_tides = []
     other_currents = []
-    seen_slugs = set()
+    # Dedup by orig_name (not by slug): _slug_to_station holds both the
+    # display-slug and a legacy orig-slug fallback for each DWF USA station,
+    # so iterating its items would count those stations twice. The display
+    # slug is inserted first, so picking the first slug we see per orig_name
+    # gives us the canonical URL.
+    seen_orig = set()
     for slug, orig_name in _slug_to_station.items():
-        if slug in seen_slugs:
+        if orig_name in seen_orig:
             continue
-        seen_slugs.add(slug)
+        seen_orig.add(orig_name)
         src = _station_data.get(orig_name)
         disp = display_name_for(orig_name, src)
         country = _country_for_name(disp) or _country_for_name(orig_name)
