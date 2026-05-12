@@ -138,6 +138,8 @@ SOURCE_GROUPS = OrderedDict([
     ('Lavergne',        {'color': '#E91E63', 'files': ['harmonics-pierre-lavergne-v10_mod.tcd',
                                                         'harmonics-pierre-lavergne-v9-europe_mod.tcd']}),
     ('UTide TC',        {'color': '#F44336', 'files': [
+                            'harmonics_utide_tidetables.tcd',
+                            'harmonics_utide_current_tables.tcd',
                             'harmonics_utide_australia_bom.tcd',
                             'harmonics_utide_brazil_dhn.tcd',
                             'harmonics_utide_canada_bc.tcd',
@@ -162,6 +164,8 @@ SOURCE_GROUPS = OrderedDict([
                             ]}),
     ('SHOM',            {'color': '#3F51B5', 'files': ['harmonics_utide_shom.tcd']}),
     ('UTide SL',        {'color': '#E57373', 'files': [
+                            'harmonics_utide_observations.tcd',
+                            'harmonics_utide_current_observations.tcd',
                             'harmonics_utide_germany_z0corrected.tcd',
                             'harmonics_utide_germany_currents.tcd',
                             'harmonics_utide_netherlands.tcd',

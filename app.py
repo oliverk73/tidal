@@ -6,9 +6,16 @@ import tempfile
 import unicodedata
 import subprocess
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 import glob
 from flask import Flask, render_template, render_template_string, abort, jsonify, url_for, request, send_from_directory
 from urllib.parse import unquote
+from timezonefinder import TimezoneFinder
+
+# Module-level TimezoneFinder: ~50 MB shapefile data, but only one instance.
+# Used to convert UTC times for stations whose harmonics meridian is +00:00
+# (all UTide-derived stations). Lookup is ~1 ms per call.
+_tzfinder = TimezoneFinder()
 
 app = Flask(__name__)
 
@@ -1500,10 +1507,54 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                 'value': value,
                 'type': tide_type,
                 'icon': icon,
-                'row_type': row_type
+                'row_type': row_type,
+                # Keep full date (untrimmed) for later TZ shift; the visible
+                # 'date' field is reset to '' for continuation rows.
+                '_full_date': date_str,
             })
     except subprocess.CalledProcessError:
         tide_rows = []
+
+    # If the user asked for "Local" but the station's harmonics are in UTC
+    # (all UTide-derived stations have `Time zone: :UTC`), xtide can't do
+    # the conversion for us — its -z flag toggles between station-meridian
+    # time and UTC, and here they're the same. Do the shift in Python using
+    # the IANA zone derived from the station's lat/lon.
+    station_tz_raw = next((v for k, v in meta_info if k == "Time zone"), "")
+    is_utc_station = station_tz_raw.strip().lstrip(':').upper() == "UTC"
+    coords_for_tz = _station_coords.get(station_raw) or _station_coords.get(decoded_station)
+    if (not utc) and is_utc_station and coords_for_tz and tide_rows:
+        try:
+            iana = _tzfinder.timezone_at(lat=coords_for_tz[0], lng=coords_for_tz[1])
+            if iana:
+                target_tz = ZoneInfo(iana)
+                shifted = []
+                prev_date = None
+                for r in tide_rows:
+                    dt_utc = datetime.strptime(
+                        f"{r['_full_date']} {r['time']}", "%Y-%m-%d %H:%M"
+                    ).replace(tzinfo=ZoneInfo("UTC"))
+                    dt_loc = dt_utc.astimezone(target_tz)
+                    full_date = dt_loc.strftime("%Y-%m-%d")
+                    r['date'] = full_date if full_date != prev_date else ''
+                    r['time'] = dt_loc.strftime("%H:%M")
+                    r['_full_date'] = full_date
+                    prev_date = full_date
+                    shifted.append(r)
+                # Re-sort after conversion (rows may now cross day boundaries
+                # in either direction depending on UTC offset sign).
+                shifted.sort(key=lambda r: (r['_full_date'], r['time']))
+                prev_date = None
+                for r in shifted:
+                    full_date = r['_full_date']
+                    r['date'] = full_date if full_date != prev_date else ''
+                    prev_date = full_date
+                tide_rows = shifted
+        except Exception as e:
+            print(f"⚠️ TZ conversion failed: {e}")
+
+    for r in tide_rows:
+        r.pop('_full_date', None)
 
     # HTML-Datei erzeugen
     is_current_station = decoded_station.rstrip().endswith('Current')
