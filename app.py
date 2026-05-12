@@ -1108,14 +1108,15 @@ def stations_index():
     curr_countries = sorted(currents_by_country.keys(), key=str.lower)
     n_tides = sum(len(v) for v in by_country.values()) + len(other_tides)
     n_currents = sum(len(v) for v in currents_by_country.values()) + len(other_currents)
+    n_total = n_tides + n_currents
     base = request.url_root.rstrip("/")
 
     out = [
         '<!DOCTYPE html><html lang="en"><head>',
         '<meta charset="utf-8"/>',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>',
-        f'<title>All tide stations ({n_tides}) — Tide predictions &amp; forecasts</title>',
-        f'<meta name="description" content="Index of {n_tides} tide stations across {len(countries)} countries plus {n_currents} current stations. High and low tide times, tide curves and forecasts."/>',
+        f'<title>All stations ({n_total}) — Tide predictions &amp; forecasts</title>',
+        f'<meta name="description" content="Index of {n_total} stations ({n_tides} tide + {n_currents} current) across {len(countries)} countries. High and low tide times, tide curves and forecasts."/>',
         f'<link rel="canonical" href="{base}/stations/"/>',
         '<link rel="manifest" href="/static/manifest.webmanifest"/>',
         '<meta name="theme-color" content="#169ca5"/>',
@@ -1139,10 +1140,10 @@ def stations_index():
         '<a href="/">&larr; Back to interactive map</a>',
         '<a href="/learn/">Learn about tides &rarr;</a>',
         '</nav>',
-        f'<h1>Tide stations ({n_tides})</h1>',
-        f'<p>Index of {n_tides} tide stations across {len(countries)} countries, sorted alphabetically. '
-        f'Click any station for high/low tide times, tide curves and forecasts. '
-        f'<a href="#currents">Tidal currents ({n_currents})</a> are listed below.</p>',
+        f'<h1>All stations ({n_total})</h1>',
+        f'<p>Index of {n_total} stations &mdash; {n_tides} tide stations across {len(countries)} countries '
+        f'plus <a href="#currents">{n_currents} tidal currents</a>, sorted alphabetically. '
+        f'Click any station for high/low tide times, tide curves and forecasts.</p>',
         '<aside class="learn-cta">',
         '  <strong>New to tides?</strong> Read our short articles on '
         '  <a href="/learn/how-tides-work/">how tides work</a>, '
