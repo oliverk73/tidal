@@ -51,7 +51,37 @@ STATIONS = [
     {'code': 'pcha', 'name': 'Puerto Chacabuco', 'lat': -45.470, 'lon': -72.824},
     {'code': 'ptar', 'name': 'Punta Arenas', 'lat': -53.120, 'lon': -70.860},
     {'code': 'pwil', 'name': 'Puerto Williams', 'lat': -54.933, 'lon': -67.608},
+    # Added 2026-05-12: 12 additional coastal stations + 5 DART buoys
+    {'code': 'toco', 'name': 'Tocopilla', 'lat': -22.0937, 'lon': -70.2115},
+    {'code': 'huas', 'name': 'Huasco', 'lat': -28.4689, 'lon': -71.2499},
+    {'code': 'quir', 'name': 'Quiriquina', 'lat': -36.6361, 'lon': -73.0573},
+    {'code': 'ptch', 'name': 'Punta de Choros', 'lat': -29.2459, 'lon': -71.4687},
+    {'code': 'ntue', 'name': 'Nehuentúe', 'lat': -38.7499, 'lon': -73.4081},
+    {'code': 'quel', 'name': 'Queule', 'lat': -39.3976, 'lon': -73.2151},
+    {'code': 'pmel', 'name': 'Puerto Melinka', 'lat': -43.8985, 'lon': -73.7482},
+    {'code': 'pagi', 'name': 'Puerto Aguirre', 'lat': -45.1646, 'lon': -73.5211},
+    {'code': 'pedn', 'name': 'Puerto Edén', 'lat': -49.1298, 'lon': -74.4086},
+    {'code': 'pnat', 'name': 'Puerto Natales', 'lat': -51.7291, 'lon': -72.5157},
+    {'code': 'cmet', 'name': 'Caleta Meteoro', 'lat': -52.9610, 'lon': -74.0722},
+    {'code': 'greg', 'name': 'Bahía Gregorio', 'lat': -52.6481, 'lon': -70.2092},
+    # DART tsunami buoys — offshore, deep ocean
+    {'code': 'dchi', 'name': 'DART West of Iquique', 'lat': -20.4417, 'lon': -73.4217},
+    {'code': 'dch2', 'name': 'DART West of Antofagasta', 'lat': -23.1694, 'lon': -72.0663},
+    {'code': 'dcld', 'name': 'DART West of Caldera', 'lat': -26.7448, 'lon': -73.9845},
+    {'code': 'dval', 'name': 'DART NW of Valparaíso', 'lat': -32.1299, 'lon': -73.7962},
+    {'code': 'dch3', 'name': 'DART NW of Concepción', 'lat': -35.7470, 'lon': -75.2838},
 ]
+
+# Stations to retry with a post-earthquake window (2016+) — previous full-history
+# fits had R² < 0.5 due to large vertical jumps from 2010/2014/2015 quakes.
+RETRY_WINDOW_START = {
+    'pisa':  '2016-01-01',
+    'meji':  '2016-01-01',
+    'const': '2016-01-01',
+}
+
+# DART buoys: deep-ocean pressure (not a sea-level dataset). Override datum.
+DART_CODES = {'dchi', 'dch2', 'dcld', 'dval', 'dch3'}
 
 DATA_DIR = Path('/tmp/ioc_chile')
 
@@ -69,15 +99,23 @@ SKIP_EXISTING_UTIDE = {
 }
 
 
-def load_ioc_csv(csv_path, max_years=10.0):
-    """Load hourly IOC data from CSV."""
+def load_ioc_csv(csv_path, max_years=10.0, start_date=None, is_dart=False):
+    """Load hourly IOC data from CSV.
+
+    start_date: optional ISO date string (e.g. "2016-01-01") — overrides max_years
+    by clamping to >= start_date. Used to skip pre-earthquake data.
+    is_dart: if True, apply DART-specific cleaning (median window filter + detrend
+    against rolling median) since DART buoys have multi-meter deployment jumps.
+    """
     df = pd.read_csv(csv_path)
     times = pd.to_datetime(df['time'], utc=True)
     levels = df['waterlevel_m'].values
 
-    # Cut to last max_years
-    last_time = times.iloc[-1]
-    cutoff = last_time - pd.Timedelta(days=int(max_years * 365.25))
+    if start_date is not None:
+        cutoff = pd.Timestamp(start_date, tz='UTC')
+    else:
+        last_time = times.iloc[-1]
+        cutoff = last_time - pd.Timedelta(days=int(max_years * 365.25))
     mask = times >= cutoff
     times = times[mask].reset_index(drop=True)
     levels = levels[mask]
@@ -87,13 +125,30 @@ def load_ioc_csv(csv_path, max_years=10.0):
     times = times[valid].reset_index(drop=True)
     levels = levels[valid]
 
-    # Remove outliers (> 5 sigma)
-    mean_l = np.mean(levels)
-    std_l = np.std(levels)
-    if std_l > 0:
-        valid2 = np.abs(levels - mean_l) < 5 * std_l
+    if is_dart:
+        # DART buoys sit at ~4 km depth; absolute pressure changes by meters
+        # between deployments. Step 1: drop any sample > 5 m from the global
+        # median (gross outliers, sensor errors). Step 2: subtract a 30-day
+        # rolling median to remove inter-deployment drift while preserving
+        # sub-daily tidal signal. Result: tidal-only residual centered on zero.
+        median = np.median(levels)
+        keep = np.abs(levels - median) < 5.0
+        times = times[keep].reset_index(drop=True)
+        levels = levels[keep]
+        s = pd.Series(levels, index=times)
+        rolling = s.rolling('30D', center=True, min_periods=24).median()
+        levels = (s - rolling).values
+        valid2 = ~np.isnan(levels)
         times = times[valid2].reset_index(drop=True)
         levels = levels[valid2]
+    else:
+        # Remove outliers (> 5 sigma)
+        mean_l = np.mean(levels)
+        std_l = np.std(levels)
+        if std_l > 0:
+            valid2 = np.abs(levels - mean_l) < 5 * std_l
+            times = times[valid2].reset_index(drop=True)
+            levels = levels[valid2]
 
     dt_list = [pd.Timestamp(t).to_pydatetime().replace(tzinfo=None) for t in times]
     n_obs = len(dt_list)
@@ -114,10 +169,22 @@ def load_ioc_csv(csv_path, max_years=10.0):
 def format_station_block(station, results, data):
     """Format a single station as XTide harmonics text block."""
     name = station['name']
+    code = station['code']
+    is_dart = code in DART_CODES
+    # DART buoys aren't in Chilean waters proper; suffix " (DART)" disambiguates
+    # them in search results from a real port and tells users this is offshore.
     full_name = f"{name}, Chile"
+    if is_dart:
+        datum_label = 'Seafloor (DART pressure sensor depth)'
+        source_label = 'NDBC DART buoy via IOC; UTide harmonic analysis'
+        station_id = f"IOC-{code}-dart"
+    else:
+        datum_label = 'Station Datum'
+        source_label = 'IOC/SHOA data; UTide harmonic analysis'
+        station_id = f"IOC-{code}-chl-shoa"
 
     lines = []
-    lines.append(f"# Harmonic constants derived from IOC/SHOA sea level data")
+    lines.append(f"# Harmonic constants derived from IOC sea level data")
     lines.append(f"# using UTide (v{utide.__version__}) with {data['n_obs']} observations")
     lines.append(f"# from {data['start_time'].strftime('%Y-%m-%d')} to {data['end_time'].strftime('%Y-%m-%d')}")
     lines.append(f"# R^2 = {results['r_squared']:.4f}, RMS error = {results['rms_error']:.4f} m")
@@ -126,10 +193,10 @@ def format_station_block(station, results, data):
     lines.append(f"# {full_name}")
     lines.append(f"# BEGIN HOT COMMENTS")
     lines.append(f"# country: Chile")
-    lines.append(f"# source: Derived from IOC/SHOA data with UTide harmonic analysis")
-    lines.append(f"# station_id_context: IOC-{station['code']}-chl-shoa")
+    lines.append(f"# source: {source_label}")
+    lines.append(f"# station_id_context: {station_id}")
     lines.append(f"# date_imported: {datetime.now().strftime('%Y%m%d')}")
-    lines.append(f"# datum: Station Datum")
+    lines.append(f"# datum: {datum_label}")
     lines.append(f"# confidence: 7")
     lines.append(f"# !units: meters")
     lines.append(f"# !longitude: {station['lon']:.6f}")
@@ -146,31 +213,67 @@ def format_station_block(station, results, data):
     return '\n'.join(lines)
 
 
+R2_MIN = 0.50  # Quality cut — below this we reject the harmonic fit
+
+
 def main():
-    output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_chile.txt')
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--only-new', action='store_true',
+                        help='Only process stations not in harmonics_utide_observations.txt')
+    parser.add_argument('--output', default='/home/oliver/harmonics/utide/harmonics_utide_chile_v2.txt',
+                        help='Output path for harmonics file')
+    args = parser.parse_args()
+
+    output_path = Path(args.output)
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_observations.txt')
 
     header = read_header_from_template(template_path)
 
+    # Which station names are already present in observations.txt? We re-fit only
+    # the stations the user is asking about (not the full STATIONS list).
+    existing_names = set()
+    if args.only_new:
+        with open(template_path, 'r', encoding='latin-1') as f:
+            for line in f:
+                if line.startswith('# ') or line.startswith('#') or '!' in line[:8]:
+                    continue
+                stripped = line.strip()
+                if stripped.endswith(', Chile'):
+                    existing_names.add(stripped)
+
     blocks = []
+    rejected = []
     for station in STATIONS:
         code = station['code']
         name = station['name']
+        full_name = f"{name}, Chile"
 
         if code in SKIP_EXISTING_UTIDE:
             print(f"\n--- Skipping {name} ({code}): already in UTide observations ---")
+            continue
+        if args.only_new and full_name in existing_names and code not in RETRY_WINDOW_START:
+            print(f"\n--- Skipping {full_name}: already in observations.txt ---")
             continue
 
         # Find CSV file
         csv_candidates = list(DATA_DIR.glob(f"{code}_*.csv"))
         if not csv_candidates:
+            print(f"\n--- No CSV for {name} ({code}), skipping ---")
             continue
 
         csv_path = csv_candidates[0]
         print(f"\n{'='*60}")
         print(f"Processing: {name} ({code}) — {csv_path.name}")
 
-        data = load_ioc_csv(csv_path)
+        # Apply retry window if this station previously had a bad fit
+        retry_start = RETRY_WINDOW_START.get(code)
+        is_dart = code in DART_CODES
+        if retry_start:
+            print(f"  Retry window: starting at {retry_start}")
+            data = load_ioc_csv(csv_path, start_date=retry_start, is_dart=is_dart)
+        else:
+            data = load_ioc_csv(csv_path, is_dart=is_dart)
         if data is None:
             print(f"  Insufficient data, skipping.")
             continue
@@ -190,6 +293,11 @@ def main():
                 print(f"  M2: A={c['amplitude']:.4f} m, phase={c['phase']:.1f}°")
                 break
 
+        if results['r_squared'] < R2_MIN:
+            print(f"  REJECTED: R² {results['r_squared']:.3f} < {R2_MIN}")
+            rejected.append((full_name, results['r_squared']))
+            continue
+
         blocks.append(format_station_block(station, results, data))
 
     if blocks:
@@ -201,6 +309,11 @@ def main():
         print(f"Written {len(blocks)} stations to {output_path}")
     else:
         print("\nNo stations analyzed successfully!")
+
+    if rejected:
+        print(f"\nRejected (R² < {R2_MIN}):")
+        for n, r in rejected:
+            print(f"  {n}: R²={r:.3f}")
 
 
 if __name__ == '__main__':

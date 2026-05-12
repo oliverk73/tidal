@@ -9,7 +9,7 @@
  * deleted on activate.
  */
 
-const CACHE_VERSION   = 'v2';
+const CACHE_VERSION   = 'v3';
 const SHELL_CACHE     = `tides-shell-${CACHE_VERSION}`;
 const PAGES_CACHE     = `tides-pages-${CACHE_VERSION}`;
 const TILES_CACHE     = `tides-tiles-${CACHE_VERSION}`;
@@ -76,7 +76,12 @@ function isTileRequest(url) {
 }
 
 function isAppShellAsset(url) {
-  return url.origin === self.location.origin && (
+  if (url.origin !== self.location.origin) return false;
+  // Data files (e.g. leaflet_markers_data.json) update with every harmonics
+  // release; stale-while-revalidate would show users yesterday's station list
+  // and break search → marker lookups for fresh entries.
+  if (url.pathname.endsWith('.json')) return false;
+  return (
     url.pathname.startsWith('/static/css/') ||
     url.pathname.startsWith('/static/js/')  ||
     url.pathname === '/static/manifest.webmanifest'

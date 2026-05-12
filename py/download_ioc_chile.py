@@ -45,6 +45,25 @@ STATIONS = [
     {'code': 'pcha', 'name': 'Puerto Chacabuco', 'lat': -45.470, 'lon': -72.824, 'start': 2009},
     {'code': 'ptar', 'name': 'Punta Arenas', 'lat': -53.120, 'lon': -70.860, 'start': 2012},
     {'code': 'pwil', 'name': 'Puerto Williams', 'lat': -54.933, 'lon': -67.608, 'start': 2009},
+    # Added 2026-05-12: 12 additional coastal stations + 5 DART buoys
+    {'code': 'toco', 'name': 'Tocopilla', 'lat': -22.0937, 'lon': -70.2115, 'start': 2024},
+    {'code': 'huas', 'name': 'Huasco', 'lat': -28.4689, 'lon': -71.2499, 'start': 2024},
+    {'code': 'quir', 'name': 'Quiriquina', 'lat': -36.6361, 'lon': -73.0573, 'start': 2014},
+    {'code': 'ptch', 'name': 'Punta de Choros', 'lat': -29.2459, 'lon': -71.4687, 'start': 2020},
+    {'code': 'ntue', 'name': 'Nehuentúe', 'lat': -38.7499, 'lon': -73.4081, 'start': 2018},
+    {'code': 'quel', 'name': 'Queule', 'lat': -39.3976, 'lon': -73.2151, 'start': 2014},
+    {'code': 'pmel', 'name': 'Puerto Melinka', 'lat': -43.8985, 'lon': -73.7482, 'start': 2014},
+    {'code': 'pagi', 'name': 'Puerto Aguirre', 'lat': -45.1646, 'lon': -73.5211, 'start': 2023},
+    {'code': 'pedn', 'name': 'Puerto Edén', 'lat': -49.1298, 'lon': -74.4086, 'start': 2014},
+    {'code': 'pnat', 'name': 'Puerto Natales', 'lat': -51.7291, 'lon': -72.5157, 'start': 2023},
+    {'code': 'cmet', 'name': 'Caleta Meteoro', 'lat': -52.9610, 'lon': -74.0722, 'start': 2014},
+    {'code': 'greg', 'name': 'Bahía Gregorio', 'lat': -52.6481, 'lon': -70.2092, 'start': 2018},
+    # DART tsunami buoys (deep-ocean pressure ~4-5 km depth, 15-min sampling)
+    {'code': 'dchi', 'name': 'DART West of Iquique', 'lat': -20.4417, 'lon': -73.4217, 'start': 2014},
+    {'code': 'dch2', 'name': 'DART West of Antofagasta', 'lat': -23.1694, 'lon': -72.0663, 'start': 2021},
+    {'code': 'dcld', 'name': 'DART West of Caldera', 'lat': -26.7448, 'lon': -73.9845, 'start': 2014},
+    {'code': 'dval', 'name': 'DART NW of Valparaíso', 'lat': -32.1299, 'lon': -73.7962, 'start': 2021},
+    {'code': 'dch3', 'name': 'DART NW of Concepción', 'lat': -35.7470, 'lon': -75.2838, 'start': 2022},
 ]
 
 OUTPUT_DIR = Path('/tmp/ioc_chile')
