@@ -19,9 +19,18 @@ harmonics/utide/checkpoints*/
 harmonics/utide/bak/
 harmonics/utide/harmonics_utide_lat/
 harmonics/utide/batch_utide.log
+harmonics/utide/*.bak-*
 harmonics/help/*
 !harmonics/help/station_seas.json
 harmonics/classic_original/
+
+# Country-specific UTide intermediates: data is merged into observations.txt
+# or tidetables.txt, so these standalone audit files shouldn't be tracked.
+# Keep only the 3 aggregate production files.
+harmonics/utide/harmonics_utide_*.txt
+!harmonics/utide/harmonics_utide_observations.txt
+!harmonics/utide/harmonics_utide_tidetables.txt
+!harmonics/utide/harmonics_utide_currents.txt
 
 # Windows Zone.Identifier metadata
 *:Zone.Identifier
