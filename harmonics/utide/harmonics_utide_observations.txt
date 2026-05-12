@@ -269494,3 +269494,656 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+
+#
+# First line:  name of location
+# Second line:  time meridian [whitespace] tzfile
+# Third line:  DATUM [whitespace] units
+# Remaining lines:  identifier [whitespace] amplitude [whitespace] epoch
+#
+# The DATUM is the mean lower low water or equivalent constant for
+# calibrating the tide height.
+#
+# The time meridian takes the format [-]HH:MM and is hours east of
+# Greenwich.  For most data sets calibrated to Local Standard Time,
+# this is your time zone displacement in the _winter_.  Do not include
+# Daylight Savings Time!  If a data set is calibrated to GMT / UTC,
+# the meridian should be set to 0:00.
+#
+# The tzfile is a reference to a file in the zoneinfo directory as
+# described in the man page for tzset.
+#
+# Epoch is "modified" or "adapted" epoch in degrees, also known as
+# Kappa Prime.
+#
+# The constituent identifiers are for readability only.  XTide assumes
+# that they are in the same order as defined above.
+#
+# These data sets are distributed in the hope that they will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+#
+#
+# UTide harmonic analysis -- aggregated statistics (observations)
+# total_stations: 1243
+# utide_method: solve(constit='auto', conf_int='MC')
+# utide_version: 0.3.1
+# utide_data_points: 2114 - 3228960 (median 138183)
+# utide_period: 1937-06-01 - 2026-04-06  (per-station detail: # utide: line)
+# utide_r2_range: 0.0073 - 0.9999 (median 0.9864)
+# utide_rms_error_range: 0.0037 - 10.1404 (median 0.0683) m
+# utide_constituents: 35 - 92 (median 68)
+# sources:
+#     132  Derived from UHSLC data with UTide harmonic analysis
+#      93  Derived from Rijkswaterstaat astronomical tide data with UTide
+#      90  Derived from Pegelonline data with UTide harmonic analysis
+#      70  Derived from SHOM REFMAR observed data with UTide harmonic analysis
+#      54  Derived from IWLS data with UTide harmonic analysis
+#      52  Derived from UHSLC hourly data with UTide harmonic analysis
+#      47  Derived from waterinfo.be observed data with UTide harmonic analysis
+#      44  Derived from BODC NTGN data with UTide harmonic analysis
+#      19  Derived from UHSLC ERDDAP observed data with UTide harmonic analysis
+#      15  Derived from Marine Institute Ireland observed data with UTide harmonic analysis
+#      13  Derived from CMEMS NOOS data with UTide harmonic analysis
+#      11  Derived from BOM ABSLMP observed data with UTide harmonic analysis
+#   ... (325 more sources, see harmonics/help/phase3/audit_<class>.csv)
+# countries:
+#   Japan=478, Germany=96, Netherlands=93, France=74, Canada=63, United Kingdom=57
+#   Belgium=47, Australia=41, Norway=31, Mexico=29, Indonesia=17, Ireland=17
+#   New Zealand=17, Portugal=17, Papua New Guinea=10, South Africa=10, Brazil=9, Peru=9
+#   Philippines=9, Chile=8, India=8, Russia=8, Argentina=7, Bangladesh=7
+#   Colombia=5, Panama=4, Mozambique=3, Angola=3, Costa Rica=3, El Salvador=3
+#   Oman=3, Thailand=3, UK=3, Vietnam=3, Myanmar=2, Cuba=2
+#   Cayman Islands=2, Iran=2, Morocco=2, Pakistan=2
+#   ... (31 more countries)
+# detail_table: harmonics/help/phase3/audit_observations.csv
+#
+# ------------- End congen output -------------
+# Harmonic constants derived from IOC/UHSLC sea level data
+# using UTide (v0.3.1) with 69325 observations
+# from 2014-03-31 to 2026-03-31
+# R^2 = 0.8448, RMS error = 0.1141 m
+# Constituents analyzed: 67
+#
+# Trieste, Italy
+# BEGIN HOT COMMENTS
+# country: Italy
+# source: UHSLC Fast Delivery; UTide harmonic analysis
+# station_id_context: trie-it
+# date_imported: 20260512
+# datum: Station Datum (detrended residual)
+# confidence: 7
+# !units: meters
+# !longitude: 13.760000
+# !latitude: 45.647000
+Trieste, Italy
++00:00 :Europe/Rome
+-0.0108 meters
+J1              0.0131  78.90
+K1              0.1750  57.80
+K2              0.0466  251.04
+L2              0.0092  245.11
+x 0 0
+M2              0.2568  251.40
+M3              0.0077  163.95
+M4              0.0005  284.59
+M6              0.0011  43.83
+M8              0.0005  288.93
+N2              0.0434  250.07
+2N2             0.0050  250.57
+O1              0.0520  49.60
+OO1             0.0084  78.21
+P1              0.0564  54.40
+Q1              0.0090  62.05
+2Q1             0.0016  62.79
+R2              0.0033  316.74
+x 0 0
+S2              0.1528  258.40
+S4              0.0008  304.57
+x 0 0
+T2              0.0086  279.85
+LDA2            0.0030  245.23
+MU2             0.0060  269.83
+NU2             0.0083  247.33
+RHO1            0.0031  80.17
+MK3             0.0012  230.80
+x 0 0
+MN4             0.0004  199.92
+MS4             0.0007  13.49
+x 0 0
+MF              0.0072  181.43
+MSF             0.0051  238.66
+MM              0.0040  219.19
+x 0 0
+SSA             0.0008  137.75
+SA-IOS          0.0047  336.37
+x 0 0
+S1-IOS          0.0211  252.40
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0005  150.30
+2MK6            0.0012  66.10
+x 0 0
+2MN6            0.0006  62.97
+2MS6            0.0027  66.27
+x 0 0
+2SK5            0.0020  314.55
+2SM6            0.0019  40.29
+3MK7            0.0006  218.26
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0009  72.90
+BET1            0.0017  119.66
+CHI1            0.0011  22.30
+H1              0.0029  160.68
+H2              0.0037  137.98
+x 0 0
+ETA2            0.0028  260.24
+x 0 0
+UPS1            0.0017  88.05
+x 0 0
+x 0 0
+MK4             0.0003  352.80
+MKS2            0.0013  149.66
+x 0 0
+EPS2            0.0011  277.43
+MO3             0.0027  237.37
+x 0 0
+TAU1            0.0033  135.32
+x 0 0
+MSK6            0.0006  70.16
+MSM             0.0053  250.48
+MSN2            0.0009  3.30
+x 0 0
+x 0 0
+NO1             0.0058  63.54
+x 0 0
+OQ2             0.0006  243.94
+PHI1            0.0051  22.76
+x 0 0
+PI1             0.0049  22.09
+x 0 0
+PSI1            0.0025  122.72
+x 0 0
+x 0 0
+SIG1            0.0019  83.06
+SK3             0.0041  112.67
+SK4             0.0005  288.14
+SN4             0.0001  95.53
+x 0 0
+SO1             0.0025  172.79
+SO3             0.0021  270.12
+THE1            0.0028  28.99
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+
+# Harmonic constants derived from IOC/UHSLC sea level data
+# using UTide (v0.3.1) with 51143 observations
+# from 2020-01-01 to 2025-12-31
+# R^2 = 0.6681, RMS error = 0.0663 m
+# Constituents analyzed: 67
+#
+# Sobra, Croatia
+# BEGIN HOT COMMENTS
+# country: Croatia
+# source: IOC sea level data; UTide harmonic analysis
+# station_id_context: sobr-cr
+# date_imported: 20260512
+# datum: Station Datum (detrended residual)
+# confidence: 7
+# !units: meters
+# !longitude: 17.620000
+# !latitude: 42.793000
+Sobra, Croatia
++00:00 :Europe/Zagreb
+0.0032 meters
+J1              0.0031  65.83
+K1              0.0523  33.74
+K2              0.0180  62.88
+L2              0.0039  55.15
+x 0 0
+M2              0.0956  64.39
+M3              0.0010  203.88
+M4              0.0006  216.65
+M6              0.0001  110.14
+x 0 0
+N2              0.0155  64.66
+2N2             0.0018  63.53
+O1              0.0186  22.21
+OO1             0.0020  57.28
+P1              0.0168  31.67
+Q1              0.0033  47.82
+2Q1             0.0008  59.88
+R2              0.0009  152.13
+x 0 0
+S2              0.0602  69.00
+S4              0.0005  268.34
+x 0 0
+T2              0.0034  83.37
+LDA2            0.0007  58.52
+MU2             0.0023  71.73
+NU2             0.0028  70.18
+RHO1            0.0003  41.74
+MK3             0.0002  138.35
+x 0 0
+MN4             0.0003  188.65
+MS4             0.0005  266.31
+x 0 0
+MF              0.0043  176.11
+MSF             0.0040  271.25
+MM              0.0105  282.13
+x 0 0
+SSA             0.0042  176.99
+SA-IOS          0.0018  288.84
+x 0 0
+S1-IOS          0.0017  226.04
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0001  158.87
+x 0 0
+x 0 0
+2MN6            0.0001  170.16
+2MS6            0.0001  186.13
+x 0 0
+2SK5            0.0001  159.24
+2SM6            0.0001  228.96
+3MK7            0.0001  25.15
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0005  63.14
+BET1            0.0001  35.29
+CHI1            0.0004  54.40
+H1              0.0012  27.97
+H2              0.0007  338.59
+x 0 0
+ETA2            0.0013  69.24
+x 0 0
+UPS1            0.0007  86.39
+x 0 0
+x 0 0
+MK4             0.0002  313.26
+MKS2            0.0002  277.70
+x 0 0
+EPS2            0.0005  84.60
+MO3             0.0004  300.17
+x 0 0
+TAU1            0.0004  67.94
+x 0 0
+x 0 0
+MSM             0.0128  310.10
+MSN2            0.0002  157.50
+x 0 0
+x 0 0
+NO1             0.0024  29.83
+x 0 0
+OQ2             0.0004  87.86
+PHI1            0.0011  14.00
+x 0 0
+PI1             0.0015  342.19
+x 0 0
+PSI1            0.0009  37.39
+x 0 0
+x 0 0
+SIG1            0.0008  60.93
+SK3             0.0008  126.15
+SK4             0.0001  273.99
+SN4             0.0001  194.18
+x 0 0
+SO1             0.0003  141.13
+SO3             0.0004  273.58
+THE1            0.0010  47.37
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+
+# Harmonic constants derived from IOC/UHSLC sea level data
+# using UTide (v0.3.1) with 52473 observations
+# from 2020-01-01 to 2025-12-31
+# R^2 = 0.6509, RMS error = 0.0730 m
+# Constituents analyzed: 67
+#
+# Stari Grad, Croatia
+# BEGIN HOT COMMENTS
+# country: Croatia
+# source: IOC sea level data; UTide harmonic analysis
+# station_id_context: stari-cr
+# date_imported: 20260512
+# datum: Station Datum (detrended residual)
+# confidence: 7
+# !units: meters
+# !longitude: 16.576000
+# !latitude: 43.181000
+Stari Grad, Croatia
++00:00 :Europe/Zagreb
+0.0075 meters
+J1              0.0052  59.73
+K1              0.0821  33.42
+K2              0.0161  74.35
+L2              0.0030  73.64
+x 0 0
+M2              0.0772  79.45
+M3              0.0027  305.27
+M4              0.0013  298.54
+M6              0.0003  279.46
+M8              0.0001  288.38
+N2              0.0123  81.25
+2N2             0.0013  81.39
+O1              0.0264  23.21
+OO1             0.0031  52.73
+P1              0.0280  28.90
+Q1              0.0048  44.42
+2Q1             0.0009  29.37
+R2              0.0008  168.61
+x 0 0
+S2              0.0538  80.46
+S4              0.0007  342.10
+x 0 0
+T2              0.0028  95.86
+LDA2            0.0009  89.46
+MU2             0.0021  96.27
+NU2             0.0022  91.04
+RHO1            0.0009  45.82
+MK3             0.0003  333.01
+x 0 0
+MN4             0.0006  275.86
+MS4             0.0009  342.39
+x 0 0
+MF              0.0051  179.55
+MSF             0.0041  262.11
+MM              0.0107  284.26
+x 0 0
+SSA             0.0078  179.49
+SA-IOS          0.0034  245.47
+x 0 0
+S1-IOS          0.0074  243.92
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0003  318.01
+2MK6            0.0002  280.88
+x 0 0
+2MN6            0.0004  296.07
+2MS6            0.0009  310.25
+x 0 0
+2SK5            0.0002  217.79
+2SM6            0.0004  355.19
+3MK7            0.0002  308.73
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0005  56.72
+BET1            0.0008  72.34
+CHI1            0.0011  17.81
+H1              0.0007  64.12
+H2              0.0005  60.74
+x 0 0
+ETA2            0.0017  98.20
+x 0 0
+UPS1            0.0010  70.50
+x 0 0
+x 0 0
+MK4             0.0002  310.17
+MKS2            0.0003  253.82
+x 0 0
+EPS2            0.0006  67.11
+MO3             0.0009  15.04
+x 0 0
+TAU1            0.0007  63.84
+x 0 0
+MSK6            0.0004  17.89
+MSM             0.0138  300.26
+MSN2            0.0008  167.49
+x 0 0
+x 0 0
+NO1             0.0034  22.21
+x 0 0
+OQ2             0.0003  12.14
+PHI1            0.0023  10.14
+x 0 0
+PI1             0.0020  346.52
+x 0 0
+PSI1            0.0017  14.50
+x 0 0
+x 0 0
+SIG1            0.0012  40.09
+SK3             0.0012  217.17
+x 0 0
+SN4             0.0004  335.50
+x 0 0
+SO1             0.0006  171.98
+SO3             0.0002  221.28
+THE1            0.0013  36.20
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
