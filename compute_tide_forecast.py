@@ -14,7 +14,7 @@ Binary encoding:
   → +1500 = +1.5m,  -800 = -0.8m,  -32768 = no data (land)
 
 Usage:
-    python3 download_tide_forecast.py [--hours 24] [--step 1] [--res 0.5]
+    python3 compute_tide_forecast.py [--hours 24] [--step 1] [--res 0.5]
 """
 
 import os
