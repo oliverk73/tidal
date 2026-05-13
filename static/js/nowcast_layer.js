@@ -109,8 +109,8 @@ class NowcastCanvasLayer {
     this.map.getContainer().querySelector('.leaflet-overlay-pane').appendChild(canvas);
     this.map.on('moveend zoomend resize', this._onMoveEnd);
 
-    // Show coverage rectangles
-    this._showCoverage();
+    // Coverage rectangles disabled — visual clutter with many regions.
+    // Enable via showCoverageBoxes() if needed for debugging.
 
     // Start at "now" frame
     const r0 = this.regions[0];
@@ -130,7 +130,8 @@ class NowcastCanvasLayer {
     this._hideCoverage();
   }
 
-  _showCoverage() {
+  // Optional debugging helper — call showCoverageBoxes() from console to see them.
+  showCoverageBoxes() {
     this._hideCoverage();
     for (var i = 0; i < this.regions.length; i++) {
       var g = this.regions[i].meta.grid;
