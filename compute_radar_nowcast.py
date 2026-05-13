@@ -441,8 +441,8 @@ def run_region_nowcast(region_name, region, api_data, forecast_minutes, forecast
 
 def main():
     parser = argparse.ArgumentParser(description="Compute radar nowcast via PySTEPS + RainViewer")
-    parser.add_argument("--regions", type=str, default="europe",
-                        help=f"Comma-separated regions: {','.join(REGIONS.keys())} (default: europe)")
+    parser.add_argument("--regions", type=str, default=",".join(REGIONS.keys()),
+                        help=f"Comma-separated regions (default: ALL = {','.join(REGIONS.keys())})")
     parser.add_argument("--forecast-minutes", type=int, default=60,
                         help="Minutes to forecast ahead (default: 60)")
     parser.add_argument("--forecast-step", type=int, default=10,
