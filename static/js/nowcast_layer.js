@@ -109,8 +109,8 @@ class NowcastCanvasLayer {
     this.map.getContainer().querySelector('.leaflet-overlay-pane').appendChild(canvas);
     this.map.on('moveend zoomend resize', this._onMoveEnd);
 
-    // Coverage rectangles disabled — visual clutter with many regions.
-    // Enable via showCoverageBoxes() if needed for debugging.
+    // Windy-style coverage mask: dark overlay where there's no radar.
+    this._showCoverage();
 
     // Start at "now" frame
     const r0 = this.regions[0];
@@ -130,20 +130,46 @@ class NowcastCanvasLayer {
     this._hideCoverage();
   }
 
-  // Optional debugging helper — call showCoverageBoxes() from console to see them.
-  showCoverageBoxes() {
+  // Windy-style coverage mask: one polygon covering the whole world with
+  // holes for each radar-coverage region. Areas with NO radar appear darkened,
+  // areas WITH radar look like the normal map underneath.
+  _showCoverage() {
     this._hideCoverage();
+    if (this.regions.length === 0) return;
+
+    // Outer ring: full world (clockwise)
+    var outer = [[85, -180], [85, 180], [-85, 180], [-85, -180]];
+
+    // Holes: each region bbox (Leaflet handles winding internally)
+    var holes = [];
     for (var i = 0; i < this.regions.length; i++) {
       var g = this.regions[i].meta.grid;
-      var desc = this.regions[i].meta.description || this.regions[i].meta.region || '';
-      var rect = L.rectangle(
-        [[g.la2, g.lo1], [g.la1, g.lo2]],
-        { color: '#4488cc', weight: 1.5, fillOpacity: 0.03, dashArray: '6,4', interactive: false }
-      );
-      rect.bindTooltip('Nowcast: ' + desc, { sticky: true, opacity: 0.8 });
-      rect.addTo(this.map);
-      this._coverageRects.push(rect);
+      var latN = Math.max(g.la1, g.la2);
+      var latS = Math.min(g.la1, g.la2);
+      var lonW = Math.min(g.lo1, g.lo2);
+      var lonE = Math.max(g.lo1, g.lo2);
+      holes.push([
+        [latN, lonW],
+        [latN, lonE],
+        [latS, lonE],
+        [latS, lonW]
+      ]);
     }
+
+    var mask = L.polygon([outer].concat(holes), {
+      stroke: false,
+      fillColor: '#000',
+      fillOpacity: 0.35,
+      interactive: false
+    });
+    mask.addTo(this.map);
+    // Push the mask BELOW the canvas in the overlay pane so the radar
+    // pixels render on top of it.
+    var el = mask._renderer && mask._renderer._container;
+    if (el && el.parentNode) {
+      el.parentNode.insertBefore(el, el.parentNode.firstChild);
+    }
+    this._coverageRects.push(mask);
   }
 
   _hideCoverage() {
