@@ -62,6 +62,7 @@ class NowcastCanvasLayer {
       if (this.active) {
         this._renderViewKey = '';
         this._frameRenderCache = {};
+        this._renderCoverageMask();
         this.render();
       }
     };
@@ -107,10 +108,12 @@ class NowcastCanvasLayer {
     canvas.style.imageRendering = 'auto';
     this.canvas = canvas;
     this.map.getContainer().querySelector('.leaflet-overlay-pane').appendChild(canvas);
-    this.map.on('moveend zoomend resize', this._onMoveEnd);
-
-    // Windy-style coverage mask: dark overlay where there's no radar.
+    // Windy-style coverage mask canvas: rendered BEFORE radar canvas so it
+    // sits underneath. Repainted on every map move/zoom/resize together with
+    // the radar canvas via _onMoveEnd.
     this._showCoverage();
+
+    this.map.on('moveend zoomend resize', this._onMoveEnd);
 
     // Start at "now" frame
     const r0 = this.regions[0];
@@ -130,46 +133,55 @@ class NowcastCanvasLayer {
     this._hideCoverage();
   }
 
-  // Windy-style coverage mask: one polygon covering the whole world with
-  // holes for each radar-coverage region. Areas with NO radar appear darkened,
-  // areas WITH radar look like the normal map underneath.
+  // Windy-style coverage mask: dark canvas covering the whole viewport with
+  // coverage regions "punched out" via destination-out. Handles overlapping
+  // regions correctly (SVG polygon-with-holes uses even-odd rule which flips
+  // back to filled inside overlapping holes).
   _showCoverage() {
     this._hideCoverage();
     if (this.regions.length === 0) return;
+    var c = L.DomUtil.create('canvas');
+    c.style.position = 'absolute';
+    c.style.pointerEvents = 'none';
+    c.style.zIndex = '200';   // below radar canvas (453), above tile layer
+    this._maskCanvas = c;
+    this.map.getContainer().querySelector('.leaflet-overlay-pane').appendChild(c);
+    this._renderCoverageMask();
+  }
 
-    // Outer ring: full world (clockwise)
-    var outer = [[85, -180], [85, 180], [-85, 180], [-85, -180]];
+  _renderCoverageMask() {
+    var c = this._maskCanvas;
+    if (!c) return;
+    var size = this.map.getSize();
+    var topLeft = this.map.containerPointToLayerPoint([0, 0]);
+    c.width = size.x;
+    c.height = size.y;
+    c.style.width = size.x + 'px';
+    c.style.height = size.y + 'px';
+    L.DomUtil.setPosition(c, topLeft);
 
-    // Holes: each region bbox (Leaflet handles winding internally)
-    var holes = [];
+    var ctx = c.getContext('2d');
+    ctx.clearRect(0, 0, size.x, size.y);
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+    ctx.fillRect(0, 0, size.x, size.y);
+
+    // Punch out each region bbox (destination-out treats alpha as eraser)
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.fillStyle = 'rgba(0, 0, 0, 1)';
     for (var i = 0; i < this.regions.length; i++) {
       var g = this.regions[i].meta.grid;
       var latN = Math.max(g.la1, g.la2);
       var latS = Math.min(g.la1, g.la2);
       var lonW = Math.min(g.lo1, g.lo2);
       var lonE = Math.max(g.lo1, g.lo2);
-      holes.push([
-        [latN, lonW],
-        [latN, lonE],
-        [latS, lonE],
-        [latS, lonW]
-      ]);
+      var nw = this.map.latLngToContainerPoint([latN, lonW]);
+      var se = this.map.latLngToContainerPoint([latS, lonE]);
+      ctx.fillRect(
+        Math.min(nw.x, se.x), Math.min(nw.y, se.y),
+        Math.abs(se.x - nw.x), Math.abs(se.y - nw.y)
+      );
     }
-
-    var mask = L.polygon([outer].concat(holes), {
-      stroke: false,
-      fillColor: '#000',
-      fillOpacity: 0.35,
-      interactive: false
-    });
-    mask.addTo(this.map);
-    // Push the mask BELOW the canvas in the overlay pane so the radar
-    // pixels render on top of it.
-    var el = mask._renderer && mask._renderer._container;
-    if (el && el.parentNode) {
-      el.parentNode.insertBefore(el, el.parentNode.firstChild);
-    }
-    this._coverageRects.push(mask);
+    ctx.globalCompositeOperation = 'source-over';
   }
 
   _hideCoverage() {
@@ -177,6 +189,10 @@ class NowcastCanvasLayer {
       this.map.removeLayer(this._coverageRects[i]);
     }
     this._coverageRects = [];
+    if (this._maskCanvas && this._maskCanvas.parentNode) {
+      this._maskCanvas.parentNode.removeChild(this._maskCanvas);
+    }
+    this._maskCanvas = null;
   }
 
   async showFrame(idx) {
