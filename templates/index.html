@@ -710,6 +710,25 @@
     var ocDataCache = {};
     var ocCacheKeys = [];     // LRU order for cache eviction
     var OC_CACHE_MAX = 6;     // keep at most 6 frames in memory
+    var ocLandMask = null;
+
+    async function ocLoadLandMask() {
+      if (ocLandMask) return ocLandMask;
+      // Reuse the pane created by the tide layer if it already exists, else create our own
+      if (!map.getPane('ocLandMask')) {
+        var p = map.createPane('ocLandMask');
+        p.style.zIndex = '401';   // above leaflet-velocity (default overlayPane=400), below markers
+        p.style.pointerEvents = 'none';
+      }
+      var resp = await fetch('/static/ne_10m_land.geojson');
+      var geojson = await resp.json();
+      ocLandMask = L.geoJSON(geojson, {
+        pane: 'ocLandMask',
+        style: { fillColor: '#f2efe9', fillOpacity: 1.0, stroke: false },
+        interactive: false,
+      });
+      return ocLandMask;
+    }
 
     async function ocLoadMeta() {
       var resp = await fetch('/static/ocean_currents/ocean_currents_meta.json?t=' + Date.now());
@@ -747,6 +766,7 @@
       if (ocVelocityLayer) {
         ocVelocityLayer.setData(data);
       } else {
+        ocLoadLandMask().then(function (lm) { if (ocVelocityLayer) lm.addTo(map); });
         ocVelocityLayer = L.velocityLayer({
           displayValues: true,
           displayOptions: {
@@ -787,6 +807,7 @@
       map.off('moveend zoomend', ocShow);
       if (ocHideTimer) { clearTimeout(ocHideTimer); ocHideTimer = null; }
       if (ocVelocityLayer) { map.removeLayer(ocVelocityLayer); ocVelocityLayer = null; }
+      if (ocLandMask && map.hasLayer(ocLandMask)) { map.removeLayer(ocLandMask); }
       ocDataCache = {};
       ocCacheKeys = [];
     }
