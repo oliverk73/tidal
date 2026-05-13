@@ -27,12 +27,13 @@ OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
 HYCOM_URL = ("https://tds.hycom.org/thredds/dodsC/"
              "FMRC_ESPC-D-V02_uv3z/FMRC_ESPC-D-V02_uv3z_best.ncd")
 
-# Predefined regions (lat_min, lat_max, lon_min, lon_max in HYCOM 0-360 system)
+# Predefined regions (lat_min, lat_max, lon_min, lon_max).
+# Negative lon_min triggers wrap branch which produces correct -180..180 output.
 REGIONS = {
-    "europe":    (30, 72, 345, 375),   # 345==-15E, 375==15E (wraps around 360)
+    "europe":    (30, 72, 345, 375),    # 345==-15E, 375==15E (wraps around 360)
     "north_sea": (48, 62, 350, 370),
-    "atlantic":  (20, 72, 280, 375),   # 280==-80W (inkl. US-Ostküste + Kanada)
-    "global":    (-70, 80, 0, 360),
+    "atlantic":  (20, 72, 280, 375),    # 280==-80W (inkl. US-Ostküste + Kanada)
+    "global":    (-70, 80, -180, 180),  # full earth, output -180..180
 }
 
 
@@ -172,7 +173,7 @@ def main():
                         help="Hour step between frames (default: 3)")
     parser.add_argument("--res", type=float, default=0.16,
                         help="Target resolution in degrees (default: 0.16)")
-    parser.add_argument("--region", default="europe",
+    parser.add_argument("--region", default="global",
                         choices=REGIONS.keys(),
                         help="Region to download (default: europe)")
     args = parser.parse_args()
