@@ -152,23 +152,38 @@
     new LocateControl().addTo(map);
 
     // --- Basemap: OSM (Standard) + CARTO Voyager (dezent, für Overlays) ---
+    // Voyager wird in "no-labels" Base + "only-labels" Top-Layer gesplittet,
+    // damit Ortsnamen ÜBER Daten-Overlays + Land-Masken liegen und nicht
+    // an Küsten halb verdeckt werden.
     const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
-    const cartoLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    const cartoBase = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd', maxZoom: 20
+    });
+    // Labels gehen in eigenen Pane oberhalb der Overlays + Land-Masken.
+    if (!map.getPane('cartoLabels')) {
+      var lp = map.createPane('cartoLabels');
+      lp.style.zIndex = '650';
+      lp.style.pointerEvents = 'none';
+    }
+    const cartoLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png', {
+      pane: 'cartoLabels',
       subdomains: 'abcd', maxZoom: 20
     });
     let activeBasemap = osmLayer;
     osmLayer.addTo(map);
 
     function switchBasemap(toOverlayStyle) {
-      if (toOverlayStyle && activeBasemap !== cartoLayer) {
+      if (toOverlayStyle && activeBasemap !== cartoBase) {
         map.removeLayer(osmLayer);
-        cartoLayer.addTo(map);
-        activeBasemap = cartoLayer;
+        cartoBase.addTo(map);
+        cartoLabels.addTo(map);
+        activeBasemap = cartoBase;
       } else if (!toOverlayStyle && activeBasemap !== osmLayer) {
-        map.removeLayer(cartoLayer);
+        map.removeLayer(cartoBase);
+        map.removeLayer(cartoLabels);
         osmLayer.addTo(map);
         activeBasemap = osmLayer;
       }
