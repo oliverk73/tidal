@@ -960,7 +960,6 @@
     });
     // --- PySTEPS Radar Nowcast Layer (Canvas, regional) ---
     const nowcastLayer = new NowcastCanvasLayer(map);
-    const NF_REGIONS = ['europe', 'usa'];
 
     async function nfLoadAllRegions() {
       nowcastLayer.deactivate();
@@ -969,6 +968,9 @@
       document.getElementById('nf-loading').textContent = 'Loading data...';
       document.getElementById('nf-player').style.display = 'none';
       try {
+        const idxResp = await fetch('/static/nowcast/nowcast_index.json?t=' + Date.now());
+        const idxData = await idxResp.json();
+        const NF_REGIONS = Object.keys(idxData.regions || {});
         await Promise.all(NF_REGIONS.map(function (r) {
           return nowcastLayer.addRegion('/static/nowcast/' + r + '/nowcast_meta.json');
         }));

@@ -56,28 +56,111 @@ REGIONS = {
         "lon_min": -125.0,
         "lon_max": -65.0,
     },
-    # --- Duplikate: bereits durch "europe" abgedeckt ---
-    # "uk": {
-    #     "description": "Großbritannien & Irland",
-    #     "lat_min": 49.0,
-    #     "lat_max": 60.0,
-    #     "lon_min": -11.0,
-    #     "lon_max": 3.0,
-    # },
-    # "scandinavia": {
-    #     "description": "Skandinavien (NO, SE, FI, DK)",
-    #     "lat_min": 54.0,
-    #     "lat_max": 72.0,
-    #     "lon_min": 3.0,
-    #     "lon_max": 32.0,
-    # },
-    # "mediterranean": {
-    #     "description": "Mittelmeer (FR, ES, IT, GR, HR)",
-    #     "lat_min": 34.0,
-    #     "lat_max": 48.0,
-    #     "lon_min": -10.0,
-    #     "lon_max": 28.0,
-    # },
+    "australia": {
+        "description": "Australien",
+        "lat_min": -44.0,
+        "lat_max": -10.0,
+        "lon_min": 112.0,
+        "lon_max": 154.0,
+    },
+    "new_zealand": {
+        "description": "Neuseeland",
+        "lat_min": -48.0,
+        "lat_max": -34.0,
+        "lon_min": 165.0,
+        "lon_max": 180.0,
+    },
+    "south_africa": {
+        "description": "Südafrika",
+        "lat_min": -35.0,
+        "lat_max": -22.0,
+        "lon_min": 14.0,
+        "lon_max": 34.0,
+    },
+    "japan_korea": {
+        "description": "Japan & Südkorea",
+        "lat_min": 30.0,
+        "lat_max": 46.0,
+        "lon_min": 124.0,
+        "lon_max": 146.0,
+    },
+    "brazil": {
+        "description": "Brasilien",
+        "lat_min": -34.0,
+        "lat_max": 6.0,
+        "lon_min": -75.0,
+        "lon_max": -34.0,
+    },
+    "mexico": {
+        "description": "Mexiko",
+        "lat_min": 14.0,
+        "lat_max": 33.0,
+        "lon_min": -118.0,
+        "lon_max": -86.0,
+    },
+    "canada": {
+        "description": "Kanada",
+        "lat_min": 49.0,
+        "lat_max": 72.0,
+        "lon_min": -141.0,
+        "lon_max": -52.0,
+    },
+    "central_am": {
+        "description": "Mittelamerika & Karibik",
+        "lat_min": 6.0,
+        "lat_max": 18.0,
+        "lon_min": -95.0,
+        "lon_max": -60.0,
+    },
+    "patagonia": {
+        "description": "Argentinien & Chile",
+        "lat_min": -56.0,
+        "lat_max": -22.0,
+        "lon_min": -78.0,
+        "lon_max": -34.0,
+    },
+    "africa": {
+        "description": "Afrika (außer Südafrika)",
+        "lat_min": -22.0,
+        "lat_max": 38.0,
+        "lon_min": -18.0,
+        "lon_max": 52.0,
+    },
+    "middle_east": {
+        "description": "Naher Osten",
+        "lat_min": 5.0,
+        "lat_max": 42.0,
+        "lon_min": 32.0,
+        "lon_max": 65.0,
+    },
+    "south_asia": {
+        "description": "Indischer Subkontinent",
+        "lat_min": 5.0,
+        "lat_max": 37.0,
+        "lon_min": 68.0,
+        "lon_max": 98.0,
+    },
+    "east_asia": {
+        "description": "China & Mongolei",
+        "lat_min": 18.0,
+        "lat_max": 50.0,
+        "lon_min": 98.0,
+        "lon_max": 124.0,
+    },
+    "se_asia": {
+        "description": "Südostasien & Indonesien",
+        "lat_min": -11.0,
+        "lat_max": 28.0,
+        "lon_min": 92.0,
+        "lon_max": 142.0,
+    },
+    "russia": {
+        "description": "Russland & Zentralasien",
+        "lat_min": 50.0,
+        "lat_max": 78.0,
+        "lon_min": 30.0,
+        "lon_max": 180.0,
+    },
 }
 
 
@@ -399,12 +482,20 @@ def main():
         print(f"\n=== {region_name.upper()}: {region['description']} ===")
         run_region_nowcast(region_name, region, api_data, args.forecast_minutes, args.forecast_step)
 
-    # Write top-level meta listing all regions
+    # Write top-level meta listing ALL regions that have valid data on disk,
+    # not just those run this invocation. Discovers per-region directories
+    # with a nowcast_meta.json so partial runs don't drop other regions.
     all_regions = {}
-    for rn in region_names:
-        meta_path = os.path.join(OUTPUT_DIR, rn, "nowcast_meta.json")
-        if os.path.exists(meta_path):
-            all_regions[rn] = REGIONS[rn]["description"]
+    for entry in sorted(os.listdir(OUTPUT_DIR)):
+        meta_path = os.path.join(OUTPUT_DIR, entry, "nowcast_meta.json")
+        if not os.path.isfile(meta_path):
+            continue
+        try:
+            with open(meta_path) as f:
+                meta = json.load(f)
+            all_regions[entry] = meta.get("description", REGIONS.get(entry, {}).get("description", entry))
+        except Exception:
+            continue
 
     index_meta = {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
