@@ -26,7 +26,7 @@ from generate_germany_harmonics_175 import (
 NPZ_DIR = Path("/home/oliver/water_levels/France_SHOM/npz")
 CSV_DIR = Path("/home/oliver/water_levels/France_SHOM")  # fallback for old CSVs
 CATALOG_PATH = CSV_DIR / "_station_catalog.json"
-TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt")
+TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_france.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_france")
 
@@ -270,11 +270,19 @@ def format_station_block(result):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--ids", help="Comma-separated SHOM IDs to process (default: all NPZ)")
+    args = ap.parse_args()
+    id_filter = set(args.ids.split(",")) if args.ids else None
+
     CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
 
     # Discover stations from NPZ files
     available = []
     for npz_path in sorted(NPZ_DIR.glob("*.npz")):
+        if id_filter and npz_path.stem not in id_filter:
+            continue
         d = np.load(npz_path, allow_pickle=True)
         sid = str(d['station_id'])
         name = str(d['name'])
