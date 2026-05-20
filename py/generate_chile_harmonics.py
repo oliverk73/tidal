@@ -85,18 +85,9 @@ DART_CODES = {'dchi', 'dch2', 'dcld', 'dval', 'dch3'}
 
 DATA_DIR = Path('/tmp/ioc_chile')
 
-# Stations already in harmonics_utide_observations.txt — skip to avoid duplicate work.
-# (Per user instruction 2026-05-11: don't reprocess stations already covered by UTide.)
-SKIP_EXISTING_UTIDE = {
-    'iqui',  # Iquique
-    'coqu',  # Coquimbo
-    'sano',  # San Antonio
-    'talc',  # Talcahuano
-    'corr',  # Corral
-    'ancu',  # Ancud
-    'pcha',  # Puerto Chacabuco
-    'ptar',  # Punta Arenas
-}
+# All Chile IOC stations are re-fit after the 2026-05-19 hourly-bin patch
+# (mean-of-hour was labeled at HH:00 instead of HH:30, producing a ~14.5° M2 lag).
+SKIP_EXISTING_UTIDE = set()
 
 
 def load_ioc_csv(csv_path, max_years=10.0, start_date=None, is_dart=False):

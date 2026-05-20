@@ -117,7 +117,7 @@ def download_station(station, max_years=10):
                 all_data.extend(data)
                 sys.stdout.write('.')
                 sys.stdout.flush()
-            time.sleep(0.5)  # Be polite to the API
+            time.sleep(0.15)  # Be polite to the API
 
     print(f" {len(all_data)} raw points")
 
@@ -125,12 +125,19 @@ def download_station(station, max_years=10):
         print("  No data!")
         return None
 
-    # Convert to hourly: take mean of all values within each hour
+    # Aggregate to hourly using nearest-hour rounding.
+    # Naïve floor (HH:M -> HH:00 for any M) labels the mean of [HH:00, HH+1:00)
+    # at HH:00 — which is actually centered at HH:30 in time. That introduces
+    # a 30-min temporal lag, equivalent to a ~14.5° M2-phase bias (Δ=σ·0.5h).
+    # Nearest-hour rounding instead labels the mean of [HH-:30, HH+:30) at HH:00,
+    # which is genuinely centered on the full hour.
     hourly = {}
     for point in all_data:
         try:
             t = datetime.strptime(point['stime'], '%Y-%m-%d %H:%M:%S')
             hour_key = t.replace(minute=0, second=0)
+            if t.minute >= 30:
+                hour_key += timedelta(hours=1)
             level = float(point['slevel'])
             if hour_key not in hourly:
                 hourly[hour_key] = []
