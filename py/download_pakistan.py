@@ -148,7 +148,9 @@ def download_ioc_station(station):
     df = df.drop_duplicates(subset='time').sort_values('time')
     # Resample to hourly mean (from 1-min data)
     df['time'] = pd.to_datetime(df['time'])
-    df = df.set_index('time').resample('1H').mean().dropna().reset_index()
+    # Nearest-hour rounding (avoids ~14.5° M2 phase lag).
+    df = (df.set_index('time').shift(freq='30min')
+            .resample('1h').mean().dropna().reset_index())
     df['time'] = df['time'].dt.strftime('%Y-%m-%dT%H:%M:%SZ')
     df.to_csv(csv_path, index=False)
     years = len(df) / (24 * 365.25)
