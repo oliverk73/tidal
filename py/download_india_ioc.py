@@ -92,7 +92,11 @@ def download_station(station, max_years=19):
     for point in all_data:
         try:
             t = datetime.strptime(point['stime'], '%Y-%m-%d %H:%M:%S')
+            # Nearest-hour rounding: mean-of-hour centered at HH:00,
+            # not labeled at start (avoids ~14.5° M2 phase lag).
             hour_key = t.replace(minute=0, second=0)
+            if t.minute >= 30:
+                hour_key += timedelta(hours=1)
             level = float(point['slevel'])
             if level <= -9999 or level > 100 or level < -100:
                 continue

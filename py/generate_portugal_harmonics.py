@@ -189,7 +189,10 @@ def load_ioc_csv(csv_path):
         df = df[(v > mu - 3.5*sigma) & (v < mu + 3.5*sigma)].copy()
     # Resample to hourly
     df = df.set_index('datetime_utc')
-    df = df.resample('1h').mean().dropna()
+    # Nearest-hour rounding: shift index +30min so mean-of-hour is
+    # centered at HH:00, not labeled at start of bin (avoids ~14.5°
+    # M2 phase lag from labeling [HH:00, HH+1:00) at HH:00).
+    df = df.shift(freq='30min').resample('1h').mean().dropna()
     df = df.reset_index()
     times = df['datetime_utc']
     levels = df['level_m'].values

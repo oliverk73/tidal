@@ -68,8 +68,9 @@ def main():
     df = df[mask].dropna()
     print(f"Dropped {before - len(df)} spikes (>50cm from 1h rolling median)")
 
-    # Resample to hourly mean
-    hourly = df['level_m'].resample('1h').mean().dropna()
+    # Resample to hourly mean using nearest-hour rounding (avoids ~14.5°
+    # M2 phase lag from labeling [HH:00, HH+1:00) bin at HH:00).
+    hourly = df['level_m'].shift(freq='30min').resample('1h').mean().dropna()
     hourly.to_csv(OUT_CSV, header=['waterlevel_m'])
 
     years = len(hourly) / (24 * 365.25)

@@ -10,7 +10,7 @@ Usage: python3 download_ioc_china.py [--years N] [--stations a,b,c]
 import json
 import time
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 import urllib.request
 
@@ -64,7 +64,10 @@ def download_station(station, max_years=8):
     for p in all_data:
         try:
             t = datetime.strptime(p['stime'], '%Y-%m-%d %H:%M:%S')
+            # Nearest-hour rounding (avoids ~14.5° M2 phase lag).
             hk = t.replace(minute=0, second=0)
+            if t.minute >= 30:
+                hk += timedelta(hours=1)
             hourly.setdefault(hk, []).append(float(p['slevel']))
         except (ValueError, KeyError):
             continue
