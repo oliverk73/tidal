@@ -72,7 +72,11 @@ def load_ioc_csv(station):
         print(f"  Datei nicht gefunden: {filepath}")
         return None, None
 
-    df = pd.read_csv(filepath, parse_dates=['datetime_utc'])
+    df = pd.read_csv(filepath)
+    # Support both new (time, waterlevel_m) and legacy (datetime_utc, level_m) formats
+    if 'time' in df.columns and 'waterlevel_m' in df.columns:
+        df = df.rename(columns={'time': 'datetime_utc', 'waterlevel_m': 'level_m'})
+    df['datetime_utc'] = pd.to_datetime(df['datetime_utc'])
     df = df.dropna(subset=['level_m'])
     n_raw = len(df)
 
