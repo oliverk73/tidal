@@ -95,12 +95,18 @@ def find_txt_for_tcd(tcd_basename):
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+SUPERSEDED_TCDS = {
+    'harmonics_utide_currents.tcd',  # split into current_observations + current_tables
+}
+
 tcd_files = sorted(glob.glob(os.path.join(TCD_DIR, "*.tcd")))
 print(f"Gefunden: {len(tcd_files)} TCD-Dateien in {TCD_DIR}")
 
 all_stations = []
 for tcd_file in tcd_files:
     basename = os.path.basename(tcd_file)
+    if basename in SUPERSEDED_TCDS:
+        continue
     txt_path = find_txt_for_tcd(basename)
     if not txt_path:
         print(f"  {basename}: ÜBERSPRUNGEN (keine TXT-Datei gefunden)")

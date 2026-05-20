@@ -324,8 +324,8 @@ def main():
         if result is not None:
             results.append(result)
 
-    # Write harmonics file (only R² >= MIN_R_SQUARED and >= 1 year of data)
-    MIN_YEARS = 1.0
+    # Write harmonics file (only R² >= MIN_R_SQUARED and >= 0.95 year of data)
+    MIN_YEARS = 0.95
     good_results = [r for r in results
                     if r['r_squared'] >= MIN_R_SQUARED
                     and r['n_obs'] / (6 * 24 * 365.25) >= MIN_YEARS
