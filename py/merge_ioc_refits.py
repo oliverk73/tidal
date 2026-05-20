@@ -35,7 +35,7 @@ SOURCE_FILES = [
     'harmonics_utide_russia.txt',
     'harmonics_utide_tr_gr.txt',
     'harmonics_utide_india.txt',
-    'harmonics_utide_puerto_barrios.txt',
+    'harmonics_utide_caribbean_uhslc.txt',  # only IOC entry here is prba (Puerto Barrios)
 ]
 
 
