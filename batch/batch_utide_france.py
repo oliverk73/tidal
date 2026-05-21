@@ -257,7 +257,10 @@ def format_station_block(result):
     lines.append(f"# !latitude: {lat:.6f}")
 
     lines.append(f"{name}, France")
-    lines.append(f"+01:00 :Europe/Paris")
+    # UTide gets UTC timestamps -> coef['g'] are Greenwich phases, so the
+    # meridian must be +00:00 (not +01:00). Europe/Paris is only the display
+    # zone. Mislabelling as +01:00 shifts XTide predictions ~1.5 h too early.
+    lines.append(f"+00:00 :Europe/Paris")
     lines.append(f"{result['mean']:.4f} meters")
 
     for c in result['constituents']:
