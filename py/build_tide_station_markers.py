@@ -246,6 +246,7 @@ SOURCE_GROUPS = OrderedDict([
                             'harmonics_utide_westafrica.tcd',
                             ]}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
+    ('FES2022',         {'color': '#CDDC39', 'files': ['harmonics_fes2022.tcd']}),
 ])
 
 # Group order: predefined + Sonstige fallback
