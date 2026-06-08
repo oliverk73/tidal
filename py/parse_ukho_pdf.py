@@ -59,30 +59,30 @@ def parse_page(page):
             if m:
                 year = int(m.group(1)); break
 
-    # Monatstitel: linker (kleinstes x) = Monat A (Spalten 0,1),
-    # rechter = Monat B (Spalten 2,3)
+    # Monatstitel (links→rechts). N Monate pro Seite → 2N Spalten
+    # (je Monat 2 Tag-Halbspalten). col_month[j] = months[j//2].
     month_titles = sorted(
-        [(w['x0'], MONTHS[w['text']]) for w in words if w['text'] in MONTHS],
+        [(w['x0'], MONTHS[w['text'].capitalize()]) for w in words
+         if w['text'].capitalize() in MONTHS],
         key=lambda t: t[0],
     )
     if len(month_titles) < 2:
         return []
-    month_a = month_titles[0][1]
-    month_b = month_titles[1][1]
+    months = [m for _, m in month_titles]
 
-    # Höhen-Tokens (Dezimalzahlen) sind in jeder Zeile vorhanden und sauber →
-    # als Anker für die 4 Spalten nutzen. Die zugehörige Zeit steht ~46px links;
-    # ältere PDFs zerlegen Zeiten in Fragmente ("1"+"525"), daher Ziffern-Concat.
+    # Höhen-Tokens (Dezimalzahlen) als Spalten-Anker.
     height_words = [w for w in words if RE_HEIGHT.match(w['text'])]
     if not height_words:
         return []
     height_cols = _cluster_centers([w['x0'] for w in height_words])
-    if len(height_cols) != 4:
+    if len(height_cols) != 2 * len(months):
         return []
+    colsp = (height_cols[-1] - height_cols[0]) / (len(height_cols) - 1)
+    col_month = {j: months[j // 2] for j in range(len(height_cols))}
 
-    def nearest_col(x, centers, tol=25.0):
+    def nearest_col(x, tol):
         best, bd = None, 1e9
-        for j, c in enumerate(centers):
+        for j, c in enumerate(height_cols):
             d = abs(x - c)
             if d < bd:
                 bd, best = d, j
@@ -90,52 +90,60 @@ def parse_page(page):
 
     digit_words = [w for w in words if w['text'].isdigit()]
 
-    # Tagesnummern: integer 1-31, ~78px links der zugehörigen Höhenspalte.
-    # (Zeit liegt ~46px links der Höhe → klar abgegrenzt.)
-    def day_column(x0):
-        for j, c in enumerate(height_cols):
-            if 60 <= (c - x0) <= 98:
-                return j
-        return None
+    def row_digits(col, top):
+        """Ziffern-Tokens dieser Spalte+Zeile (links der Höhe, innerhalb colsp)."""
+        c = height_cols[col]
+        toks = [w for w in digit_words if abs(w['top'] - top) <= 2.5
+                and (c - colsp + 2) < w['x0'] < (c - 2)]
+        return sorted(toks, key=lambda w: w['x0'])
 
-    day_words = []   # (top, day_value, col)
-    for w in digit_words:
-        if len(w['text']) <= 2 and 1 <= int(w['text']) <= 31:
-            col = day_column(w['x0'])
-            if col is not None:
-                day_words.append((w['top'], int(w['text']), col))
+    def split_time_day(toks):
+        """Rechte Tokens, die zusammen 4 Ziffern ergeben = Zeit; ein verbleibendes
+        1-2-stelliges Token links davon = Tagesnummer."""
+        digs = [t['text'] for t in toks]
+        # von rechts 4 Ziffern als Zeit sammeln
+        acc, i = '', len(digs)
+        while i > 0 and len(acc) < 4:
+            i -= 1
+            acc = digs[i] + acc
+        if len(acc) != 4:
+            return None, None
+        tstr = acc
+        day = None
+        if i - 1 >= 0 and len(digs[i - 1]) <= 2:
+            v = int(digs[i - 1])
+            if 1 <= v <= 31:
+                day = v
+        return tstr, day
 
-    # Pro Spalte: sortierte Liste (top, day_value)
-    col_days = {0: [], 1: [], 2: [], 3: []}
-    for top, dval, col in day_words:
-        col_days[col].append((top, dval))
+    # Tagesnummern pro Spalte sammeln (für active_day-Tracking)
+    col_days = {j: [] for j in range(len(height_cols))}
+    for hw in height_words:
+        col = nearest_col(hw['x0'], tol=colsp * 0.45)
+        if col is None:
+            continue
+        _, day = split_time_day(row_digits(col, hw['top']))
+        if day is not None:
+            col_days[col].append((hw['top'], day))
     for col in col_days:
         col_days[col].sort()
 
     def active_day(col, top):
-        days = col_days.get(col, [])
         cur = None
-        for dtop, dval in days:
-            if dtop <= top + 2:   # kleine Toleranz
+        for dtop, dval in col_days[col]:
+            if dtop <= top + 2:
                 cur = dval
             else:
                 break
         return cur
 
-    # Spalte → (Monat)
-    col_month = {0: month_a, 1: month_a, 2: month_b, 3: month_b}
-
     results = []
     for hw in height_words:
-        col = nearest_col(hw['x0'], height_cols, tol=25.0)
+        col = nearest_col(hw['x0'], tol=colsp * 0.45)
         if col is None:
             continue
-        # Zeit = Ziffernfragmente derselben Zeile, 5..60px links der Höhe
-        frags = [w for w in digit_words
-                 if abs(w['top'] - hw['top']) <= 2.5 and 5 <= (hw['x0'] - w['x0']) <= 60]
-        frags.sort(key=lambda w: w['x0'])
-        tstr = ''.join(w['text'] for w in frags)
-        if len(tstr) != 4:
+        tstr, _ = split_time_day(row_digits(col, hw['top']))
+        if tstr is None:
             continue
         hh, mm = int(tstr[:2]), int(tstr[2:])
         if hh > 23 or mm > 59:
@@ -143,9 +151,8 @@ def parse_page(page):
         day = active_day(col, hw['top'])
         if day is None:
             continue
-        month = col_month[col]
         try:
-            dt = datetime(year, month, day, hh, mm)
+            dt = datetime(year, col_month[col], day, hh, mm)
         except ValueError:
             continue
         results.append((dt, float(hw['text'])))

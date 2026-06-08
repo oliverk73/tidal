@@ -41,6 +41,14 @@ CONFIG = {
         'source': 'Derived from Montrose Port Authority tide predictions (UKHO) with UTide',
         'meridian': '+00:00 :Europe/London', 'confidence': 8,
     },
+    'ipswich': {
+        'name': 'Ipswich, England, United Kingdom',
+        'lat': 52.0500, 'lon': 1.1667, 'tz': 'utc', 'parser': 'layoutA',
+        'pdfs': [AP / 'ipswich_2026.pdf'],
+        'datum': 'Chart Datum',
+        'source': 'Derived from ABP Ipswich tide predictions (UKHO 0133) with UTide',
+        'meridian': '+00:00 :Europe/London', 'confidence': 8,
+    },
     'barrow': {
         'name': 'Barrow (Ramsden Dock), England, United Kingdom',
         'lat': 54.1000, 'lon': -3.2167, 'tz': 'utc', 'parser': 'monthly',
