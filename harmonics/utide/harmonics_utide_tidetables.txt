@@ -420708,8 +420708,8 @@ x 0 0
 # confidence: 7
 # utide: period=2025-01-01..2026-04-16 r2=0.7645 rms=1.1853m const=68
 # !units: meters
-# !longitude: -3.020800
-# !latitude: 53.391700
+# !longitude: -3.0153
+# !latitude: 53.4047
 Birkenhead (Alfred Dock), England, United Kingdom
 +00:00 :Europe/London
 5.1525 meters
@@ -435359,8 +435359,8 @@ x 0 0
 # confidence: 7
 # utide: period=2025-01-01..2026-04-19 r2=0.9339 rms=0.2161m const=68
 # !units: meters
-# !longitude: -2.900000
-# !latitude: 53.200000
+# !longitude: -2.9026
+# !latitude: 53.1914
 Chester, England, United Kingdom
 +00:00 :Europe/London
 3.0115 meters
@@ -450572,8 +450572,8 @@ x 0 0
 # confidence: 7
 # utide: period=2025-01-01..2026-04-19 r2=0.7605 rms=1.2563m const=68
 # !units: meters
-# !longitude: -2.950000
-# !latitude: 53.316667
+# !longitude: -2.9493
+# !latitude: 53.3228
 Eastham, England, United Kingdom
 +00:00 :Europe/London
 5.1807 meters
@@ -453995,8 +453995,8 @@ x 0 0
 # confidence: 7
 # utide: period=2025-01-01..2026-04-19 r2=0.6997 rms=0.5150m const=68
 # !units: meters
-# !longitude: -2.666667
-# !latitude: 53.366667
+# !longitude: -2.6611
+# !latitude: 53.3731
 Fiddler's Ferry, England, United Kingdom
 +00:00 :Europe/London
 1.3702 meters
@@ -462932,8 +462932,8 @@ x 0 0
 # confidence: 7
 # utide: period=2025-01-01..2026-04-19 r2=0.9374 rms=0.2112m const=68
 # !units: meters
-# !longitude: -2.800000
-# !latitude: 53.316667
+# !longitude: -2.7943
+# !latitude: 53.3221
 Hale Head, England, United Kingdom
 +00:00 :Europe/London
 5.9083 meters
@@ -490698,133 +490698,138 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+# Harmonic constants derived from official UKHO-based port tide predictions
+# using UTide (v0.3.1) with cosine-interpolated HW/LW data
+# 4232 HW/LW points -> 105075 interpolated points
+# from 2023-01-01 to 2026-12-31
+# R^2 = 0.9998, RMS error = 0.0152 m
+# Constituents analyzed: 68
 #
-# 1767 HW/LW points -> 45378 interpolated points
+# Montrose, Scotland, United Kingdom
 # BEGIN HOT COMMENTS
 # country: United Kingdom
-# source: Derived from tidetimes.co.uk HW/LW predictions with UTide
-# date_imported: 20260414
-# datum: ACD (approx.)
-# confidence: 7
-# utide: period=2025-01-01..2026-04-18 r2=0.7754 rms=0.5343m const=68
+# source: Derived from Montrose Port Authority tide predictions (UKHO) with UTide
+# date_imported: 20260608
+# datum: Chart Datum
+# confidence: 8
 # !units: meters
 # !longitude: -2.450000
 # !latitude: 56.700000
 Montrose, Scotland, United Kingdom
 +00:00 :Europe/London
-2.8971 meters
-J1              0.0054  268.71
-K1              0.1162  219.73
-K2              0.1365  93.61
-L2              0.0423  93.89
+2.9436 meters
+J1              0.0044  289.14
+K1              0.1223  214.56
+K2              0.1357  81.70
+L2              0.0410  65.06
 x 0 0
-M2              1.2782  56.56
-M3              0.0109  5.02
-M4              0.0342  209.67
-M6              0.0032  13.39
-M8              0.0006  299.92
-N2              0.2055  35.83
-2N2             0.0306  13.14
-O1              0.1230  71.61
-OO1             0.0047  314.17
-P1              0.0354  215.98
-Q1              0.0354  27.15
-2Q1             0.0053  39.97
-R2              0.0468  55.71
+M2              1.4335  43.99
+M3              0.0099  351.80
+M4              0.0457  176.65
+M6              0.0029  309.02
+M8              0.0017  262.27
+N2              0.2881  20.51
+2N2             0.0374  359.70
+O1              0.1405  59.77
+OO1             0.0041  347.14
+P1              0.0368  201.11
+Q1              0.0480  10.11
+2Q1             0.0077  329.74
+R2              0.0051  122.48
 x 0 0
-S2              0.4671  91.58
-S4              0.0030  295.54
+S2              0.4928  82.39
+S4              0.0027  214.36
 x 0 0
-T2              0.0722  171.30
-LDA2            0.0421  26.74
-MU2             0.0925  8.92
-NU2             0.0577  7.92
-RHO1            0.0087  331.44
-MK3             0.0090  282.43
+T2              0.0221  75.69
+LDA2            0.0160  46.99
+MU2             0.0372  340.34
+NU2             0.0543  27.40
+RHO1            0.0080  12.45
+MK3             0.0031  188.61
 x 0 0
-MN4             0.0073  200.15
-MS4             0.0254  233.05
-2SM2            0.0565  119.83
-MF              0.0436  207.60
-MSF             0.1350  126.92
-MM              0.0540  194.45
+MN4             0.0126  155.91
+MS4             0.0293  217.56
+2SM2            0.0024  341.90
+MF              0.0269  195.61
+MSF             0.0029  288.37
+MM              0.0025  153.08
 x 0 0
-SSA             0.0817  78.33
-SA-IOS          0.0927  268.37
+SSA             0.0156  157.66
+SA-IOS          0.1078  308.68
 x 0 0
-S1-IOS          0.0474  10.30
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0013  38.73
-2MK6            0.0007  50.71
-x 0 0
-2MN6            0.0016  19.26
-2MS6            0.0015  25.18
-x 0 0
-2SK5            0.0007  106.33
+S1-IOS          0.0171  338.28
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0005  349.64
+2MK6            0.0005  11.06
 x 0 0
-3MS4            0.0066  8.84
+2MN6            0.0012  293.03
+2MS6            0.0019  352.86
 x 0 0
-ALP1            0.0061  278.59
-BET1            0.0056  90.21
-CHI1            0.0049  117.18
-H1              0.2007  331.27
-H2              0.1855  169.18
-x 0 0
-ETA2            0.0012  184.05
-x 0 0
-UPS1            0.0072  262.24
-x 0 0
-x 0 0
-MK4             0.0086  248.83
-MKS2            0.0366  73.54
-x 0 0
-EPS2            0.0203  20.75
-MO3             0.0083  46.84
-x 0 0
-TAU1            0.0468  289.28
-x 0 0
-MSK6            0.0003  206.32
-MSM             0.0854  85.46
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0068  5.61
-OP2             0.0524  134.80
-x 0 0
-PHI1            0.0034  296.13
-x 0 0
-PI1             0.0108  284.43
-x 0 0
-PSI1            0.0064  58.40
-x 0 0
-x 0 0
-SIG1            0.0189  353.77
-SK3             0.0020  225.71
-x 0 0
-SN4             0.0009  154.18
-x 0 0
-SO1             0.0214  193.20
-SO3             0.0032  205.85
-THE1            0.0056  42.03
+2SK5            0.0001  38.39
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SKM2            0.0042  66.71
+3MS4            0.0051  312.69
+x 0 0
+ALP1            0.0002  271.67
+BET1            0.0005  51.49
+CHI1            0.0015  89.69
+H1              0.0084  43.98
+H2              0.0103  294.36
+x 0 0
+ETA2            0.0051  102.48
+x 0 0
+UPS1            0.0002  102.30
+x 0 0
+x 0 0
+MK4             0.0075  225.32
+MKS2            0.0012  335.29
+x 0 0
+EPS2            0.0048  283.60
+MO3             0.0052  54.35
+x 0 0
+TAU1            0.0004  244.88
+x 0 0
+MSK6            0.0001  20.87
+MSM             0.0034  69.92
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0036  75.32
+OP2             0.0011  278.93
+x 0 0
+PHI1            0.0031  216.35
+x 0 0
+PI1             0.0028  188.27
+x 0 0
+PSI1            0.0015  144.42
+x 0 0
+x 0 0
+SIG1            0.0066  316.03
+SK3             0.0031  267.92
+x 0 0
+SN4             0.0005  157.56
+x 0 0
+SO1             0.0025  81.77
+SO3             0.0031  119.08
+THE1            0.0006  25.93
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0013  294.44
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-NO3             0.0017  315.87
+NO3             0.0023  6.87
 x 0 0
 x 0 0
-N4              0.0032  107.00
+N4              0.0023  132.27
 x 0 0
 x 0 0
 x 0 0
@@ -534658,8 +534663,8 @@ x 0 0
 # confidence: 7
 # utide: period=2025-01-01..2026-04-19 r2=0.6973 rms=0.8030m const=68
 # !units: meters
-# !longitude: -2.733333
-# !latitude: 53.350000
+# !longitude: -2.7361
+# !latitude: 53.3477
 Widnes, England, United Kingdom
 +00:00 :Europe/London
 2.2580 meters
