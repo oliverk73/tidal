@@ -42,6 +42,10 @@ CONFIG = {
                  'sensor': 'Herne Bay', 'lat': 51.38211, 'lon': 1.11521},
     'brighton': {'name': 'Brighton Marina, England, United Kingdom',
                  'sensor': 'Brighton', 'lat': 50.81175, 'lon': -0.10116},
+    # Neue Station (existiert noch nicht) — wird nach 'anchor' eingefügt:
+    'penarth': {'name': 'Penarth, Wales, United Kingdom',
+                'sensor': 'Penarth', 'lat': 51.43467, 'lon': -3.16478,
+                'anchor': 'Cardiff, Wales, United Kingdom'},
 }
 DATUM = 'Chart Datum'
 SOURCE = 'Derived from Channel Coastal Observatory measured water levels with UTide'
@@ -134,18 +138,29 @@ def build_block(cfg, mean, cm, r2, rms, n_pts, start, end):
     return L
 
 
-def replace_block(name, new_lines):
-    lines = HARM.read_text(encoding='iso-8859-1').split('\n')
-    m = [i for i, l in enumerate(lines) if l == name]
-    if len(m) != 1:
-        raise SystemExit(f"Erwarte 1 Treffer für '{name}', gefunden {len(m)}")
-    ni = m[0]; start = ni
+def _block_span(lines, ni):
+    start = ni
     while start - 1 >= 0 and lines[start - 1].startswith('#'):
         start -= 1
     end = ni + 1
     while end < len(lines) and not lines[end].startswith('#'):
         end += 1
-    return lines[start:end], '\n'.join(lines[:start] + new_lines + lines[end:])
+    return start, end
+
+
+def replace_block(name, new_lines, anchor=None):
+    lines = HARM.read_text(encoding='iso-8859-1').split('\n')
+    m = [i for i, l in enumerate(lines) if l == name]
+    if len(m) == 1:
+        start, end = _block_span(lines, m[0])
+        return lines[start:end], '\n'.join(lines[:start] + new_lines + lines[end:])
+    if len(m) == 0 and anchor:
+        am = [i for i, l in enumerate(lines) if l == anchor]
+        if len(am) != 1:
+            raise SystemExit(f"Anker '{anchor}' nicht eindeutig ({len(am)})")
+        _, end = _block_span(lines, am[0])   # nach Anker-Block einfügen
+        return [], '\n'.join(lines[:end] + new_lines + lines[end:])
+    raise SystemExit(f"'{name}': {len(m)} Treffer (anchor={anchor})")
 
 
 def main():
@@ -162,13 +177,14 @@ def main():
         if c in cm:
             print(f"  {c}: A={cm[c][0]:.4f} g={cm[c][1]:.2f}")
     block = build_block(cfg, float(coef['mean']), cm, r2, rms, npts, t0, t1)
-    old, new_text = replace_block(cfg['name'], block)
+    old, new_text = replace_block(cfg['name'], block, cfg.get('anchor'))
     for l in old:
         if l.startswith(('# source', '# utide', '# datum')):
             print("  OLD|", l)
     if write:
         HARM.write_text(new_text, encoding='iso-8859-1')
-        print(f"✅ Block {len(old)}→{len(block)} Zeilen ersetzt.")
+        action = "eingefügt (NEU)" if not old else f"{len(old)}→{len(block)} Zeilen ersetzt"
+        print(f"✅ Block {action}.")
     else:
         print("(Dry-run — --write zum Schreiben.)")
 
