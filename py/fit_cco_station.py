@@ -24,12 +24,16 @@ from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_bom_australia import CONSTIT_67  # type: ignore
 from download_cco_tides import SENSORS, OUT
 
-HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
+# Messdaten gehören in die SL-Datei (observations), nicht tidetables (TC)!
+HARM_TIDETABLES = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
+HARM_OBS = Path('/home/oliver/harmonics/utide/harmonics_utide_observations.txt')
+HARM = HARM_OBS  # default: Messdaten → observations
 
 # key -> Konfiguration (Name = exakter bestehender Stationsname; sensor = CCO)
 CONFIG = {
     'westbay': {'name': 'West Bay (Bridport), England, United Kingdom',
-                'sensor': 'West Bay Harbour', 'lat': 50.71017, 'lon': -2.8200},
+                'sensor': 'West Bay Harbour', 'lat': 50.71017, 'lon': -2.8200,
+                'anchor': 'Weymouth, England, United Kingdom'},
     'whitby':  {'name': 'Whitby, England, United Kingdom',
                 'sensor': 'Whitby Harbour', 'lat': 54.48862, 'lon': -0.61462},
     'exmouth': {'name': 'Exmouth Dock, England, United Kingdom',
@@ -37,7 +41,8 @@ CONFIG = {
     'hastings': {'name': 'Hastings, England, United Kingdom',
                  'sensor': 'Hastings Pier', 'lat': 50.85088, 'lon': 0.57283},
     'deal':    {'name': 'Deal, England, United Kingdom',
-                'sensor': 'Deal Pier', 'lat': 51.22379, 'lon': 1.40926},
+                'sensor': 'Deal Pier', 'lat': 51.22379, 'lon': 1.40926,
+                'anchor': 'Dover, England, United Kingdom'},
     'hernebay': {'name': 'Herne Bay, England, United Kingdom',
                  'sensor': 'Herne Bay', 'lat': 51.38211, 'lon': 1.11521},
     'brighton': {'name': 'Brighton Marina, England, United Kingdom',
@@ -45,7 +50,7 @@ CONFIG = {
     # Neue Station (existiert noch nicht) — wird nach 'anchor' eingefügt:
     'penarth': {'name': 'Penarth, Wales, United Kingdom',
                 'sensor': 'Penarth', 'lat': 51.43467, 'lon': -3.16478,
-                'anchor': 'Cardiff, Wales, United Kingdom'},
+                'anchor': 'Newport (River Usk), Wales, United Kingdom'},
 }
 DATUM = 'Chart Datum'
 SOURCE = 'Derived from Channel Coastal Observatory measured water levels with UTide'
