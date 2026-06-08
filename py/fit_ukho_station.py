@@ -21,8 +21,11 @@ import utide
 sys.path.insert(0, '/home/oliver/py')
 sys.path.insert(0, '/home/oliver/batch')
 
-from parse_ukho_pdf import parse_pdf
+import parse_ukho_pdf
+import parse_ukho_monthly
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
+
+PARSERS = {'layoutA': parse_ukho_pdf.parse_pdf, 'monthly': parse_ukho_monthly.parse_pdf}
 from batch_utide_bom_australia import CONSTIT_67, cosine_interpolate  # type: ignore
 
 HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
@@ -32,10 +35,18 @@ AP = Path('/home/oliver/annual_predictions')
 CONFIG = {
     'montrose': {
         'name': 'Montrose, Scotland, United Kingdom',
-        'lat': 56.7000, 'lon': -2.4500, 'tz': 'utc',
+        'lat': 56.7000, 'lon': -2.4500, 'tz': 'utc', 'parser': 'layoutA',
         'pdfs': [AP / 'montrose' / f'montrose_{y}.pdf' for y in (2023, 2025, 2026)],
         'datum': 'Chart Datum',
         'source': 'Derived from Montrose Port Authority tide predictions (UKHO) with UTide',
+        'meridian': '+00:00 :Europe/London', 'confidence': 8,
+    },
+    'barrow': {
+        'name': 'Barrow (Ramsden Dock), England, United Kingdom',
+        'lat': 54.1000, 'lon': -3.2167, 'tz': 'utc', 'parser': 'monthly',
+        'pdfs': [AP / 'barrow_2026.pdf'],
+        'datum': 'Chart Datum',
+        'source': 'Derived from ABP Barrow tide predictions (UKHO) with UTide',
         'meridian': '+00:00 :Europe/London', 'confidence': 8,
     },
 }
@@ -158,6 +169,7 @@ def main():
         raise SystemExit(f"Keys: {', '.join(CONFIG)}")
     key = sys.argv[1]; write = '--write' in sys.argv
     cfg = CONFIG[key]
+    parse_pdf = PARSERS[cfg.get('parser', 'layoutA')]
     all_ev = []
     for p in cfg['pdfs']:
         ev = parse_pdf(p)
