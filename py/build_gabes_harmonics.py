@@ -32,19 +32,22 @@ CONFIDENCE = 7                          # gemessen, aber kurze Reihen + nur Haup
 
 # Tableau 4: {Konstituente: (Amplitude m, Phase deg UTC)}
 STATIONS = {
-    'Gabes, Tunisia': {
-        'lat': 33.883, 'lon': 10.117,
+    'Gabès, Tunisia': {
+        'lat': 33.8954, 'lon': 10.1166,
         'c': {'P1': (0.011, 36), 'K1': (0.033, 29), 'N2': (0.082, 77),
               'M2': (0.525, 73), 'S2': (0.325, 95), 'K2': (0.088, 117)},
     },
     'Mahres, Tunisia': {
-        'lat': 34.117, 'lon': 10.417,
+        # Paper Tableau 1 gibt 34°07'N/10°25' -> ~46 km zu weit südlich (Tippfehler);
+        # echtes Mahrès liegt bei 34.522,10.498 (Nominatim). Konstanten gelten weiter.
+        'lat': 34.5218, 'lon': 10.4984,
         'c': {'MM': (0.037, 247), 'MSF': (0.051, 218), 'O1': (0.016, 105),
               'K1': (0.035, 32), 'N2': (0.062, 71), 'M2': (0.471, 71),
               'S2': (0.289, 93), 'K2': (0.079, 116)},
     },
     'Cercina (Kerkennah), Tunisia': {
-        'lat': 34.733, 'lon': 11.083,
+        # Paper 34°44'/11°05' ~11 km zu weit NE; echtes Kerkennah 34.6434,11.0376 (Nominatim)
+        'lat': 34.6434, 'lon': 11.0376,
         'c': {'MM': (0.014, 95), 'MSF': (0.044, 353), 'O1': (0.008, 100),
               'K1': (0.009, 321), 'N2': (0.055, 110), 'M2': (0.329, 118),
               'S2': (0.216, 133), 'K2': (0.059, 155)},
@@ -56,7 +59,7 @@ STATIONS = {
               'K2': (0.046, 108)},
     },
     'El Kantara (Djerba), Tunisia': {
-        'lat': 33.650, 'lon': 10.917,
+        'lat': 33.6802, 'lon': 10.9156,   # Nominatim El Kantara (Paper ~3 km zu südlich)
         'c': {'MSF': (0.045, 65), 'Q1': (0.003, 146), 'O1': (0.012, 138),
               'P1': (0.004, 63), 'K1': (0.011, 56), 'N2': (0.015, 142),
               'M2': (0.104, 135), 'L2': (0.007, 124), 'S2': (0.044, 200),
