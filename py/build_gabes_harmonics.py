@@ -37,7 +37,7 @@ STATIONS = {
         'c': {'P1': (0.011, 36), 'K1': (0.033, 29), 'N2': (0.082, 77),
               'M2': (0.525, 73), 'S2': (0.325, 95), 'K2': (0.088, 117)},
     },
-    'Mahres, Tunisia': {
+    'Mahrès, Tunisia': {
         # Paper Tableau 1 gibt 34°07'N/10°25' -> ~46 km zu weit südlich (Tippfehler);
         # echtes Mahrès liegt bei 34.522,10.498 (Nominatim). Konstanten gelten weiter.
         'lat': 34.5218, 'lon': 10.4984,
