@@ -5,6 +5,7 @@ import hashlib
 import tempfile
 import unicodedata
 import subprocess
+import shutil
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 import glob
@@ -118,9 +119,26 @@ def update_coords_in_txt(txt_path, station_name, new_lat, new_lon,
 
 
 def rebuild_tcd(txt_path, tcd_basename):
-    """Recompile a harmonics .txt file to .tcd."""
+    """Recompile a harmonics .txt file to .tcd and replace the deployed TCD cleanly.
+
+    WICHTIG: build_tide_db HAENGT an eine existierende TCD an, statt sie zu
+    ueberschreiben. Wuerde man es direkt auf die System-TCD aufrufen, waechst
+    diese bei jedem Speichern (Dubletten/Bloat, z.B. 3200 -> 25000+ Records).
+    Daher: in eine frische Temp-Datei bauen (build_tide_db legt sie neu an) und
+    den Inhalt in-place ueber die deployte TCD kopieren. Das ueberschreibt nur
+    den Dateiinhalt (die .tcd in TCD_DIR gehoeren dem App-User) und braucht kein
+    Schreibrecht auf das root-eigene Verzeichnis und kein sudo.
+    """
     tcd_path = os.path.join(TCD_DIR, tcd_basename)
-    subprocess.run(["build_tide_db", tcd_path, txt_path], check=True)
+    fd, tmp = tempfile.mkstemp(suffix=".tcd")
+    os.close(fd)
+    os.unlink(tmp)  # build_tide_db muss die Datei frisch anlegen (sonst Append)
+    try:
+        subprocess.run(["build_tide_db", tmp, txt_path], check=True)
+        shutil.copyfile(tmp, tcd_path)  # Inhalt in-place ersetzen (kein Verzeichnis-Schreibrecht noetig)
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
 
 
 def get_num_constituents(txt_path):
