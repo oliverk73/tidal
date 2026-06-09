@@ -46,19 +46,24 @@ HARM_TT = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
 HARM_OBS = Path('/home/oliver/harmonics/utide/harmonics_utide_observations.txt')
 TT_DIR = Path('/home/oliver/water_levels/UK_tidetimes')
 
-SIGMA_GATE = 22.0   # max. erlaubte HW-Zeit-Streuung (min)
+SIGMA_GATE = 33.0   # max. erlaubte HW-Zeit-Streuung (min); >22 = Naeherung (conf 5)
+SIGMA_GOOD = 22.0   # darunter: gute Reproduktion (conf 6)
 A_MIN, A_MAX = 0.10, 2.0
 
-# Referenz erzwingen, wo der Nearest-Pick schlecht ist (gleiches Aestuar / naeher)
+# Referenz erzwingen, wo der Nearest-Pick schlecht ist (gleiches Aestuar / naeher).
+# Diese Refs sind selbst gute tidetimes-Fits (HW+LW, M2>0.5) im selben Aestuar.
 REF_OVERRIDE = {
     'Wisbech': "King's Lynn, England, United Kingdom",
+    'Wisbech Cut': "King's Lynn, England, United Kingdom",
     'Colchester': 'Walton-On-The-Naze, England, United Kingdom',
+    'Mistley': 'Harwich, England, United Kingdom',
     'Faversham': 'Sheerness, England, United Kingdom',
     'Dingwall (Cromarty Firth)': 'Invergordon, Scotland, United Kingdom',
     'Fortrose': 'Invergordon, Scotland, United Kingdom',
     'Redkirk': 'Silloth, England, United Kingdom',
     'Torduff Point': 'Silloth, England, United Kingdom',
     'Southerness Point': 'Silloth, England, United Kingdom',
+    'Annan Waterfoot': 'Silloth, England, United Kingdom',
 }
 # Echter Bore-/Wehr-Junk: keine sinnvolle Tidekurve moeglich -> entfernen
 REMOVE_JUNK = {'Epney', 'Lopwell'}
@@ -183,6 +188,7 @@ def build_block(st, cal, ref_z0, ref_consts, ref_meridian, ref_name):
         if sp is None:
             continue
         new_c[cn] = (a * amp, (g + sp * dt_h) % 360.0)
+    conf = 6 if cal['sigma'] < SIGMA_GOOD else 5
     L = [
         "#",
         f"# {st['name']}",
@@ -191,7 +197,10 @@ def build_block(st, cal, ref_z0, ref_consts, ref_meridian, ref_name):
         "# source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer",
         f"# date_imported: {datetime.now():%Y%m%d}",
         "# datum: station Chart Datum (approx.)",
-        "# confidence: 6",
+        f"# confidence: {conf}",]
+    if conf == 5:
+        L.append(f"# quality: approximate (variable HW lag, transfer time_sigma={cal['sigma']:.0f}min)")
+    L += [
         f"# transfer_ref: {ref_name}",
         f"# transfer: dt={cal['dt']:.1f}min(sigma={cal['sigma']:.0f}) a={a:.4f} z0={z0:.3f} predLAT={cal['lat_pred']:.2f}m",
         f"# hw_reproduction: n={cal['n']} time_sigma={cal['sigma']:.0f}min height_rms={cal['h_rms']:.3f}m",
@@ -215,10 +224,12 @@ def main():
     tt_lines, tt_st = parse_file(HARM_TT)
     obs_lines, obs_st = parse_file(HARM_OBS)
 
-    # Referenz-Pool: belastbare UK/IE-Stationen (M2>0.5, nicht tidetimes)
+    # Referenz-Pool: belastbare UK/IE-Stationen (M2>0.5). Gute tidetimes-Fits
+    # (HW+LW) sind als Referenz erlaubt; ausgeschlossen: transfer-abgeleitete
+    # (kein Transfer-vom-Transfer) und die kaputten Flatlines (M2<=0.5).
     pool = [s for s in obs_st + tt_st
             if s.get('m2') and s['m2'][0] > 0.5
-            and 'tidetimes' not in s.get('source', '').lower()
+            and 'transfer' not in s.get('source', '').lower()
             and ('United Kingdom' in s['name'] or 'Ireland' in s['name'])]
     pool_by_name = {s['name']: s for s in pool}
 
