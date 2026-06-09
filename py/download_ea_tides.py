@@ -25,7 +25,8 @@ from pathlib import Path
 from datetime import datetime
 
 EA_DIR = Path('/home/oliver/water_levels/ea')        # akkumulierte Messreihen (gitignored)
-MAP = Path('/home/oliver/harmonics/help/ea_station_map.json')  # Stations-Map (getrackt)
+STATIONS = Path('/home/oliver/harmonics/help/ea_tidal_stations.json')  # ALLE 110 EA-Tidenpegel
+MAP = Path('/home/oliver/harmonics/help/ea_station_map.json')  # Match zu unseren Stationen (getrackt)
 CSV_URL = 'https://check-for-flooding.service.gov.uk/station-csv/{rloi}'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (tidal-harmonics-research)',
            'Referer': 'https://check-for-flooding.service.gov.uk/'}
@@ -80,33 +81,35 @@ def _rloi(m):
 
 def main():
     rlois = [a for a in sys.argv[1:] if a.isdigit()]
-    mp = json.loads(MAP.read_text())
-    for m in mp:
-        m['rloi'] = _rloi(m)
-        if isinstance(m.get('ea_label'), list):
-            m['ea_label'] = m['ea_label'][0]
+    stations = json.loads(STATIONS.read_text())          # alle 110 EA-Tidenpegel
+    # Annotation: welche unserer Stationen haengt an welchem Pegel?
+    our = {}
+    if MAP.exists():
+        for m in json.loads(MAP.read_text()):
+            r = _rloi(m)
+            our.setdefault(r, m['our_name'].split(',')[0])
+    for s in stations:
+        s['rloi'] = str(s['rloi'])
+        s['our_name'] = our.get(s['rloi'], '-')
     if rlois:
-        targets = [m for m in mp if str(m['rloi']) in rlois]
+        targets = [s for s in stations if s['rloi'] in rlois]
     else:
-        # je RLOIid nur einmal (mehrere unserer Stationen koennen denselben Pegel teilen)
-        seen = set(); targets = []
-        for m in mp:
-            if m['rloi'] not in seen:
-                seen.add(m['rloi']); targets.append(m)
+        targets = stations
     print(f"{len(targets)} EA-Pegel zu holen ...")
     log = []
     for m in targets:
         rloi = m['rloi']
+        label = str(m.get('label', ''))[:24]
         try:
             pts = parse_csv(fetch_csv(rloi))
             if not pts:
-                print(f"  RLOI {rloi:>6} {m['ea_label'][:24]:24s}  0 Punkte (leer/Format?)")
+                print(f"  RLOI {rloi:>6} {label:24s}  0 Punkte (leer/Format?)")
                 log.append((rloi, 0, 0)); continue
             added, total, span = accumulate(rloi, pts)
-            print(f"  RLOI {rloi:>6} {m['ea_label'][:24]:24s}  +{added:4d} -> {total:6d} Pkt  [{span[0]}..{span[1]}]  ({m['our_name'].split(',')[0]})")
+            print(f"  RLOI {rloi:>6} {label:24s}  +{added:4d} -> {total:6d} Pkt  [{span[0]}..{span[1]}]  ({m['our_name']})")
             log.append((rloi, added, total))
         except Exception as e:
-            print(f"  RLOI {rloi:>6} {m['ea_label'][:24]:24s}  FEHLER: {e}")
+            print(f"  RLOI {rloi:>6} {label:24s}  FEHLER: {e}")
             log.append((rloi, -1, -1))
         time.sleep(0.3)
     ok = sum(1 for _, a, _ in log if a >= 0)
