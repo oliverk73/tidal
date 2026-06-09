@@ -46,8 +46,9 @@ STATIONS = {
               'S2': (0.289, 93), 'K2': (0.079, 116)},
     },
     'Cercina (Kerkennah), Tunisia': {
-        # Paper 34°44'/11°05' ~11 km zu weit NE; echtes Kerkennah 34.6434,11.0376 (Nominatim)
-        'lat': 34.6434, 'lon': 11.0376,
+        # Pegel am Hafen Sidi Youssef (Fährterminal Kerkennah, Westzipfel); Paper-Pos.
+        # ~11 km daneben, Nominatim-"Kerkennah" lag mitten auf der Insel.
+        'lat': 34.6568, 'lon': 10.9717,
         'c': {'MM': (0.014, 95), 'MSF': (0.044, 353), 'O1': (0.008, 100),
               'K1': (0.009, 321), 'N2': (0.055, 110), 'M2': (0.329, 118),
               'S2': (0.216, 133), 'K2': (0.059, 155)},
