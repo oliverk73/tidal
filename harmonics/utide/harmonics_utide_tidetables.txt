@@ -438414,7 +438414,7 @@ x 0 0
 # datum: station Chart Datum (approx.)
 # confidence: 5
 # quality: approximate (variable HW lag, transfer time_sigma=30min)
-# transfer_ref: Walton-On-The-Naze, England, United Kingdom
+# transfer_ref: Walton-on-the-Naze, England, United Kingdom (Donor-Block seit 20260610 PLA-basiert; Transfer-Phasen noch vom tidetimes-Fit)
 # transfer: dt=5.0min(sigma=30) a=1.0311 z0=2.335 predLAT=0.00m
 # hw_reproduction: n=881 time_sigma=30min height_rms=0.272m
 # bst_fix: 20260610 Phasen -speed*1h (tidetimes-HW-Zeiten waren ganzjaehrig BST, dt +60min inflationiert)
@@ -529610,7 +529610,7 @@ x 0 0
 # !units: meters
 # !longitude: 1.2741
 # !latitude: 51.8456
-Walton-On-The-Naze, England, United Kingdom (2)
+Walton-on-the-Naze, England, United Kingdom
 +00:00 :Europe/London
 2.2840 meters
 J1              0.0065  89.98
@@ -529725,199 +529725,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# 1759 HW/LW points -> 45183 interpolated points
-# BEGIN HOT COMMENTS
-# country: United Kingdom
-# source: Derived from tidetimes.co.uk HW/LW predictions with UTide
-# date_imported: 20260414
-# datum: ACD (approx.)
-# confidence: 7
-# ssc_id: SSC-walt
-# psmsl_id: 1224, 2307, 666
-# utide: period=2025-01-01..2026-04-16 r2=0.7863 rms=0.5306m const=68
-# bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
-# !units: meters
-# !longitude: 1.2741
-# !latitude: 51.8456
-Walton-on-the-Naze, England, United Kingdom
-+00:00 :Europe/London
-2.3250 meters
-J1              0.0082  140.10
-K1              0.0823  357.51
-K2              0.1162  32.10
-L2              0.1060  350.38
-x 0 0
-M2              1.3893  332.64
-M3              0.0054  165.57
-M4              0.0045  5.79
-M6              0.0025  113.73
-M8              0.0006  214.23
-N2              0.2114  311.66
-2N2             0.0224  223.06
-O1              0.1220  167.65
-OO1             0.0017  75.74
-P1              0.0249  318.87
-Q1              0.0341  116.52
-2Q1             0.0077  169.91
-R2              0.0123  94.65
-x 0 0
-S2              0.4071  26.14
-S4              0.0019  329.05
-x 0 0
-T2              0.0110  289.71
-LDA2            0.0519  315.64
-MU2             0.0717  115.82
-NU2             0.0947  286.58
-RHO1            0.0140  89.32
-MK3             0.0285  163.75
-x 0 0
-MN4             0.0027  111.54
-MS4             0.0124  93.37
-2SM2            0.0804  187.07
-MF              0.0246  282.11
-MSF             0.1011  174.56
-MM              0.0746  99.50
-x 0 0
-SSA             0.0133  261.12
-SA-IOS          0.0500  265.21
-x 0 0
-S1-IOS          0.0476  209.75
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0013  77.38
-2MK6            0.0003  250.76
-x 0 0
-2MN6            0.0016  105.80
-2MS6            0.0008  197.70
-x 0 0
-2SK5            0.0003  123.47
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0067  158.50
-x 0 0
-ALP1            0.0026  155.50
-BET1            0.0006  20.14
-CHI1            0.0050  63.45
-H1              0.0378  330.04
-H2              0.0382  185.14
-x 0 0
-ETA2            0.0041  164.82
-x 0 0
-UPS1            0.0027  90.08
-x 0 0
-x 0 0
-MK4             0.0032  119.77
-MKS2            0.0328  58.69
-x 0 0
-EPS2            0.0118  91.87
-MO3             0.0239  61.78
-x 0 0
-TAU1            0.0203  219.71
-x 0 0
-MSK6            0.0004  74.22
-MSM             0.0543  3.46
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0040  168.50
-OP2             0.0377  31.53
-x 0 0
-PHI1            0.0044  180.28
-x 0 0
-PI1             0.0075  289.71
-x 0 0
-PSI1            0.0009  34.56
-x 0 0
-x 0 0
-SIG1            0.0097  199.84
-SK3             0.0094  219.66
-x 0 0
-SN4             0.0027  125.64
-x 0 0
-SO1             0.0195  263.80
-SO3             0.0102  103.38
-THE1            0.0026  82.44
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0174  265.21
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0098  18.26
-x 0 0
-x 0 0
-N4              0.0028  58.18
 x 0 0
 x 0 0
 x 0 0
