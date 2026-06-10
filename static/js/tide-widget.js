@@ -9,8 +9,9 @@
  * Attributes:
  *   data-station  station slug or full station name
  *   data-lat / data-lon  alternative: nearest station to coordinates
- *   data-days     1..7 (default 3)
+ *   data-days     1..3 (default 3)
  *   data-theme    light | dark | auto (default light)
+ *   data-units    m | ft (default m)
  */
 (function () {
   'use strict';
@@ -43,6 +44,8 @@
     '.tide-widget .tw-date{font-weight:600;font-size:12.5px;color:#169ca5;text-transform:uppercase;letter-spacing:.03em;margin:2px 0 4px}' +
     '.tide-widget table.tw-table{width:100%;border-collapse:collapse}' +
     '.tide-widget .tw-table td{padding:2px 0;border:0;font-size:13.5px}' +
+    '.tide-widget .tw-table th{padding:0 0 2px;border:0;font-size:10.5px;font-weight:600;' +
+      'color:#8a99a3;text-transform:uppercase;letter-spacing:.05em;text-align:right}' +
     '.tide-widget .tw-icon{width:24px;text-align:center}' +
     '.tide-widget .tw-icon-high{color:#1a7fc4}' +
     '.tide-widget .tw-icon-low{color:#c47a1a}' +
@@ -59,6 +62,7 @@
     '.tide-widget.tw-dark .tw-day+.tw-day{border-top-color:#2c353c}' +
     '.tide-widget.tw-dark .tw-date{color:#4fc3cb}' +
     '.tide-widget.tw-dark .tw-type{color:#b9c4cb}' +
+    '.tide-widget.tw-dark .tw-table th{color:#6e7f8a}' +
     '.tide-widget.tw-dark .tw-height{color:#8fa0aa}' +
     '.tide-widget.tw-dark .tw-icon-high{color:#5fb2e8}' +
     '.tide-widget.tw-dark .tw-icon-low{color:#e8b25f}' +
@@ -77,6 +81,7 @@
   var ICONS = { high: '▲', low: '▼', flood: '➡', ebb: '⬅', slack: '⏸' };
   var ICON_CLASS = { high: 'tw-icon-high', low: 'tw-icon-low', flood: 'tw-icon-high', ebb: 'tw-icon-low', slack: 'tw-type' };
   var LABELS = { 'High Tide': 'High', 'Low Tide': 'Low' };
+  var UNIT_SHORT = { meters: 'm', feet: 'ft', knots: 'kn' };
 
   function el(tag, cls, text) {
     var e = document.createElement(tag);
@@ -114,16 +119,26 @@
       var box = el('div', 'tw-day');
       box.appendChild(el('div', 'tw-date', formatDate(day.date)));
       var table = el('table', 'tw-table');
+      var thead = document.createElement('thead');
+      var hrow = document.createElement('tr');
+      hrow.appendChild(el('th', null, ''));
+      hrow.appendChild(el('th', null, ''));
+      hrow.appendChild(el('th', null, 'time'));
+      hrow.appendChild(el('th', null, data.is_current ? 'rate' : 'level'));
+      thead.appendChild(hrow);
+      table.appendChild(thead);
+      var tbody = document.createElement('tbody');
       day.events.forEach(function (ev) {
         var tr = document.createElement('tr');
         var icon = el('td', 'tw-icon ' + (ICON_CLASS[ev.kind] || 'tw-type'), ICONS[ev.kind] || '');
         var type = el('td', 'tw-type', LABELS[ev.type] || ev.type);
         var time = el('td', 'tw-time', ev.time);
         var height = el('td', 'tw-height',
-          ev.height != null ? ev.height.toFixed(2) + ' ' + (ev.unit === 'meters' ? 'm' : ev.unit) : '');
+          ev.height != null ? ev.height.toFixed(2) + ' ' + (UNIT_SHORT[ev.unit] || ev.unit) : '');
         tr.appendChild(icon); tr.appendChild(type); tr.appendChild(time); tr.appendChild(height);
-        table.appendChild(tr);
+        tbody.appendChild(tr);
       });
+      table.appendChild(tbody);
       box.appendChild(table);
       root.appendChild(box);
     });
@@ -175,7 +190,9 @@
     root.classList.toggle('tw-dark', theme === 'dark');
 
     var days = parseInt(root.getAttribute('data-days') || '3', 10);
-    if (!(days >= 1 && days <= 7)) days = 3;
+    if (!(days >= 1 && days <= 3)) days = 3;
+    var units = (root.getAttribute('data-units') || 'm').toLowerCase();
+    units = (units === 'ft' || units === 'feet') ? 'ft' : 'm';
 
     renderMessage(root, 'Loading tide times…');
 
@@ -185,7 +202,7 @@
 
     function load(stationQuery) {
       fetchJson(
-        BASE + '/api/widget/tides?station=' + encodeURIComponent(stationQuery) + '&days=' + days,
+        BASE + '/api/widget/tides?station=' + encodeURIComponent(stationQuery) + '&days=' + days + '&units=' + units,
         function (data) { render(root, data); },
         function (msg) { renderMessage(root, msg); }
       );

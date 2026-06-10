@@ -1787,15 +1787,15 @@ def _widget_resolve_slug(q):
     return None, None
 
 
-def _widget_tide_data(slug, station_name, days):
+def _widget_tide_data(slug, station_name, days, units='m'):
     """Tide events for the widget: {station, days:[{date, events:[...]}], ...}.
-    Cached per (slug, days) until midnight (server time)."""
+    Cached per (slug, days, units) until midnight (server time)."""
     global _widget_cache_date
     today = datetime.now().date()
     if _widget_cache_date != today:
         _widget_cache.clear()
         _widget_cache_date = today
-    cache_key = (slug, days)
+    cache_key = (slug, days, units)
     if cache_key in _widget_cache:
         return _widget_cache[cache_key]
 
@@ -1813,6 +1813,7 @@ def _widget_tide_data(slug, station_name, days):
         "-f", "t", "-m", "p",
         "-df", "%Y-%m-%d", "-tf", "%H:%M",
         "-em", "pSsMm",  # suppress sun/moon events
+        "-u", "ft" if units == 'ft' else "m",
     ]
     result = subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
 
@@ -1899,7 +1900,12 @@ def _widget_days_param():
         days = int(request.args.get('days', 3))
     except (TypeError, ValueError):
         days = 3
-    return max(1, min(days, 7))
+    return max(1, min(days, 3))
+
+
+def _widget_units_param():
+    units = (request.args.get('units') or 'm').strip().lower()
+    return 'ft' if units in ('ft', 'feet') else 'm'
 
 
 def _cors_json(payload, status=200):
@@ -1916,8 +1922,9 @@ def api_widget_tides():
     if not slug:
         return _cors_json({"error": "Station not found"}, 404)
     days = _widget_days_param()
+    units = _widget_units_param()
     try:
-        return _cors_json(_widget_tide_data(slug, station_name, days))
+        return _cors_json(_widget_tide_data(slug, station_name, days, units))
     except subprocess.CalledProcessError as e:
         print(f"❌ Widget: tide-Aufruf fehlgeschlagen für {station_name}: {e.stderr}")
         return _cors_json({"error": "Prediction failed"}, 500)
@@ -1978,8 +1985,9 @@ def widget_frame(slug):
     theme = request.args.get('theme', 'light')
     if theme not in ('light', 'dark', 'auto'):
         theme = 'light'
+    units = _widget_units_param()
     return render_template("widget_frame.html", slug=resolved_slug,
-                           days=days, theme=theme)
+                           days=days, theme=theme, units=units)
 
 
 @app.route("/widgets/")
