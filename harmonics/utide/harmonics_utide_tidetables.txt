@@ -428646,8 +428646,8 @@ x 0 0
 # hw_reproduction: n=883 time_sigma=18min height_rms=0.406m
 # bst_fix: 20260610 Phasen -speed*1h (tidetimes-HW-Zeiten waren ganzjaehrig BST, dt +60min inflationiert)
 # !units: meters
-# !longitude: 0.750000
-# !latitude: 52.966667
+# !longitude: 0.7441
+# !latitude: 52.9650
 Burnham (Overy Staithe), England, United Kingdom
 +00:00 :Europe/London
 0.9804 meters
@@ -438409,133 +438409,131 @@ x 0 0
 # Colchester, England, United Kingdom
 # BEGIN HOT COMMENTS
 # country: United Kingdom
-# source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
-# date_imported: 20260609
+# source: Secondary-port transfer from PLA Walton-on-the-Naze (UKHO HW via tidetimes, UTC+1-fix)
+# date_imported: 20260610
 # datum: station Chart Datum (approx.)
-# confidence: 5
-# quality: approximate (variable HW lag, transfer time_sigma=30min)
-# transfer_ref: Walton-on-the-Naze, England, United Kingdom (Donor-Block seit 20260610 PLA-basiert; Transfer-Phasen noch vom tidetimes-Fit)
-# transfer: dt=5.0min(sigma=30) a=1.0311 z0=2.335 predLAT=0.00m
-# hw_reproduction: n=881 time_sigma=30min height_rms=0.272m
-# bst_fix: 20260610 Phasen -speed*1h (tidetimes-HW-Zeiten waren ganzjaehrig BST, dt +60min inflationiert)
+# confidence: 6
+# transfer_ref: Walton-on-the-Naze, England, United Kingdom (PLA, r2 0.998)
+# transfer: dt=32.0min(sigma=14) a=0.9674 z0=2.190 predLAT=0.00m
+# hw_reproduction: n=881 time_sigma=14min height_rms=0.140m
 # !units: meters
 # !longitude: 0.9323
 # !latitude: 51.8782
 Colchester, England, United Kingdom
 +00:00 :Europe/London
-2.3351 meters
-J1              0.0075  180.64
-K1              0.0867  2.38
-K2              0.1255  41.39
-L2              0.0910  6.91
+2.1902 meters
+J1              0.0063  98.29
+K1              0.1043  4.08
+K2              0.1148  41.15
+L2              0.0790  353.27
 x 0 0
-M2              1.3956  346.64
-M3              0.0039  201.55
-M4              0.0047  41.79
-M6              0.0020  163.95
-M8              0.0003  310.55
-N2              0.1936  326.14
-2N2             0.0259  234.56
-O1              0.1278  178.60
-OO1             0.0031  45.57
-P1              0.0266  332.76
-Q1              0.0361  121.30
-2Q1             0.0089  159.39
-R2              0.0380  2.39
+M2              1.4049  345.86
+M3              0.0052  44.17
+M4              0.0906  341.41
+M6              0.0521  333.40
+M8              0.0047  321.72
+N2              0.2470  321.53
+2N2             0.0399  269.10
+O1              0.1245  184.60
+OO1             0.0036  145.40
+P1              0.0398  347.49
+Q1              0.0392  128.77
+2Q1             0.0068  96.09
+R2              0.0037  104.26
 x 0 0
-S2              0.3984  39.60
-S4              0.0023  13.43
+S2              0.3942  40.46
+S4              0.0008  133.25
 x 0 0
-T2              0.0591  123.07
-LDA2            0.0652  333.15
-MU2             0.0756  136.03
-NU2             0.0901  306.87
-RHO1            0.0129  82.13
-MK3             0.0304  203.91
+T2              0.0188  23.85
+LDA2            0.0391  356.65
+MU2             0.0830  94.61
+NU2             0.0752  317.11
+RHO1            0.0092  130.12
+MK3             0.0253  271.67
 x 0 0
-MN4             0.0025  148.02
-MS4             0.0110  125.51
-2SM2            0.0761  204.02
-MF              0.0264  281.21
-MSF             0.1058  174.94
-MM              0.0777  100.22
+MN4             0.0286  316.53
+MS4             0.0468  50.55
+2SM2            0.0244  258.15
+MF              0.0115  148.35
+MSF             0.0094  46.49
+MM              0.0062  125.84
 x 0 0
-SSA             0.0144  261.45
-SA-IOS          0.0521  265.48
+SSA             0.0083  140.25
+SA-IOS          0.0595  269.62
 x 0 0
-S1-IOS          0.0486  198.79
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0014  136.51
-2MK6            0.0003  277.59
-x 0 0
-2MN6            0.0010  152.05
-2MS6            0.0007  257.33
-x 0 0
-2SK5            0.0009  175.12
+S1-IOS          0.0109  174.44
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0063  131.91
+2MK6            0.0103  32.67
 x 0 0
-3MS4            0.0057  188.33
-x 0 0
-ALP1            0.0021  134.00
-BET1            0.0004  74.87
-CHI1            0.0046  81.77
-H1              0.2132  260.65
-H2              0.1951  96.06
-x 0 0
-ETA2            0.0034  184.57
-x 0 0
-UPS1            0.0024  55.82
+2MN6            0.0275  310.09
+2MS6            0.0499  22.71
 x 0 0
 x 0 0
-MK4             0.0040  145.24
-MKS2            0.0329  17.95
-x 0 0
-EPS2            0.0129  126.09
-MO3             0.0197  85.71
-x 0 0
-TAU1            0.0394  252.40
-x 0 0
-MSK6            0.0006  126.13
-MSM             0.0555  3.33
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0038  182.93
-OP2             0.0681  40.79
-x 0 0
-PHI1            0.0014  289.77
-x 0 0
-PI1             0.0109  292.06
-x 0 0
-PSI1            0.0081  74.96
-x 0 0
-x 0 0
-SIG1            0.0111  232.75
-SK3             0.0103  248.34
-x 0 0
-SN4             0.0024  161.97
-x 0 0
-SO1             0.0299  287.68
-SO3             0.0122  171.79
-THE1            0.0033  53.55
+2SM6            0.0102  75.15
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SKM2            0.0141  285.59
+3MS8            0.0035  18.03
+x 0 0
+BET1            0.0005  283.94
+CHI1            0.0013  262.44
+H1              0.0222  58.79
+H2              0.0119  222.52
+x 0 0
+ETA2            0.0007  136.67
+x 0 0
+UPS1            0.0008  208.78
+M10             0.0033  325.50
+x 0 0
+MK4             0.0099  59.52
+MKS2            0.0057  141.93
+x 0 0
+EPS2            0.0148  93.33
+MO3             0.0282  93.37
+x 0 0
+TAU1            0.0051  85.47
+x 0 0
+MSK6            0.0044  83.75
+MSM             0.0031  168.27
+MSN2            0.0213  237.17
+MSN6            0.0109  1.23
+x 0 0
+NO1             0.0018  242.36
+x 0 0
+OQ2             0.0073  202.49
+PHI1            0.0042  342.04
+x 0 0
+PI1             0.0030  259.26
+x 0 0
+PSI1            0.0020  265.64
+x 0 0
+x 0 0
+SIG1            0.0048  321.70
+SK3             0.0077  329.11
+SK4             0.0011  178.86
+SN4             0.0015  117.20
+x 0 0
+SO1             0.0052  188.31
+SO3             0.0109  169.04
+THE1            0.0023  30.53
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-NO3             0.0074  36.15
 x 0 0
 x 0 0
-N4              0.0022  96.83
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -468105,8 +468103,8 @@ x 0 0
 # utide: period=2025-01-01..2026-04-17 r2=0.8121 rms=0.7685m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: 0.483333
-# !latitude: 52.933333
+# !longitude: 0.4838
+# !latitude: 52.9366
 Hunstanton, England, United Kingdom
 +00:00 :Europe/London
 4.1377 meters
@@ -531139,8 +531137,8 @@ x 0 0
 # utide: period=2025-01-01..2026-04-17 r2=0.6265 rms=0.5965m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: 0.850000
-# !latitude: 52.966667
+# !longitude: 0.8507
+# !latitude: 52.9584
 Wells, England, United Kingdom
 +00:00 :Europe/London
 2.0655 meters
