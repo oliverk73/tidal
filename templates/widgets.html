@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="manifest" href="/static/manifest.webmanifest"/>
+<meta name="theme-color" content="#169ca5"/>
+<link rel="apple-touch-icon" href="/static/icon-192.png"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="Tides"/>
+{% include "_pwa_head.html" %}
+<link href="/static/css/styles.css" rel="stylesheet"/>
+<style>
+html, body { overflow: auto; height: auto; }
+main { max-width: 1100px; margin: 0 auto; padding: 0 16px 48px; }
+header #search-trigger { position: static; transform: none; top: auto; left: auto; min-width: 0; width: auto; flex: 0 1 280px; }
+.crumb-home { text-decoration: none; }
+.crumb-home .home-glyph { font-size: 1em; line-height: 1; margin-right: 3px; }
+.w-intro { color: #444; font-size: 1.05em; line-height: 1.55; max-width: 760px; }
+.w-step { margin-top: 2em; padding-top: 1em; border-top: 1px solid #eee; }
+.w-step > h2 { margin: 0 0 0.7em; color: #169ca5; font-size: 1.25em; }
+.w-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: start; }
+@media (min-width: 860px) { .w-grid { grid-template-columns: 1fr 360px; } }
+.w-panel { padding: 16px; border: 1px solid #e5e5e5; border-radius: 8px; background: #fafafa; }
+.w-field { margin-bottom: 14px; }
+.w-field label { display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.95em; }
+.w-field input[type="text"], .w-field input[type="number"], .w-field select {
+  width: 100%; max-width: 420px; padding: 8px 10px; border: 1px solid #ccc;
+  border-radius: 6px; font-size: 1em; background: #fff; box-sizing: border-box;
+}
+.w-suggest { position: relative; max-width: 420px; }
+.w-suggest-list { position: absolute; top: 100%; left: 0; right: 0; z-index: 50;
+  background: #fff; border: 1px solid #ccc; border-top: none; border-radius: 0 0 6px 6px;
+  max-height: 280px; overflow-y: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+.w-suggest-list div { padding: 7px 10px; cursor: pointer; font-size: 0.93em; }
+.w-suggest-list div:hover, .w-suggest-list div.active { background: #eaf6f7; }
+.w-mode { display: flex; gap: 0; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 6px; overflow: hidden; width: fit-content; }
+.w-mode button { padding: 7px 16px; border: none; background: #fff; cursor: pointer; font-size: 0.95em; }
+.w-mode button.active { background: #169ca5; color: #fff; }
+.w-inline { display: flex; gap: 12px; flex-wrap: wrap; }
+.w-inline .w-field { flex: 0 0 auto; min-width: 130px; }
+.w-resolved { font-size: 0.9em; color: #555; margin-top: 6px; min-height: 1.2em; }
+.w-resolved strong { color: #169ca5; }
+pre.w-code { background: #1d2429; color: #dde5ea; padding: 14px; border-radius: 8px;
+  overflow-x: auto; font-size: 0.86em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.w-codebox { position: relative; }
+.w-copy { position: absolute; top: 8px; right: 8px; padding: 5px 12px; border: none;
+  border-radius: 5px; background: #169ca5; color: #fff; cursor: pointer; font-size: 0.85em; }
+.w-copy:hover { background: #128089; }
+.w-copy.copied { background: #2e9e44; }
+.w-preview-wrap { position: sticky; top: 12px; }
+.w-preview-label { font-weight: 600; margin-bottom: 8px; color: #555; font-size: 0.95em; }
+#w-preview { min-height: 120px; }
+table.w-classes { border-collapse: collapse; width: 100%; max-width: 760px; font-size: 0.93em; }
+table.w-classes th, table.w-classes td { border: 1px solid #e0e0e0; padding: 6px 10px; text-align: left; }
+table.w-classes th { background: #f4f7f8; }
+table.w-classes code { background: #f0f3f4; padding: 1px 5px; border-radius: 4px; }
+.w-note { background: #fdf6e3; border: 1px solid #f0e0b0; border-radius: 6px; padding: 10px 14px; font-size: 0.93em; color: #665; max-width: 760px; }
+ul.w-terms { line-height: 1.6; color: #444; max-width: 760px; }
+</style>
+<script src="/static/js/suche.js" defer></script>
+<script src="/static/js/pwa.js" defer></script>
+<script src="/widget.js" defer></script>
+<title>Free tide widget for your website — embed tide times</title>
+<meta name="description" content="Add free tide times to your own website: pick one of 12,000+ stations worldwide, choose how many days to show, copy two lines of HTML. Script and iframe embeds, light and dark themes."/>
+<link rel="canonical" href="{{ request.url_root.rstrip('/') }}/widgets/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Free tide widget for your website"/>
+<meta property="og:description" content="Embed tide times for 12,000+ stations worldwide with two lines of HTML."/>
+<meta property="og:url" content="{{ request.url_root.rstrip('/') }}/widgets/"/>
+<meta property="og:image" content="{{ request.url_root.rstrip('/') }}/static/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="Tide predictions"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ request.url_root.rstrip('/') }}/static/og-image.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Free tide widget for your website",
+  "url": "{{ request.url_root.rstrip('/') }}/widgets/",
+  "description": "Embed tide times for 12,000+ stations worldwide with two lines of HTML. Script and iframe embeds, light and dark themes."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"{{ request.url_root.rstrip('/') }}/"},
+    {"@type":"ListItem","position":2,"name":"Widgets","item":"{{ request.url_root.rstrip('/') }}/widgets/"}
+  ]
+}
+</script>
+</head>
+<body>
+<header style="max-width: 1100px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 12px;">
+<button id="search-trigger" type="button">Search for locations</button>
+</header>
+<nav aria-label="Breadcrumb" style="max-width:1100px;margin:0 auto;padding:0 16px 6px;font-size:0.85em;color:#666;">
+  <a href="/" class="crumb-home" style="color:#0066cc;" title="Back to map"><span class="home-glyph" aria-hidden="true">&#x2302;</span>Home</a>
+  &rsaquo; <span aria-current="page">Widgets</span>
+</nav>
+<main>
+<h1>Free tide widget for your website</h1>
+<p class="w-intro">
+  Show today&rsquo;s tide times on your own website &mdash; for any of our
+  12,000+ stations worldwide. Pick a location below, choose how many days to
+  display, and copy two lines of HTML. The widget updates itself every day,
+  is free to use, and only asks that the small attribution link stays visible.
+</p>
+
+<div class="w-grid">
+<div>
+
+<section class="w-step" aria-labelledby="step1">
+  <h2 id="step1">1. Choose a location</h2>
+  <div class="w-mode" role="tablist">
+    <button type="button" id="w-mode-station" class="active">Search a station</button>
+    <button type="button" id="w-mode-coords">Use coordinates</button>
+  </div>
+
+  <div id="w-station-fields">
+    <div class="w-field">
+      <label for="w-search">Station</label>
+      <div class="w-suggest">
+        <input type="text" id="w-search" placeholder="e.g. Dover, Cuxhaven, Sydney…" autocomplete="off"/>
+        <div class="w-suggest-list" id="w-suggest-list" hidden></div>
+      </div>
+      <div class="w-resolved" id="w-resolved"></div>
+    </div>
+  </div>
+
+  <div id="w-coord-fields" hidden>
+    <div class="w-inline">
+      <div class="w-field">
+        <label for="w-lat">Latitude</label>
+        <input type="number" id="w-lat" step="0.0001" min="-90" max="90" value="50.77"/>
+      </div>
+      <div class="w-field">
+        <label for="w-lon">Longitude</label>
+        <input type="number" id="w-lon" step="0.0001" min="-180" max="180" value="-1.11"/>
+      </div>
+    </div>
+    <div class="w-resolved" id="w-coord-resolved"></div>
+    <p style="font-size:0.9em;color:#666;max-width:560px;">
+      With coordinates the widget automatically shows the nearest tide station
+      &mdash; useful for beaches or anchorages that aren&rsquo;t in the list.
+    </p>
+  </div>
+</section>
+
+<section class="w-step" aria-labelledby="step2">
+  <h2 id="step2">2. Options</h2>
+  <div class="w-inline">
+    <div class="w-field">
+      <label for="w-days">Days shown</label>
+      <select id="w-days">
+        <option value="1">1 day</option>
+        <option value="2">2 days</option>
+        <option value="3" selected>3 days</option>
+        <option value="4">4 days</option>
+        <option value="5">5 days</option>
+        <option value="7">7 days</option>
+      </select>
+    </div>
+    <div class="w-field">
+      <label for="w-theme">Theme</label>
+      <select id="w-theme">
+        <option value="light" selected>Light</option>
+        <option value="dark">Dark</option>
+        <option value="auto">Auto (follow visitor)</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<section class="w-step" aria-labelledby="step3">
+  <h2 id="step3">3. Copy the code</h2>
+
+  <h3 style="font-size:1.05em;margin:0.5em 0 0.4em;">Script embed (recommended)</h3>
+  <p style="font-size:0.93em;color:#555;max-width:640px;margin-top:0;">
+    Paste this where the widget should appear. It adapts to your page,
+    inherits nothing, and you can style it with CSS (see below). Several
+    widgets on one page work fine &mdash; the script line is only needed once.
+  </p>
+  <div class="w-codebox">
+    <pre class="w-code" id="w-code-script"></pre>
+    <button type="button" class="w-copy" data-target="w-code-script">Copy</button>
+  </div>
+
+  <h3 style="font-size:1.05em;margin:1.2em 0 0.4em;">Iframe embed</h3>
+  <p style="font-size:0.93em;color:#555;max-width:640px;margin-top:0;">
+    Fully isolated from your page&rsquo;s CSS &mdash; use this if your CMS
+    strips script tags (e.g. some site builders and forums).
+  </p>
+  <div class="w-codebox">
+    <pre class="w-code" id="w-code-iframe"></pre>
+    <button type="button" class="w-copy" data-target="w-code-iframe">Copy</button>
+  </div>
+</section>
+
+<section class="w-step" aria-labelledby="custom">
+  <h2 id="custom">Customising the widget with CSS</h2>
+  <p style="max-width:760px;color:#444;line-height:1.55;">
+    The script embed renders plain HTML inside your page, so your own
+    stylesheet can override anything. All elements carry prefixed class
+    names; target them below <code>.tide-widget</code> in your CSS:
+  </p>
+  <table class="w-classes">
+    <tr><th>Class</th><th>Element</th></tr>
+    <tr><td><code>.tide-widget</code></td><td>Outer container (border, width, font)</td></tr>
+    <tr><td><code>.tw-header</code></td><td>Header bar with the station name</td></tr>
+    <tr><td><code>.tw-day</code></td><td>One day&rsquo;s block</td></tr>
+    <tr><td><code>.tw-date</code></td><td>Date heading of a day</td></tr>
+    <tr><td><code>.tw-table</code></td><td>Table of tide events</td></tr>
+    <tr><td><code>.tw-icon</code>, <code>.tw-type</code>, <code>.tw-time</code>, <code>.tw-height</code></td><td>Cells: icon, High/Low label, time, height</td></tr>
+    <tr><td><code>.tw-footer</code></td><td>Attribution footer</td></tr>
+  </table>
+  <p style="max-width:760px;color:#444;line-height:1.55;">
+    Example &mdash; a wider widget with your brand colour in the header:
+  </p>
+  <div class="w-codebox">
+    <pre class="w-code">&lt;style&gt;
+  .tide-widget { max-width: 100%; }
+  .tide-widget .tw-header { background: #234e70; }
+&lt;/style&gt;</pre>
+  </div>
+</section>
+
+<section class="w-step" aria-labelledby="terms">
+  <h2 id="terms">Terms of use</h2>
+  <ul class="w-terms">
+    <li>The widget is <strong>free</strong> for personal and commercial websites.</li>
+    <li>Please keep the attribution link in the footer visible and clickable.</li>
+    <li>Predictions are computed from harmonic constituents and refreshed daily.
+        They can differ from reality (weather, surge) &mdash;
+        <strong>do not use them for navigation</strong> or safety-critical decisions.</li>
+    <li>No registration, no API key, no cookies. Heavy automated use of the
+        underlying API may be rate-limited.</li>
+  </ul>
+  <div class="w-note">
+    Tip: every station page on this site (e.g. via the
+    <a href="/stations/">station index</a>) shows the same data with a 7-day
+    graph &mdash; the widget&rsquo;s header links there so your visitors can
+    see the full picture.
+  </div>
+</section>
+
+</div>
+
+<aside class="w-preview-wrap" aria-label="Live preview">
+  <div class="w-preview-label">Live preview</div>
+  <div id="w-preview"></div>
+</aside>
+</div>
+
+</main>
+
+<script>
+  var stationNames = {{ station_names | tojson }};
+</script>
+<script>
+(function () {
+  'use strict';
+  var BASE = location.origin;
+  var state = {
+    mode: 'station',                 // 'station' | 'coords'
+    slug: 'dover-england-united-kingdom',
+    station: 'Dover, England, United Kingdom',
+    lat: '50.77', lon: '-1.11',
+    days: 3, theme: 'light'
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  // ── Embed code generation ─────────────────────────────────────────
+  function scriptCode() {
+    var attrs = state.mode === 'coords'
+      ? 'data-lat="' + state.lat + '" data-lon="' + state.lon + '"'
+      : 'data-station="' + state.slug + '"';
+    return '<div class="tide-widget" ' + attrs +
+           ' data-days="' + state.days + '"' +
+           (state.theme !== 'light' ? ' data-theme="' + state.theme + '"' : '') +
+           '></div>\n<script async src="' + BASE + '/widget.js"><\/script>';
+  }
+
+  function iframeCode() {
+    var height = 90 + state.days * 125;
+    var theme = state.theme !== 'light' ? '&theme=' + state.theme : '';
+    return '<iframe src="' + BASE + '/widget/' + state.slug + '?days=' + state.days + theme + '"' +
+           ' width="320" height="' + height + '" style="border:none;max-width:100%;"' +
+           ' loading="lazy" title="Tide times for ' + state.station.replace(/"/g, '&quot;') + '"></iframe>';
+  }
+
+  function updateCode() {
+    $('w-code-script').textContent = scriptCode();
+    $('w-code-iframe').textContent = iframeCode();
+  }
+
+  // ── Live preview ──────────────────────────────────────────────────
+  function updatePreview() {
+    var holder = $('w-preview');
+    holder.innerHTML = '';
+    var div = document.createElement('div');
+    div.className = 'tide-widget';
+    if (state.mode === 'coords') {
+      div.setAttribute('data-lat', state.lat);
+      div.setAttribute('data-lon', state.lon);
+    } else {
+      div.setAttribute('data-station', state.slug);
+    }
+    div.setAttribute('data-days', state.days);
+    div.setAttribute('data-theme', state.theme);
+    holder.appendChild(div);
+    if (window.TideWidget) window.TideWidget.scan(holder);
+  }
+
+  function refresh() { updateCode(); updatePreview(); }
+
+  // ── Station search with suggestions ───────────────────────────────
+  var input = $('w-search');
+  var list = $('w-suggest-list');
+
+  function hideList() { list.hidden = true; list.innerHTML = ''; }
+
+  function pickStation(name) {
+    input.value = name;
+    hideList();
+    $('w-resolved').textContent = 'Resolving…';
+    fetch('/api/widget/resolve?station=' + encodeURIComponent(name))
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (!res.slug) throw new Error();
+        state.slug = res.slug;
+        state.station = res.station;
+        $('w-resolved').innerHTML = 'Widget id: <strong>' + res.slug + '</strong>';
+        refresh();
+      })
+      .catch(function () {
+        $('w-resolved').textContent = 'Could not resolve this station.';
+      });
+  }
+
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    if (q.length < 2) { hideList(); return; }
+    var hits = [];
+    for (var i = 0; i < stationNames.length && hits.length < 12; i++) {
+      var n = stationNames[i];
+      if (/Current$/.test(n)) continue;        // currents: not supported in widget UI
+      if (n.toLowerCase().indexOf(q) !== -1 && hits.indexOf(n) === -1) hits.push(n);
+    }
+    list.innerHTML = '';
+    hits.forEach(function (n) {
+      var item = document.createElement('div');
+      item.textContent = n;
+      item.addEventListener('mousedown', function (e) { e.preventDefault(); pickStation(n); });
+      list.appendChild(item);
+    });
+    list.hidden = hits.length === 0;
+  });
+  input.addEventListener('blur', function () { setTimeout(hideList, 150); });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && list.firstChild) {
+      e.preventDefault();
+      pickStation(list.firstChild.textContent);
+    }
+  });
+
+  // ── Coordinates mode ──────────────────────────────────────────────
+  var coordTimer = null;
+  function coordsChanged() {
+    state.lat = $('w-lat').value;
+    state.lon = $('w-lon').value;
+    if (!state.lat || !state.lon) return;
+    clearTimeout(coordTimer);
+    coordTimer = setTimeout(function () {
+      $('w-coord-resolved').textContent = 'Looking up nearest station…';
+      fetch('/api/widget/nearest?lat=' + state.lat + '&lon=' + state.lon)
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res.slug) throw new Error();
+          state.slug = res.slug;          // used by the iframe variant
+          state.station = res.station;
+          $('w-coord-resolved').innerHTML =
+            'Nearest station: <strong>' + res.station + '</strong> (' + res.distance_km + ' km)';
+          refresh();
+        })
+        .catch(function () {
+          $('w-coord-resolved').textContent = 'No station found for these coordinates.';
+        });
+    }, 500);
+  }
+  $('w-lat').addEventListener('input', coordsChanged);
+  $('w-lon').addEventListener('input', coordsChanged);
+
+  // ── Mode toggle ───────────────────────────────────────────────────
+  function setMode(mode) {
+    state.mode = mode;
+    $('w-mode-station').classList.toggle('active', mode === 'station');
+    $('w-mode-coords').classList.toggle('active', mode === 'coords');
+    $('w-station-fields').hidden = mode !== 'station';
+    $('w-coord-fields').hidden = mode !== 'coords';
+    if (mode === 'coords') { coordsChanged(); } else { refresh(); }
+  }
+  $('w-mode-station').addEventListener('click', function () { setMode('station'); });
+  $('w-mode-coords').addEventListener('click', function () { setMode('coords'); });
+
+  // ── Options ───────────────────────────────────────────────────────
+  $('w-days').addEventListener('change', function () { state.days = parseInt(this.value, 10); refresh(); });
+  $('w-theme').addEventListener('change', function () { state.theme = this.value; refresh(); });
+
+  // ── Copy buttons ──────────────────────────────────────────────────
+  document.querySelectorAll('.w-copy[data-target]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = $(btn.getAttribute('data-target')).textContent;
+      var done = function () {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+        done();
+      }
+    });
+  });
+
+  // ── Init: default station (verify it exists; fall back to first hit) ─
+  input.value = state.station;
+  fetch('/api/widget/resolve?station=' + encodeURIComponent(state.station))
+    .then(function (r) { return r.json(); })
+    .then(function (res) {
+      if (res.slug) { state.slug = res.slug; state.station = res.station; }
+      $('w-resolved').innerHTML = 'Widget id: <strong>' + state.slug + '</strong>';
+      refresh();
+    })
+    .catch(function () { refresh(); });
+})();
+</script>
+
+<div id="search-modal" class="search-modal">
+  <div class="search-modal-content">
+    <div class="search-modal-header">
+      <input id="search-modal-input" type="text" placeholder="Search for tide stations..." autocomplete="off" />
+      <button id="search-modal-close" type="button">&times;</button>
+    </div>
+    <div id="search-modal-results" class="search-modal-results"></div>
+  </div>
+</div>
+
+</body>
+</html>

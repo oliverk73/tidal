@@ -1236,6 +1236,8 @@ def sitemap_xml():
                  f"<changefreq>daily</changefreq><priority>1.0</priority></url>")
     parts.append(f"<url><loc>{base}/stations/</loc><lastmod>{today}</lastmod>"
                  f"<changefreq>weekly</changefreq><priority>0.8</priority></url>")
+    parts.append(f"<url><loc>{base}/widgets/</loc><lastmod>{today}</lastmod>"
+                 f"<changefreq>monthly</changefreq><priority>0.6</priority></url>")
     # Learn articles (FAQ-style content pages)
     from py.learn_content import ARTICLES as _LEARN_ARTICLES
     parts.append(f"<url><loc>{base}/learn/</loc><lastmod>{today}</lastmod>"
@@ -1717,6 +1719,274 @@ def generate_tide_prediction(station):
     except Exception as e:
         print(f"❌ Unerwarteter Fehler: {e}")
         return "Interner Fehler", 500
+
+# ──────────────────────────────────────────────────────────────────────
+# Embeddable tide widget (script + iframe), see /widgets/ for docs
+# ──────────────────────────────────────────────────────────────────────
+
+_widget_cache = {}        # (slug, days) → payload dict; cleared on date change
+_widget_cache_date = None
+_widget_meta_cache = {}   # (station, source) → {"tz": ..., "datum": ...}
+
+_WIDGET_EVENT_KINDS = {
+    'High Tide': 'high',
+    'Low Tide': 'low',
+    'Max Flood': 'flood',
+    'Max Ebb': 'ebb',
+    'Min Flood': 'flood',
+    'Min Ebb': 'ebb',
+    'Slack, Flood Begins': 'slack',
+    'Slack, Ebb Begins': 'slack',
+}
+
+
+def _widget_env_for_source(source):
+    if source:
+        tcd_path = os.path.join('/usr/share/xtide', source)
+        if os.path.exists(tcd_path):
+            env = os.environ.copy()
+            env['HFILE_PATH'] = tcd_path
+            return env
+    return None
+
+
+def _widget_station_meta(station_name, source, env):
+    """Time zone + datum from `tide -m a`, cached per process."""
+    key = (station_name, source)
+    cached = _widget_meta_cache.get(key)
+    if cached is not None:
+        return cached
+    meta = {"tz": "", "datum": ""}
+    try:
+        result = subprocess.run(["tide", "-l", station_name, "-m", "a"],
+                                capture_output=True, text=True, check=True, env=env)
+        for line in result.stdout.splitlines():
+            k, v = line[:14].strip(), line[14:].strip()
+            if k == "Time zone":
+                meta["tz"] = v
+            elif k == "Datum":
+                meta["datum"] = _expand_datum(v)
+    except subprocess.CalledProcessError:
+        pass
+    _widget_meta_cache[key] = meta
+    return meta
+
+
+def _widget_resolve_slug(q):
+    """Accept a slug or a full station name; return (slug, station_name) or (None, None)."""
+    q = unquote(q or "").strip()
+    if not q:
+        return None, None
+    station = _slug_to_station.get(q)
+    if station:
+        return q, station
+    slug = to_slug(q)
+    station = _slug_to_station.get(slug)
+    if station:
+        return slug, station
+    return None, None
+
+
+def _widget_tide_data(slug, station_name, days):
+    """Tide events for the widget: {station, days:[{date, events:[...]}], ...}.
+    Cached per (slug, days) until midnight (server time)."""
+    global _widget_cache_date
+    today = datetime.now().date()
+    if _widget_cache_date != today:
+        _widget_cache.clear()
+        _widget_cache_date = today
+    cache_key = (slug, days)
+    if cache_key in _widget_cache:
+        return _widget_cache[cache_key]
+
+    source = _station_data.get(station_name)
+    env = _widget_env_for_source(source)
+    meta = _widget_station_meta(station_name, source, env)
+
+    # Begin one day early and end one day late: a UTC→local shift (up to
+    # ±14 h) moves events across day boundaries in either direction.
+    begin = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d 00:00")
+    end = (datetime.now() + timedelta(days=days + 1)).strftime("%Y-%m-%d %H:%M")
+    cmd = [
+        "tide", "-l", station_name,
+        "-b", begin, "-e", end,
+        "-f", "t", "-m", "p",
+        "-df", "%Y-%m-%d", "-tf", "%H:%M",
+        "-em", "pSsMm",  # suppress sun/moon events
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
+
+    events = []
+    for line in result.stdout.splitlines():
+        line = line.strip()
+        if not re.match(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}\s", line):
+            continue
+        parts = line.split(None, 2)
+        if len(parts) < 3:
+            continue
+        date_str, time_str, rest = parts[0], parts[1], parts[2].strip()
+        val_parts = rest.rsplit('  ', 1)
+        if len(val_parts) == 2:
+            value, ev_type = val_parts[0].strip(), val_parts[1].strip()
+        else:
+            value, ev_type = '', rest
+        kind = _WIDGET_EVENT_KINDS.get(ev_type)
+        if not kind:
+            continue  # astro or unknown event
+        height, unit = None, ''
+        m = re.match(r"^(-?\d+(?:\.\d+)?)\s*(\S+)", value)
+        if m:
+            height = float(m.group(1))
+            unit = m.group(2)
+        events.append({"date": date_str, "time": time_str, "type": ev_type,
+                       "kind": kind, "height": height, "unit": unit})
+
+    # UTide-derived stations carry `Time zone: :UTC`; shift to local station
+    # time in Python (same approach as _generate_prediction).
+    is_utc_station = meta["tz"].strip().lstrip(':').upper() == "UTC"
+    coords = _station_coords.get(station_name)
+    today_str = today.isoformat()
+    if is_utc_station and coords and events:
+        try:
+            iana = _tzfinder.timezone_at(lat=coords[0], lng=coords[1])
+            if iana:
+                target_tz = ZoneInfo(iana)
+                for ev in events:
+                    dt_utc = datetime.strptime(
+                        f"{ev['date']} {ev['time']}", "%Y-%m-%d %H:%M"
+                    ).replace(tzinfo=ZoneInfo("UTC"))
+                    dt_loc = dt_utc.astimezone(target_tz)
+                    ev['date'] = dt_loc.strftime("%Y-%m-%d")
+                    ev['time'] = dt_loc.strftime("%H:%M")
+                events.sort(key=lambda e: (e['date'], e['time']))
+                # "Today" from the station's perspective, not the server's
+                today_str = datetime.now(target_tz).date().isoformat()
+        except Exception as e:
+            print(f"⚠️ Widget-TZ-Konvertierung fehlgeschlagen: {e}")
+
+    # Group by date; drop anything before today, cap at `days` distinct dates
+    day_list = []
+    for ev in events:
+        if ev['date'] < today_str:
+            continue
+        if day_list and day_list[-1]['date'] == ev['date']:
+            day_list[-1]['events'].append(ev)
+        elif len(day_list) < days:
+            day_list.append({'date': ev['date'], 'events': [ev]})
+        else:
+            break
+    for d in day_list:
+        for ev in d['events']:
+            ev.pop('date', None)
+
+    display = display_name_for(station_name, source)
+    data = {
+        "station": display,
+        "slug": slug,
+        "url": f"/prediction/{slug}",
+        "lat": coords[0] if coords else None,
+        "lon": coords[1] if coords else None,
+        "datum": meta["datum"],
+        "is_current": station_name.rstrip().endswith("Current"),
+        "days": day_list,
+    }
+    _widget_cache[cache_key] = data
+    return data
+
+
+def _widget_days_param():
+    try:
+        days = int(request.args.get('days', 3))
+    except (TypeError, ValueError):
+        days = 3
+    return max(1, min(days, 7))
+
+
+def _cors_json(payload, status=200):
+    resp = jsonify(payload)
+    resp.status_code = status
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    resp.headers['Cache-Control'] = 'public, max-age=900'
+    return resp
+
+
+@app.route("/api/widget/tides")
+def api_widget_tides():
+    slug, station_name = _widget_resolve_slug(request.args.get('station'))
+    if not slug:
+        return _cors_json({"error": "Station not found"}, 404)
+    days = _widget_days_param()
+    try:
+        return _cors_json(_widget_tide_data(slug, station_name, days))
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Widget: tide-Aufruf fehlgeschlagen für {station_name}: {e.stderr}")
+        return _cors_json({"error": "Prediction failed"}, 500)
+
+
+@app.route("/api/widget/nearest")
+def api_widget_nearest():
+    try:
+        lat = float(request.args.get('lat'))
+        lon = float(request.args.get('lon'))
+    except (TypeError, ValueError):
+        return _cors_json({"error": "lat and lon are required"}, 400)
+    if not (-90 <= lat <= 90 and -180 <= lon <= 180):
+        return _cors_json({"error": "lat/lon out of range"}, 400)
+    best = None
+    import math
+    cos_lat = math.cos(math.radians(lat))
+    for s_slug, s_lat, s_lon, s_disp in _station_index:
+        if s_disp.rstrip().endswith("Current"):
+            continue
+        dlat = math.radians(s_lat - lat)
+        dlon = math.radians(s_lon - lon)
+        a = math.sin(dlat / 2) ** 2 + cos_lat * math.cos(math.radians(s_lat)) * math.sin(dlon / 2) ** 2
+        d = 2 * 6371.0 * math.asin(math.sqrt(min(a, 1)))
+        if best is None or d < best[0]:
+            best = (d, s_slug, s_disp)
+    if not best:
+        return _cors_json({"error": "No stations available"}, 404)
+    return _cors_json({"slug": best[1], "station": best[2],
+                       "distance_km": round(best[0], 1)})
+
+
+@app.route("/api/widget/resolve")
+def api_widget_resolve():
+    slug, station_name = _widget_resolve_slug(request.args.get('station'))
+    if not slug:
+        return _cors_json({"error": "Station not found"}, 404)
+    source = _station_data.get(station_name)
+    return _cors_json({"slug": slug,
+                       "station": display_name_for(station_name, source)})
+
+
+@app.route("/widget.js")
+def widget_js():
+    resp = send_from_directory("static/js", "tide-widget.js",
+                               mimetype="application/javascript")
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    resp.headers['Cache-Control'] = 'public, max-age=86400'
+    return resp
+
+
+@app.route("/widget/<slug>")
+def widget_frame(slug):
+    resolved_slug, station_name = _widget_resolve_slug(slug)
+    if not resolved_slug:
+        return "Station not found.", 404
+    days = _widget_days_param()
+    theme = request.args.get('theme', 'light')
+    if theme not in ('light', 'dark', 'auto'):
+        theme = 'light'
+    return render_template("widget_frame.html", slug=resolved_slug,
+                           days=days, theme=theme)
+
+
+@app.route("/widgets/")
+@app.route("/widgets")
+def widgets_page():
+    return render_template("widgets.html", station_names=_station_names)
+
 
 @app.route("/update_coordinates", methods=["POST"])
 def update_coordinates():
