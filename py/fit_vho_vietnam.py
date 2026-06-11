@@ -46,11 +46,11 @@ STATIONS = {
     'cua-viet': ('Cua Viet', 'Vietnam', 'Asia/Ho_Chi_Minh'),
     'da-nang': ('Da Nang', 'Vietnam', 'Asia/Ho_Chi_Minh'),
     # 'quy-nhon': UHSLC-Messfit "Qui Nhon" vorhanden -> skip
-    'cam-ranh': ('Cam Ranh', 'Vietnam', 'Asia/Ho_Chi_Minh'),
+    'cam-ranh': ('Cam Ranh', 'Vietnam', 'Asia/Ho_Chi_Minh'),  # lon nachtraeglich 109.2333->109.165 (Minutenrundung lag auf der Halbinsel, Tafel gilt fuer die Bucht)
     # 'vung-tau': UHSLC-Messfit vorhanden -> skip
-    'sai-gon': ('Sai Gon (Ho Chi Minh City)', 'Vietnam', 'Asia/Ho_Chi_Minh'),
+    'sai-gon': ('Sai Gon (Ho Chi Minh City)', 'Vietnam', 'Asia/Ho_Chi_Minh'),  # lon nachtraeglich 106.700->106.7075 (Minutenrundung lag auf Land)
     'ha-tien': ('Ha Tien', 'Vietnam', 'Asia/Ho_Chi_Minh'),
-    'phu-quoc': ('Phu Quoc (Duong Dong)', 'Vietnam', 'Asia/Ho_Chi_Minh'),
+    'phu-quoc': ('Phu Quoc (An Thoi)', 'Vietnam', 'Asia/Ho_Chi_Minh'),
     'cong-pong-xom': ('Kampong Som (Sihanoukville)', 'Cambodia', 'Asia/Phnom_Penh'),
     'hoang-sa': ('Hoang Sa (Paracel Islands)', 'Vietnam', 'Asia/Ho_Chi_Minh'),
     'song-tu-tay': ('Song Tu Tay (Southwest Cay, Spratly Islands)', 'Vietnam', 'Asia/Ho_Chi_Minh'),
