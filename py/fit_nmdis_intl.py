@@ -148,7 +148,8 @@ def classic_tz(st, existing):
         i = lines.index(best[1])
     except ValueError:
         return None
-    m = re.search(r'(:\S+)', lines[i + 1])
+    # TZ-Name, nicht die Offset-Doppelpunkte ('-05:00 :America/Iqaluit')
+    m = re.search(r'(:[A-Za-z]\S+)', lines[i + 1])
     return m.group(1) if m else None
 
 
