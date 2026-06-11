@@ -33,14 +33,18 @@ def parse_pdf(path):
         for page in pdf.pages:
             txt = page.extract_text() or ''
             lines = [l.strip() for l in txt.split('\n') if l.strip()]
-            m = re.search(r'từ (\d{2})/(\d{2})/(\d{4})', txt)
+            m = re.search(r'từ (\d{1,2})/(\d{1,2})/(\d{4})', txt)
             if m:
                 year = int(m.group(3))
                 start_dm = (int(m.group(1)), int(m.group(2)))
-            # Datumszeile (10 Spalten DD/MM)
+            # Datumszeile (10 Spalten D/M, teils einstellig: '20/2');
+            # pro Seite frisch suchen — stale Vorseiten-Daten verschieben sonst
+            # alle Werte um Tage (Con-Dao-Bug 2026-06-11)
             for l in lines:
-                dm = re.findall(r'(\d{2})/(\d{2})', l)
-                if len(dm) >= 8 and 'từ' not in l:
+                if 'từ' in l or re.search(r'\d{1,2}/\d{1,2}/\d{4}', l):
+                    continue
+                dm = re.findall(r'(?<![\d/])(\d{1,2})/(\d{1,2})(?![\d/])', l)
+                if len(dm) >= 8:
                     dates = dm
                     break
             if not dates or year is None:
