@@ -48,6 +48,7 @@ COUNTRY = {
     'SAUDI ARABIA': 'Saudi Arabia', 'SIERRA LEONE': 'Sierra Leone',
     'SINGAPORE STRAIT': 'Singapore', 'SRI LANKA': 'Sri Lanka',
     'SUMATERA': 'Indonesia', 'SURINAM': 'Suriname', 'UAE': 'United Arab Emirates',
+    'INDIA': 'India',
     'VENEZUELA': 'Venezuela', 'WEST MALAYSIA': 'Malaysia',
 }
 # Sonderfaelle: code -> kompletter Anzeigename
@@ -66,9 +67,11 @@ NAME_FIX = {
     'T388': 'Yekaterininskaya (Kolskiy Zaliv), Russia',
     'T315': 'Khowr-e Musa Bar, Iran',
     'T321': "Musay'id (Outer Channel Entrance), Qatar",
+    'T307': 'Bhavnagar, Gujarat, India',
 }
 # GAP-Stationen: Laender-Map fuer XTide-TZ; OLD erbt von Classic-Nachbar
 TZ_GAP = {
+    'India': ':Asia/Kolkata',
     'Cuba': ':America/Havana', 'Greenland': ':America/Nuuk', 'Iran': ':Asia/Tehran',
     'Pakistan': ':Asia/Karachi', 'United Arab Emirates': ':Asia/Dubai',
     'Saudi Arabia': ':Asia/Riyadh', 'Guyana': ':America/Guyana',
