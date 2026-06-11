@@ -87,8 +87,11 @@ def map_const(coef):
 
 def build_block(name, st, z0, cm, r2, rms, npts, t0, t1, bench_cm):
     n_ana = sum(1 for cn, _ in CONSTITUENTS_175 if cn in cm)
-    datum = '# datum: Chart Datum (China, theoretical lowest tide'
-    datum += f', {bench_cm:.0f}cm below MSL)' if bench_cm is not None else ')'
+    # TCD hat ein hartes Limit an unterschiedlichen datum-Strings (~64,
+    # DEFAULT_DATUM_BITS) — Benchmark-Detail daher in eigene Kommentarzeile!
+    datum = '# datum: Chart Datum (China, theoretical lowest tide)'
+    if bench_cm is not None:
+        datum += f'\n# datum_note: {bench_cm:.0f}cm below MSL'
     L = [
         "#", f"# {name}", "# BEGIN HOT COMMENTS", "# country: China",
         f"# source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode {st['code']}) with UTide",

@@ -438229,9 +438229,9 @@ x 0 0
 # hw_reproduction: n=883 time_sigma=14min height_rms=0.099m
 # bst_fix: 20260610 Phasen -speed*1h (tidetimes-HW-Zeiten waren ganzjaehrig BST, dt +60min inflationiert)
 # !units: meters
-# !longitude: -2.950000
-# !latitude: 55.966667
-Cockenzie, Scotland, United Kingdom
+# !longitude: -2.9552
+# !latitude: 55.9728
+Cockenzie and Port Seton, Scotland, United Kingdom
 +00:00 :Europe/London
 3.1334 meters
 J1              0.0087  284.42
@@ -454318,9 +454318,9 @@ x 0 0
 # utide: period=2025-01-01..2026-04-17 r2=0.8150 rms=0.5536m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: -2.783333
-# !latitude: 56.066667
-Fidra, Scotland, United Kingdom
+# !longitude: -2.7846
+# !latitude: 56.0740
+Fidra (North Berwick), Scotland, United Kingdom
 +00:00 :Europe/London
 3.1437 meters
 J1              0.0080  320.34
@@ -460829,8 +460829,8 @@ x 0 0
 # utide: period=2025-01-01..2026-04-20 r2=0.8159 rms=0.5836m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: -3.216700
-# !latitude: 55.983300
+# !longitude: -3.2224
+# !latitude: 55.9841
 Granton, Scotland, United Kingdom
 +00:00 :Europe/London
 3.2445 meters
@@ -477875,8 +477875,8 @@ x 0 0
 # utide: period=2025-01-01..2026-04-20 r2=0.8159 rms=0.5836m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: -3.183333
-# !latitude: 55.983333
+# !longitude: -3.1817
+# !latitude: 55.9898
 Leith, Scotland, United Kingdom
 +00:00 :Europe/London
 3.2445 meters
@@ -505265,8 +505265,8 @@ x 0 0
 # utide: period=2025-01-01..2026-04-19 r2=0.7794 rms=0.8930m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: -4.366667
-# !latitude: 54.316667
+# !longitude: -4.3656
+# !latitude: 54.3206
 Ramsey, Isle of Man
 +00:00 :Europe/London
 4.0756 meters
@@ -633666,7 +633666,8 @@ x 0 0
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T020) with UTide
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 91cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 91cm below MSL
 # confidence: 7
 # utide: pts=17520 period=2024-06-30..2026-06-30 r2=0.9976 rms=0.0186m const=68
 # !units: meters
@@ -633857,7 +633858,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T061) with UTide
 # nmdis_site: T061 SHESHAN
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 229cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 229cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0193m const=68
 # !units: meters
@@ -634048,7 +634050,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T062) with UTide
 # nmdis_site: T062 CHONGMING(NANBUZHEN)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 214cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 214cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9952 rms=0.0644m const=68
 # !units: meters
@@ -634239,7 +634242,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T063) with UTide
 # nmdis_site: T063 ZHONGJUN
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 225cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 225cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9962 rms=0.0609m const=68
 # !units: meters
@@ -634430,7 +634434,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T066) with UTide
 # nmdis_site: T066 HUANGPUGONGYUAN
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 154cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 154cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9900 rms=0.0761m const=68
 # !units: meters
@@ -634621,7 +634626,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T067) with UTide
 # nmdis_site: T067 LUCAOGANG(NANHUIZUI)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 267cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 267cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9993 rms=0.0334m const=68
 # !units: meters
@@ -634812,7 +634818,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T145) with UTide
 # nmdis_site: T145 NANSHA(SHUINIUTOU)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 150cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 150cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9968 rms=0.0357m const=68
 # !units: meters
@@ -635003,7 +635010,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T148) with UTide
 # nmdis_site: T148 GUANGZHOU
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 134cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 134cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9933 rms=0.0469m const=68
 # !units: meters
@@ -635194,7 +635202,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T138) with UTide
 # nmdis_site: T138 DAPENGWAN(YANTIANGANG)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 127cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 127cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9963 rms=0.0283m const=68
 # !units: meters
@@ -635385,7 +635394,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T098) with UTide
 # nmdis_site: T098 WENZHOU
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 296cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 296cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9968 rms=0.0844m const=68
 # !units: meters
@@ -635576,7 +635586,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T031) with UTide
 # nmdis_site: T031 WEIFANGGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 120cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 120cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9985 rms=0.0201m const=68
 # !units: meters
@@ -635767,7 +635778,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T117) with UTide
 # nmdis_site: T117 HOUZHU
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 360cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 360cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0054m const=68
 # !units: meters
@@ -635958,7 +635970,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T118) with UTide
 # nmdis_site: T118 QUANZHOU(SHIHU)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 366cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 366cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0031m const=68
 # !units: meters
@@ -636149,7 +636162,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T082) with UTide
 # nmdis_site: T082 NINGBO
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 180cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 180cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9949 rms=0.0447m const=68
 # !units: meters
@@ -636340,7 +636354,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T083) with UTide
 # nmdis_site: T083 ZHENHAI
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 207cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 207cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9989 rms=0.0281m const=68
 # !units: meters
@@ -636531,7 +636546,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T084) with UTide
 # nmdis_site: T084 BEILUNGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 208cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 208cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0142m const=68
 # !units: meters
@@ -636722,7 +636738,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T022) with UTide
 # nmdis_site: T022 JINGTANGGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 118cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 118cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9989 rms=0.0151m const=68
 # !units: meters
@@ -636913,7 +636930,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T023) with UTide
 # nmdis_site: T023 CAOFEIDIAN
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 178cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 178cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9991 rms=0.0183m const=68
 # !units: meters
@@ -637104,7 +637122,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T060) with UTide
 # nmdis_site: T060 TIANSHENGGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 212cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 212cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9861 rms=0.0961m const=68
 # !units: meters
@@ -637295,7 +637314,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T027) with UTide
 # nmdis_site: T027 HUANGHUAGANG(YIQIMEIMATOU)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 240cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 240cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9991 rms=0.0250m const=68
 # !units: meters
@@ -637486,7 +637506,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T038) with UTide
 # nmdis_site: T038 YANTAI
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 147cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 147cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9993 rms=0.0166m const=68
 # !units: meters
@@ -637677,7 +637698,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T056) with UTide
 # nmdis_site: T056 DAFENGGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 300cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 300cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9989 rms=0.0424m const=68
 # !units: meters
@@ -637868,7 +637890,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T167) with UTide
 # nmdis_site: T167 MAOSHIHUA(SHUIDONGGANG)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 197cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 197cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9992 rms=0.0212m const=68
 # !units: meters
@@ -638059,7 +638082,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T136) with UTide
 # nmdis_site: T136 HUIZHOUGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 129cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 129cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9932 rms=0.0391m const=68
 # !units: meters
@@ -638250,7 +638274,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T093) with UTide
 # nmdis_site: T093 HAIMEN
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 290cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 290cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9988 rms=0.0465m const=68
 # !units: meters
@@ -638441,7 +638466,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T094) with UTide
 # nmdis_site: T094 HAIMEN KG*2 GANG(BAISHA)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 331cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 331cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0067m const=68
 # !units: meters
@@ -638632,7 +638658,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T132) with UTide
 # nmdis_site: T132 HAIMEN(GUANGDONG)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 111cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 111cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9894 rms=0.0411m const=68
 # !units: meters
@@ -638823,7 +638850,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T194) with UTide
 # nmdis_site: T194 LONGMEN
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 250cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 250cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9953 rms=0.0806m const=68
 # !units: meters
@@ -639014,7 +639042,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T101) with UTide
 # nmdis_site: T101 SANSHA
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 349cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 349cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0212m const=68
 # !units: meters
@@ -639205,7 +639234,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T102) with UTide
 # nmdis_site: T102 SAIQI
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 417cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 417cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9994 rms=0.0436m const=68
 # !units: meters
@@ -639396,7 +639426,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T114) with UTide
 # nmdis_site: T114 XIUYU
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 415cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 415cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0266m const=68
 # !units: meters
@@ -639587,7 +639618,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T015) with UTide
 # nmdis_site: T015 JINZHOUGANG(BIJIASHAN)
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 160cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 160cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9982 rms=0.0391m const=68
 # !units: meters
@@ -639778,7 +639810,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T158) with UTide
 # nmdis_site: T158 ZHUHAIGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 148cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 148cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0080m const=68
 # !units: meters
@@ -639969,7 +640002,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T012) with UTide
 # nmdis_site: T012 BAYUQUAN
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 190cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 190cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9993 rms=0.0253m const=68
 # !units: meters
@@ -640160,7 +640194,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T013) with UTide
 # nmdis_site: T013 YINGKOU
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 202cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 202cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9964 rms=0.0617m const=68
 # !units: meters
@@ -640351,7 +640386,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T001) with UTide
 # nmdis_site: T001 DANDONG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 167cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 167cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9902 rms=0.0888m const=68
 # !units: meters
@@ -640542,7 +640578,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T002) with UTide
 # nmdis_site: T002 DANDONGXINGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 354cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 354cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0325m const=68
 # !units: meters
@@ -640733,7 +640770,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T030) with UTide
 # nmdis_site: T030 DONGYINGGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 100cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 100cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9978 rms=0.0160m const=68
 # !units: meters
@@ -640924,7 +640962,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T079) with UTide
 # nmdis_site: T079 SHENJIAMEN
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 252cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 252cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0144m const=68
 # !units: meters
@@ -641115,7 +641154,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T080) with UTide
 # nmdis_site: T080 DINGHAI
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 226cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 226cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9992 rms=0.0224m const=68
 # !units: meters
@@ -641306,7 +641346,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T182) with UTide
 # nmdis_site: T182 SANYA
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 90cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 90cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0088m const=68
 # !units: meters
@@ -641497,7 +641538,8 @@ x 0 0
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T197) with UTide
 # nmdis_site: T197 FANGCHENGGANG
 # date_imported: 20260610
-# datum: Chart Datum (China, theoretical lowest tide, 230cm below MSL)
+# datum: Chart Datum (China, theoretical lowest tide)
+# datum_note: 230cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9982 rms=0.0470m const=68
 # !units: meters
@@ -642086,8 +642128,8 @@ x 0 0
 # confidence: 7
 # utide: pts=26256 period=2021-12-31..2025-12-30 r2=0.9951 rms=0.0670m const=68
 # !units: meters
-# !longitude: 107.0667
-# !latitude: 20.9500
+# !longitude: 107.0678
+# !latitude: 20.9538
 Hong Gai (Ha Long), Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 2.1326 meters
@@ -642277,8 +642319,8 @@ x 0 0
 # confidence: 7
 # utide: pts=35040 period=2021-12-31..2025-12-30 r2=0.9896 rms=0.0714m const=68
 # !units: meters
-# !longitude: 105.7500
-# !latitude: 18.7667
+# !longitude: 105.7590
+# !latitude: 18.7647
 Cua Hoi, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 1.7628 meters
@@ -642468,8 +642510,8 @@ x 0 0
 # confidence: 7
 # utide: pts=26280 period=2022-12-31..2025-12-30 r2=0.9819 rms=0.0529m const=68
 # !units: meters
-# !longitude: 106.4667
-# !latitude: 17.7000
+# !longitude: 106.4809
+# !latitude: 17.7023
 Cua Gianh, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 1.0719 meters
@@ -643041,8 +643083,8 @@ x 0 0
 # confidence: 7
 # utide: pts=35040 period=2021-12-31..2025-12-30 r2=0.9889 rms=0.0453m const=68
 # !units: meters
-# !longitude: 109.1650
-# !latitude: 11.8333
+# !longitude: 109.1429
+# !latitude: 11.8960
 Cam Ranh, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 1.2937 meters
@@ -643232,8 +643274,8 @@ x 0 0
 # confidence: 7
 # utide: pts=35040 period=2021-12-31..2025-12-30 r2=0.9852 rms=0.0899m const=68
 # !units: meters
-# !longitude: 106.7075
-# !latitude: 10.7833
+# !longitude: 106.7092
+# !latitude: 10.7820
 Sai Gon (Ho Chi Minh City), Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 2.7215 meters
@@ -644686,6 +644728,198 @@ NO3             0.0001  317.92
 x 0 0
 x 0 0
 N4              0.0001  285.57
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+#
+# Nha Trang (Cau Da), Vietnam
+# BEGIN HOT COMMENTS
+# country: Vietnam
+# source: ICOE/VAWR hourly tide predictions (icoe.org.vn, Bang trieu du bao) with UTide
+# icoe_sheet: CAUDA
+# date_imported: 20260611
+# datum: chart datum (Kartennull der amtlichen Tidetafel)
+# datum_note: ICOE He cao do Hai do
+# confidence: 6
+# utide: pts=6504 period=2024-12-31..2026-03-31 r2=0.9999 rms=0.0039m const=68
+# !units: meters
+# !longitude: 109.2167
+# !latitude: 12.2000
+Nha Trang (Cau Da), Vietnam
++00:00 :Asia/Ho_Chi_Minh
+1.2412 meters
+J1              0.0067  237.77
+K1              0.3424  197.73
+K2              0.0287  123.67
+L2              0.0112  118.18
+x 0 0
+M2              0.1684  94.98
+M3              0.0052  80.09
+M4              0.0025  165.00
+M6              0.0022  305.62
+M8              0.0006  187.26
+N2              0.0343  85.01
+2N2             0.0093  99.98
+O1              0.2723  152.71
+OO1             0.0070  195.53
+P1              0.1193  191.39
+Q1              0.0548  136.44
+2Q1             0.0074  104.03
+R2              0.0036  107.05
+x 0 0
+S2              0.0643  129.01
+S4              0.0004  264.87
+x 0 0
+T2              0.0047  143.58
+LDA2            0.0066  59.72
+MU2             0.0037  64.10
+NU2             0.0042  39.47
+RHO1            0.0101  154.03
+MK3             0.0067  251.34
+x 0 0
+MN4             0.0012  190.01
+MS4             0.0016  261.66
+2SM2            0.0001  215.62
+MF              0.0139  209.93
+MSF             0.0068  74.18
+MM              0.0183  264.19
+x 0 0
+SSA             0.0634  83.63
+SA-IOS          0.1249  326.71
+x 0 0
+S1-IOS          0.0119  46.56
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0001  52.74
+2MK6            0.0017  310.42
+x 0 0
+2MN6            0.0019  299.79
+2MS6            0.0027  332.49
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+BET1            0.0012  150.78
+CHI1            0.0045  241.31
+H1              0.0005  171.86
+H2              0.0004  92.27
+x 0 0
+ETA2            0.0037  212.22
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+MK4             0.0008  300.10
+MKS2            0.0084  123.42
+x 0 0
+EPS2            0.0022  147.07
+MO3             0.0056  212.99
+x 0 0
+TAU1            0.0155  267.54
+x 0 0
+MSK6            0.0009  32.35
+MSM             0.0001  83.42
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0262  153.22
+OP2             0.0042  267.64
+x 0 0
+PHI1            0.0087  133.47
+x 0 0
+PI1             0.0066  110.80
+x 0 0
+PSI1            0.0114  279.32
+x 0 0
+x 0 0
+SIG1            0.0076  180.37
+SK3             0.0033  331.40
+x 0 0
+SN4             0.0021  328.40
+x 0 0
+SO1             0.0026  346.98
+SO3             0.0055  267.29
+THE1            0.0065  264.88
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
