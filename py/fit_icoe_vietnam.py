@@ -30,7 +30,8 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import CONSTIT_67
 
-DEFAULT_FILES = ['/tmp/icoe_2025_h1.xlsx', '/tmp/icoe_2026_q1.xlsx']
+DEFAULT_FILES = ['/home/oliver/water_levels/VN_icoe/h1_2025.xlsx',
+                 '/home/oliver/water_levels/VN_icoe/q1_2026.xlsx']
 UTC_OFF = timedelta(hours=7)
 
 
