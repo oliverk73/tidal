@@ -180,11 +180,13 @@ def drop_alternation_breakers(events):
     return keep
 
 
-def interp_segments(events):
-    """Segmentweise Cosinus-Interpolation (Jahresluecken nicht ueberbruecken)."""
+def interp_segments(events, gap_h=16):
+    """Segmentweise Cosinus-Interpolation (Jahresluecken nicht ueberbruecken).
+    gap_h: max. Eventabstand innerhalb eines Segments (mikrotidale Tafeln mit
+    2-Event-Tagen brauchen ~26h)."""
     segs = [[events[0]]]
     for e in events[1:]:
-        if (e[0] - segs[-1][-1][0]).total_seconds() > 16 * 3600:
+        if (e[0] - segs[-1][-1][0]).total_seconds() > gap_h * 3600:
             segs.append([])
         segs[-1].append(e)
     T, V = [], []
