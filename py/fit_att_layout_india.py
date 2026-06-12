@@ -60,15 +60,17 @@ PORTS = {
 }
 
 
-def char_rows(page):
+def char_rows(page, drop_big_digits=True):
     """page.chars -> Zeilen [(top, [token,...])], Token=(x0, text).
     Zeichenweise gerenderte PDFs (Dighi 2019/2020) machen extract_words
-    unbrauchbar -> Zeilen aus chars: top-Cluster (2pt), Tokens per x-Gap."""
+    unbrauchbar -> Zeilen aus chars: top-Cluster (2pt), Tokens per x-Gap.
+    drop_big_digits: fette Tagesnummern verwerfen (ueberlappen bei Dighi
+    die Zeit-Digits; Dhamra braucht sie als Spaltenanker -> False)."""
     rows = {}
     for c in page.chars:
         if c['text'].strip() == '':
             continue
-        if c['size'] > 9.5 and c['text'].isdigit():
+        if drop_big_digits and c['size'] > 9.5 and c['text'].isdigit():
             continue    # fette Tagesnummern ueberlappen die Zeit-Digits
         key = None
         for k in (round(c['top']), round(c['top']) - 1, round(c['top']) + 1):
