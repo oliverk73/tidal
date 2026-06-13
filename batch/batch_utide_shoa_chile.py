@@ -64,6 +64,11 @@ STATIONS = {
         'lat': -35.331,   # SHOA reference (35°19'52" S)
         'lon': -72.408,   # SHOA reference (72°24'30" W)
     },
+    'puerto_natales': {
+        'name': 'Puerto Natales',
+        'lat': -51.730,   # SHOA Magallanes (~51°43.8' S)
+        'lon': -72.510,   # ~72°30.6' W
+    },
 }
 
 
