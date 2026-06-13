@@ -28,17 +28,17 @@ TZ_OFFSET_H = 6  # Bangladesh Standard Time (UTC+6, no DST)
 YEAR = 2025
 
 # code: (display name, lat, lon, confidence, meridian, year)
-# Andermanik is absent from the 2025 booklet; fitted from the 2023 Jan-Sep
-# quarterly tables (3-column layout). Its position is not published in the
-# gauge-positions page -> inferred at the Andharmanik River / Kalapara town
-# (~21.99 N), consistent with the monotonic up-channel M2 phase progression
-# (Monopile-2 99 deg -> Charipara 146 deg -> Andermanik 161 deg, the latest).
+# Andermanik is absent from the 2025 booklet; fitted from the 2022-2023
+# quarterly tables (3-column layout). Its position is not published -> set to
+# the Andharmanik River coordinate (Wikipedia 21 56'28"N 90 08'24"E), the
+# river it gauges, consistent with the late M2 phase (furthest up its own
+# tidal path; Monopile-2 99 deg -> Charipara 146 deg -> Andharmanik 161 deg).
 STATIONS = {
     'charipara':  ('Charipara (Rabnabad Channel), Bangladesh', 21.951389, 90.300556, 4, 'Asia/Dhaka', 2025),
     'kaurchar':   ('Kauar Char (Rabnabad Channel), Bangladesh', 21.832778, 90.255000, 4, 'Asia/Dhaka', 2025),
     'monopile-1': ('Monopile-1 (Rabnabad Channel), Bangladesh', 21.621389, 90.208056, 4, 'Asia/Dhaka', 2025),
     'monopile-2': ('Monopile-2 (Rabnabad Channel), Bangladesh', 21.457778, 90.126389, 4, 'Asia/Dhaka', 2025),
-    'andermanik': ('Andharmanik (Rabnabad Channel), Bangladesh', 21.990000, 90.240000, 3, 'Asia/Dhaka', 2023),
+    'andermanik': ('Andharmanik (Rabnabad Channel), Bangladesh', 21.941111, 90.140000, 3, 'Asia/Dhaka', 2023),
 }
 
 
@@ -103,7 +103,7 @@ def fit_block(code):
     if code == 'andermanik':
         L += [
             "# note: fitted from Oct2022-Sep2023 quarterly tables (not in 2025 booklet); SA/SSA forced",
-            "# note: coordinate inferred (Andharmanik R./Kalapara, M2-phase-consistent)",
+            "# note: position = Andharmanik River (gauge coord unpublished); M2-phase-consistent",
         ]
     L += [
         "# !units: meters",

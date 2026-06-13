@@ -700957,7 +700957,6 @@ x 0 0
 x 0 0
 x 0 0
 
-
 # Harmonic constants derived from Payra Port Authority tide tables
 # using UTide (v0.3.1) with cosine-interpolated HW/LW data
 # 1387 HW/LW points -> 35010 interpolated points
@@ -700974,14 +700973,14 @@ x 0 0
 # datum: Chart Datum (PPA gauge zero, ~LAT)
 # confidence: 3
 # note: fitted from Oct2022-Sep2023 quarterly tables (not in 2025 booklet); SA/SSA forced
-# note: coordinate inferred (Andharmanik R./Kalapara, M2-phase-consistent)
+# note: position = Andharmanik River (gauge coord unpublished); M2-phase-consistent
 # !units: meters
-# !longitude: 90.240000
-# !latitude: 21.990000
+# !longitude: 90.140000
+# !latitude: 21.941111
 Andharmanik (Rabnabad Channel), Bangladesh
 +00:00 :Asia/Dhaka
 1.8214 meters
-J1              0.0196  288.49
+J1              0.0196  288.50
 K1              0.1267  287.50
 K2              0.1172  191.20
 L2              0.0370  169.93
@@ -700997,7 +700996,7 @@ O1              0.0582  243.36
 OO1             0.0040  280.00
 P1              0.0439  264.02
 Q1              0.0069  204.45
-2Q1             0.0050  169.29
+2Q1             0.0050  169.28
 x 0 0
 x 0 0
 S2              0.3389  196.71
@@ -701038,12 +701037,12 @@ x 0 0
 x 0 0
 x 0 0
 ALP1            0.0134  274.28
-BET1            0.0067  12.70
-CHI1            0.0086  276.00
+BET1            0.0067  12.69
+CHI1            0.0086  275.99
 x 0 0
 x 0 0
 x 0 0
-ETA2            0.0069  188.28
+ETA2            0.0069  188.29
 x 0 0
 UPS1            0.0066  234.81
 x 0 0
@@ -701054,14 +701053,14 @@ x 0 0
 EPS2            0.0231  230.70
 MO3             0.0033  199.83
 x 0 0
-TAU1            0.0506  80.76
+TAU1            0.0506  80.77
 x 0 0
 MSK6            0.0010  13.02
 MSM             0.0051  69.36
 MSN2            0.0048  117.07
 x 0 0
 x 0 0
-NO1             0.0170  3.64
+NO1             0.0170  3.66
 x 0 0
 OQ2             0.0082  258.48
 PHI1            0.0150  151.30
