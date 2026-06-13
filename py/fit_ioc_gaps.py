@@ -39,10 +39,25 @@ STATIONS = [
      'country': 'Kuwait', 'tz': 'Asia/Kuwait', 'start': 2022},
     {'code': 'puna', 'name': 'Puná, Ecuador',               'lat': -2.7300, 'lon': -79.9100,
      'country': 'Ecuador', 'tz': 'America/Guayaquil', 'start': 2022},
-    {'code': 'golf', 'name': 'Golfito, Costa Rica',         'lat': 8.6400,  'lon': -83.1700,
-     'country': 'Costa Rica', 'tz': 'America/Costa_Rica', 'start': 2022},
     {'code': 'ashk', 'name': 'Al Ashkharah, Oman',          'lat': 21.8500, 'lon': 59.5700,
      'country': 'Oman', 'tz': 'Asia/Muscat',   'start': 2017},
+    # 2. Welle: Mittelamerika-Pazifik + neue Laender (batch_probe)
+    {'code': 'golf', 'name': 'Golfito, Costa Rica',         'lat': 8.6400,  'lon': -83.1700,
+     'country': 'Costa Rica', 'tz': 'America/Costa_Rica', 'start': 2024},
+    {'code': 'cuaj', 'name': 'Cuajiniquil, Costa Rica',     'lat': 10.9500, 'lon': -85.7100,
+     'country': 'Costa Rica', 'tz': 'America/Costa_Rica', 'start': 2024},
+    {'code': 'flam', 'name': 'Bahía Flamingo, Costa Rica',  'lat': 10.4400, 'lon': -85.7900,
+     'country': 'Costa Rica', 'tz': 'America/Costa_Rica', 'start': 2023},
+    {'code': 'psjs', 'name': 'San Juan del Sur, Nicaragua', 'lat': 11.2500, 'lon': -85.8800,
+     'country': 'Nicaragua', 'tz': 'America/Managua', 'start': 2023},
+    {'code': 'slor', 'name': 'San Lorenzo, Ecuador',        'lat': 1.2900,  'lon': -78.8400,
+     'country': 'Ecuador', 'tz': 'America/Guayaquil', 'start': 2023},
+    {'code': 'tame', 'name': 'Tamandaré, Pernambuco, Brazil','lat': -8.7600, 'lon': -35.1000,
+     'country': 'Brazil', 'tz': 'America/Recife', 'start': 2022},
+    {'code': 'yapi', 'name': 'Yap, Micronesia',             'lat': 9.5100,  'lon': 138.1200,
+     'country': 'Micronesia', 'tz': 'Pacific/Chuuk', 'start': 2022},
+    {'code': 'uper', 'name': 'Upernavik, Greenland',        'lat': 72.7900, 'lon': -56.1500,
+     'country': 'Greenland', 'tz': 'America/Godthab', 'start': 2022},
 ]
 
 
@@ -82,9 +97,9 @@ def download(st):
                 sys.stdout.write('o')
             sys.stdout.flush()
             time.sleep(0.25)
-            if empty > 30:
+            if empty > 60:
                 break
-        if empty > 30:
+        if empty > 60:
             break
     print()
     fp.write_text(json.dumps(rows))
