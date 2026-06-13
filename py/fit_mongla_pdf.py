@@ -27,7 +27,9 @@ TZ_OFFSET_H = 6  # Bangladesh Standard Time (UTC+6, no DST)
 # code: (display name, pages, lat, lon, confidence, meridian)
 STATIONS = {
     'mongla': ('Mongla, Bangladesh', [0, 1, 2], 22.533280, 89.580286, 4, 'Asia/Dhaka'),
-    # 'sundarikota': ('Sundarikota, Bangladesh', [6,7,8], ?, ?, 4, 'Asia/Dhaka'),  # geparkt: keine Koordinate
+    # Sundarikota: Koordinate tidenphysikalisch bestätigt (M2-Phase 173° fügt sich
+    # monoton zwischen Hiron Point 128° und Mongla 207° ein -> ~45km flussab Mongla).
+    'sundarikota': ('Sundarikota, Bangladesh', [6, 7, 8], 22.126667, 89.603611, 4, 'Asia/Dhaka'),
 }
 
 
