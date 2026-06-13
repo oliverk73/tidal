@@ -61,36 +61,36 @@ CONSTIT_67 = [
 STATIONS = {
     'constitucion': {
         'name': 'Constitución',
-        'lat': -35.331,   # SHOA reference (35°19'52" S)
-        'lon': -72.408,   # SHOA reference (72°24'30" W)
+        'lat': -35.35573,   # SHOA reference (35°19'52" S)
+        'lon': -72.45703,   # SHOA reference (72°24'30" W)
     },
     'puerto_natales': {
         'name': 'Puerto Natales',
-        'lat': -51.730,   # SHOA Magallanes (~51°43.8' S)
-        'lon': -72.510,   # ~72°30.6' W
+        'lat': -51.72913,   # SHOA Magallanes (~51°43.8' S)
+        'lon': -72.51567,   # ~72°30.6' W
     },
     'mejillones_del_sur': {
         'name': 'Mejillones del Sur',
-        'lat': -23.100,   # Bahía Mejillones del Sur, Antofagasta
-        'lon': -70.450,
+        'lat': -23.09771,   # Bahía Mejillones del Sur, Antofagasta
+        'lon': -70.45066,
         'tz': 'America/Santiago',
     },
     'quintero': {
         'name': 'Quintero',
-        'lat': -32.780,   # Bahía de Quintero, Valparaíso
-        'lon': -71.530,
+        'lat': -32.77549,   # Bahía de Quintero, Valparaíso
+        'lon': -71.52543,
         'tz': 'America/Santiago',
     },
     'bahia_cumberland_isla_robinson_crusoe': {
         'name': 'Bahía Cumberland (Isla Robinson Crusoe)',
-        'lat': -33.638,   # Juan Fernández, San Juan Bautista
-        'lon': -78.830,
+        'lat': -33.63602,   # Juan Fernández, San Juan Bautista
+        'lon': -78.82988,
         'tz': 'America/Santiago',
     },
     'valdivia_rio_calle_calle': {
         'name': 'Valdivia (Río Calle-Calle)',
-        'lat': -39.814,   # Río Calle-Calle, Los Ríos
-        'lon': -73.245,
+        'lat': -39.81467,   # Río Calle-Calle, Los Ríos
+        'lon': -73.24895,
         'tz': 'America/Santiago',
     },
 }
