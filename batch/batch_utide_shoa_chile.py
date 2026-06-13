@@ -69,6 +69,12 @@ STATIONS = {
         'lat': -51.730,   # SHOA Magallanes (~51°43.8' S)
         'lon': -72.510,   # ~72°30.6' W
     },
+    'mejillones_del_sur': {
+        'name': 'Mejillones del Sur',
+        'lat': -23.100,   # Bahía Mejillones del Sur, Antofagasta
+        'lon': -70.450,
+        'tz': 'America/Santiago',
+    },
 }
 
 
