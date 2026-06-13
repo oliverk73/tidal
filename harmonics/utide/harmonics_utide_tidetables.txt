@@ -294241,8 +294241,8 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0474m const=68
 # !units: meters
-# !longitude: 72.2333
-# !latitude: 21.7500
+# !longitude: 72.2328
+# !latitude: 21.7605
 Bhavnagar, Gujarat, India
 +00:00 :Asia/Kolkata
 5.7500 meters
@@ -296151,8 +296151,8 @@ x 0 0
 # confidence: 7
 # utide: pts=2354 hwlw months=25 period=2024-02-01..2026-07-31 r2=0.9996 rms=0.0054m const=68
 # !units: meters
-# !longitude: 80.333333
-# !latitude: 13.250000
+# !longitude: 80.3312
+# !latitude: 13.2323
 Ennore, Tamil Nadu, India
 +00:00 :Asia/Kolkata
 0.9423 meters
@@ -693911,8 +693911,8 @@ x 0 0
 # confidence: 7
 # utide: events=4328 hwlw period=2013+2017+2018+2019 r2=0.9947 rms=0.0189m const=68
 # !units: meters
-# !longitude: 80.1330
-# !latitude: 14.2500
+# !longitude: 80.1270
+# !latitude: 14.2512
 Krishnapatnam Port, Andhra Pradesh, India
 +00:00 :Asia/Kolkata
 0.8585 meters
@@ -694105,8 +694105,8 @@ x 0 0
 # confidence: 7
 # utide: events=4201 hwlw period=2013+2019+2021 r2=0.9941 rms=0.0650m const=68
 # !units: meters
-# !longitude: 72.9667
-# !latitude: 18.2667
+# !longitude: 72.9742
+# !latitude: 18.2634
 Dighi Port (Rajpuri Creek), Maharashtra, India
 +00:00 :Asia/Kolkata
 2.3145 meters
@@ -694299,8 +694299,8 @@ x 0 0
 # confidence: 6
 # utide: events=5331 hwlw period=2012+2016+2019+2021 r2=0.8558 rms=0.0880m const=68
 # !units: meters
-# !longitude: 79.8500
-# !latitude: 10.9167
+# !longitude: 79.8540
+# !latitude: 10.9147
 Karaikal Port, Puducherry, India
 +00:00 :Asia/Kolkata
 0.4443 meters
@@ -694494,8 +694494,8 @@ x 0 0
 # confidence: 5
 # utide: events=700 hwlw period=2011x3m+2016x3m r2=0.9994 rms=0.0191m const=68
 # !units: meters
-# !longitude: 86.9000
-# !latitude: 20.8000
+# !longitude: 86.9703
+# !latitude: 20.8216
 Dhamra Port, Odisha, India
 +00:00 :Asia/Kolkata
 2.0299 meters
@@ -694611,6 +694611,203 @@ NO3             0.0005  223.38
 x 0 0
 x 0 0
 N4              0.0016  134.49
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+
+# Harmonic constants derived from SHOA Chile tide predictions
+# using UTide (v0.3.1) with cosine-interpolated HW/LW data
+# 351 HW/LW points -> 8790 interpolated points
+# from 2026-05-01 to 2026-07-31
+# R^2 = 0.9971, RMS error = 0.0066 m
+# Constituents analyzed: 68
+#
+# Puerto Natales, Chile
+# BEGIN HOT COMMENTS
+# country: Chile
+# source: SHOA Chile tide tables × UTide
+# station_id_context: SHOA-puerto_natales
+# date_imported: 20260613
+# datum: Plano de Reducción (Chart Datum SHOA)
+# confidence: 7
+# !units: meters
+# !longitude: -72.5100
+# !latitude: -51.7300
+Puerto Natales, Chile
++00:00 :America/Punta_Arenas
+0.4112 meters
+J1              0.0050  34.39
+K1              3.5988  2.91
+K2              0.0090  185.89
+L2              0.0034  266.21
+x 0 0
+M2              0.0663  12.72
+M3              0.0011  231.72
+M4              0.0006  4.03
+M6              0.0002  129.40
+x 0 0
+N2              0.0197  253.96
+2N2             0.0025  53.36
+O1              0.0553  129.85
+OO1             0.0040  12.10
+P1              2.3929  12.27
+Q1              0.0093  134.44
+2Q1             0.0073  222.52
+R2              0.0249  167.12
+x 0 0
+S2              0.0343  297.74
+S4              0.0005  204.14
+x 0 0
+T2              0.0091  7.13
+LDA2            0.0007  201.41
+MU2             0.0028  270.26
+NU2             0.0007  160.00
+RHO1            0.0017  232.10
+MK3             0.0010  263.21
+x 0 0
+MN4             0.0005  165.69
+MS4             0.0003  283.64
+2SM2            0.0015  39.52
+MF              0.0038  208.84
+MSF             0.0927  4.78
+MM              0.0197  6.66
+x 0 0
+SSA             0.0012  272.51
+SA-IOS          0.0088  2.68
+x 0 0
+S1-IOS          6.2494  31.61
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0003  293.47
+x 0 0
+x 0 0
+2MN6            0.0002  79.67
+2MS6            0.0002  103.58
+x 0 0
+2SK5            0.0002  159.57
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+3MS4            0.0006  324.67
+x 0 0
+ALP1            0.0051  217.14
+BET1            0.0027  176.44
+CHI1            0.0084  356.56
+H1              0.0799  259.54
+H2              0.0699  48.61
+x 0 0
+ETA2            0.0011  27.43
+x 0 0
+UPS1            0.0046  293.29
+x 0 0
+x 0 0
+MK4             0.0007  231.07
+MKS2            0.0129  243.05
+x 0 0
+EPS2            0.0019  139.62
+MO3             0.0031  245.99
+x 0 0
+TAU1            0.0038  122.22
+x 0 0
+MSK6            0.0001  267.46
+MSM             0.0016  342.75
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0118  126.65
+OP2             0.0206  65.79
+x 0 0
+PHI1            0.4935  162.58
+x 0 0
+PI1             0.5697  32.03
+x 0 0
+PSI1            2.0395  339.20
+x 0 0
+x 0 0
+SIG1            0.0012  30.00
+SK3             0.0009  251.59
+x 0 0
+SN4             0.0003  261.47
+x 0 0
+SO1             0.0018  5.27
+SO3             0.0006  130.64
+THE1            0.0032  188.75
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0004  50.67
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO3             0.0008  240.65
+x 0 0
+x 0 0
+N4              0.0003  187.42
 x 0 0
 x 0 0
 x 0 0
