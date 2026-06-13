@@ -75,6 +75,12 @@ STATIONS = {
         'lon': -70.450,
         'tz': 'America/Santiago',
     },
+    'quintero': {
+        'name': 'Quintero',
+        'lat': -32.780,   # Bahía de Quintero, Valparaíso
+        'lon': -71.530,
+        'tz': 'America/Santiago',
+    },
 }
 
 
