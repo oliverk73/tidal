@@ -103,6 +103,13 @@
         }
         window.stationCoords[origName] = [lat, lon];
         window.stationSources[origName] = source;
+        // Also key by display name (search/stationNames use the ", USA"-suffixed
+        // display name, while origName may lack the country suffix) so the
+        // "show on map" button resolves coords for those stations too.
+        if (displayName !== origName) {
+          window.stationCoords[displayName] = [lat, lon];
+          window.stationSources[displayName] = source;
+        }
       }
 
       if (idx < total) {
