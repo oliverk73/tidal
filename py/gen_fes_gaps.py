@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: iso-8859-1 -*-
+# -*- coding: utf-8 -*-
 """FES2022b-Modellstationen fuer makrotidale Grosshafen-Luecken OHNE Mess-/
 Kalenderquelle (Madagaskar-Westkueste, Tansania). Wie gen_indonesia_fes.py,
 aber selbstständig: Z0 = |min| einer 19y-utide-Rekonstruktion (CD~LAT),
@@ -28,6 +28,13 @@ STATIONS = [
     ('Morondava, Madagascar',        -20.2800, 44.2800, 'Indian/Antananarivo', 'Madagascar', 'Mozambique Channel'),
     ('Maintirano, Madagascar',       -18.0600, 44.0200, 'Indian/Antananarivo', 'Madagascar', 'Mozambique Channel'),
     ('Tanga, Tanzania',               -5.0700, 39.1000, 'Africa/Dar_es_Salaam', 'Tanzania', 'Indian Ocean'),
+    # 2. Welle: offene Kuesten-Makrotidal-Luecken (fes_scan, keine Messung verfuegbar)
+    ('Moroni, Comoros',              -11.7000, 43.2500, 'Indian/Comoro',       'Comoros',   'Mozambique Channel'),
+    ('Bahía Solano, Colombia',         6.2300, -77.4100, 'America/Bogota',      'Colombia',  'Pacific Ocean'),
+    ('Dibba, Oman',                   25.6500, 56.2700, 'Asia/Muscat',         'Oman',      'Gulf of Oman'),
+    ('Ormara, Pakistan',              25.2000, 64.6800, 'Asia/Karachi',        'Pakistan',  'Arabian Sea (Makran coast)'),
+    ('Puerto Potosí, Nicaragua',      13.0100, -87.5000, 'America/Managua',     'Nicaragua', 'Gulf of Fonseca (Pacific)'),
+    ('Al Ashkharah, Oman',            21.8500, 59.5700, 'Asia/Muscat',         'Oman',      'Arabian Sea'),
 ]
 
 
