@@ -221,10 +221,15 @@ def analyze_station(code, name, lat, lon, entries_local):
     print(f"  {len(pts)} HW/LW → {n} pts ({yrs:.2f}y)", end=' ', flush=True)
 
     try:
+        # constit='auto' (Rayleigh-Kriterium): NICHT die feste CONSTIT_67-Liste
+        # erzwingen. Über kurze Records (~90 Tage SHOA-Kalender) sind eng
+        # benachbarte Diurnal-Linien (S1/K1/P1/PSI1/PI1/PHI1) nicht trennbar;
+        # erzwungen liefert OLS sich aufhebende Riesen-Amplituden, die im
+        # Fit-Fenster passen, aber außerhalb katastrophal divergieren.
         coef = utide.solve(
             datetimes_utc, levels, lat=lat,
             nodal=True, trend=False, method='ols',
-            conf_int='none', verbose=False, constit=CONSTIT_67,
+            conf_int='none', verbose=False, constit='auto',
         )
     except Exception as e:
         print(f" FEHLER: {e}")
