@@ -105,6 +105,12 @@ STATIONS = {
         'lon': -73.515259,
         'tz': 'America/Santiago',
     },
+    'inglesa': {
+        'name': 'Angostura Inglesa, Canal Messier',
+        'lat': -48.980571,  # Oliver-Vorgabe (kein IOC-Pegel), Región Aysén
+        'lon': -74.421297,
+        'tz': 'America/Santiago',
+    },
 }
 
 
