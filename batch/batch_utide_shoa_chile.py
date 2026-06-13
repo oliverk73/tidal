@@ -93,6 +93,12 @@ STATIONS = {
         'lon': -73.24895,
         'tz': 'America/Santiago',
     },
+    'corral': {
+        'name': 'Corral',
+        'lat': -39.886595,  # IOC corr
+        'lon': -73.42748,
+        'tz': 'America/Santiago',
+    },
 }
 
 
