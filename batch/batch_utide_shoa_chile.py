@@ -99,6 +99,12 @@ STATIONS = {
         'lon': -73.42748,
         'tz': 'America/Santiago',
     },
+    'chacao': {
+        'name': 'Puerto Chacao',
+        'lat': -41.828840,  # Oliver-Vorgabe (kein IOC-Pegel in Chacao)
+        'lon': -73.515259,
+        'tz': 'America/Santiago',
+    },
 }
 
 
