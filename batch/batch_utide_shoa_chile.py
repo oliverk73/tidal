@@ -111,6 +111,24 @@ STATIONS = {
         'lon': -74.421297,
         'tz': 'America/Santiago',
     },
+    'delgada': {
+        'name': 'Punta Delgada, Estrecho de Magallanes',
+        'lat': -52.456936,  # Oliver-Vorgabe (kein IOC-Pegel), Primera Angostura
+        'lon': -69.545627,
+        'tz': 'America/Punta_Arenas',  # Magallanes UTC-3
+    },
+    'meteoro': {
+        'name': 'Caleta Meteoro, Estrecho de Magallanes',
+        'lat': -52.9666,   # IOC cmet
+        'lon': -74.0667,
+        'tz': 'America/Punta_Arenas',
+    },
+    'percy': {
+        'name': 'Caleta Percy, Bahía Gente Grande',
+        'lat': -52.9,      # IOC
+        'lon': -70.266667,
+        'tz': 'America/Punta_Arenas',
+    },
 }
 
 
