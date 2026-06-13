@@ -81,6 +81,12 @@ STATIONS = {
         'lon': -71.530,
         'tz': 'America/Santiago',
     },
+    'bahia_cumberland_isla_robinson_crusoe': {
+        'name': 'Bahía Cumberland (Isla Robinson Crusoe)',
+        'lat': -33.638,   # Juan Fernández, San Juan Bautista
+        'lon': -78.830,
+        'tz': 'America/Santiago',
+    },
 }
 
 
