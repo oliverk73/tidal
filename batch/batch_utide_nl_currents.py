@@ -86,9 +86,13 @@ def analyze(code, meta, csv_path):
     print(f"  {len(df)} Punkte, Hauptachse {axis:.1f}°, |v|max={np.abs(scal).max():.2f}kn")
 
     try:
+        # constit='auto' (Rayleigh): feste CONSTIT_67-Liste über die kurzen
+        # ~140-Tage-RWS-Records erzeugte nicht trennbare, sich aufhebende
+        # Diurnal-Paare (S1/K1/P1/PSI1/PI1/PHI1) -> OOW-Divergenz. Siehe
+        # SHOA-Chile-Bug. Auto wählt nur Rayleigh-auflösbare Konstituenten.
         coef = utide.solve(times, scal, lat=meta['lat'],
                            nodal=True, trend=False, method='ols',
-                           conf_int='none', verbose=False, constit=CONSTIT_67)
+                           conf_int='none', verbose=False, constit='auto')
     except Exception as e:
         print(f"  UTide FEHLER: {e}"); return None
 
