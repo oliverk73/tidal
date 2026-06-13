@@ -624288,8 +624288,8 @@ x 0 0
 # datum: Plano de Reducción (Chart Datum SHOA)
 # confidence: 7
 # !units: meters
-# !longitude: -72.4080
-# !latitude: -35.3310
+# !longitude: -72.4570
+# !latitude: -35.3557
 Constitución, Chile
 +00:00 :UTC
 0.9350 meters
@@ -695399,6 +695399,203 @@ NO3             0.0012  248.12
 x 0 0
 x 0 0
 N4              0.0005  214.85
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+
+# Harmonic constants derived from SHOA Chile tide predictions
+# using UTide (v0.3.1) with cosine-interpolated HW/LW data
+# 356 HW/LW points -> 8818 interpolated points
+# from 2026-05-01 to 2026-08-01
+# R^2 = 0.9998, RMS error = 0.0047 m
+# Constituents analyzed: 68
+#
+# Valdivia (Río Calle-Calle), Chile
+# BEGIN HOT COMMENTS
+# country: Chile
+# source: SHOA Chile tide tables × UTide
+# station_id_context: SHOA-valdivia_rio_calle_calle
+# date_imported: 20260613
+# datum: Plano de Reducción (Chart Datum SHOA)
+# confidence: 7
+# !units: meters
+# !longitude: -73.2450
+# !latitude: -39.8140
+Valdivia (Río Calle-Calle), Chile
++00:00 :America/Santiago
+0.7467 meters
+J1              0.0085  145.81
+K1              0.6077  231.57
+K2              0.0035  143.39
+L2              0.0147  156.77
+x 0 0
+M2              0.3088  138.18
+M3              0.0010  296.76
+M4              0.0105  180.44
+M6              0.0007  262.84
+M8              0.0003  62.84
+N2              0.0745  100.35
+2N2             0.0018  268.00
+O1              0.0977  43.70
+OO1             0.0009  127.20
+P1              0.4710  245.52
+Q1              0.0157  8.86
+2Q1             0.0007  347.16
+R2              0.0149  149.71
+x 0 0
+S2              0.0762  144.06
+S4              0.0005  288.92
+x 0 0
+T2              0.0073  7.24
+LDA2            0.0024  107.04
+MU2             0.0106  142.74
+NU2             0.0003  233.29
+RHO1            0.0004  204.32
+MK3             0.0115  72.95
+x 0 0
+MN4             0.0049  143.47
+MS4             0.0053  203.81
+2SM2            0.0008  202.91
+MF              0.0018  92.12
+MSF             0.0326  347.45
+MM              0.0036  340.25
+x 0 0
+SSA             0.0113  8.05
+SA-IOS          0.0356  169.79
+x 0 0
+S1-IOS          1.2537  265.63
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0019  95.07
+2MK6            0.0001  189.21
+x 0 0
+2MN6            0.0004  214.32
+2MS6            0.0003  295.52
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+3MS4            0.0009  41.74
+x 0 0
+ALP1            0.0003  233.57
+BET1            0.0013  193.26
+CHI1            0.0015  268.57
+H1              0.0356  117.14
+H2              0.0349  263.97
+x 0 0
+ETA2            0.0059  147.22
+x 0 0
+UPS1            0.0007  190.60
+x 0 0
+x 0 0
+MK4             0.0009  298.20
+MKS2            0.0070  103.01
+x 0 0
+EPS2            0.0009  131.04
+MO3             0.0094  358.78
+x 0 0
+TAU1            0.0055  62.52
+x 0 0
+MSK6            0.0001  176.15
+MSM             0.0014  28.97
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0067  108.73
+OP2             0.0092  283.81
+x 0 0
+PHI1            0.1069  38.70
+x 0 0
+PI1             0.1093  264.16
+x 0 0
+PSI1            0.4289  214.60
+x 0 0
+x 0 0
+SIG1            0.0006  277.24
+SK3             0.0023  51.04
+x 0 0
+SN4             0.0005  41.59
+x 0 0
+SO1             0.0025  320.79
+SO3             0.0014  356.01
+THE1            0.0013  85.95
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0011  232.57
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO3             0.0019  319.70
+x 0 0
+x 0 0
+N4              0.0004  187.82
 x 0 0
 x 0 0
 x 0 0

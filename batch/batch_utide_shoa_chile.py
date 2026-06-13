@@ -87,6 +87,12 @@ STATIONS = {
         'lon': -78.830,
         'tz': 'America/Santiago',
     },
+    'valdivia_rio_calle_calle': {
+        'name': 'Valdivia (Río Calle-Calle)',
+        'lat': -39.814,   # Río Calle-Calle, Los Ríos
+        'lon': -73.245,
+        'tz': 'America/Santiago',
+    },
 }
 
 
