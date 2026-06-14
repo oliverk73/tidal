@@ -23,6 +23,7 @@ HARMONICS_DIRS = [
     "harmonics/ihm",
     "harmonics/utide",
     "harmonics/ticon",
+    "harmonics/literature",
 ]
 
 
@@ -247,6 +248,7 @@ SOURCE_GROUPS = OrderedDict([
                             ]}),
     ('Puertos',         {'color': '#00BCD4', 'files': ['harmonics_puertos_spain.tcd']}),
     ('FES2022',         {'color': '#CDDC39', 'files': ['harmonics_fes2022.tcd']}),
+    ('Literatur',       {'color': '#009688', 'files': ['harmonics_literature.tcd']}),
 ])
 
 # Group order: predefined + Sonstige fallback
