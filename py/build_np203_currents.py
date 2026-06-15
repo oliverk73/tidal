@@ -249,6 +249,18 @@ SEASONAL_NOTE = {538: "Z0 stark saisonal (Throughflow): Jan +1.7 .. Jul -2.1 .. 
                       "hier Jahresmittel ~0 angesetzt"}
 
 
+def infer_n2k2(const):
+    """N2/K2 aus M2/S2 ergaenzen (Equilibrium, wie py/build_np203.py Tide-Seite).
+    const-Werte sind hier (g_deg, H_kn). N2: amp=0.19*M2, g=g_M2-0.536*(g_S2-g_M2);
+    K2: amp=0.27*S2, g=g_S2. NP203 publiziert N2/K2 nicht -> sonst ~10-15% zu schwach."""
+    out = dict(const)
+    if "M2" in const and "S2" in const:
+        gM2, aM2 = const["M2"]; gS2, aS2 = const["S2"]
+        out.setdefault("N2", ((gM2 - 0.536 * (gS2 - gM2)) % 360, round(0.19 * aM2, 4)))
+        out.setdefault("K2", (gS2 % 360, round(0.27 * aS2, 4)))
+    return out
+
+
 def phasor(H, g_deg):
     return H * cmath.exp(-1j * math.radians(g_deg))
 
@@ -311,9 +323,10 @@ def station_block(st, order, diag):
     if st["type"] == "reversing":
         a(f"# flood_dir: {st['flood']:03d}\n")
         a(f"# ebb_dir: {st['ebb']:03d}\n")
-        const = st["const"]; datum = st["z0"]
+        const = infer_n2k2(st["const"]); datum = st["z0"]
     else:
         flood, const, ell = project_rotary(st["n"], st["e"])
+        const = infer_n2k2(const)
         D0 = math.radians(flood)
         datum = st["z0e"] * math.sin(D0) + st["z0n"] * math.cos(D0)  # Reststrom-Vektor projiziert
         a(f"# flood_dir: {round(flood):03d}\n")
@@ -323,6 +336,8 @@ def station_block(st, order, diag):
             a("# rotary_caveat: strongly rotary (|e|>0.25) - 1D major-axis "
               "underrepresents speed and shows false slacks\n")
         diag.append((st["name"], ell, flood))
+    if "N2" in const or "K2" in const:
+        a("# inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1\n")
     if st["no"] in SEASONAL_NOTE:
         a(f"# seasonal_note: {SEASONAL_NOTE[st['no']]}\n")
     a(f"# datum: Z0 residual current (knots)\n")
