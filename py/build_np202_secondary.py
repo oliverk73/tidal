@@ -13,7 +13,7 @@ Z0 2.15, M2 1.161/212, MHWS≈3.7/MHWN≈3.0 = exakt ATT). Meridian +03:00 (Zone
 Pilot: 7 Novaya-Zemlya/Kara-Lücken (1009-1015), alle 0-Coverage. conf 2 (Näherung).
 Werte aus Scan_20260615 (64).pdf (NP202 Part II).
 """
-import os, re
+import os, re, math
 
 HARM = os.path.expanduser('~/harmonics')
 HDRSRC = f'{HARM}/utide/harmonics_att_np203.txt'
@@ -57,6 +57,24 @@ def read_reference():
         else:
             break   # nächste Station / Blockende
     return con
+
+
+def load_inventory():
+    """Alle deployten Stationen (inkl. Classic 1997) für Gap-Check."""
+    import json
+    d = json.load(open(os.path.expanduser('~/static/js/leaflet_markers_data.json')))
+    # EIGENE secondary-Stationen ausschließen, sonst Selbst-Duplikat beim Re-Build
+    return [(s[1], s[2]) for s in d['stations']
+            if isinstance(s[1], (int, float)) and 'att_np202_secondary' not in str(s[3] if len(s) > 3 else '')]
+
+
+def is_gap(lat, lon, inv, km=6.0):
+    """True wenn KEINE existierende Station innerhalb km -> echte Lücke."""
+    for la, lo in inv:
+        d = (((la - lat) * 111.0) ** 2 + ((lo - lon) * 111.0 * math.cos(math.radians(lat))) ** 2) ** 0.5
+        if d < km:
+            return False
+    return True
 
 
 REF = read_reference()
@@ -132,13 +150,21 @@ def block(s):
 
 def main():
     print(f'Referenz-Konstituenten: {len(REF)} (M2={REF["M2"]})')
+    inv = load_inventory()
     lines = list(HEADER)
+    built = skipped = 0
     for s in SEC:
+        if not is_gap(s[2], s[3], inv):
+            print(f'  SKIP (Duplikat) {s[0]} {s[1]}')
+            skipped += 1
+            continue
         dt, a, z0, _ = transfer(s)
         print(f'  {s[0]} {s[1][:34]:34} dt={dt:+.2f}h scale={a:.3f} Z0={z0:.2f} '
               f'MHWS={REF_LEVELS[0]+s[6]:.1f}')
         lines += block(s)
+        built += 1
     lines.append('# END')
+    print(f'  ({built} gebaut, {skipped} Duplikate übersprungen)')
     with open(OUT, 'w', encoding='iso-8859-1') as f:
         f.write('\n'.join(lines) + '\n')
     print(f'Geschrieben: {OUT} | {len(SEC)} Stationen')
