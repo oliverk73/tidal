@@ -251,7 +251,8 @@ SOURCE_GROUPS = OrderedDict([
     ('Literatur',       {'color': '#009688', 'files': ['harmonics_literature.tcd']}),
     ('Admiralty NP203', {'color': '#D84315', 'files': ['harmonics_att_np203.tcd']}),
     ('NP203 Strömung',  {'color': '#006064', 'files': ['harmonics_att_np203_currents.tcd']}),
-    ('Admiralty NP202', {'color': '#4A148C', 'files': ['harmonics_att_np202.tcd']}),
+    ('Admiralty NP202', {'color': '#4A148C', 'files': ['harmonics_att_np202.tcd',
+                                                        'harmonics_att_np202_secondary.tcd']}),
 ])
 
 # Group order: predefined + Sonstige fallback
