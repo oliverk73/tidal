@@ -65,8 +65,11 @@ def S(att, name, lat, lon, mer, z0, con, coord_src, conf=3):
 
 
 # M2/S2/K1/O1 = (g, H[m]) aus NP202 Part III S.406
+# Koords durchweg AMTLICH aus NP202 Part II (Scan 62 S.360 FJL, Scan 63 Russia):
+# Gazetteer-Werte waren teils stark falsch (990 Mys Kharse: Gazetteer Kharasavey 71/66.8
+# vs ATT Ob-Bucht 70.10/73.72 = ~250 km!). Part II = gleiche Stationsnr wie Part III.
 STATIONS = [
-    # Franz-Josef-Land  (Part-III-Zone UT/GMT → +00:00; Koords Part II S.360)
+    # Franz-Josef-Land  (Part-III-Zone UT/GMT → +00:00)
     S(910, 'Mys Flora, Franz Josef Land (NP202 910)', dm(79, 57), dm(50, 5), '+00:00', 0.3,
       {'M2': (324, 0.13), 'S2': (23, 0.04), 'K1': (55, 0.07), 'O1': (67, 0.02)}, 'PartII'),
     S(911, 'Bukhta Tikhaya, Franz Josef Land (NP202 911)', dm(80, 20), dm(52, 48), '+00:00', 0.3,
@@ -74,41 +77,44 @@ STATIONS = [
     S(912, 'Bukhta Teplits, Franz Josef Land (NP202 912)', dm(81, 47), dm(57, 56), '+00:00', 0.4,
       {'M2': (211, 0.17), 'S2': (268, 0.06), 'K1': (62, 0.03), 'O1': (33, 0.01)}, 'PartII'),
     # Severnaya Zemlya / Sedov-Archipel  (Zone -0600 → +06:00)
-    S(920, 'Ostrov Domashniy, Severnaya Zemlya (NP202 920)', 79.50, 91.13, '+06:00', 0.3,
-      {'M2': (28, 0.10), 'S2': (86, 0.04), 'K1': (46, 0.06), 'O1': (36, 0.02)}, 'gazetteer'),
+    S(920, 'Ostrov Domashniy, Severnaya Zemlya (NP202 920)', dm(79, 30), dm(91, 8), '+06:00', 0.3,
+      {'M2': (28, 0.10), 'S2': (86, 0.04), 'K1': (46, 0.06), 'O1': (36, 0.02)}, 'PartII'),
     # Neusibirische Inseln  (Zone -1000 → +10:00)
-    S(930, 'Ostrov Kotelny (NP202 930)', 75.95, 137.87, '+10:00', 0.3,
-      {'M2': (41, 0.07), 'S2': (117, 0.05), 'K1': (306, 0.01)}, 'gazetteer'),
+    S(930, 'Ostrov Kotelny (NP202 930)', dm(75, 22), dm(137, 10), '+10:00', 0.3,
+      {'M2': (41, 0.07), 'S2': (117, 0.05), 'K1': (306, 0.01)}, 'PartII'),
     # Tschuktschen-/Ostsibirische See  (Zone -1200 → +12:00)
-    S(950, 'Mys Serdtse-Kamen (NP202 950)', 66.908, -171.631, '+12:00', 0.2,
-      {'M2': (192, 0.04), 'S2': (290, 0.01), 'K1': (69, 0.01), 'O1': (56, 0.01)}, 'gazetteer'),
-    S(951, 'Pitlekaj (NP202 951)', 67.08, -173.38, '+12:00', 0.2,
-      {'M2': (159, 0.02), 'S2': (227, 0.01), 'K1': (46, 0.01), 'O1': (43, 0.01)}, 'gazetteer'),
-    S(958, 'Ostrov Ayon (NP202 958)', 69.79, 168.66, '+12:00', 0.1,
-      {'M2': (359, 0.02), 'S2': (59, 0.01)}, 'gazetteer'),
+    S(950, 'Mys Serdtse-Kamen (NP202 950)', dm(66, 53), -dm(171, 38), '+12:00', 0.2,
+      {'M2': (192, 0.04), 'S2': (290, 0.01), 'K1': (69, 0.01), 'O1': (56, 0.01)}, 'PartII'),
+    S(951, 'Pitlekaj (NP202 951)', dm(67, 3), -dm(173, 53), '+12:00', 0.2,
+      {'M2': (159, 0.02), 'S2': (227, 0.01), 'K1': (46, 0.01), 'O1': (43, 0.01)}, 'PartII'),
+    S(958, 'Ostrov Ayon (NP202 958)', dm(69, 53), dm(167, 52), '+12:00', 0.1,
+      {'M2': (359, 0.02), 'S2': (59, 0.01)}, 'PartII'),
     # Laptewsee  (Zone -0900 → +09:00)
-    S(966, 'Tiksi Bay (NP202 966)', 71.65, 129.14, '+09:00', 0.3,
-      {'M2': (47, 0.14), 'S2': (115, 0.05), 'K1': (111, 0.03), 'O1': (90, 0.01)}, 'gazetteer'),
+    S(966, 'Tiksi Bay (NP202 966)', dm(71, 35), dm(128, 55), '+09:00', 0.3,
+      {'M2': (47, 0.14), 'S2': (115, 0.05), 'K1': (111, 0.03), 'O1': (90, 0.01)}, 'PartII'),
     # Taymyr / Karasee  (Zone -0700 → +07:00)
-    S(971, 'Komsomolskaya Pravda Islands (NP202 971)', 77.33, 107.00, '+07:00', 0.4,
-      {'M2': (314, 0.15), 'S2': (356, 0.06), 'K1': (11, 0.06), 'O1': (30, 0.01)}, 'gazetteer'),
-    S(972, 'Mys Chelyuskin (NP202 972)', 77.733, 104.25, '+07:00', 0.4,
-      {'M2': (335, 0.13), 'S2': (26, 0.05), 'K1': (25, 0.03), 'O1': (17, 0.03)}, 'gazetteer'),
-    S(985, 'Bukhta Dikson (NP202 985)', 73.507, 80.546, '+07:00', 0.3,
-      {'M2': (161, 0.10), 'S2': (225, 0.05), 'K1': (50, 0.02), 'O1': (293, 0.01)}, 'gazetteer'),
-    S(986, 'Mys Sopochnaya Karga (NP202 986)', 71.88, 82.67, '+07:00', 0.5,
-      {'M2': (286, 0.20), 'S2': (22, 0.09), 'K1': (296, 0.04), 'O1': (196, 0.02)}, 'gazetteer'),
-    S(987, 'Ostrov Nasonovskiy (NP202 987)', 70.92, 83.14, '+07:00', 0.37,
-      {'M2': (106, 0.11), 'S2': (181, 0.04), 'K1': (147, 0.04)}, 'gazetteer'),
-    # Yamal / Ob-Bucht  (Zone -0500 → +05:00)
-    S(990, 'Mys Kharasavey (NP202 990)', 71.18, 66.77, '+05:00', 0.37,
-      {'M2': (341, 0.26), 'S2': (40, 0.09), 'K1': (240, 0.05), 'O1': (353, 0.01)}, 'gazetteer'),
-    S(992, 'Mys Kamennyy (NP202 992)', 68.51, 73.57, '+05:00', 0.35,
-      {'M2': (102, 0.18), 'S2': (194, 0.10), 'K1': (151, 0.02), 'O1': (297, 0.01)}, 'gazetteer'),
+    S(971, 'Komsomolskaya Pravda Islands (NP202 971)', dm(77, 26), dm(106, 40), '+07:00', 0.4,
+      {'M2': (314, 0.15), 'S2': (356, 0.06), 'K1': (11, 0.06), 'O1': (30, 0.01)}, 'PartII'),
+    S(972, 'Mys Chelyuskin (NP202 972)', dm(77, 43), dm(104, 19), '+07:00', 0.4,
+      {'M2': (335, 0.13), 'S2': (26, 0.05), 'K1': (25, 0.03), 'O1': (17, 0.03)}, 'PartII'),
+    S(973, 'Hansen Island (NP202 973)', dm(77, 34), dm(102, 24), '+07:00', 0.3,
+      {'M2': (40, 0.07), 'S2': (68, 0.02), 'K1': (25, 0.03), 'O1': (7, 0.03)}, 'PartII'),
+    S(975, 'Rade de Zarya (NP202 975)', dm(76, 8), dm(95, 8), '+07:00', 0.4,
+      {'M2': (39, 0.18), 'S2': (119, 0.08), 'K1': (13, 0.04), 'O1': (11, 0.02)}, 'PartII'),
+    S(985, 'Bukhta Dikson (NP202 985)', dm(73, 30), dm(80, 25), '+07:00', 0.3,
+      {'M2': (161, 0.10), 'S2': (225, 0.05), 'K1': (50, 0.02), 'O1': (293, 0.01)}, 'PartII'),
+    S(986, 'Mys Sopochnaya Karga (NP202 986)', dm(71, 50), dm(82, 45), '+07:00', 0.5,
+      {'M2': (286, 0.20), 'S2': (22, 0.09), 'K1': (296, 0.04), 'O1': (196, 0.02)}, 'PartII'),
+    S(987, 'Ostrov Nasonovskiy (NP202 987)', dm(70, 52), dm(83, 22), '+07:00', 0.37,
+      {'M2': (106, 0.11), 'S2': (181, 0.04), 'K1': (147, 0.04)}, 'PartII'),
+    # Obskaya Guba (Ob-Bucht)  (Zone -0500 → +05:00)
+    S(989, 'Reka Sabule-Yaga, Obskaya Guba (NP202 989)', dm(72, 10), dm(75, 0), '+05:00', 0.46,
+      {'M2': (143, 0.32), 'S2': (183, 0.15), 'K1': (239, 0.06), 'O1': (181, 0.03)}, 'PartII'),
+    S(990, 'Mys Kharse, Obskaya Guba (NP202 990)', dm(70, 6), dm(73, 43), '+05:00', 0.37,
+      {'M2': (341, 0.26), 'S2': (40, 0.09), 'K1': (240, 0.05), 'O1': (353, 0.01)}, 'PartII'),
+    S(992, 'Mys Kamennyy, Obskaya Guba (NP202 992)', dm(68, 30), dm(73, 35), '+05:00', 0.35,
+      {'M2': (102, 0.18), 'S2': (194, 0.10), 'K1': (151, 0.02), 'O1': (297, 0.01)}, 'PartII'),
 ]
-
-# DEFERRED (Koords nicht zuverlässig auffindbar): 973 Hansen Island,
-# 975 Rade de Zarya, 989 Reka Sabule-Yaga (M2 0.32!) -> wenn Part-I-Header/Index gescannt.
 
 
 def block(s):

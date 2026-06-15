@@ -15562,12 +15562,12 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 920
 # note: Arctic gap port; microtidal; phases zone +06:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 91.1300
+# !longitude: 91.1333
 # !latitude: 79.5000
 Ostrov Domashniy, Severnaya Zemlya (NP202 920) Tide
 +06:00 :UTC
@@ -15752,13 +15752,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 930
 # note: Arctic gap port; microtidal; phases zone +10:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 137.8700
-# !latitude: 75.9500
+# !longitude: 137.1667
+# !latitude: 75.3667
 Ostrov Kotelny (NP202 930) Tide
 +10:00 :UTC
 0.3000 meters
@@ -15942,13 +15942,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 950
 # note: Arctic gap port; microtidal; phases zone +12:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -171.6310
-# !latitude: 66.9080
+# !longitude: -171.6333
+# !latitude: 66.8833
 Mys Serdtse-Kamen (NP202 950) Tide
 +12:00 :UTC
 0.2000 meters
@@ -16132,13 +16132,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 951
 # note: Arctic gap port; microtidal; phases zone +12:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -173.3800
-# !latitude: 67.0800
+# !longitude: -173.8833
+# !latitude: 67.0500
 Pitlekaj (NP202 951) Tide
 +12:00 :UTC
 0.2000 meters
@@ -16322,13 +16322,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 958
 # note: Arctic gap port; microtidal; phases zone +12:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 168.6600
-# !latitude: 69.7900
+# !longitude: 167.8667
+# !latitude: 69.8833
 Ostrov Ayon (NP202 958) Tide
 +12:00 :UTC
 0.1000 meters
@@ -16512,13 +16512,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 966
 # note: Arctic gap port; microtidal; phases zone +09:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 129.1400
-# !latitude: 71.6500
+# !longitude: 128.9167
+# !latitude: 71.5833
 Tiksi Bay (NP202 966) Tide
 +09:00 :UTC
 0.3000 meters
@@ -16702,13 +16702,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 971
 # note: Arctic gap port; microtidal; phases zone +07:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 107.0000
-# !latitude: 77.3300
+# !longitude: 106.6667
+# !latitude: 77.4333
 Komsomolskaya Pravda Islands (NP202 971) Tide
 +07:00 :UTC
 0.4000 meters
@@ -16892,13 +16892,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 972
 # note: Arctic gap port; microtidal; phases zone +07:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 104.2500
-# !latitude: 77.7330
+# !longitude: 104.3167
+# !latitude: 77.7167
 Mys Chelyuskin (NP202 972) Tide
 +07:00 :UTC
 0.4000 meters
@@ -17080,15 +17080,395 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Russia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
-# att_number: 985
+# att_number: 973
 # note: Arctic gap port; microtidal; phases zone +07:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 80.5460
-# !latitude: 73.5070
+# !longitude: 102.4000
+# !latitude: 77.5667
+Hansen Island (NP202 973) Tide
++07:00 :UTC
+0.3000 meters
+x 0 0
+K1              0.0300  25.00
+K2              0.0054  68.00
+x 0 0
+x 0 0
+M2              0.0700  40.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N2              0.0133  24.99
+x 0 0
+O1              0.0300  7.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0200  68.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# BEGIN HOT COMMENTS
+# country: Russia
+# source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
+# att_number: 975
+# note: Arctic gap port; microtidal; phases zone +07:00; N2/K2 inferred
+# coord_source: NP202 Part II
+# date_imported: 20260615
+# datum: Chart Datum (Z0 = mean level above CD)
+# confidence: 3
+# !units: meters
+# !longitude: 95.1333
+# !latitude: 76.1333
+Rade de Zarya (NP202 975) Tide
++07:00 :UTC
+0.4000 meters
+x 0 0
+K1              0.0400  13.00
+K2              0.0216  119.00
+x 0 0
+x 0 0
+M2              0.1800  39.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N2              0.0342  356.12
+x 0 0
+O1              0.0200  11.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0800  119.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# BEGIN HOT COMMENTS
+# country: Russia
+# source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
+# att_number: 985
+# note: Arctic gap port; microtidal; phases zone +07:00; N2/K2 inferred
+# coord_source: NP202 Part II
+# date_imported: 20260615
+# datum: Chart Datum (Z0 = mean level above CD)
+# confidence: 3
+# !units: meters
+# !longitude: 80.4167
+# !latitude: 73.5000
 Bukhta Dikson (NP202 985) Tide
 +07:00 :UTC
 0.3000 meters
@@ -17272,13 +17652,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 986
 # note: Arctic gap port; microtidal; phases zone +07:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 82.6700
-# !latitude: 71.8800
+# !longitude: 82.7500
+# !latitude: 71.8333
 Mys Sopochnaya Karga (NP202 986) Tide
 +07:00 :UTC
 0.5000 meters
@@ -17462,13 +17842,13 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 987
 # note: Arctic gap port; microtidal; phases zone +07:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 83.1400
-# !latitude: 70.9200
+# !longitude: 83.3667
+# !latitude: 70.8667
 Ostrov Nasonovskiy (NP202 987) Tide
 +07:00 :UTC
 0.3700 meters
@@ -17650,16 +18030,206 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Russia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
-# att_number: 990
+# att_number: 989
 # note: Arctic gap port; microtidal; phases zone +05:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 66.7700
-# !latitude: 71.1800
-Mys Kharasavey (NP202 990) Tide
+# !longitude: 75.0000
+# !latitude: 72.1667
+Reka Sabule-Yaga, Obskaya Guba (NP202 989) Tide
++05:00 :UTC
+0.4600 meters
+x 0 0
+K1              0.0600  239.00
+K2              0.0405  183.00
+x 0 0
+x 0 0
+M2              0.3200  143.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N2              0.0608  121.56
+x 0 0
+O1              0.0300  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1500  183.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# BEGIN HOT COMMENTS
+# country: Russia
+# source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
+# att_number: 990
+# note: Arctic gap port; microtidal; phases zone +05:00; N2/K2 inferred
+# coord_source: NP202 Part II
+# date_imported: 20260615
+# datum: Chart Datum (Z0 = mean level above CD)
+# confidence: 3
+# !units: meters
+# !longitude: 73.7167
+# !latitude: 70.1000
+Mys Kharse, Obskaya Guba (NP202 990) Tide
 +05:00 :UTC
 0.3700 meters
 x 0 0
@@ -17842,14 +18412,14 @@ x 0 0
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants
 # att_number: 992
 # note: Arctic gap port; microtidal; phases zone +05:00; N2/K2 inferred
-# coord_source: geo gazetteer (web)
+# coord_source: NP202 Part II
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 73.5700
-# !latitude: 68.5100
-Mys Kamennyy (NP202 992) Tide
+# !longitude: 73.5833
+# !latitude: 68.5000
+Mys Kamennyy, Obskaya Guba (NP202 992) Tide
 +05:00 :UTC
 0.3500 meters
 x 0 0
