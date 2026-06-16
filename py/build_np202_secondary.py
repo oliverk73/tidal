@@ -193,7 +193,47 @@ SEC_YEKAT2 = [
     (1112, "Guba Malyy Korabel'naya", dm(69, 35), dm(32, 45), '-0001', '-0001', 0.0, 0.0, 0.0, 0.0),
 ]
 
-BLOCKS = [('YEKAT', SEC_YEKAT), ('KEM', SEC_KEM), ('YEKAT', SEC_YEKAT2)]
+# --- Block D: letzte russische Kola-Häfen (Pechenga), Yekat-Ref, Zone -0300 ---
+# Scan_20260615 (66).pdf = S.364 oben.
+SEC_YEKAT3 = [
+    (1113, "Guba Bol'shoy Korabel'naya", dm(69, 41), dm(33, 6), '-0005', '-0005', 0.0, 0.0, 0.0, 0.0),
+    (1114, 'Guba Zubovskaya', dm(69, 47), dm(32, 40), '-0014', '-0014', 0.0, 0.0, 0.0, 0.0),
+    (1115, 'Guba Vayda', dm(69, 56), dm(32, 0), '-0023', '-0023', -0.1, -0.1, 0.0, 0.0),
+    (1118, 'Linakhamari, Guba Pechenga', dm(69, 39), dm(31, 22), '-0030', '-0035', -0.4, -0.2, 0.1, 0.1),
+    (1119, 'Guba Bazarnaya', dm(69, 46), dm(31, 2), '-0029', '-0029', -0.3, -0.3, -0.1, 0.0),
+]
+
+# --- Block E: norwegische Finnmark-Häfen, Ref OSTROV YEKATERININSKIY, ZONE -0100 ---
+# Scan 66/S.364. WICHTIG (Vard\xf8-validiert, 11 min): Output-Meridian = Sekundär-
+# Ortszone +01:00, ATT-Diff DIREKT angewandt (die 2h Moskau/Norwegen-Zonendiff
+# steckt bereits in den großen -02xx/-03xx/-04xx-Differenzen). \xf8=ø \xe5=å.
+# 1131 KIRKENES + 1188 NARVIK + 1150 HAMMERFEST = Standardhäfen (nicht hier).
+# Vard\xf8 (1134) Duplikat -> Gap-Check skippt. Narvik-/Hammerfest-ref Bl\xf6cke
+# (Russenes, Honningsv\xe5g..., Karhavn...) ZURÜCKGESTELLT: Referenz nur als
+# UTide-Messung (+00:00) vorhanden -> ~40 min Timing-Versatz (Honningsv\xe5g-Test).
+SEC_NORWAY_YEKAT = [
+    (1130, 'Grense Jakobselv', dm(69, 46), dm(30, 44), '-0240', '-0240', -0.3, -0.4, -0.1, 0.0),
+    (1132, 'Karlbotn, Varangerfjorden', dm(70, 7), dm(28, 36), '-0240', '-0245', -0.2, -0.3, -0.1, 0.0),
+    (1133, 'Vads\xf8', dm(70, 4), dm(29, 45), '-0235', '-0235', -0.2, -0.2, -0.1, 0.1),
+    (1134, 'Vard\xf8', dm(70, 20), dm(31, 6), '-0245', '-0255', -0.3, -0.3, -0.1, 0.1),
+    (1135, 'Syltefjorden', dm(70, 34), dm(30, 14), '-0305', '-0310', -0.6, -0.6, -0.1, 0.2),
+    (1136, 'Kongsfjorden', dm(70, 43), dm(29, 19), '-0315', '-0315', -0.8, -0.6, -0.1, 0.2),
+    (1137, 'Berlev\xe5g', dm(70, 52), dm(29, 6), '-0330', '-0335', -1.0, -0.8, -0.3, 0.0),
+    (1138, 'Smalfjorden, Tanafjorden', dm(70, 26), dm(28, 4), '-0340', '-0345', -0.8, -0.8, -0.3, 0.0),
+    (1139, 'Skj\xe5nes, Hopsfjorden', dm(70, 48), dm(28, 7), '-0340', '-0345', -0.9, -0.8, -0.3, 0.1),
+    (1140, 'Mehamn', dm(71, 2), dm(27, 51), '-0405', '-0410', -1.0, -0.8, -0.3, 0.0),
+    (1141, 'Kj\xf8llefjord', dm(70, 57), dm(27, 21), '-0425', '-0430', -0.9, -0.9, -0.4, 0.1),
+    (1142, 'Ifjorden, Laksfjorden', dm(70, 28), dm(27, 6), '-0425', '-0430', -1.0, -0.8, -0.3, 0.1),
+]
+
+# (refkey, meridian, country, sec_list)
+BLOCKS = [
+    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', SEC_YEKAT),
+    ('KEM', '+03:00 :Europe/Moscow', 'Russia', SEC_KEM),
+    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', SEC_YEKAT2),
+    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', SEC_YEKAT3),
+    ('YEKAT', '+01:00 :Europe/Oslo', 'Norway', SEC_NORWAY_YEKAT),
+]
 
 
 def transfer(s, refkey):
@@ -218,15 +258,18 @@ def transfer(s, refkey):
     return dt, a, z0, con
 
 
-def block(s, refkey):
+REFNAMES = {'YEKAT': 'Ostrov Yekaterininskiy', 'KEM': "Port of Kem'"}
+
+
+def block(s, refkey, mer, country):
     att, name = s[0], s[1]
     dt, a, z0, con = transfer(s, refkey)
-    refname = 'Ostrov Yekaterininskiy' if refkey == 'YEKAT' else "Port of Kem'"
+    refname = REFNAMES[refkey]
     ml = s[10] if len(s) > 10 else None
     asym = f'; ML={ml} (shallow-water asymmetry, HW/LW prioritised over MSL)' \
         if (ml is not None and abs(z0 - ml) > 0.25) else ''
     out = ['# BEGIN HOT COMMENTS',
-           '# country: Russia',
+           f'# country: {country}',
            '# source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port',
            f'# att_number: {att}',
            f'# note: Transfer from {refname} (dt={dt:+.2f}h, scale={a:.3f}); approximate{asym}',
@@ -238,7 +281,7 @@ def block(s, refkey):
            f'# !longitude: {s[3]:.4f}',
            f'# !latitude: {s[2]:.4f}',
            f'{name} (NP202 {att}) Tide',
-           '+03:00 :Europe/Moscow',
+           mer,
            f'{z0:.4f} meters']
     for c in ORDER:
         if c in con:
@@ -255,8 +298,8 @@ def main():
     inv = load_inventory()
     lines = list(HEADER)
     built = skipped = total = 0
-    for refkey, sec_list in BLOCKS:
-        print(f'--- Block {refkey} ---')
+    for refkey, mer, country, sec_list in BLOCKS:
+        print(f'--- Block {refkey} / {country} / {mer} ---')
         for s in sec_list:
             total += 1
             if not is_gap(s[2], s[3], inv):
@@ -265,8 +308,8 @@ def main():
                 continue
             dt, a, z0, _ = transfer(s, refkey)
             mhws = REFS[refkey]['levels'][0] + s[6]
-            print(f'  {str(s[0]):5} {s[1][:32]:32} dt={dt:+.2f}h scale={a:.3f} Z0={z0:.2f} MHWS={mhws:.1f}')
-            lines += block(s, refkey)
+            print(f'  {str(s[0]):5} {s[1][:30]:30} dt={dt:+.2f}h scale={a:.3f} Z0={z0:.2f} MHWS={mhws:.1f}')
+            lines += block(s, refkey, mer, country)
             built += 1
     lines.append('# END')
     print(f'  ({built} gebaut, {skipped} Duplikate übersprungen, {total} gesamt)')
