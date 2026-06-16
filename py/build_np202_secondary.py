@@ -82,16 +82,34 @@ def is_gap(lat, lon, inv, km=6.0):
 # (MHWS,MHWN,MLWN,MLWS). KEM-Stände nach Admiralty-Näherung MHWS=Z0+(M2+S2) etc.
 # aus Classic-Konstituenten (Z0 1.10, M2 0.586, S2 0.144); reproduziert die ATT-
 # Stände von Yekaterininskiy exakt (Quercheck), daher für Kem ebenso angesetzt.
+def p3_ref(con3, z0):
+    """Part-III-Standardhafen (NP202 S.408): con3={Konst:(H,g)} M2/S2/K1/O1,
+    N2/K2 inferiert, Pegel-Stände + Spring aus Konstituenten (Admiralty-Näherung
+    MHWS=Z0+(M2+S2) usw.). Phasen in Lokalzeit -> Meridian via Block. KEINE
+    Kalibrierung nötig (Admiralty-konsistent mit den Part-II-Differenzen)."""
+    con = dict(con3)
+    (hM2, gM2), (hS2, gS2) = con['M2'], con['S2']
+    con['N2'] = (round(0.19 * hM2, 4), (gM2 - 0.536 * (gS2 - gM2)) % 360)
+    con['K2'] = (round(0.27 * hS2, 4), gS2 % 360)
+    levels = (z0 + hM2 + hS2, z0 + hM2 - hS2, z0 - hM2 + hS2, z0 - hM2 - hS2)
+    return dict(con=con, levels=levels, spring=2 * (hM2 + hS2))
+
+
 REFS = {
-    'YEKAT':  dict(name='Yekaterininskaya, Russia', path=CLASSIC, levels=(3.7, 3.0, 1.3, 0.5)),
-    'KEM':    dict(name='Port Kem, Russia',         path=CLASSIC, levels=(1.83, 1.54, 0.66, 0.37)),
-    # NARVIK: Konst. nur als UTide-Messung (+00:00). Pegel-Stände ATT (NP202 S.364).
-    # Timing-Offset Mess-Narvik <-> ATT-Narvik via Honningsvåg kalibriert = +0.75 h.
-    'NARVIK': dict(name='Narvik, Norway', path=OBS, levels=(3.2, 2.5, 1.2, 0.5)),
+    'YEKAT': dict(name='Yekaterininskaya, Russia', path=CLASSIC, levels=(3.7, 3.0, 1.3, 0.5)),
+    'KEM':   dict(name='Port Kem, Russia',         path=CLASSIC, levels=(1.83, 1.54, 0.66, 0.37)),
 }
 for _k, _r in REFS.items():
     _r['con'] = read_reference(_r['name'], _r['path'])
     _r['spring'] = _r['levels'][0] - _r['levels'][3]
+
+# Norwegische Standardhäfen: Part-III-Direkt-Konstanten (NP202 S.408 = Scan 25),
+# Phasen Lokalzeit Zone -0100. Gegen gemessenes Honningsvåg validiert (Narvik-Ref):
+# HW-Versatz 10 min, Höhe 4 cm OHNE Kalibrierung. (H,g) = Amplitude[m], Phase[°].
+REFS['NARVIK'] = p3_ref({'M2': (1.00, 4), 'S2': (0.35, 44), 'K1': (0.11, 212), 'O1': (0.03, 58)}, 1.82)
+REFS['HAMMERFEST'] = p3_ref({'M2': (0.89, 48), 'S2': (0.28, 88), 'K1': (0.08, 229), 'O1': (0.03, 64)}, 1.67)
+REFS['TROMSO'] = p3_ref({'M2': (0.84, 29), 'S2': (0.28, 73), 'K1': (0.07, 223), 'O1': (0.04, 66)}, 1.61)
+REFS['LODINGEN'] = p3_ref({'M2': (0.96, 3), 'S2': (0.36, 45), 'K1': (0.11, 222), 'O1': (0.03, 61)}, 1.69)
 
 
 def hm(s):
@@ -233,10 +251,10 @@ SEC_NORWAY_YEKAT = [
     (1142, 'Ifjorden, Laksfjorden', dm(70, 28), dm(27, 6), '-0425', '-0430', -1.0, -0.8, -0.3, 0.1),
 ]
 
-# --- Block F: norweg. Finnmark, Ref NARVIK, ZONE -0100, cal +0.75 h ---
+# --- Block F: norweg. Finnmark, Ref NARVIK (Part III S.408), ZONE -0100 ---
 # Scan 66/S.364. ΔT als vorgemittelte Dezimalstunden (HW- u. LW-Spaltenmittel,
-# da die zwei Spalten ~30 min differieren). Referenz Narvik = UTide-Messung;
-# Timing via gemessenes Honningsv\xe5g kalibriert (+0.75 h -> Rest-HW-Fehler 2 min).
+# da die zwei Spalten ~30 min differieren). Referenz = Part-III-Direktkonstanten
+# (KEINE Kalibrierung; gegen gemessenes Honningsv\xe5g 10 min/4 cm validiert).
 # Honningsv\xe5g (1145) Duplikat -> Gap-Check skippt. \xe6=æ \xf8=ø \xe5=å.
 SEC_NORWAY_NARVIK = [
     (1143, 'Russenes, Porsangen', dm(70, 29), dm(25, 5), 2.833, 2.875, -0.3, -0.1, -0.3, 0.0),
@@ -248,6 +266,15 @@ SEC_NORWAY_NARVIK = [
     (1149, 'Litlefjorden, Revsbotn', dm(70, 42), dm(24, 39), 1.75, 1.792, -0.4, -0.2, -0.3, -0.1),
 ]
 
+# --- Block G: norweg. Finnmark, Ref HAMMERFEST (Part III S.408), ZONE -0100 ---
+# Scan 66/S.364 unten. ΔT vorgemittelt (HW/LW-Spaltenmittel, ~30 min Diurnal). \xf8=ø \xe6=æ
+SEC_NORWAY_HAM = [
+    (1151, 'Karhavn, S\xf8r\xf8ysundet', dm(70, 33), dm(23, 9), 1.417, 1.417, -0.5, -0.3, -0.2, -0.1),
+    (1152, 'Skarvfjorden, S\xf8r\xf8ya', dm(70, 46), dm(23, 7), 1.5, 1.542, -0.3, -0.2, -0.1, 0.0),
+    (1153, 'S\xf8rv\xe6r, S\xf8r\xf8ya', dm(70, 38), dm(21, 59), 1.25, 1.292, -0.5, -0.3, -0.2, 0.0),
+    (1154, 'Komagfjord, Vargsundet', dm(70, 16), dm(23, 23), 1.25, 1.292, -0.2, -0.2, -0.1, 0.0),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -255,7 +282,8 @@ BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT2),
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT3),
     ('YEKAT', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_YEKAT),
-    ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.75, SEC_NORWAY_NARVIK),
+    ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK),
+    ('HAMMERFEST', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAM),
 ]
 
 
@@ -281,7 +309,9 @@ def transfer(s, refkey, cal=0.0):
     return dt, a, z0, con
 
 
-REFNAMES = {'YEKAT': 'Ostrov Yekaterininskiy', 'KEM': "Port of Kem'", 'NARVIK': 'Narvik'}
+REFNAMES = {'YEKAT': 'Ostrov Yekaterininskiy', 'KEM': "Port of Kem'", 'NARVIK': 'Narvik (NP202 Part III)',
+            'HAMMERFEST': 'Hammerfest (NP202 Part III)', 'TROMSO': 'Tromso (NP202 Part III)',
+            'LODINGEN': 'Lodingen (NP202 Part III)'}
 
 
 def block(s, refkey, mer, country, cal=0.0):
