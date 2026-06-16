@@ -314,6 +314,22 @@ SEC_NORWAY_TROMSO = [
     (1275, 'For\xf8ys\xe6ter, Gullesfjorden', dm(68, 38), dm(15, 47), 0.542, 0.417, -0.9, -0.8, -0.4, -0.1),
 ]
 
+# --- Block I2: Vesterålen/Lofoten, Ref TROMSO, ZONE -0100 (Scan_20260616 (14)=S.365 flach) ---
+# Referenz per STANDARD-PORT-Marker bestätigt: Block läuft von TROMSO bis NARVIK(unten) -> alle Tromsø-ref
+# (norweg. Außenküste nahezu gleichphasig, kleine ΔT korrekt). ΔT vorgemittelt. \xe6=æ \xf8=ø \xe5=å \xd8=Ø
+SEC_NORWAY_TROMSO2 = [
+    (1276, 'Evenskj\xe6r', dm(68, 35), dm(16, 33), 0.458, 0.333, -0.9, -0.6, -0.3, -0.1),
+    (1278, 'Ris\xf8yhamn', dm(68, 58), dm(15, 39), 0.583, 0.208, -1.1, -0.8, -0.4, -0.1),
+    (1279, '\xd8ksnes', dm(68, 53), dm(14, 56), 0.417, 0.583, -1.1, -1.0, -0.4, -0.1),
+    (1280, 'Sortland', dm(68, 42), dm(15, 26), 0.417, 0.583, -1.2, -0.8, -0.3, -0.1),
+    (1281, 'Stokmarknes', dm(68, 34), dm(14, 56), 0.417, 0.583, -1.2, -0.9, -0.3, -0.1),
+    (1283, 'Eggum, Lofoten', dm(68, 19), dm(13, 41), 0.417, 0.542, -1.0, -0.4, -0.1, -0.1),
+    (1284, 'Stamsund, Lofoten', dm(68, 8), dm(13, 52), 0.333, 0.5, -0.6, -0.4, -0.2, 0.0),
+    (1285, 'S\xf8rv\xe5gen, Lofoten', dm(67, 53), dm(13, 2), 0.333, 0.5, -0.4, -0.2, -0.2, -0.1),
+    (1286, 'R\xf8st', dm(67, 30), dm(12, 5), 0.167, 0.333, -0.7, -0.4, -0.3, -0.1),
+    (1287, 'L\xf8dingen', dm(68, 25), dm(16, 0), 0.25, 0.417, -0.2, -0.3, -0.1, -0.1),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -326,6 +342,7 @@ BLOCKS = [
     ('HAMMERFEST', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAM),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK2),
     ('TROMSO', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_TROMSO),
+    ('TROMSO', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_TROMSO2),
 ]
 
 
