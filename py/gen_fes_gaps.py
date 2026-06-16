@@ -37,12 +37,6 @@ STATIONS = [
     # ('Ormara, Pakistan',            25.2000, 64.6800, 'Asia/Karachi',        'Pakistan',  'Arabian Sea (Makran coast)'),
     ('Puerto Potosí, Nicaragua',      13.0100, -87.5000, 'America/Managua',     'Nicaragua', 'Gulf of Fonseca (Pacific)'),
     ('Al Ashkharah, Oman',            21.8500, 59.5700, 'Asia/Muscat',         'Oman',      'Arabian Sea'),
-    # 3. Welle: Spanien/Portugal-Atlantik-Luecken (akzent-toleranter Gap-Check, keine
-    #   Mess-/Kalenderquelle); makrotidal ~2-3.5m. Fluss-/Aestuarmuendungen -> FES gibt
-    #   Kuesten-/Barren-Tide (Oberlauf-Asymmetrie nicht erfasst), conf 5.
-    ('Hondarribia (Fuenterrab\xeda), Spain',         43.3750, -1.7920, 'Europe/Madrid',  'Spain',    'Bay of Biscay (Bidasoa mouth)'),
-    ('Portim\xe3o, Portugal',                        37.1130, -8.5370, 'Europe/Lisbon',  'Portugal', 'Atlantic Ocean (Arade mouth, Algarve)'),
-    ('Bonanza (Sanl\xfacar de Barrameda), Spain',    36.8000, -6.3450, 'Europe/Madrid',  'Spain',    'Gulf of C\xe1diz (Guadalquivir mouth)'),
 ]
 
 
