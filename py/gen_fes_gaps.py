@@ -32,9 +32,17 @@ STATIONS = [
     ('Moroni, Comoros',              -11.7000, 43.2500, 'Indian/Comoro',       'Comoros',   'Mozambique Channel'),
     ('Bahía Solano, Colombia',         6.2300, -77.4100, 'America/Bogota',      'Colombia',  'Pacific Ocean'),
     ('Dibba, Oman',                   25.6500, 56.2700, 'Asia/Muscat',         'Oman',      'Gulf of Oman'),
-    ('Ormara, Pakistan',              25.2000, 64.6800, 'Asia/Karachi',        'Pakistan',  'Arabian Sea (Makran coast)'),
+    # Ormara: lebt bereits in harmonics_utide_tidetables.txt (NHO-Quelle) -> NICHT hier
+    # (Existenz-Check prüft nur fes2022.txt -> würde sonst bei jedem --write dupliziert).
+    # ('Ormara, Pakistan',            25.2000, 64.6800, 'Asia/Karachi',        'Pakistan',  'Arabian Sea (Makran coast)'),
     ('Puerto Potosí, Nicaragua',      13.0100, -87.5000, 'America/Managua',     'Nicaragua', 'Gulf of Fonseca (Pacific)'),
     ('Al Ashkharah, Oman',            21.8500, 59.5700, 'Asia/Muscat',         'Oman',      'Arabian Sea'),
+    # 3. Welle: Spanien/Portugal-Atlantik-Luecken (akzent-toleranter Gap-Check, keine
+    #   Mess-/Kalenderquelle); makrotidal ~2-3.5m. Fluss-/Aestuarmuendungen -> FES gibt
+    #   Kuesten-/Barren-Tide (Oberlauf-Asymmetrie nicht erfasst), conf 5.
+    ('Hondarribia (Fuenterrab\xeda), Spain',         43.3750, -1.7920, 'Europe/Madrid',  'Spain',    'Bay of Biscay (Bidasoa mouth)'),
+    ('Portim\xe3o, Portugal',                        37.1130, -8.5370, 'Europe/Lisbon',  'Portugal', 'Atlantic Ocean (Arade mouth, Algarve)'),
+    ('Bonanza (Sanl\xfacar de Barrameda), Spain',    36.8000, -6.3450, 'Europe/Madrid',  'Spain',    'Gulf of C\xe1diz (Guadalquivir mouth)'),
 ]
 
 
