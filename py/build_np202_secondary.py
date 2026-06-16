@@ -115,6 +115,15 @@ REFS['BERGEN'] = p3_ref({'M2': (0.45, 312), 'S2': (0.16, 353), 'K1': (0.03, 178)
 REFS['HAUGESUND'] = p3_ref({'M2': (0.23, 304), 'S2': (0.09, 350), 'K1': (0.02, 185), 'O1': (0.02, 19)}, 0.55)
 REFS['STAVANGER'] = p3_ref({'M2': (0.16, 302), 'S2': (0.07, 354), 'K1': (0.02, 190), 'O1': (0.02, 25)}, 0.65)
 
+# Reykjavik = Governing-Standard für NP202 S.358-360 (Faroe + ganz Island).
+# Konstituenten aus TICON4 (gemessen, Greenwich-Phasen, Zone Atlantic/Reykjavik=UTC),
+# ABER levels/spring auf die ATT-Stände 4.0/3.0/1.3/0.2 gesetzt, damit die Part-II-
+# Höhendifferenzen (relativ zu genau diesen Werten) korrekte Absolut-Stände liefern.
+REFS['REYKJAVIK'] = p3_ref({'M2': (1.316, 183.64), 'S2': (0.514, 220.88),
+                            'K1': (0.108, 117.36), 'O1': (0.068, 66.43)}, 2.15)
+REFS['REYKJAVIK']['levels'] = (4.0, 3.0, 1.3, 0.2)
+REFS['REYKJAVIK']['spring'] = 4.0 - 0.2
+
 
 def hm(s):
     """'+0135' -> +1.5833 h ; '-0452' -> -4.8667 h ; float -> float ; None -> None.
@@ -458,6 +467,48 @@ SEC_NORWAY_SKAGERRAK = [
     (1302, 'Halden', dm(59, 7), dm(11, 23), 0.0, 0.0, -0.8, -0.6, -0.2, 0.1),
 ]
 
+# --- Block O: Island Süd-/Westküste, Ref REYKJAVIK, Zone UT (GMT) = +00:00 ---
+# Scan_20260616 (45) = NP202 Part II S.358 (untere Hälfte). Höhendiffs relativ zu
+# Reykjavik 4.0/3.0/1.3/0.2; HW- und LW-Zeitdiff je Hafen identisch (semidiurnal).
+# TICON4 deckt nur Reykjavik/Sandgerði/Grundarfjörður/Patreksfjörður ab -> Rest neu.
+# \xf0=ð \xfe=þ \xe6=æ \xf6=ö \xe1=á \xed=í \xfa=ú \xe9=é. Dups (Sandgerði 816,
+# Grundarfjörður 826, Vatneyri 829=Patreksfjörður) skippt der Gap-Check.
+SEC_ICELAND_SW = [
+    (810, 'Heimaey, Vestmannaeyjar', dm(63, 27), -dm(20, 13), '-0044', '-0044', -1.3, -1.0, -0.4, 0.0),
+    (812, 'Stokkseyri', dm(63, 50), -dm(21, 4), '-0034', '-0034', -1.1, -0.9, -0.4, -0.1),
+    (813, 'Eyrarbakki', dm(63, 52), -dm(21, 8), '-0036', '-0036', -1.1, -0.9, -0.4, -0.1),
+    ('813a', '\xdeorl\xe1ksh\xf6fn', dm(63, 51), -dm(21, 22), '-0032', '-0032', -1.0, -0.7, -0.3, 0.0),
+    (814, 'Grindav\xedk', dm(63, 50), -dm(22, 26), '-0028', '-0028', -0.5, -0.4, -0.2, 0.0),
+    (816, 'Sandger\xf0i', dm(64, 2), -dm(22, 43), '-0010', '-0010', -0.3, -0.2, -0.1, 0.0),
+    (817, 'Keflav\xedk', dm(64, 0), -dm(22, 33), '-0002', '-0002', -0.1, -0.1, 0.0, 0.0),
+    (818, 'Hafnarfj\xf6r\xf0ur', dm(64, 4), -dm(21, 57), '-0002', '-0002', 0.0, 0.0, 0.0, 0.0),
+    (820, 'Grundartangi', dm(64, 21), -dm(21, 47), '+0004', '+0004', 0.1, 0.1, 0.1, 0.1, 2.23),
+    (821, 'Hvammsv\xedk', dm(64, 22), -dm(21, 35), '-0002', '-0003', 0.1, 0.1, 0.1, 0.1, 2.23),
+    (822, 'Akranes', dm(64, 19), -dm(22, 6), '+0002', '+0002', 0.0, 0.0, 0.0, 0.0, 2.12),
+    (823, 'Borgarnes', dm(64, 32), -dm(21, 55), '+0029', '+0029', 0.0, -0.1, -0.1, 0.0),
+    (825, 'Rif', dm(64, 55), -dm(23, 48), '+0031', '+0031', -0.1, 0.0, 0.0, 0.0),
+    ('825a', '\xd3lafsv\xedk', dm(64, 55), -dm(23, 42), '+0028', '+0028', -0.1, -0.1, 0.0, 0.0),
+    (826, 'Grundarfj\xf6r\xf0ur', dm(64, 56), -dm(23, 18), '+0029', '+0029', 0.1, 0.1, 0.0, 0.0),
+    (827, 'Stykkish\xf3lmur', dm(65, 5), -dm(22, 42), '+0030', '+0030', 0.4, 0.3, 0.2, 0.1),
+    (828, 'Flatey, Brei\xf0afj\xf6r\xf0ur', dm(65, 23), -dm(22, 54), '+0042', '+0042', 0.2, 0.1, 0.0, -0.1),
+    ('828a', 'Reykjanes, Brei\xf0afj\xf6r\xf0ur', dm(65, 5), -dm(22, 12), '+0047', '+0047', 0.4, 0.3, -0.1, 0.1),
+    ('828b', 'Brj\xe1nsl\xe6kur', dm(65, 32), -dm(23, 11), '+0043', '+0043', 0.5, 0.4, 0.1, 0.2),
+    (829, 'Vatneyri, Patreksfj\xf6r\xf0ur', dm(65, 35), -dm(24, 0), '+0130', '+0120', -0.8, -0.7, -0.3, 0.0),
+]
+
+# --- Block P: Faroe Islands, Ref REYKJAVIK, Zone UT (GMT) = +00:00 ---
+# Scan_20260616 (45) = S.358 (obere Hälfte). NUR Häfen MIT Zeitdaten (viele zeigen
+# ⊙ = keine Daten -> nicht baubar). HW/LW-Spalten differieren -> dT als vorgemittelte
+# Floats (h). Caveat: Faroe (~1m Hub) regimefremd zu Reykjavik (3.8m) -> conf 2.
+# ML-Spalte als Z0-Quercheck. Dups (Klaksvík/Eiði/Tórshavn/Sørvágur/Vágur) skippt Gap.
+SEC_FAROE = [
+    ('786a', 'Leirv\xedk, Eysturoy', dm(62, 13), -dm(6, 42), 3.125, 3.25, -2.9, -2.1, -1.0, -0.2, 0.59),
+    ('792a', 'Kirkjub\xf8ur, Streymoy', dm(61, 57), -dm(6, 48), -0.292, 1.125, -3.0, -2.4, -1.0, 0.0, 0.44),
+    (793, 'Vestmanna, Streymoy', dm(62, 9), -dm(7, 10), 1.083, 1.292, -1.8, -1.3, -0.5, 0.0, 0.96),
+    (799, 'Sandur, Sandoy', dm(61, 50), -dm(6, 48), 0.292, 0.25, -2.6, -2.0, -0.9, -0.2, 0.70),
+    (800, 'Trongisv\xe1gur, Su\xf0uroy', dm(61, 33), -dm(6, 49), 0.0, 0.0, -2.0, -1.9, -0.7, 0.0),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -476,6 +527,8 @@ BLOCKS = [
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_BERGEN),
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAUGESUND),
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_SKAGERRAK),
+    ('REYKJAVIK', '+00:00 :Atlantic/Reykjavik', 'Iceland', 0.0, SEC_ICELAND_SW),
+    ('REYKJAVIK', '+00:00 :Atlantic/Faroe', 'Faroe Islands', 0.0, SEC_FAROE),
 ]
 
 
@@ -505,7 +558,7 @@ REFNAMES = {'YEKAT': 'Ostrov Yekaterininskiy', 'KEM': "Port of Kem'", 'NARVIK': 
             'HAMMERFEST': 'Hammerfest (NP202 Part III)', 'TROMSO': 'Tromso (NP202 Part III)',
             'LODINGEN': 'Lodingen (NP202 Part III)', 'ALESUND': 'Alesund (NP202 Part III)',
             'BERGEN': 'Bergen (NP202 Part III)', 'HAUGESUND': 'Haugesund (NP202 Part III)',
-            'STAVANGER': 'Stavanger (NP202 Part III)'}
+            'STAVANGER': 'Stavanger (NP202 Part III)', 'REYKJAVIK': 'Reykjavik (TICON4)'}
 
 
 def block(s, refkey, mer, country, cal=0.0):
