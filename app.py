@@ -91,6 +91,61 @@ def _find_station_line(lines, station_name, expected_lat=None, expected_lon=None
     return candidates[0][1]
 
 
+def _fsync_path(path):
+    """fsync a file's contents to physical disk (e.g. after shutil.copyfile,
+    which leaves the new data only in the OS page cache)."""
+    fd = os.open(path, os.O_RDONLY)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
+
+def _fsync_dir(path):
+    """fsync the directory containing *path* so a rename into it is durable.
+
+    A rename (os.replace) is only recorded in the directory's metadata; without
+    fsyncing the directory the rename can be lost on a hard crash even if the
+    new file's data was already flushed.
+    """
+    d = os.path.dirname(os.path.abspath(path)) or "."
+    dirfd = os.open(d, os.O_RDONLY)
+    try:
+        os.fsync(dirfd)
+    finally:
+        os.close(dirfd)
+
+
+def _atomic_write_durable(path, data, encoding):
+    """Write *data* to *path* atomically AND durably.
+
+    *data* may be a string or a list of lines. Writes to a temp file in the
+    same directory, fsyncs the file's contents to physical disk, atomically
+    renames it over the target, then fsyncs the directory so the rename itself
+    is on disk.
+
+    WICHTIG: Ohne die fsyncs liegt der neue Inhalt nur im OS-Page-Cache und
+    geht bei Stromausfall / hartem Absturz (WSL2 + Windows) verloren – obwohl
+    der Aufruf erfolgreich zurueckkehrte und die App "gespeichert" meldete.
+    """
+    d = os.path.dirname(path) or "."
+    fd, tmp = tempfile.mkstemp(dir=d, suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding=encoding) as f:
+            if isinstance(data, str):
+                f.write(data)
+            else:
+                f.writelines(data)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, path)
+    except:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
+        raise
+    _fsync_dir(path)
+
+
 def update_coords_in_txt(txt_path, station_name, new_lat, new_lon,
                          expected_lat=None, expected_lon=None):
     """Update latitude/longitude for a station in a harmonics .txt file (ISO-8859-1)."""
@@ -106,15 +161,8 @@ def update_coords_in_txt(txt_path, station_name, new_lat, new_lon,
         elif lines[j].startswith("# !longitude:"):
             lines[j] = f"# !longitude: {new_lon:.4f}\n"
 
-    # Atomic write: temp file + rename to prevent truncation
-    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(txt_path), suffix=".tmp")
-    try:
-        with os.fdopen(fd, "w", encoding="iso-8859-1") as f:
-            f.writelines(lines)
-        os.replace(tmp, txt_path)
-    except:
-        os.unlink(tmp)
-        raise
+    # Atomic + durable write (survives a hard crash / power loss)
+    _atomic_write_durable(txt_path, lines, "iso-8859-1")
     return True
 
 
@@ -136,6 +184,7 @@ def rebuild_tcd(txt_path, tcd_basename):
     try:
         subprocess.run(["build_tide_db", tmp, txt_path], check=True)
         shutil.copyfile(tmp, tcd_path)  # Inhalt in-place ersetzen (kein Verzeichnis-Schreibrecht noetig)
+        _fsync_path(tcd_path)  # neue TCD durable auf die Platte zwingen (sonst nur Page-Cache)
     finally:
         if os.path.exists(tmp):
             os.unlink(tmp)
@@ -181,15 +230,8 @@ def delete_station_from_txt(txt_path, station_name,
     # Delete the block
     del lines[block_start:block_end]
 
-    # Atomic write: temp file + rename to prevent truncation
-    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(txt_path), suffix=".tmp")
-    try:
-        with os.fdopen(fd, "w", encoding="iso-8859-1") as f:
-            f.writelines(lines)
-        os.replace(tmp, txt_path)
-    except:
-        os.unlink(tmp)
-        raise
+    # Atomic + durable write (survives a hard crash / power loss)
+    _atomic_write_durable(txt_path, lines, "iso-8859-1")
     return True
 
 
@@ -271,8 +313,7 @@ def delete_station_from_markers_js(station_name):
                 )
                 break
 
-    with open(MARKERS_JS, "w", encoding="utf-8") as f:
-        f.writelines(js_lines)
+    _atomic_write_durable(MARKERS_JS, js_lines, "utf-8")
     return True
 
 
@@ -287,15 +328,8 @@ def rename_station_in_txt(txt_path, old_name, new_name,
         return False
     lines[i] = new_name + "\n"
 
-    # Atomic write: temp file + rename to prevent truncation
-    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(txt_path), suffix=".tmp")
-    try:
-        with os.fdopen(fd, "w", encoding="iso-8859-1") as f:
-            f.writelines(lines)
-        os.replace(tmp, txt_path)
-    except:
-        os.unlink(tmp)
-        raise
+    # Atomic + durable write (survives a hard crash / power loss)
+    _atomic_write_durable(txt_path, lines, "iso-8859-1")
     return True
 
 
@@ -339,8 +373,7 @@ def rename_station_in_markers_js(old_name, new_name):
         f"tide_prediction_{new_safe}.html"
     )
 
-    with open(MARKERS_JS, "w", encoding="utf-8") as f:
-        f.write(content)
+    _atomic_write_durable(MARKERS_JS, content, "utf-8")
 
 
 def update_markers_js(station_name, new_lat, new_lon):
@@ -371,8 +404,7 @@ def update_markers_js(station_name, new_lat, new_lon):
         updated = True
 
     if updated:
-        with open(MARKERS_JS, "w", encoding="utf-8") as f:
-            f.writelines(js_lines)
+        _atomic_write_durable(MARKERS_JS, js_lines, "utf-8")
 
 
 TRANSLITERATION = {

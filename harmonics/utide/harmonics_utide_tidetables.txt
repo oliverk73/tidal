@@ -341284,8 +341284,8 @@ x 0 0
 # sonel_tg_id: 2881
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9990 rms=0.0264m const=59
 # !units: meters
-# !longitude: -13.7167
-# !latitude: 9.5167
+# !longitude: -13.7154
+# !latitude: 9.5024
 Conakry, Guinea
 +00:00 :UTC
 2.1791 meters
@@ -410818,8 +410818,8 @@ x 0 0
 # utide: period=2025-01-01..2026-04-18 r2=0.3280 rms=1.1762m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: -3.800000
-# !latitude: 56.100000
+# !longitude: -3.7974
+# !latitude: 56.1084
 Alloa, Scotland, United Kingdom
 +00:00 :Europe/London
 4.0158 meters
@@ -428429,133 +428429,132 @@ x 0 0
 x 0 0
 x 0 0
 #
-# 1767 HW/LW points -> 45380 interpolated points
+# 4235 HW/LW points (official GMT tide tables, 3 years)
 # BEGIN HOT COMMENTS
 # country: United Kingdom
-# source: Derived from tidetimes.co.uk HW/LW predictions with UTide
-# date_imported: 20260414
+# source: Derived from Firth of Forth/Tay 7-port tide tables (GMT) with UTide
+# date_imported: 20260616
 # datum: ACD (approx.)
-# confidence: 7
-# utide: period=2025-01-01..2026-04-18 r2=0.8140 rms=0.5707m const=68
-# bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
+# confidence: 8
+# utide: period=2024-01-01..2026-12-31 r2=0.9986 rms=0.0489m const=68
 # !units: meters
 # !longitude: -3.233333
 # !latitude: 56.050000
 Burntisland, Scotland, United Kingdom
 +00:00 :Europe/London
-3.3491 meters
-J1              0.0116  344.73
-K1              0.0854  224.68
-K2              0.1617  107.75
-L2              0.0848  79.75
+3.3236 meters
+J1              0.0050  19.04
+K1              0.0907  223.22
+K2              0.1722  101.80
+L2              0.0679  65.25
 x 0 0
-M2              1.5809  64.26
-M3              0.0139  22.51
-M4              0.0373  194.52
-M6              0.0038  347.45
-M8              0.0010  294.75
-N2              0.2736  45.39
-2N2             0.0379  359.82
-O1              0.1141  75.27
-OO1             0.0033  35.78
-P1              0.0198  208.48
-Q1              0.0442  25.65
-2Q1             0.0031  89.79
-R2              0.0227  156.63
+M2              1.7144  63.20
+M3              0.0148  27.49
+M4              0.0456  190.67
+M6              0.0038  313.05
+M8              0.0014  305.07
+N2              0.3520  41.76
+2N2             0.0458  5.49
+O1              0.1233  69.14
+OO1             0.0037  341.40
+P1              0.0289  185.80
+Q1              0.0483  20.03
+2Q1             0.0056  340.78
+R2              0.0064  140.16
 x 0 0
-S2              0.5752  104.63
-S4              0.0024  71.13
+S2              0.5967  107.98
+S4              0.0062  90.52
 x 0 0
-T2              0.0164  27.87
-LDA2            0.0444  16.18
-MU2             0.1109  64.78
-NU2             0.0872  9.47
-RHO1            0.0094  352.11
-MK3             0.0193  195.06
+T2              0.0294  94.21
+LDA2            0.0259  37.67
+MU2             0.0537  96.00
+NU2             0.0771  40.02
+RHO1            0.0090  21.36
+MK3             0.0190  178.90
 x 0 0
-MN4             0.0036  299.50
-MS4             0.0274  265.27
-2SM2            0.0487  116.76
-MF              0.0419  147.91
-MSF             0.1756  136.03
-MM              0.0908  324.83
+MN4             0.0033  230.53
+MS4             0.0337  282.22
+2SM2            0.0231  262.68
+MF              0.0219  211.83
+MSF             0.0052  222.81
+MM              0.0282  27.54
 x 0 0
-SSA             0.0304  186.49
-SA-IOS          0.0743  316.74
+SSA             0.0235  159.90
+SA-IOS          0.0660  307.21
 x 0 0
-S1-IOS          0.0723  22.43
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0015  18.93
-2MK6            0.0013  63.63
-x 0 0
-2MN6            0.0026  37.39
-2MS6            0.0030  59.53
-x 0 0
-2SK5            0.0001  223.25
+S1-IOS          0.0178  334.09
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0010  15.61
+2MK6            0.0013  52.15
 x 0 0
-3MS4            0.0165  1.27
+2MN6            0.0010  341.58
+2MS6            0.0034  63.86
 x 0 0
-ALP1            0.0097  184.58
-BET1            0.0076  113.59
-CHI1            0.0079  96.68
-H1              0.0519  46.88
-H2              0.0524  265.64
-x 0 0
-ETA2            0.0070  200.41
-x 0 0
-UPS1            0.0045  333.67
-x 0 0
-x 0 0
-MK4             0.0117  296.49
-MKS2            0.0397  149.20
-x 0 0
-EPS2            0.0366  75.87
-MO3             0.0164  15.59
-x 0 0
-TAU1            0.0564  296.39
-x 0 0
-MSK6            0.0014  206.72
-MSM             0.0489  155.86
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0077  72.61
-OP2             0.0294  166.66
-x 0 0
-PHI1            0.0039  330.58
-x 0 0
-PI1             0.0136  276.81
-x 0 0
-PSI1            0.0167  98.86
-x 0 0
-x 0 0
-SIG1            0.0046  322.79
-SK3             0.0091  238.89
-x 0 0
-SN4             0.0082  41.17
-x 0 0
-SO1             0.0087  156.63
-SO3             0.0091  88.73
-THE1            0.0085  45.86
+2SK5            0.0003  213.65
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SKM2            0.0078  249.35
+3MS4            0.0167  359.52
+x 0 0
+ALP1            0.0022  33.67
+BET1            0.0036  55.56
+CHI1            0.0010  100.54
+H1              0.0153  63.91
+H2              0.0146  274.91
+x 0 0
+ETA2            0.0071  114.43
+x 0 0
+UPS1            0.0003  257.28
+x 0 0
+x 0 0
+MK4             0.0114  288.64
+MKS2            0.0123  197.04
+x 0 0
+EPS2            0.0122  82.03
+MO3             0.0159  22.76
+x 0 0
+TAU1            0.0130  318.48
+x 0 0
+MSK6            0.0012  200.00
+MSM             0.0080  71.56
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0063  120.72
+OP2             0.0086  4.59
+x 0 0
+PHI1            0.0032  276.84
+x 0 0
+PI1             0.0030  179.89
+x 0 0
+PSI1            0.0046  160.13
+x 0 0
+x 0 0
+SIG1            0.0036  245.50
+SK3             0.0097  225.75
+x 0 0
+SN4             0.0114  26.00
+x 0 0
+SO1             0.0027  54.45
+SO3             0.0068  63.45
+THE1            0.0032  23.55
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0085  267.45
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-NO3             0.0030  328.00
+NO3             0.0068  330.59
 x 0 0
 x 0 0
-N4              0.0036  147.04
+N4              0.0019  249.58
 x 0 0
 x 0 0
 x 0 0
@@ -459852,8 +459851,8 @@ x 0 0
 # utide: period=2025-01-01..2026-04-18 r2=0.7524 rms=0.7640m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: -3.683333
-# !latitude: 56.033333
+# !longitude: -3.6840
+# !latitude: 56.0353
 Grangemouth, Scotland, United Kingdom
 +00:00 :Europe/London
 3.1332 meters
@@ -473828,8 +473827,8 @@ x 0 0
 # utide: period=2025-01-01..2026-04-18 r2=0.7705 rms=0.7413m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: -3.716667
-# !latitude: 56.066667
+# !longitude: -3.7231
+# !latitude: 56.0657
 Kincardine, Scotland, United Kingdom
 +00:00 :Europe/London
 3.0605 meters
@@ -487998,133 +487997,132 @@ x 0 0
 x 0 0
 x 0 0
 #
-# 1765 HW/LW points -> 45379 interpolated points
+# 4233 HW/LW points (official GMT tide tables, 3 years)
 # BEGIN HOT COMMENTS
 # country: United Kingdom
-# source: Derived from tidetimes.co.uk HW/LW predictions with UTide
-# date_imported: 20260414
+# source: Derived from Firth of Forth/Tay 7-port tide tables (GMT) with UTide
+# date_imported: 20260616
 # datum: ACD (approx.)
-# confidence: 7
-# utide: period=2025-01-01..2026-04-18 r2=0.7730 rms=0.6596m const=68
-# bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
+# confidence: 8
+# utide: period=2024-01-01..2026-12-31 r2=0.9919 rms=0.1191m const=68
 # !units: meters
 # !longitude: -3.000000
 # !latitude: 56.183333
 Methil, Scotland, United Kingdom
 +00:00 :Europe/London
-3.0845 meters
-J1              0.0049  92.54
-K1              0.1016  219.12
-K2              0.1587  101.54
-L2              0.0962  78.33
+3.1123 meters
+J1              0.0049  81.67
+K1              0.1059  219.30
+K2              0.1713  95.99
+L2              0.0774  70.27
 x 0 0
-M2              1.6116  58.84
-M3              0.0152  15.53
-M4              0.0238  178.75
-M6              0.0034  355.70
-M8              0.0012  243.81
-N2              0.2865  38.00
-2N2             0.0288  9.62
-O1              0.1160  77.32
-OO1             0.0042  139.72
-P1              0.0277  231.87
-Q1              0.0381  25.13
-2Q1             0.0036  183.82
-R2              0.0203  148.39
+M2              1.7570  58.02
+M3              0.0167  11.69
+M4              0.0296  172.19
+M6              0.0021  303.94
+M8              0.0014  263.35
+N2              0.3611  35.40
+2N2             0.0388  13.85
+O1              0.1265  67.26
+OO1             0.0025  95.83
+P1              0.0321  211.86
+Q1              0.0496  17.52
+2Q1             0.0022  141.85
+R2              0.0071  115.71
 x 0 0
-S2              0.5760  97.23
-S4              0.0058  15.38
+S2              0.5907  100.14
+S4              0.0048  44.84
 x 0 0
-T2              0.0204  54.24
-LDA2            0.0447  357.54
-MU2             0.0979  40.03
-NU2             0.0746  3.63
-RHO1            0.0123  233.95
-MK3             0.0117  186.09
+T2              0.0356  89.29
+LDA2            0.0168  342.88
+MU2             0.0291  61.03
+NU2             0.0746  42.83
+RHO1            0.0036  194.77
+MK3             0.0136  156.34
 x 0 0
-MN4             0.0025  244.46
-MS4             0.0163  258.94
-2SM2            0.0669  117.95
-MF              0.0238  230.28
-MSF             0.1874  131.19
-MM              0.0531  199.47
+MN4             0.0035  204.84
+MS4             0.0208  285.32
+2SM2            0.0183  243.41
+MF              0.0081  266.34
+MSF             0.0444  214.25
+MM              0.0141  19.93
 x 0 0
-SSA             0.0934  72.09
-SA-IOS          0.0797  222.38
+SSA             0.0124  226.11
+SA-IOS          0.0310  316.62
 x 0 0
-S1-IOS          0.0627  29.49
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0009  343.47
-2MK6            0.0004  82.63
-x 0 0
-2MN6            0.0025  8.23
-2MS6            0.0009  49.15
-x 0 0
-2SK5            0.0005  85.06
+S1-IOS          0.0151  16.25
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0002  340.41
+2MK6            0.0005  55.47
 x 0 0
-3MS4            0.0150  16.38
+2MN6            0.0012  328.20
+2MS6            0.0011  61.05
 x 0 0
-ALP1            0.0061  72.88
-BET1            0.0102  63.32
-CHI1            0.0171  59.11
-H1              0.0481  35.79
-H2              0.0515  254.15
-x 0 0
-ETA2            0.0110  279.45
-x 0 0
-UPS1            0.0058  145.34
-x 0 0
-x 0 0
-MK4             0.0061  294.60
-MKS2            0.0349  140.83
-x 0 0
-EPS2            0.0306  60.18
-MO3             0.0156  32.96
-x 0 0
-TAU1            0.0506  296.44
-x 0 0
-MSK6            0.0009  198.78
-MSM             0.1117  74.52
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0026  244.28
-OP2             0.0365  144.01
-x 0 0
-PHI1            0.0046  354.35
-x 0 0
-PI1             0.0089  260.01
-x 0 0
-PSI1            0.0159  101.22
-x 0 0
-x 0 0
-SIG1            0.0074  322.40
-SK3             0.0039  214.89
-x 0 0
-SN4             0.0044  3.32
-x 0 0
-SO1             0.0212  159.74
-SO3             0.0076  127.54
-THE1            0.0124  60.89
+2SK5            0.0003  148.08
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SKM2            0.0084  17.08
+3MS4            0.0120  16.35
+x 0 0
+ALP1            0.0074  112.75
+BET1            0.0036  57.58
+CHI1            0.0117  40.00
+H1              0.0078  35.77
+H2              0.0108  249.69
+x 0 0
+ETA2            0.0028  286.97
+x 0 0
+UPS1            0.0028  102.82
+x 0 0
+x 0 0
+MK4             0.0067  287.21
+MKS2            0.0077  235.75
+x 0 0
+EPS2            0.0094  106.40
+MO3             0.0168  44.49
+x 0 0
+TAU1            0.0120  358.13
+x 0 0
+MSK6            0.0006  212.66
+MSM             0.0139  36.17
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0036  206.49
+OP2             0.0160  56.66
+x 0 0
+PHI1            0.0056  32.61
+x 0 0
+PI1             0.0038  193.70
+x 0 0
+PSI1            0.0045  127.92
+x 0 0
+x 0 0
+SIG1            0.0067  164.30
+SK3             0.0044  224.46
+x 0 0
+SN4             0.0074  348.28
+x 0 0
+SO1             0.0052  106.71
+SO3             0.0032  112.55
+THE1            0.0074  58.45
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0019  28.73
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-NO3             0.0067  352.96
+NO3             0.0069  351.92
 x 0 0
 x 0 0
-N4              0.0017  145.76
+N4              0.0008  281.05
 x 0 0
 x 0 0
 x 0 0
@@ -520375,8 +520373,8 @@ x 0 0
 # hw_reproduction: n=857 time_sigma=6min height_rms=0.328m
 # bst_fix: 20260610 Phasen -speed*1h (tidetimes-HW-Zeiten waren ganzjaehrig BST, dt +60min inflationiert)
 # !units: meters
-# !longitude: -3.933333
-# !latitude: 56.116667
+# !longitude: -3.9304
+# !latitude: 56.1192
 Stirling, Scotland, United Kingdom
 +00:00 :Europe/London
 1.4026 meters
@@ -618333,7 +618331,7 @@ x 0 0
 # !units: meters
 # !longitude: -58.7000
 # !latitude: -38.5833
-Puerto Quequén, Argentina
+Quequén, Argentina
 +00:00 :UTC
 1.0256 meters
 J1              0.0072  289.28
@@ -676635,9 +676633,9 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-07-01..2026-06-30 r2=0.9999 rms=0.0069m const=68
 # !units: meters
-# !longitude: -13.2333
-# !latitude: 8.5000
-Freetown, Sierra Leone (2)
+# !longitude: -13.2747
+# !latitude: 8.4925
+Freetown, Sierra Leone
 +00:00 :Africa/Freetown
 1.7699 meters
 J1              0.0080  27.94
@@ -678363,9 +678361,9 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0051m const=68
 # !units: meters
-# !longitude: 50.3333
-# !latitude: 29.2667
-Jazireh Ye Khark, Iran
+# !longitude: 50.3283
+# !latitude: 29.2657
+Jazireh Ye Khark (Kharg Island), Iran
 +00:00 :Asia/Tehran
 1.2600 meters
 J1              0.0177  250.84
@@ -678555,9 +678553,9 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0043m const=68
 # !units: meters
-# !longitude: 56.0667
-# !latitude: 27.1000
-Bandar Shahid Rejaie, Iran
+# !longitude: 56.0800
+# !latitude: 27.1100
+Bandar Shahid Rajaei, Iran
 +00:00 :Asia/Tehran
 2.1900 meters
 J1              0.0210  15.20
@@ -679709,7 +679707,7 @@ x 0 0
 # !units: meters
 # !longitude: 48.4000
 # !latitude: 28.7333
-Mina Saud, Kuwait
+Mina Alzour (Mina Saud), Kuwait
 +00:00 :Asia/Kuwait
 1.2800 meters
 J1              0.0010  25.11
@@ -679899,9 +679897,9 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0031m const=68
 # !units: meters
-# !longitude: 32.5500
-# !latitude: 29.9333
-Suez, Egypt (2)
+# !longitude: 32.5581
+# !latitude: 29.9356
+Suez (As Suways), Egypt
 +00:00 :Africa/Cairo
 1.1401 meters
 J1              0.0051  195.26
@@ -680475,8 +680473,8 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0051m const=68
 # !units: meters
-# !longitude: 51.6500
-# !latitude: 25.0333
+# !longitude: 51.6548
+# !latitude: 25.0304
 Musay'id (Outer Channel Entrance), Qatar
 +00:00 :Asia/Qatar
 1.1900 meters
@@ -680669,7 +680667,7 @@ x 0 0
 # !units: meters
 # !longitude: 48.1667
 # !latitude: 29.0667
-Mina Al Ahmadi, Kuwait (2)
+Mina Al Ahmadi, Kuwait
 +00:00 :Asia/Kuwait
 1.7400 meters
 J1              0.0087  262.70
