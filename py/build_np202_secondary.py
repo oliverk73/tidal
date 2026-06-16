@@ -423,9 +423,10 @@ SEC_NORWAY_BERGEN = [
     (1270, 'Espev\xe6r, Bomlo', dm(59, 36), dm(5, 10), -0.317, -0.317, -0.5, -0.4, -0.1, -0.1),
 ]
 
-# --- Block M: Ryfylke/Karmsund, Ref HAUGESUND (Part III), ZONE -0100 (Scan 17/S.368) ---
-# 1272-1275. Stavanger-ref Skagerrak (1277+) NICHT gebaut: mikrotidal, Höhendiffs ergeben
-# negative MHWS (Stavanger MHWS ~0.88), "p"/⊙-markiert, viele Dups. \xe5=å \xf8=ø
+# --- Block M: Ryfylke/Karmsund, Ref BERGEN (Part III), ZONE -0100 (Scan 17/S.368) ---
+# 1272-1275: Diffs sind BERGEN-relativ (Haugesund/Stavanger nur vermerkte Standardhäfen,
+# Abschnitt-Govern-Standard = Bergen). ML-Quercheck: Utsira 0.73 = Bergen-Mittel ✓.
+# Skagerrak (1277+) mikrotidal + "p"-Zeitdiff unklar -> nicht gebaut. \xe5=å \xf8=ø
 SEC_NORWAY_HAUGESUND = [
     (1272, 'Utsira', dm(59, 18), dm(4, 54), -0.375, -0.833, -0.5, -0.3, 0.0, 0.1),
     ('1272a', 'Kopervik, Karmsund', dm(59, 17), dm(5, 19), -0.458, -0.917, -0.6, -0.5, 0.0, 0.1),
@@ -451,7 +452,7 @@ BLOCKS = [
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK3),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK4),
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_BERGEN),
-    ('HAUGESUND', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAUGESUND),
+    ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAUGESUND),
 ]
 
 
@@ -480,7 +481,8 @@ def transfer(s, refkey, cal=0.0):
 REFNAMES = {'YEKAT': 'Ostrov Yekaterininskiy', 'KEM': "Port of Kem'", 'NARVIK': 'Narvik (NP202 Part III)',
             'HAMMERFEST': 'Hammerfest (NP202 Part III)', 'TROMSO': 'Tromso (NP202 Part III)',
             'LODINGEN': 'Lodingen (NP202 Part III)', 'ALESUND': 'Alesund (NP202 Part III)',
-            'BERGEN': 'Bergen (NP202 Part III)'}
+            'BERGEN': 'Bergen (NP202 Part III)', 'HAUGESUND': 'Haugesund (NP202 Part III)',
+            'STAVANGER': 'Stavanger (NP202 Part III)'}
 
 
 def block(s, refkey, mer, country, cal=0.0):
