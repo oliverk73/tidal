@@ -290,12 +290,12 @@ SEC_NORWAY_HAM = [
 # --- Block H: Troms-Fjorde, Ref NARVIK (Part III), ZONE -0100 (Scan 67/S.365 oben) ---
 # ΔT vorgemittelte Dezimalstd (HW/LW-Spaltenmittel). \xe6=æ \xf8=ø \xe5=å
 SEC_NORWAY_NARVIK2 = [
-    (1257, 'Badderen, Kv\xe6nangenfjorden', dm(69, 51), dm(22, 1), 1.125, 1.083, -0.3, -0.2, -0.2, 0.0),
-    (1258, 'Skjerv\xf8y', dm(70, 2), dm(20, 58), 1.25, 1.167, -0.3, -0.2, -0.1, 0.0),
-    (1259, 'Lyngseidet, Lyngenfjorden', dm(69, 35), dm(20, 13), 1.042, 0.917, -0.2, -0.1, -0.2, 0.0),
-    (1260, 'J\xf8vik, Ullsfjorden', dm(69, 36), dm(19, 50), 1.042, 0.833, -0.3, -0.3, -0.3, 0.0),
-    (1261, 'Torsv\xe5g', dm(70, 15), dm(19, 31), 0.958, 0.833, -0.5, -0.3, -0.3, 0.0),
-    (1262, 'Finnkroken, Grotsundet', dm(69, 50), dm(19, 26), 1.125, 1.0, -0.3, -0.2, -0.3, 0.0),
+    (1157, 'Badderen, Kv\xe6nangenfjorden', dm(69, 51), dm(22, 1), 1.125, 1.083, -0.3, -0.2, -0.2, 0.0),
+    (1158, 'Skjerv\xf8y', dm(70, 2), dm(20, 58), 1.25, 1.167, -0.3, -0.2, -0.1, 0.0),
+    (1159, 'Lyngseidet, Lyngenfjorden', dm(69, 35), dm(20, 13), 1.042, 0.917, -0.2, -0.1, -0.2, 0.0),
+    (1160, 'J\xf8vik, Ullsfjorden', dm(69, 36), dm(19, 50), 1.042, 0.833, -0.3, -0.3, -0.3, 0.0),
+    (1161, 'Torsv\xe5g', dm(70, 15), dm(19, 31), 0.958, 0.833, -0.5, -0.3, -0.3, 0.0),
+    (1162, 'Finnkroken, Grotsundet', dm(69, 50), dm(19, 26), 1.125, 1.0, -0.3, -0.2, -0.3, 0.0),
 ]
 
 # --- Block I: Troms-Fjorde, Ref TROMSO (Part III), ZONE -0100 (Scan 67/S.365 Mitte) ---
@@ -303,33 +303,33 @@ SEC_NORWAY_NARVIK2 = [
 # ΔT vorgemittelt. \xf8=ø \xe6=æ. Vesterålen/Lofoten (Risøyhamn südwärts) ZURÜCKGESTELLT:
 # Referenz wechselt dort zu Narvik/Lødingen + alter Scan 67 zu unsicher -> flacher Rescan.
 SEC_NORWAY_TROMSO = [
-    (1264, 'Ling\xf8ya', dm(69, 55), dm(18, 29), 0.542, 0.417, -0.9, -0.6, -0.4, -0.1),
-    (1265, 'Tennes, Balsfjorden', dm(69, 18), dm(19, 21), 1.125, 1.0, -0.5, -0.2, -0.3, 0.0),
-    (1266, 'Rystraumen, Balsfjorden', dm(69, 34), dm(18, 45), 1.125, 1.0, -0.6, -0.4, -0.4, 0.0),
-    (1267, 'Laukvik, Malangen', dm(69, 34), dm(17, 54), 0.542, 0.417, -1.0, -0.7, -0.4, -0.1),
-    (1268, 'Keianes, Malangen', dm(69, 16), dm(18, 43), 0.625, 0.5, -0.9, -0.7, -0.4, -0.1),
-    (1269, 'Gibostad, Gisundet', dm(69, 21), dm(18, 5), 0.583, 0.5, -1.2, -0.8, -0.5, -0.2),
-    (1270, 'Gryllefjord', dm(69, 22), dm(17, 4), 0.542, 0.417, -1.2, -0.7, -0.5, -0.1),
-    (1271, 'Finnlandsneset, Dyr\xf8ysundet', dm(69, 6), dm(17, 38), 0.542, 0.417, -1.0, -0.6, -0.4, -0.1),
-    (1272, 'Skrolsvik', dm(69, 4), dm(16, 49), 0.542, 0.417, -1.0, -0.7, -0.4, -0.1),
-    (1273, 'Sol\xf8y', dm(68, 47), dm(17, 47), 0.542, 0.417, -0.7, -0.4, -0.5, -0.1),
-    (1275, 'For\xf8ys\xe6ter, Gullesfjorden', dm(68, 38), dm(15, 47), 0.542, 0.417, -0.9, -0.8, -0.4, -0.1),
+    (1164, 'Ling\xf8ya', dm(69, 55), dm(18, 29), 0.542, 0.417, -0.9, -0.6, -0.4, -0.1),
+    (1165, 'Tennes, Balsfjorden', dm(69, 18), dm(19, 21), 1.125, 1.0, -0.5, -0.2, -0.3, 0.0),
+    (1166, 'Rystraumen, Balsfjorden', dm(69, 34), dm(18, 45), 1.125, 1.0, -0.6, -0.4, -0.4, 0.0),
+    (1167, 'Laukvik, Malangen', dm(69, 34), dm(17, 54), 0.542, 0.417, -1.0, -0.7, -0.4, -0.1),
+    (1168, 'Keianes, Malangen', dm(69, 16), dm(18, 43), 0.625, 0.5, -0.9, -0.7, -0.4, -0.1),
+    (1169, 'Gibostad, Gisundet', dm(69, 21), dm(18, 5), 0.583, 0.5, -1.2, -0.8, -0.5, -0.2),
+    (1170, 'Gryllefjord', dm(69, 22), dm(17, 4), 0.542, 0.417, -1.2, -0.7, -0.5, -0.1),
+    (1171, 'Finnlandsneset, Dyr\xf8ysundet', dm(69, 6), dm(17, 38), 0.542, 0.417, -1.0, -0.6, -0.4, -0.1),
+    (1172, 'Skrolsvik', dm(69, 4), dm(16, 49), 0.542, 0.417, -1.0, -0.7, -0.4, -0.1),
+    (1173, 'Sol\xf8y', dm(68, 47), dm(17, 47), 0.542, 0.417, -0.7, -0.4, -0.5, -0.1),
+    (1175, 'For\xf8ys\xe6ter, Gullesfjorden', dm(68, 38), dm(15, 47), 0.542, 0.417, -0.9, -0.8, -0.4, -0.1),
 ]
 
 # --- Block I2: Vesterålen/Lofoten, Ref TROMSO, ZONE -0100 (Scan_20260616 (14)=S.365 flach) ---
 # Referenz per STANDARD-PORT-Marker bestätigt: Block läuft von TROMSO bis NARVIK(unten) -> alle Tromsø-ref
 # (norweg. Außenküste nahezu gleichphasig, kleine ΔT korrekt). ΔT vorgemittelt. \xe6=æ \xf8=ø \xe5=å \xd8=Ø
 SEC_NORWAY_TROMSO2 = [
-    (1276, 'Evenskj\xe6r', dm(68, 35), dm(16, 33), 0.458, 0.333, -0.9, -0.6, -0.3, -0.1),
-    (1278, 'Ris\xf8yhamn', dm(68, 58), dm(15, 39), 0.583, 0.208, -1.1, -0.8, -0.4, -0.1),
-    (1279, '\xd8ksnes', dm(68, 53), dm(14, 56), 0.417, 0.583, -1.1, -1.0, -0.4, -0.1),
-    (1280, 'Sortland', dm(68, 42), dm(15, 26), 0.417, 0.583, -1.2, -0.8, -0.3, -0.1),
-    (1281, 'Stokmarknes', dm(68, 34), dm(14, 56), 0.417, 0.583, -1.2, -0.9, -0.3, -0.1),
-    (1283, 'Eggum, Lofoten', dm(68, 19), dm(13, 41), 0.417, 0.542, -1.0, -0.4, -0.1, -0.1),
-    (1284, 'Stamsund, Lofoten', dm(68, 8), dm(13, 52), 0.333, 0.5, -0.6, -0.4, -0.2, 0.0),
-    (1285, 'S\xf8rv\xe5gen, Lofoten', dm(67, 53), dm(13, 2), 0.333, 0.5, -0.4, -0.2, -0.2, -0.1),
-    (1286, 'R\xf8st', dm(67, 30), dm(12, 5), 0.167, 0.333, -0.7, -0.4, -0.3, -0.1),
-    (1287, 'L\xf8dingen', dm(68, 25), dm(16, 0), 0.25, 0.417, -0.2, -0.3, -0.1, -0.1),
+    (1176, 'Evenskj\xe6r', dm(68, 35), dm(16, 33), 0.458, 0.333, -0.9, -0.6, -0.3, -0.1),
+    (1178, 'Ris\xf8yhamn', dm(68, 58), dm(15, 39), 0.583, 0.208, -1.1, -0.8, -0.4, -0.1),
+    (1179, '\xd8ksnes', dm(68, 53), dm(14, 56), 0.417, 0.583, -1.1, -1.0, -0.4, -0.1),
+    (1180, 'Sortland', dm(68, 42), dm(15, 26), 0.417, 0.583, -1.2, -0.8, -0.3, -0.1),
+    (1181, 'Stokmarknes', dm(68, 34), dm(14, 56), 0.417, 0.583, -1.2, -0.9, -0.3, -0.1),
+    (1183, 'Eggum, Lofoten', dm(68, 19), dm(13, 41), 0.417, 0.542, -1.0, -0.4, -0.1, -0.1),
+    (1184, 'Stamsund, Lofoten', dm(68, 8), dm(13, 52), 0.333, 0.5, -0.6, -0.4, -0.2, 0.0),
+    (1185, 'S\xf8rv\xe5gen, Lofoten', dm(67, 53), dm(13, 2), 0.333, 0.5, -0.4, -0.2, -0.2, -0.1),
+    (1186, 'R\xf8st', dm(67, 30), dm(12, 5), 0.167, 0.333, -0.7, -0.4, -0.3, -0.1),
+    (1187, 'L\xf8dingen', dm(68, 25), dm(16, 0), 0.25, 0.417, -0.2, -0.3, -0.1, -0.1),
 ]
 
 # --- Block J: Vestfjord/Salten/Helgeland, Ref NARVIK, ZONE -0100 (Scan_20260616 (15)=S.366 flach) ---
