@@ -228,6 +228,16 @@ SEC_YEKAT3 = [
     (1119, 'Guba Bazarnaya', dm(69, 46), dm(31, 2), '-0029', '-0029', -0.3, -0.3, -0.1, 0.0),
 ]
 
+# --- Block D2: West-/Nord-Novaya-Zemlya, Ref Yekaterininskiy, Zone -0300 ---
+# Part-II-Werte von Oliver durchgegeben (Part-III-K1/O1 nicht sicher lesbar -> Transfer).
+# Geschwister mit Part-III-Direktkonstanten (995/998/1001/1003/1004/1007) stehen in build_np202.py.
+SEC_YEKAT4 = [
+    (1002, 'Mys Zhelaniya', dm(76, 57), dm(68, 35), '+0155', '+0145', -3.1, -2.5, -1.0, -0.3),
+    (1005, 'Guba Krestovaya', dm(74, 7), dm(55, 30), '+0130', '+0120', -2.9, -2.3, -0.9, -0.3),
+    (1006, 'Guba Mityushikha', dm(73, 39), dm(54, 48), '+0140', '+0130', -2.7, -2.1, -1.0, -0.3),
+    (1008, 'Zaliv Pukhovyy', dm(72, 39), dm(52, 42), '+0115', '+0105', -2.8, -2.3, -1.0, -0.3),
+]
+
 # --- Block E: norwegische Finnmark-Häfen, Ref OSTROV YEKATERININSKIY, ZONE -0100 ---
 # Scan 66/S.364. WICHTIG (Vard\xf8-validiert, 11 min): Output-Meridian = Sekundär-
 # Ortszone +01:00, ATT-Diff DIREKT angewandt (die 2h Moskau/Norwegen-Zonendiff
@@ -292,6 +302,7 @@ BLOCKS = [
     ('KEM', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_KEM),
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT2),
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT3),
+    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT4),
     ('YEKAT', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_YEKAT),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK),
     ('HAMMERFEST', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAM),

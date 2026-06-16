@@ -114,6 +114,22 @@ STATIONS = [
       {'M2': (341, 0.26), 'S2': (40, 0.09), 'K1': (240, 0.05), 'O1': (353, 0.01)}, 'PartII'),
     S(992, 'Mys Kamennyy, Obskaya Guba (NP202 992)', dm(68, 30), dm(73, 35), '+05:00', 0.35,
       {'M2': (102, 0.18), 'S2': (194, 0.10), 'K1': (151, 0.02), 'O1': (297, 0.01)}, 'PartII'),
+    # --- West-/Nord-Novaya-Zemlya + Yamal/Kara (Part III S.408, Scan_20260616.pdf) ---
+    # Konstanten doppelt gelesen (M2-Phase als Zeilen-Anker), Koords amtlich Part II
+    # (Oliver durchgegeben). Ragozina/Marre-Salya = Festland Kara -> Zone -0500 (Jekaterinburg);
+    # Novaya Zemlya = Moskau-Zeit +03:00. Mikrotidal (conf 3), N2/K2 inferiert.
+    S(995, 'Mys Ragozina (NP202 995)', dm(73, 23), dm(70, 7), '+05:00 :Asia/Yekaterinburg', 0.37,
+      {'M2': (318, 0.32), 'S2': (118, 0.04), 'K1': (264, 0.08), 'O1': (137, 0.03)}, 'PartII'),
+    S(998, 'Mys Marre-Salya (NP202 998)', dm(69, 43), dm(66, 48), '+05:00 :Asia/Yekaterinburg', 0.40,
+      {'M2': (165, 0.11), 'S2': (226, 0.05), 'K1': (274, 0.04), 'O1': (86, 0.05)}, 'PartII'),
+    S(1001, 'Mys Byk, Novaya Zemlya (NP202 1001)', dm(73, 14), dm(56, 24), '+03:00 :Europe/Moscow', 0.40,
+      {'M2': (32, 0.15), 'S2': (94, 0.07), 'K1': (232, 0.03), 'O1': (16, 0.05)}, 'PartII'),
+    S(1003, 'Zaliv Russkaya Gavan, Novaya Zemlya (NP202 1003)', dm(76, 14), dm(62, 32), '+03:00 :Europe/Moscow', 0.40,
+      {'M2': (254, 0.15), 'S2': (300, 0.07), 'K1': (130, 0.03), 'O1': (249, 0.03)}, 'PartII'),
+    S(1004, 'Foki Bight, Novaya Zemlya (NP202 1004)', dm(75, 58), dm(59, 55), '+03:00 :Europe/Moscow', 0.40,
+      {'M2': (263, 0.15), 'S2': (299, 0.06), 'K1': (114, 0.03), 'O1': (284, 0.01)}, 'PartII'),
+    S(1007, 'Mys Seryebryany, Novaya Zemlya (NP202 1007)', dm(73, 21), dm(54, 4), '+03:00 :Europe/Moscow', 0.39,
+      {'M2': (257, 0.24), 'S2': (337, 0.05), 'K1': (214, 0.05), 'O1': (81, 0.01)}, 'PartII'),
 ]
 
 
@@ -132,7 +148,7 @@ def block(s):
            f'# !longitude: {s["lon"]:.4f}',
            f'# !latitude: {s["lat"]:.4f}',
            f'{s["name"]} Tide',
-           f'{s["mer"]} :UTC',
+           (s["mer"] if ':' in s["mer"] else f'{s["mer"]} :UTC'),
            f'{s["z0"]:.4f} meters']
     for c in ORDER:
         if c in con:
