@@ -296,6 +296,24 @@ SEC_NORWAY_NARVIK2 = [
     (1262, 'Finnkroken, Grotsundet', dm(69, 50), dm(19, 26), 1.125, 1.0, -0.3, -0.2, -0.3, 0.0),
 ]
 
+# --- Block I: Troms-Fjorde, Ref TROMSO (Part III), ZONE -0100 (Scan 67/S.365 Mitte) ---
+# Nördliche Troms-Fjordhäfen, eindeutig Tromsø-ref (kleine +ΔT, alle 68.6-70°N).
+# ΔT vorgemittelt. \xf8=ø \xe6=æ. Vesterålen/Lofoten (Risøyhamn südwärts) ZURÜCKGESTELLT:
+# Referenz wechselt dort zu Narvik/Lødingen + alter Scan 67 zu unsicher -> flacher Rescan.
+SEC_NORWAY_TROMSO = [
+    (1264, 'Ling\xf8ya', dm(69, 55), dm(18, 29), 0.542, 0.417, -0.9, -0.6, -0.4, -0.1),
+    (1265, 'Tennes, Balsfjorden', dm(69, 18), dm(19, 21), 1.125, 1.0, -0.5, -0.2, -0.3, 0.0),
+    (1266, 'Rystraumen, Balsfjorden', dm(69, 34), dm(18, 45), 1.125, 1.0, -0.6, -0.4, -0.4, 0.0),
+    (1267, 'Laukvik, Malangen', dm(69, 34), dm(17, 54), 0.542, 0.417, -1.0, -0.7, -0.4, -0.1),
+    (1268, 'Keianes, Malangen', dm(69, 16), dm(18, 43), 0.625, 0.5, -0.9, -0.7, -0.4, -0.1),
+    (1269, 'Gibostad, Gisundet', dm(69, 21), dm(18, 5), 0.583, 0.5, -1.2, -0.8, -0.5, -0.2),
+    (1270, 'Gryllefjord', dm(69, 22), dm(17, 4), 0.542, 0.417, -1.2, -0.7, -0.5, -0.1),
+    (1271, 'Finnlandsneset, Dyr\xf8ysundet', dm(69, 6), dm(17, 38), 0.542, 0.417, -1.0, -0.6, -0.4, -0.1),
+    (1272, 'Skrolsvik', dm(69, 4), dm(16, 49), 0.542, 0.417, -1.0, -0.7, -0.4, -0.1),
+    (1273, 'Sol\xf8y', dm(68, 47), dm(17, 47), 0.542, 0.417, -0.7, -0.4, -0.5, -0.1),
+    (1275, 'For\xf8ys\xe6ter, Gullesfjorden', dm(68, 38), dm(15, 47), 0.542, 0.417, -0.9, -0.8, -0.4, -0.1),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -307,6 +325,7 @@ BLOCKS = [
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK),
     ('HAMMERFEST', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAM),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK2),
+    ('TROMSO', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_TROMSO),
 ]
 
 
