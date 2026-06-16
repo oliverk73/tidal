@@ -18,6 +18,7 @@ import os, re, math
 HARM = os.path.expanduser('~/harmonics')
 HDRSRC = f'{HARM}/utide/harmonics_att_np203.txt'
 CLASSIC = f'{HARM}/classic/harmonics-1997-05-25_mod.txt'
+OBS = f'{HARM}/utide/harmonics_utide_observations.txt'
 OUT = f'{HARM}/utide/harmonics_att_np202_secondary.txt'
 
 
@@ -43,9 +44,9 @@ def read_header():
 HEADER, ORDER, SPEED = read_header()
 
 
-def read_reference(name):
-    """Vollen Konstituenten-Satz eines Standardhafens aus Classic 1997 lesen."""
-    lines = open(CLASSIC, encoding='iso-8859-1').read().splitlines()
+def read_reference(name, path=CLASSIC):
+    """Vollen Konstituenten-Satz eines Standardhafens aus einer Harmonics-Datei lesen."""
+    lines = open(path, encoding='iso-8859-1').read().splitlines()
     i = next(k for k, l in enumerate(lines) if l.startswith(name))
     con = {}
     for l in lines[i + 3:]:
@@ -82,18 +83,24 @@ def is_gap(lat, lon, inv, km=6.0):
 # aus Classic-Konstituenten (Z0 1.10, M2 0.586, S2 0.144); reproduziert die ATT-
 # Stände von Yekaterininskiy exakt (Quercheck), daher für Kem ebenso angesetzt.
 REFS = {
-    'YEKAT': dict(classic='Yekaterininskaya, Russia', levels=(3.7, 3.0, 1.3, 0.5)),
-    'KEM':   dict(classic='Port Kem, Russia',         levels=(1.83, 1.54, 0.66, 0.37)),
+    'YEKAT':  dict(name='Yekaterininskaya, Russia', path=CLASSIC, levels=(3.7, 3.0, 1.3, 0.5)),
+    'KEM':    dict(name='Port Kem, Russia',         path=CLASSIC, levels=(1.83, 1.54, 0.66, 0.37)),
+    # NARVIK: Konst. nur als UTide-Messung (+00:00). Pegel-Stände ATT (NP202 S.364).
+    # Timing-Offset Mess-Narvik <-> ATT-Narvik via Honningsvåg kalibriert = +0.75 h.
+    'NARVIK': dict(name='Narvik, Norway', path=OBS, levels=(3.2, 2.5, 1.2, 0.5)),
 }
 for _k, _r in REFS.items():
-    _r['con'] = read_reference(_r['classic'])
+    _r['con'] = read_reference(_r['name'], _r['path'])
     _r['spring'] = _r['levels'][0] - _r['levels'][3]
 
 
 def hm(s):
-    """'+0135' -> +1.5833 h ; '-0452' -> -4.8667 h ; None -> None."""
-    if s is None:
-        return None
+    """'+0135' -> +1.5833 h ; '-0452' -> -4.8667 h ; float -> float ; None -> None.
+
+    Floats erlauben vorgemittelte ΔT (Mittel der zwei HW- bzw. LW-Spalten), wo
+    die beiden Spalten merklich differieren (z. B. Narvik-Block, ~30 min Diurnal)."""
+    if s is None or isinstance(s, float):
+        return s
     sign = -1 if s[0] == '-' else 1
     s = s.lstrip('+-')
     return sign * (int(s[:-2]) + int(s[-2:]) / 60.0)
@@ -226,23 +233,39 @@ SEC_NORWAY_YEKAT = [
     (1142, 'Ifjorden, Laksfjorden', dm(70, 28), dm(27, 6), '-0425', '-0430', -1.0, -0.8, -0.3, 0.1),
 ]
 
-# (refkey, meridian, country, sec_list)
+# --- Block F: norweg. Finnmark, Ref NARVIK, ZONE -0100, cal +0.75 h ---
+# Scan 66/S.364. ΔT als vorgemittelte Dezimalstunden (HW- u. LW-Spaltenmittel,
+# da die zwei Spalten ~30 min differieren). Referenz Narvik = UTide-Messung;
+# Timing via gemessenes Honningsv\xe5g kalibriert (+0.75 h -> Rest-HW-Fehler 2 min).
+# Honningsv\xe5g (1145) Duplikat -> Gap-Check skippt. \xe6=æ \xf8=ø \xe5=å.
+SEC_NORWAY_NARVIK = [
+    (1143, 'Russenes, Porsangen', dm(70, 29), dm(25, 5), 2.833, 2.875, -0.3, -0.1, -0.3, 0.0),
+    (1144, 'Hamnbukt, Porsangen', dm(70, 6), dm(25, 5), 2.917, 2.958, -0.2, -0.1, -0.1, 0.0),
+    (1145, 'Honningsv\xe5g', dm(70, 59), dm(25, 59), 2.917, 2.958, -0.3, -0.2, -0.3, 0.0),
+    (1146, 'Gjesv\xe6r', dm(71, 6), dm(25, 23), 2.417, 2.458, -0.3, -0.1, -0.3, 0.0),
+    (1147, 'Hav\xf8ysund', dm(71, 0), dm(24, 40), 2.208, 2.25, -0.3, -0.1, 0.0, 0.0),
+    (1148, 'Finneset, Ing\xf8y', dm(71, 5), dm(24, 1), 1.833, 1.875, -0.6, -0.3, -0.3, -0.1),
+    (1149, 'Litlefjorden, Revsbotn', dm(70, 42), dm(24, 39), 1.75, 1.792, -0.4, -0.2, -0.3, -0.1),
+]
+
+# (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
-    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', SEC_YEKAT),
-    ('KEM', '+03:00 :Europe/Moscow', 'Russia', SEC_KEM),
-    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', SEC_YEKAT2),
-    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', SEC_YEKAT3),
-    ('YEKAT', '+01:00 :Europe/Oslo', 'Norway', SEC_NORWAY_YEKAT),
+    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
+    ('KEM', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_KEM),
+    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT2),
+    ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT3),
+    ('YEKAT', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_YEKAT),
+    ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.75, SEC_NORWAY_NARVIK),
 ]
 
 
-def transfer(s, refkey):
+def transfer(s, refkey, cal=0.0):
     r = REFS[refkey]
     lev, spring, refcon = r['levels'], r['spring'], r['con']
     tHW, tLW = s[4], s[5]
     dHWS, dHWN, dLWN, dLWS = s[6], s[7], s[8], s[9]
     dts = [x for x in (hm(tHW), hm(tLW)) if x is not None]
-    dt = sum(dts) / len(dts)
+    dt = sum(dts) / len(dts) + cal       # cal = Referenz-Timing-Kalibrierung (h)
     sec_hws, sec_lws = lev[0] + dHWS, lev[3] + dLWS
     a = (sec_hws - sec_lws) / spring          # Spring-Hub-Verhältnis (robust)
     # Z0 = symmetrischer Mittelpunkt der Stände -> reproduziert HW/LW-Höhen.
@@ -258,12 +281,12 @@ def transfer(s, refkey):
     return dt, a, z0, con
 
 
-REFNAMES = {'YEKAT': 'Ostrov Yekaterininskiy', 'KEM': "Port of Kem'"}
+REFNAMES = {'YEKAT': 'Ostrov Yekaterininskiy', 'KEM': "Port of Kem'", 'NARVIK': 'Narvik'}
 
 
-def block(s, refkey, mer, country):
+def block(s, refkey, mer, country, cal=0.0):
     att, name = s[0], s[1]
-    dt, a, z0, con = transfer(s, refkey)
+    dt, a, z0, con = transfer(s, refkey, cal)
     refname = REFNAMES[refkey]
     ml = s[10] if len(s) > 10 else None
     asym = f'; ML={ml} (shallow-water asymmetry, HW/LW prioritised over MSL)' \
@@ -298,18 +321,18 @@ def main():
     inv = load_inventory()
     lines = list(HEADER)
     built = skipped = total = 0
-    for refkey, mer, country, sec_list in BLOCKS:
-        print(f'--- Block {refkey} / {country} / {mer} ---')
+    for refkey, mer, country, cal, sec_list in BLOCKS:
+        print(f'--- Block {refkey} / {country} / {mer} / cal={cal:+.2f}h ---')
         for s in sec_list:
             total += 1
             if not is_gap(s[2], s[3], inv):
                 print(f'  SKIP (Duplikat) {s[0]} {s[1]}')
                 skipped += 1
                 continue
-            dt, a, z0, _ = transfer(s, refkey)
+            dt, a, z0, _ = transfer(s, refkey, cal)
             mhws = REFS[refkey]['levels'][0] + s[6]
             print(f'  {str(s[0]):5} {s[1][:30]:30} dt={dt:+.2f}h scale={a:.3f} Z0={z0:.2f} MHWS={mhws:.1f}')
-            lines += block(s, refkey, mer, country)
+            lines += block(s, refkey, mer, country, cal)
             built += 1
     lines.append('# END')
     print(f'  ({built} gebaut, {skipped} Duplikate übersprungen, {total} gesamt)')
