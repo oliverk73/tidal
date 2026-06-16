@@ -436,6 +436,28 @@ SEC_NORWAY_HAUGESUND = [
     (1275, 'Lysebotn', dm(59, 3), dm(6, 39), -0.375, -0.833, -0.5, -0.3, 0.0, 0.1),
 ]
 
+# --- Block N: Skagerrak/Oslofjord, Ref BERGEN, ZONE -0100 (Scan 17/18 = S.368/369) ---
+# MIKROTIDAL nahe Amphidromie; ATT-Zeitdiff "p"/⊙ = ~gleichzeitig mit Referenz -> dt=0
+# (Phase approx, aber Hub winzig ~0.1-0.3m -> Fehler klein). Höhendiffs Bergen-relativ.
+# Für Vollständigkeit (Oliver). conf 2. Dups skip: Tregde/Arendal/Nevlunghavn/Helgeroa/
+# Horten/Drammen/Oscarsborg/Viker/Oslo. \xf8=ø
+SEC_NORWAY_SKAGERRAK = [
+    (1277, 'Risavika', dm(58, 55), dm(5, 36), 0.0, 0.0, -0.7, -0.5, -0.1, 0.1),
+    (1280, 'Egersund', dm(58, 27), dm(5, 59), 0.0, 0.0, -1.1, -0.9, -0.3, -0.1),
+    (1282, 'Hidra', dm(58, 13), dm(6, 35), 0.0, 0.0, -1.1, -0.8, -0.3, 0.0),
+    (1283, 'Farsund', dm(58, 5), dm(6, 48), 0.0, 0.0, -1.0, -0.8, -0.3, 0.0),
+    (1285, 'Kristiansand', dm(58, 8), dm(8, 0), 0.0, 0.0, -0.9, -0.7, -0.2, 0.0),
+    (1289, 'Grimstad', dm(58, 21), dm(8, 36), 0.0, 0.0, -0.9, -0.7, -0.2, 0.0),
+    (1291, 'Ris\xf8r', dm(58, 43), dm(9, 14), 0.0, 0.0, -0.9, -0.6, -0.2, 0.1),
+    ('1295a', 'Porsgrunn', dm(59, 8), dm(9, 38), 0.0, 0.0, -0.9, -0.6, -0.2, 0.1),
+    ('1295b', 'Larvik', dm(59, 2), dm(10, 2), 0.0, 0.0, -0.9, -0.6, -0.2, 0.1),
+    ('1295c', 'Sandefjord', dm(59, 7), dm(10, 14), 0.0, 0.0, -0.9, -0.6, -0.2, 0.1),
+    ('1295d', 'Slagentangen', dm(59, 2), dm(10, 32), 0.0, 0.0, -0.8, -0.4, -0.2, 0.1),
+    ('1295e', 'T\xf8nsberg', dm(59, 15), dm(10, 26), 0.0, 0.0, -0.8, -0.6, -0.2, 0.1),
+    (1299, 'Moss', dm(59, 26), dm(10, 39), 0.0, 0.0, -0.8, -0.6, -0.2, 0.1),
+    (1302, 'Halden', dm(59, 7), dm(11, 23), 0.0, 0.0, -0.8, -0.6, -0.2, 0.1),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -453,6 +475,7 @@ BLOCKS = [
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK4),
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_BERGEN),
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAUGESUND),
+    ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_SKAGERRAK),
 ]
 
 
