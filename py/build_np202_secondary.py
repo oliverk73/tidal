@@ -105,6 +105,27 @@ SEC = [
     (1013, 'Bukhta Varneka, Yugorski Strait', dm(69, 42), dm(60, 4), '-0213', '-0224', -2.9, -2.4, -1.0, -0.3),
     (1014, 'Ostrov Sokoliy, Yugorski Strait', dm(69, 50), dm(60, 44), '-0430', '-0440', -2.9, -2.4, -1.0, -0.3),
     (1015, 'Khabarovo, Yugorski Strait', dm(69, 39), dm(60, 25), '-0330', '-0340', -3.1, -2.5, -1.1, -0.4),
+    # --- Batch 2: Pechora-See / Kolguyev / Kanin / Weißmeer-Trichter (Mezen-Bucht) ---
+    # Werte aus Scan_20260615 (64).pdf, doppelt gelesen. LW ⊙ -> dt=nur HW.
+    (1017, 'Ostrov Dolgiy', dm(69, 12), dm(59, 10), '-0331', None, -2.7, -2.2, -0.9, -0.3),
+    (1021, 'Ostrov Varandyey', dm(68, 49), dm(58, 0), '-0329', None, -2.7, -2.2, -0.9, -0.3),
+    (1023, 'Mys Russki Zavorot', dm(68, 59), dm(54, 34), '-0515', None, -2.7, -2.2, -0.9, -0.3),
+    (1024, 'Reka Pechora bar', dm(68, 23), dm(54, 26), '-0156', '-0208', -2.8, -2.3, -0.9, -0.3),
+    (1025, 'Bugrino, Kolguyev Island', dm(68, 48), dm(49, 16), '+0519', '+0537', -2.1, -1.8, -0.7, -0.2),
+    (1026, 'Reka Indiga', dm(67, 42), dm(48, 46), '+0846', '+0830', -1.7, -1.2, -0.5, 0.1),
+    ('1026a', 'Mys Mikulkin', dm(67, 48), dm(46, 41), '+0733', '+0724', -0.2, 0.3, -0.2, 0.4),
+    (1027, 'Ostrov Korga', dm(68, 23), dm(46, 10), '+0545', '+0534', -1.3, -1.1, -0.3, -0.1),
+    (1028, 'Mys Kanin Nos', dm(68, 40), dm(43, 47), '+0310', '+0258', -0.6, -0.5, -0.2, -0.1),
+    (1031, 'Reka Kiya Mouth', dm(67, 40), dm(44, 6), '+0435', '+0446', 0.5, 0.5, 0.4, 0.5),
+    (1032, 'Banka Litke', dm(67, 11), dm(42, 48), '+0412', None, 2.3, 1.9, 0.8, 0.4),
+    (1033, 'Mys Konushin', dm(67, 11), dm(43, 47), '+0602', '+0553', 3.5, 2.9, 1.2, 0.5),
+    (1034, 'Semzha, Mezen River', dm(66, 9), dm(44, 6), '+0619', '+0644', 4.0, 3.9, 0.6, 0.6),
+    (1036, 'Ostrov Morzhovets', dm(66, 44), dm(42, 27), '+0506', '+0454', 2.2, 1.9, 0.6, 0.4),
+    (1037, 'Mys Voronov', dm(66, 31), dm(42, 14), '+0349', None, 3.1, 2.6, 1.1, 0.4),
+    # DEFERRED: 1035 Kamenka (65 53/44 08) ATT-Höhendiffs -1.4/-0.9/-0.4/+0.3
+    #   -> MHWS 2.3 m, Hub ~1.5 m. Physikalisch unmöglich neben Semzha (1034, ~6.6 m)
+    #   im selben Mezen-Trichter (Tide wächst flussaufwärts, kollabiert nicht). Wahrsch.
+    #   ATT-Druckfehler oder Sonderdatum. Nicht gebaut -> Rückfrage an Oliver.
 ]
 
 
