@@ -423,6 +423,18 @@ SEC_NORWAY_BERGEN = [
     (1270, 'Espev\xe6r, Bomlo', dm(59, 36), dm(5, 10), -0.317, -0.317, -0.5, -0.4, -0.1, -0.1),
 ]
 
+# --- Block M: Ryfylke/Karmsund, Ref HAUGESUND (Part III), ZONE -0100 (Scan 17/S.368) ---
+# 1272-1275. Stavanger-ref Skagerrak (1277+) NICHT gebaut: mikrotidal, Höhendiffs ergeben
+# negative MHWS (Stavanger MHWS ~0.88), "p"/⊙-markiert, viele Dups. \xe5=å \xf8=ø
+SEC_NORWAY_HAUGESUND = [
+    (1272, 'Utsira', dm(59, 18), dm(4, 54), -0.375, -0.833, -0.5, -0.3, 0.0, 0.1),
+    ('1272a', 'Kopervik, Karmsund', dm(59, 17), dm(5, 19), -0.458, -0.917, -0.6, -0.5, 0.0, 0.1),
+    ('1272b', 'K\xe5rst\xf8', dm(59, 16), dm(5, 30), -0.458, -0.917, -0.6, -0.5, 0.0, 0.1),
+    (1273, 'Sauda', dm(59, 39), dm(6, 22), -0.208, -0.667, -0.6, -0.3, 0.0, 0.1),
+    (1274, 'J\xf8senfjorden', dm(59, 19), dm(6, 28), -0.458, -0.917, -0.6, -0.3, 0.0, 0.1),
+    (1275, 'Lysebotn', dm(59, 3), dm(6, 39), -0.375, -0.833, -0.5, -0.3, 0.0, 0.1),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -439,6 +451,7 @@ BLOCKS = [
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK3),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK4),
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_BERGEN),
+    ('HAUGESUND', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAUGESUND),
 ]
 
 
