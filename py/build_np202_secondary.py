@@ -110,6 +110,8 @@ REFS['NARVIK'] = p3_ref({'M2': (1.00, 4), 'S2': (0.35, 44), 'K1': (0.11, 212), '
 REFS['HAMMERFEST'] = p3_ref({'M2': (0.89, 48), 'S2': (0.28, 88), 'K1': (0.08, 229), 'O1': (0.03, 64)}, 1.67)
 REFS['TROMSO'] = p3_ref({'M2': (0.84, 29), 'S2': (0.28, 73), 'K1': (0.07, 223), 'O1': (0.04, 66)}, 1.61)
 REFS['LODINGEN'] = p3_ref({'M2': (0.96, 3), 'S2': (0.36, 45), 'K1': (0.11, 222), 'O1': (0.03, 61)}, 1.69)
+REFS['ALESUND'] = p3_ref({'M2': (0.62, 319), 'S2': (0.21, 357), 'K1': (0.06, 168), 'O1': (0.06, 23)}, 1.20)
+REFS['BERGEN'] = p3_ref({'M2': (0.45, 312), 'S2': (0.16, 353), 'K1': (0.03, 178), 'O1': (0.03, 27)}, 0.90)
 
 
 def hm(s):
@@ -378,6 +380,29 @@ SEC_NORWAY_NARVIK4 = [
     (1230, 'Molde', dm(62, 44), dm(7, 10), -1.292, -1.25, -1.2, -0.9, -0.4, 0.0),
     (1231, '\xc5ndalsnes', dm(62, 34), dm(7, 41), -1.5, -1.417, -1.2, -0.7, -0.3, -0.2),
     (1232, 'Leps\xf8yrevet', dm(62, 35), dm(6, 15), -1.333, -1.25, -1.2, -0.9, -0.3, -0.2),
+    # 1233a-1236 (nach ALESUND-Standardhafen) weiter NARVIK-ref (große ΔT, Abschnitt):
+    ('1233a', 'Stranda, Norddalsfjorden', dm(62, 19), dm(6, 57), -1.5, -1.417, -1.1, -0.9, -0.4, -0.1),
+    (1234, 'Merok, Geirangerfjord', dm(62, 6), dm(7, 13), -1.417, -1.333, -1.2, -0.8, -0.2, -0.2),
+    (1235, 'Fyrde', dm(62, 4), dm(6, 19), -1.333, -1.25, -1.2, -0.9, -0.3, -0.2),
+    (1236, 'Stattvagen, Stattlandet', dm(62, 12), dm(5, 13), -1.5, -1.417, -1.3, -0.9, -0.3, -0.2),
+]
+
+# --- Block L: West-/Sognefjord, Ref BERGEN (Part III), ZONE -0100 (Scan_20260616 (16)=S.367) ---
+# Near-cophase mit Bergen (ΔT konstant ~ -0.2h), Innen-Sognefjord verstärkt (Höhendiffs +).
+# \xe6=æ \xf8=ø \xe5=å. Maloy 1237 dup.
+SEC_NORWAY_BERGEN = [
+    (1238, 'Kj\xf8lsdal, Nordfjord', dm(61, 55), dm(5, 38), -0.15, -0.15, 0.4, 0.3, 0.2, 0.1),
+    (1239, 'Olden, Nordfjord', dm(61, 51), dm(6, 49), -0.2, -0.2, 0.5, 0.4, 0.2, 0.0),
+    (1240, 'Flor\xf8', dm(61, 36), dm(5, 2), -0.067, -0.067, 0.2, 0.2, 0.1, 0.0),
+    (1241, 'F\xf8rde, Fordefjorden', dm(61, 28), dm(5, 50), -0.05, -0.05, 0.3, 0.3, 0.2, -0.1),
+    (1242, 'Askvoll, Granesund', dm(61, 21), dm(5, 4), -0.15, -0.15, 0.3, 0.3, 0.2, -0.1),
+    (1244, 'Nara, Ytre Sula', dm(61, 1), dm(4, 45), -0.183, -0.183, 0.1, 0.1, 0.0, -0.1),
+    (1245, 'Rutletangen, Sognefjord', dm(61, 4), dm(5, 11), -0.2, -0.2, 0.3, 0.2, 0.2, -0.1),
+    (1246, 'Vadheim, Sognefjord', dm(61, 13), dm(5, 49), -0.2, -0.2, 0.3, 0.2, 0.2, -0.1),
+    (1247, 'Vikisogn, Sognefjord', dm(61, 5), dm(6, 35), -0.2, -0.2, 0.2, 0.2, 0.2, -0.1),
+    (1248, 'Fl\xe5m, Sognefjord', dm(60, 52), dm(7, 8), -0.217, -0.217, 0.3, 0.3, 0.2, 0.0),
+    (1249, 'L\xe6rdals\xf8yri, Sognefjord', dm(61, 6), dm(7, 28), -0.233, -0.233, 0.3, 0.3, 0.2, 0.0),
+    (1250, 'Skjolden, Sognefjord', dm(61, 29), dm(7, 36), -0.2, -0.2, 0.3, 0.3, 0.2, 0.0),
 ]
 
 # (refkey, meridian, country, cal_h, sec_list)
@@ -395,6 +420,7 @@ BLOCKS = [
     ('TROMSO', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_TROMSO2),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK3),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK4),
+    ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_BERGEN),
 ]
 
 
@@ -422,7 +448,8 @@ def transfer(s, refkey, cal=0.0):
 
 REFNAMES = {'YEKAT': 'Ostrov Yekaterininskiy', 'KEM': "Port of Kem'", 'NARVIK': 'Narvik (NP202 Part III)',
             'HAMMERFEST': 'Hammerfest (NP202 Part III)', 'TROMSO': 'Tromso (NP202 Part III)',
-            'LODINGEN': 'Lodingen (NP202 Part III)'}
+            'LODINGEN': 'Lodingen (NP202 Part III)', 'ALESUND': 'Alesund (NP202 Part III)',
+            'BERGEN': 'Bergen (NP202 Part III)'}
 
 
 def block(s, refkey, mer, country, cal=0.0):
