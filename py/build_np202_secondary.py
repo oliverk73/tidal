@@ -275,6 +275,17 @@ SEC_NORWAY_HAM = [
     (1154, 'Komagfjord, Vargsundet', dm(70, 16), dm(23, 23), 1.25, 1.292, -0.2, -0.2, -0.1, 0.0),
 ]
 
+# --- Block H: Troms-Fjorde, Ref NARVIK (Part III), ZONE -0100 (Scan 67/S.365 oben) ---
+# ΔT vorgemittelte Dezimalstd (HW/LW-Spaltenmittel). \xe6=æ \xf8=ø \xe5=å
+SEC_NORWAY_NARVIK2 = [
+    (1257, 'Badderen, Kv\xe6nangenfjorden', dm(69, 51), dm(22, 1), 1.125, 1.083, -0.3, -0.2, -0.2, 0.0),
+    (1258, 'Skjerv\xf8y', dm(70, 2), dm(20, 58), 1.25, 1.167, -0.3, -0.2, -0.1, 0.0),
+    (1259, 'Lyngseidet, Lyngenfjorden', dm(69, 35), dm(20, 13), 1.042, 0.917, -0.2, -0.1, -0.2, 0.0),
+    (1260, 'J\xf8vik, Ullsfjorden', dm(69, 36), dm(19, 50), 1.042, 0.833, -0.3, -0.3, -0.3, 0.0),
+    (1261, 'Torsv\xe5g', dm(70, 15), dm(19, 31), 0.958, 0.833, -0.5, -0.3, -0.3, 0.0),
+    (1262, 'Finnkroken, Grotsundet', dm(69, 50), dm(19, 26), 1.125, 1.0, -0.3, -0.2, -0.3, 0.0),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -284,6 +295,7 @@ BLOCKS = [
     ('YEKAT', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_YEKAT),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK),
     ('HAMMERFEST', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAM),
+    ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK2),
 ]
 
 
