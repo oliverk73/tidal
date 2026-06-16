@@ -330,6 +330,40 @@ SEC_NORWAY_TROMSO2 = [
     (1287, 'L\xf8dingen', dm(68, 25), dm(16, 0), 0.25, 0.417, -0.2, -0.3, -0.1, -0.1),
 ]
 
+# --- Block J: Vestfjord/Salten/Helgeland, Ref NARVIK, ZONE -0100 (Scan_20260616 (15)=S.366 flach) ---
+# Alle 1190-1218 = NARVIK-ref (TRONDHEIM 1219 = Standardhafen unten). ΔT vorgemittelt.
+# Innenfjord-Häfen (Tuv/Finneid/Rognan) großer Lag +0210/+0230. \xe6=æ \xf8=ø \xe5=å
+SEC_NORWAY_NARVIK3 = [
+    (1190, 'Kj\xf8psvik, Tysfjorden', dm(68, 6), dm(16, 22), 0.333, 0.5, -0.1, -0.2, 0.0, -0.1),
+    (1191, 'Tran\xf8y, Hamar\xf8y', dm(68, 11), dm(15, 41), 0.333, 0.5, -0.2, -0.2, 0.0, -0.1),
+    (1192, 'Tommernes, Sagfjorden', dm(67, 55), dm(15, 53), 0.25, 0.417, -0.3, -0.3, -0.1, -0.1),
+    (1193, 'Gr\xf8t\xf8y', dm(67, 50), dm(14, 47), 0.25, 0.417, -0.3, -0.3, 0.0, -0.1),
+    (1194, 'Morsvikbotn, Nordfolla', dm(67, 42), dm(15, 50), 0.167, 0.333, -0.4, -0.3, -0.1, 0.0),
+    (1195, 'Djupvik, Sorfolda', dm(67, 22), dm(15, 33), 0.167, 0.333, -0.5, -0.4, -0.1, 0.0),
+    (1196, 'Helligv\xe6r', dm(67, 24), dm(13, 55), 0.167, 0.333, -0.5, -0.5, -0.2, -0.1),
+    (1198, 'Straumen, Saltfjorden', dm(67, 14), dm(14, 37), 0.25, 0.417, -0.7, -0.5, -0.2, -0.1),
+    (1199, 'Tuv, Svefjorden', dm(67, 13), dm(14, 38), 1.833, 2.0, -1.8, -1.3, -0.8, -0.3),
+    ('1199a', 'Finneid, Skjerstadfjorden', dm(67, 17), dm(15, 30), 1.958, 2.042, -1.5, -1.2, -0.6, -0.2),
+    (1200, 'Rognan, Saltdalsfjorden', dm(67, 6), dm(15, 24), 2.0, 2.167, -1.7, -1.2, -0.7, -0.3),
+    (1201, 'Tvervik, Beiaren', dm(67, 3), dm(14, 35), 0.417, 0.583, -0.5, -0.4, -0.1, -0.1),
+    (1202, 'St\xf8tt', dm(66, 55), dm(13, 27), 0.0, 0.042, -0.6, -0.4, -0.2, 0.0),
+    (1203, 'Glomfjord', dm(66, 49), dm(13, 59), -0.167, -0.125, -0.6, -0.4, -0.2, 0.0),
+    (1204, 'Indre Kvar\xf8y', dm(66, 29), dm(12, 59), -0.25, -0.208, -0.7, -0.5, -0.3, 0.0),
+    (1206, 'Nesna', dm(66, 12), dm(13, 1), -0.25, -0.208, -0.6, -0.5, -0.2, 0.0),
+    (1208, 'Sandnessj\xf8en, Alstfjorden', dm(66, 1), dm(12, 38), -0.25, -0.208, -0.5, -0.4, -0.1, 0.0),
+    (1209, 'Mosj\xf8en, Vefsenfjorden', dm(65, 51), dm(13, 12), -0.333, -0.292, -0.4, -0.3, -0.1, 0.0),
+    (1210, 'Skj\xe6rv\xe6r', dm(65, 46), dm(11, 36), -0.417, -0.375, -0.7, -0.5, -0.3, 0.0),
+    (1211, 'Hommelst\xf8, Velfjorden', dm(65, 25), dm(12, 34), -0.417, -0.375, -0.6, -0.6, -0.3, 0.0),
+    ('1211a', 'Br\xf8nn\xf8ysund', dm(65, 28), dm(12, 12), -0.5, -0.458, -0.4, -0.4, -0.1, 0.0),
+    (1212, 'Borkamo, Tosenfjorden', dm(65, 20), dm(12, 56), -0.583, -0.542, -0.7, -0.5, -0.3, -0.2),
+    (1214, 'Kongsmoen, Indre Folla', dm(64, 53), dm(12, 27), -0.333, -0.292, -0.5, -0.4, -0.1, 0.0),
+    (1215, 'Namsos, Namsenfjorden', dm(64, 28), dm(11, 30), -0.75, -0.708, -0.7, -0.5, -0.2, 0.0),
+    (1216, 'Buholmr\xe5sa', dm(64, 24), dm(10, 28), -0.833, -0.792, -0.7, -0.7, -0.4, 0.0),
+    ('1216a', 'Bessaker', dm(64, 15), dm(10, 19), -0.75, -0.708, -0.7, -0.5, -0.2, -0.1),
+    (1217, 'Stokksundet, Linesfjorden', dm(64, 2), dm(10, 3), -0.708, -0.875, -0.7, -0.6, -0.3, 0.0),
+    (1218, 'Selvnes, Trondheimsfjorden', dm(63, 37), dm(9, 44), -0.917, -0.833, -0.3, -0.4, -0.2, 0.0),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -343,6 +377,7 @@ BLOCKS = [
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK2),
     ('TROMSO', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_TROMSO),
     ('TROMSO', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_TROMSO2),
+    ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK3),
 ]
 
 
