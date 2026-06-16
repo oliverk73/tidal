@@ -509,6 +509,30 @@ SEC_FAROE = [
     (800, 'Trongisv\xe1gur, Su\xf0uroy', dm(61, 33), -dm(6, 49), 0.0, 0.0, -2.0, -1.9, -0.7, 0.0),
 ]
 
+# --- Block Q: Island NW-/Nord-/Ostküste, Ref REYKJAVIK, Zone UT (GMT) = +00:00 ---
+# Scan_20260616 (46) = NP202 Part II S.359. Höhendiffs relativ zu Reykjavik
+# 4.0/3.0/1.3/0.2. NUR Häfen mit Höhendaten (etliche zeigen ⊙ bei den Höhen ->
+# nicht per Transfer baubar: Arngerðareyri 837, Veiðileysufjörður 838, Látravík 839,
+# Reykjarfjörður 840, Hofsós 845, Haganesvík 846, Bakkafjörður 854, Nes Farm 856,
+# Dalatangi 859, Brekka 860). Westfjorde+Nordküste lagen Reykjavik um ~2-5h nach;
+# NO-Küste (ab Bakkagerði) -> Phase wrappt zu negativen Diffs. Dups skippt Gap-Check.
+SEC_ICELAND_N = [
+    (830, 'Sveinseyri, T\xe1lknafj\xf6r\xf0ur', dm(65, 38), -dm(23, 50), '+0130', '+0120', -0.8, -0.7, -0.3, 0.0),
+    (831, 'B\xedldudalur', dm(65, 41), -dm(23, 36), '+0142', '+0132', -1.0, -0.8, -0.4, -0.1),
+    (833, 'Flateyri', dm(66, 2), -dm(23, 31), '+0155', '+0145', -1.6, -1.2, -0.5, -0.1),
+    (834, 'Su\xf0ureyri', dm(66, 8), -dm(23, 32), '+0157', '+0147', -1.6, -1.3, -0.5, -0.1),
+    (835, 'Bolungav\xedk', dm(66, 9), -dm(23, 15), '+0200', '+0150', -1.8, -1.4, -0.6, -0.1),
+    (836, '\xc1lftafj\xf6r\xf0ur, \xcdsafjar\xf0ardjup', dm(66, 1), -dm(23, 0), '+0155', '+0145', -1.8, -1.4, -0.6, -0.1),
+    ('842a', 'Hvammstangi', dm(65, 24), -dm(20, 57), '+0333', '+0358', -2.5, -1.9, -0.9, -0.1),
+    ('849a', 'Hr\xedsey, Eyjafj\xf6r\xf0ur', dm(65, 59), -dm(18, 22), '+0415', '+0440', -2.7, -2.0, -0.9, -0.1),
+    ('849b', 'Gr\xedmsey', dm(66, 32), -dm(18, 1), '+0435', '+0500', -2.7, -2.0, -0.9, -0.1),
+    (850, 'Flatey, Skj\xe1lfandi', dm(66, 9), -dm(17, 50), '+0453', '+0518', -2.5, -1.7, -0.6, 0.0),
+    (852, 'Raufarh\xf6fn', dm(66, 27), -dm(15, 56), '+0510', '+0535', -2.6, -2.0, -0.9, -0.1),
+    (853, '\xde\xf3rsh\xf6fn', dm(66, 12), -dm(15, 20), '+0515', '+0540', -2.6, -1.8, -0.8, -0.1),
+    ('855a', 'Bakkager\xf0i, Borgarfj\xf6r\xf0ur', dm(65, 31), -dm(13, 49), '-0625', '-0545', -2.4, -1.7, -0.7, 0.1),
+    (858, 'Vestdalseyri, Sey\xf0isfj\xf6r\xf0ur', dm(65, 16), -dm(13, 59), '-0540', '-0500', -2.3, -1.8, -0.7, 0.1),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -528,6 +552,7 @@ BLOCKS = [
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_HAUGESUND),
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_SKAGERRAK),
     ('REYKJAVIK', '+00:00 :Atlantic/Reykjavik', 'Iceland', 0.0, SEC_ICELAND_SW),
+    ('REYKJAVIK', '+00:00 :Atlantic/Reykjavik', 'Iceland', 0.0, SEC_ICELAND_N),
     ('REYKJAVIK', '+00:00 :Atlantic/Faroe', 'Faroe Islands', 0.0, SEC_FAROE),
 ]
 
