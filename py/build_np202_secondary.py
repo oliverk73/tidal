@@ -364,6 +364,22 @@ SEC_NORWAY_NARVIK3 = [
     (1218, 'Selvnes, Trondheimsfjorden', dm(63, 37), dm(9, 44), -0.917, -0.833, -0.3, -0.4, -0.2, 0.0),
 ]
 
+# --- Block K: Trøndelag/Nordmøre, Ref NARVIK, ZONE -0100 (Scan_20260616 (16)=S.367 flach) ---
+# 1220-1232 NARVIK-ref (ALESUND 1233 = Standardhafen; ab 1233a -> Ålesund-ref, separat).
+# Südl. Außenküste: negative ΔT (HW vor Narvik, Tide läuft nordwärts). \xe6=æ \xf8=ø \xe5=å \xc5=Å
+SEC_NORWAY_NARVIK4 = [
+    (1220, 'Levanger', dm(63, 45), dm(11, 18), -0.583, -0.5, 0.0, -0.2, -0.1, 0.1),
+    (1221, 'Steinkjer', dm(64, 1), dm(11, 28), -0.75, -0.667, 0.2, -0.1, 0.1, 0.1),
+    (1223, 'Ytre Kvenv\xe6r, Ramsoyfjorden', dm(63, 29), dm(8, 18), -1.167, -1.083, -0.9, -0.7, -0.4, 0.0),
+    (1225, 'Vinje\xf8ra, Vinjefjorden', dm(63, 13), dm(8, 59), -1.25, -1.167, -0.9, -0.7, -0.3, 0.0),
+    (1227, 'Surna', dm(62, 58), dm(8, 38), -1.25, -1.167, -1.0, -0.7, -0.5, 0.0),
+    (1228, 'Sunndals\xf8ra, Sunndalsfjorden', dm(62, 41), dm(8, 33), -1.292, -1.25, -1.2, -0.8, -0.3, 0.0),
+    (1229, 'Bj\xf8rnsund', dm(62, 54), dm(6, 49), -1.25, -1.167, -1.2, -0.8, -0.3, -0.2),
+    (1230, 'Molde', dm(62, 44), dm(7, 10), -1.292, -1.25, -1.2, -0.9, -0.4, 0.0),
+    (1231, '\xc5ndalsnes', dm(62, 34), dm(7, 41), -1.5, -1.417, -1.2, -0.7, -0.3, -0.2),
+    (1232, 'Leps\xf8yrevet', dm(62, 35), dm(6, 15), -1.333, -1.25, -1.2, -0.9, -0.3, -0.2),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -378,6 +394,7 @@ BLOCKS = [
     ('TROMSO', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_TROMSO),
     ('TROMSO', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_TROMSO2),
     ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK3),
+    ('NARVIK', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_NARVIK4),
 ]
 
 
