@@ -533,6 +533,23 @@ SEC_ICELAND_N = [
     (858, 'Vestdalseyri, Sey\xf0isfj\xf6r\xf0ur', dm(65, 16), -dm(13, 59), '-0540', '-0500', -2.3, -1.8, -0.7, 0.1),
 ]
 
+# --- Block R: Island Südostküste, Ref REYKJAVIK, Zone UT (GMT) = +00:00 ---
+# Scan_20260616 (47) = NP202 Part II S.360 (oberer Teil; Rest = Jan Mayen/Svalbard).
+# Ostfjorde lagen Reykjavik um ~3-6h nach (negative Diffs = halbe Periode). NUR mit
+# Höhendaten; ⊙-Höhen nicht baubar (Hellisfjörður 862, Papey 868, Kalfafellsstaður
+# 871, Ingólfshöfði 872, Vík 875). Hvanney/Höfn = Hornafjörður -> Gap-Check skippt ggf.
+SEC_ICELAND_SE = [
+    (861, 'Nor\xf0fj\xf6r\xf0ur (Nes)', dm(65, 9), -dm(13, 42), '-0535', '-0500', -2.5, -1.9, -0.9, -0.1),
+    (864, 'Eskifj\xf6r\xf0ur', dm(65, 4), -dm(14, 1), '-0430', '-0355', -2.1, -1.6, -0.6, 0.1),
+    (865, 'B\xfa\xf0areyri, Rey\xf0arfj\xf6r\xf0ur', dm(65, 2), -dm(14, 13), '-0430', '-0355', -2.3, -1.7, -0.7, 0.0),
+    (866, 'F\xe1skr\xfa\xf0sfj\xf6r\xf0ur', dm(64, 56), -dm(14, 2), '-0415', '-0340', -2.2, -1.7, -0.7, 0.0),
+    ('866a', 'St\xf6\xf0varfj\xf6r\xf0ur', dm(64, 50), -dm(13, 53), '-0357', '-0322', -2.2, -2.0, -1.1, -0.4),
+    (867, 'Brei\xf0dalsv\xedk', dm(64, 47), -dm(14, 0), '-0340', '-0305', -2.2, -1.6, -0.7, -0.1),
+    ('867a', 'Dj\xfapivogur, Berufj\xf6r\xf0ur', dm(64, 40), -dm(14, 17), '-0325', '-0250', -1.8, -1.4, -0.5, 0.1, 1.2),
+    (870, 'Hvanney, Hornafj\xf6r\xf0ur', dm(64, 14), -dm(15, 11), '-0150', '-0115', -2.0, -1.5, -0.7, 0.0),
+    ('870a', 'H\xf6fn, Hornafj\xf6r\xf0ur', dm(64, 15), -dm(15, 12), '-0035', '+0000', -2.8, -2.1, -0.9, 0.0),
+]
+
 # (refkey, meridian, country, cal_h, sec_list)
 BLOCKS = [
     ('YEKAT', '+03:00 :Europe/Moscow', 'Russia', 0.0, SEC_YEKAT),
@@ -553,6 +570,7 @@ BLOCKS = [
     ('BERGEN', '+01:00 :Europe/Oslo', 'Norway', 0.0, SEC_NORWAY_SKAGERRAK),
     ('REYKJAVIK', '+00:00 :Atlantic/Reykjavik', 'Iceland', 0.0, SEC_ICELAND_SW),
     ('REYKJAVIK', '+00:00 :Atlantic/Reykjavik', 'Iceland', 0.0, SEC_ICELAND_N),
+    ('REYKJAVIK', '+00:00 :Atlantic/Reykjavik', 'Iceland', 0.0, SEC_ICELAND_SE),
     ('REYKJAVIK', '+00:00 :Atlantic/Faroe', 'Faroe Islands', 0.0, SEC_FAROE),
 ]
 
