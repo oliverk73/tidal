@@ -65,6 +65,14 @@ TEH, SIN, JKT, MKS = "Asia/Tehran", "Asia/Singapore", "Asia/Jakarta", "Asia/Maka
 KUL, MNL, KCH, JAY = "Asia/Kuala_Lumpur", "Asia/Manila", "Asia/Kuching", "Asia/Jayapura"
 
 STATIONS = [
+    # ===== S.252 (Scan_20260616 (38))  -  Red Sea  (Zone -0400) =====
+    # Reversierend (Flut ~NW / Ebbe ~SE), K1-dominant (diurnale Strömung), südl. Rotes Meer/Bab-el-Mandeb.
+    R(415, "Red Sea, Bab-el-Mandeb (NP203 415) Current", dm(12, 38.7), dm(43, 20.0), 308, 128,
+      (304, 0.25), (311, 0.18), (145, 0.41), (141, 0.14), "-0400", "Africa/Djibouti", "Red Sea"),
+    R(416, "Red Sea, S off Mocha (NP203 416) Current", dm(13, 23.8), dm(42, 56.0), 328, 148,
+      (309, 0.23), (0, 0.07), (155, 0.24), (147, 0.16), "-0400", "Africa/Djibouti", "Red Sea"),
+    R(417, "Red Sea, S approaches (NP203 417) Current", dm(14, 3.2), dm(42, 49.7), 338, 158,
+      (298, 0.20), (334, 0.10), (127, 0.21), (133, 0.12), "-0400", "Africa/Djibouti", "Red Sea"),
     # ===== PDF 177  -  Oman / Strait of Hormuz / The Gulf  (Zone -0400) =====
     R(418, "Masirah, Oman (NP203 418) Current", dm(20, 41.9), dm(58, 51.9), 210, 30,
       (202, 1.46), (239, 0.54), (309, 0.41), (316, 0.22), "-0400", MUS, "Oman"),
