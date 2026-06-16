@@ -43,10 +43,10 @@ def read_header():
 HEADER, ORDER, SPEED = read_header()
 
 
-def read_reference():
-    """Vollen Konstituenten-Satz von 'Yekaterininskaya, Russia' (Classic) lesen."""
+def read_reference(name):
+    """Vollen Konstituenten-Satz eines Standardhafens aus Classic 1997 lesen."""
     lines = open(CLASSIC, encoding='iso-8859-1').read().splitlines()
-    i = next(k for k, l in enumerate(lines) if l.startswith('Yekaterininskaya, Russia'))
+    i = next(k for k, l in enumerate(lines) if l.startswith(name))
     con = {}
     for l in lines[i + 3:]:
         t = l.split()
@@ -77,10 +77,17 @@ def is_gap(lat, lon, inv, km=6.0):
     return True
 
 
-REF = read_reference()
-# Referenz-Pegelstände (ATT Ostrov Yekaterininskiy, MHWS/MHWN/MLWN/MLWS)
-REF_LEVELS = (3.7, 3.0, 1.3, 0.5)
-REF_SPRING = REF_LEVELS[0] - REF_LEVELS[3]   # 3.2 m
+# Standardhafen-Registry: Konstituenten (Classic 1997) + ATT-Pegelstände
+# (MHWS,MHWN,MLWN,MLWS). KEM-Stände nach Admiralty-Näherung MHWS=Z0+(M2+S2) etc.
+# aus Classic-Konstituenten (Z0 1.10, M2 0.586, S2 0.144); reproduziert die ATT-
+# Stände von Yekaterininskiy exakt (Quercheck), daher für Kem ebenso angesetzt.
+REFS = {
+    'YEKAT': dict(classic='Yekaterininskaya, Russia', levels=(3.7, 3.0, 1.3, 0.5)),
+    'KEM':   dict(classic='Port Kem, Russia',         levels=(1.83, 1.54, 0.66, 0.37)),
+}
+for _k, _r in REFS.items():
+    _r['con'] = read_reference(_r['classic'])
+    _r['spring'] = _r['levels'][0] - _r['levels'][3]
 
 
 def hm(s):
@@ -96,8 +103,11 @@ def dm(d, m):
     return d + m / 60.0
 
 
-# (att, name, lat, lon, dT_HW, dT_LW, dMHWS,dMHWN,dMLWN,dMLWS)
-SEC = [
+# (att, name, lat, lon, dT_HW, dT_LW, dMHWS,dMHWN,dMLWN,dMLWS[, ML])
+# ML (11. Feld, optional) = ATT-Spalte "ML Z0" = Mittelwasser über Kartennull;
+# wenn vorhanden direkt als XTide-Z0 genutzt (sonst aus Ständen berechnet).
+# --- Block A: Referenz OSTROV YEKATERININSKIY ---
+SEC_YEKAT = [
     (1009, 'Guba Belushya, Novaya Zemlya', dm(71, 32), dm(52, 19), '+0135', '+0120', -3.2, -2.6, -1.2, -0.4),
     (1010, 'Guba Nekhvatova, Novaya Zemlya', dm(71, 16), dm(53, 30), '+0143', None, -3.4, -2.8, -1.2, -0.4),
     (1011, 'Guba Kamyenka, Kara Strait', dm(70, 36), dm(57, 27), '+0735', '+0725', -3.0, -2.5, -1.0, -0.4),
@@ -128,30 +138,65 @@ SEC = [
     (1035, 'Kamenka, Mezen River', dm(65, 53), dm(44, 8), '+0821', '+0726', -1.4, -0.9, -0.4, 0.3),
 ]
 
+# --- Block B: Referenz PORT OF KEM' (Karelische Küste + Kandalaksha-Golf) ---
+# Werte aus Scan_20260615 (65).pdf = NP202 Part II S.363, doppelt gelesen.
+# Zone -0300 -> Meridian +03:00. LW ⊙ -> dt=nur HW; 11. Feld ML = ATT-"ML Z0".
+# 1067 PORT OF KEM' selbst NICHT enthalten (= Classic 'Port Kem', schon vorhanden).
+SEC_KEM = [
+    (1065, 'Ostrov Solovetskiy', dm(65, 1), dm(35, 42), '+0022', '+0032', -0.9, -0.7, -0.3, -0.2),
+    (1066, 'Ostrov Yuzhnyy Rombak', dm(65, 2), dm(35, 2), '-0001', '-0013', 0.0, 0.0, 0.0, 0.0),
+    (1069, "Mys Pon'goma Navolok", dm(65, 20), dm(34, 32), '-0022', None, -0.1, -0.1, 0.0, 0.0),
+    (1070, 'Mys Solomenny', dm(65, 41), dm(34, 53), '-0033', None, -0.1, -0.1, 0.0, 0.0),
+    (1071, 'Kalgalaksha', dm(65, 45), dm(34, 41), '+0008', None, -0.3, -0.3, -0.1, -0.1),
+    (1072, 'Gridina', dm(65, 55), dm(34, 41), '-0107', '-0110', -0.2, -0.2, -0.2, -0.2, 0.94),
+    (1073, 'Ostrov Sryedniy, Guba Keret', dm(66, 18), dm(33, 39), '-0120', '-0102', 0.1, 0.2, 0.1, 0.0),
+    (1074, 'Reka Kovda', dm(66, 42), dm(32, 52), '-0114', None, 0.4, 0.4, 0.2, 0.1),
+    (1075, 'Kandalaksha', dm(67, 8), dm(32, 25), '-0131', '-0057', 1.2, 1.1, 0.5, 0.2, 1.25),
+    (1076, 'Guba Porya', dm(66, 46), dm(33, 48), '-0130', '-0122', -0.3, -0.3, -0.2, -0.3, 0.85),
+    (1077, 'Guba Malaya Pirya', dm(66, 40), dm(34, 20), '-0114', '-0052', -0.3, -0.3, 0.0, -0.1, 0.95),
+    (1079, 'Reka Varzuga', dm(66, 16), dm(36, 57), '-0113', None, -0.3, -0.3, None, -0.1),
+    (1080, 'Tetrino', dm(66, 4), dm(38, 15), '-0143', None, 0.0, 0.0, 0.0, 0.0),
+]
 
-def transfer(s):
-    att, name, lat, lon, tHW, tLW, dHWS, dHWN, dLWN, dLWS = s
+BLOCKS = [('YEKAT', SEC_YEKAT), ('KEM', SEC_KEM)]
+
+
+def transfer(s, refkey):
+    r = REFS[refkey]
+    lev, spring, refcon = r['levels'], r['spring'], r['con']
+    tHW, tLW = s[4], s[5]
+    dHWS, dHWN, dLWN, dLWS = s[6], s[7], s[8], s[9]
     dts = [x for x in (hm(tHW), hm(tLW)) if x is not None]
     dt = sum(dts) / len(dts)
-    sec = (REF_LEVELS[0] + dHWS, REF_LEVELS[1] + dHWN, REF_LEVELS[2] + dLWN, REF_LEVELS[3] + dLWS)
-    a = (sec[0] - sec[3]) / REF_SPRING
-    z0 = sum(sec) / 4.0
+    sec_hws, sec_lws = lev[0] + dHWS, lev[3] + dLWS
+    a = (sec_hws - sec_lws) / spring          # Spring-Hub-Verhältnis (robust)
+    # Z0 = symmetrischer Mittelpunkt der Stände -> reproduziert HW/LW-Höhen.
+    # (NICHT die ATT-ML-Spalte: bei flachwasser-asymm. Häfen wie Kandalaksha läge
+    #  HW/LW dann ~0.5 m zu tief, weil die linear skalierten Konst. symmetrisch sind.)
+    if dHWN is not None and dLWN is not None:
+        z0 = (lev[0] + dHWS + lev[1] + dHWN + lev[2] + dLWN + lev[3] + dLWS) / 4.0
+    else:                                      # MHWN/MLWN unvollständig -> Spring-Mittel
+        z0 = (sec_hws + sec_lws) / 2.0
     con = {}
-    for k, (amp, g) in REF.items():
+    for k, (amp, g) in refcon.items():
         con[k] = (round(a * amp, 4), (g + SPEED[k] * dt) % 360)
     return dt, a, z0, con
 
 
-def block(s):
+def block(s, refkey):
     att, name = s[0], s[1]
-    dt, a, z0, con = transfer(s)
+    dt, a, z0, con = transfer(s, refkey)
+    refname = 'Ostrov Yekaterininskiy' if refkey == 'YEKAT' else "Port of Kem'"
+    ml = s[10] if len(s) > 10 else None
+    asym = f'; ML={ml} (shallow-water asymmetry, HW/LW prioritised over MSL)' \
+        if (ml is not None and abs(z0 - ml) > 0.25) else ''
     out = ['# BEGIN HOT COMMENTS',
            '# country: Russia',
            '# source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port',
            f'# att_number: {att}',
-           f'# note: Transfer from Ostrov Yekaterininskiy (dt={dt:+.2f}h, scale={a:.3f}); approximate',
+           f'# note: Transfer from {refname} (dt={dt:+.2f}h, scale={a:.3f}); approximate{asym}',
            '# coord_source: NP202 Part II',
-           '# date_imported: 20260615',
+           '# date_imported: 20260616',
            '# datum: Chart Datum (Z0 = mean level above CD)',
            '# confidence: 2',
            '# !units: meters',
@@ -170,25 +215,29 @@ def block(s):
 
 
 def main():
-    print(f'Referenz-Konstituenten: {len(REF)} (M2={REF["M2"]})')
+    for k, r in REFS.items():
+        print(f'Referenz {k}: {len(r["con"])} Konst. (M2={r["con"]["M2"]}, spring={r["spring"]:.2f})')
     inv = load_inventory()
     lines = list(HEADER)
-    built = skipped = 0
-    for s in SEC:
-        if not is_gap(s[2], s[3], inv):
-            print(f'  SKIP (Duplikat) {s[0]} {s[1]}')
-            skipped += 1
-            continue
-        dt, a, z0, _ = transfer(s)
-        print(f'  {s[0]} {s[1][:34]:34} dt={dt:+.2f}h scale={a:.3f} Z0={z0:.2f} '
-              f'MHWS={REF_LEVELS[0]+s[6]:.1f}')
-        lines += block(s)
-        built += 1
+    built = skipped = total = 0
+    for refkey, sec_list in BLOCKS:
+        print(f'--- Block {refkey} ---')
+        for s in sec_list:
+            total += 1
+            if not is_gap(s[2], s[3], inv):
+                print(f'  SKIP (Duplikat) {s[0]} {s[1]}')
+                skipped += 1
+                continue
+            dt, a, z0, _ = transfer(s, refkey)
+            mhws = REFS[refkey]['levels'][0] + s[6]
+            print(f'  {str(s[0]):5} {s[1][:32]:32} dt={dt:+.2f}h scale={a:.3f} Z0={z0:.2f} MHWS={mhws:.1f}')
+            lines += block(s, refkey)
+            built += 1
     lines.append('# END')
-    print(f'  ({built} gebaut, {skipped} Duplikate übersprungen)')
+    print(f'  ({built} gebaut, {skipped} Duplikate übersprungen, {total} gesamt)')
     with open(OUT, 'w', encoding='iso-8859-1') as f:
         f.write('\n'.join(lines) + '\n')
-    print(f'Geschrieben: {OUT} | {len(SEC)} Stationen')
+    print(f'Geschrieben: {OUT} | {built} Stationen')
 
 
 if __name__ == '__main__':
