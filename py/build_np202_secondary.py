@@ -158,7 +158,42 @@ SEC_KEM = [
     (1080, 'Tetrino', dm(66, 4), dm(38, 15), '-0143', None, 0.0, 0.0, 0.0, 0.0),
 ]
 
-BLOCKS = [('YEKAT', SEC_YEKAT), ('KEM', SEC_KEM)]
+# --- Block C: Referenz OSTROV YEKATERININSKIY, Terskiy-/Murman-Küste + Kola-Bucht ---
+# Scan_20260615 (65).pdf = NP202 Part II S.363 (untere Hälfte), doppelt gelesen.
+# Gezeiten-Maximum an der Gorlo-Enge (Orlov-Terskiy/Gorodetskiy ~+2.4), nach
+# beiden Seiten abnehmend -> physikalisch konsistent. ML-Spalte als Quercheck
+# (Z0 stimmt überall ±3 cm). Kola-Bucht-Häfen ~identisch zur Referenz (Diff 0).
+# No. der Kola-Bucht-Enden (1105/1107/1108) im blassen Rand leicht unsicher.
+SEC_YEKAT2 = [
+    (1082, 'Ostrov Sosnovets', dm(66, 30), dm(40, 41), '+0446', '+0439', 0.2, 0.1, -0.4, -0.1, 2.0),
+    (1083, 'Ostrov Veshnyak', dm(67, 6), dm(41, 23), '+0401', '+0402', 2.1, 1.6, 0.0, -0.3, 3.0),
+    (1084, 'Mys Orlov-Terskiy Tonkiy', dm(67, 12), dm(41, 20), '+0344', '+0347', 2.1, 1.6, 0.3, -0.1, 3.09),
+    (1085, "Mys Bol'shoy Gorodetskiy", dm(67, 43), dm(40, 55), '+0213', '+0213', 2.9, 2.4, 1.1, 0.4),
+    (1087, 'Guba Gremikha', dm(68, 4), dm(39, 30), '+0200', '+0148', 2.0, 1.6, 0.8, 0.5, 3.35),
+    (1088, 'Guba Savikha', dm(68, 11), dm(39, 7), '+0143', '+0138', 1.8, 1.5, 0.7, 0.3),
+    (1089, 'Reka Drozdovka', dm(68, 20), dm(38, 25), '+0127', '+0119', 0.8, 0.7, 0.6, 0.6, 2.81),
+    (1090, 'Guba Vostochnaya Litsa', dm(68, 38), dm(37, 48), '+0124', '+0117', 1.1, 0.8, 0.4, 0.2),
+    (1091, 'Reka Kharlovka', dm(68, 47), dm(37, 19), '+0110', '+0106', 0.2, 0.2, 0.2, 0.3, 2.37),
+    (1092, 'Guba Rynda', dm(68, 55), dm(36, 50), '+0101', '+0057', 0.4, 0.4, 0.2, 0.1, 2.32),
+    (1093, 'Guba Porchnikha', dm(69, 5), dm(36, 18), '+0046', '+0041', 0.5, 0.4, 0.1, 0.2, 2.32),
+    (1094, 'Guba Podpakhta', dm(69, 9), dm(35, 56), '+0045', '+0040', 0.4, 0.4, 0.2, 0.1, 2.30),
+    (1095, 'Guba Teriberskaya', dm(69, 11), dm(35, 8), '+0020', '+0020', 0.2, 0.0, 0.1, 0.0, 2.23),
+    (1096, 'Proliv Malyy Oleniy', dm(69, 15), dm(34, 41), '+0015', '+0015', 0.2, 0.0, 0.1, 0.0),
+    (1097, "Guba Mogil'naya, Ostrov Kildin", dm(69, 19), dm(34, 20), '+0017', '+0017', 0.3, 0.2, 0.1, 0.0, 2.27),
+    (1098, 'Guba Zelenetskaya Zapadnaya', dm(69, 18), dm(33, 45), '-0001', '-0001', 0.0, 0.0, 0.0, 0.0),
+    (1099, 'Guba Sayda', dm(69, 15), dm(33, 15), '+0003', '+0003', 0.0, 0.0, 0.0, 0.0),
+    (1101, 'Mys Velikiy', dm(69, 5), dm(33, 17), '+0001', '+0001', 0.0, 0.0, 0.0, 0.0),
+    (1102, 'Mys Bazisnyy', dm(69, 1), dm(33, 4), '+0017', '+0017', 0.0, 0.0, 0.0, 0.0),
+    (1103, 'Murmansk', dm(68, 58), dm(33, 3), '+0016', '+0005', -0.4, -0.2, 0.1, 0.3, 2.09),
+    (1105, 'Guba Korelinskiy', dm(69, 25), dm(33, 25), '-0003', '-0003', 0.0, 0.0, 0.0, 0.0),
+    (1107, 'Port Vladimir, Guba Ura', dm(69, 25), dm(33, 9), '+0008', '-0004', -0.5, -0.4, 0.1, 0.3, 2.01),
+    (1108, 'Bukhta Nasha', dm(69, 23), dm(32, 55), '-0003', '-0003', 0.0, 0.0, 0.0, 0.0),
+    (1110, 'Guba Zapadnaya Litsa', dm(69, 29), dm(32, 30), '-0003', '-0003', 0.0, 0.0, 0.0, 0.0),
+    (1111, 'Bukhta Ozerko', dm(69, 44), dm(32, 9), '-0010', '-0010', 0.0, 0.0, 0.0, 0.0),
+    (1112, "Guba Malyy Korabel'naya", dm(69, 35), dm(32, 45), '-0001', '-0001', 0.0, 0.0, 0.0, 0.0),
+]
+
+BLOCKS = [('YEKAT', SEC_YEKAT), ('KEM', SEC_KEM), ('YEKAT', SEC_YEKAT2)]
 
 
 def transfer(s, refkey):
