@@ -130,6 +130,9 @@ STATIONS = [
       {'M2': (263, 0.15), 'S2': (299, 0.06), 'K1': (114, 0.03), 'O1': (284, 0.01)}, 'PartII'),
     S(1007, 'Mys Seryebryany, Novaya Zemlya (NP202 1007)', dm(73, 21), dm(54, 4), '+03:00 :Europe/Moscow', 0.39,
       {'M2': (257, 0.24), 'S2': (337, 0.05), 'K1': (214, 0.05), 'O1': (81, 0.01)}, 'PartII'),
+    # --- Norwegischer Standardhafen Haugesund (Part III S.408 Scan 5), war nur Referenz, nicht in DB ---
+    S(1271, 'Haugesund (NP202 1271)', dm(59, 25), dm(5, 16), '+01:00 :Europe/Oslo', 0.55,
+      {'M2': (304, 0.23), 'S2': (350, 0.09), 'K1': (185, 0.02), 'O1': (19, 0.02)}, 'PartII', conf=4),
 ]
 
 
