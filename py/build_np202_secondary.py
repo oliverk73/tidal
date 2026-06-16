@@ -403,6 +403,22 @@ SEC_NORWAY_BERGEN = [
     (1248, 'Fl\xe5m, Sognefjord', dm(60, 52), dm(7, 8), -0.217, -0.217, 0.3, 0.3, 0.2, 0.0),
     (1249, 'L\xe6rdals\xf8yri, Sognefjord', dm(61, 6), dm(7, 28), -0.233, -0.233, 0.3, 0.3, 0.2, 0.0),
     (1250, 'Skjolden, Sognefjord', dm(61, 29), dm(7, 36), -0.2, -0.2, 0.3, 0.3, 0.2, 0.0),
+    # --- S.368 (Scan 17): weitere BERGEN-ref (cophase, ΔT=Einzelwert) ---
+    # Skip ohne Höhendaten: 1252 Eidsfjord, 1266 Engesund, 1268 Fjæra; 1259 Vatlestraumen unsicher; 1267 Leirvik dup.
+    (1251, 'Skjerjehamn, Undelandsund', dm(60, 57), dm(4, 58), 0.05, 0.05, 0.2, 0.0, 0.0, -0.1),
+    (1253, 'Matre, Masfjord', dm(60, 53), dm(5, 35), -0.183, -0.183, 0.1, 0.0, 0.2, -0.1),
+    (1254, 'Kilstraumen, Fensfjord', dm(60, 48), dm(4, 57), 0.183, 0.183, 0.1, 0.1, 0.0, -0.1),
+    (1255, 'Alverstraumen, Radsund', dm(60, 35), dm(5, 13), 0.233, 0.233, 0.1, 0.1, 0.2, -0.1),
+    (1256, 'Stamneshella, Sorfjord', dm(60, 40), dm(5, 45), -0.05, -0.05, 0.1, 0.1, 0.2, -0.1),
+    (1257, 'Blomv\xe5g, Rorsundet', dm(60, 32), dm(4, 53), -0.233, -0.233, 0.0, -0.1, 0.0, -0.1),
+    (1260, 'Tysse, Samnangerfjord', dm(60, 24), dm(5, 44), -0.3, -0.3, -0.2, -0.1, 0.0, -0.1),
+    (1261, 'Lokksund, Hardangerfjord', dm(60, 3), dm(5, 43), 0.117, 0.117, -0.3, -0.2, 0.0, -0.1),
+    (1262, 'Norheimsund, Hardangerfjord', dm(60, 22), dm(6, 9), 0.333, 0.333, -0.2, -0.2, -0.1, -0.1),
+    (1263, 'S\xf8rfjord (Odda), Hardangerfjord', dm(60, 4), dm(6, 33), 0.4, 0.4, 0.0, 0.0, 0.0, -0.1),
+    (1264, 'Eidfjord, Hardangerfjord', dm(60, 28), dm(7, 4), 0.317, 0.317, 0.0, 0.0, 0.2, -0.1),
+    (1265, 'Stolmen', dm(60, 1), dm(5, 5), -0.267, -0.267, -0.2, -0.2, 0.0, -0.1),
+    (1269, '\xd8len, Akrafjord', dm(59, 36), dm(5, 48), 0.117, 0.117, -0.3, -0.2, 0.0, -0.1),
+    (1270, 'Espev\xe6r, Bomlo', dm(59, 36), dm(5, 10), -0.317, -0.317, -0.5, -0.4, -0.1, -0.1),
 ]
 
 # (refkey, meridian, country, cal_h, sec_list)
