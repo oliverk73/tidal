@@ -122,10 +122,10 @@ SEC = [
     (1034, 'Semzha, Mezen River', dm(66, 9), dm(44, 6), '+0619', '+0644', 4.0, 3.9, 0.6, 0.6),
     (1036, 'Ostrov Morzhovets', dm(66, 44), dm(42, 27), '+0506', '+0454', 2.2, 1.9, 0.6, 0.4),
     (1037, 'Mys Voronov', dm(66, 31), dm(42, 14), '+0349', None, 3.1, 2.6, 1.1, 0.4),
-    # DEFERRED: 1035 Kamenka (65 53/44 08) ATT-Höhendiffs -1.4/-0.9/-0.4/+0.3
-    #   -> MHWS 2.3 m, Hub ~1.5 m. Physikalisch unmöglich neben Semzha (1034, ~6.6 m)
-    #   im selben Mezen-Trichter (Tide wächst flussaufwärts, kollabiert nicht). Wahrsch.
-    #   ATT-Druckfehler oder Sonderdatum. Nicht gebaut -> Rückfrage an Oliver.
+    # 1035 Kamenka: kleiner Hub (~1.5 m) trotz Mezen-Trichter, weil flussaufwärts
+    #   OBERHALB der Mezen-Sandbarre reibungsgedämpft. KEIN Druckfehler -> Buch-MLZ0=1.4
+    #   bestätigt intern (Mittel der 4 Stände = 1.5 ≈ 1.4). Oliver-Gegencheck 2026-06-16.
+    (1035, 'Kamenka, Mezen River', dm(65, 53), dm(44, 8), '+0821', '+0726', -1.4, -0.9, -0.4, 0.3),
 ]
 
 
