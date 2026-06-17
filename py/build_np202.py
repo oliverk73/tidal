@@ -18,8 +18,8 @@ KOORDS: FJL 910-912 amtlich aus Part II (Scan 62, S.360); Rest Geo-Gazetteer
 import os, re
 
 HARM = os.path.expanduser('~/harmonics')
-HDRSRC = f'{HARM}/utide/harmonics_att_np203.txt'   # gleiche Tide-Congen-Header-Struktur
-OUT = f'{HARM}/utide/harmonics_att_np202.txt'
+HDRSRC = f'{HARM}/att/harmonics_att_np203.txt'   # gleiche Tide-Congen-Header-Struktur
+OUT = f'{HARM}/att/harmonics_att_np202.txt'
 
 
 def read_header():

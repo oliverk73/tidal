@@ -18,7 +18,7 @@ import os, re
 
 HARM = os.path.expanduser('~/harmonics')
 LIT  = f'{HARM}/literature/harmonics_literature.txt'
-OUT  = f'{HARM}/utide/harmonics_att_np203.txt'
+OUT  = f'{HARM}/att/harmonics_att_np203.txt'
 
 def read_header():
     lines = open(LIT, encoding='iso-8859-1').read().splitlines()

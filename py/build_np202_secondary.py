@@ -16,10 +16,10 @@ Werte aus Scan_20260615 (64).pdf (NP202 Part II).
 import os, re, math
 
 HARM = os.path.expanduser('~/harmonics')
-HDRSRC = f'{HARM}/utide/harmonics_att_np203.txt'
+HDRSRC = f'{HARM}/att/harmonics_att_np203.txt'
 CLASSIC = f'{HARM}/classic/harmonics-1997-05-25_mod.txt'
 OBS = f'{HARM}/utide/harmonics_utide_observations.txt'
-OUT = f'{HARM}/utide/harmonics_att_np202_secondary.txt'
+OUT = f'{HARM}/att/harmonics_att_np202_secondary.txt'
 
 
 def read_header():

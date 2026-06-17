@@ -20,6 +20,7 @@ from collections import OrderedDict, Counter
 TCD_DIR = "/usr/share/xtide"
 HARMONICS_DIRS = [
     "harmonics/classic",
+    "harmonics/att",
     "harmonics/ihm",
     "harmonics/utide",
     "harmonics/ticon",

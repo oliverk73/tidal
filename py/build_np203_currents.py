@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: iso-8859-1 -*-
 """Baut XTide-Current-Stationen aus NP203 Vol.3 Part IIIa (Tidal Stream
-Harmonic Constants, PDF 177-179) -> harmonics/utide/harmonics_att_np203_currents.txt
+Harmonic Constants, PDF 177-179) -> harmonics/att/harmonics_att_np203_currents.txt
 
 Zwei Quell-Formate:
   * reversing: eine Zeile mit Dir(+)/Dir(-) -> 1D direkt, Flutrichtung = Dir(+)
@@ -22,7 +22,7 @@ import subprocess
 
 ROOT = os.path.expanduser("~")
 HEADER_SRC = os.path.join(ROOT, "harmonics/utide/harmonics_utide_current_tables.txt")
-OUT = os.path.join(ROOT, "harmonics/utide/harmonics_att_np203_currents.txt")
+OUT = os.path.join(ROOT, "harmonics/att/harmonics_att_np203_currents.txt")
 TCD = os.path.join(ROOT, "harmonics/binary/harmonics_att_np203_currents.tcd")
 SOURCE = "Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants"
 
