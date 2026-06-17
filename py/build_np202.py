@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: iso-8859-1 -*-
+# -*- coding: utf-8 -*-
 """ADMIRALTY NP202 (North Atlantic & Arctic) Part III -> XTide-Harmonics (Tide).
 
 Politik (Oliver 2026-06-15): NUR echte Lücken bauen. NP202-Raum sonst schon
@@ -59,9 +59,10 @@ def dm(d, m):
 
 
 # con: {Konstituente: (g_deg, H_m)}; coord_src: 'PartII' | 'gazetteer'
-def S(att, name, lat, lon, mer, z0, con, coord_src, conf=3):
+def S(att, name, lat, lon, mer, z0, con, coord_src, conf=3,
+      country='Russia', note=None):
     return dict(att=att, name=name, lat=lat, lon=lon, mer=mer, z0=z0, con=con,
-                coord_src=coord_src, conf=conf)
+                coord_src=coord_src, conf=conf, country=country, note=note)
 
 
 # M2/S2/K1/O1 = (g, H[m]) aus NP202 Part III S.406
@@ -133,16 +134,100 @@ STATIONS = [
     # --- Norwegischer Standardhafen Haugesund (Part III S.408 Scan 5), war nur Referenz, nicht in DB ---
     S(1271, 'Haugesund (NP202 1271)', dm(59, 25), dm(5, 16), '+01:00 :Europe/Oslo', 0.55,
       {'M2': (304, 0.23), 'S2': (350, 0.09), 'K1': (185, 0.02), 'O1': (19, 0.02)}, 'PartII', conf=4),
+
+    # === Trinidad/Tobago + Venezuela (Part III S.413 Scan_20260615(30); Koords Part II
+    #     S.378 Scan_20260615(50)). Konstanten + Koords VISUELL aus hochaufgel. Crops.
+    #     6-km-Gap-Check 2026-06-17: 17 echte Lücken; DUP übersprungen (Punta Gorda,
+    #     Man of War Bay, La Guaira, Port of Spain, Point Fortin -> schon gemessen).
+    #     M4/M6 aus S.W.-Korrekturen (1/4- bzw. 1/6-diurnal), wo nicht vernachlässigbar.
+    #     Golf von Paria semidiurnal-gemischt (M2 0.3-0.6 m); N-/O-Küste mikrotidal. ===
+    # --- Ost-Venezuela / Golf von Paria-Süd (ATT-Zone +0430 -> Meridian -04:30) ---
+    S(2312, 'Río Pedernales (Lagoven Jetty), Venezuela (NP202 2312)', dm(9, 59), -dm(62, 15),
+      '-04:30 :America/Caracas', 0.80,
+      {'M2': (134, 0.59), 'S2': (160, 0.18), 'K1': (194, 0.14), 'O1': (202, 0.08),
+       'M4': (172, 0.016), 'M6': (31, 0.042)}, 'PartII', conf=4,
+      country='Venezuela', note='Orinoco-Delta; Z0 inferred; phases ATT zone +0430; N2/K2 inferred'),
+    S(2318, 'Puerto de Hierro, Venezuela (NP202 2318)', dm(10, 36), -dm(62, 15),
+      '-04:30 :America/Caracas', 0.58,
+      {'M2': (110, 0.45), 'S2': (137, 0.15), 'K1': (177, 0.11), 'O1': (172, 0.08)}, 'PartII', conf=4,
+      country='Venezuela', note='Golfo de Paria E; phases ATT zone +0430; N2/K2 inferred'),
+    # --- Trinidad (Golf von Paria) + Tobago (ATT-Zone +0400 -> Meridian -04:00) ---
+    S(2319, 'Gaspar Grande, Trinidad and Tobago (NP202 2319)', dm(10, 40), -dm(61, 40),
+      '-04:00 :America/Port_of_Spain', 0.88,
+      {'M2': (110, 0.30), 'S2': (151, 0.08), 'K1': (183, 0.07), 'O1': (191, 0.06)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='Chaguaramas; phases ATT zone +0400; N2/K2 inferred'),
+    S(2320, 'Carenage Bay, Trinidad and Tobago (NP202 2320)', dm(10, 41), -dm(61, 36),
+      '-04:00 :America/Port_of_Spain', 0.73,
+      {'M2': (117, 0.27), 'S2': (139, 0.09), 'K1': (188, 0.11), 'O1': (183, 0.07)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='NW Trinidad; phases ATT zone +0400; N2/K2 inferred'),
+    S(2322, 'Lisas Point, Trinidad and Tobago (NP202 2322)', dm(10, 23), -dm(61, 29),
+      '-04:00 :America/Port_of_Spain', 0.80,
+      {'M2': (122, 0.38), 'S2': (145, 0.12), 'K1': (184, 0.12), 'O1': (173, 0.08)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='Point Lisas; Z0 inferred; phases ATT zone +0400; N2/K2 inferred'),
+    S(2323, 'Pointe-à-Pierre, Trinidad and Tobago (NP202 2323)', dm(10, 19), -dm(61, 28),
+      '-04:00 :America/Port_of_Spain', 0.81,
+      {'M2': (119, 0.39), 'S2': (146, 0.13), 'K1': (189, 0.11), 'O1': (162, 0.10)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='Golfo de Paria E; phases ATT zone +0400; N2/K2 inferred'),
+    S(2325, 'Bonasse Pier, Trinidad and Tobago (NP202 2325)', dm(10, 6), -dm(61, 52),
+      '-04:00 :America/Port_of_Spain', 1.13,
+      {'M2': (126, 0.47), 'S2': (162, 0.19), 'K1': (185, 0.11), 'O1': (173, 0.09)}, 'PartII', conf=4,
+      country='Trinidad and Tobago', note='Cedros/SW Trinidad; phases ATT zone +0400; N2/K2 inferred'),
+    S(2327, 'Herine (Erin) Bay, Trinidad and Tobago (NP202 2327)', dm(10, 4), -dm(61, 40),
+      '-04:00 :America/Port_of_Spain', 1.12,
+      {'M2': (116, 0.61), 'S2': (139, 0.21), 'K1': (191, 0.09), 'O1': (173, 0.09),
+       'M6': (161, 0.133)}, 'PartII', conf=4,
+      country='Trinidad and Tobago', note='S Trinidad; shallow-water M6; phases ATT zone +0400; N2/K2 inferred'),
+    S(2329, 'Guayaguayare Bay, Trinidad and Tobago (NP202 2329)', dm(10, 9), -dm(61, 1),
+      '-04:00 :America/Port_of_Spain', 0.76,
+      {'M2': (98, 0.41), 'S2': (137, 0.15), 'K1': (165, 0.05), 'O1': (183, 0.03),
+       'M4': (194, 0.016)}, 'PartII', conf=4,
+      country='Trinidad and Tobago', note='SE Trinidad; phases ATT zone +0400; N2/K2 inferred'),
+    S(2331, 'Nariva River (Cocal), Trinidad and Tobago (NP202 2331)', dm(10, 24), -dm(61, 2),
+      '-04:00 :America/Port_of_Spain', 0.80,
+      {'M2': (104, 0.35), 'S2': (119, 0.10), 'K1': (187, 0.08), 'O1': (182, 0.07)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='E Trinidad (Manzanilla); Z0 inferred; phases ATT zone +0400; N2/K2 inferred'),
+    S(2332, 'Guayamare Point, Trinidad and Tobago (NP202 2332)', dm(10, 45), -dm(60, 58),
+      '-04:00 :America/Port_of_Spain', 0.85,
+      {'M2': (96, 0.31), 'S2': (111, 0.09), 'K1': (184, 0.08), 'O1': (179, 0.05)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='NE Trinidad; data approx; phases ATT zone +0400; N2/K2 inferred'),
+    S(2333, 'Toco, Trinidad and Tobago (NP202 2333)', dm(10, 50), -dm(60, 56),
+      '-04:00 :America/Port_of_Spain', 0.70,
+      {'M2': (94, 0.28), 'S2': (119, 0.09), 'K1': (183, 0.10), 'O1': (172, 0.08)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='NE tip Trinidad; phases ATT zone +0400; N2/K2 inferred'),
+    S(2335, 'Las Cuevas Bay, Trinidad and Tobago (NP202 2335)', dm(10, 47), -dm(61, 24),
+      '-04:00 :America/Port_of_Spain', 0.42,
+      {'M2': (98, 0.23), 'S2': (104, 0.05), 'K1': (178, 0.05), 'O1': (173, 0.04)}, 'PartII', conf=2,
+      country='Trinidad and Tobago', note='N coast Trinidad; microtidal; phases ATT zone +0400; N2/K2 inferred'),
+    S(2336, 'Scarborough, Tobago, Trinidad and Tobago (NP202 2336)', dm(11, 11), -dm(60, 44),
+      '-04:00 :America/Port_of_Spain', 0.69,
+      {'M2': (108, 0.28), 'S2': (122, 0.10), 'K1': (181, 0.08), 'O1': (177, 0.08),
+       'M4': (108, 0.041), 'M6': (210, 0.100)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='Tobago S; shallow-water M4/M6; phases ATT zone +0400; N2/K2 inferred'),
+    S(2339, 'Plymouth, Tobago, Trinidad and Tobago (NP202 2339)', dm(11, 13), -dm(60, 47),
+      '-04:00 :America/Port_of_Spain', 0.62,
+      {'M2': (96, 0.25), 'S2': (125, 0.07), 'K1': (174, 0.09), 'O1': (168, 0.08)}, 'PartII', conf=3,
+      country='Trinidad and Tobago', note='Tobago NW; phases ATT zone +0400; N2/K2 inferred'),
+    # --- Venezuela Nordküste (ATT-Zone +0430 -> Meridian -04:30); mikrotidal ---
+    S(2344, 'Puerto Carúpano, Venezuela (NP202 2344)', dm(10, 40), -dm(63, 15),
+      '-04:30 :America/Caracas', 0.20,
+      {'M2': (60, 0.11), 'S2': (82, 0.03), 'K1': (170, 0.10), 'O1': (167, 0.07)}, 'PartII', conf=2,
+      country='Venezuela', note='N coast; microtidal/mixed-diurnal; phases ATT zone +0430; N2/K2 inferred'),
+    S(2347, 'Cumaná, Venezuela (NP202 2347)', dm(10, 28), -dm(64, 11),
+      '-04:30 :America/Caracas', 0.15,
+      {'M2': (32, 0.06), 'S2': (20, 0.01), 'K1': (171, 0.10), 'O1': (172, 0.07)}, 'PartII', conf=2,
+      country='Venezuela', note='Golfo de Cariaco; microtidal/diurnal; phases ATT zone +0430; N2/K2 inferred'),
 ]
 
 
 def block(s):
     con = infer_n2k2(s['con'])
+    note = s['note'] or (f'Arctic gap port; microtidal; phases zone {s["mer"]}; '
+                         'N2/K2 inferred')
     out = ['# BEGIN HOT COMMENTS',
-           '# country: Russia',
+           f'# country: {s["country"]}',
            '# source: ADMIRALTY Tide Tables Vol.2 (NP202), Part III Harmonic Constants',
            f'# att_number: {s["att"]}',
-           f'# note: Arctic gap port; microtidal; phases zone {s["mer"]}; N2/K2 inferred',
+           f'# note: {note}',
            f'# coord_source: {"NP202 Part II" if s["coord_src"]=="PartII" else "geo gazetteer (web)"}',
            '# date_imported: 20260615',
            '# datum: Chart Datum (Z0 = mean level above CD)',
