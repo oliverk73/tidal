@@ -216,6 +216,25 @@ STATIONS = [
       '-04:30 :America/Caracas', 0.15,
       {'M2': (32, 0.06), 'S2': (20, 0.01), 'K1': (171, 0.10), 'O1': (172, 0.07)}, 'PartII', conf=2,
       country='Venezuela', note='Golfo de Cariaco; microtidal/diurnal; phases ATT zone +0430; N2/K2 inferred'),
+
+    # === Karibik-Rest, NUR Stationen mit XTide-Tidenhub >=0.40 m (Oliver 2026-06-17).
+    #     Übriger Karibik-Raum mikrotidal ODER schon abgedeckt (Bahamas/Turks=Classic 2004
+    #     [Admiralty-Quelle], Mexiko-Golf=SEMAR, Kuba/Bermuda/Barbados=gemessen). 6-km-
+    #     Gap-Check + XTide-Mittel-Hub-Filter: nur diese 3 echte Lücken übrig. ===
+    # --- Venezuela / Estrecho de Maracaibo (ATT-Zone +0430 -> Meridian -04:30) ---
+    S(2381, 'Bahía el Tablazo, Venezuela (NP202 2381)', dm(10, 53), -dm(71, 37),
+      '-04:30 :America/Caracas', 0.45,
+      {'M2': (166, 0.24), 'S2': (83, 0.03), 'K1': (178, 0.05), 'O1': (185, 0.03)}, 'PartII', conf=3,
+      country='Venezuela', note='Estrecho de Maracaibo; Hub ~0.47 m; phases ATT zone +0430; N2/K2 inferred'),
+    S(2382, 'Punta de Palmas, Venezuela (NP202 2382)', dm(10, 48), -dm(71, 37),
+      '-04:30 :America/Caracas', 0.37,
+      {'M2': (155, 0.23), 'S2': (75, 0.04), 'K1': (163, 0.04), 'O1': (163, 0.02)}, 'PartII', conf=3,
+      country='Venezuela', note='Estrecho de Maracaibo; Hub ~0.46 m; phases ATT zone +0430; N2/K2 inferred'),
+    # --- Kuba Ostspitze (ATT-Zone +0500 -> Meridian -05:00) ---
+    S(2524, 'Baracoa, Cuba (NP202 2524)', dm(20, 21), -dm(74, 30),
+      '-05:00 :America/Havana', 0.24,
+      {'M2': (229, 0.25), 'S2': (253, 0.05), 'K1': (139, 0.08), 'O1': (147, 0.06)}, 'PartII', conf=3,
+      country='Cuba', note='E-Kuba; Hub ~0.5 m; phases ATT zone +0500; N2/K2 inferred'),
 ]
 
 
