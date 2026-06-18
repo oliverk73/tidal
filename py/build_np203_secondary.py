@@ -244,11 +244,85 @@ Q('4488','Kolkata (Garden Reach)',22+33/60,88+18/60,'Sagar Roads','India',3.19,(
 Q('4491','Canning Town',22+18/60,88+40/60,'Sagar Roads','India',3.2,(200,238),(0.6,0.7,None,None))
 
 
+# ===== INDIA VOLLSTÄNDIG (Nachtrag 2026-06-18, alle Part-II-Zeilen S.234-237) =====
+def IN(att,name,lat,lon,std,ml,t,h,skip=0):
+    SEC.append(dict(att=att,name=name,lat=lat,lon=lon,std=std,region='India',ml=ml,t=t,h=h,skip=skip))
+# -- Gujarat Kutch (ref Mumbai) --
+IN('4325','Kori Creek Entrance',23+30/60,68+27/60,'Mumbai',1.9,(-5,20),(-1.4,-0.5,None,None))
+IN('4325a','Koteshwar',23+41/60,68+49/60,'Mumbai',2.47,(39,108),(-0.4,-0.1,-0.2,0.1))
+IN('4327','Godia Creek',23+15/60,68+36/60,'Mumbai',1.90,(-16,21),(-1.4,-0.7,-0.5,-0.2))
+# -- Saurashtra (ref Okha) --
+IN('4337','Miyani',21+50/60,69+23/60,'Okha',1.01,(-100,-104),(-2.0,-1.6,-0.5,0.0))
+IN('4339','Veraval',20+54/60,70+22/60,'Okha',1.0,(-100,-105),(-1.0,-1.4,-1.2,-0.1))
+IN('4340a','Diu Head',20+41/60,70+50/60,'Okha',1.3,(-105,None),(-1.3,-1.1,0.2,0.3))
+# -- Gulf of Khambhat / Narmada (ref Bhavnagar) --
+IN('4350','Ambheta',21+41/60,72+36/60,'Bhavnagar',4.22,(-21,-17),(-2.7,-2.2,-1.2,-0.7))
+IN('4351','Mahegam',21+40/60,72+46/60,'Bhavnagar',3.9,(10,25),(-5.6,-5.4,-3.1,-1.3))
+IN('4352','Bharuch',21+41/60,72+59/60,'Bhavnagar',None,(210,525),(-7.4,-6.9,-3.2,-0.6))
+# -- Maharashtra Mumbai-Umfeld (ref Mumbai) --
+IN('4357a','Arnalapada',19+27/60,72+45/60,'Mumbai',2.70,(29,42),(0.0,0.1,0.0,0.2))
+IN('4358a','Bandra',19+2/60,72+49/60,'Mumbai',2.53,(1,3),(-0.3,-0.1,-0.1,0.1))
+IN('4360','Trombay',19+2/60,72+57/60,'Mumbai',2.52,(11,None),(0.0,0.1,-0.2,-0.1))
+IN('4361','Thana',19+12/60,72+59/60,'Mumbai',2.1,(210,None),(-0.8,-0.6,None,None))
+IN('4363','Rewas Bandar',18+49/60,72+57/60,'Mumbai',2.64,(2,-3),(0.1,0.1,0.0,0.2))
+# -- Konkan/Goa/Karnataka (ref Karachi) --
+IN('4370','Musakazi Point',16+37/60,73+20/60,'Karachi',1.37,(6,5),(-0.3,-0.4,-0.1,0.0))
+IN('4373','Devgarh',16+23/60,73+23/60,'Karachi',1.38,(3,3),(-0.3,-0.4,0.0,0.0))
+IN('4374','Malvan',16+3/60,73+28/60,'Karachi',1.17,(9,5),(-0.6,-0.6,-0.1,-0.1))
+IN('4375','Vengurla',15+51/60,73+37/60,'Karachi',1.19,(6,5),(-0.6,-0.6,-0.1,-0.1))
+IN('4378','Betul',15+8/60,73+57/60,'Karachi',1.0,(30,30),(-0.8,-0.3,-0.1,0.0))
+IN('4380','Kumta',14+25/60,74+23/60,'Karachi',1.16,(25,35),(-0.6,-0.7,-0.2,0.0))
+IN('4381','Bhatkal',13+58/60,74+32/60,'Karachi',0.70,(45,30),(-1.3,-1.3,-0.5,-0.3))
+IN('4382','Coondapoor',13+37/60,74+41/60,'Mumbai',1.52,(15,None),(None,None,None,None))
+IN('4383','Malpe',13+21/60,74+41/60,'Mumbai',1.04,(25,20),(-0.8,-0.9,-0.3,-0.1))
+# -- Mangalore/Malabar (ref Mumbai bis Cannanore) --
+IN('4385','New Mangalore',12+55/60,74+48/60,'Mumbai',0.95,(40,40),(-0.8,-1.0,-0.4,-0.1))
+IN('4385a','Mangalore',12+51/60,74+50/60,'Mumbai',1.0,(None,None),(-1.0,-1.0,-0.4,-0.1))
+IN('4386','Kasaragod',12+28/60,74+59/60,'Mumbai',0.89,(27,None),(-1.1,-1.1,-0.3,0.0))
+IN('4387','Cannanore',11+51/60,75+22/60,'Mumbai',1.02,(40,30),(-1.0,-1.2,-0.2,0.0))
+# -- Kerala (ref Kochi Willingdon) --
+IN('4390','Beypore',11+10/60,75+49/60,'Kochi',0.88,(-14,-13),(0.4,0.3,0.1,0.0))
+IN('4391','Ponnani',10+47/60,75+54/60,'Kochi',0.71,(-9,-10),(0.2,0.1,-0.1,0.0))
+IN('4394','Alleppey',9+29/60,76+19/60,'Kochi',0.55,(0,None),(0.0,-0.1,-0.2,-0.2))
+IN('4395','Quilon',8+53/60,76+34/60,'Kochi',0.67,(35,-45),(0.0,0.0,0.0,0.0))
+IN('4396','Trivandrum',8+28/60,76+56/60,'Kochi',0.55,(26,20),(-0.1,-0.1,-0.2,-0.1))
+IN('4397','Muttam Point',8+7/60,77+19/60,'Kochi',0.49,(28,19),(-0.2,-0.2,-0.1,-0.1))
+# -- Gulf of Mannar (ref Colombo) --
+IN('4422','Kulasekarapatnam',8+24/60,78+3/60,'Colombo',0.60,(-4,0),(0.2,0.1,0.2,0.0))
+IN('4423','Tuticorin',8+45/60,78+12/60,'Colombo',0.64,(2,6),(0.3,0.2,0.3,0.2))
+IN('4425','Pamban Pass',9+16/60,79+12/60,'Colombo',0.41,(8,12),(0.0,0.0,None,None))
+# -- E-Küste Tamil Nadu/Andhra (ref Trincomalee / Chennai) --
+IN('4446','Kottaippattanam',9+59/60,79+11/60,'Trincomalee',0.4,(240,None),(-0.1,-0.1,None,None))
+IN('4447','Nagapattinam',10+46/60,79+51/60,'Chennai',0.34,(26,45),(-0.5,-0.3,-0.2,-0.1))
+IN('4449','Cuddalore',11+43/60,79+47/60,'Chennai',0.70,(5,-5),(-0.1,0.0,0.2,0.2))
+IN('4450','Pondicherry',11+56/60,79+50/60,'Chennai',0.88,(-8,-9),(0.2,0.2,0.3,0.2))
+IN('4453','Pulicat',13+27/60,80+19/60,'Chennai',0.50,(None,None),(-0.3,-0.2,0.0,0.1))
+IN('4455','Vadarevu',15+48/60,80+25/60,'Chennai',0.59,(None,None),(0.4,0.3,0.3,0.3))
+IN('4456','Nizampatam',15+53/60,80+40/60,'Chennai',0.9,(10,None),(0.4,0.4,0.3,0.3))
+IN('4457','Machilipatnam',16+11/60,81+12/60,'Chennai',1.1,(20,20),(0.4,0.4,0.5,0.5))
+IN('4459','Sacramento Shoal',16+36/60,82+19/60,'Chennai',0.76,(24,5),(0.1,0.2,0.1,0.1))
+# -- N-Andhra/Odisha (ref Bassein=Pathein/Myanmar) --
+IN('4464','Bhimunipatnam',17+54/60,83+27/60,'Bassein',1.14,(-127,-126),(-0.6,-0.4,None,None))
+IN('4465','Kalingapatnam',18+21/60,84+8/60,'Bassein',1.01,(-131,-103),(-0.7,-0.7,None,None))
+IN('4468','Baruva',18+52/60,84+36/60,'Bassein',1.0,(-127,-108),(-0.7,-0.5,None,None))
+IN('4469','Gopalpur',19+16/60,84+55/60,'Bassein',1.11,(-108,-1),(-0.8,-0.5,-0.2,0.1))
+IN('4471','Chilka Mouth',19+43/60,85+37/60,'Bassein',0.98,(-52,-52),(-1.0,-0.6,-0.3,0.1))
+IN('4472','Kushabhadra River',19+51/60,86+3/60,'Bassein',1.16,(-105,-43),(-0.5,-0.3,-0.2,-0.2))
+IN('4473','Devi River Entrance',19+57/60,86+22/60,'Bassein',1.65,(-115,None),(0.0,0.2,0.2,0.5))
+IN('4474','False Point',20+25/60,86+47/60,'Bassein',1.54,(-54,-54),(0.1,0.2,0.1,0.1))
+# -- Hooghly (ref Sagar Roads) --
+IN('4482','Gangra Semaphore',21+57/60,88+11/60,'Sagar Roads',3.16,(5,10),(0.4,0.3,-0.1,-0.1))
+IN('4483','Balari Semaphore',22+5/60,88+11/60,'Sagar Roads',3.16,(122,216),(0.0,0.0,None,None))
+IN('4485','Hugli Point Semaphore',22+13/60,88+4/60,'Sagar Roads',3.30,(217,311),(0.0,0.0,None,None))
+IN('4486','Moyapur',22+26/60,88+8/60,'Sagar Roads',3.2,(244,None),(0.0,0.0,None,None))
+IN('4490','Sandhead',20+58/60,88+35/60,'Sagar Roads',1.8,(-22,-42),(-2.4,-1.8,None,None))
+
 # ----- reference resolver (live harmonics files) -----
 import glob
 FILES = (glob.glob(f'{HARM}/classic/*.txt')+glob.glob(f'{HARM}/ticon/*.txt')
        + glob.glob(f'{HARM}/att/*.txt')+glob.glob(f'{HARM}/utide/*.txt')
        + glob.glob(f'{HARM}/literature/*.txt'))
+FILES=[x for x in FILES if 'np203_secondary' not in x]
 _MER=re.compile(r'^([+-]\d{2}:\d{2})\s*:(\S+)')
 _CON=re.compile(r'^([A-Za-z][A-Za-z0-9]*)\s+([\-\d.]+)\s+([\-\d.]+)\s*$')
 _ZL =re.compile(r'^([\-\d.]+)\s+meters')
@@ -294,7 +368,8 @@ REFMAP={
  'Majis (Sohar)':'Muscat (Sultan Qaboos','Khowr-e Musa Bar':'Khowr-e Musa',
  'Bandar-e Shahid Rajai':'Bandar-e Shahid Rajai (NP203','Shatt al Arab Outer Bar':'Khowr-e Musa',
  'Karachi':'Karachi','Mumbai':'Mumbai (Colaba','Okha':'Okha (NP203','Bhavnagar':'Bhavnagar',
- 'Sagar Roads':'Sagar Roads (NP203','Bassein':None,
+ 'Sagar Roads':'Sagar Roads (NP203','Bassein':'Pathein (Bassein River)',
+ 'Chennai':'Chennai, Tamil Nadu','Trincomalee':'Trincomalee','Colombo':'Colombo','Kochi':'Kochi (Willingdon Island)',
  'Cape Town':'Cape Town','Mossel Bay':'Mossel Bay','Port Elizabeth':'Port Elizabeth',
  'East London':'East London','Durban':'Durban'}
 
@@ -344,6 +419,7 @@ def _refpts():
     for f in (glob.glob(f'{HARM}/classic/*.txt')+glob.glob(f'{HARM}/ticon/*.txt')
              +glob.glob(f'{HARM}/att/*.txt')+glob.glob(f'{HARM}/utide/*.txt')
              +glob.glob(f'{HARM}/literature/*.txt')+glob.glob(f'{HARM}/fes2022/*.txt')):
+        if 'np203_secondary' in f: continue
         t=open(f,encoding='iso-8859-1').read()
         for la,lo in zip(re.findall(r'# !latitude:\s*([\-\d.]+)',t),re.findall(r'# !longitude:\s*([\-\d.]+)',t)):
             pts.append((float(la),float(lo)))
@@ -356,6 +432,7 @@ def conf_of(tr,s):
     if tr['fS']>1.6 or tr['fS']<0.55: c=4
     if abs(tr['dt'])>1.5: c=min(c,4)
     if s['h'][2] is None or s['h'][3] is None: c=min(c,4)
+    if tr['M2n']<0.50: c=min(c,3)
     return c
 
 def block(s,tr):
@@ -388,7 +465,7 @@ def main():
         rn,rr=find(q)
         if not rr: continue
         tr=transfer(s,rr)
-        if not tr or tr['M2n']<0.30: continue
+        if not tr or tr['M2n']<0.05: continue
         tr['refname']=rn
         built.append((s,tr))
     lines=list(HEADER)
