@@ -1,29 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Rendert einen komprimierten ATT-Scan korrekt orientiert (Rohbild ist
-vertikal gespiegelt -> ImageOps.flip) als PNG nach /tmp, zum Lesen.
+"""Rendert einen komprimierten ATT-Scan als PNG nach /tmp, zum Lesen.
+Die komprimierten Scans sind seit compress_scans.py (get_pixmap) bereits
+korrekt orientiert -> kein Flip mehr noetig.
 Aufruf: python render_scan.py "Scan_20260615 (30)" [oberer_anteil unterer_anteil]
 """
-import io
 import sys
 from pathlib import Path
 
 import fitz
-from PIL import Image, ImageOps
+from PIL import Image
 
 DST = Path('/mnt/c/Users/Ihr Benutzerkonto/Pictures/Scans_compressed')
 
 
 def page_img(p: Path):
     d = fitz.open(p)
-    imgs = d[0].get_images(full=True)
-    if imgs:
-        im = Image.open(io.BytesIO(d.extract_image(imgs[0][0])['image'])).convert('L')
-    else:
-        pix = d[0].get_pixmap(dpi=200, colorspace=fitz.csGRAY)
-        im = Image.frombytes('L', (pix.width, pix.height), pix.samples)
+    pix = d[0].get_pixmap(dpi=200, colorspace=fitz.csGRAY)
+    im = Image.frombytes('L', (pix.width, pix.height), pix.samples)
     d.close()
-    return ImageOps.flip(im)
+    return im
 
 
 def main():

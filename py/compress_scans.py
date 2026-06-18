@@ -18,33 +18,23 @@ from PIL import Image
 SRC = Path('/mnt/c/Users/Ihr Benutzerkonto/Pictures/Scans')
 DST = SRC.parent / 'Scans_compressed'
 QUALITY = 78
+DPI = 300
 
 
 def compress_pdf(src: Path, dst: Path) -> tuple[int, int]:
     din = fitz.open(src)
     dout = fitz.open()
     for page in din:
-        imgs = page.get_images(full=True)
-        if len(imgs) == 1:
-            # Standardfall: ein Vollseiten-Bild -> direkt re-encoden
-            raw = din.extract_image(imgs[0][0])['image']
-            im = Image.open(io.BytesIO(raw))
-            if im.mode != 'L':
-                im = im.convert('L')
-            buf = io.BytesIO()
-            im.save(buf, 'JPEG', quality=QUALITY, optimize=True)
-            pg = dout.new_page(width=im.width * 72 / 300,
-                               height=im.height * 72 / 300)
-            pg.insert_image(pg.rect, stream=buf.getvalue())
-        else:
-            # Fallback: Seite als Ganzes bei 200 DPI rendern
-            pix = page.get_pixmap(dpi=200, colorspace=fitz.csGRAY)
-            buf = io.BytesIO()
-            Image.frombytes('L', (pix.width, pix.height), pix.samples).save(
-                buf, 'JPEG', quality=QUALITY, optimize=True)
-            pg = dout.new_page(width=pix.width * 72 / 200,
-                               height=pix.height * 72 / 200)
-            pg.insert_image(pg.rect, stream=buf.getvalue())
+        # IMMER via get_pixmap rendern: respektiert die Seiten-Transformations-
+        # matrix -> korrekte Anzeige-Orientierung. (extract_image lieferte je nach
+        # Scan gespiegelt/gedreht = uneinheitlich kopfstehende Lesekopien.)
+        pix = page.get_pixmap(dpi=DPI, colorspace=fitz.csGRAY)
+        buf = io.BytesIO()
+        Image.frombytes('L', (pix.width, pix.height), pix.samples).save(
+            buf, 'JPEG', quality=QUALITY, optimize=True)
+        pg = dout.new_page(width=pix.width * 72 / DPI,
+                           height=pix.height * 72 / DPI)
+        pg.insert_image(pg.rect, stream=buf.getvalue())
     dout.save(dst, deflate=True, garbage=4)
     dout.close(); din.close()
     return src.stat().st_size, dst.stat().st_size
