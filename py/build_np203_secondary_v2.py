@@ -31,7 +31,7 @@ REGIONS['Gujarat'] = [
 ('4343','Pipavav Bandar',20.9700,71.5100,'Okha',1.76,210,200,-0.3,-0.6,0.0,0.1,''),
 ('4345','Piram Island',21.6000,72.3500,'Bhavnagar',5.2,-40,None,-1.3,-1.0,None,None,''),
 ('4348','Khambhat (Cambay)',22.3100,72.6200,'Bhavnagar',4.2,100,None,-2.1,None,None,None,''),
-('4349','Dahej Bandar',21.7000,72.5900,'Bhavnagar',4.90,-25,-110,-2.3,-2.2,0.5,1.8,''),
+('4349','Dahej Bandar',21.7345,72.5428,'Bhavnagar',4.90,-25,-110,-2.3,-2.2,0.5,1.8,''),
 ('4350','Ambetha',21.6821,72.6000,'Bhavnagar',4.22,-21,-17,-2.7,-2.2,-1.2,-0.7,''),
 ('4351','Mehgam',21.6731,72.7572,'Bhavnagar',3.9,10,25,-5.6,-5.4,-3.1,-1.3,''),
 ('4352','Bharuch',21.7000,72.9900,'Bhavnagar',None,210,525,-7.4,-6.9,-3.2,-0.6,''),
@@ -58,10 +58,11 @@ def main():
             lines+=blk; built.append((region,nm,cf,tr['M2n']))
     # 2) alle übrigen NP203-Part-II-Häfen aus der Engine-Datenbasis (ATT-Koords, conf wie gehabt),
     #    Gujarat-atts ausgelassen (oben geo-verifiziert ersetzt), Veraval 4339 raus (Dublette)
+    FORCE={'4469'}  # Gopalpur: Bestandsstation nur 4-6 Konstituenten -> ATT-Transfer trotzdem bauen
     for sx in B.SEC:
         if sx.get('skip'): continue
         if sx['att'] in gj_atts or sx['att']=='4339': continue
-        if not B.isgap(sx): continue
+        if sx['att'] not in FORCE and not B.isgap(sx): continue
         q=B.REFMAP.get(sx['std']); 
         if q is None: continue
         rn,rr=B.find(q)

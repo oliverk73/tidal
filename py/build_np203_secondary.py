@@ -387,7 +387,9 @@ def transfer(s,rr):
     if dMHWN is None: dMHWN=dMHWS
     if dMLWN is None: dMLWN=dMLWS
     SRs=SR+(dMHWS-dMLWS); NRs=NR+(dMHWN-dMLWN)
-    if SRs<=0: return None
+    # ATT-Höhendiff kann gegen kleine Referenz negativ werden (mikrotidal, z.B. E-Madagaskar):
+    # nicht verwerfen, sondern auf kleinen Positivwert klemmen -> Hafen wird trotzdem gebaut (conf 3).
+    if SRs<=0: SRs=max(0.10, 0.10*SR)
     fS=max(.05,min(3.,SRs/SR)); fN=max(.05,min(3.,NRs/NR)) if NR>.01 else fS
     su=fS*(M2+S2); di=fN*(M2-S2); M2n=max(0,.5*(su+di)); S2n=max(0,.5*(su-di)); fD=.5*(fS+fN)
     t=s.get('t'); dt=0.0
