@@ -98,7 +98,7 @@ Q('3815','Pomene',-(21+39/60),35+26/60,'Beira','Mozambique',2.41,(-33,-33),(-2.2
 Q('3816','Porto de Bartolomeu Dias',-(21+7/60),35+4/60,'Beira','Mozambique',2.40,(-16,-16),(-2.3,-1.5,-0.9,-0.2))
 Q('3818','Porto de Chiloane',-(20+37/60),34+53/60,'Beira','Mozambique',3.49,(-25,-25),(-0.4,-0.1,-0.1,0.1))
 Q('3820','Porto de Sofala',-(20+11/60),34+45/60,'Beira','Mozambique',3.2,(-15,None),(-0.9,-0.6,None,None))
-Q('3822','Pungue River Bar',-(20+0/60),34+58/60,'Beira','Mozambique',None,(-40,None))
+Q('3822','Pungue River Bar',-(20+0/60),34+58/60,'Beira','Mozambique',3.56,(-40,None))
 Q('3826','Inhamissengo Entrance',-(18+54/60),36+12/60,'Beira','Mozambique',2.0,(-30,None),(-2.9,-1.9,None,None))
 Q('3831','Morrubune',-(18+0/60),36+53/60,'Beira','Mozambique',2.60,(-34,-42),(-2.0,-1.3,-0.7,-0.1))
 Q('3833','Macuse',-(17+43/60),37+11/60,'Beira','Mozambique',2.3,(-40,-55),(-2.4,-1.7,-1.0,-0.3))
@@ -380,18 +380,26 @@ ISO={'Mozambique':'Mozambique','Madagascar':'Madagascar','Tanzania':'Tanzania','
 def transfer(s,rr):
     con=rr['con']; M2=con.get('M2',(0,0))[0]; S2=con.get('S2',(0,0))[0]
     if M2<=0: return None
-    SR=2*(M2+S2); NR=2*(M2-S2); h=s.get('h')
-    if not h or h[0] is None: return None
-    dMHWS,dMHWN,dMLWN,dMLWS=h
-    if dMLWS is None: dMLWS=0.0
-    if dMHWN is None: dMHWN=dMHWS
-    if dMLWN is None: dMLWN=dMLWS
-    SRs=SR+(dMHWS-dMLWS); NRs=NR+(dMHWN-dMLWN)
-    # ATT-Höhendiff kann gegen kleine Referenz negativ werden (mikrotidal, z.B. E-Madagaskar):
-    # nicht verwerfen, sondern auf kleinen Positivwert klemmen -> Hafen wird trotzdem gebaut (conf 3).
-    if SRs<=0: SRs=max(0.10, 0.10*SR)
-    fS=max(.05,min(3.,SRs/SR)); fN=max(.05,min(3.,NRs/NR)) if NR>.01 else fS
-    su=fS*(M2+S2); di=fN*(M2-S2); M2n=max(0,.5*(su+di)); S2n=max(0,.5*(su-di)); fD=.5*(fS+fN)
+    SR=2*(M2+S2); NR=2*(M2-S2); h=s.get('h'); _t=s.get('t')
+    if not h or h[0] is None:
+        # Keine Höhendifferenzen. Nur sinnvoll baubar, wenn wenigstens eine ZEITdifferenz
+        # vorliegt (echter ATT-Sekundärhafen). ATT-Konvention: fehlende Höhendiff => Hub
+        # entspricht dem Bezugshafen => fS=fN=1.0, nur zeitversetzt (conf<=4 via conf_of).
+        # Ohne Zeit- UND Höhendiff (reine Platzhalter) weiter droppen.
+        if not _t or all(x is None for x in _t):
+            return None
+        fS=fN=fD=1.0; M2n=M2; S2n=S2
+    else:
+        dMHWS,dMHWN,dMLWN,dMLWS=h
+        if dMLWS is None: dMLWS=0.0
+        if dMHWN is None: dMHWN=dMHWS
+        if dMLWN is None: dMLWN=dMLWS
+        SRs=SR+(dMHWS-dMLWS); NRs=NR+(dMHWN-dMLWN)
+        # ATT-Höhendiff kann gegen kleine Referenz negativ werden (mikrotidal, z.B. E-Madagaskar):
+        # nicht verwerfen, sondern auf kleinen Positivwert klemmen -> Hafen wird trotzdem gebaut (conf 3).
+        if SRs<=0: SRs=max(0.10, 0.10*SR)
+        fS=max(.05,min(3.,SRs/SR)); fN=max(.05,min(3.,NRs/NR)) if NR>.01 else fS
+        su=fS*(M2+S2); di=fN*(M2-S2); M2n=max(0,.5*(su+di)); S2n=max(0,.5*(su-di)); fD=.5*(fS+fN)
     t=s.get('t'); dt=0.0
     if t:
         v=[x for x in t if x is not None]
@@ -433,12 +441,20 @@ def conf_of(tr,s):
     c=5
     if tr['fS']>1.6 or tr['fS']<0.55: c=4
     if abs(tr['dt'])>1.5: c=min(c,4)
-    if s['h'][2] is None or s['h'][3] is None: c=min(c,4)
+    _h=s.get('h')
+    if _h is None or _h[2] is None or _h[3] is None: c=min(c,4)
     if tr['M2n']<0.50: c=min(c,3)
     return c
 
 def block(s,tr):
-    name=f"{s['name']} (NP203), {ISO.get(s['region'],s['region'])}"
+    # KEIN (NP203)-Suffix im Namen (att_number steht in Metadaten); Versalnamen -> Titlecase.
+    # Vgl. Memory feedback_att_no_np_suffix.
+    _pl=s['name']
+    if _pl.isupper():
+        _sm={'de','da','do','dos','das','del','di','du','e','y','of','the','and','la','le','les'}
+        _pl=' '.join((w.lower() if i and w.lower() in _sm else w.capitalize())
+                     for i,w in enumerate(_pl.split()))
+    name=f"{_pl}, {ISO.get(s['region'],s['region'])}"
     conf=conf_of(tr,s); z0=s.get('ml')
     if z0 is None: z0=round(tr['M2n']+tr['S2n'],2)
     z0=float(z0)

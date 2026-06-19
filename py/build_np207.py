@@ -162,7 +162,13 @@ def main():
             z0_inferred = True
         country, tz = country_tz(lat, lon)
         place = (s['place'] or m.get('place') or f'NP207 {no}').strip()
-        name = f'{place}, {country} (NP207 {no})'
+        # ATT druckt Standardhäfen in Versalien -> Titlecase; KEIN (NP20x)-Suffix im Namen
+        # (att_number steht in den Metadaten). Vgl. Memory feedback_att_no_np_suffix.
+        if place.isupper():
+            small = {'de','da','do','dos','das','del','di','du','e','y','of','the','and','la','le','les'}
+            place = ' '.join((w.lower() if i and w.lower() in small else w.capitalize())
+                             for i, w in enumerate(place.split()))
+        name = f'{place}, {country}'
         mer = meridian_for(s['zone'])
         m2h = s['con']['M2'][1]
         conf = 2 if m2h < 0.25 else 3
