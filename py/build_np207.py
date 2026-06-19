@@ -127,7 +127,7 @@ def block(no, name, lat, lon, mer, z0, con, country, conf, note):
            '# !units: meters',
            f'# !longitude: {lon:.4f}',
            f'# !latitude: {lat:.4f}',
-           f'{name} Tide',
+           name,
            f'{mer} :{country_tz(lat, lon)[1]}',
            f'{z0:.4f} meters']
     for c in ORDER:

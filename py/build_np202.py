@@ -254,7 +254,7 @@ def block(s):
            '# !units: meters',
            f'# !longitude: {s["lon"]:.4f}',
            f'# !latitude: {s["lat"]:.4f}',
-           f'{s["name"]} Tide',
+           s["name"],
            (s["mer"] if ':' in s["mer"] else f'{s["mer"]} :UTC'),
            f'{s["z0"]:.4f} meters']
     for c in ORDER:
