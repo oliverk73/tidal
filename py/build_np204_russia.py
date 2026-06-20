@@ -51,6 +51,19 @@ S = [
  # Tschukotka (Zone -1200 -> +12:00, Asia/Anadyr; West-Laenge)
  ('8369','Anadyr',64,44,177,32,-1,'+12:00','Asia/Anadyr',1.01,(0.63,330),(0.01,37),(0.13,188),(0.12,162)),
  ('8383','Mys Uelen',66,9,169,43,-1,'+12:00','Asia/Anadyr',0.30,(0.06,219),(0.02,322),(0.01,51),(0.01,83)),
+ # --- Tatarstraße/Amur-Provinz (S.382/348-349). Zone -1000 -> +10:00, Asia/Vladivostok.
+ # Starka..Lazareva semidiurnal; Amur-Mündung (Uyuzyut/Cheushi/Baidukov) diurnal;
+ # Primorje-Küste (St. Olga/Vystrechni) mikrotidal. De Kastri Bay schon abgedeckt.
+ ('8163','St. Olga Bay',43,43,135,13,1,'+10:00','Asia/Vladivostok',0.9,(0.10,129),(0.10,154),(0.0,0),(0.0,0)),
+ ('8171','Cape Vystrechni',48,9,139,44,1,'+10:00','Asia/Vladivostok',0.10,(0.02,326),(0.01,177),(0.03,34),(0.04,304)),
+ ('8176','Starka Bay',50,8,140,34,1,'+10:00','Asia/Vladivostok',0.80,(0.49,297),(0.19,353),(0.06,356),(0.06,319)),
+ ('8179','Cape Sushcheva',51,42,141,7,1,'+10:00','Asia/Vladivostok',1.10,(0.62,282),(0.23,328),(0.07,316),(0.03,234)),
+ ('8180','Cape Chikhacheva',51,47,141,12,1,'+10:00','Asia/Vladivostok',1.17,(0.76,301),(0.29,345),(0.07,8),(0.05,329)),
+ ('8181','Cape Muraveva',52,9,141,33,1,'+10:00','Asia/Vladivostok',1.13,(0.54,324),(0.21,16),(0.09,2),(0.11,334)),
+ ('8182','Cape Lazareva',52,15,141,33,1,'+10:00','Asia/Vladivostok',1.2,(0.70,354),(0.30,45),(0.10,15),(0.10,335)),
+ ('8184','Uyuzyut Island',52,49,141,13,1,'+10:00','Asia/Vladivostok',0.45,(0.05,250),(0.02,183),(0.20,37),(0.18,336)),
+ ('8186','Cheushi Island',53,17,141,26,1,'+10:00','Asia/Vladivostok',1.05,(0.25,211),(0.05,276),(0.39,312),(0.34,250)),
+ ('8187','Baidukov Island',53,18,141,25,1,'+10:00','Asia/Vladivostok',1.09,(0.28,188),(0.06,239),(0.40,264),(0.35,244)),
 ]
 
 
@@ -71,8 +84,11 @@ def read_header():
 
 
 HEADER, ORDER = read_header()
+# Eigene NP204-Stationen aus dem Inventory ausschliessen (sonst nach Deploy/Markerlauf
+# Selbst-Dubletten -> Records gingen verloren). s[3] = Quell-TCD.
 INVPTS = [(s[1], s[2]) for s in json.load(open(INV))['stations']
-          if isinstance(s[1], (int, float)) and isinstance(s[2], (int, float))]
+          if isinstance(s[1], (int, float)) and isinstance(s[2], (int, float))
+          and not (len(s) > 3 and str(s[3]).startswith('harmonics_att_np204'))]
 
 
 def is_gap(lat, lon, km=15.0):

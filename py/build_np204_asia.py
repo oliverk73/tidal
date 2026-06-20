@@ -107,7 +107,8 @@ def read_header():
 
 HEADER, ORDER = read_header()
 INVPTS = [(s[1], s[2]) for s in json.load(open(INV))['stations']
-          if isinstance(s[1], (int, float)) and isinstance(s[2], (int, float))]
+          if isinstance(s[1], (int, float)) and isinstance(s[2], (int, float))
+          and not (len(s) > 3 and str(s[3]).startswith('harmonics_att_np204'))]
 
 
 def is_gap(lat, lon, km=12.0):

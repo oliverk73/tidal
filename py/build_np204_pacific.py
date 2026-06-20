@@ -108,7 +108,8 @@ def block(att, name, lat, lon, mer, tz, z0, con):
 
 def main():
     inv = [(s[1], s[2]) for s in json.load(open(INV))['stations']
-           if isinstance(s[1], (int, float)) and isinstance(s[2], (int, float))]
+           if isinstance(s[1], (int, float)) and isinstance(s[2], (int, float))
+           and not (len(s) > 3 and str(s[3]).startswith('harmonics_att_np204'))]
     recs = []; built = []; dup = []
     for r in S:
         att, name, ld, lm, od, om, mer, tz, country, z0, M2, S2, K1, O1 = r
