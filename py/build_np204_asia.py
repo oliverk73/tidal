@@ -80,6 +80,12 @@ S = [
  ('7177',"T'u-ko-k'u",24,11,120,29,'+08:00','Asia/Taipei','Taiwan',2.18,(1.48,327),(0.37,16),(0.18,268),(0.15,232)),
  ('7178','Fang-yuan',23,55,120,18,'+08:00','Asia/Taipei','Taiwan',2.17,(1.43,331),(0.32,19),(0.22,273),(0.20,235)),
  ('7181','Kuo-sheng Kang',23,6,120,1,'+08:00','Asia/Taipei','Taiwan',1.70,(0.29,295),(0.04,330),(0.19,278),(0.18,236)),
+ # --- China Hangzhou Bay + Pearl-River-Delta (S.332/328, Part III p375/p373) ---
+ # Nur eindeutige Part-III-Matches. Yangtze-Flusshäfen (7277 Haining-Bore, 7286-7294)
+ # deferiert: Part-II/III-Namen weichen ab (7286 Liuhe Kou vs Changshu) -> nicht geraten.
+ ('7269','Baijie Shan',30,37,122,25,'+08:00','Asia/Shanghai','China',2.5,(1.2,286),(0.5,330),(0.3,198),(0.2,156)),
+ ('7086','Wailingding Dao',22,6,114,2,'+08:00','Asia/Shanghai','China',1.26,(0.41,272),(0.16,299),(0.35,301),(0.30,254)),
+ ('7087','Wenwei Zhou',21,49,113,56,'+08:00','Asia/Shanghai','China',1.1,(0.3,275),(0.1,305),(0.3,302),(0.3,255)),
 ]
 
 
