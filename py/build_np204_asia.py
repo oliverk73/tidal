@@ -10,7 +10,7 @@ als Recommended fuehren (vgl. feedback_microtidal_skip).
 import os, re, math, json
 HARM = os.path.expanduser('~/harmonics')
 HDRSRC = f'{HARM}/att/harmonics_att_np203.txt'
-OUT = f'{HARM}/att/harmonics_att_np204_asia.txt'
+OUT = f'{HARM}/help/np204/np204_asia.txt'   # Scratch; deployte Datei baut build_np204.py
 INV = os.path.expanduser('~/static/js/leaflet_markers_data.json')
 
 # att,name, latd,latm, lond,lonm, mer, tz, country, Z0, M2,S2,K1,O1 (H,g)

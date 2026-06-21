@@ -256,9 +256,7 @@ SOURCE_GROUPS = OrderedDict([
                                                         'harmonics_att_np203_secondary.tcd',
                                                         'harmonics_att_np207.tcd',
                                                         'harmonics_att_np207_secondary.tcd',
-                                                        'harmonics_att_np204_secondary.tcd',
-                                                        'harmonics_att_np204_russia.tcd',
-                                                        'harmonics_att_np204_asia.tcd']}),
+                                                        'harmonics_att_np204_secondary.tcd']}),
     ('Admiralty ATT Strömung', {'color': '#0D47A1', 'files': ['harmonics_att_np203_currents.tcd']}),
 ])
 
