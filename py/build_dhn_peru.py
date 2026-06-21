@@ -8,7 +8,9 @@ Fit mit FESTER 8-Konstituenten-Liste (auto explodiert bei 2 Clustern, s. Validie
 Phasen Greenwich (Daten zu UTC konvertiert: DHN-Lokalzeit + 5h). Z0 = Fit-Mittel
 ueber Chart Datum (DHN). Validiert: Paita M2 +3.4%/+3.2 deg vs. TICON4 (UHSLC).
 
-Output: harmonics/utide/harmonics_utide_peru_dhn.txt (ISO-8859-1), Gruppe "UTide TC".
+Output (--write): haengt neue Stationen (Bloecke ohne congen-Header) an die kanonische
+harmonics/utide/harmonics_utide_tidetables.txt (Gruppe "UTide TC"), mit Dublettenschutz
+ueber station_id_context. Danach tidetables.tcd neu bauen. Ohne --write: nur QA-Tabelle.
 """
 import os, re, zlib, glob
 import numpy as np
@@ -18,7 +20,7 @@ import utide, matplotlib.dates as mdates
 HARM = os.path.expanduser('~/harmonics')
 PERU = os.path.expanduser('~/annual_predictions/peru')
 HDRSRC = f'{HARM}/att/harmonics_att_np203.txt'
-OUT = f'{HARM}/utide/harmonics_utide_peru_dhn.txt'
+OUT = f'{HARM}/utide/harmonics_utide_tidetables.txt'  # kanonische UTide-TC-Datei
 
 CONSTIT = ['M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1']
 MES = {'ENE': 1, 'FEB': 2, 'MAR': 3, 'ABR': 4, 'MAY': 5, 'JUN': 6,
@@ -189,11 +191,18 @@ def main():
     ph = [m2g for lat, port, (m2a, m2g), *_ in sorted(rows)]
     print("\nM2-Phasen (N->S):", [round(p) for p in ph])
     if qa:
-        print("\n(QA-Modus — mit --write wird geschrieben)")
+        print("\n(QA-Modus — mit --write wird an tidetables.txt angehaengt)")
         return
+    existing = open(OUT, encoding='iso-8859-1').read()
+    if not existing.endswith('\n'):
+        existing += '\n'
+    new = [b for b in blocks
+           if f'station_id_context: {b.splitlines()[4].split(": ",1)[1]}' not in existing]
+    skipped = len(blocks) - len(new)
     with open(OUT, 'w', encoding='iso-8859-1') as f:
-        f.write('\n'.join(HEADER) + '\n' + '\n'.join(blocks) + '\n')
-    print(f"\nGeschrieben: {len(blocks)} Stationen -> {OUT}")
+        f.write(existing + ('\n'.join(new) + '\n' if new else ''))
+    print(f"\nAngehaengt an {OUT}: {len(new)} neu, {skipped} bereits vorhanden (uebersprungen)."
+          f"\n-> danach: build_tide_db harmonics/binary/harmonics_utide_tidetables.tcd {OUT}")
 
 
 if __name__ == '__main__':
