@@ -86,6 +86,14 @@ S = [
  ('7269','Baijie Shan',30,37,122,25,'+08:00','Asia/Shanghai','China',2.5,(1.2,286),(0.5,330),(0.3,198),(0.2,156)),
  ('7086','Wailingding Dao',22,6,114,2,'+08:00','Asia/Shanghai','China',1.26,(0.41,272),(0.16,299),(0.35,301),(0.30,254)),
  ('7087','Wenwei Zhou',21,49,113,56,'+08:00','Asia/Shanghai','China',1.1,(0.3,275),(0.1,305),(0.3,302),(0.3,255)),
+ # --- Yangtze-Flusshäfen mit eigenen Part-III-Konstanten (S.375). Zone -0800 -> +08:00.
+ # Phasen-Progression flussaufwärts: Shanghai 031° -> Changshu 089° -> Jiangyin 169°.
+ # Übrige Yangtze-Häfen (Liuhe Kou/Taicang/Kuzi Gang/Duanshan/Zhangjia/Zhenjiang) +
+ # Qiantang-Bore Haining = differenz-only -> nur crude Wusong-Transfer möglich, für
+ # stark verformenden Tidefluss unzuverlässig -> deferiert. (Die fr. "Namens-Diskrepanz"
+ # war ein Lesefehler 7288<->7286; att-Nummern Part II/III stimmen überein.)
+ ('7288','Changshu',31,46,120,59,'+08:00','Asia/Shanghai','China',2.00,(0.82,89),(0.39,131),(0.22,247),(0.16,201)),
+ ('7291','Jiangyin',31,55,120,14,'+08:00','Asia/Shanghai','China',1.07,(0.52,169),(0.26,215),(0.18,296),(0.13,256)),
 ]
 
 
