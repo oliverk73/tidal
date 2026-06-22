@@ -48,6 +48,9 @@ NEW48 = [
 ]
 UPGRADE = ['Tarakan', 'Kupang']   # bisher BIG/FES-Modell
 
+# BMKG-Metadaten-Koord fehlerhaft -> reale Pegelposition (geprueft):
+COORD_OVERRIDE = {'Palembang': (-2.9900, 104.7650)}  # Boom Baru, Musi (BMKG-Meta 91km daneben)
+
 
 def clean_name(lokasi):
     # "Kuala Tungkal, Jambi" -> "Kuala Tungkal"; Provinz kommt separat ins state-Feld
@@ -110,8 +113,9 @@ def main():
         if not r:
             print(f"{lok}: zu wenig Daten"); continue
         res, z0, n, r2, rms = r
+        la2,lo2 = COORD_OVERRIDE.get(lok,(s['Lat'],s['Lon']))
         nm = clean_name(lok)
-        blk = block(nm, s['Provinsi'], s['Lat'], s['Lon'], s['ID'], res, z0, n, r2, rms, upg)
+        blk = block(nm, s['Provinsi'], la2, lo2, s['ID'], res, z0, n, r2, rms, upg)
         blocks.append((blk, upg, lok))
         tag = 'U' if upg else ' '
         print(f"{tag}{nm[:23]:23s}{s['Provinsi'][:15]:15s}{res['M2'][0]:>7.3f}"
