@@ -46,6 +46,12 @@ PORTS = {
     'cerro azul':   (-13.0247, -76.4783, 'Lima'),
     'melchorita':   (-13.2937, -76.4006, 'Lima'),
     'atico':        (-16.2106, -73.6128, 'Arequipa'),
+    # DHN-Tafel heisst "Caleta Grau", der Ort ist aber PUERTO GRAU (Morro Sama,
+    # Tacna, SUEDperu) bei -17.9935/-70.8843 — NICHT Tumbes! (Oliver via GLOSS Peru
+    # National Report 2019). Fit bestaetigt die Sued-Lage: M2 25.7deg setzt die
+    # Phasen-Progression fort (Atico -16.2=356deg -> -18.0 wrappt ueber 360 auf ~25deg),
+    # kleine Amplitude 0.34m = mikrotidaler Sueden. R2=0.995. Frueheres Tumbes-Flag GELOEST.
+    'caleta grau':  (-17.9935, -70.8843, 'Tacna'),
 }
 
 
@@ -140,8 +146,11 @@ def read_order():
 HEADER, ORDER = read_header_order()
 
 
-# korrekte lokale Schreibweise (nur wo abweichend von Title-Case des Dateinamens)
-NAME_OVERRIDE = {'bayovar': 'Bayóvar'}
+# korrekte lokale Schreibweise (nur wo abweichend von Title-Case des Dateinamens).
+# 'caleta grau' = DHN-Dateiname, realer Ort/Anzeigename ist "Puerto Grau" (Tacna).
+NAME_OVERRIDE = {'bayovar': 'Bayóvar', 'caleta grau': 'Puerto Grau'}
+# station_id_context-Override, wo der DHN-Dateiname vom realen Ort abweicht
+STATION_ID = {'caleta grau': 'PUERTO_GRAU'}
 
 
 def block(port, lat, lon, region, res, z0, n):
@@ -151,7 +160,7 @@ def block(port, lat, lon, region, res, z0, n):
            '# country: Peru',
            f'# state: {region}',
            '# source: DHN Peru (Dir. de Hidrografia y Navegacion) Tabla de Mareas, HW/LW',
-           f'# station_id_context: DHN-PERU-{port.upper().replace(" ", "_")}',
+           f'# station_id_context: DHN-PERU-{STATION_ID.get(port, port.upper().replace(" ", "_"))}',
            '# date_imported: 20260621',
            '# datum: Chart Datum (DHN, nivel de reduccion de sondas)',
            '# confidence: 5',
