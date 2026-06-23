@@ -2,7 +2,7 @@
 // Loads marker data from /static/js/leaflet_markers_data.json and builds
 // markers in idle-time batches so the main thread stays responsive.
 (function () {
-  var DATA_URL = '/static/js/leaflet_markers_data.json';
+  var DATA_URL = '/static/js/leaflet_markers_data.json?v=' + (window.MARKERS_VERSION || '');
   var BATCH_SIZE = 500;
 
   function start() {

@@ -513,9 +513,22 @@ if os.path.exists(_seas_path):
     except (OSError, json.JSONDecodeError) as e:
         print(f"⚠️ Could not load station_seas.json: {e}")
 
+def _markers_version():
+    """Cache-Buster: mtime der Marker-Dateien -> bricht Browser-Cache bei jedem Rebuild."""
+    base = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "js")
+    v = 0
+    for f in ("leaflet_markers_data.json", "leaflet_markers.js"):
+        try:
+            v = max(v, int(os.path.getmtime(os.path.join(base, f))))
+        except OSError:
+            pass
+    return v
+
+
 @app.route("/")
 def index():
-    return render_template("index.html", station_names=_station_names)
+    return render_template("index.html", station_names=_station_names,
+                           markers_version=_markers_version())
 
 
 @app.route("/learn/")
