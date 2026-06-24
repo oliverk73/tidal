@@ -10,8 +10,8 @@ import subprocess
 from datetime import datetime, timedelta
 from collections import defaultdict
 
-INPUT_FILE = "subordinate_stations.csv"
-OUTPUT_FILE = "subordinate_stations_with_tides.csv"
+INPUT_FILE = "subordinate_corrections/subordinate_stations.csv"
+OUTPUT_FILE = "subordinate_corrections/subordinate_stations_with_tides.csv"
 TARGET_DATE = "2025-12-14"
 
 def get_reference_tides(station_name):

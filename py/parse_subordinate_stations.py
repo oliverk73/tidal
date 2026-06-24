@@ -9,7 +9,7 @@ import re
 import csv
 
 INPUT_FILE = "harmonics/harmonic_subordinate_corrections.idx"
-OUTPUT_FILE = "subordinate_stations.csv"
+OUTPUT_FILE = "subordinate_corrections/subordinate_stations.csv"
 
 # US und US-Außengebiete (zu filtern)
 US_CODES = {
