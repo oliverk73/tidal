@@ -66,6 +66,9 @@ tide_models/
 # Runtime-generated overlays/data
 static/nowcast/
 static/ocean_currents/
+# Generierte Marker-Dateien (jederzeit aus build_tide_station_markers.py erzeugbar)
+static/js/leaflet_markers_data.json
+static/js/leaflet_markers.js
 currents/
 annual_predictions/
 
