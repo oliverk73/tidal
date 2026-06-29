@@ -482,7 +482,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="nc-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 13.5A4.5 4.5 0 0 1 8.5 9h.3A5.5 5.5 0 0 1 19 10.5a3.5 3.5 0 0 1-.5 7H5a4.5 4.5 0 0 1-1-4z" fill="#888"/><circle cx="14" cy="20" r="1.5" fill="#555"/><path d="M10.5 18.5a5 5 0 0 1 7 0" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M8.5 16.5a8 8 0 0 1 11 0" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Radar-Nowcast DE+NL (-30min..+2h)' +
+              '<input type="checkbox" id="nc-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 13.5A4.5 4.5 0 0 1 8.5 9h.3A5.5 5.5 0 0 1 19 10.5a3.5 3.5 0 0 1-.5 7H5a4.5 4.5 0 0 1-1-4z" fill="#888"/><circle cx="14" cy="20" r="1.5" fill="#555"/><path d="M10.5 18.5a5 5 0 0 1 7 0" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M8.5 16.5a8 8 0 0 1 11 0" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Radar Nowcast DE+NL (-30 min..+2 h)' +
             '</label>' +
           '</div>' +
           '<div id="nc-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -493,7 +493,7 @@
             '</div>' +
             '<span id="nc-timestamp" style="min-width:180px;text-align:center;font-weight:bold;font-size:12px;">--</span>' +
             '<input type="range" id="nc-progress" min="0" max="30" value="0" style="width:180px;cursor:pointer;">' +
-            '<div style="font-size:10px;color:#888;">Quellen: DWD (1km) + KNMI (1km)</div>' +
+            '<div style="font-size:10px;color:#888;">Sources: DWD (1km) + KNMI (1km)</div>' +
           '</div>';
 
         L.DomEvent.disableClickPropagation(container);
@@ -527,7 +527,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="rv-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 13.5A4.5 4.5 0 0 1 8.5 9h.3A5.5 5.5 0 0 1 19 10.5a3.5 3.5 0 0 1-.5 7H5a4.5 4.5 0 0 1-1-4z" fill="#888"/><circle cx="14" cy="20" r="1.5" fill="#555"/><path d="M10.5 18.5a5 5 0 0 1 7 0" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M8.5 16.5a8 8 0 0 1 11 0" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Regenradar Animation' +
+              '<input type="checkbox" id="rv-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 13.5A4.5 4.5 0 0 1 8.5 9h.3A5.5 5.5 0 0 1 19 10.5a3.5 3.5 0 0 1-.5 7H5a4.5 4.5 0 0 1-1-4z" fill="#888"/><circle cx="14" cy="20" r="1.5" fill="#555"/><path d="M10.5 18.5a5 5 0 0 1 7 0" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M8.5 16.5a8 8 0 0 1 11 0" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Rain Radar Animation' +
             '</label>' +
           '</div>' +
           '<div id="rv-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -573,7 +573,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="td-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M3 17c2-4 4-1 6-5s2-6 4-2 4 1 5 5" stroke="#555" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="#999" stroke-width="1" stroke-dasharray="3 2"/></svg>Gezeitenvorhersage (FES2022)' +
+              '<input type="checkbox" id="td-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M3 17c2-4 4-1 6-5s2-6 4-2 4 1 5 5" stroke="#555" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="#999" stroke-width="1" stroke-dasharray="3 2"/></svg>Tide Forecast (FES2022)' +
             '</label>' +
           '</div>' +
           '<div id="td-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -645,7 +645,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="wv-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0" stroke="#555" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M2 18c2-3 4-3 6 0s4 3 6 0 4-3 6 0" stroke="#555" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/></svg>Wellenvorhersage (GFS-Wave)' +
+              '<input type="checkbox" id="wv-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0" stroke="#555" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M2 18c2-3 4-3 6 0s4 3 6 0 4-3 6 0" stroke="#555" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/></svg>Wave Forecast (GFS-Wave)' +
             '</label>' +
           '</div>' +
           '<div id="wv-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -659,7 +659,7 @@
               '</div>' +
               '<input type="range" id="wv-progress" min="0" max="8" value="0" style="width:180px;cursor:pointer;">' +
               '<label id="wv-particle-label" style="display:none;cursor:pointer;margin-top:4px;font-size:12px;color:#444;">' +
-                '<input type="checkbox" id="wv-particle-toggle" style="margin-right:4px;">Wellenrichtung animiert (Partikel)' +
+                '<input type="checkbox" id="wv-particle-toggle" style="margin-right:4px;">Wave Direction Animated (Particles)' +
               '</label>' +
             '</div>' +
           '</div>';
@@ -785,12 +785,12 @@
         ocVelocityLayer = L.velocityLayer({
           displayValues: true,
           displayOptions: {
-            velocityType: 'Meeresstr\u00f6mung',
+            velocityType: 'Ocean Current',
             position: 'bottomleft',
-            emptyString: 'Keine Str\u00f6mungsdaten',
+            emptyString: 'No current data',
             speedUnit: 'ms',
-            directionString: 'Richtung',
-            speedString: 'Geschw.'
+            directionString: 'Direction',
+            speedString: 'Speed'
           },
           data: data,
           maxVelocity: 1.5,
@@ -865,7 +865,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="oc-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 12 C8 8, 12 16, 16 12 S24 8, 20 12" stroke="#0af" stroke-width="2.5" fill="none" stroke-linecap="round"/><polygon points="18,10 22,12 18,14" fill="#0af"/></svg>Meeresstr\u00f6mung (HYCOM)' +
+              '<input type="checkbox" id="oc-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 12 C8 8, 12 16, 16 12 S24 8, 20 12" stroke="#0af" stroke-width="2.5" fill="none" stroke-linecap="round"/><polygon points="18,10 22,12 18,14" fill="#0af"/></svg>Ocean Currents (HYCOM)' +
             '</label>' +
           '</div>' +
           '<div id="oc-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -934,7 +934,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="pr-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 13.5A4.5 4.5 0 0 1 8.5 9h.3A5.5 5.5 0 0 1 19 10.5a3.5 3.5 0 0 1-.5 7H5a4.5 4.5 0 0 1-1-4z" fill="#888"/><circle cx="8" cy="20.5" r="1" fill="#555"/><circle cx="12" cy="21.5" r="1" fill="#555"/><circle cx="16" cy="20.5" r="1" fill="#555"/></svg>Niederschlagsvorhersage (GFS)' +
+              '<input type="checkbox" id="pr-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M4 13.5A4.5 4.5 0 0 1 8.5 9h.3A5.5 5.5 0 0 1 19 10.5a3.5 3.5 0 0 1-.5 7H5a4.5 4.5 0 0 1-1-4z" fill="#888"/><circle cx="8" cy="20.5" r="1" fill="#555"/><circle cx="12" cy="21.5" r="1" fill="#555"/><circle cx="16" cy="20.5" r="1" fill="#555"/></svg>Precipitation Forecast (GFS)' +
             '</label>' +
           '</div>' +
           '<div id="pr-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -1030,7 +1030,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="nf-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#666"/></svg>Radar-Nowcast PySTEPS' +
+              '<input type="checkbox" id="nf-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#666"/></svg>Radar Nowcast (PySTEPS)' +
             '</label>' +
           '</div>' +
           '<div id="nf-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -1127,7 +1127,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="sst-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><rect x="10" y="2" width="4" height="14" rx="2" fill="none" stroke="#555" stroke-width="1.8"/><circle cx="12" cy="19" r="3.5" fill="none" stroke="#555" stroke-width="1.8"/><circle cx="12" cy="19" r="1.8" fill="#d33"/><rect x="11" y="9" width="2" height="8" fill="#d33"/></svg>Wassertemperatur (SST)' +
+              '<input type="checkbox" id="sst-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><rect x="10" y="2" width="4" height="14" rx="2" fill="none" stroke="#555" stroke-width="1.8"/><circle cx="12" cy="19" r="3.5" fill="none" stroke="#555" stroke-width="1.8"/><circle cx="12" cy="19" r="1.8" fill="#d33"/><rect x="11" y="9" width="2" height="8" fill="#d33"/></svg>Sea Surface Temperature (SST)' +
             '</label>' +
           '</div>' +
           '<div id="sst-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -1293,15 +1293,164 @@
       });
     }
 
-    // --- Add overlay controls alphabetically (top to bottom) ---
-    new NowcastFcControl().addTo(map); // Radar-Nowcast PySTEPS
-    new PrecipControl().addTo(map);    // Niederschlagsvorhersage
-    new NowcastControl().addTo(map);   // Radar-Nowcast DE+NL
-    new RadarControl().addTo(map);     // Regenradar Animation
-    new SSTControl().addTo(map);       // Wassertemperatur (SST)
-    new OceanCurrentControl().addTo(map); // Meeresströmung (HYCOM)
-    new TideControl().addTo(map);      // Gezeitenvorhersage (FES2022)
-    new WaveControl().addTo(map);      // Wellenvorhersage (GFS-Wave)
+    // --- OpenSeaMap seamarks (nautical marks) ---
+    // Eigenständiger Referenz-Overlay (transparente Kacheln), KEIN Teil der
+    // gegenseitigen Ausschluss-Gruppe: koexistiert mit Wetter-Overlays + Basemap.
+    // Eigener Pane über der Basiskarte, aber unter den Stationsmarkern.
+    if (!map.getPane('seamark')) {
+      var smp = map.createPane('seamark');
+      smp.style.zIndex = '500';   // above static weather canvas overlays, below markers (600) + labels (650)
+      smp.style.pointerEvents = 'none';
+    }
+    const seamarkLayer = L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png', {
+      pane: 'seamark',
+      maxNativeZoom: 18,
+      maxZoom: 20,
+      attribution: 'Seezeichen: &copy; <a href="https://www.openseamap.org" target="_blank" rel="noopener">OpenSeaMap</a> contributors'
+    });
+
+    const SeamarkControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar');
+        container.style.cssText = 'background:rgba(255,255,255,0.25);padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.2);user-select:none;backdrop-filter:blur(4px);';
+        container.innerHTML =
+          '<div style="font-weight:bold;">' +
+            '<label style="cursor:pointer;">' +
+              '<input type="checkbox" id="osm-seamark-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><circle cx="12" cy="4" r="2" fill="none" stroke="#555" stroke-width="1.8"/><line x1="12" y1="6" x2="12" y2="20.5" stroke="#555" stroke-width="1.8"/><line x1="8" y1="9.5" x2="16" y2="9.5" stroke="#555" stroke-width="1.8"/><path d="M5 13.5a7 7 0 0 0 14 0" fill="none" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg>OpenSeaMap (Seezeichen)' +
+            '</label>' +
+          '</div>';
+
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+
+        setTimeout(function () {
+          var cb = document.getElementById('osm-seamark-toggle');
+          if (!cb) return;
+          if (localStorage.getItem('seamarkOn') === '1') {
+            cb.checked = true;
+            seamarkLayer.addTo(map);
+          }
+          cb.addEventListener('change', function () {
+            if (this.checked) {
+              seamarkLayer.addTo(map);
+              localStorage.setItem('seamarkOn', '1');
+            } else {
+              map.removeLayer(seamarkLayer);
+              localStorage.setItem('seamarkOn', '0');
+            }
+          });
+        }, 0);
+
+        return container;
+      }
+    });
+
+    // --- Zwei aufklappbare Hamburger-Menüs oben rechts: "Layer" + "Stationen" ---
+    // Fasst die früher 9 einzelnen Overlay-Boxen (Überlauf!) sowie die Stationen-
+    // Control (vorher unten rechts, aus leaflet_markers.js) zusammen. Gegenseitig
+    // ausschließend; Zustand in localStorage ('mapMenuOpen'). Default: Stationen offen.
+    const hamburgerSvg = '<svg width="16" height="16" viewBox="0 0 18 18" style="vertical-align:-2px;"><line x1="2" y1="4.5" x2="16" y2="4.5" stroke="#444" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="9" x2="16" y2="9" stroke="#444" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="13.5" x2="16" y2="13.5" stroke="#444" stroke-width="2" stroke-linecap="round"/></svg>';
+
+    const MapMenuControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        const wrap = L.DomUtil.create('div', '');
+        wrap.style.cssText = 'display:flex;flex-direction:column;gap:8px;';
+        // Jede Sektion = EINE Box (overflow:hidden); Header + Body darin transparent,
+        // getrennt nur durch eine Trennlinie (im offenen Zustand, via setMenu).
+        const sectionCss = 'background:rgba(255,255,255,0.30);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.2);overflow:hidden;font-family:sans-serif;font-size:13px;';
+        const headerCss = 'padding:7px 12px;font-weight:bold;cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px;white-space:nowrap;';
+        // Drei Aufklapp-Sektionen: Layers + Tide Stations + Current Stations.
+        // Die beiden Stationen-Bodies werden vom Generator (leaflet_markers.js) befüllt.
+        const SECTIONS = [
+          { key: 'layer',   label: 'Layers',           body: 'layer-menu-body',       count: null },
+          { key: 'tide',    label: 'Tide Stations',    body: 'tide-stations-body',    count: 'tide-stations-count' },
+          { key: 'current', label: 'Current Stations', body: 'current-stations-body', count: 'current-stations-count' }
+        ];
+        wrap.innerHTML = SECTIONS.map(function (s) {
+          var isLayer = (s.key === 'layer');
+          var bodyStyle = 'display:none;flex-direction:column;max-height:74vh;overflow-y:auto;' +
+            (isLayer ? '' : 'padding:8px 10px;');
+          var countSpan = s.count
+            ? '<span id="' + s.count + '" style="font-weight:normal;opacity:.7;margin-right:4px;"></span>' : '';
+          var placeholder = isLayer ? '' : '<span style="color:#777;">Loading…</span>';
+          return '<div data-menu="' + s.key + '" style="' + sectionCss + '">' +
+              '<div class="map-menu-header" style="' + headerCss + '">' + hamburgerSvg +
+                '<span style="flex:1;">' + s.label + '</span>' + countSpan +
+                '<span class="chev">▸</span></div>' +
+              '<div id="' + s.body + '" style="' + bodyStyle + '">' + placeholder + '</div>' +
+            '</div>';
+        }).join('');
+
+        L.DomEvent.disableClickPropagation(wrap);
+        L.DomEvent.disableScrollPropagation(wrap);
+
+        var BODY_OF = {};
+        SECTIONS.forEach(function (s) { BODY_OF[s.key] = s.body; });
+
+        function setMenu(which) {
+          SECTIONS.forEach(function (s) {
+            var open = (s.key === which);
+            var body = document.getElementById(s.body);
+            var hdr = wrap.querySelector('[data-menu="' + s.key + '"] .map-menu-header');
+            if (body) body.style.display = open ? 'flex' : 'none';
+            if (hdr) {
+              hdr.querySelector('.chev').textContent = open ? '▾' : '▸';
+              hdr.style.borderBottom = open ? '1px solid rgba(0,0,0,0.12)' : 'none';
+            }
+          });
+          localStorage.setItem('mapMenuOpen', which || 'none');
+        }
+
+        wrap.querySelectorAll('[data-menu]').forEach(function (sec) {
+          var m = sec.getAttribute('data-menu');
+          sec.querySelector('.map-menu-header').addEventListener('click', function () {
+            var isOpen = document.getElementById(BODY_OF[m]).style.display !== 'none';
+            setMenu(isOpen ? null : m);
+          });
+        });
+
+        var saved = localStorage.getItem('mapMenuOpen');
+        if (saved !== 'none' && !BODY_OF[saved]) saved = 'tide';  // default / migrate alten 'stations'-Wert
+        setMenu(saved === 'none' ? null : saved);
+
+        return wrap;
+      }
+    });
+
+    new MapMenuControl().addTo(map);
+
+    // Layer-Controls in das "Layer"-Panel hängen (statt je eigener Box auf der Karte).
+    // onAdd() liefert das fertige DOM-Element samt verdrahteter Listener; die eigene
+    // Box-Optik (Frost/Schatten/Radius) wird entfernt, damit eine flache Zeilenliste
+    // innerhalb der EINEN Sektions-Box entsteht (Trennlinien zwischen den Zeilen).
+    (function () {
+      var body = document.getElementById('layer-menu-body');
+      [NowcastFcControl,   // Radar Nowcast (PySTEPS)
+       PrecipControl,      // Niederschlagsvorhersage
+       NowcastControl,     // Radar-Nowcast DE+NL
+       RadarControl,       // Rain Radar Animation
+       SSTControl,         // Sea Surface Temperature (SST)
+       OceanCurrentControl,// Ocean Currents (HYCOM)
+       TideControl,        // Tide Forecast (FES2022)
+       WaveControl,        // Wave Forecast (GFS-Wave)
+       SeamarkControl      // OpenSeaMap Seezeichen
+      ].forEach(function (C, i) {
+        var el = new C().onAdd(map);
+        el.classList.remove('leaflet-bar');
+        el.style.background = 'transparent';
+        el.style.backdropFilter = 'none';
+        el.style.webkitBackdropFilter = 'none';
+        el.style.boxShadow = 'none';
+        el.style.borderRadius = '0';
+        el.style.border = 'none';
+        el.style.margin = '0';
+        el.style.padding = '7px 12px';
+        if (i > 0) el.style.borderTop = '1px solid rgba(0,0,0,0.10)';
+        body.appendChild(el);
+      });
+    })();
 
     // Wire up mutual exclusion + legend after controls are in the DOM
     setTimeout(function () {
