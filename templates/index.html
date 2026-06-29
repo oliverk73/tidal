@@ -56,6 +56,10 @@
 <script src="/static/js/nowcast_layer.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
+<!-- MapLibre GL + Leaflet bridge: clean English vector labels (OpenFreeMap, no key) -->
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet"/>
+<script defer src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script defer src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
 
 <title>Tide predictions &amp; forecasts — interactive global tide map</title>
 <meta name="description" content="Interactive map with tide predictions and forecasts for over 3000 stations worldwide. High and low tide times, tide curves, weather and current overlays."/>
@@ -168,10 +172,48 @@
       lp.style.zIndex = '650';
       lp.style.pointerEvents = 'none';
     }
-    const cartoLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png', {
-      pane: 'cartoLabels',
-      subdomains: 'abcd', maxZoom: 20
-    });
+    // Clean ENGLISH labels via a label-only MapLibre vector overlay (OpenFreeMap,
+    // no API key). Transparent background — only text is drawn, above the gray
+    // land mask. English everywhere, subtle halos, NO admin/province borders and
+    // no duplicate city/province names (raster reference layers cannot do this).
+    var vectorLabels = null;
+    var EN_NAME = ['coalesce', ['get', 'name:en'], ['get', 'name_en'],
+                              ['get', 'name:latin'], ['get', 'name']];
+    function makeVectorLabels() {
+      if (vectorLabels) return vectorLabels;
+      var style = {
+        version: 8,
+        glyphs: 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf',
+        sources: { omt: { type: 'vector', url: 'https://tiles.openfreemap.org/planet' } },
+        layers: [
+          { id: 'l-country', type: 'symbol', source: 'omt', 'source-layer': 'place',
+            filter: ['==', ['get', 'class'], 'country'], maxzoom: 7,
+            layout: { 'text-field': EN_NAME, 'text-font': ['Noto Sans Regular'],
+              'text-transform': 'uppercase', 'text-letter-spacing': 0.15, 'text-max-width': 8,
+              'text-size': ['interpolate', ['linear'], ['zoom'], 2, 10, 6, 15] },
+            paint: { 'text-color': '#dfe2e7', 'text-halo-color': '#1f222a', 'text-halo-width': 1.1 } },
+          { id: 'l-sea', type: 'symbol', source: 'omt', 'source-layer': 'water_name',
+            filter: ['match', ['get', 'class'], ['ocean', 'sea', 'bay', 'strait', 'gulf'], true, false],
+            layout: { 'text-field': EN_NAME, 'text-font': ['Noto Sans Italic'],
+              'text-letter-spacing': 0.1, 'text-max-width': 9,
+              'text-size': ['interpolate', ['linear'], ['zoom'], 3, 11, 8, 15] },
+            paint: { 'text-color': '#9fc0e6', 'text-halo-color': '#1f222a', 'text-halo-width': 1.0 } },
+          { id: 'l-city', type: 'symbol', source: 'omt', 'source-layer': 'place',
+            filter: ['==', ['get', 'class'], 'city'], minzoom: 3,
+            layout: { 'text-field': EN_NAME, 'text-font': ['Noto Sans Regular'], 'text-max-width': 8,
+              'text-size': ['interpolate', ['linear'], ['zoom'], 4, 11, 9, 15] },
+            paint: { 'text-color': '#f0f1f4', 'text-halo-color': '#1f222a', 'text-halo-width': 1.0 } },
+          { id: 'l-town', type: 'symbol', source: 'omt', 'source-layer': 'place',
+            filter: ['==', ['get', 'class'], 'town'], minzoom: 7,
+            layout: { 'text-field': EN_NAME, 'text-font': ['Noto Sans Regular'], 'text-max-width': 8,
+              'text-size': ['interpolate', ['linear'], ['zoom'], 7, 10, 11, 13] },
+            paint: { 'text-color': '#cfd2d8', 'text-halo-color': '#1f222a', 'text-halo-width': 1.0 } }
+        ]
+      };
+      vectorLabels = L.maplibreGL({ style: style, pane: 'cartoLabels', interactive: false,
+        attribution: 'Labels &copy; <a href="https://openfreemap.org/">OpenFreeMap</a> &copy; OpenMapTiles' });
+      return vectorLabels;
+    }
     let activeBasemap = osmLayer;
     osmLayer.addTo(map);
 
@@ -179,11 +221,11 @@
       if (toOverlayStyle && activeBasemap !== cartoBase) {
         map.removeLayer(osmLayer);
         cartoBase.addTo(map);
-        cartoLabels.addTo(map);
+        makeVectorLabels().addTo(map);  // clean English place + sea labels
         activeBasemap = cartoBase;
       } else if (!toOverlayStyle && activeBasemap !== osmLayer) {
         map.removeLayer(cartoBase);
-        map.removeLayer(cartoLabels);
+        if (vectorLabels) map.removeLayer(vectorLabels);
         osmLayer.addTo(map);
         activeBasemap = osmLayer;
       }
@@ -637,6 +679,28 @@
     // --- Wave Forecast Layer (Canvas) ---
     const waveLayer = new WaveCanvasLayer(map);
 
+    // Sharp dark-gray land mask (windy.com style) drawn above the wave canvas.
+    // The wave grid is too coarse (0.5° global) for clean coastlines, so land
+    // is shaded from the high-res Natural Earth polygons instead.
+    var waveLandMask = null;
+    async function waveLoadLandMask() {
+      if (waveLandMask) return waveLandMask;
+      if (!map.getPane('waveLandMask')) {
+        var p = map.createPane('waveLandMask');
+        p.style.zIndex = '445';           // above wave canvas (overlayPane=400), below markers
+        p.style.pointerEvents = 'none';
+      }
+      var resp = await fetch('/static/ne_10m_land.geojson');
+      var geojson = await resp.json();
+      waveLandMask = L.geoJSON(geojson, {
+        pane: 'waveLandMask',
+        renderer: L.canvas({ pane: 'waveLandMask', padding: 0.5 }),
+        style: { fillColor: '#383c44', fillOpacity: 1.0, stroke: false },
+        interactive: false,
+      });
+      return waveLandMask;
+    }
+
     const WaveControl = L.Control.extend({
       options: { position: 'topright' },
       onAdd: function () {
@@ -685,6 +749,9 @@
                   document.getElementById('wv-particle-label').style.display = '';
                 }
                 waveLayer.activate();
+                waveLoadLandMask().then(function (lm) {
+                  if (document.getElementById('wv-toggle').checked) lm.addTo(map);
+                });
               } catch (e) {
                 document.getElementById('wv-loading').textContent = 'Error loading!';
                 console.error('Wave layer error:', e);
@@ -694,6 +761,7 @@
               document.getElementById('wv-particle-toggle').checked = false;
               document.getElementById('wv-particle-label').style.display = 'none';
               waveLayer.deactivate();
+              if (waveLandMask) map.removeLayer(waveLandMask);
             }
           });
           document.getElementById('wv-play-btn').addEventListener('click', function () {

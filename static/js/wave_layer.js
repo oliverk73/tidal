@@ -56,10 +56,10 @@ const WAVE_LUT32 = new Uint32Array(2048);
 })();
 
 // Sentinel value (cm) marking land / no-data cells in the height grids.
+// Land is left transparent here and shaded by a sharp vector land-mask layer
+// (ne_10m_land.geojson) in templates/index.html — the wave grid is far too
+// coarse (0.5° global) to give clean coastlines.
 const WAVE_NODATA = 65535;
-// Land fill: a dark slate gray (windy.com style), packed as ABGR for buf32.
-// r=56 g=60 b=68 a=230
-const LAND_COLOR32 = (230 << 24) | (68 << 16) | (60 << 8) | 56;
 
 // Direction sin/cos LUT: 3601 entries for 0..360.0° in 0.1° steps
 // Eliminates all trig calls from the arrow render loop
@@ -371,7 +371,7 @@ class WaveCanvasLayer {
         if (v01 !== WAVE_NODATA) { val += v01 * fx  * fy1; wsum += fx  * fy1; }
         if (v10 !== WAVE_NODATA) { val += v10 * fx1 * fy;  wsum += fx1 * fy;  }
         if (v11 !== WAVE_NODATA) { val += v11 * fx  * fy;  wsum += fx  * fy;  }
-        if (wsum === 0) { buf32[rowOff + px] = LAND_COLOR32; continue; }  // all land
+        if (wsum === 0) continue;   // all land → transparent (vector land mask handles it)
 
         buf32[rowOff + px] = WAVE_LUT32[Math.min(2047, ((val / wsum) / 5) | 0)];
       }
@@ -427,11 +427,8 @@ class WaveCanvasLayer {
         if (v01 !== WAVE_NODATA) { val += v01 * fx  * fy1; wsum += fx  * fy1; }
         if (v10 !== WAVE_NODATA) { val += v10 * fx1 * fy;  wsum += fx1 * fy;  }
         if (v11 !== WAVE_NODATA) { val += v11 * fx  * fy;  wsum += fx  * fy;  }
-        // All four corners land → draw land (the fine regional mask gives a
-        // sharper coastline than the coarse global field underneath).
-        buf32[rowOff + px] = wsum === 0
-          ? LAND_COLOR32
-          : WAVE_LUT32[Math.min(2047, ((val / wsum) / 5) | 0)];
+        if (wsum === 0) continue;   // all land → transparent (vector land mask handles it)
+        buf32[rowOff + px] = WAVE_LUT32[Math.min(2047, ((val / wsum) / 5) | 0)];
       }
     }
   }
@@ -628,64 +625,79 @@ class WaveCanvasLayer {
     };
   }
 
-  _sampleDirection(px, py) {
-    // Sample wave direction + height at screen pixel position
+  // Sampling candidates for the current frame: regional overlays first (higher
+  // res, e.g. the Black Sea, which the global GFS field does not even cover),
+  // then the global field. Cached per frame to stay cheap in the particle loop.
+  _sampleCandidates() {
+    if (this._candFrame === this.currentFrame && this._cand) return this._cand;
+    const cand = [];
+    for (let ri = 0; ri < this.regions.length; ri++) {
+      const rg = this.regionGridCache[ri + '|' + this.currentFrame];
+      const rd = this.regionDirCache[ri + '|' + this.currentFrame];
+      if (rg && rd) cand.push({ g: this.regions[ri].grid, grid: rg, dir: rd, region: true });
+    }
     const grid = this.gridCache[this.currentFrame];
     const dirGrid = this.dirCache[this.currentFrame];
-    if (!grid || !dirGrid || !this.meta) return null;
+    if (grid && dirGrid) cand.push({ g: this.meta.grid, grid: grid, dir: dirGrid, region: false });
+    this._cand = cand;
+    this._candFrame = this.currentFrame;
+    return cand;
+  }
 
+  _sampleDirection(px, py) {
+    if (!this.meta) return null;
     const map = this.map;
     const latlng = map.containerPointToLatLng([px, py]);
     const lat = latlng.lat;
-    const lon = ((latlng.lng % 360) + 360) % 360;
-
     if (lat > 90 || lat < -90) return null;
 
-    const g = this.meta.grid;
-    const gy = (g.la1 - lat) / g.dy;
-    if (gy < 0 || gy >= g.ny - 1) return null;
-    const gx = (lon - g.lo1) / g.dx;
-    if (gx < 0) return null;
+    const cand = this._sampleCandidates();
+    for (let k = 0; k < cand.length; k++) {
+      const c = cand[k], gm = c.g, gnx = gm.nx, gny = gm.ny;
+      let lon;
+      if (c.region) {
+        lon = ((latlng.lng + 180) % 360 + 360) % 360 - 180;
+        if (lon < gm.lo1 || lon > gm.lo2) continue;
+      } else {
+        lon = ((latlng.lng % 360) + 360) % 360;
+      }
+      const gy = (gm.la1 - lat) / gm.dy;
+      if (gy < 0 || gy >= gny - 1) continue;
+      const gx = (lon - gm.lo1) / gm.dx;
+      if (gx < 0) continue;
+      const gy0 = gy | 0, fy = gy - gy0, fy1 = 1 - fy;
+      const gy1 = gy0 + 1 < gny ? gy0 + 1 : gy0;
+      const gx0 = gx | 0;
+      let gx1;
+      if (c.region) { if (gx0 + 1 >= gnx) continue; gx1 = gx0 + 1; }
+      else { gx1 = (gx0 + 1) % gnx; }
+      const fx = gx - gx0, fx1 = 1 - fx;
+      const row0 = gy0 * gnx, row1 = gy1 * gnx;
 
-    const gx0 = gx | 0;
-    const gx1 = (gx0 + 1) % g.nx;
-    const gy0 = gy | 0;
-    const gy1 = gy0 + 1 < g.ny ? gy0 + 1 : gy0;
-    const fx = gx - gx0;
-    const fx1 = 1 - fx;
-    const fy = gy - gy0;
-    const fy1 = 1 - fy;
+      // Nodata-aware height: land cells (sentinel) must not advect particles,
+      // else they blend to a huge height + direction 0 and stream south.
+      const h00 = c.grid[row0 + gx0], h01 = c.grid[row0 + gx1],
+            h10 = c.grid[row1 + gx0], h11 = c.grid[row1 + gx1];
+      let hVal = 0, hw = 0;
+      if (h00 !== WAVE_NODATA) { hVal += h00 * fx1 * fy1; hw += fx1 * fy1; }
+      if (h01 !== WAVE_NODATA) { hVal += h01 * fx  * fy1; hw += fx  * fy1; }
+      if (h10 !== WAVE_NODATA) { hVal += h10 * fx1 * fy;  hw += fx1 * fy;  }
+      if (h11 !== WAVE_NODATA) { hVal += h11 * fx  * fy;  hw += fx  * fy;  }
+      if (hw === 0) continue;      // land in this candidate → try next (global)
+      hVal /= hw;
+      if (hVal < 30) continue;     // calm → try next candidate
 
-    const row0 = gy0 * g.nx;
-    const row1 = gy1 * g.nx;
-
-    const hVal = grid[row0 + gx0] * fx1 * fy1 +
-                 grid[row0 + gx1] * fx  * fy1 +
-                 grid[row1 + gx0] * fx1 * fy +
-                 grid[row1 + gx1] * fx  * fy;
-    if (hVal < 30) return null;
-
-    const d00 = Math.min(dirGrid[row0 + gx0], 3600);
-    const d01 = Math.min(dirGrid[row0 + gx1], 3600);
-    const d10 = Math.min(dirGrid[row1 + gx0], 3600);
-    const d11 = Math.min(dirGrid[row1 + gx1], 3600);
-
-    const sinD = DIR_SIN[d00] * fx1 * fy1 +
-                 DIR_SIN[d01] * fx  * fy1 +
-                 DIR_SIN[d10] * fx1 * fy +
-                 DIR_SIN[d11] * fx  * fy;
-    const cosD = DIR_COS[d00] * fx1 * fy1 +
-                 DIR_COS[d01] * fx  * fy1 +
-                 DIR_COS[d10] * fx1 * fy +
-                 DIR_COS[d11] * fx  * fy;
-
-    const dirRad = Math.atan2(sinD, cosD) + Math.PI;
-    const speed = Math.min(1.0, Math.max(0.3, hVal / 400));
-
-    return {
-      dx: Math.sin(dirRad) * speed,
-      dy: -Math.cos(dirRad) * speed
-    };
+      const d00 = Math.min(c.dir[row0 + gx0], 3600), d01 = Math.min(c.dir[row0 + gx1], 3600);
+      const d10 = Math.min(c.dir[row1 + gx0], 3600), d11 = Math.min(c.dir[row1 + gx1], 3600);
+      const sinD = DIR_SIN[d00] * fx1 * fy1 + DIR_SIN[d01] * fx * fy1 +
+                   DIR_SIN[d10] * fx1 * fy + DIR_SIN[d11] * fx * fy;
+      const cosD = DIR_COS[d00] * fx1 * fy1 + DIR_COS[d01] * fx * fy1 +
+                   DIR_COS[d10] * fx1 * fy + DIR_COS[d11] * fx * fy;
+      const dirRad = Math.atan2(sinD, cosD) + Math.PI;
+      const speed = Math.min(1.0, Math.max(0.3, hVal / 400));
+      return { dx: Math.sin(dirRad) * speed, dy: -Math.cos(dirRad) * speed };
+    }
+    return null;
   }
 
   _startParticles() {
