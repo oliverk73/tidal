@@ -14,9 +14,11 @@
  */
 
 // --- Color scale: wave height (m) → [R, G, B, A] ---
+// Calm sea (≈0 m) is shaded with a low blue close to the 0.5 m tone instead of
+// being transparent, so the sea reads as a continuous surface.
 const WAVE_COLORS = [
-  [0.0,  0, 0, 0, 0],
-  [0.3,  0, 0, 0, 0],
+  [0.0,  30, 70, 175, 120],
+  [0.3,  18, 52, 165, 140],
   [0.5,  10, 40, 160, 150],
   [1.0,  0, 120, 210, 170],
   [1.5,  0, 190, 170, 180],
@@ -52,6 +54,12 @@ const WAVE_LUT32 = new Uint32Array(2048);
     WAVE_LUT32[i] = ((a & 0xFF) << 24) | ((b & 0xFF) << 16) | ((g & 0xFF) << 8) | (r & 0xFF);
   }
 })();
+
+// Sentinel value (cm) marking land / no-data cells in the height grids.
+const WAVE_NODATA = 65535;
+// Land fill: a dark slate gray (windy.com style), packed as ABGR for buf32.
+// r=56 g=60 b=68 a=230
+const LAND_COLOR32 = (230 << 24) | (68 << 16) | (60 << 8) | 56;
 
 // Direction sin/cos LUT: 3601 entries for 0..360.0° in 0.1° steps
 // Eliminates all trig calls from the arrow render loop
@@ -354,18 +362,18 @@ class WaveCanvasLayer {
         const fx = gx - gx0;
         const fx1 = 1 - fx;
 
-        const val = grid[row0 + gx0] * fx1 * fy1 +
-                    grid[row0 + gx1] * fx  * fy1 +
-                    grid[row1 + gx0] * fx1 * fy +
-                    grid[row1 + gx1] * fx  * fy;
+        // Nodata-aware bilinear: blend only the non-land corners so coastlines
+        // stay sharp instead of bleeding huge sentinel values into the sea.
+        const v00 = grid[row0 + gx0], v01 = grid[row0 + gx1],
+              v10 = grid[row1 + gx0], v11 = grid[row1 + gx1];
+        let val = 0, wsum = 0;
+        if (v00 !== WAVE_NODATA) { val += v00 * fx1 * fy1; wsum += fx1 * fy1; }
+        if (v01 !== WAVE_NODATA) { val += v01 * fx  * fy1; wsum += fx  * fy1; }
+        if (v10 !== WAVE_NODATA) { val += v10 * fx1 * fy;  wsum += fx1 * fy;  }
+        if (v11 !== WAVE_NODATA) { val += v11 * fx  * fy;  wsum += fx  * fy;  }
+        if (wsum === 0) { buf32[rowOff + px] = LAND_COLOR32; continue; }  // all land
 
-        if (val < 30) continue;
-
-        const lutIdx = Math.min(2047, (val / 5) | 0);
-        const color32 = WAVE_LUT32[lutIdx];
-        if (color32 === 0) continue;
-
-        buf32[rowOff + px] = color32;
+        buf32[rowOff + px] = WAVE_LUT32[Math.min(2047, ((val / wsum) / 5) | 0)];
       }
     }
 
@@ -412,15 +420,18 @@ class WaveCanvasLayer {
         const fx = gx - gx0;
         const fx1 = 1 - fx;
 
-        const val = grid[row0 + gx0] * fx1 * fy1 +
-                    grid[row0 + gx1] * fx  * fy1 +
-                    grid[row1 + gx0] * fx1 * fy +
-                    grid[row1 + gx1] * fx  * fy;
-        if (val < 30) continue;   // region dry / no data → keep global pixel
-
-        const color32 = WAVE_LUT32[Math.min(2047, (val / 5) | 0)];
-        if (color32 === 0) continue;
-        buf32[rowOff + px] = color32;
+        const v00 = grid[row0 + gx0], v01 = grid[row0 + gx1],
+              v10 = grid[row1 + gx0], v11 = grid[row1 + gx1];
+        let val = 0, wsum = 0;
+        if (v00 !== WAVE_NODATA) { val += v00 * fx1 * fy1; wsum += fx1 * fy1; }
+        if (v01 !== WAVE_NODATA) { val += v01 * fx  * fy1; wsum += fx  * fy1; }
+        if (v10 !== WAVE_NODATA) { val += v10 * fx1 * fy;  wsum += fx1 * fy;  }
+        if (v11 !== WAVE_NODATA) { val += v11 * fx  * fy;  wsum += fx  * fy;  }
+        // All four corners land → draw land (the fine regional mask gives a
+        // sharper coastline than the coarse global field underneath).
+        buf32[rowOff + px] = wsum === 0
+          ? LAND_COLOR32
+          : WAVE_LUT32[Math.min(2047, ((val / wsum) / 5) | 0)];
       }
     }
   }
@@ -487,9 +498,16 @@ class WaveCanvasLayer {
         else { gx1 = (gx0 + 1) % gnx; }
         const fx = gx - gx0, fx1 = 1 - fx;
         const row0 = gy0 * gnx, row1 = gy1 * gnx;
-        const h = c.grid[row0 + gx0] * fx1 * fy1 + c.grid[row0 + gx1] * fx * fy1 +
-                  c.grid[row1 + gx0] * fx1 * fy + c.grid[row1 + gx1] * fx * fy;
-        if (h < 30) continue;
+        const hv00 = c.grid[row0 + gx0], hv01 = c.grid[row0 + gx1],
+              hv10 = c.grid[row1 + gx0], hv11 = c.grid[row1 + gx1];
+        let h = 0, hw = 0;
+        if (hv00 !== WAVE_NODATA) { h += hv00 * fx1 * fy1; hw += fx1 * fy1; }
+        if (hv01 !== WAVE_NODATA) { h += hv01 * fx  * fy1; hw += fx  * fy1; }
+        if (hv10 !== WAVE_NODATA) { h += hv10 * fx1 * fy;  hw += fx1 * fy;  }
+        if (hv11 !== WAVE_NODATA) { h += hv11 * fx  * fy;  hw += fx  * fy;  }
+        if (hw === 0) continue;   // all land → fall through to next candidate
+        h /= hw;
+        if (h < 30) continue;     // calm → no arrow
         const d00 = Math.min(c.dir[row0 + gx0], 3600), d01 = Math.min(c.dir[row0 + gx1], 3600);
         const d10 = Math.min(c.dir[row1 + gx0], 3600), d11 = Math.min(c.dir[row1 + gx1], 3600);
         const sinD = DIR_SIN[d00]*fx1*fy1 + DIR_SIN[d01]*fx*fy1 + DIR_SIN[d10]*fx1*fy + DIR_SIN[d11]*fx*fy;

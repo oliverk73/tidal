@@ -23,7 +23,9 @@ import numpy as np
 import xarray as xr
 from datetime import datetime, timezone
 
-OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "waves")
+# Project root is the parent of this script's py/ directory (matches download_wave_regional.py)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, "static", "waves")
 NOMADS_BASE = "https://nomads.ncep.noaa.gov/cgi-bin/filter_gfswave.pl"
 
 
@@ -147,9 +149,12 @@ def grib_to_bin(grib_path, fhour, target_res):
 
     ny, nx = height_data.shape
 
-    # Wave height: NaN → 0, convert to uint16 centimeters
-    height_data = np.nan_to_num(height_data, nan=0.0)
-    height_u16 = np.clip(height_data * 100, 0, 65535).astype(np.uint16)
+    # Wave height → uint16 centimeters. Land (NaN) becomes the sentinel 65535 so
+    # the frontend can tell land apart from genuinely calm sea (0 cm) and shade
+    # only the latter. Valid heights are clipped to 0..65534.
+    land_mask = ~np.isfinite(height_data)
+    height_u16 = np.clip(np.nan_to_num(height_data, nan=0.0) * 100, 0, 65534).astype(np.uint16)
+    height_u16[land_mask] = 65535
 
     h_name = f"wave_f{fhour:03d}.bin"
     height_u16.tofile(os.path.join(OUTPUT_DIR, h_name))

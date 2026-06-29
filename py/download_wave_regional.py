@@ -42,6 +42,10 @@ REGIONS = [
      "bbox": (32.0, 44.0, 12.0, 30.5), "stride": 1},
     {"name": "persiangulf",   "dataset": "cmems_mod_glo_wav_anfc_0.083deg_PT3H-i",
      "bbox": (46.5, 57.5, 22.5, 30.7), "stride": 1},
+    # Black Sea: dedicated 2.5 km model (finer than Med); last so it wins the
+    # tiny Marmara/Dardanelles overlap with the Mediterranean grid.
+    {"name": "blacksea",      "dataset": "cmems_mod_blk_wav_anfc_2.5km_PT1H-i",
+     "bbox": (27.0, 42.0, 40.0, 47.5), "stride": 3},
 ]
 
 
@@ -103,8 +107,12 @@ def build_region(region, base_valid, frames, tmpdir):
     for fr in frames:
         valid = base_valid + dt.timedelta(hours=fr["hour"])
         sl = ds.sel(time=np.datetime64(valid.replace(tzinfo=None)), method="nearest")
-        h = np.nan_to_num(sl.VHM0.values, nan=0.0)
-        h_u16 = np.clip(h * 100, 0, 65535).astype("<u2")
+        # Land (NaN) → sentinel 65535 so the frontend shades it as land instead
+        # of confusing it with calm sea (0 cm). Valid heights clipped to 0..65534.
+        hv = sl.VHM0.values
+        land = ~np.isfinite(hv)
+        h_u16 = np.clip(np.nan_to_num(hv, nan=0.0) * 100, 0, 65534).astype("<u2")
+        h_u16[land] = 65535
         hname = f"wave_{region['name']}_f{fr['hour']:03d}.bin"
         h_u16.tofile(os.path.join(OUTPUT_DIR, hname))
 
