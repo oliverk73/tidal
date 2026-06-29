@@ -72,6 +72,9 @@ class WaveCanvasLayer {
     this.meta = null;
     this.gridCache = {};
     this.dirCache = {};
+    this.regions = [];               // higher-res regional overlays (Baltic, Med, …)
+    this.regionGridCache = {};       // key: "<regionIdx>|<frameIdx>" → Uint16Array
+    this.regionDirCache = {};
     this.canvas = null;
     this.arrowCanvas = null;
     this.particleCanvas = null;
@@ -104,8 +107,31 @@ class WaveCanvasLayer {
     this.meta = await resp.json();
     this.frames = this.meta.frames;
     this.hasDirection = !!this.meta.hasDirection;
+    this.regions = this.meta.regions || [];
+    this.regionGridCache = {};
+    this.regionDirCache = {};
     this._cacheBust = this.meta.generated ? '?t=' + encodeURIComponent(this.meta.generated) : '';
     return this.meta;
+  }
+
+  async loadRegionGrid(ri, frameIdx) {
+    const key = ri + '|' + frameIdx;
+    if (this.regionGridCache[key]) return this.regionGridCache[key];
+    const fr = this.regions[ri] && this.regions[ri].frames[frameIdx];
+    if (!fr || !fr.height) return null;
+    const resp = await fetch('/static/waves/' + fr.height + (this._cacheBust || ''));
+    this.regionGridCache[key] = new Uint16Array(await resp.arrayBuffer());
+    return this.regionGridCache[key];
+  }
+
+  async loadRegionDir(ri, frameIdx) {
+    const key = ri + '|' + frameIdx;
+    if (this.regionDirCache[key]) return this.regionDirCache[key];
+    const fr = this.regions[ri] && this.regions[ri].frames[frameIdx];
+    if (!fr || !fr.direction) return null;
+    const resp = await fetch('/static/waves/' + fr.direction + (this._cacheBust || ''));
+    this.regionDirCache[key] = new Uint16Array(await resp.arrayBuffer());
+    return this.regionDirCache[key];
   }
 
   _heightFile(frameIdx) {
@@ -195,6 +221,10 @@ class WaveCanvasLayer {
     this.currentFrame = idx;
     await this.loadGrid(idx);
     if (this.hasDirection) await this.loadDir(idx);
+    if (this.regions.length) {
+      await Promise.all(this.regions.flatMap((_, ri) =>
+        [this.loadRegionGrid(ri, idx), this.loadRegionDir(ri, idx)]));
+    }
     this._renderViewKey = '';
     this.render();
     this.updateUI();
@@ -339,8 +369,60 @@ class WaveCanvasLayer {
       }
     }
 
+    // Higher-resolution regional overlays (drawn on top of the global field)
+    for (let ri = 0; ri < this.regions.length; ri++) {
+      const rg = this.regionGridCache[ri + '|' + this.currentFrame];
+      if (rg) this._overlayHeightRegion(buf32, rw, rh, scale, bounds, this.regions[ri].grid, rg);
+    }
+
     ctx.putImageData(imgData, 0, 0);
     return imgData;
+  }
+
+  // Overlay one regional height grid onto the (already global-filled) pixel buffer.
+  // Region grid is a plain regular lat/lon block (lon in -180..180), row 0 = north.
+  _overlayHeightRegion(buf32, rw, rh, scale, bounds, g, grid) {
+    const map = this.map;
+    const gnx = g.nx, gny = g.ny;
+    const la1 = g.la1, la2 = g.la2, lo1 = g.lo1, lo2 = g.lo2, dx = g.dx, dy = g.dy;
+    const west = bounds.getWest();
+    const invRw = (bounds.getEast() - west) / rw;
+
+    for (let py = 0; py < rh; py++) {
+      const lat = map.containerPointToLatLng([0, py / scale]).lat;
+      if (lat > la1 || lat < la2) continue;
+      const gy = (la1 - lat) / dy;
+      if (gy < 0 || gy >= gny - 1) continue;
+      const gy0 = gy | 0;
+      const gy1 = gy0 + 1;
+      const fy = gy - gy0;
+      const fy1 = 1 - fy;
+      const row0 = gy0 * gnx;
+      const row1 = gy1 * gnx;
+      const rowOff = py * rw;
+
+      for (let px = 0; px < rw; px++) {
+        let lon = west + px * invRw;
+        lon = ((lon + 180) % 360 + 360) % 360 - 180;   // normalize to -180..180
+        if (lon < lo1 || lon > lo2) continue;
+        const gx = (lon - lo1) / dx;
+        if (gx < 0 || gx >= gnx - 1) continue;
+        const gx0 = gx | 0;
+        const gx1 = gx0 + 1;
+        const fx = gx - gx0;
+        const fx1 = 1 - fx;
+
+        const val = grid[row0 + gx0] * fx1 * fy1 +
+                    grid[row0 + gx1] * fx  * fy1 +
+                    grid[row1 + gx0] * fx1 * fy +
+                    grid[row1 + gx1] * fx  * fy;
+        if (val < 30) continue;   // region dry / no data → keep global pixel
+
+        const color32 = WAVE_LUT32[Math.min(2047, (val / 5) | 0)];
+        if (color32 === 0) continue;
+        buf32[rowOff + px] = color32;
+      }
+    }
   }
 
   _renderArrows(grid, size, bounds, zoom, topLeft) {
@@ -357,10 +439,14 @@ class WaveCanvasLayer {
 
     const ctx = canvas.getContext('2d');
 
-    const g = this.meta.grid;
-    const gnx = g.nx;
-    const gny = g.ny;
-    const la1 = g.la1, lo1 = g.lo1, dx = g.dx, dy = g.dy;
+    // Sampling candidates: regional overlays first (higher res), then global.
+    const cand = [];
+    for (let ri = 0; ri < this.regions.length; ri++) {
+      const rg = this.regionGridCache[ri + '|' + this.currentFrame];
+      const rd = this.regionDirCache[ri + '|' + this.currentFrame];
+      if (rg && rd) cand.push({ g: this.regions[ri].grid, grid: rg, dir: rd, region: true });
+    }
+    cand.push({ g: this.meta.grid, grid: grid, dir: dirGrid, region: false });
 
     const west = bounds.getWest();
     const lonSpan = bounds.getEast() - west;
@@ -371,63 +457,57 @@ class WaveCanvasLayer {
     const cosHA = Math.cos(headAngle);
     const sinHA = Math.sin(headAngle);
 
-    // Batch all shafts into one path, all heads into another
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
     ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
     ctx.lineWidth = 1.5;
-
-    // Shaft path
     ctx.beginPath();
-    // Collect arrowhead vertices for a second batched path
     const heads = [];
+
+    // Sample height + propagation angle at a point; regional grids win where
+    // they have data, otherwise fall through to the global field.
+    const sampleAt = (lat, lonRaw) => {
+      for (let k = 0; k < cand.length; k++) {
+        const c = cand[k], gm = c.g, gnx = gm.nx, gny = gm.ny;
+        let lon;
+        if (c.region) {
+          lon = ((lonRaw + 180) % 360 + 360) % 360 - 180;
+          if (lon < gm.lo1 || lon > gm.lo2) continue;
+        } else {
+          lon = ((lonRaw % 360) + 360) % 360;
+        }
+        const gy = (gm.la1 - lat) / gm.dy;
+        if (gy < 0 || gy >= gny - 1) continue;
+        const gx = (lon - gm.lo1) / gm.dx;
+        if (gx < 0) continue;
+        const gy0 = gy | 0, fy = gy - gy0, fy1 = 1 - fy;
+        const gy1 = gy0 + 1 < gny ? gy0 + 1 : gy0;
+        const gx0 = gx | 0;
+        let gx1;
+        if (c.region) { if (gx0 + 1 >= gnx) continue; gx1 = gx0 + 1; }
+        else { gx1 = (gx0 + 1) % gnx; }
+        const fx = gx - gx0, fx1 = 1 - fx;
+        const row0 = gy0 * gnx, row1 = gy1 * gnx;
+        const h = c.grid[row0 + gx0] * fx1 * fy1 + c.grid[row0 + gx1] * fx * fy1 +
+                  c.grid[row1 + gx0] * fx1 * fy + c.grid[row1 + gx1] * fx * fy;
+        if (h < 30) continue;
+        const d00 = Math.min(c.dir[row0 + gx0], 3600), d01 = Math.min(c.dir[row0 + gx1], 3600);
+        const d10 = Math.min(c.dir[row1 + gx0], 3600), d11 = Math.min(c.dir[row1 + gx1], 3600);
+        const sinD = DIR_SIN[d00]*fx1*fy1 + DIR_SIN[d01]*fx*fy1 + DIR_SIN[d10]*fx1*fy + DIR_SIN[d11]*fx*fy;
+        const cosD = DIR_COS[d00]*fx1*fy1 + DIR_COS[d01]*fx*fy1 + DIR_COS[d10]*fx1*fy + DIR_COS[d11]*fx*fy;
+        return { h: h, dir: Math.atan2(sinD, cosD) + Math.PI };
+      }
+      return null;
+    };
 
     for (let py = spacing * 0.5; py < size.y; py += spacing) {
       const lat = map.containerPointToLatLng([0, py]).lat;
       if (lat > 90 || lat < -90) continue;
 
-      const gy = (la1 - lat) / dy;
-      if (gy < 0 || gy >= gny - 1) continue;
-      const gy0 = gy | 0;
-      const gy1 = gy0 + 1 < gny ? gy0 + 1 : gy0;
-      const fy = gy - gy0;
-      const fy1 = 1 - fy;
-      const row0 = gy0 * gnx;
-      const row1 = gy1 * gnx;
-
       for (let px = spacing * 0.5; px < size.x; px += spacing) {
-        let lon = west + (px / size.x) * lonSpan;
-        lon = ((lon % 360) + 360) % 360;
-
-        const gx = (lon - lo1) / dx;
-        if (gx < 0) continue;
-        const gx0 = gx | 0;
-        const gx1 = (gx0 + 1) % gnx;
-        const fx = gx - gx0;
-        const fx1 = 1 - fx;
-
-        const hVal = grid[row0 + gx0] * fx1 * fy1 +
-                     grid[row0 + gx1] * fx  * fy1 +
-                     grid[row1 + gx0] * fx1 * fy +
-                     grid[row1 + gx1] * fx  * fy;
-        if (hVal < 30) continue;
-
-        // Direction interpolation via LUT (no trig in loop)
-        const d00 = Math.min(dirGrid[row0 + gx0], 3600);
-        const d01 = Math.min(dirGrid[row0 + gx1], 3600);
-        const d10 = Math.min(dirGrid[row1 + gx0], 3600);
-        const d11 = Math.min(dirGrid[row1 + gx1], 3600);
-
-        const sinD = DIR_SIN[d00] * fx1 * fy1 +
-                     DIR_SIN[d01] * fx  * fy1 +
-                     DIR_SIN[d10] * fx1 * fy +
-                     DIR_SIN[d11] * fx  * fy;
-        const cosD = DIR_COS[d00] * fx1 * fy1 +
-                     DIR_COS[d01] * fx  * fy1 +
-                     DIR_COS[d10] * fx1 * fy +
-                     DIR_COS[d11] * fx  * fy;
-
-        // atan2 is unavoidable for the final angle, but only once per arrow
-        const dirRad = Math.atan2(sinD, cosD) + Math.PI;
+        const s = sampleAt(lat, west + (px / size.x) * lonSpan);
+        if (!s) continue;
+        const hVal = s.h;
+        const dirRad = s.dir;
 
         const scaleFactor = Math.min(1.0, Math.max(0.4, hVal / 400));
         const len = arrowLen * scaleFactor;
