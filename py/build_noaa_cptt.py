@@ -371,8 +371,11 @@ def block(s, tr, cty):
 
 # build these even though they are "covered" (explicit FES replacements requested by Oliver);
 # value = display-name override (already carries its country suffix).
-# coordinate corrections for NOAA misprints (verified against neighbouring-row lat ordering)
-COORD_OVERRIDE = {219: (47.05, 142.033)}   # Port Kholmsk, Sakhalin: PDF prints 41°03' -> 47°03'
+# coordinate corrections for NOAA misprints (verified against neighbouring-row ordering + geography)
+COORD_OVERRIDE = {
+    219:  (47.05, 142.033),    # Port Kholmsk, Sakhalin: PDF prints 41°03' -> 47°03'N
+    1751: (1.25, 102.1667),    # Siak River ent. (Riau): PDF prints 105°10' -> 102°10'E (nbrs ~102°)
+}
 
 FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia',
                  1869: 'Cirebon, Java, Indonesia',
