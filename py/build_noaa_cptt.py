@@ -132,10 +132,13 @@ CK_CHINA = {'Dalian', 'Tanggu', 'Qingdao', 'Yantai', 'Lianyun Gang', 'Wusong',
             'Ch’ang Chiang Approach', 'Qinhuangdao'}
 def country(lat, lon, ref):
     if lat < -60: return 'Antarctica'   # below 60°S = Antarctica (nearest DB station is S.America)
+    # Sabah (NE Borneo, Malaysia) sits between Indonesian Kalimantan and Philippine Tawi-Tawi,
+    # so country_nn lands across a border (Lahad Datu/Kudat -> PHL/IDN); pin it geographically.
+    if 4.3 <= lat <= 7.5 and 115.2 <= lon <= 119.3: return 'Malaysia'
     # --- China/Korea/Japan/Russia (Yellow Sea + boundary refs), keyed by reference ---
     # gated by latitude: these refs are also used as distant character-matches for
     # equatorial Indonesian ports, which must NOT inherit the reference's country.
-    if ref in CK_CHINA and lat >= 18: return 'China'
+    if ref in CK_CHINA and lat >= 18 and lon < 124: return 'China'   # lon<124 keeps Korea (Koje-do) out
     if ref in ('Yokohama', 'Kamaisi', 'Naha') and lat >= 23: return 'Japan'   # Honshu / Ryukyu
     # (Otomari/Korsakov is a character-ref for BOTH Sakhalin (RU) and NE Hokkaido (JP);
     #  let country_nn decide by nearest station — e.g. Koiseboi 44.0N -> Japan.)
@@ -201,6 +204,57 @@ def tz_lookup(lat, lon):
     if z: return z
     off = round(lng / 15.0)                          # ocean fallback: fixed UTC offset
     return f"Etc/GMT{-off:+d}" if off else 'Etc/GMT'
+
+# countries whose stations carry a province/state/island in the name ("Place, Province, Country")
+PROVINCE_COUNTRIES = {'China', 'Indonesia', 'India', 'Australia', 'Japan', 'Philippines',
+                      'New Zealand', 'South Korea', 'Thailand', 'Vietnam', 'Malaysia', 'Myanmar',
+                      'Iran', 'Pakistan', 'Taiwan', 'Argentina', 'Russia'}
+_PROV_BAD = ('strait', 'river', 'bay', 'island', 'islands', 'entrance', 'gulf', 'coast', 'arch',
+             'channel', 'sound', 'shoal', 'reef', 'atoll', 'harbor', 'harbour', 'peninsula',
+             'cape', 'lagoon', 'inlet', 'pulau', 'teluk', '(', ')', '<', '>', '[')
+def is_real_province(p):
+    """Accept administrative provinces/states/prefectures; reject geographic features and OCR
+    artefacts that our DB sometimes stores in the same name slot."""
+    if not (1 < len(p) < 32): return False
+    pl = p.lower()
+    return not any(w in pl for w in _PROV_BAD)
+
+_PPTS = None
+def province_lookup(cty, lat, lon):
+    """Province/state/island for the station, taken from the nearest same-country DB station that
+    carries one (3+ name segments). Distance-capped (250 km) so remote stations don't inherit a
+    far, wrong province."""
+    if cty not in PROVINCE_COUNTRIES: return None
+    global _PPTS
+    if _PPTS is None:
+        _PPTS = {}
+        latp = re.compile(r'^# !latitude: ([\-\d.]+)'); lonp = re.compile(r'^# !longitude: ([\-\d.]+)')
+        for f in FILES:
+            if 'current' in f.lower(): continue
+            L = open(f, encoding='iso-8859-1').read().splitlines(); lo = None
+            for j, l in enumerate(L):
+                m = lonp.match(l)
+                if m: lo = float(m.group(1)); continue
+                m = latp.match(l)
+                if m and lo is not None:
+                    la = float(m.group(1)); nm = None
+                    for k in range(j + 1, min(j + 6, len(L))):
+                        if L[k].strip() and not L[k].startswith('#'): nm = L[k].strip(); break
+                    if nm and nm.count(',') >= 2 and not nm.rstrip().endswith(('Current', 'Tide')):
+                        segs = [x.strip() for x in nm.split(',')]
+                        c, prov = segs[-1], segs[-2]
+                        if c in PROVINCE_COUNTRIES and is_real_province(prov):
+                            _PPTS.setdefault(c, ([], [], []))
+                            _PPTS[c][0].append(la); _PPTS[c][1].append(lo); _PPTS[c][2].append(prov)
+                    lo = None
+        _PPTS = {c: (np.array(a), np.array(b), p) for c, (a, b, p) in _PPTS.items()}
+    idx = _PPTS.get(cty)
+    if not idx: return None
+    la_a, lo_a, provs = idx
+    d = (la_a - lat) ** 2 + ((lo_a - lon) * math.cos(math.radians(lat))) ** 2
+    i = int(np.argmin(d))
+    if math.sqrt(d[i]) * 111.0 > 250: return None          # ~km cap
+    return provs[i]
 
 def is_us_pacific(lat, lon, name):
     """US Pacific territories — excluded (NOAA's own DWF/US tide tables cover them better)."""
@@ -347,8 +401,9 @@ def block(s, tr, cty):
     if s.get('_name_override'):
         name = s['_name_override']
     else:
-        name = cleanname(s['name'])
-        if cty and not name.endswith(cty): name = f"{name}, {cty}"
+        place = cleanname(s['name'])
+        prov = province_lookup(cty, s['lat'], s['lon'])
+        name = ', '.join([place] + ([lat1(prov)] if prov else []) + ([cty] if cty else []))
     tz = tz_lookup(s['lat'], s['lon'])            # authoritative zone for the station's location
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
@@ -376,6 +431,8 @@ COORD_OVERRIDE = {
     219:  (47.05, 142.033),    # Port Kholmsk, Sakhalin: PDF prints 41°03' -> 47°03'N
     1751: (1.25, 102.1667),    # Siak River ent. (Riau): PDF prints 105°10' -> 102°10'E (nbrs ~102°)
 }
+# country fixes where neither reference nor nearest-neighbour resolve a contested border correctly
+COUNTRY_OVERRIDE = {1205: 'China'}   # Zhaoshigou (Yalu mouth, Liaoning) — NOAA refs Nampo (NK)
 
 FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia',
                  1869: 'Cirebon, Java, Indonesia',
@@ -408,7 +465,7 @@ def main():
         tr['refname'] = rn
         if forced:
             s = {**s, '_name_override': FORCE_INCLUDE[no]}
-        cty = country(s['lat'], s['lon'], s['ref'])
+        cty = COUNTRY_OVERRIDE.get(no) or country(s['lat'], s['lon'], s['ref'])
         built.append((s, tr, cty))
     lines = list(HEADER); names = []
     for s, tr, cty in built:
