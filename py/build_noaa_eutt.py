@@ -406,6 +406,7 @@ def block(s, tr, cty):
         place = cleanname(s['name'])
         prov = province_lookup(cty, s['lat'], s['lon'])
         name = ', '.join([place] + ([lat1(prov)] if prov else []) + ([cty] if cty else []))
+    name = NAME_FIX_NO.get(s['no'], name)
     tz = tz_lookup(s['lat'], s['lon'])            # authoritative zone for the station's location
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
@@ -432,6 +433,32 @@ def block(s, tr, cty):
 COORD_OVERRIDE = {}   # eutt2020: keine bekannten Druckfehler (SE-Asia-Overrides entfernt)
 # country fixes where neither reference nor nearest-neighbour resolve a contested border correctly
 COUNTRY_OVERRIDE = {}
+
+
+# Diakritika-/Namenskorrekturen per NOAA-Nr. (offizielle lokale Schreibweise; nur eindeutige
+# Faelle, alles Latin-1). Volle Anzeigenamen. Kyrillisch (RU) bleibt ASCII (ISO-8859-1).
+NAME_FIX_NO = {
+ 465: 'Huelva, Río Odiel, Spain',
+ 533: 'Corcubión, Spain',
+ 569: 'Ría de Suances, Spain',
+ 593: 'Ría de Orio, Spain',
+ 595: 'San Sebastián, Spain',
+ 31:  'Ilhéu de Fora, Ilhas Selvagens, Portugal',
+ 511: 'Esposende, Rio Cávado, Portugal',
+ 113: 'Baía de Ana Chaves, São Tomé, São Tomé and Príncipe',
+ 249: 'João Vieira Island, Guinea-Bissau',
+ 243: 'Dubréka, Guinea',
+ 13:  'Porto da Fajã, Brava Island, Cape Verde',
+ 177: 'Lomé, Togo',
+ 321: 'Kénitra, Morocco',
+ 463: 'Sevilla, Río Guadalquivir, Morocco',
+ 1495:'Sønderho, Fanø Island, Denmark',
+ 1467:'Südfall, Hever Strom, Germany',
+ 1475:'Hooge, Süder Aue, Germany',
+ 407: 'Grado, Italy',
+ 411: 'Malamocco, Italy',
+ 413: 'Chioggia, Italy',
+}
 
 # exakte Namensdubletten zu gemessenen Quellen (Puertos del Estado etc.) -> Messung gewinnt
 DROP_NO = {581}   # Bilbao (= gemessener Puertos-Pegel 'Bilbao, Spain')
