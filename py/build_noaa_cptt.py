@@ -27,7 +27,7 @@ GAP_KM = 4.0
 # cumulative: all regions built so far go into the one harmonics_noaa_cptt.txt
 REGIONS = sys.argv[1].split(',') if len(sys.argv) > 1 else \
     ['SEAsia/PHL/IDN/MY', 'China/Korea', 'IndianOcean/Arabia/EAfrica', 'PacificIslands',
-     'Okhotsk/Kamchatka/Kuril']
+     'Okhotsk/Kamchatka/Kuril', 'Arctic/Siberia', 'Australia/NZ', 'Antarctica', 'Other']
 
 # ---------- header (congen block) from an existing harmonics file ----------
 def read_header(path):
@@ -114,6 +114,9 @@ REFMAP = {
  'Nawiliwili': 'Nawiliwili', 'Hilo': 'Hilo', 'Kahului': 'Kahului', 'Moku O Loe': 'Moku O Loe',
  # --- Russian Far East / Okhotsk / Kamchatka / Kuril ---
  'Moji': 'Moji', 'Yamato Wan': 'Ostrov Mamya', 'Paramushiru Island': 'Paramushir',
+ # --- Australia / NZ / Mozambique / Guam (final batch) ---
+ 'Port Hedland': 'Port Hedland', 'Port Adelaide': 'Adelaide', 'Port Phillip': 'Port Phillip',
+ 'Port Lincoln': 'Port Lincoln', 'Beira': 'Beira', 'Guam': 'Guam',
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -128,6 +131,7 @@ def resolve_ref(noaa_ref):
 CK_CHINA = {'Dalian', 'Tanggu', 'Qingdao', 'Yantai', 'Lianyun Gang', 'Wusong',
             'Ch’ang Chiang Approach', 'Qinhuangdao'}
 def country(lat, lon, ref):
+    if lat < -60: return 'Antarctica'   # below 60°S = Antarctica (nearest DB station is S.America)
     # --- China/Korea/Japan/Russia (Yellow Sea + boundary refs), keyed by reference ---
     # gated by latitude: these refs are also used as distant character-matches for
     # equatorial Indonesian ports, which must NOT inherit the reference's country.
@@ -171,7 +175,7 @@ def country_nn(lat, lon):
                     la = float(m.group(1)); nm = None
                     for k in range(j + 1, min(j + 6, len(L))):
                         if L[k].strip() and not L[k].startswith('#'): nm = L[k].strip(); break
-                    if nm and ',' in nm and not nm.rstrip().endswith('Current'):
+                    if nm and ',' in nm and not nm.rstrip().endswith(('Current', 'Tide')):
                         c = nm.split(',')[-1].strip()
                         if 2 < len(c) < 40 and not any(ch.isdigit() for ch in c):
                             plat.append(la); plon.append(lo); pc.append(c)
@@ -181,7 +185,7 @@ def country_nn(lat, lon):
     if not len(plat): return None
     d = (plat - lat) ** 2 + ((plon - lon) * math.cos(math.radians(lat))) ** 2
     c = pc[int(np.argmin(d))]
-    return {'French Polyneisa': 'French Polynesia'}.get(c, c)   # fix known DB typo
+    return {'French Polyneisa': 'French Polynesia', 'Moçambique': 'Mozambique'}.get(c, c)
 
 from timezonefinder import TimezoneFinder
 _TF = None
@@ -206,6 +210,7 @@ def is_us_pacific(lat, lon, name):
         return True
     if 18.5 <= lat <= 28.7 and -178.6 <= lon <= -154.5: return True   # Hawaiian chain (incl. NW)
     if -14.7 <= lat <= -10.9 and -171.6 <= lon <= -168.0: return True  # American Samoa
+    if 13 <= lat <= 21 and 144 <= lon <= 147: return True             # Guam + Northern Marianas
     return False
 
 # ---------- helpers ----------
