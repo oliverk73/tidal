@@ -24,7 +24,8 @@ FULL = '/tmp/claude-1000/-home-oliver/99a597f4-8599-48bf-9982-0299f605aaa8/scrat
 GAPS = '/tmp/claude-1000/-home-oliver/99a597f4-8599-48bf-9982-0299f605aaa8/scratchpad/gaps.json'
 FT = 0.3048
 GAP_KM = 4.0
-REGION = sys.argv[1] if len(sys.argv) > 1 else 'SEAsia/PHL/IDN/MY'
+# cumulative: all regions built so far go into the one harmonics_noaa_cptt.txt
+REGIONS = sys.argv[1].split(',') if len(sys.argv) > 1 else ['SEAsia/PHL/IDN/MY', 'China/Korea']
 
 # ---------- header (congen block) from an existing harmonics file ----------
 def read_header(path):
@@ -95,6 +96,11 @@ REFMAP = {
  'Naha': 'Naha', 'Yokohama': 'Yokohama', 'Paramushiru Island': 'Paramushir', 'Darwin': 'Darwin',
  'Dar Es Salaam': 'Dar Es Salaam', 'Bombay': 'Mumbai', 'Ch’ang Chiang Approach': 'Chang Jiang',
  'Shatt Al Arab': 'Khowr-e Musa',
+ # --- China/Korea Yellow Sea + boundary ---
+ 'Dalian': 'Dalian, China', 'Tanggu': 'Tanggu, Tianjin', 'Inch’on': 'Incheon, South',
+ 'Wusong': 'Wusong', 'Namp’O-Hang': 'Nampo, North', 'Pusan': 'Busan New Port',
+ 'Lianyun Gang': 'Lianyungang (Port)', 'Yantai': 'Yantai, Shandong', 'Qingdao': 'Qingdao, China',
+ 'Qinhuangdao': 'Qinhuangdao, Hebei', 'Otomari': 'Korsakov',
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -106,7 +112,18 @@ def resolve_ref(noaa_ref):
     return rn, rr
 
 # ---------- country inference: reference-based override, then bbox ----------
+CK_CHINA = {'Dalian', 'Tanggu', 'Qingdao', 'Yantai', 'Lianyun Gang', 'Wusong',
+            'Ch’ang Chiang Approach', 'Qinhuangdao'}
 def country(lat, lon, ref):
+    # --- China/Korea/Japan/Russia (Yellow Sea + boundary refs), keyed by reference ---
+    # gated by latitude: these refs are also used as distant character-matches for
+    # equatorial Indonesian ports, which must NOT inherit the reference's country.
+    if ref in CK_CHINA and lat >= 18: return 'China'
+    if ref in ('Yokohama', 'Kamaisi', 'Naha') and lat >= 23: return 'Japan'   # Honshu / Ryukyu
+    if ref == 'Otomari' and lat >= 40: return 'Russia'                        # Sakhalin
+    if ref in ('Inch’on', 'Pusan', 'Namp’O-Hang') and lat >= 32:             # Korea, split N/S
+        if (lon < 126.7 and lat >= 37.75) or (lon >= 127.3 and lat >= 38.6): return 'North Korea'
+        return 'South Korea'
     # geography first (reference can be a distant character-match port, so don't trust it for country)
     if 21.8 <= lat <= 25.4 and 119.2 <= lon <= 122.1: return 'Taiwan'       # Taiwan + Penghu
     if 22.1 <= lat <= 22.62 and 113.82 <= lon <= 114.52: return 'Hong Kong'
@@ -298,7 +315,7 @@ FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia',
 def main():
     full = json.load(open(FULL))
     gaps = json.load(open(GAPS))
-    gapno = {g['no'] for g in gaps if g['region'] == REGION}
+    gapno = {g['no'] for g in gaps if g['region'] in REGIONS}
     gapno |= set(FORCE_INCLUDE)
     byno = {r['no']: r for r in full}
     PTS = refpts()
