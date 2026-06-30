@@ -433,6 +433,9 @@ COORD_OVERRIDE = {}   # eutt2020: keine bekannten Druckfehler (SE-Asia-Overrides
 # country fixes where neither reference nor nearest-neighbour resolve a contested border correctly
 COUNTRY_OVERRIDE = {}
 
+# exakte Namensdubletten zu gemessenen Quellen (Puertos del Estado etc.) -> Messung gewinnt
+DROP_NO = {581}   # Bilbao (= gemessener Puertos-Pegel 'Bilbao, Spain')
+
 FORCE_INCLUDE = {127: 'Kribi, Cameroon',
                  125: 'Malabo (Santa Isabel), Equatorial Guinea',
                  111: 'Annobón, Equatorial Guinea',
@@ -452,6 +455,7 @@ def main():
     PTS = refpts()
     built = []; skipped = []
     for no in sorted(gapno):
+        if no in DROP_NO: continue
         s = byno.get(no)
         if not s or s.get('daily'): continue
         if no in COORD_OVERRIDE:
