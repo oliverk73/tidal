@@ -159,7 +159,8 @@ SOURCE_GROUPS = OrderedDict([
                                                      'harmonics_att_np207.tcd',
                                                      'harmonics_att_np204_secondary.tcd']}),
     ('Harmonics ATT Currents', {'color': '#0D47A1', 'files': ['harmonics_att_np203_currents.tcd']}),
-    ('Harmonics NOAA', {'color': '#00BCD4', 'files': ['harmonics_noaa_cptt.tcd']}),
+    ('Harmonics NOAA', {'color': '#00BCD4', 'files': ['harmonics_noaa_cptt.tcd',
+                                                      'harmonics_noaa_eutt.tcd']}),
 ])
 
 # Group order: predefined + 'Other' fallback (für nicht zugeordnete Quellen)
