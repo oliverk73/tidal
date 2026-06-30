@@ -451,7 +451,6 @@ NAME_FIX_NO = {
  249: 'João Vieira Island, Guinea-Bissau',
  243: 'Dubréka, Guinea',
  13:  'Porto da Fajã, Brava Island, Cape Verde',
- 177: 'Lomé, Togo',
  321: 'Kénitra, Morocco',
  463: 'Sevilla, Río Guadalquivir, Spain',
  1495:'Sønderho, Fanø Island, Denmark',
@@ -463,7 +462,8 @@ NAME_FIX_NO = {
 }
 
 # exakte Namensdubletten zu gemessenen Quellen (Puertos del Estado etc.) -> Messung gewinnt
-DROP_NO = {581}   # Bilbao (= gemessener Puertos-Pegel 'Bilbao, Spain')
+DROP_NO = {581,   # Bilbao (= gemessener Puertos-Pegel 'Bilbao, Spain')
+           177}  # Lome (= vorhandener DWF-1997 + UTide-TC 'Lomé, Togo', 6.2km)
 
 FORCE_INCLUDE = {127: 'Kribi, Cameroon',
                  125: 'Malabo (Santa Isabel), Equatorial Guinea',
