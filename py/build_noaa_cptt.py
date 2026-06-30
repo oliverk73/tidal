@@ -398,13 +398,16 @@ def conf_of(tr, s):
     if tr['M2'] < 0.30 and tr['refF'] < 1.0: c = min(c, 3)
     return c
 
-def block(s, tr, cty):
+def block(s, tr, cty, OV=None, EXISTING=None):
     if s.get('_name_override'):
         name = s['_name_override']
     else:
         place = cleanname(s['name'])
         prov = province_lookup(cty, s['lat'], s['lon'])
         name = ', '.join([place] + ([lat1(prov)] if prov else []) + ([cty] if cty else []))
+    if OV is not None:
+        import noaa_overrides as _NOV
+        name = _NOV.resolve_name(OV, s['no'], name, EXISTING or {})
     tz = tz_lookup(s['lat'], s['lon'])            # authoritative zone for the station's location
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
@@ -452,7 +455,9 @@ def main():
     for r in full:
         clat, clon = COORD_OVERRIDE.get(r['no'], (r['lat'], r['lon']))
         raw_by_key[str(r['no'])] = (clat, clon, r.get('name', ''))
-    OV = NOV.capture('noaa_cptt', OUT, raw_by_key)
+    EXISTING = NOV.parse_existing(OUT)
+    OV = NOV.load('noaa_cptt')
+    NOV.capture_coords(OV, EXISTING, raw_by_key)
     built = []; skipped = []
     for no in sorted(gapno):
         s = byno.get(no)
@@ -479,7 +484,8 @@ def main():
         built.append((s, tr, cty))
     lines = list(HEADER); names = []
     for s, tr, cty in built:
-        b, nm, cf = block(s, tr, cty); lines += b; names.append((nm, cf, tr['M2'], s['no']))
+        b, nm, cf = block(s, tr, cty, OV, EXISTING); lines += b; names.append((nm, cf, tr['M2'], s['no']))
+    NOV.save('noaa_cptt', OV)
     open(OUT, 'w', encoding='iso-8859-1').write('\n'.join(lines) + '\n')
     print(f"BUILT {len(built)} stations -> {OUT}")
     print(f"skipped {len(skipped)}")

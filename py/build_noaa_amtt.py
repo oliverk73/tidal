@@ -437,7 +437,7 @@ def diac(name, cty):
         name = name.replace('Metis-sur-Mer','Métis-sur-Mer').replace('Ile aux Coudres','Île aux Coudres').replace("L' Islet","L'Islet")
     return name
 
-def block(s, tr, cty):
+def block(s, tr, cty, OV=None, EXISTING=None):
     if s.get('_name_override'):
         name = s['_name_override']
     else:
@@ -446,6 +446,9 @@ def block(s, tr, cty):
         name = ', '.join([place] + ([lat1(prov)] if prov else []) + ([cty] if cty else []))
     name = NAME_FIX_NO.get(s.get('uid'), name)
     name = diac(name, cty)
+    if OV is not None:
+        import noaa_overrides as _NOV
+        name = _NOV.resolve_name(OV, s.get('uid'), name, EXISTING or {})
     tz = tz_lookup(s['lat'], s['lon'])            # authoritative zone for the station's location
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
@@ -490,7 +493,9 @@ def main():
     # --- persistenter Override-Layer: Frontend-Koordinaten-Korrekturen schuetzen ---
     import noaa_overrides as NOV
     raw_by_key = {r['uid']: (r['lat'], r['lon'], r.get('name','')) for r in full}
-    OV = NOV.capture('noaa_amtt', OUT, raw_by_key)
+    EXISTING = NOV.parse_existing(OUT)
+    OV = NOV.load('noaa_amtt')
+    NOV.capture_coords(OV, EXISTING, raw_by_key)
     built = []; skipped = []
     from collections import Counter
     for s in sorted(recs, key=lambda x: x['uid']):
@@ -509,8 +514,9 @@ def main():
         built.append((s, tr, cty))
     lines = list(HEADER); names = []
     for s, tr, cty in built:
-        b, nm, cf = block(s, tr, cty); lines += b
+        b, nm, cf = block(s, tr, cty, OV, EXISTING); lines += b
         names.append((nm, cf, tr['M2'], s['uid'], s['_cls2']))
+    NOV.save('noaa_amtt', OV)
     open(OUT, 'w', encoding='iso-8859-1').write(chr(10).join(lines) + chr(10))
     print(f"BUILT {len(built)} stations -> {OUT}")
     print('classes:', dict(Counter(n[4] for n in names)))

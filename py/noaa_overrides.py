@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Persistenter Override-Layer fuer die NOAA-Band-Generatoren.
+"""Persistenter Override-Layer fuer die NOAA-Band-Generatoren (Koordinaten UND Namen).
 
-Problem: Die Web-Frontend-App schreibt manuelle Koordinaten-/Namens-Korrekturen via
-update_coords_in_txt()/update_station_name() DIREKT in die generierte harmonics_*.txt.
+Problem: Die Web-Frontend-App schreibt manuelle Koordinaten-Korrekturen (update_coords_in_txt)
+und Namens-Korrekturen (update_station_name) DIREKT in die generierte harmonics_*.txt.
 Ein Rebuild aus dem Roh-Parse wuerde diese ueberschreiben.
 
-Loesung (Auto-Capture):
-  Vor jedem Rebuild wird die bestehende OUT-.txt gelesen und je Station (Key = NOAA-Nummer
-  bzw. uid) mit dem Wert verglichen, den der Generator OHNE neue Overrides erzeugen wuerde
-  (raw-Parse-Koordinate / raw-Name). Weicht die .txt ab, ist das eine manuelle Korrektur ->
-  sie wird in eine git-getrackte JSON gesichert und beim Schreiben IMMER zuletzt angewandt.
+Loesung (Mirror-Semantik): Vor jedem Rebuild wird die bestehende OUT-.txt gelesen. Je Station
+(Key = NOAA-Nummer bzw. uid) spiegelt der Override die AKTUELLE Abweichung der .txt:
+  - Koordinate weicht vom Roh-Parse ab        -> Override speichert .txt-Koordinate
+  - Name weicht vom generierten Namen ab      -> Override speichert .txt-Namen
+  - keine Abweichung mehr (Revert)            -> Override-Feld wird geloescht
+Beim Schreiben werden Overrides IMMER zuletzt angewandt -> Frontend-Edits ueberleben jeden
+Rebuild, und ein Revert im Frontend wird ebenfalls korrekt uebernommen.
 
-Die Override-JSON liegt in harmonics/ (getrackt, NICHT in help/), damit Korrekturen
-Rebuilds, Loeschungen und Crashes ueberleben.
+Override-JSON liegt in harmonics/ (git-getrackt), damit Korrekturen Rebuilds/Crashes ueberleben.
 """
 import os, re, json
 
@@ -25,19 +26,20 @@ def _path(band):
 
 def load(band):
     p = _path(band)
-    if os.path.exists(p):
-        return json.load(open(p, encoding='utf-8'))
-    return {}
+    return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
 
 def save(band, ov):
-    json.dump(ov, open(_path(band), 'w', encoding='utf-8'),
-              ensure_ascii=False, indent=0, sort_keys=True)
+    # leere Eintraege entfernen, damit die Datei sauber bleibt
+    ov = {k: v for k, v in ov.items() if v}
+    p = _path(band)
+    if ov:
+        json.dump(ov, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=0, sort_keys=True)
+    elif os.path.exists(p):
+        os.remove(p)
 
-def _parse_existing(out_path):
-    """Liest die bestehende OUT-.txt: Key(NOAA-Nr aus '# noaa_number:') -> (lat, lon, name).
-    Key wird aus dem '# noaa_number:'-Kommentar gebildet; bei Mehr-Band-Dateien (amtt) kann
-    der Aufrufer stattdessen per (vol,no) keyen -- hier reicht die Nummer, weil je Band/Datei
-    eindeutig."""
+def parse_existing(out_path):
+    """Liest die bestehende OUT-.txt: Key (aus '# noaa_uid:' bzw. '# noaa_number:') ->
+    (lat, lon, name)."""
     res = {}
     if not os.path.exists(out_path):
         return res
@@ -52,42 +54,54 @@ def _parse_existing(out_path):
         if m: lat = float(m.group(1))
         m = re.match(r'# !longitude:\s*([\-\d.]+)', ln)
         if m: lon = float(m.group(1))
-        if ln and not ln.startswith('#') and i+1 < len(L) and mer.match(L[i+1]):
+        if ln and not ln.startswith('#') and i + 1 < len(L) and mer.match(L[i + 1]):
             if no is not None and lat is not None and lon is not None:
                 res[str(no)] = (lat, lon, ln.strip())
             no = lat = lon = None
     return res
 
-def capture(band, out_path, raw_by_key):
-    """Vergleicht bestehende OUT-.txt mit raw_by_key {key: (raw_lat, raw_lon, raw_name)} und
-    erweitert die Override-JSON um neue manuelle Abweichungen. raw_by_key MUSS die Koordinate
-    sein, die der Generator OHNE Overrides erzeugen wuerde (also Roh-Parse). Gibt das
-    aktualisierte Override-Dict zurueck."""
-    ov = load(band)
-    existing = _parse_existing(out_path)
-    changed = 0
+def capture_coords(ov, existing, raw_by_key):
+    """Spiegelt manuelle Koordinaten-Abweichungen (.txt vs Roh-Parse) in ov. raw_by_key MUSS
+    die Koordinate sein, die der Generator OHNE Overrides erzeugen wuerde (Roh-Parse incl.
+    statischer COORD_OVERRIDE). Mutiert ov in-place; gibt Anzahl Captures zurueck."""
+    n = 0
     for key, (elat, elon, ename) in existing.items():
         raw = raw_by_key.get(key)
         if not raw:
             continue
-        rlat, rlon, rname = raw
-        entry = ov.get(key, {})
-        # Koordinate: .txt weicht vom Roh-Parse ab UND ist nicht schon als Override bekannt
-        if abs(elat - rlat) > EPS or abs(elon - rlon) > EPS:
-            if entry.get('lat') != round(elat, 4) or entry.get('lon') != round(elon, 4):
-                entry['lat'] = round(elat, 4); entry['lon'] = round(elon, 4)
-                entry.setdefault('_why', 'frontend coord edit (auto-captured)')
-                changed += 1
-        if entry:
-            ov[key] = entry
-    if changed:
-        save(band, ov)
-        print(f'[overrides:{band}] {changed} manuelle Koordinaten-Korrektur(en) gesichert -> {_path(band)}')
-    return ov
+        rlat, rlon, _ = raw
+        e = ov.get(key, {})
+        deviates = abs(elat - rlat) > EPS or abs(elon - rlon) > EPS
+        if deviates:
+            if e.get('lat') != round(elat, 4) or e.get('lon') != round(elon, 4):
+                e['lat'] = round(elat, 4); e['lon'] = round(elon, 4)
+                e['_why'] = 'frontend coord edit (auto-captured)'
+                n += 1
+        elif 'lat' in e:  # Revert auf Roh-Parse -> Override entfernen
+            e.pop('lat', None); e.pop('lon', None); e.pop('_why', None); n += 1
+        ov[key] = e
+    return n
 
 def apply_coord(ov, key, lat, lon):
-    """Gibt (lat, lon) zurueck, ueberschrieben durch Override falls vorhanden."""
     e = ov.get(str(key))
     if e and 'lat' in e and 'lon' in e:
         return e['lat'], e['lon']
     return lat, lon
+
+def resolve_name(ov, key, would_be, existing):
+    """Spiegelt manuelle Namens-Abweichungen (.txt vs generierter Name) und gibt den final zu
+    schreibenden Namen zurueck. Mutiert ov in-place. `existing` = parse_existing-Dict."""
+    key = str(key)
+    e = ov.get(key, {})
+    ex_name = existing.get(key, (None, None, None))[2]
+    if ex_name and ex_name != would_be:
+        if e.get('name') != ex_name:
+            e['name'] = ex_name
+            e['_why_name'] = 'frontend name edit (auto-captured)'
+        ov[key] = e
+        return ex_name
+    # keine Abweichung (oder Revert auf generierten Namen) -> evtl. Namens-Override loeschen
+    if 'name' in e:
+        e.pop('name', None); e.pop('_why_name', None)
+        ov[key] = e
+    return e.get('name', would_be)
