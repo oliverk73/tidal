@@ -443,6 +443,7 @@ NAME_FIX_NO = {
  465: 'Huelva, Río Odiel, Spain',
  533: 'Corcubión, Spain',
  569: 'Ría de Suances, Spain',
+ 573: 'Santoña, Spain',
  593: 'Ría de Orio, Spain',
  595: 'San Sebastián, Spain',
  31:  'Ilhéu de Fora, Ilhas Selvagens, Portugal',
