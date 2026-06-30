@@ -26,7 +26,7 @@ FT = 0.3048
 GAP_KM = 4.0
 # cumulative: all regions built so far go into the one harmonics_noaa_cptt.txt
 REGIONS = sys.argv[1].split(',') if len(sys.argv) > 1 else \
-    ['SEAsia/PHL/IDN/MY', 'China/Korea', 'IndianOcean/Arabia/EAfrica']
+    ['SEAsia/PHL/IDN/MY', 'China/Korea', 'IndianOcean/Arabia/EAfrica', 'PacificIslands']
 
 # ---------- header (congen block) from an existing harmonics file ----------
 def read_header(path):
@@ -106,6 +106,11 @@ REFMAP = {
  'Colombo': 'Colombo', 'Sagar': 'Sagar Roads', 'Karachi': 'Karachi', 'Madras': 'Chennai',
  'Mina Jebel Ali': 'Jebel Ali', 'Mina Al Ahmadi': 'Mina Al Ahmadi', 'Mina Salman': 'Mina Salman',
  'Musay’id': 'Musay', 'Suez': 'Suez', 'Durban': 'Durban', 'Aden': 'Aden', 'Apia': 'Apia',
+ # --- Pacific Islands ---
+ 'Honolulu': 'Honolulu', 'Kwajalein Atoll': 'Kwajalein', 'Suva': 'Suva', 'Pago Pago': 'Pago Pago',
+ 'Chuuk': 'Chuuk', 'Pohnpei Harbor': 'Pohnpei', 'Papeete': 'Papeete', 'Auckland': 'Auckland',
+ 'Dreger Harbor': 'Dreger', 'Townsville': 'Townsville',
+ 'Nawiliwili': 'Nawiliwili', 'Hilo': 'Hilo', 'Kahului': 'Kahului', 'Moku O Loe': 'Moku O Loe',
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -152,6 +157,7 @@ def country_nn(lat, lon):
         plat = []; plon = []; pc = []
         latp = re.compile(r'^# !latitude: ([\-\d.]+)'); lonp = re.compile(r'^# !longitude: ([\-\d.]+)')
         for f in FILES:
+            if 'current' in f.lower(): continue          # skip tidal-current files
             L = open(f, encoding='iso-8859-1').read().splitlines(); lo = None
             for j, l in enumerate(L):
                 m = lonp.match(l)
@@ -161,7 +167,7 @@ def country_nn(lat, lon):
                     la = float(m.group(1)); nm = None
                     for k in range(j + 1, min(j + 6, len(L))):
                         if L[k].strip() and not L[k].startswith('#'): nm = L[k].strip(); break
-                    if nm and ',' in nm:
+                    if nm and ',' in nm and not nm.rstrip().endswith('Current'):
                         c = nm.split(',')[-1].strip()
                         if 2 < len(c) < 40 and not any(ch.isdigit() for ch in c):
                             plat.append(la); plon.append(lo); pc.append(c)
@@ -170,7 +176,18 @@ def country_nn(lat, lon):
     plat, plon, pc = _CPTS
     if not len(plat): return None
     d = (plat - lat) ** 2 + ((plon - lon) * math.cos(math.radians(lat))) ** 2
-    return pc[int(np.argmin(d))]
+    c = pc[int(np.argmin(d))]
+    return {'French Polyneisa': 'French Polynesia'}.get(c, c)   # fix known DB typo
+
+def is_us_pacific(lat, lon, name):
+    """US Pacific territories — excluded (NOAA's own DWF/US tide tables cover them better)."""
+    n = name.lower()
+    if any(x in n for x in ('howland', 'baker island', 'palmyra', 'jarvis', 'kingman',
+                            'johnston', 'wake island', 'midway')):
+        return True
+    if 18.5 <= lat <= 28.7 and -178.6 <= lon <= -154.5: return True   # Hawaiian chain (incl. NW)
+    if -14.7 <= lat <= -10.9 and -171.6 <= lon <= -168.0: return True  # American Samoa
+    return False
 
 # ---------- helpers ----------
 def lat1(s):
@@ -216,32 +233,17 @@ def measure(items):
     mllw = [LW[dl == k].min() for k in range(60) if (dl == k).any()]
     gt = (np.mean(mhhw) - np.mean(mllw)) if mhhw and mllw else spring_r
     return (float(mean_r), float(spring_r), float(gt))
-import subprocess
-SYS_HFILE = ':'.join(sorted(glob.glob('/usr/share/xtide/*.tcd')))
 _REFR = {}
 def ref_ranges(rn, con):
-    """Measure the reference station's (mean, spring, great-diurnal) ranges in metres
-    with XTide itself (system TCD) — same HW/LW method used to validate, so the
-    uniform scale matches the NOAA range exactly.  Falls back to synthesis."""
-    if rn in _REFR: return _REFR[rn]
-    try:
-        env = {**os.environ, 'HFILE_PATH': SYS_HFILE}
-        out = subprocess.run(['tide', '-f', 't', '-l', rn, '-b', '2024-01-01 00:00',
-                              '-e', '2024-04-01 00:00', '-m', 'p', '-u', 'm'],
-                             env=env, capture_output=True, text=True, timeout=60).stdout
-        ev = re.findall(r'([\-\d.]+) meters\s+(High|Low) Tide', out)
-        HW = np.array([float(m) for m, t in ev if t == 'High'])
-        LW = np.array([float(m) for m, t in ev if t == 'Low'])
-        if len(HW) >= 8 and len(LW) >= 8:
-            mn = HW.mean() - LW.mean()
-            sp = np.percentile(HW, 90) - np.percentile(LW, 10)
-            gt = np.percentile(HW, 97) - np.percentile(LW, 3)
-            r = (float(mn), float(sp), float(gt))
-            _REFR[rn] = r; return r
-    except Exception:
-        pass
-    r = measure([(SPEED[c], a, g) for c, (a, g) in con.items() if c in SPEED and a > 0])
-    _REFR[rn] = r; return r
+    """Measure the reference's (mean, spring, great-diurnal) ranges from the SAME
+    constituent set that transfer() scales — a nodal-free synthesis.  This keeps the
+    uniform scale k self-consistent: predicted range = k * synth(con) = NOAA range,
+    regardless of any name collisions between our DB files and the system TCD.
+    (Earlier a tide-based measurement of `rn` drifted from `con` for Pacific refs that
+    resolve to a different 'Kwajalein' record, inflating M2 ~3x.)"""
+    if rn not in _REFR:
+        _REFR[rn] = measure([(SPEED[c], a, g) for c, (a, g) in con.items() if c in SPEED and a > 0])
+    return _REFR[rn]
 
 SEMI_SET = SEMI | {'M2', 'S2', 'K2'}
 def transfer(s, rr):
@@ -259,12 +261,15 @@ def transfer(s, rr):
     dt = (sum(ts) / len(ts) / 60.0) if ts else 0.0   # hours
     # ---- step 1: uniform scale k matches the primary tabulated range exactly ----
     # (ranges scale linearly with a uniform amplitude scale, so this is one-shot exact)
+    # CAL corrects the systematic ~10% gap between the nodal-free synth measure (used for
+    # Mn_ref/Gt_ref) and XTide's actual HW/LW prediction, centring predicted ranges on 1.0.
+    CAL = 1.10
     if mean is not None and Mn_ref > 0.02:
-        k = clamp(mean * FT / Mn_ref, 0.05, 8.0)
+        k = clamp(CAL * mean * FT / Mn_ref, 0.05, 8.0)
     elif diu is not None and Gt_ref > 0.02:
-        k = clamp(diu * FT / Gt_ref, 0.05, 8.0)
+        k = clamp(CAL * diu * FT / Gt_ref, 0.05, 8.0)
     elif trop is not None and Gt_ref > 0.02:                # DT row whose diurnal cell dropped
-        k = clamp(0.92 * trop * FT / Gt_ref, 0.05, 8.0)
+        k = clamp(CAL * 0.92 * trop * FT / Gt_ref, 0.05, 8.0)
     else:
         return None
     # ---- step 2: spring (MS) -> nudge S2 group ; great-diurnal (MD) -> nudge diurnal group ----
@@ -358,6 +363,8 @@ def main():
         s = byno.get(no)
         if not s or s.get('daily'): continue
         forced = no in FORCE_INCLUDE
+        if not forced and is_us_pacific(s['lat'], s['lon'], s['name']):
+            skipped.append((no, s['name'], 'us')); continue
         if not forced and min(hav(s['lat'], s['lon'], a, b) for a, b in PTS) <= GAP_KM:
             skipped.append((no, s['name'], 'not-gap')); continue
         rn, rr = resolve_ref(s['ref'])
