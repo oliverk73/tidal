@@ -116,6 +116,9 @@ REFMAP = {
  # --- Australia / NZ / Mozambique / Guam (final batch) ---
  'Port Hedland': 'Port Hedland', 'Port Adelaide': 'Adelaide', 'Port Phillip': 'Port Phillip',
  'Port Lincoln': 'Port Lincoln', 'Beira': 'Beira', 'Guam': 'Guam',
+ # --- Europe & W Africa volume (eutt2020) references ---
+ 'Lisbon': 'Lisboa (Alc',                    # Lisboa (Alcantara), Portugal
+ 'Liverpool': 'Liverpool (Gladstone Dock)',  # England (NICHT Nova Scotia)
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -187,7 +190,7 @@ def country_nn(lat, lon):
     if not len(plat): return None
     d = (plat - lat) ** 2 + ((plon - lon) * math.cos(math.radians(lat))) ** 2
     c = pc[int(np.argmin(d))]
-    return {'French Polyneisa': 'French Polynesia', 'Moçambique': 'Mozambique'}.get(c, c)
+    return {'French Polyneisa': 'French Polynesia', 'Moçambique': 'Mozambique', 'Novaya Zemlya': 'Russia'}.get(c, c)
 
 from timezonefinder import TimezoneFinder
 _TF = None
