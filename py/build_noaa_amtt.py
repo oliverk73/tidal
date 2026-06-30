@@ -411,6 +411,31 @@ def conf_of(tr, s):
     if tr['M2'] < 0.30 and tr['refF'] < 1.0: c = min(c, 3)
     return c
 
+# --- Diakritika: lokale Schreibweise (nur eindeutige Faelle, alles Latin-1) ---
+_SP_CTY = {'Chile','Argentina','Mexico','Panama','Costa Rica','Colombia','Ecuador',
+           'Peru','Venezuela','Cuba','Nicaragua','El Salvador'}
+_SP_SPECIFIC = {'Quellon':'Quellón','Queilen':'Queilén','Maullin':'Maullín',
+ 'Santa Maria':'Santa María','Constitucion':'Constitución','Junin':'Junín',
+ 'Posesion':'Posesión','Ano Nuevo':'Año Nuevo','Diego Ramirez':'Diego Ramírez',
+ 'Direccion':'Dirección','Bahía Pina':'Bahía Piña','Garachine':'Garachiné',
+ 'Utria':'Utría','Tanamo':'Tánamo','Maturin':'Maturín'}
+_BR_SPECIFIC = {'Ilha de Maraca':'Ilha de Maracá','Braganca':'Bragança','Rio Para':'Rio Pará',
+ 'Salinopolis':'Salinópolis','Ilhas de Sao Joao':'Ilhas de São João','Tutoia, Baia da':'Tutóia, Baía da',
+ 'Luis Correia':'Luís Correia','Rio Ceara':'Rio Ceará','Santa Cruz Cabralia':'Santa Cruz Cabrália',
+ 'Itacurussa':'Itacuruçá','Paranagua':'Paranaguá'}
+def diac(name, cty):
+    if cty in _SP_CTY:
+        name = re.sub(r'\bBahia\b','Bahía',name)
+        name = re.sub(r'\bRio\b','Río',name)
+        for a,b in _SP_SPECIFIC.items(): name = name.replace(a,b)
+    elif cty == 'Brazil':
+        for a,b in _BR_SPECIFIC.items(): name = name.replace(a,b)
+    elif cty == 'Greenland':
+        name = name.replace('Sondre Stromfjord','Søndre Strømfjord')
+    elif cty == 'Canada':
+        name = name.replace('Metis-sur-Mer','Métis-sur-Mer').replace('Ile aux Coudres','Île aux Coudres').replace("L' Islet","L'Islet")
+    return name
+
 def block(s, tr, cty):
     if s.get('_name_override'):
         name = s['_name_override']
@@ -418,7 +443,8 @@ def block(s, tr, cty):
         place = cleanname(s['name'])
         prov = province_lookup(cty, s['lat'], s['lon'])
         name = ', '.join([place] + ([lat1(prov)] if prov else []) + ([cty] if cty else []))
-    name = NAME_FIX_NO.get(s['no'], name)
+    name = NAME_FIX_NO.get(s.get('uid'), name)
+    name = diac(name, cty)
     tz = tz_lookup(s['lat'], s['lon'])            # authoritative zone for the station's location
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
