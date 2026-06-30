@@ -17,6 +17,7 @@ Only true gaps (>GAP_KM from existing DB). Reference rows (daily predictions) sk
 Writes harmonics/att/harmonics_noaa_cptt.txt (ISO-8859-1).  Region selectable via argv.
 """
 import os, re, json, math, sys, glob, unicodedata
+sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'py'))
 
 HARM = os.path.expanduser('~/harmonics')
 OUT  = f'{HARM}/att/harmonics_noaa_amtt.txt'
@@ -456,7 +457,7 @@ def block(s, tr, cty):
     out = ['# BEGIN HOT COMMENTS',
            f"# country: {cty or '?'}",
            f'# source: NOAA Tide Tables {_vl} (NOS/C&GS) 2020, Table 2 transfer',
-           f"# noaa_number: {s['no']}", f"# note: {note}", '# date_imported: 20260630',
+           f"# noaa_number: {s['no']}", f"# noaa_uid: {s.get('uid','')}", f"# note: {note}", '# date_imported: 20260630',
            '# datum: Chart Datum (Z0 = mean tide level above CD)', f"# confidence: {conf}",
            '# !units: meters', f"# !longitude: {s['lon']:.4f}", f"# !latitude: {s['lat']:.4f}",
            name, f"{tr['mer']} :{tz}", f"{float(z0):.4f} meters"]
@@ -486,10 +487,17 @@ def main():
     full = json.load(open(FULL))
     BUILD = {'GAP-new', 'DUP-classic', 'REPLACE-FES'}
     recs = [r for r in full if r.get('_cls2') in BUILD and not r.get('daily')]
+    # --- persistenter Override-Layer: Frontend-Koordinaten-Korrekturen schuetzen ---
+    import noaa_overrides as NOV
+    raw_by_key = {r['uid']: (r['lat'], r['lon'], r.get('name','')) for r in full}
+    OV = NOV.capture('noaa_amtt', OUT, raw_by_key)
     built = []; skipped = []
     from collections import Counter
     for s in sorted(recs, key=lambda x: x['uid']):
         if s['uid'] in DROP_UID: continue
+        _olat, _olon = NOV.apply_coord(OV, s['uid'], s['lat'], s['lon'])
+        if (_olat, _olon) != (s['lat'], s['lon']):
+            s = {**s, 'lat': _olat, 'lon': _olon}
         if (s.get('spring_ft') or 0) < 1.5: skipped.append((s['uid'], 'tiny')); continue
         rn, rr = resolve_ref(s['ref'])
         if not rr: skipped.append((s['uid'], f"noref:{s['ref']}")); continue

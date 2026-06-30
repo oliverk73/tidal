@@ -17,6 +17,7 @@ Only true gaps (>GAP_KM from existing DB). Reference rows (daily predictions) sk
 Writes harmonics/att/harmonics_noaa_cptt.txt (ISO-8859-1).  Region selectable via argv.
 """
 import os, re, json, math, sys, glob, unicodedata
+sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'py'))
 
 HARM = os.path.expanduser('~/harmonics')
 OUT  = f'{HARM}/att/harmonics_noaa_eutt.txt'
@@ -483,6 +484,13 @@ def main():
     gapno |= set(FORCE_INCLUDE)
     byno = {r['no']: r for r in full}
     PTS = refpts()
+    # --- persistenter Override-Layer: Frontend-Koordinaten-Korrekturen schuetzen ---
+    import noaa_overrides as NOV
+    raw_by_key = {}
+    for r in full:
+        clat, clon = COORD_OVERRIDE.get(r['no'], (r['lat'], r['lon']))
+        raw_by_key[str(r['no'])] = (clat, clon, r.get('name', ''))
+    OV = NOV.capture('noaa_eutt', OUT, raw_by_key)
     built = []; skipped = []
     for no in sorted(gapno):
         if no in DROP_NO: continue
@@ -490,6 +498,9 @@ def main():
         if not s or s.get('daily'): continue
         if no in COORD_OVERRIDE:
             s = {**s, 'lat': COORD_OVERRIDE[no][0], 'lon': COORD_OVERRIDE[no][1]}
+        _olat, _olon = NOV.apply_coord(OV, no, s['lat'], s['lon'])
+        if (_olat, _olon) != (s['lat'], s['lon']):
+            s = {**s, 'lat': _olat, 'lon': _olon}
         forced = no in FORCE_INCLUDE
         if not forced and is_us_pacific(s['lat'], s['lon'], s['name']):
             skipped.append((no, s['name'], 'us')); continue
