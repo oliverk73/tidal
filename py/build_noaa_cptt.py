@@ -133,7 +133,8 @@ def country(lat, lon, ref):
     # equatorial Indonesian ports, which must NOT inherit the reference's country.
     if ref in CK_CHINA and lat >= 18: return 'China'
     if ref in ('Yokohama', 'Kamaisi', 'Naha') and lat >= 23: return 'Japan'   # Honshu / Ryukyu
-    if ref == 'Otomari' and lat >= 40: return 'Russia'                        # Sakhalin
+    # (Otomari/Korsakov is a character-ref for BOTH Sakhalin (RU) and NE Hokkaido (JP);
+    #  let country_nn decide by nearest station — e.g. Koiseboi 44.0N -> Japan.)
     if ref in ('Inch’on', 'Pusan', 'Namp’O-Hang') and 32 <= lat <= 43 and lon <= 131.5:  # Korea N/S
         if (lon < 126.7 and lat >= 37.75) or (lon >= 127.3 and lat >= 38.6): return 'North Korea'
         return 'South Korea'
@@ -182,16 +183,20 @@ def country_nn(lat, lon):
     c = pc[int(np.argmin(d))]
     return {'French Polyneisa': 'French Polynesia'}.get(c, c)   # fix known DB typo
 
-def tz_for(cty, lon):
-    """Override the inherited reference timezone where the NOAA character-reference sits in a
-    different zone than the station — notably the Russian Far East referenced to tropical
-    ports (Jolo +8, Pusan +9). Phases stay Greenwich-based (dt is frame-independent), so only
-    the display zone changes."""
-    if cty == 'Russia':
-        if lon < 138: return 'Asia/Vladivostok'    # +10  Primorsky
-        if lon < 154: return 'Asia/Sakhalin'       # +11  Sakhalin / Tartary / Magadan coast
-        return 'Asia/Kamchatka'                    # +12  Kamchatka / N Kuril
-    return None
+from timezonefinder import TimezoneFinder
+_TF = None
+def tz_lookup(lat, lon):
+    """Authoritative IANA timezone for the station's own location.  NOAA often uses a distant
+    character-match reference (e.g. Russian Far East -> Jolo +8; Kiribati Line Is -> Honolulu
+    -10, ~a day off across the date line), so the inherited reference tz is unreliable.
+    Phases stay in the reference's meridian frame (dt is frame-independent); tz is display only."""
+    global _TF
+    if _TF is None: _TF = TimezoneFinder()
+    lng = ((lon + 180) % 360) - 180                 # wrap to [-180,180] (Pacific lon>180)
+    z = _TF.timezone_at(lat=lat, lng=lng)
+    if z: return z
+    off = round(lng / 15.0)                          # ocean fallback: fixed UTC offset
+    return f"Etc/GMT{-off:+d}" if off else 'Etc/GMT'
 
 def is_us_pacific(lat, lon, name):
     """US Pacific territories — excluded (NOAA's own DWF/US tide tables cover them better)."""
@@ -339,7 +344,7 @@ def block(s, tr, cty):
     else:
         name = cleanname(s['name'])
         if cty and not name.endswith(cty): name = f"{name}, {cty}"
-    tz = tz_for(cty, s['lon']) or tr['tz']        # correct display zone for far-ref stations
+    tz = tz_lookup(s['lat'], s['lon'])            # authoritative zone for the station's location
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
     z0 = z0 * FT if z0 is not None else round(tr['M2'] + tr['S2'], 3)
@@ -361,6 +366,9 @@ def block(s, tr, cty):
 
 # build these even though they are "covered" (explicit FES replacements requested by Oliver);
 # value = display-name override (already carries its country suffix).
+# coordinate corrections for NOAA misprints (verified against neighbouring-row lat ordering)
+COORD_OVERRIDE = {219: (47.05, 142.033)}   # Port Kholmsk, Sakhalin: PDF prints 41°03' -> 47°03'
+
 FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia',
                  1869: 'Cirebon, Java, Indonesia',
                  1885: 'Pasuruan, Java, Indonesia',
@@ -377,6 +385,8 @@ def main():
     for no in sorted(gapno):
         s = byno.get(no)
         if not s or s.get('daily'): continue
+        if no in COORD_OVERRIDE:
+            s = {**s, 'lat': COORD_OVERRIDE[no][0], 'lon': COORD_OVERRIDE[no][1]}
         forced = no in FORCE_INCLUDE
         if not forced and is_us_pacific(s['lat'], s['lon'], s['name']):
             skipped.append((no, s['name'], 'us')); continue
