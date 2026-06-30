@@ -265,8 +265,11 @@ def conf_of(tr, s):
     return c
 
 def block(s, tr, cty):
-    name = cleanname(s['name'])
-    if cty and not name.endswith(cty): name = f"{name}, {cty}"
+    if s.get('_name_override'):
+        name = s['_name_override']
+    else:
+        name = cleanname(s['name'])
+        if cty and not name.endswith(cty): name = f"{name}, {cty}"
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
     z0 = z0 * FT if z0 is not None else round(tr['M2'] + tr['S2'], 3)
@@ -286,17 +289,23 @@ def block(s, tr, cty):
         else: out.append('x 0 0')
     return out, name, conf
 
+# build these even though they are "covered" (explicit FES replacements requested by Oliver);
+# value = display-name override (already carries its country suffix).
+FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia'}
+
 def main():
     full = json.load(open(FULL))
     gaps = json.load(open(GAPS))
     gapno = {g['no'] for g in gaps if g['region'] == REGION}
+    gapno |= set(FORCE_INCLUDE)
     byno = {r['no']: r for r in full}
     PTS = refpts()
     built = []; skipped = []
     for no in sorted(gapno):
         s = byno.get(no)
         if not s or s.get('daily'): continue
-        if min(hav(s['lat'], s['lon'], a, b) for a, b in PTS) <= GAP_KM:
+        forced = no in FORCE_INCLUDE
+        if not forced and min(hav(s['lat'], s['lon'], a, b) for a, b in PTS) <= GAP_KM:
             skipped.append((no, s['name'], 'not-gap')); continue
         rn, rr = resolve_ref(s['ref'])
         if not rr: skipped.append((no, s['name'], f"noref:{s['ref']}")); continue
@@ -304,6 +313,8 @@ def main():
         if not tr or tr['M2'] < 0.05 and s.get('diurnal_ft') is None:
             skipped.append((no, s['name'], 'tiny')); continue
         tr['refname'] = rn
+        if forced:
+            s = {**s, '_name_override': FORCE_INCLUDE[no]}
         cty = country(s['lat'], s['lon'], s['ref'])
         built.append((s, tr, cty))
     lines = list(HEADER); names = []
