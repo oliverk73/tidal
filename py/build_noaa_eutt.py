@@ -430,9 +430,11 @@ def block(s, tr, cty):
 # build these even though they are "covered" (explicit FES replacements requested by Oliver);
 # value = display-name override (already carries its country suffix).
 # coordinate corrections for NOAA misprints (verified against neighbouring-row ordering + geography)
-COORD_OVERRIDE = {}   # eutt2020: keine bekannten Druckfehler (SE-Asia-Overrides entfernt)
+COORD_OVERRIDE = {463: (37.3667, -6.0)}   # Sevilla, Rio Guadalquivir: NOAA-Druckfehler 32 deg -> 37 deg N
 # country fixes where neither reference nor nearest-neighbour resolve a contested border correctly
-COUNTRY_OVERRIDE = {}
+COUNTRY_OVERRIDE = {251: 'Guinea-Bissau',          # Cacine (country_nn-Fehler)
+                    127: 'Cameroon', 111: 'Equatorial Guinea',  # FORCE_INCLUDE-Metadaten
+                    181: 'Ghana', 183: 'Ghana', 101: 'Gabon'}
 
 
 # Diakritika-/Namenskorrekturen per NOAA-Nr. (offizielle lokale Schreibweise; nur eindeutige
@@ -451,7 +453,7 @@ NAME_FIX_NO = {
  13:  'Porto da Fajã, Brava Island, Cape Verde',
  177: 'Lomé, Togo',
  321: 'Kénitra, Morocco',
- 463: 'Sevilla, Río Guadalquivir, Morocco',
+ 463: 'Sevilla, Río Guadalquivir, Spain',
  1495:'Sønderho, Fanø Island, Denmark',
  1467:'Südfall, Hever Strom, Germany',
  1475:'Hooge, Süder Aue, Germany',
