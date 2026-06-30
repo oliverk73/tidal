@@ -26,7 +26,8 @@ FT = 0.3048
 GAP_KM = 4.0
 # cumulative: all regions built so far go into the one harmonics_noaa_cptt.txt
 REGIONS = sys.argv[1].split(',') if len(sys.argv) > 1 else \
-    ['SEAsia/PHL/IDN/MY', 'China/Korea', 'IndianOcean/Arabia/EAfrica', 'PacificIslands']
+    ['SEAsia/PHL/IDN/MY', 'China/Korea', 'IndianOcean/Arabia/EAfrica', 'PacificIslands',
+     'Okhotsk/Kamchatka/Kuril']
 
 # ---------- header (congen block) from an existing harmonics file ----------
 def read_header(path):
@@ -111,6 +112,8 @@ REFMAP = {
  'Chuuk': 'Chuuk', 'Pohnpei Harbor': 'Pohnpei', 'Papeete': 'Papeete', 'Auckland': 'Auckland',
  'Dreger Harbor': 'Dreger', 'Townsville': 'Townsville',
  'Nawiliwili': 'Nawiliwili', 'Hilo': 'Hilo', 'Kahului': 'Kahului', 'Moku O Loe': 'Moku O Loe',
+ # --- Russian Far East / Okhotsk / Kamchatka / Kuril ---
+ 'Moji': 'Moji', 'Yamato Wan': 'Ostrov Mamya', 'Paramushiru Island': 'Paramushir',
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -131,7 +134,7 @@ def country(lat, lon, ref):
     if ref in CK_CHINA and lat >= 18: return 'China'
     if ref in ('Yokohama', 'Kamaisi', 'Naha') and lat >= 23: return 'Japan'   # Honshu / Ryukyu
     if ref == 'Otomari' and lat >= 40: return 'Russia'                        # Sakhalin
-    if ref in ('Inch’on', 'Pusan', 'Namp’O-Hang') and lat >= 32:             # Korea, split N/S
+    if ref in ('Inch’on', 'Pusan', 'Namp’O-Hang') and 32 <= lat <= 43 and lon <= 131.5:  # Korea N/S
         if (lon < 126.7 and lat >= 37.75) or (lon >= 127.3 and lat >= 38.6): return 'North Korea'
         return 'South Korea'
     # geography first (reference can be a distant character-match port, so don't trust it for country)
@@ -178,6 +181,17 @@ def country_nn(lat, lon):
     d = (plat - lat) ** 2 + ((plon - lon) * math.cos(math.radians(lat))) ** 2
     c = pc[int(np.argmin(d))]
     return {'French Polyneisa': 'French Polynesia'}.get(c, c)   # fix known DB typo
+
+def tz_for(cty, lon):
+    """Override the inherited reference timezone where the NOAA character-reference sits in a
+    different zone than the station — notably the Russian Far East referenced to tropical
+    ports (Jolo +8, Pusan +9). Phases stay Greenwich-based (dt is frame-independent), so only
+    the display zone changes."""
+    if cty == 'Russia':
+        if lon < 138: return 'Asia/Vladivostok'    # +10  Primorsky
+        if lon < 154: return 'Asia/Sakhalin'       # +11  Sakhalin / Tartary / Magadan coast
+        return 'Asia/Kamchatka'                    # +12  Kamchatka / N Kuril
+    return None
 
 def is_us_pacific(lat, lon, name):
     """US Pacific territories — excluded (NOAA's own DWF/US tide tables cover them better)."""
@@ -325,6 +339,7 @@ def block(s, tr, cty):
     else:
         name = cleanname(s['name'])
         if cty and not name.endswith(cty): name = f"{name}, {cty}"
+    tz = tz_for(cty, s['lon']) or tr['tz']        # correct display zone for far-ref stations
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
     z0 = z0 * FT if z0 is not None else round(tr['M2'] + tr['S2'], 3)
@@ -337,7 +352,7 @@ def block(s, tr, cty):
            f"# noaa_number: {s['no']}", f"# note: {note}", '# date_imported: 20260630',
            '# datum: Chart Datum (Z0 = mean tide level above CD)', f"# confidence: {conf}",
            '# !units: meters', f"# !longitude: {s['lon']:.4f}", f"# !latitude: {s['lat']:.4f}",
-           name, f"{tr['mer']} :{tr['tz']}", f"{float(z0):.4f} meters"]
+           name, f"{tr['mer']} :{tz}", f"{float(z0):.4f} meters"]
     con = tr['con']
     for c in ORDER:
         if c in con: a, g = con[c]; out.append(f"{c:<16}{a:.4f}  {g:.2f}")
