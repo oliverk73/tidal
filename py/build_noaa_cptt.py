@@ -291,7 +291,9 @@ def block(s, tr, cty):
 
 # build these even though they are "covered" (explicit FES replacements requested by Oliver);
 # value = display-name override (already carries its country suffix).
-FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia'}
+FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia',
+                 1869: 'Cirebon, Java, Indonesia',
+                 1885: 'Pasuruan, Java, Indonesia'}
 
 def main():
     full = json.load(open(FULL))
