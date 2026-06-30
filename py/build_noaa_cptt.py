@@ -25,7 +25,8 @@ GAPS = '/tmp/claude-1000/-home-oliver/99a597f4-8599-48bf-9982-0299f605aaa8/scrat
 FT = 0.3048
 GAP_KM = 4.0
 # cumulative: all regions built so far go into the one harmonics_noaa_cptt.txt
-REGIONS = sys.argv[1].split(',') if len(sys.argv) > 1 else ['SEAsia/PHL/IDN/MY', 'China/Korea']
+REGIONS = sys.argv[1].split(',') if len(sys.argv) > 1 else \
+    ['SEAsia/PHL/IDN/MY', 'China/Korea', 'IndianOcean/Arabia/EAfrica']
 
 # ---------- header (congen block) from an existing harmonics file ----------
 def read_header(path):
@@ -101,6 +102,10 @@ REFMAP = {
  'Wusong': 'Wusong', 'Namp’O-Hang': 'Nampo, North', 'Pusan': 'Busan New Port',
  'Lianyun Gang': 'Lianyungang (Port)', 'Yantai': 'Yantai, Shandong', 'Qingdao': 'Qingdao, China',
  'Qinhuangdao': 'Qinhuangdao, Hebei', 'Otomari': 'Korsakov',
+ # --- Indian Ocean / Arabia / East Africa ---
+ 'Colombo': 'Colombo', 'Sagar': 'Sagar Roads', 'Karachi': 'Karachi', 'Madras': 'Chennai',
+ 'Mina Jebel Ali': 'Jebel Ali', 'Mina Al Ahmadi': 'Mina Al Ahmadi', 'Mina Salman': 'Mina Salman',
+ 'Musay’id': 'Musay', 'Suez': 'Suez', 'Durban': 'Durban', 'Aden': 'Aden', 'Apia': 'Apia',
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -128,7 +133,7 @@ def country(lat, lon, ref):
     if 21.8 <= lat <= 25.4 and 119.2 <= lon <= 122.1: return 'Taiwan'       # Taiwan + Penghu
     if 22.1 <= lat <= 22.62 and 113.82 <= lon <= 114.52: return 'Hong Kong'
     if 4.5 <= lat <= 21 and 116 <= lon <= 127: return 'Philippines'
-    if 5 <= lat <= 19.5 and 92 <= lon <= 99.5 and ref == 'Mergui': return 'Myanmar'
+    if 5 <= lat <= 19.5 and 95 <= lon <= 99.5 and ref == 'Mergui': return 'Myanmar'
     if 5.5 <= lat <= 21 and 99 <= lon <= 110 and ref in ('Mui Vung Tau', 'Do Son'): return 'Vietnam'
     if 6 <= lat <= 14 and 99 <= lon <= 105.5 and ref == 'Bangkok Bar': return 'Thailand'
     if 6.4 <= lat <= 13.8 and 99 <= lon <= 102.2: return 'Thailand'    # Gulf of Thailand
@@ -137,7 +142,35 @@ def country(lat, lon, ref):
     if 0.8 <= lat <= 7.5 and 99.5 <= lon <= 104.5 and ref == 'Sembawang': return 'Malaysia'
     if 8 <= lat <= 24 and 102 <= lon <= 110: return 'Vietnam'
     if 18 <= lat <= 41 and 105 <= lon <= 122.5: return 'China'
-    return None
+    return country_nn(lat, lon)   # fallback: country of nearest existing DB station
+
+# --- nearest-neighbour country index (for regions not covered by explicit rules) ---
+_CPTS = None
+def country_nn(lat, lon):
+    global _CPTS
+    if _CPTS is None:
+        plat = []; plon = []; pc = []
+        latp = re.compile(r'^# !latitude: ([\-\d.]+)'); lonp = re.compile(r'^# !longitude: ([\-\d.]+)')
+        for f in FILES:
+            L = open(f, encoding='iso-8859-1').read().splitlines(); lo = None
+            for j, l in enumerate(L):
+                m = lonp.match(l)
+                if m: lo = float(m.group(1)); continue
+                m = latp.match(l)
+                if m and lo is not None:
+                    la = float(m.group(1)); nm = None
+                    for k in range(j + 1, min(j + 6, len(L))):
+                        if L[k].strip() and not L[k].startswith('#'): nm = L[k].strip(); break
+                    if nm and ',' in nm:
+                        c = nm.split(',')[-1].strip()
+                        if 2 < len(c) < 40 and not any(ch.isdigit() for ch in c):
+                            plat.append(la); plon.append(lo); pc.append(c)
+                    lo = None
+        _CPTS = (np.array(plat), np.array(plon), pc)
+    plat, plon, pc = _CPTS
+    if not len(plat): return None
+    d = (plat - lat) ** 2 + ((plon - lon) * math.cos(math.radians(lat))) ** 2
+    return pc[int(np.argmin(d))]
 
 # ---------- helpers ----------
 def lat1(s):
@@ -310,7 +343,8 @@ def block(s, tr, cty):
 # value = display-name override (already carries its country suffix).
 FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia',
                  1869: 'Cirebon, Java, Indonesia',
-                 1885: 'Pasuruan, Java, Indonesia'}
+                 1885: 'Pasuruan, Java, Indonesia',
+                 3925: 'Mahajanga, Madagascar'}
 
 def main():
     full = json.load(open(FULL))
