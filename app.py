@@ -1303,8 +1303,54 @@ def sitemap_xml():
     return "\n".join(parts), 200, {"Content-Type": "application/xml; charset=utf-8"}
 
 
-def _resolve_station(station, source=None, utc=False):
-    """Decode station name and compute safe filenames + source suffix."""
+# ── Display preferences (units / time / current speed) ──────────────────
+# Resolution order: URL parameter > cookie > default. This single seam is
+# where a future logged-in user's stored preferences will slot in (between
+# the URL override and the cookie). The client-side settings menu (see
+# templates/_pwa_head.html) writes these as cookies; a shareable URL param
+# still overrides them.
+
+def _resolve_prefs():
+    """Return (units, utc, spd): units in {m,ft}, spd in {kn,ms,kmh}, utc bool."""
+    def pick(name, valid, default):
+        v = request.args.get(name)
+        if v is None:
+            v = request.cookies.get(name)
+        v = (v or '').strip().lower()
+        return v if v in valid else default
+    units = pick('units', {'m', 'ft'}, 'm')
+    spd = pick('spd', {'kn', 'ms', 'kmh'}, 'kn')
+    utc_raw = request.args.get('utc')
+    if utc_raw is None:
+        utc_raw = request.cookies.get('utc')
+    utc = str(utc_raw).strip() == '1'
+    return units, utc, spd
+
+
+def _convert_speed_value(value_str, spd):
+    """Convert an xtide current value ('1.23 knots') to the target speed unit.
+
+    xtide always emits knots for currents — its -u flag only affects length —
+    so m/s and km/h must be converted here. spd=='kn', non-knot or unparseable
+    strings pass through unchanged. Sign (ebb = negative) is preserved."""
+    if spd == 'kn':
+        return value_str
+    m = re.match(r"^(-?\d+(?:\.\d+)?)\s+knots?\b", value_str.strip(), re.I)
+    if not m:
+        return value_str
+    kn = float(m.group(1))
+    if spd == 'ms':
+        return f"{kn * 0.514444:.2f} m/s"
+    if spd == 'kmh':
+        return f"{kn * 1.852:.2f} km/h"
+    return value_str
+
+
+def _resolve_station(station, source=None, utc=False, units='m', spd='kn'):
+    """Decode station name and compute safe filenames + source suffix.
+
+    units/spd extend the cache key so each display variant gets its own cached
+    SVG+HTML. Defaults (m, kn) append no suffix → existing cache files stay valid."""
     decoded_station = unquote(station)
     safe_station = normalized.get(decoded_station, normalize_filename(decoded_station))
     if source:
@@ -1314,6 +1360,10 @@ def _resolve_station(station, source=None, utc=False):
         safe_station = safe_station + '__' + skey
     if utc:
         safe_station = safe_station + '__utc'
+    if units == 'ft':
+        safe_station = safe_station + '__ft'
+    if spd != 'kn':
+        safe_station = safe_station + '__' + spd
     svg_filename = f"tide_prediction_{safe_station}.svg"
     html_filename = f"tide_prediction_{safe_station}.html"
     return decoded_station, safe_station, svg_filename, html_filename
@@ -1401,7 +1451,7 @@ def _purge_stale_predictions(force=False):
     return n_purged
 
 
-def _generate_prediction(decoded_station, station_raw, source, svg_filename, html_filename, utc=False):
+def _generate_prediction(decoded_station, station_raw, source, svg_filename, html_filename, utc=False, units='m', spd='kn'):
     """Generate SVG + HTML prediction files. Returns html_path."""
     svg_path = os.path.join(SVG_DIR, svg_filename)
     html_path = os.path.join(PREDICTIONS_DIR, html_filename)
@@ -1433,6 +1483,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         "-f", "v",
         "-m", "g",
         "-o", svg_path,
+        "-u", units,
         *tz_flag,
     ]
 
@@ -1506,6 +1557,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
             "-df", "%Y-%m-%d",
             "-tf", "%H:%M",
             "-em", "x",
+            "-u", units,
             *tz_flag,
         ]
         text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True, env=env)
@@ -1623,6 +1675,13 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
 
     # HTML-Datei erzeugen
     is_current_station = decoded_station.rstrip().endswith('Current')
+    # Current speed unit: xtide emits knots regardless of -u, so rewrite the
+    # value strings in place. Done before FAQ + render so both pick up the
+    # converted values automatically.
+    if is_current_station and spd != 'kn':
+        for r in tide_rows:
+            if r.get('row_type') == 'tide':
+                r['value'] = _convert_speed_value(r['value'], spd)
     with open(TEMPLATE_PATH, encoding="utf-8") as f:
         template = f.read()
     svg_url = f"/static/predictions/{svg_filename}"
@@ -1696,7 +1755,7 @@ def show_prediction(slug):
         _purge_stale_predictions()
 
         source = request.args.get('source')
-        utc = request.args.get('utc') == '1'
+        units, utc, spd = _resolve_prefs()
 
         # Resolve slug to original station name
         station_name = _slug_to_station.get(slug)
@@ -1708,12 +1767,12 @@ def show_prediction(slug):
         if not source:
             source = _station_data.get(station_name)
 
-        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station_name, source, utc)
+        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station_name, source, utc, units, spd)
         html_path = os.path.join(PREDICTIONS_DIR, html_filename)
 
         if not _is_fresh_today(html_path):
             print(f"➤ Prediction veraltet oder nicht vorhanden: {decoded_station}")
-            _generate_prediction(decoded_station, station_name, source, svg_filename, html_filename, utc=utc)
+            _generate_prediction(decoded_station, station_name, source, svg_filename, html_filename, utc=utc, units=units, spd=spd)
         else:
             print(f"➤ Prediction aktuell (Cache-Hit): {decoded_station}")
 
@@ -1733,8 +1792,8 @@ def show_prediction(slug):
 def generate_tide_prediction(station):
     try:
         source = request.args.get('source')
-        utc = request.args.get('utc') == '1'
-        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station, source, utc)
+        units, utc, spd = _resolve_prefs()
+        decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station, source, utc, units, spd)
 
         print(f"➤ Angeforderte Station: {decoded_station}")
         print(f"➤ Normalisierter Dateiname: {safe_station}")
@@ -1744,7 +1803,7 @@ def generate_tide_prediction(station):
         html_path = os.path.join(PREDICTIONS_DIR, html_filename)
 
         if not _is_fresh_today(html_path):
-            _generate_prediction(decoded_station, station, source, svg_filename, html_filename, utc=utc)
+            _generate_prediction(decoded_station, station, source, svg_filename, html_filename, utc=utc, units=units, spd=spd)
         else:
             print(f"➤ Prediction aktuell (Cache-Hit): {decoded_station}")
 
@@ -1832,15 +1891,15 @@ def _widget_resolve_slug(q):
     return None, None
 
 
-def _widget_tide_data(slug, station_name, days, units='m'):
+def _widget_tide_data(slug, station_name, days, units='m', spd='kn'):
     """Tide events for the widget: {station, days:[{date, events:[...]}], ...}.
-    Cached per (slug, days, units) until midnight (server time)."""
+    Cached per (slug, days, units, spd) until midnight (server time)."""
     global _widget_cache_date
     today = datetime.now().date()
     if _widget_cache_date != today:
         _widget_cache.clear()
         _widget_cache_date = today
-    cache_key = (slug, days, units)
+    cache_key = (slug, days, units, spd)
     if cache_key in _widget_cache:
         return _widget_cache[cache_key]
 
@@ -1884,6 +1943,12 @@ def _widget_tide_data(slug, station_name, days, units='m'):
         if m:
             height = float(m.group(1))
             unit = m.group(2)
+            # Currents come out of xtide in knots; convert if requested.
+            if spd != 'kn' and unit.lower().startswith('knot'):
+                if spd == 'ms':
+                    height, unit = round(height * 0.514444, 2), 'm/s'
+                elif spd == 'kmh':
+                    height, unit = round(height * 1.852, 2), 'km/h'
         events.append({"date": date_str, "time": time_str, "type": ev_type,
                        "kind": kind, "height": height, "unit": unit})
 
@@ -1953,6 +2018,11 @@ def _widget_units_param():
     return 'ft' if units in ('ft', 'feet') else 'm'
 
 
+def _widget_speed_param():
+    spd = (request.args.get('spd') or 'kn').strip().lower()
+    return spd if spd in ('kn', 'ms', 'kmh') else 'kn'
+
+
 def _cors_json(payload, status=200):
     resp = jsonify(payload)
     resp.status_code = status
@@ -1968,8 +2038,9 @@ def api_widget_tides():
         return _cors_json({"error": "Station not found"}, 404)
     days = _widget_days_param()
     units = _widget_units_param()
+    spd = _widget_speed_param()
     try:
-        return _cors_json(_widget_tide_data(slug, station_name, days, units))
+        return _cors_json(_widget_tide_data(slug, station_name, days, units, spd))
     except subprocess.CalledProcessError as e:
         print(f"❌ Widget: tide-Aufruf fehlgeschlagen für {station_name}: {e.stderr}")
         return _cors_json({"error": "Prediction failed"}, 500)
@@ -2031,8 +2102,9 @@ def widget_frame(slug):
     if theme not in ('light', 'dark', 'auto'):
         theme = 'light'
     units = _widget_units_param()
+    spd = _widget_speed_param()
     return render_template("widget_frame.html", slug=resolved_slug,
-                           days=days, theme=theme, units=units)
+                           days=days, theme=theme, units=units, spd=spd)
 
 
 @app.route("/widgets/")

@@ -12,6 +12,7 @@
  *   data-days     1..3 (default 3)
  *   data-theme    light | dark | auto (default light)
  *   data-units    m | ft (default m)
+ *   data-spd      kn | ms | kmh (default kn; current stations only)
  */
 (function () {
   'use strict';
@@ -193,6 +194,8 @@
     if (!(days >= 1 && days <= 3)) days = 3;
     var units = (root.getAttribute('data-units') || 'm').toLowerCase();
     units = (units === 'ft' || units === 'feet') ? 'ft' : 'm';
+    var spd = (root.getAttribute('data-spd') || 'kn').toLowerCase();
+    spd = (spd === 'ms' || spd === 'kmh') ? spd : 'kn';
 
     renderMessage(root, 'Loading tide times…');
 
@@ -202,7 +205,7 @@
 
     function load(stationQuery) {
       fetchJson(
-        BASE + '/api/widget/tides?station=' + encodeURIComponent(stationQuery) + '&days=' + days + '&units=' + units,
+        BASE + '/api/widget/tides?station=' + encodeURIComponent(stationQuery) + '&days=' + days + '&units=' + units + '&spd=' + spd,
         function (data) { render(root, data); },
         function (msg) { renderMessage(root, msg); }
       );

@@ -177,6 +177,14 @@ ul.w-terms { line-height: 1.6; color: #444; max-width: 760px; }
         <option value="ft">Feet</option>
       </select>
     </div>
+    <div class="w-field">
+      <label for="w-spd">Current speed</label>
+      <select id="w-spd">
+        <option value="kn" selected>knots</option>
+        <option value="ms">m/s</option>
+        <option value="kmh">km/h</option>
+      </select>
+    </div>
   </div>
 </section>
 
@@ -274,7 +282,7 @@ ul.w-terms { line-height: 1.6; color: #444; max-width: 760px; }
     slug: 'dover-england-united-kingdom',
     station: 'Dover, England, United Kingdom',
     lat: '50.77', lon: '-1.11',
-    days: 3, theme: 'light', units: 'm'
+    days: 3, theme: 'light', units: 'm', spd: 'kn'
   };
 
   var $ = function (id) { return document.getElementById(id); };
@@ -288,6 +296,7 @@ ul.w-terms { line-height: 1.6; color: #444; max-width: 760px; }
            ' data-days="' + state.days + '"' +
            (state.theme !== 'light' ? ' data-theme="' + state.theme + '"' : '') +
            (state.units !== 'm' ? ' data-units="' + state.units + '"' : '') +
+           (state.spd !== 'kn' ? ' data-spd="' + state.spd + '"' : '') +
            '></div>\n<script async src="' + BASE + '/widget.js"><\/script>';
   }
 
@@ -295,7 +304,8 @@ ul.w-terms { line-height: 1.6; color: #444; max-width: 760px; }
     var height = 110 + state.days * 125;
     var theme = state.theme !== 'light' ? '&theme=' + state.theme : '';
     var units = state.units !== 'm' ? '&units=' + state.units : '';
-    return '<iframe src="' + BASE + '/widget/' + state.slug + '?days=' + state.days + theme + units + '"' +
+    var spd = state.spd !== 'kn' ? '&spd=' + state.spd : '';
+    return '<iframe src="' + BASE + '/widget/' + state.slug + '?days=' + state.days + theme + units + spd + '"' +
            ' width="320" height="' + height + '" style="border:none;max-width:100%;"' +
            ' loading="lazy" title="Tide times for ' + state.station.replace(/"/g, '&quot;') + '"></iframe>';
   }
@@ -320,6 +330,7 @@ ul.w-terms { line-height: 1.6; color: #444; max-width: 760px; }
     div.setAttribute('data-days', state.days);
     div.setAttribute('data-theme', state.theme);
     div.setAttribute('data-units', state.units);
+    div.setAttribute('data-spd', state.spd);
     holder.appendChild(div);
     if (window.TideWidget) window.TideWidget.scan(holder);
   }
@@ -419,6 +430,7 @@ ul.w-terms { line-height: 1.6; color: #444; max-width: 760px; }
   $('w-days').addEventListener('change', function () { state.days = parseInt(this.value, 10); refresh(); });
   $('w-theme').addEventListener('change', function () { state.theme = this.value; refresh(); });
   $('w-units').addEventListener('change', function () { state.units = this.value; refresh(); });
+  $('w-spd').addEventListener('change', function () { state.spd = this.value; refresh(); });
 
   // ── Copy buttons ──────────────────────────────────────────────────
   document.querySelectorAll('.w-copy[data-target]').forEach(function (btn) {
