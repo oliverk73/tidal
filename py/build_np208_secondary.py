@@ -40,16 +40,10 @@ def load_sec():
                             ml=p.get('ml')))
     return sec
 
-_LIVE=None
-def _live():
-    global _LIVE
-    if _LIVE is None:
-        d=json.load(open(f'{HARM}/../static/js/leaflet_markers_data.json',encoding='utf-8'))
-        _LIVE=[(x[1],x[2]) for x in d['stations']]
-    return _LIVE
 def gap(s):
-    # "fehlend" = weiter als GAP_KM von JEDER Live-Station (Marker-JSON, alle Quellen inkl. eutt)
-    return min(B._hav(s['lat'],s['lon'],a,b) for a,b in _live()) > GAP_KM
+    # Oliver-Regel (ATT): ALLE Part-II-Haefen bauen, KEINE Dublettenfilterung.
+    # Classic/eutt/IOC bleiben; NP208 kommt als separate Station daneben (Qualitaetscheck).
+    return True
 
 def block(s,tr):
     _pl=s['name']
