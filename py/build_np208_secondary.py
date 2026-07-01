@@ -30,6 +30,9 @@ REFMAP={
  'Luanda':'Luanda','Libreville':'Libreville','Douala':'Douala','Malabo':'Malabo',
  'Ponta Delgada':'Ponta Delgada','Funchal':'Funchal','Puerto de la Luz':'Puerto de la Luz','Bata':'Bata',
  'Cap Lopez':'Cap Lopez','Porto do Lobito':'Porto do Lobito','Pointe Owendo':'Pointe Owendo',
+ 'Lisbon':'Lisboa (Alc','Lisbon (Alcantara)':'Lisboa (Alc','Cadiz':'Cádiz','Cádiz':'Cádiz','Gibraltar':'Gibraltar',
+ 'Split':'Split','Bakar':'Bakar','Rovinj':'Rovinj','Trieste':'Trieste','Venezia':'Venezia',
+ 'Sfax':'Sfax','Gabes':'Gabès','Alexandria':'Al Iskandariyah','Port Said':'Bur Said',
 }
 
 def load_sec():
