@@ -25,6 +25,11 @@ REFMAP={
  'Dakar':'Dakar','Nouadhibou':'Nouadhibou','Takoradi':'Takoradi','Tema':'Tema','Lagos':'Lagos',
  'Apapa':'Apapa','Douala':'Douala','Libreville':'Libreville','Luanda':'Luanda','Walvis Bay':'Walvis Bay',
  'Lome':'Lomé','Lomé':'Lomé','Cotonou':'Cotonou','Abidjan':'Abidjan','Casablanca':'Casablanca',
+ 'Apapa':'Apapa','Warri':'Warri','Bonny Town':'Bonny','Bonny':'Bonny','Tema':'Tema, Ghana','Takoradi':'Takoradi, Ghana',
+ 'Pointe Noire':'Pointe-Noire','Pointe-Noire':'Pointe-Noire','Walvis Bay':'Walvis Bay','Cape Town':'Cape Town',
+ 'Luanda':'Luanda','Libreville':'Libreville','Douala':'Douala','Malabo':'Malabo',
+ 'Ponta Delgada':'Ponta Delgada','Funchal':'Funchal','Puerto de la Luz':'Puerto de la Luz','Bata':'Bata',
+ 'Cap Lopez':'Cap Lopez','Porto do Lobito':'Porto do Lobito','Pointe Owendo':'Pointe Owendo',
 }
 
 def load_sec():
