@@ -21,6 +21,7 @@ TCD_DIR = "/usr/share/xtide"
 HARMONICS_DIRS = [
     "harmonics/classic",
     "harmonics/att",
+    "harmonics/noaa",
     "harmonics/ihm",
     "harmonics/utide",
     "harmonics/ticon",
@@ -157,7 +158,9 @@ SOURCE_GROUPS = OrderedDict([
                                                      'harmonics_att_np203.tcd',
                                                      'harmonics_att_np203_secondary.tcd',
                                                      'harmonics_att_np207.tcd',
-                                                     'harmonics_att_np204_secondary.tcd']}),
+                                                     'harmonics_att_np204_secondary.tcd',
+                                                     'harmonics_att_np208.tcd',
+                                                     'harmonics_att_np208_secondary.tcd']}),
     ('Harmonics ATT Currents', {'color': '#0D47A1', 'files': ['harmonics_att_np203_currents.tcd']}),
     ('Harmonics NOAA', {'color': '#00BCD4', 'files': ['harmonics_noaa_cptt.tcd',
                                                       'harmonics_noaa_eutt.tcd',
@@ -176,8 +179,14 @@ def get_group_for_source(source_file):
     for group_name, info in SOURCE_GROUPS.items():
         if source_file in info['files']:
             return group_name
+    # Muster-Fallbacks: neue Quellen einer Familie landen NICHT in 'Other'
+    # (verhindert das wiederkehrende "Other"-Problem bei neuen ATT/NOAA-Bänden).
+    if source_file.startswith('harmonics_att_'):
+        return 'Harmonics ATT Currents' if 'current' in source_file else 'Harmonics ATT'
+    if source_file.startswith('harmonics_noaa_'):
+        return 'Harmonics NOAA'
     if source_file.startswith('harmonics_utide_'):
-        return 'UTide SL'
+        return 'UTide TC' if 'tables' in source_file else 'UTide SL'
     return 'Other'
 
 
