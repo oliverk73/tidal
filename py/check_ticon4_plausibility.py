@@ -21,7 +21,6 @@ from collections import defaultdict
 
 HARMONICS_DIRS = [
     "/home/oliver/harmonics/classic",
-    "/home/oliver/harmonics/ihm",
     "/home/oliver/harmonics/utide",
     "/home/oliver/harmonics/ticon",
 ]

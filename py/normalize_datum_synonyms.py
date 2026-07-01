@@ -26,7 +26,7 @@ FILES = [
     ROOT / "utide" / "harmonics_utide_observations.txt",
     ROOT / "utide" / "harmonics_utide_tidetables.txt",
     ROOT / "utide" / "harmonics_utide_currents.txt",
-    ROOT / "ihm" / "harmonics_puertos_spain.txt",
+    ROOT / "classic" / "harmonics_puertos_spain.txt",
     ROOT / "classic" / "harmonics-1997-05-25_mod.txt",
     ROOT / "classic" / "harmonics-2004-06-14_mod.txt",
     ROOT / "classic" / "harmonics-dwf-20070318_mod.txt",

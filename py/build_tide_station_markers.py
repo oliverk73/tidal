@@ -22,10 +22,8 @@ HARMONICS_DIRS = [
     "harmonics/classic",
     "harmonics/att",
     "harmonics/noaa",
-    "harmonics/ihm",
     "harmonics/utide",
     "harmonics/ticon",
-    "harmonics/literature",
 ]
 
 

@@ -57,7 +57,7 @@ REF_FILES = [
     "/home/oliver/harmonics/utide/harmonics_utide_ireland.txt",
     "/home/oliver/harmonics/utide/harmonics_utide_germany_z0corrected.txt",
     "/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt",
-    "/home/oliver/harmonics/ihm/harmonics_puertos_spain.txt",
+    "/home/oliver/harmonics/classic/harmonics_puertos_spain.txt",
 ]
 
 # Manual fixes for German stations not in Pegelonline or with wrong names

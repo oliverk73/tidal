@@ -30,7 +30,7 @@ SOURCE_FILES = [
     "/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt",
     "/home/oliver/harmonics/utide/harmonics_utide_observations.txt",
     "/home/oliver/harmonics/utide/harmonics_utide_currents.txt",
-    "/home/oliver/harmonics/ihm/harmonics_puertos_spain.txt",
+    "/home/oliver/harmonics/classic/harmonics_puertos_spain.txt",
 ]
 
 TARGET_FILES = [

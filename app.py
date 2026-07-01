@@ -49,7 +49,7 @@ MARKERS_JS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", 
 def find_txt_for_tcd(tcd_basename):
     """Map a TCD filename (e.g. harmonics-dwf-20070318_mod.tcd) to its .txt source."""
     stem = os.path.splitext(tcd_basename)[0]  # e.g. harmonics-dwf-20070318_mod
-    for subdir in ["classic", "att", "noaa", "utide", "ticon", "ihm", "literature"]:
+    for subdir in ["classic", "att", "noaa", "utide", "ticon"]:
         txt_path = os.path.join(HARMONICS_DIR, subdir, stem + ".txt")
         if os.path.exists(txt_path):
             return txt_path

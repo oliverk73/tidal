@@ -80,7 +80,7 @@ def parse_part2():
 MERID=re.compile(r'^[+-]\d{2}:\d{2}')
 def parse_inventory():
     inv=[]
-    for sub in ('utide','ihm','classic','ticon','literature'):
+    for sub in ('utide','classic','ticon'):
         for fp in glob.glob(f'{HARM}/{sub}/*.txt'):
             base=os.path.basename(fp); is_fes='fes2022' in base
             lines=open(fp,encoding='iso-8859-1',errors='replace').read().splitlines()

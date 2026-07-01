@@ -53,7 +53,6 @@ M2_SPEED = 28.984104
 
 HARMONICS_DIRS = [
     "/home/oliver/harmonics/classic",
-    "/home/oliver/harmonics/ihm",
     "/home/oliver/harmonics/utide",
     "/home/oliver/harmonics/ticon",
 ]

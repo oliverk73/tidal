@@ -17,7 +17,7 @@ Schreibt harmonics/utide/harmonics_admiralty_np203.txt (ISO-8859-1).
 import os, re
 
 HARM = os.path.expanduser('~/harmonics')
-LIT  = f'{HARM}/literature/harmonics_literature.txt'
+LIT  = f'{HARM}/classic/harmonics_literature.txt'
 OUT  = f'{HARM}/att/harmonics_att_np203.txt'
 
 def read_header():

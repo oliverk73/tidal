@@ -429,7 +429,7 @@ def is_duplicate(station1, station2):
     return False, ""
 
 def main():
-    new_file = '/home/oliver/harmonics/ihm/harmonics_puertos_spain.txt'
+    new_file = '/home/oliver/harmonics/classic/harmonics_puertos_spain.txt'
     old_file = '/home/oliver/harmonics/classic/harmonics_old_no_us_no_dupes3.txt'
     output_file = os.path.join(base_dir, 'harmonics_old_no_us_no_dupes3_no_spain.txt')
     csv_file = os.path.join(base_dir, 'deleted_stations_spain.csv')

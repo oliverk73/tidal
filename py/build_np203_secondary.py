@@ -22,7 +22,7 @@ Marker-Gruppe: NP203 (gleiche source-Kennung wie Part III).
 import os, re, math, sys, json
 
 HARM = os.path.expanduser('~/harmonics')
-LIT  = f'{HARM}/literature/harmonics_literature.txt'
+LIT  = f'{HARM}/classic/harmonics_literature.txt'
 OUT  = f'{HARM}/att/harmonics_att_np203_secondary.txt'
 
 def read_header():
@@ -321,7 +321,7 @@ IN('4490','Sandhead',20+58/60,88+35/60,'Sagar Roads',1.8,(-22,-42),(-2.4,-1.8,No
 import glob
 FILES = (glob.glob(f'{HARM}/classic/*.txt')+glob.glob(f'{HARM}/ticon/*.txt')
        + glob.glob(f'{HARM}/att/*.txt')+glob.glob(f'{HARM}/utide/*.txt')
-       + glob.glob(f'{HARM}/literature/*.txt'))
+       )
 FILES=[x for x in FILES if 'np203_secondary' not in x]
 _MER=re.compile(r'^([+-]\d{2}:\d{2})\s*:(\S+)')
 _CON=re.compile(r'^([A-Za-z][A-Za-z0-9]*)\s+([\-\d.]+)\s+([\-\d.]+)\s*$')
@@ -428,7 +428,7 @@ def _refpts():
     pts=[]
     for f in (glob.glob(f'{HARM}/classic/*.txt')+glob.glob(f'{HARM}/ticon/*.txt')
              +glob.glob(f'{HARM}/att/*.txt')+glob.glob(f'{HARM}/utide/*.txt')
-             +glob.glob(f'{HARM}/literature/*.txt')+glob.glob(f'{HARM}/fes2022/*.txt')):
+             +glob.glob(f'{HARM}/fes2022/*.txt')):
         if 'np203_secondary' in f: continue
         t=open(f,encoding='iso-8859-1').read()
         for la,lo in zip(re.findall(r'# !latitude:\s*([\-\d.]+)',t),re.findall(r'# !longitude:\s*([\-\d.]+)',t)):

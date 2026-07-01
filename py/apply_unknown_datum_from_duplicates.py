@@ -169,7 +169,7 @@ SOURCE_TO_PATH = {
     "UTide-obs":    ROOT / "utide"   / "harmonics_utide_observations.txt",
     "UTide-tt":     ROOT / "utide"   / "harmonics_utide_tidetables.txt",
     "UTide-cur":    ROOT / "utide"   / "harmonics_utide_currents.txt",
-    "IHM-Spain":    ROOT / "ihm"     / "harmonics_puertos_spain.txt",
+    "IHM-Spain":    ROOT / "classic"     / "harmonics_puertos_spain.txt",
     "Classic-1997": ROOT / "classic" / "harmonics-1997-05-25_mod.txt",
     "Classic-2004": ROOT / "classic" / "harmonics-2004-06-14_mod.txt",
     "DWF-2007":     ROOT / "classic" / "harmonics-dwf-20070318_mod.txt",

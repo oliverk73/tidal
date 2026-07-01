@@ -22,7 +22,7 @@ FILES = [
     (ROOT / "utide" / "harmonics_utide_observations.txt", "UTide observations", "block"),
     (ROOT / "utide" / "harmonics_utide_tidetables.txt", "UTide tidetables", "block"),
     (ROOT / "utide" / "harmonics_utide_currents.txt", "UTide currents", "block"),
-    (ROOT / "ihm" / "harmonics_puertos_spain.txt", "IHM Puertos Spain", "fixed=Spain"),
+    (ROOT / "classic" / "harmonics_puertos_spain.txt", "IHM Puertos Spain", "fixed=Spain"),
     (ROOT / "classic" / "harmonics-1997-05-25_mod.txt", "Classic 1997", "name"),
     (ROOT / "classic" / "harmonics-2004-06-14_mod.txt", "Classic 2004", "name"),
     (ROOT / "classic" / "harmonics-dwf-20070318_mod.txt", "DWF 2007", "name"),
