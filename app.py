@@ -49,7 +49,7 @@ MARKERS_JS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", 
 def find_txt_for_tcd(tcd_basename):
     """Map a TCD filename (e.g. harmonics-dwf-20070318_mod.tcd) to its .txt source."""
     stem = os.path.splitext(tcd_basename)[0]  # e.g. harmonics-dwf-20070318_mod
-    for subdir in ["classic", "att", "utide", "ticon", "ihm", "literature"]:
+    for subdir in ["classic", "att", "noaa", "utide", "ticon", "ihm", "literature"]:
         txt_path = os.path.join(HARMONICS_DIR, subdir, stem + ".txt")
         if os.path.exists(txt_path):
             return txt_path
@@ -1547,6 +1547,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         meta_info = []
 
     # Textvorhersage: tide -l "Station" -b ... -e ... -f t -m p
+    station_note = ''
     try:
         text_cmd = [
             "tide", "-l", decoded_station,
@@ -1566,6 +1567,11 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         for line in text_result.stdout.strip().splitlines()[2:]:  # skip header
             line = line.strip()
             if not line:
+                continue
+            # xtide emits the station's note as the first data line ("Note: ...").
+            # Don't render it as a table row — show it above the graphic instead.
+            if line.startswith('Note:'):
+                station_note = line[len('Note:'):].strip()
                 continue
             # Format: "2026-03-30 05:43   2.08 meters  Low Tide"
             # or:     "2026-03-30 05:56   Moonset"
@@ -1725,6 +1731,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                                   svg_url=svg_url,
                                   meta_info=meta_info,
                                   tide_rows=tide_rows,
+                                  station_note=station_note,
                                   is_current=is_current_station,
                                   station_names=_station_names,
                                   utc=utc,

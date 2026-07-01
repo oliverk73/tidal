@@ -48,9 +48,14 @@ def load_sec():
                             ml=p.get('ml')))
     return sec
 
+TT='harmonics_utide_tidetables.tcd'   # eigener UTide-TC-Fit = besser als ATT-Transfer
 def gap(s):
-    # Oliver-Regel (ATT): ALLE Part-II-Haefen bauen, KEINE Dublettenfilterung.
-    # Classic/eutt/IOC bleiben; NP208 kommt als separate Station daneben (Qualitaetscheck).
+    # Oliver-Regel: ALLE Part-II-Haefen bauen (Qualitaetscheck neben classic-1997/
+    # FES/eutt), AUSSER wo schon ein utide_tidetables-Fit <2.5km liegt -> der ist
+    # besser, NP208-Transfer waere nur eine schlechtere Dublette.
+    for a,b,src in _live():
+        if src==TT and B._hav(s['lat'],s['lon'],a,b)<2.5:
+            return False
     return True
 
 def block(s,tr):

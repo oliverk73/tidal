@@ -27,15 +27,18 @@ main img { width: 100%; height: auto; }
   .station-meta .meta-item { width: calc(33.3% - 22px); }
 }
 .tide-table { border-collapse: collapse; font-size: 0.95em; }
-.tide-table td { padding: 5px 10px; white-space: nowrap; }
+.tide-table td, .tide-table th { padding: 5px 10px; white-space: nowrap; }
 .tide-table .date-cell { font-weight: bold; }
 .tide-table .icon-cell { text-align: center; width: 24px; font-family: serif; font-size: 1.1em; }
 .tide-table .value-cell { text-align: right; }
 .tide-table tr.row-tide { background: #eee; }
 .tide-table tr.row-astro { background: #fff; }
 .tide-table tr.day-start td { border-top: 2px solid #ccc; }
+.tide-table thead th { text-align: left; font-weight: bold; border-bottom: 2px solid #999; background: #fff; }
+.tide-table thead th.value-cell { text-align: right; }
+.station-note { margin: 0 0 0.6em; color: #555; font-size: 0.9em; font-style: italic; }
 @media (max-width: 500px) {
-  .tide-table td { padding: 3px 4px; font-size: 0.85em; }
+  .tide-table td, .tide-table th { padding: 3px 4px; font-size: 0.85em; }
 }
 /* Override map-page search overlay: keep button in header flow on prediction pages */
 header #search-trigger {
@@ -171,6 +174,7 @@ header #search-trigger {
   <div class="meta-item"><dt>{{ key }}</dt><dd>{{ val }}</dd></div>
 {% endfor %}
 </dl>
+{% if station_note %}<p class="station-note">{{ station_note }}</p>{% endif %}
 {% if is_current %}
 <div class="tide-svg-wrap"><img src="{{ svg_url }}"
         alt="7-day tidal current forecast for {{ original_name }}{{ _wb }} — flood and ebb speeds, slack water times. See table below for exact times and current velocities."
@@ -187,6 +191,15 @@ header #search-trigger {
 <h3>Tide times</h3>
 {% endif %}
 <table class="tide-table">
+<thead>
+  <tr>
+    <th class="date-cell">Date</th>
+    <th class="time-cell">Time</th>
+    <th class="icon-cell"></th>
+    <th class="type-cell"></th>
+    <th class="value-cell">{% if is_current %}Speed{% else %}Sea Level{% endif %}</th>
+  </tr>
+</thead>
 {% for row in tide_rows %}
   <tr class="row-{{ row.row_type }}{% if row.date %} day-start{% endif %}">
     <td class="date-cell">{{ row.date }}</td>

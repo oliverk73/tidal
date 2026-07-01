@@ -14,13 +14,13 @@ Method (range-based, datum-robust):
   Z0   :  MTL (mean tide level above chart datum), else M2_sub+S2_sub.
 
 Only true gaps (>GAP_KM from existing DB). Reference rows (daily predictions) skipped.
-Writes harmonics/att/harmonics_noaa_cptt.txt (ISO-8859-1).  Region selectable via argv.
+Writes harmonics/noaa/harmonics_noaa_amtt.txt (ISO-8859-1).  Region selectable via argv.
 """
 import os, re, json, math, sys, glob, unicodedata
 sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'py'))
 
 HARM = os.path.expanduser('~/harmonics')
-OUT  = f'{HARM}/att/harmonics_noaa_amtt.txt'
+OUT  = f'{HARM}/noaa/harmonics_noaa_amtt.txt'
 FULL = f'{HARM}/help/amtt_full.json'
 GAPS = f'{HARM}/help/eutt2020_gaps.json'
 FT = 0.3048
