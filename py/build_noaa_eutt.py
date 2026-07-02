@@ -120,6 +120,7 @@ REFMAP = {
  # --- Europe & W Africa volume (eutt2020) references ---
  'Lisbon': 'Lisboa (Alc',                    # Lisboa (Alcantara), Portugal
  'Liverpool': 'Liverpool (Gladstone Dock)',  # England (NICHT Nova Scotia)
+ 'Gibralter': 'Gibraltar,',                  # NOAA-Schreibweise; Komma gegen 'Sandy Bay, Gibraltar'
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -480,13 +481,33 @@ FORCE_INCLUDE = {127: 'Kribi, Cameroon',
                  83:  'Benguela, Angola',
                  75:  'Tombua (Porto Alexandre), Angola'}
 
+def livenoaa_pts():
+    """Stationen der Live-CO-OPS-Dateien (censam/carib/pacif): dieselbe Quelle
+    in AKTUELL -> Table-2-Version dort NICHT bauen (Oliver 2026-07-02,
+    keine Quell-Duplikate)."""
+    pts = []
+    for f in glob.glob(f'{HARM}/noaa/harmonics_noaa_censam.txt') + \
+             glob.glob(f'{HARM}/noaa/harmonics_noaa_carib.txt') + \
+             glob.glob(f'{HARM}/noaa/harmonics_noaa_pacif.txt'):
+        t = open(f, encoding='iso-8859-1').read()
+        for la, lo in zip(re.findall(r'# !latitude:\s*([\-\d.]+)', t), re.findall(r'# !longitude:\s*([\-\d.]+)', t)):
+            pts.append((float(la), float(lo)))
+    return pts
+
 def main():
     full = json.load(open(FULL))
-    gaps = json.load(open(GAPS))
-    gapno = {g['no'] for g in gaps if g['region'] in REGIONS}
+    if REGIONS == ['ALL']:
+        # Build-all (Oliver 2026-07-02): ALLE Nicht-Referenz-Zeilen des Bands,
+        # kein Gap-Filter (grobe Tafel-Koordinaten machen ihn unzuverlaessig);
+        # Dedup erfolgt spaeter global ueber alle Quellen.
+        gapno = {r['no'] for r in full if not r.get('daily')}
+    else:
+        gaps = json.load(open(GAPS))
+        gapno = {g['no'] for g in gaps if g['region'] in REGIONS}
     gapno |= set(FORCE_INCLUDE)
     byno = {r['no']: r for r in full}
-    PTS = refpts()
+    PTS = refpts() if REGIONS != ['ALL'] else []
+    LIVE = livenoaa_pts()
     # --- persistenter Override-Layer: Frontend-Koordinaten-Korrekturen schuetzen ---
     import noaa_overrides as NOV
     raw_by_key = {}
@@ -509,8 +530,10 @@ def main():
         forced = no in FORCE_INCLUDE
         if not forced and is_us_pacific(s['lat'], s['lon'], s['name']):
             skipped.append((no, s['name'], 'us')); continue
-        if not forced and min(hav(s['lat'], s['lon'], a, b) for a, b in PTS) <= GAP_KM:
+        if PTS and not forced and min(hav(s['lat'], s['lon'], a, b) for a, b in PTS) <= GAP_KM:
             skipped.append((no, s['name'], 'not-gap')); continue
+        if LIVE and min(hav(s['lat'], s['lon'], a, b) for a, b in LIVE) <= 3.0:
+            skipped.append((no, s['name'], 'live-coops')); continue
         rn, rr = resolve_ref(s['ref'])
         if not rr: skipped.append((no, s['name'], f"noref:{s['ref']}")); continue
         tr = transfer(s, rr)
