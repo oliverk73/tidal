@@ -531,6 +531,12 @@ def index():
                            markers_version=_markers_version())
 
 
+@app.route("/att_review")
+def att_review():
+    # Review-Karte für vorgeschlagene ATT-Koordinaten-Verschiebungen (temporär)
+    return render_template("att_review.html")
+
+
 @app.route("/learn/")
 def learn_hub():
     from py.learn_content import ARTICLES_BY_CATEGORY, CATEGORIES

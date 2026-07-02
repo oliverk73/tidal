@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ATT Coordinate Fix — Review</title>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  html,body{margin:0;height:100%}
+  #map{position:absolute;top:0;left:0;right:0;bottom:0}
+  .panel{position:absolute;top:10px;right:10px;z-index:1000;background:#fff;
+    padding:10px 12px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.3);
+    font:13px/1.4 system-ui,sans-serif;max-width:230px}
+  .panel h3{margin:0 0 6px;font-size:14px}
+  .panel label{display:block;margin:2px 0;cursor:pointer}
+  .sw{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+  .ln{display:inline-block;width:16px;height:0;border-top:3px solid;margin-right:5px;vertical-align:3px}
+  .muted{color:#666;font-size:12px}
+  .leaflet-popup-content{font:13px/1.4 system-ui,sans-serif}
+  .leaflet-popup-content b{font-size:13px}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="panel">
+  <h3>ATT Coord Fix — Review</h3>
+  <div class="muted" id="counts">lade…</div>
+  <hr style="margin:8px 0;border:none;border-top:1px solid #ddd">
+  <label><input type="checkbox" id="f-near" checked>
+    <span class="ln" style="border-color:#1565C0"></span>Move ≤ 2 km</label>
+  <label><input type="checkbox" id="f-far" checked>
+    <span class="ln" style="border-color:#EF6C00"></span>Move &gt; 2 km</label>
+  <label><input type="checkbox" id="f-hold" checked>
+    <span class="ln" style="border-color:#C62828;border-top-style:dashed"></span>&gt; 8 km (gehalten)</label>
+  <label><input type="checkbox" id="f-nowater" checked>
+    <span class="sw" style="background:#8e24aa"></span>kein Wasser</label>
+  <hr style="margin:8px 0;border:none;border-top:1px solid #ddd">
+  <div class="muted">
+    <span class="sw" style="background:#d32f2f"></span>alt (Quelle)<br>
+    <span class="sw" style="background:#2e7d32"></span>neu (am Ufer)
+  </div>
+</div>
+<script>
+var map = L.map('map', {worldCopyJump:true}).setView([20,0], 2);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {maxZoom:19, attribution:'© OpenStreetMap'}).addTo(map);
+
+function categ(m){
+  if(m.status==='REVIEW_NOWATER') return 'nowater';
+  if(m.status==='REVIEW_FARMOVE') return 'hold';
+  return (m.move_m>2000) ? 'far' : 'near';
+}
+var COLOR={near:'#1565C0', far:'#EF6C00', hold:'#C62828', nowater:'#8e24aa'};
+var groups={near:L.layerGroup(), far:L.layerGroup(), hold:L.layerGroup(), nowater:L.layerGroup()};
+
+fetch('/static/att_review/att_moves.json?t='+Date.now()).then(r=>r.json()).then(function(d){
+  document.getElementById('counts').innerHTML =
+    d.count+' Vorschläge · '+(d.by_status.MOVE||0)+' Moves, '+
+    (d.by_status.REVIEW_FARMOVE||0)+' gehalten, '+(d.by_status.REVIEW_NOWATER||0)+' o. Wasser';
+  d.moves.forEach(function(m){
+    var c=categ(m), col=COLOR[c], g=groups[c];
+    var pop='<b>'+m.name+'</b><br>'+m.file+'<br>'+
+      (m.move_m!=null? m.move_m+' m → '+(m.kind||'?') : m.status)+
+      '<br><span class="muted">alt '+m.old[0].toFixed(4)+', '+m.old[1].toFixed(4)+
+      (m.new? '<br>neu '+m.new[0].toFixed(4)+', '+m.new[1].toFixed(4):'')+'</span>';
+    L.circleMarker(m.old,{radius:3.5,color:'#d32f2f',weight:1,
+      fillColor:'#d32f2f',fillOpacity:.9}).bindPopup(pop).addTo(g);
+    if(m.new){
+      L.polyline([m.old,m.new],{color:col,weight:2,
+        dashArray:(c==='hold'?'5,5':null),opacity:.85}).bindPopup(pop).addTo(g);
+      L.circleMarker(m.new,{radius:4.5,color:'#1b5e20',weight:1,
+        fillColor:'#2e7d32',fillOpacity:.95}).bindPopup(pop).addTo(g);
+    }
+  });
+  Object.values(groups).forEach(g=>g.addTo(map));
+});
+
+function bind(id,key){
+  document.getElementById(id).addEventListener('change',function(){
+    if(this.checked) groups[key].addTo(map); else map.removeLayer(groups[key]);
+  });
+}
+bind('f-near','near'); bind('f-far','far'); bind('f-hold','hold'); bind('f-nowater','nowater');
+</script>
+</body>
+</html>
