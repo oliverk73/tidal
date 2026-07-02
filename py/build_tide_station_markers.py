@@ -164,7 +164,8 @@ SOURCE_GROUPS = OrderedDict([
                                                       'harmonics_noaa_eutt.tcd',
                                                       'harmonics_noaa_amtt.tcd',
                                                       'harmonics_noaa_refs.tcd',
-                                                      'harmonics_noaa_censam.tcd']}),
+                                                      'harmonics_noaa_censam.tcd',
+                                                      'harmonics_noaa_carib.tcd']}),
 ])
 
 # Group order: predefined + 'Other' fallback (für nicht zugeordnete Quellen)
