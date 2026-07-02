@@ -32,7 +32,7 @@ logging.basicConfig(
 
 # Directories
 WATER_LEVELS_DIR = Path("/home/oliver/water_levels/Germany")
-BSH_DIR = Path("/home/oliver/harmonics/help/BSH")
+BSH_DIR = Path("/home/oliver/tide_tables/germany_bsh")
 ODS_FILE = Path("/home/oliver/harmonics/help/tide_stations_pegelonline.ods")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_germany_lat_2026-01-31.txt")
