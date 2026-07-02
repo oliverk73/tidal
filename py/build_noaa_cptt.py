@@ -21,7 +21,9 @@ sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'py'))
 
 HARM = os.path.expanduser('~/harmonics')
 OUT  = f'{HARM}/noaa/harmonics_noaa_cptt.txt'
-FULL = '/tmp/claude-1000/-home-oliver/99a597f4-8599-48bf-9982-0299f605aaa8/scratchpad/t2_full.json'
+# Persistenter Neuextrakt 2026-07-02 (py/parse_noaa_table2.py, cptt2018FullBook.pdf);
+# der alte Session-Pfad ist tot. GAPS nur fuer den Nicht-ALL-Modus relevant.
+FULL = f'{HARM}/help/cptt2018_table2_full.json'
 GAPS = '/tmp/claude-1000/-home-oliver/99a597f4-8599-48bf-9982-0299f605aaa8/scratchpad/gaps.json'
 FT = 0.3048
 GAP_KM = 4.0
@@ -443,13 +445,32 @@ FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia',
                  1885: 'Pasuruan, Java, Indonesia',
                  3925: 'Mahajanga, Madagascar'}
 
+def livenoaa_pts():
+    """Live-CO-OPS-Stationen (censam/carib/pacif): Table-2 = dieselbe Quelle
+    in alt -> dort nicht bauen (keine Quell-Duplikate, Oliver 2026-07-02)."""
+    pts = []
+    for base in ('censam', 'carib', 'pacif'):
+        f = f'{HARM}/noaa/harmonics_noaa_{base}.txt'
+        if not os.path.exists(f): continue
+        t = open(f, encoding='iso-8859-1').read()
+        for la, lo in zip(re.findall(r'# !latitude:\s*([\-\d.]+)', t),
+                          re.findall(r'# !longitude:\s*([\-\d.]+)', t)):
+            pts.append((float(la), float(lo)))
+    return pts
+
 def main():
     full = json.load(open(FULL))
-    gaps = json.load(open(GAPS))
-    gapno = {g['no'] for g in gaps if g['region'] in REGIONS}
+    if REGIONS == ['ALL']:
+        # Build-all (Oliver 2026-07-02): alle Nicht-Referenz-Zeilen, kein
+        # Gap-Filter; globale Dedup spaeter ueber alle Quellen.
+        gapno = {r['no'] for r in full if not r.get('daily')}
+    else:
+        gaps = json.load(open(GAPS))
+        gapno = {g['no'] for g in gaps if g['region'] in REGIONS}
     gapno |= set(FORCE_INCLUDE)
     byno = {r['no']: r for r in full}
-    PTS = refpts()
+    PTS = refpts() if REGIONS != ['ALL'] else []
+    LIVE = livenoaa_pts()
     import noaa_overrides as NOV
     raw_by_key = {}
     for r in full:
@@ -470,8 +491,10 @@ def main():
         forced = no in FORCE_INCLUDE
         if not forced and is_us_pacific(s['lat'], s['lon'], s['name']):
             skipped.append((no, s['name'], 'us')); continue
-        if not forced and min(hav(s['lat'], s['lon'], a, b) for a, b in PTS) <= GAP_KM:
+        if PTS and not forced and min(hav(s['lat'], s['lon'], a, b) for a, b in PTS) <= GAP_KM:
             skipped.append((no, s['name'], 'not-gap')); continue
+        if LIVE and min(hav(s['lat'], s['lon'], a, b) for a, b in LIVE) <= 3.0:
+            skipped.append((no, s['name'], 'live-coops')); continue
         rn, rr = resolve_ref(s['ref'])
         if not rr: skipped.append((no, s['name'], f"noref:{s['ref']}")); continue
         tr = transfer(s, rr)
