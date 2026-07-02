@@ -238,8 +238,22 @@ STATIONS = [
 ]
 
 
+def swcorr(con):
+    """ATT-S.W.-Corrections: M4/M6 stehen in `con` als DRUCKWERTE (f4,F4)/(f6,F6)
+    in (g,H)-Reihenfolge. F4/F6 sind FAKTOREN (nicht Amplituden):
+    H4=F4*H_M2^2, g4=2*g_M2+f4 (analog M6 kubisch). Bugfix 2026-07-02."""
+    out=dict(con)
+    if 'M2' in con:
+        g,H=con['M2']
+        if 'M4' in con:
+            f4,F4=con['M4']; out['M4']=(round((2*g+f4)%360,2),round(F4*H*H,4))
+        if 'M6' in con:
+            f6,F6=con['M6']; out['M6']=(round((3*g+f6)%360,2),round(F6*H**3,4))
+    return out
+
+
 def block(s):
-    con = infer_n2k2(s['con'])
+    con = infer_n2k2(swcorr(s['con']))
     note = s['note'] or (f'Arctic gap port; microtidal; phases zone {s["mer"]}; '
                          'N2/K2 inferred')
     out = ['# BEGIN HOT COMMENTS',

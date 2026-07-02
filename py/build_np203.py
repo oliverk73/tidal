@@ -404,8 +404,23 @@ STATIONS = [
       con={'M2':(0.65,276),'S2':(0.25,34),'K1':(0.42,290),'O1':(0.33,252)}),
 ]
 
+def swcorr(con):
+    """ATT-S.W.-Corrections: M4/M6 stehen in `con` als DRUCKWERTE (F4,f4)/(F6,f6).
+    F4/F6 sind FAKTOREN (nicht Amplituden): H4=F4*H_M2^2, g4=2*g_M2+f4
+    (analog H6=F6*H_M2^3, g6=3*g_M2+f6). Bugfix 2026-07-02, empirisch via NP208
+    validiert (Bordeaux/Lisboa; Sete F4=1.331 als Amplitude unmoeglich)."""
+    out=dict(con)
+    if 'M2' in con:
+        H,g=con['M2']
+        if 'M4' in con:
+            F4,f4=con['M4']; out['M4']=(round(F4*H*H,4),round((2*g+f4)%360,2))
+        if 'M6' in con:
+            F6,f6=con['M6']; out['M6']=(round(F6*H**3,4),round((3*g+f6)%360,2))
+    return out
+
 def block(s):
-    con = infer_n2k2(s['con']) if s.get('infer') else s['con']
+    con = swcorr(s['con'])
+    con = infer_n2k2(con) if s.get('infer') else con
     out=['# BEGIN HOT COMMENTS',
          f'# country: {s.get("country","")}',
          '# source: ADMIRALTY Tide Tables Vol.3 (NP203), Simplified Harmonic Method',
