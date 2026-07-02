@@ -55,7 +55,7 @@ HEADERS = {
 START_DATE = datetime(2025, 4, 20)
 BLOCK_DAYS = 60
 NUM_BLOCKS = 6  # 6 × 60 = 360 days (SHOM API rejects end-dates >7d in future)
-CSV_DIR = Path('/home/oliver/harmonics/help/shom_raw')
+CSV_DIR = Path('/home/oliver/water_levels/France_SHOM/shom_raw')
 CSV_DIR.mkdir(parents=True, exist_ok=True)
 
 
