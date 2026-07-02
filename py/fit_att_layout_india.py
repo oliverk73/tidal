@@ -36,7 +36,7 @@ MON3 = {m[:3]: i + 1 for i, m in enumerate(MONTHS_L)}
 
 PORTS = {
     'dighi': dict(
-        dir='/home/oliver/annual_predictions/india_dighi',
+        dir='/home/oliver/tide_tables/india_dighi',
         files=['dighi_2013.pdf', 'dighi_2019.pdf', 'dighi_2020b.pdf'],
         name='Dighi Port (Rajpuri Creek), Maharashtra, India',
         lat=18.2667, lon=72.9667, state='Maharashtra',
@@ -46,7 +46,7 @@ PORTS = {
                '# note: Header position: LAT 18 16 N LONG 72 58 E (Rajpuri Creek entrance).'],
     ),
     'karaikal': dict(
-        dir='/home/oliver/annual_predictions/india_karaikal',
+        dir='/home/oliver/tide_tables/india_karaikal',
         files=['karaikal_jan2012.pdf', 'karaikal_2016.pdf', 'karaikal_2019.pdf',
                'karaikal_2021.pdf'],
         name='Karaikal Port, Puducherry, India',

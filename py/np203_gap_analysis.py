@@ -13,7 +13,7 @@ import re, csv, glob, os, unicodedata, math
 from collections import Counter, defaultdict
 
 HARM = os.path.expanduser('~/harmonics')
-BASE = os.path.expanduser('~/annual_predictions/yemen')
+BASE = os.path.expanduser('~/tide_tables/yemen')
 P3   = f'{BASE}/ocr/part3_full.txt'
 P2   = f'{BASE}/ocr/part2_full.txt'
 TOL  = 0.20   # Grad (~20 km) räumliche Toleranz

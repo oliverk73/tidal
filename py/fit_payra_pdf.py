@@ -22,7 +22,7 @@ from parse_payra_pdf import parse_station, parse_andermanik
 import batch_utide_shoa_chile as B
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
-BASE = '/home/oliver/annual_predictions/bangladesh/payra'
+BASE = '/home/oliver/tide_tables/bangladesh/payra'
 PDF = BASE + '/ppa_10.pdf'
 TZ_OFFSET_H = 6  # Bangladesh Standard Time (UTC+6, no DST)
 YEAR = 2025
@@ -128,7 +128,7 @@ if __name__ == '__main__':
         print(f"{code:12} R^2={r2:.4f}  RMS={rms:.4f} m")
         blocks.append(block)
     if '--write' in sys.argv:
-        out = '/home/oliver/annual_predictions/bangladesh/payra_blocks.txt'
+        out = '/home/oliver/tide_tables/bangladesh/payra_blocks.txt'
         with open(out, 'w', encoding='iso-8859-1') as f:
             f.write('\n'.join(blocks) + '\n')
         print("written ->", out)

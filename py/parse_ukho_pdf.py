@@ -182,7 +182,7 @@ def parse_pdf(path: Path):
 
 if __name__ == '__main__':
     import sys
-    d = Path('/home/oliver/annual_predictions/mostyn')
+    d = Path('/home/oliver/tide_tables/mostyn')
     files = sorted(d.glob('*.pdf'))
     if len(sys.argv) > 1:
         files = [Path(sys.argv[1])]

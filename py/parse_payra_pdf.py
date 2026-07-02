@@ -216,7 +216,7 @@ def parse_andermanik(base_dir):
 if __name__ == '__main__':
     import calendar
     from datetime import date
-    PDF = '/home/oliver/annual_predictions/bangladesh/payra/ppa_10.pdf'
+    PDF = '/home/oliver/tide_tables/bangladesh/payra/ppa_10.pdf'
     for code in PAGES:
         res = parse_station(PDF, code, 2025)
         hs = [h for _, h in res]

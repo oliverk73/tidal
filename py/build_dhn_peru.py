@@ -18,7 +18,7 @@ from datetime import datetime, timedelta
 import utide, matplotlib.dates as mdates
 
 HARM = os.path.expanduser('~/harmonics')
-PERU = os.path.expanduser('~/annual_predictions/peru')
+PERU = os.path.expanduser('~/tide_tables/peru')
 HDRSRC = f'{HARM}/att/harmonics_att_np203.txt'
 OUT = f'{HARM}/utide/harmonics_utide_tidetables.txt'  # kanonische UTide-TC-Datei
 

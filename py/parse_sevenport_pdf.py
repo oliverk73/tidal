@@ -134,9 +134,9 @@ def parse_many(paths):
 if __name__ == '__main__':
     import sys
     files = sys.argv[1:] or [
-        'annual_predictions/UK/sevenPortFormat_24.pdf',
-        'annual_predictions/UK/sevenPortFormat_25.pdf',
-        'annual_predictions/UK/sevPortFormat_26.pdf',
+        'tide_tables/UK/sevenPortFormat_24.pdf',
+        'tide_tables/UK/sevenPortFormat_25.pdf',
+        'tide_tables/UK/sevPortFormat_26.pdf',
     ]
     data = parse_many([Path(f) for f in files])
     for name, _ in PORTS:

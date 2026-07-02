@@ -81,7 +81,7 @@ def get_station_coords(station_id):
     return lat, lon
 
 
-def parse_annual_predictions(html, year):
+def parse_tide_tables(html, year):
     """
     Parse CHS annual predictions HTML.
 
@@ -192,7 +192,7 @@ def download_station(station_id, name, lat, lon):
         print(f"  SKIP: {name} has no height data in metres")
         return None
 
-    entries = parse_annual_predictions(html, YEAR)
+    entries = parse_tide_tables(html, YEAR)
 
     if not entries:
         print(f"  SKIP: No entries parsed for {name}")

@@ -32,7 +32,7 @@ except ImportError:
     import urllib.request
 
 HARM = os.path.expanduser('~/harmonics')
-COL = os.path.expanduser('~/annual_predictions/colombia/2026')
+COL = os.path.expanduser('~/tide_tables/colombia/2026')
 HDRSRC = f'{HARM}/att/harmonics_att_np203.txt'   # 175-Konstituenten-Order
 OUT = f'{HARM}/utide/harmonics_utide_tidetables.txt'
 

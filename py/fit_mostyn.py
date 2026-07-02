@@ -31,7 +31,7 @@ from parse_mostyn_pdf import parse_pdf
 from generate_germany_harmonics_175 import (CONSTITUENTS_175, find_xtide_match)
 from batch_utide_bom_australia import CONSTIT_67, cosine_interpolate  # type: ignore
 
-PDF_DIR = Path('/home/oliver/annual_predictions/mostyn')
+PDF_DIR = Path('/home/oliver/tide_tables/mostyn')
 HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
 NAME = 'Mostyn Docks, Wales, United Kingdom'
 LAT, LON = 53.3199, -3.2602

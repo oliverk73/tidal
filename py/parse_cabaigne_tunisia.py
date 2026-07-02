@@ -83,7 +83,7 @@ def parse_station(directory: Path, station_name: str):
 if __name__ == '__main__':
     import sys
     station = sys.argv[1] if len(sys.argv) > 1 else 'Sfax'
-    d = Path('/home/oliver/annual_predictions/Tunisia')
+    d = Path('/home/oliver/tide_tables/Tunisia')
     evs = parse_station(d, station)
     print(f"\nTotal: {len(evs)} events for {station}")
     if evs:

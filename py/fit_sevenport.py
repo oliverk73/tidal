@@ -22,9 +22,9 @@ from parse_sevenport_pdf import parse_many, PORTS
 from refit_tidetimes_bst import parse_blocks, norm_name, render_consts
 
 TIDETABLES = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
-PDFS = [Path('annual_predictions/UK/sevenPortFormat_24.pdf'),
-        Path('annual_predictions/UK/sevenPortFormat_25.pdf'),
-        Path('annual_predictions/UK/sevPortFormat_26.pdf')]
+PDFS = [Path('tide_tables/UK/sevenPortFormat_24.pdf'),
+        Path('tide_tables/UK/sevenPortFormat_25.pdf'),
+        Path('tide_tables/UK/sevPortFormat_26.pdf')]
 SOURCE = 'Derived from Firth of Forth/Tay 7-port tide tables (GMT) with UTide'
 
 # nur diese ersetzen; Dundee/Leith sind Messdaten, bleiben

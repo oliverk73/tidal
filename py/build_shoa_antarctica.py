@@ -3,7 +3,7 @@
 
 Reuses the SHOA pipeline (batch_utide_shoa_chile): parse HTML HW/LW ->
 cosine-interpolate -> UTide constit='auto' -> XTide block. These stations were
-saved as SUBDIRECTORIES under annual_predictions/chile/ (generic HTML filenames),
+saved as SUBDIRECTORIES under tide_tables/chile/ (generic HTML filenames),
 each with 3 monthly files spanning May-Jul 2026 (~350 HW/LW after dedup).
 
 Coordinates: O'Higgins (ohig) and Prat (prat) from IOC sea-level monitoring;
@@ -16,7 +16,7 @@ sys.path.insert(0, '/home/oliver/py')
 from pathlib import Path
 from batch_utide_shoa_chile import parse_shoa_html, analyze_station, format_station_block
 
-CHILE = Path('/home/oliver/annual_predictions/chile')
+CHILE = Path('/home/oliver/tide_tables/chile')
 TIDETABLES = '/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt'
 
 # code, subdir, display name, lat, lon, coord source

@@ -21,7 +21,7 @@ from parse_mpa_tide_pdf import parse_station
 import batch_utide_shoa_chile as B
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
-PDF = '/home/oliver/annual_predictions/bangladesh/tide_Table_pussur_river_mongla.pdf'
+PDF = '/home/oliver/tide_tables/bangladesh/tide_Table_pussur_river_mongla.pdf'
 TZ_OFFSET_H = 6  # Bangladesh Standard Time (UTC+6, no DST)
 
 # code: (display name, pages, lat, lon, confidence, meridian)

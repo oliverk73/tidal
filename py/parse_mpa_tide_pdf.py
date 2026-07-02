@@ -66,7 +66,7 @@ def parse_station(pdf_path, pages, year=2026):
 if __name__=='__main__':
     import collections, calendar
     for name,pages in [('Mongla',[0,1,2]),('Sundarikota',[6,7,8])]:
-        res=parse_station('annual_predictions/bangladesh/tide_Table_pussur_river_mongla.pdf',pages)
+        res=parse_station('tide_tables/bangladesh/tide_Table_pussur_river_mongla.pdf',pages)
         hs=[h for _,h in res]; days=set(dt.date() for dt,_ in res)
         miss=[]
         for m in [1,2,3,4,5,6]:

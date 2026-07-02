@@ -13,7 +13,7 @@ import time
 import urllib.request
 from pathlib import Path
 
-OUTPUT_DIR = Path('/home/oliver/annual_predictions/mexico_semar')
+OUTPUT_DIR = Path('/home/oliver/tide_tables/mexico_semar')
 BASE_URL = 'https://oceanografia.semar.gob.mx/telems/tablas_num'
 
 # Stations not yet covered by UTide.
@@ -58,7 +58,7 @@ STATIONS = [
     {'slug': 'zaragoza',     'code': 'ZARAGO',     'region': 'GOLFO',    'name': 'Canal de Zaragoza',   'state': 'Quintana Roo', 'lat': 18.2128, 'lon':  -87.8422, 'tz': -5},
 ]
 
-MANUAL_PDFS = Path('/home/oliver/annual_predictions/mexico')
+MANUAL_PDFS = Path('/home/oliver/tide_tables/mexico')
 
 
 def download_one(s, year):

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fit Saudi Aramco "Arabian Gulf Tide Tables 2026" -> 13 UTide stations.
 
-The PDF (annual_predictions/saudi_arabia/) has, per station, 12 monthly HOURLY
+The PDF (tide_tables/saudi_arabia/) has, per station, 12 monthly HOURLY
 tide-level tables (text layer; each day = 2 lines of 12 integer-cm values, hours
 0-11 then 12-23). Heights are referenced to LAT (chart datum); a coordinate +
 MSL-LAT table is included. Times are Arabian Standard Time (UTC+3, no DST).
@@ -15,7 +15,7 @@ import numpy as np, utide
 from pypdf import PdfReader
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
-PDF = '/home/oliver/annual_predictions/saudi_arabia/968249708-Arabian-Gulf-Tide-Tables-2026.pdf'
+PDF = '/home/oliver/tide_tables/saudi_arabia/968249708-Arabian-Gulf-Tide-Tables-2026.pdf'
 TZ = 3  # Arabian Standard Time UTC+3
 MONTHS = {'JANUARY':1,'FEBRUARY':2,'MARCH':3,'APRIL':4,'MAY':5,'JUNE':6,'JULY':7,
           'AUGUST':8,'SEPTEMBER':9,'OCTOBER':10,'NOVEMBER':11,'DECEMBER':12}

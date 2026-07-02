@@ -7,7 +7,7 @@ amtliche SoI-Daten ("Reproduced from Tide Table for the Port of
 Krishnapatnam ... Surveyor General of India"). Kalenderlayout, 4 HW/NW-
 Events/Tag, IST (+0530), Meter ueber Kartennull.
 2013+2017 als Monats-HTML (tp_<mon><yy>.html), 2018+2019 als Monats-PDF
-(kp_<jahr>_<monat>.pdf) in ~/annual_predictions/india_krishnapatnam/.
+(kp_<jahr>_<monat>.pdf) in ~/tide_tables/india_krishnapatnam/.
 
 Usage: python3 py/fit_krishnapatnam_tides.py [--holdout-2019] > block.txt
 """
@@ -27,7 +27,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import cosine_interpolate, CONSTIT_67
 
-DIR = '/home/oliver/annual_predictions/india_krishnapatnam'
+DIR = '/home/oliver/tide_tables/india_krishnapatnam'
 UTC_OFF = timedelta(hours=5, minutes=30)
 MONTHS_L = ['january', 'february', 'march', 'april', 'may', 'june', 'july',
             'august', 'september', 'october', 'november', 'december']

@@ -12,7 +12,7 @@ import time
 import urllib.request
 from pathlib import Path
 
-OUTPUT_DIR = Path('/home/oliver/annual_predictions/mexico_cicese')
+OUTPUT_DIR = Path('/home/oliver/tide_tables/mexico_cicese')
 BASE_URL = 'https://predmar.cicese.mx/calmen/pdf'
 
 # 18 stations from CICESE not already in our UTide observations.

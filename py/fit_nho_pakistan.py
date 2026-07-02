@@ -18,7 +18,7 @@ import utide
 from ocr_nho_tide_pdf import ocr_grid
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
-PK = '/home/oliver/annual_predictions/pakistan/'
+PK = '/home/oliver/tide_tables/pakistan/'
 TZ_OFFSET_H = 5  # Pakistan Standard Time (UTC+5, no DST)
 
 # code: (display name, pdf, ndays, year, month, lat, lon, confidence)

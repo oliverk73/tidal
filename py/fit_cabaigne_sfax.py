@@ -42,7 +42,7 @@ def local_to_utc(dt_local: datetime) -> datetime:
 def main():
     out_dir = Path('/tmp/cabaigne_sfax')
     out_dir.mkdir(exist_ok=True)
-    in_dir = Path('/home/oliver/annual_predictions/Tunisia')
+    in_dir = Path('/home/oliver/tide_tables/Tunisia')
 
     print(f"Parsing Sfax HTM files...")
     events = parse_station(in_dir, 'Sfax')
