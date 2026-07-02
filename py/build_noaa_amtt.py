@@ -130,6 +130,8 @@ REFMAP = {
  # --- Europe & W Africa volume (eutt2020) references ---
  'Lisbon': 'Lisboa (Alc',                    # Lisboa (Alcantara), Portugal
  'Liverpool': 'Liverpool (Gladstone Dock)',  # England (NICHT Nova Scotia)
+ # --- Americas (ectt/wctt build-all) ---
+ 'Tampico Harbor': 'Tampico Puerto',         # Tampico Puerto (Madero), Mexiko
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -482,17 +484,72 @@ NAME_FIX_NO = {}
 
 DROP_NO = set()
 # soft-Dubletten (exakte Namenskollision zu gemessenen Quellen, >4km -> durch Klassifikation gerutscht)
-DROP_UID = {'wctt-353','wctt-279','ectt-5161','ectt-5109','ectt-4959','ectt-4733','ectt-4713'}  # Lome (= vorhandener DWF-1997 + UTide-TC 'Lomé, Togo', 6.2km)
+DROP_UID = {'wctt-353','wctt-279','ectt-5161','ectt-5109','ectt-4959','ectt-4733','ectt-4713',  # Lome (= vorhandener DWF-1997 + UTide-TC 'Lomé, Togo', 6.2km)
+            # US-Marschland Georgia/Florida (>10km von DWF-Stationen, aber USA -> nicht bauen):
+            'ectt-3043','ectt-3049','ectt-3059','ectt-3075','ectt-3095','ectt-3099',
+            'ectt-3101','ectt-3123','ectt-3147','ectt-4227'}
 
 FORCE_INCLUDE = {}
 
+def _us_mask():
+    """US-Stationen (DWF-2025) als Grid: Table-2-Zeilen <=10 km daneben sind
+    US-Gebiet -> nicht bauen (DWF deckt ab; Oliver haelt US draussen)."""
+    import collections
+    d = json.load(open('/home/oliver/static/js/leaflet_markers_data.json'))
+    g = collections.defaultdict(list)
+    for r in d['stations']:
+        if r[3] == 'harmonics-dwf-20251228-free.tcd':
+            g[(round(r[1]*5), round(r[2]*5))].append((r[1], r[2]))
+    def near(la, lo, km=10.0):
+        ci, cj = round(la*5), round(lo*5)
+        for a in range(-2, 3):
+            for b in range(-2, 3):
+                for xa, xo in g.get((ci+a, cj+b), []):
+                    if math.hypot(la-xa, (lo-xo)*math.cos(math.radians(la)))*111 <= km:
+                        return True
+        return False
+    return near
+
+def _live_pts():
+    """Live-CO-OPS-Stationen (censam/carib/pacif): Table-2 = dieselbe Quelle
+    in alt -> dort nicht bauen (keine Quell-Duplikate, Oliver 2026-07-02)."""
+    pts = []
+    for base in ('censam', 'carib', 'pacif'):
+        f = f'{HARM}/noaa/harmonics_noaa_{base}.txt'
+        if not os.path.exists(f): continue
+        t = open(f, encoding='iso-8859-1').read()
+        for la, lo in zip(re.findall(r'# !latitude:\s*([\-\d.]+)', t),
+                          re.findall(r'# !longitude:\s*([\-\d.]+)', t)):
+            pts.append((float(la), float(lo)))
+    return pts
+
 def main():
     full = json.load(open(FULL))
-    BUILD = {'GAP-new', 'DUP-classic', 'REPLACE-FES'}
-    recs = [r for r in full if r.get('_cls2') in BUILD and not r.get('daily')]
+    if REGIONS == ['ALL']:
+        # Build-all (Oliver 2026-07-02): ALLE Nicht-Referenz-Zeilen beider
+        # Baende (ectt+wctt) direkt aus den Voll-JSONs; kein spring>=1.5ft-
+        # Vorfilter (verlor Diurnal-Zeilen mit spring=null: Arktis, Chile).
+        full = []
+        for vol, fn in (('ectt', 'ectt2020_table2_full.json'),
+                        ('wctt', 'wctt2020_table2_full.json')):
+            for r in json.load(open(f'{HARM}/help/{fn}')):
+                full.append({**r, 'uid': f"{vol}-{r['no']}", '_vol': vol})
+        usnear = _us_mask()
+        livepts = _live_pts()
+        recs = []
+        for r in full:
+            if r.get('daily') or r['lat'] is None: continue
+            if usnear(r['lat'], r['lon']) or is_us_pacific(r['lat'], r['lon'], r.get('name','')):
+                continue
+            if livepts and min(hav(r['lat'], r['lon'], a, b) for a, b in livepts) <= 3.0:
+                continue
+            recs.append(r)
+    else:
+        BUILD = {'GAP-new', 'DUP-classic', 'REPLACE-FES'}
+        recs = [r for r in full if r.get('_cls2') in BUILD and not r.get('daily')]
     # --- persistenter Override-Layer: Frontend-Koordinaten-Korrekturen schuetzen ---
     import noaa_overrides as NOV
-    raw_by_key = {r['uid']: (r['lat'], r['lon'], r.get('name','')) for r in full}
+    raw_by_key = {r['uid']: (r['lat'], r['lon'], r.get('name','')) for r in full if r['lat'] is not None}
     EXISTING = NOV.parse_existing(OUT)
     OV = NOV.load('noaa_amtt')
     NOV.capture_coords(OV, EXISTING, raw_by_key)
@@ -503,7 +560,9 @@ def main():
         _olat, _olon = NOV.apply_coord(OV, s['uid'], s['lat'], s['lon'])
         if (_olat, _olon) != (s['lat'], s['lon']):
             s = {**s, 'lat': _olat, 'lon': _olon}
-        if (s.get('spring_ft') or 0) < 1.5: skipped.append((s['uid'], 'tiny')); continue
+        if (s.get('spring_ft') or 0) < 1.5 and (s.get('diurnal_ft') or 0) < 1.5 \
+           and (s.get('tropic_ft') or 0) < 1.5:
+            skipped.append((s['uid'], 'tiny')); continue
         rn, rr = resolve_ref(s['ref'])
         if not rr: skipped.append((s['uid'], f"noref:{s['ref']}")); continue
         tr = transfer(s, rr)
@@ -515,7 +574,7 @@ def main():
     lines = list(HEADER); names = []
     for s, tr, cty in built:
         b, nm, cf = block(s, tr, cty, OV, EXISTING); lines += b
-        names.append((nm, cf, tr['M2'], s['uid'], s['_cls2']))
+        names.append((nm, cf, tr['M2'], s['uid'], s.get('_cls2', 'ALL')))
     NOV.save('noaa_amtt', OV)
     open(OUT, 'w', encoding='iso-8859-1').write(chr(10).join(lines) + chr(10))
     print(f"BUILT {len(built)} stations -> {OUT}")
