@@ -83,7 +83,7 @@ RETRY_WINDOW_START = {
 # DART buoys: deep-ocean pressure (not a sea-level dataset). Override datum.
 DART_CODES = {'dchi', 'dch2', 'dcld', 'dval', 'dch3'}
 
-DATA_DIR = Path('/tmp/ioc_chile')
+DATA_DIR = Path('/home/oliver/water_levels/Chile_IOC')
 
 # All Chile IOC stations are re-fit after the 2026-05-19 hourly-bin patch
 # (mean-of-hour was labeled at HH:00 instead of HH:30, producing a ~14.5° M2 lag).

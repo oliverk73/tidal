@@ -66,7 +66,7 @@ STATIONS = [
     {'code': 'dch3', 'name': 'DART NW of Concepción', 'lat': -35.7470, 'lon': -75.2838, 'start': 2022},
 ]
 
-OUTPUT_DIR = Path('/tmp/ioc_chile')
+OUTPUT_DIR = Path('/home/oliver/water_levels/Chile_IOC')
 
 
 def download_month(code, year, month):
