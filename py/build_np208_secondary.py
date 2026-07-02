@@ -28,11 +28,15 @@ REFMAP={
  'Apapa':'Apapa','Warri':'Warri','Bonny Town':'Bonny','Bonny':'Bonny','Tema':'Tema, Ghana','Takoradi':'Takoradi, Ghana',
  'Pointe Noire':'Pointe-Noire','Pointe-Noire':'Pointe-Noire','Walvis Bay':'Walvis Bay','Cape Town':'Cape Town',
  'Luanda':'Luanda','Libreville':'Libreville','Douala':'Douala','Malabo':'Malabo',
- 'Ponta Delgada':'Ponta Delgada','Funchal':'Funchal','Puerto de la Luz':'Puerto de la Luz','Bata':'Bata',
+ 'Ponta Delgada':'Ponta Delgada','Funchal':'Funchal','Puerto de la Luz':'Puerto de la Luz','Bata':'Bata, Equatorial',
  'Cap Lopez':'Cap Lopez','Porto do Lobito':'Porto do Lobito','Pointe Owendo':'Pointe Owendo',
- 'Lisbon':'Lisboa (Alc','Lisbon (Alcantara)':'Lisboa (Alc','Cadiz':'Cádiz','Cádiz':'Cádiz','Gibraltar':'Gibraltar',
+ 'Lisbon':'Lisboa (Alc','Lisbon (Alcantara)':'Lisboa (Alc','Cadiz':'Cádiz','Cádiz':'Cádiz',
+ # 'Gibraltar,' mit Komma: nackte Query wuerde die eigene NP208-Station
+ # "Sandy Bay, Gibraltar" matchen (find() nimmt kuerzesten Namen)
+ 'Gibraltar':'Gibraltar,',
  'Split':'Split','Bakar':'Bakar','Rovinj':'Rovinj','Trieste':'Trieste','Venezia':'Venezia',
  'Sfax':'Sfax','Gabes':'Gabès','Alexandria':'Al Iskandariyah','Port Said':'Bur Said',
+ 'Pointe de Grave':'Port-Bloc','A Coruna':'A Coruña',
 }
 
 def load_sec():
@@ -49,9 +53,22 @@ def load_sec():
     return sec
 
 TT='harmonics_utide_tidetables.tcd'   # eigener UTide-TC-Fit = besser als ATT-Transfer
+_LIVE=None
+def _live():
+    """(lat, lon, quell-tcd) aller Bestandsstationen aus den Markerdaten."""
+    global _LIVE
+    if _LIVE is None:
+        d=json.load(open('/home/oliver/static/js/leaflet_markers_data.json'))
+        _LIVE=[(s[1],s[2],s[3]) for s in d['stations']]
+    return _LIVE
 def gap(s):
-    # Oliver-Regel: ALLE Part-II-Haefen bauen (Qualitaetscheck neben classic-1997/
-    # FES/eutt), AUSSER wo schon ein utide_tidetables-Fit <2.5km liegt -> der ist
+    # Seiten 282-289 (Westafrika): historisch build-all (Oliver-Regel alt).
+    # Seiten 274-281 (Med/Iberien, Batch 3): JSONs sind bereits nach der
+    # 3-km-Regel kuratiert (py/np208_gap_rule.py: bauen wenn <=3km nichts oder
+    # nur FES-2022/classic-1997) -- hier NICHT erneut filtern, sonst wuerden
+    # bestehende Stationen bei Re-Runs gegen ihre eigenen Marker geprueft
+    # und faelschlich entfernt.
+    # Verbleibender Filter: utide_tidetables-Fit <2.5km -> der ist
     # besser, NP208-Transfer waere nur eine schlechtere Dublette.
     for a,b,src in _live():
         if src==TT and B._hav(s['lat'],s['lon'],a,b)<2.5:
@@ -80,6 +97,13 @@ def block(s,tr):
     return out,name,conf
 
 def main():
+    import sys
+    if '--regenerate' not in sys.argv:
+        print('ABBRUCH: Dieses Skript REGENERIERT die komplette Datei und verwirft dabei\n'
+              'manuelle Nachkorrekturen (Akzente, Namen) sowie Stationen, die inzwischen\n'
+              'einen UTide-Fit <2.5km haben. Fuer neue Seiten build_np208_secondary_batch3.py\n'
+              '(append-only) nutzen. Wirklich regenerieren: --regenerate anhaengen.')
+        return
     sec=load_sec()
     built=[]; skipped_present=0; noref=[]; nogap=0
     for s in sec:
