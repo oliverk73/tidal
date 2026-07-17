@@ -16,7 +16,7 @@ sys.path.insert(0, '/home/oliver/py')
 from pathlib import Path
 from batch_utide_shoa_chile import parse_shoa_html, analyze_station, format_station_block
 
-CHILE = Path('/home/oliver/tide_tables/chile')
+CHILE = Path('/home/oliver/weather/tide_tables/chile')
 TIDETABLES = '/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt'
 
 # code, subdir, display name, lat, lon, coord source

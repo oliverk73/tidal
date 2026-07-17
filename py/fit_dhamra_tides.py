@@ -27,7 +27,7 @@ from fit_krishnapatnam_tides import drop_alternation_breakers, interp_segments
 from batch_utide_uk_tidetimes import CONSTIT_67
 from fit_att_layout_india import char_rows
 
-DIR = '/home/oliver/tide_tables/india_dhamra'
+DIR = '/home/oliver/weather/tide_tables/india_dhamra'
 FILES = ['dhamra_2011.pdf', 'dhamra_cont107.pdf', 'dhamra_cont111.pdf', 'dhamra_cont112.pdf']
 UTC_OFF = timedelta(hours=5, minutes=30)
 MONTHS_L = ['january', 'february', 'march', 'april', 'may', 'june', 'july',

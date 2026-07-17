@@ -2,7 +2,7 @@
 """
 UTide harmonic analysis for SEMAR Mexico tide-prediction PDFs.
 
-Reads PDFs in ~/annual_predictions/mexico_semar/{slug}/{CODE}_{YY}.pdf,
+Reads PDFs in ~/weather/tide_tables/mexico_semar/{slug}/{CODE}_{YY}.pdf,
 parses HW/LW extremes (3 years per station: 2024-2026), cosine-interpolates
 to 15-min, runs UTide with CONSTIT_67, writes
 harmonics_utide_mexico_semar.txt for downstream merge into
@@ -31,7 +31,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_ROOT = Path('/home/oliver/annual_predictions/mexico_semar')
+DATA_ROOT = Path('/home/oliver/weather/tide_tables/mexico_semar')
 CHECKPOINT_DIR = Path('/home/oliver/harmonics/utide/checkpoints_semar_mx')
 OUTPUT_PATH = Path('/home/oliver/harmonics/utide/harmonics_utide_mexico_semar.txt')
 TEMPLATE_PATH = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')

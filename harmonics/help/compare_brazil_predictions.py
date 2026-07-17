@@ -17,7 +17,7 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 import fitz  # PyMuPDF
 
-BASE = '/home/oliver/annual_predictions/brazil/'
+BASE = '/home/oliver/weather/tide_tables/brazil/'
 
 # ============================================================
 # Station definitions from parse script (all 55 DHN + coords)

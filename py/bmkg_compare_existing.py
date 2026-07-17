@@ -11,7 +11,7 @@ HDR = {'User-Agent':'Mozilla/5.0 Chrome/120','Referer':'https://maritim.bmkg.go.
 def fetch(url):
     return json.load(urllib.request.urlopen(urllib.request.Request(url,headers=HDR),timeout=120,context=ctx))
 
-bmkg = json.load(open('/home/oliver/tide_tables/pasut_meta.json'))
+bmkg = json.load(open('/home/oliver/weather/tide_tables/pasut_meta.json'))
 
 # Bestand: alle Indonesien-Bloecke mit Koord + M2/S2/K1/O1 + Quelldatei
 def load_have():

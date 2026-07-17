@@ -2,7 +2,7 @@
 """
 UTide harmonic analysis for CICESE Mexico tide-prediction PDFs.
 
-Reads PDFs in ~/annual_predictions/mexico_cicese/{code}/{code}{YY}{MM}.pdf,
+Reads PDFs in ~/weather/tide_tables/mexico_cicese/{code}/{code}{YY}{MM}.pdf,
 parses HW/LW extremes, cosine-interpolates to 15-min, runs UTide CONSTIT_67,
 writes harmonics_utide_mexico_cicese.txt for downstream merge into
 harmonics_utide_tidetables.txt.
@@ -33,7 +33,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_ROOT = Path('/home/oliver/annual_predictions/mexico_cicese')
+DATA_ROOT = Path('/home/oliver/weather/tide_tables/mexico_cicese')
 CHECKPOINT_DIR = Path('/home/oliver/harmonics/utide/checkpoints_cicese_mx')
 OUTPUT_PATH = Path('/home/oliver/harmonics/utide/harmonics_utide_mexico_cicese.txt')
 TEMPLATE_PATH = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')

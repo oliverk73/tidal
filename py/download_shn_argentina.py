@@ -20,7 +20,7 @@ import requests
 from pathlib import Path
 from datetime import datetime
 
-OUT_DIR = Path("/home/oliver/tide_tables/argentina/shn")
+OUT_DIR = Path("/home/oliver/weather/tide_tables/argentina/shn")
 RAW_DIR = OUT_DIR / "raw"
 PARSED_DIR = OUT_DIR / "parsed"
 RAW_DIR.mkdir(parents=True, exist_ok=True)

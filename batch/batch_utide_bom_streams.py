@@ -27,7 +27,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-PDF_DIR = Path("/home/oliver/annual_predictions/australia2")
+PDF_DIR = Path("/home/oliver/weather/tide_tables/australia2")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_australia_bom.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_bom_streams")
 

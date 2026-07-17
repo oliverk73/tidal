@@ -29,7 +29,7 @@ PARSERS = {'layoutA': parse_ukho_pdf.parse_pdf, 'monthly': parse_ukho_monthly.pa
 from batch_utide_bom_australia import CONSTIT_67, cosine_interpolate  # type: ignore
 
 HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
-AP = Path('/home/oliver/tide_tables')
+AP = Path('/home/oliver/weather/tide_tables')
 
 # tz: 'utc' = Zeiten sind GMT/UTC ganzjährig; 'london' = lokale Uhrzeit inkl. BST
 CONFIG = {

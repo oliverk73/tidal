@@ -7,13 +7,13 @@ generiert pro Aufruf eine PDF-Tafel des LAUFENDEN Monats (HW/LW, lokale Zeit
 UTC-5). Es gibt KEINEN Monats-/Jahresparameter — um Juli/August zu bekommen,
 muss dieses Skript im Juli bzw. August laufen (siehe Cron unten).
 
-Speichert nach ~/tide_tables/peru/<YYYY-MM>/Tabla de mareas <hafen>.pdf,
+Speichert nach ~/weather/tide_tables/peru/<YYYY-MM>/Tabla de mareas <hafen>.pdf,
 so dass sich Monate akkumulieren (für spätere UTide-TC-Fits über mehrere Monate).
 Idempotent: bereits valide vorhandene Dateien werden übersprungen.
 
 Cron (2. jedes Monats, nachdem der Server umgestellt hat):
   0 7 2 * * /usr/bin/python3 /home/oliver/py/download_dhn_peru.py \
-      >> /home/oliver/tide_tables/peru/download.log 2>&1
+      >> /home/oliver/weather/tide_tables/peru/download.log 2>&1
 """
 import os, re, sys, time, zlib
 from datetime import datetime
@@ -22,7 +22,7 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 
 BASE = "https://www.dhn.mil.pe/portal/pdf-tabla-marea/"
-OUTROOT = os.path.expanduser("~/tide_tables/peru")
+OUTROOT = os.path.expanduser("~/weather/tide_tables/peru")
 UA = "Mozilla/5.0 (X11; Linux x86_64) tide-harvester/1.0"
 
 # Alle DHN-Häfen (Klarnamen wie auf der Karte; URL = Großbuchstaben, URL-kodiert)

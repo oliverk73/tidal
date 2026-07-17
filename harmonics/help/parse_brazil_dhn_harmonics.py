@@ -33,7 +33,7 @@ from generate_brazil_harmonics import CONSTITUENTS_175, find_xtide_match
 # ============================================================
 # Station definitions — all 55 DHN stations
 # ============================================================
-BASE = '/home/oliver/annual_predictions/brazil/'
+BASE = '/home/oliver/weather/tide_tables/brazil/'
 
 STATIONS = [
     # DHN 1

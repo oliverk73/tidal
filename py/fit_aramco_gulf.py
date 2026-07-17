@@ -15,7 +15,7 @@ import numpy as np, utide
 from pypdf import PdfReader
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
-PDF = '/home/oliver/tide_tables/saudi_arabia/968249708-Arabian-Gulf-Tide-Tables-2026.pdf'
+PDF = '/home/oliver/weather/tide_tables/saudi_arabia/968249708-Arabian-Gulf-Tide-Tables-2026.pdf'
 TZ = 3  # Arabian Standard Time UTC+3
 MONTHS = {'JANUARY':1,'FEBRUARY':2,'MARCH':3,'APRIL':4,'MAY':5,'JUNE':6,'JULY':7,
           'AUGUST':8,'SEPTEMBER':9,'OCTOBER':10,'NOVEMBER':11,'DECEMBER':12}

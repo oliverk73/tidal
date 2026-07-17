@@ -22,7 +22,7 @@ from datetime import datetime, timedelta
 from parse_dhn_2017 import parse_2017
 import build_dhn_peru as dhn
 
-PDF2017 = '/home/oliver/tide_tables/peru/Tabla-Mareas-2017-HIDRONAV5023.pdf'
+PDF2017 = '/home/oliver/weather/tide_tables/peru/Tabla-Mareas-2017-HIDRONAV5023.pdf'
 OUT = '/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt'
 
 # Konservative 8-Konstituenten-Liste (wie Original-DHN). Die 22er-Liste ueberanpasst

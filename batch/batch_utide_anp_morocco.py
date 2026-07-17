@@ -3,7 +3,7 @@
 UTide harmonic analysis for ANP / Direction Générale de la Météorologie
 Maroc annual tide-prediction PDFs.
 
-Reads PDFs from ~/annual_predictions/morocco_anp/{slug}/maree_{Port}.pdf,
+Reads PDFs from ~/weather/tide_tables/morocco_anp/{slug}/maree_{Port}.pdf,
 downloading them from extranet.marocmeteo.ma if missing. Parses HW/LW
 extremes, cosine-interpolates to 15-min, runs UTide with CONSTIT_67,
 writes harmonics_utide_morocco.txt.
@@ -32,7 +32,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_ROOT = Path('/home/oliver/annual_predictions/morocco_anp')
+DATA_ROOT = Path('/home/oliver/weather/tide_tables/morocco_anp')
 CHECKPOINT_DIR = Path('/home/oliver/harmonics/utide/checkpoints_morocco_anp')
 OUTPUT_PATH = Path('/home/oliver/harmonics/utide/harmonics_utide_morocco.txt')
 TEMPLATE_PATH = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')

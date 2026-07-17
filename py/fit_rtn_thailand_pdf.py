@@ -26,7 +26,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import CONSTIT_67
 
-PDF_DIR = '/home/oliver/tide_tables/thailand'
+PDF_DIR = '/home/oliver/weather/tide_tables/thailand'
 UTC_OFF = timedelta(hours=7)
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
           'August', 'September', 'October', 'November', 'December']

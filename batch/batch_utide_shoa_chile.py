@@ -29,7 +29,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-SHOA_DIR = Path("/home/oliver/annual_predictions/chile")
+SHOA_DIR = Path("/home/oliver/weather/tide_tables/chile")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_shoa_cl")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_chile_shoa.txt")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt")

@@ -119,7 +119,7 @@ def parse_2017(pdf_path):
 if __name__ == '__main__':
     import sys
     pdf = sys.argv[1] if len(sys.argv) > 1 else \
-        '/home/oliver/tide_tables/peru/Tabla-Mareas-2017-HIDRONAV5023.pdf'
+        '/home/oliver/weather/tide_tables/peru/Tabla-Mareas-2017-HIDRONAV5023.pdf'
     data = parse_2017(pdf)
     print(f"{'Hafen':18s} {'n':>5} {'Bereich':>22} {'h_min':>6}{'h_max':>6}")
     for p, s in data.items():

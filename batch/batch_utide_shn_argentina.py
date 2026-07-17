@@ -25,7 +25,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-PARSED_DIR = Path("/home/oliver/annual_predictions/argentina/shn/parsed")
+PARSED_DIR = Path("/home/oliver/weather/tide_tables/argentina/shn/parsed")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_shn_ar")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_argentina.txt")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt")

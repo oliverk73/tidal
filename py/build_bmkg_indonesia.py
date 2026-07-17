@@ -23,7 +23,7 @@ sys.path.insert(0, '/home/oliver/py')
 import build_dhn_peru as dhn   # fuer ORDER (175 Konstituenten)
 
 OUT = '/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt'
-META = '/home/oliver/tide_tables/pasut_meta.json'
+META = '/home/oliver/weather/tide_tables/pasut_meta.json'
 YEAR_START, YEAR_END = '20260101', '20261231'
 CONSTIT = ['M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1', '2N2', 'NU2', 'MU2',
            'L2', 'T2', 'M4', 'MS4', 'MN4', 'M6', '2MS6', 'SA', 'SSA', 'MM', 'MF']
