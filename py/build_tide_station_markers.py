@@ -160,7 +160,7 @@ SOURCE_GROUPS = OrderedDict([
                                                      'harmonics_att_np208.tcd',
                                                      'harmonics_att_np208_secondary.tcd']}),
     ('Harmonics ATT Currents', {'color': '#0D47A1', 'files': ['harmonics_att_np203_currents.tcd']}),
-    ('Harmonics NOAA Currents', {'color': '#006064', 'files': ['harmonics_noaa_currents.tcd']}),
+    ('Harmonics NOAA Currents', {'color': '#00BCD4', 'files': ['harmonics_noaa_currents.tcd']}),
     ('Harmonics NOAA', {'color': '#00BCD4', 'files': ['harmonics_noaa_cptt.tcd',
                                                       'harmonics_noaa_eutt.tcd',
                                                       'harmonics_noaa_amtt.tcd',
