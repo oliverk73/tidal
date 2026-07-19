@@ -17,9 +17,9 @@ Only true gaps (>GAP_KM from existing DB). Reference rows (daily predictions) sk
 Writes harmonics/noaa/harmonics_noaa_cptt.txt (ISO-8859-1).  Region selectable via argv.
 """
 import os, re, json, math, sys, glob, unicodedata
-sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'py'))
+sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'weather', 'py'))
 
-HARM = os.path.expanduser('~/harmonics')
+HARM = os.path.expanduser('~/weather/harmonics')
 OUT  = f'{HARM}/noaa/harmonics_noaa_cptt.txt'
 # Persistenter Neuextrakt 2026-07-02 (py/parse_noaa_table2.py, cptt2018FullBook.pdf);
 # der alte Session-Pfad ist tot. GAPS nur fuer den Nicht-ALL-Modus relevant.
@@ -120,6 +120,10 @@ REFMAP = {
  # --- Australia / NZ / Mozambique / Guam (final batch) ---
  'Port Hedland': 'Port Hedland', 'Port Adelaide': 'Adelaide', 'Port Phillip': 'Port Phillip',
  'Port Lincoln': 'Port Lincoln', 'Beira': 'Beira', 'Guam': 'Guam',
+ # Audit 2026-07-19: ohne Mapping loeste 'Sydney' auf 'Sydney, Nova Scotia, Canada' auf
+ # (find() nimmt den kuerzesten Namen) -> Gruppe war +68min daneben. Fort Denison =
+ # Sydney Harbour, der tatsaechliche Referenzpegel der NOAA-Tafel.
+ 'Sydney': 'Fort Denison',
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
