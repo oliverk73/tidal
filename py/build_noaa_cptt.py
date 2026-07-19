@@ -440,6 +440,16 @@ COORD_OVERRIDE = {
 # country fixes where neither reference nor nearest-neighbour resolve a contested border correctly
 COUNTRY_OVERRIDE = {1205: 'China'}   # Zhaoshigou (Yalu mouth, Liaoning) — NOAA refs Nampo (NK)
 
+# Audit 2026-07-19: 70 Stationen mit >=1h Vorhersagefehler entfernt (Phasen-Delta gegen
+# Messnachbarn <=10km, siehe Memory noaa-eutt-tz-audit). Fehlerklassen: (a) Japan +-9h
+# Frame-/Referenzfehler (~45), (b) absurde Fern-Referenzen (Antarktis von Kuril/Do Son,
+# Golf von Tai O/Mamya), (c) Cross-Zone (Easter Island, Tuvalu, Provideniya, Pakistan).
+# Alle haben Messstationen <=10km daneben; NICHT neu bauen.
+DROP_NO = {83, 85, 147, 441, 443, 445, 569, 573, 587, 589, 591, 639, 643, 653, 655, 659,
+           661, 665, 679, 699, 709, 717, 725, 743, 755, 829, 841, 907, 909, 929, 931, 933,
+           939, 979, 1431, 1441, 1577, 1937, 1939, 1959, 2163, 2817, 2837, 2899, 3115, 3577, 3593, 3595,
+           3623, 3665, 3951, 3973, 3975, 3977, 3983, 3985, 3987, 3989, 3991, 3995}
+
 FORCE_INCLUDE = {1725: 'Banda Aceh (Ulee Lheue), Sumatra, Indonesia',
                  1869: 'Cirebon, Java, Indonesia',
                  1885: 'Pasuruan, Java, Indonesia',
@@ -481,6 +491,7 @@ def main():
     NOV.capture_coords(OV, EXISTING, raw_by_key)
     built = []; skipped = []
     for no in sorted(gapno):
+        if no in DROP_NO: continue
         s = byno.get(no)
         if not s or s.get('daily'): continue
         if no in COORD_OVERRIDE:

@@ -17,9 +17,9 @@ Only true gaps (>GAP_KM from existing DB). Reference rows (daily predictions) sk
 Writes harmonics/noaa/harmonics_noaa_eutt.txt (ISO-8859-1).  Region selectable via argv.
 """
 import os, re, json, math, sys, glob, unicodedata
-sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'py'))
+sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'weather', 'py'))
 
-HARM = os.path.expanduser('~/harmonics')
+HARM = os.path.expanduser('~/weather/harmonics')
 OUT  = f'{HARM}/noaa/harmonics_noaa_eutt.txt'
 FULL = f'{HARM}/help/eutt2020_table2_full.json'
 GAPS = f'{HARM}/help/eutt2020_gaps.json'
@@ -59,6 +59,15 @@ def _blocks(path):
         m = _MER.match(L[i])
         if m and i > 0:
             name = L[i - 1].strip(); mer, tz = m.group(1), m.group(2)
+            rlat = rlon = None; b = i - 2
+            while b >= 0 and L[b].startswith('#'):
+                if L[b].startswith('# !latitude:'):
+                    try: rlat = float(L[b].split(':', 1)[1])
+                    except ValueError: pass
+                elif L[b].startswith('# !longitude:'):
+                    try: rlon = float(L[b].split(':', 1)[1])
+                    except ValueError: pass
+                b -= 1
             z0 = None; con = {}; k = i + 1
             zm = _ZL.match(L[k]) if k < n else None
             if zm: z0 = float(zm.group(1)); k += 1
@@ -67,7 +76,8 @@ def _blocks(path):
                 cm = _CON.match(L[k])
                 if cm and cm.group(1) != 'x': con[cm.group(1)] = (float(cm.group(2)), float(cm.group(3)))
                 k += 1
-            yield name, dict(con=con, z0=z0, mer=mer, tz=tz, src=os.path.basename(path)); i = k; continue
+            yield name, dict(con=con, z0=z0, mer=mer, tz=tz, lat=rlat, lon=rlon,
+                             src=os.path.basename(path)); i = k; continue
         i += 1
 _IDX = None
 def index():
@@ -209,6 +219,26 @@ def tz_lookup(lat, lon):
     off = round(lng / 15.0)                          # ocean fallback: fixed UTC offset
     return f"Etc/GMT{-off:+d}" if off else 'Etc/GMT'
 
+# --- Zeitmeridian-Normalisierung der Table-2-Differenzen (Fix 2026-07-19) ---
+# C&GS-Konvention: Table 2 gibt Zeitdifferenzen so an, dass Referenzzeit (im Zeitmeridian der
+# Referenz) + dt = Stationszeit (im Zeitmeridian der STATION).  Liegt die Station in einer
+# anderen Zone als die Referenz, steckt die Zonendifferenz mit im dt und muss heraus:
+# dt_wahr = dt_tafel - (zone_station - zone_referenz).  Ohne diese Normalisierung waren alle
+# 50 spanischen Lisboa-Transfers +60min zu spaet (validiert gegen IHM-Nachbarn, 15-Tage-Zyklus).
+from zoneinfo import ZoneInfo
+from datetime import datetime as _dt
+# Epoche fuer die Zonenbestimmung: Die 2020-Baende reproduzieren alte C&GS-Datenbestaende;
+# massgeblich ist die HISTORISCHE Zone der Tafel-Aera, nicht die heutige (Marokko ist seit
+# 2018 UTC+1, die Tafel rechnet Casablanca aber mit UTC+0 -- empirisch validiert 2026-07-19:
+# Casablanca->Madeira/W-Sahara +-0min, Lisboa->Spanien -60min noetig; 1980 liefert beides).
+_TT_EPOCH = _dt(1980, 1, 15, 12)     # Winter = Standardzeit (kein DST)
+def std_offset_h(tzname):
+    try: return ZoneInfo(tzname).utcoffset(_TT_EPOCH).total_seconds() / 3600.0
+    except Exception: return None
+# Grenzfaelle, wo timezonefinder die Zone des Nachbarlands liefert, die Tafel aber die
+# politische Zone der Station verwendet:
+TABLE_TZ_OVERRIDE = {467: 'Europe/Madrid'}   # Ayamonte (spanisches Guadiana-Ufer)
+
 # countries whose stations carry a province/state/island in the name ("Place, Province, Country")
 PROVINCE_COUNTRIES = {'China', 'Indonesia', 'India', 'Australia', 'Japan', 'Philippines',
                       'New Zealand', 'South Korea', 'Thailand', 'Vietnam', 'Malaysia', 'Myanmar',
@@ -328,6 +358,14 @@ def ref_ranges(rn, con):
     return _REFR[rn]
 
 SEMI_SET = SEMI | {'M2', 'S2', 'K2'}
+
+# Referenzen, deren Flachwasser-Obertiden aestuar-spezifisch sind und NICHT auf die
+# Subordinates uebertragen werden duerfen (Fix 2026-07-19: Lisboa/Tejo-M4 war ~10x zu
+# gross fuer iberische Aussenkuesten-Stationen; HW/NW-Asymmetrie +10/-11min -> -3/+1min
+# nach Entfernen, validiert gegen IHM-Nachbarn). Bei Bedarf erweitern (z.B. nach Audit
+# der Gibraltar-/Casablanca-Gruppen). Praefix-Match auf den aufgeloesten Referenznamen.
+NO_SHALLOW_REFS = ('Lisboa (Alc',)
+
 def transfer(s, rr):
     con = rr['con']
     M2r = con.get('M2', (0, 0))[0]; S2r = con.get('S2', (0, 0))[0]
@@ -341,6 +379,12 @@ def transfer(s, rr):
     if diu is not None and diu <= 0.05: diu = None        # OCR drop-out -> fall back
     ts = [t for t in (s.get('dtHW'), s.get('dtLW')) if t is not None]
     dt = (sum(ts) / len(ts) / 60.0) if ts else 0.0   # hours
+    # Zonendifferenz Station-Referenz aus dem Tafel-dt herausrechnen (s. Kommentar oben)
+    tzs = 0.0
+    z_s = std_offset_h(TABLE_TZ_OVERRIDE.get(s.get('no')) or tz_lookup(s['lat'], s['lon']))
+    z_r = std_offset_h(tz_lookup(rr['lat'], rr['lon'])) if rr.get('lat') is not None else None
+    if z_s is not None and z_r is not None: tzs = z_s - z_r
+    dt -= tzs
     # ---- step 1: uniform scale k matches the primary tabulated range exactly ----
     # (ranges scale linearly with a uniform amplitude scale, so this is one-shot exact)
     # CAL corrects the systematic ~10% gap between the nodal-free synth measure (used for
@@ -368,9 +412,11 @@ def transfer(s, rr):
         tgt_contrib = (diu - mean) * FT
         if diur_contrib > 0.02 and tgt_contrib > 0:
             sD = clamp(tgt_contrib / diur_contrib, 0.1, 6.0)
+    drop_shal = any((rn or '').startswith(p) for p in NO_SHALLOW_REFS)
     out = {}
     for c, (a, g) in con.items():
         if a <= 0: continue
+        if drop_shal and c in SHAL: continue
         if c in ('S2', 'K2'): na = a * k * sS
         elif c in DIURN: na = a * k * sD
         elif c in LONGP: na = a
@@ -378,7 +424,8 @@ def transfer(s, rr):
         sp = SPEED.get(c)
         out[c] = (round(na, 4), round((g + (sp * dt if sp else 0)) % 360, 2))
     M2 = M2r * k; S2 = S2r * k * sS
-    return dict(con=out, mer=rr['mer'], tz=rr['tz'], M2=M2, S2=S2, k=k, sD=sD, dt=dt, refF=refF)
+    return dict(con=out, mer=rr['mer'], tz=rr['tz'], M2=M2, S2=S2, k=k, sD=sD, dt=dt,
+                tzs=tzs, ot=drop_shal, refF=refF)
 
 # ---------- gap check ----------
 def hav(a, b, c, d):
@@ -416,9 +463,13 @@ def block(s, tr, cty, OV=None, EXISTING=None):
     conf = conf_of(tr, s)
     z0 = s.get('mtl_ft')
     z0 = z0 * FT if z0 is not None else round(tr['M2'] + tr['S2'], 3)
+    # Vermerke kurz halten: Zeilen ueber ~300 Zeichen sprengen den build_tide_db-Parser
+    # (Ueberlauf wird als neuer Record gelesen, Stationen fallen lautlos aus dem TCD).
+    tzs_txt = f" tzs={-tr['tzs']*60:+.0f}min" if tr.get('tzs') else ''
+    ot_txt = ' OT-drop.' if tr.get('ot') else ''
     note = (f"NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from "
             f"{tr.get('refname','?')} (no.{s['no']}). M2={tr['M2']:.2f} S2={tr['S2']:.2f} "
-            f"k={tr['k']:.2f} dt={tr['dt']*60:+.0f}min.")
+            f"k={tr['k']:.2f} dt={tr['dt']*60:+.0f}min{tzs_txt}.{ot_txt}")
     out = ['# BEGIN HOT COMMENTS',
            f"# country: {cty or '?'}",
            '# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer',
@@ -469,7 +520,9 @@ NAME_FIX_NO = {
 
 # exakte Namensdubletten zu gemessenen Quellen (Puertos del Estado etc.) -> Messung gewinnt
 DROP_NO = {581,   # Bilbao (= gemessener Puertos-Pegel 'Bilbao, Spain')
-           177}  # Lome (= vorhandener DWF-1997 + UTide-TC 'Lomé, Togo', 6.2km)
+           177,   # Lome (= vorhandener DWF-1997 + UTide-TC 'Lomé, Togo', 6.2km)
+           547}   # Ria de Viveiro (2026-07-19 manuell entfernt: Duplikat der publizierten
+                  # ATT-1714-Position; Ria durch IHM 'Cillero' + ATT 'Viveiro (Landro)' abgedeckt)
 
 FORCE_INCLUDE = {127: 'Kribi, Cameroon',
                  125: 'Malabo (Santa Isabel), Equatorial Guinea',
