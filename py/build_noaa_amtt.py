@@ -17,9 +17,9 @@ Only true gaps (>GAP_KM from existing DB). Reference rows (daily predictions) sk
 Writes harmonics/noaa/harmonics_noaa_amtt.txt (ISO-8859-1).  Region selectable via argv.
 """
 import os, re, json, math, sys, glob, unicodedata
-sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'py'))
+sys.path.insert(0, os.path.join(os.path.expanduser('~'), 'weather', 'py'))
 
-HARM = os.path.expanduser('~/harmonics')
+HARM = os.path.expanduser('~/weather/harmonics')
 OUT  = f'{HARM}/noaa/harmonics_noaa_amtt.txt'
 FULL = f'{HARM}/help/amtt_full.json'
 GAPS = f'{HARM}/help/eutt2020_gaps.json'
@@ -132,6 +132,11 @@ REFMAP = {
  'Liverpool': 'Liverpool (Gladstone Dock)',  # England (NICHT Nova Scotia)
  # --- Americas (ectt/wctt build-all) ---
  'Tampico Harbor': 'Tampico Puerto',         # Tampico Puerto (Madero), Mexiko
+ # Audit 2026-07-19: find() nimmt den kuerzesten Namen -> ohne Mapping loesten
+ # 'Charleston' auf 'Charleston, New Zealand' (SC-Stationen!) und 'Victoria' auf
+ # 'Port Victoria, Seychelles' (Vancouver Island!) auf.
+ 'Charleston': 'Charleston, Cooper River entrance',   # South Carolina (dwf-free)
+ 'Victoria': 'Victoria Harbour, British Columbia,',   # Victoria BC, NICHT Seychellen
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
@@ -488,6 +493,18 @@ DROP_UID = {'wctt-353','wctt-279','ectt-5161','ectt-5109','ectt-4959','ectt-4733
             # US-Marschland Georgia/Florida (>10km von DWF-Stationen, aber USA -> nicht bauen):
             'ectt-3043','ectt-3049','ectt-3059','ectt-3075','ectt-3095','ectt-3099',
             'ectt-3101','ectt-3123','ectt-3147','ectt-4227'}
+# Audit 2026-07-19: 48 Stationen mit >=1h Vorhersagefehler entfernt (Phasen-Delta gegen
+# Messnachbarn <=10km). Ursachen: Tafel-Parse ordnete Bloecke der falschen Referenz zu
+# (Fundy-Block 'Yarmouth dtHW=-67' ist ein Saint-John-Transfer, nicht Halifax; ebenso
+# Ungava/Hudson von Lauzon/Pictou), dazu Resolver-Fehlgriffe (Victoria->Seychellen).
+# Alle haben Messnachbarn <=10km; NICHT neu bauen, solange der Section-Parse nicht fix ist.
+DROP_UID |= {'ectt-123','ectt-127','ectt-129','ectt-133','ectt-135','ectt-137','ectt-149',
+             'ectt-153','ectt-155','ectt-157','ectt-161','ectt-163','ectt-165','ectt-169',
+             'ectt-177','ectt-521','ectt-523','ectt-525','ectt-527','ectt-529','ectt-531',
+             'ectt-533','ectt-535','ectt-537','ectt-539','ectt-543','ectt-547','ectt-551',
+             'ectt-553','ectt-557','ectt-559','ectt-565','ectt-567','ectt-573','ectt-575',
+             'ectt-577','ectt-579','ectt-581','ectt-589','ectt-591','ectt-997','ectt-4641',
+             'ectt-4645','ectt-4887','ectt-4943','ectt-4945','wctt-1299','wctt-1301'}
 
 FORCE_INCLUDE = {}
 
