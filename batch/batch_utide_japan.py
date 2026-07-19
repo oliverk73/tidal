@@ -27,9 +27,9 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
-OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_japan.txt")
-DATA_DIR = Path("/home/oliver/water_levels/JMA_Japan")
+TEMPLATE_PATH = Path("/home/oliver/weather/harmonics/classic/harmonics-dwf-20070318_mod.txt")
+OUTPUT_PATH = Path("/home/oliver/weather/harmonics/utide/harmonics_utide_japan.txt")
+DATA_DIR = Path("/home/oliver/weather/water_levels/JMA_Japan")
 STATION_CSV = Path("/tmp/jma_stations_romanized_final.csv")
 
 JMA_BASE = 'https://www.data.jma.go.jp/gmd/kaiyou/data/db/tide/suisan/txt'
@@ -210,9 +210,14 @@ def analyze_station(station, data_path):
         xt_name, xt_speed = find_xtide_match(uname, utide_speed)
         if xt_name is None:
             continue
+        # BUGFIX 2026-07-19: utide.solve laeuft auf UTC-Zeiten -> coef['g'] ist die
+        # Greenwich-Phase. Der Record-Header deklariert aber Meridian +09:00 (JST),
+        # daher muss die Phase in den JST-Frame konvertiert werden (g + speed*9h).
+        # Ohne diese Konvertierung sind alle Vorhersagen exakt 9h zu frueh
+        # (so entstand der defekte Japan-Block, bereinigt am 2026-07-19).
         utide_results[xt_name] = {
             'amplitude': amplitude,
-            'phase': greenwich_phase % 360,
+            'phase': (greenwich_phase + xt_speed * 9.0) % 360,
             'speed': xt_speed,
         }
 

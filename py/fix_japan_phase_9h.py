@@ -11,6 +11,10 @@ Correction: phase_new = (phase_old + 9.0 * speed_deg_per_hour) % 360
 
 Also renames "Kankushima, Japan" → "Kansai Airport, Osaka, Japan".
 """
+import sys
+sys.exit("OBSOLET (2026-07-19): Einmal-Fix, bereits angewendet. Der Frame-Bug ist jetzt "
+         "direkt in batch/batch_utide_japan.py behoben (Phase = g + speed*9h). Ein erneuter "
+         "Lauf wuerde korrekte Phasen um +9h verfaelschen.")
 import re
 import shutil
 from pathlib import Path
