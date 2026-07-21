@@ -521,8 +521,39 @@ NAME_FIX_NO = {
 # exakte Namensdubletten zu gemessenen Quellen (Puertos del Estado etc.) -> Messung gewinnt
 DROP_NO = {581,   # Bilbao (= gemessener Puertos-Pegel 'Bilbao, Spain')
            177,   # Lome (= vorhandener DWF-1997 + UTide-TC 'Lomé, Togo', 6.2km)
-           547}   # Ria de Viveiro (2026-07-19 manuell entfernt: Duplikat der publizierten
+           547,   # Ria de Viveiro (2026-07-19 manuell entfernt: Duplikat der publizierten
                   # ATT-1714-Position; Ria durch IHM 'Cillero' + ATT 'Viveiro (Landro)' abgedeckt)
+           # 2026-07-20 Liberia-Dubletten: der NOAA-Cape-Town-Transfer ist ~3h falsch
+           # (Monrovia: HW 11:53 statt echt 14:43; verifiziert gg. att-np208 + classic-1997,
+           # die untereinander auf ±25min stimmen). Echte Admiralty-Harmonik in att_np208/_secondary
+           # deckt diese 5 Positionen ab -> Messung/echte Analyse gewinnt.
+           219,   # Monrovia (= att_np208 'Monrovia, Liberia', 0.0km)
+           207,   # Bafu Bay (= att_np208_secondary, 0.0km)
+           209,   # Cestos Bay (= att_np208_secondary, 0.0km)
+           211,   # Upper Buchanan (= att_np208_secondary 'Buchanan, Liberia', 5.8km)
+           221,   # Cape Mount Bay (= att_np208_secondary 'Cape Mount, Liberia', 0.0km)
+           # 2026-07-20 Irland-Inversion: NOAA referenziert die Süd-/West-/Nordküsten-
+           # Iren an 'Dublin' mit KLEINEM dtHW. Dublin (Irische See) liegt aber ~180° zur
+           # Süd-/Westküste (Keltische See) — um die irische Amphidromie. Der uniforme
+           # Phasen-Shift erbt Dublins Phase -> HW/NW um ~6h INVERTIERT (verifiziert:
+           # Dunmore/Cork/Galway sagen HW, wenn real NW ist). Alle 28 haben bessere
+           # unabhängige Daten <5km (Admiralty-tidetables/utide/ticon4/classic). Ostküste
+           # Irland + Wales + NI-Ostseite (in Phase mit Dublin) bleiben korrekt/erhalten.
+           1173,1175,1177,1179,1183,1185,1187,1191,1193,1195,1197,1199,1201,1203,1205,
+           1207,1209,1211,1215,1219,1221,1233,1235,1237,1239,1241,1243,1245,
+           # 2026-07-20 Ferntransfer-Dubletten (1-3.5h M2-Fehler, exakte Admiralty-/classic-
+           # Dublette <=1km am selben Ort -> Original gewinnt; verifiziert: La Palma +1.4h,
+           # Eiði/Faroe +3.5h & Amplitude 2x). Casablanca->Kanaren/Madeira/Guinea-Bissau,
+           # Dakar->Gambia, Reykjavik->Faroe, Cape Town->Greenville(=att 'Sinoe Bay').
+           17,19,21,27,31,35,37,39,205,249,259,261,275,279,281,1281,1299}  # 279=Balingho/Gambia (=att Balingo 0km, ~invertiert)
+
+# 2026-07-20 Referenz-Override: {Station-no -> Referenz-Station-no}. NOAA referenziert diese
+# 4 liberianischen Stationen an Cape Town (34 S, falsches Regime -> ~3h invertiert, verifiziert:
+# Monrovia HW 11:53 statt real 14:43). Ersatz: von Monrovia (no.219, echte att_np208/classic-
+# Harmonik) transferieren; dtHW/dtLW werden auf die Override-Referenz umgerechnet (beide sind
+# Cape-Town-relativ, Differenz = Monrovia-relativ). Verifiziert per Vorhersage: Junk River
+# entrance HW = Monrovia +/-3min (NOAA: -5min); Harper -48min; Harbel +132min (Aestuar).
+REF_OVERRIDE_NO = {203: 219, 213: 219, 215: 219, 217: 219}
 
 FORCE_INCLUDE = {127: 'Kribi, Cameroon',
                  125: 'Malabo (Santa Isabel), Equatorial Guinea',
@@ -587,7 +618,13 @@ def main():
             skipped.append((no, s['name'], 'not-gap')); continue
         if LIVE and min(hav(s['lat'], s['lon'], a, b) for a, b in LIVE) <= 3.0:
             skipped.append((no, s['name'], 'live-coops')); continue
-        rn, rr = resolve_ref(s['ref'])
+        if no in REF_OVERRIDE_NO:
+            _refst = byno.get(REF_OVERRIDE_NO[no])
+            rn, rr = resolve_ref(_refst['name']) if _refst else (None, None)
+            if _refst and s.get('dtHW') is not None and _refst.get('dtHW') is not None:
+                s = {**s, 'dtHW': s['dtHW'] - _refst['dtHW'], 'dtLW': s['dtLW'] - _refst['dtLW']}
+        else:
+            rn, rr = resolve_ref(s['ref'])
         if not rr: skipped.append((no, s['name'], f"noref:{s['ref']}")); continue
         tr = transfer(s, rr)
         if not tr or tr['M2'] < 0.05 and s.get('diurnal_ft') is None:
