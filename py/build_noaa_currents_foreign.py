@@ -14,7 +14,7 @@ import json, re, os
 from datetime import datetime, timedelta
 import numpy as np, matplotlib.dates as mdates, utide
 
-HARM='/home/oliver/harmonics'
+HARM='/home/oliver/weather/harmonics'
 OUT=f'{HARM}/noaa/harmonics_noaa_currents.txt'
 
 def read_header_order():

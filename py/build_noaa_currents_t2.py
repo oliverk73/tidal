@@ -16,7 +16,7 @@ Haengt an harmonics/noaa/harmonics_noaa_currents.txt an (append, idempotent).
 """
 import json, re, math, os
 
-HARM='/home/oliver/harmonics'
+HARM='/home/oliver/weather/harmonics'
 OUT=f'{HARM}/noaa/harmonics_noaa_currents.txt'
 REFFILES=[f'{HARM}/noaa/harmonics_noaa_currents.txt',
           f'{HARM}/classic/harmonics-dwf-20251228-free.txt']
@@ -96,7 +96,7 @@ def hav(a,b,c,e):
 
 def us_current_mask():
     import collections, json as J
-    d=J.load(open('/home/oliver/static/js/leaflet_markers_data.json'))
+    d=J.load(open('/home/oliver/weather/static/js/leaflet_markers_data.json'))
     g=collections.defaultdict(list)
     for s in d['stations']:
         if s[3]=='harmonics-dwf-20251228-free.tcd' and s[5]==1:
@@ -184,8 +184,9 @@ def main():
             if c in con: blk.append(f'{c:<16}{con[c][0]:.4f}  {con[c][1]:.2f}')
             else: blk.append('x 0 0')
         out.append((blk,name,fr,dt,cty))
-    with open(OUT,'a',encoding='iso-8859-1') as f:
-        f.write('\n'.join(l for blk,_,_,_,_ in out for l in blk)+'\n')
+    if out:
+        with open(OUT,'a',encoding='iso-8859-1') as f:
+            f.write('\n'.join(l for blk,_,_,_,_ in out for l in blk)+'\n')
     print(f'angehaengt={len(out)} | skipped={len(skipped)}')
     import collections
     print(collections.Counter(c for _,_,_,_,c in out))
