@@ -496,6 +496,7 @@ COUNTRY_OVERRIDE = {251: 'Guinea-Bissau',          # Cacine (country_nn-Fehler)
 # Diakritika-/Namenskorrekturen per NOAA-Nr. (offizielle lokale Schreibweise; nur eindeutige
 # Faelle, alles Latin-1). Volle Anzeigenamen. Kyrillisch (RU) bleibt ASCII (ISO-8859-1).
 NAME_FIX_NO = {
+ 1163: 'Dún Laoghaire, Ireland',
  465: 'Huelva, Río Odiel, Spain',
  533: 'Corcubión, Spain',
  569: 'Ría de Suances, Spain',
@@ -516,6 +517,27 @@ NAME_FIX_NO = {
  407: 'Grado, Italy',
  411: 'Malamocco, Italy',
  413: 'Chioggia, Italy',
+ # 2026-07-21 Diakritika-/Exonym-Sweep (alle 20 verbliebenen ASCII-Faelle)
+ 11:  'Porto da Praia, São Tiago Island, Cape Verde',
+ 15:  'Porto Grande, São Vicente Island, Cape Verde',   # NOAA-Tippfehler 'Vincente'
+ 73:  'Baía dos Tigres, Angola',
+ 79:  'Baía de Santa Marta, Angola',
+ 81:  'Baía dos Elefantes, Angola',
+ 445: 'Málaga, Spain',
+ 455: 'Cádiz, Spain',
+ 557: 'Avilés, Spain',
+ 561: 'Gijón, Spain',
+ 1293:'Tórshavn, Streymoy Island, Faroe Islands',
+ 1303:'Klaksvík, Borðoy Island, Faroe Islands',
+ 1335:'Antwerpen (Roads) Schelde River, Belgium',       # Exonym 'Antwerp'
+ 1447:'Büsum, Norderpiep, Germany',
+ 1463:'Tönning, Germany',
+ 1477:'Wyk, Föhr, Norder Aue, Germany',
+ 1483:'Hörnum Odde, Vortrapp Tief, Germany',
+ 1497:'Nordby, Fanø Island, Denmark',
+ 1545:'Bodø, Norway',
+ 1555:'Tromsø, Norway',
+ 1747:'Arkhangelsk, Solombala Island, Russia',          # Exonym 'Archangel'
 }
 
 # exakte Namensdubletten zu gemessenen Quellen (Puertos del Estado etc.) -> Messung gewinnt
