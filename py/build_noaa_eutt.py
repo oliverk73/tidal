@@ -486,9 +486,12 @@ def block(s, tr, cty, OV=None, EXISTING=None):
 # build these even though they are "covered" (explicit FES replacements requested by Oliver);
 # value = display-name override (already carries its country suffix).
 # coordinate corrections for NOAA misprints (verified against neighbouring-row ordering + geography)
-COORD_OVERRIDE = {463: (37.3667, -6.0)}   # Sevilla, Rio Guadalquivir: NOAA-Druckfehler 32 deg -> 37 deg N
+COORD_OVERRIDE = {463: (37.3667, -6.0),   # Sevilla, Rio Guadalquivir: NOAA-Druckfehler 32 deg -> 37 deg N
+                  283: (13.8805, -16.7565),  # Pointe de Sangomar: Oliver 2026-07-23 manuell an die Spitze gesetzt (ATT-Pendant liegt suedlich am Haken)
+                  405: (45.647060, 13.759697)}  # Trieste: Oliver 2026-07-23 an den Pegel Molo Sartorio gesetzt (Roh-Transfer stand grob auf 45.65/13.75)
 # country fixes where neither reference nor nearest-neighbour resolve a contested border correctly
-COUNTRY_OVERRIDE = {251: 'Guinea-Bissau',          # Cacine (country_nn-Fehler)
+COUNTRY_OVERRIDE = {283: 'Senegal',                # Sangomar: NOAA sagt faelschlich Gambia
+                    251: 'Guinea-Bissau',          # Cacine (country_nn-Fehler)
                     127: 'Cameroon', 111: 'Equatorial Guinea',  # FORCE_INCLUDE-Metadaten
                     181: 'Ghana', 183: 'Ghana', 101: 'Gabon'}
 
@@ -497,22 +500,22 @@ COUNTRY_OVERRIDE = {251: 'Guinea-Bissau',          # Cacine (country_nn-Fehler)
 # Faelle, alles Latin-1). Volle Anzeigenamen. Kyrillisch (RU) bleibt ASCII (ISO-8859-1).
 NAME_FIX_NO = {
  1163: 'Dún Laoghaire, Ireland',
- 465: 'Huelva, Río Odiel, Spain',
+ 465: 'Huelva (Río Odiel), Spain',
  533: 'Corcubión, Spain',
- 569: 'Ría de Suances, Spain',
+ 569: 'Suances, Spain',
  573: 'Santoña, Spain',
  593: 'Ría de Orio, Spain',
  595: 'San Sebastián, Spain',
  31:  'Ilhéu de Fora, Ilhas Selvagens, Portugal',
- 511: 'Esposende, Rio Cávado, Portugal',
+ 511: 'Esposende (Rio Cávado), Portugal',
  113: 'Baía de Ana Chaves, São Tomé, São Tomé and Príncipe',
  249: 'João Vieira Island, Guinea-Bissau',
  243: 'Dubréka, Guinea',
- 13:  'Porto da Fajã, Brava Island, Cape Verde',
+ 13:  'Fajã de Água (Brava), Cape Verde',
  321: 'Kénitra, Morocco',
  463: 'Sevilla, Río Guadalquivir, Spain',
  1495:'Sønderho, Fanø Island, Denmark',
- 1467:'Südfall, Hever Strom, Germany',
+ 1467:'Südfall (Hever), Germany',
  1475:'Hooge, Süder Aue, Germany',
  407: 'Grado, Italy',
  411: 'Malamocco, Italy',
@@ -538,6 +541,75 @@ NAME_FIX_NO = {
  1545:'Bodø, Norway',
  1555:'Tromsø, Norway',
  1747:'Arkhangelsk, Solombala Island, Russia',          # Exonym 'Archangel'
+ # 2026-07-22 Nachzuegler Norwegen (vom 21.07.-Sweep uebersehen)
+ 1535:'Florø, Norway',
+ # 2026-07-23 Sangomar (Oliver manuell in txt, hier gespiegelt)
+ 283: 'Pointe de Sangomar (Saloum River), Senegal',
+ 405: 'Trieste, Italy',  # 2026-07-23 Oliver: Suffix '<5>' entfernt
+ 1549:'Kabelvåg, Norway',
+ 1541:'Rørvik, Norway',
+ 1521:'Oscarsborg, Norway',
+ # 2026-07-22 Sweep 2 (systematischer Laender-Abgleich: FR/IS/FO/DK/DE/NL/NO/ES/PT)
+ 461: 'Sanlúcar, Río Guadalquivir, Spain',
+ 469: 'Vila Real de Santo António, Portugal',
+ 497: 'Nazaré (Baía de Pederneira), Portugal',
+ 507: 'Porto de Leixões (Matosinhos), Portugal',
+ 535: 'Camariñas, Spain',
+ 555: 'Ría de Pravia, Spain',
+ 601: 'St. Jean de Luz (Socoa), France',
+ 605: 'Cap Ferret, Bassin d\'Arcachon, France',
+ 615: 'La Maréchale, France',
+ 627: 'Île d\'Aix, France',
+ 633: 'St. Martin, Île de Ré, France',
+ 639: 'Port Joinville, Île d\'Yeu, France',
+ 657: 'Pénerf, France',
+ 665: 'La Trinité, Crac\'h River, France',
+ 667: 'Le Palais, Belle-Île, France',
+ 673: 'Île de Penfret, France',
+ 677: 'Bénodet, Odet River, France',
+ 681: 'Penmarc\'h, France',
+ 685: 'Île de Sein, France',
+ 695: 'Île de Molène, France',
+ 697: 'Île d\'Ouessant, France',
+ 699: 'L\'Aber Benoît entrance, France',
+ 701: 'L\'Aber Wrac\'h (Fort Cézon), France',
+ 707: 'Ploumanac\'h, France',
+ 709: 'Plougrescant, Tréguier River, France',
+ 711: 'Héaux-de-Bréhat, France',
+ 713: 'Île de Bréhat, France',
+ 715: 'Lézardrieux, France',
+ 721: 'Le Légué entrance, France',
+ 733: 'Diélette, France',
+ 735: 'Îles Chausey, France',
+ 769: 'Fécamp, France',
+ 775: 'Le Tréport, France',
+ 1279: 'Lopransfjørður, Suðuroy Island, Faroe Islands',
+ 1283: 'Trongisvágur, Suðuroy Island, Faroe Islands',
+ 1285: 'Suðuroyarfjørður, Faroe Islands',
+ 1287: 'Sandsvágur, Sandoy Island, Faroe Islands',
+ 1301: 'Leirvík, Eysturoy Island, Faroe Islands',
+ 1305: 'Svínoyarfjørður, Faroe Islands',
+ 1307: 'Fugloyarfjørður, Faroe Islands',
+ 1311: 'Keflavík Harbor, Iceland',
+ 1315: 'Hvammsvík, Iceland',
+ 1319: 'Hrútafjörður, Iceland',
+ 1321: 'Hrísey, Iceland',
+ 1355: 'IJmuiden (Ymuiden), Netherlands',
+ 1429: 'Scharhörn, Germany',
+ 1433: 'Brunsbüttelkoog, Germany',
+ 1435: 'Glückstadt, Germany',
+ 1439: 'Lühedeich, Germany',
+ 1479: 'Dagebüll, Norder Aue, Germany',
+ 1491: 'Højer Sluice, Denmark',
+ 1503: 'Blåvands Huk, Denmark',
+ 1543: 'Mo i Rana, Ranfjorden, Norway',
+ 1559: 'Vardøya, Norway',
+ # 2026-07-22 Baskenland: baskische Namen = uebliche lokale Bezeichnung (Oliver-Regel)
+ 585: 'Lekeitio, Spain',
+ 589: 'Deba, Spain',
+ 591: 'Getaria, Spain',
+ 595: 'Donostia (San Sebastián), Spain',
+ 597: 'Pasaia, Spain',
 }
 
 # exakte Namensdubletten zu gemessenen Quellen (Puertos del Estado etc.) -> Messung gewinnt
@@ -567,6 +639,26 @@ DROP_NO = {581,   # Bilbao (= gemessener Puertos-Pegel 'Bilbao, Spain')
            # Dublette <=1km am selben Ort -> Original gewinnt; verifiziert: La Palma +1.4h,
            # Eiði/Faroe +3.5h & Amplitude 2x). Casablanca->Kanaren/Madeira/Guinea-Bissau,
            # Dakar->Gambia, Reykjavik->Faroe, Cape Town->Greenville(=att 'Sinoe Bay').
+           # 2026-07-22 Moderate-Nachbarn-Audit (2-4km): redundant zu besserer unabh.
+           # Quelle UND M2-phasenfalsch (dg gegen UTC-normierten Nachbar-Konsens):
+           15,    # Porto Grande (= gemessenes Mindelo utide_obs/att/classic 0.8km; -118min)
+           1447,  # Buesum Norderpiep (= Buesum Schleuse utide_obs conf8 1.4km; -45..-80min)
+           459,   # Bajo Salmedina (= Chipiona utide conf8 3.7km; -37min Transfer-Rauschen)
+           121,   # Bata Bay (= Bata att/classic 4.1km, die stimmen ueberein; eutt +83min)
+           123,   # San Carlos Bay Fernando Poo (= Luba classic conf10 4.5km; eutt +79min)
+           1291,  # Vestmanna (Amphidrom! eutt-k-Transfer 0.72m physikalisch falsch; att 0.9km)
+           1303,  # Klaksvik (= classic Klaksvik conf10 2.3km; eutt -96min)
+           1325,  # Vestdalseyri (= classic Seydisfjordur conf10 2.4km im selben Fjord; -178min)
+           1853,  # Foki Bight (= att np202 3.7km; eutt -118min, Yekaterininskaya-Zonenverdacht)
+           1855,  # Russkaya Harbor (= att np202 Zaliv Russkaya Gavan 3.8km; -113min)
+           1845,  # Matochkin Strait east end (= att np202 Mys Byk 3.7km; -97min)
+           291,   # Bale[sic] d'Arguin (2026-07-23: identische Position wie att_np208_secondary
+                  # 'Ile d'Arguin'; NOAA-Zeiten = Pauschal-Offset von Port Etienne/Nouadhibou
+                  # ohne Bank-Laufzeit -> ~80min zu frueh. ATT-Gradient Nouadhibou->Arguin->
+                  # Cap Sainte-Anne physikalisch stimmig, Nouadhibou per SHOM bestaetigt)
+           463,   # Sevilla Rio Guadalquivir (2026-07-23: historischer Stadthafen, liegt heute
+                  # in der abgeschleusten Darsena (Schleuse 1926) -> dort kommt keine Tide mehr
+                  # an; Puertos Esclusa/Sevilla-2 conf8 4-5.4km flussab decken die lebende Tide ab)
            17,19,21,27,31,35,37,39,205,249,259,261,275,279,281,1281,1299}  # 279=Balingho/Gambia (=att Balingo 0km, ~invertiert)
 
 # 2026-07-20 Referenz-Override: {Station-no -> Referenz-Station-no}. NOAA referenziert diese

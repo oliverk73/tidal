@@ -338769,8 +338769,8 @@ x 0 0
 # shom_code: BUBAQUE
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9997 rms=0.0171m const=59
 # !units: meters
-# !longitude: -15.8265
-# !latitude: 11.2996
+# !longitude: -15.8263
+# !latitude: 11.3000
 Bubaque, Guinea-Bissau
 +00:00 :UTC
 2.5400 meters
@@ -342251,8 +342251,8 @@ x 0 0
 # !units: meters
 # !longitude: -15.9410
 # !latitude: 23.6615
-Dakhla, Western Sahara
-+00:00 :UTC
+Dakhla Port, Western Sahara
++00:00 :Africa/El_Aaiun
 1.5830 meters
 J1              0.0018  95.43
 K1              0.0670  33.86
@@ -344183,7 +344183,7 @@ x 0 0
 # !units: meters
 # !longitude: -9.7750
 # !latitude: 31.5057
-Essaouira (Mogador), Morocco
+Essaouira, Morocco
 +00:00 :UTC
 2.2463 meters
 J1              0.0043  95.96
@@ -348820,8 +348820,8 @@ x 0 0
 # shom_code: JORF_LASFAR
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9968 rms=0.0418m const=59
 # !units: meters
-# !longitude: -8.6333
-# !latitude: 33.1333
+# !longitude: -8.6329
+# !latitude: 33.1336
 Jorf Lasfar, Morocco
 +00:00 :UTC
 2.1682 meters
@@ -349013,9 +349013,9 @@ x 0 0
 # shom_code: KAMSAR
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9960 rms=0.0775m const=59
 # !units: meters
-# !longitude: -14.6178
-# !latitude: 10.6517
-Kamsar, Guinea
+# !longitude: -14.6168
+# !latitude: 10.6500
+Port Kamsar (Rio Nunez), Guinea
 +00:00 :UTC
 3.0314 meters
 J1              0.0070  31.96
@@ -358883,7 +358883,7 @@ x 0 0
 # !units: meters
 # !longitude: -6.6667
 # !latitude: 34.2667
-Mehdia (Kenitra), Morocco
+Mehdya, Morocco
 +00:00 :UTC
 2.2428 meters
 J1              0.0022  4.71
@@ -370505,8 +370505,8 @@ x 0 0
 # shom_code: RABAT
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9995 rms=0.0147m const=59
 # !units: meters
-# !longitude: -6.8362
-# !latitude: 34.0357
+# !longitude: -6.8352
+# !latitude: 34.0335
 Rabat, Morocco
 +00:00 :UTC
 2.1700 meters
@@ -372242,8 +372242,8 @@ x 0 0
 # shom_code: SAFI
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9992 rms=0.0203m const=59
 # !units: meters
-# !longitude: -9.2500
-# !latitude: 32.3083
+# !longitude: -9.2493
+# !latitude: 32.3091
 Safi, Morocco
 +00:00 :UTC
 2.2762 meters
@@ -377853,7 +377853,7 @@ x 0 0
 # !units: meters
 # !longitude: -12.9355
 # !latitude: 27.9419
-Tarfaya, Morocco
+Tarfaya (Cap Juby), Morocco
 +00:00 :UTC
 1.8437 meters
 J1              0.0052  36.02
@@ -461193,7 +461193,7 @@ x 0 0
 # !units: meters
 # !longitude: -6.133333
 # !latitude: 54.033333
-Greenore, Ireland
+Greenore (Carlingford Lough), Ireland
 +00:00 :Europe/London
 2.9274 meters
 J1              0.0227  18.63
@@ -528823,7 +528823,7 @@ x 0 0
 # !units: meters
 # !longitude: -6.2541
 # !latitude: 54.0965
-Warrenpoint, Northern Ireland, United Kingdom
+Warrenpoint (Carlingford Lough), Northern Ireland, United Kingdom
 +00:00 :Europe/London
 2.7776 meters
 J1              0.0113  337.69
@@ -609227,16 +609227,17 @@ x 0 0
 # source: Derived from FCUL tide predictions with UTide harmonic analysis
 # station_id_context: FCUL-Aveiro
 # date_imported: 20260506
-# datum: MSL
+# datum: Chart Datum (ZH; Z0 = NM des Nachbarn, s. fixes)
 # confidence: 6
 # fcul_code: Aveiro
 # utide: pts=8760 period=2026-01-01..2026-12-31 r2=0.9981 rms=0.0320m const=59
+# fixes: 2026-07-22 Z0 2.2119->1.4021 (FCUL-Serie nicht ZH-referenziert; NM vom NOAA-Nachbarn Barra de Aveiro 220m, Event-Check dHW+1.11/dNW+0.51 -> symmetrisch)
 # !units: meters
 # !longitude: -8.7487
 # !latitude: 40.6442
 Aveiro, Portugal
 +00:00 :UTC
-2.2119 meters
+1.4021 meters
 J1              0.0028  131.03
 K1              0.0601  61.43
 K2              0.0924  105.34
@@ -677209,9 +677210,9 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-07-01..2026-06-30 r2=1.0000 rms=0.0049m const=68
 # !units: meters
-# !longitude: -16.3167
-# !latitude: 11.8333
-Ilheu De Caio, Guinea-Bissau
+# !longitude: -16.3210
+# !latitude: 11.8350
+Ilheu de Caio, Guinea-Bissau
 +00:00 :Africa/Bissau
 1.9000 meters
 J1              0.0016  31.70
@@ -701003,12 +701004,13 @@ x 0 0
 # ih_concordance: ref=Viana do Castelo; dt=+1min; ampratio=1.00
 # datum: as reference port (Z0 from reference, IH nível médio identical)
 # confidence: 5
+# fixes: 2026-07-22 Z0 0.0->2.00 (Konkordanz-Design: Z0 = IH nivel medio der Referenz; war beim Import nicht kopiert -> Vorhersagen ~2m zu tief)
 # !units: meters
 # !longitude: -8.7667
 # !latitude: 41.3750
 Póvoa de Varzim, Portugal
 +00:00 :UTC
-0.0000 meters
+2.0000 meters
 J1              0.0010  103.61
 K1              0.0689  61.92
 K2              0.1031  102.20
@@ -701383,12 +701385,13 @@ x 0 0
 # ih_concordance: ref=Leixões; dt=+3min; ampratio=1.00
 # datum: as reference port (Z0 from reference, IH nível médio identical)
 # confidence: 5
+# fixes: 2026-07-22 Z0 0.0->2.00 (Konkordanz-Design: Z0 = IH nivel medio der Referenz; war beim Import nicht kopiert -> Vorhersagen ~2m zu tief)
 # !units: meters
 # !longitude: -8.6667
 # !latitude: 41.1467
 Cantareira (Barra do Douro), Portugal
 +00:00 :UTC
-0.0000 meters
+2.0000 meters
 J1              0.0024  94.27
 K1              0.0688  61.74
 K2              0.1008  101.01
@@ -701951,12 +701954,13 @@ x 0 0
 # ih_concordance: ref=Lagos; dt=+0min; ampratio=1.00
 # datum: as reference port (Z0 from reference, IH nível médio identical)
 # confidence: 5
+# fixes: 2026-07-22 Z0 0.0->2.00 (Konkordanz-Design: Z0 = IH nivel medio der Referenz; war beim Import nicht kopiert -> Vorhersagen ~2m zu tief)
 # !units: meters
 # !longitude: -8.5283
 # !latitude: 37.1267
 Portimão (exterior), Portugal
 +00:00 :UTC
-0.0000 meters
+2.0000 meters
 J1              0.0025  96.46
 K1              0.0699  49.06
 K2              0.1030  80.37
@@ -702141,12 +702145,13 @@ x 0 0
 # ih_concordance: ref=Lagos; dt=+23min; ampratio=1.05
 # datum: as reference port (Z0 from reference, IH nível médio identical)
 # confidence: 5
+# fixes: 2026-07-22 Z0 0.0->2.00 (Konkordanz-Design: Z0 = IH nivel medio der Referenz; war beim Import nicht kopiert -> Vorhersagen ~2m zu tief)
 # !units: meters
 # !longitude: -8.5350
 # !latitude: 37.1317
 Portimão (interior), Portugal
 +00:00 :UTC
-0.0000 meters
+2.0000 meters
 J1              0.0026  102.43
 K1              0.0734  54.83
 K2              0.1081  91.90
