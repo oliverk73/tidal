@@ -172,6 +172,9 @@ def country(lat, lon, ref):
     if 0.8 <= lat <= 7.5 and 99.5 <= lon <= 104.5 and ref == 'Sembawang': return 'Malaysia'
     if 8 <= lat <= 24 and 102 <= lon <= 110: return 'Vietnam'
     if 18 <= lat <= 41 and 105 <= lon <= 122.5: return 'China'
+    # Cote d'Ivoire: Nachbarn gemischt (att='Cote d'Ivoire', ticon4/utide='Ivory Coast')
+    # -> geografisch pinnen (Liberia-Grenze -7.55, Ghana-Grenze -3.11). Projektstandard 'Ivory Coast'.
+    if 4.0 <= lat <= 7.0 and -7.55 <= lon <= -3.11: return 'Ivory Coast'
     return country_nn(lat, lon)   # fallback: country of nearest existing DB station
 
 # --- nearest-neighbour country index (for regions not covered by explicit rules) ---
