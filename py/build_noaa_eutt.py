@@ -491,7 +491,8 @@ def block(s, tr, cty, OV=None, EXISTING=None):
 # coordinate corrections for NOAA misprints (verified against neighbouring-row ordering + geography)
 COORD_OVERRIDE = {463: (37.3667, -6.0),   # Sevilla, Rio Guadalquivir: NOAA-Druckfehler 32 deg -> 37 deg N
                   283: (13.8805, -16.7565),  # Pointe de Sangomar: Oliver 2026-07-23 manuell an die Spitze gesetzt (ATT-Pendant liegt suedlich am Haken)
-                  405: (45.647060, 13.759697)}  # Trieste: Oliver 2026-07-23 an den Pegel Molo Sartorio gesetzt (Roh-Transfer stand grob auf 45.65/13.75)
+                  405: (45.647060, 13.759697),  # Trieste: Oliver 2026-07-23 an den Pegel Molo Sartorio gesetzt (Roh-Transfer stand grob auf 45.65/13.75)
+                  195: (5.1378, -4.9915)}  # Grand-Lahou: Oliver 2026-07-24 an die Bandama-Reede (Roh-Transfer lag bei Braffedon ~5km ostlich)
 # country fixes where neither reference nor nearest-neighbour resolve a contested border correctly
 COUNTRY_OVERRIDE = {283: 'Senegal',                # Sangomar: NOAA sagt faelschlich Gambia
                     251: 'Guinea-Bissau',          # Cacine (country_nn-Fehler)
