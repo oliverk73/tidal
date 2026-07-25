@@ -656,6 +656,9 @@ DROP_NO = {581,   # Bilbao (= gemessener Puertos-Pegel 'Bilbao, Spain')
            1853,  # Foki Bight (= att np202 3.7km; eutt -118min, Yekaterininskaya-Zonenverdacht)
            1855,  # Russkaya Harbor (= att np202 Zaliv Russkaya Gavan 3.8km; -113min)
            1845,  # Matochkin Strait east end (= att np202 Mys Byk 3.7km; -97min)
+           131,   # Douala (2026-07-24: Takoradi-Ferntransfer k=1.73, HW ~1.5h zu spaet gg.
+                  # SHOM+ATT-Konsens (die auf 13min stimmen); att_np208 'Ersetzt classic-1997'
+                  # deckt den Hafen mit conf 7 ab, classic-LaPointe zusaetzlich)
            291,   # Bale[sic] d'Arguin (2026-07-23: identische Position wie att_np208_secondary
                   # 'Ile d'Arguin'; NOAA-Zeiten = Pauschal-Offset von Port Etienne/Nouadhibou
                   # ohne Bank-Laufzeit -> ~80min zu frueh. ATT-Gradient Nouadhibou->Arguin->
