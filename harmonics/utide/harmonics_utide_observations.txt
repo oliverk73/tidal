@@ -27219,9 +27219,9 @@ x 0 0
 # sonel_tg_id: 2799
 # utide: pts=19323 period=1998-01-12..2014-10-05 r2=0.9857 rms=0.1096m const=92
 # !units: meters
-# !longitude: 48.3000
-# !latitude: -13.4030
-Nosy Be, Madagascar
+# !longitude: 48.281100
+# !latitude: -13.407989
+Andoany / Hell-Ville (Nosy Be), Madagascar
 +00:00 :Indian/Antananarivo
 2.2172 meters
 J1              0.0093  0.75
@@ -27412,8 +27412,8 @@ x 0 0
 # ssc_id: SSC-mapu
 # utide: pts=32443 period=1974-01-01..1986-12-31 r2=0.9789 rms=0.1163m const=92
 # !units: meters
-# !longitude: 32.570000
-# !latitude: -25.975000
+# !longitude: 32.5695
+# !latitude: -25.9757
 Maputo, Mozambique
 +00:00 :Africa/Maputo
 2.0536 meters
@@ -27613,7 +27613,7 @@ x 0 0
 # !units: meters
 # !longitude: 40.4880
 # !latitude: -12.9670
-Pemba, Mozambique
+Pemba (Porto Amelia), Mozambique
 +00:00 :Africa/Maputo
 2.3306 meters
 J1              0.0066  1.15
@@ -27812,7 +27812,7 @@ x 0 0
 # !units: meters
 # !longitude: 35.377000
 # !latitude: -23.868000
-Inhambane, Mozambique
+Inhambane (Rio Matumba.), Mozambique
 +00:00 :Africa/Maputo
 6.2033 meters
 J1              0.0090  252.27
@@ -39653,8 +39653,8 @@ x 0 0
 # sonel_tg_id: 2884
 # utide: pts=35544 period=1971-05-31..1975-12-31 r2=0.9824 rms=0.0475m const=67
 # !units: meters
-# !longitude: 13.558000
-# !latitude: -12.333000
+# !longitude: 13.5592
+# !latitude: -12.3355
 Lobito, Angola
 +00:00 :UTC
 0.0000 meters
@@ -39850,7 +39850,7 @@ x 0 0
 # !units: meters
 # !longitude: 12.1462
 # !latitude: -15.1929
-Moçâmedes, Angola
+Moçâmedes (Namibe), Angola
 +00:00 :UTC
 0.0000 meters
 J1              0.0053  48.27
@@ -58212,7 +58212,7 @@ x 0 0
 # !units: meters
 # !longitude: 29.9218
 # !latitude: 31.2166
-Alexandria, Egypt
+Alexandria (Al Iskandariyah), Egypt
 +00:00 :Africa/Cairo
 2.5549 meters
 J1              0.0009  269.49
@@ -196117,8 +196117,8 @@ x 0 0
 # sonel_tg_id: 2201
 # utide: pts=60948 period=2008-12-31..2018-12-31 r2=0.9643 rms=0.0804m const=67
 # !units: meters
-# !longitude: 18.433000
-# !latitude: -34.183000
+# !longitude: 18.4366
+# !latitude: -34.1866
 Simon's Town, South Africa
 +00:00 :Africa/Johannesburg
 1.1103 meters
@@ -196707,8 +196707,8 @@ x 0 0
 # sonel_tg_id: 2827
 # utide: pts=83760 period=2008-12-31..2018-12-31 r2=0.9353 rms=0.1151m const=67
 # !units: meters
-# !longitude: 25.630000
-# !latitude: -33.960000
+# !longitude: 25.6335
+# !latitude: -33.9664
 Gqeberha (Port Elizabeth), South Africa
 +00:00 :Africa/Johannesburg
 1.1478 meters
@@ -197104,8 +197104,8 @@ x 0 0
 # sonel_tg_id: 2798
 # utide: pts=65970 period=2008-12-31..2018-12-31 r2=0.9665 rms=0.0880m const=67
 # !units: meters
-# !longitude: 31.050000
-# !latitude: -29.867000
+# !longitude: 31.0509
+# !latitude: -29.8744
 Durban, South Africa
 +00:00 :Africa/Johannesburg
 1.1581 meters
@@ -199079,7 +199079,7 @@ x 0 0
 # !units: meters
 # !longitude: 39.657000
 # !latitude: -4.070000
-Mombasa, Kenya
+Mombasa (Kilindini Harbour), Kenya
 +00:00 :UTC
 2.9438 meters
 J1              0.0109  3.18
@@ -199273,8 +199273,8 @@ x 0 0
 # ptwc_code: lamu
 # utide: pts=85744 period=2008-12-31..2018-12-31 r2=0.9960 rms=0.0521m const=67
 # !units: meters
-# !longitude: 40.903000
-# !latitude: -2.272000
+# !longitude: 40.9027
+# !latitude: -2.2674
 Lamu, Kenya
 +00:00 :UTC
 2.3420 meters
@@ -199467,8 +199467,8 @@ x 0 0
 # psmsl_id: 1694
 # utide: pts=32201 period=1986-07-06..1990-09-30 r2=0.9899 rms=0.0870m const=67
 # !units: meters
-# !longitude: 39.288000
-# !latitude: -6.820000
+# !longitude: 39.2889
+# !latitude: -6.8208
 Dar es Salaam, Tanzania
 +00:00 :UTC
 2.4600 meters
@@ -199666,9 +199666,9 @@ x 0 0
 # sonel_tg_id: 2614
 # utide: pts=85133 period=2009-01-28..2018-12-31 r2=0.9976 rms=0.0494m const=67
 # !units: meters
-# !longitude: 39.190000
-# !latitude: -6.155000
-Zanzibar, Tanzania
+# !longitude: 39.1916
+# !latitude: -6.1572
+Zanzibar City, Tanzania
 +00:00 :UTC
 2.0992 meters
 J1              0.0112  5.95
@@ -214297,10 +214297,12 @@ PI1             0.0012  136.97
 x 0 0
 PSI1            0.0018  290.33
 x 0 0
+x 0 0
 SIG1            0.0004  302.29
 SK3             0.0008  123.19
 SK4             0.0003  19.07
 SN4             0.0006  167.27
+x 0 0
 SO1             0.0005  95.66
 SO3             0.0002  279.44
 x 0 0
@@ -214495,9 +214497,11 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK3             0.0021  141.38
 x 0 0
 SN4             0.0005  2.74
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -214691,10 +214695,12 @@ PI1             0.0018  124.11
 x 0 0
 PSI1            0.0018  268.79
 x 0 0
+x 0 0
 SIG1            0.0002  324.15
 SK3             0.0009  119.44
 SK4             0.0002  264.90
 SN4             0.0003  0.27
+x 0 0
 SO1             0.0004  80.72
 SO3             0.0002  279.94
 x 0 0
@@ -214888,10 +214894,12 @@ PI1             0.0019  98.73
 x 0 0
 PSI1            0.0021  262.74
 x 0 0
+x 0 0
 SIG1            0.0003  285.80
 SK3             0.0008  158.81
 SK4             0.0006  256.45
 SN4             0.0005  346.16
+x 0 0
 SO1             0.0016  140.68
 SO3             0.0005  263.09
 x 0 0
@@ -215086,9 +215094,11 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK3             0.0015  162.60
 x 0 0
 SN4             0.0007  7.80
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -236579,10 +236589,12 @@ PI1             0.0030  92.61
 x 0 0
 PSI1            0.0020  219.98
 x 0 0
+x 0 0
 SIG1            0.0040  36.41
 SK3             0.0013  178.25
 SK4             0.0004  97.39
 SN4             0.0001  71.05
+x 0 0
 SO1             0.0017  149.52
 SO3             0.0009  83.38
 x 0 0
@@ -236774,10 +236786,12 @@ PI1             0.0016  214.73
 x 0 0
 PSI1            0.0011  251.11
 x 0 0
+x 0 0
 SIG1            0.0011  204.70
 SK3             0.0005  89.82
 SK4             0.0003  156.21
 SN4             0.0001  267.98
+x 0 0
 SO1             0.0016  273.54
 SO3             0.0001  199.90
 x 0 0
@@ -236969,10 +236983,12 @@ PI1             0.0020  37.44
 x 0 0
 PSI1            0.0021  8.83
 x 0 0
+x 0 0
 SIG1            0.0028  341.80
 SK3             0.0019  138.76
 SK4             0.0004  351.78
 SN4             0.0012  71.60
+x 0 0
 SO1             0.0010  45.35
 SO3             0.0013  118.41
 x 0 0
@@ -237164,9 +237180,11 @@ PI1             0.0009  218.53
 x 0 0
 PSI1            0.0016  250.89
 x 0 0
+x 0 0
 SIG1            0.0015  201.70
 SK3             0.0006  337.36
 SK4             0.0001  48.54
+x 0 0
 x 0 0
 SO1             0.0016  244.18
 SO3             0.0004  192.77
@@ -237359,10 +237377,12 @@ PI1             0.0002  333.22
 x 0 0
 PSI1            0.0011  259.13
 x 0 0
+x 0 0
 SIG1            0.0014  195.33
 SK3             0.0004  306.62
 SK4             0.0005  103.16
 SN4             0.0003  265.71
+x 0 0
 SO1             0.0012  267.18
 SO3             0.0003  233.10
 x 0 0
@@ -237554,10 +237574,12 @@ PI1             0.0002  135.65
 x 0 0
 PSI1            0.0037  359.40
 x 0 0
+x 0 0
 SIG1            0.0034  201.33
 SK3             0.0023  301.17
 SK4             0.0019  57.63
 SN4             0.0012  261.60
+x 0 0
 SO1             0.0028  268.80
 SO3             0.0016  211.19
 x 0 0
@@ -237749,10 +237771,12 @@ PI1             0.0039  93.10
 x 0 0
 PSI1            0.0069  88.65
 x 0 0
+x 0 0
 SIG1            0.0023  340.30
 SK3             0.0006  59.57
 SK4             0.0030  218.31
 SN4             0.0021  10.56
+x 0 0
 SO1             0.0039  10.80
 SO3             0.0026  74.44
 x 0 0
@@ -238133,6 +238157,1783 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from IOC 1-minute sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 5960 hourly means over 248 days
+# from 2025-11-20 to 2026-07-26
+# R^2 = 0.5399, RMS error = 0.1001 m
+# Constituents analyzed: 59
+#
+# Paralimni, Cyprus
+# BEGIN HOT COMMENTS
+# country: Cyprus
+# source: IOC Sea Level Station Monitoring Facility (station para1), UTide analysis
+# station_id_context: IOC para1
+# note: 248 Tage 1-Minuten-Radarpegel, 59 Konstituenten, R^2=0.5399, F=(0.031+0.020)/(0.108+0.065)=0.30.
+# date_imported: 20260726
+# datum: station datum (IOC), Z0 = mean of the analysed record
+# confidence: 8
+# !units: meters
+# !longitude: 34.036000
+# !latitude: 35.038000
+Paralimni, Cyprus
++00:00 :Asia/Nicosia
+0.1735 meters
+J1              0.0016  291.38
+K1              0.0312  268.46
+K2              0.0187  231.21
+L2              0.0020  231.37
+x 0 0
+M2              0.1075  222.04
+M3              0.0023  333.15
+M4              0.0004  276.70
+M6              0.0001  26.25
+M8              0.0002  98.24
+N2              0.0202  218.61
+2N2             0.0023  230.16
+O1              0.0200  250.79
+OO1             0.0003  324.18
+P1              0.0063  284.50
+Q1              0.0033  247.12
+2Q1             0.0006  265.33
+x 0 0
+x 0 0
+S2              0.0654  239.52
+S4              0.0006  48.35
+x 0 0
+x 0 0
+LDA2            0.0009  261.60
+MU2             0.0029  248.48
+NU2             0.0039  210.98
+RHO1            0.0008  180.73
+MK3             0.0005  62.49
+x 0 0
+MN4             0.0003  293.07
+MS4             0.0004  311.38
+x 0 0
+MF              0.0167  104.76
+MSF             0.0111  159.64
+MM              0.0273  12.20
+x 0 0
+SSA             0.0687  214.08
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0002  1.56
+2MK6            0.0001  151.77
+x 0 0
+2MN6            0.0002  251.01
+2MS6            0.0001  357.94
+x 0 0
+2SK5            0.0002  159.68
+2SM6            0.0001  322.93
+3MK7            0.0001  152.69
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0006  327.40
+BET1            0.0005  13.82
+CHI1            0.0007  330.65
+x 0 0
+x 0 0
+x 0 0
+ETA2            0.0016  247.56
+x 0 0
+UPS1            0.0007  162.72
+x 0 0
+x 0 0
+MK4             0.0002  296.63
+MKS2            0.0010  80.49
+x 0 0
+EPS2            0.0010  201.44
+MO3             0.0015  5.27
+x 0 0
+TAU1            0.0007  88.88
+x 0 0
+MSK6            0.0001  213.39
+MSM             0.0180  58.23
+MSN2            0.0005  162.39
+x 0 0
+x 0 0
+NO1             0.0012  206.84
+x 0 0
+OQ2             0.0011  177.71
+PHI1            0.0015  337.08
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SIG1            0.0010  225.75
+SK3             0.0011  306.42
+SK4             0.0002  344.11
+SN4             0.0001  325.67
+x 0 0
+SO1             0.0008  97.15
+SO3             0.0003  105.08
+THE1            0.0007  197.86
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from IOC 1-minute sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 6009 hourly means over 250 days
+# from 2025-11-18 to 2026-07-26
+# R^2 = 0.5410, RMS error = 0.0971 m
+# Constituents analyzed: 59
+#
+# Larnaka, Cyprus
+# BEGIN HOT COMMENTS
+# country: Cyprus
+# source: IOC Sea Level Station Monitoring Facility (station larn3), UTide analysis
+# station_id_context: IOC larn3
+# note: 250 Tage 1-Minuten-Radarpegel, 59 Konstituenten, R^2=0.5410, F=(0.027+0.019)/(0.104+0.062)=0.28.
+# date_imported: 20260726
+# datum: station datum (IOC), Z0 = mean of the analysed record
+# confidence: 8
+# !units: meters
+# !longitude: 33.645000
+# !latitude: 34.928000
+Larnaka, Cyprus
++00:00 :Asia/Nicosia
+0.0641 meters
+J1              0.0010  300.74
+K1              0.0275  273.52
+K2              0.0172  232.35
+L2              0.0024  247.80
+x 0 0
+M2              0.1039  223.08
+M3              0.0025  333.40
+M4              0.0006  266.94
+M6              0.0002  147.51
+M8              0.0001  25.79
+N2              0.0202  218.00
+2N2             0.0015  244.05
+O1              0.0189  250.44
+OO1             0.0005  37.35
+P1              0.0077  279.57
+Q1              0.0031  235.98
+2Q1             0.0004  259.65
+x 0 0
+x 0 0
+S2              0.0617  240.57
+x 0 0
+x 0 0
+x 0 0
+LDA2            0.0014  289.52
+MU2             0.0023  267.49
+NU2             0.0043  205.39
+RHO1            0.0004  153.28
+MK3             0.0005  44.64
+x 0 0
+MN4             0.0003  290.80
+MS4             0.0004  300.00
+x 0 0
+MF              0.0175  98.50
+MSF             0.0106  149.56
+MM              0.0262  12.45
+x 0 0
+SSA             0.0709  216.37
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK6            0.0001  345.86
+x 0 0
+2MN6            0.0001  185.56
+2MS6            0.0001  205.26
+x 0 0
+2SK5            0.0002  276.84
+2SM6            0.0001  190.51
+3MK7            0.0001  76.66
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0002  284.18
+BET1            0.0009  8.90
+CHI1            0.0004  351.27
+x 0 0
+x 0 0
+x 0 0
+ETA2            0.0021  242.33
+x 0 0
+UPS1            0.0005  150.62
+x 0 0
+x 0 0
+MK4             0.0002  314.27
+MKS2            0.0016  90.02
+x 0 0
+EPS2            0.0015  204.00
+MO3             0.0013  355.62
+x 0 0
+TAU1            0.0002  44.54
+x 0 0
+MSK6            0.0001  254.09
+MSM             0.0168  68.57
+MSN2            0.0020  139.81
+x 0 0
+x 0 0
+NO1             0.0010  262.42
+x 0 0
+OQ2             0.0014  197.81
+PHI1            0.0017  338.43
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SIG1            0.0011  210.53
+SK3             0.0012  282.22
+x 0 0
+SN4             0.0002  317.83
+x 0 0
+SO1             0.0009  114.56
+SO3             0.0003  107.12
+THE1            0.0008  197.94
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from IOC 1-minute sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 5960 hourly means over 248 days
+# from 2025-11-20 to 2026-07-26
+# R^2 = 0.4833, RMS error = 0.0959 m
+# Constituents analyzed: 59
+#
+# Pafos, Cyprus
+# BEGIN HOT COMMENTS
+# country: Cyprus
+# source: IOC Sea Level Station Monitoring Facility (station pafo), UTide analysis
+# station_id_context: IOC pafo
+# note: 248 Tage 1-Minuten-Radarpegel, 59 Konstituenten, R^2=0.4833, F=(0.025+0.017)/(0.091+0.055)=0.29.
+# date_imported: 20260726
+# datum: station datum (IOC), Z0 = mean of the analysed record
+# confidence: 8
+# !units: meters
+# !longitude: 32.408000
+# !latitude: 34.755000
+Pafos, Cyprus
++00:00 :Asia/Nicosia
+0.0080 meters
+J1              0.0016  294.52
+K1              0.0246  273.23
+K2              0.0155  235.39
+L2              0.0018  236.78
+x 0 0
+M2              0.0905  225.55
+M3              0.0020  333.93
+M4              0.0002  300.15
+M6              0.0001  264.11
+M8              0.0001  55.49
+N2              0.0171  222.83
+2N2             0.0015  234.78
+O1              0.0175  252.06
+OO1             0.0006  325.38
+P1              0.0088  278.62
+Q1              0.0024  237.83
+2Q1             0.0003  232.83
+x 0 0
+x 0 0
+S2              0.0549  242.45
+S4              0.0001  159.35
+x 0 0
+x 0 0
+LDA2            0.0005  276.29
+MU2             0.0024  258.60
+NU2             0.0030  211.92
+RHO1            0.0006  204.36
+MK3             0.0003  55.77
+x 0 0
+MN4             0.0004  266.23
+MS4             0.0002  348.48
+x 0 0
+MF              0.0155  90.05
+MSF             0.0110  123.17
+MM              0.0267  358.81
+x 0 0
+SSA             0.0615  215.57
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0001  10.13
+x 0 0
+x 0 0
+2MN6            0.0001  12.69
+2MS6            0.0002  97.88
+x 0 0
+x 0 0
+2SM6            0.0001  17.99
+3MK7            0.0001  62.51
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0003  355.02
+BET1            0.0008  325.60
+CHI1            0.0003  327.04
+x 0 0
+x 0 0
+x 0 0
+ETA2            0.0014  257.82
+x 0 0
+UPS1            0.0004  161.71
+x 0 0
+x 0 0
+MK4             0.0002  256.50
+MKS2            0.0010  65.46
+x 0 0
+EPS2            0.0007  223.11
+MO3             0.0010  11.07
+x 0 0
+TAU1            0.0007  147.21
+x 0 0
+MSK6            0.0001  203.55
+MSM             0.0148  71.98
+MSN2            0.0006  157.30
+x 0 0
+x 0 0
+NO1             0.0011  270.79
+x 0 0
+OQ2             0.0007  180.30
+PHI1            0.0012  313.08
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SIG1            0.0010  212.28
+SK3             0.0012  286.28
+SK4             0.0001  248.42
+SN4             0.0002  346.31
+x 0 0
+SO1             0.0004  89.63
+SO3             0.0003  85.37
+THE1            0.0007  212.89
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from IOC 1-minute sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 5936 hourly means over 247 days
+# from 2025-11-21 to 2026-07-26
+# R^2 = 0.4849, RMS error = 0.0998 m
+# Constituents analyzed: 59
+#
+# Pomos, Cyprus
+# BEGIN HOT COMMENTS
+# country: Cyprus
+# source: IOC Sea Level Station Monitoring Facility (station pomo), UTide analysis
+# station_id_context: IOC pomo
+# note: 247 Tage 1-Minuten-Radarpegel, 59 Konstituenten, R^2=0.4849, F=(0.025+0.018)/(0.089+0.053)=0.30.
+# date_imported: 20260726
+# datum: station datum (IOC), Z0 = mean of the analysed record
+# confidence: 8
+# !units: meters
+# !longitude: 32.556000
+# !latitude: 35.175000
+Pomos, Cyprus
++00:00 :Asia/Nicosia
+0.0175 meters
+J1              0.0013  301.84
+K1              0.0249  272.84
+K2              0.0153  234.60
+L2              0.0020  225.04
+x 0 0
+M2              0.0892  224.09
+M3              0.0019  335.90
+M4              0.0004  303.98
+M6              0.0001  316.93
+M8              0.0001  329.82
+N2              0.0165  223.45
+2N2             0.0017  223.23
+O1              0.0179  253.52
+OO1             0.0005  332.47
+P1              0.0084  279.76
+Q1              0.0025  237.70
+2Q1             0.0003  256.09
+x 0 0
+x 0 0
+S2              0.0532  241.58
+S4              0.0001  166.81
+x 0 0
+x 0 0
+LDA2            0.0007  211.13
+MU2             0.0024  253.97
+NU2             0.0030  220.84
+RHO1            0.0006  193.34
+MK3             0.0005  38.23
+x 0 0
+MN4             0.0003  264.69
+MS4             0.0003  0.79
+x 0 0
+MF              0.0180  97.49
+MSF             0.0130  147.22
+MM              0.0279  6.56
+x 0 0
+SSA             0.0734  212.03
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0002  319.75
+2MK6            0.0001  83.68
+x 0 0
+2MN6            0.0001  130.05
+2MS6            0.0002  96.20
+x 0 0
+2SK5            0.0001  97.17
+x 0 0
+3MK7            0.0001  351.75
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0004  28.75
+BET1            0.0009  325.58
+CHI1            0.0004  307.24
+x 0 0
+x 0 0
+x 0 0
+ETA2            0.0011  253.79
+x 0 0
+UPS1            0.0005  182.22
+x 0 0
+x 0 0
+MK4             0.0001  310.69
+MKS2            0.0007  64.30
+x 0 0
+EPS2            0.0006  250.67
+MO3             0.0013  5.66
+x 0 0
+TAU1            0.0008  103.22
+x 0 0
+MSK6            0.0002  176.86
+MSM             0.0158  53.91
+MSN2            0.0003  102.44
+x 0 0
+x 0 0
+NO1             0.0011  257.02
+x 0 0
+OQ2             0.0008  197.26
+PHI1            0.0010  311.62
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SIG1            0.0011  207.34
+SK3             0.0012  279.60
+SK4             0.0001  341.33
+SN4             0.0001  323.58
+x 0 0
+SO1             0.0004  135.06
+SO3             0.0004  81.76
+THE1            0.0008  213.43
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from IOC 1-minute sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 24002 hourly means over 1115 days
+# from 2023-07-06 to 2026-07-26
+# R^2 = 0.6321, RMS error = 0.0794 m
+# Constituents analyzed: 67
+#
+# Lemesos (Limassol), Cyprus
+# BEGIN HOT COMMENTS
+# country: Cyprus
+# source: IOC Sea Level Station Monitoring Facility (station leme), UTide analysis
+# station_id_context: IOC leme
+# note: 1115 Tage 1-Minuten-Radarpegel, 67 Konstituenten, R^2=0.6321, F=(0.025+0.018)/(0.100+0.060)=0.27.
+# date_imported: 20260726
+# datum: station datum (IOC), Z0 = mean of the analysed record
+# confidence: 8
+# !units: meters
+# !longitude: 33.042000
+# !latitude: 34.669000
+Lemesos (Limassol), Cyprus
++00:00 :Asia/Nicosia
+0.0448 meters
+J1              0.0015  280.07
+K1              0.0245  272.95
+K2              0.0176  233.52
+L2              0.0030  209.12
+x 0 0
+M2              0.0996  224.50
+M3              0.0022  344.14
+M4              0.0006  293.67
+M6              0.0001  133.78
+M8              0.0001  306.21
+N2              0.0168  223.05
+2N2             0.0019  228.24
+O1              0.0178  249.52
+OO1             0.0007  267.30
+P1              0.0097  272.48
+Q1              0.0022  230.58
+2Q1             0.0002  290.06
+R2              0.0006  288.19
+x 0 0
+S2              0.0599  239.16
+S4              0.0005  10.54
+x 0 0
+T2              0.0037  255.76
+LDA2            0.0008  234.28
+MU2             0.0026  245.95
+NU2             0.0031  226.27
+RHO1            0.0005  189.63
+MK3             0.0001  46.58
+x 0 0
+MN4             0.0003  237.37
+MS4             0.0003  304.29
+x 0 0
+MF              0.0106  98.96
+MSF             0.0012  228.38
+MM              0.0112  11.90
+x 0 0
+SSA             0.0089  32.29
+SA-IOS          0.0790  246.82
+x 0 0
+S1-IOS          0.0068  208.52
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0001  273.75
+x 0 0
+x 0 0
+2MN6            0.0001  37.73
+x 0 0
+x 0 0
+2SK5            0.0001  236.91
+2SM6            0.0001  104.46
+3MK7            0.0001  98.95
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0004  317.75
+BET1            0.0004  338.03
+CHI1            0.0003  276.67
+H1              0.0007  185.30
+H2              0.0008  196.33
+x 0 0
+ETA2            0.0012  239.63
+x 0 0
+UPS1            0.0002  179.61
+x 0 0
+x 0 0
+MK4             0.0002  273.02
+MKS2            0.0001  24.12
+x 0 0
+EPS2            0.0007  248.01
+MO3             0.0011  25.33
+x 0 0
+TAU1            0.0004  42.14
+x 0 0
+MSK6            0.0001  189.61
+MSM             0.0079  1.38
+MSN2            0.0003  87.54
+x 0 0
+x 0 0
+NO1             0.0014  256.84
+x 0 0
+OQ2             0.0004  226.08
+PHI1            0.0013  328.04
+x 0 0
+PI1             0.0016  275.10
+x 0 0
+PSI1            0.0006  260.39
+x 0 0
+x 0 0
+SIG1            0.0004  196.82
+SK3             0.0010  284.13
+SK4             0.0001  350.75
+SN4             0.0001  346.69
+x 0 0
+SO1             0.0001  181.58
+SO3             0.0001  35.24
+THE1            0.0005  224.03
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from SHELDA sub-hourly sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 11885 hourly means
+# from 2018-02-02 to 2020-06-08
+# R^2 = 0.5714, RMS error = 0.1340 m
+# Constituents analyzed: 67
+#
+# Ashdod Marina, Israel
+# BEGIN HOT COMMENTS
+# country: Israel
+# source: SHELDA sub-hourly sea level dataset (IOC station ashd1), UTide analysis
+# station_id_context: IOC ashd1
+# restriction: Non-commercial use only
+# note: SHELDA (Balic & Sepic 2025, doi:10.14284/764), CC BY-NC 4.0. 2.3 Jahre 1-Minuten-Pegel, 67 Konstituenten, R^2=0.5714.
+# date_imported: 20260726
+# datum: station datum (IOC/SHELDA), Z0 = mean of the analysed record
+# confidence: 7
+# !units: meters
+# !longitude: 34.626447
+# !latitude: 31.796269
+Ashdod Marina, Israel
++00:00 :Asia/Jerusalem
+0.0242 meters
+J1              0.0021  251.71
+K1              0.0260  264.76
+K2              0.0203  231.82
+L2              0.0039  233.18
+x 0 0
+M2              0.1141  222.30
+M3              0.0016  6.61
+M4              0.0005  235.74
+M6              0.0006  299.81
+M8              0.0001  265.21
+N2              0.0195  223.50
+2N2             0.0033  209.63
+O1              0.0194  235.98
+OO1             0.0003  319.96
+P1              0.0084  276.61
+Q1              0.0023  252.04
+2Q1             0.0021  77.40
+R2              0.0016  271.44
+x 0 0
+S2              0.0646  234.32
+S4              0.0009  208.26
+x 0 0
+T2              0.0019  213.95
+LDA2            0.0016  215.06
+MU2             0.0034  235.87
+NU2             0.0034  218.96
+RHO1            0.0011  70.03
+MK3             0.0007  154.33
+x 0 0
+MN4             0.0007  213.86
+MS4             0.0001  30.99
+x 0 0
+MF              0.0038  175.10
+MSF             0.0031  226.95
+MM              0.0275  350.56
+x 0 0
+SSA             0.0887  234.27
+SA-IOS          0.1253  269.50
+x 0 0
+S1-IOS          0.0179  294.49
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0005  304.84
+2MK6            0.0002  77.22
+x 0 0
+2MN6            0.0003  178.33
+2MS6            0.0003  280.30
+x 0 0
+2SK5            0.0003  300.05
+2SM6            0.0001  92.89
+3MK7            0.0001  335.29
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0006  158.09
+BET1            0.0015  8.68
+CHI1            0.0038  353.41
+H1              0.0019  255.34
+H2              0.0004  192.35
+x 0 0
+ETA2            0.0018  250.18
+x 0 0
+UPS1            0.0029  255.38
+x 0 0
+x 0 0
+MK4             0.0004  312.27
+MKS2            0.0017  244.54
+x 0 0
+EPS2            0.0019  213.93
+MO3             0.0008  346.49
+x 0 0
+TAU1            0.0019  250.76
+x 0 0
+MSK6            0.0002  192.45
+MSM             0.0275  319.76
+MSN2            0.0014  222.45
+x 0 0
+x 0 0
+NO1             0.0017  320.52
+x 0 0
+OQ2             0.0008  229.28
+PHI1            0.0012  327.67
+x 0 0
+PI1             0.0020  197.57
+x 0 0
+PSI1            0.0022  76.50
+x 0 0
+x 0 0
+SIG1            0.0019  145.48
+SK3             0.0013  278.24
+SK4             0.0006  28.81
+SN4             0.0002  203.88
+x 0 0
+SO1             0.0016  257.78
+SO3             0.0004  43.15
+THE1            0.0004  148.88
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from SHELDA sub-hourly sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 45391 hourly means
+# from 2010-05-10 to 2018-06-24
+# R^2 = 0.5419, RMS error = 0.1065 m
+# Constituents analyzed: 67
+#
+# Hadera, Israel
+# BEGIN HOT COMMENTS
+# country: Israel
+# source: SHELDA sub-hourly sea level dataset (IOC station hade), UTide analysis
+# station_id_context: IOC hade
+# restriction: Non-commercial use only
+# note: SHELDA (Balic & Sepic 2025, doi:10.14284/764), CC BY-NC 4.0. 8.1 Jahre 1-Minuten-Pegel, 67 Konstituenten, R^2=0.5419.
+# date_imported: 20260726
+# datum: station datum (IOC/SHELDA), Z0 = mean of the analysed record
+# confidence: 9
+# !units: meters
+# !longitude: 34.863057
+# !latitude: 32.470530
+Hadera (Coal Pier), Israel
++00:00 :Asia/Jerusalem
+0.0037 meters
+J1              0.0014  247.97
+K1              0.0266  261.35
+K2              0.0194  229.64
+L2              0.0039  224.11
+x 0 0
+M2              0.1122  222.14
+M3              0.0024  339.25
+M4              0.0007  282.16
+M6              0.0001  283.38
+M8              0.0001  343.97
+N2              0.0184  223.83
+2N2             0.0021  232.14
+O1              0.0191  240.60
+OO1             0.0005  291.41
+P1              0.0101  264.07
+Q1              0.0025  222.30
+2Q1             0.0010  229.64
+R2              0.0005  204.44
+x 0 0
+S2              0.0656  235.33
+S4              0.0003  307.59
+x 0 0
+T2              0.0034  257.07
+LDA2            0.0011  232.65
+MU2             0.0028  236.50
+NU2             0.0036  221.92
+RHO1            0.0006  206.10
+MK3             0.0003  90.18
+x 0 0
+MN4             0.0001  277.35
+MS4             0.0006  299.66
+x 0 0
+MF              0.0023  41.34
+MSF             0.0052  286.53
+MM              0.0039  217.61
+x 0 0
+SSA             0.0199  240.68
+SA-IOS          0.0851  235.98
+x 0 0
+S1-IOS          0.0056  227.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK6            0.0001  112.75
+x 0 0
+2MN6            0.0001  275.10
+2MS6            0.0002  230.51
+x 0 0
+2SK5            0.0001  202.07
+2SM6            0.0002  147.18
+3MK7            0.0001  235.15
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0002  323.05
+BET1            0.0006  246.12
+CHI1            0.0006  159.71
+H1              0.0006  180.25
+H2              0.0007  177.24
+x 0 0
+ETA2            0.0010  228.93
+x 0 0
+UPS1            0.0007  335.99
+x 0 0
+x 0 0
+MK4             0.0003  13.68
+MKS2            0.0003  19.19
+x 0 0
+EPS2            0.0007  237.07
+MO3             0.0004  38.49
+x 0 0
+TAU1            0.0001  218.66
+x 0 0
+MSK6            0.0001  318.90
+MSM             0.0034  318.57
+MSN2            0.0002  29.75
+x 0 0
+x 0 0
+NO1             0.0016  275.92
+x 0 0
+OQ2             0.0003  303.40
+PHI1            0.0004  339.44
+x 0 0
+PI1             0.0012  249.99
+x 0 0
+PSI1            0.0004  150.17
+x 0 0
+x 0 0
+x 0 0
+SK3             0.0012  278.31
+SK4             0.0001  158.73
+SN4             0.0002  305.78
+x 0 0
+SO1             0.0009  269.71
+SO3             0.0005  96.14
+THE1            0.0010  289.79
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from SHELDA sub-hourly sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 15830 hourly means
+# from 2018-01-31 to 2020-06-14
+# R^2 = 0.6735, RMS error = 0.0828 m
+# Constituents analyzed: 67
+#
+# Hadera Port, Israel
+# BEGIN HOT COMMENTS
+# country: Israel
+# source: SHELDA sub-hourly sea level dataset (IOC station hade2), UTide analysis
+# station_id_context: IOC hade2
+# restriction: Non-commercial use only
+# note: SHELDA (Balic & Sepic 2025, doi:10.14284/764), CC BY-NC 4.0. 2.4 Jahre 1-Minuten-Pegel, 67 Konstituenten, R^2=0.6735.
+# date_imported: 20260726
+# datum: station datum (IOC/SHELDA), Z0 = mean of the analysed record
+# confidence: 9
+# !units: meters
+# !longitude: 34.882600
+# !latitude: 32.472330
+Hadera Port, Israel
++00:00 :Asia/Jerusalem
+0.0030 meters
+J1              0.0014  250.82
+K1              0.0259  256.94
+K2              0.0196  229.09
+L2              0.0027  239.59
+x 0 0
+M2              0.1131  221.40
+M3              0.0021  337.38
+M4              0.0006  273.30
+M6              0.0003  355.48
+M8              0.0002  327.59
+N2              0.0199  223.51
+2N2             0.0028  230.57
+O1              0.0207  240.54
+OO1             0.0017  277.53
+P1              0.0106  270.23
+Q1              0.0022  223.38
+2Q1             0.0004  232.20
+R2              0.0011  321.50
+x 0 0
+S2              0.0651  233.52
+S4              0.0010  239.39
+x 0 0
+T2              0.0034  249.88
+LDA2            0.0006  223.32
+MU2             0.0029  234.55
+NU2             0.0038  220.47
+RHO1            0.0005  56.67
+MK3             0.0002  56.14
+x 0 0
+MN4             0.0003  242.04
+MS4             0.0002  83.33
+x 0 0
+MF              0.0097  157.06
+MSF             0.0162  302.98
+MM              0.0072  300.63
+x 0 0
+SSA             0.0317  227.59
+SA-IOS          0.0854  249.61
+x 0 0
+S1-IOS          0.0107  313.83
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0001  82.39
+2MK6            0.0002  75.60
+x 0 0
+2MN6            0.0001  306.20
+2MS6            0.0001  214.90
+x 0 0
+2SK5            0.0003  174.14
+2SM6            0.0005  144.69
+3MK7            0.0002  307.60
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0015  31.65
+BET1            0.0006  326.96
+CHI1            0.0007  29.72
+H1              0.0007  136.50
+H2              0.0009  171.40
+x 0 0
+ETA2            0.0018  253.33
+x 0 0
+UPS1            0.0010  303.67
+x 0 0
+x 0 0
+MK4             0.0005  44.78
+MKS2            0.0009  77.17
+x 0 0
+EPS2            0.0004  246.99
+MO3             0.0007  337.96
+x 0 0
+TAU1            0.0002  31.94
+x 0 0
+MSK6            0.0003  138.09
+MSM             0.0124  297.24
+MSN2            0.0004  308.49
+x 0 0
+x 0 0
+NO1             0.0038  255.56
+x 0 0
+OQ2             0.0002  312.25
+PHI1            0.0014  288.14
+x 0 0
+PI1             0.0014  1.89
+x 0 0
+PSI1            0.0017  146.98
+x 0 0
+x 0 0
+SIG1            0.0002  16.62
+SK3             0.0014  256.21
+SK4             0.0004  257.77
+SN4             0.0001  113.67
+x 0 0
+SO1             0.0004  356.74
+SO3             0.0002  13.74
+THE1            0.0005  347.39
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# Harmonic constants derived from SHELDA sub-hourly sea level data
+# using UTide (v0.3.1) harmonic analysis
+# 20712 hourly means
+# from 2018-01-29 to 2021-01-01
+# R^2 = 0.7037, RMS error = 0.0814 m
+# Constituents analyzed: 67
+#
+# Haifa, Israel
+# BEGIN HOT COMMENTS
+# country: Israel
+# source: SHELDA sub-hourly sea level dataset (IOC station haif), UTide analysis
+# station_id_context: IOC haif
+# restriction: Non-commercial use only
+# note: SHELDA (Balic & Sepic 2025, doi:10.14284/764), CC BY-NC 4.0. 2.9 Jahre 1-Minuten-Pegel, 67 Konstituenten, R^2=0.7037.
+# date_imported: 20260726
+# datum: station datum (IOC/SHELDA), Z0 = mean of the analysed record
+# confidence: 9
+# !units: meters
+# !longitude: 35.007042
+# !latitude: 32.822454
+Haifa, Israel
++00:00 :Asia/Jerusalem
+0.0077 meters
+J1              0.0013  243.00
+K1              0.0276  258.70
+K2              0.0194  230.28
+L2              0.0034  246.58
+x 0 0
+M2              0.1135  221.44
+M3              0.0020  337.24
+M4              0.0007  273.53
+M6              0.0002  30.22
+M8              0.0001  244.32
+N2              0.0201  225.06
+2N2             0.0027  219.66
+O1              0.0202  241.73
+OO1             0.0012  269.69
+P1              0.0101  269.05
+Q1              0.0020  213.86
+2Q1             0.0007  233.19
+R2              0.0011  309.37
+x 0 0
+S2              0.0657  233.08
+S4              0.0008  237.55
+x 0 0
+T2              0.0035  245.04
+LDA2            0.0005  195.80
+MU2             0.0028  235.59
+NU2             0.0039  221.04
+RHO1            0.0005  213.16
+MK3             0.0003  197.03
+x 0 0
+MN4             0.0003  238.38
+MS4             0.0005  307.46
+x 0 0
+MF              0.0049  167.58
+MSF             0.0083  316.46
+MM              0.0030  318.31
+x 0 0
+SSA             0.0314  228.97
+SA-IOS          0.1013  247.06
+x 0 0
+S1-IOS          0.0120  324.88
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0001  285.14
+2MK6            0.0001  281.84
+x 0 0
+2MN6            0.0002  318.55
+2MS6            0.0001  271.31
+x 0 0
+2SK5            0.0002  16.03
+2SM6            0.0001  347.37
+3MK7            0.0001  239.46
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+ALP1            0.0010  68.57
+BET1            0.0006  173.84
+CHI1            0.0011  351.34
+H1              0.0004  201.77
+H2              0.0005  180.37
+x 0 0
+ETA2            0.0016  234.09
+x 0 0
+UPS1            0.0008  315.46
+x 0 0
+x 0 0
+MK4             0.0002  72.43
+MKS2            0.0005  151.85
+x 0 0
+EPS2            0.0005  210.46
+MO3             0.0008  308.42
+x 0 0
+TAU1            0.0007  83.91
+x 0 0
+MSK6            0.0001  230.06
+MSM             0.0100  303.68
+MSN2            0.0006  242.41
+x 0 0
+x 0 0
+NO1             0.0026  248.93
+x 0 0
+OQ2             0.0001  244.50
+PHI1            0.0007  314.69
+x 0 0
+PI1             0.0007  318.80
+x 0 0
+PSI1            0.0016  155.12
+x 0 0
+x 0 0
+SIG1            0.0005  54.12
+SK3             0.0015  253.35
+SK4             0.0007  256.20
+SN4             0.0001  154.95
+x 0 0
+SO1             0.0002  247.69
+SO3             0.0003  134.69
+THE1            0.0006  347.04
 x 0 0
 x 0 0
 x 0 0

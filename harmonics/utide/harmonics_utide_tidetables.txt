@@ -335488,8 +335488,8 @@ x 0 0
 # shom_code: BASSAS_DA_INDIA
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9990 rms=0.0241m const=59
 # !units: meters
-# !longitude: 39.7460
-# !latitude: -21.4718
+# !longitude: 39.7297
+# !latitude: -21.4740
 Bassas da India, Îles Éparses
 +00:00 :UTC
 2.0742 meters
@@ -336260,9 +336260,9 @@ x 0 0
 # shom_code: BEYROUTH
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9984 rms=0.0043m const=59
 # !units: meters
-# !longitude: 35.5467
-# !latitude: 33.9083
-Beyrouth, Lebanon
+# !longitude: 35.5306
+# !latitude: 33.9092
+Beirut (Beyrouth), Lebanon
 +00:00 :UTC
 0.5256 meters
 J1              0.0009  262.41
@@ -357721,8 +357721,8 @@ x 0 0
 # shom_code: LONGONI
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9969 rms=0.0465m const=59
 # !units: meters
-# !longitude: 45.1617
-# !latitude: -12.7242
+# !longitude: 45.1636
+# !latitude: -12.7231
 Longoni, Mayotte
 +00:00 :UTC
 2.1278 meters
@@ -360044,8 +360044,8 @@ x 0 0
 # shom_code: RECIF_MTITI
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9980 rms=0.0390m const=59
 # !units: meters
-# !longitude: 45.0633
-# !latitude: -12.9236
+# !longitude: 45.0788
+# !latitude: -12.9112
 Bouéni (Mtiti), Mayotte
 +00:00 :UTC
 2.1665 meters
@@ -372049,8 +372049,8 @@ x 0 0
 # shom_code: SADA
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9975 rms=0.0436m const=59
 # !units: meters
-# !longitude: 45.1000
-# !latitude: -12.8400
+# !longitude: 45.1024
+# !latitude: -12.8434
 Sada (Baie de Chiconi), Mayotte
 +00:00 :UTC
 2.1983 meters
@@ -376114,8 +376114,8 @@ x 0 0
 # shom_code: SELAATA
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9983 rms=0.0043m const=59
 # !units: meters
-# !longitude: 35.6525
-# !latitude: 34.2848
+# !longitude: 35.6552
+# !latitude: 34.2844
 Selaata, Lebanon
 +00:00 :UTC
 0.4918 meters
@@ -376500,9 +376500,9 @@ x 0 0
 # shom_code: SOUR
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9984 rms=0.0043m const=59
 # !units: meters
-# !longitude: 35.2000
-# !latitude: 33.2742
-Sour, Lebanon
+# !longitude: 35.1981
+# !latitude: 33.2745
+Sour (Tyre), Lebanon
 +00:00 :UTC
 0.5071 meters
 J1              0.0010  268.94
@@ -379400,7 +379400,7 @@ x 0 0
 # !units: meters
 # !longitude: 49.4267
 # !latitude: -18.1600
-Toamasina, Madagascar
+Toamasina (Tamatave), Madagascar
 +00:00 :UTC
 0.7897 meters
 J1              0.0013  356.04
@@ -379784,8 +379784,8 @@ x 0 0
 # shom_code: TOLIARA
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9779 rms=0.1006m const=59
 # !units: meters
-# !longitude: 43.6590
-# !latitude: -23.3727
+# !longitude: 43.6641
+# !latitude: -23.3774
 Toliara, Madagascar
 +00:00 :UTC
 2.1008 meters
@@ -384030,8 +384030,8 @@ x 0 0
 # shom_code: ILE_JUAN_DE_NOVA
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9989 rms=0.0301m const=59
 # !units: meters
-# !longitude: 42.7368
-# !latitude: -17.0375
+# !longitude: 42.7265
+# !latitude: -17.0493
 Île Juan de Nova, Îles Éparses
 +00:00 :UTC
 2.6064 meters
@@ -609327,10 +609327,12 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SIG1            0.0001  175.24
 x 0 0
 SK4             0.0001  168.20
 SN4             0.0001  99.85
+x 0 0
 SO1             0.0001  176.69
 x 0 0
 x 0 0
@@ -609526,7 +609528,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SN4             0.0001  325.65
+x 0 0
 SO1             0.0001  0.53
 SO3             0.0001  45.76
 x 0 0
@@ -609721,8 +609725,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK4             0.0001  293.17
 SN4             0.0001  183.94
+x 0 0
 SO1             0.0001  114.49
 x 0 0
 x 0 0
@@ -609916,7 +609922,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK3             0.0001  321.59
+x 0 0
 x 0 0
 x 0 0
 SO1             0.0001  304.91
@@ -610111,10 +610119,12 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SIG1            0.0001  139.84
 SK3             0.0001  320.52
 SK4             0.0001  226.33
 SN4             0.0001  138.59
+x 0 0
 SO1             0.0001  118.63
 x 0 0
 x 0 0
@@ -610307,8 +610317,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SIG1            0.0001  93.36
 SK3             0.0001  105.76
+x 0 0
 x 0 0
 x 0 0
 SO1             0.0001  280.27
@@ -676058,9 +676070,9 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0036m const=68
 # !units: meters
-# !longitude: 40.7333
-# !latitude: -15.0333
-Porto De Mocambique, Mozambique
+# !longitude: 40.7343
+# !latitude: -15.0321
+Ilha de Moçambique, Mozambique
 +00:00 :Africa/Maputo
 2.2600 meters
 J1              0.0024  91.79
@@ -676250,8 +676262,8 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0045m const=68
 # !units: meters
-# !longitude: 34.8333
-# !latitude: -19.8167
+# !longitude: 34.8326
+# !latitude: -19.8254
 Beira, Mozambique
 +00:00 :Africa/Maputo
 3.5600 meters
@@ -701674,7 +701686,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SN4             0.0001  333.44
+x 0 0
 SO1             0.0001  2.67
 SO3             0.0001  51.62
 x 0 0
@@ -702432,7 +702446,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK3             0.0001  326.09
+x 0 0
 x 0 0
 x 0 0
 SO1             0.0001  306.52
@@ -702620,7 +702636,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK3             0.0001  332.10
+x 0 0
 x 0 0
 x 0 0
 SO1             0.0001  308.66
@@ -702808,7 +702826,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK3             0.0001  326.09
+x 0 0
 x 0 0
 x 0 0
 SO1             0.0001  306.52
@@ -702996,7 +703016,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK3             0.0001  311.83
+x 0 0
 x 0 0
 x 0 0
 SO1             0.0001  301.43
@@ -703184,7 +703206,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
 SK3             0.0001  314.83
+x 0 0
 x 0 0
 x 0 0
 SO1             0.0001  302.50
