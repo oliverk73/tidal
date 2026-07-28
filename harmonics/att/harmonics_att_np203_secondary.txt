@@ -62646,38 +62646,231 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: United Arab Emirates
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
-# att_number: 4210
-# note: NP203 Part II Sekundaerhafen-Transfer von Mina Zayid (Abu Dhabi) (NP203), United Arab Emirates (att 4210). fS=1.00 fN=1.00 dt=+15min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
+# att_number: 4208a
+# note: NP203 Part III S.244 (2015), Meridian +04:00. Gemessene Konstanten.
+# note: Position aus Part II S.230. N2/K2 inferiert.
+# note: 20260728 neu angelegt -- Station fehlte in der Sammlung.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
+# !units: meters
+# !longitude: 54.7167
+# !latitude: 24.8167
+Khawr Ghurabi, United Arab Emirates
++04:00 :Asia/Dubai
+0.8800 meters
+x 0 0
+K1              0.2600  164.00
+K2              0.0378  72.00
+x 0 0
+x 0 0
+M2              0.3600  8.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N2              0.0684  333.70
+x 0 0
+O1              0.1300  115.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1400  72.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# BEGIN HOT COMMENTS
+# country: United Arab Emirates
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
+# att_number: 4209
+# note: NP203 Part III S.244 (2015), Meridian +04:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
+# datum: Chart Datum (Z0 = mean level above CD)
+# confidence: 7
 # !units: meters
 # !longitude: 54.5450
 # !latitude: 24.5482
 Khawr Sa'diyat, United Arab Emirates
 +04:00 :Asia/Dubai
-1.2000 meters
+1.2300 meters
 x 0 0
-K1              0.3200  165.76
-K2              0.0486  79.52
-x 0 0
-x 0 0
-M2              0.4200  26.25
+K1              0.2400  235.00
+K2              0.0324  80.00
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0798  357.70
-x 0 0
-O1              0.1800  111.49
+M2              0.4500  80.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0855  80.00
+x 0 0
+O1              0.2400  166.00
 x 0 0
 x 0 0
-S2              0.1800  79.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1200  80.00
 x 0 0
 x 0 0
 x 0 0
@@ -64172,38 +64365,40 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: United Arab Emirates
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
-# att_number: 4216
-# note: NP203 Part II Sekundaerhafen-Transfer von Halat al Mubarraz (NP203), United Arab Emirates (att 4216). fS=0.27 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
+# att_number: 4215
+# note: NP203 Part III S.244 (2015), Meridian +04:00. Gemessene Konstanten.
+# note: Position aus Part II S.230. N2/K2 inferiert.
+# note: 20260728 neu angelegt -- Station fehlte in der Sammlung.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
-# !longitude: 53.0919
-# !latitude: 24.8722
-Zirku, United Arab Emirates
+# !longitude: 53.5167
+# !latitude: 24.8500
+Zaqqum Oilfield (Platform Zws), United Arab Emirates
 +04:00 :Asia/Dubai
-0.9600 meters
+1.2000 meters
 x 0 0
-K1              0.0684  158.00
-K2              0.0137  77.00
-x 0 0
-x 0 0
-M2              0.0592  17.00
+K1              0.3400  153.00
+K2              0.0324  67.00
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0113  344.84
-x 0 0
-O1              0.0350  113.00
+M2              0.2600  16.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0494  348.66
+x 0 0
+O1              0.1800  100.00
 x 0 0
 x 0 0
-S2              0.0507  77.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1200  67.00
 x 0 0
 x 0 0
 x 0 0
@@ -64361,38 +64556,231 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: United Arab Emirates
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
-# att_number: 4217
-# note: NP203 Part II Sekundaerhafen-Transfer von Halat al Mubarraz (NP203), United Arab Emirates (att 4217). fS=0.27 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
+# att_number: 4219
+# note: NP203 Part III S.244 (2015), Meridian +04:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
+# !units: meters
+# !longitude: 53.0919
+# !latitude: 24.8722
+Zirku, United Arab Emirates
++04:00 :Asia/Dubai
+0.9600 meters
+x 0 0
+K1              0.3600  156.00
+K2              0.0108  97.00
+x 0 0
+x 0 0
+M2              0.1100  22.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N2              0.0209  341.80
+x 0 0
+O1              0.1600  117.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0400  97.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# BEGIN HOT COMMENTS
+# country: United Arab Emirates
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
+# att_number: 4220
+# note: NP203 Part III S.244 (2015), Meridian +04:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
+# datum: Chart Datum (Z0 = mean level above CD)
+# confidence: 7
 # !units: meters
 # !longitude: 53.0830
 # !latitude: 25.0330
 Zirku Terminal, United Arab Emirates
 +04:00 :Asia/Dubai
-1.0700 meters
+1.0000 meters
 x 0 0
-K1              0.0684  158.00
-K2              0.0137  77.00
-x 0 0
-x 0 0
-M2              0.0592  17.00
+K1              0.3500  152.00
+K2              0.0135  90.00
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0113  344.84
-x 0 0
-O1              0.0350  113.00
+M2              0.1000  40.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0190  13.20
+x 0 0
+O1              0.1700  100.00
 x 0 0
 x 0 0
-S2              0.0507  77.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0500  90.00
 x 0 0
 x 0 0
 x 0 0
@@ -74482,12 +74870,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4255a
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4255a). fS=0.29 fN=1.00 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 49.6500
 # !latitude: 27.3000
@@ -74495,25 +74885,25 @@ Abu Ali, Saudi Arabia
 +03:00 :Asia/Riyadh
 1.0200 meters
 x 0 0
-K1              0.1221  319.00
-K2              0.0000  181.00
+K1              0.1800  323.00
+K2              0.0432  192.00
 x 0 0
 x 0 0
-M2              0.2250  124.00
+M2              0.4600  132.00
 x 0 0
+M4              0.0133  232.00
+M6              0.0022  0.00
 x 0 0
+N2              0.0874  99.84
 x 0 0
-x 0 0
-N2              0.0427  93.45
-x 0 0
-O1              0.0900  275.00
-x 0 0
-x 0 0
-x 0 0
+O1              0.1400  272.00
 x 0 0
 x 0 0
 x 0 0
-S2              0.0000  181.00
+x 0 0
+x 0 0
+x 0 0
+S2              0.1600  192.00
 x 0 0
 x 0 0
 x 0 0
@@ -74671,12 +75061,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4255b
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4255b). fS=0.13 fN=0.81 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 49.9500
 # !latitude: 27.2000
@@ -74684,25 +75076,25 @@ Jazirat al Jurayd, Saudi Arabia
 +03:00 :Asia/Riyadh
 1.0000 meters
 x 0 0
-K1              0.0895  319.00
-K2              0.0000  181.00
+K1              0.1500  305.00
+K2              0.0432  184.00
 x 0 0
 x 0 0
-M2              0.1500  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0285  93.45
-x 0 0
-O1              0.0659  275.00
+M2              0.4100  124.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0779  91.84
+x 0 0
+O1              0.1200  269.00
 x 0 0
 x 0 0
-S2              0.0000  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1600  184.00
 x 0 0
 x 0 0
 x 0 0
@@ -74860,12 +75252,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4256
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4256). fS=0.13 fN=0.63 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 50.1830
 # !latitude: 27.7830
@@ -74873,25 +75267,25 @@ Al Arabiyah, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.8200 meters
 x 0 0
-K1              0.0719  319.00
-K2              0.0000  181.00
+K1              0.1900  294.00
+K2              0.0351  196.00
 x 0 0
 x 0 0
-M2              0.1250  124.00
+M2              0.3500  138.00
 x 0 0
+M4              0.0054  244.00
+M6              0.0001  53.00
 x 0 0
+N2              0.0665  106.91
 x 0 0
-x 0 0
-N2              0.0238  93.45
-x 0 0
-O1              0.0530  275.00
-x 0 0
-x 0 0
-x 0 0
+O1              0.1400  249.00
 x 0 0
 x 0 0
 x 0 0
-S2              0.0000  181.00
+x 0 0
+x 0 0
+x 0 0
+S2              0.1300  196.00
 x 0 0
 x 0 0
 x 0 0
@@ -75049,12 +75443,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4257
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4257). fS=0.13 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.9000
 # !latitude: 27.5830
@@ -75062,25 +75458,25 @@ Manifah, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.8400 meters
 x 0 0
-K1              0.0168  319.00
-K2              0.0090  181.00
+K1              0.3100  316.00
+K2              0.0216  167.00
 x 0 0
 x 0 0
-M2              0.0468  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0089  93.45
-x 0 0
-O1              0.0124  275.00
+M2              0.2200  100.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0418  64.09
+x 0 0
+O1              0.2100  267.00
 x 0 0
 x 0 0
-S2              0.0333  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0800  167.00
 x 0 0
 x 0 0
 x 0 0
@@ -75238,12 +75634,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4257a
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4257a). fS=0.21 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.8830
 # !latitude: 27.7830
@@ -75251,25 +75649,25 @@ Tanajib Pier, Saudi Arabia
 +03:00 :Asia/Riyadh
 1.0600 meters
 x 0 0
-K1              0.0244  319.00
-K2              0.0157  181.00
+K1              0.3200  314.00
+K2              0.0216  163.00
 x 0 0
 x 0 0
-M2              0.0718  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0136  93.45
-x 0 0
-O1              0.0179  275.00
+M2              0.2000  94.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0380  57.02
+x 0 0
+O1              0.2100  267.00
 x 0 0
 x 0 0
-S2              0.0583  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0800  163.00
 x 0 0
 x 0 0
 x 0 0
@@ -75427,12 +75825,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4258
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4258). fS=0.10 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.7670
 # !latitude: 28.0000
@@ -75440,25 +75840,25 @@ Ras as Saffaniyah, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.9700 meters
 x 0 0
-K1              0.0143  319.00
-K2              0.0067  181.00
+K1              0.3900  311.00
+K2              0.0189  76.00
 x 0 0
 x 0 0
-M2              0.0382  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0073  93.45
-x 0 0
-O1              0.0105  275.00
+M2              0.2500  15.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0475  342.30
+x 0 0
+O1              0.2500  263.00
 x 0 0
 x 0 0
-S2              0.0248  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0700  76.00
 x 0 0
 x 0 0
 x 0 0
@@ -75616,12 +76016,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4259
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4259). fS=0.13 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.6170
 # !latitude: 28.1170
@@ -75629,25 +76031,25 @@ Mina Ras Mish'ab, Saudi Arabia
 +03:00 :Asia/Riyadh
 1.0000 meters
 x 0 0
-K1              0.0168  319.00
-K2              0.0090  181.00
+K1              0.3800  304.00
+K2              0.0216  65.00
 x 0 0
 x 0 0
-M2              0.0467  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0089  93.45
-x 0 0
-O1              0.0124  275.00
+M2              0.2500  3.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0475  329.77
+x 0 0
+O1              0.2100  263.00
 x 0 0
 x 0 0
-S2              0.0332  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0800  65.00
 x 0 0
 x 0 0
 x 0 0
@@ -75805,12 +76207,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4260
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4260). fS=0.10 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 49.6330
 # !latitude: 28.4500
@@ -75818,25 +76222,25 @@ Marjan Oilfield, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.7700 meters
 x 0 0
-K1              0.0143  319.00
-K2              0.0067  181.00
+K1              0.3200  297.00
+K2              0.0081  247.00
 x 0 0
 x 0 0
-M2              0.0382  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0073  93.45
-x 0 0
-O1              0.0105  275.00
+M2              0.0500  209.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0095  188.63
+x 0 0
+O1              0.2100  251.00
 x 0 0
 x 0 0
-S2              0.0248  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0300  247.00
 x 0 0
 x 0 0
 x 0 0
@@ -75994,12 +76398,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4260a
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4260a). fS=0.05 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 49.6170
 # !latitude: 28.2500
@@ -76007,25 +76413,25 @@ Lawhah Oilfield, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.7200 meters
 x 0 0
-K1              0.0095  319.00
-K2              0.0024  181.00
+K1              0.3000  299.00
+K2              0.0108  209.00
 x 0 0
 x 0 0
-M2              0.0225  124.00
+M2              0.0800  145.00
 x 0 0
+M4              0.0073  11.00
+M6              0.0002  142.00
 x 0 0
+N2              0.0152  110.70
 x 0 0
-x 0 0
-N2              0.0043  93.45
-x 0 0
-O1              0.0070  275.00
-x 0 0
-x 0 0
-x 0 0
+O1              0.2000  253.00
 x 0 0
 x 0 0
 x 0 0
-S2              0.0090  181.00
+x 0 0
+x 0 0
+x 0 0
+S2              0.0400  209.00
 x 0 0
 x 0 0
 x 0 0
@@ -76183,12 +76589,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4260b
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4260b). fS=0.10 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 49.1670
 # !latitude: 28.3830
@@ -76196,25 +76604,25 @@ Zuluf Oilfield, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.6800 meters
 x 0 0
-K1              0.0143  319.00
-K2              0.0067  181.00
+K1              0.3600  296.00
+K2              0.0054  31.00
 x 0 0
 x 0 0
-M2              0.0382  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0073  93.45
-x 0 0
-O1              0.0105  275.00
+M2              0.1000  340.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0190  145.62
+x 0 0
+O1              0.2200  250.00
 x 0 0
 x 0 0
-S2              0.0248  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0200  31.00
 x 0 0
 x 0 0
 x 0 0
@@ -76372,12 +76780,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4260c
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4260c). fS=0.05 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 49.0000
 # !latitude: 28.4170
@@ -76385,25 +76795,25 @@ Saffaniyah Oilfield, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.8200 meters
 x 0 0
-K1              0.0095  319.00
-K2              0.0024  181.00
+K1              0.3600  303.00
+K2              0.0135  36.00
 x 0 0
 x 0 0
-M2              0.0225  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0043  93.45
-x 0 0
-O1              0.0070  275.00
+M2              0.1700  342.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0323  146.02
+x 0 0
+O1              0.2400  255.00
 x 0 0
 x 0 0
-S2              0.0090  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0500  36.00
 x 0 0
 x 0 0
 x 0 0
@@ -76561,12 +76971,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4260d
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4260d). fS=0.21 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.9330
 # !latitude: 28.4670
@@ -76574,25 +76986,25 @@ Khafji Oilfield, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.9000 meters
 x 0 0
-K1              0.0244  319.00
-K2              0.0157  181.00
+K1              0.4000  300.00
+K2              0.0189  34.00
 x 0 0
 x 0 0
-M2              0.0718  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0136  93.45
-x 0 0
-O1              0.0179  275.00
+M2              0.2200  335.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0418  136.34
+x 0 0
+O1              0.2400  265.00
 x 0 0
 x 0 0
-S2              0.0583  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0700  34.00
 x 0 0
 x 0 0
 x 0 0
@@ -76750,12 +77162,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4260e
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4260e). fS=0.21 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.9670
 # !latitude: 28.6830
@@ -76763,25 +77177,25 @@ Hout Oilfield, Saudi Arabia
 +03:00 :Asia/Riyadh
 1.0000 meters
 x 0 0
-K1              0.0244  319.00
-K2              0.0157  181.00
+K1              0.4100  298.00
+K2              0.0216  20.00
 x 0 0
 x 0 0
-M2              0.0718  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0136  93.45
-x 0 0
-O1              0.0179  275.00
+M2              0.2600  322.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0494  123.87
+x 0 0
+O1              0.2400  264.00
 x 0 0
 x 0 0
-S2              0.0583  181.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0800  20.00
 x 0 0
 x 0 0
 x 0 0
@@ -76939,12 +77353,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Saudi Arabia
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4260f
-# note: NP203 Part II Sekundaerhafen-Transfer von Al Jubayl (NP203), Saudi Arabia (att 4260f). fS=0.37 fN=0.07 dt=+2min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.5170
 # !latitude: 28.4170
@@ -76952,25 +77368,25 @@ Ras al Khafji, Saudi Arabia
 +03:00 :Asia/Riyadh
 1.1100 meters
 x 0 0
-K1              0.0417  319.63
-K2              0.0283  182.25
+K1              0.4200  307.00
+K2              0.0270  42.00
 x 0 0
 x 0 0
-M2              0.1250  125.21
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0238  94.63
-x 0 0
-O1              0.0307  275.58
+M2              0.3300  344.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0627  145.87
+x 0 0
+O1              0.2700  258.00
 x 0 0
 x 0 0
-S2              0.1050  182.25
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1000  42.00
 x 0 0
 x 0 0
 x 0 0
@@ -77128,45 +77544,47 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Kuwait
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4260g
-# note: NP203 Part II Sekundaerhafen-Transfer von Mina Alzour (Mina Saud), Kuwait (att 4260g). fS=0.46 fN=0.11 dt=-4min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.6500
 # !latitude: 28.6830
 Jazirat Umm al Maradim, Kuwait
 +03:00 :Asia/Kuwait
 1.2100 meters
-J1              0.0060  326.89
-K1              0.1229  304.12
-K2              0.0312  36.95
-L2              0.0038  354.28
-M1              0.0054  281.15
-M2              0.1450  334.31
+x 0 0
+K1              0.4100  310.00
+K2              0.0297  19.00
+x 0 0
+x 0 0
+M2              0.3400  333.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0276  314.34
+N2              0.0646  141.30
 x 0 0
-O1              0.0771  258.19
-OO1             0.0034  350.06
-P1              0.0406  300.73
-Q1              0.0146  238.22
-x 0 0
-R2              0.0003  34.55
-x 0 0
-S2              0.1150  32.25
+O1              0.2700  250.00
 x 0 0
 x 0 0
-T2              0.0028  29.95
-LDA2            0.0009  1.18
-MU2             0.0035  276.37
-NU2             0.0055  317.04
-RHO1            0.0029  238.51
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1100  19.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -77317,45 +77735,47 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Kuwait
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4261a
-# note: NP203 Part II Sekundaerhafen-Transfer von Mina Alzour (Mina Saud), Kuwait (att 4261a). fS=0.64 fN=0.46 dt=-25min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.7830
 # !latitude: 28.8170
 Jazirat Qaru, Kuwait
 +03:00 :Asia/Kuwait
-1.2100 meters
-J1              0.0116  321.31
-K1              0.2380  298.73
-K2              0.0312  26.17
-L2              0.0064  343.70
-M1              0.0105  275.96
-M2              0.2450  323.92
+1.3100 meters
+x 0 0
+K1              0.4400  298.00
+K2              0.0351  18.00
+x 0 0
+x 0 0
+M2              0.3700  323.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0467  304.15
+N2              0.0703  126.48
 x 0 0
-O1              0.1495  253.19
-OO1             0.0066  344.28
-P1              0.0786  295.37
-Q1              0.0282  233.42
-x 0 0
-R2              0.0006  23.78
-x 0 0
-S2              0.1150  21.50
+O1              0.3100  254.00
 x 0 0
 x 0 0
-T2              0.0047  19.22
-LDA2            0.0017  350.63
-MU2             0.0058  266.35
-NU2             0.0093  306.82
-RHO1            0.0055  233.69
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1300  18.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -77506,45 +77926,47 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Kuwait
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4261b
-# note: NP203 Part II Sekundaerhafen-Transfer von Mina Alzour (Mina Saud), Kuwait (att 4261b). fS=0.64 fN=0.64 dt=-16min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.5000
 # !latitude: 29.0670
 Jazirat Kubbar, Kuwait
 +03:00 :Asia/Kuwait
 1.5400 meters
-J1              0.0135  323.77
-K1              0.2764  301.11
-K2              0.0244  30.93
-L2              0.0071  348.37
-M1              0.0122  278.26
-M2              0.2700  328.51
+x 0 0
+K1              0.4000  305.00
+K2              0.0405  19.00
+x 0 0
+x 0 0
+M2              0.5400  324.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0514  308.65
+N2              0.1026  127.48
 x 0 0
-O1              0.1736  255.40
-OO1             0.0077  346.83
-P1              0.0913  297.74
-Q1              0.0328  235.54
-x 0 0
-R2              0.0006  28.54
-x 0 0
-S2              0.0900  26.25
+O1              0.2800  249.00
 x 0 0
 x 0 0
-T2              0.0051  23.96
-LDA2            0.0019  355.29
-MU2             0.0064  270.77
-NU2             0.0103  311.33
-RHO1            0.0064  235.82
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1500  19.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -77695,45 +78117,47 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Kuwait
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4261c
-# note: NP203 Part II Sekundaerhafen-Transfer von Mina Alzour (Mina Saud), Kuwait (att 4261c). fS=0.73 fN=0.46 dt=+8min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 48.2830
 # !latitude: 28.8670
 Ras al Qulay'ah, Kuwait
 +03:00 :Asia/Kuwait
 1.3500 meters
-J1              0.0126  329.88
-K1              0.2572  307.01
-K2              0.0380  42.71
-L2              0.0071  359.94
-M1              0.0114  283.93
-M2              0.2700  339.86
+x 0 0
+K1              0.5300  312.00
+K2              0.0297  52.00
+x 0 0
+x 0 0
+M2              0.5100  336.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0514  319.79
+N2              0.0969  128.22
 x 0 0
-O1              0.1615  260.86
-OO1             0.0072  353.15
-P1              0.0849  303.59
-Q1              0.0305  240.79
-x 0 0
-R2              0.0006  40.31
-x 0 0
-S2              0.1400  38.00
+O1              0.2700  261.00
 x 0 0
 x 0 0
-T2              0.0051  35.69
-LDA2            0.0018  6.83
-MU2             0.0064  281.73
-NU2             0.0103  322.50
-RHO1            0.0060  241.10
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1100  52.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -77884,49 +78308,51 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Kuwait
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4262a
-# note: NP203 Part II Sekundaerhafen-Transfer von Mina Al Ahmadi, Kuwait (att 4262a). fS=0.94 fN=1.11 dt=+2min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 48.1330
 # !latitude: 29.1670
 Al Fintas, Kuwait
 +03:00 :Asia/Kuwait
 1.7000 meters
-J1              0.0235  333.82
-K1              0.4389  308.50
-K2              0.0323  48.40
-L2              0.0170  359.98
-M1              0.0205  282.98
-M2              0.6270  335.97
 x 0 0
-M4              0.0210  51.93
+K1              0.4700  305.00
+K2              0.0621  32.00
 x 0 0
 x 0 0
-N2              0.1220  311.95
-x 0 0
-O1              0.2936  257.46
-OO1             0.0123  359.54
-P1              0.1453  304.70
-x 0 0
-x 0 0
-R2              0.0010  45.70
-x 0 0
-S2              0.1180  43.00
-x 0 0
-x 0 0
-T2              0.0100  40.30
-LDA2            0.0041  7.08
-MU2             0.0150  268.93
-NU2             0.0240  315.15
-RHO1            0.0113  235.55
+M2              0.6600  334.00
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0090  186.97
+x 0 0
+N2              0.1254  135.87
+x 0 0
+O1              0.2900  257.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2300  32.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -78073,49 +78499,51 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Kuwait
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4262b
-# note: NP203 Part II Sekundaerhafen-Transfer von Mina Al Ahmadi, Kuwait (att 4262b). fS=1.00 fN=1.11 dt=-13min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 48.4330
 # !latitude: 29.3670
 Jazirat Awhah, Kuwait
 +03:00 :Asia/Kuwait
 1.8200 meters
-J1              0.0243  329.92
-K1              0.4524  304.74
-K2              0.0392  40.88
-L2              0.0177  352.60
-M1              0.0211  279.36
-M2              0.6520  328.72
 x 0 0
-M4              0.0227  37.44
+K1              0.4800  305.00
+K2              0.0621  26.00
 x 0 0
 x 0 0
-N2              0.1269  304.84
-x 0 0
-O1              0.3026  253.98
-OO1             0.0127  355.50
-P1              0.1497  300.96
-x 0 0
-x 0 0
-R2              0.0010  38.19
-x 0 0
-S2              0.1430  35.50
-x 0 0
-x 0 0
-T2              0.0104  32.81
-LDA2            0.0042  359.72
-MU2             0.0156  261.94
-NU2             0.0250  308.02
-RHO1            0.0116  232.18
+M2              0.7100  326.00
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0097  172.22
+x 0 0
+N2              0.1349  126.80
+x 0 0
+O1              0.3200  254.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2300  26.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -78262,12 +78690,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Kuwait
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4264
-# note: NP203 Part II Sekundaerhafen-Transfer von Ash Shuwaykh (Kuwait) (NP203), Kuwait (att 4264). fS=1.08 fN=1.16 dt=+66min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 47.8000
 # !latitude: 29.3830
@@ -78275,25 +78705,25 @@ Mina al Dawhah, Kuwait
 +03:00 :Asia/Kuwait
 2.1700 meters
 x 0 0
-K1              0.5828  326.55
-K2              0.0918  87.09
+K1              0.5100  309.00
+K2              0.0891  54.00
 x 0 0
 x 0 0
-M2              1.0500  16.88
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1995  172.26
-x 0 0
-O1              0.3698  276.34
+M2              0.9900  341.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.1881  134.83
+x 0 0
+O1              0.3300  267.00
 x 0 0
 x 0 0
-S2              0.3400  87.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.3300  54.00
 x 0 0
 x 0 0
 x 0 0
@@ -78451,12 +78881,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Kuwait
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4265
-# note: NP203 Part II Sekundaerhafen-Transfer von Ash Shuwaykh (Kuwait) (NP203), Kuwait (att 4265). fS=1.08 fN=1.16 dt=+42min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 48.2330
 # !latitude: 29.5500
@@ -78464,25 +78896,25 @@ Ras al Barshah (Beacon No. 2), Kuwait
 +03:00 :Asia/Kuwait
 2.1600 meters
 x 0 0
-K1              0.5828  320.53
-K2              0.0918  75.06
+K1              0.5300  304.00
+K2              0.0891  33.00
 x 0 0
 x 0 0
-M2              1.0500  5.29
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1995  160.89
-x 0 0
-O1              0.3698  270.76
+M2              0.9000  330.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.1710  129.19
+x 0 0
+O1              0.3700  255.00
 x 0 0
 x 0 0
-S2              0.3400  75.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.3300  33.00
 x 0 0
 x 0 0
 x 0 0
@@ -78640,12 +79072,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iraq
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4266a
-# note: NP203 Part II Sekundaerhafen-Transfer von Ash Shuwaykh (Kuwait) (NP203), Kuwait (att 4266a). fS=1.39 fN=1.57 dt=+75min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:00. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 48.0330
 # !latitude: 29.9330
@@ -78653,25 +79087,25 @@ Umm Al-Aseed (Beacon No. 15), Iraq
 +03:00 :Asia/Kuwait
 2.6900 meters
 x 0 0
-K1              0.7700  328.80
-K2              0.1121  91.60
+K1              0.6500  311.00
+K2              0.1350  51.00
 x 0 0
 x 0 0
-M2              1.3750  21.23
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2612  176.53
-x 0 0
-O1              0.4886  278.43
+M2              1.3200  345.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.2508  142.58
+x 0 0
+O1              0.3200  262.00
 x 0 0
 x 0 0
-S2              0.4150  91.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.5000  51.00
 x 0 0
 x 0 0
 x 0 0
@@ -78829,54 +79263,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4276b
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4276b). fS=0.75 fN=0.55 dt=+4min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 48.7170
 # !latitude: 29.7000
 Khowr-e Musa Approaches, Iran
 +03:30 :Asia/Tehran
 1.8200 meters
-J1              0.0162  325.71
-K1              0.3202  301.88
-K2              0.0782  19.65
-L2              0.0185  338.72
-M1              0.0149  277.85
-M2              0.5940  314.69
 x 0 0
-M4              0.0178  175.38
+K1              0.4500  298.00
+K2              0.0621  352.00
 x 0 0
 x 0 0
-N2              0.1285  290.66
-x 0 0
-O1              0.2055  253.81
-OO1             0.0091  349.94
-P1              0.1063  298.27
-Q1              0.0305  240.78
-x 0 0
-R2              0.0021  17.15
-x 0 0
-S2              0.2880  14.75
-x 0 0
-x 0 0
-T2              0.0123  12.35
-LDA2            0.0039  342.52
-MU2             0.0144  254.63
-NU2             0.0246  293.86
-RHO1            0.0078  233.19
-x 0 0
-x 0 0
-MN4             0.0070  153.35
-MS4             0.0140  244.44
+M2              0.5800  306.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  125.00
+N2              0.1102  281.34
+x 0 0
+O1              0.3000  258.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2300  352.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -79018,54 +79454,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4283a
-# note: NP203 Part II Sekundaerhafen-Transfer von Bushehr, Iran (att 4283a). fS=0.78 fN=1.00 dt=-138min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 50.7170
 # !latitude: 28.8170
 Halileh, Iran
 +03:30 :Asia/Tehran
 0.9800 meters
-J1              0.0143  263.58
-K1              0.2736  244.53
-K2              0.0196  200.46
-L2              0.0085  171.33
-M1              0.0125  225.28
-M2              0.2870  144.58
 x 0 0
-M4              0.0051  194.16
+K1              0.3200  268.00
+K2              0.0351  249.00
 x 0 0
 x 0 0
-N2              0.0622  117.83
-x 0 0
-O1              0.1818  206.05
-OO1             0.0080  283.01
-P1              0.0909  241.62
-Q1              0.0357  189.29
-x 0 0
-R2              0.0009  198.36
-x 0 0
-S2              0.0730  196.25
-x 0 0
-x 0 0
-T2              0.0060  194.14
-LDA2            0.0018  168.60
-MU2             0.0068  92.91
-NU2             0.0119  121.46
-RHO1            0.0071  189.53
-x 0 0
-x 0 0
-MN4             0.0073  81.40
-MS4             0.0051  250.83
+M2              0.3700  195.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1050  141.91
+N2              0.0703  166.06
+x 0 0
+O1              0.2000  226.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1300  249.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -79396,54 +79834,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4285
-# note: NP203 Part II Sekundaerhafen-Transfer von Bushehr, Iran (att 4285). fS=1.00 fN=2.17 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 51.2670
 # !latitude: 28.2500
 Lavar-e Saheli, Iran
 +03:30 :Asia/Tehran
 1.1400 meters
-J1              0.0253  299.30
-K1              0.4863  279.00
-K2              0.0000  269.40
-L2              0.0137  239.00
-M1              0.0222  258.50
-M2              0.4620  211.00
 x 0 0
-M4              0.0132  327.00
+K1              0.2500  262.00
+K2              0.0486  222.00
 x 0 0
 x 0 0
-N2              0.1001  183.00
-x 0 0
-O1              0.3232  238.00
-OO1             0.0143  320.00
-P1              0.1616  275.90
-Q1              0.0634  220.00
-x 0 0
-R2              0.0014  267.20
-x 0 0
-S2              0.0000  265.00
-x 0 0
-x 0 0
-T2              0.0096  262.80
-LDA2            0.0032  236.10
-MU2             0.0110  157.00
-NU2             0.0192  186.80
-RHO1            0.0127  220.40
-x 0 0
-x 0 0
-MN4             0.0188  213.00
-MS4             0.0132  26.00
+M2              0.5000  169.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1050  142.00
+N2              0.0950  140.59
+x 0 0
+O1              0.1800  220.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1800  222.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -79585,54 +80025,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4285a
-# note: NP203 Part II Sekundaerhafen-Transfer von Bushehr, Iran (att 4285a). fS=0.46 fN=0.77 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 50.1670
 # !latitude: 28.0000
 Al Farisiyah, Iran
 +03:30 :Asia/Tehran
 0.9300 meters
-J1              0.0098  299.30
-K1              0.1877  279.00
-K2              0.0062  269.40
-L2              0.0055  239.00
-M1              0.0086  258.50
-M2              0.1870  211.00
 x 0 0
-M4              0.0022  327.00
+K1              0.2700  313.00
+K2              0.0270  215.00
 x 0 0
 x 0 0
-N2              0.0405  183.00
-x 0 0
-O1              0.1247  238.00
-OO1             0.0055  320.00
-P1              0.0624  275.90
-Q1              0.0245  220.00
-x 0 0
-R2              0.0006  267.20
-x 0 0
-S2              0.0230  265.00
-x 0 0
-x 0 0
-T2              0.0039  262.80
-LDA2            0.0012  236.10
-MU2             0.0044  157.00
-NU2             0.0078  186.80
-RHO1            0.0049  220.40
-x 0 0
-x 0 0
-MN4             0.0031  213.00
-MS4             0.0022  26.00
+M2              0.2200  160.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1050  142.00
+N2              0.0418  130.52
+x 0 0
+O1              0.2000  267.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1000  215.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -80152,54 +80594,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4288
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4288). fS=0.45 fN=0.73 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 52.6170
 # !latitude: 27.4670
 Asaluyeh, Iran
 +03:30 :Asia/Tehran
 1.0000 meters
-J1              0.0148  324.80
-K1              0.2915  301.00
-K2              0.0171  17.90
-L2              0.0146  337.00
-M1              0.0136  277.00
-M2              0.4690  313.00
 x 0 0
-M4              0.0111  172.00
+K1              0.2400  168.00
+K2              0.0459  162.00
 x 0 0
 x 0 0
-N2              0.1015  289.00
-x 0 0
-O1              0.1871  253.00
-OO1             0.0083  349.00
-P1              0.0968  297.40
-Q1              0.0277  240.00
-x 0 0
-R2              0.0016  15.40
-x 0 0
-S2              0.0630  13.00
-x 0 0
-x 0 0
-T2              0.0097  10.60
-LDA2            0.0035  340.80
-MU2             0.0113  253.00
-NU2             0.0194  292.20
-RHO1            0.0071  232.40
-x 0 0
-x 0 0
-MN4             0.0044  150.00
-MS4             0.0087  241.00
+M2              0.5100  120.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  125.00
+N2              0.0969  97.49
+x 0 0
+O1              0.1200  138.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1700  162.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -80341,54 +80785,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4290
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4290). fS=0.37 fN=0.37 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 53.3830
 # !latitude: 26.8000
 Jazireh-ye Lavan, Iran
 +03:30 :Asia/Tehran
 1.1800 meters
-J1              0.0092  324.80
-K1              0.1818  301.00
-K2              0.0307  17.90
-L2              0.0099  337.00
-M1              0.0085  277.00
-M2              0.3190  313.00
 x 0 0
-M4              0.0051  172.00
+K1              0.3000  145.00
+K2              0.0324  111.00
 x 0 0
 x 0 0
-N2              0.0690  289.00
-x 0 0
-O1              0.1167  253.00
-OO1             0.0052  349.00
-P1              0.0604  297.40
-Q1              0.0173  240.00
-x 0 0
-R2              0.0011  15.40
-x 0 0
-S2              0.1130  13.00
-x 0 0
-x 0 0
-T2              0.0066  10.60
-LDA2            0.0022  340.80
-MU2             0.0077  253.00
-NU2             0.0132  292.20
-RHO1            0.0044  232.40
-x 0 0
-x 0 0
-MN4             0.0020  150.00
-MS4             0.0040  241.00
+M2              0.3300  73.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  125.00
+N2              0.0627  52.63
+x 0 0
+O1              0.1600  114.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1200  111.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -80719,54 +81165,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4295
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4295). fS=0.49 fN=0.46 dt=-102min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 54.5170
 # !latitude: 26.2500
 Jazireh-ye Forur, Iran
 +03:30 :Asia/Tehran
 1.0700 meters
-J1              0.0119  298.43
-K1              0.2353  275.56
-K2              0.0443  327.01
-L2              0.0130  287.05
-M1              0.0110  252.48
-M2              0.4190  263.97
 x 0 0
-M4              0.0088  73.94
+K1              0.3500  134.00
+K2              0.0378  42.00
 x 0 0
 x 0 0
-N2              0.0906  240.89
-x 0 0
-O1              0.1510  229.41
-OO1             0.0067  321.70
-P1              0.0781  272.09
-Q1              0.0224  217.33
-x 0 0
-R2              0.0014  324.58
-x 0 0
-S2              0.1630  322.25
-x 0 0
-x 0 0
-T2              0.0087  319.92
-LDA2            0.0029  290.97
-MU2             0.0101  205.69
-NU2             0.0174  243.97
-RHO1            0.0057  209.61
-x 0 0
-x 0 0
-MN4             0.0035  52.86
-MS4             0.0070  141.22
+M2              0.4200  357.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  124.93
+N2              0.0798  165.84
+x 0 0
+O1              0.2000  96.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1400  42.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -80908,54 +81356,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4296
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4296). fS=0.41 fN=0.37 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 54.5500
 # !latitude: 25.9000
 Jazireh-ye Sirri, Iran
 +03:30 :Asia/Tehran
 1.0600 meters
-J1              0.0097  324.80
-K1              0.1922  301.00
-K2              0.0375  17.90
-L2              0.0107  337.00
-M1              0.0090  277.00
-M2              0.3440  313.00
 x 0 0
-M4              0.0060  172.00
+K1              0.2400  137.00
+K2              0.0378  39.00
 x 0 0
 x 0 0
-N2              0.0744  289.00
-x 0 0
-O1              0.1234  253.00
-OO1             0.0054  349.00
-P1              0.0638  297.40
-Q1              0.0183  240.00
-x 0 0
-R2              0.0012  15.40
-x 0 0
-S2              0.1380  13.00
-x 0 0
-x 0 0
-T2              0.0071  10.60
-LDA2            0.0023  340.80
-MU2             0.0083  253.00
-NU2             0.0143  292.20
-RHO1            0.0047  232.40
-x 0 0
-x 0 0
-MN4             0.0024  150.00
-MS4             0.0047  241.00
+M2              0.3900  351.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  125.00
+N2              0.0741  158.23
+x 0 0
+O1              0.1800  87.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1400  39.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -81097,54 +81547,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4297
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4297). fS=0.62 fN=0.73 dt=-119min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 4
+# confidence: 7
 # !units: meters
 # !longitude: 54.8830
 # !latitude: 26.5500
 Bandar-e Lengeh, Iran
 +03:30 :Asia/Tehran
 1.5200 meters
-J1              0.0169  293.89
-K1              0.3333  271.17
-K2              0.0443  318.24
-L2              0.0177  278.44
-M1              0.0155  248.25
-M2              0.5690  255.51
 x 0 0
-M4              0.0163  57.03
+K1              0.3300  127.00
+K2              0.0621  27.00
 x 0 0
 x 0 0
-N2              0.1231  232.59
-x 0 0
-O1              0.2139  225.35
-OO1             0.0094  316.99
-P1              0.1107  267.73
-Q1              0.0317  213.43
-x 0 0
-R2              0.0020  315.82
-x 0 0
-S2              0.1630  313.50
-x 0 0
-x 0 0
-T2              0.0118  311.18
-LDA2            0.0040  282.38
-MU2             0.0138  197.53
-NU2             0.0236  235.65
-RHO1            0.0081  205.68
-x 0 0
-x 0 0
-MN4             0.0064  36.11
-MS4             0.0129  124.01
+M2              0.6000  346.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  124.92
+N2              0.1140  156.98
+x 0 0
+O1              0.2200  89.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2300  27.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -81286,54 +81738,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4298
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4298). fS=0.49 fN=0.64 dt=-114min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
+# confidence: 7
 # !units: meters
 # !longitude: 55.3000
 # !latitude: 26.2670
 Jazireh-ye Tonb-e Bozorg, Iran
 +03:30 :Asia/Tehran
 1.7700 meters
-J1              0.0142  295.32
-K1              0.2798  272.55
-K2              0.0307  320.99
-L2              0.0146  281.14
-M1              0.0130  249.58
-M2              0.4690  258.17
 x 0 0
-M4              0.0111  62.34
+K1              0.2500  122.00
+K2              0.0540  17.00
 x 0 0
 x 0 0
-N2              0.1015  235.20
-x 0 0
-O1              0.1795  226.62
-OO1             0.0079  318.47
-P1              0.0929  269.10
-Q1              0.0266  214.65
-x 0 0
-R2              0.0016  318.57
-x 0 0
-S2              0.1130  316.25
-x 0 0
-x 0 0
-T2              0.0097  313.93
-LDA2            0.0034  285.08
-MU2             0.0113  200.09
-NU2             0.0194  238.26
-RHO1            0.0068  206.92
-x 0 0
-x 0 0
-MN4             0.0044  41.37
-MS4             0.0087  129.42
+M2              0.5400  329.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  124.92
+N2              0.1026  136.23
+x 0 0
+O1              0.2000  78.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2000  17.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -81475,63 +81929,40 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4299
-# note: NP203 Part II Sekundaerhafen-Transfer von Karachi, Pakistan (att 4299). fS=0.91 fN=0.90 dt=+2min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 55.9000
 # !latitude: 26.6830
 Jazireh-ye Hengam, Iran
-+00:00 :Asia/Tehran
++03:30 :Asia/Tehran
 1.4200 meters
-J1              0.0221  351.05
-K1              0.3627  338.01
-K2              0.0795  183.14
-L2              0.0187  165.17
-M1              0.0136  248.90
-M2              0.7292  158.62
-M3              0.0108  132.96
-M4              0.0101  105.20
-M6              0.0114  121.44
-M8              0.0013  334.59
-N2              0.1747  142.49
 x 0 0
-O1              0.1829  339.52
-OO1             0.0168  10.53
-P1              0.1076  335.25
-Q1              0.0383  342.37
+K1              0.2900  81.00
+K2              0.0675  352.00
 x 0 0
-R2              0.0036  190.90
-S1              0.0221  110.12
-S2              0.2874  187.80
-S4              0.0023  112.81
 x 0 0
-T2              0.0177  195.51
-LDA2            0.0043  149.17
-MU2             0.0199  122.06
-NU2             0.0345  146.25
-RHO1            0.0067  342.71
+M2              0.7400  306.00
 x 0 0
 x 0 0
-MN4             0.0078  96.96
-MS4             0.0076  86.66
 x 0 0
-MF              0.0063  6.94
-MSF             0.0051  210.36
-MM              0.0055  58.43
-SA              0.0392  61.66
-SSA             0.0390  120.57
 x 0 0
+N2              0.1406  281.34
 x 0 0
+O1              0.2000  63.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.2500  352.00
 x 0 0
 x 0 0
 x 0 0
@@ -81555,9 +81986,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0017  190.00
 x 0 0
-EPS2            0.0038  125.20
 x 0 0
 x 0 0
 x 0 0
@@ -81576,8 +82005,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0004  24.39
-SIG1            0.0069  164.07
 x 0 0
 x 0 0
 x 0 0
@@ -81598,7 +82025,36 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0031  61.82
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -81664,54 +82120,56 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4301
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4301). fS=0.83 fN=1.00 dt=-130min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 4
+# confidence: 7
 # !units: meters
 # !longitude: 55.2830
 # !latitude: 26.6670
 Basa'idu, Iran
 +03:30 :Asia/Tehran
 1.6600 meters
-J1              0.0229  291.03
-K1              0.4522  268.41
-K2              0.0578  312.72
-L2              0.0239  273.02
-M1              0.0211  245.59
-M2              0.7690  250.20
 x 0 0
-M4              0.0298  46.40
+K1              0.3900  109.00
+K2              0.0891  32.00
 x 0 0
 x 0 0
-N2              0.1664  227.38
-x 0 0
-O1              0.2902  222.79
-OO1             0.0128  314.03
-P1              0.1501  264.99
-Q1              0.0430  210.97
-x 0 0
-R2              0.0027  310.31
-x 0 0
-S2              0.2130  308.00
-x 0 0
-x 0 0
-T2              0.0159  305.69
-LDA2            0.0055  276.98
-MU2             0.0186  192.40
-NU2             0.0319  230.42
-RHO1            0.0110  203.21
-x 0 0
-x 0 0
-MN4             0.0117  25.58
-MS4             0.0235  113.20
+M2              0.8000  339.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  124.91
+N2              0.1520  143.55
+x 0 0
+O1              0.2500  101.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.3300  32.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -82042,12 +82500,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4303a
-# note: NP203 Part II Sekundaerhafen-Transfer von Bandar-e Shahid Rajai (NP203), Iran (att 4303a). fS=1.00 fN=1.00 dt=-7min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 56.2670
 # !latitude: 27.1330
@@ -82055,25 +82515,25 @@ Bandar-e Shahid Bahonar, Iran
 +03:30 :Asia/Tehran
 2.2000 meters
 x 0 0
-K1              0.3500  68.25
-K2              0.1107  337.49
+K1              0.3600  63.00
+K2              0.1026  341.00
 x 0 0
 x 0 0
-M2              1.1000  298.62
+M2              1.0800  298.00
 x 0 0
-M4              0.0303  123.24
-M6              0.0040  141.86
+M4              0.0257  117.00
+M6              0.0076  335.00
 x 0 0
-N2              0.2090  277.78
+N2              0.2052  274.95
 x 0 0
-O1              0.2300  56.37
-x 0 0
-x 0 0
-x 0 0
+O1              0.2500  53.00
 x 0 0
 x 0 0
 x 0 0
-S2              0.4100  337.50
+x 0 0
+x 0 0
+x 0 0
+S2              0.3800  341.00
 x 0 0
 x 0 0
 x 0 0
@@ -82231,12 +82691,14 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4303b
-# note: NP203 Part II Sekundaerhafen-Transfer von Bandar-e Shahid Rajai (NP203), Iran (att 4303b). fS=0.90 fN=0.78 dt=-8min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 56.2830
 # !latitude: 27.1670
@@ -82244,25 +82706,25 @@ Bandar Abbas, Iran
 +03:30 :Asia/Tehran
 2.0000 meters
 x 0 0
-K1              0.2946  67.99
-K2              0.1107  336.99
+K1              0.3400  64.00
+K2              0.0972  334.00
 x 0 0
 x 0 0
-M2              0.9500  298.14
+M2              1.0000  298.00
 x 0 0
-M4              0.0225  122.27
-M6              0.0029  140.41
-x 0 0
-N2              0.1805  277.31
-x 0 0
-O1              0.1936  56.14
+M4              0.0370  175.00
 x 0 0
 x 0 0
+N2              0.1900  278.70
 x 0 0
+O1              0.2100  52.00
 x 0 0
 x 0 0
 x 0 0
-S2              0.4100  337.00
+x 0 0
+x 0 0
+x 0 0
+S2              0.3600  334.00
 x 0 0
 x 0 0
 x 0 0
@@ -82420,63 +82882,40 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4307
-# note: NP203 Part II Sekundaerhafen-Transfer von Karachi, Pakistan (att 4307). fS=1.09 fN=1.10 dt=-33min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 57.0500
 # !latitude: 26.5170
 Bandar-e Sirik, Iran
-+00:00 :Asia/Tehran
++03:30 :Asia/Tehran
 1.7800 meters
-J1              0.0267  341.83
-K1              0.4393  329.11
-K2              0.0933  165.34
-L2              0.0225  147.70
-M1              0.0164  240.33
-M2              0.8792  141.47
-M3              0.0130  107.24
-M4              0.0147  70.90
-M6              0.0166  70.00
-M8              0.0015  265.99
-N2              0.2107  125.67
 x 0 0
-O1              0.2215  331.27
-OO1             0.0204  0.98
-P1              0.1304  326.40
-Q1              0.0463  334.44
+K1              0.3700  68.00
+K2              0.0891  329.00
 x 0 0
-R2              0.0044  173.13
-S1              0.0267  101.25
-S2              0.3374  170.05
-S4              0.0027  77.31
 x 0 0
-T2              0.0213  177.78
-LDA2            0.0051  131.74
-MU2             0.0239  105.51
-NU2             0.0417  129.38
-RHO1            0.0081  334.74
+M2              0.9000  286.00
 x 0 0
 x 0 0
-MN4             0.0114  62.99
-MS4             0.0110  51.76
 x 0 0
-MF              0.0063  6.29
-MSF             0.0051  209.76
-MM              0.0055  58.11
-SA              0.0392  61.64
-SSA             0.0390  120.52
 x 0 0
+N2              0.1710  262.95
 x 0 0
+O1              0.2700  62.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.3300  329.00
 x 0 0
 x 0 0
 x 0 0
@@ -82500,9 +82939,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0021  172.80
 x 0 0
-EPS2            0.0046  108.98
 x 0 0
 x 0 0
 x 0 0
@@ -82521,8 +82958,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0004  357.76
-SIG1            0.0083  156.42
 x 0 0
 x 0 0
 x 0 0
@@ -82543,7 +82978,36 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0037  28.17
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -82609,63 +83073,40 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4308
-# note: NP203 Part II Sekundaerhafen-Transfer von Karachi, Pakistan (att 4308). fS=1.00 fN=1.10 dt=-30min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
+# confidence: 7
 # !units: meters
 # !longitude: 57.0670
 # !latitude: 26.3000
 Gonari Creek, Iran
-+00:00 :Asia/Tehran
++03:30 :Asia/Tehran
 1.6800 meters
-J1              0.0256  342.61
-K1              0.4214  329.86
-K2              0.0795  166.85
-L2              0.0212  149.18
-M1              0.0158  241.05
-M2              0.8292  142.92
-M3              0.0125  109.41
-M4              0.0131  73.80
-M6              0.0148  74.34
-M8              0.0015  271.79
-N2              0.1987  127.09
 x 0 0
-O1              0.2125  331.97
-OO1             0.0195  1.79
-P1              0.1250  327.15
-Q1              0.0445  335.11
+K1              0.2800  65.00
+K2              0.0567  331.00
 x 0 0
-R2              0.0041  174.63
-S1              0.0256  102.00
-S2              0.2874  171.55
-S4              0.0026  80.31
 x 0 0
-T2              0.0201  179.28
-LDA2            0.0049  133.21
-MU2             0.0226  106.91
-NU2             0.0393  130.80
-RHO1            0.0078  335.41
+M2              0.8500  286.00
 x 0 0
 x 0 0
-MN4             0.0101  65.86
-MS4             0.0098  54.71
 x 0 0
-MF              0.0063  6.34
-MSF             0.0051  209.81
-MM              0.0055  58.14
-SA              0.0392  61.64
-SSA             0.0390  120.53
 x 0 0
+N2              0.1615  261.88
 x 0 0
+O1              0.1800  55.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.2100  331.00
 x 0 0
 x 0 0
 x 0 0
@@ -82689,9 +83130,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0020  174.26
 x 0 0
-EPS2            0.0044  110.35
 x 0 0
 x 0 0
 x 0 0
@@ -82710,8 +83149,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0004  0.01
-SIG1            0.0080  157.07
 x 0 0
 x 0 0
 x 0 0
@@ -82732,7 +83169,36 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0036  31.01
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -82798,63 +83264,40 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
+# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4309
-# note: NP203 Part II Sekundaerhafen-Transfer von Karachi, Pakistan (att 4309). fS=0.96 fN=0.90 dt=-131min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part III S.246 (2015), Meridian +03:30. Gemessene
+# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.
+# note: Ersetzt am 20260728 den Sekundaerhafen-Transfer.
+# date_imported: 20260728
 # datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 4
+# confidence: 7
 # !units: meters
 # !longitude: 57.3000
 # !latitude: 25.7830
 Ras al Kuh, Iran
-+00:00 :Asia/Tehran
++03:30 :Asia/Tehran
 1.3900 meters
-J1              0.0226  316.37
-K1              0.3716  304.54
-K2              0.0864  116.21
-L2              0.0193  99.47
-M1              0.0139  216.65
-M2              0.7542  94.13
-M3              0.0110  36.23
-M4              0.0108  336.22
-M6              0.0122  287.97
-M8              0.0013  76.63
-N2              0.1807  79.22
 x 0 0
-O1              0.1874  308.50
-OO1             0.0172  334.62
-P1              0.1103  301.97
-Q1              0.0392  312.56
+K1              0.3900  32.00
+K2              0.0783  297.00
 x 0 0
-R2              0.0038  124.06
-S1              0.0226  76.75
-S2              0.3124  121.05
-S4              0.0023  339.31
 x 0 0
-T2              0.0183  128.85
-LDA2            0.0044  83.63
-MU2             0.0205  59.83
-NU2             0.0357  82.81
-RHO1            0.0069  312.74
+M2              0.7400  263.00
 x 0 0
 x 0 0
-MN4             0.0084  329.19
-MS4             0.0081  315.42
 x 0 0
-MF              0.0063  4.49
-MSF             0.0051  208.10
-MM              0.0055  57.22
-SA              0.0392  61.57
-SSA             0.0390  120.39
 x 0 0
+N2              0.1406  244.78
 x 0 0
+O1              0.2200  37.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.2900  297.00
 x 0 0
 x 0 0
 x 0 0
@@ -82878,9 +83321,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0018  125.33
 x 0 0
-EPS2            0.0039  64.18
 x 0 0
 x 0 0
 x 0 0
@@ -82899,8 +83340,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0004  284.26
-SIG1            0.0070  135.31
 x 0 0
 x 0 0
 x 0 0
@@ -82921,7 +83360,36 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0032  295.26
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
