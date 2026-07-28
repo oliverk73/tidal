@@ -296587,8 +296587,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 51.0000
-# !latitude: 25.9833
+# !longitude: 50.9994
+# !latitude: 25.9821
 Ras Ashairiq, Qatar
 +00:00 :Asia/Qatar
 0.8230 meters
@@ -296776,9 +296776,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 51.3667
-# !latitude: 26.0500
-Jabal Fuwaira, Qatar
+# !longitude: 51.3591
+# !latitude: 26.0510
+Fuwayrit (Jabal al Fuwayrit), Qatar
 +00:00 :Asia/Qatar
 0.8839 meters
 J1              0.0006  24.59
@@ -296965,9 +296965,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 52.6167
-# !latitude: 24.2833
-Jazirat Yas, United Arab Emirates
+# !longitude: 52.6393
+# !latitude: 24.2905
+Sir Bani Yas, United Arab Emirates
 +00:00 :Asia/Dubai
 0.9449 meters
 J1              0.0123  83.93
@@ -297154,8 +297154,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 52.8833
-# !latitude: 25.1500
+# !longitude: 52.8828
+# !latitude: 25.1390
 Jazirat Das, United Arab Emirates
 +00:00 :Asia/Dubai
 0.9449 meters
@@ -297343,9 +297343,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 56.3667
-# !latitude: 26.3500
-Khor Kuwai, Oman
+# !longitude: 56.3613
+# !latitude: 26.3667
+Khawr al Quway (Jazirat Umm al Ghanam), Oman
 +00:00 :Asia/Muscat
 1.7069 meters
 J1              0.0220  351.18
@@ -297532,9 +297532,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 56.5333
-# !latitude: 26.4833
-Little Quoin I, Oman
+# !longitude: 56.5380
+# !latitude: 26.4781
+Didamar (Little Quoin Island), Oman
 +00:00 :Asia/Muscat
 1.3716 meters
 J1              0.0247  347.15
@@ -297715,203 +297715,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Oman
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 3763
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Karachi, Pakistan (no.3763). M2=0.68 S2=0.11 k=0.84 dt=-65min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 58.6000
-# !latitude: 23.6167
-Masqat, Gulf of Oman, Oman
-+00:00 :Asia/Muscat
-1.4630 meters
-J1              0.0206  333.52
-K1              0.3388  321.09
-K2              0.0299  149.30
-L2              0.0174  131.95
-M1              0.0127  232.60
-M2              0.6795  126.01
-M3              0.0101  84.05
-M4              0.0104  39.98
-M6              0.0117  23.62
-M8              0.0012  204.16
-N2              0.1628  110.50
-x 0 0
-O1              0.1708  323.84
-OO1             0.0157  352.38
-P1              0.1005  318.42
-Q1              0.0357  327.29
-x 0 0
-R2              0.0034  157.11
-S1              0.0206  93.25
-S2              0.1079  154.05
-S4              0.0021  45.31
-x 0 0
-T2              0.0165  161.80
-LDA2            0.0040  116.03
-MU2             0.0185  90.59
-NU2             0.0322  114.17
-RHO1            0.0063  327.56
-x 0 0
-x 0 0
-MN4             0.0080  32.36
-MS4             0.0078  20.30
-x 0 0
-MF              0.0063  5.70
-MSF             0.0051  209.22
-MM              0.0055  57.82
-SA              0.0392  61.62
-SSA             0.0390  120.48
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0016  157.30
-x 0 0
-EPS2            0.0035  94.35
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0003  333.76
-SIG1            0.0064  149.53
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0029  357.83
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Oman
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 3771
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Karachi, Pakistan (no.3771). M2=0.62 S2=0.12 k=0.77 dt=-54min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 59.8000
-# !latitude: 22.5167
+# !longitude: 59.7984
+# !latitude: 22.5330
 Ras al Hadd, Oman
 +00:00 :Asia/Muscat
 1.6459 meters
@@ -298099,9 +297910,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 58.6333
-# !latitude: 20.2167
-Rounders Bay, Masira Island, Oman
+# !longitude: 58.6339
+# !latitude: 20.2147
+Rounders Bay (Masirah Island), Oman
 +00:00 :Asia/Muscat
 1.3411 meters
 J1              0.0179  333.65
@@ -298288,9 +298099,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 54.7000
-# !latitude: 16.9833
-Marbat, Oman
+# !longitude: 54.6861
+# !latitude: 16.9873
+Mirbat (Marbat), Oman
 +00:00 :Asia/Muscat
 1.2802 meters
 J1              0.0234  18.39
@@ -298477,8 +298288,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 49.1333
-# !latitude: 14.5167
+# !longitude: 49.1475
+# !latitude: 14.5215
 Mukalla, Yemen
 +00:00 :Asia/Aden
 1.2497 meters
@@ -298666,9 +298477,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 43.4000
-# !latitude: 12.6500
-Perim, Bab el Mandeb Strait, Yemen
+# !longitude: 43.4039
+# !latitude: 12.6487
+Mayyun / Perim (Bab el Mandeb Strait), Yemen
 +00:00 :Asia/Aden
 1.3716 meters
 J1              0.0199  0.34
@@ -298855,9 +298666,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 43.2333
-# !latitude: 13.3167
-Al Mukha, Yemen
+# !longitude: 43.2313
+# !latitude: 13.3130
+Mokha (Al Mukha), Yemen
 +00:00 :Asia/Aden
 0.6096 meters
 J1              0.0099  74.76
