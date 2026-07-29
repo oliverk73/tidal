@@ -61,9 +61,13 @@ derselben Quelle stammt wie die Daten und keine Modellannahmen braucht:
 tide -l STATION -b 2026-01-01 -e 2027-01-01 -m s   ->  "Maximum was ..."
 ```
 
-Stichprobe 2026-07-28 über 35 Golf-Stationen: 33 lagen 0.01 bis 0.44 m unter HAT,
-zwei darüber (Khawr al Quway +0.29, Al Jazeera Port +0.18) — beide daraufhin als
-prüfbedürftig markiert.
+Die HAT-Werte aller NP203-Sekundärhäfen stehen transkribiert in
+`harmonics/help/np203_table5_part2_hat.json`; `py/hat_test_np203.py` prüft damit
+die ganze Datei auf einen Rutsch (Toleranz +0.30 m nach oben, −1.00 m nach unten).
+
+Stand 2026-07-29 über 441 Stationen: 38 auffällig, davon 36 noch aus dem
+Part-II-Transfer. Vor dem Part-III-Import derselben Datei waren es 69 — der
+Import hat 31 Stationen geradegerückt.
 
 **Nicht** geeignet ist die Summe aller Amplituden plus Z0: Sie ist eine obere
 Schranke, die nie erreicht wird, und meldet Fehlalarme (Suhar schien 0.5 m zu
@@ -118,6 +122,9 @@ py/build_np203.py               Part III -> Standardhäfen (107 Stationen, 2026-
 py/build_np203_tablev.py        Part III -> Sekundärhäfen, ersetzt Part-II-Transfers
 py/build_np203_secondary.py     Part-II-Transfer (Fallback ohne Part III)
 py/rebuild_np203_page231.py     Part II Seite 231 komplett aus dem Scan
+py/add_np203_tablev_new.py      legt Stationen an, die es bei uns noch nicht gibt
+py/fix_np203_numbers_2.py       att-Nummern gegen den Scan geradeziehen
+py/hat_test_np203.py            HAT-Test gegen Table V Part 2
 ```
 
 `build_np203_tablev.py` gleicht **über die att-Nummer** ab und prüft zusätzlich den
@@ -126,6 +133,14 @@ Namen: Weicht der Buchname zu stark vom Namen in der Datei ab, wird die Zeile
 aufgedeckt — über die Nummer allein wären drei Stationen mit fremden Konstanten
 befüllt worden. Umbenennungen (Zekreet/Zikrit, Dibba/Mina Diba) passieren die
 Prüfung, ein anderer Ort nicht.
+
+Der Nummernversatz ist kein Einzelfall: Am 2026-07-29 fand dieselbe Prüfung
+13 weitere falsche Nummern (Rotes Meer und Golf von Oman, u. a. eine Kette von
+fünf aufeinanderfolgenden Stationen von Dibab bis Bandar Jissah). Erkennbar
+waren sie nur daran, dass der Buchname zur Nummer nicht zum Namen in der Datei
+passte. **Vor jedem Wertübernehmen die Nummernfolge gegen den Scan prüfen.**
+Verifizierte Abweichungen (El Tor/At Tur, Rodrigues/Port Mathurin) stehen als
+`NAME_OK` mit Begründung im Skript, damit sie nicht jedes Mal neu auffallen.
 
 ## Reihenfolge beim Einlesen eines Bandes
 

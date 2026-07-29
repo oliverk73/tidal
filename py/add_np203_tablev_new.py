@@ -30,12 +30,18 @@ NEU = [
     dict(att='4208a', name='Khawr Ghurabi, United Arab Emirates', country='United Arab Emirates',
          lat=24 + 49 / 60, lon=54 + 43 / 60, ml=0.88, mer='+04:00', tz='Asia/Dubai',
          con={'M2': (0.36, 8), 'S2': (0.14, 72), 'K1': (0.26, 164), 'O1': (0.13, 115)},
-         before="Khawr Sa'diyat, United Arab Emirates"),
+         p3=244, p2=230, before="Khawr Sa'diyat, United Arab Emirates"),
     dict(att='4215', name='Zaqqum Oilfield (Platform Zws), United Arab Emirates',
          country='United Arab Emirates',
          lat=24 + 51 / 60, lon=53 + 31 / 60, ml=1.20, mer='+04:00', tz='Asia/Dubai',
          con={'M2': (0.26, 16), 'S2': (0.12, 67), 'K1': (0.34, 153), 'O1': (0.18, 100)},
-         before='Zirku, United Arab Emirates'),
+         p3=244, p2=230, before='Zirku, United Arab Emirates'),
+    # 20260729: Part III S.243 / Part II S.229. Lag zwischen Sidab (4185b) und
+    # Port Sultan Qaboos (4186a) und fehlte in der Sammlung ganz.
+    dict(att='4186', name='Khawr Masqat, Oman', country='Oman',
+         lat=23 + 37 / 60, lon=58 + 36 / 60, ml=1.80, mer='+04:00', tz='Asia/Muscat',
+         con={'M2': (0.61, 277), 'S2': (0.23, 312), 'K1': (0.36, 43), 'O1': (0.20, 38)},
+         p3=243, p2=229, before='Mina Al Fahal, Oman'),
 ]
 
 
@@ -59,8 +65,8 @@ def block(s, ORDER):
     out = ['# BEGIN HOT COMMENTS', f'# country: {s["country"]}',
            '# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)',
            f'# att_number: {s["att"]}',
-           f'# note: NP203 Part III S.244 (2015), Meridian {s["mer"]}. Gemessene Konstanten.',
-           '# note: Position aus Part II S.230. N2/K2 inferiert.',
+           f'# note: NP203 Part III S.{s["p3"]} (2015), Meridian {s["mer"]}. Gemessene Konstanten.',
+           f'# note: Position aus Part II S.{s["p2"]}. N2/K2 inferiert.',
            f'# note: {datetime.now():%Y%m%d} neu angelegt -- Station fehlte in der Sammlung.',
            f'# date_imported: {datetime.now():%Y%m%d}',
            '# datum: Chart Datum (Z0 = mean level above CD)',
