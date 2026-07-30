@@ -23928,8 +23928,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3864
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3864). fS=1.43 fN=1.14 dt=+32min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.44 fN=1.14 dt=+32min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie Ambavanibe).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
@@ -23938,42 +23942,42 @@ x 0 0
 Baie Ambavanibe, Madagascar
 +03:00 :Indian/Antananarivo
 1.7100 meters
-J1              0.0077  34.04
-K1              0.1723  43.15
-K2              0.1246  165.09
-L2              0.0230  134.99
-M1              0.0064  52.35
-M2              0.8670  113.70
 x 0 0
-M4              0.0128  67.40
+K1              0.1423  61.15
+K2              0.1218  158.29
 x 0 0
 x 0 0
-N2              0.1607  92.40
-x 0 0
-O1              0.0977  61.55
-OO1             0.0039  24.74
-P1              0.0566  44.50
-Q1              0.0206  50.26
-x 0 0
-R2              0.0027  163.17
-x 0 0
-S2              0.4580  161.25
-x 0 0
-x 0 0
-T2              0.0230  159.33
-LDA2            0.0051  135.76
-MU2             0.0203  66.15
-NU2             0.0311  95.24
-RHO1            0.0039  69.50
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0164  157.95
+M2              0.8055  114.70
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.02
+N2              0.1530  91.35
+x 0 0
+O1              0.0906  65.55
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.4512  158.25
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -24308,8 +24312,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3868
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3868). fS=1.86 fN=1.42 dt=+17min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.89 fN=1.43 dt=+17min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Mitsio).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -24318,42 +24326,42 @@ x 0 0
 Nosy Mitsio, Madagascar
 +03:00 :Indian/Antananarivo
 2.2200 meters
-J1              0.0098  30.02
-K1              0.2199  39.26
-K2              0.1654  157.32
-L2              0.0296  127.37
-M1              0.0082  48.61
-M2              1.1170  106.21
 x 0 0
-M4              0.0212  52.42
+K1              0.1825  57.26
+K2              0.1621  150.52
 x 0 0
 x 0 0
-N2              0.2070  85.06
-x 0 0
-O1              0.1247  57.95
-OO1             0.0049  20.57
-P1              0.0722  40.64
-Q1              0.0263  46.80
-x 0 0
-R2              0.0035  155.41
-x 0 0
-S2              0.6080  153.50
-x 0 0
-x 0 0
-T2              0.0296  151.59
-LDA2            0.0066  128.15
-MU2             0.0261  58.92
-NU2             0.0400  87.88
-RHO1            0.0049  66.02
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0272  142.71
+M2              1.0431  107.21
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.01
+N2              0.1982  84.01
+x 0 0
+O1              0.1161  61.95
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.6002  150.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -24497,8 +24505,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3873
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3873). fS=1.54 fN=2.25 dt=+13min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.56 fN=2.29 dt=+31min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Anarontsangana).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -24507,42 +24519,42 @@ x 0 0
 Anarontsangana, Madagascar
 +03:00 :Indian/Antananarivo
 1.4300 meters
-J1              0.0114  28.98
-K1              0.2542  38.26
-K2              0.0838  155.32
-L2              0.0296  125.40
-M1              0.0095  47.64
-M2              1.1170  104.28
 x 0 0
-M4              0.0212  48.56
+K1              0.2113  60.77
+K2              0.0870  157.54
 x 0 0
 x 0 0
-N2              0.2070  83.16
-x 0 0
-O1              0.1442  57.02
-OO1             0.0057  19.50
-P1              0.0835  39.64
-Q1              0.0304  45.90
-x 0 0
-R2              0.0035  153.41
-x 0 0
-S2              0.3080  151.50
-x 0 0
-x 0 0
-T2              0.0296  149.59
-LDA2            0.0076  126.18
-MU2             0.0261  57.06
-NU2             0.0400  85.98
-RHO1            0.0057  65.12
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0272  138.78
+M2              1.0310  113.98
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.01
+N2              0.1959  90.64
+x 0 0
+O1              0.1344  65.20
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.3224  157.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -24686,8 +24698,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3876
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3876). fS=1.86 fN=1.42 dt=+13min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.89 fN=1.43 dt=+13min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Lava).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -24696,42 +24712,42 @@ x 0 0
 Nosy Lava, Madagascar
 +03:00 :Indian/Antananarivo
 2.5400 meters
-J1              0.0098  28.98
-K1              0.2199  38.26
-K2              0.1654  155.32
-L2              0.0296  125.40
-M1              0.0082  47.64
-M2              1.1170  104.28
 x 0 0
-M4              0.0212  48.56
+K1              0.1825  56.26
+K2              0.1621  148.52
 x 0 0
 x 0 0
-N2              0.2070  83.16
-x 0 0
-O1              0.1247  57.02
-OO1             0.0049  19.50
-P1              0.0722  39.64
-Q1              0.0263  45.90
-x 0 0
-R2              0.0035  153.41
-x 0 0
-S2              0.6080  151.50
-x 0 0
-x 0 0
-T2              0.0296  149.59
-LDA2            0.0066  126.18
-MU2             0.0261  57.06
-NU2             0.0400  85.98
-RHO1            0.0049  65.12
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0272  138.78
+M2              1.0431  105.28
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.01
+N2              0.1982  82.11
+x 0 0
+O1              0.1161  61.02
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.6002  148.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -24875,8 +24891,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3877
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3877). fS=2.03 fN=2.11 dt=-2min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.61 fN=2.14 dt=-14min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Moramba).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -24884,43 +24904,43 @@ x 0 0
 # !latitude: -14.8923
 Baie de Moramba, Madagascar
 +03:00 :Indian/Antananarivo
-2.5800 meters
-J1              0.0124  24.95
-K1              0.2775  34.37
-K2              0.1518  147.55
-L2              0.0349  117.77
-M1              0.0104  43.90
-M2              1.3170  96.79
+2.3200 meters
 x 0 0
-M4              0.0295  33.58
+K1              0.2065  49.49
+K2              0.0995  134.98
 x 0 0
 x 0 0
-N2              0.2441  75.82
-x 0 0
-O1              0.1574  53.42
-OO1             0.0062  15.33
-P1              0.0911  35.78
-Q1              0.0331  42.44
-x 0 0
-R2              0.0041  145.65
-x 0 0
-S2              0.5580  143.75
-x 0 0
-x 0 0
-T2              0.0349  141.85
-LDA2            0.0083  118.57
-MU2             0.0308  49.83
-NU2             0.0472  78.61
-RHO1            0.0062  61.64
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0379  123.54
+M2              1.0330  92.24
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.00
+N2              0.1963  69.31
+x 0 0
+O1              0.1314  54.75
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.3687  135.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -25064,8 +25084,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3878
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3878). fS=1.97 fN=2.11 dt=+23min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.00 fN=2.14 dt=+23min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Pointe Ambararata).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -25074,42 +25098,42 @@ x 0 0
 Pointe Ambararata, Madagascar
 +03:00 :Indian/Antananarivo
 2.5700 meters
-J1              0.0123  31.57
-K1              0.2738  40.77
-K2              0.1450  160.33
-L2              0.0342  130.32
-M1              0.0102  50.06
-M2              1.2920  109.11
 x 0 0
-M4              0.0283  58.22
+K1              0.2279  58.77
+K2              0.1452  153.53
 x 0 0
 x 0 0
-N2              0.2395  87.90
-x 0 0
-O1              0.1553  59.34
-OO1             0.0061  22.19
-P1              0.0899  42.13
-Q1              0.0327  48.14
-x 0 0
-R2              0.0040  158.42
-x 0 0
-S2              0.5330  156.50
-x 0 0
-x 0 0
-T2              0.0342  154.58
-LDA2            0.0082  131.09
-MU2             0.0302  61.72
-NU2             0.0463  90.73
-RHO1            0.0061  67.36
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0364  148.61
+M2              1.2021  110.11
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.02
+N2              0.2284  86.85
+x 0 0
+O1              0.1450  63.34
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.5379  153.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -25253,8 +25277,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3879
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3879). fS=2.19 fN=2.39 dt=+21min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.22 fN=2.43 dt=+21min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Longany).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -25263,42 +25291,42 @@ x 0 0
 Nosy Longany, Madagascar
 +03:00 :Indian/Antananarivo
 3.0000 meters
-J1              0.0137  31.05
-K1              0.3070  40.26
-K2              0.1586  159.33
-L2              0.0382  129.33
-M1              0.0115  49.57
-M2              1.4420  108.14
 x 0 0
-M4              0.0353  56.29
+K1              0.2558  58.26
+K2              0.1594  152.53
 x 0 0
 x 0 0
-N2              0.2673  86.95
-x 0 0
-O1              0.1741  58.88
-OO1             0.0069  21.65
-P1              0.1008  41.64
-Q1              0.0367  47.69
-x 0 0
-R2              0.0045  157.41
-x 0 0
-S2              0.5830  155.50
-x 0 0
-x 0 0
-T2              0.0382  153.59
-LDA2            0.0092  130.11
-MU2             0.0337  60.79
-NU2             0.0517  89.78
-RHO1            0.0069  66.92
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0454  146.64
+M2              1.3431  109.14
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.01
+N2              0.2552  85.90
+x 0 0
+O1              0.1628  62.88
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.5902  152.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -25442,8 +25470,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3880
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3880). fS=1.86 fN=1.84 dt=+23min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.89 fN=1.86 dt=+23min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Marosakoa).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -25452,42 +25484,42 @@ x 0 0
 Marosakoa, Madagascar
 +03:00 :Indian/Antananarivo
 2.3500 meters
-J1              0.0111  31.57
-K1              0.2479  40.77
-K2              0.1450  160.33
-L2              0.0316  130.32
-M1              0.0093  50.06
-M2              1.1920  109.11
 x 0 0
-M4              0.0241  58.22
+K1              0.2060  58.77
+K2              0.1441  153.53
 x 0 0
 x 0 0
-N2              0.2209  87.90
-x 0 0
-O1              0.1406  59.34
-OO1             0.0056  22.19
-P1              0.0814  42.13
-Q1              0.0296  48.14
-x 0 0
-R2              0.0037  158.42
-x 0 0
-S2              0.5330  156.50
-x 0 0
-x 0 0
-T2              0.0316  154.58
-LDA2            0.0074  131.09
-MU2             0.0279  61.72
-NU2             0.0427  90.73
-RHO1            0.0056  67.36
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0310  148.61
+M2              1.1095  110.11
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.02
+N2              0.2108  86.85
+x 0 0
+O1              0.1311  63.34
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.5338  153.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -25631,58 +25663,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3882
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3882). fS=1.70 fN=1.69 dt=+43min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.50 fN=2.14 dt=+43min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Pointe Maroloha).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 46.2667
 # !latitude: -15.7333
 Pointe Marolona, Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 3.4400 meters
-J1              0.0166  33.60
-K1              0.2513  17.34
-K2              0.2953  88.70
-L2              0.0563  92.39
 x 0 0
-M2              2.1318  41.54
-M3              0.0027  51.36
-M4              0.0633  281.94
-M6              0.0947  7.28
-M8              0.0029  319.35
-N2              0.3801  27.87
+K1              0.2554  63.78
+K2              0.2039  163.56
 x 0 0
-O1              0.1483  21.19
 x 0 0
-P1              0.0846  19.62
-Q1              0.0349  12.57
+M2              1.4196  119.77
 x 0 0
-R2              0.0097  105.87
-S1              0.0269  86.99
-S2              1.1480  87.35
-S4              0.0476  144.79
 x 0 0
-T2              0.0628  99.56
-LDA2            0.0118  104.55
-MU2             0.0280  18.54
-NU2             0.0623  46.62
 x 0 0
 x 0 0
+N2              0.2697  96.33
 x 0 0
-MN4             0.0581  46.97
-MS4             0.1689  84.34
+O1              0.1625  67.99
 x 0 0
-MF              0.0204  22.41
-MSF             0.0273  30.54
-MM              0.0157  11.07
-SA              0.0013  284.11
-SSA             0.0122  5.40
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.7554  163.50
 x 0 0
 x 0 0
 x 0 0
@@ -25709,9 +25723,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0235  211.39
 x 0 0
-EPS2            0.0042  355.60
 x 0 0
 x 0 0
 x 0 0
@@ -25752,7 +25764,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0034  72.58
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -25820,58 +25856,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3884
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3884). fS=1.21 fN=1.86 dt=+11min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.44 fN=1.57 dt=+11min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Makamby).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 45.9006
 # !latitude: -15.7225
 Nosy Makamby, Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.6100 meters
-J1              0.0150  25.29
-K1              0.2275  9.32
-K2              0.1602  72.66
-L2              0.0451  76.64
 x 0 0
-M2              1.7068  26.08
-M3              0.0025  28.17
-M4              0.0406  251.03
-M6              0.0607  320.90
-M8              0.0026  257.52
-N2              0.3043  12.70
+K1              0.1659  55.76
+K2              0.1039  147.52
 x 0 0
-O1              0.1342  13.76
 x 0 0
-P1              0.0766  11.64
-Q1              0.0316  5.43
+M2              0.8719  104.31
 x 0 0
-R2              0.0077  89.85
-S1              0.0244  78.99
-S2              0.6230  71.35
-S4              0.0430  112.79
 x 0 0
-T2              0.0502  83.58
-LDA2            0.0107  88.84
-MU2             0.0224  3.63
-NU2             0.0498  31.42
 x 0 0
 x 0 0
+N2              0.1657  81.16
 x 0 0
-MN4             0.0373  16.35
-MS4             0.1083  52.88
+O1              0.1056  60.56
 x 0 0
-MF              0.0204  21.82
-MSF             0.0273  30.00
-MM              0.0157  10.78
-SA              0.0013  284.09
-SSA             0.0122  5.36
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.3848  147.50
 x 0 0
 x 0 0
 x 0 0
@@ -25898,9 +25916,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0213  195.89
 x 0 0
-EPS2            0.0038  340.98
 x 0 0
 x 0 0
 x 0 0
@@ -25941,7 +25957,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0031  42.25
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -26009,58 +26049,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3886
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3886). fS=1.13 fN=1.51 dt=+26min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.28 fN=1.86 dt=+26min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Baly).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 45.3253
 # !latitude: -16.1008
 Baie de Baly (Soalala), Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.5200 meters
-J1              0.0130  29.18
-K1              0.1963  13.08
-K2              0.1667  80.18
-L2              0.0405  84.03
 x 0 0
-M2              1.5318  33.33
-M3              0.0021  39.04
-M4              0.0327  265.52
-M6              0.0489  342.64
-M8              0.0022  286.50
-N2              0.2731  19.81
+K1              0.1724  59.52
+K2              0.0724  155.04
 x 0 0
-O1              0.1158  17.24
 x 0 0
-P1              0.0661  15.38
-Q1              0.0272  8.78
+M2              0.8437  111.56
 x 0 0
-R2              0.0069  97.36
-S1              0.0210  82.74
-S2              0.6480  78.85
-S4              0.0371  127.79
 x 0 0
-T2              0.0451  91.07
-LDA2            0.0093  96.20
-MU2             0.0201  10.62
-NU2             0.0447  38.55
 x 0 0
 x 0 0
+N2              0.1603  88.27
 x 0 0
-MN4             0.0300  30.70
-MS4             0.0872  67.63
+O1              0.1097  64.04
 x 0 0
-MF              0.0204  22.10
-MSF             0.0273  30.25
-MM              0.0157  10.92
-SA              0.0013  284.10
-SSA             0.0122  5.38
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.2680  155.00
 x 0 0
 x 0 0
 x 0 0
@@ -26087,9 +26109,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0184  203.16
 x 0 0
-EPS2            0.0033  347.83
 x 0 0
 x 0 0
 x 0 0
@@ -26130,7 +26150,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0026  56.47
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -26198,58 +26242,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3888
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3888). fS=1.52 fN=1.43 dt=+31min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.11 fN=1.71 dt=+31min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Cap Saint Andre).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 44.4517
 # !latitude: -16.1870
 Tanjona Vilanandro (Cap Saint André), Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.9300 meters
-J1              0.0144  30.48
-K1              0.2188  14.33
-K2              0.2696  82.68
-L2              0.0497  86.49
 x 0 0
-M2              1.8818  35.75
-M3              0.0024  42.66
-M4              0.0493  270.35
-M6              0.0738  349.89
-M8              0.0025  296.16
-N2              0.3355  22.18
+K1              0.2104  60.77
+K2              0.1762  157.54
 x 0 0
-O1              0.1291  18.40
 x 0 0
-P1              0.0737  16.63
-Q1              0.0303  9.89
+M2              1.1840  113.98
 x 0 0
-R2              0.0085  99.86
-S1              0.0234  83.99
-S2              1.0480  81.35
-S4              0.0414  132.79
 x 0 0
-T2              0.0554  93.57
-LDA2            0.0103  98.66
-MU2             0.0247  12.95
-NU2             0.0550  40.92
 x 0 0
 x 0 0
+N2              0.2250  90.64
 x 0 0
-MN4             0.0453  35.49
-MS4             0.1316  72.55
+O1              0.1339  65.20
 x 0 0
-MF              0.0204  22.19
-MSF             0.0273  30.33
-MM              0.0157  10.96
-SA              0.0013  284.10
-SSA             0.0122  5.38
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.6526  157.50
 x 0 0
 x 0 0
 x 0 0
@@ -26276,9 +26302,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0205  205.58
 x 0 0
-EPS2            0.0037  350.12
 x 0 0
 x 0 0
 x 0 0
@@ -26319,7 +26343,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0029  61.21
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -26387,58 +26435,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3891
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3891). fS=1.57 fN=1.77 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.22 fN=2.29 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Ile Juan de Nova).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 42.7265
 # !latitude: -17.0493
 Île Juan de Nova, Îles Éparses
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 3.0000 meters
-J1              0.0164  22.43
-K1              0.2481  6.56
-K2              0.2567  67.14
-L2              0.0537  71.23
 x 0 0
-M2              2.0318  20.77
-M3              0.0027  20.20
-M4              0.0575  240.40
-M6              0.0860  304.96
-M8              0.0028  236.26
-N2              0.3623  7.49
+K1              0.2479  53.00
+K2              0.1653  142.00
 x 0 0
-O1              0.1463  11.20
 x 0 0
-P1              0.0835  8.90
-Q1              0.0344  2.97
+M2              1.3210  99.00
 x 0 0
-R2              0.0092  84.34
-S1              0.0266  76.24
-S2              0.9980  65.85
-S4              0.0469  101.79
 x 0 0
-T2              0.0598  78.09
-LDA2            0.0117  83.44
-MU2             0.0267  358.50
-NU2             0.0593  26.19
 x 0 0
 x 0 0
+N2              0.2510  75.95
 x 0 0
-MN4             0.0528  5.82
-MS4             0.1534  42.07
+O1              0.1578  58.00
 x 0 0
-MF              0.0204  21.62
-MSF             0.0273  29.81
-MM              0.0157  10.68
-SA              0.0013  284.08
-SSA             0.0122  5.34
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.6124  142.00
 x 0 0
 x 0 0
 x 0 0
@@ -26465,9 +26495,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0232  190.56
 x 0 0
-EPS2            0.0042  335.95
 x 0 0
 x 0 0
 x 0 0
@@ -26508,7 +26536,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0033  31.82
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -26576,58 +26628,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3894
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3894). fS=1.49 fN=1.43 dt=+128min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.06 fN=1.86 dt=+88min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Maintirano).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 44.0159
 # !latitude: -18.0624
 Maintirano, Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.3900 meters
-J1              0.0143  55.81
-K1              0.2168  38.77
-K2              0.2631  131.57
-L2              0.0490  134.47
 x 0 0
-M2              1.8568  82.84
-M3              0.0023  113.31
-M4              0.0480  4.55
-M6              0.0718  131.18
-M8              0.0025  124.56
-N2              0.3311  68.40
+K1              0.2152  75.19
+K2              0.1637  186.37
 x 0 0
-O1              0.1279  41.06
 x 0 0
-P1              0.0730  40.94
-Q1              0.0301  31.67
+M2              1.1820  141.75
 x 0 0
-R2              0.0084  148.68
-S1              0.0232  108.36
-S2              1.0230  130.10
-S4              0.0410  230.29
 x 0 0
-T2              0.0547  142.25
-LDA2            0.0102  146.52
-MU2             0.0244  58.40
-NU2             0.0542  87.25
 x 0 0
 x 0 0
+N2              0.2246  117.90
 x 0 0
-MN4             0.0441  128.80
-MS4             0.1281  168.39
+O1              0.1369  78.57
 x 0 0
-MF              0.0204  23.97
-MSF             0.0273  31.99
-MM              0.0157  11.85
-SA              0.0013  284.17
-SSA             0.0122  5.52
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.6063  186.25
 x 0 0
 x 0 0
 x 0 0
@@ -26654,9 +26688,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0203  252.81
 x 0 0
-EPS2            0.0037  34.68
 x 0 0
 x 0 0
 x 0 0
@@ -26697,7 +26729,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0029  153.64
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -26956,58 +27012,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3898
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3898). fS=1.44 fN=1.94 dt=+115min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.00 fN=2.86 dt=+75min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Ilot Indien).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 44.3797
 # !latitude: -19.7764
 Ilot Indien, Madagascar
-+00:00 :Indian/Antananarivo
-2.7800 meters
-J1              0.0166  52.30
-K1              0.2512  35.39
-K2              0.2117  124.80
-L2              0.0517  127.83
++03:00 :Indian/Antananarivo
+2.1000 meters
 x 0 0
-M2              1.9568  76.32
-M3              0.0027  103.53
-M4              0.0533  351.51
-M6              0.0798  111.62
-M8              0.0029  98.47
-N2              0.3489  62.00
+K1              0.2671  71.80
+K2              0.1153  179.60
 x 0 0
-O1              0.1482  37.92
 x 0 0
-P1              0.0846  37.57
-Q1              0.0348  28.65
+M2              1.3129  135.23
 x 0 0
-R2              0.0089  141.92
-S1              0.0269  104.99
-S2              0.8230  123.35
-S4              0.0475  216.79
 x 0 0
-T2              0.0576  135.51
-LDA2            0.0118  139.90
-MU2             0.0257  52.11
-NU2             0.0571  80.84
 x 0 0
 x 0 0
+N2              0.2494  111.50
 x 0 0
-MN4             0.0490  115.88
-MS4             0.1423  155.12
+O1              0.1700  75.43
 x 0 0
-MF              0.0204  23.72
-MSF             0.0273  31.76
-MM              0.0157  11.72
-SA              0.0013  284.16
-SSA             0.0122  5.50
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.4271  179.50
 x 0 0
 x 0 0
 x 0 0
@@ -27034,9 +27072,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0235  246.27
 x 0 0
-EPS2            0.0042  28.51
 x 0 0
 x 0 0
 x 0 0
@@ -27077,7 +27113,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0034  140.84
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -27145,58 +27205,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3899
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3899). fS=1.36 fN=1.34 dt=+54min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.89 fN=1.71 dt=+54min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Morondava).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 44.2736
 # !latitude: -20.2891
 Morondava, Madagascar
-+00:00 :Indian/Antananarivo
-2.5000 meters
-J1              0.0133  36.33
-K1              0.2009  19.97
-K2              0.2374  93.96
-L2              0.0451  97.56
++03:00 :Indian/Antananarivo
+2.3000 meters
 x 0 0
-M2              1.7068  46.61
-M3              0.0022  58.97
-M4              0.0406  292.09
-M6              0.0607  22.49
-M8              0.0023  339.64
-N2              0.3043  32.85
+K1              0.1982  66.66
+K2              0.1501  169.32
 x 0 0
-O1              0.1185  23.63
 x 0 0
-P1              0.0676  22.24
-Q1              0.0279  14.92
+M2              1.0874  125.33
 x 0 0
-R2              0.0077  111.13
-S1              0.0215  89.61
-S2              0.9230  92.60
-S4              0.0380  155.29
 x 0 0
-T2              0.0502  104.80
-LDA2            0.0095  109.70
-MU2             0.0224  23.44
-NU2             0.0498  51.61
 x 0 0
 x 0 0
+N2              0.2066  101.78
 x 0 0
-MN4             0.0373  57.02
-MS4             0.1083  94.66
+O1              0.1261  70.66
 x 0 0
-MF              0.0204  22.60
-MSF             0.0273  30.72
-MM              0.0157  11.17
-SA              0.0013  284.12
-SSA             0.0122  5.41
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.5560  169.25
 x 0 0
 x 0 0
 x 0 0
@@ -27223,9 +27265,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0188  216.48
 x 0 0
-EPS2            0.0034  0.40
 x 0 0
 x 0 0
 x 0 0
@@ -27266,7 +27306,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0027  82.54
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -27525,58 +27589,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3902
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3902). fS=1.62 fN=2.97 dt=+119min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.33 fN=3.00 dt=+79min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Andriangory).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 43.7621
 # !latitude: -20.8359
 Nosy Andriangory, Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.6500 meters
-J1              0.0225  53.34
-K1              0.3409  36.39
-K2              0.1795  126.80
-L2              0.0642  129.79
 x 0 0
-M2              2.4318  78.26
-M3              0.0037  106.43
-M4              0.0824  355.37
-M6              0.1232  117.42
-M8              0.0039  106.20
-N2              0.4336  63.90
+K1              0.2933  72.80
+K2              0.1485  181.61
 x 0 0
-O1              0.2011  38.85
 x 0 0
-P1              0.1148  38.57
-Q1              0.0473  29.54
+M2              1.4800  137.16
 x 0 0
-R2              0.0110  143.92
-S1              0.0365  105.99
-S2              0.6980  125.35
-S4              0.0645  220.79
 x 0 0
-T2              0.0716  137.51
-LDA2            0.0161  141.86
-MU2             0.0319  53.97
-NU2             0.0710  82.74
 x 0 0
 x 0 0
+N2              0.2812  113.40
 x 0 0
-MN4             0.0756  119.71
-MS4             0.2198  159.06
+O1              0.1867  76.36
 x 0 0
-MF              0.0204  23.80
-MSF             0.0273  31.82
-MM              0.0157  11.76
-SA              0.0013  284.16
-SSA             0.0122  5.50
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.5500  181.50
 x 0 0
 x 0 0
 x 0 0
@@ -27603,9 +27649,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0319  248.21
 x 0 0
-EPS2            0.0057  30.34
 x 0 0
 x 0 0
 x 0 0
@@ -27646,7 +27690,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0046  144.63
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -27714,58 +27782,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3903
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3903). fS=1.41 fN=1.34 dt=+130min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.89 fN=1.57 dt=+90min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Andriamitaroka).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 43.6861
 # !latitude: -21.0751
 Nosy Andriamitaroka, Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.6000 meters
-J1              0.0135  56.20
-K1              0.2047  39.15
-K2              0.2503  132.32
-L2              0.0464  135.21
 x 0 0
-M2              1.7568  83.57
-M3              0.0022  114.40
-M4              0.0430  6.00
-M6              0.0643  133.36
-M8              0.0023  127.46
-N2              0.3133  69.11
+K1              0.1903  75.56
+K2              0.1561  187.12
 x 0 0
-O1              0.1208  41.41
 x 0 0
-P1              0.0689  41.31
-Q1              0.0284  32.00
+M2              1.0652  142.48
 x 0 0
-R2              0.0080  149.43
-S1              0.0219  108.74
-S2              0.9730  130.85
-S4              0.0387  231.79
 x 0 0
-T2              0.0517  143.00
-LDA2            0.0096  147.26
-MU2             0.0231  59.10
-NU2             0.0513  87.97
 x 0 0
 x 0 0
+N2              0.2024  118.61
 x 0 0
-MN4             0.0395  130.24
-MS4             0.1147  169.87
+O1              0.1211  78.91
 x 0 0
-MF              0.0204  24.00
-MSF             0.0273  32.01
-MM              0.0157  11.86
-SA              0.0013  284.17
-SSA             0.0122  5.52
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.5781  187.00
 x 0 0
 x 0 0
 x 0 0
@@ -27792,9 +27842,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0192  253.54
 x 0 0
-EPS2            0.0034  35.37
 x 0 0
 x 0 0
 x 0 0
@@ -27835,7 +27883,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0028  155.06
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -27903,58 +27975,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3904
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3904). fS=1.57 fN=2.11 dt=+119min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.22 fN=2.86 dt=+79min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Ampasilava).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 43.7383
 # !latitude: -21.2773
 Andranopasy (Baie de Ampasilava), Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.4400 meters
-J1              0.0180  53.34
-K1              0.2735  36.39
-K2              0.2310  126.80
-L2              0.0563  129.79
 x 0 0
-M2              2.1318  78.26
-M3              0.0029  106.43
-M4              0.0633  355.37
-M6              0.0947  117.42
-M8              0.0031  106.20
-N2              0.3801  63.90
+K1              0.2794  72.80
+K2              0.1414  181.61
 x 0 0
-O1              0.1613  38.85
 x 0 0
-P1              0.0921  38.57
-Q1              0.0379  29.54
+M2              1.4095  137.16
 x 0 0
-R2              0.0097  143.92
-S1              0.0293  105.99
-S2              0.8980  125.35
-S4              0.0518  220.79
 x 0 0
-T2              0.0628  137.51
-LDA2            0.0129  141.86
-MU2             0.0280  53.97
-NU2             0.0623  82.74
 x 0 0
 x 0 0
+N2              0.2678  113.40
 x 0 0
-MN4             0.0581  119.71
-MS4             0.1689  159.06
+O1              0.1778  76.36
 x 0 0
-MF              0.0204  23.80
-MSF             0.0273  31.82
-MM              0.0157  11.76
-SA              0.0013  284.16
-SSA             0.0122  5.50
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.5238  181.50
 x 0 0
 x 0 0
 x 0 0
@@ -27981,9 +28035,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0256  248.21
 x 0 0
-EPS2            0.0046  30.34
 x 0 0
 x 0 0
 x 0 0
@@ -28024,7 +28076,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0037  144.63
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -28092,58 +28168,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3906
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3906). fS=1.41 fN=1.34 dt=+135min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.89 fN=1.57 dt=+95min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Morombe).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 43.3490
 # !latitude: -21.7486
 Morombe, Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.6000 meters
-J1              0.0135  57.50
-K1              0.2047  40.40
-K2              0.2503  134.82
-L2              0.0464  137.67
 x 0 0
-M2              1.7568  85.98
-M3              0.0022  118.02
-M4              0.0430  10.83
-M6              0.0643  140.60
-M8              0.0023  137.12
-N2              0.3133  71.48
+K1              0.1903  76.82
+K2              0.1561  189.63
 x 0 0
-O1              0.1208  42.57
 x 0 0
-P1              0.0689  42.56
-Q1              0.0284  33.12
+M2              1.0652  144.89
 x 0 0
-R2              0.0080  151.93
-S1              0.0219  109.99
-S2              0.9730  133.35
-S4              0.0387  236.79
 x 0 0
-T2              0.0517  145.50
-LDA2            0.0096  149.72
-MU2             0.0231  61.43
-NU2             0.0513  90.34
 x 0 0
 x 0 0
+N2              0.2024  120.98
 x 0 0
-MN4             0.0395  135.02
-MS4             0.1147  174.78
+O1              0.1211  80.08
 x 0 0
-MF              0.0204  24.09
-MSF             0.0273  32.10
-MM              0.0157  11.90
-SA              0.0013  284.17
-SSA             0.0122  5.52
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.5781  189.50
 x 0 0
 x 0 0
 x 0 0
@@ -28170,9 +28228,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0192  255.96
 x 0 0
-EPS2            0.0034  37.65
 x 0 0
 x 0 0
 x 0 0
@@ -28213,7 +28269,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0028  159.80
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -28281,58 +28361,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3907
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3907). fS=1.41 fN=1.26 dt=+131min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=2.06 fN=2.71 dt=+91min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Andrahombava).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 43.2034
 # !latitude: -21.9606
 Nosy Andrahombava, Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.5000 meters
-J1              0.0131  56.46
-K1              0.1984  39.40
-K2              0.2567  132.82
-L2              0.0457  135.70
 x 0 0
-M2              1.7318  84.05
-M3              0.0021  115.12
-M4              0.0418  6.96
-M6              0.0625  134.81
-M8              0.0023  129.39
-N2              0.3088  69.58
+K1              0.2623  75.81
+K2              0.1278  187.62
 x 0 0
-O1              0.1170  41.64
 x 0 0
-P1              0.0668  41.56
-Q1              0.0275  32.22
+M2              1.3149  142.96
 x 0 0
-R2              0.0079  149.93
-S1              0.0212  108.99
-S2              0.9980  131.35
-S4              0.0375  232.79
 x 0 0
-T2              0.0510  143.50
-LDA2            0.0094  147.75
-MU2             0.0227  59.56
-NU2             0.0506  88.44
 x 0 0
 x 0 0
+N2              0.2498  119.08
 x 0 0
-MN4             0.0384  131.20
-MS4             0.1115  170.85
+O1              0.1669  79.15
 x 0 0
-MF              0.0204  24.02
-MSF             0.0273  32.03
-MM              0.0157  11.87
-SA              0.0013  284.17
-SSA             0.0122  5.52
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.4735  187.50
 x 0 0
 x 0 0
 x 0 0
@@ -28359,9 +28421,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0186  254.02
 x 0 0
-EPS2            0.0033  35.83
 x 0 0
 x 0 0
 x 0 0
@@ -28402,7 +28462,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0027  156.01
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -28470,58 +28554,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3909
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3909). fS=1.34 fN=1.26 dt=+135min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.72 fN=1.43 dt=+95min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Hao).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 43.1931
 # !latitude: -22.0869
 Nosy Hao, Madagascar
-+00:00 :Indian/Antananarivo
-2.3900 meters
-J1              0.0127  57.50
-K1              0.1926  40.40
-K2              0.2374  134.82
-L2              0.0438  137.67
++03:00 :Indian/Antananarivo
+2.5400 meters
 x 0 0
-M2              1.6568  85.98
-M3              0.0021  118.02
-M4              0.0382  10.83
-M6              0.0572  140.60
-M8              0.0022  137.12
-N2              0.2954  71.48
+K1              0.1733  76.82
+K2              0.1425  189.63
 x 0 0
-O1              0.1136  42.57
 x 0 0
-P1              0.0648  42.56
-Q1              0.0267  33.12
+M2              0.9706  144.89
 x 0 0
-R2              0.0075  151.93
-S1              0.0206  109.99
-S2              0.9230  133.35
-S4              0.0364  236.79
 x 0 0
-T2              0.0488  145.50
-LDA2            0.0091  149.72
-MU2             0.0218  61.43
-NU2             0.0484  90.34
 x 0 0
 x 0 0
+N2              0.1844  120.98
 x 0 0
-MN4             0.0351  135.02
-MS4             0.1020  174.78
+O1              0.1103  80.08
 x 0 0
-MF              0.0204  24.09
-MSF             0.0273  32.10
-MM              0.0157  11.90
-SA              0.0013  284.17
-SSA             0.0122  5.52
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.5277  189.50
 x 0 0
 x 0 0
 x 0 0
@@ -28548,9 +28614,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0180  255.96
 x 0 0
-EPS2            0.0032  37.65
 x 0 0
 x 0 0
 x 0 0
@@ -28591,7 +28655,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0026  159.80
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -28659,58 +28747,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3910
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3910). fS=1.31 fN=1.51 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.78 fN=1.86 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Ile Europa).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 40.3333
 # !latitude: -22.3167
 Île Europa, Îles Éparses
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 2.2000 meters
-J1              0.0138  22.43
-K1              0.2097  6.56
-K2              0.2117  67.14
-L2              0.0451  71.23
 x 0 0
-M2              1.7068  20.77
-M3              0.0023  20.20
-M4              0.0406  240.40
-M6              0.0607  304.96
-M8              0.0024  236.26
-N2              0.3043  7.49
+K1              0.1999  53.00
+K2              0.1311  142.00
 x 0 0
-O1              0.1237  11.20
 x 0 0
-P1              0.0706  8.90
-Q1              0.0291  2.97
+M2              1.0612  99.00
 x 0 0
-R2              0.0077  84.34
-S1              0.0225  76.24
-S2              0.8230  65.85
-S4              0.0397  101.79
 x 0 0
-T2              0.0502  78.09
-LDA2            0.0099  83.44
-MU2             0.0224  358.50
-NU2             0.0498  26.19
 x 0 0
 x 0 0
+N2              0.2016  75.95
 x 0 0
-MN4             0.0373  5.82
-MS4             0.1083  42.07
+O1              0.1272  58.00
 x 0 0
-MF              0.0204  21.62
-MSF             0.0273  29.81
-MM              0.0157  10.68
-SA              0.0013  284.08
-SSA             0.0122  5.34
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.4855  142.00
 x 0 0
 x 0 0
 x 0 0
@@ -28737,9 +28807,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0196  190.56
 x 0 0
-EPS2            0.0035  335.95
 x 0 0
 x 0 0
 x 0 0
@@ -28780,7 +28848,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0028  31.82
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -29039,58 +29131,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3913
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3913). fS=1.18 fN=1.26 dt=+155min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.39 fN=1.14 dt=+108min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: St. Augustine Bay).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 43.7488
 # !latitude: -23.5486
 Baie de Saint-Augustin, Madagascar
-+00:00 :Indian/Antananarivo
-2.2800 meters
-J1              0.0119  62.69
-K1              0.1810  45.42
-K2              0.1988  144.85
-L2              0.0398  147.51
++03:00 :Indian/Antananarivo
+2.0000 meters
 x 0 0
-M2              1.5068  95.65
-M3              0.0020  132.51
-M4              0.0316  30.15
-M6              0.0473  169.59
-M8              0.0021  175.76
-N2              0.2687  80.96
+K1              0.1392  79.95
+K2              0.1153  195.90
 x 0 0
-O1              0.1068  47.22
 x 0 0
-P1              0.0610  47.54
-Q1              0.0251  37.58
+M2              0.7813  150.93
 x 0 0
-R2              0.0068  161.95
-S1              0.0194  114.99
-S2              0.7730  143.35
-S4              0.0343  256.79
 x 0 0
-T2              0.0444  155.48
-LDA2            0.0085  159.53
-MU2             0.0198  70.75
-NU2             0.0440  99.85
 x 0 0
 x 0 0
+N2              0.1484  126.90
 x 0 0
-MN4             0.0290  154.16
-MS4             0.0844  194.45
+O1              0.0886  82.98
 x 0 0
-MF              0.0204  24.46
-MSF             0.0273  32.43
-MM              0.0157  12.09
-SA              0.0013  284.19
-SSA             0.0122  5.55
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.4270  195.75
 x 0 0
 x 0 0
 x 0 0
@@ -29117,9 +29191,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0169  265.65
 x 0 0
-EPS2            0.0030  46.79
 x 0 0
 x 0 0
 x 0 0
@@ -29160,7 +29232,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0024  178.76
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -29419,58 +29515,40 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3917
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3917). fS=0.97 fN=0.91 dt=+56min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.94 fN=0.86 dt=+56min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Cap Ste. Marie).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 45.1390
 # !latitude: -25.5963
 Tanjon' i Vohimena (Cap Sainte-Marie), Madagascar
-+00:00 :Indian/Antananarivo
++03:00 :Indian/Antananarivo
 1.8800 meters
-J1              0.0093  36.98
-K1              0.1402  20.60
-K2              0.1731  95.22
-L2              0.0319  98.79
 x 0 0
-M2              1.2068  47.82
-M3              0.0015  60.78
-M4              0.0203  294.50
-M6              0.0303  26.12
-M8              0.0016  344.47
-N2              0.2152  34.03
+K1              0.0991  67.04
+K2              0.0751  170.08
 x 0 0
-O1              0.0827  24.21
 x 0 0
-P1              0.0472  22.86
-Q1              0.0195  15.48
+M2              0.5437  126.05
 x 0 0
-R2              0.0055  112.38
-S1              0.0150  90.24
-S2              0.6730  93.85
-S4              0.0265  157.79
 x 0 0
-T2              0.0355  106.05
-LDA2            0.0066  110.93
-MU2             0.0158  24.60
-NU2             0.0352  52.80
 x 0 0
 x 0 0
+N2              0.1033  102.49
 x 0 0
-MN4             0.0186  59.42
-MS4             0.0541  97.12
+O1              0.0631  71.01
 x 0 0
-MF              0.0204  22.64
-MSF             0.0273  30.76
-MM              0.0157  11.19
-SA              0.0013  284.12
-SSA             0.0122  5.42
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+S2              0.2780  170.00
 x 0 0
 x 0 0
 x 0 0
@@ -29497,9 +29575,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0131  217.69
 x 0 0
-EPS2            0.0024  1.55
 x 0 0
 x 0 0
 x 0 0
@@ -29540,7 +29616,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0019  84.91
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -29799,8 +29899,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3920
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3920). fS=0.17 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.10 fN=0.05 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Ste. Luce).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -29809,42 +29913,42 @@ x 0 0
 Sainte-Luce, Madagascar
 +03:00 :Indian/Antananarivo
 0.3000 meters
-J1              0.0003  84.40
-K1              0.0027  75.00
-K2              0.0061  45.20
-L2              0.0011  53.00
-M1              0.0003  65.50
-M2              0.0278  43.00
 x 0 0
-M4              0.0001  229.00
+K1              0.0083  53.00
+K2              0.0097  142.00
 x 0 0
 x 0 0
-N2              0.0079  33.00
-x 0 0
-O1              0.0044  56.00
-OO1             0.0002  94.00
-P1              0.0009  73.60
-Q1              0.0011  24.00
-x 0 0
-R2              0.0001  45.10
-x 0 0
-S2              0.0223  45.00
-x 0 0
-x 0 0
-T2              0.0008  44.90
-LDA2            0.0001  43.90
-MU2             0.0007  41.00
-NU2             0.0015  34.30
-RHO1            0.0002  47.80
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0001  1.00
+M2              0.0513  99.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  304.00
+N2              0.0097  75.95
+x 0 0
+O1              0.0053  58.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0358  142.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -29988,8 +30092,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3923
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3923). fS=0.17 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.10 fN=0.05 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Farafangana).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -29998,42 +30106,42 @@ x 0 0
 Farafangana, Madagascar
 +03:00 :Indian/Antananarivo
 0.3000 meters
-J1              0.0003  84.40
-K1              0.0027  75.00
-K2              0.0061  45.20
-L2              0.0011  53.00
-M1              0.0003  65.50
-M2              0.0278  43.00
 x 0 0
-M4              0.0001  229.00
+K1              0.0083  53.00
+K2              0.0097  142.00
 x 0 0
 x 0 0
-N2              0.0079  33.00
-x 0 0
-O1              0.0044  56.00
-OO1             0.0002  94.00
-P1              0.0009  73.60
-Q1              0.0011  24.00
-x 0 0
-R2              0.0001  45.10
-x 0 0
-S2              0.0223  45.00
-x 0 0
-x 0 0
-T2              0.0008  44.90
-LDA2            0.0001  43.90
-MU2             0.0007  41.00
-NU2             0.0015  34.30
-RHO1            0.0002  47.80
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0001  1.00
+M2              0.0513  99.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  304.00
+N2              0.0097  75.95
+x 0 0
+O1              0.0053  58.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0358  142.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -30177,8 +30285,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3925
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3925). fS=0.17 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.17 fN=0.14 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Manakara).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -30187,42 +30299,42 @@ x 0 0
 Manakara, Madagascar
 +03:00 :Indian/Antananarivo
 0.3300 meters
-J1              0.0003  84.40
-K1              0.0027  75.00
-K2              0.0061  45.20
-L2              0.0011  53.00
-M1              0.0003  65.50
-M2              0.0278  43.00
 x 0 0
-M4              0.0001  229.00
+K1              0.0170  53.00
+K2              0.0136  142.00
 x 0 0
 x 0 0
-N2              0.0079  33.00
-x 0 0
-O1              0.0044  56.00
-OO1             0.0002  94.00
-P1              0.0009  73.60
-Q1              0.0011  24.00
-x 0 0
-R2              0.0001  45.10
-x 0 0
-S2              0.0223  45.00
-x 0 0
-x 0 0
-T2              0.0008  44.90
-LDA2            0.0001  43.90
-MU2             0.0007  41.00
-NU2             0.0015  34.30
-RHO1            0.0002  47.80
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0001  1.00
+M2              0.0946  99.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  304.00
+N2              0.0180  75.95
+x 0 0
+O1              0.0108  58.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0504  142.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -30366,8 +30478,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3930
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3930). fS=1.17 fN=1.45 dt=+39min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.06 fN=1.14 dt=+39min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Vatomandry).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -30376,42 +30492,42 @@ x 0 0
 Vatomandry, Madagascar
 +03:00 :Indian/Antananarivo
 0.5200 meters
-J1              0.0039  94.53
-K1              0.0328  84.78
-K2              0.0260  64.75
-L2              0.0100  72.19
-M1              0.0039  74.92
-M2              0.2550  61.84
 x 0 0
-M4              0.0062  266.68
+K1              0.1209  62.78
+K2              0.0761  161.55
 x 0 0
 x 0 0
-N2              0.0721  51.49
-x 0 0
-O1              0.0537  65.06
-OO1             0.0026  104.49
-P1              0.0105  83.32
-Q1              0.0131  32.71
-x 0 0
-R2              0.0012  64.63
-x 0 0
-S2              0.0950  64.50
-x 0 0
-x 0 0
-T2              0.0075  64.37
-LDA2            0.0013  63.05
-MU2             0.0062  59.18
-NU2             0.0137  52.83
-RHO1            0.0026  56.56
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0124  39.34
+M2              0.6363  117.84
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  304.03
+N2              0.1209  94.44
+x 0 0
+O1              0.0769  67.06
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2820  161.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -30746,8 +30862,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3937
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3937). fS=0.17 fN=0.05 dt=-111min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.28 fN=0.29 dt=-71min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Tintingue).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -30756,42 +30876,42 @@ x 0 0
 Baie de Tintingue (Manompana), Madagascar
 +03:00 :Indian/Antananarivo
 0.7600 meters
-J1              0.0003  55.57
-K1              0.0027  47.17
-K2              0.0061  349.55
-L2              0.0011  358.37
-M1              0.0003  38.68
-M2              0.0278  349.38
 x 0 0
-M4              0.0001  121.76
+K1              0.0310  35.20
+K2              0.0207  106.40
 x 0 0
 x 0 0
-N2              0.0079  340.39
-x 0 0
-O1              0.0044  30.21
-OO1             0.0002  64.14
-P1              0.0009  45.93
-Q1              0.0011  359.21
-x 0 0
-R2              0.0001  349.52
-x 0 0
-S2              0.0223  349.50
-x 0 0
-x 0 0
-T2              0.0008  349.48
-LDA2            0.0001  349.41
-MU2             0.0007  349.26
-NU2             0.0015  341.55
-RHO1            0.0002  22.88
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0001  251.88
+M2              0.1651  64.70
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  303.92
+N2              0.0314  42.30
+x 0 0
+O1              0.0197  41.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0765  106.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -30935,8 +31055,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3938
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3938). fS=0.17 fN=0.05 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.39 fN=0.29 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Mananara).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -30945,42 +31069,42 @@ x 0 0
 Mananara, Madagascar
 +03:00 :Indian/Antananarivo
 0.6400 meters
-J1              0.0003  84.40
-K1              0.0027  75.00
-K2              0.0061  45.20
-L2              0.0011  53.00
-M1              0.0003  65.50
-M2              0.0278  43.00
 x 0 0
-M4              0.0001  229.00
+K1              0.0371  53.00
+K2              0.0337  142.00
 x 0 0
 x 0 0
-N2              0.0079  33.00
-x 0 0
-O1              0.0044  56.00
-OO1             0.0002  94.00
-P1              0.0009  73.60
-Q1              0.0011  24.00
-x 0 0
-R2              0.0001  45.10
-x 0 0
-S2              0.0223  45.00
-x 0 0
-x 0 0
-T2              0.0008  44.90
-LDA2            0.0001  43.90
-MU2             0.0007  41.00
-NU2             0.0015  34.30
-RHO1            0.0002  47.80
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0001  1.00
+M2              0.2135  99.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  304.00
+N2              0.0406  75.95
+x 0 0
+O1              0.0236  58.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1249  142.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -31124,8 +31248,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3939
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3939). fS=0.17 fN=0.05 dt=-24min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.44 fN=0.43 dt=-24min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Maroantsetra).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -31134,42 +31262,42 @@ x 0 0
 Maroantsetra, Madagascar
 +03:00 :Indian/Antananarivo
 0.7100 meters
-J1              0.0003  78.17
-K1              0.0027  68.98
-K2              0.0061  33.17
-L2              0.0011  41.19
-M1              0.0003  59.70
-M2              0.0278  31.41
 x 0 0
-M4              0.0001  205.81
+K1              0.0480  46.98
+K2              0.0343  129.97
 x 0 0
 x 0 0
-N2              0.0079  21.62
-x 0 0
-O1              0.0044  50.42
-OO1             0.0002  87.54
-P1              0.0009  67.62
-Q1              0.0011  18.64
-x 0 0
-R2              0.0001  33.08
-x 0 0
-S2              0.0223  33.00
-x 0 0
-x 0 0
-T2              0.0008  32.92
-LDA2            0.0001  32.12
-MU2             0.0007  29.81
-NU2             0.0015  22.89
-RHO1            0.0002  42.41
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0001  337.41
+M2              0.2598  87.41
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  303.98
+N2              0.0494  64.57
+x 0 0
+O1              0.0306  52.42
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1269  130.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -31313,8 +31441,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3941
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3941). fS=0.17 fN=0.05 dt=-24min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.50 fN=0.43 dt=-24min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Rade d'Angontsy).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -31323,42 +31455,42 @@ x 0 0
 Rade d'Angontsy (Ambodirafia), Madagascar
 +03:00 :Indian/Antananarivo
 0.7600 meters
-J1              0.0003  78.17
-K1              0.0027  68.98
-K2              0.0061  33.17
-L2              0.0011  41.19
-M1              0.0003  59.70
-M2              0.0278  31.41
 x 0 0
-M4              0.0001  205.81
+K1              0.0511  46.98
+K2              0.0408  129.97
 x 0 0
 x 0 0
-N2              0.0079  21.62
-x 0 0
-O1              0.0044  50.42
-OO1             0.0002  87.54
-P1              0.0009  67.62
-Q1              0.0011  18.64
-x 0 0
-R2              0.0001  33.08
-x 0 0
-S2              0.0223  33.00
-x 0 0
-x 0 0
-T2              0.0008  32.92
-LDA2            0.0001  32.12
-MU2             0.0007  29.81
-NU2             0.0015  22.89
-RHO1            0.0002  42.41
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0001  337.41
+M2              0.2839  87.41
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  303.98
+N2              0.0539  64.57
+x 0 0
+O1              0.0325  52.42
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1511  130.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -31884,8 +32016,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3945
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3945). fS=0.33 fN=1.45 dt=-30min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=0.78 fN=1.14 dt=-30min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Port Leven).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -31894,42 +32030,42 @@ x 0 0
 Port Leven, Madagascar
 +03:00 :Indian/Antananarivo
 1.2400 meters
-J1              0.0027  76.61
-K1              0.0223  67.48
-K2              0.0000  30.16
-L2              0.0051  38.24
-M1              0.0027  58.25
-M2              0.1300  28.51
 x 0 0
-M4              0.0016  200.02
+K1              0.1056  45.48
+K2              0.0435  126.96
 x 0 0
 x 0 0
-N2              0.0368  18.78
-x 0 0
-O1              0.0367  49.03
-OO1             0.0018  85.93
-P1              0.0072  66.12
-Q1              0.0089  17.30
-x 0 0
-R2              0.0006  30.08
-x 0 0
-S2              0.0000  30.00
-x 0 0
-x 0 0
-T2              0.0038  29.92
-LDA2            0.0009  29.17
-MU2             0.0032  27.02
-NU2             0.0070  20.04
-RHO1            0.0018  41.06
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0032  331.51
+M2              0.5155  84.51
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  303.98
+N2              0.0979  61.73
+x 0 0
+O1              0.0672  51.03
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1612  127.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -32073,8 +32209,12 @@ x 0 0
 # country: Madagascar
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3946
-# note: NP203 Part II Sekundaerhafen-Transfer von Toamasina, Madagascar (att 3946). fS=1.33 fN=1.00 dt=+6min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
+# note: fS=1.11 fN=1.00 dt=+6min, skaliert gegen die
+# note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
+# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Rigny).
+# date_imported: 20260730
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -32083,42 +32223,42 @@ x 0 0
 Baie de Rigny, Madagascar
 +03:00 :Indian/Antananarivo
 1.3000 meters
-J1              0.0035  85.96
-K1              0.0292  76.50
-K2              0.0397  48.21
-L2              0.0100  55.95
-M1              0.0035  66.95
-M2              0.2550  45.90
 x 0 0
-M4              0.0062  234.80
+K1              0.1161  54.50
+K2              0.0887  145.01
 x 0 0
 x 0 0
-N2              0.0721  35.84
-x 0 0
-O1              0.0478  57.39
-OO1             0.0023  95.61
-P1              0.0093  75.10
-Q1              0.0117  25.34
-x 0 0
-R2              0.0012  48.10
-x 0 0
-S2              0.1450  48.00
-x 0 0
-x 0 0
-T2              0.0075  47.90
-LDA2            0.0012  46.85
-MU2             0.0062  43.80
-NU2             0.0137  37.15
-RHO1            0.0023  49.15
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0124  6.90
+M2              0.6383  101.90
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0550  304.00
+N2              0.1213  78.79
+x 0 0
+O1              0.0739  59.39
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.3283  145.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -101642,384 +101782,6 @@ x 0 0
 x 0 0
 x 0 0
 SA              0.1490  326.97
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Madagascar
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
-# att_number: 3866
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3866). fS=1.86 fN=1.42 dt=+13min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: 48.6167
-# !latitude: -12.9000
-Nosy Mitsio, Madagascar
-+03:00 :Indian/Antananarivo
-2.2200 meters
-J1              0.0098  28.98
-K1              0.2199  38.26
-K2              0.1654  155.32
-L2              0.0296  125.40
-M1              0.0082  47.64
-M2              1.1170  104.28
-x 0 0
-M4              0.0212  48.56
-x 0 0
-x 0 0
-N2              0.2070  83.16
-x 0 0
-O1              0.1247  57.02
-OO1             0.0049  19.50
-P1              0.0722  39.64
-Q1              0.0263  45.90
-x 0 0
-R2              0.0035  153.41
-x 0 0
-S2              0.6080  151.50
-x 0 0
-x 0 0
-T2              0.0296  149.59
-LDA2            0.0066  126.18
-MU2             0.0261  57.06
-NU2             0.0400  85.98
-RHO1            0.0049  65.12
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0272  138.78
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.0340  280.01
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Madagascar
-# source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
-# att_number: 3885
-# note: NP203 Part II Sekundaerhafen-Transfer von Mahajanga, Madagascar (att 3885). fS=1.21 fN=1.82 dt=+11min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 45.9006
-# !latitude: -15.7225
-Nosy Makamby, Madagascar
-+03:00 :Indian/Antananarivo
-2.6100 meters
-x 0 0
-K1              0.2120  57.76
-K2              0.1620  169.52
-x 0 0
-x 0 0
-M2              1.7100  118.31
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.3249  90.87
-x 0 0
-O1              0.1060  54.56
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S2              0.6000  169.50
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
 x 0 0
 x 0 0
 x 0 0

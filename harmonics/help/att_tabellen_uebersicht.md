@@ -51,6 +51,27 @@ das zu M2 = 0.064 m statt der gemessenen 0.16 m, und S2 wurde größer als M2.
 
 Diese publizierten Werte stehen in Table V Part 1 (und im Kopf jedes Part-II-Blocks).
 
+## Welcher Standardhafen ist der Bezug?
+
+**Der eingerahmte Standardhafen über einer Gruppe gilt bis zum nächsten
+eingerahmten Kopf.** Ein Standardhafen, der *innerhalb* der Liste an seiner
+geografischen Stelle steht (`STANDARD PORT … See Table V`), ist nur ein Eintrag
+und **kein** neuer Bezug.
+
+Der Import von 2026-06 hat das verwechselt und ab jedem solchen Eintrag den
+Bezug gewechselt. Auf Seite 224 steht die ganze Madagaskar-Liste unter
+Antsiranana — der alte Import hat ab Mahajanga (3881) und ab Toamasina (3932)
+umgeschaltet und damit 28 Stationen falsch abgeleitet. Insgesamt betraf es
+63 der 170 Transfer-Stationen.
+
+ATT wählt den Bezug nach **Kurvenform, nicht nach Nähe**: Die Antarktis hängt an
+Durban, Kerguelen an Sagar Roads, Mawson an Kochi, Chagos wieder an Durban.
+Raten führt zwangsläufig in die Irre — der Kopf muss gelesen werden.
+
+Die vollständige Zuordnung aller 59 Gruppen samt publizierter Pegel steht in
+`harmonics/help/np203_part2_bezugshaefen.json`, geprüft wird sie mit
+`py/check_np203_bezug.py`.
+
 ## Warum Table V Part 2 gebraucht wird
 
 HAT ist der höchste astronomisch mögliche Wasserstand. Der über ein Jahr
@@ -125,6 +146,8 @@ py/rebuild_np203_page231.py     Part II Seite 231 komplett aus dem Scan
 py/add_np203_tablev_new.py      legt Stationen an, die es bei uns noch nicht gibt
 py/fix_np203_numbers_2.py       att-Nummern gegen den Scan geradeziehen
 py/hat_test_np203.py            HAT-Test gegen Table V Part 2
+py/check_np203_bezug.py         Bezugshäfen gegen die Gruppenköpfe prüfen
+py/rebuild_np203_transfer.py    Transfer neu ableiten (richtiger Bezug, publizierte Pegel)
 ```
 
 `build_np203_tablev.py` gleicht **über die att-Nummer** ab und prüft zusätzlich den
