@@ -8,9 +8,10 @@ Buchstationen im NP203-Gebiet liegen bei uns, auf 0.25 km genau, und die Werte
 stimmen ueberein. Es fehlen 426c und 426d.
 
 (Die uebrigen 40 Stationen der Datei liegen in Fernost -- Singapur, Riau,
-Bangka, Philippinen, Sulawesi -- und gehoeren nicht zu NP203 2015. Table V
-Part 2 sagt ausdruecklich "all Secondary Ports in this volume" und endet bei
-4491 Canning Town am Hugli. Das ist separat zu klaeren.)
+Bangka, Philippinen, Sulawesi. Sie sind korrekt etikettiert: die Ausgabe 2002
+hiess "Indian Ocean AND SOUTH CHINA SEA" und fuehrte in Part IIIa auf S.340-342
+die Nummern 415 bis 551. Die Ausgabe 2015 ist auf den Indischen Ozean
+zurueckgeschnitten und endet bei 429a.)
 
 Rechenweg, aus der bestehenden Datei rekonstruiert und an 421a, 421b und 422b
 in allen vier Konstituenten exakt nachgerechnet:

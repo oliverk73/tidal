@@ -361,11 +361,47 @@ Geschwindigkeit und zeigt Stillwasser, das es nicht gibt.
   Buchposition von **426e** (29° 56.9′ N / 49° 07.6′ E) — 162 km nördlich des
   echten 426c. Nummer korrigiert.
 
-**Offen:** Die übrigen **40** Stationen der Datei (Singapur, Riau, Bangka,
-Philippinen, Sulawesi, Lombok, Irian Jaya, Nummern 470–551) sind als NP203 2002
-gekennzeichnet, liegen aber außerhalb des Gebiets von NP203 2015 — Table V
-Part 2 endet mit „all Secondary Ports in this volume" bei 4491 Canning Town.
-Vermutlich stammen sie aus NP204; die Herkunftsangabe ist zu klären.
+**Die übrigen 40 Stationen** (Singapur, Riau, Bangka, Philippinen, Sulawesi,
+Lombok, Irian Jaya, Nummern 470–551) sind korrekt gekennzeichnet — siehe den
+nächsten Abschnitt.
+
+## Der Band ist zwischen 2002 und 2015 geschrumpft
+
+Die 40 fernöstlichen Strömungsstationen sahen zunächst falsch etikettiert aus.
+Sie sind es nicht. Das Vorwort der Ausgabe 2002 sagt:
+
+> VOLUME 3: **INDIAN OCEAN AND SOUTH CHINA SEA** (including Tidal Stream Tables)
+
+Deren Part IIIa steht auf S.340–342 und läuft von 415 bis 551 — Rotes Meer,
+Golf, Oman, dann Singapur, Malaysia, Philippinen, Borneo, Sulawesi, Indonesien,
+Irian Jaya. Die Werte in unserer Datei stimmen Ziffer für Ziffer mit dieser
+Seite überein (Stichprobe 496: 10° 41.0′ N / 122° 35.0′ E, M2 243°/1.54 kn).
+
+Die Ausgabe **2015** ist auf den Indischen Ozean zurückgeschnitten:
+
+| | 2002 | 2015 |
+|---|---|---|
+| Part IIIa | S.340–342, Nr. 415–551 | S.252–253, Nr. 415–429a |
+| Part III | S.312–339, bis Irian Jaya | S.240–249, bis Myanmar |
+| Sekundärhäfen | Part II bis weit über 4491 | endet bei 4491 Canning Town |
+| Standardhäfen (Table V Part 1) | — | endet bei 4539 Bassein River |
+
+Also: nichts zu reparieren. Die Quellenzeile nennt bereits die Ausgabe, und die
+beiden Ausgaben stehen nebeneinander in derselben Datei.
+
+**Der Band 2002 liegt vollständig vor** — `tide_tables/att/np203_2002_vollband.pdf`.
+Darin steckt Material, das wir noch nirgends haben:
+
+- **Part III für Südchinesisches Meer und Indonesien** (S.321–339, Nummern
+  ~4500–5400+): stationseigene Konstanten für Malakkastraße, Sumatra, Java,
+  Bali, Borneo, Philippinen. In keiner unserer Sammlungen.
+- **Part II derselben Region** (S.264–311).
+- **4311 Gugsar/Koksar** hat 2002 stationseigene Konstanten (S.319) — bei uns
+  der letzte Part-II-Transfer dieses Küstenabschnitts.
+- **4276A Abadan schließt der Band 2002 nicht**: dort trägt 4276a „Khowr-e Musa
+  Outer Platform", Abadan fehlt. Die Lücke bleibt.
+
+OCR von Part II und Part III liegt bereits vor: `tide_tables/yemen/ocr/part{2,3}_full.txt`.
 
 ## Scans
 
