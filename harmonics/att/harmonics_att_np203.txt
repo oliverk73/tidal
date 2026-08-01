@@ -14991,7 +14991,9 @@ MNUS2
 # country: 
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Simplified Harmonic Method
 # att_number: 4145
-# note: NP203 Part III (2002). Mikro-diurnal; M2 dominiert.
+# note: NP203 Part III S.242 (Ausgabe 2015), Meridian +03:00. Stationseigene Konstanten.
+# note: 20260801 ersetzt den Satz aus der Ausgabe 2002 -- dessen Z0 wich um mehr als
+# note: 0.15 m ab und widersprach der ML-Spalte in Part II. N2/K2 inferiert.
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
@@ -15000,27 +15002,27 @@ MNUS2
 # !latitude: 15.3343
 Kamaran (Passage), Yemen
 +03:00 :Asia/Aden
-0.7800 meters
+1.0000 meters
 x 0 0
-K1              0.0100  188.00
-x 0 0
-x 0 0
-x 0 0
-M2              0.3200  44.00
+K1              0.0200  79.00
+K2              0.0243  61.00
 x 0 0
 x 0 0
+M2              0.3300  30.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-O1              0.0100  140.00
+N2              0.0627  13.38
+x 0 0
+O1              0.0100  181.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.0900  72.00
+S2              0.0900  61.00
 x 0 0
 x 0 0
 x 0 0
@@ -15179,8 +15181,12 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: 
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Simplified Harmonic Method
-# att_number: 4146
-# note: NP203 Part III (2002) inkl. Flachwasser (M4/M6).
+# att_number: 4146a
+# note: NP203 Part III S.242 (Ausgabe 2015), Meridian +03:00. Stationseigene Konstanten.
+# note: 20260801 ersetzt den Satz aus der Ausgabe 2002 -- dessen Z0 wich um mehr als
+# note: 0.15 m ab und widersprach der ML-Spalte in Part II. N2/K2 inferiert.
+# note: Nummer 20260801 nach Scan korrigiert (4146 -> 4146a). Part II S.228 und Table V Part 2 fuehren
+# note: 4146 Ras al Katib (14 55 N) und 4146a Al Hudaydah (14 50 N) -- die Positionen belegen den Tausch.
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
@@ -15189,10 +15195,10 @@ x 0 0
 # !latitude: 14.8322
 Al Hudaydah, Yemen
 +03:00 :Asia/Aden
-1.2200 meters
+0.5800 meters
 x 0 0
 K1              0.0200  66.00
-x 0 0
+K2              0.0216  61.00
 x 0 0
 x 0 0
 M2              0.3100  29.00
@@ -15200,7 +15206,7 @@ x 0 0
 M4              0.0016  211.00
 M6              0.0005  336.00
 x 0 0
-x 0 0
+N2              0.0589  11.85
 x 0 0
 O1              0.0100  134.00
 x 0 0
@@ -15368,8 +15374,12 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: 
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Simplified Harmonic Method
-# att_number: 4146a
-# note: NP203 Part III (2002). ~4 km N von Al Hudaydah.
+# att_number: 4146
+# note: NP203 Part III S.242 (Ausgabe 2015), Meridian +03:00. Stationseigene Konstanten.
+# note: 20260801 ersetzt den Satz aus der Ausgabe 2002 -- dessen Z0 wich um mehr als
+# note: 0.15 m ab und widersprach der ML-Spalte in Part II. N2/K2 inferiert.
+# note: Nummer 20260801 nach Scan korrigiert (4146a -> 4146). Part II S.228 und Table V Part 2 fuehren
+# note: 4146 Ras al Katib (14 55 N) und 4146a Al Hudaydah (14 50 N) -- die Positionen belegen den Tausch.
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
@@ -15378,10 +15388,10 @@ x 0 0
 # !latitude: 14.9144
 Ras al Katib, Yemen
 +03:00 :Asia/Aden
-1.0900 meters
+0.4600 meters
 x 0 0
 K1              0.0400  114.00
-x 0 0
+K2              0.0189  66.00
 x 0 0
 x 0 0
 M2              0.2600  24.00
@@ -15389,7 +15399,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+N2              0.0494  1.49
 x 0 0
 O1              0.0100  124.00
 x 0 0
@@ -25009,6 +25019,9 @@ x 0 0
 # country: India
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Simplified Harmonic Method
 # att_number: 4330
+# note: NP203 Part III S.247 (Ausgabe 2015), Meridian +05:30. Stationseigene Konstanten.
+# note: 20260801 ersetzt den Satz aus der Ausgabe 2002 -- dessen Z0 wich um mehr als
+# note: 0.15 m ab und widersprach der ML-Spalte in Part II. N2/K2 inferiert.
 # note: NP203 Part III S.247 (2015), Standardhafen, Zone -0530 (Golf von Kutch). N2/K2 inferiert. Nur Classic-1997 vorhanden.
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
@@ -25018,18 +25031,18 @@ x 0 0
 # !latitude: 23.0200
 Kandla, Gujarat, India
 +05:30 :Asia/Kolkata
-3.6800 meters
+3.8800 meters
 x 0 0
 K1              0.5000  88.00
 K2              0.1782  107.00
 x 0 0
 x 0 0
-M2              2.3400  46.00
+M2              2.3400  63.00
 x 0 0
+M4              0.1588  1.00
+M6              0.0769  286.00
 x 0 0
-x 0 0
-x 0 0
-N2              0.4446  13.30
+N2              0.4446  39.42
 x 0 0
 O1              0.2400  77.00
 x 0 0

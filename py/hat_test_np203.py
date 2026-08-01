@@ -25,10 +25,28 @@ import re
 import subprocess
 import sys
 
-TCD = '/home/oliver/weather/harmonics/binary/harmonics_att_np203_secondary.tcd'
-TXT = '/home/oliver/weather/harmonics/att/harmonics_att_np203_secondary.txt'
-HATJSON = '/home/oliver/weather/harmonics/help/np203_table5_part2_hat.json'
+HARM = '/home/oliver/weather/harmonics'
+TCD = f'{HARM}/binary/harmonics_att_np203_secondary.tcd'
+TXT = f'{HARM}/att/harmonics_att_np203_secondary.txt'
+HAT2 = f'{HARM}/help/np203_table5_part2_hat.json'    # Sekundaerhaefen
+HAT1 = f'{HARM}/help/np203_table5_part1_levels.json'  # Standardhaefen
 OBEN, UNTEN = 0.30, -1.00
+
+# Welche Textquelle zu welcher TCD gehoert -- der Test braucht die Namen und
+# att-Nummern, die nur im Text stehen.
+QUELLE = {'harmonics_att_np203_secondary': TXT,
+          'harmonics_att_np203': f'{HARM}/att/harmonics_att_np203.txt'}
+
+
+def hat_tabelle():
+    """att -> HAT, aus Table V Part 2 (Sekundaer-) und Part 1 (Standardhaefen)."""
+    H = dict(json.load(open(HAT2))['hat'])
+    P1 = json.load(open(HAT1))
+    for teil in ('halbtaegig', 'tagesungleich'):
+        for v in P1[teil].values():
+            if v.get('att') and v.get('hat') is not None:
+                H.setdefault(v['att'], v['hat'])
+    return H
 
 
 def stations(path):
@@ -60,10 +78,12 @@ def main():
     # Argument schlaegt HFILE_PATH schlaegt Vorgabe. Ohne die mittlere Stufe
     # testet ein gesetztes HFILE_PATH stillschweigend die alte TCD aus binary/.
     tcd = args[0] if args else os.environ.get('HFILE_PATH') or TCD
-    print(f'TCD: {tcd}\n')
+    txt = args[1] if len(args) > 1 else QUELLE.get(
+        os.path.basename(tcd)[:-4], TXT)
+    print(f'TCD:  {tcd}\nText: {txt}\n')
     zeige_alle = '--all' in sys.argv
-    HAT = json.load(open(HATJSON))['hat']
-    NAME = stations(TXT)
+    HAT = hat_tabelle()
+    NAME = stations(txt)
 
     treffer, fehlend, auffaellig = 0, [], []
     for att, name in sorted(NAME.items()):
