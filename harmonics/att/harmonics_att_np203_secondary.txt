@@ -15373,36 +15373,65 @@ x 0 0
 # country: French Southern Territories
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 2004
-# note: NP203 Part II Sekundaerhafen-Transfer von Sagar Roads (NP203), India (att 2004). fS=0.81 fN=0.59 dt=+650min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Durban (att 3800).
+# note: fS=0.44 fN=0.05 dt=+870min, skaliert gegen die
+# note: publizierten Pegel [2.0, 1.4, 0.9, 0.2] aus dem Gruppenkopf S.222.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.222 (Buch: Baie de l'Oiseau).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Durban, South Africa") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 69.0330
 # !latitude: -48.6830
 Baie de l'Oiseau, French Southern Territories
-+05:30 :Indian/Kerguelen
++00:00 :Indian/Kerguelen
 0.6000 meters
+J1              0.0012  36.57
+K1              0.0131  2.85
+K2              0.0534  149.61
+L2              0.0074  114.61
 x 0 0
-K1              0.1050  147.94
-K2              0.1647  280.89
+M2              0.1996  104.27
+M3              0.0004  257.08
+M4              0.0006  304.12
+M6              0.0002  290.80
+M8              0.0000  36.56
+N2              0.0353  90.47
 x 0 0
+O1              0.0039  140.09
+OO1             0.0009  88.89
+P1              0.0037  357.70
+Q1              0.0023  106.85
 x 0 0
-M2              1.0500  228.99
+R2              0.0008  166.57
 x 0 0
+S2              0.1873  150.60
+S4              0.0001  224.86
 x 0 0
+T2              0.0060  155.31
+LDA2            0.0020  92.09
+MU2             0.0067  81.91
+NU2             0.0065  92.03
+RHO1            0.0005  119.17
+MK3             0.0001  36.49
 x 0 0
+MN4             0.0004  239.98
+MS4             0.0002  50.09
 x 0 0
-N2              0.1995  201.66
+MF              0.0094  356.27
+MSF             0.0023  332.54
+MM              0.0023  235.96
 x 0 0
-O1              0.0350  118.05
+SSA             0.0157  23.97
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.6100  280.00
 x 0 0
 x 0 0
 x 0 0
@@ -15416,71 +15445,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0001  194.94
+BET1            0.0000  40.87
+CHI1            0.0001  156.35
+H1              0.0007  317.02
+H2              0.0005  89.25
 x 0 0
+ETA2            0.0012  97.51
 x 0 0
+UPS1            0.0002  234.86
 x 0 0
 x 0 0
+MK4             0.0001  276.37
+MKS2            0.0011  148.24
 x 0 0
+EPS2            0.0016  57.22
+MO3             0.0001  14.91
 x 0 0
+TAU1            0.0002  106.84
 x 0 0
+MSK6            0.0001  243.77
+MSM             0.0009  122.08
+MSN2            0.0006  255.29
 x 0 0
 x 0 0
+NO1             0.0004  212.46
 x 0 0
+OQ2             0.0003  25.08
+PHI1            0.0002  167.39
 x 0 0
+PI1             0.0002  184.64
 x 0 0
+PSI1            0.0003  153.61
 x 0 0
 x 0 0
+SIG1            0.0005  247.24
+SK3             0.0012  135.52
+SK4             0.0001  56.99
+SN4             0.0000  205.53
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0002  220.76
+SO3             0.0001  158.10
+THE1            0.0002  164.87
 x 0 0
 x 0 0
 x 0 0
@@ -18990,8 +18996,14 @@ x 0 0
 # country: South Africa
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3791
-# note: NP203 Part II Sekundaerhafen-Transfer von Mossel Bay, South Africa (att 3791). fS=0.94 fN=1.00 dt=+2min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Durban (att 3800).
+# note: fS=0.94 fN=1.00 dt=+2min, skaliert gegen die
+# note: publizierten Pegel [2.0, 1.4, 0.9, 0.2] aus dem Gruppenkopf S.222.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.222 (Buch: Plettenberg Bay).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Durban, South Africa") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -19000,45 +19012,43 @@ x 0 0
 Plettenberg Bay, South Africa
 +00:00 :Africa/Johannesburg
 1.1000 meters
-J1              0.0056  162.80
-K1              0.0702  137.43
-K2              0.0760  63.30
-L2              0.0169  42.26
-M1              0.0017  47.78
-M2              0.5629  43.86
-M3              0.0092  307.87
-M4              0.0106  109.31
-M6              0.0023  120.55
-M8              0.0006  61.07
-N2              0.1154  39.91
+J1              0.0047  171.10
+K1              0.0515  145.25
+K2              0.0820  74.42
+L2              0.0197  47.43
 x 0 0
-O1              0.0193  255.24
-OO1             0.0052  198.57
-P1              0.0191  135.99
-Q1              0.0112  242.97
+M2              0.5346  44.97
+M3              0.0027  348.13
+M4              0.0043  185.51
+M6              0.0013  112.89
+M8              0.0002  159.34
+N2              0.0946  39.04
 x 0 0
-R2              0.0056  88.20
-S1              0.0096  8.12
-S2              0.2714  67.35
-S4              0.0017  210.51
+O1              0.0155  298.38
+OO1             0.0035  215.41
+P1              0.0147  141.30
+Q1              0.0089  273.02
 x 0 0
-T2              0.0173  74.18
-LDA2            0.0043  27.62
-MU2             0.0210  25.48
-NU2             0.0216  41.19
-RHO1            0.0019  254.19
+R2              0.0022  91.97
 x 0 0
+S2              0.2875  76.60
+S4              0.0009  76.86
 x 0 0
-MN4             0.0061  58.86
-MS4             0.0047  186.26
+T2              0.0161  81.91
+LDA2            0.0053  25.96
+MU2             0.0180  37.30
+NU2             0.0174  39.55
+RHO1            0.0018  284.28
+MK3             0.0007  119.59
 x 0 0
-MF              0.0034  24.83
-MSF             0.0017  245.80
-MM              0.0021  141.66
-SA              0.0155  274.77
-SSA             0.0110  222.20
+MN4             0.0028  129.24
+MS4             0.0011  276.79
 x 0 0
+MF              0.0094  340.39
+MSF             0.0023  317.84
+MM              0.0023  228.09
 x 0 0
+SSA             0.0157  22.78
 x 0 0
 x 0 0
 x 0 0
@@ -19058,23 +19068,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0006  194.94
+BET1            0.0001  40.87
+CHI1            0.0003  156.35
+H1              0.0028  317.02
+H2              0.0021  89.25
 x 0 0
+ETA2            0.0049  97.51
 x 0 0
+UPS1            0.0007  234.86
 x 0 0
 x 0 0
+MK4             0.0004  276.37
+MKS2            0.0029  87.75
 x 0 0
+EPS2            0.0042  20.48
+MO3             0.0006  14.91
 x 0 0
+TAU1            0.0007  106.84
 x 0 0
+MSK6            0.0004  243.77
+MSM             0.0034  122.08
+MSN2            0.0023  255.29
 x 0 0
 x 0 0
+NO1             0.0016  212.46
 x 0 0
-MKS2            0.0004  77.10
+OQ2             0.0011  25.08
+PHI1            0.0009  167.39
 x 0 0
-EPS2            0.0043  4.07
+PI1             0.0008  184.64
 x 0 0
+PSI1            0.0011  153.61
 x 0 0
 x 0 0
+SIG1            0.0020  247.24
+SK3             0.0047  135.52
+SK4             0.0006  56.99
+SN4             0.0002  205.53
 x 0 0
+SO1             0.0008  220.76
+SO3             0.0006  158.10
+THE1            0.0007  164.87
 x 0 0
 x 0 0
 x 0 0
@@ -19089,29 +19124,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0012  84.55
-SIG1            0.0025  47.86
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0017  355.77
 x 0 0
 x 0 0
 x 0 0
@@ -19179,8 +19191,14 @@ x 0 0
 # country: South Africa
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3792
-# note: NP203 Part II Sekundaerhafen-Transfer von Mossel Bay, South Africa (att 3792). fS=0.94 fN=1.00 dt=+2min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Durban (att 3800).
+# note: fS=0.94 fN=1.00 dt=+2min, skaliert gegen die
+# note: publizierten Pegel [2.0, 1.4, 0.9, 0.2] aus dem Gruppenkopf S.222.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.222 (Buch: Cape St. Francis).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Durban, South Africa") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -19189,45 +19207,43 @@ x 0 0
 Cape St. Francis, South Africa
 +00:00 :Africa/Johannesburg
 1.1000 meters
-J1              0.0056  162.80
-K1              0.0702  137.43
-K2              0.0760  63.30
-L2              0.0169  42.26
-M1              0.0017  47.78
-M2              0.5629  43.86
-M3              0.0092  307.87
-M4              0.0106  109.31
-M6              0.0023  120.55
-M8              0.0006  61.07
-N2              0.1154  39.91
+J1              0.0047  171.10
+K1              0.0515  145.25
+K2              0.0820  74.42
+L2              0.0197  47.43
 x 0 0
-O1              0.0193  255.24
-OO1             0.0052  198.57
-P1              0.0191  135.99
-Q1              0.0112  242.97
+M2              0.5346  44.97
+M3              0.0027  348.13
+M4              0.0043  185.51
+M6              0.0013  112.89
+M8              0.0002  159.34
+N2              0.0946  39.04
 x 0 0
-R2              0.0056  88.20
-S1              0.0096  8.12
-S2              0.2714  67.35
-S4              0.0017  210.51
+O1              0.0155  298.38
+OO1             0.0035  215.41
+P1              0.0147  141.30
+Q1              0.0089  273.02
 x 0 0
-T2              0.0173  74.18
-LDA2            0.0043  27.62
-MU2             0.0210  25.48
-NU2             0.0216  41.19
-RHO1            0.0019  254.19
+R2              0.0022  91.97
 x 0 0
+S2              0.2875  76.60
+S4              0.0009  76.86
 x 0 0
-MN4             0.0061  58.86
-MS4             0.0047  186.26
+T2              0.0161  81.91
+LDA2            0.0053  25.96
+MU2             0.0180  37.30
+NU2             0.0174  39.55
+RHO1            0.0018  284.28
+MK3             0.0007  119.59
 x 0 0
-MF              0.0034  24.83
-MSF             0.0017  245.80
-MM              0.0021  141.66
-SA              0.0155  274.77
-SSA             0.0110  222.20
+MN4             0.0028  129.24
+MS4             0.0011  276.79
 x 0 0
+MF              0.0094  340.39
+MSF             0.0023  317.84
+MM              0.0023  228.09
 x 0 0
+SSA             0.0157  22.78
 x 0 0
 x 0 0
 x 0 0
@@ -19247,23 +19263,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0006  194.94
+BET1            0.0001  40.87
+CHI1            0.0003  156.35
+H1              0.0028  317.02
+H2              0.0021  89.25
 x 0 0
+ETA2            0.0049  97.51
 x 0 0
+UPS1            0.0007  234.86
 x 0 0
 x 0 0
+MK4             0.0004  276.37
+MKS2            0.0029  87.75
 x 0 0
+EPS2            0.0042  20.48
+MO3             0.0006  14.91
 x 0 0
+TAU1            0.0007  106.84
 x 0 0
+MSK6            0.0004  243.77
+MSM             0.0034  122.08
+MSN2            0.0023  255.29
 x 0 0
 x 0 0
+NO1             0.0016  212.46
 x 0 0
-MKS2            0.0004  77.10
+OQ2             0.0011  25.08
+PHI1            0.0009  167.39
 x 0 0
-EPS2            0.0043  4.07
+PI1             0.0008  184.64
 x 0 0
+PSI1            0.0011  153.61
 x 0 0
 x 0 0
+SIG1            0.0020  247.24
+SK3             0.0047  135.52
+SK4             0.0006  56.99
+SN4             0.0002  205.53
 x 0 0
+SO1             0.0008  220.76
+SO3             0.0006  158.10
+THE1            0.0007  164.87
 x 0 0
 x 0 0
 x 0 0
@@ -19278,29 +19319,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0012  84.55
-SIG1            0.0025  47.86
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0017  355.77
 x 0 0
 x 0 0
 x 0 0
@@ -19559,8 +19577,14 @@ x 0 0
 # country: South Africa
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3797
-# note: NP203 Part II Sekundaerhafen-Transfer von East London, South Africa (att 3797). fS=0.94 fN=1.00 dt=-2min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Durban (att 3800).
+# note: fS=0.94 fN=1.00 dt=-2min, skaliert gegen die
+# note: publizierten Pegel [2.0, 1.4, 0.9, 0.2] aus dem Gruppenkopf S.223.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.223 (Buch: Port St. John's).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Durban, South Africa") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -19569,45 +19593,43 @@ x 0 0
 Port St. John's, South Africa
 +00:00 :Africa/Johannesburg
 1.1000 meters
-J1              0.0054  163.58
-K1              0.0560  141.36
-K2              0.0691  69.80
-L2              0.0165  41.67
+J1              0.0047  170.06
+K1              0.0515  144.25
+K2              0.0820  72.42
+L2              0.0197  45.47
 x 0 0
-M2              0.4850  44.85
-M3              0.0051  318.37
-M4              0.0046  157.05
-M6              0.0009  71.81
-M8              0.0002  179.35
-N2              0.0925  41.04
+M2              0.5346  43.03
+M3              0.0027  345.23
+M4              0.0043  181.65
+M6              0.0013  107.09
+M8              0.0002  151.62
+N2              0.0946  37.14
 x 0 0
-O1              0.0145  277.69
-OO1             0.0037  206.79
-P1              0.0157  136.17
-Q1              0.0092  261.93
+O1              0.0155  297.46
+OO1             0.0035  214.33
+P1              0.0147  140.30
+Q1              0.0089  272.12
 x 0 0
-R2              0.0049  87.52
+R2              0.0022  89.97
 x 0 0
-S2              0.2468  72.66
-S4              0.0005  94.55
+S2              0.2875  74.60
+S4              0.0009  72.86
 x 0 0
-T2              0.0156  79.20
-LDA2            0.0044  25.08
-MU2             0.0178  32.84
-NU2             0.0173  41.85
-RHO1            0.0017  253.27
-MK3             0.0004  101.85
+T2              0.0161  79.91
+LDA2            0.0053  24.00
+MU2             0.0180  35.44
+NU2             0.0174  37.65
+RHO1            0.0018  283.38
+MK3             0.0007  116.65
 x 0 0
-MN4             0.0028  100.32
-MS4             0.0018  252.74
+MN4             0.0028  125.42
+MS4             0.0011  272.85
 x 0 0
-MF              0.0075  306.81
-MSF             0.0107  284.85
-MM              0.0089  171.44
+MF              0.0094  340.31
+MSF             0.0023  317.78
+MM              0.0023  228.05
 x 0 0
-SSA             0.0037  247.04
-x 0 0
-x 0 0
+SSA             0.0157  22.78
 x 0 0
 x 0 0
 x 0 0
@@ -19625,48 +19647,50 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-ALP1            0.0009  216.44
-BET1            0.0003  111.98
-CHI1            0.0004  107.10
-H1              0.0046  255.78
-H2              0.0025  211.56
-x 0 0
-ETA2            0.0040  98.89
-x 0 0
-UPS1            0.0005  248.79
 x 0 0
 x 0 0
-MK4             0.0005  262.84
-MKS2            0.0034  111.74
+ALP1            0.0006  194.94
+BET1            0.0001  40.87
+CHI1            0.0003  156.35
+H1              0.0028  317.02
+H2              0.0021  89.25
 x 0 0
-EPS2            0.0040  14.38
-MO3             0.0002  348.40
+ETA2            0.0049  97.51
 x 0 0
-TAU1            0.0006  97.04
-x 0 0
-MSK6            0.0001  296.70
-MSM             0.0051  116.33
-MSN2            0.0014  234.21
+UPS1            0.0007  234.86
 x 0 0
 x 0 0
-NO1             0.0012  163.88
+MK4             0.0004  276.37
+MKS2            0.0029  85.81
 x 0 0
-OQ2             0.0015  16.59
-PHI1            0.0010  180.69
+EPS2            0.0042  18.66
+MO3             0.0006  14.91
 x 0 0
-PI1             0.0006  155.12
+TAU1            0.0007  106.84
 x 0 0
-PSI1            0.0010  160.55
+MSK6            0.0004  243.77
+MSM             0.0034  122.08
+MSN2            0.0023  255.29
 x 0 0
 x 0 0
-SIG1            0.0023  237.66
-SK3             0.0053  114.79
-SK4             0.0003  9.84
-SN4             0.0002  221.40
+NO1             0.0016  212.46
 x 0 0
-SO1             0.0009  223.82
-SO3             0.0005  151.34
-THE1            0.0007  163.23
+OQ2             0.0011  25.08
+PHI1            0.0009  167.39
+x 0 0
+PI1             0.0008  184.64
+x 0 0
+PSI1            0.0011  153.61
+x 0 0
+x 0 0
+SIG1            0.0020  247.24
+SK3             0.0047  135.52
+SK4             0.0006  56.99
+SN4             0.0002  205.53
+x 0 0
+SO1             0.0008  220.76
+SO3             0.0006  158.10
+THE1            0.0007  164.87
 x 0 0
 x 0 0
 x 0 0
@@ -19748,8 +19772,14 @@ x 0 0
 # country: South Africa
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3802
-# note: NP203 Part II Sekundaerhafen-Transfer von Richards Bay, South Africa (att 3802). fS=1.00 fN=1.00 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Durban (att 3800).
+# note: fS=1.00 fN=1.00 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.0, 1.4, 0.9, 0.2] aus dem Gruppenkopf S.223.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.223 (Buch: Kosi River Entrance).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Durban, South Africa") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -19758,45 +19788,43 @@ x 0 0
 Kosi River Entrance, South Africa
 +00:00 :Africa/Johannesburg
 1.1000 meters
-J1              0.0041  180.46
-K1              0.0483  149.83
-K2              0.0964  76.42
-L2              0.0201  54.70
-M1              0.0016  80.98
-M2              0.5954  44.78
-M3              0.0022  43.87
-M4              0.0046  216.12
-M6              0.0015  148.29
-M8              0.0001  160.94
-N2              0.1028  36.82
+J1              0.0048  170.58
+K1              0.0530  144.75
+K2              0.0889  73.42
+L2              0.0206  46.45
 x 0 0
-O1              0.0178  307.79
-OO1             0.0030  223.15
-P1              0.0139  146.55
-Q1              0.0096  278.93
+M2              0.5588  44.00
+M3              0.0029  346.68
+M4              0.0047  183.58
+M6              0.0014  109.99
+M8              0.0002  155.48
+N2              0.0989  38.09
 x 0 0
-R2              0.0068  109.84
-S1              0.0124  28.53
-S2              0.3377  77.94
-S4              0.0006  33.85
+O1              0.0159  297.92
+OO1             0.0036  214.87
+P1              0.0151  140.80
+Q1              0.0092  272.57
 x 0 0
-T2              0.0156  77.85
-LDA2            0.0080  26.05
-MU2             0.0178  40.97
-NU2             0.0181  33.64
-RHO1            0.0015  280.09
+R2              0.0023  90.97
 x 0 0
+S2              0.3117  75.60
+S4              0.0010  74.86
 x 0 0
-MN4             0.0027  155.77
-MS4             0.0024  304.82
+T2              0.0168  80.91
+LDA2            0.0055  24.98
+MU2             0.0188  36.37
+NU2             0.0182  38.60
+RHO1            0.0019  283.83
+MK3             0.0008  118.12
 x 0 0
-MF              0.0021  30.54
-MSF             0.0018  248.91
-MM              0.0011  348.59
-SA              0.0147  280.25
-SSA             0.0039  162.96
+MN4             0.0031  127.33
+MS4             0.0012  274.82
 x 0 0
+MF              0.0094  340.35
+MSF             0.0023  317.81
+MM              0.0023  228.07
 x 0 0
+SSA             0.0157  22.78
 x 0 0
 x 0 0
 x 0 0
@@ -19816,23 +19844,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0006  194.94
+BET1            0.0001  40.87
+CHI1            0.0003  156.35
+H1              0.0029  317.02
+H2              0.0022  89.25
 x 0 0
+ETA2            0.0050  97.51
 x 0 0
+UPS1            0.0007  234.86
 x 0 0
 x 0 0
+MK4             0.0004  276.37
+MKS2            0.0030  86.78
 x 0 0
+EPS2            0.0044  19.57
+MO3             0.0006  14.91
 x 0 0
+TAU1            0.0007  106.84
 x 0 0
+MSK6            0.0004  243.77
+MSM             0.0035  122.08
+MSN2            0.0024  255.29
 x 0 0
 x 0 0
+NO1             0.0016  212.46
 x 0 0
-MKS2            0.0043  100.67
+OQ2             0.0011  25.08
+PHI1            0.0009  167.39
 x 0 0
-EPS2            0.0046  27.98
+PI1             0.0008  184.64
 x 0 0
+PSI1            0.0011  153.61
 x 0 0
 x 0 0
+SIG1            0.0021  247.24
+SK3             0.0048  135.52
+SK4             0.0006  56.99
+SN4             0.0002  205.53
 x 0 0
+SO1             0.0008  220.76
+SO3             0.0006  158.10
+THE1            0.0007  164.87
 x 0 0
 x 0 0
 x 0 0
@@ -19847,29 +19900,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0016  123.97
-SIG1            0.0023  79.59
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0007  93.44
 x 0 0
 x 0 0
 x 0 0
@@ -20319,8 +20349,14 @@ x 0 0
 # country: Mozambique
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3806
-# note: NP203 Part II Sekundaerhafen-Transfer von Maputo, Mozambique (att 3806). fS=0.10 fN=0.05 dt=-32min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Beira (att 3823).
+# note: fS=0.21 fN=0.25 dt=-32min, skaliert gegen die
+# note: publizierten Pegel [6.5, 4.4, 2.8, 0.8] aus dem Gruppenkopf S.223.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.223 (Buch: Limpopo River Bar).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_tidetables.txt ("Beira, Mozambique") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -20329,45 +20365,43 @@ x 0 0
 Limpopo River Bar, Mozambique
 +00:00 :Africa/Maputo
 1.0000 meters
-J1              0.0004  193.50
-K1              0.0029  162.20
-K2              0.0180  82.02
-L2              0.0033  42.13
-M1              0.0002  162.57
-M2              0.0843  49.63
-M3              0.0006  126.56
-M4              0.0001  38.58
-M6              0.0001  218.16
-M8              0.0002  70.99
-N2              0.0136  38.73
+J1              0.0002  181.61
+K1              0.0027  2.44
+K2              0.0555  92.48
+L2              0.0172  60.71
 x 0 0
-O1              0.0018  320.07
-OO1             0.0002  232.59
-P1              0.0009  176.95
-Q1              0.0008  278.71
+M2              0.3900  51.64
+M3              0.0036  189.43
+M4              0.0049  70.13
+M6              0.0002  206.09
+M8              0.0000  303.54
+N2              0.0604  39.67
 x 0 0
-R2              0.0008  270.67
-S1              0.0030  50.76
-S2              0.0646  89.19
-S4              0.0001  135.66
+O1              0.0118  344.48
+OO1             0.0002  307.48
+P1              0.0002  309.82
+Q1              0.0034  326.81
 x 0 0
-T2              0.0024  68.08
-LDA2            0.0016  11.71
-MU2             0.0056  104.26
-NU2             0.0028  20.17
-RHO1            0.0002  254.99
+R2              0.0061  308.58
 x 0 0
+S2              0.2018  95.04
+S4              0.0022  121.65
 x 0 0
-MN4             0.0000  275.51
-MS4             0.0001  126.99
+T2              0.0135  75.59
+LDA2            0.0130  30.85
+MU2             0.0324  104.43
+NU2             0.0104  18.96
+RHO1            0.0003  269.51
+MK3             0.0001  194.01
 x 0 0
-MF              0.0093  337.51
-MSF             0.0096  322.84
-MM              0.0095  243.99
-SA              0.0838  318.03
-SSA             0.0194  64.30
+MN4             0.0000  132.60
+MS4             0.0037  67.13
 x 0 0
+MF              0.0243  33.00
+MSF             0.0396  72.08
+MM              0.0186  53.67
 x 0 0
+SSA             0.0661  11.37
 x 0 0
 x 0 0
 x 0 0
@@ -20387,30 +20421,53 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0000  267.92
+BET1            0.0000  257.93
+CHI1            0.0001  317.05
+H1              0.0006  307.39
+H2              0.0010  300.27
 x 0 0
+ETA2            0.0002  89.44
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0003  206.59
+MKS2            0.0003  325.76
 x 0 0
+EPS2            0.0009  262.69
+MO3             0.0002  235.51
 x 0 0
+TAU1            0.0003  217.84
 x 0 0
+MSK6            0.0004  11.69
+MSM             0.0000  19.72
 x 0 0
 x 0 0
-MKS2            0.0012  194.40
 x 0 0
-EPS2            0.0011  106.99
+NO1             0.0022  275.82
+OP2             0.0009  156.43
 x 0 0
+PHI1            0.0004  132.63
 x 0 0
+PI1             0.0001  359.65
 x 0 0
+PSI1            0.0004  323.57
 x 0 0
 x 0 0
+SIG1            0.0007  210.49
+SK3             0.0003  119.92
 x 0 0
+SN4             0.0001  96.89
 x 0 0
+SO1             0.0004  268.63
+SO3             0.0003  95.22
+THE1            0.0003  193.35
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0000  345.39
 x 0 0
 x 0 0
 x 0 0
@@ -20418,29 +20475,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0002  278.49
-SIG1            0.0002  105.44
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0001  181.65
+N4              0.0000  259.15
 x 0 0
 x 0 0
 x 0 0
@@ -23547,37 +23583,41 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Mozambique
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
-# att_number: 3851
-# note: NP203 Part II Sekundaerhafen-Transfer von Nacala (NP203), Mozambique (att 3851). fS=1.09 fN=1.29 dt=-25min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# att_number: 3852
+# note: NP203 Part II Sekundaerhafen-Transfer von Mombasa (Kilindini Harbour), Kenya (att 4017).
+# note: fS=1.09 fN=1.27 dt=+35min, skaliert gegen die
+# note: publizierten Pegel [3.5, 2.4, 1.3, 0.3] aus dem Gruppenkopf S.224.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Port Simuco).
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 40.6000
 # !latitude: -13.9833
 Baia Simuco, Mozambique
-+02:00 :Africa/Maputo
-2.2500 meters
++03:00 :Africa/Maputo
+2.2000 meters
 x 0 0
-K1              0.1194  14.73
-K2              0.1458  115.47
-x 0 0
-x 0 0
-M2              1.2000  73.92
+K1              0.2248  50.77
+K2              0.1349  173.55
 x 0 0
 x 0 0
+M2              1.1740  130.91
 x 0 0
+M4              0.0123  337.81
+M6              0.0014  344.72
 x 0 0
-N2              0.2280  51.64
+N2              0.2231  108.08
 x 0 0
-O1              0.1075  30.19
-x 0 0
-x 0 0
+O1              0.1302  51.13
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5400  115.50
+x 0 0
+x 0 0
+S2              0.4994  173.50
 x 0 0
 x 0 0
 x 0 0
@@ -23931,9 +23971,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.44 fN=1.14 dt=+32min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie Ambavanibe).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
@@ -24315,9 +24355,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.89 fN=1.43 dt=+17min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Mitsio).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -24508,9 +24548,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.56 fN=2.29 dt=+31min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Anarontsangana).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -24701,9 +24741,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.89 fN=1.43 dt=+13min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Lava).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -24894,9 +24934,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.61 fN=2.14 dt=-14min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Moramba).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -25087,9 +25127,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.00 fN=2.14 dt=+23min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Pointe Ambararata).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -25280,9 +25320,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.22 fN=2.43 dt=+21min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Longany).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -25473,9 +25513,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.89 fN=1.86 dt=+23min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Marosakoa).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -25666,9 +25706,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.50 fN=2.14 dt=+43min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Pointe Maroloha).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -25859,9 +25899,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.44 fN=1.57 dt=+11min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Makamby).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
@@ -26052,9 +26092,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.28 fN=1.86 dt=+26min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Baly).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
@@ -26245,9 +26285,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.11 fN=1.71 dt=+31min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Cap Saint Andre).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
@@ -26438,9 +26478,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.22 fN=2.29 dt=+0min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Ile Juan de Nova).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
@@ -26631,9 +26671,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.06 fN=1.86 dt=+88min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Maintirano).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -27015,9 +27055,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.00 fN=2.86 dt=+75min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Ilot Indien).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -27208,9 +27248,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.89 fN=1.71 dt=+54min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Morondava).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
@@ -27592,9 +27632,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.33 fN=3.00 dt=+79min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Andriangory).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -27785,9 +27825,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.89 fN=1.57 dt=+90min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Andriamitaroka).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -27978,9 +28018,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.22 fN=2.86 dt=+79min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Ampasilava).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -28171,9 +28211,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.89 fN=1.57 dt=+95min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Morombe).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -28364,9 +28404,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=2.06 fN=2.71 dt=+91min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Andrahombava).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -28557,9 +28597,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.72 fN=1.43 dt=+95min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Nosy Hao).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -28750,9 +28790,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.78 fN=1.86 dt=+0min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Ile Europa).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
@@ -29134,9 +29174,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.39 fN=1.14 dt=+108min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: St. Augustine Bay).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -29518,9 +29558,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.94 fN=0.86 dt=+56min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Cap Ste. Marie).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
@@ -29902,9 +29942,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.10 fN=0.05 dt=+0min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Ste. Luce).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -30095,9 +30135,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.10 fN=0.05 dt=+0min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Farafangana).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -30288,9 +30328,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.17 fN=0.14 dt=+0min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Manakara).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -30481,9 +30521,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.06 fN=1.14 dt=+39min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Vatomandry).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -30865,9 +30905,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.28 fN=0.29 dt=-71min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Tintingue).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -31058,9 +31098,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.39 fN=0.29 dt=+0min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Mananara).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -31251,9 +31291,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.44 fN=0.43 dt=-24min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Maroantsetra).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -31444,9 +31484,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.50 fN=0.43 dt=-24min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Rade d'Angontsy).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -32019,9 +32059,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=0.78 fN=1.14 dt=-30min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Port Leven).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -32212,9 +32252,9 @@ x 0 0
 # note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego Suarez), Madagascar (att 3948).
 # note: fS=1.11 fN=1.00 dt=+6min, skaliert gegen die
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
-# note: 20260730 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Baie de Rigny).
-# date_imported: 20260730
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
@@ -32593,52 +32633,68 @@ x 0 0
 # country: Reunion
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3951
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3951). fS=0.68 fN=0.58 dt=-195min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Victoria (att 3967).
+# note: fS=0.45 fN=0.40 dt=-195min, skaliert gegen die
+# note: publizierten Pegel [1.6, 1.3, 0.8, 0.5] aus dem Gruppenkopf S.225.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.225 (Buch: St. Leu).
+# note: Konstituenten des Bezugshafens aus ticon/harmonics_ticon4_worldwide.txt ("Victoria, Seychelles") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 55.2853
 # !latitude: -21.1677
 Saint-Leu, Réunion
-+03:00 :Indian/Reunion
++00:00 :Indian/Reunion
 0.5100 meters
-J1              0.0038  334.95
-K1              0.0843  346.12
-K2              0.0566  51.03
-L2              0.0110  23.03
-M1              0.0031  357.39
-M2              0.4170  3.80
+J1              0.0050  315.80
+K1              0.0797  311.51
+K2              0.0240  314.06
+L2              0.0054  300.13
+M1              0.0032  185.49
+M2              0.1801  280.65
+M3              0.0007  199.01
+M4              0.0004  110.16
+M6              0.0003  21.66
+M8              0.0003  255.25
+N2              0.0371  258.65
 x 0 0
-M4              0.0030  207.60
+O1              0.0458  320.20
+OO1             0.0031  357.50
+P1              0.0242  311.23
+Q1              0.0101  315.29
 x 0 0
+R2              0.0018  305.51
+S1              0.0046  95.77
+S2              0.0888  316.83
+S4              0.0002  237.33
 x 0 0
-N2              0.0773  344.57
+T2              0.0055  322.39
+LDA2            0.0013  301.75
+MU2             0.0021  234.47
+NU2             0.0077  264.15
+RHO1            0.0016  311.61
 x 0 0
-O1              0.0478  8.69
-OO1             0.0019  323.55
-P1              0.0277  347.78
-Q1              0.0101  359.45
 x 0 0
-R2              0.0013  49.27
+MN4             0.0002  57.30
+MS4             0.0001  157.57
 x 0 0
-S2              0.2080  47.50
+MF              0.0158  5.48
+MSF             0.0025  11.16
+MM              0.0080  359.68
+SA              0.0378  348.06
+SSA             0.0681  335.24
 x 0 0
 x 0 0
-T2              0.0110  45.73
-LDA2            0.0025  24.07
-MU2             0.0097  320.10
-NU2             0.0149  347.13
-RHO1            0.0019  18.42
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0038  294.30
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  279.87
 x 0 0
 x 0 0
 x 0 0
@@ -32661,7 +32717,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0010  266.71
 x 0 0
+EPS2            0.0005  262.21
 x 0 0
 x 0 0
 x 0 0
@@ -32680,6 +32738,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0005  37.00
+SIG1            0.0016  165.70
 x 0 0
 x 0 0
 x 0 0
@@ -32700,21 +32760,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  335.85
 x 0 0
 x 0 0
 x 0 0
@@ -32782,52 +32828,68 @@ x 0 0
 # country: Reunion
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3952
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3952). fS=0.68 fN=0.58 dt=-240min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Victoria (att 3967).
+# note: fS=0.45 fN=0.40 dt=-240min, skaliert gegen die
+# note: publizierten Pegel [1.6, 1.3, 0.8, 0.5] aus dem Gruppenkopf S.225.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.225 (Buch: St. Pierre).
+# note: Konstituenten des Bezugshafens aus ticon/harmonics_ticon4_worldwide.txt ("Victoria, Seychelles") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 55.4777
 # !latitude: -21.3452
 Saint-Pierre, Réunion
-+03:00 :Indian/Reunion
++00:00 :Indian/Reunion
 0.5000 meters
-J1              0.0038  323.26
-K1              0.0843  334.84
-K2              0.0566  28.47
-L2              0.0110  0.89
-M1              0.0031  346.51
-M2              0.4170  342.06
+J1              0.0050  304.11
+K1              0.0797  300.23
+K2              0.0240  291.50
+L2              0.0054  277.99
+M1              0.0032  174.61
+M2              0.1801  258.91
+M3              0.0007  166.41
+M4              0.0004  66.69
+M6              0.0003  316.45
+M8              0.0003  168.29
+N2              0.0371  237.32
 x 0 0
-M4              0.0030  164.13
+O1              0.0458  309.74
+OO1             0.0031  345.39
+P1              0.0242  300.01
+Q1              0.0101  305.25
 x 0 0
+R2              0.0018  282.98
+S1              0.0046  84.52
+S2              0.0888  294.33
+S4              0.0002  192.33
 x 0 0
-N2              0.0773  323.24
+T2              0.0055  299.92
+LDA2            0.0013  279.66
+MU2             0.0021  213.50
+NU2             0.0077  242.77
+RHO1            0.0016  301.50
 x 0 0
-O1              0.0478  358.23
-OO1             0.0019  311.44
-P1              0.0277  336.56
-Q1              0.0101  349.41
 x 0 0
-R2              0.0013  26.74
+MN4             0.0002  14.23
+MS4             0.0001  113.33
 x 0 0
-S2              0.2080  25.00
+MF              0.0158  4.66
+MSF             0.0025  10.40
+MM              0.0080  359.27
+SA              0.0378  348.03
+SSA             0.0681  335.18
 x 0 0
 x 0 0
-T2              0.0110  23.26
-LDA2            0.0025  1.98
-MU2             0.0097  299.13
-NU2             0.0149  325.75
-RHO1            0.0019  8.31
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0038  250.06
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  279.84
 x 0 0
 x 0 0
 x 0 0
@@ -32850,7 +32912,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0010  244.92
 x 0 0
+EPS2            0.0005  241.64
 x 0 0
 x 0 0
 x 0 0
@@ -32869,6 +32933,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0005  37.00
+SIG1            0.0016  165.70
 x 0 0
 x 0 0
 x 0 0
@@ -32889,21 +32955,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  293.19
 x 0 0
 x 0 0
 x 0 0
@@ -33162,52 +33214,68 @@ x 0 0
 # country: Mauritius
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3957
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3957). fS=0.51 fN=0.16 dt=-195min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Victoria (att 3967).
+# note: fS=0.18 fN=0.05 dt=-195min, skaliert gegen die
+# note: publizierten Pegel [1.6, 1.3, 0.8, 0.5] aus dem Gruppenkopf S.225.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.225 (Buch: Vieux Grand Port).
+# note: Konstituenten des Bezugshafens aus ticon/harmonics_ticon4_worldwide.txt ("Victoria, Seychelles") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 57.7140
 # !latitude: -20.3789
 Vieux Grand Port, Mauritius
-+03:00 :Indian/Mauritius
++00:00 :Indian/Mauritius
 0.5000 meters
-J1              0.0020  334.95
-K1              0.0454  346.12
-K2              0.0566  51.03
-L2              0.0071  23.03
-M1              0.0017  357.39
-M2              0.2670  3.80
+J1              0.0013  315.80
+K1              0.0216  311.51
+K2              0.0130  314.06
+L2              0.0018  300.13
+M1              0.0009  185.49
+M2              0.0595  280.65
+M3              0.0001  199.01
+M4              0.0000  110.16
+M6              0.0000  21.66
+M8              0.0000  255.25
+N2              0.0122  258.65
 x 0 0
-M4              0.0012  207.60
+O1              0.0124  320.20
+OO1             0.0008  357.50
+P1              0.0066  311.23
+Q1              0.0027  315.29
 x 0 0
+R2              0.0006  305.51
+S1              0.0013  95.77
+S2              0.0481  316.83
+S4              0.0000  237.33
 x 0 0
-N2              0.0495  344.57
+T2              0.0018  322.39
+LDA2            0.0004  301.75
+MU2             0.0007  234.47
+NU2             0.0026  264.15
+RHO1            0.0004  311.61
 x 0 0
-O1              0.0258  8.69
-OO1             0.0010  323.55
-P1              0.0149  347.78
-Q1              0.0054  359.45
 x 0 0
-R2              0.0008  49.27
+MN4             0.0000  57.30
+MS4             0.0000  157.57
 x 0 0
-S2              0.2080  47.50
+MF              0.0158  5.48
+MSF             0.0025  11.16
+MM              0.0080  359.68
+SA              0.0378  348.06
+SSA             0.0681  335.24
 x 0 0
 x 0 0
-T2              0.0071  45.73
-LDA2            0.0014  24.07
-MU2             0.0062  320.10
-NU2             0.0096  347.13
-RHO1            0.0010  18.42
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0016  294.30
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  279.87
 x 0 0
 x 0 0
 x 0 0
@@ -33230,7 +33298,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  266.71
 x 0 0
+EPS2            0.0002  262.21
 x 0 0
 x 0 0
 x 0 0
@@ -33249,6 +33319,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0001  37.00
+SIG1            0.0004  165.70
 x 0 0
 x 0 0
 x 0 0
@@ -33269,21 +33341,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  335.85
 x 0 0
 x 0 0
 x 0 0
@@ -33542,52 +33600,68 @@ x 0 0
 # country: Mauritius
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3960
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3960). fS=0.68 fN=0.44 dt=-110min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Victoria (att 3967).
+# note: fS=0.45 fN=0.20 dt=-110min, skaliert gegen die
+# note: publizierten Pegel [1.6, 1.3, 0.8, 0.5] aus dem Gruppenkopf S.225.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.225 (Buch: Cargados Carajos).
+# note: Konstituenten des Bezugshafens aus ticon/harmonics_ticon4_worldwide.txt ("Victoria, Seychelles") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 59.5167
 # !latitude: -16.8167
 Cargados Carajos Shoal, Mauritius
-+03:00 :Indian/Mauritius
++00:00 :Indian/Mauritius
 0.6000 meters
-J1              0.0034  357.03
-K1              0.0749  7.42
-K2              0.0634  93.65
-L2              0.0104  64.86
-M1              0.0028  17.92
-M2              0.3920  44.86
+J1              0.0038  337.88
+K1              0.0611  332.81
+K2              0.0302  356.68
+L2              0.0047  341.96
+M1              0.0025  206.02
+M2              0.1573  321.71
+M3              0.0005  260.60
+M4              0.0003  192.28
+M6              0.0002  144.85
+M8              0.0003  59.49
+N2              0.0324  298.94
 x 0 0
-M4              0.0026  289.72
+O1              0.0351  339.95
+OO1             0.0024  20.36
+P1              0.0185  332.43
+Q1              0.0077  334.28
 x 0 0
+R2              0.0016  348.06
+S1              0.0035  117.02
+S2              0.1116  359.33
+S4              0.0001  322.33
 x 0 0
-N2              0.0727  24.86
+T2              0.0048  4.84
+LDA2            0.0012  343.48
+MU2             0.0018  274.09
+NU2             0.0068  304.55
+RHO1            0.0012  330.69
 x 0 0
-O1              0.0425  28.44
-OO1             0.0017  346.41
-P1              0.0246  8.98
-Q1              0.0089  18.44
 x 0 0
-R2              0.0012  91.82
+MN4             0.0001  138.65
+MS4             0.0000  241.13
 x 0 0
-S2              0.2330  90.00
+MF              0.0158  7.04
+MSF             0.0025  12.60
+MM              0.0080  0.45
+SA              0.0378  348.11
+SSA             0.0681  335.36
 x 0 0
 x 0 0
-T2              0.0104  88.18
-LDA2            0.0022  65.80
-MU2             0.0092  359.72
-NU2             0.0140  27.53
-RHO1            0.0017  37.50
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0034  17.86
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  279.92
 x 0 0
 x 0 0
 x 0 0
@@ -33610,7 +33684,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0009  307.89
 x 0 0
+EPS2            0.0005  301.06
 x 0 0
 x 0 0
 x 0 0
@@ -33629,6 +33705,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0004  37.00
+SIG1            0.0012  165.70
 x 0 0
 x 0 0
 x 0 0
@@ -33649,21 +33727,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  56.43
 x 0 0
 x 0 0
 x 0 0
@@ -34113,52 +34177,68 @@ x 0 0
 # country: Seychelles
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3963
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3963). fS=0.95 fN=0.86 dt=+14min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Victoria (att 3967).
+# note: fS=0.91 fN=0.80 dt=+10min, skaliert gegen die
+# note: publizierten Pegel [1.6, 1.3, 0.8, 0.5] aus dem Gruppenkopf S.225.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.225 (Buch: Ile aux Vaches).
+# note: Konstituenten des Bezugshafens aus ticon/harmonics_ticon4_worldwide.txt ("Victoria, Seychelles") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 55.2088
 # !latitude: -3.7180
 Bird Island (Île aux Vaches), Seychelles
-+03:00 :Indian/Mahe
++00:00 :Indian/Mahe
 0.8200 meters
-J1              0.0054  29.24
-K1              0.1210  38.51
-K2              0.0770  155.82
-L2              0.0157  125.89
-M1              0.0045  47.88
-M2              0.5920  104.76
+J1              0.0099  9.05
+K1              0.1595  2.90
+K2              0.0480  56.84
+L2              0.0107  41.02
+M1              0.0064  235.02
+M2              0.3602  19.68
+M3              0.0029  347.56
+M4              0.0016  308.22
+M6              0.0010  318.75
+M8              0.0014  291.36
+N2              0.0742  355.82
 x 0 0
-M4              0.0060  49.53
+O1              0.0916  7.83
+OO1             0.0062  52.64
+P1              0.0484  2.34
+Q1              0.0202  1.07
 x 0 0
+R2              0.0036  48.15
+S1              0.0092  147.02
+S2              0.1776  59.33
+S4              0.0007  82.33
 x 0 0
-N2              0.1097  83.64
+T2              0.0111  64.75
+LDA2            0.0026  42.39
+MU2             0.0042  330.03
+NU2             0.0155  1.57
+RHO1            0.0032  357.64
 x 0 0
-O1              0.0687  57.25
-OO1             0.0027  19.77
-P1              0.0397  39.89
-Q1              0.0145  46.13
 x 0 0
-R2              0.0018  153.91
+MN4             0.0008  253.50
+MS4             0.0002  359.10
 x 0 0
-S2              0.2830  152.00
+MF              0.0158  9.23
+MSF             0.0025  14.63
+MM              0.0080  1.54
+SA              0.0378  348.20
+SSA             0.0681  335.52
 x 0 0
 x 0 0
-T2              0.0157  150.09
-LDA2            0.0036  126.67
-MU2             0.0138  57.53
-NU2             0.0212  86.45
-RHO1            0.0027  65.34
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0077  139.76
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.01
 x 0 0
 x 0 0
 x 0 0
@@ -34181,7 +34261,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0020  6.02
 x 0 0
+EPS2            0.0011  355.91
 x 0 0
 x 0 0
 x 0 0
@@ -34200,6 +34282,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0009  37.00
+SIG1            0.0032  165.70
 x 0 0
 x 0 0
 x 0 0
@@ -34220,21 +34304,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  170.19
 x 0 0
 x 0 0
 x 0 0
@@ -34493,52 +34563,68 @@ x 0 0
 # country: Seychelles
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3965
-# note: NP203 Part II Sekundaerhafen-Transfer von Antsiranana (Diego-Suarez), Madagascar (att 3965). fS=0.95 fN=0.86 dt=+5min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Victoria (att 3967).
+# note: fS=0.91 fN=0.80 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [1.6, 1.3, 0.8, 0.5] aus dem Gruppenkopf S.225.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.225 (Buch: Baie Curieuse).
+# note: Konstituenten des Bezugshafens aus ticon/harmonics_ticon4_worldwide.txt ("Victoria, Seychelles") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 55.7157
 # !latitude: -4.2845
 Baie Curieuse, Seychelles
-+03:00 :Indian/Mahe
++00:00 :Indian/Mahe
 0.9000 meters
-J1              0.0054  26.90
-K1              0.1210  36.25
-K2              0.0770  151.31
-L2              0.0157  121.46
-M1              0.0045  45.71
-M2              0.5920  100.42
+J1              0.0099  6.45
+K1              0.1595  0.39
+K2              0.0480  51.83
+L2              0.0107  36.10
+M1              0.0064  232.60
+M2              0.3602  14.85
+M3              0.0029  340.31
+M4              0.0016  298.56
+M6              0.0010  304.26
+M8              0.0014  272.04
+N2              0.0742  351.08
 x 0 0
-M4              0.0060  40.83
+O1              0.0916  5.51
+OO1             0.0062  49.95
+P1              0.0484  359.85
+Q1              0.0202  358.84
 x 0 0
+R2              0.0036  43.14
+S1              0.0092  144.52
+S2              0.1776  54.33
+S4              0.0007  72.33
 x 0 0
-N2              0.1097  79.37
+T2              0.0111  59.76
+LDA2            0.0026  37.48
+MU2             0.0042  325.37
+NU2             0.0155  356.82
+RHO1            0.0032  355.39
 x 0 0
-O1              0.0687  55.16
-OO1             0.0027  17.34
-P1              0.0397  37.65
-Q1              0.0145  44.12
 x 0 0
-R2              0.0018  149.40
+MN4             0.0008  243.93
+MS4             0.0002  349.27
 x 0 0
-S2              0.2830  147.50
+MF              0.0158  9.05
+MSF             0.0025  14.46
+MM              0.0080  1.45
+SA              0.0378  348.19
+SSA             0.0681  335.51
 x 0 0
 x 0 0
-T2              0.0157  145.60
-LDA2            0.0036  122.25
-MU2             0.0138  53.33
-NU2             0.0212  82.18
-RHO1            0.0027  63.32
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0077  130.92
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0340  280.00
 x 0 0
 x 0 0
 x 0 0
@@ -34561,7 +34647,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0020  1.18
 x 0 0
+EPS2            0.0011  351.34
 x 0 0
 x 0 0
 x 0 0
@@ -34580,6 +34668,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0009  37.00
+SIG1            0.0032  165.70
 x 0 0
 x 0 0
 x 0 0
@@ -34600,21 +34690,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  160.71
 x 0 0
 x 0 0
 x 0 0
@@ -38295,36 +38371,65 @@ x 0 0
 # country: Tanzania
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3984
-# note: NP203 Part II Sekundaerhafen-Transfer von Mtwara (NP203), Tanzania (att 3984). fS=1.03 fN=0.91 dt=+10min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Dar es Salaam (att 4001).
+# note: fS=1.03 fN=0.90 dt=+10min, skaliert gegen die
+# note: publizierten Pegel [3.6, 2.5, 1.5, 0.4] aus dem Gruppenkopf S.226.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.226 (Buch: Ruvuma Bay).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Dar es Salaam, Tanzania") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 40.3821
 # !latitude: -10.3255
 Ruvuma Bay (Msimbati), Tanzania
-+03:00 :Africa/Dar_es_Salaam
++00:00 :Africa/Dar_es_Salaam
 1.8000 meters
+J1              0.0111  347.86
+K1              0.1689  359.66
+K2              0.1511  66.51
+L2              0.0436  55.25
 x 0 0
-K1              0.1652  33.51
-K2              0.1539  161.01
+M2              1.0596  30.47
+M3              0.0031  145.71
+M4              0.0099  160.45
+M6              0.0044  45.34
+M8              0.0006  157.50
+N2              0.2103  8.91
 x 0 0
+O1              0.1034  4.05
+OO1             0.0095  20.74
+P1              0.0483  357.93
+Q1              0.0230  2.59
 x 0 0
-M2              1.0900  117.83
+R2              0.0156  65.68
 x 0 0
+S2              0.5804  70.41
+S4              0.0017  189.50
 x 0 0
+T2              0.0479  70.53
+LDA2            0.0104  94.93
+MU2             0.0178  24.20
+NU2             0.0427  4.51
+RHO1            0.0037  355.26
+MK3             0.0010  3.65
 x 0 0
+MN4             0.0056  108.90
+MS4             0.0036  217.00
 x 0 0
-N2              0.2071  94.69
+MF              0.0214  353.40
+MSF             0.0031  207.41
+MM              0.0069  353.13
 x 0 0
-O1              0.1069  51.32
+SSA             0.0346  79.65
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5700  161.00
 x 0 0
 x 0 0
 x 0 0
@@ -38338,71 +38443,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0013  330.21
+BET1            0.0009  46.08
+CHI1            0.0004  33.46
+H1              0.0172  218.37
+H2              0.0218  208.66
 x 0 0
+ETA2            0.0027  74.87
 x 0 0
+UPS1            0.0017  58.60
 x 0 0
 x 0 0
+MK4             0.0012  224.80
+MKS2            0.0177  182.61
 x 0 0
+EPS2            0.0064  15.96
+MO3             0.0009  133.41
 x 0 0
+TAU1            0.0020  28.98
 x 0 0
+MSK6            0.0011  106.13
+MSM             0.0035  20.03
+MSN2            0.0094  281.95
 x 0 0
 x 0 0
+NO1             0.0090  318.10
 x 0 0
+OQ2             0.0029  56.82
+PHI1            0.0014  4.50
 x 0 0
+PI1             0.0029  329.66
 x 0 0
+PSI1            0.0013  255.01
 x 0 0
 x 0 0
+SIG1            0.0046  341.12
+SK3             0.0025  346.89
+SK4             0.0008  182.31
+SN4             0.0012  186.30
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0018  42.88
+SO3             0.0003  245.73
+THE1            0.0020  321.88
 x 0 0
 x 0 0
 x 0 0
@@ -38484,36 +38566,65 @@ x 0 0
 # country: Tanzania
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3986
-# note: NP203 Part II Sekundaerhafen-Transfer von Mtwara (NP203), Tanzania (att 3986). fS=1.00 fN=1.00 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Dar es Salaam (att 4001).
+# note: fS=1.00 fN=1.10 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [3.6, 2.5, 1.5, 0.4] aus dem Gruppenkopf S.226.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.226 (Buch: Lindi).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Dar es Salaam, Tanzania") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 39.7193
 # !latitude: -9.9999
 Lindi, Tanzania
-+03:00 :Africa/Dar_es_Salaam
++00:00 :Africa/Dar_es_Salaam
 1.9000 meters
+J1              0.0121  345.26
+K1              0.1836  357.15
+K2              0.1308  61.50
+L2              0.0448  50.33
 x 0 0
-K1              0.1700  31.00
-K2              0.1404  156.00
+M2              1.0880  25.64
+M3              0.0033  138.46
+M4              0.0104  150.79
+M6              0.0046  30.85
+M8              0.0006  138.18
+N2              0.2160  4.17
 x 0 0
+O1              0.1125  1.73
+OO1             0.0103  18.05
+P1              0.0525  355.44
+Q1              0.0250  0.36
 x 0 0
-M2              1.0900  113.00
+R2              0.0160  60.67
 x 0 0
+S2              0.5023  65.41
+S4              0.0018  179.50
 x 0 0
+T2              0.0492  65.54
+LDA2            0.0107  90.02
+MU2             0.0182  19.54
+NU2             0.0439  359.76
+RHO1            0.0040  353.01
+MK3             0.0011  356.31
 x 0 0
+MN4             0.0059  99.33
+MS4             0.0038  207.17
 x 0 0
-N2              0.2071  89.95
+MF              0.0214  353.22
+MSF             0.0031  207.24
+MM              0.0069  353.04
 x 0 0
-O1              0.1100  49.00
+SSA             0.0346  79.64
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5200  156.00
 x 0 0
 x 0 0
 x 0 0
@@ -38527,71 +38638,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0014  330.21
+BET1            0.0009  46.08
+CHI1            0.0004  33.46
+H1              0.0187  218.37
+H2              0.0237  208.66
 x 0 0
+ETA2            0.0029  74.87
 x 0 0
+UPS1            0.0019  58.60
 x 0 0
 x 0 0
+MK4             0.0013  224.80
+MKS2            0.0181  177.77
 x 0 0
+EPS2            0.0066  11.39
+MO3             0.0009  133.41
 x 0 0
+TAU1            0.0022  28.98
 x 0 0
+MSK6            0.0012  106.13
+MSM             0.0038  20.03
+MSN2            0.0102  281.95
 x 0 0
 x 0 0
+NO1             0.0098  318.10
 x 0 0
+OQ2             0.0032  56.82
+PHI1            0.0015  4.50
 x 0 0
+PI1             0.0032  329.66
 x 0 0
+PSI1            0.0014  255.01
 x 0 0
 x 0 0
+SIG1            0.0050  341.12
+SK3             0.0027  346.89
+SK4             0.0008  182.31
+SN4             0.0013  186.30
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0020  42.88
+SO3             0.0003  245.73
+THE1            0.0022  321.88
 x 0 0
 x 0 0
 x 0 0
@@ -38673,36 +38761,65 @@ x 0 0
 # country: Tanzania
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3988
-# note: NP203 Part II Sekundaerhafen-Transfer von Mtwara (NP203), Tanzania (att 3988). fS=1.00 fN=1.00 dt=-5min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Dar es Salaam (att 4001).
+# note: fS=1.06 fN=1.20 dt=-5min, skaliert gegen die
+# note: publizierten Pegel [3.6, 2.5, 1.5, 0.4] aus dem Gruppenkopf S.226.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.226 (Buch: Kiswere Haven).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Dar es Salaam, Tanzania") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 39.5789
 # !latitude: -9.3972
 Kiswere Haven, Tanzania
-+03:00 :Africa/Dar_es_Salaam
++00:00 :Africa/Dar_es_Salaam
 2.0000 meters
+J1              0.0130  343.96
+K1              0.1979  355.90
+K2              0.1368  58.99
+L2              0.0479  47.87
 x 0 0
-K1              0.1700  29.75
-K2              0.1404  153.49
+M2              1.1643  23.22
+M3              0.0037  134.84
+M4              0.0119  145.96
+M6              0.0053  23.60
+M8              0.0007  128.52
+N2              0.2311  1.80
 x 0 0
+O1              0.1212  0.57
+OO1             0.0111  16.71
+P1              0.0566  354.19
+Q1              0.0269  359.24
 x 0 0
-M2              1.0900  110.58
+R2              0.0171  58.17
 x 0 0
+S2              0.5253  62.91
+S4              0.0020  174.50
 x 0 0
+T2              0.0527  63.04
+LDA2            0.0114  87.57
+MU2             0.0195  17.21
+NU2             0.0470  357.38
+RHO1            0.0043  351.89
+MK3             0.0012  352.64
 x 0 0
+MN4             0.0067  94.54
+MS4             0.0043  202.25
 x 0 0
-N2              0.2071  87.58
+MF              0.0214  353.13
+MSF             0.0031  207.16
+MM              0.0069  352.99
 x 0 0
-O1              0.1100  47.84
+SSA             0.0346  79.63
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5200  153.50
 x 0 0
 x 0 0
 x 0 0
@@ -38716,71 +38833,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0015  330.21
+BET1            0.0010  46.08
+CHI1            0.0005  33.46
+H1              0.0201  218.37
+H2              0.0256  208.66
 x 0 0
+ETA2            0.0032  74.87
 x 0 0
+UPS1            0.0020  58.60
 x 0 0
 x 0 0
+MK4             0.0014  224.80
+MKS2            0.0194  175.35
 x 0 0
+EPS2            0.0070  9.10
+MO3             0.0010  133.41
 x 0 0
+TAU1            0.0024  28.98
 x 0 0
+MSK6            0.0012  106.13
+MSM             0.0041  20.03
+MSN2            0.0110  281.95
 x 0 0
 x 0 0
+NO1             0.0105  318.10
 x 0 0
+OQ2             0.0034  56.82
+PHI1            0.0016  4.50
 x 0 0
+PI1             0.0034  329.66
 x 0 0
+PSI1            0.0015  255.01
 x 0 0
 x 0 0
+SIG1            0.0054  341.12
+SK3             0.0029  346.89
+SK4             0.0009  182.31
+SN4             0.0014  186.30
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0021  42.88
+SO3             0.0003  245.73
+THE1            0.0024  321.88
 x 0 0
 x 0 0
 x 0 0
@@ -38862,36 +38956,65 @@ x 0 0
 # country: Tanzania
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3990
-# note: NP203 Part II Sekundaerhafen-Transfer von Mtwara (NP203), Tanzania (att 3990). fS=1.03 fN=1.09 dt=-5min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Dar es Salaam (att 4001).
+# note: fS=1.03 fN=1.10 dt=-5min, skaliert gegen die
+# note: publizierten Pegel [3.6, 2.5, 1.5, 0.4] aus dem Gruppenkopf S.226.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.226 (Buch: Kilwa Masoko).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Dar es Salaam, Tanzania") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 39.5074
 # !latitude: -8.9403
 Kilwa Masoko, Tanzania
-+03:00 :Africa/Dar_es_Salaam
++00:00 :Africa/Dar_es_Salaam
 2.0000 meters
+J1              0.0123  343.96
+K1              0.1864  355.90
+K2              0.1372  58.99
+L2              0.0458  47.87
 x 0 0
-K1              0.1801  29.75
-K2              0.1404  153.49
+M2              1.1129  23.22
+M3              0.0034  134.84
+M4              0.0109  145.96
+M6              0.0048  23.60
+M8              0.0007  128.52
+N2              0.2209  1.80
 x 0 0
+O1              0.1141  0.57
+OO1             0.0104  16.71
+P1              0.0533  354.19
+Q1              0.0254  359.24
 x 0 0
-M2              1.1400  110.58
+R2              0.0164  58.17
 x 0 0
+S2              0.5271  62.91
+S4              0.0019  174.50
 x 0 0
+T2              0.0503  63.04
+LDA2            0.0109  87.57
+MU2             0.0187  17.21
+NU2             0.0449  357.38
+RHO1            0.0040  351.89
+MK3             0.0011  352.64
 x 0 0
+MN4             0.0062  94.54
+MS4             0.0040  202.25
 x 0 0
-N2              0.2166  87.58
+MF              0.0214  353.13
+MSF             0.0031  207.16
+MM              0.0069  352.99
 x 0 0
-O1              0.1165  47.84
+SSA             0.0346  79.63
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5200  153.50
 x 0 0
 x 0 0
 x 0 0
@@ -38905,71 +39028,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0014  330.21
+BET1            0.0010  46.08
+CHI1            0.0004  33.46
+H1              0.0190  218.37
+H2              0.0241  208.66
 x 0 0
+ETA2            0.0030  74.87
 x 0 0
+UPS1            0.0019  58.60
 x 0 0
 x 0 0
+MK4             0.0013  224.80
+MKS2            0.0186  175.35
 x 0 0
+EPS2            0.0067  9.10
+MO3             0.0010  133.41
 x 0 0
+TAU1            0.0022  28.98
 x 0 0
+MSK6            0.0012  106.13
+MSM             0.0038  20.03
+MSN2            0.0103  281.95
 x 0 0
 x 0 0
+NO1             0.0099  318.10
 x 0 0
+OQ2             0.0032  56.82
+PHI1            0.0015  4.50
 x 0 0
+PI1             0.0032  329.66
 x 0 0
+PSI1            0.0014  255.01
 x 0 0
 x 0 0
+SIG1            0.0051  341.12
+SK3             0.0028  346.89
+SK4             0.0009  182.31
+SN4             0.0013  186.30
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0020  42.88
+SO3             0.0003  245.73
+THE1            0.0022  321.88
 x 0 0
 x 0 0
 x 0 0
@@ -39433,36 +39533,65 @@ x 0 0
 # country: Tanzania
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3996
-# note: NP203 Part II Sekundaerhafen-Transfer von Mtwara (NP203), Tanzania (att 3996). fS=1.12 fN=1.18 dt=+15min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Dar es Salaam (att 4001).
+# note: fS=1.12 fN=1.20 dt=+15min, skaliert gegen die
+# note: publizierten Pegel [3.6, 2.5, 1.5, 0.4] aus dem Gruppenkopf S.226.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.226 (Buch: Salale).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Dar es Salaam, Tanzania") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 39.3305
 # !latitude: -7.8345
 Salale (Rufiji River), Tanzania
-+03:00 :Africa/Dar_es_Salaam
++00:00 :Africa/Dar_es_Salaam
 2.1000 meters
+J1              0.0134  349.16
+K1              0.2033  0.91
+K2              0.1497  69.02
+L2              0.0500  57.71
 x 0 0
-K1              0.1955  34.76
-K2              0.1539  163.52
+M2              1.2140  32.89
+M3              0.0041  149.33
+M4              0.0130  165.28
+M6              0.0058  52.59
+M8              0.0008  167.16
+N2              0.2410  11.28
 x 0 0
+O1              0.1245  5.22
+OO1             0.0114  22.08
+P1              0.0581  359.18
+Q1              0.0277  3.71
 x 0 0
-M2              1.2400  120.25
+R2              0.0178  68.18
 x 0 0
+S2              0.5750  72.91
+S4              0.0022  194.50
 x 0 0
+T2              0.0549  73.03
+LDA2            0.0119  97.38
+MU2             0.0204  26.53
+NU2             0.0490  6.89
+RHO1            0.0044  356.38
+MK3             0.0013  7.32
 x 0 0
+MN4             0.0073  113.69
+MS4             0.0047  221.92
 x 0 0
-N2              0.2356  97.06
+MF              0.0214  353.49
+MSF             0.0031  207.49
+MM              0.0069  353.18
 x 0 0
-O1              0.1265  52.49
+SSA             0.0346  79.66
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5700  163.50
 x 0 0
 x 0 0
 x 0 0
@@ -39476,71 +39605,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0015  330.21
+BET1            0.0010  46.08
+CHI1            0.0005  33.46
+H1              0.0207  218.37
+H2              0.0263  208.66
 x 0 0
+ETA2            0.0033  74.87
 x 0 0
+UPS1            0.0021  58.60
 x 0 0
 x 0 0
+MK4             0.0014  224.80
+MKS2            0.0202  185.04
 x 0 0
+EPS2            0.0073  18.25
+MO3             0.0010  133.41
 x 0 0
+TAU1            0.0024  28.98
 x 0 0
+MSK6            0.0013  106.13
+MSM             0.0042  20.03
+MSN2            0.0113  281.95
 x 0 0
 x 0 0
+NO1             0.0108  318.10
 x 0 0
+OQ2             0.0035  56.82
+PHI1            0.0016  4.50
 x 0 0
+PI1             0.0035  329.66
 x 0 0
+PSI1            0.0015  255.01
 x 0 0
 x 0 0
+SIG1            0.0056  341.12
+SK3             0.0030  346.89
+SK4             0.0009  182.31
+SN4             0.0014  186.30
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0022  42.88
+SO3             0.0003  245.73
+THE1            0.0024  321.88
 x 0 0
 x 0 0
 x 0 0
@@ -39622,36 +39728,65 @@ x 0 0
 # country: Tanzania
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3997
-# note: NP203 Part II Sekundaerhafen-Transfer von Mtwara (NP203), Tanzania (att 3997). fS=0.63 fN=0.05 dt=+215min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Dar es Salaam (att 4001).
+# note: fS=0.62 fN=0.05 dt=+135min, skaliert gegen die
+# note: publizierten Pegel [3.6, 2.5, 1.5, 0.4] aus dem Gruppenkopf S.226.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.226 (Buch: Batja).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Dar es Salaam, Tanzania") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 39.3092
 # !latitude: -7.9291
 Batja, Tanzania
-+03:00 :Africa/Dar_es_Salaam
++00:00 :Africa/Dar_es_Salaam
 1.0100 meters
+J1              0.0039  20.33
+K1              0.0590  30.99
+K2              0.1259  129.18
+L2              0.0210  116.77
 x 0 0
-K1              0.0576  84.90
-K2              0.1325  263.79
+M2              0.5103  90.85
+M3              0.0007  236.28
+M4              0.0023  281.22
+M6              0.0010  226.49
+M8              0.0001  39.04
+N2              0.1013  68.16
 x 0 0
+O1              0.0361  33.10
+OO1             0.0033  54.36
+P1              0.0169  29.10
+Q1              0.0080  30.51
 x 0 0
-M2              0.5193  216.86
+R2              0.0075  128.26
 x 0 0
+S2              0.4837  132.91
+S4              0.0004  314.50
 x 0 0
+T2              0.0231  132.95
+LDA2            0.0050  156.30
+MU2             0.0086  82.47
+NU2             0.0206  63.91
+RHO1            0.0013  23.32
+MK3             0.0002  95.37
 x 0 0
+MN4             0.0013  228.53
+MS4             0.0008  339.88
 x 0 0
-N2              0.0987  191.86
+MF              0.0214  355.69
+MSF             0.0031  209.53
+MM              0.0069  354.26
 x 0 0
-O1              0.0373  98.96
+SSA             0.0346  79.82
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.4908  263.50
 x 0 0
 x 0 0
 x 0 0
@@ -39665,71 +39800,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0004  330.21
+BET1            0.0003  46.08
+CHI1            0.0001  33.46
+H1              0.0060  218.37
+H2              0.0076  208.66
 x 0 0
+ETA2            0.0009  74.87
 x 0 0
+UPS1            0.0006  58.60
 x 0 0
 x 0 0
+MK4             0.0004  224.80
+MKS2            0.0085  243.17
 x 0 0
+EPS2            0.0031  73.09
+MO3             0.0003  133.41
 x 0 0
+TAU1            0.0007  28.98
 x 0 0
+MSK6            0.0004  106.13
+MSM             0.0012  20.03
+MSN2            0.0033  281.95
 x 0 0
 x 0 0
+NO1             0.0031  318.10
 x 0 0
+OQ2             0.0010  56.82
+PHI1            0.0005  4.50
 x 0 0
+PI1             0.0010  329.66
 x 0 0
+PSI1            0.0004  255.01
 x 0 0
 x 0 0
+SIG1            0.0016  341.12
+SK3             0.0009  346.89
+SK4             0.0003  182.31
+SN4             0.0004  186.30
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0006  42.88
+SO3             0.0001  245.73
+THE1            0.0007  321.88
 x 0 0
 x 0 0
 x 0 0
@@ -39811,36 +39923,65 @@ x 0 0
 # country: Tanzania
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 3998
-# note: NP203 Part II Sekundaerhafen-Transfer von Mtwara (NP203), Tanzania (att 3998). fS=0.16 fN=0.05 dt=+315min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Dar es Salaam (att 4001).
+# note: fS=0.16 fN=0.05 dt=+195min, skaliert gegen die
+# note: publizierten Pegel [3.6, 2.5, 1.5, 0.4] aus dem Gruppenkopf S.226.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.226 (Buch: Usimbe).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Dar es Salaam, Tanzania") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 39.2877
 # !latitude: -8.0171
 Usimbe, Tanzania
-+03:00 :Africa/Dar_es_Salaam
++00:00 :Africa/Dar_es_Salaam
 0.2600 meters
+J1              0.0012  35.91
+K1              0.0180  46.03
+K2              0.0289  159.27
+L2              0.0057  146.30
 x 0 0
-K1              0.0180  109.97
-K2              0.0313  313.93
+M2              0.1376  119.84
+M3              0.0001  279.76
+M4              0.0002  339.19
+M6              0.0001  313.45
+M8              0.0000  154.97
+N2              0.0273  96.60
 x 0 0
+O1              0.0110  47.04
+OO1             0.0010  70.50
+P1              0.0052  44.06
+Q1              0.0025  43.91
 x 0 0
-M2              0.1443  265.17
+R2              0.0020  158.30
 x 0 0
+S2              0.1109  162.91
+S4              0.0000  14.50
 x 0 0
+T2              0.0062  162.91
+LDA2            0.0013  185.75
+MU2             0.0023  110.44
+NU2             0.0055  92.43
+RHO1            0.0004  36.79
+MK3             0.0000  139.39
 x 0 0
+MN4             0.0001  285.96
+MS4             0.0001  38.87
 x 0 0
-N2              0.0274  239.26
+MF              0.0214  356.79
+MSF             0.0031  210.54
+MM              0.0069  354.81
 x 0 0
-O1              0.0116  122.20
+SSA             0.0346  79.91
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.1158  313.50
 x 0 0
 x 0 0
 x 0 0
@@ -39854,71 +39995,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0001  330.21
+BET1            0.0001  46.08
+CHI1            0.0000  33.46
+H1              0.0018  218.37
+H2              0.0023  208.66
 x 0 0
+ETA2            0.0003  74.87
 x 0 0
+UPS1            0.0002  58.60
 x 0 0
 x 0 0
+MK4             0.0001  224.80
+MKS2            0.0023  272.24
 x 0 0
+EPS2            0.0008  100.52
+MO3             0.0001  133.41
 x 0 0
+TAU1            0.0002  28.98
 x 0 0
+MSK6            0.0001  106.13
+MSM             0.0004  20.03
+MSN2            0.0010  281.95
 x 0 0
 x 0 0
+NO1             0.0010  318.10
 x 0 0
+OQ2             0.0003  56.82
+PHI1            0.0001  4.50
 x 0 0
+PI1             0.0003  329.66
 x 0 0
+PSI1            0.0001  255.01
 x 0 0
 x 0 0
+SIG1            0.0005  341.12
+SK3             0.0003  346.89
+SK4             0.0001  182.31
+SN4             0.0001  186.30
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0002  42.88
+SO3             0.0000  245.73
+THE1            0.0002  321.88
 x 0 0
 x 0 0
 x 0 0
@@ -52355,36 +52473,40 @@ x 0 0
 # country: Saudi Arabia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4138
-# note: NP203 Part II Sekundaerhafen-Transfer von Rabigh (NP203), Saudi Arabia (att 4138). fS=0.29 fN=0.05 dt=+210min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Suez (As Suways), Egypt (att 4112).
+# note: fS=0.20 fN=0.05 dt=+70min, skaliert gegen die
+# note: publizierten Pegel [1.9, 1.6, 0.7, 0.4] aus dem Gruppenkopf S.228.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.228 (Buch: Sanak Island).
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 40.6464
 # !latitude: 19.7251
 Sanak Island (Sam Alzwaher), Saudi Arabia
-+03:00 :Asia/Riyadh
++02:00 :Asia/Riyadh
 0.5000 meters
 x 0 0
-K1              0.0069  254.64
-K2              0.0061  327.29
+K1              0.0050  201.55
+K2              0.0245  49.10
 x 0 0
 x 0 0
-M2              0.0272  298.44
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0052  283.14
-x 0 0
-O1              0.0034  252.80
+M2              0.0993  9.81
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0189  181.77
+x 0 0
+O1              0.0013  214.27
 x 0 0
 x 0 0
-S2              0.0228  327.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0908  49.00
 x 0 0
 x 0 0
 x 0 0
@@ -52735,36 +52857,40 @@ x 0 0
 # country: Saudi Arabia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4140
-# note: NP203 Part II Sekundaerhafen-Transfer von Rabigh (NP203), Saudi Arabia (att 4140). fS=0.29 fN=0.05 dt=+225min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Suez (As Suways), Egypt (att 4112).
+# note: fS=0.27 fN=0.05 dt=+85min, skaliert gegen die
+# note: publizierten Pegel [1.9, 1.6, 0.7, 0.4] aus dem Gruppenkopf S.228.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.228 (Buch: Hadarah Island).
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 41.2199
 # !latitude: 18.4290
 Hadarah Island (Amaq), Saudi Arabia
-+03:00 :Asia/Riyadh
++02:00 :Asia/Riyadh
 0.5000 meters
 x 0 0
-K1              0.0069  258.40
-K2              0.0061  334.81
+K1              0.0063  205.31
+K2              0.0331  56.62
 x 0 0
 x 0 0
-M2              0.0272  305.69
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0052  290.25
-x 0 0
-O1              0.0034  256.29
+M2              0.1309  17.06
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0249  188.88
+x 0 0
+O1              0.0016  217.75
 x 0 0
 x 0 0
-S2              0.0228  334.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1224  56.50
 x 0 0
 x 0 0
 x 0 0
@@ -53115,36 +53241,40 @@ x 0 0
 # country: Yemen
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4144
-# note: NP203 Part II Sekundaerhafen-Transfer von Rabigh (NP203), Saudi Arabia (att 4144). fS=0.29 fN=0.05 dt=+220min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Suez (As Suways), Egypt (att 4112).
+# note: fS=0.53 fN=0.33 dt=+80min, skaliert gegen die
+# note: publizierten Pegel [1.9, 1.6, 0.7, 0.4] aus dem Gruppenkopf S.228.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.228 (Buch: Tiqfash).
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 42.4829
 # !latitude: 15.7154
 Jazirat Antufash / Tiqfash, Yemen
-+03:00 :Asia/Aden
++02:00 :Asia/Aden
 0.8000 meters
 x 0 0
-K1              0.0069  257.15
-K2              0.0061  332.30
+K1              0.0173  204.05
+K2              0.0607  54.11
 x 0 0
 x 0 0
-M2              0.0272  303.28
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0052  287.88
-x 0 0
-O1              0.0034  255.12
+M2              0.2817  14.65
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0535  186.51
+x 0 0
+O1              0.0043  216.59
 x 0 0
 x 0 0
-S2              0.0228  332.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2250  54.00
 x 0 0
 x 0 0
 x 0 0
@@ -53303,37 +53433,41 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Yemen
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
-# att_number: 4148
-# note: NP203 Part II Sekundaerhafen-Transfer von Rabigh (NP203), Saudi Arabia (att 4148). fS=0.29 fN=0.05 dt=+200min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# att_number: 4147
+# note: NP203 Part II Sekundaerhafen-Transfer von Suez (As Suways), Egypt (att 4112).
+# note: fS=0.40 fN=0.22 dt=+60min, skaliert gegen die
+# note: publizierten Pegel [1.9, 1.6, 0.7, 0.4] aus dem Gruppenkopf S.228.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.228 (Buch: Ras Mujamila).
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 42.9000
 # !latitude: 14.6000
 Ra's Mujamila (Ad Tarfah Island), Yemen
-+03:00 :Asia/Aden
-0.5000 meters
++02:00 :Asia/Aden
+0.6000 meters
 x 0 0
-K1              0.0069  252.14
-K2              0.0061  322.27
-x 0 0
-x 0 0
-M2              0.0272  293.61
+K1              0.0124  199.04
+K2              0.0462  44.08
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0052  278.40
-x 0 0
-O1              0.0034  250.48
+M2              0.2089  4.98
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.0397  177.03
+x 0 0
+O1              0.0031  211.94
 x 0 0
 x 0 0
-S2              0.0228  322.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.1711  44.00
 x 0 0
 x 0 0
 x 0 0
@@ -55771,56 +55905,59 @@ x 0 0
 # country: Oman
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4170a
-# note: NP203 Part II Sekundaerhafen-Transfer von Salalah, Oman (att 4170a). fS=0.54 fN=0.21 dt=-12min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Sultan Qaboos (att 4186a).
+# note: fS=0.76 fN=0.63 dt=-12min, skaliert gegen die
+# note: publizierten Pegel [2.6, 2.5, 1.7, 0.9] aus dem Gruppenkopf S.229.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.229 (Buch: Ash Shuwaymiyah).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Muscat (Sultan Qaboos Port), Oman") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 55.4240
 # !latitude: 17.8150
 Ash Shuwaymiyah, Oman
-+00:00 :Asia/Muscat
++04:00 :Asia/Muscat
 1.1500 meters
-J1              0.0084  353.07
-K1              0.1365  341.23
-K2              0.0269  155.23
-L2              0.0032  143.17
-M1              0.0049  244.77
-M2              0.1383  138.44
-M3              0.0002  147.83
-M4              0.0004  312.97
-M6              0.0002  236.80
-M8              0.0001  80.03
-N2              0.0368  126.98
+J1              0.0176  53.88
+K1              0.2725  38.45
+K2              0.0587  299.75
+L2              0.0113  288.64
 x 0 0
-O1              0.0697  344.24
-OO1             0.0062  15.68
-P1              0.0416  338.70
-Q1              0.0150  345.90
+M2              0.4641  269.49
+M3              0.0036  299.07
+M4              0.0036  69.76
+M6              0.0004  91.30
 x 0 0
-R2              0.0005  196.54
-S1              0.0079  117.02
-S2              0.0981  161.35
-S4              0.0003  289.21
+N2              0.1146  249.97
 x 0 0
-T2              0.0024  171.28
-LDA2            0.0006  129.29
-MU2             0.0055  95.22
-NU2             0.0072  134.00
-RHO1            0.0027  346.70
+O1              0.1415  35.04
+OO1             0.0119  71.91
+P1              0.0841  37.26
+Q1              0.0301  32.82
 x 0 0
+R2              0.0022  316.10
 x 0 0
-MN4             0.0003  243.43
-MS4             0.0002  136.17
+S2              0.2186  303.51
+S4              0.0005  202.63
 x 0 0
-MF              0.0109  7.00
-MSF             0.0008  262.14
-MM              0.0050  30.01
-SA              0.0794  323.41
-SSA             0.0499  124.17
+T2              0.0103  310.95
+LDA2            0.0023  294.26
+MU2             0.0142  217.11
+NU2             0.0229  255.80
+RHO1            0.0054  24.10
+MK3             0.0005  206.33
 x 0 0
+MN4             0.0019  24.14
+MS4             0.0023  156.48
 x 0 0
+MF              0.0058  17.87
+MSF             0.0033  201.43
+MM              0.0048  55.45
 x 0 0
+SSA             0.0253  142.17
 x 0 0
 x 0 0
 x 0 0
@@ -55840,59 +55977,62 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0015  14.13
+BET1            0.0019  5.75
+CHI1            0.0015  0.04
+H1              0.0022  338.73
+H2              0.0033  286.40
 x 0 0
+ETA2            0.0035  319.87
 x 0 0
+UPS1            0.0016  102.83
 x 0 0
 x 0 0
+MK4             0.0008  157.56
+MKS2            0.0007  245.14
 x 0 0
+EPS2            0.0026  202.57
+MO3             0.0006  166.22
 x 0 0
+TAU1            0.0022  9.83
 x 0 0
+MSK6            0.0001  208.91
+MSM             0.0039  5.46
 x 0 0
 x 0 0
-MKS2            0.0004  55.97
 x 0 0
-EPS2            0.0009  88.08
+NO1             0.0109  34.16
+OP2             0.0019  106.38
 x 0 0
+PHI1            0.0037  65.46
 x 0 0
+PI1             0.0047  42.19
 x 0 0
+PSI1            0.0013  18.30
 x 0 0
 x 0 0
+SIG1            0.0056  27.91
+SK3             0.0045  123.72
 x 0 0
+SN4             0.0006  121.56
 x 0 0
+SO1             0.0034  80.52
+SO3             0.0008  201.63
+THE1            0.0040  61.35
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0002  9.84
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  144.40
 x 0 0
 x 0 0
-S3              0.0001  306.79
-SIG1            0.0026  158.54
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0002  173.57
+N4              0.0004  320.94
 x 0 0
 x 0 0
 x 0 0
@@ -56344,57 +56484,59 @@ x 0 0
 # country: Oman
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4172
-# note: NP203 Part II Sekundaerhafen-Transfer von Salalah, Oman (att 4172). fS=1.00 fN=1.00 dt=+10min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# note: Nummer 20260728 nach Scan korrigiert (Buch: Duqm 4171a, Hamr an Nafur 4172, Ras Sarab 4173).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Sultan Qaboos (att 4186a).
+# note: fS=1.00 fN=1.00 dt=+10min, skaliert gegen die
+# note: publizierten Pegel [2.6, 2.5, 1.7, 0.9] aus dem Gruppenkopf S.229.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.229 (Buch: Hamr an Nafur).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Muscat (Sultan Qaboos Port), Oman") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 57.7946
 # !latitude: 19.7968
 Hamr an Nafur, Oman
-+00:00 :Asia/Muscat
++04:00 :Asia/Muscat
 1.8000 meters
-J1              0.0224  358.66
-K1              0.3626  346.62
-K2              0.0338  166.01
-L2              0.0073  153.75
-M1              0.0130  249.97
-M2              0.3133  148.83
-M3              0.0004  163.41
-M4              0.0018  333.74
-M6              0.0009  267.96
-M8              0.0003  121.57
-N2              0.0834  137.17
+J1              0.0254  59.47
+K1              0.3921  43.84
+K2              0.0671  310.53
+L2              0.0157  299.22
 x 0 0
-O1              0.1850  349.23
-OO1             0.0165  21.46
-P1              0.1105  344.06
-Q1              0.0399  350.70
+M2              0.6428  279.88
+M3              0.0070  314.65
+M4              0.0070  90.53
+M6              0.0008  122.46
 x 0 0
-R2              0.0011  207.31
-S1              0.0210  122.39
-S2              0.1231  172.10
-S4              0.0007  310.71
+N2              0.1587  260.16
 x 0 0
-T2              0.0055  182.01
-LDA2            0.0016  139.85
-MU2             0.0125  105.24
-NU2             0.0162  144.21
-RHO1            0.0072  351.53
+O1              0.2037  40.03
+OO1             0.0171  77.69
+P1              0.1211  42.62
+Q1              0.0433  37.62
 x 0 0
+R2              0.0031  326.87
 x 0 0
-MN4             0.0014  264.01
-MS4             0.0009  157.31
+S2              0.2500  314.26
+S4              0.0009  224.13
 x 0 0
-MF              0.0109  7.39
-MSF             0.0008  262.50
-MM              0.0050  30.20
-SA              0.0794  323.43
-SSA             0.0499  124.20
+T2              0.0142  321.68
+LDA2            0.0032  304.82
+MU2             0.0197  227.13
+NU2             0.0317  266.01
+RHO1            0.0077  28.93
+MK3             0.0010  222.11
 x 0 0
+MN4             0.0037  44.72
+MS4             0.0045  177.62
 x 0 0
+MF              0.0058  18.26
+MSF             0.0033  201.79
+MM              0.0048  55.64
 x 0 0
+SSA             0.0253  142.20
 x 0 0
 x 0 0
 x 0 0
@@ -56414,59 +56556,62 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0021  14.13
+BET1            0.0028  5.75
+CHI1            0.0021  0.04
+H1              0.0031  338.73
+H2              0.0047  286.40
 x 0 0
+ETA2            0.0050  319.87
 x 0 0
+UPS1            0.0023  102.83
 x 0 0
 x 0 0
+MK4             0.0012  157.56
+MKS2            0.0010  255.55
 x 0 0
+EPS2            0.0036  212.40
+MO3             0.0009  166.22
 x 0 0
+TAU1            0.0032  9.83
 x 0 0
+MSK6            0.0002  208.91
+MSM             0.0056  5.46
 x 0 0
 x 0 0
-MKS2            0.0010  66.38
 x 0 0
-EPS2            0.0024  97.91
+NO1             0.0157  34.16
+OP2             0.0027  106.38
 x 0 0
+PHI1            0.0053  65.46
 x 0 0
+PI1             0.0067  42.19
 x 0 0
+PSI1            0.0018  18.30
 x 0 0
 x 0 0
+SIG1            0.0081  27.91
+SK3             0.0065  123.72
 x 0 0
+SN4             0.0009  121.56
 x 0 0
+SO1             0.0049  80.52
+SO3             0.0011  201.63
+THE1            0.0057  61.35
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0003  9.84
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0002  144.40
 x 0 0
 x 0 0
-S3              0.0003  322.91
-SIG1            0.0069  163.17
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0004  193.95
+N4              0.0008  341.32
 x 0 0
 x 0 0
 x 0 0
@@ -56728,57 +56873,59 @@ x 0 0
 # country: Oman
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4174
-# note: NP203 Part II Sekundaerhafen-Transfer von Salalah, Oman (att 4174). fS=1.00 fN=1.00 dt=+30min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# note: Position 20260728 nach Scan korrigiert: 20.4700/58.1800 -> 20.4667/58.1667 (20 28 N, 58 10 E).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Sultan Qaboos (att 4186a).
+# note: fS=1.00 fN=0.88 dt=+30min, skaliert gegen die
+# note: publizierten Pegel [2.6, 2.5, 1.7, 0.9] aus dem Gruppenkopf S.229.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.229 (Buch: Ghubbat Hashish).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Muscat (Sultan Qaboos Port), Oman") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 58.1667
 # !latitude: 20.4667
 Ghubbat Hashish, Oman
-+00:00 :Asia/Muscat
++04:00 :Asia/Muscat
 1.8000 meters
-J1              0.0224  3.85
-K1              0.3626  351.63
-K2              0.0338  176.04
-L2              0.0073  163.59
-M1              0.0130  254.80
-M2              0.3133  158.49
-M3              0.0004  177.90
-M4              0.0018  353.06
-M6              0.0009  296.95
-M8              0.0003  160.22
-N2              0.0834  146.65
+J1              0.0238  64.66
+K1              0.3676  48.85
+K2              0.0737  320.56
+L2              0.0151  309.06
 x 0 0
-O1              0.1850  353.88
-OO1             0.0165  26.84
-P1              0.1105  349.05
-Q1              0.0399  355.17
+M2              0.6182  289.54
+M3              0.0065  329.14
+M4              0.0065  109.85
+M6              0.0007  151.45
 x 0 0
-R2              0.0011  217.32
-S1              0.0210  127.39
-S2              0.1231  182.10
-S4              0.0007  330.71
+N2              0.1526  269.64
 x 0 0
-T2              0.0055  192.00
-LDA2            0.0016  149.67
-MU2             0.0125  114.56
-NU2             0.0162  153.72
-RHO1            0.0072  356.02
+O1              0.1910  44.68
+OO1             0.0160  83.07
+P1              0.1135  47.61
+Q1              0.0406  42.09
 x 0 0
+R2              0.0030  336.88
 x 0 0
-MN4             0.0014  283.15
-MS4             0.0009  176.97
+S2              0.2746  324.26
+S4              0.0008  244.13
 x 0 0
-MF              0.0109  7.76
-MSF             0.0008  262.84
-MM              0.0050  30.38
-SA              0.0794  323.44
-SSA             0.0499  124.23
+T2              0.0137  331.67
+LDA2            0.0031  314.64
+MU2             0.0189  236.45
+NU2             0.0305  275.52
+RHO1            0.0072  33.42
+MK3             0.0009  236.78
 x 0 0
+MN4             0.0034  63.86
+MS4             0.0042  197.28
 x 0 0
+MF              0.0058  18.63
+MSF             0.0033  202.13
+MM              0.0048  55.82
 x 0 0
+SSA             0.0253  142.23
 x 0 0
 x 0 0
 x 0 0
@@ -56798,59 +56945,62 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0020  14.13
+BET1            0.0026  5.75
+CHI1            0.0020  0.04
+H1              0.0029  338.73
+H2              0.0044  286.40
 x 0 0
+ETA2            0.0047  319.87
 x 0 0
+UPS1            0.0022  102.83
 x 0 0
 x 0 0
+MK4             0.0011  157.56
+MKS2            0.0010  265.24
 x 0 0
+EPS2            0.0035  221.54
+MO3             0.0008  166.22
 x 0 0
+TAU1            0.0030  9.83
 x 0 0
+MSK6            0.0002  208.91
+MSM             0.0053  5.46
 x 0 0
 x 0 0
-MKS2            0.0010  76.07
 x 0 0
-EPS2            0.0024  107.05
+NO1             0.0147  34.16
+OP2             0.0025  106.38
 x 0 0
+PHI1            0.0050  65.46
 x 0 0
+PI1             0.0063  42.19
 x 0 0
+PSI1            0.0017  18.30
 x 0 0
 x 0 0
+SIG1            0.0076  27.91
+SK3             0.0061  123.72
 x 0 0
+SN4             0.0008  121.56
 x 0 0
+SO1             0.0046  80.52
+SO3             0.0010  201.63
+THE1            0.0053  61.35
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0003  9.84
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0002  144.40
 x 0 0
 x 0 0
-S3              0.0003  337.91
-SIG1            0.0069  167.48
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0004  212.91
+N4              0.0007  0.28
 x 0 0
 x 0 0
 x 0 0
@@ -57300,56 +57450,59 @@ x 0 0
 # country: Oman
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4178
-# note: NP203 Part II Sekundaerhafen-Transfer von Salalah, Oman (att 4178). fS=1.00 fN=1.00 dt=+30min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Sultan Qaboos (att 4186a).
+# note: fS=1.00 fN=0.88 dt=+30min, skaliert gegen die
+# note: publizierten Pegel [2.6, 2.5, 1.7, 0.9] aus dem Gruppenkopf S.229.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.229 (Buch: Ras Sheiblah).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Muscat (Sultan Qaboos Port), Oman") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 58.7963
 # !latitude: 20.9700
 Ras Sheiblah, Oman
-+00:00 :Asia/Muscat
++04:00 :Asia/Muscat
 1.8000 meters
-J1              0.0224  3.85
-K1              0.3626  351.63
-K2              0.0338  176.04
-L2              0.0073  163.59
-M1              0.0130  254.80
-M2              0.3133  158.49
-M3              0.0004  177.90
-M4              0.0018  353.06
-M6              0.0009  296.95
-M8              0.0003  160.22
-N2              0.0834  146.65
+J1              0.0238  64.66
+K1              0.3676  48.85
+K2              0.0737  320.56
+L2              0.0151  309.06
 x 0 0
-O1              0.1850  353.88
-OO1             0.0165  26.84
-P1              0.1105  349.05
-Q1              0.0399  355.17
+M2              0.6182  289.54
+M3              0.0065  329.14
+M4              0.0065  109.85
+M6              0.0007  151.45
 x 0 0
-R2              0.0011  217.32
-S1              0.0210  127.39
-S2              0.1231  182.10
-S4              0.0007  330.71
+N2              0.1526  269.64
 x 0 0
-T2              0.0055  192.00
-LDA2            0.0016  149.67
-MU2             0.0125  114.56
-NU2             0.0162  153.72
-RHO1            0.0072  356.02
+O1              0.1910  44.68
+OO1             0.0160  83.07
+P1              0.1135  47.61
+Q1              0.0406  42.09
 x 0 0
+R2              0.0030  336.88
 x 0 0
-MN4             0.0014  283.15
-MS4             0.0009  176.97
+S2              0.2746  324.26
+S4              0.0008  244.13
 x 0 0
-MF              0.0109  7.76
-MSF             0.0008  262.84
-MM              0.0050  30.38
-SA              0.0794  323.44
-SSA             0.0499  124.23
+T2              0.0137  331.67
+LDA2            0.0031  314.64
+MU2             0.0189  236.45
+NU2             0.0305  275.52
+RHO1            0.0072  33.42
+MK3             0.0009  236.78
 x 0 0
+MN4             0.0034  63.86
+MS4             0.0042  197.28
 x 0 0
+MF              0.0058  18.63
+MSF             0.0033  202.13
+MM              0.0048  55.82
 x 0 0
+SSA             0.0253  142.23
 x 0 0
 x 0 0
 x 0 0
@@ -57369,59 +57522,62 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0020  14.13
+BET1            0.0026  5.75
+CHI1            0.0020  0.04
+H1              0.0029  338.73
+H2              0.0044  286.40
 x 0 0
+ETA2            0.0047  319.87
 x 0 0
+UPS1            0.0022  102.83
 x 0 0
 x 0 0
+MK4             0.0011  157.56
+MKS2            0.0010  265.24
 x 0 0
+EPS2            0.0035  221.54
+MO3             0.0008  166.22
 x 0 0
+TAU1            0.0030  9.83
 x 0 0
+MSK6            0.0002  208.91
+MSM             0.0053  5.46
 x 0 0
 x 0 0
-MKS2            0.0010  76.07
 x 0 0
-EPS2            0.0024  107.05
+NO1             0.0147  34.16
+OP2             0.0025  106.38
 x 0 0
+PHI1            0.0050  65.46
 x 0 0
+PI1             0.0063  42.19
 x 0 0
+PSI1            0.0017  18.30
 x 0 0
 x 0 0
+SIG1            0.0076  27.91
+SK3             0.0061  123.72
 x 0 0
+SN4             0.0008  121.56
 x 0 0
+SO1             0.0046  80.52
+SO3             0.0010  201.63
+THE1            0.0053  61.35
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0003  9.84
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0002  144.40
 x 0 0
 x 0 0
-S3              0.0003  337.91
-SIG1            0.0069  167.48
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0004  212.91
+N4              0.0007  0.28
 x 0 0
 x 0 0
 x 0 0
@@ -57680,56 +57836,59 @@ x 0 0
 # country: Oman
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4180
-# note: NP203 Part II Sekundaerhafen-Transfer von Salalah, Oman (att 4180). fS=1.00 fN=1.26 dt=+10min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Port Sultan Qaboos (att 4186a).
+# note: fS=0.82 fN=0.62 dt=+10min, skaliert gegen die
+# note: publizierten Pegel [2.6, 2.5, 1.7, 0.9] aus dem Gruppenkopf S.229.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.229 (Buch: Ras al Hadd).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Muscat (Sultan Qaboos Port), Oman") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 59.7984
 # !latitude: 22.5330
 Ras al Hadd, Oman
-+00:00 :Asia/Muscat
++04:00 :Asia/Muscat
 1.6000 meters
-J1              0.0253  358.66
-K1              0.4103  346.62
-K2              0.0269  166.01
-L2              0.0079  153.75
-M1              0.0147  249.97
-M2              0.3383  148.83
-M3              0.0005  163.41
-M4              0.0021  333.74
-M6              0.0010  267.96
-M8              0.0003  121.57
-N2              0.0901  137.17
+J1              0.0184  59.47
+K1              0.2840  43.84
+K2              0.0657  310.53
+L2              0.0120  299.22
 x 0 0
-O1              0.2093  349.23
-OO1             0.0187  21.46
-P1              0.1250  344.06
-Q1              0.0451  350.70
+M2              0.4904  279.88
+M3              0.0041  314.65
+M4              0.0041  90.53
+M6              0.0005  122.46
 x 0 0
-R2              0.0012  207.31
-S1              0.0238  122.39
-S2              0.0981  172.10
-S4              0.0008  310.71
+N2              0.1211  260.16
 x 0 0
-T2              0.0059  182.01
-LDA2            0.0018  139.85
-MU2             0.0135  105.24
-NU2             0.0175  144.21
-RHO1            0.0081  351.53
+O1              0.1475  40.03
+OO1             0.0124  77.69
+P1              0.0877  42.62
+Q1              0.0314  37.62
 x 0 0
+R2              0.0024  326.87
 x 0 0
-MN4             0.0016  264.01
-MS4             0.0010  157.31
+S2              0.2449  314.26
+S4              0.0005  224.13
 x 0 0
-MF              0.0109  7.39
-MSF             0.0008  262.50
-MM              0.0050  30.20
-SA              0.0794  323.43
-SSA             0.0499  124.20
+T2              0.0108  321.68
+LDA2            0.0024  304.82
+MU2             0.0150  227.13
+NU2             0.0242  266.01
+RHO1            0.0056  28.93
+MK3             0.0006  222.11
 x 0 0
+MN4             0.0022  44.72
+MS4             0.0026  177.62
 x 0 0
+MF              0.0058  18.26
+MSF             0.0033  201.79
+MM              0.0048  55.64
 x 0 0
+SSA             0.0253  142.20
 x 0 0
 x 0 0
 x 0 0
@@ -57749,59 +57908,62 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0015  14.13
+BET1            0.0020  5.75
+CHI1            0.0015  0.04
+H1              0.0022  338.73
+H2              0.0034  286.40
 x 0 0
+ETA2            0.0036  319.87
 x 0 0
+UPS1            0.0017  102.83
 x 0 0
 x 0 0
+MK4             0.0009  157.56
+MKS2            0.0008  255.55
 x 0 0
+EPS2            0.0027  212.40
+MO3             0.0007  166.22
 x 0 0
+TAU1            0.0023  9.83
 x 0 0
+MSK6            0.0001  208.91
+MSM             0.0041  5.46
 x 0 0
 x 0 0
-MKS2            0.0011  66.38
 x 0 0
-EPS2            0.0027  97.91
+NO1             0.0114  34.16
+OP2             0.0020  106.38
 x 0 0
+PHI1            0.0038  65.46
 x 0 0
+PI1             0.0049  42.19
 x 0 0
+PSI1            0.0013  18.30
 x 0 0
 x 0 0
+SIG1            0.0059  27.91
+SK3             0.0047  123.72
 x 0 0
+SN4             0.0007  121.56
 x 0 0
+SO1             0.0035  80.52
+SO3             0.0008  201.63
+THE1            0.0041  61.35
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0002  9.84
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  144.40
 x 0 0
 x 0 0
-S3              0.0003  322.91
-SIG1            0.0078  163.17
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0005  193.95
+N4              0.0005  341.32
 x 0 0
 x 0 0
 x 0 0
@@ -80221,52 +80383,65 @@ x 0 0
 # country: Iran
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4284
-# note: NP203 Part II Sekundaerhafen-Transfer von Bushehr, Iran (att 4284). fS=0.89 fN=1.23 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Jazireh-ye Khark (att 4282).
+# note: fS=0.93 fN=1.50 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.0, 1.3, 1.1, 0.6] aus dem Gruppenkopf S.233.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.233 (Buch: Bandar-e Ameri).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_tidetables.txt ("Jazireh Ye Khark (Kharg Island), Iran") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 51.0830
 # !latitude: 28.5000
 Bandar-e Ameri, Iran
-+03:30 :Asia/Tehran
++00:00 :Asia/Tehran
 1.1300 meters
-J1              0.0170  299.30
-K1              0.3262  279.00
-K2              0.0196  269.40
-L2              0.0100  239.00
-M1              0.0149  258.50
-M2              0.3370  211.00
+J1              0.0215  250.84
+K1              0.4636  234.15
+K2              0.0154  189.21
+L2              0.0200  171.47
 x 0 0
-M4              0.0070  327.00
+M2              0.4065  149.68
+M3              0.0106  11.97
+M4              0.0075  43.47
+M6              0.0011  263.38
+M8              0.0001  174.65
+N2              0.0854  122.82
 x 0 0
+O1              0.3017  192.73
+OO1             0.0017  354.70
+P1              0.1390  225.25
+Q1              0.0561  176.00
 x 0 0
-N2              0.0730  183.00
+R2              0.0064  140.55
 x 0 0
-O1              0.2167  238.00
-OO1             0.0096  320.00
-P1              0.1084  275.90
-Q1              0.0425  220.00
+S2              0.0483  199.99
+S4              0.0017  8.48
 x 0 0
-R2              0.0010  267.20
+T2              0.0107  238.55
+LDA2            0.0051  130.76
+MU2             0.0047  170.85
+NU2             0.0180  136.45
+RHO1            0.0138  150.33
+MK3             0.0283  279.28
 x 0 0
-S2              0.0730  265.00
+MN4             0.0083  321.89
+MS4             0.0032  58.78
 x 0 0
+MF              0.0254  262.41
+MSF             0.0182  318.08
+MM              0.0128  331.65
 x 0 0
-T2              0.0070  262.80
-LDA2            0.0021  236.10
-MU2             0.0080  157.00
-NU2             0.0140  186.80
-RHO1            0.0085  220.40
+SSA             0.0262  193.90
 x 0 0
 x 0 0
-MN4             0.0100  213.00
-MS4             0.0070  26.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1050  142.00
 x 0 0
 x 0 0
 x 0 0
@@ -80280,24 +80455,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0001  277.69
+BET1            0.0001  97.29
+CHI1            0.0036  305.05
+H1              0.0024  132.12
+H2              0.0015  189.56
 x 0 0
+ETA2            0.0010  178.94
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0019  294.06
+MKS2            0.0038  181.22
 x 0 0
+EPS2            0.0016  202.83
+MO3             0.0175  234.14
 x 0 0
+TAU1            0.0217  147.58
 x 0 0
+MSK6            0.0007  209.16
+MSM             0.0002  284.97
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0329  159.61
+OP2             0.0042  244.26
 x 0 0
+PHI1            0.0124  236.12
 x 0 0
+PI1             0.0056  175.08
 x 0 0
+PSI1            0.0148  108.14
 x 0 0
 x 0 0
+SIG1            0.0021  201.63
+SK3             0.0029  344.46
 x 0 0
+SN4             0.0033  105.48
 x 0 0
+SO1             0.0024  118.08
+SO3             0.0109  288.16
+THE1            0.0126  272.79
 x 0 0
 x 0 0
 x 0 0
@@ -80311,38 +80510,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  176.26
 x 0 0
 x 0 0
 x 0 0
@@ -80792,52 +80960,65 @@ x 0 0
 # country: Iran
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4285b
-# note: NP203 Part II Sekundaerhafen-Transfer von Bushehr, Iran (att 4285b). fS=1.00 fN=2.17 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Jazireh-ye Khark (att 4282).
+# note: fS=1.00 fN=3.00 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.0, 1.3, 1.1, 0.6] aus dem Gruppenkopf S.233.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.233 (Buch: Bordekhun).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_tidetables.txt ("Jazireh Ye Khark (Kharg Island), Iran") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 51.3500
 # !latitude: 27.8330
 Bordekhun, Iran
-+03:30 :Asia/Tehran
++00:00 :Asia/Tehran
 1.1700 meters
-J1              0.0253  299.30
-K1              0.4863  279.00
-K2              0.0000  269.40
-L2              0.0137  239.00
-M1              0.0222  258.50
-M2              0.4620  211.00
+J1              0.0354  250.84
+K1              0.7636  234.15
+K2              0.0000  189.21
+L2              0.0296  171.47
 x 0 0
-M4              0.0132  327.00
+M2              0.6031  149.68
+M3              0.0233  11.97
+M4              0.0164  43.47
+M6              0.0025  263.38
+M8              0.0003  174.65
+N2              0.1266  122.82
 x 0 0
+O1              0.4970  192.73
+OO1             0.0028  354.70
+P1              0.2290  225.25
+Q1              0.0924  176.00
 x 0 0
-N2              0.1001  183.00
+R2              0.0094  140.55
 x 0 0
-O1              0.3232  238.00
-OO1             0.0143  320.00
-P1              0.1616  275.90
-Q1              0.0634  220.00
+S2              0.0000  199.99
+S4              0.0038  8.48
 x 0 0
-R2              0.0014  267.20
+T2              0.0159  238.55
+LDA2            0.0076  130.76
+MU2             0.0070  170.85
+NU2             0.0267  136.45
+RHO1            0.0228  150.33
+MK3             0.0622  279.28
 x 0 0
-S2              0.0000  265.00
+MN4             0.0184  321.89
+MS4             0.0071  58.78
 x 0 0
+MF              0.0254  262.41
+MSF             0.0182  318.08
+MM              0.0128  331.65
 x 0 0
-T2              0.0096  262.80
-LDA2            0.0032  236.10
-MU2             0.0110  157.00
-NU2             0.0192  186.80
-RHO1            0.0127  220.40
+SSA             0.0262  193.90
 x 0 0
 x 0 0
-MN4             0.0188  213.00
-MS4             0.0132  26.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1050  142.00
 x 0 0
 x 0 0
 x 0 0
@@ -80851,24 +81032,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0002  277.69
+BET1            0.0002  97.29
+CHI1            0.0060  305.05
+H1              0.0040  132.12
+H2              0.0024  189.56
 x 0 0
+ETA2            0.0016  178.94
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0032  294.06
+MKS2            0.0056  181.22
 x 0 0
+EPS2            0.0023  202.83
+MO3             0.0288  234.14
 x 0 0
+TAU1            0.0358  147.58
 x 0 0
+MSK6            0.0012  209.16
+MSM             0.0004  284.97
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0542  159.61
+OP2             0.0070  244.26
 x 0 0
+PHI1            0.0204  236.12
 x 0 0
+PI1             0.0092  175.08
 x 0 0
+PSI1            0.0244  108.14
 x 0 0
 x 0 0
+SIG1            0.0034  201.63
+SK3             0.0048  344.46
 x 0 0
+SN4             0.0054  105.48
 x 0 0
+SO1             0.0040  118.08
+SO3             0.0180  288.16
+THE1            0.0208  272.79
 x 0 0
 x 0 0
 x 0 0
@@ -80882,38 +81087,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0003  176.26
 x 0 0
 x 0 0
 x 0 0
@@ -80981,52 +81155,65 @@ x 0 0
 # country: Iran
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4286
-# note: NP203 Part II Sekundaerhafen-Transfer von Bushehr, Iran (att 4286). fS=1.43 fN=1.23 dt=-120min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Jazireh-ye Khark (att 4282).
+# note: fS=1.00 fN=1.50 dt=-80min, skaliert gegen die
+# note: publizierten Pegel [2.0, 1.3, 1.1, 0.6] aus dem Gruppenkopf S.233.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.233 (Buch: Nakhilu).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_tidetables.txt ("Jazireh Ye Khark (Kharg Island), Iran") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 51.4670
 # !latitude: 27.8170
 Nakhilu, Iran
-+03:30 :Asia/Tehran
++00:00 :Asia/Tehran
 1.2000 meters
-J1              0.0213  268.13
-K1              0.4096  248.92
-K2              0.0531  209.24
-L2              0.0137  179.94
-M1              0.0187  229.51
-M2              0.4620  153.03
+J1              0.0221  230.06
+K1              0.4772  214.10
+K2              0.0209  149.10
+L2              0.0208  132.10
 x 0 0
-M4              0.0132  211.06
+M2              0.4240  111.03
+M3              0.0115  314.00
+M4              0.0081  326.18
+M6              0.0012  147.44
+M8              0.0001  20.07
+N2              0.0890  84.90
 x 0 0
+O1              0.3106  174.14
+OO1             0.0018  333.18
+P1              0.1431  205.30
+Q1              0.0577  158.14
 x 0 0
-N2              0.1001  126.12
+R2              0.0066  100.50
 x 0 0
-O1              0.2722  210.11
-OO1             0.0120  287.72
-P1              0.1361  245.98
-Q1              0.0534  193.20
+S2              0.0658  159.99
+S4              0.0019  288.48
 x 0 0
-R2              0.0014  207.12
+T2              0.0112  198.60
+LDA2            0.0054  91.49
+MU2             0.0049  133.56
+NU2             0.0187  98.43
+RHO1            0.0143  132.37
+MK3             0.0307  220.58
 x 0 0
-S2              0.1980  205.00
+MN4             0.0091  245.32
+MS4             0.0035  340.13
 x 0 0
+MF              0.0254  260.95
+MSF             0.0182  316.73
+MM              0.0128  330.92
 x 0 0
-T2              0.0096  202.88
-LDA2            0.0027  177.19
-MU2             0.0110  101.06
-NU2             0.0192  129.77
-RHO1            0.0107  193.46
+SSA             0.0262  193.79
 x 0 0
 x 0 0
-MN4             0.0188  98.15
-MS4             0.0132  268.03
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1050  141.92
 x 0 0
 x 0 0
 x 0 0
@@ -81040,24 +81227,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0001  277.69
+BET1            0.0001  97.29
+CHI1            0.0037  305.05
+H1              0.0025  132.12
+H2              0.0015  189.56
 x 0 0
+ETA2            0.0010  178.94
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0020  294.06
+MKS2            0.0040  142.47
 x 0 0
+EPS2            0.0016  166.26
+MO3             0.0180  234.14
 x 0 0
+TAU1            0.0224  147.58
 x 0 0
+MSK6            0.0007  209.16
+MSM             0.0003  284.97
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0339  159.61
+OP2             0.0044  244.26
 x 0 0
+PHI1            0.0128  236.12
 x 0 0
+PI1             0.0057  175.08
 x 0 0
+PSI1            0.0153  108.14
 x 0 0
 x 0 0
+SIG1            0.0021  201.63
+SK3             0.0030  344.46
 x 0 0
+SN4             0.0034  105.48
 x 0 0
+SO1             0.0025  118.08
+SO3             0.0112  288.16
+THE1            0.0130  272.79
 x 0 0
 x 0 0
 x 0 0
@@ -81071,38 +81282,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  100.42
 x 0 0
 x 0 0
 x 0 0
@@ -81552,52 +81732,56 @@ x 0 0
 # country: Iran
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4293
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4293). fS=0.53 fN=0.19 dt=-104min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Shatt al Arab Outer Bar, Iraq (att 4268).
+# note: fS=0.58 fN=0.18 dt=-670min, skaliert gegen die
+# note: publizierten Pegel [3.0, 2.4, 1.3, 0.4] aus dem Gruppenkopf S.233.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.233 (Buch: Jazireh-ye Qeys).
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
 # !longitude: 54.0170
 # !latitude: 26.5500
 Jazireh-ye Qeys, Iran
-+03:30 :Asia/Tehran
++03:00 :Asia/Tehran
 1.2000 meters
-J1              0.0091  297.79
-K1              0.1792  274.93
-K2              0.0714  325.76
-L2              0.0115  285.82
-M1              0.0083  251.87
-M2              0.3690  262.76
 x 0 0
-M4              0.0069  71.52
+K1              0.1897  127.04
+K2              0.0745  33.08
 x 0 0
 x 0 0
-N2              0.0798  239.70
-x 0 0
-O1              0.1150  228.83
-OO1             0.0051  321.03
-P1              0.0595  271.47
-Q1              0.0170  216.78
-x 0 0
-R2              0.0013  323.33
-x 0 0
-S2              0.2630  321.00
-x 0 0
-x 0 0
-T2              0.0076  318.67
-LDA2            0.0022  289.74
-MU2             0.0089  204.52
-NU2             0.0153  242.78
-RHO1            0.0044  209.05
-x 0 0
-x 0 0
-MN4             0.0027  50.47
-MS4             0.0054  138.76
+M2              0.3760  344.34
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  124.93
+N2              0.0714  150.68
+x 0 0
+O1              0.1138  91.30
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2760  34.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -82887,52 +83071,56 @@ x 0 0
 # country: Iran
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4302
-# note: NP203 Part II Sekundaerhafen-Transfer von Khowr-e Musa Bar, Iran (att 4302). fS=1.25 fN=1.63 dt=-132min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Shatt al Arab Outer Bar, Iraq (att 4268).
+# note: fS=1.23 fN=1.64 dt=-740min, skaliert gegen die
+# note: publizierten Pegel [3.0, 2.4, 1.3, 0.4] aus dem Gruppenkopf S.233.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.233 (Buch: Laft).
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 55.7330
 # !latitude: 26.8830
 Laft, Iran
-+03:30 :Asia/Tehran
++03:00 :Asia/Tehran
 2.5000 meters
-J1              0.0360  290.38
-K1              0.7122  267.78
-K2              0.0782  311.47
-L2              0.0371  271.79
-M1              0.0332  244.99
-M2              1.1940  248.99
 x 0 0
-M4              0.0717  43.99
+K1              0.7168  109.49
+K2              0.0663  357.99
 x 0 0
 x 0 0
-N2              0.2583  226.20
-x 0 0
-O1              0.4570  222.21
-OO1             0.0202  313.36
-P1              0.2364  264.37
-Q1              0.0678  210.41
-x 0 0
-R2              0.0041  309.06
-x 0 0
-S2              0.2880  306.75
-x 0 0
-x 0 0
-T2              0.0247  304.44
-LDA2            0.0086  275.75
-MU2             0.0289  191.24
-NU2             0.0495  229.23
-RHO1            0.0173  202.65
-x 0 0
-x 0 0
-MN4             0.0283  23.19
-MS4             0.0566  110.74
+M2              1.1454  310.53
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1360  124.91
+N2              0.2176  117.50
+x 0 0
+O1              0.4301  75.04
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2454  359.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -97747,52 +97935,65 @@ x 0 0
 # country: India
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer
 # att_number: 4385a
-# note: NP203 Part II Sekundaerhafen-Transfer von Mumbai (Colaba), Maharashtra, India (att 4385a). fS=0.74 fN=0.60 dt=+0min. Zeit-/Hoehendiff. aus ATT Vol.3 (2015).
-# date_imported: 20260618
+# note: NP203 Part II Sekundaerhafen-Transfer von Karachi (Entrance) (att 4322).
+# note: fS=0.50 fN=0.33 dt=+0min, skaliert gegen die
+# note: publizierten Pegel [2.4, 2.3, 1.1, 0.4] aus dem Gruppenkopf S.235.
+# note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
+# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.235 (Buch: Mangalore).
+# note: Konstituenten des Bezugshafens aus utide/harmonics_utide_observations.txt ("Karachi, Pakistan") --
+# note: ATT druckt fuer Standardhaefen keine Konstanten. Wahl siehe np203_bezugshafen_konstanten.json.
+# date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
 # !longitude: 74.8333
 # !latitude: 12.8500
 Mangalore, Karnataka, India
-+05:30 :Asia/Calcutta
++00:00 :Asia/Calcutta
 1.0000 meters
-J1              0.0107  58.00
-K1              0.2837  56.00
-K2              0.1096  28.20
-L2              0.0285  3.00
-M1              0.0093  54.00
-M2              0.8520  345.00
+J1              0.0109  348.79
+K1              0.1670  337.66
+K2              0.0542  182.71
+L2              0.0090  163.97
 x 0 0
-M4              0.0169  332.00
+M2              0.3610  157.97
+M3              0.0024  132.51
+M4              0.0024  102.99
+M6              0.0028  121.40
+M8              0.0003  333.37
+N2              0.0865  141.94
 x 0 0
+O1              0.0842  339.20
+OO1             0.0073  14.89
+P1              0.0496  335.04
+Q1              0.0175  341.63
 x 0 0
-N2              0.1993  327.00
+R2              0.0019  191.98
 x 0 0
-O1              0.1342  52.00
-OO1             0.0060  60.00
-P1              0.0941  55.70
-Q1              0.0274  58.00
+S2              0.1971  187.23
+S4              0.0005  106.84
 x 0 0
-R2              0.0028  26.60
+T2              0.0093  195.37
+LDA2            0.0022  145.65
+MU2             0.0099  122.30
+NU2             0.0172  145.80
+RHO1            0.0032  340.26
+MK3             0.0025  195.76
 x 0 0
-S2              0.4040  25.00
+MN4             0.0019  96.52
+MS4             0.0018  80.93
 x 0 0
+MF              0.0045  354.51
+MSF             0.0055  208.19
+MM              0.0056  40.49
 x 0 0
-T2              0.0194  23.40
-LDA2            0.0060  3.60
-MU2             0.0201  305.00
-NU2             0.0389  329.40
-RHO1            0.0053  50.30
+SSA             0.0412  126.91
 x 0 0
 x 0 0
-MN4             0.0034  296.00
-MS4             0.0154  43.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0430  33.00
 x 0 0
 x 0 0
 x 0 0
@@ -97806,55 +98007,48 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0006  336.07
+BET1            0.0006  329.25
+CHI1            0.0013  343.73
+H1              0.0015  248.75
+H2              0.0010  248.00
 x 0 0
+ETA2            0.0019  194.54
 x 0 0
+UPS1            0.0012  34.40
 x 0 0
 x 0 0
+MK4             0.0021  83.20
+MKS2            0.0009  208.98
 x 0 0
+EPS2            0.0019  124.79
+MO3             0.0031  170.11
 x 0 0
+TAU1            0.0014  341.72
 x 0 0
+MSK6            0.0012  211.32
+MSM             0.0024  24.38
+MSN2            0.0014  304.59
 x 0 0
 x 0 0
+NO1             0.0075  337.02
 x 0 0
+OQ2             0.0010  67.20
+PHI1            0.0022  344.05
 x 0 0
+PI1             0.0020  329.75
 x 0 0
+PSI1            0.0012  321.21
 x 0 0
 x 0 0
+SIG1            0.0031  341.11
+SK3             0.0055  291.80
+SK4             0.0007  124.99
+SN4             0.0007  132.16
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+SO1             0.0017  25.91
+SO3             0.0027  192.43
+THE1            0.0021  341.64
 x 0 0
 x 0 0
 x 0 0

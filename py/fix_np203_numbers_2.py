@@ -50,7 +50,29 @@ RENUM = {
     '4185': ('4184',  'Quryat'),
     '4185a': ('4185', 'Bandar Khayran'),
     '4186': ('4185a', 'Bandar Jissah'),
+    # 20260730 beim Bezugshaefen-Audit gefunden
+    '3851': ('3852', 'Port Simuco'),        # S.224: 3852 Port Simuco 13 59 / 40 36
+    '4148': ('4147', "Ras Mujamila"),       # S.228: 4147 Ras Mujamila 14 36 / 42 54
 }
+
+
+# Umbenennungen von Oliver, die den Namensvergleich sonst nicht passieren.
+# Jede hier gegen den Scan geprueft.
+UMBENANNT = {'3851'}
+
+
+def _passt(datei_name, buch_name):
+    """Traegt die Nummer noch den Ort, den das Buch dort fuehrt?
+
+    Praefixvergleich reicht nicht: "Bandar Jissah" und "Bandar Khayran" teilen
+    sich die ersten sechs Zeichen und sind doch verschiedene Orte.
+    """
+    from difflib import SequenceMatcher
+    n = lambda s: re.sub(r'[^a-z]', '', s.split(',')[0].lower())
+    a, b = n(datei_name), n(buch_name)
+    if not a or not b:
+        return False
+    return SequenceMatcher(None, a, b).ratio() >= 0.8 or b in a or a in b
 
 
 def main():
@@ -74,10 +96,16 @@ def main():
     for old, (new, book) in sorted(RENUM.items(), key=lambda kv: -blocks.get(kv[0], (0,))[0]):
         if old not in blocks:
             print(f'{old:6s} nicht in der Datei -- uebersprungen'); continue
-        if new in blocks and new not in RENUM:
+        ai, name = blocks[old]
+        # Schon erledigt? Dann traegt die alte Nummer inzwischen einen anderen Ort.
+        # Ohne diese Pruefung wuerde ein zweiter Lauf die Kette erneut verschieben.
+        if old not in UMBENANNT and not _passt(name, book):
+            print(f'{old:6s} -> {new:6s}  uebersprungen: {old} ist inzwischen "{name[:34]}", '
+                  f'nicht "{book}" -- vermutlich bereits korrigiert')
+            continue
+        if new in blocks:
             print(f'{old:6s} -> {new}: Ziel ist bereits belegt ({blocks[new][1]}) -- ABBRUCH')
             return
-        ai, name = blocks[old]
         print(f'{old:6s} -> {new:6s}  {name[:44]:44s} Buch: {book}')
         if write:
             L[ai] = f'# att_number: {new}'

@@ -23,6 +23,18 @@ Zwei Fehler des Imports von 2026-06 werden hier behoben:
    Bei Antsiranana sind das 1.80 m statt 1.74 m Spring- und 0.70 m statt 0.62 m
    Nipphub. Der Nippfaktor lag dadurch systematisch 13 % zu hoch.
 
+3. Zonenversatz in der Zeitdifferenz. Die Differenzen in Part II werden auf die
+   Zeit des Standardhafens IN DESSEN ZONE addiert und ergeben die Zeit des
+   Sekundaerhafens in DESSEN Zone (die "Zone -0xx00"-Zwischenueberschrift). Sie
+   enthalten also den Zonensprung mit. Fuer die Phasenverschiebung brauchen wir
+   aber die echte Verzoegerung in Weltzeit:
+
+       dt_UT = dt_Buch + (Zone_Bezug - Zone_Sekundaer)
+
+   Bei Madagaskar faellt das weg (beide -0300), deshalb ist es bisher nicht
+   aufgefallen. Kerguelen unter Durban sind aber 3 h Unterschied -- in M2 sind
+   das 87 Grad Phasenfehler.
+
 Ausserdem: Phantomstationen loeschen (Nummern, die es im Buch nicht gibt) und
 Koordinaten aus dem Scan richtigstellen.
 
@@ -40,6 +52,7 @@ from datetime import datetime
 TXT = '/home/oliver/weather/harmonics/att/harmonics_att_np203_secondary.txt'
 STD = '/home/oliver/weather/harmonics/att/harmonics_att_np203.txt'
 GRUPPEN = '/home/oliver/weather/harmonics/help/np203_part2_bezugshaefen.json'
+BEZUG = '/home/oliver/weather/harmonics/help/np203_bezugshafen_konstanten.json'
 HARM = '/home/oliver/weather/harmonics'
 
 SPEED = {
@@ -64,9 +77,55 @@ def dm(g, m):
 
 
 # ---------------------------------------------------------------- Buchdaten
-# ATT NP203 Part II S.224, am 20260730 aus dem Scan gelesen.
-# att: (Name im Buch, lat, lon, tMHW, tMLW, (dMHWS,dMHWN,dMLWN,dMLWS), ML)
+# ATT NP203 Part II, aus den Scans gelesen.
+# att: (Name im Buch, lat, lon, tMHW, tMLW, (dMHWS,dMHWN,dMLWN,dMLWS), ML[, Zone])
 # Zeiten in Minuten, None = Kreis-Symbol (no data). Suedbreite negativ.
+# Zone = Stunden oestlich (ATT "Zone -0300" -> +3.0); fehlt sie, gilt ZONE_SEITE.
+#
+# Zone des jeweiligen Standardhafens, Stunden oestlich. Die Zeitdifferenzen in
+# Part II werden auf seine Ortszeit addiert, deshalb muss sie bekannt sein.
+ZONE_STD = {
+    '3782': 2.0,    # Cape Town
+    '3800': 2.0,    # Durban
+    '3823': 2.0,    # Beira
+    '3850': 2.0,    # Nacala
+    '3881': 3.0,    # Mahajanga
+    '3932': 3.0,    # Toamasina
+    '3948': 3.0,    # Antsiranana
+    '3967': 4.0,    # Port Victoria (Seychellen)
+    '3985': 3.0,    # Mtwara
+    '4001': 3.0,    # Dar es Salaam
+    '4017': 3.0,    # Kilindini (Mombasa)
+    '4112': 2.0,    # Suez
+    '4133': 3.0,    # Rabigh
+    '4155': 3.0,    # Aden
+    '4168': 4.0,    # Salalah
+    '4186a': 4.0,   # Port Sultan Qaboos
+    '4207': 4.0,    # Jebel Ali
+    '4210': 4.0,    # Mina Zayid
+    '4236': 3.0,    # Mesaieed
+    '4252': 3.0,    # Mina Salman
+    '4262': 3.0,    # Mina Al Ahmadi
+    '4268': 3.0,    # Shatt al Arab Outer Bar (Irak)
+    '4277': 3.5,    # Khowr-e Musa Bar (Iran)
+    '4282': 3.5,    # Jazireh-ye Khark
+    '4283': 3.5,    # Bushehr
+    '4303': 3.5,    # Bandar-e Shahid Rajai
+    '4322': 5.0,    # Karachi
+    '4335': 5.5,    # Okha
+    '4346': 5.5,    # Bhavnagar
+    '4359': 5.5,    # Mumbai
+    '4393': 5.5,    # Kochi
+    '4428': 5.5,    # Colombo
+    '4437': 5.5,    # Trincomalee
+    '4452': 5.5,    # Chennai
+    '4481': 5.5,    # Sagar Roads
+    '4539': 6.5,    # Bassein River Entrance (Myanmar)
+}
+
+# Vorherrschende Zone je Part-II-Seite (Zwischenueberschrift "Zone -0xx00").
+ZONE_SEITE = {222: 2.0, 223: 2.0, 224: 3.0, 225: 4.0, 226: 3.0,
+              228: 3.0, 229: 4.0, 233: 3.5, 235: 5.5}
 S224 = {
  '3864': ('Baie Ambavanibe',    -dm(12, 4), dm(49, 10),   42,   23, (1.2, 0.7, 0.6, 0.4), 1.71),
  '3865': ('Baie du Courrier',   -dm(12, 11), dm(49, 8),    38,   30, (0.9, 0.4, 0.4, 0.1), 1.80),
@@ -117,7 +176,64 @@ S224 = {
  '3946': ('Baie de Rigny',      -dm(12, 25), dm(49, 32),    6, None, (0.1, -0.1, -0.1, -0.1), 1.30),
 }
 
-BUCH = {224: S224}
+# ATT NP203 Part II S.222/223/225/226/228/229/233/235, am 20260801 gelesen.
+# Nur die Zeilen, deren Bezugshafen der alte Import verwechselt hatte.
+S222 = {
+ '2004': ("Baie de l'Oiseau",   -dm(48, 41), dm(69,  2), 1050, None, (-1.0, -0.8, None, None), 0.6, 5.0),
+ '3791': ('Plettenberg Bay',    -dm(34,  3), dm(23, 23),    2, None, (-0.1,  0.0, None, None), 1.1),
+ '3792': ('Cape St. Francis',   -dm(34, 10), dm(24, 52),    2, None, (-0.1,  0.0, None, None), 1.1),
+}
+S223 = {
+ '3797': ("Port St. John's",    -dm(31, 37), dm(29, 33),   -2, None, (-0.1,  0.0, None, None), 1.1),
+ '3802': ('Kosi River Entrance', -dm(26, 53), dm(32, 54),   0, None, ( 0.0,  0.0, None, None), 1.1),
+ '3806': ('Limpopo River Bar',  -dm(25, 12), dm(33, 31),  -32,  -32, (-4.9, -3.2, -2.0, -0.4), 1.0),
+}
+S224b = {
+ '3852': ('Port Simuco',        -dm(13, 59), dm(40, 36),  -25, None, ( 0.3,  0.3, None, None), 2.2, 2.0),
+}
+S225 = {
+ '3951': ('St. Leu',            -dm(21,  9), dm(55, 17), -190, -200, (-0.9, -0.7, -0.4, -0.3), 0.51),
+ '3952': ('St. Pierre',         -dm(21, 20), dm(55, 29), -235, -245, (-0.9, -0.7, -0.4, -0.3), 0.50),
+ '3957': ('Vieux Grand Port',   -dm(20, 22), dm(57, 43), -195, None, (-0.9, -0.6, None, None), 0.5),
+ '3960': ('Cargados Carajos',   -dm(15, 41), dm(59, 30), -110, None, (-0.6, -0.4, None, None), 0.6),
+ '3963': ('Ile aux Vaches',     -dm( 3, 43), dm(55, 13),   15,    5, (-0.3, -0.3, -0.2, -0.2), 0.82),
+ '3965': ('Baie Curieuse',      -dm( 4, 17), dm(55, 43),    5,   -5, (-0.2, -0.2, -0.1, -0.1), 0.90),
+}
+S226 = {
+ '3984': ('Ruvuma Bay',         -dm(10, 24), dm(40, 27),   10, None, ( 0.1, -0.1, None, None), 1.8),
+ '3986': ('Lindi',              -dm(10,  0), dm(39, 43),   -5,    5, (-0.1, -0.1, -0.2, -0.1), 1.9),
+ '3988': ('Kiswere Haven',      -dm( 9, 25), dm(39, 38),  -10,    0, ( 0.1,  0.1, -0.1, -0.1), 2.0),
+ '3990': ('Kilwa Masoko',       -dm( 8, 54), dm(39, 30),  -10,    0, ( 0.0,  0.0, -0.1, -0.1), 2.0),
+ '3996': ('Salale',             -dm( 7, 51), dm(39, 20),   15, None, ( 0.4,  0.2, None, None), 2.1),
+ '3997': ('Batja',              -dm( 7, 56), dm(39, 19),  135, None, (-1.2, None, None, None), None),
+ '3998': ('Usimbe',             -dm( 8,  1), dm(38, 18),  195, None, (-2.7, None, None, None), None),
+}
+S228 = {
+ '4138': ('Sanak Island',        dm(19, 43), dm(40, 38),  130, None, (-1.2, -0.9, None, None), 0.5),
+ '4140': ('Hadarah Island',      dm(18, 26), dm(41, 13),  145, None, (-1.1, -0.9, None, None), 0.5),
+ '4144': ('Tiqfash',             dm(15, 42), dm(42, 30),  140, None, (-0.7, -0.6, None, None), 0.8),
+ '4147': ('Ras Mujamila',        dm(14, 36), dm(42, 54),  120, None, (-0.9, -0.7, None, None), 0.6),
+}
+S229 = {
+ '4170a': ('Ash Shuwaymiyah',    dm(17, 49), dm(55, 27),  -11,  -12, (-0.7, -0.7, -0.4, -0.3), 1.15),
+ '4172': ('Hamr an Nafur',       dm(19, 48), dm(57, 49),   10, None, ( 0.0,  0.0, None, None), 1.8),
+ '4174': ('Ghubbat Hashish',     dm(20, 28), dm(58, 10),   30, None, ( 0.0, -0.1, None, None), 1.8),
+ '4178': ('Ras Sheiblah',        dm(20, 58), dm(58, 48),   30, None, ( 0.0, -0.1, None, None), 1.8),
+ '4180': ('Ras al Hadd',         dm(22, 32), dm(59, 48),   10, None, (-0.3, -0.3, None, None), 1.6),
+}
+S233 = {
+ '4284': ('Bandar-e Ameri',      dm(28, 30), dm(51,  5), None, None, (-0.2,  0.0, -0.1, -0.1), 1.13),
+ '4285b': ('Bordekhun',          dm(28,  0), dm(51, 23), None, None, (-0.1,  0.2, -0.3, -0.1), 1.17),
+ '4286': ('Nakhilu',             dm(27, 49), dm(51, 28),  -80, None, ( 0.0,  0.1, None, None), 1.2),
+ '4293': ('Jazireh-ye Qeys',     dm(26, 33), dm(54,  1), -640, None, (-1.1, -0.9, None, None), 1.2),
+ '4302': ('Laft',                dm(26, 56), dm(55, 44), -710, None, ( 1.1,  1.0,  0.3,  0.5), 2.5),
+}
+S235 = {
+ '4385a': ('Mangalore',          dm(12, 51), dm(74, 50), None, None, (-1.0, -1.0, -0.2,  0.0), 1.0),
+}
+
+BUCH = {222: S222, 223: S223, 224: {**S224, **S224b}, 225: S225, 226: S226,
+        228: S228, 229: S229, 233: S233, 235: S235}
 
 # Nummern, die es im Buch nicht gibt -- Duplikate ihres Nachbarn.
 PHANTOM = {
@@ -157,8 +273,50 @@ def lies(path):
     return L, out
 
 
-def transfer(ref_con, pegel, h, t):
-    """Skalierung gegen die PUBLIZIERTEN Pegel des Bezugshafens."""
+def lies_extern():
+    """Bezugshaefen aus fremden Sammlungen holen -- att -> dict(name, con, mer, tz).
+
+    ATT druckt fuer Standardhaefen keine Konstanten (die haben Part I). Welche
+    Quelle je Bezugshafen gewaehlt wurde und warum, steht in BEZUG.
+    """
+    B = json.load(open(BEZUG))['bezug']
+    nach_datei = {}
+    for att, d in B.items():
+        nach_datei.setdefault(d['datei'], []).append((att, d['station']))
+
+    out = {}
+    for datei, wanted in nach_datei.items():
+        L = open(f'{HARM}/{datei}', encoding='iso-8859-1').read().split('\n')
+        gesucht = dict((n, a) for a, n in wanted)
+        for i, l in enumerate(L):
+            if not re.match(r'^[+-]\d\d:\d\d ', l) or not i:
+                continue
+            name = L[i - 1].strip()
+            if name not in gesucht:
+                continue
+            e, con = i + 2, {}
+            while e < len(L) and not L[e].startswith('#') and L[e].strip():
+                m = re.match(r'^([A-Z][A-Z0-9]*)\s+([\d.]+)\s+([\d.]+)$', L[e])
+                if m and float(m.group(2)) > 0:
+                    con[m.group(1)] = (float(m.group(2)), float(m.group(3)))
+                e += 1
+            att = gesucht.pop(name)
+            out[att] = dict(name=B[att]['name'], con=con, mer=l.split(' :')[0],
+                            tz=l.split(' :', 1)[1], quelle=datei, station=name)
+        for name, att in gesucht.items():
+            print(f'ACHTUNG: Bezug {att} "{name}" nicht in {datei} gefunden')
+    return out
+
+
+def transfer(ref_con, pegel, h, t, dz=0.0):
+    """Skalierung gegen die PUBLIZIERTEN Pegel des Bezugshafens.
+
+    dz = Zone_Bezug - Zone_Sekundaer in Stunden. Die Zeitdifferenzen des Buches
+    enthalten den Zonensprung; fuer die Phasen brauchen wir die Verzoegerung in
+    Weltzeit. Fehlt die Zeitdifferenz ganz (Kreis-Symbol), bleibt es bei dt=0 --
+    dann ist die Verzoegerung schlicht unbekannt, und auch die Zonenkorrektur
+    allein waere geraten.
+    """
     MHWS, MHWN, MLWN, MLWS = pegel
     SR, NR = MHWS - MLWS, MHWN - MLWN
     dMHWS, dMHWN, dMLWN, dMLWS = h
@@ -187,7 +345,7 @@ def transfer(ref_con, pegel, h, t):
     rS = S2n / S2 if S2 > 0 else fS
 
     v = [x for x in t if x is not None]
-    dt = (sum(v) / len(v) / 60.0) if v else 0.0
+    dt = (sum(v) / len(v) / 60.0 + dz) if v else 0.0
 
     out = {}
     for c, (a, g) in ref_con.items():
@@ -239,15 +397,20 @@ def main():
     L, SEC = lies(TXT)
     _, STDD = lies(STD)
     ORDER = order(L)
-    refs = {**STDD, **SEC}
-    ref_by_att = {a: r for a, r in refs.items()}
+    # Reihenfolge: eigene ATT-Dateien zuerst, externe Bezugshaefen ueberschreiben
+    # nichts -- sie fuellen nur die Luecken, die ATT gar nicht drucken kann.
+    ref_by_att = {**SEC, **STDD}
+    for att, r in lies_extern().items():
+        ref_by_att.setdefault(att, r)
 
     todo, geloescht = [], []
     print(f'{"att":7s} {"Station":34s} {"fS alt":>7s} {"fS neu":>7s} {"M2 alt":>7s} {"M2 neu":>7s}  Bezug')
     print('-' * 104)
 
     for seite, rows in sorted(BUCH.items()):
-        for att, (bname, lat, lon, tH, tL, h, ml) in sorted(rows.items(), key=lambda x: key(x[0])):
+        for att, row in sorted(rows.items(), key=lambda x: key(x[0])):
+            bname, lat, lon, tH, tL, h, ml = row[:7]
+            zone = row[7] if len(row) > 7 else ZONE_SEITE[seite]
             if att not in SEC:
                 print(f'{att:7s} -- nicht in der Datei --'); continue
             b = SEC[att]
@@ -259,7 +422,9 @@ def main():
             r = ref_by_att.get(g['ref'])
             if r is None:
                 print(f'{att:7s} {b["name"][:34]:34s} Bezug {g["ref"]} nicht gefunden'); continue
-            tr = transfer(r['con'], g['pegel'], h, (tH, tL))
+            if g['ref'] not in ZONE_STD:
+                print(f'{att:7s} {b["name"][:34]:34s} Zone des Bezugs {g["ref"]} unbekannt'); continue
+            tr = transfer(r['con'], g['pegel'], h, (tH, tL), ZONE_STD[g['ref']] - zone)
             if tr is None:
                 print(f'{att:7s} {b["name"][:34]:34s} keine Hoehendifferenz -- uebersprungen'); continue
             alt = b['con'].get('M2', (0, 0))[0]
@@ -321,6 +486,12 @@ def main():
             '# note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II '
             f'S.{seite} (Buch: {bname}).',
         ]
+        if r.get('quelle', '').endswith('.txt'):
+            head[j + 5:j + 5] = [
+                f'# note: Konstituenten des Bezugshafens aus {r["quelle"]} '
+                f'("{r["station"]}") --',
+                '# note: ATT druckt fuer Standardhaefen keine Konstanten. '
+                'Wahl siehe np203_bezugshafen_konstanten.json.']
         z0 = ml if ml is not None else b['z0']
         body = [b['name'], f'{r["mer"]} :{b["tz"]}', f'{z0:.4f} meters']
         for c in ORDER:

@@ -1,0 +1,46 @@
+{
+  "_zweck": "Woher die Konstituenten der NP203-Bezugshaefen kommen.",
+  "_hintergrund": [
+    "ADMIRALTY Tide Tables drucken harmonische Konstanten NUR fuer Haefen ohne",
+    "Tagesvorhersage. Standardhaefen bekommen Part I (fertige Vorhersagen) und",
+    "Table V (Pegel) -- ihre Konstanten stehen nirgends im Buch. Part III S.240-249",
+    "listet deshalb ausschliesslich Sekundaerhaefen, S.252/253 sind Part IIIa",
+    "(Stroemungen, in Knoten).",
+    "Fuer den Part-II-Transfer brauchen wir aber einen Konstantensatz des",
+    "Bezugshafens. Der kommt aus unseren anderen Sammlungen. Diese Datei haelt",
+    "fest, welcher -- damit die Wahl nachvollziehbar und wiederholbar ist."
+  ],
+  "_auswahlkriterium": [
+    "Springhub 2*(M2+S2) und Nipphub 2*|M2-S2| gegen die publizierten Pegel des",
+    "Gruppenkopfs (MHWS-MLWS bzw. MHWN-MLWN, siehe np203_part2_bezugshaefen.json).",
+    "Bei gleichem Fehler gewinnt der reichere Konstituentensatz.",
+    "Achtung: In stark tagesungleichen Haefen (Golf) ist dieses Mass nur ein",
+    "grober Filter -- dort liegen ohnehin alle Kandidaten dicht beieinander."
+  ],
+  "_stand": "20260801",
+  "bezug": {
+    "3782": {"name": "Cape Town", "datei": "utide/harmonics_utide_observations.txt", "station": "Cape Town, South Africa", "hub": [1.45, 0.56], "buch": [1.50, 0.60]},
+    "3800": {"name": "Durban", "datei": "utide/harmonics_utide_observations.txt", "station": "Durban, South Africa", "hub": [1.74, 0.49], "buch": [1.80, 0.50]},
+    "3823": {"name": "Beira", "datei": "utide/harmonics_utide_tidetables.txt", "station": "Beira, Mozambique", "hub": [5.62, 1.51], "buch": [5.70, 1.60]},
+    "3967": {"name": "Port Victoria", "datei": "ticon/harmonics_ticon4_worldwide.txt", "station": "Victoria, Seychelles", "hub": [1.18, 0.46], "buch": [1.10, 0.50]},
+    "4001": {"name": "Dar es Salaam", "datei": "utide/harmonics_utide_observations.txt", "station": "Dar es Salaam, Tanzania", "hub": [3.18, 1.06], "buch": [3.20, 1.00]},
+    "4155": {"name": "Aden", "datei": "ticon/harmonics_ticon4_worldwide.txt", "station": "Aden, Yemen", "hub": [1.40, 0.54], "buch": [1.50, 0.50]},
+    "4186a": {"name": "Port Sultan Qaboos", "datei": "utide/harmonics_utide_observations.txt", "station": "Muscat (Sultan Qaboos Port), Oman", "hub": [1.79, 0.79], "buch": [1.70, 0.80]},
+    "4207": {"name": "Jebel Ali", "datei": "utide/harmonics_utide_tidetables.txt", "station": "Mina Jebel Ali (Dubai), United Arab Emirates", "hub": [1.18, 0.53], "buch": [1.30, 0.50]},
+    "4252": {"name": "Mina Salman", "datei": "classic_original/harmonics-1997-05-25.txt", "station": "Mina Salman, Bahrain", "hub": [1.76, 0.89], "buch": [1.80, 0.90],
+             "warum": "ticon4 liegt 12 % zu niedrig (1.57/0.78); in classic/_mod ist der Hafen nicht enthalten"},
+    "4282": {"name": "Jazireh-ye Khark", "datei": "utide/harmonics_utide_tidetables.txt", "station": "Jazireh Ye Khark (Kharg Island), Iran", "hub": [0.98, 0.48], "buch": [1.40, 0.20],
+             "warum": "stark tagesungleich (K1 0.38, O1 0.25) -- das Hubmass greift hier nicht, alle Kandidaten sind identisch"},
+    "4322": {"name": "Karachi (Entrance)", "datei": "utide/harmonics_utide_observations.txt", "station": "Karachi, Pakistan", "hub": [2.23, 0.98], "buch": [2.00, 1.20]},
+    "4346": {"name": "Bhavnagar", "datei": "utide/harmonics_utide_tidetables.txt", "station": "Bhavnagar, Gujarat, India", "hub": [8.44, 4.54], "buch": [8.80, 4.80]},
+    "4359": {"name": "Mumbai (Bombay)", "datei": "classic/harmonics-1997-05-25_mod.txt", "station": "Mumbai (Colaba), Maharashtra, India", "hub": [3.41, 1.50], "buch": [3.60, 1.40],
+             "warum": "utide_observations und master_2026-05-20 fuehren M2=3.05 m -> Springhub 8.3 m statt 3.6 m; der Satz ist kaputt"},
+    "4393": {"name": "Kochi (Cochin)", "datei": "utide/harmonics_utide_observations.txt", "station": "Kochi (Willingdon Island), Kerala, India", "hub": [0.56, 0.25], "buch": [0.60, 0.20]},
+    "4428": {"name": "Colombo", "datei": "ticon/harmonics_ticon4_worldwide.txt", "station": "Colombo, Sri Lanka", "hub": [0.60, 0.11], "buch": [0.60, 0.20]},
+    "4437": {"name": "Trincomalee", "datei": "utide/harmonics_utide_tidetables.txt", "station": "Trincomalee, Sri Lanka (2)", "hub": [0.50, 0.22], "buch": [0.60, 0.20]},
+    "4452": {"name": "Chennai (Madras)", "datei": "classic/harmonics-1997-05-25_mod.txt", "station": "Chennai, Tamil Nadu, India", "hub": [0.94, 0.39], "buch": [1.00, 0.40],
+             "warum": "utide fuehrt M2=0.283 -> Springhub 0.80 m; das Buch sagt 1.00 m"},
+    "4539": {"name": "Bassein River Entrance", "datei": "utide/harmonics_utide_tidetables.txt", "station": "Thamihla Kyun (Bassein Estuary), Myanmar", "hub": [1.94, 0.71], "buch": [2.00, 0.70],
+             "warum": "die Muendung ist Thamihla Kyun (Diamond Island), nicht Pathein flussaufwaerts -- Pathein traefe 1.88/0.94"}
+  }
+}

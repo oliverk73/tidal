@@ -57,7 +57,10 @@ def jahresmax(name, tcd, jahr=2026):
 
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
-    tcd = args[0] if args else TCD
+    # Argument schlaegt HFILE_PATH schlaegt Vorgabe. Ohne die mittlere Stufe
+    # testet ein gesetztes HFILE_PATH stillschweigend die alte TCD aus binary/.
+    tcd = args[0] if args else os.environ.get('HFILE_PATH') or TCD
+    print(f'TCD: {tcd}\n')
     zeige_alle = '--all' in sys.argv
     HAT = json.load(open(HATJSON))['hat']
     NAME = stations(TXT)

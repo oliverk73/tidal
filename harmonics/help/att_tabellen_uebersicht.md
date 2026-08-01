@@ -70,7 +70,58 @@ Raten führt zwangsläufig in die Irre — der Kopf muss gelesen werden.
 
 Die vollständige Zuordnung aller 59 Gruppen samt publizierter Pegel steht in
 `harmonics/help/np203_part2_bezugshaefen.json`, geprüft wird sie mit
-`py/check_np203_bezug.py`.
+`py/check_np203_bezug.py`. Seit 2026-08-01 hängen alle 168 Transfer-Stationen
+am richtigen Bezugshafen.
+
+## Woher die Konstanten der Bezugshäfen kommen
+
+**ATT druckt für Standardhäfen keine harmonischen Konstanten.** Part III listet
+nur Häfen ohne Tagesvorhersage; die Standardhäfen bekommen Part I und Table V.
+Seite 252/253 von NP203 ist Part **IIIa** — Gezeitenströme in Knoten, keine
+Wasserstände.
+
+Für den Transfer brauchen wir trotzdem einen Konstantensatz des Bezugshafens.
+18 von ihnen kommen deshalb aus unseren anderen Sammlungen; welcher und warum,
+steht in `harmonics/help/np203_bezugshafen_konstanten.json`. Ausgewählt wird
+nach Spring- und Nipphub gegen die publizierten Pegel des Gruppenkopfs. Zwei
+Kandidaten fielen dabei als fehlerhaft auf:
+
+| Hafen | Quelle | Springhub | Buch |
+|---|---|---:|---:|
+| Mumbai (Colaba) | `utide_observations`, `master_2026-05-20` | 8.29 m | 3.60 m |
+| Chennai | `utide_observations`, `master_2026-05-20` | 0.80 m | 1.00 m |
+
+Bei Mumbai steht dort M2 = 3.05 m statt 1.23 m. Für beide nehmen wir Classic-1997.
+
+Ebenfalls gefunden: **4539 „Bassein River Entrance"** ist nicht Pathein
+flussaufwärts, sondern Thamihla Kyun (Diamond Island) an der Mündung — 1.94/0.71 m
+gegen 2.00/0.70 m im Buch, Pathein träfe 1.88/0.94 m.
+
+## Die Zeitdifferenz enthält den Zonensprung
+
+Die Zeitdifferenzen in Part II werden auf die Zeit des Standardhafens **in dessen
+Zone** addiert und ergeben die Zeit des Sekundärhafens **in dessen** Zone (die
+Zwischenüberschrift `Zone -0xx00`). Sie enthalten den Zonenversatz also mit. Für
+die Phasenverschiebung braucht man aber die Verzögerung in Weltzeit:
+
+```
+dt_UT = dt_Buch + (Zone_Bezug - Zone_Sekundär)
+```
+
+Bei Madagaskar fällt das weg (beides −0300), deshalb fiel es lange nicht auf.
+Kerguelen unter Durban sind 3 h Unterschied — in M2 sind das 87° Phasenfehler.
+
+Nachgeprüft an Stationen, die **beides** haben, Part-III-Messwerte und
+Part-II-Differenzen (Phasen dafür auf Weltzeit umrechnen, sonst vergleicht man
+über verschiedene Meridiane):
+
+| Gruppe | dz | Fehler g(M2) ohne Korrektur | mit Korrektur |
+|---|---:|---:|---:|
+| Ägypten unter Suez (Kontrolle) | 0 h | 0.1–1.6° | 0.1–1.6° |
+| Saudi-Arabien unter Suez | −1 h | 27.6–29.0° | 0.0–1.4° |
+
+Die Zone jedes Standardhafens steht als `ZONE_STD` in
+`py/rebuild_np203_transfer.py`, die je Seite vorherrschende als `ZONE_SEITE`.
 
 ## Warum Table V Part 2 gebraucht wird
 
@@ -86,9 +137,25 @@ Die HAT-Werte aller NP203-Sekundärhäfen stehen transkribiert in
 `harmonics/help/np203_table5_part2_hat.json`; `py/hat_test_np203.py` prüft damit
 die ganze Datei auf einen Rutsch (Toleranz +0.30 m nach oben, −1.00 m nach unten).
 
-Stand 2026-07-29 über 441 Stationen: 38 auffällig, davon 36 noch aus dem
-Part-II-Transfer. Vor dem Part-III-Import derselben Datei waren es 69 — der
-Import hat 31 Stationen geradegerückt.
+Verlauf über dieselbe Datei: **69** auffällig vor dem Part-III-Import, **38**
+danach, **22** nach der Neuableitung Madagaskars, **13** seit dem 2026-08-01,
+als alle Transfers auf den richtigen Bezugshafen und die Zonenkorrektur
+umgestellt waren (443 geprüfte Stationen).
+
+Von den verbleibenden 13 sind mehrere **Widersprüche im Buch selbst**, keine
+Fehler bei uns. Beispiele, jeweils gegen den Scan geprüft:
+
+| att | Station | HAT im Buch | aus den Part-II-Differenzen |
+|---|---|---:|---:|
+| 3977 | Assomption Island | 4.6 m | MHWS 3.0 m → HAT ≈ 3.4 m |
+| 4174 | Ghubbat Hashish | 4.0 m | MHWS 2.6 m, Nachbarn 2.9–3.1 m |
+| 4178 | Ras Sheiblah | 4.0 m | dito |
+
+Beide Oman-Zeilen tragen im Buch `dx` (Differenzen approximativ, ML abgeleitet).
+
+**Achtung beim Aufruf:** `HFILE_PATH` allein genügt nicht — das Skript setzt die
+Variable für `tide` selbst. Die zu prüfende TCD als Argument übergeben, sonst
+wird stillschweigend die alte aus `binary/` getestet.
 
 **Nicht** geeignet ist die Summe aller Amplituden plus Z0: Sie ist eine obere
 Schranke, die nie erreicht wird, und meldet Fehlalarme (Suhar schien 0.5 m zu
