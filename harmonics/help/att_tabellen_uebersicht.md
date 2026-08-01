@@ -355,8 +355,30 @@ stimmt das ML aus Part II **exakt** mit dem aus Part III überein. Alle 21 neuen
 Stationen bestehen den HAT-Test (schlechtester Wert −0.95 m bei Hazira, dessen
 Zeitdifferenz das Buch nicht angibt).
 
-Werkzeug: `py/add_np203_fehlende.py`. Seiten 231, 232 und 238 sind noch nicht
-abgeglichen.
+Werkzeug: `py/add_np203_fehlende.py`.
+
+**Nachtrag 2026-08-01, Seiten 231/232/238 — damit ist NP203 Part II vollständig
+abgeglichen.** Seite 238 ist eine reine *Notes*-Seite ohne Stationen (sie löst
+das `★` auf). Auf 231 und 232 stehen 92 Buchnummern, neun davon fehlen bei uns:
+
+| att | | warum nicht angelegt |
+|---|---|---|
+| 4252 | Mina Salman | Standardhafen, liegt in classic/ticon4 |
+| 4254 | Ras Tannurah | Standardhafen, liegt in utide |
+| 4261 | Mina az Zawr | Standardhafen, liegt in classic |
+| 4276A | **Abadan** | Standardhafen — **in keiner Sammlung vorhanden** |
+| 4272–4276 | Qarmat Ali Bar, Nahr Umr, Shafi Creek, Odin Point, Qurna | Buch gibt weder Höhendifferenz noch ML (Shatt al Arab flussaufwärts) |
+
+Abadan ist damit die einzige echte Lücke im ganzen Band, die sich nicht aus
+den vorhandenen Quellen schließen lässt.
+
+Die `★`-Notizen auf S.238 erklären nebenbei zwei hartnäckige HAT-Ausreißer:
+Im **River Hugli** (4484–4488) läuft bei Springtiden eine **Flutwelle** auf, die
+bei Kidderpore 1.2 m und bei Chinsura 1.5 m erreicht; in der **Cambay Channel /
+Mahi River** (4348) ebenso. Eine Bore ist stark nichtlinear und von der
+harmonischen Methode grundsätzlich nicht darstellbar — dass 4488 Kolkata
+(−1.11 m) und 4352 Bharuch (−2.52 m) unter HAT bleiben, ist damit keine
+Schwäche unserer Ableitung, sondern eine Grenze des Verfahrens.
 
 ## Reihenfolge beim Einlesen eines Bandes
 
