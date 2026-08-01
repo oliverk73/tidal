@@ -1,0 +1,806 @@
+{
+  "_zweck": "ATT NP203 Table V Part 1 -- Gezeitenpegel der Standardhaefen, S.xxx-xxxi.",
+  "_stand": "20260801",
+  "_hinweis": [
+    "Alle Werte in Metern ueber Chart Datum (= Null der Vorhersagen).",
+    "Die Tabelle hat zwei Teile: S.xxx fuehrt die ueberwiegend halbtaegigen",
+    "Haefen mit MHWS/MHWN/MLWN/MLWS, S.xxxi die tagesungleichen mit",
+    "MHHW/MLHW/MHLW/MLLW. Beide sind hier unter 'typ' unterschieden;",
+    "die Reihenfolge der vier Pegel ist jeweils hoch-spring, hoch-nipp,",
+    "niedrig-nipp, niedrig-spring bzw. MHHW, MLHW, MHLW, MLLW.",
+    "'null' steht fuer das Kreis-Symbol (no data).",
+    "HAT und LAT ermittelt das UKHO durch Inspektion ueber mehrere Jahre,",
+    "idealerweise den vollen Metonischen Zyklus von 19 Jahren."
+  ],
+  "_felder": [
+    "att",
+    "LAT",
+    "pegel[4]",
+    "MSL",
+    "HAT"
+  ],
+  "halbtaegig": {
+    "Ad Dammam (K.A.A.P.)": {
+      "att": "4253f",
+      "lat": 0.1,
+      "pegel": [
+        2.3,
+        1.9,
+        1.0,
+        0.6
+      ],
+      "msl": 1.4,
+      "hat": 2.7
+    },
+    "Cape Town": {
+      "att": "3782",
+      "lat": 0.0,
+      "pegel": [
+        1.7,
+        1.3,
+        0.7,
+        0.2
+      ],
+      "msl": 1.0,
+      "hat": 2.0
+    },
+    "Durban": {
+      "att": "3800",
+      "lat": 0.0,
+      "pegel": [
+        2.0,
+        1.4,
+        0.9,
+        0.2
+      ],
+      "msl": 1.1,
+      "hat": 2.3
+    },
+    "Richards Bay": {
+      "att": "3801",
+      "lat": 0.0,
+      "pegel": [
+        2.1,
+        1.5,
+        1.0,
+        0.3
+      ],
+      "msl": 1.2,
+      "hat": 2.5
+    },
+    "East London": {
+      "att": "3795",
+      "lat": 0.0,
+      "pegel": [
+        1.8,
+        1.2,
+        0.8,
+        0.2
+      ],
+      "msl": 1.0,
+      "hat": 2.1
+    },
+    "Mossel Bay": {
+      "att": "3789",
+      "lat": 0.0,
+      "pegel": [
+        2.1,
+        1.5,
+        0.9,
+        0.3
+      ],
+      "msl": 1.2,
+      "hat": 2.4
+    },
+    "Port Elizabeth": {
+      "att": "3793",
+      "lat": 0.0,
+      "pegel": [
+        1.9,
+        1.3,
+        0.8,
+        0.2
+      ],
+      "msl": 1.0,
+      "hat": 2.1
+    },
+    "Beira": {
+      "att": "3823",
+      "lat": 0.2,
+      "pegel": [
+        6.5,
+        4.4,
+        2.8,
+        0.8
+      ],
+      "msl": 3.6,
+      "hat": 7.3
+    },
+    "Maputo": {
+      "att": "3804",
+      "lat": 0.1,
+      "pegel": [
+        3.5,
+        2.4,
+        1.6,
+        0.5
+      ],
+      "msl": 2.0,
+      "hat": 3.9
+    },
+    "Mtwara Bay": {
+      "att": "3985",
+      "lat": 0.0,
+      "pegel": [
+        3.6,
+        2.6,
+        1.4,
+        0.4
+      ],
+      "msl": 2.0,
+      "hat": 4.1
+    },
+    "Nacala": {
+      "att": "3850",
+      "lat": 0.3,
+      "pegel": [
+        3.9,
+        2.8,
+        1.7,
+        0.6
+      ],
+      "msl": 2.2,
+      "hat": 4.3
+    },
+    "Pemba": {
+      "att": "3855",
+      "lat": 0.1,
+      "pegel": [
+        4.1,
+        2.8,
+        1.7,
+        0.5
+      ],
+      "msl": 2.2,
+      "hat": 4.5
+    },
+    "Antsiranana": {
+      "att": "3948",
+      "lat": 0.2,
+      "pegel": [
+        2.3,
+        1.8,
+        1.1,
+        0.5
+      ],
+      "msl": 1.4,
+      "hat": 2.7
+    },
+    "Port Victoria": {
+      "att": "3967",
+      "lat": 0.2,
+      "pegel": [
+        1.6,
+        1.3,
+        0.8,
+        0.5
+      ],
+      "msl": 1.1,
+      "hat": 2.1
+    },
+    "Dar Es Salaam": {
+      "att": "4001",
+      "lat": 0.0,
+      "pegel": [
+        3.6,
+        2.5,
+        1.5,
+        0.4
+      ],
+      "msl": 2.0,
+      "hat": 4.3
+    },
+    "Kilindini": {
+      "att": "4017",
+      "lat": -0.1,
+      "pegel": [
+        3.5,
+        2.4,
+        1.3,
+        0.3
+      ],
+      "msl": 1.9,
+      "hat": 4.1
+    },
+    "Suez (As Suways)": {
+      "att": "4112",
+      "lat": -0.1,
+      "pegel": [
+        1.9,
+        1.6,
+        0.7,
+        0.4
+      ],
+      "msl": 1.1,
+      "hat": 2.2
+    },
+    "Rabigh": {
+      "att": "4133",
+      "lat": 0.3,
+      "pegel": [
+        1.0,
+        0.9,
+        0.7,
+        0.6
+      ],
+      "msl": 0.8,
+      "hat": 1.3
+    },
+    "Mina Salman": {
+      "att": "4252",
+      "lat": 0.1,
+      "pegel": [
+        2.4,
+        1.9,
+        1.0,
+        0.6
+      ],
+      "msl": 1.5,
+      "hat": 2.8
+    },
+    "Ras Tannurah": {
+      "att": "4254",
+      "lat": 0.0,
+      "pegel": [
+        2.1,
+        1.6,
+        0.9,
+        0.4
+      ],
+      "msl": 1.2,
+      "hat": 2.5
+    },
+    "Bandar-e Shahid Rajai": {
+      "att": "4303",
+      "lat": -0.4,
+      "pegel": [
+        3.7,
+        2.9,
+        1.5,
+        0.6
+      ],
+      "msl": 2.2,
+      "hat": 4.2
+    },
+    "Sultanpur": {
+      "att": "4344",
+      "lat": 0.0,
+      "pegel": [
+        6.9,
+        5.4,
+        2.8,
+        1.0
+      ],
+      "msl": 4.1,
+      "hat": 7.8
+    },
+    "Bhavnagar": {
+      "att": "4346",
+      "lat": 0.6,
+      "pegel": [
+        10.2,
+        8.3,
+        3.5,
+        1.4
+      ],
+      "msl": 6.1,
+      "hat": 12.3
+    },
+    "Hazira (Tapi River)": {
+      "att": "4354",
+      "lat": 0.0,
+      "pegel": [
+        4.1,
+        3.3,
+        1.3,
+        0.4
+      ],
+      "msl": 2.2,
+      "hat": 6.0
+    },
+    "Mumbai (Bombay)": {
+      "att": "4359",
+      "lat": -0.3,
+      "pegel": [
+        4.4,
+        3.3,
+        1.9,
+        0.8
+      ],
+      "msl": 2.5,
+      "hat": 5.1
+    },
+    "Colombo": {
+      "att": "4428",
+      "lat": -0.1,
+      "pegel": [
+        0.7,
+        0.5,
+        0.3,
+        0.1
+      ],
+      "msl": 0.4,
+      "hat": 0.9
+    },
+    "Mahajanga": {
+      "att": "3881",
+      "lat": 0.6,
+      "pegel": [
+        4.9,
+        3.6,
+        2.4,
+        1.1
+      ],
+      "msl": 2.9,
+      "hat": 5.4
+    },
+    "Trincomalee": {
+      "att": "4437",
+      "lat": 0.0,
+      "pegel": [
+        0.7,
+        0.5,
+        0.3,
+        0.1
+      ],
+      "msl": 0.4,
+      "hat": 0.9
+    },
+    "Chennai (Madras)": {
+      "att": "4452",
+      "lat": -0.1,
+      "pegel": [
+        1.1,
+        0.8,
+        0.4,
+        0.1
+      ],
+      "msl": 0.6,
+      "hat": 1.5
+    },
+    "The Sandheads": {
+      "att": "4480",
+      "lat": null,
+      "pegel": [
+        3.4,
+        2.4,
+        null,
+        null
+      ],
+      "msl": null,
+      "hat": 4.0
+    },
+    "Sagar Roads (Hugli River)": {
+      "att": "4481",
+      "lat": 0.1,
+      "pegel": [
+        5.2,
+        3.8,
+        2.2,
+        0.9
+      ],
+      "msl": 3.0,
+      "hat": 5.9
+    },
+    "Bassein River Entrance (Thamihla Kyun)": {
+      "att": "4539",
+      "lat": -0.1,
+      "pegel": [
+        2.4,
+        1.8,
+        1.1,
+        0.4
+      ],
+      "msl": 1.4,
+      "hat": 2.8
+    }
+  },
+  "tagesungleich": {
+    "Aden": {
+      "att": "4155",
+      "lat": -0.3,
+      "pegel": [
+        2.0,
+        1.8,
+        1.3,
+        0.5
+      ],
+      "msl": 1.4,
+      "hat": 2.6
+    },
+    "Port Salalah": {
+      "att": "4168",
+      "lat": 0.0,
+      "pegel": [
+        1.7,
+        1.6,
+        1.3,
+        0.6
+      ],
+      "msl": 1.3,
+      "hat": 2.2
+    },
+    "Port Sultan Qaboos": {
+      "att": "4186a",
+      "lat": 0.0,
+      "pegel": [
+        2.6,
+        2.5,
+        1.7,
+        0.9
+      ],
+      "msl": 1.9,
+      "hat": 3.3
+    },
+    "Ajman": {
+      "att": "4204",
+      "lat": 0.2,
+      "pegel": [
+        1.7,
+        1.5,
+        0.9,
+        0.6
+      ],
+      "msl": 1.2,
+      "hat": 2.0
+    },
+    "Sharjah": {
+      "att": "4205",
+      "lat": 0.3,
+      "pegel": [
+        1.8,
+        1.5,
+        0.9,
+        0.6
+      ],
+      "msl": 1.2,
+      "hat": 2.3
+    },
+    "Dubai": {
+      "att": "4206a",
+      "lat": -0.1,
+      "pegel": [
+        1.6,
+        1.3,
+        0.8,
+        0.4
+      ],
+      "msl": 1.0,
+      "hat": 2.1
+    },
+    "Jebel Ali": {
+      "att": "4207",
+      "lat": -0.2,
+      "pegel": [
+        1.7,
+        1.3,
+        0.8,
+        0.4
+      ],
+      "msl": 1.0,
+      "hat": 2.2
+    },
+    "Khalifa Port": {
+      "att": "4208b",
+      "lat": 0.2,
+      "pegel": [
+        2.0,
+        1.5,
+        1.1,
+        0.7
+      ],
+      "msl": 1.3,
+      "hat": 2.4
+    },
+    "Khawr Fakkan": {
+      "att": "4192",
+      "lat": 0.0,
+      "pegel": [
+        2.5,
+        2.4,
+        1.4,
+        0.7
+      ],
+      "msl": 1.7,
+      "hat": 3.0
+    },
+    "Majis (Sohar)": {
+      "att": "4190a",
+      "lat": 0.0,
+      "pegel": [
+        2.7,
+        2.6,
+        1.7,
+        0.9
+      ],
+      "msl": 2.0,
+      "hat": 3.4
+    },
+    "Fujairah": {
+      "att": "4191a",
+      "lat": -0.2,
+      "pegel": [
+        2.5,
+        2.4,
+        1.4,
+        0.7
+      ],
+      "msl": 1.7,
+      "hat": 3.2
+    },
+    "Mina Zayid": {
+      "att": "4210",
+      "lat": 0.2,
+      "pegel": [
+        2.1,
+        1.6,
+        1.2,
+        0.7
+      ],
+      "msl": 1.4,
+      "hat": 2.6
+    },
+    "Halat al Mubarraz": {
+      "att": "4214",
+      "lat": 0.0,
+      "pegel": [
+        1.6,
+        1.4,
+        1.1,
+        0.7
+      ],
+      "msl": 1.2,
+      "hat": 2.3
+    },
+    "Mesaieed (Outer Channel Entrance)": {
+      "att": "4236",
+      "lat": 0.3,
+      "pegel": [
+        1.9,
+        1.2,
+        1.0,
+        0.7
+      ],
+      "msl": 1.2,
+      "hat": 2.6
+    },
+    "Doha (Ad Dawhah)": {
+      "att": "4239",
+      "lat": 0.0,
+      "pegel": [
+        1.5,
+        0.9,
+        0.6,
+        0.4
+      ],
+      "msl": 0.9,
+      "hat": 2.1
+    },
+    "Ras Laffan": {
+      "att": "4242",
+      "lat": 0.1,
+      "pegel": [
+        1.5,
+        1.0,
+        0.6,
+        0.4
+      ],
+      "msl": 0.9,
+      "hat": 1.9
+    },
+    "Al Jubayl (Jubail)": {
+      "att": "4255",
+      "lat": -0.3,
+      "pegel": [
+        1.4,
+        1.2,
+        0.5,
+        0.2
+      ],
+      "msl": 0.8,
+      "hat": 1.8
+    },
+    "Mina Az Zawr": {
+      "att": "4261",
+      "lat": -0.3,
+      "pegel": [
+        2.0,
+        1.6,
+        1.3,
+        0.4
+      ],
+      "msl": 1.2,
+      "hat": 2.5
+    },
+    "Mina Al Ahmadi": {
+      "att": "4262",
+      "lat": -0.1,
+      "pegel": [
+        2.7,
+        2.2,
+        1.5,
+        0.6
+      ],
+      "msl": 1.7,
+      "hat": 3.3
+    },
+    "Ash Shuwaykh": {
+      "att": "4263",
+      "lat": -0.1,
+      "pegel": [
+        3.5,
+        3.0,
+        1.8,
+        0.9
+      ],
+      "msl": 2.3,
+      "hat": 4.3
+    },
+    "Umm Qasr": {
+      "att": "4267",
+      "lat": -0.4,
+      "pegel": [
+        4.6,
+        4.0,
+        1.9,
+        1.0
+      ],
+      "msl": 2.9,
+      "hat": 5.4
+    },
+    "Shatt Al Arab (Outer Bar)": {
+      "att": "4268",
+      "lat": -0.5,
+      "pegel": [
+        3.0,
+        2.4,
+        1.3,
+        0.4
+      ],
+      "msl": 1.7,
+      "hat": 3.5
+    },
+    "Al Faw": {
+      "att": "4269",
+      "lat": 0.1,
+      "pegel": [
+        3.0,
+        2.4,
+        1.4,
+        0.7
+      ],
+      "msl": 1.9,
+      "hat": 3.8
+    },
+    "Al Basrah": {
+      "att": "4271",
+      "lat": 0.3,
+      "pegel": [
+        2.0,
+        1.6,
+        1.2,
+        1.1
+      ],
+      "msl": 1.5,
+      "hat": 3.2
+    },
+    "Abadan": {
+      "att": "4276A",
+      "lat": 0.4,
+      "pegel": [
+        2.0,
+        1.6,
+        0.6,
+        0.6
+      ],
+      "msl": 1.2,
+      "hat": 2.6
+    },
+    "Khowr-e Musa Bar": {
+      "att": "4277",
+      "lat": -0.1,
+      "pegel": [
+        3.4,
+        2.8,
+        1.7,
+        0.9
+      ],
+      "msl": 2.2,
+      "hat": 4.2
+    },
+    "Bandar-e Mahshahr": {
+      "att": "4279",
+      "lat": -0.2,
+      "pegel": [
+        5.1,
+        4.5,
+        2.1,
+        1.3
+      ],
+      "msl": 3.2,
+      "hat": 5.7
+    },
+    "Jazireh-Ye Khark": {
+      "att": "4282",
+      "lat": 0.0,
+      "pegel": [
+        2.0,
+        1.3,
+        1.1,
+        0.6
+      ],
+      "msl": 1.3,
+      "hat": 2.6
+    },
+    "Bushehr": {
+      "att": "4283",
+      "lat": -0.2,
+      "pegel": [
+        1.5,
+        0.8,
+        0.5,
+        0.2
+      ],
+      "msl": 0.8,
+      "hat": 2.1
+    },
+    "Karachi": {
+      "att": "4322",
+      "lat": -0.4,
+      "pegel": [
+        2.4,
+        2.3,
+        1.1,
+        0.4
+      ],
+      "msl": 1.7,
+      "hat": 3.3
+    },
+    "Port Muhammad Bin Qasim": {
+      "att": "4322d",
+      "lat": -0.7,
+      "pegel": [
+        3.1,
+        3.0,
+        1.4,
+        0.7
+      ],
+      "msl": 2.0,
+      "hat": 4.0
+    },
+    "Okha": {
+      "att": "4335",
+      "lat": -0.5,
+      "pegel": [
+        3.5,
+        3.0,
+        1.2,
+        0.4
+      ],
+      "msl": 2.0,
+      "hat": 4.1
+    },
+    "Cochin (Kochi)": {
+      "att": "4393",
+      "lat": -0.2,
+      "pegel": [
+        0.9,
+        0.8,
+        0.6,
+        0.3
+      ],
+      "msl": 0.6,
+      "hat": 1.2
+    }
+  }
+}
