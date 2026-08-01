@@ -67,6 +67,38 @@ zugrundeliegenden Aufzeichnungen sind teils kurz.
 | Table VIII — Orbital Elements | wöchentliche Bahnelemente, dito |
 | Part I (Tagesvorhersagen der Standardhäfen) | fertige Vorhersagen, keine Konstanten |
 
+## Table V Part 1 — erledigt für NP203 (2026-08-01)
+
+Transkribiert in `harmonics/help/np203_table5_part1_levels.json`: 65 Standard-
+häfen mit LAT, den vier Pegeln, MSL und HAT, jeder mit att-Nummer. Die Tabelle
+hat zwei Teile — S.xxx die überwiegend halbtägigen Häfen (MHWS/MHWN/MLWN/MLWS),
+S.xxxi die tagesungleichen (MHHW/MLHW/MHLW/MLLW), S.xxxii die Definitionen.
+
+**Selbsttest:** Dieselben vier Pegel stehen auch in den Part-II-Gruppenköpfen.
+29 von 29 Bezugshäfen stimmen exakt überein — beide Transkriptionen bestätigen
+sich gegenseitig.
+
+**Der eigentliche Gewinn** war der HAT-Test für `harmonics_att_np203.txt`
+(107 Stationen), der bis dahin gar nicht existierte, weil Table V Part 2 nur
+Sekundärhäfen abdeckt. Volle HAT-Abdeckung, und der Test fand sofort zwei
+Fehler:
+
+- **4146 und 4146a waren vertauscht.** Das Buch führt 4146 Ras al Katib
+  (14° 55′ N) und 4146a Al Hudaydah (14° 50′ N); unsere Positionen belegen den
+  Tausch eindeutig, die Namen standen an der falschen Nummer.
+- **Vier Stationen trugen Z0 aus der Ausgabe 2002**, das der ML-Spalte von
+  Part II (2015) widersprach: 4145 Kamaran 0.78 → 1.00, 4146 Ras al Katib
+  1.09 → 0.46, 4146a Al Hudaydah 1.22 → 0.58, 4330 Kandla 3.68 → 3.88. Bei den
+  beiden Jemen-Häfen waren die Konstituenten selbst richtig, nur das Datum lag
+  0.63 m zu hoch. Von 84 Stationen, die in beiden Ausgaben vorliegen, weichen
+  nur diese vier um mehr als 0.15 m ab.
+
+Danach bleiben 2 von 107 auffällig: 4279 Bandar-e Mahshahr (+0.42 m) und
+4325 Kori Creek Entrance (+0.91 m).
+
+**Aufruf:** `python3 py/hat_test_np203.py <tcd> [<txt>]` — die Textquelle wird
+aus dem TCD-Namen erraten, kann aber als zweites Argument gesetzt werden.
+
 ## Warum Table V Part 1 gebraucht wird
 
 Der Part-II-Transfer skaliert den Bezugshafen mit den Höhendifferenzen des
