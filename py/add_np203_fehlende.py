@@ -6,7 +6,7 @@ Der Abgleich aller att-Nummern der Part-II-Seiten 222-230 und 233-237 gegen
 unsere Dateien ergab am 20260801 vierundfuenfzig Luecken. Siebenundzwanzig
 davon sind Standardhaefen -- fuer die druckt ATT keine Konstanten, sie sind
 hier nicht zu machen. Bleiben siebenundzwanzig Sekundaerhaefen, von denen
-achtzehn sogar gemessene Part-III-Konstanten haben.
+achtzehn sogar stationseigene Part-III-Konstanten haben.
 
 Nicht angelegt werden sechs Haefen, bei denen das Buch WEDER Hoehendifferenzen
 NOCH ein ML angibt (3828 Mchenga, 3840 Moma River Bar, 3883 Maravoai,
@@ -45,7 +45,7 @@ def dm(g, m):
 # Part II: Name, Land, Position, Zeitzone. Positionen am 20260801 aus den
 # Scans gelesen; p3 = Seite in Part III, sonst Transfer aus Part II.
 NEU = [
-    # -- mit gemessenen Part-III-Konstanten ---------------------------------
+    # -- mit stationseigenen Part-III-Konstanten ----------------------------
     dict(att='3790',  name='Knysna, South Africa', land='South Africa',
          lat=-dm(34, 4), lon=dm(23, 3), tz='Africa/Johannesburg', p2=222),
     dict(att='3871',  name='Andoany (Hellville), Madagascar', land='Madagascar',
@@ -136,7 +136,7 @@ def main():
             mer = row[7]
             z0 = s.get('ml', row[0])
             quelle, herkunft = 'Part III', (
-                f'# note: NP203 Part III S.{seite} (2015), Meridian {mer}. Gemessene '
+                f'# note: NP203 Part III S.{seite} (2015), Meridian {mer}. Stationseigene '
                 f'Konstanten.',
                 f'# note: Position und Name aus Part II S.{s["p2"]}. N2/K2 inferiert.')
         else:

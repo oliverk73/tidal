@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Legt Stationen an, die in ATT NP203 stehen, aber in keiner unserer Dateien.
 
-Konstanten aus Part III (gemessen), Position aus Part II. Kein Transfer noetig.
+Konstanten aus Part III (stationseigen), Position aus Part II. Kein Transfer noetig.
 Am 20260728 aus den Scans gelesen:
 
   4208a Khawr Ghurabi   Part II S.230: 24 49 N / 54 43 E, ML 0.88
@@ -65,7 +65,7 @@ def block(s, ORDER):
     out = ['# BEGIN HOT COMMENTS', f'# country: {s["country"]}',
            '# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)',
            f'# att_number: {s["att"]}',
-           f'# note: NP203 Part III S.{s["p3"]} (2015), Meridian {s["mer"]}. Gemessene Konstanten.',
+           f'# note: NP203 Part III S.{s["p3"]} (2015), Meridian {s["mer"]}. Stationseigene Konstanten.',
            f'# note: Position aus Part II S.{s["p2"]}. N2/K2 inferiert.',
            f'# note: {datetime.now():%Y%m%d} neu angelegt -- Station fehlte in der Sammlung.',
            f'# date_imported: {datetime.now():%Y%m%d}',

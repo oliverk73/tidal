@@ -796,7 +796,7 @@ def main():
         # Korrekturhinweise (Position, Nummer) bleiben stehen.
         head = [x for x in head if not (x.startswith('# note:') and any(
             t in x for t in ('Sekundaerhafen-Transfer', 'Part III', 'N2/K2 inferiert',
-                             'Gemessene', 'Ersetzt am')))]
+                             'Stationseigene', 'Gemessene', 'Ersetzt am')))]
         for k, x in enumerate(head):
             if x.startswith('# source:'):
                 head[k] = '# source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)'
@@ -805,7 +805,7 @@ def main():
             elif x.startswith('# date_imported:'):
                 head[k] = f'# date_imported: {datetime.now():%Y%m%d}'
         j = next(k for k, x in enumerate(head) if x.startswith('# att_number:')) + 1
-        head[j:j] = [f'# note: NP203 Part III S.{seite} (2015), Meridian {zone}. Gemessene',
+        head[j:j] = [f'# note: NP203 Part III S.{seite} (2015), Meridian {zone}. Stationseigene',
                      '# note: Konstanten statt Part-II-Transfer. N2/K2 inferiert, M4/M6 aus f4/f6.',
                      f'# note: Ersetzt am {datetime.now():%Y%m%d} den Sekundaerhafen-Transfer.']
         tz = L[ni + 1].split(' :', 1)[1]

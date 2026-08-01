@@ -24,6 +24,39 @@ für das Druckjahr gilt.
 Part II ist auch dann unverzichtbar, wenn Part III vollständig ist: **Die
 Koordinaten stehen nur dort.**
 
+## „Stationseigen" gegen „übertragen"
+
+Beides kommt als fertige Harmonics bei uns an — der Unterschied liegt darin,
+**wessen Analyse dahintersteckt**:
+
+- **Stationseigen (Part III).** Das UKHO hat an *diesem* Hafen einen
+  Pegelschrieb harmonisch analysiert und druckt das Ergebnis. Die Zahlen
+  gehören zum Ort. In den Stationsnotizen: `Stationseigene Konstanten`.
+- **Übertragen (Part-II-Transfer).** Für diese Häfen druckt das Buch **gar
+  keine** Konstanten, nur Zeit- und Höhendifferenzen zu einem Standardhafen.
+  Den Konstantensatz bauen *wir*: die Kurve des Bezugshafens, mit den
+  Höhendifferenzen gestreckt und mit der Zeitdifferenz verschoben. In den
+  Notizen: `Sekundaerhafen-Transfer von …`.
+
+Praktisch dreht sich die Sache dabei um:
+
+| | Stationen | Konstituenten im Mittel |
+|---|---:|---:|
+| aus Part III übernommen | 309 | 6.3 (3–9) |
+| aus Part II übertragen | 170 | 29.7 (6–68) |
+
+Part III gibt nur M2, S2, K1, O1 her; N2/K2 und M4/M6 leiten wir daraus ab.
+Der Transfer erbt dagegen das ganze Spektrum des Bezugshafens. Suvali (4353,
+Part III, 7 Konstituenten) und Hazira (4353a, von Bhavnagar übertragen, 55)
+liegen 9 km auseinander an derselben Flussmündung — die 48 zusätzlichen
+Konstituenten beschreiben Bhavnagar, 60 km nördlich, nicht Hazira.
+
+Part III bleibt trotzdem die bessere Quelle: Die vier dominanten Konstituenten
+tragen den Löwenanteil, und beim Transfer hängt alles daran, dass Bezugshafen,
+Pegel und Zone stimmen. **Stationseigen heißt aber nicht gut** — viele
+Part-III-Zeilen tragen im Buch ein `a` („data approximate"), und die
+zugrundeliegenden Aufzeichnungen sind teils kurz.
+
 ## Nicht gebraucht
 
 | Tabelle | Warum nicht |
@@ -47,7 +80,7 @@ SR_sek = SR_bezug + (dMHWS - dMLWS)      fS = SR_sek / SR_bezug
 aus seinem Konstantensatz gerechnete. Beispiel Mina Salman: Konstantensatz 1.57 m,
 Buch 2.4 − 0.6 = 1.80 m. Bei einer Differenz von −1.2 m bleiben im ersten Fall
 0.37 m Hub übrig, im zweiten 0.60 m — Faktor 1.6. Am Bahrain Yacht Club führte
-das zu M2 = 0.064 m statt der gemessenen 0.16 m, und S2 wurde größer als M2.
+das zu M2 = 0.064 m statt der 0.16 m aus Part III, und S2 wurde größer als M2.
 
 Diese publizierten Werte stehen in Table V Part 1 (und im Kopf jedes Part-II-Blocks).
 
@@ -111,7 +144,7 @@ dt_UT = dt_Buch + (Zone_Bezug - Zone_Sekundär)
 Bei Madagaskar fällt das weg (beides −0300), deshalb fiel es lange nicht auf.
 Kerguelen unter Durban sind 3 h Unterschied — in M2 sind das 87° Phasenfehler.
 
-Nachgeprüft an Stationen, die **beides** haben, Part-III-Messwerte und
+Nachgeprüft an Stationen, die **beides** haben, stationseigene Part-III-Konstanten und
 Part-II-Differenzen (Phasen dafür auf Weltzeit umrechnen, sonst vergleicht man
 über verschiedene Meridiane):
 
@@ -147,7 +180,7 @@ deshalb greift die ML-Regel nur in der Lücke.
 
 ## Wie gut trifft der Transfer?
 
-Gemessen an sieben Stationen, die **beides** haben — Part-III-Messwerte und
+Gemessen an sieben Stationen, die **beides** haben — stationseigene Part-III-Konstanten und
 Part-II-Differenzen (Ägypten und Saudi-Arabien unter Suez, S.228):
 
 | | mittlerer Fehler |
@@ -225,7 +258,7 @@ g_MSf = g_S2 − g_M2
 Das ist unabhängig von der Meridiankonvention, weil alle drei Phasen in
 derselben stehen. Gegenprobe: Das Buch sagt, der Springtag liege x Tage nach
 Neu- und Vollmond (x = 2 hier), also g_MSf = 2 · 24.38° = 48.8°. Bei den Häfen
-mit gemessenen Part-III-Konstanten kommt `g_S2 − g_M2` auf 1.93 bis 2.01 Tage —
+mit stationseigenen Part-III-Konstanten kommt `g_S2 − g_M2` auf 1.93 bis 2.01 Tage —
 der Befund des Buches wird bestätigt.
 
 | att | Station | ML Springs | ML +7 Tage | MSf-Amplitude | g |
@@ -307,7 +340,7 @@ teilen:
 | | Anzahl | Ergebnis |
 |---|---:|---|
 | Standardhäfen | 27 | **nichts zu tun** — ATT druckt für sie keine Konstanten, und alle 27 liegen bereits in anderen Sammlungen (utide, ticon4, classic, noaa). Es fehlt nur die ATT-Nummer, nicht die Station. |
-| Sekundärhäfen mit Part III | 18 | angelegt, gemessene Konstanten |
+| Sekundärhäfen mit Part III | 18 | angelegt, stationseigene Konstanten |
 | Sekundärhäfen ohne Part III | 9 | 3 angelegt (Transfer), 6 bewusst nicht |
 
 Die sechs nicht angelegten geben im Buch **weder Höhendifferenzen noch ML**:

@@ -546,7 +546,7 @@ def main():
                 print(f'{att:7s} -- nicht in der Datei --'); continue
             b = SEC[att]
             if 'Part III' in b['quelle'] or 'Table V' in b['quelle']:
-                continue                                   # laeuft auf gemessenen Konstanten
+                continue                                   # laeuft auf stationseigenen Konstanten
             g = gruppe(att, gruppen)
             if g is None:
                 print(f'{att:7s} {b["name"][:34]:34s} keine Gruppe'); continue

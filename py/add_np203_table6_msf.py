@@ -27,7 +27,7 @@ und das MSf-Glied hat sein Maximum bei sigma_MSf * t + V_MSf = g_MSf. Daraus
 Das ist unabhaengig von der Meridiankonvention, weil alle drei Phasen in
 derselben stehen. Gegenprobe mit dem Buch: Es gibt an, dass der Springtag
 x Tage nach Neu- und Vollmond liegt (x=2 fuer alle hiesigen Haefen), also
-g_MSf = x * 24.38 Grad = 48.8 Grad. Bei den Haefen mit gemessenen
+g_MSf = x * 24.38 Grad = 48.8 Grad. Bei den Haefen mit stationseigenen
 Part-III-Konstanten kommt g_S2 - g_M2 auf 1.93 bis 2.01 Tage heraus -- der
 Befund des Buches wird damit bestaetigt.
 
