@@ -280,6 +280,7 @@ py/hat_test_np203.py            HAT-Test gegen Table V Part 2
 py/check_np203_bezug.py         Bezugshäfen gegen die Gruppenköpfe prüfen
 py/rebuild_np203_transfer.py    Transfer neu ableiten (richtiger Bezug, publizierte Pegel)
 py/add_np203_table6_msf.py      Table VI -> MSf (vierzehntägiges Mittelwasser)
+py/add_np203_fehlende.py        fehlende Buchstationen anlegen (Part III oder Transfer)
 ```
 
 `build_np203_tablev.py` gleicht **über die att-Nummer** ab und prüft zusätzlich den
@@ -296,6 +297,33 @@ waren sie nur daran, dass der Buchname zur Nummer nicht zum Namen in der Datei
 passte. **Vor jedem Wertübernehmen die Nummernfolge gegen den Scan prüfen.**
 Verifizierte Abweichungen (El Tor/At Tur, Rodrigues/Port Mathurin) stehen als
 `NAME_OK` mit Begründung im Skript, damit sie nicht jedes Mal neu auffallen.
+
+## Vollständigkeit: Lückenprüfung gegen die Buchnummern
+
+Am 2026-08-01 alle att-Nummern der Part-II-Seiten 222–230 und 233–237 gegen
+unsere Dateien abgeglichen — **54 Lücken**, die sich sauber in drei Gruppen
+teilen:
+
+| | Anzahl | Ergebnis |
+|---|---:|---|
+| Standardhäfen | 27 | **nichts zu tun** — ATT druckt für sie keine Konstanten, und alle 27 liegen bereits in anderen Sammlungen (utide, ticon4, classic, noaa). Es fehlt nur die ATT-Nummer, nicht die Station. |
+| Sekundärhäfen mit Part III | 18 | angelegt, gemessene Konstanten |
+| Sekundärhäfen ohne Part III | 9 | 3 angelegt (Transfer), 6 bewusst nicht |
+
+Die sechs nicht angelegten geben im Buch **weder Höhendifferenzen noch ML**:
+3828 Mchenga, 3840 Moma River Bar, 3883 Maravoai, 4371 Angria Bank,
+4478 Burhabalang River Entrance, 4487 Akra Semaphore. Ohne ML gibt es kein
+Datum — die Station wäre nur der um einen Zeitversatz verschobene Bezugshafen.
+(Zwei Altfälle derselben Art stehen schon in der Datei: 3822 Pungue River Bar
+und 3824 Mapanda. Sie bleiben, aber es kommen keine neuen dazu.)
+
+Kontrolle der Zeilenzuordnung beim Anlegen: Bei allen 18 Part-III-Stationen
+stimmt das ML aus Part II **exakt** mit dem aus Part III überein. Alle 21 neuen
+Stationen bestehen den HAT-Test (schlechtester Wert −0.95 m bei Hazira, dessen
+Zeitdifferenz das Buch nicht angibt).
+
+Werkzeug: `py/add_np203_fehlende.py`. Seiten 231, 232 und 238 sind noch nicht
+abgeglichen.
 
 ## Reihenfolge beim Einlesen eines Bandes
 
