@@ -19781,10 +19781,398 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
+# country: Kuwait
+# source: Admiralty Tide Tables NP203 Vol.3 (2015), Part IIIa Tidal Stream Harmonic Constants
+# station_type: current
+# np203_no: 426c
+# np203_zone: -0300
+# stream_type: reversing
+# flood_dir: 99
+# ebb_dir: 279
+# ellipticity_m2: +0.235
+# inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
+# note: 20260801 aus dem 2015er Scan S.253 ergaenzt -- fehlte in der Ausgabe 2002.
+# note: Das Buch nennt fuer Part IIIa keine Ortsnamen, nur Nummer und Position; der Name ist beschreibend.
+# datum: Z0 residual current (knots)
+# !units: knots
+# !longitude: 48.733333
+# !latitude: 28.525000
+Khafji N, Saudi Arabia Current
++03:00 :Asia/Riyadh
+0.0415 knots
+J1           x 0 0
+K1           0.2852  9.12
+K2           0.0689  95.83
+L2           x 0 0
+M1           x 0 0
+M2           0.6780  39.86
+M3           x 0 0
+M4           x 0 0
+M6           x 0 0
+M8           x 0 0
+N2           0.1288  9.86
+2N2          x 0 0
+O1           0.1250  337.25
+OO1          x 0 0
+P1           x 0 0
+Q1           x 0 0
+2Q1          x 0 0
+R2           x 0 0
+S1           x 0 0
+S2           0.2552  95.83
+S4           x 0 0
+S6           x 0 0
+T2           x 0 0
+LDA2         x 0 0
+MU2          x 0 0
+NU2          x 0 0
+RHO1         x 0 0
+MK3          x 0 0
+2MK3         x 0 0
+MN4          x 0 0
+MS4          x 0 0
+2SM2         x 0 0
+MF           x 0 0
+MSF          x 0 0
+MM           x 0 0
+SA           x 0 0
+SSA          x 0 0
+SA-IOS       x 0 0
+MF-IOS       x 0 0
+S1-IOS       x 0 0
+OO1-IOS      x 0 0
+R2-IOS       x 0 0
+A7           x 0 0
+2MK5         x 0 0
+2MK6         x 0 0
+2MN2         x 0 0
+2MN6         x 0 0
+2MS6         x 0 0
+2NM6         x 0 0
+2SK5         x 0 0
+2SM6         x 0 0
+3MK7         x 0 0
+3MN8         x 0 0
+3MS2         x 0 0
+3MS4         x 0 0
+3MS8         x 0 0
+ALP1         x 0 0
+BET1         x 0 0
+CHI1         x 0 0
+H1           x 0 0
+H2           x 0 0
+KJ2          x 0 0
+ETA2         x 0 0
+KQ1          x 0 0
+UPS1         x 0 0
+M10          x 0 0
+M12          x 0 0
+MK4          x 0 0
+MKS2         x 0 0
+MNS2         x 0 0
+EPS2         x 0 0
+MO3          x 0 0
+MP1          x 0 0
+TAU1         x 0 0
+MPS2         x 0 0
+MSK6         x 0 0
+MSM          x 0 0
+MSN2         x 0 0
+MSN6         x 0 0
+NLK2         x 0 0
+NO1          x 0 0
+OP2          x 0 0
+OQ2          x 0 0
+PHI1         x 0 0
+KP1          x 0 0
+PI1          x 0 0
+TK1          x 0 0
+PSI1         x 0 0
+RP1          x 0 0
+S3           x 0 0
+SIG1         x 0 0
+SK3          x 0 0
+SK4          x 0 0
+SN4          x 0 0
+SNK6         x 0 0
+SO1          x 0 0
+SO3          x 0 0
+THE1         x 0 0
+2PO1         x 0 0
+2NS2         x 0 0
+MLN2S2       x 0 0
+2ML2S2       x 0 0
+SKM2         x 0 0
+2MS2K2       x 0 0
+MKL2S2       x 0 0
+M2(KS)2      x 0 0
+2SN(MK)2     x 0 0
+2KM(SN)2     x 0 0
+NO3          x 0 0
+2MLS4        x 0 0
+ML4          x 0 0
+N4           x 0 0
+SL4          x 0 0
+MNO5         x 0 0
+2MO5         x 0 0
+MSK5         x 0 0
+3KM5         x 0 0
+2MP5         x 0 0
+3MP5         x 0 0
+MNK5         x 0 0
+2NMLS6       x 0 0
+MSL6         x 0 0
+2ML6         x 0 0
+2MNLS6       x 0 0
+3MLS6        x 0 0
+2MNO7        x 0 0
+2NMK7        x 0 0
+2MSO7        x 0 0
+MSKO7        x 0 0
+2MSN8        x 0 0
+2(MS)8       x 0 0
+2(MN)8       x 0 0
+2MSL8        x 0 0
+4MLS8        x 0 0
+3ML8         x 0 0
+3MK8         x 0 0
+2MSK8        x 0 0
+2M2NK9       x 0 0
+3MNK9        x 0 0
+4MK9         x 0 0
+3MSK9        x 0 0
+4MN10        x 0 0
+3MNS10       x 0 0
+4MS10        x 0 0
+3MSL10       x 0 0
+3M2S10       x 0 0
+4MSK11       x 0 0
+4MNS12       x 0 0
+5MS12        x 0 0
+4MSL12       x 0 0
+4M2S12       x 0 0
+M1C          x 0 0
+3MKS2        x 0 0
+OQ2-HORN     x 0 0
+MSK2         x 0 0
+MSP2         x 0 0
+2MP3         x 0 0
+4MS4         x 0 0
+2MNS4        x 0 0
+2MSK4        x 0 0
+3MN4         x 0 0
+2MSN4        x 0 0
+3MK5         x 0 0
+3MO5         x 0 0
+3MNS6        x 0 0
+4MS6         x 0 0
+2MNU6        x 0 0
+3MSK6        x 0 0
+MKNU6        x 0 0
+3MSN6        x 0 0
+M7           x 0 0
+2MNK8        x 0 0
+2(MS)N10     x 0 0
+MNUS2        x 0 0
+2MK2         x 0 0
+# country: Kuwait
+# source: Admiralty Tide Tables NP203 Vol.3 (2015), Part IIIa Tidal Stream Harmonic Constants
+# station_type: current
+# np203_no: 426d
+# np203_zone: -0300
+# stream_type: reversing
+# flood_dir: 132
+# ebb_dir: 312
+# ellipticity_m2: +0.193
+# inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
+# note: 20260801 aus dem 2015er Scan S.253 ergaenzt -- fehlte in der Ausgabe 2002.
+# note: Das Buch nennt fuer Part IIIa keine Ortsnamen, nur Nummer und Position; der Name ist beschreibend.
+# datum: Z0 residual current (knots)
+# !units: knots
+# !longitude: 48.998333
+# !latitude: 28.601667
+Khafji NE, Saudi Arabia Current
++03:00 :Asia/Kuwait
+0.0067 knots
+J1           x 0 0
+K1           0.2665  16.87
+K2           0.0541  99.64
+L2           x 0 0
+M1           x 0 0
+M2           0.5422  41.18
+M3           x 0 0
+M4           x 0 0
+M6           x 0 0
+M8           x 0 0
+N2           0.1030  9.85
+2N2          x 0 0
+O1           0.1224  348.89
+OO1          x 0 0
+P1           x 0 0
+Q1           x 0 0
+2Q1          x 0 0
+R2           x 0 0
+S1           x 0 0
+S2           0.2003  99.64
+S4           x 0 0
+S6           x 0 0
+T2           x 0 0
+LDA2         x 0 0
+MU2          x 0 0
+NU2          x 0 0
+RHO1         x 0 0
+MK3          x 0 0
+2MK3         x 0 0
+MN4          x 0 0
+MS4          x 0 0
+2SM2         x 0 0
+MF           x 0 0
+MSF          x 0 0
+MM           x 0 0
+SA           x 0 0
+SSA          x 0 0
+SA-IOS       x 0 0
+MF-IOS       x 0 0
+S1-IOS       x 0 0
+OO1-IOS      x 0 0
+R2-IOS       x 0 0
+A7           x 0 0
+2MK5         x 0 0
+2MK6         x 0 0
+2MN2         x 0 0
+2MN6         x 0 0
+2MS6         x 0 0
+2NM6         x 0 0
+2SK5         x 0 0
+2SM6         x 0 0
+3MK7         x 0 0
+3MN8         x 0 0
+3MS2         x 0 0
+3MS4         x 0 0
+3MS8         x 0 0
+ALP1         x 0 0
+BET1         x 0 0
+CHI1         x 0 0
+H1           x 0 0
+H2           x 0 0
+KJ2          x 0 0
+ETA2         x 0 0
+KQ1          x 0 0
+UPS1         x 0 0
+M10          x 0 0
+M12          x 0 0
+MK4          x 0 0
+MKS2         x 0 0
+MNS2         x 0 0
+EPS2         x 0 0
+MO3          x 0 0
+MP1          x 0 0
+TAU1         x 0 0
+MPS2         x 0 0
+MSK6         x 0 0
+MSM          x 0 0
+MSN2         x 0 0
+MSN6         x 0 0
+NLK2         x 0 0
+NO1          x 0 0
+OP2          x 0 0
+OQ2          x 0 0
+PHI1         x 0 0
+KP1          x 0 0
+PI1          x 0 0
+TK1          x 0 0
+PSI1         x 0 0
+RP1          x 0 0
+S3           x 0 0
+SIG1         x 0 0
+SK3          x 0 0
+SK4          x 0 0
+SN4          x 0 0
+SNK6         x 0 0
+SO1          x 0 0
+SO3          x 0 0
+THE1         x 0 0
+2PO1         x 0 0
+2NS2         x 0 0
+MLN2S2       x 0 0
+2ML2S2       x 0 0
+SKM2         x 0 0
+2MS2K2       x 0 0
+MKL2S2       x 0 0
+M2(KS)2      x 0 0
+2SN(MK)2     x 0 0
+2KM(SN)2     x 0 0
+NO3          x 0 0
+2MLS4        x 0 0
+ML4          x 0 0
+N4           x 0 0
+SL4          x 0 0
+MNO5         x 0 0
+2MO5         x 0 0
+MSK5         x 0 0
+3KM5         x 0 0
+2MP5         x 0 0
+3MP5         x 0 0
+MNK5         x 0 0
+2NMLS6       x 0 0
+MSL6         x 0 0
+2ML6         x 0 0
+2MNLS6       x 0 0
+3MLS6        x 0 0
+2MNO7        x 0 0
+2NMK7        x 0 0
+2MSO7        x 0 0
+MSKO7        x 0 0
+2MSN8        x 0 0
+2(MS)8       x 0 0
+2(MN)8       x 0 0
+2MSL8        x 0 0
+4MLS8        x 0 0
+3ML8         x 0 0
+3MK8         x 0 0
+2MSK8        x 0 0
+2M2NK9       x 0 0
+3MNK9        x 0 0
+4MK9         x 0 0
+3MSK9        x 0 0
+4MN10        x 0 0
+3MNS10       x 0 0
+4MS10        x 0 0
+3MSL10       x 0 0
+3M2S10       x 0 0
+4MSK11       x 0 0
+4MNS12       x 0 0
+5MS12        x 0 0
+4MSL12       x 0 0
+4M2S12       x 0 0
+M1C          x 0 0
+3MKS2        x 0 0
+OQ2-HORN     x 0 0
+MSK2         x 0 0
+MSP2         x 0 0
+2MP3         x 0 0
+4MS4         x 0 0
+2MNS4        x 0 0
+2MSK4        x 0 0
+3MN4         x 0 0
+2MSN4        x 0 0
+3MK5         x 0 0
+3MO5         x 0 0
+3MNS6        x 0 0
+4MS6         x 0 0
+2MNU6        x 0 0
+3MSK6        x 0 0
+MKNU6        x 0 0
+3MSN6        x 0 0
+M7           x 0 0
+2MNK8        x 0 0
+2(MS)N10     x 0 0
+MNUS2        x 0 0
+2MK2         x 0 0
 # country: Iraq
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
-# np203_no: 426c
+# np203_no: 426e
 # np203_zone: -0300
 # stream_type: rotary
 # flood_dir: 138
@@ -19792,6 +20180,9 @@ MNUS2        x 0 0
 # ellipticity_m2: +0.334
 # rotary_caveat: strongly rotary (|e|>0.25) - 1D major-axis underrepresents speed and shows false slacks
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
+# note: Nummer 20260801 nach dem 2015er Scan korrigiert (426c -> 426e).
+# note: S.253 fuehrt 426e auf 29 56.9 N / 49 07.6 E -- das ist genau diese Position;
+# note: 426c liegt 162 km suedlich bei Khafji.
 # datum: Z0 residual current (knots)
 # !units: knots
 # !longitude: 49.126667

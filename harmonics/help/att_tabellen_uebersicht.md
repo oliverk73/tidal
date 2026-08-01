@@ -315,6 +315,58 @@ Nicht in der Sammlung: **4346** Bhavnagar und **4354** Tapi River (Hazira) sind
 Standardhäfen, für die ATT keine Konstanten druckt; **4475a** Dhamra fehlt uns
 ganz. Ebenso fehlt 4353a Hazira aus Part II S.234.
 
+## Part IIIa (Ströme) — erledigt für NP203 (2026-08-01)
+
+S.252/253 sind **nicht** Teil von Part III, sondern Part IIIa: harmonische
+Konstanten für **Gezeitenströme** in Knoten. Das Buch nennt dort keine
+Ortsnamen, nur Nummer und Position, und je Station **zwei** Zeilen — eine für
+die Nord-, eine für die Ostkomponente.
+
+Unsere 68 Strömungsstationen in `harmonics_att_np203_currents.txt` stammen aus
+der Ausgabe **2002** und waren nie gegen den 2015er Scan geprüft. Ergebnis des
+Abgleichs: von den 30 Buchstationen im NP203-Gebiet lagen 28 bei uns, auf
+**0.25 km** genau und mit übereinstimmenden Werten.
+
+**Wie aus zwei Zeilen eine XTide-Station wird.** XTide kennt nur eine
+eindimensionale Stromachse. Der Rechenweg der Ausgabe 2002 ließ sich aus der
+Datei rekonstruieren und an 421a, 421b und 422b in allen vier Konstituenten
+exakt nachrechnen:
+
+```
+1. Stromellipse aus M2:
+     W+ = 0.5·(Ae·e^(−i·ge) + i·An·e^(−i·gn))
+     W− = 0.5·(Ae·e^(+i·ge) + i·An·e^(+i·gn))
+   Hauptachsenwinkel  θ = 0.5·(arg W+ + arg W−),  Peilung = (90 − θ°) mod 360
+   Elliptizität       e = (|W+| − |W−|) / (|W+| + |W−|)
+
+2. ALLE Konstituenten auf diese eine Achse projizieren:
+     z = cos θ · Ae·e^(−i·ge) + sin θ · An·e^(−i·gn)
+     Amplitude = |z|,  Phase = (−arg z) mod 360
+
+3. N2 = 0.19·M2, K2 = 0.27·S2 (NP203 führt nur M2/S2/K1/O1).
+   Z0 (Reststrom) wird ebenso projiziert.
+```
+
+Entscheidend ist Schritt 2: Die Achse kommt **allein aus M2**, alle übrigen
+Konstituenten werden auf sie projiziert. Ein erster Versuch, jede Konstituente
+über ihre eigene Ellipse zu drehen, traf nur M2. Bei `|e| > 0.25` bekommt die
+Station ein `# rotary_caveat:` — die 1D-Darstellung unterschätzt dann die
+Geschwindigkeit und zeigt Stillwasser, das es nicht gibt.
+
+**Zwei Nummernbefunde:**
+
+- **426c/426d** (beide vor Al-Khafji) fehlten in der Ausgabe 2002 und sind
+  jetzt ergänzt: `py/add_np203_part3a_fehlende.py`.
+- Unser „Khowr-e Musa, Iran Current" trug **426c**, liegt aber exakt auf der
+  Buchposition von **426e** (29° 56.9′ N / 49° 07.6′ E) — 162 km nördlich des
+  echten 426c. Nummer korrigiert.
+
+**Offen:** Die übrigen **40** Stationen der Datei (Singapur, Riau, Bangka,
+Philippinen, Sulawesi, Lombok, Irian Jaya, Nummern 470–551) sind als NP203 2002
+gekennzeichnet, liegen aber außerhalb des Gebiets von NP203 2015 — Table V
+Part 2 endet mit „all Secondary Ports in this volume" bei 4491 Canning Town.
+Vermutlich stammen sie aus NP204; die Herkunftsangabe ist zu klären.
+
 ## Scans
 
 Ablage: `weather/tide_tables/att/`, Namensschema `np<Band>_<Edition>_<teil>_p<Seiten>.pdf`.
