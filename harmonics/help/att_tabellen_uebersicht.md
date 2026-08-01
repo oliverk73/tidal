@@ -197,30 +197,58 @@ wird stillschweigend die alte aus `binary/` getestet.
 Schranke, die nie erreicht wird, und meldet Fehlalarme (Suhar schien 0.5 m zu
 hoch, liegt tatsächlich 0.3 m unter HAT).
 
-## Warum Table VI gebraucht wird
+## Table VI — erledigt für NP203 (2026-08-01)
 
 Bei zwölf Häfen mit starkem Flachwassereinfluss schwankt das Mittelwasser im
 Vierzehntagerhythmus. Das Buch gibt korrigierte ML-Werte für den Springtag und
-für jeden Tag davor/danach. In XTide ist das die Konstituente **MSf**
-(1.0158958 °/h), die in unserem 175-Slot-Layout einen eigenen, bisher leeren
-Platz hat. Amplitude ≈ halbe Spanne, Phasenlage so, dass das Maximum auf den
-Springtag fällt.
+für jeden Tag davor/danach; Part II schreibt bei diesen Häfen ein `w` in die
+ML-Spalte. In XTide ist das die Konstituente **MSf** (1.0158958 °/h).
 
-Betroffen und bei uns vorhanden (NP203):
+**Die Buchtabelle ist eine reine Kosinuskurve** mit der MSf-Periode
+(14.765 Tage) — nachgerechnet weicht sie um höchstens 0.031 m ab. Damit ist die
+Umsetzung eindeutig:
 
-| att | Station | ML Springs | ML +7 Tage | Spanne |
-|---|---|---:|---:|---:|
-| 4326 | Lakhpat, Gujarat | 2.70 | 2.36 | 0.34 |
-| 4327 | Godia Creek, Gujarat | 2.00 | 1.80 | 0.20 |
-| 4349 | Dahej Bandar, Gujarat | 5.20 | 4.60 | 0.60 |
-| 4350 | Ambetha, Gujarat | 4.38 | 4.06 | 0.32 |
-| 4362 | Nava (Karanja), Maharashtra | 2.68 | 2.50 | 0.18 |
-| 4472 | Kushabhadra River, Odisha | 1.24 | 1.08 | 0.16 |
-| 4476 | Chandbali, Odisha | 1.88 | 1.66 | 0.22 |
-| 4484 | Diamond Harbour, West Bengal | 3.47 | 3.13 | 0.34 |
-| 4488 | Kolkata (Garden Reach) | 3.46 | 2.92 | 0.54 |
+```
+Amplitude = (ML_Springtag − ML_+7Tage) / 2
+Z0        = Mittel beider  (steht als "Average ML" in der Tabelle)
+```
 
-Nicht in der Sammlung: 4346, 4354, 4475a.
+Die Phase folgt daraus, dass das ML-Maximum auf den Springtag fällt. Springtide
+heißt, M2 und S2 sind in Phase, also `σ_MSf·t + V_MSf = g_S2 − g_M2` (denn
+S2 − M2 = MSf). Das MSf-Glied hat sein Maximum bei `σ_MSf·t + V_MSf = g_MSf`,
+also:
+
+```
+g_MSf = g_S2 − g_M2
+```
+
+Das ist unabhängig von der Meridiankonvention, weil alle drei Phasen in
+derselben stehen. Gegenprobe: Das Buch sagt, der Springtag liege x Tage nach
+Neu- und Vollmond (x = 2 hier), also g_MSf = 2 · 24.38° = 48.8°. Bei den Häfen
+mit gemessenen Part-III-Konstanten kommt `g_S2 − g_M2` auf 1.93 bis 2.01 Tage —
+der Befund des Buches wird bestätigt.
+
+| att | Station | ML Springs | ML +7 Tage | MSf-Amplitude | g |
+|---|---|---:|---:|---:|---:|
+| 4326 | Lakhpat, Gujarat | 2.70 | 2.36 | 0.170 | 49.0° |
+| 4327 | Godia Creek, Gujarat | 2.00 | 1.80 | 0.100 | 37.0° |
+| 4349 | Dahej Bandar, Gujarat | 5.20 | 4.60 | 0.300 | 47.0° |
+| 4350 | Ambetha, Gujarat | 4.38 | 4.06 | 0.160 | 41.0° |
+| 4362 | Nava (Karanja), Maharashtra | 2.68 | 2.50 | 0.090 | 42.0° |
+| 4472 | Kushabhadra River, Odisha | 1.24 | 1.08 | 0.080 | 43.0° |
+| 4476 | Chandbali, Odisha | 1.88 | 1.66 | 0.110 | 47.0° |
+| 4484 | Diamond Harbour, West Bengal | 3.47 | 3.13 | 0.170 | 48.0° |
+| 4488 | Kolkata (Garden Reach) | 3.46 | 2.92 | 0.270 | 47.0° |
+
+Werkzeug: `py/add_np203_table6_msf.py`.
+
+Nachgeprüft an Kolkata über zwei Monate stündlicher Vorhersage: Das Tagesmittel
+schwankt um 0.53 m (Buch 0.54 m), und sein Maximum fällt in jeder Periode auf
+±1 Tag mit dem größten Tageshub zusammen — genau die Aussage des Buches.
+
+Nicht in der Sammlung: **4346** Bhavnagar und **4354** Tapi River (Hazira) sind
+Standardhäfen, für die ATT keine Konstanten druckt; **4475a** Dhamra fehlt uns
+ganz. Ebenso fehlt 4353a Hazira aus Part II S.234.
 
 ## Scans
 
@@ -251,6 +279,7 @@ py/fix_np203_numbers_2.py       att-Nummern gegen den Scan geradeziehen
 py/hat_test_np203.py            HAT-Test gegen Table V Part 2
 py/check_np203_bezug.py         Bezugshäfen gegen die Gruppenköpfe prüfen
 py/rebuild_np203_transfer.py    Transfer neu ableiten (richtiger Bezug, publizierte Pegel)
+py/add_np203_table6_msf.py      Table VI -> MSf (vierzehntägiges Mittelwasser)
 ```
 
 `build_np203_tablev.py` gleicht **über die att-Nummer** ab und prüft zusätzlich den
