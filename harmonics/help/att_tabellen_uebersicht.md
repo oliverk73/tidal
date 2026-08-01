@@ -123,6 +123,42 @@ Part-II-Differenzen (Phasen dafür auf Weltzeit umrechnen, sonst vergleicht man
 Die Zone jedes Standardhafens steht als `ZONE_STD` in
 `py/rebuild_np203_transfer.py`, die je Seite vorherrschende als `ZONE_SEITE`.
 
+**Der Import von 2026-06 hat HHMM als Minutenzahl gelesen** — aus `−0540`
+wurden −540 statt −340 Minuten. Das sind 200 Minuten und damit 96.6° in M2.
+Die Umrechnung war dabei uneinheitlich (Port Beaufort `+0110` → +70 min, also
+richtig), und im Roten Meer stammten einzelne Werte zusätzlich aus verschobenen
+Zeilen. Mechanisch nachrechnen ließ sich das deshalb nicht; alle 167 Transfers
+sind neu aus dem Scan abgeleitet.
+
+## Wenn die Niedrigwasserspalten fehlen
+
+Steht bei MLWN/MLWS ein ⊙, lässt sich der Hub nicht bilden. „Niedrigwasser wie
+am Bezugshafen" anzunehmen sprengt den Faktor, sobald der Nipphub klein ist —
+Cherbaniani Reef kam so auf fN = 4.5 und lag 0.85 m über HAT. Stattdessen wird
+der Faktor gegen das **Mittelwasser** gebildet, das im Buch in der ML-Spalte
+steht; der Bezugswert folgt aus dem Gruppenkopf als (MHWS + MLWS)/2:
+
+```
+fS = (MHWS_bezug + dMHWS - ML_sek) / (MHWS_bezug - ML_bezug)
+```
+
+Wo beide Spalten vorhanden sind, liefern beide Regeln dasselbe (Al Qusayr 0.40),
+deshalb greift die ML-Regel nur in der Lücke.
+
+## Wie gut trifft der Transfer?
+
+Gemessen an sieben Stationen, die **beides** haben — Part-III-Messwerte und
+Part-II-Differenzen (Ägypten und Saudi-Arabien unter Suez, S.228):
+
+| | mittlerer Fehler |
+|---|---|
+| Amplitude M2 | 0.021 m (bei 0.13–0.42 m Amplitude) |
+| Phase M2 | 0.9° |
+
+Das ist die Genauigkeitsgrenze des Verfahrens — der Part-II-Transfer ist damit
+für Häfen ohne Part III eine tragfähige Quelle, solange Bezugshafen, Pegel und
+Zone stimmen.
+
 ## Warum Table V Part 2 gebraucht wird
 
 HAT ist der höchste astronomisch mögliche Wasserstand. Der über ein Jahr
@@ -138,11 +174,11 @@ Die HAT-Werte aller NP203-Sekundärhäfen stehen transkribiert in
 die ganze Datei auf einen Rutsch (Toleranz +0.30 m nach oben, −1.00 m nach unten).
 
 Verlauf über dieselbe Datei: **69** auffällig vor dem Part-III-Import, **38**
-danach, **22** nach der Neuableitung Madagaskars, **13** seit dem 2026-08-01,
-als alle Transfers auf den richtigen Bezugshafen und die Zonenkorrektur
-umgestellt waren (443 geprüfte Stationen).
+danach, **22** nach der Neuableitung Madagaskars, **13** nach der Umstellung
+auf den richtigen Bezugshafen, **12** seit alle 167 Transfers neu aus dem Scan
+abgeleitet sind (445 geprüfte Stationen, Stand 2026-08-01).
 
-Von den verbleibenden 13 sind mehrere **Widersprüche im Buch selbst**, keine
+Von den verbleibenden 12 sind mehrere **Widersprüche im Buch selbst**, keine
 Fehler bei uns. Beispiele, jeweils gegen den Scan geprüft:
 
 | att | Station | HAT im Buch | aus den Part-II-Differenzen |

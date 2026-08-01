@@ -53,6 +53,9 @@ RENUM = {
     # 20260730 beim Bezugshaefen-Audit gefunden
     '3851': ('3852', 'Port Simuco'),        # S.224: 3852 Port Simuco 13 59 / 40 36
     '4148': ('4147', "Ras Mujamila"),       # S.228: 4147 Ras Mujamila 14 36 / 42 54
+    # 20260801 beim Neuableiten der restlichen 98 gefunden
+    '4058': ('4057', 'Caluula'),            # S.227: 4057 Caluula 11 58 / 50 46
+    '4312': ('4311', 'Gugsar'),             # S.233: 4311 Gugsar 25 32 / 58 50
 }
 
 

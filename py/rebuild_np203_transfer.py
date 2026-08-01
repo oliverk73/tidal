@@ -124,8 +124,9 @@ ZONE_STD = {
 }
 
 # Vorherrschende Zone je Part-II-Seite (Zwischenueberschrift "Zone -0xx00").
-ZONE_SEITE = {222: 2.0, 223: 2.0, 224: 3.0, 225: 4.0, 226: 3.0,
-              228: 3.0, 229: 4.0, 233: 3.5, 235: 5.5}
+ZONE_SEITE = {222: 2.0, 223: 2.0, 224: 3.0, 225: 4.0, 226: 3.0, 227: 3.0,
+              228: 3.0, 229: 4.0, 230: 4.0, 233: 3.5, 234: 5.5, 235: 5.5,
+              236: 5.5, 237: 5.5}
 S224 = {
  '3864': ('Baie Ambavanibe',    -dm(12, 4), dm(49, 10),   42,   23, (1.2, 0.7, 0.6, 0.4), 1.71),
  '3865': ('Baie du Courrier',   -dm(12, 11), dm(49, 8),    38,   30, (0.9, 0.4, 0.4, 0.1), 1.80),
@@ -180,6 +181,11 @@ S224 = {
 # Nur die Zeilen, deren Bezugshafen der alte Import verwechselt hatte.
 S222 = {
  '2004': ("Baie de l'Oiseau",   -dm(48, 41), dm(69,  2), 1050, None, (-1.0, -0.8, None, None), 0.6, 5.0),
+ '2006a': ('Baie Norvegienne',  -dm(49, 22), dm(70, 21),  147,  129, (-3.3, -2.3, -1.3, -0.4), 1.22, 5.0),
+ '2007': ("Port Jeanne d'Arc",  -dm(49, 33), dm(69, 49),  140, None, (-3.2, -2.3, None, None), 1.1,  5.0),
+ '2007a': ('Baie Larose',       -dm(49, 35), dm(69, 18),   52,   39, (-3.8, -2.7, -1.6, -0.5), 0.89, 5.0),
+ '3787': ('Cape Agulhas',       -dm(34, 50), dm(20,  1),    5, None, ( 0.2,  0.0, None, None), 1.1),
+ '3788': ('Port Beaufort',      -dm(34, 24), dm(20, 49),   70, None, ( 0.2,  0.0, None, None), 1.1),
  '3791': ('Plettenberg Bay',    -dm(34,  3), dm(23, 23),    2, None, (-0.1,  0.0, None, None), 1.1),
  '3792': ('Cape St. Francis',   -dm(34, 10), dm(24, 52),    2, None, (-0.1,  0.0, None, None), 1.1),
 }
@@ -187,6 +193,71 @@ S223 = {
  '3797': ("Port St. John's",    -dm(31, 37), dm(29, 33),   -2, None, (-0.1,  0.0, None, None), 1.1),
  '3802': ('Kosi River Entrance', -dm(26, 53), dm(32, 54),   0, None, ( 0.0,  0.0, None, None), 1.1),
  '3806': ('Limpopo River Bar',  -dm(25, 12), dm(33, 31),  -32,  -32, (-4.9, -3.2, -2.0, -0.4), 1.0),
+ '3820': ('Porto de Sofala',    -dm(20, 11), dm(34, 45),  -15, None, (-0.9, -0.6, None, None), 3.2),
+ '3822': ('Pungue River Bar',   -dm(20,  0), dm(34, 58),  -40, None, (None, None, None, None), None),
+ '3824': ('Mapanda',            -dm(19, 23), dm(34, 29),  310, None, (None, None, None, None), None),
+ '3826': ('Inhamissengo Entrance', -dm(18, 54), dm(36, 12), -30, None, (-2.9, -1.9, None, None), 2.0),
+ '3833': ('Macuse',             -dm(17, 43), dm(37, 11),  -40,  -55, (-2.4, -1.7, -1.0, -0.3), 2.3),
+ '3834': ('Maquivale',          -dm(17, 44), dm(37,  5),  -10,  -25, (-1.9, -1.5, -0.8, -0.3), 2.4),
+ '3838': ('Porto de Moebase',   -dm(17,  6), dm(38, 43),  -45,  -45, (-3.1, -2.1, None, None), 2.1),
+ '3843': ('Angoche (Canal do Sul)', -dm(16, 15), dm(40, 1), -50, None, (-2.4, -1.6, None, None), 2.3),
+ '3847': ('Mocambo',            -dm(15,  8), dm(40, 32),  -60, None, (-2.4, -1.6, None, None), 2.3),
+}
+S227 = {
+ '4026': ('Mwamba Wa Ziwaiu',   -dm( 2, 37), dm(40, 35),  -15,  -15, (-0.5, -0.3, -0.3, -0.2), 1.6),
+ '4027': ('Ziwa La Juu',        -dm( 2, 28), dm(40, 47),   -5,   -5, (-0.3, -0.2, -0.1, -0.1), 1.7),
+ '4032': ('Buur Gaabo',         -dm( 1, 14), dm(41, 51),    0, None, (-0.8, -0.6, -0.4, -0.3), 1.4),
+ '4036': ('Baraawe (Brava)',     dm( 1,  6), dm(44,  2),   -3, None, (-1.3, -1.0, None, None), 1.1),
+ '4037': ('Marka',               dm( 1, 43), dm(44, 47),   -3, None, (-1.5, -1.2, None, None), 1.0),
+ '4040': ('Cadale (Itala)',      dm( 2, 45), dm(46, 20), None, None, (-1.7, -1.2, None, None), 0.9),
+ '4048': ('Raas Xaafuun',        dm(10, 28), dm(51, 22), None, None, (-1.8, -1.3, None, None), 0.9),
+ '4052': ('Ghubbah di-Net',      dm(12, 27), dm(53, 28),  -90, None, (-0.2, -0.2, None, None), 1.2),
+ '4055': ('Kal Farun',           dm(12, 30), dm(52, 10),   -5, None, (-0.5, -0.4, None, None), 1.0),
+ '4056': ('Raas Caseyr',         dm(11, 50), dm(51, 16), -100, None, ( 0.0, -0.4, None, None), 1.2),
+ '4057': ('Caluula',             dm(11, 58), dm(50, 46),   25,   25, ( 0.0, -0.2, -0.1,  0.0), 1.3),
+ '4060': ('Laasqoray',           dm(11, 10), dm(48, 13),  -50, None, ( 0.1, -0.1, None, None), 1.4),
+ '4062': ('Xiis',                dm(10, 54), dm(46, 55),  -30, None, ( 0.2,  0.0, None, None), 1.5),
+ '4069': ('Ghoubbet Kharab',     dm(11, 33), dm(42, 34),   20, None, (-0.7, -0.6, None, None), 0.9),
+ '4070': ('Obock',               dm(11, 57), dm(43, 17),   40, None, (-0.4, -0.2, None, None), 1.1),
+ '4074': ('Ed',                  dm(13, 56), dm(41, 42),  100, None, (-1.0, -0.9, None, None), 0.5),
+ '4076': ('Anfile Bay',          dm(14, 47), dm(40, 44),  140, None, (-1.0, -0.9, None, None), 0.5),
+}
+S230 = {
+ '4190': ('Suhar',               dm(24, 23), dm(56, 44),   10,   10, (-0.4, -0.4, -0.5, -0.3), 1.5),
+ '4202': ('Al Jazeera Port',     dm(25, 43), dm(55, 47),  -50, None, ( 0.1,  0.3, None, None), 1.1),
+}
+S234 = {
+ '4321': ('Sonmiani Harbour',    dm(25, 23), dm(66, 33),  -45, None, ( 0.1,  0.1, None, None), 1.6, 5.0),
+ '4324': ('Sir Mouth',           dm(23, 40), dm(68,  7),   10, None, ( 0.6,  0.6, None, None), 2.0, 5.0),
+ '4340a': ('Diu Head',           dm(20, 41), dm(70, 50), None, None, (-1.3, -1.1,  0.2,  0.3), 1.50),
+ '4345': ('Piram Island',        dm(21, 36), dm(72, 21),  -40, None, (-1.3, -1.0, None, None), 5.2),
+ '4348': ('Khambhat (Cambay)',   dm(22, 17), dm(72, 37),   60, None, (-2.1, None, None, None), None),
+ '4351': ('Mehegam',             dm(21, 40), dm(72, 46),   10,  145, (-5.6, -5.4, -3.1, -1.3), None),
+ '4352': ('Bharuch',             dm(21, 41), dm(72, 59),  130,  325, (-7.4, -6.9, -3.2, -0.6), None),
+}
+S236 = {
+ '4399': ('Cherbaniani Reef',    dm(12, 21), dm(71, 53),  -50, None, ( 0.7,  0.7, None, None), 1.2),
+ '4400': ('Kadmat',              dm(11, 13), dm(72, 46),    0, None, ( 0.5,  0.4, None, None), 1.0),
+ '4400a': ('Androth Island',     dm(10, 49), dm(73, 41), None, None, ( 0.4,  0.3,  0.2,  0.1), 0.9),
+ '4406': ('Vattaru',             dm( 3, 15), dm(73, 24),   60, None, ( 0.1,  0.1, None, None), 0.7, 5.0),
+ '4407': ('Hadhdunmathi Atoll',  dm( 1, 55), dm(73, 25),  290, None, ( 0.0,  0.0, None, None), 0.7, 5.0),
+ '4408': ('North Huvadhu',       dm( 0, 53), dm(73, 19),  310, None, ( 0.0,  0.0, None, None), 0.7, 5.0),
+ '4432': ('Hambantota',          dm( 6,  7), dm(81,  8),   30, None, (-0.1, -0.1, None, None), 0.4),
+ '4435': ('Batticaloa Roads',    dm( 7, 46), dm(81, 41),  155, None, ( 0.0,  0.1, None, None), 0.5),
+}
+S237 = {
+ '4446': ('Kottaippattanam',     dm( 9, 59), dm(79, 11),  160, None, (-0.1,  0.0, -0.1,  0.0), 0.4),
+ '4453': ('Pulicat',             dm(13, 27), dm(80, 19), None, None, (-0.3, -0.2,  0.0,  0.1), 0.50),
+ '4455': ('Vadarevu',            dm(15, 48), dm(80, 25), None, None, ( 0.4,  0.3,  0.3,  0.3), 0.9),
+ '4456': ('Nizampatam',          dm(15, 53), dm(80, 38),   10, None, ( 0.2,  0.3, None, None), 0.7),
+ '4457': ('Machilipatnam',       dm(16, 11), dm(81, 12),   20,   20, ( 0.5,  0.5,  0.5,  0.5), 1.1),
+ '4482': ('Gangra Semaphore',    dm(21, 57), dm(88,  1),   35,   70, ( 0.4,  0.3, -0.1, -0.1), 3.16),
+ '4482a': ('Haldia',             dm(22,  2), dm(88,  6),   51,   96, ( 0.5,  0.5, -0.1, -0.1), 3.23),
+ '4483': ('Balari Semaphore',    dm(22,  5), dm(88, 11),   82,  136, (None, None, None, None), None),
+ '4485': ('Hugli Point Semaphore', dm(22, 13), dm(88, 4), 137,  191, (None, None, None, None), None),
+ '4486': ('Moyapur',             dm(22, 26), dm(88,  8),  194,  279, ( 0.3,  0.2, -0.4,  0.0), 3.00),
+ '4490': ('Sandhead',            dm(20, 58), dm(88, 35),  -22,  -42, (-2.4, -1.8, None, None), 1.8),
+ '4491': ('Canning Town',        dm(22, 18), dm(88, 40),  120,  158, ( 0.6,  0.7, None, None), 3.2),
 }
 S224b = {
  '3852': ('Port Simuco',        -dm(13, 59), dm(40, 36),  -25, None, ( 0.3,  0.3, None, None), 2.2, 2.0),
@@ -200,6 +271,14 @@ S225 = {
  '3965': ('Baie Curieuse',      -dm( 4, 17), dm(55, 43),    5,   -5, (-0.2, -0.2, -0.1, -0.1), 0.90),
 }
 S226 = {
+ '3973': ('St. Pierre Island',  -dm( 9, 19), dm(50, 43),   55, None, ( 0.8, None, None, None), None, 4.0),
+ '3976': ('Cosmoledo Islands',  -dm( 9, 41), dm(47, 32),  -65, None, ( 0.8,  0.2, None, None), None),
+ '3977': ('Assomption Island',  -dm( 9, 44), dm(46, 30),  -60, None, ( 1.4,  0.8, None, None), 1.1),
+ '3979': ('Iles Glorieuses',    -dm(11, 30), dm(47, 22),   20, None, (-0.2, -0.1,  0.0,  0.2), 2.00),
+ '3980a': ('Mtiti',             -dm(12, 55), dm(45,  4),   -1,    9, ( 0.1,  0.3, -0.1,  0.0), 2.10),
+ '3981': ('Mutsamudu',          -dm(12, 10), dm(44, 24),  -40, None, ( 0.5,  0.6,  0.2,  0.3), 2.4),
+ '3982': ('Fomboni',            -dm(12, 17), dm(43, 46),   10, None, ( 0.3,  0.5,  0.1,  0.3), 2.3),
+ '3983': ('Moroni',             -dm(11, 42), dm(43, 15),   35, None, ( 1.0,  1.0,  0.4,  0.4), 2.7),
  '3984': ('Ruvuma Bay',         -dm(10, 24), dm(40, 27),   10, None, ( 0.1, -0.1, None, None), 1.8),
  '3986': ('Lindi',              -dm(10,  0), dm(39, 43),   -5,    5, (-0.1, -0.1, -0.2, -0.1), 1.9),
  '3988': ('Kiswere Haven',      -dm( 9, 25), dm(39, 38),  -10,    0, ( 0.1,  0.1, -0.1, -0.1), 2.0),
@@ -207,14 +286,40 @@ S226 = {
  '3996': ('Salale',             -dm( 7, 51), dm(39, 20),   15, None, ( 0.4,  0.2, None, None), 2.1),
  '3997': ('Batja',              -dm( 7, 56), dm(39, 19),  135, None, (-1.2, None, None, None), None),
  '3998': ('Usimbe',             -dm( 8,  1), dm(38, 18),  195, None, (-2.7, None, None, None), None),
+ '4000': ('Latham Island',      -dm( 6, 54), dm(39, 56),  -60, None, ( 0.5,  0.3, None, None), 2.2),
+ '4002': ('Bagamoyo',           -dm( 6, 26), dm(38, 55),  -10,    0, ( 0.9,  0.8,  0.5,  0.3), 2.6),
+ '4005': ('Ras Kizimkazi',      -dm( 6, 28), dm(39, 30),   -5, None, ( 0.6,  0.6, None, None), 2.5),
+ '4008': ('Pangani Bay',        -dm( 5, 26), dm(39,  0),   -3,    7, ( 0.3,  0.4,  0.3,  0.3), 2.3),
+ '4009': ('Mchengangazi Pass',  -dm( 5,  6), dm(39, 52),    0, None, ( 0.2,  0.2, None, None), 2.2),
+ '4013': ('Msuka Bay',          -dm( 4, 54), dm(39, 42),    0, None, ( 0.5,  0.6, None, None), 2.4),
+ '4014': ('Tanga Bay',          -dm( 5,  4), dm(39,  7),   -3,    7, ( 0.1,  0.2,  0.1,  0.1), 2.1),
 }
 S228 = {
+ '4094': ("Marsa Sha'b",         dm(22, 51), dm(35, 47), -345, None, (-1.4, -1.2, None, None), 0.3, 2.0),
+ '4095': ('Barnis (Berenice)',   dm(23, 56), dm(35, 29), -330, None, (-1.3, -1.1, None, None), 0.4, 2.0),
+ '4100': ('Hurghada (Al Ghardaqah)', dm(27, 13), dm(33, 51), -340, None, (-1.0, -0.8, None, None), 0.6, 2.0),
+ '4115': ('Sharm Ash Shaykh',    dm(27, 51), dm(34, 17), -330, -330, (-0.7, -0.5, -0.3, -0.1), 0.8, 2.0),
+ '4117': ('Khalij al Qarah (Dahab)', dm(28, 28), dm(34, 30), -300, None, (-0.8, -0.6, None, None), 0.8, 2.0),
+ '4118': ('Eilat',               dm(29, 33), dm(34, 57), -300, None, (-1.1, -0.9, -0.5, -0.4), 0.4, 2.0),
+ '4120': ('Humaydah',            dm(29, 15), dm(34, 56), -220, None, (-0.8, -0.6, None, None), 0.8),
+ '4122': ('Jazirat Tiran',       dm(28,  0), dm(34, 30), -280, None, (-0.7, -0.5, None, None), 0.9),
+ '4125': ("Sharm an Nu'man",     dm(27,  6), dm(35, 45), -270, None, (-1.2, -1.0, None, None), 0.5),
+ '4127': ('Mardunah',            dm(26,  4), dm(36, 28), -310, None, (-1.2, -1.0, None, None), 0.5),
+ '4129': ('Al Hasani',           dm(24, 58), dm(37,  5), -285, None, (-1.2, -1.0, None, None), 0.5),
  '4138': ('Sanak Island',        dm(19, 43), dm(40, 38),  130, None, (-1.2, -0.9, None, None), 0.5),
  '4140': ('Hadarah Island',      dm(18, 26), dm(41, 13),  145, None, (-1.1, -0.9, None, None), 0.5),
  '4144': ('Tiqfash',             dm(15, 42), dm(42, 30),  140, None, (-0.7, -0.6, None, None), 0.8),
  '4147': ('Ras Mujamila',        dm(14, 36), dm(42, 54),  120, None, (-0.9, -0.7, None, None), 0.6),
 }
 S229 = {
+ '4156': ('Shuqra',              dm(13, 22), dm(45, 41),   -5, None, (-0.4, -0.3, None, None), 1.1, 3.0),
+ '4157': ('Magatinal Saghir',    dm(13, 24), dm(46, 26),   20, None, (-0.4, -0.3, None, None), 1.1, 3.0),
+ '4159': ('Ras Safwan',          dm(13, 48), dm(47, 34),   20,   20, (-0.3, -0.3, -0.2, -0.2), 1.12, 3.0),
+ '4160': ('Balhaf',              dm(13, 58), dm(48, 11),   30,   30, (-0.1, -0.1,  0.0, -0.1), 1.28, 3.0),
+ '4163': ('Ras Sharmah',         dm(14, 49), dm(50,  2),   35, None, ( 0.1,  0.3, None, None), 1.5, 3.0),
+ '4165': ('Qishn',               dm(15, 25), dm(51, 41),   30, None, (-0.2,  0.0, None, None), 1.3, 3.0),
+ '4166': ('Nishtun',             dm(15, 49), dm(52, 12),   30,   30, (-0.2, -0.2, -0.1,  0.0), 1.1, 3.0),
+ '4187': ('Sib',                 dm(23, 41), dm(58, 11),   10,   10, (-0.4, -0.4, -0.5, -0.3), 1.5),
  '4170a': ('Ash Shuwaymiyah',    dm(17, 49), dm(55, 27),  -11,  -12, (-0.7, -0.7, -0.4, -0.3), 1.15),
  '4172': ('Hamr an Nafur',       dm(19, 48), dm(57, 49),   10, None, ( 0.0,  0.0, None, None), 1.8),
  '4174': ('Ghubbat Hashish',     dm(20, 28), dm(58, 10),   30, None, ( 0.0, -0.1, None, None), 1.8),
@@ -227,18 +332,24 @@ S233 = {
  '4286': ('Nakhilu',             dm(27, 49), dm(51, 28),  -80, None, ( 0.0,  0.1, None, None), 1.2),
  '4293': ('Jazireh-ye Qeys',     dm(26, 33), dm(54,  1), -640, None, (-1.1, -0.9, None, None), 1.2),
  '4302': ('Laft',                dm(26, 56), dm(55, 44), -710, None, ( 1.1,  1.0,  0.3,  0.5), 2.5),
+ '4311': ('Gugsar',              dm(25, 32), dm(58, 50),  -91,  -89, (-0.1,  0.0,  0.2,  0.2), 1.60),
 }
 S235 = {
+ '4356a': ('Tarapur',            dm(19, 52), dm(72, 41), None, None, ( 0.4,  0.4,  0.1,  0.1), 2.84),
+ '4361': ('Thana',               dm(19, 12), dm(72, 59),  130, None, (-0.8, -0.6, None, None), 2.1),
  '4385a': ('Mangalore',          dm(12, 51), dm(74, 50), None, None, (-1.0, -1.0, -0.2,  0.0), 1.0),
 }
 
 BUCH = {222: S222, 223: S223, 224: {**S224, **S224b}, 225: S225, 226: S226,
-        228: S228, 229: S229, 233: S233, 235: S235}
+        227: S227, 228: S228, 229: S229, 230: S230, 233: S233, 234: S234,
+        235: S235, 236: S236, 237: S237}
 
 # Nummern, die es im Buch nicht gibt -- Duplikate ihres Nachbarn.
 PHANTOM = {
     '3866': 'Kopie von 3868 Nosy Mitsio (Name, Position und Z0 identisch); S.224 kennt keine 3866',
     '3885': 'Kopie von 3884 Nosy Makamby (Name, Position und Z0 identisch); S.224 kennt keine 3885',
+    '4033': 'Kopie von 4032 Buur Gaabo (Name, Position und Z0 identisch); S.227 fuehrt '
+            'nur 4032 Buur Gaabo und 4034 Qooriga Kismaayo',
 }
 
 
@@ -308,7 +419,7 @@ def lies_extern():
     return out
 
 
-def transfer(ref_con, pegel, h, t, dz=0.0):
+def transfer(ref_con, pegel, h, t, dz=0.0, ml=None):
     """Skalierung gegen die PUBLIZIERTEN Pegel des Bezugshafens.
 
     dz = Zone_Bezug - Zone_Sekundaer in Stunden. Die Zeitdifferenzen des Buches
@@ -321,19 +432,39 @@ def transfer(ref_con, pegel, h, t, dz=0.0):
     SR, NR = MHWS - MLWS, MHWN - MLWN
     dMHWS, dMHWN, dMLWN, dMLWS = h
     if dMHWS is None:
-        return None
+        # Buch gibt gar keine Hoehendifferenz (Kreis-Symbol in allen vier
+        # Spalten). Dann gilt derselbe Hub wie am Bezugshafen -- genau das
+        # meint ATT damit, und genauso werden die drei anderen Spalten schon
+        # behandelt. Nur der Zeitversatz wirkt.
+        dMHWS = 0.0
     if dMLWS is None:
         dMLWS = 0.0
     if dMHWN is None:
         dMHWN = dMHWS
     if dMLWN is None:
         dMLWN = dMLWS
-    SRs = SR + (dMHWS - dMLWS)
-    NRs = NR + (dMHWN - dMLWN)
-    if SRs <= 0:
-        SRs = max(0.10, 0.10 * SR)
-    fS = max(.05, min(3., SRs / SR))
-    fN = max(.05, min(3., NRs / NR)) if NR > .01 else fS
+    # Fehlen die Niedrigwasserspalten (Kreis-Symbol), ist der Hub nicht bildbar.
+    # "Niedrigwasser wie am Bezugshafen" anzunehmen sprengt den Faktor, sobald
+    # der Nipphub klein ist -- Cherbaniani Reef kam so auf fN=4.5. Dann lieber
+    # den Faktor gegen das MITTELWASSER bilden; das steht im Buch (Spalte ML)
+    # und der Bezugswert folgt aus dem Gruppenkopf als (MHWS+MLWS)/2.
+    # Wo beide Spalten da sind, liefern beide Regeln dasselbe (Al Qusayr 0.40),
+    # deshalb greift die ML-Regel nur in der Luecke.
+    MLref = 0.5 * (MHWS + MLWS)
+    lw_fehlt = h[3] is None and ml is not None and MHWS > MLref + .01
+    if lw_fehlt:
+        fS = (MHWS + h[0] - ml) / (MHWS - MLref)
+        fN = ((MHWN + (h[1] if h[1] is not None else h[0]) - ml) / (MHWN - MLref)
+              if MHWN > MLref + .01 else fS)
+    else:
+        SRs = SR + (dMHWS - dMLWS)
+        NRs = NR + (dMHWN - dMLWN)
+        if SRs <= 0:
+            SRs = max(0.10, 0.10 * SR)
+        fS = SRs / SR
+        fN = NRs / NR if NR > .01 else fS
+    fS = max(.05, min(3., fS))
+    fN = max(.05, min(3., fN))
     fD = .5 * (fS + fN)
 
     M2, S2 = ref_con.get('M2', (0, 0))[0], ref_con.get('S2', (0, 0))[0]
@@ -424,7 +555,8 @@ def main():
                 print(f'{att:7s} {b["name"][:34]:34s} Bezug {g["ref"]} nicht gefunden'); continue
             if g['ref'] not in ZONE_STD:
                 print(f'{att:7s} {b["name"][:34]:34s} Zone des Bezugs {g["ref"]} unbekannt'); continue
-            tr = transfer(r['con'], g['pegel'], h, (tH, tL), ZONE_STD[g['ref']] - zone)
+            tr = transfer(r['con'], g['pegel'], h, (tH, tL),
+                          ZONE_STD[g['ref']] - zone, ml)
             if tr is None:
                 print(f'{att:7s} {b["name"][:34]:34s} keine Hoehendifferenz -- uebersprungen'); continue
             alt = b['con'].get('M2', (0, 0))[0]
