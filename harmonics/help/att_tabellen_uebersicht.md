@@ -236,7 +236,15 @@ tide -l STATION -b 2026-01-01 -e 2027-01-01 -m s   ->  "Maximum was ..."
 
 Die HAT-Werte aller NP203-Sekundärhäfen stehen transkribiert in
 `harmonics/help/np203_table5_part2_hat.json`; `py/hat_test_np203.py` prüft damit
-die ganze Datei auf einen Rutsch (Toleranz +0.30 m nach oben, −1.00 m nach unten).
+die ganze Datei auf einen Rutsch (Toleranz **+0.30 m plus die Amplituden der
+abgeleiteten N2/K2** nach oben, −1.00 m nach unten).
+
+Der Zuschlag für N2/K2 ist kein Aufweichen des Tests, sondern die Korrektur
+eines Äpfel-mit-Birnen-Vergleichs: ATT rechnet HAT aus M2, S2, K1 und O1, wir
+synthetisieren mit sechs. Jede zusätzliche Konstituente kann den Jahresgipfel
+über den Buch-HAT heben, und zwar proportional zu ihrer Amplitude — bei kleinem
+Hub um Zentimeter, beim größten Hafen des Bandes um vier Dezimeter. Der feste
+Zuschlag benachteiligte deshalb systematisch die Großhub-Stationen.
 
 Verlauf über dieselbe Datei: **69** auffällig vor dem Part-III-Import, **38**
 danach, **22** nach der Neuableitung Madagaskars, **13** nach der Umstellung
@@ -261,6 +269,50 @@ wird stillschweigend die alte aus `binary/` getestet.
 **Nicht** geeignet ist die Summe aller Amplituden plus Z0: Sie ist eine obere
 Schranke, die nie erreicht wird, und meldet Fehlalarme (Suhar schien 0.5 m zu
 hoch, liegt tatsächlich 0.3 m unter HAT).
+
+## Part III der Standardhäfen — gegen den Scan geprüft (2026-08-02)
+
+Anlass waren die beiden HAT-Ausreißer 4279 Bandar-e Mahshahr (+0.42 m) und
+4325 Kori Creek Entrance (+0.91 m). Beide hatten verschiedene Ursachen, und
+die zweite reichte weit über die eine Station hinaus.
+
+**Kori Creek war falsch abgeschrieben.** Buch (2015 *und* 2002, Ziffer für
+Ziffer identisch): M2 349/1.00, S2 030/0.32, K1 064/0.37. In der Datei stand
+M2 100/1.00, S2 132/0.64, K1 037/0.74. Das Muster ist immer dasselbe — eine
+Amplitude landet als Phase (`1.00` → 100), eine Phase als Amplitude
+(`074` → 0.74). Der Import vom 20260615 hat also spaltenweise verrutscht.
+
+Daraufhin **alle 107 Standardhäfen gegen die Scanseiten S.240–249 gelesen**,
+zusätzlich gegen die OCR des 2002er Bandes gegengeprüft (beide Ausgaben
+stimmen in Part III fast überall überein, siehe unten). Ergebnis: **32 der
+107 Stationen** wichen in mindestens einer Zahl ab, meist in genau einer,
+bei 4325/4334/4340 in drei bis vier. Richtigstellung in
+`py/fix_np203_part3_gegen_2015.py`, die Buchwerte stehen dort als `BUCH`.
+
+**Zweiter Fund: die N2-Inferenz lief über den Nullpunkt aus dem Ruder.**
+
+```
+g_N2 = g_M2 − 0.536 · (g_S2 − g_M2)
+```
+
+verlangt die *kleine* Phasendifferenz. Steht M2 bei 343° und S2 bei 51°, ist
+die rohe Differenz −292° statt +68°, und die N2-Phase liegt **167° daneben**.
+Das traf **25 der 102 Stationen mit Inferenz**. Die Differenz gehört auf
+(−180, 180] normiert:
+
+```python
+d = (gs - gm + 180) % 360 - 180
+```
+
+**Mahshahr dagegen ist in Ordnung.** Die Konstanten stimmen exakt mit S.246
+(Z0 3.24, M2 343/1.54, S2 051/0.53, K1 314/0.53, O1 270/0.31), S.W.-Spalten
+leer. Der Überschuss kommt allein aus den zwei Konstituenten, die wir mehr
+haben als das Buch: ohne N2/K2 liegt der Jahresgipfel bei 5.83 m (+0.13),
+mit ihnen bei 6.13 m (+0.43). Mahshahr hat mit 2.91 m die größte
+Amplitudensumme des Bandes, deshalb schlägt der Zuschlag dort am stärksten
+durch — daraus die neue, amplitudenabhängige Toleranz des HAT-Tests.
+
+Stand danach: **107 Stationen geprüft, 0 auffällig.**
 
 ## Table VI — erledigt für NP203 (2026-08-01)
 
@@ -402,6 +454,72 @@ Darin steckt Material, das wir noch nirgends haben:
   Outer Platform", Abadan fehlt. Die Lücke bleibt.
 
 OCR von Part II und Part III liegt bereits vor: `tide_tables/yemen/ocr/part{2,3}_full.txt`.
+
+## Südchinesisches Meer aus dem 2002er Band — erledigt (2026-08-02)
+
+Die Ausgabe 2002 reicht bis Irian Jaya und Vietnam, die Ausgabe 2015 nur bis
+Myanmar. Für den ganzen Bereich dahinter hatten wir **keine einzige Station**
+(nur 4490 und 4491 existierten). Jetzt:
+**`harmonics/att/harmonics_att_np203_scs.txt`, 791 Stationen.**
+
+| Land | Stationen | | Land | Stationen |
+|---|---:|---|---|---:|
+| Indonesien | 356 | | Bangladesch | 16 |
+| Philippinen | 140 | | Brunei | 9 |
+| Malaysia | 117 | | Singapur | 8 |
+| Myanmar | 44 | | Kambodscha | 3 |
+| Vietnam | 42 | | Australien (Cocos, Christmas) | 2 |
+| Thailand | 33 | | Spratly/Scarborough | 2 |
+| Indien (Andamanen/Nikobaren) | 18 | | Paracel-Inseln | 1 |
+
+**Die OCR war hier unbrauchbar** — von 849 Part-III-Zeilen ließen sich 101
+parsen, und die kaputten sind nicht als kaputt erkennbar (`4982` statt `4282`,
+`0339` statt `0.33`). Alles von den Scanseiten abgelesen, in zwei Dateien:
+
+- `harmonics/help/np203_2002_part3_scs.tsv` — Konstanten, Buchseiten 322–338
+- `harmonics/help/np203_2002_part2_scs_pos.tsv` — Position und ML, S. 281–309
+
+Part III führt **keine Koordinaten**; die stehen nur in Part II, ebenso das ML
+für die Häfen, bei denen in Part III `w` (Table VI) steht. Beide Teile decken
+sich exakt: 791 Nummern, keine ohne Gegenstück.
+
+**Trick für Part II:** nur die gebrauchten Spalten ausschneiden und
+nebeneinandersetzen, dann passt eine ganze Buchseite lesbar in ein Bild statt
+in drei:
+
+```python
+L=fitz.Rect(16,45,305,800)   # Nr, Ort, Lat, Long
+R=fitz.Rect(498,45,578,800)  # Z0
+pg.show_pdf_page(fitz.Rect(0,0,L.width,L.height), src, p, clip=L)
+pg.show_pdf_page(fitz.Rect(L.width+10,0,L.width+10+R.width,L.height), src, p, clip=R)
+```
+
+**Prüfung ohne Table V.** Für dieses Gebiet gibt es keine Table V, der HAT-Test
+entfällt. Stattdessen gegen die unabhängigen Sammlungen: 421 der neuen
+Stationen liegen näher als 3 km an einer Station aus classic/ticon/utide/noaa.
+Dabei muss man **auf denselben Meridian umrechnen** — die ATT-Stationen tragen
+den Zonenmeridian (`+08:00 :Asia/Makassar`), die anderen Sammlungen GMT
+(`+00:00 :Asia/Makassar`):
+
+```
+g_Zone = g_GMT + omega * Zonenstunden        omega(M2) = 28.9841 Grad/h
+```
+
+Danach: mittlere Abweichung **0.03 m** in der M2-Amplitude und **4.6°** in der
+Phase. Bei classic, classic_original und TICON (71 Paare) weicht keine einzige
+Phase um mehr als 60° ab. Die 35 Ausreißer stammen alle von NOAA-Table-2-
+Transfers, und zwar dort, wo M2 winzig ist (Golf von Tonkin) und der Transfer
+von einem weit entfernten Bezugshafen kommt — die Buchwerte sind dort die
+besseren.
+
+73 Stationsnamen kollidieren wörtlich mit anderen Sammlungen (Manila, Cebu,
+Haiphong …). Das ist im Bestand schon so — „Cebu, Philippines" steht bereits
+dreifach in classic_original, ticon und utide — und bleibt so.
+
+**Was der 2002er Band darüber hinaus noch hergibt:** die Part-II-Transfers für
+denselben Bereich (Zeitdifferenzen und Höhenverhältnisse für die Häfen *ohne*
+eigene Konstanten). Die habe ich nicht angefasst; von Part II sind nur
+Position und ML abgelesen.
 
 ## Scans
 

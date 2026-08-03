@@ -7,10 +7,14 @@ HAT ist der hoechste astronomisch moegliche Wasserstand. Der ueber ein volles
 Jahr vorhergesagte Maximalwert muss knapp darunter liegen. Die Pruefung stammt
 aus derselben Quelle wie die Daten und braucht keine Modellannahmen.
 
-Toleranz nach oben: +0.30 m. Wir synthetisieren mit sechs bis acht
-Konstituenten, ATT leitet HAT aus vier ab -- ein kleiner Ueberschuss ist
-normal. Nach unten wird ab -1.00 m gemeldet: so viel fehlender Hub deutet auf
-einen geschrumpften Part-II-Transfer hin.
+Toleranz nach oben: +0.30 m plus die Amplituden der abgeleiteten N2/K2. ATT
+rechnet HAT aus M2, S2, K1 und O1; jede Konstituente, die wir zusaetzlich
+ansetzen, kann den Jahresmaximalwert ueber diesen HAT heben, und zwar umso
+mehr, je groesser der Hub ist. Der feste Zuschlag allein reichte deshalb bei
+4279 Bandar-e Mahshahr nicht (N2 0.29 m + K2 0.14 m, Ueberschuss +0.43 m,
+ohne die beiden nur +0.13 m) -- 20260802 geprueft, die Konstanten stimmen
+Ziffer fuer Ziffer mit S.246. Nach unten wird ab -1.00 m gemeldet: so viel
+fehlender Hub deutet auf einen geschrumpften Part-II-Transfer hin.
 
 NICHT geeignet waere die Summe aller Amplituden plus Z0 -- eine obere Schranke,
 die nie erreicht wird (Fehlalarm Suhar 20260728).
@@ -49,6 +53,28 @@ def hat_tabelle():
     return H
 
 
+def zuschlag(path):
+    """att-Nummer -> Summe der abgeleiteten N2/K2-Amplituden. Um so viel darf
+    der Jahresmaximalwert den HAT des Buches ueberschreiten, ohne dass etwas
+    faul waere."""
+    L = open(path, encoding='iso-8859-1').read().split('\n')
+    out, att, note, s = {}, None, '', 0.0
+    for l in L + ['# BEGIN HOT COMMENTS']:
+        if l.startswith('# BEGIN HOT COMMENTS'):
+            if att:
+                out[att] = s if 'inferiert' in note else 0.0
+            att, note, s = None, '', 0.0
+        elif l.startswith('# att_number:'):
+            att = l.split(': ')[1].strip()
+        elif l.startswith('# note:'):
+            note += l
+        else:
+            m = re.match(r'^(N2|K2)\s+([\d.]+)\s+[\d.]+\s*$', l)
+            if m:
+                s += float(m.group(2))
+    return out
+
+
 def stations(path):
     """att-Nummer -> Stationsname, aus der Textquelle."""
     L = open(path, encoding='iso-8859-1').read().split('\n')
@@ -84,6 +110,7 @@ def main():
     zeige_alle = '--all' in sys.argv
     HAT = hat_tabelle()
     NAME = stations(txt)
+    ZU = zuschlag(txt)
 
     treffer, fehlend, auffaellig = 0, [], []
     for att, name in sorted(NAME.items()):
@@ -95,7 +122,8 @@ def main():
             print(f'{att:7s} {name[:44]:44s} keine Vorhersage'); continue
         d = mx - hat
         treffer += 1
-        flag = '  <-- ueber HAT' if d > OBEN else ('  <-- weit unter HAT' if d < UNTEN else '')
+        oben = OBEN + ZU.get(att, 0.0)
+        flag = '  <-- ueber HAT' if d > oben else ('  <-- weit unter HAT' if d < UNTEN else '')
         if flag:
             auffaellig.append((att, name, hat, mx, d))
         if flag or zeige_alle:
