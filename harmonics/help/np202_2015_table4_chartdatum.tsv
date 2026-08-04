@@ -1,0 +1,216 @@
+# ATT NP202, Ausgabe 2015 -- TABLE IV, Buchseiten xxxvi und xxxvii
+# "Height in metres of Chart Datum relative to the Land Levelling System in
+#  countries outside the United Kingdom"
+#
+# Der Wert ist die Hoehe des Kartennulls UEBER dem Landeshoehensystem, also
+# meist negativ (Kartennull liegt unter dem Landesnull). Umrechnung einer
+# XTide-Vorhersage h (ueber Kartennull) in Landeshoehe:
+#     h_Land = h + height
+# Beispiel Cuxhaven: 3.20 m ueber KN  ->  3.20 + (-2.00) = 1.20 m ueber NN.
+#
+# Seite xxxvi deckt 1386-1675, Seite xxxvii 1676-1992 ab. Andere Nummern des
+# Bandes stehen NICHT in Table IV -- die Tabelle fuehrt nur die Laender mit
+# amtlichem Landeshoehensystem im Bereich Daenemark bis Aegypten.
+# Am 04.08.2026 Spalte fuer Spalte gegen den Scan gelesen (2 Durchgaenge,
+# der zweite bei 1500 px Spaltenbreite), keine Abweichung.
+#
+# att	name	height	datum	std
+#   height = Hoehe Kartennull ueber Landesnull, Meter, Vorzeichen wie im Buch
+#   datum  = Kuerzel des Landeshoehensystems, siehe Legende am Dateiende
+#   std    = S, wenn das Buch den Namen fett setzt (Standardhafen des Bandes)
+#
+1386	Kobenhavn	+0.04	DNN	-
+1386a	Hornbaek	+0.01	DNN	-
+1387	Korsor	+0.09	DNN	-
+1390	Gedser	+0.10	DNN	-
+1392	Slipshavn	+0.07	DNN	-
+1395	Fredericia	+0.08	DNN	-
+1399	Arhus	+0.03	DNN	-
+1409	Frederikshavn	-0.01	DNN	-
+1417	Esbjerg	-0.69	DNN	S
+1421a	List	-1.50	NN	-
+1423	Hornum	-1.60	NN	-
+1425	Amrum-Hafen	-2.03	NN	-
+1425a	Fohr, Wyk	-2.18	NN	-
+1426	Dagebull	-2.32	NN	-
+1427	Pellworm, Anleger	-2.37	NN	-
+1428	Suderoogsand	-2.22	NN	-
+1429	Nordstrand, Strucklahnungshorn	-2.53	NN	-
+1430	Husum	-2.46	NN	-
+1431	Helgoland	-1.85	NN	S
+1435a	Linnenplate	-2.10	NN	-
+1436	Busum	-2.20	NN	-
+1437	Grosser Vogelsand	-2.18	NN	-
+1437a	Scharhorn	-2.10	NN	-
+1438	Cuxhaven	-2.00	NN	S
+1438a	Otterndorf	-1.95	NN	-
+1438b	Osteriff	-1.90	NN	-
+1439	Brunsbuttel Mole 1	-1.90	NN	S
+1440	Gluckstadt	-1.90	NN	-
+1440a	Krautsand	-1.90	NN	-
+1441	Stadersand	-1.90	NN	-
+1442	Schulau	-1.90	NN	-
+1443	Seemannshoeft	-1.90	NN	-
+1444	Hamburg	-1.90	NN	S
+1445	Harburg	-1.90	NN	-
+1449	Alte Weser Lighthouse	-2.15	NN	-
+1450	Dwarsgat	-2.41	NN	-
+1450a	Robbensudsteert	-2.56	NN	-
+1451	Bremerhaven	-2.62	NN	S
+1452	Nordenham	-2.60	NN	-
+1453	Brake	-2.25	NN	-
+1454	Elsfleth	-2.13	NN	-
+1454a	Farge	-2.00	NN	-
+1455	Vegesack	-2.00	NN	-
+1456	Bremen	-2.00	NN	-
+1458	Wangerooge East	-2.11	NN	-
+1458a	Wangerooge, Langes Riff	-2.07	NN	-
+1459	Wangerooge West	-2.06	NN	-
+1459a	Mellumplate	-2.23	NN	-
+1460	Schillig	-2.34	NN	-
+1461	Hooksielplate	-2.47	NN	-
+1463	Wilhelmshaven	-2.70	NN	S
+1466	Spiekeroog	-1.92	NN	-
+1467	Neuharlingersiel	-2.00	NN	-
+1467a	Bensersiel	-2.00	NN	-
+1468	Langeoog	-1.92	NN	-
+1469	Nordeney (Riffgat)	-1.83	NN	-
+1470	Norddeich Hafen	-1.89	NN	-
+1470a	Juist	-1.90	NN	-
+1471	Memmert	-1.90	NN	-
+1472	Borkum (Fischerbalje)	-1.81	NN	-
+1473	Emshorn	-1.92	NN	-
+1473a	Dukegat	-2.02	NN	-
+1474	Knock	-2.20	NN	-
+1475	Emden	-2.38	NN	S
+1475a	Leerort	-2.10	NN	-
+1475b	Papenburg	-2.10	NN	-
+1475c	Nieuwe Statenzijl	-2.60	NN	-
+1476	Delfzijl	-2.23	NAP	-
+1476a	Eemshaven	-1.92	NAP	S
+1477	Schiermonnikoog	-1.68	NAP	-
+1478	Lauwersoog	-1.75	NAP	-
+1480	Nes	-1.72	NAP	-
+1483	West Terschelling	-1.48	NAP	-
+1484	Vlieland-haven	-1.48	NAP	-
+1485	Harlingen	-1.34	NAP	-
+1486	Kornwerderzand	-1.27	NAP	-
+1487	Den Oever	-1.15	NAP	-
+1488	Oude Schild	-1.17	NAP	-
+1489	Den Helder	-1.25	NAP	S
+1501	IJmuiden	-1.03	NAP	S
+1503	Scheveningen	-1.03	NAP	-
+1505	Hoek van Holland	-0.92	NAP	S
+1506	Maassluis	-0.83	NAP	-
+1507	Vlaardingen	-0.74	NAP	-
+1508	Rotterdam	-0.67	NAP	S
+1509	Krimpen aan de Lek	-0.40	NAP	-
+1511	Schoonhoven	-0.35	NAP	-
+1512	Spijkenisse	-0.65	NAP	-
+1512a	Goidschalxoord	-0.35	NAP	-
+1517	Dordrecht	-0.07	NAP	-
+1521	Haringvlietsluizen	-1.15	NAP	-
+1528	Roompot Buiten	-1.81	NAP	-
+1533a	Westkapelle	-2.20	NAP	-
+1534	Vlissingen	-2.56	NAP	S
+1536	Terneuzen	-2.69	NAP	S
+1537	Hansweert	-2.83	NAP	-
+1538	Bath	-2.95	NAP	-
+1539	Prosperpolder	-0.69	TAW	S
+1539a	Boudewijnsluis	-0.74	TAW	-
+1539b	Royersluis	-0.77	TAW	-
+1539c	Boom	-0.29	TAW	-
+1539d	Gentbrugge	+2.71	TAW	-
+1540	Cadzand (Wielingen Sluis)	-2.52	NAP	-
+1562	Zeebrugge	-0.23	TAW	S
+1564	Oostende	-0.50	TAW	S
+1565	Nieuwpoort	-0.65	TAW	-
+1568	Dunkerque	-2.69	IGN	S
+1570	Calais	-3.46	IGN	S
+1572	Boulogne-sur-Mer	-4.39	IGN	S
+1579	Dieppe	-4.45	IGN	S
+1581	Fecamp	-4.43	IGN	-
+1581b	Antifer	-4.41	IGN	-
+1582	Le Havre	-4.38	IGN	S
+1600	Cherbourg	-3.29	IGN	S
+1614	St Malo	-6.29	IGN	S
+1620	Paimpol	-5.64	IGN	-
+1629	Morlaix	-4.77	IGN	-
+1630	Roscoff	-4.76	IGN	-
+1636	Le Conquet	-3.48	IGN	-
+1638	Brest	-3.64	IGN	S
+1640	Douarnenez	-3.28	IGN	-
+1643	Audierne	-2.59	IGN	-
+1648	Concarneau	-2.53	IGN	-
+1650	Port Louis	-2.58	IGN	-
+1651	Lorient (Arsenal)	-2.63	IGN	S
+1652	Port Tudy	-2.73	IGN	-
+1656	Port Navalo	-2.62	IGN	-
+1660	Penerf	-2.93	IGN	-
+1664	St. Nazaire	-3.16	IGN	-
+1667a	Pointe de Saint-Gildas	-3.08	IGN	-
+1673	Les Sables d'Olonne	-2.83	IGN	-
+1675	La Rochelle-La Pallice	-3.50	IGN	S
+1676	La Rochelle	-3.50	IGN	-
+1681	Pointe de Grave	-2.83	IGN	S
+1682	Richard	-2.82	IGN	-
+1683	Lamena	-2.81	IGN	-
+1684	Pauillac	-2.50	IGN	-
+1685	La Reuille	-2.03	IGN	-
+1686	Le Marquis	-1.88	IGN	-
+1687	Bordeaux	-1.81	IGN	-
+1692	Boucau	-2.14	IGN	-
+1693	Socoa	-2.17	IGN	-
+1756	Rio Guadalquivir Bar	-1.65	A	-
+1757	Bonanza	-1.41	A	-
+1758	Corta de los Jeronimos	-0.60	A	-
+1770	Gibraltar	-0.25	A	S
+1782	Port Vendres	-0.39	IGN	-
+1785	Marseilles	-0.33	IGN	-
+1786	Toulon	-0.25	IGN	-
+1789	Nice	-0.33	IGN	-
+1790	Monte Carlo	-0.35	IGN	-
+1794	Ajaccio	-0.37	NGC	-
+1820	Arzew	-0.34	NGA	-
+1822	Alger (Algiers)	-0.34	NGA	-
+1880	Valletta	-0.44	M	-
+1985	Famagusta	-0.39	C	-
+1988	Beirut	-0.20	LND	-
+1988a	Sidon	-0.30	LND	-
+1989	Hefa (Haifa)	-0.24	I	-
+1990	Ashdod	-0.24	I	-
+1991	Bur Sa'id (Port Said)	+17.60	S	-
+1992	El Iskandariya (Alexandria)	-0.34	E	-
+#
+# LEGENDE DER LANDESHOEHENSYSTEME (Notes on Land Levelling Systems, S. xxxvii)
+# A    Alicante Datum -- Mittelwasser in Alicante aus Beobachtungen 1870-1872.
+# C    Land Survey Datum of Cyprus -- naeherungsweise Mittelwasser.
+# DNN  Dansk Normal Null -- aus dem Mittelwasser an zehn daenischen Pegeln
+#      zwischen 1890 und 1900 bestimmt.
+# E    Survey of Egypt Datum.
+# I    Israel Survey Datum.
+# IGN  Nivellement General de la France (NGF), auch Lallemand-System, beruht
+#      auf dem Mittelwasser von Marseille.
+# LND  Lebanese National Datum.
+# M    Ordnance Datum (Malta) -- willkuerlich gelegt, naeherungsweise MSL.
+# NAP  Normaal Amsterdams Peil -- der Stand, bis zu dem das Wasser der
+#      Zuiderzee frueher in die Amsterdamer Grachten einlaufen durfte; seit
+#      1891 niederlaendisches Landeshoehensystem.
+# NGA  Nivellement General de l'Algerie.
+# NGC  Nivellement General de la Corse.
+# NN   Normal Null -- Bezugsniveau der Bundesrepublik Deutschland.
+# S    Suez Canal Datum.
+# TAW  Tweede Algemene Waterpassing -- liegt 0.11 m ueber NKD in Prosperpolder
+#      und 0.11 m ueber dem ersten Nivellementsnetz des belgischen
+#      Ministeriums fuer oeffentliche Arbeiten an der Kueste. Entspricht
+#      naeherungsweise dem Niedrigwasser der belgischen Kueste.
+#
+# ANMERKUNGEN
+# - 1475c Nieuwe Statenzijl traegt trotz niederlaendischen Namens NN: der Ort
+#   liegt an der deutsch-niederlaendischen Grenze im Ems-Aestuar, das Buch
+#   bezieht ihn auf das deutsche System. So gedruckt, nicht korrigiert.
+# - 1539d Gentbrugge und 1991 Bur Sa'id sind die beiden positiven Werte:
+#   dort liegt das Kartennull UEBER dem Landesnull. Bei Port Said ist der
+#   Bezug das Suez Canal Datum, das weit unter dem Meeresspiegel liegt.
+# - 1429 Nordstrand: das Buch setzt den Namen zweizeilig und schreibt ihn
+#   ohne Umlaut ("Strucklahnungshorn"); amtlich Strucklahnungshoern.
