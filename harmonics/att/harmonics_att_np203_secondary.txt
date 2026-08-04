@@ -19027,8 +19027,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 23.0500
-# !latitude: -34.0667
+# !longitude: 23.0449
+# !latitude: -34.0502
 Knysna, South Africa
 +02:00 :Africa/Johannesburg
 1.0600 meters
@@ -24815,8 +24815,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 48.3000
-# !latitude: -13.4000
+# !longitude: 48.2810
+# !latitude: -13.4080
 Andoany (Hellville), Madagascar
 +03:00 :Indian/Antananarivo
 2.3100 meters
@@ -43329,8 +43329,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 40.1333
-# !latitude: -3.2167
+# !longitude: 40.1265
+# !latitude: -3.2147
 Malindi, Kenya
 +03:00 :Africa/Nairobi
 1.9000 meters
@@ -80918,6 +80918,202 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Iran
+# source: ADMIRALTY Tide Tables Vol.3 (NP203)
+# att_number: 4276A
+# note: NP203 Part-II-Transfer von 4268 Shatt al Arab Outer Bar.
+# note: Die Ausgabe 2015 fuehrt Abadan als Standardhafen (Table V Part 1),
+# note: druckt aber keine Konstanten -- Part III springt von 4271 zu 4276b.
+# note: Differenzen daher aus der Ausgabe 2002, wo er noch Sekundaerhafen
+# note: Nr. 4270 war: +0250 / +0345, -1.0 -0.8 -0.7 +0.2, ML 1.22.
+# note: Probe: auf die Pegel des Bezugshafens angewendet ergibt das
+# note: 2.0 / 1.6 / 0.6 / 0.6 -- genau die Pegel der Ausgabe 2015.
+# note: fS=0.538 fN=0.909 dt=198 min.
+# date_imported: 20260803
+# datum: Chart Datum (Z0 = mean level above CD)
+# confidence: 5
+# !units: meters
+# !longitude: 48.2667
+# !latitude: 30.3333
+Abadan, Iran
++03:00 :Asia/Tehran
+1.2200 meters
+x 0 0
+K1              0.3619  344.51
+K2              0.0146  108.02
+x 0 0
+x 0 0
+M2              0.5542  43.41
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N2              0.1053  8.91
+x 0 0
+O1              0.2171  292.90
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0542  107.75
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# BEGIN HOT COMMENTS
+# country: Iran
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4276b
 # note: NP203 Part III S.246 (2015), Meridian +03:30. Stationseigene
@@ -85913,8 +86109,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 61.4170
-# !latitude: 25.0670
+# !longitude: 61.4207
+# !latitude: 25.0710
 Gwatar Bay, Iran
 +03:30 :Asia/Tehran
 1.8000 meters
@@ -91869,8 +92065,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 68.8000
-# !latitude: 23.8333
+# !longitude: 68.7727
+# !latitude: 23.8319
 Lakhpat, Gujarat, India
 +05:30 :Asia/Calcutta
 2.5300 meters
@@ -92060,9 +92256,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 69.7167
-# !latitude: 22.7333
-Navinal Point (Mundra), Gujarat, India
+# !longitude: 69.7155
+# !latitude: 22.7412
+Mundra Port (Navinal Point), Gujarat, India
 +05:30 :Asia/Kolkata
 3.3800 meters
 x 0 0
@@ -92442,9 +92638,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 70.0333
-# !latitude: 22.5667
-Rozi, Gujarat, India
+# !longitude: 70.0401
+# !latitude: 22.5671
+Rozi (Bedi Port), Gujarat, India
 +05:30 :Asia/Calcutta
 3.5600 meters
 x 0 0
@@ -92633,8 +92829,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 69.8167
-# !latitude: 22.4333
+# !longitude: 69.8197
+# !latitude: 22.4334
 Sikka, Gujarat, India
 +05:30 :Asia/Calcutta
 3.0400 meters
@@ -92824,8 +93020,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 68.9500
-# !latitude: 22.2667
+# !longitude: 68.9582
+# !latitude: 22.2563
 Dwarka (Rupen Bandar), Gujarat, India
 +05:30 :Asia/Kolkata
 2.1600 meters
@@ -93015,8 +93211,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 71.0833
-# !latitude: 20.7500
+# !longitude: 71.0791
+# !latitude: 20.7423
 Nawabandar, Gujarat, India
 +05:30 :Asia/Kolkata
 1.7000 meters
@@ -93206,8 +93402,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 71.3833
-# !latitude: 20.8667
+# !longitude: 71.3865
+# !latitude: 20.8653
 Jafarabad, Gujarat, India
 +05:30 :Asia/Kolkata
 1.8500 meters
@@ -93397,8 +93593,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 71.5333
-# !latitude: 20.9500
+# !longitude: 71.5171
+# !latitude: 20.9247
 Pipavav Bandar, Gujarat, India
 +05:30 :Asia/Kolkata
 1.7600 meters
@@ -93592,8 +93788,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 72.3500
-# !latitude: 21.6000
+# !longitude: 72.3519
+# !latitude: 21.5987
 Piram Island, Gujarat, India
 +00:00 :Asia/Calcutta
 5.2000 meters
@@ -93787,8 +93983,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 72.6167
-# !latitude: 22.2833
+# !longitude: 72.6070
+# !latitude: 22.2857
 Khambhat (Cambay), Gujarat, India
 +00:00 :Asia/Calcutta
 4.2000 meters
@@ -94173,9 +94369,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 72.6167
-# !latitude: 21.1000
-Hazira, Gujarat, India
+# !longitude: 72.6230
+# !latitude: 21.0950
+Hazira (Inner), Gujarat, India
 +00:00 :Asia/Kolkata
 4.5000 meters
 J1              0.0357  73.82
@@ -94364,8 +94560,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 72.6167
-# !latitude: 21.1833
+# !longitude: 72.6193
+# !latitude: 21.1639
 Suvali, Gujarat, India
 +05:30 :Asia/Kolkata
 3.6000 meters
@@ -94559,8 +94755,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 72.6833
-# !latitude: 19.8667
+# !longitude: 72.6808
+# !latitude: 19.8647
 Tarapur, Maharashtra, India
 +05:30 :Asia/Calcutta
 2.8400 meters
@@ -94753,8 +94949,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 72.9333
-# !latitude: 18.9167
+# !longitude: 72.9112
+# !latitude: 18.9163
 Nava (Karanja), Maharashtra, India
 +05:30 :Asia/Calcutta
 2.5900 meters
@@ -94944,8 +95140,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 72.9333
-# !latitude: 18.3167
+# !longitude: 72.9594
+# !latitude: 18.3208
 Murud-Janjira, Maharashtra, India
 +05:30 :Asia/Calcutta
 2.1600 meters
@@ -95135,9 +95331,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 73.1833
-# !latitude: 17.5833
-Port Dabhol, Maharashtra, India
+# !longitude: 73.1769
+# !latitude: 17.5845
+Dabhol, Maharashtra, India
 +05:30 :Asia/Calcutta
 1.6800 meters
 x 0 0
@@ -95326,9 +95522,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 73.8000
-# !latitude: 15.4167
-Mormugao (Goa), Goa, India
+# !longitude: 73.7946
+# !latitude: 15.4157
+Mormugao, Goa, India
 +05:30 :Asia/Calcutta
 1.3000 meters
 x 0 0
@@ -97063,9 +97259,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 68.6000
-# !latitude: 23.2500
-Godia Creek, Gujarat, India
+# !longitude: 68.6064
+# !latitude: 23.2431
+Jakhau (Godia Creek), Gujarat, India
 +05:30 :Asia/Calcutta
 1.9000 meters
 x 0 0
@@ -97254,8 +97450,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 69.3833
-# !latitude: 21.8333
+# !longitude: 69.3795
+# !latitude: 21.8374
 Miyani, Gujarat, India
 +05:30 :Asia/Kolkata
 1.0100 meters
@@ -97445,8 +97641,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 69.6000
-# !latitude: 21.6333
+# !longitude: 69.5906
+# !latitude: 21.6383
 Porbandar, Gujarat, India
 +05:30 :Asia/Kolkata
 1.8200 meters
@@ -97638,8 +97834,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 70.8333
-# !latitude: 20.6833
+# !longitude: 70.8372
+# !latitude: 20.6901
 Diu Head, India
 +05:30 :Asia/Kolkata
 1.5000 meters
@@ -98222,9 +98418,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 72.9833
-# !latitude: 21.6833
-Bharuch, Gujarat, India
+# !longitude: 72.9987
+# !latitude: 21.6943
+Bharuch (Narmada River), Gujarat, India
 +00:00 :Asia/Calcutta
 0.7000 meters
 J1              0.0130  132.91
@@ -98413,9 +98609,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 72.7500
-# !latitude: 19.4500
-Arnalapada, Maharashtra, India
+# !longitude: 72.7444
+# !latitude: 19.4622
+Arnala (Arnalapada), Maharashtra, India
 +05:30 :Asia/Calcutta
 2.7000 meters
 x 0 0
@@ -98604,9 +98800,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 72.8167
-# !latitude: 19.0333
-Bandra, Maharashtra, India
+# !longitude: 72.8182
+# !latitude: 19.0417
+Bandra (Mumbai), Maharashtra, India
 +05:30 :Asia/Calcutta
 2.4900 meters
 x 0 0
@@ -98799,9 +98995,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 72.9833
-# !latitude: 19.2000
-Thana, Maharashtra, India
+# !longitude: 72.9851
+# !latitude: 19.1976
+Thane, Maharashtra, India
 +05:30 :Asia/Calcutta
 2.1000 meters
 J1              0.0135  91.77
@@ -98990,9 +99186,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 72.9500
-# !latitude: 18.8167
-Rewas Bandar, Maharashtra, India
+# !longitude: 72.9467
+# !latitude: 18.8217
+Rewas (Jetty), Maharashtra, India
 +05:30 :Asia/Calcutta
 2.6400 meters
 x 0 0
@@ -99181,9 +99377,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 73.3000
-# !latitude: 16.9833
-Ratnagiri Bay, Maharashtra, India
+# !longitude: 73.2835
+# !latitude: 16.9878
+Ratnagiri, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.5200 meters
 x 0 0
@@ -99372,8 +99568,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 73.2333
-# !latitude: 17.3000
+# !longitude: 73.2240
+# !latitude: 17.2925
 Jaigarh, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.7800 meters
@@ -99563,8 +99759,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 73.3333
-# !latitude: 16.6167
+# !longitude: 73.3370
+# !latitude: 16.6222
 Musakazi Point, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.3700 meters
@@ -99754,8 +99950,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 74.3833
-# !latitude: 14.4167
+# !longitude: 74.3944
+# !latitude: 14.4185
 Kumta, Karnataka, India
 +05:30 :Asia/Kolkata
 1.1600 meters
@@ -99945,9 +100141,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 74.6667
-# !latitude: 13.6333
-Coondapoor, Karnataka, India
+# !longitude: 74.6730
+# !latitude: 13.6315
+Kundapura, Karnataka, India
 +05:30 :Asia/Kolkata
 1.0100 meters
 x 0 0
@@ -100136,8 +100332,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 74.6833
-# !latitude: 13.3500
+# !longitude: 74.6914
+# !latitude: 13.3497
 Malpe, Karnataka, India
 +05:30 :Asia/Calcutta
 1.0400 meters
@@ -100327,9 +100523,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 74.8000
-# !latitude: 12.9167
-New Mangalore, Karnataka, India
+# !longitude: 74.8089
+# !latitude: 12.9242
+New Mangalore Port, Karnataka, India
 +05:30 :Asia/Calcutta
 0.9500 meters
 x 0 0
@@ -100522,9 +100718,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 74.8333
-# !latitude: 12.8500
-Mangalore, Karnataka, India
+# !longitude: 74.8345
+# !latitude: 12.8492
+Mangaluru, Karnataka, India
 +00:00 :Asia/Calcutta
 1.0000 meters
 J1              0.0109  348.79
@@ -105335,8 +105531,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 64.6833
-# !latitude: 25.1833
+# !longitude: 64.6764
+# !latitude: 25.2036
 Ormara, Pakistan
 +05:00 :Asia/Karachi
 1.4900 meters
@@ -105526,8 +105722,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 63.4833
-# !latitude: 25.2667
+# !longitude: 63.4780
+# !latitude: 25.2639
 Pasni, Pakistan
 +05:00 :Asia/Karachi
 1.4000 meters
@@ -105721,9 +105917,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 66.5500
-# !latitude: 25.3833
-Sonmiani Harbour, Pakistan
+# !longitude: 66.5604
+# !latitude: 25.4495
+Sonmiani Harbour (Damb), Pakistan
 +00:00 :Asia/Karachi
 1.6000 meters
 J1              0.0234  337.10
@@ -105913,9 +106109,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 67.3167
-# !latitude: 24.1000
-Hajambro Creek, Pakistan
+# !longitude: 67.3667
+# !latitude: 24.1333
+Hajambro Creek Entrance (Keti Bandar), Pakistan
 +00:00 :Asia/Karachi
 1.8000 meters
 J1              0.0262  350.09
@@ -106295,9 +106491,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 67.2333
-# !latitude: 24.7833
-Hasan Point, Pakistan
+# !longitude: 67.2272
+# !latitude: 24.7843
+Hasan Point (Phitti Creek), Pakistan
 +05:00 :Asia/Karachi
 1.9000 meters
 x 0 0
@@ -106486,9 +106682,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 67.1333
+# !longitude: 67.1500
 # !latitude: 24.7000
-Port Qasim Entrance, Pakistan
+Port Qasim Entrance (Bundle Island), Pakistan
 +05:00 :Asia/Karachi
 1.7300 meters
 x 0 0
@@ -106677,9 +106873,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 67.1000
-# !latitude: 24.7667
-Ghizri Creek, Pakistan
+# !longitude: 67.0997
+# !latitude: 24.7774
+Ghizri Creek (Karachi), Pakistan
 +05:00 :Asia/Karachi
 1.7000 meters
 x 0 0

@@ -25042,8 +25042,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 70.2200
-# !latitude: 23.0200
+# !longitude: 70.2233
+# !latitude: 23.0094
 Kandla, Gujarat, India
 +05:30 :Asia/Kolkata
 3.8800 meters
@@ -25231,8 +25231,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 70.4500
-# !latitude: 22.9500
+# !longitude: 70.4442
+# !latitude: 22.9591
 Navlakhi, Gujarat, India
 +05:30 :Asia/Kolkata
 4.1500 meters
@@ -25420,8 +25420,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 69.0800
-# !latitude: 22.4700
+# !longitude: 69.0798
+# !latitude: 22.4688
 Okha, Gujarat, India
 +05:30 :Asia/Kolkata
 2.0400 meters
@@ -25610,8 +25610,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 70.3700
-# !latitude: 20.9100
+# !longitude: 70.3704
+# !latitude: 20.8996
 Veraval, Gujarat, India
 +05:30 :Asia/Kolkata
 1.3300 meters
@@ -25791,6 +25791,200 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
+# country: Pakistan
+# source: ADMIRALTY Tide Tables Vol.3 (NP203)
+# att_number: 4322
+# note: NP203 Part III S.247 (2015), Meridian +05:00. Stationseigene Konstanten.
+# note: Position aus Part II S.234 (24 48 N, 66 58 E). N2/K2 inferiert.
+# note: 20260803 neu angelegt -- der Bezugshafen der Gruppe
+# note: 4322a bis 4322e fehlte in der ATT-Sammlung. Unter "Karachi, Pakistan"
+# note: steht er auch in classic_original, TICON und UTide, dort aber ohne
+# note: att_number und nicht aus dem Buch.
+# date_imported: 20260803
+# datum: Chart Datum (Z0 = mean level above CD)
+# confidence: 7
+# !units: meters
+# !longitude: 66.9667
+# !latitude: 24.8000
+Karachi (Entrance), Pakistan
++05:00 :Asia/Karachi
+1.6700 meters
+x 0 0
+K1              0.4000  58.00
+K2              0.0756  344.00
+x 0 0
+x 0 0
+M2              0.8000  305.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N2              0.1520  284.10
+x 0 0
+O1              0.2100  45.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.2800  344.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+# BEGIN HOT COMMENTS
 # country: India
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Simplified Harmonic Method
 # att_number: 4325
@@ -25800,8 +25994,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 68.5000
-# !latitude: 23.6000
+# !longitude: 68.3500
+# !latitude: 23.5167
 Kori Creek Entrance, Gujarat, India
 +05:30 :Asia/Kolkata
 1.9400 meters
@@ -25989,8 +26183,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 69.3500
-# !latitude: 22.8300
+# !longitude: 69.3508
+# !latitude: 22.8217
 Mandvi, Gujarat, India
 +05:30 :Asia/Kolkata
 2.5900 meters
@@ -26179,9 +26373,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 69.6000
-# !latitude: 22.3100
-Salaya Harbour, Gujarat, India
+# !longitude: 69.6001
+# !latitude: 22.3188
+Salaya, Gujarat, India
 +05:30 :Asia/Kolkata
 3.1100 meters
 x 0 0
@@ -26368,8 +26562,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 72.9300
-# !latitude: 20.6300
+# !longitude: 72.9293
+# !latitude: 20.6299
 Valsad, Gujarat, India
 +05:30 :Asia/Kolkata
 3.8400 meters
@@ -26558,8 +26752,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 72.7100
-# !latitude: 19.9700
+# !longitude: 72.7167
+# !latitude: 19.9725
 Dahanu, Maharashtra, India
 +05:30 :Asia/Kolkata
 2.8400 meters
@@ -26748,8 +26942,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 72.6900
-# !latitude: 19.7200
+# !longitude: 72.7052
+# !latitude: 19.7272
 Satpati, Maharashtra, India
 +05:30 :Asia/Kolkata
 3.0900 meters
@@ -26938,8 +27132,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 72.8100
-# !latitude: 19.3300
+# !longitude: 72.8076
+# !latitude: 19.3248
 Vasai (Bassein), Maharashtra, India
 +05:30 :Asia/Kolkata
 2.5300 meters
@@ -27128,9 +27322,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 72.9500
-# !latitude: 19.0000
-Trombay, Maharashtra, India
+# !longitude: 72.9226
+# !latitude: 18.9989
+Trombay (Mumbai), Maharashtra, India
 +05:30 :Asia/Kolkata
 2.5200 meters
 x 0 0
@@ -27318,8 +27512,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 72.9200
-# !latitude: 18.5500
+# !longitude: 72.9291
+# !latitude: 18.5417
 Revadanda (Chaul), Maharashtra, India
 +05:30 :Asia/Kolkata
 2.4100 meters
@@ -27508,9 +27702,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 73.0500
-# !latitude: 17.9800
-Bankot, Maharashtra, India
+# !longitude: 73.0487
+# !latitude: 17.9814
+Bankot (Savitri River), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.9600 meters
 x 0 0
@@ -27697,9 +27891,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 73.3300
-# !latitude: 16.5700
-Vijayadurg Harbour, Maharashtra, India
+# !longitude: 73.3381
+# !latitude: 16.5561
+Vijayadurg (Vagothan River), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.3700 meters
 x 0 0
@@ -27887,9 +28081,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 73.3800
-# !latitude: 16.3800
-Devgarh, Maharashtra, India
+# !longitude: 73.3766
+# !latitude: 16.3806
+Devgad (Devgarh), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.3800 meters
 x 0 0
@@ -28077,8 +28271,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 73.4600
-# !latitude: 16.0600
+# !longitude: 73.4644
+# !latitude: 16.0544
 Malvan, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.1700 meters
@@ -28266,8 +28460,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 73.6300
-# !latitude: 15.8600
+# !longitude: 73.6218
+# !latitude: 15.8569
 Vengurla, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.1900 meters
@@ -28456,8 +28650,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 73.9500
-# !latitude: 15.1500
+# !longitude: 73.9508
+# !latitude: 15.1471
 Betul, Goa, India
 +05:30 :Asia/Kolkata
 1.0000 meters
@@ -28646,8 +28840,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 74.1300
-# !latitude: 14.8100
+# !longitude: 74.1116
+# !latitude: 14.7984
 Karwar, Karnataka, India
 +05:30 :Asia/Kolkata
 1.1800 meters
@@ -28836,8 +29030,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 74.5500
-# !latitude: 13.9700
+# !longitude: 74.5344
+# !latitude: 13.9681
 Bhatkal, Karnataka, India
 +05:30 :Asia/Kolkata
 0.7000 meters
@@ -29026,8 +29220,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 74.9900
-# !latitude: 12.5000
+# !longitude: 74.9937
+# !latitude: 12.4753
 Kasaragod, Kerala, India
 +05:30 :Asia/Kolkata
 0.8900 meters
