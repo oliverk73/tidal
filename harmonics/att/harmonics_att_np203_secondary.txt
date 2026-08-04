@@ -26162,12 +26162,16 @@ x 0 0
 # note: publizierten Pegel [2.3, 1.8, 1.1, 0.5] aus dem Gruppenkopf S.224.
 # note: 20260801 neu abgeleitet -- vorher falscher Bezugshafen bzw.
 # note: gerechneter statt publizierter Bezugshub. Zeit-/Hoehendiff. aus Part II S.224 (Buch: Pointe Maroloha).
+# note: 20260804 Breite berichtigt: stand auf 15 44 S, das ist die Zeile
+# note: darueber (3881 Mahajanga). Buch S.224 druckt fuer 3882 15 54 S /
+# note: 46 16 E, bei voller Scanaufloesung nachgelesen. Lage: Betsiboka-
+# note: Muendung, 18.5 km suedlich von Mahajanga.
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
 # !units: meters
 # !longitude: 46.2667
-# !latitude: -15.7333
+# !latitude: -15.9000
 Pointe Marolona, Madagascar
 +03:00 :Indian/Antananarivo
 3.4400 meters
@@ -96100,8 +96104,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 86.7333
-# !latitude: 20.7667
+# !longitude: 86.7393
+# !latitude: 20.7714
 Chandbali, Odisha, India
 +05:30 :Asia/Kolkata
 1.7700 meters
@@ -100909,9 +100913,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 75.3667
-# !latitude: 11.8500
-Cannanore, Kerala, India
+# !longitude: 75.3759
+# !latitude: 11.8550
+Kannur (Cannanore), Kerala, India
 +05:30 :Asia/Calcutta
 1.0200 meters
 x 0 0
@@ -101100,9 +101104,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 75.4833
-# !latitude: 11.7500
-Tellicherry, Kerala, India
+# !longitude: 75.4886
+# !latitude: 11.7443
+Thalassery (Tellicherry), Kerala, India
 +05:30 :Asia/Kolkata
 1.0200 meters
 x 0 0
@@ -103795,8 +103799,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 83.2833
-# !latitude: 17.6833
+# !longitude: 83.2885
+# !latitude: 17.6886
 Vishakhapatnam, Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 0.8400 meters
