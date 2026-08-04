@@ -1,0 +1,1002 @@
+# ATT NP202, Ausgabe 2015 -- TABLE V PART 2
+# "Highest Astronomical Tidal Levels (HAT) in metres at Secondary Ports"
+# Buchseiten xli-xlvii, xlix und li (PDF-Seiten 5-11, 15, 17 von np202_iv_vi.pdf).
+#
+# ABDECKUNG: transkribiert sind nur die neun Seiten, auf denen Stationen
+# unseres Bestands liegen. Die uebrigen sechs Seiten des Scans (Buchnummern
+# 2664-2904, 3039-3371, 3470-3718) enthalten keine unserer Stationen und sind
+# hier nicht erfasst. Der Scan selbst hat ausserdem eine Luecke zwischen 1694
+# und 2307 (Iberien, Mittelmeer, Westafrika, Suedamerika); dort haben wir
+# ebenfalls nichts.
+#
+# "-" = im Buch ein Kreis (No data).
+#
+# Am 04.08.2026 Spalte fuer Spalte vom Scan gelesen. WICHTIG: die Zuordnung zu
+# unserem Bestand muss ueber den NAMEN erfolgen, nicht ueber die Nummer --
+# unsere Nummerierung weicht an 17 Stellen vom Buch ab (siehe
+# py/hat_test_np202.py, Abschnitt VERSATZ).
+#
+# Bekannte Eigenheiten des Buches:
+# - 1008 Zaliv Pukhovyy steht ausser der Reihe zwischen 1090 und 1091.
+# - 1378 ist zweimal vergeben: Wismar und Travemuende. Hier als 1378 und 1378b.
+# - Die ganze Ostsee (1317-1379) traegt Kreise, dort gibt ATT kein HAT an.
+#
+# nr	name	hat
+780	Hvannasund	1.8
+782	Klaksvik	1.2
+783	Eide	2.0
+784	Nordskali	2.6
+785	Oyndarfjordur	2.3
+786	Fuglafjordur	2.3
+786a	Leirvik	1.4
+787	Gotuvik (Nordragota)	1.5
+792a	Kirkebo	1.3
+793	Vestmanna	2.6
+795	Sorvagur	2.3
+796	Midvagur	2.3
+798	Skopun	2.4
+799	Sandur	1.7
+800	Trongisvagur	1.8
+801	Vagur	1.0
+810	Heimaey	3.2
+812	Stokkseyri	3.4
+813	Eyrarbakki	3.4
+813a	Thorlakshofn	3.5
+814	Grindavik	3.8
+815	Sandgerdhi	4.3
+817	Keflavik	4.5
+818	Hafnarfjordhur	4.6
+820	Grundartangi	4.7
+821	Hvammsvik	4.7
+822	Akranes	4.6
+823	Borgarnes	4.7
+825	Rif	4.5
+825a	Olafsvik	4.5
+826	Grundarfjordhur	4.7
+827	Stykkisholmur	5.1
+828	Flatey (Breidafjordhur)	4.9
+828a	Reykanes	5.1
+828b	Brjanslaekur	5.2
+829	Vatneyri	3.8
+830	Sveinseyri	3.8
+831	Bildudalur	3.5
+832	Thingeyri	3.4
+833	Flateyri	2.8
+834	Sudhureyri	2.9
+835	Bolungavik	2.6
+835a	Isafjordhur	2.6
+836	Alftafjordhur	2.6
+837	Arngerdharseyri	-
+838	Veidileysufjordhur	-
+839	Latravik	-
+840	Reykjarfjordhur	1.5
+841	Holmavik	1.8
+842	Hrutafjordhur	1.9
+842a	Hvammstangi	1.8
+843	Skagastrond	1.8
+844	Saudarkrokur	1.6
+845	Hofsos	-
+846	Haganesvik	-
+847	Siglufjordhur	1.5
+848	Olafsfjordhur	1.6
+849	Akureyri	1.7
+849a	Hrisey	1.6
+849b	Grimsey	1.6
+850	Flatey (Skjalfanda)	1.7
+851	Husavik	1.6
+851a	Kopasker	1.4
+852	Raufarhofn	1.7
+853	Thorshofn	1.6
+854	Bakkafjordhur	-
+855	Vopnafjordhur	1.8
+855a	Bakkagerdhi	1.9
+856	Nes Farm	2.3
+858	Vestdalseyri	2.1
+859	Dalatangi	-
+860	Brekka	-
+861	Nordfjordhur (Nes)	1.8
+862	Hellisfjordhur	-
+864	Eskifjordhur	2.3
+865	Budareyri	2.0
+866	Faskrudsfjordhur	2.2
+866a	Stodvarfjordhur	2.3
+867	Breidhdalsvik	2.1
+867a	Djupivogur	2.4
+868	Papey	-
+870	Hvanney	2.4
+870a	Hofn	1.5
+871	Kalfafellstadir	-
+872	Ingolfshofdi	-
+875	Vik	-
+880	Maria Muschbukhta	1.3
+884	Kvalrossbukta	1.6
+885	Austervag	1.4
+886	Hopen	1.3
+888	Murchisonfjorden	1.3
+889	Brennevinsfjorden	1.1
+891	Sorgfjorden	1.1
+892	Mosselbukta	1.3
+894	Holmiabukta	-
+895	Danskegat	1.3
+896	Magdalenefjorden	1.3
+898	Kongsfjorden	1.6
+898a	Ny-Alesund	1.8
+900	Skansbukta	-
+901	Longyearbyen	2.0
+902	Gronfjorden	1.8
+903	Sveagruva	2.0
+904	Recherchefjorden	2.8
+905	Isbjornhamna (Hornsund)	1.7
+906	Kvalvagen	1.3
+910	Mys Flora	0.6
+911	Bukhta Tikhaya	0.4
+912	Bukhta Teplits	0.6
+920	Domashni Island	0.5
+930	Kotyelny Island	0.7
+950	Cape Serdtse Kamen	0.6
+951	Pitlekaj	0.4
+958	Ayon Island	0.1
+959	Kolyma River Entrance	-
+966	Tiksi Bay	0.6
+971	Komsomolskoy Pravda Island	0.9
+972	Cape Chelyuskin	0.9
+973	Hansen Island	0.7
+975	Rade De Zarya	0.8
+985	Bukhta Dikson	0.7
+986	Mys Sopochnaya Karga	1.3
+987	Ostrov Nasonovskiy	0.8
+989	Reka Sabule-Yaga	1.5
+990	Mys Kharse	1.2
+992	Mys Kamennyy	1.2
+995	Mys Ragozina	1.0
+998	Mys Marre-Salya	0.9
+1000	Zaliv Litke	0.6
+1001	Mys Byk	0.7
+1002	Mys Zhelaniya	0.7
+1003	Zaliv Russkaya Gavan	0.7
+1004	Foki Bight	0.7
+1005	Guba Krestovaya	0.9
+1006	Guba Mityushikha	1.1
+1007	Mys Seryebryany	0.8
+1009	Guba Belushya	0.6
+1010	Guba Nekhvatova	0.4
+1011	Guba Kamyenka	0.8
+1012	Guba Dolgaya	0.6
+1013	Bukhta Varneka	0.9
+1014	Ostrov Sokoliy	0.9
+1015	Khabarovo	0.7
+1017	Ostrov Dolgiy	1.1
+1021	Ostrov Varandyey	1.1
+1023	Mys Russki Zavorot	1.1
+1024	Reka Pechora	1.0
+1025	Bugrino	1.9
+1026	Reka Indiga	2.1
+1026a	Mys Mikulkin	3.6
+1027	Ostrov Korga	2.8
+1028	Mys Kanin Nos	3.5
+1031	Reka Kiya Mouth	4.7
+1032	Banka Litke	6.8
+1033	Mys Konushin	8.1
+1034	Semzha	8.3
+1035	Kamenka	2.6
+1036	Ostrov Morzhovets	6.6
+1037	Mys Voronov	7.7
+1038	Reka Megra	3.8
+1039	Mys Insty	2.2
+1040	Zimnyaya Zolotitsa	0.6
+1041	Mys Kerets	2.3
+1042	Berezovyy Bar	1.6
+1043	Mys Yuzhnyy	1.3
+1044	Lapominka	1.4
+1046	Severodvinsk	1.4
+1048	Unskaya Guba	1.4
+1049	Lopshen'ga	1.3
+1050	Ostrov Zhizhginskiy	1.6
+1051	Mys Letniy Orlov	1.6
+1052	Guba Pushlakhta	1.4
+1053	Mys Chesmenskiy	1.4
+1054	Mys Glubokiy	2.6
+1055	Ostrov Kiy	3.4
+1056	Onega	3.1
+1057	Ostrov Paskanets	3.6
+1058	Ostrov Mal Korepalka	2.9
+1059	Ostrov Berezhnoy Borshovets	2.0
+1060	Ostrov Sumostrov	2.1
+1061	Ostrov Molchanov	1.9
+1062	Ostrov Konev	1.7
+1064	Ostrov Anzerskiy	1.6
+1065	Solovetskiy	1.1
+1066	Ostrov Yuzhnyy Rombak	2.1
+1069	Mys Pon'goma Navolok	2.0
+1070	Mys Solomenny	2.0
+1071	Kalgalaksha	1.8
+1072	Gridina	1.9
+1073	Ostrov Sryedniy Guba Keret	2.2
+1074	Reka Kovda	2.5
+1075	Kandalaksha	3.4
+1076	Guba Porya	2.0
+1077	Guba Malaya Pirya	1.8
+1079	Reka Varzuga	1.8
+1080	Tetrino	2.1
+1082	Ostrov Sosnovets	4.5
+1083	Ostrov Veshnyak	6.6
+1084	Mys Orlov-Terskiy Tonkiy	6.7
+1085	Mys Bol'shoy Gorodetskiy	7.5
+1087	Guba Gremikha	6.5
+1088	Guba Savikha	6.2
+1089	Reka Drozdovka	5.1
+1090	Guba Vostochnaya Litsa	5.5
+1008	Zaliv Pukhovyy	1.0
+1091	Reka Kharlovka	4.4
+1092	Guba Rynda	4.6
+1093	Guba Porchnikha	4.8
+1094	Guba Podpakhta	4.6
+1095	Guba Teriberskaya	4.5
+1096	Proliv Malyy Oleniy	3.9
+1097	Guba Mogil'naya	4.6
+1098	Guba Zelenetskaya Zapadnaya	4.2
+1100	Guba Sayda	4.2
+1102	Mys Velikiy	4.2
+1103	Mys Bazisnyy	4.2
+1105	Murmansk	3.7
+1107	Guba Korelinskiy	4.2
+1108	Port Vladimir	3.6
+1109	Bukhta Nasha	4.2
+1110	Guba Zapadnaya Litsa	4.2
+1111	Bukhta Ozerko	4.2
+1112	Guba Malyy Korabel'naya	4.2
+1113	Guba Bol'shoy Korabel'naya	4.2
+1114	Guba Zubovskaya	4.2
+1115	Guba Vayda	4.1
+1118	Linakhamari	3.8
+1119	Guba Bazarnava	3.9
+1130	Grense Jakobselv	4.0
+1132	Karlbotn	4.1
+1133	Vadso	3.9
+1134	Vardo	3.7
+1135	Syltefjorden	3.6
+1136	Kongsfjorden	3.3
+1137	Berlevag	3.2
+1138	Smalfjorden	3.4
+1139	Skjanes	3.2
+1140	Mehamn	3.1
+1141	Kjollefjord	3.3
+1142	Ifjorden	3.1
+1143	Russenes	3.4
+1144	Hamnbukt	3.5
+1145	Honningsvag	3.2
+1146	Gjesvaer	3.2
+1147	Havoysund	3.4
+1148	Finneset	3.0
+1149	Litlefjorden	3.3
+1151	Karhavn	3.2
+1152	Skarvfjorden	3.4
+1153	Sorvaer	3.2
+1154	Komagfjord	3.6
+1155	Bossekop	3.6
+1156	Bergsfjord	3.5
+1157	Badderen	3.4
+1158	Skjervoy	3.4
+1159	Lyngseidet	3.5
+1160	Jovik	3.4
+1161	Torsvag	3.2
+1162	Finnkroken	3.4
+1164	Lingoya	2.7
+1165	Tennes	3.1
+1166	Rystraumen	3.1
+1167	Laukvik	2.6
+1168	Keianes	2.8
+1169	Gibostad	2.3
+1170	Gryllefjord	2.2
+1171	Finnlandsneset	2.5
+1172	Skrolsvik	2.6
+1173	Soloy	2.6
+1174	Harstad	2.7
+1175	Foroysaeter	2.8
+1176	Evenskjer	2.8
+1177	Andenes	2.5
+1178	Risoyhamn	2.6
+1179	Oksnes	2.3
+1180	Sortland	2.4
+1181	Stokmarknes	2.4
+1181a	Kabelvag	3.5
+1182	Svolvaer	3.3
+1183	Eggum	2.3
+1184	Stamsund	3.2
+1185	Sorvagen	3.4
+1186	Rost	2.8
+1187	Lodingen	3.8
+1189	Kjeldebotn	3.8
+1190	Kjopsvik	3.8
+1191	Tranoy	3.6
+1192	Tommernes	3.5
+1193	Grotoy	3.5
+1194	Morsvikbotn	3.3
+1195	Djupvik	3.2
+1196	Helligvaer	3.3
+1197	Bodo	3.3
+1198	Straumen	3.0
+1199	Tuv	1.6
+1199a	Finneid	2.1
+1200	Rognan	1.7
+1201	Tvervik	3.2
+1202	Stott	3.1
+1203	Glomfjord	3.1
+1204	Indre Kvaroy	3.0
+1205	Traena	2.9
+1206	Nesna	3.1
+1207	Mo I Rana	3.3
+1208	Sandnessjoen	3.2
+1209	Mosjoen	3.3
+1210	Skjaervaer	3.0
+1211	Hommelsto	3.2
+1211a	Bronnoysund	3.2
+1212	Borkamo	3.0
+1213	Rorvik	3.0
+1214	Kongsmoen	3.2
+1215	Namsos	3.0
+1216	Buholmrasa Light	3.1
+1216a	Bessaker	3.0
+1217	Stokksundet	3.0
+1218	Selvnes	3.6
+1220	Levanger	3.9
+1221	Steinkjer	4.2
+1222	Bogoyvaer	2.8
+1223	Ytre Kvenvaer	2.8
+1224	Heimsjo	2.9
+1225	Vinjeora	2.8
+1226	Kristiansund	2.6
+1227	Surna	2.6
+1228	Sunndalsora	2.3
+1229	Bjornsund	2.3
+1230	Molde	2.4
+1231	Andalsnes	2.2
+1232	Lepsoyrevet	2.4
+1233a	Stranda	2.6
+1234	Merok	2.3
+1235	Fyrde	2.4
+1236	Stattvagen	2.2
+1237	Maloy	2.2
+1238	Kjolsdal	2.3
+1239	Olden	2.4
+1240	Floro	2.1
+1241	Forde	2.1
+1242	Askvoll	2.2
+1244	Nara	1.9
+1245	Rutletangen	2.2
+1246	Vadheim	2.2
+1247	Vikisogn	2.0
+1248	Flam	2.1
+1249	Laerdalsoyri	2.1
+1250	Skolden	2.1
+1251	Skjerjehamn	2.1
+1252	Eidsfjord	-
+1253	Matre	2.0
+1254	Kilstraumen	1.9
+1255	Alverstraumen	1.9
+1256	Stamneshella	1.9
+1257	Blomvag	1.9
+1259	Vatlestraumen	1.8
+1260	Tysse	1.5
+1261	Lokksund	1.4
+1262	Norheimsund	1.6
+1263	Sorfjord (Odda)	1.8
+1264	Eidfjord	1.8
+1265	Stolmen	1.6
+1266	Engesund	-
+1267	Leirvik	1.4
+1268	Fjaera	-
+1269	Olen	1.4
+1270	Espevaer	1.2
+1272	Utsira	1.2
+1272a	Kopervik	1.1
+1272b	Karsto	1.1
+1273	Sauda	1.0
+1274	Josenfjorden	1.0
+1275	Lysebotn	1.2
+1277	Risavika	1.1
+1280	Egersund	0.6
+1282	Hidra	0.6
+1283	Farsund	0.5
+1284	Tregde	0.7
+1285	Kristiansand	0.8
+1289	Grimstad	0.8
+1290	Arendal	0.8
+1291	Risor	0.8
+1294	Nevlunghavn	0.7
+1295	Helgeroa	0.8
+1295a	Larvick	0.7
+1295b	Sandjeford	0.7
+1295c	Slagentangen	0.9
+1296	Horten	0.8
+1296a	Drammen	1.0
+1298	Oscarsborg	1.0
+1299	Moss	0.9
+1301	Viker	0.8
+1302	Halden	0.8
+1317	Ystadt	-
+1320	Karlskrona	-
+1328	Landsort	-
+1338	Bjorn	-
+1340	Draghallan	-
+1342	Ratan	-
+1349	Yttergrund	-
+1352	Hango	-
+1353	Helsinki	-
+1357	Kronstadt	-
+1358	Tallinn	-
+1365	Liepaja	-
+1367	Klaipeda (Memel)	-
+1369	Baltiysk	-
+1375	Swinoujscie	-
+1376	Arkona	-
+1377	Warnemunde	-
+1378	Wismar	-
+1378b	Travemunde	-
+1379	Marienleuchte	-
+1386	Kobenhavn	0.1
+1386a	Hornbaek	0.1
+1387	Korsor	0.2
+1390	Gedser	0.1
+1392	Slipshavn	0.2
+1395	Fredericia	0.2
+1399	Arhus	0.3
+1409	Frederikshavn	0.2
+1411	Skagen	0.2
+1412	Hirtshals	0.5
+1412a	Hanstholm	0.5
+1413	Thyboron	0.6
+1414	Thorsminde	0.8
+1415	Hvide Sande	1.0
+1416	Blavands Huk	2.1
+1418	Gradyb Bar	1.8
+1419	Havneby	2.2
+1420	Hojer	2.7
+1421a	List	2.7
+1423	Hornum	2.9
+1425	Amrum-Hafen	3.6
+1425a	Fohr, Wyk	3.8
+1426	Dagebull	4.2
+1427	Pellworm, Anleger	4.3
+1428	Suderoogsand	4.0
+1429	Nordstrand, Strucklahnungshorn	4.5
+1430	Husum	4.6
+1433a	Eidersperrwerk	4.2
+1435a	Linnenplate	4.3
+1436	Busum	4.5
+1437	Grosser Vogelsand	4.2
+1437a	Scharhorn	4.1
+1438a	Otterndorf	3.9
+1438b	Osteriff	3.9
+1440	Gluckstadt	4.0
+1440a	Krautsand	3.8
+1441	Stadersand	3.9
+1442	Schulau	4.1
+1443	Seemannshoeft	4.4
+1445	Harburg	4.6
+1445a	Farge	4.7
+1449	Alte Weser Lighthouse	3.9
+1450	Dwarsgat	4.6
+1450a	Robbensudsteert	4.8
+1452	Nordenham	5.1
+1453	Brake	4.9
+1454	Elsfleth	4.9
+1455	Vegesack	4.9
+1456	Bremen	5.1
+1458	Wangerooge East	4.2
+1458a	Wangerooge, Langes Riff	3.8
+1459	Wangerooge West	3.9
+1459a	Mellumplate	4.2
+1460	Schillig	4.4
+1461	Hooksielplate	4.6
+1466	Spiekeroog	3.9
+1467	Neuharlingersiel	4.0
+1467a	Bensersiel	4.0
+1468	Langeoog	3.9
+1469	Norderney (Riffgat)	3.6
+1470	Norddeich Hafen	3.7
+1470a	Juist	3.7
+1470b	Leybucht, Leyhorn	3.8
+1471	Memmert	3.7
+1472	Borkum (Fischerbalje)	3.6
+1473	Emshorn	3.7
+1473a	Dukegat	3.9
+1474	Knock	4.2
+1475a	Leerort	4.4
+1475b	Papenburg	4.5
+1475c	Nieuwe Statenzijl	4.7
+1476	Delfzijl	4.2
+1476b	Huibertgat	3.0
+1477	Schiermonnikoog	3.3
+1478	Lauwersoog	3.4
+1480	Nes	3.3
+1483	West Terschelling	2.8
+1484	Oost Vlieland	2.8
+1485	Harlingen	2.8
+1486	Kornwerderzand	2.7
+1487	Den Oever	2.4
+1488	Oudeschild	2.3
+1493	Noordwinning (Platform K13-A)	2.2
+1500	Petten (South)	2.6
+1503	Scheveningen	2.7
+1504	Europlatform	2.6
+1506	Maassluis	2.4
+1507	Vlaardingen	2.5
+1508a	Krimpen Aan De Ijssel	2.2
+1509	Krimpen Aan De Lek	1.9
+1511	Schoonhoven	1.8
+1512	Spijkenisse	2.2
+1512a	Goidschalxoord	1.7
+1517	Dordrecht	1.4
+1520	Werkendam	0.9
+1520a	Moerdijk	0.7
+1520b	Rak (North)	0.7
+1521	Haringvlietsluizen	3.4
+1522	Brouwershavensche Gat	3.9
+1528	Roompot Buiten	4.3
+1529	Stavenisse	4.1
+1530a	Bergse Diepsluis (West)	4.7
+1530c	Krammersluizen (West)	4.2
+1533a	Westkapelle	5.1
+1537	Hansweert	6.4
+1538	Bath	7.0
+1539a	Boudewijnsluis	6.6
+1539b	Royersluis	6.9
+1539c	Boom	6.5
+1539d	Gentbrugge	2.5
+1540	Cadzand (Wielingen Sluis)	5.6
+1565	Nieuwpoort	6.3
+1568a	Dunkerque Ouest	7.0
+1569	Gravelines	7.1
+1569a	Sandettie Bank	5.9
+1571	Wissant	8.7
+1573	Le Touquet (Etaples)	10.4
+1574	Berck Plage - Fort Mahon	10.6
+1575	Le Hourdel	11.1
+1576	St. Valery	11.2
+1577	Cayeux	10.7
+1578	Le Treport	10.4
+1580	St. Valery-En-Caux	9.3
+1581	Fecamp	9.0
+1581a	Etretat	8.8
+1581b	Antifer (Le Havre)	8.5
+1582a	Chenal De Rouen	8.5
+1583	Honfleur	8.7
+1584	Tancarville	8.6
+1585	Quillebeuf	8.6
+1586	Vatteville	8.4
+1587	Caudebec	8.4
+1587a	Heurteauville	8.3
+1588	Duclair	8.2
+1589	Rouen	8.3
+1590	Trouville	9.0
+1591	Dives	8.9
+1592	Ouistreham	8.2
+1593	Courseulles-Sur-Mer	8.0
+1594	Arromanches	7.9
+1595	Port-En-Bessin	7.8
+1595a	Alpha-Baie De Seine	7.5
+1596	Rade De La Capelle	7.6
+1597	Iles Saint Marcouf	7.6
+1598	St. Vaast-La-Hougue	7.4
+1599	Barfleur	7.2
+1601	Omonville	7.0
+1602	Goury	8.9
+1608a	Les Ardentes	13.5
+1609	Iles Chausey	14.5
+1610	Dielette	10.7
+1611	Carteret	11.9
+1611a	Portbail	12.9
+1611b	St. Germain Sur Ay	12.7
+1611c	Le Senequet	13.2
+1611d	Regneville Sur Mer	14.0
+1612	Granville	14.4
+1613	Cancale	14.6
+1614a	Ile Des Hebihens	13.3
+1614b	St. Cast	13.2
+1615	Erquy	12.9
+1616	Dahouet	12.6
+1617	Le Legue (Buoy)	12.6
+1618	Binic	12.7
+1619	Portrieux	12.7
+1620	Paimpol	11.9
+1621	Ile De Brehat	11.5
+1621a	Les Roches Douvres	10.8
+1622	Les Heaux De Brehat	10.6
+1623	Lezardrieux	11.7
+1624	Port Beni	10.9
+1625	Treguier	11.0
+1625a	Perros-Guirec	10.4
+1626	Ploumanac'h	10.2
+1628	Trebeurden	10.2
+1628a	Locquirec	10.2
+1628b	Anse De Primel	10.0
+1629	Morlaix (Chateau Du Taureau)	9.8
+1630	Roscoff	9.8
+1631	Ile De Batz	10.0
+1631a	Brignogan	9.4
+1632	L'Aber-Wrach	8.5
+1633	L'Aber Benoit	8.8
+1633a	Portsall	8.3
+1633b	L'Aber-Ildut	8.2
+1634	Ile D' Ouessant (Baie de Lampaul)	7.7
+1635	Molene	8.2
+1636	Le Conquet	7.7
+1637	Le Trez Hir	7.5
+1638a	Moulin Blanc	8.0
+1638b	Tinduff	8.2
+1638c	Pont De Terenez	8.3
+1639	Camaret	7.5
+1639a	Morgat	7.4
+1640	Douarnenez	7.3
+1641	Ile De Sein	6.9
+1642	Anse De Feunteun Aod	6.4
+1643	Audierne	5.8
+1644	Le Guilvinec	5.6
+1644a	Lesconil	5.7
+1645	Loctudy	6.2
+1646	Benodet	5.9
+1647	Corniguel	5.6
+1648	Concarneau	5.7
+1649	Ile De Penfret	5.6
+1650	Port Louis (Locmalo)	5.6
+1651a	Hennebont	5.7
+1652	Port Tudy	5.8
+1652a	Port D'etel	5.4
+1653	Port Haliguen	5.9
+1653a	Port Maria	6.1
+1654	Le Palais	5.7
+1655	La Trinite-Sur-Mer	6.1
+1656	Port Navalo	5.5
+1657	Auray	5.2
+1657a	Arradon	3.0
+1658	Vannes	3.4
+1658a	St. Armel (Le Passage)	3.4
+1658b	Le Logeo	3.1
+1658c	Port Du Crouesty	6.0
+1658d	Ile De Houat	5.9
+1659	Ile De Hoedic	5.7
+1660	Penerf	6.0
+1660a	Trehiguier	6.2
+1661	Le Croisic	6.1
+1662	Le Pouliguen	6.0
+1663	Le Grand-Charpentier	6.1
+1663a	Pornichet	6.1
+1664	St. Nazaire	6.5
+1665a	Cordemais	7.0
+1666	Le Pellerin	7.4
+1667	Nantes (Chantenay)	7.9
+1667a	Pointe De Saint-Gildas	6.4
+1668	Pornic	6.5
+1669	L'herbaudiere	6.1
+1670	Fromentine	6.0
+1671	Port Joinville	5.7
+1672	St. Gilles-Croix-De-Vie	5.8
+1673	Les Sables D'olonne	5.8
+1674	St. Martin	6.6
+1676	La Rochelle	6.7
+1677	Ile D'aix	7.1
+1678	Rochefort	7.5
+1679	Le Chapus	6.8
+1679a	La Cayenne	6.4
+1679b	Pointe De Gatseau	6.1
+1679c	Cordouan	5.6
+1680	Royan	5.9
+1680a	Le Verdon-Sur-Mer	6.2
+1682	Richard	6.1
+1683	Lamena	6.5
+1684	Pauillac	6.4
+1685	La Reuille	6.1
+1686	Le Marquis	6.0
+1687	Bordeaux	6.2
+1689	Libourne	5.7
+1690	Cap Ferret	4.5
+1691	Arcachon (Eyrac)	4.9
+1692	Boucau	4.8
+1693	Socoa	4.9
+2308	Isla Tercera	2.3
+2312	Rio Pedernales (Lagoven Jetty)	1.9
+2314	Punta Gorda	2.5
+2315	Guanoco	-
+2316	Carapita	-
+2318	Puerto De Hierro	1.5
+2319	Gaspar Grande	1.4
+2320	Carenage Bay	1.3
+2323	Pointe-A-Pierre	1.5
+2324	Point Fortin	1.7
+2325	Bonasse Pier	1.9
+2327	Herine (Erin) Bay	2.1
+2329	Guayaguayare Bay	1.5
+2331	Nariva River (Cocal)	1.5
+2332	Guayamare Point	1.3
+2333	Toco	1.3
+2335	Las Cuevas Bay	0.8
+2336	Scarborough, Tobago	1.4
+2338	Man Of War Bay	0.8
+2339	Plymouth	1.1
+2344	Puerto Carupano	0.5
+2347	Cumana	0.5
+2360	Puerto El Roque	0.7
+2368	Kralendijk	0.7
+2370	Willemstad	0.7
+2372	Oranjestad	0.7
+2372a	Malmok Bay	0.8
+2381	Bahia el Tablazo	0.9
+2382	Punta de Palmas	0.8
+2385	Riohacha	0.4
+2387	Puerto Colombia	0.9
+2394	Puerto Caledonia	0.5
+2396	Puerto Mandinga	0.5
+2400	Escudo De Veragua	0.5
+2401	Boca Del Toro	0.5
+2402	Puerto Limon	0.4
+2403	Greytown	0.9
+2404	Bluefields Bluff	0.8
+2405	Great Corn Island	1.0
+2407	Pearl Cays	1.0
+2409	Old Providence	0.8
+2410	Puerto Cabezas	0.7
+2412	Cabo Gracias A Dios	0.8
+2417	Isla De Guanaja	0.7
+2418	Port Royal, Honduras	0.8
+2419	Coxen Hole Pier	0.8
+2421	Puerto Cortes	0.2
+2422	Rio Dulce Entrance	0.8
+2424	Hunting Cay	0.3
+2425	Placencia	0.6
+2426	Carrie Bow Cay	0.5
+2428	Belize City	0.4
+2430	Bahia Espiritu Santo	0.7
+2431	Isla Cozumel	0.4
+2432	Puerto De Mujeres	0.4
+2433	Cabo Catoche	0.7
+2439	St. George's Harbour	0.9
+2439a	Prickly Bay	0.8
+2441	Hillsborough Bay	0.6
+2441a	Clifton Harbour	0.9
+2442	Tobago Cays	0.8
+2442a	Charlestown Bay	1.5
+2443	Mustique	1.3
+2444	Kingstown	0.8
+2446a	Vieuxfort Bay	0.8
+2448	Fort De France	1.0
+2449	Le Robert	1.0
+2450	Woodbridge Bay	0.8
+2450a	Portsmouth, Dominica	0.8
+2452	Les Saintes	0.8
+2454	Pointe-A-Pitre	0.8
+2454a	Sainte Rose	0.6
+2455	Little Bay	0.7
+2456	St. Johns, Antigua	0.7
+2458	St. Barthelemy	-
+2459	Road Bay	0.6
+2460	Anegada	0.5
+2461	Tortola	0.7
+2461a	Saint John	0.4
+2462	Saint Thomas (Charlotte Amalie)	0.4
+2462a	Saint Thomas (Benner Bay)	0.4
+2463	Saint Croix (Christiansted)	0.3
+2464	Culebra	0.4
+2466	San Juan, Puerto Rico	0.7
+2466a	Isla Magueyes	0.3
+2467	Puerto Ponce	0.3
+2467a	Las Mareas	0.3
+2468	Punta Tuna	0.4
+2470	Puerto Plata	0.8
+2471	Santa Barbara	0.7
+2472	Saona Island	-
+2472a	La Romana	0.3
+2475	Jacmel	-
+2477	Port Au Prince	0.6
+2482	Port Morant	0.6
+2483	Port Royal	0.6
+2484	Port Esquivel	0.4
+2485	Black River	0.6
+2486	Savanna La Mar	0.6
+2490	St. Ann's Bay	-
+2491	Oracabessa	0.6
+2492	Port Antonio	0.8
+2494	Blower Rock	0.6
+2495	Banco Serranilla	0.8
+2498	George Town	0.8
+2500	Guantanamo Bay	0.6
+2501	Santiago	0.5
+2502	Puerto Pilon	0.6
+2503	Manzanillo, Cuba	1.3
+2505	Casilda	0.4
+2506	Cienfuegos	1.0
+2507	Carapachibey	0.3
+2508	Los Arroyos	0.6
+2509	Bahia Honda	1.1
+2509a	Bahia De Cabanas	0.8
+2509b	Puerto del Mariel	1.3
+2511	Matanzas	0.7
+2512	Cardenas	0.8
+2513	Isabela	0.7
+2515	Cayo Paredon Grande	1.1
+2516	Bahia Nuevitas Entrance	0.5
+2517	Nuevitas	0.7
+2518	Puerto Padre	0.9
+2519	Puerto Gibara	1.0
+2520	Punta Caranero	0.9
+2521	Antilla	0.9
+2522	Puerto Tanamo	0.8
+2524	Baracoa	0.8
+2525	Punta Maisi	1.1
+2529	Grand Turk	1.0
+2530	Sandy Point	0.9
+2531	Mathew Town	1.0
+2532	Little Inagua	1.2
+2534	Low Point (Start Point)	0.9
+2536	Datum Bay	1.3
+2539	San Salvador	1.4
+2541	Nurse Channel	1.4
+2543	Long Island, Bahamas	1.2
+2545	Exuma Harbour	1.2
+2545a	Steventon	1.2
+2546	Wide Opening	1.4
+2547	Ship Channel	1.4
+2549	The Bight	1.4
+2549a	Bannerman Town	1.3
+2550	Eleuthera Island	1.2
+2551	Royal Island Harbour	1.2
+2553	Nassau	1.6
+2554	Fresh Creek	1.8
+2554a	Mastic Point	1.3
+2555	Great Stirrup Cay	1.2
+2556	Cat Cay	1.2
+2557	South Riding Rock	1.2
+2559	Elbow Cay	1.0
+2561	Pelican Harbour	1.4
+2562	Green Turtle Cay	1.2
+2563	Pensacola Cay	1.4
+2564	Walker Cay	1.4
+2566	Freeport Harbour	1.3
+2567	Settlement Point	1.3
+2568	St. David's Island	1.3
+2568a	Bermuda Esso Pier	1.5
+2570	Great Sound	1.5
+2576	Ciudad Del Carmen	0.7
+2577	Frontera (Alvaro Obregon)	0.8
+2905	Westport (St. Mary Bay)	6.3
+2906	Meteghan	6.0
+2907	Weymouth	6.3
+2910	Yarmouth (Bay Of Fundy)	5.1
+2912	Woods Harbour	3.6
+2913	Flat Island	4.1
+2913a	Seal Island	3.8
+2914	Clark's Harbour	3.2
+2915	Barrington Passage	2.6
+2917	Shelburne	2.6
+2919	Lockeport	2.5
+2922	Port Mouton	2.2
+2923	Liverpool	2.3
+2926	Krout Point	2.3
+2927	Bridgewater	2.6
+2928	Lunenburg	2.4
+2929	Mahone Harbour	2.4
+2930	Chester, Canada	2.3
+2932	Indian Harbour	2.4
+2939	Jeddore Harbour	2.3
+2940	Murphy Cove	2.2
+2942	Sheet Harbour	2.3
+2946	Sonora	2.1
+2948	Isaac's Harbour	2.2
+2950	Larry's River	2.1
+2952	Sable Island	1.9
+2954	Canso Harbour	2.1
+2956	Guysborough	1.7
+2958	Port Hastings	2.0
+2958a	Port Hawkesbury	2.3
+2959a	Sand Point	1.9
+2960	Arichat	1.8
+2961	Cannes	1.7
+2964	Gabarus	1.8
+2965	Louisburg	1.8
+2968	Glace Bay	1.5
+2969	North Sydney	1.5
+2972	St Anns Harbour	1.5
+2974	Ingonish Island	1.4
+2976	Dingwall	1.3
+2977	St. Paul Island (Cabot Strait)	1.3
+2980	Grande Entree	1.0
+2983	Cap-Aux-Meules	1.2
+2984	Havre Aubert	1.1
+2986	La Pointe	1.3
+2988	Broad Cove Marsh	1.4
+2990	Port Hood	1.3
+2993	Cape Jack	1.7
+2994	Antigonish	1.4
+2995	Ballantynes Cove	1.8
+3001	Pugwash Harbour	2.6
+3003	Cape Tormentine	2.4
+3005	Shediac Bay	1.7
+3010	Summerside	2.3
+3011	Borden	2.5
+3014	Charlottetown	3.0
+3017	Murray Harbour	1.9
+3018	Georgetown (Prince Edward Island)	1.8
+3019	Souris	1.8
+3021	Savage Harbour	0.9
+3023	Rustico	1.3
+3025	Malpeque	1.3
+3026	Alberton	1.2
+3027	Tignish	1.3
+3030	Richibucto Cape	1.4
+3032	Escuminac	2.0
+3035	Portage Island	1.6
+3036	Neguac	1.6
+3038	Shippegan Gully	1.5
+3038a	Shippegan	2.1
+3038b	Miscou	1.9
+3372	Chamisso Island	1.1
+3374	Point Barrow	0.3
+3375	Prudhoe Bay	0.5
+3375a	Prudhoe Bay (Dock No 2)	0.3
+3375b	Prudhoe Bay (Dock No 1)	0.4
+3375c	Cross Island	0.3
+3376	Flaxman Island	0.3
+3377	Herschel Island	0.8
+3378	Tuktoyaktuk	0.8
+3379	Paulatuk	0.8
+3380	Pearce Point	0.8
+3381	Bernard Harbour	1.3
+3384	Cambridge Bay	1.0
+3389	Princess Royal Island	1.4
+3393	Cape Kellett	0.5
+3395	Mercy Bay	1.0
+3396	Mould Bay	0.7
+3398	Isachsen	0.5
+3400	Eureka	0.4
+3402	Pim Island	4.6
+3404	Cape Lawrence	2.8
+3406	Discovery Harbour	2.3
+3407	Cape Sheridan	0.9
+3407a	Alert	1.0
+3408	Cape Columbia	0.4
+3413	Cape Bryant	0.5
+3414	Thank God Harbour	2.1
+3416	Renselaer Bay	4.1
+3417	Port Foulke	4.3
+3419	North Star Bay	3.2
+3422	Upernavik	2.8
+3423	Quamarujuk	2.3
+3423a	Uummannaq	2.4
+3423b	Sarqaq	3.5
+3424	Godhavn	2.6
+3424a	Jakobshavn	3.0
+3425	Kronprinsens Ejland	2.6
+3426	Egedesminde	2.8
+3428	Rifkol Island	3.2
+3429	Holsteinsborg	4.7
+3430	Manitsoq	4.7
+3431	Godthaab (Nuuk)	5.0
+3432	Faeringehavn	3.8
+3433	Frederikshaab	3.5
+3434	Gronnedal	3.2
+3434b	Narsaq	3.4
+3435	Julianehaab	3.4
+3437	Nanortalik	2.9
+3438	Frederiksdal	3.7
+3439	Cape Farewell	3.7
+3441	Finnsbu	3.0
+3443	Ammassalik	3.7
+3446	Danmark Island	1.3
+3447	Cape Tobin	1.1
+3447a	Nyhavn	1.6
+3448	Finsch Island	1.7
+3449	Zackenberg	1.8
+3450	Little Pendulum Island	2.0
+3451	Cape Borgen	2.0
+3452	Danmarks Havn	1.8
+3454	Kap Holbaek	0.8
+3455	Jorgen Bronlund Fjord	0.8
+3456	Kap Morris Jesup	0.5
+3459	Porto Da Casa	1.7
+3460	Lajes (Flores)	1.7
+3460a	Santa Cruz (Flores)	1.7
+3462	Horta	1.9
+3465	Santa Cruz (Graciosa)	1.8
+3466	Angra Do Heroismo	1.8
+3466a	Praia Da Vitoria	1.9
+3469	Vila Do Porto	2.0

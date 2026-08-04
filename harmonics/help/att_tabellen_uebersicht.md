@@ -702,3 +702,40 @@ Schwäche unserer Ableitung, sondern eine Grenze des Verfahrens.
 3. **Table V Part 1** — Bezugswerte für die Stationen, die weiter aus Part II kommen.
 4. **Table V Part 2** — HAT-Test über alle Stationen des Bandes.
 5. **Table VI** — MSf für die dort gelisteten Häfen.
+
+## NP202 (Ausgabe 2015) — Table IV, V und VI aus `np202_iv_vi.pdf` (2026-08-04)
+
+Der Scan hat 21 Seiten, davon 19 verschiedene: **S13 und S14 sind Doppelscans
+von S11 und S12** (Kopf und Fuß zeilengleich). Aufbau: Table IV auf xxxvi/xxxvii,
+Table V Part 1 auf drei Seiten, Table V Part 2 auf fünfzehn, Table VI auf einer.
+Zwischen den Buchnummern **1694 und 2307** klafft eine Lücke im Scan (Iberien,
+Mittelmeer, Westafrika, Südamerika); dort haben wir ebenfalls keine Stationen.
+
+- **Table IV** ist neu — so eine Größe gab es in keinem anderen Band:
+  *Height in metres of Chart Datum relative to the Land Levelling System*.
+  162 Häfen von København bis Alexandria plus die Legende der 13 Höhensysteme,
+  in `np202_2015_table4_chartdatum.tsv`. Umrechnung einer XTide-Vorhersage in
+  Landeshöhe: `h_Land = h_Kartennull + height`. Im gesamten XTide-Bestand haben
+  **98 der 162** ein Gegenstück (32 deutsche, 26 niederländische, 26 französische),
+  verteilt über NOAA EUTT, TICON4, UTide, DWF und Pierre Lavergne — beim Suchen
+  unbedingt das Land mitprüfen, sonst fängt man sich „Port Louis, British
+  Columbia" und „Bath, Maine" ein.
+- **Table V Part 2**: neun der fünfzehn Seiten transkribiert, nämlich die, auf
+  denen unsere Stationen liegen (`np202_2015_table5_part2_hat.tsv`, 978 Zeilen).
+  Die übrigen sechs enthalten keine.
+
+**Die Zuordnung muss über den NAMEN laufen, nicht über die Nummer.** Unsere
+NP202-Nummerierung weicht an 17 Stellen vom Buch ab, teils um eine Stelle
+verschoben (unser 2547 Wide Opening = Buch 2546; unser 2548 Ship Channel =
+Buch 2547; Seine ab 1588; Oslofjord 1295a–c). Alle Fälle stehen in
+`py/hat_test_np202.py` unter `VERSATZ`, mehrere über die Koordinaten bestätigt.
+
+**Der HAT-Test für NP202 legt einen Systemfehler in den Part-II-Transfers frei:**
+415 geprüft, **90 auffällig** (NP203 zur Einordnung: 480/12). Ursache sind
+**49 Transfers mit einem Bezugshafen weiter als 1500 km entfernt** — Guadeloupe
+und die Jungferninseln aus *Clear Lake, Galveston Bay, Texas*, Kuba und
+Nicaragua aus *Port of Spain*, Grönland aus *Harrington Harbour* und
+*Pointe-au-Père*, und 951 Pitlekaj in der Tschuktschensee aus **Helgoland**
+(6535 km). Dieselbe Fehlerart wie seinerzeit bei NP203, dort behoben.
+Nebenbefund: der Vermerk „(att NNNN)" nennt bei allen 428 Stationen die eigene
+Nummer statt der des Bezugshafens — Fehler der Vorlage, ohne Aussage.
