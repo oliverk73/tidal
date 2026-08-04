@@ -455,6 +455,39 @@ Darin steckt Material, das wir noch nirgends haben:
 
 OCR von Part II und Part III liegt bereits vor: `tide_tables/yemen/ocr/part{2,3}_full.txt`.
 
+## Die beiden letzten NP203-Lücken — geschlossen (2026-08-03)
+
+**4322 Karachi (Entrance)** fehlte in der ATT-Sammlung komplett — ausgerechnet
+der Bezugshafen der Gruppe 4322a bis 4322e. Übersehen worden war er, weil
+„Karachi, Pakistan" in classic_original, TICON und UTide steht; die
+Lückenprüfung nach att-Nummern hat ihn deshalb nicht als fehlend gemeldet.
+Konstanten aus Part III S.247 (Z0 1.67, M2 305/0.80, S2 344/0.28, K1 058/0.40,
+O1 045/0.21), Position aus Part II S.234. Gegenprobe auf GMT gerechnet:
+
+| Quelle | M2 | Phase | K1 | O1 |
+|---|---:|---:|---:|---:|
+| ATT (Buch) | 0.80 | 160.1° | 0.40 | 0.21 |
+| TICON-4 | 0.80 | 157.4° | 0.40 | 0.20 |
+| UTide | 0.80 | 158.0° | 0.40 | 0.20 |
+| classic 1997 | 0.79 | 163.1° | 0.40 | 0.20 |
+
+**4276A Abadan** ist der Sonderfall: die Ausgabe 2015 führt ihn als
+**Standardhafen** (Table V Part 1: 2.0 / 1.6 / 0.6 / 0.6, MSL 1.2, HAT 2.6),
+druckt aber **keine harmonischen Konstanten** — Part III springt von 4271 Al
+Basrah direkt zu 4276b Khowr-e Musa Approaches. Aus dem Band allein ist er
+deshalb nicht zu bauen.
+
+Die Ausgabe **2002** löst es: dort ist Abadan noch **Sekundärhafen Nr. 4270**
+mit Differenzen auf 4268 Shatt al Arab Outer Bar — +0250 / +0345,
+−1.0 −0.8 −0.7 +0.2, ML 1.22. Die Probe ist zwingend: auf die publizierten
+Pegel des Bezugshafens angewendet (3.0 / 2.4 / 1.3 / 0.4) ergibt das
+**2.0 / 1.6 / 0.6 / 0.6** — genau die Pegel, die die Ausgabe 2015 für Abadan
+druckt. Beide Ausgaben sind sich einig, der Transfer reproduziert das Buch.
+fS 0.538, fN 0.909, dt 198 min. `py/add_np203_karachi_abadan.py`.
+
+HAT-Test danach: Karachi −0.18 m, Abadan −0.31 m. Stand jetzt
+**108 Standardhäfen / 0 auffällig** und **480 Sekundärhäfen / 12 auffällig**.
+
 ## Südchinesisches Meer aus dem 2002er Band — erledigt (2026-08-02)
 
 Die Ausgabe 2002 reicht bis Irian Jaya und Vietnam, die Ausgabe 2015 nur bis
@@ -516,10 +549,52 @@ besseren.
 Haiphong …). Das ist im Bestand schon so — „Cebu, Philippines" steht bereits
 dreifach in classic_original, ticon und utide — und bleibt so.
 
-**Was der 2002er Band darüber hinaus noch hergibt:** die Part-II-Transfers für
-denselben Bereich (Zeitdifferenzen und Höhenverhältnisse für die Häfen *ohne*
-eigene Konstanten). Die habe ich nicht angefasst; von Part II sind nur
-Position und ML abgelesen.
+## Part-II-Transfers desselben Gebiets — erledigt (2026-08-04)
+
+Alle 29 Part-II-Seiten (PDF 117–145 = Buch 281–309) einzeln vom Scan gelesen.
+Ergebnis: **71 Sekundärhäfen ohne eigene Konstanten**, davon **44 gerechnet** →
+`harmonics/att/harmonics_att_np203_scs_secondary.txt`.
+Transkription: `harmonics/help/np203_2002_part2_scs_transfer.tsv`,
+Bauskript `py/build_np203_scs_transfer.py`.
+
+**Die OCR taugt hier nur als Suchraster, nicht als Quelle.** Sie übersah 4703a
+und 5156c, erfand 4708a, 5161, 5163b, 5044 und 5197 und meldete „5495" auf fünf
+Seiten, auf denen die Nummer nicht steht. Nur seitenweises Lesen ist belastbar.
+
+**Drei Differenztypen, aber nur zwei Rechenwege.** Neben semidiurn (MHWS…MLWS)
+und diurn (MHHW…MLLW) druckt das Buch im Sungai-Sarawak- und im Mekong-Gebiet
+eine **gemischte** Beschriftung „MHW / LLW" über den Spalten MHHW/MLHW/MHLW/MLLW
+(bei 400 dpi geprüft; die Kopfzeile von PDF 133 trägt sie selbst). Das betrifft
+aber nur die beiden *Zeit*spalten, und beide Zeitdifferenzen werden ohnehin zu
+einer mittleren Verzögerung gemittelt — für die Rechnung zählt allein, welche
+vier *Höhen* gemeint sind. Also: Regime S wie bisher, Regime D/M über die
+Zerlegung `A = MHHW−MLLW = 2H+2D`, `B = MLHW−MHLW = 2H−2D`.
+
+**Kreis ≠ Dreieck.** ⊙ heißt „No data" (Wert fehlt), △ heißt „Tide is usually
+diurnal" (Größe dort nicht anwendbar, MHHW/MLLW sind gedruckt). Wer beides
+gleich behandelt, verliert 4990, 5111, 7000 und 7002 grundlos.
+
+**27 nicht rechenbar** — das Buch druckt dort keine Höhen- oder Zeitdifferenzen.
+Fast alles Mekong-Delta: bis Pnom Penh und Kompon-Luom gibt es Zeitdifferenzen,
+aber keine Höhen und kein ML. Von der ganzen Strecke bleiben nur 6934 Cua Soirap
+und 6943 Ho Chi Minh City.
+
+**Zwei tote Verweise in der Ausgabe 2002:** 6878 Hua Hin und 6979 Dong Hoi
+tragen „p — use harmonic constants (see Part III)", stehen dort aber nicht
+(Part III springt 6876→6880 bzw. 6976→6980). Buchfehler, keine
+Transkriptionslücke.
+
+**Prüfung** (`py/check_np203_scs_transfer.py`, `..._extern.py`): gegen die
+unabhängigen Sammlungen im 10-km-Umkreis 9 Paare, mittlere Abweichung
+**0.13 m** in der M2-Amplitude und **26°** in der Phase. Genau eine Station über
+60°: **4911 Geting**, +92° gegen eine gemessene TICON4-Station 1.6 km entfernt.
+Das Buch markiert Getings Zeitdifferenzen selbst mit „t" (approximate) und
+druckt für Tumpat 8 km weiter +0026/+0013 statt +0350/+0340. Die Station steht
+mit Warnvermerk und `confidence: 3` in der Datei; für Navigation unbrauchbar.
+
+Beim Vergleich **beide Seiten auf GMT bringen**, `g_GMT = g_Zone − ω·Zonenstunden`.
+Nur die externe Seite umzurechnen ergibt bei +08:00 einen Scheinversatz von
+28.98°/h · 8 h = 232° ≡ −128°, der wie ein Datenfehler aussieht.
 
 ## Scans
 
