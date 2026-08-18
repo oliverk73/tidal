@@ -731,11 +731,165 @@ Buch 2547; Seine ab 1588; Oslofjord 1295a–c). Alle Fälle stehen in
 `py/hat_test_np202.py` unter `VERSATZ`, mehrere über die Koordinaten bestätigt.
 
 **Der HAT-Test für NP202 legt einen Systemfehler in den Part-II-Transfers frei:**
-415 geprüft, **90 auffällig** (NP203 zur Einordnung: 480/12). Ursache sind
-**49 Transfers mit einem Bezugshafen weiter als 1500 km entfernt** — Guadeloupe
-und die Jungferninseln aus *Clear Lake, Galveston Bay, Texas*, Kuba und
-Nicaragua aus *Port of Spain*, Grönland aus *Harrington Harbour* und
-*Pointe-au-Père*, und 951 Pitlekaj in der Tschuktschensee aus **Helgoland**
-(6535 km). Dieselbe Fehlerart wie seinerzeit bei NP203, dort behoben.
-Nebenbefund: der Vermerk „(att NNNN)" nennt bei allen 428 Stationen die eigene
-Nummer statt der des Bezugshafens — Fehler der Vorlage, ohne Aussage.
+415 geprüft, **90 auffällig** (NP203 zur Einordnung: 480/12).
+
+> **Korrektur 2026-08-05.** Die hier ursprünglich notierte Ursache — „49 Transfers
+> mit einem Bezugshafen weiter als 1500 km entfernt" — war **falsch**. In NP202
+> sind die Höhenspalten **Differenzen in Metern** („HEIGHT DIFFERENCES (IN
+> METRES)"), keine Faktoren. Die Entfernung zum Bezugshafen ist deshalb belanglos:
+> das Buch nimmt bewusst Helgoland für die sibirische Arktis, Galveston für die
+> Kleinen Antillen, Port of Spain für Nicaragua. Was wie ein Fehler aussah, ist
+> die Systematik der Vorlage. Der wirkliche Befund steht unten.
+
+## NP202 Part II neu abgeleitet (2026-08-05)
+
+Aus `np202_2015_secondary_ports_p358-403.pdf` — 28 Seiten, das sind die
+Buchseiten 358–383 sowie 400 und 401. Die Seiten 384–399 fehlen im Scan; dort
+liegt keine unserer Stationen. Ergebnis zwei neue Hilfsdateien:
+
+- `np202_part2_gruppenkoepfe.tsv` — welcher eingerahmte Bezugshafen für welchen
+  Nummernbereich gilt, mit dessen publizierten Pegeln.
+- `np202_part2_stationen.tsv` — 742 Stationszeilen mit Position, Zeit- und
+  Höhendifferenzen und ML. Deckt alle 436 unserer Stationen ab.
+
+**Drei Fehler des Imports von Juni 2026, alle behoben durch
+`py/rebuild_np202_transfer.py --write`:**
+
+1. **105 von 436 Stationen hingen am falschen Bezugshafen.** In ATT gilt der
+   eingerahmte Standardhafen über einer Gruppe bis zum nächsten eingerahmten
+   Kopf. Ein Standardhafen, der nur *innerhalb* der Liste an seiner
+   geografischen Stelle steht („STANDARD PORT / See Table V"), ist ein Eintrag
+   und kein neuer Bezug. Der Import hat ab jedem solchen Eintrag gewechselt:
+   Färöer an Tórshavn statt Reykjavík, Weißes Meer an Archangelsk statt Port of
+   Kem', Finnmark an Kirkenes statt Ostrow Jekaterininski, Troms an Tromsø statt
+   Narvik, Vestland an Stavanger und Oslo statt Bergen. **Dieselbe Falle wie bei
+   NP203 auf Seite 224.**
+2. **Skalierung gegen den falschen Hub und fehlender Zonenversatz.** Die
+   Zeitdifferenzen gelten zwischen den Ortszeiten beider Häfen; für die Phasen
+   braucht es `dt_UT = dt_Buch + (Zone_Bezug − Zone_Sekundär)`. Bei der Finnmark
+   unter Jekaterininski sind das 2 Stunden, bei Pitlekaj unter Helgoland 11.
+3. **Die Galveston-Gruppe wurde in Fuß statt Meter gerechnet.** Die
+   NOAA-Stationen in `harmonics-dwf-20251228-free.txt` tragen `# !units: feet`.
+   Wer das übersieht, macht die ganze Gruppe um 3,28 zu groß — Kleine Antillen,
+   Jungferninseln und der mexikanische Golf lagen dadurch über HAT. Als
+   Gegenprobe taugt der im Gruppenkopf gedruckte Springhub: `2·(M2+S2)` sollte
+   ihn auf wenige Prozent treffen. Zugleich wurde *Clear Lake* durch
+   *Galveston Pier 21* ersetzt — den Pegel, den ATT als GALVESTON führt.
+
+**Ergebnis: 415 geprüft, 4 auffällig** (vorher 90). Die Reste — 1689 Libourne
+(Flusseinfluss in der Dordogne), 2360 Puerto El Roque, 2491 Oracabessa,
+3432 Færingehavn — liegen alle knapp außerhalb der Toleranz.
+
+Nebenbefund, erledigt: der alte Vermerk „(att NNNN)" nannte bei allen Stationen
+die eigene Nummer statt der des Bezugshafens; die neuen Vermerke nennen die
+richtige.
+
+## Dublette 4475a Dhamra entfernt (2026-08-05)
+
+`Dhamra, Odisha, India` (ATT 4475a, NP203 Part III S. 249) und
+`Dhamra Port, Odisha, India` in `harmonics_utide_tidetables` sind **derselbe
+Pegel** — UKHO-Station 4475A. Der Utide-Satz stammt aus den Gezeitentafeln des
+Hafens, die genau diese Nummer nennen. Belege: M2 weicht um 2,6 %, S2 um 4,7 %,
+K1 um 1,1 % ab, die Hochwasserzeiten um 3 bis 10 Minuten.
+
+Die Buchposition 20° 48′ N / 86° 54′ E liegt 7,7 km westlich des Hafens und ist
+ungenau — auf derselben Buchseite stimmen Shortt Island auf 0,0 km und Chandbali
+auf 0,8 km. Der Nachweis führt über die Laufzeit: Chandbali liegt 24,7 km
+flussaufwärts und hat Hochwasser 75 Minuten später, also rund 3 Minuten je
+Kilometer. Läge der ATT-Pegel wirklich 7,7 km weiter oben, müsste sein
+Hochwasser gut 20 Minuten *später* eintreten — gemessen sind es 9 Minuten
+*früher*. Er kann also nicht oberhalb des Hafens liegen.
+
+Der ATT-Datensatz wurde daher gelöscht (7 Konstituenten, zwei davon inferiert,
+gegen 57 beim Utide-Satz). NP203 Part II hat damit eine Lücke bei 4475a; die
+Begründung steht in der Notiz von `Dhamra Port`. Die Kurve des ATT-Satzes lag
+rund 0,3 m tiefer, weil ihm MM und SSA (je 0,12 m) fehlten. Bestand danach:
+479 statt 480 Stationen, HAT-Test unverändert 467/12.
+
+## Dublette 4486 Moyapur entfernt, Mayapur neu verortet (2026-08-05)
+
+`Moyapur, West Bengal, India` (ATT 4486, NP203 Part II S. 237) und
+`Mayapur, West Bengal, India` in `harmonics_utide_tidetables` (Survey of India)
+sind **derselbe Pegel** — eine Signalstation des Hugli-Lotsendienstes; das Buch
+schreibt *Moyapur*, die Survey of India *Mayapur*.
+
+Die UTide-Station stand auf **23,4122 N / 88,3804 E**, dem bekannten Mayapur in
+Nadia, 112 km flussaufwärts. Das ist offensichtlich aus dem Namen geografisch
+aufgelöst worden. Der Nachweis kommt ohne jeden ATT-Wert aus, allein aus den
+Survey-of-India-Pegeln des Hugli (Hochwasserverzug nach Sagar Island Lighthouse):
+
+| Station | Breite | HW-Verzug |
+|---|---:|---:|
+| Sagar Island Lighthouse | 21,66 | 0 min |
+| Haldia Port Lighthouse | 21,95 | 33 min |
+| Haldia | 22,03 | 63 min |
+| Diamond Harbour | 22,18 | 97 min |
+| Mayapur | eingetragen 23,41 | 184 min |
+| Kolkata | 22,55 | 243 min |
+
+Mayapur liegt zeitlich bei 60 % der Strecke Diamond Harbour → Kolkata, also bei
+**22° 24′ N** — vier Kilometer neben der Buchangabe 22° 26′ N. Oberhalb von
+Kolkata kann der Pegel nicht liegen: dort käme die Welle später an, nicht
+59 Minuten früher. Auch die M2-Amplitude passt, 1,57 m liegt zwischen Diamond
+Harbour (1,73) und Kolkata (1,39), nicht darüber.
+
+Übernommen wurde die Buchposition 22,4333 / 88,1333; die ATT-Station wurde
+gelöscht (6 Konstituenten aus einem Transfer gegen 57 gemessene). Bestand danach:
+478 statt 479 Stationen.
+
+**Merke:** Ortsnamen aus Tafelwerken nicht geografisch auflösen, ohne die Lage
+gegen die Laufzeit der Tidewelle zu prüfen. Auf derselben Buchseite stehen mit
+Gangra, Balari, Hugli Point und Akra vier weitere Semaphorstationen, die in
+allgemeinen Karten nicht mehr auftauchen — dass ein Name dort nicht zu finden
+ist, sagt nichts über die Richtigkeit der Position.
+
+## Dublette Garden Reach: NOAA-Datensatz entfernt (2026-08-06)
+
+Vier Datensätze für denselben Pegel im Hafen von Kolkata:
+
+| Datensatz | Position | Z0 | Konstituenten | Herkunft |
+|---|---|---|---|---|
+| Calcutta (Garden Reach) Hooghly River, `noaa_cptt` | 22,5500 / 88,3000 | 3,1394 | 6 | NOAA Table-2-Transfer von Sagar Roads (+287 min) |
+| Kolkata (Garden Reach), `att_np203_secondary` (att 4488) | 22,5500 / 88,3000 | 3,1900 | 9 | NP203 Part III |
+| Kolkata (Garden Reach Khidderpore), `harmonics-1997-05-25_mod` | 22,5486 / 88,3201 | 3,2000 | 22 | ohne Quellzeile, Datum LAT |
+| Kolkata (Garden Reach Khidderpore), `utide_tidetables` | 22,5486 / 88,3201 | 3,3999 | 57 | Survey of India, r²=0,9916 |
+
+Die beiden Positionen liegen 2,1 km auseinander, nur im Längengrad. Die runden
+Werte 22° 33′ N / 88° 18′ E sind eine auf volle Bogenminuten gerundete
+Listenangabe, die NOAA und ATT gemeinsam geerbt haben.
+
+**Beleg für denselben Pegel** ist der Flachwasser-Fingerabdruck. M4 entsteht erst
+im Fluss, das Verhältnis M4/M2 wächst stromauf monoton:
+
+| Station | M2 | M4 | M4/M2 | 2g(M2)−g(M4) |
+|---|---|---|---|---|
+| Haldia | 1,702 | 0,145 | 0,085 | 87,0° |
+| Diamond Harbour | 1,731 | 0,210 | 0,121 | 89,3° |
+| Mayapur | 1,572 | 0,238 | 0,151 | 90,0° |
+| Garden Reach ATT | 1,260 | 0,229 | 0,181 | 78,0° |
+| Garden Reach classic 1997 | 1,105 | 0,222 | 0,201 | 79,0° |
+| Garden Reach utide | 1,385 | 0,237 | 0,171 | 90,9° |
+
+Alle Garden-Reach-Sätze sitzen oberhalb von Mayapur in derselben Flussstrecke.
+ATT und classic teilen `2g(M2)−g(M4)` auf 1° genau — gemeinsame
+Admiralty-Abstammung, der Satz von 1997 stammt aus einer älteren Ausgabe
+derselben Tafel. utide liegt bei 90,9° wie die übrigen modernen
+Survey-of-India-Stationen (87–90°).
+
+Trotzdem sind die Sätze nicht austauschbar: erstes Hochwasser am 14.09.2026
+zwischen 02:50 und 03:58 (68 min Spanne), Maximum 5,27 bis 6,53 m.
+
+**Gelöscht** wurde der NOAA-Satz `Calcutta (Garden Reach) Hooghly River` aus
+`harmonics_noaa_cptt.txt` (189 Zeilen, Bestand 1593 → 1592). Er war der
+schwächste der vier: ein Table-2-Transfer von Sagar Roads mit sechs
+Konstituenten und ohne M4, also ohne jede Flachwasserinformation für einen Pegel
+80 km flussaufwärts. Die übrigen drei behält Oliver und führt sie auf eine
+gemeinsame Position und einen einheitlichen Namen zusammen.
+
+**Zum Namen:** „Garden Reach" ist ein *Reach*, ein gerader Flussabschnitt in der
+seemännischen Benennung, nach den Landhäusern mit ihren Gärten benannt, die die
+Briten im 18. Jahrhundert an diesem Ufer bauten. Der Botanische Garten
+(Shibpur/Howrah) liegt am anderen Ufer und flussabwärts — die Namensähnlichkeit
+ist Zufall. Khidderpore Dock und Garden Reach sind zwei benachbarte Becken
+derselben Hafenanlage; welches Ufer die einzelnen Positionsangaben treffen, ist
+aus den Daten nicht zu entscheiden.
