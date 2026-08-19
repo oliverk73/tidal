@@ -30359,8 +30359,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 98.6000
-# !latitude: 9.9500
+# !longitude: 98.5947
+# !latitude: 9.9480
 Pak Nam Ranong, Thailand
 +07:00 :Asia/Bangkok
 2.3400 meters
@@ -30551,8 +30551,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 97.8667
-# !latitude: 9.4167
+# !longitude: 97.8701
+# !latitude: 9.4221
 Ko Surin, Thailand
 +07:00 :Asia/Bangkok
 1.5000 meters
@@ -30743,9 +30743,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 98.2500
-# !latitude: 9.0333
-Chang Ko Phra Thong, Thailand
+# !longitude: 98.2549
+# !latitude: 9.0290
+Chong Ko Phra Thong, Thailand
 +07:00 :Asia/Bangkok
 1.4000 meters
 x 0 0
@@ -30935,8 +30935,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 97.6333
-# !latitude: 8.5833
+# !longitude: 97.6373
+# !latitude: 8.5712
 Ko Miang, Thailand
 +07:00 :Asia/Bangkok
 1.4000 meters
@@ -31121,15 +31121,23 @@ x 0 0
 # att_number: 4637
 # note: NP203 Part III (2002), Zone -0700. Die Ausgabe 2015 fuehrt dieses
 # note: Gebiet nicht mehr -- der Band hiess 2002 noch "Indian Ocean and South
-# note: China Sea". Position und ML aus Part II desselben Bandes.
-# note: N2/K2 inferiert.
+# note: China Sea". N2/K2 inferiert.
+# note: "Khlong" = Tidenarm/Flussmuendung. Der Pegel liegt in der Muendung
+# note: suedlich des Leuchtturms Laem Ao Kham; dasselbe Gewaesser traegt auch
+# note: den Namen Thap Lamu. Der RTN-Pegel Ao Thap Lamu (8.5756 / 98.2219)
+# note: liegt 3.3 km suedwestlich am aeusseren Ende derselben Muendung.
+# note: Position korrigiert 2026-08-19: NP203 Part II gibt 8 36 N 98 15 E,
+# note: auf volle Bogenminuten gerundet; dieser Punkt liegt 934 m landeinwaerts.
+# note: Das Rundungsfenster (+/-0.5') reicht westlich bis 98.2417 und beruehrt
+# note: damit genau das Ostufer der Muendung. Gesetzt auf 8.5984 / 98.2405,
+# note: den naechstgelegenen Punkt im Fahrwasser (1.1 km vom Buchwert).
 # date_imported: 20260802
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 98.2500
-# !latitude: 8.6000
-Klong Thung Maphrao, Thailand
+# !longitude: 98.2405
+# !latitude: 8.5984
+Khlong Thung Maphrao, Thailand
 +07:00 :Asia/Bangkok
 1.4000 meters
 x 0 0
@@ -31319,8 +31327,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 98.4167
-# !latitude: 7.8333
+# !longitude: 98.4216
+# !latitude: 7.8338
 Ko Taphao Noi (Phuket), Thailand
 +07:00 :Asia/Bangkok
 2.2900 meters
@@ -31511,8 +31519,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 98.8333
-# !latitude: 8.0167
+# !longitude: 98.8307
+# !latitude: 8.0180
 Ao Nang (Krabi), Thailand
 +07:00 :Asia/Bangkok
 2.1000 meters
@@ -31699,13 +31707,20 @@ x 0 0
 # note: Gebiet nicht mehr -- der Band hiess 2002 noch "Indian Ocean and South
 # note: China Sea". Position und ML aus Part II desselben Bandes.
 # note: N2/K2 inferiert.
+# note: ADMIRALTY-Bezeichnung: "Pak Nam Trang" (att 4643).
+# note: Position 7 18 N 99 29 E auf volle Bogenminuten gerundet (+/- 0.9 km).
+# note: 622 m von Ban Phra Muang, 248 m vom naechsten Flussarm im
+# note: Mangrovendelta des Trang -- beides innerhalb des Rundungsfensters.
+# note: Der RTN-Pegel Hat Yao Pier (Ko Libong) liegt 9.0 km flussabwaerts
+# note: an der Muendung (7.3108 / 99.4019); dort sind M2 und S2 kleiner
+# note: und frueher. Nicht derselbe Pegel.
 # date_imported: 20260802
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 99.4833
-# !latitude: 7.3000
-Pak Nam Trang, Thailand
+# !longitude: 99.4856
+# !latitude: 7.2952
+Pramuang Pier (Na Kluea), Trang, Thailand
 +07:00 :Asia/Bangkok
 1.8500 meters
 x 0 0
@@ -31895,9 +31910,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 99.4833
-# !latitude: 7.0333
-Goh Pe-Tra (Pulau Kapai), Thailand
+# !longitude: 99.4758
+# !latitude: 7.0377
+Ko Phetra (Pulau Kapai), Thailand
 +07:00 :Asia/Bangkok
 1.5200 meters
 x 0 0
@@ -32087,9 +32102,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 99.6000
-# !latitude: 6.8667
-Goh Don (North Cone Island), Thailand
+# !longitude: 99.5958
+# !latitude: 6.8557
+Ko Don (North Cone Island), Thailand
 +07:00 :Asia/Bangkok
 1.8400 meters
 x 0 0
@@ -32279,9 +32294,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 99.7000
+# !longitude: 99.7045
 # !latitude: 6.7333
-Pulau Lela, Thailand
+Ko Lela, Satun, Thailand
 +07:00 :Asia/Bangkok
 1.8800 meters
 x 0 0
@@ -32471,8 +32486,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 99.8333
-# !latitude: 6.5833
+# !longitude: 99.8346
+# !latitude: 6.5841
 Ko Koi Noi, Thailand
 +07:00 :Asia/Bangkok
 2.0700 meters
@@ -32663,9 +32678,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 99.1833
-# !latitude: 6.5333
-Ko Butang, Malaysia
+# !longitude: 99.1726
+# !latitude: 6.5307
+Ko Batong, Thailand
 +08:00 :Asia/Kuala_Lumpur
 1.7000 meters
 x 0 0
