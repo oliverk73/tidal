@@ -21,8 +21,8 @@ import pdfplumber
 import utide
 
 warnings.filterwarnings('ignore')
-sys.path.insert(0, '/home/oliver/py')
-sys.path.insert(0, '/home/oliver/batch')
+sys.path.insert(0, '/home/oliver/weather/py')
+sys.path.insert(0, '/home/oliver/weather/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import CONSTIT_67
 
