@@ -32,6 +32,9 @@ harmonics/help/*
 !harmonics/help/np203_table5_part1_levels.json
 !harmonics/help/np203_2002_part3_scs.tsv
 !harmonics/help/np203_2002_part2_scs_pos.tsv
+!harmonics/help/positions_locked.csv
+!harmonics/help/positions_ambiguous.csv
+!harmonics/help/geprueft.csv
 harmonics/classic_original/
 
 # Country-specific UTide intermediates: data is merged into the aggregate
@@ -43,6 +46,8 @@ harmonics/utide/harmonics_utide_*.txt
 !harmonics/utide/harmonics_utide_tidetables.txt
 !harmonics/utide/harmonics_utide_current_observations.txt
 !harmonics/utide/harmonics_utide_current_tables.txt
+!harmonics/utide/harmonics_utide_australia_oceancurrent.txt
+!harmonics/utide/harmonics_utide_chile_shoa.txt
 
 # Windows Zone.Identifier metadata
 *:Zone.Identifier
