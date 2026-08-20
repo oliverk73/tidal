@@ -127910,7 +127910,6 @@ x 0 0
 # ssc_id: SSC-palb
 # ioc_code: palb
 # psmsl_id: 527
-# ptwc_code: ptal
 # utide: pts=35040 period=2025-01-01..2025-12-31 r2=1.0000 rms=0.0009m const=92
 # !units: meters
 # !longitude: -124.813613
@@ -327576,7 +327575,6 @@ x 0 0
 # datum: MLLW
 # confidence: 7
 # namria_code: SJ
-# ssc_id: SSC-sanjs
 # psmsl_id: 1711
 # utide: period=2022-12-31..2026-12-31 r2=0.9961 rms=0.0239m const=68
 # !units: meters
@@ -433627,7 +433625,7 @@ x 0 0
 # ssc_id: SSC-cast
 # ioc_code: cast
 # gloss_id: 330
-# psmsl_id: 1467, 2471
+# psmsl_id: 2471
 # uhslc_id: 835
 # sonel_tg_id: 2901
 # utide: period=2024-12-31..2026-04-20 r2=0.7563 rms=0.4263m const=68
@@ -434203,7 +434201,6 @@ x 0 0
 # date_imported: 20260414
 # datum: ACD (approx.)
 # confidence: 7
-# ssc_id: SSC-chat
 # psmsl_id: 1484
 # utide: period=2025-01-01..2026-04-20 r2=0.7654 rms=0.8408m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
@@ -528260,7 +528257,7 @@ x 0 0
 # datum: Chart Datum (PLA)
 # confidence: 7
 # ssc_id: SSC-walt
-# psmsl_id: 1224, 2307, 666
+# psmsl_id: 1224
 # station_id_context: UKHO-0129
 # pla_gauge: 0129
 # license_note: PLA-Disclaimer personal use only - Einbau mit Wissen des Betreibers
