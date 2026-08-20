@@ -63,10 +63,27 @@ def active_files():
 
 def namekey(s):
     s = unicodedata.normalize('NFKD', s.split(',')[0]).encode('ascii', 'ignore').decode().lower()
-    s = re.sub(r'\(.*?\)', '', s)
+    # Klammerzusaetze weglassen -- aber nur solche ohne Ziffern. Sonst fallen
+    # "Fundy (Offshore 1)" und "(Offshore 23)" auf denselben Schluessel.
+    s = re.sub(r'\((?![^)]*\d)[^)]*\)', '', s)
     s = re.sub(r'\b(harbour|harbor|port|puerto|pier|jetty|island|isla|ile|ko|koh'
                r'|pulau|point|bay|roads|entrance|lighthouse|st|saint)\b', '', s)
     return re.sub(r'[^a-z0-9]', '', s)
+
+
+def name_tokens(s):
+    """Wortmenge des Namens ohne das Land -- zweite Sicherung fuer Kanal B.
+
+    namekey() reduziert auf das Feld vor dem ersten Komma; bei Namen wie
+    "Padre Island, Port Mansfield Channel, Texas" steht dort aber nicht die
+    Provinz, sondern der unterscheidende Teil. Ohne diese Pruefung gelten
+    zwei verschiedene Pegel als derselbe.
+    """
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
+    parts = [p.strip() for p in s.split(',')]
+    if len(parts) > 1:
+        parts = parts[:-1]
+    return {t for t in re.split(r'[^a-z0-9]+', ' '.join(parts)) if len(t) > 1}
 
 
 def load_records():
@@ -107,7 +124,8 @@ def load_records():
                      for x in MAIN}
                 recs.append(dict(
                     fp=hashlib.md5('|'.join(rows).encode()).hexdigest(),
-                    file=path, name=line, key=namekey(line), lat=lat, lon=lon,
+                    file=path, name=line, key=namekey(line),
+                    toks=name_tokens(line), lat=lat, lon=lon,
                     slots=c, current=current, amp=amp, z=z,
                     tot=sum(abs(z[x]) for x in MAIN), line=k + 1))
                 lat = lon = units = None
@@ -232,6 +250,8 @@ def main():
                 r1, r2 = tide[idx[a]], tide[idx[b]]
                 d = km(r1, r2)
                 if d <= FAR_KM:
+                    continue
+                if not (r1['toks'] <= r2['toks'] or r2['toks'] <= r1['toks']):
                     continue
                 _absd, rel = curve_diff(r1, r2)
                 if rel > FAR_TOL:
