@@ -33,6 +33,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import load_records, curve_diff, km            # noqa: E402
 from positions_propose import gridsize_deg                       # noqa: E402
 
+FREMD_TOL = 0.25   # ab hier gilt die Kurve des Mitsitzers als unvereinbar
+
 
 def _norm(s):
     s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
@@ -76,10 +78,18 @@ def main():
                      and not verwandt(x, y)]
             gesch = [y for y in byk[x['key']] if y is not x
                      and (y['lat'], y['lon']) != (la, lo)]
-            if fremd and gesch:
-                rel = min(curve_diff(x, y)[1] for y in fremd)
-                treffer.append((rel, x, min(fremd, key=lambda y: -curve_diff(x, y)[1]),
-                                min(gesch, key=lambda y: curve_diff(x, y)[1])))
+            if not (fremd and gesch):
+                continue
+            rel = max(curve_diff(x, y)[1] for y in fremd)
+            # Stimmt die Kurve des mitsitzenden Satzes ueberein, ist es
+            # derselbe Ort unter zwei Namen und keine geliehene Position.
+            # "Puerto Princesa (Leyte)" und "San Roque, Dinagat Island"
+            # liegen 12 % auseinander -- beide Buecher drucken dieselbe
+            # Koordinate, keiner hat sie vom anderen.
+            if rel < FREMD_TOL:
+                continue
+            treffer.append((rel, x, max(fremd, key=lambda y: curve_diff(x, y)[1]),
+                            min(gesch, key=lambda y: curve_diff(x, y)[1])))
     for rel, x, f, s in sorted(treffer, key=lambda t: -t[0]):
         print(f'    {x["name"][:46]:46} {x["lat"]:8.4f} {x["lon"]:9.4f}  '
               f'{x["file"].split("/")[-1][:26]}')
