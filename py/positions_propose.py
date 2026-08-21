@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 """Sammelt Positionsvorschlaege -- und schreibt nichts in die Daten.
 
-Zwei Quellen:
   katalog   Die Kennungen des Datensatzes sind geprueft (py/id_validate.py),
             aber die Katalogposition weicht ab. Stimmen mehrere Verzeichnisse
             untereinander ueberein, ist das ein starker Hinweis.
-  kanal_b   Zwei Datensaetze gleichen Namens mit gleicher Gezeitenkurve stehen
-            weit auseinander; einer der beiden Orte ist falsch.
+Positionsvorschlaege kommen ausschliesslich aus geprueften Verzeichnis-
+eintraegen. Namensdubletten (gleicher Name, aehnliche Kurve, weit aus-
+einander) sind KEINE Positionsvorschlaege -- sie gehen als Frageliste
+nach harmonics/help/namensdubletten.csv.
 
 Jede Zeile traegt die Herkunft der heutigen Position aus
 positions_locked.csv. "manual" heisst: von Hand gesetzt, der Vorschlag
@@ -34,6 +35,7 @@ from id_validate import load_catalogues, norm_key, metres            # noqa: E40
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCK = os.path.join(ROOT, 'harmonics/help/positions_locked.csv')
 OUT = os.path.join(ROOT, 'harmonics/help/positions_proposed.csv')
+DUBL = os.path.join(ROOT, 'harmonics/help/namensdubletten.csv')
 TAGS = ('psmsl_id', 'uhslc_id', 'gloss_id', 'ssc_id', 'ioc_code',
         'ptwc_code', 'chs_id')
 
@@ -45,8 +47,11 @@ def gridsize_deg(lat, lon):
     halbe Grad genau. Ein solcher Wert ist groeber als eine von Hand
     gesetzte Position -- ihn zu uebernehmen waere ein Rueckschritt.
     """
-    for g in (1.0, 0.5, 1 / 6, 0.1, 1 / 60, 0.01, 1 / 3600, 0.0001):
-        if all(abs(v / g - round(v / g)) < 1e-6 for v in (lat, lon)):
+    # Absolute Toleranz, keine relative: "21.8333" ist die abgeschnittene
+    # Schreibweise von 21 Grad 50 Minuten (21.833333) und faellt bei einem
+    # exakten Teilbarkeitstest durch.
+    for g in (1.0, 0.5, 1 / 6, 0.1, 1 / 60, 0.01, 1 / 3600):
+        if all(abs(v / g - round(v / g)) * g < 2e-4 for v in (lat, lon)):
             return g
     return 0.0
 
@@ -99,6 +104,12 @@ def main():
             hinweis = f'Abstand in der Groessenordnung der Katalogrundung ({g:.4g} Grad)'
         else:
             hinweis = ''
+        # Unabhaengig davon festhalten, wie genau das Ziel ueberhaupt ist:
+        # ein Katalogwert auf 10 Bogenminuten sagt zwar, DASS die heutige
+        # Position falsch ist, aber nur ungefaehr, wohin.
+        if g < 9 and (not own or own < g):
+            grob = f'Ziel nur auf {g:.4g} Grad genau (~{g*111:.1f} km)'
+            hinweis = f'{hinweis}; {grob}' if hinweis else grob
         rows.append({
             'quelle': 'katalog',
             'fingerprint': r['fp'],
@@ -115,7 +126,22 @@ def main():
                                        for h in far}))[:180],
         })
 
-    # ---- Quelle kanal_b ------------------------------------------------
+    # ---- Kanal B: Namensdubletten, KEINE Positionsvorschlaege ----------
+    # Zwei Datensaetze gleichen Namens mit aehnlicher Kurve weit auseinander
+    # heissen nicht, dass einer an die Stelle des anderen gehoert. Es kann
+    # derselbe Pegel doppelt sein -- oder schlicht derselbe Ortsname an zwei
+    # Kuesten. Das entscheidet kein Skript. Hier steht nur die Gegenueber-
+    # stellung, mit Land, Quelle, Datum und Konfidenz beider Seiten.
+    def meta(r, k):
+        return '; '.join(r['tags'].get(k, []))
+
+    def land(r):
+        # Nur ein ausdruecklicher country-Eintrag zaehlt. Der letzte Teil des
+        # Namens ist kein Land -- "Florida (5)" und "Florida (4)" sind sonst
+        # zwei verschiedene Staaten.
+        return meta(r, 'country').strip()
+
+    dubl = []
     byname = collections.defaultdict(list)
     for i, r in enumerate(tide):
         if len(r['key']) >= 5:
@@ -137,26 +163,37 @@ def main():
                 if key in seen:
                     continue
                 seen.add(key)
-                same = (r1['name'].split(',')[-1].strip()
-                        == r2['name'].split(',')[-1].strip())
-                for x, y in ((r1, r2), (r2, r1)):
-                    rows.append({
-                        'quelle': 'kanal_b',
-                        'fingerprint': x['fp'],
-                        'station': x['name'],
-                        'datei': x['file'],
-                        'lat': x['lat'], 'lon': x['lon'],
-                        'vorschlag_lat': f'{y["lat"]:.4f}',
-                        'vorschlag_lon': f'{y["lon"]:.4f}',
-                        'abstand_m': f'{d*1000:.0f}',
-                        'streuung_m': '',
-                        'herkunft': prov.get(x['fp'], '?'),
-                        'hinweis': '',
-                        'beleg': (f'gleicher Name und Kurve ({rel*100:.0f} %) wie '
-                                  f'{y["name"]} [{y["file"].split("/")[-1]}]'
-                                  + ('' if same else ' -- verschiedene Laender, '
-                                     'moeglicherweise nur Namensgleichheit')),
+                l1, l2 = land(r1), land(r2)
+                if l1 and l2 and l1.lower() != l2.lower():
+                    urteil = f'verschiedene Laender ({l1} / {l2})'
+                elif not (l1 and l2):
+                    urteil = 'pruefen: Land nicht angegeben'
+                elif meta(r1, 'source') != meta(r2, 'source'):
+                    urteil = 'pruefen: gleiches Land, zwei Ableitungen'
+                else:
+                    urteil = 'pruefen: gleiches Land, gleiche Quelle'
+                row = {'urteil': urteil, 'abstand_km': f'{d:.1f}',
+                       'kurve_prozent': f'{rel*100:.0f}'}
+                for tag, r in (('a', r1), ('b', r2)):
+                    row.update({
+                        f'station_{tag}': r['name'],
+                        f'land_{tag}': land(r) or '(nicht angegeben)',
+                        f'datei_{tag}': r['file'].split('/')[-1],
+                        f'lat_{tag}': r['lat'], f'lon_{tag}': r['lon'],
+                        f'herkunft_{tag}': prov.get(r['fp'], '?'),
+                        f'quelle_{tag}': meta(r, 'source'),
+                        f'datum_{tag}': meta(r, 'datum'),
+                        f'konfidenz_{tag}': meta(r, 'confidence'),
+                        f'fingerprint_{tag}': r['fp'],
                     })
+                dubl.append(row)
+
+    dubl.sort(key=lambda r: (r['urteil'], -float(r['abstand_km'])))
+    if dubl:
+        with open(DUBL, 'w', newline='', encoding='utf-8') as fh:
+            w = csv.DictWriter(fh, fieldnames=list(dubl[0].keys()))
+            w.writeheader()
+            w.writerows(dubl)
 
     rows.sort(key=lambda r: (r['quelle'], -float(r['abstand_m'])))
     with open(OUT, 'w', newline='', encoding='utf-8') as fh:
@@ -164,11 +201,14 @@ def main():
         w.writeheader()
         w.writerows(rows)
 
-    print(f'{len(rows)} Vorschlaege -> {OUT}\n')
-    for q in ('katalog', 'kanal_b'):
-        sub = [r for r in rows if r['quelle'] == q]
-        c = collections.Counter(r['herkunft'] for r in sub)
-        print(f'{q:8}  {len(sub):4d}   ' + '  '.join(f'{v} {k}' for k, v in c.most_common()))
+    c = collections.Counter(r['herkunft'] for r in rows)
+    print(f'{len(rows)} Positionsvorschlaege -> {OUT}')
+    print('   Herkunft der heutigen Position: '
+          + '  '.join(f'{v} {k}' for k, v in c.most_common()))
+    cd = collections.Counter(r['urteil'] for r in dubl)
+    print(f'\n{len(dubl)} Namensdubletten -> {DUBL}   (keine Positionsvorschlaege)')
+    for k, v in cd.most_common():
+        print(f'   {v:4d}  {k}')
     print('\nKatalogvorschlaege ueber 20 km, nach Herkunft der heutigen Position:')
     for r in [x for x in rows if x['quelle'] == 'katalog'][:18]:
         print(f'   {float(r["abstand_m"])/1000:7.1f} km  [{r["herkunft"]:6}]  '
