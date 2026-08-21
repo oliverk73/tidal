@@ -120,7 +120,11 @@ def load_records():
                     c += 1
                     j += 1
                 current = (units or '').startswith('knot') or line.rstrip().endswith('Current')
-                z = {x: cmath.rect(amp.get(x, (0.0, 0.0))[0],
+                # Rund ein Viertel der Saetze steht in Fuss. Ohne Umrechnung
+                # sieht ein Fuss-Satz gegen einen Meter-Satz aus wie ein
+                # dreifach zu grosser Tidenhub.
+                scale = 0.3048 if (units or '').startswith('f') else 1.0
+                z = {x: cmath.rect(scale * amp.get(x, (0.0, 0.0))[0],
                                    -math.radians((amp.get(x, (0.0, 0.0))[1]
                                                   - SPEED[x] * hours) % 360))
                      for x in MAIN}
@@ -129,6 +133,7 @@ def load_records():
                     file=path, name=line, key=namekey(line),
                     toks=name_tokens(line), lat=lat, lon=lon,
                     slots=c, current=current, amp=amp, z=z,
+                    units=units or '', scale=scale,
                     tot=sum(abs(z[x]) for x in MAIN), line=k + 1))
                 lat = lon = units = None
     return recs
