@@ -12,6 +12,7 @@ Usage: python3 py/bom_qualitaet.py [--monat JULY] [--km 5] [--max N]
 """
 from __future__ import annotations
 
+import bisect
 import calendar
 import collections
 import csv
@@ -35,9 +36,12 @@ EREIGNIS = re.compile(r'^(.*),(\d{4}-\d\d-\d\d),(\d+):(\d\d) ([AP])M[^,]*,'
 
 def xtide(tcd, name, von, bis):
     env = dict(os.environ, HFILE_PATH=os.path.join(TCD, tcd))
+    # tide gibt die Stationsnamen aus der TCD in ISO-8859-1 aus; als UTF-8
+    # dekodiert bricht der Lauf beim ersten Umlaut ab.
     out = subprocess.run(['tide', '-l', name, '-b', von, '-e', bis,
                           '-m', 'p', '-u', 'm', '-f', 'c'],
-                         env=env, capture_output=True, text=True).stdout
+                         env=env, capture_output=True,
+                         encoding='iso-8859-1', errors='replace').stdout
     ev = []
     for z in out.split('\n'):
         m = EREIGNIS.match(z.strip())
@@ -50,38 +54,80 @@ def xtide(tcd, name, von, bis):
     return ev
 
 
-def vergleich(ref, y):
-    """ref/y: Listen (zeitpunkt, hoehe, art). -> Kennzahlen oder None."""
-    if len(ref) < 40 or len(y) < 40:
-        return None
-    paare = []
+def _index(y):
+    """Vorhersagen nach Art getrennt, nach Zeit sortiert -- fuer bisect."""
+    ix = {}
+    for art in ('High', 'Low'):
+        p = sorted((zy.timestamp() / 60.0, hy) for zy, hy, ay in y if ay == art)
+        ix[art] = ([q[0] for q in p], [q[1] for q in p])
+    return ix
+
+
+def _passung(ref, ix, schub, fenster=60):
+    """Ordnet Referenzereignisse den um schub Minuten verschobenen zu.
+
+    Ueber bisect statt ueber verschachtelte Schleifen: die Rastersuche
+    ruft das hundertfach je Datensatz auf.
+    """
+    tr = []
     for zr, hr, ar in ref:
-        nah = [(abs((zy - zr).total_seconds()), zy, hy)
-               for zy, hy, ay in y if ay == ar and abs((zy - zr).days) <= 1]
-        if nah:
-            paare.append((min(nah), zr, hr))
-    if len(paare) < 40:
-        return None
-    dz = [p[0][0] * (1 if p[0][1] > p[1] else -1) / 60.0 for p in paare]
-    versatz = statistics.median(dz)
-    # Zeitversatz herausrechnen, dann erneut zuordnen
-    y2 = [(zy - dt.timedelta(minutes=versatz), hy, ay) for zy, hy, ay in y]
-    treffer = []
-    for zr, hr, ar in ref:
-        nah = [(abs((zy - zr).total_seconds()) / 60.0, hy)
-               for zy, hy, ay in y2 if ay == ar and abs((zy - zr).total_seconds()) < 5400]
-        if nah:
-            treffer.append((min(nah), hr))
-    if len(treffer) < 40:
-        return None
-    dh_roh = [t[1] - t[0][1] for t in treffer]
+        t = zr.timestamp() / 60.0 - schub
+        zs, hs = ix[ar]
+        if not zs:
+            continue
+        i = bisect.bisect_left(zs, t)
+        best = None
+        for j in (i - 1, i):
+            if 0 <= j < len(zs):
+                d = abs(zs[j] - t)
+                if d < fenster and (best is None or d < best[0]):
+                    best = (d, hs[j])
+        if best:
+            tr.append((best, hr))
+    return tr
+
+
+def _guete(tr):
+    dh_roh = [t[1] - t[0][1] for t in tr]
     off = statistics.mean(dh_roh)
     dh = [q - off for q in dh_roh]
-    dt_min = [t[0][0] for t in treffer]
-    return dict(n=len(treffer), versatz_min=versatz, hoehe_off=off,
-                rms=(sum(q * q for q in dh) / len(dh)) ** 0.5,
-                max=max(abs(q) for q in dh),
-                zeit_med=statistics.median(dt_min))
+    return (sum(q * q for q in dh) / len(dh)) ** 0.5, off, dh, [t[0][0] for t in tr]
+
+
+def vergleich(ref, y):
+    """ref/y: Listen (zeitpunkt, hoehe, art). -> Kennzahlen oder None.
+
+    Der Zeitversatz wird ueber ein Raster gesucht, nicht ueber den
+    naechstgelegenen Nachbarn: die Tafeln drucken Ortszeit, viele Saetze
+    stehen auf UTC, das sind bis zu 14 Stunden. Ein Nachbarschaftsvergleich
+    kann hoechstens einen halben Tidenzyklus ueberbruecken und liefert
+    darueber hinaus einen frei erfundenen Wert.
+    """
+    if len(ref) < 40 or len(y) < 40:
+        return None
+    # Zuerst zaehlt die Trefferzahl, erst danach der RMS. Wer nur den RMS
+    # minimiert, waehlt einen falschen Versatz mit wenigen zufaellig gut
+    # passenden Ereignissen statt den richtigen mit allen.
+    ix = _index(y)
+
+    def bewerte(v):
+        tr = _passung(ref, ix, v)
+        if len(tr) < 30:
+            return None
+        return (len(tr), -_guete(tr)[0], v)
+
+    kand = [q for q in (bewerte(v) for v in range(-840, 841, 15)) if q]
+    if not kand:
+        return None
+    grob = max(kand)[2]
+    fein = [q for q in (bewerte(v) for v in range(grob - 15, grob + 16)) if q]
+    versatz = max(fein)[2] if fein else grob
+    tr = _passung(ref, ix, versatz)
+    if len(tr) < 40:
+        return None
+    rms, off, dh, dtm = _guete(tr)
+    return dict(n=len(tr), versatz_min=versatz, hoehe_off=off, rms=rms,
+                max=max(abs(q) for q in dh), zeit_med=statistics.median(dtm))
 
 
 def main():
