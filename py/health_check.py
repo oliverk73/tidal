@@ -7,6 +7,8 @@ als erklaert abgehakt ist:
 
   L  Sperrliste    hat sich eine Position oder ein Name gegen
                    positions_locked.csv veraendert?
+  E  Bestand       ist ein gesperrter Datensatz verschwunden oder
+                   doppelt vorhanden? (oft gewollt, nie stillschweigend)
   S  Struktur      fehlende Position, abweichende Slotzahl
   A  Nachbarn      unter 3 km, aber Kurven weichen stark ab
   B  Namensgleich  gleicher Name, gleiche Kurve, weit auseinander
@@ -188,8 +190,16 @@ def main():
         by_fp[r['fp']].append(r)
     for fp, row in locked.items():
         here = by_fp.get(fp, [])
-        if len(here) != 1:
+        if not here:
+            # Ein gesperrter Datensatz ist verschwunden. Das ist oft gewollt
+            # -- aber es darf nie unbemerkt bleiben, sonst faellt Handarbeit
+            # lautlos aus den Daten heraus.
+            add('E', fp, f'{"entfernt":>13}  {row["name"][:44]:44} '
+                         f'[{row["provenance"]}] {row["file"].split("/")[-1]}',
+                2.0 if row['provenance'] == 'manual' else 1.0)
             continue
+        if len(here) > 1:
+            continue        # Mehrfachvorkommen unten, ueber alle Datensaetze
         r = here[0]
         moved = None
         if r['lat'] is not None and row['lat'] and row['lon']:
@@ -203,6 +213,22 @@ def main():
         elif r['name'] != row['name']:
             add('L', fp, f'{"umbenannt":>13}  {row["name"][:40]:40} -> {r["name"][:40]} '
                          f'[{row["provenance"]}]', 1e9)
+
+    # Mehrfachvorkommen ueber den gesamten Bestand, nicht nur ueber die
+    # Sperrliste: dort steht pro Fingerabdruck nur eine Zeile, doppelte
+    # Kurven waeren also gerade dort unsichtbar.
+    for fp, here in by_fp.items():
+        if len(here) < 2:
+            continue
+        d = 0.0
+        pos = [x for x in here if x['lat'] is not None]
+        for i in range(len(pos)):
+            for j in range(i + 1, len(pos)):
+                d = max(d, km(pos[i], pos[j]))
+        add('E', fp, f'{len(here)}x dieselbe Kurve, max {d:6.1f} km  '
+                     + ' | '.join(f'{x["name"][:26]} [{x["file"].split("/")[-1][:24]}]'
+                                  for x in here)[:150],
+            100.0 - d)
 
     # ---- S: Struktur ---------------------------------------------------
     modal = {}
@@ -277,14 +303,16 @@ def main():
     # ---- Bericht -------------------------------------------------------
     for (c, _k), row in added.items():
         findings[c].append(row)
-    titles = {'L': 'Sperrliste verletzt', 'S': 'Struktur',
+    titles = {'L': 'Sperrliste verletzt',
+              'E': 'gesperrter Datensatz entfernt oder mehrfach vorhanden',
+              'S': 'Struktur',
               'A': f'Nachbarn unter {NEAR_KM:.0f} km, Kurven ueber {NEAR_TOL*100:.0f}% verschieden',
               'B': 'gleicher Name, gleiche Kurve, weit auseinander',
               'M': 'dominante Nebenkonstituente'}
     print(f'{len(recs)} Datensaetze, davon {len(tide)} Pegel mit Position')
     print(f'{len(done)} Faelle in geprueft.csv abgehakt\n')
     total = 0
-    for c in 'LSBMA':
+    for c in 'LESBMA':
         rows = findings.get(c, [])
         total += len(rows)
         print(f'[{c}] {titles[c]}: {len(rows)} offen')
