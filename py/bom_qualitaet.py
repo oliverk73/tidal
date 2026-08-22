@@ -87,6 +87,26 @@ def _passung(ref, ix, schub, fenster=60):
     return tr
 
 
+def _mittlere_differenz(ref, ix, schub, fenster=60):
+    """Median der vorzeichenbehafteten Zeitdifferenz in Minuten."""
+    d = []
+    for zr, _hr, ar in ref:
+        t = zr.timestamp() / 60.0 - schub
+        zs, _hs = ix[ar]
+        if not zs:
+            continue
+        i = bisect.bisect_left(zs, t)
+        best = None
+        for j in (i - 1, i):
+            if 0 <= j < len(zs):
+                q = zs[j] - t
+                if abs(q) < fenster and (best is None or abs(q) < abs(best)):
+                    best = q
+        if best is not None:
+            d.append(best)
+    return statistics.median(d) if d else 0.0
+
+
 def _guete(tr):
     dh_roh = [t[1] - t[0][1] for t in tr]
     off = statistics.mean(dh_roh)
@@ -114,13 +134,21 @@ def vergleich(ref, y):
         tr = _passung(ref, ix, v)
         if len(tr) < 30:
             return None
-        return (len(tr), -_guete(tr)[0], v)
+        # Erst Trefferzahl, dann kleinste Zeitabweichung. Der RMS taugt als
+        # zweites Kriterium nicht: er ist ueber das ganze Plateau gleich,
+        # weil dieselben Ereignisse zugeordnet werden.
+        return (len(tr), -statistics.median(t[0][0] for t in tr), v)
 
     kand = [q for q in (bewerte(v) for v in range(-840, 841, 15)) if q]
     if not kand:
         return None
     grob = max(kand)[2]
-    fein = [q for q in (bewerte(v) for v in range(grob - 15, grob + 16)) if q]
+    # Die Trefferzahl aendert sich innerhalb des Zuordnungsfensters nicht --
+    # es gibt ein Plateau gleich guter Versaetze, und der Rand davon liegt bis
+    # zu einem Fenster daneben. Deshalb fein abtasten und die Mitte des
+    # Plateaus nehmen; was dann an Zeitdifferenz bleibt, ist der echte
+    # Zeitfehler des Datensatzes.
+    fein = [q for q in (bewerte(v) for v in range(grob - 75, grob + 76)) if q]
     versatz = max(fein)[2] if fein else grob
     tr = _passung(ref, ix, versatz)
     if len(tr) < 40:
