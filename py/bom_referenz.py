@@ -28,7 +28,7 @@ WORT = re.compile(r'<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" '
 
 def worte(pdf, seite):
     x = subprocess.run(['pdftotext', '-bbox', '-f', str(seite), '-l', str(seite), pdf, '-'],
-                       capture_output=True, text=True).stdout
+                       capture_output=True, text=True, errors='replace').stdout
     return [(float(a), float(b), float(c), float(d), t)
             for a, b, c, d, t in WORT.findall(x)]
 
@@ -126,7 +126,7 @@ def lies(pdf):
     k = kopf(pdf)
     if not k:
         return None
-    inf = subprocess.run(['pdfinfo', pdf], capture_output=True, text=True).stdout
+    inf = subprocess.run(['pdfinfo', pdf], capture_output=True, text=True, errors='replace').stdout
     m = re.search(r'Pages:\s+(\d+)', inf)
     letzte = int(m.group(1)) if m else 6
     daten = {}
