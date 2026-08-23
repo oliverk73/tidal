@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Loescht die in harmonics/help/bom_loeschen.csv aufgefuehrten Saetze.
+"""Loescht die in einer Loeschliste aufgefuehrten Saetze.
+
+Die Liste ist eine CSV mit den Spalten datei, name, fehler_prozent und
+begruendung -- so bleibt der Nachweis im Baum, statt im Code zu stehen.
 
 Ohne --schreiben wird nur gezeigt, was passieren wuerde.
 Jede Datei wird vorher nach harmonics/backup/ gesichert.
+
+Usage: python3 py/saetze_loeschen.py <liste.csv> [--schreiben]
 """
 from __future__ import annotations
 
@@ -15,13 +20,10 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BACKUP = os.path.join(ROOT, 'harmonics/backup')
 
-LISTE = os.path.join(ROOT, 'harmonics/help/bom_loeschen.csv')
-
-
-def liste():
-    """Zu loeschende Saetze aus der CSV -- der Nachweis bleibt so im Baum."""
+def liste(pfad):
+    """Zu loeschende Saetze aus der CSV."""
     import csv
-    with open(LISTE, encoding='utf-8') as fh:
+    with open(pfad, encoding='utf-8') as fh:
         return [(r['datei'], r['name'],
                  f"{r['fehler_prozent']} % Hub -- {r['begruendung']}")
                 for r in csv.DictReader(fh)]
@@ -40,9 +42,15 @@ def block(lines, i):
 
 def main(argv):
     schreiben = '--schreiben' in argv
+    rest = [a for a in argv if not a.startswith('--')]
+    if not rest:
+        print(__doc__.strip().split('Usage:')[-1].strip())
+        return 2
+    csvpfad = rest[0]
     stamp = dt.datetime.now().strftime('%Y%m%d_%H%M')
+    kurz = os.path.basename(csvpfad).replace('_loeschen.csv', '')
     proDatei = {}
-    for datei, name, warum in liste():
+    for datei, name, warum in liste(csvpfad):
         proDatei.setdefault(datei, []).append((name, warum))
 
     gesamt = 0
@@ -66,7 +74,7 @@ def main(argv):
             print(f'   -{b - a:3} Zeilen  {name[:46]:46}\n                     {warum}')
         if schreiben:
             shutil.copy2(pfad, os.path.join(
-                BACKUP, os.path.basename(datei) + f'.vor_bom_dedup_{stamp}'))
+                BACKUP, os.path.basename(datei) + f'.vor_{kurz}_dedup_{stamp}'))
             for a, b, _n, _w in raus:
                 del lines[a:b]
             open(pfad, 'w', encoding='iso-8859-1').write('\n'.join(lines))

@@ -10,10 +10,11 @@ nachrechnen, statt seine Quelle zu bewerten.
 Der konstante Pegelversatz wird herausgerechnet -- die Bezugsniveaus sind
 verschieden (RTN gegen MSL, unsere Saetze teils gegen Chart Datum).
 
-Usage: python3 py/rtn_qualitaet.py [--monat "July 2026"] [--km 5]
+Usage: python3 py/rtn_qualitaet.py [--monat "July 2026"] [--km 5] [--csv <datei>]
 """
 from __future__ import annotations
 
+import csv
 import math
 import os
 import re
@@ -106,7 +107,11 @@ def main():
     umkreis = 5.0
     if '--km' in sys.argv:
         umkreis = float(sys.argv[sys.argv.index('--km') + 1])
+    ausgabe = None
+    if '--csv' in sys.argv:
+        ausgabe = sys.argv[sys.argv.index('--csv') + 1]
     von, bis, _ = FENSTER[monat]
+    zeilen_csv = []
     recs = [x for x in load_records()
             if x['lat'] is not None and x['lon'] is not None and not x['current']]
     print(f'Referenzmonat {monat}, Umkreis {umkreis:.0f} km\n')
@@ -137,12 +142,25 @@ def main():
             g = guete(ref, vorhersage(tcd, x['name'], von, bis))
             zeilen.append((g['rms'] if g else 9.99, d, x, g))
         for rms, d, x, g in sorted(zeilen):
+            if g:
+                zeilen_csv.append(dict(
+                    station=name, provinz=prov, lat=f'{lat:.5f}', lon=f'{lon:.5f}',
+                    satz=x['name'], datei=os.path.basename(x['file']),
+                    abstand_m=f'{d*1000:.0f}', rms_m=f'{g["rms"]:.4f}',
+                    max_m=f'{g["max"]:.3f}', r=f'{g["r"]:.4f}'))
             if not g:
                 print(f'     {x["name"][:40]:40} -- keine Vorhersage')
                 continue
             print(f'     RMS {g["rms"]:.4f}  max {g["max"]:.3f}  r {g["r"]:.4f}  '
                   f'{d*1000:5.0f} m  {x["name"][:34]:34} {os.path.basename(x["file"])[:26]}')
         print()
+
+    if ausgabe:
+        with open(ausgabe, 'w', encoding='utf-8', newline='') as fh:
+            w = csv.DictWriter(fh, fieldnames=list(zeilen_csv[0]))
+            w.writeheader()
+            w.writerows(zeilen_csv)
+        print(f'{len(zeilen_csv)} Messungen nach {ausgabe}')
 
 
 if __name__ == '__main__':
