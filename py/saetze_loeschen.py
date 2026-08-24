@@ -53,7 +53,7 @@ def main(argv):
     for datei, name, warum in liste(csvpfad):
         proDatei.setdefault(datei, []).append((name, warum))
 
-    gesamt = 0
+    gesamt, schon = 0, []
     for datei, faelle in sorted(proDatei.items()):
         pfad = os.path.join(ROOT, datei)
         lines = open(pfad, encoding='iso-8859-1').read().split('\n')
@@ -63,12 +63,19 @@ def main(argv):
         raus = []
         for name, warum in faelle:
             treffer = [k for k, l in enumerate(lines) if l.rstrip() == name]
-            if len(treffer) != 1:
+            if len(treffer) > 1:
                 print(f'  ABBRUCH {datei}: "{name}" {len(treffer)}x gefunden')
                 return 1
+            if not treffer:
+                # Schon entfernt. Die Liste ist ein dauerhafter Nachweis und
+                # waechst mit; ein zweiter Lauf darf daran nicht scheitern.
+                schon.append((datei, name))
+                continue
             a, b = block(lines, treffer[0])
             raus.append((a, b, name, warum))
         raus.sort(reverse=True)
+        if not raus:
+            continue
         print(f'\n{datei}  ({vorher} Saetze)')
         for a, b, name, warum in sorted(raus):
             print(f'   -{b - a:3} Zeilen  {name[:46]:46}\n                     {warum}')
@@ -87,6 +94,8 @@ def main(argv):
                 print('   ACHTUNG: Satzzahl passt nicht!')
                 return 1
         gesamt += len(raus)
+    if schon:
+        print(f'\n{len(schon)} Eintraege der Liste waren bereits entfernt')
     print(f'\n{gesamt} Saetze {"geloescht" if schreiben else "waeren zu loeschen"}')
     return 0
 
