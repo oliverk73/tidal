@@ -151,9 +151,19 @@ def _num(line):
 
 
 def km(a, b):
-    return 6371 * math.hypot(math.radians(a['lat'] - b['lat']),
-                             math.radians(a['lon'] - b['lon'])
-                             * math.cos(math.radians(a['lat'])))
+    """Grosskreisabstand in km.
+
+    Die Laengendifferenz muss ueber die Datumsgrenze gefaltet werden. Ohne
+    das kommt fuer Totoya Island und Suva Harbor -- beide Fidschi, 202 km
+    auseinander, aber einmal bei 179.9 West und einmal bei 178.4 Ost --
+    ein Abstand von 37675 km heraus. Alle Nachbarschaftspruefungen haben
+    Stationen beiderseits der 180. Laenge deshalb nie als Nachbarn gesehen.
+    """
+    la1, la2 = math.radians(a['lat']), math.radians(b['lat'])
+    dlo = math.radians((b['lon'] - a['lon'] + 180.0) % 360.0 - 180.0)
+    h = (math.sin((la2 - la1) / 2) ** 2
+         + math.cos(la1) * math.cos(la2) * math.sin(dlo / 2) ** 2)
+    return 2 * 6371 * math.asin(math.sqrt(h))
 
 
 def curve_diff(a, b):
