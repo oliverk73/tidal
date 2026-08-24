@@ -42,7 +42,11 @@ SPEED = {'M2': 28.984104, 'S2': 30.0, 'K1': 15.041069,
 MAIN = list(SPEED)
 MAJOR = {'M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1',
          'M4', 'M6', 'MS4', 'MN4', 'SA', 'SSA', 'MM', 'MF', 'MSF'}
-MERIDIAN = re.compile(r'^[+-]\d\d:\d\d')
+# Das Vorzeichen ist nicht in allen Dateien da und die Stunde nicht immer
+# zweistellig: die Lavergne-Saetze schreiben "0:00 :Europe/London". Mit dem
+# engeren Muster fielen 124 Saetze aus jeder Auswertung heraus, ohne dass es
+# irgendwo aufgefallen waere.
+MERIDIAN = re.compile(r'^[+-]?\d{1,2}:\d\d(\s|$)')
 
 NEAR_KM = 3.0        # Kanal A: als benachbart geltender Abstand
 NEAR_TOL = 0.30      # Kanal A: relative Abweichung, ab der es ein Widerspruch ist
@@ -103,9 +107,9 @@ def load_records():
             elif (line and not line.startswith('#') and k + 1 < len(lines)
                   and MERIDIAN.match(lines[k + 1])):
                 mer = lines[k + 1].split()[0]
-                hours = int(mer[1:3]) + int(mer[4:6]) / 60.0
-                if mer[0] == '-':
-                    hours = -hours
+                vz = -1.0 if mer[0] == '-' else 1.0
+                hh, mm = mer.lstrip('+-').split(':')
+                hours = vz * (int(hh) + int(mm) / 60.0)
                 amp, rows, j, c = {}, [], k + 3, 0
                 while j < len(lines) and c < 175:
                     p = lines[j].split()
