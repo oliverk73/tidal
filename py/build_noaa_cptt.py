@@ -90,7 +90,16 @@ def find(q):
     return cand[0] if cand else (None, None)
 
 # NOAA Table-1 reference name -> resolver query (prefer measured sources)
+# Diese Namen werden per Teilzeichenkette aufgeloest, und find() nimmt den
+# kuerzesten Treffer. Nach den Umbenennungen vom August 2026 faellt "Kure"
+# damit auf "Akureyri, Iceland" und "Suva" auf "Suvali, Gujarat, India" --
+# ein Neubau haette 33 japanische Stationen aus Island gerechnet, ohne dass
+# irgendwo eine Meldung erschienen waere. Darum sind die Namen hier auf den
+# vollen Stationsnamen festgenagelt.
 REFMAP = {
+ 'Kure': 'Kure, Hiroshima, Japan', 'Naha': 'Naha, Okinawa, Japan',
+ 'Sasebo': 'Sasebo, Nagasaki, Japan', 'Moji': 'Moji, Fukuoka, Japan',
+ 'Kobe': 'Kobe, Hyogo, Japan',
  'Cebu': 'Cebu, Phil', 'Legaspi Port': 'Legaspi', 'Davao': 'Davao, Phil', 'Manila': 'Manila, Phil',
  'Jolo': 'Jolo, Phil', 'San Fernando Harbor': 'San Fernando, Phil',
  'Kutei River Ent.': 'Kutei', 'Belawan Channel': 'Belawan', 'Musi River': 'Air Musi',
@@ -107,11 +116,11 @@ REFMAP = {
  'Lianyun Gang': 'Lianyungang (Port)', 'Yantai': 'Yantai, Shandong', 'Qingdao': 'Qingdao, China',
  'Qinhuangdao': 'Qinhuangdao, Hebei', 'Otomari': 'Korsakov',
  # --- Indian Ocean / Arabia / East Africa ---
- 'Colombo': 'Colombo', 'Sagar': 'Sagar Roads', 'Karachi': 'Karachi', 'Madras': 'Chennai',
+ 'Colombo': 'Colombo', 'Sagar': 'Sagar Island Lighthouse', 'Karachi': 'Karachi', 'Madras': 'Chennai',
  'Mina Jebel Ali': 'Jebel Ali', 'Mina Al Ahmadi': 'Mina Al Ahmadi', 'Mina Salman': 'Mina Salman',
  'Musay’id': 'Musay', 'Suez': 'Suez', 'Durban': 'Durban', 'Aden': 'Aden', 'Apia': 'Apia',
  # --- Pacific Islands ---
- 'Honolulu': 'Honolulu', 'Kwajalein Atoll': 'Kwajalein', 'Suva': 'Suva', 'Pago Pago': 'Pago Pago',
+ 'Honolulu': 'Honolulu', 'Kwajalein Atoll': 'Kwajalein', 'Suva': 'Suva Harbor', 'Pago Pago': 'Pago Pago',
  'Chuuk': 'Chuuk', 'Pohnpei Harbor': 'Pohnpei', 'Papeete': 'Papeete', 'Auckland': 'Auckland',
  'Dreger Harbor': 'Dreger', 'Townsville': 'Townsville',
  'Nawiliwili': 'Nawiliwili', 'Hilo': 'Hilo', 'Kahului': 'Kahului', 'Moku O Loe': 'Moku O Loe',

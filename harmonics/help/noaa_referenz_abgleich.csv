@@ -16,6 +16,9 @@ no,name,gedruckt,gedruckt_km,vorschlag,vorschlag_km,seite
 139,Gizhiga River entrance },Musi River,8517,Paramushiru Island,1342,392
 141,Nayakhanskaya Bay },Musi River,8451,Paramushiru Island,1319,392
 143,Udacha Bay },Musi River,8109,Paramushiru Island,1005,392
+145,"Ola Anchorage, Tauiskaya Bay",Moji,3212,Paramushiru Island,1080,392
+147,"Nagaeva Bay, Tauiskaya Bay",Moji,3189,Paramushiru Island,1085,392
+149,Okhotsk,Moji,2964,Paramushiru Island,1292,392
 151,Ayan Bay,Brisbane Bar,9427,Otomari,1137,392
 153,Udskaya Bay,Brisbane Bar,9284,Otomari,1039,392
 155,"Levyazhya Bay, Feklistov Island",Brisbane Bar,9280,Otomari,1011,392
@@ -51,26 +54,47 @@ no,name,gedruckt,gedruckt_km,vorschlag,vorschlag_km,seite
 271,Sovetskaya Harbor,Pusan,1810,Otomari,320,393
 273,Vetryechnui Point,Pusan,1708,Otomari,284,393
 429,Soya Misaki,Kamaisi,694,Otomari,138,394
-577,"Shimotsu Ura, Osaki Wan",Yokohama,438,Sakate,84,395
-579,Wakanoura Wan,Yokohama,431,Sakate,85,395
+441,Tappi Saki,Naha,2037,Kamaisi,256,394
+443,"Mimmaya, Mimmaya Wan",Naha,2038,Kamaisi,247,394
+445,"Aomori Ko, Mutsu Kaiwan",Naha,2022,Kamaisi,199,394
+447,"Shiranai Wan, Mutsu Kaiwan",Naha,2045,Kamaisi,202,394
+449,"Ominato Ko, Mutsu Kaiwan",Naha,2080,Kamaisi,229,394
+451,Oma,Naha,2091,Kamaisi,265,394
+453,Ohata,Naha,2094,Kamaisi,244,394
+547,Mio,Yokohama,452,Kobe,89,395
+567,Kannoura Ko,Naha,1036,Sakate,101,395
+569,Muroto Saki,Naha,1004,Sakate,131,395
+571,Urado Ko,Naha,990,Sakate,127,395
+573,Susaki Ko <8>,Naha,965,Sakate,151,395
+575,Hii Wan,Yokohama,451,Kobe,86,395
+577,"Shimotsu Ura, Osaki Wan",Yokohama,438,Kobe,63,395
+579,Wakanoura Wan,Yokohama,431,Kobe,55,395
 581,Tachibana Ura,Yokohama,490,Sakate,72,395
 583,Komatsushima Ko,Yokohama,488,Sakate,55,395
 609,"Fukura Ura, Awaji",Yokohama,471,Sakate,42,396
-763,Senzaki Ko,Hong Kong,2163,Pusan,234,397
-765,Hagi Ko,Hong Kong,2182,Pusan,251,397
-767,Esaki Ko,Hong Kong,2212,Sakate,245,397
-769,Hamada Ko (Tono Ura entrance) <12>,Hong Kong,2261,Sakate,212,397
+711,Yawatahama Ko,Naha,925,Moji,144,397
+713,Okuchi Wan,Naha,913,Moji,148,397
+715,Hiburi Shima,Naha,892,Moji,149,397
+717,"Mizugaura, Uwajima Wan",Naha,904,Moji,161,397
+719,Uwajima Ko,Naha,912,Moji,167,397
+721,Kashiwa,Naha,889,Moji,176,397
+725,"Katsura, Saeki Wan",Naha,857,Moji,138,397
+727,"Saganoseki, Shita Ura",Naha,880,Moji,117,397
+763,Senzaki Ko,Hong Kong,2163,Moji,55,397
+765,Hagi Ko,Hong Kong,2182,Moji,69,397
+767,Esaki Ko,Hong Kong,2212,Moji,99,397
+769,Hamada Ko (Tono Ura entrance) <12>,Hong Kong,2261,Moji,148,397
 771,Sagi Ura,Hong Kong,2340,Sakate,186,397
 773,Kaka Ura,Hong Kong,2376,Sakate,171,397
 775,"Sakai Ko, Miho Wan",Hong Kong,2388,Sakate,157,397
 777,Yonago Nakami,Hong Kong,2387,Sakate,142,397
 779,"Hinotso Ura, Dozen, Oki Retto",Hong Kong,2408,Sakate,214,397
 781,"Saigo Ko, Dogo, Oki Retto",Hong Kong,2436,Sakate,214,397
-783,Shibayama Ko,Hong Kong,2505,Sakate,138,397
-785,"Ine Ko, Wakasa Wan",Hong Kong,2553,Sakate,161,397
-787,"Maizuru Ko, Wakasa Wan <13>",Hong Kong,2544,Sakate,143,397
-789,"Tsuruga Ko, Wakasa Wan <14>",Hong Kong,2615,Sakate,208,397
-791,Mikuni Ko,Hong Kong,2651,Sakate,259,397
+783,Shibayama Ko,Hong Kong,2505,Kobe,119,397
+785,"Ine Ko, Wakasa Wan",Hong Kong,2553,Kobe,110,397
+787,"Maizuru Ko, Wakasa Wan <13>",Hong Kong,2544,Kobe,86,397
+789,"Tsuruga Ko, Wakasa Wan <14>",Hong Kong,2615,Kobe,135,397
+791,Mikuni Ko,Hong Kong,2651,Kobe,194,397
 793,Wajima Ko,Hong Kong,2775,Yokohama,327,397
 795,"Nanao, Nanao Wan",Hong Kong,2760,Yokohama,299,397
 797,"Fushiki Ko, Toyama Wan",Hong Kong,2754,Yokohama,276,397
@@ -84,6 +108,7 @@ no,name,gedruckt,gedruckt_km,vorschlag,vorschlag_km,seite
 813,Iwasaki,Hong Kong,3181,Kamaisi,224,397
 815,Fuka Ura,Hong Kong,3186,Kamaisi,227,397
 817,Kodomari Wan,Hong Kong,3242,Kamaisi,247,397
+819,Inokushi Ko <15>,Naha,839,Moji,154,397
 1035,"Choguri-man, Koje-do",Ch’ang Chiang Approach,758,Pusan,44,399
 1037,"Koje-man, Koje-do",Ch’ang Chiang Approach,748,Pusan,33,399
 1039,Ch'ungmu-hang,Ch’ang Chiang Approach,736,Pusan,42,399
@@ -125,7 +150,7 @@ no,name,gedruckt,gedruckt_km,vorschlag,vorschlag_km,seite
 1641,Pointe Lagan <27> },Manila,1383,Mui Vung Tau,200,404
 1643,Poulo Cecir de Mer <27> },Manila,1381,Mui Vung Tau,205,404
 1645,Phan Thiet <27> },Manila,1453,Mui Vung Tau,129,404
-1679,Cone Island <27> },Manila,1977,Mui Vung Tau,461,405
+1679,Cone Island <27> },Manila,1977,Bangkok Bar,365,405
 1691,Ko Lak {,Chuuk,5720,Mergui,150,405
 1693,Chumphon {,Chuuk,5783,Mergui,231,405
 1695,Ko Prap {,Chuuk,5767,Mergui,363,405
@@ -232,8 +257,16 @@ no,name,gedruckt,gedruckt_km,vorschlag,vorschlag_km,seite
 2409,Abuyog },Jolo,683,Cebu,132,412
 2425,Biri Island,Davao,634,Legaspi Port,87,412
 2427,Talisay Island,Davao,633,Legaspi Port,91,412
+2819,"Taio Hae Bay, Nuku Hiva Island",Pago Pago,3382,Papeete,1401,416
+2821,"Vai Tahu, Tahu Ata Island",Pago Pago,3465,Papeete,1411,416
+2823,Mangareva Island,Pago Pago,3878,Papeete,1644,416
+2825,Hao (Bow or La Harpe) Island,Pago Pago,3197,Papeete,911,416
+2827,Rahiroa (Rangiroa) Island,Pago Pago,2470,Papeete,348,416
+2835,Rapa (Oparo) Island,Pago Pago,3106,Papeete,1244,416
+2837,Tubuai Island,Pago Pago,2447,Papeete,649,416
 2897,Rotumah Island,Davao,6091,Suva,644,417
 2899,"Fongafale, Funafuti Atoll",Davao,6186,Suva,1071,417
+2905,Caroline Island,Pago Pago,2273,Papeete,841,417
 2975,Croixilles Harbor,Auckland,480,Wellington,93,417
 2981,Elmslie Bay,Auckland,462,Wellington,87,417
 2983,Pelorus Sound entrance,Auckland,458,Wellington,78,417
@@ -256,6 +289,7 @@ no,name,gedruckt,gedruckt_km,vorschlag,vorschlag_km,seite
 3097,"Auki Harbor, Malaita Island",Cebu,4592,Dreger Harbor,1435,418
 3115,"Seeadler Harbor, Manus Island {",Djakarta,4504,Dreger Harbor,519,419
 3133,Merauke,Singapore,4204,Dreger Harbor,849,419
+3135,Digul River entrance {,Bangkok Bar,4808,Dreger Harbor,1007,419
 3137,Etna Bay,Singapore,3483,Darwin,1038,419
 3139,"Sekar Bay, Berau Gulf",Yokohama,4309,Darwin,1100,419
 3141,"Wasian River entrance, Berau Gulf",Bombay,7036,Malakal Harbor,1067,419
@@ -280,6 +314,8 @@ no,name,gedruckt,gedruckt_km,vorschlag,vorschlag_km,seite
 3393,Auckland Island,Apia,4576,Wellington,1257,421
 3395,"Perseverance Harbor, Campbell Island",Apia,4629,Wellington,1325,421
 3397,Macquarie Island,Apia,5189,Wellington,1876,421
+3437,"Elephant Point, Rangoon River",Mergui,512,Rangoon,37,422
+3441,China Bakir (Old Lighthouse),Mergui,500,Rangoon,54,422
 3517,Calicut,Karachi,1770,Madras,534,423
 3519,Tellicherry,Karachi,1706,Madras,544,423
 3521,Cannanore,Karachi,1690,Madras,553,423
@@ -295,23 +331,39 @@ no,name,gedruckt,gedruckt_km,vorschlag,vorschlag_km,seite
 3593,Ormara,Colombo,2591,Karachi,235,423
 3595,Pasni,Colombo,2672,Karachi,353,423
 3597,Gwatar Bay,Colombo,2807,Karachi,548,423
-3599,Chah Bahar,Colombo,2887,Karachi,643,424
-3601,Ras Tang,Colombo,2946,Karachi,715,424
-3603,Koksar,Colombo,3041,Karachi,823,424
-3605,Khalij-e Jask,Colombo,3132,Mina Salman,720,424
-3607,"Jask Bay, Gulf of Oman",Colombo,3134,Mina Salman,718,424
-3609,Ras al Kuh,Colombo,3178,Mina Salman,673,424
-3611,Gonari Creek,Colombo,3230,Mina Salman,648,424
-3613,Bandar-e Sirik,Colombo,3246,Mina Salman,647,424
-3615,"Hengam, Persian Gulf",Colombo,3351,Mina Salman,530,424
-3617,"Bandar Abbas, Persian Gulf",Colombo,3354,Mina Salman,574,424
-3619,"Jazirat Farur, Persian Gulf",Hong Kong,5982,Mina Salman,391,424
+3599,Chah Bahar,Colombo,2887,Mina Jebel Ali,561,424
+3601,Ras Tang,Colombo,2946,Mina Jebel Ali,489,424
+3603,Koksar,Colombo,3041,Mina Jebel Ali,385,424
+3605,Khalij-e Jask,Colombo,3132,Mina Jebel Ali,282,424
+3607,"Jask Bay, Gulf of Oman",Colombo,3134,Mina Jebel Ali,281,424
+3609,Ras al Kuh,Colombo,3178,Mina Jebel Ali,244,424
+3611,Gonari Creek,Colombo,3230,Mina Jebel Ali,251,424
+3613,Bandar-e Sirik,Colombo,3246,Mina Jebel Ali,264,424
+3615,"Hengam, Persian Gulf",Colombo,3351,Mina Jebel Ali,205,424
+3617,"Bandar Abbas, Persian Gulf",Colombo,3354,Mina Jebel Ali,272,424
+3619,"Jazirat Farur, Persian Gulf",Hong Kong,5982,Mina Jebel Ali,149,424
 3621,"Bushahr, Persian Gulf",Hong Kong,6291,Shatt Al Arab,208,424
 3623,"Jazirat Kharg, Persian Gulf",Hong Kong,6335,Shatt Al Arab,148,424
-3663,Ras Al Mishab },Yamato Wan,8714,Shatt Al Arab,214,424
-3665,Safaniya },Yamato Wan,8714,Shatt Al Arab,224,424
-3715,Jazirat Yas {,Surabaja Strait,7392,Mina Salman,297,425
-3717,Jazirat Das {,Surabaja Strait,7401,Mina Salman,259,425
+3663,Ras Al Mishab },Yamato Wan,8714,Mina Al Ahmadi,115,424
+3665,Safaniya },Yamato Wan,8714,Mina Al Ahmadi,132,424
+3667,Munifah <38> },Bangkok Bar,5552,Mina Al Ahmadi,180,424
+3715,Jazirat Yas {,Surabaja Strait,7392,Musay’id,128,425
+3717,Jazirat Das {,Surabaja Strait,7401,Musay’id,137,425
+3721,Sir Abu Nu'ayr,Mina Al Ahmadi,736,Mina Jebel Ali,87,425
+3723,Umm an Nar,Mina Al Ahmadi,813,Mina Jebel Ali,84,425
+3725,Mina Zayed Approaches,Mina Al Ahmadi,782,Mina Jebel Ali,88,425
+3727,Mina Zayed,Mina Al Ahmadi,780,Mina Jebel Ali,106,425
+3729,Umm ad Dalkh,Mina Al Ahmadi,775,Mina Jebel Ali,102,425
+3747,Ras al Khaymah,Karachi,1113,Mina Jebel Ali,128,425
+3749,Mina Saqr,Karachi,1105,Mina Jebel Ali,147,425
+3751,Bukha,Karachi,1096,Mina Jebel Ali,169,425
+3753,Ghubbat Dabshun,Karachi,1072,Mina Jebel Ali,190,425
+3755,Khasab,Karachi,1087,Mina Jebel Ali,180,425
+3757,Khawr al Quway,Karachi,1078,Mina Jebel Ali,201,425
+3759,Khor Kuwai,Karachi,1077,Mina Jebel Ali,200,425
+3765,Ras Dillah,Karachi,1063,Mina Jebel Ali,191,425
+3767,Khawr Niad (Khawr Habalayn),Karachi,1071,Mina Jebel Ali,185,425
+3769,Mina Daba,Karachi,1081,Mina Jebel Ali,142,425
 3785,Kamaran Passage,Suez,1927,Aden,375,425
 3813,Harmil Island,Suez,1685,Aden,659,426
 3815,Massaua,Suez,1741,Aden,672,426

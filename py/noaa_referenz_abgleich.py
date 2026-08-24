@@ -35,9 +35,13 @@ ABSOLUT_KM = 1500.0  # so weit ist eine Referenz unabhaengig vom Faktor verdaech
 def referenzorte():
     """Gedruckter Referenzname -> Satz im Bestand.
 
-    Die Zuordnung kommt aus den erzeugten Notizzeilen: dort steht der
-    aufgeloeste Name, in der JSON der gedruckte. Verbunden ueber die
-    Stationsnummer.
+    Massgeblich sind die Notizzeilen: dort steht der Name, der beim Bau
+    tatsaechlich benutzt wurde. Der Aufloeser des Erzeugers taugt dafuer
+    nicht mehr -- er sucht per Teilzeichenkette und nimmt den kuerzesten
+    Treffer, und seit der Umbenennung von "Kure, Japan" faellt "Kure" auf
+    "Akureyri, Iceland". Er wird nur fuer Namen befragt, zu denen es keine
+    Notiz gibt, und sein Ergebnis wird verworfen, wenn es weit ausserhalb
+    der Stationen liegt, die diesen Namen nennen.
     """
     recs = [r for r in load_records()
             if r['lat'] is not None and r['lon'] is not None]
@@ -62,6 +66,32 @@ def referenzorte():
         name = c.most_common(1)[0][0]
         if name in nach:
             out[gedruckt] = (nach[name][0], name)
+
+    try:
+        import sys as _s
+        _alt = _s.argv
+        _s.argv = ['x']
+        import build_noaa_cptt as B
+        _s.argv = _alt
+    except Exception:
+        return out, full
+    for gedruckt in {r['ref'] for r in full.values() if r.get('ref')}:
+        if gedruckt in out:
+            continue
+        try:
+            rn, rr = B.resolve_ref(gedruckt)
+        except Exception:
+            continue
+        if not (rn and rn in nach):
+            continue
+        pts = [r for r in full.values()
+               if r.get('ref') == gedruckt and not r.get('daily')]
+        if pts:
+            mitte = {'lat': sum(p['lat'] for p in pts) / len(pts),
+                     'lon': sum(p['lon'] for p in pts) / len(pts)}
+            if km(mitte, nach[rn][0]) > 3000:
+                continue
+        out[gedruckt] = (nach[rn][0], rn)
     return out, full
 
 
