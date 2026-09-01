@@ -11,6 +11,16 @@ die gedruckte Referenz ist fast immer auch die naechstgelegene. Gemeldet
 wird, wo das nicht zutrifft, und zwar zusammenhaengend nach
 Stationsnummern, weil der Fehler blockweise auftritt.
 
+ACHTUNG -- eine Meldung hier ist KEIN Qualitaetsmangel. Die Messung gegen
+die gedruckten Tafeln (py/noaa_zurueckholen.py, 2026-09-01) hat gezeigt,
+dass eine ferne Referenz sehr oft die bessere ist: die Uebertragung
+skaliert die Referenzkurve auf den gedruckten Tidenhub, von der Referenz
+bleibt nur der Formfaktor. Chumphon faehrt mit Chuuk (6400 km) besser als
+mit Bangkok Bar (370 km), Majuro mit Kwajalein fuenfmal besser als mit
+Honolulu. Wer die Meldungen dieses Werkzeugs blind repariert, macht es
+schlechter -- gemessen 199 schlechter gegen 49 besser. Die Liste taugt
+nur, um Kandidaten fuer eine EINZELNE Nachmessung zu finden.
+
 Usage: python3 py/noaa_referenz_abgleich.py [--faktor 5] [--csv <datei>]
 """
 from __future__ import annotations
