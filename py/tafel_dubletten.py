@@ -16,7 +16,8 @@ Quelle. Vorgeschlagen wird nur, was deutlich schlechter ist.
 Usage: python3 py/tafel_dubletten.py [--csv <datei>] [--km 2.0]
                                      [--faktor 2.0] [--delta 0.01]
        --csv    Messung, Standard harmonics/help/bom_qualitaet.csv
-       --liste  Loeschliste fuer py/saetze_loeschen.py schreiben
+       --liste    Loeschliste fuer py/saetze_loeschen.py schreiben
+       --mindest  Prozent des Hubs, ab denen ein Satz als schlecht gilt
 """
 from __future__ import annotations
 
@@ -40,6 +41,12 @@ NAH_KM = 2.0        # bis hier gelten zwei Saetze als derselbe Pegel
 FAKTOR = 2.0        # ab diesem Vielfachen gilt ein Satz als deutlich schlechter
 DELTA = 0.01        # und der Abstand muss mindestens so gross sein (m)
 TAFEL_KM = 2.5      # so nah muessen beide an der Tafel stehen, die sie beurteilt
+# Wer selbst so genau ist, bleibt stehen, auch wenn der Nachbar noch
+# genauer ist. Der Faktor allein reicht als Kriterium nicht: an der Bay of
+# Fundy mit 14 m Hub sind 0.3 % gerade 4 cm, und ein Satz mit 4 cm Fehler
+# ist keiner, den man wegwirft, bloss weil daneben einer mit 2 cm steht.
+# Greift nur, wo die Messung den Tidenhub mitliefert.
+MINDEST = 1.0       # Prozent des Tidenhubs
 
 
 def _ort(name):
@@ -72,6 +79,7 @@ def gleicher_ort(a, b):
 def main(argv):
     nah, faktor, delta, tafel, quelle, ziel = (NAH_KM, FAKTOR, DELTA,
                                                TAFEL_KM, CSV, None)
+    mindest = MINDEST
     for i, a in enumerate(argv):
         if a == '--liste':
             ziel = argv[i + 1]
@@ -85,6 +93,7 @@ def main(argv):
         elif a == '--faktor': faktor = float(argv[i + 1])
         elif a == '--delta':  delta = float(argv[i + 1])
         elif a == '--tafel':  tafel = float(argv[i + 1])
+        elif a == '--mindest': mindest = float(argv[i + 1])
 
     recs = load_records()
     byname = {}
@@ -149,6 +158,10 @@ def main(argv):
                     continue
                 if not (b['_rms'] >= a['_rms'] * faktor and b['_rms'] - a['_rms'] >= delta):
                     continue
+                # Der Verlierer muss auch fuer sich genommen schlecht sein.
+                hub = float(b.get('hub_m') or 0)
+                if hub > 0 and b['_rms'] / hub * 100 < mindest:
+                    continue
                 # Beide muessen nahe an der Tafel liegen, die sie beurteilt.
                 # Die beiden Saetze "Melbourne (Williamstown)" werden sonst
                 # an der 4.4 km entfernten Tafel St Kilda gemessen -- in der
@@ -167,7 +180,8 @@ def main(argv):
     print(f'{os.path.basename(quelle)}: {len(rows)} Messungen, {len(best)} Saetze, {fehlt} nicht im Bestand gefunden')
     print(f'{sum(1 for g in gruppen.values() if len(g) > 1)} Stationen mit mehreren Saetzen')
     print(f'{len(paare)} Paare naeher als {nah} km, {len(fern)} weiter auseinander (kein Dublettenfall)')
-    print(f'{len(weg)} Loeschvorschlaege (mindestens {faktor}x schlechter und {delta*100:.0f} cm Abstand)\n')
+    print(f'{len(weg)} Loeschvorschlaege ({faktor}x schlechter, {delta*100:.0f} cm '
+          f'Abstand, selbst ueber {mindest} % des Hubs)\n')
 
     # Ein Satz kann in mehreren Paaren verlieren; nur einmal loeschen.
     einmal = {}
