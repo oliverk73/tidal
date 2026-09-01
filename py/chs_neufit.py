@@ -19,10 +19,11 @@ abzuziehen. Ersetzt werden nur Konstituentenblock und Z0; Name,
 Position, Zeitzone und Kopfzeilen bleiben stehen.
 
 Usage: python3 py/chs_neufit.py [--grenze 4] [--nur <text>]
-       python3 py/chs_neufit.py --schreiben
+       python3 py/chs_neufit.py [--weite 2000] --schreiben
 """
 from __future__ import annotations
 
+import collections
 import csv
 import datetime as dt
 import os
@@ -32,7 +33,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from health_check import MERIDIAN, ROOT                            # noqa: E402
+from health_check import MERIDIAN, ROOT, km                        # noqa: E402
 from dhn_neufit import fitte, block_bauen, KON                     # noqa: E402
 from dhn_qualitaet import art_bestimmen                            # noqa: E402
 from bom_qualitaet import vergleich, EREIGNIS                      # noqa: E402
@@ -47,9 +48,21 @@ BESSER = 0.6
 
 
 def bloecke():
+    """-> (zeilen, [(anfang, namenszeile, ende, name, lat, lon)])
+
+    Die Position wird mitgefuehrt, weil der Name allein einen Block nicht
+    eindeutig bezeichnet: "Sandy Cove", "Indian Harbour", "Port Maitland"
+    und "Sand Point" stehen je zweimal in der Datei. Wer nur nach Namen
+    sucht, findet den letzten und repariert womoeglich den falschen.
+    """
     l = open(TXT, encoding='iso-8859-1').read().split('\n')
     aus = []
+    lat = lon = None
     for k, z in enumerate(l):
+        if z.startswith('# !latitude:'):
+            lat = float(z.split(':', 1)[1])
+        elif z.startswith('# !longitude:'):
+            lon = float(z.split(':', 1)[1])
         if not (z and not z.startswith('#') and k + 1 < len(l)
                 and MERIDIAN.match(l[k + 1])):
             continue
@@ -59,7 +72,7 @@ def bloecke():
         e = k + 3
         while e < len(l) and l[e].strip() and not l[e].startswith('#'):
             e += 1
-        aus.append((a, k, e, z.strip()))
+        aus.append((a, k, e, z.strip(), lat, lon))
     return l, aus
 
 
@@ -97,24 +110,28 @@ def messe(block, ref):
     return vergleich(ref, y) if y else None
 
 
-def verdaechtig(grenze, nur=None):
-    """Gemessene uTide-Saetze ueber der Fehlergrenze, Tafel unter 500 m."""
+def verdaechtig(grenze, nur=None, weite=2000):
+    """Gemessene uTide-Saetze ueber der Fehlergrenze.
+
+    Geschluesselt auf Satz UND Station, nicht auf den Satz allein: vier
+    Namen stehen zweimal in der Datei, und wer nur nach Namen sammelt,
+    laesst die Haelfte davon liegen. Die Zuordnung zum richtigen Block
+    macht spaeter die Position.
+    """
     p = os.path.join(HELP, 'chs_qualitaet.csv')
     aus = {}
     for z in csv.DictReader(open(p, encoding='utf-8')):
         if z['datei'] != 'harmonics_utide_tidetables.txt':
             continue
         hub = float(z.get('hub_m') or 0)
-        if hub <= 0 or int(z['abstand_m']) > 500:
+        if hub <= 0 or int(z['abstand_m']) > weite:
             continue
         if float(z['rms_m']) / hub * 100 < grenze:
             continue
         if nur and nur.lower() not in z['satz'].lower():
             continue
-        # Ein Satz kann an mehreren Stationen gemessen sein; die naechste
-        # zaehlt.
-        k = z['satz']
-        if k not in aus or int(z['abstand_m']) < int(aus[k]['abstand_m']):
+        k = (z['satz'], z['station'])
+        if k not in aus or float(z['rms_m']) > float(aus[k]['rms_m']):
             aus[k] = z
     return list(aus.values())
 
@@ -122,22 +139,31 @@ def verdaechtig(grenze, nur=None):
 def main(argv):
     grenze = float(argv[argv.index('--grenze') + 1]) if '--grenze' in argv else 4.0
     nur = argv[argv.index('--nur') + 1] if '--nur' in argv else None
+    weite = float(argv[argv.index('--weite') + 1]) if '--weite' in argv else 2000
     schreiben = '--schreiben' in argv
 
-    faelle = verdaechtig(grenze, nur)
+    faelle = verdaechtig(grenze, nur, weite)
     if not faelle:
         print('keine Verdachtsfaelle')
         return 0
     stationen = {s['officialName']: s for s in C.stationen()}
     l, bl = bloecke()
-    nach_name = {n: (a, k, e) for a, k, e, n in bl}
+    nach_name = collections.defaultdict(list)
+    for a, k, e, n, la, lo in bl:
+        nach_name[n].append((a, k, e, la, lo))
     print(f'{len(faelle)} Saetze ueber {grenze} % des Hubs\n')
 
-    gebaut, schlechter, ohne = [], [], []
+    gebaut, schlechter, ohne, schon = [], [], [], set()
     for f in sorted(faelle, key=lambda x: x['satz']):
         if f['satz'] not in nach_name or f['station'] not in stationen:
             ohne.append(f['satz'])
             continue
+        # Bei mehreren gleichnamigen Bloecken der, welcher der gemessenen
+        # Station am naechsten liegt.
+        kand = nach_name[f['satz']]
+        if len(kand) > 1:
+            ziel = {'lat': float(f['lat']), 'lon': float(f['lon'])}
+            kand = sorted(kand, key=lambda q: km(ziel, {'lat': q[3], 'lon': q[4]}))
         st = stationen[f['station']]
         # Gefittet wird gegen ein volles Jahr, gemessen gegen den Juli.
         # Ein Monat reicht zum Fitten nicht: 120 Extremwerte trennen K2
@@ -148,7 +174,10 @@ def main(argv):
             continue
         ref = art_bestimmen(C.vorhersage(st))
         hub = float(f['hub_m'])
-        a, k, e = nach_name[f['satz']]
+        a, k, e = kand[0][:3]
+        if a in schon:
+            continue          # derselbe Block schon von einer anderen Station
+        schon.add(a)
         try:
             # Die CHS-Zeiten sind schon UTC, also kein Zonenversatz.
             con, mittel = fitte(jahr, 0.0, float(f['lat']))

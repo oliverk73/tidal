@@ -53,7 +53,7 @@ def main(argv):
     for datei, name, warum in liste(csvpfad):
         proDatei.setdefault(datei, []).append((name, warum))
 
-    gesamt, schon = 0, []
+    gesamt, schon, mehrdeutig = 0, [], []
     for datei, faelle in sorted(proDatei.items()):
         pfad = os.path.join(ROOT, datei)
         lines = open(pfad, encoding='iso-8859-1').read().split('\n')
@@ -64,8 +64,13 @@ def main(argv):
         for name, warum in faelle:
             treffer = [k for k, l in enumerate(lines) if l.rstrip() == name]
             if len(treffer) > 1:
-                print(f'  ABBRUCH {datei}: "{name}" {len(treffer)}x gefunden')
-                return 1
+                # Der Name bezeichnet den Satz nicht eindeutig -- in
+                # harmonics-2004-06-14_mod steht "Sullivan Bay" zweimal,
+                # 52 km auseinander. Hier zu raten waere schlimmer als
+                # stehenzulassen, und die Liste soll deswegen nicht die
+                # uebrigen Dateien mitreissen.
+                mehrdeutig.append((datei, name, len(treffer)))
+                continue
             if not treffer:
                 # Schon entfernt. Die Liste ist ein dauerhafter Nachweis und
                 # waechst mit; ein zweiter Lauf darf daran nicht scheitern.
@@ -94,6 +99,11 @@ def main(argv):
                 print('   ACHTUNG: Satzzahl passt nicht!')
                 return 1
         gesamt += len(raus)
+    if mehrdeutig:
+        print(f'\n{len(mehrdeutig)} Eintraege uebersprungen -- der Name kommt in '
+              f'seiner Datei mehrfach vor und bezeichnet den Satz nicht:')
+        for d, n, c in mehrdeutig:
+            print(f'   {c}x  {n[:52]:54s} {os.path.basename(d)}')
     if schon:
         print(f'\n{len(schon)} Eintraege der Liste waren bereits entfernt')
     print(f'\n{gesamt} Saetze {"geloescht" if schreiben else "waeren zu loeschen"}')
