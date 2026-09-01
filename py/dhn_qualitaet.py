@@ -110,7 +110,7 @@ def main(argv):
           f'{"ganzes Jahr" if ganzes_jahr else "Juli"}\n', file=sys.stderr)
     w = csv.writer(sys.stdout)
     w.writerow(['station', 'lat', 'lon', 'jahr', 'satz', 'datei', 'abstand_m',
-                'n', 'rms_m', 'max_m', 'zeit_min', 'hoehe_off_m'])
+                'n', 'rms_m', 'max_m', 'zeit_min', 'hoehe_off_m', 'hub_m'])
     for fn, k in liste:
         try:
             _k, roh = D.lies(os.path.join(D.PDFS, fn))
@@ -127,6 +127,10 @@ def main(argv):
         ref = [(z - vers, h, a) for z, h, a in ev]
         if len(ref) < 40:
             continue
+        # Tidenhub des Vergleichszeitraums: erst er macht einen RMS
+        # zwischen Orten vergleichbar -- 5 cm sind an einem Ort mit 40 cm
+        # Hub viel und an einem mit 5 m nichts.
+        hub = max(h for _z, h, _a in ref) - min(h for _z, h, _a in ref)
         von = f'{min(z for z, _h, _a in ref) - dt.timedelta(hours=6):%Y-%m-%d %H:%M}'
         bis = f'{max(z for z, _h, _a in ref) + dt.timedelta(hours=6):%Y-%m-%d %H:%M}'
         ziel = {'lat': k['lat'], 'lon': k['lon']}
@@ -147,7 +151,7 @@ def main(argv):
                         k['jahr'], x['name'], os.path.basename(x['file']),
                         round(d * 1000), g['n'], round(g['rms'], 4),
                         round(g['max'], 3), round(g['zeit_med'], 1),
-                        round(g['hoehe_off'], 3)])
+                        round(g['hoehe_off'], 3), round(hub, 3)])
             sys.stdout.flush()
     return 0
 

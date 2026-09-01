@@ -183,11 +183,14 @@ def messe(block, name, tafel, kopf):
     return Q.vergleich(ref, y) if y else None
 
 
-def verdaechtig(nur=None):
+def verdaechtig(nur=None, grenze=4.0):
     """Saetze aus der Messung, die schlecht sind und eine eigene Tafel haben.
 
-    Nur wo die Tafel naeher als 500 m liegt: sonst misst man den Nachbarn
-    mit, und ein hoher RMS heisst bloss, dass zwei verschiedene Pegel
+    Gemessen am Tidenhub, nicht in Zentimetern: 5 cm sind an einem Ort mit
+    40 cm Hub viel und an einem mit 5 m nichts.
+
+    Nur wo die Tafel naeher als 500 m liegt -- sonst misst man den Nachbarn
+    mit, und ein hoher Fehler heisst bloss, dass zwei verschiedene Pegel
     verschieden sind.
     """
     p = os.path.join(HELP, 'dhn_qualitaet.csv')
@@ -195,7 +198,10 @@ def verdaechtig(nur=None):
     for z in csv.DictReader(open(p, encoding='utf-8')):
         if z['datei'] != 'harmonics_utide_tidetables.txt':
             continue
-        if float(z['rms_m']) < 0.12 or int(z['abstand_m']) > 500:
+        hub = float(z.get('hub_m') or 0)
+        if hub <= 0 or int(z['abstand_m']) > 500:
+            continue
+        if float(z['rms_m']) / hub * 100 < grenze:
             continue
         if nur and nur.lower() not in z['satz'].lower():
             continue
