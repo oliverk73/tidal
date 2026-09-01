@@ -136,9 +136,17 @@ def block_bauen(alt, con, z0, tafel='', jahr=None):
         else:
             neu.append(z)
     for j, z in enumerate(neu):
-        if MERIDIAN.match(z):
-            neu[j + 1] = f'{z0:.4f} meters'
-            break
+        if not MERIDIAN.match(z):
+            continue
+        # fitte() rechnet in UTC und liefert Greenwich-Phasen. Der Meridian
+        # muss das sagen, sonst deutet XTide die Phasen als auf die alte
+        # Zone bezogen -- bei Halifax (-04:00) sind das 4 Stunden, also 117
+        # Grad in M2, und der Satz liegt um eine halbe Tide daneben. Der
+        # Zonenname bleibt stehen: er steuert nur die Anzeige.
+        zone = z.split(' :', 1)[1] if ' :' in z else ''
+        neu[j] = '+00:00' + (f' :{zone}' if zone else '')
+        neu[j + 1] = f'{z0:.4f} meters'
+        break
     return neu
 
 

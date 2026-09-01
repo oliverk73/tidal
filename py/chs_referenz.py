@@ -35,6 +35,12 @@ STATIONEN = os.path.join(CACHE, 'stationen.json')
 # Zahlen zueinander passen.
 VON = '2026-07-01T00:00:00Z'
 BIS = '2026-08-01T00:00:00Z'
+# Fuer einen Neufit reicht ein Monat nicht: 120 Extremwerte koennen K2
+# nicht von S2 und SA nicht von SSA trennen, worauf einzelne Amplituden
+# ins Absurde laufen (K2 = 2.9 m neben M2 = 1.1 m). Dafuer wird ein
+# ganzes Jahr geholt, in Zwoelfteln -- die Schnittstelle liefert pro
+# Anfrage hoechstens einen Monat.
+JAHR = 2026
 
 
 def _hole(pfad, params=None, versuche=3):
@@ -64,8 +70,44 @@ def stationen(neu=False):
     return d
 
 
-def _datei(code):
-    return os.path.join(CACHE, f'{code}.json')
+def _datei(code, jahr=False):
+    return os.path.join(CACHE, f'{code}{"_jahr" if jahr else ""}.json')
+
+
+def _monatsgrenzen(jahr):
+    aus = []
+    for m in range(1, 13):
+        a = dt.datetime(jahr, m, 1)
+        b = dt.datetime(jahr + (m == 12), m % 12 + 1, 1)
+        aus.append((a.strftime('%Y-%m-%dT%H:%M:%SZ'),
+                    b.strftime('%Y-%m-%dT%H:%M:%SZ')))
+    return aus
+
+
+def jahresreihe(st, neu=False):
+    """Ein volles Jahr Hoch- und Niedrigwasser, monatsweise geholt."""
+    p = _datei(st['code'], jahr=True)
+    if not neu and os.path.exists(p):
+        d = json.load(open(p, encoding='utf-8'))
+    else:
+        if not any(t['code'] == 'wlp-hilo' for t in st.get('timeSeries', [])):
+            return []
+        d = []
+        for a, b in _monatsgrenzen(JAHR):
+            teil = _hole(f"stations/{st['id']}/data",
+                         {'time-series-code': 'wlp-hilo', 'from': a, 'to': b})
+            d += teil or []
+            time.sleep(0.15)
+        os.makedirs(CACHE, exist_ok=True)
+        json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False)
+    aus = []
+    for x in d or []:
+        try:
+            z = dt.datetime.strptime(x['eventDate'], '%Y-%m-%dT%H:%M:%SZ')
+        except (KeyError, ValueError):
+            continue
+        aus.append((z, float(x['value'])))
+    return sorted(set(aus))
 
 
 def vorhersage(st, neu=False):
