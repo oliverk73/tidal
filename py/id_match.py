@@ -21,7 +21,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from health_check import load_records, km, curve_diff   # noqa: E402
+from health_check import load_records, km, curve_diff, MERIDIAN  # noqa: E402
 
 # Kennungen, die weltweit eindeutig eine Messstelle bezeichnen
 GLOBAL_TAGS = [
@@ -37,7 +37,6 @@ NOT_A_KEY = {'nos', 'wsv', 'rws', 'bsh', 'meds', 'pol', 'chs', 'bom', 'jma',
              'shom', 'linz', 'ioc', 'psmsl', 'uhslc', 'sonel', 'noaa'}
 
 TAGLINE = re.compile(r'#\s*([a-zA-Z][a-zA-Z0-9_]{2,30})\s*:\s*(\S.*)$')
-MERIDIAN = re.compile(r'^[+-]\d\d:\d\d')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 

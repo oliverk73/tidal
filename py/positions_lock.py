@@ -27,10 +27,16 @@ import re
 import subprocess
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Eine gemeinsame Definition, kein eigenes Muster: das alte
+# ^[+-]\d\d:\d\d verlangte Vorzeichen und zweistellige Stunde und hat
+# damit die 124 Lavergne-Saetze ("0:00 :Europe/London") stillschweigend
+# uebersehen -- sie standen monatelang in keiner Sperrliste.
+from health_check import MERIDIAN                                  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_LOCK = os.path.join(ROOT, 'harmonics/help/positions_locked.csv')
 OUT_AMB = os.path.join(ROOT, 'harmonics/help/positions_ambiguous.csv')
-MERIDIAN = re.compile(r'^[+-]\d\d:\d\d')
 
 
 def active_files():

@@ -41,7 +41,7 @@ def tcd_saetze(pfad):
 def main(argv):
     alle = '--alle' in argv
     nur_pruefen = '--pruefen' in argv
-    gebaut, aktuell, fehler, leer = 0, 0, 0, []
+    gebaut, aktuell, fehler, veraltet, leer = 0, 0, 0, 0, []
     for rel in active_files():
         txt = os.path.join(ROOT, rel)
         tcd = os.path.join(BINARY, os.path.basename(rel)[:-4] + '.tcd')
@@ -65,7 +65,7 @@ def main(argv):
             continue
         if nur_pruefen:
             print(f'  veraltet  {os.path.basename(rel):46} {grund}')
-            gebaut += 1
+            veraltet += 1
             continue
         if os.path.exists(tcd):
             os.remove(tcd)
@@ -81,7 +81,10 @@ def main(argv):
         fehler += 0 if ok else 1
     if leer:
         print(f'\nuebersprungen, keine Harmonics: {", ".join(leer)}')
-    print(f'\n{gebaut} gebaut, {aktuell} waren aktuell, {fehler} Fehler')
+    if nur_pruefen:
+        print(f'\n{veraltet} veraltet, {aktuell} aktuell')
+    else:
+        print(f'\n{gebaut} gebaut, {aktuell} waren aktuell, {fehler} Fehler')
     return 1 if fehler else 0
 
 
