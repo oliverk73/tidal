@@ -125584,6 +125584,7 @@ x 0 0
 # source: Derived from CHS tide predictions (reverse-engineered) with UTide harmonic analysis
 # station_id_context: CHS-08470
 # date_imported: 20260408
+# note: 20260902 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # datum: LLWLT
 # confidence: 9
@@ -125594,29 +125595,27 @@ x 0 0
 # !latitude: 51.110000
 Johnson Point, British Columbia, Canada
 +00:00 :UTC
-2.1134 meters
+1.0421 meters
 x 0 0
-K1              0.3678  262.38
-K2              0.0792  298.18
-x 0 0
-x 0 0
-M2              0.8724  261.88
-x 0 0
-M4              0.0029  61.83
+K1              0.2143  314.02
+K2              0.0257  353.84
 x 0 0
 x 0 0
-N2              0.1917  234.61
+M2              0.4106  319.22
 x 0 0
-O1              0.2334  245.64
-x 0 0
-P1              0.1179  259.97
+M4              0.0068  75.08
 x 0 0
 x 0 0
+N2              0.0759  293.72
+x 0 0
+O1              0.1313  296.23
+x 0 0
+P1              0.0512  325.73
 x 0 0
 x 0 0
-S2              0.2781  298.02
 x 0 0
 x 0 0
+S2              0.0942  352.91
 x 0 0
 x 0 0
 x 0 0
@@ -125625,11 +125624,13 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0023  284.93
 x 0 0
-MF              0.0169  159.57
 x 0 0
-MM              0.0050  178.84
+MS4             0.0225  17.85
+x 0 0
+MF              0.0200  173.09
+x 0 0
+MM              0.0108  168.22
 x 0 0
 x 0 0
 SA-IOS          0.0989  4.73
@@ -212554,6 +212555,7 @@ x 0 0
 # source: Derived from CHS (tides.gc.ca) HW/LW predictions with UTide
 # station_id_context: CHS 00333
 # date_imported: 20260411
+# note: 20260902 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # datum: LLWLT (approx.)
@@ -212565,44 +212567,44 @@ x 0 0
 # !latitude: 44.395920
 Grand Eddy, Nova Scotia, Canada
 +00:00 :America/Halifax
-3.1006 meters
-J1              0.0012  220.47
-K1              0.1379  186.76
-K2              0.0890  109.27
-L2              0.0037  115.18
+3.6629 meters
+J1              0.0007  277.50
+K1              0.1710  187.58
+K2              0.1929  124.14
+L2              0.0049  287.42
 x 0 0
-M2              2.0570  75.68
-M3              0.0017  29.90
-M4              0.0091  86.61
-M6              0.0235  227.28
-M8              0.0013  259.21
-N2              0.4637  43.87
+M2              2.3018  89.35
+M3              0.0018  38.76
+M4              0.0012  129.78
+M6              0.0220  268.30
+M8              0.0006  68.52
+N2              0.4437  62.24
 2N2             0.0100  270.96
-O1              0.1094  173.46
-OO1             0.0005  74.30
-P1              0.0435  185.24
-Q1              0.0006  222.63
+O1              0.1249  177.57
+OO1             0.0006  117.76
+P1              0.0597  185.61
+Q1              0.0009  177.06
 2Q1             0.0010  159.30
 R2              0.0000  0.00
 x 0 0
-S2              0.3292  108.76
-S4              0.0004  346.06
+S2              0.6843  123.76
+S4              0.0028  341.70
 x 0 0
-T2              0.0009  320.36
-LDA2            0.0015  83.84
-MU2             0.0046  32.24
-NU2             0.0014  79.18
+T2              0.0007  338.65
+LDA2            0.0047  102.28
+MU2             0.0130  35.58
+NU2             0.0011  68.38
 RHO1            0.0000  0.00
 MK3             0.0000  0.00
 x 0 0
-MN4             0.0055  314.58
-MS4             0.0020  67.41
+MN4             0.0006  2.83
+MS4             0.0066  124.45
 2SM2            0.0028  289.73
-MF              0.0142  216.94
-MSF             0.0135  58.33
-MM              0.0049  288.93
+MF              0.0064  110.37
+MSF             0.0509  342.04
+MM              0.0012  149.32
 x 0 0
-SSA             0.0021  28.77
+SSA             0.0026  31.97
 SA-IOS          0.0001  175.34
 x 0 0
 S1-IOS          0.0290  240.51
@@ -218958,6 +218960,7 @@ x 0 0
 # source: Derived from CHS (tides.gc.ca) HW/LW predictions with UTide
 # station_id_context: CHS 00624
 # date_imported: 20260411
+# note: 20260902 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # datum: LLWLT (approx.)
@@ -218969,44 +218972,44 @@ x 0 0
 # !latitude: 46.298640
 Penny Lane, Nova Scotia, Canada
 +00:00 :America/Halifax
-0.7005 meters
-J1              0.0026  78.07
-K1              0.0750  314.79
-K2              0.0247  64.35
-L2              0.1525  262.12
+0.9934 meters
+J1              0.0073  329.03
+K1              0.0581  318.22
+K2              0.0256  33.84
+L2              0.0080  17.57
 x 0 0
-M2              0.3669  357.71
-M3              0.0033  140.28
-M4              0.0086  94.34
+M2              0.3301  353.39
+M3              0.0039  263.83
+M4              0.0018  71.91
 x 0 0
 x 0 0
-N2              0.1039  305.33
+N2              0.0709  330.00
 2N2             0.0036  202.80
-O1              0.1086  281.69
-OO1             0.0001  156.38
-P1              0.0269  332.67
-Q1              0.0339  187.60
+O1              0.0794  281.15
+OO1             0.0033  11.11
+P1              0.0206  315.65
+Q1              0.0273  264.05
 2Q1             0.0049  128.46
 R2              0.0000  0.00
 x 0 0
-S2              0.1133  59.17
+S2              0.0915  35.98
 x 0 0
 x 0 0
-T2              0.0003  56.42
-LDA2            0.0048  339.59
-MU2             0.0523  338.82
-NU2             0.0033  32.76
+T2              0.0002  236.59
+LDA2            0.0005  146.43
+MU2             0.0154  314.73
+NU2             0.0128  329.33
 RHO1            0.0000  0.00
 MK3             0.0000  0.00
 x 0 0
-MN4             0.0035  21.31
-MS4             0.0021  175.90
+MN4             0.0008  358.22
+MS4             0.0008  196.88
 2SM2            0.0004  228.20
-MF              0.0044  282.77
-MSF             0.0280  82.59
-MM              0.0561  289.73
+MF              0.0008  357.12
+MSF             0.0295  189.28
+MM              0.0546  175.28
 x 0 0
-SSA             0.0017  23.53
+SSA             0.0005  176.13
 SA-IOS          0.0012  174.85
 x 0 0
 S1-IOS          0.0096  11.07
@@ -224395,6 +224398,7 @@ x 0 0
 # source: Derived from CHS (tides.gc.ca) HW/LW predictions with UTide
 # station_id_context: CHS 00587
 # date_imported: 20260411
+# note: 20260902 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # datum: LLWLT (approx.)
@@ -225559,6 +225563,7 @@ x 0 0
 # source: Derived from CHS (tides.gc.ca) HW/LW predictions with UTide
 # station_id_context: CHS 00337
 # date_imported: 20260411
+# note: 20260902 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # datum: LLWLT (approx.)
@@ -225570,44 +225575,44 @@ x 0 0
 # !latitude: 44.380189
 Tiverton (St. Mary Bay), Nova Scotia, Canada
 +00:00 :America/Halifax
-3.6629 meters
-J1              0.0007  277.50
-K1              0.1710  187.58
-K2              0.1929  124.14
-L2              0.0049  287.42
+3.1006 meters
+J1              0.0012  220.47
+K1              0.1379  186.76
+K2              0.0890  109.27
+L2              0.0037  115.18
 x 0 0
-M2              2.3018  89.35
-M3              0.0018  38.76
-M4              0.0012  129.78
-M6              0.0220  268.30
-M8              0.0006  68.52
-N2              0.4437  62.24
+M2              2.0570  75.68
+M3              0.0017  29.90
+M4              0.0091  86.61
+M6              0.0235  227.28
+M8              0.0013  259.21
+N2              0.4637  43.87
 2N2             0.0102  267.26
-O1              0.1249  177.57
-OO1             0.0006  117.76
-P1              0.0597  185.61
-Q1              0.0009  177.06
+O1              0.1094  173.46
+OO1             0.0005  74.30
+P1              0.0435  185.24
+Q1              0.0006  222.63
 2Q1             0.0009  161.66
 R2              0.0000  0.00
 x 0 0
-S2              0.6843  123.76
-S4              0.0028  341.70
+S2              0.3292  108.76
+S4              0.0004  346.06
 x 0 0
-T2              0.0007  338.65
-LDA2            0.0047  102.28
-MU2             0.0130  35.58
-NU2             0.0011  68.38
+T2              0.0009  320.36
+LDA2            0.0015  83.84
+MU2             0.0046  32.24
+NU2             0.0014  79.18
 RHO1            0.0000  0.00
 MK3             0.0000  0.00
 x 0 0
-MN4             0.0006  2.83
-MS4             0.0066  124.45
+MN4             0.0055  314.58
+MS4             0.0020  67.41
 2SM2            0.0023  299.39
-MF              0.0064  110.37
-MSF             0.0509  342.04
-MM              0.0012  149.32
+MF              0.0142  216.94
+MSF             0.0135  58.33
+MM              0.0049  288.93
 x 0 0
-SSA             0.0026  31.97
+SSA             0.0021  28.77
 SA-IOS          0.0004  345.79
 x 0 0
 S1-IOS          0.0227  238.89
@@ -239477,6 +239482,7 @@ x 0 0
 # source: Derived from CHS tide predictions (reverse-engineered) with UTide harmonic analysis
 # station_id_context: CHS-05160
 # date_imported: 20260416
+# note: 20260902 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # datum: LLWLT
 # confidence: 9
@@ -239487,42 +239493,42 @@ x 0 0
 # !latitude: 63.991528
 Chesterfield Narrows, Nunavut, Canada
 +00:00 :UTC
-1.1163 meters
-J1              0.0027  192.80
-K1              0.0486  339.72
-K2              0.0454  118.87
-L2              0.0266  80.34
+0.6888 meters
+J1              0.0056  196.03
+K1              0.0334  334.74
+K2              0.0526  133.58
+L2              0.0359  83.82
 x 0 0
-M2              0.7269  60.00
-M3              0.0011  12.56
-M4              0.0122  30.29
-M6              0.0064  180.69
-M8              0.0011  152.60
-N2              0.1082  26.77
+M2              0.4187  56.07
+M3              0.0040  47.72
+M4              0.0281  341.03
+M6              0.0017  306.38
+M8              0.0021  80.88
+N2              0.0845  24.16
 2N2             0.0439  333.25
-O1              0.0279  303.75
-OO1             0.0136  130.66
-P1              0.0136  337.86
-Q1              0.0040  37.28
+O1              0.0206  295.25
+OO1             0.0103  149.33
+P1              0.0088  335.05
+Q1              0.0069  93.32
 2Q1             0.0033  162.58
 x 0 0
 x 0 0
-S2              0.1938  121.63
-S4              0.0018  177.27
+S2              0.0855  112.88
+S4              0.0026  81.28
 x 0 0
 x 0 0
 x 0 0
-MU2             0.0146  138.87
-NU2             0.0269  27.36
+MU2             0.0177  170.81
+NU2             0.0232  54.31
 x 0 0
 MK3             0.0000  0.00
 x 0 0
-MN4             0.0037  357.24
-MS4             0.0072  78.16
+MN4             0.0040  3.71
+MS4             0.0181  35.59
 x 0 0
 x 0 0
-MSF             0.0767  150.46
-MM              0.0453  64.73
+MSF             0.0902  165.12
+MM              0.0620  54.66
 x 0 0
 x 0 0
 x 0 0
@@ -239671,6 +239677,7 @@ x 0 0
 # source: Derived from CHS tide predictions (reverse-engineered) with UTide harmonic analysis
 # station_id_context: CHS-05161
 # date_imported: 20260416
+# note: 20260902 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # datum: LLWLT
 # confidence: 9
@@ -239681,42 +239688,42 @@ x 0 0
 # !latitude: 63.989217
 Schooner Cove, Nunavut, Canada
 +00:00 :UTC
-0.6888 meters
-J1              0.0056  196.03
-K1              0.0334  334.74
-K2              0.0526  133.58
-L2              0.0359  83.82
+1.1163 meters
+J1              0.0027  192.80
+K1              0.0486  339.72
+K2              0.0454  118.87
+L2              0.0266  80.34
 x 0 0
-M2              0.4187  56.07
-M3              0.0040  47.72
-M4              0.0281  341.03
-M6              0.0017  306.38
-M8              0.0021  80.88
-N2              0.0845  24.16
+M2              0.7269  60.00
+M3              0.0011  12.56
+M4              0.0122  30.29
+M6              0.0064  180.69
+M8              0.0011  152.60
+N2              0.1082  26.77
 2N2             0.0483  326.31
-O1              0.0206  295.25
-OO1             0.0103  149.33
-P1              0.0088  335.05
-Q1              0.0069  93.32
+O1              0.0279  303.75
+OO1             0.0136  130.66
+P1              0.0136  337.86
+Q1              0.0040  37.28
 2Q1             0.0026  116.37
 x 0 0
 x 0 0
-S2              0.0855  112.88
-S4              0.0026  81.28
+S2              0.1938  121.63
+S4              0.0018  177.27
 x 0 0
 x 0 0
 x 0 0
-MU2             0.0177  170.81
-NU2             0.0232  54.31
+MU2             0.0146  138.87
+NU2             0.0269  27.36
 x 0 0
 MK3             0.0000  0.00
 x 0 0
-MN4             0.0040  3.71
-MS4             0.0181  35.59
+MN4             0.0037  357.24
+MS4             0.0072  78.16
 x 0 0
 x 0 0
-MSF             0.0902  165.12
-MM              0.0620  54.66
+MSF             0.0767  150.46
+MM              0.0453  64.73
 x 0 0
 x 0 0
 x 0 0
@@ -254541,6 +254548,7 @@ x 0 0
 # source: Derived from CHS tide predictions (reverse-engineered) with UTide harmonic analysis
 # station_id_context: CHS-04880
 # date_imported: 20260415
+# note: 20260902 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # note: 20260901 aus der DHN-Tafel 2026 neu gerechnet (py/dhn_neufit.py). Der vorige Satz hatte zu kleine Amplituden.
 # datum: LLWLT
