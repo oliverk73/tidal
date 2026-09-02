@@ -27,6 +27,27 @@ schlechtes Benehmen.
 Auch diese Stufe urteilt nicht. Sie sortiert die Liste so, dass oben
 steht, was am ehesten falsch ist.
 
+Zum Aufwand, gemessen am 02.09.2026: eine Abfrage kostete beim Spiegel
+kumi.systems rund fuenfzig Sekunden, und zwar unabhaengig davon, wie
+schwer sie war -- eine abgespeckte Fassung ohne die Wasserflaechen war
+keinen Deut schneller. Bei 942 Positionen waeren das dreizehn Stunden.
+Der Lauf ist deshalb abgebrochen worden; die 41 bereits geholten
+Antworten liegen im Puffer, ein neuer Lauf setzt dort auf.
+
+Wer das zu Ende bringen will, sollte nicht Punkt fuer Punkt fragen,
+sondern kachelweise: alle Kuestenlinien und benannten Gewaesser eines
+Gradfeldes in einer Abfrage holen und die Punkte dieses Feldes dann
+oertlich dagegen pruefen. Die 942 Positionen verteilen sich auf
+erheblich weniger Gradfelder.
+
+Und ein Wort zur ersten Stufe: mit einem Kilometer Aufloesung meldet die
+GLOBE-Maske auch Fjorde, Deltas und Lagunen als "acht Kilometer vom
+Wasser". Von den 942 Positionen bleiben selbst mit der Zusatzbedingung,
+dass der naechste andere Pegel mindestens fuenf Kilometer entfernt ist,
+noch 480 uebrig -- darunter Clyde River, Mercy Bay, Fort Albany und
+Ilha do Brigue am Amazonas, die alle richtig stehen. Ohne die zweite
+Stufe ist die Liste nicht zu gebrauchen.
+
 Usage: python3 py/lage_gewaesser.py [--radius 1000] [--max N]
 """
 from __future__ import annotations
