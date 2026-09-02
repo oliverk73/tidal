@@ -26,8 +26,25 @@ auf 90° W --, aber er ist der, auf den die Tafel sich bezieht. Ob er
 stimmt, zeigt die Messung: ein Datensatz, der sonst passt, haette dann
 einen Versatz von vollen Stunden.
 
-Von den beiden Hoehenspalten wird METROS genommen; PIES dient nur der
-Gegenprobe (Verhaeltnis 3.281).
+Von den beiden Hoehenspalten wird PIES genommen und selbst umgerechnet,
+nicht METROS. Die Meterspalte ist naemlich nichts anderes als die auf
+Zentimeter gerundete Fussspalte -- 0.30 ft stehen dort als 0.09 m,
+obwohl es 0.0914 m sind. Fuss hat mit 0.01 ft rund drei Millimeter
+Aufloesung, Meter nur einen Zentimeter.
+
+Erwartet hatte ich davon einiges: in Cozumel betraegt der Hub 28
+Zentimeter, die Rundung allein also 3.6 Prozent davon -- mehr als der
+ganze Fehler, den wir sonst messen. Gebracht hat es nichts. Ueber alle
+35 gemessenen Saetze bleibt der Median bei 2.18 Prozent, zehn werden
+minimal besser, acht minimal schlechter. Die Rundung ist also nicht die
+Grenze; was an Abweichung bleibt, hat andere Gruende (die Tafeln sind
+nicht rein harmonisch, und aus Hoch- und Niedrigwasser allein laesst
+sich nicht mehr herausholen).
+
+Genommen wird trotzdem die feinere Spalte -- dieselbe Groesse mit
+weniger Rauschen kostet nichts. Wer hier ansetzen will, um die
+mexikanischen Saetze zu verbessern, sei gewarnt: an der Rundung liegt
+es nicht.
 
 Usage: python3 py/semar_referenz.py             Uebersicht
        python3 py/semar_referenz.py <text>      einen Hafen zeigen
@@ -137,8 +154,10 @@ def _seite_lesen(woerter, text):
                 d = dt.date(jahr, mon, tag_je_gruppe[g])
             except ValueError:
                 continue
-            aus.append((dt.datetime.combine(d, dt.time(std, minute)),
-                        float(zahlen[-1])))
+            # zahlen = [PIES, METROS]; genommen wird PIES.
+            hoehe = (float(zahlen[0]) * 0.3048 if len(zahlen) >= 2
+                     else float(zahlen[-1]))
+            aus.append((dt.datetime.combine(d, dt.time(std, minute)), hoehe))
     return aus, md
 
 

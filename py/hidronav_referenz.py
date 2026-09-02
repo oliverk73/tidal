@@ -159,14 +159,65 @@ def stationen():
     return aus
 
 
-def vorhersage(st, ab=dt.datetime(2026, 1, 1)):
-    """Alle Ereignisse in UTC. Der Juni 2024 bleibt aussen vor, damit die
-    Messung einen zusammenhaengenden Zeitraum sieht."""
+VON = dt.datetime(2026, 7, 1)
+BIS = dt.datetime(2026, 8, 1)
+
+
+def reihe(st, von=None, bis=None):
     ev = []
     for p in st['dateien']:
-        ev += [(z, h) for z, h in _ereignisse(p) if z >= ab]
+        ev += [(z, h) for z, h in _ereignisse(p)
+               if (not von or z >= von) and (not bis or z < bis)]
+    return sorted(set(ev))
+
+
+def vorhersage(st, von=VON, bis=BIS):
+    """Ein einzelner Monat, wie bei allen anderen Laendern.
+
+    Ueber mehrere Monate zu vergleichen waere naheliegend -- es liegen
+    Juni, Juli und September 2026 vor --, gibt aber ein falsches Bild.
+    vergleich() zieht EINEN festen Hoehenversatz ab, und das Mittelwasser
+    der peruanischen Tafeln wandert im Jahresgang betraechtlich: in
+    Callao von -46.9 cm im Juni auf -52.5 cm im September, in Chimbote
+    von -69.4 auf -92.6 cm. Einzeln gemessen liegt Callao bei 1.7 bis
+    2.0 Prozent des Hubs, ueber alle drei Monate zusammen bei 2.55 --
+    der Aufschlag ist reine Drift des Mittelwassers, kein Fehler der
+    Kurve.
+
+    Das ist zugleich ein Befund ueber den Bestand: unsere Saetze bilden
+    diesen Jahresgang (Sa, Ssa) nicht ab. Wer im September eine Hoehe
+    ausrechnet, liegt in Chimbote um gut 20 Zentimeter daneben, ohne
+    dass die Gezeitenkurve selbst schlecht waere.
+    """
     import dhn_qualitaet
-    return dhn_qualitaet.art_bestimmen(sorted(set(ev)))
+    return dhn_qualitaet.art_bestimmen(reihe(st, von, bis))
+
+
+def alles(st):
+    """Alle vorliegenden Ereignisse -- fuer den Ausgleich, nicht fuers Messen.
+
+    Juni 2024 sowie Juni, Juli und September 2026: rund 470 Extremwerte
+    ueber eine Spanne von 2.3 Jahren.
+
+    Zum Rechnen taugt das NICHT, so verlockend die Spanne aussieht --
+    geprueft am 02.09.2026 und in jeder Variante verworfen:
+
+        Callao, gegen den Juli gemessen     vorhandener Satz   2.0 cm
+        Fit aus Juni+Juli 2026 (lueckenlos)                   12.8 cm
+        Fit aus allen drei Monaten 2026                       19.7 cm
+        Fit aus allem einschliesslich 2024                    25.4 cm
+
+    Zwei Monate Hoch- und Niedrigwasser reichen nicht, um die
+    Konstituenten zu trennen, und die Luecken machen es schlimmer statt
+    besser: fitte() interpoliert zwischen erstem und letztem Punkt und
+    fuellt einen Zwischenraum mit erfundenen Werten. Die Zeitversaetze
+    laufen dann auf 750 Minuten.
+
+    Die Tafeln sind ein Massstab, kein Rechengrund. Dafuer braucht es
+    ein zusammenhaengendes Jahr, wie es Argentinien, Kanada und Mexiko
+    liefern.
+    """
+    return reihe(st)
 
 
 def main(argv):

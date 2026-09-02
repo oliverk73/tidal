@@ -92,6 +92,16 @@ def fitte(ev, fuso, lat):
 
     Gefittet wird in UTC, damit die Phasen wie im Bestand auf Greenwich
     bezogen sind.
+
+    Die Reihe muss LUECKENLOS sein. Interpoliert wird zwischen dem ersten
+    und dem letzten Punkt, ohne Ruecksicht auf Zwischenraeume -- eine
+    Luecke wird also mit erfundenen Werten gefuellt, und zwar mit einer
+    glatten Kurve, die keine Gezeit ist. Bei den peruanischen Tafeln
+    (Juni, Juli und September 2026 sowie Juni 2024) fuehrt das zu
+    Zeitversaetzen von 750 Minuten und Fehlern um 25 Prozent des Hubs;
+    ohne die Luecke, aber mit nur zwei Monaten, bleiben in Callao immer
+    noch 12.8 cm gegen 2.0 cm des vorhandenen Satzes. Zum Rechnen
+    braucht es ein zusammenhaengendes Jahr.
     """
     import numpy as np
     import utide

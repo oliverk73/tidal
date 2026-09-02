@@ -49,6 +49,18 @@ ARBEIT = '/tmp/semar_neufit'
 # So viel besser muss die neue Fassung sein, damit sie uebernommen wird.
 BESSER = 0.6
 
+# Saetze, deren eigene Kopfzeile einen gescheiterten Ausgleich meldet
+# (R^2 unter 0.90 bei einem Fit gegen eine gerechnete Tafel). Sie werden
+# mit --r2 ueber alle drei Jahrgaenge neu gerechnet statt ueber einen:
+# mehr Beobachtungen trennen die Konstituenten besser, und die Tide ist
+# ueber die Jahre dieselbe.
+R2_FAELLE = {
+    'Caleta de Campos, Michoacán, Mexico': 'caleta',
+    'Punta Pérula, Jalisco, Mexico': 'perula',
+    'Puerto Vicente Guerrero, Guerrero, Mexico': 'vicente',
+    'San Miguel de Cozumel, Quintana Roo, México': 'cozumel',
+}
+
 
 def bloecke():
     """-> (zeilen, [(anfang, namenszeile, ende, name, lat, lon)])
@@ -260,11 +272,81 @@ def neu_anlegen(argv, grenze, schreiben):
     return 0
 
 
+def r2_neufit(schreiben):
+    """Die Saetze mit gescheitertem Ausgleich ueber alle Jahrgaenge neu."""
+    zeilen = open(TXT, encoding='iso-8859-1').read().split('\n')
+    bl = {}
+    for k, z in enumerate(zeilen):
+        if (z and not z.startswith('#') and k + 1 < len(zeilen)
+                and MERIDIAN.match(zeilen[k + 1])):
+            a = k
+            while a > 0 and (zeilen[a - 1].startswith('#')
+                             or not zeilen[a - 1].strip()):
+                a -= 1
+            e = k + 3
+            while e < len(zeilen) and zeilen[e].strip() and not zeilen[e].startswith('#'):
+                e += 1
+            bl.setdefault(z.strip(), (a, k, e))
+    st = {s['code']: s for s in C.stationen()}
+    gebaut, unveraendert = [], []
+    for name, code in sorted(R2_FAELLE.items()):
+        if name not in bl or code not in st:
+            print(f'  fehlt: {name[:44]}')
+            continue
+        a, _k, e = bl[name]
+        s = st[code]
+        alle = []
+        for j in (2024, 2025, 2026):
+            alle += C.jahresreihe(s, j)
+        alle = sorted(set(alle))
+        ref = C.vorhersage(s)
+        if len(alle) < 1500 or len(ref) < 40:
+            print(f'  zu wenig Daten: {name[:44]}')
+            continue
+        hub = max(h for _z, h, _x in ref) - min(h for _z, h, _x in ref)
+        alt = messe(zeilen[a:e], ref)
+        con, z0 = fitte(alle, 0.0, s['lat'])
+        neu = block_bauen(zeilen[a:e], con, z0, s['tafel'], f'{2024}-{2026}',
+                          amt='SEMAR', werkzeug='py/semar_neufit.py --r2',
+                          grund='Der vorige Fit war gescheitert (siehe R^2).')
+        g = messe(neu, ref)
+        if not g or not alt:
+            print(f'  nicht messbar: {name[:44]}')
+            continue
+        va, vn = alt['rms'] / hub * 100, g['rms'] / hub * 100
+        if g['rms'] < alt['rms'] * 0.8:
+            gebaut.append((name, a, e, neu, va, vn, alt['rms'], g['rms'], hub))
+        else:
+            unveraendert.append((name, va, vn, alt['rms'], g['rms']))
+    for n, _a, _e, _b, va, vn, ra, rn, hub in sorted(gebaut, key=lambda x: -x[4]):
+        print(f'  {va:6.2f} % ({ra*100:5.1f} cm) -> {vn:5.2f} % ({rn*100:4.1f} cm)  '
+              f'bei {hub:4.2f} m Hub   {n[:40]}')
+    for n, va, vn, ra, rn in unveraendert:
+        print(f'  unveraendert: {va:6.2f} % ({ra*100:5.1f} cm) -> {vn:6.2f} % '
+              f'({rn*100:4.1f} cm)   {n[:40]}')
+    if not gebaut or not schreiben:
+        if gebaut:
+            print('\n(--schreiben, um sie zu uebernehmen)')
+        return 0
+    for n, a, e, neu, *_ in sorted(gebaut, key=lambda q: -q[1]):
+        zeilen[a:e] = neu
+    shutil.copy2(TXT, os.path.join(
+        BACKUP, os.path.basename(TXT) + f'.vor_semarr2_{dt.datetime.now():%Y%m%d_%H%M}'))
+    tmp = TXT + '.neu'
+    with open(tmp, 'w', encoding='iso-8859-1') as fh:
+        fh.write('\n'.join(zeilen))
+    os.replace(tmp, TXT)
+    print(f'\n{len(gebaut)} Saetze neu gerechnet: {TXT}')
+    return 0
+
+
 def main(argv):
     grenze = float(argv[argv.index('--grenze') + 1]) if '--grenze' in argv else 4.0
     nur = argv[argv.index('--nur') + 1] if '--nur' in argv else None
     weite = float(argv[argv.index('--weite') + 1]) if '--weite' in argv else 2000
     schreiben = '--schreiben' in argv
+    if '--r2' in argv:
+        return r2_neufit(schreiben)
     if '--neu' in argv:
         return neu_anlegen(argv, grenze if '--grenze' in argv else 3.5, schreiben)
 
