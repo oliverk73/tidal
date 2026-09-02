@@ -185,7 +185,9 @@ def main(argv):
             print(f'  {f["satz"][:44]}: {type(ex).__name__}')
             ohne.append(f['satz'])
             continue
-        neu = block_bauen(l[a:e], con, mittel, f['station'], 2026)
+        neu = block_bauen(l[a:e], con, mittel, f['station'], 2026,
+                          amt='CHS', werkzeug='py/chs_neufit.py',
+                          grund='Der vorige Satz hatte zu kleine Amplituden.')
         g = messe(neu, ref)
         alt = float(f['rms_m'])
         if g and g['rms'] < alt * BESSER:

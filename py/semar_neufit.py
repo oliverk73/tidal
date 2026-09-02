@@ -314,7 +314,8 @@ def main(argv):
             print(f'  {f["satz"][:44]}: {type(ex).__name__}')
             ohne.append(f['satz'])
             continue
-        neu = block_bauen(l[a:e], con, mittel, f['station'], C.JAHR)
+        neu = block_bauen(l[a:e], con, mittel, f['station'], C.JAHR,
+                          amt='SEMAR', werkzeug='py/semar_neufit.py')
         g = messe(neu, ref)
         alt = float(f['rms_m'])
         if g and g['rms'] < alt * BESSER:

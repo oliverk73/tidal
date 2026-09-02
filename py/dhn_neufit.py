@@ -115,15 +115,35 @@ def fitte(ev, fuso, lat):
     return aus, float(np.mean(hs))
 
 
-def block_bauen(alt, con, z0, tafel='', jahr=None):
-    """Konstituentenblock ersetzen, Kopf und Position unangetastet."""
+def block_bauen(alt, con, z0, tafel='', jahr=None, amt='DHN',
+                werkzeug='py/dhn_neufit.py', grund=None):
+    """Konstituentenblock ersetzen, Kopf und Position unangetastet.
+
+    Amt und Werkzeug muessen mitgegeben werden. Sie standen hier fest
+    verdrahtet auf DHN und dhn_neufit, und weil chs_neufit, semar_neufit
+    und cicese_neufit dieselbe Funktion benutzen, trugen am Ende 138
+    Saetze die Notiz, sie seien "aus der DHN-Tafel neu gerechnet" --
+    123 kanadische, 6 mexikanische und 9 brasilianische. Nur die neun
+    stimmten. Eine Herkunftsangabe, die luegt, ist schlimmer als keine.
+
+    Ebenso wird die R^2-Zeile des alten Ausgleichs entwertet: sie
+    beschreibt Konstituenten, die es nicht mehr gibt, und wer den
+    Bestand nach schlechten Fits durchsucht, findet sonst Saetze, die
+    laengst neu gerechnet sind.
+    """
+    heute = f'{dt.date.today():%Y%m%d}'
     neu = []
     for z in alt:
+        m2 = re.match(r'#\s*R\^2 = ', z)
+        if m2:
+            neu.append('# ' + z.lstrip('# ').rstrip()
+                       + f'   (galt bis {heute}, siehe note)')
+            continue
         if z.startswith('# date_imported:') and tafel:
             neu.append(z)
-            neu.append(f'# note: {dt.date.today():%Y%m%d} aus der DHN-Tafel '
-                       f'{jahr} neu gerechnet (py/dhn_neufit.py). Der vorige '
-                       f'Satz hatte zu kleine Amplituden.')
+            neu.append(f'# note: {heute} aus der {amt}-Tafel {jahr} neu '
+                       f'gerechnet ({werkzeug}).'
+                       + (f' {grund}' if grund else ''))
             continue
         m = KON.match(z)
         if m and m.group(1) != 'x':
@@ -251,7 +271,9 @@ def main(argv):
         # Z0 ist der mittlere Wasserstand ueber Kartennull; die Tafel
         # nennt ihn im Kopf, und der Mittelwert der Reihe bestaetigt ihn.
         z0 = kopf['nivel_medio'] if kopf['nivel_medio'] else mittel
-        neu = block_bauen(alt, con, z0, kopf['name'], kopf['jahr'])
+        neu = block_bauen(alt, con, z0, kopf['name'], kopf['jahr'],
+                          amt='DHN', werkzeug='py/dhn_neufit.py',
+                          grund='Der vorige Satz hatte zu kleine Amplituden.')
         g = messe(neu, f['satz'], (kopf, roh), kopf)
         print(f'{f["satz"][:46]:48s}')
         print(f'   Tafel {kopf["name"][:38]}  ({fn[:30]})')

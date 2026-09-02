@@ -123,7 +123,9 @@ def main(argv):
         hub = max(h for _z, h, _x in ref) - min(h for _z, h, _x in ref)
         alt = messe(zeilen[a:e], ref)
         con, z0 = fitte(jahr, 0.0, s['lat'])
-        neu = block_bauen(zeilen[a:e], con, z0, s['tafel'], C.JAHR)
+        neu = block_bauen(zeilen[a:e], con, z0, s['tafel'], C.JAHR,
+                          amt='CICESE', werkzeug='py/cicese_neufit.py',
+                          grund='Der vorige Fit war gescheitert (siehe R^2).')
         g = messe(neu, ref)
         if not g:
             print(f'  nicht messbar: {name[:44]}')
