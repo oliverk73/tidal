@@ -32,10 +32,30 @@ festzuhalten:
 
 Was die Landmaske NICHT kann: sie kennt keine Tidefluesse. Hamburg St.
 Pauli liegt 12 km von der naechsten Ozeanzelle und ist trotzdem ein
-richtiger Pegel. Solche Faelle stehen erwartungsgemaess in der Liste,
-und darum ist es eine Liste zum Nachsehen und kein Urteil. Der
-Karnaphuli in Chittagong dagegen ist breit genug, um selbst als Wasser
-zu gelten -- Kalurghat kommt auf 1 km.
+richtiger Pegel. Der Karnaphuli in Chittagong dagegen ist breit genug,
+um selbst als Wasser zu gelten -- Kalurghat kommt auf 1 km.
+
+Der naheliegende Ausweg, zusaetzlich nach einem benannten Fluss zu
+fragen, FUNKTIONIERT NICHT, und das ist die wichtigste Erkenntnis
+dieses Werkzeugs. Matamoros liegt am Rio Bravo: Natural Earth setzt die
+falsche Position 2.5 km vom "Rio Grande", die berichtigte am Strand
+dagegen 16 km entfernt. Ein Flusstest haette also genau den falschen
+Satz entlastet und den richtigen verdaechtigt. Der Grund ist, dass die
+Frage nicht "liegt hier ein Fluss?" lautet, sondern "reicht die Tide
+hier herauf?" -- und das ist keine geometrische, sondern eine
+hydrographische Frage. Albany liegt 220 km den Hudson hinauf und ist
+tidenabhaengig, Matamoros 35 km den Rio Bravo hinauf und nicht.
+
+Was stattdessen hilft, ist die Einsamkeit: an einem echten Tidefluss
+steht eine Kette von Pegeln (Hudson, St. Lorenz, Gambia), an einer
+verrutschten Position steht nichts. Sortiert wird deshalb nach
+min(Abstand zum Wasser, Abstand zum naechsten anderen Pegel). Die alte
+Matamoros-Position kommt damit auf Rang 31 von 943, und nur 62
+Positionen liegen ueber zwanzig Kilometern -- eine Liste, die ein
+Mensch durchsieht. Ueber ihr stehen Amazonas, Gambia, Guyana,
+arktische Fjorde und die Fluesse von Sarawak, die alle richtig stehen.
+
+Ein Urteil ist das nicht und kann es nicht sein.
 
 Usage: python3 py/lage_ausreisser.py [--ab_km 8] [--zeige 40] [--csv]
 """
@@ -73,6 +93,7 @@ def ozean_abstand(lat, lon):
 
 
 def main(argv):
+    import numpy as np
     g = lambda n, v: (float(argv[argv.index(n) + 1]) if n in argv else v)
     ab, zeige = g('--ab_km', AB_KM), int(g('--zeige', 40))
     alle = [r for r in load_records()
@@ -85,23 +106,42 @@ def main(argv):
         punkte.setdefault((round(r['lat'], 3), round(r['lon'], 3)), []).append(r)
     print(f'{len(alle)} Saetze an {len(punkte)} Positionen', file=sys.stderr)
 
+    # Abstand zum naechsten anderen Pegel -- ueber Einheitsvektoren, damit
+    # der Datumswechsel kein Sonderfall ist.
+    orte = sorted(punkte)
+    lat = np.radians(np.array([o[0] for o in orte]))
+    lon = np.radians(np.array([o[1] for o in orte]))
+    xyz = np.stack([np.cos(lat) * np.cos(lon), np.cos(lat) * np.sin(lon),
+                    np.sin(lat)], axis=1)
+    m = len(orte)
+    nachbar = np.zeros(m)
+    for a in range(0, m, 512):
+        b = min(a + 512, m)
+        dd = np.arccos(np.clip(xyz[a:b] @ xyz.T, -1.0, 1.0)) * 6371.0
+        for i in range(b - a):
+            dd[i, a + i] = np.inf
+        nachbar[a:b] = dd.min(axis=1)
+
     treffer = []
-    for i, ((la, lo), rs) in enumerate(sorted(punkte.items()), 1):
+    for i, o in enumerate(orte):
+        rs = punkte[o]
         d = ozean_abstand(rs[0]['lat'], rs[0]['lon'])
         if d >= ab:
-            treffer.append((d, rs))
-        if i % 2000 == 0:
-            print(f'  {i}/{len(punkte)}', file=sys.stderr, flush=True)
+            treffer.append((min(d, nachbar[i]), d, nachbar[i], rs))
+        if i and i % 2000 == 0:
+            print(f'  {i}/{m}', file=sys.stderr, flush=True)
     treffer.sort(key=lambda x: -x[0])
 
-    n = sum(len(rs) for _d, rs in treffer)
+    n = sum(len(rs) for _s, _d, _nb, rs in treffer)
     print(f'\n{len(treffer)} Positionen ({n} Saetze) liegen weiter als '
-          f'{ab:.0f} km von der naechsten Wasserzelle\n')
-    for d, rs in treffer[:zeige]:
+          f'{ab:.0f} km von der naechsten Wasserzelle, sortiert nach '
+          f'min(Wasser, naechster Pegel)\n')
+    print(f'{"Rang":>4} {"Wasser":>7} {"Pegel":>8}  Satz')
+    for rang, (_s, d, nb, rs) in enumerate(treffer[:zeige], 1):
         r = rs[0]
         mehr = f' (+{len(rs) - 1})' if len(rs) > 1 else ''
-        print(f'  {d:6.0f} km  {r["name"][:44]:44}{mehr:5} {r["lat"]:8.4f} '
-              f'{r["lon"]:9.4f}  {os.path.basename(r["file"])[:26]}')
+        print(f'{rang:4} {d:6.0f} km {nb:7.1f} km  {r["name"][:40]:40}{mehr:5} '
+              f'{r["lat"]:8.4f} {r["lon"]:9.4f}  {os.path.basename(r["file"])[:24]}')
     if len(treffer) > zeige:
         print(f'  ... und {len(treffer) - zeige} weitere (--zeige)')
 
@@ -111,10 +151,11 @@ def main(argv):
                          'harmonics/help/lage_ausreisser.csv')
         with open(p, 'w', newline='', encoding='utf-8') as fh:
             w = csv.writer(fh)
-            w.writerow(['ozean_km', 'datei', 'name', 'lat', 'lon'])
-            for d, rs in treffer:
+            w.writerow(['rang', 'ozean_km', 'pegel_km', 'datei', 'name', 'lat', 'lon'])
+            for rang, (_s, d, nb, rs) in enumerate(treffer, 1):
                 for r in rs:
-                    w.writerow([f'{d:.0f}', os.path.basename(r['file']), r['name'],
+                    w.writerow([rang, f'{d:.0f}', f'{nb:.1f}',
+                                os.path.basename(r['file']), r['name'],
                                 f'{r["lat"]:.4f}', f'{r["lon"]:.4f}'])
         print(f'\n-> {p}')
     return 0
