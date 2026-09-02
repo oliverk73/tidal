@@ -881,7 +881,6 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 475728c81841bec857cc7cd3f6772cd0,harmonics/att/harmonics_att_np203_scs.txt,"Capiz Landing, Philippines",11.6,122.7167,source,,,,,c0ab599a 2026-08-03
 47e2e23cf71eb8a3891a7ed9c94f5940,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Kayeli, Indonesia",-3.2667,127.1,source,,,,,c0ab599a 2026-08-03
 48a14666b796481b2333e060bab74402,harmonics/att/harmonics_att_np203_scs.txt,"Genteng (Westbaai), Indonesia",-7.4,106.4,source,,,,,c0ab599a 2026-08-03
-48e253d14926beb55e78d10689bb465c,harmonics/att/harmonics_att_np203_scs.txt,"Chittagong (Sadarghat), Bangladesh",22.3246,91.8308,manual,"Chittagong, Bangladesh",22.3333,91.8333,1001,c0ab599a 2026-08-03
 492d51a7c0ba3ab1fa39db2070e70b08,harmonics/att/harmonics_att_np203_scs.txt,"Hon Me, Vietnam",19.4333,105.8833,source,,,,,c0ab599a 2026-08-03
 496329f3bf067aa0abf968b23b511233,harmonics/att/harmonics_att_np203_scs.txt,"Labuhan, Indonesia",-6.3667,105.8167,source,,,,,c0ab599a 2026-08-03
 4a02359c5bed75cae1398b8cbc48ab04,harmonics/att/harmonics_att_np203_scs.txt,"Gwa Bay, Myanmar",17.5909,94.5652,manual,,17.5833,94.5667,860,c0ab599a 2026-08-03
@@ -10172,7 +10171,6 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 38c39ac895a6d5c777fc5b0638e7dd8f,harmonics/noaa/harmonics_noaa_cptt.txt,"Melbourne (Williamstown), Victoria, Australia",-37.8667,144.9167,source,,,,,86f3ae4f 2026-07-02
 38d9f340c8c56fb4e047be86efb305ab,harmonics/noaa/harmonics_noaa_cptt.txt,"Northwest Bay, Linapacan Island, Palawan, Philippines",11.4667,119.7667,source,,,,,7a7ed8e0 2026-07-01
 390486fda7873fbc53da4d9279f5b044,harmonics/noaa/harmonics_noaa_cptt.txt,"Dahanu, Maharashtra, India",19.9725,72.7167,manual,,19.9667,72.7167,645,86f3ae4f 2026-07-02
-39305f4b09a963cee6da94386652cce0,harmonics/noaa/harmonics_noaa_cptt.txt,"Chittagong (Sadarghat), Bangladesh",22.3246,91.8308,manual,"Chittagong, Bangladesh",22.3333,91.8333,1001,7a7ed8e0 2026-07-01
 3940814c199f8a9897e65ef2f566d856,harmonics/noaa/harmonics_noaa_cptt.txt,"Bar, Liaoning, China",40.5333,122.0667,source,,,,,7a7ed8e0 2026-07-01
 396c89a65384b0589eabbc21d0d8cef2,harmonics/noaa/harmonics_noaa_cptt.txt,"Chikanzi (Hongkan Wan), Guangdong, China",20.3167,110.4,source,,,,,7a7ed8e0 2026-07-01
 39a4c6eca1804a020a9ac5c3f9ac2b2c,harmonics/noaa/harmonics_noaa_cptt.txt,"Nakagawara Ura, Kagoshima, Japan",31.85,129.85,manual,"Nakagawara Ura <18>, Kagoshima, Japan",,,,86f3ae4f 2026-07-02
@@ -15091,7 +15089,7 @@ ff7adb79e8bdb3774f8271391ebe0999,harmonics/utide/harmonics_utide_observations.tx
 0a7417c6a4243ce9de5b9b4a85a840e5,harmonics/utide/harmonics_utide_tidetables.txt,"Santa Rosalía, Baja California Sur, Mexico",27.3375,-112.2622,source,,,,,8407a3fa 2026-05-12
 0a87369e2d9df0c57630772ddd6dc130,harmonics/utide/harmonics_utide_tidetables.txt,"Western Shoal Beacon, South Australia, Australia",-33.1833,137.5333,source,,,,,17ebcd18 2026-05-01
 0a889c3e93f6dda3d9b67987340b14c6,harmonics/utide/harmonics_utide_tidetables.txt,"Moelfre, Wales, United Kingdom",53.3546,-4.2314,source,,,,,01b960b5 2026-06-10
-0abde3dd6db5098169cae3e3ef203511,harmonics/utide/harmonics_utide_tidetables.txt,"El Sauzal, Baja California, Mexico",31.893,-116.7023,ambiguous,,,,,
+0abde3dd6db5098169cae3e3ef203511,harmonics/utide/harmonics_utide_tidetables.txt,"El Sauzal, Baja California, Mexico",31.893,-116.7023,source,,,,,5347fed1 2026-09-02
 0acbf4ce3f59ed89836fba8a7e808f84,harmonics/utide/harmonics_utide_tidetables.txt,"Grand Bay, Newfoundland, Canada",47.59022,-59.181979,source,,,,,17ebcd18 2026-05-01
 0aceff31ce50946db6c25d3d8a560307,harmonics/utide/harmonics_utide_tidetables.txt,"Port Pegasus, New Zealand",-47.1955,167.6682,source,,,,,09ee867b 2026-05-03
 0ad2dc5d6b7c261807b070081fb21a3e,harmonics/utide/harmonics_utide_tidetables.txt,"Lawyer's Creek, England, United Kingdom",52.8904,0.0914,manual,,52.883333,0.083333,954,4ffe724c 2026-06-10
@@ -15247,7 +15245,7 @@ ff7adb79e8bdb3774f8271391ebe0999,harmonics/utide/harmonics_utide_observations.tx
 1487f80f31ddb6391110610a264030ff,harmonics/utide/harmonics_utide_tidetables.txt,"Springdale, Newfoundland, Canada",49.50006,-56.064947,source,,,,,17ebcd18 2026-05-01
 14891fb88cc2b5a05c33fe3ca972c162,harmonics/utide/harmonics_utide_tidetables.txt,"Motueka, New Zealand",-41.1383,173.0234,source,,,,,09ee867b 2026-05-03
 148f12b93f7185c1c5af6476b351c21d,harmonics/utide/harmonics_utide_tidetables.txt,"Locquirec, France",48.6915,-3.6444,manual,,48.7,-3.6333,1248,17ebcd18 2026-05-01
-149190185c3a38d4f6182211fb7af5a6,harmonics/utide/harmonics_utide_tidetables.txt,"Golfo de Santa Clara, Sonora, Mexico",31.6842,-114.5019,ambiguous,,,,,
+149190185c3a38d4f6182211fb7af5a6,harmonics/utide/harmonics_utide_tidetables.txt,"Golfo de Santa Clara, Sonora, Mexico",31.6842,-114.5019,source,,,,,5347fed1 2026-09-02
 14c3ac69d1543cdaa8edc4333ad385c8,harmonics/utide/harmonics_utide_tidetables.txt,"Porpoise Channel East, British Columbia, Canada",54.21515,-130.28906,source,,,,,17ebcd18 2026-05-01
 14c95b17d93b11faf189165f0910d1e8,harmonics/utide/harmonics_utide_tidetables.txt,"Xiaochangshandao, Liaoning, China",39.2333,122.6667,source,,,,,0c3cfdde 2026-06-11
 14ed1d56b844721272ec9dae39c8e94f,harmonics/utide/harmonics_utide_tidetables.txt,"Taiwawe Bay, New Zealand",-35.4348,174.3812,source,,,,,09ee867b 2026-05-03
@@ -16379,7 +16377,7 @@ ff7adb79e8bdb3774f8271391ebe0999,harmonics/utide/harmonics_utide_observations.tx
 5fb76ff8afbc2dceabd63c471d5ab633,harmonics/utide/harmonics_utide_tidetables.txt,"Isachsen, Nunavut, Canada",78.780055,-103.507806,source,,,,,17ebcd18 2026-05-01
 5fbe74c8216a49dbcc4016cd29700b18,harmonics/utide/harmonics_utide_tidetables.txt,"Red Wallis Island, Queensland, Australia",-10.85,142.0333,source,,,,,17ebcd18 2026-05-01
 5fc3408aab0911ab71ba2c6a288b533a,harmonics/utide/harmonics_utide_tidetables.txt,"Eureka, Nunavut, Canada",79.985067,-85.908967,source,,,,,17ebcd18 2026-05-01
-5fd626edc04b11b74aa54854a9a1430f,harmonics/utide/harmonics_utide_tidetables.txt,"Guerrero Negro, Baja California Sur, Mexico",27.9014,-114.1571,ambiguous,,,,,
+5fd626edc04b11b74aa54854a9a1430f,harmonics/utide/harmonics_utide_tidetables.txt,"Guerrero Negro, Baja California Sur, Mexico",27.9014,-114.1571,source,,,,,5347fed1 2026-09-02
 5fed840f073ac8cfdf70aaf084a38098,harmonics/utide/harmonics_utide_tidetables.txt,"Dornie (Loch Long Bridge), Scotland, United Kingdom",57.2781,-5.5158,manual,"Dornie Bridge, Scotland, United Kingdom",57.283333,-5.516667,584,01b960b5 2026-06-10
 5ff4720e5f2eb463b14e867db99b90a4,harmonics/utide/harmonics_utide_tidetables.txt,"Collette Reef, Queensland, Australia",-11.2333,143.35,source,,,,,17ebcd18 2026-05-01
 5ff584d2e3c66f72e1ec4fe4ea87d5c2,harmonics/utide/harmonics_utide_tidetables.txt,"Larsen Island, British Columbia, Canada",53.619,-130.574,source,,,,,17ebcd18 2026-05-01
@@ -17491,7 +17489,7 @@ ab911fc29afa00b233086eebef3f6902,harmonics/utide/harmonics_utide_tidetables.txt,
 ab9a5987dd13b48b0a4dda2569495f87,harmonics/utide/harmonics_utide_tidetables.txt,"Beirut (Beyrouth), Lebanon",33.9092,35.5306,manual,"Beyrouth, Lebanon",33.9083,35.5467,1489,17ebcd18 2026-05-01
 abd05bed07ee0c5fd65a70b065b3ddfa,harmonics/utide/harmonics_utide_tidetables.txt,"Saint-Joseph-de-la-Rive, Québec, Canada",47.448833,-70.3655,source,,,,,17ebcd18 2026-05-01
 abdd649ccdbe295ecf581358cddc15a6,harmonics/utide/harmonics_utide_tidetables.txt,"Haimen, Guangdong, China",23.1833,116.6167,source,,,,,cf44c75b 2026-06-10
-abdee85d70456c5321d75bdfbc30ce09,harmonics/utide/harmonics_utide_tidetables.txt,"Isla Tiburón, Sonora, Mexico",28.8004,-112.4355,ambiguous,,,,,
+abdee85d70456c5321d75bdfbc30ce09,harmonics/utide/harmonics_utide_tidetables.txt,"Isla Tiburón, Sonora, Mexico",28.8004,-112.4355,source,,,,,5347fed1 2026-09-02
 abfb95aa3d67163c24bab8502f6af1e6,harmonics/utide/harmonics_utide_tidetables.txt,"Fanny's Bay, Ireland",55.1985,-7.8139,manual,,55.2,-7.816667,242,4ffe724c 2026-06-10
 ac08fcede709b9413f655c01afaa8566,harmonics/utide/harmonics_utide_tidetables.txt,"Dover (Memramcook), New Brunswick, Canada",45.992446,-64.686416,source,,,,,17ebcd18 2026-05-01
 ac25cebe48f662e5ace4eaa3f6557a8d,harmonics/utide/harmonics_utide_tidetables.txt,"Newcastle-upon-Tyne, England, United Kingdom",54.9693,-1.6031,manual,"Newcastle-Upon-Tyne, England, United Kingdom",54.966667,-1.6,353,01b960b5 2026-06-10
@@ -17873,7 +17871,7 @@ c6052fd2b0d3d37fc7180629dedb593d,harmonics/utide/harmonics_utide_tidetables.txt,
 c6072e34f91c7906a4f44c87209a87f9,harmonics/utide/harmonics_utide_tidetables.txt,"Te Hapua, New Zealand",-34.5165,172.923,source,,,,,09ee867b 2026-05-03
 c6309eddde84acec1e37c02d0de42c37,harmonics/utide/harmonics_utide_tidetables.txt,"Pointe d'Agon, France",48.9885,-1.6218,source,,,,,17ebcd18 2026-05-01
 c64d6a9557b64c61138fadc234e8fe8b,harmonics/utide/harmonics_utide_tidetables.txt,"Chandbali (Dhamra River), Odisha, India",20.7714,86.7393,source,,,,,3c829665 2026-06-12
-c6641aa72f076e17a7589b7854f7c6a2,harmonics/utide/harmonics_utide_tidetables.txt,"La Crucecita (Huatulco), Oaxaca, Mexico",15.7547,-96.1303,ambiguous,,,,,
+c6641aa72f076e17a7589b7854f7c6a2,harmonics/utide/harmonics_utide_tidetables.txt,"La Crucecita (Huatulco), Oaxaca, Mexico",15.7547,-96.1303,source,,,,,5347fed1 2026-09-02
 c669eedbcb1e8c44ffa7a394eae1acd9,harmonics/utide/harmonics_utide_tidetables.txt,"Farewell, Newfoundland, Canada",49.555593,-54.477702,source,,,,,17ebcd18 2026-05-01
 c6a41c086a9e065e9f036a7eef0ac806,harmonics/utide/harmonics_utide_tidetables.txt,"Boscastle, England, United Kingdom",50.6898,-4.6929,source,,,,,01b960b5 2026-06-10
 c6bfe0a8cf546ef91f71105e7c66730d,harmonics/utide/harmonics_utide_tidetables.txt,"Samcheonpo New Port, South Korea",34.933333,128.083333,source,,,,,17ebcd18 2026-05-01
@@ -18130,7 +18128,7 @@ d73bcda38dc55bf0a366b2b08dad1663,harmonics/utide/harmonics_utide_tidetables.txt,
 d751931ae5a0b1614896e9e02d3b7efc,harmonics/utide/harmonics_utide_tidetables.txt,"Bofin Harbour, Ireland",53.6127,-10.2122,manual,,53.616667,-10.2,918,01b960b5 2026-06-10
 d76c880df1fb11a864465412bd7a26f0,harmonics/utide/harmonics_utide_tidetables.txt,"Miscou Harbour, New Brunswick, Canada",47.896209,-64.578601,source,,,,,17ebcd18 2026-05-01
 d76e38122d9da519feced662301c6aa9,harmonics/utide/harmonics_utide_tidetables.txt,"Laobeihekou, Liaoning, China",40.9667,121.8333,source,,,,,0c3cfdde 2026-06-11
-d77da12150aebf72d5cca191ea3bae11,harmonics/utide/harmonics_utide_tidetables.txt,"Puerto Refugio (Isla Ángel de la Guarda), Baja California, Mexico",29.5378,-113.5531,ambiguous,,,,,
+d77da12150aebf72d5cca191ea3bae11,harmonics/utide/harmonics_utide_tidetables.txt,"Puerto Refugio (Isla Ángel de la Guarda), Baja California, Mexico",29.5378,-113.5531,source,,,,,5347fed1 2026-09-02
 d7851c13542e41fc3586801e8b25cb83,harmonics/utide/harmonics_utide_tidetables.txt,"Nam Yet (Namyit Island, Spratly Islands), Vietnam",10.1833,114.35,source,,,,,bdcb80e2 2026-06-11
 d7a17bc83ddbf031f1425c83dd9ea26d,harmonics/utide/harmonics_utide_tidetables.txt,"Cranford Bay, Ireland",55.1488,-7.6959,manual,,55.15,-7.7,293,4ffe724c 2026-06-10
 d7ba47f5aaa1c5d12771643a5ba8d5e8,harmonics/utide/harmonics_utide_tidetables.txt,"Lossiemouth, Scotland, United Kingdom",57.7239,-3.279,manual,,57.716667,-3.3,1484,01b960b5 2026-06-10
