@@ -17,6 +17,15 @@ import os
 import shutil
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Eine gemeinsame Definition wie in positions_lock und id_match. Hier
+# stand bis zuletzt noch die Handpruefung lines[k+1][:1] in '+-' und
+# [3:4] == ':' -- dieselbe Annahme (Vorzeichen, zweistellige Stunde), die
+# die 124 Lavergne-Saetze mit "0:00 :Europe/London" jahrelang unsichtbar
+# gemacht hat. Sie diente hier nur der Zaehlprobe, haette also eine
+# falsche Satzzahl gemeldet.
+from health_check import MERIDIAN                                  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BACKUP = os.path.join(ROOT, 'harmonics/backup')
 
@@ -30,14 +39,48 @@ def liste(pfad):
 
 
 def block(lines, i):
-    """Grenzen des Satzes, dessen Namenszeile bei i steht."""
+    """Grenzen des Satzes, dessen Namenszeile bei i steht.
+
+    Nach oben wird ueber Kommentar- und Leerzeilen gelaufen -- ausser
+    beim ERSTEN Satz einer Datei. Ueber ihm stehen keine Kommentare, die
+    ihm gehoeren, sondern der Dateikopf: nach dem congen-Vorspann und
+    dessen "*END*" folgen zwanzig Zeilen, die das Format erklaeren, und
+    die sehen aus wie der Kopf eines Satzes.
+
+    Wird der erste Satz mitsamt diesen Zeilen entfernt, laesst sich die
+    Datei nicht mehr uebersetzen: build_tide_db bricht mit "Assertion
+    `string[0] == \'#\'\' failed" ab und sagt nicht, was fehlt. So
+    geschehen mit harmonics_noaa_censam, als Matamoros als erster Satz
+    der Datei geloescht wurde.
+
+    Beim ersten Satz bleibt deshalb alles ueber der Namenszeile stehen.
+    Gehoerten ein paar Kommentarzeilen wirklich ihm, bleiben sie als
+    Kommentar zurueck -- das stoert niemanden, ein zerstoerter Dateikopf
+    schon.
+    """
     a = i
+    if not _hat_satz_davor(lines, i):
+        return a, _ende(lines, i)
     while a > 0 and (lines[a - 1].startswith('#') or not lines[a - 1].strip()):
         a -= 1
+    return a, _ende(lines, i)
+
+
+def _ende(lines, i):
     b = i + 3                                   # Name, Meridian, Z0
     while b < len(lines) and lines[b].strip() and not lines[b].startswith('#'):
         b += 1
-    return a, b
+    return b
+
+
+def _hat_satz_davor(lines, i):
+    """Steht vor Zeile i schon ein Datensatz in dieser Datei?"""
+    for k in range(i):
+        z = lines[k]
+        if (z and not z.startswith('#') and k + 1 < len(lines)
+                and MERIDIAN.match(lines[k + 1])):
+            return True
+    return False
 
 
 def main(argv):
@@ -59,7 +102,7 @@ def main(argv):
         lines = open(pfad, encoding='iso-8859-1').read().split('\n')
         vorher = sum(1 for k, l in enumerate(lines)
                      if l and not l.startswith('#') and k + 1 < len(lines)
-                     and lines[k + 1][:1] in '+-' and lines[k + 1][3:4] == ':')
+                     and MERIDIAN.match(lines[k + 1]))
         raus = []
         for name, warum in faelle:
             treffer = [k for k, l in enumerate(lines) if l.rstrip() == name]
@@ -92,7 +135,7 @@ def main(argv):
             open(pfad, 'w', encoding='iso-8859-1').write('\n'.join(lines))
             nach = sum(1 for k, l in enumerate(lines)
                        if l and not l.startswith('#') and k + 1 < len(lines)
-                       and lines[k + 1][:1] in '+-' and lines[k + 1][3:4] == ':')
+                       and MERIDIAN.match(lines[k + 1]))
             print(f'   geschrieben: {vorher} -> {nach} Saetze '
                   f'(erwartet {vorher - len(raus)})')
             if nach != vorher - len(raus):

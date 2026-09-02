@@ -57,6 +57,13 @@ GRENZE = 4.0        # ab hier gilt ein Satz als falsch (Prozent des Hubs)
 GUT = 1.5           # so gut muss der Nachbar sein
 FAKTOR = 3.0        # und um so viel besser
 NAH_KM = 2.0        # so nah muss er stehen
+# Und ein absoluter Boden. Der Prozentsatz allein taugt nicht, wo der
+# Hub klein ist: an der mexikanischen Karibikkueste betraegt er 23 bis
+# 28 Zentimeter, und ein Satz mit 1.2 cm Fehler steht dort mit 4.8
+# Prozent auf der Liste. Gedruckte Tafeln runden selbst auf den
+# Zentimeter -- unter ein paar Zentimetern misst man das Papier, nicht
+# den Datensatz.
+MINDEST_CM = 3.0
 TAFEL_KM = 2.5      # so nah muss die Tafel am Satz stehen, die ihn beurteilt
 KON = ('M2', 'S2', 'K1', 'O1')
 
@@ -102,6 +109,7 @@ def main(argv):
                            if name in argv else vor)
     grenze, gut, faktor = g('--grenze', GRENZE), g('--gut', GUT), g('--faktor', FAKTOR)
     nah, tafel = g('--km', NAH_KM), g('--tafel', TAFEL_KM)
+    mindest = g('--mindest_cm', MINDEST_CM)
     quelle = argv[argv.index('--csv') + 1] if '--csv' in argv else None
     if not quelle:
         print(__doc__)
@@ -142,7 +150,7 @@ def main(argv):
         if k not in guenstig or z['_p'] < guenstig[k]:
             guenstig[k] = z['_p']
 
-    faelle, becken = {}, []
+    faelle, becken, klein = {}, [], []
     for st, rs in sorted(gruppen.items()):
         rs.sort(key=lambda x: x['_p'])
         for i in range(len(rs)):
@@ -160,6 +168,9 @@ def main(argv):
                 pb, pa = guenstig[kb], guenstig[(a['datei'], a['satz'])]
                 if pb < grenze or pa > gut or pb < pa * faktor:
                     continue
+                if float(b['rms_m']) * 100 < mindest:
+                    klein.append((pb, pa, d, st, a, b))
+                    continue
                 if kb not in faelle or pb > faelle[kb][0]:
                     faelle[kb] = (pb, pa, d, st, a, b, rb, ra)
 
@@ -171,13 +182,19 @@ def main(argv):
 
     print(f'{os.path.basename(quelle)}: {len(best)} Messungen in Reichweite, '
           f'{len(gruppen)} Tafeln')
-    print(f'{len(faelle)} Saetze ueber {grenze} % des Hubs, mit einem Nachbarn '
-          f'unter {gut} %, {faktor}x besser, hoechstens {nah} km entfernt, '
-          f'nirgends selbst der beste\n')
+    print(f'{len(faelle)} Saetze ueber {grenze} % des Hubs UND ueber {mindest} cm, '
+          f'mit einem Nachbarn unter {gut} %, {faktor}x besser, hoechstens '
+          f'{nah} km entfernt, nirgends selbst der beste\n')
     for pb, pa, d, st, a, b, _rb, _ra in sorted(faelle.values(), key=lambda x: -x[0]):
         print(f'  {pb:6.2f} % -> {pa:4.2f} %  {d*1000:5.0f} m  '
               f'{b["satz"][:42]:42} {b["datei"][:30]:30}')
         print(f'  {"":34}bleibt: {a["satz"][:42]:42} {a["datei"][:30]}')
+    if klein:
+        print(f'\n{len(klein)} unter {mindest} cm absolutem Fehler -- bleiben stehen:')
+        for pb, _pa, _d, _st, _a, b in sorted(klein, key=lambda x: -x[0]):
+            print(f'  {pb:6.2f} % = {float(b["rms_m"])*100:4.1f} cm bei '
+                  f'{float(b["hub_m"]):4.2f} m Hub   {b["satz"][:40]:40} '
+                  f'{b["datei"][:28]}')
     if becken:
         print(f'\n{len(becken)} als gedaempftes Becken ausgesondert -- bleiben stehen:')
         for pb, pa, d, st, _a, b in sorted(becken, key=lambda x: -x[0]):
