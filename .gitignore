@@ -63,6 +63,8 @@ harmonics/help/*
 !harmonics/help/cicese_kaputt.csv
 !harmonics/help/cpa_qualitaet.csv
 !harmonics/help/cpa_dubletten.csv
+!harmonics/help/lage_ausreisser.csv
+!harmonics/help/lage_gewaesser.csv
 harmonics/classic_original/
 
 # Country-specific UTide intermediates: data is merged into the aggregate
@@ -167,3 +169,4 @@ harmonics/old_xtide_backups/
 recovery/
 .pki/
 scratchpad/
+tide_tables/osm_gewaesser/

@@ -143,6 +143,26 @@ def block_bauen(alt, con, z0, tafel='', jahr=None, amt='DHN',
     """
     heute = f'{dt.date.today():%Y%m%d}'
     neu = []
+
+    def notiz(text):
+        """Notiz auf mehrere Zeilen umbrechen.
+
+        build_tide_db hat eine Zeilenlaenge, ab der es abschneidet und den
+        Rest als Datenzeile liest. Es sagt dann "Invalid level units for
+        record - <Bruchstueck>" und schreibt den Satz still NICHT in die
+        TCD -- aufgefallen ist das nur, weil tcd_bauen die Satzzahlen
+        vergleicht (3735 statt 3736). Zeilen von 210 Zeichen gehen noch,
+        370 nicht; hier wird bei 150 umgebrochen.
+        """
+        zeilen, rest = [], f'# note: {text}'
+        while len(rest) > 150:
+            schnitt = rest.rfind(' ', 0, 150)
+            if schnitt <= 8:
+                break
+            zeilen.append(rest[:schnitt])
+            rest = '# note: ' + rest[schnitt + 1:]
+        zeilen.append(rest)
+        return zeilen
     for z in alt:
         m2 = re.match(r'#\s*R\^2 = ', z)
         if m2:
@@ -151,9 +171,8 @@ def block_bauen(alt, con, z0, tafel='', jahr=None, amt='DHN',
             continue
         if z.startswith('# date_imported:') and tafel:
             neu.append(z)
-            neu.append(f'# note: {heute} aus der {amt}-Tafel {jahr} neu '
-                       f'gerechnet ({werkzeug}).'
-                       + (f' {grund}' if grund else ''))
+            neu += notiz(f'{heute} aus der {amt}-Tafel {jahr} neu gerechnet '
+                         f'({werkzeug}).' + (f' {grund}' if grund else ''))
             continue
         m = KON.match(z)
         if m and m.group(1) != 'x':

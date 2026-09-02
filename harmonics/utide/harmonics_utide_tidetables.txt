@@ -736443,11 +736443,17 @@ x 0 0
 # datum: Chart Datum
 # confidence: 7
 # semar_code: Ptomatamoros
+# note: 20260902 Position berichtigt von 25.8833/-97.5167 auf 25.8230/-97.1522.
+# note: Die alte Angabe stammt uebereinstimmend von CICESE und von NOAA
+# note: (Station 9500101), bezeichnet aber die Stadt Matamoros rund 30 km
+# note: landeinwaerts, wo es weder Meer noch Tidefluss gibt.
+# note: Der Pegel liegt an der Playa Lauro Villar (Playa Bagdad) suedlich
+# note: der Rio-Bravo-Muendung.
 # note: 20260902 neu angelegt (py/semar_neufit.py --neu); der bisher beste Satz am Ort traf die Tafel nur auf 20.2 % des Hubs (8.9 cm).
 # !units: meters
-# !longitude: -97.5167
-# !latitude: 25.8833
-Matamoros, Tamaulipas, México
+# !longitude: -97.1522
+# !latitude: 25.8230
+Playa Bagdad (Matamoros), Tamaulipas, México
 +00:00 :UTC
 0.2153 meters
 J1              0.0066  76.17
