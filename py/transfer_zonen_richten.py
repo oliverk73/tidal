@@ -26,8 +26,8 @@ angefasst -- dort stimmt meist schon der Bezugsort nicht, und das ist
 ein anderer Fehler (Antarktis-Stationen "von Cebu", Vietnam "von
 Paramushir"). Diese Faelle listet das Werkzeug getrennt auf.
 
-Usage: python3 py/transfer_zonen_richten.py [--datei <name>] [--csv]
-                                            [--schreiben]
+Usage: python3 py/transfer_zonen_richten.py [--datei <name>] [--km 5]
+                                            [--csv] [--schreiben] [--warum]
        ohne --schreiben wird nur gezeigt, was passieren wuerde
 """
 from __future__ import annotations
@@ -55,6 +55,9 @@ NAH_KM = 5.0
 MIND_GUETE = 0.80
 MIND_M2 = 0.05
 MIND_BESSER = 0.05    # so viel besser muss die Drehung passen, um zu zaehlen
+MIND_PASSUNG = 0.60   # und danach muss sie ueberhaupt zum Nachbarn passen
+WEIT_KM = 6.0         # ab hier gilt der Nachbar als weit
+WEIT_MIND = 1.0       # und entscheidet nur noch ueber Fehler ab dieser Groesse
 
 # Baender: Zonentabellen aus dem Buch und das Bauskript, dessen REFMAP die
 # Buchnamen auf unsere Satznamen abbildet. harmonics_noaa_amtt.txt ist aus
@@ -194,6 +197,7 @@ def angewandt(r, refrec):
 
 def sammeln(argv):
     nur = argv[argv.index('--datei') + 1] if '--datei' in argv else None
+    nah = float(argv[argv.index('--km') + 1]) if '--km' in argv else NAH_KM
     info = vermerke()
     recs = [r for r in load_records() if r['lat'] is not None and not r['current']]
     nach_name = {}
@@ -246,7 +250,7 @@ def sammeln(argv):
             if abs(r['z']['M2']) >= MIND_M2:
                 for x in frei:
                     d = km(r, x)
-                    if d < NAH_KM and (best is None or d < best[0]):
+                    if d < nah and (best is None or d < best[0]):
                         best = (d, x)
             v = g = p0 = p1 = None
             if best:
@@ -266,6 +270,10 @@ def sammeln(argv):
 
 
 def main(argv):
+    # Beim weiten Durchgang (--km 15) nur grobe Fehler zulassen: unter
+    # einer Stunde entscheidet ein Nachbar in zehn Kilometern nichts,
+    # weil sich das Hochwasser ueber die Strecke selbst verschiebt.
+    mind_fehler = float(argv[argv.index('--mind_fehler') + 1]) if '--mind_fehler' in argv else 0.01
     faelle = sammeln(argv)
     gruppen = collections.defaultdict(list)
     for f in faelle:
@@ -285,13 +293,19 @@ def main(argv):
                 continue
             if m[1] is not None and m[1] >= MIND_GUETE and m[0] is not None:
                 mess.append(m[0])
-            if m[3] > m[2] + MIND_BESSER:
+            # Ueber den Gezeitengradienten hinaus: ueber sechs Kilometer
+            # verschiebt sich das Hochwasser in einer Bucht schon von
+            # selbst um eine Viertelstunde. Ein weiter Nachbar darf
+            # deshalb nur ueber grobe Fehler entscheiden.
+            if b[0] > WEIT_KM and abs(fehler) < WEIT_MIND:
+                continue
+            if m[3] > m[2] + MIND_BESSER and m[3] >= MIND_PASSUNG:
                 dafuer += 1
             elif m[2] > m[3] + MIND_BESSER:
                 dagegen += 1
         mess.sort()
         med = mess[len(mess) // 2] if mess else None
-        if abs(fehler) < 0.01:
+        if abs(fehler) < mind_fehler:
             continue
         if dafuer == 0 and dagegen == 0:
             # Die Rechnung allein reicht nicht. Das Buch ist darin nicht
