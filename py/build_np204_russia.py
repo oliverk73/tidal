@@ -48,8 +48,12 @@ S = [
  ('8342','Bukhta Morzhovaya',53,14,159,57,1,'+12:00','Asia/Kamchatka',1.40,(0.30,119),(0.10,195),(0.40,154),(0.30,137)),
  ('8346','Mys Osypnoy',56,2,162,5,1,'+12:00','Asia/Kamchatka',1.50,(0.40,109),(0.10,185),(0.40,155),(0.30,133)),
  ('8357','Gavan Sibir',60,27,166,14,1,'+12:00','Asia/Kamchatka',1.51,(0.38,100),(0.08,183),(0.43,157),(0.26,127)),
- # Tschukotka (Zone -1200 -> +12:00, Asia/Anadyr; West-Laenge)
- ('8369','Anadyr',64,44,177,32,-1,'+12:00','Asia/Anadyr',1.01,(0.63,330),(0.01,37),(0.13,188),(0.12,162)),
+ # Tschukotka (Zone -1200 -> +12:00, Asia/Anadyr). ACHTUNG Laengen-Vorzeichen:
+ # auf S.352 steht Anadyr noch unter der Ueberschrift "N  E", erst DARUNTER
+ # wechselt die Spalte mit einer eigenen Zwischenzeile "N  W" auf West. Hier
+ # stand deshalb bis 20260903 -177 32 fuer Anadyr -- 190 km jenseits der
+ # Datumsgrenze. Mys Uelen dagegen liegt richtig im West-Block.
+ ('8369','Anadyr',64,44,177,32,1,'+12:00','Asia/Anadyr',1.01,(0.63,330),(0.01,37),(0.13,188),(0.12,162)),
  ('8383','Mys Uelen',66,9,169,43,-1,'+12:00','Asia/Anadyr',0.30,(0.06,219),(0.02,322),(0.01,51),(0.01,83)),
  # --- Tatarstraße/Amur-Provinz (S.382/348-349). Zone -1000 -> +10:00, Asia/Vladivostok.
  # Starka..Lazareva semidiurnal; Amur-Mündung (Uyuzyut/Cheushi/Baidukov) diurnal;
