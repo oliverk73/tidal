@@ -53,7 +53,15 @@ MIND_FAKTOR_M = 0.01  # und dann immer noch diesen Abstand
 
 
 def messungen():
-    """-> {(Satzname, Datei): [(Station, Jahr, Quelle, rms, max, hub)]}."""
+    """-> {(Satzname, Datei): [(Station, Jahr, Quelle, rms, max, hub, blind)]}.
+
+    "blind" heisst: dieser Satz wurde aus eben dieser Reihe gefittet und
+    hat auf ihr trainiert (Spalte eigen aus py/messreihe_qualitaet.py).
+    Ein solcher Satz darf verlieren, aber nicht gewinnen -- sein guter
+    Wert waere nur die Erinnerung an die eigenen Trainingsdaten. Wurde
+    ausserhalb des Fitfensters gemessen (Spalte ausserhalb), zaehlt er
+    wieder voll.
+    """
     out = collections.defaultdict(list)
     for pfad in sorted(glob.glob(os.path.join(HELP, '*qualitaet*.csv'))):
         quelle = os.path.basename(pfad).replace('_qualitaet.csv', '')
@@ -72,8 +80,9 @@ def messungen():
                 gross = float(r['max_m'])
             except (KeyError, TypeError, ValueError):
                 pass
+            blind = (r.get('eigen') == '1' and r.get('ausserhalb', 'nein') != 'ja')
             out[(r.get('satz', ''), r.get('datei', ''))].append(
-                (r.get('station', ''), r.get('jahr', ''), quelle, rms, gross, hub))
+                (r.get('station', ''), r.get('jahr', ''), quelle, rms, gross, hub, blind))
     return out
 
 
@@ -104,31 +113,44 @@ def deutlich_schlechter(rms, best):
 def main(argv):
     mess = messungen()
     recs = [r for r in load_records() if r['lat'] is not None]
-    weg, gleichauf, ohne = [], [], []
+    weg, gleichauf, ohne, zirkulaer = [], [], [], []
     for name, menge in gruppen(recs):
         # Messungen der Gruppe nach Tabelle buendeln: nur was gegen
         # dieselbe Station im selben Jahr gemessen wurde, ist vergleichbar.
         nach_tabelle = collections.defaultdict(dict)
         for r in menge:
-            for station, jahr, quelle, rms, gross, hub in mess.get(
+            for station, jahr, quelle, rms, gross, hub, blind in mess.get(
                     (r['name'], os.path.basename(r['file'])), ()):
-                nach_tabelle[(quelle, station, jahr)][id(r)] = (rms, gross, hub)
+                nach_tabelle[(quelle, station, jahr)][id(r)] = (rms, gross, hub, blind)
         vergleichbar = {k: v for k, v in nach_tabelle.items() if len(v) == len(menge)}
         if not vergleichbar:
             ohne.append((name, menge))
             continue
         # Mehrere Jahre derselben Tafel: den Median je Satz nehmen.
         werte = collections.defaultdict(list)
+        blind = collections.defaultdict(bool)
         hub = None
         for k, v in vergleichbar.items():
-            for i, (rms, _gross, h) in v.items():
+            for i, (rms, _gross, h, b) in v.items():
                 werte[i].append(rms)
+                blind[i] = blind[i] or b
                 hub = hub or h
         med = {i: sorted(v)[len(v) // 2] for i, v in werte.items()}
-        best = min(med.values())
-        sieger = [r for r in menge if med[id(r)] == best][0]
-        verlierer = [r for r in menge if r is not sieger]
-        for v in verlierer:
+        # Wer auf der Reihe trainiert hat, ist kein Massstab und wird auch
+        # nicht geloescht. Verglichen wird gegen den besten der uebrigen --
+        # sonst faellt eine ganze Dreiergruppe aus, nur weil einer davon
+        # nicht beurteilbar ist.
+        frei = [r for r in menge if not blind[id(r)]]
+        if not frei:
+            zirkulaer.append((name, menge))
+            continue
+        best = min(med[id(r)] for r in frei)
+        sieger = [r for r in frei if med[id(r)] == best][0]
+        if len(frei) < len(menge):
+            zirkulaer.append((name, [r for r in menge if blind[id(r)]]))
+        for v in frei:
+            if v is sieger:
+                continue
             if deutlich_schlechter(med[id(v)], best):
                 weg.append((v, sieger, med[id(v)], best, hub, len(vergleichbar)))
             else:
@@ -136,6 +158,7 @@ def main(argv):
 
     print(f'{len(weg)} Saetze sind an der Tafel deutlich schlechter und koennen weg')
     print(f'{len(gleichauf)} sind gleichauf -- beide bleiben')
+    print(f'{len(zirkulaer)} Saetze bleiben unbeurteilt (auf der Reihe trainiert)')
     print(f'{len(ohne)} Gruppen haben keine Messung')
     d = collections.Counter(os.path.basename(v['file']) for v, *_ in weg)
     print(f'\n{"Datei":42} {"geht":>6}')
