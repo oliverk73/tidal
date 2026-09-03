@@ -88,9 +88,11 @@ def messungen():
                 gross = float(r['max_m'])
             except (KeyError, TypeError, ValueError):
                 pass
-            blind = (r.get('eigen') == '1' and r.get('ausserhalb', 'nein') != 'ja')
+            eigen = r.get('eigen') == '1'
+            draussen = r.get('ausserhalb', 'nein') == 'ja'
             out[(r.get('satz', ''), r.get('datei', ''))].append(
-                (r.get('station', ''), r.get('jahr', ''), quelle, rms, gross, hub, blind))
+                (r.get('station', ''), r.get('jahr', ''), quelle, rms, gross, hub,
+                 eigen and not draussen, eigen and draussen))
     return out
 
 
@@ -114,7 +116,21 @@ def gruppen(recs):
     return out
 
 
-def deutlich_schlechter(rms, best):
+def deutlich_schlechter(rms, best, nur_absolut=False):
+    """Ist der Satz gegenueber dem besten deutlich schlechter?
+
+    nur_absolut gilt, wenn der Sieger aus derselben Quelle stammt wie die
+    Vergleichsreihe, nur ausserhalb seines Fitfensters gemessen wurde:
+    die JMA-Tafel fuer 2026 gegen eine Anpassung an die JMA-Tafeln
+    2011-2025. Das ist keine Zirkularitaet mehr, aber auch keine
+    Unabhaengigkeit -- der Sieger zielt auf genau die Konstanten, die
+    die Reihe erzeugt haben. Abashiri kommt so auf 1.05 cm gegen 2.30 cm
+    fuer TICON-4, und ueber die Verhaeltnisregel wuerde TICON-4 wegen
+    eines Zentimeters geloescht. Deshalb zaehlt dort nur der absolute
+    Abstand.
+    """
+    if nur_absolut:
+        return rms - best >= MIND_M
     return rms - best >= MIND_M or (rms >= FAKTOR * best and rms - best >= MIND_FAKTOR_M)
 
 
@@ -127,9 +143,10 @@ def main(argv):
         # dieselbe Station im selben Jahr gemessen wurde, ist vergleichbar.
         nach_tabelle = collections.defaultdict(dict)
         for r in menge:
-            for station, jahr, quelle, rms, gross, hub, blind in mess.get(
+            for station, jahr, quelle, rms, gross, hub, blind, halbblind in mess.get(
                     (r['name'], os.path.basename(r['file'])), ()):
-                nach_tabelle[(quelle, station, jahr)][id(r)] = (rms, gross, hub, blind)
+                nach_tabelle[(quelle, station, jahr)][id(r)] = (rms, gross, hub,
+                                                                blind, halbblind)
         vergleichbar = {k: v for k, v in nach_tabelle.items() if len(v) == len(menge)}
         if not vergleichbar:
             ohne.append((name, menge))
@@ -137,11 +154,13 @@ def main(argv):
         # Mehrere Jahre derselben Tafel: den Median je Satz nehmen.
         werte = collections.defaultdict(list)
         blind = collections.defaultdict(bool)
+        halb = collections.defaultdict(bool)
         hub = None
         for k, v in vergleichbar.items():
-            for i, (rms, _gross, h, b) in v.items():
+            for i, (rms, _gross, h, b, hb) in v.items():
                 werte[i].append(rms)
                 blind[i] = blind[i] or b
+                halb[i] = halb[i] or hb
                 hub = hub or h
         med = {i: sorted(v)[len(v) // 2] for i, v in werte.items()}
         # Wer auf der Reihe trainiert hat, ist kein Massstab und wird auch
@@ -159,7 +178,7 @@ def main(argv):
         for v in frei:
             if v is sieger:
                 continue
-            if deutlich_schlechter(med[id(v)], best):
+            if deutlich_schlechter(med[id(v)], best, halb[id(sieger)]):
                 weg.append((v, sieger, med[id(v)], best, hub, len(vergleichbar)))
             else:
                 gleichauf.append((v, sieger, med[id(v)], best, hub))

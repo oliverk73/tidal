@@ -408,8 +408,15 @@ def main(argv):
         if fit:
             fit_von = dt.datetime.strptime(fit[0], '%Y-%m-%d').replace(
                 tzinfo=dt.timezone.utc).timestamp()
-            if obs[0][0] < fit_von - tage * 86400:
-                # Vor dem Fitfenster ist die Reihe fuer alle Kandidaten neu.
+            fit_bis = dt.datetime.strptime(fit[1], '%Y-%m-%d').replace(
+                tzinfo=dt.timezone.utc).timestamp()
+            if start > fit_bis or ende < fit_von:
+                # Die Reihe liegt schon ganz ausserhalb -- etwa die
+                # JMA-Tafel fuer 2026 gegen einen Fit bis 2025.
+                ausserhalb = 'ja'
+            elif obs[0][0] < fit_von - tage * 86400:
+                # Sonst nach vorn ausweichen: vor dem Fitfenster ist die
+                # Reihe fuer alle Kandidaten gleich neu.
                 ende, start, ausserhalb = fit_von, fit_von - tage * 86400, 'ja'
         paare = [(t, h) for t, h in obs if start <= t <= ende]
         if len(paare) < MIND_PUNKTE:
