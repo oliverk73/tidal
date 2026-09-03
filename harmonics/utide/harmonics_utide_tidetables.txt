@@ -283564,7 +283564,9 @@ x 0 0
 # !units: meters
 # !longitude: -79.122359
 # !latitude: 53.435327
-Hook Island, Nunvaut, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Hook Island, Nunvaut, Québec, Canada
 +00:00 :UTC
 0.6820 meters
 x 0 0
@@ -399256,7 +399258,9 @@ x 0 0
 # !units: meters
 # !longitude: 119.666667
 # !latitude: 26.133333
-Minjiangkou, China
+# note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Minjiangkou, Fujian, China
 +00:00 :UTC
 3.3110 meters
 J1              0.0144  175.00
@@ -399454,7 +399458,9 @@ x 0 0
 # !units: meters
 # !longitude: 118.066667
 # !latitude: 24.450000
-Xiamen, China
+# note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Xiamen, Fujian, China
 +00:00 :UTC
 3.5225 meters
 J1              0.0174  167.56
@@ -399646,7 +399652,9 @@ x 0 0
 # !units: meters
 # !longitude: 116.7486
 # !latitude: 23.3339
-Shantou (Han River), China
+# note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Shantou (Han River), Guangdong, China
 +00:00 :UTC
 1.2562 meters
 J1              0.0178  194.47
@@ -400414,7 +400422,9 @@ x 0 0
 # !units: meters
 # !longitude: 100.566667
 # !latitude: 13.700000
-Bangkok Port, Bangkok, Thailand
+# note: 20260903 Provinz "Samut Prakan" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Bangkok Port, Bangkok, Samut Prakan, Thailand
 +07:00 :Asia/Bangkok
 1.9727 meters
 J1              0.0299  261.79
@@ -669490,7 +669500,9 @@ x 0 0
 # !units: meters
 # !longitude: -70.0667
 # !latitude: 60.8667
-Diana Bay, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Diana Bay, Québec, Canada
 +00:00 :America/Montreal
 5.5800 meters
 J1              0.0055  150.18
@@ -680432,7 +680444,9 @@ x 0 0
 # !units: meters
 # !longitude: 79.8361
 # !latitude: 11.9224
-Puducherry (Pondicherry), India
+# note: 20260903 Provinz "Tamil Nadu" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Puducherry (Pondicherry), Tamil Nadu, India
 +00:00 :Asia/Kolkata
 0.7529 meters
 J1              0.0108  242.72
@@ -686374,7 +686388,9 @@ x 0 0
 # !units: meters
 # !longitude: 100.4903
 # !latitude: 13.7433
-Royal Thai Navy Headquarters, Bangkok, Thailand
+# note: 20260903 Provinz "Samut Prakan" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Royal Thai Navy Headquarters, Bangkok, Samut Prakan, Thailand
 +00:00 :Asia/Bangkok
 2.2906 meters
 J1              0.0119  152.37

@@ -128974,7 +128974,9 @@ x 0 0
 # !units: meters
 # !longitude: 113.3667
 # !latitude: 23.1167
-Bazhou, Guangzhou, China
+# note: 20260903 Provinz "Guangdong" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Bazhou, Guangzhou, Guangdong, China
 +08:00 :Asia/Shanghai
 1.4935 meters
 J1              0.0283  34.70
@@ -271469,7 +271471,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.50 gegen +6.50 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Car Nicobar, India
+# note: 20260903 Provinz "Andaman and Nicobar" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Car Nicobar, Andaman and Nicobar, India
 +06:30 :Asia/Kolkata
 1.0058 meters
 J1              0.0017  329.02

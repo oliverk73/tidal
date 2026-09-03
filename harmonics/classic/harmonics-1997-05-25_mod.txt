@@ -16872,7 +16872,9 @@ x 0 0
 # !units: meters
 # !longitude: 113.4381
 # !latitude: 23.0800
-Huangpu, Guangzhou, China
+# note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Huangpu, Guangzhou, Guangdong, China
 +08:00 :Asia/Shanghai
 1.5500 meters
 J1              0.0200   27.30
@@ -22551,7 +22553,9 @@ x 0 0
 # !units: meters
 # !longitude: 121.2552
 # !latitude: 38.8019
-Lüshun (Dalian), China
+# note: 20260903 Provinz "Liaoning" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Lüshun (Dalian), Liaoning, China
 +09:00 :Asia/Shanghai
 1.4900 meters
 J1              0.0130   47.30
@@ -24978,7 +24982,9 @@ x 0 0
 # !units: meters
 # !longitude: 119.6523
 # !latitude: 26.0728
-Minjiang Kou (Fuzhou), China
+# note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Minjiang Kou (Fuzhou), Fujian, China
 +08:00 :Asia/Shanghai
 3.5300 meters
 J1              0.0180   21.80
@@ -27276,7 +27282,9 @@ x 0 0
 # !units: meters
 # !longitude: 110.6000
 # !latitude: 20.9500
-Naozhou Dao, China
+# note: 20260903 Provinz "Guangdong" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Naozhou Dao, Guangdong, China
 +08:00 :Asia/Shanghai
 1.9000 meters
 J1              0.0310  332.80
@@ -33071,7 +33079,9 @@ x 0 0
 # !units: meters
 # !longitude: 120.3141
 # !latitude: 36.0835
-Qingdao, China
+# note: 20260903 Provinz "Shandong" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Qingdao, Shandong, China
 +08:00 :Asia/Shanghai
 2.3900 meters
 J1              0.0060  352.50
@@ -40048,7 +40058,9 @@ x 0 0
 # !units: meters
 # !longitude: 116.7486
 # !latitude: 23.3339
-Shantou (Han River), China
+# note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Shantou (Han River), Guangdong, China
 +08:00 :Asia/Shanghai
 1.7300 meters
 J1              0.0190  316.30
@@ -41743,7 +41755,9 @@ x 0 0
 # !units: meters
 # !longitude: 117.7063
 # !latitude: 38.9859
-Tianjin Xingang, China
+# note: 20260903 Provinz "Tianjin" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Tianjin Xingang, Tianjin, China
 +08:00 :Asia/Shanghai
 1.5800 meters
 J1              0.0140  169.30
@@ -43924,7 +43938,9 @@ x 0 0
 # !units: meters
 # !longitude: 122.3916
 # !latitude: 36.8647
-Wangjia Wan, China
+# note: 20260903 Provinz "Shandong" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Wangjia Wan, Shandong, China
 +08:00 :Asia/Shanghai
 1.6600 meters
 J1              0.0180   15.20
@@ -44164,7 +44180,9 @@ x 0 0
 # !units: meters
 # !longitude: 122.1667
 # !latitude: 37.5000
-Weihai, China
+# note: 20260903 Provinz "Shandong" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Weihai, Shandong, China
 +08:00 :Asia/Shanghai
 1.2000 meters
 J1              0.0100  335.30
@@ -44890,7 +44908,9 @@ x 0 0
 # !units: meters
 # !longitude: 122.2585
 # !latitude: 40.6865
-Yingkou, China
+# note: 20260903 Provinz "Liaoning" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Yingkou, Liaoning, China
 +09:00 :Asia/Shanghai
 2.3800 meters
 J1              0.0240  140.80
@@ -45733,7 +45753,9 @@ x 0 0
 # !units: meters
 # !longitude: 110.4077
 # !latitude: 21.1667
-Zhanjiang, China
+# note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Zhanjiang, Guangdong, China
 +08:00 :Asia/Shanghai
 2.2000 meters
 J1              0.0290  338.40

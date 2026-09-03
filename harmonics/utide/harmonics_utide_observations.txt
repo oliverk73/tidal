@@ -17417,7 +17417,9 @@ x 0 0
 # !units: meters
 # !longitude: 96.8922
 # !latitude: -12.1167
-Bantam, Cocos Islands, Australia
+# note: 20260903 Provinz "Western Australia" ergaenzt (Nachbarn ab 4 km),
+# note: siehe py/provinz_ergaenzen.py.
+Bantam, Cocos Islands, Western Australia, Australia
 +06:30 :Indian/Cocos
 0.9246 meters
 J1              0.0091  268.11
@@ -143733,7 +143735,9 @@ x 0 0
 # !units: meters
 # !longitude: -115.9870
 # !latitude: 30.4364
-San Quintin (Campo La Chorera), Mexico
+# note: 20260903 Provinz "Baja California" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+San Quintin (Campo La Chorera), Baja California, Mexico
 +00:00 :UTC
 1.8696 meters
 J1              0.0166  254.40
@@ -219160,7 +219164,9 @@ x 0 0
 # !units: meters
 # !longitude: 110.820000
 # !latitude: 19.570000
-Qinglan, China
+# note: 20260903 Provinz "Hainan" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Qinglan, Hainan, China
 +00:00 :Asia/Shanghai
 0.0035 meters
 J1              0.0106  227.51
@@ -219356,7 +219362,9 @@ x 0 0
 # !units: meters
 # !longitude: 113.880000
 # !latitude: 22.470000
-Shenzhen, China
+# note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Shenzhen, Guangdong, China
 +00:00 :Asia/Shanghai
 0.0166 meters
 J1              0.0127  191.83
@@ -219552,7 +219560,9 @@ x 0 0
 # !units: meters
 # !longitude: 111.820000
 # !latitude: 21.580000
-Zhapo, China
+# note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Zhapo, Guangdong, China
 +00:00 :Asia/Shanghai
 0.0264 meters
 J1              0.0157  204.53

@@ -15003,7 +15003,9 @@ MNUS2
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -5.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Princess Royal Islands, Canada
+# note: 20260903 Provinz "Northwest Territories" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Princess Royal Islands, Northwest Territories, Canada
 -05:00 :America/Edmonton
 0.4267 meters
 J1              0.0033  196.90
@@ -15197,7 +15199,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Payer Harbour, Cape Sabine, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Payer Harbour, Cape Sabine, Nunavut, Canada
 +00:00 :America/Iqaluit
 1.4326 meters
 J1              0.0097  205.27
@@ -15391,7 +15395,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Cape Adair, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cape Adair, Nunavut, Canada
 +00:00 :America/Iqaluit
 1.1887 meters
 J1              0.0083  198.25
@@ -15585,7 +15591,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Cape Hewett, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cape Hewett, Nunavut, Canada
 +00:00 :America/Iqaluit
 1.3411 meters
 J1              0.0076  195.66
@@ -15775,7 +15783,9 @@ x 0 0
 # !units: meters
 # !longitude: -66.7500
 # !latitude: 68.3833
-Cape Hooper, Baffin Island, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cape Hooper, Baffin Island, Nunavut, Canada
 +00:00 :America/Iqaluit
 0.5486 meters
 J1              0.0068  238.38
@@ -15965,7 +15975,9 @@ x 0 0
 # !units: meters
 # !longitude: -65.8500
 # !latitude: 61.7667
-Lower Savage Islands, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Lower Savage Islands, Nunavut, Canada
 +00:00 :America/Iqaluit
 4.5110 meters
 J1              0.0750  252.93
@@ -16159,7 +16171,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Igloolik, Fury and Hecla Strait, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Igloolik, Fury and Hecla Strait, Nunavut, Canada
 +00:00 :America/Iqaluit
 1.4326 meters
 J1              0.0108  60.40
@@ -16349,7 +16363,9 @@ x 0 0
 # !units: meters
 # !longitude: -83.1667
 # !latitude: 66.1833
-Winter Island, Foxe Basin, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Winter Island, Foxe Basin, Nunavut, Canada
 +00:00 :America/Iqaluit
 2.4384 meters
 J1              0.0405  345.53
@@ -16543,7 +16559,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -5.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Port Nelson, Nelson River entrance, Canada
+# note: 20260903 Provinz "Manitoba" ergaenzt (Nachbarn ab 5 km),
+# note: siehe py/provinz_ergaenzen.py.
+Port Nelson, Nelson River entrance, Manitoba, Canada
 +00:00 :America/Winnipeg
 1.9507 meters
 J1              0.0059  95.96
@@ -16733,7 +16751,9 @@ x 0 0
 # !units: meters
 # !longitude: -80.5833
 # !latitude: 51.2667
-Moose Factory, James Bay, Canada
+# note: 20260903 Provinz "Ontario" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Moose Factory, James Bay, Ontario, Canada
 +00:00 :America/Toronto
 1.3716 meters
 J1              0.0020  171.15
@@ -16923,7 +16943,9 @@ x 0 0
 # !units: meters
 # !longitude: -79.2667
 # !latitude: 51.9500
-Charlton Island, James Bay, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Charlton Island, James Bay, Nunavut, Canada
 +00:00 :America/Iqaluit
 1.1887 meters
 J1              0.0022  128.03
@@ -17113,7 +17135,9 @@ x 0 0
 # !units: meters
 # !longitude: -77.7000
 # !latitude: 62.5000
-Digges Harbour, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Digges Harbour, Québec, Canada
 +00:00 :America/Iqaluit
 1.8593 meters
 J1              0.0036  340.75
@@ -17303,7 +17327,9 @@ x 0 0
 # !units: meters
 # !longitude: -71.9500
 # !latitude: 61.7167
-Wakeham Bay, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Wakeham Bay, Québec, Canada
 +00:00 :America/Iqaluit
 4.6634 meters
 J1              0.0093  313.35
@@ -17493,7 +17519,9 @@ x 0 0
 # !units: meters
 # !longitude: -69.0000
 # !latitude: 58.9167
-Leaf Bay, Ungava Bay, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Leaf Bay, Ungava Bay, Québec, Canada
 +00:00 :America/Toronto
 7.0104 meters
 J1              0.0142  311.66
@@ -17683,7 +17711,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.7333
 # !latitude: 60.6167
-Button Islands, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Button Islands, Nunavut, Canada
 +00:00 :America/Iqaluit
 2.8956 meters
 J1              0.0059  332.96
@@ -17873,7 +17903,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.1500
 # !latitude: 59.8000
-Eclipse Harbour, Canada
+# note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Eclipse Harbour, Labrador, Canada
 +00:00 :America/Goose_Bay
 0.7925 meters
 J1              0.0042  137.86
@@ -18063,7 +18095,9 @@ x 0 0
 # !units: meters
 # !longitude: -63.7833
 # !latitude: 59.3833
-Kangalaksiorvik Fiord, Canada
+# note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Kangalaksiorvik Fiord, Labrador, Canada
 +00:00 :America/Goose_Bay
 0.6706 meters
 J1              0.0046  147.60
@@ -18253,7 +18287,9 @@ x 0 0
 # !units: meters
 # !longitude: -63.5833
 # !latitude: 59.0500
-Nachvak Bay, Canada
+# note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Nachvak Bay, Labrador, Canada
 +00:00 :America/Goose_Bay
 0.9144 meters
 J1              0.0055  132.27
@@ -18443,7 +18479,9 @@ x 0 0
 # !units: meters
 # !longitude: -58.0333
 # !latitude: 54.9000
-Webeck Harbour, Canada
+# note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Webeck Harbour, Labrador, Canada
 +00:00 :America/Goose_Bay
 1.0058 meters
 J1              0.0054  112.92
@@ -18823,7 +18861,9 @@ x 0 0
 # !units: meters
 # !longitude: -58.2000
 # !latitude: 54.2833
-Ticoralak Island, Canada
+# note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Ticoralak Island, Labrador, Canada
 +00:00 :America/Goose_Bay
 1.1278 meters
 J1              0.0055  122.66
@@ -19017,7 +19057,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Port Bowen, Prince Regent Inlet, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Port Bowen, Prince Regent Inlet, Nunavut, Canada
 +00:00 :America/Rankin_Inlet
 1.4021 meters
 J1              0.0080  309.08
@@ -19207,7 +19249,9 @@ x 0 0
 # !units: meters
 # !longitude: -56.5500
 # !latitude: 53.7500
-Curlew Harbour, Canada
+# note: 20260903 Provinz "Labrador" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Curlew Harbour, Labrador, Canada
 +00:00 :America/Goose_Bay
 0.9449 meters
 J1              0.0051  128.51
@@ -19397,7 +19441,9 @@ x 0 0
 # !units: meters
 # !longitude: -55.7667
 # !latitude: 53.1500
-Comfort Bight, Canada
+# note: 20260903 Provinz "Labrador" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Comfort Bight, Labrador, Canada
 +00:00 :America/St_Johns
 0.8839 meters
 J1              0.0049  122.01
@@ -19591,7 +19637,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Port Leopold, Prince Regent Inlet, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Port Leopold, Prince Regent Inlet, Nunavut, Canada
 +00:00 :America/Rankin_Inlet
 1.2192 meters
 J1              0.0108  304.93
@@ -19781,7 +19829,9 @@ x 0 0
 # !units: meters
 # !longitude: -56.8833
 # !latitude: 51.4500
-Forteau Bay, Canada
+# note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Forteau Bay, Labrador, Canada
 +00:00 :America/St_Johns
 0.8534 meters
 J1              0.0068  255.84
@@ -19971,7 +20021,9 @@ x 0 0
 # !units: meters
 # !longitude: -55.7333
 # !latitude: 51.5000
-Pistolet Bay, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Pistolet Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.5486 meters
 J1              0.0033  128.90
@@ -20161,7 +20213,9 @@ x 0 0
 # !units: meters
 # !longitude: -56.0000
 # !latitude: 51.1667
-Ariege Bay, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Ariege Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7010 meters
 J1              0.0046  125.52
@@ -20351,7 +20405,9 @@ x 0 0
 # !units: meters
 # !longitude: -56.1667
 # !latitude: 50.7000
-Wild Cove, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Wild Cove, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.8534 meters
 J1              0.0049  120.06
@@ -20541,7 +20597,9 @@ x 0 0
 # !units: meters
 # !longitude: -56.7667
 # !latitude: 49.8333
-Sops Island, White Bay, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Sops Island, White Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.5486 meters
 J1              0.0033  117.08
@@ -20731,7 +20789,9 @@ x 0 0
 # !units: meters
 # !longitude: -53.6167
 # !latitude: 49.1667
-Valleyfield, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Valleyfield, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.5486 meters
 J1              0.0031  118.89
@@ -20921,7 +20981,9 @@ x 0 0
 # !units: meters
 # !longitude: -53.5667
 # !latitude: 48.1000
-Random Head Harbour, Trinity Bay, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Random Head Harbour, Trinity Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.5791 meters
 J1              0.0033  119.02
@@ -21111,7 +21173,9 @@ x 0 0
 # !units: meters
 # !longitude: -53.3833
 # !latitude: 46.7167
-Trepassey Harbour, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Trepassey Harbour, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.0668 meters
 J1              0.0050  160.20
@@ -21491,7 +21555,9 @@ x 0 0
 # !units: meters
 # !longitude: -54.7833
 # !latitude: 47.6667
-Grande le Pierre Harbour, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Grande le Pierre Harbour, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.2192 meters
 J1              0.0044  182.02
@@ -21685,7 +21751,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Assistance Bay, Barrow Strait, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Assistance Bay, Barrow Strait, Nunavut, Canada
 +00:00 :America/Resolute
 1.1582 meters
 J1              0.0073  322.85
@@ -22065,7 +22133,9 @@ x 0 0
 # !units: meters
 # !longitude: -56.1833
 # !latitude: 47.6500
-Great Jervis Harbour, Bay d'Espoir, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Great Jervis Harbour, Bay d'Espoir, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.1887 meters
 J1              0.0044  177.48
@@ -22255,7 +22325,9 @@ x 0 0
 # !units: meters
 # !longitude: -56.5333
 # !latitude: 47.6167
-Hare Bay, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Hare Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.0973 meters
 J1              0.0040  178.26
@@ -22445,7 +22517,9 @@ x 0 0
 # !units: meters
 # !longitude: -57.1167
 # !latitude: 47.5667
-Grey River, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Grey River, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.0668 meters
 J1              0.0037  179.30
@@ -22635,7 +22709,9 @@ x 0 0
 # !units: meters
 # !longitude: -57.9000
 # !latitude: 47.6667
-Connoire Bay, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Connoire Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.0058 meters
 J1              0.0035  177.09
@@ -23207,7 +23283,9 @@ x 0 0
 # !units: meters
 # !longitude: -59.4000
 # !latitude: 47.8833
-Codroy Road, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Codroy Road, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7925 meters
 J1              0.0066  239.47
@@ -23779,7 +23857,9 @@ x 0 0
 # !units: meters
 # !longitude: -58.5000
 # !latitude: 48.4500
-St. Georges Harbour, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+St. Georges Harbour, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.8534 meters
 J1              0.0066  252.85
@@ -23973,7 +24053,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Griffith Island, Barrow Strait, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Griffith Island, Barrow Strait, Nunavut, Canada
 +00:00 :America/Rankin_Inlet
 1.0973 meters
 J1              0.0071  327.01
@@ -24163,7 +24245,9 @@ x 0 0
 # !units: meters
 # !longitude: -58.7500
 # !latitude: 48.5500
-Port-au-Port, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Port-au-Port, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7315 meters
 J1              0.0082  263.37
@@ -24353,7 +24437,9 @@ x 0 0
 # !units: meters
 # !longitude: -58.1667
 # !latitude: 49.0667
-Frenchman's Cove, Bay of Islands, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Frenchman's Cove, Bay of Islands, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.0058 meters
 J1              0.0078  264.02
@@ -24543,7 +24629,9 @@ x 0 0
 # !units: meters
 # !longitude: -57.6000
 # !latitude: 50.1833
-Portland Cove, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Portland Cove, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.9144 meters
 J1              0.0085  266.36
@@ -24924,7 +25012,9 @@ x 0 0
 # !units: meters
 # !longitude: -56.9833
 # !latitude: 50.9167
-Castors Harbour, St. John Bay, Canada
+# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Castors Harbour, St. John Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.8230 meters
 J1              0.0071  264.02
@@ -25114,7 +25204,9 @@ x 0 0
 # !units: meters
 # !longitude: -57.2500
 # !latitude: 51.4667
-Bradore Bay, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Bradore Bay, Québec, Canada
 +00:00 :America/Blanc-Sablon
 0.9449 meters
 J1              0.0078  252.98
@@ -25304,7 +25396,9 @@ x 0 0
 # !units: meters
 # !longitude: -58.2000
 # !latitude: 51.2667
-Mistanoque Harbour, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Mistanoque Harbour, Québec, Canada
 +00:00 :America/Blanc-Sablon
 1.0058 meters
 J1              0.0082  257.52
@@ -25498,7 +25592,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Refuge Cove, Wellington Channel, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Refuge Cove, Wellington Channel, Nunavut, Canada
 +00:00 :America/Rankin_Inlet
 1.1887 meters
 J1              0.0099  316.10
@@ -25688,7 +25784,9 @@ x 0 0
 # !units: meters
 # !longitude: -60.0167
 # !latitude: 50.2000
-Wapitagun Harbour, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Wapitagun Harbour, Québec, Canada
 +00:00 :America/Blanc-Sablon
 1.0363 meters
 J1              0.0080  265.32
@@ -25878,7 +25976,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.2333
 # !latitude: 50.2000
-Kegaska, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Kegaska, Québec, Canada
 +00:00 :America/Blanc-Sablon
 0.9144 meters
 J1              0.0073  271.81
@@ -26068,7 +26168,9 @@ x 0 0
 # !units: meters
 # !longitude: -63.1833
 # !latitude: 50.2333
-Betchewun Harbour, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Betchewun Harbour, Québec, Canada
 +00:00 :America/Toronto
 0.9144 meters
 J1              0.0082  295.45
@@ -26262,7 +26364,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -5.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Mercy Bay, Banks Island, Canada
+# note: 20260903 Provinz "Northwest Territories" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Mercy Bay, Banks Island, Northwest Territories, Canada
 -05:00 :America/Edmonton
 0.3048 meters
 J1              0.0023  207.81
@@ -26452,7 +26556,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.0500
 # !latitude: 50.3000
-Mingan, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Mingan, Québec, Canada
 +00:00 :America/Toronto
 1.1887 meters
 J1              0.0110  302.33
@@ -26642,7 +26748,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.7000
 # !latitude: 49.0833
-Heath Point, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Heath Point, Québec, Canada
 +00:00 :America/Toronto
 0.7315 meters
 J1              0.0054  274.80
@@ -26832,7 +26940,9 @@ x 0 0
 # !units: meters
 # !longitude: -66.0833
 # !latitude: 50.2000
-Moisie Bay, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Moisie Bay, Québec, Canada
 +00:00 :America/Toronto
 1.4935 meters
 J1              0.0132  320.13
@@ -27026,7 +27136,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Penny Strait, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Penny Strait, Nunavut, Canada
 +00:00 :America/Rankin_Inlet
 0.4267 meters
 J1              0.0035  323.24
@@ -27216,7 +27328,9 @@ x 0 0
 # !units: meters
 # !longitude: -66.4000
 # !latitude: 50.2167
-Sept Iles, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Sept Iles, Québec, Canada
 +00:00 :America/Toronto
 1.4630 meters
 J1              0.0155  322.72
@@ -27406,7 +27520,9 @@ x 0 0
 # !units: meters
 # !longitude: -67.0000
 # !latitude: 49.8333
-Cawee Islands, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cawee Islands, Québec, Canada
 +00:00 :America/Toronto
 1.6154 meters
 J1              0.0146  324.80
@@ -27600,7 +27716,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Cap Chat, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cap Chat, Québec, Canada
 +00:00 :America/Toronto
 1.8593 meters
 J1              0.0165  328.70
@@ -27794,7 +27912,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Pointe des Monts, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Pointe des Monts, Québec, Canada
 +00:00 :America/Toronto
 1.8593 meters
 J1              0.0172  327.14
@@ -28178,7 +28298,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Métis-sur-Mer, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Métis-sur-Mer, Québec, Canada
 +00:00 :America/Toronto
 2.0726 meters
 J1              0.0190  330.52
@@ -28368,7 +28490,9 @@ x 0 0
 # !units: meters
 # !longitude: -68.6500
 # !latitude: 48.8833
-Betsiamites River, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Betsiamites River, Québec, Canada
 +00:00 :America/Toronto
 2.2250 meters
 J1              0.0043  300.23
@@ -28558,7 +28682,9 @@ x 0 0
 # !units: meters
 # !longitude: -69.6833
 # !latitude: 47.8667
-Brandypot Islands, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Brandypot Islands, Québec, Canada
 +00:00 :America/Toronto
 2.8346 meters
 J1              0.0056  309.58
@@ -28748,7 +28874,9 @@ x 0 0
 # !units: meters
 # !longitude: -70.1333
 # !latitude: 47.6500
-Murray Bay, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Murray Bay, Québec, Canada
 +00:00 :America/Toronto
 2.9870 meters
 J1              0.0060  314.00
@@ -28938,7 +29066,9 @@ x 0 0
 # !units: meters
 # !longitude: -70.3167
 # !latitude: 47.4333
-Île aux Coudres, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Île aux Coudres, Québec, Canada
 +00:00 :America/Toronto
 3.0785 meters
 J1              0.0066  331.01
@@ -29128,7 +29258,9 @@ x 0 0
 # !units: meters
 # !longitude: -70.3667
 # !latitude: 47.1333
-L'Islet, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+L'Islet, Québec, Canada
 +00:00 :America/Toronto
 2.7432 meters
 J1              0.0065  347.76
@@ -29318,7 +29450,9 @@ x 0 0
 # !units: meters
 # !longitude: -70.4833
 # !latitude: 47.0833
-Beaujeu Channel, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Beaujeu Channel, Québec, Canada
 +00:00 :America/Toronto
 2.7432 meters
 J1              0.0070  351.53
@@ -29508,7 +29642,9 @@ x 0 0
 # !units: meters
 # !longitude: -71.0000
 # !latitude: 46.8667
-St. Laurent d' Orleans, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+St. Laurent d' Orleans, Québec, Canada
 +00:00 :America/Toronto
 2.6518 meters
 J1              0.0070  7.51
@@ -29698,7 +29834,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.5000
 # !latitude: 82.4833
-Cape Sheridan, Lincoln Sea, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cape Sheridan, Lincoln Sea, Nunavut, Canada
 -05:00 :America/Iqaluit
 0.3658 meters
 J1              0.0026  137.03
@@ -29888,7 +30026,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.4833
 # !latitude: 48.8333
-GaspÖ Bay, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+GaspÖ Bay, Québec, Canada
 +00:00 :America/Toronto
 0.9449 meters
 J1              0.0111  43.85
@@ -30078,7 +30218,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.1667
 # !latitude: 48.6333
-Point St. Peter, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Point St. Peter, Québec, Canada
 +00:00 :America/Toronto
 0.7620 meters
 J1              0.0106  47.62
@@ -30268,7 +30410,9 @@ x 0 0
 # !units: meters
 # !longitude: -66.1167
 # !latitude: 48.0833
-Carleton Point, Canada
+# note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Carleton Point, Québec, Canada
 +00:00 :America/Toronto
 1.2192 meters
 J1              0.0200  55.02
@@ -30648,7 +30792,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.8667
 # !latitude: 47.5167
-Old Tracadie Gully entrance, Canada
+# note: 20260903 Provinz "New Brunswick" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Old Tracadie Gully entrance, New Brunswick, Canada
 +00:00 :America/Moncton
 0.7620 meters
 J1              0.0119  69.83
@@ -31788,7 +31934,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.0167
 # !latitude: 46.0167
-Tidnish Head, Baie Verte, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Tidnish Head, Baie Verte, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.4326 meters
 J1              0.0217  339.69
@@ -32738,7 +32886,9 @@ x 0 0
 # !units: meters
 # !longitude: -62.2833
 # !latitude: 46.3333
-Souris Head, Canada
+# note: 20260903 Provinz "Prince Edward Island" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Souris Head, Prince Edward Island, Canada
 +00:00 :America/Halifax
 1.0668 meters
 J1              0.0119  306.57
@@ -32928,7 +33078,9 @@ x 0 0
 # !units: meters
 # !longitude: -62.4500
 # !latitude: 46.0000
-Cape Bear, Canada
+# note: 20260903 Provinz "Prince Edward Island" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cape Bear, Prince Edward Island, Canada
 +00:00 :America/Halifax
 1.0363 meters
 J1              0.0132  317.74
@@ -33312,7 +33464,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.8833
 # !latitude: 45.8833
-Cape George, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cape George, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.8230 meters
 J1              0.0102  314.75
@@ -33502,7 +33656,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.5500
 # !latitude: 45.7000
-Cape Jack, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cape Jack, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.8230 meters
 J1              0.0089  309.04
@@ -34076,7 +34232,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.4667
 # !latitude: 46.1000
-Mabou River entrance, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Mabou River entrance, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.7620 meters
 J1              0.0094  313.19
@@ -35216,7 +35374,9 @@ x 0 0
 # !units: meters
 # !longitude: -60.3833
 # !latitude: 46.6667
-Ingonish Island, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Ingonish Island, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.8230 meters
 J1              0.0111  303.32
@@ -35406,7 +35566,9 @@ x 0 0
 # !units: meters
 # !longitude: -60.5667
 # !latitude: 46.2500
-St. Anns Harbour, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+St. Anns Harbour, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.8230 meters
 J1              0.0119  302.80
@@ -35596,7 +35758,9 @@ x 0 0
 # !units: meters
 # !longitude: -59.9167
 # !latitude: 46.2000
-Glace Bay, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Glace Bay, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.8230 meters
 J1              0.0106  298.13
@@ -35976,7 +36140,9 @@ x 0 0
 # !units: meters
 # !longitude: -59.9833
 # !latitude: 45.9000
-Louisburg Harbour, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Louisburg Harbour, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.9754 meters
 J1              0.0049  131.49
@@ -36166,7 +36332,9 @@ x 0 0
 # !units: meters
 # !longitude: -60.1667
 # !latitude: 45.8500
-Gabarus Cove, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Gabarus Cove, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 1.0058 meters
 J1              0.0051  136.69
@@ -36356,7 +36524,9 @@ x 0 0
 # !units: meters
 # !longitude: -60.8667
 # !latitude: 45.6333
-St. Peter Bay, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+St. Peter Bay, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 1.1582 meters
 J1              0.0058  131.88
@@ -37120,7 +37290,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.4833
 # !latitude: 45.3833
-Guysborough, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Guysborough, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 1.0668 meters
 J1              0.0053  137.47
@@ -37500,7 +37672,9 @@ x 0 0
 # !units: meters
 # !longitude: -62.0333
 # !latitude: 45.0000
-Liscomb Harbour, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Liscomb Harbour, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 1.1582 meters
 J1              0.0058  132.27
@@ -38071,7 +38245,9 @@ x 0 0
 # !units: meters
 # !longitude: -62.8167
 # !latitude: 44.7833
-Ship Harbour, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Ship Harbour, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.1582 meters
 J1              0.0058  132.92
@@ -38645,7 +38821,9 @@ x 0 0
 # !units: meters
 # !longitude: -63.0167
 # !latitude: 44.7500
-Jeddore Harbour, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Jeddore Harbour, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.1887 meters
 J1              0.0060  133.18
@@ -40735,7 +40913,9 @@ x 0 0
 # !units: meters
 # !longitude: -60.1000
 # !latitude: 43.9500
-Sable Island, north side, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Sable Island, north side, Nova Scotia, Canada
 +00:00 :America/Halifax
 0.7620 meters
 J1              0.0036  132.01
@@ -42453,7 +42633,9 @@ x 0 0
 # !units: meters
 # !longitude: -59.9000
 # !latitude: 43.9333
-Sable Island, south side, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Sable Island, south side, Nova Scotia, Canada
 +00:00 :America/Halifax
 0.7620 meters
 J1              0.0054  133.31
@@ -42833,7 +43015,9 @@ x 0 0
 # !units: meters
 # !longitude: -50.8833
 # !latitude: 2.8333
-Rio Cunani entrance, Brazil
+# note: 20260903 Provinz "Amapá" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Rio Cunani entrance, Amapá, Brazil
 +00:00 :America/Belem
 3.0785 meters
 J1              0.0187  237.72
@@ -43403,7 +43587,9 @@ x 0 0
 # !units: meters
 # !longitude: -50.7167
 # !latitude: -0.1833
-Ponta Pedreira, Amazon River, Brazil
+# note: 20260903 Provinz "Pará" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Ponta Pedreira, Amazon River, Pará, Brazil
 +00:00 :America/Belem
 2.7432 meters
 J1              0.0159  305.25
@@ -43593,7 +43779,9 @@ x 0 0
 # !units: meters
 # !longitude: -51.1833
 # !latitude: -0.0500
-Macapa, Amazon River, Brazil
+# note: 20260903 Provinz "Amapá" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Macapa, Amazon River, Amapá, Brazil
 +00:00 :America/Belem
 1.7983 meters
 J1              0.0108  22.66
@@ -43783,7 +43971,9 @@ x 0 0
 # !units: meters
 # !longitude: -47.9167
 # !latitude: -0.3833
-Canal de Bragança, Rio Pará entrance, Brazil
+# note: 20260903 Provinz "Pará" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Canal de Bragança, Rio Pará entrance, Pará, Brazil
 +00:00 :America/Belem
 1.5545 meters
 J1              0.0102  297.98
@@ -43973,7 +44163,9 @@ x 0 0
 # !units: meters
 # !longitude: -47.3833
 # !latitude: -0.6500
-Salinópolis, Brazil
+# note: 20260903 Provinz "Pará" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Salinópolis, Pará, Brazil
 +00:00 :America/Belem
 2.5298 meters
 J1              0.0161  244.99
@@ -44163,7 +44355,9 @@ x 0 0
 # !units: meters
 # !longitude: -48.5000
 # !latitude: -1.4500
-Belem (Para), Brazil
+# note: 20260903 Provinz "Pará" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Belem (Para), Pará, Brazil
 +00:00 :America/Belem
 1.8593 meters
 J1              0.0106  312.66
@@ -44353,7 +44547,9 @@ x 0 0
 # !units: meters
 # !longitude: -44.9167
 # !latitude: -1.2833
-Ilhas de São João, Brazil
+# note: 20260903 Provinz "Maranhão" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Ilhas de São João, Maranhão, Brazil
 +00:00 :America/Fortaleza
 2.1336 meters
 J1              0.0138  225.77
@@ -44543,7 +44739,9 @@ x 0 0
 # !units: meters
 # !longitude: -63.9333
 # !latitude: 44.5167
-St. Margarets Bay, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+St. Margarets Bay, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.1887 meters
 J1              0.0058  136.30
@@ -44733,7 +44931,9 @@ x 0 0
 # !units: meters
 # !longitude: -43.6000
 # !latitude: -2.2667
-Santana, Recifes de, Brazil
+# note: 20260903 Provinz "Maranhão" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Santana, Recifes de, Maranhão, Brazil
 +00:00 :America/Fortaleza
 1.9812 meters
 J1              0.0129  213.95
@@ -44923,7 +45123,9 @@ x 0 0
 # !units: meters
 # !longitude: -42.2333
 # !latitude: -2.7667
-Tutóia, Baía da, Brazil
+# note: 20260903 Provinz "Maranhão" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Tutóia, Baía da, Maranhão, Brazil
 +00:00 :America/Fortaleza
 1.7374 meters
 J1              0.0103  204.86
@@ -45113,7 +45315,9 @@ x 0 0
 # !units: meters
 # !longitude: -41.6667
 # !latitude: -2.8833
-Luís Correia, Brazil
+# note: 20260903 Provinz "Maranhão" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Luís Correia, Maranhão, Brazil
 +00:00 :America/Fortaleza
 1.6459 meters
 J1              0.0096  203.95
@@ -45303,7 +45507,9 @@ x 0 0
 # !units: meters
 # !longitude: -40.8667
 # !latitude: -2.8833
-Camocim, Brazil
+# note: 20260903 Provinz "Ceará" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Camocim, Ceará, Brazil
 +00:00 :America/Fortaleza
 1.6764 meters
 J1              0.0098  219.40
@@ -45497,7 +45703,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -5.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Winter Harbour, Melville Island, Canada
+# note: 20260903 Provinz "Northwest Territories" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Winter Harbour, Melville Island, Northwest Territories, Canada
 -05:00 :America/Edmonton
 0.4877 meters
 J1              0.0036  217.42
@@ -45687,7 +45895,9 @@ x 0 0
 # !units: meters
 # !longitude: -38.6167
 # !latitude: -3.6833
-Rio Ceará (bar), Brazil
+# note: 20260903 Provinz "Ceará" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Rio Ceará (bar), Ceará, Brazil
 +00:00 :America/Fortaleza
 1.3106 meters
 J1              0.0081  197.71
@@ -46067,7 +46277,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.3000
 # !latitude: 44.5667
-Chester, Mahone Bay, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Chester, Mahone Bay, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.2497 meters
 J1              0.0061  133.96
@@ -46257,7 +46469,9 @@ x 0 0
 # !units: meters
 # !longitude: -34.8333
 # !latitude: -7.1000
-Tambau, Brazil
+# note: 20260903 Provinz "Paraíba" ergaenzt (Nachbarn ab 2 km),
+# note: siehe py/provinz_ergaenzen.py.
+Tambau, Paraíba, Brazil
 +00:00 :America/Fortaleza
 1.2497 meters
 J1              0.0005  326.67
@@ -46447,7 +46661,9 @@ x 0 0
 # !units: meters
 # !longitude: -35.7167
 # !latitude: -9.6667
-Maceio, Brazil
+# note: 20260903 Provinz "Alagoas" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Maceio, Alagoas, Brazil
 +00:00 :America/Maceio
 1.0973 meters
 J1              0.0004  330.70
@@ -46637,7 +46853,9 @@ x 0 0
 # !units: meters
 # !longitude: -36.4000
 # !latitude: -10.5167
-Rio Sao Francisco (bar), Brazil
+# note: 20260903 Provinz "Alagoas" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Rio Sao Francisco (bar), Alagoas, Brazil
 +00:00 :America/Maceio
 1.0668 meters
 J1              0.0004  330.18
@@ -46827,7 +47045,9 @@ x 0 0
 # !units: meters
 # !longitude: -38.9000
 # !latitude: -13.3500
-Morro de Sao Paulo, Brazil
+# note: 20260903 Provinz "Bahia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Morro de Sao Paulo, Bahia, Brazil
 +00:00 :America/Bahia
 1.0668 meters
 J1              0.0004  324.46
@@ -47017,7 +47237,9 @@ x 0 0
 # !units: meters
 # !longitude: -38.9667
 # !latitude: -13.9000
-Camamu, Brazil
+# note: 20260903 Provinz "Bahia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Camamu, Bahia, Brazil
 +00:00 :America/Bahia
 1.1582 meters
 J1              0.0004  326.02
@@ -47207,7 +47429,9 @@ x 0 0
 # !units: meters
 # !longitude: -39.0333
 # !latitude: -14.8000
-Ilheus, Brazil
+# note: 20260903 Provinz "Bahia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Ilheus, Bahia, Brazil
 +00:00 :America/Bahia
 0.9754 meters
 J1              0.0004  319.14
@@ -47397,7 +47621,9 @@ x 0 0
 # !units: meters
 # !longitude: -38.9333
 # !latitude: -15.6667
-Canavieiras, Brazil
+# note: 20260903 Provinz "Bahia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Canavieiras, Bahia, Brazil
 +00:00 :America/Bahia
 0.9449 meters
 J1              0.0004  332.52
@@ -47587,7 +47813,9 @@ x 0 0
 # !units: meters
 # !longitude: -39.0333
 # !latitude: -16.2833
-Santa Cruz Cabrália, Brazil
+# note: 20260903 Provinz "Bahia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Santa Cruz Cabrália, Bahia, Brazil
 +00:00 :America/Bahia
 0.8839 meters
 J1              0.0004  318.49
@@ -47777,7 +48005,9 @@ x 0 0
 # !units: meters
 # !longitude: -39.1833
 # !latitude: -17.1000
-Cumuruxatiba, Brazil
+# note: 20260903 Provinz "Bahia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Cumuruxatiba, Bahia, Brazil
 +00:00 :America/Bahia
 1.2802 meters
 J1              0.0004  323.42
@@ -47967,7 +48197,9 @@ x 0 0
 # !units: meters
 # !longitude: -39.1500
 # !latitude: -17.7167
-Caravelas, Brazil
+# note: 20260903 Provinz "Bahia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Caravelas, Bahia, Brazil
 +00:00 :America/Bahia
 0.9449 meters
 J1              0.0004  314.72
@@ -48157,7 +48389,9 @@ x 0 0
 # !units: meters
 # !longitude: -38.7000
 # !latitude: -17.9667
-Abrolhos Anchorage, Brazil
+# note: 20260903 Provinz "Bahia" ergaenzt (Nachbarn ab 0 km),
+# note: siehe py/provinz_ergaenzen.py.
+Abrolhos Anchorage, Bahia, Brazil
 +00:00 :America/Bahia
 1.2802 meters
 J1              0.0005  327.97
@@ -48347,7 +48581,9 @@ x 0 0
 # !units: meters
 # !longitude: -40.3167
 # !latitude: -20.3167
-Vitoria, Brazil
+# note: 20260903 Provinz "Espírito Santo" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Vitoria, Espírito Santo, Brazil
 +00:00 :America/Sao_Paulo
 0.7925 meters
 J1              0.0003  318.62
@@ -48537,7 +48773,9 @@ x 0 0
 # !units: meters
 # !longitude: -40.5000
 # !latitude: -20.6667
-Guarapari, Brazil
+# note: 20260903 Provinz "Espírito Santo" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Guarapari, Espírito Santo, Brazil
 +00:00 :America/Sao_Paulo
 0.7620 meters
 J1              0.0003  331.35
@@ -48727,7 +48965,9 @@ x 0 0
 # !units: meters
 # !longitude: -41.0500
 # !latitude: -21.6333
-Sao Joao da Barra, Brazil
+# note: 20260903 Provinz "Rio de Janeiro" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Sao Joao da Barra, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6401 meters
 x 0 0
@@ -48917,7 +49157,9 @@ x 0 0
 # !units: meters
 # !longitude: -41.8833
 # !latitude: -22.7500
-Armacao dos Buzios, Brazil
+# note: 20260903 Provinz "Rio de Janeiro" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Armacao dos Buzios, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6401 meters
 x 0 0
@@ -49107,7 +49349,9 @@ x 0 0
 # !units: meters
 # !longitude: -42.0500
 # !latitude: -23.0000
-Cabo Frio, Brazil
+# note: 20260903 Provinz "Rio de Janeiro" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Cabo Frio, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6096 meters
 x 0 0
@@ -49297,7 +49541,9 @@ x 0 0
 # !units: meters
 # !longitude: -43.9167
 # !latitude: -22.9333
-Itacuruçá, Brazil
+# note: 20260903 Provinz "Rio de Janeiro" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Itacuruçá, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6706 meters
 x 0 0
@@ -49487,7 +49733,9 @@ x 0 0
 # !units: meters
 # !longitude: -44.7167
 # !latitude: -23.2333
-Parati, Brazil
+# note: 20260903 Provinz "Rio de Janeiro" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Parati, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6706 meters
 x 0 0
@@ -49677,7 +49925,9 @@ x 0 0
 # !units: meters
 # !longitude: -47.9333
 # !latitude: -25.0167
-Cananeia, Brazil
+# note: 20260903 Provinz "Sao Paulo" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Cananeia, Sao Paulo, Brazil
 -03:00 :America/Sao_Paulo
 0.7925 meters
 x 0 0
@@ -49867,7 +50117,9 @@ x 0 0
 # !units: meters
 # !longitude: -48.5053
 # !latitude: -25.5230
-Paranaguá, Brazil
+# note: 20260903 Provinz "Paraná" ergaenzt (Nachbarn ab 3 km),
+# note: siehe py/provinz_ergaenzen.py.
+Paranaguá, Paraná, Brazil
 -03:00 :America/Sao_Paulo
 0.9754 meters
 x 0 0
@@ -50057,7 +50309,9 @@ x 0 0
 # !units: meters
 # !longitude: -48.5500
 # !latitude: -27.1500
-Porto Belo, Brazil
+# note: 20260903 Provinz "Santa Catarina" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Porto Belo, Santa Catarina, Brazil
 -03:00 :America/Sao_Paulo
 0.5182 meters
 x 0 0
@@ -52918,7 +53172,9 @@ x 0 0
 # !units: meters
 # !longitude: -65.0833
 # !latitude: 43.7333
-Lockeport, Canada
+# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Lockeport, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.2192 meters
 J1              0.0064  138.12
@@ -59010,7 +59266,9 @@ x 0 0
 # !units: meters
 # !longitude: -64.2833
 # !latitude: 45.8333
-Amherst Point, Cumberland Basin, Canada
+# note: 20260903 Provinz "New Brunswick" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Amherst Point, Cumberland Basin, New Brunswick, Canada
 +00:00 :America/Moncton
 7.3152 meters
 J1              0.0440  144.48
@@ -60752,7 +61010,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -5.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Bridport Inlet, Melville Island, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Bridport Inlet, Melville Island, Nunavut, Canada
 -05:00 :America/Cambridge_Bay
 0.7620 meters
 J1              0.0041  215.08
@@ -62886,7 +63146,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -5.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Byam Martin Island, Canada
+# note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Byam Martin Island, Nunavut, Canada
 -05:00 :America/Cambridge_Bay
 0.9144 meters
 J1              0.0041  201.84
@@ -68025,7 +68287,9 @@ x 0 0
 # !units: meters
 # !longitude: -123.3333
 # !latitude: 48.8667
-Active Pass, Mayne Island, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Active Pass, Mayne Island, British Columbia, Canada
 +00:00 :America/Vancouver
 2.6213 meters
 J1              0.0272  42.73
@@ -68405,7 +68669,9 @@ x 0 0
 # !units: meters
 # !longitude: -123.7833
 # !latitude: 48.9833
-Ladysmith, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Ladysmith, British Columbia, Canada
 +00:00 :America/Vancouver
 2.5603 meters
 J1              0.0250  33.76
@@ -68595,7 +68861,9 @@ x 0 0
 # !units: meters
 # !longitude: -123.2500
 # !latitude: 49.3167
-Atkinson Point, Burrard Inlet, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Atkinson Point, Burrard Inlet, British Columbia, Canada
 +00:00 :America/Vancouver
 2.6518 meters
 J1              0.0289  41.95
@@ -68975,7 +69243,9 @@ x 0 0
 # !units: meters
 # !longitude: -124.9833
 # !latitude: 50.2667
-Redonda Bay, Deer Passage, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Redonda Bay, Deer Passage, British Columbia, Canada
 +00:00 :America/Vancouver
 3.2918 meters
 J1              0.0311  46.75
@@ -69165,7 +69435,9 @@ x 0 0
 # !units: meters
 # !longitude: -124.8500
 # !latitude: 50.9333
-Waddington Harbor, Bute Inlet, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Waddington Harbor, Bute Inlet, British Columbia, Canada
 +00:00 :America/Vancouver
 3.0785 meters
 J1              0.0320  46.10
@@ -69546,7 +69818,9 @@ x 0 0
 # !longitude: -126.2000
 # !latitude: 50.5833
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Chatham Channel (Root Point), Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Chatham Channel (Root Point), British Columbia, Canada
 -09:00 :America/Vancouver
 2.8956 meters
 J1              0.0274  124.70
@@ -69737,7 +70011,9 @@ x 0 0
 # !longitude: -126.7000
 # !latitude: 50.6000
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Farewell Harbor, Blackfish Sound, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Farewell Harbor, Blackfish Sound, British Columbia, Canada
 -09:00 :America/Vancouver
 2.5908 meters
 J1              0.0258  124.05
@@ -69928,7 +70204,9 @@ x 0 0
 # !longitude: -127.2833
 # !latitude: 50.9000
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Blunden Harbor, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Blunden Harbor, British Columbia, Canada
 -09:00 :America/Vancouver
 2.8651 meters
 J1              0.0272  116.78
@@ -70119,7 +70397,9 @@ x 0 0
 # !longitude: -124.4167
 # !latitude: 48.5500
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Port San Juan, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Port San Juan, British Columbia, Canada
 -09:00 :America/Vancouver
 2.0726 meters
 J1              0.0207  108.98
@@ -70310,7 +70590,9 @@ x 0 0
 # !longitude: -124.7500
 # !latitude: 48.6167
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Carmanah Point, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Carmanah Point, British Columbia, Canada
 -09:00 :America/Vancouver
 1.8898 meters
 J1              0.0132  107.81
@@ -70501,7 +70783,9 @@ x 0 0
 # !longitude: -125.9167
 # !latitude: 49.1500
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Clayoquot, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Clayoquot, British Columbia, Canada
 -09:00 :America/Vancouver
 2.2250 meters
 J1              0.0170  108.20
@@ -70692,7 +70976,9 @@ x 0 0
 # !longitude: -126.6167
 # !latitude: 49.6167
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Nootka Sound, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Nootka Sound, British Columbia, Canada
 -09:00 :America/Vancouver
 2.1031 meters
 J1              0.0189  108.20
@@ -70883,7 +71169,9 @@ x 0 0
 # !longitude: -127.3000
 # !latitude: 50.1333
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Kyuquot Sound, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Kyuquot Sound, British Columbia, Canada
 -09:00 :America/Vancouver
 2.2555 meters
 J1              0.0170  109.50
@@ -71074,7 +71362,9 @@ x 0 0
 # !longitude: -127.7167
 # !latitude: 50.1000
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Nasparti Inlet, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Nasparti Inlet, British Columbia, Canada
 -09:00 :America/Vancouver
 2.3165 meters
 J1              0.0179  109.89
@@ -71455,7 +71745,9 @@ x 0 0
 # !longitude: -127.7333
 # !latitude: 50.2500
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Klaskish Inlet, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Klaskish Inlet, British Columbia, Canada
 -09:00 :America/Vancouver
 2.3165 meters
 J1              0.0179  110.54
@@ -71646,7 +71938,9 @@ x 0 0
 # !longitude: -127.6167
 # !latitude: 50.5333
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Bergh Cove, Quatsino Sound, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Bergh Cove, Quatsino Sound, British Columbia, Canada
 -09:00 :America/Vancouver
 2.4994 meters
 J1              0.0198  110.80
@@ -71837,7 +72131,9 @@ x 0 0
 # !longitude: -128.1333
 # !latitude: 52.1333
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Bella Bella, Lama Passage, Campbell Island, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Bella Bella, Lama Passage, Campbell Island, British Columbia, Canada
 -09:00 :America/Vancouver
 2.8346 meters
 J1              0.0184  117.05
@@ -72218,7 +72514,9 @@ x 0 0
 # !longitude: -128.4000
 # !latitude: 52.8333
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Carter Bay, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Carter Bay, British Columbia, Canada
 -09:00 :America/Vancouver
 2.8346 meters
 J1              0.0204  118.61
@@ -72409,7 +72707,9 @@ x 0 0
 # !longitude: -128.1167
 # !latitude: 53.5167
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Kemano Bay, Gardner Canal, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Kemano Bay, Gardner Canal, British Columbia, Canada
 -09:00 :America/Vancouver
 3.4138 meters
 J1              0.0245  121.72
@@ -72600,7 +72900,9 @@ x 0 0
 # !longitude: -129.7167
 # !latitude: 53.3500
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Port Stephens, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Port Stephens, British Columbia, Canada
 -09:00 :America/Vancouver
 3.0175 meters
 J1              0.0208  120.42
@@ -72791,7 +73093,9 @@ x 0 0
 # !longitude: -130.1500
 # !latitude: 53.5833
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Port Canaveral, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Port Canaveral, British Columbia, Canada
 -09:00 :America/Vancouver
 3.0175 meters
 J1              0.0208  122.11
@@ -72982,7 +73286,9 @@ x 0 0
 # !longitude: -130.3500
 # !latitude: 53.8000
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Beaver Passage, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Beaver Passage, British Columbia, Canada
 -09:00 :America/Vancouver
 3.5357 meters
 J1              0.0267  124.84
@@ -73363,7 +73669,9 @@ x 0 0
 # !longitude: -130.4000
 # !latitude: 54.0833
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Porcher Island, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Porcher Island, British Columbia, Canada
 -09:00 :America/Vancouver
 3.6881 meters
 J1              0.0243  123.80
@@ -73554,7 +73862,9 @@ x 0 0
 # !longitude: -132.0667
 # !latitude: 53.2500
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Skidegate Inlet, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Skidegate Inlet, British Columbia, Canada
 -09:00 :America/Vancouver
 4.0234 meters
 J1              0.0277  130.03
@@ -73745,7 +74055,9 @@ x 0 0
 # !longitude: -132.0167
 # !latitude: 52.7500
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Tasu Sound, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Tasu Sound, British Columbia, Canada
 -09:00 :America/Vancouver
 2.4994 meters
 J1              0.0152  120.03
@@ -73936,7 +74248,9 @@ x 0 0
 # !longitude: -132.1333
 # !latitude: 53.9833
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Masset Harbor, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Masset Harbor, British Columbia, Canada
 -09:00 :America/Vancouver
 2.0117 meters
 J1              0.0154  130.81
@@ -74318,7 +74632,9 @@ x 0 0
 # !longitude: -130.6167
 # !latitude: 54.7167
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Haystack Island, B.C., Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Haystack Island, B.C., British Columbia, Canada
 -09:00 :America/Vancouver
 2.3774 meters
 J1              0.0255  125.62
@@ -74510,7 +74826,9 @@ x 0 0
 # !longitude: -130.5500
 # !latitude: 54.7833
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Wales Island (Cannery), Pearse Canal, Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Wales Island (Cannery), Pearse Canal, British Columbia, Canada
 -09:00 :America/Vancouver
 2.4079 meters
 J1              0.0261  129.13
@@ -74702,7 +75020,9 @@ x 0 0
 # !longitude: -129.8000
 # !latitude: 55.9167
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-Stewart, B.C., Canada
+# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Stewart, B.C., British Columbia, Canada
 -09:00 :America/Vancouver
 2.6518 meters
 J1              0.0289  127.57
@@ -119380,7 +119700,9 @@ x 0 0
 # !units: meters
 # !longitude: -96.5000
 # !latitude: 15.6500
-Puerto Angel, Mexico
+# note: 20260903 Provinz "Oaxaca" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Puerto Angel, Oaxaca, Mexico
 -06:00 :America/Mexico_City
 0.4877 meters
 J1              0.0065  296.31
@@ -119570,7 +119892,9 @@ x 0 0
 # !units: meters
 # !longitude: -99.9167
 # !latitude: 16.8333
-Acapulco, Mexico
+# note: 20260903 Provinz "Guerrero" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Acapulco, Guerrero, Mexico
 -06:00 :America/Mexico_City
 0.3048 meters
 J1              0.0036  290.99
@@ -119764,7 +120088,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Isla Socorro, Mexico
+# note: 20260903 Provinz "Colima" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Isla Socorro, Colima, Mexico
 -08:00 :America/Mazatlan
 0.5486 meters
 J1              0.0122  69.01
@@ -119958,7 +120284,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Mazatlan, Mexico
+# note: 20260903 Provinz "Sinaloa" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Mazatlan, Sinaloa, Mexico
 -08:00 :America/Mazatlan
 0.6096 meters
 J1              0.0135  69.01
@@ -120152,7 +120480,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Topolobampo, Mexico
+# note: 20260903 Provinz "Sinaloa" ergaenzt (Polygon),
+# note: siehe py/provinz_ergaenzen.py.
+Topolobampo, Sinaloa, Mexico
 -08:00 :America/Mazatlan
 0.6096 meters
 J1              0.0122  91.48
@@ -120536,7 +120866,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-San Carlos, Mexico
+# note: 20260903 Provinz "Baja California Sur" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+San Carlos, Baja California Sur, Mexico
 -08:00 :America/Mazatlan
 0.8839 meters
 J1              0.0194  76.54
@@ -120726,7 +121058,9 @@ x 0 0
 # !units: meters
 # !longitude: -116.6333
 # !latitude: 31.8500
-Ensenada, Todos Santos Bay, Mexico
+# note: 20260903 Provinz "Baja California" ergaenzt (Polygon unter 25 km),
+# note: siehe py/provinz_ergaenzen.py.
+Ensenada, Todos Santos Bay, Baja California, Mexico
 -08:00 :America/Tijuana
 0.8230 meters
 J1              0.0171  89.40
