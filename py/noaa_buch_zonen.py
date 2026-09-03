@@ -34,6 +34,7 @@ Usage: python3 py/noaa_buch_zonen.py <pdf> <erste> <letzte> [--json <datei>]
 """
 from __future__ import annotations
 
+import difflib
 import json
 import re
 import subprocess
@@ -65,8 +66,16 @@ def text(pdf, von, bis):
 
 
 def stationen(pdf, von, bis):
-    """-> {Stationsnummer: (Meridian in Stunden oder "local", Bezugsort)}."""
-    out, mer, bezug = {}, None, None
+    """-> ({Nummer: (Meridian oder "local", Bezugsort)}, {Name: Meridian}).
+
+    Das zweite Ergebnis sind die Bezugsorte selbst: sie stehen in
+    Table 2 mit "Daily predictions" statt Differenzen, und damit unter
+    dem Meridian ihres eigenen Blocks. Das ist der Ausweg fuer die
+    Bezugsorte ohne Table-1-Seite -- fuer JOLO, LEGASPI PORT und SAN
+    FERNANDO HARBOR sagt das Vorwort ausdruecklich, dass ihre
+    Tagesvorhersagen nicht abgedruckt sind.
+    """
+    out, taeglich, mer, bezug = {}, {}, None, None
     for line in text(pdf, von, bis).split('\n'):
         if LOKAL.search(line):
             mer = 'local'
@@ -79,7 +88,11 @@ def stationen(pdf, von, bis):
         z = ZEILE.match(line)
         if z and ('°' in line or '. .' in line) and mer is not None:
             out[int(z.group(1))] = (mer, bezug)
-    return out
+            if 'Daily predictions' in line and mer != 'local':
+                name = re.split(r'\s*[.{}]\s*', z.group(2))[0].strip()
+                taeglich.setdefault(norm(name), mer)
+                taeglich.setdefault(norm(name.split(',')[0]), mer)
+    return out, taeglich
 
 
 def norm(s):
@@ -110,21 +123,32 @@ def referenzen(pdf, von=1, bis=None):
 
 
 def suche(tabelle, name):
-    """Meridian zu einem Bezugsortnamen, notfalls ueber den Namensanfang."""
+    """Meridian zu einem Bezugsortnamen.
+
+    Die Schreibweisen gehen zwischen Table 1 und Table 2 auseinander:
+    "Gibralter" gegen "Gibraltar", "Suriname Rivier" gegen "Suriname
+    River Entrance". Deshalb zuletzt ein unscharfer Vergleich.
+    """
     if not name:
         return None
     n = norm(name.split(',')[0])
     if n in tabelle:
         return tabelle[n]
     treffer = [k for k in tabelle if k and (k.startswith(n) or n.startswith(k))]
-    return tabelle[treffer[0]] if treffer else None
+    if treffer:
+        return tabelle[treffer[0]]
+    nah = difflib.get_close_matches(n, [k for k in tabelle if k], n=1, cutoff=0.85)
+    return tabelle[nah[0]] if nah else None
 
 
 def main(argv):
     pdf, von, bis = argv[0], int(argv[1]), int(argv[2])
-    st = stationen(pdf, von, bis)
+    st, taeglich = stationen(pdf, von, bis)
     ref = referenzen(pdf, 1, von - 1)
-    print(f'{len(st)} Stationen, {len(ref)} Bezugsorte', file=sys.stderr)
+    for k, v in taeglich.items():
+        ref.setdefault(k, v)                  # Table 1 hat Vorrang
+    print(f'{len(st)} Stationen, {len(ref)} Bezugsorte '
+          f'({len(taeglich)} davon aus Table 2)', file=sys.stderr)
     if '--json' in argv:
         ziel = argv[argv.index('--json') + 1]
         json.dump({'stationen': {str(k): v for k, v in st.items()}, 'referenzen': ref},

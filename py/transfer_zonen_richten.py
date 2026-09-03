@@ -159,10 +159,16 @@ def passt_bezug(buchname, notizname, karte):
     if not buchname:
         return False
     frage = karte.get(buchname, buchname)
-    if frage.lower() in notizname.lower():
+    # Ohne Satz- und Leerzeichen vergleichen: der Vermerk schreibt
+    # "Changjiang Ao, China", das Buch "Ch'ang Chiang Approach".
+    a, b = buch.norm(frage), buch.norm(notizname)
+    if a and (a in b or b.startswith(a)):
         return True
-    return buch.norm(buchname).startswith(buch.norm(notizname.split(',')[0])) or \
-        buch.norm(notizname.split(',')[0]).startswith(buch.norm(buchname))
+    a, b = buch.norm(buchname), buch.norm(notizname.split(',')[0])
+    if a and b and (a.startswith(b) or b.startswith(a) or a in b or b in a):
+        return True
+    import difflib
+    return bool(difflib.get_close_matches(b, [a], n=1, cutoff=0.85))
 
 
 def _tz_std(name, epoche=dt.datetime(1980, 1, 15, 12)):
@@ -197,6 +203,7 @@ def sammeln(argv):
             if not info.get((x['file'], x['line']), ('', ''))[1] and abs(x['z']['M2']) > MIND_M2]
 
     faelle = []
+    fehlt = collections.Counter()
     for datei, (zdat, skript, schon) in BAENDER.items():
         if nur and nur not in datei:
             continue
@@ -216,6 +223,12 @@ def sammeln(argv):
                 continue
             refname, no = m.group(1).strip(), int(m.group(2))
             eintrag = stz.get(schluessel.get(r['line'], str(no)))
+            if eintrag is None:
+                fehlt['keine Buchzeile zur Nummer'] += 1
+            elif buch.suche(refz, eintrag[1]) is None:
+                fehlt[f'Bezugsort ohne Meridian: {eintrag[1]}'] += 1
+            elif not passt_bezug(eintrag[1], refname, karte):
+                fehlt[f'Vermerk nennt {refname}, Buch {eintrag[1]}'] += 1
             if eintrag and eintrag[0] == 'local':
                 # Der Block gilt in Ortszeit: dann ist die Zone des
                 # Pegels selbst gemeint, nicht eine des ganzen Blocks.
@@ -246,6 +259,9 @@ def sammeln(argv):
                 # Nachbarn als ohne?
                 p0, p1 = passung(r, best[1], 0.0), passung(r, best[1], fehler)
             faelle.append((r, refname, no, eintrag[0], zr, fehler, best, (v, g, p0, p1)))
+    if '--warum' in argv:
+        for grund, n in fehlt.most_common():
+            print(f'{n:5}  {grund}')
     return faelle
 
 
