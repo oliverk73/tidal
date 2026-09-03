@@ -43,6 +43,11 @@ import unicodedata
 # "Time meridian, 97° 30' E" / "Time meridian 135° E." / "Time meridian, 0°"
 MERIDIAN = re.compile(r'Time meridian,?\s+(\d{1,3})\s*°\s*'
                       r'(?:(\d{1,2})\s*[’ʼ\']\s*)?([EW])?')
+# Die amerikanischen Baende fuehren einzelne Bloecke unter "Time
+# meridian, local": dort gilt die Zone des jeweiligen Ortes, nicht eine
+# fuer den ganzen Block. Diese Zeile MUSS erkannt werden, sonst erbt der
+# Block stumm den Meridian des vorigen.
+LOKAL = re.compile(r'Time meridian,?\s+local', re.I)
 BEZUG = re.compile(r'\bon\s+(.+?),\s*p\.?\s*(\d+)')
 ZEILE = re.compile(r'^\s{0,8}(\d{1,4})\s+(\S.*?)\s\s')
 KOPF = re.compile(r',?\s*20\d\d\s*$')
@@ -60,9 +65,11 @@ def text(pdf, von, bis):
 
 
 def stationen(pdf, von, bis):
-    """-> {Stationsnummer: (Meridian in Stunden, Bezugsortname)} aus Table 2."""
+    """-> {Stationsnummer: (Meridian in Stunden oder "local", Bezugsort)}."""
     out, mer, bezug = {}, None, None
     for line in text(pdf, von, bis).split('\n'):
+        if LOKAL.search(line):
+            mer = 'local'
         m = MERIDIAN.search(line)
         if m:
             mer = _stunden(m)

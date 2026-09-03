@@ -56,11 +56,18 @@ MIND_GUETE = 0.80
 MIND_M2 = 0.05
 MIND_BESSER = 0.05    # so viel besser muss die Drehung passen, um zu zaehlen
 
-# Baender: Zonentabelle aus dem Buch und das Bauskript, dessen REFMAP die
-# Buchnamen auf unsere Satznamen abbildet.
+# Baender: Zonentabellen aus dem Buch und das Bauskript, dessen REFMAP die
+# Buchnamen auf unsere Satznamen abbildet. harmonics_noaa_amtt.txt ist aus
+# zwei Baenden zusammengesetzt; dort steht die Herkunft im Satz selbst
+# ("# noaa_uid: ectt-1").
 BAENDER = {
-    'harmonics_noaa_cptt.txt': ('zonen_cptt2018.json', 'build_noaa_cptt.py', False),
-    'harmonics_noaa_eutt.txt': ('zonen_eutt2020.json', 'build_noaa_eutt.py', True),
+    'harmonics_noaa_cptt.txt': ([('', 'zonen_cptt2018.json')],
+                                'build_noaa_cptt.py', False),
+    'harmonics_noaa_eutt.txt': ([('', 'zonen_eutt2020.json')],
+                                'build_noaa_eutt.py', True),
+    'harmonics_noaa_amtt.txt': ([('ectt', 'zonen_ectt2020.json'),
+                                 ('wctt', 'zonen_wctt2020.json')],
+                                'build_noaa_amtt.py', False),
 }
 
 
@@ -102,9 +109,40 @@ def speeds(pfad):
     return out
 
 
-def zonen(band):
-    d = json.load(open(os.path.join(HELP, band)))
-    return ({int(k): tuple(v) for k, v in d['stationen'].items()}, d['referenzen'])
+def zonen(baender):
+    """Stationszonen und Bezugsortzonen, ggf. aus mehreren Baenden."""
+    stationen, referenzen = {}, {}
+    for praefix, datei in baender:
+        d = json.load(open(os.path.join(HELP, datei)))
+        for k, v in d['stationen'].items():
+            stationen[f'{praefix}-{k}' if praefix else k] = tuple(v)
+        referenzen.update(d['referenzen'])
+    return stationen, referenzen
+
+
+def uids(pfad):
+    """{Zeilennummer des Satzes: noaa_uid} -- nur wo der Satz eine traegt."""
+    lines = open(pfad, encoding='iso-8859-1').read().split('\n')
+    out, offen = {}, None
+    for k, line in enumerate(lines):
+        if line.startswith('# noaa_uid:'):
+            offen = line.split(':', 1)[1].strip()
+        elif line and not line.startswith('#'):
+            if offen:
+                out[k + 1] = offen
+            offen = None
+    return out
+
+
+def ortszone(lat, lon):
+    """Zone eines Ortes zur Tafel-Epoche -- fuer Bloecke "Time meridian, local"."""
+    from timezonefinder import TimezoneFinder
+    global _TF
+    try:
+        _TF
+    except NameError:
+        _TF = TimezoneFinder()
+    return _tz_std(_TF.timezone_at(lat=lat, lng=lon) or '')
 
 
 def passt_bezug(buchname, notizname, karte):
@@ -164,7 +202,9 @@ def sammeln(argv):
             continue
         stz, refz = zonen(zdat)
         karte = refmap(skript)
-        fertig = schon_gedreht(os.path.join(ROOT, 'harmonics/noaa', datei))
+        pfad = os.path.join(ROOT, 'harmonics/noaa', datei)
+        fertig = schon_gedreht(pfad)
+        schluessel = uids(pfad)
         for r in recs:
             if os.path.basename(r['file']) != datei:
                 continue
@@ -175,7 +215,12 @@ def sammeln(argv):
             if not m:
                 continue
             refname, no = m.group(1).strip(), int(m.group(2))
-            eintrag = stz.get(no)
+            eintrag = stz.get(schluessel.get(r['line'], str(no)))
+            if eintrag and eintrag[0] == 'local':
+                # Der Block gilt in Ortszeit: dann ist die Zone des
+                # Pegels selbst gemeint, nicht eine des ganzen Blocks.
+                z = ortszone(r['lat'], r['lon'])
+                eintrag = (z, eintrag[1]) if z is not None else None
             zr = buch.suche(refz, eintrag[1]) if eintrag else None
             if not eintrag or zr is None or not passt_bezug(eintrag[1], refname, karte):
                 faelle.append((r, refname, no, eintrag[0] if eintrag else None,
