@@ -21,10 +21,22 @@ heisst das
 Wer nur dt addiert, verschiebt jeden Satz um die Zonendifferenz.
 
 Gemessen wird das an unabhaengigen Nachbarn: zu jedem Uebertragungssatz
-wird der naechste Satz unter 3 km gesucht, der selbst keine Uebertragung
-ist (Admiralty, TICON, uTide), und die M2-Phasendifferenz in Stunden
-umgerechnet. Ueber viele Saetze mittelt sich die oertliche Streuung
-heraus, der systematische Anteil bleibt stehen.
+wird der naechste Satz gesucht, der selbst keine Uebertragung ist
+(Admiralty, TICON, uTide), und der Zeitversatz bestimmt, der die eine
+Kurve auf die andere schiebt. Nicht ueber M2 allein -- eine einzelne
+halbtaegige Konstituente laesst offen, ob es sechs Stunden vor oder
+zurueck sind. Gesucht wird deshalb das Delta t, das ueber alle fuenf
+Hauptkonstituenten zugleich passt (Summe der amplitudengewichteten
+Kosinus maximal); K1 und O1 mit ihren tagesperioden brechen die
+Zweideutigkeit. Die Guete daneben sagt, wie sauber die Verschiebung den
+Unterschied erklaert: 1.0 heisst reine Zeitverschiebung, kleine Werte
+heissen, dass die beiden Orte einfach verschiedene Gezeiten haben.
+
+Zwei Nachbarn aus DERSELBEN Uebertragungsfamilie zu vergleichen sagt
+nichts: sie sind skalierte Kopien desselben Bezugsorts. Melkaya Bay
+gegen Salomatova Spit ergibt eine Guete von 1.000 -- und beide sind
+gleich falsch. Verglichen wird deshalb nur gegen Saetze ohne
+Transfervermerk.
 
 Die Kontrollgruppe macht den Befund erst belastbar: die 1201 Saetze, bei
 denen Bezugs- und Nebenort in derselben Zone liegen, streuen um -0.02 h.
@@ -40,7 +52,7 @@ Zonendifferenzen ueber sechs Stunden wird das Bild unruhig -- dort
 stehen zu wenige Paare, und der Wechsel ueber die Datumsgrenze bringt
 eigene Fehler mit. Belastbar ist die Aussage ueber die Gruppe.
 
-Usage: python3 py/transfer_zonen.py [--km 3] [--csv]
+Usage: python3 py/transfer_zonen.py [--km 5] [--guete 0.80] [--csv]
 """
 from __future__ import annotations
 
@@ -55,25 +67,60 @@ import sys
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from health_check import load_records, km, active_files, MERIDIAN     # noqa: E402
+from health_check import load_records, km, active_files, MERIDIAN, SPEED, MAIN  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NAH_KM = 3.0
-M2 = 28.984104
+NAH_KM = 5.0
+MIND_M2 = 0.05       # unter 5 cm M2 traegt der Vergleich nichts
 VERMERK = re.compile(r'transfer from (.+?) \(no\.')
+# Dieselbe Epoche wie in build_noaa_eutt.py: die Baende bilden alte
+# C&GS-Bestaende ab, massgeblich ist die Zone der Tafel-Aera. Marokko
+# etwa rechnet dort mit UTC+0 und steht heute auf UTC+1.
+EPOCHE = dt.datetime(1980, 1, 15, 12)
 
 
 def zonenstunden(name):
-    """-> Normalzeit-Versatz der IANA-Zone in Stunden (ohne Sommerzeit)."""
+    """-> Normalzeit-Versatz der IANA-Zone in Stunden zur Tafel-Epoche."""
     try:
-        z = ZoneInfo(name)
+        return ZoneInfo(name).utcoffset(EPOCHE).total_seconds() / 3600
     except Exception:
         return None
-    for monat in (1, 7):
-        d = dt.datetime(2026, monat, 15, tzinfo=z)
-        if d.dst() == dt.timedelta(0):
-            return d.utcoffset().total_seconds() / 3600
-    return None
+
+
+def passung(a, b, versatz):
+    """Wie gut erklaert eine Verschiebung um `versatz` Stunden den
+    Unterschied zwischen a und b? 1.0 = vollstaendig, 0 = gar nicht."""
+    teile = _teile(a, b)
+    if len(teile) < 3:
+        return None
+    gewicht = sum(w for _s, _d, w in teile)
+    return sum(w * math.cos(d - math.radians(s * versatz))
+               for s, d, w in teile) / gewicht
+
+
+def _teile(a, b):
+    out = []
+    for x in MAIN:
+        za, zb = a['z'][x], b['z'][x]
+        w = min(abs(za), abs(zb))
+        if w >= 0.01:
+            out.append((SPEED[x], (-cmath.phase(za)) - (-cmath.phase(zb)), w))
+    return out
+
+
+def zeitversatz(a, b, spanne=12.0, schritt=1 / 60):
+    """-> (Stunden, um die a spaeter liegt als b; Guete 0..1)."""
+    teile = _teile(a, b)
+    if len(teile) < 3:
+        return None, 0.0
+    gewicht = sum(w for _s, _d, w in teile)
+    best = (-2.0, 0.0)
+    for i in range(int(2 * spanne / schritt) + 1):
+        t = -spanne + i * schritt
+        f = sum(w * math.cos(d - math.radians(s * t)) for s, d, w in teile) / gewicht
+        if f > best[0]:
+            best = (f, t)
+    return best[1], best[0]
 
 
 def vermerke():
@@ -97,6 +144,7 @@ def vermerke():
 
 def main(argv):
     nah = float(argv[argv.index('--km') + 1]) if '--km' in argv else NAH_KM
+    mind_guete = float(argv[argv.index('--guete') + 1]) if '--guete' in argv else 0.80
     info = vermerke()
     recs = [r for r in load_records() if r['lat'] is not None and not r['current']]
     zone = {}
@@ -127,20 +175,21 @@ def main(argv):
     for r, ref, zd in faelle:
         best = None
         for x in frei:
+            if abs(x['z']['M2']) < MIND_M2:
+                continue
             d = km(r, x)
             if d < nah and (best is None or d < best[0]):
                 best = (d, x)
-        versatz = None
-        if best and abs(r['z']['M2']) > 0.05 and abs(best[1]['z']['M2']) > 0.05:
-            dg = (math.degrees(-cmath.phase(r['z']['M2']))
-                  - math.degrees(-cmath.phase(best[1]['z']['M2']))) % 360
-            versatz = (dg - 360 if dg > 180 else dg) / M2
-            gruppen[(os.path.basename(r['file']), round(zd, 1))].append(versatz)
-        zeilen.append((r, ref, zd, best, versatz))
+        versatz = guete = None
+        if best and abs(r['z']['M2']) > MIND_M2:
+            versatz, guete = zeitversatz(r, best[1])
+            if versatz is not None and guete >= mind_guete:
+                gruppen[(os.path.basename(r['file']), round(zd, 1))].append(versatz)
+        zeilen.append((r, ref, zd, best, versatz, guete))
 
     print(f'{len(faelle)} Uebertragungen mit auffindbarem Bezugsort, '
           f'{sum(len(v) for v in gruppen.values())} davon mit unabhaengigem '
-          f'Nachbarn unter {nah:.0f} km\n')
+          f'Nachbarn unter {nah:.0f} km und Guete ueber {mind_guete:.2f}\n')
     print(f'{"Datei":32} {"Zonendiff":>9} {"n":>5} {"Median":>8}  Befund')
     for (f, zd), v in sorted(gruppen.items()):
         v = sorted(v)
@@ -159,13 +208,15 @@ def main(argv):
         p = os.path.join(ROOT, 'harmonics/help/transfer_zonen.csv')
         with open(p, 'w', newline='', encoding='utf-8') as fh:
             w = csv.writer(fh)
-            w.writerow(['datei', 'name', 'bezugsort', 'zonendiff_h',
-                        'nachbar', 'nachbar_km', 'versatz_h'])
-            for r, ref, zd, best, versatz in zeilen:
-                w.writerow([os.path.basename(r['file']), r['name'], ref, f'{zd:+.1f}',
+            w.writerow(['datei', 'name', 'lat', 'lon', 'bezugsort', 'zonendiff_h',
+                        'nachbar', 'nachbar_km', 'versatz_h', 'guete'])
+            for r, ref, zd, best, versatz, guete in zeilen:
+                w.writerow([os.path.basename(r['file']), r['name'],
+                            f'{r["lat"]:.4f}', f'{r["lon"]:.4f}', ref, f'{zd:+.1f}',
                             best[1]['name'] if best else '',
                             f'{best[0]:.1f}' if best else '',
-                            f'{versatz:+.2f}' if versatz is not None else ''])
+                            f'{versatz:+.2f}' if versatz is not None else '',
+                            f'{guete:.2f}' if guete is not None else ''])
         print(f'\n-> {p}')
     return 0
 
