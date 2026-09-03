@@ -12,6 +12,7 @@ Usage: python3 py/saetze_loeschen.py <liste.csv> [--schreiben]
 """
 from __future__ import annotations
 
+import collections
 import datetime as dt
 import os
 import shutil
@@ -103,9 +104,23 @@ def main(argv):
         vorher = sum(1 for k, l in enumerate(lines)
                      if l and not l.startswith('#') and k + 1 < len(lines)
                      and MERIDIAN.match(lines[k + 1]))
+        # Wie oft nennt die Liste denselben Namen in dieser Datei? Steht er
+        # dort mehrfach und die Liste fuehrt ihn genauso oft auf, sind alle
+        # Vorkommen gemeint -- sonst waere ein Satz nicht zu loeschen, der
+        # zweimal mit demselben Namen im selben Bestand steht.
+        wieoft = collections.Counter(n for n, _w in faelle)
+        erledigt = set()
         raus = []
         for name, warum in faelle:
             treffer = [k for k, l in enumerate(lines) if l.rstrip() == name]
+            if len(treffer) > 1 and wieoft[name] == len(treffer):
+                if name in erledigt:
+                    continue
+                erledigt.add(name)
+                for t in treffer:
+                    a, b = block(lines, t)
+                    raus.append((a, b, name, warum))
+                continue
             if len(treffer) > 1:
                 # Der Name bezeichnet den Satz nicht eindeutig -- in
                 # harmonics-2004-06-14_mod steht "Sullivan Bay" zweimal,
