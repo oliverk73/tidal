@@ -45,6 +45,7 @@ import collections
 import csv
 import datetime as dt
 import glob
+import math
 import os
 import re
 import subprocess
@@ -123,7 +124,13 @@ def _lies_csv(pfad):
             if len(f) <= max(zi, wi):
                 continue
             try:
-                out.append((_zeit(f[zi]), float(f[wi]) * faktor))
+                wert = float(f[wi]) * faktor
+                # Die UHSLC-Reihen schreiben Luecken als "nan" -- float()
+                # nimmt das an, und ein einziger davon macht den ganzen
+                # RMS zu nan.
+                if not math.isfinite(wert):
+                    continue
+                out.append((_zeit(f[zi]), wert))
             except (ValueError, TypeError):
                 continue
     out.sort()

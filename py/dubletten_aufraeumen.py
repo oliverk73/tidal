@@ -38,6 +38,7 @@ from __future__ import annotations
 import collections
 import csv
 import glob
+import math
 import os
 import sys
 
@@ -69,6 +70,8 @@ def messungen():
             try:
                 rms = float(r['rms_m'])
             except (KeyError, TypeError, ValueError):
+                continue
+            if not math.isfinite(rms):
                 continue
             hub = None
             try:
