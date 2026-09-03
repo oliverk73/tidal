@@ -62,22 +62,24 @@ MIND_PUNKTE = 2000
 
 
 def kopfdaten():
-    """-> {(datei, zeile): (station_id_context, fitzeitraum)}."""
+    """-> {(datei, zeile): (station_id_context, fitzeitraum, quelle)}."""
     out = {}
     for path in active_files():
         lines = open(os.path.join(ROOT, path), encoding='iso-8859-1').read().split('\n')
-        sid = zeit = None
+        sid = zeit = quelle = None
         for k, line in enumerate(lines):
             if line.startswith('# station_id_context:'):
                 sid = line.split(':', 1)[1].strip()
+            elif line.startswith('# source:'):
+                quelle = line.split(':', 1)[1].strip()
             elif line.startswith('# utide:'):
                 m = re.search(r'period=(\d{4}-\d\d-\d\d)\.\.(\d{4}-\d\d-\d\d)', line)
                 if m:
                     zeit = (m.group(1), m.group(2))
             elif (line and not line.startswith('#') and k + 1 < len(lines)
                   and MERIDIAN.match(lines[k + 1])):
-                out[(path, k + 1)] = (sid, zeit)
-                sid = zeit = None
+                out[(path, k + 1)] = (sid, zeit, quelle or '')
+                sid = zeit = quelle = None
     return out
 
 
@@ -102,10 +104,97 @@ def reihendateien(nur=None):
 
 
 def lies(pfad):
-    """-> [(unixzeit, hoehe_m)] aus CSV oder JMA-Festbreite, nach Zeit sortiert."""
+    """-> [(unixzeit, hoehe_m)], grob von Ausreissern befreit."""
+    return _sauber(_lies(pfad))
+
+
+def _sauber(reihe, spanne=20.0, mindest_m=3.0):
+    """Wirft heraus, was weit ausserhalb der Streuung liegt.
+
+    Die irischen Rohreihen enthalten Spitzen von dreissig Metern --
+    Sensorfehler, die den RMS einer ganzen Station unbrauchbar machen.
+    Gemessen wird an der mittleren absoluten Abweichung vom Median, die
+    ein einzelner Ausreisser nicht verschiebt.
+    """
+    if len(reihe) < 100:
+        return reihe
+    werte = sorted(h for _t, h in reihe)
+    med = werte[len(werte) // 2]
+    mad = sorted(abs(h - med) for h in werte)[len(werte) // 2] or 0.01
+    grenze = max(mindest_m, spanne * mad)
+    return [(t, h) for t, h in reihe if abs(h - med) <= grenze]
+
+
+def _lies(pfad):
     if os.path.basename(os.path.dirname(pfad)).upper().startswith('JMA'):
         return _lies_jma(pfad)
+    if 'bodc' in pfad:
+        return _lies_bodc(pfad)
+    if pfad.endswith('.npz'):
+        return _lies_npz(pfad)
     return _lies_csv(pfad)
+
+
+def _lies_npz(pfad):
+    """Die irischen Reihen liegen als numpy-Archiv mit allem drin."""
+    import numpy as np
+    d = np.load(pfad, allow_pickle=True)
+    t = d['datetimes_utc'].astype('datetime64[s]').astype('int64')
+    h = d['levels_m'].astype(float)
+    gut = np.isfinite(h)
+    return sorted(zip(t[gut].tolist(), h[gut].tolist()))
+
+
+BODC_ZEILE = re.compile(r'^\s*\d+\)\s+(\d{4})/(\d\d)/(\d\d)\s+(\d\d):(\d\d):(\d\d)'
+                        r'\s+(-?[\d.]+)([A-Z]?)\s+(-?[\d.]+)([A-Z]?)')
+
+
+def bodc_kopf(pfad):
+    """-> (Site, lat, lon) aus dem Kopf einer BODC-Datei."""
+    site = lat = lon = None
+    with open(pfad, encoding='iso-8859-1', errors='replace') as fh:
+        for _ in range(12):
+            z = fh.readline()
+            if z.startswith('Site:'):
+                site = z.split(':', 1)[1].strip()
+            elif z.startswith('Latitude:'):
+                lat = float(z.split(':', 1)[1])
+            elif z.startswith('Longitude:'):
+                lon = float(z.split(':', 1)[1])
+    return site, lat, lon
+
+
+def _lies_bodc(pfad):
+    """BODC-Pegelreihe. Gibt den GEZEITENANTEIL zurueck: Wert minus Residuum.
+
+    Die Dateien fuehren neben dem Messwert das Residuum mit, also den
+    nicht-astronomischen Anteil. Zieht man es ab, bleibt die Tide ohne
+    Wind und Luftdruck -- damit misst diese Reihe wie eine Tafel und
+    nicht wie eine Messung, der Sturmboden von zehn bis zwanzig
+    Zentimetern faellt weg.
+
+    Verworfen werden nur Zeilen mit dem Kennbuchstaben N (Luecke) und
+    Werte unter -90.
+    """
+    out = []
+    for zeile in open(pfad, encoding='iso-8859-1', errors='replace'):
+        m = BODC_ZEILE.match(zeile)
+        if not m:
+            continue
+        # Nur 'N' heisst fehlend ("gaps are filled in with null values,
+        # marked with an 'N' flag"); 'M' steht an fast der Haelfte aller
+        # Zeilen und markiert keine Luecke, sondern eine Nachbearbeitung.
+        if 'N' in (m.group(8), m.group(10)):
+            continue
+        wert, rest = float(m.group(7)), float(m.group(9))
+        if wert < -90 or rest < -90:
+            continue
+        t = dt.datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)),
+                        int(m.group(4)), int(m.group(5)), int(m.group(6)),
+                        tzinfo=dt.timezone.utc).timestamp()
+        out.append((t, wert - rest))
+    out.sort()
+    return out
 
 
 def _lies_csv(pfad):
@@ -117,7 +206,21 @@ def _lies_csv(pfad):
                    if 'level' in c or 'water' in c or 'height' in c or 'sea' in c), None)
         if zi is None or wi is None:
             return []
-        faktor = 0.01 if 'cm' in kl[wi] else 1.0
+        # Manche UHSLC-Dateien setzen eine zweite Kopfzeile mit den
+        # Einheiten darunter ("UTC,millimeters,"). Ohne sie werden
+        # Millimeter als Meter gelesen, und der RMS kommt in
+        # Hunderten von Metern heraus statt in Zentimetern.
+        merker = fh.tell()
+        zweite = fh.readline().split(',')
+        einheit = kl[wi]
+        if len(zweite) > wi:
+            try:
+                float(zweite[wi])
+                fh.seek(merker)
+            except ValueError:
+                einheit = zweite[wi].strip().lower() or einheit
+        faktor = 0.001 if einheit.startswith('milli') or einheit == 'mm' else (
+            0.01 if 'cm' in einheit or einheit.startswith('centi') else 1.0)
         out = []
         for zeile in fh:
             f = zeile.rstrip('\n').split(',')
@@ -221,6 +324,46 @@ def messe(obs_t, obs_h, vt, vh):
             versatz, float(d.mean()), float(vh.max() - vh.min()))
 
 
+def bodc_reihen(nur=None):
+    """BODC-Jahresdateien: sie bringen Name und Position selbst mit."""
+    ordner = glob.glob(os.path.join(REIHEN, 'UK', 'bodc*', ''))
+    if nur and nur != 'UK':
+        return []
+    neueste = {}
+    for verzeichnis in ordner:
+        for name in os.listdir(verzeichnis):
+            m = re.match(r'^(\d{4})([A-Z]{3})\.txt$', name)
+            if m and int(m.group(1)) >= neueste.get(m.group(2), (0, ''))[0]:
+                neueste[m.group(2)] = (int(m.group(1)), os.path.join(verzeichnis, name))
+    out = []
+    for _code, (_jahr, pfad) in sorted(neueste.items()):
+        site, lat, lon = bodc_kopf(pfad)
+        if lat is None or lon is None:
+            continue
+        out.append((dict(lat=lat, lon=lon, name=site or os.path.basename(pfad),
+                         file='(BODC)', line=0), pfad, None, 'BODC'))
+    return out
+
+
+def npz_reihen(nur=None):
+    """Reihen im numpy-Format, die Name und Position selbst mitbringen."""
+    import numpy as np
+    out = []
+    for pfad in sorted(glob.glob(os.path.join(REIHEN, '**', '*.npz'), recursive=True)):
+        ordner = os.path.relpath(pfad, REIHEN).split(os.sep)[0]
+        if nur and nur != ordner:
+            continue
+        try:
+            d = np.load(pfad, allow_pickle=True)
+            lat, lon = float(d['latitude']), float(d['longitude'])
+            name = str(d['name'])
+        except Exception:
+            continue
+        out.append((dict(lat=lat, lon=lon, name=name, file=f'({ordner})', line=0),
+                    pfad, None, 'Marine Institute' if 'Ireland' in ordner else ordner))
+    return out
+
+
 def main(argv):
     import numpy as np
     umkreis = float(argv[argv.index('--km') + 1]) if '--km' in argv else 3.0
@@ -233,7 +376,7 @@ def main(argv):
             if r['lat'] is not None and r['lon'] is not None and not r['current']]
     anker = []
     for r in recs:
-        sid, fit = kopf.get((r['file'], r['line']), (None, None))
+        sid, fit, _q = kopf.get((r['file'], r['line']), (None, None, ''))
         if not sid:
             continue
         teile = [t for t in re.split(r'[ \-_]', sid) if t]
@@ -244,7 +387,9 @@ def main(argv):
                     continue
                 pfad = pfad or dateien.get((teile[i].upper(), teile[j].upper()))
         if pfad:
-            anker.append((r, pfad, fit))
+            anker.append((r, pfad, fit, None))
+    anker += bodc_reihen(nur)
+    anker += npz_reihen(nur)
     print(f'{len(anker)} Reihen zugeordnet, Umkreis {umkreis:.0f} km, '
           f'{tage} Tage Fenster', file=sys.stderr)
 
@@ -252,7 +397,7 @@ def main(argv):
     w.writerow(['station', 'lat', 'lon', 'jahr', 'satz', 'datei', 'abstand_m', 'n',
                 'rms_m', 'max_m', 'zeit_min', 'hoehe_off_m', 'hub_m', 'reihe',
                 'eigen', 'ausserhalb'])
-    for nr, (a, pfad, fit) in enumerate(anker, 1):
+    for nr, (a, pfad, fit, anbieter) in enumerate(anker, 1):
         obs = lies(pfad)
         if len(obs) < MIND_PUNKTE:
             print(f'  {os.path.basename(pfad)}: nur {len(obs)} Werte', file=sys.stderr)
@@ -285,12 +430,19 @@ def main(argv):
             if not g:
                 continue
             n, rms, gross, versatz, off, hub = g
+            # "eigen" heisst: dieser Satz stammt aus eben dieser Quelle.
+            # Bei den Ankern ueber station_id_context ist es derselbe
+            # Satz, bei den BODC-Reihen erkennt man es am Quellenvermerk.
+            eigen = 1 if x is a else 0
+            if anbieter and anbieter.lower() in kopf.get(
+                    (x['file'], x['line']), ('', None, ''))[2].lower():
+                eigen = 1
             w.writerow([os.path.basename(pfad), f'{a["lat"]:.4f}', f'{a["lon"]:.4f}',
                         dt.datetime.fromtimestamp(ende, dt.timezone.utc).year,
                         x['name'], os.path.basename(x['file']), round(d * 1000), n,
                         round(rms, 4), round(gross, 3), versatz, round(off, 3),
                         round(hub, 3), os.path.relpath(pfad, REIHEN).split(os.sep)[0],
-                        1 if x is a else 0, ausserhalb])
+                        eigen, ausserhalb])
             sys.stdout.flush()
         if nr % 20 == 0:
             print(f'  {nr}/{len(anker)}', file=sys.stderr, flush=True)

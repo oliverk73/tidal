@@ -51,6 +51,7 @@ GLEICH = 0.10         # ab hier ist es ein Widerspruch, keine Dublette
 MIND_M = 0.03         # so viel mehr RMS muss der Verlierer haben
 FAKTOR = 2.0          # oder so viel mal so viel
 MIND_FAKTOR_M = 0.01  # und dann immer noch diesen Abstand
+UNSINN_M = 1.00       # darueber misst man die Reihe, nicht den Satz
 
 
 def messungen():
@@ -71,7 +72,11 @@ def messungen():
                 rms = float(r['rms_m'])
             except (KeyError, TypeError, ValueError):
                 continue
-            if not math.isfinite(rms):
+            if not math.isfinite(rms) or rms > UNSINN_M:
+                # Ein RMS von hunderten Metern heisst nicht, dass der Satz
+                # schlecht ist, sondern dass die Reihe nicht stimmt --
+                # Millimeter als Meter gelesen etwa. Solche Zeilen duerfen
+                # nichts entscheiden.
                 continue
             hub = None
             try:
