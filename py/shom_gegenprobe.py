@@ -51,7 +51,15 @@ Bezugshafen. Bordeaux ist der Sonderfall: official=1, aber nota=6, und
 der Dienst verweigert es auf jeder Parametervariante, waehrend Le Havre
 antwortet.
 
-Usage: python3 py/shom_gegenprobe.py [--nur CST] [--csv]
+Mit --datei laesst sich derselbe Massstab an eine andere Datei legen.
+Der Anlass dafuer kam aus dieser Pruefung selbst: bei Calais und Dieppe
+hatte XTide den NOAA-Satz statt des SHOM-Satzes gerechnet, und der
+stand +60 und +70 Minuten daneben. Was als Stoerung anfing, ist ein
+eigener Befund -- die Table-2-Uebertragungen an der Kanalkueste lassen
+sich hier gegen das Amt pruefen statt gegen den Nachbarn.
+
+Usage: python3 py/shom_gegenprobe.py [--nur CST] [--csv] [--weit]
+                                     [--datei harmonics_noaa_eutt.txt]
 """
 from __future__ import annotations
 
@@ -73,7 +81,7 @@ URL = 'https://services.data.shom.fr/b2q8lrcdl4s04cbabsj4nhcb/hdm/spm/wl'
 KOPF = {'User-Agent': 'tidal-corpus/1.0 (harmonic constant verification; '
                       'github.com/oliverk73/tidal)',
         'Referer': 'https://maree.shom.fr/'}
-HAEFEN = os.path.join(ROOT, 'water_levels/France_SHOM/shom_harbors.json')
+HAEFEN = os.path.join(ROOT, 'water_levels/France_SHOM/shom_ports_wfs.json')
 REIHEN = os.path.join(ROOT, 'water_levels/France_SHOM_2026')
 OFFEN = os.path.join(ROOT, 'harmonics/help/shom_stunde.csv')
 AUS = os.path.join(ROOT, 'harmonics/help/shom_gegenprobe.csv')
@@ -149,13 +157,37 @@ def vorhersage(name, von, bis):
     return np.array(t), np.array(h)
 
 
+def haefen_liste():
+    """-> {cst: {lat, lon}} der Haefen, die der Dienst wirklich rechnet.
+
+    Die WFS-Liste fuehrt 439 Haefen, aber nur 356 mit official=1. Die
+    uebrigen zeigt SHOM auf der Karte und rechnet sie nicht; ein Abruf
+    endet dort mit 400.
+    """
+    d = json.load(open(HAEFEN, encoding='utf-8'))
+    return {f['properties']['cst']: f['properties'] for f in d['features']
+            if f['properties'].get('official') == 1}
+
+
 def main(argv):
-    haefen = json.load(open(HAEFEN, encoding='utf-8'))
-    recs = {r['name']: r for r in load_records()
-            if 'utide_observations' in r['file']}
-    offen = [r['name'] for r in csv.DictReader(open(OFFEN, encoding='utf-8'))
-             if r['urteil'] in ('widerspruch', 'ohne')]
-    ziele = KONTROLLE + [n for n in offen if n not in KONTROLLE]
+    haefen = haefen_liste()
+    datei = argv[argv.index('--datei') + 1] if '--datei' in argv else None
+    global XTIDE, AUS
+    if datei:
+        XTIDE = os.path.join('/usr/share/xtide', datei[:-4] + '.tcd')
+        AUS = os.path.join(ROOT, 'harmonics/help',
+                           f'shom_gegenprobe_{datei[:-4]}.csv')
+        alle = [r for r in load_records()
+                if datei in r['file'] and r['lat'] is not None
+                and not r['current']]
+        recs = {r['name']: r for r in alle}
+        ziele = sorted(recs)
+    else:
+        recs = {r['name']: r for r in load_records()
+                if 'utide_observations' in r['file']}
+        offen = [r['name'] for r in csv.DictReader(open(OFFEN, encoding='utf-8'))
+                 if r['urteil'] in ('widerspruch', 'ohne')]
+        ziele = KONTROLLE + [n for n in offen if n not in KONTROLLE]
 
     zeilen = []
     for name in ziele:

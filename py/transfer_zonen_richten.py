@@ -182,17 +182,29 @@ def _tz_std(name, epoche=dt.datetime(1980, 1, 15, 12)):
         return None
 
 
-def angewandt(r, refrec):
-    """Zonendifferenz, die build_noaa_eutt.py schon abgezogen hat."""
-    from timezonefinder import TimezoneFinder
-    global _TF
-    try:
-        _TF
-    except NameError:
-        _TF = TimezoneFinder()
-    a = _tz_std(_TF.timezone_at(lat=r['lat'], lng=r['lon']) or '')
-    b = _tz_std(_TF.timezone_at(lat=refrec['lat'], lng=refrec['lon']) or '') if refrec else None
-    return (a - b) if (a is not None and b is not None) else 0.0
+def angewandt(r, refrec, dt_buch=None):
+    """Zonendifferenz, die der Erbauer wirklich abgezogen hat -- gemessen.
+
+    Hier stand bis zum 04.09.2026 eine Unterstellung: die Zonendifferenz
+    zwischen den heutigen IANA-Zonen von Satz und Bezugsort, in der
+    Annahme, build_noaa_eutt.py habe genau die abgezogen. Damit wurde der
+    Fehler unsichtbar, wo er auftritt -- fuer Calais rechnete das Werkzeug
+    zd 1.00 minus angewandt 1.00 gleich null und liess den Satz in Ruhe,
+    waehrend der Satz gegen die SHOM-Vorhersage eine volle Stunde zu spaet
+    lag.
+
+    Gemessen wird stattdessen am Satz selbst: der Zeitabstand zum
+    Bezugssatz minus der Differenz, die das Buch druckt. Ist die
+    Zonendifferenz abgezogen worden, bleibt sie stehen; ist sie es nicht,
+    kommt null heraus. Fuer Calais gegen Dover misst sich +76 min bei
+    einem Buchwert von +72 -- die Korrektur ist nie gelaufen.
+    """
+    if refrec is None or dt_buch is None:
+        return 0.0
+    v, guete = zeitversatz(r, refrec)
+    if v is None or guete < MIND_GUETE:
+        return 0.0
+    return round(dt_buch - v, 2)
 
 
 def sammeln(argv):
@@ -244,7 +256,11 @@ def sammeln(argv):
                                zr, None, None, (None, None, None, None)))
                 continue
             zd = round(eintrag[0] - zr, 2)
-            weg = round(angewandt(r, nach_name.get(refname)), 2) if schon else 0.0
+            dtb = None
+            mdt = re.search(r'dt=([-+]?\d+)min', note)
+            if mdt:
+                dtb = int(mdt.group(1)) / 60.0
+            weg = round(angewandt(r, nach_name.get(refname), dtb), 2) if schon else 0.0
             fehler = round(zd - weg, 2)
             best = None
             if abs(r['z']['M2']) >= MIND_M2:
