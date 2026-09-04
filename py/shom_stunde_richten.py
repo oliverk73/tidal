@@ -42,7 +42,13 @@ also nicht alle Reihen gleich behandelt; py/download_shom_refmar.py
 ersetzt HF-Dateien durch nachtraeglich gepruefte, und wo das gelang,
 stimmt die Zeit.
 
+Wo auch der Zwilling fehlt, entscheidet das Amt selbst:
+py/shom_gegenprobe.py holt die SHOM-Vorhersage und misst unseren Satz
+dagegen. Mit --gegenprobe werden die Saetze gedreht, deren gemessener
+Versatz dort zwischen 45 und 75 Minuten liegt.
+
 Usage: python3 py/shom_stunde_richten.py [--csv] [--schreiben]
+                                         [--gegenprobe]
 """
 from __future__ import annotations
 
@@ -64,6 +70,8 @@ from pegel_dubletten import vermerke                              # noqa: E402
 DATEI = 'harmonics/utide/harmonics_utide_observations.txt'
 BACKUP = os.path.join(ROOT, 'harmonics/backup')
 AUS = os.path.join(ROOT, 'harmonics/help/shom_stunde.csv')
+GEGEN = os.path.join(ROOT, 'harmonics/help/shom_gegenprobe.csv')
+GEGEN_MIN, GEGEN_MAX = 45, 75   # Minuten, in denen es die fehlende Stunde ist
 
 STUNDE = 1.00        # so viel wird abgezogen
 NAH_KM = 15.0
@@ -120,6 +128,36 @@ def _messen(r, kandidaten):
     return (statistics.median(m), len(m), max(m) - min(m), len(dateien), werte)
 
 
+def gegenprobe(recs):  # noqa: C901
+    """-> Saetze, die die SHOM-Vorhersage um rund eine Stunde verfehlen."""
+    if not os.path.exists(GEGEN):
+        sys.exit(f'{GEGEN} fehlt -- erst python3 py/shom_gegenprobe.py --csv')
+    # Bei doppeltem Namen den SHOM-Satz nehmen, nicht irgendeinen: in
+    # Fort-de-France und Pointe-a-Pitre steht neben dem SHOM-Satz noch
+    # einer aus UHSLC an derselben Stelle, und die beiden liegen genau
+    # eine Stunde auseinander.
+    komm = vermerke()
+    nach_name = {}
+    for r in recs:
+        alt = nach_name.get(r['name'])
+        if alt is None or ('SHOM' in komm.get((r['file'], r['line']), '')
+                           and 'SHOM' not in komm.get((alt['file'], alt['line']), '')):
+            nach_name[r['name']] = r
+    out = []
+    for row in csv.DictReader(open(GEGEN, encoding='utf-8')):
+        try:
+            v = float(row['versatz_min'])
+        except (TypeError, ValueError):
+            continue
+        r = nach_name.get(row['name'])
+        if r is None or DATEI not in r['file']:
+            continue
+        if GEGEN_MIN <= v <= GEGEN_MAX:
+            out.append((r, row['shom_hafen'],
+                        (v / 60.0, 1, 0.0, 1, [], f'SHOM {row["shom_hafen"]}')))
+    return out
+
+
 def main(argv):
     recs = [r for r in load_records()
             if r['lat'] is not None and r['lon'] is not None and not r['current']]
@@ -174,6 +212,13 @@ def main(argv):
                                 e[3] if e else '', f'{e[2]:.2f}' if e else '',
                                 e[4][0][1]['name'] if e else ''])
         print(f'-> {os.path.relpath(AUS, ROOT)}')
+
+    if '--gegenprobe' in argv:
+        richten = gegenprobe(recs)
+        print(f'\nGegenprobe am Amt: {len(richten)} Saetze verfehlen die '
+              f'SHOM-Vorhersage um {GEGEN_MIN}-{GEGEN_MAX} min')
+        for r, hafen, e in sorted(richten, key=lambda x: x[0]['name']):
+            print(f'  {e[0] * 60:+4.0f} min  {r["name"][:44]:44s} gegen {hafen}')
 
     if '--schreiben' in argv:
         schreiben(richten)
