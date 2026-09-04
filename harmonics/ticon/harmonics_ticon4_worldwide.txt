@@ -43583,12 +43583,16 @@ x 0 0
 # ptwc_code: cher
 # sonel_gps_id: 3182, 3183, 3535
 # sonel_tg_id: 1748
-# !units: knots
+# note: 20260904 Etikett berichtigt: der Satz stand als Stroemung in Knoten,
+# note: traegt aber Meereshoehen. TICON-4 ist eine harmonische Analyse von
+# note: GESLA-4-Pegelreihen und enthaelt keine Stroeme; die Kopfzeilen nennen
+# note: psmsl_id und das Hoehendatum NAP bzw. IGN69. Siehe py/health_check.py.
+# !units: meters
 # !longitude: -1.635508
 # !latitude: 49.651447
-Cherbourg-en-Cotentin, France Current
+Cherbourg-en-Cotentin, France
 +00:00 :Europe/Paris
-0.0000 knots
+0.0000 meters
 J1              0.0051  189.12
 K1              0.0931  106.59
 K2              0.1981  270.12
@@ -51114,12 +51118,16 @@ x 0 0
 # ssc_id: SSC-delf
 # ioc_code: delf
 # psmsl_id: 24
-# !units: knots
+# note: 20260904 Etikett berichtigt: der Satz stand als Stroemung in Knoten,
+# note: traegt aber Meereshoehen. TICON-4 ist eine harmonische Analyse von
+# note: GESLA-4-Pegelreihen und enthaelt keine Stroeme; die Kopfzeilen nennen
+# note: psmsl_id und das Hoehendatum NAP bzw. IGN69. Siehe py/health_check.py.
+# !units: meters
 # !longitude: 6.933123
 # !latitude: 53.326353
-Delfzijl, Netherlands Current
+Delfzijl, Netherlands
 +00:00 :Europe/Amsterdam
-0.0000 knots
+0.0000 meters
 J1              0.0019  124.21
 K1              0.0742  26.33
 K2              0.0996  13.54
@@ -75085,12 +75093,16 @@ x 0 0
 # ssc_id: SSC-harl
 # ioc_code: harl
 # psmsl_id: 25
-# !units: knots
+# note: 20260904 Etikett berichtigt: der Satz stand als Stroemung in Knoten,
+# note: traegt aber Meereshoehen. TICON-4 ist eine harmonische Analyse von
+# note: GESLA-4-Pegelreihen und enthaelt keine Stroeme; die Kopfzeilen nennen
+# note: psmsl_id und das Hoehendatum NAP bzw. IGN69. Siehe py/health_check.py.
+# !units: meters
 # !longitude: 5.409342
 # !latitude: 53.175632
-Harlingen, Netherlands Current
+Harlingen, Netherlands
 +00:00 :Europe/Amsterdam
-0.0000 knots
+0.0000 meters
 J1              0.0033  95.97
 K1              0.0741  22.36
 K2              0.0636  321.91
@@ -80226,12 +80238,16 @@ x 0 0
 # ssc_id: SSC-hoek
 # ioc_code: hoek
 # psmsl_id: 22
-# !units: knots
+# note: 20260904 Etikett berichtigt: der Satz stand als Stroemung in Knoten,
+# note: traegt aber Meereshoehen. TICON-4 ist eine harmonische Analyse von
+# note: GESLA-4-Pegelreihen und enthaelt keine Stroeme; die Kopfzeilen nennen
+# note: psmsl_id und das Hoehendatum NAP bzw. IGN69. Siehe py/health_check.py.
+# !units: meters
 # !longitude: 4.119881
 # !latitude: 51.977572
-Hoek Van Holland, Netherlands Current
+Hoek van Holland, Netherlands
 +00:00 :Europe/Amsterdam
-0.0000 knots
+0.0000 meters
 J1              0.0034  57.88
 K1              0.0752  345.88
 K2              0.0574  117.88
