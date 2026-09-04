@@ -45,6 +45,7 @@ import collections
 import csv
 import datetime as dt
 import glob
+import json
 import math
 import os
 import re
@@ -140,7 +141,13 @@ def _lies_npz(pfad):
     import numpy as np
     d = np.load(pfad, allow_pickle=True)
     t = d['datetimes_utc'].astype('datetime64[s]').astype('int64')
-    h = d['levels_m'].astype(float)
+    # Die irischen Reihen fuehren Meter, die deutschen Zentimeter.
+    if 'levels_m' in d:
+        h = d['levels_m'].astype(float)
+    elif 'levels_cm' in d:
+        h = d['levels_cm'].astype(float) / 100.0
+    else:
+        return []
     gut = np.isfinite(h)
     return sorted(zip(t[gut].tolist(), h[gut].tolist()))
 
@@ -346,9 +353,25 @@ def bodc_reihen(nur=None):
 
 
 def npz_reihen(nur=None):
-    """Reihen im numpy-Format, die Name und Position selbst mitbringen."""
+    """Reihen im numpy-Format.
+
+    Die meisten bringen Name und Position selbst mit. Die deutschen
+    PEGELONLINE-Reihen nicht: sie enthalten nur datetimes_utc und
+    levels_cm, und damit fielen alle 99 aus jeder Guetepruefung heraus --
+    genau der Bestand, in dem die TICON-Saetze 38 Minuten zu spaet
+    liegen. Fuer solche Ordner liegt die Zuordnung als
+    npz_stationen.json daneben, einmal von Hand geprueft, statt bei
+    jedem Lauf neu geraten.
+    """
     import numpy as np
     out = []
+    beiblatt = {}
+    for pfad in glob.glob(os.path.join(REIHEN, '*', 'npz_stationen.json')):
+        ordner = os.path.relpath(pfad, REIHEN).split(os.sep)[0]
+        try:
+            beiblatt[ordner] = json.load(open(pfad, encoding='utf-8'))
+        except Exception:
+            pass
     for pfad in sorted(glob.glob(os.path.join(REIHEN, '**', '*.npz'), recursive=True)):
         ordner = os.path.relpath(pfad, REIHEN).split(os.sep)[0]
         if nur and nur != ordner:
@@ -358,7 +381,10 @@ def npz_reihen(nur=None):
             lat, lon = float(d['latitude']), float(d['longitude'])
             name = str(d['name'])
         except Exception:
-            continue
+            e = beiblatt.get(ordner, {}).get(os.path.basename(pfad)[:-4])
+            if not e:
+                continue
+            lat, lon, name = float(e['lat']), float(e['lon']), e['name']
         out.append((dict(lat=lat, lon=lon, name=name, file=f'({ordner})', line=0),
                     pfad, None, 'Marine Institute' if 'Ireland' in ordner else ordner))
     return out
