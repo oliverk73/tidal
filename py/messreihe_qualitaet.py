@@ -352,6 +352,35 @@ def bodc_reihen(nur=None):
     return out
 
 
+def beiblatt_reihen(nur=None):
+    """Reihen, die ein stationen.json neben sich haben.
+
+    Der Hauptweg ist satzgetrieben: eine Reihe wird nur gelesen, wenn
+    ein Satz sie in station_id_context nennt. Damit lagen 2694 von 4659
+    Dateien brach -- allein die kanadischen Provinzordner fuehren 1007
+    Reihen, von denen zehn ankamen. Wo ein Beiblatt Position und Name
+    liefert, geht es auch ohne Namensnennung: gesucht wird dann wie bei
+    den npz-Reihen ueber die Lage.
+    """
+    out = []
+    for pfad in sorted(glob.glob(os.path.join(REIHEN, '*', 'stationen.json'))):
+        ordner = os.path.relpath(pfad, REIHEN).split(os.sep)[0]
+        if nur and nur != ordner:
+            continue
+        try:
+            eintraege = json.load(open(pfad, encoding='utf-8'))
+        except Exception:
+            continue
+        for datei, e in sorted(eintraege.items()):
+            voll = os.path.join(REIHEN, ordner, datei)
+            if not os.path.exists(voll):
+                continue
+            out.append((dict(lat=float(e['lat']), lon=float(e['lon']),
+                             name=e.get('name', datei), file=f'({ordner})', line=0),
+                        voll, None, ordner))
+    return out
+
+
 def npz_reihen(nur=None):
     """Reihen im numpy-Format.
 
@@ -416,6 +445,7 @@ def main(argv):
             anker.append((r, pfad, fit, None))
     anker += bodc_reihen(nur)
     anker += npz_reihen(nur)
+    anker += beiblatt_reihen(nur)
     print(f'{len(anker)} Reihen zugeordnet, Umkreis {umkreis:.0f} km, '
           f'{tage} Tage Fenster', file=sys.stderr)
 

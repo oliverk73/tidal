@@ -30,7 +30,14 @@ Das Ergebnis liegt als npz_stationen.json neben den Reihen und wird von
 py/messreihe_qualitaet.py gelesen. Es steht bewusst dort und nicht im
 Baum: water_levels ist nicht versioniert, dieses Skript schon.
 
+Fuer Ordner mit CSV-Reihen und einem Stationskatalog daneben schreibt
+--katalog dasselbe Beiblatt unter dem Namen stationen.json. Die
+kanadischen Ordner fuehren je Provinz ein _xx_stations.json mit Code,
+Name und Koordinaten, und die Reihen heissen <Code>_<Name>_wlp.csv --
+1136 Dateien, von denen bisher zehn gelesen wurden.
+
 Usage: python3 py/npz_stationen_bauen.py [Ordner]     (Vorgabe: Germany)
+       python3 py/npz_stationen_bauen.py --katalog [Ordner ...]
 """
 from __future__ import annotations
 
@@ -118,7 +125,52 @@ def _lies_info(text):
     return nr, name
 
 
+def katalog(ordner):
+    """Beiblatt aus einem Stationskatalog neben den CSV-Reihen.
+
+    Erwartet eine JSON-Liste mit code/name/lat/lon und Reihen, deren
+    Dateiname mit dem Code beginnt. Genau so liegen die kanadischen
+    Provinzordner.
+    """
+    basis = os.path.join(REIHEN, ordner)
+    kataloge = glob.glob(os.path.join(basis, '_*_stations.json'))
+    if not kataloge:
+        return 0, 0
+    eintraege = []
+    for k in kataloge:
+        try:
+            eintraege += json.load(open(k, encoding='utf-8'))
+        except Exception:
+            pass
+    nach_code = {str(e['code']): e for e in eintraege
+                 if e.get('lat') is not None and e.get('lon') is not None}
+    out, dateien = {}, glob.glob(os.path.join(basis, '*.csv'))
+    for pfad in dateien:
+        n = os.path.basename(pfad)
+        code = n.split('_', 1)[0]
+        e = nach_code.get(code)
+        if not e:
+            continue
+        out[n] = dict(lat=round(float(e['lat']), 5), lon=round(float(e['lon']), 5),
+                      name=f"{e.get('name', code)} ({ordner} {code})")
+    if out:
+        json.dump(out, open(os.path.join(basis, 'stationen.json'), 'w',
+                            encoding='utf-8'), ensure_ascii=False, indent=1)
+    return len(out), len([d for d in dateien if not os.path.basename(d).startswith('_')])
+
+
 def main(argv):
+    if '--katalog' in argv:
+        ordner = [a for a in argv if not a.startswith('--')]
+        if not ordner:
+            ordner = sorted(d for d in os.listdir(REIHEN)
+                            if os.path.isdir(os.path.join(REIHEN, d))
+                            and glob.glob(os.path.join(REIHEN, d, '_*_stations.json')))
+        for o in ordner:
+            n, gesamt = katalog(o)
+            if gesamt:
+                print(f'  {o:24s} {n:5} von {gesamt:5} Reihen -> stationen.json')
+        return 0
     ordner = argv[0] if argv else 'Germany'
     la1, la2, lo1, lo2 = KASTEN.get(ordner, (-90, 90, -180, 180))
     try:
