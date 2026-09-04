@@ -22,8 +22,8 @@ dieselbe Tafel.
 
 Geloescht wird ein Satz nur, wenn er DEUTLICH schlechter ist:
 mindestens drei Zentimeter mehr RMS, oder doppelt so viel bei
-mindestens einem Zentimeter Unterschied -- oder mindestens zwanzig
-Minuten mehr Zeitfehler.
+mindestens einem Zentimeter Unterschied -- oder deutlich mehr
+Zeitfehler.
 
 Die Zeit musste dazu, weil der RMS sie kaum sieht. In Helgoland liegt
 der TICON-Satz vierzig Minuten zu spaet, und im RMS macht das 31.0
@@ -85,7 +85,12 @@ FAKTOR = 2.0          # oder so viel mal so viel
 MIND_FAKTOR_M = 0.01  # und dann immer noch diesen Abstand
 UNSINN_M = 1.00       # darueber misst man die Reihe, nicht den Satz
 TAUB = 0.25           # liegt schon der Sieger so weit daneben, taugt die Reihe nicht
-MIND_MIN = 20         # so viele Minuten mehr Zeitfehler machen einen Satz schlechter
+MIND_MIN = 25         # so viele Minuten mehr Zeitfehler machen einen Satz schlechter
+# Die Zahl haengt an der Aufloesung: py/messreihe_qualitaet.py sucht den
+# Zeitversatz in Zehn-Minuten-Schritten. Bei einer Schwelle von genau 20
+# entscheiden zwei Rasterschritte, und ein Satz mit wahren 15 Minuten
+# faellt schon. 25 verlangt drei Schritte -- der erste Wert, der zaehlt,
+# ist 30.
 
 
 def messungen():
