@@ -86,6 +86,7 @@ MIND_FAKTOR_M = 0.01  # und dann immer noch diesen Abstand
 UNSINN_M = 1.00       # darueber misst man die Reihe, nicht den Satz
 TAUB = 0.25           # liegt schon der Sieger so weit daneben, taugt die Reihe nicht
 MIND_MIN = 25         # so viele Minuten mehr Zeitfehler machen einen Satz schlechter
+SPRUNG_MIN = 240      # darueber ist es ein Periodensprung, kein Uhrfehler
 # Die Zahl haengt an der Aufloesung: py/messreihe_qualitaet.py sucht den
 # Zeitversatz in Zehn-Minuten-Schritten. Bei einer Schwelle von genau 20
 # entscheiden zwei Rasterschritte, und ein Satz mit wahren 15 Minuten
@@ -224,6 +225,12 @@ def zeitlich_schlechter(zeit, best):
     innerhalb der Schwelle, entscheidet die Zeit nichts.
     """
     if zeit is None or best is None or abs(best) > MIND_MIN:
+        return False
+    if abs(zeit) > SPRUNG_MIN:
+        # Jenseits von vier Stunden ist es kein Uhrfehler mehr, sondern ein
+        # halber Periodensprung: Sorel am Sankt-Lorenz-Strom misst -720
+        # Minuten, also genau zwoelf Stunden. Solche Werte entscheiden
+        # nichts -- wenn der Satz wirklich schlecht ist, sagt es der RMS.
         return False
     return abs(zeit) - abs(best) >= MIND_MIN
 
