@@ -72,6 +72,14 @@ BACKUP = os.path.join(ROOT, 'harmonics/backup')
 AUS = os.path.join(ROOT, 'harmonics/help/shom_stunde.csv')
 GEGEN = os.path.join(ROOT, 'harmonics/help/shom_gegenprobe.csv')
 GEGEN_MIN, GEGEN_MAX = 45, 75   # Minuten, in denen es die fehlende Stunde ist
+# Liegt der SHOM-Hafen flussabwaerts, kommt zur Stunde die Laufzeit dazu.
+# An der Adour zeigen die drei Saetze +70, +90 und +100 min bei 4.4, 6.4
+# und 11.3 km -- ein Reststau, der monoton mit der Entfernung waechst,
+# waehrend Boucau-Bayonne an der Muendung (0.01 km) genau +60 zeigte.
+# Deshalb bis 105 min, aber nur wenn der Rest zur Entfernung passt.
+WEIT_MAX = 105
+WEIT_KM = 12.0
+MIN_JE_KM = 5.0
 
 STUNDE = 1.00        # so viel wird abgezogen
 NAH_KM = 15.0
@@ -152,9 +160,17 @@ def gegenprobe(recs):  # noqa: C901
         r = nach_name.get(row['name'])
         if r is None or DATEI not in r['file']:
             continue
-        if GEGEN_MIN <= v <= GEGEN_MAX:
+        try:
+            d = float(row['abstand_km'])
+        except (TypeError, ValueError):
+            d = 0.0
+        passt = GEGEN_MIN <= v <= GEGEN_MAX or (
+            GEGEN_MAX < v <= WEIT_MAX and d <= WEIT_KM
+            and (v - 60) <= MIN_JE_KM * d)
+        if passt:
             out.append((r, row['shom_hafen'],
-                        (v / 60.0, 1, 0.0, 1, [], f'SHOM {row["shom_hafen"]}')))
+                        (v / 60.0, 1, 0.0, 1, [],
+                         f'SHOM {row["shom_hafen"]} in {d:.1f} km')))
     return out
 
 

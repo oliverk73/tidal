@@ -29,6 +29,28 @@ Die Reihen werden unter water_levels/France_SHOM_2026/ abgelegt und bei
 einem zweiten Lauf von dort gelesen -- der Dienst wird nicht zweimal
 gefragt. Zwischen zwei Abrufen liegen drei Sekunden.
 
+Die Schnittstelle steht nicht in einer Dokumentation, sondern im
+Ember-Konfigurationsblock, den maree.shom.fr als meta-Tag ausliefert
+(name="shom-horaires-des-marees/config/environment", url-kodiert):
+
+    hdmServiceUrl  https://services.data.shom.fr/b2q8lrcdl4s04cbabsj4nhcb/hdm
+    wlEndpoint     /spm/wl      Pegelkurve, braucht nbWaterLevels
+    hltEndpoint    /spm/hlt     Hoch- und Niedrigwasser, braucht correlation
+    coeffEndpoint  /spm/coeff   Koeffizienten
+    wfsHarborUrl   die Hafenliste als WFS, hier als shom_ports_wfs.json
+
+Ohne correlation antwortet /spm/hlt mit 400 -- daran war ein erster
+Versuch gescheitert, der den Endpunkt fuer nicht vorhanden hielt.
+
+Die Hafenliste erklaert auch, warum ein Teil der Flussstationen gar
+nicht zu holen ist: Le Marquis, Cordemais, Le Pellerin, Montoir,
+Nantes, Fatouville, Rochefort und Le Chapus stehen zwar in der Liste,
+haben dort aber official=None und ut=None -- SHOM zeigt sie auf der
+Karte und rechnet sie nicht, sie haengen ueber ch_ref an einem
+Bezugshafen. Bordeaux ist der Sonderfall: official=1, aber nota=6, und
+der Dienst verweigert es auf jeder Parametervariante, waehrend Le Havre
+antwortet.
+
 Usage: python3 py/shom_gegenprobe.py [--nur CST] [--csv]
 """
 from __future__ import annotations
@@ -65,6 +87,9 @@ START = dt.date(2026, 6, 1)
 TAGE = 30
 PAUSE = 3.0
 NAH_KM = 2.0         # weiter weg ist es im Fluss ein anderer Pegel
+WEIT_KM = 12.0       # fuer die reine Stundenfrage reicht auch das:
+                     # ueber zwoelf Flusskilometer laeuft die Welle
+                     # zwanzig bis vierzig Minuten, nie sechzig
 KONTROLLE = ['Brest (Estuaire Penfeld), France', 'Bourcefranc-le-Chapus, France']
 
 
@@ -141,7 +166,8 @@ def main(argv):
                          key=lambda kv: km(rec, {'lat': kv[1]['lat'],
                                                  'lon': kv[1]['lon']}))
         d = km(rec, {'lat': hafen['lat'], 'lon': hafen['lon']})
-        if d > NAH_KM:
+        grenze = WEIT_KM if '--weit' in argv else NAH_KM
+        if d > grenze:
             zeilen.append((None, d, name, cst, 'zu weit'))
             continue
         if '--nur' in argv and argv[argv.index('--nur') + 1] != cst:
