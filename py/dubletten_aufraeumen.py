@@ -22,7 +22,22 @@ dieselbe Tafel.
 
 Geloescht wird ein Satz nur, wenn er DEUTLICH schlechter ist:
 mindestens drei Zentimeter mehr RMS, oder doppelt so viel bei
-mindestens einem Zentimeter Unterschied. Die drei Zentimeter sind
+mindestens einem Zentimeter Unterschied -- oder mindestens zwanzig
+Minuten mehr Zeitfehler.
+
+Die Zeit musste dazu, weil der RMS sie kaum sieht. In Helgoland liegt
+der TICON-Satz vierzig Minuten zu spaet, und im RMS macht das 31.0
+gegen 29.8 Zentimeter: gut ein Zentimeter, weit unter jeder Schwelle.
+Der Grund ist der Windstau, der in der Deutschen Bucht dreissig
+Zentimeter ausmacht und den Zeitfehler unter sich begraebt. Dasselbe
+bei Arica, wo ein um den Faktor 2.4 falsches S2 im RMS nur 1.1
+Zentimeter kostete. Der Zeitversatz steht ohnehin in jeder Zeile der
+Guetetabellen; er war nur nie gelesen worden.
+
+Die Zeit schuetzt auch: liegt der Verlierer zwanzig Minuten NAEHER an
+der Reihe als der Sieger, bleibt er stehen, egal was der RMS sagt.
+Sonst loescht die Runde den puenktlichen Satz zugunsten eines
+glatteren. Die drei Zentimeter sind
 dieselbe Untergrenze wie in py/tafel_kaputt.py -- darunter misst man
 die Tafel, nicht den Satz.
 
@@ -70,6 +85,7 @@ FAKTOR = 2.0          # oder so viel mal so viel
 MIND_FAKTOR_M = 0.01  # und dann immer noch diesen Abstand
 UNSINN_M = 1.00       # darueber misst man die Reihe, nicht den Satz
 TAUB = 0.25           # liegt schon der Sieger so weit daneben, taugt die Reihe nicht
+MIND_MIN = 20         # so viele Minuten mehr Zeitfehler machen einen Satz schlechter
 
 
 def messungen():
@@ -106,11 +122,16 @@ def messungen():
                 gross = float(r['max_m'])
             except (KeyError, TypeError, ValueError):
                 pass
+            zeit = None
+            try:
+                zeit = float(r['zeit_min'])
+            except (KeyError, TypeError, ValueError):
+                pass
             eigen = r.get('eigen') == '1'
             draussen = r.get('ausserhalb', 'nein') == 'ja'
             out[(r.get('satz', ''), r.get('datei', ''))].append(
                 (r.get('station', ''), r.get('jahr', ''), quelle, rms, gross, hub,
-                 eigen and not draussen, eigen and draussen))
+                 eigen and not draussen, eigen and draussen, zeit))
     return out
 
 
@@ -187,6 +208,21 @@ def haufen_gruppen(recs):
     return out
 
 
+def zeitlich_schlechter(zeit, best):
+    """Liegt der Satz deutlich weiter von der Reihe entfernt als der Sieger?
+
+    Der Vergleich taugt nur, wenn der Sieger selbst nahe an der Reihe
+    liegt. In Jamestown auf St. Helena messen sich -490 und -440 Minuten:
+    beide Saetze sind gleich unbrauchbar, und die fuenfzig Minuten
+    Unterschied dazwischen sind Rauschen einer Reihe, in der die
+    Versatzsuche um halbe Perioden springt. Steht der Sieger nicht selbst
+    innerhalb der Schwelle, entscheidet die Zeit nichts.
+    """
+    if zeit is None or best is None or abs(best) > MIND_MIN:
+        return False
+    return abs(zeit) - abs(best) >= MIND_MIN
+
+
 def deutlich_schlechter(rms, best, nur_absolut=False):
     """Ist der Satz gegenueber dem besten deutlich schlechter?
 
@@ -222,26 +258,31 @@ def main(argv):
         # dieselbe Station im selben Jahr gemessen wurde, ist vergleichbar.
         nach_tabelle = collections.defaultdict(dict)
         for r in menge:
-            for station, jahr, quelle, rms, gross, hub, blind, halbblind in mess.get(
-                    (r['name'], os.path.basename(r['file'])), ()):
+            for (station, jahr, quelle, rms, gross, hub, blind, halbblind,
+                 zeit) in mess.get((r['name'], os.path.basename(r['file'])), ()):
                 nach_tabelle[(quelle, station, jahr)][id(r)] = (rms, gross, hub,
-                                                                blind, halbblind)
+                                                                blind, halbblind,
+                                                                zeit)
         vergleichbar = {k: v for k, v in nach_tabelle.items() if len(v) == len(menge)}
         if not vergleichbar:
             ohne.append((name, menge))
             continue
         # Mehrere Jahre derselben Tafel: den Median je Satz nehmen.
         werte = collections.defaultdict(list)
+        zeiten = collections.defaultdict(list)
         blind = collections.defaultdict(bool)
         halb = collections.defaultdict(bool)
         hub = None
         for k, v in vergleichbar.items():
-            for i, (rms, _gross, h, b, hb) in v.items():
+            for i, (rms, _gross, h, b, hb, zt) in v.items():
                 werte[i].append(rms)
+                if zt is not None:
+                    zeiten[i].append(zt)
                 blind[i] = blind[i] or b
                 halb[i] = halb[i] or hb
                 hub = hub or h
         med = {i: sorted(v)[len(v) // 2] for i, v in werte.items()}
+        zmed = {i: sorted(v)[len(v) // 2] for i, v in zeiten.items() if v}
         # Wer auf der Reihe trainiert hat, ist kein Massstab und wird auch
         # nicht geloescht. Verglichen wird gegen den besten der uebrigen --
         # sonst faellt eine ganze Dreiergruppe aus, nur weil einer davon
@@ -261,10 +302,18 @@ def main(argv):
             continue
         if len(frei) < len(menge):
             zirkulaer.append((name, [r for r in menge if blind[id(r)]]))
+        zbest = zmed.get(id(sieger))
         for v in frei:
             if v is sieger:
                 continue
-            if not deutlich_schlechter(med[id(v)], best, halb[id(sieger)]):
+            zv = zmed.get(id(v))
+            if zeitlich_schlechter(zbest, zv):
+                # Der Verlierer trifft die Reihe zeitlich deutlich besser als
+                # der Sieger. Dann ist der RMS kein Urteil, sondern ein
+                # Zufall der Reihe -- beide bleiben.
+                gleichauf.append((v, sieger, med[id(v)], best, hub))
+            elif (not deutlich_schlechter(med[id(v)], best, halb[id(sieger)])
+                    and not zeitlich_schlechter(zv, zbest)):
                 gleichauf.append((v, sieger, med[id(v)], best, hub))
             elif meta['beleg'] == 'nur abgeleitet' and id(v) not in meta['abgeleitet']:
                 # Die Gruppe haelt nur zusammen, weil einer der Saetze eine
@@ -274,7 +323,7 @@ def main(argv):
                 gleichauf.append((v, sieger, med[id(v)], best, hub))
             else:
                 weg.append((v, sieger, med[id(v)], best, hub, len(vergleichbar),
-                            meta))
+                            meta, zv, zbest))
 
     print(f'{len(weg)} Saetze sind an der Tafel deutlich schlechter und koennen weg')
     if taub:
@@ -291,7 +340,8 @@ def main(argv):
     for k, n in d.most_common():
         print(f'{k[:42]:42} {n:6}')
     print(f'\nBeispiele:')
-    for v, s, rms, best, hub, n, _meta in sorted(weg, key=lambda x: -(x[2] - x[3]))[:12]:
+    for v, s, rms, best, hub, n, _meta, _zv, _zb in sorted(
+            weg, key=lambda x: -(x[2] - x[3]))[:12]:
         h = f'{(rms - best) / hub * 100:4.1f} % Hub' if hub else '   ?'
         print(f'  {v["name"][:34]:34} {rms * 100:6.1f} cm gegen {best * 100:5.1f} cm '
               f'({h})  {os.path.basename(v["file"])[:24]} raus, '
@@ -308,7 +358,7 @@ def main(argv):
         with open(p, 'w', newline='', encoding='utf-8') as fh:
             w = csv.writer(fh)
             w.writerow(['datei', 'name', 'fehler_prozent', 'begruendung'])
-            for v, s, rms, best, hub, n, meta in weg:
+            for v, s, rms, best, hub, n, meta, zv, zb in weg:
                 anteil = (rms / hub * 100) if hub else 0.0
                 w.writerow([v['file'], v['name'], f'{anteil:.1f}',
                             f'Dublette: {km(v, s) * 1000:.0f} m von "{s["name"]}" '
@@ -316,6 +366,8 @@ def main(argv):
                             f'{curve_diff(v, s)[1] * 100:.0f} % gleich. An der Tafel '
                             f'({n} Vergleich(e)) {rms * 100:.1f} cm RMS gegen '
                             f'{best * 100:.1f} cm' +
+                            (f', Zeitversatz {zv:+.0f} gegen {zb:+.0f} min'
+                             if zv is not None and zb is not None else '') +
                             (f' [Spur {meta["spur"]}, Beleg {meta["beleg"]}]'
                              if meta['spur'] else '') +
                             (f' bei {hub:.2f} m Hub' if hub else '') + '.'])
