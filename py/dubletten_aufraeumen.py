@@ -30,8 +30,24 @@ Wo beide gleich gut sind, bleibt beides stehen. Das ist Absicht: die
 Dublette kostet nichts als einen Eintrag in der Liste, eine falsche
 Loeschung kostet den besseren Satz.
 
-Usage: python3 py/dubletten_aufraeumen.py [--csv] [--offen]
-       --offen  auch die Gruppen ohne Messung auflisten
+Gruppiert wird wahlweise nach dem Namen (Vorgabe) oder nach den Haufen
+aus py/pegel_dubletten.py (--haufen). Der zweite Weg findet auch die
+Dubletten, die in verschiedenen Sprachen heissen -- und braucht deshalb
+einen Nachweis, DASS es derselbe Pegel ist, bevor etwas geloescht wird.
+Bei gleichem Namen liegt der Nachweis im Namen. Sonst muss ihn eine der
+Spuren liefern:
+
+  L  beide standen einmal auf derselben Position (positions_locked.csv)
+  H/K  einer der beiden ist eine gerechnete Uebertragung -- dann darf
+     auch nur dieser geloescht werden, nie der gemessene Satz
+
+Bleibt als Beleg nur "liegt nah beieinander und sieht aehnlich aus",
+wird nichts geloescht. Moji und Shimonoseki liegen 1.5 km auseinander,
+ihre Kurven unterscheiden sich um 4 Prozent, und sie sind zwei Pegel.
+
+Usage: python3 py/dubletten_aufraeumen.py [--csv] [--offen] [--haufen]
+       --offen   auch die Gruppen ohne Messung auflisten
+       --haufen  nach py/pegel_dubletten.py gruppieren statt nach dem Namen
 """
 from __future__ import annotations
 
@@ -46,12 +62,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import load_records, km, curve_diff, ROOT       # noqa: E402
 
 HELP = os.path.join(ROOT, 'harmonics/help')
+HAUFEN = os.path.join(HELP, 'pegel_dubletten.csv')
 NAH_KM = 1.0          # weiter auseinander ist es nicht derselbe Pegel
 GLEICH = 0.10         # ab hier ist es ein Widerspruch, keine Dublette
 MIND_M = 0.03         # so viel mehr RMS muss der Verlierer haben
 FAKTOR = 2.0          # oder so viel mal so viel
 MIND_FAKTOR_M = 0.01  # und dann immer noch diesen Abstand
 UNSINN_M = 1.00       # darueber misst man die Reihe, nicht den Satz
+TAUB = 0.25           # liegt schon der Sieger so weit daneben, taugt die Reihe nicht
 
 
 def messungen():
@@ -116,6 +134,59 @@ def gruppen(recs):
     return out
 
 
+def haufen_gruppen(recs):
+    """-> Gruppen aus py/pegel_dubletten.py, mit ihrem Identitaetsbeleg.
+
+    Ketten werden uebersprungen: dort sind mehrere Pegel ueber gemeinsame
+    Nachbarn zusammengewachsen, und welcher Satz zu welchem gehoert,
+    entscheidet keine Guetetabelle.
+    """
+    if not os.path.exists(HAUFEN):
+        sys.exit(f'{HAUFEN} fehlt -- erst python3 py/pegel_dubletten.py --csv')
+    nach_ort = {(r['file'], r['line']): r for r in recs}
+    zeilen = collections.defaultdict(list)
+    for row in csv.DictReader(open(HAUFEN, encoding='utf-8')):
+        zeilen[row['haufen']].append(row)
+    out = []
+    for nr, rows in sorted(zeilen.items(), key=lambda t: int(t[0])):
+        if rows[0].get('kette'):
+            continue
+        menge, abgeleitet = [], set()
+        for row in rows:
+            r = nach_ort.get((row['datei'], int(row['zeile'])))
+            if r is None or r['name'] != row['name']:
+                menge = []
+                break
+            menge.append(r)
+            if row['abgeleitet']:
+                abgeleitet.add(id(r))
+        if len(menge) < 2:
+            continue
+        spur = rows[0]['spur']
+        namen = rows[0]['namen']
+        # Woran haengt die Identitaet? Verlangt wird der VOLLE Name, nicht
+        # der Namensschluessel. Der Schluessel wirft Klammerzusaetze und
+        # Woerter wie harbour/point/entrance weg, und genau die
+        # unterscheiden oft zwei Pegel: "Chatham (Lock Approaches)" und
+        # "Chatham, Medway River" fallen auf denselben Schluessel,
+        # "Elsfleth (Weser)" und "Elsfleth Ohrt (Hunte)" liegen an zwei
+        # Fluessen, und "Deokjeokdo Jinri" und "Deokjeokdo Bukri" sind
+        # zwei Pegel auf einer Insel. Sonst muss die Altlage den Beleg
+        # liefern oder der Umstand, dass einer der Saetze nur gerechnet ist.
+        if len({r['name'] for r in menge}) == 1:
+            beleg = 'Name'
+        elif 'L' in spur:
+            beleg = 'Altlage'
+        elif ('H' in spur or 'K' in spur) and abgeleitet:
+            beleg = 'nur abgeleitet'
+        else:
+            beleg = None
+        out.append((menge[0]['name'], menge,
+                    dict(nr=nr, spur=spur, namen=namen, beleg=beleg,
+                         abgeleitet=abgeleitet)))
+    return out
+
+
 def deutlich_schlechter(rms, best, nur_absolut=False):
     """Ist der Satz gegenueber dem besten deutlich schlechter?
 
@@ -137,8 +208,16 @@ def deutlich_schlechter(rms, best, nur_absolut=False):
 def main(argv):
     mess = messungen()
     recs = [r for r in load_records() if r['lat'] is not None]
-    weg, gleichauf, ohne, zirkulaer = [], [], [], []
-    for name, menge in gruppen(recs):
+    if '--haufen' in argv:
+        quelle = haufen_gruppen(recs)
+    else:
+        quelle = [(n, m, dict(beleg='Name', spur='', namen='gleich',
+                              abgeleitet=set())) for n, m in gruppen(recs)]
+    weg, gleichauf, ohne, zirkulaer, unbelegt, taub = [], [], [], [], [], []
+    for name, menge, meta in quelle:
+        if meta['beleg'] is None:
+            unbelegt.append((name, menge))
+            continue
         # Messungen der Gruppe nach Tabelle buendeln: nur was gegen
         # dieselbe Station im selben Jahr gemessen wurde, ist vergleichbar.
         nach_tabelle = collections.defaultdict(dict)
@@ -173,17 +252,37 @@ def main(argv):
             continue
         best = min(med[id(r)] for r in frei)
         sieger = [r for r in frei if med[id(r)] == best][0]
+        if hub and best > TAUB * hub:
+            # Saint-Louis am Senegal: der beste Satz kommt auf 74.7 cm RMS
+            # bei 1.35 m Hub, die beiden anderen auf 80.4 und 80.6. Der
+            # Abstand reicht formal fuer eine Loeschung, aber gemessen wird
+            # hier der Fluss, nicht der Satz.
+            taub.append((name, menge))
+            continue
         if len(frei) < len(menge):
             zirkulaer.append((name, [r for r in menge if blind[id(r)]]))
         for v in frei:
             if v is sieger:
                 continue
-            if deutlich_schlechter(med[id(v)], best, halb[id(sieger)]):
-                weg.append((v, sieger, med[id(v)], best, hub, len(vergleichbar)))
-            else:
+            if not deutlich_schlechter(med[id(v)], best, halb[id(sieger)]):
                 gleichauf.append((v, sieger, med[id(v)], best, hub))
+            elif meta['beleg'] == 'nur abgeleitet' and id(v) not in meta['abgeleitet']:
+                # Die Gruppe haelt nur zusammen, weil einer der Saetze eine
+                # Rechnung ist. Dann darf auch nur die Rechnung weichen --
+                # ein gemessener Satz waere hier kein Duplikat, sondern ein
+                # Nachbar, den die Spur faelschlich eingesammelt hat.
+                gleichauf.append((v, sieger, med[id(v)], best, hub))
+            else:
+                weg.append((v, sieger, med[id(v)], best, hub, len(vergleichbar),
+                            meta))
 
     print(f'{len(weg)} Saetze sind an der Tafel deutlich schlechter und koennen weg')
+    if taub:
+        print(f'{len(taub)} Haufen bleiben stehen -- schon der beste Satz liegt '
+              f'ueber {TAUB * 100:.0f} % des Hubs daneben, da misst die Reihe sich selbst')
+    if unbelegt:
+        print(f'{len(unbelegt)} Haufen bleiben unangetastet -- nah und '
+              f'aehnlich, aber kein Beleg, dass es derselbe Pegel ist')
     print(f'{len(gleichauf)} sind gleichauf -- beide bleiben')
     print(f'{len(zirkulaer)} Saetze bleiben unbeurteilt (auf der Reihe trainiert)')
     print(f'{len(ohne)} Gruppen haben keine Messung')
@@ -192,7 +291,7 @@ def main(argv):
     for k, n in d.most_common():
         print(f'{k[:42]:42} {n:6}')
     print(f'\nBeispiele:')
-    for v, s, rms, best, hub, n in sorted(weg, key=lambda x: -(x[2] - x[3]))[:12]:
+    for v, s, rms, best, hub, n, _meta in sorted(weg, key=lambda x: -(x[2] - x[3]))[:12]:
         h = f'{(rms - best) / hub * 100:4.1f} % Hub' if hub else '   ?'
         print(f'  {v["name"][:34]:34} {rms * 100:6.1f} cm gegen {best * 100:5.1f} cm '
               f'({h})  {os.path.basename(v["file"])[:24]} raus, '
@@ -209,7 +308,7 @@ def main(argv):
         with open(p, 'w', newline='', encoding='utf-8') as fh:
             w = csv.writer(fh)
             w.writerow(['datei', 'name', 'fehler_prozent', 'begruendung'])
-            for v, s, rms, best, hub, n in weg:
+            for v, s, rms, best, hub, n, meta in weg:
                 anteil = (rms / hub * 100) if hub else 0.0
                 w.writerow([v['file'], v['name'], f'{anteil:.1f}',
                             f'Dublette: {km(v, s) * 1000:.0f} m von "{s["name"]}" '
@@ -217,6 +316,8 @@ def main(argv):
                             f'{curve_diff(v, s)[1] * 100:.0f} % gleich. An der Tafel '
                             f'({n} Vergleich(e)) {rms * 100:.1f} cm RMS gegen '
                             f'{best * 100:.1f} cm' +
+                            (f' [Spur {meta["spur"]}, Beleg {meta["beleg"]}]'
+                             if meta['spur'] else '') +
                             (f' bei {hub:.2f} m Hub' if hub else '') + '.'])
         print(f'\n-> {p}')
         q = os.path.join(HELP, 'dubletten_gleichauf.csv')
