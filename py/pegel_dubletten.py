@@ -63,6 +63,7 @@ import math
 import os
 import re
 import sys
+import unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import (load_records, active_files, km, curve_diff,   # noqa: E402
@@ -83,6 +84,38 @@ KOPIE_DT = 0.10     # und dessen Zeitversatz zum gemessenen Satz
 KOPIE_GUETE = 0.99
 
 ABGELEITET = re.compile(r'Table 2 transfer|Part II Transfer|transfer from', re.I)
+
+# Gegensatzpaare: Namen, die sich genau in einem dieser Woerter
+# unterscheiden, meinen NIE denselben Pegel -- egal wie nah sie liegen und
+# wie aehnlich die Kurven sind. Ein Sperrwerk hat zwei Pegel, einen vor und
+# einen hinter dem Tor, und die stehen an derselben Stelle. Die Kurve
+# rettet da nichts: "Cranz (Este-Sperrwerk)" und "Este (Inneres Sperrwerk
+# Binnenpegel)" liegen 1.05 km auseinander und weichen um 2.6 Prozent ab,
+# weil das Estesperrwerk im Normalbetrieb offen steht und der Binnenpegel
+# der Elbe folgt. Zwei Pegel bleiben es trotzdem, und bei geschlossenem Tor
+# trennen sie Meter.
+GEGENSATZ = [
+    ({'binnen', 'binnenpegel', 'innen', 'inner', 'inneres', 'innere',
+      'landward', 'inside'},
+     {'aussen', 'aussenpegel', 'outer', 'seaward', 'outside'}),
+    ({'oberwasser', 'oberhalb', 'upper', 'above', 'upstream'},
+     {'unterwasser', 'unterhalb', 'lower', 'below', 'downstream'}),
+]
+
+
+def _worte(name):
+    s = name.lower().replace('\u00df', 'ss')
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()
+    return set(re.split(r'[^a-z0-9]+', s))
+
+
+def gegensatz(a, b):
+    """Tragen die beiden Namen entgegengesetzte Zusaetze?"""
+    wa, wb = _worte(a['name']), _worte(b['name'])
+    for links, rechts in GEGENSATZ:
+        if (wa & links and wb & rechts) or (wa & rechts and wb & links):
+            return True
+    return False
 
 
 def vermerke():
@@ -157,6 +190,7 @@ def main(argv):
 
     u = Union()
     grund = {}
+    veto = [0]
     for i, a in enumerate(recs):
         cz = round(a['lat'] * 20)
         for dz in (-1, 0, 1):
@@ -165,6 +199,9 @@ def main(argv):
                     if j <= i:
                         continue
                     b = recs[j]
+                    if gegensatz(a, b):
+                        veto[0] += 1
+                        continue
                     d = km(a, b)
                     rel = curve_diff(a, b)[1]
                     spur = None
@@ -187,6 +224,9 @@ def main(argv):
             for b_ in range(a_ + 1, len(idx)):
                 i, j = idx[a_], idx[b_]
                 if (min(i, j), max(i, j)) in grund:
+                    continue
+                if gegensatz(recs[i], recs[j]):
+                    veto[0] += 1
                     continue
                 d = km(recs[i], recs[j])
                 rel = curve_diff(recs[i], recs[j])[1]
@@ -211,7 +251,7 @@ def main(argv):
             if j == i or (min(i, j), max(i, j)) in grund:
                 continue
             b = recs[j]
-            if a['abgeleitet'] == b['abgeleitet']:
+            if a['abgeleitet'] == b['abgeleitet'] or gegensatz(a, b):
                 continue
             if km(a, b) > KOPIE_KM:
                 continue
@@ -235,7 +275,7 @@ def main(argv):
                for j in gitter.get((cz + dz, cm + dm), ())]
         for j in nah:
             b = recs[j]
-            if j == i:
+            if j == i or gegensatz(a, b):
                 continue
             d = _km(a['alt'][0], a['alt'][1], b['lat'], b['lon'])
             if d > ALT_KM:
@@ -315,6 +355,8 @@ def main(argv):
         else:
             neu.append(g)
 
+    print(f'{veto[0]} Paare vom Gegensatzveto ausgeschlossen '
+          f'(Binnen-/Aussenpegel, Ober-/Unterwasser)')
     print(f'{len(gruppen)} Haufen aus mehreren Saetzen auf einem Pegel')
     print(f'  {len(bekannt)} davon sieht py/dubletten_aufraeumen.py schon '
           f'(gleicher Name, unter {NAME_KM:.0f} km)')
