@@ -12,23 +12,34 @@ sind Kartennull (Hải đồ) — Flussstationen sind Staatshoehensystem + Abflu
 Dieses Skript fittet nur die uebergebenen Sheets und schreibt KEINE Datei,
 sondern gibt den Block auf stdout aus (Insert von Hand/Folgeskript).
 
+ACHTUNG, laeuft derzeit nicht: CONSTIT_67 kommt aus
+batch_utide_uk_tidetimes, und dieses Modul lag in /home/oliver/batch,
+das es nicht mehr gibt. Die Liste der 67 Konstituenten ist damit
+verloren und wird hier nicht geraten -- mit einer anderen Auswahl kaeme
+ein anderer Satz heraus als der, der im Bestand steht. Wer neu fitten
+will, stellt die Liste zuerst wieder her. Das Einlesen der Mappen selbst
+ist repariert (py/xlsx_lesen.py) und wird von py/icoe_reihen_bauen.py
+benutzt, das die Blaetter zu Reihen fuer die Guetepruefung umsetzt.
+
 Usage: python3 py/fit_icoe_vietnam.py SHEET NAME [--files f1.xlsx f2.xlsx]
 Beispiel: python3 py/fit_icoe_vietnam.py CAUDA 'Nha Trang (Cau Da), Vietnam'
 """
 from __future__ import annotations
+import os
 import re
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
 import numpy as np
-import openpyxl
 import utide
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, '/home/oliver/py')
 sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import CONSTIT_67
+import xlsx_lesen
 
 DEFAULT_FILES = ['/home/oliver/water_levels/VN_icoe/h1_2025.xlsx',
                  '/home/oliver/water_levels/VN_icoe/q1_2026.xlsx']
@@ -36,13 +47,17 @@ UTC_OFF = timedelta(hours=7)
 
 
 def parse_sheet(path, sheet):
-    wb = openpyxl.load_workbook(path, data_only=True, read_only=True)
-    ws = wb[sheet]
+    """Ein Stationsblatt -> (Zeiten, Hoehen in m, meta).
+
+    Gelesen wird seit dem 05.09.2026 mit py/xlsx_lesen.py statt mit
+    openpyxl: das liess sich auf diesem Rechner nicht mehr installieren
+    (PEP 668), und damit lief dieses Skript ueberhaupt nicht mehr.
+    """
     meta = {}
     month = year = None
     day = 0
     t, v = [], []
-    for row in ws.iter_rows(min_row=1, max_col=30, values_only=True):
+    for row in xlsx_lesen.zeilen(path, sheet):
         cells = [x for x in row if x not in (None, '')]
         txt = ' '.join(str(x) for x in cells)
         if 'Hệ cao độ' in txt:
@@ -67,7 +82,7 @@ def parse_sheet(path, sheet):
         # und 'Ngày/Dương'-Zeilen ueberspringen, Tag aus Spalte 0 (CN=Sonntag)
         hrs = row[2:26]
         if month and sum(1 for x in hrs if isinstance(x, (int, float))) == 24:
-            if hrs[:6] == (0, 1, 2, 3, 4, 5):
+            if list(hrs[:6]) == [0, 1, 2, 3, 4, 5]:
                 continue
             day = int(row[0]) if isinstance(row[0], (int, float)) else day + 1
             base = datetime(year, month, day)
