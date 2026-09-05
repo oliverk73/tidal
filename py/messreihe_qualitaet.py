@@ -60,6 +60,11 @@ REIHEN = os.path.join(ROOT, 'water_levels')
 SCHRITT_MIN = 10             # Aufloesung der Vorhersage
 SUCHE_MIN = 720              # Zeitversatz wird in diesem Rahmen gesucht
 MIND_PUNKTE = 2000
+# Hoch- und Niedrigwassertafeln haben nur vier Werte am Tag, also rund
+# 1400 im Jahr. Fuer sie gilt eine eigene Schwelle: die Punkte liegen
+# dafuer genau auf den Scheiteln, wo eine Kurve am meisten aussagt.
+MIND_PUNKTE_TAFEL = 600
+TAFELREIHEN = ('NewZealand_LINZ',)
 
 
 def kopfdaten():
@@ -159,7 +164,66 @@ def _lies(pfad):
         return _lies_npz(pfad)
     if 'Japan_JHOD' in pfad and jhod_kopf(pfad):
         return _lies_jhod(pfad)
+    if 'NewZealand_LINZ' in pfad and linz_kopf(pfad):
+        return _lies_linz(pfad)
     return _lies_csv(pfad)
+
+
+LINZ_KOPF = re.compile(r"^\ufeff?(\d+),([^,]+),(\d+)[^\d]+(\d+)'([NS]),(\d+)[^\d]+(\d+)'([EW])")
+
+
+def linz_kopf(pfad):
+    """-> (Kennung, Name, lat, lon) aus der Kopfzeile einer LINZ-Tafel."""
+    try:
+        erste = open(pfad, encoding='utf-8-sig', errors='replace').readline()
+    except Exception:
+        return None
+    m = LINZ_KOPF.match(erste)
+    if not m:
+        return None
+    la = int(m.group(3)) + int(m.group(4)) / 60.0
+    lo = int(m.group(6)) + int(m.group(7)) / 60.0
+    if m.group(5) == 'S':
+        la = -la
+    if m.group(8) == 'W':
+        lo = -lo
+    return m.group(1), m.group(2).strip(), la, lo
+
+
+def _lies_linz(pfad):
+    """Die Gezeitentafeln von LINZ: je Zeile ein Tag mit bis zu vier Gezeiten.
+
+    Zeile: Tagnummer, Wochentag, Monat, Jahr, dann Paare aus Uhrzeit und
+    Hoehe in Metern. Die dritte Kopfzeile sagt "Local Std or Daylight
+    Time" -- die Zeiten stehen also in neuseelaendischer Ortszeit MIT
+    Sommerzeit. Ein fester Versatz waere falsch; gerechnet wird ueber die
+    Zonenregeln.
+    """
+    from zoneinfo import ZoneInfo
+    zone = ZoneInfo('Pacific/Auckland')
+    out = []
+    with open(pfad, encoding='utf-8-sig', errors='replace') as fh:
+        for zeile in fh:
+            f = [x.strip() for x in zeile.rstrip('\n').split(',')]
+            if len(f) < 6 or not f[0].isdigit() or not f[3].isdigit():
+                continue
+            try:
+                tag, monat, jahr = int(f[0]), int(f[2]), int(f[3])
+            except ValueError:
+                continue
+            for i in range(4, len(f) - 1, 2):
+                zeit, hoehe = f[i], f[i + 1]
+                if not zeit or ':' not in zeit or not hoehe:
+                    continue
+                try:
+                    st, mi = (int(x) for x in zeit.split(':'))
+                    h = float(hoehe)
+                    t = dt.datetime(jahr, monat, tag, st, mi, tzinfo=zone)
+                except ValueError:
+                    continue
+                out.append((t.timestamp(), h))
+    out.sort()
+    return out
 
 
 JHOD_KOPF = re.compile(r'^(\d{4}),([^,]+),(\d+)-(\d+)([NS]),(\d+)-(\d+)([EW])')
@@ -420,17 +484,18 @@ def vorhersage(tcd, name, von, bis, schritt=SCHRITT_MIN):
     return np.array(t), np.array(h)
 
 
-def messe(obs_t, obs_h, vt, vh):
+def messe(obs_t, obs_h, vt, vh, mind=None):
     """-> (n, rms, max, zeitversatz_min, hoehenversatz, hub) oder None."""
     import numpy as np
-    if len(vt) < 100 or len(obs_t) < MIND_PUNKTE:
+    mind = mind or MIND_PUNKTE
+    if len(vt) < 100 or len(obs_t) < mind:
         return None
     schritt = vt[1] - vt[0]
     best = None
     for versatz in range(-SUCHE_MIN, SUCHE_MIN + 1, SCHRITT_MIN):
         i = np.round((obs_t + versatz * 60 - vt[0]) / schritt).astype(int)
         gut = (i >= 0) & (i < len(vh))
-        if gut.sum() < MIND_PUNKTE:
+        if gut.sum() < mind:
             continue
         d = obs_h[gut] - vh[i[gut]]
         rms = float(np.sqrt(np.mean((d - d.mean()) ** 2)))
@@ -490,6 +555,21 @@ def beiblatt_reihen(nur=None):
             out.append((dict(lat=float(e['lat']), lon=float(e['lon']),
                              name=e.get('name', datei), file=f'({ordner})', line=0),
                         voll, None, ordner))
+    return out
+
+
+def linz_reihen(nur=None):
+    """Je LINZ-Tafel eine Reihe -- Kopfzeile bringt Name und Lage mit."""
+    out = []
+    if nur and nur != 'NewZealand_LINZ':
+        return out
+    for pfad in sorted(glob.glob(os.path.join(REIHEN, 'NewZealand_LINZ', '*.csv'))):
+        kopf = linz_kopf(pfad)
+        if not kopf:
+            continue
+        _code, name, la, lo = kopf
+        out.append((dict(lat=la, lon=lo, name=f'{name} (LINZ)',
+                         file='(NewZealand_LINZ)', line=0), pfad, None, 'LINZ'))
     return out
 
 
@@ -578,6 +658,7 @@ def main(argv):
     anker += npz_reihen(nur)
     anker += beiblatt_reihen(nur)
     anker += jhod_reihen(nur)
+    anker += linz_reihen(nur)
     print(f'{len(anker)} Reihen zugeordnet, Umkreis {umkreis:.0f} km, '
           f'{tage} Tage Fenster', file=sys.stderr)
 
@@ -586,8 +667,10 @@ def main(argv):
                 'rms_m', 'max_m', 'zeit_min', 'hoehe_off_m', 'hub_m', 'reihe',
                 'eigen', 'ausserhalb'])
     for nr, (a, pfad, fit, anbieter) in enumerate(anker, 1):
+        mind = (MIND_PUNKTE_TAFEL if any(t in pfad for t in TAFELREIHEN)
+                else MIND_PUNKTE)
         obs = lies(pfad)
-        if len(obs) < MIND_PUNKTE:
+        if len(obs) < mind:
             print(f'  {os.path.basename(pfad)}: nur {len(obs)} Werte', file=sys.stderr)
             continue
         ende = obs[-1][0]
@@ -607,7 +690,7 @@ def main(argv):
                 # Reihe fuer alle Kandidaten gleich neu.
                 ende, start, ausserhalb = fit_von, fit_von - tage * 86400, 'ja'
         paare = [(t, h) for t, h in obs if start <= t <= ende]
-        if len(paare) < MIND_PUNKTE:
+        if len(paare) < mind:
             continue
         obs_t = np.array([p[0] for p in paare])
         obs_h = np.array([p[1] for p in paare])
@@ -621,7 +704,7 @@ def main(argv):
             if not os.path.exists(os.path.join(TCD, tcd)):
                 continue
             vt, vh = vorhersage(tcd, x['name'], von, bis)
-            g = messe(obs_t, obs_h, vt, vh)
+            g = messe(obs_t, obs_h, vt, vh, mind)
             if not g:
                 continue
             n, rms, gross, versatz, off, hub = g
