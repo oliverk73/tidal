@@ -159,7 +159,8 @@ def _lies(pfad):
     if os.path.basename(os.path.dirname(pfad)).upper().startswith('JMA'):
         return _lies_jma(pfad)
     if 'bodc' in pfad:
-        return _lies_bodc(pfad)
+        alle = _lies_bodc_alle(pfad)
+        return alle if alle is not None else _lies_bodc(pfad)
     if pfad.endswith('.npz'):
         return _lies_npz(pfad)
     if 'Japan_JHOD' in pfad and jhod_kopf(pfad):
@@ -442,6 +443,19 @@ BODC_ZEILE = re.compile(r'^\s*\d+\)\s+(\d{4})/(\d\d)/(\d\d)\s+(\d\d):(\d\d):(\d\
                         r'\s+(-?[\d.]+)([A-Z]?)\s+(-?[\d.]+)([A-Z]?)')
 
 
+def _lies_bodc_alle(pfad):
+    """Alle Monatsdateien einer BODC-Station als eine Reihe."""
+    m = re.match(r'^([A-Z]{3})\d{4}\.txt$', os.path.basename(pfad))
+    if not m:
+        return None
+    out = []
+    for f in sorted(glob.glob(os.path.join(os.path.dirname(pfad),
+                                           f'{m.group(1)}[0-9][0-9][0-9][0-9].txt'))):
+        out += _lies_bodc(f)
+    out.sort()
+    return out
+
+
 def bodc_kopf(pfad):
     """-> (Site, lat, lon) aus dem Kopf einer BODC-Datei."""
     site = lat = lon = None
@@ -640,16 +654,35 @@ def messe(obs_t, obs_h, vt, vh, mind=None):
 
 
 def bodc_reihen(nur=None):
-    """BODC-Jahresdateien: sie bringen Name und Position selbst mit."""
+    """BODC-Dateien: sie bringen Name und Position selbst mit.
+
+    Zwei Benennungen liegen dort nebeneinander. Die aelteren heissen
+    2023IMM.txt -- ein Jahr je Datei --, die neueren IMM2509.txt, also
+    Stationskuerzel plus Jahr und Monat. Der Leser kannte nur die erste
+    Form, und damit blieben 517 Dateien an 40 Stationen ungelesen, im
+    Median 14 Monate: ausgerechnet die juengsten, 2025 und 2026. In der
+    Bestandsaufnahme standen sie als Brache und sahen nach alten
+    Jahrgaengen aus, die man nicht braucht.
+
+    Die Monatsdateien werden zu einer Reihe zusammengefasst; genannt wird
+    die erste, gelesen werden alle Geschwister mit demselben Kuerzel.
+    """
     ordner = glob.glob(os.path.join(REIHEN, 'UK', 'bodc*', ''))
     if nur and nur != 'UK':
         return []
-    neueste = {}
+    neueste, monate = {}, collections.defaultdict(list)
     for verzeichnis in ordner:
         for name in os.listdir(verzeichnis):
             m = re.match(r'^(\d{4})([A-Z]{3})\.txt$', name)
             if m and int(m.group(1)) >= neueste.get(m.group(2), (0, ''))[0]:
                 neueste[m.group(2)] = (int(m.group(1)), os.path.join(verzeichnis, name))
+                continue
+            m = re.match(r'^([A-Z]{3})(\d{4})\.txt$', name)
+            if m:
+                monate[m.group(1)].append(os.path.join(verzeichnis, name))
+    # Wo Monatsdateien vorliegen, sind sie die juengeren und dichteren.
+    for code, pfade in monate.items():
+        neueste[code] = (9999, sorted(pfade)[0])
     out = []
     for _code, (_jahr, pfad) in sorted(neueste.items()):
         site, lat, lon = bodc_kopf(pfad)
