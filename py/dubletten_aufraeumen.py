@@ -71,10 +71,12 @@ import csv
 import glob
 import math
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from health_check import load_records, km, curve_diff, ROOT       # noqa: E402
+from health_check import (load_records, km, curve_diff, ROOT,     # noqa: E402
+                          active_files, MERIDIAN)
 
 HELP = os.path.join(ROOT, 'harmonics/help')
 HAUFEN = os.path.join(HELP, 'pegel_dubletten.csv')
@@ -162,6 +164,69 @@ def gruppen(recs):
     return out
 
 
+KENNUNGEN = ('ssc_id', 'gloss_id', 'psmsl_id', 'uhslc_id', 'ioc_code',
+             'sonel_tg_id', 'att_number')
+
+
+def kennungen():
+    """-> {(Datei, Zeile): {Kennung: Wert}} aus den Kopfkommentaren.
+
+    Tubuai steht dreimal im TICON-Bestand, auf derselben Position, und
+    hiess nach dem Import "... (1)", "(2)" und "(3)" -- die Nummern hat
+    unser Import angehaengt, damit die Namen eindeutig bleiben. Damit
+    war der Namensbeleg zerstoert, und zwar genau dort, wo er am
+    einfachsten haette greifen koennen: die drei Saetze tragen dieselbe
+    ssc_id, gloss_id, psmsl_id, uhslc_id, ioc_code und sonel_tg_id. Sie
+    unterscheiden sich nur im Datenstrom, aus dem TICON-4 denselben
+    Pegel analysiert hat (REFMAR, UHSLC, CMEMS).
+
+    Eine geteilte Katalogkennung ist ein staerkerer Beleg als jeder
+    Name: sie kommt von Dritten und ist mit py/id_validate.py geprueft.
+    Wo zwei Saetze eines Haufens dieselbe Kennung tragen, ist es
+    derselbe Pegel, gleich wie sie heissen.
+
+    Was sie nicht leistet: sie sagt nichts ueber die Qualitaet. Wer
+    bleibt, entscheidet weiterhin die Messung.
+    """
+    out = {}
+    muster = re.compile(r'#\s*([a-z_]+):\s*(\S+)\s*$')
+    for path in active_files():
+        lines = open(os.path.join(ROOT, path),
+                     encoding='iso-8859-1').read().split('\n')
+        for k, line in enumerate(lines):
+            if (not line or line.startswith('#') or k + 1 >= len(lines)
+                    or not MERIDIAN.match(lines[k + 1])):
+                continue
+            ids, j = {}, k - 1
+            while j >= 0 and lines[j].startswith('#'):
+                m = muster.match(lines[j])
+                if m and m.group(1) in KENNUNGEN:
+                    ids[m.group(1)] = m.group(2)
+                j -= 1
+            if ids:
+                out[(path, k + 1)] = ids
+    return out
+
+
+def _kennungs_belegt(menge, ids):
+    """Teilt JEDES Satzpaar der Gruppe mindestens eine Kennung?
+
+    Wie beim Handbeleg reicht ein einzelnes Paar nicht: sonst wuerde ein
+    dritter Satz ueber eine fremde Kennung mitgeloescht.
+    """
+    if len(menge) < 2:
+        return False
+    for i in range(len(menge)):
+        a = ids.get((menge[i]['file'], menge[i]['line']), {})
+        if not a:
+            return False
+        for j in range(i + 1, len(menge)):
+            b = ids.get((menge[j]['file'], menge[j]['line']), {})
+            if not any(k in b and b[k] == v for k, v in a.items()):
+                return False
+    return True
+
+
 def handbeleg():
     """-> Menge der von Hand bestaetigten Namenspaare.
 
@@ -223,6 +288,7 @@ def haufen_gruppen(recs):
     if not os.path.exists(HAUFEN):
         sys.exit(f'{HAUFEN} fehlt -- erst python3 py/pegel_dubletten.py --csv')
     bestaetigt = handbeleg()
+    ids = kennungen()
     nach_ort = {(r['file'], r['line']): r for r in recs}
     zeilen = collections.defaultdict(list)
     for row in csv.DictReader(open(HAUFEN, encoding='utf-8')):
@@ -255,6 +321,8 @@ def haufen_gruppen(recs):
         # liefern oder der Umstand, dass einer der Saetze nur gerechnet ist.
         if len({r['name'] for r in menge}) == 1:
             beleg = 'Name'
+        elif _kennungs_belegt(menge, ids):
+            beleg = 'Kennung'
         elif _hand_belegt(menge, bestaetigt):
             beleg = 'Hand'
         elif 'L' in spur:
