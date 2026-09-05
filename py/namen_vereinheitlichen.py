@@ -22,6 +22,10 @@ Saetze ploetzlich gleich heissen, findet die Antwort dort.
 
 Gelesen wird die Spalte "Neuer gemeinsamer Name" aus
 harmonics/help/dubletten_handbeleg_vorschlag.csv (py/handbeleg_vorschlag.py).
+Der Vermerk im Satz zeigt aber nicht dorthin, sondern auf
+harmonics/help/namen_vereinheitlicht.csv: die Vorschlagsliste wird nach
+jeder Runde neu gerechnet und enthaelt das erledigte Paar dann nicht
+mehr -- ein Nachweis, der ins Leere zeigt, ist keiner.
 Ein Satz wird ueber Name UND Datei angesprochen: "Audierne, France"
 steht zweimal im Bestand, und nur einer der beiden ist gemeint. Reicht
 auch das nicht, entscheidet die Haufennummer: "L'Ile-d'Anticosti,
@@ -161,7 +165,7 @@ def main(argv):
                 lines[i:i] = [f'# note: {heute} Name vereinheitlicht, vorher '
                               f'"{alt}"',
                               '# note: -- selber Pegel, siehe '
-                              'harmonics/help/dubletten_handbeleg_vorschlag.csv']
+                              'harmonics/help/namen_vereinheitlicht.csv']
             gesamt += 1
         if schreiben:
             shutil.copy2(voll, os.path.join(

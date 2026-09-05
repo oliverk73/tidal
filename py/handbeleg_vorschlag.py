@@ -45,6 +45,24 @@ from health_check import load_records, km, curve_diff             # noqa: E402
 from transfer_zonen import zeitversatz                            # noqa: E402
 
 ZIEL = os.path.join(da.HELP, 'dubletten_handbeleg_vorschlag.csv')
+SPALTE = 'Neuer gemeinsamer Name'
+
+
+def bisherige():
+    """-> {(name_a, name_b): gemeinsamer Name} aus einer vorhandenen Liste.
+
+    Die Liste wird nach jeder Regelaenderung neu erzeugt, und dabei
+    duerfen die von Hand eingetragenen Namen nicht verlorengehen -- sie
+    sind das eigentliche Urteil, alles andere ist nachrechenbar.
+    """
+    if not os.path.exists(ZIEL):
+        return {}
+    out = {}
+    for r in csv.DictReader(open(ZIEL, encoding='utf-8')):
+        v = (r.get(SPALTE) or '').strip()
+        if v:
+            out[frozenset((r['name_a'], r['name_b']))] = v
+    return out
 
 
 def worte(n):
@@ -88,6 +106,7 @@ def main(argv):
                                  encoding='utf-8')):
         wirksam.add((r['datei'], r['name']))
 
+    alt = bisherige()
     zeilen = []
     for _name, menge, meta in echt(recs):
         if meta['beleg'] is not None:
@@ -108,7 +127,8 @@ def main(argv):
                     namensueberlappung=f'{ueberlappung(namen[i], namen[j]):.2f}',
                     spur=meta['spur'], haufen=meta['nr'],
                     datei_a=os.path.basename(a['file']),
-                    datei_b=os.path.basename(b['file'])))
+                    datei_b=os.path.basename(b['file']),
+                    **{SPALTE: alt.get(frozenset((namen[i], namen[j])), '')}))
     zeilen.sort(key=lambda z: (float(z['km']), float(z['kurve_prozent']),
                                -float(z['namensueberlappung'])))
     with open(ZIEL, 'w', newline='', encoding='utf-8') as fh:
