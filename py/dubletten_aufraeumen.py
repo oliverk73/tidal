@@ -78,6 +78,7 @@ from health_check import load_records, km, curve_diff, ROOT       # noqa: E402
 
 HELP = os.path.join(ROOT, 'harmonics/help')
 HAUFEN = os.path.join(HELP, 'pegel_dubletten.csv')
+HANDBELEG = os.path.join(HELP, 'dubletten_handbeleg.csv')
 NAH_KM = 1.0          # weiter auseinander ist es nicht derselbe Pegel
 GLEICH = 0.10         # ab hier ist es ein Widerspruch, keine Dublette
 MIND_M = 0.03         # so viel mehr RMS muss der Verlierer haben
@@ -161,6 +162,57 @@ def gruppen(recs):
     return out
 
 
+def handbeleg():
+    """-> Menge der von Hand bestaetigten Namenspaare.
+
+    Die Spuren finden Haufen ohne Ruecksicht auf den Namen, der Beleg
+    verlangt danach den vollen Namen -- und daran haengen 228 Saetze,
+    die an der Tafel messbar schlechter sind und trotzdem stehen
+    bleiben, weil ihr Name einen Zusatz traegt: "Belan Point, Menai
+    Strait" neben "Fort Belan" auf derselben Position, "St. Malo" neben
+    "Saint-Malo", die halbe NOAA-Reihe mit Bucht- oder Flussnamen im
+    Titel.
+
+    Ein Namensvergleich, der das automatisch aufloest, ist nicht in
+    Sicht: derselbe Zusatz, der hier ueberfluessig ist, unterscheidet
+    anderswo zwei Pegel ("Elsfleth (Weser)" und "Elsfleth Ohrt
+    (Hunte)"). Also entscheidet ein Mensch, und zwar einmal je Paar,
+    nachpruefbar im Baum: harmonics/help/dubletten_handbeleg.csv mit den
+    Spalten name_a, name_b, begruendung.
+
+    Bestaetigt wird damit NUR die Identitaet -- wer bleibt, entscheidet
+    weiterhin die Messung. Ein Handbeleg ohne freien Massstab loescht
+    nichts (Bach Long Vi, Mys Menaputsy), und ein blinder Sieger gewinnt
+    auch mit Handbeleg nicht (Bahia Coliumo).
+
+    Der Beleg haengt an den Namen, nicht an der Haufennummer: die
+    vergibt py/pegel_dubletten.py bei jedem Lauf neu, und nach einer
+    Loeschung stuende die Bestaetigung auf einer fremden Gruppe.
+    """
+    if not os.path.exists(HANDBELEG):
+        return set()
+    out = set()
+    for r in csv.DictReader(open(HANDBELEG, encoding='utf-8')):
+        a, b = (r.get('name_a') or '').strip(), (r.get('name_b') or '').strip()
+        if a and b and a != b:
+            out.add(frozenset((a, b)))
+    return out
+
+
+def _hand_belegt(menge, bestaetigt):
+    """Ist JEDES Namenspaar der Gruppe von Hand bestaetigt?
+
+    Ein einzelnes bestaetigtes Paar reicht nicht: in einer Dreiergruppe
+    hiesse das, dass der dritte Satz ueber ein fremdes Urteil mitgeloescht
+    wird.
+    """
+    namen = sorted({r['name'] for r in menge})
+    if len(namen) < 2:
+        return False
+    return all(frozenset((namen[i], namen[j])) in bestaetigt
+               for i in range(len(namen)) for j in range(i + 1, len(namen)))
+
+
 def haufen_gruppen(recs):
     """-> Gruppen aus py/pegel_dubletten.py, mit ihrem Identitaetsbeleg.
 
@@ -170,6 +222,7 @@ def haufen_gruppen(recs):
     """
     if not os.path.exists(HAUFEN):
         sys.exit(f'{HAUFEN} fehlt -- erst python3 py/pegel_dubletten.py --csv')
+    bestaetigt = handbeleg()
     nach_ort = {(r['file'], r['line']): r for r in recs}
     zeilen = collections.defaultdict(list)
     for row in csv.DictReader(open(HAUFEN, encoding='utf-8')):
@@ -202,6 +255,8 @@ def haufen_gruppen(recs):
         # liefern oder der Umstand, dass einer der Saetze nur gerechnet ist.
         if len({r['name'] for r in menge}) == 1:
             beleg = 'Name'
+        elif _hand_belegt(menge, bestaetigt):
+            beleg = 'Hand'
         elif 'L' in spur:
             beleg = 'Altlage'
         elif ('H' in spur or 'K' in spur) and abgeleitet:
