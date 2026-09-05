@@ -157,7 +157,74 @@ def _lies(pfad):
         return _lies_bodc(pfad)
     if pfad.endswith('.npz'):
         return _lies_npz(pfad)
+    if 'Japan_JHOD' in pfad and jhod_kopf(pfad):
+        return _lies_jhod(pfad)
     return _lies_csv(pfad)
+
+
+JHOD_KOPF = re.compile(r'^(\d{4}),([^,]+),(\d+)-(\d+)([NS]),(\d+)-(\d+)([EW])')
+JHOD_STUNDEN = 9.0      # die Tafeln des JHOD stehen in japanischer Zeit
+
+
+def _lies_jhod(pfad):
+    """Die Vorhersagetafeln des japanischen Hydrographischen Dienstes.
+
+    Kopfzeile: Kennung, Name, Breite, Laenge, Rasterweite, Z0. Danach je
+    Zeile ein Tag mit Jahr, Monat, Tag und 144 Zehn-Minuten-Werten in
+    Zentimetern. Ein Monat je Datei; gelesen wird der ganze Ordner, denn
+    die zwoelf Dateien sind eine Reihe.
+
+    Die Zeitbasis stand nicht im Kopf und war zu messen. Gegen sechs
+    unserer japanischen Saetze -- Nemuro, Wakkanai, Hakodate, Harumi,
+    Yokohama, Nagoya -- ergibt die Verschiebung einheitlich -540 Minuten
+    bei 1.1 bis 2.6 cm RMS: japanische Zeit, UTC+9. Ein erster Versuch
+    ueber die Hochwasserzeiten hatte -19 bis -114 Minuten geliefert und
+    damit in die Irre gefuehrt; bei den Mischgezeiten von Tokio und
+    Hakodate greift der Vergleich zum falschen der beiden Tagesgipfel.
+    """
+    ordner = os.path.dirname(pfad)
+    out = []
+    for datei in sorted(glob.glob(os.path.join(ordner, '*.txt'))):
+        try:
+            zeilen = open(datei, encoding='shift_jis',
+                          errors='replace').read().split('\n')
+        except Exception:
+            continue
+        for zeile in zeilen[1:]:
+            teile = zeile.split()
+            if len(teile) != 147:
+                continue
+            try:
+                tag = dt.datetime(int(teile[0]), int(teile[1]), int(teile[2]),
+                                  tzinfo=dt.timezone.utc).timestamp()
+            except ValueError:
+                continue
+            for i, wert in enumerate(teile[3:]):
+                try:
+                    h = int(wert) / 100.0
+                except ValueError:
+                    continue
+                out.append((tag + i * 600 - JHOD_STUNDEN * 3600, h))
+    out.sort()
+    return out
+
+
+def jhod_kopf(pfad):
+    """-> (Kennung, Name, lat, lon) aus der Kopfzeile."""
+    try:
+        erste = open(pfad, encoding='shift_jis', errors='replace').readline()
+    except Exception:
+        return None
+    m = JHOD_KOPF.match(erste)
+    if not m:
+        return None
+    la = int(m.group(3)) + int(m.group(4)) / 60.0
+    lo = int(m.group(6)) + int(m.group(7)) / 60.0
+    if m.group(5) == 'S':
+        la = -la
+    if m.group(8) == 'W':
+        lo = -lo
+    return m.group(1), m.group(2).strip(), la, lo
 
 
 def _lies_npz(pfad):
@@ -426,6 +493,25 @@ def beiblatt_reihen(nur=None):
     return out
 
 
+def jhod_reihen(nur=None):
+    """Je Station des JHOD eine Reihe -- Kopfzeile bringt Name und Lage mit."""
+    out = []
+    if nur and nur != 'Japan_JHOD':
+        return out
+    for ordner in sorted(glob.glob(os.path.join(REIHEN, 'Japan_JHOD', '*', ''))):
+        dateien = sorted(glob.glob(os.path.join(ordner, '*.txt')))
+        if not dateien:
+            continue
+        kopf = jhod_kopf(dateien[0])
+        if not kopf:
+            continue
+        _code, name, la, lo = kopf
+        out.append((dict(lat=la, lon=lo, name=f'{name} (JHOD)',
+                         file='(Japan_JHOD)', line=0),
+                    dateien[0], None, 'JHOD'))
+    return out
+
+
 def npz_reihen(nur=None):
     """Reihen im numpy-Format.
 
@@ -491,6 +577,7 @@ def main(argv):
     anker += bodc_reihen(nur)
     anker += npz_reihen(nur)
     anker += beiblatt_reihen(nur)
+    anker += jhod_reihen(nur)
     print(f'{len(anker)} Reihen zugeordnet, Umkreis {umkreis:.0f} km, '
           f'{tage} Tage Fenster', file=sys.stderr)
 
