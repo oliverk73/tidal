@@ -305,6 +305,13 @@ def main(argv):
             continue
         best = min(med[id(r)] for r in frei)
         sieger = [r for r in frei if med[id(r)] == best][0]
+        if zmed.get(id(sieger)) is not None and abs(zmed[id(sieger)]) > SPRUNG_MIN:
+            # Liegt schon der Sieger Stunden neben der Reihe, entscheidet
+            # die Gruppe nichts. Georgetown auf Ascension misst +330
+            # Minuten fuer den Sieger und -410 fuer die beiden anderen --
+            # dort stimmt die Reihe nicht, nicht die Saetze.
+            taub.append((name, menge))
+            continue
         if hub and best > TAUB * hub:
             # Saint-Louis am Senegal: der beste Satz kommt auf 74.7 cm RMS
             # bei 1.35 m Hub, die beiden anderen auf 80.4 und 80.6. Der

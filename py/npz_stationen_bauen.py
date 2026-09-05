@@ -36,8 +36,16 @@ kanadischen Ordner fuehren je Provinz ein _xx_stations.json mit Code,
 Name und Koordinaten, und die Reihen heissen <Code>_<Name>_wlp.csv --
 1136 Dateien, von denen bisher zehn gelesen wurden.
 
+Wo kein Katalog daliegt, bleibt der Name der Datei. --namen baut das
+Beiblatt fuer CSV-Ordner ueber ihn: die niederlaendischen Reihen heissen
+"breskens.veerhaven.csv", die malaysischen "johor_baharu.csv". Fuer
+Malaysia liegen die Anzeigenamen im Scraper selbst
+(py/scrape_malaysia_phn.py fuehrt STATIONS als Paare aus Klarname und
+Dateikennung), und die treffen unseren Bestand besser als die Kennung.
+
 Usage: python3 py/npz_stationen_bauen.py [Ordner]     (Vorgabe: Germany)
        python3 py/npz_stationen_bauen.py --katalog [Ordner ...]
+       python3 py/npz_stationen_bauen.py --spiegel Quelle Ziel
 """
 from __future__ import annotations
 
@@ -133,33 +141,182 @@ def katalog(ordner):
     Provinzordner.
     """
     basis = os.path.join(REIHEN, ordner)
-    kataloge = glob.glob(os.path.join(basis, '_*_stations.json'))
+    kataloge = (glob.glob(os.path.join(basis, '_*_stations.json'))
+                + glob.glob(os.path.join(basis, '_station_catalog.json')))
+    if not kataloge:
+        # Canada_IWLS und Canada_IWLS_PEI fuehren keinen eigenen Katalog,
+        # ihre Codes stehen aber in denen der Geschwisterordner. Gesucht
+        # wird deshalb bei allen, die denselben ersten Namensteil tragen.
+        stamm = ordner.split('_')[0]
+        kataloge = glob.glob(os.path.join(REIHEN, f'{stamm}_*',
+                                          '_*_stations.json'))
     if not kataloge:
         return 0, 0
     eintraege = []
     for k in kataloge:
         try:
-            eintraege += json.load(open(k, encoding='utf-8'))
+            d = json.load(open(k, encoding='utf-8'))
+            eintraege += d if isinstance(d, list) else list(d.values())
         except Exception:
             pass
-    nach_code = {str(e['code']): e for e in eintraege
-                 if e.get('lat') is not None and e.get('lon') is not None}
+    # Die Kataloge schreiben ihre Felder verschieden: Kanada code/name/lat/lon,
+    # Belgien einmal station_no/station_name/station_latitude und einmal
+    # code/name/lat/lon.
+    def hol(e, *namen):
+        for n in namen:
+            if e.get(n) not in (None, ''):
+                return e[n]
+        return None
+
+    nach_code = {}
+    for e in eintraege:
+        c = hol(e, 'code', 'station_no', 'station_number', 'id')
+        la = hol(e, 'lat', 'latitude', 'station_latitude')
+        lo = hol(e, 'lon', 'longitude', 'station_longitude')
+        if c is None or la is None or lo is None:
+            continue
+        nach_code[str(c)] = (float(la), float(lo),
+                             hol(e, 'name', 'station_name', 'toponyme') or str(c))
     out, dateien = {}, glob.glob(os.path.join(basis, '*.csv'))
     for pfad in dateien:
         n = os.path.basename(pfad)
-        code = n.split('_', 1)[0]
-        e = nach_code.get(code)
+        stamm = os.path.splitext(n)[0]
+        e = (nach_code.get(stamm) or nach_code.get(stamm.split('_', 1)[0])
+             or nach_code.get(stamm.lstrip('0')))
+        if not e:
+            # Belgien haengt der Kennung im Dateinamen eine 04 voran.
+            for c, v in nach_code.items():
+                if stamm.endswith(c) or c.endswith(stamm):
+                    e = v
+                    break
         if not e:
             continue
-        out[n] = dict(lat=round(float(e['lat']), 5), lon=round(float(e['lon']), 5),
-                      name=f"{e.get('name', code)} ({ordner} {code})")
+        la, lo, name = e
+        out[n] = dict(lat=round(la, 5), lon=round(lo, 5),
+                      name=f'{name} ({ordner})')
     if out:
         json.dump(out, open(os.path.join(basis, 'stationen.json'), 'w',
                             encoding='utf-8'), ensure_ascii=False, indent=1)
     return len(out), len([d for d in dateien if not os.path.basename(d).startswith('_')])
 
 
+ALIAS_QUELLE = {'Malaysia_PHN': 'scrape_malaysia_phn.py'}
+
+
+def spiegel(quelle, ziel):
+    """Traegt die Zuordnung eines aufgeloesten Ordners auf einen zweiten.
+
+    JMA_Japan_2026 fuehrt dieselben Stationen wie JMA_Japan, nur einen
+    Jahrgang spaeter -- die Tafeln von 2026 gegen die von 2011-2025. Der
+    Hauptweg loest nur den ersten der beiden auf, weil beide dieselbe
+    Kennung tragen und reihendateien() den ersten Fund behaelt. Statt die
+    Stationsliste neu zu holen (sie lag in /tmp und ist weg), wird die
+    fertige Zuordnung des einen Ordners auf den anderen uebertragen:
+    gleicher Dateiname, gleiche Station.
+    """
+    import re as _re
+    import messreihe_qualitaet as M
+    kopf = M.kopfdaten()
+    dateien = M.reihendateien(quelle)
+    nach_pfad = {}
+    for r in load_records():
+        if r['lat'] is None or r['current']:
+            continue
+        sid = kopf.get((r['file'], r['line']), (None, None, ''))[0]
+        if not sid:
+            continue
+        teile = [t for t in _re.split(r'[ \-_]', sid) if t]
+        for i in range(len(teile)):
+            for j in range(len(teile)):
+                if i == j:
+                    continue
+                p = dateien.get((teile[i].upper(), teile[j].upper()))
+                if p:
+                    nach_pfad.setdefault(os.path.basename(p), r)
+    basis = os.path.join(REIHEN, ziel)
+    out = {}
+    for pfad in sorted(glob.glob(os.path.join(basis, '*'))):
+        n = os.path.basename(pfad)
+        r = nach_pfad.get(n)
+        if r:
+            out[n] = dict(lat=round(r['lat'], 5), lon=round(r['lon'], 5),
+                          name=f"{r['name']} ({ziel})")
+    if out:
+        json.dump(out, open(os.path.join(basis, 'stationen.json'), 'w',
+                            encoding='utf-8'), ensure_ascii=False, indent=1)
+    return len(out), len(glob.glob(os.path.join(basis, '*')))
+
+
+def aliasse(ordner):
+    """-> {Dateikennung: Klarname} aus der STATIONS-Liste eines Scrapers."""
+    quelle = ALIAS_QUELLE.get(ordner)
+    if not quelle:
+        return {}
+    pfad = os.path.join(os.path.dirname(os.path.abspath(__file__)), quelle)
+    try:
+        text = open(pfad, encoding='utf-8').read()
+    except Exception:
+        return {}
+    m = re.search(r'STATIONS = \[(.*?)\n\]', text, re.S)
+    if not m:
+        return {}
+    return {b: a for a, b in re.findall(r"\('([^']+)',\s*'([^']+)'\)", m.group(1))}
+
+
+def namen(ordner, kand):
+    """Beiblatt ueber die Dateinamen, wo kein Katalog daliegt."""
+    basis = os.path.join(REIHEN, ordner)
+    alias = aliasse(ordner)
+    out, dateien = {}, [p for p in glob.glob(os.path.join(basis, '*.csv'))
+                        if not os.path.basename(p).startswith('_')]
+    for pfad in dateien:
+        n = os.path.basename(pfad)
+        stamm = os.path.splitext(n)[0]
+        roh = stamm.replace('.', ' ').replace('_', ' ')
+        # Kanada schreibt "01650 Souris wlp": vorn die Pegelnummer, hinten
+        # die Messgroesse (wlp Vorhersage, wlo Beobachtung).
+        ohne = re.sub(r'^\d+\s+', '', roh)
+        ohne = re.sub(r'\s+(wlp|wlo|wl)$', '', ohne, flags=re.I)
+        formen_datei = {roh, ohne, re.sub(r'[ .]\d+$', '', stamm).replace(
+            '.', ' ').replace('_', ' ')}
+        if stamm in alias:
+            formen_datei |= formen(alias[stamm])
+        treffer = [r for f in formen_datei for s in schluessel(f)
+                   for r in kand.get(s, [])]
+        if not treffer:
+            continue
+        c = collections.Counter((round(r['lat'], 4), round(r['lon'], 4))
+                                for r in treffer)
+        (la, lo), n_hits = c.most_common(1)[0]
+        if len(c) > 1 and n_hits == c.most_common(2)[1][1]:
+            continue
+        name = next(r['name'] for r in treffer
+                    if round(r['lat'], 4) == la and round(r['lon'], 4) == lo)
+        out[n] = dict(lat=la, lon=lo, name=f'{name} ({ordner})')
+    if out:
+        json.dump(out, open(os.path.join(basis, 'stationen.json'), 'w',
+                            encoding='utf-8'), ensure_ascii=False, indent=1)
+    return len(out), len(dateien)
+
+
 def main(argv):
+    if '--spiegel' in argv:
+        a = [x for x in argv if not x.startswith('--')]
+        n, gesamt = spiegel(a[0], a[1])
+        print(f'  {a[1]:24s} {n:5} von {gesamt:5} Reihen -> stationen.json')
+        return 0
+    if '--namen' in argv:
+        recs = [r for r in load_records()
+                if r['lat'] is not None and not r['current']]
+        kand = collections.defaultdict(list)
+        for r in recs:
+            for f in formen(r['name']):
+                for s in schluessel(f):
+                    kand[s].append(r)
+        for o in [a for a in argv if not a.startswith('--')]:
+            n, gesamt = namen(o, kand)
+            print(f'  {o:24s} {n:5} von {gesamt:5} Reihen -> stationen.json')
+        return 0
     if '--katalog' in argv:
         ordner = [a for a in argv if not a.startswith('--')]
         if not ordner:

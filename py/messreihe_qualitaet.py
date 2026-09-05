@@ -248,13 +248,34 @@ def _lies_csv(pfad):
 
 
 def _zeit(s):
-    s = s.strip().replace('T', ' ').replace('Z', '')
-    if '+' in s[10:]:
-        s = s[:10] + s[10:].split('+')[0]
-    s = s.strip()
+    """-> Unixzeit. Ein Zonenoffset im Zeitstempel wird BEACHTET.
+
+    Hier stand bis zum 05.09.2026 ein Abschneiden: "+01:00" wurde
+    weggeworfen und der Rest zu UTC erklaert. Damit wurde jede Reihe, die
+    ihre Zeitzone mitschreibt, um genau diese Zone falsch gelesen -- die
+    niederlaendischen RWS-Reihen stehen in "+01:00" und im Sommer in
+    "+02:00", und alle niederlaendischen Saetze massen sich daran auf
+    -60 bis -80 Minuten, Sieger wie Verlierer. Nicht die Saetze waren
+    verschoben, sondern die Reihe.
+    """
+    s = s.strip().replace('T', ' ')
+    versatz = 0.0
+    rest = s[10:]
+    for zeichen in ('+', '-'):
+        if zeichen in rest:
+            teil = rest.split(zeichen)[-1]
+            m = re.match(r'^(\d{2}):?(\d{2})$', teil.strip())
+            if m:
+                versatz = (int(m.group(1)) + int(m.group(2)) / 60.0) * 3600
+                if zeichen == '-':
+                    versatz = -versatz
+                s = s[:10] + rest.split(zeichen)[0]
+            break
+    s = s.replace('Z', '').strip()
     for muster in ('%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M', '%Y-%m-%d %H:%M:%S.%f'):
         try:
-            return dt.datetime.strptime(s, muster).replace(tzinfo=dt.timezone.utc).timestamp()
+            t = dt.datetime.strptime(s, muster).replace(tzinfo=dt.timezone.utc)
+            return t.timestamp() - versatz
         except ValueError:
             pass
     raise ValueError(s)

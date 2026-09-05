@@ -13,6 +13,8 @@ py/messreihe_qualitaet.py findet Reihen auf drei Wegen:
   Anker      satzgetrieben: ein Satz nennt in station_id_context eine
              Kennung, die zu einem Dateinamen passt. Das ist der
              Hauptweg -- und er sieht nur, was jemand benannt hat.
+  Beiblatt   ein stationen.json neben den Reihen nennt zu jeder Datei
+             Position und Name; gesucht wird dann ueber die Lage.
   BODC       die britischen Jahresdateien, die Name und Position im
              Kopf tragen.
   npz        numpy-Archive mit Position im Archiv oder im Beiblatt
@@ -61,7 +63,8 @@ def benutzt(nur=None):
                     p = dateien.get((teile[i].upper(), teile[j].upper()))
                     if p:
                         pfade.add(p)
-    for _a, p, _f, _q in M.bodc_reihen(nur) + M.npz_reihen(nur):
+    for _a, p, _f, _q in (M.bodc_reihen(nur) + M.npz_reihen(nur)
+                          + M.beiblatt_reihen(nur)):
         pfade.add(p)
     # Die BODC-Ordner fuehren je Station eine Datei pro Jahr, und
     # bodc_reihen() nimmt mit Absicht nur die juengste. Die uebrigen
