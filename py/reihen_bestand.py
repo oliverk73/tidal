@@ -19,6 +19,9 @@ py/messreihe_qualitaet.py findet Reihen auf drei Wegen:
              Kopf tragen.
   npz        numpy-Archive mit Position im Archiv oder im Beiblatt
              npz_stationen.json daneben.
+  Amt        Tafeln, die Name und Lage in der Kopfzeile tragen: die
+             Vorhersagen des japanischen Hydrographischen Dienstes und
+             die von Toitu Te Whenua (LINZ).
 
 Dieses Werkzeug zaehlt je Ordner, was da liegt und was davon ankommt.
 Wo die Zahlen auseinanderklaffen, steht der Grund daneben: kein Satz
@@ -64,8 +67,15 @@ def benutzt(nur=None):
                     if p:
                         pfade.add(p)
     for _a, p, _f, _q in (M.bodc_reihen(nur) + M.npz_reihen(nur)
-                          + M.beiblatt_reihen(nur)):
+                          + M.beiblatt_reihen(nur) + M.jhod_reihen(nur)
+                          + M.linz_reihen(nur)):
         pfade.add(p)
+    # Der JHOD legt je Station einen Ordner mit zwoelf Monatsdateien an,
+    # und jhod_reihen() nennt nur die erste davon. Die uebrigen elf sind
+    # nicht brach, sie werden mitgelesen.
+    for p in list(pfade):
+        if 'Japan_JHOD' in p:
+            pfade.update(glob.glob(os.path.join(os.path.dirname(p), '*.txt')))
     # Die BODC-Ordner fuehren je Station eine Datei pro Jahr, und
     # bodc_reihen() nimmt mit Absicht nur die juengste. Die uebrigen
     # Jahrgaenge sind nicht brach, sondern nicht gebraucht -- sonst

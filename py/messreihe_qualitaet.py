@@ -64,7 +64,7 @@ MIND_PUNKTE = 2000
 # 1400 im Jahr. Fuer sie gilt eine eigene Schwelle: die Punkte liegen
 # dafuer genau auf den Scheiteln, wo eine Kurve am meisten aussagt.
 MIND_PUNKTE_TAFEL = 600
-TAFELREIHEN = ('NewZealand_LINZ',)
+TAFELREIHEN = ('NewZealand_LINZ', 'UK_tidetimes')
 
 
 def kopfdaten():
@@ -166,7 +166,138 @@ def _lies(pfad):
         return _lies_jhod(pfad)
     if 'NewZealand_LINZ' in pfad and linz_kopf(pfad):
         return _lies_linz(pfad)
+    if pfad.endswith('.json') and os.sep + 'ea' + os.sep in pfad:
+        return _lies_ea(pfad)
+    if 'UK_tidetimes' in pfad and pfad.endswith('.json'):
+        return _lies_tidetimes(pfad)
     return _lies_csv(pfad)
+
+
+def _lies_tidetimes(pfad):
+    """Die Hoch- und Niedrigwassertafeln von tidetimes.co.uk.
+
+    678 Stationen liegen als JSON da -- Name, Lage, Zeitzone und eine
+    Liste aus Datum, Uhrzeit, Hoehe und Art. Sie sind die Quelle, aus der
+    672 unserer britischen Saetze mit UTide angepasst wurden, und wurden
+    seither nie zurueckgemessen.
+
+    Das ist ein gueltiger Pruefstein fuer die RECHNUNG: trifft unsere
+    Anpassung die Tafel, hat der Fit die Quelle sauber wiedergegeben, und
+    gebrochene Anpassungen, Zeitzonenfehler oder falsche Zuordnungen
+    fallen auf. Als Schiedsrichter zwischen zwei Saetzen taugt sie nicht
+    -- wer daraus gemacht wurde, gewinnt fast zwangslaeufig. Dafuer gibt
+    es die Spalte eigen: solche Saetze duerfen daran scheitern, aber
+    nichts gewinnen.
+
+    Die Zeitbasis ist die Falle. Die Datei nennt als timezone
+    "Europe/London", aber tidetimes.co.uk publiziert GANZJAEHRIG BST,
+    also festes UTC+1 -- im Winter gibt es diese Stunde gar nicht. Wer
+    die Zone nimmt, wie sie dasteht, liegt von Oktober bis Maerz eine
+    Stunde daneben. Genau darauf ist schon der urspruengliche Einlesebatch
+    hereingefallen (siehe py/refit_tidetimes_bst.py, das alle davon
+    abgeleiteten Saetze deshalb neu angepasst hat), und beim ersten
+    Anlauf hier noch einmal: die Messung fand als Kompromiss zwischen
+    Sommer und Winter -30 Minuten und blies den RMS der eigenen
+    Anpassungen von rund 5 auf 25 Zentimeter auf.
+
+    Gemessen wird an den Scheiteln; was tidetimes zwischen ihnen
+    kosinusfoermig interpoliert, geht damit nicht ein. Umgekehrt ist ein
+    Hoehen-RMS an Scheiteln fuer Zeitfehler fast blind -- dort ist die
+    Kurve flach. Fuer die Zeit taugt der Vergleich der Scheitelzeiten,
+    nicht dieser RMS.
+    """
+    try:
+        d = json.load(open(pfad, encoding='utf-8'))
+    except Exception:
+        return []
+    zone = dt.timezone(dt.timedelta(hours=1))     # festes BST, siehe oben
+    out = []
+    for e in d.get('entries', ()):
+        try:
+            j, m, t = (int(x) for x in e['date'].split('-'))
+            st, mi = (int(x) for x in e['time'].split(':'))
+            h = float(e['height_m'])
+        except (KeyError, ValueError, TypeError):
+            continue
+        try:
+            out.append((dt.datetime(j, m, t, st, mi, tzinfo=zone).timestamp(), h))
+        except ValueError:
+            continue
+    out.sort()
+    return out
+
+
+def tidetimes_reihen(nur=None):
+    """Je tidetimes-Station eine Reihe; Name und Lage stehen in der Datei."""
+    out = []
+    if nur and nur != 'UK_tidetimes':
+        return out
+    for pfad in sorted(glob.glob(os.path.join(REIHEN, 'UK_tidetimes', '*.json'))):
+        try:
+            d = json.load(open(pfad, encoding='utf-8'))
+            la, lo = float(d['lat']), float(d['lon'])
+        except Exception:
+            continue
+        out.append((dict(lat=la, lon=lo, name=f"{d.get('name', '')} (tidetimes)",
+                         file='(UK_tidetimes)', line=0),
+                    pfad, None, 'tidetimes.co.uk'))
+    return out
+
+
+def _lies_ea(pfad):
+    """Die 15-Minuten-Messungen der englischen Environment Agency.
+
+    py/download_ea_tides.py sammelt sie aus der check-for-flooding-CSV
+    (die liefert nur ein rollierendes Fenster von etwa fuenf Tagen) und
+    legt sie je Pegel als JSON ab: Zeitstempel in UTC auf Wert in Metern.
+    104 Stationen lagen so auf der Platte, ohne dass sie je jemand
+    gemessen haette -- der Leser kannte nur csv, txt und npz.
+
+    Fuer Grossbritannien ist das die einzige offene Messquelle neben den
+    44 BODC-Netzpegeln, und der Skriptkopf nennt sie zu Recht den
+    Goldstandard: die 672 Saetze, die wir aus tidetimes.co.uk
+    angepasst haben, stammen aus cosinus-interpolierten Tafeln und sind
+    gegen sich selbst nicht zu pruefen.
+    """
+    try:
+        d = json.load(open(pfad, encoding='utf-8'))
+    except Exception:
+        return []
+    out = []
+    for zeit, wert in (d.items() if isinstance(d, dict) else d):
+        try:
+            out.append((_zeit(zeit), float(wert)))
+        except (ValueError, TypeError):
+            continue
+    out.sort()
+    return out
+
+
+def ea_reihen(nur=None):
+    """Je Pegel der Environment Agency eine Reihe, Lage aus der Karte."""
+    out = []
+    if nur and nur != 'ea':
+        return out
+    karte = os.path.join(REIHEN, 'ea', 'ea_station_map.json')
+    if not os.path.exists(karte):
+        return out
+    try:
+        eintraege = json.load(open(karte, encoding='utf-8'))
+    except Exception:
+        return out
+    gesehen = set()
+    for e in eintraege:
+        rloi = str(e.get('rloi', ''))
+        if not rloi or rloi in gesehen:
+            continue
+        pfad = os.path.join(REIHEN, 'ea', f'rloi{rloi}.json')
+        if not os.path.exists(pfad):
+            continue
+        gesehen.add(rloi)
+        out.append((dict(lat=float(e['ea_lat']), lon=float(e['ea_lon']),
+                         name=f"{e.get('ea_label', rloi)} (EA)",
+                         file='(ea)', line=0), pfad, None, 'EA'))
+    return out
 
 
 LINZ_KOPF = re.compile(r"^\ufeff?(\d+),([^,]+),(\d+)[^\d]+(\d+)'([NS]),(\d+)[^\d]+(\d+)'([EW])")
@@ -659,6 +790,8 @@ def main(argv):
     anker += beiblatt_reihen(nur)
     anker += jhod_reihen(nur)
     anker += linz_reihen(nur)
+    anker += ea_reihen(nur)
+    anker += tidetimes_reihen(nur)
     print(f'{len(anker)} Reihen zugeordnet, Umkreis {umkreis:.0f} km, '
           f'{tage} Tage Fenster', file=sys.stderr)
 
