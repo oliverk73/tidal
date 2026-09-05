@@ -84,6 +84,24 @@ def kopfdaten():
     return out
 
 
+# Woerter, die in Stationsnamen so haeufig vorkommen, dass sie als
+# Kennung nichts taugen. Ohne diese Liste griff "SHOM-PORT-TUDY" ueber
+# das Paar (SHOM, PORT) nach ERQUY_PORT.csv, 250 km entfernt, und
+# "pointe_noire-234a-cog-uhslc_rq" ueber (UHSLC, POINTE) nach
+# h272_pointe_a_pitre.csv -- Pointe-a-Pitre in Guadeloupe statt
+# Pointe-Noire im Kongo, ein halber Erdumfang. Beide Messungen kamen mit
+# 119 Metern RMS heraus und waren damit zwar unschaedlich (ueber
+# UNSINN_M wird nichts entschieden), aber sie verstopften die Tafel.
+UNSPEZIFISCH = {
+    'PORT', 'PORTS', 'POINTE', 'POINT', 'PUERTO', 'PORTO', 'HAFEN', 'HARBOUR',
+    'HARBOR', 'BAIE', 'BAY', 'CAP', 'CAPE', 'ILE', 'ILES', 'ISLA', 'ISLAND',
+    'ISLANDS', 'RIVER', 'RIO', 'SAN', 'SANTA', 'SANTO', 'SAINT', 'ST', 'NORD',
+    'SUD', 'EST', 'OUEST', 'NORTH', 'SOUTH', 'EAST', 'WEST', 'NEW', 'LA', 'LE',
+    'LES', 'LOS', 'DU', 'DE', 'DEL', 'DER', 'DAS', 'PULAU', 'TELUK', 'KUALA',
+    'TANJUNG', 'MUARA', 'BANDAR', 'W', 'H', 'WL', 'WLO', 'WLP', 'CSV', 'TXT',
+}
+
+
 def reihendateien(nur=None):
     """-> {(anbieter, kennung): pfad} fuer alles, was wir lesen koennen."""
     out = {}
@@ -98,6 +116,12 @@ def reihendateien(nur=None):
         teile = [t for t in re.split(r'[_\-. ]', stamm) if t]
         for anbieter in re.split(r'[_\-]', ordner):
             for t in teile:
+                # Keine Mindestlaenge: die JMA-Kennungen heissen A0 und
+                # B1, und eine Laengenregel hat den ganzen japanischen
+                # Weg stillgelegt. Ausgeschlossen werden Woerter, nicht
+                # kurze Kennungen.
+                if t.upper() in UNSPEZIFISCH:
+                    continue
                 out.setdefault((anbieter.upper(), t.upper()), pfad)
         # JMA legt die Kennung allein in den Dateinamen (A0.txt).
         out.setdefault((ordner.upper(), stamm.upper()), pfad)
