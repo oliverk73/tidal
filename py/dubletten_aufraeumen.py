@@ -331,9 +331,82 @@ def haufen_gruppen(recs):
             beleg = 'nur abgeleitet'
         else:
             beleg = None
+        if beleg is None:
+            # Am schwaechsten Glied scheitert sonst die ganze Gruppe. In
+            # Tubuai stehen drei TICON-Saetze mit identischer Kennung und
+            # daneben "Rochers Noirs - Tubuai", 200 m weiter, ohne
+            # gemeinsame Kennung -- und weil der Beleg jedes Paar
+            # verlangt, blieb alles stehen. Der Haufen wird deshalb am
+            # Beleg entlang zerlegt: Teilmengen, in denen JEDES Paar
+            # belegt ist, werden fuer sich beurteilt, der Rest bleibt
+            # unangetastet. Das ist keine Lockerung -- innerhalb der
+            # Teilmenge gilt derselbe Beleg wie vorher.
+            teile = _zerlegen(menge, ids, bestaetigt)
+            for teil, grund in teile:
+                out.append((teil[0]['name'], teil,
+                            dict(nr=nr, spur=spur, namen=namen,
+                                 beleg=grund + ' (Teilmenge)',
+                                 abgeleitet=abgeleitet)))
+            # Was keiner Teilmenge angehoert, bleibt unbelegt -- und muss
+            # gemeldet werden, sonst verschwindet der ungeklaerte Rest
+            # stillschweigend aus der Zaehlung.
+            drin = {id(r) for teil, _g in teile for r in teil}
+            rest = [r for r in menge if id(r) not in drin]
+            if len(rest) >= 2 or not teile:
+                out.append((menge[0]['name'], rest if teile else menge,
+                            dict(nr=nr, spur=spur, namen=namen, beleg=None,
+                                 abgeleitet=abgeleitet)))
+            continue
         out.append((menge[0]['name'], menge,
                     dict(nr=nr, spur=spur, namen=namen, beleg=beleg,
                          abgeleitet=abgeleitet)))
+    return out
+
+
+def _zerlegen(menge, ids, bestaetigt):
+    """-> [(Teilmenge, Belegart)] fuer jede vollstaendig belegte Teilmenge.
+
+    Zusammenhangskomponenten der Belegbeziehung, danach die Probe, dass
+    die Komponente auch wirklich vollstaendig ist: sonst wuerde ueber
+    zwei Kanten ein dritter Satz mitgenommen, den mit dem ersten nichts
+    verbindet -- dieselbe Kettenbildung, gegen die pegel_dubletten schon
+    die vollstaendige Verkettung verlangt.
+    """
+    def belegt(a, b):
+        if a['name'] == b['name']:
+            return 'Name'
+        if _kennungs_belegt([a, b], ids):
+            return 'Kennung'
+        if _hand_belegt([a, b], bestaetigt):
+            return 'Hand'
+        return None
+
+    n = len(menge)
+    kante = {(i, j): belegt(menge[i], menge[j])
+             for i in range(n) for j in range(i + 1, n)}
+    eltern = list(range(n))
+
+    def wurzel(i):
+        while eltern[i] != i:
+            eltern[i] = eltern[eltern[i]]
+            i = eltern[i]
+        return i
+
+    for (i, j), g in kante.items():
+        if g:
+            eltern[wurzel(i)] = wurzel(j)
+    gruppen = collections.defaultdict(list)
+    for i in range(n):
+        gruppen[wurzel(i)].append(i)
+    out = []
+    for teil in gruppen.values():
+        if len(teil) < 2 or len(teil) == n:
+            continue
+        arten = [kante[(min(i, j), max(i, j))]
+                 for a, i in enumerate(teil) for j in teil[a + 1:]]
+        if not all(arten):
+            continue
+        out.append(([menge[i] for i in teil], sorted(set(arten))[0]))
     return out
 
 
