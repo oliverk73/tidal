@@ -280,19 +280,44 @@ def main(argv):
             ohne.append((name, menge))
             continue
         # Mehrere Jahre derselben Tafel: den Median je Satz nehmen.
+        # Blind ist ein Satz JE TABELLE, nicht ueberhaupt. In Heysham
+        # liegen drei Massstaebe nebeneinander -- die BODC-Reihe, eine
+        # aeltere BODC-Jahresdatei und die tidetimes-Tafel --, und jeder
+        # der drei Saetze ist in genau einem davon trainiert: der
+        # dwf-Satz gegen BODC, der uTide-Satz gegen die 2024er Reihe, der
+        # tidetimes-Satz gegen tidetimes. Wer das ueber alle Tabellen
+        # verodert, erklaert alle drei fuer blind und faellt aus der
+        # Wertung -- obwohl fuer jeden ein unabhaengiger Massstab
+        # danebenliegt. Gezaehlt werden deshalb nur die Tabellen, in
+        # denen ein Satz NICHT trainiert hat; blind bleibt er nur, wenn
+        # es keine solche gibt.
         werte = collections.defaultdict(list)
+        blindwerte = collections.defaultdict(list)
         zeiten = collections.defaultdict(list)
         blind = collections.defaultdict(bool)
         halb = collections.defaultdict(bool)
         hub = None
         for k, v in vergleichbar.items():
             for i, (rms, _gross, h, b, hb, zt) in v.items():
-                werte[i].append(rms)
-                if zt is not None:
-                    zeiten[i].append(zt)
-                blind[i] = blind[i] or b
+                # halbblind (auf der Reihe trainiert, aber ausserhalb des
+                # Fitfensters gemessen) ist NICHT blind -- es muss deshalb
+                # ausserhalb des Zweigs gesetzt werden, sonst faellt die
+                # Nur-Absolut-Regel weg, und ein Sieger, der die Reihe
+                # selbst erzeugt hat, gewinnt schon mit anderthalb
+                # Zentimetern.
                 halb[i] = halb[i] or hb
+                if b:
+                    blindwerte[i].append(rms)
+                else:
+                    werte[i].append(rms)
+                    if zt is not None:
+                        zeiten[i].append(zt)
                 hub = hub or h
+        for r in menge:
+            i = id(r)
+            if not werte[i]:
+                blind[i] = True
+                werte[i] = blindwerte[i]
         med = {i: sorted(v)[len(v) // 2] for i, v in werte.items()}
         zmed = {i: sorted(v)[len(v) // 2] for i, v in zeiten.items() if v}
         # Wer auf der Reihe trainiert hat, ist kein Massstab und wird auch

@@ -878,15 +878,44 @@ def main(argv):
             # Bei den Ankern ueber station_id_context ist es derselbe
             # Satz, bei den BODC-Reihen erkennt man es am Quellenvermerk.
             eigen = 1 if x is a else 0
-            if anbieter and anbieter.lower() in kopf.get(
-                    (x['file'], x['line']), ('', None, ''))[2].lower():
+            eig_fit = kopf.get((x['file'], x['line']), ('', None, ''))[1]
+            draussen = ausserhalb
+            # Der Anbietername kann der ganze Ordner sein
+            # ("JMA_Japan_2026"), und der steht in keinem Quellenvermerk.
+            # Geprueft wird deshalb Bestandteil fuer Bestandteil: die
+            # japanischen uTide-Saetze sind aus den JMA-Tafeln gefittet
+            # und stehen gegen JMA_Japan korrekt als eigen -- gegen den
+            # gespiegelten Ordner JMA_Japan_2026 galten sie ploetzlich
+            # als unabhaengig geprueft, und 67 TICON-Saetze waeren
+            # daraufhin wegen anderthalb Zentimetern geloescht worden.
+            quellentext = kopf.get((x['file'], x['line']), ('', None, ''))[2].lower()
+            teile_anb = [t for t in re.split(r'[_\-\s]', anbieter or '')
+                         if len(t) >= 3]
+            if any(t.lower() in quellentext for t in teile_anb):
                 eigen = 1
+                # "eigen" heisst trainiert -- aber nur, solange die Reihe im
+                # Anpassungsfenster liegt. Der uTide-Satz fuer Heysham stammt
+                # aus BODC 2007-2024, gemessen wird gegen BODC 2023-2026: das
+                # ist teils Trainingsmaterial, teils nicht. Ohne diese
+                # Unterscheidung galten in Heysham alle guten Saetze als blind,
+                # und der schlechteste blieb als einziger freier uebrig --
+                # womit er automatisch Sieger wurde, statt zu verlieren.
+                if eig_fit:
+                    try:
+                        fv = dt.datetime.strptime(eig_fit[0], '%Y-%m-%d').replace(
+                            tzinfo=dt.timezone.utc).timestamp()
+                        fb = dt.datetime.strptime(eig_fit[1], '%Y-%m-%d').replace(
+                            tzinfo=dt.timezone.utc).timestamp()
+                        if start > fb or ende < fv:
+                            draussen = 'ja'
+                    except (ValueError, IndexError, TypeError):
+                        pass
             w.writerow([os.path.basename(pfad), f'{a["lat"]:.4f}', f'{a["lon"]:.4f}',
                         dt.datetime.fromtimestamp(ende, dt.timezone.utc).year,
                         x['name'], os.path.basename(x['file']), round(d * 1000), n,
                         round(rms, 4), round(gross, 3), versatz, round(off, 3),
                         round(hub, 3), os.path.relpath(pfad, REIHEN).split(os.sep)[0],
-                        eigen, ausserhalb])
+                        eigen, draussen])
             sys.stdout.flush()
         if nr % 20 == 0:
             print(f'  {nr}/{len(anker)}', file=sys.stderr, flush=True)
