@@ -66197,7 +66197,9 @@ x 0 0
 # !units: meters
 # !longitude: 153.5499
 # !latitude: -28.1623
-Snapper Rocks, Queensland, Australia
+# note: 20260906 Name vereinheitlicht, vorher "Snapper Rocks, Queensland, Australia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Point Danger (Snapper Rocks), New South Wales, Australia
 +00:00 :UTC
 0.9937 meters
 J1              0.0060  350.02
@@ -126423,7 +126425,9 @@ x 0 0
 # !units: meters
 # !longitude: -124.985000
 # !latitude: 48.982000
-Brooksby Point, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Brooksby Point, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Brooksby Point (Uchucklesit Inlet), British Columbia, Canada
 +00:00 :UTC
 2.0700 meters
 J1              0.0228  255.65
@@ -126809,7 +126813,9 @@ x 0 0
 # !units: meters
 # !longitude: -124.812000
 # !latitude: 49.108000
-Franklin River, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Franklin River, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Sprout Narrows (Franklin River), British Columbia, Canada
 +00:00 :UTC
 2.0910 meters
 J1              0.0265  253.22
@@ -129136,7 +129142,9 @@ x 0 0
 # !units: meters
 # !longitude: -126.617000
 # !latitude: 49.622000
-Saavedra Islands, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Saavedra Islands, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Saavedra Islands (Nootka Sound), British Columbia, Canada
 +00:00 :UTC
 2.3700 meters
 J1              0.0290  251.62
@@ -131461,7 +131469,9 @@ x 0 0
 # !units: meters
 # !longitude: -127.624000
 # !latitude: 50.537000
-Bergh Cove, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Bergh Cove, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Bergh Cove (Quatsino Sound), British Columbia, Canada
 +00:00 :UTC
 2.2500 meters
 J1              0.0206  220.54
@@ -131847,7 +131857,9 @@ x 0 0
 # !units: meters
 # !longitude: -127.554000
 # !latitude: 50.556000
-Makwazniht Island, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Makwazniht Island, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Makwaziniht Island, British Columbia, Canada
 +00:00 :UTC
 2.1619 meters
 J1              0.0043  302.07
@@ -143824,7 +143836,9 @@ x 0 0
 # !units: meters
 # !longitude: -130.395000
 # !latitude: 54.087000
-Humpback Bay, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Humpback Bay, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Humpback Bay (Porcher Island), British Columbia, Canada
 +00:00 :UTC
 3.5070 meters
 x 0 0
@@ -159856,7 +159870,9 @@ x 0 0
 # !units: meters
 # !longitude: -66.418731
 # !latitude: 45.092840
-West Dipper Harbour, New Brunswick, Canada
+# note: 20260906 Name vereinheitlicht, vorher "West Dipper Harbour, New Brunswick, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Dipper Harbour West, New Brunswick, Canada
 +00:00 :UTC
 3.9600 meters
 J1              0.0090  179.97
@@ -208946,7 +208962,9 @@ x 0 0
 # !units: meters
 # !longitude: -65.831633
 # !latitude: 44.665805
-Culloden, Nova Scotia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Culloden, Nova Scotia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Culloden Wharf, Nova Scotia, Canada
 +00:00 :America/Halifax
 3.9976 meters
 J1              0.0042  230.36
@@ -222337,7 +222355,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.904549
 # !latitude: 45.057346
-Sonora, Nova Scotia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Sonora, Nova Scotia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Sonora (St. Marys River), Nova Scotia, Canada
 +00:00 :America/Halifax
 1.1356 meters
 J1              0.0004  68.46
@@ -253656,7 +253676,9 @@ x 0 0
 # !units: meters
 # !longitude: -61.828083
 # !latitude: 47.235189
-Havre-Aubert, Québec, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Havre-Aubert, Québec, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Havre Aubert (Amherst), Québec, Canada
 +00:00 :UTC
 0.7980 meters
 J1              0.0072  268.77
@@ -292325,8 +292347,10 @@ x 0 0
 # confidence: 7
 # utide: pts=2197 hwlw months=26 period=2022-07-31..2026-07-31 r2=0.9990 rms=0.0069m const=68
 # !units: meters
-# !longitude: 78.200000
-# !latitude: 8.750000
+# !longitude: 78.200300
+# !latitude: 8.750100
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 8.7500/78.2000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Thoothukudi (Tuticorin), Tamil Nadu, India
 +00:00 :Asia/Kolkata
 0.7060 meters
@@ -293098,10 +293122,12 @@ x 0 0
 # psmsl_id: 970
 # utide: period=2024-12-31..2026-12-31 r2=0.7329 rms=0.2563m const=68
 # !units: meters
-# !longitude: 128.650000
-# !latitude: 35.150000
+# !longitude: 128.642110
+# !latitude: 35.145410
 # province: South Gyeongsang
 # admin1_quelle: Polygon
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 35.1500/128.6500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Jinhae, South Korea
 +00:00 :Asia/Seoul
 1.0247 meters
@@ -350362,7 +350388,9 @@ x 0 0
 # !latitude: 46.4975
 # region: Vendée
 # admin1_quelle: Polygon
-Les Sables d'Olonne, France
+# note: 20260906 Name vereinheitlicht, vorher "Les Sables d'Olonne, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Les Sables-d'Olonne, France
 +00:00 :UTC
 3.3144 meters
 J1              0.0017  112.93
@@ -379444,7 +379472,9 @@ x 0 0
 # !latitude: 46.0074
 # region: Charente-Maritime
 # admin1_quelle: Ufer 4.9 km
-Île d'Aix, France
+# note: 20260906 Name vereinheitlicht, vorher "Île d'Aix, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Île-d'Aix, France
 +00:00 :UTC
 3.9581 meters
 J1              0.0013  168.51
@@ -408569,7 +408599,7 @@ x 0 0
 #
 # Balbriggan, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -408581,8 +408611,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.1787
 # !latitude: 53.6125
-# region: Newry and Mourne
-# admin1_quelle: Ufer 47.3 km
+# region: Fingal
+# admin1_quelle: Polygon
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Newry and Mourne" -> "Fingal".
 Balbriggan, Ireland
 +00:00 :Europe/Dublin
 2.4829 meters
@@ -409150,7 +409182,7 @@ x 0 0
 #
 # 1779 HW/LW points -> 45477 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -409160,8 +409192,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.2370
 # !latitude: 55.2081
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Moyle
+# admin1_quelle: Polygon
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Moyle".
 Ballycastle Bay, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 0.8515 meters
@@ -409729,7 +409763,7 @@ x 0 0
 #
 # Ballysadare Bay (Culleenamore), Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -409741,8 +409775,10 @@ x 0 0
 # !units: meters
 # !longitude: -8.5929
 # !latitude: 54.2352
-# region: Fermanagh
-# admin1_quelle: Ufer 36.2 km
+# region: Sligo
+# admin1_quelle: Ufer 1.3 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Fermanagh" -> "Sligo".
 Ballysadare Bay (Culleenamore), Ireland
 +00:00 :Europe/Dublin
 2.2563 meters
@@ -426566,7 +426602,7 @@ x 0 0
 #
 # Carnsore Point, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -426578,8 +426614,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.3631
 # !latitude: 52.1726
-# region: Pembrokeshire
-# admin1_quelle: Ufer 78.1 km
+# region: Wexford
+# admin1_quelle: Ufer 0.9 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Pembrokeshire" -> "Wexford".
 Carnsore Point, Ireland
 +00:00 :Europe/Dublin
 1.7105 meters
@@ -431015,7 +431053,7 @@ x 0 0
 #
 # Clifden Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -431027,6 +431065,8 @@ x 0 0
 # !units: meters
 # !longitude: -10.0519
 # !latitude: 53.4861
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Galway".
 Clifden Bay, Ireland
 +00:00 :Europe/Dublin
 2.5503 meters
@@ -431208,7 +431248,7 @@ x 0 0
 #
 # Clonakilty Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -431220,6 +431260,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8545
 # !latitude: 51.5949
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Cork".
 Clonakilty Bay, Ireland
 +00:00 :Europe/Dublin
 2.1007 meters
@@ -432369,7 +432411,7 @@ x 0 0
 #
 # 1778 HW/LW points -> 45479 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -432379,8 +432421,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.6754
 # !latitude: 55.1322
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Coleraine
+# admin1_quelle: Polygon
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Coleraine".
 Coleraine, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 1.2979 meters
@@ -432757,7 +432801,7 @@ x 0 0
 #
 # Coney Island, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -432769,6 +432813,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.9922
 # !latitude: 52.7141
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Clare".
 Coney Island, Ireland
 +00:00 :Europe/Dublin
 2.9224 meters
@@ -435076,7 +435122,7 @@ x 0 0
 #
 # Courtown, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -435089,8 +435135,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.2241
 # !latitude: 52.6431
-# region: Gwynedd
-# admin1_quelle: Ufer 99.8 km
+# region: Wexford
+# admin1_quelle: Polygon
+# note: 20260906 country "United Kingdom" -> "Ireland" berichtigt; damit
+# note: -- auch die Region "Gwynedd" -> "Wexford".
 Courtown, Ireland
 +00:00 :Europe/London
 0.7130 meters
@@ -436044,7 +436092,7 @@ x 0 0
 #
 # 1773 HW/LW points -> 45455 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -436054,8 +436102,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.0633
 # !latitude: 54.0229
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Newry and Mourne
+# admin1_quelle: Ufer 1.7 km
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Newry and Mourne".
 Cranfield Point, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 2.8533 meters
@@ -436237,7 +436287,7 @@ x 0 0
 #
 # Cranford Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -436250,8 +436300,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.6959
 # !latitude: 55.1488
-# region: Derry
-# admin1_quelle: Ufer 24.2 km
+# region: Donegal
+# admin1_quelle: Ufer 0.9 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Derry" -> "Donegal".
 Cranford Bay, Ireland
 +00:00 :Europe/London
 0.8332 meters
@@ -437205,7 +437257,7 @@ x 0 0
 #
 # Culdaff Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -437217,8 +437269,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.1532
 # !latitude: 55.2998
-# region: Limavady
-# admin1_quelle: Ufer 16.8 km
+# region: Donegal
+# admin1_quelle: Polygon
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Limavady" -> "Donegal".
 Culdaff Bay, Ireland
 +00:00 :Europe/Dublin
 1.6905 meters
@@ -437593,7 +437647,7 @@ x 0 0
 #
 # 1777 HW/LW points -> 45478 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -437603,8 +437657,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.2537
 # !latitude: 55.0464
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Derry
+# admin1_quelle: Polygon
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Derry".
 Culmore Point, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 1.4019 meters
@@ -437981,7 +438037,7 @@ x 0 0
 #
 # 1775 HW/LW points -> 45455 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -437991,8 +438047,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.0406
 # !latitude: 55.1255
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Moyle
+# admin1_quelle: Polygon
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Moyle".
 Cushendun, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 0.9844 meters
@@ -439530,7 +439588,7 @@ x 0 0
 #
 # Donegal Harbour (Salt Hill Quay), Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -439542,8 +439600,10 @@ x 0 0
 # !units: meters
 # !longitude: -8.2046
 # !latitude: 54.6298
-# region: Fermanagh
-# admin1_quelle: Ufer 16.1 km
+# region: Donegal
+# admin1_quelle: Ufer 1.9 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Fermanagh" -> "Donegal".
 Donegal Harbour (Salt Hill Quay), Ireland
 +00:00 :Europe/Dublin
 2.2780 meters
@@ -440113,7 +440173,7 @@ x 0 0
 #
 # Downies Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -440125,8 +440185,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.8422
 # !latitude: 55.1897
-# region: Derry
-# admin1_quelle: Ufer 34.5 km
+# region: Donegal
+# admin1_quelle: Polygon
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Derry" -> "Donegal".
 Downings Harbour, Ireland
 +00:00 :Europe/Dublin
 2.3704 meters
@@ -441080,7 +441142,7 @@ x 0 0
 #
 # Dunany Point, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -441092,8 +441154,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.2375
 # !latitude: 53.8601
-# region: Newry and Mourne
-# admin1_quelle: Ufer 21.7 km
+# region: Louth
+# admin1_quelle: Ufer 0.5 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Newry and Mourne" -> "Louth".
 Dunany Point, Ireland
 +00:00 :Europe/Dublin
 2.8341 meters
@@ -445720,7 +445784,7 @@ x 0 0
 #
 # Fanny's Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -445732,8 +445796,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.8139
 # !latitude: 55.1985
-# region: Derry
-# admin1_quelle: Ufer 33.5 km
+# region: Donegal
+# admin1_quelle: Ufer 0.4 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Derry" -> "Donegal".
 Fanny's Bay, Ireland
 +00:00 :Europe/Dublin
 1.7224 meters
@@ -453647,7 +453713,7 @@ x 0 0
 #
 # Great Saltee, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -453660,8 +453726,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.6145
 # !latitude: 52.1146
-# region: Pembrokeshire
-# admin1_quelle: Ufer 92.5 km
+# region: Wexford
+# admin1_quelle: Ufer 7.3 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Pembrokeshire" -> "Wexford".
 Great Saltee, Ireland
 +00:00 :Europe/London
 2.0930 meters
@@ -454808,7 +454876,7 @@ x 0 0
 #
 # Greystones, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -454820,8 +454888,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.0657
 # !latitude: 53.1517
-# region: Anglesey
-# admin1_quelle: Ufer 92.8 km
+# region: Wicklow
+# admin1_quelle: Polygon
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Anglesey" -> "Wicklow".
 Greystones, Ireland
 +00:00 :Europe/Dublin
 2.0896 meters
@@ -460610,7 +460680,7 @@ x 0 0
 #
 # Inishbofin Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -460622,8 +460692,10 @@ x 0 0
 # !units: meters
 # !longitude: -8.1669
 # !latitude: 55.1692
-# region: Derry
-# admin1_quelle: Ufer 51.7 km
+# region: Donegal
+# admin1_quelle: Ufer 1.3 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Derry" -> "Donegal".
 Inishbofin Bay, Ireland
 +00:00 :Europe/Dublin
 2.2673 meters
@@ -460998,7 +461070,7 @@ x 0 0
 #
 # 1746 HW/LW points -> 45478 interpolated points
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: ACD (approx.)
@@ -461008,8 +461080,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.233333
 # !latitude: 55.433333
-# region: Limavady
-# admin1_quelle: Ufer 31.5 km
+# region: Donegal
+# admin1_quelle: Ufer 8.5 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Limavady" -> "Donegal".
 Inishtrahull, Ireland
 +00:00 :Europe/London
 2.0234 meters
@@ -469889,7 +469963,7 @@ x 0 0
 #
 # Liscannor, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -469901,6 +469975,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.3865
 # !latitude: 52.9377
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Clare".
 Liscannor, Ireland
 +00:00 :Europe/Dublin
 2.7196 meters
@@ -475493,7 +475569,7 @@ x 0 0
 #
 # 1782 HW/LW points -> 45578 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -475505,8 +475581,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.3208
 # !latitude: 55.0021
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Derry
+# admin1_quelle: Polygon
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Derry".
 Londonderry, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 1.6413 meters
@@ -476463,7 +476541,7 @@ x 0 0
 #
 # Loughros More Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -476475,8 +476553,10 @@ x 0 0
 # !units: meters
 # !longitude: -8.5211
 # !latitude: 54.7978
-# region: Strabane
-# admin1_quelle: Ufer 39.5 km
+# region: Donegal
+# admin1_quelle: Ufer 1.2 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Strabane" -> "Donegal".
 Loughros More Bay, Ireland
 +00:00 :Europe/Dublin
 2.3160 meters
@@ -482656,7 +482736,7 @@ x 0 0
 #
 # Mulroy Bay Bar, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -482668,8 +482748,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.766667
 # !latitude: 55.250000
-# region: Derry
-# admin1_quelle: Ufer 34.7 km
+# region: Donegal
+# admin1_quelle: Ufer 0.4 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Derry" -> "Donegal".
 Mulroy Bay Bar, Ireland
 +00:00 :Europe/Dublin
 2.3033 meters
@@ -485169,7 +485251,7 @@ x 0 0
 #
 # 1351 HW/LW points -> 45454 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -485179,8 +485261,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.3052
 # !latitude: 54.1241
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Newry and Mourne
+# admin1_quelle: Polygon
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Newry and Mourne".
 Newry (Victoria Lock), Northern Ireland, United Kingdom
 +00:00 :Europe/London
 3.8417 meters
@@ -496383,7 +496467,7 @@ x 0 0
 #
 # 1777 HW/LW points -> 45455 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -496393,8 +496477,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.0531
 # !latitude: 55.0657
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Moyle
+# admin1_quelle: Ufer 0.1 km
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Moyle".
 Red Bay, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 0.8856 meters
@@ -497739,7 +497825,7 @@ x 0 0
 #
 # 1778 HW/LW points -> 45478 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -497749,8 +497835,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.2609
 # !latitude: 55.0430
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Derry
+# admin1_quelle: Polygon
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Derry".
 River Foyle (Lisahally), Northern Ireland, United Kingdom
 +00:00 :Europe/London
 1.4262 meters
@@ -504122,7 +504210,7 @@ x 0 0
 #
 # Seafield Point, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -504134,6 +504222,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.4886
 # !latitude: 52.8102
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Clare".
 Quilty Pier (Seafield), Ireland
 +00:00 :Europe/Dublin
 2.6225 meters
@@ -504508,7 +504598,7 @@ x 0 0
 #
 # Seamount Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -504520,8 +504610,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.7368
 # !latitude: 55.1825
-# region: Derry
-# admin1_quelle: Ufer 28.5 km
+# region: Donegal
+# admin1_quelle: Ufer 0.3 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Derry" -> "Donegal".
 Seamount Bay, Ireland
 +00:00 :Europe/Dublin
 1.2087 meters
@@ -507410,7 +507502,7 @@ x 0 0
 #
 # Slyne Head, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -507422,6 +507514,8 @@ x 0 0
 # !units: meters
 # !longitude: -10.2363
 # !latitude: 53.4006
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Galway".
 Slyne Head, Ireland
 +00:00 :Europe/Dublin
 2.5502 meters
@@ -507603,7 +507697,7 @@ x 0 0
 #
 # Smerwick Harbour, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -507615,6 +507709,8 @@ x 0 0
 # !units: meters
 # !longitude: -10.4115
 # !latitude: 52.1870
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Kerry".
 Ard na Caithne (Smerwick Harbour), Ireland
 +00:00 :Europe/Dublin
 2.0989 meters
@@ -508581,7 +508677,9 @@ x 0 0
 # !latitude: 51.514500
 # region: England
 # admin1_quelle: Name
-Southend-on-Sea, England, United Kingdom
+# note: 20260906 Name vereinheitlicht, vorher "Southend-on-Sea, England, United Kingdom"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Southend-on-Sea (Pier), England, United Kingdom
 +00:00 :Europe/London
 3.0624 meters
 J1              0.0074  103.87
@@ -517284,7 +517382,7 @@ x 0 0
 #
 # Trawbreaga Bay, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -517296,8 +517394,10 @@ x 0 0
 # !units: meters
 # !longitude: -7.3040
 # !latitude: 55.2927
-# region: Limavady
-# admin1_quelle: Ufer 24.2 km
+# region: Donegal
+# admin1_quelle: Ufer 0.6 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Limavady" -> "Donegal".
 Trawbreaga Bay, Ireland
 +00:00 :Europe/Dublin
 2.3970 meters
@@ -519806,7 +519906,7 @@ x 0 0
 #
 # Warren Lighthouse, Ireland
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: UKHO HW predictions (tidetimes.co.uk); Admiralty secondary-port transfer
 # date_imported: 20260609
 # datum: station Chart Datum (approx.)
@@ -519819,8 +519919,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.9518
 # !latitude: 55.2096
-# region: Limavady
-# admin1_quelle: Ufer 1.6 km
+# region: Donegal
+# admin1_quelle: Ufer 1.1 km
+# note: 20260906 country "United Kingdom" -> "Ireland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Limavady" -> "Donegal".
 Warren Lighthouse, Ireland
 +00:00 :Europe/London
 1.3987 meters
@@ -520002,7 +520104,7 @@ x 0 0
 #
 # 1765 HW/LW points -> 45455 interpolated points
 # BEGIN HOT COMMENTS
-# country: Ireland
+# country: United Kingdom
 # source: Derived from tidetimes.co.uk HW/LW predictions with UTide
 # date_imported: 20260414
 # datum: LAT (approx.)
@@ -520012,8 +520114,10 @@ x 0 0
 # !units: meters
 # !longitude: -6.2541
 # !latitude: 54.0965
-# region: Northern Ireland
-# admin1_quelle: Name
+# region: Newry and Mourne
+# admin1_quelle: Ufer 0.8 km
+# note: 20260906 country "Ireland" -> "United Kingdom" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Northern Ireland" -> "Newry and Mourne".
 Warrenpoint (Carlingford Lough), Northern Ireland, United Kingdom
 +00:00 :Europe/London
 2.7776 meters
@@ -602454,7 +602558,9 @@ x 0 0
 # !latitude: -54.6476
 # province: Tierra del Fuego
 # admin1_quelle: Name
-Islas de Año Nuevo (Isla Observatorio), Tierra del Fuego, Argentina
+# note: 20260906 Name vereinheitlicht, vorher "Islas de Año Nuevo (Isla Observatorio), Tierra del Fuego, Argentina"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Isla Observatorio (Islas de Año Nuevo), Tierra del Fuego, Argentina
 +00:00 :UTC
 1.7388 meters
 J1              0.0002  338.51
@@ -668885,7 +668991,7 @@ x 0 0
 #
 # Freetown, Sierra Leone (2)
 # BEGIN HOT COMMENTS
-# country: Sierra Leone (2)
+# country: Sierra Leone
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T457) with UTide
 # nmdis_site: T457 SIERRA LEONE-FREETOWN
 # date_imported: 20260611
@@ -668898,6 +669004,7 @@ x 0 0
 # !latitude: 8.4925
 # province: Western
 # admin1_quelle: Polygon
+# note: 20260906 country "Sierra Leone (2)" -> "Sierra Leone" nach dem Namen berichtigt,
 Freetown, Sierra Leone
 +00:00 :Africa/Freetown
 1.7699 meters
@@ -671026,10 +671133,12 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0107m const=68
 # !units: meters
-# !longitude: 49.0500
-# !latitude: 30.0000
+# !longitude: 49.050000
+# !latitude: 29.999800
 # province: Khuzestan
 # admin1_quelle: Ufer 13.4 km
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 30.0000/49.0500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Khowr-e Musa Bar, Iran
 +00:00 :Asia/Tehran
 2.2000 meters
@@ -672181,7 +672290,7 @@ x 0 0
 #
 # Suez, Egypt (2)
 # BEGIN HOT COMMENTS
-# country: Egypt (2)
+# country: Egypt
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T326) with UTide
 # nmdis_site: T326 EGYPT-SUEZ
 # date_imported: 20260611
@@ -672194,6 +672303,7 @@ x 0 0
 # !latitude: 29.9356
 # region: As Suways
 # admin1_quelle: Ufer 1.0 km
+# note: 20260906 country "Egypt (2)" -> "Egypt" nach dem Namen berichtigt,
 Suez (As Suways), Egypt
 +00:00 :Africa/Cairo
 1.1401 meters
@@ -672957,7 +673067,7 @@ x 0 0
 #
 # Mina Al Ahmadi, Kuwait (2)
 # BEGIN HOT COMMENTS
-# country: Kuwait (2)
+# country: Kuwait
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T317) with UTide
 # nmdis_site: T317 KUWAIT-MINA AL AHMADI
 # date_imported: 20260611
@@ -672970,6 +673080,7 @@ x 0 0
 # !latitude: 29.0662
 # province: Al Ahmadi
 # admin1_quelle: Ufer 5.4 km
+# note: 20260906 country "Kuwait (2)" -> "Kuwait" nach dem Namen berichtigt,
 Mina Al Ahmadi Refinery, Kuwait
 +00:00 :Asia/Kuwait
 1.7400 meters
@@ -673539,7 +673650,7 @@ x 0 0
 #
 # Trincomalee, Sri Lanka (2)
 # BEGIN HOT COMMENTS
-# country: Sri Lanka (2)
+# country: Sri Lanka
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T303) with UTide
 # nmdis_site: T303 SRI LANKA-TRINCOMALEE
 # date_imported: 20260611
@@ -673552,6 +673663,7 @@ x 0 0
 # !latitude: 8.5637
 # region: Trikunamalaya
 # admin1_quelle: Polygon
+# note: 20260906 country "Sri Lanka (2)" -> "Sri Lanka" nach dem Namen berichtigt,
 Trincomalee, Sri Lanka
 +00:00 :Asia/Colombo
 0.3900 meters
@@ -674703,7 +674815,7 @@ x 0 0
 #
 # Bandar Victoria (Labuan), Malaysia (2)
 # BEGIN HOT COMMENTS
-# country: Malaysia (2)
+# country: Malaysia
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T248) with UTide
 # nmdis_site: T248 KALIMANTAN-LABUAN
 # date_imported: 20260611
@@ -674718,6 +674830,7 @@ x 0 0
 # note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
 # region: Labuan
 # admin1_quelle: Ufer 0.3 km
+# note: 20260906 country "Malaysia (2)" -> "Malaysia" nach dem Namen berichtigt,
 Bandar Victoria (Labuan), Malaysia
 +00:00 :Asia/Kuala_Lumpur
 1.3900 meters
@@ -677033,7 +677146,7 @@ x 0 0
 #
 # Kuala Batu Pahat, Malaysia (2)
 # BEGIN HOT COMMENTS
-# country: Malaysia (2)
+# country: Malaysia
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T234) with UTide
 # nmdis_site: T234 WEST MALAYSIA-KUALA BATU PAHAT
 # date_imported: 20260611
@@ -677046,6 +677159,7 @@ x 0 0
 # !latitude: 1.7667
 # state: Johor
 # admin1_quelle: Ufer 3.3 km
+# note: 20260906 country "Malaysia (2)" -> "Malaysia" nach dem Namen berichtigt,
 Kuala Batu Pahat, Malaysia
 +00:00 :Asia/Kuala_Lumpur
 1.5101 meters
@@ -691535,7 +691649,7 @@ x 0 0
 #
 # Base Prat (Bahía Chile, Isla Greenwich), Chile
 # BEGIN HOT COMMENTS
-# country: Chile
+# country: Antarctica
 # source: SHOA Chile tide tables × UTide
 # station_id_context: SHOA-soberania
 # date_imported: 20260614
@@ -691544,9 +691658,13 @@ x 0 0
 # !units: meters
 # !longitude: -59.6630
 # !latitude: -62.4790
-# region: Isla Greenwich)
-# admin1_quelle: Name
-Base Prat (Bahía Chile, Isla Greenwich), Chile
+# region: Antarctica
+# admin1_quelle: Ufer 16.3 km
+# note: 20260906 Name vereinheitlicht, vorher "Base Prat (Bahía Chile, Isla Greenwich), Chile"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# note: 20260906 country "Chile" -> "Antarctica" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Isla Greenwich)" -> "Antarctica".
+Captain Arturo Prat Base (Isla Greenwich, South Shetlands), Antarctica
 +00:00 :UTC
 1.5183 meters
 J1              0.0179  67.00
@@ -698807,7 +698925,9 @@ x 0 0
 # !units: meters
 # !longitude: -80.6611
 # !latitude: -3.6772
-Zorritos, Tumbes, Peru
+# note: 20260906 Name vereinheitlicht, vorher "Zorritos, Tumbes, Peru"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Zorritos, Peru
 +00:00 :UTC
 1.1175 meters
 x 0 0
@@ -698997,7 +699117,9 @@ x 0 0
 # !units: meters
 # !longitude: -81.2811
 # !latitude: -4.4519
-Lobitos, Piura, Peru
+# note: 20260906 Name vereinheitlicht, vorher "Lobitos, Piura, Peru"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Lobitos, Peru
 +00:00 :UTC
 0.9932 meters
 x 0 0
@@ -699947,7 +700069,9 @@ x 0 0
 # !units: meters
 # !longitude: -78.1718
 # !latitude: -10.0970
-Huarmey, Ancash, Peru
+# note: 20260906 Name vereinheitlicht, vorher "Huarmey, Ancash, Peru"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Puerto Huarmey, Peru
 +00:00 :UTC
 0.4685 meters
 x 0 0
@@ -700327,7 +700451,9 @@ x 0 0
 # !units: meters
 # !longitude: -77.6111
 # !latitude: -11.1186
-Huacho, Lima, Peru
+# note: 20260906 Name vereinheitlicht, vorher "Huacho, Lima, Peru"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Huacho, Peru
 +00:00 :UTC
 0.4088 meters
 x 0 0
@@ -732544,7 +732670,7 @@ x 0 0
 #
 # PUERTO ARGENTINO (Isla Soledad, Islas Malvinas)
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina tide tables × UTide
 # station_id_context: SHN-PARG
 # date_imported: 20260902
@@ -732554,8 +732680,12 @@ x 0 0
 # note: 20260902 neu angelegt (py/shn_neufit.py); an dieser Station stand bisher kein Satz aus der amtlichen Tafel. Gegen den Juli 2025 gemessen 0.59 % des Tidenhubs.
 # note: Position aus der SHN-Datei, dort auf Bogenminuten gerundet (bis zu 900 m).
 # !units: meters
-# !longitude: -57.8500
-# !latitude: -51.7000
+# !longitude: -57.866700
+# !latitude: -51.683300
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -51.7000/-57.8500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
+# note: 20260906 country "Argentina" -> "Falkland Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Falkland Islands".
 Stanley, Falkland Islands
 +00:00 :UTC
 1.0126 meters

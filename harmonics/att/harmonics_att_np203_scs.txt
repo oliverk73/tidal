@@ -31531,7 +31531,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Malaysia
+# country: Thailand
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 4650
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -31545,7 +31545,8 @@ x 0 0
 # !longitude: 99.1726
 # !latitude: 6.5307
 # region: Satun
-# admin1_quelle: Name
+# admin1_quelle: Ufer 0.9 km
+# note: 20260906 country "Malaysia" -> "Thailand" nach dem Namen berichtigt,
 Ko Batong, Satun, Thailand
 +08:00 :Asia/Kuala_Lumpur
 1.7000 meters
@@ -58896,10 +58897,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 104.1500
-# !latitude: 1.8500
+# !longitude: 104.147200
+# !latitude: 1.842900
 # state: Johor
 # admin1_quelle: Ufer 1.3 km
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 1.8500/104.1500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Sedili Kechil, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.4800 meters
@@ -73058,7 +73061,9 @@ x 0 0
 # !latitude: 13.8167
 # province: Mindoro Occidental
 # admin1_quelle: Polygon
-Port Tilig, Philippines
+# note: 20260906 Name vereinheitlicht, vorher "Port Tilig, Philippines"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Port Tilig (Lubang Island), Occidental Mindoro, Philippines
 +08:00 :Asia/Manila
 0.5000 meters
 x 0 0
@@ -73830,10 +73835,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 119.9000
-# !latitude: 16.4000
+# !longitude: 119.897800
+# !latitude: 16.394000
 # province: Pangasinan
 # admin1_quelle: Ufer 1.7 km
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 16.4000/119.9000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Bolinao, Philippines
 +08:00 :Asia/Manila
 0.2700 meters
@@ -78874,10 +78881,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 123.7500
-# !latitude: 13.1500
+# !longitude: 123.758000
+# !latitude: 13.146100
 # province: Albay
 # admin1_quelle: Polygon
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 13.1500/123.7500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Legaspi, Philippines
 +08:00 :Asia/Manila
 0.7400 meters
@@ -90130,7 +90139,9 @@ x 0 0
 # !latitude: 5.0333
 # state: Sabah
 # admin1_quelle: Polygon
-Lahad Datu, Malaysia
+# note: 20260906 Name vereinheitlicht, vorher "Lahad Datu, Malaysia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Lahad Datu (Darvel Bay), Malaysia
 +08:00 :Asia/Kuching
 0.9800 meters
 x 0 0
@@ -92637,7 +92648,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Brunei
+# country: Malaysia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5138
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -92650,8 +92661,10 @@ x 0 0
 # !units: meters
 # !longitude: 115.6001
 # !latitude: 5.2178
-# region: Brunei and Muara
-# admin1_quelle: Ufer 58.2 km
+# region: Sabah
+# admin1_quelle: Ufer 0.8 km
+# note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Brunei and Muara" -> "Sabah".
 Weston, Malaysia
 +08:00 :Asia/Brunei
 1.5600 meters
@@ -92831,7 +92844,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Brunei
+# country: Malaysia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5139
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -92844,8 +92857,10 @@ x 0 0
 # !units: meters
 # !longitude: 115.5500
 # !latitude: 5.0833
-# region: Temburong
-# admin1_quelle: Ufer 47.5 km
+# region: Sabah
+# admin1_quelle: Ufer 1.4 km
+# note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Temburong" -> "Sabah".
 Sipitang, Malaysia
 +08:00 :Asia/Brunei
 1.3800 meters
@@ -93025,7 +93040,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Brunei
+# country: Malaysia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5139a
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -93038,8 +93053,10 @@ x 0 0
 # !units: meters
 # !longitude: 115.4246
 # !latitude: 4.9547
-# region: Temburong
-# admin1_quelle: Ufer 28.0 km
+# region: Sarawak
+# admin1_quelle: Polygon
+# note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Temburong" -> "Sarawak".
 Kuala Lawas, Malaysia
 +08:00 :Asia/Brunei
 1.5000 meters
@@ -93219,7 +93236,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Brunei
+# country: Malaysia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5140
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -93232,8 +93249,10 @@ x 0 0
 # !units: meters
 # !longitude: 115.3464
 # !latitude: 4.8957
-# region: Temburong
-# admin1_quelle: Ufer 17.2 km
+# region: Sarawak
+# admin1_quelle: Polygon
+# note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Temburong" -> "Sarawak".
 Punang, Malaysia
 +08:00 :Asia/Brunei
 1.3700 meters
@@ -93413,7 +93432,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Brunei
+# country: Malaysia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5141
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -93426,8 +93445,10 @@ x 0 0
 # !units: meters
 # !longitude: 115.0167
 # !latitude: 4.8500
-# region: Temburong
-# admin1_quelle: Ufer 3.6 km
+# region: Sarawak
+# admin1_quelle: Polygon
+# note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Temburong" -> "Sarawak".
 Kuala Limbang, Malaysia
 +08:00 :Asia/Brunei
 1.6700 meters
@@ -93607,7 +93628,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Brunei
+# country: Malaysia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5141a
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -93620,8 +93641,10 @@ x 0 0
 # !units: meters
 # !longitude: 115.0000
 # !latitude: 4.7500
-# region: Temburong
-# admin1_quelle: Ufer 2.7 km
+# region: Sarawak
+# admin1_quelle: Polygon
+# note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Temburong" -> "Sarawak".
 Bandar Limbang, Malaysia
 +08:00 :Asia/Brunei
 1.4900 meters
@@ -94383,7 +94406,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Malaysia
+# country: Brunei
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5144
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -94396,8 +94419,10 @@ x 0 0
 # !units: meters
 # !longitude: 114.4667
 # !latitude: 4.6833
-# state: Sarawak
-# admin1_quelle: Ufer 30.6 km
+# state: Tutong
+# admin1_quelle: Ufer 3.1 km
+# note: 20260906 country "Malaysia" -> "Brunei" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Sarawak" -> "Tutong".
 Lumut, Brunei
 +08:00 :Asia/Kuching
 1.2100 meters
@@ -94577,7 +94602,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Malaysia
+# country: Brunei
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5145
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -94590,8 +94615,10 @@ x 0 0
 # !units: meters
 # !longitude: 114.3167
 # !latitude: 4.6167
-# state: Sarawak
-# admin1_quelle: Ufer 16.9 km
+# state: Belait
+# admin1_quelle: Ufer 1.6 km
+# note: 20260906 country "Malaysia" -> "Brunei" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Sarawak" -> "Belait".
 Seria, Brunei
 +08:00 :Asia/Kuching
 1.2100 meters
@@ -94771,7 +94798,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Malaysia
+# country: Brunei
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5145a
 # note: NP203 Part III (2002), Zone -0800. Die Ausgabe 2015 fuehrt dieses
@@ -94784,8 +94811,10 @@ x 0 0
 # !units: meters
 # !longitude: 114.1833
 # !latitude: 4.5833
-# state: Sarawak
-# admin1_quelle: Ufer 6.0 km
+# state: Belait
+# admin1_quelle: Polygon
+# note: 20260906 country "Malaysia" -> "Brunei" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Sarawak" -> "Belait".
 Kuala Belait, Brunei
 +08:00 :Asia/Kuching
 1.2000 meters
@@ -127372,7 +127401,9 @@ x 0 0
 # !latitude: -7.2000
 # state: Jawa Timur
 # admin1_quelle: Ufer 1.4 km
-Surabaya, Indonesia
+# note: 20260906 Name vereinheitlicht, vorher "Surabaya, Indonesia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Surabaya (Tanjung Perak), Indonesia
 +07:00 :Asia/Jakarta
 1.5900 meters
 x 0 0
@@ -134339,7 +134370,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Timor-Leste
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5417
 # note: NP203 Part III (2002), Zone -0900. Die Ausgabe 2015 fuehrt dieses
@@ -134352,8 +134383,10 @@ x 0 0
 # !units: meters
 # !longitude: 127.0000
 # !latitude: -8.6667
-# state: Maluku
-# admin1_quelle: Ufer 65.4 km
+# state: Lautém
+# admin1_quelle: Polygon
+# note: 20260906 country "Indonesia" -> "Timor-Leste" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Maluku" -> "Lautém".
 Saenamo, Timor-Leste
 +09:00 :Asia/Jayapura
 1.7000 meters
@@ -134533,7 +134566,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Timor-Leste
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic Method
 # att_number: 5418
 # note: NP203 Part III (2002), Zone -0900. Die Ausgabe 2015 fuehrt dieses
@@ -134546,8 +134579,10 @@ x 0 0
 # !units: meters
 # !longitude: 125.5667
 # !latitude: -8.5500
-# state: Nusa Tenggara Timur
-# admin1_quelle: Ufer 52.9 km
+# state: Dili
+# admin1_quelle: Polygon
+# note: 20260906 country "Indonesia" -> "Timor-Leste" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Nusa Tenggara Timur" -> "Dili".
 Dili, Timor-Leste
 +09:00 :Asia/Jayapura
 1.3500 meters
@@ -154722,7 +154757,9 @@ x 0 0
 # !latitude: 10.3333
 # province: Ba Ria - Vung Tau
 # admin1_quelle: Ufer 2.5 km
-Mui Vung Tau, Vietnam
+# note: 20260906 Name vereinheitlicht, vorher "Mui Vung Tau, Vietnam"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Vung Tau, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 2.4100 meters
 x 0 0
@@ -159960,7 +159997,9 @@ x 0 0
 # !latitude: 20.6667
 # province: Hai Phong
 # admin1_quelle: Ufer 1.6 km
-Cua Cam Approaches (Hon Dau), Vietnam
+# note: 20260906 Name vereinheitlicht, vorher "Cua Cam Approaches (Hon Dau), Vietnam"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Hon Dau, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 1.8600 meters
 x 0 0

@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import json
 import math
 import os
 import re
@@ -93,20 +94,49 @@ def git(*args):
                           capture_output=True).stdout
 
 
+CACHE = os.path.join(ROOT, 'harmonics/help/positions_lock_cache')
+
+
+def _cache_pfad(path):
+    return os.path.join(CACHE, path.replace('/', '_') + '.json')
+
+
 def first_seen(path):
     """Fuer jeden Fingerabdruck die aelteste eingecheckte Fassung.
 
     Gibt zusaetzlich zurueck, wie viele Commits ausgewertet wurden.
+
+    Die Historie wird zwischengespeichert. Ohne das las dieser Lauf bei
+    JEDER Aenderung die komplette Geschichte jeder Datei neu aus git --
+    fuer harmonics_utide_tidetables.txt sind das 123 Fassungen zu je
+    fuenf Megabyte, einzeln geholt, dekodiert und geparst, mal vierzig
+    Dateien. Bei einem einzigen geaenderten Satz dauerte das Minuten.
+
+    Unterhalb der Spitze aendert sich die Geschichte aber nie: neue
+    Commits kommen oben dazu, alte bleiben. Gespeichert wird deshalb der
+    Stand der Faltung samt der Liste der schon ausgewerteten Blobs, und
+    ein neuer Lauf verarbeitet nur, was seither hinzukam. Stimmt die
+    gespeicherte Blobliste nicht mehr mit der Geschichte ueberein (etwa
+    nach einem rebase), wird von vorn gerechnet.
     """
     shas = git('log', '--reverse', '--format=%H', '--', path).decode().split()
-    seen = {}
-    blobs = set()
-    dates = {}
+    seen, dates, blobs = {}, {}, []
+    cp = _cache_pfad(path)
+    if os.path.exists(cp):
+        try:
+            d = json.load(open(cp, encoding='utf-8'))
+            seen = {k: (tuple(v) if v else None) for k, v in d['seen'].items()}
+            dates = {k: tuple(v) for k, v in d['dates'].items()}
+            blobs = d['blobs']
+        except Exception:
+            seen, dates, blobs = {}, {}, []
+    fertig = set(blobs)
+    neu_blobs = []
     for sha in shas:
         blob = git('rev-parse', f'{sha}:{path}').decode().strip()
-        if not blob or blob in blobs:
+        if not blob or blob in fertig or blob in neu_blobs:
             continue
-        blobs.add(blob)
+        neu_blobs.append(blob)
         text = git('cat-file', 'blob', blob).decode('iso-8859-1')
         date = git('log', '-1', '--format=%cs', sha).decode().strip()
         for fp, entries in parse(text).items():
@@ -117,7 +147,13 @@ def first_seen(path):
                 continue
             seen[fp] = entries[0]
             dates[fp] = (sha[:8], date)
-    return seen, dates, len(shas), len(blobs)
+    if neu_blobs:
+        os.makedirs(CACHE, exist_ok=True)
+        json.dump({'blobs': blobs + neu_blobs,
+                   'seen': {k: (list(v) if v else None) for k, v in seen.items()},
+                   'dates': {k: list(v) for k, v in dates.items()}},
+                  open(cp, 'w', encoding='utf-8'))
+    return seen, dates, len(shas), len(blobs) + len(neu_blobs)
 
 
 def metres(la1, lo1, la2, lo2):

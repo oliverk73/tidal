@@ -48584,10 +48584,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 141.4500
-# !latitude: 41.4000
+# !longitude: 141.454400
+# !latitude: 41.398300
 # region: Aomori
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 41.4000/141.4500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Shiriya, Aomori, Japan
 +00:00 :Asia/Tokyo
 0.9754 meters
@@ -55080,10 +55082,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 135.5000
-# !latitude: 33.5500
+# !longitude: 135.492400
+# !latitude: 33.547800
 # region: Wakayama
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 33.5500/135.5000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Susami, Wakayama, Japan
 +00:00 :Asia/Tokyo
 1.1278 meters
@@ -56039,7 +56043,9 @@ x 0 0
 # !latitude: 33.1333
 # region: Tokyo
 # admin1_quelle: Name
-Kaminato Hakuchi, Hachijo Jima, Tokyo, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Kaminato Hakuchi, Hachijo Jima, Tokyo, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Kaminato (Hachijo-jima), Tokyo, Japan
 +00:00 :Asia/Tokyo
 0.8230 meters
 J1              0.0095  49.78
@@ -57373,12 +57379,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 134.3000
-# !latitude: 33.5500
+# !longitude: 134.302200
+# !latitude: 33.542800
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Kochi
 # admin1_quelle: Name
-Kannoura Ko, Kochi, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Kannoura Ko, Kochi, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 33.5500/134.3000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
+Kannoura, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.0973 meters
 J1              0.0111  220.05
@@ -57952,7 +57962,9 @@ x 0 0
 # !latitude: 34.1167
 # region: Wakayama
 # admin1_quelle: Name
-Shimotsu Ura, Osaki Wan, Wakayama, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Shimotsu Ura, Osaki Wan, Wakayama, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Shimotsu, Wakayama, Japan
 +00:00 :Asia/Tokyo
 1.0973 meters
 J1              0.0140  70.43
@@ -58334,7 +58346,9 @@ x 0 0
 # !latitude: 33.8667
 # region: Tokushima
 # admin1_quelle: Name
-Tachibana Ura, Tokushima, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Tachibana Ura, Tokushima, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Tachibana, Tokushima, Japan
 +00:00 :Asia/Tokyo
 1.0363 meters
 J1              0.0140  65.37
@@ -59291,7 +59305,9 @@ x 0 0
 # !latitude: 34.4667
 # region: Hyogo
 # admin1_quelle: Name
-Ei, Awaji, Hyogo, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Ei, Awaji, Hyogo, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Ei (Awaji-shima), Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.7925 meters
 J1              0.0086  283.39
@@ -61012,7 +61028,9 @@ x 0 0
 # !latitude: 34.7833
 # region: Hyogo
 # admin1_quelle: Name
-Shikama Ko, Hyogo, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Shikama Ko, Hyogo, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Himeji (Shikama), Hyogo, Japan
 +09:00 :Asia/Tokyo
 1.0058 meters
 J1              0.0104  273.00
@@ -63311,7 +63329,9 @@ x 0 0
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Ehime
 # admin1_quelle: Name
-Imabari, Kurushima Kaikyo, Ehime, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Imabari, Kurushima Kaikyo, Ehime, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Imabari, Ehime, Japan
 +09:00 :Asia/Tokyo
 1.9507 meters
 J1              0.0173  279.89
@@ -68879,7 +68899,9 @@ x 0 0
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Yamaguchi
 # admin1_quelle: Name
-Mitajiri Ko, Yamaguchi, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Mitajiri Ko, Yamaguchi, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Hofu (Mitajiri), Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 1.7069 meters
 J1              0.0151  248.59
@@ -152366,7 +152388,9 @@ x 0 0
 # !latitude: -7.2167
 # state: Java
 # admin1_quelle: Name
-Surabaja, Surabaja Strait, Java, Indonesia
+# note: 20260906 Name vereinheitlicht, vorher "Surabaja, Surabaja Strait, Java, Indonesia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Surabaya (Tanjung Perak), Indonesia
 +00:00 :Asia/Jakarta
 1.4935 meters
 J1              0.0124  213.63
@@ -160484,7 +160508,9 @@ x 0 0
 # !latitude: 5.0333
 # state: Sabah
 # admin1_quelle: Polygon
-Lahad Datu, Darvel Bay, Malaysia
+# note: 20260906 Name vereinheitlicht, vorher "Lahad Datu, Darvel Bay, Malaysia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Lahad Datu (Darvel Bay), Malaysia
 +00:00 :Asia/Kuching
 0.9754 meters
 J1              0.0074  174.91
@@ -160675,7 +160701,9 @@ x 0 0
 # !latitude: 4.4833
 # state: Sabah
 # admin1_quelle: Ufer 1.3 km
-Semporna, Darvel Bay, Malaysia
+# note: 20260906 Name vereinheitlicht, vorher "Semporna, Darvel Bay, Malaysia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Semporna, Malaysia
 +00:00 :Asia/Kuching
 0.9754 meters
 J1              0.0074  177.12
@@ -160854,7 +160882,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Malaysia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 1985
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Sungai Kutei, Indonesia (no.1985). M2=0.75 S2=0.27 k=1.26 dt=-12min.
@@ -160864,8 +160892,10 @@ x 0 0
 # !units: meters
 # !longitude: 117.8833
 # !latitude: 4.2500
-# state: Kalimantan Timur
-# admin1_quelle: Ufer 10.7 km
+# state: Sabah
+# admin1_quelle: Ufer 1.3 km
+# note: 20260906 country "Indonesia" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Kalimantan Timur" -> "Sabah".
 Tawau, Malaysia
 +00:00 :Asia/Kuching
 1.5240 meters
@@ -167173,7 +167203,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Malaysia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2057
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Manila, Philippines (no.2057). M2=0.19 S2=0.07 k=1.01 dt=+18min.
@@ -167183,7 +167213,11 @@ x 0 0
 # !units: meters
 # !longitude: 113.9833
 # !latitude: 4.5833
-Baram River entrance, Indonesia
+# note: 20260906 Name vereinheitlicht, vorher "Baram River entrance, Indonesia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# note: 20260906 country "Indonesia" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sarawak".
+Kuala Baram, Malaysia
 +00:00 :Asia/Kuching
 0.9449 meters
 J1              0.0099  215.83
@@ -167362,7 +167396,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Brunei
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2059
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Manila, Philippines (no.2059). M2=0.29 S2=0.10 k=1.54 dt=+40min.
@@ -167372,6 +167406,8 @@ x 0 0
 # !units: meters
 # !longitude: 115.1333
 # !latitude: 5.0000
+# note: 20260906 country "Indonesia" -> "Brunei" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Brunei and Muara".
 Sapo Point, Brunei Bay, Brunei
 +00:00 :Asia/Brunei
 1.4021 meters
@@ -188943,7 +188979,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Malaysia
+# country: Philippines
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2297
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Cebu, Philippines (no.2297). M2=0.36 S2=0.20 k=0.89 dt=-180min.
@@ -188953,6 +188989,8 @@ x 0 0
 # !units: meters
 # !longitude: 118.5333
 # !latitude: 6.9833
+# note: 20260906 country "Malaysia" -> "Philippines" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Palawan".
 Mapun (Cagayan de Tawi-Tawi), Philippines
 +00:00 :Asia/Manila
 0.6401 meters
@@ -207289,7 +207327,9 @@ x 0 0
 # !latitude: 13.8167
 # region: Lubang
 # admin1_quelle: Name
-Port Tilig, Lubang Island, Lubang, Philippines
+# note: 20260906 Name vereinheitlicht, vorher "Port Tilig, Lubang Island, Lubang, Philippines"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Port Tilig (Lubang Island), Occidental Mindoro, Philippines
 +00:00 :Asia/Manila
 0.5182 meters
 J1              0.0108  208.42
@@ -224670,7 +224710,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Tonga
+# country: Fiji
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2883
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Suva Harbor, Fiji Islands, Fiji (no.2883). M2=0.61 S2=0.02 k=1.08 dt=+56min.
@@ -224680,6 +224720,8 @@ x 0 0
 # !units: meters
 # !longitude: -179.8833
 # !latitude: -18.9833
+# note: 20260906 country "Tonga" -> "Fiji" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Eastern".
 Totoya Island, Fiji
 +12:00 :Pacific/Fiji
 0.9144 meters
@@ -226015,7 +226057,9 @@ x 0 0
 # !latitude: -45.7833
 # region: Otago
 # admin1_quelle: Name
-Otago Harbor entrance, Otago, New Zealand
+# note: 20260906 Name vereinheitlicht, vorher "Otago Harbor entrance, Otago, New Zealand"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Taiaroa Head, New Zealand
 +00:00 :Pacific/Auckland
 0.9754 meters
 J1              0.0033  314.13
@@ -252834,14 +252878,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 147.7500
-# !latitude: -43.1000
+# !longitude: 147.740900
+# !latitude: -43.104000
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Tasmania
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -43.1000/147.7500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Parsons Bay, Tasmania, Australia
 +00:00 :Australia/Hobart
 0.9449 meters
@@ -276210,7 +276256,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Iraq
+# country: Kuwait
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 3637
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Khowr-e Musa Bar, Iran (no.3637). M2=1.35 S2=0.16 k=1.56 dt=+76min.
@@ -276220,8 +276266,10 @@ x 0 0
 # !units: meters
 # !longitude: 48.1502
 # !latitude: 30.0044
-# province: Al-Basrah
-# admin1_quelle: Ufer 4.0 km
+# province: Al Jahrah
+# admin1_quelle: Ufer 1.1 km
+# note: 20260906 country "Iraq" -> "Kuwait" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al-Basrah" -> "Al Jahrah".
 al-Warba, Kuwait
 +03:30 :Asia/Kuwait
 2.4384 meters

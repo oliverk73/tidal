@@ -18453,10 +18453,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -65.2500
-# !latitude: -54.6000
+# !longitude: -65.250200
+# !latitude: -54.640800
 # province: Tierra del Fuego
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -54.6000/-65.2500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Bahía Thetis, Tierra del Fuego, Argentina
 -03:00 :America/Buenos_Aires
 2.1900 meters
@@ -29201,7 +29203,9 @@ x 0 0
 # !latitude: -4.8167
 # state: Rio Grande do Norte
 # admin1_quelle: Name
-Areia Branca (Salineiro Terminal), Rio Grande do Norte, Brazil
+# note: 20260906 Name vereinheitlicht, vorher "Areia Branca (Salineiro Terminal), Rio Grande do Norte, Brazil"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Areia Branca (Terminal Salineiro), Rio Grande do Norte, Brazil
 -03:00 :America/Sao_Paulo
 1.8700 meters
 x 0 0
@@ -30161,7 +30165,9 @@ x 0 0
 # !latitude: -62.4833
 # region: Antarctica
 # admin1_quelle: Ufer 16.7 km
-Discovery Bay, Antarctica
+# note: 20260906 Name vereinheitlicht, vorher "Discovery Bay, Antarctica"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Captain Arturo Prat Base (Isla Greenwich, South Shetlands), Antarctica
 -03:00 :Antarctica/Palmer
 1.5000 meters
 x 0 0
@@ -32083,7 +32089,9 @@ x 0 0
 # !latitude: -54.6500
 # province: Tierra del Fuego
 # admin1_quelle: Name
-Isla Observatorio, Tierra del Fuego, Argentina
+# note: 20260906 Name vereinheitlicht, vorher "Isla Observatorio, Tierra del Fuego, Argentina"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Isla Observatorio (Islas de Año Nuevo), Tierra del Fuego, Argentina
 -03:00 :America/Buenos_Aires
 1.8600 meters
 x 0 0
@@ -41103,7 +41111,9 @@ x 0 0
 # !latitude: -53.7000
 # province: Tierra del Fuego
 # admin1_quelle: Name
-Caleta la Misión, Tierra del Fuego, Argentina
+# note: 20260906 Name vereinheitlicht, vorher "Caleta la Misión, Tierra del Fuego, Argentina"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Caleta La Misión, Tierra del Fuego, Argentina
 -03:00 :America/Buenos_Aires
 4.8000 meters
 x 0 0

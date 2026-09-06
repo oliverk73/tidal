@@ -7287,7 +7287,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -7297,7 +7297,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 2.1 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Albany Island, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.8200 meters
@@ -19367,7 +19368,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -19377,7 +19378,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 2.2 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Bampfield Head, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.6300 meters
@@ -31038,7 +31040,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -31047,6 +31049,7 @@ x 0 0
 # !latitude: -9.1333
 # region: Coral Sea
 # admin1_quelle: Name
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Bramble Cay, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.4800 meters
@@ -48466,7 +48469,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -48475,6 +48478,7 @@ x 0 0
 # !latitude: -23.2500
 # region: Coral Sea
 # admin1_quelle: Name
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Cato Island, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.0300 meters
@@ -54567,13 +54571,15 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
 # !units: meters
 # !longitude: 143.0667
 # !latitude: -10.0500
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Queensland".
 Coconut Island, Torres Strait, Australia
 +10:00 :Australia/Brisbane
 1.9700 meters
@@ -57236,7 +57242,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -57246,7 +57252,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 3.6 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Crab Island, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.0320 meters
@@ -60873,7 +60880,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -60882,6 +60889,7 @@ x 0 0
 # !latitude: -9.6000
 # region: Coral Sea
 # admin1_quelle: Name
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Darnley Island, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.6900 meters
@@ -67779,15 +67787,17 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
 # !units: meters
 # !longitude: 142.9833
 # !latitude: -9.9833
-# region: Coral Sea
-# admin1_quelle: Name
+# region: Queensland
+# admin1_quelle: Ufer 67.8 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Coral Sea" -> "Queensland".
 Dungeness Reef, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.7220 meters
@@ -68744,7 +68754,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -68753,6 +68763,7 @@ x 0 0
 # !latitude: -17.4333
 # region: Coral Sea
 # admin1_quelle: Name
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 East Diamond Inlet., Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.0700 meters
@@ -69704,7 +69715,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -69714,7 +69725,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 17.4 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 East Strait Island, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.6970 meters
@@ -70667,7 +70679,9 @@ x 0 0
 # !units: feet
 # !longitude: -66.9850
 # !latitude: 44.9033
-Eastport, Maine (2) (expired 1988-12-31)
+# note: 20260906 Name vereinheitlicht, vorher "Eastport, Maine (2) (expired 1988-12-31)"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Eastport, Passamaquoddy Bay, Maine
 -05:00 :America/New_York
 9.7100 feet
 J1              0.0300  127.40
@@ -70852,7 +70866,9 @@ x 0 0
 # !units: meters
 # !longitude: -66.9833
 # !latitude: 44.9000
-Eastport, Maine (3)
+# note: 20260906 Name vereinheitlicht, vorher "Eastport, Maine (3)"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Eastport, Passamaquoddy Bay, Maine
 -04:00 :America/New_York
 2.9250 meters
 J1              0.0210  121.30
@@ -78959,7 +78975,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -78968,6 +78984,7 @@ x 0 0
 # !latitude: -17.8667
 # region: Coral Sea
 # admin1_quelle: Name
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Flinders Reef, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.4800 meters
@@ -90060,7 +90077,9 @@ x 0 0
 # !latitude: 53.987000
 # province: British Columbia
 # admin1_quelle: Name
-Godfrey Point, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Godfrey Point, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Seabreeze Point, British Columbia, Canada
 -08:00 :America/Vancouver
 3.8370 meters
 J1              0.0270  152.90
@@ -99845,7 +99864,7 @@ x 0 0
 # Data from NOS disk 1991AUG05 (TID), AUG2 (CUR) ------------------------------
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Chile
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -99858,8 +99877,10 @@ x 0 0
 # !units: feet
 # !longitude: -109.4394
 # !latitude: -27.1548
-# region: Isla de Pascua (Easter)
-# admin1_quelle: Name
+# region: Valparaíso
+# admin1_quelle: Polygon
+# note: 20260906 country "Unknown" -> "Chile" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Isla de Pascua (Easter)" -> "Valparaíso".
 Hanga Roa, Isla de Pascua (Easter), Chile
 -07:00 :Pacific/Easter
 1.5000 feet
@@ -100245,7 +100266,9 @@ x 0 0
 # !latitude: 45.0669
 # province: Nova Scotia
 # admin1_quelle: Ufer 2.4 km
-Hantsport, Nova Scotia (2), Canada
+# note: 20260906 Name vereinheitlicht, vorher "Hantsport, Nova Scotia (2), Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Hantsport, Nova Scotia, Canada
 -04:00 :America/Halifax
 7.4880 meters
 J1              0.0120  168.20
@@ -100622,7 +100645,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -100632,7 +100655,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 12.3 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Harrington Reef, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.1601 meters
@@ -102930,7 +102954,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -102940,7 +102964,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 18.4 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Hawkesbury Island, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.3120 meters
@@ -103126,13 +103151,15 @@ x 0 0
 # ENGLISH
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Turks and Caicos Islands
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
 # !units: feet
 # !longitude: -71.1417
 # !latitude: 21.4234
+# note: 20260906 country "Unknown" -> "Turks and Caicos Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Grand Turk".
 Hawks Nest Anchorage, Grand Turk, Turks Islands, Turks and Caicos Islands
 -05:00 :America/Grand_Turk
 1.1020 feet
@@ -105426,7 +105453,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -105436,7 +105463,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 1.9 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Herald Camp, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.2610 meters
@@ -110053,7 +110081,7 @@ x 0 0
 # Data: **        M.44.5-4M
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -110061,6 +110089,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.6288
 # !latitude: 44.9288
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sakhalin".
 Kasatka Bay (Iturup), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.8600 meters
@@ -117163,7 +117193,7 @@ x 0 0
 # Data: **        M.36
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -117171,8 +117201,10 @@ x 0 0
 # !units: meters
 # !longitude: 145.8502
 # !latitude: 44.0199
-# region: Hokkaido
-# admin1_quelle: Ufer 45.3 km
+# region: Sakhalin
+# admin1_quelle: Ufer 0.6 km
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Hokkaido" -> "Sakhalin".
 Yuzhno-Kurilsk (Kunashin), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.8800 meters
@@ -120632,7 +120664,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -120642,7 +120674,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 8.5 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Ince Point, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.7610 meters
@@ -123127,7 +123160,7 @@ x 0 0
 # Data: **        M.43.6-2M
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -123135,6 +123168,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.3458
 # !latitude: 44.7153
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sakhalin".
 Golownino (Iturup), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.9600 meters
@@ -143537,7 +143572,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -143547,7 +143582,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Nachbarn ab 11 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 40.8 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Kirkcaldie Reef, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.8000 meters
@@ -143742,7 +143778,9 @@ x 0 0
 # !latitude: 34.4667
 # region: Osaka
 # admin1_quelle: Name
-Kisiwada, Osaka, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Kisiwada, Osaka, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Kishiwada, Osaka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
 J1              0.0086  226.51
@@ -144517,7 +144555,9 @@ x 0 0
 # !latitude: 54.079000
 # province: British Columbia
 # admin1_quelle: Name
-Klaxton Creek, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Klaxton Creek, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Claxton, British Columbia, Canada
 -08:00 :America/Vancouver
 3.7810 meters
 J1              0.0240  161.00
@@ -162367,7 +162407,7 @@ x 0 0
 # NU2.  DWF
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Palau
 # source:  From C&GS-444
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -162375,6 +162415,8 @@ x 0 0
 # !units: feet
 # !longitude: 134.4667
 # !latitude: 7.3333
+# note: 20260906 country "Unknown" -> "Palau" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Koror".
 Malakal Harbor, Palau Islands, Caroline Islands, Palau
 +09:00 :Pacific/Palau
 3.6400 feet
@@ -165429,7 +165471,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 + INFER                           TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -165438,6 +165480,7 @@ x 0 0
 # !latitude: -19.1000
 # region: Coral Sea
 # admin1_quelle: Name
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Marion Reef, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.1700 meters
@@ -171019,7 +171062,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 + INFER                           TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -171028,6 +171071,7 @@ x 0 0
 # !latitude: -17.4167
 # region: Coral Sea
 # admin1_quelle: Name
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Mellish Reef, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 0.8400 meters
@@ -177180,7 +177224,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -177190,7 +177234,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Polygon
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Moa Island, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.6950 meters
@@ -181209,7 +181254,7 @@ x 0 0
 # Data: **        M.42.6-3M
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -181217,6 +181262,8 @@ x 0 0
 # !units: meters
 # !longitude: 148.8416
 # !latitude: 45.4262
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sakhalin".
 Medvezhya Bay (Iturup), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.6500 meters
@@ -185258,7 +185305,7 @@ x 0 0
 # Data: **        M.37.6-2M
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -185266,6 +185313,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.1884
 # !latitude: 44.7651
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sakhalin".
 Dobroe Nachalo Bay (Iturup), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.7000 meters
@@ -188335,7 +188384,7 @@ x 0 0
 # Data: **        M.37.5-3M
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -188343,6 +188392,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.8811
 # !latitude: 45.2570
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sakhalin".
 Kurilsk (Iturup), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.6700 meters
@@ -192166,7 +192217,7 @@ x 0 0
 # Data: **        M.38.6-3M
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -192174,8 +192225,10 @@ x 0 0
 # !units: meters
 # !longitude: 145.7436
 # !latitude: 44.0542
-# region: Hokkaido
-# admin1_quelle: Ufer 35.9 km
+# region: Sakhalin
+# admin1_quelle: Polygon
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Hokkaido" -> "Sakhalin".
 Otradnoje (Kunashin), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.6400 meters
@@ -223519,7 +223572,7 @@ x 0 0
 #   adavis@saipan.com, Wed Nov 27 11:06:52 1996
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Micronesia
 # source:  From C&GS-444
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -223527,6 +223580,8 @@ x 0 0
 # !units: feet
 # !longitude: 158.2110
 # !latitude: 6.9693
+# note: 20260906 country "Unknown" -> "Micronesia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Pohnpei".
 Pohnpei Harbor, Caroline Islands, Micronesia
 +11:00 :Pacific/Ponape
 2.3000 feet
@@ -229487,7 +229542,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -0630
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -229496,8 +229551,10 @@ x 0 0
 # !latitude: -12.1063
 # note: 20260903 Provinz "Western Australia" ergaenzt (Nachbarn ab 3 km),
 # note: siehe py/provinz_ergaenzen.py.
-# region: Western Australia
-# admin1_quelle: Name
+# region: Cocos (Keeling) Islands
+# admin1_quelle: Ufer 4.4 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Western Australia" -> "Cocos (Keeling) Islands".
 Port Refuge, Cocos Islands, Western Australia, Australia
 +06:30 :Indian/Cocos
 0.6500 meters
@@ -231990,7 +232047,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -232000,7 +232057,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 3.0 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Possession Island, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.4210 meters
@@ -233139,7 +233197,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -233149,7 +233207,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Nachbarn ab 31 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 70.9 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Proudfoot Shoal, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.1620 meters
@@ -235298,7 +235357,9 @@ x 0 0
 # !latitude: 50.537000
 # province: British Columbia
 # admin1_quelle: Name
-Quatsino Village, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Quatsino Village, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Bergh Cove (Quatsino Sound), British Columbia, Canada
 -08:00 :America/Vancouver
 2.4710 meters
 J1              0.0210  129.30
@@ -236446,7 +236507,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -236456,7 +236517,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Nachbarn ab 35 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 96.2 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Raine Island, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.1920 meters
@@ -237223,7 +237285,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -237233,7 +237295,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 1.0 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Red Island, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.7150 meters
@@ -238182,15 +238245,17 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
 # !units: meters
 # !longitude: 143.2667
 # !latitude: -9.7667
-# region: Coral Sea
-# admin1_quelle: Name
+# region: Queensland
+# admin1_quelle: Ufer 67.7 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Coral Sea" -> "Queensland".
 Rennel Island, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.6520 meters
@@ -242398,7 +242463,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -242408,7 +242473,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 4.7 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Round Island, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.9010 meters
@@ -244707,7 +244773,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -244717,7 +244783,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Polygon
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Saibai Island, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.8400 meters
@@ -250649,13 +250716,15 @@ x 0 0
 # METRIC
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Turks and Caicos Islands
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
 # !units: meters
 # !longitude: -72.0463
 # !latitude: 21.9354
+# note: 20260906 country "Unknown" -> "Turks and Caicos Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "North Caicos".
 Sandy Point, North Caicos Island, Turks and Caicos Islands
 -05:00 :America/Grand_Turk
 0.4800 meters
@@ -261591,7 +261660,7 @@ x 0 0
 # Data: **        M.42.4-4M
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -261599,6 +261668,8 @@ x 0 0
 # !units: meters
 # !longitude: 148.6158
 # !latitude: 45.4979
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sakhalin".
 Sentyabrka (Iturup) Sakhalin, Russia
 +09:00 :Asia/Magadan
 0.6300 meters
@@ -269301,7 +269372,9 @@ x 0 0
 # !latitude: 45.0574
 # province: Nova Scotia
 # admin1_quelle: Name
-Sonora, St. Mary River, Nova Scotia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Sonora, St. Mary River, Nova Scotia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Sonora (St. Marys River), Nova Scotia, Canada
 -04:00 :America/Halifax
 1.1090 meters
 J1              0.0030   55.60
@@ -271222,7 +271295,9 @@ x 0 0
 # !latitude: 49.1052
 # province: British Columbia
 # admin1_quelle: Name
-Sproat Narrows, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Sproat Narrows, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Sprout Narrows (Franklin River), British Columbia, Canada
 -08:00 :America/Vancouver
 2.0930 meters
 J1              0.0190  130.60
@@ -279225,7 +279300,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -279235,7 +279310,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 19.4 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Suarji Island, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.7720 meters
@@ -281928,13 +282004,15 @@ x 0 0
 # NOS DATA FROM T. KENDRICK 1995 NOV 27 -- CONSTANT.95 OR CURCON.93 -----------
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Suriname
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
 # !units: feet
 # !longitude: -55.164109
 # !latitude: 5.943935
+# note: 20260906 country "Unknown" -> "Suriname" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Commewijne".
 Braamspunt (Suriname River), Suriname
 -03:30 :America/Paramaribo
 4.2800 feet
@@ -284044,7 +284122,7 @@ x 0 0
 # Data: **        T12.6-60D
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -284052,8 +284130,10 @@ x 0 0
 # !units: meters
 # !longitude: 146.8255
 # !latitude: 43.8710
-# region: Hokkaido
-# admin1_quelle: Ufer 97.3 km
+# region: Sakhalin
+# admin1_quelle: Ufer 0.5 km
+# note: 20260906 country "Japan" -> "Russia" berichtigt; damit
+# note: -- auch die Region "Hokkaido" -> "Sakhalin".
 Malokurilskoye (Shikotan), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.8000 meters
@@ -284237,7 +284317,7 @@ x 0 0
 # Data: **
 # 
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source:  JODC/JHD
 # restriction: Non-commercial use only
 # datum: MLLW
@@ -284245,6 +284325,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.9980
 # !latitude: 45.3332
+# note: 20260906 country "Japan" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sakhalin".
 Reidowo (Iturup), Kuril Islands, Russia
 +09:00 :Asia/Sakhalin
 0.7100 meters
@@ -290789,7 +290871,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -       + SEASON.VAR.             TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -290799,7 +290881,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 2.7 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Tarilag Island, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.9290 meters
@@ -305413,7 +305496,9 @@ x 0 0
 # !latitude: -28.1706
 # state: New South Wales
 # admin1_quelle: Name
-Tweed River, New South Wales, Australia
+# note: 20260906 Name vereinheitlicht, vorher "Tweed River, New South Wales, Australia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Point Danger (Snapper Rocks), New South Wales, Australia
 +10:00 :Australia/Sydney
 0.7900 meters
 x 0 0
@@ -305599,7 +305684,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -305609,7 +305694,8 @@ x 0 0
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
-# admin1_quelle: Name
+# admin1_quelle: Ufer 18.4 km
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Twin Island, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.6290 meters
@@ -306961,7 +307047,9 @@ x 0 0
 # !latitude: 48.982000
 # province: British Columbia
 # admin1_quelle: Name
-Uchucklesit Inlet, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Uchucklesit Inlet, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Brooksby Point (Uchucklesit Inlet), British Columbia, Canada
 -08:00 :America/Vancouver
 2.0660 meters
 J1              0.0180  131.40
@@ -323088,7 +323176,7 @@ x 0 0
 # ROYAL AUSTRALIAN NAVY DATA, 1944 -                                 TZ = -1000
 # 
 # BEGIN HOT COMMENTS
-# country: Unknown
+# country: Australia
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
@@ -323097,6 +323185,7 @@ x 0 0
 # !latitude: -16.2167
 # region: Coral Sea
 # admin1_quelle: Name
+# note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 Willis Island, Coral Sea, Australia
 +10:00 :Australia/Brisbane
 1.3200 meters
@@ -325583,7 +325672,9 @@ x 0 0
 # !latitude: 33.1000
 # region: Tokyo
 # admin1_quelle: Name
-Yaene (Hatizyo Sima), Tokyo, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Yaene (Hatizyo Sima), Tokyo, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Yaene (Hachijo-jima), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
 J1              0.0085  198.28

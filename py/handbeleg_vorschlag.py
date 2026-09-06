@@ -129,6 +129,19 @@ def main(argv):
                     datei_a=os.path.basename(a['file']),
                     datei_b=os.path.basename(b['file']),
                     **{SPALTE: alt.get(frozenset((namen[i], namen[j])), '')}))
+    # Vorschlag, wo die Entscheidung erfahrungsgemaess feststeht: gemessen
+    # an den 102 von Hand entschiedenen Paaren traf "alle Woerter des
+    # kuerzeren Namens stecken im laengeren UND unter 1 km" 31 mal zu und
+    # lag dabei 29 mal richtig -- 94 Prozent. Fuer eine Loeschung ist das
+    # zu wenig, zum Vorausfuellen genug: es nimmt vierzig Prozent der
+    # Tipparbeit ab, und was nicht stimmt, wird gestrichen statt getippt.
+    for z in zeilen:
+        if z[SPALTE]:
+            continue
+        if float(z['namensueberlappung']) >= 1.0 and float(z['km']) < 1.0:
+            a, b = z['name_a'], z['name_b']
+            z[SPALTE] = a if len(a) >= len(b) else b
+            z['begruendung'] = 'Vorschlag: Wortueberlappung 1.0, unter 1 km'
     zeilen.sort(key=lambda z: (float(z['km']), float(z['kurve_prozent']),
                                -float(z['namensueberlappung'])))
     with open(ZIEL, 'w', newline='', encoding='utf-8') as fh:

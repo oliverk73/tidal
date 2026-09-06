@@ -15422,7 +15422,7 @@ x 0 0
 #
 # Kralendijk, Bonaire
 # BEGIN HOT COMMENTS
-# country: Bonaire
+# country: Caribbean Netherlands
 # water body: Caribbean Sea
 # source: Derived from IOC SLSMF data (code=bona, sensor=rad) with UTide harmonic analysis
 # station_id_context: IOC-bona
@@ -15433,7 +15433,8 @@ x 0 0
 # !longitude: -68.278000
 # !latitude: 12.150000
 # region: Bonaire
-# admin1_quelle: Name
+# admin1_quelle: Polygon
+# note: 20260906 country "Bonaire" -> "Caribbean Netherlands" nach dem Namen berichtigt,
 Kralendijk, Bonaire, Caribbean Netherlands
 +00:00 :UTC
 0.0848 meters
@@ -16827,7 +16828,9 @@ x 0 0
 # !units: meters
 # !longitude: -58.683000
 # !latitude: -62.233000
-Dallmann, Antártida Argentina, Argentina
+# note: 20260906 Name vereinheitlicht, vorher "Dallmann, Antártida Argentina, Argentina"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Base Carlini (Caleta Potter, Isla 25 de Mayo), Antártida Argentina, Argentina
 +00:00 :UTC
 2.7883 meters
 J1              0.0119  56.78
@@ -55400,7 +55403,9 @@ x 0 0
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
 # region: Pyrénées-Atlantiques
 # admin1_quelle: Polygon
-Boucau-Bayonne, France
+# note: 20260906 Name vereinheitlicht, vorher "Boucau-Bayonne, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Boucau-Bayonne (L'Adour), France
 +00:00 :Europe/Paris
 2.6080 meters
 J1              0.0025  121.17
@@ -60223,7 +60228,9 @@ x 0 0
 # note: +0.93 h. Siehe py/shom_stunde_richten.py.
 # region: Charente-Maritime
 # admin1_quelle: Ufer 1.2 km
-La Rochelle - La Pallice, France
+# note: 20260906 Name vereinheitlicht, vorher "La Rochelle - La Pallice, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+La Rochelle (La Pallice), France
 +00:00 :Europe/Paris
 3.9444 meters
 J1              0.0025  115.73
@@ -101940,7 +101947,9 @@ x 0 0
 # !latitude: 33.133333
 # region: Tokyo
 # admin1_quelle: Name
-Hachijoshima(konominato), Tokyo, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Hachijoshima(konominato), Tokyo, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Kaminato (Hachijo-jima), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.8100 meters
 J1              0.0120  205.19
@@ -102134,7 +102143,9 @@ x 0 0
 # !latitude: 33.100000
 # region: Tokyo
 # admin1_quelle: Name
-Hachijoshima(yaene), Tokyo, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Hachijoshima(yaene), Tokyo, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Yaene (Hachijo-jima), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
 J1              0.0107  216.52
@@ -130844,10 +130855,12 @@ x 0 0
 # jma_code: SE
 # utide: period=2011-01-01..2025-12-31 r2=0.9818 rms=0.0142m const=68
 # !units: meters
-# !longitude: 139.850000
-# !latitude: 42.450000
+# !longitude: 139.845200
+# !latitude: 42.453900
 # region: Hokkaido
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 42.4500/139.8500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Setana, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -151204,7 +151217,7 @@ x 0 0
 #
 # Dukegat
 # BEGIN HOT COMMENTS
-# country: Netherlands
+# country: Germany
 # source: Derived from Rijkswaterstaat astronomical tide data with UTide
 # station_id_context: RWS
 # date_imported: 20260319
@@ -151217,8 +151230,10 @@ x 0 0
 # !units: meters
 # !longitude: 6.926111
 # !latitude: 53.433611
-# province: Groningen
-# admin1_quelle: Ufer 3.9 km
+# province: Niedersachsen
+# admin1_quelle: Ufer 6.7 km
+# note: 20260906 country "Netherlands" -> "Germany" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Groningen" -> "Niedersachsen".
 Dukegat (Ems), Germany
 +00:00 :Europe/Amsterdam
 0.0820 meters
@@ -155280,7 +155295,9 @@ x 0 0
 # !latitude: 52.463943
 # province: Noord-Holland
 # admin1_quelle: Ufer 4.0 km
-IJGeul, 1, Netherlands
+# note: 20260906 Name vereinheitlicht, vorher "IJGeul, 1, Netherlands"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+IJGeul 1 (IJmuiden Stroommeetpaal), Netherlands
 +00:00 :Europe/Amsterdam
 -0.0598 meters
 x 0 0
@@ -156044,7 +156061,7 @@ x 0 0
 #
 # Knock
 # BEGIN HOT COMMENTS
-# country: Netherlands
+# country: Germany
 # source: Derived from Rijkswaterstaat astronomical tide data with UTide
 # station_id_context: RWS
 # date_imported: 20260319
@@ -156057,8 +156074,10 @@ x 0 0
 # !units: meters
 # !longitude: 7.030556
 # !latitude: 53.327222
-# province: Groningen
-# admin1_quelle: Ufer 2.0 km
+# province: Niedersachsen
+# admin1_quelle: Ufer 2.4 km
+# note: 20260906 country "Netherlands" -> "Germany" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Groningen" -> "Niedersachsen".
 Knock (Ems), Germany
 +00:00 :Europe/Amsterdam
 0.0982 meters
@@ -157410,7 +157429,9 @@ x 0 0
 # !latitude: 51.992205
 # region: stroommeetpaal
 # admin1_quelle: Name
-Maasmond, stroommeetpaal, Netherlands
+# note: 20260906 Name vereinheitlicht, vorher "Maasmond, stroommeetpaal, Netherlands"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Maasmond (Stroommeetpaal), Netherlands
 +00:00 :Europe/Amsterdam
 0.0902 meters
 x 0 0
@@ -160492,7 +160513,7 @@ x 0 0
 #
 # Pogum
 # BEGIN HOT COMMENTS
-# country: Netherlands
+# country: Germany
 # source: Derived from Rijkswaterstaat astronomical tide data with UTide
 # station_id_context: RWS
 # date_imported: 20260319
@@ -160505,8 +160526,10 @@ x 0 0
 # !units: meters
 # !longitude: 7.253999
 # !latitude: 53.321485
-# province: Groningen
-# admin1_quelle: Ufer 9.4 km
+# province: Niedersachsen
+# admin1_quelle: Ufer 0.2 km
+# note: 20260906 country "Netherlands" -> "Germany" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Groningen" -> "Niedersachsen".
 Pogum (Ems), Germany
 +00:00 :Europe/Amsterdam
 0.1306 meters
@@ -181983,7 +182006,7 @@ x 0 0
 #
 # Anewa Bay, Papua New Guinea
 # BEGIN HOT COMMENTS
-# country: Papua New Guinea
+# country: Solomon Islands
 # source: Derived from UHSLC data with UTide harmonic analysis
 # station_id_context: UHSLC-48
 # date_imported: 20260421
@@ -181996,8 +182019,10 @@ x 0 0
 # !units: meters
 # !longitude: 155.5436
 # !latitude: -6.1838
-# region: Bougainville
-# admin1_quelle: Name
+# region: Western
+# admin1_quelle: Ufer 89.4 km
+# note: 20260906 country "Papua New Guinea" -> "Solomon Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Bougainville" -> "Western".
 Anewa Bay, Bougainville, Solomon Islands
 +00:00 :UTC
 0.8292 meters
@@ -188718,7 +188743,9 @@ x 0 0
 # !units: meters
 # !longitude: 15.150000
 # !latitude: -26.650000
-Luderitz, Namibia
+# note: 20260906 Name vereinheitlicht, vorher "Luderitz, Namibia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Lüderitz, Namibia
 +00:00 :Africa/Windhoek
 0.9869 meters
 J1              0.0049  94.87

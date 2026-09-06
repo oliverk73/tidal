@@ -162,23 +162,43 @@ BESTAND_ALIAS = {'usa': 'united states', 'espana': 'spain', 'españa': 'spain',
                  'tristan da cunha': 'saint helena, ascension and tristan da cunha'}
 
 
+def _flach(s):
+    """-> kleingeschrieben und ohne Akzente. "México" und "Mexico" sind
+    dasselbe Land, "São Tomé and Príncipe" ebenso -- ein exakter
+    Vergleich muss das sehen, ohne deshalb wieder Teilzeichenketten
+    zuzulassen."""
+    s = unicodedata.normalize('NFD', s.lower().strip())
+    return ''.join(c for c in s if unicodedata.category(c) != 'Mn')
+
+
+def _flach(s):
+    """-> kleingeschrieben und ohne Akzente.
+
+    "Mexico" und "Mexico" sind dasselbe Land, "Sao Tome and Principe"
+    ebenso -- ein exakter Vergleich muss das sehen, ohne deshalb wieder
+    Teilzeichenketten zuzulassen.
+    """
+    s = unicodedata.normalize('NFD', (s or '').lower().strip())
+    return ''.join(c for c in s if unicodedata.category(c) != 'Mn')
+
+
 def _passt(admin, land):
-    # Ein leeres country-Feld darf nicht jedes Land passieren lassen. Mit
-    # dem frueheren Teilzeichenketten-Vergleich tat es das, weil die
-    # leere Zeichenkette in jedem Land steckt -- die jemenitischen Saetze
-    # bekamen ihre Region so nur durch Zufall der Naehe.
+    """Gehoert das Polygon zum Land des Satzes?
+
+    Verglichen wird EXAKT (nach Kleinschreibung, Akzenten und Aliasen).
+    Der frueher benutzte Teilzeichenketten-Vergleich liess "Guinea" auf
+    "Guinea-Bissau" passen -- Bissau bekam die guineische Region Boke --
+    und ein leeres country-Feld auf jedes Land, weil die leere
+    Zeichenkette ueberall steckt.
+    """
     land = (land or '').strip() or None
     if not land or not admin:
         return True
-    l = land.lower().strip()
-    a = LAND_ALIAS.get(admin, admin).lower()
+    l = _flach(land)
+    a = _flach(LAND_ALIAS.get(admin, admin))
     if l in US_STAATEN:
         return a == 'united states'
-    if l in ('espana', 'españa'):
-        l = 'spain'
-    # Kein Teilzeichenketten-Vergleich: "Guinea" steckt in
-    # "Guinea-Bissau", und Bissau bekam daraufhin die guineische Region
-    # Boke. Ebenso Congo/DR Congo, Niger/Nigeria, Sudan/South Sudan.
+    l = _flach(BESTAND_ALIAS.get(l, l))
     return a == l
 
 

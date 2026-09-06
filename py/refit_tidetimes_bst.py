@@ -32,17 +32,17 @@ from pathlib import Path
 import numpy as np
 import utide
 
-sys.path.insert(0, '/home/oliver/batch')
-sys.path.insert(0, '/home/oliver/py')
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from batch_utide_uk_tidetimes import (
     cosine_interpolate, CONSTIT_67,
 )
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
-TIDETABLES = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
-DATA_DIR = Path('/home/oliver/water_levels/UK_tidetimes')
-CHECKPOINT_DIR = Path('/home/oliver/harmonics/utide/checkpoints_bst_refit')
-LOG = Path('/home/oliver/harmonics/utide/bst_refit.log')
+ROOT = Path(__file__).resolve().parent.parent
+TIDETABLES = ROOT / 'harmonics/utide/harmonics_utide_tidetables.txt'
+DATA_DIR = ROOT / 'water_levels/UK_tidetimes'
+CHECKPOINT_DIR = ROOT / 'harmonics/help/checkpoints_bst_refit'
+LOG = ROOT / 'harmonics/help/bst_refit.log'
 
 SOURCE_MARK = 'Derived from tidetimes.co.uk HW/LW predictions with UTide'
 
@@ -315,7 +315,16 @@ def main():
             out.append(lines[i])
             i += 1
     new_raw = '\n'.join(out)
-    TIDETABLES.write_text(new_raw, encoding='iso-8859-1')
+    # Erst sichern, dann ueber sicher_schreiben: write_text leert die
+    # Datei sofort, und ein Zeichen jenseits von ISO-8859-1 liesse sie
+    # leer zurueck -- das ist heute zweimal passiert.
+    import shutil, datetime as _dt, sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import sicher_schreiben
+    shutil.copy2(TIDETABLES, ROOT / 'harmonics/backup' /
+                 (TIDETABLES.name + '.vor_bstrefit_'
+                  + _dt.datetime.now().strftime('%Y%m%d_%H%M')))
+    sicher_schreiben.schreiben(str(TIDETABLES), new_raw)
     log(f'Geschrieben: {TIDETABLES} ({len(out)} Zeilen, vorher {n})')
 
 

@@ -19,6 +19,7 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sicher_schreiben                                             # noqa: E402
 # Eine gemeinsame Definition wie in positions_lock und id_match. Hier
 # stand bis zuletzt noch die Handpruefung lines[k+1][:1] in '+-' und
 # [3:4] == ':' -- dieselbe Annahme (Vorzeichen, zweistellige Stunde), die
@@ -147,7 +148,7 @@ def main(argv):
                 BACKUP, os.path.basename(datei) + f'.vor_{kurz}_dedup_{stamp}'))
             for a, b, _n, _w in raus:
                 del lines[a:b]
-            open(pfad, 'w', encoding='iso-8859-1').write('\n'.join(lines))
+            sicher_schreiben.schreiben(pfad, '\n'.join(lines))
             nach = sum(1 for k, l in enumerate(lines)
                        if l and not l.startswith('#') and k + 1 < len(lines)
                        and MERIDIAN.match(lines[k + 1]))

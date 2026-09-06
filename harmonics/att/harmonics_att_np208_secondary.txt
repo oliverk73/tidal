@@ -46479,7 +46479,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Angola
+# country: Democratic Republic of the Congo
 # source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
 # att_number: 3721
 # note: NP208 Part II Sekundaerhafen-Transfer von Luanda, Angola (att 3721). fS=1.08 fN=0.85 dt=+12min. ATT Vol.8 (2026).
@@ -46489,8 +46489,10 @@ x 0 0
 # !units: meters
 # !longitude: 12.4377
 # !latitude: -6.0556
-# province: Zaire
-# admin1_quelle: Ufer 5.9 km
+# province: Bas-Congo
+# admin1_quelle: Ufer 0.6 km
+# note: 20260906 country "Angola" -> "Democratic Republic of the Congo" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Zaire" -> "Bas-Congo".
 Pointe de Bulabemba, Democratic Republic of the Congo
 +01:00 :Africa/Luanda
 1.0000 meters
@@ -46861,7 +46863,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Angola
+# country: Democratic Republic of the Congo
 # source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
 # att_number: 3723
 # note: NP208 Part II Sekundaerhafen-Transfer von Luanda, Angola (att 3723). fS=0.38 fN=0.05 dt=+205min. ATT Vol.8 (2026).
@@ -46871,8 +46873,10 @@ x 0 0
 # !units: meters
 # !longitude: 12.8167
 # !latitude: -5.9542
-# province: Zaire
-# admin1_quelle: Ufer 8.5 km
+# province: Bas-Congo
+# admin1_quelle: Ufer 1.0 km
+# note: 20260906 country "Angola" -> "Democratic Republic of the Congo" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Zaire" -> "Bas-Congo".
 Pass Mateba, Democratic Republic of the Congo
 +01:00 :Africa/Luanda
 0.2400 meters
@@ -55457,7 +55461,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Libya
+# country: Tunisia
 # source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
 # att_number: 1843
 # note: NP208 Part II Sekundaerhafen-Transfer von Gibraltar, United Kingdom (att 1843). fS=0.76 fN=0.05 dt=-5min. ATT Vol.8 (2026).
@@ -55467,8 +55471,10 @@ x 0 0
 # !units: meters
 # !longitude: 11.4902
 # !latitude: 33.1855
-# region: An Nuqat al Khams
-# admin1_quelle: Ufer 1.5 km
+# region: Médenine
+# admin1_quelle: Polygon
+# note: 20260906 country "Libya" -> "Tunisia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "An Nuqat al Khams" -> "Médenine".
 Ras el Ketef, Tunisia
 +00:00 :Africa/Tunis
 0.5200 meters
@@ -56221,7 +56227,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Turkiye
+# country: Turkey
 # source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
 # att_number: 1950
 # note: NP208 Part II Sekundaerhafen-Transfer von Gibraltar, United Kingdom (att 1950). fS=0.29 fN=0.24 dt=+80min. ATT Vol.8 (2026).
@@ -56231,6 +56237,8 @@ x 0 0
 # !units: meters
 # !longitude: 25.9469
 # !latitude: 40.1272
+# note: 20260906 country "Turkiye" -> "Turkey" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Çanakkale".
 Aydincik Koyu (Gökçeada), Turkey
 +00:00 :Europe/Istanbul
 0.1200 meters
@@ -56410,7 +56418,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Turkiye
+# country: Turkey
 # source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
 # att_number: 1968
 # note: NP208 Part II Sekundaerhafen-Transfer von Gibraltar, United Kingdom (att 1968). fS=0.29 fN=0.24 dt=+120min. ATT Vol.8 (2026).
@@ -56420,6 +56428,8 @@ x 0 0
 # !units: meters
 # !longitude: 26.6963
 # !latitude: 39.3287
+# note: 20260906 country "Turkiye" -> "Turkey" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Balikesir".
 Ayvalik, Turkey
 +00:00 :Europe/Istanbul
 0.1200 meters

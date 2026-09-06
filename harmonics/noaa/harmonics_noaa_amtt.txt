@@ -26480,12 +26480,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -64.0500
-# !latitude: 50.3000
+# !longitude: -64.020167
+# !latitude: 50.289167
 # note: 20260903 Provinz "Québec" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Québec
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 50.3000/-64.0500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Mingan, Québec, Canada
 +00:00 :America/Toronto
 1.1887 meters
@@ -48737,12 +48739,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -42.0500
-# !latitude: -23.0000
+# !longitude: -42.013600
+# !latitude: -22.972500
 # note: 20260903 Provinz "Rio de Janeiro" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Rio de Janeiro
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -23.0000/-42.0500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cabo Frio, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6096 meters
@@ -49513,12 +49517,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -48.5500
-# !latitude: -27.1500
+# !longitude: -48.545200
+# !latitude: -27.153300
 # note: 20260903 Provinz "Santa Catarina" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Santa Catarina
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -27.1500/-48.5500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Porto Belo, Santa Catarina, Brazil
 -03:00 :America/Sao_Paulo
 0.5182 meters
@@ -50677,11 +50683,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -57.5500
-# !latitude: -38.0500
+# !longitude: -57.531500
+# !latitude: -38.035800
 # fixes: Gruppen-Shift -50min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # province: Buenos Aires
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -38.0500/-57.5500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Mar del Plata, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 0.9144 meters
@@ -56056,10 +56064,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -65.7500
-# !latitude: -47.2000
+# !longitude: -65.738200
+# !latitude: -47.201300
 # province: Santa Cruz
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -47.2000/-65.7500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cabo Blanco, Santa Cruz, Argentina
 -03:00 :America/Buenos_Aires
 2.7432 meters
@@ -64410,10 +64420,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -73.7500
-# !latitude: -43.9000
+# !longitude: -73.748200
+# !latitude: -43.898500
 # region: Aisén del General Carlos Ibáñez del Campo
 # admin1_quelle: Ufer 1.6 km
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -43.9000/-73.7500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Puerto Melinka, Chile
 +00:00 :America/Coyhaique
 1.2192 meters
@@ -68841,7 +68853,9 @@ x 0 0
 # !latitude: -39.8667
 # region: Bahía Corral
 # admin1_quelle: Name
-Corral, Bahía Corral, Chile
+# note: 20260906 Name vereinheitlicht, vorher "Corral, Bahía Corral, Chile"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Corral, Chile
 +00:00 :America/Santiago
 1.3106 meters
 J1              0.0082  90.38
@@ -70206,7 +70220,9 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
-Nootka Sound, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Nootka Sound, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Saavedra Islands (Nootka Sound), British Columbia, Canada
 -09:00 :America/Vancouver
 2.1031 meters
 J1              0.0189  108.20
@@ -71178,7 +71194,9 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
-Bergh Cove, Quatsino Sound, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Bergh Cove, Quatsino Sound, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Bergh Cove (Quatsino Sound), British Columbia, Canada
 -09:00 :America/Vancouver
 2.4994 meters
 J1              0.0198  110.80
@@ -72927,7 +72945,9 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
-Porcher Island, British Columbia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Porcher Island, British Columbia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Humpback Bay (Porcher Island), British Columbia, Canada
 -09:00 :America/Vancouver
 3.6881 meters
 J1              0.0243  123.80
@@ -86600,10 +86620,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -71.5500
-# !latitude: -32.1500
+# !longitude: -71.530000
+# !latitude: -32.137000
 # region: Coquimbo
 # admin1_quelle: Ufer 1.0 km
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -32.1500/-71.5500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Pichidangui, Chile
 +00:00 :America/Santiago
 0.7315 meters
@@ -111564,7 +111586,9 @@ x 0 0
 # !latitude: -10.1000
 # state: Áncash
 # admin1_quelle: Polygon
-Bahía Huarmey, Peru
+# note: 20260906 Name vereinheitlicht, vorher "Bahía Huarmey, Peru"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Puerto Huarmey, Peru
 +00:00 :America/Lima
 0.4572 meters
 J1              0.0112  47.64
@@ -112524,7 +112548,9 @@ x 0 0
 # !latitude: -5.8333
 # state: Piura
 # admin1_quelle: Polygon
-Bayovar, Peru
+# note: 20260906 Name vereinheitlicht, vorher "Bayovar, Peru"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Bayóvar, Piura, Peru
 +00:00 :America/Lima
 0.6706 meters
 J1              0.0072  72.82
@@ -112716,7 +112742,9 @@ x 0 0
 # !latitude: -4.4500
 # state: Piura
 # admin1_quelle: Polygon
-Caleta Lobitos, Peru
+# note: 20260906 Name vereinheitlicht, vorher "Caleta Lobitos, Peru"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Lobitos, Peru
 +00:00 :America/Lima
 0.7925 meters
 J1              0.0085  67.88

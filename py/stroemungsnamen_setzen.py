@@ -33,6 +33,7 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sicher_schreiben                                             # noqa: E402
 import stroemungsnamen_overpass as so                               # noqa: E402
 from health_check import load_records, MERIDIAN, ROOT               # noqa: E402
 
@@ -111,7 +112,7 @@ def main(argv):
         if schreiben:
             shutil.copy2(voll, os.path.join(
                 BACKUP, os.path.basename(datei) + f'.vor_stromnamen_{stamp}'))
-            open(voll, 'w', encoding='iso-8859-1').write('\n'.join(lines))
+            sicher_schreiben.schreiben(voll, '\n'.join(lines))
             nachher = sum(1 for k, l in enumerate(lines)
                           if l and not l.startswith('#') and k + 1 < len(lines)
                           and MERIDIAN.match(lines[k + 1]))

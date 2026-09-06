@@ -15372,7 +15372,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: St. Helena
+# country: Saint Helena
 # source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 7
 # note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Takoradi, Ghana (no.7). M2=0.35 S2=0.07 k=0.75 dt=-16min.
@@ -15382,6 +15382,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.7180
 # !latitude: -15.9234
+# note: 20260906 country "St. Helena" -> "Saint Helena" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Saint Helena".
 Jamestown, Saint Helena
 +00:00 :Atlantic/St_Helena
 0.7620 meters
@@ -30442,7 +30444,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Sierra Leone
+# country: Liberia
 # source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 223
 # note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Casablanca, Morocco (no.223). M2=0.48 S2=0.09 k=0.47 dt=-425min.
@@ -30452,8 +30454,10 @@ x 0 0
 # !units: meters
 # !longitude: -11.6500
 # !latitude: 7.0000
-# province: Southern
-# admin1_quelle: Ufer 2.3 km
+# province: Grand Cape Mount
+# admin1_quelle: Ufer 21.1 km
+# note: 20260906 country "Sierra Leone" -> "Liberia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Southern" -> "Grand Cape Mount".
 Kerefe River, Liberia
 +00:00 :Africa/Freetown
 0.7620 meters
@@ -49045,10 +49049,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -5.9500
-# !latitude: 43.6000
+# !longitude: -5.930200
+# !latitude: 43.591600
 # region: Asturias
 # admin1_quelle: Ufer 3.3 km
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 43.6000/-5.9500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Avilés, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -53079,7 +53085,9 @@ x 0 0
 # !latitude: 43.5167
 # region: Pyrénées-Atlantiques
 # admin1_quelle: Polygon
-Le Boucau, Adour River, France
+# note: 20260906 Name vereinheitlicht, vorher "Le Boucau, Adour River, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Boucau-Bayonne (L'Adour), France
 +00:00 :Europe/Paris
 1.7983 meters
 J1              0.0016  134.55
@@ -53270,7 +53278,9 @@ x 0 0
 # !latitude: 44.6167
 # region: Bassin d'Arcachon
 # admin1_quelle: Name
-Cap Ferret, Bassin d'Arcachon, France
+# note: 20260906 Name vereinheitlicht, vorher "Cap Ferret, Bassin d'Arcachon, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Cap Ferret, France
 +00:00 :Europe/Paris
 2.0422 meters
 J1              0.0015  140.78
@@ -54992,7 +55002,9 @@ x 0 0
 # !latitude: 46.1667
 # region: Charente-Maritime
 # admin1_quelle: Ufer 0.5 km
-La Pallice, France
+# note: 20260906 Name vereinheitlicht, vorher "La Pallice, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+La Rochelle (La Pallice), France
 +00:00 :Europe/Paris
 3.1090 meters
 J1              0.0023  136.23
@@ -55947,7 +55959,9 @@ x 0 0
 # !latitude: 46.9000
 # region: Vendée
 # admin1_quelle: Ufer 1.9 km
-Fromentine, France
+# note: 20260906 Name vereinheitlicht, vorher "Fromentine, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Fromentine (La Barre-de-Monts), France
 +00:00 :Europe/Paris
 2.9261 meters
 J1              0.0021  137.92
@@ -57858,7 +57872,9 @@ x 0 0
 # !latitude: 47.8833
 # region: Finistère
 # admin1_quelle: Ufer 0.5 km
-Bénodet, Odet River, France
+# note: 20260906 Name vereinheitlicht, vorher "Bénodet, Odet River, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Bénodet (L'Odet), France
 +00:00 :Europe/Paris
 2.7432 meters
 J1              0.0019  135.97
@@ -59577,7 +59593,9 @@ x 0 0
 # !latitude: 48.9000
 # region: Côtes-d'Armor
 # admin1_quelle: Ufer 3.0 km
-Héaux-de-Bréhat, France
+# note: 20260906 Name vereinheitlicht, vorher "Héaux-de-Bréhat, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Les Héaux-de-Bréhat, France
 +00:00 :Europe/Paris
 5.4864 meters
 J1              0.0032  141.12
@@ -59959,7 +59977,9 @@ x 0 0
 # !latitude: 48.6333
 # region: Ille-et-Vilaine
 # admin1_quelle: Ufer 1.1 km
-St. Malo, France
+# note: 20260906 Name vereinheitlicht, vorher "St. Malo, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Saint-Malo, France
 +00:00 :Europe/Paris
 6.8580 meters
 J1              0.0039  149.18
@@ -60150,7 +60170,9 @@ x 0 0
 # !latitude: 48.8667
 # region: Manche
 # admin1_quelle: Ufer 15.7 km
-Îles Chausey, France
+# note: 20260906 Name vereinheitlicht, vorher "Îles Chausey, France"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Grande-Île (Îles Chausey), France
 +00:00 :Europe/Paris
 7.4981 meters
 J1              0.0040  151.90
@@ -66314,12 +66336,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 0.3500
-# !latitude: 53.1500
+# !longitude: 0.349500
+# !latitude: 53.144600
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 53.1500/0.3500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Skegness, England, United Kingdom
 +00:00 :Europe/London
 3.9624 meters
@@ -67478,7 +67502,9 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
-Southend Pier, Thames River, England, United Kingdom
+# note: 20260906 Name vereinheitlicht, vorher "Southend Pier, Thames River, England, United Kingdom"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Southend-on-Sea (Pier), England, United Kingdom
 +00:00 :Europe/London
 2.9566 meters
 J1              0.0094  97.92
@@ -70367,12 +70393,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -3.5000
-# !latitude: 50.5500
+# !longitude: -3.492130
+# !latitude: 50.543880
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 50.5500/-3.5000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Teignmouth, England, United Kingdom
 +00:00 :Europe/London
 2.7127 meters
@@ -76551,12 +76579,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -3.6000
-# !latitude: 54.5500
+# !longitude: -3.598600
+# !latitude: 54.552800
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 54.5500/-3.6000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Whitehaven, England, United Kingdom
 +00:00 :Europe/London
 4.5110 meters
@@ -85417,8 +85447,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -1.5000
-# !latitude: 60.4500
+# !longitude: -1.487000
+# !latitude: 60.475900
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # note: 20260904 Phasen um +0.98 h gedreht: die
@@ -85427,6 +85457,8 @@ x 0 0
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 60.4500/-1.5000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Hillswick, Scotland, United Kingdom
 +00:00 :Europe/London
 1.1887 meters
@@ -99366,7 +99398,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Russia
 # source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1561
 # note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1561). M2=1.14 S2=0.16 k=0.98 dt=-29min.
@@ -99376,8 +99408,10 @@ x 0 0
 # !units: meters
 # !longitude: 31.0333
 # !latitude: 69.7667
-# region: Finnmark
-# admin1_quelle: Ufer 6.6 km
+# region: Murmansk
+# admin1_quelle: Polygon
+# note: 20260906 country "Norway" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Finnmark" -> "Murmansk".
 Guba Bazarnaya, Russia
 +03:00 :Europe/Moscow
 1.9812 meters
@@ -99557,7 +99591,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Russia
 # source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1563
 # note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1563). M2=1.12 S2=0.15 k=0.97 dt=-36min.
@@ -99567,8 +99601,10 @@ x 0 0
 # !units: meters
 # !longitude: 31.3667
 # !latitude: 69.6500
-# region: Finnmark
-# admin1_quelle: Ufer 17.1 km
+# region: Murmansk
+# admin1_quelle: Ufer 0.2 km
+# note: 20260906 country "Norway" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Finnmark" -> "Murmansk".
 Linakhamar (Pechenga Bay), Russia
 +03:00 :Europe/Moscow
 1.9507 meters

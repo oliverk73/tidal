@@ -27756,7 +27756,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Atlantic
+# country: Russia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 951
 # note: NP202 Part II Sekundaerhafen-Transfer von Helgoland, Germany (att 1431).
@@ -27769,6 +27769,8 @@ x 0 0
 # !units: meters
 # !longitude: -173.5000
 # !latitude: 67.0500
+# note: 20260906 country "Atlantic" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Chukchi Autonomous Okrug".
 Pitlekaj, Russia
 +00:00 :Asia/Anadyr
 0.2000 meters
@@ -45602,7 +45604,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Russia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1118
 # note: NP202 Part II Sekundaerhafen-Transfer von Yekaterininskaya, Russia (att 1101).
@@ -45615,8 +45617,10 @@ x 0 0
 # !units: meters
 # !longitude: 31.3667
 # !latitude: 69.6500
-# region: Finnmark
-# admin1_quelle: Ufer 17.1 km
+# region: Murmansk
+# admin1_quelle: Ufer 0.2 km
+# note: 20260906 country "Norway" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Finnmark" -> "Murmansk".
 Linakhamar (Pechenga Bay), Russia
 +03:00 :Europe/Moscow
 2.0000 meters
@@ -45796,7 +45800,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Russia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1119
 # note: NP202 Part II Sekundaerhafen-Transfer von Yekaterininskaya, Russia (att 1101).
@@ -45809,8 +45813,10 @@ x 0 0
 # !units: meters
 # !longitude: 31.0333
 # !latitude: 69.7667
-# region: Finnmark
-# admin1_quelle: Ufer 6.6 km
+# region: Murmansk
+# admin1_quelle: Polygon
+# note: 20260906 country "Norway" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Finnmark" -> "Murmansk".
 Guba Bazarnava, Russia
 +03:00 :Europe/Moscow
 1.9500 meters
@@ -72956,7 +72962,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Sweden
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1328
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -72969,6 +72975,8 @@ x 0 0
 # !units: meters
 # !longitude: 17.8643
 # !latitude: 58.7449
+# note: 20260906 country "Norway" -> "Sweden" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Stockholm".
 Landsort, Sweden
 +00:00 :Europe/Stockholm
 0.0000 meters
@@ -73148,7 +73156,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Sweden
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1330
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -73161,6 +73169,8 @@ x 0 0
 # !units: meters
 # !longitude: 17.9860
 # !latitude: 60.6388
+# note: 20260906 country "Norway" -> "Sweden" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Uppsala".
 Björn, Sweden
 +00:00 :Europe/Stockholm
 0.0000 meters
@@ -73340,7 +73350,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Sweden
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1340
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -73353,6 +73363,8 @@ x 0 0
 # !units: meters
 # !longitude: 17.4394
 # !latitude: 62.3397
+# note: 20260906 country "Norway" -> "Sweden" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Västernorrland".
 Draghällan (Sundsvall), Sweden
 +00:00 :Europe/Stockholm
 0.0000 meters
@@ -73532,7 +73544,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Sweden
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1342
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -73545,6 +73557,8 @@ x 0 0
 # !units: meters
 # !longitude: 20.8913
 # !latitude: 63.9902
+# note: 20260906 country "Norway" -> "Sweden" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Västerbotten".
 Ratan, Sweden
 +00:00 :Europe/Stockholm
 0.0000 meters
@@ -73724,7 +73738,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Finland
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1349
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -73737,6 +73751,8 @@ x 0 0
 # !units: meters
 # !longitude: 21.2946
 # !latitude: 61.9805
+# note: 20260906 country "Norway" -> "Finland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Ostrobothnia".
 Yttergrund, Finland
 +00:00 :Europe/Helsinki
 0.0000 meters
@@ -73916,7 +73932,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Finland
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1353
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -73929,6 +73945,8 @@ x 0 0
 # !units: meters
 # !longitude: 24.9555
 # !latitude: 60.1667
+# note: 20260906 country "Norway" -> "Finland" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Uusimaa".
 Helsinki, Finland
 +00:00 :Europe/Helsinki
 0.0000 meters
@@ -74108,7 +74126,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Norway
+# country: Estonia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1358
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -74121,6 +74139,8 @@ x 0 0
 # !units: meters
 # !longitude: 24.7755
 # !latitude: 59.4493
+# note: 20260906 country "Norway" -> "Estonia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Harju".
 Tallinn, Estonia
 +00:00 :Europe/Tallinn
 0.0000 meters
@@ -74300,7 +74320,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Sweden
+# country: Latvia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1365
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -74313,6 +74333,8 @@ x 0 0
 # !units: meters
 # !longitude: 20.9833
 # !latitude: 56.5333
+# note: 20260906 country "Sweden" -> "Latvia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Liepaja".
 Liepaja, Latvia
 +00:00 :Europe/Riga
 0.0000 meters
@@ -74492,7 +74514,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Sweden
+# country: Lithuania
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1367
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -74505,6 +74527,8 @@ x 0 0
 # !units: meters
 # !longitude: 21.0925
 # !latitude: 55.7269
+# note: 20260906 country "Sweden" -> "Lithuania" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Klaipedos".
 Klaipeda (Memel), Lithuania
 +00:00 :Europe/Vilnius
 0.0000 meters
@@ -74684,7 +74708,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Atlantic
+# country: Russia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1369
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -74697,6 +74721,8 @@ x 0 0
 # !units: meters
 # !longitude: 19.8898
 # !latitude: 54.6386
+# note: 20260906 country "Atlantic" -> "Russia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Kaliningrad".
 Baltiysk, Russia
 +00:00 :Europe/Kaliningrad
 0.0000 meters
@@ -75070,7 +75096,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Atlantic
+# country: Germany
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1376
 # note: NP202 Part II Sekundaerhafen-Transfer von Bergen, Norway (att 1258).
@@ -75083,6 +75109,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.4333
 # !latitude: 54.6833
+# note: 20260906 country "Atlantic" -> "Germany" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Mecklenburg-Vorpommern".
 Arkona, Germany
 +00:00 :Europe/Berlin
 0.0000 meters
@@ -76038,7 +76066,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Denmark
+# country: Germany
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1425.5
 # note: NP202 Part II Sekundaerhafen-Transfer von Helgoland, Germany (att 1431).
@@ -76051,8 +76079,10 @@ x 0 0
 # !units: meters
 # !longitude: 8.5781
 # !latitude: 54.6925
-# region: Syddanmark
-# admin1_quelle: Ufer 23.2 km
+# region: Schleswig-Holstein
+# admin1_quelle: Ufer 0.3 km
+# note: 20260906 country "Denmark" -> "Germany" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Syddanmark" -> "Schleswig-Holstein".
 Wyk auf Föhr, Germany
 +00:00 :Europe/Berlin
 2.0800 meters
@@ -76232,7 +76262,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Denmark
+# country: Germany
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1428
 # note: NP202 Part II Sekundaerhafen-Transfer von Helgoland, Germany (att 1431).
@@ -76245,8 +76275,10 @@ x 0 0
 # !units: meters
 # !longitude: 8.5000
 # !latitude: 54.4167
-# region: Syddanmark
-# admin1_quelle: Ufer 54.0 km
+# region: Schleswig-Holstein
+# admin1_quelle: Ufer 8.9 km
+# note: 20260906 country "Denmark" -> "Germany" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Syddanmark" -> "Schleswig-Holstein".
 Süderoogsand, Germany
 +00:00 :Europe/Berlin
 2.1500 meters
@@ -76426,7 +76458,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Denmark
+# country: Germany
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 1429
 # note: NP202 Part II Sekundaerhafen-Transfer von Helgoland, Germany (att 1431).
@@ -76439,8 +76471,10 @@ x 0 0
 # !units: meters
 # !longitude: 8.8070
 # !latitude: 54.4977
-# region: Strucklahnungshörn
-# admin1_quelle: Name
+# region: Schleswig-Holstein
+# admin1_quelle: Ufer 0.6 km
+# note: 20260906 country "Denmark" -> "Germany" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Strucklahnungshörn" -> "Schleswig-Holstein".
 Nordstrand, Strucklahnungshörn, Germany
 +00:00 :Europe/Berlin
 2.4000 meters
@@ -82052,7 +82086,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Nicaragua
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2403
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -82065,6 +82099,8 @@ x 0 0
 # !units: meters
 # !longitude: -83.7000
 # !latitude: 10.9167
+# note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Rio San Juan".
 Greytown, Nicaragua
 +00:00 :America/Managua
 0.2000 meters
@@ -82244,7 +82280,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Nicaragua
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2404
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -82257,6 +82293,8 @@ x 0 0
 # !units: meters
 # !longitude: -83.6667
 # !latitude: 12.0000
+# note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Atlántico Sur".
 Bluefields Bluff, Nicaragua
 +00:00 :America/Managua
 0.1000 meters
@@ -82436,7 +82474,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Nicaragua
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2405
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -82449,6 +82487,8 @@ x 0 0
 # !units: meters
 # !longitude: -83.0500
 # !latitude: 12.1667
+# note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Atlántico Sur".
 Great Corn Island, Nicaragua
 +00:00 :America/Managua
 0.2000 meters
@@ -82628,7 +82668,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Nicaragua
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2407
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -82641,6 +82681,8 @@ x 0 0
 # !units: meters
 # !longitude: -83.4167
 # !latitude: 12.4167
+# note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Atlántico Sur".
 Pearl Cays, Nicaragua
 +00:00 :America/Managua
 0.2000 meters
@@ -82820,7 +82862,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Atlantic
+# country: Colombia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2409
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -82833,6 +82875,8 @@ x 0 0
 # !units: meters
 # !longitude: -81.3833
 # !latitude: 13.3333
+# note: 20260906 country "Atlantic" -> "Colombia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "San Andrés y Providencia".
 Old Providence, Colombia
 +00:00 :America/Bogota
 0.1000 meters
@@ -83012,7 +83056,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Nicaragua
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2410
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -83025,6 +83069,8 @@ x 0 0
 # !units: meters
 # !longitude: -83.3833
 # !latitude: 14.0167
+# note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Atlántico Norte".
 Puerto Cabezas, Nicaragua
 +00:00 :America/Managua
 0.2100 meters
@@ -83204,7 +83250,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Nicaragua
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2412
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -83217,6 +83263,8 @@ x 0 0
 # !units: meters
 # !longitude: -83.1833
 # !latitude: 15.0000
+# note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Atlántico Norte".
 Cabo Gracias a Dios, Nicaragua
 +00:00 :America/Tegucigalpa
 0.2000 meters
@@ -83396,7 +83444,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Honduras
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2417
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -83409,6 +83457,8 @@ x 0 0
 # !units: meters
 # !longitude: -85.9000
 # !latitude: 16.4833
+# note: 20260906 country "Central America" -> "Honduras" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Islas de la Bahía".
 Isla de Guanaja, Honduras
 +00:00 :America/Tegucigalpa
 0.2000 meters
@@ -83588,7 +83638,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Honduras
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2418
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -83601,6 +83651,8 @@ x 0 0
 # !units: meters
 # !longitude: -86.3000
 # !latitude: 16.4000
+# note: 20260906 country "Central America" -> "Honduras" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Islas de la Bahía".
 Port Royal, Honduras
 +00:00 :America/Tegucigalpa
 0.2000 meters
@@ -83780,7 +83832,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Honduras
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2419
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -83793,6 +83845,8 @@ x 0 0
 # !units: meters
 # !longitude: -86.5333
 # !latitude: 16.3167
+# note: 20260906 country "Central America" -> "Honduras" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Islas de la Bahía".
 Coxen Hole Pier, Honduras
 +00:00 :America/Tegucigalpa
 0.2000 meters
@@ -83972,7 +84026,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Guatemala
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2422
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -83985,6 +84039,8 @@ x 0 0
 # !units: meters
 # !longitude: -88.7500
 # !latitude: 15.8333
+# note: 20260906 country "Central America" -> "Guatemala" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Izabal".
 Río Dulce Entrance, Guatemala
 +00:00 :America/Guatemala
 0.2000 meters
@@ -84164,7 +84220,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Belize
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2424
 # note: NP202 Part II Sekundaerhafen-Transfer von Cristobal, Panama (att 2398).
@@ -84177,6 +84233,8 @@ x 0 0
 # !units: meters
 # !longitude: -88.2667
 # !latitude: 16.1000
+# note: 20260906 country "Central America" -> "Belize" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Toledo".
 Hunting Cay, Belize
 +00:00 :UTC
 0.2500 meters
@@ -84356,7 +84414,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Belize
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2425
 # note: NP202 Part II Sekundaerhafen-Transfer von Cristobal, Panama (att 2398).
@@ -84369,6 +84427,8 @@ x 0 0
 # !units: meters
 # !longitude: -88.3667
 # !latitude: 16.5167
+# note: 20260906 country "Central America" -> "Belize" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Stann Creek".
 Placencia, Belize
 +00:00 :UTC
 0.3800 meters
@@ -84548,7 +84608,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Belize
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2426
 # note: NP202 Part II Sekundaerhafen-Transfer von Cristobal, Panama (att 2398).
@@ -84561,6 +84621,8 @@ x 0 0
 # !units: meters
 # !longitude: -88.0833
 # !latitude: 16.8000
+# note: 20260906 country "Central America" -> "Belize" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Stann Creek".
 Carrie Bow Cay, Belize
 +00:00 :UTC
 0.3000 meters
@@ -84740,7 +84802,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Central America
+# country: Mexico
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2430
 # note: NP202 Part II Sekundaerhafen-Transfer von Cristobal, Panama (att 2398).
@@ -84754,7 +84816,8 @@ x 0 0
 # !longitude: -87.5000
 # !latitude: 19.3333
 # region: Quintana Roo
-# admin1_quelle: Name
+# admin1_quelle: Ufer 0.8 km
+# note: 20260906 country "Central America" -> "Mexico" nach dem Namen berichtigt,
 Bahía Espíritu Santo, Quintana Roo, Mexico
 +00:00 :UTC
 0.2000 meters
@@ -85128,7 +85191,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Lesser Antilles
+# country: Saint Vincent and the Grenadines
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2441a
 # note: NP202 Part II Sekundaerhafen-Transfer von Bridgetown, Barbados (att 2437).
@@ -85141,6 +85204,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.4167
 # !latitude: 12.5965
+# note: 20260906 country "Lesser Antilles" -> "Saint Vincent and the Grenadines" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Grenadines".
 Clifton Harbour, Saint Vincent and the Grenadines
 +00:00 :UTC
 0.6500 meters
@@ -85320,7 +85385,7 @@ x 0 0
 MNUS2            0.0000    0.00
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Lesser Antilles
+# country: Saint Vincent and the Grenadines
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2442
 # note: NP202 Part II Sekundaerhafen-Transfer von Bridgetown, Barbados (att 2437).
@@ -85333,6 +85398,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.3500
 # !latitude: 12.6333
+# note: 20260906 country "Lesser Antilles" -> "Saint Vincent and the Grenadines" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Grenadines".
 Tobago Cays, Saint Vincent and the Grenadines
 +00:00 :UTC
 0.4500 meters
@@ -85512,7 +85579,7 @@ x 0 0
 MNUS2            0.0000    0.00
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Lesser Antilles
+# country: Saint Vincent and the Grenadines
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2442a
 # note: NP202 Part II Sekundaerhafen-Transfer von Bridgetown, Barbados (att 2437).
@@ -85525,6 +85592,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.3296
 # !latitude: 12.7042
+# note: 20260906 country "Lesser Antilles" -> "Saint Vincent and the Grenadines" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Grenadines".
 Charlestown Bay, Saint Vincent and the Grenadines
 +00:00 :UTC
 0.5000 meters
@@ -85704,7 +85773,7 @@ x 0 0
 MNUS2            0.0000    0.00
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Lesser Antilles
+# country: Saint Vincent and the Grenadines
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2443
 # note: NP202 Part II Sekundaerhafen-Transfer von Bridgetown, Barbados (att 2437).
@@ -85717,6 +85786,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.1882
 # !latitude: 12.8798
+# note: 20260906 country "Lesser Antilles" -> "Saint Vincent and the Grenadines" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Grenadines".
 Mustique, Saint Vincent and the Grenadines
 +00:00 :UTC
 0.3000 meters
@@ -85896,7 +85967,7 @@ x 0 0
 MNUS2            0.0000    0.00
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Lesser Antilles
+# country: Saint Lucia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2446a
 # note: NP202 Part II Sekundaerhafen-Transfer von Bridgetown, Barbados (att 2437).
@@ -85909,6 +85980,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.9500
 # !latitude: 13.7167
+# note: 20260906 country "Lesser Antilles" -> "Saint Lucia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Vieux Fort".
 Vieuxfort Bay, Saint Lucia
 +00:00 :America/St_Lucia
 0.5200 meters
@@ -86472,7 +86545,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Lesser Antilles
+# country: Antigua and Barbuda
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2457
 # note: NP202 Part II Sekundaerhafen-Transfer von Galveston Pier 21, Galveston Channel, Texas (att 2590).
@@ -86485,6 +86558,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.7667
 # !latitude: 17.0167
+# note: 20260906 country "Lesser Antilles" -> "Antigua and Barbuda" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Saint Paul".
 English Harbour, Antigua and Barbuda
 +00:00 :America/Antigua
 0.4500 meters
@@ -86664,7 +86739,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Lesser Antilles
+# country: Anguilla
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2459
 # note: NP202 Part II Sekundaerhafen-Transfer von Galveston Pier 21, Galveston Channel, Texas (att 2590).
@@ -86677,6 +86752,8 @@ x 0 0
 # !units: meters
 # !longitude: -63.0833
 # !latitude: 18.2000
+# note: 20260906 country "Lesser Antilles" -> "Anguilla" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Blowing Point".
 Road Bay, Anguilla
 +00:00 :America/Anguilla
 0.3900 meters
@@ -86856,7 +86933,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Atlantic
+# country: British Virgin Islands
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2460
 # note: NP202 Part II Sekundaerhafen-Transfer von Galveston Pier 21, Galveston Channel, Texas (att 2590).
@@ -86869,6 +86946,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.3807
 # !latitude: 18.7212
+# note: 20260906 country "Atlantic" -> "British Virgin Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "British Virgin Islands".
 Anegada, British Virgin Islands
 +00:00 :America/Tortola
 0.2800 meters
@@ -87048,7 +87127,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Atlantic
+# country: British Virgin Islands
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2461
 # note: NP202 Part II Sekundaerhafen-Transfer von Galveston Pier 21, Galveston Channel, Texas (att 2590).
@@ -87061,8 +87140,10 @@ x 0 0
 # !units: meters
 # !longitude: -64.6121
 # !latitude: 18.4216
-# region: Tortola
-# admin1_quelle: Name
+# region: British Virgin Islands
+# admin1_quelle: Ufer 0.2 km
+# note: 20260906 country "Atlantic" -> "British Virgin Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Tortola" -> "British Virgin Islands".
 Road Town, Tortola, British Virgin Islands
 +00:00 :America/Tortola
 0.4400 meters
@@ -87242,7 +87323,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Hispaniola
+# country: Dominican Republic
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2471
 # note: NP202 Part II Sekundaerhafen-Transfer von Galveston Pier 21, Galveston Channel, Texas (att 2590).
@@ -87255,6 +87336,8 @@ x 0 0
 # !units: meters
 # !longitude: -69.3333
 # !latitude: 19.2000
+# note: 20260906 country "Hispaniola" -> "Dominican Republic" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Samaná".
 Santa Barbara, Dominican Republic
 +00:00 :America/St_Thomas
 0.2100 meters
@@ -87434,7 +87517,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Hispaniola
+# country: Haiti
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2475
 # note: NP202 Part II Sekundaerhafen-Transfer von Galveston Pier 21, Galveston Channel, Texas (att 2590).
@@ -87447,6 +87530,8 @@ x 0 0
 # !units: meters
 # !longitude: -72.5667
 # !latitude: 18.2167
+# note: 20260906 country "Hispaniola" -> "Haiti" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Sud-Est".
 Jacmel, Haiti
 +00:00 :America/Port-au-Prince
 0.2700 meters
@@ -88984,7 +89069,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Atlantic
+# country: Jamaica
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2494
 # note: NP202 Part II Sekundaerhafen-Transfer von St. George's Island, Bermuda (att 2569).
@@ -88997,6 +89082,8 @@ x 0 0
 # !units: meters
 # !longitude: -77.5333
 # !latitude: 17.0500
+# note: 20260906 country "Atlantic" -> "Jamaica" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Clarendon".
 Blower Rock, Jamaica
 +00:00 :America/Jamaica
 0.3300 meters
@@ -89176,7 +89263,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Atlantic
+# country: Colombia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2495
 # note: NP202 Part II Sekundaerhafen-Transfer von St. George's Island, Bermuda (att 2569).
@@ -89189,6 +89276,7 @@ x 0 0
 # !units: meters
 # !longitude: -79.8500
 # !latitude: 15.8000
+# note: 20260906 country "Atlantic" -> "Colombia" nach dem Namen berichtigt,
 Banco Serranilla, Colombia
 +00:00 :America/Bogota
 0.2000 meters
@@ -89961,10 +90049,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -80.4500
-# !latitude: 22.1500
+# !longitude: -80.450000
+# !latitude: 22.133300
 # province: Cienfuegos
 # admin1_quelle: Polygon
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 22.1500/-80.4500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cienfuegos, Cuba
 +00:00 :America/Havana
 0.3000 meters

@@ -1,7 +1,7 @@
 station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub_m
 "Ancón, Lima, Peru",-11.7736,-77.1772,2026,"Ancón, Lima, Peru",harmonics_utide_tidetables.txt,0,120,0.0284,0.069,9.0,0.031,1.16
 "Atico, Arequipa, Peru",-16.2106,-73.6128,2026,"Atico, Arequipa, Peru",harmonics_utide_tidetables.txt,0,120,0.0284,0.068,11.0,-0.012,1.26
-"Bayovar, Peru",-5.8333,-81.0500,2026,"Bayovar, Peru",harmonics_noaa_amtt.txt,0,120,0.0756,0.165,12.0,0.225,1.83
+"Bayovar, Peru",-5.8333,-81.0500,2026,"Bayóvar, Piura, Peru",harmonics_noaa_amtt.txt,0,120,0.0756,0.165,12.0,0.225,1.83
 "Bayovar, Peru",-5.8333,-81.0500,2026,"Bayóvar, Piura, Peru",harmonics_utide_tidetables.txt,2384,120,0.0321,0.085,7.0,0.015,1.83
 "Cabo Blanco, Piura, Peru",-4.2486,-81.2253,2026,"Cabo Blanco, Piura, Peru",harmonics_utide_tidetables.txt,0,120,0.031,0.067,6.0,0.013,1.96
 "Callao (La Punta), Peru",-12.0689,-77.1667,2026,"Callao (La Punta), Peru",harmonics_ticon4_worldwide.txt,0,119,0.0198,0.058,5.0,-0.488,1.14
@@ -14,13 +14,13 @@ station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub
 "Punta Eten, Peru",-6.9500,-79.8667,2026,"Punta Eten, Peru",harmonics_noaa_amtt.txt,0,120,0.1516,0.285,14.0,0.055,1.5
 "Punta Eten, Peru",-6.9500,-79.8667,2026,"Eten, Lambayeque, Peru",harmonics_utide_tidetables.txt,1811,119,0.0327,0.1,15.0,0.03,1.5
 "Huacho, Peru",-11.1167,-77.6167,2026,"Huacho, Peru",harmonics_noaa_amtt.txt,0,120,0.0707,0.135,14.0,0.055,1.2
-"Huacho, Peru",-11.1167,-77.6167,2026,"Huacho, Lima, Peru",harmonics_utide_tidetables.txt,647,120,0.029,0.07,10.0,0.03,1.2
-"Bahía Huarmey, Peru",-10.1000,-78.1667,2026,"Bahía Huarmey, Peru",harmonics_noaa_amtt.txt,0,120,0.0843,0.155,13.0,0.055,1.26
-"Bahía Huarmey, Peru",-10.1000,-78.1667,2026,"Huarmey, Ancash, Peru",harmonics_utide_tidetables.txt,650,120,0.0295,0.07,10.0,0.03,1.26
+"Huacho, Peru",-11.1167,-77.6167,2026,"Huacho, Peru",harmonics_utide_tidetables.txt,647,120,0.029,0.07,10.0,0.03,1.2
+"Bahía Huarmey, Peru",-10.1000,-78.1667,2026,"Puerto Huarmey, Peru",harmonics_noaa_amtt.txt,0,120,0.0843,0.155,13.0,0.055,1.26
+"Bahía Huarmey, Peru",-10.1000,-78.1667,2026,"Puerto Huarmey, Peru",harmonics_utide_tidetables.txt,650,120,0.0295,0.07,10.0,0.03,1.26
 "Ilo, Peru",-17.6447,-71.3496,2026,"Ilo, Peru",harmonics_utide_observations.txt,0,114,0.1015,0.266,15.0,-0.906,1.36
 "Ilo, Peru",-17.6447,-71.3496,2026,"Ilo, Peru",harmonics_noaa_amtt.txt,1268,120,0.0575,0.157,14.0,0.077,1.36
-"Caleta Lobitos, Peru",-4.4500,-81.2833,2026,"Caleta Lobitos, Peru",harmonics_noaa_amtt.txt,0,120,0.0687,0.142,12.0,0.222,2.01
-"Caleta Lobitos, Peru",-4.4500,-81.2833,2026,"Lobitos, Piura, Peru",harmonics_utide_tidetables.txt,323,120,0.0313,0.065,5.0,0.015,2.01
+"Caleta Lobitos, Peru",-4.4500,-81.2833,2026,"Lobitos, Peru",harmonics_noaa_amtt.txt,0,120,0.0687,0.142,12.0,0.222,2.01
+"Caleta Lobitos, Peru",-4.4500,-81.2833,2026,"Lobitos, Peru",harmonics_utide_tidetables.txt,323,120,0.0313,0.065,5.0,0.015,2.01
 "Lobos De Afuera, Peru",-6.9513,-80.7194,2026,"Lobos De Afuera, Peru",harmonics_ticon4_worldwide.txt,0,120,0.0193,0.054,3.0,-0.406,1.56
 "Lobos De Afuera, Peru",-6.9513,-80.7194,2026,"Isla Lobos de Tierra, Peru",harmonics_utide_observations.txt,0,103,0.3123,0.526,36.0,-0.394,1.56
 "Lobos De Afuera, Peru",-6.9513,-80.7194,2026,"Lobos de Afuera, Peru",harmonics_utide_observations.txt,2052,120,0.023,0.042,3.0,-0.662,1.56
@@ -39,4 +39,4 @@ station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub
 "Talara, Peru",-4.5752,-81.2828,2026,"Talara, Peru",harmonics_ticon4_worldwide.txt,0,120,0.0195,0.052,2.0,-0.482,1.98
 "Talara, Peru",-4.5752,-81.2828,2026,"Talara, Peru",harmonics_utide_observations.txt,0,120,0.0192,0.058,1.0,-0.478,1.98
 "Zorritos, Peru",-3.6667,-80.6667,2026,"Zorritos, Peru",harmonics_noaa_amtt.txt,0,120,0.0743,0.14,12.0,0.22,2.19
-"Zorritos, Peru",-3.6667,-80.6667,2026,"Zorritos, Tumbes, Peru",harmonics_utide_tidetables.txt,1323,120,0.0309,0.071,10.0,0.011,2.19
+"Zorritos, Peru",-3.6667,-80.6667,2026,"Zorritos, Peru",harmonics_utide_tidetables.txt,1323,120,0.0309,0.071,10.0,0.011,2.19

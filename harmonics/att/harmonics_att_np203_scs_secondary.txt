@@ -20849,7 +20849,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Brunei
+# country: Malaysia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Part II Transfer
 # att_number: 5139b
 # note: NP203 Part II (2002), Zone -0800. Kein eigener Konstantensatz im
@@ -20863,8 +20863,10 @@ x 0 0
 # !units: meters
 # !longitude: 115.4115
 # !latitude: 4.8613
-# region: Temburong
-# admin1_quelle: Ufer 22.9 km
+# region: Sarawak
+# admin1_quelle: Polygon
+# note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Temburong" -> "Sarawak".
 Pasar Lawas, Malaysia
 +08:00 :Asia/Brunei
 1.5400 meters

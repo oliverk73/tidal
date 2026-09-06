@@ -19021,7 +19021,7 @@ x 0 0
 #
 # Alofi
 # BEGIN HOT COMMENTS
-# country: Niue
+# country: New Zealand
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: alofi-598-niu-uhslc_fd
 # date_imported: 20260322
@@ -19032,6 +19032,7 @@ x 0 0
 # !latitude: -19.033000
 # region: Niue
 # admin1_quelle: Polygon
+# note: 20260906 country "Niue" -> "New Zealand" nach dem Namen berichtigt,
 Niue Island, New Zealand
 +00:00 :Pacific/Niue
 0.7300 meters
@@ -20630,7 +20631,7 @@ x 0 0
 #
 # Anewa Bay 048A
 # BEGIN HOT COMMENTS
-# country: Papua New Guinea
+# country: Solomon Islands
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: anewa_bay-048a-png-uhslc_rq
 # date_imported: 20260322
@@ -20639,8 +20640,10 @@ x 0 0
 # !units: meters
 # !longitude: 155.5436
 # !latitude: -6.1838
-# region: Bougainville
-# admin1_quelle: Name
+# region: Western
+# admin1_quelle: Ufer 89.4 km
+# note: 20260906 country "Papua New Guinea" -> "Solomon Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Bougainville" -> "Western".
 Anewa Bay, Bougainville, Solomon Islands
 +00:00 :Pacific/Bougainville
 0.8800 meters
@@ -23039,7 +23042,7 @@ x 0 0
 #
 # Ascension 291A
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ascension Island
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ascension-291a-gbr-uhslc_rq
 # date_imported: 20260322
@@ -23056,6 +23059,8 @@ x 0 0
 # !units: meters
 # !longitude: -14.4141
 # !latitude: -7.9251
+# note: 20260906 country "United Kingdom" -> "Ascension Island" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Ascension".
 Georgetown, Ascension Island
 +00:00 :Atlantic/St_Helena
 0.7600 meters
@@ -27831,7 +27836,7 @@ x 0 0
 #
 # Base Prat
 # BEGIN HOT COMMENTS
-# country: Chile
+# country: Antarctica
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: base_prat-730-chl-uhslc_fd
 # date_imported: 20260322
@@ -27847,7 +27852,11 @@ x 0 0
 # !units: meters
 # !longitude: -59.667000
 # !latitude: -62.483000
-Puerto Soberania, South Shetland Islands, Antarctica
+# note: 20260906 Name vereinheitlicht, vorher "Puerto Soberania, South Shetland Islands, Antarctica"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# note: 20260906 country "Chile" -> "Antarctica" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Antarctica".
+Captain Arturo Prat Base (Isla Greenwich, South Shetlands), Antarctica
 +00:00 :America/Punta_Arenas
 1.5000 meters
 J1              0.0100  61.61
@@ -33241,7 +33250,9 @@ x 0 0
 # !units: meters
 # !longitude: -63.9465
 # !latitude: 44.6566
-Boutilier Point, Nova Scotia, Canada
+# note: 20260906 Name vereinheitlicht, vorher "Boutilier Point, Nova Scotia, Canada"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Boutiliers Point, Nova Scotia, Canada
 +00:00 :America/Halifax
 0.0000 meters
 J1              0.0060  144.54
@@ -39433,7 +39444,7 @@ x 0 0
 #
 # Casey 130A
 # BEGIN HOT COMMENTS
-# country: Australia
+# country: Antarctica
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: casey-130a-aus-uhslc_rq
 # date_imported: 20260322
@@ -39448,6 +39459,8 @@ x 0 0
 # !units: meters
 # !longitude: 110.533000
 # !latitude: -66.283000
+# note: 20260906 country "Australia" -> "Antarctica" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Antarctica".
 Casey, Antarctica
 +00:00 :Antarctica/Casey
 0.8430 meters
@@ -60059,10 +60072,12 @@ x 0 0
 # datum: MSL
 # confidence: 7
 # !units: meters
-# !longitude: -177.9000
-# !latitude: -29.250000
+# !longitude: -177.903900
+# !latitude: -29.251100
 # region: Kermadec Islands
 # admin1_quelle: Polygon
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -29.2500/-177.9000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Fishing Rock, New Zealand
 +12:00 :Pacific/Auckland
 -0.0000 meters
@@ -69468,7 +69483,9 @@ x 0 0
 # !latitude: 33.130283
 # region: Tokyo
 # admin1_quelle: Name
-Kaminato (Hatizyo Sima), Tokyo, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Kaminato (Hatizyo Sima), Tokyo, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Kaminato (Hachijo-jima), Tokyo, Japan
 +00:00 :Asia/Tokyo
 0.8100 meters
 J1              0.0106  61.80
@@ -77278,7 +77295,9 @@ x 0 0
 # !latitude: 34.0369
 # region: Yamaguchi
 # admin1_quelle: Name
-Hofu, Yamaguchi, Japan
+# note: 20260906 Name vereinheitlicht, vorher "Hofu, Yamaguchi, Japan"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Hofu (Mitajiri), Yamaguchi, Japan
 +00:00 :Asia/Tokyo
 1.8000 meters
 J1              0.0153  107.19
@@ -78262,7 +78281,7 @@ x 0 0
 #
 # Hong Kong
 # BEGIN HOT COMMENTS
-# country: Hong Kong
+# country: China
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: hong_kong-329-hkg-uhslc_fd
 # date_imported: 20260322
@@ -78279,8 +78298,10 @@ x 0 0
 # !units: meters
 # !longitude: 114.2133
 # !latitude: 22.2910
-# region: Eastern
-# admin1_quelle: Ufer 0.6 km
+# region: Guangdong
+# admin1_quelle: Ufer 26.3 km
+# note: 20260906 country "Hong Kong" -> "China" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Eastern" -> "Guangdong".
 Hong Kong (Quarry Bay), China
 +00:00 :Asia/Hong_Kong
 1.3780 meters
@@ -80883,7 +80904,9 @@ x 0 0
 # !latitude: 52.463943
 # province: Noord-Holland
 # admin1_quelle: Ufer 4.0 km
-IJmuiden Stroommeetpaal, Netherlands
+# note: 20260906 Name vereinheitlicht, vorher "IJmuiden Stroommeetpaal, Netherlands"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+IJGeul 1 (IJmuiden Stroommeetpaal), Netherlands
 +01:00 :Europe/Amsterdam
 0.0000 meters
 J1              0.0038  87.92
@@ -87274,7 +87297,7 @@ x 0 0
 #
 # Johor Baharu 321A
 # BEGIN HOT COMMENTS
-# country: Malaysia
+# country: Singapore
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: johor_baharu-321a-mys-uhslc_rq
 # date_imported: 20260322
@@ -87286,8 +87309,10 @@ x 0 0
 # !units: meters
 # !longitude: 103.7922
 # !latitude: 1.4630
-# state: Johor
-# admin1_quelle: Ufer 2.3 km
+# state: North West
+# admin1_quelle: Ufer 2.1 km
+# note: 20260906 country "Malaysia" -> "Singapore" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Johor" -> "North West".
 Sembawang, Singapore
 +00:00 :Asia/Kuala_Lumpur
 1.9700 meters
@@ -97089,10 +97114,12 @@ x 0 0
 # psmsl_id: 950
 # uhslc_id: 186
 # !units: meters
-# !longitude: 23.045
-# !latitude: -34.05
+# !longitude: 23.044900
+# !latitude: -34.050200
 # province: Western Cape
 # admin1_quelle: Ufer 0.7 km
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -34.0500/23.0450,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Knysna, South Africa
 +00:00 :Africa/Johannesburg
 1.1392 meters
@@ -113307,7 +113334,7 @@ x 0 0
 #
 # Luderitz 702A
 # BEGIN HOT COMMENTS
-# country: South Africa
+# country: Namibia
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: luderitz-702a-zaf-uhslc_rq
 # date_imported: 20260322
@@ -113319,7 +113346,11 @@ x 0 0
 # !units: meters
 # !longitude: 15.150000
 # !latitude: -26.650000
-Luderitz Bay, Namibia
+# note: 20260906 Name vereinheitlicht, vorher "Luderitz Bay, Namibia"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# note: 20260906 country "South Africa" -> "Namibia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Karas".
+Lüderitz, Namibia
 +00:00 :Africa/Johannesburg
 0.7400 meters
 J1              0.0044  100.36
@@ -114720,7 +114751,9 @@ x 0 0
 # !latitude: 51.992205
 # province: Zuid-Holland
 # admin1_quelle: Ufer 0.7 km
-Maasmond Stroommeetpaal, Netherlands
+# note: 20260906 Name vereinheitlicht, vorher "Maasmond Stroommeetpaal, Netherlands"
+# note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+Maasmond (Stroommeetpaal), Netherlands
 +01:00 :Europe/Amsterdam
 0.0000 meters
 J1              0.0039  90.13
@@ -114907,7 +114940,7 @@ x 0 0
 #
 # Macau 338A
 # BEGIN HOT COMMENTS
-# country: Portugal
+# country: China
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: macau-338a-prt-uhslc_rq
 # date_imported: 20260322
@@ -114924,7 +114957,8 @@ x 0 0
 # note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Guangdong
-# admin1_quelle: Name
+# admin1_quelle: Ufer 4.0 km
+# note: 20260906 country "Portugal" -> "China" nach dem Namen berichtigt,
 Macau, Guangdong, China
 +00:00 :Asia/Macau
 1.8000 meters
@@ -122539,7 +122573,7 @@ x 0 0
 #
 # Mawson
 # BEGIN HOT COMMENTS
-# country: Australia
+# country: Antarctica
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: mawson-177-aus-uhslc_fd
 # date_imported: 20260322
@@ -122554,6 +122588,8 @@ x 0 0
 # !units: meters
 # !longitude: 62.867000
 # !latitude: -67.600000
+# note: 20260906 country "Australia" -> "Antarctica" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Antarctica".
 Mawson, Antarctica
 +00:00 :Antarctica/Mawson
 0.6890 meters
@@ -127560,7 +127596,7 @@ x 0 0
 #
 # Monaco Fontvieille
 # BEGIN HOT COMMENTS
-# country: France
+# country: Monaco
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: monaco_fontvieille-22-fra-refmar
 # date_imported: 20260322
@@ -127574,8 +127610,10 @@ x 0 0
 # !units: meters
 # !longitude: 7.421497
 # !latitude: 43.728847
-# region: Alpes-Maritimes
-# admin1_quelle: Ufer 2.1 km
+# region: Monaco
+# admin1_quelle: Ufer 0.4 km
+# note: 20260906 country "France" -> "Monaco" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Alpes-Maritimes" -> "Monaco".
 Monte Carlo, Monaco
 +00:00 :Europe/Paris
 0.0000 meters
@@ -154964,10 +155002,12 @@ x 0 0
 # datum: MSL
 # confidence: 7
 # !units: meters
-# !longitude: 147.14
-# !latitude: -9.478
+# !longitude: 147.133300
+# !latitude: -9.483300
 # province: National Capital District
 # admin1_quelle: Ufer 1.1 km
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -9.4780/147.1400,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Port Moresby, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
 1.8217 meters
@@ -156158,7 +156198,7 @@ x 0 0
 #
 # Port Stanley
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Falkland Islands
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: port_stanley-290-gbr-uhslc_fd
 # date_imported: 20260322
@@ -156167,6 +156207,8 @@ x 0 0
 # !units: meters
 # !longitude:  -57.864931
 # !latitude: -51.690339
+# note: 20260906 country "United Kingdom" -> "Falkland Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Falkland Islands".
 Stanley, Falkland Islands
 +00:00 :Atlantic/Stanley
 0.0000 meters
@@ -171480,7 +171522,7 @@ x 0 0
 #
 # Roseau
 # BEGIN HOT COMMENTS
-# country: Dominican Republic
+# country: Dominica
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: roseau-786-dom-uhslc_fd
 # date_imported: 20260322
@@ -171496,6 +171538,7 @@ x 0 0
 # !latitude: 15.2984
 # region: Saint George
 # admin1_quelle: Polygon
+# note: 20260906 country "Dominican Republic" -> "Dominica" nach dem Namen berichtigt,
 Roseau, Dominica
 +00:00 :America/Santo_Domingo
 0.0000 meters
@@ -174681,7 +174724,7 @@ x 0 0
 #
 # Saint Martin
 # BEGIN HOT COMMENTS
-# country: France
+# country: Saint Martin
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: saint_martin-159-fra-refmar
 # date_imported: 20260322
@@ -174693,6 +174736,8 @@ x 0 0
 # !units: meters
 # !longitude: -63.085434
 # !latitude: 18.083330
+# note: 20260906 country "France" -> "Saint Martin" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "St. Martin".
 Pointe Arago, Saint Martin
 +00:00 :America/Marigot
 0.0000 meters
@@ -178909,7 +178954,7 @@ x 0 0
 #
 # Sao Tome
 # BEGIN HOT COMMENTS
-# country: Ghana
+# country: São Tomé and Príncipe
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: sao_tome-225-stp-uhslc_fd
 # date_imported: 20260322
@@ -178925,6 +178970,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.737000
 # !latitude: 0.348000
+# note: 20260906 country "Ghana" -> "São Tomé and Príncipe" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "São Tomé".
 São Tomé (Baía de Ana Chaves), São Tomé and Príncipe
 +00:00 :Africa/Accra
 0.0000 meters
@@ -188296,7 +188343,7 @@ x 0 0
 #
 # St Helena 292A
 # BEGIN HOT COMMENTS
-# country: St. Helena
+# country: Saint Helena
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: st_helena-292a-shn-uhslc_rq
 # date_imported: 20260322
@@ -188313,6 +188360,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.7180
 # !latitude: -15.9234
+# note: 20260906 country "St. Helena" -> "Saint Helena" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Saint Helena".
 Jamestown, Saint Helena
 +00:00 :Atlantic/St_Helena
 0.5000 meters
@@ -189098,7 +189147,7 @@ x 0 0
 #
 # Stanley
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Falkland Islands
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: stanley-sta-gbr-noc
 # date_imported: 20260322
@@ -189107,6 +189156,8 @@ x 0 0
 # !units: meters
 # !longitude: -57.820500
 # !latitude: -51.692400
+# note: 20260906 country "United Kingdom" -> "Falkland Islands" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Falkland Islands".
 Stanley Harbor, Falkland Islands
 +00:00 :Atlantic/Stanley
 0.0000 meters

@@ -28842,7 +28842,7 @@ x 0 0
 #
 # ------------- End congen output -------------
 # BEGIN HOT COMMENTS
-# country: Denmark
+# country: Sweden
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-Fladen
 # datum: n/a
@@ -28854,8 +28854,10 @@ x 0 0
 # !units: knots
 # !longitude: 11.666700
 # !latitude: 57.166700
-# region: Nordjylland
-# admin1_quelle: Ufer 32.0 km
+# region: Halland
+# admin1_quelle: Ufer 26.9 km
+# note: 20260906 country "Denmark" -> "Sweden" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Nordjylland" -> "Halland".
 Fladen, Sweden Current
 +00:00 :UTC
 0.0404 knots
@@ -29037,7 +29039,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: Denmark
+# country: Sweden
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-Svinbadan
 # datum: n/a
@@ -29049,8 +29051,10 @@ x 0 0
 # !units: knots
 # !longitude: 12.516700
 # !latitude: 56.166700
-# region: Hovedstaden
-# admin1_quelle: Ufer 7.7 km
+# region: Skåne
+# admin1_quelle: Ufer 2.8 km
+# note: 20260906 country "Denmark" -> "Sweden" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Hovedstaden" -> "Skåne".
 Svinbadan, Sweden Current
 +00:00 :UTC
 18.8758 knots
@@ -29232,7 +29236,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: Denmark
+# country: Sweden
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-Vinga
 # datum: n/a
@@ -29244,8 +29248,10 @@ x 0 0
 # !units: knots
 # !longitude: 11.600000
 # !latitude: 57.566700
-# region: Nordjylland
-# admin1_quelle: Ufer 36.2 km
+# region: Västra Götaland
+# admin1_quelle: Ufer 15.8 km
+# note: 20260906 country "Denmark" -> "Sweden" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Nordjylland" -> "Västra Götaland".
 Vinga, Sweden Current
 +00:00 :UTC
 -0.1160 knots
@@ -29620,7 +29626,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: France
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-6201030
 # datum: n/a
@@ -29632,6 +29638,8 @@ x 0 0
 # !units: knots
 # !longitude: -3.842800
 # !latitude: 43.784700
+# note: 20260906 country "France" -> "Spain" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Cantabria".
 Santander boya, Spain Current
 +00:00 :UTC
 0.0184 knots
@@ -29813,7 +29821,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: France
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-Bilbao-current-meter
 # datum: n/a
@@ -29825,6 +29833,8 @@ x 0 0
 # !units: knots
 # !longitude: -3.171000
 # !latitude: 43.666000
+# note: 20260906 country "France" -> "Spain" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Cantabria".
 Bilbao-Vizcaya boya, Spain Current
 +00:00 :UTC
 0.0416 knots
@@ -30006,7 +30016,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: France
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-Bilbao-station
 # datum: n/a
@@ -30018,6 +30028,8 @@ x 0 0
 # !units: knots
 # !longitude: -3.082500
 # !latitude: 43.378800
+# note: 20260906 country "France" -> "Spain" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Bizkaia".
 Bilbao (Punta Lucero), Spain Current
 +00:00 :UTC
 0.0738 knots
@@ -30199,7 +30211,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: France
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-Matxitxako-buoy
 # datum: n/a
@@ -30211,8 +30223,10 @@ x 0 0
 # !units: knots
 # !longitude: -2.725000
 # !latitude: 43.535000
-# region: Pyrénées-Atlantiques
-# admin1_quelle: Ufer 76.7 km
+# region: Bizkaia
+# admin1_quelle: Ufer 9.7 km
+# note: 20260906 country "France" -> "Spain" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Pyrénées-Atlantiques" -> "Bizkaia".
 Matxitxako boya, Spain Current
 +00:00 :UTC
 -0.0355 knots
@@ -30394,7 +30408,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: France
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-Santander-current-meter
 # datum: n/a
@@ -30406,6 +30420,8 @@ x 0 0
 # !units: knots
 # !longitude: -3.500000
 # !latitude: 43.560000
+# note: 20260906 country "France" -> "Spain" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Cantabria".
 Noja boya, Spain Current
 +00:00 :UTC
 0.0249 knots
@@ -43234,7 +43250,7 @@ x 0 0
 #
 # ------------- End congen output -------------
 # BEGIN HOT COMMENTS
-# country: Portugal
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-6200084
 # datum: n/a
@@ -43246,8 +43262,10 @@ x 0 0
 # !units: knots
 # !longitude: -9.500000
 # !latitude: 41.902300
-# region: Viana do Castelo
-# admin1_quelle: Ufer 51.8 km
+# region: Pontevedra
+# admin1_quelle: Ufer 51.1 km
+# note: 20260906 country "Portugal" -> "Spain" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Viana do Castelo" -> "Pontevedra".
 Rio Miño offshore buoay, Spain Current
 +00:00 :UTC
 0.0045 knots
@@ -43429,7 +43447,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: Portugal
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-6200085
 # datum: n/a
@@ -43441,8 +43459,10 @@ x 0 0
 # !units: knots
 # !longitude: -7.017000
 # !latitude: 36.453000
-# region: Faro
-# admin1_quelle: Ufer 86.4 km
+# region: Cádiz
+# admin1_quelle: Ufer 59.2 km
+# note: 20260906 country "Portugal" -> "Spain" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Faro" -> "Cádiz".
 Golfo de Cádiz, Spain Current
 +00:00 :UTC
 0.1907 knots
@@ -43624,7 +43644,7 @@ x 0 0
 #
 # (UTide v0.3.1, principal-axis projection)
 # BEGIN HOT COMMENTS
-# country: Portugal
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-6201031
 # datum: n/a
@@ -43636,8 +43656,10 @@ x 0 0
 # !units: knots
 # !longitude: -8.8993
 # !latitude: 41.9011
-# region: Viana do Castelo
-# admin1_quelle: Ufer 5.3 km
+# region: Pontevedra
+# admin1_quelle: Ufer 1.7 km
+# note: 20260906 country "Portugal" -> "Spain" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Viana do Castelo" -> "Pontevedra".
 A Guarda boya, Spain Current
 +00:00 :UTC
 -0.1347 knots

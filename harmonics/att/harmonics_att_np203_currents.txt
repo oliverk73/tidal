@@ -14984,7 +14984,7 @@ MNUS2
 #
 #
 #
-# country: Red Sea
+# country: Yemen
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 415
@@ -15000,6 +15000,8 @@ MNUS2
 # note: 20260906 Name vergeben (vorher "Red Sea, Bab-el-Mandeb Current"),
 # note: -- OSM "Bab-el-Mandeb Strait" in 8.19 km, NP203-Hafen "Mayyun / Perim (Bab el Mandeb Strait), Yemen" in 7.7 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# note: 20260906 country "Red Sea" -> "Yemen" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Ta`izz".
 Mayyun / Perim (Bab el Mandeb Strait), Yemen Current
 +04:00 :Africa/Djibouti
 0.0000 knots
@@ -15369,7 +15371,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Red Sea
+# country: Yemen
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 417
@@ -15382,6 +15384,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 42.828333
 # !latitude: 14.053333
+# note: 20260906 country "Red Sea" -> "Yemen" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Al Hudaydah".
 Zuqar / Abu Ali Islands, Yemen Current
 +04:00 :Africa/Djibouti
 0.0000 knots
@@ -16146,7 +16150,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: United Arab Emirates
+# country: Oman
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 420a
@@ -16160,8 +16164,10 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 56.363333
 # !latitude: 26.361667
-# region: Ras Al Khaymah
-# admin1_quelle: Ufer 37.7 km
+# region: Musandam
+# admin1_quelle: Polygon
+# note: 20260906 country "United Arab Emirates" -> "Oman" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Ras Al Khaymah" -> "Musandam".
 Khawr Quway, Oman Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -18487,7 +18493,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Bahrain
+# country: Qatar
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 424c
@@ -18501,6 +18507,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 51.866667
 # !latitude: 26.180000
+# note: 20260906 country "Bahrain" -> "Qatar" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Al Khawr".
 Ras Laffan NE (Persian Gulf), Qatar Current
 +04:00 :Asia/Bahrain
 0.0000 knots
@@ -19452,7 +19460,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Kuwait
+# country: Saudi Arabia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 426a
@@ -19466,8 +19474,10 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 48.595000
 # !latitude: 28.451667
-# province: Al Ahmadi
-# admin1_quelle: Ufer 18.6 km
+# province: Ash Sharqiyah
+# admin1_quelle: Ufer 7.6 km
+# note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
 Khafji, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0000 knots
@@ -19646,7 +19656,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Kuwait
+# country: Saudi Arabia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 426b
@@ -19660,8 +19670,10 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 48.936667
 # !latitude: 28.475000
-# province: Al Ahmadi
-# admin1_quelle: Ufer 49.7 km
+# province: Ash Sharqiyah
+# admin1_quelle: Ufer 39.9 km
+# note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
 Khafji Oilfield, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0000 knots
@@ -19840,7 +19852,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Kuwait
+# country: Saudi Arabia
 # source: Admiralty Tide Tables NP203 Vol.3 (2015), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 426c
@@ -19856,8 +19868,10 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 48.733333
 # !latitude: 28.525000
-# province: Al Ahmadi
-# admin1_quelle: Ufer 29.4 km
+# province: Ash Sharqiyah
+# admin1_quelle: Ufer 23.2 km
+# note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
 Khafji N, Saudi Arabia Current
 +03:00 :Asia/Riyadh
 0.0415 knots
@@ -20036,7 +20050,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Kuwait
+# country: Saudi Arabia
 # source: Admiralty Tide Tables NP203 Vol.3 (2015), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 426d
@@ -20052,8 +20066,10 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 48.998333
 # !latitude: 28.601667
-# province: Al Ahmadi
-# admin1_quelle: Ufer 55.5 km
+# province: Ash Sharqiyah
+# admin1_quelle: Ufer 50.0 km
+# note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
 Khafji NE, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0067 knots
@@ -20232,7 +20248,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Iraq
+# country: Iran
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 426e
@@ -20250,8 +20266,10 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 49.126667
 # !latitude: 29.946667
-# province: Al-Basrah
-# admin1_quelle: Ufer 54.6 km
+# province: Khuzestan
+# admin1_quelle: Ufer 22.8 km
+# note: 20260906 country "Iraq" -> "Iran" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al-Basrah" -> "Khuzestan".
 Khowr-e Musa, Iran Current
 +03:00 :Asia/Baghdad
 0.0000 knots
@@ -20818,7 +20836,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Singapore
+# country: Indonesia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 470
@@ -20836,8 +20854,10 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 470) Current"),
 # note: -- OSM "Marko" in 12.82 km, NP203-Hafen "Kukup, Malaysia" in 18.5 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
-# region: South West
-# admin1_quelle: Ufer 37.3 km
+# region: Kepulauan Riau
+# admin1_quelle: Ufer 12.6 km
+# note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "South West" -> "Kepulauan Riau".
 Posal Piya (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0800 knots
@@ -21034,7 +21054,7 @@ MNUS2        x 0 0
 # note: -- der Name war sonst mehrfach vergeben und der Satz fuer XTide nicht erreichbar.
 # region: South West
 # admin1_quelle: Ufer 19.5 km
-Singapore Strait (NP203 471) Current
+Pulau Nipa (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 -0.1740 knots
 J1           x 0 0
@@ -21212,7 +21232,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Singapore
+# country: Indonesia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 471a
@@ -21232,8 +21252,10 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 471a) Current"),
 # note: -- OSM "Phillip Strait" in 3.70 km, NP203-Hafen "Raffles Lighthouse, Singapore" in 6.2 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
-# region: South West
-# admin1_quelle: Ufer 18.1 km
+# region: Kepulauan Riau
+# admin1_quelle: Ufer 18.7 km
+# note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "South West" -> "Kepulauan Riau".
 Pulau Takong Besar (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0977 knots
@@ -21605,7 +21627,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Singapore
+# country: Indonesia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 472
@@ -21623,8 +21645,10 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 472) Current"),
 # note: -- OSM "Phillip Strait" in 1.13 km, NP203-Hafen "Sembawang Shipyard, Singapore" in 42.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
-# region: South West
-# admin1_quelle: Ufer 20.3 km
+# region: Kepulauan Riau
+# admin1_quelle: Ufer 15.7 km
+# note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "South West" -> "Kepulauan Riau".
 Takong Kecil Lighthouse (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -22001,7 +22025,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Singapore
+# country: Indonesia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 472b
@@ -22019,8 +22043,10 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 472b) Current"),
 # note: -- OSM "Singapore Strait" in 5.09 km, NP203-Hafen "Sungai Changi, Malaysia" in 33.1 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
-# region: South West
-# admin1_quelle: Ufer 11.1 km
+# region: Kepulauan Riau
+# admin1_quelle: Ufer 14.1 km
+# note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "South West" -> "Kepulauan Riau".
 Semakau & Sebarok / Pulau Subar (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 -0.2500 knots
@@ -22796,7 +22822,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Singapore
+# country: Malaysia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 473
@@ -22814,8 +22840,10 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait E (NP203 473) Current"),
 # note: -- OSM "Tanjung Kapal" in 5.86 km, NP203-Hafen "Tanjung Ayam, Malaysia" in 6.3 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
-# region: South East
-# admin1_quelle: Ufer 20.1 km
+# region: Johor
+# admin1_quelle: Ufer 6.6 km
+# note: 20260906 country "Singapore" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "South East" -> "Johor".
 Pengerang Anchorage (Singapore Strait), Malaysia Current
 +08:00 :Asia/Singapore
 0.0200 knots
@@ -22994,7 +23022,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Singapore
+# country: Indonesia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 473a
@@ -23012,8 +23040,10 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 473a) Current"),
 # note: -- OSM "Cooper Channel" in 11.79 km, NP203-Hafen "Tanjung Pengelih, Malaysia" in 22.2 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
-# region: South East
-# admin1_quelle: Ufer 11.0 km
+# region: Kepulauan Riau
+# admin1_quelle: Ufer 8.2 km
+# note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "South East" -> "Kepulauan Riau".
 Northwest of Pulau Batam (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 -0.5500 knots
@@ -23192,7 +23222,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Singapore
+# country: Indonesia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 473b
@@ -23210,8 +23240,10 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 473b) Current"),
 # note: -- OSM "Cooper Channel" in 4.56 km, NP203-Hafen "Tanjung Pengelih, Malaysia" in 29.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
-# region: South West
-# admin1_quelle: Ufer 8.9 km
+# region: Kepulauan Riau
+# admin1_quelle: Ufer 10.0 km
+# note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "South West" -> "Kepulauan Riau".
 Batu Berhanti Lighthouse (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -23390,7 +23422,7 @@ M7           x 0 0
 2(MS)N10     x 0 0
 MNUS2        x 0 0
 2MK2         x 0 0
-# country: Singapore
+# country: Malaysia
 # source: Admiralty Tide Tables NP203 Vol.3 (2002), Part IIIa Tidal Stream Harmonic Constants
 # station_type: current
 # np203_no: 473c
@@ -23408,8 +23440,10 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait E (NP203 473c) Current"),
 # note: -- OSM "Lima Channel" in 6.22 km, NP203-Hafen "Horsburgh Lighthouse, Malaysia" in 7.4 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
-# region: South East
-# admin1_quelle: Ufer 36.9 km
+# region: Johor
+# admin1_quelle: Ufer 7.3 km
+# note: 20260906 country "Singapore" -> "Malaysia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "South East" -> "Johor".
 Falloden Hall Shoal (Singapore Strait), Malaysia Current
 +08:00 :Asia/Singapore
 0.0000 knots

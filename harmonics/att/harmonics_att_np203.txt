@@ -34531,7 +34531,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Iraq
+# country: Kuwait
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Simplified Harmonic Method
 # att_number: 4266
 # note: NP203 Part III S.246 (2015), Standardhafen, Zone -0300 (Warbah-Insel). N2/K2 inferiert. GAP; Koord aus Geografie.
@@ -34542,8 +34542,10 @@ x 0 0
 # !units: meters
 # !longitude: 48.1502
 # !latitude: 30.0044
-# province: Al-Basrah
-# admin1_quelle: Ufer 4.0 km
+# province: Al Jahrah
+# admin1_quelle: Ufer 1.1 km
+# note: 20260906 country "Iraq" -> "Kuwait" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al-Basrah" -> "Al Jahrah".
 al-Warba, Kuwait
 +03:00 :Asia/Baghdad
 2.4400 meters

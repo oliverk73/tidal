@@ -54857,7 +54857,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Yemen
+# country: Djibouti
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4153a
 # note: NP203 Part III S.242 (2015), Meridian +03:00. Stationseigene
@@ -54869,8 +54869,10 @@ x 0 0
 # !units: meters
 # !longitude: 43.4136
 # !latitude: 12.4605
-# region: Ta`izz
-# admin1_quelle: Ufer 19.2 km
+# region: Obock
+# admin1_quelle: Ufer 9.2 km
+# note: 20260906 country "Yemen" -> "Djibouti" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Ta`izz" -> "Obock".
 Sawabi (Seven Brothers Islands), Djibouti
 +03:00 :Asia/Aden
 1.6500 meters
@@ -63033,7 +63035,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Iran
+# country: Oman
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4198
 # note: NP203 Part III S.244 (2015), Meridian +04:00. Stationseigene
@@ -63045,8 +63047,10 @@ x 0 0
 # !units: meters
 # !longitude: 56.3613
 # !latitude: 26.3667
-# province: Hormozgan
-# admin1_quelle: Ufer 51.2 km
+# province: Musandam
+# admin1_quelle: Polygon
+# note: 20260906 country "Iran" -> "Oman" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Hormozgan" -> "Musandam".
 Khawr al Quway (Jazirat Umm al Ghanam), Oman
 +04:00 :Asia/Dubai
 1.4900 meters
@@ -63226,7 +63230,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Iran
+# country: Oman
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4199a
 # note: NP203 Part III S.244 (2015), Meridian +04:00. Stationseigene
@@ -63238,8 +63242,10 @@ x 0 0
 # !units: meters
 # !longitude: 56.4017
 # !latitude: 26.2072
-# province: Hormozgan
-# admin1_quelle: Ufer 68.8 km
+# province: Musandam
+# admin1_quelle: Polygon
+# note: 20260906 country "Iran" -> "Oman" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Hormozgan" -> "Musandam".
 Ghubbat Dabshun, Oman
 +04:00 :Asia/Dubai
 1.4800 meters
@@ -67671,7 +67677,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Qatar
+# country: United Arab Emirates
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4228
 # note: NP203 Part III S.244 (2015), Meridian +04:00. Stationseigene
@@ -67683,6 +67689,8 @@ x 0 0
 # !units: meters
 # !longitude: 52.4500
 # !latitude: 24.1000
+# note: 20260906 country "Qatar" -> "United Arab Emirates" nach dem Namen berichtigt,
+# note: -- damit auch die Region "None" -> "Abu Dhabi".
 Jazirat Shuwayhat, United Arab Emirates
 +04:00 :Asia/Qatar
 1.0700 meters
@@ -67862,7 +67870,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Qatar
+# country: United Arab Emirates
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4229
 # note: NP203 Part III S.244 (2015), Meridian +04:00. Stationseigene
@@ -67874,8 +67882,10 @@ x 0 0
 # !units: meters
 # !longitude: 52.3167
 # !latitude: 24.4667
-# region: Al Wakrah
-# admin1_quelle: Ufer 91.2 km
+# region: Abu Dhabi
+# admin1_quelle: Ufer 1.0 km
+# note: 20260906 country "Qatar" -> "United Arab Emirates" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Wakrah" -> "Abu Dhabi".
 Jazirat Dalma, United Arab Emirates
 +04:00 :Asia/Qatar
 1.1800 meters
@@ -68055,7 +68065,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Qatar
+# country: United Arab Emirates
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4230
 # note: NP203 Part III S.244 (2015), Meridian +04:00. Stationseigene
@@ -68067,8 +68077,10 @@ x 0 0
 # !units: meters
 # !longitude: 52.0000
 # !latitude: 24.1667
-# region: Al Wakrah
-# admin1_quelle: Ufer 79.9 km
+# region: Abu Dhabi
+# admin1_quelle: Ufer 5.0 km
+# note: 20260906 country "Qatar" -> "United Arab Emirates" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Wakrah" -> "Abu Dhabi".
 Jazirat al Yasat, United Arab Emirates
 +04:00 :Asia/Qatar
 1.0000 meters
@@ -68248,7 +68260,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Qatar
+# country: United Arab Emirates
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4231
 # note: NP203 Part III S.244 (2015), Meridian +04:00. Stationseigene
@@ -68260,8 +68272,10 @@ x 0 0
 # !units: meters
 # !longitude: 51.8667
 # !latitude: 24.2167
-# region: Al Wakrah
-# admin1_quelle: Ufer 66.1 km
+# region: Abu Dhabi
+# admin1_quelle: Ufer 8.9 km
+# note: 20260906 country "Qatar" -> "United Arab Emirates" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Wakrah" -> "Abu Dhabi".
 Umm al Hatab, United Arab Emirates
 +04:00 :Asia/Qatar
 1.2000 meters
@@ -68441,7 +68455,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Qatar
+# country: United Arab Emirates
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4232
 # note: NP203 Part III S.244 (2015), Meridian +04:00. Stationseigene
@@ -68453,8 +68467,10 @@ x 0 0
 # !units: meters
 # !longitude: 51.5500
 # !latitude: 24.4000
-# region: Al Wakrah
-# admin1_quelle: Ufer 28.4 km
+# region: Abu Dhabi
+# admin1_quelle: Ufer 4.6 km
+# note: 20260906 country "Qatar" -> "United Arab Emirates" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Wakrah" -> "Abu Dhabi".
 Jazair Ghaghah, United Arab Emirates
 +04:00 :Asia/Qatar
 1.3500 meters
@@ -69020,7 +69036,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Qatar
+# country: Saudi Arabia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4235
 # note: NP203 Part III S.244 (2015), Meridian +03:00. Stationseigene
@@ -69032,8 +69048,10 @@ x 0 0
 # !units: meters
 # !longitude: 51.5000
 # !latitude: 24.5667
-# region: Al Wakrah
-# admin1_quelle: Ufer 12.9 km
+# region: Ash Sharqiyah
+# admin1_quelle: Ufer 1.1 km
+# note: 20260906 country "Qatar" -> "Saudi Arabia" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al Wakrah" -> "Ash Sharqiyah".
 Ras Abu Gamys, Saudi Arabia
 +03:00 :Asia/Qatar
 1.3000 meters
@@ -71529,7 +71547,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Qatar
+# country: United Arab Emirates
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4247c
 # note: NP203 Part III S.245 (2015), Meridian +03:00. Stationseigene
@@ -71543,6 +71561,7 @@ x 0 0
 # !latitude: 25.4333
 # region: Ar Rayyan
 # admin1_quelle: Ufer 1.5 km
+# note: 20260906 country "Qatar" -> "United Arab Emirates" nach dem Namen berichtigt,
 Dukhan, United Arab Emirates
 +03:00 :Asia/Bahrain
 0.3000 meters
@@ -80598,7 +80617,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Iraq
+# country: Kuwait
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)
 # att_number: 4266a
 # note: NP203 Part III S.246 (2015), Meridian +03:00. Stationseigene
@@ -80610,8 +80629,10 @@ x 0 0
 # !units: meters
 # !longitude: 48.0224
 # !latitude: 29.9177
-# province: Al-Basrah
-# admin1_quelle: Ufer 10.9 km
+# province: Al Jahrah
+# admin1_quelle: Ufer 4.1 km
+# note: 20260906 country "Iraq" -> "Kuwait" nach dem Namen berichtigt,
+# note: -- damit auch die Region "Al-Basrah" -> "Al Jahrah".
 Umm Al-Aseed (Beacon No. 15), Kuwait
 +03:00 :Asia/Kuwait
 2.6900 meters
@@ -89919,10 +89940,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
 # !units: meters
-# !longitude: 78.2000
-# !latitude: 8.7500
+# !longitude: 78.200300
+# !latitude: 8.750100
 # state: Tamil Nadu
 # admin1_quelle: Name
+# note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 8.7500/78.2000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Thoothukudi (Tuticorin), Tamil Nadu, India
 +05:30 :Asia/Colombo
 0.6400 meters
