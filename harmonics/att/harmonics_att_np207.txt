@@ -14999,6 +14999,8 @@ MNUS2
 # !units: meters
 # !longitude: -40.9833
 # !latitude: -22.0000
+# state: Rio de Janeiro
+# admin1_quelle: Name
 Cabo de São Tomé, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6700 meters
@@ -15189,6 +15191,8 @@ x 0 0
 # !units: meters
 # !longitude: -42.0136
 # !latitude: -22.9725
+# state: Rio de Janeiro
+# admin1_quelle: Name
 Cabo Frio, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6800 meters
@@ -15379,6 +15383,8 @@ x 0 0
 # !units: meters
 # !longitude: -55.1333
 # !latitude: -61.2333
+# region: Antarctica
+# admin1_quelle: Ufer 1.1 km
 Elephant Island, Antarctica
 -03:00 :Antarctica/Palmer
 1.3000 meters
@@ -15569,6 +15575,8 @@ x 0 0
 # !units: meters
 # !longitude: -39.0659
 # !latitude: -16.4549
+# state: Bahia
+# admin1_quelle: Name
 Porto Seguro, Bahia, Brazil
 -03:00 :America/Sao_Paulo
 1.0500 meters
@@ -15949,6 +15957,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.6000
 # !latitude: -51.3167
+# region: Falkland Islands
+# admin1_quelle: Ufer 2.2 km
 Pebble Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.4100 meters
@@ -16139,6 +16149,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.9000
 # !latitude: -51.9000
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Gull Harbour, Falkland Islands
 -03:00 :Atlantic/Stanley
 2.2000 meters
@@ -16329,6 +16341,8 @@ x 0 0
 # !units: meters
 # !longitude: -50.1263
 # !latitude: -29.9805
+# state: Rio Grande do Sul
+# admin1_quelle: Name
 Tramandaí, Rio Grande do Sul, Brazil
 -03:00 :America/Sao_Paulo
 0.0600 meters
@@ -16519,6 +16533,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.6833
 # !latitude: -52.2000
+# region: Falkland Islands
+# admin1_quelle: Ufer 0.6 km
 Speedwell Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 0.5400 meters
@@ -16709,6 +16725,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.3833
 # !latitude: -51.5500
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Roy Cove, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.9100 meters
@@ -16899,6 +16917,8 @@ x 0 0
 # !units: meters
 # !longitude: -44.9222
 # !latitude: -1.3362
+# state: Maranhão
+# admin1_quelle: Name
 Ilhas de São João, Maranhão, Brazil
 -03:00 :America/Sao_Paulo
 2.8500 meters
@@ -17089,6 +17109,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.5333
 # !latitude: -52.2000
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Albemarle, Falkland Islands
 -03:00 :Atlantic/Stanley
 0.9400 meters
@@ -17279,6 +17301,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.0833
 # !latitude: -51.5667
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Ajax Bay, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.1900 meters
@@ -17469,6 +17493,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.2500
 # !latitude: -51.3667
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Saunders Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 2.1300 meters
@@ -17661,6 +17687,8 @@ x 0 0
 # !latitude: -1.0673
 # note: 20260903 Provinz "Maranhão" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# state: Maranhão
+# admin1_quelle: Name
 Ilha Irmãos, Maranhão, Brazil
 -03:00 :America/Sao_Paulo
 2.3100 meters
@@ -17851,6 +17879,8 @@ x 0 0
 # !units: meters
 # !longitude: -55.1000
 # !latitude: 5.8833
+# region: Paramaribo
+# admin1_quelle: Ufer 1.2 km
 Nieuw Amsterdam, Suriname
 -03:00 :America/Paramaribo
 1.5700 meters
@@ -18041,6 +18071,8 @@ x 0 0
 # !units: meters
 # !longitude: -41.0134
 # !latitude: -21.6254
+# state: Rio de Janeiro
+# admin1_quelle: Name
 Atafona (Pontal), Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.7300 meters
@@ -18231,6 +18263,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.0167
 # !latitude: -51.7167
+# region: Falkland Islands
+# admin1_quelle: Ufer 0.9 km
 Brenton Loch, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.5000 meters
@@ -18421,6 +18455,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.2500
 # !latitude: -54.6000
+# province: Tierra del Fuego
+# admin1_quelle: Name
 Bahía Thetis, Tierra del Fuego, Argentina
 -03:00 :America/Buenos_Aires
 2.1900 meters
@@ -18611,6 +18647,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.6000
 # !latitude: -44.9000
+# province: Chubut
+# admin1_quelle: Name
 Caleta Carolina, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.8000 meters
@@ -18801,6 +18839,8 @@ x 0 0
 # !units: meters
 # !longitude: -41.3167
 # !latitude: -2.9333
+# state: Ceará
+# admin1_quelle: Name
 Barra do Timonha (Cajueiro da Praia), Ceará, Brazil
 -03:00 :America/Sao_Paulo
 1.8500 meters
@@ -18991,6 +19031,8 @@ x 0 0
 # !units: meters
 # !longitude: -43.1580
 # !latitude: -22.7712
+# state: Rio de Janeiro
+# admin1_quelle: Name
 Ilha do Boqueirão, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.8900 meters
@@ -19181,6 +19223,8 @@ x 0 0
 # !units: meters
 # !longitude: -56.6833
 # !latitude: -38.8833
+# province: Buenos Aires
+# admin1_quelle: Name
 Punta Médanos, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 0.5600 meters
@@ -19371,6 +19415,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.6167
 # !latitude: 6.4000
+# region: Pomeroon-Supenaam
+# admin1_quelle: Polygon
 Bartica, Guyana
 -04:00 :America/Guyana
 1.4300 meters
@@ -19561,6 +19607,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.2333
 # !latitude: -44.0333
+# province: Chubut
+# admin1_quelle: Name
 Bahía Janssen, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.2300 meters
@@ -19751,6 +19799,8 @@ x 0 0
 # !units: meters
 # !longitude: -62.0167
 # !latitude: -64.5500
+# region: Antarctica
+# admin1_quelle: Ufer 5.6 km
 Gerlache Strait (Nansen Island), Antarctica
 -03:00 :Antarctica/Palmer
 1.3000 meters
@@ -19941,6 +19991,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.8667
 # !latitude: -39.1833
+# province: Buenos Aires
+# admin1_quelle: Name
 Punta Lobos, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 1.8900 meters
@@ -20131,6 +20183,8 @@ x 0 0
 # !units: meters
 # !longitude: -68.5000
 # !latitude: -53.1667
+# province: Tierra del Fuego
+# admin1_quelle: Name
 Bahía San Sebastián, Tierra del Fuego, Argentina
 -03:00 :America/Buenos_Aires
 5.4000 meters
@@ -20321,6 +20375,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.2167
 # !latitude: -54.8167
+# province: Tierra del Fuego
+# admin1_quelle: Name
 Bahía Buen Suceso, Tierra del Fuego, Argentina
 -03:00 :America/Buenos_Aires
 1.5200 meters
@@ -20511,6 +20567,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.1833
 # !latitude: -51.5833
+# region: Falkland Islands
+# admin1_quelle: Ufer 1.5 km
 North West Islands, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.6000 meters
@@ -20701,6 +20759,8 @@ x 0 0
 # !units: meters
 # !longitude: -40.2943
 # !latitude: -20.3183
+# state: Espírito Santo
+# admin1_quelle: Name
 Vitória, Espírito Santo, Brazil
 -03:00 :America/Sao_Paulo
 0.8100 meters
@@ -21081,6 +21141,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.3055
 # !latitude: 6.0086
+# region: Upper Takutu-Upper Essequibo
+# admin1_quelle: Polygon
 Linden, Guyana
 -04:00 :America/Guyana
 1.2200 meters
@@ -21271,6 +21333,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.5667
 # !latitude: -42.3833
+# province: Chubut
+# admin1_quelle: Name
 La Argentina, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 4.1100 meters
@@ -21461,6 +21525,8 @@ x 0 0
 # !units: meters
 # !longitude: -54.9495
 # !latitude: -34.9637
+# region: Maldonado
+# admin1_quelle: Polygon
 Punta del Este, Uruguay
 -03:00 :America/Montevideo
 0.9200 meters
@@ -21651,6 +21717,8 @@ x 0 0
 # !units: meters
 # !longitude: -38.7000
 # !latitude: -17.9667
+# state: Bahia
+# admin1_quelle: Name
 Ilhas dos Abrolhos, Bahia, Brazil
 -03:00 :America/Sao_Paulo
 1.2400 meters
@@ -21841,6 +21909,8 @@ x 0 0
 # !units: meters
 # !longitude: -48.7628
 # !latitude: -28.4963
+# state: Santa Catarina
+# admin1_quelle: Name
 Laguna, Santa Catarina, Brazil
 -03:00 :America/Sao_Paulo
 0.2100 meters
@@ -22031,6 +22101,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.6833
 # !latitude: -45.0333
+# province: Chubut
+# admin1_quelle: Name
 Bahía Gil, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.9300 meters
@@ -22221,6 +22293,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.8000
 # !latitude: -47.9333
+# province: Santa Cruz
+# admin1_quelle: Name
 Bahía Oso Marino, Santa Cruz, Argentina
 -03:00 :America/Buenos_Aires
 3.1400 meters
@@ -22411,6 +22485,8 @@ x 0 0
 # !units: meters
 # !longitude: -48.2911
 # !latitude: -0.9274
+# state: Pará
+# admin1_quelle: Name
 Colares (Ilha de Colares), Pará, Brazil
 -03:00 :America/Sao_Paulo
 1.7400 meters
@@ -22601,6 +22677,8 @@ x 0 0
 # !units: meters
 # !longitude: -55.0833
 # !latitude: 5.7000
+# region: Wanica
+# admin1_quelle: Polygon
 Domburg, Suriname
 -03:00 :America/Paramaribo
 1.8600 meters
@@ -22791,6 +22869,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.0667
 # !latitude: -51.9500
+# region: Falkland Islands
+# admin1_quelle: Ufer 0.7 km
 Fox Bay, Falkland Islands
 -03:00 :Atlantic/Stanley
 0.6000 meters
@@ -22981,6 +23061,8 @@ x 0 0
 # !units: meters
 # !longitude: -62.2724
 # !latitude: -40.7752
+# province: Buenos Aires
+# admin1_quelle: Name
 Segunda Barranca, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 1.2200 meters
@@ -23171,6 +23253,8 @@ x 0 0
 # !units: meters
 # !longitude: -47.4524
 # !latitude: -24.6840
+# state: São Paulo
+# admin1_quelle: Name
 Icapara, São Paulo, Brazil
 -03:00 :America/Sao_Paulo
 0.8200 meters
@@ -23361,6 +23445,8 @@ x 0 0
 # !units: meters
 # !longitude: -47.0053
 # !latitude: -24.4053
+# state: São Paulo
+# admin1_quelle: Name
 Guaraú (Ponta Paranapua), São Paulo, Brazil
 -03:00 :America/Sao_Paulo
 0.5000 meters
@@ -23551,6 +23637,8 @@ x 0 0
 # !units: meters
 # !longitude: -57.0167
 # !latitude: 5.9667
+# region: Nickerie
+# admin1_quelle: Polygon
 Nickerie River, Suriname
 -03:00 :America/Paramaribo
 1.5500 meters
@@ -23741,6 +23829,8 @@ x 0 0
 # !units: meters
 # !longitude: -34.8213
 # !latitude: -7.1115
+# state: Paraíba
+# admin1_quelle: Name
 Tambaú (João Pessoa), Paraíba, Brazil
 -03:00 :America/Sao_Paulo
 1.2000 meters
@@ -23931,6 +24021,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.8667
 # !latitude: -51.9833
+# region: Falkland Islands
+# admin1_quelle: Ufer 2.9 km
 Dyke Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 2.0000 meters
@@ -24121,6 +24213,8 @@ x 0 0
 # !units: meters
 # !longitude: -38.7946
 # !latitude: -12.8403
+# state: Bahia
+# admin1_quelle: Name
 Ponta do Alambique, Bahia, Brazil
 -03:00 :America/Sao_Paulo
 1.2500 meters
@@ -24311,6 +24405,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.1333
 # !latitude: -51.5500
+# region: Falkland Islands
+# admin1_quelle: Ufer 1.2 km
 Berkeley Sound, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.1500 meters
@@ -24501,6 +24597,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.7833
 # !latitude: 8.4000
+# region: Barima-Waini
+# admin1_quelle: Ufer 0.7 km
 Punta Wani, Guyana
 -04:00 :America/Guyana
 0.9100 meters
@@ -24691,6 +24789,8 @@ x 0 0
 # !units: meters
 # !longitude: -40.1398
 # !latitude: -2.8394
+# state: Ceará
+# admin1_quelle: Name
 Acaraú, Ceará, Brazil
 -03:00 :America/Sao_Paulo
 1.6000 meters
@@ -24881,6 +24981,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.8500
 # !latitude: -52.2000
+# region: Falkland Islands
+# admin1_quelle: Ufer 12.1 km
 Bleaker Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 0.7000 meters
@@ -25071,6 +25173,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.3333
 # !latitude: -43.7167
+# province: Chubut
+# admin1_quelle: Name
 Isla Escondida, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.5900 meters
@@ -25261,6 +25365,8 @@ x 0 0
 # !units: meters
 # !longitude: -55.1500
 # !latitude: 5.8333
+# region: Paramaribo
+# admin1_quelle: Polygon
 Paramaribo, Suriname
 -03:00 :America/Paramaribo
 1.5300 meters
@@ -25451,6 +25557,8 @@ x 0 0
 # !units: meters
 # !longitude: -63.6000
 # !latitude: -42.5167
+# province: Chubut
+# admin1_quelle: Name
 Caleta Valdés, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.0400 meters
@@ -25641,6 +25749,8 @@ x 0 0
 # !units: meters
 # !longitude: -51.0449
 # !latitude: 0.0345
+# state: Amapá
+# admin1_quelle: Name
 Macapá, Amapá, Brazil
 -03:00 :America/Sao_Paulo
 1.4800 meters
@@ -25831,6 +25941,8 @@ x 0 0
 # !units: meters
 # !longitude: -34.8407
 # !latitude: -6.9702
+# state: Paraíba
+# admin1_quelle: Name
 Cabedelo (Porto), Paraíba, Brazil
 -03:00 :America/Sao_Paulo
 1.3400 meters
@@ -26021,6 +26133,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.7000
 # !latitude: -51.9667
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Great Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.0500 meters
@@ -26211,6 +26325,8 @@ x 0 0
 # !units: meters
 # !longitude: -40.8452
 # !latitude: -2.8882
+# state: Ceará
+# admin1_quelle: Name
 Camocim, Ceará, Brazil
 -03:00 :America/Sao_Paulo
 1.8200 meters
@@ -26401,6 +26517,8 @@ x 0 0
 # !units: meters
 # !longitude: -57.8433
 # !latitude: -34.4749
+# region: Colonia
+# admin1_quelle: Ufer 1.2 km
 Colonia del Sacramento (Rio de la Plata), Uruguay
 -03:00 :America/Montevideo
 0.7300 meters
@@ -26591,6 +26709,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.7333
 # !latitude: -51.3833
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Golding Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.1900 meters
@@ -26971,6 +27091,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.4500
 # !latitude: -51.3500
+# region: Falkland Islands
+# admin1_quelle: Ufer 0.9 km
 Tamar Pass, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.4400 meters
@@ -27351,6 +27473,8 @@ x 0 0
 # !units: meters
 # !longitude: -67.5833
 # !latitude: -71.3000
+# region: Antarctica
+# admin1_quelle: Ufer 1.7 km
 Hobbs Pool, Antarctica
 -03:00 :Antarctica/Palmer
 1.2000 meters
@@ -27541,6 +27665,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.1000
 # !latitude: -41.0333
+# province: Río Negro
+# admin1_quelle: Name
 Caleta de los Loros, Río Negro, Argentina
 -03:00 :America/Buenos_Aires
 4.5100 meters
@@ -27731,6 +27857,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.9500
 # !latitude: -48.0167
+# province: Santa Cruz
+# admin1_quelle: Name
 Bahía de los Nodales, Santa Cruz, Argentina
 -03:00 :America/Buenos_Aires
 2.9600 meters
@@ -27921,6 +28049,8 @@ x 0 0
 # !units: meters
 # !longitude: -12.3133
 # !latitude: -37.0637
+# region: Edinburgh of the Seven Seas
+# admin1_quelle: Name
 Calshot Harbour, Edinburgh of the Seven Seas, Tristan da Cunha Island
 +00:00 :Atlantic/St_Helena
 0.5000 meters
@@ -28111,6 +28241,8 @@ x 0 0
 # !units: meters
 # !longitude: -68.4167
 # !latitude: -70.8333
+# region: Antarctica
+# admin1_quelle: Polygon
 Ablation Lake, Antarctica
 -03:00 :Antarctica/Palmer
 1.2000 meters
@@ -28301,6 +28433,8 @@ x 0 0
 # !units: meters
 # !longitude: -38.9186
 # !latitude: -13.3766
+# state: Bahia
+# admin1_quelle: Name
 Morro de São Paulo, Bahia, Brazil
 -03:00 :America/Sao_Paulo
 1.1400 meters
@@ -28491,6 +28625,8 @@ x 0 0
 # !units: meters
 # !longitude: -45.6000
 # !latitude: -60.7167
+# region: Antarctica
+# admin1_quelle: Ufer 8.6 km
 Signy Island, Antarctica
 -03:00 :Antarctica/Palmer
 1.2000 meters
@@ -29061,6 +29197,8 @@ x 0 0
 # !units: meters
 # !longitude: -37.0333
 # !latitude: -4.8167
+# state: Rio Grande do Norte
+# admin1_quelle: Name
 Areia Branca (Salineiro Terminal), Rio Grande do Norte, Brazil
 -03:00 :America/Sao_Paulo
 1.8700 meters
@@ -29251,6 +29389,8 @@ x 0 0
 # !units: meters
 # !longitude: -39.3639
 # !latitude: -17.8861
+# state: Bahia
+# admin1_quelle: Name
 Nova Viçosa, Bahia, Brazil
 -03:00 :America/Sao_Paulo
 1.4300 meters
@@ -29441,6 +29581,8 @@ x 0 0
 # !units: meters
 # !longitude: -57.3333
 # !latitude: -63.8833
+# region: Antarctica
+# admin1_quelle: Ufer 9.2 km
 Pastorizo Bay, Antarctica
 -03:00 :Antarctica/Palmer
 2.0000 meters
@@ -29631,6 +29773,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.7382
 # !latitude: -47.2013
+# province: Santa Cruz
+# admin1_quelle: Name
 Cabo Blanco, Santa Cruz, Argentina
 -03:00 :America/Buenos_Aires
 2.7400 meters
@@ -29821,6 +29965,8 @@ x 0 0
 # !units: meters
 # !longitude: -54.1477
 # !latitude: -34.6501
+# region: Rocha
+# admin1_quelle: Polygon
 Paloma (Puerto), Uruguay
 -03:00 :America/Montevideo
 0.8900 meters
@@ -30011,6 +30157,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.6333
 # !latitude: -62.4833
+# region: Antarctica
+# admin1_quelle: Ufer 16.7 km
 Discovery Bay, Antarctica
 -03:00 :Antarctica/Palmer
 1.5000 meters
@@ -30203,6 +30351,8 @@ x 0 0
 # !latitude: -10.5167
 # note: 20260903 Provinz "Alagoas" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# state: Alagoas
+# admin1_quelle: Name
 Rio São Francisco Bar, Alagoas, Brazil
 -03:00 :America/Sao_Paulo
 1.0600 meters
@@ -30393,6 +30543,8 @@ x 0 0
 # !units: meters
 # !longitude: -41.9146
 # !latitude: -22.7689
+# state: Rio de Janeiro
+# admin1_quelle: Name
 Búzios (Porto), Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6600 meters
@@ -30583,6 +30735,8 @@ x 0 0
 # !units: meters
 # !longitude: -43.1169
 # !latitude: -22.7546
+# state: Rio de Janeiro
+# admin1_quelle: Name
 Ilha de Brocoió, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6700 meters
@@ -30773,6 +30927,8 @@ x 0 0
 # !units: meters
 # !longitude: -68.1333
 # !latitude: -67.5667
+# region: Antarctica
+# admin1_quelle: Polygon
 Rothera Point, Antarctica
 -03:00 :Antarctica/Palmer
 1.2200 meters
@@ -30963,6 +31119,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.2333
 # !latitude: -51.8000
+# region: Falkland Islands
+# admin1_quelle: Ufer 0.8 km
 Fitzroy Creek, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.0500 meters
@@ -31153,6 +31311,8 @@ x 0 0
 # !units: meters
 # !longitude: -63.7571
 # !latitude: -42.0784
+# province: Chubut
+# admin1_quelle: Name
 Punta Norte, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.6000 meters
@@ -31343,6 +31503,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.6000
 # !latitude: -51.7833
+# region: Falkland Islands
+# admin1_quelle: Ufer 4.7 km
 Swan Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.5000 meters
@@ -31533,6 +31695,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.3500
 # !latitude: -52.2667
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Fanny Cove Creek, Falkland Islands
 -03:00 :Atlantic/Stanley
 0.8200 meters
@@ -31723,6 +31887,8 @@ x 0 0
 # !units: meters
 # !longitude: -67.0000
 # !latitude: -68.1833
+# region: Antarctica
+# admin1_quelle: Ufer 1.1 km
 Stonington, Antarctica
 -03:00 :Antarctica/Palmer
 0.9400 meters
@@ -31913,6 +32079,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.1333
 # !latitude: -54.6500
+# province: Tierra del Fuego
+# admin1_quelle: Name
 Isla Observatorio, Tierra del Fuego, Argentina
 -03:00 :America/Buenos_Aires
 1.8600 meters
@@ -32103,6 +32271,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.3333
 # !latitude: -52.1167
+# region: Falkland Islands
+# admin1_quelle: Polygon
 North Arm, Falkland Islands
 -03:00 :Atlantic/Stanley
 0.7400 meters
@@ -32483,6 +32653,8 @@ x 0 0
 # !units: meters
 # !longitude: -68.3667
 # !latitude: -52.3500
+# province: Santa Cruz
+# admin1_quelle: Name
 Cabo Vírgenes, Santa Cruz, Argentina
 -03:00 :America/Buenos_Aires
 5.8500 meters
@@ -32673,6 +32845,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.4500
 # !latitude: -51.9000
+# region: Falkland Islands
+# admin1_quelle: Ufer 2.3 km
 Mare Harbour, Falkland Islands
 -03:00 :Atlantic/Stanley
 0.8600 meters
@@ -32863,6 +33037,8 @@ x 0 0
 # !units: meters
 # !longitude: -35.2965
 # !latitude: -9.1545
+# state: Alagoas
+# admin1_quelle: Name
 Porto de Pedras, Alagoas, Brazil
 -03:00 :America/Sao_Paulo
 1.1800 meters
@@ -33053,6 +33229,8 @@ x 0 0
 # !units: meters
 # !longitude: -44.7086
 # !latitude: -23.2224
+# state: Rio de Janeiro
+# admin1_quelle: Name
 Paraty, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.7800 meters
@@ -33243,6 +33421,8 @@ x 0 0
 # !units: meters
 # !longitude: -62.2396
 # !latitude: -39.2702
+# province: Buenos Aires
+# admin1_quelle: Name
 Romero Chico, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 2.4700 meters
@@ -33623,6 +33803,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.5167
 # !latitude: -51.6167
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Port Howard, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.2800 meters
@@ -33813,6 +33995,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.6833
 # !latitude: -51.3500
+# region: Falkland Islands
+# admin1_quelle: Ufer 2.6 km
 Westpoint Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 2.0800 meters
@@ -34003,6 +34187,8 @@ x 0 0
 # !units: meters
 # !longitude: -63.6357
 # !latitude: -42.7670
+# province: Chubut
+# admin1_quelle: Name
 Punta Delgada, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.3200 meters
@@ -34193,6 +34379,8 @@ x 0 0
 # !units: meters
 # !longitude: -39.8233
 # !latitude: -19.6461
+# state: Espírito Santo
+# admin1_quelle: Name
 Regência, Espírito Santo, Brazil
 -03:00 :America/Sao_Paulo
 0.6700 meters
@@ -34383,6 +34571,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.2667
 # !latitude: -65.2500
+# region: Antarctica
+# admin1_quelle: Ufer 7.6 km
 Marina Point, Antarctica
 -03:00 :Antarctica/Palmer
 1.2000 meters
@@ -34763,6 +34953,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.2604
 # !latitude: -38.9920
+# province: Buenos Aires
+# admin1_quelle: Name
 Vila Faro Recalada, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 1.6200 meters
@@ -34953,6 +35145,8 @@ x 0 0
 # !units: meters
 # !longitude: -44.6500
 # !latitude: -60.7333
+# region: Antarctica
+# admin1_quelle: Polygon
 Scotia Bay, Antarctica
 -03:00 :Antarctica/Palmer
 1.1600 meters
@@ -35143,6 +35337,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.1000
 # !latitude: -51.4833
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Hill Cove, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.8200 meters
@@ -35333,6 +35529,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.0667
 # !latitude: -51.3500
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Port Egmont, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.9400 meters
@@ -35523,6 +35721,8 @@ x 0 0
 # !units: meters
 # !longitude: -66.5325
 # !latitude: -45.1155
+# province: Chubut
+# admin1_quelle: Name
 Bahía Bustamante, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 3.1100 meters
@@ -35903,6 +36103,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.9833
 # !latitude: -51.5000
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Port San Carlos, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.1200 meters
@@ -36093,6 +36295,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.0333
 # !latitude: -52.0333
+# region: Falkland Islands
+# admin1_quelle: Ufer 0.8 km
 Adventure Sound, Falkland Islands
 -03:00 :Atlantic/Stanley
 0.7000 meters
@@ -36283,6 +36487,8 @@ x 0 0
 # !units: meters
 # !longitude: -37.0457
 # !latitude: -10.9204
+# state: Sergipe
+# admin1_quelle: Name
 Aracaju (Capitania dos Portos), Sergipe, Brazil
 -03:00 :America/Sao_Paulo
 1.1600 meters
@@ -36473,6 +36679,8 @@ x 0 0
 # !units: meters
 # !longitude: -40.8054
 # !latitude: -21.0059
+# state: Espírito Santo
+# admin1_quelle: Name
 Itapemirim, Espírito Santo, Brazil
 -03:00 :America/Sao_Paulo
 0.7300 meters
@@ -36663,6 +36871,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.3500
 # !latitude: -66.0000
+# region: Antarctica
+# admin1_quelle: Ufer 0.6 km
 Prospect Point, Antarctica
 -03:00 :Antarctica/Palmer
 0.9000 meters
@@ -36853,6 +37063,8 @@ x 0 0
 # !units: meters
 # !longitude: -66.8000
 # !latitude: -66.8667
+# region: Antarctica
+# admin1_quelle: Ufer 10.4 km
 Detaille Island, Antarctica
 -03:00 :Antarctica/Palmer
 0.9000 meters
@@ -37043,6 +37255,8 @@ x 0 0
 # !units: meters
 # !longitude: -56.7789
 # !latitude: -36.2914
+# province: Buenos Aires
+# admin1_quelle: Name
 Cabo San Antonio, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 0.9100 meters
@@ -37423,6 +37637,8 @@ x 0 0
 # !units: meters
 # !longitude: -35.0911
 # !latitude: -8.7531
+# state: Pernambuco
+# admin1_quelle: Name
 Tamandaré, Pernambuco, Brazil
 -03:00 :America/Sao_Paulo
 1.2400 meters
@@ -37613,6 +37829,8 @@ x 0 0
 # !units: meters
 # !longitude: -65.5833
 # !latitude: -45.0667
+# province: Chubut
+# admin1_quelle: Name
 Caleta Leones, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.9900 meters
@@ -37993,6 +38211,8 @@ x 0 0
 # !units: meters
 # !longitude: -43.6000
 # !latitude: -2.2667
+# state: Maranhão
+# admin1_quelle: Name
 Ilha de Santana, Maranhão, Brazil
 -03:00 :America/Sao_Paulo
 2.2900 meters
@@ -38183,6 +38403,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.1667
 # !latitude: -63.8833
+# region: Antarctica
+# admin1_quelle: Ufer 1.0 km
 Whiskey Bay, Antarctica
 -03:00 :Antarctica/Palmer
 2.0000 meters
@@ -38373,6 +38595,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.3000
 # !latitude: -51.7167
+# region: Falkland Islands
+# admin1_quelle: Polygon
 New Island, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.6900 meters
@@ -38563,6 +38787,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.4667
 # !latitude: -52.0000
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Lively Settlement, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.0300 meters
@@ -38753,6 +38979,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.1500
 # !latitude: -42.4000
+# province: Chubut
+# admin1_quelle: Name
 Pueyrredón, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 4.1100 meters
@@ -39133,6 +39361,8 @@ x 0 0
 # !units: meters
 # !longitude: -62.3798
 # !latitude: -38.7513
+# province: Buenos Aires
+# admin1_quelle: Name
 Puerto Cuatreros (Bahía Blanca), Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 2.8700 meters
@@ -39323,6 +39553,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.9167
 # !latitude: -51.3333
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Keppel Sound, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.9700 meters
@@ -39513,6 +39745,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.3167
 # !latitude: -51.4167
+# region: Falkland Islands
+# admin1_quelle: Ufer 0.9 km
 Port Salvador Entrance, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.5600 meters
@@ -39703,6 +39937,8 @@ x 0 0
 # !units: meters
 # !longitude: -62.0500
 # !latitude: -39.4333
+# province: Buenos Aires
+# admin1_quelle: Name
 Punta Laberinto, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 2.0100 meters
@@ -39893,6 +40129,8 @@ x 0 0
 # !units: meters
 # !longitude: -50.0745
 # !latitude: 0.9156
+# state: Amapá
+# admin1_quelle: Name
 Barra Norte (Rio de Brigue), Amapá, Brazil
 -03:00 :America/Sao_Paulo
 3.0000 meters
@@ -40083,6 +40321,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.7978
 # !latitude: -38.9935
+# province: Buenos Aires
+# admin1_quelle: Name
 Punta Tejada, Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 1.8900 meters
@@ -40273,6 +40513,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.0833
 # !latitude: -51.7167
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Chartres, Falkland Islands
 -03:00 :Atlantic/Stanley
 2.1300 meters
@@ -40463,6 +40705,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.4167
 # !latitude: -42.9500
+# province: Chubut
+# admin1_quelle: Name
 Punta Ninfas, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.6200 meters
@@ -40653,6 +40897,8 @@ x 0 0
 # !units: meters
 # !longitude: -69.1667
 # !latitude: -50.9500
+# province: Santa Cruz
+# admin1_quelle: Name
 Ría Coig, Santa Cruz, Argentina
 -03:00 :America/Buenos_Aires
 6.1000 meters
@@ -40843,6 +41089,8 @@ x 0 0
 # !units: meters
 # !longitude: -67.8333
 # !latitude: -53.7000
+# province: Tierra del Fuego
+# admin1_quelle: Name
 Caleta la Misión, Tierra del Fuego, Argentina
 -03:00 :America/Buenos_Aires
 4.8000 meters
@@ -41033,6 +41281,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.2830
 # !latitude: -42.5752
+# province: Chubut
+# admin1_quelle: Name
 Puerto Pirámide, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.9900 meters
@@ -41223,6 +41473,8 @@ x 0 0
 # !units: meters
 # !longitude: -62.1667
 # !latitude: -40.0167
+# province: Buenos Aires
+# admin1_quelle: Name
 Isla Gaviota (Isla N.W.), Buenos Aires, Argentina
 -03:00 :America/Buenos_Aires
 1.4700 meters
@@ -41413,6 +41665,8 @@ x 0 0
 # !units: meters
 # !longitude: -48.5452
 # !latitude: -27.1533
+# state: Santa Catarina
+# admin1_quelle: Name
 Porto Belo, Santa Catarina, Brazil
 -03:00 :America/Sao_Paulo
 0.5200 meters
@@ -41603,6 +41857,8 @@ x 0 0
 # !units: meters
 # !longitude: -40.4972
 # !latitude: -20.6659
+# state: Espírito Santo
+# admin1_quelle: Name
 Guarapari, Espírito Santo, Brazil
 -03:00 :America/Sao_Paulo
 0.7600 meters
@@ -41793,6 +42049,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.9667
 # !latitude: -51.8333
+# region: Falkland Islands
+# admin1_quelle: Ufer 0.4 km
 Darwin Harbour (Goose Green), Falkland Islands
 -03:00 :Atlantic/Stanley
 0.8200 meters
@@ -41983,6 +42241,8 @@ x 0 0
 # !units: meters
 # !longitude: -39.1801
 # !latitude: -17.1051
+# state: Bahia
+# admin1_quelle: Name
 Cumuruxatiba, Bahia, Brazil
 -03:00 :America/Sao_Paulo
 1.2700 meters
@@ -42173,6 +42433,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.8333
 # !latitude: -52.1000
+# region: Falkland Islands
+# admin1_quelle: Polygon
 Port Stephens, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.1100 meters
@@ -42363,6 +42625,8 @@ x 0 0
 # !units: meters
 # !longitude: -56.2563
 # !latitude: -34.9034
+# region: Montevideo
+# admin1_quelle: Polygon
 Montevideo, Uruguay
 -03:00 :America/Montevideo
 0.9100 meters
@@ -42553,6 +42817,8 @@ x 0 0
 # !units: meters
 # !longitude: -57.8667
 # !latitude: -51.6833
+# region: Falkland Islands
+# admin1_quelle: Ufer 2.2 km
 Stanley, Falkland Islands
 -03:00 :Atlantic/Stanley
 1.0200 meters
@@ -42743,6 +43009,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.0500
 # !latitude: 6.9500
+# region: East Berbice-Corentyne
+# admin1_quelle: Ufer 14.4 km
 Demerara Light Buoy, Guyana
 -04:00 :America/Guyana
 1.4600 meters
@@ -42933,6 +43201,8 @@ x 0 0
 # !units: meters
 # !longitude: -58.4167
 # !latitude: 6.8667
+# region: Demerara-Mahaica
+# admin1_quelle: Polygon
 Parika, Guyana
 -04:00 :America/Guyana
 1.7400 meters
@@ -43123,6 +43393,8 @@ x 0 0
 # !units: meters
 # !longitude: -43.1144
 # !latitude: -22.9514
+# state: Rio de Janeiro
+# admin1_quelle: Name
 Ponta do Imbuí, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6800 meters
@@ -43313,6 +43585,8 @@ x 0 0
 # !units: meters
 # !longitude: -50.1708
 # !latitude: 0.7548
+# state: Amapá
+# admin1_quelle: Name
 Limão do Curuá, Amapá, Brazil
 -03:00 :America/Sao_Paulo
 2.2000 meters
@@ -43505,6 +43779,8 @@ x 0 0
 # !latitude: -20.4667
 # note: 20260903 Provinz "Espírito Santo" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# state: Espírito Santo
+# admin1_quelle: Name
 Martin Vaz Islets, Espírito Santo, Brazil
 -02:00 :America/Sao_Paulo
 0.6700 meters

@@ -14998,6 +14998,8 @@ MNUS2
 # !units: meters
 # !longitude: -25.1493
 # !latitude: 36.9438
+# region: Açores
+# admin1_quelle: Name
 Vila do Porto (Santa Maria), Açores, Portugal
 -01:00 :Atlantic/Azores
 1.0000 meters
@@ -15187,6 +15189,8 @@ x 0 0
 # !units: meters
 # !longitude: -24.9930
 # !latitude: 16.8870
+# region: São Vicente
+# admin1_quelle: Name
 Mindelo (Porto Grande Bay), São Vicente, Cape Verde
 -01:00 :Atlantic/Cape_Verde
 0.8000 meters
@@ -15376,6 +15380,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.6170
 # !latitude: 33.6070
+# region: Grand Casablanca
+# admin1_quelle: Polygon
 Casablanca (Port), Morocco
 +01:00 :Africa/Casablanca
 2.2400 meters
@@ -15565,6 +15571,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.6380
 # !latitude: 30.4210
+# region: Souss - Massa - Draâ
+# admin1_quelle: Ufer 0.6 km
 Agadir, Morocco
 +01:00 :Africa/Casablanca
 2.1700 meters
@@ -15943,6 +15951,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.5100
 # !latitude: 16.0260
+# region: Saint-Louis
+# admin1_quelle: Ufer 1.0 km
 Saint-Louis, Senegal
 +00:00 :Africa/Dakar
 1.0300 meters
@@ -16132,6 +16142,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.5720
 # !latitude: 13.4440
+# region: Banjul
+# admin1_quelle: Ufer 1.4 km
 Banjul, Gambia
 +00:00 :Africa/Banjul
 0.9800 meters
@@ -16888,6 +16900,8 @@ x 0 0
 # !units: meters
 # !longitude: -14.6170
 # !latitude: 10.6500
+# region: Boke
+# admin1_quelle: Polygon
 Port Kamsar (Rio Nunez), Guinea
 +00:00 :Africa/Conakry
 3.0300 meters
@@ -17077,6 +17091,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.7154
 # !latitude: 9.5024
+# region: Conakry
+# admin1_quelle: Ufer 0.6 km
 Conakry, Guinea
 +00:00 :Africa/Conakry
 2.1800 meters
@@ -17266,6 +17282,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.2750
 # !latitude: 8.4920
+# province: Western
+# admin1_quelle: Polygon
 Freetown, Sierra Leone
 +00:00 :Africa/Freetown
 1.7600 meters
@@ -17455,6 +17473,8 @@ x 0 0
 # !units: meters
 # !longitude: -10.8000
 # !latitude: 6.3330
+# region: Montserrado
+# admin1_quelle: Ufer 0.6 km
 Monrovia, Liberia
 +00:00 :Africa/Monrovia
 0.9000 meters
@@ -17833,6 +17853,8 @@ x 0 0
 # !units: meters
 # !longitude: 0.0170
 # !latitude: 5.6393
+# region: Greater Accra
+# admin1_quelle: Polygon
 Tema, Ghana
 +00:00 :Africa/Accra
 0.8800 meters
@@ -18022,6 +18044,8 @@ x 0 0
 # !units: meters
 # !longitude: 1.2865
 # !latitude: 6.1346
+# region: Maritime
+# admin1_quelle: Ufer 1.7 km
 Lomé, Togo
 +00:00 :Africa/Lome
 1.1500 meters
@@ -18211,6 +18235,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.0654
 # !latitude: 4.3285
+# state: Bayelsa
+# admin1_quelle: Ufer 0.7 km
 Akassa (Nun River), Nigeria
 +01:00 :Africa/Lagos
 0.9800 meters
@@ -18400,6 +18426,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.1706
 # !latitude: 4.4571
+# state: Rivers
+# admin1_quelle: Ufer 1.3 km
 Bonny (Eyamba Town), Nigeria
 +01:00 :Africa/Lagos
 1.4600 meters
@@ -18589,6 +18617,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.3839
 # !latitude: 6.4525
+# state: Lagos
+# admin1_quelle: Ufer 0.9 km
 Lagos (Apapa), Nigeria
 +01:00 :Africa/Lagos
 0.8800 meters
@@ -18778,6 +18808,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.7324
 # !latitude: 5.5147
+# state: Delta
+# admin1_quelle: Polygon
 Warri, Nigeria
 +01:00 :Africa/Lagos
 1.0400 meters
@@ -18967,6 +18999,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.2190
 # !latitude: 3.9610
+# province: Sud-Ouest
+# admin1_quelle: Ufer 0.6 km
 Man O' War Bay, Cameroon
 +01:00 :Africa/Douala
 1.2000 meters
@@ -19156,6 +19190,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.6760
 # !latitude: 4.0410
+# province: Littoral
+# admin1_quelle: Ufer 0.8 km
 Douala (Cameroon River), Cameroon
 +01:00 :Africa/Douala
 1.6200 meters
@@ -19345,6 +19381,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.5550
 # !latitude: 3.4610
+# province: Bioko Sur
+# admin1_quelle: Ufer 1.0 km
 Luba (Bioko), Equatorial Guinea
 +01:00 :Africa/Malabo
 1.0200 meters
@@ -19534,6 +19572,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.7700
 # !latitude: 1.8732
+# province: Litoral
+# admin1_quelle: Ufer 1.1 km
 Bata, Equatorial Guinea
 +01:00 :Africa/Malabo
 1.0200 meters
@@ -19723,6 +19763,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.6935
 # !latitude: 1.0829
+# province: Litoral
+# admin1_quelle: Ufer 2.2 km
 Cogo (Puerto Iradier), Equatorial Guinea
 +01:00 :Africa/Malabo
 1.4900 meters
@@ -19912,6 +19954,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.3640
 # !latitude: -6.1200
+# province: Zaire
+# admin1_quelle: Polygon
 Soyo, Angola
 +01:00 :Africa/Luanda
 1.1000 meters
@@ -20101,6 +20145,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.2345
 # !latitude: -8.7861
+# province: Luanda
+# admin1_quelle: Ufer 1.8 km
 Luanda, Angola
 +01:00 :Africa/Luanda
 1.1000 meters
@@ -20290,6 +20336,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.5050
 # !latitude: 0.2838
+# province: Estuaire
+# admin1_quelle: Ufer 0.9 km
 Pointe Owendo (Estuaire du Gabon), Gabon
 +01:00 :Africa/Libreville
 1.5600 meters
@@ -20479,6 +20527,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7093
 # !latitude: -0.6195
+# province: Ogooué-Maritime
+# admin1_quelle: Polygon
 Cap Lopez (Pointe Renard), Gabon
 +01:00 :Africa/Libreville
 1.2100 meters
@@ -20668,6 +20718,8 @@ x 0 0
 # !units: meters
 # !longitude: 11.8330
 # !latitude: -4.7830
+# region: Pointe Noire
+# admin1_quelle: Polygon
 Pointe-Noire, Congo
 +01:00 :Africa/Brazzaville
 0.9600 meters
@@ -20857,6 +20909,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.1890
 # !latitude: -5.5481
+# province: Cabinda
+# admin1_quelle: Polygon
 Cabinda, Angola
 +01:00 :Africa/Luanda
 1.1000 meters
@@ -21046,6 +21100,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.5500
 # !latitude: -12.3500
+# province: Benguela
+# admin1_quelle: Polygon
 Porto do Lobito, Angola
 +01:00 :Africa/Luanda
 1.1000 meters
@@ -21235,6 +21291,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.5000
 # !latitude: -22.9500
+# province: Erongo
+# admin1_quelle: Polygon
 Walvis Bay, Namibia
 +02:00 :Africa/Windhoek
 0.9800 meters
@@ -21424,6 +21482,8 @@ x 0 0
 # !units: meters
 # !longitude: -14.4141
 # !latitude: -7.9251
+# region: Ascension
+# admin1_quelle: Ufer 0.8 km
 Georgetown, Ascension Island
 +00:00 :Atlantic/St_Helena
 0.7000 meters
@@ -21613,6 +21673,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.7180
 # !latitude: -15.9234
+# region: Saint Helena
+# admin1_quelle: Polygon
 Jamestown, Saint Helena
 +00:00 :Atlantic/St_Helena
 0.5500 meters
@@ -21802,6 +21864,8 @@ x 0 0
 # !units: meters
 # !longitude: -25.6713
 # !latitude: 37.7356
+# region: Açores
+# admin1_quelle: Name
 Ponta Delgada (São Miguel), Açores, Portugal
 -01:00 :Atlantic/Azores
 1.0000 meters
@@ -21991,6 +22055,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.9170
 # !latitude: 32.6500
+# region: Madeira
+# admin1_quelle: Name
 Funchal, Madeira, Portugal
 +00:00 :Atlantic/Madeira
 1.4000 meters
@@ -22180,6 +22246,8 @@ x 0 0
 # !units: meters
 # !longitude: -15.4119
 # !latitude: 28.1407
+# region: Islas Canarias
+# admin1_quelle: Name
 Puerto de la Luz (Gran Canaria), Islas Canarias, Spain
 +00:00 :Atlantic/Canary
 1.4200 meters
@@ -22369,6 +22437,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.7293
 # !latitude: 45.5503
+# region: Koper
+# admin1_quelle: Polygon
 Koper, Slovenia
 +01:00 :Europe/Ljubljana
 0.7000 meters
@@ -22558,6 +22628,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.4216
 # !latitude: 45.3294
+# region: Primorsko-Goranska
+# admin1_quelle: Ufer 1.8 km
 Rijeka, Croatia
 +01:00 :Europe/Zagreb
 0.3000 meters
@@ -22747,6 +22819,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.4660
 # !latitude: 44.5353
+# region: Primorsko-Goranska
+# admin1_quelle: Polygon
 Mali Losinj, Croatia
 +01:00 :Europe/Zagreb
 0.3400 meters
@@ -22936,6 +23010,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.2286
 # !latitude: 44.1179
+# region: Zadarska
+# admin1_quelle: Ufer 0.5 km
 Zadar, Croatia
 +01:00 :Europe/Zagreb
 0.3000 meters
@@ -23125,6 +23201,8 @@ x 0 0
 # !units: meters
 # !longitude: 16.4361
 # !latitude: 43.5012
+# region: Splitsko-Dalmatinska
+# admin1_quelle: Ufer 2.3 km
 Split, Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
@@ -23314,6 +23392,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.3167
 # !latitude: 31.2667
+# region: Bur Sa`id
+# admin1_quelle: Polygon
 Port Said, Egypt
 +02:00 :Africa/Cairo
 0.4500 meters
@@ -23503,6 +23583,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.7742
 # !latitude: 34.7276
+# region: Sfax
+# admin1_quelle: Ufer 1.4 km
 Sfax, Tunisia
 +01:00 :Africa/Tunis
 0.9900 meters
@@ -23692,6 +23774,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.8570
 # !latitude: 33.8880
+# region: Médenine
+# admin1_quelle: Ufer 0.7 km
 Houmt Souk (Djerba), Tunisia
 +01:00 :Africa/Tunis
 1.1400 meters
@@ -23881,6 +23965,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.2897
 # !latitude: 38.6948
+# region: Lisboa
+# admin1_quelle: Ufer 0.6 km
 Paço de Arcos, Portugal
 +00:00 :Europe/Lisbon
 2.0000 meters
@@ -24070,6 +24156,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.9871
 # !latitude: 38.9523
+# region: Lisboa
+# admin1_quelle: Polygon
 Vila Franca de Xira (Rio Tejo), Portugal
 +00:00 :Europe/Lisbon
 2.4700 meters
@@ -24259,6 +24347,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.9664
 # !latitude: 38.7570
+# region: Setúbal
+# admin1_quelle: Polygon
 Alcochete, Portugal
 +00:00 :Europe/Lisbon
 2.4000 meters
@@ -24448,6 +24538,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.0359
 # !latitude: 36.1827
+# region: Cádiz
+# admin1_quelle: Ufer 0.8 km
 Cabo Trafalgar (Los Caños de Meca), Spain
 +01:00 :Europe/Madrid
 1.4000 meters
@@ -24637,6 +24729,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.7963
 # !latitude: 36.0776
+# region: Cádiz
+# admin1_quelle: Ufer 0.9 km
 Punta Camarinal, Spain
 +01:00 :Europe/Madrid
 1.2000 meters
@@ -24826,6 +24920,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.4330
 # !latitude: 36.0670
+# region: Cádiz
+# admin1_quelle: Ufer 0.3 km
 Punta Carnero, Spain
 +01:00 :Europe/Madrid
 0.6000 meters
@@ -25015,6 +25111,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.3399
 # !latitude: 36.1297
+# region: Gibraltar
+# admin1_quelle: Polygon
 Sandy Bay, Gibraltar
 +01:00 :Europe/Gibraltar
 0.4500 meters
@@ -25393,6 +25491,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.6838
 # !latitude: 35.8385
+# region: Tanger - Tétouan
+# admin1_quelle: Ufer 1.0 km
 Hejar Lesfar, Morocco
 +01:00 :Africa/Casablanca
 1.0000 meters
@@ -25582,6 +25682,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.3094
 # !latitude: 36.8071
+# region: Tunis
+# admin1_quelle: Ufer 1.9 km
 La Goulette (Halq-al-Wadi), Tunisia
 +01:00 :Africa/Tunis
 0.3000 meters
@@ -25771,6 +25873,8 @@ x 0 0
 # !units: meters
 # !longitude: 11.2539
 # !latitude: 34.7137
+# region: Sfax
+# admin1_quelle: Polygon
 El Abassia (Kerkennah), Tunisia
 +01:00 :Africa/Tunis
 0.6300 meters
@@ -25960,6 +26064,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.7407
 # !latitude: 33.7161
+# region: Médenine
+# admin1_quelle: Polygon
 Houmt Ajim (Djerba), Tunisia
 +01:00 :Africa/Tunis
 0.6400 meters
@@ -26149,6 +26255,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.5002
 # !latitude: 44.3166
+# province: Savona
+# admin1_quelle: Ufer 3.0 km
 Savona, Italy
 +01:00 :Europe/Rome
 0.1500 meters
@@ -26338,6 +26446,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.8576
 # !latitude: 44.0966
+# province: La Spezia
+# admin1_quelle: Ufer 1.7 km
 La Spezia, Italy
 +01:00 :Europe/Rome
 0.2000 meters
@@ -26527,6 +26637,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.5465
 # !latitude: 42.9297
+# province: Livorno
+# admin1_quelle: Ufer 0.6 km
 Piombino, Italy
 +01:00 :Europe/Rome
 0.1900 meters
@@ -26716,6 +26828,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.5097
 # !latitude: 40.9236
+# region: Sardinia
+# admin1_quelle: Name
 Olbia, Sardinia, Italy
 +01:00 :Europe/Rome
 0.1600 meters
@@ -26905,6 +27019,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.9396
 # !latitude: 40.7443
+# province: Napoli
+# admin1_quelle: Polygon
 Ischia, Italy
 +01:00 :Europe/Rome
 0.1600 meters
@@ -27094,6 +27210,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.9037
 # !latitude: 38.6815
+# province: Vibo Valentia
+# admin1_quelle: Ufer 0.3 km
 Tropea, Italy
 +01:00 :Europe/Rome
 0.2000 meters
@@ -27283,6 +27401,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.8864
 # !latitude: 38.4360
+# province: Reggio Calabria
+# admin1_quelle: Polygon
 Gioia Tauro, Italy
 +01:00 :Europe/Rome
 0.1700 meters
@@ -27472,6 +27592,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.6330
 # !latitude: 38.2170
+# province: Reggio Calabria
+# admin1_quelle: Ufer 0.4 km
 Villa San Giovanni, Italy
 +01:00 :Europe/Rome
 0.1200 meters
@@ -27661,6 +27783,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.2801
 # !latitude: 37.8410
+# region: Sicily
+# admin1_quelle: Name
 Taormina, Sicily, Italy
 +01:00 :Europe/Rome
 0.1200 meters
@@ -27850,6 +27974,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.6500
 # !latitude: 38.2670
+# region: Sicily
+# admin1_quelle: Name
 Capo Peloro (Torre Faro), Sicily, Italy
 +01:00 :Europe/Rome
 0.2000 meters
@@ -28039,6 +28165,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.9557
 # !latitude: 38.4714
+# province: Messina
+# admin1_quelle: Polygon
 Lipari, Italy
 +01:00 :Europe/Rome
 0.2000 meters
@@ -28228,6 +28356,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.2500
 # !latitude: 38.2170
+# region: Sicily
+# admin1_quelle: Name
 Milazzo, Sicily, Italy
 +01:00 :Europe/Rome
 0.2000 meters
@@ -28417,6 +28547,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.3713
 # !latitude: 38.1214
+# region: Sicily
+# admin1_quelle: Name
 Palermo, Sicily, Italy
 +01:00 :Europe/Rome
 0.2100 meters
@@ -28606,6 +28738,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.4368
 # !latitude: 37.7874
+# region: Sicily
+# admin1_quelle: Name
 Marsala, Sicily, Italy
 +01:00 :Europe/Rome
 0.1500 meters
@@ -28795,6 +28929,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.5822
 # !latitude: 37.6510
+# region: Sicily
+# admin1_quelle: Name
 Mazara del Vallo, Sicily, Italy
 +01:00 :Europe/Rome
 0.1500 meters
@@ -28984,6 +29120,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.5170
 # !latitude: 35.8830
+# region: Cospicua
+# admin1_quelle: Polygon
 Valletta, Malta
 +01:00 :Europe/Malta
 0.6300 meters
@@ -29173,6 +29311,8 @@ x 0 0
 # !units: meters
 # !longitude: 17.9629
 # !latitude: 40.6472
+# province: Brindisi
+# admin1_quelle: Ufer 0.3 km
 Brindisi, Italy
 +01:00 :Europe/Rome
 0.1500 meters
@@ -29362,6 +29502,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.9057
 # !latitude: 43.9230
+# province: Pesaro e Urbino
+# admin1_quelle: Ufer 2.0 km
 Pesaro, Italy
 +01:00 :Europe/Rome
 0.3700 meters
@@ -29551,6 +29693,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.2670
 # !latitude: 45.2170
+# province: Venezia
+# admin1_quelle: Ufer 0.9 km
 Chioggia, Italy
 +01:00 :Europe/Rome
 0.5200 meters
@@ -29740,6 +29884,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.3273
 # !latitude: 45.3376
+# province: Venezia
+# admin1_quelle: Ufer 1.2 km
 Porto di Malamocco, Italy
 +01:00 :Europe/Rome
 0.5200 meters
@@ -29929,6 +30075,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.8465
 # !latitude: 44.8761
+# region: Istarska
+# admin1_quelle: Polygon
 Pula, Croatia
 +01:00 :Europe/Zagreb
 0.3400 meters
@@ -30118,6 +30266,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.6347
 # !latitude: 45.0810
+# region: Istarska
+# admin1_quelle: Polygon
 Rovinj, Croatia
 +01:00 :Europe/Zagreb
 0.4800 meters
@@ -30307,6 +30457,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.9000
 # !latitude: 44.9916
+# region: Licko-Senjska
+# admin1_quelle: Ufer 1.6 km
 Senj, Croatia
 +01:00 :Europe/Zagreb
 0.3500 meters
@@ -30496,6 +30648,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.8506
 # !latitude: 44.1429
+# region: Zadarska
+# admin1_quelle: Polygon
 Zaliv Pantera (Dugi Otok), Croatia
 +01:00 :Europe/Zagreb
 0.3000 meters
@@ -30685,6 +30839,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.2655
 # !latitude: 44.0866
+# region: Zadarska
+# admin1_quelle: Ufer 1.0 km
 Gazenica (Zadar), Croatia
 +01:00 :Europe/Zagreb
 0.2400 meters
@@ -30874,6 +31030,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.8939
 # !latitude: 43.7307
+# region: Sibensko-Kninska
+# admin1_quelle: Polygon
 Sibenik, Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
@@ -31063,6 +31221,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.9636
 # !latitude: 43.5322
+# region: Sibensko-Kninska
+# admin1_quelle: Ufer 0.7 km
 Rogoznica, Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
@@ -31252,6 +31412,8 @@ x 0 0
 # !units: meters
 # !longitude: 16.1851
 # !latitude: 43.0615
+# region: Splitsko-Dalmatinska
+# admin1_quelle: Polygon
 Vis, Croatia
 +01:00 :Europe/Zagreb
 0.1700 meters
@@ -31441,6 +31603,8 @@ x 0 0
 # !units: meters
 # !longitude: 16.0861
 # !latitude: 43.0444
+# region: Splitsko-Dalmatinska
+# admin1_quelle: Polygon
 Komiza (Vis), Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
@@ -31630,6 +31794,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.7585
 # !latitude: 43.0211
+# region: Splitsko-Dalmatinska
+# admin1_quelle: Ufer 24.1 km
 Otok Svetac, Croatia
 +01:00 :Europe/Zagreb
 0.5200 meters
@@ -31819,6 +31985,8 @@ x 0 0
 # !units: meters
 # !longitude: 17.4332
 # !latitude: 43.0506
+# region: Dubrovacko-Neretvanska
+# admin1_quelle: Polygon
 Ploce, Croatia
 +01:00 :Europe/Zagreb
 0.2200 meters
@@ -32008,6 +32176,8 @@ x 0 0
 # !units: meters
 # !longitude: 18.0845
 # !latitude: 42.6605
+# region: Dubrovacko-Neretvanska
+# admin1_quelle: Polygon
 Dubrovnik (Luka Gruz), Croatia
 +01:00 :Europe/Zagreb
 0.1800 meters
@@ -32197,6 +32367,8 @@ x 0 0
 # !units: meters
 # !longitude: 18.5623
 # !latitude: 42.4530
+# region: Herceg Novi
+# admin1_quelle: Polygon
 Meljine (Boka Kotorska), Montenegro
 +01:00 :Europe/Podgorica
 0.2000 meters
@@ -32386,6 +32558,8 @@ x 0 0
 # !units: meters
 # !longitude: 19.0886
 # !latitude: 42.0957
+# region: Bar
+# admin1_quelle: Polygon
 Bar, Montenegro
 +01:00 :Europe/Podgorica
 0.1800 meters
@@ -32575,6 +32749,8 @@ x 0 0
 # !units: meters
 # !longitude: 19.5860
 # !latitude: 41.8110
+# region: Lezhë
+# admin1_quelle: Ufer 0.8 km
 Shëngjin, Albania
 +01:00 :Europe/Tirane
 0.1900 meters
@@ -32764,6 +32940,8 @@ x 0 0
 # !units: meters
 # !longitude: 19.4539
 # !latitude: 41.3144
+# region: Durrës
+# admin1_quelle: Polygon
 Durrës, Albania
 +01:00 :Europe/Tirane
 0.1500 meters
@@ -32953,6 +33131,8 @@ x 0 0
 # !units: meters
 # !longitude: 26.8526
 # !latitude: 37.1582
+# region: Notio Aigaio
+# admin1_quelle: Polygon
 Agia Marina (Leros), Greece
 +02:00 :Europe/Athens
 0.1000 meters
@@ -33142,6 +33322,8 @@ x 0 0
 # !units: meters
 # !longitude: 26.3554
 # !latitude: 36.5472
+# region: Notio Aigaio
+# admin1_quelle: Ufer 0.9 km
 Astypalaia, Greece
 +02:00 :Europe/Athens
 0.1000 meters
@@ -33331,6 +33513,8 @@ x 0 0
 # !units: meters
 # !longitude: 27.2906
 # !latitude: 36.8982
+# region: Notio Aigaio
+# admin1_quelle: Ufer 0.7 km
 Kos, Greece
 +02:00 :Europe/Athens
 0.1000 meters
@@ -33520,6 +33704,8 @@ x 0 0
 # !units: meters
 # !longitude: 27.8392
 # !latitude: 36.6181
+# region: Notio Aigaio
+# admin1_quelle: Ufer 1.1 km
 Symi, Greece
 +02:00 :Europe/Athens
 0.1000 meters
@@ -33709,6 +33895,8 @@ x 0 0
 # !units: meters
 # !longitude: 28.2329
 # !latitude: 36.4471
+# region: Notio Aigaio
+# admin1_quelle: Polygon
 Ródos, Greece
 +02:00 :Europe/Athens
 0.2000 meters
@@ -33898,6 +34086,8 @@ x 0 0
 # !units: meters
 # !longitude: 28.0891
 # !latitude: 36.0951
+# region: Notio Aigaio
+# admin1_quelle: Polygon
 Lindos (Rodos), Greece
 +02:00 :Europe/Athens
 0.2000 meters
@@ -34276,6 +34466,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.9095
 # !latitude: 35.4286
+# region: Northern Cyprus
+# admin1_quelle: Polygon
 Kaplica (Davlos), Cyprus
 +02:00 :Asia/Nicosia
 0.4900 meters
@@ -34465,6 +34657,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.3346
 # !latitude: 35.3411
+# region: Northern Cyprus
+# admin1_quelle: Ufer 4.9 km
 Girne (Kyrenia), Cyprus
 +02:00 :Asia/Nicosia
 0.4800 meters
@@ -34654,6 +34848,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.0331
 # !latitude: 34.5721
+# region: Limassol
+# admin1_quelle: Ufer 7.1 km
 Akrotiri, Cyprus
 +02:00 :Asia/Nicosia
 0.4000 meters
@@ -34843,6 +35039,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.0424
 # !latitude: 34.6686
+# region: Limassol
+# admin1_quelle: Polygon
 Limassol, Cyprus
 +02:00 :Asia/Nicosia
 0.3800 meters
@@ -35032,6 +35230,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.9484
 # !latitude: 35.1234
+# region: Northern Cyprus
+# admin1_quelle: Polygon
 Famagusta, Cyprus
 +02:00 :Asia/Nicosia
 0.4000 meters
@@ -35221,6 +35421,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.6265
 # !latitude: 33.9863
+# province: Mount Lebanon
+# admin1_quelle: Polygon
 Jounieh, Lebanon
 +02:00 :Asia/Beirut
 0.2900 meters
@@ -35410,6 +35612,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.1981
 # !latitude: 33.2745
+# province: South Lebanon
+# admin1_quelle: Polygon
 Sour (Tyre), Lebanon
 +02:00 :Asia/Beirut
 0.3000 meters
@@ -35599,6 +35803,8 @@ x 0 0
 # !units: meters
 # !longitude: 31.7670
 # !latitude: 31.4670
+# region: Dumyat
+# admin1_quelle: Polygon
 Mina Dumyat (Damietta), Egypt
 +02:00 :Africa/Cairo
 0.4000 meters
@@ -35788,6 +35994,8 @@ x 0 0
 # !units: meters
 # !longitude: 29.9219
 # !latitude: 31.2165
+# region: Al Iskandariyah
+# admin1_quelle: Polygon
 Alexandria (Al Iskandariyah), Egypt
 +02:00 :Africa/Cairo
 0.3000 meters
@@ -35977,6 +36185,8 @@ x 0 0
 # !units: meters
 # !longitude: 25.0933
 # !latitude: 31.7542
+# region: Al Butnan
+# admin1_quelle: Polygon
 Mina Bardiyah (Bardia), Libya
 +02:00 :Africa/Tripoli
 0.1000 meters
@@ -36166,6 +36376,8 @@ x 0 0
 # !units: meters
 # !longitude: 19.5830
 # !latitude: 30.4170
+# region: Ajdabiya
+# admin1_quelle: Ufer 1.4 km
 Marsa al Burayqah (Brega), Libya
 +02:00 :Africa/Tripoli
 0.3400 meters
@@ -36355,6 +36567,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.2170
 # !latitude: 32.3670
+# region: Misratah
+# admin1_quelle: Ufer 2.7 km
 Misrata, Libya
 +02:00 :Africa/Tripoli
 0.3700 meters
@@ -36544,6 +36758,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.1830
 # !latitude: 32.9000
+# region: Tajura' wa an Nawahi al Arba
+# admin1_quelle: Polygon
 Tripoli (Tarabulus), Libya
 +02:00 :Africa/Tripoli
 0.3000 meters

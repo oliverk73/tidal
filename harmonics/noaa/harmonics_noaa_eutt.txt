@@ -14998,6 +14998,8 @@ MNUS2
 # !units: meters
 # !longitude: -12.3133
 # !latitude: -37.0637
+# region: Edinburgh of the Seven Seas
+# admin1_quelle: Name
 Calshot Harbour, Edinburgh of the Seven Seas, Tristan da Cunha Island
 +00:00 :Atlantic/St_Helena
 0.4877 meters
@@ -15189,6 +15191,8 @@ x 0 0
 # !latitude: -20.5000
 # note: 20260903 Provinz "Espírito Santo" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# state: Espírito Santo
+# admin1_quelle: Name
 Trinidade, Ilha da, Espírito Santo, Brazil
 +00:00 :America/Sao_Paulo
 0.6096 meters
@@ -15756,6 +15760,8 @@ x 0 0
 # !units: meters
 # !longitude: -24.7321
 # !latitude: 14.8704
+# region: Brava
+# admin1_quelle: Polygon
 Fajã de Água (Brava), Cape Verde
 +00:00 :Atlantic/Cape_Verde
 0.5486 meters
@@ -15945,6 +15951,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.2411
 # !latitude: 28.4772
+# region: Islas Canarias
+# admin1_quelle: Name
 Santa Cruz de Tenerife, Islas Canarias, Spain
 +00:00 :Atlantic/Canary
 1.4326 meters
@@ -16134,6 +16142,8 @@ x 0 0
 # !units: meters
 # !longitude: -15.4119
 # !latitude: 28.1407
+# region: Islas Canarias
+# admin1_quelle: Name
 Puerto de la Luz (Gran Canaria), Islas Canarias, Spain
 +00:00 :Atlantic/Canary
 1.4326 meters
@@ -16323,6 +16333,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.5300
 # !latitude: 28.9719
+# region: Islas Canarias
+# admin1_quelle: Name
 Arrecife (Lanzarote), Islas Canarias, Spain
 +00:00 :Atlantic/Canary
 1.5240 meters
@@ -16512,6 +16524,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.9107
 # !latitude: 32.6447
+# region: Madeira
+# admin1_quelle: Name
 Funchal, Madeira, Portugal
 +00:00 :Atlantic/Madeira
 1.4021 meters
@@ -16701,6 +16715,8 @@ x 0 0
 # !units: meters
 # !longitude: -25.1493
 # !latitude: 36.9438
+# region: Açores
+# admin1_quelle: Name
 Vila do Porto (Santa Maria), Açores, Portugal
 +00:00 :Atlantic/Azores
 1.0058 meters
@@ -16890,6 +16906,8 @@ x 0 0
 # !units: meters
 # !longitude: -28.6214
 # !latitude: 38.5339
+# region: Açores
+# admin1_quelle: Name
 Horta (Faial), Açores, Portugal
 +00:00 :Atlantic/Azores
 1.0058 meters
@@ -17079,6 +17097,8 @@ x 0 0
 # !units: meters
 # !longitude: -27.2155
 # !latitude: 38.6515
+# region: Açores
+# admin1_quelle: Name
 Angra do Heroísmo (Terceira), Açores, Portugal
 +00:00 :Atlantic/Azores
 1.0058 meters
@@ -17268,6 +17288,8 @@ x 0 0
 # !units: meters
 # !longitude: -27.0573
 # !latitude: 38.7298
+# region: Açores
+# admin1_quelle: Name
 Praia da Vitória (Terceira), Açores, Portugal
 +00:00 :Atlantic/Azores
 1.0058 meters
@@ -17457,6 +17479,8 @@ x 0 0
 # !units: meters
 # !longitude: -27.9972
 # !latitude: 39.0838
+# region: Açores
+# admin1_quelle: Name
 Santa Cruz da Graciosa, Açores, Portugal
 +00:00 :Atlantic/Azores
 1.0058 meters
@@ -17646,6 +17670,8 @@ x 0 0
 # !units: meters
 # !longitude: -31.1685
 # !latitude: 39.3783
+# region: Açores
+# admin1_quelle: Name
 Lajes das Flores, Açores, Portugal
 +00:00 :Atlantic/Azores
 1.0058 meters
@@ -17835,6 +17861,8 @@ x 0 0
 # !units: meters
 # !longitude: 23.0450
 # !latitude: -34.0500
+# province: Western Cape
+# admin1_quelle: Ufer 0.7 km
 Knysna, South Africa
 +00:00 :Africa/Johannesburg
 1.1582 meters
@@ -18024,6 +18052,8 @@ x 0 0
 # !units: meters
 # !longitude: 22.1453
 # !latitude: -34.1767
+# province: Western Cape
+# admin1_quelle: Ufer 0.3 km
 Mossel Bay, South Africa
 +00:00 :Africa/Johannesburg
 1.1278 meters
@@ -18213,6 +18243,8 @@ x 0 0
 # !units: meters
 # !longitude: 19.2283
 # !latitude: -34.4335
+# province: Western Cape
+# admin1_quelle: Ufer 2.5 km
 Hermanus, South Africa
 +00:00 :Africa/Johannesburg
 1.0973 meters
@@ -18402,6 +18434,8 @@ x 0 0
 # !units: meters
 # !longitude: 18.4366
 # !latitude: -34.1866
+# province: Western Cape
+# admin1_quelle: Polygon
 Simon's Town, South Africa
 +00:00 :Africa/Johannesburg
 1.0668 meters
@@ -18591,6 +18625,8 @@ x 0 0
 # !units: meters
 # !longitude: 17.9500
 # !latitude: -33.0167
+# province: Western Cape
+# admin1_quelle: Ufer 0.6 km
 Saldanha, South Africa
 +00:00 :Africa/Johannesburg
 1.0058 meters
@@ -18780,6 +18816,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.1500
 # !latitude: -26.6333
+# province: Karas
+# admin1_quelle: Ufer 1.3 km
 Luderitz Bay, Namibia
 +00:00 :Africa/Windhoek
 0.7315 meters
@@ -18969,6 +19007,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.5000
 # !latitude: -22.9500
+# province: Erongo
+# admin1_quelle: Polygon
 Walvisbaai, Namibia
 +00:00 :Africa/Windhoek
 0.9144 meters
@@ -19162,6 +19202,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Namibe
+# admin1_quelle: Polygon
 Baía dos Tigres, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -19355,6 +19397,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Namibe
+# admin1_quelle: Polygon
 Tômbua (Porto Alexandre), Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -19548,6 +19592,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Namibe
+# admin1_quelle: Polygon
 Moçâmedes (Namibe), Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -19741,6 +19787,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Namibe
+# admin1_quelle: Polygon
 Baía de Santa Marta, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -19934,6 +19982,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Benguela
+# admin1_quelle: Polygon
 Baía dos Elefantes, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -20127,6 +20177,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Benguela
+# admin1_quelle: Polygon
 Benguela, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -20320,6 +20372,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Benguela
+# admin1_quelle: Polygon
 Porto do Lobito, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -20513,6 +20567,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Cuanza Sul
+# admin1_quelle: Polygon
 Porto Amboim, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -20706,6 +20762,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Luanda
+# admin1_quelle: Ufer 1.8 km
 Luanda, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -20899,6 +20957,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Bengo
+# admin1_quelle: Ufer 3.5 km
 Ambriz, Angola
 +00:00 :Africa/Luanda
 1.0668 meters
@@ -21092,6 +21152,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Zaire
+# admin1_quelle: Polygon
 N'Zeto, Angola
 +00:00 :Africa/Luanda
 1.0668 meters
@@ -21285,6 +21347,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Zaire
+# admin1_quelle: Ufer 0.1 km
 Ponta do Padrão (Congo River entrance), Angola
 +00:00 :Africa/Luanda
 1.0668 meters
@@ -21478,6 +21542,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Cabinda
+# admin1_quelle: Polygon
 Cabinda, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -21671,6 +21737,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Nyanga
+# admin1_quelle: Polygon
 Mayumba, Gabon
 +00:00 :Africa/Libreville
 1.1278 meters
@@ -21864,6 +21932,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Ogooué-Maritime
+# admin1_quelle: Polygon
 Cap Lopez (Pointe Renard), Gabon
 +00:00 :Africa/Libreville
 1.2192 meters
@@ -22057,6 +22127,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Ogooué-Maritime
+# admin1_quelle: Polygon
 Kondjo entrance (Baie du Cap Lopez), Gabon
 +00:00 :Africa/Libreville
 1.2192 meters
@@ -22250,6 +22322,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Estuaire
+# admin1_quelle: Ufer 0.9 km
 Pointe Owendo (Estuaire du Gabon), Gabon
 +00:00 :Africa/Libreville
 1.4630 meters
@@ -22443,6 +22517,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Estuaire
+# admin1_quelle: Polygon
 Cap Estérias, Gabon
 +00:00 :Africa/Libreville
 1.3716 meters
@@ -22636,6 +22712,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Annobón
+# admin1_quelle: Ufer 1.4 km
 Annobón, Equatorial Guinea
 +00:00 :Africa/Malabo
 0.7620 meters
@@ -22829,6 +22907,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: São Tomé
+# admin1_quelle: Name
 Baía de Ana Chaves, São Tomé, São Tomé and Príncipe
 +00:00 :Africa/Sao_Tome
 1.1887 meters
@@ -23022,6 +23102,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Litoral
+# admin1_quelle: Ufer 2.2 km
 Cogo (Puerto Iradier), Equatorial Guinea
 +00:00 :Africa/Malabo
 1.5545 meters
@@ -23215,6 +23297,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Rio Muni
+# admin1_quelle: Name
 San Benito River, Rio Muni, Equatorial Guinea
 +00:00 :Africa/Malabo
 0.9754 meters
@@ -23408,6 +23492,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Bioko Norte
+# admin1_quelle: Ufer 1.3 km
 Malabo (Santa Isabel), Equatorial Guinea
 +00:00 :Africa/Malabo
 1.0668 meters
@@ -23601,6 +23687,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Sud
+# admin1_quelle: Polygon
 Kribi, Cameroon
 +00:00 :Africa/Douala
 1.0058 meters
@@ -23794,6 +23882,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Littoral
+# admin1_quelle: Ufer 0.8 km
 Cap Cameroon, Cameroon
 +00:00 :Africa/Douala
 1.3716 meters
@@ -23987,6 +24077,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Sud-Ouest
+# admin1_quelle: Ufer 2.1 km
 Bimbia River entrance, Cameroon
 +00:00 :Africa/Douala
 1.1278 meters
@@ -24180,6 +24272,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: Sud-Ouest
+# admin1_quelle: Ufer 5.2 km
 Rio del Rey Entrance, Cameroon
 +00:00 :Africa/Douala
 1.4021 meters
@@ -24566,6 +24660,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Akwa Ibom
+# admin1_quelle: Ufer 1.3 km
 Tom Shot Point, Calabar River, Nigeria
 +00:00 :Africa/Lagos
 1.0973 meters
@@ -24759,6 +24855,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Cross River
+# admin1_quelle: Ufer 2.8 km
 Inikoi Island (Akwayafe River,) Cameroon
 +00:00 :Africa/Douala
 1.5545 meters
@@ -24952,6 +25050,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Cross River
+# admin1_quelle: Polygon
 Calabar (Calabar River), Nigeria
 +00:00 :Africa/Lagos
 1.8288 meters
@@ -25145,6 +25245,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Rivers
+# admin1_quelle: Ufer 0.4 km
 Opobo River Entrance (Sandy Point), Nigeria
 +00:00 :Africa/Lagos
 1.0973 meters
@@ -25338,6 +25440,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Rivers
+# admin1_quelle: Ufer 8.7 km
 Bonny River Bar (Niger River Delta), Nigeria
 +00:00 :Africa/Lagos
 1.4326 meters
@@ -25531,6 +25635,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Rivers
+# admin1_quelle: Ufer 1.3 km
 Bonny (Eyamba Town), Nigeria
 +00:00 :Africa/Lagos
 1.4021 meters
@@ -25724,6 +25830,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Rivers
+# admin1_quelle: Polygon
 Port Harcourt (Bonny River), Nigeria
 +00:00 :Africa/Lagos
 1.3106 meters
@@ -25917,6 +26025,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Rivers
+# admin1_quelle: Ufer 3.7 km
 New Calabar River Bar, Nigeria
 +00:00 :Africa/Lagos
 0.7925 meters
@@ -26110,6 +26220,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Rivers
+# admin1_quelle: Polygon
 Bakana (New Calabar River), Nigeria
 +00:00 :Africa/Lagos
 1.1278 meters
@@ -26303,6 +26415,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Bayelsa
+# admin1_quelle: Ufer 0.6 km
 Brass (Brass River), Nigeria
 +00:00 :Africa/Lagos
 0.9754 meters
@@ -26496,6 +26610,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Bayelsa
+# admin1_quelle: Ufer 0.7 km
 Akassa (Nun River), Nigeria
 +00:00 :Africa/Lagos
 0.7620 meters
@@ -26689,6 +26805,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Delta
+# admin1_quelle: Ufer 7.8 km
 Forcados River Bar (Niger Delta), Nigeria
 +00:00 :Africa/Lagos
 0.8839 meters
@@ -26882,6 +27000,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Delta
+# admin1_quelle: Ufer 0.2 km
 Forcados (Forcados River), Nigeria
 +00:00 :Africa/Lagos
 0.7925 meters
@@ -27075,6 +27195,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Delta
+# admin1_quelle: Ufer 1.6 km
 Ogidigbe (Escravos River mouth), Nigeria
 +00:00 :Africa/Lagos
 0.9754 meters
@@ -27268,6 +27390,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Delta
+# admin1_quelle: Ufer 5.8 km
 Benin River Bar, Nigeria
 +00:00 :Africa/Lagos
 0.9144 meters
@@ -27461,6 +27585,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# state: Lagos
+# admin1_quelle: Ufer 1.8 km
 Lagos Bar, Nigeria
 +00:00 :Africa/Lagos
 0.4572 meters
@@ -27650,6 +27776,8 @@ x 0 0
 # !units: meters
 # !longitude: 0.6398
 # !latitude: 5.7834
+# region: Greater Accra
+# admin1_quelle: Polygon
 Ada Foah (Volta River), Ghana
 +00:00 :Africa/Accra
 0.7620 meters
@@ -27839,6 +27967,8 @@ x 0 0
 # !units: meters
 # !longitude: 0.0170
 # !latitude: 5.6393
+# region: Greater Accra
+# admin1_quelle: Polygon
 Tema, Ghana
 +00:00 :Africa/Accra
 0.8534 meters
@@ -28028,6 +28158,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.2082
 # !latitude: 5.5347
+# region: Greater Accra
+# admin1_quelle: Ufer 11.4 km
 Accra, Ghana
 +00:00 :Africa/Accra
 0.8839 meters
@@ -28217,6 +28349,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.2371
 # !latitude: 5.1047
+# region: Central
+# admin1_quelle: Polygon
 Cape Coast, Ghana
 +00:00 :Africa/Accra
 0.8839 meters
@@ -28406,6 +28540,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.9461
 # !latitude: 4.7937
+# region: Western
+# admin1_quelle: Polygon
 Dixcove, Ghana
 +00:00 :Africa/Accra
 0.7620 meters
@@ -28595,6 +28731,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.2455
 # !latitude: 4.8645
+# region: Western
+# admin1_quelle: Ufer 0.3 km
 Axim, Ghana
 +00:00 :Africa/Accra
 0.7620 meters
@@ -29540,6 +29678,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.7292
 # !latitude: 4.3662
+# region: Maryland
+# admin1_quelle: Ufer 0.7 km
 Harper (Cape Palmas), Liberia
 +00:00 :Africa/Monrovia
 0.9144 meters
@@ -29729,6 +29869,8 @@ x 0 0
 # !units: meters
 # !longitude: -10.3803
 # !latitude: 6.1337
+# region: Margibi
+# admin1_quelle: Ufer 0.5 km
 Junk River entrance, Liberia
 +00:00 :Africa/Monrovia
 0.6096 meters
@@ -29918,6 +30060,8 @@ x 0 0
 # !units: meters
 # !longitude: -10.3795
 # !latitude: 6.1524
+# region: Margibi
+# admin1_quelle: Ufer 1.1 km
 Marshall, Junk River, Liberia
 +00:00 :Africa/Monrovia
 0.5486 meters
@@ -30107,6 +30251,8 @@ x 0 0
 # !units: meters
 # !longitude: -10.3366
 # !latitude: 6.2679
+# region: Margibi
+# admin1_quelle: Polygon
 Harbel, Farmington River, Liberia
 +00:00 :Africa/Monrovia
 0.5486 meters
@@ -30296,6 +30442,8 @@ x 0 0
 # !units: meters
 # !longitude: -11.6500
 # !latitude: 7.0000
+# province: Southern
+# admin1_quelle: Ufer 2.3 km
 Kerefe River, Liberia
 +00:00 :Africa/Freetown
 0.7620 meters
@@ -30485,6 +30633,8 @@ x 0 0
 # !units: meters
 # !longitude: -12.9667
 # !latitude: 7.9167
+# province: Southern
+# admin1_quelle: Ufer 1.0 km
 Shenge Point, Sherbro River, Sierra Leone
 +00:00 :Africa/Freetown
 1.5850 meters
@@ -30674,6 +30824,8 @@ x 0 0
 # !units: meters
 # !longitude: -12.7000
 # !latitude: 7.7000
+# province: Southern
+# admin1_quelle: Ufer 0.9 km
 Buoy Point, Sherbro River, Sierra Leone
 +00:00 :Africa/Freetown
 1.6154 meters
@@ -30863,6 +31015,8 @@ x 0 0
 # !units: meters
 # !longitude: -12.4833
 # !latitude: 7.5333
+# province: Southern
+# admin1_quelle: Ufer 2.3 km
 York Island, Sherbro River, Sierra Leone
 +00:00 :Africa/Freetown
 1.1278 meters
@@ -31052,6 +31206,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.1833
 # !latitude: 8.1333
+# province: Western
+# admin1_quelle: Ufer 4.7 km
 Banana Islands, Sierra Leone
 +00:00 :Africa/Freetown
 1.7069 meters
@@ -31241,6 +31397,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.2333
 # !latitude: 8.5000
+# province: Western
+# admin1_quelle: Ufer 0.8 km
 Freetown, Sierra Leone
 +00:00 :Africa/Freetown
 1.7069 meters
@@ -31430,6 +31588,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.1167
 # !latitude: 8.4167
+# province: Western
+# admin1_quelle: Polygon
 Maroon River, Sierra Leone
 +00:00 :Africa/Freetown
 1.8593 meters
@@ -31619,6 +31779,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.0667
 # !latitude: 8.5833
+# province: Northern
+# admin1_quelle: Ufer 0.5 km
 Pepel, Sierra Leone
 +00:00 :Africa/Freetown
 1.6764 meters
@@ -31808,6 +31970,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.2714
 # !latitude: 9.1635
+# region: Forécariah
+# admin1_quelle: Ufer 1.0 km
 Bôlintan (Île Tana), Guinea
 +00:00 :Africa/Conakry
 2.1031 meters
@@ -31997,6 +32161,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.5254
 # !latitude: 9.7937
+# region: Dubréka
+# admin1_quelle: Polygon
 Dubréka, Guinea
 +00:00 :Africa/Conakry
 2.4079 meters
@@ -32186,6 +32352,8 @@ x 0 0
 # !units: meters
 # !longitude: -13.9500
 # !latitude: 9.9667
+# region: Boffa
+# admin1_quelle: Ufer 0.5 km
 Taboria, Guinea
 +00:00 :Africa/Conakry
 2.1031 meters
@@ -32379,6 +32547,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Boke
+# admin1_quelle: Ufer 12.7 km
 Cacine, Guinea-Bissau
 +00:00 :Africa/Bissau
 3.3223 meters
@@ -33340,6 +33510,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.6983
 # !latitude: 12.5611
+# region: Ziguinchor
+# admin1_quelle: Ufer 1.6 km
 Karabane (Casamance), Senegal
 +00:00 :Africa/Dakar
 0.9754 meters
@@ -33529,6 +33701,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.6674
 # !latitude: 13.4893
+# region: Banjul
+# admin1_quelle: Ufer 1.1 km
 Cape St. Mary (Bakau), Gambia
 +00:00 :Africa/Banjul
 0.9754 meters
@@ -33718,6 +33892,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.5718
 # !latitude: 13.4442
+# region: Banjul
+# admin1_quelle: Ufer 1.5 km
 Banjul, Gambia
 +00:00 :Africa/Banjul
 1.0058 meters
@@ -33907,6 +34083,8 @@ x 0 0
 # !units: meters
 # !longitude: -15.9902
 # !latitude: 13.4477
+# region: Lower River
+# admin1_quelle: Ufer 3.9 km
 Salikenne Point, Gambia
 +00:00 :Africa/Banjul
 1.0973 meters
@@ -34096,6 +34274,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.7565
 # !latitude: 13.8805
+# region: Fatick
+# admin1_quelle: Ufer 1.9 km
 Pointe de Sangomar (Saloum River), Senegal
 +00:00 :Africa/Dakar
 1.0058 meters
@@ -34285,6 +34465,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.5100
 # !latitude: 16.0262
+# region: Saint-Louis
+# admin1_quelle: Ufer 1.0 km
 Saint-Louis, Senegal
 +00:00 :Africa/Dakar
 1.0058 meters
@@ -34474,6 +34656,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.1097
 # !latitude: 18.5926
+# region: Trarza
+# admin1_quelle: Polygon
 Port Tanit, Mauritania
 +00:00 :Africa/Nouakchott
 1.0058 meters
@@ -34663,6 +34847,8 @@ x 0 0
 # !units: meters
 # !longitude: -17.0425
 # !latitude: 20.9047
+# region: Dakhlet Nouadhibou
+# admin1_quelle: Ufer 0.7 km
 Nouadhibou, Mauritania
 +00:00 :Africa/Nouakchott
 1.3106 meters
@@ -34852,6 +35038,8 @@ x 0 0
 # !units: meters
 # !longitude: -17.0946
 # !latitude: 20.8261
+# region: Dakhlet Nouadhibou
+# admin1_quelle: Ufer 5.6 km
 La Güera, Mauritania
 +00:00 :Africa/El_Aaiun
 0.8534 meters
@@ -35419,6 +35607,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.4998
 # !latitude: 33.2556
+# region: Doukkala - Abda
+# admin1_quelle: Polygon
 El Jadida, Morocco
 +00:00 :Africa/Casablanca
 2.1031 meters
@@ -35608,6 +35798,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.5833
 # !latitude: 34.2660
+# region: Gharb - Chrarda - Béni Hssen
+# admin1_quelle: Polygon
 Kénitra, Morocco
 +00:00 :Africa/Casablanca
 1.5850 meters
@@ -35797,6 +35989,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.1521
 # !latitude: 35.2004
+# region: Tanger - Tétouan
+# admin1_quelle: Polygon
 Larache, Morocco
 +00:00 :Africa/Casablanca
 1.7678 meters
@@ -35986,6 +36180,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.0356
 # !latitude: 35.4707
+# region: Tanger - Tétouan
+# admin1_quelle: Polygon
 Asilah, Morocco
 +00:00 :Africa/Casablanca
 2.9261 meters
@@ -36179,6 +36375,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+0.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Ceuta
+# admin1_quelle: Polygon
 Ceuta, Spain
 +01:00 :Africa/Ceuta
 0.5791 meters
@@ -36368,6 +36566,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.1166
 # !latitude: 33.8952
+# region: Gabès
+# admin1_quelle: Ufer 7.0 km
 Gabès, Tunisia
 +01:00 :Africa/Tunis
 1.3106 meters
@@ -36557,6 +36757,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.8570
 # !latitude: 33.8880
+# region: Médenine
+# admin1_quelle: Ufer 0.7 km
 Hawmat As Suq, Tunisia
 +01:00 :Africa/Tunis
 1.0668 meters
@@ -36746,6 +36948,8 @@ x 0 0
 # !units: meters
 # !longitude: 11.1201
 # !latitude: 33.4909
+# region: Médenine
+# admin1_quelle: Ufer 0.3 km
 Zarzis (Jarjis), Tunisia
 +01:00 :Africa/Tunis
 0.6401 meters
@@ -36935,6 +37139,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.1833
 # !latitude: 32.9000
+# region: Tajura' wa an Nawahi al Arba
+# admin1_quelle: Polygon
 Tripoli (Tarabulus), Libya
 +01:00 :Africa/Tripoli
 0.3048 meters
@@ -37128,6 +37334,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+2.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Bur Sa`id
+# admin1_quelle: Polygon
 Port Said, Egypt
 +01:00 :Africa/Cairo
 0.4877 meters
@@ -37321,6 +37529,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+2.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Northern Cyprus
+# admin1_quelle: Ufer 4.9 km
 Girne (Kyrenia), Cyprus
 +01:00 :Asia/Famagusta
 0.4267 meters
@@ -37510,6 +37720,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.9484
 # !latitude: 35.1234
+# region: Northern Cyprus
+# admin1_quelle: Polygon
 Famagusta, Cyprus
 +01:00 :Asia/Famagusta
 0.4267 meters
@@ -37699,6 +37911,8 @@ x 0 0
 # !units: meters
 # !longitude: 19.0886
 # !latitude: 42.0957
+# region: Bar
+# admin1_quelle: Polygon
 Bar, Montenegro
 +01:00 :Europe/Podgorica
 0.2438 meters
@@ -37888,6 +38102,8 @@ x 0 0
 # !units: meters
 # !longitude: 18.1126
 # !latitude: 42.6405
+# region: Dubrovacko-Neretvanska
+# admin1_quelle: Ufer 0.8 km
 Dubrovnik (Ragusa), Croatia
 +01:00 :Europe/Zagreb
 0.1524 meters
@@ -38077,6 +38293,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.759697
 # !latitude: 45.647060
+# province: Trieste
+# admin1_quelle: Polygon
 Trieste, Italy
 +01:00 :Europe/Rome
 0.5182 meters
@@ -38266,6 +38484,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.3833
 # !latitude: 45.6833
+# province: Gorizia
+# admin1_quelle: Polygon
 Grado, Italy
 +01:00 :Europe/Rome
 0.5182 meters
@@ -38455,6 +38675,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.3449
 # !latitude: 45.3708
+# province: Venezia
+# admin1_quelle: Ufer 1.3 km
 Malamocco, Italy
 +01:00 :Europe/Rome
 0.5182 meters
@@ -38644,6 +38866,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.3000
 # !latitude: 45.2333
+# province: Venezia
+# admin1_quelle: Ufer 0.6 km
 Chioggia, Italy
 +01:00 :Europe/Rome
 0.5182 meters
@@ -38833,6 +39057,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.3713
 # !latitude: 38.1214
+# region: Sicily
+# admin1_quelle: Name
 Palermo, Sicily, Italy
 +00:00 :Europe/Rome
 0.1524 meters
@@ -39022,6 +39248,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.9557
 # !latitude: 38.4714
+# province: Messina
+# admin1_quelle: Polygon
 Lipari, Italy
 +00:00 :Europe/Rome
 0.2134 meters
@@ -39211,6 +39439,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.2500
 # !latitude: 38.2167
+# region: Sicily
+# admin1_quelle: Name
 Milazzo, Sicily, Italy
 +00:00 :Europe/Rome
 0.2134 meters
@@ -39400,6 +39630,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.4171
 # !latitude: 36.7119
+# region: Málaga
+# admin1_quelle: Ufer 0.9 km
 Málaga, Spain
 +00:00 :Europe/Madrid
 0.3353 meters
@@ -39589,6 +39821,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.6034
 # !latitude: 36.0065
+# region: Cádiz
+# admin1_quelle: Ufer 0.8 km
 Tarifa, Spain
 +00:00 :Europe/Madrid
 0.6706 meters
@@ -39779,6 +40013,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.1367
 # !latitude: 36.2950
+# region: Cádiz
+# admin1_quelle: Polygon
 Conil de la Frontera, Spain
 +01:00 :Europe/Madrid
 1.5850 meters
@@ -39969,6 +40205,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.1823
 # !latitude: 36.4979
+# region: Cádiz
+# admin1_quelle: Polygon
 Arsenal de la Carraca, Spain
 +01:00 :Europe/Madrid
 1.9507 meters
@@ -40159,6 +40397,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.2867
 # !latitude: 36.5399
+# region: Cádiz
+# admin1_quelle: Ufer 0.4 km
 Cádiz, Spain
 +01:00 :Europe/Madrid
 1.8593 meters
@@ -40349,6 +40589,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.3281
 # !latitude: 36.6133
+# region: Cádiz
+# admin1_quelle: Ufer 3.1 km
 Rota, Spain
 +01:00 :Europe/Madrid
 1.8288 meters
@@ -40539,6 +40781,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.3500
 # !latitude: 36.7833
+# region: Río Guadalquivir
+# admin1_quelle: Name
 Sanlúcar, Río Guadalquivir, Spain
 +01:00 :Europe/Madrid
 1.7678 meters
@@ -40729,6 +40973,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.9603
 # !latitude: 37.2549
+# region: Huelva
+# admin1_quelle: Polygon
 Huelva (Río Odiel), Spain
 +01:00 :Europe/Madrid
 1.9202 meters
@@ -40919,6 +41165,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.4167
 # !latitude: 37.2167
+# region: Huelva
+# admin1_quelle: Polygon
 Ayamonte, Spain
 +01:00 :Europe/Lisbon
 1.7374 meters
@@ -41109,6 +41357,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.4167
 # !latitude: 37.1833
+# region: Faro
+# admin1_quelle: Polygon
 Vila Real de Santo António, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -41299,6 +41549,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.8667
 # !latitude: 36.9667
+# region: Faro
+# admin1_quelle: Ufer 1.1 km
 Faro bar, Portugal
 +01:00 :Europe/Lisbon
 2.0422 meters
@@ -41489,6 +41741,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.2667
 # !latitude: 37.0833
+# region: Faro
+# admin1_quelle: Polygon
 Ponta da Balieira, Portugal
 +01:00 :Europe/Lisbon
 2.1031 meters
@@ -41679,6 +41933,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.5167
 # !latitude: 37.1000
+# region: Faro
+# admin1_quelle: Ufer 2.7 km
 Ponta do Altar, Portugal
 +01:00 :Europe/Lisbon
 2.1031 meters
@@ -41869,6 +42125,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.6667
 # !latitude: 37.1000
+# region: Faro
+# admin1_quelle: Polygon
 Lagos, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -42059,6 +42317,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.9500
 # !latitude: 37.0000
+# region: Faro
+# admin1_quelle: Ufer 0.9 km
 Ponta de Sagres, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -42249,6 +42509,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8667
 # !latitude: 37.2833
+# region: Faro
+# admin1_quelle: Polygon
 Arrifana, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -42439,6 +42701,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.7822
 # !latitude: 37.7222
+# region: Beja
+# admin1_quelle: Ufer 0.2 km
 Vila Nova de Milfontes, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -42629,6 +42893,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8833
 # !latitude: 37.9500
+# region: Setúbal
+# admin1_quelle: Polygon
 Enseada de Sines, Portugal
 +01:00 :Europe/Lisbon
 1.9507 meters
@@ -42819,6 +43085,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8893
 # !latitude: 38.5203
+# region: Setúbal
+# admin1_quelle: Polygon
 Setúbal, Portugal
 +01:00 :Europe/Lisbon
 1.9812 meters
@@ -43009,6 +43277,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.1097
 # !latitude: 38.4400
+# region: Setúbal
+# admin1_quelle: Polygon
 Sesimbra, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -43199,6 +43469,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.4154
 # !latitude: 38.6932
+# region: Lisboa
+# admin1_quelle: Ufer 1.5 km
 Cascais, Portugal
 +01:00 :Europe/Lisbon
 2.1946 meters
@@ -43389,6 +43661,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.0778
 # !latitude: 39.5898
+# region: Leiria
+# admin1_quelle: Polygon
 Nazaré (Baía de Pederneira), Portugal
 +01:00 :Europe/Lisbon
 1.8898 meters
@@ -43579,6 +43853,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8634
 # !latitude: 40.1466
+# region: Coimbra
+# admin1_quelle: Ufer 1.2 km
 Figueira da Foz, Portugal
 +01:00 :Europe/Lisbon
 1.8898 meters
@@ -43769,6 +44045,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.7461
 # !latitude: 40.6441
+# region: Aveiro
+# admin1_quelle: Polygon
 Barra de Aveiro (Gafanha da Nazaré), Portugal
 +01:00 :Europe/Lisbon
 1.4021 meters
@@ -43959,6 +44237,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.6667
 # !latitude: 41.1467
+# region: Porto
+# admin1_quelle: Ufer 1.5 km
 Cantareira (Barra do Douro), Portugal
 +01:00 :Europe/Lisbon
 1.9812 meters
@@ -44149,6 +44429,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.6023
 # !latitude: 41.1403
+# region: Porto
+# admin1_quelle: Polygon
 Porto (Rio Douro), Portugal
 +01:00 :Europe/Lisbon
 1.9507 meters
@@ -44339,6 +44621,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.7045
 # !latitude: 41.1867
+# region: Porto
+# admin1_quelle: Polygon
 Porto de Leixões (Matosinhos), Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -44529,6 +44813,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.7667
 # !latitude: 41.3750
+# region: Porto
+# admin1_quelle: Polygon
 Póvoa de Varzim, Portugal
 +01:00 :Europe/Lisbon
 1.9812 meters
@@ -44719,6 +45005,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.7845
 # !latitude: 41.5336
+# region: Braga
+# admin1_quelle: Polygon
 Esposende (Rio Cávado), Portugal
 +01:00 :Europe/Lisbon
 1.9507 meters
@@ -44909,6 +45197,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8771
 # !latitude: 41.8994
+# region: Pontevedra
+# admin1_quelle: Polygon
 A Guarda, Spain
 +01:00 :Europe/Madrid
 1.8593 meters
@@ -45099,6 +45389,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8448
 # !latitude: 42.1204
+# region: Pontevedra
+# admin1_quelle: Polygon
 Baiona, Spain
 +01:00 :Europe/Madrid
 1.9507 meters
@@ -45289,6 +45581,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.7260
 # !latitude: 42.2432
+# region: Pontevedra
+# admin1_quelle: Polygon
 Vigo, Spain
 +01:00 :Europe/Madrid
 1.9812 meters
@@ -45479,6 +45773,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.6911
 # !latitude: 42.4061
+# region: Pontevedra
+# admin1_quelle: Polygon
 Marín (Ría de Pontevedra), Spain
 +01:00 :Europe/Madrid
 1.9507 meters
@@ -45669,6 +45965,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.7700
 # !latitude: 42.6008
+# region: Pontevedra
+# admin1_quelle: Polygon
 Vilagarcía de Arousa, Spain
 +01:00 :Europe/Madrid
 2.0422 meters
@@ -45859,6 +46157,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.9833
 # !latitude: 42.5500
+# region: La Coruña
+# admin1_quelle: Ufer 0.2 km
 Santa Uxía de Ribeíra (Ría de Arousa), Spain
 +01:00 :Europe/Madrid
 1.9507 meters
@@ -46049,6 +46349,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.0912
 # !latitude: 42.5784
+# region: La Coruña
+# admin1_quelle: Ufer 2.6 km
 Cabo Corrubedo, Spain
 +01:00 :Europe/Madrid
 1.8898 meters
@@ -46239,6 +46541,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.9439
 # !latitude: 42.7937
+# region: La Coruña
+# admin1_quelle: Ufer 0.6 km
 Freixo, Spain
 +01:00 :Europe/Madrid
 2.0117 meters
@@ -46429,6 +46733,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.0512
 # !latitude: 42.7766
+# region: La Coruña
+# admin1_quelle: Polygon
 Muros, Spain
 +01:00 :Europe/Madrid
 1.9507 meters
@@ -46619,6 +46925,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.1909
 # !latitude: 42.9453
+# region: La Coruña
+# admin1_quelle: Ufer 0.5 km
 Corcubión, Spain
 +01:00 :Europe/Madrid
 1.8593 meters
@@ -46809,6 +47117,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.1817
 # !latitude: 43.1267
+# region: La Coruña
+# admin1_quelle: Ufer 1.5 km
 Camariñas, Spain
 +01:00 :Europe/Madrid
 2.0726 meters
@@ -46999,6 +47309,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.9644
 # !latitude: 43.2637
+# region: La Coruña
+# admin1_quelle: Ufer 1.0 km
 Corme, Spain
 +01:00 :Europe/Madrid
 1.9812 meters
@@ -47189,6 +47501,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.3833
 # !latitude: 43.3833
+# region: La Coruña
+# admin1_quelle: Ufer 0.5 km
 La Coruña, Spain
 +01:00 :Europe/Madrid
 2.0422 meters
@@ -47379,6 +47693,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.2667
 # !latitude: 43.4667
+# region: La Coruña
+# admin1_quelle: Ufer 1.4 km
 El Ferrol, Spain
 +01:00 :Europe/Madrid
 2.1336 meters
@@ -47569,6 +47885,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.0667
 # !latitude: 43.6667
+# region: La Coruña
+# admin1_quelle: Polygon
 Cedeira, Spain
 +01:00 :Europe/Madrid
 2.1641 meters
@@ -47759,6 +48077,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.8633
 # !latitude: 43.7340
+# region: La Coruña
+# admin1_quelle: Polygon
 Cariño, Spain
 +01:00 :Europe/Madrid
 2.1641 meters
@@ -47949,6 +48269,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.2545
 # !latitude: 43.5664
+# region: Lugo
+# admin1_quelle: Ufer 0.9 km
 Foz, Spain
 +01:00 :Europe/Madrid
 2.1946 meters
@@ -48139,6 +48461,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.0367
 # !latitude: 43.5340
+# region: Lugo
+# admin1_quelle: Polygon
 Ribadeo, Spain
 +01:00 :Europe/Madrid
 2.1336 meters
@@ -48329,6 +48653,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.5333
 # !latitude: 43.5491
+# region: Asturias
+# admin1_quelle: Polygon
 Luarca, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -48519,6 +48845,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.0833
 # !latitude: 43.5667
+# region: Asturias
+# admin1_quelle: Polygon
 Ría de Pravia, Spain
 +01:00 :Europe/Madrid
 2.1946 meters
@@ -48709,6 +49037,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.9500
 # !latitude: 43.6000
+# region: Asturias
+# admin1_quelle: Ufer 3.3 km
 Avilés, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -48899,6 +49229,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.7831
 # !latitude: 43.6200
+# region: Asturias
+# admin1_quelle: Polygon
 Luanco, Spain
 +01:00 :Europe/Madrid
 2.1946 meters
@@ -49089,6 +49421,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.6667
 # !latitude: 43.5500
+# region: Asturias
+# admin1_quelle: Polygon
 Gijón, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -49279,6 +49613,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.0667
 # !latitude: 43.4667
+# region: Asturias
+# admin1_quelle: Polygon
 Ribadesella, Spain
 +01:00 :Europe/Madrid
 2.2250 meters
@@ -49469,6 +49805,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.7500
 # !latitude: 43.4167
+# region: Asturias
+# admin1_quelle: Polygon
 Llanes, Spain
 +01:00 :Europe/Madrid
 2.1946 meters
@@ -49659,6 +49997,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.3932
 # !latitude: 43.3892
+# region: Cantabria
+# admin1_quelle: Ufer 0.9 km
 San Vicente de la Barquera, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -49849,6 +50189,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.0419
 # !latitude: 43.4408
+# region: Cantabria
+# admin1_quelle: Ufer 1.1 km
 Suances, Spain
 +01:00 :Europe/Madrid
 2.1641 meters
@@ -50039,6 +50381,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.7833
 # !latitude: 43.4667
+# region: Cantabria
+# admin1_quelle: Ufer 1.8 km
 Santander, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -50229,6 +50573,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.4550
 # !latitude: 43.4390
+# region: Cantabria
+# admin1_quelle: Ufer 0.9 km
 Santoña, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -50419,6 +50765,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.2167
 # !latitude: 43.3833
+# region: Cantabria
+# admin1_quelle: Polygon
 Castro-Urdiales, Spain
 +01:00 :Europe/Madrid
 2.1641 meters
@@ -50609,6 +50957,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.0333
 # !latitude: 43.3500
+# region: Bizkaia
+# admin1_quelle: Ufer 1.1 km
 Bilbao Bay, Spain
 +01:00 :Europe/Madrid
 2.2250 meters
@@ -50799,6 +51149,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.0333
 # !latitude: 43.3333
+# region: Abra Bilbao
+# admin1_quelle: Name
 Portugalete, Abra Bilbao, Spain
 +01:00 :Europe/Madrid
 2.2250 meters
@@ -50989,6 +51341,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.7167
 # !latitude: 43.4167
+# region: Bizkaia
+# admin1_quelle: Polygon
 Bermeo, Spain
 +01:00 :Europe/Madrid
 2.4994 meters
@@ -51179,6 +51533,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.4989
 # !latitude: 43.3667
+# region: Bizkaia
+# admin1_quelle: Polygon
 Lekeitio, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -51369,6 +51725,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.4205
 # !latitude: 43.3246
+# region: Bizkaia
+# admin1_quelle: Polygon
 Ondarroa, Spain
 +01:00 :Europe/Madrid
 2.1336 meters
@@ -51559,6 +51917,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.3541
 # !latitude: 43.3016
+# region: Gipuzkoa
+# admin1_quelle: Polygon
 Deba, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -51749,6 +52109,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.1993
 # !latitude: 43.3039
+# region: Gipuzkoa
+# admin1_quelle: Polygon
 Getaria, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -51939,6 +52301,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.1285
 # !latitude: 43.2838
+# region: Gipuzkoa
+# admin1_quelle: Polygon
 Ría de Orio, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -52129,6 +52493,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.9903
 # !latitude: 43.3223
+# region: Gipuzkoa
+# admin1_quelle: Polygon
 Donostia (San Sebastián), Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -52319,6 +52685,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.9333
 # !latitude: 43.3333
+# region: Gipuzkoa
+# admin1_quelle: Polygon
 Pasaia, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -52508,6 +52876,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.6833
 # !latitude: 43.4000
+# region: Pyrénées-Atlantiques
+# admin1_quelle: Ufer 1.8 km
 St. Jean de Luz (Socoa), France
 +00:00 :Europe/Paris
 2.2860 meters
@@ -52697,6 +53067,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.5000
 # !latitude: 43.5167
+# region: Pyrénées-Atlantiques
+# admin1_quelle: Polygon
 Le Boucau, Adour River, France
 +00:00 :Europe/Paris
 1.7983 meters
@@ -52886,6 +53258,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.2500
 # !latitude: 44.6167
+# region: Bassin d'Arcachon
+# admin1_quelle: Name
 Cap Ferret, Bassin d'Arcachon, France
 +00:00 :Europe/Paris
 2.0422 meters
@@ -53075,6 +53449,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.7833
 # !latitude: 45.3167
+# region: Gironde
+# admin1_quelle: Polygon
 La Maréchale, France
 +00:00 :Europe/Paris
 2.9870 meters
@@ -53264,6 +53640,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.7500
 # !latitude: 45.2000
+# region: Gironde
+# admin1_quelle: Polygon
 Pauillac, France
 +00:00 :Europe/Paris
 3.0175 meters
@@ -53454,6 +53832,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.6667
 # !latitude: 45.1333
+# region: Gironde
+# admin1_quelle: Polygon
 Blaye, France
 +00:00 :Europe/Paris
 2.7737 meters
@@ -53644,6 +54024,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.5667
 # !latitude: 44.8333
+# region: Gironde
+# admin1_quelle: Polygon
 Bordeaux, Garonne River, France
 +00:00 :Europe/Paris
 2.4079 meters
@@ -53833,6 +54215,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.1167
 # !latitude: 45.7833
+# region: Charente-Maritime
+# admin1_quelle: Ufer 1.4 km
 La Cayenne, Seudre River, France
 +00:00 :Europe/Paris
 3.5357 meters
@@ -54023,6 +54407,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.9667
 # !latitude: 45.9500
+# region: Charente-Maritime
+# admin1_quelle: Polygon
 Rochefort, Charente River, France
 +00:00 :Europe/Paris
 3.7795 meters
@@ -54212,6 +54598,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.1667
 # !latitude: 46.0167
+# region: Charente-Maritime
+# admin1_quelle: Ufer 4.3 km
 Île d'Aix, France
 +00:00 :Europe/Paris
 3.5357 meters
@@ -54401,6 +54789,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.1500
 # !latitude: 46.1500
+# region: Charente-Maritime
+# admin1_quelle: Polygon
 La Rochelle, France
 +00:00 :Europe/Paris
 3.2004 meters
@@ -54590,6 +54980,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.2167
 # !latitude: 46.1667
+# region: Charente-Maritime
+# admin1_quelle: Ufer 0.5 km
 La Pallice, France
 +00:00 :Europe/Paris
 3.1090 meters
@@ -54779,6 +55171,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.3667
 # !latitude: 46.2000
+# region: Île de Ré
+# admin1_quelle: Name
 St. Martin, Île de Ré, France
 +00:00 :Europe/Paris
 3.3528 meters
@@ -54968,6 +55362,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.7833
 # !latitude: 46.5000
+# region: Vendée
+# admin1_quelle: Polygon
 Les Sables d'Olonne, France
 +00:00 :Europe/Paris
 2.8651 meters
@@ -55157,6 +55553,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.9333
 # !latitude: 46.7000
+# region: Vendée
+# admin1_quelle: Ufer 0.6 km
 St. Gilles sur Vie, France
 +00:00 :Europe/Paris
 2.9870 meters
@@ -55346,6 +55744,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.3333
 # !latitude: 46.7000
+# region: Île d'Yeu
+# admin1_quelle: Name
 Port Joinville, Île d'Yeu, France
 +00:00 :Europe/Paris
 2.5298 meters
@@ -55535,6 +55935,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.1667
 # !latitude: 46.9000
+# region: Vendée
+# admin1_quelle: Ufer 1.9 km
 Fromentine, France
 +00:00 :Europe/Paris
 2.9261 meters
@@ -55724,6 +56126,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.2183
 # !latitude: 47.0106
+# region: Vendée
+# admin1_quelle: Polygon
 Bois de la Chaise (Noirmoutier), France
 +00:00 :Europe/Paris
 2.8346 meters
@@ -55913,6 +56317,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.0333
 # !latitude: 47.2833
+# region: Loire-Atlantique
+# admin1_quelle: Polygon
 Paimboeuf, Loire River, France
 +00:00 :Europe/Paris
 2.8651 meters
@@ -56103,6 +56509,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.5833
 # !latitude: 47.2167
+# region: Loire-Atlantique
+# admin1_quelle: Polygon
 Nantes, Loire River, France
 +00:00 :Europe/Paris
 3.2614 meters
@@ -56292,6 +56700,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.9167
 # !latitude: 47.5500
+# region: Morbihan
+# admin1_quelle: Ufer 1.1 km
 Port Navalo, Morbihan entrance, France
 +00:00 :Europe/Paris
 2.7737 meters
@@ -56481,6 +56891,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.0333
 # !latitude: 47.5833
+# region: Morbihan
+# admin1_quelle: Polygon
 La Trinité, Crac'h River, France
 +00:00 :Europe/Paris
 3.0785 meters
@@ -56670,6 +57082,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.1500
 # !latitude: 47.3500
+# region: Belle-Île
+# admin1_quelle: Name
 Le Palais, Belle-Île, France
 +00:00 :Europe/Paris
 2.9261 meters
@@ -56859,6 +57273,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.3500
 # !latitude: 47.7000
+# region: Morbihan
+# admin1_quelle: Ufer 0.7 km
 Port Louis, France
 +00:00 :Europe/Paris
 2.8042 meters
@@ -57048,6 +57464,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.3500
 # !latitude: 47.7500
+# region: Morbihan
+# admin1_quelle: Polygon
 Lorient, France
 +00:00 :Europe/Paris
 2.8042 meters
@@ -57237,6 +57655,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.9500
 # !latitude: 47.7167
+# region: Finistère
+# admin1_quelle: Ufer 11.9 km
 Île de Penfret, France
 +00:00 :Europe/Paris
 2.7432 meters
@@ -57426,6 +57846,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.1167
 # !latitude: 47.8833
+# region: Finistère
+# admin1_quelle: Ufer 0.5 km
 Bénodet, Odet River, France
 +00:00 :Europe/Paris
 2.7432 meters
@@ -57615,6 +58037,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.3667
 # !latitude: 47.8000
+# region: Finistère
+# admin1_quelle: Ufer 0.9 km
 Penmarc'h, France
 +00:00 :Europe/Paris
 2.8042 meters
@@ -57804,6 +58228,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.6000
 # !latitude: 48.2667
+# region: Finistère
+# admin1_quelle: Polygon
 Camaret, France
 +00:00 :Europe/Paris
 4.4501 meters
@@ -57993,6 +58419,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.9667
 # !latitude: 48.4000
+# region: Finistère
+# admin1_quelle: Ufer 8.9 km
 Île de Molène, France
 +00:00 :Europe/Paris
 4.4196 meters
@@ -58182,6 +58610,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.1000
 # !latitude: 48.4500
+# region: Finistère
+# admin1_quelle: Polygon
 Île d'Ouessant, France
 +00:00 :Europe/Paris
 4.4806 meters
@@ -58371,6 +58801,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.6333
 # !latitude: 48.5833
+# region: Finistère
+# admin1_quelle: Ufer 0.7 km
 L'Aber Benoît entrance, France
 +00:00 :Europe/Paris
 4.6939 meters
@@ -58560,6 +58992,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.5833
 # !latitude: 48.6000
+# region: Finistère
+# admin1_quelle: Polygon
 L'Aber Wrac'h (Fort Cézon), France
 +00:00 :Europe/Paris
 4.7244 meters
@@ -58749,6 +59183,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.8833
 # !latitude: 48.6833
+# region: Finistère
+# admin1_quelle: Ufer 0.9 km
 Morlaix River entrance, France
 +00:00 :Europe/Paris
 5.1511 meters
@@ -58938,6 +59374,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.2167
 # !latitude: 48.8500
+# region: Côtes-d'Armor
+# admin1_quelle: Polygon
 Plougrescant, Tréguier River, France
 +00:00 :Europe/Paris
 5.5474 meters
@@ -59127,6 +59565,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.0833
 # !latitude: 48.9000
+# region: Côtes-d'Armor
+# admin1_quelle: Ufer 3.0 km
 Héaux-de-Bréhat, France
 +00:00 :Europe/Paris
 5.4864 meters
@@ -59316,6 +59756,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.7167
 # !latitude: 48.5333
+# region: Côtes-d'Armor
+# admin1_quelle: Ufer 0.4 km
 Le Légué entrance, France
 +00:00 :Europe/Paris
 6.4008 meters
@@ -59505,6 +59947,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.0333
 # !latitude: 48.6333
+# region: Ille-et-Vilaine
+# admin1_quelle: Ufer 1.1 km
 St. Malo, France
 +00:00 :Europe/Paris
 6.8580 meters
@@ -59694,6 +60138,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.8167
 # !latitude: 48.8667
+# region: Manche
+# admin1_quelle: Ufer 15.7 km
 Îles Chausey, France
 +00:00 :Europe/Paris
 7.4981 meters
@@ -59883,6 +60329,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.1333
 # !latitude: 48.9500
+# region: Bailiwick of Jersey
+# admin1_quelle: Name
 Les Minquiers, Bailiwick of Jersey, Channel Islands
 +00:00 :Europe/Jersey
 6.4618 meters
@@ -60072,6 +60520,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.1167
 # !latitude: 49.1833
+# region: Bailiwick of Jersey
+# admin1_quelle: Name
 St. Helier, Bailiwick of Jersey, Channel Islands
 +00:00 :Europe/Jersey
 6.1570 meters
@@ -60450,6 +60900,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.8167
 # !latitude: 49.3500
+# region: Calvados
+# admin1_quelle: Polygon
 Port-en-Bessin, France
 +00:00 :Europe/Paris
 4.0843 meters
@@ -60643,6 +61095,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Seine-Maritime
+# admin1_quelle: Polygon
 St. Valery-en-Caux, France
 +00:00 :Europe/Paris
 4.8768 meters
@@ -60836,6 +61290,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Pas-de-Calais
+# admin1_quelle: Polygon
 Boulogne, France
 +00:00 :Europe/Paris
 4.9378 meters
@@ -61029,6 +61485,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nord
+# admin1_quelle: Polygon
 Dunkerque, France
 +00:00 :Europe/Paris
 3.1394 meters
@@ -61220,6 +61678,8 @@ x 0 0
 # !latitude: 57.9667
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Golspie, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3165 meters
@@ -61411,6 +61871,8 @@ x 0 0
 # !latitude: 57.8333
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Portmahomack, Scotland, United Kingdom
 +00:00 :Europe/London
 2.2250 meters
@@ -61602,6 +62064,8 @@ x 0 0
 # !latitude: 57.6833
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Invergordon, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3774 meters
@@ -61793,6 +62257,8 @@ x 0 0
 # !latitude: 57.7167
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Lossiemouth, Scotland, United Kingdom
 +00:00 :Europe/London
 2.0117 meters
@@ -61984,6 +62450,8 @@ x 0 0
 # !latitude: 57.6667
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Banff, Scotland, United Kingdom
 +00:00 :Europe/London
 1.6764 meters
@@ -62175,6 +62643,8 @@ x 0 0
 # !latitude: 57.5000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Peterhead, Scotland, United Kingdom
 +00:00 :Europe/London
 2.2555 meters
@@ -62366,6 +62836,8 @@ x 0 0
 # !latitude: 56.9667
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Stonehaven, Scotland, United Kingdom
 +00:00 :Europe/London
 2.6213 meters
@@ -62557,6 +63029,8 @@ x 0 0
 # !latitude: 56.4500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Tay River Bar, Scotland, United Kingdom
 +00:00 :Europe/London
 3.0175 meters
@@ -62748,6 +63222,8 @@ x 0 0
 # !latitude: 56.4500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Dundee, Tay River, Scotland, United Kingdom
 +00:00 :Europe/London
 3.0480 meters
@@ -62939,6 +63415,8 @@ x 0 0
 # !latitude: 56.2167
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Anstruther Easter, Scotland, United Kingdom
 +00:00 :Europe/London
 3.1699 meters
@@ -63130,6 +63608,8 @@ x 0 0
 # !latitude: 56.0333
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Grangemouth, Forth River, Scotland, United Kingdom
 +00:00 :Europe/London
 3.1699 meters
@@ -63321,6 +63801,8 @@ x 0 0
 # !latitude: 56.0667
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Fidra Island, Scotland, United Kingdom
 +00:00 :Europe/London
 3.0785 meters
@@ -63512,6 +63994,8 @@ x 0 0
 # !latitude: 56.0000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Dunbar, Scotland, United Kingdom
 +00:00 :Europe/London
 3.0480 meters
@@ -63703,6 +64187,8 @@ x 0 0
 # !latitude: 55.7833
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Berwick-upon-Tweed, England, United Kingdom
 +00:00 :Europe/London
 2.5908 meters
@@ -63894,6 +64380,8 @@ x 0 0
 # !latitude: 55.0167
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Tyne River entrance, England, United Kingdom
 +00:00 :Europe/London
 2.8956 meters
@@ -64085,6 +64573,8 @@ x 0 0
 # !latitude: 54.9667
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Newcastle-on-Tyne, England, United Kingdom
 +00:00 :Europe/London
 2.9870 meters
@@ -64274,6 +64764,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.3500
 # !latitude: 54.9167
+# region: Durham
+# admin1_quelle: Name
 Sunderland, Durham, United Kingdom
 +00:00 :Europe/London
 3.0480 meters
@@ -64465,6 +64957,8 @@ x 0 0
 # !latitude: 54.8333
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Seaham, England, United Kingdom
 +00:00 :Europe/London
 2.9870 meters
@@ -64656,6 +65150,8 @@ x 0 0
 # !latitude: 54.6833
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Hartlepool, England, United Kingdom
 +00:00 :Europe/London
 2.8956 meters
@@ -64847,6 +65343,8 @@ x 0 0
 # !latitude: 54.6333
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 River Tees Entrance, England, United Kingdom
 +00:00 :Europe/London
 3.1699 meters
@@ -65038,6 +65536,8 @@ x 0 0
 # !latitude: 54.2833
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Scarborough, England, United Kingdom
 +00:00 :Europe/London
 3.3833 meters
@@ -65229,6 +65729,8 @@ x 0 0
 # !latitude: 53.5833
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Grimsby, England, United Kingdom
 +00:00 :Europe/London
 4.0538 meters
@@ -65420,6 +65922,8 @@ x 0 0
 # !latitude: 53.7333
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Hull, England, United Kingdom
 +00:00 :Europe/London
 4.0843 meters
@@ -65611,6 +66115,8 @@ x 0 0
 # !latitude: 53.7000
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Goole, England, United Kingdom
 +00:00 :Europe/London
 2.5603 meters
@@ -65802,6 +66308,8 @@ x 0 0
 # !latitude: 53.1500
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Skegness, England, United Kingdom
 +00:00 :Europe/London
 3.9624 meters
@@ -65993,6 +66501,8 @@ x 0 0
 # !latitude: 52.9667
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Boston, England, United Kingdom
 +00:00 :Europe/London
 3.4138 meters
@@ -66184,6 +66694,8 @@ x 0 0
 # !latitude: 52.5667
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Gorleston, Great Yarmouth, England, United Kingdom
 +00:00 :Europe/London
 1.2192 meters
@@ -66375,6 +66887,8 @@ x 0 0
 # !latitude: 52.0833
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Orford Ness, England, United Kingdom
 +00:00 :Europe/London
 1.7069 meters
@@ -66566,6 +67080,8 @@ x 0 0
 # !latitude: 51.8000
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Brightlingsea, Colne River, England, United Kingdom
 +00:00 :Europe/London
 2.3165 meters
@@ -66757,6 +67273,8 @@ x 0 0
 # !latitude: 51.7167
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Osea Island, Blackwater River, England, United Kingdom
 +00:00 :Europe/London
 2.8346 meters
@@ -66948,6 +67466,8 @@ x 0 0
 # !latitude: 51.5167
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Southend Pier, Thames River, England, United Kingdom
 +00:00 :Europe/London
 2.9566 meters
@@ -67139,6 +67659,8 @@ x 0 0
 # !latitude: 51.4667
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Tilbury Dock, Thames River, England, United Kingdom
 +00:00 :Europe/London
 3.2309 meters
@@ -67330,6 +67852,8 @@ x 0 0
 # !latitude: 51.3333
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Ramsgate, England, United Kingdom
 +00:00 :Europe/London
 2.6213 meters
@@ -67521,6 +68045,8 @@ x 0 0
 # !latitude: 51.0833
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Folkestone, England, United Kingdom
 +00:00 :Europe/London
 3.2004 meters
@@ -67712,6 +68238,8 @@ x 0 0
 # !latitude: 50.9000
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Dungeness, England, United Kingdom
 +00:00 :Europe/London
 3.7795 meters
@@ -67903,6 +68431,8 @@ x 0 0
 # !latitude: 50.7667
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Eastbourne, England, United Kingdom
 +00:00 :Europe/London
 3.4747 meters
@@ -68094,6 +68624,8 @@ x 0 0
 # !latitude: 50.8167
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Brighton, England, United Kingdom
 +00:00 :Europe/London
 2.8956 meters
@@ -68285,6 +68817,8 @@ x 0 0
 # !latitude: 50.8333
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Shoreham Harbor entrance, England, United Kingdom
 +00:00 :Europe/London
 2.8346 meters
@@ -68477,6 +69011,8 @@ x 0 0
 # !latitude: 50.7167
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Selsey Bill, England, United Kingdom
 +00:00 :Europe/London
 2.9870 meters
@@ -68667,6 +69203,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.2000
 # !latitude: 50.6000
+# region: Isle of Wight
+# admin1_quelle: Name
 Ventnor, Isle of Wight, United Kingdom
 +00:00 :Europe/London
 1.6154 meters
@@ -68857,6 +69395,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.3000
 # !latitude: 50.7667
+# region: Isle of Wight
+# admin1_quelle: Name
 Cowes, Isle of Wight, United Kingdom
 +00:00 :Europe/London
 1.8898 meters
@@ -69049,6 +69589,8 @@ x 0 0
 # !latitude: 50.8167
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Calshot Castle, England, United Kingdom
 +00:00 :Europe/London
 2.6213 meters
@@ -69239,6 +69781,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.5000
 # !latitude: 50.7000
+# region: Isle of Wight
+# admin1_quelle: Name
 Yarmouth, Isle of Wight, United Kingdom
 +00:00 :Europe/London
 1.3716 meters
@@ -69431,6 +69975,8 @@ x 0 0
 # !latitude: 50.5667
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Portland, England, United Kingdom
 +00:00 :Europe/London
 1.0668 meters
@@ -69622,6 +70168,8 @@ x 0 0
 # !latitude: 50.7167
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Lyme Regis, England, United Kingdom
 +00:00 :Europe/London
 2.0117 meters
@@ -69813,6 +70361,8 @@ x 0 0
 # !latitude: 50.5500
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Teignmouth, England, United Kingdom
 +00:00 :Europe/London
 2.7127 meters
@@ -70004,6 +70554,8 @@ x 0 0
 # !latitude: 50.4667
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Torquay, England, United Kingdom
 +00:00 :Europe/London
 2.1946 meters
@@ -70195,6 +70747,8 @@ x 0 0
 # !latitude: 50.3500
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Dartmouth, England, United Kingdom
 +00:00 :Europe/London
 2.6518 meters
@@ -70386,6 +70940,8 @@ x 0 0
 # !latitude: 50.2167
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Salcombe, Salcombe River, England, United Kingdom
 +00:00 :Europe/London
 3.0480 meters
@@ -70577,6 +71133,8 @@ x 0 0
 # !latitude: 50.3500
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 East Looe, England, United Kingdom
 +00:00 :Europe/London
 3.0480 meters
@@ -70768,6 +71326,8 @@ x 0 0
 # !latitude: 50.3333
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Fowey, England, United Kingdom
 +00:00 :Europe/London
 3.0785 meters
@@ -70959,6 +71519,8 @@ x 0 0
 # !latitude: 50.1000
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Penzance (Newlyn), England, United Kingdom
 +00:00 :Europe/London
 3.2309 meters
@@ -71154,6 +71716,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+0.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: England
+# admin1_quelle: Name
 St. Ives, England, United Kingdom
 +00:00 :Europe/London
 3.8405 meters
@@ -71349,6 +71913,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+0.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: England
+# admin1_quelle: Name
 Padstow, England, United Kingdom
 +00:00 :Europe/London
 3.5357 meters
@@ -71540,6 +72106,8 @@ x 0 0
 # !latitude: 51.0500
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Appledore, Bristol Channel, England, United Kingdom
 +00:00 :Europe/London
 3.5966 meters
@@ -71731,6 +72299,8 @@ x 0 0
 # !latitude: 51.1833
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Watchet, Bristol Channel, England, United Kingdom
 +00:00 :Europe/London
 6.2179 meters
@@ -71922,6 +72492,8 @@ x 0 0
 # !latitude: 51.2333
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Burnham, Parrett River, England, United Kingdom
 +00:00 :Europe/London
 5.4559 meters
@@ -72113,6 +72685,8 @@ x 0 0
 # !latitude: 51.3500
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Weston-super-Mare, Bristol Channel, England, United Kingdom
 +00:00 :Europe/London
 6.1265 meters
@@ -72304,6 +72878,8 @@ x 0 0
 # !latitude: 51.4667
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Porthcawl, Bristol Channel, Wales, United Kingdom
 +00:00 :Europe/London
 5.4254 meters
@@ -72495,6 +73071,8 @@ x 0 0
 # !latitude: 51.6500
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Whiteford Lighthouse, Burry Inlet, Wales, United Kingdom
 +00:00 :Europe/London
 4.8158 meters
@@ -72686,6 +73264,8 @@ x 0 0
 # !latitude: 51.7667
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Ferryside, Towy River, Wales, United Kingdom
 +00:00 :Europe/London
 3.0175 meters
@@ -72877,6 +73457,8 @@ x 0 0
 # !latitude: 51.6667
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Tenby, Bristol Channel, Wales, United Kingdom
 +00:00 :Europe/London
 4.6330 meters
@@ -73068,6 +73650,8 @@ x 0 0
 # !latitude: 51.7000
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Neyland, Cleddau River, Wales, United Kingdom
 +00:00 :Europe/London
 3.8405 meters
@@ -73259,6 +73843,8 @@ x 0 0
 # !latitude: 52.5333
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Aberdovey, Wales, United Kingdom
 +00:00 :Europe/London
 2.3774 meters
@@ -73450,6 +74036,8 @@ x 0 0
 # !latitude: 52.9167
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Portmadoc (Borth), Wales, United Kingdom
 +00:00 :Europe/London
 2.4689 meters
@@ -73641,6 +74229,8 @@ x 0 0
 # !latitude: 52.8833
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Pwllheli Road, Wales, United Kingdom
 +00:00 :Europe/London
 2.4689 meters
@@ -73832,6 +74422,8 @@ x 0 0
 # !latitude: 52.7667
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Bardsey Island, Wales, United Kingdom
 +00:00 :Europe/London
 2.4994 meters
@@ -74023,6 +74615,8 @@ x 0 0
 # !latitude: 53.1225
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Belan Point, Menai Strait, Wales, United Kingdom
 +00:00 :Europe/London
 2.6822 meters
@@ -74214,6 +74808,8 @@ x 0 0
 # !latitude: 53.4154
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Amlwch, Wales, United Kingdom
 +00:00 :Europe/London
 3.9624 meters
@@ -74405,6 +75001,8 @@ x 0 0
 # !latitude: 53.3130
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Trwyn Du (Menai Strait), Wales, United Kingdom
 +00:00 :Europe/London
 4.1148 meters
@@ -74596,6 +75194,8 @@ x 0 0
 # !latitude: 53.2167
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Wales
+# admin1_quelle: Name
 Menai Bridge, Menai Strait, Wales, United Kingdom
 +00:00 :Europe/London
 4.1453 meters
@@ -74787,6 +75387,8 @@ x 0 0
 # !latitude: 53.3834
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Hilbre Island (Dee River), England, United Kingdom
 +00:00 :Europe/London
 5.1511 meters
@@ -74978,6 +75580,8 @@ x 0 0
 # !latitude: 53.3167
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Eastham, England, United Kingdom
 +00:00 :Europe/London
 5.2426 meters
@@ -75169,6 +75773,8 @@ x 0 0
 # !latitude: 53.7464
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 St. Anne's (Ribble River), England, United Kingdom
 +00:00 :Europe/London
 5.3645 meters
@@ -75360,6 +75966,8 @@ x 0 0
 # !latitude: 53.9273
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Fleetwood, River Wyre, England, United Kingdom
 +00:00 :Europe/London
 5.3340 meters
@@ -75551,6 +76159,8 @@ x 0 0
 # !latitude: 54.0754
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Morecambe, England, United Kingdom
 +00:00 :Europe/London
 5.2426 meters
@@ -75742,6 +76352,8 @@ x 0 0
 # !latitude: 54.1000
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Barrow (Ramsden Dock), England, United Kingdom
 +00:00 :Europe/London
 4.9987 meters
@@ -75933,6 +76545,8 @@ x 0 0
 # !latitude: 54.5500
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Whitehaven, England, United Kingdom
 +00:00 :Europe/London
 4.5110 meters
@@ -76124,6 +76738,8 @@ x 0 0
 # !latitude: 54.6500
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Workington, England, United Kingdom
 +00:00 :Europe/London
 4.5415 meters
@@ -76315,6 +76931,8 @@ x 0 0
 # !latitude: 54.7167
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Maryport, England, United Kingdom
 +00:00 :Europe/London
 4.6634 meters
@@ -76506,6 +77124,8 @@ x 0 0
 # !latitude: 54.8667
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: England
+# admin1_quelle: Name
 Silloth, England, United Kingdom
 +00:00 :Europe/London
 4.8158 meters
@@ -76695,6 +77315,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.3667
 # !latitude: 54.3167
+# region: Isle of Man
+# admin1_quelle: Polygon
 Ramsey, Isle of Man
 +00:00 :Europe/Isle_of_Man
 4.0234 meters
@@ -76884,6 +77506,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.4667
 # !latitude: 54.1500
+# region: Isle of Man
+# admin1_quelle: Ufer 0.7 km
 Douglas, Isle of Man
 +00:00 :Europe/Isle_of_Man
 3.9014 meters
@@ -77073,6 +77697,8 @@ x 0 0
 # !units: meters
 # !longitude: -4.7000
 # !latitude: 54.2333
+# region: Isle of Man
+# admin1_quelle: Ufer 1.3 km
 Peel, Isle of Man
 +00:00 :Europe/Isle_of_Man
 2.8651 meters
@@ -77264,6 +77890,8 @@ x 0 0
 # !latitude: 54.7000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Isle of Whithorn, Wigtown Bay, Scotland, United Kingdom
 +00:00 :Europe/London
 3.9929 meters
@@ -77455,6 +78083,8 @@ x 0 0
 # !latitude: 54.6833
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Drummore, Wigtown Bay, Scotland, United Kingdom
 +00:00 :Europe/London
 3.2309 meters
@@ -77646,6 +78276,8 @@ x 0 0
 # !latitude: 55.4667
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Ayr, Firth of Clyde, Scotland, United Kingdom
 +00:00 :Europe/London
 1.7983 meters
@@ -77837,6 +78469,8 @@ x 0 0
 # !latitude: 55.6333
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Ardrossan, Firth of Clyde, Scotland, United Kingdom
 +00:00 :Europe/London
 1.7678 meters
@@ -78028,6 +78662,8 @@ x 0 0
 # !latitude: 55.8500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Glasgow, Clyde River, Scotland, United Kingdom
 +00:00 :Europe/London
 2.8042 meters
@@ -78219,6 +78855,8 @@ x 0 0
 # !latitude: 55.9333
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Bowling, Clyde River, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3165 meters
@@ -78410,6 +79048,8 @@ x 0 0
 # !latitude: 55.8500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Rothesay Bay, Firth of Clyde, Scotland, United Kingdom
 +00:00 :Europe/London
 1.9202 meters
@@ -78601,6 +79241,8 @@ x 0 0
 # !latitude: 56.2333
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Inverary, Loch Fyne, Scotland, United Kingdom
 +00:00 :Europe/London
 1.7678 meters
@@ -78792,6 +79434,8 @@ x 0 0
 # !latitude: 55.4167
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Campbeltown, Firth of Clyde, Scotland, United Kingdom
 +00:00 :Europe/London
 1.7069 meters
@@ -78983,6 +79627,8 @@ x 0 0
 # !latitude: 55.8500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Port Askaig, Sound of Jura, Scotland, United Kingdom
 +00:00 :Europe/London
 1.1887 meters
@@ -79174,6 +79820,8 @@ x 0 0
 # !latitude: 55.9333
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Rudha Mhail, Isle of Islay, Scotland, United Kingdom
 +00:00 :Europe/London
 1.9202 meters
@@ -79365,6 +80013,8 @@ x 0 0
 # !latitude: 56.5500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Port Appin, Loch Linnhe, Scotland, United Kingdom
 +00:00 :Europe/London
 2.1336 meters
@@ -79556,6 +80206,8 @@ x 0 0
 # !latitude: 56.6167
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Tobermory, Sound of Mull, Scotland, United Kingdom
 +00:00 :Europe/London
 2.1641 meters
@@ -79747,6 +80399,8 @@ x 0 0
 # !latitude: 56.5000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Scarinish, Tiree Island, Scotland, United Kingdom
 +00:00 :Europe/London
 1.9202 meters
@@ -79938,6 +80592,8 @@ x 0 0
 # !latitude: 57.0333
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Inverie Bay, Loch Nevis, Scotland, United Kingdom
 +00:00 :Europe/London
 2.4384 meters
@@ -80129,6 +80785,8 @@ x 0 0
 # !latitude: 57.2833
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Kyle Akin, Scotland, United Kingdom
 +00:00 :Europe/London
 2.1946 meters
@@ -80320,6 +80978,8 @@ x 0 0
 # !latitude: 57.4000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Portree, Raasey Sound, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3774 meters
@@ -80511,6 +81171,8 @@ x 0 0
 # !latitude: 57.6167
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Uig Bay, Skye Island, Scotland, United Kingdom
 +00:00 :Europe/London
 2.6518 meters
@@ -80702,6 +81364,8 @@ x 0 0
 # !latitude: 58.1500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Loch Inver, Scotland, United Kingdom
 +00:00 :Europe/London
 2.4689 meters
@@ -80893,6 +81557,8 @@ x 0 0
 # !latitude: 58.6000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Thurso, Scotland, United Kingdom
 +00:00 :Europe/London
 2.4079 meters
@@ -81082,6 +81748,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.0531
 # !latitude: 55.0657
+# region: Northern Ireland
+# admin1_quelle: Name
 Red Bay, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 0.8839 meters
@@ -81271,6 +81939,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.7968
 # !latitude: 54.8480
+# region: Northern Ireland
+# admin1_quelle: Name
 Larne, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 1.6154 meters
@@ -81462,6 +82132,8 @@ x 0 0
 # !latitude: 54.6000
 # note: 20260903 Provinz "Northern Ireland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Northern Ireland
+# admin1_quelle: Name
 Belfast, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 1.9812 meters
@@ -81653,6 +82325,8 @@ x 0 0
 # !latitude: 54.6333
 # note: 20260903 Provinz "Northern Ireland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Northern Ireland
+# admin1_quelle: Name
 Donaghadee, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 2.2555 meters
@@ -81842,6 +82516,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.5544
 # !latitude: 54.3715
+# region: Northern Ireland
+# admin1_quelle: Name
 Strangford, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 2.0117 meters
@@ -82031,6 +82707,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.8840
 # !latitude: 54.1983
+# region: Northern Ireland
+# admin1_quelle: Name
 Newcastle, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 2.8042 meters
@@ -82220,6 +82898,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.0633
 # !latitude: 54.0229
+# region: Northern Ireland
+# admin1_quelle: Name
 Cranfield Point, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 2.4994 meters
@@ -82409,6 +83089,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.2833
 # !latitude: 53.9667
+# region: Louth
+# admin1_quelle: Ufer 4.3 km
 Dundalk (pile light), Ireland
 +00:00 :Europe/Dublin
 2.6822 meters
@@ -82598,6 +83280,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.1310
 # !latitude: 53.2978
+# region: Dun LaoghaireRathdown
+# admin1_quelle: Ufer 0.4 km
 Dún Laoghaire, Ireland
 +00:00 :Europe/Dublin
 2.1336 meters
@@ -82789,6 +83473,8 @@ x 0 0
 # !latitude: 57.8000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Village Bay, St. Kilda Island, Scotland, United Kingdom
 +00:00 :Europe/London
 1.4630 meters
@@ -82980,6 +83666,8 @@ x 0 0
 # !latitude: 57.0000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 North Bay, Barra, Scotland, United Kingdom
 +00:00 :Europe/London
 2.0726 meters
@@ -83171,6 +83859,8 @@ x 0 0
 # !latitude: 57.1500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Loch Boisdale, Scotland, United Kingdom
 +00:00 :Europe/London
 2.1946 meters
@@ -83362,6 +84052,8 @@ x 0 0
 # !latitude: 57.6000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Loch Maddy, Scotland, United Kingdom
 +00:00 :Europe/London
 2.2860 meters
@@ -83553,6 +84245,8 @@ x 0 0
 # !latitude: 57.7667
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Leverburgh, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3165 meters
@@ -83744,6 +84438,8 @@ x 0 0
 # !latitude: 57.9000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 East Loch Tarbert, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3774 meters
@@ -83935,6 +84631,8 @@ x 0 0
 # !latitude: 58.2667
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Bernera Harbor, Scotland, United Kingdom
 +00:00 :Europe/London
 1.9202 meters
@@ -84126,6 +84824,8 @@ x 0 0
 # !latitude: 58.2000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Scotland
+# admin1_quelle: Name
 Stornoway, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3165 meters
@@ -84321,6 +85021,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+0.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Scotland
+# admin1_quelle: Name
 Pierowall, Scotland, United Kingdom
 +00:00 :Europe/London
 1.8288 meters
@@ -84516,6 +85218,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+0.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Scotland
+# admin1_quelle: Name
 Scalloway, Scotland, United Kingdom
 +00:00 :Europe/London
 0.9754 meters
@@ -84711,6 +85415,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+0.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Scotland
+# admin1_quelle: Name
 Hillswick, Scotland, United Kingdom
 +00:00 :Europe/London
 1.1887 meters
@@ -84900,6 +85606,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.7667
 # !latitude: 61.4500
+# region: Eysturoyar
+# admin1_quelle: Polygon
 Lopransfjørður, Suðuroy Island, Faroe Islands
 +00:00 :Atlantic/Faroe
 1.4630 meters
@@ -85089,6 +85797,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.8333
 # !latitude: 61.5667
+# region: Eysturoyar
+# admin1_quelle: Polygon
 Trongisvágur, Suðuroy Island, Faroe Islands
 +00:00 :Atlantic/Faroe
 0.6401 meters
@@ -85278,6 +85988,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.8167
 # !latitude: 61.6500
+# region: Eysturoyar
+# admin1_quelle: Ufer 3.4 km
 Suðuroyarfjørður, Faroe Islands
 +00:00 :Atlantic/Faroe
 1.4630 meters
@@ -85467,6 +86179,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.8000
 # !latitude: 61.8333
+# region: Eysturoyar
+# admin1_quelle: Polygon
 Sandsvágur, Sandoy Island, Faroe Islands
 +00:00 :Atlantic/Faroe
 1.0973 meters
@@ -85656,6 +86370,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.6333
 # !latitude: 62.1000
+# region: Eysturoyar
+# admin1_quelle: Polygon
 Mykines, Faroe Islands
 +00:00 :Atlantic/Faroe
 1.4630 meters
@@ -85845,6 +86561,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.7667
 # !latitude: 62.0000
+# region: Eysturoyar
+# admin1_quelle: Polygon
 Tórshavn, Streymoy Island, Faroe Islands
 +00:00 :Atlantic/Faroe
 0.1524 meters
@@ -86034,6 +86752,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.7000
 # !latitude: 62.2167
+# region: Eysturoyar
+# admin1_quelle: Polygon
 Leirvík, Eysturoy Island, Faroe Islands
 +00:00 :Atlantic/Faroe
 1.0058 meters
@@ -86223,6 +86943,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.4167
 # !latitude: 62.2667
+# region: Eysturoyar
+# admin1_quelle: Polygon
 Svínoyarfjørður, Faroe Islands
 +00:00 :Atlantic/Faroe
 1.0058 meters
@@ -86412,6 +87134,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.3000
 # !latitude: 62.3167
+# region: Eysturoyar
+# admin1_quelle: Ufer 1.1 km
 Fugloyarfjørður, Faroe Islands
 +00:00 :Atlantic/Faroe
 0.9144 meters
@@ -86794,6 +87518,8 @@ x 0 0
 # !units: meters
 # !longitude: -22.5500
 # !latitude: 64.0000
+# region: Suðurnes
+# admin1_quelle: Polygon
 Keflavík Harbor, Iceland
 +00:00 :Atlantic/Reykjavik
 1.9812 meters
@@ -86983,6 +87709,8 @@ x 0 0
 # !units: meters
 # !longitude: -21.5667
 # !latitude: 64.3667
+# region: Höfuðborgarsvæði
+# admin1_quelle: Polygon
 Hvammsvík, Iceland
 +00:00 :Atlantic/Reykjavik
 2.1946 meters
@@ -87172,6 +87900,8 @@ x 0 0
 # !units: meters
 # !longitude: -22.1000
 # !latitude: 64.3167
+# region: Vesturland
+# admin1_quelle: Ufer 0.2 km
 Akranes, Iceland
 +00:00 :Atlantic/Reykjavik
 2.1336 meters
@@ -87361,6 +88091,8 @@ x 0 0
 # !units: meters
 # !longitude: -21.1167
 # !latitude: 65.2500
+# region: Norðurland vestra
+# admin1_quelle: Ufer 1.0 km
 Hrútafjörður, Iceland
 +00:00 :Atlantic/Reykjavik
 0.9754 meters
@@ -87550,6 +88282,8 @@ x 0 0
 # !units: meters
 # !longitude: -18.3667
 # !latitude: 65.9833
+# region: Norðurland eystra
+# admin1_quelle: Polygon
 Hrísey, Iceland
 +00:00 :Atlantic/Reykjavik
 0.8534 meters
@@ -87739,6 +88473,8 @@ x 0 0
 # !units: meters
 # !longitude: -18.0833
 # !latitude: 65.6833
+# region: Norðurland eystra
+# admin1_quelle: Ufer 0.7 km
 Akureyri, Iceland
 +00:00 :Atlantic/Reykjavik
 0.8839 meters
@@ -87928,6 +88664,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.8333
 # !latitude: 51.3333
+# province: Zeeland
+# admin1_quelle: Polygon
 Terneuzen, West Schelde River, Netherlands
 +00:00 :Europe/Amsterdam
 2.6518 meters
@@ -88117,6 +88855,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.0000
 # !latitude: 51.4500
+# province: Zeeland
+# admin1_quelle: Ufer 0.4 km
 Hansweert, West Schelde River, Netherlands
 +00:00 :Europe/Amsterdam
 2.7737 meters
@@ -88306,6 +89046,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.0167
 # !latitude: 51.6000
+# province: Zeeland
+# admin1_quelle: Ufer 1.8 km
 Stavenisse, East Schelde River, Netherlands
 +00:00 :Europe/Amsterdam
 1.7983 meters
@@ -88495,6 +89237,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.6667
 # !latitude: 51.8167
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Dordrecht, Netherlands
 +00:00 :Europe/Amsterdam
 0.5182 meters
@@ -88685,6 +89429,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.2667
 # !latitude: 52.1000
+# province: Zuid-Holland
+# admin1_quelle: Ufer 1.9 km
 Scheveningen, Netherlands
 +00:00 :Europe/Amsterdam
 1.0973 meters
@@ -88874,6 +89620,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.5833
 # !latitude: 52.4667
+# province: Noord-Holland
+# admin1_quelle: Polygon
 IJmuiden (Ymuiden), Netherlands
 +00:00 :Europe/Amsterdam
 1.0668 meters
@@ -89064,6 +89812,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.7500
 # !latitude: 52.9667
+# province: Noord-Holland
+# admin1_quelle: Polygon
 Den Helder, Netherlands
 +00:00 :Europe/Amsterdam
 1.0058 meters
@@ -89253,6 +90003,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.2167
 # !latitude: 53.3667
+# province: Friesland
+# admin1_quelle: Polygon
 West Terschelling, Netherlands
 +00:00 :Europe/Amsterdam
 1.2497 meters
@@ -89442,6 +90194,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.4167
 # !latitude: 53.1667
+# province: Friesland
+# admin1_quelle: Ufer 2.7 km
 Harlingen, Netherlands
 +00:00 :Europe/Amsterdam
 1.1887 meters
@@ -89631,6 +90385,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.9500
 # !latitude: 53.3333
+# province: Groningen
+# admin1_quelle: Ufer 0.6 km
 Delfzijl, Ems River, Netherlands
 +00:00 :Europe/Amsterdam
 1.9202 meters
@@ -90009,6 +90765,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.6500
 # !latitude: 53.5833
+# state: west coast
+# admin1_quelle: Name
 Borkum, west coast, Germany
 +00:00 :Europe/Berlin
 1.2802 meters
@@ -90198,6 +90956,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.4500
 # !latitude: 53.2167
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Leer, Germany
 +00:00 :Europe/Berlin
 1.1887 meters
@@ -90387,6 +91147,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.9833
 # !latitude: 53.6833
+# state: north coast
+# admin1_quelle: Name
 Juist, north coast, Germany
 +00:00 :Europe/Berlin
 1.2497 meters
@@ -90576,6 +91338,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.1667
 # !latitude: 53.6167
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Norddeich, Germany
 +00:00 :Europe/Berlin
 1.4630 meters
@@ -90765,6 +91529,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.3572
 # !latitude: 53.7287
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.6 km
 Baltrum (West), Germany
 +00:00 :Europe/Berlin
 1.2802 meters
@@ -90954,6 +91720,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.4667
 # !latitude: 53.7333
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.4 km
 Langeoog, Germany
 +00:00 :Europe/Berlin
 1.4935 meters
@@ -91143,6 +91911,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.9667
 # !latitude: 53.7833
+# state: east end
+# admin1_quelle: Name
 Wangerooge, east end, Germany
 +01:00 :Europe/Berlin
 1.6459 meters
@@ -91332,6 +92102,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.0500
 # !latitude: 53.7000
+# state: Niedersachsen
+# admin1_quelle: Ufer 1.2 km
 Schillighorn, Germany
 +01:00 :Europe/Berlin
 1.6459 meters
@@ -91521,6 +92293,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.2667
 # !latitude: 53.4500
+# state: Niedersachsen
+# admin1_quelle: Ufer 2.0 km
 Schweiburger Tief, Germany
 +01:00 :Europe/Berlin
 2.0117 meters
@@ -91710,6 +92484,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.0833
 # !latitude: 53.8500
+# state: Niedersachsen
+# admin1_quelle: Ufer 11.2 km
 Roter Sand, Germany
 +01:00 :Europe/Berlin
 1.5850 meters
@@ -91899,6 +92675,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.5000
 # !latitude: 53.5000
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Nordenham, Germany
 +01:00 :Europe/Berlin
 1.7983 meters
@@ -92088,6 +92866,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4833
 # !latitude: 53.3333
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Brake, Germany
 +01:00 :Europe/Berlin
 1.7983 meters
@@ -92277,6 +93057,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4667
 # !latitude: 53.2500
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Elsfleth, Germany
 +01:00 :Europe/Berlin
 1.7374 meters
@@ -92466,6 +93248,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.5167
 # !latitude: 53.2000
+# state: Bremen
+# admin1_quelle: Polygon
 Farge, Germany
 +01:00 :Europe/Berlin
 1.6154 meters
@@ -92655,6 +93439,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.6333
 # !latitude: 53.1667
+# state: Bremen
+# admin1_quelle: Polygon
 Vegesack, Germany
 +01:00 :Europe/Berlin
 1.6459 meters
@@ -92844,6 +93630,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7833
 # !latitude: 54.2833
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 1.0 km
 Vollerwiek Plate, Germany
 +01:00 :Europe/Berlin
 1.6154 meters
@@ -93033,6 +93821,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.9500
 # !latitude: 54.3167
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Tönning, Germany
 +01:00 :Europe/Berlin
 1.7678 meters
@@ -93222,6 +94012,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7167
 # !latitude: 54.4500
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 4.6 km
 Südfall (Hever), Germany
 +01:00 :Europe/Berlin
 1.6154 meters
@@ -93411,6 +94203,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.9272
 # !latitude: 54.4675
+# state: Hever)
+# admin1_quelle: Name
 Nordstrand (Süderhafen, Hever), Germany
 +01:00 :Europe/Berlin
 1.7069 meters
@@ -93600,6 +94394,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.0500
 # !latitude: 54.4833
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Husum, Germany
 +01:00 :Europe/Berlin
 1.8288 meters
@@ -93789,6 +94585,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7000
 # !latitude: 54.5000
+# state: Pellworm
+# admin1_quelle: Name
 Ochsen Sand, Pellworm, Germany
 +01:00 :Europe/Berlin
 1.7678 meters
@@ -93978,6 +94776,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.5667
 # !latitude: 54.5833
+# state: Süder Aue
+# admin1_quelle: Name
 Hooge, Süder Aue, Germany
 +00:00 :Europe/Berlin
 1.4630 meters
@@ -94167,6 +94967,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.5833
 # !latitude: 54.6833
+# state: Norder Aue
+# admin1_quelle: Name
 Wyk, Föhr, Norder Aue, Germany
 +00:00 :Europe/Berlin
 1.4630 meters
@@ -94356,6 +95158,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.6833
 # !latitude: 54.7167
+# state: Norder Aue
+# admin1_quelle: Name
 Dagebüll, Norder Aue, Germany
 +00:00 :Europe/Berlin
 1.4935 meters
@@ -94545,6 +95349,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3634
 # !latitude: 54.9212
+# state: Lister Tief
+# admin1_quelle: Name
 Munkmarsch, Lister Tief, Germany
 +00:00 :Europe/Berlin
 0.9754 meters
@@ -94734,6 +95540,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3000
 # !latitude: 55.0667
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 5.9 km
 Lister Tief approach, Germany
 +00:00 :Europe/Berlin
 0.9449 meters
@@ -94923,6 +95731,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.6833
 # !latitude: 54.9667
+# region: Syddanmark
+# admin1_quelle: Polygon
 Højer Sluice, Denmark
 +01:00 :Europe/Copenhagen
 1.1582 meters
@@ -95112,6 +95922,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4833
 # !latitude: 55.3500
+# region: Syddanmark
+# admin1_quelle: Ufer 0.7 km
 Sønderho, Fanø Island, Denmark
 +01:00 :Europe/Copenhagen
 0.7620 meters
@@ -95301,6 +96113,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4167
 # !latitude: 55.4500
+# region: Syddanmark
+# admin1_quelle: Ufer 1.3 km
 Nordby, Fanø Island, Denmark
 +01:00 :Europe/Copenhagen
 0.7010 meters
@@ -95490,6 +96304,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3542
 # !latitude: 55.5212
+# region: Syddanmark
+# admin1_quelle: Ufer 4.2 km
 Hjerting, Denmark
 +01:00 :Europe/Copenhagen
 0.6706 meters
@@ -95679,6 +96495,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.0833
 # !latitude: 55.5500
+# region: Syddanmark
+# admin1_quelle: Ufer 0.8 km
 Blåvands Huk, Denmark
 +01:00 :Europe/Copenhagen
 0.7925 meters
@@ -95868,6 +96686,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.1904
 # !latitude: 55.8178
+# region: Midtjylland
+# admin1_quelle: Ufer 0.5 km
 Nymindegab, Denmark
 +01:00 :Europe/Copenhagen
 0.4572 meters
@@ -96057,6 +96877,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.2500
 # !latitude: 56.7833
+# region: Nordjylland
+# admin1_quelle: Polygon
 Agger, Denmark
 +01:00 :Europe/Copenhagen
 0.1829 meters
@@ -96246,6 +97068,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.9664
 # !latitude: 57.5941
+# region: Nordjylland
+# admin1_quelle: Ufer 0.3 km
 Hirtshals, Denmark
 +01:00 :Europe/Copenhagen
 0.1524 meters
@@ -96435,6 +97259,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.6049
 # !latitude: 59.6780
+# region: Akershus
+# admin1_quelle: Ufer 0.8 km
 Oscarsborg, Norway
 +00:00 :Europe/Oslo
 0.3048 meters
@@ -96624,6 +97450,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.7345
 # !latitude: 59.9085
+# region: Oslo
+# admin1_quelle: Polygon
 Oslo, Norway
 +00:00 :Europe/Oslo
 0.2743 meters
@@ -96813,6 +97641,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7674
 # !latitude: 58.4574
+# region: Aust-Agder
+# admin1_quelle: Polygon
 Arendal, Norway
 +00:00 :Europe/Oslo
 0.1829 meters
@@ -97002,6 +97832,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.5548
 # !latitude: 58.0064
+# region: Vest-Agder
+# admin1_quelle: Ufer 1.9 km
 Tregde (Mandal), Norway
 +00:00 :Europe/Oslo
 0.1829 meters
@@ -97191,6 +98023,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.7301
 # !latitude: 58.9743
+# region: Rogaland
+# admin1_quelle: Ufer 0.9 km
 Stavanger, Norway
 +00:00 :Europe/Oslo
 0.3048 meters
@@ -97380,6 +98214,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.0333
 # !latitude: 61.6000
+# region: Sogn og Fjordane
+# admin1_quelle: Ufer 4.0 km
 Florø, Norway
 +00:00 :Europe/Oslo
 0.9449 meters
@@ -97569,6 +98405,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.7361
 # !latitude: 63.1138
+# region: Møre og Romsdal
+# admin1_quelle: Ufer 2.0 km
 Kristiansund, Norway
 +00:00 :Europe/Oslo
 1.2192 meters
@@ -97758,6 +98596,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.1295
 # !latitude: 66.3176
+# region: Ranfjorden
+# admin1_quelle: Name
 Mo i Rana, Ranfjorden, Norway
 +00:00 :Europe/Oslo
 1.6154 meters
@@ -97947,6 +98787,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.4278
 # !latitude: 67.2543
+# region: Nordland
+# admin1_quelle: Polygon
 Finneid (Fauske), Norway
 +00:00 :Europe/Oslo
 0.9449 meters
@@ -98136,6 +98978,8 @@ x 0 0
 # !units: meters
 # !longitude: 16.1348
 # !latitude: 69.3261
+# region: Nordland
+# admin1_quelle: Ufer 1.7 km
 Andenes, Norway
 +00:00 :Europe/Oslo
 1.1582 meters
@@ -98329,6 +99173,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Finnmark
+# admin1_quelle: Ufer 1.8 km
 Vardøya, Norway
 +03:00 :Europe/Oslo
 1.7678 meters
@@ -98518,6 +99364,8 @@ x 0 0
 # !units: meters
 # !longitude: 31.0333
 # !latitude: 69.7667
+# region: Finnmark
+# admin1_quelle: Ufer 6.6 km
 Guba Bazarnaya, Russia
 +03:00 :Europe/Moscow
 1.9812 meters
@@ -98707,6 +99555,8 @@ x 0 0
 # !units: meters
 # !longitude: 31.3667
 # !latitude: 69.6500
+# region: Finnmark
+# admin1_quelle: Ufer 17.1 km
 Linakhamar (Pechenga Bay), Russia
 +03:00 :Europe/Moscow
 1.9507 meters
@@ -98896,6 +99746,8 @@ x 0 0
 # !units: meters
 # !longitude: 31.9333
 # !latitude: 69.7833
+# region: Bolshaya Volokovaya
+# admin1_quelle: Name
 Pummanki, Bolshaya Volokovaya, Russia
 +03:00 :Europe/Moscow
 2.0117 meters
@@ -99085,6 +99937,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.0000
 # !latitude: 69.9333
+# region: Murmansk
+# admin1_quelle: Polygon
 Vaida Bay, Russia
 +03:00 :Europe/Moscow
 2.1031 meters
@@ -99274,6 +100128,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.6833
 # !latitude: 69.7833
+# region: Murmansk
+# admin1_quelle: Polygon
 Zubovskaya Bay, Russia
 +03:00 :Europe/Moscow
 2.1641 meters
@@ -99463,6 +100319,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.1000
 # !latitude: 69.6833
+# region: Murmansk
+# admin1_quelle: Polygon
 Bolshaya Korabelnaya Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -99652,6 +100510,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.7500
 # !latitude: 69.5833
+# region: Murmansk
+# admin1_quelle: Ufer 4.7 km
 Malaya Korabelnaya Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -99841,6 +100701,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.4167
 # !latitude: 69.6333
+# region: Murmansk
+# admin1_quelle: Ufer 1.7 km
 Eyna Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -100030,6 +100892,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.1667
 # !latitude: 69.6667
+# region: Murmansk
+# admin1_quelle: Polygon
 Motka Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -100219,6 +101083,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.1500
 # !latitude: 69.7333
+# region: Murmansk
+# admin1_quelle: Ufer 1.0 km
 Ozerko Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -100408,6 +101274,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.0667
 # !latitude: 69.5833
+# region: Murmansk
+# admin1_quelle: Polygon
 Titovka Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -100597,6 +101465,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.5000
 # !latitude: 69.4833
+# region: Murmansk
+# admin1_quelle: Polygon
 Zapadnaya Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -100786,6 +101656,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.6500
 # !latitude: 69.4667
+# region: Murmansk
+# admin1_quelle: Polygon
 Vichany Islands, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -100975,6 +101847,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.8500
 # !latitude: 69.4333
+# region: Murmansk
+# admin1_quelle: Polygon
 Ara Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -101164,6 +102038,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.9167
 # !latitude: 69.3833
+# region: Murmansk
+# admin1_quelle: Ufer 1.6 km
 Nasha Bay, Ura Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -101353,6 +102229,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.1500
 # !latitude: 69.4167
+# region: Murmansk
+# admin1_quelle: Polygon
 Port Vladimirski, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -101542,6 +102420,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.0833
 # !latitude: 69.3833
+# region: Murmansk
+# admin1_quelle: Polygon
 Kislaya Harbor, Russia
 +03:00 :Europe/Moscow
 2.0117 meters
@@ -101731,6 +102611,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.4167
 # !latitude: 69.3000
+# region: Murmansk
+# admin1_quelle: Ufer 1.2 km
 Kuvshinskaya Strait, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -101920,6 +102802,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.2500
 # !latitude: 69.2500
+# region: Murmansk
+# admin1_quelle: Polygon
 Sayda Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -102109,6 +102993,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.6000
 # !latitude: 69.2667
+# region: Murmansk
+# admin1_quelle: Polygon
 Bolshaya Volokovaya Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -102298,6 +103184,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.3500
 # !latitude: 69.2167
+# region: Murmansk
+# admin1_quelle: Polygon
 Olenya Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -102487,6 +103375,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.2833
 # !latitude: 69.0833
+# region: Murmansk
+# admin1_quelle: Polygon
 Veliki Point, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -102676,6 +103566,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.0667
 # !latitude: 69.0167
+# region: Murmansk
+# admin1_quelle: Polygon
 Bazisnyy Point, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -102865,6 +103757,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.0667
 # !latitude: 68.9833
+# region: Murmansk
+# admin1_quelle: Polygon
 Murmansk, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -103054,6 +103948,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.0167
 # !latitude: 68.9333
+# region: Murmansk
+# admin1_quelle: Polygon
 Drovyanoi Point, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -103243,6 +104139,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.0167
 # !latitude: 68.8833
+# region: Murmansk
+# admin1_quelle: Polygon
 Kola, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -103432,6 +104330,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.7500
 # !latitude: 69.3000
+# region: Murmansk
+# admin1_quelle: Polygon
 Zyelyenyets Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -103621,6 +104521,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.8667
 # !latitude: 69.2833
+# region: Murmansk
+# admin1_quelle: Polygon
 Dolgaya Bay, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -103810,6 +104712,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.9667
 # !latitude: 69.3333
+# region: Murmansk
+# admin1_quelle: Ufer 3.3 km
 Bik Point, Kildin Island, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -103999,6 +104903,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.3333
 # !latitude: 69.3167
+# region: Murmansk
+# admin1_quelle: Ufer 3.3 km
 Mogilnyy Point, Kildin Island, Russia
 +03:00 :Europe/Moscow
 2.2860 meters
@@ -104188,6 +105094,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.7000
 # !latitude: 69.2500
+# region: Murmansk
+# admin1_quelle: Ufer 1.5 km
 Mali Oleni Strait, Russia
 +03:00 :Europe/Moscow
 2.2250 meters
@@ -104377,6 +105285,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.1333
 # !latitude: 69.1833
+# region: Murmansk
+# admin1_quelle: Polygon
 Teriberka Bay, Russia
 +03:00 :Europe/Moscow
 2.2250 meters
@@ -104566,6 +105476,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.9333
 # !latitude: 69.1500
+# region: Murmansk
+# admin1_quelle: Polygon
 Podpakhta Bay, Russia
 +03:00 :Europe/Moscow
 2.4079 meters
@@ -104755,6 +105667,8 @@ x 0 0
 # !units: meters
 # !longitude: 36.3000
 # !latitude: 69.0833
+# region: Murmansk
+# admin1_quelle: Ufer 1.5 km
 Porchnikha Cove, Russia
 +03:00 :Europe/Moscow
 2.4384 meters
@@ -104944,6 +105858,8 @@ x 0 0
 # !units: meters
 # !longitude: 36.8333
 # !latitude: 68.9167
+# region: Murmansk
+# admin1_quelle: Polygon
 Rynda Bay, Russia
 +03:00 :Europe/Moscow
 2.4079 meters
@@ -105133,6 +106049,8 @@ x 0 0
 # !units: meters
 # !longitude: 37.3333
 # !latitude: 68.7833
+# region: Murmansk
+# admin1_quelle: Polygon
 Kharlovka River mouth, Russia
 +03:00 :Europe/Moscow
 2.5908 meters
@@ -105322,6 +106240,8 @@ x 0 0
 # !units: meters
 # !longitude: 37.5000
 # !latitude: 68.7333
+# region: Murmansk
+# admin1_quelle: Polygon
 Semiostrovski Road, SE. entrance, Russia
 +03:00 :Europe/Moscow
 2.6213 meters
@@ -105511,6 +106431,8 @@ x 0 0
 # !units: meters
 # !longitude: 37.8000
 # !latitude: 68.6333
+# region: Murmansk
+# admin1_quelle: Polygon
 Vostochnaya Litsa Bay, Russia
 +03:00 :Europe/Moscow
 2.7737 meters
@@ -105700,6 +106622,8 @@ x 0 0
 # !units: meters
 # !longitude: 38.4167
 # !latitude: 68.3333
+# region: Murmansk
+# admin1_quelle: Polygon
 Drozdovka Bay, Russia
 +03:00 :Europe/Moscow
 2.9566 meters
@@ -105889,6 +106813,8 @@ x 0 0
 # !units: meters
 # !longitude: 39.1167
 # !latitude: 68.1833
+# region: Murmansk
+# admin1_quelle: Polygon
 Savikha Bay, Russia
 +03:00 :Europe/Moscow
 3.2004 meters
@@ -106078,6 +107004,8 @@ x 0 0
 # !units: meters
 # !longitude: 39.5000
 # !latitude: 68.0667
+# region: Murmansk
+# admin1_quelle: Polygon
 Gryemikha Bay, Russia
 +03:00 :Europe/Moscow
 3.2918 meters
@@ -106267,6 +107195,8 @@ x 0 0
 # !units: meters
 # !longitude: 39.6167
 # !latitude: 68.0333
+# region: Murmansk
+# admin1_quelle: Polygon
 Zyelyony Island, Russia
 +03:00 :Europe/Moscow
 3.2918 meters
@@ -106456,6 +107386,8 @@ x 0 0
 # !units: meters
 # !longitude: 40.9500
 # !latitude: 67.7167
+# region: Murmansk
+# admin1_quelle: Polygon
 Gorodetskaya Bay, Russia
 +03:00 :Europe/Moscow
 3.4442 meters
@@ -106645,6 +107577,8 @@ x 0 0
 # !units: meters
 # !longitude: 41.3333
 # !latitude: 67.2000
+# region: Murmansk
+# admin1_quelle: Polygon
 Cape Orlov, Russia
 +03:00 :Europe/Moscow
 3.5966 meters
@@ -106834,6 +107768,8 @@ x 0 0
 # !units: meters
 # !longitude: 41.3833
 # !latitude: 67.1000
+# region: Murmansk
+# admin1_quelle: Ufer 0.7 km
 Three Islands, Russia
 +03:00 :Europe/Moscow
 3.8100 meters
@@ -107023,6 +107959,8 @@ x 0 0
 # !units: meters
 # !longitude: 40.6833
 # !latitude: 66.4833
+# region: Murmansk
+# admin1_quelle: Ufer 3.3 km
 Sosnovets Island, Russia
 +03:00 :Europe/Moscow
 2.4384 meters
@@ -107212,6 +108150,8 @@ x 0 0
 # !units: meters
 # !longitude: 38.2833
 # !latitude: 66.0667
+# region: Murmansk
+# admin1_quelle: Ufer 2.0 km
 Tetrino, Russia
 +03:00 :Europe/Moscow
 1.0973 meters
@@ -107401,6 +108341,8 @@ x 0 0
 # !units: meters
 # !longitude: 36.9667
 # !latitude: 66.2667
+# region: Murmansk
+# admin1_quelle: Ufer 4.1 km
 Varzukha River entrance, Russia
 +03:00 :Europe/Moscow
 0.9144 meters
@@ -107590,6 +108532,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.5167
 # !latitude: 66.5500
+# region: Murmansk
+# admin1_quelle: Polygon
 Cape Turiya, Russia
 +03:00 :Europe/Moscow
 1.1887 meters
@@ -107779,6 +108723,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.3500
 # !latitude: 66.6167
+# region: Murmansk
+# admin1_quelle: Ufer 1.0 km
 Volostrov, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -107968,6 +108914,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.3333
 # !latitude: 66.7000
+# region: Murmansk
+# admin1_quelle: Polygon
 Mal Piryu Bay, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -108157,6 +109105,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.9000
 # !latitude: 66.7000
+# region: Murmansk
+# admin1_quelle: Ufer 1.0 km
 Tar Bay, Russia
 +03:00 :Europe/Moscow
 1.2497 meters
@@ -108346,6 +109296,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.8000
 # !latitude: 66.7667
+# region: Murmansk
+# admin1_quelle: Polygon
 Porya Anchorage, Russia
 +03:00 :Europe/Moscow
 1.2497 meters
@@ -108535,6 +109487,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.4167
 # !latitude: 67.1333
+# region: Murmansk
+# admin1_quelle: Ufer 1.0 km
 Kandalaksha, Russia
 +03:00 :Europe/Moscow
 1.8593 meters
@@ -108724,6 +109678,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.8833
 # !latitude: 66.7000
+# region: Murmansk
+# admin1_quelle: Polygon
 Kovda River entrance, Russia
 +03:00 :Europe/Moscow
 1.4021 meters
@@ -108913,6 +109869,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.6000
 # !latitude: 66.3000
+# region: Karelia
+# admin1_quelle: Polygon
 Sredni Anchorage, Keret Bay, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -109102,6 +110060,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.6667
 # !latitude: 65.9000
+# region: Karelia
+# admin1_quelle: Polygon
 Gridina Bay, Russia
 +03:00 :Europe/Moscow
 1.1278 meters
@@ -109291,6 +110251,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.8833
 # !latitude: 65.6667
+# region: Karelia
+# admin1_quelle: Ufer 4.3 km
 Kalgalaksha Bay entrance, Russia
 +03:00 :Europe/Moscow
 1.0668 meters
@@ -109480,6 +110442,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.6833
 # !latitude: 65.7667
+# region: Karelia
+# admin1_quelle: Polygon
 Kalgalaksha, Kalgalaksha Bay, Russia
 +03:00 :Europe/Moscow
 1.0363 meters
@@ -109669,6 +110633,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.5667
 # !latitude: 65.3167
+# region: Karelia
+# admin1_quelle: Ufer 4.3 km
 Pongama Bay, Russia
 +03:00 :Europe/Moscow
 1.0668 meters
@@ -109858,6 +110824,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.0333
 # !latitude: 65.0333
+# region: Karelia
+# admin1_quelle: Ufer 10.2 km
 Rombaki Island, Russia
 +03:00 :Europe/Moscow
 1.0973 meters
@@ -110047,6 +111015,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.1333
 # !latitude: 64.9500
+# region: Karelia
+# admin1_quelle: Ufer 12.8 km
 Kuzov Island, Russia
 +03:00 :Europe/Moscow
 0.7010 meters
@@ -110236,6 +111206,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.0000
 # !latitude: 64.8167
+# region: Karelia
+# admin1_quelle: Ufer 4.3 km
 Lukovatyy Island, Russia
 +03:00 :Europe/Moscow
 0.8534 meters
@@ -110622,6 +111594,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 2.8 km
 Sorokas Road, Russia
 +03:00 :Europe/Moscow
 1.0363 meters
@@ -110815,6 +111789,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 1.3 km
 Molchanov Island, Russia
 +03:00 :Europe/Moscow
 0.9754 meters
@@ -111008,6 +111984,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 2.4 km
 Sum Island, Russia
 +03:00 :Europe/Moscow
 1.0973 meters
@@ -111201,6 +112179,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 6.4 km
 Raz Island, Russia
 +03:00 :Europe/Moscow
 1.0973 meters
@@ -111394,6 +112374,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 3.6 km
 Berejnoi Island, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -111587,6 +112569,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 6.3 km
 Parusnitsa Beacon, Russia
 +03:00 :Europe/Moscow
 1.4630 meters
@@ -111780,6 +112764,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 0.4 km
 Ponomarev Point, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -111973,6 +112959,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 20.1 km
 Kond Island, Russia
 +03:00 :Europe/Moscow
 1.4326 meters
@@ -112166,6 +113154,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 5.0 km
 Malaya Korepalka, Russia
 +03:00 :Europe/Moscow
 1.6154 meters
@@ -112359,6 +113349,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Unezhemskaya Bay, Russia
 +03:00 :Europe/Moscow
 1.6764 meters
@@ -112552,6 +113544,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 15.1 km
 Nyapa Beacon, Russia
 +03:00 :Europe/Moscow
 1.8288 meters
@@ -112745,6 +113739,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 4.2 km
 Paskanets Islet, Russia
 +03:00 :Europe/Moscow
 2.0726 meters
@@ -112938,6 +113934,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Onega River entrance, Russia
 +03:00 :Europe/Moscow
 2.0726 meters
@@ -113131,6 +114129,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 5.2 km
 Kii Island, Onega Bay, Russia
 +03:00 :Europe/Moscow
 2.1641 meters
@@ -113324,6 +114324,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Cape Gluboki, Russia
 +03:00 :Europe/Moscow
 1.4326 meters
@@ -113517,6 +114519,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 1.3 km
 Cape Chesmenski, Russia
 +03:00 :Europe/Moscow
 0.7010 meters
@@ -113710,6 +114714,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Pushlakhta Bay, Russia
 +03:00 :Europe/Moscow
 0.7010 meters
@@ -113903,6 +114909,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Cape Letni Orlov, Russia
 +03:00 :Europe/Moscow
 0.8230 meters
@@ -114096,6 +115104,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 1.1 km
 Muksalma Island, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -114289,6 +115299,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 1.1 km
 Solovets Roads, Solovetski Island, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -114482,6 +115494,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Polygon
 Sosnovaya Bay, Solovetski Island, Russia
 +03:00 :Europe/Moscow
 1.0973 meters
@@ -114675,6 +115689,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Karelia
+# admin1_quelle: Ufer 0.6 km
 Anzerski Island, Russia
 +03:00 :Europe/Moscow
 0.8230 meters
@@ -114868,6 +115884,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 5.9 km
 Zhizhgin Island, Russia
 +03:00 :Europe/Moscow
 0.8534 meters
@@ -115061,6 +116079,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Lopshenga River entrance, Russia
 +03:00 :Europe/Moscow
 0.7315 meters
@@ -115254,6 +116274,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Unskaya Inlet, Russia
 +03:00 :Europe/Moscow
 0.6706 meters
@@ -115447,6 +116469,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 0.8 km
 Nikolskoi Bar, Russia
 +03:00 :Europe/Moscow
 0.7010 meters
@@ -115640,6 +116664,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Kyegostrov, Russia
 +03:00 :Europe/Moscow
 0.5486 meters
@@ -115833,6 +116859,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 1.8 km
 Arkhangelsk, Solombala Island, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -116026,6 +117054,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 1.2 km
 Novo Dvina Fortress, Russia
 +03:00 :Europe/Moscow
 0.7010 meters
@@ -116219,6 +117249,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 0.2 km
 Lapominka Island, Russia
 +03:00 :Europe/Moscow
 0.8230 meters
@@ -116412,6 +117444,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 7.1 km
 Mudyugskiy Island, Russia
 +03:00 :Europe/Moscow
 0.7620 meters
@@ -116605,6 +117639,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 9.5 km
 Berezovvy Bar, Russia
 +03:00 :Europe/Moscow
 0.8230 meters
@@ -116798,6 +117834,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 1.2 km
 Kuya River entrance, Russia
 +03:00 :Europe/Moscow
 0.9144 meters
@@ -116991,6 +118029,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 1.9 km
 Kerets Point, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -117184,6 +118224,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Lisunov Point, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -117377,6 +118419,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Bolshaya Tova River entrance, Russia
 +03:00 :Europe/Moscow
 0.8230 meters
@@ -117570,6 +118614,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Intsi Point, Russia
 +03:00 :Europe/Moscow
 1.3411 meters
@@ -117763,6 +118809,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Ruchi River entrance, Russia
 +03:00 :Europe/Moscow
 1.4630 meters
@@ -117956,6 +119004,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Megra River entrance, Russia
 +03:00 :Europe/Moscow
 1.5240 meters
@@ -118149,6 +119199,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Mayda River entrance, Russia
 +03:00 :Europe/Moscow
 2.1946 meters
@@ -118342,6 +119394,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Bolshaya Kedovaya River entrance, Russia
 +03:00 :Europe/Moscow
 2.5603 meters
@@ -118535,6 +119589,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Cape Voronov, Russia
 +03:00 :Europe/Moscow
 3.9624 meters
@@ -118728,6 +119784,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 0.5 km
 Morzhovetz Island, Russia
 +03:00 :Europe/Moscow
 3.3223 meters
@@ -118921,6 +119979,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Yurovati Point, Russia
 +03:00 :Europe/Moscow
 4.4501 meters
@@ -119114,6 +120174,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Cape Abramov, Russia
 +03:00 :Europe/Moscow
 5.1511 meters
@@ -119307,6 +120369,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Nerninski Point, Russia
 +03:00 :Europe/Moscow
 5.8826 meters
@@ -119500,6 +120564,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 2.2 km
 Kuloy River, Russia
 +03:00 :Europe/Moscow
 4.6330 meters
@@ -119693,6 +120759,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Semzha River mouth, Russia
 +03:00 :Europe/Moscow
 6.0960 meters
@@ -119886,6 +120954,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Piya River mouth, Mezen River, Russia
 +03:00 :Europe/Moscow
 4.2367 meters
@@ -120079,6 +121149,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Kamenka, Mezen River, Russia
 +03:00 :Europe/Moscow
 2.4079 meters
@@ -120272,6 +121344,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 1.5 km
 Cape Konushin, Russia
 +03:00 :Europe/Moscow
 3.7490 meters
@@ -120658,6 +121732,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Kiya River entrance, Russia
 +03:00 :Europe/Moscow
 2.5298 meters
@@ -120851,6 +121927,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 4.7 km
 Tarkhanovo, Russia
 +03:00 :Europe/Moscow
 2.0117 meters
@@ -121044,6 +122122,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 1.3 km
 Cape Kanin, Russia
 +03:00 :Europe/Moscow
 1.7983 meters
@@ -121237,6 +122317,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Kambalnitsa River entrance, Russia
 +03:00 :Europe/Moscow
 1.7374 meters
@@ -121430,6 +122512,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 1.0 km
 Indiga River entrance, Russia
 +03:00 :Europe/Moscow
 1.4630 meters
@@ -121623,6 +122707,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 1.6 km
 Bugrino, Kolguyev Island, Russia
 +03:00 :Europe/Moscow
 0.8839 meters
@@ -121816,6 +122902,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Russki Zavorot, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -122009,6 +123097,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Gulyayevskiye Koshki, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -122202,6 +123292,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 8.7 km
 Pyechora River bar, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -122395,6 +123487,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 0.9 km
 Cape Bolvanski, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -122588,6 +123682,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Zyelyony I., Pyechora River mouth, Russia
 +03:00 :Europe/Moscow
 0.4572 meters
@@ -122781,6 +123877,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Varandei Island, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -122974,6 +124072,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Dolgoi Island, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -123167,6 +124267,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 3.0 km
 Lyamchin Cape, Vaygach Island, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -123360,6 +124462,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 0.3 km
 Petukhovski Strait, Russia
 +03:00 :Europe/Moscow
 0.3962 meters
@@ -123553,6 +124657,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Rakhmanova Inlet, Sakhanikha Bay, Russia
 +03:00 :Europe/Moscow
 0.2438 meters
@@ -123746,6 +124852,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Propashchaya Inlet, Russia
 +03:00 :Europe/Moscow
 0.2134 meters
@@ -123939,6 +125047,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Nekhvatovo River, Russia
 +03:00 :Europe/Moscow
 0.1524 meters
@@ -124132,6 +125242,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Byelushya Bay, Russia
 +03:00 :Europe/Moscow
 0.2743 meters
@@ -124325,6 +125437,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Malyye Karmakuly, Moller Bay, Russia
 +03:00 :Europe/Moscow
 0.4267 meters
@@ -124518,6 +125632,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 2.2 km
 Pukhovy Bay, Russia
 +03:00 :Europe/Moscow
 0.5486 meters
@@ -124711,6 +125827,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 1.0 km
 Matochkin Strait, west entrance, Russia
 +03:00 :Europe/Moscow
 0.6706 meters
@@ -124904,6 +126022,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 2.0 km
 Lagernyy, Matochkin Strait, Russia
 +03:00 :Europe/Moscow
 0.4267 meters
@@ -125097,6 +126217,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Uzki Point, Matochkin Strait, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -125290,6 +126412,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Mityushikha Bay, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -125483,6 +126607,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Krestovaya Bay, Russia
 +03:00 :Europe/Moscow
 0.4267 meters
@@ -125676,6 +126802,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Gorbovi Islands, Russia
 +03:00 :Europe/Moscow
 0.4572 meters
@@ -125869,6 +126997,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 1.4 km
 Cape Zhelaniya, Russia
 +03:00 :Europe/Moscow
 0.3962 meters
@@ -126062,6 +127192,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Polygon
 Blagopoluchiya Bay, Russia
 +03:00 :Europe/Moscow
 0.3658 meters
@@ -126255,6 +127387,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 1.5 km
 Kamenka Bay, Russia
 +03:00 :Europe/Moscow
 0.4572 meters
@@ -126448,6 +127582,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 7.2 km
 Bolshoi Loginov Island, Russia
 +03:00 :Europe/Moscow
 0.4572 meters
@@ -126641,6 +127777,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 2.4 km
 Kusova Zemlya Island, Russia
 +03:00 :Europe/Moscow
 0.3962 meters
@@ -126834,6 +127972,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 1.5 km
 Bolvanski Point, Vaigach Island, Russia
 +03:00 :Europe/Moscow
 0.4877 meters
@@ -127027,6 +128167,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 0.6 km
 Bolshaya Voronov I., Vaigach Island, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -127220,6 +128362,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Dolgaya Bay, Vaigach Island, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -127413,6 +128557,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Ufer 2.4 km
 Varneka Bay, Russia
 +03:00 :Europe/Moscow
 0.4267 meters
@@ -127606,6 +128752,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Khabarovo, Russia
 +03:00 :Europe/Moscow
 0.3658 meters
@@ -127799,6 +128947,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Sokoli Island, Russia
 +03:00 :Europe/Moscow
 0.3658 meters
@@ -127992,6 +129142,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Mestnyy Island, Russia
 +03:00 :Europe/Moscow
 0.4572 meters
@@ -128185,6 +129337,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Nenets
+# admin1_quelle: Polygon
 Karskaya Bay, Russia
 +03:00 :Europe/Moscow
 0.3658 meters
@@ -128378,6 +129532,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Cape Morrasale, Russia
 +03:00 :Asia/Yekaterinburg
 0.3048 meters
@@ -128571,6 +129727,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Payndte River mouth, Russia
 +03:00 :Asia/Yekaterinburg
 0.3658 meters
@@ -128764,6 +129922,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Cape Ragozina, Belyy Island, Russia
 +03:00 :Asia/Yekaterinburg
 0.5486 meters
@@ -128957,6 +130117,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Ufer 3.8 km
 Cape Drovyanoy, Yamal Peninsula, Russia
 +03:00 :Asia/Yekaterinburg
 1.1582 meters
@@ -129150,6 +130312,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Ufer 3.2 km
 Sabule-Yaga River mouth, Russia
 +03:00 :Asia/Yekaterinburg
 0.6706 meters
@@ -129343,6 +130507,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Sabu-to River mouth, Russia
 +03:00 :Asia/Yekaterinburg
 0.3962 meters
@@ -129536,6 +130702,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Cape Kharse, Obskaya Gulf, Russia
 +03:00 :Asia/Yekaterinburg
 0.4572 meters
@@ -129729,6 +130897,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Khampyl-Yaga River mouth, Russia
 +03:00 :Asia/Yekaterinburg
 0.3048 meters
@@ -129922,6 +131092,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Cape Kamenni, Obskaya Gulf, Russia
 +03:00 :Asia/Yekaterinburg
 0.3962 meters
@@ -130115,6 +131287,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Ufer 1.1 km
 Novyy Port, Obskaya Gulf, Russia
 +03:00 :Asia/Yekaterinburg
 0.3962 meters
@@ -130308,6 +131482,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Ufer 1.8 km
 Cape Yamsale, Russia
 +03:00 :Asia/Yekaterinburg
 0.2134 meters
@@ -130501,6 +131677,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Shirokaya River mouth, Russia
 +03:00 :Asia/Yekaterinburg
 0.3353 meters
@@ -130694,6 +131872,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Oleniy Island, Russia
 +03:00 :Asia/Yekaterinburg
 0.3962 meters
@@ -130887,6 +132067,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Cape Daleki, Russia
 +03:00 :Asia/Yekaterinburg
 0.5486 meters
@@ -131080,6 +132262,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Cape Minina, Russia
 +03:00 :Asia/Yekaterinburg
 0.4267 meters
@@ -131273,6 +132457,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yamal-Nenets
+# admin1_quelle: Polygon
 Cape Chernyy, Russia
 +03:00 :Asia/Yekaterinburg
 0.3353 meters
@@ -131466,6 +132652,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Polygon
 Cape Leskina, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2134 meters
@@ -131659,6 +132847,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 14.0 km
 Korsakovskiye Islands, Russia
 +03:00 :Asia/Krasnoyarsk
 0.3048 meters
@@ -131852,6 +133042,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 1.0 km
 Olginski Sand, Yenisey River, Russia
 +03:00 :Asia/Krasnoyarsk
 0.4572 meters
@@ -132045,6 +133237,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 1.0 km
 Cape Sopochnaya Korga, Yenisey Gulf, Russia
 +03:00 :Asia/Krasnoyarsk
 0.3962 meters
@@ -132238,6 +133432,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 0.8 km
 Golchikha, Yenisey River, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2438 meters
@@ -132431,6 +133627,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 4.0 km
 Nasonovski Island, Yenisey River, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2134 meters
@@ -132624,6 +133822,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 1.8 km
 Cape Efremov-Kamen, Russia
 +03:00 :Asia/Krasnoyarsk
 0.1524 meters
@@ -132817,6 +134017,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 3.4 km
 Rastorguyeva Island, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2743 meters
@@ -133006,6 +134208,8 @@ x 0 0
 # !units: meters
 # !longitude: 85.5667
 # !latitude: 73.8000
+# region: Krasnoyarsk
+# admin1_quelle: Polygon
 Cape Zveroboi, Russia
 +03:00 :Asia/Krasnoyarsk
 0.3048 meters
@@ -133199,6 +134403,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Polygon
 Pyasina River entrance, Russia
 +03:00 :Asia/Krasnoyarsk
 0.3048 meters
@@ -133392,6 +134598,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 10.5 km
 Rybnyye Islands, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2134 meters
@@ -133585,6 +134793,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 5.1 km
 Sev. (North) Plavikovy Island, Russia
 +03:00 :Asia/Krasnoyarsk
 0.1829 meters
@@ -133778,6 +134988,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Krasnoyarsk
+# admin1_quelle: Ufer 0.8 km
 Cape Sterlegova, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2134 meters
@@ -134156,6 +135368,8 @@ x 0 0
 # !units: meters
 # !longitude: 76.8833
 # !latitude: 79.4833
+# region: Krasnoyarsk
+# admin1_quelle: Polygon
 Vize Island, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2438 meters
@@ -134349,6 +135563,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 3.0 km
 Cape Flora, Russia
 +03:00 :Europe/Moscow
 0.2438 meters
@@ -134542,6 +135758,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Arkhangel'sk
+# admin1_quelle: Ufer 0.4 km
 Teplitts Bay, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -134731,6 +135949,8 @@ x 0 0
 # !units: meters
 # !longitude: 19.2000
 # !latitude: 74.4833
+# region: Barents Sea
+# admin1_quelle: Name
 Bear Island, Barents Sea, Svalbard
 +00:00 :Arctic/Longyearbyen
 0.4877 meters
@@ -134920,6 +136140,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.5667
 # !latitude: 78.2500
+# region: Vestspitsbergen
+# admin1_quelle: Name
 Advent Bay, Vestspitsbergen, Norway
 +00:00 :Arctic/Longyearbyen
 0.6706 meters
@@ -135109,6 +136331,8 @@ x 0 0
 # !units: meters
 # !longitude: 11.2167
 # !latitude: 79.5500
+# region: Vestspitsbergen
+# admin1_quelle: Name
 Magdalenefjord, Vestspitsbergen, Svalbard
 +00:00 :Arctic/Longyearbyen
 0.4572 meters
@@ -135298,6 +136522,8 @@ x 0 0
 # !units: meters
 # !longitude: 16.9000
 # !latitude: 79.8833
+# region: Vestspitsbergen
+# admin1_quelle: Name
 Sorgfjord, Vestspitsbergen, Svalbard
 +00:00 :Arctic/Longyearbyen
 0.3962 meters

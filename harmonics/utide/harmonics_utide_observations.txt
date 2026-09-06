@@ -15036,6 +15036,8 @@ MNUS2
 # !units: meters
 # !longitude: -69.020000
 # !latitude: 12.187000
+# region: Curaçao
+# admin1_quelle: Polygon
 Bullen Bay, Curaçao
 +00:00 :UTC
 4.1427 meters
@@ -15232,6 +15234,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.0384
 # !latitude: 12.5165
+# region: Aruba
+# admin1_quelle: Ufer 1.4 km
 Oranjestad, Aruba
 +00:00 :UTC
 0.6353 meters
@@ -15428,6 +15432,8 @@ x 0 0
 # !units: meters
 # !longitude: -68.278000
 # !latitude: 12.150000
+# region: Bonaire
+# admin1_quelle: Name
 Kralendijk, Bonaire, Caribbean Netherlands
 +00:00 :UTC
 0.0848 meters
@@ -15624,6 +15630,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.820600
 # !latitude: 17.590800
+# region: Barbuda
+# admin1_quelle: Polygon
 Barbuda, Antigua and Barbuda
 +00:00 :UTC
 0.0000 meters
@@ -17018,6 +17026,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.910000
 # !latitude: -41.050000
+# state: Tasmania
+# admin1_quelle: Name
 Burnie, Tasmania, Australia
 +10:00 :Australia/Hobart
 1.9759 meters
@@ -17217,6 +17227,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.060000
 # !latitude: -19.280000
+# state: Queensland
+# admin1_quelle: Name
 Cape Ferguson, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.7710 meters
@@ -17419,6 +17431,8 @@ x 0 0
 # !latitude: -12.1167
 # note: 20260903 Provinz "Western Australia" ergaenzt (Nachbarn ab 4 km),
 # note: siehe py/provinz_ergaenzen.py.
+# state: Western Australia
+# admin1_quelle: Name
 Bantam, Cocos Islands, Western Australia, Australia
 +06:30 :Indian/Cocos
 0.9246 meters
@@ -17616,6 +17630,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.4173
 # !latitude: -13.8591
+# state: Northern Territory
+# admin1_quelle: Name
 Groote Eylandt, Northern Territory, Australia
 +09:30 :Australia/Darwin
 1.2379 meters
@@ -17815,6 +17831,8 @@ x 0 0
 # !units: meters
 # !longitude: 115.740000
 # !latitude: -31.830000
+# state: Western Australia
+# admin1_quelle: Name
 Hillarys, Western Australia, Australia
 +08:00 :Australia/Perth
 0.8634 meters
@@ -18009,6 +18027,8 @@ x 0 0
 # !units: meters
 # !longitude: 143.9882
 # !latitude: -38.5470
+# state: Victoria
+# admin1_quelle: Name
 Lorne, Victoria, Australia
 +10:00 :Australia/Melbourne
 1.5165 meters
@@ -18208,6 +18228,8 @@ x 0 0
 # !units: meters
 # !longitude: 150.9113
 # !latitude: -34.4719
+# state: New South Wales
+# admin1_quelle: Name
 Port Kembla, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.9601 meters
@@ -18407,6 +18429,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.470000
 # !latitude: -35.110000
+# state: South Australia
+# admin1_quelle: Name
 Port Stanvac, South Australia, Australia
 +09:30 :Australia/Adelaide
 1.1531 meters
@@ -18606,6 +18630,8 @@ x 0 0
 # !units: meters
 # !longitude: 150.790000
 # !latitude: -23.160000
+# state: Queensland
+# admin1_quelle: Name
 Rosslyn Bay, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.4977 meters
@@ -18802,6 +18828,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.2233
 # !latitude: -38.3730
+# state: Victoria
+# admin1_quelle: Name
 Stony Point (Westernport), Victoria, Australia
 +10:00 :Australia/Melbourne
 1.7404 meters
@@ -18997,6 +19025,8 @@ x 0 0
 # !units: meters
 # !longitude: 142.2199
 # !latitude: -10.5866
+# state: Queensland
+# admin1_quelle: Name
 Thursday Island, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.9521 meters
@@ -19191,6 +19221,8 @@ x 0 0
 # !units: meters
 # !longitude: 148.250000
 # !latitude: -20.020000
+# state: Queensland
+# admin1_quelle: Name
 Bowen, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.8719 meters
@@ -19383,6 +19415,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.7798
 # !latitude: -16.9319
+# state: Queensland
+# admin1_quelle: Name
 Cairns, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.7763 meters
@@ -19575,6 +19609,8 @@ x 0 0
 # !units: meters
 # !longitude: 146.030000
 # !latitude: -18.270000
+# state: Queensland
+# admin1_quelle: Name
 Cardwell, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.0290 meters
@@ -19769,6 +19805,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.2494
 # !latitude: -15.4628
+# state: Queensland
+# admin1_quelle: Name
 Cooktown, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.6702 meters
@@ -19961,6 +19999,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.8362
 # !latitude: -17.4858
+# state: Queensland
+# admin1_quelle: Name
 Karumba, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.2523 meters
@@ -20153,6 +20193,8 @@ x 0 0
 # !units: meters
 # !longitude: 149.2295
 # !latitude: -21.1098
+# state: Queensland
+# admin1_quelle: Name
 Mackay Outer Harbour, Queensland, Australia
 +10:00 :Australia/Brisbane
 3.1161 meters
@@ -20345,6 +20387,8 @@ x 0 0
 # !units: meters
 # !longitude: 153.120000
 # !latitude: -26.680000
+# state: Queensland
+# admin1_quelle: Name
 Mooloolaba, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.0339 meters
@@ -20539,6 +20583,8 @@ x 0 0
 # !units: meters
 # !longitude: 146.1211
 # !latitude: -17.6015
+# state: Queensland
+# admin1_quelle: Name
 Mourilyan Harbour, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.8610 meters
@@ -20731,6 +20777,8 @@ x 0 0
 # !units: meters
 # !longitude: 153.4188
 # !latitude: -27.9648
+# state: Queensland
+# admin1_quelle: Name
 Southport, Queensland, Australia
 +10:00 :Australia/Brisbane
 0.9251 meters
@@ -20923,6 +20971,8 @@ x 0 0
 # !units: meters
 # !longitude: 152.9101
 # !latitude: -25.2932
+# state: Queensland
+# admin1_quelle: Name
 Urangan, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.1799 meters
@@ -21119,6 +21169,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.8688
 # !latitude: -12.6722
+# state: Queensland
+# admin1_quelle: Name
 Weipa, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.9718 meters
@@ -21316,6 +21368,8 @@ x 0 0
 # !units: meters
 # !longitude: 151.2258
 # !latitude: -33.8547
+# state: New South Wales
+# admin1_quelle: Name
 Fort Denison, New South Wales, Australia
 +10:00 :Australia/Sydney
 1.0160 meters
@@ -21513,6 +21567,8 @@ x 0 0
 # !units: meters
 # !longitude: 159.0582
 # !latitude: -31.5236
+# state: Tasman Sea
+# admin1_quelle: Name
 Lord Howe Island, Tasman Sea, Australia
 +10:30 :Australia/Lord_Howe
 1.1244 meters
@@ -21908,6 +21964,8 @@ x 0 0
 # !units: meters
 # !longitude: 115.733000
 # !latitude: -32.050000
+# state: Western Australia
+# admin1_quelle: Name
 Fremantle, Western Australia, Australia
 +08:00 :Australia/Perth
 0.8503 meters
@@ -22104,6 +22162,8 @@ x 0 0
 # !units: meters
 # !longitude: 113.617000
 # !latitude: -24.883000
+# state: Western Australia
+# admin1_quelle: Name
 Carnarvon, Western Australia, Australia
 +08:00 :Australia/Perth
 1.0683 meters
@@ -22302,6 +22362,8 @@ x 0 0
 # !units: meters
 # !longitude: 118.567000
 # !latitude: -20.317000
+# state: Western Australia
+# admin1_quelle: Name
 Port Hedland, Western Australia, Australia
 +08:00 :Australia/Perth
 3.9776 meters
@@ -22496,6 +22558,8 @@ x 0 0
 # !units: meters
 # !longitude: 128.101000
 # !latitude: -15.453000
+# state: Western Australia
+# admin1_quelle: Name
 Wyndham, Western Australia, Australia
 +08:00 :Australia/Perth
 4.6250 meters
@@ -22892,6 +22956,8 @@ x 0 0
 # !units: meters
 # !longitude: 153.1718
 # !latitude: -27.3608
+# state: Queensland
+# admin1_quelle: Name
 Brisbane Bar, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.3409 meters
@@ -23088,6 +23154,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.917000
 # !latitude: -10.600000
+# state: Queensland
+# admin1_quelle: Name
 Booby Island, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.5166 meters
@@ -23284,6 +23352,8 @@ x 0 0
 # !units: meters
 # !longitude: 146.833000
 # !latitude: -19.250000
+# state: Queensland
+# admin1_quelle: Name
 Townsville, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.0150 meters
@@ -23481,6 +23551,8 @@ x 0 0
 # !units: meters
 # !longitude: 152.3856
 # !latitude: -24.7624
+# state: Queensland
+# admin1_quelle: Name
 Bundaberg (Burnett Heads), Queensland, Australia
 +10:00 :Australia/Brisbane
 1.7997 meters
@@ -23676,6 +23748,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.3408
 # !latitude: -42.8768
+# state: Tasmania
+# admin1_quelle: Name
 Hobart, Tasmania, Australia
 +10:00 :Australia/Hobart
 0.9195 meters
@@ -23875,6 +23949,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.9299
 # !latitude: -42.5482
+# state: Tasmania
+# admin1_quelle: Name
 Spring Bay, Tasmania, Australia
 +10:00 :Australia/Hobart
 1.1916 meters
@@ -24074,6 +24150,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.640000
 # !latitude: -32.150000
+# state: South Australia
+# admin1_quelle: Name
 Thevenard, South Australia, Australia
 +09:30 :Australia/Adelaide
 1.0916 meters
@@ -24273,6 +24351,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.613000
 # !latitude: -38.343000
+# state: Victoria
+# admin1_quelle: Name
 Portland, Victoria, Australia
 +10:00 :Australia/Melbourne
 0.6025 meters
@@ -24472,6 +24552,8 @@ x 0 0
 # !units: meters
 # !longitude: 122.2179
 # !latitude: -18.0017
+# state: Western Australia
+# admin1_quelle: Name
 Broome, Western Australia, Australia
 +08:00 :Australia/Perth
 3.5030 meters
@@ -24671,6 +24753,8 @@ x 0 0
 # !units: meters
 # !longitude: 121.900000
 # !latitude: -33.867000
+# state: Western Australia
+# admin1_quelle: Name
 Esperance, Western Australia, Australia
 +08:00 :Australia/Perth
 0.8189 meters
@@ -24870,6 +24954,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.850000
 # !latitude: -12.467000
+# state: Northern Territory
+# admin1_quelle: Name
 Darwin, Northern Territory, Australia
 +09:30 :Australia/Darwin
 4.2740 meters
@@ -25068,6 +25154,8 @@ x 0 0
 # !units: meters
 # !longitude: -59.6310
 # !latitude: 13.1110
+# region: Saint Michael
+# admin1_quelle: Ufer 0.6 km
 Bridgetown, Barbados
 +00:00 :UTC
 0.0000 meters
@@ -25267,6 +25355,8 @@ MNUS2           0.0000  0.00
 # !units: meters
 # !longitude: 91.8209
 # !latitude: 22.2417
+# region: Chittagong
+# admin1_quelle: Ufer 0.9 km
 Dakshin Bandar (Chittagong 15 No. Ghat), Bangladesh
 +00:00 :Asia/Dhaka
 3.4917 meters
@@ -25461,6 +25551,8 @@ x 0 0
 # !units: meters
 # !longitude: 89.4622
 # !latitude: 21.8174
+# region: Khulna
+# admin1_quelle: Polygon
 Hiron Point (Pasur River), Bangladesh
 +00:00 :Asia/Dhaka
 1.8428 meters
@@ -25654,6 +25746,8 @@ x 0 0
 # !units: meters
 # !longitude: 91.8191
 # !latitude: 22.2691
+# region: Chittagong
+# admin1_quelle: Polygon
 Chittagong (Dry Dock, Kharnapuli River), Bangladesh
 +00:00 :Asia/Dhaka
 2.4192 meters
@@ -25848,6 +25942,8 @@ x 0 0
 # !units: meters
 # !longitude: 91.9695
 # !latitude: 21.4511
+# region: Chittagong
+# admin1_quelle: Polygon
 Cox's Bazaar, Bangladesh
 +00:00 :Asia/Dhaka
 2.0801 meters
@@ -26042,6 +26138,8 @@ x 0 0
 # !units: meters
 # !longitude: 92.3108
 # !latitude: 20.8708
+# region: Chittagong
+# admin1_quelle: Ufer 1.4 km
 Teknaf, Bangladesh
 +00:00 :Asia/Dhaka
 2.5033 meters
@@ -26236,6 +26334,8 @@ x 0 0
 # !units: meters
 # !longitude: 90.2187
 # !latitude: 21.9844
+# region: Barisal
+# admin1_quelle: Polygon
 Khepupara, Bangladesh
 +00:00 :Asia/Dhaka
 2.3291 meters
@@ -26434,6 +26534,8 @@ x 0 0
 # !units: meters
 # !longitude: 97.6180
 # !latitude: 16.4830
+# state: Mon
+# admin1_quelle: Ufer 1.2 km
 Mawlamyaing (Thanlwin River), Myanmar
 +00:00 :Asia/Yangon
 2.8318 meters
@@ -26632,6 +26734,8 @@ x 0 0
 # !units: meters
 # !longitude: 92.9034
 # !latitude: 20.1405
+# state: Rakhine
+# admin1_quelle: Ufer 0.7 km
 Sittwe (Akyab), Myanmar
 +00:00 :Asia/Yangon
 3.3423 meters
@@ -26828,6 +26932,8 @@ x 0 0
 # !units: meters
 # !longitude: 48.281100
 # !latitude: -13.407989
+# region: Diana
+# admin1_quelle: Ufer 1.8 km
 Andoany / Hell-Ville (Nosy Be), Madagascar
 +00:00 :Indian/Antananarivo
 2.2172 meters
@@ -27021,6 +27127,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.5695
 # !latitude: -25.9757
+# province: Maputo
+# admin1_quelle: Ufer 1.0 km
 Maputo, Mozambique
 +00:00 :Africa/Maputo
 2.0536 meters
@@ -27220,6 +27328,8 @@ x 0 0
 # !units: meters
 # !longitude: 40.4880
 # !latitude: -12.9670
+# province: Cabo Delgado
+# admin1_quelle: Ufer 1.0 km
 Pemba (Porto Amelia), Mozambique
 +00:00 :Africa/Maputo
 2.3306 meters
@@ -27413,6 +27523,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.467076
 # !latitude: 51.033779
+# province: Antwerp
+# admin1_quelle: Polygon
 Mechelen Benedensluis, Belgium
 +01:00 :Europe/Brussels
 3.1961 meters
@@ -27606,6 +27718,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.496889
 # !latitude: 51.023641
+# province: Antwerp
+# admin1_quelle: Polygon
 Mechelen Stuw Afwaarts, Belgium
 +01:00 :Europe/Brussels
 3.5091 meters
@@ -27799,6 +27913,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.497031
 # !latitude: 51.023389
+# province: Antwerp
+# admin1_quelle: Polygon
 Mechelen Stuw Opwaarts, Belgium
 +01:00 :Europe/Brussels
 4.4380 meters
@@ -27992,6 +28108,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.430267
 # !latitude: 51.064029
+# province: Antwerp
+# admin1_quelle: Polygon
 Zennegat Afwaarts DVW, Belgium
 +01:00 :Europe/Brussels
 3.0105 meters
@@ -28185,6 +28303,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.144160
 # !latitude: 51.106278
+# province: East Flanders
+# admin1_quelle: Polygon
 Hamme, Belgium
 +01:00 :Europe/Brussels
 2.8882 meters
@@ -28378,6 +28498,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.173916
 # !latitude: 51.109637
+# province: East Flanders
+# admin1_quelle: Polygon
 Tielrode, Belgium
 +01:00 :Europe/Brussels
 2.7661 meters
@@ -28571,6 +28693,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.087806
 # !latitude: 51.101856
+# province: East Flanders
+# admin1_quelle: Polygon
 Waasmunster Brug, Belgium
 +01:00 :Europe/Brussels
 3.6424 meters
@@ -28764,6 +28888,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.067105
 # !latitude: 51.107937
+# province: East Flanders
+# admin1_quelle: Polygon
 Waasmunster Manta, Belgium
 +01:00 :Europe/Brussels
 4.5561 meters
@@ -28957,6 +29083,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.648965
 # !latitude: 51.127219
+# province: Antwerp
+# admin1_quelle: Polygon
 Kessel, Belgium
 +01:00 :Europe/Brussels
 4.2073 meters
@@ -29150,6 +29278,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.589244
 # !latitude: 51.133439
+# province: Antwerp
+# admin1_quelle: Polygon
 Lier Maasfort, Belgium
 +01:00 :Europe/Brussels
 3.9520 meters
@@ -29343,6 +29473,8 @@ x 0 0
 # !units: meters
 # !longitude: 2.757461
 # !latitude: 51.134584
+# province: West Flanders
+# admin1_quelle: Polygon
 Nieuwpoort Iepersluis Afwaarts DVW, Belgium
 +01:00 :Europe/Brussels
 2.4592 meters
@@ -29536,6 +29668,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.608634
 # !latitude: 51.158029
+# province: Antwerp
+# admin1_quelle: Polygon
 Emblem, Belgium
 +01:00 :Europe/Brussels
 4.0767 meters
@@ -29729,6 +29863,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.530167
 # !latitude: 51.109139
+# province: Antwerp
+# admin1_quelle: Polygon
 Duffel Sluis, Belgium
 +01:00 :Europe/Brussels
 3.1717 meters
@@ -29922,6 +30058,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.571825
 # !latitude: 51.126359
+# province: Antwerp
+# admin1_quelle: Polygon
 Lier Molbrug, Belgium
 +01:00 :Europe/Brussels
 3.6401 meters
@@ -30115,6 +30253,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.424416
 # !latitude: 51.073443
+# province: Antwerp
+# admin1_quelle: Polygon
 Rumst, Belgium
 +01:00 :Europe/Brussels
 2.8834 meters
@@ -30311,6 +30451,8 @@ x 0 0
 # !units: meters
 # !longitude: 2.7281
 # !latitude: 51.1506
+# province: West Flanders
+# admin1_quelle: Polygon
 Nieuwpoort, Belgium
 +01:00 :Europe/Brussels
 2.3790 meters
@@ -30509,6 +30651,8 @@ x 0 0
 # !units: meters
 # !longitude: 2.926681
 # !latitude: 51.234286
+# province: West Flanders
+# admin1_quelle: Polygon
 Oostende, Belgium
 +01:00 :Europe/Brussels
 2.3826 meters
@@ -30702,6 +30846,8 @@ x 0 0
 # !units: meters
 # !longitude: 2.947130
 # !latitude: 51.222885
+# province: West Flanders
+# admin1_quelle: Polygon
 Oostende-Sas Slijkens Afwaarts DVW, Belgium
 +01:00 :Europe/Brussels
 2.4501 meters
@@ -30900,6 +31046,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.200364
 # !latitude: 51.346400
+# province: West Flanders
+# admin1_quelle: Ufer 5.6 km
 Zeebrugge, Belgium
 +01:00 :Europe/Brussels
 2.3802 meters
@@ -31093,6 +31241,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.214476
 # !latitude: 51.336553
+# province: West Flanders
+# admin1_quelle: Polygon
 Zeebrugge Vandammesluis Afwaarts DVW, Belgium
 +01:00 :Europe/Brussels
 2.2872 meters
@@ -31286,6 +31436,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.360221
 # !latitude: 51.084414
+# province: Antwerp
+# admin1_quelle: Polygon
 Boom Rupelbrug DVW, Belgium
 +01:00 :Europe/Brussels
 2.8038 meters
@@ -31479,6 +31631,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.353686
 # !latitude: 51.086858
+# province: Antwerp
+# admin1_quelle: Polygon
 Boom, Belgium
 +01:00 :Europe/Brussels
 2.7615 meters
@@ -31672,6 +31826,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.366943
 # !latitude: 51.081187
+# province: Antwerp
+# admin1_quelle: Polygon
 Klein Willebroek Sluis Afwaarts DVW, Belgium
 +01:00 :Europe/Brussels
 3.4823 meters
@@ -31865,6 +32021,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.418806
 # !latitude: 51.073669
+# province: Antwerp
+# admin1_quelle: Polygon
 Walem, Belgium
 +01:00 :Europe/Brussels
 2.8758 meters
@@ -32058,6 +32216,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.399914
 # !latitude: 51.227468
+# province: Antwerp
+# admin1_quelle: Polygon
 Antwerpen, Belgium
 +01:00 :Europe/Brussels
 2.5804 meters
@@ -32251,6 +32411,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.086837
 # !latitude: 51.043790
+# province: East Flanders
+# admin1_quelle: Polygon
 Dendermonde Afwaarts DVW, Belgium
 +01:00 :Europe/Brussels
 3.1791 meters
@@ -32444,6 +32606,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.103857
 # !latitude: 51.034557
+# province: East Flanders
+# admin1_quelle: Polygon
 Dendermonde, Belgium
 +01:00 :Europe/Brussels
 3.0570 meters
@@ -32637,6 +32801,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.170995
 # !latitude: 51.092557
+# province: East Flanders
+# admin1_quelle: Polygon
 Driegoten, Belgium
 +01:00 :Europe/Brussels
 2.7848 meters
@@ -32830,6 +32996,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.747217
 # !latitude: 51.047055
+# province: East Flanders
+# admin1_quelle: Polygon
 Gentbrugge, Belgium
 +01:00 :Europe/Brussels
 5.0964 meters
@@ -33023,6 +33191,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.330075
 # !latitude: 51.143320
+# province: Antwerp
+# admin1_quelle: Polygon
 Hemiksem, Belgium
 +01:00 :Europe/Brussels
 2.6286 meters
@@ -33216,6 +33386,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.298524
 # !latitude: 51.267998
+# province: Antwerp
+# admin1_quelle: Polygon
 Kallosluis, Belgium
 +01:00 :Europe/Brussels
 2.5449 meters
@@ -33409,6 +33581,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.285994
 # !latitude: 51.296424
+# province: East Flanders
+# admin1_quelle: Polygon
 Liefkenshoek, Belgium
 +01:00 :Europe/Brussels
 2.5328 meters
@@ -33602,6 +33776,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.805347
 # !latitude: 51.004325
+# province: East Flanders
+# admin1_quelle: Polygon
 Melle, Belgium
 +01:00 :Europe/Brussels
 3.5957 meters
@@ -33795,6 +33971,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.751126
 # !latitude: 51.008261
+# province: East Flanders
+# admin1_quelle: Polygon
 Merelbeke Afwaarts DVW, Belgium
 +01:00 :Europe/Brussels
 3.6727 meters
@@ -33988,6 +34166,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.237932
 # !latitude: 51.348327
+# province: East Flanders
+# admin1_quelle: Polygon
 Prosperpolder (Schelde), Belgium
 +01:00 :Europe/Brussels
 2.5037 meters
@@ -34181,6 +34361,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.315665
 # !latitude: 51.126028
+# province: Antwerp
+# admin1_quelle: Polygon
 Schelle, Belgium
 +01:00 :Europe/Brussels
 2.6748 meters
@@ -34374,6 +34556,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.012083
 # !latitude: 51.005366
+# province: East Flanders
+# admin1_quelle: Polygon
 Schoonaarde Brug, Belgium
 +01:00 :Europe/Brussels
 3.2965 meters
@@ -34567,6 +34751,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.007578
 # !latitude: 51.004666
+# province: East Flanders
+# admin1_quelle: Polygon
 Schoonaarde, Belgium
 +01:00 :Europe/Brussels
 3.2967 meters
@@ -34760,6 +34946,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.197217
 # !latitude: 51.052638
+# province: Antwerp
+# admin1_quelle: Polygon
 Sint-Amands, Belgium
 +01:00 :Europe/Brussels
 2.8374 meters
@@ -34953,6 +35141,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.218673
 # !latitude: 51.122809
+# province: East Flanders
+# admin1_quelle: Polygon
 Temse, Belgium
 +01:00 :Europe/Brussels
 2.7287 meters
@@ -35146,6 +35336,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.959686
 # !latitude: 51.012687
+# province: East Flanders
+# admin1_quelle: Polygon
 Uitbergen, Belgium
 +01:00 :Europe/Brussels
 3.3329 meters
@@ -35339,6 +35531,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.876655
 # !latitude: 51.007090
+# province: East Flanders
+# admin1_quelle: Polygon
 Wetteren Brug, Belgium
 +01:00 :Europe/Brussels
 3.4652 meters
@@ -35532,6 +35726,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.881577
 # !latitude: 51.008436
+# province: East Flanders
+# admin1_quelle: Polygon
 Wetteren, Belgium
 +01:00 :Europe/Brussels
 3.4683 meters
@@ -35725,6 +35921,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.302773
 # !latitude: 51.118940
+# province: Antwerp
+# admin1_quelle: Polygon
 Wintam Sluis Afwaarts DVW, Belgium
 +01:00 :Europe/Brussels
 2.6664 meters
@@ -35918,6 +36116,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.270543
 # !latitude: 51.349460
+# province: Antwerp
+# admin1_quelle: Ufer 0.9 km
 Zandvliet, Belgium
 +01:00 :Europe/Brussels
 2.5030 meters
@@ -36111,6 +36311,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.448936
 # !latitude: 51.015219
+# province: Antwerp
+# admin1_quelle: Polygon
 Hombeek, Belgium
 +01:00 :Europe/Brussels
 3.4220 meters
@@ -36304,6 +36506,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.464076
 # !latitude: 50.995219
+# province: Flemish Brabant
+# admin1_quelle: Polygon
 Zemst, Belgium
 +01:00 :Europe/Brussels
 3.8973 meters
@@ -37683,6 +37887,8 @@ x 0 0
 # !units: meters
 # !longitude: -64.6578
 # !latitude: 18.4275
+# region: Tortola
+# admin1_quelle: Name
 Cane Garden Bay, Tortola, British Virgin Islands
 +00:00 :UTC
 3.0909 meters
@@ -37882,6 +38088,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.1260
 # !latitude: 4.0058
+# province: Sud-Ouest
+# admin1_quelle: Ufer 1.4 km
 Limbé (Port Sonara), Cameroon
 +00:00 :UTC
 0.0000 meters
@@ -38081,6 +38289,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.737000
 # !latitude: 0.348000
+# region: São Tomé
+# admin1_quelle: Polygon
 São Tomé (Baía de Ana Chaves), São Tomé and Príncipe
 +00:00 :UTC
 0.0000 meters
@@ -38276,6 +38486,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.2345
 # !latitude: -8.7861
+# province: Luanda
+# admin1_quelle: Ufer 1.8 km
 Luanda, Angola
 +00:00 :UTC
 0.0000 meters
@@ -38473,6 +38685,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.5592
 # !latitude: -12.3355
+# province: Benguela
+# admin1_quelle: Ufer 0.3 km
 Lobito, Angola
 +00:00 :UTC
 0.0000 meters
@@ -38668,6 +38882,8 @@ x 0 0
 # !units: meters
 # !longitude: 12.1462
 # !latitude: -15.1929
+# province: Namibe
+# admin1_quelle: Polygon
 Moçâmedes (Namibe), Angola
 +00:00 :UTC
 0.0000 meters
@@ -48021,6 +48237,8 @@ x 0 0
 # !units: meters
 # !longitude: -22.983000
 # !latitude: 16.750000
+# region: Sal
+# admin1_quelle: Ufer 1.0 km
 Palmeira (Sal), Cape Verde
 +00:00 :UTC
 1.5441 meters
@@ -48217,6 +48435,8 @@ x 0 0
 # !units: meters
 # !longitude: -23.508000
 # !latitude: 14.908000
+# region: Praia
+# admin1_quelle: Ufer 0.6 km
 Praia (Santiago), Cape Verde
 +00:00 :UTC
 0.0004 meters
@@ -48412,6 +48632,8 @@ x 0 0
 # !units: meters
 # !longitude: -24.9932
 # !latitude: 16.8868
+# region: São Vicente
+# admin1_quelle: Name
 Mindelo (Porto Grande Bay), São Vicente, Cape Verde
 +00:00 :UTC
 -0.0081 meters
@@ -48605,6 +48827,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.063600
 # !latitude: 14.601900
+# region: Martinique
+# admin1_quelle: Ufer 0.5 km
 Fort-de-France, Martinique
 +00:00 :UTC
 0.0000 meters
@@ -48804,6 +49028,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.531400
 # !latitude: 16.224400
+# region: Guadeloupe
+# admin1_quelle: Ufer 1.0 km
 Pointe-à-Pitre, Guadeloupe
 +00:00 :UTC
 0.0000 meters
@@ -49000,6 +49226,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.795900
 # !latitude: 16.305300
+# region: Guadeloupe
+# admin1_quelle: Name
 Deshaies, Guadeloupe, France
 +00:00 :UTC
 0.0000 meters
@@ -49196,6 +49424,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.226600
 # !latitude: 14.807600
+# region: Martinique
+# admin1_quelle: Ufer 0.0 km
 Le Précheur, Martinique
 +00:00 :UTC
 0.0000 meters
@@ -49392,6 +49622,8 @@ x 0 0
 # !units: meters
 # !longitude: -76.117000
 # !latitude: 21.117000
+# province: Holguín
+# admin1_quelle: Ufer 1.5 km
 Gibara, Cuba
 +00:00 :America/Havana
 1.0038 meters
@@ -49586,6 +49818,8 @@ x 0 0
 # !units: meters
 # !longitude: -75.1512
 # !latitude: 19.9176
+# province: Guantánamo
+# admin1_quelle: Ufer 6.0 km
 Guantanamo Bay, Cuba
 +00:00 :America/Havana
 0.7290 meters
@@ -49785,6 +50019,8 @@ x 0 0
 # !units: meters
 # !longitude: -76.8447
 # !latitude: 17.9348
+# region: Saint Andrew
+# admin1_quelle: Ufer 1.3 km
 Port Royal, Jamaica
 +00:00 :America/Jamaica
 0.4939 meters
@@ -49984,6 +50220,8 @@ x 0 0
 # !units: meters
 # !longitude: -78.9912
 # !latitude: 26.7025
+# region: West Grand Bahama
+# admin1_quelle: Ufer 0.4 km
 Settlement Point, Bahamas
 +00:00 :America/Nassau
 1.1239 meters
@@ -50179,6 +50417,8 @@ x 0 0
 # !units: meters
 # !longitude: -88.622000
 # !latitude: 15.695000
+# region: Izabal
+# admin1_quelle: Polygon
 Puerto Barrios, Guatemala
 +00:00 :America/Guatemala
 0.3040 meters
@@ -50377,6 +50617,8 @@ x 0 0
 # !units: meters
 # !longitude: -81.383000
 # !latitude: 19.295000
+# region: Grand Cayman
+# admin1_quelle: Name
 George Town, Grand Cayman, Cayman Islands
 +00:00 :UTC
 0.0000 meters
@@ -50572,6 +50814,8 @@ x 0 0
 # !units: meters
 # !longitude: -81.089000
 # !latitude: 19.312000
+# region: Grand Cayman
+# admin1_quelle: Name
 Gun Bay, Grand Cayman, Cayman Islands
 +00:00 :UTC
 0.0000 meters
@@ -50768,6 +51012,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.1478
 # !latitude: -20.2045
+# region: Tarapacá
+# admin1_quelle: Polygon
 Iquique, Chile
 +00:00 :America/Santiago
 4.1978 meters
@@ -50964,6 +51210,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.3355
 # !latitude: -29.9508
+# region: Coquimbo
+# admin1_quelle: Polygon
 Coquimbo, Chile
 +00:00 :America/Santiago
 2.8330 meters
@@ -51160,6 +51408,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.6182
 # !latitude: -33.5816
+# region: Valparaíso
+# admin1_quelle: Polygon
 San Antonio, Chile
 +00:00 :America/Santiago
 3.3975 meters
@@ -51356,6 +51606,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.1061
 # !latitude: -36.7008
+# region: Bío-Bío
+# admin1_quelle: Polygon
 Talcahuano, Chile
 +00:00 :America/Santiago
 3.2801 meters
@@ -51552,6 +51804,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.8329
 # !latitude: -41.8674
+# region: Los Lagos
+# admin1_quelle: Polygon
 Ancud, Chile
 +00:00 :America/Santiago
 3.7256 meters
@@ -51748,6 +52002,8 @@ x 0 0
 # !units: meters
 # !longitude: -72.8203
 # !latitude: -45.4672
+# region: Aisén del General Carlos Ibáñez del Campo
+# admin1_quelle: Polygon
 Puerto Chacabuco, Chile
 +00:00 :America/Coyhaique
 4.8580 meters
@@ -51944,6 +52200,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.860000
 # !latitude: -53.120000
+# region: Magallanes y Antártica Chilena
+# admin1_quelle: Ufer 1.9 km
 Punta Arenas, Chile
 +00:00 :America/Punta_Arenas
 3.7145 meters
@@ -52141,6 +52399,8 @@ x 0 0
 # !units: meters
 # !longitude: -74.2215
 # !latitude: 11.2352
+# region: Magdalena
+# admin1_quelle: Polygon
 Santa Marta, Colombia
 +00:00 :UTC
 1.3940 meters
@@ -52337,6 +52597,8 @@ x 0 0
 # !units: meters
 # !longitude: -75.536900
 # !latitude: 10.391400
+# region: Bolívar
+# admin1_quelle: Polygon
 Cartagena, Colombia
 +00:00 :UTC
 0.4638 meters
@@ -52533,6 +52795,8 @@ x 0 0
 # !units: meters
 # !longitude: -75.750300
 # !latitude: 10.180600
+# region: Bolívar
+# admin1_quelle: Ufer 6.9 km
 Isla Naval, Colombia
 +00:00 :UTC
 1.3811 meters
@@ -52729,6 +52993,8 @@ x 0 0
 # !units: meters
 # !longitude: -77.0814
 # !latitude: 3.8910
+# region: Valle del Cauca
+# admin1_quelle: Ufer 2.4 km
 Buenaventura, Colombia
 +00:00 :UTC
 2.7549 meters
@@ -52925,6 +53191,8 @@ x 0 0
 # !units: meters
 # !longitude: -87.048000
 # !latitude: 5.557000
+# province: Puntarenas
+# admin1_quelle: Ufer 1.8 km
 Cocos Island, Costa Rica
 +00:00 :UTC
 1.8376 meters
@@ -53124,6 +53392,8 @@ x 0 0
 # !units: meters
 # !longitude: -84.167000
 # !latitude: 9.400000
+# province: Puntarenas
+# admin1_quelle: Polygon
 Quepos, Costa Rica
 +00:00 :UTC
 0.1165 meters
@@ -53321,6 +53591,8 @@ x 0 0
 # !units: meters
 # !longitude: -83.033000
 # !latitude: 10.000000
+# province: Limón
+# admin1_quelle: Polygon
 Limon, Costa Rica
 +00:00 :UTC
 0.5596 meters
@@ -53518,6 +53790,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.439700
 # !latitude: 55.460200
+# region: Syddanmark
+# admin1_quelle: Ufer 0.4 km
 Esbjerg Havn I, Denmark
 +01:00 :Europe/Copenhagen
 0.1278 meters
@@ -53717,6 +53991,8 @@ x 0 0
 # !units: meters
 # !longitude: 29.9218
 # !latitude: 31.2166
+# region: Al Iskandariyah
+# admin1_quelle: Polygon
 Alexandria (Al Iskandariyah), Egypt
 +00:00 :Africa/Cairo
 2.5549 meters
@@ -53916,6 +54192,8 @@ x 0 0
 # !units: meters
 # !longitude: -89.838100
 # !latitude: 13.573800
+# region: Sonsonate
+# admin1_quelle: Ufer 0.5 km
 Acajutla, El Salvador
 +00:00 :UTC
 1.4766 meters
@@ -54112,6 +54390,8 @@ x 0 0
 # !units: meters
 # !longitude: -89.319000
 # !latitude: 13.485100
+# region: La Libertad
+# admin1_quelle: Ufer 0.8 km
 La Libertad, El Salvador
 +00:00 :UTC
 6.4910 meters
@@ -54308,6 +54588,8 @@ x 0 0
 # !units: meters
 # !longitude: -87.818100
 # !latitude: 13.333300
+# region: La Unión
+# admin1_quelle: Ufer 1.9 km
 La Union, El Salvador
 +00:00 :UTC
 6.4362 meters
@@ -54511,6 +54793,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 3 Nachbarn aus 3 Dateien gemessen:
 # note: +1.03 h. Siehe py/shom_stunde_richten.py.
+# region: Gironde
+# admin1_quelle: Polygon
 Arcachon (Jetée d'Eyrac), France
 +00:00 :Europe/Paris
 2.4939 meters
@@ -54708,6 +54992,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.17 h. Siehe py/shom_stunde_richten.py.
+# region: Pyrénées-Atlantiques
+# admin1_quelle: Polygon
 Bayonne (Pont Grenet), France
 +00:00 :Europe/Paris
 2.6628 meters
@@ -54905,6 +55191,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.50 h. Siehe py/shom_stunde_richten.py.
+# region: Pyrénées-Atlantiques
+# admin1_quelle: Polygon
 Bayonne (Pont Blanc), France
 +00:00 :Europe/Paris
 2.8349 meters
@@ -55108,6 +55396,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Pyrénées-Atlantiques
+# admin1_quelle: Polygon
 Boucau-Bayonne, France
 +00:00 :Europe/Paris
 2.6080 meters
@@ -55312,6 +55602,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 4 Nachbarn aus 4 Dateien gemessen:
 # note: +0.99 h. Siehe py/shom_stunde_richten.py.
+# region: Guyane française
+# admin1_quelle: Ufer 13.3 km
 Îles du Salut, French Guiana
 +00:00 :America/Cayenne
 2.1372 meters
@@ -55516,6 +55808,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Martinique
+# admin1_quelle: Ufer 0.5 km
 Fort-de-France, Martinique
 +00:00 :America/Martinique
 0.6999 meters
@@ -56330,6 +56624,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 2 Nachbarn aus 2 Dateien gemessen:
 # note: +1.22 h. Siehe py/shom_stunde_richten.py.
+# region: Landes
+# admin1_quelle: Polygon
 Mimizan-Plage, France
 +00:00 :Europe/Paris
 2.8740 meters
@@ -56535,6 +56831,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 2 Nachbarn aus 2 Dateien gemessen:
 # note: +1.02 h. Siehe py/shom_stunde_richten.py.
+# region: Tahiti
+# admin1_quelle: Name
 Papeete (Fare 'Ute), Tahiti, French Polynesia
 +00:00 :Pacific/Tahiti
 0.5255 meters
@@ -56739,6 +57037,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Guadeloupe
+# admin1_quelle: Ufer 1.0 km
 Pointe-à-Pitre, Guadeloupe
 +00:00 :America/Guadeloupe
 0.5764 meters
@@ -56936,6 +57236,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Guyane française
+# admin1_quelle: Ufer 0.9 km
 Port du Dégrad des Cannes, French Guiana
 +00:00 :America/Cayenne
 2.1707 meters
@@ -57139,6 +57441,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 2 Nachbarn aus 2 Dateien gemessen:
 # note: +0.94 h. Siehe py/shom_stunde_richten.py.
+# region: Pyrénées-Atlantiques
+# admin1_quelle: Polygon
 Saint-Jean-de-Luz (Socoa), France
 +00:00 :Europe/Paris
 2.5548 meters
@@ -57336,6 +57640,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.67 h. Siehe py/shom_stunde_richten.py.
+# region: Pyrénées-Atlantiques
+# admin1_quelle: Polygon
 Villefranque, France
 +00:00 :Europe/Paris
 3.0454 meters
@@ -57529,6 +57835,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.603517
 # !latitude: 45.040483
+# region: Gironde
+# admin1_quelle: Ufer 1.4 km
 Ambès, France
 +00:00 :Europe/Paris
 2.6892 meters
@@ -57722,6 +58030,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.537278
 # !latitude: 44.904193
+# region: Gironde
+# admin1_quelle: Polygon
 Bassens, France
 +00:00 :Europe/Paris
 2.5985 meters
@@ -57915,6 +58225,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.552800
 # !latitude: 44.860000
+# region: Gironde
+# admin1_quelle: Polygon
 Bordeaux, France
 +00:00 :Europe/Paris
 2.6057 meters
@@ -58108,6 +58420,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.700000
 # !latitude: 45.117000
+# region: Gironde
+# admin1_quelle: Ufer 2.3 km
 Cussac-Fort-Médoc, France
 +00:00 :Europe/Paris
 2.8991 meters
@@ -58305,6 +58619,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.03 h. Siehe py/shom_stunde_richten.py.
+# region: Gironde
+# admin1_quelle: Ufer 0.6 km
 Jau-Dignac-et-Loirac (Richard), France
 +00:00 :Europe/Paris
 3.3365 meters
@@ -58498,6 +58814,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.559667
 # !latitude: 45.003117
+# region: Gironde
+# admin1_quelle: Ufer 0.9 km
 Le Marquis, France
 +00:00 :Europe/Paris
 2.6199 meters
@@ -58695,6 +59013,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Gironde
+# admin1_quelle: Polygon
 Saint-Yzans-de-Médoc (Lamena), France
 +00:00 :Europe/Paris
 3.3099 meters
@@ -58892,6 +59212,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.07 h. Siehe py/shom_stunde_richten.py.
+# region: Gironde
+# admin1_quelle: Polygon
 Trompeloup (Pauillac), France
 +00:00 :Europe/Paris
 3.1038 meters
@@ -59085,6 +59407,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.889800
 # !latitude: 47.277217
+# region: Loire-Atlantique
+# admin1_quelle: Ufer 0.8 km
 Cordemais, France
 +00:00 :Europe/Paris
 3.7588 meters
@@ -59285,6 +59609,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Vendée
+# admin1_quelle: Polygon
 L'Aiguillon-la-Presqu'île, France
 +00:00 :Europe/Paris
 4.1965 meters
@@ -59487,6 +59813,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 2 Nachbarn aus 2 Dateien gemessen:
 # note: +0.98 h. Siehe py/shom_stunde_richten.py.
+# region: Vendée
+# admin1_quelle: Ufer 0.9 km
 L'Herbaudière (Île de Noirmoutier), France
 +00:00 :Europe/Paris
 3.5798 meters
@@ -59686,6 +60014,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Charente-Maritime
+# admin1_quelle: Ufer 1.8 km
 La Cotinière (Île d'Oléron), France
 +00:00 :Europe/Paris
 3.7876 meters
@@ -59889,6 +60219,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +0.93 h. Siehe py/shom_stunde_richten.py.
+# region: Charente-Maritime
+# admin1_quelle: Ufer 1.2 km
 La Rochelle - La Pallice, France
 +00:00 :Europe/Paris
 3.9444 meters
@@ -60086,6 +60418,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +0.93 h. Siehe py/shom_stunde_richten.py.
+# region: Vendée
+# admin1_quelle: Ufer 0.8 km
 Fromentine (La Barre-de-Monts), France
 +00:00 :Europe/Paris
 3.4363 meters
@@ -60279,6 +60613,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.765133
 # !latitude: 47.205383
+# region: Loire-Atlantique
+# admin1_quelle: Polygon
 Le Pellerin, France
 +00:00 :Europe/Paris
 3.9456 meters
@@ -60476,6 +60812,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 5 Nachbarn aus 4 Dateien gemessen:
 # note: +1.28 h. Siehe py/shom_stunde_richten.py.
+# region: Gironde
+# admin1_quelle: Ufer 1.3 km
 Le Verdon-sur-Mer, France
 +00:00 :Europe/Paris
 3.3149 meters
@@ -60679,6 +61017,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 2 Nachbarn aus 2 Dateien gemessen:
 # note: +0.89 h. Siehe py/shom_stunde_richten.py.
+# region: Vendée
+# admin1_quelle: Polygon
 Les Sables-d'Olonne, France
 +00:00 :Europe/Paris
 3.3127 meters
@@ -60872,6 +61212,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.108367
 # !latitude: 47.305550
+# region: Loire-Atlantique
+# admin1_quelle: Ufer 2.5 km
 Montoir-de-Bretagne, France
 +00:00 :Europe/Paris
 3.7099 meters
@@ -61065,6 +61407,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.633667
 # !latitude: 47.193450
+# region: Loire-Atlantique
+# admin1_quelle: Polygon
 Nantes, France
 +00:00 :Europe/Paris
 4.1121 meters
@@ -61258,6 +61602,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.000417
 # !latitude: 47.286583
+# region: Loire-Atlantique
+# admin1_quelle: Polygon
 Paimboeuf, France
 +00:00 :Europe/Paris
 3.7477 meters
@@ -61455,6 +61801,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.17 h. Siehe py/shom_stunde_richten.py.
+# region: Charente-Maritime
+# admin1_quelle: Polygon
 Pont du Brault, France
 +00:00 :Europe/Paris
 3.3169 meters
@@ -61657,6 +62005,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.05 h. Siehe py/shom_stunde_richten.py.
+# region: Gironde
+# admin1_quelle: Polygon
 Port-Bloc (La Pointe de Grave), France
 +00:00 :Europe/Paris
 3.3229 meters
@@ -61857,6 +62207,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +0.97 h. Siehe py/shom_stunde_richten.py.
+# region: Charente-Maritime
+# admin1_quelle: Ufer 0.3 km
 Royan, France
 +00:00 :Europe/Paris
 3.4286 meters
@@ -62060,6 +62412,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Loire-Atlantique
+# admin1_quelle: Ufer 0.8 km
 Saint-Nazaire, France
 +00:00 :Europe/Paris
 3.6424 meters
@@ -62257,6 +62611,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 5 Nachbarn aus 4 Dateien gemessen:
 # note: +1.03 h. Siehe py/shom_stunde_richten.py.
+# region: Charente-Maritime
+# admin1_quelle: Ufer 1.7 km
 Saint-Palais-sur-Mer, France
 +00:00 :Europe/Paris
 3.3419 meters
@@ -62458,6 +62814,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Finistère
+# admin1_quelle: Ufer 0.6 km
 Audierne, France
 +00:00 :Europe/Paris
 3.1663 meters
@@ -62662,6 +63020,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Finistère
+# admin1_quelle: Polygon
 Brest (Estuaire Penfeld), France
 +00:00 :Europe/Paris
 4.2089 meters
@@ -62859,6 +63219,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 3 Nachbarn aus 2 Dateien gemessen:
 # note: +1.10 h. Siehe py/shom_stunde_richten.py.
+# region: Ille-et-Vilaine
+# admin1_quelle: Ufer 0.8 km
 Cancale, France
 +00:00 :Europe/Paris
 7.4656 meters
@@ -63062,6 +63424,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Manche
+# admin1_quelle: Polygon
 Cherbourg-en-Cotentin, France
 +00:00 :Europe/Paris
 3.8749 meters
@@ -63265,6 +63629,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +0.98 h. Siehe py/shom_stunde_richten.py.
+# region: Finistère
+# admin1_quelle: Polygon
 Concarneau, France
 +00:00 :Europe/Paris
 3.0585 meters
@@ -63465,6 +63831,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.15 h. Siehe py/shom_stunde_richten.py.
+# region: Manche
+# admin1_quelle: Polygon
 Diélette, France
 +00:00 :Europe/Paris
 5.5204 meters
@@ -63668,6 +64036,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.10 h. Siehe py/shom_stunde_richten.py.
+# region: Finistère
+# admin1_quelle: Ufer 0.5 km
 Le Conquet, France
 +00:00 :Europe/Paris
 4.0182 meters
@@ -63870,6 +64240,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Morbihan
+# admin1_quelle: Ufer 0.6 km
 Arzon (Port Crouesty), France
 +00:00 :Europe/Paris
 3.3483 meters
@@ -64072,6 +64444,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 2 Nachbarn aus 2 Dateien gemessen:
 # note: +1.02 h. Siehe py/shom_stunde_richten.py.
+# region: Morbihan
+# admin1_quelle: Ufer 6.7 km
 Port Tudy (Île de Groix), France
 +00:00 :Europe/Paris
 3.1998 meters
@@ -64275,6 +64649,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.22 h. Siehe py/shom_stunde_richten.py.
+# region: Finistère
+# admin1_quelle: Ufer 0.4 km
 Roscoff, France
 +00:00 :Europe/Paris
 5.3236 meters
@@ -64478,6 +64854,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 2 Nachbarn aus 2 Dateien gemessen:
 # note: +1.04 h. Siehe py/shom_stunde_richten.py.
+# region: Ille-et-Vilaine
+# admin1_quelle: Ufer 0.2 km
 Saint-Malo, France
 +00:00 :Europe/Paris
 6.8158 meters
@@ -64679,6 +65057,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 5 Nachbarn aus 2 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Côtes-d'Armor
+# admin1_quelle: Ufer 1.3 km
 Saint-Quay-Portrieux, France
 +00:00 :Europe/Paris
 6.4696 meters
@@ -64874,6 +65254,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.953483
 # !latitude: 45.946335
+# region: Charente-Maritime
+# admin1_quelle: Polygon
 Rochefort, France
 +00:00 :Europe/Paris
 4.9959 meters
@@ -65073,6 +65455,8 @@ x 0 0
 # !units: meters
 # !longitude: 1.577660
 # !latitude: 50.727380
+# region: Pas-de-Calais
+# admin1_quelle: Polygon
 Boulogne-sur-Mer, France
 +00:00 :Europe/Paris
 5.0250 meters
@@ -65276,6 +65660,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Pas-de-Calais
+# admin1_quelle: Polygon
 Calais, France
 +00:00 :Europe/Paris
 4.0810 meters
@@ -65479,6 +65865,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.17 h. Siehe py/shom_stunde_richten.py.
+# region: Seine-Maritime
+# admin1_quelle: Polygon
 Dieppe, France
 +00:00 :Europe/Paris
 5.0672 meters
@@ -65678,6 +66066,8 @@ x 0 0
 # !units: meters
 # !longitude: 2.366698
 # !latitude: 51.048091
+# region: Nord
+# admin1_quelle: Polygon
 Dunkerque, France
 +00:00 :Europe/Paris
 3.3219 meters
@@ -65871,6 +66261,8 @@ x 0 0
 # !units: meters
 # !longitude: 0.315964
 # !latitude: 49.431786
+# region: Eure
+# admin1_quelle: Polygon
 Fatouville, France
 +00:00 :Europe/Paris
 5.1753 meters
@@ -66068,6 +66460,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Calvados
+# admin1_quelle: Ufer 3.9 km
 Honfleur, France
 +00:00 :Europe/Paris
 5.1142 meters
@@ -66271,6 +66665,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Seine-Maritime
+# admin1_quelle: Ufer 1.3 km
 Le Havre (Marégraphe), France
 +00:00 :Europe/Paris
 4.9796 meters
@@ -66474,6 +66870,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.02 h. Siehe py/shom_stunde_richten.py.
+# region: Seine-Maritime
+# admin1_quelle: Ufer 0.7 km
 Le Havre (Quai de la Marine), France
 +00:00 :Europe/Paris
 5.0493 meters
@@ -66674,6 +67072,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.15 h. Siehe py/shom_stunde_richten.py.
+# region: Calvados
+# admin1_quelle: Polygon
 Ouistreham, France
 +00:00 :Europe/Paris
 4.7620 meters
@@ -67080,6 +67480,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Îles Loyauté
+# admin1_quelle: Name
 Lifou Wé, Îles Loyauté, New Caledonia
 +00:00 :Pacific/Noumea
 0.9906 meters
@@ -67686,6 +68088,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Îles Loyauté
+# admin1_quelle: Name
 Ouvéa, Îles Loyauté, New Caledonia
 +00:00 :Pacific/Noumea
 1.0448 meters
@@ -68089,6 +68493,8 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
+# region: Maré (Îles Loyauté)
+# admin1_quelle: Name
 Tadine, Maré (Îles Loyauté), New Caledonia
 +00:00 :Pacific/Noumea
 0.9819 meters
@@ -68281,6 +68687,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.9700
 # !latitude: 53.5456
+# state: Hamburg
+# admin1_quelle: Polygon
 Hamburg (St. Pauli), Germany
 +00:00 :Europe/Berlin
 5.3196 meters
@@ -68473,6 +68881,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.9920
 # !latitude: 53.4730
+# state: Schleuse)
+# admin1_quelle: Name
 Hamburg-Harburg (Elbe, Schleuse), Germany
 +00:00 :Europe/Berlin
 5.3447 meters
@@ -68665,6 +69075,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.7960
 # !latitude: 53.5580
+# state: Unterfeuer)
+# admin1_quelle: Name
 Hamburg-Blankenese (Elbe, Unterfeuer), Germany
 +00:00 :Europe/Berlin
 5.3241 meters
@@ -68857,6 +69269,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.8810
 # !latitude: 53.5400
+# state: Hamburg
+# admin1_quelle: Polygon
 Hamburg Seemannshöft (Elbe), Germany
 +00:00 :Europe/Berlin
 5.3236 meters
@@ -69049,6 +69463,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.0620
 # !latitude: 53.5080
+# state: Hamburg
+# admin1_quelle: Polygon
 Hamburg Dove-Elbe (Einfahrt), Germany
 +00:00 :Europe/Berlin
 5.3910 meters
@@ -69241,6 +69657,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.0640
 # !latitude: 53.4610
+# state: Hamburg
+# admin1_quelle: Polygon
 Hamburg-Bunthaus (Elbe), Germany
 +00:00 :Europe/Berlin
 4.9475 meters
@@ -69432,6 +69850,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3151
 # !latitude: 53.9844
+# state: Niedersachsen
+# admin1_quelle: Ufer 21.8 km
 Scharhörnriff (Bake A), Germany
 +00:00 :Europe/Berlin
 5.1762 meters
@@ -69624,6 +70044,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3146
 # !latitude: 54.0135
+# state: Niedersachsen
+# admin1_quelle: Ufer 23.9 km
 Bake Z, Germany
 +00:00 :Europe/Berlin
 5.1456 meters
@@ -69816,6 +70238,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.0371
 # !latitude: 53.8228
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Belum (Oste), Germany
 +00:00 :Europe/Berlin
 5.1999 meters
@@ -70012,6 +70436,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.5682
 # !latitude: 53.5450
+# state: Bremen
+# admin1_quelle: Polygon
 Bremerhaven (Alter Leuchtturm), Germany
 +00:00 :Europe/Berlin
 5.2260 meters
@@ -70204,6 +70630,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.8944
 # !latitude: 53.1340
+# state: Bremen
+# admin1_quelle: Polygon
 Bremen-Borgfeld (Wümme), Germany
 +00:00 :Europe/Berlin
 6.3173 meters
@@ -70401,6 +70829,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.7479
 # !latitude: 53.5574
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.8 km
 Borkum (Fischerbalje), Germany
 +00:00 :Europe/Berlin
 5.0266 meters
@@ -70593,6 +71023,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.6610
 # !latitude: 53.5770
+# state: Niedersachsen
+# admin1_quelle: Ufer 1.1 km
 Borkum (Südstrand), Germany
 +00:00 :Europe/Berlin
 4.9814 meters
@@ -70785,6 +71217,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.6323
 # !latitude: 53.9277
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Breitenberg (Stör), Germany
 +00:00 :Europe/Berlin
 5.6903 meters
@@ -70977,6 +71411,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.3160
 # !latitude: 53.8627
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Brokdorf (Elbe), Germany
 +00:00 :Europe/Berlin
 5.2241 meters
@@ -71169,6 +71605,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.1429
 # !latitude: 53.8878
+# state: Niedersachsen
+# admin1_quelle: Ufer 3.1 km
 Brunsbüttel (Elbe), Germany
 +00:00 :Europe/Berlin
 5.1677 meters
@@ -71361,6 +71799,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4126
 # !latitude: 53.1799
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Buttelerhörne (Hunte), Germany
 +00:00 :Europe/Berlin
 5.6524 meters
@@ -71553,6 +71993,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.7034
 # !latitude: 53.4804
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Buxtehude (Este), Germany
 +00:00 :Europe/Berlin
 5.7460 meters
@@ -71745,6 +72187,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.8591
 # !latitude: 54.1218
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.4 km
 Büsum (Schleuse), Germany
 +00:00 :Europe/Berlin
 5.0336 meters
@@ -71937,6 +72381,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.7915
 # !latitude: 53.5359
+# state: Hamburg
+# admin1_quelle: Polygon
 Cranz (Este-Sperrwerk), Germany
 +00:00 :Europe/Berlin
 5.3116 meters
@@ -72136,6 +72582,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7170
 # !latitude: 53.8680
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Cuxhaven-Steubenhöft (Elbe), Germany
 +00:00 :Europe/Berlin
 5.0804 meters
@@ -72328,6 +72776,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.6691
 # !latitude: 53.1780
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Dreyschloot (Leda), Germany
 +00:00 :Europe/Berlin
 5.8140 meters
@@ -72523,6 +72973,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3076
 # !latitude: 53.7186
+# state: Niedersachsen
+# admin1_quelle: Ufer 7.4 km
 Dwarsgat (Unterfeuer), Germany
 +00:00 :Europe/Berlin
 4.9188 meters
@@ -72715,6 +73167,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.8421
 # !latitude: 54.2659
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.8 km
 Eider-Sperrwerk (Außenpegel), Germany
 +00:00 :Europe/Berlin
 5.0929 meters
@@ -72907,6 +73361,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.8496
 # !latitude: 54.2659
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.6 km
 Eider-Sperrwerk (Binnenpegel), Germany
 +00:00 :Europe/Berlin
 5.0515 meters
@@ -73099,6 +73555,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.6539
 # !latitude: 53.7522
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Elmshorn (Krückau Hafen), Germany
 +00:00 :Europe/Berlin
 5.9086 meters
@@ -73291,6 +73749,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4599
 # !latitude: 53.2212
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Elsfleth Ohrt (Hunte), Germany
 +00:00 :Europe/Berlin
 5.3605 meters
@@ -73483,6 +73943,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.1863
 # !latitude: 53.3368
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Emden (Neue Seeschleuse), Germany
 +00:00 :Europe/Berlin
 4.9921 meters
@@ -73675,6 +74137,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.7765
 # !latitude: 53.5328
+# state: Hamburg
+# admin1_quelle: Polygon
 Este (Inneres Sperrwerk Binnenpegel), Germany
 +00:00 :Europe/Berlin
 5.3948 meters
@@ -73867,6 +74331,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.3155
 # !latitude: 53.3603
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Fahrenholz (Ilmenau Unterpegel), Germany
 +00:00 :Europe/Berlin
 6.4207 meters
@@ -74059,6 +74525,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.0950
 # !latitude: 54.3688
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Friedrichstadt (Eider Strassenbrücke), Germany
 +00:00 :Europe/Berlin
 5.1363 meters
@@ -74251,6 +74719,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.4086
 # !latitude: 53.7842
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.7 km
 Glückstadt (Elbe), Germany
 +00:00 :Europe/Berlin
 5.2569 meters
@@ -74443,6 +74913,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.4948
 # !latitude: 53.6791
+# state: Niedersachsen
+# admin1_quelle: Ufer 1.4 km
 Grauerort (Reede), Germany
 +00:00 :Europe/Berlin
 5.4131 meters
@@ -74635,6 +75107,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.6901
 # !latitude: 53.9357
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Grönhude (Stör), Germany
 +00:00 :Europe/Berlin
 6.0881 meters
@@ -74827,6 +75301,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.8040
 # !latitude: 53.0730
+# state: Weser)
+# admin1_quelle: Name
 Bremen (Wilhelm-Kaisen-Brücke, Weser), Germany
 +00:00 :Europe/Berlin
 5.3979 meters
@@ -75019,6 +75495,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.2528
 # !latitude: 53.6405
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Hechthausen (Oste), Germany
 +00:00 :Europe/Berlin
 5.4962 meters
@@ -75216,6 +75694,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.8899
 # !latitude: 54.1789
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.5 km
 Helgoland (Binnenhafen), Germany
 +00:00 :Europe/Berlin
 5.0066 meters
@@ -75413,6 +75893,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.8943
 # !latitude: 54.1750
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.5 km
 Helgoland (Südhafen), Germany
 +00:00 :Europe/Berlin
 5.0948 meters
@@ -75605,6 +76087,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.3171
 # !latitude: 53.0419
+# state: Hafendamm)
+# admin1_quelle: Name
 Herbrum (Ems, Hafendamm), Germany
 +00:00 :Europe/Berlin
 5.5475 meters
@@ -75797,6 +76281,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.5843
 # !latitude: 53.6094
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.3 km
 Hetlingen (Elbe), Germany
 +00:00 :Europe/Berlin
 5.3002 meters
@@ -75989,6 +76475,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3785
 # !latitude: 53.1681
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Hollersiel, Germany
 +00:00 :Europe/Berlin
 5.6700 meters
@@ -76181,6 +76669,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.1486
 # !latitude: 53.6692
+# state: Niedersachsen
+# admin1_quelle: Ufer 5.0 km
 Hooksielplate, Germany
 +00:00 :Europe/Berlin
 4.9870 meters
@@ -76373,6 +76863,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.5911
 # !latitude: 53.5123
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Horneburg (Lühe), Germany
 +00:00 :Europe/Berlin
 5.8611 meters
@@ -76565,6 +77057,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4460
 # !latitude: 53.2000
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Huntebrück (Hunte), Germany
 +00:00 :Europe/Berlin
 5.4288 meters
@@ -76757,6 +77251,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.0248
 # !latitude: 54.4723
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Husum (Schleuse), Germany
 +00:00 :Europe/Berlin
 5.0722 meters
@@ -76953,6 +77449,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.2960
 # !latitude: 54.7581
+# state: Hafen)
+# admin1_quelle: Name
 Hörnum (Sylt, Hafen), Germany
 +00:00 :Europe/Berlin
 5.0717 meters
@@ -77145,6 +77643,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.1785
 # !latitude: 53.3939
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Ilmenau (Speerwerk Außenpegel), Germany
 +00:00 :Europe/Berlin
 6.0033 meters
@@ -77337,6 +77837,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.5006
 # !latitude: 53.9245
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Itzehoe (Stör Hafen), Germany
 +00:00 :Europe/Berlin
 5.4015 meters
@@ -77529,6 +78031,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.1491
 # !latitude: 53.6020
+# state: Niedersachsen
+# admin1_quelle: Ufer 1.9 km
 Jade-Weser-Port, Germany
 +00:00 :Europe/Berlin
 5.0151 meters
@@ -77724,6 +78228,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.0307
 # !latitude: 53.3272
+# state: Niedersachsen
+# admin1_quelle: Ufer 2.4 km
 Knock (Ems), Germany
 +00:00 :Europe/Berlin
 5.1033 meters
@@ -77916,6 +78422,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.4598
 # !latitude: 53.7311
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.5 km
 Kollmar (Elbe), Germany
 +00:00 :Europe/Berlin
 5.4095 meters
@@ -78108,6 +78616,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.3912
 # !latitude: 53.7547
+# state: Reede)
+# admin1_quelle: Name
 Krautsand (Elbe, Reede), Germany
 +00:00 :Europe/Berlin
 5.2455 meters
@@ -78300,6 +78810,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.5270
 # !latitude: 53.7164
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Krückau-Sperrwerk (Binnenpegel), Germany
 +00:00 :Europe/Berlin
 5.2330 meters
@@ -78492,6 +79004,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.5017
 # !latitude: 53.7232
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.8 km
 Langeoog (Hafeneinfahrt), Germany
 +00:00 :Europe/Berlin
 5.0388 meters
@@ -78684,6 +79198,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.4732
 # !latitude: 53.2135
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Ledasperrwerk (Unterpegel), Germany
 +00:00 :Europe/Berlin
 5.1447 meters
@@ -78876,6 +79392,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.4262
 # !latitude: 53.2153
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Leerort (Ems), Germany
 +00:00 :Europe/Berlin
 5.1060 meters
@@ -79071,6 +79589,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.1276
 # !latitude: 53.8633
+# state: Niedersachsen
+# admin1_quelle: Ufer 13.9 km
 Leuchtturm Alte Weser, Germany
 +00:00 :Europe/Berlin
 5.0926 meters
@@ -79263,6 +79783,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.6340
 # !latitude: 53.5710
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Lühort (Lühe), Germany
 +00:00 :Europe/Berlin
 5.2730 meters
@@ -79457,6 +79979,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4404
 # !latitude: 55.0165
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 1.2 km
 List auf Sylt (Hafen), Germany
 +00:00 :Europe/Berlin
 5.0930 meters
@@ -79649,6 +80173,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.8265
 # !latitude: 53.1615
+# state: Bremen
+# admin1_quelle: Polygon
 Niederblockland (Wümme), Germany
 +00:00 :Europe/Berlin
 5.9243 meters
@@ -79841,6 +80367,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4881
 # !latitude: 53.4645
+# state: Unterfeuer)
+# admin1_quelle: Name
 Nordenham (Weser, Unterfeuer), Germany
 +00:00 :Europe/Berlin
 5.0735 meters
@@ -80033,6 +80561,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.1578
 # !latitude: 53.6965
+# state: Niedersachsen
+# admin1_quelle: Ufer 1.2 km
 Norderney (Riffgat), Germany
 +00:00 :Europe/Berlin
 4.9744 meters
@@ -80225,6 +80755,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.1382
 # !latitude: 54.3395
+# state: Unterwasser)
+# admin1_quelle: Name
 Nordfeld (Eider, Unterwasser), Germany
 +00:00 :Europe/Berlin
 5.2335 meters
@@ -80417,6 +80949,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.2341
 # !latitude: 53.1402
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Oldenburg-Drielake (Hunte), Germany
 +00:00 :Europe/Berlin
 5.8019 meters
@@ -80609,6 +81143,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7122
 # !latitude: 53.1198
+# state: Bremen
+# admin1_quelle: Polygon
 Bremen-Oslebshausen (Weser), Germany
 +00:00 :Europe/Berlin
 5.3709 meters
@@ -80801,6 +81337,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.0316
 # !latitude: 53.8564
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.4 km
 Osterriff (Elbe), Germany
 +00:00 :Europe/Berlin
 5.2736 meters
@@ -80993,6 +81531,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.8707
 # !latitude: 53.8354
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.8 km
 Otterndorf (Elbe), Germany
 +00:00 :Europe/Berlin
 5.1132 meters
@@ -81185,6 +81725,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.1011
 # !latitude: 53.4287
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Over (Elbe), Germany
 +00:00 :Europe/Berlin
 5.7802 meters
@@ -81380,6 +81922,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.3656
 # !latitude: 53.1082
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Papenburg (Ems), Germany
 +00:00 :Europe/Berlin
 5.1331 meters
@@ -81572,6 +82116,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7020
 # !latitude: 54.5009
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 2.1 km
 Pellworm (Anleger), Germany
 +00:00 :Europe/Berlin
 5.0114 meters
@@ -81764,6 +82310,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.5588
 # !latitude: 53.6712
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Pinnau-Sperrwerk (Binnenpegel), Germany
 +00:00 :Europe/Berlin
 5.3987 meters
@@ -81959,6 +82507,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.2598
 # !latitude: 53.3214
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.4 km
 Pogum (Ems), Germany
 +00:00 :Europe/Berlin
 5.0343 meters
@@ -82151,6 +82701,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.5006
 # !latitude: 53.3812
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.5 km
 Rechtenfleth (Weser), Germany
 +00:00 :Europe/Berlin
 5.1614 meters
@@ -82343,6 +82895,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3220
 # !latitude: 53.1610
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Reithörne (Hunte), Germany
 +00:00 :Europe/Berlin
 5.7752 meters
@@ -82535,6 +83089,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.2870
 # !latitude: 53.0724
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Rhede (Ems), Germany
 +00:00 :Europe/Berlin
 5.3059 meters
@@ -82727,6 +83283,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.6362
 # !latitude: 53.9421
+# state: Niedersachsen
+# admin1_quelle: Ufer 5.6 km
 Mittelgrund, Germany
 +00:00 :Europe/Berlin
 5.7577 meters
@@ -82919,6 +83477,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4450
 # !latitude: 53.6390
+# state: Niedersachsen
+# admin1_quelle: Ufer 3.7 km
 Robbensüdsteert / Solthörn, Germany
 +00:00 :Europe/Berlin
 4.9726 meters
@@ -83111,6 +83671,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.4626
 # !latitude: 53.9670
+# state: Niedersachsen
+# admin1_quelle: Ufer 13.4 km
 Scharhörn (Bake C), Germany
 +00:00 :Europe/Berlin
 4.9747 meters
@@ -83303,6 +83865,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.0471
 # !latitude: 53.6990
+# state: Niedersachsen
+# admin1_quelle: Ufer 1.0 km
 Schillig, Germany
 +00:00 :Europe/Berlin
 5.0311 meters
@@ -83495,6 +84059,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.7029
 # !latitude: 53.5679
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 1.1 km
 Schulau (Elbe), Germany
 +00:00 :Europe/Berlin
 5.2863 meters
@@ -83687,6 +84253,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.6819
 # !latitude: 53.7492
+# state: Niedersachsen
+# admin1_quelle: Ufer 1.0 km
 Spiekeroog (Alter Anleger), Germany
 +00:00 :Europe/Berlin
 5.1936 meters
@@ -83879,6 +84447,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.5266
 # !latitude: 53.6297
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Stadersand (Elbe), Germany
 +00:00 :Europe/Berlin
 5.4330 meters
@@ -84074,6 +84644,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.3961
 # !latitude: 53.2927
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Terborg (Ems), Germany
 +00:00 :Europe/Berlin
 5.0832 meters
@@ -84266,6 +84838,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.9501
 # !latitude: 54.3147
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.6 km
 Tönning (Eider), Germany
 +00:00 :Europe/Berlin
 5.1318 meters
@@ -84458,6 +85032,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.6771
 # !latitude: 53.6782
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Uetersen (Pinnau), Germany
 +00:00 :Europe/Berlin
 5.5934 meters
@@ -84650,6 +85226,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.9292
 # !latitude: 53.8063
+# state: Nord)
+# admin1_quelle: Name
 Wangerooge (Langes Riff, Nord), Germany
 +00:00 :Europe/Berlin
 5.0009 meters
@@ -84842,6 +85420,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.9849
 # !latitude: 53.7671
+# state: Niedersachsen
+# admin1_quelle: Ufer 2.6 km
 Wangerooge (Ost), Germany
 +00:00 :Europe/Berlin
 4.9586 meters
@@ -85034,6 +85614,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.8679
 # !latitude: 53.7762
+# state: Niedersachsen
+# admin1_quelle: Ufer 0.4 km
 Wangerooge (Hafen), Germany
 +00:00 :Europe/Berlin
 5.0398 meters
@@ -85226,6 +85808,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.8410
 # !latitude: 53.4940
+# state: Niedersachsen
+# admin1_quelle: Ufer 9.5 km
 Emshörn, Germany
 +00:00 :Europe/Berlin
 5.6964 meters
@@ -85421,6 +86005,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.3719
 # !latitude: 53.1612
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Weener (Ems), Germany
 +00:00 :Europe/Berlin
 5.0978 meters
@@ -85613,6 +86199,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.8548
 # !latitude: 53.0602
+# state: Bremen
+# admin1_quelle: Polygon
 Bremen-Weserwehr (Unterpegel), Germany
 +00:00 :Europe/Berlin
 5.7436 meters
@@ -85805,6 +86393,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.1451
 # !latitude: 53.5145
+# state: Jade)
+# admin1_quelle: Name
 Wilhelmshaven (Alter Vorhafen, Jade), Germany
 +00:00 :Europe/Berlin
 5.0184 meters
@@ -85997,6 +86587,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.1607
 # !latitude: 53.5303
+# state: Jade)
+# admin1_quelle: Name
 Wilhelmshaven (Neuer Vorhafen, Jade), Germany
 +00:00 :Europe/Berlin
 4.9887 meters
@@ -86189,6 +86781,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.3839
 # !latitude: 54.6318
+# state: Schleswig-Holstein
+# admin1_quelle: Polygon
 Wittdün (Amrum Hafen), Germany
 +00:00 :Europe/Berlin
 5.0418 meters
@@ -86381,6 +86975,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.6582
 # !latitude: 53.9555
+# state: Niedersachsen
+# admin1_quelle: Ufer 7.0 km
 Zehnerloch, Germany
 +00:00 :Europe/Berlin
 5.0390 meters
@@ -86573,6 +87169,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.1854
 # !latitude: 53.3987
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Zollenspieker (Elbe), Germany
 +00:00 :Europe/Berlin
 6.0424 meters
@@ -88371,6 +88969,8 @@ x 0 0
 # !units: meters
 # !longitude: 125.190000
 # !latitude: 1.438000
+# state: Sulawesi
+# admin1_quelle: Name
 Bitung (Lembeh Strait), Sulawesi, Indonesia
 +00:00 :Asia/Makassar
 1.5633 meters
@@ -88570,6 +89170,8 @@ x 0 0
 # !units: meters
 # !longitude: 100.3685
 # !latitude: -1.0019
+# state: Sumatra
+# admin1_quelle: Name
 Padang, Sumatra, Indonesia
 +00:00 :Asia/Jakarta
 1.8723 meters
@@ -88766,6 +89368,8 @@ x 0 0
 # !units: meters
 # !longitude: 98.767000
 # !latitude: 1.750000
+# state: Sumatra
+# admin1_quelle: Name
 Sibolga, Sumatra, Indonesia
 +00:00 :Asia/Jakarta
 1.7939 meters
@@ -88964,6 +89568,8 @@ x 0 0
 # !units: meters
 # !longitude: 95.3169
 # !latitude: 5.8879
+# state: Aceh
+# admin1_quelle: Polygon
 Sabang (Pulau Weh), Indonesia
 +00:00 :Asia/Jakarta
 1.1170 meters
@@ -89160,6 +89766,8 @@ x 0 0
 # !units: meters
 # !longitude: 111.733000
 # !latitude: -8.283000
+# state: Java
+# admin1_quelle: Name
 Prigi, Java, Indonesia
 +00:00 :Asia/Jakarta
 1.4283 meters
@@ -89359,6 +89967,8 @@ x 0 0
 # !units: meters
 # !longitude: 128.200000
 # !latitude: -3.700000
+# state: Maluku
+# admin1_quelle: Name
 Ambon, Maluku, Indonesia
 +00:00 :Asia/Jayapura
 1.5873 meters
@@ -89557,6 +90167,8 @@ x 0 0
 # !units: meters
 # !longitude: 112.725000
 # !latitude: -7.208000
+# state: Java
+# admin1_quelle: Name
 Surabaya, Java, Indonesia
 +00:00 :Asia/Jakarta
 1.5551 meters
@@ -89753,6 +90365,8 @@ x 0 0
 # !units: meters
 # !longitude: 106.850000
 # !latitude: -6.117000
+# state: Java
+# admin1_quelle: Name
 Jakarta, Java, Indonesia
 +00:00 :Asia/Jakarta
 2.0513 meters
@@ -89952,6 +90566,8 @@ x 0 0
 # !units: meters
 # !longitude: 109.017000
 # !latitude: -7.752000
+# state: Java
+# admin1_quelle: Name
 Cilacap, Java, Indonesia
 +00:00 :Asia/Jakarta
 3.4744 meters
@@ -90151,6 +90767,8 @@ x 0 0
 # !units: meters
 # !longitude: 115.210000
 # !latitude: -8.745000
+# state: Bali
+# admin1_quelle: Name
 Benoa, Bali, Indonesia
 +00:00 :Asia/Makassar
 0.9764 meters
@@ -90348,6 +90966,8 @@ x 0 0
 # !units: meters
 # !longitude: 105.667000
 # !latitude: -6.483000
+# state: Java
+# admin1_quelle: Name
 Tanjung Lesung, Java, Indonesia
 +00:00 :Asia/Jakarta
 3.2734 meters
@@ -90545,6 +91165,8 @@ x 0 0
 # !units: meters
 # !longitude: 110.783000
 # !latitude: -8.500000
+# state: Java
+# admin1_quelle: Name
 Sadeng, Java, Indonesia
 +00:00 :Asia/Jakarta
 2.8997 meters
@@ -90743,6 +91365,8 @@ x 0 0
 # !units: meters
 # !longitude: 119.233000
 # !latitude: -9.400000
+# state: Sumba
+# admin1_quelle: Name
 Waikelo, Sumba, Indonesia
 +00:00 :Asia/Makassar
 3.6058 meters
@@ -90938,6 +91562,8 @@ x 0 0
 # !units: meters
 # !longitude: 116.072000
 # !latitude: -8.732000
+# state: Lombok
+# admin1_quelle: Name
 Lembar, Lombok, Indonesia
 +00:00 :Asia/Makassar
 2.6929 meters
@@ -91134,6 +91760,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.290000
 # !latitude: -7.982000
+# state: Yamdena
+# admin1_quelle: Name
 Saumlaki, Yamdena, Indonesia
 +00:00 :Asia/Jayapura
 1.1855 meters
@@ -91331,6 +91959,8 @@ x 0 0
 # !units: meters
 # !longitude: 97.822000
 # !latitude: 0.555000
+# state: Nias
+# admin1_quelle: Name
 Telukdalam, Nias, Indonesia
 +00:00 :Asia/Jakarta
 0.9798 meters
@@ -91528,6 +92158,8 @@ x 0 0
 # !units: meters
 # !longitude: 96.1318
 # !latitude: 4.1272
+# state: Sumatra
+# admin1_quelle: Name
 Meulaboh, Sumatra, Indonesia
 +00:00 :Asia/Jakarta
 1.8571 meters
@@ -91726,6 +92358,8 @@ x 0 0
 # !units: meters
 # !longitude: 60.6009
 # !latitude: 25.2957
+# province: Sistan and Baluchestan
+# admin1_quelle: Ufer 2.1 km
 Chabahar, Iran
 +03:30 :Asia/Tehran
 1.6158 meters
@@ -91924,6 +92558,8 @@ x 0 0
 # !units: meters
 # !longitude: 57.7653
 # !latitude: 25.6467
+# province: Hormozgan
+# admin1_quelle: Ufer 1.4 km
 Khalij-e Jask, Iran
 +03:30 :Asia/Tehran
 2.1786 meters
@@ -92116,6 +92752,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.4955
 # !latitude: 54.9897
+# region: Donegal
+# admin1_quelle: Polygon
 Leabgarrow (Aranmore Island), Ireland
 +00:00 :Europe/Dublin
 2.2374 meters
@@ -92308,6 +92946,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.000700
 # !latitude: 51.827800
+# region: Cork
+# admin1_quelle: Ufer 0.3 km
 Ballycotton, Ireland
 +00:00 :Europe/Dublin
 2.3763 meters
@@ -92506,6 +93146,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.903400
 # !latitude: 51.649600
+# region: Cork
+# admin1_quelle: Polygon
 Castletown Bearhaven, Ireland
 +00:00 :Europe/Dublin
 1.9536 meters
@@ -92702,6 +93344,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.221700
 # !latitude: 53.345700
+# region: Dublin
+# admin1_quelle: Polygon
 Dublin Port, Ireland
 +00:00 :Europe/Dublin
 2.5050 meters
@@ -92894,6 +93538,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.991880
 # !latitude: 52.147670
+# region: Waterford
+# admin1_quelle: Ufer 0.6 km
 Dunmore East, Ireland
 +00:00 :Europe/Dublin
 2.4166 meters
@@ -93088,6 +93734,8 @@ x 0 0
 # !latitude: 53.269000
 # note: 20260905 Name vereinheitlicht, vorher "Galway Port, Ireland"
 # note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# region: Galway
+# admin1_quelle: Ufer 0.6 km
 Galway, Ireland
 +00:00 :Europe/Dublin
 3.0176 meters
@@ -93280,6 +93928,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.068090
 # !latitude: 53.391335
+# region: Fingal
+# admin1_quelle: Polygon
 Howth, Ireland
 +00:00 :Europe/Dublin
 2.6034 meters
@@ -93472,6 +94122,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.666900
 # !latitude: 53.117800
+# region: Galway
+# admin1_quelle: Ufer 0.4 km
 Kilronan (Inishmore), Ireland
 +00:00 :Europe/Dublin
 2.7732 meters
@@ -93664,6 +94316,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.4397
 # !latitude: 54.6362
+# region: Donegal
+# admin1_quelle: Polygon
 Killybegs, Ireland
 +00:00 :Europe/Dublin
 2.3269 meters
@@ -93856,6 +94510,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.502080
 # !latitude: 52.631910
+# region: Clare
+# admin1_quelle: Ufer 0.8 km
 Kilrush Lough, Ireland
 +00:00 :Europe/Dublin
 2.8490 meters
@@ -94056,6 +94712,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.334400
 # !latitude: 55.371700
+# region: Donegal
+# admin1_quelle: Polygon
 Malin Head - Portmore Pier, Ireland
 +00:00 :Europe/Dublin
 2.1463 meters
@@ -94248,6 +94906,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.9049
 # !latitude: 53.7629
+# region: Mayo
+# admin1_quelle: Polygon
 Roonagh Pier, Ireland
 +00:00 :Europe/Dublin
 2.4823 meters
@@ -94440,6 +95100,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.334861
 # !latitude: 52.254600
+# region: Wexford
+# admin1_quelle: Ufer 1.9 km
 Rosslare, Ireland
 +00:00 :Europe/Dublin
 1.1520 meters
@@ -94632,6 +95294,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.108100
 # !latitude: 53.585000
+# region: Fingal
+# admin1_quelle: Ufer 0.3 km
 Skerries Harbour, Ireland
 +00:00 :Europe/Dublin
 2.8425 meters
@@ -94824,6 +95488,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.4953
 # !latitude: 54.2856
+# region: Sligo
+# admin1_quelle: Ufer 0.7 km
 Sligo, Ireland
 +00:00 :Europe/Dublin
 2.2915 meters
@@ -95024,6 +95690,8 @@ x 0 0
 # !units: meters
 # !longitude: 144.2858
 # !latitude: 44.0195
+# region: Hokkaido
+# admin1_quelle: Name
 Abashiri, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.6800 meters
@@ -95224,6 +95892,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.4095
 # !latitude: 31.5770
+# region: Miyazaki
+# admin1_quelle: Name
 Aburatsu, Miyazaki, Japan
 +09:00 :Asia/Tokyo
 1.1600 meters
@@ -95420,6 +96090,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.6155
 # !latitude: 35.1600
+# region: Kanagawa
+# admin1_quelle: Name
 Aburatsubo, Kanagawa, Japan
 +09:00 :Asia/Tokyo
 0.9300 meters
@@ -95612,6 +96284,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.1883
 # !latitude: 34.6050
+# region: Aichi
+# admin1_quelle: Name
 Akabane, Aichi, Japan
 +09:00 :Asia/Tokyo
 1.0500 meters
@@ -95804,6 +96478,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.9906
 # !latitude: 34.6450
+# region: Hyogo
+# admin1_quelle: Name
 Akashi, Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.7000 meters
@@ -95996,6 +96672,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.8793
 # !latitude: 33.9094
+# region: Fukuoka
+# admin1_quelle: Name
 Hiagari, Fukuoka, Japan
 +09:00 :Asia/Tokyo
 0.8000 meters
@@ -96188,6 +96866,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.0658
 # !latitude: 39.7461
+# region: Akita
+# admin1_quelle: Name
 Akita, Akita, Japan
 +09:00 :Asia/Tokyo
 0.1900 meters
@@ -96384,6 +97064,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.1911
 # !latitude: 32.0175
+# region: Kagoshima
+# admin1_quelle: Name
 Akune, Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.6000 meters
@@ -96576,6 +97258,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.400000
 # !latitude: 34.700000
+# region: Hyogo
+# admin1_quelle: Name
 Amagasaki, Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -96768,6 +97452,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.5342
 # !latitude: 28.3228
+# region: Kagoshima
+# admin1_quelle: Name
 Kominato (Amami Oshima), Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.1900 meters
@@ -96960,6 +97646,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.0187
 # !latitude: 33.9488
+# region: Fukuoka
+# admin1_quelle: Name
 Aohama, Fukuoka, Japan
 +09:00 :Asia/Tokyo
 2.1000 meters
@@ -97152,6 +97840,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.6878
 # !latitude: 34.3650
+# region: Kagawa
+# admin1_quelle: Name
 Aoki, Kagawa, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -97346,6 +98036,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.7639
 # !latitude: 40.8353
+# region: Aomori
+# admin1_quelle: Name
 Aomori, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.3700 meters
@@ -97542,6 +98234,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.8592
 # !latitude: 40.8975
+# region: Aomori
+# admin1_quelle: Name
 Asamushi, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.3700 meters
@@ -97736,6 +98430,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.2550
 # !latitude: 38.4678
+# region: Niigata
+# admin1_quelle: Name
 Awashima, Niigata, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -97928,6 +98624,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.5922
 # !latitude: 33.7711
+# region: Tokushima
+# admin1_quelle: Name
 Awayuki, Tokushima, Japan
 +09:00 :Asia/Tokyo
 1.0600 meters
@@ -98122,6 +98820,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.5053
 # !latitude: 38.2967
+# region: Miyagi
+# admin1_quelle: Name
 Ayukawa, Miyagi, Japan
 +09:00 :Asia/Tokyo
 0.8800 meters
@@ -98314,6 +99014,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.5036
 # !latitude: 33.2986
+# region: Oita
+# admin1_quelle: Name
 Beppu, Oita, Japan
 +09:00 :Asia/Tokyo
 1.3000 meters
@@ -98508,6 +99210,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.0456
 # !latitude: 35.5680
+# region: Chiba
+# admin1_quelle: Name
 Chiba Light, Chiba, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -98700,6 +99404,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.0955
 # !latitude: 35.6011
+# region: Chiba
+# admin1_quelle: Name
 Chibaminato, Chiba, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -98892,6 +99598,8 @@ x 0 0
 # !units: meters
 # !longitude: 142.1947
 # !latitude: 27.0939
+# region: Tokyo
+# admin1_quelle: Name
 Chichijima, Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.6800 meters
@@ -99084,6 +99792,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.0043
 # !latitude: 34.0141
+# region: Yamaguchi
+# admin1_quelle: Name
 Chofu (Shimonoseki), Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 2.1000 meters
@@ -99276,6 +99986,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.8587
 # !latitude: 35.7444
+# region: Chiba
+# admin1_quelle: Name
 Choshi Gyoko, Chiba, Japan
 +09:00 :Asia/Tokyo
 0.9000 meters
@@ -99469,6 +100181,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.9271
 # !latitude: 33.9246
+# region: Yamaguchi
+# admin1_quelle: Name
 Deshimatsu, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -99661,6 +100375,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.8302
 # !latitude: 34.4694
+# region: Hyogo
+# admin1_quelle: Name
 Ei (Awaji-shima), Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.8000 meters
@@ -99853,6 +100569,8 @@ x 0 0
 # !units: meters
 # !longitude: 142.5892
 # !latitude: 44.9386
+# region: Hokkaido
+# admin1_quelle: Name
 Esashi, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.5700 meters
@@ -100047,6 +100765,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.1256
 # !latitude: 41.8706
+# region: Hokkaido
+# admin1_quelle: Name
 Esashi (Hiyama), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.2400 meters
@@ -100243,6 +100963,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.9264
 # !latitude: 40.6472
+# region: Aomori
+# admin1_quelle: Name
 Fukaura, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -100437,6 +101159,8 @@ x 0 0
 # !units: meters
 # !longitude: 128.8494
 # !latitude: 32.6961
+# region: Nagasaki
+# admin1_quelle: Name
 Fukue (Fukue-jima), Nagasaki, Japan
 +09:00 :Asia/Tokyo
 1.5900 meters
@@ -100630,6 +101354,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.8504
 # !latitude: 39.8820
+# region: Akita
+# admin1_quelle: Name
 Funagawa, Akita, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -100822,6 +101548,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.066667
 # !latitude: 36.800000
+# region: Toyama
+# admin1_quelle: Name
 Fushikitoyama, Toyama, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -101014,6 +101742,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.1644
 # !latitude: 33.8512
+# region: Wakayama
+# admin1_quelle: Name
 Gobo, Wakayama, Japan
 +09:00 :Asia/Tokyo
 1.1000 meters
@@ -101206,6 +101936,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.800000
 # !latitude: 33.133333
+# region: Tokyo
+# admin1_quelle: Name
 Hachijoshima(konominato), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.8100 meters
@@ -101398,6 +102130,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.766667
 # !latitude: 33.100000
+# region: Tokyo
+# admin1_quelle: Name
 Hachijoshima(yaene), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -101590,6 +102324,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.5556
 # !latitude: 40.5353
+# region: Aomori
+# admin1_quelle: Name
 Hachinohe, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.8500 meters
@@ -101782,6 +102518,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.8770
 # !latitude: 33.9484
+# region: Yamaguchi
+# admin1_quelle: Name
 Haedomari, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 0.8000 meters
@@ -101976,6 +102714,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.4139
 # !latitude: 34.4296
+# region: Yamaguchi
+# admin1_quelle: Name
 Hagi, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 0.4800 meters
@@ -102170,6 +102910,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.4078
 # !latitude: 33.6186
+# region: Fukuoka
+# admin1_quelle: Name
 Fukuoka (Hakata), Fukuoka, Japan
 +09:00 :Asia/Tokyo
 1.1000 meters
@@ -102370,6 +103112,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.7247
 # !latitude: 41.7817
+# region: Hokkaido
+# admin1_quelle: Name
 Hakodate, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.5700 meters
@@ -102570,6 +103314,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.0661
 # !latitude: 34.8972
+# region: Shimane
+# admin1_quelle: Name
 Hamada, Shimane, Japan
 +09:00 :Asia/Tokyo
 0.2900 meters
@@ -102766,6 +103512,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.5678
 # !latitude: 43.2781
+# region: Hokkaido
+# admin1_quelle: Name
 Hanasaki, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.8600 meters
@@ -102959,6 +103707,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.9694
 # !latitude: 34.1094
+# region: Ehime
+# admin1_quelle: Name
 Hashihama, Ehime, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -103151,6 +103901,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.700000
 # !latitude: 32.916667
+# region: Kochi
+# admin1_quelle: Name
 Henshima, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.1700 meters
@@ -103343,6 +104095,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.666667
 # !latitude: 34.783333
+# region: Hyogo
+# admin1_quelle: Name
 Himeji (Shikama), Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.9000 meters
@@ -103535,6 +104289,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.5753
 # !latitude: 33.3611
+# region: Nagasaki
+# admin1_quelle: Name
 Tabira (Hiradoseto), Nagasaki, Japan
 +09:00 :Asia/Tokyo
 1.5500 meters
@@ -103729,6 +104485,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.4647
 # !latitude: 34.3531
+# region: Hiroshima
+# admin1_quelle: Name
 Hiroshima, Hiroshima, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -103921,6 +104679,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.6286
 # !latitude: 36.4994
+# region: Ibaraki
+# admin1_quelle: Name
 Hitachi, Ibaraki, Japan
 +09:00 :Asia/Tokyo
 0.8600 meters
@@ -104114,6 +104874,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.5410
 # !latitude: 33.7310
+# region: Tokushima
+# admin1_quelle: Name
 Hiwasa, Tokushima, Japan
 +09:00 :Asia/Tokyo
 1.0800 meters
@@ -104306,6 +105068,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.2097
 # !latitude: 32.4297
+# region: Kumamoto
+# admin1_quelle: Name
 Hondoseto, Kumamoto, Japan
 +09:00 :Asia/Tokyo
 2.0500 meters
@@ -104498,6 +105262,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.6753
 # !latitude: 35.4233
+# region: Kanagawa
+# admin1_quelle: Name
 Yokohama (Honmoku), Kanagawa, Japan
 +09:00 :Asia/Tokyo
 1.1500 meters
@@ -104690,6 +105456,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.0056
 # !latitude: 34.0687
+# region: Ehime
+# admin1_quelle: Name
 Imabari, Ehime, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -104883,6 +105651,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.9765
 # !latitude: 34.1229
+# region: Ehime
+# admin1_quelle: Name
 Imabari Kojima, Ehime, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -105076,6 +105846,8 @@ x 0 0
 # !units: meters
 # !longitude: 123.7465
 # !latitude: 24.3592
+# region: Okinawa
+# admin1_quelle: Name
 Shirahama (Iriomote), Okinawa, Japan
 +09:00 :Asia/Tokyo
 1.0300 meters
@@ -105268,6 +106040,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.8492
 # !latitude: 34.6117
+# region: Shizuoka
+# admin1_quelle: Name
 Irozaki, Shizuoka, Japan
 +09:00 :Asia/Tokyo
 1.0000 meters
@@ -105460,6 +106234,8 @@ x 0 0
 # !units: meters
 # !longitude: 124.1636
 # !latitude: 24.3322
+# region: Okinawa
+# admin1_quelle: Name
 Ishigaki, Okinawa, Japan
 +09:00 :Asia/Tokyo
 1.0700 meters
@@ -105652,6 +106428,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.3090
 # !latitude: 43.2144
+# region: Hokkaido
+# admin1_quelle: Name
 Ishikari, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1760 meters
@@ -105844,6 +106622,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.2670
 # !latitude: 38.4081
+# region: Miyagi
+# admin1_quelle: Name
 Ishinomaki, Miyagi, Japan
 +09:00 :Asia/Tokyo
 0.9000 meters
@@ -106036,6 +106816,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.1330
 # !latitude: 34.8956
+# region: Shizuoka
+# admin1_quelle: Name
 Futo (Ito), Shizuoka, Japan
 +09:00 :Asia/Tokyo
 0.9800 meters
@@ -106229,6 +107011,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.0934
 # !latitude: 34.3929
+# region: Hiroshima
+# admin1_quelle: Name
 Itozaki (Mihara), Hiroshima, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -106421,6 +107205,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.5072
 # !latitude: 42.9872
+# region: Hokkaido
+# admin1_quelle: Name
 Iwanai, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -106613,6 +107399,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.5440
 # !latitude: 33.9870
+# region: Ehime
+# admin1_quelle: Name
 Shikokuchuo, Ehime, Japan
 +09:00 :Asia/Tokyo
 2.1000 meters
@@ -106807,6 +107595,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.2911
 # !latitude: 34.1975
+# region: Nagasaki
+# admin1_quelle: Name
 Izuhara, Nagasaki, Japan
 +09:00 :Asia/Tokyo
 0.9300 meters
@@ -106999,6 +107789,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.400000
 # !latitude: 34.516667
+# region: Osaka
+# admin1_quelle: Name
 Izumiotsu, Osaka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -107193,6 +107985,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.5647
 # !latitude: 31.5925
+# region: Kagoshima
+# admin1_quelle: Name
 Kagoshima, Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.5500 meters
@@ -107389,6 +108183,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.1914
 # !latitude: 34.1442
+# region: Wakayama
+# admin1_quelle: Name
 Kainan, Wakayama, Japan
 +09:00 :Asia/Tokyo
 1.1100 meters
@@ -107581,6 +108377,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.8892
 # !latitude: 39.2733
+# region: Iwate
+# admin1_quelle: Name
 Kamaisi, Iwate, Japan
 +09:00 :Asia/Tokyo
 0.8600 meters
@@ -107773,6 +108571,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.6028
 # !latitude: 36.6178
+# region: Ishikawa
+# admin1_quelle: Name
 Kanazawa, Ishikawa, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -107965,6 +108765,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.2543
 # !latitude: 34.4444
+# region: Osaka
+# admin1_quelle: Name
 Kansai Airport, Osaka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -108157,6 +108959,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.3022
 # !latitude: 33.5428
+# region: Kochi
+# admin1_quelle: Name
 Kannoura, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.0900 meters
@@ -108349,6 +109153,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.9617
 # !latitude: 33.4669
+# region: Saga
+# admin1_quelle: Name
 Karatsu, Saga, Japan
 +09:00 :Asia/Tokyo
 1.1800 meters
@@ -108541,6 +109347,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.0006
 # !latitude: 33.7936
+# region: Fukuoka
+# admin1_quelle: Name
 Kanda, Fukuoka, Japan
 +09:00 :Asia/Tokyo
 2.1000 meters
@@ -108737,6 +109545,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.8492
 # !latitude: 33.4731
+# region: Saga
+# admin1_quelle: Name
 Kariya, Saga, Japan
 +09:00 :Asia/Tokyo
 1.2700 meters
@@ -108929,6 +109739,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.6936
 # !latitude: 35.9295
+# region: Ibaraki
+# admin1_quelle: Name
 Kashima, Ibaraki, Japan
 +09:00 :Asia/Tokyo
 0.8900 meters
@@ -109126,6 +109938,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.5086
 # !latitude: 37.3567
+# region: Niigata
+# admin1_quelle: Name
 Kashiwazaki, Niigata, Japan
 +09:00 :Asia/Tokyo
 0.2100 meters
@@ -109318,6 +110132,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.1881
 # !latitude: 34.7828
+# region: Aichi
+# admin1_quelle: Name
 Katanohara (Katahara), Aichi, Japan
 +09:00 :Asia/Tokyo
 1.3500 meters
@@ -109514,6 +110330,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.2494
 # !latitude: 35.1294
+# region: Chiba
+# admin1_quelle: Name
 Katsuura, Chiba, Japan
 +09:00 :Asia/Tokyo
 0.9000 meters
@@ -109708,6 +110526,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.7761
 # !latitude: 35.5035
+# region: Kanagawa
+# admin1_quelle: Name
 Kawasaki (Shiohama Unga), Kanagawa, Japan
 +09:00 :Asia/Tokyo
 1.1500 meters
@@ -109900,6 +110720,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.6381
 # !latitude: 35.4670
+# region: Kanagawa
+# admin1_quelle: Name
 Yokohama (Keihin), Kanagawa, Japan
 +09:00 :Asia/Tokyo
 1.1500 meters
@@ -110092,6 +110914,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.4146
 # !latitude: 36.8897
+# region: Toyama
+# admin1_quelle: Name
 Ikuji (Kurobe), Toyama, Japan
 +09:00 :Asia/Tokyo
 0.2200 meters
@@ -110284,6 +111108,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.950000
 # !latitude: 34.883333
+# region: Aichi
+# admin1_quelle: Name
 Kinuura, Aichi, Japan
 +09:00 :Asia/Tokyo
 1.3000 meters
@@ -110476,6 +111302,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.1164
 # !latitude: 43.0783
+# region: Hokkaido
+# admin1_quelle: Name
 Hamanaka (Kiritappu), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.8099 meters
@@ -110668,6 +111496,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.9132
 # !latitude: 35.3716
+# region: Chiba
+# admin1_quelle: Name
 Kisarazu, Chiba, Japan
 +09:00 :Asia/Tokyo
 1.1500 meters
@@ -110860,6 +111690,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.366667
 # !latitude: 34.466667
+# region: Osaka
+# admin1_quelle: Name
 Kishiwada, Osaka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -111054,6 +111886,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.1903
 # !latitude: 34.6822
+# region: Hyogo
+# admin1_quelle: Name
 Kobe, Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -111248,6 +112082,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.5692
 # !latitude: 33.4992
+# region: Kochi
+# admin1_quelle: Name
 Kochi, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.0800 meters
@@ -111440,6 +112276,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.9928
 # !latitude: 32.9388
+# region: Kochi
+# admin1_quelle: Name
 Shimoda, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.0800 meters
@@ -111632,6 +112470,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.8352
 # !latitude: 32.7225
+# region: Nagasaki
+# admin1_quelle: Name
 Kogo, Nagasaki, Japan
 +09:00 :Asia/Tokyo
 1.6400 meters
@@ -111826,6 +112666,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.5878
 # !latitude: 34.0092
+# region: Tokushima
+# admin1_quelle: Name
 Komatushima, Tokushima, Japan
 +09:00 :Asia/Tokyo
 1.0100 meters
@@ -112020,6 +112862,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.1317
 # !latitude: 34.2092
+# region: Tokyo
+# admin1_quelle: Name
 Kozushima, Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.9700 meters
@@ -112214,6 +113058,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.1953
 # !latitude: 32.6053
+# region: Nagasaki
+# admin1_quelle: Name
 Kuchinotsu, Nagasaki, Japan
 +09:00 :Asia/Tokyo
 1.9400 meters
@@ -112406,6 +113252,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.7967
 # !latitude: 40.1922
+# region: Iwate
+# admin1_quelle: Name
 Kuji, Iwate, Japan
 +09:00 :Asia/Tokyo
 0.8900 meters
@@ -112598,6 +113446,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.5647
 # !latitude: 32.7522
+# region: Kumamoto
+# admin1_quelle: Name
 Kumamoto, Kumamoto, Japan
 +09:00 :Asia/Tokyo
 2.4500 meters
@@ -112790,6 +113640,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.1689
 # !latitude: 33.9258
+# region: Mie
+# admin1_quelle: Name
 Nigishima (Kumano), Mie, Japan
 +09:00 :Asia/Tokyo
 1.0200 meters
@@ -112982,6 +113834,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.5503
 # !latitude: 34.2405
+# region: Hiroshima
+# admin1_quelle: Name
 Kure, Hiroshima, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -113178,6 +114032,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.2433
 # !latitude: 33.3336
+# region: Kochi
+# admin1_quelle: Name
 Kure, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.1100 meters
@@ -113378,6 +114234,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.7733
 # !latitude: 33.4758
+# region: Wakayama
+# admin1_quelle: Name
 Kushimoto, Wakayama, Japan
 +09:00 :Asia/Tokyo
 1.0500 meters
@@ -113570,6 +114428,8 @@ x 0 0
 # !units: meters
 # !longitude: 144.3714
 # !latitude: 42.9756
+# region: Hokkaido
+# admin1_quelle: Name
 Kushiro, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.8700 meters
@@ -113762,6 +114622,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.1351
 # !latitude: 45.1876
+# region: Hokkaido
+# admin1_quelle: Name
 Kutsugata (Rishiri-to), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -113957,6 +114819,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.6089
 # !latitude: 34.6820
+# region: Shizuoka
+# admin1_quelle: Name
 Maisaka (Hamamatsu), Shizuoka, Japan
 +09:00 :Asia/Tokyo
 0.7000 meters
@@ -114149,6 +115013,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.3870
 # !latitude: 35.4767
+# region: Kyoto
+# admin1_quelle: Name
 Maizuru (Higashi Ko), Kyoto, Japan
 +09:00 :Asia/Tokyo
 0.1900 meters
@@ -114343,6 +115209,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.2930
 # !latitude: 31.2678
+# region: Kagoshima
+# admin1_quelle: Name
 Makurazaki, Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.5000 meters
@@ -114535,6 +115403,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.0914
 # !latitude: 41.4220
+# region: Hokkaido
+# admin1_quelle: Name
 Matsumae, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.2300 meters
@@ -114727,6 +115597,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.7122
 # !latitude: 33.8589
+# region: Ehime
+# admin1_quelle: Name
 Matsuyama, Ehime, Japan
 +09:00 :Asia/Tokyo
 1.9000 meters
@@ -114927,6 +115799,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.8250
 # !latitude: 34.9189
+# region: Chiba
+# admin1_quelle: Name
 Mera, Chiba, Japan
 +09:00 :Asia/Tokyo
 0.9000 meters
@@ -115119,6 +115993,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.3206
 # !latitude: 34.7345
+# region: Aichi
+# admin1_quelle: Name
 Mikawa (Toyohashi), Aichi, Japan
 +09:00 :Asia/Tokyo
 1.3500 meters
@@ -115315,6 +116191,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.1489
 # !latitude: 36.2544
+# region: Fukui
+# admin1_quelle: Name
 Mikuni, Fukui, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -115508,6 +116386,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.3782
 # !latitude: 32.1982
+# region: Kumamoto
+# admin1_quelle: Name
 Minamata, Kumamoto, Japan
 +09:00 :Asia/Tokyo
 1.9500 meters
@@ -115700,6 +116580,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.2281
 # !latitude: 25.8686
+# region: Okinawa
+# admin1_quelle: Name
 Minamidaito, Okinawa, Japan
 +09:00 :Asia/Tokyo
 0.9800 meters
@@ -115892,6 +116774,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.8891
 # !latitude: 34.6288
+# region: Shizuoka
+# admin1_quelle: Name
 Minamiizu, Shizuoka, Japan
 +09:00 :Asia/Tokyo
 1.0000 meters
@@ -116093,6 +116977,8 @@ x 0 0
 # !units: meters
 # !longitude: 153.9779
 # !latitude: 24.2811
+# region: Tokyo
+# admin1_quelle: Name
 Minamitorishima, Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.3200 meters
@@ -116285,6 +117171,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.5883
 # !latitude: 34.0339
+# region: Yamaguchi
+# admin1_quelle: Name
 Hofu (Mitajiri), Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 1.8000 meters
@@ -116480,6 +117368,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.4808
 # !latitude: 34.0672
+# region: Tokyo
+# admin1_quelle: Name
 Ako (Miyakeshima), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.9100 meters
@@ -116672,6 +117562,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.5439
 # !latitude: 34.0572
+# region: Tokyo
+# admin1_quelle: Name
 Tsubota (Miyakeshima), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.9100 meters
@@ -116865,6 +117757,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.9753
 # !latitude: 39.6431
+# region: Iwate
+# admin1_quelle: Name
 Miyako (Kuwagasaki), Iwate, Japan
 +09:00 :Asia/Tokyo
 0.8300 meters
@@ -117057,6 +117951,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.4564
 # !latitude: 31.9028
+# region: Miyazaki
+# admin1_quelle: Name
 Miyazaki, Miyazaki, Japan
 +09:00 :Asia/Tokyo
 1.1300 meters
@@ -117249,6 +118145,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.1939
 # !latitude: 35.5400
+# region: Kyoto
+# admin1_quelle: Name
 Miyazu, Kyoto, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -117442,6 +118340,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.7370
 # !latitude: 34.5164
+# region: Okayama
+# admin1_quelle: Name
 Mizushima, Okayama, Japan
 +09:00 :Asia/Tokyo
 1.9000 meters
@@ -117636,6 +118536,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.9576
 # !latitude: 33.9452
+# region: Fukuoka
+# admin1_quelle: Name
 Moji, Fukuoka, Japan
 +09:00 :Asia/Tokyo
 1.3000 meters
@@ -117830,6 +118732,8 @@ x 0 0
 # !units: meters
 # !longitude: 143.3583
 # !latitude: 44.3542
+# region: Hokkaido
+# admin1_quelle: Name
 Monbetsu, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.7100 meters
@@ -118022,6 +118926,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.5946
 # !latitude: 42.1107
+# region: Hokkaido
+# admin1_quelle: Name
 Mori, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.9200 meters
@@ -118216,6 +119122,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.9507
 # !latitude: 42.3452
+# region: Hokkaido
+# admin1_quelle: Name
 Muroran, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -118410,6 +119318,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.1644
 # !latitude: 33.2664
+# region: Kochi
+# admin1_quelle: Name
 Murotozaki, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.1000 meters
@@ -118602,6 +119512,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.3880
 # !latitude: 40.9264
+# region: Aomori
+# admin1_quelle: Name
 Mutsuogawara, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.8500 meters
@@ -118802,6 +119714,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.8661
 # !latitude: 32.7350
+# region: Nagasaki
+# admin1_quelle: Name
 Nagasaki (Matsugae), Nagasaki, Japan
 +09:00 :Asia/Tokyo
 1.6400 meters
@@ -118996,6 +119910,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.8808
 # !latitude: 35.0914
+# region: Aichi
+# admin1_quelle: Name
 Nagoya, Aichi, Japan
 +09:00 :Asia/Tokyo
 1.4000 meters
@@ -119196,6 +120112,8 @@ x 0 0
 # !units: meters
 # !longitude: 127.6653
 # !latitude: 26.2133
+# region: Okinawa
+# admin1_quelle: Name
 Naha, Okinawa, Japan
 +09:00 :Asia/Tokyo
 1.1800 meters
@@ -119388,6 +120306,8 @@ x 0 0
 # !units: meters
 # !longitude: 127.8394
 # !latitude: 26.3272
+# region: Okinawa
+# admin1_quelle: Name
 Awase, Okinawa, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -119583,6 +120503,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.8478
 # !latitude: 29.8420
+# region: Kagoshima
+# admin1_quelle: Name
 Nakanoshima, Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.2500 meters
@@ -119775,6 +120697,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.9683
 # !latitude: 37.0495
+# region: Ishikawa
+# admin1_quelle: Name
 Nanao, Ishikawa, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -119967,6 +120891,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.2515
 # !latitude: 37.1837
+# region: Niigata
+# admin1_quelle: Name
 Naoetsu (Joetsu), Niigata, Japan
 +09:00 :Asia/Tokyo
 0.1900 meters
@@ -120159,6 +121085,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.4980
 # !latitude: 28.4000
+# region: Kagoshima
+# admin1_quelle: Name
 Naze (Amami Oshima), Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.1500 meters
@@ -120351,6 +121279,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.5862
 # !latitude: 43.3413
+# region: Hokkaido
+# admin1_quelle: Name
 Nemuro, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.8700 meters
@@ -120547,6 +121477,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.5461
 # !latitude: 38.5633
+# region: Yamagata
+# admin1_quelle: Name
 Nezugaseki, Yamagata, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -120739,6 +121671,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.2173
 # !latitude: 37.9905
+# region: Niigata
+# admin1_quelle: Name
 Niigata (Tarodai), Niigata, Japan
 +09:00 :Asia/Tokyo
 0.1700 meters
@@ -120931,6 +121865,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.0611
 # !latitude: 37.9406
+# region: Niigata
+# admin1_quelle: Name
 Niigata (Irifunecho), Niigata, Japan
 +09:00 :Asia/Tokyo
 0.1700 meters
@@ -121123,6 +122059,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.2678
 # !latitude: 33.9676
+# region: Ehime
+# admin1_quelle: Name
 Niihama, Ehime, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -121315,6 +122253,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.3297
 # !latitude: 34.7085
+# region: Hyogo
+# admin1_quelle: Name
 Nishinomiya, Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -121510,6 +122450,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.9922
 # !latitude: 30.7350
+# region: Kagoshima
+# admin1_quelle: Name
 Nishinoomote, Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -121705,6 +122647,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.1553
 # !latitude: 37.5008
+# region: Ishikawa
+# admin1_quelle: Name
 Noto, Ishikawa, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -121897,6 +122841,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.566667
 # !latitude: 36.300000
+# region: Ibaraki
+# admin1_quelle: Name
 Oarai, Ibaraki, Japan
 +09:00 :Asia/Tokyo
 0.8700 meters
@@ -122089,6 +123035,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.1481
 # !latitude: 35.2381
+# region: Kanagawa
+# admin1_quelle: Name
 Odawara, Kanagawa, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -122283,6 +123231,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.6892
 # !latitude: 31.0236
+# region: Kagoshima
+# admin1_quelle: Name
 Odomari, Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.4200 meters
@@ -122475,6 +123425,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.7533
 # !latitude: 39.0197
+# region: Iwate
+# admin1_quelle: Name
 Ofunato, Iwate, Japan
 +09:00 :Asia/Tokyo
 0.8800 meters
@@ -122671,6 +123623,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.7050
 # !latitude: 39.9445
+# region: Akita
+# admin1_quelle: Name
 Oga, Akita, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -122867,6 +123821,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.2811
 # !latitude: 37.8147
+# region: Niigata
+# admin1_quelle: Name
 Ogi (Sado), Niigata, Japan
 +09:00 :Asia/Tokyo
 0.1900 meters
@@ -123059,6 +124015,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.8991
 # !latitude: 41.5265
+# region: Aomori
+# admin1_quelle: Name
 Oma, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.4600 meters
@@ -123251,6 +124209,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.6867
 # !latitude: 33.2661
+# region: Oita
+# admin1_quelle: Name
 Oita-Tsurusaki, Oita, Japan
 +09:00 :Asia/Tokyo
 1.3000 meters
@@ -123445,6 +124405,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.3914
 # !latitude: 34.7895
+# region: Tokyo
+# admin1_quelle: Name
 Okata (Oshima), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.9000 meters
@@ -123641,6 +124603,8 @@ x 0 0
 # !units: meters
 # !longitude: 127.8247
 # !latitude: 26.1794
+# region: Okinawa
+# admin1_quelle: Name
 Azama, Okinawa, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -123837,6 +124801,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.4895
 # !latitude: 42.0786
+# region: Hokkaido
+# admin1_quelle: Name
 Matsue (Okushiri), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1880 meters
@@ -124029,6 +124995,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.5181
 # !latitude: 42.1742
+# region: Hokkaido
+# admin1_quelle: Name
 Okushiri, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -124221,6 +125189,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.2222
 # !latitude: 34.6083
+# region: Shizuoka
+# admin1_quelle: Name
 Omaezaki, Shizuoka, Japan
 +09:00 :Asia/Tokyo
 1.0000 meters
@@ -124415,6 +125385,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.1450
 # !latitude: 41.2564
+# region: Aomori
+# admin1_quelle: Name
 Ominato, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.4100 meters
@@ -124607,6 +125579,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.4162
 # !latitude: 33.0136
+# region: Fukuoka
+# admin1_quelle: Name
 Miike (Omuta), Fukuoka, Japan
 +09:00 :Asia/Tokyo
 2.6500 meters
@@ -124801,6 +125775,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.8920
 # !latitude: 36.9375
+# region: Fukushima
+# admin1_quelle: Name
 Onahama, Fukushima, Japan
 +09:00 :Asia/Tokyo
 0.8400 meters
@@ -124997,6 +125973,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.8239
 # !latitude: 34.9036
+# region: Aichi
+# admin1_quelle: Name
 Onizaki, Aichi, Japan
 +09:00 :Asia/Tokyo
 1.3000 meters
@@ -125191,6 +126169,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.2206
 # !latitude: 32.9767
+# region: Saga
+# admin1_quelle: Name
 Oura, Saga, Japan
 +09:00 :Asia/Tokyo
 2.6800 meters
@@ -125385,6 +126365,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.4328
 # !latitude: 34.6581
+# region: Osaka
+# admin1_quelle: Name
 Osaka, Osaka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -125578,6 +126560,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.8583
 # !latitude: 43.2094
+# region: Hokkaido
+# admin1_quelle: Name
 Oshoro, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1700 meters
@@ -125770,6 +126754,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.0053
 # !latitude: 43.2067
+# region: Hokkaido
+# admin1_quelle: Name
 Otaru (Ironai), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1600 meters
@@ -125962,6 +126948,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.6842
 # !latitude: 34.4988
+# region: Okayama
+# admin1_quelle: Name
 Tamashima (Kurashiki), Okayama, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -126156,6 +127144,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.2072
 # !latitude: 34.0764
+# region: Mie
+# admin1_quelle: Name
 Owase, Mie, Japan
 +09:00 :Asia/Tokyo
 1.0400 meters
@@ -126348,6 +127338,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.9051
 # !latitude: 33.9133
+# region: Yamaguchi
+# admin1_quelle: Name
 Ooyamanohana, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 0.9000 meters
@@ -126540,6 +127532,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.983333
 # !latitude: 34.116667
+# region: Ehime
+# admin1_quelle: Name
 Kurushima Koro, Ehime, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -126732,6 +127726,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.200000
 # !latitude: 44.016667
+# region: Hokkaido
+# admin1_quelle: Name
 Rausu, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.6400 meters
@@ -126924,6 +127920,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.0369
 # !latitude: 32.4675
+# region: Kumamoto
+# admin1_quelle: Name
 Reihoku (Shimoshima), Kumamoto, Japan
 +09:00 :Asia/Tokyo
 1.6600 meters
@@ -127116,6 +128114,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.6350
 # !latitude: 43.9505
+# region: Hokkaido
+# admin1_quelle: Name
 Rumoi, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1600 meters
@@ -127308,6 +128308,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.4371
 # !latitude: 38.0835
+# region: Niigata
+# admin1_quelle: Name
 Ryotsu (Sado), Niigata, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -127503,6 +128505,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.5172
 # !latitude: 38.3186
+# region: Niigata
+# admin1_quelle: Name
 Washizaki (Sado), Niigata, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -127695,6 +128699,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.9608
 # !latitude: 32.9461
+# region: Oita
+# admin1_quelle: Name
 Saeki (Tsurumi Okimatsuura), Oita, Japan
 +09:00 :Asia/Tokyo
 1.0500 meters
@@ -127891,6 +128897,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.3311
 # !latitude: 36.2014
+# region: Shimane
+# admin1_quelle: Name
 Okinoshima (Dogo), Shimane, Japan
 +09:00 :Asia/Tokyo
 0.1700 meters
@@ -128083,6 +129091,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.6695
 # !latitude: 32.4286
+# region: Miyazaki
+# admin1_quelle: Name
 Hososhima (Hyuga), Miyazaki, Japan
 +09:00 :Asia/Tokyo
 1.0600 meters
@@ -128275,6 +129285,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.466667
 # !latitude: 34.600000
+# region: Osaka
+# admin1_quelle: Name
 Sakai, Osaka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -128469,6 +129481,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.2431
 # !latitude: 35.5478
+# region: Tottori
+# admin1_quelle: Name
 Sakaiminato, Tottori, Japan
 +09:00 :Asia/Tokyo
 0.1700 meters
@@ -128661,6 +129675,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.8236
 # !latitude: 38.9175
+# region: Yamagata
+# admin1_quelle: Name
 Sakata, Yamagata, Japan
 +09:00 :Asia/Tokyo
 0.2100 meters
@@ -128853,6 +129869,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.9815
 # !latitude: 34.6005
+# region: Okayama
+# admin1_quelle: Name
 Shinchikko, Okayama, Japan
 +09:00 :Asia/Tokyo
 1.3000 meters
@@ -129047,6 +130065,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.4514
 # !latitude: 32.6231
+# region: Kumamoto
+# admin1_quelle: Name
 Misumi, Kumamoto, Japan
 +09:00 :Asia/Tokyo
 2.2100 meters
@@ -129242,6 +130262,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.7239
 # !latitude: 33.1581
+# region: Nagasaki
+# admin1_quelle: Name
 Sasebo, Nagasaki, Japan
 +09:00 :Asia/Tokyo
 1.6500 meters
@@ -129434,6 +130456,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.6878
 # !latitude: 33.7433
+# region: Nagasaki
+# admin1_quelle: Name
 Gonoura, Nagasaki, Japan
 +09:00 :Asia/Tokyo
 1.2700 meters
@@ -129626,6 +130650,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.0039
 # !latitude: 38.2728
+# region: Miyagi
+# admin1_quelle: Name
 Sendai, Miyagi, Japan
 +09:00 :Asia/Tokyo
 0.9300 meters
@@ -129818,6 +130844,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.850000
 # !latitude: 42.450000
+# region: Hokkaido
+# admin1_quelle: Name
 Setana, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -130010,6 +131038,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.116667
 # !latitude: 31.483333
+# region: Kagoshima
+# admin1_quelle: Name
 Shibushi, Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.1600 meters
@@ -130204,6 +131234,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.5175
 # !latitude: 35.0117
+# region: Shizuoka
+# admin1_quelle: Name
 Miho (Shimizu), Shizuoka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -130396,6 +131428,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.9592
 # !latitude: 34.6753
+# region: Shizuoka
+# admin1_quelle: Name
 Shimoda, Shizuoka, Japan
 +09:00 :Asia/Tokyo
 1.0100 meters
@@ -130588,6 +131622,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.2381
 # !latitude: 41.3647
+# region: Aomori
+# admin1_quelle: Name
 Sekinehama, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.8000 meters
@@ -130780,6 +131816,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.1330
 # !latitude: 34.1182
+# region: Wakayama
+# admin1_quelle: Name
 Shimotsu, Wakayama, Japan
 +09:00 :Asia/Tokyo
 1.1000 meters
@@ -130972,6 +132010,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.1181
 # !latitude: 36.7752
+# region: Toyama
+# admin1_quelle: Name
 Shinminato (Horioka), Toyama, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -131164,6 +132204,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.0340
 # !latitude: 38.3162
+# region: Miyagi
+# admin1_quelle: Name
 Shiogama, Miyagi, Japan
 +09:00 :Asia/Tokyo
 0.9200 meters
@@ -131358,6 +132400,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.3753
 # !latitude: 33.6836
+# region: Wakayama
+# admin1_quelle: Name
 Shirahama (Katata), Wakayama, Japan
 +09:00 :Asia/Tokyo
 1.1000 meters
@@ -131550,6 +132594,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.3206
 # !latitude: 42.5214
+# region: Hokkaido
+# admin1_quelle: Name
 Shiraoiko, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.8800 meters
@@ -131742,6 +132788,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.4838
 # !latitude: 35.3004
+# region: Kanagawa
+# admin1_quelle: Name
 Enoshima (Shonan Minato), Kanagawa, Japan
 +09:00 :Asia/Tokyo
 0.9200 meters
@@ -131934,6 +132982,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.9644
 # !latitude: 30.4636
+# region: Kagoshima
+# admin1_quelle: Name
 Kumano (Tanegashima), Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -132130,6 +133180,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.9617
 # !latitude: 37.8306
+# region: Fukushima
+# admin1_quelle: Name
 Soma, Fukushima, Japan
 +09:00 :Asia/Tokyo
 0.8800 meters
@@ -132324,6 +133376,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.9011
 # !latitude: 34.3467
+# region: Hyogo
+# admin1_quelle: Name
 Sumoto, Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -132517,6 +133571,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.8917
 # !latitude: 33.8921
+# region: Fukuoka
+# admin1_quelle: Name
 Sunatsu, Fukuoka, Japan
 +09:00 :Asia/Tokyo
 0.9000 meters
@@ -132713,6 +133769,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.6047
 # !latitude: 34.6275
+# region: Yamaguchi
+# admin1_quelle: Name
 Susa, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 0.4000 meters
@@ -132906,6 +133964,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.2891
 # !latitude: 33.4003
+# region: Kochi
+# admin1_quelle: Name
 Susaki, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.1200 meters
@@ -133098,6 +134158,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.233333
 # !latitude: 42.800000
+# region: Hokkaido
+# admin1_quelle: Name
 Suttsu, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1700 meters
@@ -133290,6 +134352,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.633333
 # !latitude: 33.866667
+# region: Tokushima
+# admin1_quelle: Name
 Tachibana, Tokushima, Japan
 +09:00 :Asia/Tokyo
 1.1000 meters
@@ -133483,6 +134547,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.7450
 # !latitude: 34.2750
+# region: Kagawa
+# admin1_quelle: Name
 Tadotsu, Kagawa, Japan
 +09:00 :Asia/Tokyo
 1.9534 meters
@@ -133679,6 +134745,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.7639
 # !latitude: 34.8072
+# region: Shizuoka
+# admin1_quelle: Name
 Tago, Shizuoka, Japan
 +09:00 :Asia/Tokyo
 1.0000 meters
@@ -133871,6 +134939,8 @@ x 0 0
 # !units: meters
 # !longitude: 125.2783
 # !latitude: 24.8133
+# region: Okinawa
+# admin1_quelle: Name
 Hirara (Miyakojima), Okinawa, Japan
 +09:00 :Asia/Tokyo
 1.0300 meters
@@ -134065,6 +135135,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.0570
 # !latitude: 34.3514
+# region: Kagawa
+# admin1_quelle: Name
 Takamatsu, Kagawa, Japan
 +09:00 :Asia/Tokyo
 1.4000 meters
@@ -134257,6 +135329,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.9167
 # !latitude: 34.3320
+# region: Hiroshima
+# admin1_quelle: Name
 Takehara, Hiroshima, Japan
 +09:00 :Asia/Tokyo
 2.0000 meters
@@ -134451,6 +135525,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.1781
 # !latitude: 34.3389
+# region: Osaka
+# admin1_quelle: Name
 Tannowa, Osaka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -134647,6 +135723,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.3161
 # !latitude: 35.5936
+# region: Tottori
+# admin1_quelle: Name
 Tajiri, Tottori, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -134839,6 +135917,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.9170
 # !latitude: 33.9130
+# region: Yamaguchi
+# admin1_quelle: Name
 Tanokubi, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 1.0000 meters
@@ -135033,6 +136113,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.3814
 # !latitude: 41.2425
+# region: Aomori
+# admin1_quelle: Name
 Tappi, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.3300 meters
@@ -135225,6 +136307,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.8492
 # !latitude: 34.9861
+# region: Chiba
+# admin1_quelle: Name
 Tateyama, Chiba, Japan
 +09:00 :Asia/Tokyo
 1.0000 meters
@@ -135417,6 +136501,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.8247
 # !latitude: 34.4853
+# region: Mie
+# admin1_quelle: Name
 Toba, Mie, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -135613,6 +136699,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.5478
 # !latitude: 39.1855
+# region: Yamagata
+# admin1_quelle: Name
 Tobishima, Yamagata, Japan
 +09:00 :Asia/Tokyo
 0.1900 meters
@@ -135805,6 +136893,8 @@ x 0 0
 # !units: meters
 # !longitude: 143.3222
 # !latitude: 42.2970
+# region: Hokkaido
+# admin1_quelle: Name
 Hiroo (Tokachi), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.8500 meters
@@ -135999,6 +137089,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.8028
 # !latitude: 34.0408
+# region: Yamaguchi
+# admin1_quelle: Name
 Tokuyama, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 1.8000 meters
@@ -136191,6 +137283,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.7700
 # !latitude: 35.6486
+# region: Tokyo
+# admin1_quelle: Name
 Harumi, Tokyo, Japan
 +09:00 :Asia/Tokyo
 1.2000 meters
@@ -136383,6 +137477,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.8172
 # !latitude: 42.6058
+# region: Hokkaido
+# admin1_quelle: Name
 Tomakomai (Higashiko), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.8800 meters
@@ -136575,6 +137671,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.6211
 # !latitude: 42.6297
+# region: Hokkaido
+# admin1_quelle: Name
 Tomakomai (Nishiko), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.8800 meters
@@ -136767,6 +137865,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.9589
 # !latitude: 32.7792
+# region: Kochi
+# admin1_quelle: Name
 Tosashimizu, Kochi, Japan
 +09:00 :Asia/Tokyo
 1.1200 meters
@@ -136968,6 +138068,8 @@ x 0 0
 # !units: meters
 # !longitude: 137.2330
 # !latitude: 36.7670
+# region: Toyama
+# admin1_quelle: Name
 Toyama, Toyama, Japan
 +09:00 :Asia/Tokyo
 0.2200 meters
@@ -137160,6 +138262,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.8357
 # !latitude: 35.6497
+# region: Hyogo
+# admin1_quelle: Name
 Tsuiyama, Hyogo, Japan
 +09:00 :Asia/Tokyo
 0.1700 meters
@@ -137352,6 +138456,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.0644
 # !latitude: 35.6606
+# region: Fukui
+# admin1_quelle: Name
 Tsuruga, Fukui, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -137544,6 +138650,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.3222
 # !latitude: 34.2596
+# region: Nagasaki
+# admin1_quelle: Name
 Takahama (Tsushima), Nagasaki, Japan
 +09:00 :Asia/Tokyo
 0.8800 meters
@@ -137736,6 +138844,8 @@ x 0 0
 # !units: meters
 # !longitude: 129.4782
 # !latitude: 34.6554
+# region: Nagasaki
+# admin1_quelle: Name
 Tsushimahitakatsu, Nagasaki, Japan
 +09:00 :Asia/Tokyo
 0.5800 meters
@@ -137928,6 +139038,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.2431
 # !latitude: 33.9389
+# region: Yamaguchi
+# admin1_quelle: Name
 Ube, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 2.1000 meters
@@ -138122,6 +139234,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.8903
 # !latitude: 35.0172
+# region: Shizuoka
+# admin1_quelle: Name
 Uchiura, Shizuoka, Japan
 +09:00 :Asia/Tokyo
 1.0000 meters
@@ -138316,6 +139430,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.9489
 # !latitude: 34.4880
+# region: Okayama
+# admin1_quelle: Name
 Uno, Okayama, Japan
 +09:00 :Asia/Tokyo
 1.4000 meters
@@ -138512,6 +139628,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.8964
 # !latitude: 33.5583
+# region: Wakayama
+# admin1_quelle: Name
 Uragami, Wakayama, Japan
 +09:00 :Asia/Tokyo
 1.0500 meters
@@ -138706,6 +139824,8 @@ x 0 0
 # !units: meters
 # !longitude: 142.766667
 # !latitude: 42.166667
+# region: Hokkaido
+# admin1_quelle: Name
 Urakawa, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.9300 meters
@@ -138900,6 +140020,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.5511
 # !latitude: 33.2272
+# region: Ehime
+# admin1_quelle: Name
 Uwajima, Ehime, Japan
 +09:00 :Asia/Tokyo
 1.3000 meters
@@ -139094,6 +140216,8 @@ x 0 0
 # !units: meters
 # !longitude: 135.1455
 # !latitude: 34.2217
+# region: Wakayama
+# admin1_quelle: Name
 Wakayama, Wakayama, Japan
 +09:00 :Asia/Tokyo
 1.1100 meters
@@ -139294,6 +140418,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.6853
 # !latitude: 45.4078
+# region: Hokkaido
+# admin1_quelle: Name
 Wakkanai, Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.1800 meters
@@ -139490,6 +140616,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.9006
 # !latitude: 37.4058
+# region: Ishikawa
+# admin1_quelle: Name
 Wajima, Ishikawa, Japan
 +09:00 :Asia/Tokyo
 0.2000 meters
@@ -139686,6 +140814,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.3275
 # !latitude: 34.8706
+# region: Shizuoka
+# admin1_quelle: Name
 Yaizu, Shizuoka, Japan
 +09:00 :Asia/Tokyo
 0.9500 meters
@@ -139878,6 +141008,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.5667
 # !latitude: 32.5119
+# region: Kumamoto
+# admin1_quelle: Name
 Yatushiro, Kumamoto, Japan
 +09:00 :Asia/Tokyo
 2.1500 meters
@@ -140070,6 +141202,8 @@ x 0 0
 # !units: meters
 # !longitude: 136.6330
 # !latitude: 34.9500
+# region: Mie
+# admin1_quelle: Name
 Yokkaichi Minato, Mie, Japan
 +09:00 :Asia/Tokyo
 1.3000 meters
@@ -140262,6 +141396,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.6442
 # !latitude: 35.4542
+# region: Kanagawa
+# admin1_quelle: Name
 Yokohama (Shinko), Kanagawa, Japan
 +09:00 :Asia/Tokyo
 1.1500 meters
@@ -140456,6 +141592,8 @@ x 0 0
 # !units: meters
 # !longitude: 139.6514
 # !latitude: 35.2880
+# region: Kanagawa
+# admin1_quelle: Name
 Yokosuka, Kanagawa, Japan
 +09:00 :Asia/Tokyo
 1.1000 meters
@@ -140648,6 +141786,8 @@ x 0 0
 # !units: meters
 # !longitude: 122.9419
 # !latitude: 24.4522
+# region: Okinawa
+# admin1_quelle: Name
 Kubura (Yonaguni), Okinawa, Japan
 +09:00 :Asia/Tokyo
 1.0000 meters
@@ -140840,6 +141980,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.8230
 # !latitude: 34.3845
+# region: Kagawa
+# admin1_quelle: Name
 Yoshima, Kagawa, Japan
 +09:00 :Asia/Tokyo
 1.8000 meters
@@ -141032,6 +142174,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.2383
 # !latitude: 41.4445
+# region: Hokkaido
+# admin1_quelle: Name
 Fukushima (Yoshioka), Hokkaido, Japan
 +09:00 :Asia/Tokyo
 0.4500 meters
@@ -141226,6 +142370,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.978720
 # !latitude: 29.408970
+# province: Aqaba
+# admin1_quelle: Polygon
 Aqaba, Jordan
 +00:00 :UTC
 -0.2724 meters
@@ -147154,6 +148300,8 @@ x 0 0
 # !units: meters
 # !longitude: -62.205900
 # !latitude: 16.803500
+# region: Saint Peter
+# admin1_quelle: Polygon
 Little Bay, Montserrat
 +00:00 :UTC
 0.5527 meters
@@ -147348,6 +148496,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.499800
 # !latitude: 33.255600
+# region: Doukkala - Abda
+# admin1_quelle: Polygon
 El Jadida (Mazagan), Morocco
 +00:00 :UTC
 0.0000 meters
@@ -147543,6 +148693,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.292900
 # !latitude: 35.111900
+# region: Oriental
+# admin1_quelle: Polygon
 Saidia Marina, Morocco
 +00:00 :UTC
 0.0000 meters
@@ -147734,6 +148886,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.759448
 # !latitude: 53.429766
+# region: Nes
+# admin1_quelle: Name
 Ameland, Nes, Netherlands
 +00:00 :Europe/Amsterdam
 0.0759 meters
@@ -147925,6 +149079,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.097315
 # !latitude: 51.971117
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Beerkanaal, Netherlands
 +00:00 :Europe/Amsterdam
 0.0902 meters
@@ -148116,6 +149272,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.312531
 # !latitude: 51.891814
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Botlek Geulhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.1901 meters
@@ -148309,6 +149467,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.550427
 # !latitude: 51.403661
+# region: Veerhaven
+# admin1_quelle: Name
 Breskens, Veerhaven, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0198 meters
@@ -148500,6 +149660,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.621747
 # !latitude: 51.766527
+# province: Zeeland
+# admin1_quelle: Ufer 6.5 km
 Brouwersdam Brouwershavense Gat 2, Netherlands
 +00:00 :Europe/Amsterdam
 0.0002 meters
@@ -148691,6 +149853,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.8218
 # !latitude: 51.7479
+# province: Zeeland
+# admin1_quelle: Ufer 0.5 km
 Brouwersdam Brouwershavense Gat 8, Netherlands
 +00:00 :Europe/Amsterdam
 0.0001 meters
@@ -148884,6 +150048,8 @@ x 0 0
 # !latitude: 51.379298
 # note: 20260905 Name vereinheitlicht, vorher "Cadzand, 2, Netherlands"
 # note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# province: Zeeland
+# admin1_quelle: Polygon
 Cadzand, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0256 meters
@@ -149075,6 +150241,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.016527
 # !latitude: 51.822000
+# province: Gelderland
+# admin1_quelle: Polygon
 Dalem, Netherlands
 +00:00 :Europe/Amsterdam
 1.1052 meters
@@ -149269,6 +150437,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.931000
 # !latitude: 53.328000
+# province: Groningen
+# admin1_quelle: Polygon
 Delfzijl, Netherlands
 +00:00 :Europe/Amsterdam
 0.1057 meters
@@ -149463,6 +150633,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.744990
 # !latitude: 52.964359
+# region: Marsdiep
+# admin1_quelle: Name
 Den Helder, Marsdiep, Netherlands
 +00:00 :Europe/Amsterdam
 0.0039 meters
@@ -149654,6 +150826,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.045596
 # !latitude: 52.931538
+# region: Waddenzee voorhaven
+# admin1_quelle: Name
 Den Oever, Waddenzee voorhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.1139 meters
@@ -149845,6 +151019,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.671000
 # !latitude: 51.820000
+# region: Beneden Merwede
+# admin1_quelle: Name
 Dordrecht Oude Maas, Beneden Merwede, Netherlands
 +00:00 :Europe/Amsterdam
 0.4792 meters
@@ -150039,6 +151215,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.926111
 # !latitude: 53.433611
+# province: Groningen
+# admin1_quelle: Ufer 3.9 km
 Dukegat (Ems), Germany
 +00:00 :Europe/Amsterdam
 0.0820 meters
@@ -150230,6 +151408,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.417595
 # !latitude: 51.889213
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Eemhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.2101 meters
@@ -150421,6 +151601,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.828392
 # !latitude: 53.448702
+# region: haven
+# admin1_quelle: Name
 Eemshaven, haven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0299 meters
@@ -150612,6 +151794,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.821731
 # !latitude: 53.474392
+# region: Waddenzee
+# admin1_quelle: Name
 Eemshaven, Waddenzee, Netherlands
 +00:00 :Europe/Amsterdam
 0.0501 meters
@@ -150803,6 +151987,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.029151
 # !latitude: 51.962179
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Europahaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0853 meters
@@ -150994,6 +152180,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.210879
 # !latitude: 51.901771
+# region: Harmsenbrug
+# admin1_quelle: Name
 Europoort, Harmsenbrug, Netherlands
 +00:00 :Europe/Amsterdam
 0.1601 meters
@@ -151185,6 +152373,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.307781
 # !latitude: 51.866350
+# region: Hartelbrug
+# admin1_quelle: Name
 Europoort, Hartelbrug, Netherlands
 +00:00 :Europe/Amsterdam
 0.1849 meters
@@ -151376,6 +152566,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.757884
 # !latitude: 51.411393
+# province: Zeeland
+# admin1_quelle: Ufer 2.2 km
 Gat van Borssele, Netherlands
 +00:00 :Europe/Amsterdam
 0.0502 meters
@@ -151567,6 +152759,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.719720
 # !latitude: 52.006580
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Gouda Hollandsche IJssel, Netherlands
 +00:00 :Europe/Amsterdam
 0.2722 meters
@@ -151758,6 +152952,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.131500
 # !latitude: 51.993000
+# region: beneden
+# admin1_quelle: Name
 Hagestein, beneden, Netherlands
 +00:00 :Europe/Amsterdam
 1.0808 meters
@@ -151949,6 +153145,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.894000
 # !latitude: 51.719100
+# region: Bergsche Maas
+# admin1_quelle: Name
 Hank, Bergsche Maas, Netherlands
 +00:00 :Europe/Amsterdam
 0.5581 meters
@@ -152140,6 +153338,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.997440
 # !latitude: 51.445670
+# province: Zeeland
+# admin1_quelle: Ufer 0.8 km
 Hansweert, Netherlands
 +00:00 :Europe/Amsterdam
 0.1221 meters
@@ -152334,6 +153534,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.409342
 # !latitude: 53.175634
+# region: Waddenzee
+# admin1_quelle: Name
 Harlingen, Waddenzee, Netherlands
 +00:00 :Europe/Amsterdam
 0.0658 meters
@@ -152525,6 +153727,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.163079
 # !latitude: 51.930255
+# region: Kuwait Petroleum
+# admin1_quelle: Name
 Hartelkanaal, Kuwait Petroleum, Netherlands
 +00:00 :Europe/Amsterdam
 0.1402 meters
@@ -152716,6 +153920,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.124738
 # !latitude: 51.735848
+# province: Noord-Brabant
+# admin1_quelle: Polygon
 Heesbeen, Netherlands
 +00:00 :Europe/Amsterdam
 0.6475 meters
@@ -152907,6 +154113,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.451622
 # !latitude: 51.830298
+# region: Goidschalxoord
+# admin1_quelle: Name
 Heinenoord, Goidschalxoord, Netherlands
 +00:00 :Europe/Amsterdam
 0.3026 meters
@@ -153100,6 +154308,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.128239
 # !latitude: 51.819724
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Hellevoetsluis, Netherlands
 +00:00 :Europe/Amsterdam
 0.5182 meters
@@ -153294,6 +154504,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.119827
 # !latitude: 51.976899
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Hoek van Holland, Netherlands
 +00:00 :Europe/Amsterdam
 0.0902 meters
@@ -153485,6 +154697,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.161443
 # !latitude: 51.958239
+# region: noord
+# admin1_quelle: Name
 Hoek van Holland, Maeslantkering, Beneden, noord, Netherlands
 +00:00 :Europe/Amsterdam
 0.1000 meters
@@ -153676,6 +154890,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.878059
 # !latitude: 53.395656
+# region: Veersteiger
+# admin1_quelle: Name
 Holwerd, Veersteiger, Netherlands
 +00:00 :Europe/Amsterdam
 0.0399 meters
@@ -153867,6 +155083,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.398433
 # !latitude: 53.573750
+# province: Groningen
+# admin1_quelle: Ufer 3.4 km
 Huibertgat, Netherlands
 +00:00 :Europe/Amsterdam
 0.0194 meters
@@ -154058,6 +155276,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.517596
 # !latitude: 52.463943
+# province: Noord-Holland
+# admin1_quelle: Ufer 4.0 km
 IJGeul, 1, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0598 meters
@@ -154253,6 +155473,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.555000
 # !latitude: 52.463000
+# region: buitenhaven
+# admin1_quelle: Name
 IJmuiden, buitenhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0401 meters
@@ -154444,6 +155666,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.865418
 # !latitude: 51.543947
+# region: Zandkreeksluis
+# admin1_quelle: Name
 Kats, Zandkreeksluis, Netherlands
 +00:00 :Europe/Amsterdam
 0.0200 meters
@@ -154635,6 +155859,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.102580
 # !latitude: 51.366086
+# region: Baalhoek
+# admin1_quelle: Name
 Kloosterzande, Baalhoek, Netherlands
 +00:00 :Europe/Amsterdam
 0.1602 meters
@@ -154829,6 +156055,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.030556
 # !latitude: 53.327222
+# province: Groningen
+# admin1_quelle: Ufer 2.0 km
 Knock (Ems), Germany
 +00:00 :Europe/Amsterdam
 0.0982 meters
@@ -155020,6 +156248,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.334757
 # !latitude: 53.074590
+# province: Friesland
+# admin1_quelle: Polygon
 Kornwerderzand Waddenzee buitenhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0618 meters
@@ -155211,6 +156441,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.144264
 # !latitude: 51.659345
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Krammersluizen west, Netherlands
 +00:00 :Europe/Amsterdam
 0.0459 meters
@@ -155402,6 +156634,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.579000
 # !latitude: 51.916500
+# region: Hollandsche IJssel
+# admin1_quelle: Name
 Krimpen aan de IJssel, Hollandsche IJssel, Netherlands
 +00:00 :Europe/Amsterdam
 0.2918 meters
@@ -155593,6 +156827,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.628906
 # !latitude: 51.890722
+# region: Lek
+# admin1_quelle: Name
 Krimpen aan de Lek, Lek, Netherlands
 +00:00 :Europe/Amsterdam
 0.3317 meters
@@ -155784,6 +157020,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.196046
 # !latitude: 53.408334
+# region: Waddenzee
+# admin1_quelle: Name
 Lauwersoog, Waddenzee, Netherlands
 +00:00 :Europe/Amsterdam
 0.0358 meters
@@ -155975,6 +157213,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.433000
 # !latitude: 51.810500
+# region: beneden dorp
+# admin1_quelle: Name
 Lith, beneden dorp, Netherlands
 +00:00 :Europe/Amsterdam
 1.0318 meters
@@ -156166,6 +157406,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.007711
 # !latitude: 51.992205
+# region: stroommeetpaal
+# admin1_quelle: Name
 Maasmond, stroommeetpaal, Netherlands
 +00:00 :Europe/Amsterdam
 0.0902 meters
@@ -156359,6 +157601,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.249788
 # !latitude: 51.917507
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Maassluis, Netherlands
 +00:00 :Europe/Amsterdam
 0.1352 meters
@@ -156550,6 +157794,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.994960
 # !latitude: 51.962190
+# province: Zuid-Holland
+# admin1_quelle: Ufer 1.8 km
 Maasvlakte Amaliahaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0203 meters
@@ -156741,6 +157987,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.042464
 # !latitude: 51.929692
+# region: Hartelhaven
+# admin1_quelle: Name
 Maasvlakte, Hartelhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0905 meters
@@ -156932,6 +158180,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.191958
 # !latitude: 51.479747
+# province: Zeeland
+# admin1_quelle: Ufer 3.8 km
 Marollegat, Netherlands
 +00:00 :Europe/Amsterdam
 0.0300 meters
@@ -157123,6 +158373,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.615000
 # !latitude: 51.712000
+# province: Noord-Brabant
+# admin1_quelle: Polygon
 Moerdijk, Netherlands
 +00:00 :Europe/Amsterdam
 0.5281 meters
@@ -157314,6 +158566,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.207423
 # !latitude: 53.231562
+# region: Dollard
+# admin1_quelle: Name
 Nieuwe Statenzijl, Dollard, Netherlands
 +00:00 :Europe/Amsterdam
 0.1999 meters
@@ -157505,6 +158759,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.294811
 # !latitude: 52.273107
+# region: meetpost
+# admin1_quelle: Name
 Noordwijk, meetpost, Netherlands
 +00:00 :Europe/Amsterdam
 0.0002 meters
@@ -157696,6 +158952,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.480331
 # !latitude: 51.643290
+# region: 11
+# admin1_quelle: Name
 Oosterschelde, 11, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0198 meters
@@ -157887,6 +159145,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.676908
 # !latitude: 51.720117
+# region: 14
+# admin1_quelle: Name
 Oosterschelde, 14, Netherlands
 +00:00 :Europe/Amsterdam
 0.0201 meters
@@ -158078,6 +159338,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.693420
 # !latitude: 51.655140
+# province: Zeeland
+# admin1_quelle: Ufer 2.9 km
 Oosterschelde, 4, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0300 meters
@@ -158271,6 +159533,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.688000
 # !latitude: 51.618000
+# province: Zeeland
+# admin1_quelle: Ufer 6.9 km
 Oosterschelde Roompotsluis binnen, Netherlands
 +00:00 :Europe/Amsterdam
 0.0043 meters
@@ -158464,6 +159728,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.680000
 # !latitude: 51.619000
+# province: Zeeland
+# admin1_quelle: Ufer 7.0 km
 Oosterschelde Roompotsluis buiten, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0158 meters
@@ -158655,6 +159921,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.966769
 # !latitude: 51.407884
+# province: Zeeland
+# admin1_quelle: Ufer 0.9 km
 Ossenisse, Netherlands
 +00:00 :Europe/Amsterdam
 0.1202 meters
@@ -158846,6 +160114,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.464452
 # !latitude: 51.906535
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Parksluis, Netherlands
 +00:00 :Europe/Amsterdam
 0.2201 meters
@@ -159037,6 +160307,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.649702
 # !latitude: 52.772659
+# region: zuid
+# admin1_quelle: Name
 Petten, zuid, Netherlands
 +00:00 :Europe/Amsterdam
 0.0143 meters
@@ -159231,6 +160503,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.253999
 # !latitude: 53.321485
+# province: Groningen
+# admin1_quelle: Ufer 9.4 km
 Pogum (Ems), Germany
 +00:00 :Europe/Amsterdam
 0.1306 meters
@@ -159422,6 +160696,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.210140
 # !latitude: 51.398780
+# region: Bath
+# admin1_quelle: Name
 Rilland, Bath, Netherlands
 +00:00 :Europe/Amsterdam
 0.1642 meters
@@ -159613,6 +160889,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.120655
 # !latitude: 51.954265
+# region: Dintelhaven
+# admin1_quelle: Name
 Rotterdam, Dintelhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.1202 meters
@@ -159804,6 +161082,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.500300
 # !latitude: 51.918400
+# region: Boerengat
+# admin1_quelle: Name
 Rotterdam, Nieuwe Maas, Boerengat, Netherlands
 +00:00 :Europe/Amsterdam
 0.2425 meters
@@ -159995,6 +161275,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.228892
 # !latitude: 51.895774
+# region: noordzijde
+# admin1_quelle: Name
 Rozenburgsesluis, noordzijde, Netherlands
 +00:00 :Europe/Amsterdam
 0.0902 meters
@@ -160186,6 +161468,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.229823
 # !latitude: 51.891244
+# region: zuidzijde
+# admin1_quelle: Name
 Rozenburgsesluis, zuidzijde, Netherlands
 +00:00 :Europe/Amsterdam
 0.1402 meters
@@ -160377,6 +161661,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.164992
 # !latitude: 51.377868
+# province: Zeeland
+# admin1_quelle: Ufer 0.8 km
 Schaar van de Noord, Netherlands
 +00:00 :Europe/Amsterdam
 0.1601 meters
@@ -160568,6 +161854,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.138792
 # !latitude: 51.962297
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Scheurhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0902 meters
@@ -160761,6 +162049,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.263563
 # !latitude: 52.099035
+# province: Zuid-Holland
+# admin1_quelle: Ufer 2.1 km
 Scheveningen, Netherlands
 +00:00 :Europe/Amsterdam
 0.0202 meters
@@ -160952,6 +162242,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.202908
 # !latitude: 53.468937
+# region: Waddenzee
+# admin1_quelle: Name
 Schiermonnikoog, Waddenzee, Netherlands
 +00:00 :Europe/Amsterdam
 0.0499 meters
@@ -161143,6 +162435,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.850000
 # !latitude: 51.942000
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Schoonhoven, Netherlands
 +00:00 :Europe/Amsterdam
 0.5764 meters
@@ -161334,6 +162628,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.109586
 # !latitude: 51.603596
+# region: Haven Steiger
+# admin1_quelle: Name
 Sint Annaland, Haven Steiger, Netherlands
 +00:00 :Europe/Amsterdam
 0.0501 meters
@@ -161525,6 +162821,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.333954
 # !latitude: 51.861661
+# region: Oude Maas
+# admin1_quelle: Name
 Spijkenisse, Oude Maas, Netherlands
 +00:00 :Europe/Amsterdam
 0.1958 meters
@@ -161716,6 +163014,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.004000
 # !latitude: 51.598000
+# province: Zeeland
+# admin1_quelle: Ufer 1.4 km
 Stavenisse, Netherlands
 +00:00 :Europe/Amsterdam
 0.0301 meters
@@ -161909,6 +163209,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.033445
 # !latitude: 51.827028
+# region: buitenhaven
+# admin1_quelle: Name
 Stellendam, buitenhaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0501 meters
@@ -162100,6 +163402,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.107234
 # !latitude: 51.937687
+# region: noordzijde
+# admin1_quelle: Name
 Suurhofbrug, noordzijde, Netherlands
 +00:00 :Europe/Amsterdam
 0.1102 meters
@@ -162291,6 +163595,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.093561
 # !latitude: 51.963507
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Tennesseehaven, Netherlands
 +00:00 :Europe/Amsterdam
 0.0902 meters
@@ -162484,6 +163790,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.819812
 # !latitude: 51.336212
+# province: Zeeland
+# admin1_quelle: Polygon
 Terneuzen, Netherlands
 +00:00 :Europe/Amsterdam
 0.0902 meters
@@ -162675,6 +163983,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.333033
 # !latitude: 53.442486
+# region: Noordzee
+# admin1_quelle: Name
 Terschelling, Noordzee, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0223 meters
@@ -162871,6 +164181,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.220026
 # !latitude: 53.363045
+# region: west
+# admin1_quelle: Name
 Terschelling, west, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0041 meters
@@ -163064,6 +164376,8 @@ x 0 0
 # !latitude: 53.120612
 # note: 20260905 Name vereinheitlicht, vorher "Texel, Noordzee, Netherlands"
 # note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# province: Noord-Holland
+# admin1_quelle: Ufer 2.2 km
 Texel (Noordzee), Netherlands
 +00:00 :Europe/Amsterdam
 0.0080 meters
@@ -163255,6 +164569,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.850192
 # !latitude: 53.038835
+# region: Oudeschild
+# admin1_quelle: Name
 Texel, Oudeschild, Netherlands
 +00:00 :Europe/Amsterdam
 0.0439 meters
@@ -163446,6 +164762,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.349048
 # !latitude: 51.899639
+# province: Zuid-Holland
+# admin1_quelle: Polygon
 Vlaardingen, Netherlands
 +00:00 :Europe/Amsterdam
 0.1952 meters
@@ -163639,6 +164957,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.242164
 # !latitude: 51.503721
+# province: Zeeland
+# admin1_quelle: Ufer 14.7 km
 Vlakte van de Raan, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0397 meters
@@ -163830,6 +165150,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.091456
 # !latitude: 53.296127
+# region: haven
+# admin1_quelle: Name
 Vlieland, haven, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0283 meters
@@ -164026,6 +165348,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.600000
 # !latitude: 51.442000
+# province: Zeeland
+# admin1_quelle: Ufer 0.8 km
 Vlissingen, Netherlands
 +00:00 :Europe/Amsterdam
 0.0061 meters
@@ -164217,6 +165541,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.026206
 # !latitude: 51.398427
+# province: Zeeland
+# admin1_quelle: Polygon
 Walsoorden, Netherlands
 +00:00 :Europe/Amsterdam
 0.1202 meters
@@ -164408,6 +165734,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.876824
 # !latitude: 51.806041
+# region: Nieuwe Merwede
+# admin1_quelle: Name
 Werkendam, Nieuwe Merwede, Netherlands
 +00:00 :Europe/Amsterdam
 0.7260 meters
@@ -164599,6 +165927,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.440031
 # !latitude: 51.521448
+# province: Zeeland
+# admin1_quelle: Ufer 1.2 km
 Westkapelle, Netherlands
 +00:00 :Europe/Amsterdam
 -0.0097 meters
@@ -164790,6 +166120,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.958261
 # !latitude: 53.515827
+# province: Friesland
+# admin1_quelle: Ufer 5.5 km
 Wierumergronden, Netherlands
 +00:00 :Europe/Amsterdam
 0.0100 meters
@@ -164981,6 +166313,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.406890
 # !latitude: 51.696401
+# region: Hollandsch Diep
+# admin1_quelle: Name
 Willemstad, Hollandsch Diep, Netherlands
 +00:00 :Europe/Amsterdam
 0.5181 meters
@@ -165172,6 +166506,8 @@ x 0 0
 # !units: meters
 # !longitude: 4.075130
 # !latitude: 51.506154
+# province: Zeeland
+# admin1_quelle: Ufer 1.3 km
 Yerseke, Netherlands
 +00:00 :Europe/Amsterdam
 0.0200 meters
@@ -168725,6 +170061,8 @@ x 0 0
 # !units: meters
 # !longitude: -87.167000
 # !latitude: 12.483000
+# region: Chinandega
+# admin1_quelle: Ufer 1.0 km
 Puerto Corinto, Nicaragua
 +00:00 :UTC
 2.6081 meters
@@ -168921,6 +170259,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.151900
 # !latitude: 62.469400
+# region: Møre og Romsdal
+# admin1_quelle: Ufer 3.7 km
 Ålesund, Norway
 +00:00 :UTC
 1.2901 meters
@@ -169121,6 +170461,8 @@ x 0 0
 # !units: meters
 # !longitude: 16.134800
 # !latitude: 69.326100
+# region: Nordland
+# admin1_quelle: Ufer 1.7 km
 Andenes, Norway
 +00:00 :UTC
 1.3771 meters
@@ -169319,6 +170661,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.320500
 # !latitude: 60.398000
+# region: Hordaland
+# admin1_quelle: Polygon
 Bergen, Norway
 +00:00 :UTC
 0.9851 meters
@@ -169515,6 +170859,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.399800
 # !latitude: 67.292300
+# region: Nordland
+# admin1_quelle: Ufer 1.2 km
 Bodø, Norway
 +00:00 :UTC
 1.7024 meters
@@ -169708,6 +171054,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.339700
 # !latitude: 61.135900
+# region: Sogn og Fjordane
+# admin1_quelle: Polygon
 Leirvik (Bøfjorden), Norway
 +00:00 :UTC
 1.1133 meters
@@ -169904,6 +171252,8 @@ x 0 0
 # !units: meters
 # !longitude: 6.893900
 # !latitude: 60.492100
+# region: Hordaland
+# admin1_quelle: Ufer 1.6 km
 Bruravik, Norway
 +00:00 :UTC
 0.9989 meters
@@ -170100,6 +171450,8 @@ x 0 0
 # !units: meters
 # !longitude: 23.678700
 # !latitude: 70.664800
+# region: Finnmark
+# admin1_quelle: Ufer 0.5 km
 Hammerfest, Norway
 +00:00 :UTC
 1.7388 meters
@@ -170296,6 +171648,8 @@ x 0 0
 # !units: meters
 # !longitude: 16.548200
 # !latitude: 68.801300
+# region: Troms
+# admin1_quelle: Ufer 1.5 km
 Harstad, Norway
 +00:00 :UTC
 1.4315 meters
@@ -170492,6 +171846,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.101500
 # !latitude: 63.425200
+# region: Sør-Trøndelag
+# admin1_quelle: Polygon
 Heimsjøen, Norway
 +00:00 :UTC
 1.5101 meters
@@ -170688,6 +172044,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.856400
 # !latitude: 58.995200
+# region: Vestfold
+# admin1_quelle: Polygon
 Helgeroa, Norway
 +00:00 :UTC
 0.5588 meters
@@ -170887,6 +172245,8 @@ x 0 0
 # !units: meters
 # !longitude: 25.972700
 # !latitude: 70.980300
+# region: Finnmark
+# admin1_quelle: Polygon
 Honningsvåg, Norway
 +00:00 :UTC
 1.7185 meters
@@ -171083,6 +172443,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.482100
 # !latitude: 68.212600
+# region: Nordland
+# admin1_quelle: Polygon
 Kabelvåg, Norway
 +00:00 :UTC
 1.8092 meters
@@ -171279,6 +172641,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.736100
 # !latitude: 63.113900
+# region: Møre og Romsdal
+# admin1_quelle: Ufer 2.0 km
 Kristiansund, Norway
 +00:00 :UTC
 1.3716 meters
@@ -171475,6 +172839,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.503700
 # !latitude: 59.766400
+# region: Hordaland
+# admin1_quelle: Ufer 2.7 km
 Leirvik, Norway
 +00:00 :UTC
 0.8271 meters
@@ -171673,6 +173039,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.665200
 # !latitude: 63.869300
+# region: Sør-Trøndelag
+# admin1_quelle: Ufer 7.5 km
 Mausund (Måøya), Norway
 +00:00 :UTC
 1.4618 meters
@@ -171870,6 +173238,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.113300
 # !latitude: 61.933800
+# region: Sogn og Fjordane
+# admin1_quelle: Ufer 0.3 km
 Måløy, Norway
 +00:00 :UTC
 1.2321 meters
@@ -172066,6 +173436,8 @@ x 0 0
 # !units: meters
 # !longitude: 17.425800
 # !latitude: 68.428300
+# region: Nordland
+# admin1_quelle: Ufer 1.4 km
 Narvik, Norway
 +00:00 :UTC
 1.8893 meters
@@ -172266,6 +173638,8 @@ x 0 0
 # !units: meters
 # !longitude: 11.938000
 # !latitude: 78.928500
+# region: Svalbard
+# admin1_quelle: Polygon
 Ny-Ålesund, Norway
 +00:00 :UTC
 0.8388 meters
@@ -172462,6 +173836,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.604900
 # !latitude: 59.678100
+# region: Akershus
+# admin1_quelle: Ufer 0.8 km
 Oscarsborg, Norway
 +00:00 :UTC
 0.6968 meters
@@ -172660,6 +174036,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.734500
 # !latitude: 59.908600
+# region: Oslo
+# admin1_quelle: Polygon
 Oslo, Norway
 +00:00 :UTC
 0.7046 meters
@@ -172860,6 +174238,8 @@ x 0 0
 # !units: meters
 # !longitude: 11.230100
 # !latitude: 64.859500
+# region: Nord-Trøndelag
+# admin1_quelle: Ufer 0.8 km
 Rørvik, Norway
 +00:00 :UTC
 1.5522 meters
@@ -173056,6 +174436,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.746600
 # !latitude: 58.868200
+# region: Rogaland
+# admin1_quelle: Polygon
 Sandnes, Norway
 +00:00 :UTC
 0.7451 meters
@@ -173252,6 +174634,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.791600
 # !latitude: 58.505200
+# region: Rogaland
+# admin1_quelle: Polygon
 Sirevåg, Norway
 +00:00 :UTC
 0.4991 meters
@@ -173449,6 +174833,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.273000
 # !latitude: 59.710600
+# region: Buskerud
+# admin1_quelle: Ufer 1.4 km
 Solumstrand, Norway
 +00:00 :UTC
 0.6387 meters
@@ -173647,6 +175033,8 @@ x 0 0
 # !units: meters
 # !longitude: 5.730100
 # !latitude: 58.974300
+# region: Rogaland
+# admin1_quelle: Ufer 0.9 km
 Stavanger, Norway
 +00:00 :UTC
 0.7117 meters
@@ -173847,6 +175235,8 @@ x 0 0
 # !units: meters
 # !longitude: 7.554800
 # !latitude: 58.006400
+# region: Vest-Agder
+# admin1_quelle: Ufer 1.9 km
 Tregde (Mandal), Norway
 +00:00 :UTC
 0.5321 meters
@@ -174045,6 +175435,8 @@ x 0 0
 # !units: meters
 # !longitude: 18.954800
 # !latitude: 69.646100
+# region: Troms
+# admin1_quelle: Ufer 3.4 km
 Tromsø, Norway
 +00:00 :UTC
 1.7044 meters
@@ -174243,6 +175635,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.391700
 # !latitude: 63.436500
+# region: Sør-Trøndelag
+# admin1_quelle: Polygon
 Trondheim, Norway
 +00:00 :UTC
 1.6806 meters
@@ -174640,6 +176034,8 @@ x 0 0
 # !units: meters
 # !longitude: 31.104000
 # !latitude: 70.375000
+# region: Finnmark
+# admin1_quelle: Ufer 1.8 km
 Vardø, Norway
 +00:00 :UTC
 1.9768 meters
@@ -174836,6 +176232,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.949800
 # !latitude: 59.036000
+# region: Østfold
+# admin1_quelle: Ufer 2.4 km
 Viker, Norway
 +00:00 :UTC
 0.5661 meters
@@ -175032,6 +176430,8 @@ x 0 0
 # !units: meters
 # !longitude: 58.872000
 # !latitude: 20.687000
+# region: Ash Sharqiyah South
+# admin1_quelle: Ufer 1.2 km
 Ras Hilf (Masirah Island), Oman
 +04:00 :Asia/Muscat
 1.4683 meters
@@ -175228,6 +176628,8 @@ x 0 0
 # !units: meters
 # !longitude: 58.565000
 # !latitude: 23.628000
+# province: Muscat
+# admin1_quelle: Polygon
 Muscat (Sultan Qaboos Port), Oman
 +04:00 :Asia/Muscat
 4.5837 meters
@@ -175426,6 +176828,8 @@ x 0 0
 # !units: meters
 # !longitude: 54.007000
 # !latitude: 16.935000
+# province: Dhofar
+# admin1_quelle: Ufer 0.4 km
 Salalah, Oman
 +04:00 :Asia/Muscat
 2.1132 meters
@@ -175624,6 +177028,8 @@ x 0 0
 # !units: meters
 # !longitude: 66.975000
 # !latitude: 24.812000
+# province: Sind
+# admin1_quelle: Ufer 1.0 km
 Karachi, Pakistan
 +00:00 :UTC
 1.8487 meters
@@ -175819,6 +177225,8 @@ x 0 0
 # !units: meters
 # !longitude: 62.339400
 # !latitude: 25.112200
+# province: Baluchistan
+# admin1_quelle: Polygon
 Gwadar, Pakistan
 +00:00 :UTC
 1.3867 meters
@@ -176016,6 +177424,8 @@ x 0 0
 # !units: meters
 # !longitude: -79.5718
 # !latitude: 8.9650
+# region: Panama
+# admin1_quelle: Polygon
 Balboa, Panama
 +00:00 :UTC
 4.3099 meters
@@ -176214,6 +177624,8 @@ x 0 0
 # !units: meters
 # !longitude: -79.9147
 # !latitude: 9.3552
+# region: Colón
+# admin1_quelle: Ufer 1.8 km
 Cristobal, Panama
 +00:00 :UTC
 0.7071 meters
@@ -176410,6 +177822,8 @@ x 0 0
 # !units: meters
 # !longitude: -78.9492
 # !latitude: 9.5582
+# region: Kuna Yala
+# admin1_quelle: Ufer 1.0 km
 El Porvenir, Panama
 +00:00 :UTC
 0.3921 meters
@@ -176606,6 +178020,8 @@ x 0 0
 # !units: meters
 # !longitude: -82.257700
 # !latitude: 9.350900
+# region: Bocas del Toro
+# admin1_quelle: Polygon
 Bocas del Toro, Panama
 +00:00 :UTC
 1.3925 meters
@@ -176803,6 +178219,8 @@ x 0 0
 # !units: meters
 # !longitude: -81.2828
 # !latitude: -4.5752
+# state: Piura
+# admin1_quelle: Polygon
 Talara, Peru
 +00:00 :UTC
 1.4823 meters
@@ -177200,6 +178618,8 @@ x 0 0
 # !units: meters
 # !longitude: -77.1667
 # !latitude: -12.0689
+# state: Callao
+# admin1_quelle: Polygon
 Callao (La Punta), Peru
 +00:00 :UTC
 1.0587 meters
@@ -177397,6 +178817,8 @@ x 0 0
 # !units: meters
 # !longitude: -72.1086
 # !latitude: -17.0010
+# state: Arequipa
+# admin1_quelle: Polygon
 Matarani, Peru
 +00:00 :UTC
 2.1489 meters
@@ -177593,6 +179015,8 @@ x 0 0
 # !units: meters
 # !longitude: -80.8543
 # !latitude: -6.4167
+# state: Piura
+# admin1_quelle: Polygon
 Isla Lobos de Tierra, Peru
 +00:00 :UTC
 1.1361 meters
@@ -177789,6 +179213,8 @@ x 0 0
 # !units: meters
 # !longitude: -78.612700
 # !latitude: -9.076200
+# state: Áncash
+# admin1_quelle: Polygon
 Chimbote, Peru
 +00:00 :UTC
 1.4770 meters
@@ -177985,6 +179411,8 @@ x 0 0
 # !units: meters
 # !longitude: -77.273200
 # !latitude: -11.584900
+# state: Lima
+# admin1_quelle: Polygon
 Chancay, Peru
 +00:00 :UTC
 1.1190 meters
@@ -178181,6 +179609,8 @@ x 0 0
 # !units: meters
 # !longitude: -74.248100
 # !latitude: -15.866100
+# state: Arequipa
+# admin1_quelle: Polygon
 Chala, Peru
 +00:00 :UTC
 0.7800 meters
@@ -178377,6 +179807,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.349600
 # !latitude: -17.644700
+# state: Moquegua
+# admin1_quelle: Polygon
 Ilo, Peru
 +00:00 :UTC
 1.4132 meters
@@ -178576,6 +180008,8 @@ x 0 0
 # !units: meters
 # !longitude: 120.968000
 # !latitude: 14.585000
+# region: Manila
+# admin1_quelle: Polygon
 Manila, Philippines
 +00:00 :Asia/Manila
 2.5067 meters
@@ -178775,6 +180209,8 @@ x 0 0
 # !units: meters
 # !longitude: 123.7580
 # !latitude: 13.1461
+# province: Albay
+# admin1_quelle: Ufer 0.9 km
 Legaspi, Philippines
 +00:00 :Asia/Manila
 2.0344 meters
@@ -178974,6 +180410,8 @@ x 0 0
 # !units: meters
 # !longitude: 125.633000
 # !latitude: 7.083000
+# region: Davao
+# admin1_quelle: Polygon
 Davao, Philippines
 +00:00 :Asia/Manila
 2.9937 meters
@@ -179170,6 +180608,8 @@ x 0 0
 # !units: meters
 # !longitude: 121.000000
 # !latitude: 6.067000
+# province: Sulu
+# admin1_quelle: Ufer 1.1 km
 Jolo, Philippines
 +00:00 :Asia/Manila
 2.0065 meters
@@ -179364,6 +180804,8 @@ x 0 0
 # !units: meters
 # !longitude: 123.917000
 # !latitude: 10.300000
+# region: Cebu
+# admin1_quelle: Ufer 1.3 km
 Cebu, Philippines
 +00:00 :Asia/Manila
 1.8000 meters
@@ -179558,6 +181000,8 @@ x 0 0
 # !units: meters
 # !longitude: 118.736000
 # !latitude: 9.745000
+# region: Puerto Princesa
+# admin1_quelle: Polygon
 Puerto Princesa, Philippines
 +00:00 :Asia/Manila
 1.8295 meters
@@ -179754,6 +181198,8 @@ x 0 0
 # !units: meters
 # !longitude: 120.252000
 # !latitude: 14.765000
+# province: Bataan
+# admin1_quelle: Polygon
 Subic Bay, Philippines
 +00:00 :Asia/Manila
 1.2164 meters
@@ -179950,6 +181396,8 @@ x 0 0
 # !units: meters
 # !longitude: 120.488000
 # !latitude: 17.988000
+# province: Ilocos Norte
+# admin1_quelle: Polygon
 Currimao, Philippines
 +00:00 :Asia/Manila
 0.9211 meters
@@ -180146,6 +181594,8 @@ x 0 0
 # !units: meters
 # !longitude: 120.2018
 # !latitude: 13.8160
+# region: Lubang
+# admin1_quelle: Name
 Tilik, Lubang, Philippines
 +00:00 :Asia/Manila
 0.9209 meters
@@ -180344,6 +181794,8 @@ x 0 0
 # !units: meters
 # !longitude: 152.175000
 # !latitude: -4.200000
+# province: East New Britain
+# admin1_quelle: Polygon
 Rabaul, Papua New Guinea
 +00:00 :UTC
 0.7884 meters
@@ -180538,6 +181990,8 @@ x 0 0
 # !units: meters
 # !longitude: 155.5436
 # !latitude: -6.1838
+# region: Bougainville
+# admin1_quelle: Name
 Anewa Bay, Bougainville, Solomon Islands
 +00:00 :UTC
 0.8292 meters
@@ -180732,6 +182186,8 @@ x 0 0
 # !units: meters
 # !longitude: 143.633000
 # !latitude: -3.570000
+# province: East Sepik
+# admin1_quelle: Polygon
 Wewak, Papua New Guinea
 +00:00 :UTC
 1.0520 meters
@@ -180928,6 +182384,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.140000
 # !latitude: -9.478000
+# province: National Capital District
+# admin1_quelle: Ufer 1.1 km
 Port Moresby, Papua New Guinea
 +00:00 :UTC
 1.8217 meters
@@ -181127,6 +182585,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.272000
 # !latitude: -2.013000
+# province: Manus
+# admin1_quelle: Polygon
 Manus, Papua New Guinea
 +00:00 :UTC
 1.0350 meters
@@ -181321,6 +182781,8 @@ x 0 0
 # !units: meters
 # !longitude: 145.800000
 # !latitude: -5.200000
+# province: Madang
+# admin1_quelle: Ufer 0.9 km
 Madang, Papua New Guinea
 +00:00 :UTC
 1.3796 meters
@@ -181517,6 +182979,8 @@ x 0 0
 # !units: meters
 # !longitude: 146.983000
 # !latitude: -6.733000
+# province: Morobe
+# admin1_quelle: Polygon
 Lae, Papua New Guinea
 +00:00 :UTC
 1.3013 meters
@@ -181711,6 +183175,8 @@ x 0 0
 # !units: meters
 # !longitude: 150.795000
 # !latitude: -2.585000
+# province: New Ireland
+# admin1_quelle: Ufer 2.4 km
 Kavieng, Papua New Guinea
 +00:00 :UTC
 0.9082 meters
@@ -181907,6 +183373,8 @@ x 0 0
 # !units: meters
 # !longitude: 150.453000
 # !latitude: -10.317000
+# province: Milne Bay
+# admin1_quelle: Ufer 0.9 km
 Alotau, Papua New Guinea
 +00:00 :UTC
 0.9235 meters
@@ -182106,6 +183574,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.375000
 # !latitude: -2.037000
+# region: Manus Is.
+# admin1_quelle: Name
 Lombrum, Manus Is., Papua New Guinea
 +00:00 :UTC
 0.8048 meters
@@ -182305,6 +183775,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.4154
 # !latitude: 38.6932
+# region: Lisboa
+# admin1_quelle: Ufer 1.5 km
 Cascais, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -182503,6 +183975,8 @@ x 0 0
 # !units: meters
 # !longitude: -31.1259
 # !latitude: 39.4514
+# region: Açores
+# admin1_quelle: Name
 Santa Cruz das Flores, Açores, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -182703,6 +184177,8 @@ x 0 0
 # !units: meters
 # !longitude: -25.6713
 # !latitude: 37.7356
+# region: Açores
+# admin1_quelle: Name
 Ponta Delgada (São Miguel), Açores, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -182898,6 +184374,8 @@ x 0 0
 # !units: meters
 # !longitude: -28.6214
 # !latitude: 38.5339
+# region: Açores
+# admin1_quelle: Name
 Horta (Faial), Açores, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -183091,6 +184569,8 @@ x 0 0
 # !units: meters
 # !longitude: -31.1686
 # !latitude: 39.3783
+# region: Açores
+# admin1_quelle: Name
 Lajes das Flores, Açores, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -183284,6 +184764,8 @@ x 0 0
 # !units: meters
 # !longitude: -27.2155
 # !latitude: 38.6515
+# region: Açores
+# admin1_quelle: Name
 Angra do Heroísmo (Terceira), Açores, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -183482,6 +184964,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.9109
 # !latitude: 32.6447
+# region: Madeira
+# admin1_quelle: Name
 Funchal, Madeira, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -183680,6 +185164,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.6668
 # !latitude: 37.0988
+# region: Faro
+# admin1_quelle: Ufer 1.7 km
 Lagos, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -183875,6 +185361,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8396
 # !latitude: 41.6850
+# region: Viana do Castelo
+# admin1_quelle: Ufer 1.1 km
 Viana do Castelo, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -184072,6 +185560,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.7045
 # !latitude: 41.1867
+# region: Porto
+# admin1_quelle: Polygon
 Porto de Leixoes (Matosinhos), Portugal
 +00:00 :UTC
 0.0000 meters
@@ -184265,6 +185755,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.0740
 # !latitude: 39.5860
+# region: Leiria
+# admin1_quelle: Polygon
 Nazaré, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -184458,6 +185950,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.3670
 # !latitude: 39.3540
+# region: Leiria
+# admin1_quelle: Polygon
 Peniche, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -184653,6 +186147,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8880
 # !latitude: 37.9490
+# region: Setúbal
+# admin1_quelle: Ufer 0.7 km
 Sines, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -184849,6 +186345,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.2604
 # !latitude: 37.0825
+# region: Faro
+# admin1_quelle: Polygon
 Albufeira, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -185045,6 +186543,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.8694
 # !latitude: 37.2956
+# region: Faro
+# admin1_quelle: Polygon
 Arrifana, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -185241,6 +186741,8 @@ x 0 0
 # !units: meters
 # !longitude: -8.9282
 # !latitude: 37.0104
+# region: Faro
+# admin1_quelle: Ufer 0.7 km
 Sagres, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -185437,6 +186939,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.3149
 # !latitude: 33.0597
+# region: Madeira
+# admin1_quelle: Name
 Porto Santo, Madeira, Portugal
 +00:00 :UTC
 0.0000 meters
@@ -185632,6 +187136,8 @@ x 0 0
 # !units: meters
 # !longitude: 132.860000
 # !latitude: 42.780000
+# region: Primor'ye
+# admin1_quelle: Polygon
 Nakhodka, Russia
 +00:00 :UTC
 4.5434 meters
@@ -185827,6 +187333,8 @@ x 0 0
 # !units: meters
 # !longitude: 166.020000
 # !latitude: 55.200000
+# region: Kamchatka
+# admin1_quelle: Polygon
 Nikol'skoe, Russia
 +00:00 :UTC
 1.2697 meters
@@ -186022,6 +187530,8 @@ x 0 0
 # !units: meters
 # !longitude: 158.650000
 # !latitude: 53.016700
+# region: Kamchatka
+# admin1_quelle: Polygon
 Petropavlovsk, Russia
 +00:00 :UTC
 2.6010 meters
@@ -186217,6 +187727,8 @@ x 0 0
 # !units: meters
 # !longitude: 130.800000
 # !latitude: 42.650000
+# region: Primor'ye
+# admin1_quelle: Ufer 0.3 km
 Pos'et, Russia
 +00:00 :UTC
 4.2658 meters
@@ -186412,6 +187924,8 @@ x 0 0
 # !units: meters
 # !longitude: 140.290000
 # !latitude: 48.970000
+# region: Khabarovsk
+# admin1_quelle: Ufer 0.6 km
 Sovetskaya Gavan', Russia
 +00:00 :UTC
 1.7172 meters
@@ -186607,6 +188121,8 @@ x 0 0
 # !units: meters
 # !longitude: 142.820000
 # !latitude: 47.410000
+# region: Sakhalin
+# admin1_quelle: Polygon
 Starodubskoe, Russia
 +00:00 :UTC
 0.6068 meters
@@ -186802,6 +188318,8 @@ x 0 0
 # !units: meters
 # !longitude: 142.070000
 # !latitude: 49.080000
+# region: Sakhalin
+# admin1_quelle: Polygon
 Uglegorsk, Russia
 +00:00 :UTC
 1.0110 meters
@@ -186997,6 +188515,8 @@ x 0 0
 # !units: meters
 # !longitude: 131.920000
 # !latitude: 43.130000
+# region: Primor'ye
+# admin1_quelle: Polygon
 Vladivostok, Russia
 +00:00 :UTC
 4.6498 meters
@@ -189360,6 +190880,8 @@ x 0 0
 # !units: meters
 # !longitude: -62.709700
 # !latitude: 17.290000
+# region: Saint George Basseterre
+# admin1_quelle: Ufer 0.4 km
 Basseterre, Saint Kitts and Nevis
 +00:00 :UTC
 -3.0791 meters
@@ -189556,6 +191078,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.2239
 # !latitude: 13.1494
+# region: Saint George
+# admin1_quelle: Ufer 1.6 km
 Kingstown, Saint Vincent and the Grenadines
 +00:00 :UTC
 6.3678 meters
@@ -189752,6 +191276,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.195500
 # !latitude: 13.129900
+# region: Saint George
+# admin1_quelle: Ufer 1.1 km
 Calliaqua, Saint Vincent and the Grenadines
 +00:00 :UTC
 0.5963 meters
@@ -190346,6 +191872,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.517000
 # !latitude: 10.650000
+# region: Port of Spain
+# admin1_quelle: Polygon
 Port of Spain, Trinidad and Tobago
 +00:00 :UTC
 0.0000 meters
@@ -190543,6 +192071,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.689000
 # !latitude: 10.190000
+# region: Point Fortin
+# admin1_quelle: Ufer 2.3 km
 Point Fortin, Trinidad and Tobago
 +00:00 :UTC
 0.0000 meters
@@ -190741,6 +192271,8 @@ x 0 0
 # !units: meters
 # !longitude: 39.657000
 # !latitude: -4.070000
+# province: Coast
+# admin1_quelle: Ufer 0.8 km
 Mombasa (Kilindini Harbour), Kenya
 +00:00 :UTC
 2.9438 meters
@@ -190937,6 +192469,8 @@ x 0 0
 # !units: meters
 # !longitude: 40.9027
 # !latitude: -2.2674
+# province: Coast
+# admin1_quelle: Ufer 2.1 km
 Lamu, Kenya
 +00:00 :UTC
 2.3420 meters
@@ -191131,6 +192665,8 @@ x 0 0
 # !units: meters
 # !longitude: 39.2889
 # !latitude: -6.8208
+# region: Dar-Es-Salaam
+# admin1_quelle: Ufer 0.8 km
 Dar es Salaam, Tanzania
 +00:00 :UTC
 2.4600 meters
@@ -191330,6 +192866,8 @@ x 0 0
 # !units: meters
 # !longitude: 39.1916
 # !latitude: -6.1572
+# region: Zanzibar West
+# admin1_quelle: Polygon
 Zanzibar City, Tanzania
 +00:00 :UTC
 2.0992 meters
@@ -192505,6 +194043,8 @@ x 0 0
 # !units: meters
 # !longitude: 1.409260
 # !latitude: 51.223790
+# region: England
+# admin1_quelle: Name
 Deal, England, United Kingdom
 +00:00 :Europe/London
 3.4961 meters
@@ -194859,6 +196399,8 @@ x 0 0
 # !units: meters
 # !longitude: -3.164780
 # !latitude: 51.434670
+# region: Wales
+# admin1_quelle: Name
 Penarth, Wales, United Kingdom
 +00:00 :Europe/London
 6.6774 meters
@@ -195841,6 +197383,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.820000
 # !latitude: 50.710170
+# region: England
+# admin1_quelle: Name
 West Bay (Bridport), England, United Kingdom
 +00:00 :Europe/London
 2.5893 meters
@@ -200749,6 +202293,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.140000
 # !latitude: 60.154000
+# region: Scotland
+# admin1_quelle: Name
 Lerwick (Shetlands), Scotland, United Kingdom
 +00:00 :Europe/London
 1.3070 meters
@@ -200947,6 +202493,8 @@ x 0 0
 # !units: meters
 # !longitude: -5.543000
 # !latitude: 50.103000
+# region: England
+# admin1_quelle: Name
 Newlyn, England, United Kingdom
 +00:00 :Europe/London
 3.2165 meters
@@ -201145,6 +202693,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.3889
 # !latitude: 58.2072
+# region: Scotland
+# admin1_quelle: Name
 Stornoway (Isle of Lewis), Scotland, United Kingdom
 +00:00 :Europe/London
 2.9054 meters
@@ -201344,6 +202894,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.3344
 # !latitude: 55.3717
+# region: Donegal
+# admin1_quelle: Polygon
 Malin Head, Ireland
 +00:00 :Europe/Dublin
 2.9812 meters
@@ -201541,6 +203093,8 @@ x 0 0
 # !units: meters
 # !longitude: -66.9315
 # !latitude: 10.6041
+# state: Vargas
+# admin1_quelle: Polygon
 La Guaira, Venezuela
 +00:00 :UTC
 0.0000 meters
@@ -201739,6 +203293,8 @@ x 0 0
 # !units: meters
 # !longitude: 109.2513
 # !latitude: 13.7680
+# province: Binh inh
+# admin1_quelle: Ufer 0.5 km
 Qui Nhon, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 1.4470 meters
@@ -201935,6 +203491,8 @@ x 0 0
 # !units: meters
 # !longitude: 107.072000
 # !latitude: 10.340000
+# province: Ba Ria - Vung Tau
+# admin1_quelle: Ufer 2.5 km
 Vung Tau, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 2.7165 meters
@@ -202130,6 +203688,8 @@ x 0 0
 # !units: meters
 # !longitude: 106.8138
 # !latitude: 20.6685
+# province: Hai Phong
+# admin1_quelle: Ufer 1.3 km
 Hon Dau, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 1.9775 meters
@@ -202323,6 +203883,8 @@ x 0 0
 # !units: meters
 # !longitude: -16.037300
 # !latitude: 17.990200
+# region: Nouakchott
+# admin1_quelle: Ufer 3.6 km
 Nouakchott, Mauritania
 +00:00 :UTC
 0.0000 meters
@@ -202523,6 +204085,8 @@ x 0 0
 # !units: meters
 # !longitude: -17.420000
 # !latitude: 14.677000
+# region: Dakar
+# admin1_quelle: Ufer 0.8 km
 Dakar, Senegal
 +00:00 :UTC
 0.0000 meters
@@ -202920,6 +204484,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.745000
 # !latitude: 4.882500
+# region: Western
+# admin1_quelle: Ufer 0.4 km
 Takoradi, Ghana
 +00:00 :UTC
 0.0000 meters
@@ -203113,6 +204679,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.3839
 # !latitude: 6.4525
+# state: Lagos
+# admin1_quelle: Ufer 0.9 km
 Lagos (Apapa), Nigeria
 +00:00 :UTC
 0.0000 meters
@@ -203306,6 +204874,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.3997
 # !latitude: 6.3920
+# state: Lagos
+# admin1_quelle: Ufer 1.8 km
 Lagos Bar, Nigeria
 +00:00 :UTC
 0.0000 meters
@@ -203506,6 +205076,8 @@ x 0 0
 # !units: meters
 # !longitude: -0.9738
 # !latitude: 37.5967
+# region: Murcia
+# admin1_quelle: Polygon
 Cartagena, Spain
 +00:00 :UTC
 0.2155 meters
@@ -203705,6 +205277,8 @@ x 0 0
 # !units: meters
 # !longitude: 1.2988
 # !latitude: 38.9771
+# region: Baleares
+# admin1_quelle: Name
 Sant Antoni de Portmany, Ibiza, Baleares, Spain
 +00:00 :UTC
 0.0923 meters
@@ -203904,6 +205478,8 @@ x 0 0
 # !units: meters
 # !longitude: 2.3785
 # !latitude: 39.5442
+# region: Baleares
+# admin1_quelle: Name
 Andratx, Mallorca, Baleares, Spain
 +00:00 :UTC
 0.2095 meters
@@ -204103,6 +205679,8 @@ x 0 0
 # !units: meters
 # !longitude: 3.0885
 # !latitude: 39.9046
+# region: Baleares
+# admin1_quelle: Name
 Pollença, Mallorca, Baleares, Spain
 +00:00 :UTC
 0.2431 meters
@@ -204302,6 +205880,8 @@ x 0 0
 # !units: meters
 # !longitude: 2.9533
 # !latitude: 39.3603
+# region: Baleares
+# admin1_quelle: Name
 Sa Rapita, Mallorca, Baleares, Spain
 +00:00 :UTC
 0.1109 meters
@@ -204499,6 +206079,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.1559
 # !latitude: 53.4857
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Bremervörde UW (Oste), Germany
 +00:00 :Europe/Berlin
 5.8222 meters
@@ -204695,6 +206277,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7644
 # !latitude: 53.1834
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Ritterhude (Hamme), Germany
 +00:00 :Europe/Berlin
 5.7580 meters
@@ -204891,6 +206475,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.7192
 # !latitude: 53.1643
+# state: Bremen
+# admin1_quelle: Polygon
 Wasserhorst (Lesum), Germany
 +00:00 :Europe/Berlin
 5.6964 meters
@@ -205087,6 +206673,8 @@ x 0 0
 # !units: meters
 # !longitude: 10.29679
 # !latitude: 53.430844
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Altengamme (Elbe), Germany
 +00:00 :Europe/Berlin
 6.2570 meters
@@ -205283,6 +206871,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.686973
 # !latitude: 54.730507
+# state: Schleswig-Holstein
+# admin1_quelle: Ufer 0.5 km
 Dagebüll, Germany
 +00:00 :Europe/Berlin
 5.1197 meters
@@ -205479,6 +207069,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.481417
 # !latitude: 53.263946
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Elsfleth (Weser), Germany
 +00:00 :Europe/Berlin
 5.4744 meters
@@ -205675,6 +207267,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.510193
 # !latitude: 53.204709
+# state: Bremen
+# admin1_quelle: Polygon
 Farge (Weser), Germany
 +00:00 :Europe/Berlin
 5.4765 meters
@@ -205871,6 +207465,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.092507
 # !latitude: 53.771714
+# state: Niedersachsen
+# admin1_quelle: Ufer 4.9 km
 Mellumplate (Jade), Germany
 +00:00 :Europe/Berlin
 5.1255 meters
@@ -206067,6 +207663,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.619533
 # !latitude: 53.169406
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Vegesack (Weser), Germany
 +00:00 :Europe/Berlin
 5.5208 meters
@@ -206263,6 +207861,8 @@ x 0 0
 # !units: meters
 # !longitude: 8.486546
 # !latitude: 53.315979
+# state: Niedersachsen
+# admin1_quelle: Polygon
 Brake (Weser), Germany
 +00:00 :Europe/Berlin
 5.3806 meters
@@ -206527,6 +208127,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.3230
 # !latitude: -18.4748
+# region: Arica y Parinacota
+# admin1_quelle: Polygon
 Arica, Chile
 +00:00 :America/Santiago
 3.4546 meters
@@ -206723,6 +208325,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.1979
 # !latitude: -20.8031
+# region: Tarapacá
+# admin1_quelle: Ufer 0.2 km
 Patache, Chile
 +00:00 :America/Santiago
 3.4688 meters
@@ -206919,6 +208523,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.468000
 # !latitude: -25.010000
+# region: Antofagasta
+# admin1_quelle: Polygon
 Paposo, Chile
 +00:00 :America/Santiago
 2.6452 meters
@@ -207115,6 +208721,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.485000
 # !latitude: -25.410000
+# region: Antofagasta
+# admin1_quelle: Polygon
 Taltal, Chile
 +00:00 :America/Santiago
 4.3543 meters
@@ -207311,6 +208919,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.627000
 # !latitude: -26.351000
+# region: Atacama
+# admin1_quelle: Polygon
 Chañaral, Chile
 +00:00 :America/Santiago
 2.9891 meters
@@ -207507,6 +209117,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.8248
 # !latitude: -27.0646
+# region: Atacama
+# admin1_quelle: Polygon
 Caldera, Chile
 +00:00 :America/Santiago
 3.6510 meters
@@ -207703,6 +209315,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.613000
 # !latitude: -30.290000
+# region: Coquimbo
+# admin1_quelle: Polygon
 Puerto Aldea, Chile
 +00:00 :America/Santiago
 3.2415 meters
@@ -207899,6 +209513,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.530000
 # !latitude: -32.137000
+# region: Coquimbo
+# admin1_quelle: Polygon
 Pichidangui, Chile
 +00:00 :America/Santiago
 3.3443 meters
@@ -208095,6 +209711,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.5254
 # !latitude: -32.7755
+# region: Valparaíso
+# admin1_quelle: Polygon
 Quintero, Chile
 +00:00 :America/Santiago
 3.0290 meters
@@ -208291,6 +209909,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.628000
 # !latitude: -33.028000
+# region: Valparaíso
+# admin1_quelle: Polygon
 Valparaíso, Chile
 +00:00 :America/Santiago
 2.9543 meters
@@ -208487,6 +210107,8 @@ x 0 0
 # !units: meters
 # !longitude: -72.055000
 # !latitude: -34.690000
+# region: Libertador General Bernardo O'Higgins
+# admin1_quelle: Polygon
 Boyeruca, Chile
 +00:00 :America/Santiago
 0.9202 meters
@@ -208683,6 +210305,8 @@ x 0 0
 # !units: meters
 # !longitude: -72.959000
 # !latitude: -36.545000
+# region: Bío-Bío
+# admin1_quelle: Polygon
 Coliumo, Chile
 +00:00 :America/Santiago
 3.9711 meters
@@ -208879,6 +210503,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.1517
 # !latitude: -37.0286
+# region: Bío-Bío
+# admin1_quelle: Polygon
 Coronel, Chile
 +00:00 :America/Santiago
 3.4118 meters
@@ -209075,6 +210701,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.660000
 # !latitude: -37.594000
+# region: Bío-Bío
+# admin1_quelle: Polygon
 Lebu, Chile
 +00:00 :America/Santiago
 3.0954 meters
@@ -209271,6 +210899,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.744000
 # !latitude: -40.580000
+# region: Los Lagos
+# admin1_quelle: Polygon
 Bahía Mansa, Chile
 +00:00 :America/Santiago
 3.3915 meters
@@ -209467,6 +211097,8 @@ x 0 0
 # !units: meters
 # !longitude: -72.961000
 # !latitude: -41.485000
+# region: Los Lagos
+# admin1_quelle: Polygon
 Puerto Montt, Chile
 +00:00 :America/Santiago
 5.6023 meters
@@ -209663,6 +211295,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.764000
 # !latitude: -42.480000
+# region: Los Lagos
+# admin1_quelle: Polygon
 Castro, Chile
 +00:00 :America/Santiago
 4.4487 meters
@@ -209859,6 +211493,8 @@ x 0 0
 # !units: meters
 # !longitude: -67.6082
 # !latitude: -54.9329
+# region: Magallanes y Antártica Chilena
+# admin1_quelle: Polygon
 Puerto Williams, Chile
 +00:00 :America/Punta_Arenas
 2.9379 meters
@@ -210055,6 +211691,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.2156
 # !latitude: -19.5969
+# region: Tarapacá
+# admin1_quelle: Polygon
 Pisagua, Chile
 +00:00 :America/Santiago
 3.2927 meters
@@ -210251,6 +211889,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.211500
 # !latitude: -22.093700
+# region: Antofagasta
+# admin1_quelle: Polygon
 Tocopilla, Chile
 +00:00 :America/Santiago
 3.0520 meters
@@ -210447,6 +212087,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.249900
 # !latitude: -28.468900
+# region: Atacama
+# admin1_quelle: Ufer 0.3 km
 Huasco, Chile
 +00:00 :America/Santiago
 4.4294 meters
@@ -210643,6 +212285,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.057300
 # !latitude: -36.636100
+# region: Bío-Bío
+# admin1_quelle: Ufer 3.7 km
 Quiriquina, Chile
 +00:00 :America/Santiago
 3.4263 meters
@@ -210839,6 +212483,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.468700
 # !latitude: -29.245900
+# region: Coquimbo
+# admin1_quelle: Ufer 1.9 km
 Punta de Choros, Chile
 +00:00 :America/Santiago
 3.0725 meters
@@ -211035,6 +212681,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.408100
 # !latitude: -38.749900
+# region: La Araucanía
+# admin1_quelle: Polygon
 Nehuentúe (Puerto Saavedra), Chile
 +00:00 :America/Santiago
 1.7263 meters
@@ -211231,6 +212879,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.215100
 # !latitude: -39.397600
+# region: Los Ríos
+# admin1_quelle: Polygon
 Queule, Chile
 +00:00 :America/Santiago
 2.4022 meters
@@ -211427,6 +213077,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.748200
 # !latitude: -43.898500
+# region: Aisén del General Carlos Ibáñez del Campo
+# admin1_quelle: Ufer 1.6 km
 Puerto Melinka, Chile
 +00:00 :America/Coyhaique
 3.9092 meters
@@ -211623,6 +213275,8 @@ x 0 0
 # !units: meters
 # !longitude: -73.521100
 # !latitude: -45.164600
+# region: Aisén del General Carlos Ibáñez del Campo
+# admin1_quelle: Ufer 6.8 km
 Puerto Aguirre, Chile
 +00:00 :America/Coyhaique
 5.3138 meters
@@ -211819,6 +213473,8 @@ x 0 0
 # !units: meters
 # !longitude: -74.408600
 # !latitude: -49.129800
+# region: Magallanes y Antártica Chilena
+# admin1_quelle: Polygon
 Puerto Edén, Chile
 +00:00 :America/Punta_Arenas
 3.8667 meters
@@ -212015,6 +213671,8 @@ x 0 0
 # !units: meters
 # !longitude: -74.072200
 # !latitude: -52.961000
+# region: Estrecho de Magallanes
+# admin1_quelle: Name
 Caleta Meteoro, Estrecho de Magallanes, Chile
 +00:00 :America/Punta_Arenas
 1.7862 meters
@@ -212211,6 +213869,8 @@ x 0 0
 # !units: meters
 # !longitude: -70.209200
 # !latitude: -52.648100
+# region: Magallanes y Antártica Chilena
+# admin1_quelle: Polygon
 Bahía Gregorio, Chile
 +00:00 :America/Punta_Arenas
 5.4573 meters
@@ -213452,6 +215112,8 @@ x 0 0
 # !units: meters
 # !longitude: 142.7563
 # !latitude: 46.6279
+# region: Sakhalin
+# admin1_quelle: Ufer 1.2 km
 Korsakov (Sakhalin), Russia
 +00:00 :Asia/Sakhalin
 0.0460 meters
@@ -213648,6 +215310,8 @@ x 0 0
 # !units: meters
 # !longitude: 147.8811
 # !latitude: 45.2570
+# region: Sakhalin
+# admin1_quelle: Polygon
 Kurilsk (Iturup), Kuril Islands, Russia
 +00:00 :Asia/Sakhalin
 0.0166 meters
@@ -213844,6 +215508,8 @@ x 0 0
 # !units: meters
 # !longitude: 143.1200
 # !latitude: 49.2270
+# region: Sakhalin
+# admin1_quelle: Polygon
 Poronaysk (Sakhalin), Russia
 +00:00 :Asia/Sakhalin
 0.0045 meters
@@ -214040,6 +215706,8 @@ x 0 0
 # !units: meters
 # !longitude: 133.9028
 # !latitude: 42.8969
+# region: Primor'ye
+# admin1_quelle: Polygon
 Preobrazheniye, Russia
 +00:00 :Asia/Vladivostok
 0.0027 meters
@@ -214306,6 +215974,8 @@ x 0 0
 # !latitude: 19.570000
 # note: 20260903 Provinz "Hainan" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Hainan
+# admin1_quelle: Name
 Qinglan, Hainan, China
 +00:00 :Asia/Shanghai
 0.0035 meters
@@ -214504,6 +216174,8 @@ x 0 0
 # !latitude: 22.470000
 # note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Guangdong
+# admin1_quelle: Name
 Shenzhen, Guangdong, China
 +00:00 :Asia/Shanghai
 0.0166 meters
@@ -214702,6 +216374,8 @@ x 0 0
 # !latitude: 21.580000
 # note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# region: Guangdong
+# admin1_quelle: Name
 Zhapo, Guangdong, China
 +00:00 :Asia/Shanghai
 0.0264 meters
@@ -214966,6 +216640,8 @@ x 0 0
 # !units: meters
 # !longitude: 30.612600
 # !latitude: 36.835500
+# province: Antalya
+# admin1_quelle: Ufer 1.0 km
 Antalya, Turkey
 +00:00 :Europe/Istanbul
 0.0018 meters
@@ -215162,6 +216838,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.885200
 # !latitude: 36.415600
+# province: Hatay
+# admin1_quelle: Ufer 1.2 km
 Arsuz (Hatay), Turkey
 +00:00 :Europe/Istanbul
 0.0001 meters
@@ -215358,6 +217036,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.255400
 # !latitude: 36.563700
+# province: Mersin
+# admin1_quelle: Ufer 3.2 km
 Erdemli, Turkey
 +00:00 :Europe/Istanbul
 0.0005 meters
@@ -215554,6 +217234,8 @@ x 0 0
 # !units: meters
 # !longitude: 26.7376
 # !latitude: 38.4199
+# province: Izmir
+# admin1_quelle: Polygon
 Mentes (Güvendik), Turkey
 +00:00 :Europe/Istanbul
 -0.0000 meters
@@ -215750,6 +217432,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.836200
 # !latitude: 36.281500
+# province: Mersin
+# admin1_quelle: Polygon
 Tasucu, Turkey
 +00:00 :Europe/Istanbul
 0.0010 meters
@@ -216011,6 +217695,8 @@ x 0 0
 # !units: meters
 # !longitude: 13.760000
 # !latitude: 45.647000
+# province: Trieste
+# admin1_quelle: Polygon
 Trieste, Italy
 +00:00 :Europe/Rome
 -0.0108 meters
@@ -216207,6 +217893,8 @@ x 0 0
 # !units: meters
 # !longitude: 17.6204
 # !latitude: 42.7394
+# region: Dubrovacko-Neretvanska
+# admin1_quelle: Polygon
 Sobra (Mljet), Croatia
 +00:00 :Europe/Zagreb
 0.0032 meters
@@ -216403,6 +218091,8 @@ x 0 0
 # !units: meters
 # !longitude: 16.576000
 # !latitude: 43.181000
+# region: Splitsko-Dalmatinska
+# admin1_quelle: Polygon
 Stari Grad, Croatia
 +00:00 :Europe/Zagreb
 0.0075 meters
@@ -216667,6 +218357,8 @@ x 0 0
 # !units: meters
 # !longitude: 57.720000
 # !latitude: 19.660000
+# region: Al Wusta
+# admin1_quelle: Ufer 0.8 km
 Duqm, Oman
 +04:00 :Asia/Muscat
 -0.0230 meters
@@ -216863,6 +218555,8 @@ x 0 0
 # !units: meters
 # !longitude: 56.6070
 # !latitude: 24.5188
+# region: Al Batnah North
+# admin1_quelle: Ufer 2.5 km
 Majis (Suhar), Oman
 +04:00 :Asia/Muscat
 -0.0720 meters
@@ -217059,6 +218753,8 @@ x 0 0
 # !units: meters
 # !longitude: 58.925000
 # !latitude: 23.260000
+# province: Muscat
+# admin1_quelle: Polygon
 Qurayyat, Oman
 +04:00 :Asia/Muscat
 -0.0650 meters
@@ -217255,6 +218951,8 @@ x 0 0
 # !units: meters
 # !longitude: 59.5279
 # !latitude: 22.5762
+# region: Ash Sharqiyah South
+# admin1_quelle: Polygon
 Sur, Oman
 +04:00 :Asia/Muscat
 -0.0624 meters
@@ -217451,6 +219149,8 @@ x 0 0
 # !units: meters
 # !longitude: -52.668683
 # !latitude: 5.151667
+# region: Guyane française
+# admin1_quelle: Polygon
 Pariacabo (Kourou), French Guiana
 +00:00 :America/Cayenne
 2.2631 meters
@@ -217647,6 +219347,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.9369
 # !latitude: 14.6793
+# region: Martinique
+# admin1_quelle: Polygon
 Le Robert, Martinique
 +00:00 :America/Martinique
 0.6278 meters
@@ -217843,6 +219545,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.246350
 # !latitude: 47.140383
+# region: Loire-Atlantique
+# admin1_quelle: Ufer 0.5 km
 Pointe de Saint-Gildas (Préfailles), France
 +00:00 :Europe/Paris
 3.4792 meters
@@ -218039,6 +219743,8 @@ x 0 0
 # !units: meters
 # !longitude: -2.088300
 # !latitude: 47.305667
+# region: Loire-Atlantique
+# admin1_quelle: Ufer 3.6 km
 Donges, France
 +00:00 :Europe/Paris
 3.6443 meters
@@ -218267,6 +219973,8 @@ x 0 0
 # !units: meters
 # !longitude: -52.190483
 # !latitude: 4.893783
+# region: Guyane française
+# admin1_quelle: Ufer 3.9 km
 Îlet la Mère, French Guiana
 +00:00 :America/Cayenne
 2.3072 meters
@@ -218463,6 +220171,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.574250
 # !latitude: 47.204217
+# region: Loire-Atlantique
+# admin1_quelle: Polygon
 Nantes (Salorges), France
 +00:00 :Europe/Paris
 4.2194 meters
@@ -218691,6 +220401,8 @@ x 0 0
 # !units: meters
 # !longitude: -1.6640
 # !latitude: 43.3848
+# region: Pyrénées-Atlantiques
+# admin1_quelle: Polygon
 Saint-Jean-de-Luz (Ciboure), France
 +00:00 :Europe/Paris
 2.6095 meters
@@ -218887,6 +220599,8 @@ x 0 0
 # !units: meters
 # !longitude: 9.403830
 # !latitude: 41.856856
+# region: Haute-Corse
+# admin1_quelle: Ufer 0.8 km
 Solenzara, France
 +00:00 :Europe/Paris
 0.6019 meters
@@ -222918,6 +224632,8 @@ x 0 0
 # !units: meters
 # !longitude: -7.464125
 # !latitude: 55.126617
+# region: Donegal
+# admin1_quelle: Ufer 0.8 km
 Buncrana, Ireland
 +00:00 :Europe/Dublin
 2.5211 meters
@@ -223109,6 +224825,8 @@ x 0 0
 # !units: meters
 # !longitude: -9.133490
 # !latitude: 51.558964
+# region: Cork
+# admin1_quelle: Polygon
 Union Hall Harbour, Ireland
 +00:00 :Europe/Dublin
 1.9970 meters
@@ -223300,6 +225018,8 @@ x 0 0
 # !units: meters
 # !longitude: -6.458900
 # !latitude: 52.338500
+# region: Wexford
+# admin1_quelle: Polygon
 Wexford, Ireland
 +00:00 :Europe/Dublin
 0.9183 meters
@@ -223492,6 +225212,8 @@ x 0 0
 # !units: meters
 # !longitude: 106.2830
 # !latitude: 18.0830
+# region: Ha Tinh
+# admin1_quelle: Polygon
 Vung Ang, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 1.4236 meters
@@ -223687,6 +225409,8 @@ x 0 0
 # !units: meters
 # !longitude: 110.4200
 # !latitude: -6.9477
+# state: Java
+# admin1_quelle: Name
 Semarang, Java, Indonesia
 +00:00 :Asia/Jakarta
 0.5255 meters
@@ -224074,6 +225798,8 @@ x 0 0
 # !units: meters
 # !longitude: 48.0936
 # !latitude: 29.3262
+# province: Hawalli
+# admin1_quelle: Polygon
 Salmiya (Kuwait City), Kuwait
 +00:00 :Asia/Kuwait
 2.0557 meters
@@ -224265,6 +225991,8 @@ x 0 0
 # !units: meters
 # !longitude: -79.9119
 # !latitude: -2.7344
+# state: Guayas
+# admin1_quelle: Polygon
 Puná, Ecuador
 +00:00 :America/Guayaquil
 2.3898 meters
@@ -224456,6 +226184,8 @@ x 0 0
 # !units: meters
 # !longitude: 57.5250
 # !latitude: 23.8246
+# region: Al Batnah North
+# admin1_quelle: Polygon
 Khawr Wudam, Oman
 +00:00 :Asia/Muscat
 1.9495 meters
@@ -224647,6 +226377,8 @@ x 0 0
 # !units: meters
 # !longitude: -83.1685
 # !latitude: 8.6359
+# province: Puntarenas
+# admin1_quelle: Polygon
 Golfito, Costa Rica
 +00:00 :America/Costa_Rica
 1.9148 meters
@@ -224838,6 +226570,8 @@ x 0 0
 # !units: meters
 # !longitude: -85.7098
 # !latitude: 10.9519
+# province: Guanacaste
+# admin1_quelle: Polygon
 Cuajiniquil, Costa Rica
 +00:00 :America/Costa_Rica
 1.6384 meters
@@ -225029,6 +226763,8 @@ x 0 0
 # !units: meters
 # !longitude: -85.7873
 # !latitude: 10.4404
+# province: Guanacaste
+# admin1_quelle: Ufer 1.4 km
 Bahía Flamingo, Costa Rica
 +00:00 :America/Costa_Rica
 1.5882 meters
@@ -225220,6 +226956,8 @@ x 0 0
 # !units: meters
 # !longitude: -78.8388
 # !latitude: 1.2930
+# state: Esmeraldas
+# admin1_quelle: Ufer 0.4 km
 San Lorenzo, Ecuador
 +00:00 :America/Guayaquil
 2.2286 meters
@@ -225411,6 +227149,8 @@ x 0 0
 # !units: meters
 # !longitude: -56.150000
 # !latitude: 72.790000
+# region: Qaasuitsup Kommunia
+# admin1_quelle: Ufer 5.6 km
 Upernavik, Greenland
 +00:00 :America/Godthab
 1.1394 meters
@@ -225608,6 +227348,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.1246
 # !latitude: 9.5142
+# region: Yap
+# admin1_quelle: Polygon
 Yap (Colonia), Micronesia
 +00:00 :UTC
 1.6843 meters
@@ -225805,6 +227547,8 @@ x 0 0
 # !units: meters
 # !longitude: -71.0922
 # !latitude: 18.2081
+# province: Barahona
+# admin1_quelle: Polygon
 Barahona, Dominican Republic
 +00:00 :UTC
 6.3715 meters
@@ -226002,6 +227746,8 @@ x 0 0
 # !units: meters
 # !longitude: 56.5856
 # !latitude: -10.3456
+# region: Agaléga
+# admin1_quelle: Ufer 4.7 km
 Agalega, Mauritius
 +00:00 :UTC
 7.2550 meters
@@ -226199,6 +227945,8 @@ x 0 0
 # !units: meters
 # !longitude: -63.0926
 # !latitude: 18.1711
+# region: Blowing Point
+# admin1_quelle: Ufer 0.9 km
 Blowing Point, Anguilla
 +00:00 :UTC
 6.8660 meters
@@ -226396,6 +228144,8 @@ x 0 0
 # !units: meters
 # !longitude: -61.4582
 # !latitude: 15.5768
+# region: Saint John
+# admin1_quelle: Polygon
 Portsmouth, Dominica
 +00:00 :UTC
 1.3930 meters
@@ -226593,6 +228343,8 @@ x 0 0
 # !units: meters
 # !longitude: -60.5500
 # !latitude: 11.3167
+# region: Tobago
+# admin1_quelle: Name
 Charlotteville, Tobago, Trinidad and Tobago
 +00:00 :UTC
 1.0390 meters
@@ -226790,6 +228542,8 @@ x 0 0
 # !units: meters
 # !longitude: -86.7600
 # !latitude: 15.7900
+# region: Atlántida
+# admin1_quelle: Polygon
 La Ceiba, Honduras
 +00:00 :UTC
 0.2510 meters
@@ -226978,6 +228732,8 @@ x 0 0
 # !units: meters
 # !longitude: 15.916924
 # !latitude: 39.527645
+# province: Cosenza
+# admin1_quelle: Polygon
 Cetraro, Italy
 +00:00 :Europe/Rome
 0.0039 meters
@@ -227167,6 +228923,8 @@ x 0 0
 # !units: meters
 # !longitude: 14.827313
 # !latitude: 36.720245
+# province: Ragusa
+# admin1_quelle: Polygon
 Pozzallo, Italy
 +00:00 :Europe/Rome
 0.0454 meters
@@ -227364,6 +229122,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.036000
 # !latitude: 35.038000
+# region: Famagusta
+# admin1_quelle: Polygon
 Paralimni, Cyprus
 +00:00 :Asia/Nicosia
 0.1735 meters
@@ -227561,6 +229321,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.645000
 # !latitude: 34.928000
+# region: Larnaca
+# admin1_quelle: Ufer 0.5 km
 Larnaka, Cyprus
 +00:00 :Asia/Nicosia
 0.0641 meters
@@ -227758,6 +229520,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.408000
 # !latitude: 34.755000
+# region: Paphos
+# admin1_quelle: Ufer 0.5 km
 Pafos, Cyprus
 +00:00 :Asia/Nicosia
 0.0080 meters
@@ -227955,6 +229719,8 @@ x 0 0
 # !units: meters
 # !longitude: 32.556000
 # !latitude: 35.175000
+# region: Paphos
+# admin1_quelle: Polygon
 Pomos, Cyprus
 +00:00 :Asia/Nicosia
 0.0175 meters
@@ -228152,6 +229918,8 @@ x 0 0
 # !units: meters
 # !longitude: 33.042000
 # !latitude: 34.669000
+# region: Limassol
+# admin1_quelle: Polygon
 Lemesos (Limassol), Cyprus
 +00:00 :Asia/Nicosia
 0.0448 meters
@@ -228350,6 +230118,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.626447
 # !latitude: 31.796269
+# region: HaDarom
+# admin1_quelle: Polygon
 Ashdod Marina, Israel
 +00:00 :Asia/Jerusalem
 0.0242 meters
@@ -228548,6 +230318,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.863057
 # !latitude: 32.470530
+# region: Haifa
+# admin1_quelle: Ufer 4.6 km
 Hadera (Coal Pier), Israel
 +00:00 :Asia/Jerusalem
 0.0037 meters
@@ -228746,6 +230518,8 @@ x 0 0
 # !units: meters
 # !longitude: 34.882600
 # !latitude: 32.472330
+# region: Haifa
+# admin1_quelle: Ufer 4.7 km
 Hadera Port, Israel
 +00:00 :Asia/Jerusalem
 0.0030 meters
@@ -228944,6 +230718,8 @@ x 0 0
 # !units: meters
 # !longitude: 35.007042
 # !latitude: 32.822454
+# region: Haifa
+# admin1_quelle: Polygon
 Haifa, Israel
 +00:00 :Asia/Jerusalem
 0.0077 meters

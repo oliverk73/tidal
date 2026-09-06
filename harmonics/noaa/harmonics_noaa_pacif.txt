@@ -15754,6 +15754,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.2667
 # !latitude: 7.0500
+# region: Peleliu
+# admin1_quelle: Polygon
 Shonian Harbor, Palau
 +00:00 :Pacific/Palau
 1.0068 meters
@@ -15943,6 +15945,8 @@ x 0 0
 # !units: meters
 # !longitude: 134.5167
 # !latitude: 7.5000
+# region: Ngatpang
+# admin1_quelle: Ufer 0.9 km
 West Passage, Palau
 +00:00 :Pacific/Palau
 1.0778 meters
@@ -16699,6 +16703,8 @@ x 0 0
 # !units: meters
 # !longitude: 149.6500
 # !latitude: 8.5833
+# region: Chuuk
+# admin1_quelle: Ufer 1.7 km
 Namonuito Atoll, Micronesia
 +00:00 :Pacific/Chuuk
 0.1812 meters
@@ -17644,6 +17650,8 @@ x 0 0
 # !units: meters
 # !longitude: 153.7333
 # !latitude: 5.3333
+# region: Chuuk
+# admin1_quelle: Ufer 3.2 km
 Satawan Anchorage, Nomoi Islands, Micronesia
 +00:00 :Pacific/Chuuk
 0.2530 meters
@@ -17833,6 +17841,8 @@ x 0 0
 # !units: meters
 # !longitude: 165.5500
 # !latitude: 11.6000
+# region: Railik Chain
+# admin1_quelle: Ufer 2.2 km
 Bikini Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.5592 meters
@@ -18022,6 +18032,8 @@ x 0 0
 # !units: meters
 # !longitude: 165.3333
 # !latitude: 11.5000
+# region: Bikini Atoll
+# admin1_quelle: Name
 Eniirikku Island, Bikini Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.4759 meters
@@ -18211,6 +18223,8 @@ x 0 0
 # !units: meters
 # !longitude: 166.9000
 # !latitude: 11.1500
+# region: Rongelap Atoll
+# admin1_quelle: Name
 Rongelap Island, Rongelap Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.5368 meters
@@ -18967,6 +18981,8 @@ x 0 0
 # !units: meters
 # !longitude: 168.7500
 # !latitude: 7.2833
+# region: Railik Chain
+# admin1_quelle: Ufer 2.4 km
 Ailinglapalap Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.6647 meters
@@ -19156,6 +19172,8 @@ x 0 0
 # !units: meters
 # !longitude: 169.6500
 # !latitude: 5.9167
+# region: Railik Chain
+# admin1_quelle: Polygon
 Jaluit Atoll (SE Pass), Marshall Islands
 +00:00 :Pacific/Majuro
 0.5307 meters
@@ -19345,6 +19363,8 @@ x 0 0
 # !units: meters
 # !longitude: 168.6833
 # !latitude: 4.6000
+# region: Railik Chain
+# admin1_quelle: Ufer 2.9 km
 Ebon (Boston) Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.5922 meters
@@ -19534,6 +19554,8 @@ x 0 0
 # !units: meters
 # !longitude: 168.9500
 # !latitude: 14.5667
+# region: Ratak Chain
+# admin1_quelle: Ufer 4.6 km
 Taongi Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.5586 meters
@@ -20290,6 +20312,8 @@ x 0 0
 # !units: meters
 # !longitude: 170.2333
 # !latitude: 9.4667
+# region: Ratak Chain
+# admin1_quelle: Ufer 0.6 km
 Wotje Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.4998 meters
@@ -20857,6 +20881,8 @@ x 0 0
 # !units: meters
 # !longitude: 171.7000
 # !latitude: 7.1333
+# region: Ratak Chain
+# admin1_quelle: Ufer 12.5 km
 Arno Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.6291 meters
@@ -21046,6 +21072,8 @@ x 0 0
 # !units: meters
 # !longitude: 171.8000
 # !latitude: 6.2333
+# region: Mili Atoll
+# admin1_quelle: Name
 Port Rhin, Mili Atoll, Marshall Islands
 +00:00 :Pacific/Majuro
 0.6594 meters
@@ -21235,6 +21263,8 @@ x 0 0
 # !units: meters
 # !longitude: -171.7500
 # !latitude: 25.7667
+# state: Hawaii
+# admin1_quelle: Ufer 1.0 km
 Laysan Island, Hawaii
 +00:00 :Pacific/Honolulu
 0.1315 meters
@@ -21424,6 +21454,8 @@ x 0 0
 # !units: meters
 # !longitude: -166.2080
 # !latitude: 23.7833
+# region: French Frigate Shoals
+# admin1_quelle: Name
 East Island, French Frigate Shoals, Hawaii
 +00:00 :Pacific/Honolulu
 0.1839 meters
@@ -21613,6 +21645,8 @@ x 0 0
 # !units: meters
 # !longitude: -160.2350
 # !latitude: 21.8700
+# state: Hawaii
+# admin1_quelle: Polygon
 Nonopapa, Niihau Island, Hawaii
 +00:00 :Pacific/Honolulu
 0.1942 meters
@@ -21802,6 +21836,8 @@ x 0 0
 # !units: meters
 # !longitude: -159.6730
 # !latitude: 21.9567
+# state: Hawaii
+# admin1_quelle: Polygon
 Waimea Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.2214 meters
@@ -21991,6 +22027,8 @@ x 0 0
 # !units: meters
 # !longitude: -159.3350
 # !latitude: 21.9950
+# state: Hawaii
+# admin1_quelle: Polygon
 Hanamaulu Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.2466 meters
@@ -22180,6 +22218,8 @@ x 0 0
 # !units: meters
 # !longitude: -159.5020
 # !latitude: 22.2150
+# state: Hawaii
+# admin1_quelle: Ufer 0.1 km
 Hanalei Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.2588 meters
@@ -22369,6 +22409,8 @@ x 0 0
 # !units: meters
 # !longitude: -158.1080
 # !latitude: 21.5983
+# state: Hawaii
+# admin1_quelle: Polygon
 Haleiwa, Waialua Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.2012 meters
@@ -22558,6 +22600,8 @@ x 0 0
 # !units: meters
 # !longitude: -158.1920
 # !latitude: 21.4450
+# state: Hawaii
+# admin1_quelle: Ufer 0.5 km
 Waianae, Hawaii
 +00:00 :Pacific/Honolulu
 0.2384 meters
@@ -22747,6 +22791,8 @@ x 0 0
 # !units: meters
 # !longitude: -157.6970
 # !latitude: 21.2750
+# state: Hawaii
+# admin1_quelle: Polygon
 Hanauma Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.2517 meters
@@ -22936,6 +22982,8 @@ x 0 0
 # !units: meters
 # !longitude: -157.6930
 # !latitude: 21.3350
+# state: Hawaii
+# admin1_quelle: Ufer 0.4 km
 Waimanalo, Hawaii
 +00:00 :Pacific/Honolulu
 0.2749 meters
@@ -23125,6 +23173,8 @@ x 0 0
 # !units: meters
 # !longitude: -157.8500
 # !latitude: 21.5000
+# state: Hawaii
+# admin1_quelle: Polygon
 Waikane, Kaneohe Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.3544 meters
@@ -23314,6 +23364,8 @@ x 0 0
 # !units: meters
 # !longitude: -157.9333
 # !latitude: 21.6500
+# state: Hawaii
+# admin1_quelle: Polygon
 Laie Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.3059 meters
@@ -23503,6 +23555,8 @@ x 0 0
 # !units: meters
 # !longitude: -157.1970
 # !latitude: 21.0933
+# state: Hawaii
+# admin1_quelle: Polygon
 Kolo, Hawaii
 +00:00 :Pacific/Honolulu
 0.2525 meters
@@ -23692,6 +23746,8 @@ x 0 0
 # !units: meters
 # !longitude: -156.8770
 # !latitude: 21.0483
+# state: Hawaii
+# admin1_quelle: Ufer 1.0 km
 Kamalo Harbor, Hawaii
 +00:00 :Pacific/Honolulu
 0.2671 meters
@@ -23881,6 +23937,8 @@ x 0 0
 # !units: meters
 # !longitude: -156.8000
 # !latitude: 21.0717
+# state: Hawaii
+# admin1_quelle: Ufer 0.8 km
 Pukoo Harbor, Hawaii
 +00:00 :Pacific/Honolulu
 0.2677 meters
@@ -24070,6 +24128,8 @@ x 0 0
 # !units: meters
 # !longitude: -156.9950
 # !latitude: 20.7900
+# state: Hawaii
+# admin1_quelle: Ufer 1.1 km
 Kaumalapau, Lanai Island, Hawaii
 +00:00 :Pacific/Honolulu
 0.2839 meters
@@ -24259,6 +24319,8 @@ x 0 0
 # !units: meters
 # !longitude: -156.6070
 # !latitude: 20.5950
+# state: Hawaii
+# admin1_quelle: Ufer 0.5 km
 Kuheia Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.2839 meters
@@ -24448,6 +24510,8 @@ x 0 0
 # !units: meters
 # !longitude: -156.6833
 # !latitude: 20.5167
+# state: Hawaii
+# admin1_quelle: Polygon
 Smuggler Cove, Hawaii
 +00:00 :Pacific/Honolulu
 0.2834 meters
@@ -24637,6 +24701,8 @@ x 0 0
 # !units: meters
 # !longitude: -155.9870
 # !latitude: 20.7617
+# state: Hawaii
+# admin1_quelle: Polygon
 Hana, Hawaii
 +00:00 :Pacific/Honolulu
 0.3144 meters
@@ -24826,6 +24892,8 @@ x 0 0
 # !units: meters
 # !longitude: -156.4450
 # !latitude: 20.6567
+# state: Hawaii
+# admin1_quelle: Ufer 0.5 km
 Makena, Hawaii
 +00:00 :Pacific/Honolulu
 0.2331 meters
@@ -25015,6 +25083,8 @@ x 0 0
 # !units: meters
 # !longitude: -156.4667
 # !latitude: 20.7833
+# state: Hawaii
+# admin1_quelle: Polygon
 Kihei, Maalaea Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.2826 meters
@@ -25204,6 +25274,8 @@ x 0 0
 # !units: meters
 # !longitude: -155.9030
 # !latitude: 20.1867
+# state: Hawaii
+# admin1_quelle: Ufer 0.5 km
 Mahukona, Hawaii
 +00:00 :Pacific/Honolulu
 0.2636 meters
@@ -25393,6 +25465,8 @@ x 0 0
 # !units: meters
 # !longitude: -156.0000
 # !latitude: 19.6433
+# state: Hawaii
+# admin1_quelle: Polygon
 Kailua Kona, Hawaii
 +00:00 :Pacific/Honolulu
 0.2631 meters
@@ -25582,6 +25656,8 @@ x 0 0
 # !units: meters
 # !longitude: -155.9220
 # !latitude: 19.4767
+# state: Hawaii
+# admin1_quelle: Polygon
 Napoopoo, Kealakekua Bay, Hawaii
 +00:00 :Pacific/Honolulu
 0.2028 meters
@@ -25771,6 +25847,8 @@ x 0 0
 # !units: meters
 # !longitude: -155.5530
 # !latitude: 19.0883
+# state: Hawaii
+# admin1_quelle: Polygon
 Honuapo, Hawaii
 +00:00 :Pacific/Honolulu
 0.3482 meters
@@ -25960,6 +26038,8 @@ x 0 0
 # !units: meters
 # !longitude: -162.0833
 # !latitude: 5.8833
+# region: Palmyra Atoll
+# admin1_quelle: Ufer 0.1 km
 Palmyra Atoll, USA
 +00:00 :Etc/GMT+11
 0.3245 meters
@@ -26149,6 +26229,8 @@ x 0 0
 # !units: meters
 # !longitude: -176.6333
 # !latitude: 0.8000
+# region: Howland Island
+# admin1_quelle: Ufer 0.5 km
 Howland Island, USA
 +00:00 :Etc/GMT+12
 0.9954 meters
@@ -26338,6 +26420,8 @@ x 0 0
 # !units: meters
 # !longitude: -159.3667
 # !latitude: 3.8500
+# region: Kiribati
+# admin1_quelle: Ufer 1.1 km
 Fanning Island (Tabuaeran), Kiribati
 +00:00 :Pacific/Kiritimati
 0.3802 meters
@@ -26716,6 +26800,8 @@ x 0 0
 # !units: meters
 # !longitude: 172.8000
 # !latitude: 3.0333
+# region: Kiribati
+# admin1_quelle: Polygon
 Makin Atoll, Kiribati
 +00:00 :Pacific/Tarawa
 0.6443 meters
@@ -26905,6 +26991,8 @@ x 0 0
 # !units: meters
 # !longitude: 173.8333
 # !latitude: 0.4667
+# region: Kiribati
+# admin1_quelle: Ufer 1.5 km
 Abemama Atoll, Kiribati
 +00:00 :Pacific/Tarawa
 0.6515 meters
@@ -27094,6 +27182,8 @@ x 0 0
 # !units: meters
 # !longitude: 174.4500
 # !latitude: -0.6667
+# region: Kiribati
+# admin1_quelle: Ufer 2.1 km
 Nonouti Atoll, Kiribati
 +00:00 :Pacific/Tarawa
 0.7128 meters
@@ -27283,6 +27373,8 @@ x 0 0
 # !units: meters
 # !longitude: 169.5833
 # !latitude: -0.8667
+# region: Kiribati
+# admin1_quelle: Ufer 3.1 km
 Ocean Island (Banaba), Kiribati
 +00:00 :Pacific/Tarawa
 0.6716 meters
@@ -27850,6 +27942,8 @@ x 0 0
 # !units: meters
 # !longitude: -139.1000
 # !latitude: -9.9333
+# region: Marquesas Islands
+# admin1_quelle: Polygon
 Vai Tahu, Tahu Ata Island, French Polynesia
 +00:00 :Pacific/Marquesas
 0.5840 meters
@@ -28039,6 +28133,8 @@ x 0 0
 # !units: meters
 # !longitude: -144.2833
 # !latitude: -27.6000
+# region: Austral Islands
+# admin1_quelle: Ufer 1.8 km
 Rapa (Oparo) Island, French Polynesia
 +00:00 :Pacific/Tahiti
 0.4304 meters
@@ -28228,6 +28324,8 @@ x 0 0
 # !units: meters
 # !longitude: -157.9833
 # !latitude: -9.0000
+# region: Penrhyn
+# admin1_quelle: Ufer 2.7 km
 Penrhyn (Tongareva Island), Cook Islands
 +00:00 :Pacific/Rarotonga
 0.2476 meters
@@ -28417,6 +28515,8 @@ x 0 0
 # !units: meters
 # !longitude: -161.0167
 # !latitude: -10.4167
+# region: Manihiki
+# admin1_quelle: Ufer 5.1 km
 Manihiki, Cook Islands
 +00:00 :Pacific/Rarotonga
 0.1801 meters
@@ -28606,6 +28706,8 @@ x 0 0
 # !units: meters
 # !longitude: -159.7833
 # !latitude: -18.8500
+# region: Palmerston
+# admin1_quelle: Polygon
 Aitutaki Island, Cook Islands
 +00:00 :Pacific/Rarotonga
 0.3365 meters
@@ -28795,6 +28897,8 @@ x 0 0
 # !units: meters
 # !longitude: -165.8667
 # !latitude: -10.8667
+# region: Pukapuka
+# admin1_quelle: Ufer 4.9 km
 Pukapuka, Cook Islands
 +00:00 :Pacific/Rarotonga
 0.3227 meters
@@ -28984,6 +29088,8 @@ x 0 0
 # !units: meters
 # !longitude: 178.5667
 # !latitude: -17.6333
+# region: Central
+# admin1_quelle: Polygon
 Tailevu, Viti Levu Island, Fiji
 +00:00 :Pacific/Fiji
 0.9180 meters
@@ -29173,6 +29279,8 @@ x 0 0
 # !units: meters
 # !longitude: 177.4167
 # !latitude: -17.7500
+# region: Viti Levu
+# admin1_quelle: Name
 Nandi Waters, Viti Levu, Fiji
 +00:00 :Pacific/Fiji
 0.9979 meters
@@ -29362,6 +29470,8 @@ x 0 0
 # !units: meters
 # !longitude: 178.1667
 # !latitude: -19.0667
+# region: Eastern
+# admin1_quelle: Polygon
 Ngaloa Harbor, Kandavu Island, Fiji
 +00:00 :Pacific/Fiji
 0.7951 meters
@@ -29551,6 +29661,8 @@ x 0 0
 # !units: meters
 # !longitude: 179.7500
 # !latitude: -19.1667
+# region: Eastern
+# admin1_quelle: Ufer 0.4 km
 Matuku Island, Fiji
 +00:00 :Pacific/Fiji
 0.9201 meters
@@ -29740,6 +29852,8 @@ x 0 0
 # !units: meters
 # !longitude: -179.8100
 # !latitude: -18.9667
+# region: Eastern
+# admin1_quelle: Polygon
 Totoya Island, Fiji
 +00:00 :Pacific/Fiji
 0.9190 meters
@@ -29929,6 +30043,8 @@ x 0 0
 # !units: meters
 # !longitude: 179.9667
 # !latitude: -18.5167
+# region: Eastern
+# admin1_quelle: Ufer 5.0 km
 Moala Island, Fiji
 +00:00 :Pacific/Fiji
 0.9196 meters
@@ -30118,6 +30234,8 @@ x 0 0
 # !units: meters
 # !longitude: 179.2167
 # !latitude: -18.0000
+# region: Eastern
+# admin1_quelle: Ufer 3.1 km
 Ngau Island, Fiji
 +00:00 :Pacific/Fiji
 0.8340 meters
@@ -30307,6 +30425,8 @@ x 0 0
 # !units: meters
 # !longitude: 179.3667
 # !latitude: -17.8000
+# region: Eastern
+# admin1_quelle: Ufer 2.8 km
 Nairai Island, Fiji
 +00:00 :Pacific/Fiji
 0.6704 meters
@@ -30496,6 +30616,8 @@ x 0 0
 # !units: meters
 # !longitude: 178.8333
 # !latitude: -17.6667
+# region: Eastern
+# admin1_quelle: Ufer 0.3 km
 Levuka, Ovalau Island, Fiji
 +00:00 :Pacific/Fiji
 0.9505 meters
@@ -30685,6 +30807,8 @@ x 0 0
 # !units: meters
 # !longitude: 178.7667
 # !latitude: -16.9667
+# region: Northern
+# admin1_quelle: Polygon
 Nandi, Vanua Levu Island, Fiji
 +00:00 :Pacific/Fiji
 0.8232 meters

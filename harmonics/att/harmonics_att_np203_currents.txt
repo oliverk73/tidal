@@ -15573,6 +15573,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 58.865000
 # !latitude: 20.698333
+# region: Ash Sharqiyah South
+# admin1_quelle: Ufer 2.5 km
 Ras Hilf (Masirah Island), Oman Current
 +04:00 :Asia/Muscat
 0.0000 knots
@@ -15767,6 +15769,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Off Muscat, Oman Current"),
 # note: -- OSM "Khawr Riyam" in 1.76 km, NP203-Hafen "Suhar (Sohar), Oman" in 205.6 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# province: Muscat
+# admin1_quelle: Polygon
 Khawr Riyam / Al Jazirah, Oman Current
 +04:00 :Asia/Muscat
 0.0000 knots
@@ -15962,6 +15966,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Strait of Hormuz, Oman Current"),
 # note: -- NP203-Hafen "Saqr Port (Mina Saqr), United Arab Emirates" in 77.6 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# province: Musandam
+# admin1_quelle: Ufer 18.7 km
 Strait of Hormuz (Jazirat Musandam), Oman Current
 +04:00 :Asia/Muscat
 0.0000 knots
@@ -16540,6 +16546,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 54.233333
 # !latitude: 25.300000
+# region: Abu Dhabi
+# admin1_quelle: Ufer 6.0 km
 Sir Abu Nu'ayr N, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -16733,6 +16741,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 54.283333
 # !latitude: 25.216667
+# region: Abu Dhabi
+# admin1_quelle: Ufer 4.5 km
 Sir Abu Nu'ayr E, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -16929,6 +16939,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "The Gulf (NP203 422) Current"),
 # note: -- OSM "Sir Bani Yas" in 8.82 km, NP203-Hafen "Ghasha Light Buoy, United Arab Emirates" in 8.8 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Abu Dhabi
+# admin1_quelle: Ufer 2.4 km
 Sir Bani Yas / Ghashshah (Persian Gulf), United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17314,6 +17326,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 52.936667
 # !latitude: 24.821667
+# region: Abu Dhabi
+# admin1_quelle: Ufer 14.0 km
 Zirku SW, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17506,6 +17520,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 52.955000
 # !latitude: 24.938333
+# region: Abu Dhabi
+# admin1_quelle: Ufer 11.8 km
 Zirku NW, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17890,6 +17906,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 51.741667
 # !latitude: 25.218333
+# region: Al Wakrah
+# admin1_quelle: Ufer 12.8 km
 Doha SE (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -18279,6 +18297,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "The Gulf (NP203 424b) Current"),
 # note: -- NP203-Hafen "Sumaysimah, Qatar" in 80.5 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Al Wakrah
+# admin1_quelle: Ufer 15.5 km
 Mesaieed offshore (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -18664,6 +18684,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 51.783333
 # !latitude: 25.293333
+# region: Ad Dawhah
+# admin1_quelle: Ufer 18.1 km
 Doha E (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -19430,6 +19452,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 48.595000
 # !latitude: 28.451667
+# province: Al Ahmadi
+# admin1_quelle: Ufer 18.6 km
 Khafji, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0000 knots
@@ -20590,6 +20614,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 53.416667
 # !latitude: 26.583333
+# province: Hormozgan
+# admin1_quelle: Ufer 21.2 km
 Lavan / Hendorabi S, Iran Current
 +04:00 :Asia/Tehran
 0.0000 knots
@@ -20980,6 +21006,8 @@ MNUS2        x 0 0
 # !latitude: 1.136667
 # note: 20260905 Stationsnummer im Namen wiederhergestellt (vorher "Singapore Strait Current"),
 # note: -- der Name war sonst mehrfach vergeben und der Satz fuer XTide nicht erreichbar.
+# region: South West
+# admin1_quelle: Ufer 19.5 km
 Singapore Strait (NP203 471) Current
 +08:00 :Asia/Singapore
 -0.1740 knots
@@ -21178,6 +21206,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 471a) Current"),
 # note: -- OSM "Phillip Strait" in 3.70 km, NP203-Hafen "Raffles Lighthouse, Singapore" in 6.2 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South West
+# admin1_quelle: Ufer 18.1 km
 Pulau Takong Besar (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0977 knots
@@ -21369,6 +21399,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 103.566667
 # !latitude: 1.000000
+# state: Kepulauan Riau
+# admin1_quelle: Ufer 13.5 km
 Singapore Strait, Riau Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -21565,6 +21597,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 472) Current"),
 # note: -- OSM "Phillip Strait" in 1.13 km, NP203-Hafen "Sembawang Shipyard, Singapore" in 42.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South West
+# admin1_quelle: Ufer 20.3 km
 Takong Kecil Lighthouse (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -21761,6 +21795,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 472a) Current"),
 # note: -- OSM "Singapore Strait" in 2.75 km, NP203-Hafen "Sembawang Shipyard, Singapore" in 26.0 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South West
+# admin1_quelle: Ufer 3.6 km
 Terumbu Selegi / Sentosa (Singapore Strait), Singapore Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -21957,6 +21993,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 472b) Current"),
 # note: -- OSM "Singapore Strait" in 5.09 km, NP203-Hafen "Sungai Changi, Malaysia" in 33.1 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South West
+# admin1_quelle: Ufer 11.1 km
 Semakau & Sebarok / Pulau Subar (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 -0.2500 knots
@@ -22154,6 +22192,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 472d) Current"),
 # note: -- OSM "Keppel Harbour" in 1.36 km, NP203-Hafen "Sembawang Shipyard, Singapore" in 24.1 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South West
+# admin1_quelle: Ufer 1.9 km
 Palawan / Sentosa (Singapore Strait), Singapore Current
 +08:00 :Asia/Singapore
 -0.1253 knots
@@ -22351,6 +22391,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 472e) Current"),
 # note: -- OSM "Cooper Channel" in 2.17 km, NP203-Hafen "Sungai Changi, Malaysia" in 22.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South West
+# admin1_quelle: Ufer 2.8 km
 Pulau Buran / Sentosa (Cooper Channel), Singapore Current
 +08:00 :Asia/Singapore
 0.0877 knots
@@ -22548,6 +22590,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 472f) Current"),
 # note: -- OSM "Cooper Channel" in 7.88 km, NP203-Hafen "Sungai Changi, Malaysia" in 19.3 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Central Singapore
+# admin1_quelle: Ufer 7.5 km
 Southeast of Marina South (Cooper Channel), Singapore Current
 +08:00 :Asia/Singapore
 -0.1137 knots
@@ -22744,6 +22788,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait E (NP203 473) Current"),
 # note: -- OSM "Tanjung Kapal" in 5.86 km, NP203-Hafen "Tanjung Ayam, Malaysia" in 6.3 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South East
+# admin1_quelle: Ufer 20.1 km
 Pengerang Anchorage (Singapore Strait), Malaysia Current
 +08:00 :Asia/Singapore
 0.0200 knots
@@ -22940,6 +22986,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 473a) Current"),
 # note: -- OSM "Cooper Channel" in 11.79 km, NP203-Hafen "Tanjung Pengelih, Malaysia" in 22.2 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South East
+# admin1_quelle: Ufer 11.0 km
 Northwest of Pulau Batam (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 -0.5500 knots
@@ -23136,6 +23184,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 473b) Current"),
 # note: -- OSM "Cooper Channel" in 4.56 km, NP203-Hafen "Tanjung Pengelih, Malaysia" in 29.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South West
+# admin1_quelle: Ufer 8.9 km
 Batu Berhanti Lighthouse (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -23528,6 +23578,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Riau Archipelago (NP203 473d) Current"),
 # note: -- OSM "Tanjung Talu" in 3.76 km, NP203-Hafen "Tanjung Ayam, Malaysia" in 37.1 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Kepulauan Riau
+# admin1_quelle: Ufer 5.4 km
 Tanjung Talu / Ngenang (Riau), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -23724,6 +23776,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Riau Archipelago (NP203 474) Current"),
 # note: -- OSM "Pulau Korek Busung" in 10.99 km, NP203-Hafen "Tanjungpinang, Indonesia" in 33.4 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Pulau Garang-baru (Riau)
+# admin1_quelle: Name
 East of Pantai Cakang, Pulau Garang-baru (Riau), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -23920,6 +23974,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Riau Archipelago (NP203 474a) Current"),
 # note: -- OSM "Selat Maralimau" in 4.41 km, NP203-Hafen "Pelabuhan Kijang, Indonesia" in 5.6 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Kepulauan Riau
+# admin1_quelle: Ufer 1.2 km
 Pulau Ngalih / Pulau Kelong (Riau), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24114,6 +24170,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Karimata approaches Current"),
 # note: -- NP203-Hafen "Tanjung Butun, Indonesia" in 63.0 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Kepulauan Riau
+# admin1_quelle: Ufer 17.2 km
 Bulungkor (Pulau Lingga), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24310,6 +24368,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Berhala Strait (NP203 475a) Current"),
 # note: -- OSM "Berhala Strait" in 5.77 km, NP203-Hafen "Pulau Berhala, Indonesia" in 3.7 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Jambi
+# admin1_quelle: Ufer 18.4 km
 Pulau Berhala (Berhala Strait), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24898,6 +24958,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Bangka Strait (NP203 485a) Current"),
 # note: -- OSM "Brom-Brom Reef" in 9.55 km, NP203-Hafen "Tanjung Kelian, Indonesia" in 21.0 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Bangka-Belitung
+# admin1_quelle: Ufer 10.9 km
 Southeast of Muntok (Bangka Strait), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -25092,6 +25154,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Gaspar Strait Current"),
 # note: -- OSM "Pulau Besar" in 14.81 km, NP203-Hafen "Pulau Besar, Indonesia" in 14.8 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Bangka-Belitung
+# admin1_quelle: Ufer 5.8 km
 Pulau Besar (Gaspar Strait), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -25286,6 +25350,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "E Malaysia coast Current"),
 # note: -- OSM "Tanjung Gelang" in 2.28 km, NP203-Hafen "Chendering, Malaysia" in 149.2 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Pahang
+# admin1_quelle: Ufer 2.7 km
 Tanjung Gelang (Kuantan Port), Malaysia Current
 +08:00 :Asia/Kuala_Lumpur
 0.0000 knots
@@ -25482,6 +25548,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Philippine Islands (NP203 496) Current"),
 # note: -- OSM "Nabitasan Lake Island" in 4.04 km, NP203-Hafen "Moalbual, Philippines" in 122.2 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# province: Guimaras
+# admin1_quelle: Ufer 1.3 km
 Iloilo Strait (Iloilo City), Philippines Current
 +08:00 :Asia/Manila
 0.0000 knots
@@ -25678,6 +25746,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Philippine Islands (NP203 497) Current"),
 # note: -- OSM "Cebu Strait" in 13.47 km, NP203-Hafen "Nin Bay, Philippines" in 227.0 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Cebu
+# admin1_quelle: Ufer 1.1 km
 Shell Island (Cebu Strait), Philippines Current
 +08:00 :Asia/Manila
 0.0000 knots
@@ -25872,6 +25942,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "San Bernardino Strait Current"),
 # note: -- OSM "Bato Island" in 7.55 km, NP203-Hafen "Biri Island, Philippines" in 31.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Capul Lighthouse)
+# admin1_quelle: Name
 San Bernardino Strait (Calintaan, Capul Lighthouse), Philippines Current
 +08:00 :Asia/Manila
 1.1600 knots
@@ -26068,6 +26140,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Philippine Islands (NP203 504) Current"),
 # note: -- OSM "San Juanico Strait" in 10.37 km, NP203-Hafen "Tacloban, Philippines" in 1.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Tacloban
+# admin1_quelle: Ufer 0.9 km
 Tacloban / Bintac Point (San Juanico Strait), Philippines Current
 +08:00 :Asia/Manila
 0.0000 knots
@@ -26264,6 +26338,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Philippine Islands (NP203 504a) Current"),
 # note: -- OSM "San Juanico Strait" in 1.81 km, NP203-Hafen "Santa Elena River, Philippines" in 1.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Leyte
+# admin1_quelle: Name
 Uban Point (San Juanico Strait), Leyte, Philippines Current
 +08:00 :Asia/Manila
 0.0000 knots
@@ -26458,6 +26534,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Basilan Strait Current"),
 # note: -- OSM "Coast Guard Sub-station Rio Hondo" in 2.23 km, NP203-Hafen "Zamboanga, Philippines" in 0.0 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Zamboanga
+# admin1_quelle: Ufer 2.2 km
 Zamboanga (Basilan Strait), Philippines Current
 +08:00 :Asia/Manila
 -0.5000 knots
@@ -26654,6 +26732,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Off Borneo (NP203 511) Current"),
 # note: -- OSM "Sandakan Bay" in 1.26 km, NP203-Hafen "Sandakan, Malaysia" in 0.4 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Sabah
+# admin1_quelle: Ufer 2.8 km
 Teluk Sandakan, Malaysia Current
 +08:00 :Asia/Kuching
 0.0000 knots
@@ -26851,6 +26931,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Off Borneo (NP203 514) Current"),
 # note: -- OSM "Kuraman Island" in 2.97 km, NP203-Hafen "Muara, Brunei" in 25.4 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Labuan
+# admin1_quelle: Ufer 2.9 km
 Pulau Kuraman (north), Malaysia Current
 +08:00 :Asia/Kuching
 0.0000 knots
@@ -27047,6 +27129,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Off Borneo (NP203 514a) Current"),
 # note: -- OSM "Kuraman Island" in 2.55 km, NP203-Hafen "Muara, Brunei" in 23.7 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: Labuan
+# admin1_quelle: Ufer 2.8 km
 Pulau Kuraman (northeast), Malaysia Current
 +08:00 :Asia/Kuching
 0.0000 knots
@@ -27439,6 +27523,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Sulawesi (NP203 532a) Current"),
 # note: -- OSM "Kepulauan Sula" in 8.29 km, NP203-Hafen "Dofa, Indonesia" in 7.6 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Maluku Utara
+# admin1_quelle: Ufer 1.7 km
 Selat Capalulu (Pulau Taliabu / Mangoli), Indonesia Current
 +08:00 :Asia/Makassar
 0.0000 knots
@@ -27632,6 +27718,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Sunda Strait Current"),
 # note: -- OSM "Pulau Ular" in 4.72 km, NP203-Hafen "Genteng (Westbaai), Indonesia" in 168.1 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Banten
+# admin1_quelle: Ufer 5.7 km
 Sangiang (Sunda Strait), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -27826,6 +27914,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Madura Strait Current"),
 # note: -- OSM "Madura Strait" in 10.79 km, NP203-Hafen "Gading, Indonesia" in 29.7 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Jawa Timur
+# admin1_quelle: Ufer 3.9 km
 Gresik / Junganyar (Madura Strait), Indonesia Current
 +07:00 :Asia/Jakarta
 0.1500 knots
@@ -28021,6 +28111,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Lombok Strait Current"),
 # note: -- OSM "Pulau Batuaba" in 13.57 km, NP203-Hafen "Tanjung Pandanan, Indonesia" in 14.6 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Nusa Tenggara Barat
+# admin1_quelle: Ufer 9.1 km
 Nusa Penida / Tanjung Pandanan (Lombok Strait), Indonesia Current
 +08:00 :Asia/Makassar
 0.0000 knots
@@ -28217,6 +28309,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Irian Jaya (NP203 550) Current"),
 # note: -- OSM "Tanjung Kanyolo" in 4.61 km, NP203-Hafen "Sailolof, Indonesia" in 25.7 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Papua Barat
+# admin1_quelle: Polygon
 Selat Sele (Seget), Indonesia Current
 +09:00 :Asia/Jayapura
 0.1500 knots
@@ -28413,6 +28507,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Irian Jaya (NP203 551) Current"),
 # note: -- NP203-Hafen "Muturi Terminal, Indonesia" in 3.9 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: New Guinea
+# admin1_quelle: Name
 Sungai Muturi, New Guinea, Indonesia Current
 +09:00 :Asia/Jayapura
 0.0000 knots

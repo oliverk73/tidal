@@ -15002,6 +15002,8 @@ MNUS2
 # !units: meters
 # !longitude: 89.6344
 # !latitude: 22.3527
+# region: Khulna
+# admin1_quelle: Polygon
 Joymoni (Pasur River), Bangladesh
 +06:00 :Asia/Dhaka
 2.1000 meters
@@ -15195,6 +15197,8 @@ x 0 0
 # !units: meters
 # !longitude: 89.5221
 # !latitude: 22.6002
+# region: Khulna
+# admin1_quelle: Polygon
 Chalna (Pasur River), Bangladesh
 +06:00 :Asia/Dhaka
 2.1000 meters
@@ -15388,6 +15392,8 @@ x 0 0
 # !units: meters
 # !longitude: 97.6330
 # !latitude: 16.2864
+# state: Mon
+# admin1_quelle: Ufer 1.7 km
 Feronia Crossing (Thanlwin River), Myanmar
 +06:30 :Asia/Yangon
 2.7000 meters
@@ -15581,6 +15587,8 @@ x 0 0
 # !units: meters
 # !longitude: 97.8523
 # !latitude: 15.2435
+# state: Mon
+# admin1_quelle: Polygon
 Ye (Town), Myanmar
 +06:30 :Asia/Yangon
 2.6000 meters
@@ -15774,6 +15782,8 @@ x 0 0
 # !units: meters
 # !longitude: 98.1333
 # !latitude: 13.5500
+# region: Tanintharyi
+# admin1_quelle: Ufer 1.0 km
 Myin Kwa Aw (Horseshoe Bay), Myanmar
 +06:30 :Asia/Yangon
 3.1000 meters
@@ -15969,6 +15979,8 @@ x 0 0
 # !latitude: 10.6000
 # note: 20260903 Provinz "Andaman and Nicobar" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
+# state: Andaman and Nicobar
+# admin1_quelle: Name
 Little Andaman, Andaman and Nicobar, India
 +05:30 :Asia/Kolkata
 1.1000 meters
@@ -16162,6 +16174,8 @@ x 0 0
 # !units: meters
 # !longitude: 99.5832
 # !latitude: 7.1146
+# province: Trang
+# admin1_quelle: Name
 Goh Sukorn (Pulau Babi), Trang, Thailand
 +07:00 :Asia/Bangkok
 1.5000 meters
@@ -16355,6 +16369,8 @@ x 0 0
 # !units: meters
 # !longitude: 99.6667
 # !latitude: 6.4333
+# state: Kedah
+# admin1_quelle: Ufer 0.8 km
 Teluk Datai (Langkawi), Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.6500 meters
@@ -16549,6 +16565,8 @@ x 0 0
 # !units: meters
 # !longitude: 100.1320
 # !latitude: 6.4008
+# state: Perlis
+# admin1_quelle: Ufer 2.3 km
 Kuala Perlis, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.8700 meters
@@ -16742,6 +16760,8 @@ x 0 0
 # !units: meters
 # !longitude: 100.6167
 # !latitude: 4.1500
+# state: Perak
+# admin1_quelle: Ufer 1.9 km
 Pulau Katak, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.6000 meters
@@ -17128,6 +17148,8 @@ x 0 0
 # !units: meters
 # !longitude: 100.8000
 # !latitude: 3.8000
+# state: Selangor
+# admin1_quelle: Ufer 1.5 km
 Kuala Bernam, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.1700 meters
@@ -17321,6 +17343,8 @@ x 0 0
 # !units: meters
 # !longitude: 102.7023
 # !latitude: 1.8441
+# state: Johor
+# admin1_quelle: Ufer 1.7 km
 Tanjung Tohor, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.5500 meters
@@ -17514,6 +17538,8 @@ x 0 0
 # !units: meters
 # !longitude: 103.5119
 # !latitude: 1.2672
+# state: Johor
+# admin1_quelle: Ufer 0.6 km
 Tanjung Piai, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.0000 meters
@@ -17708,6 +17734,8 @@ x 0 0
 # !units: meters
 # !longitude: 103.5500
 # !latitude: 1.3500
+# state: Johor
+# admin1_quelle: Polygon
 Tanjung Pelepas, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.0500 meters
@@ -17901,6 +17929,8 @@ x 0 0
 # !units: meters
 # !longitude: 103.6470
 # !latitude: 1.3887
+# state: Johor
+# admin1_quelle: Ufer 2.3 km
 Tanjung Bunga, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.9000 meters
@@ -18094,6 +18124,8 @@ x 0 0
 # !units: meters
 # !longitude: 103.7167
 # !latitude: 1.4333
+# state: Johor
+# admin1_quelle: Ufer 2.1 km
 Putri Narrows, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.1000 meters
@@ -18287,6 +18319,8 @@ x 0 0
 # !units: meters
 # !longitude: 103.7667
 # !latitude: 1.4500
+# state: Johor
+# admin1_quelle: Ufer 0.9 km
 Johor Bahru (West Side of Causeway), Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.2000 meters
@@ -18480,6 +18514,8 @@ x 0 0
 # !units: meters
 # !longitude: 103.9833
 # !latitude: 1.4000
+# state: Johor
+# admin1_quelle: Ufer 2.4 km
 Sungai Changi, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.8000 meters
@@ -18673,6 +18709,8 @@ x 0 0
 # !units: meters
 # !longitude: 104.0333
 # !latitude: 1.5667
+# state: Johor
+# admin1_quelle: Polygon
 Teluk Sengat, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.9000 meters
@@ -18866,6 +18904,8 @@ x 0 0
 # !units: meters
 # !longitude: 104.0333
 # !latitude: 1.4667
+# state: Johor
+# admin1_quelle: Ufer 2.3 km
 Tanjung Surat, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.8000 meters
@@ -19059,6 +19099,8 @@ x 0 0
 # !units: meters
 # !longitude: 104.1000
 # !latitude: 1.5167
+# state: Johor
+# admin1_quelle: Ufer 2.1 km
 Tanjung Serindet, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.9000 meters
@@ -19252,6 +19294,8 @@ x 0 0
 # !units: meters
 # !longitude: 104.0833
 # !latitude: 1.3667
+# state: Johor
+# admin1_quelle: Ufer 2.7 km
 Tanjung Pengelih, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.8000 meters
@@ -19451,6 +19495,8 @@ x 0 0
 # !units: meters
 # !longitude: 102.1000
 # !latitude: 6.2333
+# state: Kelantan
+# admin1_quelle: Polygon
 Geting, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 0.8500 meters
@@ -19644,6 +19690,8 @@ x 0 0
 # !units: meters
 # !longitude: 119.7000
 # !latitude: 10.6667
+# province: Palawan
+# admin1_quelle: Ufer 3.8 km
 Paly Island, Philippines
 +08:00 :Asia/Manila
 0.7000 meters
@@ -19837,6 +19885,8 @@ x 0 0
 # !units: meters
 # !longitude: 121.0000
 # !latitude: 10.8500
+# province: Palawan
+# admin1_quelle: Ufer 2.6 km
 Cuyo Island, Philippines
 +08:00 :Asia/Manila
 0.7000 meters
@@ -20031,6 +20081,8 @@ x 0 0
 # !units: meters
 # !longitude: 119.9167
 # !latitude: 15.5167
+# province: Zambales
+# admin1_quelle: Ufer 3.9 km
 Port Masinloc, Philippines
 +08:00 :Asia/Manila
 0.4000 meters
@@ -20224,6 +20276,8 @@ x 0 0
 # !units: meters
 # !longitude: 121.9667
 # !latitude: 20.4500
+# province: Batanes
+# admin1_quelle: Polygon
 Basco, Philippines
 +08:00 :Asia/Manila
 0.4000 meters
@@ -20417,6 +20471,8 @@ x 0 0
 # !units: meters
 # !longitude: 119.1167
 # !latitude: 5.4500
+# state: Sabah
+# admin1_quelle: Ufer 5.2 km
 Tambisan Island, Malaysia
 +08:00 :Asia/Kuching
 0.9000 meters
@@ -20610,6 +20666,8 @@ x 0 0
 # !units: meters
 # !longitude: 118.5667
 # !latitude: 5.7000
+# state: Sabah
+# admin1_quelle: Ufer 0.5 km
 Kinabatangan, Malaysia
 +08:00 :Asia/Kuching
 0.9000 meters
@@ -20803,6 +20861,8 @@ x 0 0
 # !units: meters
 # !longitude: 115.4115
 # !latitude: 4.8613
+# region: Temburong
+# admin1_quelle: Ufer 22.9 km
 Pasar Lawas, Malaysia
 +08:00 :Asia/Brunei
 1.5400 meters
@@ -20996,6 +21056,8 @@ x 0 0
 # !units: meters
 # !longitude: 111.5833
 # !latitude: 2.4333
+# state: Sarawak
+# admin1_quelle: Polygon
 Tanjung Sidau, Malaysia
 +08:00 :Asia/Kuching
 2.6200 meters
@@ -21189,6 +21251,8 @@ x 0 0
 # !units: meters
 # !longitude: 111.3833
 # !latitude: 2.3667
+# state: Sarawak
+# admin1_quelle: Ufer 1.0 km
 Tanjung Bekakong, Malaysia
 +08:00 :Asia/Kuching
 2.5900 meters
@@ -21382,6 +21446,8 @@ x 0 0
 # !units: meters
 # !longitude: 111.5000
 # !latitude: 2.3500
+# state: Sarawak
+# admin1_quelle: Polygon
 Kampung Sepenah, Malaysia
 +08:00 :Asia/Kuching
 2.4100 meters
@@ -21575,6 +21641,8 @@ x 0 0
 # !units: meters
 # !longitude: 111.6000
 # !latitude: 2.3500
+# state: Sarawak
+# admin1_quelle: Polygon
 Tanjung Kamis, Malaysia
 +08:00 :Asia/Kuching
 2.6100 meters
@@ -21768,6 +21836,8 @@ x 0 0
 # !units: meters
 # !longitude: 110.7667
 # !latitude: 1.5500
+# state: Sarawak
+# admin1_quelle: Polygon
 Kuala Sadong, Malaysia
 +08:00 :Asia/Kuching
 3.2000 meters
@@ -21961,6 +22031,8 @@ x 0 0
 # !units: meters
 # !longitude: 110.6500
 # !latitude: 1.4167
+# state: Sarawak
+# admin1_quelle: Polygon
 Sungai Ensengie, Malaysia
 +08:00 :Asia/Kuching
 3.5400 meters
@@ -22154,6 +22226,8 @@ x 0 0
 # !units: meters
 # !longitude: 110.7500
 # !latitude: 1.4000
+# state: Sarawak
+# admin1_quelle: Polygon
 Simunjan, Malaysia
 +08:00 :Asia/Kuching
 3.5400 meters
@@ -22347,6 +22421,8 @@ x 0 0
 # !units: meters
 # !longitude: 110.3667
 # !latitude: 1.4667
+# state: Sarawak
+# admin1_quelle: Polygon
 Ulu Kuap, Malaysia
 +08:00 :Asia/Kuching
 3.6700 meters
@@ -22540,6 +22616,8 @@ x 0 0
 # !units: meters
 # !longitude: 106.2167
 # !latitude: 9.4667
+# province: Soc Trang
+# admin1_quelle: Ufer 0.8 km
 Cua Batak, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 2.9300 meters
@@ -22733,6 +22811,8 @@ x 0 0
 # !units: meters
 # !longitude: 106.8000
 # !latitude: 10.3833
+# province: Tien Giang
+# admin1_quelle: Ufer 1.7 km
 Cua Soirap, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 2.4000 meters
@@ -22926,6 +23006,8 @@ x 0 0
 # !units: meters
 # !longitude: 106.7000
 # !latitude: 10.7667
+# region: Ho Chi Minh city
+# admin1_quelle: Polygon
 Ho Chi Minh City (Sai Gon), Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 2.3000 meters
@@ -23119,6 +23201,8 @@ x 0 0
 # !units: meters
 # !longitude: 106.8333
 # !latitude: 20.7667
+# province: Quang Ninh
+# admin1_quelle: Ufer 3.7 km
 Cua Nam Trieu, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 1.8000 meters
@@ -23312,6 +23396,8 @@ x 0 0
 # !units: meters
 # !longitude: 107.1167
 # !latitude: 20.6333
+# province: Quang Ninh
+# admin1_quelle: Ufer 10.8 km
 Xuy Nong Chao, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 1.9000 meters
