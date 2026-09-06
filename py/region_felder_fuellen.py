@@ -137,16 +137,37 @@ US_STAATEN = {
     'northern mariana islands', 'us virgin islands', 'usa',
     'united states virgin islands'}
 
-LAND_ALIAS = {'United States of America': 'United States',
-              'Republic of Serbia': 'Serbia',
-              'Republic of the Congo': 'Congo',
-              'Democratic Republic of the Congo': 'DR Congo',
-              'United Republic of Tanzania': 'Tanzania',
-              'The Bahamas': 'Bahamas', 'Ivory Coast': "Cote d'Ivoire",
-              'East Timor': 'Timor-Leste', 'Czechia': 'Czech Republic'}
+LAND_ALIAS = {'United States of America': 'united states',
+              'Republic of Serbia': 'serbia',
+              'Republic of the Congo': 'congo',
+              'Democratic Republic of the Congo': 'democratic republic of the congo',
+              'United Republic of Tanzania': 'tanzania',
+              'The Bahamas': 'bahamas',
+              'East Timor': 'timor-leste',
+              'Czechia': 'czech republic',
+              'Republic of Korea': 'south korea',
+              'Kingdom of Norway': 'norway',
+              'Federated States of Micronesia': 'micronesia',
+              'Saint Helena': 'saint helena, ascension and tristan da cunha',
+              'Ashmore and Cartier Islands': 'australia',
+              'Indian Ocean Territories': 'australia'}
+# Wie der Bestand ein Land nennt, wenn es von Natural Earth abweicht
+BESTAND_ALIAS = {'usa': 'united states', 'espana': 'spain', 'españa': 'spain',
+                 'ivory coast': "cote d'ivoire", 'uk': 'united kingdom',
+                 'south korea': 'south korea', 'north korea': 'north korea',
+                 'burma': 'myanmar', 'holland': 'netherlands',
+                 'federated states of micronesia': 'micronesia',
+                 'saint helena': 'saint helena, ascension and tristan da cunha',
+                 'ascension island': 'saint helena, ascension and tristan da cunha',
+                 'tristan da cunha': 'saint helena, ascension and tristan da cunha'}
 
 
 def _passt(admin, land):
+    # Ein leeres country-Feld darf nicht jedes Land passieren lassen. Mit
+    # dem frueheren Teilzeichenketten-Vergleich tat es das, weil die
+    # leere Zeichenkette in jedem Land steckt -- die jemenitischen Saetze
+    # bekamen ihre Region so nur durch Zufall der Naehe.
+    land = (land or '').strip() or None
     if not land or not admin:
         return True
     l = land.lower().strip()
@@ -155,7 +176,10 @@ def _passt(admin, land):
         return a == 'united states'
     if l in ('espana', 'españa'):
         l = 'spain'
-    return a == l or a in l or l in a
+    # Kein Teilzeichenketten-Vergleich: "Guinea" steckt in
+    # "Guinea-Bissau", und Bissau bekam daraufhin die guineische Region
+    # Boke. Ebenso Congo/DR Congo, Niger/Nigeria, Sudan/South Sudan.
+    return a == l
 
 
 def welches(lon, lat, polys, land=None):
@@ -279,6 +303,7 @@ def main(argv):
         if n % 2000 == 0:
             print(f'  {n}/{len(recs)}', file=sys.stderr)
         feld, wert, land = info[r['file']].get(r['line'], (None, None, None))
+        land = (land or '').strip() or None
         if wert:
             quelle['Feld'] += 1
             continue

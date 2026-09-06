@@ -32805,6 +32805,8 @@ x 0 0
 # !units: meters
 # !longitude: 141.2667
 # !latitude: 46.2500
+# region: Sakhalin
+# admin1_quelle: Ufer 47.5 km
 Kaiba To (Todo Shima), Russia
 +11:00 :Asia/Sakhalin
 0.1219 meters
@@ -90164,6 +90166,8 @@ x 0 0
 # !units: meters
 # !longitude: 125.9833
 # !latitude: 36.1167
+# region: South Chungcheong
+# admin1_quelle: Ufer 45.8 km
 Ochongdo, South Korea
 +00:00 :Asia/Seoul
 3.2004 meters
@@ -92645,6 +92649,8 @@ x 0 0
 # !units: meters
 # !longitude: 125.3667
 # !latitude: 37.6833
+# region: Gyeonggi
+# admin1_quelle: Ufer 27.5 km
 Tungsan-got, South Korea
 +00:00 :Asia/Pyongyang
 3.2004 meters
@@ -97454,6 +97460,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# province: P'yongan-bukto
+# admin1_quelle: Ufer 39.7 km
 Dalu Dao [Talu Tao], North Korea
 +09:00 :Asia/Shanghai
 3.2918 meters
@@ -119637,6 +119645,8 @@ x 0 0
 # !longitude: 119.4167
 # !latitude: 23.2167
 # fixes: Gruppen-Shift -55min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
+# region: Penghu
+# admin1_quelle: Ufer 36.5 km
 Ch'i-mei Yu, Taiwan
 +08:00 :Asia/Taipei
 1.1278 meters
@@ -127846,6 +127856,8 @@ x 0 0
 # !units: meters
 # !longitude: 108.8667
 # !latitude: 21.6333
+# province: Quang Ninh
+# admin1_quelle: Ufer 91.8 km
 Dafeng Jiang, Vietnam
 +00:00 :Asia/Shanghai
 2.4079 meters
@@ -128035,6 +128047,8 @@ x 0 0
 # !units: meters
 # !longitude: 108.7833
 # !latitude: 21.6333
+# province: Quang Ninh
+# admin1_quelle: Ufer 83.4 km
 Sanniang Wan, Vietnam
 +00:00 :Asia/Shanghai
 3.1090 meters
@@ -129758,6 +129772,8 @@ x 0 0
 # !units: meters
 # !longitude: 107.7167
 # !latitude: 20.1333
+# province: Quang Ninh
+# admin1_quelle: Ufer 79.6 km
 Bach Long Vi Island, Vietnam
 +07:00 :Asia/Bangkok
 1.9507 meters
@@ -136322,6 +136338,8 @@ x 0 0
 # !units: meters
 # !longitude: 104.6299
 # !latitude: 9.7974
+# province: Kiên Giang
+# admin1_quelle: Ufer 25.7 km
 Hon Rai (Gulf of Siam), Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 0.9144 meters
@@ -136703,6 +136721,8 @@ x 0 0
 # !units: meters
 # !longitude: 103.6000
 # !latitude: 10.5000
+# province: Kiên Giang
+# admin1_quelle: Ufer 30.4 km
 Phumi Phsar Ream Bay, Vietnam
 +07:00 :Asia/Phnom_Penh
 0.7620 meters
@@ -144047,6 +144067,8 @@ x 0 0
 # !units: meters
 # !longitude: 105.2667
 # !latitude: -1.2167
+# state: Bangka-Belitung
+# admin1_quelle: Ufer 44.0 km
 Chebia, Tudjuh Islands, Indonesia
 +07:00 :Asia/Jakarta
 1.4935 meters
@@ -146719,6 +146741,8 @@ x 0 0
 # !units: meters
 # !longitude: 107.2167
 # !latitude: -3.3167
+# state: Bangka-Belitung
+# admin1_quelle: Ufer 43.6 km
 Simedang Island, Indonesia
 +00:00 :Asia/Jakarta
 1.1887 meters
@@ -219493,6 +219517,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Yap
+# admin1_quelle: Ufer 86.9 km
 Ulithi Islands, Micronesia
 +00:00 :Pacific/Chuuk
 0.7925 meters
@@ -222165,6 +222191,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-10.00 gegen -11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Tuamotu-Gambier
+# admin1_quelle: Ufer 25.3 km
 Rahiroa (Rangiroa) Island, French Polynesia
 +00:00 :Pacific/Tahiti
 0.5182 meters
@@ -223693,6 +223721,8 @@ x 0 0
 # !units: meters
 # !longitude: -174.8000
 # !latitude: -20.2667
+# region: Ha'apai
+# admin1_quelle: Ufer 58.3 km
 Nomuka, Tonga
 -11:00 :Pacific/Tongatapu
 0.9449 meters
@@ -280619,6 +280649,8 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+3.00 gegen +2.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# region: Debub
+# admin1_quelle: Ufer 45.7 km
 Harmil Island, Eritrea
 +02:00 :Africa/Asmara
 0.3048 meters

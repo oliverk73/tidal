@@ -16160,6 +16160,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 56.363333
 # !latitude: 26.361667
+# region: Ras Al Khaymah
+# admin1_quelle: Ufer 37.7 km
 Khawr Quway, Oman Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -16353,6 +16355,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 53.705000
 # !latitude: 24.863333
+# region: Abu Dhabi
+# admin1_quelle: Ufer 57.8 km
 Al Ghallan / Al Tok Island Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17133,6 +17137,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 52.578333
 # !latitude: 24.653333
+# region: Abu Dhabi
+# admin1_quelle: Ufer 28.6 km
 Jazirat Arzanah S, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17714,6 +17720,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 52.616667
 # !latitude: 25.100000
+# region: Abu Dhabi
+# admin1_quelle: Ufer 50.2 km
 El Bunduq Oilfield, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -18101,6 +18109,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 52.011667
 # !latitude: 25.360000
+# region: Ad Dawhah
+# admin1_quelle: Ufer 42.2 km
 Doha Offshore (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -18878,6 +18888,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 52.040000
 # !latitude: 25.773333
+# region: Al Khawr
+# admin1_quelle: Ufer 44.5 km
 Al Chaur E (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -19260,6 +19272,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 53.751667
 # !latitude: 25.496667
+# region: Abu Dhabi
+# admin1_quelle: Ufer 53.5 km
 Sir Abu Nu'ayr NW, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -19646,6 +19660,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 48.936667
 # !latitude: 28.475000
+# province: Al Ahmadi
+# admin1_quelle: Ufer 49.7 km
 Khafji Oilfield, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0000 knots
@@ -19840,6 +19856,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 48.733333
 # !latitude: 28.525000
+# province: Al Ahmadi
+# admin1_quelle: Ufer 29.4 km
 Khafji N, Saudi Arabia Current
 +03:00 :Asia/Riyadh
 0.0415 knots
@@ -20034,6 +20052,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 48.998333
 # !latitude: 28.601667
+# province: Al Ahmadi
+# admin1_quelle: Ufer 55.5 km
 Khafji NE, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0067 knots
@@ -20230,6 +20250,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 49.126667
 # !latitude: 29.946667
+# province: Al-Basrah
+# admin1_quelle: Ufer 54.6 km
 Khowr-e Musa, Iran Current
 +03:00 :Asia/Baghdad
 0.0000 knots
@@ -20422,6 +20444,8 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 51.418333
 # !latitude: 27.448333
+# province: Bushehr
+# admin1_quelle: Ufer 47.4 km
 Nakhiloo / Thamadoo S, Iran Current
 +03:30 :Asia/Tehran
 0.0000 knots
@@ -20812,6 +20836,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait (NP203 470) Current"),
 # note: -- OSM "Marko" in 12.82 km, NP203-Hafen "Kukup, Malaysia" in 18.5 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South West
+# admin1_quelle: Ufer 37.3 km
 Posal Piya (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0800 knots
@@ -23382,6 +23408,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Singapore Strait E (NP203 473c) Current"),
 # note: -- OSM "Lima Channel" in 6.22 km, NP203-Hafen "Horsburgh Lighthouse, Malaysia" in 7.4 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# region: South East
+# admin1_quelle: Ufer 36.9 km
 Falloden Hall Shoal (Singapore Strait), Malaysia Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -24566,6 +24594,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Berhala Strait (NP203 476) Current"),
 # note: -- NP203-Hafen "Kuala Lajau, Indonesia" in 34.1 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Jambi
+# admin1_quelle: Ufer 25.4 km
 Northeast of Kuala Tungkal (Berhala Strait), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24762,6 +24792,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Bangka Strait (NP203 485) Current"),
 # note: -- NP203-Hafen "Pulau Cebia, Indonesia" in 24.1 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Bangka-Belitung
+# admin1_quelle: Ufer 34.2 km
 Pulau Cebia (Bangka Strait), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -27327,6 +27359,8 @@ MNUS2        x 0 0
 # note: 20260906 Name vergeben (vorher "Sulawesi (NP203 532) Current"),
 # note: -- NP203-Hafen "Dofa, Indonesia" in 48.2 km.
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
+# state: Maluku Utara
+# admin1_quelle: Ufer 28.4 km
 Pulau Taliabu (northeast), Indonesia Current
 +08:00 :Asia/Makassar
 0.0000 knots
