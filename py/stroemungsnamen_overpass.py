@@ -119,21 +119,51 @@ def hole(kz, km_):
     return {'elements': []}
 
 
+# Wie aussagekraeftig ist die Merkmalsart fuer einen Ort auf See?
+# Eine Meerenge benennt die Stelle, eine Kuestenlinie benennt nur, dass
+# dort Land anfaengt -- die stand im ersten Lauf 69 mal von 133 oben.
+RANG = {'strait': 0, 'channel': 0, 'bay': 1, 'cape': 1, 'island': 2,
+        'islet': 2, 'archipelago': 2, 'reef': 3, 'shoal': 3, 'peninsula': 3,
+        'coastline': 9}
+
+
+def _name(t):
+    """-> (Name, Schriftvermerk). Englisch bevorzugt.
+
+    OSM fuehrt den Ortsnamen in der Landessprache: die erste Fassung
+    lieferte fuer Bab-el-Mandeb "نقطة بلفا". Der Bestand ist durchweg
+    lateinisch geschrieben, also wird name:en genommen, wo es das gibt,
+    sonst int_name oder ein lateinischer alt_name. Bleibt nur die
+    Landesschrift, wird sie mitgegeben und vermerkt -- verschweigen
+    waere schlechter, als sie zur Auswahl zu stellen.
+    """
+    for k in ('name:en', 'int_name'):
+        if t.get(k):
+            return t[k], ''
+    n = t.get('name', '')
+    if n.isascii():
+        return n, ''
+    for k in ('alt_name', 'name:de'):
+        if t.get(k) and t[k].isascii():
+            return t[k], 'lateinisch aus ' + k
+    return n, 'nur Landesschrift'
+
+
 def merkmale(antwort):
-    """-> [(Name, Art, lat, lon)] aus einer Overpass-Antwort."""
+    """-> [(Name, Art, lat, lon, Schriftvermerk)] aus einer Overpass-Antwort."""
     out = []
     for e in antwort.get('elements', []):
         t = e.get('tags', {})
-        name = t.get('name')
-        if not name:
+        if not t.get('name'):
             continue
+        name, schrift = _name(t)
         art = (t.get('natural') or t.get('place') or t.get('waterway')
                or t.get('seamark:type') or '?')
         la = e.get('lat', (e.get('center') or {}).get('lat'))
         lo = e.get('lon', (e.get('center') or {}).get('lon'))
         if la is None or lo is None:
             continue
-        out.append((name, art, float(la), float(lo)))
+        out.append((name, art, float(la), float(lo), schrift))
     return out
 
 
@@ -160,27 +190,36 @@ def main(argv):
         nahe = []
         for dz in (-1, 0, 1):
             for dm in (-1, 0, 1):
-                for name, art, la, lo in gefunden.get(
+                for name, art, la, lo, schrift in gefunden.get(
                         (kachel(s['lat'], s['lon'])[0] + dz,
                          kachel(s['lat'], s['lon'])[1] + dm), []):
                     d = km(s, {'lat': la, 'lon': lo})
                     if d <= umkreis:
-                        nahe.append((d, name, art))
-        nahe.sort()
+                        nahe.append((RANG.get(art, 5), round(d, 2), name, art,
+                                     schrift))
+        # Dasselbe Merkmal liegt in mehreren Nachbarkacheln; je Name und
+        # Art bleibt der naechste Fund.
+        beste = {}
+        for rang, d, name, art, schrift in nahe:
+            k = (name, art)
+            if k not in beste or d < beste[k][1]:
+                beste[k] = (rang, d, name, art, schrift)
+        nahe = sorted(beste.values())
         p = re.match(r'(\d{3})', no).group(1)
         hk = [(km(s, h), n, h) for n, h in haefen if n.startswith(p)]
         hd, hn, hr = min(hk) if hk else (None, '', None)
-        for d, name, art in nahe[:3]:
+        for _rang, d, name, art, schrift in nahe[:3]:
             zeilen.append(dict(
                 np203_no=no, name_alt=s['name'], lat=f'{s["lat"]:.4f}',
                 lon=f'{s["lon"]:.4f}', kandidat=name, art=art, km=f'{d:.2f}',
+                schrift=schrift,
                 buchhafen=hr['name'] if hr else '', buchhafen_nr=hn,
                 buchhafen_km=f'{hd:.1f}' if hd is not None else '',
                 name_neu=''))
         if not nahe:
             zeilen.append(dict(
                 np203_no=no, name_alt=s['name'], lat=f'{s["lat"]:.4f}',
-                lon=f'{s["lon"]:.4f}', kandidat='', art='', km='',
+                lon=f'{s["lon"]:.4f}', kandidat='', art='', km='', schrift='',
                 buchhafen=hr['name'] if hr else '', buchhafen_nr=hn,
                 buchhafen_km=f'{hd:.1f}' if hd is not None else '',
                 name_neu=''))
