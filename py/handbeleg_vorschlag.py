@@ -37,6 +37,7 @@ import csv
 import os
 import re
 import sys
+import difflib
 import unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -73,11 +74,35 @@ def worte(n):
 
 
 def ueberlappung(a, b):
-    """Anteil gemeinsamer Woerter am kleineren Namen."""
+    """Wie aehnlich sind zwei Namen? 0 bis 1.
+
+    Der einfache Wortvergleich reicht nicht. "George Town, Penang,
+    Malaysia" und "Pinang (Bandar Raya Georgetown), Malaysia" sind
+    derselbe Pegel, haben aber KEIN gemeinsames Wort: einmal steht eine
+    Wortgrenze mitten in Georgetown, und Penang und Pinang sind zwei
+    Umschriften desselben Namens. Nach dem alten Mass war das Paar 0.00
+    aehnlich und stand damit ganz unten in der Liste -- deshalb hat es
+    Oliver nie zu Gesicht bekommen.
+
+    Zusaetzlich wird deshalb ohne Wortgrenzen verglichen (der eine Name
+    steckt zusammengezogen im anderen) und mit Unschaerfe (penang ~
+    pinang). Genommen wird der bessere der beiden Werte, damit die
+    Aenderung nichts verschlechtert.
+    """
     wa, wb = worte(a), worte(b)
     if not wa or not wb:
         return 0.0
-    return len(wa & wb) / min(len(wa), len(wb))
+    einfach = len(wa & wb) / min(len(wa), len(wb))
+    ca, cb = ''.join(sorted(wa)), ''.join(sorted(wb))
+    if ''.join(wa) in ''.join(wb) or ''.join(wb) in ''.join(wa):
+        return 1.0
+    lang = [w for w in wa if len(w) >= 4]
+    if not lang:
+        return einfach
+    treffer = sum(1 for w in lang
+                  if w in ''.join(wb)
+                  or difflib.get_close_matches(w, list(wb), 1, 0.8))
+    return max(einfach, treffer / len(lang))
 
 
 def main(argv):
