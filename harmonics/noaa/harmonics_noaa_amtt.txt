@@ -39054,7 +39054,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Trinidad and Tobago
+# country: Venezuela
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4931
 # noaa_uid: ectt-4931
@@ -39065,9 +39065,11 @@ x 0 0
 # !units: meters
 # !longitude: -62.0833
 # !latitude: 10.6167
-# region: Diego Martin
+# region: Sucre
 # admin1_quelle: Ufer 46.4 km
-Puerto de Hierro, Trinidad and Tobago
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto de Hierro, Trinidad and Tobago"),
+# note: -- die Position liegt in Venezuela (Sucre); von Hand entschieden.
+Puerto de Hierro, Venezuela
 -06:00 :America/Caracas
 0.6096 meters
 J1              0.0210  263.87
@@ -56826,10 +56828,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -58.1500
-# !latitude: -51.5500
+# !longitude: -58.151550
+# !latitude: -51.553850
 # region: Falkland Islands
 # admin1_quelle: Polygon
+# note: 20260907 Position von -51.5500/-58.1500 (Buchwert auf
+# note: -- Bogenminuten) an die Kuestenlinie gerueckt: -51.553850/-58.151550, 441 m.
 Port Louis (Berkeley Sound), Falkland Islands
 +00:00 :Atlantic/Stanley
 0.9144 meters

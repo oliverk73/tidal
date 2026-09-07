@@ -23140,8 +23140,10 @@ x 0 0
 # bom_id: QLD-TP132
 # utide: period=2024-12-31..2027-12-31 r2=0.9991 rms=0.0176m const=68
 # !units: meters
-# !longitude: 150.283300
-# !latitude: -20.100000
+# !longitude: 150.271486
+# !latitude: -19.911512
+# note: 20260907 Position nach Olivers Angabe:
+# note: -- Position -20.1000/150.2833 -> -19.911512/150.271486
 Whitetip Reef Rear, Queensland, Australia
 +00:00 :UTC
 1.2235 meters
@@ -602966,7 +602968,7 @@ x 0 0
 #
 # Golfo Caldera (Islas Sandwich del Sur), Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: South Georgia and the South Sandwich Islands
 # source: SHN Argentina tide tables × UTide
 # station_id_context: SHN-CALD
 # date_imported: 20260511
@@ -602979,7 +602981,9 @@ x 0 0
 # !latitude: -59.4500
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Golfo Caldera (Islas Sandwich del Sur), Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Golfo Caldera (Islas Sandwich del Sur), Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Golfo Caldera (Islas Sandwich del Sur), South Georgia and the South Sandwich Islands
 +00:00 :UTC
 0.9500 meters
 x 0 0
@@ -629242,10 +629246,12 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9902 rms=0.0888m const=68
 # !units: meters
-# !longitude: 124.4000
-# !latitude: 40.1167
+# !longitude: 124.387975
+# !latitude: 40.116040
 # region: Liaoning
 # admin1_quelle: Name
+# note: 20260907 Position von 40.1167/124.4000 (auf Bogenminuten
+# note: -- gerundet) auf 40.116040/124.387975 berichtigt, von Hand entschieden.
 Dandong, Liaoning, China
 +00:00 :Asia/Shanghai
 1.6687 meters
@@ -724550,7 +724556,7 @@ x 0 0
 #
 # Bahía del Laberinto, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -724562,7 +724568,9 @@ x 0 0
 # !latitude: -52.0333
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Bahía del Laberinto, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Bahía del Laberinto, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Bahía del Laberinto, Falkland Islands
 +00:00 :UTC
 0.4700 meters
 x 0 0
@@ -724747,7 +724755,7 @@ x 0 0
 #
 # Bahía del Rosario, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -724759,7 +724767,9 @@ x 0 0
 # !latitude: -51.7000
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Bahía del Rosario, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Bahía del Rosario, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Bahía del Rosario, Falkland Islands
 +00:00 :UTC
 0.7150 meters
 x 0 0
@@ -724944,7 +724954,7 @@ x 0 0
 #
 # Bahía de los Abrigos, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -724956,7 +724966,9 @@ x 0 0
 # !latitude: -52.2500
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Bahía de los Abrigos, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Bahía de los Abrigos, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Bahía de los Abrigos, Falkland Islands
 +00:00 :UTC
 0.4400 meters
 x 0 0
@@ -725346,12 +725358,14 @@ x 0 0
 # patron: Puerto Argentino (Islas Malvinas)  region_template: Quilla
 # establecimiento_min: 428  amplitud_media_m: 1.31
 # !units: meters
-# !longitude: -60.7000
-# !latitude: -52.1500
+# !longitude: -60.700900
+# !latitude: -52.150270
 # province: Falkland Islands
 # admin1_quelle: Name
 # note: 20260907 Land im Namen berichtigt (vorher "Bahía San Felipe, Islas del Atlántico Sur, Argentina"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+# note: 20260907 Position von -52.1500/-60.7000 (Buchwert auf
+# note: -- Bogenminuten) an die Kuestenlinie gerueckt: -52.150270/-60.700900, 68 m.
 Bahía San Felipe, Falkland Islands
 +00:00 :UTC
 0.6550 meters
@@ -725734,7 +725748,7 @@ x 0 0
 #
 # Caleta Trullo, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -725746,7 +725760,9 @@ x 0 0
 # !latitude: -51.5167
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Caleta Trullo, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Caleta Trullo, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Caleta Trullo, Falkland Islands
 +00:00 :UTC
 0.4400 meters
 x 0 0
@@ -726719,7 +726735,7 @@ x 0 0
 #
 # Paso Tamar, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -726731,7 +726747,9 @@ x 0 0
 # !latitude: -51.3333
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Paso Tamar, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Paso Tamar, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Paso Tamar, Falkland Islands
 +00:00 :UTC
 0.7150 meters
 x 0 0
@@ -726924,12 +726942,14 @@ x 0 0
 # patron: Puerto Argentino (Islas Malvinas)  region_template: Quilla
 # establecimiento_min: 408  amplitud_media_m: 0.88
 # !units: meters
-# !longitude: -59.6000
-# !latitude: -52.1000
+# !longitude: -59.603190
+# !latitude: -52.093350
 # province: Falkland Islands
 # admin1_quelle: Name
 # note: 20260907 Land im Namen berichtigt (vorher "Puerto Danson, Islas del Atlántico Sur, Argentina"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+# note: 20260907 Position von -52.1000/-59.6000 (Buchwert auf
+# note: -- Bogenminuten) an die Kuestenlinie gerueckt: -52.093350/-59.603190, 770 m.
 Puerto Danson, Falkland Islands
 +00:00 :UTC
 0.4400 meters
@@ -727115,7 +727135,7 @@ x 0 0
 #
 # Puerto del Río, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -727127,7 +727147,9 @@ x 0 0
 # !latitude: -51.4333
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto del Río, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto del Río, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Puerto del Río, Falkland Islands
 +00:00 :UTC
 0.7750 meters
 x 0 0
@@ -727312,7 +727334,7 @@ x 0 0
 #
 # Puerto de la Cruzada, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -727320,11 +727342,15 @@ x 0 0
 # patron: Puerto Argentino (Islas Malvinas)  region_template: Quilla
 # establecimiento_min: 423  amplitud_media_m: 1.89
 # !units: meters
-# !longitude: -60.0500
-# !latitude: -51.3500
+# !longitude: -60.056590
+# !latitude: -51.345920
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto de la Cruzada, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto de la Cruzada, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+# note: 20260907 Position von -51.3500/-60.0500 (Buchwert auf
+# note: -- Bogenminuten) an die Kuestenlinie gerueckt: -51.345920/-60.056590, 643 m.
+Puerto de la Cruzada, Falkland Islands
 +00:00 :UTC
 0.9450 meters
 x 0 0
@@ -727509,7 +727535,7 @@ x 0 0
 #
 # Puerto Edgardo, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -727521,7 +727547,9 @@ x 0 0
 # !latitude: -52.0167
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto Edgardo, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto Edgardo, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Puerto Edgardo, Falkland Islands
 +00:00 :UTC
 0.4400 meters
 x 0 0
@@ -727706,7 +727734,7 @@ x 0 0
 #
 # Puerto Luis, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -727718,7 +727746,9 @@ x 0 0
 # !latitude: -51.8833
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto Luis, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto Luis, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Puerto Luis, Falkland Islands
 +00:00 :UTC
 0.4900 meters
 x 0 0
@@ -727903,7 +727933,7 @@ x 0 0
 #
 # Puerto Mitre, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -727911,11 +727941,15 @@ x 0 0
 # patron: Puerto Argentino (Islas Malvinas)  region_template: Quilla
 # establecimiento_min: 438  amplitud_media_m: 0.88
 # !units: meters
-# !longitude: -59.5500
-# !latitude: -51.6500
+# !longitude: -59.552990
+# !latitude: -51.649390
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto Mitre, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto Mitre, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+# note: 20260907 Position von -51.6500/-59.5500 (Buchwert auf
+# note: -- Bogenminuten) an die Kuestenlinie gerueckt: -51.649390/-59.552990, 217 m.
+Puerto Mitre, Falkland Islands
 +00:00 :UTC
 0.4400 meters
 x 0 0
@@ -728100,7 +728134,7 @@ x 0 0
 #
 # Puerto Navidad, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -728112,7 +728146,9 @@ x 0 0
 # !latitude: -51.6667
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto Navidad, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto Navidad, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Puerto Navidad, Falkland Islands
 +00:00 :UTC
 0.9450 meters
 x 0 0
@@ -728297,7 +728333,7 @@ x 0 0
 #
 # Puerto Ruiseñor, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -728309,7 +728345,9 @@ x 0 0
 # !latitude: -51.7667
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto Ruiseñor, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto Ruiseñor, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Puerto Ruiseñor, Falkland Islands
 +00:00 :UTC
 0.5350 meters
 x 0 0
@@ -728494,7 +728532,7 @@ x 0 0
 #
 # Puerto San José, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -728506,7 +728544,9 @@ x 0 0
 # !latitude: -51.8333
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto San José, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto San José, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Puerto San José, Falkland Islands
 +00:00 :UTC
 0.7150 meters
 x 0 0
@@ -728691,7 +728731,7 @@ x 0 0
 #
 # Puerto Sur, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -728699,11 +728739,15 @@ x 0 0
 # patron: Puerto Argentino (Islas Malvinas)  region_template: Quilla
 # establecimiento_min: 513  amplitud_media_m: 1.74
 # !units: meters
-# !longitude: -60.8000
-# !latitude: -52.0000
+# !longitude: -60.804790
+# !latitude: -51.997770
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Puerto Sur, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto Sur, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+# note: 20260907 Position von -52.0000/-60.8000 (Buchwert auf
+# note: -- Bogenminuten) an die Kuestenlinie gerueckt: -51.997770/-60.804790, 410 m.
+Puerto Sur, Falkland Islands
 +00:00 :UTC
 0.8700 meters
 x 0 0
@@ -729087,7 +729131,7 @@ x 0 0
 #
 # Punta Esperanza, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -729099,7 +729143,9 @@ x 0 0
 # !latitude: -51.3333
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Punta Esperanza, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Punta Esperanza, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Punta Esperanza, Falkland Islands
 +00:00 :UTC
 0.8700 meters
 x 0 0
@@ -729284,7 +729330,7 @@ x 0 0
 #
 # Punta Peña Blanca, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -729296,7 +729342,9 @@ x 0 0
 # !latitude: -51.9000
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Punta Peña Blanca, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Punta Peña Blanca, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Punta Peña Blanca, Falkland Islands
 +00:00 :UTC
 0.5350 meters
 x 0 0
@@ -729481,7 +729529,7 @@ x 0 0
 #
 # Seno Choiseul, Islas del Atlántico Sur, Argentina
 # BEGIN HOT COMMENTS
-# country: Argentina
+# country: Falkland Islands
 # source: SHN Argentina spring-only secondary port (establishment+range approximation)
 # date_imported: 20260628
 # datum: Chart Datum
@@ -729493,7 +729541,9 @@ x 0 0
 # !latitude: -51.9167
 # province: Islas del Atlántico Sur
 # admin1_quelle: Name
-Seno Choiseul, Islas del Atlántico Sur, Argentina
+# note: 20260907 Land im Namen berichtigt (vorher "Seno Choiseul, Islas del Atlántico Sur, Argentina"),
+# note: -- von Hand entschieden; gilt fuer die ganze Gruppe.
+Seno Choiseul, Falkland Islands
 +00:00 :UTC
 0.4700 meters
 x 0 0

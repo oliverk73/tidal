@@ -59,6 +59,30 @@ SONDERFORM = {'US Naval Base Guantanamo Bay':
               ('Cuba', 'Guantanamo Bay (US Naval Base), Cuba')}
 
 
+POSITION = re.compile(r'Position\s*korrigieren\s*:\s*(-?[\d.]+)\s*,\s*(-?[\d.]+)',
+                      re.I)
+
+
+def positionen():
+    """-> {(Name, Dateibasis): (lat, lon)} aus der Kommentarspalte.
+
+    Die Liste hat neben der Entscheidung eine Spalte fuer Anmerkungen,
+    und dort stand "Position korrigieren: 40.116040, 124.387975" fuer
+    Dandong. Beim ersten Lauf habe ich nur die Entscheidungsspalte
+    gelesen und die Anmerkung uebersehen -- deshalb wird sie jetzt
+    ausgewertet. Erkannt wird genau diese Schreibweise; alles andere
+    bleibt Text fuer Menschen.
+    """
+    out = {}
+    for r in csv.DictReader(open(QUELLE, encoding='utf-8')):
+        for wert in r.values():
+            m = POSITION.search(wert or '')
+            if m:
+                out[(r['name'], r['datei'])] = (float(m.group(1)), float(m.group(2)))
+                break
+    return out
+
+
 def entscheidungen():
     """-> {(Name, Dateibasis): Soll-Land}."""
     out = {}
@@ -81,8 +105,19 @@ def entscheidungen():
 def main(argv):
     schreiben = '--schreiben' in argv
     soll = entscheidungen()
-    recs = [r for r in load_records()
-            if (r['name'], os.path.basename(r['file'])) in soll]
+    # Eine Entscheidung ueber ein Land gilt fuer den PEGEL, nicht fuer die
+    # Zeile der Liste. "Puerto de Hierro, Trinidad and Tobago" stand
+    # zweimal im Bestand, gemeldet war nur einer -- der andere liegt im
+    # Golf von Paria, wo kein Polygon greift. Ich habe daraufhin einen
+    # umbenannt und den anderen stehen lassen. Dasselbe war bei den
+    # Falklandinseln passiert: 4 von 18 berichtigt. Deshalb gilt die
+    # Entscheidung ab jetzt fuer jeden Satz mit demselben Namen.
+    nach_name = {}
+    for (name, _datei), wahl in soll.items():
+        nach_name.setdefault(name, wahl)
+    recs = [r for r in load_records() if r['name'] in nach_name]
+    soll = {(r['name'], os.path.basename(r['file'])): nach_name[r['name']]
+            for r in recs}
     print(f'{len(soll)} Entscheidungen, {len(recs)} Saetze betroffen')
     polys = rf.polygone()
     heute = dt.datetime.now().strftime('%Y%m%d')

@@ -295,8 +295,16 @@ def haufen_gruppen(recs):
         zeilen[row['haufen']].append(row)
     out = []
     for nr, rows in sorted(zeilen.items(), key=lambda t: int(t[0])):
-        if rows[0].get('kette'):
-            continue
+        # Ketten sind unzuverlaessig: dort wachsen mehrere Pegel ueber
+        # gemeinsame Nachbarn zusammen. Frueher wurden sie ganz
+        # uebersprungen -- damit fiel aber auch heraus, was INNERHALB
+        # einer Kette zweifelsfrei zusammengehoert. In Stanley auf den
+        # Falklandinseln stehen vier Saetze ueber 3.3 km, drei davon mit
+        # identischem Namen; die drei sind so sicher wie jede
+        # Namensgruppe, wurden aber wegen des vierten nie beurteilt.
+        # Aus einer Kette werden deshalb nur vollstaendig belegte
+        # Teilmengen genommen, und der ungeklaerte Rest bleibt liegen.
+        kette = bool(rows[0].get('kette'))
         menge, abgeleitet = [], set()
         for row in rows:
             r = nach_ort.get((row['datei'], int(row['zeile'])))
@@ -319,6 +327,17 @@ def haufen_gruppen(recs):
         # Fluessen, und "Deokjeokdo Jinri" und "Deokjeokdo Bukri" sind
         # zwei Pegel auf einer Insel. Sonst muss die Altlage den Beleg
         # liefern oder der Umstand, dass einer der Saetze nur gerechnet ist.
+        if kette:
+            for teil, grund in _zerlegen(menge, ids, bestaetigt):
+                out.append((teil[0]['name'], teil,
+                            dict(nr=nr, spur=spur, namen=namen,
+                                 beleg=grund + ' (Kette, Teilmenge)',
+                                 abgeleitet=abgeleitet)))
+            if len({r['name'] for r in menge}) == 1:
+                out.append((menge[0]['name'], menge,
+                            dict(nr=nr, spur=spur, namen=namen, beleg='Name',
+                                 abgeleitet=abgeleitet)))
+            continue
         if len({r['name'] for r in menge}) == 1:
             beleg = 'Name'
         elif _kennungs_belegt(menge, ids):
