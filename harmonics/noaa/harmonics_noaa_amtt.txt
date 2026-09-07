@@ -38862,7 +38862,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Trinidad and Tobago
+# country: Venezuela
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4929
 # noaa_uid: ectt-4929
@@ -38873,9 +38873,12 @@ x 0 0
 # !units: meters
 # !longitude: -61.9333
 # !latitude: 10.6500
-# region: Diego Martin
+# region: Sucre
 # admin1_quelle: Ufer 29.7 km
-Macuro, Trinidad and Tobago
+# note: 20260907 Land im Namen berichtigt (vorher "Macuro, Trinidad and Tobago"):
+# note: -- Macuro liegt auf der Halbinsel Paria in Venezuela (Sucre),
+# note: -- rund 40 km von Trinidad. Von Hand entschieden.
+Macuro, Venezuela
 -06:00 :America/Caracas
 0.4267 meters
 J1              0.0140  254.12
@@ -39063,8 +39066,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -62.0833
-# !latitude: 10.6167
+# !longitude: -62.0901
+# !latitude: 10.6322
 # region: Sucre
 # admin1_quelle: Ufer 46.4 km
 # note: 20260907 Land im Namen berichtigt (vorher "Puerto de Hierro, Trinidad and Tobago"),
