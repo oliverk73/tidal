@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Baut TCDs nach harmonics/binary/ fuer alle Dateien, deren TCD veraltet ist.
+"""Baut die TCDs fuer alle Dateien, deren TCD veraltet ist, und liefert sie aus.
 
 Veraltet heisst: TCD fehlt, ist aelter als die Textdatei, oder enthaelt
 eine andere Zahl von Saetzen. Die Satzzahl ist die wichtigere Probe --
 build_tide_db haengt an eine vorhandene Datei an, statt sie zu ersetzen,
 weshalb das Ziel vor jedem Bau geloescht wird.
+
+Geprueft wird gegen den AUSLIEFERUNGSORT (/usr/share/xtide), nicht gegen
+harmonics/binary/. Das Verzeichnis binary/ ist nur ein Zwischenspeicher:
+gebaut wird dorthin, und die fertige Datei wandert anschliessend nach
+/usr/share/xtide. Prueft man gegen den Zwischenspeicher, gilt nach jedem
+Ausliefern wieder jede TCD als "fehlt", und es werden alle 38 neu
+gebaut statt der zwei oder drei, die sich geaendert haben.
 
 Usage: python3 py/tcd_bauen.py [--alle] [--pruefen]
        --alle     auch aktuelle TCDs neu bauen
@@ -15,13 +22,15 @@ from __future__ import annotations
 
 import os
 import re
+import shutil
 import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import active_files, ROOT, MERIDIAN              # noqa: E402
 
-BINARY = os.path.join(ROOT, 'harmonics/binary')
+BINARY = os.path.join(ROOT, 'harmonics/binary')   # Zwischenspeicher
+ZIEL = '/usr/share/xtide'                         # Auslieferungsort
 
 def saetze(pfad):
     l = open(pfad, encoding='iso-8859-1').read().split('\n')
@@ -44,7 +53,11 @@ def main(argv):
     gebaut, aktuell, fehler, veraltet, leer = 0, 0, 0, 0, []
     for rel in active_files():
         txt = os.path.join(ROOT, rel)
-        tcd = os.path.join(BINARY, os.path.basename(rel)[:-4] + '.tcd')
+        name = os.path.basename(rel)[:-4] + '.tcd'
+        tcd = os.path.join(BINARY, name)
+        # Der Stand, der zaehlt, liegt am Auslieferungsort.
+        fertig = os.path.join(ZIEL, name)
+        stand = fertig if os.path.exists(fertig) else tcd
         n_txt = saetze(txt)
         if n_txt == 0:
             # Im Baum liegen auch Textdateien, die keine Harmonics sind
@@ -52,12 +65,12 @@ def main(argv):
             leer.append(os.path.basename(rel))
             continue
         grund = None
-        if not os.path.exists(tcd):
+        if not os.path.exists(stand):
             grund = 'fehlt'
-        elif os.path.getmtime(tcd) < os.path.getmtime(txt):
+        elif os.path.getmtime(stand) < os.path.getmtime(txt):
             grund = 'aelter als der Text'
         else:
-            n_tcd = tcd_saetze(tcd)
+            n_tcd = tcd_saetze(stand)
             if n_tcd != n_txt:
                 grund = f'{n_tcd} statt {n_txt} Saetze'
         if grund is None and not alle:
@@ -78,6 +91,8 @@ def main(argv):
               f'{n:5} Saetze' + ('' if ok else f'  -- Text hat {n_txt}')
               + (f'   ({grund})' if grund else ''))
         gebaut += 1
+        if ok and os.path.isdir(ZIEL):
+            shutil.move(tcd, os.path.join(ZIEL, name))
         fehler += 0 if ok else 1
     if leer:
         print(f'\nuebersprungen, keine Harmonics: {", ".join(leer)}')
