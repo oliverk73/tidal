@@ -675588,8 +675588,8 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0067m const=68
 # !units: meters
-# !longitude: 104.4000
-# !latitude: 1.3333
+# !longitude: 104.4056
+# !latitude: 1.3299
 # region: South East
 # admin1_quelle: Ufer 44.2 km
 Horsburgh Lighthouse, Singapore
@@ -675782,11 +675782,16 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0149m const=68
 # !units: meters
-# !longitude: 102.8833
-# !latitude: 1.7667
+# !longitude: 102.893600
+# !latitude: 1.799100
 # state: Johor
 # admin1_quelle: Ufer 3.3 km
 # note: 20260906 country "Malaysia (2)" -> "Malaysia" nach dem Namen berichtigt,
+# note: 20260907 Position von 1.7667/102.8833 auf 1.7991/102.8936 gesetzt:
+# note: -- der Buchwert (1d46 N 102d53 E, auf Bogenminuten gerundet) liegt
+# note: -- 1835 m landeinwaerts, der gleichnamige classic-Satz 41 m vom Wasser.
+# note: -- Alle Nachbarstationen des NP203-Blocks 4700-4712 liegen 29 bis 200 m
+# note: -- vom Wasser. Von Hand entschieden.
 Kuala Batu Pahat, Malaysia
 +00:00 :Asia/Kuala_Lumpur
 1.5101 meters
@@ -675977,11 +675982,11 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0046m const=68
 # !units: meters
-# !longitude: 103.1333
-# !latitude: 5.3500
+# !longitude: 103.1525
+# !latitude: 5.3365
 # state: Terengganu
 # admin1_quelle: Polygon
-Trengganu, Malaysia
+Kuala Terengganu, Malaysia
 +00:00 :Asia/Kuala_Lumpur
 1.0200 meters
 J1              0.0379  277.76
