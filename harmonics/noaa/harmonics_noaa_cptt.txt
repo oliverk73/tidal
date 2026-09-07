@@ -135969,11 +135969,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 102.2500
-# !latitude: 2.1833
+# !longitude: 102.2469
+# !latitude: 2.1836
 # state: Sumatra
 # admin1_quelle: Name
-Malacca, Sumatra, Indonesia
+Bandaraya Melaka, Malaysia
 +00:00 :Asia/Kuala_Lumpur
 1.1582 meters
 J1              0.0104  306.22
@@ -136166,7 +136166,11 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260907 Land im Namen berichtigt (vorher "Port Kelang, Sumatra, Indonesia"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
-Port Kelang, Selangor, Malaysia
+# note: 20260907 Name "Port Kelang, Selangor, Malaysia" -> "Pelabuhan Klang, Malaysia":
+# note: -- derselbe Hafen (Pelabuhan Klang = Port Klang = Port Kelang).
+# note: -- Dieser Satz weicht in der Kurve rund 20 % von den drei uebrigen ab
+# note: -- und hiess bis 07.09.2026 "Port Kelang, Sumatra, Indonesia".
+Pelabuhan Klang, Malaysia
 +00:00 :Asia/Kuala_Lumpur
 2.3165 meters
 J1              0.0226  267.39
