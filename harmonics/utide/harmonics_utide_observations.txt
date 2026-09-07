@@ -49825,7 +49825,9 @@ x 0 0
 # !latitude: 19.9176
 # province: Guantánamo
 # admin1_quelle: Ufer 6.0 km
-Guantanamo Bay, Cuba
+# note: 20260907 Land im Namen berichtigt (vorher "Guantanamo Bay, Cuba"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Guantanamo Bay (US Naval Base), Cuba
 +00:00 :America/Havana
 0.7290 meters
 J1              0.0051  217.13
@@ -181804,7 +181806,7 @@ x 0 0
 #
 # Anewa Bay, Papua New Guinea
 # BEGIN HOT COMMENTS
-# country: Solomon Islands
+# country: Papua New Guinea
 # source: Derived from UHSLC data with UTide harmonic analysis
 # station_id_context: UHSLC-48
 # date_imported: 20260421
@@ -181817,11 +181819,13 @@ x 0 0
 # !units: meters
 # !longitude: 155.5436
 # !latitude: -6.1838
-# region: Western
+# region: North Solomons
 # admin1_quelle: Ufer 89.4 km
 # note: 20260906 country "Papua New Guinea" -> "Solomon Islands" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Bougainville" -> "Western".
-Anewa Bay, Bougainville, Solomon Islands
+# note: 20260907 Land im Namen berichtigt (vorher "Anewa Bay, Bougainville, Solomon Islands"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Anewa Bay, North Solomons, Papua New Guinea
 +00:00 :UTC
 0.8292 meters
 J1              0.0109  74.97

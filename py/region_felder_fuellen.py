@@ -150,9 +150,19 @@ LAND_ALIAS = {'United States of America': 'united states',
               'Federated States of Micronesia': 'micronesia',
               'Saint Helena': 'saint helena, ascension and tristan da cunha',
               'Ashmore and Cartier Islands': 'australia',
-              'Indian Ocean Territories': 'australia'}
+              'Indian Ocean Territories': 'australia',
+              # Natural Earth fuehrt diese Gebiete als eigenes admin, der
+              # Bestand zaehlt sie zum Staat. "Kaplica (Davlos), Cyprus"
+              # liegt im NE-Polygon "Northern Cyprus" und war deshalb als
+              # Widerspruch gemeldet, obwohl am Satz nichts falsch ist.
+              'Northern Cyprus': 'cyprus',
+              'Somaliland': 'somalia',
+              'Hong Kong S.A.R.': 'china',
+              'Macao S.A.R': 'china',
+              'Macao S.A.R.': 'china'}
 # Wie der Bestand ein Land nennt, wenn es von Natural Earth abweicht
-BESTAND_ALIAS = {'usa': 'united states', 'espana': 'spain', 'españa': 'spain',
+BESTAND_ALIAS = {'usa': 'united states',
+                 'united states of america': 'united states', 'espana': 'spain', 'españa': 'spain',
                  'ivory coast': "cote d'ivoire", 'uk': 'united kingdom',
                  'south korea': 'south korea', 'north korea': 'north korea',
                  'burma': 'myanmar', 'holland': 'netherlands',

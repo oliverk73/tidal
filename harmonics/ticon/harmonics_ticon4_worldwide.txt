@@ -19021,7 +19021,7 @@ x 0 0
 #
 # Alofi
 # BEGIN HOT COMMENTS
-# country: New Zealand
+# country: Niue
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: alofi-598-niu-uhslc_fd
 # date_imported: 20260322
@@ -19033,7 +19033,9 @@ x 0 0
 # region: Niue
 # admin1_quelle: Polygon
 # note: 20260906 country "Niue" -> "New Zealand" nach dem Namen berichtigt,
-Niue Island, New Zealand
+# note: 20260907 Land im Namen berichtigt (vorher "Niue Island, New Zealand"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Niue Island, Niue
 +00:00 :Pacific/Niue
 0.7300 meters
 J1              0.0025  54.42
@@ -20631,7 +20633,7 @@ x 0 0
 #
 # Anewa Bay 048A
 # BEGIN HOT COMMENTS
-# country: Solomon Islands
+# country: Papua New Guinea
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: anewa_bay-048a-png-uhslc_rq
 # date_imported: 20260322
@@ -20640,11 +20642,13 @@ x 0 0
 # !units: meters
 # !longitude: 155.5436
 # !latitude: -6.1838
-# region: Western
+# region: North Solomons
 # admin1_quelle: Ufer 89.4 km
 # note: 20260906 country "Papua New Guinea" -> "Solomon Islands" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Bougainville" -> "Western".
-Anewa Bay, Bougainville, Solomon Islands
+# note: 20260907 Land im Namen berichtigt (vorher "Anewa Bay, Bougainville, Solomon Islands"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Anewa Bay, North Solomons, Papua New Guinea
 +00:00 :Pacific/Bougainville
 0.8800 meters
 J1              0.0107  78.27
@@ -21438,7 +21442,7 @@ x 0 0
 #
 # Antwerpen Prosperpolder Antwppppdr
 # BEGIN HOT COMMENTS
-# country: Netherlands
+# country: Belgium
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: antwerpen_prosperpolder-antwppppdr-nld-rws
 # date_imported: 20260322
@@ -21447,9 +21451,11 @@ x 0 0
 # !units: meters
 # !longitude: 4.247633
 # !latitude: 51.342082
-# province: Zeeland
+# province: East Flanders
 # admin1_quelle: Ufer 2.4 km
-Prosperpolder (Schelde), Netherlands
+# note: 20260907 Land im Namen berichtigt (vorher "Prosperpolder (Schelde), Netherlands"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Prosperpolder (Schelde), Belgium
 +01:00 :Europe/Amsterdam
 0.0000 meters
 J1              0.0043  136.43
@@ -50681,7 +50687,7 @@ x 0 0
 #
 # Diego Garcia
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: British Indian Ocean Territory
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: diego_garcia-104-gbr-uhslc_fd
 # date_imported: 20260322
@@ -50690,7 +50696,9 @@ x 0 0
 # !units: meters
 # !longitude: 72.393000
 # !latitude: -7.290000
-Diego Garcia, United Kingdom
+# note: 20260907 Land im Namen berichtigt (vorher "Diego Garcia, United Kingdom"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Diego Garcia, British Indian Ocean Territory
 +00:00 :Indian/Chagos
 0.0000 meters
 J1              0.0025  75.53
@@ -68688,7 +68696,9 @@ x 0 0
 # !latitude: 19.9176
 # province: Guantánamo
 # admin1_quelle: Ufer 6.0 km
-Guantanamo, Cuba
+# note: 20260907 Land im Namen berichtigt (vorher "Guantanamo, Cuba"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Guantanamo Bay (US Naval Base), Cuba
 +00:00 :America/Havana
 0.7290 meters
 J1              0.0046  217.34
@@ -80897,7 +80907,7 @@ x 0 0
 #
 # Ile Saint Paul
 # BEGIN HOT COMMENTS
-# country: France
+# country: French Southern and Antarctic Lands
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: ile_saint_paul-194-fra-refmar
 # date_imported: 20260322
@@ -80913,7 +80923,9 @@ x 0 0
 # !units: meters
 # !longitude: 77.530603
 # !latitude: -38.714296
-Île Saint-Paul, France
+# note: 20260907 Land im Namen berichtigt (vorher "Île Saint-Paul, France"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Île Saint-Paul, French Southern and Antarctic Lands
 +00:00 :Indian/Kerguelen
 0.0000 meters
 J1              0.0042  158.96
@@ -146228,7 +146240,7 @@ x 0 0
 # !latitude: 5.4220
 # region: Penang
 # admin1_quelle: Name
-George Town, Penang, Malaysia
+George Town (Selat Pulau Pinang), Malaysia
 +00:00 :Asia/Kuala_Lumpur
 0.0000 meters
 J1              0.0157  271.25
@@ -171117,7 +171129,7 @@ x 0 0
 #
 # Rothera 832A
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Antarctica
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: rothera-832a-gbr-uhslc_rq
 # date_imported: 20260322
@@ -171134,7 +171146,9 @@ x 0 0
 # !units: meters
 # !longitude: -68.133000
 # !latitude: -67.567000
-Rothera, United Kingdom
+# note: 20260907 Land im Namen berichtigt (vorher "Rothera, United Kingdom"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Rothera, Antarctica
 +00:00 :Antarctica/Rothera
 0.0000 meters
 J1              0.0124  96.65

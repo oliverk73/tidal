@@ -29433,7 +29433,7 @@ x 0 0
 #
 # ------------- End congen output -------------
 # BEGIN HOT COMMENTS
-# country: France
+# country: Spain
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-6200024
 # datum: n/a
@@ -29445,7 +29445,9 @@ x 0 0
 # !units: knots
 # !longitude: -3.176300
 # !latitude: 43.339400
-6200024, France Current
+# note: 20260907 Land im Namen berichtigt (vorher "6200024, France Current"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+6200024, Spain
 +00:00 :UTC
 0.0506 knots
 J1              0.0017  159.66

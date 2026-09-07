@@ -44164,7 +44164,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 361
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Ostrov Paramushir, Kuril Islands, Russia (no.361). M2=0.31 S2=0.08 k=0.84 dt=+50min.
@@ -44174,9 +44174,11 @@ x 0 0
 # !units: meters
 # !longitude: 145.4500
 # !latitude: 43.7333
-# region: Hokkaido
+# region: Sakhalin
 # admin1_quelle: Name
-Tomari Wan, Hokkaido, Japan
+# note: 20260907 Land im Namen berichtigt (vorher "Tomari Wan, Hokkaido, Japan"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Tomari Wan, Sakhalin, Russia
 +00:00 :Asia/Magadan
 0.9144 meters
 J1              0.0001  179.87
@@ -44546,7 +44548,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Japan
+# country: Russia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 365
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Ostrov Paramushir, Kuril Islands, Russia (no.365). M2=0.28 S2=0.07 k=0.77 dt=+25min.
@@ -44556,9 +44558,11 @@ x 0 0
 # !units: meters
 # !longitude: 146.3500
 # !latitude: 43.6333
-# region: Hokkaido
+# region: Sakhalin
 # admin1_quelle: Name
-Taraku Jima, Hokkaido, Japan
+# note: 20260907 Land im Namen berichtigt (vorher "Taraku Jima, Hokkaido, Japan"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Taraku Jima, Sakhalin, Russia
 +00:00 :Asia/Magadan
 0.8534 meters
 J1              0.0001  173.37
@@ -95925,15 +95929,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 124.4000
-# !latitude: 40.1167
+# !longitude: 124.3880
+# !latitude: 40.1160
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # province: P'yongan-bukto
 # admin1_quelle: Polygon
-Dandong [Tan-tung], North Korea
+Dandong, Liaoning, China
 +09:00 :Asia/Pyongyang
 1.4935 meters
 J1              0.0146  58.39
@@ -125756,7 +125760,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Vietnam
+# country: China
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 1561
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Beihai, China (no.1561). M2=0.23 S2=0.02 k=0.50 dt=-352min.
@@ -125766,7 +125770,9 @@ x 0 0
 # !units: meters
 # !longitude: 108.7167
 # !latitude: 18.5000
-Yinggehai, Vietnam
+# note: 20260907 Land im Namen berichtigt (vorher "Yinggehai, Vietnam"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Yinggehai, China
 +00:00 :Asia/Shanghai
 0.7010 meters
 J1              0.0099  263.85
@@ -126134,7 +126140,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Vietnam
+# country: China
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 1565
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Beihai, China (no.1565). M2=0.54 S2=0.06 k=1.17 dt=-13min.
@@ -126144,7 +126150,9 @@ x 0 0
 # !units: meters
 # !longitude: 109.1167
 # !latitude: 21.0333
-Weizhou Dao, Vietnam
+# note: 20260907 Land im Namen berichtigt (vorher "Weizhou Dao, Vietnam"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Weizhou Dao, China
 +00:00 :Asia/Shanghai
 2.4079 meters
 J1              0.0234  351.90
@@ -136144,7 +136152,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Malaysia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 1709
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Sembawang, Singapore (no.1709). M2=1.42 S2=0.27 k=1.63 dt=-330min.
@@ -136154,9 +136162,11 @@ x 0 0
 # !units: meters
 # !longitude: 101.3833
 # !latitude: 3.0000
-# state: Sumatra
+# state: Selangor
 # admin1_quelle: Name
-Port Kelang, Sumatra, Indonesia
+# note: 20260907 Land im Namen berichtigt (vorher "Port Kelang, Sumatra, Indonesia"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Port Kelang, Selangor, Malaysia
 +00:00 :Asia/Kuala_Lumpur
 2.3165 meters
 J1              0.0226  267.39
@@ -136526,7 +136536,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Malaysia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 1713
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Sembawang, Singapore (no.1713). M2=0.71 S2=0.20 k=0.81 dt=-439min.
@@ -136536,9 +136546,11 @@ x 0 0
 # !units: meters
 # !longitude: 100.6167
 # !latitude: 4.2333
-# state: Sumatra
+# state: Perak
 # admin1_quelle: Name
-Lumut, Dinding River, Sumatra, Indonesia
+# note: 20260907 Land im Namen berichtigt (vorher "Lumut, Dinding River, Sumatra, Indonesia"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Lumut, Dinding River, Perak, Malaysia
 +00:00 :Asia/Kuala_Lumpur
 1.5850 meters
 J1              0.0113  239.21
@@ -136725,13 +136737,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 100.3500
-# !latitude: 5.4167
+# !longitude: 100.3462
+# !latitude: 5.4220
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Pinang (Georgetown), Indonesia
+George Town (Selat Pulau Pinang), Malaysia
 +00:00 :Asia/Kuala_Lumpur
 1.5545 meters
 x 0 0
@@ -164500,7 +164512,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Malaysia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2047
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Darwin, Northern Territory, Australia (no.2047). M2=1.40 S2=0.25 k=0.76 dt=-67min.
@@ -164514,9 +164526,11 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.50 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# state: Borneo
+# state: Sarawak
 # admin1_quelle: Name
-Kuching, Sarawak River, Borneo, Indonesia
+# note: 20260907 Land im Namen berichtigt (vorher "Kuching, Sarawak River, Borneo, Indonesia"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Kuching, Sarawak River, Sarawak, Malaysia
 +09:30 :Asia/Kuching
 3.0175 meters
 J1              0.0304  31.86
@@ -164890,7 +164904,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Malaysia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2051
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Manila, Philippines (no.2051). M2=0.22 S2=0.08 k=1.17 dt=-0min.
@@ -164900,7 +164914,9 @@ x 0 0
 # !units: meters
 # !longitude: 113.3000
 # !latitude: 3.5167
-Kuala Similajau, Indonesia
+# note: 20260907 Land im Namen berichtigt (vorher "Kuala Similajau, Indonesia"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Kuala Similajau, Malaysia
 +00:00 :Asia/Kuching
 1.1582 meters
 J1              0.0114  210.89
@@ -165079,7 +165095,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Malaysia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2053
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Manila, Philippines (no.2053). M2=0.22 S2=0.08 k=1.17 dt=+40min.
@@ -165089,7 +165105,9 @@ x 0 0
 # !units: meters
 # !longitude: 113.7000
 # !latitude: 3.9667
-Kuala Niah, Indonesia
+# note: 20260907 Land im Namen berichtigt (vorher "Kuala Niah, Indonesia"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Kuala Niah, Malaysia
 +00:00 :Asia/Kuching
 1.1278 meters
 J1              0.0114  221.54
@@ -217031,7 +217049,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Palau
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2637
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Malakal Harbor, Palau (no.2637). M2=0.57 S2=0.09 k=0.32 dt=-6min.
@@ -217041,7 +217059,9 @@ x 0 0
 # !units: meters
 # !longitude: 134.4833
 # !latitude: 7.3500
-Koror, Indonesia
+# note: 20260907 Land im Namen berichtigt (vorher "Koror, Indonesia"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Koror, Palau
 +00:00 :Pacific/Palau
 1.0668 meters
 J1              0.0128  99.87
@@ -220859,7 +220879,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: New Zealand
+# country: Niue
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2861
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Pago Pago, American Samoa (no.2861). M2=0.35 S2=0.01 k=0.28 dt=+48min.
@@ -220869,7 +220889,9 @@ x 0 0
 # !units: meters
 # !longitude: -169.9167
 # !latitude: -19.0333
-Niue Island (N.Z.), New Zealand
+# note: 20260907 Land im Namen berichtigt (vorher "Niue Island (N.Z.), New Zealand"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Niue Island (N.Z.), Niue
 +00:00 :Pacific/Niue
 0.7315 meters
 J1              0.0028  76.54
@@ -222773,7 +222795,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Tuvalu
+# country: Fiji
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2897
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Davao, Philippines (no.2897). M2=0.52 S2=0.14 k=0.92 dt=-8min.
@@ -222783,7 +222805,9 @@ x 0 0
 # !units: meters
 # !longitude: 177.1167
 # !latitude: -12.4833
-Rotumah Island, Tuvalu
+# note: 20260907 Land im Namen berichtigt (vorher "Rotumah Island, Tuvalu"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Rotumah Island, Fiji
 +00:00 :Pacific/Fiji
 0.8839 meters
 J1              0.0064  112.96
@@ -288333,7 +288357,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: France
+# country: French Southern and Antarctic Lands
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 3949
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Durban, South Africa (no.3949). M2=0.33 S2=0.12 k=0.60 dt=-324min.
@@ -288347,7 +288371,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +2.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Amsterdam Island, France
+# note: 20260907 Land im Namen berichtigt (vorher "Amsterdam Island, France"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Amsterdam Island, French Southern and Antarctic Lands
 +00:00 :Indian/Kerguelen
 0.4877 meters
 J1              0.0024  43.94
@@ -289105,7 +289131,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Antarctica
+# country: Australia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 3959
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Vung Tau, Vietnam (no.3959). M2=0.25 S2=0.02 k=0.33 dt=-116min.
@@ -289119,7 +289145,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-Heard Island (Atlas Cove), Antarctica
+# note: 20260907 Land im Namen berichtigt (vorher "Heard Island (Atlas Cove), Antarctica"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Heard Island (Atlas Cove), Australia
 +00:00 :Etc/GMT-5
 0.7315 meters
 J1              0.0072  241.51

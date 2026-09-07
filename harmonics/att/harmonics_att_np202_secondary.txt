@@ -81116,7 +81116,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Trinidad and Tobago
+# country: Venezuela
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2318
 # note: NP202 Part II Sekundaerhafen-Transfer von Georgetown, Guyana (att 2290).
@@ -81129,9 +81129,11 @@ x 0 0
 # !units: meters
 # !longitude: -62.0833
 # !latitude: 10.6333
-# region: Diego Martin
+# region: Sucre
 # admin1_quelle: Ufer 46.1 km
-Puerto de Hierro, Trinidad and Tobago
+# note: 20260907 Land im Namen berichtigt (vorher "Puerto de Hierro, Trinidad and Tobago"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Puerto de Hierro, Venezuela
 +00:00 :America/Guyana
 0.5800 meters
 J1               0.0061  267.80
@@ -81504,7 +81506,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Venezuela
+# country: Colombia
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2385
 # note: NP202 Part II Sekundaerhafen-Transfer von Cristobal, Panama (att 2398).
@@ -81517,9 +81519,11 @@ x 0 0
 # !units: meters
 # !longitude: -72.9167
 # !latitude: 11.5500
-# state: Zulia
+# state: La Guajira
 # admin1_quelle: Ufer 65.8 km
-Riohacha, Venezuela
+# note: 20260907 Land im Namen berichtigt (vorher "Riohacha, Venezuela"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Riohacha, Colombia
 +00:00 :UTC
 0.1000 meters
 J1               0.0062  228.25
@@ -83250,7 +83254,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Nicaragua
+# country: Honduras
 # source: ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer
 # att_number: 2412
 # note: NP202 Part II Sekundaerhafen-Transfer von Port of Spain, Trinidad and Tobago (att 2321).
@@ -83265,7 +83269,9 @@ x 0 0
 # !latitude: 15.0000
 # note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Atlántico Norte".
-Cabo Gracias a Dios, Nicaragua
+# note: 20260907 Land im Namen berichtigt (vorher "Cabo Gracias a Dios, Nicaragua"),
+# note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+Cabo Gracias a Dios, Honduras
 +00:00 :America/Tegucigalpa
 0.2000 meters
 J1               0.0030    2.14
