@@ -99867,11 +99867,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 110.3833
-# !latitude: 1.5500
+# !longitude: 110.3979
+# !latitude: 1.5551
 # state: Sarawak
 # admin1_quelle: Polygon
-Pending, Malaysia
+Pending (Sungai Sarawak), Malaysia
 +08:00 :Asia/Kuching
 3.4200 meters
 x 0 0
@@ -100061,8 +100061,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 110.2833
-# !latitude: 1.4500
+# !longitude: 110.2810
+# !latitude: 1.4508
 # state: Sarawak
 # admin1_quelle: Polygon
 Batu Kitang, Malaysia
@@ -100259,7 +100259,13 @@ x 0 0
 # !latitude: 1.7500
 # state: Sarawak
 # admin1_quelle: Ufer 1.3 km
-Pulau Lakei, Malaysia
+# note: 20260909 Name "Pulau Lakei, Malaysia" -> "Pulau Lakei (Sungai Sarawak), Malaysia":
+# note: -- derselbe Pegel am Eingang des Sarawak-Flusses. Die Gezeitentafeln
+# note: -- fuehren die Eingangsstation unter dem Namen des Flusses (SHOM Nr. 540,
+# note: -- NMDIS T250), die Admiralty unter dem der Insel (NP203 5172). Die Kurven
+# note: -- stimmen auf 0.6 bis 0.9 % ueberein; flussaufwaerts waechst der
+# note: -- Unterschied auf 3.2 % (Santubong), 11.0 % (Pending), 19.0 % (Kuching).
+Pulau Lakei (Sungai Sarawak), Malaysia
 +08:00 :Asia/Kuching
 3.1000 meters
 x 0 0
@@ -100449,11 +100455,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 110.3167
-# !latitude: 1.7167
+# !longitude: 110.3171
+# !latitude: 1.7164
 # state: Sarawak
 # admin1_quelle: Polygon
-Santubong, Malaysia
+Kampung Santubong, Malaysia
 +08:00 :Asia/Kuching
 2.9000 meters
 x 0 0
@@ -100643,8 +100649,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 110.1667
-# !latitude: 1.7833
+# !longitude: 110.1670
+# !latitude: 1.7831
 # state: Sarawak
 # admin1_quelle: Ufer 9.0 km
 Pulau Satang Besar, Malaysia

@@ -164524,8 +164524,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 110.3500
-# !latitude: 1.5667
+# !longitude: 110.3469
+# !latitude: 1.5607
 # note: 20260903 Phasen um +1.50 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.50 nach dem Buch)
@@ -164534,7 +164534,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260907 Land im Namen berichtigt (vorher "Kuching, Sarawak River, Borneo, Indonesia"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
-Kuching, Sarawak River, Sarawak, Malaysia
+Kuching (Sungai Sarawak), Malaysia
 +09:30 :Asia/Kuching
 3.0175 meters
 J1              0.0304  31.86
@@ -164713,7 +164713,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
+# country: Malaysia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2049
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Darwin, Northern Territory, Australia (no.2049). M2=1.24 S2=0.26 k=0.67 dt=-112min.
@@ -164727,9 +164727,16 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.50 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# state: Borneo
+# state: Sarawak
 # admin1_quelle: Name
-Pulau Lakei, Borneo, Indonesia
+# note: 20260909 Name "Pulau Lakei, Borneo, Indonesia" -> "Pulau Lakei (Sungai Sarawak), Malaysia":
+# note: -- derselbe Pegel am Eingang des Sarawak-Flusses. Die Gezeitentafeln
+# note: -- fuehren die Eingangsstation unter dem Namen des Flusses (SHOM Nr. 540,
+# note: -- NMDIS T250), die Admiralty unter dem der Insel (NP203 5172). Die Kurven
+# note: -- stimmen auf 0.6 bis 0.9 % ueberein; flussaufwaerts waechst der
+# note: -- Unterschied auf 3.2 % (Santubong), 11.0 % (Pending), 19.0 % (Kuching).
+# note: -- Ausserdem Land berichtigt: Sarawak ist Malaysia (Sarawak).
+Pulau Lakei (Sungai Sarawak), Malaysia
 +09:30 :Asia/Kuching
 3.1090 meters
 J1              0.0270  20.04
