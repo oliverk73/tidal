@@ -105,6 +105,29 @@ def ueberlappung(a, b):
     return max(einfach, treffer / len(lang))
 
 
+
+def keine_dublette():
+    """-> Menge der Namenspaare, die Oliver als VERSCHIEDENE Pegel bestaetigt hat.
+
+    Ohne dieses Gegenstueck zum Handbeleg taucht jede abgelehnte Paarung
+    in der naechsten Vorschlagsliste wieder auf, und dieselbe
+    Entscheidung waere jedes Mal neu zu treffen. Die Liste steht in
+    harmonics/help/keine_dublette.csv und haelt neben den Namen den
+    Grund fest -- IJmuiden Zuidelijk Havenhoofd gegen IJmuiden
+    buitenhaven, Hoek van Holland Maeslantkering gegen Scheurhaven,
+    Brentwood Bay gegen Tod Inlet: nah beieinander, aehnliche Kurve, und
+    doch zwei Pegel.
+    """
+    pfad = os.path.join(da.HELP, 'keine_dublette.csv')
+    if not os.path.exists(pfad):
+        return set()
+    out = set()
+    for r in csv.DictReader(open(pfad, encoding='utf-8')):
+        a, b = (r.get('name_a') or '').strip(), (r.get('name_b') or '').strip()
+        if a and b:
+            out.add(frozenset((a, b)))
+    return out
+
 def main(argv):
     recs = [r for r in load_records()
             if r['lat'] is not None and r['lon'] is not None and not r['current']]
@@ -132,6 +155,7 @@ def main(argv):
         wirksam.add((r['datei'], r['name']))
 
     alt = bisherige()
+    abgelehnt = keine_dublette()
     zeilen = []
     for _name, menge, meta in echt(recs):
         if meta['beleg'] is not None:
@@ -142,6 +166,8 @@ def main(argv):
         satz = {r['name']: r for r in menge}
         for i in range(len(namen)):
             for j in range(i + 1, len(namen)):
+                if frozenset((namen[i], namen[j])) in abgelehnt:
+                    continue
                 a, b = satz[namen[i]], satz[namen[j]]
                 d = km(a, b)
                 v, gu = zeitversatz(a, b)
