@@ -17436,7 +17436,9 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # state: Western Australia
 # admin1_quelle: Name
-Bantam, Cocos Islands, Western Australia, Australia
+# note: 20260909 Name "Bantam, Cocos Islands, Western Australia, Australia" -> "Port Refuge, Cocos Islands, Western Australia, Australia":
+# note: -- Bantam liegt 0.85 km von Port Refuge, Kurve 1.4 % -- derselbe Pegel.
+Port Refuge, Cocos Islands, Western Australia, Australia
 +06:30 :Indian/Cocos
 0.9246 meters
 J1              0.0091  268.11
@@ -99409,7 +99411,9 @@ x 0 0
 # !latitude: 27.0939
 # region: Tokyo
 # admin1_quelle: Name
-Chichijima, Tokyo, Japan
+# note: 20260909 Name "Chichijima, Tokyo, Japan" -> "Chichijima (Futami Ko), Tokyo, Japan":
+# note: -- Name vereinheitlicht: derselbe Pegel im Hafen Futami Ko.
+Chichijima (Futami Ko), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.6800 meters
 J1              0.0087  208.67

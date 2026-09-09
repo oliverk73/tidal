@@ -1,7 +1,7 @@
 fingerprint,file,name,lat,lon,provenance,orig_name,orig_lat,orig_lon,moved_m,first_seen
 0868c620f8b50b8e718306ab13a31beb,harmonics/att/harmonics_att_np202.txt,"Ostrov Kotelny, Russia",75.3667,137.1667,manual,Ostrov Kotelny (NP202 930) Tide,,,,14fdab51 2026-06-17
 1289d38537401c1739ca16a18be8f483,harmonics/att/harmonics_att_np202.txt,"Dikson (Bukhta Dikson), Krasnoyarsk Krai, Russia",73.5,80.4167,manual,Bukhta Dikson (NP202 985) Tide,,,,14fdab51 2026-06-17
-1b9c99047bbf85516a8a61e68a335c4f,harmonics/att/harmonics_att_np202.txt,"Güiria, Venezuela",10.6,-62.25,manual,"Puerto de Hierro, Venezuela (NP202 2318) Tide",,,,14fdab51 2026-06-17
+1b9c99047bbf85516a8a61e68a335c4f,harmonics/att/harmonics_att_np202.txt,"Güiria, Venezuela",10.5678,-62.2909,manual,"Puerto de Hierro, Venezuela (NP202 2318) Tide",10.6,-62.25,5727,14fdab51 2026-06-17
 24bd2eb98cdea5d74dbec92471373950,harmonics/att/harmonics_att_np202.txt,"Pitlekaj, Russia",67.05,-173.8833,manual,Pitlekaj (NP202 951) Tide,,,,14fdab51 2026-06-17
 2724d6e0cb526479779d7a119553b179,harmonics/att/harmonics_att_np202.txt,"Plymouth, Tobago, Trinidad and Tobago",11.2198,-60.7791,manual,"Plymouth, Tobago, Trinidad and Tobago (NP202 2339) Tide",11.2167,-60.7833,573,14fdab51 2026-06-17
 2b4c50736f36914e5a64855c8df1052d,harmonics/att/harmonics_att_np202.txt,Haugesund,59.4145,5.2646,manual,Haugesund (NP202 1271) Tide,59.4167,5.2667,272,14fdab51 2026-06-17
@@ -454,7 +454,7 @@ f2bcb4a5ebe6a2d6b2bf6156879d6c6e,harmonics/att/harmonics_att_np202_secondary.txt
 f2ecec29dd31fdd6698e2e45b80a96e9,harmonics/att/harmonics_att_np202_secondary.txt,"Hidra (Rasvag), Norway",58.2131,6.5811,source,,,,,ad4600a5 2026-08-18
 f34ca7e449f9ed10805856a569ad38bd,harmonics/att/harmonics_att_np202_secondary.txt,"Berlevåg, Norway",70.8589,29.0995,source,,,,,ad4600a5 2026-08-18
 f3a856d5e65a43aa67bfdea5a3e146c1,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Velikiy, Russia",69.0833,33.2833,source,,,,,ad4600a5 2026-08-18
-f3d13a1a14212188cebe2f7c911565f3,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto El Roque, Venezuela",11.9333,-66.6667,source,,,,,ad4600a5 2026-08-18
+f3d13a1a14212188cebe2f7c911565f3,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto El Roque, Venezuela",11.9447,-66.6748,manual,,11.9333,-66.6667,1544,ad4600a5 2026-08-18
 f4e641a343eaa6c8527562074cc54e2c,harmonics/att/harmonics_att_np202_secondary.txt,"Flåm (Aurlandsfjorden), Norway",60.863,7.117,source,,,,,ad4600a5 2026-08-18
 f51d38b09d307185ba320f38befb140c,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Pon'goma Navolok, Russia",65.3333,34.5333,source,,,,,ad4600a5 2026-08-18
 f581e2f970da9ffa8fbb58ad7d41347c,harmonics/att/harmonics_att_np202_secondary.txt,"Stamneshella, Norway",60.6641,5.7469,source,,,,,ad4600a5 2026-08-18
@@ -673,7 +673,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 03004e5c42ad44cf589363dbf70bd177,harmonics/att/harmonics_att_np203_scs.txt,"Tepeleu, Indonesia",0.3333,128.7667,source,,,,,c0ab599a 2026-08-03
 031ccf290e1d23accdfeb562aef4fa9c,harmonics/att/harmonics_att_np203_scs.txt,"Linapakan Island, Philippines",11.4667,119.7667,source,,,,,c0ab599a 2026-08-03
 034c408b9f5de14f37686aa2289485ce,harmonics/att/harmonics_att_np203_scs.txt,"Kajang, Indonesia",-5.2833,120.3833,source,,,,,c0ab599a 2026-08-03
-0384ca900a343a1ca68806b471ee2d16,harmonics/att/harmonics_att_np203_scs.txt,"Cap Ba Ke, Vietnam",10.5,107.5,source,,,,,c0ab599a 2026-08-03
+0384ca900a343a1ca68806b471ee2d16,harmonics/att/harmonics_att_np203_scs.txt,"Hai dang Ba Kiem, Vietnam",10.5,107.5,manual,"Cap Ba Ke, Vietnam",,,,c0ab599a 2026-08-03
 03a9bfc710ae5ea5fe3bdf45b961669c,harmonics/att/harmonics_att_np203_scs.txt,"Pelabuhan Kijang, Indonesia",0.85,104.6167,source,,,,,c0ab599a 2026-08-03
 03dc0252aae20113fd41015c86d0dfc2,harmonics/att/harmonics_att_np203_scs.txt,"Sangkapura Bay, Indonesia",-5.8333,112.6333,source,,,,,c0ab599a 2026-08-03
 040a10e42ed845b1e549dd6d0da4d8b8,harmonics/att/harmonics_att_np203_scs.txt,"Kampungbaru, Indonesia",-3.4167,116.0167,source,,,,,c0ab599a 2026-08-03
@@ -683,13 +683,13 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 05770e8a5fb7a6ef67c12df39e080d3e,harmonics/att/harmonics_att_np203_scs.txt,"Kenyana, Malaysia",2.7833,112.2,source,,,,,c0ab599a 2026-08-03
 05e5a6f7b7d0de92049aa0ff0e9ec59e,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Lamala, Indonesia",-0.9,123.15,source,,,,,c0ab599a 2026-08-03
 072d3c8e216fecb019fe92f526d2f612,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Kaja (Hollandia Baai), Indonesia",-2.5333,140.7333,source,,,,,c0ab599a 2026-08-03
-0752c1f04b12f196900c739baa00908a,harmonics/att/harmonics_att_np203_scs.txt,"Cap Padaran, Vietnam",11.3667,109.0167,source,,,,,c0ab599a 2026-08-03
+0752c1f04b12f196900c739baa00908a,harmonics/att/harmonics_att_np203_scs.txt,"Mui Dinh, Vietnam",11.367,109.0204,manual,"Cap Padaran, Vietnam",11.3667,109.0167,405,c0ab599a 2026-08-03
 07532eeb616f02b1a44149097e74e417,harmonics/att/harmonics_att_np203_scs.txt,"Asmiro, Indonesia",2.0,127.8,source,,,,,c0ab599a 2026-08-03
 07604ebe9ebed9f0ef2a15fc30744d45,harmonics/att/harmonics_att_np203_scs.txt,"Tanjung Dewa, Indonesia",-0.6167,117.2833,source,,,,,c0ab599a 2026-08-03
 079e43b4209fd6f5c70c8544b1b1c19d,harmonics/att/harmonics_att_np203_scs.txt,"Basbas Channel, Philippines",5.35,120.2167,source,,,,,c0ab599a 2026-08-03
 07dc6d46df8282fea2ddd3a975a983f1,harmonics/att/harmonics_att_np203_scs.txt,"Pegatan, Indonesia",-3.2833,113.35,source,,,,,c0ab599a 2026-08-03
 08419f71df05b717660302065a046b15,harmonics/att/harmonics_att_np203_scs.txt,"Pasir Panjang, Singapore",1.2929,103.7612,manual,,1.3,103.7667,999,c0ab599a 2026-08-03
-0857dd6d7ad3fa5298f9001a29d91727,harmonics/att/harmonics_att_np203_scs.txt,"Pointe de Ke Ga, Vietnam",10.7,107.9833,source,,,,,c0ab599a 2026-08-03
+0857dd6d7ad3fa5298f9001a29d91727,harmonics/att/harmonics_att_np203_scs.txt,"Mui Ke Ga, Vietnam",10.6997,107.993,manual,"Pointe de Ke Ga, Vietnam",10.7,107.9833,1060,c0ab599a 2026-08-03
 087f2ebaed8dcc8525053131107295ef,harmonics/att/harmonics_att_np203_scs.txt,"Langkuas, Indonesia",-2.5333,107.6167,source,,,,,c0ab599a 2026-08-03
 088ba2296bbd9f83a49e4e756440b2b3,harmonics/att/harmonics_att_np203_scs.txt,"Kolaka, Indonesia",-4.05,121.6,source,,,,,c0ab599a 2026-08-03
 08b98c2a49217324fb0d2ec8383f072f,harmonics/att/harmonics_att_np203_scs.txt,"Bima, Indonesia",-8.45,118.7167,source,,,,,c0ab599a 2026-08-03
@@ -747,7 +747,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 1c966be780e161f17e7330194aeba016,harmonics/att/harmonics_att_np203_scs.txt,"Palompon, Philippines",11.05,124.3833,source,,,,,c0ab599a 2026-08-03
 1ce00ae035c6fa813364ba8b32617d03,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Geser, Indonesia",-3.8833,130.9,source,,,,,c0ab599a 2026-08-03
 1d0130121e311684e50f849df88b5315,harmonics/att/harmonics_att_np203_scs.txt,"Tiger Point (Sundarban Sanctuary), Bangladesh",21.85,89.8333,manual,"Tiger Point, Bangladesh",,,,c0ab599a 2026-08-03
-1e09fe9171fe4f3cb15a5a34bd6d6054,harmonics/att/harmonics_att_np203_scs.txt,"Santubong, Malaysia",1.7167,110.3167,source,,,,,c0ab599a 2026-08-03
+1e09fe9171fe4f3cb15a5a34bd6d6054,harmonics/att/harmonics_att_np203_scs.txt,"Kampung Santubong, Malaysia",1.7164,110.3171,manual,"Santubong, Malaysia",1.7167,110.3167,56,c0ab599a 2026-08-03
 1ec490336f27e5e07f6524d87c9184fd,harmonics/att/harmonics_att_np203_scs.txt,"Karang Jamuang, Indonesia",-6.9333,112.7333,source,,,,,c0ab599a 2026-08-03
 1f4fad96c3bc6e46df783d6c68225c66,harmonics/att/harmonics_att_np203_scs.txt,"Bengkalis, Indonesia",1.4667,102.1,source,,,,,c0ab599a 2026-08-03
 1f8722671aa2d1acbf2615231c16fe75,harmonics/att/harmonics_att_np203_scs.txt,"Menalu, Indonesia",3.5167,125.6167,source,,,,,c0ab599a 2026-08-03
@@ -771,7 +771,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 265ce181d955b64d48974c696f94743f,harmonics/att/harmonics_att_np203_scs.txt,"Sandwip Island, Bangladesh",22.4842,91.4347,manual,,22.5,91.4167,2551,c0ab599a 2026-08-03
 267dd5b705401465c2edf15177ce8ec3,harmonics/att/harmonics_att_np203_scs.txt,"Gunungsitoli, Indonesia",1.3,97.6,source,,,,,c0ab599a 2026-08-03
 271ddfee313b9b1c0538e3532f68d1ce,harmonics/att/harmonics_att_np203_scs.txt,"Demta Baai, Indonesia",-2.35,140.2333,source,,,,,c0ab599a 2026-08-03
-27cfcbd7854e11722b8c5cf13996e873,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Satang Besar, Malaysia",1.7833,110.1667,source,,,,,c0ab599a 2026-08-03
+27cfcbd7854e11722b8c5cf13996e873,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Satang Besar, Malaysia",1.7831,110.167,manual,,1.7833,110.1667,40,c0ab599a 2026-08-03
 28089ba83f093b9272deefb1a8a87252,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Sambu, Indonesia",1.1667,103.9,source,,,,,c0ab599a 2026-08-03
 283806f1a43283563c0e9c78d912f85b,harmonics/att/harmonics_att_np203_scs.txt,"Ha Tien, Vietnam",10.3667,104.4667,source,,,,,c0ab599a 2026-08-03
 28592abd4dd54e466a8e958d81440634,harmonics/att/harmonics_att_np203_scs.txt,"Aparri, Philippines",18.35,121.6333,source,,,,,c0ab599a 2026-08-03
@@ -781,7 +781,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 295fdf76f2bde497ed854a8d679df8db,harmonics/att/harmonics_att_np203_scs.txt,"Christmas Island, Australia",-10.4173,105.6668,manual,,-10.4,105.7167,5787,c0ab599a 2026-08-03
 29762c6ba5364b1c5921f07ae83c204b,harmonics/att/harmonics_att_np203_scs.txt,"Khlong Thung Maphrao, Phang Nga, Thailand",8.5984,98.2405,manual,"Klong Thung Maphrao, Thailand",8.6,98.25,1060,c0ab599a 2026-08-03
 2992f9ad1f63814e89882a82c1f9f97a,harmonics/att/harmonics_att_np203_scs.txt,"Dassalan Island, Philippines",6.7333,121.4667,source,,,,,c0ab599a 2026-08-03
-2a02e46e6b7265a873d23537663c83bd,harmonics/att/harmonics_att_np203_scs.txt,"Batu Kitang, Malaysia",1.45,110.2833,source,,,,,c0ab599a 2026-08-03
+2a02e46e6b7265a873d23537663c83bd,harmonics/att/harmonics_att_np203_scs.txt,"Batu Kitang, Malaysia",1.4508,110.281,manual,,1.45,110.2833,271,c0ab599a 2026-08-03
 2a339e1c48cc7f5c694af6efd82397f4,harmonics/att/harmonics_att_np203_scs.txt,"Ile Bach Long Vi, Vietnam",20.1333,107.7167,source,,,,,c0ab599a 2026-08-03
 2a8a7a4ebfe02f14e97afa3fa41e0408,harmonics/att/harmonics_att_np203_scs.txt,"Sabang, Indonesia",5.9,95.3333,source,,,,,c0ab599a 2026-08-03
 2a9a2eb2de2864336bbf70e8501944f0,harmonics/att/harmonics_att_np203_scs.txt,"Iligan, Philippines",8.2333,124.2333,source,,,,,c0ab599a 2026-08-03
@@ -867,7 +867,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 45179f88f812e603494380c545f53229,harmonics/att/harmonics_att_np203_scs.txt,"Hinunangan Bay, Philippines",10.4,125.2,source,,,,,c0ab599a 2026-08-03
 4528ce26a0b441f12bb7d9777a3b80b3,harmonics/att/harmonics_att_np203_scs.txt,"Pankol, Philippines",10.8833,119.4167,source,,,,,c0ab599a 2026-08-03
 4548853162df3d81b1c8507513e9841c,harmonics/att/harmonics_att_np203_scs.txt,"Pakalangan, Malaysia",4.35,118.5667,source,,,,,c0ab599a 2026-08-03
-459f7927ed325cf7e03c3960380b5053,harmonics/att/harmonics_att_np203_scs.txt,"Rajang, Malaysia",2.15,111.25,source,,,,,c0ab599a 2026-08-03
+459f7927ed325cf7e03c3960380b5053,harmonics/att/harmonics_att_np203_scs.txt,"Rajang, Malaysia",2.1493,111.2538,manual,,2.15,111.25,429,c0ab599a 2026-08-03
 4647cb364db9221fb318a28d3f93faec,harmonics/att/harmonics_att_np203_scs.txt,"Pelabuhan Kuah (Langkawi), Malaysia",6.3,99.85,manual,"Pelabuhan Kuah, Malaysia",,,,c0ab599a 2026-08-03
 46851c3d2a9abd6ed72156737cd82f9c,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Baleara, Indonesia",-5.1667,121.8,source,,,,,c0ab599a 2026-08-03
 46ded0f06f17740655538c199d31d26e,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Tonggo, Indonesia",-2.7833,100.2333,source,,,,,c0ab599a 2026-08-03
@@ -919,7 +919,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 57ac73581dd9ad9da44d0d9d5b91627e,harmonics/att/harmonics_att_np203_scs.txt,"Tanjung Cikoneng (Fourth Point), Indonesia",-6.0667,105.8833,source,,,,,c0ab599a 2026-08-03
 57bae503554d0cb9825a02f536d97b9f,harmonics/att/harmonics_att_np203_scs.txt,"Chendering, Malaysia",5.265,103.187,manual,,5.2667,103.1833,451,c0ab599a 2026-08-03
 584110a21b4d05ff11523f658431b41a,harmonics/att/harmonics_att_np203_scs.txt,"Mios Wundi, Indonesia",-0.6333,135.5,source,,,,,c0ab599a 2026-08-03
-587634f7e2366028c21f3953c6c39a83,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Lakei, Malaysia",1.75,110.5,source,,,,,c0ab599a 2026-08-03
+587634f7e2366028c21f3953c6c39a83,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Lakei (Sungai Sarawak), Malaysia",1.75,110.5,manual,"Pulau Lakei, Malaysia",,,,c0ab599a 2026-08-03
 58894b7426b57d9401b980f4794d0368,harmonics/att/harmonics_att_np203_scs.txt,"Yangon (Rangoon), Myanmar",16.7667,96.1667,manual,"Rangoon, Myanmar",,,,c0ab599a 2026-08-03
 59fb0282c252313f3f266f46fd48442a,harmonics/att/harmonics_att_np203_scs.txt,"Talisei, Indonesia",1.8333,125.0667,source,,,,,c0ab599a 2026-08-03
 5a1fc08fef2dba061293d4a0f0686d2d,harmonics/att/harmonics_att_np203_scs.txt,"Can Gio, Vietnam",10.4182,106.9716,manual,"Can-Gio, Vietnam",10.4167,106.9833,1290,c0ab599a 2026-08-03
@@ -933,7 +933,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 5d060300c29cef68aef37ca866fa7cd7,harmonics/att/harmonics_att_np203_scs.txt,"Labuan Bilik, Indonesia",2.5167,100.1667,source,,,,,c0ab599a 2026-08-03
 5d131c6bf3d7c07d91e85df2cb5e5d61,harmonics/att/harmonics_att_np203_scs.txt,"Port Blair, Andaman and Nicobar, India",11.6833,92.7667,manual,"Port Blair, India",,,,c0ab599a 2026-08-03
 5d5a053e630f55256777f6e9c8eec776,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Vesuvius, Indonesia",-1.9,125.4,source,,,,,c0ab599a 2026-08-03
-5ee5ecfe994917d75c1595ace6476f34,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Cecir de Mer, Vietnam",10.5,108.95,source,,,,,c0ab599a 2026-08-03
+5ee5ecfe994917d75c1595ace6476f34,harmonics/att/harmonics_att_np203_scs.txt,"Phu Quy, Vietnam",10.5,108.95,manual,"Pulau Cecir de Mer, Vietnam",,,,c0ab599a 2026-08-03
 5f02ce0c48e186213f24f64a49404b45,harmonics/att/harmonics_att_np203_scs.txt,"Hilaban Island, Philippines",12.0333,125.5667,source,,,,,c0ab599a 2026-08-03
 5f4216974268b0816b2c4f8114e1ce43,harmonics/att/harmonics_att_np203_scs.txt,"Gantung, Indonesia",-2.9667,108.1667,source,,,,,c0ab599a 2026-08-03
 5f467a93ebc648e5cc37500f08ae4d31,harmonics/att/harmonics_att_np203_scs.txt,"Ru, Indonesia",-2.9833,107.5,source,,,,,c0ab599a 2026-08-03
@@ -966,7 +966,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 64b4e7e3e1faf8911bb9c6a60e1e1484,harmonics/att/harmonics_att_np203_scs.txt,"Pasar Lundu, Malaysia",1.6703,109.8538,manual,,1.6667,109.85,582,c0ab599a 2026-08-03
 657f580d6a96ecc79e1d94fa5228b1bc,harmonics/att/harmonics_att_np203_scs.txt,"Kuala Balingian, Malaysia",3.0167,112.6167,source,,,,,c0ab599a 2026-08-03
 65c43f6f06f2094759ab45b5114d3b8e,harmonics/att/harmonics_att_np203_scs.txt,"Ambunten, Indonesia",-6.8833,113.7333,source,,,,,c0ab599a 2026-08-03
-6644dc8498285e732bac99d1c4914928,harmonics/att/harmonics_att_np203_scs.txt,"Triso Darat, Malaysia",1.5167,111.0,source,,,,,c0ab599a 2026-08-03
+6644dc8498285e732bac99d1c4914928,harmonics/att/harmonics_att_np203_scs.txt,"Triso Darat (Batang Lupar), Malaysia",1.5233,111.0025,manual,"Triso Darat, Malaysia",1.5167,111.0,785,c0ab599a 2026-08-03
 6645f282f7d5d8087b994a0801a056fe,harmonics/att/harmonics_att_np203_scs.txt,"Merauke, Indonesia",-8.4833,140.3833,source,,,,,c0ab599a 2026-08-03
 664c1aff1c0bd7a39b9952e4557dac73,harmonics/att/harmonics_att_np203_scs.txt,"Bandong, Indonesia",0.5333,103.3,source,,,,,c0ab599a 2026-08-03
 66985ad37848a3925666ccfcea01aa00,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Selandu (near), Indonesia",-3.0667,108.2667,source,,,,,c0ab599a 2026-08-03
@@ -1025,7 +1025,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 77e01b9874b6ea2210db2f82837079e7,harmonics/att/harmonics_att_np203_scs.txt,"Sembilan Channel, Indonesia",4.1333,98.25,source,,,,,c0ab599a 2026-08-03
 78601e1fa33360dce626db34c01f8fd8,harmonics/att/harmonics_att_np203_scs.txt,"Ko Koi Noi, Satun, Thailand",6.5841,99.8346,manual,"Ko Koi Noi, Thailand",6.5833,99.8333,169,c0ab599a 2026-08-03
 799399faa6ed4382668b492d4beed09a,harmonics/att/harmonics_att_np203_scs.txt,"Lingkobu, Indonesia",-2.0667,121.55,source,,,,,c0ab599a 2026-08-03
-79c0e15ef7b9ca3a23d371fccd541081,harmonics/att/harmonics_att_np203_scs.txt,"Fan Thiet, Vietnam",10.9167,108.1,source,,,,,c0ab599a 2026-08-03
+79c0e15ef7b9ca3a23d371fccd541081,harmonics/att/harmonics_att_np203_scs.txt,"Phan Thiet, Vietnam",10.9187,108.1058,manual,"Fan Thiet, Vietnam",10.9167,108.1,671,c0ab599a 2026-08-03
 79fdccd450f4f0792bd83e6af6c418b7,harmonics/att/harmonics_att_np203_scs.txt,"Air Bangis, Indonesia",0.2,99.3833,source,,,,,c0ab599a 2026-08-03
 7a00bb83f8408013390842f6ed63d57d,harmonics/att/harmonics_att_np203_scs.txt,"Patani, Indonesia",0.25,128.75,source,,,,,c0ab599a 2026-08-03
 7a63a16e4ff0e47c743c8df58477fc66,harmonics/att/harmonics_att_np203_scs.txt,"Pawè-gyi Kyun, Myanmar",11.419,98.5062,manual,"Pawei Kyun, Myanmar",11.4167,98.5,723,c0ab599a 2026-08-03
@@ -1048,7 +1048,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 7d430549d4f8481fcab96d284aa7b7b2,harmonics/att/harmonics_att_np203_scs.txt,"Bulan Island, Philippines",6.15,121.8333,source,,,,,c0ab599a 2026-08-03
 7dc67654d2021c20d279df7c3e87687d,harmonics/att/harmonics_att_np203_scs.txt,"Tanjong Sapo, Brunei",5.0,115.1333,source,,,,,c0ab599a 2026-08-03
 7de5d58efc3fa0b5f9fd7dd79863eab9,harmonics/att/harmonics_att_np203_scs.txt,"Kalianget, Indonesia",-7.05,113.9167,source,,,,,c0ab599a 2026-08-03
-7ea78561347962118835dd00198a49c2,harmonics/att/harmonics_att_np203_scs.txt,"Tanjung Mani, Malaysia",2.15,111.3667,source,,,,,c0ab599a 2026-08-03
+7ea78561347962118835dd00198a49c2,harmonics/att/harmonics_att_np203_scs.txt,"Tanjung Manis, Malaysia",2.1504,111.3387,manual,"Tanjung Mani, Malaysia",2.15,111.3667,3112,c0ab599a 2026-08-03
 7ecf537ff182431ede85d31ee8a6ad76,harmonics/att/harmonics_att_np203_scs.txt,"Nasipit Harbour, Philippines",8.9833,125.3333,source,,,,,c0ab599a 2026-08-03
 7f246a4c4345c51e4bbab82b8aca1872,harmonics/att/harmonics_att_np203_scs.txt,"Sibu, Malaysia",2.2833,111.8167,source,,,,,c0ab599a 2026-08-03
 7f559d33292a3a821959c4be8fe09532,harmonics/att/harmonics_att_np203_scs.txt,"Berasbasah, Indonesia",0.0667,117.55,source,,,,,c0ab599a 2026-08-03
@@ -1067,7 +1067,7 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 857d74a4627682de65aa0d19b63ee6c2,harmonics/att/harmonics_att_np203_scs.txt,"Kyaukkayan (Padaw Aw), Myanmar",12.6156,98.396,manual,"Padaw-aw, Myanmar",12.6167,98.4167,2249,c0ab599a 2026-08-03
 86403d674eb686768fb83494ef28205a,harmonics/att/harmonics_att_np203_scs.txt,"Sungai Barito (Outer Bar), Indonesia",-3.5667,114.4833,source,,,,,c0ab599a 2026-08-03
 86ce3718eff3248b19e7972b3edabd28,harmonics/att/harmonics_att_np203_scs.txt,"Sandakan, Malaysia",5.8333,118.1167,source,,,,,c0ab599a 2026-08-03
-8701b673e9872de66f9d2fd2870a2974,harmonics/att/harmonics_att_np203_scs.txt,"Pointe de Lagan, Vietnam",11.1667,108.7,source,,,,,c0ab599a 2026-08-03
+8701b673e9872de66f9d2fd2870a2974,harmonics/att/harmonics_att_np203_scs.txt,"Mui La Gan, Vietnam",11.1652,108.7036,manual,"Pointe de Lagan, Vietnam",11.1667,108.7,427,c0ab599a 2026-08-03
 872deeade5ab317ebaceb040b67ee426,harmonics/att/harmonics_att_np203_scs.txt,"Aguasa Bay, Philippines",13.2833,122.5167,source,,,,,c0ab599a 2026-08-03
 874ba50d0e0549203c8d7f5a7410645c,harmonics/att/harmonics_att_np203_scs.txt,"Langsa Bay, Indonesia",4.55,98.0333,source,,,,,c0ab599a 2026-08-03
 876b4c9e7631c83aec42a91aa5865d3f,harmonics/att/harmonics_att_np203_scs.txt,"Tapul Island, Philippines",5.7,120.8833,source,,,,,c0ab599a 2026-08-03
@@ -1180,7 +1180,7 @@ a7dd4418af92d026ae04d7781e49869c,harmonics/att/harmonics_att_np203_scs.txt,"Pula
 a86310fbed9af0fc8a952fe28cdff750,harmonics/att/harmonics_att_np203_scs.txt,"Port Barrera, Philippines",12.5333,123.3833,source,,,,,c0ab599a 2026-08-03
 a8c1ee52d69d24acb962653f010d7b0a,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Ewa (Langkawi), Malaysia",6.4333,99.7667,manual,"Teluk Ewa, Malaysia",,,,c0ab599a 2026-08-03
 a91c950258d129df14b7ff211ac842e5,harmonics/att/harmonics_att_np203_scs.txt,"Lumut (Sungai Dinding), Malaysia",4.2381,100.613,manual,"Lumut Pier, Malaysia",4.2333,100.6167,673,c0ab599a 2026-08-03
-a97bc1af38ec597c2d248c91de9671fd,harmonics/att/harmonics_att_np203_scs.txt,"Sarikei, Malaysia",2.1333,111.5167,source,,,,,c0ab599a 2026-08-03
+a97bc1af38ec597c2d248c91de9671fd,harmonics/att/harmonics_att_np203_scs.txt,"Sarikei, Malaysia",2.1328,111.5181,manual,,2.1333,111.5167,165,c0ab599a 2026-08-03
 a97c677a13b5c9849f27598831b78bdd,harmonics/att/harmonics_att_np203_scs.txt,"Dofa, Indonesia",-1.8068,125.3575,manual,,-1.8167,125.4,4850,c0ab599a 2026-08-03
 a9bf6cc1fbc5a183635c85781bf29433,harmonics/att/harmonics_att_np203_scs.txt,"Muara, Brunei",5.0268,115.0754,manual,,5.0333,115.0667,1205,c0ab599a 2026-08-03
 aa1ef2a89a269f26087aeb4d3ab69c2b,harmonics/att/harmonics_att_np203_scs.txt,"Johor Port, Malaysia",1.4333,103.9,source,,,,,c0ab599a 2026-08-03
@@ -1222,7 +1222,6 @@ b5c30e4b671fb486a0603ce2b9bce2c3,harmonics/att/harmonics_att_np203_scs.txt,"Port
 b5f1d401a15c520dc82f3c303c3d0761,harmonics/att/harmonics_att_np203_scs.txt,"Karabra River, Indonesia",-1.5,131.6833,source,,,,,c0ab599a 2026-08-03
 b6a7d16ec362c7e4272c436d46cb3c73,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Pari, Indonesia",-5.85,106.6167,source,,,,,c0ab599a 2026-08-03
 b6df97b83628dace961b23167e29bb66,harmonics/att/harmonics_att_np203_scs.txt,"Saonek, Indonesia",-0.45,130.7667,source,,,,,c0ab599a 2026-08-03
-b7064899787841440413fd683d7ec0b3,harmonics/att/harmonics_att_np203_scs.txt,"Port Refuge, Western Australia, Australia",-12.1167,96.9,manual,"Port Refuge, Australia",,,,c0ab599a 2026-08-03
 b750e12f4232f2e885d3a99947dc9292,harmonics/att/harmonics_att_np203_scs.txt,"Pantai Wonreli, Indonesia",-8.1,127.15,source,,,,,c0ab599a 2026-08-03
 b75a0d751212d0d136fc068c94f96b9a,harmonics/att/harmonics_att_np203_scs.txt,"Sibolga, Indonesia",1.75,98.7667,source,,,,,c0ab599a 2026-08-03
 b7d1a45f511ddda6b62df093ab1fa901,harmonics/att/harmonics_att_np203_scs.txt,"Lang Suan, Chumphon, Thailand",9.95,99.1667,manual,"Lang Suan, Thailand",,,,c0ab599a 2026-08-03
@@ -1286,12 +1285,12 @@ cbca517aff2c3437f773054940eb09ae,harmonics/att/harmonics_att_np203_scs.txt,"Rita
 cc6326abe925be9c76c3b559e1d7b404,harmonics/att/harmonics_att_np203_scs.txt,"Baybay, Philippines",10.6833,124.8,source,,,,,c0ab599a 2026-08-03
 cc63595a012261f20db32886371b7d16,harmonics/att/harmonics_att_np203_scs.txt,"Tanjungpinang, Indonesia",0.9167,104.4333,source,,,,,c0ab599a 2026-08-03
 ccb3647839cc20c7676ad85f7e521e43,harmonics/att/harmonics_att_np203_scs.txt,"Sha Pak Wan, Vietnam",20.9667,107.7333,source,,,,,c0ab599a 2026-08-03
-ccfe409e7f2e232a465fe721075c0c94,harmonics/att/harmonics_att_np203_scs.txt,"Pending, Malaysia",1.55,110.3833,source,,,,,c0ab599a 2026-08-03
+ccfe409e7f2e232a465fe721075c0c94,harmonics/att/harmonics_att_np203_scs.txt,"Pending (Sungai Sarawak), Malaysia",1.5551,110.3979,manual,"Pending, Malaysia",1.55,110.3833,1719,c0ab599a 2026-08-03
 cd93e66087cae1147c94403673df672d,harmonics/att/harmonics_att_np203_scs.txt,"Himamaylan, Philippines",10.1,122.8667,source,,,,,c0ab599a 2026-08-03
 cd978a1961c82517096a55955677e0a8,harmonics/att/harmonics_att_np203_scs.txt,"Donggala, Indonesia",-0.6667,119.75,source,,,,,c0ab599a 2026-08-03
 ce141bf574b7adec22402450c9e73647,harmonics/att/harmonics_att_np203_scs.txt,"Thuan An, Vietnam",16.5833,107.6167,source,,,,,c0ab599a 2026-08-03
 ce3cd106daf43cc24387fd8518b5d92b,harmonics/att/harmonics_att_np203_scs.txt,"Kampung Sokkan, Indonesia",2.1833,117.6833,source,,,,,c0ab599a 2026-08-03
-ce838aa597907fd79deaaad28fe46ed8,harmonics/att/harmonics_att_np203_scs.txt,"Pusa, Malaysia",1.6161,111.2869,manual,,1.6167,111.2833,406,c0ab599a 2026-08-03
+ce838aa597907fd79deaaad28fe46ed8,harmonics/att/harmonics_att_np203_scs.txt,"Pusa (Batang Layar), Malaysia",1.6161,111.2869,manual,"Pusa, Malaysia",1.6167,111.2833,406,c0ab599a 2026-08-03
 cf6f508a5ae41a588904b3c7e9a351f8,harmonics/att/harmonics_att_np203_scs.txt,"Iloilo, Philippines",10.6667,122.5833,source,,,,,c0ab599a 2026-08-03
 d07ce1f200384933a717c36d1624bdb8,harmonics/att/harmonics_att_np203_scs.txt,"Tiga, Malaysia",5.7,115.6667,source,,,,,c0ab599a 2026-08-03
 d07e04eb2c2d0ed37eb6084247804851,harmonics/att/harmonics_att_np203_scs.txt,"Linteh, Indonesia",-8.6667,119.8,source,,,,,c0ab599a 2026-08-03
@@ -1313,7 +1312,7 @@ d694dae7a2aee2c8a5b458beacda5a35,harmonics/att/harmonics_att_np203_scs.txt,"Bent
 d700a96ee9e3d0f5d996a7fb6cd162ef,harmonics/att/harmonics_att_np203_scs.txt,"Sungai Manggar, Indonesia",-2.8333,108.3,source,,,,,c0ab599a 2026-08-03
 d712c9859db95025d5fad4b7247d8ff8,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Bara, Indonesia",-3.0,126.2167,source,,,,,c0ab599a 2026-08-03
 d792b7e9e27a8156aa1d039caed12807,harmonics/att/harmonics_att_np203_scs.txt,"Pak Phun, Nakhon Si Thammarat, Thailand",8.5677,100.0052,manual,"Pak Phun, Thailand",8.5333,100.0,3868,c0ab599a 2026-08-03
-d793ed9ca5a31c00aa897bf6ae27bee0,harmonics/att/harmonics_att_np203_scs.txt,"Kabong, Malaysia",1.8,111.1167,source,,,,,c0ab599a 2026-08-03
+d793ed9ca5a31c00aa897bf6ae27bee0,harmonics/att/harmonics_att_np203_scs.txt,"Kabong (Sungai Krian), Malaysia",1.7976,111.1216,manual,"Kabong, Malaysia",1.8,111.1167,606,c0ab599a 2026-08-03
 d7c3c8891772c6c8259ac9a369c8bfbf,harmonics/att/harmonics_att_np203_scs.txt,"Tanjung Berhala, Malaysia",4.2496,103.4693,manual,,4.25,103.4667,292,c0ab599a 2026-08-03
 d7df47c547a58c494fe2942ad90e6e9b,harmonics/att/harmonics_att_np203_scs.txt,"Impul Passage, Indonesia",3.0667,105.6667,source,,,,,c0ab599a 2026-08-03
 d81e9ac86c58ea0ee06ece3e730c08cb,harmonics/att/harmonics_att_np203_scs.txt,"Santa Rita Island, Philippines",11.45,124.95,source,,,,,c0ab599a 2026-08-03
@@ -1401,27 +1400,25 @@ f95584c7496d4d75d77edbadb06704f1,harmonics/att/harmonics_att_np203_scs.txt,"Pula
 f9e5f6695c28a1d92bc4589bb12df345,harmonics/att/harmonics_att_np203_scs.txt,"Liloan, Philippines",10.15,125.1167,source,,,,,c0ab599a 2026-08-03
 f9eaed700c4b396e30ce4fdfa9993793,harmonics/att/harmonics_att_np203_scs.txt,"Quang Khe, Vietnam",17.7,106.4667,source,,,,,c0ab599a 2026-08-03
 fa17a1ff6163a6d7faf8ac427c4d85a3,harmonics/att/harmonics_att_np203_scs.txt,"Pulau-Pulau Nangka, Indonesia",-2.3833,105.7667,source,,,,,c0ab599a 2026-08-03
-fb6851838c33b439176323226264c47f,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Plan (Pelabuhan Bintulu), Malaysia",3.2667,113.0667,source,,,,,c0ab599a 2026-08-03
 fba297d698510f679926c5b78d29387a,harmonics/att/harmonics_att_np203_scs.txt,"Saint Martin's Island, Bangladesh",20.6324,92.3294,manual,"St. Martin's Island, Bangladesh",20.6167,92.3167,2190,c0ab599a 2026-08-03
 fbb87809203fd5f078d6a88c29eb6b1f,harmonics/att/harmonics_att_np203_scs.txt,"Korim, Indonesia",-0.9167,136.0333,source,,,,,c0ab599a 2026-08-03
 fc705f62704572289f1a8202a7da7a34,harmonics/att/harmonics_att_np203_scs.txt,"Strait Island, Andaman and Nicobar, India",12.2167,92.9167,manual,"Strait Island, India",,,,c0ab599a 2026-08-03
 fcaab1c0145b90291528e4b9bea967a9,harmonics/att/harmonics_att_np203_scs.txt,"Mangarin, Philippines",12.35,121.1,source,,,,,c0ab599a 2026-08-03
 fcad2529f65572bda7709c0e58dfdc11,harmonics/att/harmonics_att_np203_scs.txt,"Muara Biwan, Indonesia",2.9167,117.7,source,,,,,c0ab599a 2026-08-03
-fd0496a8920336744d9adf16243c964c,harmonics/att/harmonics_att_np203_scs.txt,"Qui Nhon, Vietnam",13.75,109.2167,source,,,,,c0ab599a 2026-08-03
 fd4ad231d7a2dbaafefc0513163f72e2,harmonics/att/harmonics_att_np203_scs.txt,"Balut Island, Philippines",5.4167,125.4333,source,,,,,c0ab599a 2026-08-03
 fd771fb0afdcbc75105dadcd1d4ab45e,harmonics/att/harmonics_att_np203_scs.txt,"Bagatao Island, Philippines",12.8333,123.8,source,,,,,c0ab599a 2026-08-03
 fdaea2fb7fc0345ae3e9a61acc84b7e5,harmonics/att/harmonics_att_np203_scs.txt,"Malu, Indonesia",2.3,108.9,source,,,,,c0ab599a 2026-08-03
-febffdac6e775b0fac730fbd797c2e85,harmonics/att/harmonics_att_np203_scs.txt,"Simanggang, Malaysia",1.2391,111.4629,manual,,1.2333,111.45,1572,c0ab599a 2026-08-03
+febffdac6e775b0fac730fbd797c2e85,harmonics/att/harmonics_att_np203_scs.txt,"Simanggang (Batang Lupar), Malaysia",1.2391,111.4629,manual,"Simanggang, Malaysia",1.2333,111.45,1572,c0ab599a 2026-08-03
 ff45adaca9d189c3a5123d2d84cbc8a5,harmonics/att/harmonics_att_np203_scs.txt,"San Fernando, Philippines",16.6167,120.3,source,,,,,c0ab599a 2026-08-03
 ff75384b964f29d0a85cc86da4610a43,harmonics/att/harmonics_att_np203_scs.txt,"Port Lebak, Philippines",6.5333,124.05,source,,,,,c0ab599a 2026-08-03
 00caaefcb262c4ad0c3b4e3e5e6cc30a,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Kampung Sepenah, Malaysia",2.35,111.5,source,,,,,f8cd136a 2026-08-04
 0c6993a97e2fcf5b00bba97349484210,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Tanjung Surat, Malaysia",1.4659,104.0403,manual,,1.4667,104.0333,783,f8cd136a 2026-08-04
-0e59e845498c91b535f6b510eadf130e,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Simunjan, Malaysia",1.4,110.75,source,,,,,f8cd136a 2026-08-04
+0e59e845498c91b535f6b510eadf130e,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Simunjan (Batang Sadong), Malaysia",1.3923,110.7487,manual,"Simunjan, Malaysia",1.4,110.75,868,f8cd136a 2026-08-04
 12723f1dddbbd2e309f86afa5c5a2226,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Joymoni (Pasur River), Bangladesh",22.3527,89.6344,manual,"Jayman Reach, Bangladesh",22.35,89.6333,321,f8cd136a 2026-08-04
 151804cc135f522c4ba3b449b617fec1,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Tanjung Bunga, Malaysia",1.3887,103.647,manual,,1.3833,103.65,687,f8cd136a 2026-08-04
 1a7758be11fbfd690fccf8d8defb6bce,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Ho Chi Minh City (Sai Gon), Vietnam",10.7667,106.7,source,,,,,f8cd136a 2026-08-04
 2f50366f4a4907d4979931e54fc8221d,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Pulau Katak, Malaysia",4.1563,100.6195,manual,,4.15,100.6167,766,f8cd136a 2026-08-04
-311f74001d2f51b69b9d336605ed817e,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Ulu Kuap, Malaysia",1.4667,110.3667,source,,,,,f8cd136a 2026-08-04
+311f74001d2f51b69b9d336605ed817e,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Ulu Kuap (Sungai Kuap), Malaysia",1.4679,110.3651,manual,"Ulu Kuap, Malaysia",1.4667,110.3667,222,f8cd136a 2026-08-04
 3461c6c3d995d9501e3c01b56d467be4,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Goh Sukorn (Pulau Babi), Trang, Thailand",7.1146,99.5832,manual,"Goh Sukorn (Pulau Babi), Thailand",7.1,99.5833,1623,f8cd136a 2026-08-04
 3a4754c670f7602068eb436f4794000a,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Paly Island, Philippines",10.6667,119.7,source,,,,,f8cd136a 2026-08-04
 438be67e7c0eecf75ac15b5329e2e08a,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Johor Bahru (West Side of Causeway), Malaysia",1.4539,103.766,manual,,1.45,103.7667,441,f8cd136a 2026-08-04
@@ -1432,7 +1429,7 @@ ff75384b964f29d0a85cc86da4610a43,harmonics/att/harmonics_att_np203_scs.txt,"Port
 520b73d2ad465ac2e6fcbe2ce23b327a,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Teluk Sengat, Malaysia",1.5598,104.0292,manual,,1.5667,104.0333,892,f8cd136a 2026-08-04
 52daeeafb884c4ee0812513a85ae45f6,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Tambisan Island, Malaysia",5.45,119.1167,source,,,,,f8cd136a 2026-08-04
 5542e92758fa72853b4bab422308ef6e,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Tanjung Piai, Malaysia",1.2672,103.5119,manual,,1.2667,103.5167,536,f8cd136a 2026-08-04
-56d0be0868a97b3853e9a36b5e38055e,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Kuala Sadong, Malaysia",1.55,110.7667,source,,,,,f8cd136a 2026-08-04
+56d0be0868a97b3853e9a36b5e38055e,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Sebangan (Kuala Sadong), Malaysia",1.55,110.7667,manual,"Kuala Sadong, Malaysia",,,,f8cd136a 2026-08-04
 5773f4c5801af26fd9e2dfec7c649a83,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Cua Soirap, Vietnam",10.3833,106.8,source,,,,,f8cd136a 2026-08-04
 71716b91b2845ecea0e7eda2901625cc,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Tanjung Pengelih, Malaysia",1.3709,104.0886,manual,,1.3667,104.0833,752,f8cd136a 2026-08-04
 75e3bdb0f09740ca90616f5138c19d22,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Chalna (Pasur River), Bangladesh",22.6002,89.5221,manual,"Chalna Reach, Bangladesh",22.5667,89.55,4699,f8cd136a 2026-08-04
@@ -1455,7 +1452,7 @@ e5a62ac2a07c8c72bc202a0643879167,harmonics/att/harmonics_att_np203_scs_secondary
 e6d55259d24ac762c72e5116eea4660d,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Tanjung Bekakong, Malaysia",2.3667,111.3833,source,,,,,f8cd136a 2026-08-04
 e7e155232b6d696a8389b7a39845231e,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Tanjung Kamis, Malaysia",2.35,111.6,source,,,,,f8cd136a 2026-08-04
 e88d0397afdd8f8362ce7252f92ec4e4,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Myin Kwa Aw (Horseshoe Bay), Myanmar",13.55,98.1333,manual,"Myinkwa-aw, Myanmar",,,,f8cd136a 2026-08-04
-f6d35e1eabea018eef650e547733103a,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Sungai Ensengie, Malaysia",1.4167,110.65,source,,,,,f8cd136a 2026-08-04
+f6d35e1eabea018eef650e547733103a,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Kampung Ensengie (Batang Sadong), Malaysia",1.4176,110.6416,manual,"Sungai Ensengie, Malaysia",1.4167,110.65,939,f8cd136a 2026-08-04
 feee94bed22f436e2a01b3bb4f9af782,harmonics/att/harmonics_att_np203_scs_secondary.txt,"Putri Narrows, Malaysia",1.4461,103.6984,manual,,1.4333,103.7167,2483,f8cd136a 2026-08-04
 000ffdbe4bcd84fff79cf48f7c05abc3,harmonics/att/harmonics_att_np203_secondary.txt,"Abu al Abyad, United Arab Emirates",24.25,53.817,source,,,,,bb8d04df 2026-07-28
 011c031e7efe678107d6f86854e2999a,harmonics/att/harmonics_att_np203_secondary.txt,"Nakhiloo, Iran",27.8426,51.4533,manual,"Nakhilu, Iran",27.817,51.467,3149,004d889e 2026-08-01
@@ -2748,7 +2745,7 @@ ffa5fe2e22e8b9d3e8d3d8e0033badfa,harmonics/att/harmonics_att_np208_secondary.txt
 922472f987bdce9d062e63e1f045a87c,harmonics/classic/harmonics-1997-05-25_mod.txt,"Okha, Gujarat, India",22.4688,69.0798,manual,"Okha, India",22.4667,69.0833,429,87be3e0e 2026-03-25
 92754d0f5e2dbb51c1cbc147a096d367,harmonics/classic/harmonics-1997-05-25_mod.txt,"Posorja, Ecuador",-2.6999,-80.2448,manual,,-2.7,-80.25,578,87be3e0e 2026-03-25
 9326008603f671d4cef44f3203f3c4ef,harmonics/classic/harmonics-1997-05-25_mod.txt,"Mocímboa da Praia, Mozambique",-11.3365,40.362,manual,"Mocimboa da Praia, Moçambique",-11.3333,40.3667,624,87be3e0e 2026-03-25
-9377e820f3e82a56ab26c2eb1d9f6604,harmonics/classic/harmonics-1997-05-25_mod.txt,"Sungai Sarawak, Malaysia",1.75,110.5,source,,,,,87be3e0e 2026-03-25
+9377e820f3e82a56ab26c2eb1d9f6604,harmonics/classic/harmonics-1997-05-25_mod.txt,"Pulau Lakei (Sungai Sarawak), Malaysia",1.75,110.5,manual,"Sungai Sarawak, Malaysia",,,,87be3e0e 2026-03-25
 93cceefbab07af9d5d44201a21b07a09,harmonics/classic/harmonics-1997-05-25_mod.txt,"Campeche City, Campeche, México",19.8645,-90.5281,manual,,18.6667,-90.5333,133190,87be3e0e 2026-03-25
 94343d27b9c57bf4402a0fdcb1837f97,harmonics/classic/harmonics-1997-05-25_mod.txt,"Doha (Ad Dawhah), Qatar",25.2945,51.5313,manual,"Ad Dawhah, Qatar",25.3,51.5167,1590,87be3e0e 2026-03-25
 944f33b37285366919375a6a30e540f6,harmonics/classic/harmonics-1997-05-25_mod.txt,"Mokp'o, South Korea",34.7833,126.3833,source,,,,,87be3e0e 2026-03-25
@@ -2781,7 +2778,7 @@ a5ba08c4c874672b231b440639646f72,harmonics/classic/harmonics-1997-05-25_mod.txt,
 a5df9d4b3a5546c9f8df9695b6c26aff,harmonics/classic/harmonics-1997-05-25_mod.txt,"Montevideo (Base Naval Cerro), Uruguay",-34.9034,-56.2563,manual,"Montevideo, Uruguay",-34.9167,-56.2167,3902,87be3e0e 2026-03-25
 a620e1b20af4c18f848240126fa46b4c,harmonics/classic/harmonics-1997-05-25_mod.txt,"Da Nang, Vietnam",16.1167,108.2167,manual,"Da Nang, Viet Nam",,,,87be3e0e 2026-03-25
 a629b58f08250956d5fc576936f747ee,harmonics/classic/harmonics-1997-05-25_mod.txt,"Shantou (Han River), Guangdong, China",23.3339,116.7486,manual,"Swatow, China",23.3333,116.75,158,87be3e0e 2026-03-25
-a6dcd34a1729233f6418c7052ceb0993,harmonics/classic/harmonics-1997-05-25_mod.txt,"Kuching, Malaysia",1.5607,110.3469,manual,,1.5667,110.35,751,87be3e0e 2026-03-25
+a6dcd34a1729233f6418c7052ceb0993,harmonics/classic/harmonics-1997-05-25_mod.txt,"Kuching (Sungai Sarawak), Malaysia",1.5607,110.3469,manual,"Kuching, Malaysia",1.5667,110.35,751,87be3e0e 2026-03-25
 a7e9d703ef2921eb759147fefe8576a8,harmonics/classic/harmonics-1997-05-25_mod.txt,"Chise P'o, South Korea",34.8333,128.7167,source,,,,,87be3e0e 2026-03-25
 a8db4622f8832ebb38b36228127596a2,harmonics/classic/harmonics-1997-05-25_mod.txt,"Vila Real de Santo António, Portugal",37.1928,-7.4128,manual,"Vila Real de Santo Antonio, Portugal",37.1833,-7.4,1550,87be3e0e 2026-03-25
 a9d7c7d0952bc0391f863b9dfc028def,harmonics/classic/harmonics-1997-05-25_mod.txt,"Toamasina (Tamatave), Madagascar",-18.16,49.4267,manual,"Tamatave, Madagascar",-18.15,49.4333,1313,87be3e0e 2026-03-25
@@ -8766,7 +8763,6 @@ a982a405f15c389f8ec8a8e034ecfa25,harmonics/classic/harmonics-pierre-lavergne-v10
 abd07061e24c81123f5d1a077261559b,harmonics/classic/harmonics-pierre-lavergne-v10_mod.txt,"Tréguier, France",48.787,-3.2222,manual,,48.7868,-3.2224,27,87be3e0e 2026-03-25
 b15988ef8ad39d299fa90fc1e42a7d91,harmonics/classic/harmonics-pierre-lavergne-v10_mod.txt,"Courseulles-sur-Mer (Large), France",49.4,-0.4667,manual,,49.3364,-0.4576,7103,87be3e0e 2026-03-25
 b5317d9bd08e782282ec6b4ea537a65f,harmonics/classic/harmonics-pierre-lavergne-v10_mod.txt,"Port-Béni, France",48.8471,-3.1723,source,,,,,87be3e0e 2026-03-25
-b63b35e61ac8a2e63a84da4beb3b3e3c,harmonics/classic/harmonics-pierre-lavergne-v10_mod.txt,"Portland, England, United Kingdom",50.5682,-2.4357,source,,,,,87be3e0e 2026-03-25
 b6fb447232497f8a1f6ead13be6799c0,harmonics/classic/harmonics-pierre-lavergne-v10_mod.txt,"Le Guilvinec, France",47.7931,-4.2812,source,,,,,87be3e0e 2026-03-25
 c0b2741e32039161e102b5d4cdd8370b,harmonics/classic/harmonics-pierre-lavergne-v10_mod.txt,"Bastia, France",42.6998,9.4541,source,,,,,87be3e0e 2026-03-25
 c374c398478dea9da14ac2d5af069f6c,harmonics/classic/harmonics-pierre-lavergne-v10_mod.txt,"Vannes, France",47.6384,-2.7619,source,,,,,87be3e0e 2026-03-25
@@ -8981,7 +8977,7 @@ fffc50901e871574fc328bd64e72f70d,harmonics/classic/harmonics_puertos_spain.txt,"
 328f2b5fe29da64c873434b6a9d19880,harmonics/noaa/harmonics_noaa_amtt.txt,"General Daniel Cerri, Buenos Aires, Argentina",-38.75,-62.4,source,,,,,0ac4263d 2026-07-02
 334b9cf0d288fb7ba2b26f2837656128,harmonics/noaa/harmonics_noaa_amtt.txt,"Bahía Swallow, Chile",-53.5,-72.7833,source,,,,,7a7ed8e0 2026-07-01
 33835c45e218a04afcddc9b135043c94,harmonics/noaa/harmonics_noaa_amtt.txt,"San Carlos, Baja California Sur, Mexico",24.7833,-112.1167,manual,"San Carlos, Mexico",,,,f1526a65 2026-09-03
-33cc1cf6a330a97fd6af9f7dd4721a6c,harmonics/noaa/harmonics_noaa_amtt.txt,"Macuro, Trinidad and Tobago",10.65,-61.9333,source,,,,,7a7ed8e0 2026-07-01
+33cc1cf6a330a97fd6af9f7dd4721a6c,harmonics/noaa/harmonics_noaa_amtt.txt,"Macuro, Venezuela",10.65,-61.9333,manual,"Macuro, Trinidad and Tobago",,,,7a7ed8e0 2026-07-01
 348e7f3dc1997b9e27d251d2d3271e05,harmonics/noaa/harmonics_noaa_amtt.txt,"Usof Bay, Alaska",53.5167,-166.8,source,,,,,0ac4263d 2026-07-02
 3494b44949db5baf27db6913a6412b02,harmonics/noaa/harmonics_noaa_amtt.txt,"Roca Remolinos, Canal Chacao, Chile",-41.8,-73.5333,source,,,,,0ac4263d 2026-07-02
 355d7e31fa827d8b8c8655cceb69b7aa,harmonics/noaa/harmonics_noaa_amtt.txt,"Bahía Camarones, Chubut, Argentina",-44.9,-65.6,source,,,,,0ac4263d 2026-07-02
@@ -9269,7 +9265,7 @@ aca4a921d7f6bb2f867a58aba9dd1f99,harmonics/noaa/harmonics_noaa_amtt.txt,"Cumurux
 ae66be9298649eb1c24dff3c9b20c286,harmonics/noaa/harmonics_noaa_amtt.txt,"Bay of Waterfalls #, Alaska",51.65,-176.8333,source,,,,,0ac4263d 2026-07-02
 aee28da9c98f31a96b9686ce0898d69b,harmonics/noaa/harmonics_noaa_amtt.txt,"Tebenkof Bay, Kuiu Island, Alaska",56.4167,-134.1333,source,,,,,0d21bbcb 2026-07-19
 aef199307fa724d7cce14919018b6ec6,harmonics/noaa/harmonics_noaa_amtt.txt,"Rabbit Island, 5 miles south of #, Louisiana",29.4167,-91.6,source,,,,,0ac4263d 2026-07-02
-afb6c0d210e272750b0cc664e339cf57,harmonics/noaa/harmonics_noaa_amtt.txt,"Puerto de Hierro, Venezuela",10.6167,-62.0833,manual,"Puerto de Hierro, Trinidad and Tobago",,,,0ac4263d 2026-07-02
+afb6c0d210e272750b0cc664e339cf57,harmonics/noaa/harmonics_noaa_amtt.txt,"Puerto de Hierro, Venezuela",10.6322,-62.0901,manual,"Puerto de Hierro, Trinidad and Tobago",10.6167,-62.0833,1877,0ac4263d 2026-07-02
 afe38d7f537aafa0532b761a81bf02d6,harmonics/noaa/harmonics_noaa_amtt.txt,"Liscomb Harbour, Nova Scotia, Canada",45.0,-62.0333,manual,"Liscomb Harbour, Canada",,,,0ac4263d 2026-07-02
 b16c635fec09652454d65148c719fd09,harmonics/noaa/harmonics_noaa_amtt.txt,"Point Thatcher, Alaska",57.4167,-134.85,source,,,,,0ac4263d 2026-07-02
 b1ff4503ed3460234d240f498f6e720b,harmonics/noaa/harmonics_noaa_amtt.txt,"Port Canaveral, British Columbia, Canada",53.5833,-130.15,manual,"Port Canaveral, Canada",,,,0d21bbcb 2026-07-19
@@ -9639,7 +9635,7 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 0f355aca54169804424633dc90351e1e,harmonics/noaa/harmonics_noaa_cptt.txt,"Airo Wan, Russia",46.8167,143.4167,ambiguous,,,,,
 0f5684ba52fa3ddcbee06126a3f01a91,harmonics/noaa/harmonics_noaa_cptt.txt,"Mc Donald Bay, Antarctica",-66.55,93.0167,source,,,,,7a7ed8e0 2026-07-01
 0fae81a820cdbd7c4c4b281f38b5092b,harmonics/noaa/harmonics_noaa_cptt.txt,"Maroantsetra, Madagascar",-15.4392,49.739,manual,,-15.45,49.8167,8414,7a7ed8e0 2026-07-01
-10127e7665b35bba66bbfd6b2fdfeb85,harmonics/noaa/harmonics_noaa_cptt.txt,"Mui Ba Kiem, Tien Giang, Vietnam",10.5,107.5,source,,,,,7a7ed8e0 2026-07-01
+10127e7665b35bba66bbfd6b2fdfeb85,harmonics/noaa/harmonics_noaa_cptt.txt,"Hai dang Ba Kiem, Vietnam",10.5,107.5,manual,"Mui Ba Kiem, Tien Giang, Vietnam",,,,7a7ed8e0 2026-07-01
 108c87e8258513a45afcc7cecfd9edd8,harmonics/noaa/harmonics_noaa_cptt.txt,"Kotomari Zaki, Russia",50.8333,156.5,source,,,,,86f3ae4f 2026-07-02
 109b81727c361b6043c668fce913f240,harmonics/noaa/harmonics_noaa_cptt.txt,"Starokadomskogo Island, Russia",78.2333,105.9667,source,,,,,3f8410d9 2026-09-03
 10cb7700d4bd95ad90206db3ffc9a503,harmonics/noaa/harmonics_noaa_cptt.txt,"Golygina River entrance, Russia",51.8833,156.5167,source,,,,,3f8410d9 2026-09-03
@@ -9739,7 +9735,6 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 2235fc99e08ea2618404829d24c14113,harmonics/noaa/harmonics_noaa_cptt.txt,"Shizhen (Zhongwai Yu), Fujian, China",24.55,118.5,source,,,,,7a7ed8e0 2026-07-01
 226507498127c7116823ae05edaadb9b,harmonics/noaa/harmonics_noaa_cptt.txt,"Galle, Sri Lanka",6.032,80.2189,manual,,6.0333,80.2167,283,86f3ae4f 2026-07-02
 226b0fe3a7dac0c5ba051ed938854a10,harmonics/noaa/harmonics_noaa_cptt.txt,"Abuyog, Leyte, Philippines",10.75,125.0167,source,,,,,7a7ed8e0 2026-07-01
-228077bcc304af12dd199e11e66f6827,harmonics/noaa/harmonics_noaa_cptt.txt,"Himeji (Shikama), Hyogo, Japan",34.7833,134.6833,manual,"Shikama Ko, Hyogo, Japan",,,,86f3ae4f 2026-07-02
 228e0ddcd2fd1545ee950d0bfa64ea87,harmonics/noaa/harmonics_noaa_cptt.txt,"Pamukan Bay, Borneo, Indonesia",-2.6,116.5,source,,,,,7a7ed8e0 2026-07-01
 229ebdd85bcbf467dc22a5e8eeb3b141,harmonics/noaa/harmonics_noaa_cptt.txt,"Cat Ba, Isle de la Cat Ba, Vietnam",20.7167,107.05,source,,,,,7a7ed8e0 2026-07-01
 230ccd7b831b706d4b6727d8a1a040f3,harmonics/noaa/harmonics_noaa_cptt.txt,"Cangouac Point, Sibuyan Island, Romblon, Philippines",12.5,122.5,source,,,,,7a7ed8e0 2026-07-01
@@ -9747,7 +9742,7 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 234c15be5836c333a87de3620f61eee1,harmonics/noaa/harmonics_noaa_cptt.txt,"Pronchishchevoi Bay, Russia",75.5667,113.3667,source,,,,,3f8410d9 2026-09-03
 235d3e8669b59a408343a0c8cecc6253,harmonics/noaa/harmonics_noaa_cptt.txt,"Kampung Baru, Laut Strait, Borneo, Indonesia",-3.4167,116.0167,source,,,,,7a7ed8e0 2026-07-01
 2371cfab3c4c80ff7cf6bbdeab08eca9,harmonics/noaa/harmonics_noaa_cptt.txt,"Sohutan Bay, Bucas Grande Island, Surigao del Sur, Philippines",9.6,125.9167,source,,,,,7a7ed8e0 2026-07-01
-237c3b938deaaea70ea72091a8d0b636,harmonics/noaa/harmonics_noaa_cptt.txt,"Mui Ke Ga, Tien Giang, Vietnam",10.7,107.9833,source,,,,,7a7ed8e0 2026-07-01
+237c3b938deaaea70ea72091a8d0b636,harmonics/noaa/harmonics_noaa_cptt.txt,"Mui Ke Ga, Vietnam",10.6997,107.993,manual,"Mui Ke Ga, Tien Giang, Vietnam",10.7,107.9833,1060,7a7ed8e0 2026-07-01
 238a1b607acf78fbabaebf77de70bb40,harmonics/noaa/harmonics_noaa_cptt.txt,"Yongjong-do, Yom-ha, South Korea",37.5,126.5667,source,,,,,86f3ae4f 2026-07-02
 238e2a6d00c25b25164736cf78b0f4a3,harmonics/noaa/harmonics_noaa_cptt.txt,"Cape Shmidta, Russia",68.9167,-179.4833,source,,,,,e69e89f9 2026-09-03
 23a372cf163f4cb409870124e6b887ca,harmonics/noaa/harmonics_noaa_cptt.txt,"Port Cataingan, Masbate, Philippines",12.0,124.0,source,,,,,7a7ed8e0 2026-07-01
@@ -9859,10 +9854,9 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 387e1f50d57009a01a3bafa831840d4b,harmonics/noaa/harmonics_noaa_cptt.txt,"Aru Bank, Borneo, Indonesia",-2.25,116.6667,source,,,,,7a7ed8e0 2026-07-01
 3899e36fc774957cd52460398824de56,harmonics/noaa/harmonics_noaa_cptt.txt,"Morzhovaya Bay, Russia",53.2333,159.95,source,,,,,3f8410d9 2026-09-03
 38a7eb92d57f32625a86a077fc0d1544,harmonics/noaa/harmonics_noaa_cptt.txt,"Haiphong, Cua Cam, Vietnam",20.8667,106.6667,source,,,,,86f3ae4f 2026-07-02
-38c39ac895a6d5c777fc5b0638e7dd8f,harmonics/noaa/harmonics_noaa_cptt.txt,"Melbourne (Williamstown), Victoria, Australia",-37.8667,144.9167,source,,,,,86f3ae4f 2026-07-02
 38d9f340c8c56fb4e047be86efb305ab,harmonics/noaa/harmonics_noaa_cptt.txt,"Northwest Bay, Linapacan Island, Palawan, Philippines",11.4667,119.7667,source,,,,,7a7ed8e0 2026-07-01
 390486fda7873fbc53da4d9279f5b044,harmonics/noaa/harmonics_noaa_cptt.txt,"Dahanu, Maharashtra, India",19.9725,72.7167,manual,,19.9667,72.7167,645,86f3ae4f 2026-07-02
-3919ec6e93ea30fefb27d17ade315a0f,harmonics/noaa/harmonics_noaa_cptt.txt,"Phan Thiet, Tien Giang, Vietnam",10.9167,108.1,source,,,,,3f8410d9 2026-09-03
+3919ec6e93ea30fefb27d17ade315a0f,harmonics/noaa/harmonics_noaa_cptt.txt,"Phan Thiet, Vietnam",10.9187,108.1058,manual,"Phan Thiet, Tien Giang, Vietnam",10.9167,108.1,671,3f8410d9 2026-09-03
 3940814c199f8a9897e65ef2f566d856,harmonics/noaa/harmonics_noaa_cptt.txt,"Bar, Liaoning, China",40.5333,122.0667,source,,,,,7a7ed8e0 2026-07-01
 396c89a65384b0589eabbc21d0d8cef2,harmonics/noaa/harmonics_noaa_cptt.txt,"Chikanzi (Hongkan Wan), Guangdong, China",20.3167,110.4,source,,,,,7a7ed8e0 2026-07-01
 39a4c6eca1804a020a9ac5c3f9ac2b2c,harmonics/noaa/harmonics_noaa_cptt.txt,"Nakagawara Ura, Kagoshima, Japan",31.85,129.85,manual,"Nakagawara Ura <18>, Kagoshima, Japan",,,,86f3ae4f 2026-07-02
@@ -9911,7 +9905,7 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 421276d1297c35389632d096bdff5c32,harmonics/noaa/harmonics_noaa_cptt.txt,"Miang Besar, Sangkulirang Bay, Borneo, Indonesia",0.75,118.0,source,,,,,7a7ed8e0 2026-07-01
 4247e62914c892e03dcb34bc23e0a3f6,harmonics/noaa/harmonics_noaa_cptt.txt,"P'yongyang, North Korea",39.0167,125.75,source,,,,,7a7ed8e0 2026-07-01
 4254769c8c83c421d86507b025d77981,harmonics/noaa/harmonics_noaa_cptt.txt,"Restoration Island, Queensland, Australia",-12.6167,143.4667,source,,,,,86f3ae4f 2026-07-02
-42580e1a42123ca2a01013178b97ec6e,harmonics/noaa/harmonics_noaa_cptt.txt,"Mui Dinh, Vietnam",11.3667,109.0167,source,,,,,3f8410d9 2026-09-03
+42580e1a42123ca2a01013178b97ec6e,harmonics/noaa/harmonics_noaa_cptt.txt,"Mui Dinh, Vietnam",11.367,109.0204,manual,,11.3667,109.0167,405,3f8410d9 2026-09-03
 42715d50174113b617a6e5c0123fcbcb,harmonics/noaa/harmonics_noaa_cptt.txt,"Calbayog, Samar, Philippines",12.0667,124.5833,source,,,,,7a7ed8e0 2026-07-01
 42778cc91deaf5991fee8d6db3ab57b7,harmonics/noaa/harmonics_noaa_cptt.txt,"Tori Shima, Tokyo, Japan",30.4833,140.3167,source,,,,,86f3ae4f 2026-07-02
 428b31ec28520f83f0da69c39ba22a15,harmonics/noaa/harmonics_noaa_cptt.txt,"Kazamoto Ura, Iki Shima, Nagasaki, Japan",33.85,129.6833,source,,,,,e4304b6d 2026-07-19
@@ -9980,11 +9974,11 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 501d0ad7cd8f54456670ed7ac696584a,harmonics/noaa/harmonics_noaa_cptt.txt,"Learmonth, Exmouth Gulf, Western Australia, Australia",-22.1833,114.0833,source,,,,,86f3ae4f 2026-07-02
 504071e0aaedc113b802c69a70a23fb2,harmonics/noaa/harmonics_noaa_cptt.txt,"Mohang-ni, South Korea",36.7833,126.1333,source,,,,,7a7ed8e0 2026-07-01
 507f79ae83d14d4eef5daa3fe852bd07,harmonics/noaa/harmonics_noaa_cptt.txt,"Syndaska Bay entrance, Russia",73.2333,108.15,source,,,,,3f8410d9 2026-09-03
-50c1e9539d288c9510d9b97e935846a8,harmonics/noaa/harmonics_noaa_cptt.txt,"Kuching, Sarawak River, Sarawak, Malaysia",1.5667,110.35,manual,"Kuching, Sarawak River, Borneo, Indonesia",,,,3f8410d9 2026-09-03
+50c1e9539d288c9510d9b97e935846a8,harmonics/noaa/harmonics_noaa_cptt.txt,"Kuching (Sungai Sarawak), Malaysia",1.5607,110.3469,manual,"Kuching, Sarawak River, Borneo, Indonesia",1.5667,110.35,751,3f8410d9 2026-09-03
 50f82429991a377d46224115a11fe194,harmonics/noaa/harmonics_noaa_cptt.txt,"Ngapali (Andrew Bay), Myanmar",18.365,94.339,source,,,,,3f8410d9 2026-09-03
 512b0b90ffe42e438a0bc3207bf746fa,harmonics/noaa/harmonics_noaa_cptt.txt,"Gansena (Hansen) Island, Russia",77.5167,102.5,source,,,,,3f8410d9 2026-09-03
 512cf60d69059a969b067648dfb65ead,harmonics/noaa/harmonics_noaa_cptt.txt,"Ujelang Atoll, Marshall Islands",9.7667,160.9667,source,,,,,86f3ae4f 2026-07-02
-512d306fcf12cf45190726e247d4dc83,harmonics/noaa/harmonics_noaa_cptt.txt,"Pulau Lakei, Borneo, Indonesia",1.75,110.5,source,,,,,3f8410d9 2026-09-03
+512d306fcf12cf45190726e247d4dc83,harmonics/noaa/harmonics_noaa_cptt.txt,"Pulau Lakei (Sungai Sarawak), Malaysia",1.75,110.5,manual,"Pulau Lakei, Borneo, Indonesia",,,,3f8410d9 2026-09-03
 51792149a735c7684c21a083bd27953c,harmonics/noaa/harmonics_noaa_cptt.txt,"Tanahgrogot, Pasir River, Borneo, Indonesia",-1.9167,116.2,source,,,,,7a7ed8e0 2026-07-01
 51c9661d51d2d49e321922fc35b9d665,harmonics/noaa/harmonics_noaa_cptt.txt,"Port Augusta, Spencer Gulf, South Australia, Australia",-32.5,137.7667,source,,,,,7a7ed8e0 2026-07-01
 51ca12b43f9ceb5cc01f68950aa277a3,harmonics/noaa/harmonics_noaa_cptt.txt,"Wis-som, Saryang-do, Busan, South Korea",34.85,128.2333,source,,,,,f8c0af39 2026-07-19
@@ -10016,12 +10010,11 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 5757f121dc32d15f886af205a3825a0b,harmonics/noaa/harmonics_noaa_cptt.txt,"Yotsuiwa, Russia",50.2833,155.9167,source,,,,,86f3ae4f 2026-07-02
 57643e8a8be3fe8f75be0dcd2d7b168d,harmonics/noaa/harmonics_noaa_cptt.txt,"Kukum, Guadalcanal Island, Solomon Islands",-9.4167,160.0167,source,,,,,7a7ed8e0 2026-07-01
 57f93b8c074c061f34e3930c37e2f870,harmonics/noaa/harmonics_noaa_cptt.txt,"Saonek, Dampier Strait, Indonesia",-0.45,130.7667,source,,,,,7a7ed8e0 2026-07-01
-58002652b9461a287f350df1216f77c5,harmonics/noaa/harmonics_noaa_cptt.txt,"Futami Ko, Ogasawara Gunto, Tokyo, Japan",27.0833,142.1833,manual,"Futami Ko, Ogasawara Gunto <7>, Tokyo, Japan",,,,86f3ae4f 2026-07-02
 58073c5fdaf61ac563d7d4d24042c6fd,harmonics/noaa/harmonics_noaa_cptt.txt,"Port Cornwallis, Andaman and Nicobar, India",13.3167,93.05,source,,,,,3f8410d9 2026-09-03
 5827b0729e4e8725582ab3bd586ef726,harmonics/noaa/harmonics_noaa_cptt.txt,"Alera Bay, Penkegnei Bay, Russia",64.8167,-172.9167,source,,,,,e69e89f9 2026-09-03
 584c805b4eca01c2d80d8d9c5778fd1e,harmonics/noaa/harmonics_noaa_cptt.txt,"Panabutan Bay, Zamboanga del Sur, Philippines",7.5833,122.1333,ambiguous,,,,,
 584c805b4eca01c2d80d8d9c5778fd1e,harmonics/noaa/harmonics_noaa_cptt.txt,"Liloan, Sogod Bay, Surigao del Sur, Philippines",10.15,125.1167,ambiguous,,,,,
-585912e9d079a88a39424df45b1cb3f2,harmonics/noaa/harmonics_noaa_cptt.txt,"Pointe Lagan, Tien Giang, Vietnam",11.1667,108.7,source,,,,,3f8410d9 2026-09-03
+585912e9d079a88a39424df45b1cb3f2,harmonics/noaa/harmonics_noaa_cptt.txt,"Mui La Gan, Vietnam",11.1652,108.7036,manual,"Pointe Lagan, Tien Giang, Vietnam",11.1667,108.7,427,3f8410d9 2026-09-03
 58836d1e1365b9166db18a734b26e652,harmonics/noaa/harmonics_noaa_cptt.txt,"Ballina, New South Wales, Australia",-28.8667,153.5833,source,,,,,86f3ae4f 2026-07-02
 58eb11dfe2d0fe6544ec8c2bfafb47c8,harmonics/noaa/harmonics_noaa_cptt.txt,"West Haven Inlet, Nelson, New Zealand",-40.5833,172.5333,source,,,,,86f3ae4f 2026-07-02
 59076abde13ba4cc6b2ea1cc32b4904c,harmonics/noaa/harmonics_noaa_cptt.txt,"Shikuka, Russia",49.2333,143.1333,source,,,,,86f3ae4f 2026-07-02
@@ -10588,7 +10581,6 @@ bb4869eea3c546a7f80862104979d551,harmonics/noaa/harmonics_noaa_cptt.txt,"Hinunan
 bb60c45c1b7e345351ff442bf3426b4c,harmonics/noaa/harmonics_noaa_cptt.txt,"Night Cliff, Point Darwin, Northern Territory, Australia",-12.3833,130.8333,source,,,,,86f3ae4f 2026-07-02
 bba1e9050966030624b365815c528760,harmonics/noaa/harmonics_noaa_cptt.txt,"Shortt Island, Odisha, India",20.7833,87.0667,source,,,,,86f3ae4f 2026-07-02
 bbaee8bd939651308ca57f882787c1d2,harmonics/noaa/harmonics_noaa_cptt.txt,"Cape Palliser, Wellington, New Zealand",-41.6167,175.2833,source,,,,,86f3ae4f 2026-07-02
-bbd59ad7345de831fa94a1b06959ca19,harmonics/noaa/harmonics_noaa_cptt.txt,"Portland, Victoria, Australia",-38.35,141.6167,source,,,,,86f3ae4f 2026-07-02
 bc3b340550ee1460727d77196b582cb9,harmonics/noaa/harmonics_noaa_cptt.txt,"Shimminato, Yamaguchi, Japan",34.1833,132.2333,source,,,,,e4304b6d 2026-07-19
 bc4f0ff5cc81179bb724e8d9639608d0,harmonics/noaa/harmonics_noaa_cptt.txt,"Queenscliff, Port Phillip, Victoria, Australia",-38.3167,144.6667,source,,,,,86f3ae4f 2026-07-02
 bc9906f713ee754d497eb58a94159762,harmonics/noaa/harmonics_noaa_cptt.txt,"Bunbury Harbor, Western Australia, Australia",-33.3167,115.65,source,,,,,86f3ae4f 2026-07-02
@@ -10644,7 +10636,7 @@ c3ad96a988860de63cb5f3c5dea3aedf,harmonics/noaa/harmonics_noaa_cptt.txt,"Bandung
 c3f9e927796d9a805425b3d373d62f97,harmonics/noaa/harmonics_noaa_cptt.txt,"Bulunkan Bay, Tiksi Bay, Russia",71.6667,128.9667,source,,,,,7a7ed8e0 2026-07-01
 c480a6acd87319094ebf1b3758c9ac05,harmonics/noaa/harmonics_noaa_cptt.txt,"Tulagi Island, Solomon Islands",-9.1,160.15,source,,,,,7a7ed8e0 2026-07-01
 c488297685ec106b59658cf90ff2ec28,harmonics/noaa/harmonics_noaa_cptt.txt,"Ust Bolsheretsk, Bolshaya River, Russia",52.7667,156.2333,source,,,,,3f8410d9 2026-09-03
-c4afbb786ff366ce6864d65ea085b775,harmonics/noaa/harmonics_noaa_cptt.txt,"Poulo Cecir de Mer, Vietnam",10.5333,108.9333,source,,,,,3f8410d9 2026-09-03
+c4afbb786ff366ce6864d65ea085b775,harmonics/noaa/harmonics_noaa_cptt.txt,"Phu Quy, Vietnam",10.5,108.95,manual,"Poulo Cecir de Mer, Vietnam",10.5333,108.9333,4128,3f8410d9 2026-09-03
 c4c9afc25e6c6aa81b9ebfbfac2f7f5e,harmonics/noaa/harmonics_noaa_cptt.txt,"Banjo Zaki, Russia",50.75,156.1333,source,,,,,86f3ae4f 2026-07-02
 c4f44de97c4a54bd478aacfc6c847305,harmonics/noaa/harmonics_noaa_cptt.txt,"Iligan, Misamis Oriental, Philippines",8.2333,124.2333,source,,,,,7a7ed8e0 2026-07-01
 c53128b205be5d0c6ec173c62fc280b8,harmonics/noaa/harmonics_noaa_cptt.txt,"Omu Ko, Hokkaido, Japan",44.5833,142.9667,source,,,,,3f8410d9 2026-09-03
@@ -10732,7 +10724,7 @@ d2f3229e27141a463602ff9c154bb62f,harmonics/noaa/harmonics_noaa_cptt.txt,"Tomo Ts
 d3153b973b0d7355dcca1e4fd0527cfa,harmonics/noaa/harmonics_noaa_cptt.txt,"Kakaji, Oita, Japan",33.6833,131.5167,source,,,,,e4304b6d 2026-07-19
 d334ee8c9d0fcc0edcdcc1fd9d39a7cd,harmonics/noaa/harmonics_noaa_cptt.txt,"Nao Shima, Kagawa, Japan",34.45,133.9667,source,,,,,e4304b6d 2026-07-19
 d38c7ef4c042d0acaa87531d4572d752,harmonics/noaa/harmonics_noaa_cptt.txt,"Vung Chua Bay, Vietnam",17.9333,106.5,source,,,,,7a7ed8e0 2026-07-01
-d3acc9df89fb46807c61beac5450219d,harmonics/noaa/harmonics_noaa_cptt.txt,"Pelabuhan Klang, Malaysia",3.0,101.3833,manual,"Port Kelang, Sumatra, Indonesia",,,,86f3ae4f 2026-07-02
+d3acc9df89fb46807c61beac5450219d,harmonics/noaa/harmonics_noaa_cptt.txt,"Pelabuhan Klang, Malaysia",2.999,101.3885,manual,"Port Kelang, Sumatra, Indonesia",3.0,101.3833,588,86f3ae4f 2026-07-02
 d3cf4de422733a7df5018a05ea4363aa,harmonics/noaa/harmonics_noaa_cptt.txt,"Auki Harbor, Malaita Island, Solomon Islands",-8.7833,160.7,source,,,,,7a7ed8e0 2026-07-01
 d3feca5a5019650f4031ca0d1ef233c8,harmonics/noaa/harmonics_noaa_cptt.txt,"Asan, South Korea",36.9667,126.7833,source,,,,,86f3ae4f 2026-07-02
 d40c49f40e9de73bde50fbb4d9990142,harmonics/noaa/harmonics_noaa_cptt.txt,"Solvec Cove, La Union, Philippines",17.45,120.45,source,,,,,7a7ed8e0 2026-07-01
@@ -11299,7 +11291,6 @@ fd89bb0f5c884a1a011f38fead68c9b5,harmonics/noaa/harmonics_noaa_currents.txt,"Fla
 33cc28b72ae1ae9a33945b37930b3f0d,harmonics/noaa/harmonics_noaa_eutt.txt,"Russki Zavorot, Russia",68.9833,54.3333,source,,,,,3f8410d9 2026-09-03
 3410582d6dc2bb2f55033dc74bedb225,harmonics/noaa/harmonics_noaa_eutt.txt,"Savikha Bay, Russia",68.1833,39.1167,source,,,,,4baa7dd1 2026-07-02
 341bf1c9ad0354344be4e2e5fd9519cf,harmonics/noaa/harmonics_noaa_eutt.txt,"Drozdovka Bay, Russia",68.3333,38.4167,source,,,,,4baa7dd1 2026-07-02
-3442fbdd188bf0e01995796c47f6d56a,harmonics/noaa/harmonics_noaa_eutt.txt,"La Rochelle (La Pallice), France",46.1667,-1.2167,manual,"La Pallice, France",,,,4baa7dd1 2026-07-02
 3454867c3bc6109fd9e96c1982e0472f,harmonics/noaa/harmonics_noaa_eutt.txt,"Pasaia, Spain",43.3333,-1.9333,manual,"Pasajes, Spain",,,,e4304b6d 2026-07-19
 345ebb8eeb04b792a5ec63c09c2f2a45,harmonics/noaa/harmonics_noaa_eutt.txt,"Llanes, Spain",43.4167,-4.75,source,,,,,e4304b6d 2026-07-19
 35224b79b65ad32f60393a85bc63f4af,harmonics/noaa/harmonics_noaa_eutt.txt,"Weston-super-Mare, Bristol Channel, England, United Kingdom",51.35,-2.9833,manual,"Weston-super-Mare, Bristol Channel, United Kingdom",,,,4baa7dd1 2026-07-02
@@ -12002,7 +11993,7 @@ fce7f17dd4f6bcc356b9a50f02ad81d7,harmonics/noaa/harmonics_noaa_pacif.txt,"Makin 
 1f96082357e63d0cfe7eb77cc50f3ffc,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Geraldton, Western Australia, Australia",-28.776,114.6019,source,,,,,0e084421 2026-04-23
 1fbd3366bb5f666e7e7210e0f3b558ce,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Moçâmedes (Namibe), Angola",-15.1929,12.1462,manual,"Mocamedes 238A, AGO",-15.192,12.145,163,be5dbfbe 2026-03-23
 1fe505f8766ae3f63b07d56364e2bf26,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Morlaix (Écluse), France",48.588699,-3.83826,manual,"Morlaixvigicruestg 06Minute, France",,,,be5dbfbe 2026-03-23
-200822d8405a655c5e82996c1707ccbb,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Chichijima, Tokyo, Japan",27.093883,142.194717,manual,"Ma58 Ma58, Japan",,,,be5dbfbe 2026-03-23
+200822d8405a655c5e82996c1707ccbb,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Chichijima (Futami Ko), Tokyo, Japan",27.093883,142.194717,manual,"Ma58 Ma58, Japan",,,,be5dbfbe 2026-03-23
 201a4ed3b1f06ae82b23839e5db7583f,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Blankenberge, Belgium",51.310501,3.11638,source,,,,,2ab58057 2026-04-22
 207bf70c89c2d1de828f5082c08da210,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Marseille (Corniche), France",43.2756,5.3599,manual,"Marseille, France",43.3,5.35,2829,be5dbfbe 2026-03-23
 20e5ae2f1cd56dad9139ee0953905236,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Klagshamn, Sweden",55.5222,12.8936,source,,,,,be5dbfbe 2026-03-23
@@ -12248,9 +12239,7 @@ fce7f17dd4f6bcc356b9a50f02ad81d7,harmonics/noaa/harmonics_noaa_pacif.txt,"Makin 
 5cf2b9ca86053f79672c796ecbccca3b,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Kobe, Hyogo, Japan",34.682217,135.190283,manual,"Kobe Ma31, Japan",,,,be5dbfbe 2026-03-23
 5d29f7f986577d20b078addece3c5a10,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Viana do Castelo, Portugal",41.685001,-8.8396,manual,"Vianadocastelotg, Portugal",,,,be5dbfbe 2026-03-23
 5d5c4058ed285f6132effd0e753940da,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Tomakomai (Nishiko), Hokkaido, Japan",42.629717,141.621117,manual,"Tomakomainishiko, Japan",,,,be5dbfbe 2026-03-23
-5d62084475877d3dead4584642f3b4b7,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Schillig, Germany",53.699,8.0471,manual,,53.700578,8.047995,185,be5dbfbe 2026-03-23
 5e88e651eba134daed293a12c0668c06,harmonics/ticon/harmonics_ticon4_worldwide.txt,"West Channel, Victoria, Australia",-38.1944,144.7552,source,,,,,0e084421 2026-04-23
-5e931ccb2bcd1b6e4da3496abaea2b4f,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Pellworm (Anleger), Germany",54.5009,8.702,manual,"Pellwormanleger, Germany",54.502583,8.70305,199,be5dbfbe 2026-03-23
 5eac18453587713c8fddae2eb2a1dbe7,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Wakkanai, Hokkaido, Japan",45.4078,141.6853,manual,"Wakkanai 360A, Japan",45.4,141.683,886,be5dbfbe 2026-03-23
 5eb5ea60189d2ca4becc1ad1d61fa3c2,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Dundalk, Ireland",54.007999,-6.385,source,,,,,be5dbfbe 2026-03-23
 5ec429cfc0c3d2195315b877e124362c,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Stellendam (Haringvlietdam), Netherlands",51.829224,4.04484,manual,"Haringvlietsluizen Buiten Harvszbtn, Netherlands",,,,be5dbfbe 2026-03-23
@@ -12352,7 +12341,6 @@ fce7f17dd4f6bcc356b9a50f02ad81d7,harmonics/noaa/harmonics_noaa_pacif.txt,"Makin 
 74a665d8e59f3852c5f7f6e7350ad76e,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Apia, Samoa Islands",-13.8268,-171.7613,source,,,,,0e084421 2026-04-23
 7533540e2634cddd1d31bcec8f59d752,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Ras Hilf (Masirah Island), Oman",20.687,58.872,manual,"Masirah, Oman",,,,be5dbfbe 2026-03-23
 75e585136a61f18598cbee2fe9be7e7c,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Ancona, Italy",43.624767,13.506517,source,,,,,d41216ac 2026-04-23
-7638d32f9f76b05c2cd7464eebd42268,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Borkum (Südstrand), Germany",53.577,6.661,manual,"Borkumsdstrand, Germany",53.578415,6.662107,173,be5dbfbe 2026-03-23
 764ca17028c9247379ed26a8f2dcb48e,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Knysna, South Africa",-34.0502,23.0449,manual,"Knysna 186A, South Africa",-34.05,23.045,24,be5dbfbe 2026-03-23
 76b69c7634570535b72b37f7837e5734,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Arun Platform (Littlehampton), England, United Kingdom",50.769825,-0.492154,manual,"Arunplatformtg, United Kingdom",,,,be5dbfbe 2026-03-23
 76caa0842eadb6128a98680ba47c17c8,harmonics/ticon/harmonics_ticon4_worldwide.txt,"St. Mary's (Isles of Scilly), England, United Kingdom",49.9179,-6.3172,manual,"St Marys, United Kingdom",49.917833,-6.317139,9,be5dbfbe 2026-03-23
@@ -12613,7 +12601,7 @@ b20c0acfd4be5c44662613692e05cb1a,harmonics/ticon/harmonics_ticon4_worldwide.txt,
 b23e1677486273e19fd7d95c5f5743cc,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Arica, Chile",-18.4693,-70.3235,manual,,-18.467,-70.333,1034,be5dbfbe 2026-03-23
 b2505794d46e70dbe26a6df3d652581f,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Karrebæksminde, Denmark",55.1763,11.6428,manual,"Karrebaeksminde, Denmark",55.1833,11.65,903,be5dbfbe 2026-03-23
 b27253ea839e20e736969b08d811a581,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Banc Du Cap (Banc du Cap Brûlé), Quebec, Canada",47.09,-70.71,manual,"Banc Du Cap Brule, Canada",,,,be5dbfbe 2026-03-23
-b274b096561d8f7aefa6874dd0e89965,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Chichijima, Tokyo, Japan (2)",27.0939,142.1947,manual,"Chichijima, Japan",27.1,142.183,1342,be5dbfbe 2026-03-23
+b274b096561d8f7aefa6874dd0e89965,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Chichijima (Futami Ko), Tokyo, Japan",27.0939,142.1947,manual,"Chichijima, Japan",27.1,142.183,1342,be5dbfbe 2026-03-23
 b2ae78c7a9a448a66951ea4798d5c81f,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Georgetown, Ascension Island",-7.9251,-14.4141,manual,"Ascension 291A, United Kingdom",-7.917,-14.417,956,be5dbfbe 2026-03-23
 b305aaa16c79f6c3a48567932595a07a,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Port-au-Prince, Haiti",18.5499,-72.3499,manual,"Portu Prince, Haiti",18.567,-72.35,1901,be5dbfbe 2026-03-23
 b30fb3ca8c8420301892b3c418561c9c,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Shiraoiko, Hokkaido, Japan",42.5214,141.3206,manual,"Shiraoiko, Japan",,,,be5dbfbe 2026-03-23
@@ -13882,7 +13870,7 @@ a172b09ac36d1b3593de1e796e67581f,harmonics/utide/harmonics_utide_observations.tx
 a1cdae7e5b0660a63875957f8d3a5697,harmonics/utide/harmonics_utide_observations.txt,"East Loch Tarbert, Scotland, United Kingdom",55.864548,-5.411187,source,,,,,82f073fc 2026-06-09
 a1e83468c4aa7c7936904e177f64bd60,harmonics/utide/harmonics_utide_observations.txt,"Ancud, Chile",-41.8674,-73.8329,manual,,-41.87,-73.83,376,f8efb887 2026-05-20
 a23572b5b421262538509eb637aad8f5,harmonics/utide/harmonics_utide_observations.txt,"Talara, Peru",-4.5752,-81.2828,source,,,,,17ebcd18 2026-05-01
-a25220a21a2915caf0bfcc61d12d4a0a,harmonics/utide/harmonics_utide_observations.txt,"Bantam, Cocos Islands, Western Australia, Australia",-12.1167,96.8922,manual,"Bantam, Cocos Islands, Australia",,,,17ebcd18 2026-05-01
+a25220a21a2915caf0bfcc61d12d4a0a,harmonics/utide/harmonics_utide_observations.txt,"Port Refuge, Cocos Islands, Western Australia, Australia",-12.1167,96.8922,manual,"Bantam, Cocos Islands, Australia",,,,17ebcd18 2026-05-01
 a32bdfb9fdcdaf5d443b5bd43b6d81ae,harmonics/utide/harmonics_utide_observations.txt,"Kurilsk (Iturup), Kuril Islands, Russia",45.257,147.8811,manual,"Kuril'sk, Russia",45.23,147.88,3003,2f9ee060 2026-05-12
 a3455e2263431bac9fc7b0742a35d43d,harmonics/utide/harmonics_utide_observations.txt,"Uglegorsk, Russia",49.08,142.07,source,,,,,d74103b9 2026-05-20
 a355b51e19784b4b791d6fcefcc13520,harmonics/utide/harmonics_utide_observations.txt,"Tennesseehaven, Netherlands",51.963507,4.093561,source,,,,,17ebcd18 2026-05-01
@@ -14025,7 +14013,7 @@ c7509460e0db2cd7244272e9978dcace,harmonics/utide/harmonics_utide_observations.tx
 c7a5c1d8557cd5a8245f16e7ed7d666e,harmonics/utide/harmonics_utide_observations.txt,"Heinenoord, Goidschalxoord, Netherlands",51.830298,4.451622,source,,,,,17ebcd18 2026-05-01
 c7dd0cb83f7dc505a5b11afb972e04ba,harmonics/utide/harmonics_utide_observations.txt,"Padang, Sumatra, Indonesia",-1.0019,100.3685,source,,,,,17ebcd18 2026-05-01
 c811aaf0d1a29ecf2c5a87bbd84e2758,harmonics/utide/harmonics_utide_observations.txt,"Bahía Mansa, Chile",-40.58,-73.744,source,,,,,f8efb887 2026-05-20
-c8866910d89b52df503246a7564c5bbf,harmonics/utide/harmonics_utide_observations.txt,"Chichijima, Tokyo, Japan",27.0939,142.1947,source,,,,,17ebcd18 2026-05-01
+c8866910d89b52df503246a7564c5bbf,harmonics/utide/harmonics_utide_observations.txt,"Chichijima (Futami Ko), Tokyo, Japan",27.0939,142.1947,manual,"Chichijima, Tokyo, Japan",,,,17ebcd18 2026-05-01
 c89a5bbb513c2a903fb25cc463fe53eb,harmonics/utide/harmonics_utide_observations.txt,"Tappi, Aomori, Japan",41.2425,140.3814,source,,,,,17ebcd18 2026-05-01
 c93d1a16305ccb57a0d65ea9a8a73960,harmonics/utide/harmonics_utide_observations.txt,"Starodubskoe, Russia",47.41,142.82,source,,,,,d74103b9 2026-05-20
 c9af6abff301a0a5817768939c02a7bf,harmonics/utide/harmonics_utide_observations.txt,"Clachnaharry, Scotland, United Kingdom",57.490502,-4.26302,manual,"Inverness, Scotland, United Kingdom",,,,82f073fc 2026-06-09
@@ -14986,7 +14974,7 @@ ff7adb79e8bdb3774f8271391ebe0999,harmonics/utide/harmonics_utide_observations.tx
 3017be933ba7c6d4ddcf8b2fc8d937d8,harmonics/utide/harmonics_utide_tidetables.txt,"Gweedore Harbour (Bunbeg), Ireland",55.0586,-8.317,source,,,,,ef775bdb 2026-09-07
 3022a920b7931bee06d53660ff74d871,harmonics/utide/harmonics_utide_tidetables.txt,"Lisboa (Alcântara), Portugal",38.7001,-9.1634,manual,"Lisboa, Portugal",38.7117,-9.1233,3711,17ebcd18 2026-05-01
 303132f2c664da2b5730b691bf210d8b,harmonics/utide/harmonics_utide_tidetables.txt,"Opunake Bay, New Zealand",-39.4738,173.8634,source,,,,,09ee867b 2026-05-03
-3045fdd524da345da666ec80fdd5d3de,harmonics/utide/harmonics_utide_tidetables.txt,"Sungai Sarawak, Malaysia (2)",1.75,110.5,source,,,,,c4cbd789 2026-06-11
+3045fdd524da345da666ec80fdd5d3de,harmonics/utide/harmonics_utide_tidetables.txt,"Pulau Lakei (Sungai Sarawak), Malaysia",1.75,110.5,manual,"Sungai Sarawak, Malaysia (2)",,,,c4cbd789 2026-06-11
 3050b7762d82981a8d1dc2b8f9a3fb1c,harmonics/utide/harmonics_utide_tidetables.txt,"Hull (Alexandra Dock), England, United Kingdom",53.7425,-0.2968,source,,,,,ef775bdb 2026-09-07
 3050c620a70a6112f981a4b80e6a11c9,harmonics/utide/harmonics_utide_tidetables.txt,"Cantareira (Barra do Douro), Portugal",41.1467,-8.6667,manual,"Barra do Douro, Portugal",,,,049d0264 2026-06-17
 305baed3d821f4440f75d477656e9ee3,harmonics/utide/harmonics_utide_tidetables.txt,"Dongfenggang, Shandong, China",38.25,118.1667,source,,,,,0c3cfdde 2026-06-11
@@ -17655,7 +17643,7 @@ e940921afc182efb20822b02fd996856,harmonics/utide/harmonics_utide_tidetables.txt,
 e9572ba1b6c164f09da035471bc274c6,harmonics/utide/harmonics_utide_tidetables.txt,"Makwaziniht Island, British Columbia, Canada",50.556,-127.554,manual,"Makwazniht Island, British Columbia, Canada",,,,17ebcd18 2026-05-01
 e9660c7aaca24dc7c8a647d8ddd6218b,harmonics/utide/harmonics_utide_tidetables.txt,"Hat Yao Pier (Ko Libong), Trang, Thailand",7.3108,99.4019,source,,,,,64032f7f 2026-08-19
 e982df845e4d9e963815c3165f88dfe2,harmonics/utide/harmonics_utide_tidetables.txt,"Hurst Point, England, United Kingdom",50.7,-1.55,source,,,,,ef775bdb 2026-09-07
-e99e2fc0c4ef5ed05574f26de5daa3fc,harmonics/utide/harmonics_utide_tidetables.txt,"Phu Quy, Vietnam",10.5333,108.9333,source,,,,,7a436dc1 2026-06-11
+e99e2fc0c4ef5ed05574f26de5daa3fc,harmonics/utide/harmonics_utide_tidetables.txt,"Phu Quy, Vietnam",10.5,108.95,manual,,10.5333,108.9333,4128,7a436dc1 2026-06-11
 e9a1372a2817d9be45b500ae06c6e5fe,harmonics/utide/harmonics_utide_tidetables.txt,"Mongla, Bangladesh",22.53328,89.580286,source,,,,,a5d32940 2026-08-18
 e9a540bacebf28fe9344915e82948994,harmonics/utide/harmonics_utide_tidetables.txt,"Musay'id (Outer Channel Entrance), Qatar",25.0304,51.6548,manual,,25.0333,51.65,581,c4cbd789 2026-06-11
 e9accae4ec6ab7d484d0236ed015557b,harmonics/utide/harmonics_utide_tidetables.txt,"Île Europa, Îles Éparses",-22.3168,40.3333,source,,,,,17ebcd18 2026-05-01
