@@ -32090,8 +32090,11 @@ x 0 0
 # !latitude: 36.8024
 # region: Cádiz
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: UTC-Phasen, beschriftet als MEZ, wie die
+# note: -- Puertos-del-Estado-Quelle (gegen den berichtigten Puertos-Zwilling bzw.
+# note: -- FES einheitlich -60 min). Siehe py/ticon_zeit_richten.py.
 Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0000 meters
 J1              0.0017  146.98
 K1              0.0623  61.06
@@ -45139,8 +45142,11 @@ x 0 0
 # !latitude: 39.737301
 # region: Mallorca
 # admin1_quelle: Name
+# note: 20260910 Meridian +01:00 -> +00:00: UTC-Phasen, beschriftet als MEZ, wie die
+# note: -- Puertos-del-Estado-Quelle (gegen den berichtigten Puertos-Zwilling bzw.
+# note: -- FES einheitlich -60 min). Siehe py/ticon_zeit_richten.py.
 Colònia de Sant Pere, Mallorca, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0000 meters
 J1              0.0035  180.99
 K1              0.0339  170.53
@@ -57554,8 +57560,11 @@ x 0 0
 # !latitude: 43.4631
 # region: La Coruña
 # admin1_quelle: Ufer 1.1 km
+# note: 20260910 Meridian +01:00 -> +00:00: UTC-Phasen, beschriftet als MEZ, wie die
+# note: -- Puertos-del-Estado-Quelle (gegen den berichtigten Puertos-Zwilling bzw.
+# note: -- FES einheitlich -60 min). Siehe py/ticon_zeit_richten.py.
 Puerto exterior de Prioriño-Ferrol 1, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0000 meters
 J1              0.0027  101.33
 K1              0.0724  71.84
@@ -141540,8 +141549,11 @@ x 0 0
 # !latitude: 39.560299
 # region: Baleares
 # admin1_quelle: Name
+# note: 20260910 Meridian +01:00 -> +00:00: UTC-Phasen, beschriftet als MEZ, wie die
+# note: -- Puertos-del-Estado-Quelle (gegen den berichtigten Puertos-Zwilling bzw.
+# note: -- FES einheitlich -60 min). Siehe py/ticon_zeit_richten.py.
 Palma de Mallorca, Baleares, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0000 meters
 J1              0.0014  185.67
 K1              0.0367  169.50
@@ -176309,8 +176321,11 @@ x 0 0
 # !latitude: 37.318501
 # region: Sevilla
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: UTC-Phasen, beschriftet als MEZ, wie die
+# note: -- Puertos-del-Estado-Quelle (gegen den berichtigten Puertos-Zwilling bzw.
+# note: -- FES einheitlich -60 min). Siehe py/ticon_zeit_richten.py.
 Sevilla (Dársena del Gualdaquivir), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0000 meters
 J1              0.0037  223.44
 K1              0.0660  116.37

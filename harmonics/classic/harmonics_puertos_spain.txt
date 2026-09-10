@@ -15001,8 +15001,11 @@ MNUS2
 # !latitude: 39.83452
 # region: Baleares
 # admin1_quelle: Name
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Alcúdia Mallorca, Baleares, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.4371 meters
 x 0 0
 K1 0.0367 169.71
@@ -15204,8 +15207,11 @@ x 0 0
 # !latitude: 36.17703
 # region: Cádiz
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Algeciras (San Roque), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.5396 meters
 x 0 0
 K1 0.0233 128.56
@@ -15609,8 +15615,11 @@ x 0 0
 # !latitude: 41.34204
 # region: Barcelona
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Barcelona (Port), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.3656 meters
 x 0 0
 K1 0.0367 167.97
@@ -15812,8 +15821,11 @@ x 0 0
 # !latitude: 43.35172
 # region: Bizkaia
 # admin1_quelle: Ufer 1.0 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Bilbao, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.4565 meters
 x 0 0
 K1 0.0636 68.98
@@ -16014,8 +16026,11 @@ x 0 0
 # !latitude: 36.80236
 # region: Cádiz
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 1.4949 meters
 x 0 0
 K1 0.0627 60.84
@@ -16214,8 +16229,11 @@ x 0 0
 # !latitude: 36.97431
 # region: Almería
 # admin1_quelle: Ufer 0.7 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Puerto de Carboneras, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.1546 meters
 x 0 0
 K1 0.0372 157.53
@@ -16417,8 +16435,11 @@ x 0 0
 # !latitude: 43.46311
 # region: La Coruña
 # admin1_quelle: Ufer 1.1 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Puerto exterior de Prioriño-Ferrol 1, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.2504 meters
 x 0 0
 K1 0.0726 71.95
@@ -16618,8 +16639,11 @@ x 0 0
 # !latitude: 43.47631
 # region: La Coruña
 # admin1_quelle: Ufer 0.7 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 El Ferrol del Caudillo, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.2560 meters
 x 0 0
 K1 0.0725 73.54
@@ -16814,8 +16838,11 @@ x 0 0
 # !latitude: 43.4662
 # region: La Coruña
 # admin1_quelle: Ufer 1.3 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Puerto exterior de Prioriño-Ferrol 2, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.2451 meters
 x 0 0
 K1 0.0719 71.76
@@ -17015,8 +17042,11 @@ x 0 0
 # !latitude: 38.73467
 # region: Baleares
 # admin1_quelle: Name
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 La Savina, Formentera, Baleares, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.3963 meters
 x 0 0
 K1 0.0378 166.25
@@ -17419,8 +17449,11 @@ x 0 0
 # !latitude: 38.99518
 # region: Valencia
 # admin1_quelle: Ufer 1.0 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Gandía, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0000 meters
 x 0 0
 K1 0.0370 163.57
@@ -17621,8 +17654,11 @@ x 0 0
 # !latitude: 43.55808
 # region: Asturias
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Gijón, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.4061 meters
 x 0 0
 K1 0.0669 70.93
@@ -17825,8 +17861,11 @@ x 0 0
 # !latitude: 37.13195
 # region: Huelva
 # admin1_quelle: Ufer 2.1 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Mazagón (Huelva), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 1.9299 meters
 x 0 0
 K1 0.0649 47.68
@@ -18029,8 +18068,11 @@ x 0 0
 # !latitude: 38.91124
 # region: Baleares
 # admin1_quelle: Name
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Eivissa, Ibiza, Baleares, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.4365 meters
 x 0 0
 K1 0.0379 167.84
@@ -18230,8 +18272,11 @@ x 0 0
 # !latitude: 43.3466
 # region: La Coruña
 # admin1_quelle: Ufer 2.6 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Punta Langosteira (Puerto exterior), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.2984 meters
 x 0 0
 K1 0.0733 72.29
@@ -18842,8 +18887,11 @@ x 0 0
 # !latitude: 39.89316
 # region: Baleares
 # admin1_quelle: Name
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Mahón, Menorca, Baleares, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0000 meters
 x 0 0
 K1 0.0365 173.99
@@ -19044,8 +19092,11 @@ x 0 0
 # !latitude: 36.71188
 # region: Málaga
 # admin1_quelle: Ufer 0.9 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Malaga, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.6164 meters
 x 0 0
 K1 0.0328 150.41
@@ -19248,8 +19299,11 @@ x 0 0
 # !latitude: 35.29073
 # region: Melilla
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Melilla, Spain
-+01:00 :Africa/Ceuta
++00:00 :Africa/Ceuta
 0.3403 meters
 x 0 0
 K1 0.0341 146.64
@@ -19450,8 +19504,11 @@ x 0 0
 # !latitude: 36.7202
 # region: Granada
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Puerto de Motril, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.5907 meters
 x 0 0
 K1 0.0327 154.09
@@ -19653,8 +19710,11 @@ x 0 0
 # !latitude: 39.56022
 # region: Baleares
 # admin1_quelle: Name
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Palma de Mallorca, Baleares, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0995 meters
 x 0 0
 K1 0.0368 169.62
@@ -19853,8 +19913,11 @@ x 0 0
 # !latitude: 39.63404
 # region: Valencia
 # admin1_quelle: Ufer 2.3 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Sagunto, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.0000 meters
 x 0 0
 K1 0.0375 162.11
@@ -20254,8 +20317,11 @@ x 0 0
 # !latitude: 37.33099
 # region: Sevilla
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Sevilla (Esclusa), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 1.3167 meters
 x 0 0
 K1 0.0681 121.92
@@ -20456,8 +20522,11 @@ x 0 0
 # !latitude: 37.31847
 # region: Sevilla
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Sevilla (Dársena del Gualdaquivir), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.5938 meters
 x 0 0
 K1 0.0664 116.77
@@ -20660,8 +20729,11 @@ x 0 0
 # !latitude: 36.00647
 # region: Cádiz
 # admin1_quelle: Ufer 0.7 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Tarifa, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.8042 meters
 x 0 0
 K1 0.0263 128.69
@@ -20861,8 +20933,11 @@ x 0 0
 # !latitude: 41.07898
 # region: Tarragona
 # admin1_quelle: Ufer 1.8 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Tarragona, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.2419 meters
 x 0 0
 K1 0.0369 164.86
@@ -21271,8 +21346,11 @@ x 0 0
 # !latitude: 39.44223
 # region: Valencia
 # admin1_quelle: Ufer 1.9 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Valencia, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.5008 meters
 x 0 0
 K1 0.0376 163.2
@@ -21475,8 +21553,11 @@ x 0 0
 # !latitude: 42.24321
 # region: Pontevedra
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Vigo, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.0344 meters
 x 0 0
 K1 0.0732 61.68
@@ -21675,8 +21756,11 @@ x 0 0
 # !latitude: 42.60076
 # region: Pontevedra
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Vilagarcía de Arousa, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.0951 meters
 x 0 0
 K1 0.0742 64.22
@@ -21879,8 +21963,11 @@ x 0 0
 # !latitude: 36.83008
 # region: Almería
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Almería, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 0.4120 meters
 x 0 0
 K1 0.0350 156.71
@@ -22076,8 +22163,11 @@ x 0 0
 # !latitude: 43.34786
 # region: La Coruña
 # admin1_quelle: Ufer 0.6 km
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Punta Langosteira 2 (Puerto exterior), Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.1704 meters
 x 0 0
 K1 0.0715 71.57
@@ -22277,8 +22367,11 @@ x 0 0
 # !latitude: 43.32319
 # region: Gipuzkoa
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 Pasaia, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.4922 meters
 x 0 0
 K1 0.0608 69.33
@@ -22474,8 +22567,11 @@ x 0 0
 # !latitude: 43.70908
 # region: Lugo
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 San Cibrao, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.2683 meters
 x 0 0
 K1 0.0700 71.85
@@ -22672,8 +22768,11 @@ x 0 0
 # !latitude: 43.35737
 # region: La Coruña
 # admin1_quelle: Polygon
+# note: 20260910 Meridian +01:00 -> +00:00: Puertos del Estado liefert Greenwich-
+# note: -- Phasen (alle 33 Festlandsaetze lagen einheitlich -60 min gegen FES,
+# note: -- die Kanaren unter +00:00 auf 0; San Cibrao: uTide-Zwilling -60).
 A Coruña, Spain
-+01:00 :Europe/Madrid
++00:00 :Europe/Madrid
 2.1640 meters
 x 0 0
 K1 0.0735 72.12

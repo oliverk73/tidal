@@ -38,8 +38,8 @@ h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira)
 72_Bluff.csv,-46.5977,168.3454,2026,"Bluff, Southland, New Zealand",harmonics_utide_observations.txt,0,8712,0.1471,0.551,0,0.044,2.569,New_Zealand_UHSLC,0,nein
 72_Bluff.csv,-46.5977,168.3454,2026,"Stirling Point, New Zealand",harmonics_utide_tidetables.txt,1893,8712,0.1788,0.673,-30,1.856,2.97,New_Zealand_UHSLC,0,nein
 72_Bluff.csv,-46.5977,168.3454,2026,"Davey Shoal, New Zealand",harmonics_utide_tidetables.txt,1946,8712,0.1796,0.679,-30,1.856,2.972,New_Zealand_UHSLC,0,nein
-BonanzaTG.csv,36.8024,-6.3381,2024,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain",harmonics_ticon4_worldwide.txt,0,8667,0.1025,0.598,-60,1.796,3.306,Portugal_CMEMS,1,nein
-BonanzaTG.csv,36.8024,-6.3381,2024,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain",harmonics_puertos_spain.txt,5,8667,0.1129,0.563,-60,0.301,3.254,Portugal_CMEMS,0,nein
+BonanzaTG.csv,36.8024,-6.3381,2024,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain",harmonics_ticon4_worldwide.txt,0,8667,0.1025,0.598,0,1.796,3.306,Portugal_CMEMS,1,nein
+BonanzaTG.csv,36.8024,-6.3381,2024,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain",harmonics_puertos_spain.txt,5,8667,0.1129,0.563,0,0.301,3.254,Portugal_CMEMS,0,nein
 BonanzaTG.csv,36.8024,-6.3381,2024,"Sanlúcar, Río Guadalquivir, Spain",harmonics_noaa_eutt.txt,2373,8667,0.1976,0.778,10,0.028,3.184,Portugal_CMEMS,0,nein
 285_Buenos_Aires.csv,-34.5609,-58.3988,1961,"Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina",harmonics_ticon4_worldwide.txt,0,8761,0.497,2.328,-10,0.078,1.366,Argentina_UHSLC,1,nein
 285_Buenos_Aires.csv,-34.5609,-58.3988,1961,"Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina",harmonics_utide_tidetables.txt,9,8761,0.4965,2.302,30,0.085,1.34,Argentina_UHSLC,0,nein
@@ -328,9 +328,9 @@ sao_tome_stp.csv,0.3480,6.7370,2010,"São Tomé (Baía de Ana Chaves), São Tom�
 09360_Seal_Cove_wlp.csv,54.3311,-130.2796,2025,"Seal Cove, British Columbia, Canada",harmonics_utide_tidetables.txt,0,35040,0.0484,0.203,0,0.0,7.378,Canada_IWLS_BC,0,nein
 257_Settlement_Point.csv,26.7025,-78.9912,2018,"Settlement Point, Grand Bahama Island, Bahamas",harmonics_ticon4_worldwide.txt,0,8761,0.0562,0.4,0,0.04,1.221,Caribbean_UHSLC_CubaJamaicaBahamas,1,nein
 257_Settlement_Point.csv,26.7025,-78.9912,2018,"Settlement Point, Bahamas",harmonics_utide_observations.txt,0,8761,0.0549,0.373,0,0.04,1.243,Caribbean_UHSLC_CubaJamaicaBahamas,0,nein
-Sevilla2TG.csv,37.3185,-6.0077,2024,"Sevilla (Dársena del Gualdaquivir), Spain",harmonics_ticon4_worldwide.txt,0,8684,0.2003,1.086,-50,0.602,2.907,Portugal_CMEMS,1,nein
-Sevilla2TG.csv,37.3185,-6.0077,2024,"Sevilla (Dársena del Gualdaquivir), Spain",harmonics_puertos_spain.txt,17,8684,0.2162,1.15,-50,0.008,2.891,Portugal_CMEMS,0,nein
-Sevilla2TG.csv,37.3185,-6.0077,2024,"Sevilla (Esclusa), Spain",harmonics_puertos_spain.txt,1741,8684,0.2367,1.165,-50,-0.715,2.716,Portugal_CMEMS,0,nein
+Sevilla2TG.csv,37.3185,-6.0077,2024,"Sevilla (Dársena del Gualdaquivir), Spain",harmonics_ticon4_worldwide.txt,0,8684,0.2003,1.086,10,0.602,2.907,Portugal_CMEMS,1,nein
+Sevilla2TG.csv,37.3185,-6.0077,2024,"Sevilla (Dársena del Gualdaquivir), Spain",harmonics_puertos_spain.txt,17,8684,0.2162,1.15,10,0.008,2.891,Portugal_CMEMS,0,nein
+Sevilla2TG.csv,37.3185,-6.0077,2024,"Sevilla (Esclusa), Spain",harmonics_puertos_spain.txt,1741,8684,0.2367,1.165,10,-0.715,2.716,Portugal_CMEMS,0,nein
 221_Simons_Town.csv,-34.1866,18.4366,2018,"Simon's Town, South Africa",harmonics_att_np203_secondary.txt,0,8570,0.0934,0.376,0,0.099,1.813,SouthAfrica_UHSLC,0,nein
 221_Simons_Town.csv,-34.1866,18.4366,2018,"Simon's Town, South Africa",harmonics_noaa_eutt.txt,0,8570,0.1061,0.4,0,0.033,1.749,SouthAfrica_UHSLC,0,nein
 221_Simons_Town.csv,-34.1866,18.4366,2018,"Simon's Town, South Africa",harmonics_ticon4_worldwide.txt,0,8570,0.0853,0.351,0,1.099,1.918,SouthAfrica_UHSLC,1,nein
