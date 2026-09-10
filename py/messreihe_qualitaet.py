@@ -66,6 +66,17 @@ MIND_PUNKTE = 2000
 MIND_PUNKTE_TAFEL = 600
 TAFELREIHEN = ('NewZealand_LINZ', 'UK_tidetimes')
 
+# Reihen mit nachgewiesenem Zeitfehler -- sie duerfen nie Massstab sein,
+# sonst loescht die Zeitregel in dubletten_aufraeumen.py den richtigen Satz.
+GESPERRT = {
+    # UHSLC 329 Quarry Bay, Hong Kong (fast und rqds, 2015-2026): jedes Jahr
+    # exakt 60 min frueher als die HKO-Vorhersage, die Indian Tide Tables und
+    # die NOAA-Tafel. FES2022 (Altimetrie, unabhaengig) sieht den TICON-Satz
+    # aus dieser Reihe 43-53 min zu frueh, waehrend es 50 andere UHSLC-Saetze
+    # der Region meist auf +-15 min trifft. Geprueft am 10.09.2026.
+    '329_Quarry_Bay.csv', '329a_Quarry_Bay_rqds.csv',
+}
+
 
 def kopfdaten():
     """-> {(datei, zeile): (station_id_context, fitzeitraum, quelle)}."""
@@ -116,6 +127,8 @@ def reihendateien(nur=None):
         rel = os.path.relpath(pfad, REIHEN)
         ordner = rel.split(os.sep)[0]
         if nur and nur != ordner:
+            continue
+        if os.path.basename(pfad) in GESPERRT:
             continue
         stamm = os.path.splitext(os.path.basename(pfad))[0]
         teile = [t for t in re.split(r'[_\-. ]', stamm) if t]
@@ -794,6 +807,49 @@ def npz_reihen(nur=None):
     return out
 
 
+def uhslc_kennung_reihen(nur=None, schon=()):
+    """UHSLC-Reihen ueber die Kennung im Satzkopf ("# uhslc_id: 329").
+
+    Die Zuordnung ueber station_id_context greift nur bei Saetzen, die wir
+    selbst aus einer UHSLC-Reihe gefittet haben. Quarry Bay (Hong Kong)
+    hatte zwei Saetze mit uhslc_id 329 -- TICON und uTide aus HKO-Tafeln --,
+    aber keinen, der die Reihe im station_id_context nennt, und blieb
+    deshalb ungemessen, waehrend TICON dort 63 min neben den Tafeln lag
+    (10.09.2026). Verankert wird an der Position des ersten Satzes, der
+    die Kennung traegt; eigen ist hier keiner, es sei denn, sein
+    Quellenvermerk nennt UHSLC.
+    """
+    dateien = {}
+    for pfad in sorted(glob.glob(os.path.join(REIHEN, '*UHSLC*', '*.csv'))):
+        ordner = os.path.relpath(pfad, REIHEN).split(os.sep)[0]
+        if (nur and nur != ordner) or os.path.basename(pfad) in GESPERRT:
+            continue
+        m = re.match(r'(?:uhslc_|h)?(\d+)(?:[_a-z]|$)', os.path.basename(pfad), re.I)
+        if m:
+            dateien.setdefault(int(m.group(1)), pfad)
+    out, benutzt = [], set(schon)
+    for path in active_files():
+        lines = open(os.path.join(ROOT, path), encoding='iso-8859-1').read().split('\n')
+        kennung = lat = lon = None
+        for k, line in enumerate(lines):
+            if line.startswith('# uhslc_id:'):
+                t = line.split(':', 1)[1].strip()
+                kennung = int(t) if t.isdigit() else None
+            elif line.startswith('# !latitude:'):
+                lat = float(line.split(':', 1)[1])
+            elif line.startswith('# !longitude:'):
+                lon = float(line.split(':', 1)[1])
+            elif line and not line.startswith('#') and k + 1 < len(lines) \
+                    and MERIDIAN.match(lines[k + 1]):
+                pfad = dateien.get(kennung)
+                if pfad and pfad not in benutzt and lat is not None:
+                    benutzt.add(pfad)
+                    out.append((dict(lat=lat, lon=lon, name=f'UHSLC {kennung}',
+                                     file='(UHSLC)', line=0), pfad, None, 'UHSLC'))
+                kennung = lat = lon = None
+    return out
+
+
 def main(argv):
     import numpy as np
     umkreis = float(argv[argv.index('--km') + 1]) if '--km' in argv else 3.0
@@ -825,6 +881,7 @@ def main(argv):
     anker += linz_reihen(nur)
     anker += ea_reihen(nur)
     anker += tidetimes_reihen(nur)
+    anker += uhslc_kennung_reihen(nur, {p for _a, p, _f, _b in anker})
     print(f'{len(anker)} Reihen zugeordnet, Umkreis {umkreis:.0f} km, '
           f'{tage} Tage Fenster', file=sys.stderr)
 
