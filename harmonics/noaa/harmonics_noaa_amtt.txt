@@ -38866,7 +38866,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4929
 # noaa_uid: ectt-4929
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4929). M2=0.34 S2=0.02 k=1.16 dt=-100min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4929). M2=0.34 S2=0.04 k=0.41 dt=-100min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
@@ -38878,46 +38878,59 @@ x 0 0
 # note: 20260907 Land im Namen berichtigt (vorher "Macuro, Trinidad and Tobago"):
 # note: -- Macuro liegt auf der Halbinsel Paria in Venezuela (Sucre),
 # note: -- rund 40 km von Trinidad. Von Hand entschieden.
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Das Buch druckt fuer den Block 60 30' W, fuer den Bezugsort
+# note: -- im selben Block 67 30' W; gemessen gilt 67 30' W.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Macuro, Venezuela
--06:00 :America/Caracas
++00:00 :America/Caracas
 0.4267 meters
-J1              0.0140  254.12
-K1              0.1701  256.03
-K2              0.0058  254.16
-L2              0.0093  249.39
-M1              0.0128  257.94
-M2              0.3355  233.69
+J1              0.0048  238.63
+K1              0.0519  232.32
+K2              0.0105  247.71
+L2              0.0195  214.15
 x 0 0
-M4              0.0315  2.29
+M2              0.3439  221.48
+M3              0.0037  61.76
+M4              0.0271  325.75
+M6              0.0002  1.77
+M8              0.0000  164.91
+N2              0.0649  201.91
 x 0 0
+O1              0.0360  222.48
+OO1             0.0017  224.85
+P1              0.0155  238.51
+Q1              0.0049  211.17
 x 0 0
-N2              0.0699  218.00
+R2              0.0006  294.57
 x 0 0
-O1              0.1747  259.96
-OO1             0.0082  252.00
-P1              0.0524  258.87
-Q1              0.0408  252.37
+S2              0.0432  253.42
+S4              0.0004  285.45
 x 0 0
+T2              0.0059  256.43
+LDA2            0.0028  192.44
+MU2             0.0058  308.75
+NU2             0.0125  210.27
+RHO1            0.0011  212.54
+MK3             0.0006  278.84
 x 0 0
-S1              0.0128  278.20
-S2              0.0213  249.90
+MN4             0.0004  326.51
+MS4             0.0005  8.89
 x 0 0
+MF              0.0022  154.06
+MSF             0.0004  9.49
+MM              0.0013  226.70
 x 0 0
-T2              0.0058  250.17
-LDA2            0.0023  241.21
-MU2             0.0082  192.09
-NU2             0.0140  220.18
-RHO1            0.0070  261.75
+SSA             0.0559  78.02
 x 0 0
 x 0 0
-MN4             0.0093  210.89
-MS4             0.0082  217.69
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.13
-SSA             0.0570  64.36
 x 0 0
 x 0 0
 x 0 0
@@ -38932,25 +38945,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0001  296.28
+CHI1            0.0006  32.72
+H1              0.0004  187.87
+H2              0.0004  286.71
 x 0 0
+ETA2            0.0005  159.83
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0003  127.27
+MKS2            0.0005  36.79
 x 0 0
+EPS2            0.0014  97.40
+MO3             0.0005  252.74
 x 0 0
+TAU1            0.0003  321.79
 x 0 0
+MSK6            0.0004  104.78
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0062  217.96
+OP2             0.0006  1.77
 x 0 0
+PHI1            0.0002  208.95
 x 0 0
+PI1             0.0006  18.09
 x 0 0
+PSI1            0.0004  206.31
 x 0 0
 x 0 0
+SIG1            0.0006  66.26
+SK3             0.0002  127.56
 x 0 0
+SN4             0.0006  200.29
 x 0 0
+SO1             0.0006  25.62
+SO3             0.0007  150.72
+THE1            0.0005  104.82
 x 0 0
 x 0 0
 x 0 0
@@ -38961,38 +38996,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0000  200.71
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  322.76
 x 0 0
 x 0 0
 x 0 0
@@ -39061,7 +39068,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4931
 # noaa_uid: ectt-4931
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4931). M2=0.50 S2=0.04 k=1.75 dt=-63min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4931). M2=0.52 S2=0.08 k=0.61 dt=-63min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -39072,46 +39079,59 @@ x 0 0
 # admin1_quelle: Ufer 46.4 km
 # note: 20260907 Land im Namen berichtigt (vorher "Puerto de Hierro, Trinidad and Tobago"),
 # note: -- die Position liegt in Venezuela (Sucre); von Hand entschieden.
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Das Buch druckt fuer den Block 60 30' W, fuer den Bezugsort
+# note: -- im selben Block 67 30' W; gemessen gilt 67 30' W.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Puerto de Hierro, Venezuela
--06:00 :America/Caracas
++00:00 :America/Caracas
 0.6096 meters
-J1              0.0210  263.87
-K1              0.2551  265.43
-K2              0.0104  272.96
-L2              0.0140  267.84
-M1              0.0192  267.00
-M2              0.5032  251.81
+J1              0.0071  248.38
+K1              0.0779  241.72
+K2              0.0190  266.51
+L2              0.0293  232.60
 x 0 0
-M4              0.0472  38.52
+M2              0.5158  239.60
+M3              0.0055  88.93
+M4              0.0406  1.98
+M6              0.0003  56.11
+M8              0.0001  237.37
+N2              0.0974  219.69
 x 0 0
+O1              0.0540  231.20
+OO1             0.0026  234.94
+P1              0.0232  247.86
+Q1              0.0074  219.54
 x 0 0
-N2              0.1048  235.78
+R2              0.0009  313.35
 x 0 0
-O1              0.2621  268.68
-OO1             0.0122  262.09
-P1              0.0786  268.22
-Q1              0.0612  260.74
+S2              0.0778  272.17
+S4              0.0005  322.95
 x 0 0
+T2              0.0089  275.15
+LDA2            0.0043  210.85
+MU2             0.0086  326.23
+NU2             0.0188  228.09
+RHO1            0.0017  220.96
+MK3             0.0009  306.36
 x 0 0
-S1              0.0192  287.57
-S2              0.0383  268.65
+MN4             0.0005  2.40
+MS4             0.0008  45.76
 x 0 0
+MF              0.0022  154.75
+MSF             0.0004  10.12
+MM              0.0013  227.04
 x 0 0
-T2              0.0087  268.89
-LDA2            0.0035  259.62
-MU2             0.0122  209.57
-NU2             0.0210  238.00
-RHO1            0.0105  270.17
+SSA             0.0559  78.07
 x 0 0
 x 0 0
-MN4             0.0140  246.78
-MS4             0.0122  254.56
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.16
-SSA             0.0570  64.41
 x 0 0
 x 0 0
 x 0 0
@@ -39126,25 +39146,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0001  305.28
+CHI1            0.0009  41.82
+H1              0.0005  205.96
+H2              0.0005  304.86
 x 0 0
+ETA2            0.0007  178.97
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0004  164.18
+MKS2            0.0008  54.95
 x 0 0
+EPS2            0.0021  114.54
+MO3             0.0007  279.57
 x 0 0
+TAU1            0.0004  330.56
 x 0 0
+MSK6            0.0006  160.44
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0093  227.02
+OP2             0.0009  19.83
 x 0 0
+PHI1            0.0004  218.41
 x 0 0
+PI1             0.0009  27.41
 x 0 0
+PSI1            0.0005  215.74
 x 0 0
 x 0 0
+SIG1            0.0010  74.34
+SK3             0.0003  155.71
 x 0 0
+SN4             0.0010  236.82
 x 0 0
+SO1             0.0009  35.65
+SO3             0.0011  178.19
+THE1            0.0008  114.51
 x 0 0
 x 0 0
 x 0 0
@@ -39155,38 +39197,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  227.20
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  358.31
 x 0 0
 x 0 0
 x 0 0
@@ -39255,55 +39269,68 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4933
 # noaa_uid: ectt-4933
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4933). M2=0.70 S2=0.05 k=2.44 dt=-34min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4933). M2=0.72 S2=0.10 k=0.85 dt=-34min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -62.5167
 # !latitude: 10.3000
 # state: Monagas
 # admin1_quelle: Ufer 10.6 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Das Buch druckt fuer den Block 60 30' W, fuer den Bezugsort
+# note: -- im selben Block 67 30' W; gemessen gilt 67 30' W.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Barra de Maturín, channel entrance, Venezuela
--06:00 :America/Caracas
++00:00 :America/Caracas
 0.8534 meters
-J1              0.0292  271.40
-K1              0.3556  272.70
-K2              0.0128  287.50
-L2              0.0195  282.11
-M1              0.0268  274.01
-M2              0.7015  265.82
+J1              0.0099  255.91
+K1              0.1086  248.99
+K2              0.0232  281.05
+L2              0.0408  246.87
 x 0 0
-M4              0.0658  66.53
+M2              0.7190  253.61
+M3              0.0076  109.95
+M4              0.0566  29.99
+M6              0.0004  98.14
+M8              0.0001  293.41
+N2              0.1358  233.43
 x 0 0
+O1              0.0752  237.94
+OO1             0.0037  242.74
+P1              0.0324  255.09
+Q1              0.0103  226.02
 x 0 0
-N2              0.1461  249.52
+R2              0.0013  327.87
 x 0 0
-O1              0.3654  275.42
-OO1             0.0171  269.89
-P1              0.1096  275.45
-Q1              0.0853  267.22
+S2              0.0951  286.67
+S4              0.0008  351.95
 x 0 0
+T2              0.0124  289.63
+LDA2            0.0059  225.08
+MU2             0.0121  339.74
+NU2             0.0262  241.87
+RHO1            0.0024  227.47
+MK3             0.0012  327.64
 x 0 0
-S1              0.0268  294.82
-S2              0.0468  283.15
+MN4             0.0008  30.16
+MS4             0.0011  74.27
 x 0 0
+MF              0.0022  155.28
+MSF             0.0004  10.61
+MM              0.0013  227.31
 x 0 0
-T2              0.0122  283.37
-LDA2            0.0049  273.85
-MU2             0.0171  223.08
-NU2             0.0292  251.78
-RHO1            0.0146  276.68
+SSA             0.0559  78.11
 x 0 0
 x 0 0
-MN4             0.0195  274.54
-MS4             0.0171  283.07
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.18
-SSA             0.0570  64.45
 x 0 0
 x 0 0
 x 0 0
@@ -39318,25 +39345,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0002  312.25
+CHI1            0.0013  48.87
+H1              0.0008  219.95
+H2              0.0008  318.88
 x 0 0
+ETA2            0.0010  193.77
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0006  192.73
+MKS2            0.0011  69.00
 x 0 0
+EPS2            0.0030  127.80
+MO3             0.0010  300.32
 x 0 0
+TAU1            0.0006  337.34
 x 0 0
+MSK6            0.0008  203.49
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0129  234.03
+OP2             0.0013  33.80
 x 0 0
+PHI1            0.0005  225.72
 x 0 0
+PI1             0.0012  34.62
 x 0 0
+PSI1            0.0008  223.03
 x 0 0
 x 0 0
+SIG1            0.0014  80.59
+SK3             0.0004  177.48
 x 0 0
+SN4             0.0014  265.06
 x 0 0
+SO1             0.0013  43.41
+SO3             0.0015  199.43
+THE1            0.0011  122.01
 x 0 0
 x 0 0
 x 0 0
@@ -39347,38 +39396,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  247.69
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  25.80
 x 0 0
 x 0 0
 x 0 0
@@ -39447,55 +39468,68 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4937
 # noaa_uid: ectt-4937
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4937). M2=0.66 S2=0.05 k=2.28 dt=-18min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4937). M2=0.67 S2=0.10 k=0.79 dt=-18min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -62.2000
 # !latitude: 10.0167
 # state: Delta Amacuro
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Das Buch druckt fuer den Block 60 30' W, fuer den Bezugsort
+# note: -- im selben Block 67 30' W; gemessen gilt 67 30' W.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Boca Pedernales entrance, Venezuela
--06:00 :America/Caracas
++00:00 :America/Caracas
 0.7925 meters
-J1              0.0273  275.29
-K1              0.3324  276.46
-K2              0.0128  295.02
-L2              0.0182  289.50
-M1              0.0250  277.63
-M2              0.6557  273.06
+J1              0.0093  259.80
+K1              0.1015  252.75
+K2              0.0232  288.57
+L2              0.0382  254.26
 x 0 0
-M4              0.0615  81.03
+M2              0.6721  260.85
+M3              0.0071  120.81
+M4              0.0529  44.49
+M6              0.0004  119.88
+M8              0.0001  322.39
+N2              0.1269  240.54
 x 0 0
+O1              0.0703  241.42
+OO1             0.0034  246.77
+P1              0.0302  258.83
+Q1              0.0096  229.37
 x 0 0
-N2              0.1366  256.63
+R2              0.0012  335.38
 x 0 0
-O1              0.3415  278.90
-OO1             0.0159  273.92
-P1              0.1025  279.19
-Q1              0.0797  270.57
+S2              0.0951  294.17
+S4              0.0007  6.95
 x 0 0
+T2              0.0116  297.12
+LDA2            0.0056  232.45
+MU2             0.0113  346.74
+NU2             0.0245  249.00
+RHO1            0.0022  230.84
+MK3             0.0011  338.65
 x 0 0
-S1              0.0250  298.57
-S2              0.0468  290.65
+MN4             0.0007  44.51
+MS4             0.0010  89.01
 x 0 0
+MF              0.0022  155.55
+MSF             0.0004  10.87
+MM              0.0013  227.44
 x 0 0
-T2              0.0114  290.86
-LDA2            0.0046  281.22
-MU2             0.0159  230.08
-NU2             0.0273  258.91
-RHO1            0.0137  280.05
+SSA             0.0559  78.13
 x 0 0
 x 0 0
-MN4             0.0182  288.89
-MS4             0.0159  297.81
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.19
-SSA             0.0570  64.47
 x 0 0
 x 0 0
 x 0 0
@@ -39510,25 +39544,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0002  315.86
+CHI1            0.0012  52.51
+H1              0.0007  227.19
+H2              0.0007  326.14
 x 0 0
+ETA2            0.0010  201.43
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0006  207.50
+MKS2            0.0010  76.27
 x 0 0
+EPS2            0.0028  134.65
+MO3             0.0010  311.05
 x 0 0
+TAU1            0.0006  340.85
 x 0 0
+MSK6            0.0008  225.76
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0121  237.65
+OP2             0.0012  41.03
 x 0 0
+PHI1            0.0005  229.50
 x 0 0
+PI1             0.0011  38.35
 x 0 0
+PSI1            0.0007  226.80
 x 0 0
 x 0 0
+SIG1            0.0013  83.82
+SK3             0.0004  188.74
 x 0 0
+SN4             0.0013  279.67
 x 0 0
+SO1             0.0012  47.43
+SO3             0.0014  210.41
+THE1            0.0010  125.89
 x 0 0
 x 0 0
 x 0 0
@@ -39539,38 +39595,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  258.28
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  40.02
 x 0 0
 x 0 0
 x 0 0
@@ -39639,55 +39667,68 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4939
 # noaa_uid: ectt-4939
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4939). M2=0.76 S2=0.07 k=2.65 dt=-2min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4939). M2=0.78 S2=0.15 k=0.92 dt=-2min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -60.5833
 # !latitude: 8.6500
 # state: Isla Ramon Isidro
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Das Buch druckt fuer den Block 60 30' W, fuer den Bezugsort
+# note: -- im selben Block 67 30' W; gemessen gilt 67 30' W.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Río Orinoco entrance, Isla Ramon Isidro, Venezuela
--06:00 :America/Caracas
++00:00 :America/Caracas
 1.1582 meters
-J1              0.0318  279.45
-K1              0.3865  280.47
-K2              0.0197  303.05
-L2              0.0212  297.37
-M1              0.0291  281.50
-M2              0.7625  280.79
+J1              0.0108  263.96
+K1              0.1180  256.76
+K2              0.0358  296.60
+L2              0.0444  262.13
 x 0 0
-M4              0.0715  96.48
+M2              0.7815  268.58
+M3              0.0083  132.41
+M4              0.0616  59.94
+M6              0.0005  143.07
+M8              0.0001  353.31
+N2              0.1476  248.13
 x 0 0
+O1              0.0818  245.14
+OO1             0.0040  251.08
+P1              0.0352  262.82
+Q1              0.0112  232.94
 x 0 0
-N2              0.1589  264.22
+R2              0.0014  343.39
 x 0 0
-O1              0.3971  282.62
-OO1             0.0185  278.23
-P1              0.1191  283.18
-Q1              0.0927  274.14
+S2              0.1470  302.17
+S4              0.0008  22.95
 x 0 0
+T2              0.0135  305.11
+LDA2            0.0065  240.30
+MU2             0.0131  354.19
+NU2             0.0285  256.60
+RHO1            0.0026  234.43
+MK3             0.0013  350.39
 x 0 0
-S1              0.0291  302.57
-S2              0.0723  298.65
+MN4             0.0008  59.83
+MS4             0.0012  104.74
 x 0 0
+MF              0.0022  155.84
+MSF             0.0004  11.14
+MM              0.0013  227.59
 x 0 0
-T2              0.0132  298.85
-LDA2            0.0053  289.07
-MU2             0.0185  237.53
-NU2             0.0318  266.51
-RHO1            0.0159  283.64
+SSA             0.0559  78.16
 x 0 0
 x 0 0
-MN4             0.0212  304.21
-MS4             0.0185  313.54
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.20
-SSA             0.0570  64.50
 x 0 0
 x 0 0
 x 0 0
@@ -39702,25 +39743,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0002  319.70
+CHI1            0.0014  56.39
+H1              0.0008  234.90
+H2              0.0008  333.88
 x 0 0
+ETA2            0.0011  209.59
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0006  223.25
+MKS2            0.0012  84.02
 x 0 0
+EPS2            0.0032  141.97
+MO3             0.0011  322.50
 x 0 0
+TAU1            0.0006  344.59
 x 0 0
+MSK6            0.0009  249.51
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0140  241.52
+OP2             0.0014  48.74
 x 0 0
+PHI1            0.0006  233.53
 x 0 0
+PI1             0.0013  42.33
 x 0 0
+PSI1            0.0008  230.82
 x 0 0
 x 0 0
+SIG1            0.0015  87.27
+SK3             0.0005  200.75
 x 0 0
+SN4             0.0015  295.26
 x 0 0
+SO1             0.0014  51.71
+SO3             0.0017  222.13
+THE1            0.0012  130.02
 x 0 0
 x 0 0
 x 0 0
@@ -39731,38 +39794,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  269.58
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  55.19
 x 0 0
 x 0 0
 x 0 0
@@ -39831,7 +39866,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4941
 # noaa_uid: ectt-4941
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4941). M2=0.29 S2=0.03 k=1.01 dt=-64min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4941). M2=0.30 S2=0.05 k=0.35 dt=-64min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
@@ -39840,46 +39875,57 @@ x 0 0
 # !latitude: 10.6833
 # region: Diego Martin
 # admin1_quelle: Ufer 0.5 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches -0.50 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Staubles Bay, Trinidad and Tobago
--06:00 :America/Port_of_Spain
++00:00 :America/Port_of_Spain
 0.8534 meters
-J1              0.0121  263.35
-K1              0.1469  264.93
-K2              0.0070  271.96
-L2              0.0080  266.86
-M1              0.0111  266.52
-M2              0.2897  250.84
+J1              0.0041  240.07
+K1              0.0449  233.70
+K2              0.0126  250.47
+L2              0.0169  216.86
 x 0 0
-M4              0.0272  36.58
+M2              0.2970  224.14
+M3              0.0032  65.74
+M4              0.0234  331.06
+M6              0.0002  9.74
+M8              0.0000  175.54
+N2              0.0561  204.52
 x 0 0
+O1              0.0311  223.76
+OO1             0.0015  226.33
+P1              0.0134  239.88
+Q1              0.0042  212.40
 x 0 0
-N2              0.0604  234.83
+R2              0.0005  297.33
 x 0 0
-O1              0.1509  268.21
-OO1             0.0070  261.55
-P1              0.0453  267.72
-Q1              0.0352  260.30
+S2              0.0519  256.17
+S4              0.0003  290.95
 x 0 0
+T2              0.0051  259.17
+LDA2            0.0025  195.14
+MU2             0.0050  311.31
+NU2             0.0108  212.88
+RHO1            0.0010  213.77
+MK3             0.0005  282.88
 x 0 0
-S1              0.0111  287.07
-S2              0.0255  267.65
+MN4             0.0003  331.78
+MS4             0.0005  14.30
 x 0 0
+MF              0.0022  154.16
+MSF             0.0004  9.58
+MM              0.0013  226.75
 x 0 0
-T2              0.0050  267.89
-LDA2            0.0020  258.64
-MU2             0.0070  208.63
-NU2             0.0121  237.05
-RHO1            0.0060  269.72
+SSA             0.0559  78.03
 x 0 0
 x 0 0
-MN4             0.0080  244.87
-MS4             0.0070  252.59
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.16
-SSA             0.0570  64.41
 x 0 0
 x 0 0
 x 0 0
@@ -39894,25 +39940,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0001  297.59
+CHI1            0.0005  34.06
+H1              0.0003  190.53
+H2              0.0003  289.38
 x 0 0
+ETA2            0.0004  162.64
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0002  132.68
+MKS2            0.0005  39.45
 x 0 0
+EPS2            0.0012  99.92
+MO3             0.0004  256.68
 x 0 0
+TAU1            0.0002  323.08
 x 0 0
+MSK6            0.0004  112.94
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0053  219.29
+OP2             0.0005  4.42
 x 0 0
+PHI1            0.0002  210.34
 x 0 0
+PI1             0.0005  19.45
 x 0 0
+PSI1            0.0003  207.70
 x 0 0
 x 0 0
+SIG1            0.0006  67.45
+SK3             0.0002  131.69
 x 0 0
+SN4             0.0006  205.65
 x 0 0
+SO1             0.0005  27.09
+SO3             0.0006  154.75
+THE1            0.0005  106.23
 x 0 0
 x 0 0
 x 0 0
@@ -39923,38 +39991,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0000  204.60
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  327.97
 x 0 0
 x 0 0
 x 0 0
@@ -40023,7 +40063,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4947
 # noaa_uid: ectt-4947
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4947). M2=0.52 S2=0.04 k=1.80 dt=-29min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4947). M2=0.53 S2=0.09 k=0.63 dt=-29min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -40032,46 +40072,57 @@ x 0 0
 # !latitude: 10.0833
 # region: Siparia
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches -0.50 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Bonasse pier, Trinidad and Tobago
--06:00 :America/Port_of_Spain
++00:00 :America/Port_of_Spain
 1.0363 meters
-J1              0.0216  272.57
-K1              0.2628  273.83
-K2              0.0116  289.76
-L2              0.0144  284.33
-M1              0.0198  275.09
-M2              0.5185  267.99
+J1              0.0073  249.29
+K1              0.0803  242.60
+K2              0.0211  268.27
+L2              0.0302  234.33
 x 0 0
-M4              0.0486  70.88
+M2              0.5315  241.29
+M3              0.0056  91.47
+M4              0.0419  5.36
+M6              0.0003  61.18
+M8              0.0001  244.13
+N2              0.1004  221.34
 x 0 0
+O1              0.0556  232.01
+OO1             0.0027  235.88
+P1              0.0239  248.73
+Q1              0.0076  220.32
 x 0 0
-N2              0.1080  251.65
+R2              0.0009  315.10
 x 0 0
-O1              0.2701  276.46
-OO1             0.0126  271.10
-P1              0.0810  276.57
-Q1              0.0630  268.22
+S2              0.0864  273.92
+S4              0.0006  326.45
 x 0 0
+T2              0.0092  276.90
+LDA2            0.0044  212.56
+MU2             0.0089  327.86
+NU2             0.0194  229.75
+RHO1            0.0018  221.74
+MK3             0.0009  308.93
 x 0 0
-S1              0.0198  295.95
-S2              0.0425  285.40
+MN4             0.0006  5.76
+MS4             0.0008  49.20
 x 0 0
+MF              0.0022  154.81
+MSF             0.0004  10.18
+MM              0.0013  227.08
 x 0 0
-T2              0.0090  285.62
-LDA2            0.0036  276.06
-MU2             0.0126  225.18
-NU2             0.0216  253.92
-RHO1            0.0108  277.69
+SSA             0.0559  78.08
 x 0 0
 x 0 0
-MN4             0.0144  278.85
-MS4             0.0126  287.49
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.18
-SSA             0.0570  64.46
 x 0 0
 x 0 0
 x 0 0
@@ -40086,25 +40137,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0001  306.12
+CHI1            0.0009  42.68
+H1              0.0006  207.65
+H2              0.0006  306.55
 x 0 0
+ETA2            0.0008  180.76
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0004  167.63
+MKS2            0.0008  56.65
 x 0 0
+EPS2            0.0022  116.15
+MO3             0.0008  282.08
 x 0 0
+TAU1            0.0004  331.38
 x 0 0
+MSK6            0.0006  165.64
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0095  227.86
+OP2             0.0009  21.52
 x 0 0
+PHI1            0.0004  219.29
 x 0 0
+PI1             0.0009  28.28
 x 0 0
+PSI1            0.0006  216.62
 x 0 0
 x 0 0
+SIG1            0.0010  75.10
+SK3             0.0003  158.34
 x 0 0
+SN4             0.0010  240.22
 x 0 0
+SO1             0.0009  36.59
+SO3             0.0011  180.75
+THE1            0.0008  115.41
 x 0 0
 x 0 0
 x 0 0
@@ -40115,38 +40188,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  229.67
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  1.63
 x 0 0
 x 0 0
 x 0 0
@@ -40215,55 +40260,66 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4949
 # noaa_uid: ectt-4949
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4949). M2=0.66 S2=0.06 k=2.28 dt=-46min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4949). M2=0.67 S2=0.11 k=0.79 dt=-46min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -61.6500
 # !latitude: 10.0667
 # region: Siparia
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches -0.50 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Erin Bay, Trinidad and Tobago
--06:00 :America/Port_of_Spain
++00:00 :America/Port_of_Spain
 1.0973 meters
-J1              0.0273  268.28
-K1              0.3324  269.69
-K2              0.0151  281.49
-L2              0.0182  276.21
-M1              0.0250  271.11
-M2              0.6557  260.02
+J1              0.0093  245.00
+K1              0.1015  238.46
+K2              0.0274  260.00
+L2              0.0382  226.21
 x 0 0
-M4              0.0615  54.94
+M2              0.6721  233.32
+M3              0.0071  79.51
+M4              0.0529  349.42
+M6              0.0004  37.27
+M8              0.0001  212.25
+N2              0.1269  213.52
 x 0 0
+O1              0.0703  228.18
+OO1             0.0034  231.44
+P1              0.0302  244.62
+Q1              0.0096  216.64
 x 0 0
-N2              0.1366  243.83
+R2              0.0012  306.84
 x 0 0
-O1              0.3415  272.63
-OO1             0.0159  266.66
-P1              0.1025  272.46
-Q1              0.0797  264.54
+S2              0.1124  265.67
+S4              0.0007  309.95
 x 0 0
+T2              0.0116  268.66
+LDA2            0.0056  204.46
+MU2             0.0113  320.17
+NU2             0.0245  221.91
+RHO1            0.0022  218.03
+MK3             0.0011  296.82
 x 0 0
-S1              0.0250  291.82
-S2              0.0553  277.15
+MN4             0.0007  349.96
+MS4             0.0010  32.98
 x 0 0
+MF              0.0022  154.51
+MSF             0.0004  9.90
+MM              0.0013  226.93
 x 0 0
-T2              0.0114  277.38
-LDA2            0.0046  267.96
-MU2             0.0159  217.49
-NU2             0.0273  246.08
-RHO1            0.0137  273.98
+SSA             0.0559  78.06
 x 0 0
 x 0 0
-MN4             0.0182  263.05
-MS4             0.0159  271.27
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.17
-SSA             0.0570  64.44
 x 0 0
 x 0 0
 x 0 0
@@ -40278,25 +40334,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0002  302.16
+CHI1            0.0012  38.67
+H1              0.0007  199.69
+H2              0.0007  298.57
 x 0 0
+ETA2            0.0010  172.33
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0006  151.39
+MKS2            0.0010  48.66
 x 0 0
+EPS2            0.0028  108.60
+MO3             0.0010  270.28
 x 0 0
+TAU1            0.0006  327.52
 x 0 0
+MSK6            0.0008  141.15
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0121  223.88
+OP2             0.0012  13.57
 x 0 0
+PHI1            0.0005  215.13
 x 0 0
+PI1             0.0011  24.18
 x 0 0
+PSI1            0.0007  212.47
 x 0 0
 x 0 0
+SIG1            0.0013  71.55
+SK3             0.0004  145.95
 x 0 0
+SN4             0.0013  224.15
 x 0 0
+SO1             0.0012  32.17
+SO3             0.0014  168.67
+THE1            0.0010  111.15
 x 0 0
 x 0 0
 x 0 0
@@ -40307,38 +40385,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  218.02
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  345.99
 x 0 0
 x 0 0
 x 0 0
@@ -40601,7 +40651,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4951
 # noaa_uid: ectt-4951
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4951). M2=0.47 S2=0.03 k=1.64 dt=-80min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4951). M2=0.48 S2=0.06 k=0.57 dt=-80min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -40610,46 +40660,57 @@ x 0 0
 # !latitude: 10.1500
 # region: Rio Claro-Mayaro
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches -0.50 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Guayaguayare Bay, Trinidad and Tobago
--06:00 :America/Port_of_Spain
++00:00 :America/Port_of_Spain
 0.9144 meters
-J1              0.0197  259.19
-K1              0.2397  260.92
-K2              0.0081  263.94
-L2              0.0131  258.98
-M1              0.0181  262.65
-M2              0.4727  243.11
+J1              0.0067  235.91
+K1              0.0732  229.69
+K2              0.0147  242.45
+L2              0.0275  208.98
 x 0 0
-M4              0.0443  21.13
+M2              0.4846  216.41
+M3              0.0052  54.15
+M4              0.0382  315.61
+M6              0.0003  346.55
+M8              0.0001  144.62
+N2              0.0915  196.93
 x 0 0
+O1              0.0507  220.04
+OO1             0.0025  222.03
+P1              0.0218  235.89
+Q1              0.0069  208.82
 x 0 0
-N2              0.0985  227.24
+R2              0.0009  289.31
 x 0 0
-O1              0.2462  264.49
-OO1             0.0115  257.25
-P1              0.0739  263.73
-Q1              0.0575  256.72
+S2              0.0605  248.17
+S4              0.0005  274.95
 x 0 0
+T2              0.0084  251.19
+LDA2            0.0040  187.28
+MU2             0.0081  303.86
+NU2             0.0177  205.28
+RHO1            0.0016  210.18
+MK3             0.0008  271.14
 x 0 0
-S1              0.0181  283.07
-S2              0.0298  259.65
+MN4             0.0005  316.47
+MS4             0.0007  358.57
 x 0 0
+MF              0.0022  153.87
+MSF             0.0004  9.31
+MM              0.0013  226.61
 x 0 0
-T2              0.0082  259.91
-LDA2            0.0033  250.78
-MU2             0.0115  201.18
-NU2             0.0197  229.45
-RHO1            0.0098  266.13
+SSA             0.0559  78.01
 x 0 0
 x 0 0
-MN4             0.0131  229.56
-MS4             0.0115  236.86
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.14
-SSA             0.0570  64.39
 x 0 0
 x 0 0
 x 0 0
@@ -40664,25 +40725,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0001  293.75
+CHI1            0.0009  30.17
+H1              0.0005  182.81
+H2              0.0005  281.64
 x 0 0
+ETA2            0.0007  154.47
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0004  116.93
+MKS2            0.0007  31.70
 x 0 0
+EPS2            0.0020  92.61
+MO3             0.0007  245.24
 x 0 0
+TAU1            0.0004  319.34
 x 0 0
+MSK6            0.0006  89.19
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0087  215.42
+OP2             0.0009  356.71
 x 0 0
+PHI1            0.0003  206.31
 x 0 0
+PI1             0.0008  15.48
 x 0 0
+PSI1            0.0005  203.67
 x 0 0
 x 0 0
+SIG1            0.0009  64.01
+SK3             0.0003  119.68
 x 0 0
+SN4             0.0009  190.06
 x 0 0
+SO1             0.0009  22.81
+SO3             0.0010  143.03
+THE1            0.0007  102.10
 x 0 0
 x 0 0
 x 0 0
@@ -40693,38 +40776,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0001  193.30
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  312.81
 x 0 0
 x 0 0
 x 0 0
@@ -40793,7 +40848,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 4953
 # noaa_uid: ectt-4953
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Belize (no.4953). M2=0.37 S2=0.03 k=1.27 dt=-71min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Punta Gorda, Venezuela (no.4953). M2=0.38 S2=0.06 k=0.44 dt=-71min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -40802,46 +40857,57 @@ x 0 0
 # !latitude: 10.4000
 # region: Rio Claro-Mayaro
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
+# note: -- gemeint ist Punta Gorda, Rio San Juan, Venezuela; der Import hatte per
+# note: -- Namensgleichheit "Punta Gorda, Belize" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches -0.50 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Nariva River, Trinidad and Tobago
--06:00 :America/Port_of_Spain
++00:00 :America/Port_of_Spain
 0.7620 meters
-J1              0.0152  261.66
-K1              0.1855  263.30
-K2              0.0081  268.70
-L2              0.0102  263.66
-M1              0.0140  264.95
-M2              0.3660  247.70
+J1              0.0052  238.38
+K1              0.0567  232.07
+K2              0.0147  247.21
+L2              0.0213  213.66
 x 0 0
-M4              0.0343  30.30
+M2              0.3751  221.00
+M3              0.0040  61.03
+M4              0.0295  324.78
+M6              0.0002  0.32
+M8              0.0000  162.98
+N2              0.0708  201.44
 x 0 0
+O1              0.0393  222.25
+OO1             0.0019  224.58
+P1              0.0169  238.26
+Q1              0.0054  210.94
 x 0 0
-N2              0.0762  231.75
+R2              0.0007  294.07
 x 0 0
-O1              0.1906  266.70
-OO1             0.0089  259.80
-P1              0.0572  266.10
-Q1              0.0445  258.84
+S2              0.0605  252.92
+S4              0.0004  284.45
 x 0 0
+T2              0.0065  255.93
+LDA2            0.0031  191.94
+MU2             0.0063  308.28
+NU2             0.0137  209.79
+RHO1            0.0012  212.31
+MK3             0.0006  278.11
 x 0 0
-S1              0.0140  285.45
-S2              0.0298  264.40
+MN4             0.0004  325.56
+MS4             0.0006  7.91
 x 0 0
+MF              0.0022  154.04
+MSF             0.0004  9.47
+MM              0.0013  226.70
 x 0 0
-T2              0.0064  264.65
-LDA2            0.0025  255.44
-MU2             0.0089  205.60
-NU2             0.0152  233.96
-RHO1            0.0076  268.26
+SSA             0.0559  78.02
 x 0 0
 x 0 0
-MN4             0.0102  238.65
-MS4             0.0089  246.20
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.1300  184.15
-SSA             0.0570  64.40
 x 0 0
 x 0 0
 x 0 0
@@ -40856,25 +40922,47 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+BET1            0.0001  296.03
+CHI1            0.0007  32.48
+H1              0.0004  187.39
+H2              0.0004  286.23
 x 0 0
+ETA2            0.0005  159.32
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0003  126.28
+MKS2            0.0006  36.30
 x 0 0
+EPS2            0.0016  96.95
+MO3             0.0005  252.03
 x 0 0
+TAU1            0.0003  321.56
 x 0 0
+MSK6            0.0004  103.29
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0067  217.72
+OP2             0.0007  1.29
 x 0 0
+PHI1            0.0003  208.70
 x 0 0
+PI1             0.0006  17.84
 x 0 0
+PSI1            0.0004  206.06
 x 0 0
 x 0 0
+SIG1            0.0007  66.05
+SK3             0.0002  126.81
 x 0 0
+SN4             0.0007  199.32
 x 0 0
+SO1             0.0007  25.35
+SO3             0.0008  149.99
+THE1            0.0006  104.55
 x 0 0
 x 0 0
 x 0 0
@@ -40885,38 +40973,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0000  200.01
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  321.81
 x 0 0
 x 0 0
 x 0 0
@@ -49517,7 +49577,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 5095
 # noaa_uid: ectt-5095
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Pinamar, Buenos Aires, Argentina (no.5095). M2=0.33 S2=0.01 k=1.04 dt=-192min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina (no.5095). M2=0.31 S2=0.01 k=1.10 dt=-192min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
@@ -49527,36 +49587,55 @@ x 0 0
 # fixes: Gruppen-Shift -50min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # province: Buenos Aires
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Buenos Aires"
+# note: -- gemeint ist Buenos Aires, Rio de la Plata; der Import hatte per
+# note: -- Namensgleichheit "Pinamar, Buenos Aires, Argentina" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Banco Chico, Buenos Aires, Argentina
--03:00 :America/Buenos_Aires
++00:00 :America/Buenos_Aires
 1.0363 meters
-J1              0.0146  135.24
-K1              0.1490  87.34
-K2              0.0034  170.97
-L2              0.0094  122.90
-M1              0.0135  39.03
-M2              0.3272  105.10
+J1              0.0031  290.42
+K1              0.0907  29.63
+K2              0.0043  300.48
+L2              0.0249  246.49
+M1              0.0052  144.13
+M2              0.3133  195.89
+M3              0.0029  309.95
+M4              0.0313  275.31
+M6              0.0095  331.00
+M8              0.0025  42.63
+N2              0.1143  154.54
 x 0 0
+O1              0.1655  215.56
+OO1             0.0020  119.09
+P1              0.0423  22.34
+Q1              0.0422  173.74
 x 0 0
+R2              0.0053  62.49
+S1              0.0822  227.36
+S2              0.0116  272.65
+S4              0.0029  68.60
 x 0 0
+T2              0.0060  208.20
+LDA2            0.0136  246.21
+MU2             0.0031  47.96
+NU2             0.0252  160.99
+RHO1            0.0099  185.25
 x 0 0
-N2              0.0625  87.29
 x 0 0
-O1              0.1845  350.76
-OO1             0.0083  183.90
-P1              0.0490  80.06
-Q1              0.0354  332.95
+MN4             0.0196  250.57
+MS4             0.0156  352.64
 x 0 0
+MF              0.0159  146.35
+MSF             0.0267  83.53
+MM              0.0350  57.89
+SA              0.0800  312.38
+SSA             0.0271  355.31
 x 0 0
 x 0 0
-S2              0.0121  166.00
 x 0 0
 x 0 0
-T2              0.0042  163.56
-LDA2            0.0021  133.39
-MU2             0.0083  44.19
-NU2             0.0125  89.70
-RHO1            0.0073  309.36
 x 0 0
 x 0 0
 x 0 0
@@ -49584,7 +49663,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0020  121.22
 x 0 0
+EPS2            0.0026  242.90
 x 0 0
 x 0 0
 x 0 0
@@ -49603,6 +49684,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0011  49.84
+SIG1            0.0024  292.41
 x 0 0
 x 0 0
 x 0 0
@@ -49623,25 +49706,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0059  214.37
 x 0 0
 x 0 0
 x 0 0
@@ -49710,7 +49775,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 5097
 # noaa_uid: ectt-5097
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Pinamar, Buenos Aires, Argentina (no.5097). M2=0.33 S2=0.01 k=1.04 dt=-332min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina (no.5097). M2=0.31 S2=0.01 k=1.10 dt=-332min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
@@ -49720,36 +49785,55 @@ x 0 0
 # fixes: Gruppen-Shift -50min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # province: Buenos Aires
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Buenos Aires"
+# note: -- gemeint ist Buenos Aires, Rio de la Plata; der Import hatte per
+# note: -- Namensgleichheit "Pinamar, Buenos Aires, Argentina" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Banco Cuirassier, Buenos Aires, Argentina
--03:00 :America/Buenos_Aires
++00:00 :America/Buenos_Aires
 1.0363 meters
-J1              0.0146  98.87
-K1              0.1490  52.24
-K2              0.0034  100.78
-L2              0.0094  54.00
-M1              0.0135  5.20
-M2              0.3272  37.47
+J1              0.0031  254.05
+K1              0.0907  354.53
+K2              0.0043  230.29
+L2              0.0249  177.59
+M1              0.0052  110.30
+M2              0.3133  128.26
+M3              0.0029  208.50
+M4              0.0313  140.05
+M6              0.0095  128.11
+M8              0.0025  132.12
+N2              0.1143  88.18
 x 0 0
+O1              0.1655  183.03
+OO1             0.0020  81.44
+P1              0.0423  347.44
+Q1              0.0422  142.48
 x 0 0
+R2              0.0053  352.39
+S1              0.0822  192.36
+S2              0.0116  202.65
+S4              0.0029  288.60
 x 0 0
+T2              0.0060  138.30
+LDA2            0.0136  177.48
+MU2             0.0031  342.70
+NU2             0.0252  94.46
+RHO1            0.0099  153.82
 x 0 0
-N2              0.0625  20.93
 x 0 0
-O1              0.1845  318.23
-OO1             0.0083  146.25
-P1              0.0490  45.16
-Q1              0.0354  301.69
+MN4             0.0196  116.58
+MS4             0.0156  215.01
 x 0 0
+MF              0.0159  143.78
+MSF             0.0267  81.16
+MM              0.0350  56.62
+SA              0.0800  312.28
+SSA             0.0271  355.12
 x 0 0
 x 0 0
-S2              0.0121  96.00
 x 0 0
 x 0 0
-T2              0.0042  93.66
-LDA2            0.0021  64.66
-MU2             0.0083  338.93
-NU2             0.0125  23.17
-RHO1            0.0073  277.93
 x 0 0
 x 0 0
 x 0 0
@@ -49777,7 +49861,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0020  53.40
 x 0 0
+EPS2            0.0026  178.91
 x 0 0
 x 0 0
 x 0 0
@@ -49796,6 +49882,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0011  304.84
+SIG1            0.0024  262.25
 x 0 0
 x 0 0
 x 0 0
@@ -49816,25 +49904,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0059  81.65
 x 0 0
 x 0 0
 x 0 0
@@ -49903,7 +49973,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 5099
 # noaa_uid: ectt-5099
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Pinamar, Buenos Aires, Argentina (no.5099). M2=0.50 S2=0.02 k=1.59 dt=-436min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina (no.5099). M2=0.48 S2=0.02 k=1.67 dt=-436min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
@@ -49913,36 +49983,55 @@ x 0 0
 # fixes: Gruppen-Shift -50min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # province: Buenos Aires
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Buenos Aires"
+# note: -- gemeint ist Buenos Aires, Rio de la Plata; der Import hatte per
+# note: -- Namensgleichheit "Pinamar, Buenos Aires, Argentina" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Punta Piedras, Buenos Aires, Argentina
--03:00 :America/Buenos_Aires
++00:00 :America/Buenos_Aires
 1.2802 meters
-J1              0.0222  71.73
-K1              0.2271  26.05
-K2              0.0051  48.38
-L2              0.0143  2.57
-M1              0.0206  339.96
-M2              0.4986  346.99
+J1              0.0047  226.91
+K1              0.1382  328.34
+K2              0.0065  177.89
+L2              0.0380  126.16
+M1              0.0079  85.06
+M2              0.4774  77.78
+M3              0.0043  132.78
+M4              0.0477  39.09
+M6              0.0146  336.67
+M8              0.0038  290.19
+N2              0.1741  38.65
 x 0 0
+O1              0.2522  158.74
+OO1             0.0030  53.33
+P1              0.0644  321.38
+Q1              0.0642  119.14
 x 0 0
+R2              0.0080  300.07
+S1              0.1253  166.24
+S2              0.0174  150.40
+S4              0.0043  184.10
 x 0 0
+T2              0.0092  86.12
+LDA2            0.0207  126.18
+MU2             0.0047  293.99
+NU2             0.0385  44.80
+RHO1            0.0151  130.35
 x 0 0
-N2              0.0953  331.40
 x 0 0
-O1              0.2811  293.94
-OO1             0.0127  118.14
-P1              0.0746  19.10
-Q1              0.0540  278.35
+MN4             0.0299  16.57
+MS4             0.0238  112.28
 x 0 0
+MF              0.0159  141.87
+MSF             0.0267  79.39
+MM              0.0350  55.67
+SA              0.0800  312.21
+SSA             0.0271  354.97
 x 0 0
 x 0 0
-S2              0.0182  43.75
 x 0 0
 x 0 0
-T2              0.0064  41.48
-LDA2            0.0032  13.36
-MU2             0.0127  290.22
-NU2             0.0191  333.51
-RHO1            0.0111  254.46
 x 0 0
 x 0 0
 x 0 0
@@ -49970,7 +50059,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0030  2.77
 x 0 0
+EPS2            0.0040  131.15
 x 0 0
 x 0 0
 x 0 0
@@ -49989,6 +50080,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0017  226.47
+SIG1            0.0037  239.74
 x 0 0
 x 0 0
 x 0 0
@@ -50009,25 +50102,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0090  342.58
 x 0 0
 x 0 0
 x 0 0
@@ -50293,7 +50368,7 @@ x 0 0
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 5101
 # noaa_uid: ectt-5101
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Pinamar, Buenos Aires, Argentina (no.5101). M2=0.47 S2=0.02 k=1.49 dt=-548min.
+# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina (no.5101). M2=0.45 S2=0.02 k=1.57 dt=-548min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
@@ -50303,36 +50378,55 @@ x 0 0
 # fixes: Gruppen-Shift -50min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # province: Buenos Aires
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Buenos Aires"
+# note: -- gemeint ist Buenos Aires, Rio de la Plata; der Import hatte per
+# note: -- Namensgleichheit "Pinamar, Buenos Aires, Argentina" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Punta Norte del Cabo San Antonio, Buenos Aires, Argentina
--03:00 :America/Buenos_Aires
++00:00 :America/Buenos_Aires
 1.0058 meters
-J1              0.0208  42.76
-K1              0.2129  358.09
-K2              0.0059  352.48
-L2              0.0134  307.70
-M1              0.0194  313.02
-M2              0.4675  293.13
+J1              0.0044  197.94
+K1              0.1295  300.38
+K2              0.0076  121.99
+L2              0.0356  71.29
+M1              0.0074  58.12
+M2              0.4475  23.92
+M3              0.0041  51.99
+M4              0.0447  291.37
+M6              0.0136  175.09
+M8              0.0036  74.74
+N2              0.1632  345.80
 x 0 0
+O1              0.2365  132.83
+OO1             0.0028  23.34
+P1              0.0604  293.59
+Q1              0.0602  94.25
 x 0 0
+R2              0.0075  244.24
+S1              0.1175  138.36
+S2              0.0203  94.65
+S4              0.0041  72.60
 x 0 0
+T2              0.0086  30.45
+LDA2            0.0194  71.44
+MU2             0.0044  242.02
+NU2             0.0361  351.82
+RHO1            0.0141  105.32
 x 0 0
-N2              0.0893  278.55
 x 0 0
-O1              0.2635  268.03
-OO1             0.0119  88.15
-P1              0.0700  351.31
-Q1              0.0506  253.46
+MN4             0.0281  269.86
+MS4             0.0223  2.67
 x 0 0
+MF              0.0159  139.83
+MSF             0.0267  77.50
+MM              0.0350  54.66
+SA              0.0800  312.13
+SSA             0.0271  354.82
 x 0 0
 x 0 0
-S2              0.0212  348.00
 x 0 0
 x 0 0
-T2              0.0060  345.81
-LDA2            0.0030  318.62
-MU2             0.0119  238.25
-NU2             0.0179  280.53
-RHO1            0.0104  229.43
 x 0 0
 x 0 0
 x 0 0
@@ -50360,7 +50454,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0028  308.76
 x 0 0
+EPS2            0.0038  80.19
 x 0 0
 x 0 0
 x 0 0
@@ -50379,6 +50475,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0016  142.84
+SIG1            0.0034  215.71
 x 0 0
 x 0 0
 x 0 0
@@ -50399,25 +50497,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0085  236.88
 x 0 0
 x 0 0
 x 0 0
@@ -67107,7 +67187,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1309
 # noaa_uid: wctt-1309
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver, Columbia River, Washington (no.1309). M2=1.02 S2=0.22 k=1.36 dt=-23min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver (CRAB Park at Portside), British Columbia, Canada (no.1309). M2=0.89 S2=0.23 k=0.95 dt=-23min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -67118,46 +67198,53 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Vancouver"
+# note: -- gemeint ist Vancouver, Burrard Inlet; der Import hatte per
+# note: -- Namensgleichheit "Vancouver, Columbia River, Washington" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Active Pass, Mayne Island, British Columbia, Canada
 +00:00 :America/Vancouver
 2.6213 meters
-J1              0.0272  42.73
-K1              0.5311  2.23
-K2              0.1362  70.77
-L2              0.0817  70.08
-M1              0.0272  44.64
-M2              1.0214  47.09
-M3              0.0272  225.03
-M4              0.1907  14.78
-M6              0.0136  353.27
+J1              0.0487  319.36
+K1              0.8232  283.29
+K2              0.0636  51.30
+L2              0.0287  47.69
 x 0 0
-N2              0.1770  26.30
+M2              0.8921  25.18
+M3              0.0013  44.31
+M4              0.0123  243.59
+M6              0.0125  65.29
+M8              0.0023  306.07
+N2              0.1856  359.04
 x 0 0
-O1              0.2451  20.06
-OO1             0.0272  98.11
-P1              0.1090  338.07
-Q1              0.0681  22.06
+O1              0.4506  260.83
+OO1             0.0334  330.45
+P1              0.2586  283.10
+Q1              0.0744  255.10
 x 0 0
-R2              0.0681  147.48
-S1              0.1226  271.85
-S2              0.2179  79.60
+R2              0.0013  9.64
 x 0 0
+S2              0.2264  54.73
+S4              0.0006  305.68
+S6              0.0002  305.15
+T2              0.0143  46.50
+LDA2            0.0110  42.17
+MU2             0.0117  274.63
+NU2             0.0382  5.14
+RHO1            0.0135  247.24
+MK3             0.0086  197.28
 x 0 0
-T2              0.0409  129.02
-LDA2            0.0409  48.81
-MU2             0.0409  153.48
-NU2             0.0409  18.77
-RHO1            0.0136  90.44
-MK3             0.1634  321.32
+MN4             0.0050  225.76
+MS4             0.0069  262.60
 x 0 0
-MN4             0.0681  352.89
-MS4             0.0953  50.39
+MF              0.0216  150.76
+MSF             0.0062  42.13
+MM              0.0073  218.81
 x 0 0
-MF              0.0900  187.48
+SSA             0.0433  199.56
 x 0 0
 x 0 0
-SA              0.3700  308.68
-SSA             0.1500  182.97
 x 0 0
 x 0 0
 x 0 0
@@ -67175,33 +67262,70 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0056  306.40
+BET1            0.0095  232.08
+CHI1            0.0064  282.12
+H1              0.0009  130.44
+H2              0.0055  51.14
 x 0 0
+ETA2            0.0038  52.83
 x 0 0
+UPS1            0.0049  18.22
+M10             0.0013  190.15
+M12             0.0007  102.37
+MK4             0.0058  4.96
+MKS2            0.0013  82.13
 x 0 0
+EPS2            0.0031  165.14
+MO3             0.0089  254.09
 x 0 0
+TAU1            0.0330  16.25
 x 0 0
+MSK6            0.0020  120.39
+MSM             0.0031  257.84
+MSN2            0.0040  257.20
+MSN6            0.0023  55.98
 x 0 0
+NO1             0.0383  286.26
+OP2             0.0036  249.25
+OQ2             0.0012  326.38
+PHI1            0.0133  299.17
 x 0 0
+PI1             0.0144  288.37
 x 0 0
+PSI1            0.0185  264.12
 x 0 0
 x 0 0
+SIG1            0.0160  306.64
+SK3             0.0035  269.11
 x 0 0
+SN4             0.0009  245.15
 x 0 0
+SO1             0.0324  46.71
+SO3             0.0042  251.89
+THE1            0.0069  306.05
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0007  86.89
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0042  234.66
 x 0 0
 x 0 0
+N4              0.0008  182.46
+SL4             0.0006  270.56
+MNO5            0.0030  265.89
 x 0 0
+MSK5            0.0049  352.10
 x 0 0
 x 0 0
 x 0 0
+MNK5            0.0048  294.45
 x 0 0
 x 0 0
 x 0 0
@@ -67252,46 +67376,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M7              0.0011  293.56
 x 0 0
 x 0 0
 x 0 0
@@ -67493,7 +67578,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1315
 # noaa_uid: wctt-1315
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver, Columbia River, Washington (no.1315). M2=0.94 S2=0.20 k=1.25 dt=-58min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver (CRAB Park at Portside), British Columbia, Canada (no.1315). M2=0.82 S2=0.21 k=0.87 dt=-58min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -67504,46 +67589,53 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Vancouver"
+# note: -- gemeint ist Vancouver, Burrard Inlet; der Import hatte per
+# note: -- Namensgleichheit "Vancouver, Columbia River, Washington" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Ladysmith, British Columbia, Canada
 +00:00 :America/Vancouver
 2.5603 meters
-J1              0.0250  33.76
-K1              0.4878  353.59
-K2              0.1251  53.47
-L2              0.0750  53.10
-M1              0.0250  36.31
-M2              0.9381  30.42
-M3              0.0250  200.04
-M4              0.1751  341.45
-M6              0.0125  303.27
+J1              0.0447  310.39
+K1              0.7560  274.65
+K2              0.0584  34.00
+L2              0.0264  30.71
 x 0 0
-N2              0.1626  9.95
+M2              0.8193  8.51
+M3              0.0012  19.32
+M4              0.0113  210.26
+M6              0.0115  15.29
+M8              0.0021  239.40
+N2              0.1704  342.69
 x 0 0
-O1              0.2251  12.04
-OO1             0.0250  88.83
-P1              0.1001  329.46
-Q1              0.0625  14.36
+O1              0.4138  252.81
+OO1             0.0306  321.17
+P1              0.2374  274.49
+Q1              0.0683  247.40
 x 0 0
-R2              0.0625  130.21
-S1              0.1126  263.23
-S2              0.2001  62.35
+R2              0.0012  352.37
 x 0 0
+S2              0.2079  37.48
+S4              0.0005  271.18
+S6              0.0002  253.40
+T2              0.0131  29.27
+LDA2            0.0101  25.23
+MU2             0.0107  258.55
+NU2             0.0351  348.75
+RHO1            0.0124  239.49
+MK3             0.0079  171.97
 x 0 0
-T2              0.0375  111.79
-LDA2            0.0375  31.87
-MU2             0.0375  137.40
-NU2             0.0375  2.38
-RHO1            0.0125  82.69
-MK3             0.1501  296.01
+MN4             0.0046  192.74
+MS4             0.0064  228.68
 x 0 0
-MN4             0.0625  319.87
-MS4             0.0876  16.47
+MF              0.0216  150.13
+MSF             0.0062  41.55
+MM              0.0073  218.50
 x 0 0
-MF              0.0900  186.85
+SSA             0.0433  199.51
 x 0 0
 x 0 0
-SA              0.3700  308.66
-SSA             0.1500  182.92
 x 0 0
 x 0 0
 x 0 0
@@ -67561,33 +67653,70 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0051  299.28
+BET1            0.0087  223.80
+CHI1            0.0059  273.74
+H1              0.0008  113.79
+H2              0.0050  34.45
 x 0 0
+ETA2            0.0035  35.22
 x 0 0
+UPS1            0.0045  8.63
+M10             0.0012  106.82
+M12             0.0006  2.37
+MK4             0.0053  330.99
+MKS2            0.0012  65.41
 x 0 0
+EPS2            0.0029  149.37
+MO3             0.0082  229.41
 x 0 0
+TAU1            0.0303  8.19
 x 0 0
+MSK6            0.0018  69.17
+MSM             0.0031  257.57
+MSN2            0.0037  239.64
+MSN6            0.0021  5.71
 x 0 0
+NO1             0.0352  277.93
+OP2             0.0033  232.63
+OQ2             0.0011  310.65
+PHI1            0.0122  290.48
 x 0 0
+PI1             0.0132  279.79
 x 0 0
+PSI1            0.0170  255.45
 x 0 0
 x 0 0
+SIG1            0.0147  299.21
+SK3             0.0032  243.22
 x 0 0
+SN4             0.0008  211.55
 x 0 0
+SO1             0.0298  37.48
+SO3             0.0038  226.62
+THE1            0.0064  297.13
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0006  69.01
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0038  210.29
 x 0 0
 x 0 0
+N4              0.0007  149.75
+SL4             0.0005  236.33
+MNO5            0.0028  224.86
 x 0 0
+MSK5            0.0045  309.54
 x 0 0
 x 0 0
 x 0 0
+MNK5            0.0044  252.78
 x 0 0
 x 0 0
 x 0 0
@@ -67638,46 +67767,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M7              0.0010  235.23
 x 0 0
 x 0 0
 x 0 0
@@ -67687,7 +67777,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1319
 # noaa_uid: wctt-1319
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver, Columbia River, Washington (no.1319). M2=1.08 S2=0.23 k=1.45 dt=-26min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver (CRAB Park at Portside), British Columbia, Canada (no.1319). M2=0.95 S2=0.24 k=1.01 dt=-26min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -67698,46 +67788,53 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Vancouver"
+# note: -- gemeint ist Vancouver, Burrard Inlet; der Import hatte per
+# note: -- Namensgleichheit "Vancouver, Columbia River, Washington" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Atkinson Point, Burrard Inlet, British Columbia, Canada
 +00:00 :America/Vancouver
 2.6518 meters
-J1              0.0289  41.95
-K1              0.5637  1.48
-K2              0.1445  69.26
-L2              0.0867  68.60
-M1              0.0289  43.92
-M2              1.0840  45.64
-M3              0.0289  222.86
-M4              0.2023  11.88
-M6              0.0145  348.92
+J1              0.0517  318.58
+K1              0.8736  282.54
+K2              0.0675  49.79
+L2              0.0305  46.21
 x 0 0
-N2              0.1879  24.88
+M2              0.9468  23.73
+M3              0.0014  42.14
+M4              0.0131  240.69
+M6              0.0133  60.94
+M8              0.0024  300.27
+N2              0.1969  357.62
 x 0 0
-O1              0.2602  19.36
-OO1             0.0289  97.31
-P1              0.1156  337.32
-Q1              0.0723  21.39
+O1              0.4782  260.13
+OO1             0.0354  329.65
+P1              0.2744  282.35
+Q1              0.0790  254.43
 x 0 0
-R2              0.0723  145.98
-S1              0.1301  271.10
-S2              0.2312  78.10
+R2              0.0014  8.14
 x 0 0
+S2              0.2403  53.23
+S4              0.0006  302.68
+S6              0.0002  300.65
+T2              0.0152  45.00
+LDA2            0.0117  40.70
+MU2             0.0124  273.23
+NU2             0.0405  3.71
+RHO1            0.0143  246.56
+MK3             0.0092  195.08
 x 0 0
-T2              0.0434  127.52
-LDA2            0.0434  47.34
-MU2             0.0434  152.08
-NU2             0.0434  17.34
-RHO1            0.0145  89.76
-MK3             0.1734  319.12
+MN4             0.0053  222.89
+MS4             0.0073  259.65
 x 0 0
-MN4             0.0723  350.02
-MS4             0.1012  47.44
+MF              0.0216  150.70
+MSF             0.0062  42.08
+MM              0.0073  218.78
 x 0 0
-MF              0.0900  187.42
+SSA             0.0433  199.55
 x 0 0
 x 0 0
-SA              0.3700  308.68
-SSA             0.1500  182.96
 x 0 0
 x 0 0
 x 0 0
@@ -67755,33 +67852,70 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0059  305.78
+BET1            0.0101  231.36
+CHI1            0.0068  281.39
+H1              0.0009  128.99
+H2              0.0058  49.69
 x 0 0
+ETA2            0.0040  51.30
 x 0 0
+UPS1            0.0052  17.39
+M10             0.0014  182.90
+M12             0.0007  93.67
+MK4             0.0061  2.00
+MKS2            0.0014  80.67
 x 0 0
+EPS2            0.0033  163.77
+MO3             0.0095  251.95
 x 0 0
+TAU1            0.0350  15.55
 x 0 0
+MSK6            0.0021  115.93
+MSM             0.0031  257.82
+MSN2            0.0042  255.67
+MSN6            0.0024  51.61
 x 0 0
+NO1             0.0406  285.54
+OP2             0.0038  247.81
+OQ2             0.0013  325.01
+PHI1            0.0141  298.42
 x 0 0
+PI1             0.0153  287.63
 x 0 0
+PSI1            0.0196  263.36
 x 0 0
 x 0 0
+SIG1            0.0170  306.00
+SK3             0.0037  266.86
 x 0 0
+SN4             0.0009  242.23
 x 0 0
+SO1             0.0344  45.91
+SO3             0.0044  249.69
+THE1            0.0073  305.28
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0007  85.33
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0044  232.54
 x 0 0
 x 0 0
+N4              0.0008  179.61
+SL4             0.0006  267.58
+MNO5            0.0032  262.32
 x 0 0
+MSK5            0.0052  348.40
 x 0 0
 x 0 0
 x 0 0
+MNK5            0.0051  290.83
 x 0 0
 x 0 0
 x 0 0
@@ -67832,46 +67966,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M7              0.0012  288.49
 x 0 0
 x 0 0
 x 0 0
@@ -68073,7 +68168,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1335
 # noaa_uid: wctt-1335
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver, Columbia River, Washington (no.1335). M2=1.17 S2=0.25 k=1.56 dt=-8min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver (CRAB Park at Portside), British Columbia, Canada (no.1335). M2=1.02 S2=0.26 k=1.08 dt=-8min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -68084,46 +68179,53 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Vancouver"
+# note: -- gemeint ist Vancouver, Burrard Inlet; der Import hatte per
+# note: -- Namensgleichheit "Vancouver, Columbia River, Washington" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Redonda Bay, Deer Passage, British Columbia, Canada
 +00:00 :America/Vancouver
 3.2918 meters
-J1              0.0311  46.75
-K1              0.6070  6.12
-K2              0.1556  78.54
-L2              0.0934  77.71
-M1              0.0311  48.39
-M2              1.1674  54.58
-M3              0.0311  236.27
-M4              0.2179  29.75
-M6              0.0156  15.73
+J1              0.0557  323.38
+K1              0.9408  287.18
+K2              0.0727  59.07
+L2              0.0328  55.32
 x 0 0
-N2              0.2023  33.65
+M2              1.0196  32.67
+M3              0.0015  55.55
+M4              0.0141  258.56
+M6              0.0143  87.75
+M8              0.0026  336.02
+N2              0.2121  6.39
 x 0 0
-O1              0.2802  23.66
-OO1             0.0311  102.28
-P1              0.1245  341.93
-Q1              0.0778  25.53
+O1              0.5149  264.43
+OO1             0.0381  334.62
+P1              0.2955  286.96
+Q1              0.0850  258.57
 x 0 0
-R2              0.0778  155.24
-S1              0.1401  275.73
-S2              0.2490  87.35
+R2              0.0015  17.40
 x 0 0
+S2              0.2588  62.48
+S4              0.0006  321.18
+S6              0.0002  328.40
+T2              0.0164  54.24
+LDA2            0.0126  49.78
+MU2             0.0133  281.85
+NU2             0.0437  12.51
+RHO1            0.0154  250.72
+MK3             0.0099  208.66
 x 0 0
-T2              0.0467  136.76
-LDA2            0.0467  56.42
-MU2             0.0467  160.70
-NU2             0.0467  26.14
-RHO1            0.0156  93.92
-MK3             0.1868  332.70
+MN4             0.0057  240.59
+MS4             0.0079  277.84
 x 0 0
-MN4             0.0778  7.72
-MS4             0.1090  65.63
+MF              0.0216  151.04
+MSF             0.0062  42.39
+MM              0.0073  218.95
 x 0 0
-MF              0.0900  187.76
+SSA             0.0433  199.58
 x 0 0
 x 0 0
-SA              0.3700  308.69
-SSA             0.1500  182.99
 x 0 0
 x 0 0
 x 0 0
@@ -68141,33 +68243,70 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0064  309.60
+BET1            0.0108  235.81
+CHI1            0.0074  285.88
+H1              0.0010  137.91
+H2              0.0063  58.64
 x 0 0
+ETA2            0.0043  60.74
 x 0 0
+UPS1            0.0056  22.53
+M10             0.0015  227.58
+M12             0.0008  147.29
+MK4             0.0066  20.22
+MKS2            0.0015  89.64
 x 0 0
+EPS2            0.0036  172.22
+MO3             0.0102  265.18
 x 0 0
+TAU1            0.0377  19.88
 x 0 0
+MSK6            0.0023  143.40
+MSM             0.0031  257.96
+MSN2            0.0045  265.09
+MSN6            0.0026  78.56
 x 0 0
+NO1             0.0438  290.01
+OP2             0.0041  256.72
+OQ2             0.0014  333.44
+PHI1            0.0152  303.08
 x 0 0
+PI1             0.0165  292.23
 x 0 0
+PSI1            0.0211  268.01
 x 0 0
 x 0 0
+SIG1            0.0183  309.98
+SK3             0.0040  280.75
 x 0 0
+SN4             0.0010  260.25
 x 0 0
+SO1             0.0370  50.86
+SO3             0.0048  263.24
+THE1            0.0079  310.06
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0008  94.92
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0048  245.61
 x 0 0
 x 0 0
+N4              0.0009  197.15
+SL4             0.0006  285.94
+MNO5            0.0035  284.33
 x 0 0
+MSK5            0.0056  11.23
 x 0 0
 x 0 0
 x 0 0
+MNK5            0.0055  313.17
 x 0 0
 x 0 0
 x 0 0
@@ -68218,46 +68357,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M7              0.0013  319.77
 x 0 0
 x 0 0
 x 0 0
@@ -68267,7 +68367,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1339
 # noaa_uid: wctt-1339
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver, Columbia River, Washington (no.1339). M2=1.20 S2=0.26 k=1.60 dt=-10min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver (CRAB Park at Portside), British Columbia, Canada (no.1339). M2=1.05 S2=0.27 k=1.11 dt=-10min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -68278,46 +68378,53 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Vancouver"
+# note: -- gemeint ist Vancouver, Burrard Inlet; der Import hatte per
+# note: -- Namensgleichheit "Vancouver, Columbia River, Washington" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Waddington Harbor, Bute Inlet, British Columbia, Canada
 +00:00 :America/Vancouver
 3.0785 meters
-J1              0.0320  46.10
-K1              0.6233  5.49
-K2              0.1598  77.29
-L2              0.0959  76.48
-M1              0.0320  47.78
-M2              1.1986  53.37
-M3              0.0320  234.45
-M4              0.2237  27.34
-M6              0.0160  12.11
+J1              0.0572  322.73
+K1              0.9660  286.55
+K2              0.0746  57.82
+L2              0.0337  54.09
 x 0 0
-N2              0.2078  32.46
+M2              1.0469  31.46
+M3              0.0016  53.73
+M4              0.0145  256.15
+M6              0.0147  84.13
+M8              0.0027  331.19
+N2              0.2178  5.20
 x 0 0
-O1              0.2877  23.08
-OO1             0.0320  101.61
-P1              0.1279  341.31
-Q1              0.0799  24.97
+O1              0.5287  263.85
+OO1             0.0391  333.95
+P1              0.3034  286.34
+Q1              0.0873  258.01
 x 0 0
-R2              0.0799  153.99
-S1              0.1438  275.10
-S2              0.2557  86.10
+R2              0.0016  16.15
 x 0 0
+S2              0.2657  61.23
+S4              0.0007  318.68
+S6              0.0002  324.65
+T2              0.0168  52.99
+LDA2            0.0129  48.55
+MU2             0.0137  280.69
+NU2             0.0448  11.32
+RHO1            0.0158  250.15
+MK3             0.0101  206.82
 x 0 0
-T2              0.0479  135.51
-LDA2            0.0479  55.19
-MU2             0.0479  159.54
-NU2             0.0479  24.95
-RHO1            0.0160  93.35
-MK3             0.1918  330.86
+MN4             0.0059  238.20
+MS4             0.0081  275.38
 x 0 0
-MN4             0.0799  5.33
-MS4             0.1119  63.17
+MF              0.0216  151.00
+MSF             0.0062  42.35
+MM              0.0073  218.93
 x 0 0
-MF              0.0900  187.72
+SSA             0.0433  199.58
 x 0 0
 x 0 0
-SA              0.3700  308.69
-SSA             0.1500  182.99
 x 0 0
 x 0 0
 x 0 0
@@ -68335,33 +68442,70 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0066  309.09
+BET1            0.0111  235.21
+CHI1            0.0076  285.27
+H1              0.0010  136.71
+H2              0.0065  57.43
 x 0 0
+ETA2            0.0044  59.47
 x 0 0
+UPS1            0.0058  21.84
+M10             0.0016  221.55
+M12             0.0008  140.05
+MK4             0.0068  17.76
+MKS2            0.0016  88.43
 x 0 0
+EPS2            0.0037  171.08
+MO3             0.0105  263.40
 x 0 0
+TAU1            0.0387  19.29
 x 0 0
+MSK6            0.0023  139.69
+MSM             0.0031  257.94
+MSN2            0.0047  263.82
+MSN6            0.0027  74.92
 x 0 0
+NO1             0.0449  289.40
+OP2             0.0042  255.51
+OQ2             0.0014  332.30
+PHI1            0.0156  302.45
 x 0 0
+PI1             0.0169  291.60
 x 0 0
+PSI1            0.0217  267.39
 x 0 0
 x 0 0
+SIG1            0.0188  309.45
+SK3             0.0041  278.87
 x 0 0
+SN4             0.0010  257.81
 x 0 0
+SO1             0.0380  50.19
+SO3             0.0049  261.41
+THE1            0.0081  309.41
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0008  93.63
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+NO3             0.0049  243.85
 x 0 0
 x 0 0
+N4              0.0009  194.78
+SL4             0.0007  283.46
+MNO5            0.0036  281.36
 x 0 0
+MSK5            0.0058  8.14
 x 0 0
 x 0 0
 x 0 0
+MNK5            0.0057  310.15
 x 0 0
 x 0 0
 x 0 0
@@ -68412,46 +68556,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M7              0.0013  315.54
 x 0 0
 x 0 0
 x 0 0
@@ -96009,7 +96114,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2205
 # noaa_uid: wctt-2205
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2205). M2=0.82 S2=0.19 k=1.38 dt=+0min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2205). M2=0.79 S2=0.26 k=1.08 dt=+0min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -96018,44 +96123,51 @@ x 0 0
 # !latitude: 55.1500
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Sanborn Harbor, Nagai Island, Alaska
--04:00 :America/Anchorage
++00:00 :America/Anchorage
 1.1887 meters
-J1              0.0161  24.80
-K1              0.3855  352.70
-K2              0.0552  257.30
-L2              0.0207  230.10
+J1              0.0227  297.60
+K1              0.3867  285.10
+K2              0.0722  343.10
+L2              0.0164  343.70
+M1              0.0142  293.70
+M2              0.7872  322.20
+M3              0.0033  226.10
+M4              0.0033  276.10
+M6              0.0098  26.40
 x 0 0
-M2              0.8229  228.40
-M3              0.0097  288.70
-M4              0.0566  20.20
-M6              0.0041  212.40
-M8              0.0083  44.80
-N2              0.1643  204.10
+N2              0.1705  299.30
 x 0 0
-O1              0.2302  287.90
+O1              0.2474  270.30
+OO1             0.0142  315.60
+P1              0.1223  281.70
+Q1              0.0455  263.30
 x 0 0
-P1              0.1392  349.60
-Q1              0.0482  205.90
 x 0 0
+S1              0.0085  65.00
+S2              0.2624  349.40
+S4              0.0033  200.80
+S6              0.0033  282.80
+T2              0.0164  340.20
+LDA2            0.0066  335.60
+MU2             0.0197  276.20
+NU2             0.0328  303.00
+RHO1            0.0085  262.20
 x 0 0
 x 0 0
-S2              0.1864  268.30
 x 0 0
+MS4             0.0033  301.80
 x 0 0
-T2              0.0110  266.70
-LDA2            0.0055  246.90
-MU2             0.0483  233.50
-NU2             0.0331  209.20
-RHO1            0.0107  260.10
 x 0 0
 x 0 0
-MN4             0.0304  312.40
-MS4             0.0221  139.00
 x 0 0
+SA              0.1433  266.40
 x 0 0
-MSF             0.0440  288.40
-MM              0.0570  152.60
 x 0 0
 x 0 0
 x 0 0
@@ -96092,18 +96204,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0097  42.90
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0041  238.30
 x 0 0
 x 0 0
-NO1             0.0083  44.10
 x 0 0
-OQ2             0.0055  265.90
 x 0 0
 x 0 0
 x 0 0
@@ -96111,14 +96219,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0107  158.20
-SK3             0.0041  204.50
-SK4             0.0014  22.70
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0214  2.60
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -96201,7 +96311,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2207
 # noaa_uid: wctt-2207
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2207). M2=0.81 S2=0.18 k=1.35 dt=-0min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2207). M2=0.77 S2=0.26 k=1.06 dt=-0min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -96210,44 +96320,51 @@ x 0 0
 # !latitude: 55.1333
 # state: Alaska
 # admin1_quelle: Ufer 0.2 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Mist Harbor, Nagai Island, Alaska
--04:00 :America/Anchorage
++00:00 :America/Anchorage
 1.1278 meters
-J1              0.0153  24.67
-K1              0.3662  352.57
-K2              0.0542  257.05
-L2              0.0203  229.85
+J1              0.0216  297.47
+K1              0.3673  284.97
+K2              0.0708  342.85
+L2              0.0161  343.45
+M1              0.0135  293.58
+M2              0.7720  321.96
+M3              0.0032  225.74
+M4              0.0032  275.62
+M6              0.0097  25.68
 x 0 0
-M2              0.8071  228.16
-M3              0.0095  288.34
-M4              0.0555  19.72
-M6              0.0041  211.68
-M8              0.0081  43.83
-N2              0.1611  203.86
+N2              0.1673  299.06
 x 0 0
-O1              0.2187  287.78
+O1              0.2350  270.18
+OO1             0.0135  315.47
+P1              0.1161  281.58
+Q1              0.0432  263.19
 x 0 0
-P1              0.1323  349.48
-Q1              0.0458  205.79
 x 0 0
+S1              0.0081  64.88
+S2              0.2573  349.15
+S4              0.0032  200.30
+S6              0.0032  282.05
+T2              0.0161  339.95
+LDA2            0.0064  335.35
+MU2             0.0193  275.97
+NU2             0.0322  302.76
+RHO1            0.0081  262.09
 x 0 0
 x 0 0
-S2              0.1828  268.05
 x 0 0
+MS4             0.0032  301.31
 x 0 0
-T2              0.0108  266.45
-LDA2            0.0054  246.65
-MU2             0.0474  233.27
-NU2             0.0325  208.96
-RHO1            0.0102  259.99
 x 0 0
 x 0 0
-MN4             0.0298  311.92
-MS4             0.0217  138.51
 x 0 0
+SA              0.1433  266.40
 x 0 0
-MSF             0.0440  288.39
-MM              0.0570  152.60
 x 0 0
 x 0 0
 x 0 0
@@ -96284,18 +96401,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0095  42.54
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0041  238.05
 x 0 0
 x 0 0
-NO1             0.0081  43.98
 x 0 0
-OQ2             0.0054  265.67
 x 0 0
 x 0 0
 x 0 0
@@ -96303,14 +96416,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0102  158.09
-SK3             0.0041  204.12
-SK4             0.0014  22.20
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0203  2.47
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -96585,7 +96700,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2215
 # noaa_uid: wctt-2215
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2215). M2=0.87 S2=0.20 k=1.46 dt=+0min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2215). M2=0.83 S2=0.28 k=1.14 dt=+0min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -96594,44 +96709,51 @@ x 0 0
 # !latitude: 55.5833
 # state: Alaska
 # admin1_quelle: Ufer 1.1 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Albatross Anchorage, Balboa Bay, Alaska
--04:00 :America/Anchorage
++00:00 :America/Anchorage
 1.2497 meters
-J1              0.0169  24.93
-K1              0.4048  352.83
-K2              0.0584  257.55
-L2              0.0219  230.35
+J1              0.0239  297.73
+K1              0.4060  285.23
+K2              0.0763  343.35
+L2              0.0173  343.95
+M1              0.0149  293.82
+M2              0.8326  322.44
+M3              0.0035  226.46
+M4              0.0035  276.58
+M6              0.0104  27.12
 x 0 0
-M2              0.8704  228.64
-M3              0.0102  289.06
-M4              0.0599  20.68
-M6              0.0044  213.12
-M8              0.0088  45.77
-N2              0.1738  204.34
+N2              0.1804  299.54
 x 0 0
-O1              0.2418  288.02
+O1              0.2597  270.42
+OO1             0.0149  315.73
+P1              0.1284  281.82
+Q1              0.0478  263.41
 x 0 0
-P1              0.1462  349.72
-Q1              0.0506  206.01
 x 0 0
+S1              0.0090  65.12
+S2              0.2775  349.65
+S4              0.0035  201.30
+S6              0.0035  283.55
+T2              0.0173  340.45
+LDA2            0.0069  335.85
+MU2             0.0208  276.43
+NU2             0.0347  303.24
+RHO1            0.0090  262.31
 x 0 0
 x 0 0
-S2              0.1971  268.55
 x 0 0
+MS4             0.0035  302.29
 x 0 0
-T2              0.0117  266.95
-LDA2            0.0058  247.15
-MU2             0.0511  233.73
-NU2             0.0350  209.44
-RHO1            0.0112  260.21
 x 0 0
 x 0 0
-MN4             0.0321  312.88
-MS4             0.0234  139.49
 x 0 0
+SA              0.1433  266.40
 x 0 0
-MSF             0.0440  288.41
-MM              0.0570  152.60
 x 0 0
 x 0 0
 x 0 0
@@ -96668,18 +96790,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0102  43.26
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0044  238.55
 x 0 0
 x 0 0
-NO1             0.0088  44.22
 x 0 0
-OQ2             0.0058  266.13
 x 0 0
 x 0 0
 x 0 0
@@ -96687,14 +96805,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0112  158.31
-SK3             0.0044  204.88
-SK4             0.0015  23.20
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0225  2.73
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -96777,7 +96897,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2217
 # noaa_uid: wctt-2217
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2217). M2=0.82 S2=0.19 k=1.38 dt=+2min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2217). M2=0.79 S2=0.26 k=1.08 dt=+2min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -96786,44 +96906,51 @@ x 0 0
 # !latitude: 55.4667
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Beaver Bay, Alaska
--04:00 :America/Anchorage
++00:00 :America/Anchorage
 1.2192 meters
-J1              0.0169  25.45
-K1              0.4048  353.33
-K2              0.0552  258.55
-L2              0.0207  231.33
+J1              0.0239  298.25
+K1              0.4060  285.73
+K2              0.0722  344.35
+L2              0.0164  344.93
+M1              0.0149  294.30
+M2              0.7872  323.41
+M3              0.0033  227.91
+M4              0.0033  278.52
+M6              0.0098  30.02
 x 0 0
-M2              0.8229  229.61
-M3              0.0097  290.51
-M4              0.0566  22.62
-M6              0.0041  216.02
-M8              0.0083  49.63
-N2              0.1643  205.28
+N2              0.1705  300.48
 x 0 0
-O1              0.2418  288.48
+O1              0.2597  270.88
+OO1             0.0149  316.27
+P1              0.1284  282.32
+Q1              0.0478  263.86
 x 0 0
-P1              0.1462  350.22
-Q1              0.0506  206.46
 x 0 0
+S1              0.0090  65.62
+S2              0.2624  350.65
+S4              0.0033  203.30
+S6              0.0033  286.55
+T2              0.0164  341.45
+LDA2            0.0066  336.83
+MU2             0.0197  277.37
+NU2             0.0328  304.19
+RHO1            0.0090  262.76
 x 0 0
 x 0 0
-S2              0.1864  269.55
 x 0 0
+MS4             0.0033  304.26
 x 0 0
-T2              0.0110  267.95
-LDA2            0.0055  248.13
-MU2             0.0483  234.67
-NU2             0.0331  210.39
-RHO1            0.0112  260.66
 x 0 0
 x 0 0
-MN4             0.0304  314.79
-MS4             0.0221  141.46
 x 0 0
+SA              0.1433  266.40
 x 0 0
-MSF             0.0440  288.44
-MM              0.0570  152.62
 x 0 0
 x 0 0
 x 0 0
@@ -96860,18 +96987,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0097  44.69
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0041  239.57
 x 0 0
 x 0 0
-NO1             0.0083  44.70
 x 0 0
-OQ2             0.0055  267.04
 x 0 0
 x 0 0
 x 0 0
@@ -96879,14 +97002,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0112  158.74
-SK3             0.0041  206.38
-SK4             0.0014  25.20
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0225  3.25
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -96969,7 +97094,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2219
 # noaa_uid: wctt-2219
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2219). M2=0.79 S2=0.18 k=1.33 dt=+2min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2219). M2=0.76 S2=0.25 k=1.03 dt=+2min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -96978,44 +97103,51 @@ x 0 0
 # !latitude: 55.3667
 # state: Alaska
 # admin1_quelle: Ufer 0.6 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Seal Cape, Coal Bay, Alaska
--04:00 :America/Anchorage
++00:00 :America/Anchorage
 1.1887 meters
-J1              0.0161  25.45
-K1              0.3855  353.33
-K2              0.0531  258.55
-L2              0.0199  231.33
+J1              0.0227  298.25
+K1              0.3867  285.73
+K2              0.0694  344.35
+L2              0.0158  344.93
+M1              0.0142  294.30
+M2              0.7569  323.41
+M3              0.0032  227.91
+M4              0.0032  278.52
+M6              0.0095  30.02
 x 0 0
-M2              0.7912  229.61
-M3              0.0093  290.51
-M4              0.0544  22.62
-M6              0.0040  216.02
-M8              0.0080  49.63
-N2              0.1580  205.28
+N2              0.1640  300.48
 x 0 0
-O1              0.2302  288.48
+O1              0.2474  270.88
+OO1             0.0142  316.27
+P1              0.1223  282.32
+Q1              0.0455  263.86
 x 0 0
-P1              0.1392  350.22
-Q1              0.0482  206.46
 x 0 0
+S1              0.0085  65.62
+S2              0.2523  350.65
+S4              0.0032  203.30
+S6              0.0032  286.55
+T2              0.0158  341.45
+LDA2            0.0063  336.83
+MU2             0.0189  277.37
+NU2             0.0315  304.19
+RHO1            0.0085  262.76
 x 0 0
 x 0 0
-S2              0.1792  269.55
 x 0 0
+MS4             0.0032  304.26
 x 0 0
-T2              0.0106  267.95
-LDA2            0.0053  248.13
-MU2             0.0465  234.67
-NU2             0.0319  210.39
-RHO1            0.0107  260.66
 x 0 0
 x 0 0
-MN4             0.0292  314.79
-MS4             0.0212  141.46
 x 0 0
+SA              0.1433  266.40
 x 0 0
-MSF             0.0440  288.44
-MM              0.0570  152.62
 x 0 0
 x 0 0
 x 0 0
@@ -97052,18 +97184,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0093  44.69
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0040  239.57
 x 0 0
 x 0 0
-NO1             0.0080  44.70
 x 0 0
-OQ2             0.0053  267.04
 x 0 0
 x 0 0
 x 0 0
@@ -97071,14 +97199,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0107  158.74
-SK3             0.0040  206.38
-SK4             0.0013  25.20
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0214  3.25
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -97161,7 +97291,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2221
 # noaa_uid: wctt-2221
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2221). M2=0.79 S2=0.18 k=1.33 dt=+4min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2221). M2=0.76 S2=0.25 k=1.03 dt=+4min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -97170,44 +97300,51 @@ x 0 0
 # !latitude: 55.2667
 # state: Alaska
 # admin1_quelle: Ufer 1.8 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Ukolnoi Island, Alaska
--04:00 :America/Anchorage
++00:00 :America/Anchorage
 1.1582 meters
-J1              0.0161  25.71
-K1              0.3855  353.58
-K2              0.0531  259.05
-L2              0.0199  231.82
+J1              0.0227  298.51
+K1              0.3867  285.98
+K2              0.0694  344.85
+L2              0.0158  345.42
+M1              0.0142  294.55
+M2              0.7569  323.89
+M3              0.0032  228.64
+M4              0.0032  279.48
+M6              0.0095  31.47
 x 0 0
-M2              0.7912  230.09
-M3              0.0093  291.24
-M4              0.0544  23.58
-M6              0.0040  217.47
-M8              0.0080  51.56
-N2              0.1580  205.76
+N2              0.1640  300.96
 x 0 0
-O1              0.2302  288.71
+O1              0.2474  271.11
+OO1             0.0142  316.54
+P1              0.1223  282.57
+Q1              0.0455  264.08
 x 0 0
-P1              0.1392  350.47
-Q1              0.0482  206.68
 x 0 0
+S1              0.0085  65.88
+S2              0.2523  351.15
+S4              0.0032  204.30
+S6              0.0032  288.05
+T2              0.0158  341.95
+LDA2            0.0063  337.32
+MU2             0.0189  277.83
+NU2             0.0315  304.66
+RHO1            0.0085  262.99
 x 0 0
 x 0 0
-S2              0.1792  270.05
 x 0 0
+MS4             0.0032  305.24
 x 0 0
-T2              0.0106  268.45
-LDA2            0.0053  248.62
-MU2             0.0465  235.13
-NU2             0.0319  210.86
-RHO1            0.0107  260.89
 x 0 0
 x 0 0
-MN4             0.0292  315.75
-MS4             0.0212  142.44
 x 0 0
+SA              0.1433  266.40
 x 0 0
-MSF             0.0440  288.46
-MM              0.0570  152.63
 x 0 0
 x 0 0
 x 0 0
@@ -97244,18 +97381,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0093  45.40
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0040  240.08
 x 0 0
 x 0 0
-NO1             0.0080  44.95
 x 0 0
-OQ2             0.0053  267.50
 x 0 0
 x 0 0
 x 0 0
@@ -97263,14 +97396,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0107  158.95
-SK3             0.0040  207.13
-SK4             0.0013  26.20
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0214  3.50
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -97353,7 +97488,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2225
 # noaa_uid: wctt-2225
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2225). M2=0.82 S2=0.19 k=1.38 dt=+8min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2225). M2=0.79 S2=0.26 k=1.08 dt=+8min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -97362,44 +97497,51 @@ x 0 0
 # !latitude: 55.5000
 # state: Alaska
 # admin1_quelle: Ufer 1.8 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Settlement Point, Pavlof Bay, Alaska
--04:00 :America/Anchorage
++00:00 :America/Anchorage
 1.1582 meters
-J1              0.0161  27.01
-K1              0.3855  354.83
-K2              0.0552  261.56
-L2              0.0207  234.28
+J1              0.0227  299.81
+K1              0.3867  287.23
+K2              0.0722  347.36
+L2              0.0164  347.88
+M1              0.0142  295.75
+M2              0.7872  326.31
+M3              0.0033  232.26
+M4              0.0033  284.31
+M6              0.0098  38.72
 x 0 0
-M2              0.8229  232.51
-M3              0.0097  294.86
-M4              0.0566  28.41
-M6              0.0041  224.72
-M8              0.0083  61.22
-N2              0.1643  208.13
+N2              0.1705  303.33
 x 0 0
-O1              0.2302  289.88
+O1              0.2474  272.28
+OO1             0.0142  317.89
+P1              0.1223  283.82
+Q1              0.0455  265.20
 x 0 0
-P1              0.1392  351.72
-Q1              0.0482  207.80
 x 0 0
+S1              0.0085  67.12
+S2              0.2624  353.65
+S4              0.0033  209.30
+S6              0.0033  295.55
+T2              0.0164  344.44
+LDA2            0.0066  339.77
+MU2             0.0197  280.16
+NU2             0.0328  307.04
+RHO1            0.0085  264.11
 x 0 0
 x 0 0
-S2              0.1864  272.55
 x 0 0
+MS4             0.0033  310.16
 x 0 0
-T2              0.0110  270.94
-LDA2            0.0055  251.07
-MU2             0.0483  237.46
-NU2             0.0331  213.24
-RHO1            0.0107  262.01
 x 0 0
 x 0 0
-MN4             0.0304  320.54
-MS4             0.0221  147.36
 x 0 0
+SA              0.1433  266.41
 x 0 0
-MSF             0.0440  288.54
-MM              0.0570  152.68
 x 0 0
 x 0 0
 x 0 0
@@ -97436,18 +97578,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0097  48.98
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0041  242.63
 x 0 0
 x 0 0
-NO1             0.0083  46.15
 x 0 0
-OQ2             0.0055  269.77
 x 0 0
 x 0 0
 x 0 0
@@ -97455,14 +97593,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0107  160.03
-SK3             0.0041  210.88
-SK4             0.0014  31.21
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0214  4.80
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -97737,7 +97877,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2233
 # noaa_uid: wctt-2233
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2233). M2=0.63 S2=0.14 k=1.06 dt=-6min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2233). M2=0.61 S2=0.20 k=0.83 dt=-6min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -97746,44 +97886,51 @@ x 0 0
 # !latitude: 54.4000
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Peterson Bay, Alaska
--04:00 :America/Nome
++00:00 :America/Nome
 1.0363 meters
-J1              0.0177  23.11
-K1              0.4241  351.07
-K2              0.0425  254.04
-L2              0.0159  226.90
+J1              0.0250  295.91
+K1              0.4253  283.47
+K2              0.0555  339.84
+L2              0.0126  340.50
+M1              0.0156  292.13
+M2              0.6055  319.06
+M3              0.0025  221.39
+M4              0.0025  269.82
+M6              0.0076  16.98
 x 0 0
-M2              0.6330  225.26
-M3              0.0074  283.99
-M4              0.0435  13.92
-M6              0.0032  202.98
-M8              0.0064  32.24
-N2              0.1264  201.02
+N2              0.1312  296.22
 x 0 0
-O1              0.2533  286.39
+O1              0.2721  268.79
+OO1             0.0156  313.85
+P1              0.1345  280.08
+Q1              0.0500  261.85
 x 0 0
-P1              0.1531  347.98
-Q1              0.0530  204.45
 x 0 0
+S1              0.0094  63.38
+S2              0.2018  346.15
+S4              0.0025  194.30
+S6              0.0025  273.05
+T2              0.0126  336.95
+LDA2            0.0050  332.41
+MU2             0.0151  273.17
+NU2             0.0252  299.91
+RHO1            0.0094  260.74
 x 0 0
 x 0 0
-S2              0.1434  265.05
 x 0 0
+MS4             0.0025  295.41
 x 0 0
-T2              0.0085  263.45
-LDA2            0.0042  243.71
-MU2             0.0372  230.47
-NU2             0.0255  206.11
-RHO1            0.0118  258.64
 x 0 0
 x 0 0
-MN4             0.0234  306.18
-MS4             0.0170  132.61
 x 0 0
+SA              0.1433  266.40
 x 0 0
-MSF             0.0440  288.29
-MM              0.0570  152.54
 x 0 0
 x 0 0
 x 0 0
@@ -97820,18 +97967,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0074  38.25
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0032  234.99
 x 0 0
 x 0 0
-NO1             0.0064  42.53
 x 0 0
-OQ2             0.0042  262.94
 x 0 0
 x 0 0
 x 0 0
@@ -97839,14 +97982,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0118  156.80
-SK3             0.0032  199.62
-SK4             0.0011  16.19
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0236  0.92
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -97929,7 +98074,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2235
 # noaa_uid: wctt-2235
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2235). M2=0.70 S2=0.16 k=1.17 dt=+8min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2235). M2=0.67 S2=0.22 k=0.91 dt=+8min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -97938,44 +98083,51 @@ x 0 0
 # !latitude: 54.4833
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Sanak Harbor, Alaska
--04:00 :America/Nome
++00:00 :America/Nome
 1.0973 meters
-J1              0.0177  27.01
-K1              0.4241  354.83
-K2              0.0467  261.56
-L2              0.0175  234.28
+J1              0.0250  299.81
+K1              0.4253  287.23
+K2              0.0611  347.36
+L2              0.0139  347.88
+M1              0.0156  295.75
+M2              0.6661  326.31
+M3              0.0028  232.26
+M4              0.0028  284.31
+M6              0.0083  38.72
 x 0 0
-M2              0.6963  232.51
-M3              0.0082  294.86
-M4              0.0479  28.41
-M6              0.0035  224.72
-M8              0.0070  61.22
-N2              0.1390  208.13
+N2              0.1443  303.33
 x 0 0
-O1              0.2533  289.88
+O1              0.2721  272.28
+OO1             0.0156  317.89
+P1              0.1345  283.82
+Q1              0.0500  265.20
 x 0 0
-P1              0.1531  351.72
-Q1              0.0530  207.80
 x 0 0
+S1              0.0094  67.12
+S2              0.2220  353.65
+S4              0.0028  209.30
+S6              0.0028  295.55
+T2              0.0139  344.44
+LDA2            0.0056  339.77
+MU2             0.0167  280.16
+NU2             0.0278  307.04
+RHO1            0.0094  264.11
 x 0 0
 x 0 0
-S2              0.1577  272.55
 x 0 0
+MS4             0.0028  310.16
 x 0 0
-T2              0.0093  270.94
-LDA2            0.0047  251.07
-MU2             0.0409  237.46
-NU2             0.0280  213.24
-RHO1            0.0118  262.01
 x 0 0
 x 0 0
-MN4             0.0257  320.54
-MS4             0.0187  147.36
 x 0 0
+SA              0.1433  266.41
 x 0 0
-MSF             0.0440  288.54
-MM              0.0570  152.68
 x 0 0
 x 0 0
 x 0 0
@@ -98012,18 +98164,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0082  48.98
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0035  242.63
 x 0 0
 x 0 0
-NO1             0.0070  46.15
 x 0 0
-OQ2             0.0047  269.77
 x 0 0
 x 0 0
 x 0 0
@@ -98031,14 +98179,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0118  160.03
-SK3             0.0035  210.88
-SK4             0.0012  31.21
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0236  4.80
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -98121,7 +98271,7 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2237
 # noaa_uid: wctt-2237
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Nova Scotia, Canada (no.2237). M2=0.68 S2=0.15 k=1.14 dt=+15min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Sand Point, Popof Island, Alaska (no.2237). M2=0.65 S2=0.22 k=0.89 dt=+15min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
@@ -98130,44 +98280,51 @@ x 0 0
 # !latitude: 54.7000
 # state: Alaska
 # admin1_quelle: Ufer 0.6 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
+# note: -- gemeint ist Sand Point, Popof Island, Alaska; der Import hatte per
+# note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Dora Harbor, Alaska
--04:00 :America/Nome
++00:00 :America/Nome
 1.0668 meters
-J1              0.0177  28.70
-K1              0.4241  356.46
-K2              0.0457  264.82
-L2              0.0171  237.48
+J1              0.0250  301.50
+K1              0.4253  288.86
+K2              0.0597  350.62
+L2              0.0136  351.08
+M1              0.0156  297.32
+M2              0.6509  329.45
+M3              0.0027  236.97
+M4              0.0027  290.59
+M6              0.0081  48.14
 x 0 0
-M2              0.6805  235.65
-M3              0.0080  299.57
-M4              0.0468  34.69
-M6              0.0034  234.14
-M8              0.0069  73.78
-N2              0.1359  211.21
+N2              0.1410  306.41
 x 0 0
-O1              0.2533  291.39
+O1              0.2721  273.79
+OO1             0.0156  319.63
+P1              0.1345  285.44
+Q1              0.0500  266.65
 x 0 0
-P1              0.1531  353.34
-Q1              0.0530  209.25
 x 0 0
+S1              0.0094  68.75
+S2              0.2170  356.90
+S4              0.0027  215.80
+S6              0.0027  305.30
+T2              0.0136  347.69
+LDA2            0.0054  342.96
+MU2             0.0163  283.19
+NU2             0.0271  310.13
+RHO1            0.0094  265.57
 x 0 0
 x 0 0
-S2              0.1541  275.80
 x 0 0
+MS4             0.0027  316.55
 x 0 0
-T2              0.0091  274.19
-LDA2            0.0046  254.26
-MU2             0.0400  240.49
-NU2             0.0274  216.33
-RHO1            0.0118  263.47
 x 0 0
 x 0 0
-MN4             0.0251  326.76
-MS4             0.0183  153.75
 x 0 0
+SA              0.1433  266.41
 x 0 0
-MSF             0.0440  288.65
-MM              0.0570  152.74
 x 0 0
 x 0 0
 x 0 0
@@ -98204,18 +98361,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MO3             0.0080  53.63
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0034  245.94
 x 0 0
 x 0 0
-NO1             0.0069  47.72
 x 0 0
-OQ2             0.0046  272.74
 x 0 0
 x 0 0
 x 0 0
@@ -98223,14 +98376,16 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SIG1            0.0118  161.43
-SK3             0.0034  215.76
-SK4             0.0011  37.72
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-THE1            0.0236  6.48
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -120989,55 +121144,60 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 511
 # noaa_uid: wctt-511
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Alameda, San Francisco Bay, California (no.511). M2=0.54 S2=0.12 k=0.24 dt=-74min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from San Francisco, San Francisco Bay, California (no.511). M2=0.53 S2=0.13 k=0.92 dt=-74min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -122.3333
 # !latitude: 37.1000
 # state: California
 # admin1_quelle: Ufer 1.5 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "San Francisco"
+# note: -- gemeint ist San Francisco (Golden Gate); der Import hatte per
+# note: -- Namensgleichheit "Alameda, San Francisco Bay, California" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Ano Nuevo Island, California
 +00:00 :America/Los_Angeles
 0.8230 meters
-J1              0.0165  239.08
-K1              0.3407  214.15
-K2              0.0362  185.10
-L2              0.0242  200.28
-M1              0.0110  239.02
-M2              0.5386  187.55
-M3              0.0024  68.28
-M4              0.0121  66.71
-M6              0.0048  284.76
+J1              0.0170  225.08
+K1              0.3426  206.85
+K2              0.0365  168.90
+L2              0.0168  193.18
+M1              0.0113  219.62
+M2              0.5306  172.45
+M3              0.0028  343.98
+M4              0.0197  65.31
+M6              0.0028  260.06
 x 0 0
-N2              0.1111  164.42
+N2              0.1123  148.12
 x 0 0
-O1              0.2088  199.00
-OO1             0.0110  256.50
-P1              0.1044  211.65
-Q1              0.0357  194.77
-x 0 0
-R2              0.0024  31.25
-S1              0.0110  263.90
-S2              0.1208  197.40
+O1              0.2124  191.20
+OO1             0.0113  240.10
+P1              0.1048  203.65
+Q1              0.0368  185.87
 x 0 0
 x 0 0
-T2              0.0072  182.75
-LDA2            0.0072  181.07
-MU2             0.0072  1.61
-NU2             0.0242  170.03
-RHO1            0.0082  193.19
-MK3             0.0145  51.00
-x 0 0
-MN4             0.0048  48.68
-MS4             0.0048  88.55
-x 0 0
-MF              0.0600  151.85
+S1              0.0057  264.10
+S2              0.1263  179.20
 x 0 0
 x 0 0
-SA              0.1300  187.75
-SSA             0.1000  272.40
+T2              0.0084  167.65
+LDA2            0.0056  177.97
+MU2             0.0056  65.71
+NU2             0.0253  154.73
+RHO1            0.0085  183.39
+MK3             0.0168  69.80
+x 0 0
+MN4             0.0084  41.18
+MS4             0.0084  76.25
+x 0 0
+MF              0.0152  151.75
+x 0 0
+x 0 0
+SA              0.0427  200.15
+SSA             0.0305  272.20
 x 0 0
 x 0 0
 x 0 0
@@ -121181,55 +121341,60 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 515
 # noaa_uid: wctt-515
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Alameda, San Francisco Bay, California (no.515). M2=0.58 S2=0.13 k=0.26 dt=-29min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from San Francisco, San Francisco Bay, California (no.515). M2=0.58 S2=0.14 k=1.00 dt=-29min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -123.0000
 # !latitude: 37.7000
 # state: California
 # admin1_quelle: Ufer 32.3 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "San Francisco"
+# note: -- gemeint ist San Francisco (Golden Gate); der Import hatte per
+# note: -- Namensgleichheit "Alameda, San Francisco Bay, California" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Southeast Farallon Island, California
 +00:00 :America/Los_Angeles
 0.9144 meters
-J1              0.0175  250.77
-K1              0.3608  225.43
-K2              0.0393  207.66
-L2              0.0262  222.43
-M1              0.0116  249.89
-M2              0.5848  209.29
-M3              0.0026  100.89
-M4              0.0131  110.18
-M6              0.0052  349.97
+J1              0.0180  236.77
+K1              0.3628  218.13
+K2              0.0396  191.46
+L2              0.0183  215.33
+M1              0.0120  230.49
+M2              0.5761  194.19
+M3              0.0030  16.59
+M4              0.0213  108.78
+M6              0.0030  325.27
 x 0 0
-N2              0.1206  185.75
+N2              0.1219  169.45
 x 0 0
-O1              0.2211  209.46
-OO1             0.0116  268.60
-P1              0.1106  222.87
-Q1              0.0378  204.82
-x 0 0
-R2              0.0026  53.78
-S1              0.0116  275.15
-S2              0.1311  219.90
+O1              0.2249  201.66
+OO1             0.0120  252.20
+P1              0.1109  214.87
+Q1              0.0390  195.92
 x 0 0
 x 0 0
-T2              0.0079  205.22
-LDA2            0.0079  203.16
-MU2             0.0079  22.58
-NU2             0.0262  191.42
-RHO1            0.0087  203.29
-MK3             0.0157  84.02
-x 0 0
-MN4             0.0052  91.75
-MS4             0.0052  132.79
-x 0 0
-MF              0.0600  152.67
+S1              0.0060  275.35
+S2              0.1372  201.70
 x 0 0
 x 0 0
-SA              0.1300  187.78
-SSA             0.1000  272.46
+T2              0.0091  190.12
+LDA2            0.0061  200.06
+MU2             0.0061  86.68
+NU2             0.0274  176.12
+RHO1            0.0090  193.49
+MK3             0.0183  102.82
+x 0 0
+MN4             0.0091  84.25
+MS4             0.0091  120.49
+x 0 0
+MF              0.0152  152.57
+x 0 0
+x 0 0
+SA              0.0427  200.18
+SSA             0.0305  272.26
 x 0 0
 x 0 0
 x 0 0
@@ -123485,55 +123650,60 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 769
 # noaa_uid: wctt-769
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Alameda, San Francisco Bay, California (no.769). M2=0.54 S2=0.12 k=0.24 dt=+4min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from San Francisco, San Francisco Bay, California (no.769). M2=0.53 S2=0.13 k=0.92 dt=+4min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -122.9833
 # !latitude: 38.2333
 # state: California
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "San Francisco"
+# note: -- gemeint ist San Francisco (Golden Gate); der Import hatte per
+# note: -- Namensgleichheit "Alameda, San Francisco Bay, California" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Tomales Bay entrance, California
 +00:00 :America/Los_Angeles
 0.8230 meters
-J1              0.0165  259.34
-K1              0.3407  233.70
-K2              0.0362  224.21
-L2              0.0242  238.67
-M1              0.0110  257.87
-M2              0.5386  225.23
-M3              0.0024  124.80
-M4              0.0121  142.06
-M6              0.0048  37.80
+J1              0.0170  245.34
+K1              0.3426  226.40
+K2              0.0365  208.01
+L2              0.0168  231.57
+M1              0.0113  238.47
+M2              0.5306  210.13
+M3              0.0028  40.50
+M4              0.0197  140.66
+M6              0.0028  13.10
 x 0 0
-N2              0.1111  201.40
+N2              0.1123  185.10
 x 0 0
-O1              0.2088  217.13
-OO1             0.0110  277.48
-P1              0.1044  231.10
-Q1              0.0357  212.19
-x 0 0
-R2              0.0024  70.30
-S1              0.0110  283.40
-S2              0.1208  236.40
+O1              0.2124  209.33
+OO1             0.0113  261.08
+P1              0.1048  223.10
+Q1              0.0368  203.29
 x 0 0
 x 0 0
-T2              0.0072  221.70
-LDA2            0.0072  219.36
-MU2             0.0072  37.96
-NU2             0.0242  207.10
-RHO1            0.0082  210.70
-MK3             0.0145  108.24
-x 0 0
-MN4             0.0048  123.33
-MS4             0.0048  165.23
-x 0 0
-MF              0.0600  153.27
+S1              0.0057  283.60
+S2              0.1263  218.20
 x 0 0
 x 0 0
-SA              0.1300  187.80
-SSA             0.1000  272.51
+T2              0.0084  206.60
+LDA2            0.0056  216.26
+MU2             0.0056  102.06
+NU2             0.0253  191.80
+RHO1            0.0085  200.90
+MK3             0.0168  127.04
+x 0 0
+MN4             0.0084  115.83
+MS4             0.0084  152.93
+x 0 0
+MF              0.0152  153.17
+x 0 0
+x 0 0
+SA              0.0427  200.20
+SSA             0.0305  272.31
 x 0 0
 x 0 0
 x 0 0
@@ -123677,55 +123847,60 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 775
 # noaa_uid: wctt-775
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Alameda, San Francisco Bay, California (no.775). M2=0.55 S2=0.12 k=0.25 dt=+57min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from San Francisco, San Francisco Bay, California (no.775). M2=0.55 S2=0.13 k=0.95 dt=+57min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -122.9000
 # !latitude: 38.1667
 # state: California
 # admin1_quelle: Ufer 1.7 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "San Francisco"
+# note: -- gemeint ist San Francisco (Golden Gate); der Import hatte per
+# note: -- Namensgleichheit "Alameda, San Francisco Bay, California" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Marshall, Tomales Bay, California
 +00:00 :America/Los_Angeles
 0.8534 meters
-J1              0.0175  273.11
-K1              0.3608  246.99
-K2              0.0373  250.78
-L2              0.0248  264.75
-M1              0.0116  270.67
-M2              0.5540  250.83
-M3              0.0025  163.20
-M4              0.0124  193.27
-M6              0.0050  114.60
+J1              0.0180  259.11
+K1              0.3628  239.69
+K2              0.0375  234.58
+L2              0.0173  257.65
+M1              0.0120  251.27
+M2              0.5458  235.73
+M3              0.0029  78.90
+M4              0.0202  191.87
+M6              0.0029  89.90
 x 0 0
-N2              0.1143  226.52
+N2              0.1155  210.22
 x 0 0
-O1              0.2211  229.45
-OO1             0.0116  291.73
-P1              0.1106  244.31
-Q1              0.0378  224.03
-x 0 0
-R2              0.0025  96.84
-S1              0.0116  296.65
-S2              0.1242  262.90
+O1              0.2249  221.65
+OO1             0.0120  275.33
+P1              0.1109  236.31
+Q1              0.0390  215.13
 x 0 0
 x 0 0
-T2              0.0075  248.16
-LDA2            0.0075  245.38
-MU2             0.0075  62.67
-NU2             0.0248  232.29
-RHO1            0.0087  222.60
-MK3             0.0149  147.12
-x 0 0
-MN4             0.0050  174.05
-MS4             0.0050  217.33
-x 0 0
-MF              0.0600  154.24
+S1              0.0060  296.85
+S2              0.1299  244.70
 x 0 0
 x 0 0
-SA              0.1300  187.84
-SSA             0.1000  272.58
+T2              0.0087  233.06
+LDA2            0.0058  242.28
+MU2             0.0058  126.77
+NU2             0.0260  216.99
+RHO1            0.0090  212.80
+MK3             0.0173  165.92
+x 0 0
+MN4             0.0087  166.55
+MS4             0.0087  205.03
+x 0 0
+MF              0.0152  154.14
+x 0 0
+x 0 0
+SA              0.0427  200.24
+SSA             0.0305  272.38
 x 0 0
 x 0 0
 x 0 0
@@ -123869,55 +124044,60 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 781
 # noaa_uid: wctt-781
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Alameda, San Francisco Bay, California (no.781). M2=0.58 S2=0.13 k=0.26 dt=-27min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from San Francisco, San Francisco Bay, California (no.781). M2=0.58 S2=0.14 k=1.00 dt=-27min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -123.0500
 # !latitude: 38.3000
 # state: California
 # admin1_quelle: Ufer 0.3 km
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "San Francisco"
+# note: -- gemeint ist San Francisco (Golden Gate); der Import hatte per
+# note: -- Namensgleichheit "Alameda, San Francisco Bay, California" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Bodega Harbor entrance, California
 +00:00 :America/Los_Angeles
 0.9449 meters
-J1              0.0184  251.29
-K1              0.3808  225.93
-K2              0.0393  208.66
-L2              0.0262  223.41
-M1              0.0123  250.38
-M2              0.5848  210.26
-M3              0.0026  102.34
-M4              0.0131  112.11
-M6              0.0052  352.87
+J1              0.0190  237.29
+K1              0.3829  218.63
+K2              0.0396  192.46
+L2              0.0183  216.31
+M1              0.0127  230.98
+M2              0.5761  195.16
+M3              0.0030  18.04
+M4              0.0213  110.71
+M6              0.0030  328.17
 x 0 0
-N2              0.1206  186.70
+N2              0.1219  170.40
 x 0 0
-O1              0.2334  209.93
-OO1             0.0123  269.14
-P1              0.1167  223.37
-Q1              0.0399  205.27
-x 0 0
-R2              0.0026  54.78
-S1              0.0123  275.65
-S2              0.1311  220.90
+O1              0.2374  202.13
+OO1             0.0127  252.74
+P1              0.1171  215.37
+Q1              0.0411  196.37
 x 0 0
 x 0 0
-T2              0.0079  206.22
-LDA2            0.0079  204.14
-MU2             0.0079  23.51
-NU2             0.0262  192.37
-RHO1            0.0092  203.74
-MK3             0.0157  85.49
-x 0 0
-MN4             0.0052  93.66
-MS4             0.0052  134.76
-x 0 0
-MF              0.0600  152.71
+S1              0.0063  275.85
+S2              0.1372  202.70
 x 0 0
 x 0 0
-SA              0.1300  187.78
-SSA             0.1000  272.46
+T2              0.0091  191.12
+LDA2            0.0061  201.04
+MU2             0.0061  87.61
+NU2             0.0274  177.07
+RHO1            0.0095  193.94
+MK3             0.0183  104.29
+x 0 0
+MN4             0.0091  86.16
+MS4             0.0091  122.46
+x 0 0
+MF              0.0152  152.61
+x 0 0
+x 0 0
+SA              0.0427  200.18
+SSA             0.0305  272.26
 x 0 0
 x 0 0
 x 0 0
@@ -124061,55 +124241,60 @@ x 0 0
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 783
 # noaa_uid: wctt-783
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Alameda, San Francisco Bay, California (no.783). M2=0.60 S2=0.13 k=0.27 dt=-40min.
+# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from San Francisco, San Francisco Bay, California (no.783). M2=0.59 S2=0.14 k=1.03 dt=-40min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
+# confidence: 5
 # !units: meters
 # !longitude: -123.2500
 # !latitude: 38.5167
 # state: California
 # admin1_quelle: Polygon
+# note: 20260910 Bezugsort berichtigt: das Buch nennt "San Francisco"
+# note: -- gemeint ist San Francisco (Golden Gate); der Import hatte per
+# note: -- Namensgleichheit "Alameda, San Francisco Bay, California" genommen.
+# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
+# note: -- Siehe py/noaa_referenz_verwechslung.py.
 Fort Ross, California
 +00:00 :America/Los_Angeles
 0.9144 meters
-J1              0.0175  247.78
-K1              0.3608  222.55
-K2              0.0404  201.89
-L2              0.0269  216.77
-M1              0.0116  247.11
-M2              0.6001  203.74
-M3              0.0027  92.55
-M4              0.0135  99.07
-M6              0.0054  333.31
+J1              0.0180  233.78
+K1              0.3628  215.25
+K2              0.0407  185.69
+L2              0.0188  209.67
+M1              0.0120  227.71
+M2              0.5912  188.64
+M3              0.0031  8.25
+M4              0.0219  97.67
+M6              0.0031  308.61
 x 0 0
-N2              0.1238  180.30
+N2              0.1251  164.00
 x 0 0
-O1              0.2211  206.79
-OO1             0.0116  265.51
-P1              0.1106  220.00
-Q1              0.0378  202.26
-x 0 0
-R2              0.0027  48.02
-S1              0.0116  272.27
-S2              0.1346  214.15
+O1              0.2249  198.99
+OO1             0.0120  249.11
+P1              0.1109  212.00
+Q1              0.0390  193.36
 x 0 0
 x 0 0
-T2              0.0081  199.48
-LDA2            0.0081  197.52
-MU2             0.0081  17.22
-NU2             0.0269  185.95
-RHO1            0.0087  200.71
-MK3             0.0161  75.58
-x 0 0
-MN4             0.0054  80.74
-MS4             0.0054  121.49
-x 0 0
-MF              0.0600  152.46
+S1              0.0060  272.48
+S2              0.1408  195.95
 x 0 0
 x 0 0
-SA              0.1300  187.77
-SSA             0.1000  272.44
+T2              0.0094  184.38
+LDA2            0.0063  194.42
+MU2             0.0063  81.32
+NU2             0.0282  170.65
+RHO1            0.0090  190.91
+MK3             0.0188  94.38
+x 0 0
+MN4             0.0094  73.24
+MS4             0.0094  109.19
+x 0 0
+MF              0.0152  152.36
+x 0 0
+x 0 0
+SA              0.0427  200.17
+SSA             0.0305  272.24
 x 0 0
 x 0 0
 x 0 0

@@ -105,7 +105,7 @@ REFMAP = {
  'Kutei River Ent.': 'Kutei', 'Belawan Channel': 'Belawan', 'Musi River': 'Air Musi',
  'Surabaja Strait': 'Surabaya', 'Barito River': 'Barito', 'Djakarta': 'Jakarta, Java',
  'Mergui': 'Mergui', 'Mui Vung Tau': 'Vung Tau', 'Do Son': 'Do Son', 'Bangkok Bar': 'Bangkok',
- 'Singapore': 'Sembawang', 'Hong Kong': 'Hong Kong', 'Shantou': 'Shantou', 'Huangpu': 'Huangpu',
+ 'Singapore': 'Sembawang', 'Hong Kong': 'Quarry Bay, Hong Kong, China',  # 2026-09-10: 'Hong Kong' traf Tai O; TICON-Quarry-Bay ist 63 min zu frueh 'Shantou': 'Shantou', 'Huangpu': 'Huangpu',
  'Beihai': 'Beihai', 'Haikou': 'Haikou', 'PengHu (Ma-Kung Kang)': 'Magong', 'Kamaisi': 'Kamaisi',
  'Naha': 'Naha', 'Yokohama': 'Yokohama', 'Paramushiru Island': 'Paramushir', 'Darwin': 'Darwin',
  'Dar Es Salaam': 'Dar Es Salaam', 'Bombay': 'Mumbai', 'Ch’ang Chiang Approach': 'Chang Jiang',

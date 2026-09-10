@@ -93,7 +93,7 @@ REFMAP = {
  'Kutei River Ent.': 'Kutei', 'Belawan Channel': 'Belawan', 'Musi River': 'Air Musi',
  'Surabaja Strait': 'Surabaya', 'Barito River': 'Barito', 'Djakarta': 'Jakarta, Java',
  'Mergui': 'Mergui', 'Mui Vung Tau': 'Vung Tau', 'Do Son': 'Do Son', 'Bangkok Bar': 'Bangkok',
- 'Singapore': 'Sembawang', 'Hong Kong': 'Hong Kong', 'Shantou': 'Shantou', 'Huangpu': 'Huangpu',
+ 'Singapore': 'Sembawang', 'Hong Kong': 'Quarry Bay, Hong Kong, China', 'Shantou': 'Shantou', 'Huangpu': 'Huangpu',
  'Beihai': 'Beihai', 'Haikou': 'Haikou', 'PengHu (Ma-Kung Kang)': 'Magong', 'Kamaisi': 'Kamaisi',
  'Naha': 'Naha', 'Yokohama': 'Yokohama', 'Paramushiru Island': 'Paramushir', 'Darwin': 'Darwin',
  'Dar Es Salaam': 'Dar Es Salaam', 'Bombay': 'Mumbai', 'Ch’ang Chiang Approach': 'Chang Jiang',
@@ -137,6 +137,15 @@ REFMAP = {
  # 'Port Victoria, Seychelles' (Vancouver Island!) auf.
  'Charleston': 'Charleston, Cooper River entrance',   # South Carolina (dwf-free)
  'Victoria': 'Victoria Harbour, British Columbia,',   # Victoria BC, NICHT Seychellen
+ # Audit 2026-09-10 (py/noaa_referenz_verwechslung.py): weitere Namensgleichheiten,
+ # jede mit dem Buch belegt. Der kuerzeste Treffer war jeweils ein anderer Ort.
+ 'Punta Gorda': 'Punta Gorda, Venezuela',            # Rio San Juan, NICHT Belize
+ 'Sand Point': 'Sand Point, Popof Island, Alaska',   # NICHT Nova Scotia
+ 'Vancouver': 'Vancouver (CRAB Park at Portside), British Columbia',  # NICHT Columbia River, WA
+ 'Buenos Aires': 'Buenos Aires (Muelle de Pescadores)',  # Rio de la Plata, NICHT Pinamar
+ 'Rio de Janeiro': 'Ilha Fiscal, Rio de Janeiro',    # NICHT Paraty (Bundesstaat)
+ 'Galveston': 'Galveston (Galveston Channel), Texas',  # NICHT Clear Lake
+ 'San Francisco': 'San Francisco, San Francisco Bay, California',  # Golden Gate, NICHT Alameda
 }
 _refcache = {}
 def resolve_ref(noaa_ref):
