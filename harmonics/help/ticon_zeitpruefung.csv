@@ -1,0 +1,585 @@
+klasse,name,datei,versatz_min,zwilling,zwilling_datei,zwilling_km,zwilling_gegen_fes_min,ticon_gegen_fes,je_tide,messung_min
+A,"K13 Alpha Platform, Netherlands",harmonics_ticon4_worldwide.txt,-26,"K13A platform, Netherlands",harmonics-2004-06-14_mod.txt,0.15,5,M2-24 S2-26 K1-16 O1-28,M2-25 S2-26 K1-24 O1-36,
+A,"Mellumplate (Jade), Germany",harmonics_ticon4_worldwide.txt,38,"Mellumplate (Jade), Germany",harmonics_utide_observations.txt,0.0,-5,M2+35 S2+31 K1+33 O1+21,M2+38 S2+38 K1+31 O1+35,
+A,"Dagebüll, Germany",harmonics_ticon4_worldwide.txt,40,"Dagebüll, Germany",harmonics_utide_observations.txt,0.0,-12,M2+31 S2+44 K1+11 O1+22,M2+40 S2+42 K1+32 O1+38,
+B,"Thessaloniki, Greece",harmonics_ticon4_worldwide.txt,-594,"Thessaloniki, Greece",harmonics_att_np208_secondary.txt,0.0,,M2+241 S2+231,M2+148 S2+120,
+B,"Willemstad (Hollandsch Diep), Netherlands",harmonics_ticon4_worldwide.txt,-120,"Willemstad, Hollandsch Diep, Netherlands",harmonics_utide_observations.txt,1.02,,M2+50,M2-120,-120.0
+B,"Vuren (Waal), Netherlands",harmonics_ticon4_worldwide.txt,-114,"Dalem, Netherlands",harmonics_utide_observations.txt,0.01,,M2+30 S2+79,M2-114 S2-113,-110.0
+B,"Lagos Bar, Nigeria",harmonics_ticon4_worldwide.txt,-92,"Lagos Bar, Nigeria",harmonics_att_np208_secondary.txt,0.0,109,M2+8 S2+16 K1+15,M2-92 S2-94 K1-97,
+B,"Bayonne (Pont Blanc), France",harmonics_ticon4_worldwide.txt,-62,"Bayonne (Pont Blanc), France",harmonics_utide_observations.txt,0.0,62,M2-29 S2-24 K1+17 O1+14,M2-60 S2-62 K1-72 O1-71,-55.0
+B,"Mawson, Antarctica",harmonics_ticon4_worldwide.txt,-60,"Mawson, Antarctica",harmonics_att_np203_secondary.txt,0.0,54,M2-9 S2-10 K1-8 O1+2,M2-64 S2-60 K1-61 O1-56,
+B,"Owenga, Chatham, Island, New Zealand",harmonics_ticon4_worldwide.txt,-56,"Owenga, Chatham, Island, New Zealand",harmonics_utide_tidetables.txt,0.0,,M2-51,M2-56,
+B,"Lagos (Apapa), Nigeria",harmonics_ticon4_worldwide.txt,-45,"Lagos (Apapa), Nigeria",harmonics_att_np208.txt,0.0,,,,
+B,"Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina",harmonics_ticon4_worldwide.txt,-40,"Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina",harmonics_utide_tidetables.txt,0.01,112,M2-18 S2-57 K1+507 O1+198,M2-38 S2-66 K1-49 O1-7,14.0
+B,"La Spezia, Italy",harmonics_ticon4_worldwide.txt,-37,"La Spezia, Italy",harmonics_att_np208.txt,0.0,-23,M2-58 S2-55 K1-69,M2-35 S2-46 K1-29,
+B,"São Tomé (Baía de Ana Chaves), São Tomé and Príncipe",harmonics_ticon4_worldwide.txt,-37,"São Tomé (Baía de Ana Chaves), São Tomé and Príncipe",harmonics_att_np208_secondary.txt,0.0,35,M2-1 S2+1 K1-1,M2-36 S2-61 K1-32,
+B,"Port-Saint-François, Québec, Canada",harmonics_ticon4_worldwide.txt,-34,"Port-Saint-François, Québec, Canada",harmonics_utide_tidetables.txt,0.0,,,,-20.0
+B,"Eider-Sperrwerk (Binnenpegel), Germany",harmonics_ticon4_worldwide.txt,-26,"Eider-Sperrwerk (Binnenpegel), Germany",harmonics_utide_observations.txt,0.0,40,M2+14 S2+20 K1-31 O1+0,M2-24 S2-22 K1-61 O1-72,-10.0
+B,"Elmshorn (Krückau Hafen), Germany",harmonics_ticon4_worldwide.txt,34,"Elmshorn (Krückau Hafen), Germany",harmonics_utide_observations.txt,0.0,196,M2+178 S2+160 K1+287 O1+501,M2+34 S2+36 K1+39 O1+40,40.0
+B,"Itzehoe (Stör Hafen), Germany",harmonics_ticon4_worldwide.txt,37,"Itzehoe (Stör Hafen), Germany",harmonics_utide_observations.txt,0.0,167,M2+193 S2+184 K1+213 O1+361,M2+36 S2+36 K1+36 O1+38,40.0
+B,"Krückau-Sperrwerk (Binnenpegel), Germany",harmonics_ticon4_worldwide.txt,37,"Krückau-Sperrwerk (Binnenpegel), Germany",harmonics_utide_observations.txt,0.02,113,M2+136 S2+120 K1+170 O1+401,M2+37 S2+38 K1+43 O1+40,40.0
+B,"Pinnau-Sperrwerk (Binnenpegel), Germany",harmonics_ticon4_worldwide.txt,37,"Pinnau-Sperrwerk (Binnenpegel), Germany",harmonics_utide_observations.txt,0.01,125,M2+144 S2+129 K1+187 O1+415,M2+37 S2+37 K1+43 O1+40,40.0
+B,"Friedrichstadt (Eider Strassenbrücke), Germany",harmonics_ticon4_worldwide.txt,40,"Friedrichstadt (Eider Strassenbrücke), Germany",harmonics_utide_observations.txt,0.0,108,M2+119 S2+130 K1+146 O1+172,M2+43 S2+41 K1+18 O1-7,-25.0
+B,"Lühort (Lühe), Germany",harmonics_ticon4_worldwide.txt,40,"Lühort (Lühe), Germany",harmonics_utide_observations.txt,0.08,143,M2+164 S2+150 K1+201 O1+432,M2+40 S2+40 K1+40 O1+44,40.0
+B,"Elsfleth (Weser), Germany",harmonics_ticon4_worldwide.txt,41,"Elsfleth (Weser), Germany",harmonics_utide_observations.txt,0.0,83,M2+124 S2+135 K1+116 O1+116,M2+41 S2+41 K1+33 O1+40,
+B,"Farge (Weser), Germany",harmonics_ticon4_worldwide.txt,41,"Farge (Weser), Germany",harmonics_utide_observations.txt,0.0,104,M2+145 S2+157 K1+138 O1+139,M2+41 S2+41 K1+33 O1+41,
+B,"Palmeira (Sal), Cape Verde",harmonics_ticon4_worldwide.txt,41,"Palmeira (Sal), Cape Verde",harmonics_att_np208_secondary.txt,0.0,-27,M2+15 S2+6 K1+6 O1+11,M2+42 S2+48 K1-4,0.0
+B,"Vegesack (Weser), Germany",harmonics_ticon4_worldwide.txt,41,"Vegesack (Weser), Germany",harmonics_utide_observations.txt,0.0,123,M2+163 S2+175 K1+158 O1+159,M2+41 S2+41 K1+33 O1+41,
+B,"Este (Inneres Sperrwerk Binnenpegel), Germany",harmonics_ticon4_worldwide.txt,42,"Este (Inneres Sperrwerk Binnenpegel), Germany",harmonics_utide_observations.txt,0.0,152,M2+185 S2+175 K1+209 O1+445,M2+41 S2+41 K1+48 O1+43,45.0
+B,"Ritterhude (Hamme), Germany",harmonics_ticon4_worldwide.txt,42,"Ritterhude (Hamme), Germany",harmonics_utide_observations.txt,0.0,182,M2+219 S2+231 K1+223 O1+234,M2+43 S2+42 K1+52 O1+41,40.0
+B,"Wasserhorst (Lesum), Germany",harmonics_ticon4_worldwide.txt,42,"Wasserhorst (Lesum), Germany",harmonics_utide_observations.txt,0.0,170,M2+208 S2+220 K1+208 O1+219,M2+42 S2+41 K1+50 O1+43,50.0
+B,"Cranz (Este-Sperrwerk), Germany",harmonics_ticon4_worldwide.txt,45,"Cranz (Este-Sperrwerk), Germany",harmonics_utide_observations.txt,0.0,160,M2+183 S2+171 K1+219 O1+453,M2+45 S2+44 K1+37 O1+47,40.0
+B,"Altengamme (Elbe), Germany",harmonics_ticon4_worldwide.txt,46,"Altengamme (Elbe), Germany",harmonics_utide_observations.txt,0.0,,M2+7,M2+47,
+B,"Fahrenholz (Ilmenau Unterpegel), Germany",harmonics_ticon4_worldwide.txt,46,"Fahrenholz (Ilmenau Unterpegel), Germany",harmonics_utide_observations.txt,0.0,,M2+42,M2+46,50.0
+B,"Arklow, Ireland",harmonics_ticon4_worldwide.txt,57,"Arklow, Ireland",harmonics_utide_tidetables.txt,0.0,-109,M2-9 S2-11 K1+9 O1+3,M2+69 S2+20 K1+148 O1+166,70.0
+B,"San Sebastián de La Gomera, Spain",harmonics_ticon4_worldwide.txt,136,"San Sebastián de la Gomera, Spain",harmonics_att_np208_secondary.txt,0.0,-138,M2-1 S2-3 K1-9 O1-2,M2+137 S2+133 K1+149 O1+135,
+B,"Esquimalt Lagoon, British Columbia, Canada",harmonics_ticon4_worldwide.txt,155,"Esquimalt Harbour, British Columbia, Canada",harmonics_utide_tidetables.txt,1.89,7,M2+100 K1+191 O1+238,M2+92 K1+186 O1+233,97.0
+B,"Charleston, New Zealand",harmonics_ticon4_worldwide.txt,720,"Charleston, New Zealand",harmonics_utide_tidetables.txt,0.0,,M2-0 S2-2,M2-1 S2+1,
+,"Prosperpolder (Schelde), Belgium",harmonics_ticon4_worldwide.txt,-25,"Prosperpolder (Schelde), Belgium",harmonics_utide_observations.txt,0.97,-1,M2-34 S2-35 K1-3 O1-15,M2-24 S2-26 K1-24 O1-21,-25.0
+,"Osterriff (Elbe), Germany",harmonics_ticon4_worldwide.txt,-25,"Osterriff (Elbe), Germany",harmonics_utide_observations.txt,0.0,25,M2+4 S2-3 K1-7 O1+9,M2-25 S2-24 K1-28 O1-23,-20.0
+,"Brunsbüttel (Elbe), Germany",harmonics_ticon4_worldwide.txt,-23,"Brunsbüttel (Elbe), Germany",harmonics_utide_observations.txt,0.0,35,M2+19 S2+5 K1+9 O1+18,M2-23 S2-23 K1-20 O1-23,-20.0
+,"Trois-Rivieres, Québec, Canada",harmonics_ticon4_worldwide.txt,-23,"Trois-Rivières, Québec, Canada",harmonics_utide_tidetables.txt,0.0,,,,10.0
+,"Becancour, Québec, Canada",harmonics_ticon4_worldwide.txt,-22,"Bécancour, Québec, Canada",harmonics_utide_tidetables.txt,0.0,,,,0.0
+,"Bremerhaven (Alter Leuchtturm), Germany",harmonics_ticon4_worldwide.txt,-21,"Bremerhaven (Alter Leuchtturm), Germany",harmonics_utide_observations.txt,0.0,22,M2+8 S2+8 K1-10 O1-21,M2-21 S2-21 K1-24 O1-23,-20.0
+,"Hörnum (Sylt, Hafen), Germany",harmonics_ticon4_worldwide.txt,-20,"Hörnum (Sylt, Hafen), Germany",harmonics_utide_observations.txt,0.0,14,M2-6 S2-11 K1-13 O1-5,M2-20 S2-19 K1-26 O1-23,-20.0
+,"Le Port (Pointe des Galets), Réunion",harmonics_ticon4_worldwide.txt,-20,"Le Port (Pointe des Galets), Réunion",harmonics_att_np203_secondary.txt,0.0,41,M2+11 S2+22 K1+28 O1+31,M2-22 S2-22 K1-24 O1-6,
+,"Nordenham (Weser, Unterfeuer), Germany",harmonics_ticon4_worldwide.txt,-19,"Nordenham (Weser, Unterfeuer), Germany",harmonics_utide_observations.txt,0.0,37,M2+24 S2+27 K1+7 O1-4,M2-19 S2-19 K1-23 O1-21,-20.0
+,"Brake (Weser), Germany",harmonics_ticon4_worldwide.txt,-18,"Brake (Weser), Germany",harmonics_utide_observations.txt,0.0,63,M2+47 S2+57 K1+36 O1+36,M2-18 S2-18 K1-24 O1-18,
+,"Ledasperrwerk (Unterpegel), Germany",harmonics_ticon4_worldwide.txt,-17,"Ledasperrwerk (Unterpegel), Germany",harmonics_utide_observations.txt,0.0,61,M2+22 S2+64 K1+10 O1+77,M2-17 S2-19 K1-21 O1-17,-20.0
+,"Whiteness Head (Moray Firth), Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,-16,"Whiteness Head (Moray Firth), Scotland, United Kingdom",harmonics_utide_tidetables.txt,0.0,22,M2+3 S2+6 K1+12 O1+13,M2-12 S2-24 K1+45 O1-46,-30.0
+,"La Crucecita (Huatulco), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,-15,"La Crucecita (Huatulco), Oaxaca, Mexico",harmonics_utide_tidetables.txt,0.0,12,M2-4 S2-0 K1-4 O1-13,M2-13 S2-13 K1-17 O1-25,
+,"Zandkreeksluis (Kats Buiten), Netherlands",harmonics_ticon4_worldwide.txt,-14,"Kats, Zandkreeksluis, Netherlands",harmonics_utide_observations.txt,0.0,66,M2+35 S2+42 K1+62 O1+41,M2-13 S2-17 K1-33 O1-32,
+,"Port Aux Basques, Newfoundland, Canada",harmonics_ticon4_worldwide.txt,-14,"Port Aux Basques, Newfoundland, Canada",harmonics_utide_observations.txt,0.03,19,M2+2 S2+2 K1+10 O1+2,M2-14 S2-15 K1-13 O1-18,0.0
+,"Abidjan (Canal de Vridi), Ivory Coast",harmonics_ticon4_worldwide.txt,-12,"Abidjan (Canal de Vridi), Ivory Coast",harmonics_att_np208.txt,0.0,32,M2+12 S2+21 K1+34,M2-20 S2-22 K1+69,
+,"Champlain, Québec, Canada",harmonics_ticon4_worldwide.txt,-12,"Champlain, Québec, Canada",harmonics_utide_tidetables.txt,0.03,,,,5.5
+,"Djibouti (Gulf of Aden), Djibouti",harmonics_ticon4_worldwide.txt,-11,"Djibouti (Gulf of Aden), Djibouti",harmonics_att_np203_secondary.txt,0.0,14,M2+1 S2+1 K1+1 O1+2,M2-13 S2-7 K1-13 O1-16,
+,"Buenaventura, Colombia",harmonics_ticon4_worldwide.txt,-10,"Buenaventura, Colombia",harmonics_utide_observations.txt,0.0,28,M2+18 S2+15 K1+13,M2-10 S2-8 K1-15,0.0
+,"Lüderitz, Namibia",harmonics_ticon4_worldwide.txt,-10,"Lüderitz, Namibia",harmonics_att_np208_secondary.txt,0.0,12,M2+0 S2+0 K1-3,M2-12 S2-11 K1+72,
+,"San Felipe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,-10,"San Felipe, Baja California, Mexico",harmonics-2004-06-14_mod.txt,0.01,50,M2+32 S2+42 K1+54 O1+48,M2-5 S2-8 K1-34 O1-3,-20.0
+,"Port-aux-Francais, Kerguelen Islands",harmonics_ticon4_worldwide.txt,-9,"Port-aux-Francais, Kerguelen Islands",harmonics-1997-05-25_mod.txt,0.0,13,M2-1 S2-2 K1+14,M2-10 S2-15 K1-5,100.0
+,"Batiscan, Québec, Canada",harmonics_ticon4_worldwide.txt,-8,"Batiscan, Québec, Canada",harmonics_utide_tidetables.txt,0.0,,,,-10.0
+,"Minicoy Island, Lakshadweep, India",harmonics_ticon4_worldwide.txt,-8,"Minicoy Island, Lakshadweep, India",harmonics-1997-05-25_mod.txt,0.0,5,M2+5 S2-8 K1-28 O1+26,M2-3 S2-16 K1-30 O1+24,0.0
+,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_ticon4_worldwide.txt,-7,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_utide_observations.txt,0.0,76,M2+27 K1+75 O1+86,M2-9 K1-1 O1-15,165.0
+,"Ciudad del Carmen (Faro Atalaya), Campeche, Mexico",harmonics_ticon4_worldwide.txt,-7,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_utide_observations.txt,1.75,76,M2+27 K1+75 O1+86,M2-9 K1-1 O1-15,-390.0
+,"Ensenada, Baja California, Mexico",harmonics_ticon4_worldwide.txt,-7,"Ensenada, Baja California, Mexico",harmonics_utide_observations.txt,0.0,6,M2+1 S2-4 K1+0 O1-2,M2-7 S2-9 K1-6 O1-7,-50.0
+,"Cape Town, South Africa",harmonics_ticon4_worldwide.txt,-6,"Cape Town, South Africa",harmonics_utide_observations.txt,0.0,9,M2+3 S2+3 K1+3,M2-5 S2-7 K1-7,0.0
+,"Stellendam (Haringvlietdam), Netherlands",harmonics_ticon4_worldwide.txt,-6,"Stellendam, buitenhaven, Netherlands",harmonics_utide_observations.txt,0.82,-16,M2-23 S2-22 K1-36 O1-12,M2-6 S2-7 K1-3 O1-9,
+,"Inhambane (Rio Matumba.), Mozambique",harmonics_ticon4_worldwide.txt,-5,"Inhambane (Rio Matumba.), Mozambique",harmonics_att_np203_secondary.txt,0.02,26,M2+11 S2+17,M2-5 S2-9,
+,"Kimmirut (Lake Harbour), Nunavut, Canada",harmonics_ticon4_worldwide.txt,-5,"Kimmirut (Lake Harbour), Nunavut, Canada",harmonics-2004-06-14_mod.txt,0.01,17,M2+6 S2+17 K1+45 O1+6,M2-4 S2-3 K1-5 O1-7,1.0
+,"Male, Maldives",harmonics_ticon4_worldwide.txt,-5,"Male, Maldives",harmonics_att_np203_secondary.txt,0.53,-1,M2-3 S2-4 K1+1 O1+4,M2-6 S2+1 K1+6 O1-85,
+,"Male Hulule, Maldives",harmonics_ticon4_worldwide.txt,-5,"Male, Maldives",harmonics_att_np203_secondary.txt,1.35,-1,M2+0 S2-3 K1+1 O1+4,M2-3 S2+1 K1+5 O1-84,
+,"Andoany / Hell-Ville (Nosy Be), Madagascar",harmonics_ticon4_worldwide.txt,-5,"Andoany / Hell-Ville (Nosy Be), Madagascar",harmonics-1997-05-25_mod.txt,0.0,8,M2+4 S2-1 K1+9 O1-1,M2-5 S2-3 K1-4 O1-8,
+,"Puerto Williams, Chile",harmonics_ticon4_worldwide.txt,-5,"Puerto Williams, Chile",harmonics_utide_observations.txt,0.0,-17,M2-6 S2-32 K1-37 O1-16,M2-4 S2-11 K1-5 O1-3,-10.0
+,"Ringaskiddy (NMCI), Ireland",harmonics_ticon4_worldwide.txt,-5,"Cobh, Ireland",harmonics-1997-05-25_mod.txt,1.79,23,M2+11 S2+25 O1+18,M2-6 S2-3 O1-4,-20.0
+,"Saldahna, South Africa",harmonics_ticon4_worldwide.txt,-5,"Saldanha, South Africa",harmonics_att_np203_secondary.txt,0.0,3,M2-2 S2-2 K1-2,M2-5 S2-6 K1-4,20.0
+,"Shanwei, Guangdong, China",harmonics_ticon4_worldwide.txt,-5,"Shanwei, Guangdong, China",harmonics_utide_tidetables.txt,0.0,16,M2+7 S2+16 K1+16 O1+16,M2-9 S2+1 K1+4 O1-3,
+,"Balboa, Panama",harmonics_ticon4_worldwide.txt,-4,"Balboa, Panama",harmonics_utide_observations.txt,0.0,4,M2+1 S2+1 K1+1 O1-7,M2-4 S2-3 K1-2 O1-7,0.0
+,"Ballyglass (Broadhaven), Ireland",harmonics_ticon4_worldwide.txt,-4,"Ballyglass (Broadhaven), Ireland",harmonics_utide_tidetables.txt,0.0,-7,M2+1 S2-2 K1-20 O1-22,M2-4 S2-6 K1-2 O1+45,-5.0
+,"Cox's Bazar, Bangladesh",harmonics_ticon4_worldwide.txt,-4,"Cox's Bazaar, Bangladesh",harmonics_utide_observations.txt,0.0,34,M2+22 S2+35 K1+50 O1-25,M2-3 S2-8 K1-26 O1+14,0.0
+,"Faraday, Antarctica",harmonics_ticon4_worldwide.txt,-4,"Marina Point, Antarctica",harmonics_att_np207.txt,0.01,1,M2-1 S2-2 K1+3 O1+3,M2+1 S2+4 K1-1 O1-2,
+,"Île Saint-Paul, French Southern and Antarctic Lands",harmonics_ticon4_worldwide.txt,-4,"St. Paul Island, French Southern Territories",harmonics_att_np203_secondary.txt,0.37,8,M2+2 S2+3 K1+10 O1-1,M2-8 S2-4 K1+6 O1-55,
+,"Rothera, Antarctica",harmonics_ticon4_worldwide.txt,-4,"Rothera Point, Antarctica",harmonics_att_np207.txt,0.04,-1,M2-28 S2+12 K1+10 O1+7,M2-2 S2-7 K1-2 O1+21,
+,"Rumoi, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,-4,"Rumoi, Hokkaido, Japan",harmonics_utide_observations.txt,0.01,0,M2-2 K1-5 O1-3,M2-4 K1-4 O1-3,0.0
+,"Stavanger, Norway",harmonics_ticon4_worldwide.txt,-4,"Stavanger, Norway",harmonics_utide_observations.txt,0.0,,M2-4 S2-12,M2-3 S2-5,-10.0
+,"Umashima, Ehime, Japan",harmonics_ticon4_worldwide.txt,-4,"Kurushima Koro, Ehime, Japan",harmonics_utide_observations.txt,0.63,32,M2+12 S2+6 K1+28 O1+44,M2-10 S2-12 K1-15 O1-24,10.0
+,"Cartagena de Indias, Colombia",harmonics_ticon4_worldwide.txt,-3,"Cartagena, Colombia",harmonics_utide_observations.txt,1.11,11,M2+6 K1-0 O1+5,M2-5 K1+16 O1-6,0.0
+,"Dongfang, Hainan, China",harmonics_ticon4_worldwide.txt,-3,"Dongfang (Basuo), Hainan, China",harmonics_utide_tidetables.txt,0.03,-4,M2-3 S2-7 K1-15 O1-4,M2-5 S2-1 K1-2 O1-3,
+,"Kashima, Ibaraki, Japan",harmonics_ticon4_worldwide.txt,-3,"Kashima, Ibaraki, Japan",harmonics_utide_observations.txt,0.01,0,M2-2 S2-1 K1-3 O1-15,M2-3 S2-3 K1-2 O1-4,0.0
+,"Mombasa (Kilindini Harbour), Kenya",harmonics_ticon4_worldwide.txt,-3,"Mombasa (Kilindini Harbour), Kenya",harmonics-1997-05-25_mod.txt,0.01,6,M2+1 S2+1 K1+2 O1+0,M2-2 S2-3 K1-7 O1-6,0.0
+,"Oga, Akita, Japan",harmonics_ticon4_worldwide.txt,-3,"Oga, Akita, Japan",harmonics_utide_observations.txt,0.0,4,M2+4 K1-3 O1+1,M2-3 K1-2 O1-3,0.0
+,"Oterdum, Netherlands",harmonics_ticon4_worldwide.txt,-3,"Knock (Ems), Germany",harmonics_utide_observations.txt,1.95,-3,M2-2 S2+13 K1-15 O1+7,M2+7 S2-4 K1+20 O1+4,10.0
+,"Port-Bloc (La Pointe de Grave), France",harmonics_ticon4_worldwide.txt,-3,"Port-Bloc (La Pointe de Grave), France",harmonics_utide_observations.txt,0.0,15,M2+8 S2+9 K1+13 O1+16,M2-3 S2-4 K1-5 O1-5,0.0
+,"Richards Bay, South Africa",harmonics_ticon4_worldwide.txt,-3,"Richards Bay, South Africa",harmonics_utide_observations.txt,0.0,1,M2-1 S2+2 K1-1,M2-3 S2-3 K1-1,0.0
+,"Veracruz, Veracruz, Mexico",harmonics_ticon4_worldwide.txt,-3,"Veracruz, Veracruz, Mexico",harmonics_utide_observations.txt,0.0,-2,M2-5 K1-11 O1-4,M2-4 K1-2 O1-5,-390.0
+,"Xiamen, Fujian, China",harmonics_ticon4_worldwide.txt,-3,"Xiamen, Fujian, China",harmonics_utide_tidetables.txt,0.0,8,M2+5 S2+2 K1+6 O1+14,M2-1 S2-8 K1+21 O1-10,
+,"Zhapo (Heiling), Guangdong, China",harmonics_ticon4_worldwide.txt,-3,"Zhapo, Guangdong, China",harmonics_utide_observations.txt,0.0,2,M2+3 S2+2 K1+0 O1+3,M2-4 S2+1 K1-1 O1-1,
+,"Arica, Chile",harmonics_ticon4_worldwide.txt,-2,"Arica, Chile",harmonics_utide_observations.txt,0.61,1,M2-2 S2-3 K1+3 O1+0,M2-2 S2-2 K1-1 O1-2,0.0
+,"Brunswick, New South Wales, Australia",harmonics_ticon4_worldwide.txt,-2,"Brunswick Heads, New South Wales, Australia",harmonics-2004-06-14_mod.txt,0.0,28,M2+19 S2+21 K1+34 O1+48,M2-3 S2-2 K1+0 O1-2,
+,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,-2,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_utide_observations.txt,0.0,4,M2-0 S2+1 K1+2 O1+2,M2-2 S2-3 K1-3 O1-3,-390.0
+,"Cádiz, Spain",harmonics_ticon4_worldwide.txt,-2,"Cádiz, Spain",harmonics_utide_tidetables.txt,0.01,13,M2+10 S2+10 K1+12 O1+8,M2-1 S2-2 K1-9 O1-6,
+,"Cascais, Portugal",harmonics_ticon4_worldwide.txt,-2,"Cascais, Portugal",harmonics_utide_observations.txt,0.0,5,M2+1 S2+1 K1+2 O1-2,M2-3 S2-2 K1-4 O1-10,
+,"Colón, Panama",harmonics_ticon4_worldwide.txt,-2,"Cristobal, Panama",harmonics_utide_observations.txt,0.0,5,M2+3 K1+2 O1+3,M2-2 K1-0 O1-4,0.0
+,"Haikou, Hainan, China",harmonics_ticon4_worldwide.txt,-2,"Haikou (Xiuying), Hainan, China",harmonics_utide_tidetables.txt,0.81,-8,M2-34 S2-16 K1+15 O1+5,M2-6 S2+6 K1+1 O1+0,
+,"Hiron Point (Pasur River), Bangladesh",harmonics_ticon4_worldwide.txt,-2,"Hiron Point (Pasur River), Bangladesh",harmonics_utide_observations.txt,0.0,-7,M2-7 S2-8 K1-6 O1-9,M2-2 S2-2 K1+1 O1-1,10.0
+,"Holwerd, Netherlands",harmonics_ticon4_worldwide.txt,-2,"Holwerd, Veersteiger, Netherlands",harmonics_utide_observations.txt,0.1,29,M2+28 S2+27 K1-16 O1+35,M2-2 S2-2 K1+8 O1-12,
+,"La Unión, El Salvador",harmonics_ticon4_worldwide.txt,-2,"La Union, El Salvador",harmonics_utide_observations.txt,1.54,-2,M2+2 S2+2 K1-16 O1-4,M2-2 S2-1 K1-5 O1+4,0.0
+,"Legaspi, Philippines",harmonics_ticon4_worldwide.txt,-2,"Legaspi, Philippines",harmonics_att_np203_scs.txt,0.0,-3,M2-7 S2-2 K1-12 O1-1,M2-2 S2-1 K1-4 O1-3,10.0
+,"Manzanillo, Colima, Mexico",harmonics_ticon4_worldwide.txt,-2,"Manzanillo, Colima, Mexico",harmonics_utide_observations.txt,0.0,1,M2-1 S2-2 K1-1 O1-8,M2-2 S2-3 K1-1 O1-3,360.0
+,"Newport (River Usk), Wales, United Kingdom",harmonics_ticon4_worldwide.txt,-2,"Newport (River Usk), Wales, United Kingdom",harmonics-dwf-20100529-nonfree_mod.txt,0.0,-13,M2-1 S2-3 K1-27 O1-33,M2-1 S2-2 K1-2 O1+0,0.0
+,"Oslo, Norway",harmonics_ticon4_worldwide.txt,-2,"Oslo, Norway",harmonics_utide_observations.txt,0.0,,M2+30,M2-2,10.0
+,"Pointe-Noire, Republic of the Congo",harmonics_ticon4_worldwide.txt,-2,"Pointe-Noire, Republic of the Congo",harmonics_utide_tidetables.txt,0.0,4,M2+2 S2+4 K1+5,M2-1 S2-4 K1+2,5.0
+,"Port Nolloth, South Africa",harmonics_ticon4_worldwide.txt,-2,"Port Nolloth, South Africa",harmonics_att_np203_secondary.txt,0.03,2,M2-1 S2+2 K1+4,M2-2 S2-0 K1-5,0.0
+,"Puerto Montt, Chile",harmonics_ticon4_worldwide.txt,-2,"Puerto Montt, Chile",harmonics_utide_observations.txt,0.03,10,M2+2 S2+3 K1+13 O1+13,M2-2 S2-3 K1-2 O1-1,0.0
+,"Jau-Dignac-et-Loirac (Richard), France",harmonics_ticon4_worldwide.txt,-2,"Jau-Dignac-et-Loirac (Richard), France",harmonics_utide_observations.txt,0.0,8,M2+5 S2+7 K1+6 O1+18,M2-2 S2-2 K1-14 O1+10,0.0
+,"Saeki (Tsurumi Okimatsuura), Oita, Japan",harmonics_ticon4_worldwide.txt,-2,"Saeki (Tsurumi Okimatsuura), Oita, Japan",harmonics_utide_observations.txt,0.0,-5,M2-8 S2-9 K1-3 O1+2,M2-2 S2-1 K1+0 O1-2,0.0
+,"Shiraoiko, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,-2,"Shiraoiko, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,2,M2+0 S2+1 K1+2 O1-5,M2-1 S2-2 K1-2 O1-2,0.0
+,"Tregde (Mandal), Norway",harmonics_ticon4_worldwide.txt,-2,"Tregde (Mandal), Norway",harmonics_utide_observations.txt,0.0,,M2-4,M2-2,10.0
+,"Union Hall Harbour, Ireland",harmonics_ticon4_worldwide.txt,-2,"Union Hall Harbour, Ireland",harmonics_utide_observations.txt,0.0,,M2+14 S2+21,M2-2 S2-2,0.0
+,"Vairao, Tahiti, French Polynesia",harmonics_ticon4_worldwide.txt,-2,"Vairao Oututaata, French Polynesia",harmonics_utide_tidetables.txt,0.29,,M2+9 S2+8,M2-2 S2-1,0.0
+,"Fukushima (Yoshioka), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,-2,"Fukushima (Yoshioka), Hokkaido, Japan",harmonics_utide_observations.txt,0.01,-17,M2+25 S2+21 K1-57 O1-91,M2-2 S2-2 K1-0 O1-1,0.0
+,"Acapulco (Puerto), Guerrero, Mexico",harmonics_ticon4_worldwide.txt,-1,"Acapulco, Guerrero, Mexico",harmonics_utide_observations.txt,0.0,3,M2+7 S2+1 K1+5 O1-3,M2+3 S2-3 K1+0 O1-2,-720.0
+,"Akabane, Aichi, Japan",harmonics_ticon4_worldwide.txt,-1,"Akabane, Aichi, Japan",harmonics_utide_observations.txt,0.0,-4,M2+0 S2+2 K1-13 O1-12,M2-1 S2-0 K1+0 O1-2,0.0
+,"Aomori, Aomori, Japan",harmonics_ticon4_worldwide.txt,-1,"Aomori, Aomori, Japan",harmonics_utide_observations.txt,0.0,63,M2+10 S2+11 K1+115 O1+146,M2-1 S2-1 K1-0 O1+1,0.0
+,"Bedford Institute, Nova Scotia, Canada",harmonics_ticon4_worldwide.txt,-1,"Bedford Institute, Nova Scotia, Canada",harmonics_utide_observations.txt,0.02,5,M2+4 S2+6 K1+2 O1+8,M2-0 S2-1 K1+3 O1+2,0.0
+,"Brisbane Bar, Queensland, Australia",harmonics_ticon4_worldwide.txt,-1,"Brisbane Bar, Queensland, Australia",harmonics_utide_observations.txt,0.01,-3,M2-2 S2-3 K1-8 O1-1,M2-1 S2+0 K1-1 O1+1,0.0
+,"Caldera, Chile",harmonics_ticon4_worldwide.txt,-1,"Caldera, Chile",harmonics_utide_observations.txt,0.0,3,M2+1 S2+2 K1+2 O1+1,M2-1 S2-1 K1-1 O1-2,0.0
+,"Chendering, Malaysia",harmonics_ticon4_worldwide.txt,-1,"Chendering, Malaysia",harmonics_att_np203_scs.txt,0.0,3,M2-0 S2-2 K1+1 O1+2,M2+2 S2-0 K1-8 O1-6,
+,"Nouméa, New Caledonia",harmonics_ticon4_worldwide.txt,-1,"Nouméa - Chaleix, New Caledonia",harmonics_utide_tidetables.txt,0.18,6,M2+7 S2+12 K1+5 O1-5,M2-1 S2-1 K1+0 O1+1,0.0
+,"Kochi (Willingdon Island), Kerala, India",harmonics_ticon4_worldwide.txt,-1,"Kochi (Willingdon Island), Kerala, India",harmonics_utide_observations.txt,0.0,38,M2+27 S2+22 K1+33 O1+54,M2-0 S2+8 K1-16 O1+0,10.0
+,"Deal, England, United Kingdom",harmonics_ticon4_worldwide.txt,-1,"Deal, England, United Kingdom",harmonics_utide_observations.txt,0.0,4,M2-1 S2-0 K1+37 O1-1,M2-0 S2-1 K1-9 O1-9,-10.0
+,"Dundalk, Ireland",harmonics_ticon4_worldwide.txt,-1,"Dundalk, Ireland",harmonics_utide_tidetables.txt,0.0,24,M2+14 S2+23 K1+72 O1+65,M2-4 S2+7 K1+42 O1+25,0.0
+,"KuGompo City (East London), South Africa",harmonics_ticon4_worldwide.txt,-1,"KuGompo City (East London), South Africa",harmonics_utide_observations.txt,0.0,1,M2-2 S2-0 K1+4,M2-0 S2-1 K1-0,-10.0
+,"Hanga Roa, Isla de Pascua (Easter), Chile",harmonics_ticon4_worldwide.txt,-1,"Hanga Roa, Isla de Pascua (Easter), Chile",harmonics-2004-06-14_mod.txt,0.0,-1,M2+2 S2-2 K1+6 O1-12,M2-3 S2+1 K1+3 O1-5,
+,"Esashi, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,-1,"Esashi, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,-10,M2-5 S2+2 K1-26 O1-17,M2-1 S2-2 K1-2 O1+0,0.0
+,"Shinminato (Horioka), Toyama, Japan",harmonics_ticon4_worldwide.txt,-1,"Shinminato (Horioka), Toyama, Japan",harmonics_utide_observations.txt,0.01,-1,M2-0 K1-14 O1-3,M2+0 K1-2 O1-2,0.0
+,"Hammerfest, Norway",harmonics_ticon4_worldwide.txt,-1,"Hammerfest, Norway",harmonics_utide_observations.txt,0.0,8,M2+0 S2+1 K1+18 O1+11,M2-1 S2-2 K1-4 O1-3,0.0
+,"Hondoseto, Kumamoto, Japan",harmonics_ticon4_worldwide.txt,-1,"Hondoseto, Kumamoto, Japan",harmonics_utide_observations.txt,0.0,3,M2+7 S2+13 K1-2 O1-9,M2-1 S2-1 K1-0 O1+0,0.0
+,"Îles du Salut, French Guiana",harmonics_ticon4_worldwide.txt,-1,"Îles du Salut, French Guiana",harmonics-1997-05-25_mod.txt,0.0,8,M2+1 S2+4 K1+1 O1+4,M2-1 S2+2 K1-13 O1-12,0.0
+,"Izuhara, Nagasaki, Japan",harmonics_ticon4_worldwide.txt,-1,"Izuhara, Nagasaki, Japan",harmonics_utide_observations.txt,0.0,3,M2+0 S2+2 K1-0 O1-0,M2-0 S2+0 K1-4 O1-3,0.0
+,"Yokohama (Shinko), Kanagawa, Japan",harmonics_ticon4_worldwide.txt,-1,"Yokohama (Shinko), Kanagawa, Japan",harmonics_utide_observations.txt,0.0,0,M2+3 S2+4 K1-5 O1-5,M2-0 S2-1 K1-2 O1-2,0.0
+,"Karachi, Pakistan",harmonics_ticon4_worldwide.txt,-1,"Karachi, Pakistan",harmonics_utide_observations.txt,0.0,6,M2+6 S2+6 K1+5 O1+3,M2-1 S2-1 K1-1 O1-1,
+,"Kanda, Fukuoka, Japan",harmonics_ticon4_worldwide.txt,-1,"Kanda, Fukuoka, Japan",harmonics_utide_observations.txt,0.0,-1,M2-6 S2-10 K1+2 O1+13,M2-1 S2-1 K1-1 O1-0,0.0
+,"Kashiwazaki, Niigata, Japan",harmonics_ticon4_worldwide.txt,-1,"Kashiwazaki, Niigata, Japan",harmonics_utide_observations.txt,0.0,3,M2+3 K1-5 O1+2,M2-1 K1-1 O1-2,0.0
+,"Keizersveer (Bergsche Maas), Netherlands",harmonics_ticon4_worldwide.txt,-1,"Hank, Bergsche Maas, Netherlands",harmonics_utide_observations.txt,0.12,,M2+210,M2-1,
+,"Kobe, Hyogo, Japan",harmonics_ticon4_worldwide.txt,-1,"Kobe, Hyogo, Japan",harmonics_utide_observations.txt,0.0,8,M2+4 S2+1 K1+10 O1+17,M2-1 S2-0 K1-0 O1-0,0.0
+,"Tanjung Gelang (Kuantan Port), Malaysia",harmonics_ticon4_worldwide.txt,-1,"Tanjung Gelang (Kuantan Port), Malaysia",harmonics_att_np203_scs.txt,0.0,5,M2+3 S2+0 K1+4 O1+3,M2+2 S2-1 K1-7 O1-6,
+,"Kumamoto, Kumamoto, Japan",harmonics_ticon4_worldwide.txt,-1,"Kumamoto, Kumamoto, Japan",harmonics_utide_observations.txt,0.0,1,M2-7 S2-14 K1+7 O1+18,M2-1 S2-2 K1-1 O1-0,0.0
+,"Kushimoto, Wakayama, Japan",harmonics_ticon4_worldwide.txt,-1,"Kushimoto, Wakayama, Japan",harmonics_utide_observations.txt,0.0,-4,M2+3 S2+2 K1-10 O1-10,M2-1 S2+0 K1+0 O1+0,0.0
+,"Kutsugata (Rishiri-to), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,-1,"Kutsugata (Rishiri-to), Hokkaido, Japan",harmonics_utide_observations.txt,0.0,1,M2-1 K1-2 O1+3,M2-2 K1+0 O1+0,0.0
+,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,-1,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_utide_observations.txt,0.01,31,M2+30 S2+30 K1+27 O1+31,M2-1 S2-1 K1-0 O1-0,-80.0
+,"Seeadler Harbor, Manus, Admiralty Islands, Papua New Guinea",harmonics_ticon4_worldwide.txt,-1,"Seeadler Harbor, Manus, Admiralty Islands, Papua New Guinea",harmonics-1997-05-25_mod.txt,0.0,9,M2+5 S2-8 K1+1 O1+6,M2+22 S2-21 K1-4 O1-19,0.0
+,"Marsden Point, Northland, New Zealand",harmonics_ticon4_worldwide.txt,-1,"Marsden Point, Northland, New Zealand",harmonics_utide_observations.txt,0.0,13,M2+8 S2+14 K1+13,M2-1 S2+1 K1-2,-5.0
+,"Turtle Head, Torres Strait",harmonics_ticon4_worldwide.txt,-1,"Nardana Patches, Queensland, Australia",harmonics_utide_tidetables.txt,0.86,14,M2+4 S2+10 K1+21 O1+20,M2-27 S2-6 K1+10 O1+18,17.0
+,"Narvik, Norway",harmonics_ticon4_worldwide.txt,-1,"Narvik, Norway",harmonics_utide_observations.txt,0.0,0,M2-3 S2+1 K1-4 O1+8,M2-0 S2-1 K1+0 O1-6,0.0
+,"Nelson, New Zealand",harmonics_ticon4_worldwide.txt,-1,"Nelson, Nelson, New Zealand",harmonics_utide_observations.txt,0.0,6,M2+5 S2+4 K1+12,M2-1 S2-1 K1-1,5.0
+,"Odawara, Kanagawa, Japan",harmonics_ticon4_worldwide.txt,-1,"Odawara, Kanagawa, Japan",harmonics_utide_observations.txt,0.0,-3,M2+0 S2+1 K1-11 O1-8,M2-1 S2-0 K1+1 O1-1,0.0
+,"Oshoro, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,-1,"Oshoro, Hokkaido, Japan",harmonics_utide_observations.txt,0.01,0,M2-2 K1-2 O1+4,M2-1 K1+1 O1+0,0.0
+,"Port Tudy (Île de Groix), France",harmonics_ticon4_worldwide.txt,-1,"Port Tudy (Île de Groix), France",harmonics_utide_observations.txt,0.0,2,M2+0 S2-0 K1+5 O1+3,M2-0 S2-1 K1-0 O1-1,0.0
+,"Puerto Deseado, Santa Cruz, Argentina",harmonics_ticon4_worldwide.txt,-1,"Puerto Deseado, Santa Cruz, Argentina",harmonics_utide_observations.txt,0.01,15,M2+2 S2+7 K1+21 O1+22,M2-1 S2-1 K1-1 O1+0,2.0
+,"Reihoku (Shimoshima), Kumamoto, Japan",harmonics_ticon4_worldwide.txt,-1,"Reihoku (Shimoshima), Kumamoto, Japan",harmonics_utide_observations.txt,0.0,2,M2-0 S2+0 K1+4 O1+6,M2-1 S2-1 K1+1 O1-1,0.0
+,"Rikitea, Mangareva, Gambier Islands",harmonics_ticon4_worldwide.txt,-1,"Rikitea, French Polynesia",harmonics_utide_tidetables.txt,0.25,,M2+5 S2+3,M2-0 S2-3,0.0
+,"Saint-Jean-de-Luz (Socoa), France",harmonics_ticon4_worldwide.txt,-1,"Saint-Jean-de-Luz (Socoa), France",harmonics_utide_observations.txt,0.0,11,M2+1 S2+2 K1+20 O1+16,M2-1 S2-1 K1-3 O1-3,0.0
+,"San Quintin (Campo La Chorera), Baja California, Mexico",harmonics_ticon4_worldwide.txt,-1,"San Quintin (Campo La Chorera), Baja California, Mexico",harmonics_utide_observations.txt,0.0,28,M2-23 S2+63 K1+38 O1+17,M2-1 S2-1 K1-0 O1-0,-30.0
+,"Schiermonnikoog, Netherlands",harmonics_ticon4_worldwide.txt,-1,"Schiermonnikoog, Waddenzee, Netherlands",harmonics_utide_observations.txt,0.0,5,M2+5 S2+2 K1-2 O1+10,M2-1 S2-1 K1-3 O1-1,
+,"Sunatsu (Kitakyushu), Fukuoka, Japan",harmonics_ticon4_worldwide.txt,-1,"Sunatsu (Kitakyushu), Fukuoka, Japan",harmonics-2004-06-14_mod.txt,0.01,-27,M2-24 S2-18 K1-28 O1-29,M2-1 S2-4 K1+5 O1+2,0.0
+,"Tadoussac, Québec, Canada",harmonics_ticon4_worldwide.txt,-1,"Tadoussac, Québec, Canada",harmonics_utide_tidetables.txt,0.0,17,M2+22 S2+20 K1+9 O1+15,M2-1 S2-1 K1-3 O1+1,0.0
+,"Timaru Harbour, New Zealand",harmonics_ticon4_worldwide.txt,-1,"Timaru, Canterbury, New Zealand",harmonics_utide_observations.txt,0.0,0,M2-1 S2-0 K1-4,M2-1 S2-2 K1-3,-5.0
+,"Kampung Tektek (Pulau Tioman), Malaysia",harmonics_ticon4_worldwide.txt,-1,"Kampung Tektek (Pulau Tioman), Malaysia",harmonics_att_np203_scs.txt,0.0,-4,M2-4 S2-8 K1-5 O1-6,M2+1 S2-0 K1-6 O1-3,
+,"Tobishima, Yamagata, Japan",harmonics_ticon4_worldwide.txt,-1,"Tobishima, Yamagata, Japan",harmonics_utide_observations.txt,0.01,-3,M2-1 K1-8 O1-4,M2-0 K1-0 O1-0,0.0
+,"Topolobampo, Sinaloa, Mexico",harmonics_ticon4_worldwide.txt,-1,"Topolobampo, Sinaloa, Mexico",harmonics_utide_observations.txt,0.0,57,M2+62 S2+63 K1+51 O1+51,M2-1 S2-0 K1-1 O1-1,-50.0
+,"Tsushimahitakatsu, Nagasaki, Japan",harmonics_ticon4_worldwide.txt,-1,"Tsushimahitakatsu, Nagasaki, Japan",harmonics_utide_observations.txt,0.0,20,M2-4 S2-5 K1+51 O1+41,M2-1 S2-1 K1-0 O1-3,0.0
+,"Vardø, Norway",harmonics_ticon4_worldwide.txt,-1,"Vardø, Norway",harmonics_utide_observations.txt,0.06,2,M2+1 S2-0 K1+12,M2-0 S2-2 K1-3,0.0
+,"Visakhapatnam, Andhra Pradesh, India",harmonics_ticon4_worldwide.txt,-1,"Vishakhapatnam, Andhra Pradesh, India",harmonics_att_np203_secondary.txt,0.0,2,M2-1 S2-2 K1+4 O1-11,M2-2 S2-3 K1-4 O1+4,0.0
+,"Walvis Bay, Namibia",harmonics_ticon4_worldwide.txt,-1,"Walvis Bay, Namibia",harmonics_att_np208.txt,0.0,0,M2+0 S2+1 K1-4,M2+0 S2-0 K1-4,
+,"West Bay (Bridport), England, United Kingdom",harmonics_ticon4_worldwide.txt,-1,"West Bay (Bridport), England, United Kingdom",harmonics_literature.txt,0.0,0,M2-1 S2-1 K1-9 O1-3,M2-1 S2-1 K1-1 O1-6,-10.0
+,"Iluka, New South Wales, Australia",harmonics_ticon4_worldwide.txt,-1,"Yamba, New South Wales, Australia",harmonics-2004-06-14_mod.txt,1.73,10,M2+9 S2+10 K1+12 O1+11,M2-1 S2-1 K1+2 O1+10,
+,"Yatushiro, Kumamoto, Japan",harmonics_ticon4_worldwide.txt,-1,"Yatushiro, Kumamoto, Japan",harmonics_utide_observations.txt,0.01,1,M2+5 S2+7 K1-4 O1-11,M2-1 S2-1 K1-0 O1+0,0.0
+,"Ålesund, Norway",harmonics_ticon4_worldwide.txt,0,"Ålesund, Norway",harmonics_utide_observations.txt,0.0,1,M2+1 S2+1 K1+4 O1-0,M2+0 S2-0 K1+1 O1-2,0.0
+,"Aberdeen, Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Aberdeen, Scotland, United Kingdom",harmonics_utide_observations.txt,0.0,-2,M2-1 S2-0 K1+2 O1-4,M2+0 S2-0 K1+4 O1+4,0.0
+,"Acajutla, El Salvador",harmonics_ticon4_worldwide.txt,0,"Acajutla, El Salvador",harmonics_utide_observations.txt,0.0,-1,M2-2 S2+1 K1-4 O1+1,M2-1 S2+1 K1-1 O1+0,0.0
+,"Sittwe (Akyab), Myanmar",harmonics_ticon4_worldwide.txt,0,"Sittwe (Akyab), Myanmar",harmonics_utide_observations.txt,0.0,19,M2+15 S2+4 K1+20 O1+37,M2+0 S2+0 K1-4 O1+4,0.0
+,"Kominato (Amami Oshima), Kagoshima, Japan",harmonics_ticon4_worldwide.txt,0,"Kominato (Amami Oshima), Kagoshima, Japan",harmonics_utide_observations.txt,0.0,-12,M2-2 S2-0 K1-22 O1-28,M2+0 S2-0 K1-0 O1+0,0.0
+,"Ambon, Maluku, Indonesia",harmonics_ticon4_worldwide.txt,0,"Ambon, Maluku, Indonesia",harmonics_utide_observations.txt,0.0,11,M2-1 S2+1 K1+28 O1+20,M2-0 S2-0 K1-0 O1+0,-10.0
+,"Andenes, Norway",harmonics_ticon4_worldwide.txt,0,"Andenes, Norway",harmonics_utide_observations.txt,0.0,8,M2-4 S2-0 K1+14 O1+18,M2-0 S2-0 K1-2 O1-0,0.0
+,"Aohama, Fukuoka, Japan",harmonics_ticon4_worldwide.txt,0,"Aohama, Fukuoka, Japan",harmonics_utide_observations.txt,0.0,0,M2-6 S2-10 K1+6 O1+17,M2+0 S2-0 K1+1 O1+1,0.0
+,"Georgetown, Ascension Island",harmonics_ticon4_worldwide.txt,0,"Georgetown, Ascension Island",harmonics_att_np208.txt,0.0,4,M2+2 S2-2 K1+2,M2+3 S2-6 K1-2,-410.0
+,"Audierne, France",harmonics_ticon4_worldwide.txt,0,"Audierne, France",harmonics_utide_observations.txt,0.0,11,M2+8 S2+8 K1+13 O1+15,M2+0 S2-0 K1-1 O1+0,0.0
+,"Awashima, Niigata, Japan",harmonics_ticon4_worldwide.txt,0,"Awashima, Niigata, Japan",harmonics_utide_observations.txt,0.0,-4,M2-1 K1-6 O1-4,M2+0 K1+0 O1-1,0.0
+,"Awayuki, Tokushima, Japan",harmonics_ticon4_worldwide.txt,0,"Awayuki, Tokushima, Japan",harmonics_utide_observations.txt,0.0,-4,M2-2 S2-2 K1-7 O1-7,M2+0 S2-0 K1-1 O1-2,0.0
+,"Bahía de los Ángeles, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,"Bahia de los Angeles, Baja California, Mexico",harmonics_utide_observations.txt,0.0,1,M2-1 S2+0 K1+2 O1+0,M2-0 S2-0 K1-0 O1-0,-30.0
+,"Benoa, Bali, Indonesia",harmonics_ticon4_worldwide.txt,0,"Benoa, Bali, Indonesia",harmonics_utide_observations.txt,0.0,9,M2+4 S2+3 K1+21 O1+16,M2+0 S2+0 K1+0 O1+0,0.0
+,"Beppu, Oita, Japan",harmonics_ticon4_worldwide.txt,0,"Beppu, Oita, Japan",harmonics_utide_observations.txt,0.0,10,M2+6 S2+8 K1+12 O1+18,M2+0 S2-1 K1+0 O1+1,0.0
+,"Bergen, Norway",harmonics_ticon4_worldwide.txt,0,"Bergen, Norway",harmonics_utide_observations.txt,0.01,,M2+15 S2+9,M2+1 S2-2,0.0
+,"Bodø, Norway",harmonics_ticon4_worldwide.txt,0,"Bodø, Norway",harmonics_utide_observations.txt,0.0,-3,M2-7 S2-0 K1-5 O1-0,M2+1 S2-1 K1+3 O1-8,0.0
+,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain",harmonics_ticon4_worldwide.txt,0,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain",harmonics_puertos_spain.txt,0.0,-12,M2-39 S2-38 K1+14 O1+23,M2-0 S2+0 K1+1 O1+0,
+,"Brighton, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Brighton Marina, England, United Kingdom",harmonics_literature.txt,0.0,1,M2+0 S2+0 K1-2,M2-0 S2-0 K1-2,-10.0
+,"Cebu, Philippines",harmonics_ticon4_worldwide.txt,0,"Cebu, Philippines",harmonics_utide_observations.txt,0.11,5,M2+8 S2+9 K1+2 O1-1,M2-0 S2+0 K1-0 O1+0,0.0
+,"Isla de Cedros, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,"Isla de Cedros, Baja California, Mexico",harmonics_utide_observations.txt,0.0,2,M2+2 S2+0 K1+4 O1+3,M2+0 S2-0 K1-0 O1+0,-40.0
+,"Waitangi, Chatham Island, New Zealand",harmonics_ticon4_worldwide.txt,0,"Waitangi, Chatham Islands, New Zealand",harmonics_utide_observations.txt,0.0,1,M2+0 K1+20 O1-35,M2-0 K1+1 O1+1,0.0
+,"Cherbourg-en-Cotentin, France",harmonics_ticon4_worldwide.txt,0,"Cherbourg-en-Cotentin, France",harmonics_utide_observations.txt,0.0,-1,M2-1 S2-2 K1+2 O1-4,M2-0 S2-1 K1-1 O1+0,0.0
+,"Chiba Light, Chiba, Japan",harmonics_ticon4_worldwide.txt,0,"Chiba Light, Chiba, Japan",harmonics_utide_observations.txt,0.0,-2,M2+1 S2+3 K1-4 O1-4,M2+0 S2+0 K1+0 O1+1,0.0
+,"Chofu (Shimonoseki), Yamaguchi, Japan",harmonics_ticon4_worldwide.txt,0,"Chofu (Shimonoseki), Yamaguchi, Japan",harmonics_utide_observations.txt,0.0,0,M2-6 S2-11 K1+6 O1+16,M2+0 S2-1 K1+0 O1+0,0.0
+,"Christmas Island, Australia",harmonics_ticon4_worldwide.txt,0,"Christmas Island, Australia",harmonics_utide_observations.txt,0.0,-3,M2-4 S2-1 K1-1 O1-6,M2+0 S2+0 K1-0 O1+1,
+,"Saint-Jean-de-Luz (Ciboure), France",harmonics_ticon4_worldwide.txt,0,"Saint-Jean-de-Luz (Ciboure), France",harmonics_utide_observations.txt,0.0,8,M2+5 S2+7 K1+32 O1+22,M2-1 S2+0 K1+22 O1+2,0.0
+,"Cocos Island, Costa Rica",harmonics_ticon4_worldwide.txt,0,"Cocos Island, Costa Rica",harmonics_utide_observations.txt,0.0,-4,M2-2 S2-5 K1-8,M2-0 S2-0 K1-0,0.0
+,"Cromer, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Cromer, England, United Kingdom",harmonics_utide_observations.txt,0.02,-1,M2-1 S2-1 K1+7 O1-10,M2-1 S2-0 K1+12 O1-8,0.0
+,"Currimao, Philippines",harmonics_ticon4_worldwide.txt,0,"Currimao, Philippines",harmonics_utide_observations.txt,0.0,10,M2+3 K1+13 O1+10,M2+0 K1-0 O1+0,0.0
+,"Dar Es Salaam, Tanzania",harmonics_ticon4_worldwide.txt,0,"Dar es Salaam, Tanzania",harmonics_utide_observations.txt,0.0,2,M2-5 S2+0 K1+5 O1+3,M2-0 S2+0 K1-0 O1-1,-10.0
+,"Davao, Philippines",harmonics_ticon4_worldwide.txt,0,"Davao, Philippines",harmonics_utide_observations.txt,0.0,-1,M2-1 S2-1 K1-24 O1-9,M2-0 S2+1 K1-1 O1-9,10.0
+,"Den Helder, Netherlands",harmonics_ticon4_worldwide.txt,0,"Den Helder, Marsdiep, Netherlands",harmonics_utide_observations.txt,0.0,17,M2+17 S2+16 K1+14 O1+18,M2+1 S2+1 K1-3 O1-2,
+,"Durban, South Africa",harmonics_ticon4_worldwide.txt,0,"Durban, South Africa",harmonics_utide_observations.txt,0.0,-2,M2-2 S2+0 K1-3,M2-0 S2-1 K1+4,0.0
+,"Dzaoudzi, Mayotte",harmonics_ticon4_worldwide.txt,0,"Dzaoudzi, Comoros",harmonics_att_np203_secondary.txt,0.0,6,M2+6 S2+4 K1+4 O1+7,M2+1 S2+0 K1-2 O1-1,
+,"Esperanza (Hope Bay, Antarctica), Antártida Argentina, Argentina",harmonics_ticon4_worldwide.txt,0,"Esperanza (Hope Bay, Antarctica), Antártida Argentina, Argentina",harmonics_utide_observations.txt,0.0,-6,M2+0 S2-4 K1-15 O1-8,M2-0 S2+0 K1-1 O1-0,2.4
+,"Felixstowe, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Felixstowe, England, United Kingdom",harmonics_utide_observations.txt,0.0,-7,M2-5 S2-9 K1+2 O1-8,M2+0 S2+0 K1-7 O1+5,0.0
+,"Puerto exterior de Prioriño-Ferrol 1, Spain",harmonics_ticon4_worldwide.txt,0,"Puerto exterior de Prioriño-Ferrol 1, Spain",harmonics_puertos_spain.txt,0.0,-58,M2-60 S2-59 K1-49 O1-57,M2-0 S2+0 K1-0 O1-0,
+,"Fukue (Fukue-jima), Nagasaki, Japan",harmonics_ticon4_worldwide.txt,0,"Fukue (Fukue-jima), Nagasaki, Japan",harmonics_utide_observations.txt,0.01,2,M2+2 S2+3 K1+0 O1+2,M2+0 S2-0 K1-1 O1-0,0.0
+,"Funchal, Madeira, Portugal",harmonics_ticon4_worldwide.txt,0,"Funchal, Madeira, Portugal",harmonics_utide_observations.txt,0.02,1,M2-1 S2-0 K1+1 O1-1,M2-0 S2-1 K1-0 O1-2,
+,"Gibara, Cuba",harmonics_ticon4_worldwide.txt,0,"Gibara, Cuba",harmonics_utide_observations.txt,0.0,-22,M2-13 S2-20 K1-30 O1-25,M2-0 S2+0 K1+0 O1+0,-10.0
+,"Gisborne, New Zealand",harmonics_ticon4_worldwide.txt,0,"Gisborne, Gisborne, New Zealand",harmonics_utide_observations.txt,0.0,-1,M2-1 S2-4 K1+49,M2-0 S2+1 K1-2,5.0
+,"Gobo, Wakayama, Japan",harmonics_ticon4_worldwide.txt,0,"Gobo, Wakayama, Japan",harmonics_utide_observations.txt,0.0,-3,M2-3 S2-1 K1-4 O1-5,M2-0 S2-1 K1-1 O1-1,0.0
+,"Isla Guadalupe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,"Isla Guadalupe, Baja California, Mexico",harmonics_utide_observations.txt,0.0,-7,M2-4 S2-2 K1-11 O1-9,M2+0 S2-0 K1-0 O1+0,-60.0
+,"Guantanamo Bay (US Naval Base), Cuba",harmonics_ticon4_worldwide.txt,0,"Guantanamo Bay (US Naval Base), Cuba",harmonics_utide_observations.txt,0.0,-38,M2-11 S2-9 K1-65 O1-113,M2-0 S2-0 K1+0 O1-0,0.0
+,"Guaymas, Sonora, Mexico",harmonics_ticon4_worldwide.txt,0,"Guaymas, Sonora, Mexico",harmonics_utide_observations.txt,0.0,2,M2+2 S2+2 K1+2 O1+2,M2-0 S2-0 K1+0 O1+2,-350.0
+,"Kaminato (Hachijo-jima), Tokyo, Japan",harmonics_ticon4_worldwide.txt,0,"Kaminato (Hachijo-jima), Tokyo, Japan",harmonics_utide_observations.txt,0.0,-3,M2-3 S2-1 K1-11 O1+5,M2+0 S2+1 K1-0 O1+2,0.0
+,"Fukuoka (Hakata), Fukuoka, Japan",harmonics_ticon4_worldwide.txt,0,"Fukuoka (Hakata), Fukuoka, Japan",harmonics_utide_observations.txt,0.0,14,M2+9 S2+6 K1+33 O1+18,M2-0 S2+0 K1-1 O1-0,0.0
+,"Hamada, Shimane, Japan",harmonics_ticon4_worldwide.txt,0,"Hamada, Shimane, Japan",harmonics_utide_observations.txt,0.0,28,M2+3 S2+3 K1+62 O1+54,M2+1 S2+1 K1+0 O1+1,0.0
+,"Hastings, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Hastings, England, United Kingdom",harmonics_literature.txt,0.01,0,M2+0 S2-1 K1+7,M2+0 S2-1 K1-1,-10.0
+,"Heimsjøen, Norway",harmonics_ticon4_worldwide.txt,0,"Heimsjøen, Norway",harmonics_utide_observations.txt,0.0,5,M2+4 S2+6 K1+10 O1+3,M2+0 S2-0 K1-0 O1-0,0.0
+,"Helgeroa, Norway",harmonics_ticon4_worldwide.txt,0,"Helgeroa, Norway",harmonics_utide_observations.txt,0.0,,M2+1,M2+1,10.0
+,"Herne Bay, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Herne Bay, England, United Kingdom",harmonics_utide_observations.txt,0.0,-1,M2-4 S2-4 K1+8 O1-0,M2+0 S2-0 K1-1 O1-1,-10.0
+,"Tabira (Hiradoseto), Nagasaki, Japan",harmonics_ticon4_worldwide.txt,0,"Tabira (Hiradoseto), Nagasaki, Japan",harmonics_utide_observations.txt,0.0,0,M2+14 S2+4 K1-6 O1-17,M2-0 S2-1 K1-1 O1+1,0.0
+,"Hirara (Miyakojima), Okinawa, Japan",harmonics_ticon4_worldwide.txt,0,"Hirara (Miyakojima), Okinawa, Japan",harmonics_utide_observations.txt,0.0,4,M2+3 S2+6 K1+2 O1+18,M2+0 S2-0 K1-0 O1+1,0.0
+,"Honningsvåg, Norway",harmonics_ticon4_worldwide.txt,0,"Honningsvåg, Norway",harmonics_utide_observations.txt,0.0,2,M2+0 S2+1 K1+16,M2-0 S2-1 K1-3,0.0
+,"Île-d'Aix, France",harmonics_ticon4_worldwide.txt,0,"Île-d'Aix, France",harmonics_utide_tidetables.txt,0.01,0,M2-1 S2-1 K1+5 O1+1,M2-0 S2-0 K1-6 O1+8,0.0
+,"Ilfracombe, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Ilfracombe, England, United Kingdom",harmonics_utide_observations.txt,0.0,-3,M2-3 S2-3 K1-2 O1-14,M2+0 S2-0 K1+0 O1-1,0.0
+,"Irozaki, Shizuoka, Japan",harmonics_ticon4_worldwide.txt,0,"Irozaki, Shizuoka, Japan",harmonics_utide_observations.txt,0.0,2,M2+3 S2+3 K1+1 O1+0,M2-0 S2-0 K1+0 O1+0,0.0
+,"Iwanai, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Iwanai, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,2,M2+1 K1-8 O1+12,M2-0 K1+2 O1-0,0.0
+,"Jackson Bay, New Zealand",harmonics_ticon4_worldwide.txt,0,"Jackson Bay, New Zealand",harmonics_utide_observations.txt,0.0,2,M2+2 S2+0 K1-20 O1+16,M2-0 S2-1 K1-5 O1+1,5.0
+,"Khalij-e Jask, Iran",harmonics_ticon4_worldwide.txt,0,"Khalij-e Jask, Iran",harmonics_att_np203_secondary.txt,0.0,7,M2+5 S2+4 K1+3 O1+7,M2+3 S2-2 K1-10 O1-1,
+,"Jolo, Philippines",harmonics_ticon4_worldwide.txt,0,"Jolo, Philippines",harmonics_utide_observations.txt,0.0,14,M2+11 S2+8 K1+17 O1+19,M2-0 S2+0 K1+0 O1-1,-10.0
+,"Kabelvåg, Norway",harmonics_ticon4_worldwide.txt,0,"Kabelvåg, Norway",harmonics_utide_observations.txt,0.0,-1,M2-3 S2+2 K1-7 O1+7,M2-0 S2-0 K1+1 O1-6,0.0
+,"Kaikoura, New Zealand",harmonics_ticon4_worldwide.txt,0,"Kaikoura, New Zealand",harmonics_utide_tidetables.txt,0.02,-4,M2-2 K1-17 O1+26,M2+1 K1-12 O1+80,
+,"Kanazawa, Ishikawa, Japan",harmonics_ticon4_worldwide.txt,0,"Kanazawa, Ishikawa, Japan",harmonics_utide_observations.txt,0.0,0,M2+3 K1-8 O1-1,M2+1 K1+0 O1-1,0.0
+,"Kaohsiung, Taiwan",harmonics_ticon4_worldwide.txt,0,"Kaohsiung, Taiwan",harmonics_utide_tidetables.txt,0.0,8,M2+8 S2+5 K1+27 O1+23,M2-8 S2-3 K1+18 O1+19,
+,"Kariya, Saga, Japan",harmonics_ticon4_worldwide.txt,0,"Kariya, Saga, Japan",harmonics_utide_observations.txt,0.01,17,M2+21 S2+14 K1+21 O1+14,M2+0 S2+0 K1-0 O1+0,0.0
+,"Kavieng, New Ireland, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,"Kavieng, Papua New Guinea",harmonics_utide_observations.txt,0.64,3,M2+0 S2+2 K1+5 O1+4,M2+5 S2+0 K1-0 O1+1,0.0
+,"Kawasaki (Shiohama Unga), Kanagawa, Japan",harmonics_ticon4_worldwide.txt,0,"Kawasaki (Shiohama Unga), Kanagawa, Japan",harmonics_utide_observations.txt,0.0,0,M2+1 S2+4 K1-2 O1-3,M2-0 S2-0 K1-0 O1+2,0.0
+,"Khepupara, Bangladesh",harmonics_ticon4_worldwide.txt,0,"Khepupara, Bangladesh",harmonics_utide_observations.txt,0.0,-84,M2-84 S2+129 K1-100,M2-0 S2+0 K1+0,-10.0
+,"Hamanaka (Kiritappu), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Hamanaka (Kiritappu), Hokkaido, Japan",harmonics_utide_observations.txt,0.0,2,M2+1 S2+1 K1-14 O1+55,M2-1 S2-2 K1+0 O1+5,0.0
+,"Kogo, Nagasaki, Japan",harmonics_ticon4_worldwide.txt,0,"Kogo, Nagasaki, Japan",harmonics_utide_observations.txt,0.0,6,M2+6 S2+6 K1+5 O1+4,M2-0 S2-1 K1-0 O1+1,0.0
+,"Komatushima, Tokushima, Japan",harmonics_ticon4_worldwide.txt,0,"Komatushima, Tokushima, Japan",harmonics_utide_observations.txt,0.0,-11,M2-11 S2-11 K1-10 O1-8,M2+0 S2+0 K1+0 O1-0,0.0
+,"Kozushima, Tokyo, Japan",harmonics_ticon4_worldwide.txt,0,"Kozushima, Tokyo, Japan",harmonics_utide_observations.txt,0.0,11,M2+9 S2+9 K1+14 O1+15,M2+0 S2-0 K1+1 O1+1,0.0
+,"Kristiansund, Norway",harmonics_ticon4_worldwide.txt,0,"Kristiansund, Norway",harmonics_utide_observations.txt,0.0,4,M2+2 S2+1 K1+11 O1+0,M2+0 S2-1 K1-2 O1-4,0.0
+,"Kuji, Iwate, Japan",harmonics_ticon4_worldwide.txt,0,"Kuji, Iwate, Japan",harmonics_utide_observations.txt,0.0,-2,M2-0 S2+1 K1-4 O1-9,M2+0 S2-0 K1+0 O1+0,0.0
+,"Nigishima (Kumano), Mie, Japan",harmonics_ticon4_worldwide.txt,0,"Nigishima (Kumano), Mie, Japan",harmonics_utide_observations.txt,0.0,-1,M2-0 S2+0 K1-5 O1-2,M2+0 S2+0 K1-1 O1-1,0.0
+,"Kure, Hiroshima, Japan",harmonics_ticon4_worldwide.txt,0,"Kure, Hiroshima, Japan",harmonics_utide_observations.txt,0.01,20,M2+20 S2+21 K1+19 O1+28,M2+0 S2+0 K1+0 O1-0,0.0
+,"Little Cornwallis, Nunavut, Canada",harmonics_ticon4_worldwide.txt,0,"Little Cornwallis Island, Nunavut, Canada",harmonics_utide_tidetables.txt,0.01,17,M2+9 S2-5 K1+25 O1+38,M2+0 S2-0 K1-0 O1-0,1.5
+,"La Guaira, Venezuela",harmonics_ticon4_worldwide.txt,0,"La Guaira, Venezuela",harmonics_utide_observations.txt,0.0,3,M2-2 K1+5 O1+3,M2-0 K1+0 O1-0,
+,"Lae, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,"Lae, Papua New Guinea",harmonics_utide_observations.txt,0.0,5,M2+22 S2+7 K1+2 O1-6,M2+0 S2-0 K1-0 O1+1,
+,"Saint-Yzans-de-Médoc, France",harmonics_ticon4_worldwide.txt,0,"Saint-Yzans-de-Médoc (Lamena), France",harmonics_utide_observations.txt,0.0,-6,M2+2 S2+18 K1-26 O1-13,M2-0 S2+0 K1+2 O1+2,0.0
+,"Lamu, Kenya",harmonics_ticon4_worldwide.txt,0,"Lamu, Kenya",harmonics_utide_observations.txt,0.0,21,M2+19 S2+22 K1+21 O1+25,M2+0 S2-0 K1+1 O1-0,0.0
+,"Arzon (Port Crouesty), France",harmonics_ticon4_worldwide.txt,0,"Arzon (Port Crouesty), France",harmonics_utide_observations.txt,0.0,4,M2+5 S2+5 K1+2 O1+4,M2-0 S2-0 K1+0 O1+0,-10.0
+,"Leith, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Leith, England, United Kingdom",harmonics_utide_observations.txt,0.0,2,M2+0 S2+1 K1+3 O1+2,M2-0 S2+0 K1-3 O1-1,-5.0
+,"Porto de Leixoes (Matosinhos), Portugal",harmonics_ticon4_worldwide.txt,0,"Porto de Leixoes (Matosinhos), Portugal",harmonics_utide_observations.txt,0.0,2,M2+2 S2+3 K1+5 O1+2,M2+0 S2+1 K1+2 O1+4,0.0
+,"Pelabuhan Lembar, Lombok, Indonesia",harmonics_ticon4_worldwide.txt,0,"Lembar, Lombok, Indonesia",harmonics_utide_observations.txt,0.13,0,M2+16 S2-10 K1+10 O1-19,M2+0 S2-0 K1+1 O1+0,10.0
+,"Llandudno, Wales, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Llandudno, England, United Kingdom",harmonics_utide_observations.txt,0.0,0,M2-1 S2-1 K1+6 O1-2,M2-0 S2-1 K1+2 O1-3,0.0
+,"Lobito, Angola",harmonics_ticon4_worldwide.txt,0,"Lobito, Angola",harmonics_utide_observations.txt,0.0,1,M2-2 S2+1 K1+2,M2-0 S2+0 K1+0,
+,"Lombrum, Manus, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,"Lombrum, Manus Is., Papua New Guinea",harmonics_utide_observations.txt,0.51,3,M2+6 S2-11 K1-1 O1+5,M2-1 S2+1 K1+0 O1-3,0.0
+,"Loreto, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,"Loreto, Baja California Sur, Mexico",harmonics_utide_observations.txt,0.0,5,M2+3 S2+4 K1+6 O1+6,M2+0 S2-0 K1-0 O1+0,-340.0
+,"Lowestoft, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Lowestoft, England, United Kingdom",harmonics_utide_observations.txt,0.0,2,M2+4 S2-0 K1+6 O1-13,M2+0 S2+0 K1-4 O1-0,0.0
+,"Tilik, Lubang, Philippines",harmonics_ticon4_worldwide.txt,0,"Tilik, Lubang, Philippines",harmonics_utide_observations.txt,0.0,4,M2+3 S2+6 K1+5 O1-2,M2+0 S2+0 K1+0 O1+0,0.0
+,"Lyttelton, New Zealand",harmonics_ticon4_worldwide.txt,0,"Lyttelton, Canterbury, New Zealand",harmonics_utide_observations.txt,0.0,0,M2+1 S2+2 K1-19,M2+0 S2+2 K1+4,5.0
+,"Madang Harbour, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,"Madang, Papua New Guinea",harmonics_utide_observations.txt,0.93,0,M2-2 S2+3 K1-1 O1+8,M2-1 S2+1 K1+0 O1-0,0.0
+,"Maisaka (Hamamatsu), Shizuoka, Japan",harmonics_ticon4_worldwide.txt,0,"Maisaka (Hamamatsu), Shizuoka, Japan",harmonics_utide_observations.txt,0.0,25,M2+21 S2+22 K1+28 O1+31,M2+0 S2+0 K1+0 O1-1,0.0
+,"Makemo Atoll, Tuamotu Archipelago",harmonics_ticon4_worldwide.txt,0,"Makemo Atoll, Tuamotu Archipelago",harmonics_utide_observations.txt,0.0,,M2+136 S2+127,M2-0 S2+1,10.0
+,"Måløy, Norway",harmonics_ticon4_worldwide.txt,0,"Måløy, Norway",harmonics_utide_observations.txt,0.0,1,M2+1 S2+1 K1-9 O1+2,M2+0 S2-0 K1-1 O1-1,0.0
+,"Tadine, Maré (Îles Loyauté), New Caledonia",harmonics_ticon4_worldwide.txt,0,"Tadine, Maré (Îles Loyauté), New Caledonia",harmonics_utide_observations.txt,0.0,7,M2+5 S2+2 K1+9 O1+12,M2-0 S2-0 K1-1 O1+0,0.0
+,"Ras Hilf (Masirah Island), Oman",harmonics_ticon4_worldwide.txt,0,"Ras Hilf (Masirah Island), Oman",harmonics_utide_observations.txt,0.0,7,M2+3 S2+4 K1+10 O1+16,M2-0 S2-0 K1-0 O1+1,0.0
+,"Matsumae, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Matsumae, Hokkaido, Japan",harmonics_utide_observations.txt,0.01,-52,M2+8 S2+7 K1-130 O1-111,M2-1 S2-1 K1+2 O1+1,0.0
+,"Matsuyama, Ehime, Japan",harmonics_ticon4_worldwide.txt,0,"Matsuyama, Ehime, Japan",harmonics_utide_observations.txt,0.0,1,M2-0 S2+0 K1+2 O1+12,M2+0 S2+0 K1-0 O1-1,0.0
+,"Mausund (Måløya), Norway",harmonics_ticon4_worldwide.txt,0,"Mausund (Måøya), Norway",harmonics_utide_observations.txt,0.0,3,M2+3 S2+4 K1+2 O1+3,M2+0 S2-0 K1+0 O1+0,0.0
+,"Mera, Chiba, Japan",harmonics_ticon4_worldwide.txt,0,"Mera, Chiba, Japan",harmonics_utide_observations.txt,0.0,-4,M2-4 S2-2 K1-2 O1-5,M2+0 S2+0 K1+0 O1+1,0.0
+,"Meulaboh, Sumatra, Indonesia",harmonics_ticon4_worldwide.txt,0,"Meulaboh, Sumatra, Indonesia",harmonics_utide_observations.txt,0.0,0,M2-6 S2+0 K1+12 O1+0,M2-0 S2+0 K1+0 O1-0,0.0
+,"Mikawa (Toyohashi), Aichi, Japan",harmonics_ticon4_worldwide.txt,0,"Mikawa (Toyohashi), Aichi, Japan",harmonics_utide_observations.txt,0.01,-13,M2-11 S2-14 K1-10 O1-20,M2+0 S2+0 K1-0 O1-0,0.0
+,"Mikuni, Fukui, Japan",harmonics_ticon4_worldwide.txt,0,"Mikuni, Fukui, Japan",harmonics_utide_observations.txt,0.01,5,M2+11 K1+2 O1+7,M2-1 K1+2 O1+3,10.0
+,"Milford Haven, Wales, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Milford Haven, Wales, United Kingdom",harmonics_utide_observations.txt,0.0,1,M2-0 S2+1 K1+1 O1-14,M2+0 S2-0 K1-0 O1+1,0.0
+,"Millport, Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Millport, Scotland, United Kingdom",harmonics_utide_observations.txt,0.0,13,M2+6 S2+21 K1+22 O1+4,M2+0 S2+0 K1-1 O1-1,0.0
+,"Minamidaito, Okinawa, Japan",harmonics_ticon4_worldwide.txt,0,"Minamidaito, Okinawa, Japan",harmonics_utide_observations.txt,0.0,-1,M2+0 S2+3 K1-9 O1-1,M2-0 S2-1 K1+0 O1+0,0.0
+,"Minamitorishima, Tokyo, Japan",harmonics_ticon4_worldwide.txt,0,"Minamitorishima, Tokyo, Japan",harmonics_utide_observations.txt,0.0,6,M2+2 S2+9 K1+3 O1+12,M2-0 S2-1 K1+0 O1+2,0.0
+,"Ako (Miyakeshima), Tokyo, Japan",harmonics_ticon4_worldwide.txt,0,"Ako (Miyakeshima), Tokyo, Japan",harmonics_utide_observations.txt,0.0,2,M2-3 S2-1 K1+6 O1+8,M2+0 S2+0 K1+1 O1-1,0.0
+,"Tsubota (Miyakeshima), Tokyo, Japan",harmonics_ticon4_worldwide.txt,0,"Tsubota (Miyakeshima), Tokyo, Japan",harmonics_utide_observations.txt,0.0,-8,M2-1 S2+0 K1-20 O1-15,M2+0 S2+0 K1+0 O1+0,0.0
+,"Miyazaki, Miyazaki, Japan",harmonics_ticon4_worldwide.txt,0,"Miyazaki, Miyazaki, Japan",harmonics_utide_observations.txt,0.0,-9,M2-3 S2-1 K1-21 O1-15,M2-0 S2-1 K1-1 O1+1,0.0
+,"Mori, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Mori, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,0,M2-0 S2+1 K1+0 O1-5,M2-0 S2-1 K1-1 O1-0,0.0
+,"Mawlamyaing (Thanlwin River), Myanmar",harmonics_ticon4_worldwide.txt,0,"Mawlamyaing (Thanlwin River), Myanmar",harmonics_utide_observations.txt,0.0,46,M2-100 S2-139 K1+191 O1+299,M2-0 S2-0 K1+1 O1+5,0.0
+,"Mourilyan Harbour, Queensland, Australia",harmonics_ticon4_worldwide.txt,0,"Mourilyan Harbour, Queensland, Australia",harmonics_utide_observations.txt,0.01,6,M2+5 S2+6 K1+6 O1+9,M2+2 S2+0 K1+0 O1-1,-600.0
+,"Muroran, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Muroran, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,4,M2+4 S2+5 K1+4 O1-1,M2+0 S2-0 K1+0 O1+0,0.0
+,"Muscat (Sultan Qaboos Port), Oman",harmonics_ticon4_worldwide.txt,0,"Muscat (Sultan Qaboos Port), Oman",harmonics_utide_observations.txt,0.0,0,M2-2 S2-2 K1+4 O1+2,M2-0 S2-0 K1+0 O1+0,0.0
+,"Nagasaki (Matsugae), Nagasaki, Japan",harmonics_ticon4_worldwide.txt,0,"Nagasaki (Matsugae), Nagasaki, Japan",harmonics_utide_observations.txt,0.0,3,M2+3 S2+2 K1+4 O1+4,M2+1 S2+1 K1-1 O1-0,0.0
+,"Nakanoshima, Kagoshima, Japan",harmonics_ticon4_worldwide.txt,0,"Nakanoshima, Kagoshima, Japan",harmonics_utide_observations.txt,0.0,-5,M2-2 S2-0 K1-8 O1-8,M2-0 S2-0 K1-0 O1-0,0.0
+,"Awase, Okinawa, Japan",harmonics_ticon4_worldwide.txt,0,"Awase, Okinawa, Japan",harmonics_utide_observations.txt,0.01,-7,M2+1 S2+2 K1-16 O1-14,M2-0 S2-0 K1-0 O1+1,0.0
+,"Napier, New Zealand",harmonics_ticon4_worldwide.txt,0,"Napier, Hawke's Bay, New Zealand",harmonics_utide_observations.txt,0.0,-8,M2-1 S2-4 K1-8,M2+0 S2+5 K1+0,0.0
+,"Nazaré, Portugal",harmonics_ticon4_worldwide.txt,0,"Nazaré, Portugal",harmonics_utide_observations.txt,0.0,3,M2+1 S2+3 K1+11 O1+6,M2+0 S2+1 K1+2 O1+2,0.0
+,"Naze (Amami Oshima), Kagoshima, Japan",harmonics_ticon4_worldwide.txt,0,"Naze (Amami Oshima), Kagoshima, Japan",harmonics_utide_observations.txt,0.0,-2,M2-4 S2-3 K1-6 O1+6,M2+1 S2-1 K1-3 O1+2,0.0
+,"Nemuro, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Nemuro, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,0,M2+0 S2+1 K1-0 O1-28,M2-0 S2-1 K1+1 O1+3,0.0
+,"Newhaven, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Newhaven, England, United Kingdom",harmonics_utide_observations.txt,0.0,1,M2+1 S2+1 K1-3,M2+0 S2-0 K1-0,0.0
+,"Nieuwpoort, Belgium",harmonics_ticon4_worldwide.txt,0,"Nieuwpoort, Belgium",harmonics_utide_observations.txt,0.01,6,M2+3 S2+5 K1+29 O1+6,M2-0 S2-0 K1+0 O1-0,0.0
+,"Niigata (Irifunecho), Niigata, Japan",harmonics_ticon4_worldwide.txt,0,"Niigata (Irifunecho), Niigata, Japan",harmonics_utide_observations.txt,0.01,0,M2-0 K1-5 O1+0,M2+0 K1-0 O1-1,0.0
+,"Noto, Ishikawa, Japan",harmonics_ticon4_worldwide.txt,0,"Noto, Ishikawa, Japan",harmonics_utide_observations.txt,0.0,-3,M2+1 K1-11 O1-3,M2+0 K1-1 O1+0,0.0
+,"Nouakchott, Mauritania",harmonics_ticon4_worldwide.txt,0,"Nouakchott, Mauritania",harmonics_utide_observations.txt,0.0,0,M2+1 S2-1 K1-6 O1+7,M2+0 S2+0 K1+0 O1+1,
+,"Ny-Ålesund, Spitsbergen, Norway",harmonics_ticon4_worldwide.txt,0,"Ny-Ålesund, Norway",harmonics_utide_observations.txt,1.06,-3,M2-2 S2-4 K1+75,M2+0 S2-1 K1-6,0.0
+,"Odomari, Kagoshima, Japan",harmonics_ticon4_worldwide.txt,0,"Odomari, Kagoshima, Japan",harmonics_utide_observations.txt,0.0,-6,M2-7 S2-6 K1-7 O1-7,M2+0 S2-0 K1-1 O1-0,0.0
+,"Oita-Tsurusaki, Oita, Japan",harmonics_ticon4_worldwide.txt,0,"Oita-Tsurusaki, Oita, Japan",harmonics_utide_observations.txt,0.0,14,M2+10 S2+13 K1+14 O1+20,M2-0 S2-0 K1-1 O1-1,0.0
+,"Okata (Oshima), Tokyo, Japan",harmonics_ticon4_worldwide.txt,0,"Okata (Oshima), Tokyo, Japan",harmonics_utide_observations.txt,0.01,0,M2-2 S2-0 K1-0 O1+1,M2+0 S2+0 K1-1 O1-1,0.0
+,"Matsue (Okushiri), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Matsue (Okushiri), Hokkaido, Japan",harmonics_utide_observations.txt,0.0,-13,M2-0 K1-32 O1-13,M2+1 K1-1 O1+1,0.0
+,"Omaezaki, Shizuoka, Japan",harmonics_ticon4_worldwide.txt,0,"Omaezaki, Shizuoka, Japan",harmonics_utide_observations.txt,0.0,1,M2+0 S2+3 K1+4 O1+1,M2+0 S2+0 K1+1 O1+1,0.0
+,"Oostende, Belgium",harmonics_ticon4_worldwide.txt,0,"Oostende, Belgium",harmonics_utide_observations.txt,0.0,3,M2+1 S2+3 K1+19 O1+2,M2-0 S2-1 K1-4 O1+1,0.0
+,"Osaka, Osaka, Japan",harmonics_ticon4_worldwide.txt,0,"Osaka, Osaka, Japan",harmonics_utide_observations.txt,0.0,7,M2+3 S2+2 K1+10 O1+16,M2-1 S2+1 K1+0 O1+0,0.0
+,"Oscarsborg, Norway",harmonics_ticon4_worldwide.txt,0,"Oscarsborg, Norway",harmonics_utide_observations.txt,0.0,,M2+24,M2+1,10.0
+,"Oudeschild (Texel), Netherlands",harmonics_ticon4_worldwide.txt,0,"Texel, Oudeschild, Netherlands",harmonics_utide_observations.txt,0.0,-3,M2-1 S2-4 K1-9 O1+12,M2+1 S2+0 K1-1 O1-1,0.0
+,"Owase, Mie, Japan",harmonics_ticon4_worldwide.txt,0,"Owase, Mie, Japan",harmonics_utide_observations.txt,0.0,-4,M2+1 S2+2 K1-8 O1-7,M2+1 S2+0 K1+0 O1+1,0.0
+,"Ooyamanohana, Yamaguchi, Japan",harmonics_ticon4_worldwide.txt,0,"Ooyamanohana, Yamaguchi, Japan",harmonics_utide_observations.txt,0.0,-28,M2-26 S2-18 K1-27 O1-35,M2+0 S2-1 K1+3 O1+4,0.0
+,"Palma de Mallorca, Baleares, Spain",harmonics_ticon4_worldwide.txt,0,"Palma de Mallorca, Baleares, Spain",harmonics_puertos_spain.txt,0.03,,K1-63,K1-0,
+,"Pemba (Porto Amelia), Mozambique",harmonics_ticon4_worldwide.txt,0,"Pemba (Porto Amelia), Mozambique",harmonics_utide_observations.txt,0.0,4,M2+0 S2+3 K1+6 O1+13,M2-0 S2+0 K1-1 O1+1,
+,"Point Fortin, Trinidad and Tobago",harmonics_ticon4_worldwide.txt,0,"Point Fortin, Trinidad and Tobago",harmonics_utide_observations.txt,0.02,-1,M2-1 S2-2 K1+1 O1-1,M2-0 S2+0 K1-0 O1-0,
+,"Pointe-au-Père, Québec, Canada",harmonics_ticon4_worldwide.txt,0,"Pointe-au-Père, Québec, Canada",harmonics_utide_tidetables.txt,0.0,-7,M2-1 S2-7 K1-10 O1-6,M2-0 S2-0 K1-2 O1+2,0.5
+,"Port Moresby, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,"Port Moresby, Papua New Guinea",harmonics_utide_observations.txt,0.0,5,M2+6 S2+4 K1+12 O1+5,M2-0 S2+0 K1-0 O1+0,0.0
+,"Port Royal, Jamaica",harmonics_ticon4_worldwide.txt,0,"Port Royal, Jamaica",harmonics_utide_observations.txt,0.0,9,M2+9 K1+11 O1+5,M2+0 K1+0 O1-0,
+,"Port of Spain, Trinidad and Tobago",harmonics_ticon4_worldwide.txt,0,"Port of Spain, Trinidad and Tobago",harmonics_utide_observations.txt,0.0,5,M2-0 S2+3 K1+8 O1+9,M2-0 S2-0 K1-0 O1-0,
+,"Portpatrick, Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Portpatrick, Scotland, United Kingdom",harmonics_utide_observations.txt,0.0,8,M2+5 S2+12 K1+15 O1+1,M2+0 S2+0 K1-1 O1-3,0.0
+,"Portsmouth, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Portsmouth, England, United Kingdom",harmonics_utide_observations.txt,0.0,7,M2+7 S2+11 K1-6,M2-0 S2-0 K1+0,0.0
+,"Prigi, Java, Indonesia",harmonics_ticon4_worldwide.txt,0,"Prigi, Java, Indonesia",harmonics_utide_observations.txt,0.0,3,M2+4 S2+3 K1+5 O1+2,M2+0 S2+0 K1+0 O1-0,0.0
+,"Quepos, Costa Rica",harmonics_ticon4_worldwide.txt,0,"Quepos, Costa Rica",harmonics_utide_observations.txt,0.0,-2,M2-0 S2-0 K1-5 O1-2,M2-1 S2+0 K1-0 O1+1,0.0
+,"Resolute, Nunavut, Canada",harmonics_ticon4_worldwide.txt,0,"Resolute, Nunavut, Canada",harmonics_utide_tidetables.txt,0.0,9,M2+6 S2-8 K1+11 O1+22,M2-0 S2-1 K1+0 O1-1,1.5
+,"Rørvik, Norway",harmonics_ticon4_worldwide.txt,0,"Rørvik, Norway",harmonics_utide_observations.txt,0.0,-1,M2-0 S2-1 K1-4 O1-4,M2+0 S2-1 K1+1 O1-3,0.0
+,"Sabang (Pulau Weh), Indonesia (1)",harmonics_ticon4_worldwide.txt,0,"Sabang (Pulau Weh), Indonesia",harmonics_utide_observations.txt,0.0,0,M2+2 S2+0 K1-1 O1+0,M2-0 S2-0 K1-0 O1+0,0.0
+,"Washizaki (Sado), Niigata, Japan",harmonics_ticon4_worldwide.txt,0,"Washizaki (Sado), Niigata, Japan",harmonics_utide_observations.txt,0.0,-1,M2-0 K1-10 O1-2,M2+0 K1+0 O1-1,0.0
+,"Okinoshima (Dogo), Shimane, Japan",harmonics_ticon4_worldwide.txt,0,"Okinoshima (Dogo), Shimane, Japan",harmonics_utide_observations.txt,0.0,3,M2-1 K1+3 O1+31,M2+0 K1-0 O1-1,0.0
+,"Pointe de Saint-Gildas (Préfailles), France",harmonics_ticon4_worldwide.txt,0,"Pointe de Saint-Gildas (Préfailles), France",harmonics_utide_observations.txt,0.0,3,M2+3 S2+3 K1+2 O1+1,M2-0 S2-0 K1-1 O1-1,0.0
+,"Saumlaki, Yamdena, Indonesia",harmonics_ticon4_worldwide.txt,0,"Saumlaki, Yamdena, Indonesia",harmonics_utide_observations.txt,0.1,3,M2+4 S2+4 K1+3 O1-5,M2+0 S2-0 K1-0 O1+1,0.0
+,"Seal Cove, British Columbia, Canada",harmonics_ticon4_worldwide.txt,0,"Seal Cove, British Columbia, Canada",harmonics_utide_tidetables.txt,0.0,7,M2+4 S2+5 K1+10 O1+5,M2-0 S2-0 K1-0 O1-2,1.0
+,"Setana, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Setana, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,-37,M2+0 K1-39 O1-60,M2+0 K1-2 O1-2,0.0
+,"Sevilla (Dársena del Gualdaquivir), Spain",harmonics_ticon4_worldwide.txt,0,"Sevilla (Dársena del Gualdaquivir), Spain",harmonics_puertos_spain.txt,0.02,207,M2+171 S2+180 K1+233 O1+264,M2-0 S2-0 K1-2 O1-4,
+,"Sibaura, Tokyo, Japan",harmonics_ticon4_worldwide.txt,0,"Harumi, Tokyo, Japan",harmonics_utide_observations.txt,1.97,0,M2-0 S2+3 K1+0 O1-3,M2+0 S2+1 K1+1 O1+2,0.0
+,"Shimoda, Shizuoka, Japan",harmonics_ticon4_worldwide.txt,0,"Shimoda, Shizuoka, Japan",harmonics_utide_observations.txt,0.0,9,M2+11 S2+11 K1+7 O1+8,M2-0 S2-0 K1+1 O1+3,0.0
+,"Sekinehama, Aomori, Japan",harmonics_ticon4_worldwide.txt,0,"Sekinehama, Aomori, Japan",harmonics_utide_observations.txt,0.0,5,M2+2 S2+4 K1+11 O1+6,M2-0 S2-0 K1+0 O1+0,0.0
+,"Sines, Portugal",harmonics_ticon4_worldwide.txt,0,"Sines, Portugal",harmonics_utide_observations.txt,0.0,5,M2+2 S2+2 K1+8 O1+6,M2+0 S2-0 K1-1 O1-0,0.0
+,"St. Helier, Jersey, Channel Islands",harmonics_ticon4_worldwide.txt,0,"St. Helier, Jersey, Channel Islands",harmonics_utide_observations.txt,0.0,-2,M2-1 S2+1 K1-1 O1-1,M2+0 S2+0 K1+1 O1+2,0.0
+,"Stornoway (Isle of Lewis), Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Stornoway (Isle of Lewis), Scotland, United Kingdom",harmonics_utide_observations.txt,0.0,-3,M2-1 S2-1 K1-5 O1-5,M2+0 S2+0 K1+0 O1-1,0.0
+,"Subic, Philippines",harmonics_ticon4_worldwide.txt,0,"Subic Bay, Philippines",harmonics_utide_observations.txt,0.0,-3,M2-12 S2-13 K1+6 O1+6,M2-0 S2-0 K1-0 O1+0,0.0
+,"Surabaya, Java, Indonesia",harmonics_ticon4_worldwide.txt,0,"Surabaya, Java, Indonesia",harmonics_utide_observations.txt,0.0,0,M2+1 S2-0 K1-1 O1+2,M2-0 S2-0 K1+0 O1-0,0.0
+,"Takoradi, Ghana",harmonics_ticon4_worldwide.txt,0,"Takoradi, Ghana",harmonics_utide_observations.txt,0.0,2,M2+2 S2+6 K1+1,M2-0 S2+0 K1+0,
+,"Kumano (Tanegashima), Kagoshima, Japan",harmonics_ticon4_worldwide.txt,0,"Kumano (Tanegashima), Kagoshima, Japan",harmonics_utide_observations.txt,0.0,-6,M2-2 S2+1 K1-14 O1-8,M2+0 S2-1 K1+2 O1+2,0.0
+,"Tannowa, Osaka, Japan",harmonics_ticon4_worldwide.txt,0,"Tannowa, Osaka, Japan",harmonics_utide_observations.txt,0.0,6,M2+2 S2+0 K1+10 O1+16,M2-0 S2+0 K1+0 O1-0,0.0
+,"Tanokubi, Yamaguchi, Japan",harmonics_ticon4_worldwide.txt,0,"Tanokubi, Yamaguchi, Japan",harmonics_utide_observations.txt,0.01,77,M2+7 S2+3 K1+149 O1+161,M2-0 S2-2 K1+3 O1+5,0.0
+,"Tappi, Aomori, Japan",harmonics_ticon4_worldwide.txt,0,"Tappi, Aomori, Japan",harmonics_utide_observations.txt,0.0,37,M2+37 S2+34 K1+386,M2+0 S2+0 K1+2,0.0
+,"Teknaf, Bangladesh",harmonics_ticon4_worldwide.txt,0,"Teknaf, Bangladesh",harmonics_utide_observations.txt,0.0,8,M2+16 S2+1 K1+15 O1-11,M2+0 S2-0 K1-1 O1+0,0.0
+,"Tokuyama, Yamaguchi, Japan",harmonics_ticon4_worldwide.txt,0,"Tokuyama, Yamaguchi, Japan",harmonics_utide_observations.txt,0.0,7,M2+6 S2+7 K1+8 O1+17,M2+0 S2+0 K1+0 O1-0,0.0
+,"Tomakomai (Higashiko), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Tomakomai (Higashiko), Hokkaido, Japan",harmonics_utide_observations.txt,0.0,3,M2+2 S2+3 K1+3 O1-4,M2-0 S2-1 K1+0 O1-1,0.0
+,"Tomakomai (Nishiko), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Tomakomai (Nishiko), Hokkaido, Japan",harmonics_utide_observations.txt,0.0,2,M2+2 S2+3 K1+4 O1-4,M2+1 S2+0 K1+1 O1-0,0.0
+,"Toyama, Toyama, Japan",harmonics_ticon4_worldwide.txt,0,"Toyama, Toyama, Japan",harmonics_utide_observations.txt,0.0,-2,M2+1 K1-10 O1-3,M2-0 K1+0 O1-1,0.0
+,"Tromsø, Norway",harmonics_ticon4_worldwide.txt,0,"Tromsø, Norway",harmonics_utide_observations.txt,0.0,-3,M2-31 S2-8 K1-6 O1-10,M2+1 S2-2 K1-7 O1-10,0.0
+,"Trondheim, Norway",harmonics_ticon4_worldwide.txt,0,"Trondheim, Norway",harmonics_utide_observations.txt,0.0,10,M2+10 S2+17 K1+9 O1+1,M2-0 S2-1 K1-1 O1-1,0.0
+,"Takahama (Tsushima), Nagasaki, Japan",harmonics_ticon4_worldwide.txt,0,"Takahama (Tsushima), Nagasaki, Japan",harmonics_utide_observations.txt,0.0,3,M2+1 S2+1 K1+7 O1+9,M2+0 S2-0 K1+1 O1-0,0.0
+,"Tubuai, Austral Islands, French Polynesia (1)",harmonics_ticon4_worldwide.txt,0,"Rochers Noirs - Tubuai, French Polynesia",harmonics_utide_tidetables.txt,0.2,,M2-12 S2+5,M2-0 S2+1,0.0
+,"Tubuai, Austral Islands, French Polynesia (2)",harmonics_ticon4_worldwide.txt,0,"Rochers Noirs - Tubuai, French Polynesia",harmonics_utide_tidetables.txt,0.2,,M2-12 S2+5,M2-0 S2+1,0.0
+,"Tumbo Channel, British Columbia, Canada",harmonics_ticon4_worldwide.txt,0,"Tumbo Channel, British Columbia, Canada",harmonics_utide_tidetables.txt,0.0,1,M2-23 S2-23 K1+25 O1+28,M2+0 S2-0 K1+1 O1+3,6.25
+,"Ube, Yamaguchi, Japan",harmonics_ticon4_worldwide.txt,0,"Ube, Yamaguchi, Japan",harmonics_utide_observations.txt,0.0,0,M2-3 S2-5 K1+4 O1+15,M2+0 S2-1 K1+0 O1+0,0.0
+,"Uchiura, Shizuoka, Japan",harmonics_ticon4_worldwide.txt,0,"Uchiura, Shizuoka, Japan",harmonics_utide_observations.txt,0.0,-6,M2+1 S2+3 K1-21 O1-15,M2-0 S2-0 K1-0 O1-1,0.0
+,"Uragami, Wakayama, Japan",harmonics_ticon4_worldwide.txt,0,"Uragami, Wakayama, Japan",harmonics_utide_observations.txt,0.0,-1,M2+1 S2+2 K1-8 O1-2,M2-0 S2-0 K1+0 O1-0,0.0
+,"Urakawa, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,"Urakawa, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,3,M2+3 S2+3 K1+5 O1-6,M2-0 S2-1 K1-1 O1+1,0.0
+,"Puerto Vallarta, Jalisco, Mexico",harmonics_ticon4_worldwide.txt,0,"Puerto Vallarta, Jalisco, Mexico",harmonics_utide_observations.txt,0.0,23,M2+8 S2+15 K1+30 O1+33,M2-0 S2+0 K1+0 O1+0,-80.0
+,"Valparaíso, Chile",harmonics_ticon4_worldwide.txt,0,"Valparaíso, Chile",harmonics_utide_observations.txt,0.06,1,M2+1 S2-0 K1+1 O1-1,M2-0 S2-1 K1+0 O1+0,0.0
+,"Viker, Norway",harmonics_ticon4_worldwide.txt,0,"Viker, Norway",harmonics_utide_observations.txt,0.01,,M2-2,M2+0,10.0
+,"Waikelo, Sumba, Indonesia",harmonics_ticon4_worldwide.txt,0,"Waikelo, Sumba, Indonesia",harmonics_utide_observations.txt,0.0,5,M2+12 S2+11 K1-3 O1-1,M2+0 S2+0 K1+0 O1-0,0.0
+,"Wakayama, Wakayama, Japan",harmonics_ticon4_worldwide.txt,0,"Wakayama, Wakayama, Japan",harmonics_utide_observations.txt,0.01,-2,M2-1 S2-1 K1-4 O1-2,M2+1 S2+1 K1+1 O1+0,0.0
+,"Wewak, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,"Wewak, Papua New Guinea",harmonics_utide_observations.txt,0.0,2,M2+2 K1+2 O1-5,M2-0 K1+0 O1+0,
+,"Weymouth, England, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Weymouth, England, United Kingdom",harmonics_utide_observations.txt,0.0,0,M2+2 S2-1 K1-6 O1+2,M2-0 S2+1 K1+1 O1+1,0.0
+,"Wick, Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,0,"Wick, Scotland, United Kingdom",harmonics_utide_observations.txt,0.0,4,M2-2 S2+1 K1+6 O1+9,M2+0 S2+1 K1-2 O1+2,0.0
+,"Winter Harbour, British Columbia, Canada",harmonics_ticon4_worldwide.txt,0,"Winter Harbour, British Columbia, Canada",harmonics_utide_observations.txt,0.0,3,M2+1 S2+2 K1+4 O1+6,M2-0 S2+0 K1+0 O1-1,0.0
+,"Yarmouth, Nova Scotia, Canada",harmonics_ticon4_worldwide.txt,0,"Yarmouth, New Brunswick, Canada",harmonics_utide_observations.txt,0.01,-3,M2-1 S2-2 K1-1 O1-13,M2+0 S2-1 K1+3 O1-1,0.0
+,"Kubura (Yonaguni), Okinawa, Japan",harmonics_ticon4_worldwide.txt,0,"Kubura (Yonaguni), Okinawa, Japan",harmonics_utide_observations.txt,0.0,-3,M2-1 S2+1 K1-6 O1-8,M2+0 S2-0 K1-0 O1+0,0.0
+,"Yoshima, Kagawa, Japan",harmonics_ticon4_worldwide.txt,0,"Yoshima, Kagawa, Japan",harmonics_utide_observations.txt,0.01,0,M2-4 S2-9 K1+4 O1+13,M2-0 S2-1 K1-0 O1+0,0.0
+,"Zeebrugge, Belgium",harmonics_ticon4_worldwide.txt,0,"Zeebrugge, Belgium",harmonics_utide_observations.txt,0.0,6,M2+2 S2+6 K1+24 O1+7,M2-0 S2-0 K1-2 O1+2,0.0
+,"Abashiri, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,1,"Abashiri, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,2,M2+2 S2+4 K1+5 O1-4,M2+1 S2+1 K1+0 O1-0,0.0
+,"Aburatsu, Miyazaki, Japan",harmonics_ticon4_worldwide.txt,1,"Aburatsu, Miyazaki, Japan",harmonics_utide_observations.txt,0.0,-3,M2+0 S2+0 K1-3 O1-6,M2+1 S2+1 K1+1 O1+2,0.0
+,"Akita, Akita, Japan",harmonics_ticon4_worldwide.txt,1,"Akita, Akita, Japan",harmonics_utide_observations.txt,0.0,-4,M2+0 K1-6 O1-4,M2+2 K1-0 O1+0,0.0
+,"Akune, Kagoshima, Japan",harmonics_ticon4_worldwide.txt,1,"Akune, Kagoshima, Japan",harmonics_utide_observations.txt,0.0,4,M2+2 S2+4 K1+7 O1+7,M2+1 S2+1 K1+1 O1+1,0.0
+,"Ayukawa, Miyagi, Japan",harmonics_ticon4_worldwide.txt,1,"Ayukawa, Miyagi, Japan",harmonics_utide_observations.txt,0.0,-1,M2+1 S2+1 K1-0 O1-3,M2+1 S2+0 K1+1 O1+1,0.0
+,"Bangor, Northern Ireland, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Bangor, Northern Ireland, United Kingdom",harmonics_utide_observations.txt,0.01,12,M2+5 S2+15 K1+21 O1+5,M2+1 S2+0 K1+12 O1-9,0.0
+,"Barmouth, Wales, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Barmouth, Wales, United Kingdom",harmonics_utide_observations.txt,0.0,9,M2+6 S2+9 K1+19 O1+12,M2+1 S2+1 K1+2 O1+3,0.0
+,"Bénodet (L'Odet), France",harmonics_ticon4_worldwide.txt,1,"Bénodet (L'Odet), France",harmonics_utide_tidetables.txt,0.02,3,M2+7 S2+7 K1+7 O1+9,M2+1 S2+1 K1+11 O1+8,-60.0
+,"Bermuda Esso Pier, St. Georges, Bermuda",harmonics_ticon4_worldwide.txt,1,"St. George's Island, Bermuda",harmonics_noaa_carib.txt,0.05,3,M2+4 S2+1 K1+4 O1+1,M2+1 S2+0 K1-3 O1-2,
+,"Bitung (Lembeh Strait), Sulawesi, Indonesia",harmonics_ticon4_worldwide.txt,1,"Bitung (Lembeh Strait), Sulawesi, Indonesia",harmonics_utide_observations.txt,0.1,-6,M2+2 S2+3 K1-6 O1-33,M2-0 S2+0 K1+9 O1+4,
+,"Bullenbaai, Curaçao",harmonics_ticon4_worldwide.txt,1,"Bullen Bay, Curaçao",harmonics_utide_observations.txt,0.0,0,M2-8 K1-0 O1+1,M2+0 K1-0 O1+0,0.0
+,"Callao (La Punta), Peru",harmonics_ticon4_worldwide.txt,1,"Callao (La Punta), Peru",harmonics_utide_observations.txt,0.0,1,M2-0 S2+3 K1+3 O1+2,M2+2 S2-1 K1+1 O1+3,2.5
+,"Chabahar, Iran",harmonics_ticon4_worldwide.txt,1,"Chabahar, Iran",harmonics_att_np203_secondary.txt,0.0,0,M2+2 S2+3 K1+1 O1+3,M2+2 S2+6 K1+1 O1-18,
+,"Chichijima (Futami Ko), Tokyo, Japan",harmonics_ticon4_worldwide.txt,1,"Chichijima (Futami Ko), Tokyo, Japan",harmonics_utide_observations.txt,0.0,13,M2+11 S2+14 K1+11 O1+18,M2+1 S2-0 K1-0 O1+1,0.0
+,"Dakar, Senegal",harmonics_ticon4_worldwide.txt,1,"Dakar, Senegal",harmonics_utide_observations.txt,0.0,-3,M2+2 S2-1 K1-3 O1-3,M2+1 S2+1 K1+1 O1+4,
+,"Deshimatsu, Yamaguchi, Japan",harmonics_ticon4_worldwide.txt,1,"Deshimatsu, Yamaguchi, Japan",harmonics_utide_observations.txt,0.01,-90,M2-42 S2-30 K1-133 O1-132,M2+1 S2+0 K1+4 O1+4,-10.0
+,"El Porvenir, Panama",harmonics_ticon4_worldwide.txt,1,"El Porvenir, Panama",harmonics_utide_observations.txt,0.0,2,M2+3 K1-4 O1+5,M2+1 K1+0 O1+0,0.0
+,"Esashi (Hiyama), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,1,"Esashi (Hiyama), Hokkaido, Japan",harmonics_utide_observations.txt,0.01,114,M2-13 K1+131 O1+115,M2+1 K1-0 O1+1,0.0
+,"Esbjerg, Denmark",harmonics_ticon4_worldwide.txt,1,"Esbjerg Havn I, Denmark",harmonics_utide_observations.txt,0.83,0,M2+6 S2+3 K1-3 O1-1,M2+1 S2-1 K1+9 O1+2,10.0
+,"Gonoura, Nagasaki, Japan",harmonics_ticon4_worldwide.txt,1,"Gonoura, Nagasaki, Japan",harmonics_utide_observations.txt,0.0,11,M2+13 S2+9 K1+14 O1+9,M2+1 S2-0 K1-0 O1+1,0.0
+,"Haedomari, Yamaguchi, Japan",harmonics_ticon4_worldwide.txt,1,"Haedomari, Yamaguchi, Japan",harmonics_utide_observations.txt,0.0,5,M2-1 S2-0 K1+28 O1+13,M2+1 S2-1 K1+2 O1+2,0.0
+,"Hakodate, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,1,"Hakodate, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,-4,M2+3 S2+2 K1-9 O1-24,M2+1 S2+0 K1+1 O1+1,0.0
+,"Hanasaki, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,1,"Hanasaki, Hokkaido, Japan",harmonics_utide_observations.txt,0.01,11,M2+4 S2+3 K1+37 O1+20,M2+1 S2+1 K1+0 O1+2,0.0
+,"Harstad, Norway",harmonics_ticon4_worldwide.txt,1,"Harstad, Norway",harmonics_utide_observations.txt,0.0,4,M2-2 S2+1 K1+12 O1+8,M2+1 S2+0 K1-6 O1-0,0.0
+,"Hiroshima, Hiroshima, Japan",harmonics_ticon4_worldwide.txt,1,"Hiroshima, Hiroshima, Japan",harmonics_utide_observations.txt,0.01,22,M2+23 S2+23 K1+21 O1+29,M2+1 S2+1 K1+1 O1+1,0.0
+,"Yokohama (Shinyamashita), Kanagawa, Japan",harmonics_ticon4_worldwide.txt,1,"Yokohama (Honmoku), Kanagawa, Japan",harmonics_utide_observations.txt,1.43,1,M2+5 S2+8 K1-1 O1-0,M2+1 S2+1 K1+1 O1+1,0.0
+,"Immingham (Humberside), England, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Immingham (Humberside), England, United Kingdom",harmonics_utide_observations.txt,0.0,3,M2+16 S2+24 K1-18 O1-8,M2+1 S2+1 K1-4 O1+1,0.0
+,"Ishinomaki, Miyagi, Japan",harmonics_ticon4_worldwide.txt,1,"Ishinomaki, Miyagi, Japan",harmonics_utide_observations.txt,0.01,0,M2+1 S2+2 K1-0 O1-1,M2+1 S2+1 K1+1 O1+2,0.0
+,"Sembawang, Singapore",harmonics_ticon4_worldwide.txt,1,"Johor Bahru (East Side of Causeway), Malaysia",harmonics_att_np203_scs.txt,1.07,-56,M2-23 S2-12 K1-15 O1-58,M2-9 S2-8 K1+82 O1+76,
+,"Bahía Cumberland (Isla Robinson Crusoe, Juan Fernández), Chile",harmonics_ticon4_worldwide.txt,1,"Bahía Cumberland (Isla Robinson Crusoe, Juan Fernández), Chile",harmonics_utide_tidetables.txt,0.0,1,M2-2 S2+2 K1+10 O1+4,M2+0 S2-1 K1+10 O1+2,3.0
+,"Kagoshima, Kagoshima, Japan",harmonics_ticon4_worldwide.txt,1,"Kagoshima, Kagoshima, Japan",harmonics_utide_observations.txt,0.0,4,M2+3 S2+4 K1+6 O1+5,M2+1 S2+0 K1-0 O1+0,0.0
+,"Kamaisi, Iwate, Japan",harmonics_ticon4_worldwide.txt,1,"Kamaisi, Iwate, Japan",harmonics_utide_observations.txt,0.0,3,M2+4 S2+3 K1+5 O1+7,M2+2 S2+1 K1+1 O1+1,0.0
+,"Karatsu, Saga, Japan",harmonics_ticon4_worldwide.txt,1,"Karatsu, Saga, Japan",harmonics_utide_observations.txt,0.01,16,M2+16 S2+8 K1+24 O1+18,M2+1 S2-1 K1-1 O1+2,0.0
+,"Keelung, Taiwan",harmonics_ticon4_worldwide.txt,1,"Keelung, Taiwan",harmonics_utide_tidetables.txt,0.0,-2,M2+12 S2+13 K1-7 O1-5,M2+0 S2-3 K1+10 O1+13,
+,"Tanjung Kling, Malaysia",harmonics_ticon4_worldwide.txt,1,"Tanjung Kling, Malaysia",harmonics_att_np203_scs.txt,0.0,-2,M2-4 S2-4 K1+3 O1+1,M2-2 S2-1 K1+18 O1-0,
+,"King Edward, United Kingdom",harmonics_ticon4_worldwide.txt,1,"King Edward Cove, South Georgia and the South Sandwich Islands",harmonics_att_np207.txt,0.21,1,M2+2 S2+1 K1+4 O1+1,M2+4 S2-3 K1-4 O1+18,
+,"Kochi, Kochi, Japan",harmonics_ticon4_worldwide.txt,1,"Kochi, Kochi, Japan",harmonics_utide_observations.txt,0.0,0,M2+3 S2+2 K1-2 O1-2,M2+1 S2+1 K1+2 O1+1,0.0
+,"Le Robert, Martinique",harmonics_ticon4_worldwide.txt,1,"Le Robert, Martinique",harmonics_utide_observations.txt,0.0,3,M2-11 S2-0 K1+5 O1+1,M2+3 S2-3 K1+1 O1-4,0.0
+,"Limon, Costa Rica",harmonics_ticon4_worldwide.txt,1,"Limon, Costa Rica",harmonics_utide_observations.txt,0.0,1,M2+2 K1-0 O1+3,M2+1 K1-0 O1-0,0.0
+,"Lord Howe Island, Tasman Sea, Australia",harmonics_ticon4_worldwide.txt,1,"Lord Howe Island, Tasman Sea, Australia",harmonics_utide_observations.txt,0.0,6,M2+4 S2+3 K1+12 O1+14,M2+1 S2+2 K1+2 O1+2,0.0
+,"Lymington, England, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Lymington, England, United Kingdom",harmonics_utide_observations.txt,0.0,15,M2+21 S2+25 K1-9 O1+9,M2+1 S2+1 K1+2 O1-0,
+,"Chichijima (Futami Ko), Tokyo, Japan",harmonics_ticon4_worldwide.txt,1,"Chichijima (Futami Ko), Tokyo, Japan",harmonics_utide_observations.txt,0.0,13,M2+11 S2+14 K1+11 O1+18,M2+1 S2-0 K1-0 O1+1,0.0
+,"Makurazaki, Kagoshima, Japan",harmonics_ticon4_worldwide.txt,1,"Makurazaki, Kagoshima, Japan",harmonics_utide_observations.txt,0.0,-1,M2-1 S2+0 K1+0 O1+1,M2+1 S2+1 K1+0 O1+1,0.0
+,"Maputo, Mozambique",harmonics_ticon4_worldwide.txt,1,"Maputo, Mozambique",harmonics_utide_observations.txt,0.0,-138,M2-137 S2-156 K1+55,M2+1 S2+1 K1-1,0.0
+,"Marín (Ría de Pontevedra), Spain",harmonics_ticon4_worldwide.txt,1,"Marín (Ría de Pontevedra), Spain",harmonics_utide_tidetables.txt,0.0,3,M2+2 S2+3 K1+8 O1+3,M2+1 S2+1 K1-2 O1-1,
+,"Mazatlán, Sinaloa, Mexico",harmonics_ticon4_worldwide.txt,1,"Mazatlán, Sinaloa, Mexico",harmonics_utide_observations.txt,0.0,2,M2+3 S2+2 K1+3 O1+2,M2+1 S2+0 K1+0 O1+2,-30.0
+,"Miyako (Kuwagasaki), Iwate, Japan",harmonics_ticon4_worldwide.txt,1,"Miyako (Kuwagasaki), Iwate, Japan",harmonics_utide_observations.txt,0.01,0,M2+1 S2+1 K1+2 O1-4,M2+1 S2+0 K1+0 O1+0,0.0
+,"Miojin Hana, Fukuoka, Japan",harmonics_ticon4_worldwide.txt,1,"Moji, Fukuoka, Japan",harmonics_utide_observations.txt,0.0,48,M2+1 S2-3 K1+101 O1+155,M2+0 S2-0 K1+5 O1+6,0.0
+,"Monbetsu, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,1,"Monbetsu, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,-7,M2+0 S2+4 K1-16 O1-11,M2+1 S2+1 K1+2 O1+1,0.0
+,"Murotozaki, Kochi, Japan",harmonics_ticon4_worldwide.txt,1,"Murotozaki, Kochi, Japan",harmonics_utide_observations.txt,0.01,-4,M2+2 S2+2 K1-7 O1-9,M2+1 S2+1 K1+1 O1-1,0.0
+,"Mutsu-Ogawara, Aomori, Japan",harmonics_ticon4_worldwide.txt,1,"Mutsuogawara, Aomori, Japan",harmonics_utide_observations.txt,0.0,6,M2+1 S2+2 K1+11 O1+12,M2+0 S2+0 K1+1 O1+2,0.0
+,"Naha, Okinawa, Japan",harmonics_ticon4_worldwide.txt,1,"Naha, Okinawa, Japan",harmonics_utide_observations.txt,0.0,7,M2+8 S2+7 K1+8 O1+10,M2+1 S2+1 K1+1 O1+1,0.0
+,"Nanao, Ishikawa, Japan",harmonics_ticon4_worldwide.txt,1,"Nanao, Ishikawa, Japan",harmonics_utide_observations.txt,0.01,5,M2+6 K1-6 O1+6,M2+1 K1+1 O1+1,0.0
+,"North Sydney, Nova Scotia, Canada",harmonics_ticon4_worldwide.txt,1,"North Sydney, Nova Scotia, Canada",harmonics_utide_observations.txt,0.0,4,M2+4 S2+5 K1+6 O1+9,M2+2 S2+0 K1+4 O1-2,0.0
+,"Ofunato, Iwate, Japan",harmonics_ticon4_worldwide.txt,1,"Ofunato, Iwate, Japan",harmonics_utide_observations.txt,0.0,-2,M2+0 S2+1 K1-2 O1-4,M2+1 S2+0 K1+1 O1+0,0.0
+,"Azama, Okinawa, Japan",harmonics_ticon4_worldwide.txt,1,"Azama, Okinawa, Japan",harmonics_utide_observations.txt,0.01,-8,M2+2 S2+2 K1-15 O1-15,M2+1 S2+1 K1+3 O1+2,0.0
+,"Onahama, Fukushima, Japan",harmonics_ticon4_worldwide.txt,1,"Onahama, Fukushima, Japan",harmonics_utide_observations.txt,0.0,1,M2+1 S2+2 K1+3 O1+6,M2+1 S2+1 K1+1 O1+1,0.0
+,"Peniche, Portugal",harmonics_ticon4_worldwide.txt,1,"Peniche, Portugal",harmonics_utide_observations.txt,0.0,-4,M2-1 S2+1 K1-8 O1-3,M2+0 S2+2 K1+2 O1+5,10.0
+,"Port Isaac, England, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Port Isaac, England, United Kingdom",harmonics_utide_observations.txt,0.0,-2,M2-2 S2-1 K1+6 O1-4,M2+1 S2+1 K1+0 O1+1,
+,"Qaqortoq, Denmark",harmonics_ticon4_worldwide.txt,1,"Qaqortoq, Greenland",harmonics-2004-06-14_mod.txt,0.0,4,M2+4 S2+2 K1+6 O1-0,M2-1 S2+4 K1-2 O1-3,
+,"Rabaul, New Britain, Papua New Guinea",harmonics_ticon4_worldwide.txt,1,"Rabaul, Papua New Guinea",harmonics_utide_observations.txt,0.15,-19,M2-55 S2+5 K1-12 O1-27,M2+2 S2+1 K1+0 O1-0,
+,"Sakaiminato, Tottori, Japan",harmonics_ticon4_worldwide.txt,1,"Sakaiminato, Tottori, Japan",harmonics_utide_observations.txt,0.0,-6,M2+25 K1-2 O1-6,M2+0 K1+3 O1+1,0.0
+,"Salalah, Oman",harmonics_ticon4_worldwide.txt,1,"Salalah, Oman",harmonics_utide_observations.txt,0.0,0,M2+2 S2+0 K1-0 O1+3,M2+1 S2+1 K1+1 O1+1,0.0
+,"Salina Cruz (Puerto), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,1,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_utide_observations.txt,1.14,4,M2+3 S2+4 K1-0 O1+4,M2+1 S2-3 K1-5 O1+6,-15.0
+,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,1,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_utide_observations.txt,0.0,4,M2+3 S2+4 K1-0 O1+4,M2+1 S2-3 K1-5 O1+6,-10.0
+,"Sandnes, Norway",harmonics_ticon4_worldwide.txt,1,"Sandnes, Norway",harmonics_utide_observations.txt,0.0,,M2+0 S2-7,M2+2 S2+2,0.0
+,"Sandown, England, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Sandown, England, United Kingdom",harmonics_utide_observations.txt,0.0,2,M2+3 S2+6 K1-8,M2+1 S2+1 K1+2,
+,"Santa Marta, Colombia",harmonics_ticon4_worldwide.txt,1,"Santa Marta, Colombia",harmonics_utide_observations.txt,0.0,-5,M2-12 K1+0 O1-5,M2+0 K1+0 O1+1,0.0
+,"Sasebo, Nagasaki, Japan",harmonics_ticon4_worldwide.txt,1,"Sasebo, Nagasaki, Japan",harmonics_utide_observations.txt,0.01,12,M2+19 S2+15 K1+12 O1+7,M2+1 S2+2 K1+0 O1+1,0.0
+,"Scarborough, England, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Scarborough, England, United Kingdom",harmonics_utide_observations.txt,0.0,1,M2+2 S2+2 K1+8 O1+3,M2+1 S2+1 K1-2 O1+3,
+,"Settlement Point, Grand Bahama Island, Bahamas",harmonics_ticon4_worldwide.txt,1,"Settlement Point, Bahamas",harmonics_utide_observations.txt,0.0,62,M2+8 S2+44 K1+89 O1+82,M2+1 S2+1 K1+0 O1+2,
+,"Prince of Wales Bridge, England, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Prince of Wales Bridge, England, United Kingdom",harmonics_utide_observations.txt,0.0,-19,M2+3 S2-10 K1-36 O1-27,M2+1 S2+1 K1-0 O1+1,
+,"Rizhao (Shijiuju), Shandong, China",harmonics_ticon4_worldwide.txt,1,"Rizhaogang (Shijiusuo), Shandong, China",harmonics_utide_tidetables.txt,1.64,2,M2+0 S2-2 K1+11 O1+10,M2+2 S2-2 K1+7 O1+6,
+,"Simon's Town, South Africa",harmonics_ticon4_worldwide.txt,1,"Simon's Town, South Africa",harmonics_att_np203_secondary.txt,0.0,1,M2+2 S2+1 K1+2,M2+0 S2+0 K1+1,0.0
+,"Jamestown, Saint Helena",harmonics_ticon4_worldwide.txt,1,"Jamestown, Saint Helena",harmonics_att_np208.txt,0.0,2,M2+3 S2+4 K1-3,M2+0 S2+6 K1-5,
+,"Swanage, England, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Swanage, England, United Kingdom",harmonics_utide_observations.txt,0.01,5,M2+32 S2+8 K1-7 O1+1,M2+1 S2+1 K1-0 O1-1,
+,"Fort Dension, New South Wales, Australia",harmonics_ticon4_worldwide.txt,1,"Fort Denison, New South Wales, Australia",harmonics_utide_observations.txt,0.0,6,M2+4 S2+5 K1+8 O1+23,M2+1 S2+2 K1-1 O1+2,0.0
+,"Tago, Shizuoka, Japan",harmonics_ticon4_worldwide.txt,1,"Tago, Shizuoka, Japan",harmonics_utide_observations.txt,0.0,6,M2+1 S2+4 K1+10 O1+15,M2+1 S2+0 K1+0 O1+0,0.0
+,"Takamatsu, Kagawa, Japan",harmonics_ticon4_worldwide.txt,1,"Takamatsu, Kagawa, Japan",harmonics_utide_observations.txt,0.0,5,M2-2 S2-0 K1+13 O1+23,M2+1 S2+1 K1+1 O1-0,0.0
+,"Tanjung Lesung, Java, Indonesia",harmonics_ticon4_worldwide.txt,1,"Tanjung Lesung, Java, Indonesia",harmonics_utide_observations.txt,0.0,-8,M2+1 S2-3 K1-12 O1-11,M2-0 S2+0 K1+1 O1+1,0.0
+,"Taranaki, Taranaki, New Zealand",harmonics_ticon4_worldwide.txt,1,"Taranaki, Taranaki, New Zealand",harmonics_utide_observations.txt,0.0,0,M2+1 S2+1 K1-12,M2+0 S2+1 K1-1,5.0
+,"Teignmouth, England, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Teignmouth, England, United Kingdom",harmonics_utide_observations.txt,0.0,-1,M2-1 S2-0 K1-16 O1-0,M2+1 S2+1 K1+1 O1+1,
+,"Tosashimizu, Kochi, Japan",harmonics_ticon4_worldwide.txt,1,"Tosashimizu, Kochi, Japan",harmonics_utide_observations.txt,0.0,-5,M2+1 S2+0 K1-9 O1-10,M2+1 S2+0 K1+1 O1+1,0.0
+,"Tsuruga, Fukui, Japan",harmonics_ticon4_worldwide.txt,1,"Tsuruga, Fukui, Japan",harmonics_utide_observations.txt,0.01,-3,M2+3 K1-11 O1-2,M2+2 K1+1 O1+1,0.0
+,"Ullapool, Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,1,"Ullapool, Scotland, United Kingdom",harmonics_utide_observations.txt,0.01,-1,M2-0 S2-1 K1-4 O1+5,M2+1 S2+0 K1+2 O1+6,0.0
+,"Uwajima, Ehime, Japan",harmonics_ticon4_worldwide.txt,1,"Uwajima, Ehime, Japan",harmonics_utide_observations.txt,0.0,2,M2+5 S2+2 K1+2 O1+4,M2+1 S2+1 K1+1 O1+1,0.0
+,"Viana do Castelo, Portugal",harmonics_ticon4_worldwide.txt,1,"Viana do Castelo, Portugal",harmonics_utide_observations.txt,0.0,1,M2+1 S2+3 K1+6 O1+3,M2+0 S2+2 K1+1 O1+2,0.0
+,"Yokosuka, Kanagawa, Japan",harmonics_ticon4_worldwide.txt,1,"Yokosuka, Kanagawa, Japan",harmonics_utide_observations.txt,0.01,2,M2+6 S2+8 K1-1 O1+1,M2+1 S2+1 K1+1 O1+1,0.0
+,"Zanzibar City, Tanzania",harmonics_ticon4_worldwide.txt,1,"Zanzibar City, Tanzania",harmonics_utide_observations.txt,0.0,-1,M2+0 S2-0 K1-0 O1-1,M2+0 S2+1 K1+1 O1+1,
+,"Aburatsubo, Kanagawa, Japan",harmonics_ticon4_worldwide.txt,2,"Aburatsubo, Kanagawa, Japan",harmonics_utide_observations.txt,0.0,-2,M2+3 S2+4 K1-4 O1-2,M2+2 S2+2 K1+2 O1+3,0.0
+,"Asamushi, Aomori, Japan",harmonics_ticon4_worldwide.txt,2,"Asamushi, Aomori, Japan",harmonics_utide_observations.txt,0.0,62,M2+11 S2+10 K1+117 O1+145,M2+3 S2+2 K1+1 O1+3,0.0
+,"Bath, Netherlands",harmonics_ticon4_worldwide.txt,2,"Rilland, Bath, Netherlands",harmonics_utide_observations.txt,0.04,-27,M2-23 S2-28 K1+4 O1-28,M2+3 S2+2 K1+2 O1+1,
+,"Ceuta, Spain",harmonics_ticon4_worldwide.txt,2,"Ceuta, Spain",harmonics_utide_tidetables.txt,0.01,-4,M2-3 S2-6 K1+28,M2+3 S2-1 K1-9,
+,"Choshi Gyoko, Chiba, Japan",harmonics_ticon4_worldwide.txt,2,"Choshi Gyoko, Chiba, Japan",harmonics-2004-06-14_mod.txt,0.01,2,M2+3 S2+4 K1+6 O1+2,M2+2 S2+2 K1+3 O1+0,0.0
+,"Cilacap, Java, Indonesia",harmonics_ticon4_worldwide.txt,2,"Cilacap, Java, Indonesia",harmonics_utide_observations.txt,0.0,4,M2+5 S2+3 K1+8 O1-1,M2+3 S2+2 K1+2 O1-7,0.0
+,"Delfzijl, Netherlands",harmonics_ticon4_worldwide.txt,2,"Delfzijl, Netherlands",harmonics_utide_observations.txt,0.23,13,M2+9 S2+21 K1+1 O1+27,M2+2 S2+1 K1-0 O1+3,
+,"Eemshaven, Netherlands",harmonics_ticon4_worldwide.txt,2,"Eemshaven, haven, Netherlands",harmonics_utide_observations.txt,0.0,1,M2+2 S2+3 K1-3 O1+2,M2+2 S2+2 K1+0 O1+1,
+,"Lajes das Flores, Açores, Portugal",harmonics_ticon4_worldwide.txt,2,"Lajes das Flores, Açores, Portugal",harmonics_att_np208_secondary.txt,0.0,7,M2+7 S2+6 K1+3,M2+1 S2-2 K1+103,
+,"Gold Coast Seaway, Queensland, Australia",harmonics_ticon4_worldwide.txt,2,"Southport, Queensland, Australia",harmonics_utide_observations.txt,1.66,26,M2+27 S2+27 K1+26 O1+28,M2+1 S2+1 K1-0 O1+2,2.5
+,"Harwich, England, United Kingdom",harmonics_ticon4_worldwide.txt,2,"Harwich, England, United Kingdom",harmonics-dwf-20100529-nonfree_mod.txt,0.01,1,M2+1 S2-2 K1+17 O1-1,M2+1 S2+2 K1+7 O1-3,0.0
+,"Hinkley Point, England, United Kingdom",harmonics_ticon4_worldwide.txt,2,"Hinkley Point, England, United Kingdom",harmonics_utide_observations.txt,0.0,-16,M2-2 S2-5 K1-15 O1-28,M2+2 S2+2 K1+11 O1+6,0.0
+,"IJmuiden Zuidelijk Havenhoofd, Netherlands",harmonics_ticon4_worldwide.txt,2,"IJGeul 1 (IJmuiden Stroommeetpaal), Netherlands",harmonics_utide_observations.txt,1.0,0,M2+5 S2-4 K1+1 O1-12,M2+3 S2-0 K1-3 O1-10,0.0
+,"Îlet la Mère, French Guiana",harmonics_ticon4_worldwide.txt,2,"Îlet la Mère, French Guiana",harmonics_utide_observations.txt,0.0,2,M2+1 S2+3 K1+0 O1+4,M2+2 S2+2 K1-2 O1-13,0.0
+,"Ishigaki, Okinawa, Japan",harmonics_ticon4_worldwide.txt,2,"Ishigaki, Okinawa, Japan",harmonics_utide_observations.txt,0.0,7,M2+10 S2+12 K1+7 O1+5,M2+3 S2+2 K1-2 O1-1,0.0
+,"Futo (Ito), Shizuoka, Japan",harmonics_ticon4_worldwide.txt,2,"Futo (Ito), Shizuoka, Japan",harmonics_utide_observations.txt,0.01,-2,M2+2 S2+3 K1-1 O1-2,M2+2 S2+1 K1+2 O1+2,0.0
+,"Kainan, Wakayama, Japan",harmonics_ticon4_worldwide.txt,2,"Kainan, Wakayama, Japan",harmonics_utide_observations.txt,0.0,-3,M2-1 S2-1 K1-4 O1-2,M2+2 S2+2 K1+2 O1+1,0.0
+,"Kukup, Malaysia",harmonics_ticon4_worldwide.txt,2,"Kukup, Malaysia",harmonics_att_np203_scs.txt,0.0,4,M2+5 S2+5 K1+5 O1+1,M2-1 S2-2 K1+3 O1+2,
+,"Kure, Kochi, Japan",harmonics_ticon4_worldwide.txt,2,"Kure, Kochi, Japan",harmonics_utide_observations.txt,0.0,-2,M2+2 S2+2 K1-4 O1-3,M2+2 S2+1 K1+2 O1+1,0.0
+,"Kushiro, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,2,"Kushiro, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,2,M2+4 S2+3 K1+10 O1-39,M2+2 S2+1 K1+2 O1+3,0.0
+,"Lumut, Malaysia",harmonics_ticon4_worldwide.txt,2,"Lumut (Sungai Dinding), Malaysia",harmonics_att_np203_scs.txt,0.0,1,M2+1 S2-1 K1-3,M2-0 S2+1 K1-3,
+,"Mackay Outer Harbour, Queensland, Australia",harmonics_ticon4_worldwide.txt,2,"Mackay Outer Harbour, Queensland, Australia",harmonics_utide_observations.txt,0.0,0,M2-1 S2-6 K1+2 O1+3,M2+2 S2+1 K1+0 O1+0,-600.0
+,"Manila, Philippines",harmonics_ticon4_worldwide.txt,2,"Manila, Philippines",harmonics_utide_observations.txt,0.0,-3,M2-3 S2-6 K1+12 O1+4,M2+0 S2+3 K1+2 O1+8,0.0
+,"Matarani, Peru",harmonics_ticon4_worldwide.txt,2,"Matarani, Peru",harmonics_utide_observations.txt,0.0,-2,M2-1 S2+0 K1+3 O1+2,M2+2 S2+3 K1+2 O1+3,1.5
+,"Mossel Bay, South Africa",harmonics_ticon4_worldwide.txt,2,"Mossel Bay, South Africa",harmonics_utide_observations.txt,0.0,-12,M2-10 S2-4 K1-8,M2+2 S2+1 K1+3,-10.0
+,"Nagoya, Aichi, Japan",harmonics_ticon4_worldwide.txt,2,"Nagoya, Aichi, Japan",harmonics_utide_observations.txt,0.0,-11,M2-8 S2-8 K1-10 O1-17,M2+2 S2+2 K1+2 O1+2,0.0
+,"Niigata (Tarodai), Niigata, Japan",harmonics_ticon4_worldwide.txt,2,"Niigata (Tarodai), Niigata, Japan",harmonics_utide_observations.txt,0.01,1,M2+3 K1-3 O1+3,M2+2 K1-1 O1+1,0.0
+,"Nishinoomote, Kagoshima, Japan",harmonics_ticon4_worldwide.txt,2,"Nishinoomote, Kagoshima, Japan",harmonics_utide_observations.txt,0.0,-1,M2+1 S2+1 K1+2 O1+4,M2+2 S2+2 K1+2 O1+3,0.0
+,"Ogi (Sado), Niigata, Japan",harmonics_ticon4_worldwide.txt,2,"Ogi (Sado), Niigata, Japan",harmonics_utide_observations.txt,0.0,1,M2+3 K1-6 O1+2,M2+2 K1+2 O1+1,0.0
+,"Okushiri, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,2,"Okushiri, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,-5,M2-3 K1-14 O1+18,M2+2 K1+4 O1+0,0.0
+,"Onizaki, Aichi, Japan",harmonics_ticon4_worldwide.txt,2,"Onizaki, Aichi, Japan",harmonics_utide_observations.txt,0.0,-11,M2-7 S2-8 K1-9 O1-16,M2+2 S2+2 K1+3 O1+2,0.0
+,"George Town (Selat Pulau Pinang), Malaysia",harmonics_ticon4_worldwide.txt,2,"Pinang (Bandar Raya Georgetown), Malaysia",harmonics_att_np203_scs.txt,0.0,-2,M2-2 S2-6 K1-2 O1-1,M2-0 S2-2 K1+1 O1-12,
+,"Point Tupper, Nova Scotia, Canada",harmonics_ticon4_worldwide.txt,2,"Point Tupper, Nova Scotia, Canada",harmonics_utide_tidetables.txt,0.04,39,M2-4 S2-8 K1+111 O1+90,M2+2 S2+0 K1+9 O1+6,0.0
+,"Port Simpson, British Columbia, Canada",harmonics_ticon4_worldwide.txt,2,"Lax Kw'alaams, British Columbia, Canada",harmonics_utide_tidetables.txt,0.0,1,M2+1 S2+3 K1+6 O1+2,M2+1 S2+2 K1+1 O1+1,1.0
+,"Punta Arenas, Costa Rica",harmonics_ticon4_worldwide.txt,2,"Puntarenas, Costa Rica",harmonics-2004-06-14_mod.txt,0.0,1,M2+3 S2+2 K1-1 O1-5,M2+1 S2+2 K1+3 O1-15,
+,"Rangiroa, Tuamoto Atoll, French Polyneisa",harmonics_ticon4_worldwide.txt,2,"Avatoru lagon, French Polynesia",harmonics_utide_tidetables.txt,0.8,,M2+31 S2+37,M2+2 S2+1,0.0
+,"Port Maturin, Rodrigues, Mauritius",harmonics_ticon4_worldwide.txt,2,"Port Maturin, Rodrigues, Mauritius",harmonics_att_np203_secondary.txt,0.0,4,M2-0 S2+1 K1+6 O1+9,M2-1 S2-3 K1-4 O1+4,
+,"Shirahama (Katata), Wakayama, Japan",harmonics_ticon4_worldwide.txt,2,"Shirahama (Katata), Wakayama, Japan",harmonics_utide_observations.txt,0.0,-3,M2+0 S2+2 K1-2 O1-4,M2+2 S2+2 K1+3 O1+3,0.0
+,"Soma, Fukushima, Japan",harmonics_ticon4_worldwide.txt,2,"Soma, Fukushima, Japan",harmonics_utide_observations.txt,0.01,0,M2+3 S2+3 K1+2 O1+1,M2+2 S2+1 K1+2 O1+2,0.0
+,"Thio, New Caledonia",harmonics_ticon4_worldwide.txt,2,"Thio, New Caledonia",harmonics_utide_tidetables.txt,0.7,-3,M2-1 S2+7 K1-1 O1-12,M2+2 S2+3 K1+3 O1+2,0.0
+,"Harumi, Tokyo, Japan",harmonics_ticon4_worldwide.txt,2,"Harumi, Tokyo, Japan",harmonics_utide_observations.txt,0.0,0,M2+1 S2+4 K1+2 O1-1,M2+2 S2+2 K1+3 O1+4,0.0
+,"Ushuaia, Tierra del Fuego, Argentina",harmonics_ticon4_worldwide.txt,2,"Ushuaia, Tierra del Fuego, Argentina",harmonics_utide_observations.txt,0.0,-16,M2-9 K1-29 O1-15,M2+2 K1+1 O1+1,2.0
+,"Wajima, Ishikawa, Japan",harmonics_ticon4_worldwide.txt,2,"Wajima, Ishikawa, Japan",harmonics_utide_observations.txt,0.01,2,M2+5 K1-3 O1+3,M2+1 K1+3 O1+1,0.0
+,"Wakkanai, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,2,"Wakkanai, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,,K1+13 O1+11,K1-0 O1-2,0.0
+,"Yaizu, Shizuoka, Japan",harmonics_ticon4_worldwide.txt,2,"Yaizu, Shizuoka, Japan",harmonics_utide_observations.txt,0.01,-4,M2-0 S2+2 K1-6 O1-12,M2+2 S2+1 K1+1 O1+1,0.0
+,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_ticon4_worldwide.txt,3,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_att_np208_secondary.txt,0.0,-4,M2-1 S2-1 K1-10,M2+3 S2+1 K1+24,
+,"Fishing Rock, New Zealand",harmonics_ticon4_worldwide.txt,3,"Fishing Rock, New Zealand",harmonics_utide_tidetables.txt,0.0,-4,M2-1 S2-2 K1+2,M2+3 S2+2 K1+30,
+,"Gan, Maldives",harmonics_ticon4_worldwide.txt,3,"Addoo Atoll, Maldives",harmonics_att_np203_secondary.txt,0.58,3,M2+4 S2+4 K1-6 O1-11,M2+0 S2+1 K1-7 O1-13,
+,"Hachinohe, Aomori, Japan",harmonics_ticon4_worldwide.txt,3,"Hachinohe, Aomori, Japan",harmonics_utide_observations.txt,0.0,1,M2+3 S2+3 K1+4 O1+6,M2+3 S2+2 K1+3 O1+4,0.0
+,"Halifax, Nova Scotia, Canada",harmonics_ticon4_worldwide.txt,3,"Halifax, Nova Scotia, Canada",harmonics_utide_tidetables.txt,0.03,1,M2+2 S2+2 K1+3 O1+3,M2+3 S2-1 K1+7 O1-17,6.5
+,"Harlingen, Netherlands",harmonics_ticon4_worldwide.txt,3,"Harlingen, Netherlands",harmonics-dwf-20100529-nonfree_mod.txt,0.0,44,M2+47 S2+49 K1+11 O1+67,M2+3 S2+4 K1+6 O1+12,
+,"Fare, Huahine, French Polynesia",harmonics_ticon4_worldwide.txt,3,"Mouillage de Fare, French Polynesia",harmonics_utide_tidetables.txt,0.55,,S2-27,S2+2,0.0
+,"Katsuura, Chiba, Japan",harmonics_ticon4_worldwide.txt,3,"Katsuura, Chiba, Japan",harmonics_utide_observations.txt,0.01,2,M2+6 S2+5 K1+2 O1+4,M2+3 S2+2 K1+2 O1+2,0.0
+,"Pelabuhan Klang, Malaysia",harmonics_ticon4_worldwide.txt,3,"Pelabuhan Klang, Malaysia",harmonics_att_np203_scs.txt,0.0,0,M2-1 S2-1 K1-4 O1+23,M2+0 S2+1 K1-5 O1-10,
+,"Kornwerderzand, Netherlands",harmonics_ticon4_worldwide.txt,3,"Kornwerderzand Waddenzee buitenhaven, Netherlands",harmonics_utide_observations.txt,0.54,25,M2+28 S2+29 K1+6 O1+45,M2+4 S2+2 K1-1 O1-0,0.0
+,"Kuchinotsu, Nagasaki, Japan",harmonics_ticon4_worldwide.txt,3,"Kuchinotsu, Nagasaki, Japan",harmonics_utide_observations.txt,0.0,17,M2+8 S2+13 K1+25 O1+31,M2+3 S2+3 K1+1 O1+1,0.0
+,"Uraga, Kanagawa, Japan",harmonics_ticon4_worldwide.txt,3,"Kurihama, Kanagawa, Japan",harmonics-2004-06-14_mod.txt,0.0,1,M2+6 S2+7 K1-2 O1+0,M2+5 S2-1 K1-3 O1+8,
+,"Lianyungang (Port), Jiangsu, China",harmonics_ticon4_worldwide.txt,3,"Lianyungang, Jiangsu, China",harmonics_utide_tidetables.txt,0.11,0,M2+3 S2-4 K1+11 O1+6,M2+3 S2-3 K1+8 O1+7,
+,"Maizuru (Higashi Ko), Kyoto, Japan",harmonics_ticon4_worldwide.txt,3,"Maizuru (Higashi Ko), Kyoto, Japan",harmonics_utide_observations.txt,0.01,-4,M2+3 K1-11 O1-2,M2+3 K1+3 O1+2,0.0
+,"Mar del Plata, Buenos Aires, Argentina",harmonics_ticon4_worldwide.txt,3,"Puerto Mar del Plata, Buenos Aires, Argentina",harmonics_utide_tidetables.txt,0.01,-4,M2+5 S2+5 K1+7 O1+4,M2+2 S2+15 K1-21 O1+29,3.75
+,"North Cape / Otou, New Zealand",harmonics_ticon4_worldwide.txt,3,"North Cape / Otou, New Zealand",harmonics_utide_tidetables.txt,0.0,-7,M2-4 S2-1 K1+1,M2+2 S2+6 K1-21,
+,"Nuuk, Greenland",harmonics_ticon4_worldwide.txt,3,"Nuuk, Greenland",harmonics-2004-06-14_mod.txt,0.0,3,M2+1 S2+2 K1+10 O1+9,M2+3 S2+3 K1-6 O1+1,
+,"Parkers Cove, Nova Scotia, Canada",harmonics_ticon4_worldwide.txt,3,"Parkers Cove, Nova Scotia, Canada",harmonics_utide_tidetables.txt,0.01,-5,M2-4 S2-1 K1-0 O1-26,M2+3 S2+2 K1+0 O1-2,0.5
+,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_ticon4_worldwide.txt,3,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_att_np208.txt,0.0,-1,M2+2 S2+3 K1-1,M2+3 S2+2 K1+6,
+,"Port Chalmers, Otago, New Zealand",harmonics_ticon4_worldwide.txt,3,"Port Chalmers, Otago, New Zealand",harmonics_utide_observations.txt,0.0,,M2+30 S2+39,M2+3 S2+3,0.0
+,"Puerto Princesa, Palawan, Philippines",harmonics_ticon4_worldwide.txt,3,"Puerto Princesa, Philippines",harmonics_att_np203_scs.txt,0.02,-5,M2-2 S2-4 K1+0 O1-6,M2+5 S2+1 K1-2 O1-1,0.0
+,"Sakata, Yamagata, Japan",harmonics_ticon4_worldwide.txt,3,"Sakata, Yamagata, Japan",harmonics_utide_observations.txt,0.0,-3,M2+3 K1-3 O1-1,M2+4 K1+1 O1+2,0.0
+,"Shibushi, Kagoshima, Japan",harmonics_ticon4_worldwide.txt,3,"Shibushi, Kagoshima, Japan",harmonics-2004-06-14_mod.txt,0.0,-6,M2+1 S2+1 K1-1 O1-2,M2+1 S2+6 K1+6 O1+4,0.0
+,"Miho (Shimizu), Shizuoka, Japan",harmonics_ticon4_worldwide.txt,3,"Miho (Shimizu), Shizuoka, Japan",harmonics_utide_observations.txt,0.0,-8,M2+3 S2+5 K1-14 O1-14,M2+3 S2+2 K1+4 O1+3,0.0
+,"Tauranga, New Zealand",harmonics_ticon4_worldwide.txt,3,"Tauranga, Bay of Plenty, New Zealand",harmonics_utide_observations.txt,0.0,19,M2+17 S2+23 K1+32,M2+3 S2+4 K1+3,0.0
+,"Pituffik Space Base, Greenland",harmonics_ticon4_worldwide.txt,3,"Pituffik Space Base, Greenland",harmonics-2004-06-14_mod.txt,0.0,-3,M2-2 S2-0 K1+1 O1+26,M2-1 S2+6 K1+17 O1+6,
+,"Hiroo (Tokachi), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,3,"Hiroo (Tokachi), Hokkaido, Japan",harmonics_utide_observations.txt,0.01,2,M2+4 S2+4 K1-2 O1+25,M2+3 S2+2 K1+4 O1+3,0.0
+,"Trieste, Italy",harmonics_ticon4_worldwide.txt,3,"Trieste, Italy",harmonics_utide_observations.txt,0.0,6,M2+5 S2+5 K1+12 O1+11,M2+3 S2+3 K1+3 O1-1,
+,"Anewa Bay, North Solomons, Papua New Guinea",harmonics_ticon4_worldwide.txt,4,"Anewa Bay, North Solomons, Papua New Guinea",harmonics-2004-06-14_mod.txt,0.0,-2,M2+1 S2+3 K1+7 O1+4,M2+4 S2+4 K1+4 O1+7,0.0
+,"Arun Platform (Littlehampton), England, United Kingdom",harmonics_ticon4_worldwide.txt,4,"Arun Platform (Littlehampton), England, United Kingdom",harmonics_utide_observations.txt,0.0,-5,M2-1 S2-0 K1-6,M2+4 S2+4 K1+2,
+,"Avilés, Spain",harmonics_ticon4_worldwide.txt,4,"Avilés, Spain",harmonics_utide_tidetables.txt,0.02,5,M2+8 S2+9 K1+20 O1+13,M2+4 S2+4 K1+5 O1+13,
+,"Beihai, Guangxi, China",harmonics_ticon4_worldwide.txt,4,"Beihai, Guangxi, China",harmonics_utide_tidetables.txt,0.0,-9,M2+0 S2-5 K1-11 O1-6,M2+5 S2+4 K1+2 O1+3,
+,"Santa Cruz das Flores, Açores, Portugal",harmonics_ticon4_worldwide.txt,4,"Santa Cruz das Flores, Açores, Portugal",harmonics_att_np208_secondary.txt,0.0,6,M2+9 S2+7 K1+25,M2+3 S2+1 K1+134,
+,"Fukaura, Aomori, Japan",harmonics_ticon4_worldwide.txt,4,"Fukaura, Aomori, Japan",harmonics_utide_observations.txt,0.0,-7,M2-0 K1-3 O1-2,M2+4 K1+5 O1+5,0.0
+,"Ishikari, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,4,"Ishikari, Hokkaido, Japan",harmonics_utide_observations.txt,0.0,1,M2+4 K1+4 O1+10,M2+4 K1+5 O1+6,0.0
+,"Teluk Yu (Langkawi), Malaysia",harmonics_ticon4_worldwide.txt,4,"Teluk Ewa (Langkawi), Malaysia",harmonics_att_np203_scs.txt,0.39,-2,M2-1 S2-2 K1+6 O1-7,M2-0 S2+2 K1+0 O1+5,
+,"Tanjung Telang (Langkawi), Malaysia",harmonics_ticon4_worldwide.txt,4,"Teluk Ewa (Langkawi), Malaysia",harmonics_att_np203_scs.txt,0.38,-2,M2-1 S2-1 K1+3 O1-8,M2+0 S2+2 K1-3 O1+4,
+,"Daliang, Liaoning, China",harmonics_ticon4_worldwide.txt,4,"Dalian (Laohutan), Liaoning, China",harmonics_utide_tidetables.txt,0.04,-6,M2-5 S2-4 K1-5 O1-1,M2+5 S2+5 K1-3 O1-1,
+,"Lottin Point, New Zealand",harmonics_ticon4_worldwide.txt,4,"Lottin Point / Wakatiri, New Zealand",harmonics_utide_tidetables.txt,0.04,-3,M2-1 S2+0 K1+26,M2+2 S2+3 K1+61,
+,"Nezugaseki, Yamagata, Japan",harmonics_ticon4_worldwide.txt,4,"Nezugaseki, Yamagata, Japan",harmonics_utide_observations.txt,0.0,-1,M2+5 K1+3 O1+5,M2+3 K1+4 O1+5,0.0
+,"Ominato, Aomori, Japan",harmonics_ticon4_worldwide.txt,4,"Ominato, Aomori, Japan",harmonics_utide_observations.txt,0.0,64,M2+14 S2+13 K1+120 O1+148,M2+5 S2+5 K1+1 O1-1,0.0
+,"Ste-Anne-Des-Monts, Québec, Canada",harmonics_ticon4_worldwide.txt,4,"Sainte-Anne-des-Monts, Québec, Canada",harmonics_utide_tidetables.txt,0.0,-3,M2+3 S2+2 K1-1 O1-0,M2+4 S2+5 K1+3 O1+10,1.0
+,"Tajiri, Tottori, Japan",harmonics_ticon4_worldwide.txt,4,"Tajiri, Tottori, Japan",harmonics_utide_observations.txt,0.0,-3,M2+1 K1-9 O1+1,M2+4 K1+4 O1+3,0.0
+,"Wellington, Wellington, New Zealand",harmonics_ticon4_worldwide.txt,4,"Wellington, Wellington, New Zealand",harmonics_utide_observations.txt,0.0,,M2-0 O1+28,M2+5 O1+11,0.0
+,"Wexford, Ireland",harmonics_ticon4_worldwide.txt,4,"Wexford, Ireland",harmonics_utide_observations.txt,0.0,47,M2+40 S2+58 K1+48 O1+42,M2+3 S2+4 K1-2 O1-2,10.0
+,"Pictou, Nova Scotia, Canada",harmonics_ticon4_worldwide.txt,5,"Pictou, Nova Scotia, Canada",harmonics_utide_tidetables.txt,0.01,16,M2+28 S2+25 K1+15 O1+18,M2+5 S2+4 K1+12 O1+6,2.25
+,"Port Louis, Mauritius",harmonics_ticon4_worldwide.txt,5,"Port Louis, Mauritius",harmonics_att_np203_secondary.txt,0.02,-28,M2+1 S2-6 K1-44 O1-43,M2+3 S2+4 K1+2 O1+4,
+,"Toba, Mie, Japan",harmonics_ticon4_worldwide.txt,5,"Toba, Mie, Japan",harmonics_utide_observations.txt,0.0,-8,M2-2 S2-2 K1-3 O1-9,M2+4 S2+5 K1+7 O1+7,0.0
+,"Bluff, Southland, New Zealand",harmonics_ticon4_worldwide.txt,6,"Bluff, Southland, New Zealand",harmonics-2004-06-14_mod.txt,0.0,43,M2+48 S2+51 O1+63,M2+5 S2+10 O1+3,0.0
+,"Boat Cove, New Zealand",harmonics_ticon4_worldwide.txt,6,"Boat Cove, New Zealand",harmonics_utide_tidetables.txt,0.0,-4,M2+2 S2+7 K1+31,M2+6 S2+5 K1+38,
+,"Jinjidao Island (Kanmen Gang), Zhejiang, China",harmonics_ticon4_worldwide.txt,6,"Kanmen, Zhejiang, China",harmonics_utide_tidetables.txt,1.84,-7,M2-1 S2+1 K1-1 O1-6,M2+7 S2+6 K1+2 O1+2,
+,"Port Ellen (Islay), Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,6,"Port Ellen (Islay), Scotland, United Kingdom",harmonics_utide_observations.txt,0.02,-4,M2+7 S2-30 K1+18 O1-5,M2+7 S2+3 K1+12 O1+4,0.0
+,"Knysna, South Africa",harmonics_ticon4_worldwide.txt,7,"Knysna, South Africa",harmonics_att_np203_secondary.txt,0.0,3,M2-4 S2+10 K1+15,M2+4 S2+7 K1+6,-20.0
+,"Nuku'alofa, Tonga",harmonics_ticon4_worldwide.txt,7,"Nuku'alofa, Tonga",harmonics-1997-05-25_mod.txt,0.0,-29,M2+8 S2-16 K1-24 O1-49,M2+9 S2-9 K1+26 O1+3,
+,"Adelaide Inner Harbour, South Australia, Australia",harmonics_ticon4_worldwide.txt,7,"Port Adelaide, South Australia, Australia",harmonics-1997-05-25_mod.txt,1.8,-5,M2-5 S2+3 K1-3 O1+5,M2+9 S2+5 K1+4 O1-0,
+,"Fenit (Tralee), Ireland",harmonics_ticon4_worldwide.txt,8,"Fenit (Tralee), Ireland",harmonics_utide_tidetables.txt,0.0,,M2+5 S2+5 K1+6 O1+11,M2+10 S2+4,-10.0
+,"Port, South Australia, Australia",harmonics_ticon4_worldwide.txt,8,"Port Alma, Queensland, Australia",harmonics-2004-06-14_mod.txt,0.19,2,M2+9 S2+10 K1+7 O1+1,M2+8 S2+8 K1+3 O1+1,
+,"Rotterdam, Netherlands",harmonics_ticon4_worldwide.txt,8,"Rotterdam, Nieuwe Maas, Boerengat, Netherlands",harmonics_utide_observations.txt,0.18,51,M2+48 S2+39 K1+81 O1+70,M2+8 S2+8 K1+5 O1+7,10.0
+,"Tanjong Pagar, Singapore",harmonics_ticon4_worldwide.txt,9,"Tanjong Pagar, Singapore",harmonics_att_np203_scs.txt,0.0,1,M2+6 S2+4 K1+35 O1+28,M2+4 S2+5 K1+30 O1+34,
+,"Lusi, Jiangsu, China",harmonics_ticon4_worldwide.txt,9,"Lusi, Jiangsu, China",harmonics_utide_tidetables.txt,0.0,0,M2+19 S2+18 K1+3 O1-35,M2+7 S2+12 K1+10 O1+9,
+,"Palermo, Italy",harmonics_ticon4_worldwide.txt,9,"Palermo, Sicily, Italy",harmonics_att_np208.txt,0.0,-8,M2-1 S2+0,M2+7 S2+11,
+,"Hososhima (Hyuga), Miyazaki, Japan",harmonics_ticon4_worldwide.txt,10,"Hososhima (Hyuga), Miyazaki, Japan",harmonics_utide_observations.txt,0.0,-3,M2+14 S2+13 K1+1 O1+4,M2+10 S2+10 K1+11 O1+13,10.0
+,"Tawau, Malaysia",harmonics_ticon4_worldwide.txt,10,"Tawau, Malaysia",harmonics_att_np203_scs.txt,0.0,-18,M2-2 S2-0 K1+5 O1-15,M2+9 S2-5 K1+30 O1+105,
+,"Moçâmedes (Namibe), Angola",harmonics_ticon4_worldwide.txt,13,"Moçâmedes (Namibe), Angola",harmonics_att_np208_secondary.txt,0.0,-8,M2+4 S2+6 K1+5,M2+12 S2+8 K1+40,
+,"Sibolga, Indonesia",harmonics_ticon4_worldwide.txt,15,"Sibolga, Indonesia",harmonics_att_np203_scs.txt,0.0,-7,M2+2 S2+9 K1+18 O1+13,M2+23 S2+2 K1+77 O1-156,10.0
+,"Alexandria (Al Iskandariyah), Egypt",harmonics_ticon4_worldwide.txt,19,"Alexandria (Al Iskandariyah), Egypt",harmonics_utide_observations.txt,0.0,,M2+28 S2+28,M2+20 S2+18,20.0
+,"Antalya, Turkey",harmonics_ticon4_worldwide.txt,21,"Antalya, Turkey",harmonics_utide_observations.txt,0.0,,M2-4 S2-14,M2+23 S2+16,
+,"Kugluktuk (Coppermine), Nunavut, Canada",harmonics_ticon4_worldwide.txt,22,"Kugluktuk (Coppermine), Nunavut, Canada",harmonics-2004-06-14_mod.txt,0.0,,K1+56,K1+35,
+,"Bremervörde UW (Oste), Germany",harmonics_ticon4_worldwide.txt,25,"Bremervörde UW (Oste), Germany",harmonics_utide_observations.txt,0.0,321,M2+348 S2+331 O1+681,M2+27 S2+25 O1+3,30.0

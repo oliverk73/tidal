@@ -55,6 +55,9 @@ def main(argv):
             continue
         for r in betroffen:
             q = os.path.join(M.REIHEN, r['reihe'], r['station'])
+            if not os.path.exists(q):
+                print(f'  Reihe nicht mehr vorhanden, Zeile bleibt: {os.path.relpath(q, M.REIHEN)}')
+                continue
             if q not in reihen:
                 reihen[q] = M.lies(q)
             obs = reihen[q]

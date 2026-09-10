@@ -1,8 +1,8 @@
 station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub_m,reihe,eigen,ausserhalb
-316_Acapulco.csv,16.8406,-99.9090,2011,"Acapulco (Puerto), Guerrero, Mexico",harmonics_ticon4_worldwide.txt,0,8751,0.1991,0.57,-720,-0.03,1.119,Mexico_UHSLC,1,nein
+316_Acapulco.csv,16.8406,-99.9090,2011,"Acapulco (Puerto), Guerrero, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0663,0.256,0,-0.031,1.119,Mexico_UHSLC,1,nein
 316_Acapulco.csv,16.8406,-99.9090,2011,"Acapulco, Guerrero, Mexico",harmonics_utide_observations.txt,0,8761,0.0591,0.241,0,-0.031,1.129,Mexico_UHSLC,0,nein
 316_Acapulco.csv,16.8406,-99.9090,2011,"Acapulco, Guerrero, Mexico",harmonics_noaa_amtt.txt,1153,8751,0.1916,0.61,-720,0.666,0.98,Mexico_UHSLC,0,nein
-316_Acapulco.csv,16.8420,-99.8520,2011,"Acapulco (Icacos), Guerrero, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.2073,0.626,-40,-0.03,1.171,Mexico_UHSLC,1,nein
+316_Acapulco.csv,16.8420,-99.8520,2011,"Acapulco (Icacos), Guerrero, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0627,0.229,0,-0.031,1.171,Mexico_UHSLC,1,nein
 907_Akyab_Sittwe.csv,20.1405,92.9034,2018,"Sittwe (Akyab), Myanmar",harmonics_ticon4_worldwide.txt,0,6898,0.0874,0.386,0,0.033,3.215,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
 907_Akyab_Sittwe.csv,20.1405,92.9034,2018,"Sittwe (Akyab), Myanmar",harmonics_utide_observations.txt,0,6898,0.087,0.338,0,0.031,3.238,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
 907_Akyab_Sittwe.csv,20.1405,92.9034,2018,"Sittwe (Akyab), Myanmar",harmonics_utide_tidetables.txt,0,6898,0.0998,0.437,0,2.112,3.33,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
@@ -20,7 +20,7 @@ h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira)
 70_Auckland.csv,-36.8429,174.7669,1988,"Auckland (Queens Wharf), New Zealand",harmonics_utide_observations.txt,0,8761,0.0969,0.471,0,-0.026,3.447,New_Zealand_UHSLC,0,nein
 70_Auckland.csv,-36.8429,174.7669,1988,"Westhaven Inlet, New Zealand",harmonics_utide_tidetables.txt,1826,8761,0.1149,0.571,-10,1.793,3.372,New_Zealand_UHSLC,0,nein
 70_Auckland.csv,-36.8429,174.7669,1988,"Devonport Naval Base, New Zealand",harmonics_utide_tidetables.txt,2155,8761,0.1182,0.597,-10,1.793,3.303,New_Zealand_UHSLC,0,nein
-310_Bahia_de_los_Angeles.csv,28.9479,-113.5572,1994,"Bahía de los Ángeles, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8177,0.4711,1.224,-30,1.578,3.476,Mexico_UHSLC,1,nein
+310_Bahia_de_los_Angeles.csv,28.9479,-113.5572,1994,"Bahía de los Ángeles, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8177,0.0575,0.242,0,1.581,3.476,Mexico_UHSLC,1,nein
 310_Bahia_de_los_Angeles.csv,28.9479,-113.5572,1994,"Bahia de los Angeles, Baja California, Mexico",harmonics_utide_observations.txt,0,8177,0.052,0.2,0,-0.021,3.464,Mexico_UHSLC,0,nein
 302_panama.csv,8.9650,-79.5718,2018,"Balboa, Panama",harmonics_ticon4_worldwide.txt,0,8761,0.1331,0.532,0,0.011,6.179,Panama_UHSLC,1,nein
 302_panama.csv,8.9650,-79.5718,2018,"Balboa, Panama",harmonics_utide_observations.txt,0,8761,0.1148,0.442,0,0.011,6.46,Panama_UHSLC,0,nein
@@ -45,7 +45,7 @@ BonanzaTG.csv,36.8024,-6.3381,2024,"Sanlúcar, Río Guadalquivir, Spain",harmoni
 285_Buenos_Aires.csv,-34.5609,-58.3988,1961,"Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina",harmonics_utide_tidetables.txt,9,8761,0.4965,2.302,30,0.085,1.34,Argentina_UHSLC,0,nein
 uhslc_878.csv,12.1870,-69.0200,2026,"Bullenbaai, Curaçao",harmonics_ticon4_worldwide.txt,0,8073,0.0425,0.334,0,0.009,0.594,ABC_UHSLC,1,nein
 uhslc_878.csv,12.1870,-69.0200,2026,"Bullen Bay, Curaçao",harmonics_utide_observations.txt,0,8073,0.0415,0.315,0,0.009,0.603,ABC_UHSLC,0,nein
-34_Cabo_San_Lucas.csv,22.8800,-109.9080,2014,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,8755,0.288,0.822,390,0.009,2.075,Mexico_UHSLC,1,nein
+34_Cabo_San_Lucas.csv,22.8800,-109.9080,2014,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,8760,0.0544,0.204,0,0.009,2.075,Mexico_UHSLC,1,nein
 34_Cabo_San_Lucas.csv,22.8800,-109.9080,2014,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_utide_observations.txt,0,8760,0.0526,0.194,0,0.009,2.161,Mexico_UHSLC,0,nein
 221_Simons_Town.csv,-33.9000,18.4330,2018,"Cape Town, South Africa",harmonics_ticon4_worldwide.txt,0,8570,0.0854,0.328,0,0.083,1.846,SouthAfrica_UHSLC,1,nein
 221_Simons_Town.csv,-33.9000,18.4330,2018,"Cape Town, South Africa",harmonics_utide_observations.txt,0,8570,0.0862,0.375,10,0.083,1.852,SouthAfrica_UHSLC,0,nein
@@ -54,7 +54,7 @@ h209_cascais.csv,38.6932,-9.4154,2026,"Cascais, Portugal",harmonics_ticon4_world
 h209_cascais.csv,38.6932,-9.4154,2026,"Cascais, Portugal",harmonics_utide_observations.txt,0,6497,711.2892,1852.157,-10,2355.872,3.455,Portugal_UHSLC,0,nein
 379_Cebu.csv,10.3005,123.9161,2014,"Cebu, Philippines",harmonics_ticon4_worldwide.txt,0,8636,0.0899,0.408,0,-0.009,2.378,Philippines_UHSLC,1,nein
 379_Cebu.csv,10.3005,123.9161,2014,"Cebu, Philippines",harmonics_utide_observations.txt,113,8636,0.0841,0.381,0,-0.009,2.464,Philippines_UHSLC,0,nein
-305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,7070,0.431,1.12,-40,-0.027,2.703,Mexico_UHSLC,1,nein
+305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,7070,0.066,0.356,0,-0.012,2.703,Mexico_UHSLC,1,nein
 305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_utide_observations.txt,0,7070,0.0565,0.313,0,-0.012,2.722,Mexico_UHSLC,0,nein
 138_Charchanga.csv,22.2259,91.0654,2000,"Charchenga (Hatiya Island), Bangladesh",harmonics_ticon4_worldwide.txt,0,8710,0.2851,1.431,-10,0.044,4.258,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
 138_Charchanga.csv,22.2259,91.0654,2000,"Charchenga (Hatiya Island), Bangladesh",harmonics_utide_observations.txt,0,8710,0.2771,1.417,-10,0.045,4.316,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
@@ -69,8 +69,8 @@ h209_cascais.csv,38.6932,-9.4154,2026,"Cascais, Portugal",harmonics_utide_observ
 162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap, Java, Indonesia",harmonics_ticon4_worldwide.txt,0,8742,0.0988,0.277,0,0.167,2.226,Indonesia_UHSLC,1,nein
 162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap, Java, Indonesia",harmonics_utide_observations.txt,0,8742,0.1029,0.31,0,0.167,2.321,Indonesia_UHSLC,0,nein
 162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Tjillatjap), Indonesia",harmonics_att_np203_scs.txt,2799,8742,0.1285,0.395,20,2.542,2.126,Indonesia_UHSLC,0,nein
-779_Ciudad_del_Carmen.csv,18.6432,-91.8433,1991,"Ciudad del Carmen (Faro Atalaya), Campeche, Mexico",harmonics_ticon4_worldwide.txt,0,8005,0.2378,1.021,720,0.102,0.789,Mexico_UHSLC,1,nein
-779_Ciudad_del_Carmen.csv,18.6432,-91.8433,1991,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_ticon4_worldwide.txt,1754,8005,0.2352,1.024,720,0.102,0.78,Mexico_UHSLC,0,nein
+779_Ciudad_del_Carmen.csv,18.6432,-91.8433,1991,"Ciudad del Carmen (Faro Atalaya), Campeche, Mexico",harmonics_ticon4_worldwide.txt,0,8016,0.1396,0.55,-180,0.125,0.789,Mexico_UHSLC,1,nein
+779_Ciudad_del_Carmen.csv,18.6432,-91.8433,1991,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_ticon4_worldwide.txt,1754,8016,0.14,0.547,-180,0.124,0.78,Mexico_UHSLC,0,nein
 779_Ciudad_del_Carmen.csv,18.6432,-91.8433,1991,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_utide_observations.txt,1754,8016,0.1363,0.544,-170,0.124,0.79,Mexico_UHSLC,0,nein
 392_cr.csv,5.5570,-87.0480,2026,"Cocos Island, Costa Rica",harmonics_ticon4_worldwide.txt,0,7577,0.0703,1.05,0,0.022,3.215,CostaRica_UHSLC,1,nein
 392_cr.csv,5.5570,-87.0480,2026,"Cocos Island, Costa Rica",harmonics_utide_observations.txt,0,7577,0.0689,1.058,0,0.023,3.226,CostaRica_UHSLC,0,nein
@@ -94,7 +94,7 @@ dakar_senegal.csv,14.6770,-17.4200,2024,"Dakar, Senegal",harmonics_utide_observa
 187_East_London.csv,-33.0273,27.9173,2016,"KuGompo City (East London), South Africa",harmonics_utide_observations.txt,0,8645,0.1007,0.361,0,0.004,2.102,SouthAfrica_UHSLC,0,nein
 739_panama.csv,9.5582,-78.9492,2026,"El Porvenir, Panama",harmonics_ticon4_worldwide.txt,0,8739,0.0466,0.197,0,0.032,0.596,Panama_UHSLC,1,nein
 739_panama.csv,9.5582,-78.9492,2026,"El Porvenir, Panama",harmonics_utide_observations.txt,0,8739,0.0461,0.204,0,0.032,0.602,Panama_UHSLC,0,nein
-317_Ensenada.csv,31.8483,-116.6178,2009,"Ensenada, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.4238,1.133,-50,-0.03,2.656,Mexico_UHSLC,1,nein
+317_Ensenada.csv,31.8483,-116.6178,2009,"Ensenada, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.0514,0.209,-10,-0.032,2.656,Mexico_UHSLC,1,nein
 317_Ensenada.csv,31.8483,-116.6178,2009,"Ensenada, Baja California, Mexico",harmonics_utide_observations.txt,0,8331,0.0423,0.249,0,-0.031,2.783,Mexico_UHSLC,0,nein
 317_Ensenada.csv,31.8483,-116.6178,2009,"Ensenada, Todos Santos Bay, Baja California, Mexico",harmonics_noaa_amtt.txt,1476,8331,0.1491,0.439,0,0.766,2.853,Mexico_UHSLC,0,nein
 601_Esperanza.csv,-63.3950,-56.9950,2005,"Esperanza (Hope Bay, Antarctica), Antártida Argentina, Argentina",harmonics_ticon4_worldwide.txt,0,5074,0.1857,1.641,0,-0.096,3.499,Argentina_UHSLC,1,nein
@@ -119,11 +119,11 @@ h218_funchal.csv,32.6447,-16.9107,2012,"Funchal, Madeira, Portugal",harmonics_at
 78_Gisborne.csv,-38.6830,178.0330,2024,"Gisborne, New Zealand",harmonics_ticon4_worldwide.txt,0,8615,0.1053,0.642,0,0.014,1.824,New_Zealand_UHSLC,1,nein
 78_Gisborne.csv,-38.6830,178.0330,2024,"Gisborne, Gisborne, New Zealand",harmonics_utide_observations.txt,0,8615,0.1031,0.635,0,0.015,1.865,New_Zealand_UHSLC,0,nein
 78_Gisborne.csv,-38.6830,178.0330,2024,"Sponge Bay, New Zealand",harmonics_utide_tidetables.txt,2398,8615,0.1149,0.664,0,1.291,1.817,New_Zealand_UHSLC,0,nein
-36_Isla_Guadalupe.csv,28.8820,-118.2912,1985,"Isla Guadalupe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,3062,0.4081,1.226,-60,0.035,2.312,Mexico_UHSLC,1,nein
+36_Isla_Guadalupe.csv,28.8820,-118.2912,1985,"Isla Guadalupe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,3062,0.0845,0.354,0,0.006,2.312,Mexico_UHSLC,1,nein
 36_Isla_Guadalupe.csv,28.8820,-118.2912,1985,"Isla Guadalupe, Baja California, Mexico",harmonics_utide_observations.txt,0,3062,0.0783,0.299,0,0.007,2.352,Mexico_UHSLC,0,nein
 251_Guantanamo_Bay.csv,19.9176,-75.1512,1997,"Guantanamo Bay (US Naval Base), Cuba",harmonics_ticon4_worldwide.txt,0,7297,0.0606,0.169,0,0.192,0.64,Caribbean_UHSLC_CubaJamaicaBahamas,1,nein
 251_Guantanamo_Bay.csv,19.9176,-75.1512,1997,"Guantanamo Bay (US Naval Base), Cuba",harmonics_utide_observations.txt,0,7297,0.0601,0.166,0,0.193,0.648,Caribbean_UHSLC_CubaJamaicaBahamas,0,nein
-397_Guaymas.csv,27.9211,-110.8819,1986,"Guaymas, Sonora, Mexico",harmonics_ticon4_worldwide.txt,0,8757,0.3756,1.195,-360,0.036,1.711,Mexico_UHSLC,1,nein
+397_Guaymas.csv,27.9211,-110.8819,1986,"Guaymas, Sonora, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0768,0.403,0,0.035,1.711,Mexico_UHSLC,1,nein
 397_Guaymas.csv,27.9211,-110.8819,1986,"Guaymas, Sonora, Mexico",harmonics_utide_observations.txt,0,8761,0.0742,0.393,0,0.036,1.76,Mexico_UHSLC,0,nein
 134_Hiron_Point.csv,21.8174,89.4622,2003,"Hiron Point (Pasur River), Bangladesh",harmonics_ticon4_worldwide.txt,0,8761,0.137,0.648,-10,0.069,3.433,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
 134_Hiron_Point.csv,21.8174,89.4622,2003,"Hiron Point (Pasur River), Bangladesh",harmonics_utide_observations.txt,0,8761,0.1306,0.736,0,0.069,3.502,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
@@ -149,7 +149,7 @@ ko_lak_328.csv,7.8338,98.4216,2025,"Ko Taphao Noi (Phuket), Phuket, Thailand",ha
 ko_lak_328.csv,7.8338,98.4216,2025,"Ko Taphao Noi (Phuket), Phuket, Thailand",harmonics_utide_observations.txt,0,6564,0.7994,2.536,470,0.362,3.277,UHSLC_Thailand,0,nein
 h247_la_guaira.csv,10.6041,-66.9315,1994,"La Guaira, Venezuela",harmonics_ticon4_worldwide.txt,0,8600,126.4375,390.12,720,1255.884,0.6,Venezuela_UHSLC,1,nein
 h247_la_guaira.csv,10.6041,-66.9315,1994,"La Guaira, Venezuela",harmonics_utide_observations.txt,0,8600,126.4382,390.121,720,1255.884,0.586,Venezuela_UHSLC,0,nein
-671_La_Paz.csv,24.1519,-110.3314,1983,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,5784,0.3409,0.992,-60,0.149,1.817,Mexico_UHSLC,1,nein
+671_La_Paz.csv,24.1519,-110.3314,1983,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,5784,0.0836,0.24,0,0.085,1.817,Mexico_UHSLC,1,nein
 671_La_Paz.csv,24.1519,-110.3314,1983,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_utide_observations.txt,5,5784,0.0787,0.262,0,0.085,1.856,Mexico_UHSLC,0,nein
 67_Lae.csv,-6.7330,146.9830,1998,"Lae, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,8039,0.1466,0.381,0,-0.04,0.993,PapuaNewGuinea_UHSLC,1,nein
 67_Lae.csv,-6.7330,146.9830,1998,"Lae, Papua New Guinea",harmonics_utide_observations.txt,0,8039,0.1441,0.355,0,-0.04,1.015,PapuaNewGuinea_UHSLC,0,nein
@@ -197,7 +197,7 @@ lobito_angola.csv,-12.3355,13.5592,1975,"Porto do Lobito, Angola",harmonics_noaa
 400_Lombrum_Manus_Is.csv,-2.0191,147.2697,2021,"Seeadler Harbor, Manus, Admiralty Islands, Papua New Guinea",harmonics-2004-06-14_mod.txt,0,8761,0.0645,0.295,0,0.138,1.066,PapuaNewGuinea_UHSLC,0,nein
 400_Lombrum_Manus_Is.csv,-2.0191,147.2697,2021,"Seeadler Harbor, Manus, Admiralty Islands, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,8761,0.0636,0.219,0,0.378,1.101,PapuaNewGuinea_UHSLC,1,nein
 400_Lombrum_Manus_Is.csv,-2.0191,147.2697,2021,"Manus, Papua New Guinea",harmonics_utide_observations.txt,725,8761,0.0603,0.208,0,-0.157,1.095,PapuaNewGuinea_UHSLC,0,nein
-395_Manzanillo.csv,19.0556,-104.3178,2013,"Manzanillo, Colima, Mexico",harmonics_ticon4_worldwide.txt,0,8590,0.0658,0.27,350,0.013,1.297,Mexico_UHSLC,1,nein
+395_Manzanillo.csv,19.0556,-104.3178,2013,"Manzanillo, Colima, Mexico",harmonics_ticon4_worldwide.txt,0,8594,0.0658,0.271,0,0.013,1.297,Mexico_UHSLC,1,nein
 395_Manzanillo.csv,19.0556,-104.3178,2013,"Manzanillo, Colima, Mexico",harmonics_utide_observations.txt,0,8594,0.065,0.24,0,0.014,1.394,Mexico_UHSLC,0,nein
 190_Maputo.csv,-25.9757,32.5695,1986,"Maputo, Mozambique",harmonics_ticon4_worldwide.txt,0,7665,0.1141,0.634,0,-0.014,3.572,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
 190_Maputo.csv,-25.9757,32.5695,1986,"Maputo, Mozambique",harmonics_utide_observations.txt,0,7665,0.1115,0.676,0,-0.013,3.614,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
@@ -272,7 +272,7 @@ h248_port_of_spain.csv,10.6500,-61.5170,1992,"Port of Spain, Trinidad and Tobago
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi, Java, Indonesia",harmonics_ticon4_worldwide.txt,0,8743,0.1117,0.317,0,0.149,2.84,Indonesia_UHSLC,1,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi, Java, Indonesia",harmonics_utide_observations.txt,0,8743,0.1072,0.303,0,0.149,2.862,Indonesia_UHSLC,0,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Segoro Wedi Bay, Indonesia",harmonics_att_np203_scs.txt,2606,8743,0.2,0.575,10,0.378,2.159,Indonesia_UHSLC,0,nein
-721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatán, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.1647,0.59,-380,4.256,0.968,Mexico_UHSLC,1,nein
+721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatán, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.1001,0.398,0,4.254,0.964,Mexico_UHSLC,1,nein
 721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatan, Mexico",harmonics_utide_observations.txt,0,8329,0.1337,0.519,190,4.255,0.679,Mexico_UHSLC,0,nein
 286_Puerto_Deseado.csv,-47.7536,-65.9147,2026,"Puerto Deseado, Santa Cruz, Argentina",harmonics_ticon4_worldwide.txt,0,8704,0.1751,0.781,0,0.017,5.596,Argentina_UHSLC,1,nein
 286_Puerto_Deseado.csv,-47.7536,-65.9147,2026,"Puerto Deseado, Santa Cruz, Argentina",harmonics_utide_observations.txt,8,8704,0.1661,0.775,0,0.017,5.669,Argentina_UHSLC,0,nein
@@ -303,15 +303,15 @@ salalah_114.csv,16.9350,54.0070,2025,"Salalah, Oman",harmonics_utide_observation
 703_Saldanha_Bay.csv,-33.0170,17.9500,2016,"Saldanha Bay, South Africa",harmonics_utide_observations.txt,0,7202,0.0812,0.313,-10,0.005,2.039,SouthAfrica_UHSLC,0,nein
 703_Saldanha_Bay.csv,-33.0170,17.9500,2016,"Saldanha, South Africa",harmonics_att_np208_secondary.txt,11,7202,0.086,0.353,0,0.111,1.969,SouthAfrica_UHSLC,0,nein
 703_Saldanha_Bay.csv,-33.0170,17.9500,2016,"Saldanha, South Africa",harmonics_noaa_eutt.txt,33,7202,0.1003,0.396,0,0.095,1.858,SouthAfrica_UHSLC,0,nein
-394_Salina_Cruz.csv,16.1600,-95.2030,1991,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,0,8083,0.2126,0.679,-20,-0.001,1.74,Mexico_UHSLC,1,nein
+394_Salina_Cruz.csv,16.1600,-95.2030,1991,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,0,8083,0.0912,0.333,0,-0.009,1.74,Mexico_UHSLC,1,nein
 394_Salina_Cruz.csv,16.1600,-95.2030,1991,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_utide_observations.txt,0,8083,0.0918,0.311,0,-0.008,1.776,Mexico_UHSLC,0,nein
-394_Salina_Cruz.csv,16.1600,-95.2030,1991,"Salina Cruz (Puerto), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,1143,8083,0.2126,0.683,-20,-0.001,1.743,Mexico_UHSLC,0,nein
+394_Salina_Cruz.csv,16.1600,-95.2030,1991,"Salina Cruz (Puerto), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,1143,8083,0.0913,0.331,0,-0.008,1.743,Mexico_UHSLC,0,nein
 708_Salvador.csv,-12.9715,-38.5158,2026,"Salvador (Porto), Bahia, Brazil",harmonics_ticon4_worldwide.txt,0,7742,0.056,0.199,0,0.815,2.917,Brazil_UHSLC,1,nein
 708_Salvador.csv,-12.9715,-38.5158,2026,"Salvador (Porto), Bahia, Brazil",harmonics_utide_tidetables.txt,0,7742,0.0824,0.34,10,0.783,2.917,Brazil_UHSLC,0,nein
 674_San_Carlos.csv,24.7874,-112.1203,1983,"San Carlos, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,8017,0.3804,1.086,-30,0.083,2.783,Mexico_UHSLC,1,nein
 674_San_Carlos.csv,24.7874,-112.1203,1983,"San Carlos, Baja California Sur, Mexico",harmonics_utide_observations.txt,0,8017,0.0872,0.431,-10,0.087,2.837,Mexico_UHSLC,0,nein
 674_San_Carlos.csv,24.7874,-112.1203,1983,"San Carlos, Baja California Sur, Mexico",harmonics_noaa_amtt.txt,583,8017,0.2503,0.792,-10,1.087,3.153,Mexico_UHSLC,0,nein
-307_San_Felipe.csv,31.0256,-114.8310,1986,"San Felipe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8450,0.6237,1.727,-20,1.118,6.97,Mexico_UHSLC,1,nein
+307_San_Felipe.csv,31.0256,-114.8310,1986,"San Felipe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8450,0.1261,0.881,0,1.126,6.97,Mexico_UHSLC,1,nein
 307_San_Felipe.csv,31.0256,-114.8310,1986,"San Felipe, Baja California, Mexico",harmonics-2004-06-14_mod.txt,10,8450,0.249,1.368,0,1.122,7.574,Mexico_UHSLC,0,nein
 307_San_Felipe.csv,31.0256,-114.8310,1986,"San Felipe, Baja California, Mexico",harmonics_utide_observations.txt,10,8450,0.1196,0.86,0,-0.023,6.933,Mexico_UHSLC,0,nein
 394_Salina_Cruz.csv,-0.7485,-90.3130,1991,"Puerto Ayora, Santa Cruz, Galapagos, Ecuador",harmonics_ticon4_worldwide.txt,0,8083,0.233,0.776,0,1.361,2.247,Mexico_UHSLC,1,nein
@@ -367,9 +367,9 @@ h231a_takoradi.csv,4.8825,-1.7450,1986,"Takoradi, Ghana",harmonics_utide_observa
 07510_Tumbo_Channel_wlp.csv,48.7932,-123.1088,2025,"Tumbo Channel, British Columbia, Canada",harmonics_ticon4_worldwide.txt,0,35040,0.0909,0.284,0,2.56,4.502,Canada_IWLS_BC,1,nein
 07510_Tumbo_Channel_wlp.csv,48.7932,-123.1088,2025,"Tumbo Channel, British Columbia, Canada",harmonics_utide_tidetables.txt,0,35040,0.0341,0.131,0,0.0,4.465,Canada_IWLS_BC,0,nein
 07510_Tumbo_Channel_wlp.csv,48.7932,-123.1088,2025,"Narvaez Bay, British Columbia, Canada",harmonics_utide_tidetables.txt,2243,35040,0.1138,0.462,-20,0.201,4.339,Canada_IWLS_BC,0,nein
-393_Puerto_Vallarta.csv,20.6586,-105.2439,1991,"Puerto Vallarta, Jalisco, Mexico",harmonics_ticon4_worldwide.txt,0,6601,0.2902,1.012,-80,0.019,1.795,Mexico_UHSLC,1,nein
+393_Puerto_Vallarta.csv,20.6586,-105.2439,1991,"Puerto Vallarta, Jalisco, Mexico",harmonics_ticon4_worldwide.txt,0,6601,0.0736,0.299,-40,0.068,1.8,Mexico_UHSLC,1,nein
 393_Puerto_Vallarta.csv,20.6586,-105.2439,1991,"Puerto Vallarta, Jalisco, Mexico",harmonics_utide_observations.txt,0,6601,0.0725,0.294,-40,0.066,1.816,Mexico_UHSLC,0,nein
-250_Veracruz.csv,19.2009,-96.1307,2012,"Veracruz, Veracruz, Mexico",harmonics_ticon4_worldwide.txt,0,8756,0.1932,0.704,-390,0.569,0.99,Mexico_UHSLC,1,nein
+250_Veracruz.csv,19.2009,-96.1307,2012,"Veracruz, Veracruz, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0785,0.377,0,0.569,0.99,Mexico_UHSLC,1,nein
 250_Veracruz.csv,19.2009,-96.1307,2012,"Veracruz, Veracruz, Mexico",harmonics_utide_observations.txt,0,8761,0.0913,0.376,0,0.569,1.04,Mexico_UHSLC,0,nein
 250_Veracruz.csv,19.2009,-96.1307,2012,"Veracruz #, Mexico",harmonics_noaa_amtt.txt,291,8761,0.0826,0.379,0,1.353,1.164,Mexico_UHSLC,0,nein
 VianaDoCasteloTG.csv,41.6850,-8.8396,2024,"Viana do Castelo, Portugal",harmonics_ticon4_worldwide.txt,0,8595,0.1191,0.639,0,2.268,3.751,Portugal_CMEMS,1,nein
@@ -1118,62 +1118,62 @@ J8.txt,34.3845,133.8230,2025,"Yoshima, Kagawa, Japan",harmonics_utide_observatio
 J8.txt,34.3845,133.8230,2025,"Yoshima, Kagawa, Japan",harmonics_ticon4_worldwide.txt,7,8761,0.048,0.191,0,0.0,3.508,JMA_Japan,0,nein
 Q0.txt,41.4445,140.2383,2025,"Fukushima (Yoshioka), Hokkaido, Japan",harmonics_utide_observations.txt,0,8737,0.0043,0.014,0,0.0,0.997,JMA_Japan,1,nein
 Q0.txt,41.4445,140.2383,2025,"Fukushima (Yoshioka), Hokkaido, Japan",harmonics_ticon4_worldwide.txt,6,8737,0.019,0.068,0,0.0,0.978,JMA_Japan,0,nein
-317_Ensenada.csv,31.8483,-116.6178,2009,"Ensenada, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.4238,1.133,-50,-0.03,2.656,Mexico_UHSLC,0,nein
+317_Ensenada.csv,31.8483,-116.6178,2009,"Ensenada, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.0514,0.209,-10,-0.032,2.656,Mexico_UHSLC,0,nein
 317_Ensenada.csv,31.8483,-116.6178,2009,"Ensenada, Baja California, Mexico",harmonics_utide_observations.txt,0,8331,0.0423,0.249,0,-0.031,2.783,Mexico_UHSLC,1,nein
 317_Ensenada.csv,31.8483,-116.6178,2009,"Ensenada, Todos Santos Bay, Baja California, Mexico",harmonics_noaa_amtt.txt,1476,8331,0.1491,0.439,0,0.766,2.853,Mexico_UHSLC,0,nein
-308_San_Quintin.csv,30.4364,-115.9870,1980,"San Quintin (Campo La Chorera), Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8351,0.3631,1.045,-30,0.002,2.484,Mexico_UHSLC,0,ja
+308_San_Quintin.csv,30.4364,-115.9870,1980,"San Quintin (Campo La Chorera), Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0693,0.272,0,0.017,2.737,Mexico_UHSLC,0,ja
 308_San_Quintin.csv,30.4364,-115.9870,1980,"San Quintin (Campo La Chorera), Baja California, Mexico",harmonics_utide_observations.txt,0,8351,0.0729,0.379,10,-0.004,2.501,Mexico_UHSLC,1,ja
-36_Isla_Guadalupe.csv,28.8820,-118.2912,1985,"Isla Guadalupe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,3062,0.4081,1.226,-60,0.035,2.312,Mexico_UHSLC,0,nein
+36_Isla_Guadalupe.csv,28.8820,-118.2912,1985,"Isla Guadalupe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,3062,0.0845,0.354,0,0.006,2.312,Mexico_UHSLC,0,nein
 36_Isla_Guadalupe.csv,28.8820,-118.2912,1985,"Isla Guadalupe, Baja California, Mexico",harmonics_utide_observations.txt,0,3062,0.0783,0.299,0,0.007,2.352,Mexico_UHSLC,1,nein
-305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,7070,0.431,1.12,-40,-0.027,2.703,Mexico_UHSLC,0,nein
+305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,7070,0.066,0.356,0,-0.012,2.703,Mexico_UHSLC,0,nein
 305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_utide_observations.txt,0,7070,0.0565,0.313,0,-0.012,2.722,Mexico_UHSLC,1,nein
-34_Cabo_San_Lucas.csv,22.8800,-109.9080,2004,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,8756,0.3452,0.887,-390,0.014,2.148,Mexico_UHSLC,0,ja
+34_Cabo_San_Lucas.csv,22.8800,-109.9080,2004,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,8760,0.0544,0.204,0,0.009,2.075,Mexico_UHSLC,0,ja
 34_Cabo_San_Lucas.csv,22.8800,-109.9080,2004,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_utide_observations.txt,0,8761,0.0508,0.518,0,0.014,2.222,Mexico_UHSLC,1,ja
 90_Isla_Socorro.csv,18.7330,-111.0170,1997,"Isla Socorro, Colima, Mexico",harmonics_utide_observations.txt,0,8761,0.0632,0.57,0,0.053,1.839,Mexico_UHSLC,1,nein
 90_Isla_Socorro.csv,18.7330,-111.0170,1997,"Isla Socorro, Colima, Mexico",harmonics_noaa_amtt.txt,46,8761,0.1722,0.53,10,1.306,1.972,Mexico_UHSLC,0,nein
 307_San_Felipe.csv,31.0256,-114.8311,1986,"San Felipe, Baja California, Mexico",harmonics-2004-06-14_mod.txt,0,8450,0.249,1.368,0,1.122,7.574,Mexico_UHSLC,0,nein
 307_San_Felipe.csv,31.0256,-114.8311,1986,"San Felipe, Baja California, Mexico",harmonics_utide_observations.txt,0,8450,0.1196,0.86,0,-0.023,6.933,Mexico_UHSLC,1,nein
-307_San_Felipe.csv,31.0256,-114.8311,1986,"San Felipe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,10,8450,0.6237,1.727,-20,1.118,6.97,Mexico_UHSLC,0,nein
-310_Bahia_de_los_Angeles.csv,28.9479,-113.5572,1980,"Bahía de los Ángeles, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8171,0.4518,1.214,-30,1.529,3.511,Mexico_UHSLC,0,ja
+307_San_Felipe.csv,31.0256,-114.8311,1986,"San Felipe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,10,8450,0.1261,0.881,0,1.126,6.97,Mexico_UHSLC,0,nein
+310_Bahia_de_los_Angeles.csv,28.9479,-113.5572,1980,"Bahía de los Ángeles, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8177,0.0575,0.242,0,1.581,3.476,Mexico_UHSLC,0,ja
 310_Bahia_de_los_Angeles.csv,28.9479,-113.5572,1980,"Bahia de los Angeles, Baja California, Mexico",harmonics_utide_observations.txt,0,8171,0.0639,0.295,0,-0.072,3.542,Mexico_UHSLC,1,ja
-319_Loreto.csv,26.0146,-111.3388,1988,"Loreto, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,6305,0.3402,0.965,-340,-0.206,1.677,Mexico_UHSLC,0,nein
+319_Loreto.csv,26.0146,-111.3388,1988,"Loreto, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,6309,0.0758,0.283,-10,-0.128,1.677,Mexico_UHSLC,0,nein
 319_Loreto.csv,26.0146,-111.3388,1988,"Loreto, Baja California Sur, Mexico",harmonics_utide_observations.txt,0,6309,0.0712,0.277,-10,-0.128,1.758,Mexico_UHSLC,1,nein
 674_San_Carlos.csv,24.7874,-112.1203,1983,"San Carlos, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,8017,0.3804,1.086,-30,0.083,2.783,Mexico_UHSLC,0,nein
 674_San_Carlos.csv,24.7874,-112.1203,1983,"San Carlos, Baja California Sur, Mexico",harmonics_utide_observations.txt,0,8017,0.0872,0.431,-10,0.087,2.837,Mexico_UHSLC,1,nein
 674_San_Carlos.csv,24.7874,-112.1203,1983,"San Carlos, Baja California Sur, Mexico",harmonics_noaa_amtt.txt,583,8017,0.2503,0.792,-10,1.087,3.153,Mexico_UHSLC,0,nein
 671_La_Paz.csv,24.1519,-110.3314,1965,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_utide_observations.txt,0,8761,0.0527,0.366,0,-0.031,1.855,Mexico_UHSLC,1,ja
-671_La_Paz.csv,24.1519,-110.3314,1965,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,5,8761,0.3598,1.22,-80,-0.032,1.809,Mexico_UHSLC,0,ja
-676_Topolobampo.csv,25.5819,-109.0592,1964,"Topolobampo, Sinaloa, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.4079,1.261,-50,-0.109,2.029,Mexico_UHSLC,0,ja
+671_La_Paz.csv,24.1519,-110.3314,1965,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,5,5784,0.0836,0.24,0,0.085,1.817,Mexico_UHSLC,0,ja
+676_Topolobampo.csv,25.5819,-109.0592,1964,"Topolobampo, Sinaloa, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0868,0.345,0,0.046,2.078,Mexico_UHSLC,0,ja
 676_Topolobampo.csv,25.5819,-109.0592,1964,"Topolobampo, Sinaloa, Mexico",harmonics_utide_observations.txt,0,8761,0.0782,0.359,0,-0.109,2.041,Mexico_UHSLC,1,ja
 677_Yavaros.csv,26.7061,-109.5135,1973,"Yavaros (Isla Las Viejas), Sonora, Mexico",harmonics-2004-06-14_mod.txt,0,5089,0.1309,0.705,10,0.772,1.901,Mexico_UHSLC,0,nein
 677_Yavaros.csv,26.7061,-109.5135,1973,"Yavaros (Isla Las Viejas), Sonora, Mexico",harmonics_utide_observations.txt,0,5089,0.0978,0.563,-10,-0.008,1.835,Mexico_UHSLC,1,nein
-397_Guaymas.csv,27.9211,-110.8819,1973,"Guaymas, Sonora, Mexico",harmonics_ticon4_worldwide.txt,0,8757,0.3463,1.173,-350,-0.051,1.665,Mexico_UHSLC,0,ja
+397_Guaymas.csv,27.9211,-110.8819,1973,"Guaymas, Sonora, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0768,0.403,0,0.035,1.711,Mexico_UHSLC,0,ja
 397_Guaymas.csv,27.9211,-110.8819,1973,"Guaymas, Sonora, Mexico",harmonics_utide_observations.txt,0,8761,0.1074,0.352,-10,-0.051,1.711,Mexico_UHSLC,1,ja
-673_Mazatlan.csv,23.2030,-106.4111,1965,"Mazatlán, Sinaloa, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.3327,0.953,-30,1.572,2.129,Mexico_UHSLC,0,ja
+673_Mazatlan.csv,23.2030,-106.4111,1965,"Mazatlán, Sinaloa, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0804,0.377,0,1.591,2.095,Mexico_UHSLC,0,ja
 673_Mazatlan.csv,23.2030,-106.4111,1965,"Mazatlán, Sinaloa, Mexico",harmonics_utide_observations.txt,0,8761,0.0752,0.387,0,-0.028,2.167,Mexico_UHSLC,1,ja
-393_Puerto_Vallarta.csv,20.6586,-105.2439,1991,"Puerto Vallarta, Jalisco, Mexico",harmonics_ticon4_worldwide.txt,0,6601,0.2902,1.012,-80,0.019,1.795,Mexico_UHSLC,0,nein
+393_Puerto_Vallarta.csv,20.6586,-105.2439,1991,"Puerto Vallarta, Jalisco, Mexico",harmonics_ticon4_worldwide.txt,0,6601,0.0736,0.299,-40,0.068,1.8,Mexico_UHSLC,0,nein
 393_Puerto_Vallarta.csv,20.6586,-105.2439,1991,"Puerto Vallarta, Jalisco, Mexico",harmonics_utide_observations.txt,0,6601,0.0725,0.294,-40,0.066,1.816,Mexico_UHSLC,1,nein
-395_Manzanillo.csv,19.0556,-104.3178,2003,"Manzanillo, Colima, Mexico",harmonics_ticon4_worldwide.txt,0,8706,0.0982,0.332,360,0.084,1.309,Mexico_UHSLC,0,ja
+395_Manzanillo.csv,19.0556,-104.3178,2003,"Manzanillo, Colima, Mexico",harmonics_ticon4_worldwide.txt,0,8594,0.0658,0.271,0,0.013,1.297,Mexico_UHSLC,0,ja
 395_Manzanillo.csv,19.0556,-104.3178,2003,"Manzanillo, Colima, Mexico",harmonics_utide_observations.txt,0,8711,0.1046,0.325,0,0.084,1.364,Mexico_UHSLC,1,ja
 687_Zihuatanejo.csv,17.6370,-101.5580,2013,"Zihuatanejo, Guerrero, Mexico",harmonics_utide_observations.txt,0,7060,0.0576,0.249,0,-0.005,0.949,Mexico_UHSLC,1,nein
-316_Acapulco.csv,16.8406,-99.9090,2011,"Acapulco (Puerto), Guerrero, Mexico",harmonics_ticon4_worldwide.txt,0,8751,0.1991,0.57,-720,-0.03,1.119,Mexico_UHSLC,0,nein
+316_Acapulco.csv,16.8406,-99.9090,2011,"Acapulco (Puerto), Guerrero, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0663,0.256,0,-0.031,1.119,Mexico_UHSLC,0,nein
 316_Acapulco.csv,16.8406,-99.9090,2011,"Acapulco, Guerrero, Mexico",harmonics_utide_observations.txt,0,8761,0.0591,0.241,0,-0.031,1.129,Mexico_UHSLC,1,nein
 316_Acapulco.csv,16.8406,-99.9090,2011,"Acapulco, Guerrero, Mexico",harmonics_noaa_amtt.txt,1153,8751,0.1916,0.61,-720,0.666,0.98,Mexico_UHSLC,0,nein
 672_Puerto_Angel.csv,15.6656,-96.4914,1971,"Puerto Ángel, Oaxaca, Mexico",harmonics_utide_observations.txt,0,8761,0.0647,0.345,10,-0.074,1.459,Mexico_UHSLC,1,ja
-394_Salina_Cruz.csv,16.1600,-95.2030,1975,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,0,7393,0.227,0.713,-10,-0.016,1.776,Mexico_UHSLC,0,ja
+394_Salina_Cruz.csv,16.1600,-95.2030,1975,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,0,8083,0.0912,0.333,0,-0.009,1.74,Mexico_UHSLC,0,ja
 394_Salina_Cruz.csv,16.1600,-95.2030,1975,"Salina Cruz (Faro), Oaxaca, Mexico",harmonics_utide_observations.txt,0,7393,0.0976,0.432,0,-0.011,1.797,Mexico_UHSLC,1,ja
-394_Salina_Cruz.csv,16.1600,-95.2030,1975,"Salina Cruz (Puerto), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,1143,7393,0.2271,0.717,-10,-0.016,1.77,Mexico_UHSLC,0,ja
+394_Salina_Cruz.csv,16.1600,-95.2030,1975,"Salina Cruz (Puerto), Oaxaca, Mexico",harmonics_ticon4_worldwide.txt,1143,8083,0.0913,0.331,0,-0.008,1.743,Mexico_UHSLC,0,ja
 318_Puerto_Madero.csv,14.7000,-92.3978,1988,"Puerto Madero, Chiapas, Mexico",harmonics_utide_observations.txt,0,8761,0.0763,0.394,0,0.006,2.067,Mexico_UHSLC,1,nein
 277_Madero_Tampico.csv,22.2616,-97.7957,2007,"Tampico Puerto (Madero), Tamaulipas, Mexico",harmonics-2004-06-14_mod.txt,0,6676,0.1035,0.384,10,3.524,1.021,Mexico_UHSLC,0,nein
 277_Madero_Tampico.csv,22.2616,-97.7957,2007,"Tampico Puerto (Madero), Tamaulipas, Mexico",harmonics_utide_observations.txt,0,6676,0.0983,0.344,0,0.058,1.045,Mexico_UHSLC,1,nein
-250_Veracruz.csv,19.2009,-96.1307,1994,"Veracruz, Veracruz, Mexico",harmonics_ticon4_worldwide.txt,0,8756,0.1988,0.707,-390,0.459,0.992,Mexico_UHSLC,0,ja
+250_Veracruz.csv,19.2009,-96.1307,1994,"Veracruz, Veracruz, Mexico",harmonics_ticon4_worldwide.txt,0,8761,0.0785,0.377,0,0.569,0.99,Mexico_UHSLC,0,ja
 250_Veracruz.csv,19.2009,-96.1307,1994,"Veracruz, Veracruz, Mexico",harmonics_utide_observations.txt,0,8761,0.1059,0.374,10,0.459,1.015,Mexico_UHSLC,1,ja
 250_Veracruz.csv,19.2009,-96.1307,1994,"Veracruz #, Mexico",harmonics_noaa_amtt.txt,291,8761,0.0892,0.339,0,1.243,1.127,Mexico_UHSLC,0,ja
-779_Ciudad_del_Carmen.csv,18.6318,-91.8318,1968,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_ticon4_worldwide.txt,0,8756,0.2104,0.812,-390,0.072,0.805,Mexico_UHSLC,0,ja
+779_Ciudad_del_Carmen.csv,18.6318,-91.8318,1968,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_ticon4_worldwide.txt,0,8016,0.14,0.547,-180,0.124,0.78,Mexico_UHSLC,0,ja
 779_Ciudad_del_Carmen.csv,18.6318,-91.8318,1968,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_utide_observations.txt,0,8761,0.1055,0.477,20,0.072,0.788,Mexico_UHSLC,1,ja
-779_Ciudad_del_Carmen.csv,18.6318,-91.8318,1968,"Ciudad del Carmen (Faro Atalaya), Campeche, Mexico",harmonics_ticon4_worldwide.txt,1754,8756,0.2127,0.82,-390,0.072,0.819,Mexico_UHSLC,0,ja
+779_Ciudad_del_Carmen.csv,18.6318,-91.8318,1968,"Ciudad del Carmen (Faro Atalaya), Campeche, Mexico",harmonics_ticon4_worldwide.txt,1754,8016,0.1396,0.55,-180,0.125,0.789,Mexico_UHSLC,0,ja
 861_Celestun.csv,20.8580,-90.4030,2011,"Celestun, Yucatan, Mexico",harmonics_utide_observations.txt,0,8761,0.099,0.453,0,-0.015,1.179,Mexico_UHSLC,1,nein
-721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatán, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.1647,0.59,-380,4.256,0.968,Mexico_UHSLC,0,nein
+721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatán, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.1001,0.398,0,4.254,0.964,Mexico_UHSLC,0,nein
 721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatan, Mexico",harmonics_utide_observations.txt,0,8329,0.1337,0.519,190,4.255,0.679,Mexico_UHSLC,1,nein
 862_Telchac.csv,21.3400,-89.3080,2013,"Telchac, Yucatan, Mexico",harmonics_utide_observations.txt,0,8126,0.0912,0.392,0,0.001,1.036,Mexico_UHSLC,1,nein
 860_Puerto_Morelos.csv,20.8680,-86.8670,2013,"Puerto Morelos, Quintana Roo, Mexico",harmonics_utide_observations.txt,0,8507,0.0647,0.51,-10,0.025,0.416,Mexico_UHSLC,1,nein
@@ -1612,7 +1612,6 @@ BRIGNOGAN.csv,48.6678,-4.3223,2026,"Brignogan-Plage, France",harmonics_utide_tid
 BUBAQUE.csv,11.3000,-15.8263,2026,"Bubaque, Guinea-Bissau",harmonics-1997-05-25_mod.txt,0,103680,0.038,0.139,0,-0.0,4.441,France_SHOM,0,nein
 BUBAQUE.csv,11.3000,-15.8263,2026,"Bubaque, Guinea-Bissau",harmonics_utide_tidetables.txt,0,103680,0.0361,0.134,0,-0.0,4.45,France_SHOM,1,nein
 BENODET.csv,47.8810,-4.1158,2026,"Bénodet (L'Odet), France",harmonics_utide_tidetables.txt,0,103680,0.0547,0.199,0,0.0,5.083,France_SHOM,1,nein
-BENODET.csv,47.8810,-4.1158,2026,"Bénodet (L'Odet), France",harmonics_ticon4_worldwide.txt,16,103680,0.0529,0.231,-60,3.21,5.15,France_SHOM,0,nein
 BENODET.csv,47.8810,-4.1158,2026,"Bénodet (L'Odet), France",harmonics_noaa_eutt.txt,264,103680,0.2271,0.64,0,0.467,4.732,France_SHOM,0,nein
 CALVI.csv,42.5667,8.7633,2026,"Calvi, France",harmonics_utide_tidetables.txt,0,103680,0.0389,0.078,0,0.0,0.34,France_SHOM,1,nein
 CAMARET-SUR-MER.csv,48.2808,-4.5886,2026,"Camaret-sur-Mer, France",harmonics-pierre-lavergne-v10_mod.txt,0,103680,0.1018,0.443,0,-0.006,6.621,France_SHOM,0,nein
@@ -4527,7 +4526,7 @@ AUDIERNE.csv,48.0215,-4.5376,2026,"Audierne, France",harmonics_ticon4_worldwide.
 AUDIERNE.csv,48.0215,-4.5376,2026,"Audierne, France",harmonics_utide_observations.txt,0,8640,0.049,0.142,0,-0.03,5.198,France_SHOM_2026,0,nein
 AUDIERNE.csv,48.0215,-4.5376,2026,"Audierne, France",harmonics_noaa_eutt.txt,1070,8640,0.2336,0.609,-10,-0.503,5.046,France_SHOM_2026,0,nein
 BENODET.csv,47.8810,-4.1158,2026,"Bénodet (L'Odet), France",harmonics_utide_tidetables.txt,2,8640,0.0395,0.133,0,-0.045,5.083,France_SHOM_2026,0,nein
-BENODET.csv,47.8810,-4.1158,2026,"Bénodet (L'Odet), France",harmonics_ticon4_worldwide.txt,14,8640,0.0446,0.187,-60,3.223,5.115,France_SHOM_2026,0,nein
+BENODET.csv,47.8810,-4.1158,2026,"Bénodet (L'Odet), France",harmonics_ticon4_worldwide.txt,14,8640,0.0446,0.187,0,3.223,5.115,France_SHOM_2026,0,nein
 BENODET.csv,47.8810,-4.1158,2026,"Bénodet (L'Odet), France",harmonics_noaa_eutt.txt,264,8640,0.1847,0.49,0,0.491,4.653,France_SHOM_2026,0,nein
 BOUCAU-BAYONNE.csv,43.5272,-1.5147,2026,"Boucau-Bayonne (L’Adour), France",harmonics_utide_observations.txt,14,8640,0.047,0.188,0,-0.098,4.257,France_SHOM_2026,0,nein
 BOUCAU-BAYONNE.csv,43.5272,-1.5147,2026,"Boucau-Bayonne (L’Adour), France",harmonics_noaa_eutt.txt,1666,8640,0.1391,0.394,10,0.74,3.818,France_SHOM_2026,0,nein
