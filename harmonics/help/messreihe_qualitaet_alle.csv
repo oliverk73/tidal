@@ -156,7 +156,7 @@ h247_la_guaira.csv,10.6041,-66.9315,1994,"La Guaira, Venezuela",harmonics_utide_
 h723a_lagos.csv,6.4525,3.3839,2000,"Lagos (Apapa), Nigeria",harmonics_att_np208.txt,0,8508,808.1654,1968.752,720,2182.245,0.847,Portugal_UHSLC,0,nein
 h723a_lagos.csv,6.4525,3.3839,2000,"Lagos (Apapa), Nigeria",harmonics_ticon4_worldwide.txt,0,8508,808.0568,1968.456,720,2183.125,1.325,Portugal_UHSLC,1,nein
 h723a_lagos.csv,6.4525,3.3839,2000,"Lagos (Apapa), Nigeria",harmonics_utide_observations.txt,0,8508,808.0573,1968.452,720,2183.125,1.367,Portugal_UHSLC,0,nein
-h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_att_np208_secondary.txt,0,8508,808.2637,1968.883,720,2182.345,1.018,Portugal_UHSLC,0,nein
+h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_att_np208_secondary.txt,0,8508,808.2004,1968.749,720,2182.345,1.018,Portugal_UHSLC,0,nein
 h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_noaa_eutt.txt,0,8508,808.1319,1968.601,720,2182.668,1.549,Portugal_UHSLC,0,nein
 h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_ticon4_worldwide.txt,0,8508,808.0658,1968.417,720,2183.124,1.672,Portugal_UHSLC,1,nein
 h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_utide_observations.txt,0,8508,808.066,1968.412,720,2183.124,1.64,Portugal_UHSLC,0,nein
@@ -1384,7 +1384,7 @@ arri_Arrifana.csv,37.2956,-8.8694,2022,"Arrifana, Portugal",harmonics_utide_obse
 arri_Arrifana.csv,37.2956,-8.8694,2022,"Arrifana, Portugal",harmonics_noaa_eutt.txt,1388,376026,0.1902,3.02,30,-2.594,3.028,Portugal_IOC,0,nein
 sagr_Sagres.csv,37.0104,-8.9282,2021,"Sagres, Portugal",harmonics_utide_observations.txt,0,397595,0.1003,4.332,0,0.067,3.61,Portugal_IOC,1,nein
 sagr_Sagres.csv,37.0104,-8.9282,2021,"Ponta de Sagres, Portugal",harmonics_noaa_eutt.txt,2255,397595,0.1651,4.449,10,-1.946,3.133,Portugal_IOC,0,nein
-posa_Porto_Santo.csv,33.0597,-16.3149,2021,"Porto Santo, Madeira, Portugal",harmonics_att_np208_secondary.txt,0,248684,0.2302,4.504,-100,0.374,2.572,Portugal_IOC,0,nein
+posa_Porto_Santo.csv,33.0597,-16.3149,2021,"Porto Santo, Madeira, Portugal",harmonics_att_np208_secondary.txt,0,248684,0.2299,4.501,0,0.374,2.572,Portugal_IOC,0,nein
 posa_Porto_Santo.csv,33.0597,-16.3149,2021,"Porto Santo, Madeira, Portugal",harmonics_utide_observations.txt,0,248684,0.2162,4.473,0,1.76,2.754,Portugal_IOC,1,nein
 ioc_naho_Nakhodka.csv,42.7800,132.8600,2025,"Nakhodka, Russia",harmonics_utide_observations.txt,0,8271,0.077,0.36,0,0.009,0.679,Russia_IOC,1,nein
 ioc_nksk_Nikolskoe.csv,55.2000,166.0200,2025,"Nikol'skoe, Russia",harmonics_utide_observations.txt,0,7967,0.1131,0.637,0,-0.004,1.875,Russia_IOC,1,nein
@@ -1658,7 +1658,6 @@ DOUARNENEZ.csv,48.0993,-4.3214,2026,"Douarnenez, France",harmonics-pierre-laverg
 DOUARNENEZ.csv,48.0993,-4.3214,2026,"Douarnenez, France",harmonics_utide_tidetables.txt,0,103680,0.0666,0.304,0,0.0,6.617,France_SHOM,1,nein
 DOUEOULOU.csv,-20.9250,167.0833,2026,"Douéoulou, New Caledonia",harmonics_utide_tidetables.txt,0,103680,0.0118,0.045,0,-0.0,1.294,France_SHOM,1,nein
 DUNKERQUE_OUEST.csv,51.0225,2.1808,2026,"Dunkerque Ouest, France",harmonics_utide_tidetables.txt,0,103680,0.1044,0.481,0,-0.0,6.643,France_SHOM,1,nein
-LAAYOUNE.csv,27.0932,-13.4264,2026,"El Marsa (Laayoune), Western Sahara",harmonics_att_np208_secondary.txt,0,103680,0.0844,0.293,-140,0.328,2.522,France_SHOM,0,nein
 LAAYOUNE.csv,27.0932,-13.4264,2026,"El Marsa (Laayoune), Western Sahara",harmonics_utide_tidetables.txt,0,103680,0.0324,0.134,0,-0.0,2.655,France_SHOM,1,nein
 MAZAGAN.csv,33.2556,-8.4998,2026,"El Jadida, Morocco",harmonics_noaa_eutt.txt,0,103680,0.1657,0.523,0,0.006,3.174,France_SHOM,0,nein
 MAZAGAN.csv,33.2556,-8.4998,2026,"El Jadida (Mazagan), Morocco",harmonics_utide_observations.txt,0,103680,0.7267,2.125,-30,2.115,2.299,France_SHOM,0,nein

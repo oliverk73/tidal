@@ -39,10 +39,23 @@ REFMAP={
  'Pointe de Grave':'Port-Bloc','A Coruna':'A Coruña',
 }
 
+# Seiten 282-289 (Madeira, Kanaren, Westafrika) stehen im JSON als Ziffernfolge
+# "h mm" (-143 = -1 h 43 min), nicht in Minuten -- bis zum 10.09.2026 hier als
+# Minuten genommen (je Stunde 40 min zu viel). Zudem rechnet ATT den Zonenwechsel
+# in die Differenz ein; das behandelt dieser Builder NICHT (siehe
+# py/np208_zeit_richten.py, Casablanca -0100 -> UT: +60 min).
+HHMM_SEITEN={f'page_{n}.json' for n in range(282,290)}
+def _hhmm(t):
+    if t is None: return None
+    s=-1 if t<0 else 1; t=abs(t); return s*((t//100)*60+t%100)
+
 def load_sec():
     sec=[]
     for f in sorted(glob.glob(f'{SJ}/*.json')):
+        hm=os.path.basename(f) in HHMM_SEITEN
         for p in json.load(open(f,encoding='utf-8')):
+            if hm:
+                p=dict(p, tHW=_hhmm(p.get('tHW')), tLW=_hhmm(p.get('tLW')))
             fl=(p.get('flags') or '')
             if 'STD' in fl.upper(): continue   # Standardhaefen nicht als Sekundaer bauen
             sec.append(dict(att=p['att'], name=p['name'], lat=p['lat'], lon=p['lon'],
