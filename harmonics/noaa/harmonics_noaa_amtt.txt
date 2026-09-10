@@ -18892,200 +18892,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Canada
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 189
-# noaa_uid: ectt-189
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Halifax, Nova Scotia, Canada (no.189). M2=0.63 S2=0.06 k=1.01 dt=-45min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -58.2000
-# !latitude: 54.2833
-# note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# province: Labrador
-# admin1_quelle: Name
-Ticoralak Island, Labrador, Canada
-+00:00 :America/Goose_Bay
-1.1278 meters
-J1              0.0055  122.66
-K1              0.1045  110.78
-K2              0.0155  357.35
-L2              0.0176  350.89
-M1              0.0038  12.99
-M2              0.6343  329.06
-M3              0.0008  327.58
-M4              0.0378  230.28
-M6              0.0033  35.29
-M8              0.0008  196.57
-N2              0.1408  307.54
-x 0 0
-O1              0.0484  84.58
-OO1             0.0047  133.61
-P1              0.0331  109.41
-Q1              0.0046  88.73
-x 0 0
-R2              0.0016  192.61
-S1              0.0064  81.68
-S2              0.0562  359.94
-S4              0.0064  173.83
-x 0 0
-T2              0.0112  341.44
-LDA2            0.0064  347.47
-MU2             0.0188  311.60
-NU2             0.0275  308.78
-RHO1            0.0011  60.76
-x 0 0
-x 0 0
-MN4             0.0198  175.00
-MS4             0.0186  359.55
-x 0 0
-MF              0.0058  253.10
-MSF             0.0028  214.61
-MM              0.0051  184.55
-SA              0.0441  272.20
-SSA             0.0092  152.65
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0016  151.00
-x 0 0
-EPS2            0.0056  307.52
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0018  49.85
-SIG1            0.0016  295.13
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0049  115.12
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 19
 # noaa_uid: ectt-19
 # note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Harrington Harbour, Québec, Canada (no.19). M2=0.53 S2=0.07 k=0.99 dt=+64min.
@@ -20847,12 +20653,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -53.6167
-# !latitude: 49.1667
+# !longitude: -53.607874
+# !latitude: 49.122244
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 49.1667/-53.6167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Valleyfield, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.5486 meters
@@ -23940,200 +23748,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Canada
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 269
-# noaa_uid: ectt-269
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Harrington Harbour, Québec, Canada (no.269). M2=0.43 S2=0.05 k=0.81 dt=-33min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -58.5000
-# !latitude: 48.4500
-# note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
-# note: siehe py/provinz_ergaenzen.py.
-# province: Newfoundland
-# admin1_quelle: Name
-St. Georges Harbour, Newfoundland, Canada
-+00:00 :America/St_Johns
-0.8534 meters
-J1              0.0066  252.85
-K1              0.1180  254.65
-K2              0.0131  78.68
-L2              0.0093  88.77
-M1              0.0065  167.87
-M2              0.4324  55.29
-M3              0.0023  103.63
-M4              0.0058  306.29
-M6              0.0013  165.09
-M8              0.0001  202.75
-N2              0.0887  33.89
-x 0 0
-O1              0.1125  232.35
-OO1             0.0041  259.55
-P1              0.0396  251.32
-Q1              0.0197  201.09
-x 0 0
-R2              0.0016  354.35
-S1              0.0028  355.97
-S2              0.0475  82.23
-S4              0.0008  344.82
-x 0 0
-T2              0.0100  75.93
-LDA2            0.0031  104.73
-MU2             0.0100  5.47
-NU2             0.0171  39.77
-RHO1            0.0038  214.83
-x 0 0
-x 0 0
-MN4             0.0027  243.06
-MS4             0.0012  62.33
-x 0 0
-MF              0.0047  196.19
-MSF             0.0043  232.61
-MM              0.0071  164.07
-SA              0.0475  221.96
-SSA             0.0203  183.66
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0019  315.73
-x 0 0
-EPS2            0.0019  6.21
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0031  316.74
-SIG1            0.0017  357.40
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0005  173.15
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 27
 # noaa_uid: ectt-27
 # note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Harrington Harbour, Québec, Canada (no.27). M2=0.46 S2=0.06 k=0.87 dt=+132min.
@@ -27059,200 +26673,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Canada
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 311
-# noaa_uid: ectt-311
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Harrington Harbour, Québec, Canada (no.311). M2=1.02 S2=0.14 k=1.91 dt=+236min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: -66.4000
-# !latitude: 50.2167
-# note: 20260903 Provinz "Québec" ergaenzt (Polygon),
-# note: siehe py/provinz_ergaenzen.py.
-# province: Québec
-# admin1_quelle: Name
-Sept Iles, Québec, Canada
-+00:00 :America/Toronto
-1.4630 meters
-J1              0.0155  322.72
-K1              0.2782  322.08
-K2              0.0374  213.55
-L2              0.0220  221.16
-M1              0.0153  232.86
-M2              1.0191  185.23
-M3              0.0054  298.55
-M4              0.0136  206.18
-M6              0.0031  194.92
-M8              0.0002  2.54
-N2              0.2091  161.39
-x 0 0
-O1              0.2652  294.86
-OO1             0.0098  331.91
-P1              0.0933  318.39
-Q1              0.0463  261.16
-x 0 0
-R2              0.0038  129.03
-S1              0.0065  63.22
-S2              0.1358  216.73
-S4              0.0019  253.82
-x 0 0
-T2              0.0236  210.25
-LDA2            0.0073  236.79
-MU2             0.0236  130.86
-NU2             0.0402  167.60
-RHO1            0.0090  275.23
-x 0 0
-x 0 0
-MN4             0.0063  140.51
-MS4             0.0029  326.77
-x 0 0
-MF              0.0047  201.11
-MSF             0.0043  237.17
-MM              0.0071  166.51
-SA              0.0475  222.14
-SSA             0.0203  184.03
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0044  86.05
-x 0 0
-EPS2            0.0044  129.16
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0073  158.49
-SIG1            0.0040  55.36
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0011  68.16
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 313
 # noaa_uid: ectt-313
 # note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Harrington Harbour, Québec, Canada (no.313). M2=0.96 S2=0.12 k=1.80 dt=+244min.
@@ -29598,12 +29018,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -61.5000
-# !latitude: 82.4833
+# !longitude: -61.448051
+# !latitude: 82.455349
 # note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nunavut
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 82.4833/-61.5000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cape Sheridan, Lincoln Sea, Nunavut, Canada
 -05:00 :America/Iqaluit
 0.3658 meters
@@ -35769,200 +35191,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Canada
 # source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 465
-# noaa_uid: ectt-465
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Halifax, Nova Scotia, Canada (no.465). M2=0.56 S2=0.04 k=0.88 dt=-11min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -59.9833
-# !latitude: 45.9000
-# note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
-# note: siehe py/provinz_ergaenzen.py.
-# province: Nova Scotia
-# admin1_quelle: Name
-Louisburg Harbour, Nova Scotia, Canada
-+00:00 :America/Glace_Bay
-0.9754 meters
-J1              0.0049  131.49
-K1              0.0914  119.30
-K2              0.0121  14.39
-L2              0.0154  7.63
-M1              0.0034  21.20
-M2              0.5550  345.49
-M3              0.0007  352.22
-M4              0.0331  263.13
-M6              0.0029  84.56
-M8              0.0007  262.26
-N2              0.1232  323.66
-x 0 0
-O1              0.0424  92.48
-OO1             0.0041  142.75
-P1              0.0289  117.89
-Q1              0.0041  96.32
-x 0 0
-R2              0.0014  209.63
-S1              0.0056  90.18
-S2              0.0437  16.94
-S4              0.0056  207.83
-x 0 0
-T2              0.0098  358.42
-LDA2            0.0056  4.16
-MU2             0.0164  327.45
-NU2             0.0241  324.93
-RHO1            0.0010  68.39
-x 0 0
-x 0 0
-MN4             0.0173  207.54
-MS4             0.0162  32.98
-x 0 0
-MF              0.0058  253.72
-MSF             0.0028  215.18
-MM              0.0051  184.86
-SA              0.0441  272.22
-SSA             0.0092  152.69
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0014  167.47
-x 0 0
-EPS2            0.0049  323.06
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0016  75.35
-SIG1            0.0014  302.46
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0043  147.35
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 467
 # noaa_uid: ectt-467
 # note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Halifax, Nova Scotia, Canada (no.467). M2=0.59 S2=0.04 k=0.93 dt=+9min.
@@ -37132,12 +36360,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -62.0333
-# !latitude: 45.0000
+# !longitude: -61.996700
+# !latitude: 45.023900
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 45.0000/-62.0333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Liscomb Harbour, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 1.1582 meters
@@ -37905,10 +37135,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -60.7333
-# !latitude: 11.1833
+# !longitude: -60.736300
+# !latitude: 11.180400
 # region: Tobago
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 11.1833/-60.7333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Scarborough, Tobago, Trinidad and Tobago
 +00:00 :America/Port_of_Spain
 0.4267 meters
@@ -41634,8 +40866,10 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -52.3333
-# !latitude: 4.9333
+# !longitude: -52.340000
+# !latitude: 4.936400
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 4.9333/-52.3333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cayenne, French Guiana
 +00:00 :America/Cayenne
 1.9507 meters
@@ -44726,12 +43960,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -40.8667
-# !latitude: -2.8833
+# !longitude: -40.845200
+# !latitude: -2.888200
 # note: 20260903 Provinz "Ceará" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Ceará
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -2.8833/-40.8667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Camocim, Ceará, Brazil
 +00:00 :America/Fortaleza
 1.6764 meters
@@ -44920,8 +44156,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -110.8000
-# !latitude: 74.7833
+# !longitude: -110.650900
+# !latitude: 74.774600
 # note: 20260903 Phasen um +2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -5.00 nach dem Buch)
@@ -44930,6 +44166,8 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # province: Northwest Territories
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 74.7833/-110.8000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Winter Harbour, Melville Island, Northwest Territories, Canada
 -05:00 :America/Edmonton
 0.4877 meters
@@ -46862,12 +46100,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -38.9333
-# !latitude: -15.6667
+# !longitude: -38.944000
+# !latitude: -15.683300
 # note: 20260903 Provinz "Bahia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Bahia
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -15.6667/-38.9333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Canavieiras, Bahia, Brazil
 +00:00 :America/Bahia
 0.9449 meters
@@ -47250,12 +46490,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -39.1833
-# !latitude: -17.1000
+# !longitude: -39.180100
+# !latitude: -17.105100
 # note: 20260903 Provinz "Bahia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Bahia
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -17.1000/-39.1833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cumuruxatiba, Bahia, Brazil
 +00:00 :America/Bahia
 1.2802 meters
@@ -48026,12 +47268,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -40.5000
-# !latitude: -20.6667
+# !longitude: -40.497200
+# !latitude: -20.665900
 # note: 20260903 Provinz "Espírito Santo" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Espírito Santo
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -20.6667/-40.5000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Guarapari, Espírito Santo, Brazil
 +00:00 :America/Sao_Paulo
 0.7620 meters
@@ -49707,204 +48951,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0059  214.37
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Argentina
-# source: NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 5097
-# noaa_uid: ectt-5097
-# note: NOAA Tide Tables (C&GS/NOS) East Coast of N & S America 2020 Table 2 transfer from Buenos Aires (Muelle de Pescadores), Buenos Aires, Argentina (no.5097). M2=0.31 S2=0.01 k=1.10 dt=-332min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: -57.1333
-# !latitude: -35.1000
-# fixes: Gruppen-Shift -50min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-# province: Buenos Aires
-# admin1_quelle: Name
-# note: 20260910 Bezugsort berichtigt: das Buch nennt "Buenos Aires"
-# note: -- gemeint ist Buenos Aires, Rio de la Plata; der Import hatte per
-# note: -- Namensgleichheit "Pinamar, Buenos Aires, Argentina" genommen.
-# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
-# note: -- Siehe py/noaa_referenz_verwechslung.py.
-Banco Cuirassier, Buenos Aires, Argentina
-+00:00 :America/Buenos_Aires
-1.0363 meters
-J1              0.0031  254.05
-K1              0.0907  354.53
-K2              0.0043  230.29
-L2              0.0249  177.59
-M1              0.0052  110.30
-M2              0.3133  128.26
-M3              0.0029  208.50
-M4              0.0313  140.05
-M6              0.0095  128.11
-M8              0.0025  132.12
-N2              0.1143  88.18
-x 0 0
-O1              0.1655  183.03
-OO1             0.0020  81.44
-P1              0.0423  347.44
-Q1              0.0422  142.48
-x 0 0
-R2              0.0053  352.39
-S1              0.0822  192.36
-S2              0.0116  202.65
-S4              0.0029  288.60
-x 0 0
-T2              0.0060  138.30
-LDA2            0.0136  177.48
-MU2             0.0031  342.70
-NU2             0.0252  94.46
-RHO1            0.0099  153.82
-x 0 0
-x 0 0
-MN4             0.0196  116.58
-MS4             0.0156  215.01
-x 0 0
-MF              0.0159  143.78
-MSF             0.0267  81.16
-MM              0.0350  56.62
-SA              0.0800  312.28
-SSA             0.0271  355.12
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0020  53.40
-x 0 0
-EPS2            0.0026  178.91
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0011  304.84
-SIG1            0.0024  262.25
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0059  81.65
 x 0 0
 x 0 0
 x 0 0
@@ -52107,12 +51153,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -65.0833
-# !latitude: 43.7333
+# !longitude: -65.107000
+# !latitude: 43.701500
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.7333/-65.0833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Lockeport, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.2192 meters
@@ -52301,10 +51349,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -62.2833
-# !latitude: -40.7833
+# !longitude: -62.272400
+# !latitude: -40.775200
 # province: Buenos Aires
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -40.7833/-62.2833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Faro Segunda Barranca, Buenos Aires, Argentina
 +00:00 :America/Buenos_Aires
 1.2192 meters
@@ -53069,10 +52119,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -63.7667
-# !latitude: -42.0833
+# !longitude: -63.757100
+# !latitude: -42.078400
 # province: Chubut
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -42.0833/-63.7667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Punta Norte, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.8956 meters
@@ -53453,10 +52505,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -63.6333
-# !latitude: -42.7667
+# !longitude: -63.635700
+# !latitude: -42.767000
 # province: Chubut
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -42.7667/-63.6333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Punta Delgada, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 1.9507 meters
@@ -55565,10 +54619,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -66.5333
-# !latitude: -45.1167
+# !longitude: -66.532500
+# !latitude: -45.115500
 # province: Chubut
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -45.1167/-66.5333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Bahía Bustamante, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 3.1090 meters
@@ -63157,10 +62213,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -65.2167
-# !latitude: -54.8167
+# !longitude: -65.264600
+# !latitude: -54.796300
 # province: Tierra del Fuego
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -54.8167/-65.2167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Bahía Buen Suceso, Tierra del Fuego, Argentina
 +00:00 :America/Buenos_Aires
 1.5240 meters
@@ -65271,10 +64329,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -73.7667
-# !latitude: -42.4833
+# !longitude: -73.764000
+# !latitude: -42.480000
 # region: Los Lagos
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -42.4833/-73.7667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Castro, Chile
 +00:00 :America/Santiago
 2.8042 meters
@@ -66808,10 +65868,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -73.8333
-# !latitude: -41.8667
+# !longitude: -73.832900
+# !latitude: -41.867400
 # region: Los Lagos
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -41.8667/-73.8333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ancud, Chile
 +00:00 :America/Santiago
 1.0973 meters
@@ -67183,205 +66245,6 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Canada
-# source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1309
-# noaa_uid: wctt-1309
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver (CRAB Park at Portside), British Columbia, Canada (no.1309). M2=0.89 S2=0.23 k=0.95 dt=-23min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -123.3333
-# !latitude: 48.8667
-# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
-# note: siehe py/provinz_ergaenzen.py.
-# province: British Columbia
-# admin1_quelle: Name
-# note: 20260910 Bezugsort berichtigt: das Buch nennt "Vancouver"
-# note: -- gemeint ist Vancouver, Burrard Inlet; der Import hatte per
-# note: -- Namensgleichheit "Vancouver, Columbia River, Washington" genommen.
-# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
-# note: -- Siehe py/noaa_referenz_verwechslung.py.
-Active Pass, Mayne Island, British Columbia, Canada
-+00:00 :America/Vancouver
-2.6213 meters
-J1              0.0487  319.36
-K1              0.8232  283.29
-K2              0.0636  51.30
-L2              0.0287  47.69
-x 0 0
-M2              0.8921  25.18
-M3              0.0013  44.31
-M4              0.0123  243.59
-M6              0.0125  65.29
-M8              0.0023  306.07
-N2              0.1856  359.04
-x 0 0
-O1              0.4506  260.83
-OO1             0.0334  330.45
-P1              0.2586  283.10
-Q1              0.0744  255.10
-x 0 0
-R2              0.0013  9.64
-x 0 0
-S2              0.2264  54.73
-S4              0.0006  305.68
-S6              0.0002  305.15
-T2              0.0143  46.50
-LDA2            0.0110  42.17
-MU2             0.0117  274.63
-NU2             0.0382  5.14
-RHO1            0.0135  247.24
-MK3             0.0086  197.28
-x 0 0
-MN4             0.0050  225.76
-MS4             0.0069  262.60
-x 0 0
-MF              0.0216  150.76
-MSF             0.0062  42.13
-MM              0.0073  218.81
-x 0 0
-SSA             0.0433  199.56
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-ALP1            0.0056  306.40
-BET1            0.0095  232.08
-CHI1            0.0064  282.12
-H1              0.0009  130.44
-H2              0.0055  51.14
-x 0 0
-ETA2            0.0038  52.83
-x 0 0
-UPS1            0.0049  18.22
-M10             0.0013  190.15
-M12             0.0007  102.37
-MK4             0.0058  4.96
-MKS2            0.0013  82.13
-x 0 0
-EPS2            0.0031  165.14
-MO3             0.0089  254.09
-x 0 0
-TAU1            0.0330  16.25
-x 0 0
-MSK6            0.0020  120.39
-MSM             0.0031  257.84
-MSN2            0.0040  257.20
-MSN6            0.0023  55.98
-x 0 0
-NO1             0.0383  286.26
-OP2             0.0036  249.25
-OQ2             0.0012  326.38
-PHI1            0.0133  299.17
-x 0 0
-PI1             0.0144  288.37
-x 0 0
-PSI1            0.0185  264.12
-x 0 0
-x 0 0
-SIG1            0.0160  306.64
-SK3             0.0035  269.11
-x 0 0
-SN4             0.0009  245.15
-x 0 0
-SO1             0.0324  46.71
-SO3             0.0042  251.89
-THE1            0.0069  306.05
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0007  86.89
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0042  234.66
-x 0 0
-x 0 0
-N4              0.0008  182.46
-SL4             0.0006  270.56
-MNO5            0.0030  265.89
-x 0 0
-MSK5            0.0049  352.10
-x 0 0
-x 0 0
-x 0 0
-MNK5            0.0048  294.45
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-M7              0.0011  293.56
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
 # country: Chile
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 131
@@ -67569,205 +66432,6 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1315
-# noaa_uid: wctt-1315
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Vancouver (CRAB Park at Portside), British Columbia, Canada (no.1315). M2=0.82 S2=0.21 k=0.87 dt=-58min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -123.7833
-# !latitude: 48.9833
-# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# province: British Columbia
-# admin1_quelle: Name
-# note: 20260910 Bezugsort berichtigt: das Buch nennt "Vancouver"
-# note: -- gemeint ist Vancouver, Burrard Inlet; der Import hatte per
-# note: -- Namensgleichheit "Vancouver, Columbia River, Washington" genommen.
-# note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
-# note: -- Siehe py/noaa_referenz_verwechslung.py.
-Ladysmith, British Columbia, Canada
-+00:00 :America/Vancouver
-2.5603 meters
-J1              0.0447  310.39
-K1              0.7560  274.65
-K2              0.0584  34.00
-L2              0.0264  30.71
-x 0 0
-M2              0.8193  8.51
-M3              0.0012  19.32
-M4              0.0113  210.26
-M6              0.0115  15.29
-M8              0.0021  239.40
-N2              0.1704  342.69
-x 0 0
-O1              0.4138  252.81
-OO1             0.0306  321.17
-P1              0.2374  274.49
-Q1              0.0683  247.40
-x 0 0
-R2              0.0012  352.37
-x 0 0
-S2              0.2079  37.48
-S4              0.0005  271.18
-S6              0.0002  253.40
-T2              0.0131  29.27
-LDA2            0.0101  25.23
-MU2             0.0107  258.55
-NU2             0.0351  348.75
-RHO1            0.0124  239.49
-MK3             0.0079  171.97
-x 0 0
-MN4             0.0046  192.74
-MS4             0.0064  228.68
-x 0 0
-MF              0.0216  150.13
-MSF             0.0062  41.55
-MM              0.0073  218.50
-x 0 0
-SSA             0.0433  199.51
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-ALP1            0.0051  299.28
-BET1            0.0087  223.80
-CHI1            0.0059  273.74
-H1              0.0008  113.79
-H2              0.0050  34.45
-x 0 0
-ETA2            0.0035  35.22
-x 0 0
-UPS1            0.0045  8.63
-M10             0.0012  106.82
-M12             0.0006  2.37
-MK4             0.0053  330.99
-MKS2            0.0012  65.41
-x 0 0
-EPS2            0.0029  149.37
-MO3             0.0082  229.41
-x 0 0
-TAU1            0.0303  8.19
-x 0 0
-MSK6            0.0018  69.17
-MSM             0.0031  257.57
-MSN2            0.0037  239.64
-MSN6            0.0021  5.71
-x 0 0
-NO1             0.0352  277.93
-OP2             0.0033  232.63
-OQ2             0.0011  310.65
-PHI1            0.0122  290.48
-x 0 0
-PI1             0.0132  279.79
-x 0 0
-PSI1            0.0170  255.45
-x 0 0
-x 0 0
-SIG1            0.0147  299.21
-SK3             0.0032  243.22
-x 0 0
-SN4             0.0008  211.55
-x 0 0
-SO1             0.0298  37.48
-SO3             0.0038  226.62
-THE1            0.0064  297.13
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0006  69.01
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0038  210.29
-x 0 0
-x 0 0
-N4              0.0007  149.75
-SL4             0.0005  236.33
-MNO5            0.0028  224.86
-x 0 0
-MSK5            0.0045  309.54
-x 0 0
-x 0 0
-x 0 0
-MNK5            0.0044  252.78
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-M7              0.0010  235.23
 x 0 0
 x 0 0
 x 0 0
@@ -70131,10 +68795,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -73.2333
-# !latitude: -39.3833
+# !longitude: -73.215100
+# !latitude: -39.397600
 # region: La Araucanía
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -39.3833/-73.2333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Queule, Chile
 +00:00 :America/Santiago
 0.7315 meters
@@ -72119,201 +70785,6 @@ x 0 0
 x 0 0
 SA              0.3240  270.50
 SSA             0.1070  154.71
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1441
-# noaa_uid: wctt-1441
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Ketchikan, Alaska (no.1441). M2=1.17 S2=0.15 k=0.19 dt=+26min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: -132.0167
-# !latitude: 52.7500
-# fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
-# note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
-# note: siehe py/provinz_ergaenzen.py.
-# province: British Columbia
-# admin1_quelle: Name
-Tasu Sound, British Columbia, Canada
--09:00 :America/Vancouver
-2.4994 meters
-J1              0.0152  120.03
-K1              0.3155  117.15
-K2              0.0390  4.00
-L2              0.0273  358.52
-M1              0.0131  123.06
-M2              1.1659  352.94
-M3              0.0127  284.80
-M4              0.0121  96.67
-x 0 0
-x 0 0
-N2              0.2359  333.65
-x 0 0
-O1              0.1917  111.39
-OO1             0.0082  122.82
-P1              0.0988  112.70
-Q1              0.0338  107.69
-x 0 0
-R2              0.0030  14.73
-S1              0.0057  265.77
-S2              0.1499  15.15
-x 0 0
-x 0 0
-T2              0.0224  15.47
-LDA2            0.0082  3.26
-MU2             0.0269  324.12
-NU2             0.0470  339.41
-RHO1            0.0072  108.96
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0063  120.49
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.3240  270.48
-SSA             0.1070  154.65
 x 0 0
 x 0 0
 x 0 0
@@ -79791,10 +78262,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -71.6333
-# !latitude: -33.5833
+# !longitude: -71.618200
+# !latitude: -33.581600
 # region: Valparaíso
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -33.5833/-71.6333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 San Antonio, Chile
 +00:00 :America/Santiago
 0.7315 meters
@@ -87863,10 +86336,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -71.3333
-# !latitude: -29.9333
+# !longitude: -71.335500
+# !latitude: -29.950800
 # region: Coquimbo
 # admin1_quelle: Ufer 0.3 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -29.9333/-71.3333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Coquimbo, Chile
 +00:00 :America/Santiago
 0.8839 meters
@@ -88439,10 +86914,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -71.2333
-# !latitude: -28.4667
+# !longitude: -71.249900
+# !latitude: -28.468900
 # region: Atacama
 # admin1_quelle: Ufer 0.4 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -28.4667/-71.2333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Huasco, Chile
 +00:00 :America/Santiago
 0.7010 meters
@@ -90935,10 +89412,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.4833
-# !latitude: -25.4167
+# !longitude: -70.485000
+# !latitude: -25.410000
 # region: Antofagasta
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -25.4167/-70.4833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Taltal, Chile
 +00:00 :America/Santiago
 0.7925 meters
@@ -91511,10 +89990,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.4667
-# !latitude: -25.0333
+# !longitude: -70.468000
+# !latitude: -25.010000
 # region: Antofagasta
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -25.0333/-70.4667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Paposo, Chile
 +00:00 :America/Santiago
 0.7925 meters
@@ -95159,10 +93640,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.2333
-# !latitude: -22.1000
+# !longitude: -70.211500
+# !latitude: -22.093700
 # region: Antofagasta
 # admin1_quelle: Ufer 2.3 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -22.1000/-70.2333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Tocopilla, Chile
 +00:00 :America/Santiago
 0.7620 meters
@@ -97690,10 +96173,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.1667
-# !latitude: -20.2000
+# !longitude: -70.147800
+# !latitude: -20.204500
 # region: Tarapacá
 # admin1_quelle: Ufer 0.6 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -20.2000/-70.1667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Iquique, Chile
 +00:00 :America/Santiago
 0.9144 meters
@@ -98857,10 +97342,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.2333
-# !latitude: -19.5833
+# !longitude: -70.215600
+# !latitude: -19.596900
 # region: Tarapacá
 # admin1_quelle: Ufer 1.9 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -19.5833/-70.2333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Pisagua, Chile
 +00:00 :America/Santiago
 0.9449 meters
@@ -99625,10 +98112,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.3333
-# !latitude: -18.4667
+# !longitude: -70.323500
+# !latitude: -18.469300
 # region: Arica y Parinacota
 # admin1_quelle: Ufer 0.7 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -18.4667/-70.3333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Arica, Chile
 +00:00 :America/Santiago
 0.7925 meters
@@ -110368,198 +108857,6 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Peru
-# source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 245
-# noaa_uid: wctt-245
-# note: NOAA Tide Tables (C&GS/NOS) West Coast of N & S America 2020 Table 2 transfer from Callao (La Punta), Peru (no.245). M2=0.34 S2=0.04 k=1.46 dt=-61min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -78.6333
-# !latitude: -9.0833
-# state: Áncash
-# admin1_quelle: Ufer 1.1 km
-Chimbote, Peru
-+00:00 :America/Lima
-0.6706 meters
-J1              0.0117  44.78
-K1              0.2134  13.02
-K2              0.0116  301.38
-L2              0.0086  297.04
-M1              0.0073  275.71
-M2              0.3412  287.44
-M3              0.0085  195.70
-M4              0.0016  108.20
-M6              0.0019  77.43
-M8              0.0003  355.58
-N2              0.0954  256.18
-x 0 0
-O1              0.1041  332.91
-OO1             0.0098  72.99
-P1              0.0634  10.50
-Q1              0.0162  302.43
-x 0 0
-R2              0.0015  29.59
-S1              0.0039  133.59
-S2              0.0357  300.52
-S4              0.0018  15.65
-x 0 0
-T2              0.0056  268.68
-LDA2            0.0042  286.68
-MU2             0.0184  255.64
-NU2             0.0183  257.72
-RHO1            0.0032  306.38
-x 0 0
-x 0 0
-MN4             0.0010  28.01
-MS4             0.0007  24.04
-x 0 0
-MF              0.0102  21.65
-MSF             0.0007  58.84
-MM              0.0054  11.28
-SA              0.0434  9.80
-SSA             0.0048  147.02
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0012  282.21
-x 0 0
-EPS2            0.0054  223.45
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0028  262.02
-SIG1            0.0020  111.04
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0003  298.53
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
 # country: Alaska
 # source: NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 2467
@@ -113449,10 +111746,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -77.4000
-# !latitude: 6.2333
+# !longitude: -77.411900
+# !latitude: 6.232800
 # region: Chocó
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 6.2333/-77.4000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Bahía Solano, Colombia
 +00:00 :America/Bogota
 1.5545 meters
@@ -114601,14 +112900,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -82.8667
-# !latitude: 8.2667
+# !longitude: -82.857000
+# !latitude: 8.268600
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -6.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Chiriquí
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 8.2667/-82.8667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Puerto Armuelles, Panama
 -06:00 :America/Panama
 1.4630 meters
@@ -115373,10 +113674,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -89.3167
-# !latitude: 13.4833
+# !longitude: -89.319000
+# !latitude: 13.485100
 # region: La Libertad
 # admin1_quelle: Ufer 1.1 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 13.4833/-89.3167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 La Libertad, El Salvador
 +00:00 :America/El_Salvador
 1.0058 meters
@@ -115949,10 +114252,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -91.9333
-# !latitude: 14.3000
+# !longitude: -91.920300
+# !latitude: 14.294400
 # region: Retalhuleu
 # admin1_quelle: Ufer 3.2 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 14.3000/-91.9333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Champerico, Guatemala
 +00:00 :America/Guatemala
 0.9144 meters
@@ -116141,12 +114446,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -99.9167
-# !latitude: 16.8333
+# !longitude: -99.909000
+# !latitude: 16.840600
 # note: 20260903 Provinz "Guerrero" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Guerrero
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 16.8333/-99.9167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Acapulco, Guerrero, Mexico
 -06:00 :America/Mexico_City
 0.3048 meters
@@ -116335,8 +114642,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -111.0167
-# !latitude: 18.7333
+# !longitude: -111.017000
+# !latitude: 18.733000
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -8.00 nach dem Buch)
@@ -116345,6 +114652,8 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # state: Colima
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 18.7333/-111.0167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Isla Socorro, Colima, Mexico
 -08:00 :America/Mazatlan
 0.5486 meters
@@ -116725,8 +115034,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -112.1167
-# !latitude: 24.7833
+# !longitude: -112.120300
+# !latitude: 24.787400
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-7.00 gegen -8.00 nach dem Buch)
@@ -116735,6 +115044,8 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # state: Baja California Sur
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 24.7833/-112.1167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 San Carlos, Baja California Sur, Mexico
 -08:00 :America/Mazatlan
 0.8839 meters

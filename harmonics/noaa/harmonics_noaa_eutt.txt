@@ -18625,10 +18625,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 17.9500
-# !latitude: -33.0167
+# !longitude: 17.950000
+# !latitude: -33.017000
 # province: Western Cape
 # admin1_quelle: Ufer 0.6 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -33.0167/17.9500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Saldanha, South Africa
 +00:00 :Africa/Johannesburg
 1.0058 meters
@@ -20173,14 +20175,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 13.4000
-# !latitude: -12.5667
+# !longitude: 13.400000
+# !latitude: -12.567000
 # note: 20260904 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # province: Benguela
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -12.5667/13.4000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Benguela, Angola
 +00:00 :Africa/Luanda
 1.0973 meters
@@ -24853,14 +24857,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 8.5333
-# !latitude: 4.6833
+# !longitude: 8.533000
+# !latitude: 4.683000
 # note: 20260904 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Cross River
 # admin1_quelle: Ufer 2.8 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 4.6833/8.5333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Inikoi Island (Akwayafe River,) Cameroon
 +00:00 :Africa/Douala
 1.5545 meters
@@ -26023,14 +26029,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 7.0333
-# !latitude: 4.3500
+# !longitude: 7.033000
+# !latitude: 4.350000
 # note: 20260904 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Rivers
 # admin1_quelle: Ufer 3.7 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 4.3500/7.0333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 New Calabar River Bar, Nigeria
 +00:00 :Africa/Lagos
 0.7925 meters
@@ -26803,14 +26811,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 5.2167
-# !latitude: 5.3833
+# !longitude: 5.217000
+# !latitude: 5.383000
 # note: 20260904 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Delta
 # admin1_quelle: Ufer 7.8 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 5.3833/5.2167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Forcados River Bar (Niger Delta), Nigeria
 +00:00 :Africa/Lagos
 0.8839 meters
@@ -27388,14 +27398,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 5.0333
-# !latitude: 5.7167
+# !longitude: 5.033000
+# !latitude: 5.717000
 # note: 20260904 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Delta
 # admin1_quelle: Ufer 5.8 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 5.7167/5.0333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Benin River Bar, Nigeria
 +00:00 :Africa/Lagos
 0.9144 meters
@@ -31218,10 +31230,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -13.1833
-# !latitude: 8.1333
+# !longitude: -13.183000
+# !latitude: 8.133000
 # province: Western
 # admin1_quelle: Ufer 4.7 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 8.1333/-13.1833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Banana Islands, Sierra Leone
 +00:00 :Africa/Freetown
 1.7069 meters
@@ -31409,10 +31423,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -13.2333
-# !latitude: 8.5000
+# !longitude: -13.275000
+# !latitude: 8.492000
 # province: Western
 # admin1_quelle: Ufer 0.8 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 8.5000/-13.2333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Freetown, Sierra Leone
 +00:00 :Africa/Freetown
 1.7069 meters
@@ -31791,10 +31807,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -13.0667
-# !latitude: 8.5833
+# !longitude: -13.067000
+# !latitude: 8.583000
 # province: Northern
 # admin1_quelle: Ufer 0.5 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 8.5833/-13.0667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Pepel, Sierra Leone
 +00:00 :Africa/Freetown
 1.6764 meters
@@ -32364,10 +32382,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -13.9500
-# !latitude: 9.9667
+# !longitude: -13.950000
+# !latitude: 9.967000
 # region: Boffa
 # admin1_quelle: Ufer 0.5 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 9.9667/-13.9500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Taboria, Guinea
 +00:00 :Africa/Conakry
 2.1031 meters
@@ -37151,10 +37171,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 13.1833
-# !latitude: 32.9000
+# !longitude: 13.183000
+# !latitude: 32.900000
 # region: Tajura' wa an Nawahi al Arba
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 32.9000/13.1833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Tripoli (Tarabulus), Libya
 +01:00 :Africa/Tripoli
 0.3048 meters
@@ -38878,10 +38900,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 12.3000
-# !latitude: 45.2333
+# !longitude: 12.267000
+# !latitude: 45.217000
 # province: Venezia
 # admin1_quelle: Ufer 0.6 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 45.2333/12.3000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Chioggia, Italy
 +01:00 :Europe/Rome
 0.5182 meters
@@ -39451,10 +39475,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 15.2500
-# !latitude: 38.2167
+# !longitude: 15.250000
+# !latitude: 38.217000
 # region: Sicily
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 38.2167/15.2500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Milazzo, Sicily, Italy
 +00:00 :Europe/Rome
 0.2134 meters
@@ -41177,10 +41203,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -7.4167
-# !latitude: 37.2167
+# !longitude: -7.405000
+# !latitude: 37.211600
 # region: Huelva
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 37.2167/-7.4167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ayamonte, Spain
 +01:00 :Europe/Lisbon
 1.7374 meters
@@ -41369,10 +41397,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -7.4167
-# !latitude: 37.1833
+# !longitude: -7.412800
+# !latitude: 37.192800
 # region: Faro
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 37.1833/-7.4167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Vila Real de Santo António, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -42137,10 +42167,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -8.6667
-# !latitude: 37.1000
+# !longitude: -8.666800
+# !latitude: 37.098800
 # region: Faro
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 37.1000/-8.6667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Lagos, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -42521,10 +42553,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -8.8667
-# !latitude: 37.2833
+# !longitude: -8.869400
+# !latitude: 37.295600
 # region: Faro
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 37.2833/-8.8667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Arrifana, Portugal
 +01:00 :Europe/Lisbon
 2.0117 meters
@@ -46169,10 +46203,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -8.9833
-# !latitude: 42.5500
+# !longitude: -8.988300
+# !latitude: 42.563300
 # region: La Coruña
 # admin1_quelle: Ufer 0.2 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 42.5500/-8.9833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Santa Uxía de Ribeíra (Ría de Arousa), Spain
 +01:00 :Europe/Madrid
 1.9507 meters
@@ -47897,10 +47933,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -8.0667
-# !latitude: 43.6667
+# !longitude: -8.071700
+# !latitude: 43.656700
 # region: La Coruña
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.6667/-8.0667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cedeira, Spain
 +01:00 :Europe/Madrid
 2.1641 meters
@@ -49435,10 +49473,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -5.6667
-# !latitude: 43.5500
+# !longitude: -5.698560
+# !latitude: 43.558080
 # region: Asturias
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.5500/-5.6667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Gijón, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -49627,10 +49667,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -5.0667
-# !latitude: 43.4667
+# !longitude: -5.060000
+# !latitude: 43.461700
 # region: Asturias
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.4667/-5.0667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ribadesella, Spain
 +01:00 :Europe/Madrid
 2.2250 meters
@@ -49819,10 +49861,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -4.7500
-# !latitude: 43.4167
+# !longitude: -4.750600
+# !latitude: 43.421000
 # region: Asturias
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.4167/-4.7500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Llanes, Spain
 +01:00 :Europe/Madrid
 2.1946 meters
@@ -50395,10 +50439,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -3.7833
-# !latitude: 43.4667
+# !longitude: -3.790790
+# !latitude: 43.461340
 # region: Cantabria
 # admin1_quelle: Ufer 1.8 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.4667/-3.7833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Santander, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -51355,10 +51401,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -2.7167
-# !latitude: 43.4167
+# !longitude: -2.712800
+# !latitude: 43.420700
 # region: Bizkaia
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.4167/-2.7167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Bermeo, Spain
 +01:00 :Europe/Madrid
 2.4994 meters
@@ -52699,10 +52747,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -1.9333
-# !latitude: 43.3333
+# !longitude: -1.923240
+# !latitude: 43.323190
 # region: Gipuzkoa
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.3333/-1.9333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Pasaia, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -53081,12 +53131,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -1.5000
-# !latitude: 43.5167
+# !longitude: -1.514830
+# !latitude: 43.527320
 # region: Pyrénées-Atlantiques
 # admin1_quelle: Polygon
 # note: 20260906 Name vereinheitlicht, vorher "Le Boucau, Adour River, France"
 # note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 43.5167/-1.5000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Boucau-Bayonne (L'Adour), France
 +00:00 :Europe/Paris
 1.7983 meters
@@ -53202,388 +53254,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0073  232.43
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: France
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 615
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Port-Bloc (La Pointe de Grave), France (no.615). M2=1.96 S2=0.28 k=1.29 dt=+68min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -0.7833
-# !latitude: 45.3167
-# region: Gironde
-# admin1_quelle: Polygon
-La Maréchale, France
-+00:00 :Europe/Paris
-2.9870 meters
-J1              0.0023  158.83
-K1              0.0766  95.68
-K2              0.0813  175.02
-L2              0.0774  149.67
-M1              0.0027  329.55
-M2              1.9625  141.75
-M3              0.0243  39.77
-M4              0.0984  61.35
-M6              0.0166  71.32
-M8              0.0087  6.34
-N2              0.3921  122.86
-x 0 0
-O1              0.0909  346.27
-OO1             0.0021  249.16
-P1              0.0272  88.14
-Q1              0.0276  301.48
-x 0 0
-R2              0.0083  177.76
-S1              0.0141  64.47
-S2              0.2829  177.23
-S4              0.0065  298.06
-x 0 0
-T2              0.0396  167.81
-LDA2            0.0296  137.96
-MU2             0.0237  152.82
-NU2             0.0821  123.48
-RHO1            0.0053  304.24
-x 0 0
-x 0 0
-MN4             0.0461  15.06
-MS4             0.0250  171.32
-x 0 0
-MF              0.0069  178.30
-MSF             0.0140  27.13
-MM              0.0070  1.90
-SA              0.0538  251.55
-SSA             0.0248  97.53
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0075  277.37
-x 0 0
-EPS2            0.0060  176.31
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0022  163.56
-SIG1            0.0038  94.36
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0109  321.07
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: France
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 617
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Port-Bloc (La Pointe de Grave), France (no.617). M2=2.10 S2=0.29 k=1.39 dt=+88min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -0.7500
-# !latitude: 45.2000
-# region: Gironde
-# admin1_quelle: Polygon
-Pauillac, France
-+00:00 :Europe/Paris
-3.0175 meters
-J1              0.0025  164.29
-K1              0.0821  100.95
-K2              0.0839  185.55
-L2              0.0829  160.00
-M1              0.0029  334.62
-M2              2.1015  151.89
-M3              0.0261  54.99
-M4              0.1054  81.64
-M6              0.0177  101.75
-M8              0.0093  46.92
-N2              0.4199  132.82
-x 0 0
-O1              0.0973  351.15
-OO1             0.0022  254.81
-P1              0.0291  93.37
-Q1              0.0295  306.17
-x 0 0
-R2              0.0089  188.27
-S1              0.0151  69.72
-S2              0.2920  187.73
-S4              0.0069  319.06
-x 0 0
-T2              0.0424  178.30
-LDA2            0.0317  148.27
-MU2             0.0254  162.61
-NU2             0.0879  133.46
-RHO1            0.0057  308.95
-x 0 0
-x 0 0
-MN4             0.0494  35.16
-MS4             0.0268  191.96
-x 0 0
-MF              0.0069  178.68
-MSF             0.0140  27.49
-MM              0.0070  2.09
-SA              0.0538  251.56
-SSA             0.0248  97.56
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0080  287.54
-x 0 0
-EPS2            0.0064  185.91
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0024  179.31
-SIG1            0.0040  98.89
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0116  340.98
 x 0 0
 x 0 0
 x 0 0
@@ -59002,197 +58672,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Channel Islands
 # source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 737
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Brest (Moulin Blanc), France (no.737). M2=3.85 S2=0.75 k=1.87 dt=+156min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: -2.1333
-# !latitude: 48.9500
-# region: Bailiwick of Jersey
-# admin1_quelle: Name
-Les Minquiers, Bailiwick of Jersey, Channel Islands
-+00:00 :Europe/Jersey
-6.4618 meters
-J1              0.0037  153.33
-K1              0.1180  111.39
-K2              0.2169  224.60
-L2              0.1053  173.66
-x 0 0
-M2              3.8516  184.37
-M3              0.0360  132.43
-M4              0.1088  256.74
-M6              0.0594  220.18
-M8              0.0034  191.84
-N2              0.7828  164.87
-x 0 0
-O1              0.1212  1.61
-OO1             0.0024  248.47
-P1              0.0403  101.34
-Q1              0.0358  315.87
-x 0 0
-x 0 0
-x 0 0
-S2              0.7487  226.39
-S4              0.0043  66.87
-x 0 0
-x 0 0
-LDA2            0.0562  148.29
-MU2             0.1576  180.93
-NU2             0.1454  160.74
-RHO1            0.0062  318.33
-MK3             0.0035  53.54
-x 0 0
-MN4             0.0372  211.75
-MS4             0.0668  330.81
-x 0 0
-MF              0.0131  173.73
-MSF             0.0010  72.40
-MM              0.0006  78.94
-x 0 0
-SSA             0.0183  93.99
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-BET1            0.0004  99.03
-CHI1            0.0004  350.77
-x 0 0
-x 0 0
-x 0 0
-ETA2            0.0136  264.58
-x 0 0
-UPS1            0.0002  197.48
-x 0 0
-x 0 0
-MK4             0.0196  332.17
-MKS2            0.0170  247.20
-x 0 0
-EPS2            0.0317  165.89
-MO3             0.0021  157.85
-x 0 0
-TAU1            0.0035  175.25
-x 0 0
-MSK6            0.0024  189.45
-MSM             0.0017  153.84
-MSN2            0.0282  10.41
-x 0 0
-x 0 0
-NO1             0.0065  40.24
-x 0 0
-OQ2             0.0054  78.26
-PHI1            0.0024  153.87
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SIG1            0.0056  284.08
-SK3             0.0097  188.63
-SK4             0.0021  64.18
-SN4             0.0093  297.64
-x 0 0
-SO1             0.0004  241.94
-SO3             0.0002  137.80
-THE1            0.0021  80.23
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Channel Islands
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 739
 # note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Brest (Moulin Blanc), France (no.739). M2=3.62 S2=0.82 k=1.76 dt=+150min.
 # date_imported: 20260630
@@ -59579,10 +59058,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -0.8167
-# !latitude: 49.3500
+# !longitude: -0.755600
+# !latitude: 49.351400
 # region: Calvados
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 49.3500/-0.8167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Port-en-Bessin, France
 +00:00 :Europe/Paris
 4.0843 meters
@@ -59698,201 +59179,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0172  353.17
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: France
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 771
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Dover, England, United Kingdom (no.771). M2=3.25 S2=0.42 k=1.44 dt=+12min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 0.7000
-# !latitude: 49.8667
-# note: 20260904 Phasen um -1.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Seine-Maritime
-# admin1_quelle: Polygon
-St. Valery-en-Caux, France
-+00:00 :Europe/Paris
-4.8768 meters
-J1              0.0062  168.49
-K1              0.0713  29.36
-K2              0.1228  357.88
-L2              0.1765  315.75
-M1              0.0027  56.06
-M2              3.2462  308.48
-M3              0.0154  0.25
-M4              0.3731  174.44
-M6              0.0964  33.18
-M8              0.0304  279.01
-N2              0.5916  286.49
-x 0 0
-O1              0.0817  168.12
-OO1             0.0063  175.82
-P1              0.0281  10.04
-Q1              0.0314  107.43
-x 0 0
-R2              0.0115  43.43
-S1              0.0085  274.77
-S2              0.4232  359.46
-S4              0.0230  302.85
-x 0 0
-T2              0.0547  343.81
-LDA2            0.0866  305.21
-MU2             0.1286  28.06
-NU2             0.1449  278.80
-RHO1            0.0063  119.61
-x 0 0
-x 0 0
-MN4             0.1356  151.49
-MS4             0.2414  225.87
-x 0 0
-MF              0.0133  196.25
-MSF             0.0127  223.94
-MM              0.0096  197.92
-SA              0.0647  212.34
-SSA             0.0126  124.43
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0202  85.01
-x 0 0
-EPS2            0.0364  18.71
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0014  184.46
-SIG1            0.0050  159.70
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0269  127.74
 x 0 0
 x 0 0
 x 0 0
@@ -60160,14 +59446,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 2.3667
-# !latitude: 51.0500
+# !longitude: 2.366698
+# !latitude: 51.048091
 # note: 20260904 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Nord
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 51.0500/2.3667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Dunkerque, France
 +00:00 :Europe/Paris
 3.1394 meters
@@ -60355,12 +59643,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -3.9833
-# !latitude: 57.9667
+# !longitude: -3.979900
+# !latitude: 57.969800
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 57.9667/-3.9833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Golspie, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3165 meters
@@ -60548,12 +59838,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -3.8333
-# !latitude: 57.8333
+# !longitude: -3.829800
+# !latitude: 57.837700
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 57.8333/-3.8333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Portmahomack, Scotland, United Kingdom
 +00:00 :Europe/London
 2.2250 meters
@@ -60741,12 +60033,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -4.1667
-# !latitude: 57.6833
+# !longitude: -4.162100
+# !latitude: 57.685800
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 57.6833/-4.1667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Invergordon, Scotland, United Kingdom
 +00:00 :Europe/London
 2.3774 meters
@@ -60934,12 +60228,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -3.3000
-# !latitude: 57.7167
+# !longitude: -3.279000
+# !latitude: 57.723900
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 57.7167/-3.3000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Lossiemouth, Scotland, United Kingdom
 +00:00 :Europe/London
 2.0117 meters
@@ -61127,12 +60423,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -2.5167
-# !latitude: 57.6667
+# !longitude: -2.521000
+# !latitude: 57.670600
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 57.6667/-2.5167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Banff, Scotland, United Kingdom
 +00:00 :Europe/London
 1.6764 meters
@@ -61320,12 +60618,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -1.7667
-# !latitude: 57.5000
+# !longitude: -1.772400
+# !latitude: 57.497300
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 57.5000/-1.7667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Peterhead, Scotland, United Kingdom
 +00:00 :Europe/London
 2.2555 meters
@@ -61513,12 +60813,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -2.2000
-# !latitude: 56.9667
+# !longitude: -2.202000
+# !latitude: 56.960000
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 56.9667/-2.2000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Stonehaven, Scotland, United Kingdom
 +00:00 :Europe/London
 2.6213 meters
@@ -62092,12 +61394,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -2.7000
-# !latitude: 56.2167
+# !longitude: -2.697000
+# !latitude: 56.219600
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 56.2167/-2.7000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Anstruther Easter, Scotland, United Kingdom
 +00:00 :Europe/London
 3.1699 meters
@@ -62671,12 +61975,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -2.5167
-# !latitude: 56.0000
+# !longitude: -2.516900
+# !latitude: 56.005900
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 56.0000/-2.5167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Dunbar, Scotland, United Kingdom
 +00:00 :Europe/London
 3.0480 meters
@@ -62985,199 +62291,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0024  40.62
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: United Kingdom
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 841
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Leith, England, United Kingdom (no.841). M2=1.67 S2=0.31 k=0.93 dt=+70min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -1.4000
-# !latitude: 55.0167
-# note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: England
-# admin1_quelle: Name
-Tyne River entrance, England, United Kingdom
-+00:00 :Europe/London
-2.8956 meters
-J1              0.0050  309.48
-K1              0.1122  238.34
-K2              0.0878  128.91
-L2              0.0585  107.43
-M1              0.0021  126.84
-M2              1.6745  89.17
-M3              0.0202  61.13
-M4              0.0708  250.71
-M6              0.0450  27.72
-M8              0.0131  314.80
-N2              0.3270  65.11
-x 0 0
-O1              0.1323  82.14
-OO1             0.0043  18.74
-P1              0.0346  224.46
-Q1              0.0438  29.87
-x 0 0
-R2              0.0080  154.64
-S1              0.0110  148.04
-S2              0.3077  130.81
-S4              0.0141  150.20
-x 0 0
-T2              0.0259  126.43
-LDA2            0.0215  93.64
-MU2             0.0185  34.24
-NU2             0.0677  70.28
-RHO1            0.0078  31.95
-x 0 0
-x 0 0
-MN4             0.0162  192.44
-MS4             0.0636  8.02
-x 0 0
-MF              0.0164  199.22
-MSF             0.0050  214.55
-MM              0.0138  187.56
-SA              0.0738  227.42
-SSA             0.0125  150.83
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0016  225.97
-x 0 0
-EPS2            0.0018  357.52
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0019  313.13
-SIG1            0.0048  167.69
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0023  98.45
 x 0 0
 x 0 0
 x 0 0
@@ -63634,12 +62747,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -1.3167
-# !latitude: 54.8333
+# !longitude: -1.325900
+# !latitude: 54.836800
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.8333/-1.3167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Seaham, England, United Kingdom
 +00:00 :Europe/London
 2.9870 meters
@@ -63827,12 +62942,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -1.1833
-# !latitude: 54.6833
+# !longitude: -1.198100
+# !latitude: 54.690400
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.6833/-1.1833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Hartlepool, England, United Kingdom
 +00:00 :Europe/London
 2.8956 meters
@@ -64213,12 +63330,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -0.3833
-# !latitude: 54.2833
+# !longitude: -0.390270
+# !latitude: 54.282480
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.2833/-0.3833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Scarborough, England, United Kingdom
 +00:00 :Europe/London
 3.3833 meters
@@ -64406,12 +63525,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -0.0667
-# !latitude: 53.5833
+# !longitude: -0.066200
+# !latitude: 53.583600
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 53.5833/-0.0667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Grimsby, England, United Kingdom
 +00:00 :Europe/London
 4.0538 meters
@@ -64792,12 +63913,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -0.8667
-# !latitude: 53.7000
+# !longitude: -0.866400
+# !latitude: 53.701900
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 53.7000/-0.8667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Goole, England, United Kingdom
 +00:00 :Europe/London
 2.5603 meters
@@ -66338,12 +65461,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 1.4167
-# !latitude: 51.3333
+# !longitude: 1.419500
+# !latitude: 51.330000
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 51.3333/1.4167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ramsgate, England, United Kingdom
 +00:00 :Europe/London
 2.6213 meters
@@ -66724,12 +65849,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 0.9667
-# !latitude: 50.9000
+# !longitude: 0.968400
+# !latitude: 50.910500
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.9000/0.9667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Dungeness, England, United Kingdom
 +00:00 :Europe/London
 3.7795 meters
@@ -66917,12 +66044,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 0.2833
-# !latitude: 50.7667
+# !longitude: 0.295700
+# !latitude: 50.765600
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.7667/0.2833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Eastbourne, England, United Kingdom
 +00:00 :Europe/London
 3.4747 meters
@@ -67038,199 +66167,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0213  152.39
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: United Kingdom
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 919
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Dover, England, United Kingdom (no.919). M2=2.32 S2=0.36 k=1.03 dt=-34min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -0.1333
-# !latitude: 50.8167
-# note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: England
-# admin1_quelle: Name
-Brighton, England, United Kingdom
-+00:00 :Europe/London
-2.8956 meters
-J1              0.0044  172.26
-K1              0.0510  33.00
-K2              0.1049  5.14
-L2              0.1263  322.89
-M1              0.0020  59.57
-M2              2.3231  315.48
-M3              0.0110  10.76
-M4              0.2670  188.45
-M6              0.0690  54.19
-M8              0.0218  307.03
-N2              0.4234  293.36
-x 0 0
-O1              0.0585  171.49
-OO1             0.0045  179.72
-P1              0.0201  13.65
-Q1              0.0225  110.67
-x 0 0
-R2              0.0082  50.69
-S1              0.0061  278.40
-S2              0.3615  6.71
-S4              0.0165  317.35
-x 0 0
-T2              0.0392  351.05
-LDA2            0.0620  312.33
-MU2             0.0921  34.82
-NU2             0.1037  285.69
-RHO1            0.0045  122.87
-x 0 0
-x 0 0
-MN4             0.0970  165.36
-MS4             0.1728  240.12
-x 0 0
-MF              0.0133  196.52
-MSF             0.0127  224.19
-MM              0.0096  198.05
-SA              0.0647  212.35
-SSA             0.0126  124.44
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0144  92.04
-x 0 0
-EPS2            0.0261  25.33
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0010  195.33
-SIG1            0.0036  162.82
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0193  141.49
 x 0 0
 x 0 0
 x 0 0
@@ -67497,12 +66433,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -0.7833
-# !latitude: 50.7167
+# !longitude: -0.785100
+# !latitude: 50.722700
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.7167/-0.7833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Selsey Bill, England, United Kingdom
 +00:00 :Europe/London
 2.9870 meters
@@ -68654,12 +67592,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -2.9167
-# !latitude: 50.7167
+# !longitude: -2.936900
+# !latitude: 50.719800
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.7167/-2.9167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Lyme Regis, England, United Kingdom
 +00:00 :Europe/London
 2.0117 meters
@@ -69042,12 +67982,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -3.5167
-# !latitude: 50.4667
+# !longitude: -3.526500
+# !latitude: 50.459900
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.4667/-3.5167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Torquay, England, United Kingdom
 +00:00 :Europe/London
 2.1946 meters
@@ -69235,12 +68177,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -3.5667
-# !latitude: 50.3500
+# !longitude: -3.577200
+# !latitude: 50.351100
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.3500/-3.5667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Dartmouth, England, United Kingdom
 +00:00 :Europe/London
 2.6518 meters
@@ -69814,12 +68758,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -4.6333
-# !latitude: 50.3333
+# !longitude: -4.633100
+# !latitude: 50.335900
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.3333/-4.6333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Fowey, England, United Kingdom
 +00:00 :Europe/London
 3.0785 meters
@@ -70200,8 +69146,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -5.4667
-# !latitude: 50.2000
+# !longitude: -5.476300
+# !latitude: 50.215200
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # note: 20260904 Phasen um +1.00 h gedreht: die
@@ -70210,6 +69156,8 @@ x 0 0
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.2000/-5.4667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 St. Ives, England, United Kingdom
 +00:00 :Europe/London
 3.8405 meters
@@ -70397,8 +69345,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -4.9333
-# !latitude: 50.5500
+# !longitude: -4.936900
+# !latitude: 50.541700
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # note: 20260904 Phasen um +1.00 h gedreht: die
@@ -70407,6 +69355,8 @@ x 0 0
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 50.5500/-4.9333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Padstow, England, United Kingdom
 +00:00 :Europe/London
 3.5357 meters
@@ -72331,12 +71281,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -4.0500
-# !latitude: 52.5333
+# !longitude: -4.045600
+# !latitude: 52.542900
 # note: 20260903 Provinz "Wales" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Wales
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 52.5333/-4.0500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Aberdovey, Wales, United Kingdom
 +00:00 :Europe/London
 2.3774 meters
@@ -74068,12 +73020,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -2.9500
-# !latitude: 53.3167
+# !longitude: -2.949300
+# !latitude: 53.322800
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 53.3167/-2.9500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Eastham, England, United Kingdom
 +00:00 :Europe/London
 5.2426 meters
@@ -75421,12 +74375,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -3.5000
-# !latitude: 54.7167
+# !longitude: -3.507500
+# !latitude: 54.717000
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.7167/-3.5000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Maryport, England, United Kingdom
 +00:00 :Europe/London
 4.6634 meters
@@ -75614,12 +74570,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -3.4000
-# !latitude: 54.8667
+# !longitude: -3.394400
+# !latitude: 54.868000
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.8667/-3.4000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Silloth, England, United Kingdom
 +00:00 :Europe/London
 4.8158 meters
@@ -75807,10 +74765,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -4.3667
-# !latitude: 54.3167
+# !longitude: -4.365600
+# !latitude: 54.320600
 # region: Isle of Man
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.3167/-4.3667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ramsey, Isle of Man
 +00:00 :Europe/Isle_of_Man
 4.0234 meters
@@ -75998,10 +74958,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -4.4667
-# !latitude: 54.1500
+# !longitude: -4.467900
+# !latitude: 54.147500
 # region: Isle of Man
 # admin1_quelle: Ufer 0.7 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.1500/-4.4667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Douglas, Isle of Man
 +00:00 :Europe/Isle_of_Man
 3.9014 meters
@@ -76189,10 +75151,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -4.7000
-# !latitude: 54.2333
+# !longitude: -4.694600
+# !latitude: 54.227900
 # region: Isle of Man
 # admin1_quelle: Ufer 1.3 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.2333/-4.7000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Peel, Isle of Man
 +00:00 :Europe/Isle_of_Man
 2.8651 meters
@@ -80815,12 +79779,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -5.5333
-# !latitude: 54.6333
+# !longitude: -5.531000
+# !latitude: 54.645000
 # note: 20260903 Provinz "Northern Ireland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Northern Ireland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.6333/-5.5333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Donaghadee, Northern Ireland, United Kingdom
 +00:00 :Europe/London
 2.2555 meters
@@ -83507,8 +82473,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -2.9667
-# !latitude: 59.3167
+# !longitude: -2.988300
+# !latitude: 59.319500
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # note: 20260904 Phasen um +1.00 h gedreht: die
@@ -83517,6 +82483,8 @@ x 0 0
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 59.3167/-2.9667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Pierowall, Scotland, United Kingdom
 +00:00 :Europe/London
 1.8288 meters
@@ -86585,10 +85553,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -21.1167
-# !latitude: 65.2500
+# !longitude: -21.108000
+# !latitude: 65.254400
 # region: Norðurland vestra
 # admin1_quelle: Ufer 1.0 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 65.2500/-21.1167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Hrútafjörður, Iceland
 +00:00 :Atlantic/Reykjavik
 0.9754 meters
@@ -87923,10 +86893,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 4.2667
-# !latitude: 52.1000
+# !longitude: 4.263563
+# !latitude: 52.099035
 # province: Zuid-Holland
 # admin1_quelle: Ufer 1.9 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 52.1000/4.2667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Scheveningen, Netherlands
 +00:00 :Europe/Amsterdam
 1.0973 meters
@@ -88306,10 +87278,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 4.7500
-# !latitude: 52.9667
+# !longitude: 4.745000
+# !latitude: 52.964400
 # province: Noord-Holland
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 52.9667/4.7500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Den Helder, Netherlands
 +00:00 :Europe/Amsterdam
 1.0058 meters
@@ -88688,10 +87662,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 5.4167
-# !latitude: 53.1667
+# !longitude: 5.409342
+# !latitude: 53.175632
 # province: Friesland
 # admin1_quelle: Ufer 2.7 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 53.1667/5.4167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Harlingen, Netherlands
 +00:00 :Europe/Amsterdam
 1.1887 meters
@@ -90203,579 +89179,6 @@ x 0 0
 MKNU6           0.0016  292.22
 x 0 0
 M7              0.0003  91.75
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Germany
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1385
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Helgoland, Germany (no.1385). M2=1.26 S2=0.11 k=1.14 dt=-13min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 7.4667
-# !latitude: 53.7333
-# state: Niedersachsen
-# admin1_quelle: Ufer 0.4 km
-Langeoog, Germany
-+00:00 :Europe/Berlin
-1.4935 meters
-J1              0.0006  355.65
-K1              0.0800  16.61
-K2              0.0340  13.87
-L2              0.0966  329.71
-x 0 0
-M2              1.2631  305.34
-M3              0.0030  132.34
-M4              0.0778  134.37
-M6              0.0243  272.34
-M8              0.0050  100.48
-N2              0.2139  276.53
-x 0 0
-O1              0.1064  228.06
-OO1             0.0019  104.21
-P1              0.0310  21.25
-Q1              0.0280  173.03
-x 0 0
-R2              0.0109  350.36
-S1              0.0087  15.80
-S2              0.1145  10.57
-S4              0.0047  271.44
-S6              0.0007  217.80
-T2              0.0198  4.14
-LDA2            0.0442  320.20
-MU2             0.1112  39.67
-NU2             0.0750  261.78
-RHO1            0.0100  188.11
-MK3             0.0050  232.46
-x 0 0
-MN4             0.0323  110.45
-MS4             0.0464  189.83
-x 0 0
-MF              0.0558  307.98
-MSF             0.0133  234.34
-MM              0.1076  241.53
-SA              0.1485  201.25
-SSA             0.0330  79.39
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-A7              0.0477  136.91
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-ALP1            0.0034  141.69
-BET1            0.0082  215.59
-CHI1            0.0042  325.15
-x 0 0
-x 0 0
-KJ2             0.0021  288.97
-x 0 0
-KQ1             0.0043  200.30
-x 0 0
-M10             0.0025  262.67
-M12             0.0011  125.23
-MK4             0.0123  188.13
-MKS2            0.0168  94.92
-MNS2            0.0303  352.40
-x 0 0
-x 0 0
-MP1             0.0098  145.20
-x 0 0
-MPS2            0.0319  319.37
-MSK6            0.0017  19.59
-MSM             0.0333  314.64
-MSN2            0.0219  191.55
-MSN6            0.0039  295.37
-NLK2            0.0285  243.63
-NO1             0.0209  49.64
-OP2             0.0113  307.33
-x 0 0
-PHI1            0.0059  110.46
-x 0 0
-PI1             0.0047  35.24
-x 0 0
-PSI1            0.0083  312.98
-x 0 0
-S3              0.0006  103.41
-SIG1            0.0073  20.75
-SK3             0.0019  332.50
-SK4             0.0027  302.43
-SN4             0.0048  225.88
-SNK6            0.0041  73.86
-SO1             0.0031  219.22
-SO3             0.0059  177.58
-THE1            0.0036  164.63
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0146  222.70
-x 0 0
-MKL2S2          0.0028  17.09
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0056  48.15
-x 0 0
-ML4             0.0152  133.79
-N4              0.0095  104.01
-SL4             0.0089  202.61
-MNO5            0.0031  242.69
-x 0 0
-MSK5            0.0011  115.31
-x 0 0
-x 0 0
-x 0 0
-MNK5            0.0014  19.04
-x 0 0
-MSL6            0.0034  14.60
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MSKO7           0.0010  71.93
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-M1C             0.0345  179.88
-x 0 0
-x 0 0
-x 0 0
-MSP2            0.0276  295.95
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKNU6           0.0017  309.00
-x 0 0
-M7              0.0003  111.20
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Germany
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1395
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Bremerhaven (Alter Leuchtturm), Germany (no.1395). M2=1.41 S2=0.13 k=0.86 dt=-88min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 7.9667
-# !latitude: 53.7833
-# state: east end
-# admin1_quelle: Name
-Wangerooge, east end, Germany
-+01:00 :Europe/Berlin
-1.6459 meters
-J1              0.0025  163.98
-K1              0.0618  29.59
-K2              0.0339  36.05
-L2              0.1192  335.68
-M1              0.0005  139.09
-M2              1.4081  320.10
-M3              0.0033  183.21
-M4              0.1140  104.24
-M6              0.0295  288.85
-M8              0.0052  198.03
-N2              0.2209  295.96
-x 0 0
-O1              0.0818  237.61
-OO1             0.0022  213.22
-P1              0.0273  33.54
-Q1              0.0251  179.85
-x 0 0
-R2              0.0468  145.77
-S1              0.0177  58.56
-S2              0.1264  33.47
-S4              0.0104  324.05
-x 0 0
-T2              0.0721  306.42
-LDA2            0.0569  332.47
-MU2             0.1577  43.51
-NU2             0.0852  275.67
-RHO1            0.0052  180.45
-x 0 0
-x 0 0
-MN4             0.0350  80.59
-MS4             0.0787  183.09
-x 0 0
-MF              0.0101  145.29
-MSF             0.0200  57.13
-MM              0.0190  162.83
-SA              0.0817  223.92
-SSA             0.0417  214.38
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0731  101.85
-x 0 0
-EPS2            0.0357  22.12
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0011  51.42
-SIG1            0.0022  214.69
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0071  57.96
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Germany
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1397
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Bremerhaven (Alter Leuchtturm), Germany (no.1397). M2=1.49 S2=0.12 k=0.91 dt=-61min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 8.0500
-# !latitude: 53.7000
-# state: Niedersachsen
-# admin1_quelle: Ufer 1.2 km
-Schillighorn, Germany
-+01:00 :Europe/Berlin
-1.6459 meters
-J1              0.0026  170.99
-K1              0.0652  36.36
-K2              0.0315  49.59
-L2              0.1257  348.96
-M1              0.0005  145.61
-M2              1.4854  333.14
-M3              0.0035  202.78
-M4              0.1203  130.32
-M6              0.0312  327.97
-M8              0.0055  250.21
-N2              0.2330  308.76
-x 0 0
-O1              0.0863  243.89
-OO1             0.0023  220.49
-P1              0.0288  40.27
-Q1              0.0264  185.88
-x 0 0
-R2              0.0494  159.29
-S1              0.0187  65.31
-S2              0.1174  46.97
-S4              0.0110  351.05
-x 0 0
-T2              0.0760  319.90
-LDA2            0.0600  345.73
-MU2             0.1663  56.09
-NU2             0.0898  288.50
-RHO1            0.0055  186.51
-x 0 0
-x 0 0
-MN4             0.0370  106.43
-MS4             0.0830  209.63
-x 0 0
-MF              0.0101  145.78
-MSF             0.0200  57.59
-MM              0.0190  163.07
-SA              0.0817  223.94
-SSA             0.0417  214.42
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0771  114.93
-x 0 0
-EPS2            0.0377  34.46
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0012  71.67
-SIG1            0.0023  220.51
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0075  83.56
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -92818,388 +91221,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0076  157.98
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Germany
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1471
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Bremerhaven (Alter Leuchtturm), Germany (no.1471). M2=1.64 S2=0.11 k=1.00 dt=+30min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 9.0500
-# !latitude: 54.4833
-# state: Schleswig-Holstein
-# admin1_quelle: Polygon
-Husum, Germany
-+01:00 :Europe/Berlin
-1.8288 meters
-J1              0.0029  194.89
-K1              0.0720  59.43
-K2              0.0291  95.71
-L2              0.1388  34.24
-M1              0.0006  167.84
-M2              1.6402  17.58
-M3              0.0038  269.44
-M4              0.1328  219.21
-M6              0.0344  101.30
-M8              0.0060  67.97
-N2              0.2573  352.37
-x 0 0
-O1              0.0953  265.27
-OO1             0.0025  245.23
-P1              0.0318  63.20
-Q1              0.0292  206.42
-x 0 0
-R2              0.0546  205.35
-S1              0.0207  88.31
-S2              0.1084  92.97
-S4              0.0121  83.05
-x 0 0
-T2              0.0839  5.84
-LDA2            0.0663  30.89
-MU2             0.1836  98.98
-NU2             0.0992  332.22
-RHO1            0.0060  207.17
-x 0 0
-x 0 0
-MN4             0.0408  194.48
-MS4             0.0917  300.07
-x 0 0
-MF              0.0101  147.47
-MSF             0.0200  59.15
-MM              0.0190  163.91
-SA              0.0817  224.00
-SSA             0.0417  214.54
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0852  159.50
-x 0 0
-EPS2            0.0416  76.51
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0013  140.67
-SIG1            0.0025  240.33
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0083  170.77
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Germany
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1473
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Bremerhaven (Alter Leuchtturm), Germany (no.1473). M2=1.61 S2=0.13 k=0.98 dt=-2min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 8.7000
-# !latitude: 54.5000
-# state: Pellworm
-# admin1_quelle: Name
-Ochsen Sand, Pellworm, Germany
-+01:00 :Europe/Berlin
-1.7678 meters
-J1              0.0029  186.58
-K1              0.0707  51.40
-K2              0.0339  79.67
-L2              0.1362  18.49
-M1              0.0006  160.11
-M2              1.6092  2.13
-M3              0.0037  246.25
-M4              0.1303  188.29
-M6              0.0338  54.93
-M8              0.0059  6.14
-N2              0.2524  337.20
-x 0 0
-O1              0.0935  257.83
-OO1             0.0025  236.63
-P1              0.0312  55.23
-Q1              0.0286  199.28
-x 0 0
-R2              0.0535  189.33
-S1              0.0203  80.31
-S2              0.1264  76.97
-S4              0.0119  51.05
-x 0 0
-T2              0.0824  349.86
-LDA2            0.0650  15.18
-MU2             0.1802  84.06
-NU2             0.0973  317.02
-RHO1            0.0059  199.98
-x 0 0
-x 0 0
-MN4             0.0401  163.85
-MS4             0.0899  268.62
-x 0 0
-MF              0.0101  146.88
-MSF             0.0200  58.60
-MM              0.0190  163.62
-SA              0.0817  223.98
-SSA             0.0417  214.50
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0835  143.99
-x 0 0
-EPS2            0.0408  61.88
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0013  116.67
-SIG1            0.0025  233.44
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0082  140.44
 x 0 0
 x 0 0
 x 0 0
@@ -96710,10 +94731,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 5.0333
-# !latitude: 61.6000
+# !longitude: 5.032800
+# !latitude: 61.601200
 # region: Sogn og Fjordane
 # admin1_quelle: Ufer 4.0 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 61.6000/5.0333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Florø, Norway
 +00:00 :Europe/Oslo
 0.9449 meters

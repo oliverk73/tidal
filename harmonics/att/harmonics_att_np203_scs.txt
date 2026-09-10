@@ -27435,12 +27435,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 92.7667
-# !latitude: 11.6833
+# !longitude: 92.733100
+# !latitude: 11.674600
 # note: 20260903 Provinz "Andaman and Nicobar" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Andaman and Nicobar
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 11.6833/92.7667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Port Blair, Andaman and Nicobar, India
 +05:30 :Asia/Kolkata
 1.2100 meters
@@ -50561,10 +50563,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 98.7667
-# !latitude: 1.7500
+# !longitude: 98.767000
+# !latitude: 1.750000
 # state: Sumatera Utara
 # admin1_quelle: Ufer 0.8 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 1.7500/98.7667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Sibolga, Indonesia
 +07:00 :Asia/Jakarta
 0.7000 meters
@@ -54247,10 +54251,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 104.7667
-# !latitude: -2.9833
+# !longitude: 104.765000
+# !latitude: -2.990000
 # state: Sumatera Selatan
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -2.9833/104.7667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Palembang, Indonesia
 +07:00 :Asia/Jakarta
 1.4000 meters
@@ -63369,10 +63375,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 118.7000
-# !latitude: 9.7333
+# !longitude: 118.736000
+# !latitude: 9.745000
 # region: Puerto Princesa
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 9.7333/118.7000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Puerto Princesa, Philippines
 +08:00 :Asia/Manila
 0.6100 meters
@@ -73263,10 +73271,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 119.9000
-# !latitude: 15.7667
+# !longitude: 119.907100
+# !latitude: 15.760300
 # province: Zambales
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 15.7667/119.9000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Santa Cruz, Philippines
 +08:00 :Asia/Manila
 0.3400 meters
@@ -73847,10 +73857,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 120.3000
-# !latitude: 16.6167
+# !longitude: 120.294700
+# !latitude: 16.610400
 # province: La Union
 # admin1_quelle: Ufer 0.6 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 16.6167/120.3000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 San Fernando, Philippines
 +08:00 :Asia/Manila
 0.3700 meters
@@ -88981,10 +88993,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 117.8833
-# !latitude: 4.2333
+# !longitude: 117.884500
+# !latitude: 4.240900
 # state: Sabah
 # admin1_quelle: Ufer 2.8 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 4.2333/117.8833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Tawau, Malaysia
 +08:00 :Asia/Kuching
 1.5100 meters
@@ -90147,10 +90161,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 118.1167
-# !latitude: 5.8333
+# !longitude: 118.084200
+# !latitude: 5.816400
 # state: Sabah
 # admin1_quelle: Ufer 2.5 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 5.8333/118.1167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Sandakan, Malaysia
 +08:00 :Asia/Kuching
 1.1100 meters
@@ -93457,11 +93473,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 114.9833
-# !latitude: 4.9000
+# !longitude: 114.9802
+# !latitude: 4.8926
 # region: Brunei and Muara
 # admin1_quelle: Polygon
-Dato Gandi, Brunei
+Dato Gandi (Bandar Seri Begawan), Brunei
 +08:00 :Asia/Brunei
 1.5700 meters
 x 0 0
@@ -93655,7 +93671,7 @@ x 0 0
 # !latitude: 5.0000
 # region: Brunei and Muara
 # admin1_quelle: Ufer 5.3 km
-Tanjong Sapo, Brunei
+Tanjung Sapo, Brunei
 +08:00 :Asia/Brunei
 1.3900 meters
 x 0 0
@@ -94039,13 +94055,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 114.4667
-# !latitude: 4.6833
+# !longitude: 114.4681
+# !latitude: 4.6768
 # state: Tutong
 # admin1_quelle: Ufer 3.1 km
 # note: 20260906 country "Malaysia" -> "Brunei" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Sarawak" -> "Tutong".
-Lumut, Brunei
+Kampung Lumut, Brunei
 +08:00 :Asia/Kuching
 1.2100 meters
 x 0 0
@@ -94431,8 +94447,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 114.1833
-# !latitude: 4.5833
+# !longitude: 114.1848
+# !latitude: 4.5869
 # state: Belait
 # admin1_quelle: Polygon
 # note: 20260906 country "Malaysia" -> "Brunei" nach dem Namen berichtigt,
@@ -94627,8 +94643,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 113.7000
-# !latitude: 3.9667
+# !longitude: 113.7051
+# !latitude: 3.9660
 # state: Sarawak
 # admin1_quelle: Polygon
 Kuala Niah, Malaysia
@@ -94821,8 +94837,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 113.3000
-# !latitude: 3.5167
+# !longitude: 113.3021
+# !latitude: 3.5187
 # state: Sarawak
 # admin1_quelle: Polygon
 Kuala Similajau, Malaysia
@@ -95015,8 +95031,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 113.0333
-# !latitude: 3.1833
+# !longitude: 113.0335
+# !latitude: 3.1808
 # state: Sarawak
 # admin1_quelle: Polygon
 Kuala Bintulu, Malaysia
@@ -95209,8 +95225,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 112.8000
-# !latitude: 3.0833
+# !longitude: 112.7972
+# !latitude: 3.0829
 # state: Sarawak
 # admin1_quelle: Polygon
 Kuala Tatau, Malaysia
@@ -95403,8 +95419,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 112.6167
-# !latitude: 3.0167
+# !longitude: 112.5841
+# !latitude: 3.0165
 # state: Sarawak
 # admin1_quelle: Polygon
 Kuala Balingian, Malaysia
@@ -95597,8 +95613,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 112.0833
-# !latitude: 2.9000
+# !longitude: 112.0946
+# !latitude: 2.9064
 # state: Sarawak
 # admin1_quelle: Polygon
 Kuala Mukah, Malaysia
@@ -95791,8 +95807,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 112.2000
-# !latitude: 2.7833
+# !longitude: 112.2033
+# !latitude: 2.7910
 # state: Sarawak
 # admin1_quelle: Polygon
 Kenyana, Malaysia
@@ -95985,8 +96001,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 111.8833
-# !latitude: 2.8667
+# !longitude: 111.8823
+# !latitude: 2.8670
 # state: Sarawak
 # admin1_quelle: Polygon
 Kuala Oya, Malaysia
@@ -103945,10 +103961,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 109.3333
-# !latitude: -0.0167
+# !longitude: 109.337000
+# !latitude: -0.021000
 # state: Kalimantan Barat
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -0.0167/109.3333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Pontianak, Indonesia
 +07:00 :Asia/Jakarta
 0.8000 meters
@@ -121981,10 +121999,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 111.3333
-# !latitude: -6.7167
+# !longitude: 111.334400
+# !latitude: -6.699400
 # state: Jawa Tengah
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -6.7167/111.3333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Rembang, Indonesia
 +07:00 :Asia/Jakarta
 0.7000 meters
@@ -132263,10 +132283,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 122.2167
-# !latitude: -8.6500
+# !longitude: 122.219800
+# !latitude: -8.614400
 # state: Nusa Tenggara Timur
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -8.6500/122.2167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Maumere, Indonesia
 +08:00 :Asia/Makassar
 1.3000 meters
@@ -133817,12 +133839,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 125.5667
-# !latitude: -8.5500
+# !longitude: 125.578000
+# !latitude: -8.545000
 # state: Dili
 # admin1_quelle: Polygon
 # note: 20260906 country "Indonesia" -> "Timor-Leste" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Nusa Tenggara Timur" -> "Dili".
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -8.5500/125.5667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Dili, Timor-Leste
 +09:00 :Asia/Jayapura
 1.3500 meters
@@ -135565,10 +135589,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 132.7167
-# !latitude: -5.6333
+# !longitude: 132.741500
+# !latitude: -5.616900
 # state: Maluku
 # admin1_quelle: Ufer 1.9 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -5.6333/132.7167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Tual, Indonesia
 +09:00 :Asia/Jayapura
 1.2000 meters
@@ -136147,10 +136173,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 129.8833
-# !latitude: -4.5333
+# !longitude: 129.894700
+# !latitude: -4.527000
 # state: Maluku
 # admin1_quelle: Ufer 1.7 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -4.5333/129.8833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Banda Harbour (Naira), Indonesia
 +09:00 :Asia/Jayapura
 1.3000 meters
@@ -138475,10 +138503,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 127.3833
-# !latitude: 0.7833
+# !longitude: 127.389000
+# !latitude: 0.814000
 # state: Maluku Utara
 # admin1_quelle: Ufer 1.4 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 0.7833/127.3833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ternate, Indonesia
 +09:00 :Asia/Jayapura
 0.9000 meters
@@ -143519,10 +143549,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 134.0833
-# !latitude: -0.8667
+# !longitude: 134.076700
+# !latitude: -0.869700
 # state: Papua Barat
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -0.8667/134.0833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Manokwari, Indonesia
 +09:00 :Asia/Jayapura
 1.1000 meters
@@ -151473,10 +151505,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 140.3833
-# !latitude: -8.4833
+# !longitude: 140.380000
+# !latitude: -8.479000
 # state: Papua
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -8.4833/140.3833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Merauke, Indonesia
 +09:00 :Asia/Jayapura
 3.3000 meters
@@ -157873,10 +157907,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 105.7500
-# !latitude: 18.7667
+# !longitude: 105.759000
+# !latitude: 18.764700
 # province: Nghe An
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 18.7667/105.7500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cua Hoi, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 1.4500 meters
@@ -159037,10 +159073,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 106.6667
-# !latitude: 20.8667
+# !longitude: 106.671400
+# !latitude: 20.868500
 # province: Hai Phong
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 20.8667/106.6667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Haiphong, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 1.9000 meters

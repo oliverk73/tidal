@@ -301727,10 +301727,12 @@ x 0 0
 # sonel_tg_id: 2913
 # utide: period=2024-12-31..2026-12-31 r2=0.6791 rms=0.0860m const=68
 # !units: meters
-# !longitude: 129.383333
-# !latitude: 35.500000
+# !longitude: 129.387300
+# !latitude: 35.501800
 # region: Ulsan
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 35.5000/129.3833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ulsan, South Korea
 +00:00 :Asia/Seoul
 0.3332 meters
@@ -335553,10 +335555,12 @@ x 0 0
 # shom_code: COTONOU
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9986 rms=0.0146m const=59
 # !units: meters
-# !longitude: 2.4333
-# !latitude: 6.3500
+# !longitude: 2.433000
+# !latitude: 6.350000
 # region: Littoral
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 6.3500/2.4333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cotonou, Benin
 +00:00 :UTC
 0.8969 meters
@@ -347461,10 +347465,12 @@ x 0 0
 # shom_code: LE_LEGUE_BOUEE
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9979 rms=0.1193m const=59
 # !units: meters
-# !longitude: -2.6833
-# !latitude: 48.5667
+# !longitude: -2.683300
+# !latitude: 48.566600
 # region: Côtes-d'Armor
 # admin1_quelle: Ufer 2.4 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 48.5667/-2.6833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Le Légué (Bouée), France
 +00:00 :UTC
 6.4588 meters
@@ -351948,10 +351954,12 @@ x 0 0
 # psmsl_id: 1950
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9979 rms=0.1097m const=59
 # !units: meters
-# !longitude: -3.1000
-# !latitude: 48.7833
+# !longitude: -3.098600
+# !latitude: 48.790700
 # region: Côtes-d'Armor
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 48.7833/-3.1000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Lézardrieux, France
 +00:00 :UTC
 5.8971 meters
@@ -361515,10 +361523,12 @@ x 0 0
 # shom_code: PORT-NAVALO
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9987 rms=0.0411m const=59
 # !units: meters
-# !longitude: -2.9167
-# !latitude: 47.5500
+# !longitude: -2.916600
+# !latitude: 47.549900
 # region: Morbihan
 # admin1_quelle: Ufer 1.1 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 47.5500/-2.9167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Port-Navalo, France
 +00:00 :UTC
 3.0478 meters
@@ -366990,10 +367000,12 @@ x 0 0
 # shom_code: SAINT-GERMAIN-SUR-AY
 # utide: pts=103680 period=2025-04-20..2026-04-14 r2=0.9976 rms=0.1328m const=59
 # !units: meters
-# !longitude: -1.6667
-# !latitude: 49.2000
+# !longitude: -1.666700
+# !latitude: 49.199900
 # region: Manche
 # admin1_quelle: Ufer 3.7 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 49.2000/-1.6667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Saint-Germain-sur-Ay, France
 +00:00 :UTC
 6.4215 meters
@@ -398008,12 +398020,14 @@ x 0 0
 # sonel_tg_id: 2449
 # utide: period=2025-12-31..2026-12-31 r2=0.9998 rms=0.0231m const=68
 # !units: meters
-# !longitude: 118.066667
+# !longitude: 118.067000
 # !latitude: 24.450000
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 24.4500/118.0667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Xiamen, Fujian, China
 +00:00 :UTC
 3.5225 meters
@@ -466481,10 +466495,12 @@ x 0 0
 # utide: period=2024-12-31..2026-04-18 r2=0.8399 rms=0.2820m const=68
 # bst_fix: 20260610 refit, Rohzeiten als festes UTC+1 (tidetimes publiziert ganzjaehrig BST)
 # !units: meters
-# !longitude: -2.966667
-# !latitude: 58.983333
+# !longitude: -2.960258
+# !latitude: 58.985443
 # region: Scotland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 58.9833/-2.9667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Kirkwall, Scotland, United Kingdom
 +00:00 :Europe/London
 1.7375 meters
@@ -660266,10 +660282,12 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0218m const=68
 # !units: meters
-# !longitude: 120.3000
-# !latitude: 36.0833
+# !longitude: 120.314100
+# !latitude: 36.083500
 # region: Shandong
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 36.0833/120.3000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Qingdao, Shandong, China
 +00:00 :Asia/Shanghai
 2.3878 meters
@@ -660460,10 +660478,12 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9984 rms=0.0346m const=68
 # !units: meters
-# !longitude: 110.4000
-# !latitude: 21.1667
+# !longitude: 110.407700
+# !latitude: 21.166700
 # region: Guangdong
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 21.1667/110.4000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Zhanjiang, Guangdong, China
 +00:00 :Asia/Shanghai
 2.1960 meters
@@ -661624,10 +661644,12 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9945 rms=0.0314m const=68
 # !units: meters
-# !longitude: 115.3667
-# !latitude: 22.7667
+# !longitude: 115.347900
+# !latitude: 22.758100
 # region: Guangdong
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 22.7667/115.3667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Shanwei, Guangdong, China
 +00:00 :Asia/Shanghai
 0.9972 meters
@@ -662206,10 +662228,12 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9980 rms=0.0512m const=68
 # !units: meters
-# !longitude: 109.0833
-# !latitude: 21.4833
+# !longitude: 109.083000
+# !latitude: 21.483000
 # region: Guangxi
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 21.4833/109.0833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Beihai, Guangxi, China
 +00:00 :Asia/Shanghai
 2.5488 meters
@@ -662982,10 +663006,12 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0312m const=68
 # !units: meters
-# !longitude: 121.6167
-# !latitude: 32.1333
+# !longitude: 121.603100
+# !latitude: 32.101600
 # region: Jiangsu
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 32.1333/121.6167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Lusi, Jiangsu, China
 +00:00 :Asia/Shanghai
 3.1000 meters
@@ -722603,10 +722629,12 @@ x 0 0
 # patron: Puerto Belgrano (Punta Ala)
 # nivel_medio_m: 1.94  amplitud_media_m: 2.41
 # !units: meters
-# !longitude: -61.8167
-# !latitude: -38.9833
+# !longitude: -61.797800
+# !latitude: -38.993500
 # province: Buenos Aires
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -38.9833/-61.8167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Punta Tejada, Buenos Aires, Argentina
 +00:00 :UTC
 1.9196 meters

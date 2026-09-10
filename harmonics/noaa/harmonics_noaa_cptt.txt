@@ -40734,10 +40734,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 154.0833
-# !latitude: 48.7833
+# !longitude: 154.083000
+# !latitude: 48.783300
 # region: Sakhalin
 # admin1_quelle: Ufer 1.3 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 48.7833/154.0833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Shiashkotan (Southeast coast), Kuril Islands, Russia
 +00:00 :Asia/Srednekolymsk
 0.9144 meters
@@ -47041,10 +47043,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 140.4333
-# !latitude: 41.5667
+# !longitude: 140.432000
+# !latitude: 41.562100
 # region: Hokkaido
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 41.5667/140.4333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Wakimoto, Hokkaido, Japan
 +00:00 :Asia/Tokyo
 0.5486 meters
@@ -48396,11 +48400,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.1667
-# !latitude: 41.4000
+# !longitude: 141.167900
+# !latitude: 41.410800
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Aomori
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 41.4000/141.1667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ohata, Aomori, Japan
 +09:00 :Asia/Tokyo
 0.7010 meters
@@ -48781,10 +48787,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 141.4000
-# !latitude: 41.0833
+# !longitude: 141.394800
+# !latitude: 41.102800
 # region: Aomori
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 41.0833/141.4000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Tomari, Aomori, Japan
 +00:00 :Asia/Tokyo
 0.8839 meters
@@ -50238,197 +50246,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0001  56.12
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Japan
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 477
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Kamaisi, Iwate, Japan (no.477). M2=0.21 S2=0.02 k=0.69 dt=+46min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 140.8333
-# !latitude: 35.7333
-# region: Chiba
-# admin1_quelle: Name
-Choshi Ko (inside), Chiba, Japan
-+00:00 :Asia/Tokyo
-0.5791 meters
-J1              0.0076  53.69
-K1              0.1607  38.10
-K2              0.0066  242.60
-L2              0.0073  227.05
-M1              0.0072  296.95
-M2              0.2098  210.01
-M3              0.0040  78.20
-M4              0.0013  303.40
-M6              0.0001  146.60
-M8              0.0001  1.33
-N2              0.0265  192.57
-x 0 0
-O1              0.1304  21.23
-OO1             0.0045  75.24
-P1              0.0520  35.83
-Q1              0.0272  11.36
-x 0 0
-R2              0.0005  301.75
-S1              0.0039  229.07
-S2              0.0232  247.70
-S4              0.0006  41.14
-x 0 0
-T2              0.0057  244.59
-LDA2            0.0021  214.00
-MU2             0.0042  224.46
-NU2             0.0056  191.11
-RHO1            0.0051  12.48
-x 0 0
-x 0 0
-MN4             0.0003  168.08
-MS4             0.0009  89.81
-x 0 0
-MF              0.0034  151.06
-MSF             0.0017  192.65
-MM              0.0058  154.12
-SA              0.0967  177.79
-SSA             0.0241  236.79
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0003  60.34
-x 0 0
-EPS2            0.0010  219.87
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0015  153.97
-SIG1            0.0045  184.49
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0001  91.19
 x 0 0
 x 0 0
 x 0 0
@@ -55470,10 +55287,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 135.0833
-# !latitude: 33.8833
+# !longitude: 135.080600
+# !latitude: 33.888600
 # region: Wakayama
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 33.8833/135.0833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Mio, Wakayama, Japan
 +00:00 :Asia/Tokyo
 1.0973 meters
@@ -57190,10 +57009,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 135.0833
-# !latitude: 33.9167
+# !longitude: 135.082200
+# !latitude: 33.919200
 # region: Wakayama
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 33.9167/135.0833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Hii Wan, Wakayama, Japan
 +00:00 :Asia/Tokyo
 1.0668 meters
@@ -61015,11 +60836,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 133.8000
-# !latitude: 34.4333
+# !longitude: 133.800300
+# !latitude: 34.435600
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Okayama
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 34.4333/133.8000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Shimotsui, Okayama, Japan
 +09:00 :Asia/Tokyo
 1.7069 meters
@@ -66775,11 +66598,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 131.5167
-# !latitude: 33.6833
+# !longitude: 131.513300
+# !latitude: 33.672700
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Oita
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 33.6833/131.5167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Kakaji, Oita, Japan
 +09:00 :Asia/Tokyo
 1.8593 meters
@@ -67729,198 +67554,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Japan
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 747
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Moji, Japan (no.747). M2=0.70 S2=0.16 k=1.05 dt=+6min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 130.9167
-# !latitude: 33.9500
-# fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
-# region: Yamaguchi
-# admin1_quelle: Name
-Isakimachi, Yamaguchi, Japan
-+09:00 :Asia/Tokyo
-1.2497 meters
-J1              0.0111  272.25
-K1              0.1719  239.33
-K2              0.0445  296.31
-L2              0.0255  263.87
-x 0 0
-M2              0.7035  261.09
-M3              0.0100  345.81
-M4              0.0454  358.99
-M6              0.0095  177.29
-x 0 0
-N2              0.1258  251.19
-x 0 0
-O1              0.1460  216.02
-OO1             0.0073  303.30
-P1              0.0564  240.66
-Q1              0.0315  200.33
-x 0 0
-R2              0.0040  256.74
-x 0 0
-S2              0.1602  300.39
-S4              0.0038  42.74
-x 0 0
-T2              0.0218  294.32
-LDA2            0.0100  256.35
-MU2             0.0193  283.68
-NU2             0.0242  249.46
-RHO1            0.0065  203.72
-MK3             0.0080  296.21
-x 0 0
-MN4             0.0148  338.21
-MS4             0.0331  39.20
-x 0 0
-MF              0.0057  194.65
-MSF             0.0128  212.76
-MM              0.0061  163.57
-x 0 0
-SSA             0.0103  14.82
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-BET1            0.0005  210.49
-CHI1            0.0013  209.75
-H1              0.0004  131.19
-H2              0.0003  125.43
-x 0 0
-ETA2            0.0048  312.47
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MK4             0.0052  31.56
-MKS2            0.0057  44.81
-x 0 0
-EPS2            0.0057  275.50
-MO3             0.0035  119.98
-x 0 0
-TAU1            0.0073  248.57
-x 0 0
-MSK6            0.0039  255.04
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0101  225.64
-OP2             0.0044  256.41
-x 0 0
-PHI1            0.0021  212.73
-x 0 0
-PI1             0.0033  243.36
-x 0 0
-PSI1            0.0040  238.10
-x 0 0
-x 0 0
-SIG1            0.0033  167.38
-SK3             0.0067  174.98
-x 0 0
-SN4             0.0023  353.49
-x 0 0
-SO1             0.0093  342.53
-SO3             0.0007  280.57
-THE1            0.0019  225.99
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Japan
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 757
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Moji, Japan (no.757). M2=0.34 S2=0.08 k=0.52 dt=+42min.
 # date_imported: 20260630
@@ -68119,11 +67752,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 130.9000
-# !latitude: 34.3167
+# !longitude: 130.897200
+# !latitude: 34.317000
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Yamaguchi
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 34.3167/130.9000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Kottoi, Yamaguchi, Japan
 +09:00 :Asia/Tokyo
 0.7315 meters
@@ -68895,207 +68530,6 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# noaa_fussnote: 12
-# country: Japan
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 769
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Quarry Bay, Hong Kong, China (no.769). M2=0.09 S2=0.01 k=0.26 dt=+166min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: 132.0667
-# !latitude: 34.9167
-# note: 20260903 Phasen um -1.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+9.00 gegen +8.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Shimane
-# admin1_quelle: Name
-# note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
-# note: -- gemeint ist Hong Kong (Quarry Bay); der Import hatte per
-# note: -- Namensgleichheit "Tai O, Hong Kong, China" genommen.
-# note: -- Neu uebertragen, Zonendifferenz des Buches -1.00 h.
-# note: -- Siehe py/noaa_referenz_verwechslung.py.
-Hamada Ko (Tono Ura entrance), Shimane, Japan
-+00:00 :Asia/Tokyo
-0.2743 meters
-J1              0.0014  251.90
-K1              0.0932  204.22
-K2              0.0027  119.66
-L2              0.0010  36.54
-x 0 0
-M2              0.0945  89.56
-M3              0.0031  49.56
-M4              0.0040  275.80
-M6              0.0000  311.23
-M8              0.0001  99.82
-N2              0.0224  76.15
-x 0 0
-O1              0.0753  160.46
-OO1             0.0007  288.11
-P1              0.0266  194.68
-Q1              0.0149  147.34
-x 0 0
-R2              0.0005  280.55
-x 0 0
-S2              0.0077  111.66
-S4              0.0002  347.81
-x 0 0
-T2              0.0026  100.21
-LDA2            0.0006  10.71
-MU2             0.0106  56.50
-NU2             0.0021  73.94
-RHO1            0.0045  152.68
-MK3             0.0012  353.76
-x 0 0
-MN4             0.0019  245.24
-MS4             0.0022  306.60
-x 0 0
-MF              0.0153  141.45
-MSF             0.0172  219.70
-MM              0.0083  31.33
-x 0 0
-SSA             0.0536  58.08
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-ALP1            0.0009  283.56
-BET1            0.0018  169.22
-CHI1            0.0020  201.40
-H1              0.0018  109.72
-H2              0.0006  281.29
-x 0 0
-x 0 0
-x 0 0
-UPS1            0.0005  152.79
-x 0 0
-x 0 0
-MK4             0.0007  302.41
-MKS2            0.0011  151.18
-x 0 0
-x 0 0
-MO3             0.0006  330.02
-x 0 0
-TAU1            0.0050  349.62
-x 0 0
-MSK6            0.0001  170.52
-MSM             0.0028  353.53
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-OP2             0.0010  255.71
-x 0 0
-PHI1            0.0005  65.69
-x 0 0
-PI1             0.0024  189.92
-x 0 0
-PSI1            0.0013  123.50
-x 0 0
-x 0 0
-SIG1            0.0019  290.58
-SK3             0.0011  255.05
-x 0 0
-SN4             0.0004  260.53
-x 0 0
-x 0 0
-SO3             0.0008  225.41
-THE1            0.0005  258.52
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0009  300.10
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0013  277.98
-x 0 0
-x 0 0
-N4              0.0006  224.25
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
 # noaa_fussnote: 15
 # country: Japan
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
@@ -69489,11 +68923,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 131.6167
-# !latitude: 32.3333
+# !longitude: 131.614800
+# !latitude: 32.337900
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Miyazaki
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 32.3333/131.6167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Mimitsu, Miyazaki, Japan
 +09:00 :Asia/Tokyo
 1.0973 meters
@@ -69682,11 +69118,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 131.4667
-# !latitude: 31.7500
+# !longitude: 131.475800
+# !latitude: 31.757900
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Miyazaki
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 31.7500/131.4667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Uchiumi, Miyazaki, Japan
 +09:00 :Asia/Tokyo
 1.1582 meters
@@ -73127,10 +72565,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 129.5833
-# !latitude: 33.2167
+# !longitude: 129.582100
+# !latitude: 33.216400
 # region: Nagasaki
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 33.2167/129.5833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Kusudomari, Nagasaki, Japan
 +09:00 :Asia/Tokyo
 1.6459 meters
@@ -75615,11 +75055,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 130.6833
-# !latitude: 33.9333
+# !longitude: 130.683100
+# !latitude: 33.933600
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Fukuoka
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 33.9333/130.6833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Iwaya, Fukuoka, Japan
 +09:00 :Asia/Tokyo
 0.8230 meters
@@ -111611,10 +111053,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 121.5833
-# !latitude: 32.1333
+# !longitude: 121.603100
+# !latitude: 32.101600
 # region: Jiangsu
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 32.1333/121.5833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Lusi, Jiangsu, China
 +00:00 :Asia/Shanghai
 3.1090 meters
@@ -147074,14 +146518,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 100.3500
-# !latitude: -0.9667
+# !longitude: 100.368500
+# !latitude: -1.001900
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Sumatra
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -0.9667/100.3500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Padang, Sumatra, Indonesia
 +00:00 :Asia/Jakarta
 0.7010 meters
@@ -149219,14 +148665,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 96.1333
-# !latitude: 4.1333
+# !longitude: 96.131800
+# !latitude: 4.127200
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Sumatra
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 4.1333/96.1333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Meulaboh, Sumatra, Indonesia
 +00:00 :Asia/Jakarta
 0.3048 meters
@@ -149995,10 +149443,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 110.4167
-# !latitude: -6.9667
+# !longitude: 110.420000
+# !latitude: -6.947700
 # state: Java
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -6.9667/110.4167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Semarang, Java, Indonesia
 +00:00 :Asia/Jakarta
 0.6096 meters
@@ -154828,14 +154278,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 124.8667
-# !latitude: -9.0000
+# !longitude: 124.859100
+# !latitude: -8.993900
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Nusa Tenggara Timur
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -9.0000/124.8667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Atapupu, Indonesia
 +00:00 :Asia/Makassar
 1.3106 meters
@@ -157932,10 +157384,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.8333
-# !latitude: 1.5000
+# !longitude: 124.838300
+# !latitude: 1.497900
 # state: Sulawesi
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 1.5000/124.8333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Manado, Sulawesi, Indonesia
 +00:00 :Asia/Makassar
 1.1887 meters
@@ -158696,12 +158150,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 117.8833
-# !latitude: 4.2500
+# !longitude: 117.884500
+# !latitude: 4.240900
 # state: Sabah
 # admin1_quelle: Ufer 1.3 km
 # note: 20260906 country "Indonesia" -> "Malaysia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Kalimantan Timur" -> "Sabah".
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 4.2500/117.8833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Tawau, Malaysia
 +00:00 :Asia/Kuching
 1.5240 meters
@@ -164648,8 +164104,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.3000
-# !latitude: 3.5167
+# !longitude: 113.3021
+# !latitude: 3.5187
 # note: 20260907 Land im Namen berichtigt (vorher "Kuala Similajau, Indonesia"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
 Kuala Similajau, Malaysia
@@ -164839,8 +164295,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.7000
-# !latitude: 3.9667
+# !longitude: 113.7051
+# !latitude: 3.9660
 # note: 20260907 Land im Namen berichtigt (vorher "Kuala Niah, Indonesia"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
 Kuala Niah, Malaysia
@@ -165034,7 +164490,7 @@ x 0 0
 # !latitude: 5.0000
 # note: 20260906 country "Indonesia" -> "Brunei" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Brunei and Muara".
-Sapo Point, Brunei Bay, Brunei
+Tanjung Sapo, Brunei
 +00:00 :Asia/Brunei
 1.4021 meters
 J1              0.0151  221.41
@@ -184894,10 +184350,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 118.7167
-# !latitude: 9.7333
+# !longitude: 118.735800
+# !latitude: 9.744900
 # region: Palawan
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 9.7333/118.7167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Puerto Princesa, Palawan, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
@@ -195208,10 +194666,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.8000
-# !latitude: 10.6833
+# !longitude: 124.795944
+# !latitude: 10.675167
 # region: Leyte
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 10.6833/124.8000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Baybay, Leyte, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
@@ -197882,10 +197342,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.8833
-# !latitude: 11.7833
+# !longitude: 124.878639
+# !latitude: 11.775278
 # region: Samar
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 11.7833/124.8833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Catbalogan, Samar, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
@@ -200174,10 +199636,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.7167
-# !latitude: 11.0333
+# !longitude: 125.712833
+# !latitude: 11.043222
 # region: Eastern Samar
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 11.0333/125.7167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Guiuan, Eastern Samar, Philippines
 +00:00 :Asia/Manila
 0.3353 meters
@@ -219457,201 +218921,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: French Polynesia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 2819
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Pago Pago, American Samoa (no.2819). M2=0.51 S2=0.03 k=0.41 dt=-210min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: -140.1000
-# !latitude: -8.9333
-# note: 20260903 Phasen um -1.50 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (-9.50 gegen -11.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Marquesas Islands
-# admin1_quelle: Ufer 1.6 km
-Taio Hae Bay, Nuku Hiva Island, French Polynesia
-+00:00 :Pacific/Marquesas
-0.7315 meters
-J1              0.0041  346.40
-K1              0.0574  6.82
-K2              0.0077  3.94
-L2              0.0082  34.71
-x 0 0
-M2              0.5086  35.12
-M3              0.0041  162.49
-M4              0.0041  151.24
-x 0 0
-x 0 0
-N2              0.1436  18.44
-x 0 0
-O1              0.0410  357.61
-x 0 0
-P1              0.0164  358.53
-Q1              0.0082  346.52
-x 0 0
-x 0 0
-S1              0.0041  165.32
-S2              0.0309  15.15
-x 0 0
-x 0 0
-T2              0.0041  7.95
-x 0 0
-MU2             0.0246  0.19
-NU2             0.0287  18.97
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MF              0.0300  18.32
-x 0 0
-MM              0.0200  14.58
-SA              0.0400  204.80
-SSA             0.0100  103.69
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: French Polynesia
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2825
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Pago Pago, American Samoa (no.2825). M2=0.30 S2=0.03 k=0.24 dt=-312min.
 # date_imported: 20260630
@@ -220048,14 +219317,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -159.7667
-# !latitude: -21.2000
+# !longitude: -159.775000
+# !latitude: -21.207000
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-10.00 gegen -11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Rarotonga
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -21.2000/-159.7667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Avarua, Rarotonga, Cook Islands
 +00:00 :Pacific/Rarotonga
 0.3048 meters
@@ -222658,197 +221929,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0002  78.27
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Kiribati
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 2907
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Pago Pago, American Samoa (no.2907). M2=0.40 S2=0.05 k=0.32 dt=-21min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: -171.7167
-# !latitude: -2.8000
-# region: Kiribati
-# admin1_quelle: Ufer 1.6 km
-Canton Island, Kiribati
-+00:00 :Pacific/Kanton
-0.6401 meters
-J1              0.0032  58.75
-K1              0.0449  76.64
-K2              0.0116  143.57
-L2              0.0064  171.77
-x 0 0
-M2              0.3973  169.66
-M3              0.0032  4.28
-M4              0.0032  60.31
-x 0 0
-x 0 0
-N2              0.1122  150.45
-x 0 0
-O1              0.0320  62.32
-x 0 0
-P1              0.0128  67.96
-Q1              0.0064  48.71
-x 0 0
-x 0 0
-S1              0.0032  234.95
-S2              0.0463  154.40
-x 0 0
-x 0 0
-T2              0.0032  147.01
-x 0 0
-MU2             0.0192  130.01
-NU2             0.0224  151.32
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MF              0.0300  23.42
-x 0 0
-MM              0.0200  17.11
-SA              0.0400  204.99
-SSA             0.0100  104.07
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -235175,201 +234255,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Vanuatu
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 3083
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Yokohama (Shinko), Kanagawa, Japan (no.3083). M2=0.42 S2=0.05 k=0.96 dt=+26min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 167.1667
-# !latitude: -15.5167
-# note: 20260903 Phasen um -2.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Pekoa Chan
-# admin1_quelle: Name
-Espiritu Santo Island, Pekoa Chan, Vanuatu
-+00:00 :Pacific/Efate
-0.8534 meters
-J1              0.0119  25.36
-K1              0.2356  15.02
-K2              0.0145  210.16
-L2              0.0142  195.76
-M1              0.0092  274.11
-M2              0.4216  187.57
-M3              0.0090  23.66
-M4              0.0058  251.66
-M6              0.0003  195.02
-M8              0.0001  338.79
-N2              0.0638  184.56
-x 0 0
-O1              0.1846  358.12
-OO1             0.0051  59.41
-P1              0.0780  12.71
-Q1              0.0379  350.39
-x 0 0
-R2              0.0045  28.30
-S1              0.0078  254.96
-S2              0.0531  213.98
-S4              0.0029  0.84
-x 0 0
-T2              0.0105  192.31
-LDA2            0.0031  189.41
-MU2             0.0120  201.85
-NU2             0.0128  183.24
-RHO1            0.0067  347.01
-x 0 0
-x 0 0
-MN4             0.0004  150.09
-MS4             0.0019  330.50
-x 0 0
-MF              0.0071  111.04
-MSF             0.0060  335.00
-MM              0.0075  95.26
-SA              0.0933  162.12
-SSA             0.0061  278.92
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0048  310.05
-x 0 0
-EPS2            0.0035  195.49
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0047  81.88
-SIG1            0.0055  166.28
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0004  355.02
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Vanuatu
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 3085
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Yokohama (Shinko), Kanagawa, Japan (no.3085). M2=0.44 S2=0.06 k=1.00 dt=-18min.
 # date_imported: 20260630
@@ -239206,10 +238091,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 147.1333
-# !latitude: -9.4833
+# !longitude: 147.140000
+# !latitude: -9.478000
 # province: National Capital District
 # admin1_quelle: Ufer 1.4 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -9.4833/147.1333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Port Moresby, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 1.4630 meters
@@ -243432,10 +242319,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 145.4000
-# !latitude: -15.0833
+# !longitude: 145.374000
+# !latitude: -15.090700
 # state: Queensland
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -15.0833/145.4000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Low Wooded Isle, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.4630 meters
@@ -247634,10 +246523,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 153.5833
-# !latitude: -28.8667
+# !longitude: 153.576900
+# !latitude: -28.869600
 # state: New South Wales
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -28.8667/153.5833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Ballina, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.7620 meters
@@ -247825,10 +246716,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 153.3667
-# !latitude: -29.4167
+# !longitude: 153.351800
+# !latitude: -29.416900
 # state: New South Wales
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -29.4167/153.3667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Iluka, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.9144 meters
@@ -248016,12 +246909,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 167.9333
-# !latitude: -29.0667
+# !longitude: 167.950000
+# !latitude: -29.067000
 # note: 20260903 Phasen um -1.50 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.50 gegen +10.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -29.0667/167.9333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Norfolk Island, Australia
 +10:00 :Pacific/Norfolk
 0.8839 meters
@@ -248785,11 +247680,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 151.7833
-# !latitude: -32.9333
+# !longitude: 151.788900
+# !latitude: -32.923800
 # fixes: Referenz korrigiert: Fort Denison (Sydney NSW) statt Sydney Nova Scotia, 2026-07-19
 # state: New South Wales
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -32.9333/151.7833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Newcastle, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.9449 meters
@@ -249169,11 +248066,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 149.9000
-# !latitude: -37.0667
+# !longitude: 149.908300
+# !latitude: -37.071200
 # fixes: Referenz korrigiert: Fort Denison (Sydney NSW) statt Sydney Nova Scotia, 2026-07-19
 # state: New South Wales
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -37.0667/149.9000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Eden, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.7620 meters
@@ -249553,10 +248452,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 144.7833
-# !latitude: -40.6000
+# !longitude: 144.779600
+# !latitude: -40.602300
 # state: Tasmania
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -40.6000/144.7833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Stack Island, Tasmania, Australia
 +10:00 :Australia/Hobart
 1.2497 meters
@@ -249744,10 +248645,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 146.3833
-# !latitude: -41.1500
+# !longitude: 146.366800
+# !latitude: -41.165200
 # state: Tasmania
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -41.1500/146.3833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Devonport, Tasmania, Australia
 +10:00 :Australia/Hobart
 1.6459 meters
@@ -250519,10 +249422,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 146.5167
-# !latitude: -38.9167
+# !longitude: 146.513200
+# !latitude: -38.913000
 # state: Victoria
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -38.9167/146.5167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Rabbit Island, Victoria, Australia
 +10:00 :Australia/Melbourne
 1.2192 meters
@@ -251474,10 +250379,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 143.0000
-# !latitude: -38.6333
+# !longitude: 142.991500
+# !latitude: -38.621100
 # state: Victoria
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -38.6333/143.0000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Port Campbell, Victoria, Australia
 +10:00 :Australia/Melbourne
 0.5182 meters
@@ -251665,10 +250572,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 142.4833
-# !latitude: -38.4000
+# !longitude: 142.476400
+# !latitude: -38.402300
 # state: Victoria
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -38.4000/142.4833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Warrnambool, Victoria, Australia
 +10:00 :Australia/Melbourne
 0.6706 meters
@@ -252047,10 +250956,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 139.8500
-# !latitude: -36.8333
+# !longitude: 139.847900
+# !latitude: -36.825700
 # state: South Australia
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -36.8333/139.8500,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Kingston, South Australia, Australia
 +09:30 :Australia/Adelaide
 0.9754 meters
@@ -252238,10 +251149,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 138.2167
-# !latitude: -35.5167
+# !longitude: 138.217000
+# !latitude: -35.511000
 # state: South Australia
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -35.5167/138.2167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Second Valley, South Australia, Australia
 +09:30 :Australia/Adelaide
 0.9449 meters
@@ -258557,14 +257470,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 158.9667
-# !latitude: -54.5167
+# !longitude: 158.967000
+# !latitude: -54.483000
 # note: 20260903 Phasen um +2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +13.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Macquarie Island
 # admin1_quelle: Ufer 3.1 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -54.5167/158.9667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Macquarie Island, Australia
 -11:00 :Antarctica/Macquarie
 0.5486 meters
@@ -259530,14 +258445,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 92.7667
-# !latitude: 11.6833
+# !longitude: 92.733100
+# !latitude: 11.674600
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.50 gegen +6.50 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Andaman and Nicobar
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 11.6833/92.7667,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Port Blair, Andaman and Nicobar, India
 +06:30 :Asia/Kolkata
 1.0668 meters
@@ -265296,10 +264213,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 84.9167
-# !latitude: 19.2667
+# !longitude: 84.948300
+# !latitude: 19.288900
 # state: Odisha
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 19.2667/84.9167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Gopalpur, Odisha, India
 +05:30 :Asia/Kolkata
 0.9754 meters
@@ -272745,8 +271664,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 54.5167
-# !latitude: 26.2500
+# !longitude: 54.517000
+# !latitude: 26.250000
 # note: 20260903 Phasen um +4.50 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+3.50 gegen +8.00 nach dem Buch)
@@ -272758,6 +271677,8 @@ x 0 0
 # note: -- Namensgleichheit "Tai O, Hong Kong, China" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +4.50 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 26.2500/54.5167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Jazireh-ye Forur, Iran
 +00:00 :Asia/Tehran
 1.2497 meters
@@ -277572,10 +276493,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 34.2833
-# !latitude: 26.1000
+# !longitude: 34.283000
+# !latitude: 26.100000
 # region: Al Bahr al Ahmar
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 26.1000/34.2833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Al Qusayr, Egypt
 +02:00 :Africa/Cairo
 0.4572 meters
@@ -283335,10 +282258,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 35.4333
-# !latitude: -21.6500
+# !longitude: 35.433000
+# !latitude: -21.650000
 # province: Inhambane
 # admin1_quelle: Ufer 2.6 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -21.6500/35.4333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Bazaruto, Mozambique
 +02:00 :Africa/Maputo
 2.4384 meters
@@ -286779,14 +285704,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 57.4833
-# !latitude: -20.1500
+# !longitude: 57.483000
+# !latitude: -20.150000
 # note: 20260903 Phasen um +5.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Port Louis city
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -20.1500/57.4833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Port Louis, Mauritius
 +00:00 :Indian/Mauritius
 0.6096 meters

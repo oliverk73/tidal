@@ -67,7 +67,7 @@ import unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import (load_records, active_files, km, curve_diff,   # noqa: E402
-                          namekey, ROOT)
+                          namekey, ROOT, zell_km)
 from transfer_zonen import zeitversatz                                  # noqa: E402
 
 LOCK = os.path.join(ROOT, 'harmonics/help/positions_locked.csv')
@@ -203,11 +203,18 @@ def main(argv):
                         veto[0] += 1
                         continue
                     d = km(a, b)
+                    # Gemessen wird von der Unschaerfezelle aus: eine
+                    # Rasterposition (ganze Bogenminute, Buchwert) sagt nur
+                    # "irgendwo in dieser Minute". "Hamada Ko (Tono Ura
+                    # entrance)" steht als 34 55'/132 04' 2.17 km vom JMA-Pegel
+                    # und fiel an der 2-km-Grenze durch; von der Zelle aus
+                    # sind es 1.25 km (10.09.2026).
+                    dz = zell_km(a, b)
                     rel = curve_diff(a, b)[1]
                     spur = None
-                    if d <= NAH_KM and rel < GLEICH:
+                    if dz <= NAH_KM and rel < GLEICH:
                         spur = 'N'
-                    elif d <= NAH_KM and (a['abgeleitet'] or b['abgeleitet']):
+                    elif dz <= NAH_KM and (a['abgeleitet'] or b['abgeleitet']):
                         spur = 'H'
                     if spur:
                         u.union(i, j)

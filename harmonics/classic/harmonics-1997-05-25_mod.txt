@@ -4488,128 +4488,6 @@ x 0 0
 x 0 0
 #
 # 
-# Merged from harmonics.
-# This data set was submitted by Jean-Pierre LaPointe
-# (scipur@collegenotre-dame.qc.ca) 1996-11-29
-# The source was the Table des Marees des Grands Ports du Monde, No. 540,
-# from the Service Hydrographique et Oceanographique de la Marine - Paris,
-# B.P. 426, 29275 Brest Cedex.
-#
-# 
-# rel_pedigree: 1250000000 (Via LaPointe)
-# BEGIN HOT COMMENTS
-# country: Argentina
-# restriction: Non-commercial use only
-# datum: CD (SHN)
-# confidence: 10
-# !units: meters
-# !longitude: -65.2502
-# !latitude: -54.6408
-# province: Tierra del Fuego
-# admin1_quelle: Name
-Bahía Thetis, Tierra del Fuego, Argentina
--03:00 :America/Buenos_Aires
-2.1900 meters
-J1              0.0150   57.90
-K1              0.1830   42.00
-K2              0.0850  261.70
-L2              0.0350  237.00
-M1              0.0130   26.00
-M2              1.2670  212.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2460  187.00
-2N2             0.0330  162.00
-O1              0.1890   10.00
-OO1             0.0080   74.00
-P1              0.0610   39.60
-x 0 0
-2Q1             0.0050  338.30
-R2              0.0030  259.80
-x 0 0
-S2              0.3140  258.00
-x 0 0
-x 0 0
-T2              0.0190  256.20
-LDA2            0.0090  233.30
-MU2             0.0300  166.00
-NU2             0.0480  190.40
-RHO1            0.0070  356.30
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# 
 # BALLENAS BAY, B.C.S., MEXICO ----------- 26d43. 'N 113d34. 'W--(BLLNSBAY.TD4)
 # OLD DATA
 # IHO from US C&GS 36 days, 1890
@@ -24007,10 +23885,12 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: -10.8000
-# !latitude: 6.3333
+# !longitude: -10.800000
+# !latitude: 6.333000
 # region: Montserrado
 # admin1_quelle: Ufer 0.6 km
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 6.3333/-10.8000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Monrovia, Liberia
 +00:00 :Africa/Monrovia
 0.7300 meters
@@ -24621,7 +24501,7 @@ x 0 0
 # !latitude: 2.9064
 # state: Sarawak
 # admin1_quelle: Polygon
-Mukah, Malaysia
+Kuala Mukah, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.6100 meters
 J1              0.0270  354.80
@@ -42180,10 +42060,12 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: 139.6333
-# !latitude: 35.4000
+# !longitude: 139.633000
+# !latitude: 35.400000
 # region: Kanagawa
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 35.4000/139.6333,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Yokohama (Negishi), Kanagawa, Japan
 +09:00 :Asia/Tokyo
 1.1000 meters

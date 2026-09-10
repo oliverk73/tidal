@@ -150,6 +150,41 @@ def _num(line):
         return None
 
 
+def auf_raster(lat, lon):
+    """Steht die Position auf ganzen Bogenminuten -- ein Buchwert, +-0.93 km?
+
+    Die Toleranz muss die Schreibweise abdecken: 34 55' steht im Bestand
+    als 34.9167, und das sind 2095.002 Minuten, nicht 2095. Bis zum
+    10.09.2026 verlangte positionen_vereinen.py 1e-6 und erkannte damit
+    617 von 5501 Rasterpositionen; vierstellig geschriebene Buchwerte
+    galten als fein. Vier Dezimalen runden hoechstens 0.003 Minuten.
+    """
+    if lat is None or lon is None:
+        return False
+    la, lo = lat * 60.0, lon * 60.0
+    return abs(la - round(la)) < 0.0035 and abs(lo - round(lo)) < 0.0035
+
+
+def zell_km(a, b):
+    """Abstand einer freien Position zur Unschaerfezelle eines Buchwerts.
+
+    Eine Rasterposition sagt nur: irgendwo in der Bogenminute um diesen
+    Punkt (+-0.5'). Steht der andere Satz frei, wird deshalb vom Rand
+    dieser Zelle gemessen. Stehen BEIDE auf dem Raster, bleibt es beim
+    Punktabstand: rundet man denselben Punkt zweimal, landet man auf
+    derselben Minute -- zwei verschiedene Minuten heissen, dass die Buecher
+    verschiedene Positionen hatten.
+    """
+    ra, rb = auf_raster(a['lat'], a['lon']), auf_raster(b['lat'], b['lon'])
+    if ra == rb:
+        return km(a, b)
+    h = 0.5 / 60.0
+    dla = max(0.0, abs(a['lat'] - b['lat']) - h)
+    dlo = max(0.0, abs((b['lon'] - a['lon'] + 180.0) % 360.0 - 180.0) - h)
+    mitte = math.radians((a['lat'] + b['lat']) / 2)
+    return 6371 * math.radians(1) * math.hypot(dla, dlo * math.cos(mitte))
+
+
 def km(a, b):
     """Grosskreisabstand in km.
 

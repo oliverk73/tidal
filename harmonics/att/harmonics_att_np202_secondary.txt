@@ -83071,10 +83071,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -83.3833
-# !latitude: 14.0167
+# !longitude: -83.381900
+# !latitude: 14.042200
 # note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Atlántico Norte".
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 14.0167/-83.3833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Puerto Cabezas, Nicaragua
 +00:00 :America/Managua
 0.2100 meters
@@ -83265,12 +83267,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -83.1833
-# !latitude: 15.0000
+# !longitude: -83.167000
+# !latitude: 15.000000
 # note: 20260906 country "Central America" -> "Nicaragua" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Atlántico Norte".
 # note: 20260907 Land im Namen berichtigt (vorher "Cabo Gracias a Dios, Nicaragua"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 15.0000/-83.1833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Cabo Gracias a Dios, Honduras
 +00:00 :America/Tegucigalpa
 0.2000 meters
@@ -83461,10 +83465,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -85.9000
-# !latitude: 16.4833
+# !longitude: -85.915000
+# !latitude: 16.445000
 # note: 20260906 country "Central America" -> "Honduras" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Islas de la Bahía".
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 16.4833/-85.9000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Isla de Guanaja, Honduras
 +00:00 :America/Tegucigalpa
 0.2000 meters

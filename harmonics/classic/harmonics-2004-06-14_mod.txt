@@ -23600,10 +23600,12 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: feet
-# !longitude: -88.1833
-# !latitude: 17.5000
+# !longitude: -88.183000
+# !latitude: 17.500000
 # region: Belize
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 17.5000/-88.1833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Belize City, Belize
 -06:00 :America/Belize
 0.4080 feet
@@ -102602,10 +102604,12 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: 73.3833
-# !latitude: -53.0167
+# !longitude: 73.383000
+# !latitude: -53.017000
 # note: 20260907 Land im Namen berichtigt (vorher "Heard Island, Antarctica"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -53.0167/73.3833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Heard Island, Australia
 +06:00 :Etc/GMT-6
 0.8320 meters
@@ -206103,10 +206107,12 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: 174.7833
-# !latitude: -36.9333
+# !longitude: 174.785500
+# !latitude: -36.932800
 # region: Auckland
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -36.9333/174.7833,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Onehunga, New Zealand
 +12:00 :Pacific/Auckland
 2.3702 meters

@@ -41,7 +41,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sicher_schreiben                                             # noqa: E402
-from health_check import load_records, active_files, ROOT, MERIDIAN, km  # noqa: E402
+from health_check import load_records, active_files, ROOT, MERIDIAN, km, auf_raster  # noqa: E402
 
 BACKUP = os.path.join(ROOT, 'harmonics/backup')
 GRENZE_KM = 5.0
@@ -70,8 +70,7 @@ def geschrieben(path):
 
 def stufe(r, text):
     """0 = fein, 1 = frei aber grob geschrieben, 2 = auf Bogenminuten."""
-    la, lo = r['lat'] * 60, r['lon'] * 60
-    if abs(la - round(la)) < 1e-6 and abs(lo - round(lo)) < 1e-6:
+    if auf_raster(r['lat'], r['lon']):
         return 2
     stellen = min((len(t.split('.')[1]) if t and '.' in t else 0) for t in text)
     return 0 if stellen >= 4 else 1

@@ -101747,12 +101747,14 @@ x 0 0
 # jma_code: QQ
 # utide: period=2011-01-01..2025-12-31 r2=0.9844 rms=0.0410m const=68
 # !units: meters
-# !longitude: 139.800000
-# !latitude: 33.133333
+# !longitude: 139.804717
+# !latitude: 33.130283
 # region: Tokyo
 # admin1_quelle: Name
 # note: 20260906 Name vereinheitlicht, vorher "Hachijoshima(konominato), Tokyo, Japan"
 # note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 33.1333/139.8000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Kaminato (Hachijo-jima), Tokyo, Japan
 +09:00 :Asia/Tokyo
 0.8100 meters
@@ -130855,10 +130857,12 @@ x 0 0
 # jma_code: X6
 # utide: period=2011-01-01..2025-12-31 r2=0.9991 rms=0.0149m const=68
 # !units: meters
-# !longitude: 131.116667
-# !latitude: 31.483333
+# !longitude: 131.108900
+# !latitude: 31.475000
 # region: Kagoshima
 # admin1_quelle: Name
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 31.4833/131.1167,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Shibushi, Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.1600 meters

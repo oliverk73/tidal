@@ -31661,10 +31661,12 @@ x 0 0
 # datum: MSL
 # confidence: 7
 # !units: meters
-# !longitude: -177.9000
-# !latitude: -29.283333
+# !longitude: -177.894600
+# !latitude: -29.280300
 # region: Kermadec Islands
 # admin1_quelle: Polygon
+# note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -29.2833/-177.9000,
+# note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 Boat Cove, New Zealand
 +12:00 :Pacific/Auckland
 -0.0001 meters
@@ -153214,12 +153216,15 @@ x 0 0
 # datum: MSL
 # confidence: 7
 # !units: meters
-# !longitude: 147.133300
-# !latitude: -9.483300
+# !longitude: 147.140000
+# !latitude: -9.478000
 # province: National Capital District
 # admin1_quelle: Ufer 1.1 km
 # note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -9.4780/147.1400,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
+# note: 20260910 Position zurueckgesetzt auf -9.478/147.14: die Uebernahme
+# note: -- ging in die falsche Richtung -- die Rasterposition des Zwillings
+# note: -- galt wegen einer zu engen Rasterpruefung als fein.
 Port Moresby, Papua New Guinea
 +00:00 :Pacific/Port_Moresby
 1.8217 meters
@@ -174684,207 +174689,6 @@ N4              0.0004  262.57
 x 0 0
 x 0 0
 2MO5            0.0001  205.69
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# Harmonic constants from TICON-4 database (GESLA-4 analysis)
-# 65288 observations over 16 years
-# from 01/10/1968 to 01/05/1983
-# Quality: No obvious issues
-# Source: gesla4.UHSLC_RQ
-# Constituents matched: 42/50
-#
-# San Carlos 674A
-# BEGIN HOT COMMENTS
-# country: Mexico
-# source: TICON-4 (GESLA-4 harmonic analysis)
-# station_id_context: san_carlos-674a-mex-uhslc_rq
-# date_imported: 20260322
-# datum: MSL
-# confidence: 7
-# ssc_id: SSC-sanc
-# psmsl_id: 1221
-# uhslc_id: 674
-# !units: meters
-# !longitude: -112.1203
-# !latitude: 24.7874
-# state: Baja California Sur
-# admin1_quelle: Name
-San Carlos, Baja California Sur, Mexico
--06:00 :America/Mazatlan
-1.8843 meters
-J1              0.0120  31.11
-K1              0.2689  17.36
-K2              0.0839  298.68
-L2              0.0225  278.94
-M1              0.0120  305.63
-M2              0.5537  296.17
-M3              0.0034  114.61
-M4              0.0046  179.78
-M6              0.0039  212.57
-M8              0.0004  112.31
-N2              0.1245  283.57
-2N2             0.0169  258.89
-O1              0.1787  3.17
-OO1             0.0070  41.39
-P1              0.0816  16.52
-Q1              0.0333  356.61
-2Q1             0.0042  354.95
-R2              0.0072  245.55
-S1              0.0043  174.57
-S2              0.3064  305.59
-S4              0.0003  247.91
-x 0 0
-T2              0.0215  312.90
-LDA2            0.0081  245.00
-MU2             0.0153  346.44
-NU2             0.0236  294.25
-RHO1            0.0057  5.10
-x 0 0
-x 0 0
-MN4             0.0014  184.63
-MS4             0.0058  218.99
-2SM2            0.0087  91.05
-MF              0.0038  251.61
-MSF             0.0036  262.58
-MM              0.0064  272.41
-SA              0.1158  15.53
-SSA             0.0127  159.17
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0034  186.29
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0058  230.06
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0105  92.85
-x 0 0
-EPS2            0.0067  359.25
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0020  124.84
-SIG1            0.0065  241.55
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0007  163.76
-x 0 0
-x 0 0
-2MO5            0.0027  348.94
 x 0 0
 x 0 0
 x 0 0
