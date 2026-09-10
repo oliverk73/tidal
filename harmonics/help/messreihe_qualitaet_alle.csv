@@ -242,7 +242,7 @@ NazareTG.csv,39.5860,-9.0740,2024,"Nazaré (Baía de Pederneira), Portugal",harm
 150_Nosy_Be.csv,-13.4080,48.2811,2014,"Andoany (Hellville), Madagascar",harmonics_att_np203_secondary.txt,11,2542,0.0856,0.255,0,0.003,4.157,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
 h806a_nouakchott.csv,17.9902,-16.0373,2015,"Nouakchott, Mauritania",harmonics_ticon4_worldwide.txt,0,8376,360.0996,994.841,0,1077.224,1.836,WestAfrica_UHSLC,1,nein
 h806a_nouakchott.csv,17.9902,-16.0373,2015,"Nouakchott, Mauritania",harmonics_utide_observations.txt,0,8376,360.0982,994.832,0,1077.224,1.861,WestAfrica_UHSLC,0,nein
-uhslc_235.csv,16.7500,-22.9830,2026,"Palmeira (Sal), Cape Verde",harmonics_att_np208_secondary.txt,0,8712,0.0665,0.194,-40,0.751,1.289,CapeVerde_UHSLC,0,nein
+uhslc_235.csv,16.7500,-22.9830,2026,"Palmeira (Sal), Cape Verde",harmonics_att_np208_secondary.txt,0,8712,0.0665,0.194,20,0.751,1.289,CapeVerde_UHSLC,0,nein
 uhslc_235.csv,16.7500,-22.9830,2026,"Palmeira (Sal), Cape Verde",harmonics_ticon4_worldwide.txt,0,8712,0.0326,0.123,0,0.007,1.157,CapeVerde_UHSLC,1,nein
 uhslc_235.csv,16.7500,-22.9830,2026,"Palmeira (Sal), Cape Verde",harmonics_utide_observations.txt,0,8712,0.0314,0.125,0,0.007,1.186,CapeVerde_UHSLC,0,nein
 PenicheTG.csv,39.3540,-9.3670,2024,"Peniche, Portugal",harmonics_ticon4_worldwide.txt,0,8044,0.1102,0.532,10,2.291,3.726,Portugal_CMEMS,1,nein
@@ -464,7 +464,7 @@ brid2_bridgetown.csv,13.1110,-59.6310,2026,"Bridgetown, Barbados",harmonics_utid
 282_Ubatuba.csv,-23.4513,-45.0467,2017,"Ubatuba, Sao Paulo, Brazil",harmonics_utide_observations.txt,0,8683,0.1707,0.725,0,0.021,1.427,Brazil_UHSLC,1,nein
 281_Cananeia.csv,-25.0159,-47.9263,1996,"Cananeia, Sao Paulo, Brazil",harmonics_utide_observations.txt,0,8761,0.1917,0.917,0,-0.051,1.781,Brazil_UHSLC,1,ja
 tbvi2_ioc.csv,18.4275,-64.6578,2024,"Cane Garden Bay, Tortola, British Virgin Islands",harmonics_utide_observations.txt,0,122738,0.0452,1.447,0,0.001,0.556,BVI_IOC,1,nein
-uhslc_235.csv,16.7500,-22.9830,2015,"Palmeira (Sal), Cape Verde",harmonics_att_np208_secondary.txt,0,8761,0.057,0.192,-40,0.702,1.328,CapeVerde_UHSLC,0,ja
+uhslc_235.csv,16.7500,-22.9830,2015,"Palmeira (Sal), Cape Verde",harmonics_att_np208_secondary.txt,0,8712,0.0665,0.194,20,0.751,1.289,CapeVerde_UHSLC,0,ja
 uhslc_235.csv,16.7500,-22.9830,2015,"Palmeira (Sal), Cape Verde",harmonics_ticon4_worldwide.txt,0,8761,0.0304,0.155,0,-0.042,1.205,CapeVerde_UHSLC,0,ja
 uhslc_235.csv,16.7500,-22.9830,2015,"Palmeira (Sal), Cape Verde",harmonics_utide_observations.txt,0,8761,0.0314,0.17,0,-0.042,1.237,CapeVerde_UHSLC,1,ja
 desh_deshaies.csv,16.3053,-61.7959,2026,"Deshaies, Guadeloupe, France",harmonics_utide_observations.txt,0,506636,0.0414,0.551,0,0.67,0.553,Guadeloupe_IOC,1,nein
@@ -1589,7 +1589,6 @@ BASTIA.csv,42.7000,9.4550,2026,"Bastia, France",harmonics_utide_tidetables.txt,0
 BASTIA.csv,42.7000,9.4550,2026,"Bastia, France",harmonics-pierre-lavergne-v10_mod.txt,77,103680,0.0362,0.092,0,0.063,0.402,France_SHOM,0,nein
 BOUEE_FORT-MAHON.csv,50.3417,1.5158,2026,"Berck Plage - Fort Mahon, France",harmonics-pierre-lavergne-v10_mod.txt,0,103680,0.2077,0.839,0,-0.098,10.42,France_SHOM,0,nein
 BOUEE_FORT-MAHON.csv,50.3417,1.5158,2026,"Berck Plage - Fort Mahon, France",harmonics_utide_tidetables.txt,0,103680,0.1349,0.57,0,-0.0,9.695,France_SHOM,1,nein
-BEYROUTH.csv,33.9092,35.5306,2026,"Beirut (Beyrouth), Lebanon",harmonics_att_np208_secondary.txt,0,103680,0.066,0.212,-680,0.405,0.406,France_SHOM,0,nein
 BEYROUTH.csv,33.9092,35.5306,2026,"Beirut (Beyrouth), Lebanon",harmonics_utide_tidetables.txt,0,103680,0.007,0.029,0,-0.0,0.558,France_SHOM,1,nein
 BINIC.csv,48.6011,-2.8153,2026,"Binic, France",harmonics-pierre-lavergne-v10_mod.txt,0,103680,0.2139,1.001,0,0.004,11.81,France_SHOM,0,nein
 BINIC.csv,48.6011,-2.8153,2026,"Binic, France",harmonics_utide_tidetables.txt,0,103680,0.1334,0.643,0,0.0,11.67,France_SHOM,1,nein
@@ -1642,7 +1641,6 @@ CORDOUAN.csv,45.5833,-1.1667,2026,"Cordouan, France",harmonics_noaa_eutt.txt,0,1
 CORDOUAN.csv,45.5833,-1.1667,2026,"Cordouan, France",harmonics_utide_tidetables.txt,0,103680,0.0588,0.272,0,-0.0,4.992,France_SHOM,1,nein
 CORDOUAN.csv,45.5833,-1.1667,2026,"Phare de Cordouan, France",harmonics-pierre-lavergne-v10_mod.txt,599,103680,0.0689,0.329,0,0.003,4.891,France_SHOM,0,nein
 COTONOU.csv,6.3500,2.4333,2026,"Cotonou, Benin",harmonics_utide_tidetables.txt,0,103680,0.0217,0.087,0,-0.0,1.994,France_SHOM,1,nein
-COTONOU.csv,6.3500,2.4333,2026,"Cotonou, Benin",harmonics_att_np208_secondary.txt,33,103680,0.1192,0.308,70,0.007,2.313,France_SHOM,0,nein
 COURSEULLES_LARGE.csv,49.4000,-0.4667,2026,"Courseulles-sur-Mer (Large), France",harmonics-pierre-lavergne-v10_mod.txt,0,103680,0.1775,0.747,0,0.032,7.924,France_SHOM,0,nein
 COURSEULLES_LARGE.csv,49.4000,-0.4667,2026,"Courseulles-sur-Mer (Large), France",harmonics_utide_tidetables.txt,0,103680,0.1027,0.471,0,0.0,7.22,France_SHOM,1,nein
 DAHOUET.csv,48.5787,-2.5696,2026,"Dahouet, France",harmonics-pierre-lavergne-v10_mod.txt,0,103680,0.2178,1.083,0,0.067,11.755,France_SHOM,0,nein

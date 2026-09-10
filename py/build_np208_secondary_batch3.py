@@ -10,35 +10,28 @@ fehlende Stationen an die Bestandsdatei an. Idempotent (Skip wenn Name schon da)
 """
 import importlib.util, os, json, glob, re
 
-spec=importlib.util.spec_from_file_location('S','/home/oliver/py/build_np208_secondary.py')
+PY=os.path.dirname(os.path.abspath(__file__))
+spec=importlib.util.spec_from_file_location('S',os.path.join(PY,'build_np208_secondary.py'))
 S=importlib.util.module_from_spec(spec); spec.loader.exec_module(S)
 B=S.B
 
-HARM=os.path.expanduser('~/harmonics')
+HARM=S.HARM
 SJ=f'{HARM}/help/np208_part2_json'
 OUT=f'{HARM}/att/harmonics_att_np208_secondary.txt'
 PAGES=['page_276','page_277','page_278','page_279','page_280','page_281']
 
 def load_batch3():
-    sec=[]
-    for pg in PAGES:
-        for p in json.load(open(f'{SJ}/{pg}.json',encoding='utf-8')):
-            sec.append(dict(att=p['att'], name=p['name'], lat=p['lat'], lon=p['lon'],
-                            region=p.get('region',''), std=p['std'],
-                            t=(p.get('tHW'), p.get('tLW')),
-                            h=(p.get('dMHWS'), p.get('dMHWN'), p.get('dMLWN'), p.get('dMLWS')),
-                            ml=p.get('ml')))
-    return sec
+    # Ueber S.load_sec(): dieselbe Zeit- und Zonenbehandlung wie im Hauptbuilder
+    # (Zonenwechsel nach ATT-Konvention, 10.09.2026).
+    return [s for s in S.load_sec() if s['seite'][:-5] in PAGES]
 
 def main():
     txt=open(OUT,encoding='iso-8859-1').read()
     existing=set(re.findall(r'^# !latitude:[^\n]*\n([^\n]+)',txt,re.M))
     built=[]; skipped=[]; failed=[]
     for s in load_batch3():
-        q=S.REFMAP.get(s['std'])
-        if not q: failed.append((s['name'],'kein REFMAP')); continue
-        rn,rr=B.find(q)
-        if not rr: failed.append((s['name'],f'Ref {q} unaufgeloest')); continue
+        rn,rr=S.bezug(s['std'])
+        if not rr: failed.append((s['name'],f"kein Bezug fuer {s['std']}")); continue
         tr=B.transfer(s,rr)
         if not tr or tr['M2n']<0.02:
             failed.append((s['name'],f'Transfer M2n={tr["M2n"] if tr else "-"}')); continue

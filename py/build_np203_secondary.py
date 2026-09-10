@@ -21,7 +21,7 @@ Marker-Gruppe: NP203 (gleiche source-Kennung wie Part III).
 """
 import os, re, math, sys, json
 
-HARM = os.path.expanduser('~/harmonics')
+HARM = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'harmonics')
 LIT  = f'{HARM}/classic/harmonics_literature.txt'
 OUT  = f'{HARM}/att/harmonics_att_np203_secondary.txt'
 

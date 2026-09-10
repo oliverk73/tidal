@@ -16,7 +16,7 @@
 
 Gedreht wird g' = g + w * Delta, Delta = (neue - alte Differenz); Amplituden bleiben.
 
-Usage: venv/bin/python3 py/np208_zeit_richten.py [--schreiben]
+Usage: venv/bin/python3 py/np208_zeit_richten.py [--zonen] [--schreiben]
 """
 from __future__ import annotations
 
@@ -134,5 +134,95 @@ def main(argv):
     return 0
 
 
+
+
+def zonen(argv):
+    """Schritt 3 (10.09.2026): Zonenwechsel fuer alle NP208-Nebenstationen nach
+    der ATT-Konvention, wie ihn build_np208_secondary.py jetzt rechnet.
+
+    Gruppenweise (Bezugshafen, Zone der Nebenstation): geschrieben nur, wo der
+    FES-Median der Gruppe danach naeher an null liegt (bis 30 min), und je Satz
+    nur, wenn er einzeln nicht um mehr als 30 min schlechter wird. Dazu der von
+    A Coruna geerbte Puertos-Fehler (+60 min, bis 10.09. lag der Bezug selbst
+    eine Stunde zu frueh).
+    """
+    import collections
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('S', os.path.join(os.path.dirname(__file__),
+                                                                      'build_np208_secondary.py'))
+    S = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(S)
+    buch = {}
+    for p in glob.glob(os.path.join(JSON, '*.json')):
+        for e in json.load(open(p, encoding='utf-8')):
+            buch[str(e['att'])] = e
+    recs = [r for r in load_records() if r['file'].endswith('harmonics_att_np208_secondary.txt')]
+    L = open(DATEI, encoding='iso-8859-1').read().split('\n')
+    fes = T.fes_werte(recs)
+    gruppen = collections.defaultdict(list)
+    for r in recs:
+        k = r['line'] - 1
+        j, kopf = k - 1, []
+        while j >= 0 and not L[j].startswith('# BEGIN HOT'):
+            kopf.append(L[j])
+            j -= 1
+        text = '\n'.join(kopf)
+        a = re.search(r'# att_number: (\S+)', text)
+        e = buch.get(a.group(1).rstrip('#')) if a else None
+        if not e or 'Zonenwechsel' in text:
+            continue
+        zm = S.zonen_minuten(e) or 0
+        erbe = 60 if e['std'] == 'A Coruna' else 0
+        if not zm and not erbe:
+            continue
+        d = []
+        for c in T.TEILE:
+            g, am = T.phase(r, c)
+            gf, af = fes[id(r)][c]
+            if am >= T.MIND_AMP and af >= T.MIND_AMP and not math.isnan(gf):
+                d.append(T.versatz_min(g, gf, c))
+        f = statistics.mean(d) if len(d) >= 2 else None
+        gruppen[(e['std'], S.zone_neben(e), zm, erbe)].append((r, f))
+    plan = []
+    for (std, zs, zm, erbe), v in sorted(gruppen.items(), key=lambda x: str(x[0])):
+        delta = zm + erbe
+        fs = [f for _r, f in v if f is not None]
+        vor = statistics.median(fs) if fs else None
+        ok = erbe or (vor is not None and abs(vor + delta) <= 30 and abs(vor + delta) < abs(vor))
+        print(f"  {std:12} Zone {zs:+d} -> {delta:+4d} min, n={len(v):2}, FES-Median "
+              f"{'-' if vor is None else f'{vor:+.0f} -> {vor + delta:+.0f}'}  {'schreiben' if ok else 'NICHT'}")
+        if not ok:
+            continue
+        for r, f in v:
+            if f is not None and abs(f + delta) > abs(f) + 30 and not erbe:
+                print(f"      ausgelassen, einzeln schlechter: {r['name']} ({f:+.0f} -> {f + delta:+.0f})")
+                continue
+            plan.append((r, delta, zm, erbe))
+    print(f'{len(plan)} Saetze')
+    if '--schreiben' not in argv:
+        return 0
+    sp = speeds(DATEI)
+    for r, delta, zm, erbe in sorted(plan, key=lambda p: -p[0]['line']):
+        k = r['line'] - 1
+        j = k + 3
+        while j < len(L) and L[j] and not L[j].startswith('#'):
+            p = L[j].split()
+            if p[0] != 'x' and p[0] in sp and len(p) >= 3:
+                L[j] = f'{p[0]:<16}{float(p[1]):.4f}  {(float(p[2]) + sp[p[0]] * delta / 60) % 360:.2f}'
+            j += 1
+        grund = []
+        if zm:
+            grund.append(f'{zm:+d} min Zonenwechsel (ATT rechnet ihn ein)')
+        if erbe:
+            grund.append('+60 min: Bezug A Coruna lag bis 10.09. eine Stunde zu frueh (Puertos)')
+        L[k:k] = [f"# note: {HEUTE} Zeit berichtigt: {'; '.join(grund)}.",
+                  '# note: -- Siehe py/np208_zeit_richten.py --zonen.']
+    shutil.copy2(DATEI, os.path.join(ROOT, 'harmonics/backup',
+                                     os.path.basename(DATEI) + f'.vor_np208_zonen_{HEUTE}'))
+    schreiben(DATEI, '\n'.join(L))
+    print('geschrieben')
+    return 0
+
+
 if __name__ == '__main__':
-    sys.exit(main(sys.argv[1:]))
+    sys.exit(zonen(sys.argv[1:]) if '--zonen' in sys.argv else main(sys.argv[1:]))
