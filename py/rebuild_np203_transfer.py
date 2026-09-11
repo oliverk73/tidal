@@ -180,7 +180,8 @@ S224 = {
 # ATT NP203 Part II S.222/223/225/226/228/229/233/235, am 20260801 gelesen.
 # Nur die Zeilen, deren Bezugshafen der alte Import verwechselt hatte.
 S222 = {
- '2004': ("Baie de l'Oiseau",   -dm(48, 41), dm(69,  2), 1050, None, (-1.0, -0.8, None, None), 0.6, 5.0),
+ # 2004: Buch "+10 50" (h mm) -- bis 11.09.2026 als 1050 min abgeschrieben (FES -5.5 h).
+ '2004': ("Baie de l'Oiseau",   -dm(48, 41), dm(69,  2),  650, None, (-1.0, -0.8, None, None), 0.6, 5.0),
  '2006a': ('Baie Norvegienne',  -dm(49, 22), dm(70, 21),  147,  129, (-3.3, -2.3, -1.3, -0.4), 1.22, 5.0),
  '2007': ("Port Jeanne d'Arc",  -dm(49, 33), dm(69, 49),  140, None, (-3.2, -2.3, None, None), 1.1,  5.0),
  '2007a': ('Baie Larose',       -dm(49, 35), dm(69, 18),   52,   39, (-3.8, -2.7, -1.6, -0.5), 0.89, 5.0),

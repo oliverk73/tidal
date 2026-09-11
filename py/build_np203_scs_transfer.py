@@ -40,7 +40,8 @@ Nipp stehen in diesen Spalten nicht. Beide bekommen denselben Faktor. Das ist
 die Grenze der Quelle, nicht der Rechnung.
 
 Zonenversatz: die Zeitdifferenzen des Buches enthalten den Zonensprung. Fuer die
-Phasen wird er wieder herausgerechnet, dt_UT = dt_Buch + (Zone_Bezug - Zone_Sek).
+Phasen wird im Rahmen der Nebenstation geschrieben -- dort hebt er sich auf
+(g_neben = g_bezug_Ortszeit + w*dt_Buch; berichtigt 11.09.2026).
 
 Aufruf: venv/bin/python py/build_np203_scs_transfer.py [--write]
 """
@@ -205,9 +206,14 @@ def main():
         for f in (f_semi, f_diur):
             assert 0.02 < f < 5.0, f'{att}: Faktor {f:.2f} unplausibel'
 
-        # Verzoegerung in Weltzeit
-        dz = (-int(ref_zone[:3]) - -int(zone[:3])) + (int(ref_zone[3:]) - int(zone[3:])) / 60.0
-        dt = (dt1 + dt2) / 2.0 / 60.0 - dz
+        # Zeitverschiebung im Rahmen der Nebenstation. Die Bezugskonstanten sind
+        # Ortsphasen in der Buchzone des Bezugshafens, geschrieben wird mit dem
+        # Meridian der Nebenstation; das Buch gibt t_neben(Ortszeit) =
+        # t_bezug(Ortszeit) + dt. Dann hebt sich der Zonenwechsel auf:
+        # g_neben = g_bezug + w*dt_Buch. Bis zum 11.09.2026 stand hier zusaetzlich
+        # "- (Zone_Bezug - Zone_Neben)" -- Little Andaman und Goh Sukorn lagen
+        # dadurch eine Stunde zu frueh (FES M2/S2 -61/-63 bzw. -57/-76 min).
+        dt = (dt1 + dt2) / 2.0 / 60.0
 
         con = {}
         for c, (a, g) in ref_con.items():

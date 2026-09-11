@@ -15969,7 +15969,7 @@ x 0 0
 # note: NP203 Part II (2002), Zone -0530. Kein eigener Konstantensatz im
 # note: Buch -- abgeleitet vom Bezugshafen 4539 ueber die publizierten
 # note: Pegel des Gruppenkopfs. Regime S (Spring/Nipp).
-# note: f_semi=0.850 f_diurn=0.854 dt=-124min
+# note: f_semi=0.850 f_diurn=0.854 dt=-64min
 # note: Die Ausgabe 2015 fuehrt dieses Gebiet nicht mehr.
 # date_imported: 20260804
 # datum: Chart Datum (Z0 = mean level above CD)
@@ -15981,29 +15981,30 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # state: Andaman and Nicobar
 # admin1_quelle: Name
+# note: 20260911 Zeit berichtigt (+60 min): Builder zog den Zonenwechsel (-0630 -> -0530) ab, obwohl er sich im Rahmen der Nebenstation aufhebt.
 Little Andaman, Andaman and Nicobar, India
 +05:30 :Asia/Kolkata
 1.1000 meters
 x 0 0
-K1              0.1110  311.92
-K2              0.0688  258.83
+K1              0.1110  326.96
+K2              0.0688  288.91
 x 0 0
 x 0 0
-M2              0.5708  221.10
+M2              0.5708  250.08
 x 0 0
-M4              0.0116  30.20
-x 0 0
-x 0 0
-N2              0.1082  200.78
-x 0 0
-O1              0.0427  292.18
+M4              0.0116  88.17
 x 0 0
 x 0 0
+N2              0.1082  229.22
 x 0 0
+O1              0.0427  306.12
 x 0 0
 x 0 0
 x 0 0
-S2              0.2537  259.00
+x 0 0
+x 0 0
+x 0 0
+S2              0.2537  289.00
 x 0 0
 x 0 0
 x 0 0
@@ -16166,7 +16167,7 @@ x 0 0
 # note: NP203 Part II (2002), Zone -0700. Kein eigener Konstantensatz im
 # note: Buch -- abgeleitet vom Bezugshafen 4663 ueber die publizierten
 # note: Pegel des Gruppenkopfs. Regime S (Spring/Nipp).
-# note: f_semi=1.263 f_diurn=1.332 dt=-201min
+# note: f_semi=1.263 f_diurn=1.332 dt=-141min
 # note: Die Ausgabe 2015 fuehrt dieses Gebiet nicht mehr.
 # date_imported: 20260804
 # datum: Chart Datum (Z0 = mean level above CD)
@@ -16176,29 +16177,30 @@ x 0 0
 # !latitude: 7.1146
 # province: Trang
 # admin1_quelle: Name
+# note: 20260911 Zeit berichtigt (+60 min): Builder zog den Zonenwechsel (-0800 -> -0700) ab, obwohl er sich im Rahmen der Nebenstation aufhebt.
 Goh Sukorn (Pulau Babi), Trang, Thailand
 +07:00 :Asia/Bangkok
 1.5000 meters
 x 0 0
-K1              0.2663  306.61
-K2              0.1262  327.22
+K1              0.2663  321.65
+K2              0.1262  357.30
 x 0 0
 x 0 0
-M2              0.8003  287.90
+M2              0.8003  316.88
 x 0 0
-M4              0.1101  50.81
-M6              0.1229  234.71
+M4              0.1101  108.78
+M6              0.1229  321.66
 x 0 0
-N2              0.1488  266.68
+N2              0.1488  295.12
 x 0 0
-O1              0.0666  246.29
-x 0 0
-x 0 0
-x 0 0
+O1              0.0666  260.23
 x 0 0
 x 0 0
 x 0 0
-S2              0.4503  327.50
+x 0 0
+x 0 0
+x 0 0
+S2              0.4503  357.50
 x 0 0
 x 0 0
 x 0 0
