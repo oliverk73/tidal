@@ -75,6 +75,13 @@ GESPERRT = {
     # aus dieser Reihe 43-53 min zu frueh, waehrend es 50 andere UHSLC-Saetze
     # der Region meist auf +-15 min trifft. Geprueft am 10.09.2026.
     '329_Quarry_Bay.csv', '329a_Quarry_Bay_rqds.csv',
+    # IOC elja1 El Jadida (Marokko): Rohwerte um -617, der Fit daraus erklaert
+    # die Reihe zu 42 % und hat M2 0.21 statt 0.95 m (SHOM). Die Reihe bewertete
+    # die guten Saetze mit 74 cm (11.09.2026).
+    'elja1_el_jadida.csv',
+    # IOC brid2 Bridgetown (Barbados): Kurve verkehrt herum (M2 28 statt ~220 Grad
+    # wie FES und alle Nachbarn), 11.09.2026.
+    'brid2_bridgetown.csv',
 }
 
 
@@ -132,6 +139,8 @@ def reihendateien(nur=None):
             continue
         stamm = os.path.splitext(os.path.basename(pfad))[0]
         teile = [t for t in re.split(r'[_\-. ]', stamm) if t]
+        # UHSLC schreibt "h723a" -- die Kennung im Satz heisst "723a".
+        teile += [t[1:] for t in teile if re.fullmatch(r'[hH]\d+[a-zA-Z]?', t)]
         for anbieter in re.split(r'[_\-]', ordner):
             for t in teile:
                 # Keine Mindestlaenge: die JMA-Kennungen heissen A0 und
@@ -539,8 +548,12 @@ def _lies_csv(pfad):
                 fh.seek(merker)
             except ValueError:
                 einheit = zweite[wi].strip().lower() or einheit
-        faktor = 0.001 if einheit.startswith('milli') or einheit == 'mm' else (
-            0.01 if 'cm' in einheit or einheit.startswith('centi') else 1.0)
+        # Auch "level_mm" / "level_cm" (UHSLC-Portugal): vorher als Meter
+        # gelesen, RMS 808 m (11.09.2026).
+        teile_e = [t for t in re.split(r'[_\s()\[\]]+', einheit) if t]
+        faktor = 0.001 if (einheit.startswith('milli') or einheit == 'mm' or 'mm' in teile_e
+                           or 'millimeters' in teile_e) else (
+            0.01 if ('cm' in teile_e or einheit == 'cm' or einheit.startswith('centi')) else 1.0)
         out = []
         for zeile in fh:
             f = zeile.rstrip('\n').split(',')
@@ -850,12 +863,75 @@ def uhslc_kennung_reihen(nur=None, schon=()):
     return out
 
 
-def main(argv):
-    import numpy as np
-    umkreis = float(argv[argv.index('--km') + 1]) if '--km' in argv else 3.0
-    tage = int(argv[argv.index('--tage') + 1]) if '--tage' in argv else 365
-    nur = argv[argv.index('--ordner') + 1] if '--ordner' in argv else None
+def _namensnaehe(name, pfad):
+    """Wie gut passt ein Satzname zum Dateinamen der Reihe (0..1).
 
+    Groesstes aus: Ortsteil gegen Stamm, ganzer Name gegen Stamm
+    ("Saint-Pierre, Reunion" gegen SAINT-PIERRE_LA_REUNION) und Anteil der
+    Stammwoerter, die im Namen stehen ("bona" in Kralendijk, Bonaire).
+    """
+    import difflib
+    import unicodedata
+    def flach(x):
+        x = unicodedata.normalize('NFKD', x.lower()).encode('ascii', 'ignore').decode()
+        return re.sub(r'[^a-z]', '', x)
+    name = re.sub(r'\s*\([^()]*\)\s*$', '', name)
+    stamm = re.sub(r'^(h?\d+[a-z]?[_\-])', '', os.path.splitext(os.path.basename(pfad))[0].lower())
+    s = flach(stamm)
+    werte = [difflib.SequenceMatcher(None, flach(name.split(',')[0]), s).ratio(),
+             difflib.SequenceMatcher(None, flach(name), s).ratio()]
+    woerter = [w for w in (flach(t) for t in re.split(r'[_\-. ]', stamm))
+               if len(w) >= 3 and w not in ('ioc', 'raw', 'uhslc', 'csv', 'the')]
+    if woerter:
+        werte.append(sum(w in flach(name) for w in woerter) / len(woerter))
+    return max(werte)
+
+
+def anker_pruefen(anker, weit_km=50.0, gut=0.6):
+    """Verwirft Anker, die ueber eine Namensgleichheit an die falsche Reihe kamen.
+
+    Am 11.09.2026 standen in messreihe_qualitaet_alle.csv Messungen wie
+    "Settlement Point, Bahamas" gegen Ponta Delgada (Portugal_UHSLC h211),
+    "La Trinite, Martinique" gegen La Trinite-sur-Mer, "Saint-Louis,
+    Senegal" gegen Port-Louis, Nigeria gegen Lagos (Portugal) -- die
+    Zuordnung ueber station_id_context nimmt Anbieter und Namensteil.
+
+    Hat eine Reihe mehrere Anker, die weiter als weit_km auseinander liegen,
+    bleibt die Gruppe um den Anker, dessen Name am besten zum Dateinamen
+    passt, wenn er gut (ab gut) passt; sonst die Gruppe, die dem Median der
+    uebrigen Anker desselben Ordners am naechsten liegt (Khal_10 im Ordner
+    BD/MM/MG/MZ: Chittagong, nicht Rabaul).
+    Einzelne falsche Anker (nur der fremde Satz traf die Reihe) faengt die
+    Nummernpflicht in alle_anker(): nennt die Kennung eine Nummer, muss die
+    Reihe sie tragen. Eine Ordner-Regel fuer alle Anker (Abstand zum Median)
+    war zu grob -- sie warf die franzoesischen Ueberseegebiete aus France_SHOM.
+    """
+    import statistics
+    nach_pfad = {}
+    for a in anker:
+        nach_pfad.setdefault(a[1], []).append(a)
+    nach_ordner = {}
+    for a in anker:
+        nach_ordner.setdefault(os.path.dirname(a[1]), []).append(a)
+    behalten = []
+    for pfad, liste in nach_pfad.items():
+        if len(liste) > 1 and max(km(x[0], y[0]) for x in liste for y in liste) > weit_km:
+            wertung = sorted(((_namensnaehe(a[0]['name'], pfad), i) for i, a in enumerate(liste)),
+                             reverse=True)
+            bester = liste[wertung[0][1]]
+            if wertung[0][0] < gut:
+                andere = [a[0] for a in nach_ordner[os.path.dirname(pfad)] if a[1] != pfad]
+                if andere:
+                    mitte = {'lat': statistics.median(r['lat'] for r in andere),
+                             'lon': statistics.median(r['lon'] for r in andere)}
+                    bester = min(liste, key=lambda a: km(a[0], mitte))
+            liste = [a for a in liste if km(a[0], bester[0]) <= weit_km]
+        behalten += liste
+    return behalten
+
+
+def alle_anker(nur=None):
+    """Alle (Satz, Reihe)-Zuordnungen, geprueft."""
     kopf = kopfdaten()
     dateien = reihendateien(nur)
     recs = [r for r in load_records()
@@ -872,6 +948,16 @@ def main(argv):
                 if i == j:
                     continue
                 pfad = pfad or dateien.get((teile[i].upper(), teile[j].upper()))
+        # Nennt die Kennung eine Nummer, muss die Reihe sie auch tragen: sonst
+        # traf "lagos-233a-nga-uhslc_rq" (Nigeria) ueber UHSLC+LAGOS die Reihe
+        # h723a_lagos.csv aus Portugal (11.09.2026).
+        # Verglichen werden nur die Ziffern (395a = 395, 01660 = 1660), und
+        # nur wenn der Dateiname selbst eine Nummer traegt (dakar_senegal.csv).
+        nummern = {int(n) for t in teile for n in re.findall(r'\d+', t)}
+        if pfad and nummern:
+            dnum = {int(n) for n in re.findall(r'\d+', os.path.splitext(os.path.basename(pfad))[0])}
+            if dnum and not (nummern & dnum):
+                pfad = None
         if pfad:
             anker.append((r, pfad, fit, None))
     anker += bodc_reihen(nur)
@@ -882,6 +968,17 @@ def main(argv):
     anker += ea_reihen(nur)
     anker += tidetimes_reihen(nur)
     anker += uhslc_kennung_reihen(nur, {p for _a, p, _f, _b in anker})
+    anker = anker_pruefen(anker)
+    return kopf, recs, anker
+
+
+def main(argv):
+    import numpy as np
+    umkreis = float(argv[argv.index('--km') + 1]) if '--km' in argv else 3.0
+    tage = int(argv[argv.index('--tage') + 1]) if '--tage' in argv else 365
+    nur = argv[argv.index('--ordner') + 1] if '--ordner' in argv else None
+
+    kopf, recs, anker = alle_anker(nur)
     print(f'{len(anker)} Reihen zugeordnet, Umkreis {umkreis:.0f} km, '
           f'{tage} Tage Fenster', file=sys.stderr)
 

@@ -12,10 +12,6 @@ station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub
 48_Anewa_Bay.csv,-6.1838,155.5436,1977,"Anewa Bay, North Solomons, Papua New Guinea",harmonics-2004-06-14_mod.txt,0,7721,0.0743,0.282,0,-0.123,1.714,PapuaNewGuinea_UHSLC,0,nein
 48_Anewa_Bay.csv,-6.1838,155.5436,1977,"Anewa Bay, North Solomons, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,7721,0.0727,0.277,0,-0.12,1.672,PapuaNewGuinea_UHSLC,1,nein
 48_Anewa_Bay.csv,-6.1838,155.5436,1977,"Anewa Bay, North Solomons, Papua New Guinea",harmonics_utide_observations.txt,0,7721,0.0727,0.263,0,-0.069,1.69,PapuaNewGuinea_UHSLC,0,nein
-h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_att_np208_secondary.txt,0,8751,365.3712,1115.054,-720,1183.345,1.584,Portugal_UHSLC,0,nein
-h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_noaa_eutt.txt,0,8751,365.3483,1115.036,-720,1183.339,1.627,Portugal_UHSLC,0,nein
-h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_ticon4_worldwide.txt,0,8751,365.3532,1114.946,-720,1184.345,1.7,Portugal_UHSLC,1,nein
-h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_utide_observations.txt,0,8751,365.3528,1114.928,-720,1184.345,1.714,Portugal_UHSLC,0,nein
 70_Auckland.csv,-36.8429,174.7669,1988,"Auckland, New Zealand",harmonics_ticon4_worldwide.txt,0,8761,0.0986,0.489,0,-0.026,3.472,New_Zealand_UHSLC,1,nein
 70_Auckland.csv,-36.8429,174.7669,1988,"Auckland (Queens Wharf), New Zealand",harmonics_utide_observations.txt,0,8761,0.0969,0.471,0,-0.026,3.447,New_Zealand_UHSLC,0,nein
 70_Auckland.csv,-36.8429,174.7669,1988,"Westhaven Inlet, New Zealand",harmonics_utide_tidetables.txt,1826,8761,0.1149,0.571,-10,1.793,3.372,New_Zealand_UHSLC,0,nein
@@ -24,9 +20,6 @@ h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira)
 310_Bahia_de_los_Angeles.csv,28.9479,-113.5572,1994,"Bahia de los Angeles, Baja California, Mexico",harmonics_utide_observations.txt,0,8177,0.052,0.2,0,-0.021,3.464,Mexico_UHSLC,0,nein
 302_panama.csv,8.9650,-79.5718,2018,"Balboa, Panama",harmonics_ticon4_worldwide.txt,0,8761,0.1331,0.532,0,0.011,6.179,Panama_UHSLC,1,nein
 302_panama.csv,8.9650,-79.5718,2018,"Balboa, Panama",harmonics_utide_observations.txt,0,8761,0.1148,0.442,0,0.011,6.46,Panama_UHSLC,0,nein
-663_Scott_Base.csv,-62.4830,-59.6670,2017,"Captain Arturo Prat Base (Isla Greenwich, South Shetlands), Antarctica",harmonics_ticon4_worldwide.txt,0,8752,0.399,1.14,-660,0.47,2.313,New_Zealand_UHSLC,1,nein
-663_Scott_Base.csv,-62.4830,-59.6670,2017,"Captain Arturo Prat Base (Isla Greenwich, South Shetlands), Antarctica",harmonics_utide_tidetables.txt,490,8752,0.3865,1.101,-660,0.452,2.292,New_Zealand_UHSLC,0,nein
-663_Scott_Base.csv,-62.4830,-59.6670,2017,"Captain Arturo Prat Base (Isla Greenwich, South Shetlands), Antarctica",harmonics_att_np207.txt,1732,8751,0.4092,1.119,-670,0.471,2.212,New_Zealand_UHSLC,0,nein
 163_Benoa.csv,-8.7450,115.2100,2026,"Benoa, Bali, Indonesia",harmonics_ticon4_worldwide.txt,0,8576,0.0948,0.291,0,0.108,3.186,Indonesia_UHSLC,1,nein
 163_Benoa.csv,-8.7450,115.2100,2026,"Benoa, Bali, Indonesia",harmonics_utide_observations.txt,0,8576,0.0872,0.26,0,0.108,3.22,Indonesia_UHSLC,0,nein
 163_Benoa.csv,-8.7450,115.2100,2026,"Benoa, Indonesia",harmonics_att_np203_scs.txt,923,8576,0.1533,0.529,10,-0.216,2.812,Indonesia_UHSLC,0,nein
@@ -47,11 +40,6 @@ uhslc_878.csv,12.1870,-69.0200,2026,"Bullenbaai, Curaçao",harmonics_ticon4_worl
 uhslc_878.csv,12.1870,-69.0200,2026,"Bullen Bay, Curaçao",harmonics_utide_observations.txt,0,8073,0.0415,0.315,0,0.009,0.603,ABC_UHSLC,0,nein
 34_Cabo_San_Lucas.csv,22.8800,-109.9080,2014,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,8760,0.0544,0.204,0,0.009,2.075,Mexico_UHSLC,1,nein
 34_Cabo_San_Lucas.csv,22.8800,-109.9080,2014,"Cabo San Lucas, Baja California Sur, Mexico",harmonics_utide_observations.txt,0,8760,0.0526,0.194,0,0.009,2.161,Mexico_UHSLC,0,nein
-221_Simons_Town.csv,-33.9000,18.4330,2018,"Cape Town, South Africa",harmonics_ticon4_worldwide.txt,0,8570,0.0854,0.328,0,0.083,1.846,SouthAfrica_UHSLC,1,nein
-221_Simons_Town.csv,-33.9000,18.4330,2018,"Cape Town, South Africa",harmonics_utide_observations.txt,0,8570,0.0862,0.375,10,0.083,1.852,SouthAfrica_UHSLC,0,nein
-h209_cascais.csv,38.6932,-9.4154,2026,"Cascais, Portugal",harmonics_noaa_eutt.txt,0,6497,711.2926,1852.438,-10,2353.683,3.008,Portugal_UHSLC,0,nein
-h209_cascais.csv,38.6932,-9.4154,2026,"Cascais, Portugal",harmonics_ticon4_worldwide.txt,0,6497,711.2661,1852.139,-20,2355.869,3.516,Portugal_UHSLC,1,nein
-h209_cascais.csv,38.6932,-9.4154,2026,"Cascais, Portugal",harmonics_utide_observations.txt,0,6497,711.2892,1852.157,-10,2355.872,3.455,Portugal_UHSLC,0,nein
 379_Cebu.csv,10.3005,123.9161,2014,"Cebu, Philippines",harmonics_ticon4_worldwide.txt,0,8636,0.0899,0.408,0,-0.009,2.378,Philippines_UHSLC,1,nein
 379_Cebu.csv,10.3005,123.9161,2014,"Cebu, Philippines",harmonics_utide_observations.txt,113,8636,0.0841,0.381,0,-0.009,2.464,Philippines_UHSLC,0,nein
 305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,7070,0.066,0.356,0,-0.012,2.703,Mexico_UHSLC,1,nein
@@ -61,8 +49,6 @@ h209_cascais.csv,38.6932,-9.4154,2026,"Cascais, Portugal",harmonics_utide_observ
 79_Chatham_Island.csv,-43.9463,-176.5612,2016,"Waitangi, Chatham Island, New Zealand",harmonics_ticon4_worldwide.txt,0,8761,0.1009,0.423,0,0.051,1.004,New_Zealand_UHSLC,1,nein
 79_Chatham_Island.csv,-43.9463,-176.5612,2016,"Waitangi, Chatham Islands, New Zealand",harmonics_utide_observations.txt,0,8761,0.0995,0.429,0,0.052,0.992,New_Zealand_UHSLC,0,nein
 79_Chatham_Island.csv,-43.9463,-176.5612,2016,"Waitangi, Chatham Island, New Zealand",harmonics_utide_tidetables.txt,0,8761,0.1118,0.457,0,1.938,0.892,New_Zealand_UHSLC,0,nein
-170_Christmas_Island.csv,1.9823,-157.4714,2026,"Kiritimati (Christmas Island), Kiribati",harmonics_ticon4_worldwide.txt,0,8661,0.1944,0.7,140,0.241,1.0,Australia_UHSLC,1,nein
-170_Christmas_Island.csv,1.9823,-157.4714,2026,"Kiritimati, Kiribati",harmonics_utide_tidetables.txt,0,8661,0.1909,0.701,140,0.241,1.006,Australia_UHSLC,0,nein
 170_Christmas_Island.csv,-10.4170,105.6670,2026,"Christmas Island, Australia",harmonics_ticon4_worldwide.txt,0,8662,0.0969,0.426,0,0.078,1.851,Australia_UHSLC,1,nein
 170_Christmas_Island.csv,-10.4170,105.6670,2026,"Christmas Island, Australia",harmonics_utide_observations.txt,0,8662,0.0931,0.421,0,0.078,1.894,Australia_UHSLC,0,nein
 170_Christmas_Island.csv,-10.4170,105.6670,2026,"Christmas Island, Australia",harmonics_att_np203_scs.txt,40,8662,0.1105,0.482,0,0.116,1.533,Australia_UHSLC,0,nein
@@ -103,17 +89,6 @@ dakar_senegal.csv,14.6770,-17.4200,2024,"Dakar, Senegal",harmonics_utide_observa
 07109_Esquimalt_Harbour_wlp.csv,48.4300,-123.4700,2025,"Esquimalt Lagoon, British Columbia, Canada",harmonics_ticon4_worldwide.txt,0,35036,0.4798,1.814,170,1.852,1.41,Canada_IWLS_BC,1,nein
 07109_Esquimalt_Harbour_wlp.csv,48.4300,-123.4700,2025,"Esquimalt Harbour, British Columbia, Canada",harmonics_utide_tidetables.txt,1887,35040,0.0209,0.084,0,0.0,3.351,Canada_IWLS_BC,0,nein
 07109_Esquimalt_Harbour_wlp.csv,48.4300,-123.4700,2025,"Esquimalt Government Hbr., British Columbia, Canada",harmonics_utide_tidetables.txt,2298,35040,0.0329,0.105,0,-0.03,3.355,Canada_IWLS_BC,0,nein
-h210_flores_santa_cruz.csv,39.3783,-31.1686,2009,"Lajes das Flores, Açores, Portugal",harmonics_att_np208_secondary.txt,0,6456,306.0532,848.16,0,1060.231,1.394,Portugal_UHSLC,0,nein
-h210_flores_santa_cruz.csv,39.3783,-31.1686,2009,"Lajes das Flores, Açores, Portugal",harmonics_ticon4_worldwide.txt,0,6456,306.0599,848.132,0,1061.236,1.33,Portugal_UHSLC,1,nein
-h210_flores_santa_cruz.csv,39.3783,-31.1686,2009,"Lajes das Flores, Açores, Portugal",harmonics_utide_observations.txt,0,6456,306.0599,848.138,0,1061.236,1.339,Portugal_UHSLC,0,nein
-h210_flores_santa_cruz.csv,39.3783,-31.1686,2009,"Lajes das Flores, Açores, Portugal",harmonics_noaa_eutt.txt,9,6456,306.0414,848.179,10,1060.226,1.377,Portugal_UHSLC,0,nein
-h210_flores_santa_cruz.csv,39.4514,-31.1259,2009,"Santa Cruz das Flores, Açores, Portugal",harmonics_att_np208_secondary.txt,0,6456,306.0638,848.162,0,1060.231,1.385,Portugal_UHSLC,0,nein
-h210_flores_santa_cruz.csv,39.4514,-31.1259,2009,"Santa Cruz das Flores, Açores, Portugal",harmonics_ticon4_worldwide.txt,0,6456,306.0489,848.097,10,1061.236,1.401,Portugal_UHSLC,1,nein
-h210_flores_santa_cruz.csv,39.4514,-31.1259,2009,"Santa Cruz das Flores, Açores, Portugal",harmonics_utide_observations.txt,0,6456,306.0478,848.088,0,1061.235,1.412,Portugal_UHSLC,0,nein
-h218_funchal.csv,32.6447,-16.9107,2012,"Funchal, Madeira, Portugal",harmonics_noaa_eutt.txt,0,7601,558.6349,1318.994,710,1648.616,2.481,Portugal_UHSLC,0,nein
-h218_funchal.csv,32.6447,-16.9107,2012,"Funchal, Madeira, Portugal",harmonics_ticon4_worldwide.txt,0,7601,558.6493,1318.999,710,1650.014,2.538,Portugal_UHSLC,1,nein
-h218_funchal.csv,32.6447,-16.9107,2012,"Funchal, Madeira, Portugal",harmonics_utide_observations.txt,19,7601,558.6529,1319.016,710,1650.013,2.547,Portugal_UHSLC,0,nein
-h218_funchal.csv,32.6447,-16.9107,2012,"Funchal, Madeira, Portugal",harmonics_att_np208.txt,834,7601,558.673,1319.128,710,1648.622,2.144,Portugal_UHSLC,0,nein
 244_Gibara.csv,21.1170,-76.1170,1992,"Gibara, Cuba",harmonics_ticon4_worldwide.txt,0,8761,0.068,0.295,-10,0.032,1.137,Caribbean_UHSLC_CubaJamaicaBahamas,1,nein
 244_Gibara.csv,21.1170,-76.1170,1992,"Gibara, Cuba",harmonics_utide_observations.txt,0,8761,0.0672,0.294,-10,0.032,1.135,Caribbean_UHSLC_CubaJamaicaBahamas,0,nein
 78_Gisborne.csv,-38.6830,178.0330,2024,"Gisborne, New Zealand",harmonics_ticon4_worldwide.txt,0,8615,0.1053,0.642,0,0.014,1.824,New_Zealand_UHSLC,1,nein
@@ -129,7 +104,6 @@ h218_funchal.csv,32.6447,-16.9107,2012,"Funchal, Madeira, Portugal",harmonics_at
 134_Hiron_Point.csv,21.8174,89.4622,2003,"Hiron Point (Pasur River), Bangladesh",harmonics_utide_observations.txt,0,8761,0.1306,0.736,0,0.069,3.502,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
 900_Inhambane.csv,-23.8681,35.3767,2014,"Inhambane (Rio Matumba.), Mozambique",harmonics_ticon4_worldwide.txt,0,3543,0.0917,0.411,0,0.125,3.388,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
 900_Inhambane.csv,-23.8681,35.3767,2014,"Inhambane (Rio Matumba.), Mozambique",harmonics_att_np203_secondary.txt,20,3543,0.1432,0.533,10,4.392,3.271,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
-bona_ioc.csv,41.0019,39.7445,2026,"Trabzon, Turkey",harmonics_ticon4_worldwide.txt,0,513774,0.2332,0.769,240,0.035,0.385,ABC_IOC,1,nein
 161_Jakarta.csv,-6.1068,106.8908,2004,"Jakarta (Port), Java, Indonesia",harmonics_ticon4_worldwide.txt,0,8533,0.1108,0.459,10,-0.003,1.322,Indonesia_UHSLC,1,nein
 161_Jakarta.csv,-6.1068,106.8908,2004,"Tanjung Priok, Indonesia",harmonics_att_np203_scs.txt,2770,8533,0.1505,0.572,20,1.449,0.98,Indonesia_UHSLC,0,nein
 373_Jolo.csv,6.0670,121.0000,1995,"Jolo, Philippines",harmonics_ticon4_worldwide.txt,0,6088,0.0766,0.234,-10,0.06,1.335,Philippines_UHSLC,1,nein
@@ -145,21 +119,12 @@ bona_ioc.csv,41.0019,39.7445,2026,"Trabzon, Turkey",harmonics_ticon4_worldwide.t
 186_Knysna.csv,-34.0500,23.0450,2016,"Knysna, South Africa",harmonics_att_np203_secondary.txt,24,8761,0.1317,0.595,0,0.079,2.043,SouthAfrica_UHSLC,0,nein
 ko_lak_328.csv,11.7950,99.8170,2025,"Ko Lak, Prachuap Khiri Khan, Thailand",harmonics_ticon4_worldwide.txt,0,6570,0.1295,1.007,0,0.098,2.778,UHSLC_Thailand,1,nein
 ko_lak_328.csv,11.7950,99.8170,2025,"Ko Lak, Prachuap Khiri Khan, Thailand",harmonics_utide_observations.txt,40,6570,0.1184,0.999,0,0.096,2.758,UHSLC_Thailand,0,nein
-ko_lak_328.csv,7.8338,98.4216,2025,"Ko Taphao Noi (Phuket), Phuket, Thailand",harmonics_ticon4_worldwide.txt,0,6564,0.801,2.537,470,0.364,3.233,UHSLC_Thailand,1,nein
-ko_lak_328.csv,7.8338,98.4216,2025,"Ko Taphao Noi (Phuket), Phuket, Thailand",harmonics_utide_observations.txt,0,6564,0.7994,2.536,470,0.362,3.277,UHSLC_Thailand,0,nein
 h247_la_guaira.csv,10.6041,-66.9315,1994,"La Guaira, Venezuela",harmonics_ticon4_worldwide.txt,0,8600,126.4375,390.12,720,1255.884,0.6,Venezuela_UHSLC,1,nein
 h247_la_guaira.csv,10.6041,-66.9315,1994,"La Guaira, Venezuela",harmonics_utide_observations.txt,0,8600,126.4382,390.121,720,1255.884,0.586,Venezuela_UHSLC,0,nein
 671_La_Paz.csv,24.1519,-110.3314,1983,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_ticon4_worldwide.txt,0,5784,0.0836,0.24,0,0.085,1.817,Mexico_UHSLC,1,nein
 671_La_Paz.csv,24.1519,-110.3314,1983,"La Paz (Cuarta Zona Naval), Baja California Sur, Mexico",harmonics_utide_observations.txt,5,5784,0.0787,0.262,0,0.085,1.856,Mexico_UHSLC,0,nein
 67_Lae.csv,-6.7330,146.9830,1998,"Lae, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,8039,0.1466,0.381,0,-0.04,0.993,PapuaNewGuinea_UHSLC,1,nein
 67_Lae.csv,-6.7330,146.9830,1998,"Lae, Papua New Guinea",harmonics_utide_observations.txt,0,8039,0.1441,0.355,0,-0.04,1.015,PapuaNewGuinea_UHSLC,0,nein
-h723a_lagos.csv,6.4525,3.3839,2000,"Lagos (Apapa), Nigeria",harmonics_att_np208.txt,0,8508,808.1654,1968.752,720,2182.245,0.847,Portugal_UHSLC,0,nein
-h723a_lagos.csv,6.4525,3.3839,2000,"Lagos (Apapa), Nigeria",harmonics_ticon4_worldwide.txt,0,8508,808.0568,1968.456,720,2183.125,1.325,Portugal_UHSLC,1,nein
-h723a_lagos.csv,6.4525,3.3839,2000,"Lagos (Apapa), Nigeria",harmonics_utide_observations.txt,0,8508,808.0573,1968.452,720,2183.125,1.367,Portugal_UHSLC,0,nein
-h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_att_np208_secondary.txt,0,8508,808.2004,1968.749,720,2182.345,1.018,Portugal_UHSLC,0,nein
-h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_noaa_eutt.txt,0,8508,808.1319,1968.601,720,2182.668,1.549,Portugal_UHSLC,0,nein
-h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_ticon4_worldwide.txt,0,8508,808.0658,1968.417,720,2183.124,1.672,Portugal_UHSLC,1,nein
-h723a_lagos.csv,6.3920,3.3997,2000,"Lagos Bar, Nigeria",harmonics_utide_observations.txt,0,8508,808.066,1968.412,720,2183.124,1.64,Portugal_UHSLC,0,nein
 149_Lamu.csv,-2.2674,40.9027,2018,"Lamu, Kenya",harmonics_ticon4_worldwide.txt,0,8761,0.0592,0.279,0,-0.005,3.747,EastAfrica_UHSLC_TZ_KE,1,nein
 149_Lamu.csv,-2.2674,40.9027,2018,"Lamu, Kenya",harmonics_utide_observations.txt,0,8761,0.0541,0.278,0,-0.005,3.784,EastAfrica_UHSLC_TZ_KE,0,nein
 371_Legaspi.csv,13.1461,123.7580,2026,"Legaspi, Philippines",harmonics_ticon4_worldwide.txt,0,8131,0.0562,0.549,0,0.234,2.2,Philippines_UHSLC,1,nein
@@ -188,7 +153,6 @@ lobito_angola.csv,-12.3355,13.5592,1975,"Porto do Lobito, Angola",harmonics_noaa
 667_Lyttelton.csv,-43.6056,172.7219,2024,"Lyttelton, New Zealand",harmonics_ticon4_worldwide.txt,0,8606,0.1206,0.447,0,0.022,2.455,New_Zealand_UHSLC,1,nein
 667_Lyttelton.csv,-43.6056,172.7219,2024,"Lyttelton, Canterbury, New Zealand",harmonics_utide_observations.txt,0,8606,0.119,0.45,0,0.022,2.447,New_Zealand_UHSLC,0,nein
 667_Lyttelton.csv,-43.6056,172.7219,2024,"Lyttelton, Canterbury, New Zealand",harmonics_noaa_cptt.txt,1303,8606,0.1637,0.592,10,0.544,2.69,New_Zealand_UHSLC,0,nein
-400_Lombrum_Manus_Is.csv,-54.4830,158.9670,2021,"Macquarie Island, Australia",harmonics_ticon4_worldwide.txt,0,8753,0.2785,1.013,-590,0.468,1.277,PapuaNewGuinea_UHSLC,1,nein
 66_Madang.csv,-5.2084,145.8002,1998,"Madang Harbour, Papua New Guinea",harmonics_ticon4_worldwide.txt,0,7974,0.0561,0.274,0,0.003,1.043,PapuaNewGuinea_UHSLC,1,nein
 66_Madang.csv,-5.2084,145.8002,1998,"Madang, Papua New Guinea",harmonics_utide_observations.txt,934,7974,0.0499,0.28,0,0.003,1.021,PapuaNewGuinea_UHSLC,0,nein
 370_Manila.csv,14.5850,120.9680,2026,"Manila, Philippines",harmonics_ticon4_worldwide.txt,0,8748,0.0831,0.405,0,-0.387,1.994,Philippines_UHSLC,1,nein
@@ -249,9 +213,6 @@ PenicheTG.csv,39.3540,-9.3670,2024,"Peniche, Portugal",harmonics_ticon4_worldwid
 PenicheTG.csv,39.3540,-9.3670,2024,"Peniche, Portugal",harmonics_utide_observations.txt,0,8044,0.1074,0.561,10,2.291,3.857,Portugal_CMEMS,0,nein
 h728_point_fortin.csv,10.1901,-61.6889,1996,"Point Fortin, Trinidad and Tobago",harmonics_ticon4_worldwide.txt,0,8525,345.15,860.557,0,871.345,1.677,TrinidadTobago_UHSLC,1,nein
 h728_point_fortin.csv,10.1901,-61.6889,1996,"Point Fortin, Trinidad and Tobago",harmonics_utide_observations.txt,16,8525,345.1494,860.55,0,871.345,1.684,TrinidadTobago_UHSLC,0,nein
-h211_ponta_delgada.csv,37.7356,-25.6713,2026,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_att_np208.txt,0,8485,367.5266,909.463,-720,1217.942,1.367,Portugal_UHSLC,0,nein
-h211_ponta_delgada.csv,37.7356,-25.6713,2026,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_ticon4_worldwide.txt,0,8485,367.4951,909.286,-720,1218.941,1.787,Portugal_UHSLC,1,nein
-h211_ponta_delgada.csv,37.7356,-25.6713,2026,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_utide_observations.txt,0,8485,367.4969,909.287,-720,1218.94,1.8,Portugal_UHSLC,0,nein
 669_Port_Chalmers.csv,-45.8147,170.6241,2024,"Port Chalmers, Otago, New Zealand",harmonics_ticon4_worldwide.txt,0,8761,0.1124,0.43,0,0.016,2.316,New_Zealand_UHSLC,1,nein
 669_Port_Chalmers.csv,-45.8147,170.6241,2024,"Port Chalmers, Otago, New Zealand",harmonics_utide_observations.txt,0,8761,0.108,0.403,0,0.016,2.399,New_Zealand_UHSLC,0,nein
 669_Port_Chalmers.csv,-45.8147,170.6241,2024,"Port Chalmers, Otago Harbor, Otago, New Zealand",harmonics_noaa_cptt.txt,2020,8761,0.1431,0.565,10,0.226,2.274,New_Zealand_UHSLC,0,nein
@@ -264,11 +225,8 @@ h211_ponta_delgada.csv,37.7356,-25.6713,2026,"Ponta Delgada (São Miguel), Açor
 701_Port_Nolloth.csv,-29.2497,16.8669,2016,"Port Nolloth, South Africa",harmonics_utide_observations.txt,35,8697,0.0753,0.358,0,0.009,2.195,SouthAfrica_UHSLC,0,nein
 782_Port_Royal.csv,17.9348,-76.8447,1971,"Port Royal, Jamaica",harmonics_ticon4_worldwide.txt,0,8761,0.0743,0.218,0,0.041,0.462,Caribbean_UHSLC_CubaJamaicaBahamas,1,nein
 782_Port_Royal.csv,17.9348,-76.8447,1971,"Port Royal, Jamaica",harmonics_utide_observations.txt,0,8761,0.0734,0.217,0,0.041,0.493,Caribbean_UHSLC_CubaJamaicaBahamas,0,nein
-543_Victoria.csv,-4.6200,55.4588,2018,"Victoria, Seychelles",harmonics_noaa_cptt.txt,0,8759,0.5053,1.551,180,0.891,1.477,Canada_UHSLC,0,nein
-543_Victoria.csv,-4.6200,55.4588,2018,"Victoria, Seychelles",harmonics_ticon4_worldwide.txt,0,8760,0.4872,1.65,170,1.928,1.767,Canada_UHSLC,1,nein
 h248_port_of_spain.csv,10.6500,-61.5170,1992,"Port of Spain, Trinidad and Tobago",harmonics_ticon4_worldwide.txt,0,7110,261.525,747.604,-10,788.253,1.312,TrinidadTobago_UHSLC,1,nein
 h248_port_of_spain.csv,10.6500,-61.5170,1992,"Port of Spain, Trinidad and Tobago",harmonics_utide_observations.txt,0,7110,261.5248,747.601,-10,788.254,1.322,TrinidadTobago_UHSLC,0,nein
-540_Prince_Rupert.csv,18.5499,-72.3499,2026,"Port-au-Prince, Haiti",harmonics_ticon4_worldwide.txt,0,8753,1.39,3.637,-510,3.722,0.978,Canada_UHSLC,1,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi, Java, Indonesia",harmonics_ticon4_worldwide.txt,0,8743,0.1117,0.317,0,0.149,2.84,Indonesia_UHSLC,1,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi, Java, Indonesia",harmonics_utide_observations.txt,0,8743,0.1072,0.303,0,0.149,2.862,Indonesia_UHSLC,0,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Segoro Wedi Bay, Indonesia",harmonics_att_np203_scs.txt,2606,8743,0.2,0.575,10,0.378,2.159,Indonesia_UHSLC,0,nein
@@ -276,7 +234,6 @@ h248_port_of_spain.csv,10.6500,-61.5170,1992,"Port of Spain, Trinidad and Tobago
 721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatan, Mexico",harmonics_utide_observations.txt,0,8329,0.1337,0.519,190,4.255,0.679,Mexico_UHSLC,0,nein
 286_Puerto_Deseado.csv,-47.7536,-65.9147,2026,"Puerto Deseado, Santa Cruz, Argentina",harmonics_ticon4_worldwide.txt,0,8704,0.1751,0.781,0,0.017,5.596,Argentina_UHSLC,1,nein
 286_Puerto_Deseado.csv,-47.7536,-65.9147,2026,"Puerto Deseado, Santa Cruz, Argentina",harmonics_utide_observations.txt,8,8704,0.1661,0.775,0,0.017,5.669,Argentina_UHSLC,0,nein
-729_Mar_del_Plata.csv,19.8014,-70.7008,2026,"Puerto Plata, Dominican Republic",harmonics_ticon4_worldwide.txt,0,7769,0.4317,3.739,160,3.249,0.979,Argentina_UHSLC,1,nein
 380_Puerto_Princesa.csv,9.7449,118.7358,2014,"Puerto Princesa, Palawan, Philippines",harmonics_ticon4_worldwide.txt,0,8694,0.0601,0.236,0,0.021,2.145,Philippines_UHSLC,1,nein
 380_Puerto_Princesa.csv,9.7449,118.7358,2014,"Puerto Princesa, Philippines",harmonics_utide_observations.txt,25,8694,0.052,0.202,0,0.021,2.195,Philippines_UHSLC,0,nein
 380_Puerto_Princesa.csv,9.7449,118.7358,2014,"Puerto Princesa, Palawan, Philippines",harmonics_noaa_cptt.txt,2459,8694,0.1326,0.427,-10,1.18,2.353,Philippines_UHSLC,0,nein
@@ -314,7 +271,6 @@ salalah_114.csv,16.9350,54.0070,2025,"Salalah, Oman",harmonics_utide_observation
 307_San_Felipe.csv,31.0256,-114.8310,1986,"San Felipe, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,8450,0.1261,0.881,0,1.126,6.97,Mexico_UHSLC,1,nein
 307_San_Felipe.csv,31.0256,-114.8310,1986,"San Felipe, Baja California, Mexico",harmonics-2004-06-14_mod.txt,10,8450,0.249,1.368,0,1.122,7.574,Mexico_UHSLC,0,nein
 307_San_Felipe.csv,31.0256,-114.8310,1986,"San Felipe, Baja California, Mexico",harmonics_utide_observations.txt,10,8450,0.1196,0.86,0,-0.023,6.933,Mexico_UHSLC,0,nein
-394_Salina_Cruz.csv,-0.7485,-90.3130,1991,"Puerto Ayora, Santa Cruz, Galapagos, Ecuador",harmonics_ticon4_worldwide.txt,0,8083,0.233,0.776,0,1.361,2.247,Mexico_UHSLC,1,nein
 738_colombia.csv,11.2352,-74.2215,2026,"Santa Marta, Colombia",harmonics_ticon4_worldwide.txt,0,8739,0.0523,0.169,0,0.018,0.62,Colombia_UHSLC,1,nein
 738_colombia.csv,11.2352,-74.2215,2026,"Santa Marta, Colombia",harmonics_utide_observations.txt,0,8739,0.0518,0.177,0,0.018,0.65,Colombia_UHSLC,0,nein
 sao_tome_stp.csv,0.3480,6.7370,2010,"São Tomé (Baía de Ana Chaves), São Tomé and Príncipe",harmonics_att_np208_secondary.txt,0,8070,411.4638,1105.775,40,1771.073,2.024,CentralWestAfrica_UHSLC,0,nein
@@ -430,7 +386,6 @@ bona_ioc.csv,12.1500,-68.2780,2026,"Kralendijk, Bonaire, Caribbean Netherlands",
 166_Broome.csv,-18.0017,122.2179,2007,"Broome, Western Australia, Australia",harmonics_utide_observations.txt,0,8761,0.0914,0.471,0,-0.083,10.411,Australia_UHSLC,1,ja
 176_Esperance.csv,-33.8670,121.9000,2007,"Esperance, Western Australia, Australia",harmonics_utide_observations.txt,0,8761,0.1347,0.598,0,-0.078,1.28,Australia_UHSLC,1,ja
 168_Darwin.csv,-12.4670,130.8500,2007,"Darwin, Northern Territory, Australia",harmonics_utide_observations.txt,0,8761,0.0991,0.39,0,-0.104,8.02,Australia_UHSLC,1,ja
-brid2_bridgetown.csv,13.1110,-59.6310,2026,"Bridgetown, Barbados",harmonics_utide_observations.txt,0,508308,0.103,2.971,-30,3.161,1.116,Barbados_IOC,1,nein
 124_Chittagong.csv,22.2417,91.8209,2018,"Dakshin Bandar (Chittagong 15 No. Ghat), Bangladesh",harmonics_utide_observations.txt,0,8761,0.1641,2.143,0,-0.081,6.029,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
 124_Chittagong.csv,22.2417,91.8209,2018,"Patenga Point Light (Khal No. 18), Bangladesh",harmonics_utide_tidetables.txt,2717,8761,0.3263,2.002,0,0.792,5.557,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
 134_Hiron_Point.csv,21.8174,89.4622,1984,"Hiron Point (Pasur River), Bangladesh",harmonics_ticon4_worldwide.txt,0,8736,0.1562,0.979,10,0.031,3.539,IndianOcean_UHSLC_BD_MM_MG_MZ,0,ja
@@ -1178,9 +1133,6 @@ Q0.txt,41.4445,140.2383,2025,"Fukushima (Yoshioka), Hokkaido, Japan",harmonics_t
 862_Telchac.csv,21.3400,-89.3080,2013,"Telchac, Yucatan, Mexico",harmonics_utide_observations.txt,0,8126,0.0912,0.392,0,0.001,1.036,Mexico_UHSLC,1,nein
 860_Puerto_Morelos.csv,20.8680,-86.8670,2013,"Puerto Morelos, Quintana Roo, Mexico",harmonics_utide_observations.txt,0,8507,0.0647,0.51,-10,0.025,0.416,Mexico_UHSLC,1,nein
 mnts_ioc.csv,16.8035,-62.2059,2026,"Little Bay, Montserrat",harmonics_utide_observations.txt,0,490445,0.0395,1.448,0,0.013,0.548,Montserrat_IOC,1,nein
-elja1_el_jadida.csv,33.2556,-8.4998,2024,"El Jadida, Morocco",harmonics_noaa_eutt.txt,0,123912,0.743,1.66,380,-2.051,3.298,Morocco_IOC,0,nein
-elja1_el_jadida.csv,33.2556,-8.4998,2024,"El Jadida (Mazagan), Morocco",harmonics_utide_observations.txt,0,123985,0.1511,0.628,-340,-0.39,2.348,Morocco_IOC,1,nein
-elja1_el_jadida.csv,33.2556,-8.4998,2024,"El Jadida (Mazagan), Morocco",harmonics_utide_tidetables.txt,0,123912,0.7379,1.722,380,-2.105,3.467,Morocco_IOC,0,nein
 said_saidia.csv,35.1119,-2.2929,2020,"Saidia Marina, Morocco",harmonics_utide_observations.txt,0,264306,0.3003,1.702,-30,0.957,0.58,Morocco_IOC,1,ja
 398_Marsden_Point.csv,-35.8346,174.4902,2014,"Marsden Point, Northland, New Zealand",harmonics_ticon4_worldwide.txt,0,8761,0.0866,0.452,0,-0.021,2.79,New_Zealand_UHSLC,0,ja
 398_Marsden_Point.csv,-35.8346,174.4902,2014,"Marsden Point, Northland, New Zealand",harmonics_utide_observations.txt,0,8761,0.0866,0.458,0,-0.021,2.807,New_Zealand_UHSLC,1,ja
@@ -4255,43 +4207,6 @@ zes57a-1066.csv,51.0043,3.8053,2026,"Melle, Belgium",harmonics_utide_observation
 04840_Fort_Albany_wlp.csv,52.2189,-81.6356,2025,"Fort Albany, Ontario, Canada",harmonics_utide_tidetables.txt,0,35040,0.019,0.059,0,-0.0,2.477,Canada_IWLS_ON,0,nein
 04880_Bear_Island_wlp.csv,54.3533,-81.0833,2025,"Bear Island, Nunavut, Canada",harmonics_utide_tidetables.txt,0,35040,0.2268,0.488,20,0.235,1.997,Canada_IWLS_ON,0,nein
 04920_Winisk_wlp.csv,55.2833,-85.1000,2025,"Winisk, Ontario, Canada",harmonics_utide_tidetables.txt,0,35040,0.024,0.083,0,-0.0,3.249,Canada_IWLS_ON,0,nein
-01650_Souris_wlo.csv,46.3496,-62.2518,2025,"Souris, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,20736,0.1396,0.702,-10,0.398,1.687,Canada_IWLS_PEI,0,nein
-01650_Souris_wlp.csv,46.3496,-62.2518,2025,"Souris, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0089,0.033,0,0.0,1.687,Canada_IWLS_PEI,0,nein
-01660_Georgetown_wlp.csv,-7.9251,-14.4141,2025,"Georgetown, Ascension Island",harmonics_att_np208.txt,0,35033,0.2365,0.765,-410,0.434,0.991,Canada_IWLS_PEI,0,nein
-01660_Georgetown_wlp.csv,-7.9251,-14.4141,2025,"Georgetown, Ascension Island",harmonics_noaa_eutt.txt,0,35036,0.1824,0.598,330,0.372,1.363,Canada_IWLS_PEI,0,nein
-01660_Georgetown_wlp.csv,-7.9251,-14.4141,2025,"Georgetown, Ascension Island",harmonics_ticon4_worldwide.txt,0,35033,0.2366,0.704,-410,0.374,1.304,Canada_IWLS_PEI,0,nein
-01662_Montague_wlp.csv,46.1647,-62.6463,2025,"Montague, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0113,0.047,0,-0.0,1.852,Canada_IWLS_PEI,0,nein
-01662_Montague_wlp.csv,46.1647,-62.6463,2025,"Montague, Prince Edward Island, Canada",harmonics-2004-06-14_mod.txt,4,35051,0.017,0.07,0,-0.0,1.841,Canada_IWLS_PEI,0,nein
-01665_Graham_Pond_wlp.csv,46.0960,-62.4537,2025,"Graham Pond, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0095,0.035,0,0.0,1.72,Canada_IWLS_PEI,0,nein
-01670_Murray_Harbour_wlp.csv,46.0055,-62.5235,2025,"Murray Harbour, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0113,0.043,0,0.0,1.917,Canada_IWLS_PEI,0,nein
-01680_Wood_Islands_wlo.csv,45.9529,-62.7494,2025,"Wood Islands, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,33524,0.1638,0.775,0,0.119,2.217,Canada_IWLS_PEI,0,nein
-01680_Wood_Islands_wlp.csv,45.9529,-62.7494,2025,"Wood Islands, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0136,0.054,0,0.0,2.217,Canada_IWLS_PEI,0,nein
-01690_Prim_Point_wlp.csv,46.0562,-63.0302,2025,"Prim Point, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0165,0.059,0,0.0,2.794,Canada_IWLS_PEI,0,nein
-01700_Charlottetown_wlp.csv,46.2301,-63.1222,2025,"Charlottetown, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0219,0.099,0,0.0,2.926,Canada_IWLS_PEI,0,nein
-01700_Charlottetown_wlp.csv,46.2301,-63.1222,2025,"Charlottetown, Prince Edward Island, Canada",harmonics_utide_observations.txt,3,35051,0.0388,0.146,0,-0.085,2.984,Canada_IWLS_PEI,0,nein
-01725_Port_Borden_wlp.csv,46.2461,-63.7007,2025,"Port Borden, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0194,0.07,0,0.0,2.475,Canada_IWLS_PEI,0,nein
-01725_Port_Borden_wlp.csv,46.2461,-63.7007,2025,"Port Borden, Prince Edward Island, Canada",harmonics-2004-06-14_mod.txt,3,35051,0.0181,0.065,0,0.0,2.483,Canada_IWLS_PEI,0,nein
-01735_Summerside_wlp.csv,46.3865,-63.7896,2025,"Summerside, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0147,0.06,0,-0.0,1.908,Canada_IWLS_PEI,0,nein
-01735_Summerside_wlp.csv,46.3865,-63.7896,2025,"Summerside, Prince Edward Island, Canada",harmonics-2004-06-14_mod.txt,4,35051,0.0222,0.1,0,-0.0,1.928,Canada_IWLS_PEI,0,nein
-01780_Tidnish_wlp.csv,45.9976,-64.0074,2025,"Tidnish, Nova Scotia, Canada",harmonics_utide_tidetables.txt,4,35051,0.0427,0.151,0,0.02,2.871,Canada_IWLS_PEI,0,nein
-01780_Tidnish_wlp.csv,45.9976,-64.0074,2025,"Tidnish Head, New Brunswick, Canada",harmonics-2004-06-14_mod.txt,22,35051,0.042,0.144,0,-0.0,2.922,Canada_IWLS_PEI,0,nein
-01780_Tidnish_wlp.csv,45.9976,-64.0074,2025,"Tidnish Head, Baie Verte, Nova Scotia, Canada",harmonics_noaa_amtt.txt,2242,35051,0.1911,0.587,0,0.008,3.442,Canada_IWLS_PEI,0,nein
-01785_Port_Elgin_wlp.csv,46.0519,-64.0828,2025,"Port Elgin, New Brunswick, Canada",harmonics_utide_tidetables.txt,4,35051,0.0193,0.075,0,0.0,2.805,Canada_IWLS_PEI,0,nein
-01790_Cape_Tormentine_wlp.csv,46.1347,-63.7768,2025,"Cape Tormentine, New Brunswick, Canada",harmonics_utide_tidetables.txt,2,35051,0.0191,0.082,0,-0.0,2.373,Canada_IWLS_PEI,0,nein
-01800_Cap_Pelé_wlp.csv,46.2358,-64.2613,2025,"Cap Pelé (Cape Bald), New Brunswick, Canada",harmonics_utide_tidetables.txt,4,35051,0.0079,0.03,0,0.0,1.536,Canada_IWLS_PEI,0,nein
-01800_Cap_Pelé_wlp.csv,46.2358,-64.2613,2025,"Cap Pelé (Cape Bald), New Brunswick, Canada",harmonics-2004-06-14_mod.txt,5,35051,0.0238,0.079,0,-0.0,1.558,Canada_IWLS_PEI,0,nein
-01835_Cape_Egmont_wlp.csv,46.4082,-64.1336,2025,"Cape Egmont, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0122,0.047,0,-0.0,1.594,Canada_IWLS_PEI,0,nein
-01845_West_Point_wlp.csv,46.6201,-64.3718,2025,"West Point, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0104,0.039,0,0.0,1.414,Canada_IWLS_PEI,0,nein
-01855_Miminegash_wlp.csv,46.8801,-64.2344,2025,"Miminegash, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0063,0.024,0,0.0,1.281,Canada_IWLS_PEI,0,nein
-01860_Skinners_Pond_wlp.csv,46.9642,-64.1229,2025,"Skinner's Pond, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0078,0.034,0,-0.0,1.257,Canada_IWLS_PEI,0,nein
-01865_North_Point_wlp.csv,47.0582,-63.9960,2025,"North Point, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0063,0.024,0,0.0,1.289,Canada_IWLS_PEI,0,nein
-01875_Tignish_wlp.csv,46.9509,-63.9938,2025,"Tignish, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0064,0.024,0,0.0,1.298,Canada_IWLS_PEI,0,nein
-01885_Alberton_wlp.csv,46.7951,-64.0583,2025,"Alberton, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0053,0.018,0,0.0,1.085,Canada_IWLS_PEI,0,nein
-01905_Malpeque_wlp.csv,46.5240,-63.6966,2025,"Malpeque, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0061,0.023,0,-0.0,1.269,Canada_IWLS_PEI,0,nein
-01918_Covehead_wlp.csv,46.4290,-63.1461,2025,"Covehead, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0198,1.98,0,-0.0,1.209,Canada_IWLS_PEI,0,nein
-01945_Naufrage_wlp.csv,46.4684,-62.4172,2025,"Naufrage, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.034,0.068,0,-0.0,1.29,Canada_IWLS_PEI,0,nein
-01945_Naufrage_wlp.csv,46.4684,-62.4172,2025,"Naufrage, Prince Edward Island, Canada",harmonics-2004-06-14_mod.txt,4,35051,0.0328,0.095,0,-0.0,1.328,Canada_IWLS_PEI,0,nein
-01955_North_Lake_Harbour_wlp.csv,46.4670,-62.0688,2025,"North Lake Harbour, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0057,0.021,0,0.0,1.107,Canada_IWLS_PEI,0,nein
 01960_Anse_à_la_Cabane_wlp.csv,47.2177,-61.9854,2025,"Anse à la Cabane, Québec, Canada",harmonics_utide_tidetables.txt,0,35040,0.0135,0.107,0,0.0,0.909,Canada_IWLS_QC,0,nein
 01964_Havre-Aubert_wlp.csv,47.2352,-61.8281,2025,"Havre Aubert (Amherst), Québec, Canada",harmonics_utide_tidetables.txt,0,35040,0.0129,0.042,0,0.0,1.092,Canada_IWLS_QC,0,nein
 01964_Havre-Aubert_wlp.csv,47.2352,-61.8281,2025,"Havre Aubert (Amherst), Québec, Canada",harmonics-2004-06-14_mod.txt,90,35040,0.0378,0.124,0,0.015,1.019,Canada_IWLS_QC,0,nein
@@ -4760,3 +4675,70 @@ wierumergronden.csv,53.5158,5.9583,2026,"Wierumergronden, Netherlands",harmonics
 willemstad.hollandschdiep.csv,51.6950,4.4216,2026,"Willemstad (Hollandsch Diep), Netherlands",harmonics_ticon4_worldwide.txt,4,52561,0.0255,0.083,-120,0.49,0.547,Netherlands,0,nein
 willemstad.hollandschdiep.csv,51.6950,4.4216,2026,"Willemstad, Hollandsch Diep, Netherlands",harmonics_utide_observations.txt,1026,52561,0.0276,0.097,0,-0.028,0.538,Netherlands,0,nein
 yerseke.csv,51.5062,4.0751,2026,"Yerseke, Netherlands",harmonics_utide_observations.txt,6,52561,0.0645,0.215,0,-0.0,4.286,Netherlands,0,nein
+h210_flores_santa_cruz.csv,39.4514,-31.1259,2009,"Santa Cruz das Flores, Açores, Portugal",harmonics_att_np208_secondary.txt,0,6456,0.085,0.409,0,0.061,1.385,Portugal_UHSLC,0,nein
+h210_flores_santa_cruz.csv,39.4514,-31.1259,2009,"Santa Cruz das Flores, Açores, Portugal",harmonics_ticon4_worldwide.txt,0,6456,0.0788,0.392,10,1.066,1.401,Portugal_UHSLC,1,nein
+h210_flores_santa_cruz.csv,39.4514,-31.1259,2009,"Santa Cruz das Flores, Açores, Portugal",harmonics_utide_observations.txt,0,6456,0.0792,0.41,0,1.065,1.412,Portugal_UHSLC,0,nein
+h211_ponta_delgada.csv,37.7356,-25.6713,2026,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_att_np208.txt,0,8494,0.1227,0.439,-10,0.219,1.367,Portugal_UHSLC,0,nein
+h211_ponta_delgada.csv,37.7356,-25.6713,2026,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_ticon4_worldwide.txt,0,8494,0.0686,0.258,0,1.218,1.787,Portugal_UHSLC,1,nein
+h211_ponta_delgada.csv,37.7356,-25.6713,2026,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_utide_observations.txt,0,8494,0.0644,0.252,0,1.217,1.8,Portugal_UHSLC,0,nein
+h209_cascais.csv,38.6932,-9.4154,2010,"Cascais, Portugal",harmonics_noaa_eutt.txt,0,8503,0.1611,0.689,0,0.06,3.142,Portugal_UHSLC,0,ja
+h209_cascais.csv,38.6932,-9.4154,2010,"Cascais, Portugal",harmonics_ticon4_worldwide.txt,0,8503,0.1131,0.607,-10,2.254,3.63,Portugal_UHSLC,0,ja
+h209_cascais.csv,38.6932,-9.4154,2010,"Cascais, Portugal",harmonics_utide_observations.txt,0,8503,0.1173,0.591,0,2.254,3.582,Portugal_UHSLC,1,ja
+h210_flores_santa_cruz.csv,39.4514,-31.1259,1986,"Santa Cruz das Flores, Açores, Portugal",harmonics_att_np208_secondary.txt,0,8665,0.0954,0.457,0,-0.04,1.382,Portugal_UHSLC,0,ja
+h210_flores_santa_cruz.csv,39.4514,-31.1259,1986,"Santa Cruz das Flores, Açores, Portugal",harmonics_ticon4_worldwide.txt,0,8665,0.0954,0.428,0,0.96,1.386,Portugal_UHSLC,0,ja
+h210_flores_santa_cruz.csv,39.4514,-31.1259,1986,"Santa Cruz das Flores, Açores, Portugal",harmonics_utide_observations.txt,0,8665,0.095,0.415,0,0.96,1.408,Portugal_UHSLC,1,ja
+h211_ponta_delgada.csv,37.7356,-25.6713,2015,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_att_np208.txt,0,8699,0.1249,0.402,0,0.132,1.413,Portugal_UHSLC,0,ja
+h211_ponta_delgada.csv,37.7356,-25.6713,2015,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_ticon4_worldwide.txt,0,8699,0.075,0.293,0,1.131,1.879,Portugal_UHSLC,0,ja
+h211_ponta_delgada.csv,37.7356,-25.6713,2015,"Ponta Delgada (São Miguel), Açores, Portugal",harmonics_utide_observations.txt,0,8699,0.0702,0.294,0,1.131,1.903,Portugal_UHSLC,1,ja
+h212a_horta.csv,38.5339,-28.6214,1986,"Horta (Faial), Açores, Portugal",harmonics_att_np208_secondary.txt,0,6145,0.0699,0.347,10,0.066,1.507,Portugal_UHSLC,0,nein
+h212a_horta.csv,38.5339,-28.6214,1986,"Horta (Faial), Açores, Portugal",harmonics-1997-05-25_mod.txt,0,6145,0.0676,0.299,10,0.062,1.497,Portugal_UHSLC,0,nein
+h212a_horta.csv,38.5339,-28.6214,1986,"Horta (Faial), Açores, Portugal",harmonics_noaa_eutt.txt,0,6145,0.0834,0.388,10,0.061,1.456,Portugal_UHSLC,0,nein
+h212a_horta.csv,38.5339,-28.6214,1986,"Horta (Faial), Açores, Portugal",harmonics_utide_observations.txt,0,6145,0.0638,0.286,0,1.069,1.572,Portugal_UHSLC,1,nein
+h213a_flores_lajes.csv,39.3783,-31.1686,2013,"Lajes das Flores, Açores, Portugal",harmonics_att_np208_secondary.txt,0,8761,0.0838,0.34,0,0.096,1.359,Portugal_UHSLC,0,nein
+h213a_flores_lajes.csv,39.3783,-31.1686,2013,"Lajes das Flores, Açores, Portugal",harmonics_ticon4_worldwide.txt,0,8761,0.0734,0.283,0,1.096,1.347,Portugal_UHSLC,0,nein
+h213a_flores_lajes.csv,39.3783,-31.1686,2013,"Lajes das Flores, Açores, Portugal",harmonics_utide_observations.txt,0,8761,0.0736,0.282,0,1.096,1.347,Portugal_UHSLC,1,nein
+h213a_flores_lajes.csv,39.3783,-31.1686,2013,"Lajes das Flores, Açores, Portugal",harmonics_noaa_eutt.txt,9,8761,0.0971,0.414,0,0.09,1.353,Portugal_UHSLC,0,nein
+h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_att_np208_secondary.txt,0,8761,0.0937,0.436,0,0.184,1.584,Portugal_UHSLC,0,nein
+h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_noaa_eutt.txt,0,8761,0.1052,0.417,0,0.179,1.627,Portugal_UHSLC,0,nein
+h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_ticon4_worldwide.txt,0,8761,0.0887,0.394,0,1.184,1.7,Portugal_UHSLC,0,nein
+h215a_angra_do_heroismo.csv,38.6515,-27.2155,1962,"Angra do Heroísmo (Terceira), Açores, Portugal",harmonics_utide_observations.txt,0,8761,0.0881,0.403,0,1.185,1.714,Portugal_UHSLC,1,nein
+h218_funchal.csv,32.6447,-16.9109,2002,"Funchal, Madeira, Portugal",harmonics_utide_observations.txt,0,6127,0.0648,0.387,0,1.6,2.768,Portugal_UHSLC,1,ja
+h218_funchal.csv,32.6447,-16.9109,2002,"Funchal, Madeira, Portugal",harmonics_noaa_eutt.txt,19,6127,0.1152,0.47,0,0.202,2.555,Portugal_UHSLC,0,ja
+h218_funchal.csv,32.6447,-16.9109,2002,"Funchal, Madeira, Portugal",harmonics_ticon4_worldwide.txt,19,6127,0.0636,0.371,0,1.601,2.743,Portugal_UHSLC,0,ja
+h218_funchal.csv,32.6447,-16.9109,2002,"Funchal, Madeira, Portugal",harmonics_att_np208.txt,821,6127,0.1505,0.472,0,0.212,2.136,Portugal_UHSLC,0,ja
+h723a_lagos.csv,37.0988,-8.6668,2000,"Lagos, Portugal",harmonics_noaa_eutt.txt,0,8519,0.1643,0.692,-10,0.172,3.231,Portugal_UHSLC,0,nein
+h723a_lagos.csv,37.0988,-8.6668,2000,"Lagos, Portugal",harmonics_utide_observations.txt,0,8519,0.0892,0.507,0,2.182,3.564,Portugal_UHSLC,1,nein
+01650_Souris_wlo.csv,46.3496,-62.2518,2025,"Souris, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,20736,0.1396,0.702,-10,0.398,1.687,Canada_IWLS_PEI,0,nein
+01650_Souris_wlp.csv,46.3496,-62.2518,2025,"Souris, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0089,0.033,0,0.0,1.687,Canada_IWLS_PEI,0,nein
+01660_Georgetown_wlp.csv,46.1795,-62.5316,2025,"Georgetown Harbour, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0113,0.045,0,-0.0,1.955,Canada_IWLS_PEI,0,nein
+01662_Montague_wlp.csv,46.1647,-62.6463,2025,"Montague, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0113,0.047,0,-0.0,1.852,Canada_IWLS_PEI,0,nein
+01662_Montague_wlp.csv,46.1647,-62.6463,2025,"Montague, Prince Edward Island, Canada",harmonics-2004-06-14_mod.txt,4,35051,0.017,0.07,0,-0.0,1.841,Canada_IWLS_PEI,0,nein
+01665_Graham_Pond_wlp.csv,46.0960,-62.4537,2025,"Graham Pond, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0095,0.035,0,0.0,1.72,Canada_IWLS_PEI,0,nein
+01670_Murray_Harbour_wlp.csv,46.0055,-62.5235,2025,"Murray Harbour, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0113,0.043,0,0.0,1.917,Canada_IWLS_PEI,0,nein
+01680_Wood_Islands_wlo.csv,45.9529,-62.7494,2025,"Wood Islands, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,33524,0.1638,0.775,0,0.119,2.217,Canada_IWLS_PEI,0,nein
+01680_Wood_Islands_wlp.csv,45.9529,-62.7494,2025,"Wood Islands, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0136,0.054,0,0.0,2.217,Canada_IWLS_PEI,0,nein
+01690_Prim_Point_wlp.csv,46.0562,-63.0302,2025,"Prim Point, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0165,0.059,0,0.0,2.794,Canada_IWLS_PEI,0,nein
+01700_Charlottetown_wlp.csv,46.2301,-63.1222,2025,"Charlottetown, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0219,0.099,0,0.0,2.926,Canada_IWLS_PEI,0,nein
+01700_Charlottetown_wlp.csv,46.2301,-63.1222,2025,"Charlottetown, Prince Edward Island, Canada",harmonics_utide_observations.txt,3,35051,0.0388,0.146,0,-0.085,2.984,Canada_IWLS_PEI,1,nein
+01725_Port_Borden_wlp.csv,46.2461,-63.7007,2025,"Port Borden, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0194,0.07,0,0.0,2.475,Canada_IWLS_PEI,0,nein
+01725_Port_Borden_wlp.csv,46.2461,-63.7007,2025,"Port Borden, Prince Edward Island, Canada",harmonics-2004-06-14_mod.txt,3,35051,0.0181,0.065,0,0.0,2.483,Canada_IWLS_PEI,0,nein
+01735_Summerside_wlp.csv,46.3865,-63.7896,2025,"Summerside, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0147,0.06,0,-0.0,1.908,Canada_IWLS_PEI,0,nein
+01735_Summerside_wlp.csv,46.3865,-63.7896,2025,"Summerside, Prince Edward Island, Canada",harmonics-2004-06-14_mod.txt,4,35051,0.0222,0.1,0,-0.0,1.928,Canada_IWLS_PEI,0,nein
+01780_Tidnish_wlp.csv,45.9976,-64.0074,2025,"Tidnish, Nova Scotia, Canada",harmonics_utide_tidetables.txt,4,35051,0.0427,0.151,0,0.02,2.871,Canada_IWLS_PEI,0,nein
+01780_Tidnish_wlp.csv,45.9976,-64.0074,2025,"Tidnish Head, New Brunswick, Canada",harmonics-2004-06-14_mod.txt,22,35051,0.042,0.144,0,-0.0,2.922,Canada_IWLS_PEI,0,nein
+01780_Tidnish_wlp.csv,45.9976,-64.0074,2025,"Tidnish Head, Baie Verte, Nova Scotia, Canada",harmonics_noaa_amtt.txt,2242,35051,0.1911,0.587,0,0.008,3.442,Canada_IWLS_PEI,0,nein
+01785_Port_Elgin_wlp.csv,46.0519,-64.0828,2025,"Port Elgin, New Brunswick, Canada",harmonics_utide_tidetables.txt,4,35051,0.0193,0.075,0,0.0,2.805,Canada_IWLS_PEI,0,nein
+01790_Cape_Tormentine_wlp.csv,46.1347,-63.7768,2025,"Cape Tormentine, New Brunswick, Canada",harmonics_utide_tidetables.txt,2,35051,0.0191,0.082,0,-0.0,2.373,Canada_IWLS_PEI,0,nein
+01800_Cap_Pelé_wlp.csv,46.2358,-64.2613,2025,"Cap Pelé (Cape Bald), New Brunswick, Canada",harmonics_utide_tidetables.txt,4,35051,0.0079,0.03,0,0.0,1.536,Canada_IWLS_PEI,0,nein
+01835_Cape_Egmont_wlp.csv,46.4082,-64.1336,2025,"Cape Egmont, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0122,0.047,0,-0.0,1.594,Canada_IWLS_PEI,0,nein
+01845_West_Point_wlp.csv,46.6201,-64.3718,2025,"West Point, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0104,0.039,0,0.0,1.414,Canada_IWLS_PEI,0,nein
+01855_Miminegash_wlp.csv,46.8801,-64.2344,2025,"Miminegash, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0063,0.024,0,0.0,1.281,Canada_IWLS_PEI,0,nein
+01860_Skinners_Pond_wlp.csv,46.9642,-64.1229,2025,"Skinner's Pond, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0078,0.034,0,-0.0,1.257,Canada_IWLS_PEI,0,nein
+01865_North_Point_wlp.csv,47.0582,-63.9960,2025,"North Point, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0063,0.024,0,0.0,1.289,Canada_IWLS_PEI,0,nein
+01875_Tignish_wlp.csv,46.9509,-63.9938,2025,"Tignish, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0064,0.024,0,0.0,1.298,Canada_IWLS_PEI,0,nein
+01885_Alberton_wlp.csv,46.7951,-64.0583,2025,"Alberton, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0053,0.018,0,0.0,1.085,Canada_IWLS_PEI,0,nein
+01905_Malpeque_wlp.csv,46.5240,-63.6966,2025,"Malpeque, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0061,0.023,0,-0.0,1.269,Canada_IWLS_PEI,0,nein
+01918_Covehead_wlp.csv,46.4290,-63.1461,2025,"Covehead, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0198,1.98,0,-0.0,1.209,Canada_IWLS_PEI,0,nein
+01945_Naufrage_wlp.csv,46.4684,-62.4172,2025,"Naufrage, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.034,0.068,0,-0.0,1.29,Canada_IWLS_PEI,0,nein
+01945_Naufrage_wlp.csv,46.4684,-62.4172,2025,"Naufrage, Prince Edward Island, Canada",harmonics-2004-06-14_mod.txt,4,35051,0.0328,0.095,0,-0.0,1.328,Canada_IWLS_PEI,0,nein
+01955_North_Lake_Harbour_wlp.csv,46.4670,-62.0688,2025,"North Lake Harbour, Prince Edward Island, Canada",harmonics_utide_tidetables.txt,0,35051,0.0057,0.021,0,0.0,1.107,Canada_IWLS_PEI,0,nein
