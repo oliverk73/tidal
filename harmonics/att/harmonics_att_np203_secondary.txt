@@ -16736,8 +16736,11 @@ x 0 0
 # !latitude: -67.6000
 # region: Antarctica
 # admin1_quelle: Ufer 6.3 km
+# note: 20260911 Meridian +05:00 -> +06:00: Mawson lief bis 2009 auf UTC+6, die Buch-
+# note: -- konstanten stammen aus dieser Zeit. Vorher +54 min gegen FES (alle vier
+# note: -- Partialtiden) und +60 min gegen den TICON-Zwilling.
 Mawson, Antarctica
-+05:00 :Antarctica/Mawson
++06:00 :Antarctica/Mawson
 0.8100 meters
 x 0 0
 K1              0.2300  22.00
