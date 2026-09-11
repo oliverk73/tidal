@@ -295,8 +295,16 @@ def haufen_gruppen(recs):
     Nachbarn zusammengewachsen, und welcher Satz zu welchem gehoert,
     entscheidet keine Guetetabelle.
     """
-    if not os.path.exists(HAUFEN):
-        sys.exit(f'{HAUFEN} fehlt -- erst python3 py/pegel_dubletten.py --csv')
+    # pegel_dubletten.csv verknuepft ueber (Datei, Zeile). Ist eine Harmonics-
+    # Datei juenger, sind die Zeilennummern verschoben und Haufen fallen
+    # stillschweigend heraus -- am 09.09.2026 fehlten so 604 von 1155 Paaren
+    # in haufen_ohne_massstab.csv. Dann erst neu erzeugen (11.09.2026).
+    stand = os.path.getmtime(HAUFEN) if os.path.exists(HAUFEN) else 0
+    if any(os.path.getmtime(os.path.join(ROOT, f)) > stand for f in active_files()):
+        import subprocess
+        print('  pegel_dubletten.csv ist aelter als der Bestand -- erzeuge neu ...', file=sys.stderr)
+        subprocess.run([sys.executable, os.path.join(ROOT, 'py/pegel_dubletten.py'), '--csv'],
+                       stdout=subprocess.DEVNULL, check=True)
     bestaetigt = handbeleg()
     ids = kennungen()
     nach_ort = {(r['file'], r['line']): r for r in recs}
