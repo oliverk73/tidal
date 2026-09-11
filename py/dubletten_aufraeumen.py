@@ -108,9 +108,19 @@ def messungen():
     wieder voll.
     """
     out = collections.defaultdict(list)
+    # Zeilen, deren Satz sich seit der Messung geaendert hat, entscheiden
+    # nichts (py/messung_fingerabdruck.py, 11.09.2026).
+    from messung_fingerabdruck import stand, _schluessel
+    veraltet = stand()
+    if veraltet:
+        print(f'  {len(veraltet)} veraltete Messzeilen verworfen (py/messung_fingerabdruck.py)',
+              file=sys.stderr)
     for pfad in sorted(glob.glob(os.path.join(HELP, '*qualitaet*.csv'))):
         quelle = os.path.basename(pfad).replace('_qualitaet.csv', '')
+        tab = os.path.basename(pfad)
         for r in csv.DictReader(open(pfad, encoding='utf-8')):
+            if _schluessel(tab, r) in veraltet:
+                continue
             try:
                 rms = float(r['rms_m'])
             except (KeyError, TypeError, ValueError):
