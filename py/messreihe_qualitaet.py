@@ -126,9 +126,25 @@ UNSPEZIFISCH = {
 
 
 def reihendateien(nur=None):
-    """-> {(anbieter, kennung): pfad} fuer alles, was wir lesen koennen."""
+    """-> {(anbieter, kennung): pfad} fuer alles, was wir lesen koennen.
+
+    Bei mehreren Treffern gewinnt der erste Fund. Fuer die Zuordnung der
+    Saetze nimmt alle_anker() stattdessen reihendateien_alle() und waehlt
+    ueber kennung_zur_reihe().
+    """
+    return {k: v[0] for k, v in reihendateien_alle(nur).items()}
+
+
+def reihendateien_alle(nur=None):
+    """-> {(anbieter, kennung): [pfad, ...]} -- alle Treffer je Namenspaar.
+
+    Ein Paar wie (UHSLC, LAGOS) trifft Lagos in Portugal (h723a) und Lagos
+    in Nigeria (h233a, h233c). Mit nur einem Treffer je Paar hing die
+    Zuordnung davon ab, welcher Ordner mitlief: im Gesamtlauf gewann
+    Portugal, im Ordnerlauf Nigeria (11.09.2026).
+    """
     out = {}
-    for pfad in glob.glob(os.path.join(REIHEN, '**', '*'), recursive=True):
+    for pfad in sorted(glob.glob(os.path.join(REIHEN, '**', '*'), recursive=True)):
         if not os.path.isfile(pfad) or os.path.splitext(pfad)[1] not in ('.csv', '.txt'):
             continue
         rel = os.path.relpath(pfad, REIHEN)
@@ -136,6 +152,14 @@ def reihendateien(nur=None):
         if nur and nur != ordner:
             continue
         if os.path.basename(pfad) in GESPERRT:
+            continue
+        # Sicherungen (bak-bug/, _backup_hf/) sind alte, fehlerhafte Abzuege
+        # derselben Reihen -- in sortierter Folge kaemen sie vor dem Original.
+        if any(re.match(r'_?(bak|backup)', d, re.I) for d in rel.split(os.sep)[1:-1]):
+            continue
+        # UHSLC-Rohdateien ohne Kopfzeile (2007,1,5,14,791) liest _lies()
+        # nicht -- als Kandidat verdraengten sie die lesbare Fassung.
+        if pfad.endswith('.csv') and _ohne_kopf(pfad):
             continue
         stamm = os.path.splitext(os.path.basename(pfad))[0]
         teile = [t for t in re.split(r'[_\-. ]', stamm) if t]
@@ -149,10 +173,89 @@ def reihendateien(nur=None):
                 # kurze Kennungen.
                 if t.upper() in UNSPEZIFISCH:
                     continue
-                out.setdefault((anbieter.upper(), t.upper()), pfad)
+                _dazu(out, (anbieter.upper(), t.upper()), pfad)
         # JMA legt die Kennung allein in den Dateinamen (A0.txt).
-        out.setdefault((ordner.upper(), stamm.upper()), pfad)
+        _dazu(out, (ordner.upper(), stamm.upper()), pfad)
     return out
+
+
+def _dazu(out, schluessel, pfad):
+    liste = out.setdefault(schluessel, [])
+    if pfad not in liste:
+        liste.append(pfad)
+
+
+def _ohne_kopf(pfad):
+    try:
+        with open(pfad, encoding='utf-8', errors='replace') as fh:
+            zeile = fh.readline()
+    except OSError:
+        return True
+    return bool(zeile.strip()) and not re.search(r'[A-Za-z]', zeile)
+
+
+def _nummern(teile):
+    """-> {(zahl, zusatz)} aus Kennungsteilen: 'h233a' -> (233, 'a').
+
+    Zusatz ist ein Buchstabe (UHSLC-Fassungen a, b, c der geprueften Reihe)
+    oder 'fd' (Fast Delivery): '223fd', und '223' neben einem Teil 'fd'
+    ('dakar-223-sen-uhslc_fd', 'h223_fd_raw'). So passt TICONs Dakar-fd
+    nicht auf die historische h223a, sondern auf die fd-Reihe.
+    Mischteile wie '2024ABE' (BODC) liefern keine Nummer.
+    """
+    klein = [t.lower() for t in teile]
+    fd = 'fd' in klein
+    out = set()
+    for t in klein:
+        for n, z in re.findall(r'(?<![0-9])(\d+)(fd|[a-z])?(?![a-z0-9])', t):
+            out.add((int(n), z or ('fd' if fd else '')))
+    return out
+
+
+def _nummer_passt(a, b):
+    """395a passt auf 395, 01660 auf 1660 -- 233c aber nicht auf 233a."""
+    return any(na == nb and (ba == bb or not ba or not bb)
+               for na, ba in a for nb, bb in b)
+
+
+def kennung_zur_reihe(sid, alle):
+    """Waehlt zu station_id_context die Reihe aus reihendateien_alle().
+
+    Kandidaten sind alle Dateien, die ein Paar von Kennungsteilen trifft.
+    Nennt die Kennung eine Nummer, muss eine nummerierte Datei sie tragen
+    (lagos-233a-nga traf sonst h723a_lagos in Portugal; lagos-233c nicht
+    h233a). Unter den uebrigen gewinnt die Datei mit Nummerntreffer, dann
+    die mit den meisten gemeinsamen Namensteilen (Ordner eingerechnet).
+    """
+    teile = [t for t in re.split(r'[ \-_]', sid) if t]
+    kand = []
+    for i in range(len(teile)):
+        for j in range(len(teile)):
+            if i != j:
+                for p in alle.get((teile[i].upper(), teile[j].upper()), ()):
+                    if p not in kand:
+                        kand.append(p)
+    if not kand:
+        return None
+    num = _nummern(teile)
+    stid = {t.upper() for t in teile}
+
+    def daten(p):
+        rel = os.path.splitext(os.path.relpath(p, REIHEN))[0]
+        ptok = {t.upper() for t in re.split(r'[_\-. /]', rel) if t}
+        ptok |= {t[1:] for t in ptok if re.fullmatch(r'H\d+[A-Z]?', t)}
+        return _nummern(re.split(r'[_\-. ]', os.path.basename(rel))), ptok
+
+    wahl = []
+    for p in kand:
+        dnum, ptok = daten(p)
+        treffer = bool(num and dnum and _nummer_passt(num, dnum))
+        if num and dnum and not treffer:
+            continue
+        wahl.append(((treffer, len(stid & ptok)), p))
+    if not wahl:
+        return None
+    return max(wahl, key=lambda w: w[0])[1]
 
 
 def lies(pfad):
@@ -933,7 +1036,7 @@ def anker_pruefen(anker, weit_km=50.0, gut=0.6):
 def alle_anker(nur=None):
     """Alle (Satz, Reihe)-Zuordnungen, geprueft."""
     kopf = kopfdaten()
-    dateien = reihendateien(nur)
+    alle = reihendateien_alle(nur)
     recs = [r for r in load_records()
             if r['lat'] is not None and r['lon'] is not None and not r['current']]
     anker = []
@@ -941,23 +1044,7 @@ def alle_anker(nur=None):
         sid, fit, _q = kopf.get((r['file'], r['line']), (None, None, ''))
         if not sid:
             continue
-        teile = [t for t in re.split(r'[ \-_]', sid) if t]
-        pfad = None
-        for i in range(len(teile)):
-            for j in range(len(teile)):
-                if i == j:
-                    continue
-                pfad = pfad or dateien.get((teile[i].upper(), teile[j].upper()))
-        # Nennt die Kennung eine Nummer, muss die Reihe sie auch tragen: sonst
-        # traf "lagos-233a-nga-uhslc_rq" (Nigeria) ueber UHSLC+LAGOS die Reihe
-        # h723a_lagos.csv aus Portugal (11.09.2026).
-        # Verglichen werden nur die Ziffern (395a = 395, 01660 = 1660), und
-        # nur wenn der Dateiname selbst eine Nummer traegt (dakar_senegal.csv).
-        nummern = {int(n) for t in teile for n in re.findall(r'\d+', t)}
-        if pfad and nummern:
-            dnum = {int(n) for n in re.findall(r'\d+', os.path.splitext(os.path.basename(pfad))[0])}
-            if dnum and not (nummern & dnum):
-                pfad = None
+        pfad = kennung_zur_reihe(sid, alle)
         if pfad:
             anker.append((r, pfad, fit, None))
     anker += bodc_reihen(nur)
@@ -1010,6 +1097,17 @@ def main(argv):
                 # Reihe fuer alle Kandidaten gleich neu.
                 ende, start, ausserhalb = fit_von, fit_von - tage * 86400, 'ja'
         paare = [(t, h) for t, h in obs if start <= t <= ende]
+        # Duennes Ende (Nouakchott: 2023/24 zusammen 704 Werte, davor volle
+        # Jahre) -- sonst fiel die Reihe stumm heraus. Zurueckspringen auf
+        # das juengste Fenster mit genug Werten.
+        frueher = [t for t, _h in obs if t < start]
+        while len(paare) < mind and frueher:
+            ende = frueher[-1]
+            start = ende - tage * 86400
+            paare = [(t, h) for t, h in obs if start <= t <= ende]
+            frueher = [t for t in frueher if t < start]
+            if fit:
+                ausserhalb = 'ja' if (start > fit_bis or ende < fit_von) else 'nein'
         if len(paare) < mind:
             continue
         obs_t = np.array([p[0] for p in paare])

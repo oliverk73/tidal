@@ -50,22 +50,17 @@ KEIN_REIHE = ('nutzungsbedingungen.txt', 'zeitreiheninformation.txt',
 def benutzt(nur=None):
     """-> Menge der Pfade, die messreihe_qualitaet.py tatsaechlich anfasst."""
     kopf = M.kopfdaten()
-    dateien = M.reihendateien(nur)
+    alle = M.reihendateien_alle(nur)
     recs = [r for r in load_records()
             if r['lat'] is not None and r['lon'] is not None and not r['current']]
-    import re
     pfade = set()
     for r in recs:
         sid, _fit, _q = kopf.get((r['file'], r['line']), (None, None, ''))
         if not sid:
             continue
-        teile = [t for t in re.split(r'[ \-_]', sid) if t]
-        for i in range(len(teile)):
-            for j in range(len(teile)):
-                if i != j:
-                    p = dateien.get((teile[i].upper(), teile[j].upper()))
-                    if p:
-                        pfade.add(p)
+        p = M.kennung_zur_reihe(sid, alle)
+        if p:
+            pfade.add(p)
     for _a, p, _f, _q in (M.bodc_reihen(nur) + M.npz_reihen(nur)
                           + M.beiblatt_reihen(nur) + M.jhod_reihen(nur)
                           + M.linz_reihen(nur)):

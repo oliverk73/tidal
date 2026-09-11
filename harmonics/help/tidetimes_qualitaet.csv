@@ -1,7 +1,7 @@
 station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub_m,reihe,eigen,ausserhalb
 Aberdaron.json,52.8000,-4.7167,2026,"Aberdaron, Wales, United Kingdom",harmonics_utide_tidetables.txt,331,1357,0.1552,0.647,0,0.014,5.038,UK_tidetimes,1,nein
+Aberdovey.json,52.5500,-4.0500,2026,"Aberdovey, Wales, United Kingdom",harmonics_noaa_eutt.txt,844,1357,0.3557,1.368,-50,0.43,5.125,UK_tidetimes,0,nein
 Aberdovey.json,52.5500,-4.0500,2026,"Aberdovey, Wales, United Kingdom",harmonics_utide_tidetables.txt,844,1357,0.16,0.71,0,0.017,5.348,UK_tidetimes,1,nein
-Aberdovey.json,52.5500,-4.0500,2026,"Aberdovey, Wales, United Kingdom",harmonics_noaa_eutt.txt,1857,1357,0.3557,1.368,-50,0.43,5.125,UK_tidetimes,0,nein
 Aberporth.json,52.1333,-4.5500,2026,"Aberporth, Wales, United Kingdom",harmonics_utide_tidetables.txt,355,1357,0.1582,0.732,0,-0.005,5.025,UK_tidetimes,1,nein
 Aberystwyth.json,52.4000,-4.0833,2026,"Aberystwyth, Wales, United Kingdom",harmonics-1997-05-25_mod.txt,1294,1357,0.1114,0.719,-10,-0.019,5.325,UK_tidetimes,0,nein
 Aberystwyth.json,52.4000,-4.0833,2026,"Aberystwyth, Wales, United Kingdom",harmonics_utide_tidetables.txt,1294,1357,0.1663,0.799,-10,0.015,5.405,UK_tidetimes,1,nein
@@ -16,7 +16,7 @@ Amble.json,55.3333,-1.5667,2026,"Coquet Island, England, United Kingdom",harmoni
 Amlwch.json,53.4167,-4.3333,2026,"Amlwch, Wales, United Kingdom",harmonics_noaa_eutt.txt,143,1358,0.2873,0.927,-20,0.211,7.074,UK_tidetimes,0,nein
 Amlwch.json,53.4167,-4.3333,2026,"Amlwch, Wales, United Kingdom",harmonics_utide_tidetables.txt,143,1358,0.2949,1.046,0,0.061,6.963,UK_tidetimes,1,nein
 Annan_Waterfoot.json,54.9667,-3.2667,2026,"Annan Waterfoot, Scotland, United Kingdom",harmonics_utide_tidetables.txt,301,781,0.8967,3.317,720,-0.168,7.6,UK_tidetimes,1,nein
-Anstruther_Easter.json,56.2167,-2.7000,2026,"Anstruther Easter, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.2138,0.582,-50,-0.057,5.412,UK_tidetimes,0,nein
+Anstruther_Easter.json,56.2167,-2.7000,2026,"Anstruther Easter, Scotland, United Kingdom",harmonics_noaa_eutt.txt,375,1353,0.2138,0.582,-50,-0.057,5.412,UK_tidetimes,0,nein
 Anstruther_Easter.json,56.2167,-2.7000,2026,"Anstruther Easter, Scotland, United Kingdom",harmonics_utide_tidetables.txt,375,1353,0.1926,0.758,0,-0.006,5.563,UK_tidetimes,1,nein
 Applecross.json,57.4333,-5.8167,2026,"Applecross, Scotland, United Kingdom",harmonics_utide_tidetables.txt,113,1356,0.1775,0.867,-10,-0.028,5.395,UK_tidetimes,1,nein
 Appledore.json,51.0500,-4.2000,2026,"Appledore, Bristol Channel, England, United Kingdom",harmonics_noaa_eutt.txt,0,1361,0.343,1.053,-70,0.6,7.881,UK_tidetimes,0,nein
@@ -48,7 +48,7 @@ Ballyglass_(Broadhaven).json,54.2667,-9.8833,2026,"Ballyglass (Broadhaven), Irel
 Ballysadare_Bay_(Culleenamore).json,54.2500,-8.5833,2026,"Ballysadare Bay (Culleenamore), Ireland",harmonics_utide_tidetables.txt,1759,681,0.1648,0.36,-10,0.009,4.39,UK_tidetimes,1,nein
 Baltasound_Pier.json,60.7500,-0.8333,2026,"Baltasound Pier, Scotland, United Kingdom",harmonics_utide_tidetables.txt,1010,1358,0.0939,0.338,-10,0.019,2.406,UK_tidetimes,1,nein
 "Baltimore,_Ireland.json",51.4833,-9.3667,2026,"Baltimore, Ireland, Ireland",harmonics_utide_tidetables.txt,598,1362,0.1417,0.558,0,-0.027,3.062,UK_tidetimes,1,nein
-Banff.json,57.6667,-2.5167,2026,"Banff, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.0998,0.309,-40,0.73,3.601,UK_tidetimes,0,nein
+Banff.json,57.6667,-2.5167,2026,"Banff, Scotland, United Kingdom",harmonics_noaa_eutt.txt,508,1353,0.0998,0.309,-40,0.73,3.601,UK_tidetimes,0,nein
 Banff.json,57.6667,-2.5167,2026,"Banff, Scotland, United Kingdom",harmonics_utide_tidetables.txt,508,1353,0.1461,0.606,-10,0.023,3.615,UK_tidetimes,1,nein
 Bantry.json,51.6833,-9.4667,2026,"Bantry, Ireland",harmonics_utide_tidetables.txt,415,1362,0.1386,0.491,-10,-0.027,3.085,UK_tidetimes,1,nein
 Barcaldine_Pier.json,56.5333,-5.3167,2026,"Barcaldine Pier, Scotland, United Kingdom",harmonics_utide_tidetables.txt,532,1356,0.1378,0.68,0,-0.032,4.032,UK_tidetimes,1,nein
@@ -58,7 +58,6 @@ Barnstaple.json,51.0833,-4.0667,2026,"Barnstaple, England, United Kingdom",harmo
 Barra_(North_Bay).json,57.0000,-7.4000,2026,"North Bay, Barra, Scotland, United Kingdom",harmonics_noaa_eutt.txt,0,1357,0.1625,0.498,-40,0.451,4.318,UK_tidetimes,0,nein
 Barra_(North_Bay).json,57.0000,-7.4000,2026,"Barra (North Bay), Scotland, United Kingdom",harmonics_utide_tidetables.txt,0,1357,0.1628,0.769,-10,-0.033,4.505,UK_tidetimes,1,nein
 Barra_Head.json,56.7833,-7.6333,2026,"Barra Head, Scotland, United Kingdom",harmonics_utide_tidetables.txt,684,1356,0.1411,0.682,-10,-0.03,4.028,UK_tidetimes,1,nein
-Barrow_(Ramsden_Dock).json,54.1000,-3.2167,2026,"Barrow-in-Furness (Ramsden Dock), England, United Kingdom",harmonics-1997-05-25_mod.txt,509,1357,0.1592,0.718,-10,0.111,10.219,UK_tidetimes,0,nein
 Barrow_(Ramsden_Dock).json,54.1000,-3.2167,2026,"Barrow-in-Furness (Ramsden Dock), England, United Kingdom",harmonics_utide_tidetables.txt,509,1357,0.0815,0.568,-10,0.012,9.673,UK_tidetimes,0,nein
 Barrow_(Ramsden_Dock).json,54.1000,-3.2167,2026,"Barrow (Ramsden Dock), England, United Kingdom",harmonics_noaa_eutt.txt,1087,1357,0.3527,0.98,-10,0.148,8.871,UK_tidetimes,0,nein
 Barry.json,51.3833,-3.2667,2026,"Barry, Wales, United Kingdom",harmonics-1997-05-25_mod.txt,1134,1356,0.3484,1.715,10,0.138,12.512,UK_tidetimes,0,nein
@@ -78,22 +77,22 @@ Bee_Ness.json,51.4167,0.6500,2026,"Bee Ness, England, United Kingdom",harmonics_
 Belfast.json,54.6000,-5.9167,2026,"Belfast, Northern Ireland, United Kingdom",harmonics_noaa_eutt.txt,2,1357,0.2024,0.697,-30,0.039,3.836,UK_tidetimes,0,nein
 Belfast.json,54.6000,-5.9167,2026,"Belfast (Lagan Weir), Northern Ireland, United Kingdom",harmonics-1997-05-25_mod.txt,348,1357,0.1047,0.309,-10,0.016,3.822,UK_tidetimes,0,nein
 Belfast.json,54.6000,-5.9167,2026,"Belfast (Lagan Weir), Northern Ireland, United Kingdom",harmonics_utide_tidetables.txt,348,1357,0.1491,0.555,-10,0.024,3.584,UK_tidetimes,1,nein
-Bembridge_Approaches.json,50.7000,-1.1000,2026,"Bembridge Approaches, England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.1933,0.69,-10,0.035,4.274,UK_tidetimes,1,nein
-Bembridge_Approaches.json,50.7000,-1.1000,2026,"Bembridge Harbour, England, United Kingdom",harmonics_utide_tidetables.txt,1174,1353,1.1687,4.154,-720,0.883,4.253,UK_tidetimes,1,nein
-Bembridge_Approaches.json,50.7000,-1.1000,2026,"Foreland (Lifeboat Slip), England, United Kingdom",harmonics_utide_tidetables.txt,2991,1354,0.1935,0.71,0,0.037,4.275,UK_tidetimes,1,nein
-Bembridge_Harbour.json,50.7000,-1.1167,2026,"Bembridge Harbour, England, United Kingdom",harmonics_utide_tidetables.txt,0,1147,0.4643,1.985,-10,-0.115,4.253,UK_tidetimes,1,nein
-Bembridge_Harbour.json,50.7000,-1.1167,2026,"Bembridge Approaches, England, United Kingdom",harmonics_utide_tidetables.txt,1174,1147,0.1709,0.511,-60,-1.361,4.274,UK_tidetimes,1,nein
+Bembridge_Approaches.json,50.7000,-1.1000,2026,"Bembridge Approaches, England, United Kingdom",harmonics_utide_tidetables.txt,463,1354,0.1933,0.69,-10,0.035,4.274,UK_tidetimes,1,nein
+Bembridge_Approaches.json,50.7000,-1.1000,2026,"Bembridge Harbour, England, United Kingdom",harmonics_utide_tidetables.txt,821,1353,1.1687,4.154,-720,0.883,4.253,UK_tidetimes,1,nein
+Bembridge_Approaches.json,50.7000,-1.1000,2026,"Bembridge (Lifeboat Station), England, United Kingdom",harmonics_utide_tidetables.txt,2347,1354,0.1935,0.71,0,0.037,4.275,UK_tidetimes,1,nein
+Bembridge_Harbour.json,50.7000,-1.1167,2026,"Bembridge Harbour, England, United Kingdom",harmonics_utide_tidetables.txt,945,1147,0.4643,1.985,-10,-0.115,4.253,UK_tidetimes,1,nein
+Bembridge_Harbour.json,50.7000,-1.1167,2026,"Bembridge Approaches, England, United Kingdom",harmonics_utide_tidetables.txt,1623,1147,0.1709,0.511,-60,-1.361,4.274,UK_tidetimes,1,nein
 Berkeley.json,51.7000,-2.5000,2026,"Berkeley, England, United Kingdom",harmonics_utide_tidetables.txt,0,1030,0.5133,2.598,0,0.003,11.171,UK_tidetimes,1,nein
 Berkeley.json,51.7000,-2.5000,2026,"Sharpness Dock, England, United Kingdom",harmonics_utide_tidetables.txt,2269,1030,0.5811,2.52,10,0.055,11.082,UK_tidetimes,1,nein
-Berwick.json,55.7667,-1.9833,2026,"Berwick, England, United Kingdom",harmonics_utide_tidetables.txt,1362,1357,0.2054,0.783,-10,-0.007,5.016,UK_tidetimes,1,nein
-Berwick.json,55.7667,-1.9833,2026,"Berwick-upon-Tweed, England, United Kingdom",harmonics_noaa_eutt.txt,2123,1357,0.1594,0.502,0,0.089,4.765,UK_tidetimes,0,nein
+Berwick.json,55.7667,-1.9833,2026,"Berwick-upon-Tweed, England, United Kingdom",harmonics_noaa_eutt.txt,1362,1357,0.1594,0.502,0,0.089,4.765,UK_tidetimes,0,nein
+Berwick.json,55.7667,-1.9833,2026,"Berwick-upon-Tweed, England, United Kingdom",harmonics_utide_tidetables.txt,1362,1357,0.2054,0.783,-10,-0.007,5.016,UK_tidetimes,1,nein
 Bideford.json,51.0167,-4.2000,2026,"Bideford, England, United Kingdom",harmonics_utide_tidetables.txt,309,910,0.6971,4.824,0,-0.177,8.038,UK_tidetimes,1,nein
 Birkenhead_(Alfred_Dock).json,53.3917,-3.0208,2026,"Birkenhead (Alfred Dock), England, United Kingdom",harmonics_utide_tidetables.txt,1491,1357,0.4027,1.485,0,0.065,9.342,UK_tidetimes,1,nein
 Black_Ball_Harbour.json,51.6000,-10.0333,2026,"Black Ball Harbour, Ireland",harmonics_utide_tidetables.txt,417,1361,0.1361,0.528,0,-0.027,3.142,UK_tidetimes,1,nein
 Black_Tar.json,51.7500,-4.9000,2026,"Black Tar, Wales, United Kingdom",harmonics_utide_tidetables.txt,204,1356,0.3361,1.527,-10,-0.103,7.365,UK_tidetimes,1,nein
 Blackpool.json,53.8167,-3.0667,2026,"Blackpool, England, United Kingdom",harmonics_utide_tidetables.txt,397,1358,0.3878,1.48,0,0.088,8.486,UK_tidetimes,1,nein
 Blacksod_Quay.json,54.1000,-10.0667,2026,"Blacksod Quay, Ireland",harmonics_utide_tidetables.txt,441,1352,0.3067,1.469,-10,-0.078,3.897,UK_tidetimes,1,nein
-Blacktoft.json,53.7000,-0.7167,2026,"Blacktoft, England, United Kingdom",harmonics_utide_tidetables.txt,964,1289,0.5523,2.044,-10,-0.093,6.985,UK_tidetimes,1,nein
+Blacktoft.json,53.7000,-0.7167,2026,"Blacktoft (River Ouse), England, United Kingdom",harmonics_utide_tidetables.txt,964,1289,0.5523,2.044,-10,-0.093,6.985,UK_tidetimes,1,nein
 Blakeney.json,52.9500,1.0167,2026,"Blakeney, England, United Kingdom",harmonics_utide_tidetables.txt,679,679,0.2983,0.814,-10,0.021,3.268,UK_tidetimes,1,nein
 Blakeney_Bar.json,52.9833,0.9833,2026,"Blakeney Bar, England, United Kingdom",harmonics_utide_tidetables.txt,0,679,0.1235,0.471,10,0.018,6.24,UK_tidetimes,1,nein
 Blyth.json,55.1167,-1.4833,2026,"Blyth, England, United Kingdom",harmonics_utide_tidetables.txt,221,1356,0.0704,0.426,-20,-0.018,5.442,UK_tidetimes,0,nein
@@ -104,7 +103,7 @@ Bonawe.json,56.4500,-5.2167,2026,"Rubha Na Creige, Scotland, United Kingdom",har
 Boscastle.json,50.6833,-4.7000,2026,"Boscastle, England, United Kingdom",harmonics_utide_tidetables.txt,876,1362,0.3038,1.246,0,-0.082,7.215,UK_tidetimes,1,nein
 Bosham.json,50.8333,-0.8667,2026,"Bosham, England, United Kingdom",harmonics_utide_tidetables.txt,681,677,0.0891,0.284,-20,0.028,5.075,UK_tidetimes,1,nein
 Bosham.json,50.8333,-0.8667,2026,"Itchenor, England, United Kingdom",harmonics_utide_tidetables.txt,2795,677,0.2068,0.603,-30,0.252,4.655,UK_tidetimes,1,nein
-"Boston,_England.json",52.9667,-0.0167,2026,"Boston, England, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.5568,1.825,60,-0.125,7.824,UK_tidetimes,0,nein
+"Boston,_England.json",52.9667,-0.0167,2026,"Boston, England, United Kingdom",harmonics_noaa_eutt.txt,438,1353,0.5568,1.825,60,-0.125,7.824,UK_tidetimes,0,nein
 "Boston,_England.json",52.9667,-0.0167,2026,"Boston, England, England, United Kingdom",harmonics_utide_tidetables.txt,438,1353,0.219,1.112,0,-0.024,6.857,UK_tidetimes,1,nein
 Bouley_Bay.json,49.2500,-2.0833,2026,"Bouley Bay, Jersey, Channel Islands",harmonics_utide_tidetables.txt,1067,1361,0.3899,2.066,0,-0.085,11.403,UK_tidetimes,1,nein
 Bovisand_Pier.json,50.3333,-4.1333,2026,"Bovisand Pier, England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.2108,0.916,-10,-0.048,4.967,UK_tidetimes,1,nein
@@ -119,12 +118,11 @@ Bridgwater.json,51.1333,-3.0000,2026,"Bridgwater, England, United Kingdom",harmo
 Bridlington.json,54.0833,-0.1833,2026,"Bridlington, England, United Kingdom",harmonics_utide_tidetables.txt,493,1353,0.232,0.792,-10,-0.054,5.638,UK_tidetimes,1,nein
 Bridport_(West_Bay).json,50.7167,-2.7667,2026,"West Bay (Bridport), England, United Kingdom",harmonics_literature.txt,886,1353,0.0996,0.469,-10,-0.119,4.364,UK_tidetimes,0,nein
 Bridport_(West_Bay).json,50.7167,-2.7667,2026,"West Bay (Bridport), England, United Kingdom",harmonics_ticon4_worldwide.txt,888,1353,0.1063,0.505,-10,2.438,4.382,UK_tidetimes,0,nein
-Brightlingsea.json,51.8000,1.0000,2026,"Brightlingsea, Colne River, England, United Kingdom",harmonics_noaa_eutt.txt,0,1353,0.2787,0.86,-20,0.283,5.011,UK_tidetimes,0,nein
-Brightlingsea.json,51.8000,1.0000,2026,"Brightlingsea, England, United Kingdom",harmonics_utide_tidetables.txt,869,1353,0.2463,0.983,0,0.024,5.425,UK_tidetimes,1,nein
+Brightlingsea.json,51.8000,1.0000,2026,"Brightlingsea (Colne River), England, United Kingdom",harmonics_noaa_eutt.txt,1688,1353,0.2787,0.86,-20,0.283,5.011,UK_tidetimes,0,nein
+Brightlingsea.json,51.8000,1.0000,2026,"Brightlingsea (Colne River), England, United Kingdom",harmonics_utide_tidetables.txt,1688,1353,0.2463,0.983,0,0.024,5.425,UK_tidetimes,1,nein
 Brighton_Marina.json,50.8167,-0.1000,2026,"Brighton Marina, England, United Kingdom",harmonics_literature.txt,552,1353,0.1009,0.404,-10,-0.147,6.712,UK_tidetimes,0,nein
 Brighton_Marina.json,50.8167,-0.1000,2026,"Brighton, England, United Kingdom",harmonics_ticon4_worldwide.txt,552,1353,0.1014,0.477,-10,3.556,6.688,UK_tidetimes,0,nein
 Brighton_Marina.json,50.8167,-0.1000,2026,"Brighton, England, United Kingdom",harmonics_utide_observations.txt,552,1353,0.0968,0.458,-10,3.555,6.482,UK_tidetimes,0,nein
-Brighton_Marina.json,50.8167,-0.1000,2026,"Brighton, England, United Kingdom",harmonics_noaa_eutt.txt,2339,1353,0.325,0.999,-10,0.683,6.422,UK_tidetimes,0,nein
 Broadford_Bay.json,57.2500,-5.9000,2026,"Broadford Bay (Skye), Scotland, United Kingdom",harmonics_utide_tidetables.txt,453,1356,0.1899,0.937,-10,-0.033,5.802,UK_tidetimes,1,nein
 Broadstairs.json,51.3667,1.4500,2026,"Broadstairs, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.2042,0.731,0,0.03,4.705,UK_tidetimes,1,nein
 Brodick_Bay.json,55.5833,-5.1333,2026,"Brodick (Arran), Scotland, United Kingdom",harmonics_utide_tidetables.txt,595,1358,0.1628,0.594,-10,0.008,3.384,UK_tidetimes,1,nein
@@ -134,9 +132,7 @@ Buckie.json,57.6833,-2.9500,2026,"Buckie, Scotland, United Kingdom",harmonics_ut
 Buckie.json,57.6833,-2.9500,2026,"Buckie, Scotland, United Kingdom",harmonics_utide_observations.txt,374,1353,0.0512,0.287,-10,0.142,4.246,UK_tidetimes,0,nein
 Bucklers_Hard.json,50.8000,-1.4167,2026,"Bucklers Hard, England, United Kingdom",harmonics_utide_tidetables.txt,484,1354,0.1531,0.52,0,0.028,3.57,UK_tidetimes,1,nein
 Bude.json,50.8333,-4.5500,2026,"Bude, England, United Kingdom",harmonics_utide_tidetables.txt,441,682,0.0934,0.333,0,0.008,8.088,UK_tidetimes,1,nein
-Bulbinbeg.json,55.3667,-7.3333,2026,"Malin Head - Portmore Pier, Ireland",harmonics_utide_observations.txt,560,1354,0.0857,0.438,-10,-0.287,4.086,UK_tidetimes,0,nein
 Bulbinbeg.json,55.3667,-7.3333,2026,"Malin Head, Ireland",harmonics_utide_observations.txt,560,1354,0.0916,0.44,-10,-1.123,3.962,UK_tidetimes,0,nein
-Bulbinbeg.json,55.3667,-7.3333,2026,"Bulbinbeg, Ireland",harmonics_utide_tidetables.txt,560,1354,0.2237,1.032,0,-0.051,3.696,UK_tidetimes,1,nein
 Bull_Sand_Fort.json,53.5667,0.0667,2026,"Spurn Head, England, United Kingdom",harmonics_utide_tidetables.txt,2942,1354,0.2637,1.044,-10,-0.122,6.729,UK_tidetimes,1,nein
 Bunessan.json,56.3167,-6.2333,2026,"Bunessan (Mull), Scotland, United Kingdom",harmonics_utide_tidetables.txt,72,1357,0.1724,0.821,-10,-0.047,4.293,UK_tidetimes,1,nein
 Bur_Wick.json,58.7333,-2.9667,2026,"Bur Wick, Scotland, United Kingdom",harmonics_utide_tidetables.txt,711,1357,0.1471,0.496,0,0.031,3.329,UK_tidetimes,1,nein
@@ -187,7 +183,6 @@ Chelsea_Bridge.json,51.4833,-0.1500,2026,"Chelsea Bridge, England, United Kingdo
 Chelsea_Bridge.json,51.4833,-0.1500,2026,"Albert Bridge, England, United Kingdom",harmonics_utide_tidetables.txt,1154,1343,0.7192,3.82,10,0.089,7.087,UK_tidetimes,1,nein
 Chesil_Beach.json,50.6167,-2.5500,2026,"Chesil Beach, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.1622,0.783,0,-0.024,3.902,UK_tidetimes,1,nein
 Chesil_Cove.json,50.5667,-2.4667,2026,"Chesil Cove, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.1555,0.585,0,-0.023,3.776,UK_tidetimes,1,nein
-Chesil_Cove.json,50.5667,-2.4667,2026,"Portland, England, United Kingdom",harmonics-pierre-lavergne-v10_mod.txt,2196,1353,0.6533,1.192,20,1.192,2.37,UK_tidetimes,0,nein
 Chesil_Cove.json,50.5667,-2.4667,2026,"Portland, England, United Kingdom",harmonics_noaa_eutt.txt,2359,1353,0.5819,1.223,-40,1.223,2.063,UK_tidetimes,0,nein
 Chester.json,53.2000,-2.9000,2026,"Chester, England, United Kingdom",harmonics_utide_tidetables.txt,972,679,0.5656,1.471,-10,0.046,3.418,UK_tidetimes,1,nein
 Chichester_Harbour_(Entrance).json,50.7833,-0.9333,2026,"Chichester Harbour (Entrance), England, United Kingdom",harmonics_utide_tidetables.txt,561,1354,0.1902,0.731,-10,0.036,4.487,UK_tidetimes,1,nein
@@ -233,9 +228,8 @@ Coulport.json,56.0500,-4.8833,2026,"Coulport, Scotland, United Kingdom",harmonic
 Courtmacsherry.json,51.6333,-8.7167,2026,"Courtmacsherry, Ireland",harmonics_utide_tidetables.txt,543,1362,0.168,0.664,-10,-0.029,3.755,UK_tidetimes,1,nein
 Courtown.json,52.6500,-6.2167,2026,"Courtown, Ireland",harmonics_utide_tidetables.txt,917,1360,0.1223,0.354,90,0.159,1.3,UK_tidetimes,1,nein
 Coverack.json,50.0167,-5.1000,2026,"Coverack, England, United Kingdom",harmonics_utide_tidetables.txt,814,1354,0.2243,0.94,-10,-0.042,5.218,UK_tidetimes,1,nein
-Cowes.json,50.7667,-1.3000,2026,"Cowes, England, United Kingdom",harmonics_utide_tidetables.txt,0,2029,0.0997,0.53,-10,-0.004,4.257,UK_tidetimes,1,nein
-Cowes.json,50.7667,-1.3000,2026,"Cowes, Isle of Wight, United Kingdom",harmonics_noaa_eutt.txt,4,2029,0.3046,1.433,30,0.87,4.651,UK_tidetimes,0,nein
-Cowes.json,50.7667,-1.3000,2026,"Stansore Point, England, United Kingdom",harmonics_utide_tidetables.txt,2988,2029,0.2796,0.812,-40,0.444,3.879,UK_tidetimes,1,nein
+Cowes.json,50.7667,-1.3000,2026,"Cowes (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,0,2029,0.0997,0.53,-10,-0.004,4.257,UK_tidetimes,1,nein
+Cowes.json,50.7667,-1.3000,2026,"Cowes (Isle of Wight), England, United Kingdom",harmonics_noaa_eutt.txt,4,2029,0.3046,1.433,30,0.87,4.651,UK_tidetimes,0,nein
 Craighouse.json,55.8333,-5.9500,2026,"Craighouse (Jura), Scotland, United Kingdom",harmonics_utide_tidetables.txt,83,1320,0.0743,0.363,0,-0.023,0.977,UK_tidetimes,1,nein
 Craignure.json,56.4667,-5.7000,2026,"Craignure (Mull), Scotland, United Kingdom",harmonics_utide_tidetables.txt,597,1356,0.1554,0.722,0,-0.038,4.036,UK_tidetimes,1,nein
 Cranfield_Point.json,54.0167,-6.0667,2026,"Cranfield Point, Northern Ireland, United Kingdom",harmonics_noaa_eutt.txt,727,1357,0.2249,0.739,30,0.384,5.027,UK_tidetimes,0,nein
@@ -255,19 +249,19 @@ Cushendun.json,55.1333,-6.0333,2026,"Cushendun, Northern Ireland, United Kingdom
 Dale_Roads.json,51.7000,-5.1500,2026,"Dale Roads, Wales, United Kingdom",harmonics_utide_tidetables.txt,1443,1357,0.3557,1.712,-10,-0.091,7.107,UK_tidetimes,1,nein
 Darnett_Ness.json,51.4000,0.6000,2026,"Darnett Ness, England, United Kingdom",harmonics_utide_tidetables.txt,879,1352,0.2772,1.132,0,0.02,6.265,UK_tidetimes,1,nein
 Darnett_Ness.json,51.4000,0.6000,2026,"Bartlett Creek, England, United Kingdom",harmonics_utide_tidetables.txt,1814,1352,0.2057,0.958,0,0.041,6.389,UK_tidetimes,1,nein
+Dartmouth.json,50.3500,-3.5833,2026,"Dartmouth, England, United Kingdom",harmonics_noaa_eutt.txt,452,1353,0.2428,0.829,-40,0.038,4.681,UK_tidetimes,0,nein
 Dartmouth.json,50.3500,-3.5833,2026,"Dartmouth, England, United Kingdom",harmonics_utide_tidetables.txt,452,1353,0.2093,0.933,-10,-0.047,4.94,UK_tidetimes,1,nein
-Dartmouth.json,50.3500,-3.5833,2026,"Dartmouth, England, United Kingdom",harmonics_noaa_eutt.txt,1180,1353,0.2428,0.829,-40,0.038,4.681,UK_tidetimes,0,nein
 Deal.json,51.2167,1.4167,2026,"Deal, England, United Kingdom",harmonics_utide_observations.txt,943,1353,0.106,0.518,-10,0.075,6.205,UK_tidetimes,0,nein
 Deal.json,51.2167,1.4167,2026,"Deal, England, United Kingdom",harmonics_ticon4_worldwide.txt,944,1353,0.1113,0.533,-10,3.567,6.294,UK_tidetimes,0,nein
 Deal.json,51.2167,1.4167,2026,"Deal, England, United Kingdom",harmonics_literature.txt,947,1353,0.1035,0.625,0,0.048,6.34,UK_tidetimes,0,nein
 Deer_Sound.json,58.9667,-2.8333,2026,"Deer Sound, Scotland, United Kingdom",harmonics_utide_tidetables.txt,978,1358,0.1204,0.486,-10,0.029,3.071,UK_tidetimes,1,nein
 Dell_Quay.json,50.8167,-0.8167,2026,"Dell Quay, England, United Kingdom",harmonics_utide_tidetables.txt,282,677,0.0903,0.326,-20,0.028,5.077,UK_tidetimes,1,nein
 Dingwall_(Cromarty_Firth).json,57.6000,-4.4167,2026,"Dingwall (Cromarty Firth), Scotland, United Kingdom",harmonics_utide_tidetables.txt,0,679,0.2104,0.863,10,0.029,4.901,UK_tidetimes,1,nein
+Donaghadee.json,54.6500,-5.5333,2026,"Donaghadee, Northern Ireland, United Kingdom",harmonics_noaa_eutt.txt,576,1358,0.2297,0.689,-30,0.018,4.463,UK_tidetimes,0,nein
 Donaghadee.json,54.6500,-5.5333,2026,"Donaghadee, Northern Ireland, United Kingdom",harmonics_utide_tidetables.txt,576,1358,0.1762,0.644,-10,0.026,3.959,UK_tidetimes,1,nein
-Donaghadee.json,54.6500,-5.5333,2026,"Donaghadee, Northern Ireland, United Kingdom",harmonics_noaa_eutt.txt,1857,1358,0.2297,0.689,-30,0.018,4.463,UK_tidetimes,0,nein
 Donegal_Harbour_(Salt_Hill_Quay).json,54.6333,-8.2000,2026,"Donegal Harbour (Salt Hill Quay), Ireland",harmonics_utide_tidetables.txt,492,681,0.1592,0.365,0,0.002,4.282,UK_tidetimes,1,nein
 Dornie_Bridge.json,57.2833,-5.5167,2026,"Dornie (Loch Long Bridge), Scotland, United Kingdom",harmonics_utide_tidetables.txt,584,1357,0.1754,0.935,0,-0.022,5.413,UK_tidetimes,1,nein
-Douglas.json,54.1500,-4.4670,2026,"Douglas, Isle of Man",harmonics_noaa_eutt.txt,20,1355,0.3171,1.211,-30,-0.099,6.662,UK_tidetimes,0,nein
+Douglas.json,54.1500,-4.4670,2026,"Douglas, Isle of Man",harmonics_noaa_eutt.txt,284,1355,0.3171,1.211,-30,-0.099,6.662,UK_tidetimes,0,nein
 Douglas.json,54.1500,-4.4670,2026,"Douglas, Isle of Man",harmonics_utide_tidetables.txt,284,1355,0.2935,1.081,0,0.03,7.129,UK_tidetimes,1,nein
 Downies_Bay.json,55.1833,-7.8333,2026,"Downings Harbour, Ireland",harmonics_utide_tidetables.txt,904,681,0.151,0.428,-20,0.003,4.459,UK_tidetimes,1,nein
 Downies_Bay.json,55.1833,-7.8333,2026,"Fanny's Bay, Ireland",harmonics_utide_tidetables.txt,2089,681,0.1611,0.462,40,0.966,3.239,UK_tidetimes,1,nein
@@ -279,18 +273,18 @@ Duddon_Bar.json,54.1500,-3.3333,2026,"Duddon Bar, England, United Kingdom",harmo
 Dun_Laoghaire.json,53.3000,-6.1333,2026,"Dún Laoghaire, Ireland",harmonics_noaa_eutt.txt,290,1361,0.2354,0.787,-20,0.266,4.169,UK_tidetimes,0,nein
 Dun_Laoghaire.json,53.3000,-6.1333,2026,"Dun Laoghaire, Ireland",harmonics_utide_tidetables.txt,290,1361,0.1693,0.679,-10,0.023,4.083,UK_tidetimes,1,nein
 Dunany_Point.json,53.8667,-6.2333,2026,"Dunany Point, Ireland",harmonics_utide_tidetables.txt,780,679,0.1357,0.641,-90,0.429,5.285,UK_tidetimes,1,nein
+Dunbar.json,56.0060,-2.5170,2026,"Dunbar, Scotland, United Kingdom",harmonics_noaa_eutt.txt,13,1357,0.1833,0.598,-20,-0.007,5.156,UK_tidetimes,0,nein
 Dunbar.json,56.0060,-2.5170,2026,"Dunbar, Scotland, United Kingdom",harmonics_utide_tidetables.txt,13,1357,0.1924,0.787,0,-0.011,5.562,UK_tidetimes,1,nein
-Dunbar.json,56.0060,-2.5170,2026,"Dunbar, Scotland, United Kingdom",harmonics_noaa_eutt.txt,667,1357,0.1833,0.598,-20,-0.007,5.156,UK_tidetimes,0,nein
 Dunbeacon_Harbour.json,51.6167,-9.5500,2026,"Dunbeacon (Durrus), Ireland",harmonics_utide_tidetables.txt,1400,1361,0.1452,0.563,-10,-0.027,3.203,UK_tidetimes,1,nein
 Duncansby_Head.json,58.6500,-3.0333,2026,"Duncansby Head, Scotland, United Kingdom",harmonics_utide_tidetables.txt,789,679,0.0475,0.187,-10,-1.92,3.239,UK_tidetimes,1,nein
 Dundalk.json,54.0000,-6.3833,2026,"Dundalk, Ireland",harmonics_ticon4_worldwide.txt,896,1361,0.1886,0.673,0,2.957,4.755,UK_tidetimes,0,nein
 Dundalk.json,54.0000,-6.3833,2026,"Dundalk, Ireland",harmonics_utide_tidetables.txt,896,1361,0.2169,0.826,0,0.032,5.034,UK_tidetimes,1,nein
-Dundee.json,56.4500,-2.9667,2026,"Dundee, Tay River, Scotland, United Kingdom",harmonics_noaa_eutt.txt,2,1353,0.1763,0.525,-10,0.199,5.2,UK_tidetimes,0,nein
+Dundee.json,56.4500,-2.9667,2026,"Dundee, Tay River, Scotland, United Kingdom",harmonics_noaa_eutt.txt,1663,1353,0.1763,0.525,-10,0.199,5.2,UK_tidetimes,0,nein
 Dundee.json,56.4500,-2.9667,2026,"Dundee, Scotland, United Kingdom",harmonics-1997-05-25_mod.txt,1685,1353,0.1584,0.66,-10,0.205,5.423,UK_tidetimes,0,nein
 Dundee.json,56.4500,-2.9667,2026,"Dundee, Scotland, United Kingdom",harmonics_utide_tidetables.txt,1685,1353,0.1994,0.776,0,-0.021,5.618,UK_tidetimes,1,nein
 Dundee.json,56.4500,-2.9667,2026,"Newport-on-Tay, Scotland, United Kingdom",harmonics_utide_observations.txt,1890,1353,0.0816,0.618,0,0.388,5.482,UK_tidetimes,0,nein
+Dungeness.json,50.9167,0.9667,2026,"Dungeness, England, United Kingdom",harmonics_noaa_eutt.txt,696,1354,0.3878,1.258,-30,0.544,7.645,UK_tidetimes,0,nein
 Dungeness.json,50.9167,0.9667,2026,"Dungeness, England, United Kingdom",harmonics_utide_tidetables.txt,696,1354,0.3257,1.045,0,0.056,7.432,UK_tidetimes,1,nein
-Dungeness.json,50.9167,0.9667,2026,"Dungeness, England, United Kingdom",harmonics_noaa_eutt.txt,1853,1354,0.3878,1.258,-30,0.544,7.645,UK_tidetimes,0,nein
 Dunkerron_Harbour.json,51.8667,-9.6500,2026,"Dunkerron (Kenmare), Ireland",harmonics_utide_tidetables.txt,1401,1362,0.1623,0.606,0,-0.033,3.806,UK_tidetimes,1,nein
 Dunmanus_Harbour.json,51.5333,-9.6667,2026,"Dunmanus Harbour, Ireland",harmonics_utide_tidetables.txt,796,1362,0.1421,0.579,0,-0.027,3.225,UK_tidetimes,1,nein
 Dunmore_East.json,52.1500,-6.9833,2026,"Dunmore East, Ireland",harmonics_utide_observations.txt,640,1361,0.0826,0.272,-20,-0.035,4.302,UK_tidetimes,0,nein
@@ -301,9 +295,9 @@ E._Loch_Tarbert.json,57.9000,-6.8000,2026,"East Loch Tarbert, Scotland, United K
 E._Loch_Tarbert.json,57.9000,-6.8000,2026,"Tarbert (Harris), Scotland, United Kingdom",harmonics_utide_tidetables.txt,347,1357,0.177,0.87,-10,-0.037,5.375,UK_tidetimes,1,nein
 East_Loch_Tarbert.json,55.8667,-5.4000,2026,"East Loch Tarbert, Scotland, United Kingdom",harmonics_utide_tidetables.txt,736,1346,0.2496,1.388,-10,-0.005,3.852,UK_tidetimes,1,nein
 East_Loch_Tarbert.json,55.8667,-5.4000,2026,"East Loch Tarbert, Scotland, United Kingdom",harmonics_utide_observations.txt,737,1346,0.2313,0.615,0,-0.009,3.73,UK_tidetimes,0,nein
+Eastbourne.json,50.7667,0.3000,2026,"Eastbourne, England, United Kingdom",harmonics_noaa_eutt.txt,325,1354,0.3655,1.366,-10,0.437,7.098,UK_tidetimes,0,nein
 Eastbourne.json,50.7667,0.3000,2026,"Eastbourne, England, United Kingdom",harmonics_utide_tidetables.txt,325,1354,0.324,1.105,-10,0.064,7.146,UK_tidetimes,1,nein
-Eastbourne.json,50.7667,0.3000,2026,"Eastbourne, England, United Kingdom",harmonics_noaa_eutt.txt,1174,1354,0.3655,1.366,-10,0.437,7.098,UK_tidetimes,0,nein
-Eastham.json,53.3167,-2.9500,2026,"Eastham, England, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.4193,1.251,-10,-0.039,9.629,UK_tidetimes,0,nein
+Eastham.json,53.3167,-2.9500,2026,"Eastham, England, United Kingdom",harmonics_noaa_eutt.txt,684,1357,0.4193,1.251,-10,-0.039,9.629,UK_tidetimes,0,nein
 Eastham.json,53.3167,-2.9500,2026,"Eastham, England, United Kingdom",harmonics_utide_tidetables.txt,684,1357,0.435,1.77,0,0.075,9.76,UK_tidetimes,1,nein
 Egilsay.json,59.1500,-2.9500,2026,"Egilsay, Scotland, United Kingdom",harmonics_utide_tidetables.txt,597,1357,0.1175,0.415,-10,0.026,3.266,UK_tidetimes,1,nein
 English_And_Welsh_Grounds.json,51.4667,-2.9833,2026,"English And Welsh Grounds, England, United Kingdom",harmonics_utide_tidetables.txt,0,1356,0.5527,2.131,-10,-0.057,13.433,UK_tidetimes,1,nein
@@ -330,7 +324,7 @@ Ferryside.json,51.7667,-4.3667,2026,"Ferryside, Towy River, Wales, United Kingdo
 Ferryside.json,51.7667,-4.3667,2026,"Ferryside, Wales, United Kingdom",harmonics_utide_tidetables.txt,381,1329,0.6131,2.997,0,-0.14,8.226,UK_tidetimes,1,nein
 Fethard-On-Sea.json,52.2000,-6.8167,2026,"Fethard-On-Sea, Ireland",harmonics_utide_tidetables.txt,877,1362,0.1693,0.658,-10,-0.031,3.791,UK_tidetimes,1,nein
 Fiddlers_Ferry.json,53.3667,-2.6667,2026,"Fiddler's Ferry, England, United Kingdom",harmonics_utide_tidetables.txt,805,1354,0.4095,1.589,0,0.015,4.521,UK_tidetimes,1,nein
-Fidra.json,56.0667,-2.7833,2026,"Fidra Island, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.2007,0.514,-30,0.039,5.208,UK_tidetimes,0,nein
+Fidra.json,56.0667,-2.7833,2026,"Fidra (North Berwick), Scotland, United Kingdom",harmonics_noaa_eutt.txt,819,1357,0.2007,0.514,-30,0.039,5.208,UK_tidetimes,0,nein
 Fidra.json,56.0667,-2.7833,2026,"Fidra (North Berwick), Scotland, United Kingdom",harmonics_utide_tidetables.txt,819,1357,0.1932,0.811,0,-0.012,5.715,UK_tidetimes,1,nein
 Filey_Bay.json,54.2167,-0.2667,2026,"Filey Bay, England, United Kingdom",harmonics_utide_tidetables.txt,1432,1353,0.2369,0.923,-10,-0.048,5.373,UK_tidetimes,1,nein
 Fishguard.json,52.0167,-4.9833,2026,"Fishguard, Wales, United Kingdom",harmonics-dwf-20100529-nonfree_mod.txt,375,1356,0.0572,0.465,-10,-0.002,4.877,UK_tidetimes,0,nein
@@ -340,25 +334,25 @@ Fleetwood.json,53.9333,-3.0000,2026,"Fleetwood, River Wyre, England, United King
 Fleetwood.json,53.9333,-3.0000,2026,"Fleetwood, England, United Kingdom",harmonics_utide_tidetables.txt,774,1357,0.4023,1.564,-10,0.085,9.219,UK_tidetimes,1,nein
 Fleetwood.json,53.9333,-3.0000,2026,"Wyre Lighthouse, England, United Kingdom",harmonics_utide_tidetables.txt,2812,1357,0.445,1.667,-10,0.172,10.084,UK_tidetimes,1,nein
 Flixborough_Wharf.json,53.6167,-0.7000,2026,"Flixborough Wharf, England, United Kingdom",harmonics_utide_tidetables.txt,369,1266,0.6536,2.91,0,-0.123,7.04,UK_tidetimes,1,nein
-Folkestone.json,51.0833,1.2000,2026,"Folkestone, England, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.2691,0.813,10,0.725,7.073,UK_tidetimes,0,nein
-Folly_Inn.json,50.7333,-1.2833,2026,"Folly Inn, England, United Kingdom",harmonics_utide_tidetables.txt,89,1354,0.1552,0.56,0,0.033,3.412,UK_tidetimes,1,nein
-Foreland_(Lifeboat_Slip).json,50.6833,-1.0667,2026,"Foreland (Lifeboat Slip), England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.1936,0.692,-10,0.034,4.277,UK_tidetimes,1,nein
-Foreland_(Lifeboat_Slip).json,50.6833,-1.0667,2026,"Bembridge Approaches, England, United Kingdom",harmonics_utide_tidetables.txt,2991,1354,0.1922,0.702,-10,0.039,4.273,UK_tidetimes,1,nein
+Folkestone.json,51.0833,1.2000,2026,"Folkestone, England, United Kingdom",harmonics_noaa_eutt.txt,874,1353,0.2691,0.813,10,0.725,7.073,UK_tidetimes,0,nein
+Folkestone.json,51.0833,1.2000,2026,"Folkestone, England, United Kingdom",harmonics_utide_tidetables.txt,874,1353,0.3185,1.07,0,0.045,6.967,UK_tidetimes,1,nein
+Folly_Inn.json,50.7333,-1.2833,2026,"Folly Inn (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,89,1354,0.1552,0.56,0,0.033,3.412,UK_tidetimes,1,nein
+Foreland_(Lifeboat_Slip).json,50.6833,-1.0667,2026,"Bembridge (Lifeboat Station), England, United Kingdom",harmonics_utide_tidetables.txt,818,1354,0.1936,0.692,-10,0.034,4.277,UK_tidetimes,1,nein
+Foreland_(Lifeboat_Slip).json,50.6833,-1.0667,2026,"Bembridge Approaches, England, United Kingdom",harmonics_utide_tidetables.txt,2752,1354,0.1922,0.702,-10,0.039,4.273,UK_tidetimes,1,nein
 Formby.json,53.5333,-3.1167,2026,"Formby, England, United Kingdom",harmonics_utide_tidetables.txt,0,1358,0.3886,1.434,0,0.094,8.587,UK_tidetimes,1,nein
 Fort_Belan.json,53.1167,-4.3333,2026,"Belan Point, Menai Strait, Wales, United Kingdom",harmonics_noaa_eutt.txt,692,1358,0.3051,0.877,30,-0.044,4.871,UK_tidetimes,0,nein
 Fort_Belan.json,53.1167,-4.3333,2026,"Fort Belan, Wales, United Kingdom",harmonics_utide_tidetables.txt,692,1358,0.1723,0.59,0,0.038,4.753,UK_tidetimes,1,nein
 Fortrose.json,57.5833,-4.1333,2026,"Fortrose, Scotland, United Kingdom",harmonics_utide_tidetables.txt,560,677,0.212,0.835,10,0.025,4.901,UK_tidetimes,1,nein
 Foula.json,60.1167,-2.0500,2026,"Foula, Scotland, United Kingdom",harmonics_utide_tidetables.txt,1885,1357,0.0748,0.229,-20,-0.043,2.136,UK_tidetimes,1,nein
-Fowey.json,50.3333,-4.6333,2026,"Fowey, England, United Kingdom",harmonics_noaa_eutt.txt,4,1354,0.258,0.784,-30,-0.089,5.082,UK_tidetimes,0,nein
+Fowey.json,50.3333,-4.6333,2026,"Fowey, England, United Kingdom",harmonics_noaa_eutt.txt,286,1354,0.258,0.784,-30,-0.089,5.082,UK_tidetimes,0,nein
 Fowey.json,50.3333,-4.6333,2026,"Fowey, England, United Kingdom",harmonics_utide_tidetables.txt,286,1354,0.2246,0.917,-10,-0.049,5.319,UK_tidetimes,1,nein
 Foynes_Island.json,52.6167,-9.1167,2026,"Foynes Island, Ireland",harmonics_utide_tidetables.txt,565,1354,0.4774,2.186,0,-0.069,5.369,UK_tidetimes,1,nein
 Fraserburgh.json,57.6833,-2.0000,2026,"Fraserburgh, Scotland, United Kingdom",harmonics_utide_tidetables.txt,996,1353,0.1387,0.596,0,0.027,3.447,UK_tidetimes,1,nein
 Fremington.json,51.0833,-4.1167,2026,"Fremington, England, United Kingdom",harmonics_utide_tidetables.txt,439,1360,0.2526,0.931,-10,-0.07,7.213,UK_tidetimes,1,nein
-Freshwater_Bay.json,50.6667,-1.5167,2026,"Freshwater Bay, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.1096,0.445,-10,0.041,2.471,UK_tidetimes,1,nein
-Freshwater_Bay.json,50.6667,-1.5167,2026,"Totland Bay, England, United Kingdom",harmonics_utide_tidetables.txt,2789,1353,0.1472,0.59,0,-0.154,2.185,UK_tidetimes,1,nein
+Freshwater_Bay.json,50.6667,-1.5167,2026,"Freshwater Bay (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,496,1353,0.1096,0.445,-10,0.041,2.471,UK_tidetimes,1,nein
+Freshwater_Bay.json,50.6667,-1.5167,2026,"Totland Bay (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,2789,1353,0.1472,0.59,0,-0.154,2.185,UK_tidetimes,1,nein
 Gairloch.json,57.7167,-5.6833,2026,"Gairloch, Scotland, United Kingdom",harmonics_utide_tidetables.txt,1028,1357,0.1893,0.849,-10,-0.029,4.939,UK_tidetimes,1,nein
 Galmisdale_Pier.json,56.8833,-6.1333,2026,"Galmisdale Pier (Eigg), Scotland, United Kingdom",harmonics_utide_tidetables.txt,597,1356,0.1738,0.761,0,-0.037,4.508,UK_tidetimes,1,nein
-Galway.json,53.2667,-9.0500,2026,"Galway, Ireland",harmonics_ticon4_worldwide.txt,288,1361,0.0712,0.336,-10,2.951,5.337,UK_tidetimes,0,nein
 Galway.json,53.2667,-9.0500,2026,"Galway, Ireland",harmonics_utide_observations.txt,288,1361,0.0662,0.347,-10,-0.062,5.451,UK_tidetimes,0,nein
 Garelochhead.json,56.0833,-4.8333,2026,"Garelochhead, Scotland, United Kingdom",harmonics_utide_tidetables.txt,400,1316,0.3708,1.797,0,-0.044,4.001,UK_tidetimes,1,nein
 Garelochhead.json,56.0833,-4.8333,2026,"Faslane (Gare Loch), Scotland, United Kingdom",harmonics_utide_tidetables.txt,2532,1316,0.324,1.732,0,-0.075,3.821,UK_tidetimes,1,nein
@@ -371,38 +365,37 @@ Glasgow.json,55.8500,-4.2667,2026,"Glasgow, Clyde River, Scotland, United Kingdo
 Glasson_Dock.json,54.0000,-2.8500,2026,"Glasson Dock, England, United Kingdom",harmonics_utide_tidetables.txt,68,679,0.6196,1.531,0,0.03,6.666,UK_tidetimes,1,nein
 Glenelg_Bay.json,57.2167,-5.6333,2026,"Glenelg Bay, Scotland, United Kingdom",harmonics_utide_tidetables.txt,538,1356,0.1937,0.776,0,-0.03,4.952,UK_tidetimes,1,nein
 Glengarrisdale_Bay.json,56.1167,-5.7833,2026,"Glengarrisdale Bay (Jura), Scotland, United Kingdom",harmonics_utide_tidetables.txt,477,1357,0.185,1.083,0,-0.052,3.594,UK_tidetimes,1,nein
-Golspie.json,57.9667,-3.9833,2026,"Golspie, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.1285,0.367,-50,0.068,3.917,UK_tidetimes,0,nein
+Golspie.json,57.9667,-3.9833,2026,"Golspie, Scotland, United Kingdom",harmonics_noaa_eutt.txt,403,1357,0.1285,0.367,-50,0.068,3.917,UK_tidetimes,0,nein
 Golspie.json,57.9667,-3.9833,2026,"Golspie, Scotland, United Kingdom",harmonics_utide_tidetables.txt,403,1357,0.1554,0.639,0,0.035,3.83,UK_tidetimes,1,nein
-Goole.json,53.7000,-0.8667,2026,"Goole, England, United Kingdom",harmonics_noaa_eutt.txt,2,1337,0.5181,1.534,30,0.034,6.281,UK_tidetimes,0,nein
+Goole.json,53.7000,-0.8667,2026,"Goole, England, United Kingdom",harmonics_noaa_eutt.txt,212,1337,0.5181,1.534,30,0.034,6.281,UK_tidetimes,0,nein
 Goole.json,53.7000,-0.8667,2026,"Goole, England, United Kingdom",harmonics_utide_tidetables.txt,212,1337,0.3062,1.715,0,-0.015,6.845,UK_tidetimes,1,nein
 Gott_Bay.json,56.5167,-6.8000,2026,"Gott Bay (Tiree), Scotland, United Kingdom",harmonics_utide_tidetables.txt,738,1357,0.1488,0.682,0,-0.037,3.931,UK_tidetimes,1,nein
 Gott_Bay.json,56.5167,-6.8000,2026,"Scarinish, Tiree Island, Scotland, United Kingdom",harmonics_noaa_eutt.txt,1853,1357,0.2132,0.634,-30,0.53,4.068,UK_tidetimes,0,nein
-Grangemouth.json,56.0333,-3.6833,2026,"Grangemouth, Scotland, United Kingdom",harmonics_utide_tidetables.txt,223,1351,0.3154,1.221,0,-0.081,6.259,UK_tidetimes,1,nein
-Grangemouth.json,56.0333,-3.6833,2026,"Grangemouth, Forth River, Scotland, United Kingdom",harmonics_noaa_eutt.txt,2071,1351,0.2445,0.66,-20,-0.09,5.948,UK_tidetimes,0,nein
+Grangemouth.json,56.0333,-3.6833,2026,"Grangemouth (Forth River), Scotland, United Kingdom",harmonics_noaa_eutt.txt,223,1351,0.2445,0.66,-20,-0.09,5.948,UK_tidetimes,0,nein
+Grangemouth.json,56.0333,-3.6833,2026,"Grangemouth (Forth River), Scotland, United Kingdom",harmonics_utide_tidetables.txt,223,1351,0.3154,1.221,0,-0.081,6.259,UK_tidetimes,1,nein
 Granton.json,55.9833,-3.2167,2026,"Granton, Scotland, United Kingdom",harmonics_utide_tidetables.txt,366,1357,0.2027,0.802,0,-0.021,5.953,UK_tidetimes,1,nein
 Granton.json,55.9833,-3.2167,2026,"Leith, Scotland, United Kingdom",harmonics-1997-05-25_mod.txt,2294,1357,0.1017,0.566,-20,0.228,6.017,UK_tidetimes,0,nein
 Granton.json,55.9833,-3.2167,2026,"Leith, England, United Kingdom",harmonics_ticon4_worldwide.txt,2295,1357,0.0865,0.539,-10,3.222,5.938,UK_tidetimes,0,nein
 Granton.json,55.9833,-3.2167,2026,"Leith, England, United Kingdom",harmonics_utide_observations.txt,2296,1357,0.0902,0.585,-10,-0.081,5.794,UK_tidetimes,0,nein
-Gravesend.json,51.4500,0.3833,2026,"Gravesend, England, United Kingdom",harmonics_utide_tidetables.txt,0,1360,0.3073,1.185,0,0.015,6.777,UK_tidetimes,1,nein
-Gravesend.json,51.4500,0.3833,2026,"Tilbury Dock, Thames River, England, United Kingdom",harmonics_noaa_eutt.txt,2184,1360,0.3231,1.087,-30,0.122,6.685,UK_tidetimes,0,nein
+Gravesend.json,51.4500,0.3833,2026,"Gravesend, England, United Kingdom",harmonics_utide_tidetables.txt,965,1360,0.3073,1.185,0,0.015,6.777,UK_tidetimes,1,nein
 Great_Saltee.json,52.1167,-6.6167,2026,"Great Saltee, Ireland",harmonics_utide_tidetables.txt,273,682,0.1656,0.473,30,0.063,4.173,UK_tidetimes,1,nein
 Great_Yarmouth_(Britannia_Pier).json,52.6000,1.7500,2026,"Great Yarmouth (Britannia Pier), England, United Kingdom",harmonics_utide_tidetables.txt,1090,1356,0.0978,0.461,-10,0.004,2.65,UK_tidetimes,1,nein
-Great_Yarmouth_(Gorleston-On-Sea).json,52.5667,1.7333,2026,"Gorleston, Great Yarmouth, England, United Kingdom",harmonics_noaa_eutt.txt,4,1356,0.1781,0.54,-30,0.297,2.251,UK_tidetimes,0,nein
+Great_Yarmouth_(Gorleston-On-Sea).json,52.5667,1.7333,2026,"Great Yarmouth (Gorleston-On-Sea), England, United Kingdom",harmonics_noaa_eutt.txt,675,1356,0.1781,0.54,-30,0.297,2.251,UK_tidetimes,0,nein
 Great_Yarmouth_(Gorleston-On-Sea).json,52.5667,1.7333,2026,"Great Yarmouth (Gorleston-On-Sea), England, United Kingdom",harmonics_utide_tidetables.txt,675,1356,0.0966,0.433,0,0.014,2.778,UK_tidetimes,1,nein
 Greenock.json,55.9500,-4.7667,2026,"Greenock, Scotland, United Kingdom",harmonics-1997-05-25_mod.txt,839,1347,0.1674,0.591,-10,0.032,3.932,UK_tidetimes,0,nein
 Greenock.json,55.9500,-4.7667,2026,"Greenock, Scotland, United Kingdom",harmonics_utide_tidetables.txt,839,1347,0.2302,1.188,0,-0.002,3.657,UK_tidetimes,1,nein
 Greenore.json,54.0333,-6.1333,2026,"Greenore (Carlingford Lough), Ireland",harmonics_utide_tidetables.txt,0,1356,0.2683,1.104,0,0.005,5.326,UK_tidetimes,1,nein
 Greenway_Quay.json,50.3833,-3.5833,2026,"Greenway Quay, England, United Kingdom",harmonics_utide_tidetables.txt,597,1353,0.2058,0.939,0,-0.042,4.888,UK_tidetimes,1,nein
 Greystones.json,53.1500,-6.0667,2026,"Greystones, Ireland",harmonics_utide_tidetables.txt,200,681,0.0512,0.19,-30,0.044,3.778,UK_tidetimes,1,nein
-Grimsby.json,53.5833,-0.0667,2026,"Grimsby, England, United Kingdom",harmonics_noaa_eutt.txt,4,1354,0.3223,1.109,-20,0.071,7.054,UK_tidetimes,0,nein
+Grimsby.json,53.5833,-0.0667,2026,"Grimsby, England, United Kingdom",harmonics_noaa_eutt.txt,43,1354,0.3223,1.109,-20,0.071,7.054,UK_tidetimes,0,nein
 Grimsby.json,53.5833,-0.0667,2026,"Grimsby, England, United Kingdom",harmonics_utide_tidetables.txt,43,1354,0.2718,1.089,-10,-0.045,6.727,UK_tidetimes,1,nein
 Grovehurst_Jetty.json,51.3667,0.7667,2026,"Grovehurst Jetty, England, United Kingdom",harmonics_utide_tidetables.txt,545,1352,0.2701,1.036,0,0.019,6.048,UK_tidetimes,1,nein
 Gweedore_Harbour.json,55.0667,-8.3167,2026,"Gweedore Harbour (Bunbeg), Ireland",harmonics_utide_tidetables.txt,897,1360,0.2146,1.073,0,-0.05,3.885,UK_tidetimes,1,nein
 Hale_Head.json,53.3167,-2.8000,2026,"Hale Head, England, United Kingdom",harmonics_utide_tidetables.txt,713,679,0.3412,1.0,-20,0.078,6.733,UK_tidetimes,1,nein
 Halfway_Shoal.json,54.0167,-3.2000,2026,"Halfway Shoal, England, United Kingdom",harmonics_utide_tidetables.txt,0,1357,0.3784,1.409,0,0.07,8.712,UK_tidetimes,1,nein
 Hammersmith_Bridge.json,51.4833,-0.2333,2026,"Hammersmith Bridge, England, United Kingdom",harmonics_utide_tidetables.txt,503,1285,0.6434,3.533,-10,-0.075,6.99,UK_tidetimes,1,nein
+Hartlepool.json,54.7000,-1.2000,2026,"Hartlepool, England, United Kingdom",harmonics_noaa_eutt.txt,1074,1357,0.2136,0.562,0,0.112,4.896,UK_tidetimes,0,nein
 Hartlepool.json,54.7000,-1.2000,2026,"Hartlepool, England, United Kingdom",harmonics_utide_tidetables.txt,1074,1357,0.2207,0.734,-10,-0.03,5.457,UK_tidetimes,1,nein
-Hartlepool.json,54.7000,-1.2000,2026,"Hartlepool, England, United Kingdom",harmonics_noaa_eutt.txt,2145,1357,0.2136,0.562,0,0.112,4.896,UK_tidetimes,0,nein
 Harwich.json,51.9500,1.2833,2026,"Harwich, England, United Kingdom",harmonics_ticon4_worldwide.txt,638,1353,0.093,0.519,-10,2.158,4.27,UK_tidetimes,0,nein
 Harwich.json,51.9500,1.2833,2026,"Harwich, England, United Kingdom",harmonics-dwf-20100529-nonfree_mod.txt,645,1353,0.0818,0.317,-20,-0.03,4.398,UK_tidetimes,0,nein
 Hastings.json,50.8500,0.6000,2026,"Hastings, England, United Kingdom",harmonics_literature.txt,1905,1353,0.135,0.711,-10,0.053,8.078,UK_tidetimes,0,nein
@@ -433,21 +426,21 @@ Howth.json,53.3833,-6.0667,2026,"Howth, Ireland",harmonics_utide_observations.tx
 Hull_(Albert_Dock).json,53.7333,-0.3500,2026,"Hull (Albert Dock), England, United Kingdom",harmonics_utide_tidetables.txt,418,1351,0.3114,1.295,-10,-0.05,7.865,UK_tidetimes,1,nein
 Hull_(Alexandra_Dock).json,53.7333,-0.3000,2026,"Hull (Alexandra Dock), England, United Kingdom",harmonics_utide_tidetables.txt,1044,1353,0.3022,1.345,-10,-0.057,7.868,UK_tidetimes,1,nein
 Hull_(Alexandra_Dock).json,53.7333,-0.3000,2026,"Hull (King George Dock), England, United Kingdom",harmonics-1997-05-25_mod.txt,1947,1353,0.2225,1.068,-10,0.102,8.004,UK_tidetimes,0,nein
+Hull_(Alexandra_Dock).json,53.7333,-0.3000,2026,"Hull, England, United Kingdom",harmonics_noaa_eutt.txt,1947,1353,0.3695,1.23,-20,0.119,7.669,UK_tidetimes,0,nein
 Hull_(Alexandra_Dock).json,53.7333,-0.3000,2026,"Hull (King George Dock), England, United Kingdom",harmonics_utide_tidetables.txt,1947,1353,0.3179,1.394,-10,-0.042,7.953,UK_tidetimes,1,nein
 Hull_(Alexandra_Dock).json,53.7333,-0.3000,2026,"Hull (Albert Dock), England, United Kingdom",harmonics_utide_tidetables.txt,2905,1353,0.3296,1.385,0,-0.028,7.864,UK_tidetimes,1,nein
 Hull_(King_George_Dock).json,53.7333,-0.2667,2026,"Hull (King George Dock), England, United Kingdom",harmonics-1997-05-25_mod.txt,864,1353,0.2439,1.059,-10,0.086,8.008,UK_tidetimes,0,nein
+Hull_(King_George_Dock).json,53.7333,-0.2667,2026,"Hull, England, United Kingdom",harmonics_noaa_eutt.txt,864,1353,0.3849,1.197,-20,0.1,7.668,UK_tidetimes,0,nein
 Hull_(King_George_Dock).json,53.7333,-0.2667,2026,"Hull (King George Dock), England, United Kingdom",harmonics_utide_tidetables.txt,864,1353,0.3122,1.345,-10,-0.056,7.953,UK_tidetimes,1,nein
-Hull_(King_George_Dock).json,53.7333,-0.2667,2026,"Hull, England, United Kingdom",harmonics_noaa_eutt.txt,1096,1353,0.3849,1.197,-20,0.1,7.668,UK_tidetimes,0,nein
 Hull_(King_George_Dock).json,53.7333,-0.2667,2026,"Hull (Alexandra Dock), England, United Kingdom",harmonics_utide_tidetables.txt,2229,1353,0.3123,1.32,-10,-0.072,7.867,UK_tidetimes,1,nein
 Hullbridge.json,51.6333,0.6333,2026,"Hullbridge, England, United Kingdom",harmonics_utide_tidetables.txt,1431,1351,0.3001,1.171,0,0.002,5.809,UK_tidetimes,1,nein
 Humber_Bridge.json,53.7167,-0.4500,2026,"Humber Bridge, England, United Kingdom",harmonics_utide_tidetables.txt,408,1346,0.3624,1.516,-10,-0.059,7.753,UK_tidetimes,1,nein
 Humber_Sea_Terminal.json,53.6667,-0.2333,2026,"Humber Sea Terminal, England, United Kingdom",harmonics_utide_tidetables.txt,185,1353,0.2805,1.116,-10,-0.052,7.267,UK_tidetimes,1,nein
 Hunstanton.json,52.9333,0.4833,2026,"Hunstanton, England, United Kingdom",harmonics_utide_tidetables.txt,365,1356,0.2667,1.221,-10,-0.034,7.722,UK_tidetimes,1,nein
-Hurst_Point.json,50.7000,-1.5500,2026,"Hurst Point, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.0947,0.331,0,0.023,2.259,UK_tidetimes,1,nein
-Hurst_Point.json,50.7000,-1.5500,2026,"Totland Bay, England, United Kingdom",harmonics_utide_tidetables.txt,1856,1353,0.2122,0.565,-20,0.144,2.185,UK_tidetimes,1,nein
+Hurst_Point.json,50.7000,-1.5500,2026,"Hurst Point, England, United Kingdom",harmonics_utide_tidetables.txt,911,1353,0.0947,0.331,0,0.023,2.259,UK_tidetimes,1,nein
+Hurst_Point.json,50.7000,-1.5500,2026,"Totland Bay (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,1856,1353,0.2122,0.565,-20,0.144,2.185,UK_tidetimes,1,nein
 Iken_Cliffs.json,52.1500,1.5167,2026,"Iken Cliffs, England, United Kingdom",harmonics_utide_tidetables.txt,435,1356,0.1187,0.434,-10,0.006,2.887,UK_tidetimes,1,nein
 Immingham.json,53.6333,-0.1833,2026,"Immingham (Humberside), England, United Kingdom",harmonics-dwf-20100529-nonfree_mod.txt,418,1353,0.0956,0.708,-10,-0.007,7.089,UK_tidetimes,0,nein
-Immingham.json,53.6333,-0.1833,2026,"Immingham, England, United Kingdom",harmonics_utide_tidetables.txt,418,1353,0.2878,1.25,-10,-0.052,7.251,UK_tidetimes,1,nein
 Immingham.json,53.6333,-0.1833,2026,"Immingham (Humberside), England, United Kingdom",harmonics_ticon4_worldwide.txt,426,1353,0.1097,0.712,-10,4.167,7.368,UK_tidetimes,0,nein
 Immingham.json,53.6333,-0.1833,2026,"Immingham (Humberside), England, United Kingdom",harmonics_utide_observations.txt,426,1353,0.1099,0.715,-10,-0.047,7.188,UK_tidetimes,0,nein
 Inishbiggle.json,54.0000,-9.8833,2026,"Inishbiggle, Ireland",harmonics_utide_tidetables.txt,393,1360,0.1579,0.737,-10,-0.026,3.91,UK_tidetimes,1,nein
@@ -458,7 +451,7 @@ Inishtrahull.json,55.4333,-7.2333,2026,"Inishtrahull, Ireland",harmonics_utide_t
 Inner_Dowsing_Light.json,53.3167,0.5833,2026,"Inner Dowsing Light, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.239,0.965,-10,-0.047,6.404,UK_tidetimes,1,nein
 Inveraray.json,56.2333,-5.0667,2026,"Inveraray, Scotland, United Kingdom",harmonics_utide_tidetables.txt,0,1305,0.3614,1.635,-10,-0.043,4.142,UK_tidetimes,1,nein
 Inveraray.json,56.2333,-5.0667,2026,"Inverary, Loch Fyne, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1305,0.2112,0.663,-10,0.03,4.176,UK_tidetimes,0,nein
-Invergordon.json,57.6833,-4.1667,2026,"Invergordon, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.1582,0.548,-40,0.19,4.353,UK_tidetimes,0,nein
+Invergordon.json,57.6833,-4.1667,2026,"Invergordon, Scotland, United Kingdom",harmonics_noaa_eutt.txt,386,1357,0.1582,0.548,-40,0.19,4.353,UK_tidetimes,0,nein
 Invergordon.json,57.6833,-4.1667,2026,"Invergordon, Scotland, United Kingdom",harmonics_utide_tidetables.txt,386,1357,0.1757,0.795,0,0.034,4.375,UK_tidetimes,1,nein
 Inverie_Bay.json,57.0333,-5.6833,2026,"Inverie Bay, Loch Nevis, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.2244,0.797,-10,0.534,5.095,UK_tidetimes,0,nein
 Inverie_Bay.json,57.0333,-5.6833,2026,"Inverie Bay, Scotland, United Kingdom",harmonics_utide_tidetables.txt,514,1357,0.19,0.953,0,-0.045,5.094,UK_tidetimes,1,nein
@@ -498,8 +491,8 @@ Kings_Lynn.json,52.7500,0.4000,2026,"King's Lynn, England, United Kingdom",harmo
 Kinsale.json,51.7000,-8.5167,2026,"Kinsale, Ireland",harmonics_utide_tidetables.txt,168,1362,0.1628,0.666,0,-0.029,3.526,UK_tidetimes,1,nein
 Kirkcudbright_Bay.json,54.8000,-4.0667,2026,"Kirkcudbright Bay, Scotland, United Kingdom",harmonics_utide_tidetables.txt,650,1357,0.3332,1.32,0,0.058,7.519,UK_tidetimes,1,nein
 Kirkcudbright_Bay.json,54.8000,-4.0667,2026,"Kirkcudbright Bay, Scotland, United Kingdom",harmonics_utide_observations.txt,650,1357,0.1055,0.586,-20,0.002,8.198,UK_tidetimes,0,nein
-Kirkwall.json,58.9833,-2.9667,2026,"Kirkwall, Scotland, United Kingdom",harmonics_utide_tidetables.txt,0,1358,0.114,0.431,0,0.024,2.902,UK_tidetimes,1,nein
 Kirkwall.json,58.9833,-2.9667,2026,"Kirkwall, Scotland, United Kingdom",harmonics_utide_observations.txt,436,1358,0.0909,0.241,-10,0.018,3.251,UK_tidetimes,0,nein
+Kirkwall.json,58.9833,-2.9667,2026,"Kirkwall, Scotland, United Kingdom",harmonics_utide_tidetables.txt,436,1358,0.114,0.431,0,0.024,2.902,UK_tidetimes,1,nein
 Knights_Town.json,51.9333,-10.3000,2026,"Knights Town (Valentia), Ireland",harmonics_utide_tidetables.txt,1237,1358,0.179,0.791,0,-0.043,3.631,UK_tidetimes,1,nein
 Kyle_Of_Lochalsh.json,57.2833,-5.7167,2026,"Kyle Akin, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.2189,0.651,-20,0.902,5.514,UK_tidetimes,0,nein
 Kyle_Of_Lochalsh.json,57.2833,-5.7167,2026,"Kyle Of Lochalsh, Scotland, United Kingdom",harmonics_utide_tidetables.txt,483,1357,0.1959,0.99,-10,-0.033,5.534,UK_tidetimes,1,nein
@@ -514,12 +507,9 @@ Leith.json,55.9833,-3.1833,2026,"Leith, Scotland, United Kingdom",harmonics-1997
 Leith.json,55.9833,-3.1833,2026,"Leith, England, United Kingdom",harmonics_utide_observations.txt,730,1357,0.0927,0.601,-10,-0.08,5.833,UK_tidetimes,0,nein
 Leith.json,55.9833,-3.1833,2026,"Leith, England, United Kingdom",harmonics_ticon4_worldwide.txt,730,1357,0.089,0.539,-10,3.222,5.893,UK_tidetimes,0,nein
 Leith.json,55.9833,-3.1833,2026,"Granton, Scotland, United Kingdom",harmonics_utide_tidetables.txt,2432,1357,0.2033,0.858,0,-0.019,5.901,UK_tidetimes,1,nein
-Lerwick.json,60.1500,-1.1333,2026,"Lerwick (Shetlands), Scotland, United Kingdom",harmonics_utide_observations.txt,579,1357,0.0793,0.211,0,-0.09,2.162,UK_tidetimes,0,nein
 Lerwick.json,60.1500,-1.1333,2026,"Lerwick (Shetlands), Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,592,1357,0.0245,0.157,-10,1.3,2.259,UK_tidetimes,0,nein
-Lerwick.json,60.1500,-1.1333,2026,"Lerwick (Shetlands), Scotland, United Kingdom",harmonics_utide_observations.txt,593,1357,0.0793,0.211,0,-0.09,2.162,UK_tidetimes,0,nein
 Les_Ecrehou.json,49.2833,-1.9333,2026,"Les Écréhous, Channel Islands",harmonics-pierre-lavergne-v10_mod.txt,532,1361,0.4119,1.563,-10,-0.016,11.177,UK_tidetimes,0,nein
 Les_Ecrehou.json,49.2833,-1.9333,2026,"Les Écréhous, Channel Islands",harmonics_utide_tidetables.txt,532,1361,0.4161,2.026,-10,-0.056,11.255,UK_tidetimes,1,nein
-Les_Minquiers.json,48.9500,-2.1333,2026,"Les Minquiers, Bailiwick of Jersey, Channel Islands",harmonics_noaa_eutt.txt,2,1361,0.5445,1.549,-10,0.067,11.281,UK_tidetimes,0,nein
 Les_Minquiers.json,48.9500,-2.1333,2026,"Les Minquiers (Îles Anglo-Normandes), Channel Islands",harmonics-pierre-lavergne-v10_mod.txt,2238,1361,0.2541,1.293,-10,-0.03,11.874,UK_tidetimes,0,nein
 Les_Minquiers.json,48.9500,-2.1333,2026,"Les Minquiers (Îles Anglo-Normandes), Channel Islands",harmonics_utide_tidetables.txt,2238,1361,0.42,2.061,-10,-0.079,12.112,UK_tidetimes,1,nein
 Leverburgh.json,57.7667,-7.0333,2026,"Leverburgh (Harris), Scotland, United Kingdom",harmonics_utide_tidetables.txt,482,1357,0.1739,0.832,-10,-0.03,5.016,UK_tidetimes,1,nein
@@ -531,8 +521,6 @@ Little_Bernera.json,58.2667,-6.8667,2026,"Bernera Harbor, Scotland, United Kingd
 Little_Haven.json,51.7667,-5.1167,2026,"Little Haven, Wales, United Kingdom",harmonics_utide_tidetables.txt,993,1356,0.2158,1.051,-10,-0.061,6.283,UK_tidetimes,1,nein
 Littlehampton.json,50.8000,-0.5500,2026,"Littlehampton, England, United Kingdom",harmonics_literature.txt,562,1354,0.1348,0.626,-10,-0.157,6.04,UK_tidetimes,0,nein
 Liverpool_(Gladstone_Dock).json,53.4500,-3.0167,2026,"Liverpool (Gladstone Dock), England, United Kingdom",harmonics-dwf-20100529-nonfree_mod.txt,94,1357,0.0786,0.507,-10,0.161,9.58,UK_tidetimes,0,nein
-Liverpool_(Gladstone_Dock).json,53.4500,-3.0167,2026,"Liverpool (Gladstone Dock), England, United Kingdom",harmonics_ticon4_worldwide.txt,94,1357,0.1028,0.599,-10,5.365,9.639,UK_tidetimes,0,nein
-Liverpool_(Gladstone_Dock).json,53.4500,-3.0167,2026,"Liverpool, Gladstone Dock, England, United Kingdom",harmonics_utide_observations.txt,95,1357,0.202,0.882,-10,0.091,9.451,UK_tidetimes,0,nein
 Lizard_Point.json,49.9667,-5.2000,2026,"Lizard Point, England, United Kingdom",harmonics_utide_tidetables.txt,1107,1354,0.2193,0.902,-10,-0.042,5.122,UK_tidetimes,1,nein
 Llanddwyn_Island.json,53.1333,-4.4167,2026,"Llanddwyn Island, Wales, United Kingdom",harmonics_utide_tidetables.txt,0,1357,0.1797,0.627,0,0.031,5.065,UK_tidetimes,1,nein
 Llanelli.json,51.6667,-4.1667,2026,"Llanelli, Wales, United Kingdom",harmonics_utide_tidetables.txt,132,679,0.2404,0.809,20,0.51,7.456,UK_tidetimes,1,nein
@@ -566,7 +554,7 @@ Londonderry.json,55.0000,-7.3167,2026,"Londonderry, Northern Ireland, United Kin
 Londonderry.json,55.0000,-7.3167,2026,"Londonderry, Northern Ireland, United Kingdom",harmonics_utide_tidetables.txt,352,1360,0.0949,0.405,0,-0.0,3.041,UK_tidetimes,1,nein
 Looe.json,50.3500,-4.4500,2026,"East Looe, England, United Kingdom",harmonics_noaa_eutt.txt,0,1353,0.263,0.805,-40,-0.088,5.103,UK_tidetimes,0,nein
 Looe.json,50.3500,-4.4500,2026,"Looe, England, United Kingdom",harmonics_utide_tidetables.txt,526,1353,0.2293,1.008,-10,-0.05,5.404,UK_tidetimes,1,nein
-Lossiemouth.json,57.7167,-3.3000,2026,"Lossiemouth, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.1571,0.394,-40,0.449,3.931,UK_tidetimes,0,nein
+Lossiemouth.json,57.7167,-3.3000,2026,"Lossiemouth, Scotland, United Kingdom",harmonics_noaa_eutt.txt,1484,1353,0.1571,0.394,-40,0.449,3.931,UK_tidetimes,0,nein
 Lossiemouth.json,57.7167,-3.3000,2026,"Lossiemouth, Scotland, United Kingdom",harmonics_utide_tidetables.txt,1484,1353,0.1589,0.673,-10,0.034,4.014,UK_tidetimes,1,nein
 Lostwithiel.json,50.4000,-4.6667,2026,"Lostwithiel, England, United Kingdom",harmonics_utide_tidetables.txt,565,668,0.3106,0.694,10,0.009,1.074,UK_tidetimes,1,nein
 Loth.json,59.1833,-2.7000,2026,"Loth, Scotland, United Kingdom",harmonics_utide_tidetables.txt,934,1358,0.1042,0.425,-10,0.023,2.63,UK_tidetimes,1,nein
@@ -575,8 +563,8 @@ Luce_Bay_(Offshore_Platform).json,54.8333,-4.8833,2026,"Luce Bay (Offshore Platf
 Lulworth_Cove.json,50.6167,-2.2500,2026,"Lulworth Cove, England, United Kingdom",harmonics_utide_tidetables.txt,215,1354,0.0998,0.535,0,-0.023,2.374,UK_tidetimes,1,nein
 Lulworth_Cove.json,50.6167,-2.2500,2026,"Mupe Bay, England, United Kingdom",harmonics_utide_tidetables.txt,2352,1354,0.0998,0.535,0,-0.023,2.374,UK_tidetimes,1,nein
 Lundy.json,51.1667,-4.6500,2026,"Lundy, England, United Kingdom",harmonics_utide_tidetables.txt,454,1361,0.3448,1.384,-10,-0.101,8.135,UK_tidetimes,1,nein
+Lyme_Regis.json,50.7167,-2.9333,2026,"Lyme Regis, England, United Kingdom",harmonics_noaa_eutt.txt,429,1353,0.2575,0.723,-50,0.302,3.848,UK_tidetimes,0,nein
 Lyme_Regis.json,50.7167,-2.9333,2026,"Lyme Regis, England, United Kingdom",harmonics_utide_tidetables.txt,429,1353,0.1683,0.768,0,-0.029,4.236,UK_tidetimes,1,nein
-Lyme_Regis.json,50.7167,-2.9333,2026,"Lyme Regis, England, United Kingdom",harmonics_noaa_eutt.txt,1171,1353,0.2575,0.723,-50,0.302,3.848,UK_tidetimes,0,nein
 Lynmouth.json,51.2333,-3.8333,2026,"Lynmouth, England, United Kingdom",harmonics_utide_tidetables.txt,236,681,0.1113,0.531,10,0.03,10.11,UK_tidetimes,1,nein
 Malahide.json,53.4500,-6.1500,2026,"Malahide, Ireland",harmonics_utide_tidetables.txt,301,1358,0.1811,0.797,0,0.027,4.181,UK_tidetimes,1,nein
 Maldon.json,51.7333,0.7000,2026,"Maldon, England, United Kingdom",harmonics_utide_tidetables.txt,930,676,0.0959,0.292,-40,0.081,3.167,UK_tidetimes,1,nein
@@ -585,7 +573,7 @@ Margate.json,51.3833,1.3833,2026,"Margate, England, United Kingdom",harmonics_ut
 Marino_Point.json,51.8833,-8.3333,2026,"Marino Point, Ireland",harmonics_utide_tidetables.txt,572,1362,0.1938,0.756,-10,-0.03,4.097,UK_tidetimes,1,nein
 Martins_Haven.json,51.7333,-5.2500,2026,"Martin's Haven, Wales, United Kingdom",harmonics_utide_tidetables.txt,480,1356,0.2331,1.155,-10,-0.066,6.527,UK_tidetimes,1,nein
 Martins_Haven.json,51.7333,-5.2500,2026,"Skomer Island, Wales, United Kingdom",harmonics_utide_tidetables.txt,2259,1356,0.2415,0.864,-50,-0.23,6.944,UK_tidetimes,1,nein
-Maryport.json,54.7167,-3.5000,2026,"Maryport, England, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.3708,1.209,-10,-0.038,8.371,UK_tidetimes,0,nein
+Maryport.json,54.7167,-3.5000,2026,"Maryport, England, United Kingdom",harmonics_noaa_eutt.txt,483,1357,0.3708,1.209,-10,-0.038,8.371,UK_tidetimes,0,nein
 Maryport.json,54.7167,-3.5000,2026,"Maryport, England, United Kingdom",harmonics_utide_tidetables.txt,483,1357,0.3813,1.439,0,0.075,8.601,UK_tidetimes,1,nein
 Maseline_Pier.json,49.4333,-2.3500,2026,"Maseline Harbour, Sark, Channel Islands",harmonics_utide_tidetables.txt,533,1360,0.3285,1.615,0,-0.065,9.381,UK_tidetimes,1,nein
 Meikle_Ferry.json,57.8500,-4.1333,2026,"Meikle Ferry, Scotland, United Kingdom",harmonics_utide_tidetables.txt,735,1357,0.1717,0.783,0,0.031,4.458,UK_tidetimes,1,nein
@@ -621,8 +609,8 @@ Nato_Jetty.json,57.8333,-5.5833,2026,"Aultbea (Nato Jetty), Scotland, United Kin
 New_Hythe.json,51.3167,0.4667,2026,"New Hythe, England, United Kingdom",harmonics_utide_tidetables.txt,751,1357,0.2562,0.897,-10,0.014,4.813,UK_tidetimes,1,nein
 New_Quay.json,52.2167,-4.3500,2026,"New Quay, Wales, United Kingdom",harmonics_utide_tidetables.txt,393,1357,0.1491,0.727,0,-0.013,5.363,UK_tidetimes,1,nein
 New_Ross.json,52.4000,-6.9500,2026,"New Ross, Ireland",harmonics_utide_tidetables.txt,362,1360,0.1703,0.765,-10,-0.013,4.12,UK_tidetimes,1,nein
-Newburgh.json,56.3500,-3.2333,2026,"Newburgh, Scotland, United Kingdom",harmonics_utide_tidetables.txt,564,1339,0.326,1.7,-10,-0.046,4.804,UK_tidetimes,1,nein
-Newcastle-Upon-Tyne.json,54.9667,-1.6000,2026,"Newcastle-on-Tyne, England, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.195,0.53,0,0.147,5.141,UK_tidetimes,0,nein
+Newburgh.json,56.3500,-3.2333,2026,"Newburgh (Tay River), Scotland, United Kingdom",harmonics_utide_tidetables.txt,564,1339,0.326,1.7,-10,-0.046,4.804,UK_tidetimes,1,nein
+Newcastle-Upon-Tyne.json,54.9667,-1.6000,2026,"Newcastle-on-Tyne, England, United Kingdom",harmonics_noaa_eutt.txt,353,1357,0.195,0.53,0,0.147,5.141,UK_tidetimes,0,nein
 Newcastle-Upon-Tyne.json,54.9667,-1.6000,2026,"Newcastle-upon-Tyne, England, United Kingdom",harmonics_utide_tidetables.txt,353,1357,0.2158,0.721,-10,-0.03,5.442,UK_tidetimes,1,nein
 Newcastle_(N.Ireland).json,54.2000,-5.8833,2026,"Newcastle, Northern Ireland, United Kingdom",harmonics_noaa_eutt.txt,194,1357,0.3295,1.148,-40,0.036,5.549,UK_tidetimes,0,nein
 Newcastle_(N.Ireland).json,54.2000,-5.8833,2026,"Newcastle, Northern Ireland, United Kingdom",harmonics_utide_tidetables.txt,194,1357,0.2223,0.927,0,0.036,5.402,UK_tidetimes,1,nein
@@ -643,24 +631,24 @@ Orford_Ness.json,52.0833,1.5833,2026,"Orford Ness, England, United Kingdom",harm
 Orford_Ness.json,52.0833,1.5833,2026,"Orford Ness, England, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.1583,0.493,-20,0.036,2.868,UK_tidetimes,0,nein
 Orford_Quay.json,52.0833,1.5333,2026,"Orford Quay, England, United Kingdom",harmonics_utide_tidetables.txt,921,1357,0.1097,0.41,-10,0.016,2.713,UK_tidetimes,1,nein
 Orsay.json,55.6833,-6.5167,2026,"Orsay, Scotland, United Kingdom",harmonics_utide_tidetables.txt,930,1356,0.0639,0.246,-10,-0.021,1.669,UK_tidetimes,1,nein
-Osea_Island.json,51.7167,0.7667,2026,"Osea Island, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.2607,1.023,0,0.02,5.691,UK_tidetimes,1,nein
-Osea_Island.json,51.7167,0.7667,2026,"Osea Island, Blackwater River, England, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.255,0.759,-20,-0.076,5.474,UK_tidetimes,0,nein
+Osea_Island.json,51.7167,0.7667,2026,"Osea Island (Blackwater River), England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.2607,1.023,0,0.02,5.691,UK_tidetimes,1,nein
+Osea_Island.json,51.7167,0.7667,2026,"Osea Island (Blackwater River), England, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.255,0.759,-20,-0.076,5.474,UK_tidetimes,0,nein
 Out_Skerries.json,60.4167,-0.7500,2026,"Out Skerries (Shetlands), Scotland, United Kingdom",harmonics-1997-05-25_mod.txt,677,1356,0.106,0.287,-20,0.332,2.263,UK_tidetimes,0,nein
 Out_Skerries.json,60.4167,-0.7500,2026,"Out Skerries (Shetlands), Scotland, United Kingdom",harmonics_utide_tidetables.txt,677,1356,0.0952,0.311,0,0.016,2.299,UK_tidetimes,1,nein
 Outer_Westmark_Knock.json,52.8833,0.2167,2026,"Outer Westmark Knock, England, United Kingdom",harmonics_utide_tidetables.txt,0,1356,0.2853,1.268,-10,-0.048,7.584,UK_tidetimes,1,nein
 Owston_Ferry.json,53.4833,-0.7667,2026,"Owston Ferry, England, United Kingdom",harmonics_utide_tidetables.txt,628,677,0.4611,1.215,10,-0.048,3.409,UK_tidetimes,1,nein
-Padstow.json,50.5500,-4.9333,2026,"Padstow, England, United Kingdom",harmonics_noaa_eutt.txt,2,1361,0.397,1.19,-30,0.55,7.57,UK_tidetimes,0,nein
+Padstow.json,50.5500,-4.9333,2026,"Padstow, England, United Kingdom",harmonics_noaa_eutt.txt,957,1361,0.397,1.19,-30,0.55,7.57,UK_tidetimes,0,nein
 Padstow.json,50.5500,-4.9333,2026,"Padstow, England, United Kingdom",harmonics_utide_tidetables.txt,957,1361,0.3287,1.452,-10,-0.079,7.187,UK_tidetimes,1,nein
 Pagham.json,50.7667,-0.7167,2026,"Pagham, England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.2387,0.86,-10,0.052,5.477,UK_tidetimes,1,nein
 Par.json,50.3500,-4.7000,2026,"Par, England, United Kingdom",harmonics_utide_tidetables.txt,737,1354,0.2149,0.875,-10,-0.048,5.01,UK_tidetimes,1,nein
-Peel.json,54.2333,-4.7000,2026,"Peel, Isle of Man",harmonics_noaa_eutt.txt,4,1353,0.2157,0.848,0,-0.013,5.351,UK_tidetimes,0,nein
+Peel.json,54.2333,-4.7000,2026,"Peel, Isle of Man",harmonics_noaa_eutt.txt,699,1353,0.2157,0.848,0,-0.013,5.351,UK_tidetimes,0,nein
 Peel.json,54.2333,-4.7000,2026,"Peel, Isle of Man",harmonics_utide_tidetables.txt,699,1353,0.253,0.891,0,0.023,5.08,UK_tidetimes,1,nein
 Perranporth.json,50.3500,-5.1500,2026,"Perranporth, England, United Kingdom",harmonics_utide_tidetables.txt,610,1362,0.2861,1.172,0,-0.095,6.819,UK_tidetimes,1,nein
 Perth.json,56.4000,-3.4167,2026,"Perth, Scotland, United Kingdom",harmonics_utide_tidetables.txt,1707,1353,0.1717,0.648,-10,0.014,4.143,UK_tidetimes,1,nein
-Peterhead.json,57.5000,-1.7667,2026,"Peterhead, Scotland, United Kingdom",harmonics_noaa_eutt.txt,2,1353,0.1547,0.444,-40,0.166,3.76,UK_tidetimes,0,nein
+Peterhead.json,57.5000,-1.7667,2026,"Peterhead, Scotland, United Kingdom",harmonics_noaa_eutt.txt,455,1353,0.1547,0.444,-40,0.166,3.76,UK_tidetimes,0,nein
 Peterhead.json,57.5000,-1.7667,2026,"Peterhead, Scotland, United Kingdom",harmonics_utide_tidetables.txt,455,1353,0.1415,0.626,0,0.02,3.934,UK_tidetimes,1,nein
+Pierowall.json,59.3167,-2.9833,2026,"Pierowall, Scotland, United Kingdom",harmonics_noaa_eutt.txt,423,1357,0.1327,0.366,0,0.215,3.711,UK_tidetimes,0,nein
 Pierowall.json,59.3167,-2.9833,2026,"Pierowall, Scotland, United Kingdom",harmonics_utide_tidetables.txt,423,1357,0.1559,0.5,-10,0.012,3.744,UK_tidetimes,1,nein
-Pierowall.json,59.3167,-2.9833,2026,"Pierowall, Scotland, United Kingdom",harmonics_noaa_eutt.txt,944,1357,0.1327,0.366,0,0.215,3.711,UK_tidetimes,0,nein
 Plockton.json,57.3500,-5.6500,2026,"Plockton, Scotland, United Kingdom",harmonics_utide_tidetables.txt,988,1356,0.2015,0.986,-10,-0.035,5.783,UK_tidetimes,1,nein
 Poole_(Entrance).json,50.6833,-1.9500,2026,"Poole (Entrance), England, United Kingdom",harmonics_utide_tidetables.txt,109,1353,0.0814,0.363,0,0.022,2.336,UK_tidetimes,1,nein
 Poole_(Entrance).json,50.6833,-1.9500,2026,"Pottery Pier (Brownsea Island), England, United Kingdom",harmonics_utide_tidetables.txt,2888,1353,0.1787,0.481,30,0.096,1.98,UK_tidetimes,1,nein
@@ -674,11 +662,8 @@ Port_Askaig.json,55.8500,-6.1000,2026,"Port Askaig (Islay), Scotland, United Kin
 Port_Cardigan.json,52.1167,-4.6833,2026,"Port Cardigan, Wales, United Kingdom",harmonics_utide_tidetables.txt,353,1357,0.1414,0.743,0,-0.017,5.014,UK_tidetimes,1,nein
 Port_Dinorwic.json,53.1833,-4.2167,2026,"Port Dinorwic, Wales, United Kingdom",harmonics_utide_tidetables.txt,539,1357,0.2185,0.792,0,0.049,5.449,UK_tidetimes,1,nein
 Port_Glasgow.json,55.9333,-4.6833,2026,"Port Glasgow, Scotland, United Kingdom",harmonics_utide_tidetables.txt,275,1349,0.2801,1.371,0,-0.016,3.97,UK_tidetimes,1,nein
-Port_Of_Bristol_(Avonmouth).json,51.5000,-2.7333,2026,"Portbury, England, United Kingdom",harmonics_utide_observations.txt,336,1356,0.3254,1.863,-10,-0.185,14.126,UK_tidetimes,0,nein
 Port_Of_Bristol_(Avonmouth).json,51.5000,-2.7333,2026,"Portbury, England, United Kingdom",harmonics_ticon4_worldwide.txt,341,1356,0.3077,1.835,-10,6.885,13.841,UK_tidetimes,0,nein
 Port_Of_Bristol_(Avonmouth).json,51.5000,-2.7333,2026,"Avonmouth (Port of Bristol), England, United Kingdom",harmonics_ticon4_worldwide.txt,1747,1356,0.2909,1.763,-10,6.893,13.966,UK_tidetimes,0,nein
-Port_Of_Bristol_(Avonmouth).json,51.5000,-2.7333,2026,"Port Of Bristol (Avonmouth), England, United Kingdom",harmonics_utide_tidetables.txt,1747,1356,0.5517,2.431,-10,-0.027,13.917,UK_tidetimes,1,nein
-Port_Of_Bristol_(Avonmouth).json,51.5000,-2.7333,2026,"Avonmouth (Port of Bristol), England, United Kingdom",harmonics_utide_observations.txt,1755,1356,0.4195,2.553,-10,-0.243,13.802,UK_tidetimes,0,nein
 Port_St._Mary.json,54.0667,-4.7333,2026,"Port Saint Mary, Isle of Man",harmonics_utide_tidetables.txt,482,1358,0.2698,1.0,0,0.057,5.832,UK_tidetimes,1,nein
 Port_Sutton_Bridge.json,52.7667,0.2000,2026,"Port Sutton Bridge, England, United Kingdom",harmonics_utide_tidetables.txt,344,1353,0.249,0.972,-10,-0.015,6.973,UK_tidetimes,1,nein
 Port_Talbot.json,51.5833,-3.8167,2026,"Port Talbot, Wales, United Kingdom",harmonics_utide_tidetables.txt,1231,1357,0.3988,1.746,-10,-0.083,9.854,UK_tidetimes,1,nein
@@ -692,8 +677,7 @@ Porthcawl.json,51.4667,-3.7000,2026,"Porthcawl, Wales, United Kingdom",harmonics
 Porthgain.json,51.9500,-5.1833,2026,"Porthgain, Wales, United Kingdom",harmonics_utide_tidetables.txt,200,1356,0.1534,0.749,-10,-0.031,4.685,UK_tidetimes,1,nein
 Porthleven.json,50.0833,-5.3167,2026,"Porthleven, England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.2259,0.942,-10,-0.046,5.221,UK_tidetimes,1,nein
 Porthmadog.json,52.9167,-4.1333,2026,"Porthmadog, Wales, United Kingdom",harmonics_utide_tidetables.txt,0,679,0.1633,0.533,10,0.032,5.361,UK_tidetimes,1,nein
-Porthmadog.json,52.9167,-4.1333,2026,"Portmadoc (Borth), Wales, United Kingdom",harmonics_noaa_eutt.txt,4,679,0.6343,1.357,10,0.057,5.19,UK_tidetimes,0,nein
-Portmahomack.json,57.8333,-3.8333,2026,"Portmahomack, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.1216,0.405,-50,0.331,3.938,UK_tidetimes,0,nein
+Portmahomack.json,57.8333,-3.8333,2026,"Portmahomack, Scotland, United Kingdom",harmonics_noaa_eutt.txt,529,1357,0.1216,0.405,-50,0.331,3.938,UK_tidetimes,0,nein
 Portmahomack.json,57.8333,-3.8333,2026,"Portmahomack, Scotland, United Kingdom",harmonics_utide_tidetables.txt,529,1357,0.153,0.644,0,0.033,3.843,UK_tidetimes,1,nein
 Portnancon.json,58.5000,-4.7000,2026,"Portnancon, Scotland, United Kingdom",harmonics_utide_tidetables.txt,284,1357,0.1726,0.886,0,-0.002,5.332,UK_tidetimes,1,nein
 Portree.json,57.4000,-6.1833,2026,"Portree, Raasey Sound, Scotland, United Kingdom",harmonics_noaa_eutt.txt,2,1357,0.2072,0.577,-20,0.625,5.359,UK_tidetimes,0,nein
@@ -702,14 +686,13 @@ Portrush.json,55.2000,-6.6667,2026,"Portrush, Northern Ireland, United Kingdom",
 Pottery_Pier.json,50.7000,-1.9833,2026,"Pottery Pier (Brownsea Island), England, United Kingdom",harmonics_utide_tidetables.txt,894,1356,0.0703,0.285,0,0.019,1.98,UK_tidetimes,1,nein
 Pottery_Pier.json,50.7000,-1.9833,2026,"Poole Harbour, England, United Kingdom",harmonics_utide_tidetables.txt,1544,1356,0.2115,0.629,-170,0.224,2.637,UK_tidetimes,1,nein
 Preston.json,53.7500,-2.7500,2026,"Preston, England, United Kingdom",harmonics_utide_tidetables.txt,902,1359,0.4381,1.503,0,0.023,7.015,UK_tidetimes,1,nein
-Pwllheli.json,52.8833,-4.4000,2026,"Pwllheli Road, Wales, United Kingdom",harmonics_noaa_eutt.txt,4,1356,0.4482,1.232,-40,0.515,5.188,UK_tidetimes,0,nein
 Pwllheli.json,52.8833,-4.4000,2026,"Pwllheli, Wales, United Kingdom",harmonics_utide_tidetables.txt,540,1356,0.1669,0.807,0,0.004,5.646,UK_tidetimes,1,nein
 Quigleys_Point.json,55.1333,-7.1833,2026,"Quigley's Point, Ireland",harmonics_utide_tidetables.txt,1504,1353,0.1248,0.59,0,-0.027,2.618,UK_tidetimes,1,nein
 Quoile_Barrier.json,54.3667,-5.6833,2026,"Quoile Barrier, Northern Ireland, United Kingdom",harmonics_utide_tidetables.txt,301,1356,0.1887,0.686,0,0.001,3.95,UK_tidetimes,1,nein
-Ramsey.json,54.3167,-4.3667,2026,"Ramsey, Isle of Man",harmonics_noaa_eutt.txt,4,1357,0.2855,1.027,-10,0.079,7.095,UK_tidetimes,0,nein
+Ramsey.json,54.3167,-4.3667,2026,"Ramsey, Isle of Man",harmonics_noaa_eutt.txt,443,1357,0.2855,1.027,-10,0.079,7.095,UK_tidetimes,0,nein
 Ramsey.json,54.3167,-4.3667,2026,"Ramsey, Isle of Man",harmonics_utide_tidetables.txt,443,1357,0.3221,1.213,0,0.06,7.308,UK_tidetimes,1,nein
 Ramsey_Sound.json,51.8833,-5.3167,2026,"Ramsey Sound, Wales, United Kingdom",harmonics_utide_tidetables.txt,0,1356,0.1884,0.898,-10,-0.044,5.384,UK_tidetimes,1,nein
-Ramsgate.json,51.3333,1.4167,2026,"Ramsgate, England, United Kingdom",harmonics_noaa_eutt.txt,4,1352,0.2257,0.725,-30,0.099,5.472,UK_tidetimes,0,nein
+Ramsgate.json,51.3333,1.4167,2026,"Ramsgate, England, United Kingdom",harmonics_noaa_eutt.txt,420,1352,0.2257,0.725,-30,0.099,5.472,UK_tidetimes,0,nein
 Ramsgate.json,51.3333,1.4167,2026,"Ramsgate, England, United Kingdom",harmonics_utide_tidetables.txt,420,1352,0.2346,0.815,0,0.027,5.289,UK_tidetimes,1,nein
 Rapness.json,59.2500,-2.8667,2026,"Rapness (Westray), Scotland, United Kingdom",harmonics_utide_tidetables.txt,494,1357,0.1365,0.456,-10,0.01,3.627,UK_tidetimes,1,nein
 Rathmullan.json,55.1000,-7.5333,2026,"Rathmullan, Ireland",harmonics_utide_tidetables.txt,648,1344,0.3768,1.892,0,-0.096,4.36,UK_tidetimes,1,nein
@@ -727,14 +710,13 @@ River_Foyle_(Lisahally).json,55.0500,-7.2667,2026,"River Foyle (Lisahally), Nort
 River_Foyle_(Lisahally).json,55.0500,-7.2667,2026,"Culmore Point, Northern Ireland, United Kingdom",harmonics_utide_tidetables.txt,918,1361,0.1465,0.507,0,0.019,2.936,UK_tidetimes,1,nein
 River_Neath_Entrance.json,51.6167,-3.8500,2026,"River Neath Entrance, Wales, United Kingdom",harmonics_utide_tidetables.txt,0,679,0.2403,0.846,10,0.604,9.376,UK_tidetimes,1,nein
 River_Tay_Bar.json,56.4667,-2.6333,2026,"River Tay Bar, Scotland, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.1889,0.742,0,-0.008,5.573,UK_tidetimes,1,nein
-River_Tay_Bar.json,56.4667,-2.6333,2026,"Tay River Bar, Scotland, United Kingdom",harmonics_noaa_eutt.txt,1853,1353,0.1714,0.452,-30,0.08,5.206,UK_tidetimes,0,nein
-River_Tees_Entrance.json,54.6333,-1.1500,2026,"River Tees Entrance, England, United Kingdom",harmonics_noaa_eutt.txt,4,1358,0.1776,0.524,0,-0.033,5.229,UK_tidetimes,0,nein
+River_Tay_Bar.json,56.4667,-2.6333,2026,"Tay River Bar, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.1714,0.452,-30,0.08,5.206,UK_tidetimes,0,nein
 River_Tees_Entrance.json,54.6333,-1.1500,2026,"River Tees (Teesmouth), England, United Kingdom",harmonics-1997-05-25_mod.txt,1075,1358,0.0797,0.406,-10,-0.025,5.862,UK_tidetimes,0,nein
 River_Tees_Entrance.json,54.6333,-1.1500,2026,"River Tees (Teesmouth), England, United Kingdom",harmonics_utide_tidetables.txt,1075,1358,0.2158,0.763,0,-0.034,5.449,UK_tidetimes,1,nein
+River_Tees_Entrance.json,54.6333,-1.1500,2026,"River Tees (Teesmouth), England, United Kingdom",harmonics_noaa_eutt.txt,1075,1358,0.1776,0.524,0,-0.033,5.229,UK_tidetimes,0,nein
 River_Tyne_(North_Shields).json,55.0000,-1.4333,2026,"North Shields (River Tyne), England, United Kingdom",harmonics-dwf-20100529-nonfree_mod.txt,920,1358,0.0448,0.404,-10,0.014,5.379,UK_tidetimes,0,nein
 River_Tyne_(North_Shields).json,55.0000,-1.4333,2026,"Tynemouth Lighthouse, England, United Kingdom",harmonics-1997-05-25_mod.txt,2516,1358,0.072,0.425,-10,0.113,5.52,UK_tidetimes,0,nein
 River_Tyne_(North_Shields).json,55.0000,-1.4333,2026,"Tynemouth Lighthouse, England, United Kingdom",harmonics-pierre-lavergne-v10_mod.txt,2516,1358,0.072,0.425,-10,0.113,5.52,UK_tidetimes,0,nein
-River_Tyne_(North_Shields).json,55.0000,-1.4333,2026,"Tyne River entrance, England, United Kingdom",harmonics_noaa_eutt.txt,2822,1358,0.1681,0.454,0,0.059,4.863,UK_tidetimes,0,nein
 River_Yealm_Entrance.json,50.3167,-4.0667,2026,"River Yealm Entrance, England, United Kingdom",harmonics_utide_tidetables.txt,647,1353,0.222,0.926,0,-0.049,5.281,UK_tidetimes,1,nein
 Roa_Island.json,54.0667,-3.1667,2026,"Roa Island, England, United Kingdom",harmonics_utide_tidetables.txt,787,1357,0.3969,1.512,0,0.076,9.004,UK_tidetimes,1,nein
 Roa_Island.json,54.0667,-3.1667,2026,"Haws Point, England, United Kingdom",harmonics_utide_tidetables.txt,1853,1357,0.3854,1.478,-10,-0.011,9.025,UK_tidetimes,1,nein
@@ -756,7 +738,7 @@ Rubh_A_Mhail.json,55.9333,-6.1167,2026,"Rudha Mhail, Isle of Islay, Scotland, Un
 Rubh_A_Mhail.json,55.9333,-6.1167,2026,"Rubh' A' Mhail (Islay), Scotland, United Kingdom",harmonics_utide_tidetables.txt,378,1357,0.1465,0.738,0,-0.034,3.595,UK_tidetimes,1,nein
 Rubha_A_Bhodaich.json,55.9167,-5.1500,2026,"Rubha A' Bhodaich (Bute), Scotland, United Kingdom",harmonics_utide_tidetables.txt,735,1358,0.1416,0.549,-10,0.015,3.254,UK_tidetimes,1,nein
 Rubha_Na_Creige.json,56.4667,-5.1833,2026,"Rubha Na Creige, Scotland, United Kingdom",harmonics_utide_tidetables.txt,0,1361,0.0708,0.318,0,0.003,2.107,UK_tidetimes,1,nein
-Ryde.json,50.7333,-1.1667,2026,"Ryde, England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.1862,0.749,0,0.042,4.214,UK_tidetimes,1,nein
+Ryde.json,50.7333,-1.1667,2026,"Ryde (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.1862,0.749,0,0.042,4.214,UK_tidetimes,1,nein
 Rye_(Approaches).json,50.9167,0.7833,2026,"Rye (Approaches), England, United Kingdom",harmonics_utide_tidetables.txt,0,677,0.3901,1.308,20,0.066,8.524,UK_tidetimes,1,nein
 Rye_(Approaches).json,50.9167,0.7833,2026,"Rye (Harbour), England, United Kingdom",harmonics_utide_tidetables.txt,2809,677,0.4035,1.047,0,2.416,5.569,UK_tidetimes,1,nein
 Rye_(Harbour).json,50.9333,0.7667,2026,"Rye (Harbour), England, United Kingdom",harmonics_utide_tidetables.txt,641,677,0.4035,1.047,0,0.016,5.569,UK_tidetimes,1,nein
@@ -779,12 +761,12 @@ Scrabster.json,58.6167,-3.5500,2026,"Thurso, Scotland, United Kingdom",harmonics
 Sea_Mills.json,51.4833,-2.6500,2026,"Sea Mills, England, United Kingdom",harmonics_utide_tidetables.txt,337,1357,0.5026,2.139,-10,0.027,12.848,UK_tidetimes,1,nein
 Sea_Mills.json,51.4833,-2.6500,2026,"Shirehampton, England, United Kingdom",harmonics_utide_tidetables.txt,2308,1357,0.5334,2.468,-10,-0.673,13.36,UK_tidetimes,1,nein
 Seafield_Point.json,52.8000,-9.5000,2026,"Quilty Pier (Seafield), Ireland",harmonics_utide_tidetables.txt,1369,681,0.1553,0.413,0,0.011,5.208,UK_tidetimes,1,nein
-Seaham.json,54.8333,-1.3167,2026,"Seaham, England, United Kingdom",harmonics_noaa_eutt.txt,4,1355,0.2101,0.575,-10,-0.009,5.018,UK_tidetimes,0,nein
+Seaham.json,54.8333,-1.3167,2026,"Seaham, England, United Kingdom",harmonics_noaa_eutt.txt,706,1355,0.2101,0.575,-10,-0.009,5.018,UK_tidetimes,0,nein
 Seaham.json,54.8333,-1.3167,2026,"Seaham, England, United Kingdom",harmonics_utide_tidetables.txt,706,1355,0.2501,1.23,0,-0.042,5.375,UK_tidetimes,1,nein
 Seamount_Bay.json,55.1833,-7.7333,2026,"Seamount Bay, Ireland",harmonics_utide_tidetables.txt,239,681,0.0882,0.252,50,0.05,2.274,UK_tidetimes,1,nein
 Seil_Sound.json,56.3000,-5.5833,2026,"Seil Sound (Balvicar), Scotland, United Kingdom",harmonics_utide_tidetables.txt,819,1357,0.1058,0.456,0,-0.03,2.59,UK_tidetimes,1,nein
+Selsey_Bill.json,50.7333,-0.7833,2026,"Selsey Bill, England, United Kingdom",harmonics_noaa_eutt.txt,1189,1354,0.3258,1.171,100,-0.222,6.045,UK_tidetimes,0,nein
 Selsey_Bill.json,50.7333,-0.7833,2026,"Selsey Bill, England, United Kingdom",harmonics_utide_tidetables.txt,1189,1354,0.2177,0.85,-10,0.04,5.165,UK_tidetimes,1,nein
-Selsey_Bill.json,50.7333,-0.7833,2026,"Selsey Bill, England, United Kingdom",harmonics_noaa_eutt.txt,1850,1354,0.3258,1.171,100,-0.222,6.045,UK_tidetimes,0,nein
 Sennen_Cove.json,50.0833,-5.7000,2026,"Sennen Cove, England, United Kingdom",harmonics_utide_tidetables.txt,583,682,0.0768,0.257,-20,0.032,6.421,UK_tidetimes,1,nein
 Sharpness_Dock.json,51.7167,-2.4833,2026,"Sharpness Dock, England, United Kingdom",harmonics_utide_tidetables.txt,89,1094,0.4984,2.571,0,0.011,11.083,UK_tidetimes,1,nein
 Sharpness_Dock.json,51.7167,-2.4833,2026,"Wellhouse Rock, River Severn, England, United Kingdom",harmonics-1997-05-25_mod.txt,1816,1094,0.8655,2.473,0,0.015,9.503,UK_tidetimes,0,nein
@@ -795,10 +777,10 @@ Shillay.json,57.5333,-7.7000,2026,"Shillay (Monach Islands), Scotland, United Ki
 Shirehampton.json,51.4833,-2.6833,2026,"Shirehampton, England, United Kingdom",harmonics_utide_tidetables.txt,0,1357,0.5117,2.065,-10,0.005,13.363,UK_tidetimes,1,nein
 Shirehampton.json,51.4833,-2.6833,2026,"Sea Mills, England, United Kingdom",harmonics_utide_tidetables.txt,2340,1357,0.5592,1.935,10,0.621,12.85,UK_tidetimes,1,nein
 Shivering_Sand.json,51.5000,1.0833,2026,"Shivering Sand, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.1091,0.719,-10,-0.035,5.504,UK_tidetimes,0,nein
-Shoreham.json,50.8333,-0.2500,2026,"Shoreham Harbor entrance, England, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.3285,1.169,-10,0.562,6.074,UK_tidetimes,0,nein
 Shoreham.json,50.8333,-0.2500,2026,"Shoreham (River Adur), England, United Kingdom",harmonics-1997-05-25_mod.txt,493,1353,0.1579,0.561,0,0.052,6.863,UK_tidetimes,0,nein
+Shoreham.json,50.8333,-0.2500,2026,"Shoreham (River Adur), England, United Kingdom",harmonics_noaa_eutt.txt,493,1353,0.3285,1.169,-10,0.562,6.074,UK_tidetimes,0,nein
 Shoreham.json,50.8333,-0.2500,2026,"Shoreham (River Adur), England, United Kingdom",harmonics_utide_tidetables.txt,493,1353,0.2717,0.999,-10,0.062,5.979,UK_tidetimes,1,nein
-Silloth.json,54.8667,-3.4000,2026,"Silloth, England, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.3506,1.113,-10,0.031,9.124,UK_tidetimes,0,nein
+Silloth.json,54.8667,-3.4000,2026,"Silloth, England, United Kingdom",harmonics_noaa_eutt.txt,388,1357,0.3506,1.113,-10,0.031,9.124,UK_tidetimes,0,nein
 Silloth.json,54.8667,-3.4000,2026,"Silloth, England, United Kingdom",harmonics_utide_tidetables.txt,388,1357,0.4332,1.593,0,0.059,9.48,UK_tidetimes,1,nein
 Skegness.json,53.1500,0.3500,2026,"Skegness, England, United Kingdom",harmonics_noaa_eutt.txt,601,1353,0.3437,1.073,-50,-0.013,7.185,UK_tidetimes,0,nein
 Skegness.json,53.1500,0.3500,2026,"Skegness, England, United Kingdom",harmonics_utide_tidetables.txt,601,1353,0.2533,1.22,-10,-0.05,6.945,UK_tidetimes,1,nein
@@ -814,37 +796,33 @@ Sound_Of_Gigha.json,55.6833,-5.7333,2026,"Ardminish (Sound of Gigha), Scotland, 
 Sound_Of_Ulva.json,56.4833,-6.1333,2026,"Sound Of Ulva, Scotland, United Kingdom",harmonics_utide_tidetables.txt,1110,1357,0.182,1.015,0,-0.047,4.399,UK_tidetimes,1,nein
 South_Rock.json,54.4000,-5.4167,2026,"South Rock, Northern Ireland, United Kingdom",harmonics_utide_tidetables.txt,0,1358,0.2003,0.735,-10,0.03,4.557,UK_tidetimes,1,nein
 Southend.json,51.5145,0.7238,2026,"Southend-on-Sea (Pier), England, United Kingdom",harmonics_utide_tidetables.txt,0,1358,0.1221,0.819,-10,-0.021,6.102,UK_tidetimes,0,nein
-Southend.json,51.5145,0.7238,2026,"Southend-on-Sea (Pier), England, United Kingdom",harmonics_noaa_eutt.txt,1829,1358,0.2795,0.819,-20,0.086,5.817,UK_tidetimes,0,nein
 Southend_(Kintyre).json,55.3167,-5.6333,2026,"Southend (Kintyre), Scotland, United Kingdom",harmonics_utide_tidetables.txt,1433,1306,0.2339,1.08,0,-0.026,2.57,UK_tidetimes,1,nein
 Southerness_Point.json,54.8667,-3.6000,2026,"Southerness Point, Scotland, United Kingdom",harmonics_utide_tidetables.txt,761,679,0.4759,1.737,10,0.044,9.773,UK_tidetimes,1,nein
 Southport.json,53.6500,-3.0167,2026,"Southport, England, United Kingdom",harmonics_utide_tidetables.txt,670,679,0.2255,0.713,-20,0.097,9.171,UK_tidetimes,1,nein
 Southwold.json,52.3167,1.6667,2026,"Southwold, England, United Kingdom",harmonics_utide_tidetables.txt,252,1357,0.1004,0.377,-10,0.018,2.373,UK_tidetimes,1,nein
 Sovereign_Harbour.json,50.7833,0.3167,2026,"Sovereign Harbour, England, United Kingdom",harmonics_utide_tidetables.txt,1107,1361,0.3265,1.217,0,0.061,6.958,UK_tidetimes,1,nein
+Sovereign_Harbour.json,50.7833,0.3167,2026,"Eastbourne, England, United Kingdom",harmonics_noaa_eutt.txt,2462,1361,0.3396,1.178,-10,0.503,7.095,UK_tidetimes,0,nein
 Sovereign_Harbour.json,50.7833,0.3167,2026,"Eastbourne, England, United Kingdom",harmonics_utide_tidetables.txt,2462,1361,0.3024,1.098,0,0.13,7.148,UK_tidetimes,1,nein
-Sovereign_Harbour.json,50.7833,0.3167,2026,"Eastbourne, England, United Kingdom",harmonics_noaa_eutt.txt,2987,1361,0.3396,1.178,-10,0.503,7.095,UK_tidetimes,0,nein
 Spurn_Head.json,53.5833,0.1167,2026,"Spurn Head, England, United Kingdom",harmonics_utide_tidetables.txt,879,1354,0.2687,1.048,-10,-0.057,6.722,UK_tidetimes,1,nein
 St._Catherine_Bay.json,49.2167,-2.0167,2026,"St. Catherine Bay, Jersey, Channel Islands",harmonics_utide_tidetables.txt,753,1360,0.3936,1.872,-10,-0.061,11.549,UK_tidetimes,1,nein
 St._Germans.json,50.3833,-4.3000,2026,"St. Germans, England, United Kingdom",harmonics_utide_tidetables.txt,864,1354,0.196,0.874,0,-0.04,4.784,UK_tidetimes,1,nein
+St._Ives.json,50.2167,-5.4833,2026,"St. Ives, England, United Kingdom",harmonics_noaa_eutt.txt,526,1362,0.3055,1.226,30,-0.185,6.818,UK_tidetimes,0,nein
 St._Ives.json,50.2167,-5.4833,2026,"St. Ives, England, United Kingdom",harmonics_utide_tidetables.txt,526,1362,0.27,1.07,-10,-0.086,6.511,UK_tidetimes,1,nein
-St._Ives.json,50.2167,-5.4833,2026,"St. Ives, England, United Kingdom",harmonics_noaa_eutt.txt,2199,1362,0.3055,1.226,30,-0.185,6.818,UK_tidetimes,0,nein
 St._Marys.json,49.9167,-6.3167,2026,"St. Mary's (Isles of Scilly), England, United Kingdom",harmonics_ticon4_worldwide.txt,142,1354,0.0519,0.344,-10,3.191,5.763,UK_tidetimes,0,nein
-St._Marys.json,49.9167,-6.3167,2026,"St. Mary's (Isles of Scilly), England, United Kingdom",harmonics_utide_observations.txt,142,1354,0.0975,0.537,-10,-0.028,5.721,UK_tidetimes,0,nein
-St._Marys.json,49.9167,-6.3167,2026,"St. Mary's, England, United Kingdom",harmonics_utide_tidetables.txt,142,1354,0.2217,0.839,-10,-0.051,5.373,UK_tidetimes,1,nein
 St._Marys_(Scapa_Flow).json,58.9000,-2.9167,2026,"St. Mary's (Scapa Flow), Scotland, United Kingdom",harmonics_utide_tidetables.txt,685,1357,0.1329,0.505,0,0.014,3.237,UK_tidetimes,1,nein
 St._Thomass_Head.json,51.4000,-2.9333,2026,"St. Thomas's Head, England, United Kingdom",harmonics_utide_tidetables.txt,0,1356,0.5694,2.296,0,-0.05,13.283,UK_tidetimes,1,nein
 St._Tudwals_Roads.json,52.8167,-4.4833,2026,"St. Tudwal's Roads, Wales, United Kingdom",harmonics_utide_tidetables.txt,0,1357,0.163,0.699,0,0.011,5.365,UK_tidetimes,1,nein
 Stackpole_Quay.json,51.6167,-4.9000,2026,"Stackpole Quay, Wales, United Kingdom",harmonics_utide_tidetables.txt,816,1357,0.3088,1.349,0,-0.082,8.176,UK_tidetimes,1,nein
-Stansore_Point.json,50.7833,-1.3333,2026,"Stansore Point, England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.1676,0.584,0,0.033,3.874,UK_tidetimes,1,nein
-Stansore_Point.json,50.7833,-1.3333,2026,"Cowes, Isle of Wight, United Kingdom",harmonics_noaa_eutt.txt,2986,1354,0.2806,0.935,100,0.378,4.648,UK_tidetimes,0,nein
-Stansore_Point.json,50.7833,-1.3333,2026,"Cowes, England, United Kingdom",harmonics_utide_tidetables.txt,2988,1354,0.0958,0.439,10,-0.309,4.255,UK_tidetimes,1,nein
+Stansore_Point.json,50.7833,-1.3333,2026,"Stansore Point, England, United Kingdom",harmonics_utide_tidetables.txt,614,1354,0.1676,0.584,0,0.033,3.874,UK_tidetimes,1,nein
+Stansore_Point.json,50.7833,-1.3333,2026,"Cowes (Isle of Wight), England, United Kingdom",harmonics_noaa_eutt.txt,2986,1354,0.2806,0.935,100,0.378,4.648,UK_tidetimes,0,nein
+Stansore_Point.json,50.7833,-1.3333,2026,"Cowes (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,2988,1354,0.0958,0.439,10,-0.309,4.255,UK_tidetimes,1,nein
 Start_Point.json,50.2167,-3.6500,2026,"Start Point, England, United Kingdom",harmonics_utide_tidetables.txt,907,1353,0.2148,1.013,-10,-0.049,5.261,UK_tidetimes,1,nein
 Steep_Holm.json,51.3333,-3.1000,2026,"Steep Holm, England, United Kingdom",harmonics_utide_tidetables.txt,782,1356,0.5523,2.287,0,-0.088,12.019,UK_tidetimes,1,nein
 Stirling.json,56.1167,-3.9333,2026,"Stirling, Scotland, United Kingdom",harmonics_utide_tidetables.txt,335,860,0.6252,1.921,-50,-0.175,2.576,UK_tidetimes,1,nein
 Stoke_Gabriel_(Duncannon).json,50.4000,-3.6333,2026,"Stoke Gabriel (Duncannon), England, United Kingdom",harmonics_utide_tidetables.txt,521,1353,0.2569,1.052,0,-0.066,4.787,UK_tidetimes,1,nein
-Stonehaven.json,56.9667,-2.2000,2026,"Stonehaven, Scotland, United Kingdom",harmonics_noaa_eutt.txt,4,1353,0.1701,0.443,-30,0.067,4.407,UK_tidetimes,0,nein
+Stonehaven.json,56.9667,-2.2000,2026,"Stonehaven, Scotland, United Kingdom",harmonics_noaa_eutt.txt,751,1353,0.1701,0.443,-30,0.067,4.407,UK_tidetimes,0,nein
 Stonehaven.json,56.9667,-2.2000,2026,"Stonehaven, Scotland, United Kingdom",harmonics_utide_tidetables.txt,751,1353,0.1638,0.672,-10,0.009,4.772,UK_tidetimes,1,nein
 Stornoway.json,58.2000,-6.3833,2026,"Stornoway, Scotland, United Kingdom",harmonics_noaa_eutt.txt,2,1357,0.1604,0.533,-10,0.565,4.8,UK_tidetimes,0,nein
-Stornoway.json,58.2000,-6.3833,2026,"Stornoway (Isle of Lewis), Scotland, United Kingdom (2)",harmonics_utide_observations.txt,855,1357,0.1331,0.564,-10,-0.055,4.971,UK_tidetimes,0,nein
 Stornoway.json,58.2000,-6.3833,2026,"Stornoway (Isle of Lewis), Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,864,1357,0.065,0.472,-10,2.88,5.131,UK_tidetimes,0,nein
 Stornoway.json,58.2000,-6.3833,2026,"Stornoway (Isle of Lewis), Scotland, United Kingdom",harmonics_utide_observations.txt,864,1357,0.0595,0.504,-10,-0.023,5.192,UK_tidetimes,0,nein
 Strangford.json,54.3667,-5.5500,2026,"Strangford, Northern Ireland, United Kingdom",harmonics_noaa_eutt.txt,608,1357,0.2303,0.767,-30,0.014,4.175,UK_tidetimes,0,nein
@@ -858,8 +836,8 @@ Sule_Skerry.json,59.0833,-4.4000,2026,"Sule Skerry, Scotland, United Kingdom",ha
 Sullom_Voe.json,60.4500,-1.3000,2026,"Sullom Voe (Shetlands), Scotland, United Kingdom",harmonics-1997-05-25_mod.txt,1079,1358,0.1038,0.338,-20,0.046,2.461,UK_tidetimes,0,nein
 Sullom_Voe.json,60.4500,-1.3000,2026,"Sullom Voe (Shetlands), Scotland, United Kingdom",harmonics_utide_tidetables.txt,1079,1358,0.0898,0.323,0,0.013,2.584,UK_tidetimes,1,nein
 Sumburgh_(Grutness_Voe).json,59.8833,-1.2833,2026,"Sumburgh (Grutness Voe), Scotland, United Kingdom",harmonics_utide_tidetables.txt,181,1358,0.0934,0.397,0,-0.003,1.969,UK_tidetimes,1,nein
+Sunderland.json,54.9167,-1.3667,2026,"Sunderland, England, United Kingdom",harmonics_noaa_eutt.txt,477,1356,0.1804,0.521,0,0.017,5.012,UK_tidetimes,0,nein
 Sunderland.json,54.9167,-1.3667,2026,"Sunderland, England, United Kingdom",harmonics_utide_tidetables.txt,477,1356,0.2058,0.664,-10,-0.027,5.307,UK_tidetimes,1,nein
-Sunderland.json,54.9167,-1.3667,2026,"Sunderland, Durham, United Kingdom",harmonics_noaa_eutt.txt,1065,1356,0.1804,0.521,0,0.017,5.012,UK_tidetimes,0,nein
 Sunk_Dredged_Channel.json,53.6167,-0.0333,2026,"Sunk Dredged Channel, England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.2834,1.077,-10,-0.049,6.872,UK_tidetimes,1,nein
 Sunk_Head.json,51.7833,1.5000,2026,"Sunk Head, England, United Kingdom",harmonics_utide_tidetables.txt,0,1354,0.2006,0.72,0,0.016,4.011,UK_tidetimes,1,nein
 Swansea.json,51.6167,-3.9167,2026,"Swansea (King's Dock), Wales, United Kingdom",harmonics-1997-05-25_mod.txt,891,1357,0.2145,1.227,0,-0.134,10.396,UK_tidetimes,0,nein
@@ -873,22 +851,20 @@ Tees_(Newport)_Bridge.json,54.5667,-1.2667,2026,"Tees (Newport) Bridge, England,
 Tenby.json,51.6667,-4.7000,2026,"Tenby, Bristol Channel, Wales, United Kingdom",harmonics_noaa_eutt.txt,4,1357,0.4292,1.1,-50,-0.105,8.011,UK_tidetimes,0,nein
 Tenby.json,51.6667,-4.7000,2026,"Tenby, Wales, United Kingdom",harmonics_utide_tidetables.txt,880,1357,0.3496,1.541,-10,-0.085,8.774,UK_tidetimes,1,nein
 Tighnabruaich.json,55.9167,-5.2167,2026,"Tighnabruaich, Scotland, United Kingdom",harmonics_utide_tidetables.txt,833,1357,0.1319,0.576,-10,0.018,3.252,UK_tidetimes,1,nein
-Tilbury.json,51.4633,0.3583,2026,"Tilbury Dock, Thames River, England, United Kingdom",harmonics_noaa_eutt.txt,694,1357,0.3162,1.031,-30,0.148,6.678,UK_tidetimes,0,nein
-Tilbury.json,51.4633,0.3583,2026,"Tilbury, England, United Kingdom",harmonics_utide_tidetables.txt,1786,1357,0.1525,0.89,-10,-0.013,6.803,UK_tidetimes,0,nein
-Tilbury.json,51.4633,0.3583,2026,"Gravesend, England, United Kingdom",harmonics_utide_tidetables.txt,2278,1357,0.3191,1.25,-10,0.06,6.776,UK_tidetimes,1,nein
+Tilbury.json,51.4633,0.3583,2026,"Tilbury (Thames River), England, United Kingdom",harmonics_noaa_eutt.txt,1786,1357,0.3162,1.031,-30,0.148,6.678,UK_tidetimes,0,nein
+Tilbury.json,51.4633,0.3583,2026,"Tilbury (Thames River), England, United Kingdom",harmonics_utide_tidetables.txt,1786,1357,0.1525,0.89,-10,-0.013,6.803,UK_tidetimes,0,nein
+Tilbury.json,51.4633,0.3583,2026,"Gravesend, England, United Kingdom",harmonics_utide_tidetables.txt,2151,1357,0.3191,1.25,-10,0.06,6.776,UK_tidetimes,1,nein
 Tingwall.json,59.0833,-3.0500,2026,"Tingwall, Scotland, United Kingdom",harmonics_utide_tidetables.txt,827,1357,0.1108,0.392,0,0.019,3.22,UK_tidetimes,1,nein
-Tobermory.json,56.6167,-6.0667,2026,"Tobermory (Island of Mull), Scotland, United Kingdom",harmonics_utide_observations.txt,732,1357,0.0917,0.46,-10,0.022,4.489,UK_tidetimes,0,nein
 Tobermory.json,56.6167,-6.0667,2026,"Tobermory (Island of Mull), Scotland, United Kingdom",harmonics_ticon4_worldwide.txt,732,1357,0.0546,0.419,-10,2.717,4.734,UK_tidetimes,0,nein
 Tobermory.json,56.6167,-6.0667,2026,"Tobermory, Sound of Mull, Scotland, United Kingdom",harmonics_noaa_eutt.txt,1018,1357,0.1995,0.649,0,0.593,4.434,UK_tidetimes,0,nein
 Toft_Pier.json,60.4667,-1.2000,2026,"Toft Pier, Scotland, United Kingdom",harmonics_utide_tidetables.txt,313,1357,0.0972,0.34,-10,0.011,2.41,UK_tidetimes,1,nein
 Topsham.json,50.6833,-3.4667,2026,"Topsham, England, United Kingdom",harmonics_utide_tidetables.txt,365,677,0.0649,0.29,20,-0.006,4.605,UK_tidetimes,1,nein
 Topsham.json,50.6833,-3.4667,2026,"Turf Lock, England, United Kingdom",harmonics_utide_tidetables.txt,2084,677,0.0637,0.259,10,0.008,4.541,UK_tidetimes,1,nein
 Torduff_Point.json,54.9667,-3.1500,2026,"Torduff Point, Scotland, United Kingdom",harmonics_utide_tidetables.txt,297,678,0.8402,2.056,10,0.042,4.921,UK_tidetimes,1,nein
+Torquay.json,50.4667,-3.5333,2026,"Torquay, England, United Kingdom",harmonics_noaa_eutt.txt,894,1353,0.238,0.765,-40,0.68,4.4,UK_tidetimes,0,nein
 Torquay.json,50.4667,-3.5333,2026,"Torquay, England, United Kingdom",harmonics_utide_tidetables.txt,894,1353,0.1933,0.784,-10,-0.044,4.731,UK_tidetimes,1,nein
-Torquay.json,50.4667,-3.5333,2026,"Torquay, England, United Kingdom",harmonics_noaa_eutt.txt,1177,1353,0.238,0.765,-40,0.68,4.4,UK_tidetimes,0,nein
-Totland_Bay.json,50.6833,-1.5500,2026,"Totland Bay, England, United Kingdom",harmonics_utide_tidetables.txt,282,1353,0.1198,0.54,-10,0.044,2.185,UK_tidetimes,1,nein
-Totland_Bay.json,50.6833,-1.5500,2026,"Hurst Point, England, United Kingdom",harmonics_utide_tidetables.txt,1853,1353,0.1313,0.516,-20,-0.052,2.259,UK_tidetimes,1,nein
-Totland_Bay.json,50.6833,-1.5500,2026,"Freshwater Bay, England, United Kingdom",harmonics_utide_tidetables.txt,2992,1353,0.1535,0.778,-20,0.257,2.471,UK_tidetimes,1,nein
+Totland_Bay.json,50.6833,-1.5500,2026,"Totland Bay (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,282,1353,0.1198,0.54,-10,0.044,2.185,UK_tidetimes,1,nein
+Totland_Bay.json,50.6833,-1.5500,2026,"Hurst Point, England, United Kingdom",harmonics_utide_tidetables.txt,2750,1353,0.1313,0.516,-20,-0.052,2.259,UK_tidetimes,1,nein
 Totnes.json,50.4333,-3.6833,2026,"Totnes, England, United Kingdom",harmonics_utide_tidetables.txt,501,1343,0.178,0.786,-10,-0.035,3.746,UK_tidetimes,1,nein
 Trearddur_Bay.json,53.2667,-4.6167,2026,"Trearddur Bay, Wales, United Kingdom",harmonics_utide_tidetables.txt,1274,1357,0.1946,0.63,0,0.038,5.205,UK_tidetimes,1,nein
 Trefor.json,53.0000,-4.4167,2026,"Trefor, Wales, United Kingdom",harmonics_utide_tidetables.txt,371,1357,0.1744,0.612,0,0.032,5.099,UK_tidetimes,1,nein
@@ -900,8 +876,8 @@ Turf_Lock.json,50.6667,-3.4667,2026,"Turf Lock, England, United Kingdom",harmoni
 Turf_Lock.json,50.6667,-3.4667,2026,"Topsham, England, United Kingdom",harmonics_utide_tidetables.txt,1522,1081,0.5642,1.999,10,-0.334,4.605,UK_tidetimes,1,nein
 Turnchapel.json,50.3667,-4.1167,2026,"Turnchapel, England, United Kingdom",harmonics_utide_tidetables.txt,769,1354,0.2161,0.975,-10,-0.048,5.282,UK_tidetimes,1,nein
 Ulverston.json,54.1833,-3.0667,2026,"Ulverston, England, United Kingdom",harmonics_utide_tidetables.txt,1161,679,0.11,0.576,-60,-0.284,10.831,UK_tidetimes,1,nein
-Ventnor.json,50.6000,-1.2000,2026,"Ventnor, Isle of Wight, United Kingdom",harmonics_noaa_eutt.txt,0,1353,0.2026,0.688,100,0.783,3.995,UK_tidetimes,0,nein
-Ventnor.json,50.6000,-1.2000,2026,"Ventnor, England, United Kingdom",harmonics_utide_tidetables.txt,0,1353,0.1407,0.534,0,0.029,3.167,UK_tidetimes,1,nein
+Ventnor.json,50.6000,-1.2000,2026,"Ventnor (Isle of Wight), United Kingdom",harmonics_noaa_eutt.txt,872,1353,0.2026,0.688,100,0.783,3.995,UK_tidetimes,0,nein
+Ventnor.json,50.6000,-1.2000,2026,"Ventnor (Isle of Wight), England, United Kingdom",harmonics_utide_tidetables.txt,872,1353,0.1407,0.534,0,0.029,3.167,UK_tidetimes,1,nein
 Wadebridge.json,50.5167,-4.8333,2026,"Wadebridge, England, United Kingdom",harmonics_utide_tidetables.txt,128,1264,0.216,0.935,10,-0.13,4.194,UK_tidetimes,1,nein
 Walton-On-The-Naze.json,51.8500,1.2833,2026,"Walton-on-the-Naze, England, United Kingdom",harmonics_utide_tidetables.txt,801,1353,0.0787,0.396,-10,-0.024,4.584,UK_tidetimes,0,nein
 Walton-on-the-Naze.json,51.8500,1.2670,2026,"Walton-on-the-Naze, England, United Kingdom",harmonics_utide_tidetables.txt,691,1354,0.0779,0.407,-10,-0.024,4.584,UK_tidetimes,0,nein
@@ -949,8 +925,8 @@ Woodbridge_Haven.json,51.9833,1.4000,2026,"Woodbridge Haven, England, United Kin
 Worthing.json,50.8000,-0.3667,2026,"Worthing, England, United Kingdom",harmonics_utide_tidetables.txt,793,1354,0.2621,0.93,-10,0.062,5.98,UK_tidetimes,1,nein
 Wouldham.json,51.3500,0.4500,2026,"Wouldham, England, United Kingdom",harmonics_utide_tidetables.txt,519,1356,0.3139,1.125,-10,0.011,6.174,UK_tidetimes,1,nein
 Wyre_Lighthouse.json,53.9500,-3.0333,2026,"Wyre Lighthouse, England, United Kingdom",harmonics_utide_tidetables.txt,532,679,0.4923,1.597,0,0.032,10.084,UK_tidetimes,1,nein
-Yarmouth.json,50.7000,-1.5000,2026,"Yarmouth, Isle of Wight, United Kingdom",harmonics_noaa_eutt.txt,0,1353,0.2193,0.697,100,0.571,3.183,UK_tidetimes,0,nein
-Yarmouth.json,50.7000,-1.5000,2026,"Yarmouth, England, United Kingdom",harmonics_utide_tidetables.txt,768,1353,0.1057,0.432,0,0.024,2.522,UK_tidetimes,1,nein
+Yarmouth.json,50.7000,-1.5000,2026,"Yarmouth (Isle of Wight), United Kingdom",harmonics_noaa_eutt.txt,768,1353,0.2193,0.697,100,0.571,3.183,UK_tidetimes,0,nein
+Yarmouth.json,50.7000,-1.5000,2026,"Yarmouth (Isle of Wight), United Kingdom",harmonics_utide_tidetables.txt,768,1353,0.1057,0.432,0,0.024,2.522,UK_tidetimes,1,nein
 Yelland_Marsh.json,51.0667,-4.1667,2026,"Yelland Marsh, England, United Kingdom",harmonics_utide_tidetables.txt,787,1228,1.0765,4.322,-10,-0.303,8.765,UK_tidetimes,1,nein
 Yelland_Marsh.json,51.0667,-4.1667,2026,"Appledore, England, United Kingdom",harmonics_utide_tidetables.txt,2143,1228,0.5138,1.865,-10,-1.088,8.333,UK_tidetimes,1,nein
 Yelland_Marsh.json,51.0667,-4.1667,2026,"Appledore, Bristol Channel, England, United Kingdom",harmonics_noaa_eutt.txt,2977,1228,0.4301,1.451,-50,-0.453,7.851,UK_tidetimes,0,nein

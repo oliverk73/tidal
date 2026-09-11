@@ -142,18 +142,13 @@ def main(argv):
 
     # Messreihen-Anker wie in messreihe_qualitaet.py
     kopf = MQ.kopfdaten()
-    dateien = MQ.reihendateien()
+    alle = MQ.reihendateien_alle()
     anker = []
     for r in recs:
         sid = kopf.get((r['file'], r['line']), (None, None, ''))[0]
         if not sid:
             continue
-        teile = [t for t in re.split(r'[ \-_]', sid) if t]
-        p = None
-        for i in range(len(teile)):
-            for j in range(len(teile)):
-                if i != j:
-                    p = p or dateien.get((teile[i].upper(), teile[j].upper()))
+        p = MQ.kennung_zur_reihe(sid, alle)
         if p and os.path.basename(p) not in MQ.GESPERRT:
             anker.append((r['lat'], r['lon'], p))
     for f in (MQ.bodc_reihen, MQ.npz_reihen, MQ.beiblatt_reihen, MQ.jhod_reihen,
