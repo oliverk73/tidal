@@ -96,7 +96,7 @@ REFMAP = {
  'Singapore': 'Sembawang', 'Hong Kong': 'Quarry Bay, Hong Kong, China', 'Shantou': 'Shantou', 'Huangpu': 'Huangpu',
  'Beihai': 'Beihai', 'Haikou': 'Haikou', 'PengHu (Ma-Kung Kang)': 'Magong', 'Kamaisi': 'Kamaisi',
  'Naha': 'Naha', 'Yokohama': 'Yokohama', 'Paramushiru Island': 'Paramushir', 'Darwin': 'Darwin',
- 'Dar Es Salaam': 'Dar Es Salaam', 'Bombay': 'Mumbai', 'Ch’ang Chiang Approach': 'Chang Jiang',
+ 'Dar Es Salaam': 'Dar Es Salaam', 'Bombay': 'Mumbai', 'Ch’ang Chiang Approach': 'Luhuashan, Zhejiang',
  'Shatt Al Arab': 'Khowr-e Musa',
  # --- China/Korea Yellow Sea + boundary ---
  'Dalian': 'Dalian, China', 'Tanggu': 'Tanggu, Tianjin', 'Inch’on': 'Incheon, South',

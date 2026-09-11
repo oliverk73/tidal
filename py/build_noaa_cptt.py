@@ -108,7 +108,7 @@ REFMAP = {
  'Singapore': 'Sembawang', 'Hong Kong': 'Quarry Bay, Hong Kong, China',  # 2026-09-10: 'Hong Kong' traf Tai O; TICON-Quarry-Bay ist 63 min zu frueh 'Shantou': 'Shantou', 'Huangpu': 'Huangpu',
  'Beihai': 'Beihai', 'Haikou': 'Haikou', 'PengHu (Ma-Kung Kang)': 'Magong', 'Kamaisi': 'Kamaisi',
  'Naha': 'Naha', 'Yokohama': 'Yokohama', 'Paramushiru Island': 'Paramushir', 'Darwin': 'Darwin',
- 'Dar Es Salaam': 'Dar Es Salaam', 'Bombay': 'Mumbai', 'Ch’ang Chiang Approach': 'Chang Jiang',
+ 'Dar Es Salaam': 'Dar Es Salaam', 'Bombay': 'Mumbai', 'Ch’ang Chiang Approach': 'Luhuashan, Zhejiang',  # 11.09.2026: Side Saddle, Buch 30 49'N 122 38'E; 'Chang Jiang' traf Changjiang Ao (Liaoning)
  'Shatt Al Arab': 'Khowr-e Musa',
  # --- China/Korea Yellow Sea + boundary ---
  'Dalian': 'Dalian, China', 'Tanggu': 'Tanggu, Tianjin', 'Inch’on': 'Incheon, South',

@@ -86,6 +86,12 @@ RICHTIG = {
     # auf derselben Position trifft auf die Minute.
     ('cptt', 'Hong Kong'): ('Quarry Bay, Hong Kong, China', 'harmonics_utide_tidetables.txt',
                             'Hong Kong (Quarry Bay)'),
+    # 11.09.2026: "Ch'ang Chiang Approach (Side Saddle)" liegt laut Buch (Nr. 1425) bei
+    # 30 49'N 122 38'E vor der Jangtse-Muendung; der Resolver hatte "Changjiang Ao,
+    # Liaoning" genommen, eine Bucht bei Dalian, 800 km noerdlich. Luhuashan liegt
+    # 3.2 km vom Buchpunkt.
+    ('cptt', 'Ch’ang Chiang Approach'): ('Luhuashan, Zhejiang, China', 'harmonics_utide_tidetables.txt',
+                                         "Ch'ang Chiang Approach (Side Saddle)"),
 }
 
 # Zonen, die das Buch falsch druckt. Der Venezuela-Block der ectt 2020
