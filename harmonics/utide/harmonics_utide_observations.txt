@@ -216229,8 +216229,10 @@ x 0 0
 # !latitude: 19.660000
 # region: Al Wusta
 # admin1_quelle: Ufer 0.8 km
+# note: 20260911 Meridian +04:00 -> +00:00: der Fit aus der IOC-Reihe hat UTC-Phasen;
+# note: -- vorher -240 min gegen FES (alle vier Partialtiden) und gegen den ATT-Zwilling.
 Duqm, Oman
-+04:00 :Asia/Muscat
++00:00 :Asia/Muscat
 -0.0230 meters
 J1              0.0213  9.74
 K1              0.3470  342.45
@@ -216427,8 +216429,10 @@ x 0 0
 # !latitude: 24.5188
 # region: Al Batnah North
 # admin1_quelle: Ufer 2.5 km
+# note: 20260911 Meridian +04:00 -> +00:00: der Fit aus der IOC-Reihe hat UTC-Phasen;
+# note: -- vorher -240 min gegen FES (alle vier Partialtiden) und gegen den ATT-Zwilling.
 Majis (Suhar), Oman
-+04:00 :Asia/Muscat
++00:00 :Asia/Muscat
 -0.0720 meters
 J1              0.0269  356.37
 K1              0.3993  340.39
@@ -216625,8 +216629,10 @@ x 0 0
 # !latitude: 23.260000
 # province: Muscat
 # admin1_quelle: Polygon
+# note: 20260911 Meridian +04:00 -> +00:00: der Fit aus der IOC-Reihe hat UTC-Phasen;
+# note: -- vorher -240 min gegen FES (alle vier Partialtiden) und gegen den ATT-Zwilling.
 Qurayyat, Oman
-+04:00 :Asia/Muscat
++00:00 :Asia/Muscat
 -0.0650 meters
 J1              0.0242  351.05
 K1              0.3567  339.90
@@ -216823,8 +216829,10 @@ x 0 0
 # !latitude: 22.5762
 # region: Ash Sharqiyah South
 # admin1_quelle: Polygon
+# note: 20260911 Meridian +04:00 -> +00:00: der Fit aus der IOC-Reihe hat UTC-Phasen;
+# note: -- vorher -240 min gegen FES (alle vier Partialtiden) und gegen den ATT-Zwilling.
 Sur, Oman
-+04:00 :Asia/Muscat
++00:00 :Asia/Muscat
 -0.0624 meters
 J1              0.0266  353.36
 K1              0.3887  340.72
