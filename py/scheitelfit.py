@@ -52,7 +52,7 @@ trifft. Der Median von 19.5 cm der eigenen Fits ist also kein Beweis,
 dass sie schlecht vorhersagen -- gegen echte Pegel liegen dieselben
 Saetze bei 9 bis 22 cm, und davon ist ein Teil Windstau und Flusswasser.
 
-Usage: python3 py/scheitelfit.py [--kandidaten] [Station ...] [--alle] [--gewicht 0.5]
+Usage: python3 py/scheitelfit.py [--kandidaten] [--schreiben [Tafel ...]] [Station ...] [--alle] [--gewicht 0.5]
                                  [--konstituenten 67]
        ohne Station: alle Tafeln (--alle), --leise nur die Summe,
        --csv schreibt harmonics/help/scheitelfit.csv.
@@ -366,6 +366,96 @@ def kandidaten(argv, kopf, nutz, gewicht, recs):
         print(f'   {art:36} {n:4d}')
 
 
+def satz_schreiben(pfad_harm, satzname, z0, werte, namen, notizen):
+    """Ersetzt Z0 und die Konstituenten eines Satzes an seiner Stelle.
+
+    Aufbau eines Satzes in der Datei: Kommentarblock, Name, Meridianzeile,
+    "Z0 einheit", dann ALLE Konstituenten des Dateikopfs in dessen
+    Reihenfolge -- ungenutzte als "x 0 0". Name, Lage, Meridian und Zone
+    bleiben unberuehrt; die Notizen kommen vor die !units-Zeile.
+    """
+    zeilen = open(pfad_harm, encoding='iso-8859-1').read().split('\n')
+    for k, z in enumerate(zeilen):
+        if z.strip() == satzname:
+            break
+    else:
+        raise KeyError(satzname)
+    einheit = (zeilen[k + 2].split() + ['meters'])[1]
+    if not einheit.startswith('m'):
+        raise ValueError(f'{satzname}: Einheit {einheit}, erwartet Meter')
+    neu = [f'{z0:.4f} {einheit}']
+    for name in namen:
+        if name in werte and werte[name][0] > 0:
+            a, kap = werte[name]
+            neu.append(f'{name:<16}{a:.4f}  {kap % 360.0:.2f}')
+        else:
+            neu.append('x 0 0')
+    zeilen[k + 2:k + 3 + len(namen)] = neu
+    # Notizen vor die !units-Zeile des eigenen Kommentarblocks
+    i = k - 1
+    while i > 0 and (zeilen[i].startswith('#') or not zeilen[i].strip()):
+        if zeilen[i].startswith('# !units:'):
+            zeilen[i:i] = [f'# note: {t}' for t in notizen]
+            break
+        i -= 1
+    open(pfad_harm, 'w', encoding='iso-8859-1').write('\n'.join(zeilen))
+
+
+def schreiben(argv, kopf, nutz, gewicht, recs):
+    """Schreibt die empfohlenen Scheitelfits in den Bestand.
+
+    Quelle ist harmonics/help/scheitelfit_kandidaten.csv: alle Zeilen mit
+    Empfehlung "neu fitten", dazu die auf der Befehlszeile genannten
+    Tafeln (am 12.09.2026 Keadby, Spurn Head und St. Ives -- dort belegt
+    der echte Pegel die Verbesserung, waehrend die Nachbarn schwiegen).
+    """
+    namen, speeds, arg, fak = kopf
+    liste = os.path.join(ROOT, 'harmonics/help/scheitelfit_kandidaten.csv')
+    rows = list(csv.DictReader(open(liste, encoding='utf-8')))
+    extra = [a for a in argv[1:] if not a.startswith('--')]
+    nimm = [z for z in rows if z['empfehlung'] == 'neu fitten'
+            or any(e.lower() in z['tafel'].lower() for e in extra)]
+    print(f'{len(nimm)} Saetze werden neu gefittet')
+    sicherung = None
+    for z in nimm:
+        pfad = os.path.join(TAFELN, z['tafel'])
+        t, h, name, lat, lon = tafel(pfad)
+        if t is None:
+            print('  ?', z['tafel'])
+            continue
+        z0, werte = fit(t, h, nutz, speeds, arg, fak, gewicht)
+        rms, dt, _o = guete(t, h, z0, werte, kopf, versatz=False)
+        ziel = [r for r in recs if r['name'] == z['satz']
+                and os.path.basename(r['file']) == z['datei']]
+        if not ziel:
+            print('  Satz nicht gefunden:', z['satz'])
+            continue
+        datei = ziel[0]['file']
+        if sicherung is None:
+            sicherung = os.path.join(ROOT, 'harmonics/backup',
+                                     os.path.basename(datei)[:-4] + '_20260912_vor_scheitelfit.txt')
+            if not os.path.exists(sicherung):
+                open(sicherung, 'wb').write(open(datei, 'rb').read())
+                print('  Sicherung:', os.path.relpath(sicherung, ROOT))
+        belege = [f'Tafeltreue {z["tafel_alt_cm"]} -> {rms * 100:.1f} cm an {len(t)} Scheiteln, '
+                  f'Scheitelzeit {dt:.1f} min']
+        if z['nachbar_alt_pct']:
+            belege.append(f'Nachbarkonsens {z["nachbar_alt_pct"]} -> {z["nachbar_neu_pct"]} Prozent')
+        if z['echt_alt_cm']:
+            belege.append(f'gegen {z["reihe"]} {z["echt_alt_cm"]} -> {z["echt_neu_cm"]} cm')
+        notizen = [
+            '20260912 Scheitelfit aus der tidetimes-Tafel (py/scheitelfit.py):',
+            'Konstanten direkt aus den gedruckten Scheiteln, h(t_i)=h_i und',
+            'h\'(t_i)=0 im XTide-Modell. Der vorige Satz war ein UTide-Fit auf',
+            'eine Kosinus-Interpolation zwischen den Scheiteln und gab schon',
+            'die eigene Tafel schlecht wieder. Belege: ' + '; '.join(belege) + '.',
+            'Freigabe Oliver 12.09.2026.',
+        ]
+        satz_schreiben(datei, z['satz'], z0, werte, namen, notizen)
+        print(f'  {z["satz"][:40]:40} {z["tafel_alt_cm"]:>6} -> {rms * 100:5.1f} cm  '
+              f'{os.path.basename(datei)}')
+
+
 def main(argv):
     gewicht = float(argv[argv.index('--gewicht') + 1]) if '--gewicht' in argv else GEWICHT
     anzahl = int(argv[argv.index('--konstituenten') + 1]) if '--konstituenten' in argv else len(CONSTIT_67)
@@ -377,6 +467,9 @@ def main(argv):
     recs = [r for r in load_records() if r['lat'] is not None and not r['current']]
     if '--kandidaten' in argv:
         kandidaten(argv, kopf, nutz, gewicht, recs)
+        return
+    if '--schreiben' in argv:
+        schreiben(argv, kopf, nutz, gewicht, recs)
         return
     pfade = sorted(glob.glob(os.path.join(TAFELN, '*.json')))
     if namen_arg:
