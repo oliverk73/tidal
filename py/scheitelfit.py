@@ -52,7 +52,7 @@ trifft. Der Median von 19.5 cm der eigenen Fits ist also kein Beweis,
 dass sie schlecht vorhersagen -- gegen echte Pegel liegen dieselben
 Saetze bei 9 bis 22 cm, und davon ist ein Teil Windstau und Flusswasser.
 
-Usage: python3 py/scheitelfit.py [Station ...] [--alle] [--gewicht 0.5]
+Usage: python3 py/scheitelfit.py [--kandidaten] [Station ...] [--alle] [--gewicht 0.5]
                                  [--konstituenten 67]
        ohne Station: alle Tafeln (--alle), --leise nur die Summe,
        --csv schreibt harmonics/help/scheitelfit.csv.
@@ -61,6 +61,7 @@ from __future__ import annotations
 
 import collections
 import csv
+import math
 import glob
 import json
 import os
@@ -178,6 +179,193 @@ def bestand(recs, lat, lon, kopf, zeiten, hoehen, umkreis=1.5):
     return out
 
 
+def bandbreite(zeiten, hoehen, z0, werte, kopf, schritt_min=30):
+    """-> (tiefste, hoechste) Modellhoehe im Tafelzeitraum.
+
+    Zwischen den Scheiteln ist der Scheitelfit frei. Bridgwater lief dort
+    um 5.6 m aus dem Ruder, waehrend er die Scheitel auf Zentimeter traf.
+    Wer den Fit benutzen will, muss das pruefen: die Kurve darf den Bereich
+    der Tafel nicht wesentlich verlassen.
+    """
+    dicht = np.arange(zeiten[0], zeiten[-1], schritt_min * 60.0)
+    kurve = X.kurve(dicht, z0, werte, *kopf)
+    return float(kurve.min()), float(kurve.max())
+
+
+def echte_reihen():
+    """-> {Pfad: (lat, lon)} der echten Messreihen in Grossbritannien."""
+    out = {}
+    for name in ('bodc_qualitaet.csv', 'ea_qualitaet.csv', 'messreihe_qualitaet_alle.csv'):
+        pfad = os.path.join(ROOT, 'harmonics/help', name)
+        if not os.path.exists(pfad):
+            continue
+        for z in csv.DictReader(open(pfad, encoding='utf-8')):
+            if z.get('reihe') in ('UK', 'ea', 'UK_UHSLC'):
+                p = os.path.join(ROOT, 'water_levels', z['reihe'], z['station'])
+                if os.path.exists(p):
+                    out[p] = (float(z['lat']), float(z['lon']))
+    return out
+
+
+def gegen_reihe(pfad_reihe, zeitraum, z0, werte, kopf):
+    """-> (RMS in m, Zeitversatz in min) gegen eine echte Reihe, oder None."""
+    obs = M.lies(pfad_reihe)
+    if len(obs) < 2000:
+        return None
+    ot = np.array([x[0] for x in obs])
+    oh = np.array([x[1] for x in obs])
+    m = (ot >= zeitraum[0]) & (ot <= zeitraum[1])
+    if m.sum() >= 2000:
+        ot, oh = ot[m], oh[m]
+    if len(ot) > 30000:
+        ot, oh = ot[-30000:], oh[-30000:]
+    best = None
+    for v in range(-60, 61, 5):
+        h, _h1, _h2 = hoehe_und_ableitungen(ot + v * 60, z0, werte, kopf)
+        d = oh - h
+        rms = float(np.sqrt(np.mean((d - d.mean()) ** 2)))
+        if best is None or rms < best[0]:
+            best = (rms, v)
+    return best
+
+
+def nachbar_urteil(recs, lat, lon, besser, z0, werte, speeds, umkreis=25.0, eigen_km=0.3):
+    """-> (Abweichung alt, Abweichung neu) gegen den Konsens der Nachbarn in %.
+
+    Gemessen wird wie in py/nachbarprobe.py: je Nachbarort der beste
+    Treffer, daraus der Median. Nachbarn am selben Ort bleiben draussen,
+    sie sind derselbe Pegel.
+    """
+    import cmath
+    import statistics
+    from health_check import MAIN, curve_diff, km as entfernung
+    hier = {'lat': lat, 'lon': lon}
+    alt = [r for r in recs if r['name'] == besser[0]
+           and os.path.basename(r['file']) == besser[1]]
+    if not alt:
+        return None, None
+    neu = {'z': {x: cmath.rect(werte[x][0], -math.radians(werte[x][1]))
+                 if x in werte else 0j for x in MAIN}}
+    neu['tot'] = sum(abs(v) for v in neu['z'].values())
+    nachbarn = [r for r in recs
+                if eigen_km < entfernung(hier, r) <= umkreis and r is not alt[0]]
+    orte = []
+    for r in sorted(nachbarn, key=lambda r: (r['lat'], r['lon'])):
+        for g in orte:
+            if entfernung(g[0], r) <= 0.5:
+                g.append(r)
+                break
+        else:
+            orte.append([r])
+    if len(orte) < 3:
+        return None, None
+    ja = [min(curve_diff(alt[0], x)[1] * 100 for x in g) for g in orte]
+    jn = [min(curve_diff(neu, x)[1] * 100 for x in g) for g in orte]
+    return statistics.median(ja), statistics.median(jn)
+
+
+def kandidaten(argv, kopf, nutz, gewicht, recs):
+    """Die Faelle, in denen der Scheitelfit den Bestand verbessern kann.
+
+    Verlangt wird alles zusammen:
+      * der Bestandssatz ist selbst ein tidetimes-Fit (sonst steht eine
+        amtliche Tafel oder eine echte Messung dahinter -- Blyth, Exmouth),
+      * er gibt die eigene Tafel um MIND_FAKTOR schlechter wieder als der
+        Scheitelfit und schlechter als MIND_RMS_CM,
+      * der Scheitelfit bleibt im Tafelbereich (kein Bridgwater).
+    Liegt eine echte Messreihe unter 2 km, wird beides dort gemessen; das
+    entscheidet dann, nicht die Tafeltreue.
+    """
+    namen, speeds, arg, fak = kopf
+    MIND_FAKTOR, MIND_RMS_CM, RAND = 3.0, 25.0, 0.25
+    from health_check import MAIN, curve_diff as kurven_abstand
+    reihen = echte_reihen()
+    out = []
+    for pfad in sorted(glob.glob(os.path.join(TAFELN, '*.json'))):
+        t, h, name, lat, lon = tafel(pfad)
+        if t is None or len(t) < 200 or lat is None:
+            continue
+        alt = bestand(recs, lat, lon, kopf, t, h)
+        tt = [a for a in alt if 'utide_tidetables' in a[1]]
+        if not tt:
+            continue
+        besser = min(alt, key=lambda x: x[2])
+        if besser[1] != tt[0][1]:
+            continue                      # ein anderer Satz ist schon besser
+        if besser[2] * 100 < MIND_RMS_CM:
+            continue
+        z0, werte = fit(t, h, nutz, speeds, arg, fak, gewicht)
+        rms, dt, _o = guete(t, h, z0, werte, kopf, versatz=False)
+        if rms <= 0 or besser[2] / rms < MIND_FAKTOR:
+            continue
+        tief, hoch = bandbreite(t, h, z0, werte, kopf)
+        spanne = float(h.max() - h.min())
+        zahm = (tief > h.min() - RAND * spanne) and (hoch < h.max() + RAND * spanne)
+        nah = [(p, km({'lat': lat, 'lon': lon}, {'lat': a, 'lon': b}))
+               for p, (a, b) in reihen.items()
+               if km({'lat': lat, 'lon': lon}, {'lat': a, 'lon': b}) < 2.0]
+        echt_neu = echt_alt = None
+        reihe_name = ''
+        if nah:
+            p_reihe = min(nah, key=lambda x: x[1])[0]
+            reihe_name = os.path.basename(p_reihe)
+            echt_neu = gegen_reihe(p_reihe, (t[0], t[-1]), z0, werte, kopf)
+            try:
+                r = [x for x in recs if x['name'] == besser[0]
+                     and os.path.basename(x['file']) == besser[1]][0]
+                rz0, rw, einheit, meridian = X.satz_lesen(r['file'], r['name'])
+                sk = 0.3048 if einheit.startswith('f') else 1.0
+                g = {k: (a * sk, kap + speeds[k] * meridian)
+                     for k, (a, kap) in rw.items() if k in speeds}
+                echt_alt = gegen_reihe(p_reihe, (t[0], t[-1]), rz0 * sk, g, kopf)
+            except (IndexError, KeyError, ValueError):
+                pass
+        # Schiedsrichter ohne Pegel: die Nachbarschaft. Ein Name taugt
+        # nicht (BINNEN wuerde Bembridge Harbour ausschliessen, den besten
+        # Fall). Wer naeher am Konsens der unabhaengigen Nachbarn liegt,
+        # gewinnt -- dieselbe Logik wie py/nachbarprobe.py.
+        nachbar_alt, nachbar_neu = nachbar_urteil(
+            recs, lat, lon, besser, z0, werte, speeds)
+        if not zahm:
+            empfehlung = 'lassen (Kurve laeuft aus dem Ruder)'
+        elif nachbar_alt is None:
+            empfehlung = 'offen (keine Nachbarn)'
+        elif nachbar_neu < nachbar_alt - 2.0:
+            empfehlung = 'neu fitten'
+        elif nachbar_neu > nachbar_alt + 2.0:
+            empfehlung = 'lassen (Nachbarn widersprechen)'
+        else:
+            empfehlung = 'offen (Nachbarn unentschieden)'
+        out.append(dict(
+            tafel=os.path.basename(pfad), satz=besser[0], datei=besser[1],
+            empfehlung=empfehlung,
+            nachbar_alt_pct='' if nachbar_alt is None else round(nachbar_alt, 1),
+            nachbar_neu_pct='' if nachbar_neu is None else round(nachbar_neu, 1),
+            lat=f'{lat:.4f}', lon=f'{lon:.4f}',
+            tafel_alt_cm=round(besser[2] * 100, 1), tafel_neu_cm=round(rms * 100, 1),
+            neu_dt_min=round(dt, 1), zahm='ja' if zahm else 'nein',
+            tiefste=round(tief, 2), hoechste=round(hoch, 2),
+            tafel_tief=round(float(h.min()), 2), tafel_hoch=round(float(h.max()), 2),
+            reihe=reihe_name,
+            echt_neu_cm='' if not echt_neu else round(echt_neu[0] * 100, 1),
+            echt_alt_cm='' if not echt_alt else round(echt_alt[0] * 100, 1),
+            entscheidung=''))
+        z = out[-1]
+        print(f'{z["tafel"][:-5][:26]:26} Tafel {z["tafel_alt_cm"]:6.1f} -> {z["tafel_neu_cm"]:5.1f} cm  '
+              f'{z["empfehlung"][:22]:24} {"echt " + str(z["echt_alt_cm"]) + " -> " + str(z["echt_neu_cm"]) + " cm" if z["reihe"] else ""}')
+    ziel = os.path.join(ROOT, 'harmonics/help/scheitelfit_kandidaten.csv')
+    if out and '--csv' in argv:
+        with open(ziel, 'w', newline='', encoding='utf-8') as fh:
+            w = csv.DictWriter(fh, fieldnames=list(out[0].keys()))
+            w.writeheader()
+            w.writerows(sorted(out, key=lambda z: -(z['tafel_alt_cm'] - z['tafel_neu_cm'])))
+        print('->', os.path.relpath(ziel, ROOT))
+    zahl = collections.Counter(z['empfehlung'] for z in out)
+    print(f'{len(out)} Kandidaten, mit echter Reihe {sum(1 for z in out if z["reihe"])}')
+    for art, n in sorted(zahl.items()):
+        print(f'   {art:36} {n:4d}')
+
+
 def main(argv):
     gewicht = float(argv[argv.index('--gewicht') + 1]) if '--gewicht' in argv else GEWICHT
     anzahl = int(argv[argv.index('--konstituenten') + 1]) if '--konstituenten' in argv else len(CONSTIT_67)
@@ -187,6 +375,9 @@ def main(argv):
     namen, speeds, arg, fak = kopf
     nutz = konstituenten(namen, CONSTIT_67)[:anzahl]
     recs = [r for r in load_records() if r['lat'] is not None and not r['current']]
+    if '--kandidaten' in argv:
+        kandidaten(argv, kopf, nutz, gewicht, recs)
+        return
     pfade = sorted(glob.glob(os.path.join(TAFELN, '*.json')))
     if namen_arg:
         pfade = [p for p in pfade if any(n.lower() in os.path.basename(p).lower()
