@@ -553,6 +553,12 @@ def _lies_npz(pfad):
     import numpy as np
     d = np.load(pfad, allow_pickle=True)
     t = d['datetimes_utc'].astype('datetime64[s]').astype('int64')
+    # Queensland: das Portal liefert Datum und Uhrzeit in AEST (UTC+10, ohne
+    # Sommerzeit), py/download_qld_australia.py hat sie trotzdem unter
+    # datetimes_utc abgelegt. Die Fits sind richtig (Meridian +10:00), die
+    # Messung lag deshalb bei allen Saetzen um -600 min daneben (13.09.2026).
+    if str(d['datum']) == 'LAT_QLD' if 'datum' in d.files else 'Australia_QLD' in pfad:
+        t = t - 10 * 3600
     # Die irischen Reihen fuehren Meter, die deutschen Zentimeter.
     if 'levels_m' in d:
         h = d['levels_m'].astype(float)
