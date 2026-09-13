@@ -100,7 +100,8 @@ def main():
         targets = [s for s in stations if s['rloi'] in rlois]
     else:
         targets = stations
-    print(f"{len(targets)} EA-Pegel zu holen ...")
+    # Zeitstempel je Lauf -- der systemd-Timer haengt alles an harvest.log an.
+    print(f"=== Lauf {datetime.utcnow().strftime('%Y-%m-%dT%H:%MZ')}: {len(targets)} EA-Pegel zu holen ...")
     log = []
     for m in targets:
         rloi = m['rloi']
