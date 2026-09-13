@@ -21,18 +21,27 @@ import logging
 import requests
 from datetime import datetime, timedelta
 
-OUTPUT_DIR = '/home/oliver/water_levels/UK_tidetimes'
-MISSING_JSON = os.path.join(OUTPUT_DIR, 'missing_stations.json')
+# Pfade relativ zum Projekt; bis 13.09.2026 stand hier /home/oliver/water_levels
+# (vor dem Umzug nach /home/oliver/weather).
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_DIR = os.path.join(ROOT, 'water_levels/UK_tidetimes')
+# Stationsliste: Standard missing_stations.json, sonst --liste <datei>
+MISSING_JSON = (sys.argv[sys.argv.index('--liste') + 1] if '--liste' in sys.argv
+                else os.path.join(OUTPUT_DIR, 'missing_stations.json'))
 PROGRESS_FILE = os.path.join(OUTPUT_DIR, 'download_progress.json')
 LOG_FILE = os.path.join(OUTPUT_DIR, 'download.log')
 
+# Ehrlicher User-Agent statt Browser-Kostuem (wie bei Nominatim/Overpass).
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36',
+    'User-Agent': 'weather-tides/1.0 (private tidal harmonics research)',
     'Accept': 'text/html,application/xhtml+xml',
 }
 
-START_DATE = datetime(2025, 1, 1)
-END_DATE = datetime(2026, 12, 31)
+START_DATE = (datetime.strptime(sys.argv[sys.argv.index('--von') + 1], '%Y-%m-%d')
+              if '--von' in sys.argv else datetime(2025, 1, 1))
+END_DATE = (datetime.strptime(sys.argv[sys.argv.index('--bis') + 1], '%Y-%m-%d')
+            if '--bis' in sys.argv else datetime(2026, 12, 31))
+PAUSE_S = 0.5          # zwischen zwei Seitenabrufen
 
 
 def setup_logging():
@@ -152,7 +161,7 @@ def download_station(station, logger, progress_cb=None):
                 progress_cb(f"{day_count}/{total_days} Tage, {len(all_entries)} Eintraege")
 
         current += timedelta(days=1)
-        time.sleep(0.25)
+        time.sleep(PAUSE_S)
 
     if not all_entries:
         logger.info(f"  KEINE DATEN")
