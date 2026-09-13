@@ -48553,8 +48553,8 @@ x 0 0
 # note: GESLA-4-Pegelreihen und enthaelt keine Stroeme; die Kopfzeilen nennen
 # note: psmsl_id und das Hoehendatum NAP bzw. IGN69. Siehe py/health_check.py.
 # !units: meters
-# !longitude: 6.933123
-# !latitude: 53.326353
+# !longitude: 6.9310
+# !latitude: 53.3280
 # province: Groningen
 # admin1_quelle: Polygon
 Delfzijl, Netherlands
@@ -77993,7 +77993,7 @@ x 0 0
 # !latitude: 52.463691
 # province: Noord-Holland
 # admin1_quelle: Ufer 3.2 km
-IJmuiden Zuidelijk Havenhoofd, Netherlands
+IJmuiden (Zuidelijk Havenhoofd), Netherlands
 +00:00 :Europe/Amsterdam
 0.0000 meters
 J1              0.0065  107.72
@@ -180907,206 +180907,6 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants from TICON-4 database (GESLA-4 analysis)
-# 46017 observations over 6 years
-# from 05/05/1992 to 22/09/1997
-# Quality: No obvious issues
-# Source: gesla4.UHSLC_FD
-# Constituents matched: 42/50
-#
-# Socorro
-# BEGIN HOT COMMENTS
-# country: Mexico
-# source: TICON-4 (GESLA-4 harmonic analysis)
-# station_id_context: socorro-090-mex-uhslc_fd
-# date_imported: 20260322
-# datum: MSL
-# confidence: 7
-# !units: meters
-# !longitude: -110.9492
-# !latitude: 18.7258
-# note: 20260903 Provinz "Colima" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# state: Colima
-# admin1_quelle: Name
-Isla Socorro, Revillagigedo Islands, Colima, Mexico
-+00:00 :America/Mazatlan
-1.8007 meters
-J1              0.0093  14.30
-K1              0.1859  9.95
-K2              0.0610  279.21
-L2              0.0098  267.03
-M1              0.0056  295.06
-M2              0.3386  277.43
-M3              0.0024  28.91
-M4              0.0015  28.55
-M6              0.0001  336.06
-M8              0.0002  313.06
-N2              0.0827  266.30
-2N2             0.0119  243.91
-O1              0.1329  355.30
-OO1             0.0024  344.87
-P1              0.0589  5.35
-Q1              0.0263  346.67
-2Q1             0.0029  348.08
-R2              0.0003  304.46
-S1              0.0057  25.12
-S2              0.2146  282.59
-S4              0.0004  175.45
-x 0 0
-T2              0.0122  266.54
-LDA2            0.0031  269.97
-MU2             0.0138  254.60
-NU2             0.0165  269.18
-RHO1            0.0046  354.05
-x 0 0
-x 0 0
-MN4             0.0004  251.91
-MS4             0.0006  126.24
-2SM2            0.0020  158.49
-MF              0.0082  201.01
-MSF             0.0004  277.23
-MM              0.0045  203.81
-SA              0.0301  340.88
-SSA             0.0150  185.24
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0003  200.70
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0006  17.55
-x 0 0
-EPS2            0.0036  235.16
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0016  80.26
-SIG1            0.0030  174.21
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0001  164.20
-x 0 0
-x 0 0
-2MO5            0.0001  310.72
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# Harmonic constants from TICON-4 database (GESLA-4 analysis)
 # 427813 observations over 51 years
 # from 30/04/1973 to 31/12/2023
 # Quality: Possible datum issues
@@ -203798,11 +203598,11 @@ x 0 0
 # datum: DVR90
 # confidence: 7
 # !units: meters
-# !longitude: 8.666000
-# !latitude: 54.966702
+# !longitude: 8.6607
+# !latitude: 54.9632
 # region: Syddanmark
 # admin1_quelle: Ufer 0.7 km
-Vidaa, Denmark
+Vidåslusen (Højer), Denmark
 +01:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0062  190.10

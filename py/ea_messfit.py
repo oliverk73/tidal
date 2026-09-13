@@ -143,7 +143,7 @@ def main(argv):
             except (KeyError, IndexError, ValueError):
                 continue
             sk = 0.3048 if einheit.startswith('f') else 1.0
-            g = {k: (a * sk, kap + speeds[k] * mer) for k, (a, kap) in rw.items() if k in speeds}
+            g = {k: (a * sk, X.greenwich(kap, speeds[k], mer)) for k, (a, kap) in rw.items() if k in speeds}
             alt.append((r, gegen(t[sept], h[sept], rz0 * sk, g, kopf)))
         bester = min(alt, key=lambda x: x[1][0]) if alt else None
         ref = bester[0] if bester else am_ort[0]

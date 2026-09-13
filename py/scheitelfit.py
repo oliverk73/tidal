@@ -172,7 +172,7 @@ def bestand(recs, lat, lon, kopf, zeiten, hoehen, umkreis=1.5):
         except (KeyError, IndexError, ValueError):
             continue
         skala = 0.3048 if einheit.startswith('f') else 1.0
-        g = {k: (a * skala, kap + kopf[1][k] * meridian)
+        g = {k: (a * skala, X.greenwich(kap, kopf[1][k], meridian))
              for k, (a, kap) in werte.items() if k in kopf[1]}
         r_rms, r_dt, r_off = guete(zeiten, hoehen, z0 * skala, g, kopf)
         out.append((r['name'], os.path.basename(r['file']), r_rms, r_dt, r_off))
@@ -315,7 +315,7 @@ def kandidaten(argv, kopf, nutz, gewicht, recs):
                      and os.path.basename(x['file']) == besser[1]][0]
                 rz0, rw, einheit, meridian = X.satz_lesen(r['file'], r['name'])
                 sk = 0.3048 if einheit.startswith('f') else 1.0
-                g = {k: (a * sk, kap + speeds[k] * meridian)
+                g = {k: (a * sk, X.greenwich(kap, speeds[k], meridian))
                      for k, (a, kap) in rw.items() if k in speeds}
                 echt_alt = gegen_reihe(p_reihe, (t[0], t[-1]), rz0 * sk, g, kopf)
             except (IndexError, KeyError, ValueError):

@@ -164,7 +164,6 @@ PenicheTG.csv,39.3540,-9.3670,2024,"Peniche, Portugal",harmonics_utide_observati
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi, Java, Indonesia",harmonics_utide_observations.txt,0,8743,0.1072,0.303,0,0.149,2.862,Indonesia_UHSLC,0,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Segoro Wedi Bay, Indonesia",harmonics_att_np203_scs.txt,2606,8743,0.2,0.575,10,0.378,2.159,Indonesia_UHSLC,0,nein
 721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatán, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.1001,0.398,0,4.254,0.964,Mexico_UHSLC,1,nein
-721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatan, Mexico",harmonics_utide_observations.txt,0,8329,0.1337,0.519,190,4.255,0.679,Mexico_UHSLC,0,nein
 286_Puerto_Deseado.csv,-47.7536,-65.9147,2026,"Puerto Deseado, Santa Cruz, Argentina",harmonics_ticon4_worldwide.txt,0,8704,0.1751,0.781,0,0.017,5.596,Argentina_UHSLC,1,nein
 286_Puerto_Deseado.csv,-47.7536,-65.9147,2026,"Puerto Deseado, Santa Cruz, Argentina",harmonics_utide_observations.txt,8,8704,0.1661,0.775,0,0.017,5.669,Argentina_UHSLC,0,nein
 380_Puerto_Princesa.csv,9.7449,118.7358,2014,"Puerto Princesa, Palawan, Philippines",harmonics_ticon4_worldwide.txt,0,8694,0.0601,0.236,0,0.021,2.145,Philippines_UHSLC,1,nein
@@ -201,7 +200,6 @@ Sevilla2TG.csv,37.3185,-6.0077,2024,"Sevilla (Esclusa), Spain",harmonics_puertos
 SinesTG.csv,37.9490,-8.8880,2024,"Sines, Portugal",harmonics_ticon4_worldwide.txt,0,8113,0.0684,0.342,0,2.288,3.698,Portugal_CMEMS,1,nein
 SinesTG.csv,37.9490,-8.8880,2024,"Sines, Portugal",harmonics_utide_observations.txt,0,8113,0.0678,0.337,0,2.288,3.755,Portugal_CMEMS,0,nein
 SinesTG.csv,37.9490,-8.8880,2024,"Enseada de Sines, Portugal",harmonics_noaa_eutt.txt,427,8113,0.1509,0.502,10,0.337,3.12,Portugal_CMEMS,0,nein
-90_Isla_Socorro.csv,18.7258,-110.9492,1997,"Isla Socorro, Revillagigedo Islands, Colima, Mexico",harmonics_ticon4_worldwide.txt,0,8756,0.2261,1.017,380,0.054,1.801,Mexico_UHSLC,1,nein
 276_St_Johns.csv,47.5670,-52.7025,2018,"St. John's, Newfoundland, Canada",harmonics_ticon4_worldwide.txt,0,8761,0.1458,0.795,0,0.124,1.556,Canada_UHSLC,1,nein
 382_Subic_Bay.csv,14.7650,120.2520,2026,"Subic, Philippines",harmonics_ticon4_worldwide.txt,0,8714,0.0499,0.249,0,0.099,1.818,Philippines_UHSLC,1,nein
 382_Subic_Bay.csv,14.7650,120.2520,2026,"Subic Bay, Philippines",harmonics_utide_observations.txt,0,8714,0.0419,0.266,0,0.099,1.83,Philippines_UHSLC,0,nein
@@ -993,7 +991,6 @@ Q0.txt,41.4445,140.2383,2025,"Fukushima (Yoshioka), Hokkaido, Japan",harmonics_t
 779_Ciudad_del_Carmen.csv,18.6318,-91.8318,1968,"Ciudad del Carmen (Faro Atalaya), Campeche, Mexico",harmonics_ticon4_worldwide.txt,1754,8016,0.1396,0.55,-180,0.125,0.789,Mexico_UHSLC,0,ja
 861_Celestun.csv,20.8580,-90.4030,2011,"Celestun, Yucatan, Mexico",harmonics_utide_observations.txt,0,8761,0.099,0.453,0,-0.015,1.179,Mexico_UHSLC,1,nein
 721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatán, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.1001,0.398,0,4.254,0.964,Mexico_UHSLC,0,nein
-721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatan, Mexico",harmonics_utide_observations.txt,0,8329,0.1337,0.519,190,4.255,0.679,Mexico_UHSLC,1,nein
 862_Telchac.csv,21.3400,-89.3080,2013,"Telchac, Yucatan, Mexico",harmonics_utide_observations.txt,0,8126,0.0912,0.392,0,0.001,1.036,Mexico_UHSLC,1,nein
 860_Puerto_Morelos.csv,20.8680,-86.8670,2013,"Puerto Morelos, Quintana Roo, Mexico",harmonics_utide_observations.txt,0,8507,0.0647,0.51,-10,0.025,0.416,Mexico_UHSLC,1,nein
 mnts_ioc.csv,16.8035,-62.2059,2026,"Little Bay, Montserrat",harmonics_utide_observations.txt,0,490445,0.0395,1.448,0,0.013,0.548,Montserrat_IOC,1,nein
@@ -1175,19 +1172,6 @@ sagr_Sagres.csv,37.0104,-8.9282,2021,"Sagres, Portugal",harmonics_utide_observat
 sagr_Sagres.csv,37.0104,-8.9282,2021,"Ponta de Sagres, Portugal",harmonics_noaa_eutt.txt,2255,397595,0.1651,4.449,10,-1.946,3.133,Portugal_IOC,0,nein
 posa_Porto_Santo.csv,33.0597,-16.3149,2021,"Porto Santo, Madeira, Portugal",harmonics_att_np208_secondary.txt,0,248684,0.2299,4.501,0,0.374,2.572,Portugal_IOC,0,nein
 posa_Porto_Santo.csv,33.0597,-16.3149,2021,"Porto Santo, Madeira, Portugal",harmonics_utide_observations.txt,0,248684,0.2162,4.473,0,1.76,2.754,Portugal_IOC,1,nein
-ioc_naho_Nakhodka.csv,42.7800,132.8600,2025,"Nakhodka, Russia",harmonics_utide_observations.txt,0,8271,0.077,0.36,0,0.009,0.679,Russia_IOC,1,nein
-ioc_nksk_Nikolskoe.csv,55.2000,166.0200,2025,"Nikol'skoe, Russia",harmonics_utide_observations.txt,0,7967,0.1131,0.637,0,-0.004,1.875,Russia_IOC,1,nein
-ioc_nksk_Nikolskoe.csv,55.2000,166.0200,2025,"Nikolski, Bering Island, Russia",harmonics_noaa_cptt.txt,2329,7967,0.1587,0.749,-100,-0.046,1.802,Russia_IOC,0,nein
-ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk, Russia",harmonics_noaa_cptt.txt,0,7179,0.2503,0.919,-10,1.025,2.046,Russia_IOC,0,nein
-ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk, Russia",harmonics_utide_observations.txt,0,7179,0.2118,0.655,-10,-0.216,2.207,Russia_IOC,1,nein
-ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk-Kamchatsky, Russia",harmonics-1997-05-25_mod.txt,157,7179,0.2481,0.857,-60,1.026,2.136,Russia_IOC,0,nein
-ioc_posi_Poset.csv,42.6500,130.8000,2025,"Pos'et, Russia",harmonics_utide_observations.txt,0,8221,0.085,0.55,0,0.014,0.756,Russia_IOC,1,nein
-ioc_sove_Sovetskaya_Gavan.csv,48.9700,140.2900,2025,"Sovetskaya Gavan', Russia",harmonics_utide_observations.txt,0,8211,0.0883,0.389,0,0.018,1.005,Russia_IOC,1,nein
-ioc_sove_Sovetskaya_Gavan.csv,48.9700,140.2900,2025,"Sovetskaya Harbor, Russia",harmonics_noaa_cptt.txt,1558,8211,0.1508,0.558,20,1.396,0.677,Russia_IOC,0,nein
-ioc_star_Starodubskoe.csv,47.4100,142.8200,2025,"Starodubskoe, Russia",harmonics_utide_observations.txt,0,8195,0.2394,1.649,0,0.049,1.417,Russia_IOC,1,nein
-ioc_star_Starodubskoe.csv,47.4100,142.8200,2025,"Sakayehama, Russia",harmonics_noaa_cptt.txt,785,8195,0.2558,1.67,0,0.018,1.645,Russia_IOC,0,nein
-ioc_ugle_Uglegorsk.csv,49.0800,142.0700,2025,"Uglegorsk, Russia",harmonics_utide_observations.txt,0,8109,0.1345,1.007,0,0.003,1.274,Russia_IOC,1,nein
-ioc_vlad_Vladivostok.csv,43.1300,131.9200,2025,"Vladivostok, Russia",harmonics_utide_observations.txt,0,8272,0.0809,0.467,0,0.032,0.811,Russia_IOC,1,nein
 bass_ioc.csv,17.2900,-62.7097,2018,"Basseterre, Saint Kitts and Nevis",harmonics_utide_observations.txt,0,504176,0.0528,0.774,-10,-0.01,0.462,StKitts_IOC,1,nein
 uhslc_795.csv,13.1494,-61.2239,2026,"Kingstown, Saint Vincent and the Grenadines",harmonics_utide_observations.txt,0,7336,0.0469,0.188,0,0.001,0.713,StVincent_UHSLC,1,nein
 uhslc_795.csv,13.1494,-61.2239,2026,"Kingstown, St. Vincent, Saint Vincent and the Grenadines",harmonics_noaa_amtt.txt,2076,7336,0.2802,0.765,30,5.945,1.94,StVincent_UHSLC,0,nein
@@ -1262,14 +1246,6 @@ dch2_dart_west_of_antofagasta.csv,-23.1694,-72.0663,2025,"DART West of Antofagas
 dcld_dart_west_of_caldera.csv,-26.7448,-73.9845,2025,"DART West of Caldera, Chile",harmonics_utide_observations.txt,0,8664,0.0603,0.203,0,4059.942,1.452,Chile_IOC,1,nein
 dval_dart_nw_of_valparaíso.csv,-32.1299,-73.7962,2023,"DART NW of Valparaíso, Chile",harmonics_utide_observations.txt,0,6541,0.024,0.185,0,4204.541,1.688,Chile_IOC,1,nein
 dch3_dart_nw_of_concepción.csv,-35.7470,-75.2838,2024,"DART NW of Concepción, Chile",harmonics_utide_observations.txt,0,7360,0.0309,0.185,0,4080.704,1.679,Chile_IOC,1,nein
-ioc_kors_Korsakov.csv,46.6279,142.7563,2025,"Korsakov (Sakhalin), Russia",harmonics-1997-05-25_mod.txt,0,5897,1.2673,11.149,0,3.486,1.67,Russia_IOC,0,nein
-ioc_kors_Korsakov.csv,46.6279,142.7563,2025,"Korsakov (Sakhalin), Russia",harmonics_utide_observations.txt,0,5897,1.2607,11.136,-40,4.175,1.534,Russia_IOC,1,nein
-ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kurilsk (Iturup), Kuril Islands, Russia",harmonics-2004-06-14_mod.txt,0,8704,0.1196,0.434,10,0.505,1.442,Russia_IOC,0,nein
-ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kurilsk (Iturup), Kuril Islands, Russia",harmonics_utide_observations.txt,0,8704,0.1805,0.649,-50,1.158,1.183,Russia_IOC,1,nein
-ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kitovyy, Russia",harmonics_noaa_cptt.txt,797,8704,0.123,0.558,10,0.505,1.645,Russia_IOC,0,nein
-ioc_poro_Poronajsk.csv,49.2270,143.1200,2025,"Poronaysk (Sakhalin), Russia",harmonics_utide_observations.txt,0,7749,0.7127,4.445,-20,1.277,1.389,Russia_IOC,1,nein
-ioc_poro_Poronajsk.csv,49.2270,143.1200,2025,"Shikuka, Russia",harmonics_noaa_cptt.txt,1193,7749,0.7118,4.361,-10,0.581,1.762,Russia_IOC,0,nein
-ioc_preo_Preobrazheniye.csv,42.8969,133.9028,2025,"Preobrazheniye, Russia",harmonics_utide_observations.txt,0,8560,0.4557,0.905,-30,2.234,0.449,Russia_IOC,1,nein
 AIGUILLON_SUR_MER.csv,46.3350,-1.3164,2026,"L'Aiguillon-la-Presqu'île, France",harmonics_utide_observations.txt,1,103680,0.268,1.31,0,-0.153,5.47,France_SHOM,0,nein
 MIMIZAN.csv,44.2107,-1.2951,2026,"Mimizan-Plage, France",harmonics_utide_observations.txt,3,103680,0.2924,1.246,20,-0.245,3.394,France_SHOM,0,nein
 SAINT-MALO.csv,48.6412,-2.0275,2026,"Saint-Malo, France",harmonics_utide_observations.txt,0,103680,0.1271,0.547,0,-0.035,12.426,France_SHOM,0,nein
@@ -1386,7 +1362,7 @@ Thursday_Island.npz,-10.5800,142.2200,2025,"Thursday Island, Queensland, Austral
 23293.npz,55.5602,9.7532,2025,"Fredericia, Denmark",harmonics_ticon4_worldwide.txt,151,51939,0.146,1.065,-60,0.104,0.593,Denmark_DMI,0,nein
 25149.npz,55.4602,8.4397,2025,"Esbjerg Havn I, Denmark",harmonics_utide_observations.txt,0,52121,0.4354,6.955,10,0.053,2.394,Denmark_DMI,0,nein
 25149.npz,55.4602,8.4397,2025,"Esbjerg, Denmark",harmonics_ticon4_worldwide.txt,828,52121,0.4403,6.965,10,0.18,2.345,Denmark_DMI,0,nein
-25149.npz,55.4602,8.4397,2025,"Nordby, Fanø Island, Denmark",harmonics_noaa_eutt.txt,1841,52121,0.4596,6.888,30,-0.521,1.919,Denmark_DMI,0,nein
+25149.npz,55.4602,8.4397,2025,"Nordby (Fanø), Denmark",harmonics_noaa_eutt.txt,1841,52121,0.4596,6.888,30,-0.521,1.919,Denmark_DMI,0,nein
 26457.npz,54.9947,9.9851,2025,"Fynshav (Als), Denmark",harmonics_ticon4_worldwide.txt,74,51925,0.2003,1.036,-50,0.118,0.318,Denmark_DMI,0,nein
 27084.npz,55.8155,10.6399,2025,"Ballen (Samsø), Denmark",harmonics_ticon4_worldwide.txt,245,52016,0.1694,3.18,-60,0.113,0.631,Denmark_DMI,0,nein
 28234.npz,55.2878,10.8264,2025,"Nyborg (Slipshavn), Denmark",harmonics_ticon4_worldwide.txt,70,52212,0.1515,1.009,-50,0.114,0.62,Denmark_DMI,0,nein
@@ -1412,7 +1388,6 @@ bhvalterleuchtturm.npz,53.5450,8.5682,2026,"Bremerhaven (Alter Leuchtturm), Germ
 borgfeld.npz,53.1340,8.8944,2026,"Bremen-Borgfeld (Wümme), Germany",harmonics_utide_observations.txt,3,8761,0.2658,1.146,0,-0.1,2.076,Germany,0,nein
 borkumfischerbalje.npz,53.5574,6.7479,2026,"Borkum (Fischerbalje), Germany",harmonics_utide_observations.txt,4,8761,0.2911,1.897,0,0.066,3.416,Germany,0,nein
 borkumsdstrand.npz,53.5769,6.6614,2026,"Borkum (Südstrand), Germany",harmonics_utide_observations.txt,32,8761,0.2949,1.929,0,0.104,3.374,Germany,0,nein
-borkumsdstrand.npz,53.5769,6.6614,2026,"Borkum, west coast, Germany",harmonics_noaa_eutt.txt,1041,8761,0.3564,1.778,20,3.804,3.196,Germany,0,nein
 breitenberg.npz,53.9277,9.6323,2026,"Breitenberg (Stör), Germany",harmonics_utide_observations.txt,3,8734,0.3639,1.97,0,0.005,2.371,Germany,0,nein
 bremervrdeuw.npz,53.4841,9.1548,2026,"Bremervörde UW (Oste), Germany",harmonics_ticon4_worldwide.txt,187,8082,0.3036,2.046,30,-0.121,1.332,Germany,0,nein
 bremervrdeuw.npz,53.4841,9.1548,2026,"Bremervörde UW (Oste), Germany",harmonics_utide_observations.txt,191,8082,0.3043,1.849,0,-0.118,1.327,Germany,0,nein
@@ -1487,9 +1462,9 @@ krckausperrwerkbp.npz,53.7163,9.5270,2026,"Krückau-Sperrwerk (Binnenpegel), Ger
 langeoog.npz,53.7232,7.5016,2026,"Langeoog (Hafeneinfahrt), Germany",harmonics_utide_observations.txt,5,8761,0.3151,2.027,0,0.082,3.793,Germany,0,nein
 ledasperrwerkup.npz,53.2135,7.4732,2026,"Ledasperrwerk (Unterpegel), Germany",harmonics_ticon4_worldwide.txt,6,8759,0.4311,3.846,-20,0.26,3.909,Germany,0,nein
 ledasperrwerkup.npz,53.2135,7.4732,2026,"Ledasperrwerk (Unterpegel), Germany",harmonics_utide_observations.txt,6,8759,0.4056,4.078,0,0.26,4.245,Germany,0,nein
-ledasperrwerkup.npz,53.2135,7.4732,2026,"Leer, Germany",harmonics_noaa_eutt.txt,1587,8759,0.5624,3.503,80,4.214,3.355,Germany,0,nein
+ledasperrwerkup.npz,53.2135,7.4732,2026,"Leer (Leda Schleuse), Germany",harmonics_noaa_eutt.txt,1587,8759,0.5624,3.503,80,4.214,3.355,Germany,0,nein
 leerort.npz,53.2153,7.4262,2026,"Leerort (Ems), Germany",harmonics_utide_observations.txt,4,8761,0.4098,4.397,0,0.225,4.482,Germany,0,nein
-leerort.npz,53.2153,7.4262,2026,"Leer, Germany",harmonics_noaa_eutt.txt,1593,8761,0.5902,3.548,80,4.14,3.355,Germany,0,nein
+leerort.npz,53.2153,7.4262,2026,"Leer (Leda Schleuse), Germany",harmonics_noaa_eutt.txt,1593,8761,0.5902,3.548,80,4.14,3.355,Germany,0,nein
 leuchtturmalteweser.npz,53.8633,8.1276,2026,"Leuchtturm Alte Weser, Germany",harmonics_utide_observations.txt,4,8761,0.317,1.953,0,-0.021,4.037,Germany,0,nein
 lhort.npz,53.5716,9.6334,2026,"Lühort (Lühe), Germany",harmonics_utide_observations.txt,77,8735,0.3944,2.06,0,0.093,4.366,Germany,0,nein
 listaufsylt.npz,55.0165,8.4404,2026,"List auf Sylt (Hafen), Germany",harmonics_utide_observations.txt,4,7729,0.364,3.726,-10,-0.143,2.507,Germany,0,nein
@@ -1595,7 +1570,6 @@ zes57a-1066.csv,51.0043,3.8053,2026,"Melle, Belgium",harmonics_utide_observation
 04HIS_rup03a-1066.csv,51.0737,4.4188,2019,"Rumst, Belgium",harmonics_utide_observations.txt,392,52561,0.3151,2.541,0,-0.041,6.681,Belgium_waterinfo,0,nein
 04HIS_rup03a-1066.csv,51.0737,4.4188,2019,"Zennegat Afwaarts DVW, Belgium",harmonics_utide_observations.txt,1338,52561,0.3236,2.727,0,-0.168,6.463,Belgium_waterinfo,0,nein
 04HIS_zes03a-1066.csv,51.3495,4.2705,2017,"Zandvliet, Belgium",harmonics_utide_observations.txt,0,52561,0.2645,2.18,0,0.021,6.86,Belgium_waterinfo,0,nein
-04HIS_zes03a-1066.csv,51.3495,4.2705,2017,"Prosperpolder (Schelde), Belgium",harmonics_ticon4_worldwide.txt,1790,52561,0.31,2.221,-30,2.524,6.129,Belgium_waterinfo,0,nein
 04HIS_zes03a-1066.csv,51.3495,4.2705,2017,"Prosperpolder (Schelde), Belgium",harmonics_utide_observations.txt,2268,52561,0.269,2.145,0,0.02,6.836,Belgium_waterinfo,0,nein
 04HIS_zes29a-1066.csv,51.1260,4.3157,2013,"Schelle, Belgium",harmonics_utide_observations.txt,0,52561,0.2735,1.785,0,-0.039,6.945,Belgium_waterinfo,0,nein
 04HIS_zes29a-1066.csv,51.1260,4.3157,2013,"Wintam Sluis Afwaarts DVW, Belgium",harmonics_utide_observations.txt,1196,52561,0.278,1.721,0,-0.031,6.941,Belgium_waterinfo,0,nein
@@ -1662,7 +1636,6 @@ zes57a-1066.csv,51.0043,3.8053,2026,"Melle, Belgium",harmonics_utide_observation
 04zen02a-1066.csv,50.9952,4.4641,2026,"Zemst, Belgium",harmonics_utide_observations.txt,0,52265,0.3851,6.103,0,-0.094,3.691,Belgium_waterinfo,0,nein
 04zen02a-1066.csv,50.9952,4.4641,2026,"Hombeek, Belgium",harmonics_utide_observations.txt,2463,52265,0.5532,6.519,-10,0.381,4.581,Belgium_waterinfo,0,nein
 04zes01a-1066.csv,51.3483,4.2379,2026,"Prosperpolder (Schelde), Belgium",harmonics_utide_observations.txt,0,52561,0.2828,2.075,0,0.082,6.559,Belgium_waterinfo,0,nein
-04zes01a-1066.csv,51.3483,4.2379,2026,"Prosperpolder (Schelde), Belgium",harmonics_ticon4_worldwide.txt,968,52561,0.3431,1.81,-20,2.585,5.938,Belgium_waterinfo,0,nein
 04zes01a-1066.csv,51.3483,4.2379,2026,"Zandvliet, Belgium",harmonics_utide_observations.txt,2268,52561,0.2847,2.081,0,0.082,6.572,Belgium_waterinfo,0,nein
 04zes10a-1066.csv,51.2964,4.2860,2026,"Liefkenshoek, Belgium",harmonics_utide_observations.txt,1,52561,0.2858,2.147,0,0.03,6.71,Belgium_waterinfo,0,nein
 04zes14a-1066.csv,51.2680,4.2985,2026,"Kallosluis, Belgium",harmonics_utide_observations.txt,0,52561,0.2916,2.192,0,0.045,6.849,Belgium_waterinfo,0,nein
@@ -3401,8 +3374,6 @@ heesbeen.csv,51.7358,5.1247,2026,"Heesbeen, Netherlands",harmonics_utide_observa
 hellevoetsluis.csv,51.8197,4.1282,2026,"Hellevoetsluis, Netherlands",harmonics_utide_observations.txt,4,52561,0.0289,0.1,0,-0.028,0.535,Netherlands,0,nein
 huibertgat.csv,53.5737,6.3984,2026,"Huibertgat, Netherlands",harmonics_utide_observations.txt,6,52561,0.0441,0.167,0,0.021,3.026,Netherlands,0,nein
 ijgeul.1.csv,52.4639,4.5176,2026,"IJGeul 1 (IJmuiden Stroommeetpaal), Netherlands",harmonics_utide_observations.txt,5,52561,0.05,0.205,0,-0.0,2.4,Netherlands,0,nein
-ijgeul.1.csv,52.4639,4.5176,2026,"IJmuiden Zuidelijk Havenhoofd, Netherlands",harmonics_ticon4_worldwide.txt,995,52561,0.1085,0.393,0,-0.061,2.422,Netherlands,0,nein
-ijgeul.1.csv,52.4639,4.5176,2026,"IJmuiden, buitenhaven, Netherlands",harmonics_utide_observations.txt,2536,52561,0.0497,0.198,0,-0.1,2.377,Netherlands,0,nein
 kornwerderzand.waddenzee.buitenhaven.csv,53.0746,5.3348,2026,"Kornwerderzand Waddenzee buitenhaven, Netherlands",harmonics_utide_observations.txt,3,52561,0.0461,0.172,0,0.008,2.501,Netherlands,0,nein
 kornwerderzand.waddenzee.buitenhaven.csv,53.0746,5.3348,2026,"Kornwerderzand, Netherlands",harmonics_ticon4_worldwide.txt,541,52561,0.0694,0.276,0,0.07,2.43,Netherlands,0,nein
 krammersluizen.west.csv,51.6593,4.1443,2026,"Krammersluizen west, Netherlands",harmonics_utide_observations.txt,6,52561,0.0654,0.237,0,0.004,3.897,Netherlands,0,nein
@@ -4610,3 +4581,25 @@ Southport.npz,-27.9400,153.4300,2025,"Southport, Queensland, Australia",harmonic
 Southport.npz,-27.9400,153.4300,2025,"Gold Coast Operations Base, Queensland, Australia",harmonics_utide_tidetables.txt,2969,52438,0.0908,0.509,0,0.077,1.955,Australia_QLD,0,nein
 Urangan.npz,-25.2900,152.9100,2025,"Urangan, Queensland, Australia",harmonics_utide_observations.txt,356,52561,0.0807,0.383,0,0.031,3.835,Australia_QLD,1,nein
 Weipa.npz,-12.6700,141.8700,2025,"Weipa, Queensland, Australia",harmonics_utide_observations.txt,277,52525,0.1343,0.489,0,0.07,3.233,Australia_QLD,1,nein
+ioc_khol_Kholmsk.csv,41.0019,39.7445,2025,"Trabzon, Turkey",harmonics_ticon4_worldwide.txt,0,8585,0.4153,1.706,420,4.52,0.379,Russia_IOC,1,nein
+ioc_naho_Nakhodka.csv,42.7800,132.8600,2025,"Nakhodka, Russia",harmonics_utide_observations.txt,0,8271,0.077,0.36,0,0.009,0.679,Russia_IOC,1,nein
+ioc_nksk_Nikolskoe.csv,55.2000,166.0200,2025,"Nikol'skoe, Russia",harmonics_utide_observations.txt,0,7967,0.1131,0.637,0,-0.004,1.875,Russia_IOC,1,nein
+ioc_nksk_Nikolskoe.csv,55.2000,166.0200,2025,"Nikolski, Bering Island, Russia",harmonics_noaa_cptt.txt,2329,7967,0.1587,0.749,-100,-0.046,1.802,Russia_IOC,0,nein
+ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk, Russia",harmonics_noaa_cptt.txt,0,7179,0.2503,0.919,-10,1.025,2.046,Russia_IOC,0,nein
+ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk, Russia",harmonics_utide_observations.txt,0,7179,0.2118,0.655,-10,-0.216,2.207,Russia_IOC,1,nein
+ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk-Kamchatsky, Russia",harmonics-1997-05-25_mod.txt,157,7179,0.2481,0.857,-60,1.026,2.136,Russia_IOC,0,nein
+ioc_posi_Poset.csv,42.6500,130.8000,2025,"Pos'et, Russia",harmonics_utide_observations.txt,0,8221,0.085,0.55,0,0.014,0.756,Russia_IOC,1,nein
+ioc_sove_Sovetskaya_Gavan.csv,48.9700,140.2900,2025,"Sovetskaya Gavan', Russia",harmonics_utide_observations.txt,0,8211,0.0883,0.389,0,0.018,1.005,Russia_IOC,1,nein
+ioc_sove_Sovetskaya_Gavan.csv,48.9700,140.2900,2025,"Sovetskaya Harbor, Russia",harmonics_noaa_cptt.txt,1558,8211,0.1508,0.558,20,1.396,0.677,Russia_IOC,0,nein
+ioc_star_Starodubskoe.csv,47.4100,142.8200,2025,"Starodubskoe, Russia",harmonics_utide_observations.txt,0,8195,0.2394,1.649,0,0.049,1.417,Russia_IOC,1,nein
+ioc_star_Starodubskoe.csv,47.4100,142.8200,2025,"Sakayehama, Russia",harmonics_noaa_cptt.txt,785,8195,0.2558,1.67,0,0.018,1.645,Russia_IOC,0,nein
+ioc_ugle_Uglegorsk.csv,49.0800,142.0700,2025,"Uglegorsk, Russia",harmonics_utide_observations.txt,0,8109,0.1345,1.007,0,0.003,1.274,Russia_IOC,1,nein
+ioc_vlad_Vladivostok.csv,43.1300,131.9200,2025,"Vladivostok, Russia",harmonics_utide_observations.txt,0,8272,0.0809,0.467,0,0.032,0.811,Russia_IOC,1,nein
+ioc_kors_Korsakov.csv,46.6279,142.7563,2025,"Korsakov (Sakhalin), Russia",harmonics-1997-05-25_mod.txt,0,5897,1.2673,11.149,0,3.486,1.67,Russia_IOC,0,nein
+ioc_kors_Korsakov.csv,46.6279,142.7563,2025,"Korsakov (Sakhalin), Russia",harmonics_utide_observations.txt,0,5897,1.2607,11.136,-40,4.175,1.534,Russia_IOC,1,nein
+ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kurilsk (Iturup), Kuril Islands, Russia",harmonics-2004-06-14_mod.txt,0,8704,0.1196,0.434,10,0.505,1.442,Russia_IOC,0,nein
+ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kurilsk (Iturup), Kuril Islands, Russia",harmonics_utide_observations.txt,0,8704,0.0927,0.436,0,0.007,1.532,Russia_IOC,1,nein
+ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kitovyy, Russia",harmonics_noaa_cptt.txt,797,8704,0.123,0.558,10,0.505,1.645,Russia_IOC,0,nein
+ioc_poro_Poronajsk.csv,49.2270,143.1200,2025,"Poronaysk (Sakhalin), Russia",harmonics_utide_observations.txt,0,7749,0.7127,4.445,-20,1.277,1.389,Russia_IOC,1,nein
+ioc_poro_Poronajsk.csv,49.2270,143.1200,2025,"Shikuka, Russia",harmonics_noaa_cptt.txt,1193,7749,0.7118,4.361,-10,0.581,1.762,Russia_IOC,0,nein
+ioc_preo_Preobrazheniye.csv,42.8969,133.9028,2025,"Preobrazheniye, Russia",harmonics_utide_observations.txt,0,8560,0.4557,0.905,-30,2.234,0.449,Russia_IOC,1,nein

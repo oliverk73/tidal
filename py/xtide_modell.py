@@ -119,6 +119,16 @@ def satz_lesen(pfad, name):
     return z0, werte, einheit, meridian
 
 
+def greenwich(kappa, speed, meridian_h):
+    """Phase im Meridian des Satzes -> Greenwich-Phase: G = kappa - speed * meridian.
+
+    Bis 13.09.2026 stand hier "+" -- die Gegenprobe lief nur an Saetzen mit
+    Meridian +00:00 und sah es nicht. Kurilsk 2004 (+09:00) wich damit um 45 cm
+    von XTide ab. Gleiche Rechnung wie health_check (G = g - SPEED * hours).
+    """
+    return kappa - speed * meridian_h
+
+
 def jahresbeginn(jahr):
     return dt.datetime(jahr, 1, 1, tzinfo=dt.timezone.utc).timestamp()
 
@@ -163,8 +173,7 @@ def pruefe(argv):
     if not len(vt):
         print('keine XTide-Vorhersage')
         return
-    # XTide rechnet kappa im Meridian des Satzes: G = kappa + speed*meridian
-    eigen = {k: (a, kap + speeds[k] * meridian) for k, (a, kap) in werte.items()}
+    eigen = {k: (a, greenwich(kap, speeds[k], meridian)) for k, (a, kap) in werte.items()}
     mein = kurve(vt, z0, eigen, namen, speeds, arg, fak, skala)
     d = mein - vh
     print(f'{name}: {len(vt)} Punkte, Abweichung zu XTide max {abs(d).max() * 100:.3f} cm, '
