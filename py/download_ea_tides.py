@@ -24,12 +24,17 @@ import sys, json, csv, io, time, urllib.request
 from pathlib import Path
 from datetime import datetime
 
-EA_DIR = Path('/home/oliver/water_levels/ea')        # akkumulierte Messreihen (gitignored)
-STATIONS = Path('/home/oliver/harmonics/help/ea_tidal_stations.json')  # ALLE 110 EA-Tidenpegel
-MAP = Path('/home/oliver/harmonics/help/ea_station_map.json')  # Match zu unseren Stationen (getrackt)
+# Pfade relativ zum Projekt. Bis 13.09.2026 standen hier /home/oliver/water_levels
+# und /home/oliver/harmonics -- nach dem Umzug nach /home/oliver/weather lief der
+# Sammler ins Leere, seit dem 2. Juli fehlen die Messungen (die Quelle liefert
+# nur ein rollierendes Fenster, Verpasstes ist verloren).
+ROOT = Path(__file__).resolve().parent.parent
+EA_DIR = ROOT / 'water_levels/ea'                        # akkumulierte Messreihen (gitignored)
+STATIONS = ROOT / 'harmonics/help/ea_tidal_stations.json'  # ALLE 110 EA-Tidenpegel
+MAP = ROOT / 'harmonics/help/ea_station_map.json'          # Match zu unseren Stationen (getrackt)
 CSV_URL = 'https://check-for-flooding.service.gov.uk/station-csv/{rloi}'
-HEADERS = {'User-Agent': 'Mozilla/5.0 (tidal-harmonics-research)',
-           'Referer': 'https://check-for-flooding.service.gov.uk/'}
+# Ehrlicher User-Agent (wie bei Nominatim/Overpass), kein Browser-Kostuem.
+HEADERS = {'User-Agent': 'weather-tides/1.0 (private tidal harmonics research)'}
 
 
 def fetch_csv(rloi, timeout=30):
