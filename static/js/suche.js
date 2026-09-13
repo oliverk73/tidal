@@ -9,6 +9,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var names = (typeof stationNames !== 'undefined') ? stationNames : [];
 
+  // Suchliste: sobald die Kartendaten geladen sind, jeder Satz einzeln
+  // (window.stationRows aus leaflet_markers.js). Gleichnamige Saetze aus
+  // verschiedenen Dateien bekommen die Quelle angehaengt und rufen die
+  // Vorhersage mit ?source= auf -- sonst gewinnt der zuletzt gelesene.
+  // Ohne Kartendaten (Lernseiten) bleibt es bei stationNames.
+  var entries = null, entriesFromRows = false;
+  function sourceLabel(row) {
+    var g = window.stationGroups && window.stationGroups[row[4]];
+    var label = g ? g.name.replace(/^Harmonics\s+/, '') : row[3].replace(/\.tcd$/, '');
+    return label === 'Other' ? row[3].replace(/\.tcd$/, '') : label;
+  }
+  function getEntries() {
+    var rows = window.stationRows;
+    if (entries && (entriesFromRows || !rows)) return entries;
+    if (rows) {
+      entries = rows.map(function (r) {
+        var dup = r[7] === 1;
+        var tag = dup ? sourceLabel(r) : '';
+        return {
+          full: r[0],
+          tag: tag,
+          label: tag ? r[0] + ' · ' + tag : r[0],
+          source: dup ? r[3] : '',
+          coords: [r[1], r[2]]
+        };
+      });
+      entriesFromRows = true;
+    } else {
+      entries = names.map(function (n) {
+        return { full: n, tag: '', label: n, source: '', coords: null };
+      });
+    }
+    return entries;
+  }
+
   // --- Open / Close ---
   function openModal() {
     modal.classList.add("open");
@@ -45,12 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- Filtering ---
   function filterStations(query) {
     var q = normalize(query);
+    var list = getEntries();
     var startsWith = [];
     var contains = [];
-    for (var i = 0; i < names.length; i++) {
-      var lower = normalize(names[i]);
-      if (lower.startsWith(q)) startsWith.push(names[i]);
-      else if (lower.includes(q)) contains.push(names[i]);
+    for (var i = 0; i < list.length; i++) {
+      var lower = normalize(list[i].label);
+      if (lower.startsWith(q)) startsWith.push(list[i]);
+      else if (lower.includes(q)) contains.push(list[i]);
     }
     return startsWith.concat(contains);
   }
@@ -92,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var q = query.trim();
     if (q.length < 1) {
       resultsEl.innerHTML = '<div class="search-modal-hint">Type to search across ' +
-        names.length + ' tide stations</div>';
+        getEntries().length + ' tide stations</div>';
       return;
     }
 
@@ -111,20 +147,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var hasCoords = (typeof stationCoords !== 'undefined');
 
-    limited.forEach(function (full) {
+    function coordsOf(e) {
+      // Eindeutige Namen: stationCoords (folgt Positionskorrekturen live).
+      if (!e.source && hasCoords && stationCoords[e.full]) return stationCoords[e.full];
+      return e.coords;
+    }
+
+    limited.forEach(function (e, i) {
+      var full = e.full;
       var isCurrent = CURRENT_RE.test(full);
       // Strip trailing " Current[..]" for cleaner display; data-station keeps full name.
       var displayFull = isCurrent ? full.replace(CURRENT_RE, '') : full;
+      if (e.tag) displayFull += ' · ' + e.tag;
       var p = parseName(displayFull);
       var mapBtn = '';
-      if (hasCoords && stationCoords[full]) {
-        mapBtn = '<button class="search-modal-map-btn" data-station-map="' + escapeHtml(full) + '" title="Auf Karte zeigen">' +
+      if (coordsOf(e)) {
+        mapBtn = '<button class="search-modal-map-btn" data-idx="' + i + '" title="Auf Karte zeigen">' +
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
           '<path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/>' +
           '<circle cx="12" cy="10" r="3"/>' +
           '</svg></button>';
       }
-      html += '<div class="search-modal-item" data-station="' + escapeHtml(full) + '">' +
+      html += '<div class="search-modal-item" data-idx="' + i + '">' +
         '<div class="search-modal-item-text">' +
         '<span class="search-modal-item-name">' + highlightMatch(p.name, q) + '</span>' +
         (p.detail ? '<span class="search-modal-item-detail">' + highlightMatch(p.detail, q) + '</span>' : '') +
@@ -145,8 +189,8 @@ document.addEventListener("DOMContentLoaded", function () {
     resultsEl.querySelectorAll(".search-modal-map-btn").forEach(function (btn) {
       btn.addEventListener("click", function (e) {
         e.stopPropagation();
-        var station = this.getAttribute("data-station-map");
-        var coords = stationCoords[station];
+        var e = limited[+this.getAttribute("data-idx")];
+        var coords = coordsOf(e);
         if (coords && window.map) {
           closeModal();
           window.map.setView(coords, 11);
@@ -155,6 +199,9 @@ document.addEventListener("DOMContentLoaded", function () {
             markers.eachLayer(function (layer) {
               var ll = layer.getLatLng();
               if (Math.abs(ll.lat - coords[0]) < 0.0001 && Math.abs(ll.lng - coords[1]) < 0.0001) {
+                // Gleiche Position, anderer Satz: nur den gesuchten oeffnen
+                var sd = layer.options && layer.options.sd;
+                if (e.source && sd && sd.s !== e.source) return;
                 // Spiderfied clusters need a small delay
                 setTimeout(function () { layer.openPopup(); }, 300);
               }
@@ -167,8 +214,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Click handler: item text → generate prediction
     resultsEl.querySelectorAll(".search-modal-item").forEach(function (el) {
       el.addEventListener("click", function () {
-        var station = this.getAttribute("data-station");
-        generatePrediction(station);
+        var e = limited[+this.getAttribute("data-idx")];
+        generatePrediction(e.full, e.source);
       });
     });
   }
@@ -190,29 +237,30 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!q) return;
 
       // Exact match?
-      var exact = names.find(function (n) {
-        return normalize(n) === normalize(q);
+      var exact = getEntries().find(function (e) {
+        return normalize(e.label) === normalize(q) || normalize(e.full) === normalize(q);
       });
       if (exact) {
-        generatePrediction(exact);
+        generatePrediction(exact.full, exact.source);
         return;
       }
 
       // Otherwise pick first result
-      var first = resultsEl.querySelector(".search-modal-item");
+      var first = filterStations(q)[0];
       if (first) {
-        generatePrediction(first.getAttribute("data-station"));
+        generatePrediction(first.full, first.source);
       }
     }
   });
 
   // --- Generate prediction ---
-  function generatePrediction(station) {
+  function generatePrediction(station, source) {
     // Show loading state in modal
     resultsEl.innerHTML = '<div class="search-modal-loading">Generating prediction for ' +
       escapeHtml(station) + '...</div>';
 
-    fetch('/generate/' + encodeURIComponent(station))
+    fetch('/generate/' + encodeURIComponent(station) +
+          (source ? '?source=' + encodeURIComponent(source) : ''))
       .then(function (r) {
         if (!r.ok) throw new Error("HTTP " + r.status);
         return r.json();
