@@ -202,6 +202,10 @@ def echte_reihen():
         for z in csv.DictReader(open(pfad, encoding='utf-8')):
             if z.get('reihe') in ('UK', 'ea', 'UK_UHSLC'):
                 p = os.path.join(ROOT, 'water_levels', z['reihe'], z['station'])
+                if not os.path.exists(p):
+                    # BODC liegt eine Ebene tiefer (bodc_sea_level_.../ABE2309.txt)
+                    tief = glob.glob(os.path.join(ROOT, 'water_levels', z['reihe'], '*', z['station']))
+                    p = tief[0] if len(tief) == 1 else p
                 if os.path.exists(p):
                     out[p] = (float(z['lat']), float(z['lon']))
     return out

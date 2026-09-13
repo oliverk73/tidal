@@ -56,6 +56,13 @@ def main(argv):
         for r in betroffen:
             q = os.path.join(M.REIHEN, r['reihe'], r['station'])
             if not os.path.exists(q):
+                # Unterordner (France_SHOM/npz/111.npz, UK/bodc_.../ABE2309.txt);
+                # Sicherungsordner zaehlen nicht
+                tief = [t for t in glob.glob(os.path.join(M.REIHEN, r['reihe'], '*', r['station']))
+                        if 'bak' not in t and '_backup' not in t]
+                if len(tief) == 1:
+                    q = tief[0]
+            if not os.path.exists(q):
                 print(f'  Reihe nicht mehr vorhanden, Zeile bleibt: {os.path.relpath(q, M.REIHEN)}')
                 continue
             if q not in reihen:

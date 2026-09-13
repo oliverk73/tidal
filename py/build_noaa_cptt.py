@@ -321,7 +321,17 @@ def measure(items):
     if len(hi) < 5 or len(lo) < 5: return (0.0, 0.0, 0.0)
     HW, LW = h[hi], h[lo]
     mean_r = HW.mean() - LW.mean()
+    # Mittlerer Springhub: nur Scheitel, an denen M2 und S2 in Phase sind (bis 30 Grad).
+    # Bis 13.09.2026 stand hier Perzentil 92/8 -- der Rand der Verteilung, dadurch
+    # kam S2 in Schritt 2 im Median halb so gross heraus (py/noaa_s2_nachziehen.py).
     spring_r = np.percentile(HW, 92) - np.percentile(LW, 8)
+    _m2 = [(a, g) for sp_, a, g in items if abs(sp_ - 28.9841042) < 1e-4]
+    _s2 = [(a, g) for sp_, a, g in items if abs(sp_ - 30.0) < 1e-6]
+    if _m2 and _s2:
+        _phi = ((30.0 - 28.9841042) * _T - (_s2[0][1] - _m2[0][1]) + 180.0) % 360.0 - 180.0
+        _shi, _slo = hi[np.abs(_phi[hi]) <= 30.0], lo[np.abs(_phi[lo]) <= 30.0]
+        if len(_shi) >= 3 and len(_slo) >= 3:
+            spring_r = h[_shi].mean() - h[_slo].mean()
     dh = _DAY[hi]; dl = _DAY[lo]
     mhhw = [HW[dh == k].max() for k in range(60) if (dh == k).any()]
     mllw = [LW[dl == k].min() for k in range(60) if (dl == k).any()]
@@ -369,7 +379,7 @@ def transfer(s, rr):
     # ---- step 2: spring (MS) -> nudge S2 group ; great-diurnal (MD) -> nudge diurnal group ----
     sS = 1.0
     if spring is not None and mean is not None:
-        cur_diff = k * (Sr_ref - Mn_ref); tgt_diff = (spring - mean) * FT
+        cur_diff = k * (Sr_ref - Mn_ref); tgt_diff = CAL * (spring - mean) * FT   # CAL wie beim Mittelhub
         if cur_diff > 0.02 and tgt_diff > 0:
             sS = clamp(tgt_diff / cur_diff, 0.1, 6.0)
     sD = 1.0
