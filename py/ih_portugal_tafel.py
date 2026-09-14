@@ -27,20 +27,41 @@ PDF = os.path.join(ROOT, 'tide_tables/Portugal/TabelaMare_I_2026_signed.pdf')
 MONATE = {'JANEIRO': 1, 'FEVEREIRO': 2, 'MARÇO': 3, 'ABRIL': 4, 'MAIO': 5, 'JUNHO': 6, 'JULHO': 7,
           'AGOSTO': 8, 'SETEMBRO': 9, 'OUTUBRO': 10, 'NOVEMBRO': 11, 'DEZEMBRO': 12}
 PAAR = re.compile(r'(\d{2}):(\d{2})\s+(-?\d\.\d)')
-_TEXT = None
+PDF_II = os.path.join(ROOT, 'tide_tables/Portugal/TabelaMare_II_2026_signed.pdf')
+PDF_2025 = os.path.join(ROOT, 'tide_tables/Portugal/TabMares_I_2025_completa_signed-1.pdf')
+_TEXT = {}
 
 
-def text():
-    global _TEXT
-    if _TEXT is None:
-        _TEXT = subprocess.run(['pdftotext', '-layout', PDF, '-'], capture_output=True,
-                               text=True).stdout.split('\n')
-    return _TEXT
+def text(pdf=None):
+    pdf = pdf or PDF
+    if pdf not in _TEXT:
+        _TEXT[pdf] = subprocess.run(['pdftotext', '-layout', pdf, '-'], capture_output=True,
+                                    text=True).stdout.split('\n')
+    return _TEXT[pdf]
 
 
-def scheitel(hafen):
-    """-> [(unix-zeit, hoehe m)] aller Hoch- und Niedrigwasser 2026 fuer 'Porto de <hafen>'."""
-    L = text()
+def jahr(pdf):
+    m = re.search(r'(20\d\d)', os.path.basename(pdf or PDF))
+    return int(m.group(1)) if m else 2026
+
+
+def haefen(pdf=None):
+    """{Hafen: (lat, lon)} aus den Kopfzeilen 'Porto de ...' + 'Latitude ... Longitude ...'."""
+    L = text(pdf); out = {}
+    for i, l in enumerate(L[:-1]):
+        if l.strip().startswith('Porto de ') and 'Latitude' in L[i + 1]:
+            m = re.search(r"Latitude\s+(\d+)º\s+([\d.]+)'\s*([NS])\s+Longitude\s+(\d+)º\s+([\d.]+)'\s*([EW])", L[i + 1])
+            if m and l.strip()[9:] not in out:
+                la = (int(m.group(1)) + float(m.group(2)) / 60) * (1 if m.group(3) == 'N' else -1)
+                lo = (int(m.group(4)) + float(m.group(5)) / 60) * (1 if m.group(6) == 'E' else -1)
+                out[l.strip()[9:]] = (la, lo)
+    return out
+
+
+def scheitel(hafen, pdf=None):
+    """-> [(unix-zeit, hoehe m)] aller Hoch- und Niedrigwasser fuer 'Porto de <hafen>' (Zeiten in UT)."""
+    L = text(pdf)
+    J = jahr(pdf)
     out = []
     starts = [i for i, l in enumerate(L) if l.strip() == f'Porto de {hafen}']
     for s in starts:
@@ -66,7 +87,7 @@ def scheitel(hafen):
                     mon = monate[min(c // 2, len(monate) - 1)]
                     tag = 1 + block if c % 2 == 0 else 17 + block
                     try:
-                        t = dt.datetime(2026, mon, tag, int(m.group(1)), int(m.group(2)),
+                        t = dt.datetime(J, mon, tag, int(m.group(1)), int(m.group(2)),
                                         tzinfo=dt.timezone.utc)
                     except ValueError:
                         continue
@@ -90,10 +111,10 @@ ZONE_H = {'VILA DO PORTO': -1.0, 'PONTA DELGADA': -1.0, 'ANGRA DO HEROÍSMO': -1
 SPEED = {'M2': 28.9841042, 'S2': 30.0, 'K1': 15.0410686, 'O1': 13.9430356}
 
 
-def konstanten():
+def konstanten(pdf=None):
     """{Hafen (Grossbuchstaben): {c: (amp m, G Greenwich)}} aus der Tabelle der Konstanten."""
     out = {}
-    for l in text():
+    for l in text(pdf):
         m = re.match(r'^([A-ZÇÃÕÉÍÓÚÂÊ .\-]+?)\s+(\.\d{3}|\d\.\d{3})\s+([\d.]+)\s+(\.\d{3})\s+([\d.]+)\s+(\.\d{3})\s+([\d.]+)\s+(\.\d{3})\s+([\d.]+)\s*$', l.replace('\t', ' '))
         if m:
             v = [float(x) for x in m.groups()[1:]]
