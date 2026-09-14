@@ -102,12 +102,17 @@ def scheitel(hafen, pdf=None):
     return sorted(set(out))
 
 
-# Die Tabelle "Constantes harmonicas fundamentais" nennt keinen Phasenbezug. Fuer das Festland und
+# Die Tabelle "Constantes harmonicas fundamentais" nennt keinen Phasenbezug (Vol. II: siehe unten). Fuer das Festland und
 # Madeira sind es Greenwich-Phasen (UT); fuer die Azoren sind sie auf die Ortszone UT-1 bezogen:
 # alle Messsaetze dort (TICON, UHSLC) liegen gegen diese Werte einheitlich 56-64 min "spaet",
 # waehrend dieselben Saetze die Tafelzeiten (in UT) auf 0-2 min treffen (14.09.2026).
 ZONE_H = {'VILA DO PORTO': -1.0, 'PONTA DELGADA': -1.0, 'ANGRA DO HEROÍSMO': -1.0, 'HORTA': -1.0,
-          'LAJES DAS FLORES': -1.0}
+          'LAJES DAS FLORES': -1.0, 'PORTO GRANDE': -1.0,
+          # Vol. II: Angola in UT+1, Mocambique in UT+2 (gegen die eigenen Tafeln: 60-68 bzw. >120 min
+          # daneben mit UT, 1-4 min mit Ortszone; 14.09.2026)
+          'LUANDA': 1.0, 'LOBITO': 1.0, 'NAMIBE': 1.0,
+          'MAPUTO': 2.0, 'INHAMBANE': 2.0, 'CHINDE': 2.0, 'QUELIMANE': 2.0, 'PEBANE': 2.0,
+          'ANTÓNIO ENES': 2.0, 'ILHA DE MOÇAMBIQUE': 2.0, 'NACALA': 2.0, 'PEMBA': 2.0}
 SPEED = {'M2': 28.9841042, 'S2': 30.0, 'K1': 15.0410686, 'O1': 13.9430356}
 
 
@@ -119,7 +124,7 @@ def konstanten(pdf=None):
         if m:
             v = [float(x) for x in m.groups()[1:]]
             name = m.group(1).strip()
-            z = ZONE_H.get(name, 0.0)
+            z = ZONE_H.get(name.split(' .')[0].strip(), 0.0)
             roh = {'M2': (v[0], v[1]), 'S2': (v[2], v[3]), 'K1': (v[4], v[5]), 'O1': (v[6], v[7])}
             # g_Ortszone = G + speed * zone  ->  G = g - speed * zone
             out[name] = {c: (a, (g - SPEED[c] * z) % 360.0) for c, (a, g) in roh.items()}

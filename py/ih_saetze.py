@@ -75,10 +75,11 @@ def tafelprobe(hafen, pdf, z0, g):
     return rms * 100, float(np.median(dtm[hw])), float(np.median(dtm[~hw])), len(s)
 
 
-def block(name, land, tz, lat, lon, z0, g, noten):
+def block(name, land, tz, lat, lon, z0, g, noten,
+          quelle='Instituto Hidrografico (PT), Tabela de Mares 2026, Constantes harmonicas'):
     heute = dt.date.today().strftime('%Y%m%d')
     z = ['# BEGIN HOT COMMENTS', f'# country: {land}',
-         '# source: Instituto Hidrografico (PT), Tabela de Mares 2026, Constantes harmonicas',
+         f'# source: {quelle}',
          f'# date_imported: {heute}', '# datum: Zero Hidrografico (ZH)', '# confidence: 7']
     z += [f'# note: {n}' for n in noten]
     z += ['# !units: meters', f'# !longitude: {lon:.4f}', f'# !latitude: {lat:.4f}',
@@ -91,7 +92,7 @@ def block(name, land, tz, lat, lon, z0, g, noten):
     return z
 
 
-def main(argv):
+def standard_zeilen():
     zeilen = list(dateikopf())
     for hafen, key, zone, name, land, tz, ml, pdf, hinweis in STANDARD:
         la, lo = IH.haefen(pdf)[hafen]
@@ -102,6 +103,11 @@ def main(argv):
                  f'M2/S2/K1/O1 aus der IH-Tabelle der Konstanten (Phasen UT{zone:+.0f}), N2/K2/P1/Q1 abgeleitet.',
                  f'Gegen die IH-Tafel 2026 ({n} Scheitel): Hoehe {rms:.1f} cm, HW {hw:+.1f} / NW {nw:+.1f} min.']
         zeilen += block(name, land, tz, la, lo, ml, g, noten)
+    return zeilen
+
+
+def main(argv):
+    zeilen = standard_zeilen()
     if '--schreiben' in argv:
         schreiben(AUS, '\n'.join(zeilen) + '\n')
         print('->', os.path.relpath(AUS, ROOT))
