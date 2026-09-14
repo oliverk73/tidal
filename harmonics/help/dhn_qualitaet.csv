@@ -1,12 +1,14 @@
 station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub_m
 IGARAPÉ GRANDE DO CURUÁ,0.7633,-50.1167,2024,"Igarapé Grande do Curua, Amapá, Brazil",harmonics_utide_tidetables.txt,182,120,0.1047,0.23,7.0,0.02,4.4
 PORTO DE SANTANA - CIA DOCAS DE SANTANA (ESTADO DO AMAPÁ),-0.0617,-51.1683,2026,"Santana (Cia Docas), Amapá, Brazil",harmonics_utide_observations.txt,66,120,0.0514,0.112,8.0,0.022,3.07
+PORTO DE SANTANA - CIA DOCAS DE SANTANA (ESTADO DO AMAPÁ),-0.0617,-51.1683,2026,"Macapa, Amazon River, Amapá, Brazil",harmonics_noaa_amtt.txt,2110,120,0.1803,0.419,18.0,-0.039,3.07
 FUNDEADOURO DE SALINÓPOLIS (ESTADO DO PARÁ),-0.6167,-47.3500,2026,"Salinópolis, Pará, Brazil",harmonics_utide_tidetables.txt,520,120,0.0466,0.092,5.0,-0.022,5.1
 ILHA DOS GUARÁS (ESTADO DO PARÁ),-0.5983,-47.9150,2026,"Ilha dos Guarás, Pará, Brazil",harmonics_utide_tidetables.txt,97,120,0.052,0.117,4.0,0.007,5.36
 ILHA DO MOSQUEIRO (ESTADO DO PARÁ),-1.1650,-48.4750,2024,"Mosqueiro, Pará, Brazil",harmonics_utide_tidetables.txt,95,120,0.0562,0.138,5.0,-0.008,3.2
 PORTO DE BELÉM (ESTADO DO PARÁ),-1.4367,-48.4933,2024,"Belém, Pará, Brazil",harmonics_utide_tidetables.txt,100,120,0.0755,0.196,10.0,0.074,3.1
+PORTO DE BELÉM (ESTADO DO PARÁ),-1.4367,-48.4933,2024,"Belem (Para), Pará, Brazil",harmonics_noaa_amtt.txt,1657,109,0.0737,0.205,23.0,0.105,3.1
 PORTO DE VILA DO CONDE (ESTADO DO PARÁ),-1.5400,-48.7533,2024,"Vila do Conde, Pará, Brazil",harmonics_utide_tidetables.txt,189,120,0.0673,0.173,5.0,0.027,3.1
-ATRACADOURO DE BREVES (ESTADO DO PARÁ),-1.6917,-50.4833,2026,"Breves, Pará, Brazil",harmonics_utide_tidetables.txt,5,120,0.081,0.175,10.0,-0.005,1.38
+ATRACADOURO DE BREVES (ESTADO DO PARÁ),-1.6917,-50.4833,2026,"Breves, Pará, Brazil",harmonics_utide_tidetables.txt,5,120,0.0313,0.065,11.0,-0.015,1.38
 BARRA NORTE - ARCO LAMOSO,1.4350,-49.2217,2026,"Barra Norte - Arco Lamoso, Amapá, Brazil",harmonics_utide_tidetables.txt,1167,120,0.0542,0.121,5.0,0.019,4.2
 SÃO LUÍS (ESTADO DO MARANHÃO),-2.5267,-44.3117,2026,"Sao Luis, Maranhão, Brazil",harmonics_utide_tidetables.txt,462,120,0.0523,0.15,3.0,0.01,5.9
 TERMINAL DA PONTA DA MADEIRA (ESTADO DO MARANHÃO),-2.5650,-44.3783,2026,"Terminal da Ponta da Madeira, Maranhão, Brazil",harmonics_utide_tidetables.txt,4,120,0.0439,0.107,3.0,0.007,5.8
@@ -18,8 +20,11 @@ PORTO DE ITAQUI (ESTADO DO MARANHÃO),-2.5767,-44.3700,2024,"Terminal da Ponta d
 TERMINAL DA ALUMAR (ESTADO DO MARANHÃO),-2.6783,-44.3583,2026,"Terminal da Alumar, Maranhão, Brazil",harmonics_utide_tidetables.txt,552,120,0.0439,0.114,2.0,0.006,6.53
 TERMINAL DA ALUMAR (ESTADO DO MARANHÃO),-2.6783,-44.3633,2024,"Terminal da Alumar, Maranhão, Brazil",harmonics_utide_tidetables.txt,5,120,0.0956,0.24,3.0,0.0,5.9
 PORTO DE TUTÓIA (ESTADO DO MARANHÃO),-2.7650,-42.2750,2026,"Tutóia, Maranhão, Brazil",harmonics_utide_tidetables.txt,0,120,0.0525,0.131,3.0,0.052,3.54
+PORTO DE TUTÓIA (ESTADO DO MARANHÃO),-2.7650,-42.2750,2026,"Tutóia, Baía da, Maranhão, Brazil",harmonics_noaa_amtt.txt,4635,120,0.131,0.414,6.0,0.206,3.54
 PORTO DE LUÍS CORREIA (ESTADO DO PIAUÍ),-2.8533,-41.6433,2025,"Luís Correia, Piauí, Brazil",harmonics_utide_tidetables.txt,82,120,0.015,0.038,1.5,0.012,3.1
+PORTO DE LUÍS CORREIA (ESTADO DO PIAUÍ),-2.8533,-41.6433,2025,"Luís Correia, Maranhão, Brazil",harmonics_noaa_amtt.txt,4223,120,0.1194,0.298,5.0,0.202,3.1
 PORTO DE LUÍS CORREIA (ESTADO DO PIAUÍ),-2.8517,-41.6450,2026,"Luís Correia, Piauí, Brazil",harmonics_utide_tidetables.txt,206,119,0.0157,0.048,2.0,0.012,3.41
+PORTO DE LUÍS CORREIA (ESTADO DO PIAUÍ),-2.8517,-41.6450,2026,"Luís Correia, Maranhão, Brazil",harmonics_noaa_amtt.txt,4264,119,0.1262,0.313,6.0,0.207,3.41
 TERMINAL PORTUÁRIO DO PECÉM (ESTADO DO CEARÁ),-3.5350,-38.7983,2026,"Terminal Portuário do Pecém, Ceará, Brazil",harmonics_utide_tidetables.txt,4,119,0.007,0.017,1.0,-0.003,3.19
 PORTO DE MUCURIPE - FORTALEZA (ESTADO DO CEARÁ),-3.7150,-38.4767,2026,"Mucuripe (Porto), Ceará, Brazil",harmonics_utide_tidetables.txt,84,119,0.017,0.044,1.0,-0.004,3.07
 ARQUIPÉLAGO DE FERNANDO DE NORONHA (BAÍA DE SANTO ANTÔNIO),-3.8333,-32.4033,2026,"Fernando de Noronha, Pernambuco, Brazil",harmonics_utide_tidetables.txt,94,119,0.0188,0.043,1.0,-0.007,2.58
@@ -39,6 +44,7 @@ PORTO DO RECIFE (ESTADO DE PERNAMBUCO),-8.0567,-34.8683,2024,"Recife (Farol), Pe
 PORTO DE SUAPE (ESTADO DE PERNAMBUCO),-8.3933,-34.9600,2026,"Porto de Suape, Pernambuco, Brazil",harmonics_utide_tidetables.txt,621,120,0.0203,0.046,2.0,0.006,2.47
 PORTO DE SUAPE (ESTADO DE PERNAMBUCO),-8.3983,-34.9600,2024,"Porto de Suape, Pernambuco, Brazil",harmonics_utide_tidetables.txt,77,119,0.0411,0.122,2.0,-0.022,2.3
 PORTO DE MACEIÓ (ESTADO DE ALAGOAS),-9.6833,-35.7250,2026,"Maceió (Porto), Alagoas, Brazil",harmonics_utide_tidetables.txt,4,120,0.0058,0.012,2.0,0.022,2.29
+PORTO DE MACEIÓ (ESTADO DE ALAGOAS),-9.6833,-35.7250,2026,"Maceio, Alagoas, Brazil",harmonics_noaa_amtt.txt,2061,120,0.0655,0.143,4.0,0.127,2.29
 TERMINAL MARÍTIMO INÁCIO BARBOSA (ESTADO DE SERGIPE),-10.8433,-36.9183,2026,"Terminal Maritimo Inacio Barbosa, Sergipe, Brazil",harmonics_utide_tidetables.txt,5,120,0.0453,0.092,2.0,-0.128,2.34
 CAPITANIA DOS PORTOS DE SERGIPE (ESTADO DE SERGIPE),-10.9200,-37.0467,2026,"Aracaju (Capitania dos Portos), Sergipe, Brazil",harmonics_att_np207.txt,115,120,0.0301,0.091,4.0,-0.021,2.2
 CAPITANIA DOS PORTOS DE SERGIPE (ESTADO DE SERGIPE),-10.9200,-37.0467,2026,"Aracaju (Capitania dos Portos), Sergipe, Brazil",harmonics_utide_tidetables.txt,115,120,0.0248,0.058,2.0,-0.042,2.2
@@ -48,10 +54,12 @@ PORTO DE ARATU - BASE NAVAL (ESTADO DA BAHIA),-12.7950,-38.4950,2026,"Aratu (Bas
 PORTO DE ARATU - BASE NAVAL (ESTADO DA BAHIA),-12.7967,-38.4917,2024,"Aratu (Base Naval), Bahia, Brazil",harmonics_utide_tidetables.txt,381,120,0.0471,0.119,4.0,0.051,2.7
 PORTO DE SALVADOR (ESTADO DA BAHIA),-12.9733,-38.5167,2026,"Salvador (Porto), Bahia, Brazil",harmonics_ticon4_worldwide.txt,224,120,0.021,0.05,3.0,0.03,2.54
 PORTO DE ILHÉUS - MALHADO (ESTADO DA BAHIA),-14.7800,-39.0267,2026,"Ilhéus (Porto), Bahia, Brazil",harmonics_utide_tidetables.txt,4,120,0.021,0.046,3.0,-0.004,2.11
+PORTO DE ILHÉUS - MALHADO (ESTADO DA BAHIA),-14.7800,-39.0267,2026,"Ilheus, Bahia, Brazil",harmonics_noaa_amtt.txt,2335,120,0.0609,0.148,7.0,0.142,2.11
 TERMINAL DE BARRA DO RIACHO (ESTADO DO ESPÍRITO SANTO),-19.8383,-40.0600,2026,"Barra do Riacho, Espírito Santo, Brazil",harmonics_utide_tidetables.txt,35,120,0.0049,0.01,3.0,0.0,1.52
 TERMINAL DE BARRA DO RIACHO (ESTADO DO ESPÍRITO SANTO),-19.8383,-40.0567,2024,"Barra do Riacho, Espírito Santo, Brazil",harmonics_utide_tidetables.txt,318,119,0.0296,0.057,2.0,0.003,1.6
 PORTO DE TUBARÃO (ESTADO DO ESPÍRITO SANTO),-20.2883,-40.2433,2026,"Tubarão (Porto), Espírito Santo, Brazil",harmonics_utide_tidetables.txt,89,120,0.01,0.022,2.0,-0.022,1.64
 PORTO DE VITÓRIA (ESTADO DO ESPÍRITO SANTO),-20.3217,-40.3367,2026,"Vitória (Porto), Espírito Santo, Brazil",harmonics_utide_tidetables.txt,82,120,0.0056,0.01,2.0,-0.0,1.66
+PORTO DE VITÓRIA (ESTADO DO ESPÍRITO SANTO),-20.3217,-40.3367,2026,"Vitoria, Espírito Santo, Brazil",harmonics_noaa_amtt.txt,2154,120,0.0801,0.181,9.0,0.009,1.66
 PORTO DE VITÓRIA (ESTADO DO ESPÍRITO SANTO),-20.3217,-40.3367,2026,"Vitória, Espírito Santo, Brazil",harmonics_att_np207.txt,4434,120,0.0369,0.086,9.0,-0.006,1.66
 ILHA DA TRINDADE (BRASIL),-20.5067,-29.3083,2025,"Ilha da Trindade, Espírito Santo, Brazil",harmonics_utide_tidetables.txt,251,120,0.0205,0.048,3.0,-0.038,1.25
 ILHA DA TRINDADE (BRASIL),-20.5083,-29.3100,2026,"Ilha da Trindade, Espírito Santo, Brazil",harmonics_utide_tidetables.txt,4,120,0.0181,0.039,2.0,-0.039,1.39
@@ -63,9 +71,11 @@ TERMINAL MARÍTIMO DE IMBETIBA (ESTADO DO RIO DE JANEIRO),-22.3850,-41.7700,2026
 PORTO DO RIO DE JANEIRO - ILHA FISCAL (ESTADO DO RIO DE JANEIRO),-22.8967,-43.1667,2026,"Ilha Fiscal, Rio de Janeiro, Brazil",harmonics_utide_observations.txt,69,131,0.025,0.064,23.0,0.004,1.44
 PORTO DO RIO DE JANEIRO - ILHA FISCAL (ESTADO DO RIO DE JANEIRO),-22.8967,-43.1667,2026,"Ilha Fiscal, Rio de Janeiro, Brazil",harmonics_utide_tidetables.txt,69,118,0.0132,0.038,12.5,0.008,1.44
 PORTO DO FORNO (ESTADO DO RIO DE JANEIRO),-22.9717,-42.0133,2024,"Cabo Frio, Rio de Janeiro, Brazil",harmonics_att_np207.txt,97,119,0.0554,0.116,15.0,-0.014,1.3
+PORTO DO FORNO (ESTADO DO RIO DE JANEIRO),-22.9717,-42.0133,2024,"Cabo Frio, Rio de Janeiro, Brazil",harmonics_noaa_amtt.txt,97,119,0.0611,0.154,15.0,0.056,1.3
 PORTO DO FORNO (ESTADO DO RIO DE JANEIRO),-22.9717,-42.0133,2024,"Arraial do Cabo (Porto do Forno), Rio de Janeiro, Brazil",harmonics_utide_tidetables.txt,97,119,0.0477,0.114,18.0,0.024,1.3
 PORTO DE ITAGUAÍ (ESTADO DO RIO DE JANEIRO),-22.9317,-43.8417,2026,"Itaguaí, Rio de Janeiro, Brazil",harmonics_utide_tidetables.txt,5,164,0.0642,0.157,16.0,-0.003,1.76
 PORTO DO FORNO (ESTADO DO RIO DE JANEIRO),-22.9733,-42.0133,2026,"Cabo Frio, Rio de Janeiro, Brazil",harmonics_att_np207.txt,97,112,0.0523,0.155,21.0,-0.045,1.28
+PORTO DO FORNO (ESTADO DO RIO DE JANEIRO),-22.9733,-42.0133,2026,"Cabo Frio, Rio de Janeiro, Brazil",harmonics_noaa_amtt.txt,97,112,0.0534,0.154,21.0,0.024,1.28
 PORTO DO FORNO (ESTADO DO RIO DE JANEIRO),-22.9733,-42.0133,2026,"Arraial do Cabo (Porto do Forno), Rio de Janeiro, Brazil",harmonics_utide_tidetables.txt,97,118,0.0327,0.075,24.0,-0.005,1.28
 TERMINAL DA ILHA GUAÍBA (ESTADO DO RIO DE JANEIRO),-23.0000,-44.0317,2026,"Ilha Guaíba, Rio de Janeiro, Brazil",harmonics_utide_tidetables.txt,106,131,0.0239,0.074,11.0,0.016,1.49
 PORTO DE ANGRA DOS REIS (ESTADO DO RIO DE JANEIRO),-23.0133,-44.3150,2026,"Angra dos Reis, Rio de Janeiro, Brazil",harmonics_utide_tidetables.txt,4,119,0.0149,0.042,11.0,0.012,1.35
@@ -75,9 +85,11 @@ TERMINAL PORTUÁRIO DA PONTA DO FÉLIX (ESTADO DO PARANÁ),-25.4550,-48.6783,202
 BARRA DE PARANAGUÁ - CANAL SUESTE (ESTADO DO PARANÁ),-25.5400,-48.2950,2026,"Ilha do Mel (Canal Sueste), Paraná, Brazil",harmonics_utide_tidetables.txt,186,136,0.1384,0.286,8.5,-0.036,2.13
 BARRA DE PARANAGUÁ - CANAL SUESTE (ESTADO DO PARANÁ),-25.5400,-48.2950,2026,"Encantadas (Ilha do Mel / Canal da Galheta), Paraná, Brazil",harmonics_utide_tidetables.txt,3976,121,0.2054,0.536,17.0,-0.046,2.13
 PORTO DE PARANAGUÁ - CAIS OESTE (ESTADO DO PARANÁ),-25.5017,-48.5317,2026,"Paranaguá (Cais Oeste), Paraná, Brazil",harmonics_utide_tidetables.txt,589,158,0.0768,0.226,12.0,-0.014,2.39
+PORTO DE PARANAGUÁ - CAIS OESTE (ESTADO DO PARANÁ),-25.5017,-48.5317,2026,"Paranaguá, Paraná, Brazil",harmonics_noaa_amtt.txt,3554,78,0.2307,0.489,30.0,0.009,2.39
 BARRA DE PARANAGUÁ - CANAL DA GALHETA (ESTADO DO PARANÁ),-25.5667,-48.3167,2026,"Encantadas (Ilha do Mel / Canal da Galheta), Paraná, Brazil",harmonics_utide_tidetables.txt,383,132,0.0392,0.101,11.5,-0.011,1.59
 BARRA DE PARANAGUÁ - CANAL DA GALHETA (ESTADO DO PARANÁ),-25.5667,-48.3167,2026,"Ilha do Mel (Canal Sueste), Paraná, Brazil",harmonics_utide_tidetables.txt,3821,123,0.1086,0.308,18.0,-0.002,1.59
 PORTO DE PARANAGUÁ - CAIS OESTE (ESTADO DO PARANÁ),-25.5017,-48.5250,2024,"Paranaguá (Cais Oeste), Paraná, Brazil",harmonics_utide_tidetables.txt,84,143,0.0813,0.208,19.0,0.002,2.3
+PORTO DE PARANAGUÁ - CAIS OESTE (ESTADO DO PARANÁ),-25.5017,-48.5250,2024,"Paranaguá, Paraná, Brazil",harmonics_noaa_amtt.txt,3088,75,0.1943,0.531,28.0,0.011,2.3
 PORTO DE SÃO FRANCISCO DO SUL (ESTADO DE SANTA CATARINA),-26.2450,-48.6417,2026,"São Francisco do Sul (Clube Náutico Cruzeiro do Sul), Santa Catarina, Brazil",harmonics_utide_tidetables.txt,139,159,0.0819,0.228,10.0,0.012,2.07
 PORTO DE SÃO FRANCISCO DO SUL (ESTADO DE SANTA CATARINA),-26.2450,-48.6400,2024,"São Francisco do Sul (Clube Náutico Cruzeiro do Sul), Santa Catarina, Brazil",harmonics_utide_tidetables.txt,122,157,0.1023,0.308,15.0,-0.038,2.0
 PORTO DE ITAJAÍ (ESTADO DE SANTA CATARINA),-26.9067,-48.6483,2025,"Itajaí, Santa Catarina, Brazil",harmonics_utide_tidetables.txt,363,130,0.0248,0.083,10.0,-0.013,1.14
@@ -88,7 +100,7 @@ PORTO DE IMBITUBA (ESTADO DE SANTA CATARINA),-28.2333,-48.6500,2026,"Imbituba, S
 PORTO DE IMBITUBA (ESTADO DE SANTA CATARINA),-28.2300,-48.6500,2024,"Imbituba, Santa Catarina, Brazil",harmonics_utide_tidetables.txt,121,121,0.0427,0.101,25.0,-0.011,1.0
 PORTO DO RIO GRANDE (ESTADO DO RIO GRANDE DO SUL),-32.1383,-52.1033,2026,"Rio Grande (Industrial Tamandaré), Rio Grande do Sul, Brazil",harmonics_utide_tidetables.txt,49,197,0.0157,0.04,11.0,0.0,0.7
 FUNDEADOURO DA ESTAÇÃO ANTÁRTICA COMANDANTE FERRAZ,-62.0850,-58.3950,2026,"Estação Antártica Comandante Ferraz, Antártica, Brazil",harmonics_utide_tidetables.txt,172,117,0.0371,0.09,7.0,-0.01,2.11
-FUNDEADOURO DA ESTAÇÃO ANTÁRTICA COMANDANTE FERRAZ,-62.0850,-58.3950,2026,"Admiralty Bay, Antarctica",harmonics_noaa_amtt.txt,3901,82,0.2,0.497,24.5,0.323,2.11
+FUNDEADOURO DA ESTAÇÃO ANTÁRTICA COMANDANTE FERRAZ,-62.0850,-58.3950,2026,"Admiralty Bay, Antarctica",harmonics_noaa_amtt.txt,3901,99,0.1856,0.388,15.0,0.338,2.11
 ILHA DO MOSQUEIRO (ESTADO DO PARÁ),-1.1650,-48.4733,2026,"Mosqueiro, Pará, Brazil",harmonics_utide_tidetables.txt,102,119,0.033,0.083,5.0,0.003,3.68
 PORTO DE BELÉM (ESTADO DO PARÁ),-1.3967,-48.4933,2026,"Belém, Pará, Brazil",harmonics_utide_tidetables.txt,4397,120,0.068,0.152,5.5,-0.062,3.23
 PORTO DE VILA DO CONDE (ESTADO DO PARÁ),-1.5383,-48.7533,2026,"Vila do Conde, Pará, Brazil",harmonics_utide_tidetables.txt,5,120,0.057,0.151,5.5,-0.041,3.2

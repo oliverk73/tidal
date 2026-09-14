@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""ACHTUNG (14.09.2026): Die Uebertragungsrechnung dieses Skripts ist ueberholt.
+Am Pruefstand (py/noaa_pruefstand.py, 1133 Saetze mit amtlicher Wahrheit) gemessen:
+Faktor CAL 1.10 macht alle Amplituden ~10 % zu gross, der Springhub stand als
+92/8-Perzentil (S2 halb so gross), cptt/amtt kennen keine Buchzonen, der Bezugssatz
+wird per Namens-Teilstring gesucht. Die Saetze wurden mit py/noaa_neu_uebertragen.py
+neu uebertragen (Kern: noaa_pruefstand.uebertragen). NICHT erneut laufen lassen --
+es wuerde die Datei mit der alten Rechnung ueberschreiben.
+"""
 """NOAA 'Tide Tables Central & Western Pacific + Indian Ocean' (2018) Table 2
    subordinate stations -> XTide harmonics (C&GS/NOS difference transfer).
 
@@ -560,6 +568,7 @@ def _live_pts():
     return pts
 
 def main():
+    raise SystemExit('Ueberholt, siehe Kopf dieses Skripts (py/noaa_neu_uebertragen.py).')
     full = json.load(open(FULL))
     if REGIONS == ['ALL']:
         # Build-all (Oliver 2026-07-02): ALLE Nicht-Referenz-Zeilen beider
