@@ -37086,45 +37086,47 @@ x 0 0
 # note: 20260913 S2/K2 x 1.57 auf den Springhub des Buchs (eutt-353); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.619. Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sfax, Tunisia [harmonics_att_np208.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (1) 4.8 -> 4.4 %, Tunesien-Meri.
 Gabès, Tunisia
 +01:00 :Africa/Tunis
 1.3106 meters
-J1              0.0012  345.29
-K1              0.0225  22.88
-K2              0.1046  141.07
-L2              0.0112  117.66
-M1              0.0012  60.78
-M2              0.5189  110.56
 x 0 0
-M4              0.0037  128.11
+K1              0.0225  21.88
+K2              0.0932  139.77
 x 0 0
 x 0 0
-N2              0.0773  103.45
-x 0 0
-O1              0.0100  98.67
-x 0 0
-P1              0.0075  28.57
-Q1              0.0025  111.57
-x 0 0
-R2              0.0025  139.86
-x 0 0
-S2              0.3826  138.75
-x 0 0
-x 0 0
-T2              0.0200  137.64
-LDA2            0.0037  123.65
-MU2             0.0125  82.36
-NU2             0.0150  104.36
+M2              0.4716  111.56
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0125  120.31
+N2              0.0896  96.44
+x 0 0
+O1              0.0112  97.67
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0440  218.01
+x 0 0
+x 0 0
+S2              0.3452  139.75
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
@@ -37280,45 +37282,47 @@ x 0 0
 # note: 20260913 S2/K2 x 1.59 auf den Springhub des Buchs (eutt-355); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.645. Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sfax, Tunisia [harmonics_att_np208.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit 5.9 -> 3.8 %, Tunesien-Meridian als Buchf.
 Hawmat As Suq, Tunisia
 +01:00 :Africa/Tunis
 1.0668 meters
-J1              0.0008  354.38
-K1              0.0146  31.66
-K2              0.0707  158.61
-L2              0.0073  134.88
-M1              0.0008  69.23
-M2              0.3366  127.46
 x 0 0
-M4              0.0024  161.93
+K1              0.0146  30.66
+K2              0.0621  157.31
 x 0 0
 x 0 0
-N2              0.0502  120.04
-x 0 0
-O1              0.0065  106.81
-x 0 0
-P1              0.0049  37.29
-Q1              0.0016  119.38
-x 0 0
-R2              0.0016  157.38
-x 0 0
-S2              0.2585  156.25
-x 0 0
-x 0 0
-T2              0.0129  155.12
-LDA2            0.0024  140.83
-MU2             0.0081  98.68
-NU2             0.0097  121.00
+M2              0.3059  128.46
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0081  154.71
+N2              0.0581  113.03
+x 0 0
+O1              0.0073  105.81
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0440  218.03
+x 0 0
+x 0 0
+S2              0.2301  157.25
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
 x 0 0
 x 0 0
 x 0 0
