@@ -101,6 +101,12 @@ RICHTIG = {
 # unabhaengigen Nachbarn (Puerto de Hierro/ATT, Isla Tercera, Rio Pedernales)
 # stimmt 67 30' W.
 ZONE_BUCHFEHLER = {('ectt', no): -4.5 for no in (4929, 4931, 4933, 4937, 4939)}
+# eutt 2020 S. 172: der Tunesien-Block "on Sfax" steht unter "Time meridian, 0°", die
+# Sfax-Vorhersage (Table 1, S. 24) rechnet mit 15° E. Gemessen an der amtlichen Wahrheit
+# Houmt Souk (ATT np208, 0 km) stimmt 15° E: mit Buchzone 0 lag die Uebertragung +51 min,
+# ohne Zonendifferenz -11 min (Pruefstand 14.09.2026). Die Algerien-/Tunis-Zeilen "on
+# Gibraltar" im selben Block (339-349) sind ohne Wahrheit und bleiben unberuehrt.
+ZONE_BUCHFEHLER.update({('eutt', no): 1.0 for no in (353, 355, 357)})
 BAND_JSON = {'ectt': 'ectt2020', 'wctt': 'wctt2020', 'cptt': 'cptt2018', 'eutt': 'eutt2020'}
 PAT = re.compile(r'transfer from (.+?) \(no\.(\d+)\)\. M2=[\d.]+ S2=[\d.]+ k=[\d.]+ dt=[-+]?\d+min\.?')
 
