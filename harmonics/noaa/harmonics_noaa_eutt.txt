@@ -15201,52 +15201,59 @@ x 0 0
 # note: 20260913 S2/K2 x 2.24 auf den Springhub des Buchs (eutt-5); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Takoradi, Ghana [harmonics_ticon4_worldwide.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: ein Nachbar unter 10 km.
 Trinidade, Ilha da, Espírito Santo, Brazil
 +00:00 :America/Sao_Paulo
 0.6096 meters
-J1              0.0072  16.91
-K1              0.1217  353.63
-K2              0.0459  137.05
-L2              0.0102  123.06
-M1              0.0052  288.15
-M2              0.4624  113.71
-M3              0.0034  120.33
-M4              0.0079  324.25
-M6              0.0027  99.99
-M8              0.0036  172.94
-N2              0.1018  109.22
+J1              0.0069  48.08
+K1              0.1165  23.71
+K2              0.0447  197.22
+L2              0.0097  182.11
+M1              0.0050  317.15
+M2              0.4430  171.68
+M3              0.0033  207.29
+M4              0.0076  80.19
+M6              0.0026  273.89
+M8              0.0035  44.81
+N2              0.0975  166.10
+2N2             0.0180  148.46
+O1              0.0207  352.49
+OO1             0.0058  65.03
+P1              0.0332  20.48
+Q1              0.0031  141.86
+2Q1             0.0017  113.74
+R2              0.0021  218.73
+S1              0.0049  154.30
+S2              0.1695  201.90
+S4              0.0014  302.33
 x 0 0
-O1              0.0216  324.61
-OO1             0.0061  32.76
-P1              0.0346  350.56
-Q1              0.0032  115.06
+T2              0.0107  199.59
+LDA2            0.0017  201.83
+MU2             0.0189  134.59
+NU2             0.0179  170.38
+RHO1            0.0008  154.71
 x 0 0
-R2              0.0022  158.65
-S1              0.0051  124.30
-S2              0.1738  141.90
-S4              0.0015  182.33
 x 0 0
-T2              0.0112  139.67
-LDA2            0.0018  142.92
-MU2             0.0198  78.66
-NU2             0.0187  113.36
-RHO1            0.0009  127.76
+MN4             0.0043  22.22
+MS4             0.0053  163.87
+2SM2            0.0005  347.10
+MF              0.0173  355.66
+MSF             0.0058  66.60
+MM              0.0097  335.70
+SA              0.0585  278.50
+SSA             0.0608  79.01
 x 0 0
 x 0 0
-MN4             0.0045  267.37
-MS4             0.0056  45.90
 x 0 0
-MF              0.0173  353.46
-MSF             0.0058  64.57
-MM              0.0097  334.61
-SA              0.0585  278.42
-SSA             0.0608  78.84
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0005  10.90
 x 0 0
 x 0 0
 x 0 0
+2MS6            0.0026  331.35
 x 0 0
 x 0 0
 x 0 0
@@ -15267,14 +15274,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  57.59
 x 0 0
+EPS2            0.0043  106.74
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0007  359.45
 x 0 0
-EPS2            0.0045  51.89
 x 0 0
 x 0 0
 x 0 0
@@ -15288,13 +15295,13 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0007  339.35
+SIG1            0.0020  307.94
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0007  249.35
-SIG1            0.0021  282.09
 x 0 0
 x 0 0
 x 0 0
@@ -15310,15 +15317,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+N4              0.0012  313.55
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0013  199.79
-x 0 0
-x 0 0
-x 0 0
+2MO5            0.0005  145.42
 x 0 0
 x 0 0
 x 0 0
@@ -31007,36 +31009,38 @@ x 0 0
 # note: 20260913 S2/K2 x 1.84 auf den Springhub des Buchs (eutt-225); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.297. Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Casablanca, Morocco [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (3) und FES.
 Shenge Point, Sherbro River, Sierra Leone
 +00:00 :Africa/Freetown
 1.5850 meters
-J1              0.0054  356.40
-K1              0.0760  309.86
-K2              0.1046  247.71
-L2              0.0304  237.73
-M1              0.0043  262.91
-M2              1.0971  227.88
+J1              0.0050  356.40
+K1              0.0700  309.86
+K2              0.0884  247.71
+L2              0.0280  237.73
+M1              0.0040  262.91
+M2              1.0100  227.88
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.2129  218.03
+N2              0.1960  218.03
+2N2             0.0260  208.18
+O1              0.0600  216.02
+OO1             0.0030  43.69
+P1              0.0230  302.79
+Q1              0.0120  169.47
+2Q1             0.0020  122.93
+R2              0.0030  246.98
 x 0 0
-O1              0.0652  216.02
-OO1             0.0033  43.69
-P1              0.0250  302.79
-Q1              0.0130  169.47
-x 0 0
-R2              0.0033  246.98
-x 0 0
-S2              0.3829  246.25
+S2              0.3237  246.25
 x 0 0
 x 0 0
-T2              0.0239  245.52
-LDA2            0.0076  236.40
-MU2             0.0261  209.51
-NU2             0.0413  219.36
-RHO1            0.0022  175.80
+T2              0.0220  245.52
+LDA2            0.0070  236.40
+MU2             0.0240  209.51
+NU2             0.0380  219.35
+RHO1            0.0020  175.80
 x 0 0
 x 0 0
 x 0 0
@@ -32179,36 +32183,38 @@ x 0 0
 # note: 20260913 S2/K2 x 1.84 auf den Springhub des Buchs (eutt-237); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.318. Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Casablanca, Morocco [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
 Pepel, Sierra Leone
 +00:00 :Africa/Freetown
 1.6764 meters
-J1              0.0057  9.78
-K1              0.0803  322.77
-K2              0.1094  273.53
-L2              0.0321  263.07
-M1              0.0046  275.35
-M2              1.1589  252.76
+J1              0.0053  9.78
+K1              0.0739  322.77
+K2              0.0926  273.54
+L2              0.0296  263.07
+M1              0.0042  275.35
+M2              1.0669  252.76
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.2249  242.44
+N2              0.2070  242.44
+2N2             0.0275  232.13
+O1              0.0634  227.99
+OO1             0.0032  57.55
+P1              0.0243  315.63
+Q1              0.0127  180.97
+2Q1             0.0021  133.96
+R2              0.0032  272.77
 x 0 0
-O1              0.0688  227.99
-OO1             0.0034  57.55
-P1              0.0264  315.63
-Q1              0.0138  180.97
-x 0 0
-R2              0.0034  272.77
-x 0 0
-S2              0.4008  272.00
+S2              0.3392  272.00
 x 0 0
 x 0 0
-T2              0.0252  271.23
-LDA2            0.0080  261.68
-MU2             0.0275  233.51
-NU2             0.0436  243.83
-RHO1            0.0023  187.36
+T2              0.0232  271.23
+LDA2            0.0074  261.69
+MU2             0.0254  233.51
+NU2             0.0401  243.83
+RHO1            0.0021  187.36
 x 0 0
 x 0 0
 x 0 0
@@ -32373,45 +32379,47 @@ x 0 0
 # note: 20260913 S2/K2 x 1.72 auf den Springhub des Buchs (eutt-239); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.309. Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Casablanca, Morocco [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
 Bôlintan (Île Tana), Guinea
 +00:00 :Africa/Conakry
 2.1031 meters
-J1              0.0072  1.21
-K1              0.1007  314.49
-K2              0.0886  256.99
-L2              0.0403  246.83
-M1              0.0058  267.38
-M2              1.4524  236.82
+J1              0.0066  1.21
+K1              0.0927  314.50
+K2              0.0800  256.99
+L2              0.0371  246.83
+M1              0.0053  267.38
+M2              1.3372  236.81
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.2819  226.80
+N2              0.2595  226.80
+2N2             0.0344  216.78
+O1              0.0794  220.32
+OO1             0.0040  48.67
+P1              0.0305  307.40
+Q1              0.0159  173.60
+2Q1             0.0027  126.89
+R2              0.0040  256.25
 x 0 0
-O1              0.0863  220.32
-OO1             0.0043  48.67
-P1              0.0331  307.41
-Q1              0.0173  173.60
-x 0 0
-R2              0.0043  256.24
-x 0 0
-S2              0.3244  255.50
-x 0 0
-x 0 0
-T2              0.0316  254.76
-LDA2            0.0101  245.48
-MU2             0.0345  218.13
-NU2             0.0546  228.15
-RHO1            0.0029  179.95
+S2              0.2929  255.50
 x 0 0
 x 0 0
+T2              0.0291  254.75
+LDA2            0.0093  245.48
+MU2             0.0318  218.13
+NU2             0.0503  228.15
+RHO1            0.0027  179.95
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0900  220.74
+x 0 0
+x 0 0
+SA              0.0900  220.75
 x 0 0
 x 0 0
 x 0 0
@@ -71027,41 +71035,43 @@ x 0 0
 # note: 20260913 S2/K2 x 2.25 auf den Springhub des Buchs (eutt-1063); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Liverpool (Gladstone Dock), England, United Kingdom [harmoni,
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
 St. Anne's (River Ribble), England, United Kingdom
 +00:00 :Europe/London
 5.3645 meters
 x 0 0
-K1              0.1196  192.05
-K2              0.3875  6.26
-L2              0.1307  334.77
+K1              0.1088  192.05
+K2              0.3239  6.26
+L2              0.1189  334.77
 x 0 0
-M2              2.9823  323.08
-M3              0.0337  302.64
-M4              0.2327  206.65
-M6              0.0537  353.60
+M2              2.7133  323.08
+M3              0.0307  302.64
+M4              0.2117  206.65
+M6              0.0488  353.60
 x 0 0
-N2              0.5690  300.39
+N2              0.5177  300.39
+2N2             0.0624  279.16
+O1              0.1022  42.03
 x 0 0
-O1              0.1123  42.03
-x 0 0
-P1              0.0428  183.82
-Q1              0.0345  345.10
+P1              0.0390  183.82
+Q1              0.0314  345.11
 x 0 0
 x 0 0
 x 0 0
-S2              1.3441  7.28
-S4              0.0198  288.39
+S2              1.1239  7.28
+S4              0.0181  288.39
 x 0 0
-T2              0.0538  359.48
-LDA2            0.0608  324.31
-MU2             0.0431  34.57
-NU2             0.1306  299.17
+T2              0.0489  359.48
+LDA2            0.0553  324.31
+MU2             0.0393  34.57
+NU2             0.1188  299.17
 x 0 0
-MK3             0.0203  46.15
-x 0 0
-MN4             0.0927  179.87
-MS4             0.1410  250.07
-x 0 0
+MK3             0.0185  46.15
+2MK3            0.0152  263.54
+MN4             0.0843  179.87
+MS4             0.1283  250.07
+2SM2            0.0308  217.41
 MF              0.0202  226.10
 x 0 0
 x 0 0
@@ -71076,11 +71086,14 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+2MN6            0.0286  331.38
+2MS6            0.0465  36.31
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+3MS2            0.0150  213.40
 x 0 0
 x 0 0
 x 0 0
@@ -71094,22 +71107,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0377  248.89
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0415  248.89
 x 0 0
 x 0 0
 x 0 0
+MPS2            0.0180  329.41
 x 0 0
 x 0 0
+MSN2            0.0265  196.98
+MSN6            0.0154  23.26
+NLK2            0.0276  265.38
 x 0 0
-MPS2            0.0198  329.41
 x 0 0
 x 0 0
-MSN2            0.0291  196.98
-MSN6            0.0169  23.26
-NLK2            0.0304  265.38
 x 0 0
 x 0 0
 x 0 0
@@ -71118,30 +71131,31 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+SK3             0.0144  94.13
 x 0 0
+SN4             0.0192  221.07
 x 0 0
 x 0 0
-SK3             0.0158  94.13
 x 0 0
-SN4             0.0211  221.07
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0144  215.46
 x 0 0
 x 0 0
 x 0 0
-SKM2            0.0158  215.46
 x 0 0
 x 0 0
 x 0 0
+2MLS4           0.0195  7.29
 x 0 0
+N4              0.0191  154.24
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0210  154.24
 x 0 0
 x 0 0
 x 0 0
@@ -71181,11 +71195,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MSP2            0.0159  265.80
+MSP2            0.0145  265.80
 x 0 0
 x 0 0
 x 0 0
@@ -78343,121 +78353,123 @@ x 0 0
 # note: 20260913 S2/K2 x 2.67 auf den Springhub des Buchs (eutt-1157); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dublin Bar, Ireland [harmonics_utide_tidetables.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
 Dundalk (pile light), Ireland
 +00:00 :Europe/Dublin
 2.6822 meters
-J1              0.0047  300.01
-K1              0.1290  189.86
-K2              0.2109  2.77
-L2              0.1356  12.25
+J1              0.0067  303.38
+K1              0.1129  188.36
+K2              0.1244  358.39
+L2              0.0847  10.26
 x 0 0
-M2              1.8253  326.93
-M3              0.0191  237.90
-M4              0.0618  26.78
-M6              0.0060  100.81
-M8              0.0021  302.35
-N2              0.3232  303.17
+M2              1.5388  326.94
+M3              0.0153  242.41
+M4              0.0536  26.15
+M6              0.0035  103.20
+M8              0.0024  298.45
+N2              0.2991  300.51
+2N2             0.0310  287.80
+O1              0.1252  39.62
+OO1             0.0032  50.22
+P1              0.0362  191.34
+Q1              0.0402  342.91
+2Q1             0.0053  118.66
+R2              0.0025  336.47
 x 0 0
-O1              0.1576  50.43
-OO1             0.0044  26.21
-P1              0.0410  201.01
-Q1              0.0492  0.44
+S2              0.4326  0.90
+S4              0.0044  22.73
 x 0 0
-R2              0.0102  55.84
+T2              0.0299  0.16
+LDA2            0.0136  58.82
+MU2             0.1068  152.96
+NU2             0.0676  305.67
+RHO1            0.0114  15.25
+MK3             0.0013  62.10
 x 0 0
-S2              0.7375  0.21
-S4              0.0046  33.50
+MN4             0.0218  1.55
+MS4             0.0340  55.93
+2SM2            0.0695  204.73
+MF              0.0193  230.25
+MSF             0.1728  210.75
+MM              0.0107  133.94
 x 0 0
-T2              0.0275  356.78
-LDA2            0.0258  291.53
-MU2             0.1345  154.88
-NU2             0.0954  279.66
-RHO1            0.0174  354.30
-MK3             0.0070  161.66
+SSA             0.0545  187.83
+SA-IOS          0.0837  301.60
 x 0 0
-MN4             0.0223  3.90
-MS4             0.0405  60.54
-x 0 0
-MF              0.0501  277.07
-MSF             0.1374  204.35
-MM              0.0559  138.30
-x 0 0
-SSA             0.0448  179.85
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+S1-IOS          0.0696  197.99
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0006  67.50
+2MK6            0.0004  167.58
 x 0 0
+2MN6            0.0030  82.12
+2MS6            0.0013  93.61
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+2SK5            0.0004  138.75
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-ALP1            0.0070  43.26
-BET1            0.0009  10.88
-CHI1            0.0112  92.66
-H1              0.0489  308.40
-H2              0.0393  162.82
+3MS4            0.0151  159.21
 x 0 0
-ETA2            0.0078  246.84
+ALP1            0.0029  316.09
+BET1            0.0021  122.23
+CHI1            0.0077  98.36
+H1              0.0074  337.13
+H2              0.0033  66.70
 x 0 0
-UPS1            0.0020  348.84
+ETA2            0.0056  317.00
 x 0 0
-x 0 0
-MK4             0.0090  61.78
-MKS2            0.0298  79.19
-x 0 0
-EPS2            0.0047  150.82
-MO3             0.0050  44.46
-x 0 0
-TAU1            0.0605  228.87
-x 0 0
-MSK6            0.0008  102.16
-MSM             0.0295  66.67
+UPS1            0.0009  80.65
 x 0 0
 x 0 0
+MK4             0.0076  61.72
+MKS2            0.0124  165.40
 x 0 0
-NO1             0.0052  154.67
-OP2             0.0515  75.64
+EPS2            0.0078  130.40
+MO3             0.0028  27.55
 x 0 0
-PHI1            0.0109  249.43
+TAU1            0.0412  280.72
 x 0 0
-PI1             0.0121  330.61
-x 0 0
-PSI1            0.0138  47.63
-x 0 0
-x 0 0
-SIG1            0.0078  248.23
-SK3             0.0055  120.61
-x 0 0
-SN4             0.0061  53.17
-x 0 0
-SO1             0.0162  252.44
-SO3             0.0093  60.57
-THE1            0.0032  328.74
+MSK6            0.0004  87.31
+MSM             0.0253  150.97
 x 0 0
 x 0 0
 x 0 0
+NO1             0.0079  139.21
+OP2             0.0132  96.42
 x 0 0
-SKM2            0.0203  296.86
+PHI1            0.0035  204.30
+x 0 0
+PI1             0.0108  8.48
+x 0 0
+PSI1            0.0087  55.94
+x 0 0
+x 0 0
+SIG1            0.0095  268.26
+SK3             0.0050  114.78
+x 0 0
+SN4             0.0043  40.02
+x 0 0
+SO1             0.0092  13.35
+SO3             0.0053  12.86
+THE1            0.0027  207.73
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+SKM2            0.0131  301.62
 x 0 0
-NO3             0.0031  31.90
 x 0 0
 x 0 0
-N4              0.0046  257.24
+x 0 0
+x 0 0
+NO3             0.0010  310.10
+x 0 0
+x 0 0
+N4              0.0033  260.60
 x 0 0
 x 0 0
 x 0 0
@@ -110044,40 +110056,42 @@ x 0 0
 # note: 20260913 S2/K2 x 2.25 auf den Springhub des Buchs (eutt-1733); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Port Kem, Russia [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (2) und FES.
 Sosnovaya Bay, Solovetski Island, Russia
 +03:00 :Europe/Moscow
 1.0973 meters
 x 0 0
-K1              0.0748  109.25
-K2              0.0315  201.30
-L2              0.0187  193.49
+K1              0.0680  109.25
+K2              0.0390  201.30
+L2              0.0170  193.49
 x 0 0
-M2              0.6443  150.49
+M2              0.5860  150.48
 x 0 0
-M4              0.0528  234.96
-x 0 0
-x 0 0
-N2              0.1297  107.47
-x 0 0
-O1              0.0066  352.24
-x 0 0
-P1              0.0253  100.45
-Q1              0.0110  212.22
-x 0 0
-R2              0.0011  199.40
-x 0 0
-S2              0.1165  197.50
+M4              0.0480  234.97
 x 0 0
 x 0 0
-T2              0.0088  195.60
-LDA2            0.0044  172.29
-MU2             0.0154  103.46
-NU2             0.0253  113.28
+N2              0.1180  107.47
+2N2             0.0160  64.47
+O1              0.0060  352.23
+x 0 0
+P1              0.0230  100.45
+Q1              0.0100  212.22
+x 0 0
+R2              0.0010  199.40
+x 0 0
+S2              0.1440  197.50
+x 0 0
+x 0 0
+T2              0.0080  195.60
+LDA2            0.0040  172.29
+MU2             0.0140  103.47
+NU2             0.0230  113.27
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0264  238.99
+MS4             0.0240  238.98
 x 0 0
 x 0 0
 x 0 0
@@ -112424,40 +112438,42 @@ x 0 0
 # note: 20260913 S2/K2 x 2.24 auf den Springhub des Buchs (eutt-1757); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Port Kem, Russia [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
 Kuya River entrance, Russia
 +03:00 :Europe/Moscow
 0.9144 meters
 x 0 0
-K1              0.0620  111.26
-K2              0.0268  205.31
-L2              0.0155  197.43
+K1              0.0564  111.26
+K2              0.0334  205.31
+L2              0.0141  197.43
 x 0 0
-M2              0.5343  154.35
+M2              0.4859  154.35
 x 0 0
-M4              0.0438  242.69
-x 0 0
-x 0 0
-N2              0.1076  111.27
-x 0 0
-O1              0.0055  354.09
-x 0 0
-P1              0.0210  102.44
-Q1              0.0091  214.01
-x 0 0
-R2              0.0009  203.41
-x 0 0
-S2              0.0993  201.50
+M4              0.0398  242.70
 x 0 0
 x 0 0
-T2              0.0073  199.59
-LDA2            0.0036  176.21
-MU2             0.0128  107.19
-NU2             0.0210  117.08
+N2              0.0979  111.27
+2N2             0.0133  68.18
+O1              0.0050  354.09
+x 0 0
+P1              0.0191  102.44
+Q1              0.0083  214.01
+x 0 0
+R2              0.0008  203.41
+x 0 0
+S2              0.1234  201.50
+x 0 0
+x 0 0
+T2              0.0066  199.59
+LDA2            0.0033  176.22
+MU2             0.0116  107.20
+NU2             0.0191  117.08
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0219  246.85
+MS4             0.0199  246.85
 x 0 0
 x 0 0
 x 0 0
@@ -112622,40 +112638,42 @@ x 0 0
 # note: 20260913 S2/K2 x 2.21 auf den Springhub des Buchs (eutt-1759); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.26. Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Port Kem, Russia [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
 Kerets Point, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
 x 0 0
-K1              0.0839  99.98
-K2              0.0354  182.75
-L2              0.0210  175.28
+K1              0.0763  99.98
+K2              0.0446  182.75
+L2              0.0191  175.28
 x 0 0
-M2              0.7228  132.61
+M2              0.6575  132.61
 x 0 0
-M4              0.0592  199.22
-x 0 0
-x 0 0
-N2              0.1456  89.94
-x 0 0
-O1              0.0074  343.64
-x 0 0
-P1              0.0284  91.22
-Q1              0.0123  203.96
-x 0 0
-R2              0.0012  180.88
-x 0 0
-S2              0.1309  179.00
+M4              0.0539  199.22
 x 0 0
 x 0 0
-T2              0.0099  177.12
-LDA2            0.0049  154.12
-MU2             0.0173  86.22
-NU2             0.0284  95.70
+N2              0.1324  89.94
+2N2             0.0180  47.26
+O1              0.0067  343.63
+x 0 0
+P1              0.0258  91.22
+Q1              0.0112  203.96
+x 0 0
+R2              0.0011  180.88
+x 0 0
+S2              0.1646  179.00
+x 0 0
+x 0 0
+T2              0.0090  177.12
+LDA2            0.0045  154.13
+MU2             0.0157  86.22
+NU2             0.0258  95.69
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0296  202.61
+MS4             0.0269  202.61
 x 0 0
 x 0 0
 x 0 0
@@ -120335,40 +120353,42 @@ x 0 0
 # note: 20260913 S2/K2 x 2.05 auf den Springhub des Buchs (eutt-1837); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.258. Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
 Pukhovy Bay, Russia
 +03:00 :Europe/Moscow
 0.5486 meters
-J1              0.0006  241.88
-K1              0.0373  323.55
-K2              0.0234  297.90
-L2              0.0102  278.45
-M1              0.0006  45.92
-M2              0.3281  245.81
+J1              0.0005  241.88
+K1              0.0351  323.55
+K2              0.0230  297.90
+L2              0.0096  278.45
+M1              0.0005  45.91
+M2              0.3086  245.81
 x 0 0
-M4              0.0076  25.63
+M4              0.0072  25.63
 x 0 0
 x 0 0
-N2              0.0718  213.18
-x 0 0
-O1              0.0071  128.26
+N2              0.0675  213.18
+2N2             0.0090  180.55
+O1              0.0066  128.27
 OO1             0.0003  158.83
-P1              0.0124  335.95
-Q1              0.0071  72.63
-x 0 0
+P1              0.0117  335.95
+Q1              0.0066  72.63
+2Q1             0.0003  291.70
 R2              0.0008  295.95
 x 0 0
-S2              0.0859  294.00
+S2              0.0848  294.00
 x 0 0
 x 0 0
-T2              0.0057  292.05
-LDA2            0.0023  268.17
-MU2             0.0079  197.63
-NU2             0.0138  217.56
+T2              0.0053  292.05
+LDA2            0.0021  268.16
+MU2             0.0074  197.63
+NU2             0.0130  217.56
 RHO1            0.0003  198.92
 x 0 0
 x 0 0
-MN4             0.0028  324.99
-MS4             0.0068  45.81
+MN4             0.0027  324.99
+MS4             0.0064  45.81
 x 0 0
 x 0 0
 x 0 0
@@ -121520,40 +121540,42 @@ x 0 0
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (eutt-1851); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
 Gorbovi Islands, Russia
 +03:00 :Europe/Moscow
 0.4572 meters
-J1              0.0005  252.53
-K1              0.0302  333.83
-K2              0.0186  318.46
-L2              0.0082  298.62
-M1              0.0005  55.82
-M2              0.2656  265.62
+J1              0.0004  252.53
+K1              0.0284  333.83
+K2              0.0184  318.45
+L2              0.0077  298.63
+M1              0.0004  55.82
+M2              0.2498  265.62
 x 0 0
-M4              0.0062  65.24
+M4              0.0058  65.24
 x 0 0
 x 0 0
-N2              0.0581  232.61
-x 0 0
-O1              0.0057  137.79
+N2              0.0547  232.61
+2N2             0.0073  199.61
+O1              0.0054  137.80
 OO1             0.0002  169.86
-P1              0.0101  346.17
-Q1              0.0057  81.78
+P1              0.0095  346.17
+Q1              0.0054  81.79
+2Q1             0.0002  300.48
+R2              0.0006  316.48
 x 0 0
-R2              0.0007  316.48
-x 0 0
-S2              0.0684  314.50
-x 0 0
-x 0 0
-T2              0.0046  312.52
-LDA2            0.0018  288.29
-MU2             0.0064  216.74
-NU2             0.0112  237.04
-RHO1            0.0002  208.13
+S2              0.0678  314.50
 x 0 0
 x 0 0
-MN4             0.0023  4.23
-MS4             0.0055  86.12
+T2              0.0043  312.52
+LDA2            0.0017  288.29
+MU2             0.0060  216.74
+NU2             0.0105  237.05
+RHO1            0.0002  208.12
+x 0 0
+x 0 0
+MN4             0.0022  4.23
+MS4             0.0052  86.12
 x 0 0
 x 0 0
 x 0 0
@@ -126076,45 +126098,47 @@ x 0 0
 # note: 20260913 S2/K2 x 2.31 auf den Springhub des Buchs (eutt-1901); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
 Novyy Port, Obskaya Gulf, Russia
 +03:00 :Asia/Yekaterinburg
 0.3962 meters
-J1              0.0003  236.81
-K1              0.0231  318.66
-K2              0.0263  288.12
-L2              0.0063  268.85
-M1              0.0003  41.20
-M2              0.2031  236.40
+J1              0.0003  205.65
+K1              0.0217  288.58
+K2              0.0230  227.95
+L2              0.0059  209.80
+M1              0.0003  12.21
+M2              0.1910  178.43
 x 0 0
-M4              0.0047  6.79
-x 0 0
-x 0 0
-N2              0.0444  203.94
-x 0 0
-O1              0.0044  123.74
-OO1             0.0002  153.58
-P1              0.0077  331.09
-Q1              0.0044  68.28
-x 0 0
-R2              0.0005  286.19
-x 0 0
-S2              0.0965  284.25
+M4              0.0044  250.85
 x 0 0
 x 0 0
-T2              0.0035  282.31
-LDA2            0.0014  258.59
-MU2             0.0049  188.54
-NU2             0.0086  208.30
-RHO1            0.0002  194.54
+N2              0.0418  147.06
+2N2             0.0056  115.69
+O1              0.0041  95.85
+OO1             0.0002  121.31
+P1              0.0072  301.17
+Q1              0.0041  41.48
+2Q1             0.0002  261.81
+R2              0.0005  226.10
+x 0 0
+S2              0.0848  224.25
 x 0 0
 x 0 0
-MN4             0.0017  306.34
-MS4             0.0042  26.65
+T2              0.0033  222.40
+LDA2            0.0013  199.68
+MU2             0.0046  132.60
+NU2             0.0081  151.27
+RHO1            0.0002  167.60
+x 0 0
+x 0 0
+MN4             0.0016  191.48
+MS4             0.0040  268.68
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0570  325.04
+SA              0.0570  324.95
 x 0 0
 x 0 0
 x 0 0
@@ -126472,45 +126496,47 @@ x 0 0
 # note: 20260913 S2/K2 x 2.05 auf den Springhub des Buchs (eutt-1905); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
 Shirokaya River mouth, Russia
 +03:00 :Asia/Yekaterinburg
 0.3353 meters
-J1              0.0003  173.82
-K1              0.0231  257.87
-K2              0.0139  166.54
-L2              0.0063  149.51
-M1              0.0003  342.61
-M2              0.2031  119.25
+J1              0.0003  142.66
+K1              0.0217  227.79
+K2              0.0138  106.37
+L2              0.0059  90.45
+M1              0.0003  313.62
+M2              0.1910  61.28
 x 0 0
-M4              0.0047  132.50
-x 0 0
-x 0 0
-N2              0.0444  88.99
-x 0 0
-O1              0.0044  67.39
-OO1             0.0002  88.35
-P1              0.0077  270.63
-Q1              0.0044  14.12
-x 0 0
-R2              0.0005  164.77
-x 0 0
-S2              0.0514  163.00
+M4              0.0044  16.57
 x 0 0
 x 0 0
-T2              0.0035  161.23
-LDA2            0.0014  139.54
-MU2             0.0049  75.50
-NU2             0.0086  93.06
-RHO1            0.0002  140.09
+N2              0.0418  32.11
+2N2             0.0056  2.94
+O1              0.0041  39.50
+OO1             0.0002  56.08
+P1              0.0072  240.71
+Q1              0.0041  347.33
+2Q1             0.0002  209.86
+R2              0.0005  104.69
+x 0 0
+S2              0.0508  103.00
 x 0 0
 x 0 0
-MN4             0.0017  74.25
-MS4             0.0042  148.25
+T2              0.0033  101.31
+LDA2            0.0013  80.63
+MU2             0.0046  19.57
+NU2             0.0081  36.03
+RHO1            0.0002  113.15
+x 0 0
+x 0 0
+MN4             0.0016  319.40
+MS4             0.0040  30.28
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0570  324.87
+SA              0.0570  324.79
 x 0 0
 x 0 0
 x 0 0
@@ -127066,45 +127092,47 @@ x 0 0
 # note: 20260913 S2/K2 x 2.25 auf den Springhub des Buchs (eutt-1913); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
+# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
 Cape Minina, Russia
 +03:00 :Asia/Yekaterinburg
 0.4267 meters
-J1              0.0004  192.01
-K1              0.0249  275.42
-K2              0.0256  201.64
-L2              0.0068  183.96
-M1              0.0004  359.53
-M2              0.2187  153.06
+J1              0.0003  160.84
+K1              0.0234  245.33
+K2              0.0230  141.47
+L2              0.0064  124.90
+M1              0.0003  330.53
+M2              0.2057  95.10
 x 0 0
-M4              0.0051  200.13
-x 0 0
-x 0 0
-N2              0.0479  122.17
-x 0 0
-O1              0.0047  83.65
-OO1             0.0002  107.18
-P1              0.0083  288.08
-Q1              0.0047  29.75
-x 0 0
-R2              0.0006  199.82
-x 0 0
-S2              0.0940  198.00
+M4              0.0048  84.19
 x 0 0
 x 0 0
-T2              0.0038  196.18
-LDA2            0.0015  173.91
-MU2             0.0053  108.13
-NU2             0.0092  126.32
-RHO1            0.0002  155.81
+N2              0.0450  65.29
+2N2             0.0060  35.49
+O1              0.0044  55.76
+OO1             0.0002  74.91
+P1              0.0078  258.17
+Q1              0.0044  2.96
+2Q1             0.0002  224.85
+R2              0.0005  139.73
+x 0 0
+S2              0.0848  138.00
 x 0 0
 x 0 0
-MN4             0.0019  141.24
-MS4             0.0045  217.06
+T2              0.0035  136.27
+LDA2            0.0014  115.00
+MU2             0.0050  52.19
+NU2             0.0087  69.30
+RHO1            0.0002  128.86
+x 0 0
+x 0 0
+MN4             0.0018  26.39
+MS4             0.0043  99.10
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0570  324.92
+SA              0.0570  324.83
 x 0 0
 x 0 0
 x 0 0
