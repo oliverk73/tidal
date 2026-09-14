@@ -15195,6 +15195,8 @@ x 0 0
 # admin1_quelle: Ufer 0.1 km
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.80 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Wahrheit 2.81 -> 2.8 %.
+# note: 20260914 Flachwassertiden des Bezugs Lissabon entfernt (Tejo-Obertiden, M4 0.054 m,
+# note: Nachbarn 0.021 m); gegen 5 Nachbarn bis 25 km Kurve 2.8 -> 2.1 %, |HW| 24 -> 12 min.
 Vila Real de Santo António, Portugal
 +01:00 :Europe/Lisbon
 2.0000 meters
@@ -15205,7 +15207,7 @@ L2              0.0335  98.15
 x 0 0
 M2              0.9650  96.32
 M3              0.0042  322.53
-M4              0.0542  284.74
+x 0 0
 x 0 0
 x 0 0
 N2              0.1997  80.19
@@ -15218,7 +15220,7 @@ x 0 0
 R2              0.0051  60.59
 S1              0.0026  260.55
 S2              0.3360  126.00
-S4              0.0034  20.70
+x 0 0
 x 0 0
 T2              0.0185  121.71
 LDA2            0.0142  80.47
@@ -15228,7 +15230,7 @@ RHO1            0.0034  306.23
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0338  323.32
+x 0 0
 x 0 0
 MF              0.0200  102.65
 MSF             0.0090  168.88
@@ -15390,6 +15392,8 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py --zonen.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.67 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Wahrheit 2.91 -> 1.67 %.
+# note: 20260914 Flachwassertiden des Bezugs Lissabon entfernt (Tejo-Obertiden, M4 0.054 m,
+# note: Nachbarn 0.021 m); gegen 5 Nachbarn bis 25 km Kurve 2.7 -> 2.1 %, |HW| 6 -> 7 min.
 Ayamonte, Spain
 +01:00 :Europe/Madrid
 1.7500 meters
@@ -15400,7 +15404,7 @@ L2              0.0335  89.04
 x 0 0
 M2              0.9633  87.39
 M3              0.0042  309.12
-M4              0.0541  266.87
+x 0 0
 x 0 0
 x 0 0
 N2              0.1994  71.42
@@ -15413,7 +15417,7 @@ x 0 0
 R2              0.0050  51.33
 S1              0.0026  255.93
 S2              0.3377  116.75
-S4              0.0033  2.20
+x 0 0
 x 0 0
 T2              0.0184  112.47
 LDA2            0.0142  71.39
@@ -15423,7 +15427,7 @@ RHO1            0.0033  302.08
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0337  305.14
+x 0 0
 x 0 0
 MF              0.0200  102.31
 MSF             0.0090  168.56
@@ -15780,6 +15784,8 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py --zonen.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.73 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Wahrheit 16.09 -> 15.97 %.
+# note: 20260914 Flachwassertiden des Bezugs Lissabon entfernt (Tejo-Obertiden, M4 0.032 m,
+# note: Nachbarn 0.071 m); gegen 4 Nachbarn bis 25 km Kurve 7.0 -> 6.7 %, |HW| 35 -> 26 min.
 Corta de los Jerónimos, Spain
 +01:00 :Europe/Madrid
 1.5500 meters
@@ -15790,7 +15796,7 @@ L2              0.0260  210.85
 x 0 0
 M2              0.7449  206.95
 M3              0.0032  128.46
-M4              0.0323  145.99
+x 0 0
 x 0 0
 x 0 0
 N2              0.1542  188.74
@@ -15803,7 +15809,7 @@ x 0 0
 R2              0.0038  175.24
 S1              0.0020  317.80
 S2              0.2561  240.50
-S4              0.0026  249.70
+x 0 0
 x 0 0
 T2              0.0142  236.06
 LDA2            0.0110  192.89
@@ -15813,7 +15819,7 @@ RHO1            0.0026  357.65
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0201  188.45
+x 0 0
 x 0 0
 MF              0.0200  106.84
 MSF             0.0090  172.75
@@ -52609,199 +52615,6 @@ MSF             0.0090  169.25
 MM              0.0120  90.23
 SA              0.0200  33.20
 SSA             0.0220  178.50
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Portugal
-# source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
-# att_number: 1748
-# note: NP208 Part II Sekundaerhafen-Transfer von Lisboa (Alcântara), Portugal (att 1748). fS=1.03 fN=1.00 dt=-29min. ATT Vol.8 (2026).
-# date_imported: 20260701
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -8.9660
-# !latitude: 37.0232
-# region: Faro
-# admin1_quelle: Polygon
-# note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=1.00 (Nipphub-Differenzen
-# note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
-Enseada de Beliche, Portugal
-+01:00 :Europe/Lisbon
-1.6000 meters
-J1              0.0030  68.47
-K1              0.0701  65.63
-K2              0.1148  118.76
-L2              0.0413  93.23
-x 0 0
-M2              1.1862  91.49
-M3              0.0052  315.29
-M4              0.0819  275.08
-x 0 0
-x 0 0
-N2              0.2455  75.45
-x 0 0
-O1              0.0629  326.96
-OO1             0.0010  276.50
-P1              0.0248  60.97
-Q1              0.0154  270.92
-x 0 0
-R2              0.0062  55.58
-S1              0.0030  258.05
-S2              0.4148  121.00
-S4              0.0042  10.70
-x 0 0
-T2              0.0227  116.72
-LDA2            0.0176  75.56
-MU2             0.0289  78.08
-NU2             0.0464  77.72
-RHO1            0.0042  303.99
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0511  313.49
-x 0 0
-MF              0.0200  102.47
-MSF             0.0090  168.71
-MM              0.0120  89.94
-SA              0.0200  33.18
-SSA             0.0220  178.46
 x 0 0
 x 0 0
 x 0 0
