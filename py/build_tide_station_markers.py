@@ -25,6 +25,7 @@ HARMONICS_DIRS = [
     "harmonics/utide",
     "harmonics/ticon",
     "harmonics/bsh",
+    "harmonics/ih",
 ]
 
 
@@ -152,6 +153,7 @@ SOURCE_GROUPS = OrderedDict([
     ('Harmonics Misc', {'color': '#009688', 'files': ['harmonics_puertos_spain.tcd',
                                                       'harmonics_literature.tcd']}),
     ('Harmonics BSH', {'color': '#212121', 'files': ['harmonics_bsh_germany.tcd']}),
+    ('Harmonics IH', {'color': '#006400', 'files': ['harmonics_ih_tabelas.tcd']}),
     ('Harmonics FES2022', {'color': '#CDDC39', 'files': ['harmonics_fes2022.tcd']}),
     ('Harmonics ATT', {'color': '#0D47A1', 'files': ['harmonics_att_np202.tcd',
                                                      'harmonics_att_np202_secondary.tcd',
