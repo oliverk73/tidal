@@ -1,0 +1,144 @@
+{
+  "date": "20260914",
+  "cycle": "06",
+  "generated": "2026-09-14T15:31:48.160534+00:00",
+  "grid": {
+    "nx": 720,
+    "ny": 361,
+    "la1": 90.0,
+    "la2": -90.0,
+    "lo1": 0.0,
+    "lo2": 359.5,
+    "dx": 0.5,
+    "dy": 0.5
+  },
+  "unit": "0.01 m/s",
+  "layout": "u block then v block, int16 LE",
+  "frames": [
+    {
+      "file": "wind_f000.bin",
+      "hour": 0,
+      "label": "+0h"
+    },
+    {
+      "file": "wind_f003.bin",
+      "hour": 3,
+      "label": "+3h"
+    },
+    {
+      "file": "wind_f006.bin",
+      "hour": 6,
+      "label": "+6h"
+    },
+    {
+      "file": "wind_f009.bin",
+      "hour": 9,
+      "label": "+9h"
+    },
+    {
+      "file": "wind_f012.bin",
+      "hour": 12,
+      "label": "+12h"
+    },
+    {
+      "file": "wind_f015.bin",
+      "hour": 15,
+      "label": "+15h"
+    },
+    {
+      "file": "wind_f018.bin",
+      "hour": 18,
+      "label": "+18h"
+    },
+    {
+      "file": "wind_f021.bin",
+      "hour": 21,
+      "label": "+21h"
+    },
+    {
+      "file": "wind_f024.bin",
+      "hour": 24,
+      "label": "+24h"
+    },
+    {
+      "file": "wind_f027.bin",
+      "hour": 27,
+      "label": "+27h"
+    },
+    {
+      "file": "wind_f030.bin",
+      "hour": 30,
+      "label": "+30h"
+    },
+    {
+      "file": "wind_f033.bin",
+      "hour": 33,
+      "label": "+33h"
+    },
+    {
+      "file": "wind_f036.bin",
+      "hour": 36,
+      "label": "+36h"
+    },
+    {
+      "file": "wind_f039.bin",
+      "hour": 39,
+      "label": "+39h"
+    },
+    {
+      "file": "wind_f042.bin",
+      "hour": 42,
+      "label": "+42h"
+    },
+    {
+      "file": "wind_f045.bin",
+      "hour": 45,
+      "label": "+45h"
+    },
+    {
+      "file": "wind_f048.bin",
+      "hour": 48,
+      "label": "+48h"
+    },
+    {
+      "file": "wind_f051.bin",
+      "hour": 51,
+      "label": "+51h"
+    },
+    {
+      "file": "wind_f054.bin",
+      "hour": 54,
+      "label": "+54h"
+    },
+    {
+      "file": "wind_f057.bin",
+      "hour": 57,
+      "label": "+57h"
+    },
+    {
+      "file": "wind_f060.bin",
+      "hour": 60,
+      "label": "+60h"
+    },
+    {
+      "file": "wind_f063.bin",
+      "hour": 63,
+      "label": "+63h"
+    },
+    {
+      "file": "wind_f066.bin",
+      "hour": 66,
+      "label": "+66h"
+    },
+    {
+      "file": "wind_f069.bin",
+      "hour": 69,
+      "label": "+69h"
+    },
+    {
+      "file": "wind_f072.bin",
+      "hour": 72,
+      "label": "+72h"
+    }
+  ]
+}

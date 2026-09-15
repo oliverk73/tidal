@@ -50,6 +50,7 @@
 <script src="/static/js/suche.js?v=20260913" defer></script>
 <script src="/static/js/pwa.js" defer></script>
 <script src="/static/js/wave_layer.js" defer></script>
+<script src="/static/js/wind_layer.js" defer></script>
 <script src="/static/js/precip_layer.js" defer></script>
 <script src="/static/js/sst_layer.js" defer></script>
 <script src="/static/js/tide_layer.js" defer></script>
@@ -784,6 +785,80 @@
         return container;
       }
     });
+    // --- Wind Forecast Layer (Canvas + animated particles) ---
+    const windLayer = new WindCanvasLayer(map);
+
+    const WindControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar');
+        container.style.cssText = 'background:rgba(255,255,255,0.25);padding:8px 12px;border-radius:6px;font-family:sans-serif;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.2);user-select:none;backdrop-filter:blur(4px);';
+        container.innerHTML =
+          '<div style="margin-bottom:6px;font-weight:bold;">' +
+            '<label style="cursor:pointer;">' +
+              '<input type="checkbox" id="wd-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M3 8h10a3 3 0 1 0-3-3" stroke="#555" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M3 12h15a3 3 0 1 1-3 3" stroke="#555" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M3 16h7" stroke="#555" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/></svg>Wind Forecast (GFS 10 m)' +
+            '</label>' +
+          '</div>' +
+          '<div id="wd-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
+            '<div id="wd-loading" style="color:#888;">Loading data...</div>' +
+            '<div id="wd-player" style="display:none;">' +
+              '<div style="display:flex;align-items:center;gap:8px;">' +
+                '<button id="wd-prev-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">⏮</button>' +
+                '<button id="wd-play-btn" style="font-size:18px;cursor:pointer;border:none;background:none;padding:2px 8px;">▶</button>' +
+                '<button id="wd-next-btn" style="font-size:16px;cursor:pointer;border:none;background:none;padding:2px 6px;">⏭</button>' +
+                '<span id="wd-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
+              '</div>' +
+              '<input type="range" id="wd-progress" min="0" max="24" value="0" style="width:180px;cursor:pointer;">' +
+              '<div id="wd-readout" style="font-size:12px;color:#444;min-height:15px;text-align:center;"></div>' +
+            '</div>' +
+          '</div>';
+
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+
+        setTimeout(function () {
+          document.getElementById('wd-toggle').addEventListener('change', async function () {
+            if (this.checked) {
+              document.getElementById('wd-controls').style.display = 'flex';
+              document.getElementById('wd-loading').style.display = 'block';
+              document.getElementById('wd-player').style.display = 'none';
+              try {
+                await windLayer.loadMeta('/static/wind/wind_meta.json');
+                // ~1 MB per frame: show the first frame right away, fetch the rest in the background
+                await windLayer.loadGrid(Math.min(windLayer.currentFrame, windLayer.frames.length - 1));
+                const progEl = document.getElementById('wd-progress');
+                progEl.max = windLayer.frames.length - 1;
+                document.getElementById('wd-loading').style.display = 'none';
+                document.getElementById('wd-player').style.display = 'block';
+                windLayer.activate();
+                windLayer.preloadAll().catch(function (e) { console.error('Wind preload error:', e); });
+              } catch (e) {
+                document.getElementById('wd-loading').textContent = 'Error loading!';
+                console.error('Wind layer error:', e);
+              }
+            } else {
+              document.getElementById('wd-controls').style.display = 'none';
+              windLayer.deactivate();
+            }
+          });
+          document.getElementById('wd-play-btn').addEventListener('click', function () {
+            windLayer.toggleAnim();
+          });
+          document.getElementById('wd-prev-btn').addEventListener('click', function () {
+            windLayer.stopAnim(); windLayer.showFrame(windLayer.currentFrame - 1);
+          });
+          document.getElementById('wd-next-btn').addEventListener('click', function () {
+            windLayer.stopAnim(); windLayer.showFrame(windLayer.currentFrame + 1);
+          });
+          document.getElementById('wd-progress').addEventListener('input', function () {
+            windLayer.stopAnim(); windLayer.showFrame(parseInt(this.value));
+          });
+        }, 0);
+
+        return container;
+      }
+    });
+
     // --- Ocean Currents Layer (leaflet-velocity) ---
     var ocVelocityLayer = null;
     var ocMeta = null;
@@ -1273,6 +1348,7 @@
       { id: 'rv-toggle',  off: function () { document.getElementById('rv-controls').style.display = 'none'; rvStop(); rvClearCache(); rvActive = false; } },
       { id: 'sst-toggle', off: function () { document.getElementById('sst-controls').style.display = 'none'; sstDeactivateAll(); } },
       { id: 'wv-toggle',  off: function () { document.getElementById('wv-controls').style.display = 'none'; waveLayer.deactivate(); } },
+      { id: 'wd-toggle',  off: function () { document.getElementById('wd-controls').style.display = 'none'; windLayer.deactivate(); } },
       { id: 'td-toggle',  off: function () { document.getElementById('td-controls').style.display = 'none'; tideLayer.deactivate(); } },
       { id: 'oc-toggle',  off: function () { document.getElementById('oc-controls').style.display = 'none'; ocDeactivate(); } }
     ];
@@ -1306,6 +1382,10 @@
       'wv-toggle': {
         gradient: 'linear-gradient(to top,#0a28a0,#0078d2,#00bea8,#3cc83c,#d2d200,#eb9600,#d2281e,#960050)',
         min: '0.5', max: '8+', unit: 'm'
+      },
+      'wd-toggle': {
+        gradient: 'linear-gradient(to top,#6271b7,#39619f,#4a94a9,#4d8d7b,#53a553,#359f35,#a79d51,#9f7f3a,#a16c5c,#813a4e,#af5088,#754a93,#6d61a3)',
+        min: '0', max: '64+', unit: 'kn'
       },
       'td-toggle': {
         gradient: 'linear-gradient(to top,#141450,#1e32a0,#2864c8,#50a0dc,#8cc8eb,#dce1e6,#ebc38c,#dc9b50,#c86428,#aa281e,#640f0f)',
@@ -1503,6 +1583,7 @@
        OceanCurrentControl,// Ocean Currents (HYCOM)
        TideControl,        // Tide Forecast (FES2022)
        WaveControl,        // Wave Forecast (GFS-Wave)
+       WindControl,        // Wind Forecast (GFS 10 m)
        SeamarkControl      // OpenSeaMap Seezeichen
       ].forEach(function (C, i) {
         var el = new C().onAdd(map);
