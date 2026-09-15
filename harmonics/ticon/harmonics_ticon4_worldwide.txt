@@ -160821,13 +160821,14 @@ x 0 0
 # ssc_id: SSC-anzio
 # ioc_code: AZ42
 # psmsl_id: 2136
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Anzi vorher M2/S2/K1/O1 -57/-57/-58/-50 min.
 # !units: meters
 # !longitude: 12.634800
 # !latitude: 41.446899
 # province: Roma
 # admin1_quelle: Ufer 0.1 km
 Anzio, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0009  208.91
 K1              0.0276  194.32
@@ -161022,13 +161023,14 @@ x 0 0
 # ssc_id: SSC-barii
 # ioc_code: BA05
 # psmsl_id: 2075
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Bar vorher M2/S2/K1/O1 -59/-59/-60/-59 min.
 # !units: meters
 # !longitude: 16.865999
 # !latitude: 41.140202
 # province: Bari
 # admin1_quelle: Ufer 0.1 km
 Bari, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0026  76.22
 K1              0.0506  52.12
@@ -161226,13 +161228,14 @@ x 0 0
 # ptwc_code: cagl
 # sonel_gps_id: 2412, 3575, 645
 # sonel_tg_id: 2252
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Cagliar vorher M2/S2/K1/O1 -62/-63/-61/-71 min.
 # !units: meters
 # !longitude: 9.114300
 # !latitude: 39.210201
 # province: Cagliari
 # admin1_quelle: Ufer 0.2 km
 Cagliari, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0011  207.75
 K1              0.0290  181.41
@@ -161430,13 +161433,14 @@ x 0 0
 # ptwc_code: cata
 # sonel_gps_id: 2253
 # sonel_tg_id: 2251
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Catani vorher M2/S2/K1/O1 -63/-63/-78/-73 min.
 # !units: meters
 # !longitude: 15.093800
 # !latitude: 37.498100
 # province: Catania
 # admin1_quelle: Polygon
 Catania, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0006  71.08
 K1              0.0173  43.78
@@ -161634,13 +161638,14 @@ x 0 0
 # ptwc_code: ci20
 # sonel_gps_id: 2256
 # sonel_tg_id: 2255
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Civitavecchi vorher M2/S2/K1/O1 -58/-56/-46/-40 min.
 # !units: meters
 # !longitude: 11.789700
 # !latitude: 42.094002
 # province: Roma
 # admin1_quelle: Polygon
 Civitavecchia, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0009  210.71
 K1              0.0241  192.52
@@ -161835,13 +161840,14 @@ x 0 0
 # ssc_id: SSC-gata
 # ioc_code: GA37
 # psmsl_id: 2137
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Gaet vorher M2/S2/K1/O1 -54/-54/-51/-48 min.
 # !units: meters
 # !longitude: 13.589700
 # !latitude: 41.209999
 # province: Latina
 # admin1_quelle: Ufer 1.2 km
 Gaeta, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0014  217.64
 K1              0.0282  199.66
@@ -162036,13 +162042,14 @@ x 0 0
 # ssc_id: SSC-gino
 # ioc_code: GI20
 # psmsl_id: 2138
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Ginostr vorher M2/S2/K1/O1 -59/-59/-66/ min.
 # !units: meters
 # !longitude: 15.1906
 # !latitude: 38.7853
 # province: Messina
 # admin1_quelle: Ufer 0.5 km
 Ginostra (Stromboli), Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0010  204.73
 K1              0.0249  194.76
@@ -162237,13 +162244,14 @@ x 0 0
 # ssc_id: SSC-itit
 # ioc_code: IT45
 # psmsl_id: 2248
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-IsoleTremit vorher M2/S2/K1/O1 -59/-60/-60/-61 min.
 # !units: meters
 # !longitude: 15.501600
 # !latitude: 42.118900
 # province: Foggia
 # admin1_quelle: Ufer 23.0 km
 Isole Tremiti, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0051  112.93
 K1              0.0757  69.68
@@ -162441,13 +162449,14 @@ x 0 0
 # ptwc_code: lamp
 # sonel_gps_id: 722
 # sonel_tg_id: 2226
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Lampedus vorher M2/S2/K1/O1 -59/-60// min.
 # !units: meters
 # !longitude: 12.604400
 # !latitude: 35.499901
 # province: Agrigento
 # admin1_quelle: Polygon
 Lampedusa, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0005  301.20
 K1              0.0062  354.45
@@ -162644,13 +162653,14 @@ x 0 0
 # psmsl_id: 2139
 # sonel_gps_id: 3436
 # sonel_tg_id: 3435
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-LaSpezi vorher M2/S2/K1/O1 -57/-56/-49/-57 min.
 # !units: meters
 # !longitude: 9.857600
 # !latitude: 44.096600
 # province: La Spezia
 # admin1_quelle: Ufer 1.7 km
 La Spezia, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0012  209.15
 K1              0.0357  190.71
@@ -162845,13 +162855,14 @@ x 0 0
 # ssc_id: SSC-lirn
 # ioc_code: LI11
 # psmsl_id: 110, 2080
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Livorn vorher M2/S2/K1/O1 -62/-59/-56/-50 min.
 # !units: meters
 # !longitude: 10.299300
 # !latitude: 43.546299
 # province: Livorno
 # admin1_quelle: Ufer 2.5 km
 Livorno, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0016  195.70
 K1              0.0357  182.02
@@ -163048,13 +163059,14 @@ x 0 0
 # psmsl_id: 2140
 # sonel_gps_id: 3438
 # sonel_tg_id: 3437
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-MarinaDiCamp vorher M2/S2/K1/O1 -64/-63/-59/-62 min.
 # !units: meters
 # !longitude: 10.238300
 # !latitude: 42.742599
 # province: Livorno
 # admin1_quelle: Polygon
 Marina di Campo (Elba), Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0009  211.25
 K1              0.0271  182.15
@@ -163249,13 +163261,14 @@ x 0 0
 # ssc_id: SSC-orta
 # ioc_code: OR24
 # psmsl_id: 2097, 972
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Orton vorher M2/S2/K1/O1 -63/-62/-62/-59 min.
 # !units: meters
 # !longitude: 14.414900
 # !latitude: 42.355900
 # province: Chieti
 # admin1_quelle: Ufer 2.9 km
 Ortona, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0051  92.12
 K1              0.0884  67.59
@@ -163453,13 +163466,14 @@ x 0 0
 # ptwc_code: otra
 # sonel_gps_id: 3444
 # sonel_tg_id: 3442, 3443
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Otrant vorher M2/S2/K1/O1 -58/-59/-69/-67 min.
 # !units: meters
 # !longitude: 18.497101
 # !latitude: 40.147202
 # province: Lecce
 # admin1_quelle: Polygon
 Otranto, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0010  82.64
 K1              0.0229  61.75
@@ -163655,13 +163669,14 @@ x 0 0
 # ioc_code: PO40
 # psmsl_id: 2141
 # ptwc_code: po40
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Ponz vorher M2/S2/K1/O1 -59/-58/-66/-46 min.
 # !units: meters
 # !longitude: 12.965600
 # !latitude: 40.895199
 # province: Latina
 # admin1_quelle: Ufer 37.3 km
 Ponza, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0018  211.66
 K1              0.0278  192.01
@@ -164057,13 +164072,14 @@ x 0 0
 # ssc_id: SSC-ravn
 # ioc_code: RA10
 # psmsl_id: 100, 2085, 2361
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Ravenn vorher M2/S2/K1/O1 -63/-63/-61/-62 min.
 # !units: meters
 # !longitude: 12.282700
 # !latitude: 44.492100
 # province: Ravenna
 # admin1_quelle: Polygon
 Porto Corsini (Ravenna), Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.4000 meters
 J1              0.0092  92.10
 K1              0.1616  67.15
@@ -164260,13 +164276,14 @@ x 0 0
 # psmsl_id: 2142, 670
 # sonel_gps_id: 3150
 # sonel_tg_id: 3148, 3149
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-ReggioCalabri vorher M2/S2/K1/O1 -57/-59/-78/-47 min.
 # !units: meters
 # !longitude: 15.648900
 # !latitude: 38.121700
 # province: Reggio Calabria
 # admin1_quelle: Polygon
 Reggio Calabria, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0009  43.60
 K1              0.0138  40.94
@@ -164461,13 +164478,14 @@ x 0 0
 # ssc_id: SSC-salrn
 # ioc_code: SA16
 # psmsl_id: 2086
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-Salern vorher M2/S2/K1/O1 -63/-65/-64/-55 min.
 # !units: meters
 # !longitude: 14.750800
 # !latitude: 40.676601
 # province: Salerno
 # admin1_quelle: Polygon
 Salerno, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0013  219.46
 K1              0.0285  198.27
@@ -164664,13 +164682,14 @@ x 0 0
 # psmsl_id: 2143
 # sonel_gps_id: 3446
 # sonel_tg_id: 3445
+# note: 20260915 Meridian +01:00 -> +00:00 (Phasen in UTC): gegen CMEMS-Messreihe RMN-SBenedettoDelTront vorher M2/S2/K1/O1 -56/-56/-56/-49 min.
 # !units: meters
 # !longitude: 13.889800
 # !latitude: 42.955101
 # province: Ascoli Piceno
 # admin1_quelle: Ufer 6.1 km
 San Benedetto del Tronto, Italy
-+01:00 :Europe/Rome
++00:00 :Europe/Rome
 0.0000 meters
 J1              0.0058  98.86
 K1              0.0940  71.96
@@ -164787,207 +164806,6 @@ N4              0.0001  223.59
 x 0 0
 x 0 0
 2MO5            0.0001  115.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# Harmonic constants from TICON-4 database (GESLA-4 analysis)
-# 97941 observations over 14 years
-# from 21/06/2012 to 30/04/2025
-# Quality: No obvious issues
-# Source: gesla4.CMEMS
-# Constituents matched: 42/50
-#
-# Rmn Sciacca
-# BEGIN HOT COMMENTS
-# country: Italy
-# source: TICON-4 (GESLA-4 harmonic analysis)
-# station_id_context: rmn_sciacca-rmn-ita-cmems
-# date_imported: 20260322
-# datum: MSL
-# confidence: 7
-# ssc_id: SSC-scia
-# ioc_code: SC43
-# psmsl_id: 2224
-# !units: meters
-# !longitude: 13.0779
-# !latitude: 37.5043
-# province: Agrigento
-# admin1_quelle: Polygon
-Sciacca, Italy (1)
-+01:00 :Europe/Rome
-0.0000 meters
-J1              0.0008  84.88
-K1              0.0200  86.77
-K2              0.0094  75.13
-L2              0.0017  64.08
-M1              0.0005  322.43
-M2              0.0441  89.79
-M3              0.0006  248.74
-M4              0.0016  282.04
-M6              0.0002  87.14
-x 0 0
-N2              0.0090  108.07
-2N2             0.0016  117.19
-O1              0.0122  67.04
-OO1             0.0002  108.53
-P1              0.0077  79.53
-Q1              0.0022  65.41
-2Q1             0.0002  331.13
-R2              0.0005  137.49
-S1              0.0030  353.44
-S2              0.0316  80.39
-S4              0.0005  342.97
-x 0 0
-T2              0.0017  103.85
-LDA2            0.0005  66.43
-MU2             0.0022  125.74
-NU2             0.0016  106.10
-RHO1            0.0003  0.14
-x 0 0
-x 0 0
-MN4             0.0005  247.52
-MS4             0.0024  319.48
-2SM2            0.0005  294.19
-MF              0.0006  8.16
-MSF             0.0009  261.59
-MM              0.0020  122.67
-SA              0.0557  196.35
-SSA             0.0217  89.44
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0001  233.99
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0007  100.31
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0008  229.00
-x 0 0
-EPS2            0.0007  107.03
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0003  295.67
-SIG1            0.0005  257.75
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0001  260.18
-x 0 0
-x 0 0
-2MO5            0.0001  283.28
 x 0 0
 x 0 0
 x 0 0
@@ -174721,7 +174539,7 @@ x 0 0
 # !latitude: 37.505900
 # province: Agrigento
 # admin1_quelle: Polygon
-Sciacca, Italy (2)
+Sciacca, Italy
 +01:00 :Europe/Rome
 0.0000 meters
 J1              0.0007  124.85
@@ -202711,209 +202529,6 @@ N4              0.0001  170.60
 x 0 0
 x 0 0
 2MO5            0.0005  179.08
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# Harmonic constants from TICON-4 database (GESLA-4 analysis)
-# 359385 observations over 41 years
-# from 01/01/1983 to 31/12/2023
-# Quality: No obvious issues
-# Source: gesla4.CV
-# Constituents matched: 42/50
-#
-# Venezia Vene
-# BEGIN HOT COMMENTS
-# country: Italy
-# source: TICON-4 (GESLA-4 harmonic analysis)
-# station_id_context: venezia-vene-ita-cv
-# date_imported: 20260322
-# datum: LAT
-# confidence: 7
-# ssc_id: SSC-veni
-# ioc_code: VE19
-# psmsl_id: 168, 2100, 218, 39, 87
-# sonel_gps_id: 2271, 3154, 876
-# sonel_tg_id: 2221, 2273, 2737, 2739
-# !units: meters
-# !longitude: 12.425700
-# !latitude: 45.418800
-# province: Venezia
-# admin1_quelle: Polygon
-Venezia, Italy
-+01:00 :Europe/Rome
-0.5200 meters
-J1              0.0101  115.79
-K1              0.1755  89.74
-K2              0.0419  317.33
-L2              0.0097  306.22
-M1              0.0043  0.54
-M2              0.2424  313.27
-M3              0.0065  264.32
-M4              0.0040  94.49
-M6              0.0014  289.15
-M8              0.0001  86.41
-N2              0.0396  312.25
-2N2             0.0045  310.76
-O1              0.0520  78.41
-OO1             0.0104  136.00
-P1              0.0555  86.13
-Q1              0.0086  94.35
-2Q1             0.0012  78.09
-R2              0.0008  62.73
-S1              0.0150  85.61
-S2              0.1407  323.37
-S4              0.0015  120.56
-x 0 0
-T2              0.0056  345.78
-LDA2            0.0049  295.47
-MU2             0.0077  44.18
-NU2             0.0087  305.36
-RHO1            0.0019  95.64
-x 0 0
-x 0 0
-MN4             0.0012  88.97
-MS4             0.0046  108.47
-2SM2            0.0069  114.63
-MF              0.0081  173.11
-MSF             0.0031  352.78
-MM              0.0069  242.56
-SA              0.0477  197.08
-SSA             0.0375  105.41
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0025  318.34
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0027  300.26
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0018  109.73
-x 0 0
-EPS2            0.0023  50.38
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0002  67.53
-SIG1            0.0028  332.79
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0002  100.56
-x 0 0
-x 0 0
-2MO5            0.0005  134.75
 x 0 0
 x 0 0
 x 0 0

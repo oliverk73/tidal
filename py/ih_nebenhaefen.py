@@ -79,7 +79,16 @@ KOORD_II = {'Água Izé': (0.2183, 6.7333),          # gedruckt 6 44.0 W; Sao To
             # 12 29.1 E liegt an Land westlich der Baía das Luciras; der Ort liegt ~0.7 km vom Kap (Farol OSM
             # 13.878 S 12.423 E) wie ATT/NOAA. Baía dos Tigres gedruckt 16 36.1 S 11 49.3 E liegt in der Bucht;
             # der Ort (São Martinho dos Tigres) liegt auf der Insel wie ATT/NOAA.
-            'Santa Marta': (-13.8772, 12.4327), 'Baía dos Tigres': (-16.5990, 11.7238)}
+            'Santa Marta': (-13.8772, 12.4327), 'Baía dos Tigres': (-16.5990, 11.7238),
+            # Oliver 15.09.2026: auf die Position der Namensvettern (ATT)
+            # Ibo gedruckt 12 11.8 S = 16 km noerdlich des Ortes an Land; ATT-Standardhafen/1997/NOAA am Ort
+            'Ibo': (-12.3457, 40.5808),
+            # Moma gedruckt 16 47.4 S 39 16.0 E = 5.6 km suedoestlich im Wasser; ATT "Moma (Rio Liganha)" am Ort
+            'Moma': (-16.7672, 39.2214),
+            # Sofala gedruckt 20 08.4 S 34 46.9 E; ATT 5 km suedwestlich
+            'Sofala': (-20.1575, 34.7373),
+            # Bazaruto gedruckt 21 31.8 S 35 29.9 E (Nordspitze der Insel); ATT/NOAA an der Westkueste
+            'Bazaruto': (-21.6500, 35.4330)}
 AUSLASSEN_II = {'Aproximação ao porto': 'Laenge 37 18.0 E liegt 250 km vor Beira (Druckfehler)',
                 'Porto Gole': 'Canal do Geba, eigene Tabelle (siehe GEBA_ORTE)'}
 
@@ -464,7 +473,7 @@ ANZEIGE = {
     ('LEIXÕES', 'Capitania do Douro'): 'Capitania do Douro (Porto)', ('LEIXÕES', 'Crestuma'): 'Crestuma (Rio Douro)',
     ('INHAMBANE', 'Bóia de espera'): 'Bóia de espera (Inhambane)', ('INHAMBANE', 'Farol da Barra'): 'Farol da Barra (Inhambane)',
     ('INHAMBANE', 'Pedestal'): 'Pedestal (Inhambane)', ('BEIRA', 'Pilotos da Beira'): 'Pilotos da Beira',
-    ('BEIRA', 'Sofala'): 'Sofala', ('CACHEU', 'Foz do Rio Cacheu'): 'Foz do Rio Cacheu',
+    ('BEIRA', 'Sofala'): 'Sofala', ('ANGOCHE', 'Moma'): 'Moma (Rio Liganha)', ('CACHEU', 'Foz do Rio Cacheu'): 'Foz do Rio Cacheu',
     ('CAIÓ', 'Bóia de aterragem'): 'Bóia de aterragem (Caió)', ('CAIÓ', 'Jabadá'): 'Jabadá (Rio Geba)',
     ('CAIÓ', 'Porto Gole'): 'Porto Gole (Rio Geba)', ('CAIÓ', 'Biombo'): 'Biombo',
     ('MORRUBUNE', 'Bóia de espera'): 'Bóia de espera (Barra de Quelimane)', ('MORRUBUNE', 'Barra'): 'Barra de Quelimane',
@@ -498,8 +507,15 @@ def _norm_leer(s):
     return unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().upper()
 
 
+# Namensvettern, die trotz Abstand > 3 km verglichen werden (Oliver 15.09.2026)
+NAMENSVETTERN = {('LISBOA', 'Montijo'): ('Montijo, Portugal',),
+                 ('MOCÍMBOA DA PRAIA', 'Palma'): ('Palma (Baía de Tungue), Mozambique',)}
+
+
 def gleicher_ort(k, r, d, punkte=()):
     """Bestandssatz r gehoert zum Konkordanzort k: nah (Name oder <= 1 km) und kein anderer Ort naeher."""
+    if r['name'] in NAMENSVETTERN.get((k['bezug'], k['name']), ()) and d <= 15.0:
+        return True
     if d > 3.0:
         return False
     if any(km(r, q) < d - 0.05 for q in punkte if q is not k):
@@ -709,7 +725,11 @@ def schreiben_datei(neue):
                                          'Cabo de Santa Maria liegt auf 12 32 E.',
                           'Água Izé': 'Position berichtigt: gedruckt 6 44.0 W, Sao Tome liegt oestlich (6 44.0 E).',
                           'Santa Marta': 'Position auf den Ort am Kap gelegt (wie ATT/NOAA); gedruckt 13 52.4 S 12 29.1 E an Land.',
-                          'Baía dos Tigres': 'Position auf den Ort auf der Insel gelegt (wie ATT/NOAA); gedruckt 16 36.1 S 11 49.3 E.'}[k['name']])
+                          'Baía dos Tigres': 'Position auf den Ort auf der Insel gelegt (wie ATT/NOAA); gedruckt 16 36.1 S 11 49.3 E.',
+                          'Ibo': 'Position auf den Ort gelegt (wie ATT/1997/NOAA); gedruckt 12 11.8 S 40 33.6 E (16 km noerdlich, an Land).',
+                          'Moma': 'Position auf den Ort gelegt (wie ATT); gedruckt 16 47.4 S 39 16.0 E.',
+                          'Sofala': 'Position wie ATT gelegt; gedruckt 20 08.4 S 34 46.9 E.',
+                          'Bazaruto': 'Position wie ATT/NOAA gelegt; gedruckt 21 31.8 S 35 29.9 E (Nordspitze).'}[k['name']])
         fp = k.get('_fes')
         if fp and fp[2] == 'bestaetigt':
             noten.append(f"Zeitkorrektur von FES2022 bestaetigt (Buch {fp[0]:+.0f}, FES {fp[1]:+.0f} min).")

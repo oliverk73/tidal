@@ -107,6 +107,21 @@ ZONE_BUCHFEHLER = {('ectt', no): -4.5 for no in (4929, 4931, 4933, 4937, 4939)}
 # ohne Zonendifferenz -11 min (Pruefstand 14.09.2026). Die Algerien-/Tunis-Zeilen "on
 # Gibraltar" im selben Block (339-349) sind ohne Wahrheit und bleiben unberuehrt.
 ZONE_BUCHFEHLER.update({('eutt', no): 1.0 for no in (353, 355, 357)})
+
+# Bezugsorte, die das Buch falsch ueberschreibt (Hubprobe + Pruefstand 15.09.2026). In allen drei
+# Bloecken steht der richtige Bezugsort selbst als "Daily predictions" mitten im Block, die
+# Ueberschrift nennt einen fremden Ort; die gedruckten Hube passen nur zum Ort im Block
+# (Norway Islands +0.1 ft, Hub 6.5/9.7 ft = Do Son 6.5/9.7; Paramushir 4.5/5.2), und gegen die
+# amtliche Wahrheit sinkt die Kurvenabweichung stark:
+#   ectt S. 334-335 "on Halifax"      Bay of Fundy 521-593 -> Saint John (569)   34-42 % -> 2-6 %
+#   cptt S. 404     "on Paramushiru"  Golf von Tonkin 1575-1613 -> Do Son (1591) 27-35 % -> 3-15 %
+#   cptt S. 423-424 "on Colombo"      Pakistan/Iran 3577-3617 -> Karachi (3589)  25-30 % -> 4-6 %
+# Nicht betroffen (gedruckter Bezug am Pruefstand besser): Dalian, Hong Kong, Gibraltar, Reykjavik,
+# Pictou, Sagar, Cebu, Surabaja, Southampton, Sheerness, Port Adelaide, Ch'ang Chiang.
+REF_BUCHFEHLER = {}
+REF_BUCHFEHLER.update({('ectt', no): 'Saint John' for no in range(521, 594, 2) if no != 569})
+REF_BUCHFEHLER.update({('cptt', no): 'Do Son' for no in range(1575, 1614, 2) if no != 1591})
+REF_BUCHFEHLER.update({('cptt', no): 'Karachi' for no in range(3577, 3618, 2) if no != 3589})
 BAND_JSON = {'ectt': 'ectt2020', 'wctt': 'wctt2020', 'cptt': 'cptt2018', 'eutt': 'eutt2020'}
 PAT = re.compile(r'transfer from (.+?) \(no\.(\d+)\)\. M2=[\d.]+ S2=[\d.]+ k=[\d.]+ dt=[-+]?\d+min\.?')
 

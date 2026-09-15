@@ -17,7 +17,8 @@ Teile:
   uebertragen()   der Uebertragungskern mit Schaltern (siehe VARIANTEN)
   messen()        Kurvenabstand, M2-Zeit/Amplitude, S2/M2, HW/NW-Zeiten
 
-Usage: python3 py/noaa_pruefstand.py --bezug        Bezugssaetze pruefen
+Usage: python3 py/noaa_pruefstand.py --hubprobe     Buchhube gegen den Bezugsort (Druckfehler im Bezug)
+       python3 py/noaa_pruefstand.py --bezug        Bezugssaetze pruefen
        python3 py/noaa_pruefstand.py --wahrheit     Abdeckung der Wahrheit
        python3 py/noaa_pruefstand.py --varianten    alle Varianten messen
 """
@@ -73,8 +74,11 @@ NICHT_QUELLE = re.compile(r'HW/LW|tidetimes|HW predictions|transfer|secondary|FE
 def buch():
     """{(band, no): zeile} aller Baender, dazu zonen {(band, no): (zone, ref)} und refzonen."""
     zeilen, zonen, refz = {}, {}, {}
+    from noaa_referenz_verwechslung import REF_BUCHFEHLER
     for band, (j, _d) in BAENDER.items():
         for z in json.load(open(os.path.join(HELP, f'{j}_table2_full.json'), encoding='utf-8')):
+            if (band, z['no']) in REF_BUCHFEHLER and not z.get('daily'):
+                z = dict(z, ref=REF_BUCHFEHLER[(band, z['no'])], ref_druck=z['ref'])
             zeilen[(band, z['no'])] = z
         zj = json.load(open(os.path.join(HELP, f'zonen_{j}.json'), encoding='utf-8'))
         for k, v in zj['stationen'].items():
@@ -608,9 +612,61 @@ def gruppen(recs):
     print('->', os.path.relpath(ziel, ROOT))
 
 
+def hubprobe(zeilen, schwelle=(0.8, 1.25)):
+    """Prueft jede Buchzeile gegen ihren Bezugsort: der gedruckte Hub muss aus dem Hub des Bezugsorts
+    und den Hoehendifferenzen folgen (Faktor = Reihe/Erwartung). Unstimmig und zugleich passend zu
+    einer anderen Tagesstation bis 800 km: Verdacht auf falsche Bezugsueberschrift im Buch.
+
+    Anlass 15.09.2026: Golf von Tonkin "on Paramushiru" (richtig Do Son), Bay of Fundy "on Halifax"
+    (Saint John), Pakistan/Iran "on Colombo" (Karachi) -- siehe noaa_referenz_verwechslung.REF_BUCHFEHLER.
+    Liste harmonics/help/noaa_hubprobe.csv."""
+    def hub(z):
+        return z.get('diurnal_ft') or z.get('mean_ft')
+    daily = {b: [z for (bb, _), z in zeilen.items() if bb == b and z.get('daily')] for b in BAENDER}
+    out = []
+    for (band, no), z in sorted(zeilen.items()):
+        if z.get('daily') or z.get('hHW') is None or z.get('hLW') is None or not hub(z):
+            continue
+        rb = daily_zeile(zeilen, band, z['ref'])
+        if not rb or not hub(rb):
+            continue
+        def erwartet(q):
+            if z['hHW_kind'] == 'ratio':
+                return hub(q) * (z['hHW'] + z['hLW']) / 2.0
+            if z.get('hLW_kind') == 'offset':
+                return hub(q) + z['hHW'] - z['hLW']
+            return None
+        e = erwartet(rb)
+        if not e or e <= 0.05:
+            continue
+        f = hub(z) / e
+        if schwelle[0] <= f <= schwelle[1]:
+            continue
+        alt = None
+        for q in daily[band]:
+            if q is rb or not hub(q) or km(q, z) > 800:
+                continue
+            e2 = erwartet(q)
+            if e2 and e2 > 0.05 and abs(math.log(hub(z) / e2)) < 0.1 and (alt is None or km(q, z) < km(alt, z)):
+                alt = q
+        out.append(dict(band=band, no=no, name=z['name'], ref=z['ref'], ref_druck=z.get('ref_druck', ''),
+                        faktor=round(f, 2), passt_zu=alt['name'] if alt else '', passt_km=round(km(alt, z)) if alt else ''))
+    with open(os.path.join(HELP, 'noaa_hubprobe.csv'), 'w', newline='', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=list(out[0]) if out else ['band'])
+        w.writeheader(); w.writerows(out)
+    return out
+
+
 def main(argv):
     recs = [r for r in load_records() if r['lat'] is not None]
     zeilen, zonen, refz = buch()
+    if '--hubprobe' in argv:
+        out = hubprobe(zeilen)
+        c = collections.Counter((o['band'], o['ref']) for o in out if o['passt_zu'])
+        print(len(out), 'unstimmige Zeilen,', sum(c.values()), 'mit passender anderer Tagesstation')
+        for (b, r), n in c.most_common(15):
+            print(f'  {b:5} {r[:30]:30} {n}')
+        return
     if '--bezug' in argv:
         B = bezugssaetze(recs, zeilen)
         print(f"{'Band':5} {'Buch-Bezugsort':28} {'benutzter Satz':48} {'Datei':30} {'km':>7} {'Kl':2} n  Varianten")
