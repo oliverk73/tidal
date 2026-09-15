@@ -122,6 +122,17 @@ REF_BUCHFEHLER = {}
 REF_BUCHFEHLER.update({('ectt', no): 'Saint John' for no in range(521, 594, 2) if no != 569})
 REF_BUCHFEHLER.update({('cptt', no): 'Do Son' for no in range(1575, 1614, 2) if no != 1591})
 REF_BUCHFEHLER.update({('cptt', no): 'Karachi' for no in range(3577, 3618, 2) if no != 3589})
+
+# Positionen, die das Einlesen der Table 2 verdreht hat (Vorzeichen, Zehnerstelle); gefunden 15.09.2026 ueber
+# den Abstand Buchzeile <-> heutiger Satz bzw. naechster Satz. Die Saetze selbst tragen die richtige Position.
+POS_LESEFEHLER = {
+    ('cptt', 219): (47.0500, 142.0333),    # Port Kholmsk, gelesen 41.05 N
+    ('cptt', 1751): (1.2500, 102.1667),    # Siak River entrance, gelesen 105.17 E
+    ('ectt', 4975): (2.1500, -50.5000),    # Ilha de Maraca, gelesen 2 09 S
+    ('ectt', 4977): (0.9167, -50.0833),    # Ilha do Brigue, gelesen 0 55 S
+    ('eutt', 1815): (70.4667, 59.0667),    # Cape Bolvanski, gelesen 66 17 N 54 27 E
+    ('eutt', 463): (37.3667, -6.0000),     # Sevilla, gelesen 32 22 N
+}
 BAND_JSON = {'ectt': 'ectt2020', 'wctt': 'wctt2020', 'cptt': 'cptt2018', 'eutt': 'eutt2020'}
 PAT = re.compile(r'transfer from (.+?) \(no\.(\d+)\)\. M2=[\d.]+ S2=[\d.]+ k=[\d.]+ dt=[-+]?\d+min\.?')
 

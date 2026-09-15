@@ -74,11 +74,13 @@ NICHT_QUELLE = re.compile(r'HW/LW|tidetimes|HW predictions|transfer|secondary|FE
 def buch():
     """{(band, no): zeile} aller Baender, dazu zonen {(band, no): (zone, ref)} und refzonen."""
     zeilen, zonen, refz = {}, {}, {}
-    from noaa_referenz_verwechslung import REF_BUCHFEHLER
+    from noaa_referenz_verwechslung import REF_BUCHFEHLER, POS_LESEFEHLER
     for band, (j, _d) in BAENDER.items():
         for z in json.load(open(os.path.join(HELP, f'{j}_table2_full.json'), encoding='utf-8')):
             if (band, z['no']) in REF_BUCHFEHLER and not z.get('daily'):
                 z = dict(z, ref=REF_BUCHFEHLER[(band, z['no'])], ref_druck=z['ref'])
+            if (band, z['no']) in POS_LESEFEHLER:
+                z = dict(z, lat=POS_LESEFEHLER[(band, z['no'])][0], lon=POS_LESEFEHLER[(band, z['no'])][1])
             zeilen[(band, z['no'])] = z
         zj = json.load(open(os.path.join(HELP, f'zonen_{j}.json'), encoding='utf-8'))
         for k, v in zj['stationen'].items():

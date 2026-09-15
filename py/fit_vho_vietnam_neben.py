@@ -44,6 +44,28 @@ DIR = ROOT / 'water_levels' / 'VN_vho'
 HARM = ROOT / 'harmonics' / 'utide' / 'harmonics_utide_tidetables.txt'
 LISTE = ROOT / 'harmonics' / 'help' / 'vho_neben_pruefung.csv'
 UTC_OFF = timedelta(hours=7)
+# 15.09.2026 (Oliver: A und B umsetzen). B: VHO ersetzt schwaechere Saetze am selben Ort und uebernimmt deren
+# (von Hand gepflegten) Namen und Position. A: neue Orte; Spratly-Stationen mit Zusatz "(Truong Sa)".
+UEBERNAHME = {'vinh-cat-ba': ('Pho Cat Ba', 20.7173, 107.0453), 'dao-chang-tay': ('Dao Tran', 21.2440, 107.9590),
+              'bach-long-vy': ('Bach Long Vi', 20.1251, 107.7238), 'cua-ba-lat': ('Cua Ba Lat', 20.2529, 106.5918),
+              'hon-me': ('Hon Me', 19.3592, 105.9275), 'chan-may': ('Chan May Bay', 16.3333, 108.0167),
+              'cu-lao-cham': ('Cu Lao Cham (Tan Hiep)', 15.9572, 108.5053), 'vung-dung-quat': ('Dung Quat Bay', 15.4000, 108.7500),
+              'vung-ro': ('Vung Ro', 12.8672, 109.4073)}
+TRUONG_SA = {'phan-vinh', 'toc-tan', 'tien-nu', 'nui-le', 'da-dong', 'da-tay', 'da-lat', 'thuyen-chai', 'an-bang', 'phuc-tan', 'ba-ke'}
+
+
+def wasserpunkt(lat, lon, max_km=5.0):
+    """Naechster Punkt, den die Landmaske als Wasser fuehrt (Portalpositionen sind auf Bogenminuten gerundet)."""
+    from global_land_mask import globe
+    import math as _m
+    if not globe.is_land(lat, lon):
+        return lat, lon, 0.0
+    for r in np.arange(0.002, max_km / 111.0, 0.002):
+        for a in range(0, 360, 10):
+            la = lat + r * _m.cos(_m.radians(a)); lo = lon + r * _m.sin(_m.radians(a)) / _m.cos(_m.radians(lat))
+            if not globe.is_land(la, lo):
+                return la, lo, r * 111.0
+    return lat, lon, None
 R2_GATE = 0.95
 SPAN = '2024-01-01_2024-12-31'
 MIN_PUNKTE = 24 * 300
@@ -186,11 +208,23 @@ def main(argv):
         for e, f in faelle:
             if not f or (wahl is not None and e['slug'] not in wahl) or (wahl is None and e['status'] != 'kandidat'):
                 continue
-            if e['name'] in lines:
-                print('existiert schon:', e['name'])
+            name, la, lo = e['name'], e['lat'], e['lon']
+            noten = [f'Eigenmessung {e["eigen_min"]:+d} min; VHO-Station {e["name"].split(",")[0]} (DIZI {e["dizi"]}).']
+            if e['slug'] in UEBERNAHME:
+                n0, la, lo = UEBERNAHME[e['slug']]
+                name = f'{n0}, Vietnam'
+                noten.append('Ersetzt schwaechere ATT/NOAA/NCHMF-Saetze am selben Ort; Name und Position von dort uebernommen.')
+            else:
+                if e['slug'] in TRUONG_SA:
+                    name = f"{e['name'].split(',')[0]} (Truong Sa), Vietnam"
+                la2, lo2, d = wasserpunkt(la, lo)
+                if d:
+                    noten.append(f'Portalposition {la:.4f}/{lo:.4f} (Bogenminuten) liegt an Land; {d:.1f} km zum Wasser verschoben.')
+                la, lo = la2, lo2
+            if name in lines:
+                print('existiert schon:', name)
                 continue
-            noten = [f'Portalposition auf Bogenminuten gerundet; Eigenmessung {e["eigen_min"]:+d} min.']
-            blk = block(e['name'], e['slug'], e['lat'], e['lon'], f['z0'], f['cm'], f['r2'], f['rms'], len(f['t']),
+            blk = block(name, e['slug'], la, lo, f['z0'], f['cm'], f['r2'], f['rms'], len(f['t']),
                         f['t'][0], f['t'][-1], noten)
             end = len(lines)
             while end > 0 and lines[end - 1].strip() == '':
