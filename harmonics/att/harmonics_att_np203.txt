@@ -19778,7 +19778,8 @@ x 0 0
 # country: Saudi Arabia
 # source: ADMIRALTY Tide Tables Vol.3 (NP203), Simplified Harmonic Method
 # att_number: 4253f
-# note: NP203 Part III S.245 (2015), Standardhafen, Zone -0300. S2 in NP203 als "v" (variabel) -> aus Nachbarn Mina Salman/Ra's Tanura geschaetzt (H=0.215 g=195). M4/M6 (f4/f6). N2/K2 inferiert.
+# note: NP203 Part III S.245 (2015), Standardhafen, Zone -0300. S2 in NP203 als "v" (variabel) -> aus Nachbarn Mina Salman/Ra's Tanura geschaetzt (H=0.215 g=195). M4/M6 (f4/f6).
+# note: N2/K2 inferiert.
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
@@ -21122,12 +21123,14 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20260916 umbenannt: Der Buchname "Quelimane" der IH-Tabela Vol. II gehoert zum Muendungspegel Ponta Tangalane (18 00.3 S/36 58.2 E);
+# note: dieser Satz ist die Stadt, 25 km flussauf am Rio dos Bons Sinais (M2 1.25 m statt 1.17 m, +22 min).
 # !units: meters
 # !longitude: 36.8875
 # !latitude: -17.8843
 # province: Zambezia
 # admin1_quelle: Ufer 0.4 km
-Quelimane, Mozambique
+Quelimane (cidade), Mozambique
 +02:00 :Africa/Maputo
 2.5600 meters
 x 0 0

@@ -6,7 +6,10 @@ Die Liste ist eine CSV mit den Spalten datei, name, fehler_prozent und
 begruendung -- so bleibt der Nachweis im Baum, statt im Code zu stehen.
 
 Ohne --schreiben wird nur gezeigt, was passieren wuerde.
-Jede Datei wird vorher nach harmonics/backup/ gesichert.
+Jede Datei wird vorher nach harmonics/backup/ gesichert. Zusaetzlich
+kommt jeder geloeschte Satz mit Kommentarkopf, Datum, Liste und Grund in
+das Archiv harmonics/backup/geloescht/<datei> -- von dort holt
+py/satz_zurueckholen.py ihn bei Bedarf zurueck.
 
 Usage: python3 py/saetze_loeschen.py <liste.csv> [--schreiben]
 """
@@ -15,6 +18,7 @@ from __future__ import annotations
 import collections
 import datetime as dt
 import os
+import re
 import shutil
 import sys
 
@@ -30,6 +34,7 @@ from health_check import MERIDIAN                                  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BACKUP = os.path.join(ROOT, 'harmonics/backup')
+ARCHIV = os.path.join(BACKUP, 'geloescht')
 
 def liste(pfad):
     """Zu loeschende Saetze aus der CSV."""
@@ -38,6 +43,21 @@ def liste(pfad):
         return [(r['datei'], r['name'],
                  f"{r['fehler_prozent']} % Hub -- {r['begruendung']}")
                 for r in csv.DictReader(fh)]
+
+
+def archivieren(datei, lines, raus, liste_name):
+    """Haengt die Saetze vor dem Loeschen an das Archiv ihrer Datei an.
+
+    Jeder Satz beginnt dort mit einer Zeile "# ARCHIV: ..." (Datum, Liste,
+    Grund); darunter steht er unveraendert, wie er im Bestand stand.
+    """
+    os.makedirs(ARCHIV, exist_ok=True)
+    heute = dt.date.today().strftime('%Y%m%d')
+    with open(os.path.join(ARCHIV, os.path.basename(datei)), 'a', encoding='iso-8859-1') as fh:
+        for a, b, name, warum in sorted(raus):
+            kopf = re.sub(r'\s+', ' ', warum)
+            fh.write(f'# ARCHIV: {heute} | {liste_name} | {name} | {kopf}\n')
+            fh.write('\n'.join(l for l in lines[a:b] if l.strip()) + '\n\n')
 
 
 def block(lines, i):
@@ -146,6 +166,7 @@ def main(argv):
         if schreiben:
             shutil.copy2(pfad, os.path.join(
                 BACKUP, os.path.basename(datei) + f'.vor_{kurz}_dedup_{stamp}'))
+            archivieren(datei, lines, raus, os.path.basename(csvpfad))
             for a, b, _n, _w in raus:
                 del lines[a:b]
             sicher_schreiben.schreiben(pfad, '\n'.join(lines))

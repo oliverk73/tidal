@@ -2190,7 +2190,7 @@ x 0 0
 # !latitude: -2.2333
 # state: Sumatera Selatan
 # admin1_quelle: Ufer 7.5 km
-Air Musi (Outer Bar), Indonesia
+Air Musi (Outer Bar), Sumatera Selatan, Indonesia
 +07:00 :Asia/Jakarta
 1.9000 meters
 J1              0.0470  190.70
@@ -4379,9 +4379,9 @@ x 0 0
 # !units: meters
 # !longitude: 116.8000
 # !latitude: -1.2667
-# state: Borneo
+# state: Kalimantan Timur
 # admin1_quelle: Name
-Balikpapan, Borneo, Indonesia
+Balikpapan (Borneo), Kalimantan Timur, Indonesia
 +08:00 :Asia/Ujung_Pandang
 1.4000 meters
 J1              0.0100  296.90
@@ -4503,7 +4503,7 @@ x 0 0
 # !latitude: -4.5270
 # state: Maluku
 # admin1_quelle: Ufer 2.8 km
-Banda Harbour (Naira), Indonesia
+Banda Harbour (Naira), Maluku, Indonesia
 +09:00 :Asia/Jayapura
 1.3000 meters
 J1              0.0140  332.90
@@ -5724,9 +5724,9 @@ x 0 0
 # !units: meters
 # !longitude: 98.7049
 # !latitude: 3.7882
-# state: Sumatra
+# state: Sumatera Utara
 # admin1_quelle: Name
-Belawan, Sumatra, Indonesia
+Belawan (Sumatra), Sumatera Utara, Indonesia
 +07:00 :Asia/Jakarta
 1.5000 meters
 J1              0.0030   20.70
@@ -16738,9 +16738,9 @@ x 0 0
 # !units: meters
 # !longitude: 112.7278
 # !latitude: -6.9295
-# state: Java
+# state: Jawa Timur
 # admin1_quelle: Name
-Karang Jamuang, Java, Indonesia
+Karang Jamuang (Java), Jawa Timur, Indonesia
 +07:00 :Asia/Jakarta
 1.0500 meters
 J1              0.0210  345.80
@@ -21668,9 +21668,9 @@ x 0 0
 # !units: meters
 # !longitude: 124.8383
 # !latitude: 1.4979
-# state: Sulawesi
+# state: Sulawesi Utara
 # admin1_quelle: Name
-Manado, Sulawesi, Indonesia
+Manado (Sulawesi), Sulawesi Utara, Indonesia
 +08:00 :Asia/Ujung_Pandang
 1.2000 meters
 J1              0.0130  282.30
@@ -29894,12 +29894,14 @@ x 0 0
 # restriction: Non-commercial use only
 # datum: MLLW
 # confidence: 10
+# note: 20260916 umbenannt: Der Buchname "Quelimane" der IH-Tabela Vol. II gehoert zum Muendungspegel Ponta Tangalane (18 00.3 S/36 58.2 E);
+# note: dieser Satz ist die Stadt, 25 km flussauf am Rio dos Bons Sinais (M2 1.25 m statt 1.17 m, +22 min).
 # !units: meters
 # !longitude: 36.8875
 # !latitude: -17.8843
 # province: Zambezia
 # admin1_quelle: Ufer 0.4 km
-Quelimane, Mozambique
+Quelimane (cidade), Mozambique
 +02:00 :Africa/Maputo
 2.5600 meters
 J1              0.0040   43.00
@@ -35524,9 +35526,9 @@ x 0 0
 # !units: meters
 # !longitude: 114.5067
 # !latitude: -3.5302
-# state: Borneo
+# state: Kalimantan Selatan
 # admin1_quelle: Name
-Sungai Barito, Borneo, Indonesia
+Sungai Barito (Borneo), Kalimantan Selatan, Indonesia
 +08:00 :Asia/Ujung_Pandang
 1.3000 meters
 J1              0.0260    9.30
@@ -35646,9 +35648,9 @@ x 0 0
 # !units: meters
 # !longitude: 117.5000
 # !latitude: -0.7000
-# state: Borneo
+# state: Kalimantan Timur
 # admin1_quelle: Name
-Sungai Kutei, Borneo, Indonesia
+Sungai Kutei (Borneo), Kalimantan Timur, Indonesia
 +08:00 :Asia/Ujung_Pandang
 1.4000 meters
 J1              0.0120  305.80
@@ -35768,9 +35770,9 @@ x 0 0
 # !units: meters
 # !longitude: 133.6500
 # !latitude: -2.2333
-# state: New Guinea
+# state: Papua Barat
 # admin1_quelle: Name
-Sungai Muturi, New Guinea, Indonesia
+Sungai Muturi (New Guinea), Papua Barat, Indonesia
 +09:00 :Asia/Jayapura
 2.9000 meters
 J1              0.0250  358.90
@@ -37982,130 +37984,6 @@ x 0 0
 # 
 # rel_pedigree: 1250000000 (Via LaPointe)
 # BEGIN HOT COMMENTS
-# country: China
-# restriction: Non-commercial use only
-# datum: CD
-# confidence: 10
-# !units: meters
-# !longitude: 117.7063
-# !latitude: 38.9859
-# note: 20260903 Provinz "Tianjin" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: Tianjin
-# admin1_quelle: Name
-Tianjin Xingang, Tianjin, China
-+08:00 :Asia/Shanghai
-1.5800 meters
-J1              0.0140  169.30
-K1              0.2450  149.00
-K2              0.0660  175.20
-L2              0.0180  124.00
-M1              0.0120  128.50
-M2              0.9350   92.00
-x 0 0
-M4              0.1060  103.00
-x 0 0
-x 0 0
-N2              0.1260   60.00
-2N2             0.0170   28.00
-O1              0.1760  108.00
-OO1             0.0080  190.00
-P1              0.0810  145.90
-Q1              0.0370   72.00
-2Q1             0.0050   67.30
-R2              0.0020  172.10
-x 0 0
-S2              0.2420  169.00
-x 0 0
-x 0 0
-T2              0.0140  165.90
-LDA2            0.0070  127.70
-MU2             0.0220   15.00
-NU2             0.0240   64.30
-RHO1            0.0070   90.40
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.2040  117.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# 
-# Merged from harmonics.
-# This data set was submitted by Jean-Pierre LaPointe
-# (scipur@collegenotre-dame.qc.ca) 1996-11-29
-# The source was the Table des Marees des Grands Ports du Monde, No. 540,
-# from the Service Hydrographique et Oceanographique de la Marine - Paris,
-# B.P. 426, 29275 Brest Cedex.
-#
-# 
-# rel_pedigree: 1250000000 (Via LaPointe)
-# BEGIN HOT COMMENTS
 # country: South Korea
 # restriction: Non-commercial use only
 # datum: ALLW (approx.)
@@ -38727,9 +38605,9 @@ x 0 0
 # !units: meters
 # !longitude: 119.4000
 # !latitude: -5.1500
-# state: Sulawesi
+# state: Sulawesi Selatan
 # admin1_quelle: Name
-Makassar (Ujung Pandang), Sulawesi, Indonesia
+Makassar (Ujung Pandang, Sulawesi), Sulawesi Selatan, Indonesia
 +08:00 :Asia/Ujung_Pandang
 0.8000 meters
 J1              0.0130  316.40
@@ -40832,7 +40710,7 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # region: Liaoning
 # admin1_quelle: Name
-Yingkou, Liaoning, China
+Yingkou Neigang (Daliao River), Liaoning, China
 +09:00 :Asia/Shanghai
 2.3800 meters
 J1              0.0240  140.80

@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 """DHN Peru (Dirección de Hidrografía y Navegación) Tide-Table-Downloader.
 
+ABGELOEST (17.09.2026): py/dhn_peru_tage.py holt beliebige Zeitraeume ueber
+www.dhn.mil.pe/app/mareas/res.php -- kein Monatslauf mehr noetig. Der unten
+beschriebene Cron war zuletzt nirgends mehr eingetragen (crontab leer), daher
+fehlte der August 2026.
+
 Der DHN-Webdienst https://www.dhn.mil.pe/portal/pdf-tabla-marea/<HAFEN>
 generiert pro Aufruf eine PDF-Tafel des LAUFENDEN Monats (HW/LW, lokale Zeit
 UTC-5). Es gibt KEINEN Monats-/Jahresparameter — um Juli/August zu bekommen,

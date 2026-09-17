@@ -70,7 +70,7 @@ def umbenennungen(recs):
     return out
 
 
-def nachziehen(pfad, karte, schreiben):
+def nachziehen(pfad, karte, schreiben, treffer=None):
     roh = open(pfad, encoding='utf-8', newline='').read()
     ende = '\r\n' if '\r\n' in roh[:2000] else '\n'
     zeilen = list(csv.reader(io.StringIO(roh, newline='')))
@@ -86,6 +86,8 @@ def nachziehen(pfad, karte, schreiben):
             if len(z) > j:
                 datei = os.path.basename(z[i])
                 if (datei, z[j]) in karte:
+                    if treffer is not None:
+                        treffer[(datei, z[j])] += 1
                     z[j] = karte[(datei, z[j])]
                     n += 1
     if n and schreiben:
@@ -98,9 +100,16 @@ def nachziehen(pfad, karte, schreiben):
 def main(argv):
     schreiben = '--schreiben' in argv
     karte = umbenennungen(load_records())
+    # Die Karte stammt auch aus dem letzten Commit; bereits nachgezogene
+    # Umbenennungen tauchen darin bis zum naechsten Commit immer wieder auf.
+    # Gezeigt werden deshalb nur die, die in einer Tabelle noch etwas aendern.
+    treffer = collections.Counter()
+    for pfad in sorted(glob.glob(os.path.join(HELP, '*.csv'))):
+        nachziehen(pfad, karte, False, treffer)
     for (datei, alt), neu in sorted(karte.items()):
-        print(f'  {datei[:30]:30} {alt[:45]:45} -> {neu}')
-    print(f'{len(karte)} Umbenennungen')
+        if treffer[(datei, alt)]:
+            print(f'  {datei[:30]:30} {alt[:45]:45} -> {neu}  ({treffer[(datei, alt)]}x)')
+    print(f'{len(karte)} Umbenennungen erkannt, {sum(1 for k in karte if treffer[k])} betreffen noch Tabellen')
     for pfad in sorted(glob.glob(os.path.join(HELP, '*.csv'))):
         n = nachziehen(pfad, karte, schreiben)
         if n:
