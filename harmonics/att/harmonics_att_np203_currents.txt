@@ -24432,7 +24432,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Jambi
 # admin1_quelle: Ufer 18.4 km
-Pulau Berhala (Berhala Strait), Kepulauan Riau, Indonesia Current
+Pulau Berhala (Selat Berhala), Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
 J1           x 0 0
@@ -24818,6 +24818,7 @@ MNUS2        x 0 0
 # ebb_dir: 225
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
+# note: 20260917 umbenannt (Oliver): "Pulau Cebia (Bangka Strait), Kepulauan Riau, Indonesia Current" -> "Pulau Cebia (Selat Bangka), Kepulauan Riau, Indonesia Current".
 # !units: knots
 # !longitude: 105.166667
 # !latitude: -1.400000
@@ -24828,7 +24829,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Bangka-Belitung
 # admin1_quelle: Ufer 34.2 km
-Pulau Cebia (Bangka Strait), Indonesia Current
+Pulau Cebia (Selat Bangka), Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
 J1           x 0 0
@@ -25016,6 +25017,8 @@ MNUS2        x 0 0
 # ebb_dir: 293
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
+# note: 20260917 umbenannt (Oliver): "Southeast of Muntok (Selat Bangka), Kepulauan Bangka Belitung, Indonesia Current" -> "Muntok Tenggara (Selat Bangka), Kepulauan Bangka
+# note: Belitung, Indonesia Current".
 # !units: knots
 # !longitude: 105.250000
 # !latitude: -2.216667
@@ -25026,7 +25029,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Bangka-Belitung
 # admin1_quelle: Ufer 10.9 km
-Southeast of Muntok (Bangka Strait), Indonesia Current
+Muntok Tenggara (Selat Bangka), Kepulauan Bangka Belitung, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
 J1           x 0 0
@@ -25222,7 +25225,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Bangka-Belitung
 # admin1_quelle: Ufer 5.8 km
-Pulau Besar (Gaspar Strait), Indonesia Current
+Pulau Besar (Selat Bangka), Kepulauan Bangka Belitung, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
 J1           x 0 0
@@ -27788,7 +27791,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Banten
 # admin1_quelle: Ufer 5.7 km
-Sangiang (Sunda Strait), Indonesia Current
+Sangiang (Selat Sunda), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
 J1           x 0 0
@@ -27984,7 +27987,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Jawa Timur
 # admin1_quelle: Ufer 3.9 km
-Gresik / Junganyar (Madura Strait), Indonesia Current
+Gresik / Junganyar (Selaut Madura), Indonesia Current
 +07:00 :Asia/Jakarta
 0.1500 knots
 J1           x 0 0
@@ -28181,7 +28184,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Nusa Tenggara Barat
 # admin1_quelle: Ufer 9.1 km
-Nusa Penida / Tanjung Pandanan (Lombok Strait), Indonesia Current
+Nusa Penida / Tanjung Pandanan (Selat Lombok), Indonesia Current
 +08:00 :Asia/Makassar
 0.0000 knots
 J1           x 0 0
@@ -28370,8 +28373,8 @@ MNUS2        x 0 0
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
-# !longitude: 130.966667
-# !latitude: -1.400000
+# !longitude: 130.9707
+# !latitude: -1.3966
 # note: 20260905 Stationsnummer im Namen wiederhergestellt (vorher "Irian Jaya Current"),
 # note: -- der Name war sonst mehrfach vergeben und der Satz fuer XTide nicht erreichbar.
 # note: 20260906 Name vergeben (vorher "Irian Jaya (NP203 550) Current"),
@@ -28577,7 +28580,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: New Guinea
 # admin1_quelle: Name
-Sungai Muturi, New Guinea, Indonesia Current
+Sungai Muturi, Papua Barat, Indonesia Current
 +09:00 :Asia/Jayapura
 0.0000 knots
 J1           x 0 0

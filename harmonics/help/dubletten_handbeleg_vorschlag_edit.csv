@@ -4,7 +4,7 @@ name_a,name_b,begruendung,km,kurve_prozent,dt_h,guete,namensueberlappung,spur,ha
 "Mitlenatch Island, British Columbia, Canada","Mitlenatch, British Columbia, Canada",,0.00,0.0,+0.00,1000,1.00,N,1502,harmonics-2004-06-14_mod.txt,harmonics_utide_tidetables.txt,"Mitlenatch Island, British Columbia, Canada"
 "Schooner Harbour, Baffin Island, Nunavut, Canada","Schooner Harbour, Nunavut, Canada",,0.00,0.0,+0.00,1000,1.00,N,2274,harmonics-2004-06-14_mod.txt,harmonics_utide_tidetables.txt,"Schooner Harbour (Baffin Island), Nunavut, Canada"
 "Sops Island, Newfoundland, Canada","Sops Island, White Bay, Newfoundland, Canada",,0.00,0.0,+0.00,1000,1.00,N,2382,harmonics_utide_tidetables.txt,harmonics-2004-06-14_mod.txt,"Sops Island (White Bay), Newfoundland, Canada"
-"Tubuai, Austral Islands, French Polynesia (1)","Tubuai, Austral Islands, French Polynesia (2)",,0.00,0.0,+0.00,1000,1.00,N,2646,harmonics_ticon4_worldwide.txt,harmonics_ticon4_worldwide.txt,
+"Tubuai, Austral Islands, French Polynesia (1)","Tubuai, Austral Islands, French Polynesia",,0.00,0.0,+0.00,1000,1.00,N,2646,harmonics_ticon4_worldwide.txt,harmonics_ticon4_worldwide.txt,
 "Chatham Point, British Columbia, Canada","Chatham Pt., British Columbia, Canada",,0.00,0.0,+0.00,1000,0.75,N,473,harmonics-2004-06-14_mod.txt,harmonics_utide_tidetables.txt,
 "Khyex Point, British Columbia, Canada","Khyex River, British Columbia, Canada",,0.00,0.0,+0.00,1000,0.75,N,1146,harmonics-2004-06-14_mod.txt,harmonics_utide_tidetables.txt,
 "Kwinitsa Creek, British Columbia, Canada","Kwinitsa River, British Columbia, Canada",,0.00,0.0,+0.00,1000,0.75,N,1234,harmonics-2004-06-14_mod.txt,harmonics_utide_tidetables.txt,
@@ -68,7 +68,7 @@ name_a,name_b,begruendung,km,kurve_prozent,dt_h,guete,namensueberlappung,spur,ha
 "Sonora, Nova Scotia, Canada","Sonora, St. Mary River, Nova Scotia, Canada",,0.01,0.7,+0.00,1000,1.00,N,2381,harmonics_utide_tidetables.txt,harmonics-2004-06-14_mod.txt,
 "Stornoway (Isle of Lewis), Scotland, United Kingdom","Stornoway (Isle of Lewis), Scotland, United Kingdom (2)",,0.01,1.2,-0.02,1000,1.00,N,2431,harmonics_utide_observations.txt,harmonics_utide_observations.txt,
 "Kimmirut (Lake Harbour), Nunavut, Canada","Kimmirut, Nunavut, Canada",,0.01,1.6,-0.07,1000,1.00,N,1150,harmonics_ticon4_worldwide.txt,harmonics_utide_tidetables.txt,
-"Tubuai, Austral Islands, French Polynesia (2)","Tubuai, Austral Islands, French Polynesia (3)",,0.01,2.6,+0.12,1000,1.00,N,2646,harmonics_ticon4_worldwide.txt,harmonics_ticon4_worldwide.txt,
+"Tubuai, Austral Islands, French Polynesia","Tubuai, Austral Islands, French Polynesia (3)",,0.01,2.6,+0.12,1000,1.00,N,2646,harmonics_ticon4_worldwide.txt,harmonics_ticon4_worldwide.txt,
 "Andoany (Hellville), Madagascar","Andoany / Hell-Ville (Nosy Be), Madagascar",,0.01,3.5,+0.15,1000,0.50,N,51,harmonics_att_np203_secondary.txt,harmonics_utide_observations.txt,
 "Immingham (Humberside), England, United Kingdom","Immingham, England, United Kingdom",,0.01,3.7,-0.12,999,1.00,N,1001,harmonics_utide_observations.txt,harmonics_utide_tidetables.txt,
 "Point Danger (Snapper Rocks), New South Wales, Australia","Snapper Rocks, Queensland, Australia",,0.01,3.7,-0.07,998,0.67,N,1881,harmonics-2004-06-14_mod.txt,harmonics_utide_tidetables.txt,
@@ -87,7 +87,7 @@ name_a,name_b,begruendung,km,kurve_prozent,dt_h,guete,namensueberlappung,spur,ha
 "Makwaziniht Island, British Columbia, Canada","Makwazniht Island, British Columbia, Canada",,0.13,0.4,+0.02,1000,0.75,N,1393,harmonics-2004-06-14_mod.txt,harmonics_utide_tidetables.txt,
 "Shimotsu Ura, Osaki Wan, Wakayama, Japan","Shimotsu, Wakayama, Japan",,0.17,8.1,-0.08,999,1.00,N,2330,harmonics_noaa_cptt.txt,harmonics_utide_observations.txt,
 "Rochers Noirs - Tubuai, French Polynesia","Tubuai, Austral Islands, French Polynesia (1)",,0.20,0.2,+0.00,1000,0.33,N,2646,harmonics_utide_tidetables.txt,harmonics_ticon4_worldwide.txt,
-"Rochers Noirs - Tubuai, French Polynesia","Tubuai, Austral Islands, French Polynesia (2)",,0.20,0.2,+0.00,1000,0.33,N,2646,harmonics_utide_tidetables.txt,harmonics_ticon4_worldwide.txt,
+"Rochers Noirs - Tubuai, French Polynesia","Tubuai, Austral Islands, French Polynesia",,0.20,0.2,+0.00,1000,0.33,N,2646,harmonics_utide_tidetables.txt,harmonics_ticon4_worldwide.txt,
 "Rochers Noirs - Tubuai, French Polynesia","Tubuai, Austral Islands, French Polynesia (3)",,0.21,2.6,+0.10,1000,0.33,N,2646,harmonics_utide_tidetables.txt,harmonics_ticon4_worldwide.txt,
 "Eastport, Maine (2) (expired 1988-12-31)","Eastport, Passamaquoddy Bay, Maine",,0.22,0.9,+0.00,1000,1.00,N,661,harmonics-2004-06-14_mod.txt,harmonics-dwf-20251228-free.txt,
 "Aohama, Fukuoka, Japan","Aohama, Kyushu, Fukuoka, Japan",,0.23,9.2,+0.17,999,1.00,N,68,harmonics_utide_observations.txt,harmonics_noaa_cptt.txt,
