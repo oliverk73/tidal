@@ -152061,15 +152061,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.9833
-# !latitude: -2.0500
+# !longitude: 125.9820
+# !latitude: -2.0570
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+9.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # state: Maluku Utara
 # admin1_quelle: Polygon
-Sanana (Sula Sanana, Sula Islands), Maluku Utara, Indonesia
+Sanana, Maluku Utara, Indonesia
 +08:00 :Asia/Jayapura
 1.0973 meters
 J1              0.0152  323.31
@@ -152256,8 +152256,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 127.8500
-# !latitude: 1.8167
+# !longitude: 127.8469
+# !latitude: 1.8212
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+9.00 gegen +7.00 nach dem Buch)
@@ -152269,7 +152269,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.561. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Belawan, Indonesia [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
-Galela Bay (Halmahera Island), Maluku Utara, Indonesia
+Galela (Halmahera), Maluku Utara, Indonesia
 +00:00 :Asia/Jayapura
 1.0973 meters
 x 0 0
@@ -152654,8 +152654,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.4833
-# !latitude: 3.6167
+# !longitude: 125.4913
+# !latitude: 3.6082
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+9.00 gegen +8.00 nach dem Buch)
@@ -152665,7 +152665,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.30 auf den Springhub des Buchs (cptt-1951); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Taruna Bay (Sangi Island, Sulawesi), Sulawesi Utara, Indonesia
+Tahuna (Sangihe), Sulawesi Utara, Indonesia
 +00:00 :Asia/Makassar
 1.1887 meters
 J1              0.0076  171.79
@@ -152852,8 +152852,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 121.6000
-# !latitude: -4.0667
+# !longitude: 121.5872
+# !latitude: -4.0582
 # note: 20260903 Phasen um -5.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +3.00 nach dem Buch)
@@ -152867,7 +152867,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.946,
 # note: Zielwert F=0.722 aus Wahrheit statt F=0.705 des Bezugsorts; Beleg: Wahrheit 6.08 -> 5.94 %.
-Kolaka (Gulf of Boni), Sulawesi Tenggara, Indonesia
+Kolaka (Teluk Bone), Sulawesi Tenggara, Indonesia
 +03:30 :Asia/Makassar
 1.1887 meters
 x 0 0
@@ -153067,7 +153067,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.298. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Khowr-e Musa Bar, Iran [harmonics_att_np203.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Tampunawu (Muna Island), Sulawesi Tenggara, Indonesia
+Tampunawu (Kanapa Napa, Pulau Muna), Sulawesi Tenggara, Indonesia
 +03:30 :Asia/Makassar
 1.4021 meters
 x 0 0
@@ -153456,8 +153456,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.5333
-# !latitude: -2.0667
+# !longitude: 121.5293
+# !latitude: -2.0456
 # state: Sulawesi Tengah
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 5.37 auf den Springhub des Buchs (cptt-1963); der Bau
@@ -153652,8 +153652,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.1500
-# !latitude: -0.9000
+# !longitude: 123.1425
+# !latitude: -0.8970
 # state: Sulawesi Tengah
 # admin1_quelle: Ufer 0.6 km
 # note: 20260913 S2/K2 x 7.13 auf den Springhub des Buchs (cptt-1965); der Bau
@@ -153661,7 +153661,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.6. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Shantou (Han River), Guangdong, China [harmonics-1997-05-25_,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Teluk Lamala (Peling Strait), Sulawesi Tengah, Indonesia
+Teluk Lamala (Selat Peleng), Sulawesi Tengah, Indonesia
 +08:00 :Asia/Makassar
 1.0058 meters
 J1              0.0088  318.38
@@ -153848,8 +153848,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 120.7500
-# !latitude: -1.3667
+# !longitude: 120.7549
+# !latitude: -1.3799
 # state: Sulawesi Tengah
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (cptt-1967); der Bau
@@ -154042,13 +154042,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.0500
-# !latitude: 0.5000
+# !longitude: 123.0630
+# !latitude: 0.5088
 # state: Gorontalo
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Gorontalo River entrance (Sulawesi), Gorontalo, Indonesia
+Gorontalo (Sulawesi), Gorontalo, Indonesia
 +00:00 :Asia/Makassar
 0.7925 meters
 J1              0.0093  208.00
@@ -154235,8 +154235,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.838300
-# !latitude: 1.497900
+# !longitude: 124.8396
+# !latitude: 1.4979
 # state: Sulawesi Utara
 # admin1_quelle: Name
 # note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 1.5000/124.8333,
@@ -154245,7 +154245,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.925,
 # note: Zielwert F=0.352 aus Wahrheit statt F=0.382 des Bezugsorts; Beleg: Wahrheit 2.89 -> 2.88 %.
-Manado (Sulawesi), Sulawesi Utara, Indonesia
+Manado, Sulawesi Utara, Indonesia
 +00:00 :Asia/Makassar
 1.1887 meters
 x 0 0
@@ -154432,13 +154432,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.8167
-# !latitude: 1.0333
+# !longitude: 120.8085
+# !latitude: 1.0371
 # state: Sulawesi Tengah
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Muara Bayor, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Tolitoli Bay, Sulawesi Tengah, Indonesia
+Tolitoli, Sulawesi Tengah, Indonesia
 +00:00 :Asia/Makassar
 1.1887 meters
 x 0 0
@@ -154625,8 +154625,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 119.7333
-# !latitude: -0.6667
+# !longitude: 119.7454
+# !latitude: -0.6660
 # state: Sulawesi Tengah
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.40 auf den Springhub des Buchs (cptt-1977); der Bau
@@ -154634,7 +154634,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.851. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Muara Bayor, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Donggala (Borneo), Sulawesi Tengah, Indonesia
+Donggala, Sulawesi Tengah, Indonesia
 +00:00 :Asia/Makassar
 1.1887 meters
 x 0 0
@@ -155219,15 +155219,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 117.5833
-# !latitude: 3.2833
+# !longitude: 117.5941
+# !latitude: 3.2805
 # state: Kalimantan Utara
 # admin1_quelle: Ufer 3.5 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Muara Bayor, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.649,
 # note: Zielwert F=0.252 aus Wahrheit statt F=0.382 des Bezugsorts; Beleg: Wahrheit 3.62 -> 2.23 %.
-Lingkas (Tarakan Island), Kalimantan Utara, Indonesia
+Tarakan (Lingkas), Kalimantan Utara, Indonesia
 +00:00 :Asia/Makassar
 1.7069 meters
 x 0 0
@@ -155414,8 +155414,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 117.7000
-# !latitude: 2.9167
+# !longitude: 117.7128
+# !latitude: 2.9055
 # state: Kalimantan Utara
 # admin1_quelle: Ufer 4.2 km
 # note: 20260913 S2/K2 x 2.19 auf den Springhub des Buchs (cptt-1989); der Bau
@@ -155621,7 +155621,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.594. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Muara Bayor, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Tanjung Selor, Kalimantan Utara, Indonesia
+Tanjung Selor (Sungai Kayan), Kalimantan Utara, Indonesia
 +00:00 :Asia/Makassar
 0.6096 meters
 x 0 0
@@ -155808,8 +155808,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 117.8667
-# !latitude: 2.1667
+# !longitude: 117.9115
+# !latitude: 2.2067
 # state: Kalimantan Timur
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.18 auf den Springhub des Buchs (cptt-1993); der Bau
@@ -155817,7 +155817,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Muara Bayor, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -2.86 Punkte.
-Kasseimouth (Berau River), Kalimantan Timur, Indonesia
+Muara Kasai (Sungai Berau), Kalimantan Timur, Indonesia
 +00:00 :Asia/Makassar
 1.7983 meters
 x 0 0
@@ -156004,8 +156004,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 117.5333
-# !latitude: 2.1833
+# !longitude: 117.5334
+# !latitude: 2.1764
 # state: Kalimantan Timur
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.55 auf den Springhub des Buchs (cptt-1995); der Bau
@@ -156200,8 +156200,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 118.0000
-# !latitude: 0.7500
+# !longitude: 118.0116
+# !latitude: 0.7451
 # state: Kalimantan Timur
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.21 auf den Springhub des Buchs (cptt-1997); der Bau
@@ -156209,7 +156209,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.654. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Muara Bayor, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Miang Besar (Sangkulirang Bay, Borneo), Kalimantan Timur, Indonesia
+Pulau Miang Besar, Kalimantan Timur, Indonesia
 +00:00 :Asia/Makassar
 1.1887 meters
 x 0 0
@@ -156396,8 +156396,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 117.9833
-# !latitude: 0.9833
+# !longitude: 117.9815
+# !latitude: 0.9930
 # state: Kalimantan Timur
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.52 auf den Springhub des Buchs (cptt-1999); der Bau
@@ -156407,7 +156407,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.813,
 # note: Zielwert F=0.296 aus Wahrheit statt F=0.382 des Bezugsorts; Beleg: Wahrheit 1.80 -> 0.95 %.
-Sangkulirang (Sangkulirang River, Borneo), Kalimantan Timur, Indonesia
+Benoa Baru (Sangkulirang), Kalimantan Timur, Indonesia
 +00:00 :Asia/Makassar
 1.1887 meters
 x 0 0
@@ -156792,8 +156792,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 116.8000
-# !latitude: -1.2667
+# !longitude: 116.8056
+# !latitude: -1.2724
 # state: Kalimantan Timur
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.71 auf den Springhub des Buchs (cptt-2005); der Bau
@@ -156803,7 +156803,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.616,
 # note: Zielwert F=0.22 aus Wahrheit statt F=0.382 des Bezugsorts; Beleg: Wahrheit 5.17 -> 4.18 %.
-Balik Papan (Borneo), Kalimantan Timur, Indonesia
+Balikpapan (Borneo), Kalimantan Timur, Indonesia
 +00:00 :Asia/Makassar
 1.4021 meters
 x 0 0
@@ -156991,7 +156991,7 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 116.2000
-# !latitude: -1.9167
+# !latitude: -1.9117
 # state: Kalimantan Timur
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.82 auf den Springhub des Buchs (cptt-2007); der Bau
@@ -157001,7 +157001,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.138,
 # note: Zielwert F=0.436 aus Wahrheit statt F=0.382 des Bezugsorts; Beleg: Wahrheit 2.41 -> 2.28 %.
-Tanahgrogot (Pasir River, Borneo), Kalimantan Timur, Indonesia
+Tanahgrogot (Sungai Kendilo), Kalimantan Timur, Indonesia
 +00:00 :Asia/Makassar
 1.4021 meters
 x 0 0
@@ -157197,7 +157197,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 1.0. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.348,
 # note: Zielwert F=0.384 aus Wahrheit statt F=0.382 des Bezugsorts; Beleg: Wahrheit 11.85 -> 11.59 %.
-Aru Bank (Borneo), Kalimantan Timur, Indonesia
+Gosong Aru, Kalimantan Timur, Indonesia
 +00:00 :Asia/Makassar
 0.6096 meters
 J1              0.0039  170.62
@@ -157384,8 +157384,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 116.5000
-# !latitude: -2.6000
+# !longitude: 116.4813
+# !latitude: -2.5710
 # state: Kalimantan Selatan
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.21 auf den Springhub des Buchs (cptt-2011); der Bau
@@ -157393,7 +157393,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.683. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Muara Bayor, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
-Pamukan Bay (Borneo), Kalimantan Selatan, Indonesia
+Tanjung Pamukan (Sesulung), Kalimantan Selatan, Indonesia
 +00:00 :Asia/Makassar
 1.4021 meters
 x 0 0
@@ -157580,8 +157580,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 116.2167
-# !latitude: -3.0167
+# !longitude: 116.2151
+# !latitude: -3.0030
 # state: Kalimantan Selatan
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.71 auf den Springhub des Buchs (cptt-2013); der Bau
@@ -157589,7 +157589,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 1.102. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Muara Bayor, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Klumpeng Bay (Borneo), Kalimantan Selatan, Indonesia
+Teluk Klumpang (Tanjung Batu), Kalimantan Selatan, Indonesia
 +00:00 :Asia/Makassar
 1.4021 meters
 x 0 0
@@ -157776,14 +157776,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 116.0167
-# !latitude: -3.4167
+# !longitude: 116.0099
+# !latitude: -3.4285
 # state: Kalimantan Selatan
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.50 auf den Springhub des Buchs (cptt-2015); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 1.324. Siehe py/noaa_s2_nachziehen.py.
-Kampung Baru (Laut Strait, Borneo), Kalimantan Selatan, Indonesia
+Kampung Baru (Batulicin), Kalimantan Selatan, Indonesia
 +00:00 :Asia/Makassar
 1.3106 meters
 J1              0.0066  178.41
@@ -157970,13 +157970,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 114.6000
-# !latitude: -3.3333
+# !longitude: 114.5905
+# !latitude: -3.3281
 # state: Kalimantan Selatan
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sungai Barito (Outer Bar), Indonesia [harmonics_att_np203_sc,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Banjermasin (Martapura River, Borneo), Kalimantan Selatan, Indonesia
+Banjarmasin (Sungai Martapura), Kalimantan Selatan, Indonesia
 +08:00 :Asia/Makassar
 1.3106 meters
 x 0 0
@@ -158163,15 +158163,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 114.1667
-# !latitude: -3.0667
+# !longitude: 114.1639
+# !latitude: -3.0579
 # state: Kalimantan Tengah
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sungai Barito (Outer Bar), Indonesia [harmonics_att_np203_sc,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 1.348,
 # note: Zielwert F=1.844 aus Wahrheit statt F=2.487 des Bezugsorts; Beleg: Wahrheit 5.90 -> 5.70 %.
-Pangkoh (Kahajan River, Borneo), Kalimantan Tengah, Indonesia
+Pangkoh (Sungai Kahayan), Kalimantan Tengah, Indonesia
 +08:00 :Asia/Pontianak
 1.4935 meters
 x 0 0
@@ -158358,13 +158358,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.3500
-# !latitude: -3.2833
+# !longitude: 113.3455
+# !latitude: -3.2782
 # state: Kalimantan Tengah
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sungai Barito (Outer Bar), Indonesia [harmonics_att_np203_sc,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Pegatan (Mendawai River, Borneo), Kalimantan Tengah, Indonesia
+Pegatan (Sungai Katigan / Mendawai), Kalimantan Tengah, Indonesia
 +08:00 :Asia/Pontianak
 1.3106 meters
 x 0 0
@@ -158551,13 +158551,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.0500
-# !latitude: -3.0000
+# !longitude: 113.0560
+# !latitude: -3.0010
 # state: Kalimantan Tengah
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sungai Barito (Outer Bar), Indonesia [harmonics_att_np203_sc,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Sampit Bay (Borneo), Kalimantan Tengah, Indonesia
+Teluk Sampit, Kalimantan Tengah, Indonesia
 +08:00 :Asia/Pontianak
 1.4021 meters
 x 0 0
@@ -158744,13 +158744,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 112.5667
-# !latitude: -3.4167
+# !longitude: 112.5678
+# !latitude: -3.4301
 # state: Kalimantan Tengah
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sungai Barito (Outer Bar), Indonesia [harmonics_att_np203_sc,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Pembuang River entrance (Borneo), Kalimantan Tengah, Indonesia
+Kuala Pembuang, Kalimantan Tengah, Indonesia
 +08:00 :Asia/Pontianak
 1.3106 meters
 x 0 0
@@ -158937,15 +158937,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 111.8000
-# !latitude: -3.1667
+# !longitude: 111.8055
+# !latitude: -3.1581
 # state: Kalimantan Tengah
 # admin1_quelle: Ufer 3.1 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.918,
 # note: Zielwert F=2.0 aus Wahrheit statt F=1.836 des Bezugsorts; Beleg: Wahrheit 13.33 -> 12.90 %.
-Sungai Aru Tobal (Kumai Bay), Kalimantan Tengah, Indonesia
+Sungai Aru Tobal (Teluk Kumei), Kalimantan Tengah, Indonesia
 +00:00 :Asia/Pontianak
 0.7010 meters
 J1              0.0103  207.22
@@ -159132,13 +159132,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 111.4333
-# !latitude: -2.9000
+# !longitude: 111.4306
+# !latitude: -2.8875
 # state: Kalimantan Tengah
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Lurah (Kota Waringin River entrance), Kalimantan Tengah, Indonesia
+Kuala Sapu (Sungai Lamandau), Kalimantan Tengah, Indonesia
 +00:00 :Asia/Pontianak
 1.0058 meters
 J1              0.0100  200.21
@@ -159325,13 +159325,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 110.7333
-# !latitude: -2.9833
+# !longitude: 110.7411
+# !latitude: -2.9776
 # state: Kalimantan Tengah
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Djelai River entrance, Kalimantan Tengah, Indonesia
+Tanjung Kuala Jelai, Kalimantan Tengah, Indonesia
 +00:00 :Asia/Pontianak
 0.4877 meters
 J1              0.0051  206.96
@@ -159524,7 +159524,7 @@ x 0 0
 # admin1_quelle: Ufer 1.8 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Tanjung Priok, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Pawan River entrance, Kalimantan Barat, Indonesia
+Sungai Pawan (Tanjung Bawang), Kalimantan Barat, Indonesia
 +00:00 :Asia/Pontianak
 1.0973 meters
 x 0 0
@@ -159711,11 +159711,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 109.9500
-# !latitude: -1.2333
+# !longitude: 109.9400
+# !latitude: -1.2487
 # state: Kalimantan Barat
 # admin1_quelle: Ufer 0.3 km
-Sukadana (Sukadana Bay), Kalimantan Barat, Indonesia
+Sukadana, Kalimantan Barat, Indonesia
 +00:00 :Asia/Pontianak
 1.1887 meters
 J1              0.0337  72.45
@@ -159902,8 +159902,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 109.3333
-# !latitude: -0.0167
+# !longitude: 109.3376
+# !latitude: -0.0197
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +7.00 nach dem Buch)
@@ -159914,7 +159914,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 1.189,
 # note: Zielwert F=3.111 aus Wahrheit statt F=3.7 des Bezugsorts; Beleg: Wahrheit 3.56 -> 3.46 %.
-Pontianak (Little Kapuas River, Borneo), Kalimantan Barat, Indonesia
+Dwikora Pontianak, Kalimantan Barat, Indonesia
 +07:00 :Asia/Pontianak
 0.7925 meters
 x 0 0
@@ -160300,8 +160300,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 108.9833
-# !latitude: 1.1833
+# !longitude: 108.9682
+# !latitude: 1.1800
 # state: Kalimantan Barat
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.32 auf den Springhub des Buchs (cptt-2043); der Bau
@@ -160309,7 +160309,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.192. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.822,
 # note: Zielwert F=0.968 aus Wahrheit statt F=0.943 des Bezugsorts; Beleg: Wahrheit 6.55 -> 4.78 %.
-Pamangkat (Sambas-besar River, Borneo), Kalimantan Barat, Indonesia
+Pemangkat (Sungai Sambas Besar), Kalimantan Barat, Indonesia
 +00:00 :Asia/Pontianak
 0.6096 meters
 J1              0.0060  317.63
@@ -160496,8 +160496,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 109.6500
-# !latitude: 2.0833
+# !longitude: 109.6448
+# !latitude: 2.0815
 # note: 20260903 Phasen um +1.50 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.50 nach dem Buch)
@@ -160507,7 +160507,7 @@ x 0 0
 # note: 20260913 S2/K2 x 1.37 auf den Springhub des Buchs (cptt-2045); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.189. Siehe py/noaa_s2_nachziehen.py.
-Tandjung Datu (Borneo), Kalimantan Barat, Indonesia
+Tanjung Datu (Borneo), Kalimantan Barat, Indonesia
 +09:30 :Asia/Kuching
 1.5850 meters
 J1              0.0194  22.12
@@ -237044,15 +237044,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 134.0833
-# !latitude: -0.8667
+# !longitude: 134.0767
+# !latitude: -0.8697
 # state: Papua Barat
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yokohama (Shinko), Kanagawa, Japan [harmonics_ticon4_worldwi,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.902,
 # note: Zielwert F=0.597 aus Wahrheit statt F=0.658 des Bezugsorts; Beleg: Wahrheit 5.08 -> 4.72 %.
-Manokwari (New Guinea), Papua Barat, Indonesia
+Manokwari, Papua Barat, Indonesia
 +00:00 :Asia/Jayapura
 1.0973 meters
 J1              0.0108  79.65
@@ -237239,8 +237239,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 136.3833
-# !latitude: -1.2667
+# !longitude: 136.3772
+# !latitude: -1.2561
 # state: Papua
 # admin1_quelle: Ufer 13.6 km
 # note: 20260913 S2/K2 x 2.55 auf den Springhub des Buchs (cptt-3149); der Bau
@@ -237248,7 +237248,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.861,
 # note: Zielwert F=0.63 aus Nachbarn statt F=0.658 des Bezugsorts; Beleg: Nachbarn 5.70 -> 4.43 %.
-Mios Woendi Lagoon (Schouten Islands), Papua, Indonesia
+Pulau Mioswundi (Padaido), Papua, Indonesia
 +00:00 :Asia/Jayapura
 1.0973 meters
 J1              0.0117  77.96
@@ -237363,202 +237363,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0004  186.99
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Indonesia
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 3151
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Yokohama (Shinko), Kanagawa, Japan (no.3151). M2=0.26 S2=0.02 k=0.60 dt=+115min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 140.7333
-# !latitude: -2.5333
-# state: Papua
-# admin1_quelle: Polygon
-# note: 20260913 S2/K2 x 1.62 auf den Springhub des Buchs (cptt-3151); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.16. Siehe py/noaa_s2_nachziehen.py.
-# note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.287,
-# note: Zielwert F=1.172 aus Wahrheit statt F=0.658 des Bezugsorts; Beleg: Wahrheit 4.33 -> 4.31 %.
-Kajo Bay, Papua, Indonesia
-+00:00 :Asia/Jayapura
-0.9144 meters
-J1              0.0095  79.78
-K1              0.1882  67.54
-K2              0.0066  315.20
-L2              0.0088  298.87
-M1              0.0073  324.73
-M2              0.2617  288.77
-M3              0.0056  175.46
-M4              0.0036  94.07
-M6              0.0002  138.63
-M8              0.0001  23.60
-N2              0.0396  283.86
-x 0 0
-O1              0.1475  46.80
-OO1             0.0041  115.76
-P1              0.0623  64.94
-Q1              0.0302  37.18
-x 0 0
-R2              0.0028  133.19
-S1              0.0062  307.34
-S2              0.0246  318.73
-S4              0.0018  210.34
-x 0 0
-T2              0.0065  296.92
-LDA2            0.0019  292.26
-MU2             0.0075  299.51
-NU2             0.0079  282.80
-RHO1            0.0054  34.04
-x 0 0
-x 0 0
-MN4             0.0002  350.59
-MS4             0.0012  176.45
-x 0 0
-MF              0.0071  114.87
-MSF             0.0060  338.55
-MM              0.0075  97.16
-SA              0.0933  162.26
-SSA             0.0061  279.21
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0030  51.54
-x 0 0
-EPS2            0.0022  291.24
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0029  239.01
-SIG1            0.0044  211.42
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0002  193.63
 x 0 0
 x 0 0
 x 0 0

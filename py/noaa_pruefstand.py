@@ -66,7 +66,7 @@ KLASSE_A_DATEI = ('harmonics_utide_observations.txt', 'harmonics_ticon4_worldwid
                   'harmonics-1997-05-25_mod.txt', 'harmonics-2004-06-14_mod.txt',
                   'harmonics-dwf-20100529-nonfree_mod.txt', 'harmonics-dwf-20070318_mod.txt')
 KLASSE_A_QUELLE = re.compile(r'reverse-engineered|1y hourly|SHOM tide predictions|KHOA|NAMRIA|CWA tide|'
-                             r'BMKG|JMA|Hidronav|SEMAR|CICESE|10-min|hourly', re.I)
+                             r'BMKG|Pushidrosal|JMA|Hidronav|SEMAR|CICESE|10-min|hourly', re.I)
 NICHT_QUELLE = re.compile(r'HW/LW|tidetimes|HW predictions|transfer|secondary|FES|SHN Argentina|'
                           r'Marinha do Brasil|IHM tide predictions', re.I)
 

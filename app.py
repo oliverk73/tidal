@@ -6,12 +6,21 @@ import tempfile
 import unicodedata
 import subprocess
 import shutil
+import threading
+from collections import Counter
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 import glob
 from flask import Flask, render_template, render_template_string, abort, jsonify, url_for, request, send_from_directory
 from urllib.parse import unquote
 from timezonefinder import TimezoneFinder
+
+# Loeschen ueber die App laeuft ueber dieselben Blockgrenzen und dasselbe
+# Archiv wie py/saetze_loeschen.py -- dann holt py/satz_zurueckholen.py auch
+# einen im Browser geloeschten Satz zurueck.
+import sys as _sys
+_sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "py"))
+import saetze_loeschen as _saetze_loeschen  # noqa: E402
 
 # Module-level TimezoneFinder: ~50 MB shapefile data, but only one instance.
 # Used to convert UTC times for stations whose harmonics meridian is +00:00
@@ -43,7 +52,11 @@ SVG_DIR = PREDICTIONS_DIR  # generated tide grafiks (gleicher Lifecycle wie HTML
 TEMPLATE_PATH = "templates/tide_prediction_template.html"
 HARMONICS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "harmonics")
 TCD_DIR = "/usr/share/xtide"
-MARKERS_JS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "js", "leaflet_markers.js")
+# Die Karte laedt ihre Stationen aus dieser Datei (Spalten siehe load_station_data).
+# leaflet_markers.js ist seit der Aufteilung nur noch der kleine Loader und
+# enthaelt keine Stationen mehr -- dort gibt es nichts zu patchen.
+MARKERS_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "js", "leaflet_markers_data.json")
+_markers_json_lock = threading.Lock()
 
 
 def find_txt_for_tcd(tcd_basename):
@@ -202,119 +215,100 @@ def get_num_constituents(txt_path):
 
 
 def delete_station_from_txt(txt_path, station_name,
-                            expected_lat=None, expected_lon=None):
-    """Delete a station and its entire data block from a harmonics .txt file."""
-    num_constituents = get_num_constituents(txt_path)
-    if num_constituents is None:
-        return False
+                            expected_lat=None, expected_lon=None, grund=None):
+    """Satz samt Kommentarkopf aus der Datei nehmen und vorher archivieren.
 
+    Die Blockgrenzen kommen aus py/saetze_loeschen.py. Die fruehere eigene
+    Rechnung lief beim ERSTEN Satz einer Datei ueber den Dateikopf nach
+    oben und nahm ihn mit -- danach bricht build_tide_db ab (so geschehen
+    mit harmonics_noaa_censam). Der Satz landet unveraendert in
+    harmonics/backup/geloescht/<datei>, von dort holt ihn
+    py/satz_zurueckholen.py zurueck.
+    """
     with open(txt_path, "r", encoding="iso-8859-1") as f:
-        lines = f.readlines()
+        lines = f.read().split("\n")
 
     name_idx = _find_station_line(lines, station_name, expected_lat, expected_lon)
     if name_idx is None:
         return False
 
-    # Block end: name line + 2 info lines + N constituent lines
-    block_end = name_idx + 3 + num_constituents
-
-    # Block start: scan backwards over comment lines (#) and blank lines
-    block_start = name_idx
-    for j in range(name_idx - 1, -1, -1):
-        stripped = lines[j].strip()
-        if stripped == "" or stripped.startswith("#"):
-            block_start = j
-        else:
-            break
-
-    # Delete the block
-    del lines[block_start:block_end]
+    a, b = _saetze_loeschen.block(lines, name_idx)
+    wo = (f" bei {expected_lat:.4f}/{expected_lon:.4f}"
+          if expected_lat is not None and expected_lon is not None else "")
+    warum = grund or f"in der App (Karte) geloescht{wo}"
+    _saetze_loeschen.archivieren(txt_path, lines, [(a, b, station_name, warum)],
+                                 "app.py /delete_station")
+    del lines[a:b]
 
     # Atomic + durable write (survives a hard crash / power loss)
-    _atomic_write_durable(txt_path, lines, "iso-8859-1")
+    _atomic_write_durable(txt_path, "\n".join(lines), "iso-8859-1")
     return True
 
 
-def delete_station_from_markers_js(station_name):
-    """Remove a station from leaflet_markers.js and decrement group counts.
+def _finde_markerzeile(rows, name, source, lat=None, lon=None):
+    """Index der Markerzeile zu (Name, Quelle); bei mehreren die naechste zu (lat, lon).
 
-    The generator writes 6 lines per station:
-      stationCoords['Name'] = ...;
-      stationSources['Name'] = ...;
-      var mN = L.marker(...);
-      mN.bindPopup("<b>Name</b>...");
-      grp_all_tide.addLayer(mN);         (or grp_all_current)
-      src_<Group>_tide.push(mN);         (or _current)
+    Zeilen: [anzeige, lat, lon, quelle, gruppe, strom, slug, braucht_quelle, name].
+    Gleiche Namen kommen in verschiedenen Dateien vor (und nach dateiinternen
+    Dubletten auch in derselben), deshalb zaehlt die Quelle mit und im
+    Zweifel die alte Position.
     """
-    with open(MARKERS_JS, "r", encoding="utf-8") as f:
-        js_lines = f.readlines()
+    treffer = [i for i, r in enumerate(rows)
+               if len(r) > 8 and r[8] == name and (not source or r[3] == source)]
+    if not treffer:
+        return None
+    if len(treffer) == 1 or lat is None or lon is None:
+        return treffer[0]
+    return min(treffer, key=lambda i: (rows[i][1] - lat) ** 2 + (rows[i][2] - lon) ** 2)
 
-    coord_key = station_name.replace("\\", "\\\\").replace("'", "\\'")
-    display_name = station_name.replace('"', '&quot;')
 
-    indices_to_remove = set()
-    # Per src_var count: tide/current station deletions attributed to each group
-    deletions_per_src = {}
-    for i, line in enumerate(js_lines):
-        if f"stationCoords['{coord_key}']" in line:
-            indices_to_remove.add(i)
-        elif f"stationSources['{coord_key}']" in line:
-            indices_to_remove.add(i)
-        elif f"<b>{display_name}</b>" in line:
-            indices_to_remove.add(i)
-            if i > 0:
-                indices_to_remove.add(i - 1)  # var mN = L.marker(...)
-            if i + 1 < len(js_lines):
-                indices_to_remove.add(i + 1)  # grp_all_*.addLayer(mN)
-            if i + 2 < len(js_lines):
-                indices_to_remove.add(i + 2)  # src_*.push(mN)
-                m = re.match(r"(src_\w+_(?:tide|current))\.push\(",
-                             js_lines[i + 2].strip())
-                if m:
-                    deletions_per_src[m.group(1)] = \
-                        deletions_per_src.get(m.group(1), 0) + 1
+def _braucht_quelle_neu(rows):
+    """Spalte 7 (Quelle in der URL noetig) neu setzen -- dieselbe Regel wie
+    py/build_tide_station_markers.py: Name mehrfach vorhanden oder Slug-Kollision.
+    Nach einer Umbenennung oder Loeschung kann das andere Zeilen betreffen."""
+    namen = [r[8] for r in rows]
+    doppelt = {n for n, c in Counter(namen).items() if c > 1}
+    slug_namen = {}
+    for n in namen:
+        slug_namen.setdefault(to_slug(n), set()).add(n)
+    for gruppe in slug_namen.values():
+        if len(gruppe) > 1:
+            doppelt |= gruppe
+    for r in rows:
+        r[7] = 1 if r[8] in doppelt else 0
 
-    if not indices_to_remove:
-        return False
 
-    js_lines = [ln for idx, ln in enumerate(js_lines)
-                if idx not in indices_to_remove]
+def _markers_json_aendern(aenderung):
+    """Liest die Markerdaten, wendet aenderung(rows) -> bool an, schreibt atomar.
 
-    # Decrement group counts in tideGroups/currentGroups and the header totals
-    tide_deletions = sum(n for s, n in deletions_per_src.items()
-                         if s.endswith("_tide"))
-    current_deletions = sum(n for s, n in deletions_per_src.items()
-                            if s.endswith("_current"))
-
-    for src_var, n in deletions_per_src.items():
-        count_pattern = re.compile(
-            r"(count:)(\d+)([^}]*?markers:" + re.escape(src_var) + r"\b)"
-        )
-        for idx, line in enumerate(js_lines):
-            if f"markers:{src_var}," in line:
-                js_lines[idx] = count_pattern.sub(
-                    lambda m: f"{m.group(1)}{int(m.group(2)) - n}{m.group(3)}",
-                    line,
-                    count=1,
-                )
-                break
-
-    for header, n in (("Tides", tide_deletions), ("Currents", current_deletions)):
-        if n == 0:
-            continue
-        header_pattern = re.compile(rf"buildSection\('{header} \((\d+)\)")
-        for idx, line in enumerate(js_lines):
-            m = header_pattern.search(line)
-            if m:
-                js_lines[idx] = line.replace(
-                    f"{header} ({m.group(1)})",
-                    f"{header} ({int(m.group(1)) - n})",
-                    1,
-                )
-                break
-
-    _atomic_write_durable(MARKERS_JS, js_lines, "utf-8")
+    Danach werden die Stationslisten im Speicher (Suche, Stationsseiten,
+    Naechste-Stationen) aus der neuen Datei nachgeladen -- sonst waere eine
+    umbenannte Station erst nach einem Neustart unter ihrem neuen Namen
+    erreichbar.
+    """
+    with _markers_json_lock:
+        with open(MARKERS_JSON, encoding="utf-8") as f:
+            data = json.load(f)
+        rows = data.get("stations", [])
+        if not aenderung(rows):
+            return False
+        _braucht_quelle_neu(rows)
+        _atomic_write_durable(MARKERS_JSON,
+                              json.dumps(data, ensure_ascii=False, separators=(",", ":")),
+                              "utf-8")
+        _stationslisten_nachladen()
     return True
+
+
+def delete_station_from_markers_json(station_name, source, old_lat=None, old_lon=None):
+    """Station aus der Karte entfernen."""
+    def aenderung(rows):
+        i = _finde_markerzeile(rows, station_name, source, old_lat, old_lon)
+        if i is None:
+            return False
+        del rows[i]
+        return True
+    return _markers_json_aendern(aenderung)
 
 
 def rename_station_in_txt(txt_path, old_name, new_name,
@@ -333,78 +327,30 @@ def rename_station_in_txt(txt_path, old_name, new_name,
     return True
 
 
-def rename_station_in_markers_js(old_name, new_name):
-    """Rename a station in leaflet_markers.js — update all references."""
-    with open(MARKERS_JS, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    old_escaped = re.escape(old_name)
-    new_display = new_name.replace('"', '&quot;')
-    new_js = new_name.replace("\\", "\\\\").replace("'", "\\x27").replace('"', "\\x22")
-    new_coord_key = new_name.replace("\\", "\\\\").replace("'", "\\'")
-    old_coord_key = old_name.replace("\\", "\\\\").replace("'", "\\'")
-    old_safe = normalize_filename(old_name)
-    new_safe = normalize_filename(new_name)
-
-    # stationCoords['Old'] → stationCoords['New']
-    content = content.replace(
-        f"stationCoords['{old_coord_key}']",
-        f"stationCoords['{new_coord_key}']"
-    )
-    # stationSources['Old'] → stationSources['New']
-    content = content.replace(
-        f"stationSources['{old_coord_key}']",
-        f"stationSources['{new_coord_key}']"
-    )
-    # Popup: <b>Old</b> → <b>New</b>
-    content = content.replace(
-        f"<b>{old_name.replace(chr(34), '&quot;')}</b>",
-        f"<b>{new_display}</b>"
-    )
-    # Popup: encodeURIComponent('Old') → encodeURIComponent('New')
-    old_js = old_name.replace("\\", "\\\\").replace("'", "\\x27").replace('"', "\\x22")
-    content = content.replace(
-        f"encodeURIComponent('{old_js}')",
-        f"encodeURIComponent('{new_js}')"
-    )
-    # Popup: tide_prediction_OldSafe.html → tide_prediction_NewSafe.html
-    content = content.replace(
-        f"tide_prediction_{old_safe}.html",
-        f"tide_prediction_{new_safe}.html"
-    )
-
-    _atomic_write_durable(MARKERS_JS, content, "utf-8")
+def rename_station_in_markers_json(old_name, new_name, source, old_lat=None, old_lon=None):
+    """Station auf der Karte umbenennen: Name, Anzeigename und Slug."""
+    def aenderung(rows):
+        i = _finde_markerzeile(rows, old_name, source, old_lat, old_lon)
+        if i is None:
+            return False
+        r = rows[i]
+        r[8] = new_name
+        r[0] = display_name_for(new_name, r[3])
+        r[6] = to_slug(r[0])
+        return True
+    return _markers_json_aendern(aenderung)
 
 
-def update_markers_js(station_name, new_lat, new_lon):
-    """Update coordinates for a station directly in leaflet_markers.js.
-
-    Generator writes 6 lines per station; we update line N (stationCoords)
-    and line N+2 (var mX = L.marker([lat, lon], ...)). Strictly line-based
-    so a regex can never accidentally cross station boundaries.
-    """
-    with open(MARKERS_JS, "r", encoding="utf-8") as f:
-        js_lines = f.readlines()
-
-    coord_key = station_name.replace("\\", "\\\\").replace("'", "\\'")
-    needle = f"stationCoords['{coord_key}'] = ["
-
-    updated = False
-    for i, line in enumerate(js_lines):
-        if not line.startswith(needle):
-            continue
-        js_lines[i] = f"{needle}{new_lat}, {new_lon}];\n"
-        if i + 2 < len(js_lines):
-            js_lines[i + 2] = re.sub(
-                r"(L\.marker\()\[[^\]]+\]",
-                rf"\g<1>[{new_lat}, {new_lon}]",
-                js_lines[i + 2],
-                count=1,
-            )
-        updated = True
-
-    if updated:
-        _atomic_write_durable(MARKERS_JS, js_lines, "utf-8")
+def update_markers_json(station_name, source, new_lat, new_lon, old_lat=None, old_lon=None):
+    """Position einer Station auf der Karte setzen (5 Stellen wie im Markerbau)."""
+    def aenderung(rows):
+        i = _finde_markerzeile(rows, station_name, source, old_lat, old_lon)
+        if i is None:
+            return False
+        rows[i][1] = round(new_lat, 5)
+        rows[i][2] = round(new_lon, 5)
+        return True
+    return _markers_json_aendern(aenderung)
 
 
 TRANSLITERATION = {
@@ -458,7 +404,7 @@ def display_name_for(name, source_file):
 def load_station_data():
     """Read station name → source/coords pairs from leaflet_markers_data.json.
     Returns (sources_dict, coords_dict)."""
-    json_path = os.path.join("static", "js", "leaflet_markers_data.json")
+    json_path = MARKERS_JSON
     sources = {}
     coords = {}
     if not os.path.exists(json_path):
@@ -494,12 +440,17 @@ def to_slug(name):
 # Reverse lookup: slug → original station name (used for tide CLI)
 # Slug is computed from the *display* name so URLs match what the user sees,
 # but the lookup returns the original name to keep tide -l working.
-_slug_to_station = {}
-for _orig, _src in _station_data.items():
-    _disp = display_name_for(_orig, _src)
-    _slug_to_station[to_slug(_disp)] = _orig
-    # Also accept the original-name slug as fallback (back-compat for old bookmarks)
-    _slug_to_station.setdefault(to_slug(_orig), _orig)
+def _slug_tabelle(station_data):
+    out = {}
+    for _orig, _src in station_data.items():
+        _disp = display_name_for(_orig, _src)
+        out[to_slug(_disp)] = _orig
+        # Also accept the original-name slug as fallback (back-compat for old bookmarks)
+        out.setdefault(to_slug(_orig), _orig)
+    return out
+
+
+_slug_to_station = _slug_tabelle(_station_data)
 
 # Station -> sea/ocean lookup (built by py/build_station_seas.py from IHO Sea Areas).
 # Used in SEO copy when xtide's water_body comment is unavailable.
@@ -1389,18 +1340,33 @@ _last_purge_date = None  # tracks date of last successful purge
 # Pre-compute (slug, lat, lon, display_name) for nearest-station lookup.
 # Built once at module load; query is O(N) per request (~11k entries → <10ms).
 # Dedup: one entry per unique display_name (a station may have multiple slugs).
-_station_index = []
-_seen_disp_for_index = set()
-for _orig, _src in _station_data.items():
-    _coords = _station_coords.get(_orig)
-    if not _coords:
-        continue
-    _disp = display_name_for(_orig, _src)
-    if _disp in _seen_disp_for_index:
-        continue
-    _seen_disp_for_index.add(_disp)
-    _slug = to_slug(_disp)
-    _station_index.append((_slug, _coords[0], _coords[1], _disp))
+def _stationsindex(station_data, station_coords):
+    out, gesehen = [], set()
+    for _orig, _src in station_data.items():
+        _coords = station_coords.get(_orig)
+        if not _coords:
+            continue
+        _disp = display_name_for(_orig, _src)
+        if _disp in gesehen:
+            continue
+        gesehen.add(_disp)
+        out.append((to_slug(_disp), _coords[0], _coords[1], _disp))
+    return out
+
+
+_station_index = _stationsindex(_station_data, _station_coords)
+
+
+def _stationslisten_nachladen():
+    """Alle aus den Markerdaten abgeleiteten Listen neu aufbauen -- IN PLACE,
+    damit jede Stelle, die sie schon referenziert, den neuen Stand sieht."""
+    data, coords = load_station_data()
+    _station_data.clear(); _station_data.update(data)
+    _station_coords.clear(); _station_coords.update(coords)
+    _station_names[:] = [display_name_for(n, s) for n, s in data.items()]
+    neu = _slug_tabelle(data)
+    _slug_to_station.clear(); _slug_to_station.update(neu)
+    _station_index[:] = _stationsindex(data, coords)
 
 
 def _nearest_stations(slug, lat, lon, k=8, max_km=300):
@@ -2156,11 +2122,13 @@ def update_coordinates():
         # TCD neu kompilieren
         rebuild_tcd(txt_path, tcd_file)
 
-        # Marker-JS aktualisieren
-        update_markers_js(station, new_lat, new_lon)
+        # Karte aktualisieren
+        karte = update_markers_json(station, tcd_file, new_lat, new_lon, old_lat, old_lon)
+        if not karte:
+            print(f"⚠️ {station!r} nicht in den Markerdaten -- py/build_tide_station_markers.py laufen lassen")
 
         print(f"✅ Koordinaten aktualisiert: {station} → {new_lat:.4f}, {new_lon:.4f} (in {txt_path})")
-        return jsonify(ok=True, lat=new_lat, lon=new_lon)
+        return jsonify(ok=True, lat=new_lat, lon=new_lon, karte=karte)
 
     except Exception as e:
         print(f"❌ Fehler beim Aktualisieren der Koordinaten: {e}")
@@ -2199,11 +2167,13 @@ def update_station_name():
         # TCD neu kompilieren
         rebuild_tcd(txt_path, tcd_file)
 
-        # Marker-JS aktualisieren
-        rename_station_in_markers_js(old_name, new_name)
+        # Karte aktualisieren
+        karte = rename_station_in_markers_json(old_name, new_name, tcd_file, old_lat, old_lon)
+        if not karte:
+            print(f"⚠️ {old_name!r} nicht in den Markerdaten -- py/build_tide_station_markers.py laufen lassen")
 
         print(f"✅ Station umbenannt: '{old_name}' → '{new_name}' (in {txt_path})")
-        return jsonify(ok=True, new_name=new_name)
+        return jsonify(ok=True, new_name=new_name, karte=karte)
 
     except Exception as e:
         print(f"❌ Fehler beim Umbenennen: {e}")
@@ -2229,19 +2199,22 @@ def delete_station():
         if not txt_path:
             return jsonify(error=f"Keine .txt-Datei gefunden für {tcd_file}"), 404
 
-        # Station aus .txt löschen
+        # Station aus .txt löschen (vorher ins Archiv)
         if not delete_station_from_txt(txt_path, station,
-                                       expected_lat=old_lat, expected_lon=old_lon):
+                                       expected_lat=old_lat, expected_lon=old_lon,
+                                       grund=(data.get("grund") or "").strip() or None):
             return jsonify(error=f"Station '{station}' nicht in {txt_path} gefunden"), 404
 
         # TCD neu kompilieren
         rebuild_tcd(txt_path, tcd_file)
 
-        # Marker aus JS entfernen
-        delete_station_from_markers_js(station)
+        # Von der Karte nehmen
+        karte = delete_station_from_markers_json(station, tcd_file, old_lat, old_lon)
+        if not karte:
+            print(f"⚠️ {station!r} nicht in den Markerdaten -- py/build_tide_station_markers.py laufen lassen")
 
         print(f"🗑️ Station gelöscht: '{station}' (aus {txt_path})")
-        return jsonify(ok=True)
+        return jsonify(ok=True, karte=karte)
 
     except Exception as e:
         print(f"❌ Fehler beim Löschen: {e}")
