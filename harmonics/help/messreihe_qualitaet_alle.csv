@@ -19,9 +19,9 @@ station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub
 163_Benoa.csv,-8.7450,115.2100,2026,"Benoa, Bali, Indonesia",harmonics_ticon4_worldwide.txt,0,8576,0.0948,0.291,0,0.108,3.186,Indonesia_UHSLC,1,nein
 163_Benoa.csv,-8.7450,115.2100,2026,"Benoa, Bali, Indonesia",harmonics_utide_observations.txt,0,8576,0.0872,0.26,0,0.108,3.22,Indonesia_UHSLC,0,nein
 163_Benoa.csv,-8.7450,115.2100,2026,"Benoa, Bali, Indonesia",harmonics_att_np203_scs.txt,923,8576,0.1533,0.529,10,-0.216,2.812,Indonesia_UHSLC,0,nein
-33_Bitung.csv,1.4388,125.1903,2026,"Bitung (Lembeh Strait, Sulawesi), Sulawesi Utara, Indonesia",harmonics_ticon4_worldwide.txt,0,8433,0.0477,0.241,0,0.169,1.776,Indonesia_UHSLC,1,nein
-33_Bitung.csv,1.4388,125.1903,2026,"Bitung (Lembeh Strait, Sulawesi), Sulawesi Utara, Indonesia",harmonics_utide_observations.txt,95,8433,0.0395,0.227,0,0.168,1.805,Indonesia_UHSLC,0,nein
-33_Bitung.csv,1.4388,125.1903,2026,"Bitung, Sulawesi Utara, Indonesia",harmonics_att_np203_scs.txt,1240,8433,0.0904,0.375,10,0.531,1.762,Indonesia_UHSLC,0,nein
+33_Bitung.csv,1.4388,125.1903,2026,"Bitung (Teluk Lembeh), Sulawesi Utara, Indonesia",harmonics_ticon4_worldwide.txt,0,8433,0.0477,0.241,0,0.169,1.776,Indonesia_UHSLC,1,nein
+33_Bitung.csv,1.4388,125.1903,2026,"Bitung (Teluk Lembeh), Sulawesi Utara, Indonesia",harmonics_utide_observations.txt,95,8433,0.0395,0.227,0,0.168,1.805,Indonesia_UHSLC,0,nein
+33_Bitung.csv,1.4388,125.1903,2026,"Bitung (Teluk Lembeh), Sulawesi Utara, Indonesia",harmonics_att_np203_scs.txt,1240,8433,0.0904,0.375,10,0.531,1.762,Indonesia_UHSLC,0,nein
 72_Bluff.csv,-46.5977,168.3454,2026,"Bluff, Southland, New Zealand",harmonics-2004-06-14_mod.txt,0,8712,0.1447,0.55,0,0.25,2.688,New_Zealand_UHSLC,0,nein
 72_Bluff.csv,-46.5977,168.3454,2026,"Bluff, Southland, New Zealand",harmonics_ticon4_worldwide.txt,0,8712,0.1482,0.548,0,0.044,2.583,New_Zealand_UHSLC,1,nein
 72_Bluff.csv,-46.5977,168.3454,2026,"Bluff, Southland, New Zealand",harmonics_utide_observations.txt,0,8712,0.1471,0.551,0,0.044,2.569,New_Zealand_UHSLC,0,nein
@@ -49,7 +49,7 @@ uhslc_878.csv,12.1870,-69.0200,2026,"Bullen Bay, Curaçao",harmonics_utide_obser
 170_Christmas_Island.csv,-10.4170,105.6670,2026,"Christmas Island, Australia",harmonics_att_np203_scs.txt,40,8662,0.1105,0.482,0,0.116,1.533,Australia_UHSLC,0,nein
 162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Java), Jawa Tengah, Indonesia",harmonics_ticon4_worldwide.txt,0,8742,0.0988,0.277,0,0.167,2.226,Indonesia_UHSLC,1,nein
 162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Java), Jawa Tengah, Indonesia",harmonics_utide_observations.txt,0,8742,0.1029,0.31,0,0.167,2.321,Indonesia_UHSLC,0,nein
-162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Tjillatjap), Jawa Tengah, Indonesia",harmonics_att_np203_scs.txt,2799,8742,0.1285,0.395,20,2.542,2.126,Indonesia_UHSLC,0,nein
+162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Java), Jawa Tengah, Indonesia",harmonics_att_np203_scs.txt,2799,8742,0.1285,0.395,20,2.542,2.126,Indonesia_UHSLC,0,nein
 779_Ciudad_del_Carmen.csv,18.6432,-91.8433,1991,"Ciudad del Carmen (Faro Atalaya), Campeche, Mexico",harmonics_ticon4_worldwide.txt,0,8016,0.1396,0.55,-180,0.125,0.789,Mexico_UHSLC,1,nein
 779_Ciudad_del_Carmen.csv,18.6432,-91.8433,1991,"Ciudad Del Carmen (Sector Naval), Campeche, Mexico",harmonics_utide_observations.txt,1754,8016,0.1363,0.544,-170,0.124,0.79,Mexico_UHSLC,0,nein
 392_cr.csv,5.5570,-87.0480,2026,"Cocos Island, Costa Rica",harmonics_ticon4_worldwide.txt,0,7577,0.0703,1.05,0,0.022,3.215,CostaRica_UHSLC,1,nein
@@ -89,8 +89,8 @@ uhslc_878.csv,12.1870,-69.0200,2026,"Bullen Bay, Curaçao",harmonics_utide_obser
 134_Hiron_Point.csv,21.8174,89.4622,2003,"Hiron Point (Pasur River), Bangladesh",harmonics_utide_observations.txt,0,8761,0.1306,0.736,0,0.069,3.502,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
 900_Inhambane.csv,-23.8681,35.3767,2014,"Inhambane (Rio Matumba.), Mozambique",harmonics_ticon4_worldwide.txt,0,3543,0.0917,0.411,0,0.125,3.388,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
 900_Inhambane.csv,-23.8681,35.3767,2014,"Inhambane (Rio Matumba.), Mozambique",harmonics_att_np203_secondary.txt,20,3543,0.1432,0.533,10,4.392,3.271,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
-161_Jakarta.csv,-6.1068,106.8908,2004,"Jakarta (Port, Java), Jakarta, Indonesia",harmonics_ticon4_worldwide.txt,0,8533,0.1108,0.459,10,-0.003,1.322,Indonesia_UHSLC,1,nein
-161_Jakarta.csv,-6.1068,106.8908,2004,"Tanjung Priok, Jakarta, Indonesia",harmonics_att_np203_scs.txt,2770,8533,0.1505,0.572,20,1.449,0.98,Indonesia_UHSLC,0,nein
+161_Jakarta.csv,-6.1068,106.8908,2004,"Jakarta (Tanjung Priok), Jakarta, Indonesia",harmonics_ticon4_worldwide.txt,0,8533,0.1108,0.459,10,-0.003,1.322,Indonesia_UHSLC,1,nein
+161_Jakarta.csv,-6.1068,106.8908,2004,"Jakarta (Tanjung Priok), Jakarta, Indonesia",harmonics_att_np203_scs.txt,2770,8533,0.1505,0.572,20,1.449,0.98,Indonesia_UHSLC,0,nein
 373_Jolo.csv,6.0670,121.0000,1995,"Jolo, Philippines",harmonics_ticon4_worldwide.txt,0,6088,0.0766,0.234,-10,0.06,1.335,Philippines_UHSLC,1,nein
 373_Jolo.csv,6.0670,121.0000,1995,"Jolo, Philippines",harmonics_utide_observations.txt,0,6088,0.0728,0.188,-10,0.059,1.401,Philippines_UHSLC,0,nein
 139_Khepupara.csv,21.9844,90.2187,2000,"Khepupara, Bangladesh",harmonics_ticon4_worldwide.txt,0,8097,0.2519,1.356,-10,0.111,3.771,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
@@ -107,7 +107,7 @@ LeixoesTG.csv,41.1867,-8.7045,2024,"Porto de Leixões (Matosinhos), Portugal",ha
 LeixoesTG.csv,41.1867,-8.7045,2024,"Porto de Leixoes (Matosinhos), Portugal",harmonics_utide_observations.txt,0,7380,0.1174,0.535,0,2.285,3.889,Portugal_CMEMS,0,nein
 419_Lembar.csv,-8.7308,116.0721,2026,"Pelabuhan Lembar (Lombok), Nusa Tenggara Barat, Indonesia",harmonics_ticon4_worldwide.txt,0,2967,0.0749,0.257,10,0.136,2.127,Indonesia_UHSLC,1,nein
 419_Lembar.csv,-8.7308,116.0721,2026,"Lembar (Lombok), Nusa Tenggara Barat, Indonesia",harmonics_utide_observations.txt,134,2967,0.0658,0.243,10,0.13,2.193,Indonesia_UHSLC,0,nein
-419_Lembar.csv,-8.7308,116.0721,2026,"Teluk Labuhantereng (Labuan Tring), Nusa Tenggara Barat, Indonesia",harmonics_att_np203_scs.txt,2891,2967,0.1374,0.392,-40,1.754,1.936,Indonesia_UHSLC,0,nein
+419_Lembar.csv,-8.7308,116.0721,2026,"Pelabuhan Lembar (Lombok), Nusa Tenggara Barat, Indonesia",harmonics_att_np203_scs.txt,2891,2967,0.1374,0.392,-40,1.754,1.936,Indonesia_UHSLC,0,nein
 268_cr.csv,10.0000,-83.0330,2026,"Limon, Costa Rica",harmonics_ticon4_worldwide.txt,0,8745,0.0419,0.132,0,0.031,0.601,CostaRica_UHSLC,1,nein
 268_cr.csv,10.0000,-83.0330,2026,"Limon, Costa Rica",harmonics_utide_observations.txt,0,8745,0.0412,0.135,0,0.03,0.607,CostaRica_UHSLC,0,nein
 655_Lubang.csv,13.8160,120.2018,2026,"Tilik, Lubang, Philippines",harmonics_ticon4_worldwide.txt,0,8676,0.0518,0.268,0,0.081,1.863,Philippines_UHSLC,1,nein
@@ -130,7 +130,7 @@ masirah_113.csv,20.6870,58.8720,2019,"Ras Hilf (Masirah Island), Oman",harmonics
 masirah_113.csv,20.6870,58.8720,2019,"Ras Hilf (Masirah Island), Oman",harmonics_utide_observations.txt,0,4447,0.0859,0.518,0,0.047,2.989,UHSLC_Oman,0,nein
 914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh (Sumatra), Aceh, Indonesia",harmonics_ticon4_worldwide.txt,0,6756,0.0924,0.521,0,0.009,0.886,Indonesia_UHSLC,1,nein
 914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh (Sumatra), Aceh, Indonesia",harmonics_utide_observations.txt,0,6756,0.0922,0.526,0,0.009,0.9,Indonesia_UHSLC,0,nein
-914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh, Aceh, Indonesia",harmonics_att_np203_scs.txt,698,6756,0.1338,0.61,-10,1.571,0.505,Indonesia_UHSLC,0,nein
+914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh (Sumatra), Aceh, Indonesia",harmonics_att_np203_scs.txt,698,6756,0.1338,0.61,-10,1.571,0.505,Indonesia_UHSLC,0,nein
 914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh (Sumatra), Aceh, Indonesia",harmonics_noaa_cptt.txt,698,6756,0.112,0.591,0,1.561,0.671,Indonesia_UHSLC,0,nein
 101_Mombasa.csv,-4.0701,39.6573,2018,"Mombasa (Kilindini Harbour), Kenya",harmonics_ticon4_worldwide.txt,0,8735,0.0486,0.193,0,1.11,3.906,EastAfrica_UHSLC_TZ_KE,1,nein
 101_Mombasa.csv,-4.0701,39.6573,2018,"Mombasa (Kilindini Harbour), Kenya",harmonics-1997-05-25_mod.txt,11,8735,0.0737,0.279,0,1.11,3.997,EastAfrica_UHSLC_TZ_KE,0,nein
@@ -162,7 +162,7 @@ PenicheTG.csv,39.3540,-9.3670,2024,"Peniche, Portugal",harmonics_utide_observati
 782_Port_Royal.csv,17.9348,-76.8447,1971,"Port Royal, Jamaica",harmonics_utide_observations.txt,0,8761,0.0734,0.217,0,0.041,0.493,Caribbean_UHSLC_CubaJamaicaBahamas,0,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi (Java), Jawa Timur, Indonesia",harmonics_ticon4_worldwide.txt,0,8743,0.1117,0.317,0,0.149,2.84,Indonesia_UHSLC,1,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi (Java), Jawa Timur, Indonesia",harmonics_utide_observations.txt,0,8743,0.1072,0.303,0,0.149,2.862,Indonesia_UHSLC,0,nein
-125_Prigi.csv,-8.2830,111.7330,2026,"Segoro Wedi Bay, Jawa Timur, Indonesia",harmonics_att_np203_scs.txt,2606,8743,0.2,0.575,10,0.378,2.159,Indonesia_UHSLC,0,nein
+125_Prigi.csv,-8.2830,111.7330,2026,"Prigi (Java), Jawa Timur, Indonesia",harmonics_att_np203_scs.txt,2606,8743,0.2,0.575,10,0.378,2.159,Indonesia_UHSLC,0,nein
 721_Progreso.csv,21.3030,-89.6662,2013,"Progreso, Yucatán, Mexico",harmonics_ticon4_worldwide.txt,0,8331,0.1001,0.398,0,4.254,0.964,Mexico_UHSLC,1,nein
 286_Puerto_Deseado.csv,-47.7536,-65.9147,2026,"Puerto Deseado, Santa Cruz, Argentina",harmonics_ticon4_worldwide.txt,0,8704,0.1751,0.781,0,0.017,5.596,Argentina_UHSLC,1,nein
 286_Puerto_Deseado.csv,-47.7536,-65.9147,2026,"Puerto Deseado, Santa Cruz, Argentina",harmonics_utide_observations.txt,8,8704,0.1661,0.775,0,0.017,5.669,Argentina_UHSLC,0,nein
@@ -203,8 +203,8 @@ SinesTG.csv,37.9490,-8.8880,2024,"Sines, Portugal",harmonics_noaa_eutt.txt,427,8
 276_St_Johns.csv,47.5670,-52.7025,2018,"St. John's, Newfoundland, Canada",harmonics_ticon4_worldwide.txt,0,8761,0.1458,0.795,0,0.124,1.556,Canada_UHSLC,1,nein
 382_Subic_Bay.csv,14.7650,120.2520,2026,"Subic, Philippines",harmonics_ticon4_worldwide.txt,0,8714,0.0499,0.249,0,0.099,1.818,Philippines_UHSLC,1,nein
 382_Subic_Bay.csv,14.7650,120.2520,2026,"Subic Bay, Philippines",harmonics_utide_observations.txt,0,8714,0.0419,0.266,0,0.099,1.83,Philippines_UHSLC,0,nein
-160_Surabaya.csv,-7.2080,112.7250,2004,"Surabaya (Java), Jawa Timur, Indonesia",harmonics_ticon4_worldwide.txt,0,7985,0.1216,0.608,10,-0.002,2.821,Indonesia_UHSLC,1,nein
-160_Surabaya.csv,-7.2080,112.7250,2004,"Surabaya (Java), Jawa Timur, Indonesia",harmonics_utide_observations.txt,0,7985,0.1127,0.614,10,-0.002,2.806,Indonesia_UHSLC,0,nein
+160_Surabaya.csv,-7.2080,112.7250,2004,"Surabaya (Tanjung Perak), Jawa Timur, Indonesia",harmonics_ticon4_worldwide.txt,0,7985,0.1216,0.608,10,-0.002,2.821,Indonesia_UHSLC,1,nein
+160_Surabaya.csv,-7.2080,112.7250,2004,"Surabaya (Tanjung Perak), Jawa Timur, Indonesia",harmonics_utide_observations.txt,0,7985,0.1127,0.614,10,-0.002,2.806,Indonesia_UHSLC,0,nein
 160_Surabaya.csv,-7.2080,112.7250,2004,"Surabaya (Tanjung Perak), Jawa Timur, Indonesia",harmonics_att_np203_scs.txt,1277,7985,0.1734,0.754,10,-0.036,2.461,Indonesia_UHSLC,0,nein
 416_Tanjung_Lesung.csv,-6.4830,105.6670,2012,"Tanjung Lesung (Java), Banten, Indonesia",harmonics_ticon4_worldwide.txt,0,6532,0.1003,0.632,0,0.017,1.567,Indonesia_UHSLC,1,nein
 416_Tanjung_Lesung.csv,-6.4830,105.6670,2012,"Tanjung Lesung (Java), Banten, Indonesia",harmonics_utide_observations.txt,0,6532,0.099,0.664,0,0.016,1.599,Indonesia_UHSLC,0,nein
@@ -375,42 +375,42 @@ mini_minicoy.csv,8.2824,73.0530,2025,"Minicoy Island, Lakshadweep, India",harmon
 mini_minicoy.csv,8.2824,73.0530,2025,"Minicoy Island, Lakshadweep, India",harmonics_ticon4_worldwide.txt,0,5459,0.3223,3.903,0,-0.014,1.431,India_IOC,0,nein
 mini_minicoy.csv,8.2824,73.0530,2025,"Minicoy, Lakshadweep, India",harmonics_utide_observations.txt,0,5459,0.3165,3.977,0,-0.097,1.515,India_IOC,1,nein
 mini_minicoy.csv,8.2824,73.0530,2025,"Minicoy, Lakshadweep, India",harmonics_att_np203_secondary.txt,337,5459,0.3392,4.018,10,-0.124,1.274,India_IOC,0,nein
-107_Padang.csv,-1.0019,100.3685,2007,"Padang (Sumatra), Sumatera Barat, Indonesia",harmonics_utide_observations.txt,0,6018,0.1073,0.277,0,-0.162,1.632,Indonesia_UHSLC,1,ja
-107_Padang.csv,-1.0019,100.3685,2007,"Teluk Bayur (Emma Haven), Sumatera Barat, Indonesia",harmonics_att_np203_scs.txt,291,6018,0.1297,0.363,0,1.01,1.556,Indonesia_UHSLC,0,ja
+107_Padang.csv,-1.0019,100.3685,2007,"Teluk Bayur (Padang), Sumatera Barat, Indonesia",harmonics_utide_observations.txt,0,6018,0.1073,0.277,0,-0.162,1.632,Indonesia_UHSLC,1,ja
+107_Padang.csv,-1.0019,100.3685,2007,"Teluk Bayur (Padang), Sumatera Barat, Indonesia",harmonics_att_np203_scs.txt,291,6018,0.1297,0.363,0,1.01,1.556,Indonesia_UHSLC,0,ja
 122_Sibolga.csv,1.7500,98.7670,2006,"Sibolga, Sumatera Utara, Indonesia",harmonics_ticon4_worldwide.txt,0,8736,0.0893,0.271,10,0.001,1.334,Indonesia_UHSLC,0,ja
-122_Sibolga.csv,1.7500,98.7670,2006,"Sibolga (Sumatra), Sumatera Utara, Indonesia",harmonics_utide_observations.txt,0,8736,0.0892,0.285,10,0.001,1.344,Indonesia_UHSLC,1,ja
+122_Sibolga.csv,1.7500,98.7670,2006,"Sibolga, Sumatera Utara, Indonesia",harmonics_utide_observations.txt,0,8736,0.0892,0.285,10,0.001,1.344,Indonesia_UHSLC,1,ja
 122_Sibolga.csv,1.7500,98.7670,2006,"Sibolga, Sumatera Utara, Indonesia",harmonics_att_np203_scs.txt,33,8736,0.1495,0.498,-10,1.094,0.838,Indonesia_UHSLC,0,ja
 123_Sabang.csv,5.8879,95.3169,2007,"Sabang (Pulau Weh), Aceh, Indonesia",harmonics_ticon4_worldwide.txt,0,8761,0.1044,0.34,0,-0.034,2.093,Indonesia_UHSLC,0,ja
 123_Sabang.csv,5.8879,95.3169,2007,"Sabang (Pulau Weh), Aceh, Indonesia",harmonics_utide_observations.txt,0,8761,0.1069,0.35,0,-0.034,2.138,Indonesia_UHSLC,1,ja
 123_Sabang.csv,5.8879,95.3169,2007,"Sabang (Pulau Weh), Aceh, Indonesia",harmonics_att_np203_scs.txt,2258,8761,0.1233,0.469,-30,0.283,1.779,Indonesia_UHSLC,0,ja
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi (Java), Jawa Timur, Indonesia",harmonics_ticon4_worldwide.txt,0,8743,0.1117,0.317,0,0.149,2.84,Indonesia_UHSLC,0,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi (Java), Jawa Timur, Indonesia",harmonics_utide_observations.txt,0,8743,0.1072,0.303,0,0.149,2.862,Indonesia_UHSLC,1,nein
-125_Prigi.csv,-8.2830,111.7330,2026,"Segoro Wedi Bay, Jawa Timur, Indonesia",harmonics_att_np203_scs.txt,2606,8743,0.2,0.575,10,0.378,2.159,Indonesia_UHSLC,0,nein
+125_Prigi.csv,-8.2830,111.7330,2026,"Prigi (Java), Jawa Timur, Indonesia",harmonics_att_np203_scs.txt,2606,8743,0.2,0.575,10,0.378,2.159,Indonesia_UHSLC,0,nein
 133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_ticon4_worldwide.txt,0,4078,0.0843,0.296,-10,0.085,2.481,Indonesia_UHSLC,0,nein
 133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_utide_observations.txt,0,4078,0.0772,0.313,-10,0.083,2.508,Indonesia_UHSLC,1,nein
 133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_att_np203_scs.txt,2623,4078,0.1496,0.479,0,0.596,2.252,Indonesia_UHSLC,0,nein
-160_Surabaya.csv,-7.2080,112.7250,1985,"Surabaya (Java), Jawa Timur, Indonesia",harmonics_ticon4_worldwide.txt,0,8761,0.0918,0.4,0,0.03,2.76,Indonesia_UHSLC,0,ja
-160_Surabaya.csv,-7.2080,112.7250,1985,"Surabaya (Java), Jawa Timur, Indonesia",harmonics_utide_observations.txt,0,8761,0.0768,0.338,0,0.03,2.673,Indonesia_UHSLC,1,ja
+160_Surabaya.csv,-7.2080,112.7250,1985,"Surabaya (Tanjung Perak), Jawa Timur, Indonesia",harmonics_ticon4_worldwide.txt,0,8761,0.0918,0.4,0,0.03,2.76,Indonesia_UHSLC,0,ja
+160_Surabaya.csv,-7.2080,112.7250,1985,"Surabaya (Tanjung Perak), Jawa Timur, Indonesia",harmonics_utide_observations.txt,0,8761,0.0768,0.338,0,0.03,2.673,Indonesia_UHSLC,1,ja
 160_Surabaya.csv,-7.2080,112.7250,1985,"Surabaya (Tanjung Perak), Jawa Timur, Indonesia",harmonics_att_np203_scs.txt,1277,8761,0.1488,0.543,0,-0.005,2.405,Indonesia_UHSLC,0,ja
 162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Java), Jawa Tengah, Indonesia",harmonics_ticon4_worldwide.txt,0,8742,0.0988,0.277,0,0.167,2.226,Indonesia_UHSLC,0,nein
 162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Java), Jawa Tengah, Indonesia",harmonics_utide_observations.txt,0,8742,0.1029,0.31,0,0.167,2.321,Indonesia_UHSLC,1,nein
-162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Tjillatjap), Jawa Tengah, Indonesia",harmonics_att_np203_scs.txt,2799,8742,0.1285,0.395,20,2.542,2.126,Indonesia_UHSLC,0,nein
+162_Cilacap.csv,-7.7520,109.0170,2026,"Cilacap (Java), Jawa Tengah, Indonesia",harmonics_att_np203_scs.txt,2799,8742,0.1285,0.395,20,2.542,2.126,Indonesia_UHSLC,0,nein
 163_Benoa.csv,-8.7450,115.2100,2007,"Benoa, Bali, Indonesia",harmonics_ticon4_worldwide.txt,0,8526,0.1188,0.512,0,-0.14,3.182,Indonesia_UHSLC,0,ja
 163_Benoa.csv,-8.7450,115.2100,2007,"Benoa, Bali, Indonesia",harmonics_utide_observations.txt,0,8526,0.1216,0.515,0,-0.14,3.176,Indonesia_UHSLC,1,ja
 163_Benoa.csv,-8.7450,115.2100,2007,"Benoa, Bali, Indonesia",harmonics_att_np203_scs.txt,923,8526,0.1719,0.579,10,-0.459,2.759,Indonesia_UHSLC,0,ja
 416_Tanjung_Lesung.csv,-6.4830,105.6670,2012,"Tanjung Lesung (Java), Banten, Indonesia",harmonics_ticon4_worldwide.txt,0,6532,0.1003,0.632,0,0.017,1.567,Indonesia_UHSLC,0,nein
 416_Tanjung_Lesung.csv,-6.4830,105.6670,2012,"Tanjung Lesung (Java), Banten, Indonesia",harmonics_utide_observations.txt,0,6532,0.099,0.664,0,0.016,1.599,Indonesia_UHSLC,1,nein
-417_Sadeng.csv,-8.5000,110.7830,2016,"Sadeng (Java), Yogyakarta, Indonesia",harmonics_utide_observations.txt,0,8463,0.0907,1.199,0,-0.078,2.618,Indonesia_UHSLC,1,nein
+417_Sadeng.csv,-8.5000,110.7830,2016,"Pantai Sadeng (Java), Yogyakarta, Indonesia",harmonics_utide_observations.txt,0,8463,0.0907,1.199,0,-0.078,2.618,Indonesia_UHSLC,1,nein
 418_Waikelo.csv,-9.4000,119.2330,2019,"Waikelo (Sumba), Nusa Tenggara Timur, Indonesia",harmonics_ticon4_worldwide.txt,0,8744,0.3862,2.884,0,-0.371,3.485,Indonesia_UHSLC,0,nein
 418_Waikelo.csv,-9.4000,119.2330,2019,"Waikelo (Sumba), Nusa Tenggara Timur, Indonesia",harmonics_utide_observations.txt,0,8744,0.3835,2.831,0,-0.371,3.473,Indonesia_UHSLC,1,nein
 419_Lembar.csv,-8.7320,116.0720,2026,"Lembar (Lombok), Nusa Tenggara Barat, Indonesia",harmonics_utide_observations.txt,0,2967,0.0658,0.243,10,0.13,2.193,Indonesia_UHSLC,1,nein
 419_Lembar.csv,-8.7320,116.0720,2026,"Pelabuhan Lembar (Lombok), Nusa Tenggara Barat, Indonesia",harmonics_ticon4_worldwide.txt,134,2967,0.0749,0.257,10,0.136,2.127,Indonesia_UHSLC,0,nein
-419_Lembar.csv,-8.7320,116.0720,2026,"Teluk Labuhantereng (Labuan Tring), Nusa Tenggara Barat, Indonesia",harmonics_att_np203_scs.txt,2957,2967,0.1374,0.392,-40,1.754,1.936,Indonesia_UHSLC,0,nein
+419_Lembar.csv,-8.7320,116.0720,2026,"Pelabuhan Lembar (Lombok), Nusa Tenggara Barat, Indonesia",harmonics_att_np203_scs.txt,2957,2967,0.1374,0.392,-40,1.754,1.936,Indonesia_UHSLC,0,nein
 420_Saumlaki.csv,-7.9820,131.2900,2026,"Saumlaki (Yamdena), Maluku, Indonesia",harmonics_utide_observations.txt,0,4027,0.1166,1.586,0,0.153,2.972,Indonesia_UHSLC,1,nein
 420_Saumlaki.csv,-7.9820,131.2900,2026,"Saumlaki (Yamdena), Maluku, Indonesia",harmonics_ticon4_worldwide.txt,105,4027,0.1196,1.621,0,0.158,2.922,Indonesia_UHSLC,0,nein
 914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh (Sumatra), Aceh, Indonesia",harmonics_ticon4_worldwide.txt,0,6756,0.0924,0.521,0,0.009,0.886,Indonesia_UHSLC,0,nein
 914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh (Sumatra), Aceh, Indonesia",harmonics_utide_observations.txt,0,6756,0.0922,0.526,0,0.009,0.9,Indonesia_UHSLC,1,nein
-914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh, Aceh, Indonesia",harmonics_att_np203_scs.txt,698,6756,0.1338,0.61,-10,1.571,0.505,Indonesia_UHSLC,0,nein
+914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh (Sumatra), Aceh, Indonesia",harmonics_att_np203_scs.txt,698,6756,0.1338,0.61,-10,1.571,0.505,Indonesia_UHSLC,0,nein
 914_Meulaboh.csv,4.1272,96.1318,2016,"Meulaboh (Sumatra), Aceh, Indonesia",harmonics_noaa_cptt.txt,698,6756,0.112,0.591,0,1.561,0.671,Indonesia_UHSLC,0,nein
 AS.txt,44.0195,144.2858,2025,"Abashiri, Hokkaido, Japan",harmonics_ticon4_worldwide.txt,0,8737,0.03,0.078,0,-0.0,1.634,JMA_Japan,0,nein
 AS.txt,44.0195,144.2858,2025,"Abashiri, Hokkaido, Japan",harmonics_utide_observations.txt,0,8737,0.0114,0.036,0,-0.0,1.677,JMA_Japan,1,nein

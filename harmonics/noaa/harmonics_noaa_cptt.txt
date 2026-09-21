@@ -103539,7 +103539,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Tanggu, Tianjin, China [harmonics_utide_tidetables.txt],
 # note: Flach weg + HW/NW, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -4.22 Punkte.
-Tianjin Bar, Tianjin, China
+Hai He Bar, Tianjin, China
 +00:00 :Asia/Shanghai
 2.4079 meters
 J1              0.0085  53.52
@@ -103928,7 +103928,9 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Tanggu, Tianjin, China [harmonics_utide_tidetables.txt],
 # note: Flach weg + HW/NW, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -4.22 Punkte.
-Bar, Hebei, China
+# note: 20260921 umbenannt: "Bar" -> "Qikou Bar"; im Buch steht darueber die Zeile "Qi He"
+# note: (Barre vor der Qi-He-Muendung bei Qikou), beim Einlesen verloren.
+Qikou Bar, Hebei, China
 +00:00 :Asia/Shanghai
 2.4994 meters
 J1              0.0079  65.73

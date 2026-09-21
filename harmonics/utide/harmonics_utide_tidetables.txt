@@ -623183,9 +623183,10 @@ x 0 0
 # datum_note: 229cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0193m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 31.4167/122.2333 -> 31.4224/122.2383.
 # !units: meters
-# !longitude: 122.2333
-# !latitude: 31.4167
+# !longitude: 122.2383
+# !latitude: 31.4224
 # region: Shanghai
 # admin1_quelle: Name
 Sheshan, Shanghai, China
@@ -623562,7 +623563,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Zhongjun, Shanghai, China
+# Zhongjun (Pudong), Shanghai, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T063) with UTide
@@ -623572,12 +623573,13 @@ x 0 0
 # datum_note: 225cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9962 rms=0.0609m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Zhongjun, Shanghai, China" -> "Zhongjun (Pudong), Shanghai, China"; Position 31.1167/121.9000 -> 31.1187/121.8984.
 # !units: meters
-# !longitude: 121.9000
-# !latitude: 31.1167
+# !longitude: 121.8984
+# !latitude: 31.1187
 # region: Shanghai
 # admin1_quelle: Name
-Zhongjun, Shanghai, China
+Zhongjun (Pudong), Shanghai, China
 +00:00 :Asia/Shanghai
 2.2508 meters
 J1              0.0139  126.98
@@ -623950,7 +623952,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Lucaogang (Nanhuizui), Shanghai, China
+# Luchaogangzhen (Hangzhou Bay), Shanghai, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T067) with UTide
@@ -623960,12 +623962,14 @@ x 0 0
 # datum_note: 267cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9993 rms=0.0334m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Lucaogang (Nanhuizui), Shanghai, China" -> "Luchaogangzhen (Hangzhou Bay), Shanghai, China";
+# note: Position 30.8333/121.8333 -> 30.8415/121.8470.
 # !units: meters
-# !longitude: 121.8333
-# !latitude: 30.8333
+# !longitude: 121.8470
+# !latitude: 30.8415
 # region: Shanghai
 # admin1_quelle: Name
-Lucaogang (Nanhuizui), Shanghai, China
+Luchaogangzhen (Hangzhou Bay), Shanghai, China
 +00:00 :Asia/Shanghai
 2.6708 meters
 J1              0.0163  143.87
@@ -624924,7 +624928,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Weifanggang, Shandong, China
+# Weifang Gang, Shandong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T031) with UTide
@@ -624934,12 +624938,13 @@ x 0 0
 # datum_note: 120cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9985 rms=0.0201m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Weifanggang, Shandong, China" -> "Weifang Gang, Shandong, China"; Position 37.2333/119.1833 -> 37.2454/119.1926.
 # !units: meters
-# !longitude: 119.1833
-# !latitude: 37.2333
+# !longitude: 119.1926
+# !latitude: 37.2454
 # region: Shandong
 # admin1_quelle: Name
-Weifanggang, Shandong, China
+Weifang Gang, Shandong, China
 +00:00 :Asia/Shanghai
 1.1996 meters
 J1              0.0051  62.59
@@ -625323,9 +625328,10 @@ x 0 0
 # datum_note: 366cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0031m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 24.8167/118.7000 -> 24.8188/118.7118.
 # !units: meters
-# !longitude: 118.7000
-# !latitude: 24.8167
+# !longitude: 118.7118
+# !latitude: 24.8188
 # region: Fujian
 # admin1_quelle: Name
 Quanzhou (Shihu), Fujian, China
@@ -626092,7 +626098,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Jingtanggang, Hebei, China
+# Jingtang Gang, Hebei, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T022) with UTide
@@ -626102,12 +626108,13 @@ x 0 0
 # datum_note: 118cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9989 rms=0.0151m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Jingtanggang, Hebei, China" -> "Jingtang Gang, Hebei, China"; Position 39.2167/119.0167 -> 39.2024/119.0196.
 # !units: meters
-# !longitude: 119.0167
-# !latitude: 39.2167
+# !longitude: 119.0196
+# !latitude: 39.2024
 # region: Hebei
 # admin1_quelle: Name
-Jingtanggang, Hebei, China
+Jingtang Gang, Hebei, China
 +00:00 :Asia/Shanghai
 1.1792 meters
 J1              0.0077  29.02
@@ -626481,7 +626488,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Tianshenggang, Jiangsu, China
+# Tianshenggang (Gangzha), Jiangsu, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T060) with UTide
@@ -626491,12 +626498,13 @@ x 0 0
 # datum_note: 212cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9861 rms=0.0961m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Tianshenggang, Jiangsu, China" -> "Tianshenggang (Gangzha), Jiangsu, China".
 # !units: meters
 # !longitude: 120.7500
 # !latitude: 32.0333
 # region: Jiangsu
 # admin1_quelle: Name
-Tianshenggang, Jiangsu, China
+Tianshenggang (Gangzha), Jiangsu, China
 +00:00 :Asia/Shanghai
 2.1194 meters
 J1              0.0109  187.42
@@ -627462,9 +627470,10 @@ x 0 0
 # datum_note: 129cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9932 rms=0.0391m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 22.7000/114.5333 -> 22.7269/114.5791.
 # !units: meters
-# !longitude: 114.5333
-# !latitude: 22.7000
+# !longitude: 114.5791
+# !latitude: 22.7269
 # region: Guangdong
 # admin1_quelle: Name
 Huizhougang, Guangdong, China
@@ -627852,8 +627861,8 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0067m const=68
 # !units: meters
-# !longitude: 121.6333
-# !latitude: 28.7000
+# !longitude: 121.6482
+# !latitude: 28.7107
 # region: Zhejiang
 # admin1_quelle: Name
 Haimen Gang (Baisha), Zhejiang, China
@@ -629007,7 +629016,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Jinzhougang (Bijiashan), Liaoning, China
+# Jinzhou Gang (Dabijiashan), Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T015) with UTide
@@ -629017,12 +629026,13 @@ x 0 0
 # datum_note: 160cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9982 rms=0.0391m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Jinzhougang (Bijiashan), Liaoning, China" -> "Jinzhou Gang (Dabijiashan), Liaoning, China".
 # !units: meters
 # !longitude: 121.0667
 # !latitude: 40.8000
 # region: Liaoning
 # admin1_quelle: Name
-Jinzhougang (Bijiashan), Liaoning, China
+Jinzhou Gang (Dabijiashan), Liaoning, China
 +00:00 :Asia/Shanghai
 1.5999 meters
 J1              0.0128  302.84
@@ -629590,7 +629600,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Sidaogou (Yingkou / Liaohe Kou), Liaoning, China
+# Yingkou, Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T013) with UTide
@@ -629601,12 +629611,13 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9964 rms=0.0617m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: "Yingkou" zunaechst bestaetigt, danach von Oliver umbenannt in "Sidaogou (Yingkou / Liaohe Kou)" und verschoben.
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Sidaogou (Yingkou / Liaohe Kou), Liaoning, China" -> "Yingkou, Liaoning, China".
 # !units: meters
 # !longitude: 122.1480
 # !latitude: 40.6338
 # region: Liaoning
 # admin1_quelle: Name
-Sidaogou (Yingkou / Liaohe Kou), Liaoning, China
+Yingkou, Liaoning, China
 +00:00 :Asia/Shanghai
 2.0205 meters
 J1              0.0136  53.81
@@ -630176,7 +630187,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Dongyinggang, Shandong, China
+# Dongying Port, Shandong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T030) with UTide
@@ -630186,12 +630197,13 @@ x 0 0
 # datum_note: 100cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9978 rms=0.0160m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Dongyinggang, Shandong, China" -> "Dongying Port, Shandong, China".
 # !units: meters
 # !longitude: 118.9667
 # !latitude: 38.1000
 # region: Shandong
 # admin1_quelle: Name
-Dongyinggang, Shandong, China
+Dongying Port, Shandong, China
 +00:00 :Asia/Shanghai
 0.9997 meters
 J1              0.0062  59.89
@@ -635802,7 +635814,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Luoyuanjitou, Fujian, China
+# Luoyuan Wan (Jitou), Fujian, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T104) with UTide
@@ -635812,12 +635824,13 @@ x 0 0
 # datum_note: 406cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0032m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Luoyuanjitou, Fujian, China" -> "Luoyuan Wan (Jitou), Fujian, China"; Position 26.4667/119.6833 -> 26.4652/119.6214.
 # !units: meters
-# !longitude: 119.6833
-# !latitude: 26.4667
+# !longitude: 119.6214
+# !latitude: 26.4652
 # region: Fujian
 # admin1_quelle: Name
-Luoyuanjitou, Fujian, China
+Luoyuan Wan (Jitou), Fujian, China
 +00:00 :Asia/Shanghai
 4.0600 meters
 J1              0.0003  312.15
@@ -636581,7 +636594,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Zhuyu, Fujian, China
+# Zhuyukou (Pingtan), Fujian, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T108) with UTide
@@ -636591,12 +636604,13 @@ x 0 0
 # datum_note: 391cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0039m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Zhuyu, Fujian, China" -> "Zhuyukou (Pingtan), Fujian, China".
 # !units: meters
 # !longitude: 119.7333
 # !latitude: 25.5167
 # region: Fujian
 # admin1_quelle: Name
-Zhuyu, Fujian, China
+Zhuyukou (Pingtan), Fujian, China
 +00:00 :Asia/Shanghai
 3.9100 meters
 J1              0.0002  267.82
@@ -636775,7 +636789,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Langguan, Fujian, China
+# Nanlangguan (Fuqing), Fujian, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T109) with UTide
@@ -636785,12 +636799,13 @@ x 0 0
 # datum_note: 427cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0081m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Langguan, Fujian, China" -> "Nanlangguan (Fuqing), Fujian, China"; Position 25.5667/119.3000 -> 25.5518/119.3006.
 # !units: meters
-# !longitude: 119.3000
-# !latitude: 25.5667
+# !longitude: 119.3006
+# !latitude: 25.5518
 # region: Fujian
 # admin1_quelle: Name
-Langguan, Fujian, China
+Nanlangguan (Fuqing), Fujian, China
 +00:00 :Asia/Shanghai
 4.2700 meters
 J1              0.0060  243.20
@@ -637359,7 +637374,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Tiwu, Fujian, China
+# Dongwu / Titing, Fujian, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T115) with UTide
@@ -637369,12 +637384,13 @@ x 0 0
 # datum_note: 410cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0287m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Tiwu, Fujian, China" -> "Dongwu / Titing, Fujian, China"; Position 25.1333/119.0333 -> 25.1165/119.0485.
 # !units: meters
-# !longitude: 119.0333
-# !latitude: 25.1333
+# !longitude: 119.0485
+# !latitude: 25.1165
 # region: Fujian
 # admin1_quelle: Name
-Tiwu, Fujian, China
+Dongwu / Titing, Fujian, China
 +00:00 :Asia/Shanghai
 4.0962 meters
 J1              0.0176  178.27
@@ -637748,7 +637764,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Shenhugang, Fujian, China
+# Shenhu Wan, Fujian, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T119) with UTide
@@ -637758,12 +637774,13 @@ x 0 0
 # datum_note: 333cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0238m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Shenhugang, Fujian, China" -> "Shenhu Wan, Fujian, China"; Position 24.6333/118.6667 -> 24.6346/118.6695.
 # !units: meters
-# !longitude: 118.6667
-# !latitude: 24.6333
+# !longitude: 118.6695
+# !latitude: 24.6346
 # region: Fujian
 # admin1_quelle: Name
-Shenhugang, Fujian, China
+Shenhu Wan, Fujian, China
 +00:00 :Asia/Shanghai
 3.3285 meters
 J1              0.0172  177.37
@@ -638343,6 +638360,7 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0041m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Jiangjunao, Fujian, China" -> "Jiangjun'ao, Fujian, China"; Position 24.0333/117.9000 -> 24.0325/117.8841.
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 24.0325/117.8841 -> 24.0325/117.8841.
 # !units: meters
 # !longitude: 117.8841
 # !latitude: 24.0325
@@ -640094,6 +640112,7 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9980 rms=0.0241m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Nanaodao (Yunao), Guangdong, China" -> "Nan'ao Dao (Yunao), Guangdong, China"; Position 23.4000/117.1000 -> 23.4336/117.0530.
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 23.4336/117.0530 -> 23.4336/117.0530.
 # !units: meters
 # !longitude: 117.0530
 # !latitude: 23.4336
@@ -641254,7 +641273,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Neilingding, Guangdong, China
+# Nei Lingding Dao, Guangdong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T142) with UTide
@@ -641264,12 +641283,13 @@ x 0 0
 # datum_note: 170cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0031m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Neilingding, Guangdong, China" -> "Nei Lingding Dao, Guangdong, China"; Position 22.4210/113.7997 -> 22.4210/113.7997.
 # !units: meters
-# !longitude: 113.8000
-# !latitude: 22.4167
+# !longitude: 113.7997
+# !latitude: 22.4210
 # region: Guangdong
 # admin1_quelle: Name
-Neilingding, Guangdong, China
+Nei Lingding Dao, Guangdong, China
 +00:00 :Asia/Shanghai
 1.7000 meters
 J1              0.0001  101.08
@@ -641643,7 +641663,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Shenzhenjichang (Youmatou), Guangdong, China
+# Shenzhen Airport Fu Yong Pier, Guangdong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T144) with UTide
@@ -641653,12 +641673,14 @@ x 0 0
 # datum_note: 170cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9989 rms=0.0221m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Shenzhenjichang (Youmatou), Guangdong, China" -> "Shenzhen Airport Fu Yong Pier, Guangdong, China";
+# note: Position 22.6333/113.8000 -> 22.6028/113.8089.
 # !units: meters
-# !longitude: 113.8000
-# !latitude: 22.6333
+# !longitude: 113.8089
+# !latitude: 22.6028
 # region: Guangdong
 # admin1_quelle: Name
-Shenzhenjichang (Youmatou), Guangdong, China
+Shenzhen Airport Fu Yong Pier, Guangdong, China
 +00:00 :Asia/Shanghai
 1.7000 meters
 J1              0.0122  232.97
@@ -641837,7 +641859,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Haiqin, Guangdong, China
+# Haixin, Guangdong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T146) with UTide
@@ -641847,12 +641869,13 @@ x 0 0
 # datum_note: 176cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0066m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Haiqin, Guangdong, China" -> "Haixin, Guangdong, China".
 # !units: meters
 # !longitude: 113.5333
 # !latitude: 22.9667
 # region: Guangdong
 # admin1_quelle: Name
-Haiqin, Guangdong, China
+Haixin, Guangdong, China
 +00:00 :Asia/Shanghai
 1.7600 meters
 J1              0.0054  259.64
@@ -643016,6 +643039,7 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9984 rms=0.0197m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Sanzaodao, Guangdong, China" -> "Sanzao Dao, Guangdong, China"; Position 22.0333/113.4000 -> 22.0342/113.3445.
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 22.0337/113.3957 -> 22.0342/113.3445.
 # !units: meters
 # !longitude: 113.3445
 # !latitude: 22.0342
@@ -643210,9 +643234,10 @@ x 0 0
 # datum_note: 95cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9929 rms=0.0407m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 22.3333/113.1833 -> 22.3234/113.1902.
 # !units: meters
-# !longitude: 113.1833
-# !latitude: 22.3333
+# !longitude: 113.1902
+# !latitude: 22.3234
 # region: Guangdong
 # admin1_quelle: Name
 Hengshan, Guangdong, China
@@ -643405,6 +643430,7 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9935 rms=0.0370m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Jingan (Baijiao), Guangdong, China" -> "Jing'an (Baijiao), Guangdong, China"; Position 22.2167/113.3000 -> 22.2107/113.2922.
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 22.2159/113.2993 -> 22.2107/113.2922.
 # !units: meters
 # !longitude: 113.2922
 # !latitude: 22.2107
@@ -647086,7 +647112,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Yongxingdao (Xisha Qundao), Hainan, China
+# Yongxing Dao (Woody Island, Paracel), Hainan, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T188) with UTide
@@ -647096,12 +647122,14 @@ x 0 0
 # datum_note: 95cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0070m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Yongxingdao (Xisha Qundao), Hainan, China" -> "Yongxing Dao (Woody Island, Paracel), Hainan, China";
+# note: Position 16.8333/112.3333 -> 16.8333/112.3314.
 # !units: meters
-# !longitude: 112.3333
+# !longitude: 112.3314
 # !latitude: 16.8333
 # region: Hainan
 # admin1_quelle: Name
-Yongxingdao (Xisha Qundao), Hainan, China
+Yongxing Dao (Woody Island, Paracel), Hainan, China
 +00:00 :Asia/Shanghai
 0.9500 meters
 J1              0.0130  212.55
@@ -647474,7 +647502,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Zhongshaquandao-Huangyandao, Hainan, China
+# Scarborough Shoal (Huangyan Dao), Hainan, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T485) with UTide
@@ -647484,12 +647512,13 @@ x 0 0
 # datum_note: 90cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0030m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Zhongshaquandao-Huangyandao, Hainan, China" -> "Scarborough Shoal (Huangyan Dao), Hainan, China".
 # !units: meters
 # !longitude: 117.8500
 # !latitude: 15.1167
 # region: Hainan
 # admin1_quelle: Name
-Zhongshaquandao-Huangyandao, Hainan, China
+Scarborough Shoal (Huangyan Dao), Hainan, China
 +00:00 :Asia/Shanghai
 0.9000 meters
 J1              0.0094  206.62
@@ -647874,6 +647903,7 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0074m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Qilihai (Xinkaikou), Hebei, China" -> "Qili Hai (Xinkaikou), Hebei, China"; Position 39.5833/119.2833 -> 39.5817/119.2591.
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 39.5817/119.2591 -> 39.5817/119.2591.
 # !units: meters
 # !longitude: 119.2591
 # !latitude: 39.5817
@@ -648068,9 +648098,10 @@ x 0 0
 # datum_note: 253cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0166m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 38.6000/117.5167 -> 38.6117/117.5565.
 # !units: meters
-# !longitude: 117.5167
-# !latitude: 38.6000
+# !longitude: 117.5565
+# !latitude: 38.6117
 # region: Hebei
 # admin1_quelle: Name
 Qikou, Hebei, China
@@ -648837,7 +648868,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Sheyanghekou, Jiangsu, China
+# Sheyang Hekou, Jiangsu, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T054) with UTide
@@ -648847,12 +648878,13 @@ x 0 0
 # datum_note: 171cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9984 rms=0.0335m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Sheyanghekou, Jiangsu, China" -> "Sheyang Hekou, Jiangsu, China".
 # !units: meters
 # !longitude: 120.5000
 # !latitude: 33.8167
 # region: Jiangsu
 # admin1_quelle: Name
-Sheyanghekou, Jiangsu, China
+Sheyang Hekou, Jiangsu, China
 +00:00 :Asia/Shanghai
 1.7107 meters
 J1              0.0053  354.19
@@ -649431,9 +649463,10 @@ x 0 0
 # datum_note: 406cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0277m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 32.5000/121.4167 -> 32.4456/121.3318.
 # !units: meters
-# !longitude: 121.4167
-# !latitude: 32.5000
+# !longitude: 121.3318
+# !latitude: 32.4456
 # region: Jiangsu
 # admin1_quelle: Name
 Yangkougang, Jiangsu, China
@@ -649625,9 +649658,10 @@ x 0 0
 # datum_note: 200cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9729 rms=0.1514m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 39.9667/123.6667 -> 39.9607/123.6632.
 # !units: meters
-# !longitude: 123.6667
-# !latitude: 39.9667
+# !longitude: 123.6632
+# !latitude: 39.9607
 # region: Liaoning
 # admin1_quelle: Name
 Shishanzi, Liaoning, China
@@ -649820,12 +649854,13 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0054m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Dalu Dao, Liaoning, China" -> "Daludao, Liaoning, China".
 # !units: meters
 # !longitude: 123.7500
 # !latitude: 39.7500
 # region: Liaoning
 # admin1_quelle: Name
-Dalu Dao, Liaoning, China
+Daludao, Liaoning, China
 +00:00 :Asia/Shanghai
 3.3099 meters
 x 0 0
@@ -650394,7 +650429,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Lushunxingang, Liaoning, China
+# Yangtouwa (Lüshunkou), Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T008) with UTide
@@ -650404,12 +650439,13 @@ x 0 0
 # datum_note: 117cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9994 rms=0.0124m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Lushunxingang, Liaoning, China" -> "Yangtouwa (Lüshunkou), Liaoning, China"; Position 38.8000/121.1333 -> 38.8077/121.1303.
 # !units: meters
-# !longitude: 121.1333
-# !latitude: 38.8000
+# !longitude: 121.1303
+# !latitude: 38.8077
 # region: Liaoning
 # admin1_quelle: Name
-Lushunxingang, Liaoning, China
+Yangtouwa (Lüshunkou), Liaoning, China
 +00:00 :Asia/Shanghai
 1.1691 meters
 J1              0.0070  316.94
@@ -650588,7 +650624,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Jinxian, Liaoning, China
+# Jinxian (Dalian), Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T009) with UTide
@@ -650598,12 +650634,13 @@ x 0 0
 # datum_note: 150cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9989 rms=0.0188m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Jinxian, Liaoning, China" -> "Jinxian (Dalian), Liaoning, China".
 # !units: meters
 # !longitude: 121.5333
 # !latitude: 39.0500
 # region: Liaoning
 # admin1_quelle: Name
-Jinxian, Liaoning, China
+Jinxian (Dalian), Liaoning, China
 +00:00 :Asia/Shanghai
 1.5000 meters
 J1              0.0327  359.42
@@ -650793,6 +650830,7 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0029m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Hulutao, Liaoning, China" -> "Pulandian Wan Kou (Huludao), Liaoning, China"; Position 39.2667/121.6000 -> 39.2720/121.5966.
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 39.2720/121.5966 -> 39.2720/121.5966.
 # !units: meters
 # !longitude: 121.5966
 # !latitude: 39.2720
@@ -651172,7 +651210,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Laobeihekou, Liaoning, China
+# Liaohekou, Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T014) with UTide
@@ -651182,12 +651220,13 @@ x 0 0
 # datum_note: 209cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0030m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Laobeihekou, Liaoning, China" -> "Liaohekou, Liaoning, China"; Position 40.9667/121.8333 -> 40.9327/121.8232.
 # !units: meters
-# !longitude: 121.8333
-# !latitude: 40.9667
+# !longitude: 121.8232
+# !latitude: 40.9327
 # region: Liaoning
 # admin1_quelle: Name
-Laobeihekou, Liaoning, China
+Liaohekou, Liaoning, China
 +00:00 :Asia/Shanghai
 2.0900 meters
 J1              0.0001  1.61
@@ -651366,7 +651405,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Juhuadao, Liaoning, China
+# Juhua Dao, Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T016) with UTide
@@ -651376,12 +651415,13 @@ x 0 0
 # datum_note: 142cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0030m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Juhuadao, Liaoning, China" -> "Juhua Dao, Liaoning, China"; Position 40.4833/120.8333 -> 40.5224/120.8162.
 # !units: meters
-# !longitude: 120.8333
-# !latitude: 40.4833
+# !longitude: 120.8162
+# !latitude: 40.5224
 # region: Liaoning
 # admin1_quelle: Name
-Juhuadao, Liaoning, China
+Juhua Dao, Liaoning, China
 +00:00 :Asia/Shanghai
 1.4200 meters
 J1              0.0003  99.75
@@ -651560,7 +651600,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Tuanshanjiao, Liaoning, China
+# Tuanshanzicun, Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T017) with UTide
@@ -651570,12 +651610,13 @@ x 0 0
 # datum_note: 76cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0029m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Tuanshanjiao, Liaoning, China" -> "Tuanshanzicun, Liaoning, China"; Position 40.2333/120.4667 -> 40.2119/120.4620.
 # !units: meters
-# !longitude: 120.4667
-# !latitude: 40.2333
+# !longitude: 120.4620
+# !latitude: 40.2119
 # region: Liaoning
 # admin1_quelle: Name
-Tuanshanjiao, Liaoning, China
+Tuanshanzicun, Liaoning, China
 +00:00 :Asia/Shanghai
 0.7601 meters
 J1              0.0001  201.38
@@ -651754,7 +651795,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Zhimaowan, Liaoning, China
+# Zhimaowancun, Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T018) with UTide
@@ -651764,12 +651805,13 @@ x 0 0
 # datum_note: 75cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9980 rms=0.0171m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Zhimaowan, Liaoning, China" -> "Zhimaowancun, Liaoning, China"; Position 40.0167/119.9167 -> 40.0098/119.9191.
 # !units: meters
-# !longitude: 119.9167
-# !latitude: 40.0167
+# !longitude: 119.9191
+# !latitude: 40.0098
 # region: Liaoning
 # admin1_quelle: Name
-Zhimaowan, Liaoning, China
+Zhimaowancun, Liaoning, China
 +00:00 :Asia/Shanghai
 0.7482 meters
 J1              0.0087  19.43
@@ -652143,7 +652185,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Wanwangoukou, Shandong, China
+# Wanwangoukou (Hekou), Shandong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T029) with UTide
@@ -652153,12 +652195,13 @@ x 0 0
 # datum_note: 130cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9974 rms=0.0325m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Wanwangoukou, Shandong, China" -> "Wanwangoukou (Hekou), Shandong, China".
 # !units: meters
 # !longitude: 118.4500
 # !latitude: 38.1833
 # region: Shandong
 # admin1_quelle: Name
-Wanwangoukou, Shandong, China
+Wanwangoukou (Hekou), Shandong, China
 +00:00 :Asia/Shanghai
 1.3000 meters
 J1              0.0130  57.51
@@ -652337,7 +652380,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Laizhougang, Shandong, China
+# Laizhou Gang, Shandong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T032) with UTide
@@ -652347,12 +652390,13 @@ x 0 0
 # datum_note: 105cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9977 rms=0.0214m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Laizhougang, Shandong, China" -> "Laizhou Gang, Shandong, China".
 # !units: meters
 # !longitude: 119.9333
 # !latitude: 37.4167
 # region: Shandong
 # admin1_quelle: Name
-Laizhougang, Shandong, China
+Laizhou Gang, Shandong, China
 +00:00 :Asia/Shanghai
 1.0499 meters
 J1              0.0107  98.81
@@ -652531,7 +652575,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Longkou, Shandong, China
+# Longkou Gang, Shandong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T033) with UTide
@@ -652541,12 +652585,13 @@ x 0 0
 # datum_note: 70cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9982 rms=0.0143m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Longkou, Shandong, China" -> "Longkou Gang, Shandong, China".
 # !units: meters
 # !longitude: 120.3167
 # !latitude: 37.6500
 # region: Shandong
 # admin1_quelle: Name
-Longkou, Shandong, China
+Longkou Gang, Shandong, China
 +00:00 :Asia/Shanghai
 0.6998 meters
 J1              0.0042  81.30
@@ -653125,9 +653170,10 @@ x 0 0
 # datum_note: 89cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0065m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 38.1667/120.7500 -> 38.1617/120.7537.
 # !units: meters
-# !longitude: 120.7500
-# !latitude: 38.1667
+# !longitude: 120.7537
+# !latitude: 38.1617
 # region: Shandong
 # admin1_quelle: Name
 Tuojidao, Shandong, China
@@ -654284,7 +654330,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Nudaogang, Shandong, China
+# Nudao Gang (Laoshan Wan), Shandong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T045) with UTide
@@ -654294,12 +654340,13 @@ x 0 0
 # datum_note: 220cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0183m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Nudaogang, Shandong, China" -> "Nudao Gang (Laoshan Wan), Shandong, China"; Position 36.3681/120.8675 -> 36.3681/120.8675.
 # !units: meters
-# !longitude: 120.8667
-# !latitude: 36.3667
+# !longitude: 120.8675
+# !latitude: 36.3681
 # region: Shandong
 # admin1_quelle: Name
-Nudaogang, Shandong, China
+Nudao Gang (Laoshan Wan), Shandong, China
 +00:00 :Asia/Shanghai
 2.1996 meters
 J1              0.0072  260.07
@@ -655063,7 +655110,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Luhuashan, Zhejiang, China
+# Lühua Port (Xiluhua Island), Zhejiang, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T069) with UTide
@@ -655073,12 +655120,13 @@ x 0 0
 # datum_note: 263cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0077m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Luhuashan, Zhejiang, China" -> "Lühua Port (Xiluhua Island), Zhejiang, China"; Position 30.8167/122.6000 -> 30.8192/122.6235.
 # !units: meters
-# !longitude: 122.6000
-# !latitude: 30.8167
+# !longitude: 122.6235
+# !latitude: 30.8192
 # region: Zhejiang
 # admin1_quelle: Name
-Luhuashan, Zhejiang, China
+Lühua Port (Xiluhua Island), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.6300 meters
 J1              0.0207  117.80
@@ -656243,8 +656291,8 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0194m const=68
 # !units: meters
-# !longitude: 121.5000
-# !latitude: 30.2167
+# !longitude: 121.5252
+# !latitude: 30.2296
 # region: Zhejiang
 # admin1_quelle: Name
 Haihuangshan, Zhejiang, China
@@ -656816,7 +656864,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Ximatou, Zhejiang, China
+# Dinghai (Zhoushan), Zhejiang, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T078) with UTide
@@ -656826,12 +656874,13 @@ x 0 0
 # datum_note: 211cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9992 rms=0.0217m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Ximatou, Zhejiang, China" -> "Dinghai (Zhoushan), Zhejiang, China"; Position 30.1167/122.1333 -> 30.1202/122.1383.
 # !units: meters
-# !longitude: 122.1333
-# !latitude: 30.1167
+# !longitude: 122.1383
+# !latitude: 30.1202
 # region: Zhejiang
 # admin1_quelle: Name
-Ximatou, Zhejiang, China
+Dinghai (Zhoushan), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.1145 meters
 J1              0.0141  142.05
@@ -657205,7 +657254,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Qitoujiao, Zhejiang, China
+# Qitoujiao (Zhangshuijiao), Zhejiang, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T085) with UTide
@@ -657215,12 +657264,13 @@ x 0 0
 # datum_note: 241cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0186m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Qitoujiao, Zhejiang, China" -> "Qitoujiao (Zhangshuijiao), Zhejiang, China"; Position 29.9000/122.1167 -> 29.9106/122.1165.
 # !units: meters
-# !longitude: 122.1167
-# !latitude: 29.9000
+# !longitude: 122.1165
+# !latitude: 29.9106
 # region: Zhejiang
 # admin1_quelle: Name
-Qitoujiao, Zhejiang, China
+Qitoujiao (Zhangshuijiao), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.4110 meters
 J1              0.0149  132.05
@@ -657594,7 +657644,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Xize, Zhejiang, China
+# Xize (Xiangshan Gang), Zhejiang, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T087) with UTide
@@ -657604,12 +657654,13 @@ x 0 0
 # datum_note: 269cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0136m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Xize, Zhejiang, China" -> "Xize (Xiangshan Gang), Zhejiang, China".
 # !units: meters
 # !longitude: 121.8333
 # !latitude: 29.6167
 # region: Zhejiang
 # admin1_quelle: Name
-Xize, Zhejiang, China
+Xize (Xiangshan Gang), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.6901 meters
 J1              0.0187  133.02
@@ -658188,9 +658239,10 @@ x 0 0
 # datum_note: 350cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0299m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 29.0333/121.6000 -> 29.0393/121.6098.
 # !units: meters
-# !longitude: 121.6000
-# !latitude: 29.0333
+# !longitude: 121.6098
+# !latitude: 29.0393
 # region: Zhejiang
 # admin1_quelle: Name
 Jiantiao, Zhejiang, China
@@ -658372,7 +658424,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Yushan, Zhejiang, China
+# Yushan Island, Zhejiang, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T091) with UTide
@@ -658382,12 +658434,13 @@ x 0 0
 # datum_note: 251cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0124m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Yushan, Zhejiang, China" -> "Yushan Island, Zhejiang, China"; Position 28.8833/122.2667 -> 28.8893/122.2594.
 # !units: meters
-# !longitude: 122.2667
-# !latitude: 28.8833
+# !longitude: 122.2594
+# !latitude: 28.8893
 # region: Zhejiang
 # admin1_quelle: Name
-Yushan, Zhejiang, China
+Yushan Island, Zhejiang, China
 +00:00 :Asia/Shanghai
 2.5132 meters
 J1              0.0149  121.68
@@ -658566,7 +658619,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Xiadachen, Zhejiang, China
+# Xia Da Chen Dao, Zhejiang, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T092) with UTide
@@ -658576,12 +658629,13 @@ x 0 0
 # datum_note: 299cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0132m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Xiadachen, Zhejiang, China" -> "Xia Da Chen Dao, Zhejiang, China"; Position 28.4500/121.9000 -> 28.4511/121.8968.
 # !units: meters
-# !longitude: 121.9000
-# !latitude: 28.4500
+# !longitude: 121.8968
+# !latitude: 28.4511
 # region: Zhejiang
 # admin1_quelle: Name
-Xiadachen, Zhejiang, China
+Xia Da Chen Dao, Zhejiang, China
 +00:00 :Asia/Shanghai
 2.9911 meters
 J1              0.0148  123.78
@@ -659150,7 +659204,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Ruian, Zhejiang, China
+# Rui'an (Feiyun Jiang), Zhejiang, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T099) with UTide
@@ -659160,12 +659214,13 @@ x 0 0
 # datum_note: 310cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9978 rms=0.0718m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Ruian, Zhejiang, China" -> "Rui'an (Feiyun Jiang), Zhejiang, China"; Position 27.6167/121.1833 -> 27.7604/120.6327.
 # !units: meters
-# !longitude: 121.1833
-# !latitude: 27.6167
+# !longitude: 120.6327
+# !latitude: 27.7604
 # region: Zhejiang
 # admin1_quelle: Name
-Ruian, Zhejiang, China
+Rui'an (Feiyun Jiang), Zhejiang, China
 +00:00 :Asia/Shanghai
 3.1000 meters
 J1              0.0086  172.15
@@ -659344,7 +659399,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Nanjishan, Zhejiang, China
+# Nanjishan (Nanji Island), Zhejiang, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T100) with UTide
@@ -659354,12 +659409,13 @@ x 0 0
 # datum_note: 315cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0168m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Nanjishan, Zhejiang, China" -> "Nanjishan (Nanji Island), Zhejiang, China"; Position 27.4500/121.0500 -> 27.4777/121.0582.
 # !units: meters
-# !longitude: 121.0500
-# !latitude: 27.4500
+# !longitude: 121.0582
+# !latitude: 27.4777
 # region: Zhejiang
 # admin1_quelle: Name
-Nanjishan, Zhejiang, China
+Nanjishan (Nanji Island), Zhejiang, China
 +00:00 :Asia/Shanghai
 3.1500 meters
 J1              0.0164  123.67
@@ -660123,7 +660179,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Tanggu (Binhai), Tianjin, China
+# Tanggu, Tianjin, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T024) with UTide
@@ -660134,12 +660190,13 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9992 rms=0.0245m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Tanggu (Binhai), Tianjin, China" -> "Tanggu, Tianjin, China".
 # !units: meters
 # !longitude: 117.7833
 # !latitude: 38.9833
 # region: Tianjin
 # admin1_quelle: Name
-Tanggu (Binhai), Tianjin, China
+Tanggu, Tianjin, China
 +00:00 :Asia/Shanghai
 2.4101 meters
 J1              0.0095  53.39
@@ -661110,9 +661167,10 @@ x 0 0
 # datum_note: 270cm below MSL
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0205m const=68
+# note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 35.3667/119.5500 -> 35.3762/119.5639.
 # !units: meters
-# !longitude: 119.5500
-# !latitude: 35.3667
+# !longitude: 119.5639
+# !latitude: 35.3762
 # region: Shandong
 # admin1_quelle: Name
 Rizhaogang (Shijiusuo), Shandong, China
@@ -663260,8 +663318,8 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0145m const=68
 # !units: meters
-# !longitude: 122.4333
-# !latitude: 36.8833
+# !longitude: 122.4434
+# !latitude: 36.8792
 # region: Shandong
 # admin1_quelle: Name
 Shidao, Shandong, China

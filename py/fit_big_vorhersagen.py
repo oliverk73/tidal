@@ -18,8 +18,12 @@ eindeutig beschriftet. Z0 wird deshalb als MSL ueber LAT gesetzt, LAT als
 tiefster Wasserstand der Konstanten ueber 19 Jahre (2026-2044, stuendlich) --
 vergleichbar mit den BMKG- und Pushidrosal-Saetzen (Kartennull LAT).
 
+Ausgelassen (AUSLASSEN): Pegel, deren BIG-Konstanten selbst kaputt sind -- gegen
+BIGs eigene Messung und alle Nachbarsaetze geprueft am 21.09.2026.
+
 Usage: python3 py/fit_big_vorhersagen.py            Pruefbericht
        python3 py/fit_big_vorhersagen.py --saetze   Saetze nach harmonics/help/big_saetze.txt
+       python3 py/fit_big_vorhersagen.py --datei    ganze Datei harmonics/utide/harmonics_utide_big_srgi.txt
 """
 from __future__ import annotations
 
@@ -48,7 +52,18 @@ MESS = os.path.join(ROOT, 'water_levels/Indonesia_BIG')
 SAETZE = os.path.join(ROOT, 'harmonics/help/big_saetze.txt')
 BERICHT = os.path.join(ROOT, 'harmonics/help/big_vergleich.csv')
 KOPF = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
+DATEI = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_big_srgi.txt')
 HEUTE = dt.date.today().strftime('%Y%m%d')
+
+AUSLASSEN = {
+    'SMLK': 'Vorhersage nur Nullen (Konstanten von 2021)',
+    'TRKN': 'M2 0.35 statt 0.87 m, S2 0.06 statt 0.55 m; BIGs eigene 3-Tage-Messung 54 cm daneben, 4 Nachbarsaetze einig',
+}
+# zwei Pegel heissen bei BIG "Cilacap"; Ortsteil nach OSM
+NAMEN = {
+    'CCAP': 'Cilacap (Tanjung Intan)',      # Hafen Pelindo Tanjung Intan, 0.6 km
+    'CILI': 'Cilacap (Tegalkamulyan)',      # UHSLC-Pegel am Fischereihafen, Kel. Tegalkamulyan
+}
 
 CONSTIT = ['M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1', '2N2', 'NU2', 'MU2', 'L2', 'T2',
            'M4', 'MS4', 'MN4', 'M6', '2MS6', 'MK3', 'M3', 'S4', 'J1', 'OO1', 'MM', 'MF', 'MSF']
@@ -123,6 +138,9 @@ def main(argv):
             continue
         d, t, h = geladen
         st, q = d['station'], d['query']
+        if st['code'] in AUSLASSEN:
+            print(f"  {st['code']:5s} ausgelassen: {AUSLASSEN[st['code']]}")
+            continue
         lat, lon = float(st['lat']), float(st['lon'])
         c = utide.solve(t, h, lat=lat, nodal=True, trend=False, method='ols', conf_int='none',
                         constit=CONSTIT, verbose=False)
@@ -130,7 +148,7 @@ def main(argv):
         neu, k = als_record(c, lat, lon)
         z0 = lat_z0(c)
         prov = provinz(neu, recs, polys)
-        name = f'{name_bestand(st["name"])}, {prov}, Indonesia'
+        name = f'{NAMEN.get(st["code"]) or name_bestand(st["name"])}, {prov}, Indonesia'
         nah = sorted(((km(neu, r), i) for i, r in enumerate(recs) if km(neu, r) <= 15.0))
         mess = [(dk, recs[i]) for dk, i in nah if os.path.basename(recs[i]['file']) in MESSUNG]
         z = dict(kode=st['code'], name=name, lat=lat, lon=lon, jahr=q.get('source_datum'),
@@ -173,6 +191,19 @@ def main(argv):
     if '--saetze' in argv:
         open(SAETZE, 'w', encoding='iso-8859-1').write('\n'.join(bloecke) + '\n')
         print(f'-> {os.path.relpath(SAETZE, ROOT)}  ({len(bloecke)} Saetze, noch NICHT im Bestand)')
+    if '--datei' in argv:
+        vorlage = open(KOPF, encoding='iso-8859-1').read().split('\n')
+        # die Vorlage traegt mehrere End-congen-Marken; massgeblich ist die nach der Statistik
+        start = next(i for i, z in enumerate(vorlage) if z.startswith('# UTide harmonic analysis -- aggregated'))
+        ende = next(i for i in range(start, len(vorlage)) if vorlage[i].startswith('# ------------- End congen output'))
+        kopf = vorlage[:start] + [
+            '# BIG (Badan Informasi Geospasial), SRGI-Pegelnetz: harmonische Konstanten der Messpegel,',
+            "# von BIG aus den Messungen bestimmt (meist 2025) und aus BIGs Live-Vorhersage zurueckgewonnen",
+            '# (py/big_vorhersagen_laden.py, py/fit_big_vorhersagen.py). Z0 = MSL ueber LAT (19 Jahre).',
+            f'# Ausgelassen: {", ".join(sorted(AUSLASSEN))} (BIG-Konstanten selbst fehlerhaft).',
+            '# utide_version: 0.3.1', '#'] + vorlage[ende:ende + 1]
+        open(DATEI, 'w', encoding='iso-8859-1').write('\n'.join(kopf) + '\n' + '\n'.join(bloecke) + '\n')
+        print(f'-> {os.path.relpath(DATEI, ROOT)}  ({len(bloecke)} Saetze)')
 
 
 if __name__ == '__main__':

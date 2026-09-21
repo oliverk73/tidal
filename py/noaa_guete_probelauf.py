@@ -84,6 +84,20 @@ GENERISCH = {
     'kang', 'dao', 'wan', 'jiao', 'shima', 'jima', 'ko', 'misaki', 'zaki', 'saki', 'hang', 'man',
     'teluk', 'tanjung', 'tg', 'selat', 'muara', 'kuala', 'sungai', 'hon', 'cua', 'mui', 'vinh',
     'guba', 'bukhta', 'zaliv', 'mys', 'ostrov', 'proliv', 'reka', 'port', 'fjord', 'fiord',
+    # 21.09.2026 aus der Gattungswort-Analyse der name:unbekannt-Faelle: nur Orts- und
+    # Anlagenbezeichnungen, keine Eigennamen (Weser, Plata, Hope ... bleiben draussen)
+    'bridge', 'beach', 'barra', 'bar', 'jazirat', 'beacon', 'ferry', 'terminal', 'bandar', 'breakwater',
+    'sperrwerk', 'cove', 'islet', 'islets', 'ilet', 'offshore', 'approaches', 'off', 'area', 'barge',
+    'fishing', 'arsenal', 'refinery', 'uscg', 'institute', 'office', 'airport', 'kyst', 'brug', 'kap',
+    'pass', 'passage', 'bayou', 'causeway', 'pont', 'viaduc', 'anse', 'bouee', 'buoy', 'lough', 'loch',
+    'quay', 'slip', 'banc', 'banco', 'ostrova', 'archipel', 'roca', 'fondeadero', 'mouillage', 'hakuchi',
+    'faro', 'leuchtturm', 'semaphore', 'heads', 'ness', 'bight', 'sandspit', 'shoal', 'flats', 'marsh',
+    'gully', 'cliffs', 'sill', 'seaway', 'canal', 'lagon', 'laguna', 'foz', 'estuary', 'slough', 'lock',
+    'locks', 'sluis', 'sluice', 'hafen', 'haven', 'hamn', 'minato', 'gyoko', 'hama', 'gawa', 'gang',
+    'shuidao', 'myeon', 'pantai', 'batang', 'tanjong', 'pelabuhan', 'pasar', 'mina', 'sebkhat',
+    'presqu', 'entree', 'pilotos', 'yacht', 'boat', 'base', 'historical', 'outside', 'buiten', 'binnen',
+    'noord', 'vieux', 'upon', 'al', 'te', 'ne', 'nw', 'se', 'southeast', 'southwest', 'southern',
+    'kepulauan', 'gosong',
 }
 
 
