@@ -58,6 +58,7 @@ HEUTE = dt.date.today().strftime('%Y%m%d')
 AUSLASSEN = {
     'SMLK': 'Vorhersage nur Nullen (Konstanten von 2021)',
     'TRKN': 'M2 0.35 statt 0.87 m, S2 0.06 statt 0.55 m; BIGs eigene 3-Tage-Messung 54 cm daneben, 4 Nachbarsaetze einig',
+    'MNDO': 'Tagestiden falsch: K1 78/O1 68 Grad, BIG Likupang und Amurang, Messreihen Bitung und Altsaetze am Ort ~135/105',
 }
 # zwei Pegel heissen bei BIG "Cilacap"; Ortsteil nach OSM
 NAMEN = {

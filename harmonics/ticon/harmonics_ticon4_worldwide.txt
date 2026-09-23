@@ -110466,13 +110466,15 @@ x 0 0
 # sonel_gps_id: 3569
 # sonel_tg_id: 3568
 # !units: meters
-# !longitude: 113.550000
-# !latitude: 22.167000
+# !longitude: 113.530333
+# !latitude: 22.188000
 # note: 20260903 Provinz "Guangdong" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Guangdong
 # admin1_quelle: Ufer 4.0 km
 # note: 20260906 country "Portugal" -> "China" nach dem Namen berichtigt,
+# note: 20260923 Position 22.1670/113.5500 -> 22.1880/113.5303: Pegel Innerer Hafen, Pier 5A
+# note: (22 11.28 N, 113 31.82 E, WGS84; Tidal prediction and flow dynamics in Macao waters, 2025).
 Macau, Guangdong, China
 +00:00 :Asia/Macau
 1.8000 meters

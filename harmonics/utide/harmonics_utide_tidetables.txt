@@ -624160,8 +624160,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9968 rms=0.0357m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 113.5667
-# !latitude: 22.7500
+# !longitude: 113.5658
+# !latitude: 22.7434
 # region: Guangdong
 # admin1_quelle: Name
 Nansha (Shuiniutou), Guangdong, China
@@ -641090,8 +641090,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0062m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Guishandao, Guangdong, China" -> "Guishan Dao, Guangdong, China"; Position 22.1333/113.8167 -> 22.1351/113.8232.
 # !units: meters
-# !longitude: 113.8232
-# !latitude: 22.1351
+# !longitude: 113.8157
+# !latitude: 22.1375
 # region: Guangdong
 # admin1_quelle: Name
 Guishan Dao, Guangdong, China
@@ -641480,8 +641480,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0135m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Shanbanzhou, Guangdong, China" -> "Shanban Zhou, Guangdong, China"; Position 22.7167/113.6667 -> 22.7205/113.6531.
 # !units: meters
-# !longitude: 113.6531
-# !latitude: 22.7205
+# !longitude: 113.6631
+# !latitude: 22.7146
 # region: Guangdong
 # admin1_quelle: Name
 Shanban Zhou, Guangdong, China
@@ -642259,9 +642259,10 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9964 rms=0.0337m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
+# note: 20260923 NMDIS-Namenswerkstatt (Oliver): Position 22.6333/113.5167 -> 22.5860/113.4634.
 # !units: meters
-# !longitude: 113.5167
-# !latitude: 22.6333
+# !longitude: 113.4634
+# !latitude: 22.5860
 # region: Guangdong
 # admin1_quelle: Name
 Hengmen, Guangdong, China
@@ -642833,7 +642834,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Denglongshan, Guangdong, China
+# Modaomen (Denglongshan), Guangdong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T156) with UTide
@@ -642844,12 +642845,14 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9962 rms=0.0288m const=68
 # note: 20260917 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
+# note: 20260923 NMDIS-Namenswerkstatt (Oliver): Name "Denglongshan, Guangdong, China" -> "Modaomen (Denglongshan), Guangdong, China";
+# note: Position 22.2333/113.4000 -> 22.2333/113.4000.
 # !units: meters
 # !longitude: 113.4000
 # !latitude: 22.2333
 # region: Guangdong
 # admin1_quelle: Name
-Denglongshan, Guangdong, China
+Modaomen (Denglongshan), Guangdong, China
 +00:00 :Asia/Shanghai
 0.9022 meters
 J1              0.0089  241.30
@@ -643041,8 +643044,8 @@ x 0 0
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Sanzaodao, Guangdong, China" -> "Sanzao Dao, Guangdong, China"; Position 22.0333/113.4000 -> 22.0342/113.3445.
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 22.0337/113.3957 -> 22.0342/113.3445.
 # !units: meters
-# !longitude: 113.3445
-# !latitude: 22.0342
+# !longitude: 113.3975
+# !latitude: 22.0351
 # region: Guangdong
 # admin1_quelle: Name
 Sanzao Dao, Guangdong, China
@@ -643236,8 +643239,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9929 rms=0.0407m const=68
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 22.3333/113.1833 -> 22.3234/113.1902.
 # !units: meters
-# !longitude: 113.1902
-# !latitude: 22.3234
+# !longitude: 113.1851
+# !latitude: 22.3259
 # region: Guangdong
 # admin1_quelle: Name
 Hengshan, Guangdong, China
@@ -643419,7 +643422,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Jing'an (Baijiao), Guangdong, China
+# Jing'anzhen (Doumen), Guangdong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T160) with UTide
@@ -643431,12 +643434,14 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9935 rms=0.0370m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Jingan (Baijiao), Guangdong, China" -> "Jing'an (Baijiao), Guangdong, China"; Position 22.2167/113.3000 -> 22.2107/113.2922.
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 22.2159/113.2993 -> 22.2107/113.2922.
+# note: 20260923 NMDIS-Namenswerkstatt (Oliver): Name "Jing'an (Baijiao), Guangdong, China" -> "Jing'anzhen (Doumen), Guangdong, China";
+# note: Position 22.2107/113.2922 -> 22.2107/113.2922.
 # !units: meters
 # !longitude: 113.2922
 # !latitude: 22.2107
 # region: Guangdong
 # admin1_quelle: Name
-Jing'an (Baijiao), Guangdong, China
+Jing'anzhen (Doumen), Guangdong, China
 +00:00 :Asia/Shanghai
 1.0725 meters
 J1              0.0083  264.23
@@ -644209,8 +644214,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9988 rms=0.0248m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Position 21.4833/111.2333 -> 21.4896/111.2189.
 # !units: meters
-# !longitude: 111.2189
-# !latitude: 21.4896
+# !longitude: 111.2330
+# !latitude: 21.4823
 # region: Guangdong
 # admin1_quelle: Name
 Bohe, Guangdong, China
@@ -662150,7 +662155,7 @@ x 0 0
 # !latitude: 22.2413
 # region: Guangdong
 # admin1_quelle: Name
-Zhuhai Jiuzhou Port, Guangdong, China
+Zhuhai (Jiuzhou Port), Guangdong, China
 +00:00 :Asia/Shanghai
 1.6269 meters
 J1              0.0146  210.47
@@ -662731,9 +662736,10 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0033m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Aomen, Guangdong, China" -> "Aomen (Macao), Guangdong, China"; Position 22.2167/113.5500 -> 22.2107/113.5411.
+# note: 20260923 NMDIS-Namenswerkstatt (Oliver): Position 22.2107/113.5411 -> 22.1880/113.5303.
 # !units: meters
-# !longitude: 113.5411
-# !latitude: 22.2107
+# !longitude: 113.5303
+# !latitude: 22.1880
 # region: Guangdong
 # admin1_quelle: Name
 Aomen (Macao), Guangdong, China
