@@ -641871,8 +641871,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0066m const=68
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Haiqin, Guangdong, China" -> "Haixin, Guangdong, China".
 # !units: meters
-# !longitude: 113.5333
-# !latitude: 22.9667
+# !longitude: 113.5269
+# !latitude: 22.9571
 # region: Guangdong
 # admin1_quelle: Name
 Haixin, Guangdong, China
@@ -753362,8 +753362,8 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2565 ausreisser=2 rest_scheitel=0.0277m const=21
 # !units: meters
-# !longitude: 117.066667
-# !latitude: 8.000000
+# !longitude: 117.0649
+# !latitude: 7.9885
 Balabac, Palawan, Philippines
 +00:00 :Asia/Manila
 0.6352 meters
@@ -754702,7 +754702,9 @@ x 0 0
 # !units: meters
 # !longitude: 118.516667
 # !latitude: 9.766667
-Peñascosa, Palawan, Philippines
+# note: 20260923 umbenannt (Oliver): "Peñascosa" -> "Peñascosa (Bagong Bayan)"; Kurve passt zur Westkueste
+# note: (Ulugan Bay 1.8 %), Tafelkopf 9 46 N 118 31 E liegt in Bagong Bayan, Puerto Princesa.
+Peñascosa (Bagong Bayan), Palawan, Philippines
 +00:00 :Asia/Manila
 0.5223 meters
 J1              0.0046  167.24

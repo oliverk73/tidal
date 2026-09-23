@@ -50,7 +50,8 @@ GRENZE = 0.08          # Rest an den Scheiteln; Maconacon (1 Jahr, 19 cm) faellt
 # Namen, die Google Maps so findet (Provinz ergaenzt, KIG ausgeschrieben)
 NAMEN = {62: 'Manila North Harbor, Metro Manila', 67: 'Corregidor Island, Cavite',
          68: 'Dalahican (Lucena), Quezon', 69: 'Lawak Island (Kalayaan), Palawan',
-         83: 'Polloc Port (Parang), Maguindanao', 90: 'Polambato (Bogo City), Cebu'}
+         83: 'Polloc Port (Parang), Maguindanao', 90: 'Polambato (Bogo City), Cebu',
+         72: 'Peñascosa (Bagong Bayan), Palawan'}
 CONSTIT = ['M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1', '2N2', 'MU2', 'NU2', 'L2', 'T2',
            'J1', 'OO1', 'M4', 'MS4', 'MN4', 'M6', 'SA', 'SSA']
 
