@@ -162249,7 +162249,7 @@ x 0 0
 # !latitude: 5.1333
 # region: Tawi-Tawi
 # admin1_quelle: Name
-Gallo Malo Channel, south entrance, Tawi-Tawi, Philippines
+Gallo Malo Channel (south entrance), Tawi-Tawi, Philippines
 +00:00 :Asia/Manila
 0.8230 meters
 J1              0.0081  121.79
@@ -162442,7 +162442,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Tandugan Channel, Tawitawi Island, Tawi-Tawi, Philippines
+Tandungan Channel (Tandubas), Tawi-Tawi, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0047  120.75
@@ -162629,13 +162629,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.5000
-# !latitude: 5.2000
+# !longitude: 120.4895
+# !latitude: 5.1914
 # region: Tawi-Tawi
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-South Ubian Usland, Tawi-Tawi, Philippines
+South Ubian Island, Tawi-Tawi, Philippines
 +00:00 :Asia/Manila
 0.4572 meters
 J1              0.0036  108.29
@@ -162826,7 +162826,8 @@ x 0 0
 # !latitude: 5.9167
 # region: Zamboanga del Sur
 # admin1_quelle: Name
-Maimbung, Jolo Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Maimbung, Jolo Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.5182 meters
 J1              0.0051  119.72
@@ -163013,13 +163014,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 119.9500
-# !latitude: 5.2500
+# !longitude: 119.9623
+# !latitude: 5.2350
 # region: Tawi-Tawi
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.84 Punkte.
-Tataan Pass, Tawitawi Island, Tawi-Tawi, Philippines
+Tataan Pass, Tawi-Tawi, Philippines
 +00:00 :Asia/Manila
 0.3048 meters
 J1              0.0077  199.95
@@ -163212,7 +163213,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Basbas Channel, Tawitawi Island, Tawi-Tawi, Philippines
+Basbas Channel, Tawi-Tawi, Philippines
 +00:00 :Asia/Manila
 0.3658 meters
 J1              0.0080  197.87
@@ -163399,15 +163400,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.2833
-# !latitude: 5.6500
+# !longitude: 120.2797
+# !latitude: 5.6396
 # region: Tawi-Tawi
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.898,
 # note: Zielwert F=2.045 aus Wahrheit statt F=1.836 des Bezugsorts; Beleg: Wahrheit 7.01 -> 6.70 %.
-Lahatlahat Island, Tawi-Tawi, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Lahat-Lahat Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.3962 meters
 J1              0.0084  199.43
@@ -163600,7 +163602,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Pearl Bank, Tawi-Tawi, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Pearl Bank, Sulu, Philippines
 +00:00 :Asia/Manila
 0.5182 meters
 J1              0.0109  226.70
@@ -163787,13 +163790,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.5000
-# !latitude: 6.2500
+# !longitude: 120.5057
+# !latitude: 6.2483
 # region: Tawi-Tawi
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.84 Punkte.
-Pangutaran Island, Tawi-Tawi, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Pangutaran Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.5182 meters
 J1              0.0112  230.08
@@ -163986,7 +163990,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.84 Punkte.
-Port Siasi, Siasi Island, Tawi-Tawi, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Siasi, Siasi Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0132  183.84
@@ -164179,7 +164184,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Banting, Tapul Island, Tawi-Tawi, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Banting, Tapul Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.3962 meters
 J1              0.0100  188.91
@@ -164372,7 +164378,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.84 Punkte.
-Tulayan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Tulayan Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.3048 meters
 J1              0.0077  178.13
@@ -164565,7 +164572,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Dassalan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Dassalan Island, Basilan, Philippines
 +00:00 :Asia/Manila
 0.4877 meters
 J1              0.0106  213.19
@@ -164756,7 +164764,8 @@ x 0 0
 # !latitude: 6.0167
 # region: Zamboanga del Sur
 # admin1_quelle: Name
-Capual Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Capual Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0106  116.08
@@ -164947,7 +164956,8 @@ x 0 0
 # !latitude: 5.9667
 # region: Zamboanga del Sur
 # admin1_quelle: Name
-Simisa Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Simisa Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.5791 meters
 J1              0.0074  114.52
@@ -165140,7 +165150,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Bulan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Bulan Island, Sulu, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0061  114.52
@@ -165333,7 +165344,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=11 -0.02 Punkte.
-Linawan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Linawan Island, Basilan, Philippines
 +00:00 :Asia/Manila
 0.5791 meters
 J1              0.0053  109.58
@@ -165526,7 +165538,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Balas, Basilan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Balas, Basilan Island, Basilan, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0061  119.20
@@ -165719,7 +165732,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=11 -0.02 Punkte.
-Bojelebung, Basilan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Bojelebung, Basilan Island, Basilan, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0061  114.13
@@ -165912,7 +165926,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=11 -0.02 Punkte.
-Amoyloi, Basilan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Amoyloi, Basilan Island, Basilan, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0070  120.62
@@ -166107,7 +166122,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.517,
 # note: Zielwert F=0.95 aus Wahrheit statt F=1.836 des Bezugsorts; Beleg: Wahrheit 10.13 -> 6.42 %.
-Port Holland, Basilan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Holland, Basilan Island, Basilan, Philippines
 +00:00 :Asia/Manila
 0.3962 meters
 J1              0.0050  179.69
@@ -166300,7 +166316,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.84 Punkte.
-Isabela, Basilan Island, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Isabela, Basilan Island, Basilan, Philippines
 +00:00 :Asia/Manila
 0.3353 meters
 J1              0.0071  208.26
@@ -166688,7 +166705,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Sibuco Bay, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Sibuco Bay, Zamboanga del Norte, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0103  217.88
@@ -166881,7 +166899,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=15 -0.18 Punkte.
-Panabutan Bay, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Panabutan Bay, Zamboanga del Norte, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0109  217.88
@@ -167267,7 +167286,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Dapitan, Negros Oriental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Dapitan, Zamboanga del Norte, Philippines
 +00:00 :Asia/Manila
 0.5791 meters
 J1              0.0123  217.88
@@ -167460,7 +167480,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=32 -0.30 Punkte.
-Murcielagos, Negros Oriental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Murcielagos, Misamis Occidental, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0096  225.54
@@ -167653,7 +167674,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Plaridel (Langaran), Negros Oriental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Plaridel (Langaran), Misamis Occidental, Philippines
 +00:00 :Asia/Manila
 0.5791 meters
 J1              0.0103  221.78
@@ -167846,7 +167868,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=31 -0.30 Punkte.
-Oroquieta, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Oroquieta, Misamis Occidental, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0089  224.37
@@ -168039,7 +168062,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=26 -0.33 Punkte.
-Jiminez, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Jiminez, Misamis Occidental, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0096  226.97
@@ -168234,7 +168258,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.305,
 # note: Zielwert F=1.167 aus Wahrheit statt F=0.943 des Bezugsorts; Beleg: Wahrheit 4.61 -> 3.86 %.
-Misamis, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Misamis, Misamis Occidental, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0134  227.75
@@ -168427,7 +168452,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Iligan, Misamis Oriental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Iligan, Lanao del Norte, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0109  225.67
@@ -168813,7 +168839,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=29 -0.30 Punkte.
-Canauyor Anchorage, Camiguin, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Canauyor Anchorage, Misamis Oriental, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0103  224.37
@@ -169199,7 +169226,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Nasipit Harbor, Butuan Bay, Camiguin, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Nasipit Harbor, Butuan Bay, Agusan del Norte, Philippines
 +00:00 :Asia/Manila
 0.5791 meters
 J1              0.0089  223.85
@@ -169392,7 +169420,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=24 -0.22 Punkte.
-Agusan River ent., Butuan Bay, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Agusan River ent., Butuan Bay, Agusan del Norte, Philippines
 +00:00 :Asia/Manila
 0.4877 meters
 J1              0.0089  225.41
@@ -169585,7 +169614,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (4).
-Dinagat, Dinagat Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Dinagat, Dinagat Island, Dinagat Islands, Philippines
 +00:00 :Asia/Manila
 0.5182 meters
 J1              0.0095  216.22
@@ -169776,7 +169806,8 @@ x 0 0
 # !latitude: 10.0667
 # region: Surigao del Sur
 # admin1_quelle: Name
-Melgar, Dinagat Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Melgar, Dinagat Island, Dinagat Islands, Philippines
 +00:00 :Asia/Manila
 0.5182 meters
 J1              0.0105  211.02
@@ -170164,7 +170195,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.77 Punkte.
-Malinao Inlet, Dinagat Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Malinao Inlet, Dinagat Island, Dinagat Islands, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 x 0 0
@@ -170357,7 +170389,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.77 Punkte.
-Gaas Bay, Dinagat Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Gaas Bay, Dinagat Island, Dinagat Islands, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 x 0 0
@@ -170550,7 +170583,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.77 Punkte.
-Cuyomongan, Talavera Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Cuyomongan, Talavera Island, Surigao del Norte, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 x 0 0
@@ -170743,7 +170777,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.63 Punkte.
-Tayanan, Kangbangyo Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Tayanan, Kangbangyo Island, Surigao del Norte, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 x 0 0
@@ -170938,7 +170973,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.319,
 # note: Zielwert F=0.571 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 4.23 -> 3.34 %.
-Port Pilar, Siargao Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Pilar, Siargao Island, Surigao del Norte, Philippines
 +00:00 :Asia/Manila
 0.6401 meters
 x 0 0
@@ -171131,7 +171167,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.77 Punkte.
-San Miguel, East Bugas Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+San Miguel, East Bugas Island, Surigao del Norte, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 x 0 0
@@ -171324,7 +171361,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -0.94 Punkte.
-Sohutan Bay, Bucas Grande Island, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Sohutan Bay, Bucas Grande Island, Surigao del Norte, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 x 0 0
@@ -173258,7 +173296,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.91 Punkte.
-Malalag, South Cotabato, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Malalag, Davao del Sur, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 J1              0.0070  115.95
@@ -173451,7 +173490,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.91 Punkte.
-Malita, South Cotabato, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Malita, Davao Occidental, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0088  113.61
@@ -173644,7 +173684,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Sarangani Island, South Cotabato, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Sarangani Island, Davao Occidental, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 J1              0.0079  115.56
@@ -173839,7 +173880,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.91 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.218,
 # note: Zielwert F=0.284 aus Nachbarn statt F=0.244 des Bezugsorts; Beleg: Nachbarn 3.31 -> 3.19 %.
-Sarangani Bay, South Cotabato, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Sarangani Bay, Sarangani, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0085  116.08
@@ -174225,7 +174267,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -0.83 Punkte.
-Cotabato, Mindanao River, Sultan Kudarat, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Cotabato, Mindanao River, Maguindanao, Philippines
 +00:00 :Asia/Manila
 0.4877 meters
 J1              0.0044  136.08
@@ -174420,7 +174463,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.916,
 # note: Zielwert F=0.2 aus Wahrheit statt F=0.244 des Bezugsorts; Beleg: Wahrheit 3.51 -> 3.38 %.
-Polloc Harbor, Sultan Kudarat, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Polloc Harbor, Maguindanao del Norte, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0064  118.55
@@ -174613,7 +174657,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -0.83 Punkte.
-Port Baras, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Baras, Lanao del Sur, Philippines
 +00:00 :Asia/Manila
 0.8230 meters
 J1              0.0070  118.55
@@ -175964,7 +176009,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -0.31 Punkte.
-Port Sibulan, Zamboanga del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Sibulan, Zamboanga Sibugay, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0079  119.84
@@ -176157,7 +176203,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -0.31 Punkte.
-Taba Bay, Sibuguey Bay, Zamboanga del Norte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Taba Bay, Sibuguey Bay, Zamboanga Sibugay, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0079  121.14
@@ -176350,7 +176397,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Ticauan Point, Sibuguey Bay, Zamboanga del Norte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Ticauan Point, Sibuguey Bay, Zamboanga Sibugay, Philippines
 +00:00 :Asia/Manila
 0.8839 meters
 J1              0.0079  121.14
@@ -176543,7 +176591,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -0.31 Punkte.
-Port Banga, Sibuguey Bay, Zamboanga del Norte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Banga, Sibuguey Bay, Zamboanga Sibugay, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0079  121.14
@@ -180994,7 +181043,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.15 Punkte.
-Cuyo, Antique, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Cuyo, Palawan, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0126  212.32
@@ -181967,7 +182017,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=23 -0.35 Punkte.
-Cagayan Anchorage (Cagayan Island), Negros Occidental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Cagayan Anchorage (Cagayan Island), Palawan, Philippines
 +00:00 :Asia/Manila
 0.5791 meters
 J1              0.0096  219.70
@@ -182158,7 +182209,8 @@ x 0 0
 # !latitude: 6.9725
 # note: 20260906 country "Malaysia" -> "Philippines" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Palawan".
-Mapun (Cagayan de Tawi-Tawi), Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (ergaenzt), py/provinz_ph_osm.py.
+Mapun (Cagayan de Tawi-Tawi), Tawi-Tawi, Philippines
 +00:00 :Asia/Manila
 0.6401 meters
 J1              0.0100  181.51
@@ -183127,7 +183179,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=44 -0.31 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.204,
 # note: Zielwert F=0.983 aus Nachbarn statt F=0.943 des Bezugsorts; Beleg: Nachbarn 4.72 -> 4.61 %.
-Aclan River entrance, Capiz, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Aclan River entrance, Aklan, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0140  226.97
@@ -183320,7 +183373,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=48 -0.31 Punkte.
-Port Batan, Capiz, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Batan, Aklan, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  228.27
@@ -183708,7 +183762,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.945,
 # note: Zielwert F=0.667 aus Wahrheit statt F=0.943 des Bezugsorts; Beleg: Wahrheit 4.25 -> 3.85 %.
-Estancia, Capiz, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Estancia, Iloilo, Philippines
 +00:00 :Asia/Manila
 1.0363 meters
 J1              0.0129  232.17
@@ -183901,7 +183956,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=50 -0.33 Punkte.
-Concepcion, Capiz, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Concepcion, Iloilo, Philippines
 +00:00 :Asia/Manila
 1.0363 meters
 J1              0.0137  232.17
@@ -184094,7 +184150,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Banate, Guimaras, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Banate, Iloilo, Philippines
 +00:00 :Asia/Manila
 1.0363 meters
 J1              0.0137  234.76
@@ -184480,7 +184537,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=47 -0.35 Punkte.
-Inampulugan I., Guimaras Island, Negros Occidental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Inampulugan I., Guimaras Island, Guimaras, Philippines
 +00:00 :Asia/Manila
 0.7010 meters
 J1              0.0123  225.67
@@ -184673,7 +184731,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=45 -0.35 Punkte.
-Lugmayan Point, Guimaras Island, Negros Occidental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Lugmayan Point, Guimaras Island, Guimaras, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0123  223.07
@@ -184866,7 +184925,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
-Lloilo, Guimaras, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Lloilo, Iloilo, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0130  229.57
@@ -185061,7 +185121,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=40 -0.35 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.904,
 # note: Zielwert F=1.1 aus Nachbarn statt F=0.943 des Bezugsorts; Beleg: Nachbarn 4.35 -> 4.13 %.
-Miagao, Antique, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Miagao, Iloilo, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0118  223.07
@@ -185447,7 +185508,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=49 -0.35 Punkte.
-Himugaan River entrance, Cebu, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Himugaan River entrance, Negros Occidental, Philippines
 +00:00 :Asia/Manila
 0.9144 meters
 J1              0.0123  234.76
@@ -186607,7 +186669,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Larena, Siquijor Island, Negros Oriental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Larena, Siquijor Island, Siquijor, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0103  221.78
@@ -187572,7 +187635,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Moalboal, Bohol, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Moalboal, Cebu, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0123  230.87
@@ -187765,7 +187829,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=44 -0.35 Punkte.
-Barili Bay, Negros Occidental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Barili Bay, Cebu, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0123  230.87
@@ -187958,7 +188023,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Balamban Bay, Negros Occidental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Balamban Bay, Cebu, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0123  230.87
@@ -188925,7 +188991,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=47 -0.35 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.071,
 # note: Zielwert F=0.875 aus Nachbarn statt F=0.943 des Bezugsorts; Beleg: Nachbarn 3.50 -> 3.38 %.
-Carmen, Negros Occidental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Carmen, Cebu, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0124  230.87
@@ -189118,7 +189185,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=43 -0.35 Punkte.
-Carcar Bay, Negros Occidental, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Carcar Bay, Cebu, Philippines
 +00:00 :Asia/Manila
 0.7010 meters
 J1              0.0116  226.97
@@ -189311,7 +189379,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Boljoon, Bohol, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Boljoon, Cebu, Philippines
 +00:00 :Asia/Manila
 0.6401 meters
 J1              0.0103  224.37
@@ -189890,7 +189959,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=42 -0.35 Punkte.
-Ubay, Leyte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Ubay, Bohol, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 J1              0.0116  228.27
@@ -190083,7 +190153,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Cogton Bay, Camiguin, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Cogton Bay, Bohol, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0103  224.37
@@ -190469,7 +190540,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Liloan, Sogod Bay, Surigao del Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Liloan, Sogod Bay, Southern Leyte, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0109  217.88
@@ -190662,7 +190734,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Maasin, Leyte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Maasin, Southern Leyte, Philippines
 +00:00 :Asia/Manila
 0.6401 meters
 J1              0.0109  224.37
@@ -191245,7 +191318,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Palompon, Biliran, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Palompon, Leyte, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0123  230.87
@@ -192210,7 +192284,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Santa Rita I., San Juanico Strait, Leyte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Santa Rita I., San Juanico Strait, Samar, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0096  232.17
@@ -192403,7 +192478,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Uban Point, San Juanico Strait, Leyte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Uban Point, San Juanico Strait, Samar, Philippines
 +00:00 :Asia/Manila
 0.4572 meters
 J1              0.0096  210.09
@@ -192984,7 +193060,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Hinunangan, Leyte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Hinunangan, Southern Leyte, Philippines
 +00:00 :Asia/Manila
 0.2743 meters
 J1              0.0074  202.81
@@ -193762,7 +193839,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=39 -0.37 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.279,
 # note: Zielwert F=0.821 aus Nachbarn statt F=0.943 des Bezugsorts; Beleg: Nachbarn 4.99 -> 4.34 %.
-Santo Nino, Santo Nino Island, Biliran, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Santo Nino, Santo Nino Island, Samar, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0114  229.57
@@ -195115,7 +195193,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -1.05 Punkte.
-Helm Harbor, Gamay Bay, Samar, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Helm Harbor, Gamay Bay, Eastern Samar, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 x 0 0
@@ -195310,7 +195389,8 @@ x 0 0
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.392,
 # note: Zielwert F=0.571 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 3.42 -> 3.03 %.
-Hilaban Island, Samar, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Hilaban Island, Eastern Samar, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 x 0 0
@@ -195503,7 +195583,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -0.77 Punkte.
-Andis Island, Port Borongan, Samar, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Andis Island, Port Borongan, Eastern Samar, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 x 0 0
@@ -197049,7 +197130,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=38 -0.36 Punkte.
-Port San Miguel, Ticao Island, Sorsogon, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port San Miguel, Ticao Island, Masbate, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  228.27
@@ -197242,7 +197324,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=40 -0.36 Punkte.
-San Jacinto, Ticao Island, Sorsogon, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+San Jacinto, Ticao Island, Masbate, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0096  228.27
@@ -197821,7 +197904,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-San Pascual, Burias Island, Camarines Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+San Pascual, Burias Island, Masbate, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0116  228.27
@@ -198400,7 +198484,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=37 -0.31 Punkte.
-Guimbiravan, Tablas Island, Aklan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Guimbiravan, Tablas Island, Romblon, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0116  228.27
@@ -199946,7 +200031,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Mansalay, Occidental Mindoro, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Mansalay, Oriental Mindoro, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 J1              0.0123  225.67
@@ -201114,7 +201200,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Corregidor Island, Manila Bay, Bataan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Corregidor Island, Manila Bay, Cavite, Philippines
 +00:00 :Asia/Manila
 0.4877 meters
 J1              0.0092  208.42
@@ -201307,7 +201394,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -1.16 Punkte.
-Cavite, Manila Bay, Bataan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Cavite, Manila Bay, Philippines
 +00:00 :Asia/Manila
 0.4877 meters
 J1              0.0090  214.53
@@ -201500,7 +201588,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Olongapo, Subic Bay, Bataan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Olongapo, Subic Bay, Zambales, Philippines
 +00:00 :Asia/Manila
 0.4572 meters
 J1              0.0084  210.89
@@ -201693,7 +201782,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.15 Punkte.
-Port Silanguin, Bataan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Silanguin, Zambales, Philippines
 +00:00 :Asia/Manila
 0.4572 meters
 J1              0.0084  205.82
@@ -202274,7 +202364,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug San Fernando, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Bolinao, Lingayen Gulf, La Union, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Bolinao, Lingayen Gulf, Pangasinan, Philippines
 +08:00 :Asia/Manila
 0.3658 meters
 x 0 0
@@ -202469,7 +202560,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.928,
 # note: Zielwert F=4.083 aus Wahrheit statt F=4.4 des Bezugsorts; Beleg: Wahrheit 5.78 -> 5.41 %.
-Sual, Lingayen Gulf, Zambales, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Sual, Lingayen Gulf, Pangasinan, Philippines
 +08:00 :Asia/Manila
 0.3658 meters
 x 0 0
@@ -202859,7 +202951,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -2.52 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.785,
 # note: Zielwert F=3.455 aus Nachbarn statt F=4.4 des Bezugsorts; Beleg: Nachbarn 10.77 -> 9.90 %.
-Solvec Cove, La Union, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Solvec Cove, Ilocos Sur, Philippines
 +08:00 :Asia/Manila
 0.3353 meters
 x 0 0
@@ -203054,7 +203147,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.785,
 # note: Zielwert F=3.455 aus Wahrheit statt F=4.4 des Bezugsorts; Beleg: Wahrheit 10.51 -> 9.61 %.
-Salomague, Cagayan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Salomague, Ilocos Sur, Philippines
 +08:00 :Asia/Manila
 0.3048 meters
 x 0 0
@@ -203249,7 +203343,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -2.52 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.785,
 # note: Zielwert F=3.455 aus Nachbarn statt F=4.4 des Bezugsorts; Beleg: Nachbarn 12.87 -> 12.10 %.
-Laoag River entrance, Cagayan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Laoag River entrance, Ilocos Norte, Philippines
 +08:00 :Asia/Manila
 0.2743 meters
 x 0 0
@@ -203444,7 +203539,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.577,
 # note: Zielwert F=2.538 aus Wahrheit statt F=4.4 des Bezugsorts; Beleg: Wahrheit 16.08 -> 15.20 %.
-Nagabungan Bay, Cagayan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Nagabungan Bay, Ilocos Norte, Philippines
 +08:00 :Asia/Manila
 0.3048 meters
 x 0 0
@@ -204992,7 +205088,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Babuyan Island, Batanes, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Babuyan Island, Cagayan, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 x 0 0
@@ -205573,7 +205670,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=14 -0.68 Punkte.
-Divilacan Bay, Cagayan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Divilacan Bay, Isabela, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 x 0 0
@@ -205768,7 +205866,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.090,
 # note: Zielwert F=0.333 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 2.92 -> 2.86 %.
-Port Bicobian, Cagayan, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Bicobian, Isabela, Philippines
 +00:00 :Asia/Manila
 0.6401 meters
 x 0 0
@@ -207710,7 +207809,8 @@ x 0 0
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.236,
 # note: Zielwert F=0.333 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 2.69 -> 2.33 %.
-Atimonan, Marinduque, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Atimonan, Quezon, Philippines
 +00:00 :Asia/Manila
 0.8230 meters
 x 0 0
@@ -207903,7 +208003,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=14 -0.99 Punkte.
-Apat Bay, Camarines Norte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Apat Bay, Quezon, Philippines
 +00:00 :Asia/Manila
 0.8230 meters
 x 0 0
@@ -209067,7 +209168,8 @@ x 0 0
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.915,
 # note: Zielwert F=0.317 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 2.36 -> 2.35 %.
-Sisiran Bay, Catanduanes, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Sisiran Bay, Camarines Sur, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 x 0 0
@@ -209260,7 +209362,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=13 -0.99 Punkte.
-Tabgon Bay, Catanduanes, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Tabgon Bay, Camarines Sur, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 x 0 0
@@ -210038,7 +210141,8 @@ x 0 0
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.068,
 # note: Zielwert F=0.38 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 1.20 -> 1.05 %.
-Tabaco, Tabaco Bay, Catanduanes, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Tabaco, Tabaco Bay, Albay, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 x 0 0
@@ -210231,7 +210335,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=10 -1.11 Punkte.
-Batan Island, Catanduanes, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Batan Island, Albay, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 x 0 0
@@ -210617,7 +210722,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=10 -1.11 Punkte.
-San Bernardino Island, Northern Samar, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+San Bernardino Island, Sorsogon, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 x 0 0
@@ -211584,7 +211690,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Guinayangan, Ragay Gulf, Camarines Norte, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Guinayangan, Ragay Gulf, Quezon, Philippines
 +00:00 :Asia/Manila
 0.8230 meters
 J1              0.0130  232.17
@@ -211777,7 +211884,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Port Pusgo, Camarines Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Port Pusgo, Quezon, Philippines
 +00:00 :Asia/Manila
 0.8230 meters
 J1              0.0103  228.27
@@ -211972,7 +212080,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.887,
 # note: Zielwert F=0.857 aus Wahrheit statt F=0.943 des Bezugsorts; Beleg: Wahrheit 4.97 -> 4.38 %.
-Aguasa Bay, Camarines Sur, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Aguasa Bay, Quezon, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0115  228.27
@@ -212165,7 +212274,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=25 -0.31 Punkte.
-Catanauan, Marinduque, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Catanauan, Quezon, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 J1              0.0130  228.27
@@ -212358,7 +212468,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=23 -0.31 Punkte.
-Pitogo, Marinduque, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Pitogo, Quezon, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0130  228.27
@@ -212551,7 +212662,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Tayabas River entrance, Marinduque, Philippines
+# note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+Tayabas River entrance, Quezon, Philippines
 +00:00 :Asia/Manila
 0.7010 meters
 J1              0.0123  229.57
