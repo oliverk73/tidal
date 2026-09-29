@@ -313942,12 +313942,14 @@ x 0 0
 # psmsl_id: 1708
 # utide: period=2022-12-31..2026-12-31 r2=0.9999 rms=0.0049m const=68
 # !units: meters
-# !longitude: 125.501258
-# !latitude: 9.784450
+# !longitude: 126.431714
+# !latitude: 8.237866
 # region: Surigao del Sur
 # admin1_quelle: Name
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Bislig Bay, Surigao del Norte, Philippines
+# note: 20260929 Oliver: NAMRIA-Stationsblatt nennt "PPA, Brgy. Lawigan, Bislig City", traegt aber die
+# note: Koordinaten von Surigao City (9.7845/125.5013); verschoben nach 8.237866/126.431714, umbenannt.
+Lawigan (Bislig Bay), Surigao del Sur, Philippines
 +00:00 :Asia/Manila
 0.8150 meters
 J1              0.0155  125.74
@@ -314919,7 +314921,7 @@ x 0 0
 # !latitude: 8.500611
 # region: Misamis Oriental
 # admin1_quelle: Name
-Cagayan de Oro City, Misamis Oriental, Philippines
+Cagayan de Oro (Macabalan), Misamis Oriental, Philippines
 +00:00 :Asia/Manila
 0.5760 meters
 J1              0.0110  238.84
@@ -316085,7 +316087,7 @@ x 0 0
 # !latitude: 9.312500
 # region: Negros Oriental
 # admin1_quelle: Name
-Dumaguete City, Negros Oriental, Philippines
+Dumaguete, Negros Oriental, Philippines
 +00:00 :Asia/Manila
 0.6270 meters
 J1              0.0140  236.63
@@ -316861,7 +316863,7 @@ x 0 0
 # !latitude: 9.632177
 # region: Negros Occidental
 # admin1_quelle: Name
-Hinoba-an, Negros Occidental, Philippines
+Hinoba-an Port, Negros Occidental, Philippines
 +00:00 :Asia/Manila
 0.6290 meters
 J1              0.0136  239.79
@@ -318805,7 +318807,7 @@ x 0 0
 # !latitude: 6.948361
 # region: Davao Oriental
 # admin1_quelle: Name
-Mati, Davao Oriental, Philippines
+Mati (Pujada Bay), Davao Oriental, Philippines
 +00:00 :Asia/Manila
 0.7720 meters
 J1              0.0094  110.26
@@ -320559,7 +320561,7 @@ x 0 0
 # !latitude: 10.477833
 # region: Negros Occidental
 # admin1_quelle: Name
-San Carlos City, Negros Occidental, Philippines
+San Carlos, Negros Occidental, Philippines
 +00:00 :Asia/Manila
 0.7883 meters
 J1              0.0153  243.89
@@ -321533,7 +321535,7 @@ x 0 0
 # province: Surigao del Norte
 # admin1_quelle: Ufer 1.9 km
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (ergaenzt), py/provinz_ph_osm.py.
-Sta. Monica, Siargao Island, Surigao del Norte, Philippines
+Santa Monica (Siargao Island), Surigao del Norte, Philippines
 +00:00 :Asia/Manila
 0.6722 meters
 J1              0.0104  102.41
@@ -321729,7 +321731,7 @@ x 0 0
 # !latitude: 9.779889
 # region: Surigao del Norte
 # admin1_quelle: Name
-Surigao City, Surigao del Norte, Philippines
+Surigao, Surigao del Norte, Philippines
 +00:00 :Asia/Manila
 0.4890 meters
 J1              0.0139  221.42
@@ -322119,7 +322121,7 @@ x 0 0
 # !latitude: 9.649278
 # region: Bohol
 # admin1_quelle: Name
-Tagbilaran City, Bohol, Philippines
+Tagbilaran, Bohol, Philippines
 +00:00 :Asia/Manila
 0.6410 meters
 J1              0.0137  236.95
@@ -322315,7 +322317,7 @@ x 0 0
 # !latitude: 9.085111
 # region: Surigao del Sur
 # admin1_quelle: Name
-Tandag City, Surigao del Sur, Philippines
+Tandag, Surigao del Sur, Philippines
 +00:00 :Asia/Manila
 0.7699 meters
 J1              0.0133  96.72
@@ -755850,8 +755852,8 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2877 ausreisser=8 rest_scheitel=0.0294m const=21
 # !units: meters
-# !longitude: 124.366667
-# !latitude: 9.633333
+# !longitude: 124.3676
+# !latitude: 9.6481
 Jagna, Bohol, Philippines
 +00:00 :Asia/Manila
 0.5351 meters
@@ -756423,9 +756425,9 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2829 ausreisser=7 rest_scheitel=0.0452m const=21
 # !units: meters
-# !longitude: 124.216667
-# !latitude: 8.216667
-Iligan Bay, Lanao del Norte, Philippines
+# !longitude: 124.2317
+# !latitude: 8.2314
+Iligan, Lanao del Norte, Philippines
 +00:00 :Asia/Manila
 0.5997 meters
 J1              0.0173  239.87
@@ -756615,8 +756617,8 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2271 ausreisser=10 rest_scheitel=0.0243m const=21
 # !units: meters
-# !longitude: 124.216667
-# !latitude: 7.350000
+# !longitude: 124.2238
+# !latitude: 7.3541
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
 Polloc Port (Parang), Maguindanao del Norte, Philippines
 +00:00 :Asia/Manila
@@ -757573,7 +757575,7 @@ x 0 0
 # !units: meters
 # !longitude: 124.529667
 # !latitude: 9.841111
-Candijay, Bohol, Philippines
+Cogtong, Bohol, Philippines
 +00:00 :Asia/Manila
 0.5243 meters
 J1              0.0078  207.70

@@ -46,7 +46,9 @@ ZIEL = os.path.join(ROOT, 'water_levels/Philippines_NAMRIA')
 DATEI = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 PHT = dt.timedelta(hours=8)
 # NAMRIA-Namen, die Google Maps nicht findet ("KIG" = Kalayaan Island Group)
-NAMEN = {31: 'Pag-asa Island (Kalayaan), Palawan'}
+NAMEN = {31: 'Pag-asa Island (Kalayaan), Palawan', 56: 'Lawigan (Bislig Bay), Surigao del Sur'}
+# Stationsblaetter mit falschen Koordinaten (56 Bislig Bay traegt die von Surigao City)
+KOORD = {56: (8.237866, 126.431714)}
 
 
 def holen(pfad):
@@ -72,7 +74,7 @@ def satz(lid):
         t.append(dt.datetime(y, m, d) + dt.timedelta(hours=int(x['hour'].split(':')[0])) - PHT)
         h.append(float(x['tide']))
     t, h = np.array(t), np.array(h)
-    lat, lon = grad(st['coordinates_lat']), grad(st['coordinates_long'])
+    lat, lon = KOORD.get(lid) or (grad(st['coordinates_lat']), grad(st['coordinates_long']))
     c = utide.solve(t, h, lat=lat, nodal=True, trend=False, method='ols', conf_int='none',
                     constit='auto', Rayleigh_min=0.9, verbose=False)
     if 'SA' not in c.name:
