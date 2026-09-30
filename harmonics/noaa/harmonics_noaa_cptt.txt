@@ -175384,15 +175384,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.9167
-# !latitude: 10.4333
+# !longitude: 121.9263
+# !latitude: 10.4291
 # region: Antique
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.913,
 # note: Zielwert F=1.0 aus Wahrheit statt F=0.943 des Bezugsorts; Beleg: Wahrheit 4.48 -> 3.82 %.
-Aniniy, Antique, Philippines
+Anini-y, Antique, Philippines
 +00:00 :Asia/Manila
 0.7010 meters
 J1              0.0119  221.78
@@ -175579,13 +175579,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.9333
-# !latitude: 10.7333
+# !longitude: 121.9385
+# !latitude: 10.7374
 # region: Antique
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-San Jose, Antique, Philippines
+San Jose de Buenavista, Antique, Philippines
 +00:00 :Asia/Manila
 0.6401 meters
 J1              0.0130  220.48
@@ -175772,8 +175772,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.0333
-# !latitude: 11.2833
+# !longitude: 122.0349
+# !latitude: 11.2848
 # region: Antique
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -175965,13 +175965,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.9333
-# !latitude: 11.9500
+# !longitude: 121.9393
+# !latitude: 11.9384
 # region: Aklan
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Borocay Island, Aklan, Philippines
+Boracay Island, Aklan, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  221.78
@@ -176158,8 +176158,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.3667
-# !latitude: 11.7333
+# !longitude: 122.3662
+# !latitude: 11.7338
 # region: Capiz
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -176167,7 +176167,7 @@ x 0 0
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.204,
 # note: Zielwert F=0.983 aus Nachbarn statt F=0.943 des Bezugsorts; Beleg: Nachbarn 4.72 -> 4.61 %.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Aclan River entrance, Aklan, Philippines
+Aklan River entrance, Aklan, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0140  226.97
@@ -176354,14 +176354,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.5000
-# !latitude: 11.6000
+# !longitude: 122.4943
+# !latitude: 11.5868
 # region: Capiz
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=48 -0.31 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Port Batan, Aklan, Philippines
+Batan, Aklan, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  228.27
@@ -176542,207 +176542,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Philippines
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 2311
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Cebu, Philippines (no.2311). M2=0.48 S2=0.27 k=1.18 dt=+0min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 122.7167
-# !latitude: 11.6000
-# region: Capiz
-# admin1_quelle: Name
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Libas (Capiz Landing), Capiz, Philippines
-+00:00 :Asia/Manila
-0.7925 meters
-J1              0.0123  228.27
-K1              0.3101  204.89
-K2              0.0776  128.98
-L2              0.0216  101.47
-M1              0.0146  110.17
-M2              0.4441  83.51
-M3              0.0013  167.62
-M4              0.0044  298.49
-M6              0.0015  290.01
-M8              0.0001  260.99
-N2              0.0687  64.40
-2N2             0.0066  56.67
-O1              0.2865  168.48
-OO1             0.0054  278.67
-P1              0.1023  205.34
-Q1              0.0578  152.57
-2Q1             0.0080  140.99
-R2              0.0039  67.39
-S1              0.0015  278.42
-S2              0.2459  129.00
-S4              0.0006  339.51
-x 0 0
-T2              0.0156  130.42
-LDA2            0.0107  97.15
-MU2             0.0133  190.94
-NU2             0.0159  65.22
-RHO1            0.0105  143.46
-x 0 0
-x 0 0
-MN4             0.0016  290.12
-MS4             0.0049  325.50
-2SM2            0.0101  4.11
-MF              0.0058  354.90
-MSF             0.0036  30.24
-MM              0.0078  28.05
-SA              0.0846  136.55
-SSA             0.0044  46.28
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0031  285.82
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0027  317.48
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0015  270.17
-x 0 0
-EPS2            0.0032  174.56
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0010  309.94
-SIG1            0.0163  0.66
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0002  322.22
-x 0 0
-x 0 0
-2MO5            0.0028  68.69
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Philippines
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2313
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Cebu, Philippines (no.2313). M2=0.66 S2=0.36 k=1.61 dt=+15min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.1500
-# !latitude: 11.4667
+# !longitude: 123.1549
+# !latitude: 11.4513
 # region: Capiz
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -176937,8 +176744,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.1000
-# !latitude: 11.2167
+# !longitude: 123.1107
+# !latitude: 11.2166
 # region: Capiz
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -177131,8 +176938,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.8167
-# !latitude: 11.0000
+# !longitude: 122.8203
+# !latitude: 10.9973
 # region: Guimaras
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -177325,13 +177132,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.6833
-# !latitude: 10.7333
+# !longitude: 122.6847
+# !latitude: 10.7335
 # region: Guimaras
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=47 -0.35 Punkte.
-Navalas, Guimaras Island, Guimaras, Philippines
+Navalas, Guimaras, Philippines
 +00:00 :Asia/Manila
 0.9449 meters
 J1              0.0137  232.17
@@ -177518,14 +177325,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.7167
-# !latitude: 10.4500
+# !longitude: 122.7270
+# !latitude: 10.4548
 # region: Negros Occidental
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=47 -0.35 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Inampulugan I., Guimaras Island, Guimaras, Philippines
+Inampulugan Island, Guimaras, Philippines
 +00:00 :Asia/Manila
 0.7010 meters
 J1              0.0123  225.67
@@ -177712,8 +177519,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.5333
-# !latitude: 10.4167
+# !longitude: 122.4982
+# !latitude: 10.4551
 # region: Negros Occidental
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -177906,14 +177713,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.5667
-# !latitude: 10.7000
+# !longitude: 122.5851
+# !latitude: 10.6934
 # region: Guimaras
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Lloilo, Iloilo, Philippines
+Iloilo City, Iloilo, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0130  229.57
@@ -178100,8 +177907,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.2333
-# !latitude: 10.6333
+# !longitude: 122.2377
+# !latitude: 10.6373
 # region: Antique
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -180616,8 +180423,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.4000
-# !latitude: 9.9333
+# !longitude: 123.3915
+# !latitude: 9.9328
 # region: Bohol
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -180810,14 +180617,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.4833
-# !latitude: 10.1167
+# !longitude: 123.4907
+# !latitude: 10.1244
 # region: Negros Occidental
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=44 -0.35 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Barili Bay, Cebu, Philippines
+Japitan (Barili Bay), Cebu, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0123  230.87
@@ -181004,8 +180811,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.7167
-# !latitude: 10.5000
+# !longitude: 123.7107
+# !latitude: 10.5029
 # region: Negros Occidental
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -181198,8 +181005,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.8167
-# !latitude: 10.7333
+# !longitude: 123.8237
+# !latitude: 10.7307
 # region: Cebu
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -181391,8 +181198,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.9667
-# !latitude: 11.1333
+# !longitude: 123.9612
+# !latitude: 11.1255
 # region: Cebu
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -181584,13 +181391,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.7167
-# !latitude: 11.1667
+# !longitude: 123.7149
+# !latitude: 11.1651
 # region: Cebu
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Bantayan, Bantayan Island, Cebu, Philippines
+Bantayan, Cebu, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0123  233.47
@@ -181771,207 +181578,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Philippines
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 2365
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Cebu, Philippines (no.2365). M2=0.50 S2=0.27 k=1.22 dt=+20min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 124.0000
-# !latitude: 11.0667
-# region: Cebu
-# admin1_quelle: Name
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Bogo Bay, Cebu, Philippines
-+00:00 :Asia/Manila
-0.7925 meters
-J1              0.0116  233.47
-K1              0.2929  209.90
-K2              0.0797  139.01
-L2              0.0222  111.31
-M1              0.0138  115.00
-M2              0.4565  93.17
-M3              0.0014  182.11
-M4              0.0045  317.81
-M6              0.0016  318.99
-M8              0.0001  299.63
-N2              0.0706  73.88
-2N2             0.0067  65.97
-O1              0.2706  173.13
-OO1             0.0051  284.05
-P1              0.0966  210.33
-Q1              0.0546  157.04
-2Q1             0.0076  145.28
-R2              0.0040  77.40
-S1              0.0014  283.42
-S2              0.2527  139.00
-S4              0.0007  359.51
-x 0 0
-T2              0.0160  140.41
-LDA2            0.0110  106.97
-MU2             0.0137  200.26
-NU2             0.0164  74.72
-RHO1            0.0099  147.95
-x 0 0
-x 0 0
-MN4             0.0017  309.26
-MS4             0.0050  345.16
-2SM2            0.0104  14.45
-MF              0.0058  355.27
-MSF             0.0036  30.58
-MM              0.0078  28.23
-SA              0.0846  136.56
-SSA             0.0044  46.31
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0031  310.16
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0028  346.80
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0016  279.86
-x 0 0
-EPS2            0.0032  183.70
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0010  324.94
-SIG1            0.0154  4.97
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0002  341.18
-x 0 0
-x 0 0
-2MO5            0.0029  92.66
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Philippines
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2367
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Cebu, Philippines (no.2367). M2=0.48 S2=0.27 k=1.18 dt=+10min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.0167
-# !latitude: 10.5833
+# !longitude: 124.0245
+# !latitude: 10.5845
 # region: Negros Occidental
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -182166,8 +181780,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.6500
-# !latitude: 10.0833
+# !longitude: 123.6544
+# !latitude: 10.0878
 # region: Negros Occidental
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -182360,8 +181974,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.4833
-# !latitude: 9.6333
+# !longitude: 123.4813
+# !latitude: 9.6268
 # region: Bohol
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -183521,14 +183135,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.1167
-# !latitude: 10.1500
+# !longitude: 125.1239
+# !latitude: 10.1585
 # region: Surigao del Sur
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Liloan, Sogod Bay, Southern Leyte, Philippines
+Liloan (Sogod Bay), Southern Leyte, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0109  217.88
@@ -183715,8 +183329,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.8333
-# !latitude: 10.1333
+# !longitude: 124.8419
+# !latitude: 10.1301
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -183909,8 +183523,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.795944
-# !latitude: 10.675167
+# !longitude: 124.7964
+# !latitude: 10.6751
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 10.6833/124.8000,
@@ -184106,8 +183720,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.6000
-# !latitude: 11.0000
+# !longitude: 124.6061
+# !latitude: 11.0010
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -184299,8 +183913,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.3833
-# !latitude: 11.0500
+# !longitude: 124.3819
+# !latitude: 11.0505
 # region: Biliran
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -184493,13 +184107,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.3500
-# !latitude: 11.7000
+# !longitude: 124.3595
+# !latitude: 11.6838
 # region: Biliran
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=42 -0.37 Punkte.
-Genuruan Island, Biliran Island, Biliran, Philippines
+Kawayan (Genuruan Island), Biliran, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0116  229.57
@@ -184686,13 +184300,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.4833
-# !latitude: 11.4667
+# !longitude: 124.4790
+# !latitude: 11.4576
 # region: Biliran
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=43 -0.37 Punkte.
-Poro Island, Biliran Strait, Biliran, Philippines
+Poro Island (Biliran Strait), Biliran, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0116  230.87
@@ -184879,8 +184493,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.6833
-# !latitude: 11.3000
+# !longitude: 124.6886
+# !latitude: 11.3087
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -185072,13 +184686,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.8500
-# !latitude: 11.4333
+# !longitude: 124.8543
+# !latitude: 11.4395
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=35 -0.37 Punkte.
-Canauay Island, Janabatas Channel, Leyte, Philippines
+Canauay Island (Janabatas Channel), Leyte, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0109  232.17
@@ -185265,14 +184879,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.9667
-# !latitude: 11.4333
+# !longitude: 124.9629
+# !latitude: 11.4305
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Santa Rita I., San Juanico Strait, Samar, Philippines
+Santa Rita Island (San Juanico Strait), Samar, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
 J1              0.0096  232.17
@@ -185459,14 +185073,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 124.9833
-# !latitude: 11.3667
+# !longitude: 124.9789
+# !latitude: 11.3690
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Uban Point, San Juanico Strait, Samar, Philippines
+Uban Point (San Juanico Strait), Leyte, Philippines
 +00:00 :Asia/Manila
 0.4572 meters
 J1              0.0096  210.09
@@ -185653,8 +185267,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.0000
-# !latitude: 11.2500
+# !longitude: 124.9998
+# !latitude: 11.2484
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
@@ -185848,8 +185462,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 125.0167
-# !latitude: 10.7500
+# !longitude: 125.0150
+# !latitude: 10.7457
 # region: Leyte
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
