@@ -174803,15 +174803,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.4000
-# !latitude: 12.6667
+# !longitude: 120.4179
+# !latitude: 12.6572
 # region: Occidental Mindoro
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.888,
 # note: Zielwert F=2.0 aus Wahrheit statt F=2.251 des Bezugsorts; Beleg: Wahrheit 5.84 -> 5.20 %.
-Apo Island, Mindoro Strait, Occidental Mindoro, Philippines
+Apo Island (Mindoro Strait), Occidental Mindoro, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0090  209.72
@@ -185849,8 +185849,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.8333
-# !latitude: 11.5333
+# !longitude: 124.8345
+# !latitude: 11.5309
 # region: Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -186048,7 +186048,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=36 -0.35 Punkte.
-Parasan Harbor, Daram Island, Samar, Philippines
+Parasan Harbor (Daram Island), Samar, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 J1              0.0103  230.87
@@ -186628,8 +186628,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.5833
-# !latitude: 12.0667
+# !longitude: 124.5932
+# !latitude: 12.0593
 # region: Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -186823,13 +186823,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.3167
-# !latitude: 12.4333
+# !longitude: 124.3126
+# !latitude: 12.4441
 # region: Northern Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
-Mauo, Northern Samar, Philippines
+Mawo (Victoria), Northern Samar, Philippines
 +00:00 :Asia/Manila
 0.3658 meters
 J1              0.0067  217.51
@@ -187016,13 +187016,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.6500
-# !latitude: 12.5167
+# !longitude: 124.6553
+# !latitude: 12.5152
 # region: Northern Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -1.17 Punkte.
-Catarman River entrance, Northern Samar, Philippines
+Catarman, Northern Samar, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 x 0 0
@@ -187209,15 +187209,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.0167
-# !latitude: 12.5667
+# !longitude: 125.0121
+# !latitude: 12.5678
 # region: Northern Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.837,
 # note: Zielwert F=0.571 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 4.83 -> 3.68 %.
-Laoang, Laoang Island, Northern Samar, Philippines
+Laoang, Northern Samar, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 x 0 0
@@ -187404,14 +187404,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.3500
-# !latitude: 12.3000
+# !longitude: 125.3428
+# !latitude: 12.2796
 # region: Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -1.05 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Helm Harbor, Gamay Bay, Eastern Samar, Philippines
+Tangbo (Helm Harbor, Gamay Bay), Eastern Samar, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 x 0 0
@@ -187598,8 +187598,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.5667
-# !latitude: 12.0333
+# !longitude: 125.5598
+# !latitude: 12.0350
 # region: Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
@@ -187607,7 +187607,7 @@ x 0 0
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.392,
 # note: Zielwert F=0.571 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 3.42 -> 3.03 %.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Hilaban Island, Eastern Samar, Philippines
+Hilabaan Island, Eastern Samar, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 x 0 0
@@ -187794,14 +187794,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.4833
-# !latitude: 11.6500
+# !longitude: 125.4779
+# !latitude: 11.6428
 # region: Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -0.77 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Andis Island, Port Borongan, Eastern Samar, Philippines
+Andis Island (Port Borongan), Eastern Samar, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 x 0 0
@@ -187988,8 +187988,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.5833
-# !latitude: 11.2333
+# !longitude: 125.5919
+# !latitude: 11.2295
 # region: Eastern Samar
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Legaspi, Philippines [harmonics_att_np203_scs.txt],
@@ -188376,8 +188376,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.0000
-# !latitude: 12.0000
+# !longitude: 124.0040
+# !latitude: 12.0026
 # region: Masbate
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -188569,13 +188569,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.2833
-# !latitude: 12.2333
+# !longitude: 123.2801
+# !latitude: 12.2244
 # region: Masbate
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Nin Bay, Masbate, Philippines
+Mandaon (Nin Bay), Masbate, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  228.27
@@ -188768,7 +188768,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
-Port Barrera, Masbate, Philippines
+Port Barrera (Aroroy), Masbate, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  229.57
@@ -188956,12 +188956,12 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 123.6167
-# !latitude: 12.3667
+# !latitude: 12.3677
 # region: Masbate
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Masbate, Masbate, Philippines
+Masbate City, Masbate, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  228.27
@@ -189148,13 +189148,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.8500
-# !latitude: 12.2000
+# !longitude: 123.8583
+# !latitude: 12.1948
 # region: Masbate
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=44 -0.35 Punkte.
-Dimasalang, Naro Bay, Masbate, Philippines
+Dimasalang (Naro Bay), Masbate, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 J1              0.0103  228.27
@@ -189341,14 +189341,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.5833
-# !latitude: 12.6667
+# !longitude: 123.5892
+# !latitude: 12.7177
 # region: Sorsogon
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=38 -0.36 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Port San Miguel, Ticao Island, Masbate, Philippines
+San Miguel Island (Ticao Island), Masbate, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  228.27
@@ -189535,14 +189535,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.7333
-# !latitude: 12.5667
+# !longitude: 123.7326
+# !latitude: 12.5713
 # region: Sorsogon
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=40 -0.36 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-San Jacinto, Ticao Island, Masbate, Philippines
+San Jacinto (Ticao Island), Masbate, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0096  228.27
@@ -189729,13 +189729,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.7833
-# !latitude: 12.4167
+# !longitude: 123.7815
+# !latitude: 12.4185
 # region: Masbate
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Batuan Bay, Ticao Island, Masbate, Philippines
+Batuan (Ticao Island), Masbate, Philippines
 +00:00 :Asia/Manila
 0.5791 meters
 J1              0.0089  230.87
@@ -189922,13 +189922,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.3167
-# !latitude: 12.7833
+# !longitude: 123.3124
+# !latitude: 12.7770
 # region: Masbate
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=37 -0.35 Punkte.
-Port Boca Engano, Burias Island, Masbate, Philippines
+Boca Engano (Burias Island), Masbate, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0109  229.57
@@ -190115,14 +190115,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.9833
-# !latitude: 13.1333
+# !longitude: 122.9752
+# !latitude: 13.1281
 # region: Camarines Sur
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-San Pascual, Burias Island, Masbate, Philippines
+San Pascual (Burias Island), Masbate, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0116  228.27
@@ -190309,13 +190309,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.5000
-# !latitude: 12.5000
+# !longitude: 122.4899
+# !latitude: 12.4975
 # region: Romblon
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=38 -0.33 Punkte.
-Cangouac Point, Sibuyan Island, Romblon, Philippines
+Cangouac Point (Ambulong Port, Sibuyan Island), Romblon, Philippines
 +00:00 :Asia/Manila
 0.8230 meters
 J1              0.0130  221.78
@@ -190502,13 +190502,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.2667
-# !latitude: 12.5833
+# !longitude: 122.2687
+# !latitude: 12.5782
 # region: Romblon
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Romblon, Romblon Island, Romblon, Philippines
+Romblon, Romblon, Philippines
 +00:00 :Asia/Manila
 0.7925 meters
 J1              0.0123  226.97
@@ -190695,14 +190695,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.0333
-# !latitude: 12.1667
+# !longitude: 122.0383
+# !latitude: 12.1718
 # region: Aklan
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=37 -0.31 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Guimbiravan, Tablas Island, Romblon, Philippines
+Guimbirayan (Tablas Island), Romblon, Philippines
 +00:00 :Asia/Manila
 0.8534 meters
 J1              0.0116  228.27
@@ -190889,13 +190889,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.0000
-# !latitude: 12.2667
+# !longitude: 121.9907
+# !latitude: 12.2533
 # region: Romblon
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Looc, Tablas Island, Romblon, Philippines
+Looc (Tablas Island), Romblon, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
 J1              0.0116  226.32
@@ -191082,13 +191082,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.7333
-# !latitude: 12.9167
+# !longitude: 121.7203
+# !latitude: 12.9126
 # region: Romblon
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Port Concepcion, Maestre de Campo I, Romblon, Philippines
+Concepcion (Maestre de Campo / Sibale Island), Romblon, Philippines
 +00:00 :Asia/Manila
 0.7315 meters
 J1              0.0123  225.67
@@ -191275,15 +191275,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.8667
-# !latitude: 13.5333
+# !longitude: 121.8652
+# !latitude: 13.5343
 # region: Marinduque
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.913,
 # note: Zielwert F=1.0 aus Wahrheit statt F=0.943 des Bezugsorts; Beleg: Wahrheit 4.60 -> 3.95 %.
-Port Balanacan, Marinduque, Philippines
+Balanacan, Marinduque, Philippines
 +00:00 :Asia/Manila
 0.7010 meters
 J1              0.0119  225.67
@@ -191470,8 +191470,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.0667
-# !latitude: 13.5000
+# !longitude: 122.0515
+# !latitude: 13.5042
 # region: Marinduque
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -191663,8 +191663,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.0833
-# !latitude: 13.3167
+# !longitude: 122.0921
+# !latitude: 13.3249
 # region: Marinduque
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -191856,13 +191856,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 120.9667
-# !latitude: 13.5167
+# !longitude: 120.9520
+# !latitude: 13.5033
 # region: Oriental Mindoro
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=16 -0.29 Punkte.
-Port Galera, Oriental Mindoro, Philippines
+Puerto Galera, Oriental Mindoro, Philippines
 +00:00 :Asia/Manila
 0.5791 meters
 J1              0.0123  220.48
@@ -192049,13 +192049,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.1833
-# !latitude: 13.4333
+# !longitude: 121.1938
+# !latitude: 13.4263
 # region: Oriental Mindoro
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Calapan Bay, Oriental Mindoro, Philippines
+Calapan, Oriental Mindoro, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0130  223.07
@@ -192242,8 +192242,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.4333
-# !latitude: 12.5167
+# !longitude: 121.4412
+# !latitude: 12.5191
 # region: Occidental Mindoro
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -192430,209 +192430,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Philippines
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 2485
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Manila, Philippines (no.2485). M2=0.22 S2=0.08 k=1.17 dt=+5min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 121.1000
-# !latitude: 12.3500
-# region: Occidental Mindoro
-# admin1_quelle: Name
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-# note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.703,
-# note: Zielwert F=1.583 aus Wahrheit statt F=2.251 des Bezugsorts; Beleg: Wahrheit 6.11 -> 5.28 %.
-Mangarin, Occidental Mindoro, Philippines
-+00:00 :Asia/Manila
-0.5486 meters
-J1              0.0073  212.32
-K1              0.2230  200.75
-K2              0.0220  90.25
-L2              0.0056  79.80
-M1              0.0105  98.56
-M2              0.1997  65.89
-M3              0.0041  298.19
-M4              0.0020  226.87
-M6              0.0014  296.89
-M8              0.0001  282.11
-N2              0.0408  52.97
-2N2             0.0049  33.52
-O1              0.2041  156.99
-OO1             0.0049  258.00
-P1              0.0705  196.75
-Q1              0.0374  137.58
-2Q1             0.0047  134.55
-R2              0.0012  270.08
-S1              0.0019  203.69
-S2              0.0700  94.78
-S4              0.0003  249.44
-x 0 0
-T2              0.0066  73.85
-LDA2            0.0011  78.53
-MU2             0.0062  27.86
-NU2             0.0074  54.78
-RHO1            0.0074  138.75
-x 0 0
-x 0 0
-MN4             0.0009  246.94
-MS4             0.0018  260.83
-2SM2            0.0008  72.36
-MF              0.0080  7.62
-MSF             0.0061  27.16
-MM              0.0079  19.79
-SA              0.1279  141.85
-SSA             0.0152  5.11
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0003  70.66
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0015  332.60
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0012  56.22
-x 0 0
-EPS2            0.0012  9.18
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0005  61.05
-SIG1            0.0049  334.55
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0003  197.74
-x 0 0
-x 0 0
-2MO5            0.0002  95.23
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Philippines
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2487
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Manila, Philippines (no.2487). M2=0.21 S2=0.08 k=1.13 dt=-5min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.7667
-# !latitude: 12.8333
+# !longitude: 120.7699
+# !latitude: 12.8318
 # region: Occidental Mindoro
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
@@ -192826,8 +192631,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.4667
-# !latitude: 13.4167
+# !longitude: 120.4654
+# !latitude: 13.4096
 # region: Occidental Mindoro
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
@@ -193021,15 +192826,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.2000
-# !latitude: 13.8167
+# !longitude: 120.2018
+# !latitude: 13.8160
 # region: Lubang
 # admin1_quelle: Name
 # note: 20260906 Name vereinheitlicht, vorher "Port Tilig, Lubang Island, Lubang, Philippines"
 # note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Manila, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
-Port Tilig (Lubang Island), Occidental Mindoro, Philippines
+Tilik (Lubang Island), Occidental Mindoro, Philippines
 +00:00 :Asia/Manila
 0.5182 meters
 J1              0.0098  208.42
