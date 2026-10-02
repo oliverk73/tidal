@@ -313362,7 +313362,7 @@ x 0 0
 # !latitude: 20.447694
 # region: Batanes
 # admin1_quelle: Name
-Basco, Batanes, Philippines
+Basco (Batan Island), Batanes, Philippines
 +00:00 :Asia/Manila
 0.4031 meters
 J1              0.0042  113.80
@@ -317057,7 +317057,7 @@ x 0 0
 # !latitude: 14.314250
 # region: Camarines Norte
 # admin1_quelle: Name
-Jose Panganiban, Camarines Norte, Philippines
+Port Jose Panganiban, Camarines Norte, Philippines
 +00:00 :Asia/Manila
 0.7860 meters
 J1              0.0103  104.56
@@ -317639,7 +317639,7 @@ x 0 0
 # !latitude: 14.514278
 # region: Bataan
 # admin1_quelle: Name
-Limay, Bataan, Philippines
+Lamao (Limay), Bataan, Philippines
 +00:00 :Asia/Manila
 0.5027 meters
 J1              0.0107  210.47
@@ -319585,7 +319585,7 @@ x 0 0
 # !latitude: 13.505111
 # region: Camarines Sur
 # admin1_quelle: Name
-Pasacao, Camarines Sur, Philippines
+Pasacao (Ragay Gulf), Camarines Sur, Philippines
 +00:00 :Asia/Manila
 0.8080 meters
 J1              0.0150  229.72
@@ -319781,7 +319781,7 @@ x 0 0
 # !latitude: 18.382944
 # region: Cagayan
 # admin1_quelle: Name
-Port Irene, Cagayan, Philippines
+Port Irene (Casambalangan), Cagayan, Philippines
 +00:00 :Asia/Manila
 0.5670 meters
 J1              0.0078  100.01
@@ -320173,7 +320173,8 @@ x 0 0
 # !latitude: 14.671250
 # region: Quezon
 # admin1_quelle: Name
-Real, Quezon, Philippines
+# note: 20261002 umbenannt (vorher "Real, Quezon, Philippines"), Hafenname Port Lampon ergaenzt.
+Real (Port Lampon), Quezon, Philippines
 +00:00 :Asia/Manila
 0.9649 meters
 J1              0.0101  106.07
@@ -647527,7 +647528,9 @@ x 0 0
 # !latitude: 15.1167
 # region: Hainan
 # admin1_quelle: Name
-Scarborough Shoal (Huangyan Dao), Hainan, China
+# note: 20261002 umbenannt (vorher "Scarborough Shoal (Huangyan Dao), Hainan, China"): Souveraenitaet umstritten (China/Philippinen/Taiwan),
+# note: PCA-Schiedsspruch 2016 entschied sie nicht -> neutraler Name mit beiden Landesnamen, Meer statt Land.
+Scarborough Shoal (Huangyan Dao / Bajo de Masinloc), South China Sea
 +00:00 :Asia/Shanghai
 0.9000 meters
 J1              0.0094  206.62
@@ -753557,8 +753560,10 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2804 ausreisser=4 rest_scheitel=0.0464m const=21
 # !units: meters
-# !longitude: 122.316667
-# !latitude: 13.566667
+# !longitude: 122.322000
+# !latitude: 13.589500
+# note: 20261002 Position berichtigt: NAMRIA-Tafelkopf druckt LAT 13 34 N (2.6 km suedlich auf See);
+# note: an den Fischereihafen Catanauan gesetzt (13.5895/122.3220). NOAA-Catanauan archiviert.
 Catanauan, Quezon, Philippines
 +00:00 :Asia/Manila
 0.7826 meters
@@ -753748,9 +753753,9 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2373 ausreisser=55 rest_scheitel=0.0534m const=21
 # !units: meters
-# !longitude: 120.583333
-# !latitude: 14.383333
-Corregidor Island, Cavite, Philippines
+# !longitude: 120.5861
+# !latitude: 14.3883
+Corregidor Island (Manila Bay), Cavite, Philippines
 +00:00 :Asia/Manila
 0.4593 meters
 J1              0.0104  247.83
@@ -753939,8 +753944,10 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2825 ausreisser=3 rest_scheitel=0.0320m const=21
 # !units: meters
-# !longitude: 121.750000
-# !latitude: 13.900000
+# !longitude: 121.6268
+# !latitude: 13.9054
+# note: 20261002 Position berichtigt: NAMRIA-Tafelkopf druckt LONG 121 45 E (Pagbilao Grande, 13 km
+# note: oestlich); Dalahican/Port of Lucena liegt bei 121 37.7 E. Auf die Pier gesetzt (13.9035/121.6280).
 Dalahican (Lucena), Quezon, Philippines
 +00:00 :Asia/Manila
 0.7479 meters
@@ -754321,8 +754328,8 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2402 ausreisser=5 rest_scheitel=0.0541m const=21
 # !units: meters
-# !longitude: 124.083333
-# !latitude: 12.583333
+# !longitude: 124.0870
+# !latitude: 12.5838
 Matnog, Sorsogon, Philippines
 +00:00 :Asia/Manila
 0.2238 meters
@@ -754897,9 +754904,11 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=3031 ausreisser=2 rest_scheitel=0.0533m const=21
 # !units: meters
-# !longitude: 122.566667
-# !latitude: 13.583333
-San Narciso, Quezon, Philippines
+# !longitude: 122.5674
+# !latitude: 13.5630
+# note: 20261002 umbenannt (vorher "San Narciso, Quezon, Philippines"); NAMRIA San Narciso und NP203 Port Pusgo
+# note: sind derselbe Ort (Konstanten auf 1-2 cm gleich); NOAA-Port-Pusgo archiviert.
+San Narciso (Port Pusgo), Quezon, Philippines
 +00:00 :Asia/Manila
 0.8337 meters
 J1              0.0146  269.06
@@ -755088,9 +755097,9 @@ x 0 0
 # note: per OCR (py/namria_hilow_ocr.py), Kosinus-Kurve zwischen den Scheiteln gefittet (py/fit_namria_hilow.py).
 # utide: scheitel=2228 ausreisser=1 rest_scheitel=0.0357m const=21
 # !units: meters
-# !longitude: 120.450000
-# !latitude: 17.450000
-Solvec, Ilocos Sur, Philippines
+# !longitude: 120.4461
+# !latitude: 17.4410
+Sulvec, Ilocos Sur, Philippines
 +00:00 :Asia/Manila
 0.3471 meters
 J1              0.0217  252.25
@@ -757384,7 +757393,7 @@ x 0 0
 # !units: meters
 # !longitude: 120.098917
 # !latitude: 16.068889
-Sual, Pangasinan, Philippines
+Sual (Lingayen Gulf), Pangasinan, Philippines
 +00:00 :Asia/Manila
 0.3615 meters
 J1              0.0181  206.21
@@ -758149,7 +758158,7 @@ x 0 0
 # !units: meters
 # !longitude: 120.333056
 # !latitude: 16.075417
-Dagupan City, Pangasinan, Philippines
+Dagupan City (Lingayen Gulf), Pangasinan, Philippines
 +00:00 :Asia/Manila
 0.3942 meters
 J1              0.0302  224.20
