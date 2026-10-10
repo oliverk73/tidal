@@ -40,10 +40,18 @@ UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
 FELDER = ['dags', 'sjavarfoll', 'ahladandi', 'sjavarhaed', 'dags_greiningar']
 
 
-def hole(pfad):
-    req = urllib.request.Request(BASIS + pfad, headers={'User-Agent': UA})
-    with urllib.request.urlopen(req, timeout=90) as r:
-        return r.read().decode('utf-8', 'ignore')
+def hole(pfad, versuche=4):
+    # sjolag.is antwortet zeitweise mit 502 Bad Gateway (lokal wie auf GitHub,
+    # 10.10.2026 fuenf Haefen am Stueck) -- dann mit Pause erneut versuchen.
+    for k in range(versuche):
+        try:
+            req = urllib.request.Request(BASIS + pfad, headers={'User-Agent': UA})
+            with urllib.request.urlopen(req, timeout=90) as r:
+                return r.read().decode('utf-8', 'ignore')
+        except Exception:
+            if k == versuche - 1:
+                raise
+            time.sleep(20 * (k + 1))
 
 
 def hafen_ids():

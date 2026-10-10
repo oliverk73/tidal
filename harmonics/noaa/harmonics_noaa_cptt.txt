@@ -120405,8 +120405,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 117.0500
-# !latitude: 23.4000
+# !longitude: 117.0871
+# !latitude: 23.4058
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.52 auf den Springhub des Buchs (cptt-1493); der Bau
@@ -120414,7 +120414,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Shantou (Han River), Guangdong, China [harmonics-1997-05-25_,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
-Nanao Dao (Yunao Wan), Guangdong, China
+Yunao (Nan'ao Dao), Guangdong, China
 +08:00 :Asia/Shanghai
 1.4935 meters
 J1              0.0234  305.91
@@ -120595,210 +120595,21 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: China
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 1497
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Shantou (Han River), China (no.1497). M2=0.50 S2=0.03 k=1.20 dt=+5min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 116.9167
-# !latitude: 23.2500
-# region: Guangdong
-# admin1_quelle: Name
-Dahao, Guangdong, China
-+08:00 :Asia/Shanghai
-0.9144 meters
-J1              0.0228  317.60
-K1              0.3642  295.25
-K2              0.0079  102.41
-L2              0.0120  55.46
-M1              0.0204  272.71
-M2              0.5025  23.42
-x 0 0
-M4              0.0829  156.83
-x 0 0
-x 0 0
-N2              0.0878  351.37
-x 0 0
-O1              0.2909  250.16
-OO1             0.0120  340.34
-P1              0.1202  291.85
-Q1              0.0541  230.12
-x 0 0
-R2              0.0012  99.40
-x 0 0
-S2              0.0295  96.50
-x 0 0
-x 0 0
-T2              0.0072  93.60
-LDA2            0.0036  57.35
-MU2             0.0120  310.33
-NU2             0.0168  355.68
-RHO1            0.0108  230.82
-x 0 0
-x 0 0
-x 0 0
-MS4             0.0373  209.92
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.0730  299.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: China
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 1499
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Shantou (Han River), China (no.1499). M2=0.70 S2=0.03 k=1.68 dt=+2min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 116.7500
-# !latitude: 23.2500
+# !longitude: 116.8100
+# !latitude: 23.2360
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Shantou (Han River), Guangdong, China [harmonics-1997-05-25_,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
-Biaojiao, Guangdong, China
+# note: 20261010 an Biaojiao-Leuchtturm (Guang'ao) verschoben: Buchposition 23-15N 116-45E lag 6 km
+# note: -- westlich an Land (grobe Minutenangabe, gleich wie Dahao Dock).
+Biaojiao (Guang'ao), Guangdong, China
 +08:00 :Asia/Shanghai
 1.4021 meters
 J1              0.0203  316.82
@@ -120985,8 +120796,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 116.7500
-# !latitude: 23.2500
+# !longitude: 116.7662
+# !latitude: 23.2275
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Shantou (Han River), Guangdong, China [harmonics-1997-05-25_,
@@ -121184,7 +120995,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Shantou (Han River), Guangdong, China [harmonics-1997-05-25_,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Haimen Wan, Guangdong, China
+Haimen, Guangdong, China
 +08:00 :Asia/Shanghai
 1.0973 meters
 J1              0.0146  316.17
@@ -121371,14 +121182,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 116.4833
-# !latitude: 22.9333
+# !longitude: 116.4958
+# !latitude: 22.9382
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 5.65 auf den Springhub des Buchs (cptt-1505); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.5. Siehe py/noaa_s2_nachziehen.py.
-Shibeshan Jiao, Guangdong, China
+Shibeishan Jiao, Guangdong, China
 +08:00 :Asia/Shanghai
 0.9144 meters
 J1              0.0228  311.75
@@ -121565,8 +121376,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 114.4333
-# !latitude: 22.5500
+# !longitude: 114.4335
+# !latitude: 22.5451
 # region: North
 # admin1_quelle: Ufer 11.1 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
@@ -121576,7 +121387,9 @@ x 0 0
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.877,
 # note: Zielwert F=1.284 aus Nachbarn statt F=1.249 des Bezugsorts; Beleg: Nachbarn 5.89 -> 5.71 %.
-Peng Chau, Hong Kong
+# note: 20261010 umbenannt (war "Peng Chau, Hong Kong"): Buchposition 22-33N 114-26E
+# note: -- ist Tung Ping Chau (Mirs Bay), alte Seekarten "Ping Chau"; nicht Peng Chau bei Lantau (50 km).
+Tung Ping Chau, Hong Kong, China
 +00:00 :Asia/Hong_Kong
 1.2192 meters
 J1              0.0054  224.37
@@ -122157,8 +121970,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 114.2833
-# !latitude: 22.3833
+# !longitude: 114.2759
+# !latitude: 22.3812
 # region: Sai Kung
 # admin1_quelle: Ufer 0.9 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
@@ -122168,7 +121981,7 @@ x 0 0
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.827,
 # note: Zielwert F=1.209 aus Nachbarn statt F=1.249 des Bezugsorts; Beleg: Nachbarn 4.85 -> 4.58 %.
-Port Shelter, Hong Kong
+Sai Kung Town (Ngao Tau Hoi / Port Shelter), Hong Kong
 +00:00 :Asia/Hong_Kong
 1.2802 meters
 J1              0.0051  216.71
@@ -122355,8 +122168,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 114.2333
-# !latitude: 22.2333
+# !longitude: 114.2349
+# !latitude: 22.2338
 # region: Southern
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
@@ -122364,7 +122177,7 @@ x 0 0
 # note: -- Namensgleichheit "Tai O, Hong Kong, China" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
-Taitam Bay, Hong Kong
+Tai Tam Bay, Hong Kong
 +00:00 :Asia/Hong_Kong
 1.2497 meters
 J1              0.0058  222.68
@@ -122551,8 +122364,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 114.1500
-# !latitude: 22.2500
+# !longitude: 114.1523
+# !latitude: 22.2473
 # region: Southern
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
@@ -122747,8 +122560,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.9333
-# !latitude: 21.8167
+# !longitude: 113.9371
+# !latitude: 21.8138
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
@@ -122756,7 +122569,7 @@ x 0 0
 # note: -- Namensgleichheit "Tai O, Hong Kong, China" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
-Wen Wei Rock, Guangdong, China
+Wenwei Zhou, Guangdong, China
 +00:00 :Asia/Shanghai
 0.9144 meters
 J1              0.0045  228.27
@@ -122943,8 +122756,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 114.0333
-# !latitude: 22.1000
+# !longitude: 114.0294
+# !latitude: 22.1080
 # region: Islands
 # admin1_quelle: Ufer 11.7 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
@@ -122954,7 +122767,7 @@ x 0 0
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Quarry Bay, Hong Kong, China [harmonics_utide_tidetables.txt,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (5).
-Wai-ling-ting, Hong Kong
+Wailingding Dao, Guangdong, China
 +00:00 :Asia/Shanghai
 1.2497 meters
 J1              0.0054  226.06
@@ -123537,8 +123350,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.6000
-# !latitude: 22.9167
+# !longitude: 113.6003
+# !latitude: 22.9187
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.27 auf den Springhub des Buchs (cptt-1531); der Bau
@@ -123546,7 +123359,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Huangpu, Guangdong, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (5).
-Sishengwei, Guangdong, China
+Sishengwei (Shatian), Guangdong, China
 +08:00 :Asia/Shanghai
 1.7069 meters
 J1              0.0112  46.17
@@ -123733,8 +123546,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.5167
-# !latitude: 22.8833
+# !longitude: 113.4957
+# !latitude: 22.8946
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.23 auf den Springhub des Buchs (cptt-1533); der Bau
@@ -123742,7 +123555,9 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Huangpu, Guangdong, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (5).
-Sanshakou, Guangdong, China
+# note: 20261010 an die Muendung des Sansha-Kanals (Sansha Chong) in den Shawan-Arm gesetzt (OSM),
+# note: vorher Buchposition 22.8833/113.5167 (Autobahn, Huangge); Name um Dongchong ergaenzt.
+Sanshakou (Dongchong), Guangdong, China
 +08:00 :Asia/Shanghai
 1.7069 meters
 J1              0.0107  49.55
@@ -123929,8 +123744,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.5667
-# !latitude: 22.9000
+# !longitude: 113.5725
+# !latitude: 22.9039
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (cptt-1535); der Bau
@@ -123938,7 +123753,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Huangpu, Guangdong, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (5).
-Nizhoutou, Guangdong, China
+Nizhou Tou, Guangdong, China
 +08:00 :Asia/Shanghai
 1.8898 meters
 J1              0.0112  50.71
@@ -124321,13 +124136,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.5333
-# !latitude: 23.0500
+# !longitude: 113.5317
+# !latitude: 23.0507
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Huangpu, Guangdong, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
-Dasheng, Guangdong, China
+# note: 20261010 Gemeinde ergaenzt (vorher "Dasheng"): Dasheng-Dorf, Mayong/Dongguan, 0.9 km von der Buchposition.
+Dasheng (Mayong), Guangdong, China
 +08:00 :Asia/Shanghai
 1.6154 meters
 J1              0.0107  58.12
@@ -124514,8 +124330,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 113.5000
-# !latitude: 23.0500
+# !longitude: 113.4984
+# !latitude: 23.0477
 # region: Guangdong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.05 auf den Springhub des Buchs (cptt-1541); der Bau
@@ -124523,7 +124339,8 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Huangpu, Guangdong, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
-Chisha (Lighthouse), Guangdong, China
+# note: 20261010 umbenannt (vorher "Chisha (Lighthouse)"): Wade-Giles Ch'i-sha = Qisha, Hualong/Panyu (OSM an der Buchposition).
+Qisha (Hualong), Guangdong, China
 +08:00 :Asia/Shanghai
 1.6154 meters
 J1              0.0107  59.94
@@ -205447,197 +205264,6 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Japan
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 2675
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Pohnpei Harbor, Caroline Islands, Micronesia (no.2675). M2=0.20 S2=0.07 k=0.21 dt=-19min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 153.9667
-# !latitude: 24.2833
-# region: Tokyo
-# admin1_quelle: Name
-Marcus Island, Tokyo, Japan
-+11:00 :Asia/Tokyo
-0.5182 meters
-x 0 0
-K1              0.1150  222.74
-K2              0.0205  101.67
-L2              0.0075  55.35
-x 0 0
-M2              0.1976  78.62
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0359  76.79
-x 0 0
-O1              0.0676  190.58
-x 0 0
-P1              0.0374  220.16
-Q1              0.0130  172.56
-x 0 0
-x 0 0
-S1              0.0073  79.85
-S2              0.0670  105.40
-x 0 0
-x 0 0
-T2              0.0079  104.91
-x 0 0
-MU2             0.0073  61.44
-NU2             0.0073  74.57
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MF              0.0410  22.15
-x 0 0
-x 0 0
-SA              0.0130  201.69
-SSA             0.2340  59.37
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
 # country: Micronesia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 2677
@@ -239800,202 +239426,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Australia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 3329
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Port Adelaide, South Australia, Australia (no.3329). M2=0.30 S2=0.14 k=0.60 dt=+31min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 137.6167
-# !latitude: -33.9167
-# state: South Australia
-# admin1_quelle: Name
-# note: 20260913 S2/K2 x 1.99 auf den Springhub des Buchs (cptt-3329); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.979. Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Adelaide Outer Harbour, South Australia, Australia [harmonic,
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Wallaroo, Spencer Gulf, South Australia, Australia
-+09:30 :Australia/Adelaide
-0.8839 meters
-J1              0.0079  80.26
-K1              0.1448  57.23
-K2              0.0826  191.03
-L2              0.0169  156.68
-M1              0.0054  301.66
-M2              0.2864  121.78
-M3              0.0005  27.00
-M4              0.0028  192.51
-M6              0.0002  226.74
-M8              0.0001  322.89
-N2              0.0161  216.82
-2N2             0.0140  187.35
-O1              0.0978  29.46
-OO1             0.0046  138.16
-P1              0.0407  53.54
-Q1              0.0222  10.16
-2Q1             0.0033  335.98
-R2              0.0063  143.20
-S1              0.0149  117.83
-S2              0.2891  191.40
-S4              0.0005  147.51
-x 0 0
-T2              0.0189  190.36
-LDA2            0.0034  199.79
-MU2             0.0461  229.26
-NU2             0.0036  102.67
-RHO1            0.0041  10.51
-x 0 0
-x 0 0
-MN4             0.0021  145.55
-MS4             0.0006  50.75
-2SM2            0.0199  113.76
-MF              0.0029  123.62
-MSF             0.0012  38.00
-MM              0.0037  270.77
-SA              0.0778  99.19
-SSA             0.0271  164.88
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0002  257.34
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0024  212.52
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0151  318.27
-x 0 0
-EPS2            0.0039  208.86
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0009  296.42
-SIG1            0.0064  194.73
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0006  78.04
-x 0 0
-x 0 0
-2MO5            0.0003  118.67
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Australia
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 3331
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Port Adelaide, South Australia, Australia (no.3331). M2=0.59 S2=0.27 k=1.18 dt=+164min.
 # date_imported: 20260630
@@ -272291,200 +271721,6 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Indonesia
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 3947
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Dar Es Salaam, Tanzania (no.3947). M2=0.38 S2=0.09 k=0.36 dt=+107min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: 105.6668
-# !latitude: -10.4172
-# note: 20260913 S2/K2 x 1.67 auf den Springhub des Buchs (cptt-3947); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dar Es Salaam, Tanzania [harmonics_ticon4_worldwide.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
-Christmas Island, Australia
-+00:00 :Indian/Christmas
-1.0973 meters
-J1              0.0039  321.73
-K1              0.0606  323.76
-K2              0.0356  354.85
-L2              0.0152  343.42
-M1              0.0041  239.36
-M2              0.3678  321.34
-M3              0.0011  42.43
-M4              0.0034  17.54
-M6              0.0014  196.27
-M8              0.0002  231.67
-N2              0.0703  299.05
-2N2             0.0059  281.93
-O1              0.0372  330.67
-OO1             0.0058  336.05
-P1              0.0172  322.30
-Q1              0.0083  327.11
-2Q1             0.0016  318.49
-R2              0.0066  349.37
-S1              0.0066  76.65
-S2              0.1368  358.95
-S4              0.0006  47.11
-x 0 0
-T2              0.0166  359.05
-LDA2            0.0035  24.65
-MU2             0.0062  318.16
-NU2             0.0146  297.01
-RHO1            0.0015  326.09
-x 0 0
-x 0 0
-MN4             0.0019  326.97
-MS4             0.0013  76.47
-2SM2            0.0005  75.45
-MF              0.0152  355.40
-MSF             0.0030  200.35
-MM              0.0069  354.81
-SA              0.0237  23.41
-SSA             0.0336  78.40
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0002  66.09
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0016  246.57
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0074  111.70
-x 0 0
-EPS2            0.0021  308.13
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0004  226.23
-SIG1            0.0019  133.97
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0003  271.16
-x 0 0
-x 0 0
-2MO5            0.0001  295.92
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
 # country: French Southern Territories
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 3953
@@ -273596,199 +272832,6 @@ N4              0.0002  21.00
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Antarctica
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 3965
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Cebu, Philippines (no.3965). M2=0.31 S2=0.17 k=0.76 dt=+60min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 110.5167
-# !latitude: -66.2500
-# region: Antarctica
-# admin1_quelle: Ufer 3.1 km
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
-Wilkes Station, Antarctica
-+00:00 :Antarctica/Casey
-1.2802 meters
-J1              0.0087  243.99
-K1              0.2189  220.06
-K2              0.0502  159.31
-L2              0.0140  131.25
-M1              0.0103  124.79
-M2              0.2874  112.74
-M3              0.0008  211.46
-M4              0.0028  356.94
-M6              0.0010  17.69
-M8              0.0001  17.89
-N2              0.0445  93.08
-2N2             0.0042  84.80
-O1              0.2022  182.54
-OO1             0.0038  294.94
-P1              0.0722  220.42
-Q1              0.0408  166.08
-2Q1             0.0056  153.95
-R2              0.0025  97.68
-S1              0.0011  293.55
-S2              0.1591  159.25
-S4              0.0004  40.01
-x 0 0
-T2              0.0101  160.63
-LDA2            0.0069  126.85
-MU2             0.0086  219.14
-NU2             0.0103  93.97
-RHO1            0.0074  157.04
-x 0 0
-x 0 0
-MN4             0.0011  348.02
-MS4             0.0032  24.98
-2SM2            0.0066  35.38
-MF              0.0058  356.01
-MSF             0.0036  31.26
-MM              0.0078  28.60
-SA              0.0846  136.59
-SSA             0.0044  46.36
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0020  359.44
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0018  46.18
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0010  299.48
-x 0 0
-EPS2            0.0021  202.21
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0006  355.31
-SIG1            0.0115  13.70
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0001  19.57
-x 0 0
-x 0 0
-2MO5            0.0018  141.20
 x 0 0
 x 0 0
 x 0 0
