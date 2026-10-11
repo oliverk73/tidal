@@ -33041,7 +33041,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: China
+# country: Taiwan
 # source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
 # att_number: 7205
 # note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
@@ -33050,13 +33050,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 119.4500
-# !latitude: 25.0000
+# !longitude: 119.4522
+# !latitude: 24.9883
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
-# region: Fujian
-# admin1_quelle: Name
-Wuqiu Yu, Fujian, China
+# region: Kinmen
+# admin1_quelle: Hand (Oliver)
+# note: 20261011 Umbenannt (Oliver): "Wuqiu Yu, Fujian, China" -> "Wuqiu Yu, Taiwan"; ROC-verwaltete Insel, Land Taiwan, Region Kinmen.
+Wuqiu, Taiwan
 +08:00 :Asia/Shanghai
 3.2400 meters
 x 0 0
@@ -33250,7 +33251,7 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
 # admin1_quelle: Name
-Ren Yu, Fujian, China
+Renyu (Lianfengcun), Fujian, China
 +08:00 :Asia/Shanghai
 3.5700 meters
 x 0 0
@@ -33438,13 +33439,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 119.6833
-# !latitude: 25.7667
+# !longitude: 119.6656
+# !latitude: 25.7643
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
 # admin1_quelle: Name
-Dongluo Liedao, Fujian, China
+# note: 20261011 Position von Hand auf den Hafen zwischen Dongluo Dao und Xiluo Dao gesetzt (25.7643/119.6656);
+# note: umbenannt, um die Insel gleichen Namens bei Lianjiang (26.418/119.913) zu unterscheiden.
+Dongluo Dao (Changle), Fujian, China
 +08:00 :Asia/Shanghai
 3.6000 meters
 x 0 0
@@ -33623,7 +33626,7 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: China
+# country: Taiwan
 # source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
 # att_number: 7209
 # note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
@@ -33632,13 +33635,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 119.9333
-# !latitude: 25.9667
+# !longitude: 119.9326
+# !latitude: 25.9678
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
-# region: Fujian
-# admin1_quelle: Name
-Baiquan Liedao, Fujian, China
+# region: Lienchiang
+# admin1_quelle: Hand (Oliver)
+# note: 20261011 Umbenannt (Oliver): "Baiquan Liedao, Fujian, China" -> "Baiquan Liedao (Matsu), Taiwan"; ROC-verwaltete Insel, Land Taiwan, Region Lienchiang.
+# note: 20261011 Umbenannt (Oliver): "Baiquan Liedao (Matsu), Taiwan" -> "Qingfan Gang (Xiju, Matsu), Taiwan";
+# note: Baiquan (White Dogs) ist der alte Name von Juguang; Position 20261011 von Hand auf den Faehranleger Xiju (Qingfan) gesetzt (25.9678/119.9326).
+Qingfan Gang (Xiju, Matsu), Taiwan
 +08:00 :Asia/Shanghai
 3.5000 meters
 x 0 0
@@ -33826,13 +33832,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 119.7000
-# !latitude: 26.6333
+# !longitude: 119.6677
+# !latitude: 26.6366
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
 # admin1_quelle: Name
-Sandu Dao, Fujian, China
+Sandu Dao (Ningde), Fujian, China
 +08:00 :Asia/Shanghai
 4.2700 meters
 x 0 0
@@ -34020,8 +34026,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 120.0500
-# !latitude: 26.5000
+# !longitude: 120.0465
+# !latitude: 26.5030
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
@@ -34214,8 +34220,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 120.4167
-# !latitude: 27.1667
+# !longitude: 120.4148
+# !latitude: 27.1677
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
@@ -36959,394 +36965,6 @@ x 0 0
 x 0 0
 x 0 0
 S2              0.1800  80.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: China
-# source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
-# att_number: 7161
-# note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
-# coord_source: NP204 Part II
-# date_imported: 20260620
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 117.8667
-# !latitude: 23.9167
-# note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: Fujian
-# admin1_quelle: Name
-Bai Yu, Fujian, China
-+08:00 :Asia/Shanghai
-2.6000 meters
-x 0 0
-K1              0.3000  281.00
-K2              0.0810  66.00
-x 0 0
-x 0 0
-M2              1.5000  1.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2850  326.16
-x 0 0
-O1              0.2000  246.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S2              0.3000  66.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: China
-# source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
-# att_number: 7162
-# note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
-# coord_source: NP204 Part II
-# date_imported: 20260620
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 118.1667
-# !latitude: 24.3833
-# note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: Fujian
-# admin1_quelle: Name
-Dadan (Dao), Fujian, China
-+08:00 :Asia/Shanghai
-3.1000 meters
-x 0 0
-K1              0.3600  276.00
-K2              0.1107  60.00
-x 0 0
-x 0 0
-M2              1.8700  356.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.3553  154.66
-x 0 0
-O1              0.1900  245.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S2              0.4100  60.00
 x 0 0
 x 0 0
 x 0 0

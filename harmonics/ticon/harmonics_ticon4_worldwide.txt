@@ -87207,13 +87207,16 @@ x 0 0
 # datum: MSL
 # confidence: 7
 # !units: meters
-# !longitude: 121.2649
-# !latitude: 28.0803
+# !longitude: 121.2837
+# !latitude: 28.0891
 # note: 20260903 Provinz "Zhejiang" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Zhejiang
 # admin1_quelle: Name
-Jinjidao Island (Kanmen Gang), Zhejiang, China
+# note: 20261011 Umbenannt (Oliver): "Jinjidao Island (Kanmen Gang), Zhejiang, China" -> "Kanmen (Yuhuan Dao), Zhejiang, China";
+# note: Position von 28.0803/121.2649 (Wasser, 2.4 km westlich) auf das Pegelgelaende Kanmen (OSM, Kanmen tide gauge station) gesetzt.
+# note: 20261011 NMDIS-Satz T096 Kanmen (Vorhersagetafel, gleiche Kurve) archiviert; dieser Messsatz bleibt.
+Kanmen (Yuhuan Dao), Zhejiang, China
 +00:00 :Asia/Shanghai
 0.0000 meters
 J1              0.0136  123.07
@@ -208847,13 +208850,13 @@ x 0 0
 # sonel_gps_id: 2087
 # sonel_tg_id: 2449
 # !units: meters
-# !longitude: 118.067000
-# !latitude: 24.450000
+# !longitude: 118.0672
+# !latitude: 24.4496
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
 # admin1_quelle: Name
-Xiamen, Fujian, China
+Xiamen (Gulangyu), Fujian, China
 +00:00 :Asia/Shanghai
 3.5225 meters
 J1              0.0160  186.83

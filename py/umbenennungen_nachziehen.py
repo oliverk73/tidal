@@ -71,6 +71,12 @@ def umbenennungen(recs):
 
 
 def nachziehen(pfad, karte, schreiben, treffer=None):
+    # Loeschlisten sind Nachweis UND Auftrag: wuerde hier der Name eines
+    # entfernten Satzes durch den neuen Namen seines erhaltenen Zwillings
+    # ersetzt, loeschte der naechste Lauf von saetze_loeschen.py den
+    # lebenden Satz. Sie bleiben, wie sie waren.
+    if os.path.basename(pfad).startswith('loeschen_'):
+        return 0
     roh = open(pfad, encoding='utf-8', newline='').read()
     ende = '\r\n' if '\r\n' in roh[:2000] else '\n'
     zeilen = list(csv.reader(io.StringIO(roh, newline='')))

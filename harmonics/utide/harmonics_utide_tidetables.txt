@@ -397449,7 +397449,7 @@ x 0 0
 # !units: meters
 # !longitude: 119.942800
 # !latitude: 26.161700
-Matsu, Taiwan
+Nangan (Matsu), Taiwan
 +00:00 :UTC
 3.7784 meters
 J1              0.0179  153.21
@@ -397645,7 +397645,8 @@ x 0 0
 # !latitude: 24.407500
 # region: Kinmen
 # admin1_quelle: Ufer 2.4 km
-Liaoluowan, Taiwan
+# note: 20261011 Umbenannt (Oliver): "Liaoluowan, Fujian, China" -> "Liaoluowan (Kinmen), Taiwan"; CWA-Pegel auf Kinmen, von Taiwan betrieben.
+Liaoluowan (Kinmen), Taiwan
 +00:00 :UTC
 2.9748 meters
 J1              0.0193  179.30
@@ -397841,7 +397842,8 @@ x 0 0
 # !latitude: 24.421110
 # region: Kinmen
 # admin1_quelle: Ufer 0.1 km
-Shuitou, Taiwan
+# note: 20261011 Umbenannt (Oliver): "Shuitou, Fujian, China" -> "Shuitou (Kinmen), Taiwan"; CWA-Pegel auf Kinmen, von Taiwan betrieben.
+Shuitou (Kinmen), Taiwan
 +00:00 :UTC
 3.2579 meters
 J1              0.0205  185.87
@@ -398225,13 +398227,16 @@ x 0 0
 # cwa_code: 294
 # utide: period=2025-12-31..2026-12-31 r2=0.9997 rms=0.0267m const=68
 # !units: meters
-# !longitude: 119.666667
-# !latitude: 26.133333
+# !longitude: 119.6603
+# !latitude: 26.1384
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
 # admin1_quelle: Name
-Minjiangkou, Fujian, China
+# note: 20261011 Position von Hand (Oliver) auf den Anleger der Insel Chuanshi (OSM) gesetzt;
+# note: CWA-Rohwert 26.1333/119.6667 (Minutenraster) lag mitten auf der Insel. CWA-Name 294 = Minjiangkou (min river mouth).
+# note: 20261011 Umbenannt: "Minjiangkou, Fujian, China" -> "Chuanshi Dao (Minjiangkou), Fujian, China".
+Chuanshi Dao (Minjiangkou), Fujian, China
 +00:00 :UTC
 3.3110 meters
 J1              0.0144  175.00
@@ -398427,15 +398432,15 @@ x 0 0
 # sonel_tg_id: 2449
 # utide: period=2025-12-31..2026-12-31 r2=0.9998 rms=0.0231m const=68
 # !units: meters
-# !longitude: 118.067000
-# !latitude: 24.450000
+# !longitude: 118.0672
+# !latitude: 24.4496
 # note: 20260903 Provinz "Fujian" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
 # admin1_quelle: Name
 # note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 24.4500/118.0667,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
-Xiamen, Fujian, China
+Xiamen (Gulangyu), Fujian, China
 +00:00 :UTC
 3.5225 meters
 J1              0.0174  167.56
@@ -624559,11 +624564,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9968 rms=0.0844m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 120.6500
-# !latitude: 28.0333
+# !longitude: 120.6572
+# !latitude: 28.0296
 # region: Zhejiang
 # admin1_quelle: Name
-Wenzhou, Zhejiang, China
+Wenzhou (Ou Jiang ), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.9626 meters
 J1              0.0125  173.32
@@ -624949,11 +624954,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0054m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 118.6667
-# !latitude: 24.9000
+# !longitude: 118.6757
+# !latitude: 24.8961
 # region: Fujian
 # admin1_quelle: Name
-Houzhu, Fujian, China
+Quanzhou (Houzhu), Fujian, China
 +00:00 :Asia/Shanghai
 3.6000 meters
 J1              0.0009  26.40
@@ -625534,8 +625539,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9989 rms=0.0281m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Zhenhai, Zhejiang, China" -> "Zhenhai Gang, Zhejiang, China".
 # !units: meters
-# !longitude: 121.7333
-# !latitude: 29.9833
+# !longitude: 121.7335
+# !latitude: 29.9814
 # region: Zhejiang
 # admin1_quelle: Name
 Zhenhai Gang, Zhejiang, China
@@ -625729,8 +625734,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0142m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Beilungang, Zhejiang, China" -> "Beilun (Beilunshan), Zhejiang, China".
 # !units: meters
-# !longitude: 121.8500
-# !latitude: 29.9333
+# !longitude: 121.8524
+# !latitude: 29.9410
 # region: Zhejiang
 # admin1_quelle: Name
 Beilun (Beilunshan), Zhejiang, China
@@ -627481,11 +627486,13 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9988 rms=0.0465m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.4500
-# !latitude: 28.6833
+# !longitude: 121.4507
+# !latitude: 28.6864
 # region: Zhejiang
 # admin1_quelle: Name
-Haimen, Zhejiang, China
+# note: 20261011 Umbenannt (Oliver): "Haimen, Zhejiang, China" -> "Jiaojiang (Taizhou), Zhejiang, China";
+# note: Haimen findet man sonst bei Nantong (Jiangsu). NMDIS T093 HAIMEN steht in der Gemeinde Haimen, Bezirk Jiaojiang.
+Jiaojiang (Taizhou), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.9017 meters
 J1              0.0113  161.74
@@ -627679,7 +627686,9 @@ x 0 0
 # !latitude: 28.7107
 # region: Zhejiang
 # admin1_quelle: Name
-Haimen Gang (Baisha), Zhejiang, China
+# note: 20261011 Umbenannt (Oliver): "Haimen Gang (Baisha), Zhejiang, China" -> "Baisha (Taizhou), Zhejiang, China";
+# note: Haimen fuehrt zur Stadt bei Nantong. NMDIS T094 HAIMEN KG*2 GANG(BAISHA); OSM: Baisha Bucht (Linhai) 2 km westlich.
+Baisha (Taizhou), Zhejiang, China
 +00:00 :Asia/Shanghai
 3.3100 meters
 J1              0.0155  116.19
@@ -628647,10 +628656,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0266m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 118.9667
-# !latitude: 25.2000
+# !longitude: 118.9884
+# !latitude: 25.2132
 # region: Fujian
 # admin1_quelle: Name
+# note: 20261011 Position von Hand (Oliver) korrigiert: 25.2000/118.9667 (Suedufer, Quangang) -> 25.2132/118.9884 (Nordufer der Meizhou-Bucht, Dongzhuang/Xiuyu).
 Xiuyu, Fujian, China
 +00:00 :Asia/Shanghai
 4.1500 meters
@@ -630208,11 +630218,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0144m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.3000
-# !latitude: 29.9333
+# !longitude: 122.2928
+# !latitude: 29.9257
 # region: Zhejiang
 # admin1_quelle: Name
-Shenjiamen, Zhejiang, China
+Shenjiamen (Lujiashi), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.5212 meters
 J1              0.0149  125.29
@@ -630403,11 +630413,13 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9992 rms=0.0224m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.0667
-# !latitude: 30.0000
+# !longitude: 122.0711
+# !latitude: 30.0104
 # region: Zhejiang
 # admin1_quelle: Name
-Dinghai, Zhejiang, China
+# note: 20261011 Umbenannt (Oliver): "Dinghai, Zhejiang, China" -> "Dinghai (Zhoushan), Zhejiang, China" (Name seit Umbenennung von T078 zu Ganlan frei).
+# note: 20261011 Position ist Rasterwert 30 00/122 04 (+-1 km), im Sund zwischen Zhoushan und Insel Panzhi; Pegel vermutlich am Suedufer von Zhoushan (Dinghai).
+Dinghai (Zhoushan), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.2600 meters
 J1              0.0173  134.92
@@ -635445,11 +635457,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0353m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Bangmen, Fujian, China" -> "Yundanmen Island (Bangmen), Fujian, China".
 # !units: meters
-# !longitude: 119.5833
-# !latitude: 26.7500
+# !longitude: 119.5809
+# !latitude: 26.7538
 # region: Fujian
 # admin1_quelle: Name
-Yundanmen Island (Bangmen), Fujian, China
+Yundanmen Dao (Ningde), Fujian, China
 +00:00 :Asia/Shanghai
 4.5699 meters
 J1              0.0161  155.22
@@ -635835,8 +635847,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0237m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 119.8833
-# !latitude: 26.3333
+# !longitude: 119.8825
+# !latitude: 26.3197
 # region: Fujian
 # admin1_quelle: Name
 Huangqi, Fujian, China
@@ -636030,8 +636042,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9963 rms=0.0781m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Mawei, Fujian, China" -> "Mawei Qu, Fujian, China"; Position 25.9667/119.4667 -> 26.0105/119.4630.
 # !units: meters
-# !longitude: 119.4630
-# !latitude: 26.0105
+# !longitude: 119.4736
+# !latitude: 25.9979
 # region: Fujian
 # admin1_quelle: Name
 Mawei Qu, Fujian, China
@@ -636225,11 +636237,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0225m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Fuqingwan (Songxiagang), Fujian, China" -> "Fuqing Wan (Songxiagang), Fujian, China".
 # !units: meters
-# !longitude: 119.5833
-# !latitude: 25.6833
+# !longitude: 119.5836
+# !latitude: 25.6869
 # region: Fujian
 # admin1_quelle: Name
-Fuqing Wan (Songxiagang), Fujian, China
+Fuqing Wan (Songxiacun), Fujian, China
 +00:00 :Asia/Shanghai
 3.9400 meters
 J1              0.0170  145.76
@@ -636814,7 +636826,7 @@ x 0 0
 # !latitude: 25.4667
 # region: Fujian
 # admin1_quelle: Name
-Pingtan, Fujian, China
+Guanyin'ao (Pingtan), Fujian, China
 +00:00 :Asia/Shanghai
 4.0283 meters
 J1              0.0160  157.01
@@ -637204,7 +637216,7 @@ x 0 0
 # !latitude: 25.1165
 # region: Fujian
 # admin1_quelle: Name
-Dongwu / Titing, Fujian, China
+Dongwucun / Titingcun, Fujian, China
 +00:00 :Asia/Shanghai
 4.0962 meters
 J1              0.0176  178.27
@@ -637395,8 +637407,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0240m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 118.9500
-# !latitude: 24.8833
+# !longitude: 118.9502
+# !latitude: 24.8766
 # region: Fujian
 # admin1_quelle: Name
 Chongwu, Fujian, China
@@ -637785,11 +637797,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0137m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Weitou, Fujian, China" -> "Weitoucun, Fujian, China"; Position 24.5167/118.5667 -> 24.5290/118.5778.
 # !units: meters
-# !longitude: 118.5778
-# !latitude: 24.5290
+# !longitude: 118.5637
+# !latitude: 24.5229
 # region: Fujian
 # admin1_quelle: Name
-Weitoucun, Fujian, China
+Weitoucun (Jinjiang), Fujian, China
 +00:00 :Asia/Shanghai
 3.2199 meters
 J1              0.0127  153.25
@@ -637980,8 +637992,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0342m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 118.4167
-# !latitude: 24.6333
+# !longitude: 118.4299
+# !latitude: 24.6334
 # region: Fujian
 # admin1_quelle: Name
 Shijing, Fujian, China
@@ -638176,8 +638188,8 @@ x 0 0
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Jiangjunao, Fujian, China" -> "Jiangjun'ao, Fujian, China"; Position 24.0333/117.9000 -> 24.0325/117.8841.
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 24.0325/117.8841 -> 24.0325/117.8841.
 # !units: meters
-# !longitude: 117.8841
-# !latitude: 24.0325
+# !longitude: 117.8818
+# !latitude: 24.0307
 # region: Fujian
 # admin1_quelle: Name
 Jiangjun'ao, Fujian, China
@@ -638371,8 +638383,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9602 rms=0.2512m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 117.8167
-# !latitude: 24.4500
+# !longitude: 117.8183
+# !latitude: 24.4507
 # region: Fujian
 # admin1_quelle: Name
 Shima, Fujian, China
@@ -656116,7 +656128,9 @@ x 0 0
 # !latitude: 30.2296
 # region: Zhejiang
 # admin1_quelle: Name
-Haihuangshan, Zhejiang, China
+# note: 20261011 Umbenannt (Oliver): "Haihuangshan, Zhejiang, China" (NMDIS T075 HAIHUANGSHAN, Name in OSM/Google nicht auffindbar) -> "Guanhaiwei (Cixi), Zhejiang, China".
+# note: Position liegt am Ufer der Hangzhou-Bucht in Guanhaiwei (OSM: Damm der G92 Hangshaoyong 0.4 km); die GLOBE-Landmaske zeigt dort noch Watt (Polder nach 2000).
+Guanhaiwei (Cixi), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.1400 meters
 J1              0.0185  153.21
@@ -656307,11 +656321,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0200m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.3000
-# !latitude: 30.2500
+# !longitude: 122.3044
+# !latitude: 30.2521
 # region: Zhejiang
 # admin1_quelle: Name
-Changtu, Zhejiang, China
+Changtu Dao, Zhejiang, China
 +00:00 :Asia/Shanghai
 2.3800 meters
 J1              0.0158  129.89
@@ -656502,8 +656516,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9994 rms=0.0195m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.1833
-# !latitude: 30.2333
+# !longitude: 122.2029
+# !latitude: 30.2382
 # region: Zhejiang
 # admin1_quelle: Name
 Daishan, Zhejiang, China
@@ -656701,7 +656715,9 @@ x 0 0
 # !latitude: 30.1202
 # region: Zhejiang
 # admin1_quelle: Name
-Dinghai (Zhoushan), Zhejiang, China
+# note: 20261011 Umbenannt (Oliver): "Dinghai (Zhoushan), Zhejiang, China" (vorher "Ximatou, Zhejiang, China", NMDIS T078 XIMATOU) -> "Ganlan (Dinghai), Zhejiang, China";
+# note: Ganlan Town (OSM name:en), Dorf Ximatou 0.6 km; Google findet Ximatou nicht.
+Ganlan (Dinghai), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.1145 meters
 J1              0.0141  142.05
@@ -657282,11 +657298,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0180m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.0167
-# !latitude: 29.8167
+# !longitude: 122.0137
+# !latitude: 29.8226
 # region: Zhejiang
 # admin1_quelle: Name
-Meishan, Zhejiang, China
+Meishan (Guijiaojiao), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.3400 meters
 J1              0.0145  131.69
@@ -658261,7 +658277,7 @@ x 0 0
 # !latitude: 28.8893
 # region: Zhejiang
 # admin1_quelle: Name
-Yushan Island, Zhejiang, China
+Yushan Dao, Zhejiang, China
 +00:00 :Asia/Shanghai
 2.5132 meters
 J1              0.0149  121.68
@@ -658456,7 +658472,7 @@ x 0 0
 # !latitude: 28.4511
 # region: Zhejiang
 # admin1_quelle: Name
-Xia Da Chen Dao, Zhejiang, China
+Xiadachen Dao, Zhejiang, China
 +00:00 :Asia/Shanghai
 2.9911 meters
 J1              0.0148  123.78
@@ -658647,11 +658663,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0091m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.2167
-# !latitude: 28.3333
+# !longitude: 121.2170
+# !latitude: 28.3341
 # region: Zhejiang
 # admin1_quelle: Name
-Dongmencun, Zhejiang, China
+Dongmentou (Wenling), Zhejiang, China
 +00:00 :Asia/Shanghai
 4.3000 meters
 J1              0.0025  44.15
@@ -658846,7 +658862,7 @@ x 0 0
 # !latitude: 27.9500
 # region: Zhejiang
 # admin1_quelle: Name
-Damendao (Huangdaao), Zhejiang, China
+Damen Dao (Dongtou), Zhejiang, China
 +00:00 :Asia/Shanghai
 3.6312 meters
 J1              0.0151  131.95
@@ -659232,11 +659248,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0168m const=68
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Nanjishan, Zhejiang, China" -> "Nanjishan (Nanji Island), Zhejiang, China"; Position 27.4500/121.0500 -> 27.4777/121.0582.
 # !units: meters
-# !longitude: 121.0582
-# !latitude: 27.4777
+# !longitude: 121.0584
+# !latitude: 27.4771
 # region: Zhejiang
 # admin1_quelle: Name
-Nanjishan (Nanji Island), Zhejiang, China
+Nanjishan (Nanji Dao), Zhejiang, China
 +00:00 :Asia/Shanghai
 3.1500 meters
 J1              0.0164  123.67
@@ -663454,201 +663470,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0001  183.91
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# Kanmen, Zhejiang, China
-# BEGIN HOT COMMENTS
-# country: China
-# source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T096) with UTide
-# nmdis_site: T096 KANMEN
-# date_imported: 20260611
-# datum: Chart Datum (China, theoretical lowest tide)
-# datum_note: 334cm below MSL
-# confidence: 7
-# utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0197m const=68
-# note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
-# !units: meters
-# !longitude: 121.2833
-# !latitude: 28.0833
-# region: Zhejiang
-# admin1_quelle: Name
-Kanmen, Zhejiang, China
-+00:00 :Asia/Shanghai
-3.3411 meters
-J1              0.0153  127.69
-K1              0.3011  98.18
-K2              0.1887  46.94
-L2              0.0691  40.29
-x 0 0
-M2              1.8364  18.90
-M3              0.0130  339.30
-M4              0.0242  184.46
-M6              0.0080  22.88
-M8              0.0032  238.93
-N2              0.3416  2.77
-2N2             0.0547  327.88
-O1              0.2300  69.00
-OO1             0.0079  151.17
-P1              0.0944  96.28
-Q1              0.0432  52.84
-2Q1             0.0067  14.54
-R2              0.0072  60.69
-x 0 0
-S2              0.6800  51.53
-S4              0.0080  310.48
-x 0 0
-T2              0.0394  54.69
-LDA2            0.0339  42.36
-MU2             0.0385  133.43
-NU2             0.0847  4.36
-RHO1            0.0083  50.60
-MK3             0.0239  77.17
-x 0 0
-MN4             0.0048  154.52
-MS4             0.0334  244.66
-2SM2            0.0136  280.10
-MF              0.0076  263.58
-MSF             0.0141  74.11
-MM              0.0132  15.99
-x 0 0
-SSA             0.0513  21.82
-SA-IOS          0.1101  251.61
-x 0 0
-S1-IOS          0.0199  191.78
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0072  124.44
-2MK6            0.0035  71.78
-x 0 0
-2MN6            0.0031  359.87
-2MS6            0.0121  69.13
-x 0 0
-2SK5            0.0001  128.31
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0001  99.34
-x 0 0
-ALP1            0.0001  194.28
-BET1            0.0002  325.27
-CHI1            0.0031  109.40
-H1              0.0086  324.33
-H2              0.0106  212.55
-x 0 0
-ETA2            0.0105  70.31
-x 0 0
-UPS1            0.0007  164.67
-x 0 0
-x 0 0
-MK4             0.0109  237.61
-MKS2            0.0056  288.59
-x 0 0
-EPS2            0.0154  96.09
-MO3             0.0202  19.93
-x 0 0
-TAU1            0.0023  161.53
-x 0 0
-MSK6            0.0025  131.84
-MSM             0.0002  290.31
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0167  81.16
-OP2             0.0130  7.16
-x 0 0
-PHI1            0.0046  87.13
-x 0 0
-PI1             0.0066  113.36
-x 0 0
-PSI1            0.0024  262.74
-x 0 0
-x 0 0
-SIG1            0.0055  77.73
-SK3             0.0068  101.66
-x 0 0
-SN4             0.0055  265.40
-x 0 0
-SO1             0.0039  227.15
-SO3             0.0079  41.88
-THE1            0.0030  119.93
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0058  292.73
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0021  88.46
 x 0 0
 x 0 0
 x 0 0
