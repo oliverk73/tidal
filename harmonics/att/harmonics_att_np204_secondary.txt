@@ -20551,6 +20551,7 @@ x 0 0
 # !latitude: 51.7333
 # region: Sakhalin
 # admin1_quelle: Ufer 1.6 km
+# note: 20261012 N2-Phase 122 -> 289 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Cape Tuik, Russia
 +11:00 :Asia/Sakhalin
 1.4000 meters
@@ -20564,7 +20565,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1501  122.09
+N2              0.1501  289.13
 x 0 0
 O1              0.0700  320.00
 x 0 0
@@ -20743,6 +20744,7 @@ x 0 0
 # !latitude: 51.5833
 # region: Sakhalin
 # admin1_quelle: Ufer 2.5 km
+# note: 20261012 N2-Phase 121 -> 288 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Viyakhtu Bay, Russia
 +11:00 :Asia/Sakhalin
 1.4000 meters
@@ -20756,7 +20758,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1710  120.70
+N2              0.1710  287.74
 x 0 0
 O1              0.1000  316.00
 x 0 0
@@ -25748,6 +25750,7 @@ x 0 0
 # !latitude: 64.7333
 # region: Chukchi Autonomous Okrug
 # admin1_quelle: Ufer 2.5 km
+# note: 20261012 N2-Phase 127 -> 294 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Anadyr, Russia
 +12:00 :Asia/Anadyr
 1.0100 meters
@@ -25761,7 +25764,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1197  127.05
+N2              0.1197  294.09
 x 0 0
 O1              0.1200  162.00
 x 0 0
@@ -27092,6 +27095,7 @@ x 0 0
 # !latitude: 52.1500
 # region: Khabarovsk
 # admin1_quelle: Ufer 0.0 km
+# note: 20261012 N2-Phase 129 -> 296 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Cape Muraveva, Russia
 +10:00 :Asia/Vladivostok
 1.1300 meters
@@ -27105,7 +27109,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1026  129.09
+N2              0.1026  296.13
 x 0 0
 O1              0.1100  334.00
 x 0 0
@@ -27286,6 +27290,7 @@ x 0 0
 # admin1_quelle: Ufer 3.3 km
 # note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 52.2500/141.5500,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
+# note: 20261012 N2-Phase 160 -> 327 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Cape Lazareva, Russia
 +10:00 :Asia/Vladivostok
 1.2000 meters
@@ -27299,7 +27304,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1330  159.62
+N2              0.1330  326.66
 x 0 0
 O1              0.1000  335.00
 x 0 0
@@ -33057,6 +33062,7 @@ x 0 0
 # region: Kinmen
 # admin1_quelle: Hand (Oliver)
 # note: 20261011 Umbenannt (Oliver): "Wuqiu Yu, Fujian, China" -> "Wuqiu Yu, Taiwan"; ROC-verwaltete Insel, Land Taiwan, Region Kinmen.
+# note: 20261012 N2-Phase 153 -> 320 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Wuqiu, Taiwan
 +08:00 :Asia/Shanghai
 3.2400 meters
@@ -33070,7 +33076,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.4047  152.59
+N2              0.4047  319.63
 x 0 0
 O1              0.2700  245.00
 x 0 0
@@ -33251,6 +33257,7 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # region: Fujian
 # admin1_quelle: Name
+# note: 20261012 N2-Phase 126 -> 293 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Renyu (Lianfengcun), Fujian, China
 +08:00 :Asia/Shanghai
 3.5700 meters
@@ -33264,7 +33271,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.3914  125.77
+N2              0.3914  292.81
 x 0 0
 O1              0.2200  222.00
 x 0 0
@@ -34407,976 +34414,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: China
 # source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
-# att_number: 7310
-# note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
-# coord_source: NP204 Part II
-# date_imported: 20260620
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 119.8333
-# !latitude: 34.5833
-# note: 20260903 Provinz "Jiangsu" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: Jiangsu
-# admin1_quelle: Name
-Kaishan Dao, Jiangsu, China
-+08:00 :Asia/Shanghai
-2.1000 meters
-x 0 0
-K1              0.3000  53.00
-K2              0.1080  277.00
-x 0 0
-x 0 0
-M2              1.0000  222.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1900  192.52
-x 0 0
-O1              0.2000  356.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S2              0.4000  277.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: China
-# source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
-# att_number: 7319
-# note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
-# coord_source: NP204 Part II
-# date_imported: 20260620
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 120.5333
-# !latitude: 36.1000
-# note: 20260903 Provinz "Shandong" ergaenzt (Polygon),
-# note: siehe py/provinz_ergaenzen.py.
-# region: Shandong
-# admin1_quelle: Name
-Laoshan Gang, Shandong, China
-+08:00 :Asia/Shanghai
-2.3000 meters
-x 0 0
-K1              0.3200  0.00
-K2              0.0783  170.00
-x 0 0
-x 0 0
-M2              1.2500  122.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2375  96.27
-x 0 0
-O1              0.2400  301.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S2              0.2900  170.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: China
-# source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
-# att_number: 7324
-# note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
-# coord_source: NP204 Part II
-# date_imported: 20260620
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 121.2333
-# !latitude: 36.6833
-# note: 20260903 Provinz "Shandong" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: Shandong
-# admin1_quelle: Name
-Fengcheng, Shandong, China
-+08:00 :Asia/Shanghai
-2.1000 meters
-x 0 0
-K1              0.3000  352.00
-K2              0.0540  148.00
-x 0 0
-x 0 0
-M2              1.1000  95.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2090  66.59
-x 0 0
-O1              0.2000  284.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S2              0.2000  148.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: China
-# source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
-# att_number: 7326
-# note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
-# coord_source: NP204 Part II
-# date_imported: 20260620
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 121.6333
-# !latitude: 36.7333
-# note: 20260903 Provinz "Shandong" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: Shandong
-# admin1_quelle: Name
-Gulong Zui, Shandong, China
-+08:00 :Asia/Shanghai
-2.0000 meters
-x 0 0
-K1              0.3000  345.00
-K2              0.0540  134.00
-x 0 0
-x 0 0
-M2              1.0000  79.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1900  49.52
-x 0 0
-O1              0.2000  273.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S2              0.2000  134.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: China
-# source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
-# att_number: 7329
-# note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
-# coord_source: NP204 Part II
-# date_imported: 20260620
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 122.1833
-# !latitude: 36.8500
-# note: 20260903 Provinz "Shandong" ergaenzt (Polygon unter 25 km),
-# note: siehe py/provinz_ergaenzen.py.
-# region: Shandong
-# admin1_quelle: Name
-Jinghai Jiao, Shandong, China
-+08:00 :Asia/Shanghai
-1.8000 meters
-x 0 0
-K1              0.3000  341.00
-K2              0.0540  126.00
-x 0 0
-x 0 0
-M2              0.9000  69.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1710  38.45
-x 0 0
-O1              0.2000  267.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S2              0.2000  126.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: China
-# source: ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants
 # att_number: 7332
 # note: NP204 Part III Harmonic Constants; Phasen ATT-Lokalzone (Meridian +08:00); N2/K2 inferiert
 # coord_source: NP204 Part II
@@ -35384,13 +34421,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 122.4833
-# !latitude: 37.0500
+# !longitude: 122.4798
+# !latitude: 37.0498
 # note: 20260903 Provinz "Shandong" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Shandong
 # admin1_quelle: Name
-Sanggou Wan, Shandong, China
+Boge Dao (Sanggou Wan), Shandong, China
 +08:00 :Asia/Shanghai
 1.5000 meters
 x 0 0
@@ -35578,13 +34615,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 122.5500
-# !latitude: 37.2667
+# !longitude: 122.5811
+# !latitude: 37.2564
 # note: 20260903 Provinz "Shandong" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Shandong
 # admin1_quelle: Name
-Waizhe Dao, Shandong, China
+# note: 20261012 Namenswerkstatt (Oliver): Name "Waizhe Dao, Shandong, China" -> "Waizhedao (Lidao Wan), Shandong, China"; Position 37.2667/122.5500 -> 37.2564/122.5811 (Google Maps).
+Waizhedao (Lidao Wan), Shandong, China
 +08:00 :Asia/Shanghai
 1.2000 meters
 x 0 0
@@ -35772,12 +34810,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 122.4833
-# !latitude: 37.4500
+# !longitude: 122.4806
+# !latitude: 37.4461
 # note: 20260903 Provinz "Shandong" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Shandong
 # admin1_quelle: Name
+# note: 20261012 N2-Phase 121 -> 288 (lokal +08:00) = 60 Grad UTC; die Inferenz hatte S2-M2 nicht auf (-180,180] normiert (Oliver).
 Jiming Dao, Shandong, China
 +08:00 :Asia/Shanghai
 1.2000 meters
@@ -35791,7 +34830,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0950  121.12
+N2              0.0950  287.52
 x 0 0
 O1              0.2000  265.00
 x 0 0
@@ -35972,6 +35011,7 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # region: Shandong
 # admin1_quelle: Name
+# note: 20261012 N2-Phase 103 -> 270 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Lian Shi, Shandong, China
 +08:00 :Asia/Shanghai
 1.2000 meters
@@ -35985,7 +35025,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1140  103.34
+N2              0.1140  270.38
 x 0 0
 O1              0.1000  250.00
 x 0 0
@@ -37134,6 +36174,7 @@ x 0 0
 # !latitude: 23.3667
 # region: Penghu
 # admin1_quelle: Ufer 17.3 km
+# note: 20261012 N2-Phase 129 -> 296 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Chiang-chun Kang-tao, Taiwan
 +08:00 :Asia/Taipei
 1.2000 meters
@@ -37147,7 +36188,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1140  129.09
+N2              0.1140  296.13
 x 0 0
 O1              0.2000  238.00
 x 0 0
@@ -37326,6 +36367,7 @@ x 0 0
 # !latitude: 24.1833
 # region: Changhua
 # admin1_quelle: Polygon
+# note: 20261012 N2-Phase 134 -> 301 (Inferenz ohne Normierung von S2-M2) (Oliver).
 T'u-ko-k'u, Taiwan
 +08:00 :Asia/Taipei
 2.1800 meters
@@ -37339,7 +36381,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.2812  133.70
+N2              0.2812  300.74
 x 0 0
 O1              0.1500  232.00
 x 0 0
@@ -37518,6 +36560,7 @@ x 0 0
 # !latitude: 23.9167
 # region: Changhua
 # admin1_quelle: Polygon
+# note: 20261012 N2-Phase 138 -> 305 (Inferenz ohne Normierung von S2-M2) (Oliver).
 Fang-yuan, Taiwan
 +08:00 :Asia/Taipei
 2.1700 meters
@@ -37531,7 +36574,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.2717  138.23
+N2              0.2717  305.27
 x 0 0
 O1              0.2000  235.00
 x 0 0
@@ -37898,13 +36941,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 122.4167
-# !latitude: 30.6167
+# !longitude: 122.4214
+# !latitude: 30.6192
 # note: 20260903 Provinz "Zhejiang" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Zhejiang
 # admin1_quelle: Name
-Baijie Shan, Zhejiang, China
+Baijieshan Dao, Zhejiang, China
 +08:00 :Asia/Shanghai
 2.5000 meters
 x 0 0
@@ -38480,13 +37523,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 120.9833
-# !latitude: 31.7667
+# !longitude: 120.9573
+# !latitude: 31.7638
 # note: 20260903 Provinz "Jiangsu" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Jiangsu
 # admin1_quelle: Name
-Changshu, Jiangsu, China
+# note: 20261012 Namenswerkstatt (Oliver): Name "Changshu, Jiangsu, China" -> "Changshu (Yangtze), Jiangsu, China"; Position 31.7667/120.9833 -> 31.7638/120.9573.
+Changshu (Yangtze), Jiangsu, China
 +08:00 :Asia/Shanghai
 2.0000 meters
 x 0 0
@@ -38674,13 +37718,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 120.2333
-# !latitude: 31.9167
+# !longitude: 120.2582
+# !latitude: 31.9317
 # note: 20260903 Provinz "Jiangsu" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Jiangsu
 # admin1_quelle: Name
-Jiangyin, Jiangsu, China
+# note: 20261012 Namenswerkstatt (Oliver): Name "Jiangyin, Jiangsu, China" -> "Jiangyin (Yangtze), Jiangsu, China"; Position 31.9167/120.2333 -> 31.9317/120.2582.
+# note: Gleicher Pegel wie NOAA-Satz (Tianshenggang-Vergleich), beide auf eine Position.
+Jiangyin (Yangtze), Jiangsu, China
 +08:00 :Asia/Shanghai
 1.0700 meters
 x 0 0

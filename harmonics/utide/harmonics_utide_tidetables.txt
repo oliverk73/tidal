@@ -623187,7 +623187,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Chongming (Nanbuzhen), Shanghai, China
+# Buzhen (Chongming), Shanghai, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T062) with UTide
@@ -623199,11 +623199,12 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9952 rms=0.0644m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.6333
-# !latitude: 31.5333
+# !longitude: 121.6029
+# !latitude: 31.5230
 # region: Shanghai
 # admin1_quelle: Name
-Chongming (Nanbuzhen), Shanghai, China
+# note: 20261012 Namenswerkstatt (Oliver): Name "Chongming (Nanbuzhen), Shanghai, China" -> "Buzhen (Chongming), Shanghai, China"; Position 31.5333/121.6333 -> 31.5230/121.6029.
+Buzhen (Chongming), Shanghai, China
 +00:00 :Asia/Shanghai
 2.1412 meters
 J1              0.0147  163.36
@@ -623588,10 +623589,11 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9900 rms=0.0761m const=68
 # !units: meters
-# !longitude: 121.4833
-# !latitude: 31.2333
+# !longitude: 121.4919
+# !latitude: 31.2428
 # region: Shanghai
 # admin1_quelle: Name
+# note: 20261012 Namenswerkstatt (Oliver): Position 31.2333/121.4833 -> 31.2428/121.4919 (Anleger vor dem Huangpu-Park (OSM-Pier)).
 Huangpu Gongyuan, Shanghai, China
 +00:00 :Asia/Shanghai
 1.5401 meters
@@ -623784,11 +623786,11 @@ x 0 0
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Lucaogang (Nanhuizui), Shanghai, China" -> "Luchaogangzhen (Hangzhou Bay), Shanghai, China";
 # note: Position 30.8333/121.8333 -> 30.8415/121.8470.
 # !units: meters
-# !longitude: 121.8470
-# !latitude: 30.8415
+# !longitude: 121.8454
+# !latitude: 30.8395
 # region: Shanghai
 # admin1_quelle: Name
-Luchaogangzhen (Hangzhou Bay), Shanghai, China
+Luchaogangzhen (Hangzhou Wan), Shanghai, China
 +00:00 :Asia/Shanghai
 2.6708 meters
 J1              0.0163  143.87
@@ -648323,11 +648325,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9983 rms=0.0460m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 119.7833
-# !latitude: 34.4833
+# !longitude: 119.7892
+# !latitude: 34.4790
 # region: Jiangsu
 # admin1_quelle: Name
-Yanwei, Jiangsu, China
+Yanwei (Guanhe), Jiangsu, China
 +00:00 :Asia/Shanghai
 2.7800 meters
 J1              0.0031  19.32
@@ -648912,7 +648914,7 @@ x 0 0
 # !latitude: 33.6167
 # region: Jiangsu
 # admin1_quelle: Name
-Xinyanggang, Jiangsu, China
+Xinyanggang (Yancheng), Jiangsu, China
 +00:00 :Asia/Shanghai
 2.0000 meters
 J1              0.0060  9.20
@@ -649103,11 +649105,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0343m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 120.8667
-# !latitude: 32.7333
+# !longitude: 120.9426
+# !latitude: 32.7214
 # region: Jiangsu
 # admin1_quelle: Name
-Jianggang, Jiangsu, China
+Jianggangzhen, Jiangsu, China
 +00:00 :Asia/Shanghai
 3.0100 meters
 J1              0.0234  267.43
@@ -653395,8 +653397,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9986 rms=0.0140m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.6833
-# !latitude: 37.3833
+# !longitude: 122.7050
+# !latitude: 37.3961
 # region: Shandong
 # admin1_quelle: Name
 Chengshanjiao, Shandong, China
@@ -653590,11 +653592,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=1.0000 rms=0.0031m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.1667
-# !latitude: 37.0167
+# !longitude: 122.1709
+# !latitude: 37.0097
 # region: Shandong
 # admin1_quelle: Name
-Zhangjiabu, Shandong, China
+Zhangjiabu (Qinglong He), Shandong, China
 +00:00 :Asia/Shanghai
 2.1800 meters
 x 0 0
@@ -654370,8 +654372,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9988 rms=0.0381m const=68
 # note: 20260917 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 119.7667
-# !latitude: 35.6000
+# !longitude: 119.7499
+# !latitude: 35.5884
 # region: Shandong
 # admin1_quelle: Name
 Dongjiakou, Shandong, China
@@ -654760,11 +654762,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9969 rms=0.0886m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.3667
-# !latitude: 30.7500
+# !longitude: 121.3568
+# !latitude: 30.7094
 # region: Shanghai
 # admin1_quelle: Name
-Jinshanzui, Shanghai, China
+Qijiadun (Jinshan), Shanghai, China
 +00:00 :Asia/Shanghai
 3.0712 meters
 J1              0.0192  154.05
@@ -654955,11 +654957,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0077m const=68
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Name "Luhuashan, Zhejiang, China" -> "Lühua Port (Xiluhua Island), Zhejiang, China"; Position 30.8167/122.6000 -> 30.8192/122.6235.
 # !units: meters
-# !longitude: 122.6235
-# !latitude: 30.8192
+# !longitude: 122.6216
+# !latitude: 30.8194
 # region: Zhejiang
 # admin1_quelle: Name
-Lühua Port (Xiluhua Island), Zhejiang, China
+Lühua Dao (Shengshi), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.6300 meters
 J1              0.0207  117.80
@@ -655150,11 +655152,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9995 rms=0.0243m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.1667
-# !latitude: 30.8167
+# !longitude: 122.1716
+# !latitude: 30.8111
 # region: Zhejiang
 # admin1_quelle: Name
-Dajishan, Zhejiang, China
+Dajishan Dao, Zhejiang, China
 +00:00 :Asia/Shanghai
 2.5400 meters
 J1              0.0131  135.30
@@ -655345,11 +655347,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9999 rms=0.0112m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.8000
-# !latitude: 30.7167
+# !longitude: 122.8054
+# !latitude: 30.7266
 # region: Zhejiang
 # admin1_quelle: Name
-Shengshan, Zhejiang, China
+Shengshan Dao (Shengshi), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.5805 meters
 J1              0.0141  115.58
@@ -655540,11 +655542,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9971 rms=0.0982m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.0833
-# !latitude: 30.6167
+# !longitude: 121.1001
+# !latitude: 30.5883
 # region: Zhejiang
 # admin1_quelle: Name
-Zhapu, Zhejiang, China
+Zhapu (Hangzhou Wan), Zhejiang, China
 +00:00 :Asia/Shanghai
 3.5018 meters
 J1              0.0190  154.73
@@ -655735,11 +655737,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9963 rms=0.1344m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 120.9000
-# !latitude: 30.4000
+# !longitude: 120.9174
+# !latitude: 30.3896
 # region: Zhejiang
 # admin1_quelle: Name
-Ganpu, Zhejiang, China
+Ganpu (Hangzhou Wan), Zhejiang, China
 +00:00 :Asia/Shanghai
 4.1411 meters
 J1              0.0172  162.29
@@ -655930,11 +655932,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9982 rms=0.0570m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.6167
-# !latitude: 30.6167
+# !longitude: 121.6249
+# !latitude: 30.6156
 # region: Zhejiang
 # admin1_quelle: Name
-Tanhu, Zhejiang, China
+Tanhu (Hangzhou Wan), Zhejiang, China
 +00:00 :Asia/Shanghai
 2.7020 meters
 J1              0.0171  157.81
@@ -659443,10 +659445,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9949 rms=0.0657m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.5667
-# !latitude: 31.3500
+# !longitude: 121.5853
+# !latitude: 31.3725
 # region: Shanghai
 # admin1_quelle: Name
+# note: 20261012 Namenswerkstatt (Oliver): Position 31.3500/121.5667 -> 31.3723/121.5818 (Anleger am Jangtse-Ufer (OSM-Pier)).
 Gaoqiao, Shanghai, China
 +00:00 :Asia/Shanghai
 1.9702 meters
@@ -659638,10 +659641,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9940 rms=0.0691m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.5000
-# !latitude: 31.4000
+# !longitude: 121.5045
+# !latitude: 31.4115
 # region: Shanghai
 # admin1_quelle: Name
+# note: 20261012 Namenswerkstatt (Oliver): Position 31.4000/121.5000 -> 31.4115/121.5045 (Position des Classic-Satzes "Shanghai, China" uebernommen).
 Wusong, Shanghai, China
 +00:00 :Asia/Shanghai
 2.0208 meters
@@ -660223,13 +660227,13 @@ x 0 0
 # confidence: 7
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0218m const=68
 # !units: meters
-# !longitude: 120.314100
-# !latitude: 36.083500
+# !longitude: 120.3138
+# !latitude: 36.0837
 # region: Shandong
 # admin1_quelle: Name
 # note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 36.0833/120.3000,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
-Qingdao, Shandong, China
+Qingdao (Houhai), Shandong, China
 +00:00 :Asia/Shanghai
 2.3878 meters
 J1              0.0074  281.02
@@ -660811,10 +660815,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0229m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Lianyungang, Jiangsu, China" -> "Lianyun Gang, Jiangsu, China"; Position 34.7500/119.4167 -> 34.7333/119.4500.
 # !units: meters
-# !longitude: 119.4500
-# !latitude: 34.7333
+# !longitude: 119.4156
+# !latitude: 34.7496
 # region: Jiangsu
 # admin1_quelle: Name
+# note: 20261012 Namenswerkstatt (Oliver): Position 34.7333/119.4500 -> 34.7496/119.4156 (Position des TICON-Satzes, direkt am Ufer).
 Lianyun Gang, Jiangsu, China
 +00:00 :Asia/Shanghai
 2.8992 meters
@@ -661395,8 +661400,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9981 rms=0.0235m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 122.1333
-# !latitude: 37.5167
+# !longitude: 122.1305
+# !latitude: 37.5127
 # region: Shandong
 # admin1_quelle: Name
 Weihai, Shandong, China
@@ -663351,8 +663356,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9998 rms=0.0149m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Huangdao, Shandong, China" -> "Huang Dao, Shandong, China"; Position 36.0833/120.3167 -> 36.0428/120.2156.
 # !units: meters
-# !longitude: 120.2156
-# !latitude: 36.0428
+# !longitude: 120.2272
+# !latitude: 36.0456
 # region: Shandong
 # admin1_quelle: Name
 Huang Dao, Shandong, China
