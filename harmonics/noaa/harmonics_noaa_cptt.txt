@@ -81766,8 +81766,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 129.3833
-# !latitude: 35.5000
+# !longitude: 129.3886
+# !latitude: 35.5176
 # region: Busan
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.90 auf den Springhub des Buchs (cptt-1017); der Bau
@@ -81775,6 +81775,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.479. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 20261013 Position 35.5000/129.3833 -> 35.5176/129.3886 Ulsanbonhang (GeoNames HBR, 2.02 km) (Oliver).
 Ulsan, Busan, South Korea
 +00:00 :Asia/Seoul
 0.3353 meters
@@ -82354,8 +82355,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.8167
-# !latitude: 35.0167
+# !longitude: 128.8099
+# !latitude: 35.0275
 # region: Busan
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.81 auf den Springhub des Buchs (cptt-1025); der Bau
@@ -82365,6 +82366,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.561,
 # note: Zielwert F=0.167 aus Wahrheit statt F=0.102 des Bezugsorts; Beleg: Wahrheit 6.08 -> 6.03 %.
+# note: 20261013 Position 35.0167/128.8167 -> 35.0275/128.8099 Cheonseongman (GeoNames BAY, 1.35 km) (Oliver).
 Ch'onsong-man, Kadok-to, Busan, South Korea
 +00:00 :Asia/Seoul
 0.9754 meters
@@ -82552,8 +82554,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.5667
-# !latitude: 35.1667
+# !longitude: 128.5953
+# !latitude: 35.1614
 # region: Busan
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.83 auf den Springhub des Buchs (cptt-1027); der Bau
@@ -82561,6 +82563,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -2.02 Punkte.
+# note: 20261013 Position 35.1667/128.5667 -> 35.1614/128.5953 Masan-man (GeoNames BAY, 2.66 km) (Oliver).
 Masan-man, Busan, South Korea
 +00:00 :Asia/Seoul
 1.0363 meters
@@ -83140,8 +83143,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.7167
-# !latitude: 34.8333
+# !longitude: 128.7083
+# !latitude: 34.8364
 # region: Busan
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.77 auf den Springhub des Buchs (cptt-1033); der Bau
@@ -83151,6 +83154,7 @@ x 0 0
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.579,
 # note: Zielwert F=0.174 aus Wahrheit statt F=0.102 des Bezugsorts; Beleg: Wahrheit 2.22 -> 2.08 %.
+# note: 20261013 Position 34.8333/128.7167 -> 34.8364/128.7083 Tise Po (GeoNames HBR, 0.84 km) (Oliver).
 Chise-p'o, Koje-do, Busan, South Korea
 +00:00 :Asia/Seoul
 1.0058 meters
@@ -83338,8 +83342,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.6000
-# !latitude: 34.7167
+# !longitude: 128.5947
+# !latitude: 34.7286
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Busan
 # admin1_quelle: Name
@@ -83355,6 +83359,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (5).
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.813,
 # note: Zielwert F=0.21 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 6.55 -> 6.31 %.
+# note: 20261013 Position 34.7167/128.6000 -> 34.7286/128.5947 Tokkuri-mang (GeoNames BAY, 1.41 km) (Oliver).
 Choguri-man, Koje-do, Busan, South Korea
 +00:00 :Asia/Seoul
 1.3411 meters
@@ -83542,8 +83547,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.5833
-# !latitude: 34.8333
+# !longitude: 128.5664
+# !latitude: 34.8181
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Busan
 # admin1_quelle: Name
@@ -83559,6 +83564,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (4).
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.671,
 # note: Zielwert F=0.174 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 9.14 -> 8.52 %.
+# note: 20261013 Position 34.8333/128.5833 -> 34.8181/128.5664 Kyosai-wan (GeoNames BAY, 2.29 km) (Oliver).
 Koje-man, Koje-do, Busan, South Korea
 +00:00 :Asia/Seoul
 1.4326 meters
@@ -84152,8 +84158,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.3500
-# !latitude: 34.9167
+# !longitude: 128.3256
+# !latitude: 34.9315
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Busan
 # admin1_quelle: Name
@@ -84169,6 +84175,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (4).
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.800,
 # note: Zielwert F=0.21 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 4.78 -> 4.62 %.
+# note: 20261013 Position 34.9167/128.3500 -> 34.9315/128.3256 Kosng-man (GeoNames BAY, 2.77 km) (Oliver).
 Kosong-man, Busan, South Korea
 +00:00 :Asia/Seoul
 1.5850 meters
@@ -84356,8 +84363,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.0500
-# !latitude: 34.7167
+# !longitude: 128.0457
+# !latitude: 34.7237
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Busan
 # admin1_quelle: Name
@@ -84373,6 +84380,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (4).
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.861,
 # note: Zielwert F=0.218 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 3.42 -> 3.28 %.
+# note: 20261013 Position 34.7167/128.0500 -> 34.7237/128.0457 Mijoman (GeoNames BAY, 0.87 km) (Oliver).
 Mijo-man, Namhae-do, Busan, South Korea
 +00:00 :Asia/Seoul
 1.6154 meters
@@ -86182,8 +86190,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 126.6333
-# !latitude: 34.1500
+# !longitude: 126.6106
+# !latitude: 34.1377
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Jeju-do
 # admin1_quelle: Name
@@ -86199,6 +86207,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.220,
 # note: Zielwert F=0.318 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 5.87 -> 5.71 %.
+# note: 20261013 Position 34.1500/126.6333 -> 34.1377/126.6106 Soan-hang (GeoNames HBR, 2.5 km) (Oliver).
 Soan-hang, Soan-do, Jeju-do, South Korea
 +00:00 :Asia/Seoul
 1.9507 meters
@@ -90176,8 +90185,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 126.1333
-# !latitude: 36.7833
+# !longitude: 126.1314
+# !latitude: 36.7786
 # province: South Chungcheong
 # admin1_quelle: Ufer 1.7 km
 # note: 20260913 S2/K2 x 1.91 auf den Springhub des Buchs (cptt-1133); der Bau
@@ -90185,6 +90194,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Inch'on, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
+# note: 20261013 Position 36.7833/126.1333 -> 36.7786/126.1314 Mohang-hang (GeoNames HBR, 0.55 km) (Oliver).
 Mohang-ni, South Korea
 +00:00 :Asia/Seoul
 3.6271 meters
