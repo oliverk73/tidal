@@ -622809,8 +622809,8 @@ x 0 0
 # confidence: 7
 # utide: pts=17520 period=2024-06-30..2026-06-30 r2=0.9976 rms=0.0186m const=68
 # !units: meters
-# !longitude: 119.6167
-# !latitude: 39.9167
+# !longitude: 119.6116
+# !latitude: 39.9078
 # region: Hebei
 # admin1_quelle: Name
 Qinhuangdao, Hebei, China
@@ -626126,8 +626126,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9991 rms=0.0183m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Caofeidian, Hebei, China" -> "Caofeidian (Tangshan), Hebei, China".
 # !units: meters
-# !longitude: 118.5000
-# !latitude: 38.9000
+# !longitude: 118.4968
+# !latitude: 38.9148
 # region: Hebei
 # admin1_quelle: Name
 Caofeidian (Tangshan), Hebei, China
@@ -629426,7 +629426,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Yingkou, Liaoning, China
+# Yingkou (Sidaogou), Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T013) with UTide
@@ -629443,7 +629443,8 @@ x 0 0
 # !latitude: 40.6338
 # region: Liaoning
 # admin1_quelle: Name
-Yingkou, Liaoning, China
+# note: 20261013 umbenannt "Yingkou" -> "Yingkou (Sidaogou)": Station am alten Ort Sidaogou (NOAA-Buch 1253), 3.5 km suedlich der Liao-He-Muendung (Oliver).
+Yingkou (Sidaogou), Liaoning, China
 +00:00 :Asia/Shanghai
 2.0205 meters
 J1              0.0136  53.81
@@ -629818,7 +629819,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Dandong (Yalu River), Liaoning, China
+# Dandong Xingang, Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T002) with UTide
@@ -629830,11 +629831,12 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9996 rms=0.0325m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Dandongxingang, Liaoning, China" -> "Dandong (Yalu River), Liaoning, China".
 # !units: meters
-# !longitude: 124.1500
-# !latitude: 39.8333
+# !longitude: 124.1564
+# !latitude: 39.8211
 # region: Liaoning
 # admin1_quelle: Name
-Dandong (Yalu River), Liaoning, China
+# note: 20261013 umbenannt -> "Dandong Xingang" (NMDIS-Name), Position 39.8333/124.1500 -> Ufer am Passagierterminal (OSM) (Oliver).
+Dandong Xingang, Liaoning, China
 +00:00 :Asia/Shanghai
 3.5386 meters
 J1              0.0162  246.86
@@ -642272,7 +642274,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Dongaodao, Guangdong, China
+# Dong'ao Dao, Guangdong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T154) with UTide
@@ -642288,7 +642290,8 @@ x 0 0
 # !latitude: 22.0167
 # region: Guangdong
 # admin1_quelle: Name
-Dongaodao, Guangdong, China
+# note: 20261013 umbenannt "Dongaodao" -> "Dong'ao Dao" (GB/T 16159) (Oliver).
+Dong'ao Dao, Guangdong, China
 +00:00 :Asia/Shanghai
 1.3000 meters
 J1              0.0131  212.61
@@ -643463,7 +643466,8 @@ x 0 0
 # !latitude: 21.7251
 # region: Guangdong
 # admin1_quelle: Name
-Sanzhouwan (Shangchuandao), Guangdong, China
+# note: 20261013 umbenannt "Sanzhouwan (Shangchuandao)" -> "Sanzhouwan (Shangchuan Dao)" (GB/T 16159) (Oliver).
+Sanzhouwan (Shangchuan Dao), Guangdong, China
 +00:00 :Asia/Shanghai
 1.6000 meters
 J1              0.0188  197.67
@@ -647544,8 +647548,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9984 rms=0.0152m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 119.8167
-# !latitude: 39.9833
+# !longitude: 119.8191
+# !latitude: 39.9780
 # region: Hebei
 # admin1_quelle: Name
 Shanhaiguan, Hebei, China
@@ -647740,8 +647744,8 @@ x 0 0
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Qilihai (Xinkaikou), Hebei, China" -> "Qili Hai (Xinkaikou), Hebei, China"; Position 39.5833/119.2833 -> 39.5817/119.2591.
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 39.5817/119.2591 -> 39.5817/119.2591.
 # !units: meters
-# !longitude: 119.2591
-# !latitude: 39.5817
+# !longitude: 119.2721
+# !latitude: 39.5859
 # region: Hebei
 # admin1_quelle: Name
 Qili Hai (Xinkaikou), Hebei, China
@@ -649495,10 +649499,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9729 rms=0.1514m const=68
 # note: 20260921 NMDIS-Namenswerkstatt (Oliver): Position 39.9667/123.6667 -> 39.9607/123.6632.
 # !units: meters
-# !longitude: 123.6632
-# !latitude: 39.9607
+# !longitude: 123.6646
+# !latitude: 39.9601
 # region: Liaoning
 # admin1_quelle: Name
+# note: 20261013 Position 39.9607/123.6632 -> 39.9601/123.6646 (Google Maps, Oliver).
 Shishanzi, Liaoning, China
 +00:00 :Asia/Shanghai
 2.0041 meters
@@ -649678,7 +649683,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Daludao, Liaoning, China
+# Dalu Dao, Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T004) with UTide
@@ -649695,7 +649700,8 @@ x 0 0
 # !latitude: 39.7500
 # region: Liaoning
 # admin1_quelle: Name
-Daludao, Liaoning, China
+# note: 20261013 umbenannt "Daludao" -> "Dalu Dao" (Insel: Eigenname und Gattungswort getrennt, GB/T 16159) (Oliver).
+Dalu Dao, Liaoning, China
 +00:00 :Asia/Shanghai
 3.3099 meters
 x 0 0
@@ -649886,10 +649892,11 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0180m const=68
 # note: 20260916 NMDIS-Namenswerkstatt (Oliver): Name "Xiaochangshandao, Liaoning, China" -> "Xiaochangshan Dao, Liaoning, China"; Position 39.2333/122.6667 -> 39.2347/122.7197.
 # !units: meters
-# !longitude: 122.7197
-# !latitude: 39.2347
+# !longitude: 122.6660
+# !latitude: 39.2411
 # region: Liaoning
 # admin1_quelle: Name
+# note: 20261013 Position 39.2347/122.7197 (an Land) -> 39.2411/122.6660 Faehrhafen Xigou Gang, passt zur NMDIS-Angabe 39d14/122d40 (Oliver).
 Xiaochangshan Dao, Liaoning, China
 +00:00 :Asia/Shanghai
 2.3191 meters
@@ -650081,8 +650088,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0149m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.9000
-# !latitude: 39.0167
+# !longitude: 121.9127
+# !latitude: 39.0156
 # region: Liaoning
 # admin1_quelle: Name
 Dayaowan Nandaquan, Liaoning, China
@@ -650850,7 +650857,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Changxingdao, Liaoning, China
+# Changxingdao (Fuzhou Wan), Liaoning, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T011) with UTide
@@ -650866,7 +650873,7 @@ x 0 0
 # !latitude: 39.6500
 # region: Liaoning
 # admin1_quelle: Name
-Changxingdao, Liaoning, China
+Changxingdao (Fuzhou Wan), Liaoning, China
 +00:00 :Asia/Shanghai
 1.0032 meters
 J1              0.0099  347.21
@@ -660620,8 +660627,8 @@ x 0 0
 # utide: pts=8760 period=2025-06-30..2026-06-30 r2=0.9997 rms=0.0144m const=68
 # note: 20260916 NMDIS-Namenswerkstatt: Name bestaetigt (Oliver).
 # !units: meters
-# !longitude: 121.6833
-# !latitude: 38.8667
+# !longitude: 121.6786
+# !latitude: 38.8722
 # region: Liaoning
 # admin1_quelle: Name
 Dalian (Laohutan), Liaoning, China
@@ -662758,7 +662765,7 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Naozhoudao (Beigang), Guangdong, China
+# Naozhou Dao (Beigang), Guangdong, China
 # BEGIN HOT COMMENTS
 # country: China
 # source: NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T168) with UTide
@@ -662775,7 +662782,8 @@ x 0 0
 # !latitude: 20.8999
 # region: Guangdong
 # admin1_quelle: Name
-Naozhoudao (Beigang), Guangdong, China
+# note: 20261013 umbenannt "Naozhoudao (Beigang)" -> "Naozhou Dao (Beigang)" (GB/T 16159) (Oliver).
+Naozhou Dao (Beigang), Guangdong, China
 +00:00 :Asia/Shanghai
 1.8967 meters
 J1              0.0190  223.12

@@ -30167,12 +30167,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 122.0500
-# !latitude: 39.0833
+# !longitude: 122.0492
+# !latitude: 39.0841
 # note: 20260903 Provinz "Liaoning" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Liaoning
 # admin1_quelle: Name
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Changjiang Ao (Jinshitan), Liaoning, China
 +08:00 :Asia/Shanghai
 2.0100 meters
@@ -30190,8 +30191,8 @@ N2              0.2185  247.13
 x 0 0
 O1              0.2300  307.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0960  345.00
+Q1              0.0446  307.00
 x 0 0
 x 0 0
 x 0 0
@@ -30367,6 +30368,7 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # region: Liaoning
 # admin1_quelle: Name
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Haiyang Dao, Liaoning, China
 +08:00 :Asia/Shanghai
 2.3200 meters
@@ -30384,8 +30386,8 @@ N2              0.2603  225.13
 x 0 0
 O1              0.2500  297.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.1225  329.00
+Q1              0.0485  297.00
 x 0 0
 x 0 0
 x 0 0
@@ -30561,6 +30563,7 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # region: Liaoning
 # admin1_quelle: Name
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Dawangjia Dao, Liaoning, China
 +08:00 :Asia/Shanghai
 2.8400 meters
@@ -30578,8 +30581,8 @@ N2              0.3002  223.84
 x 0 0
 O1              0.2500  295.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.1158  339.00
+Q1              0.0485  295.00
 x 0 0
 x 0 0
 x 0 0
@@ -30755,7 +30758,9 @@ x 0 0
 # note: siehe py/provinz_ergaenzen.py.
 # region: Liaoning
 # admin1_quelle: Name
-Qianyang, Liaoning, China
+# note: 20261013 umbenannt "Qianyang" -> "Dagushan (Shuikou)": Position = Reede Dagushan, M2 gleich NOAA 1213 (Oliver).
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+Dagushan (Shuikou), Liaoning, China
 +08:00 :Asia/Shanghai
 2.9600 meters
 x 0 0
@@ -30772,8 +30777,8 @@ N2              0.3667  235.56
 x 0 0
 O1              0.2400  280.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.1225  335.00
+Q1              0.0466  280.00
 x 0 0
 x 0 0
 x 0 0
@@ -30947,7 +30952,9 @@ x 0 0
 # !latitude: 39.9333
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 0.9 km
-Tuyup'o, North Korea
+# note: 20261013 umbenannt "Tuyup'o" -> "Yongamp'o (Tuyup'o)": bekannter Hafenort 1.5 km entfernt (Oliver).
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+Yongamp'o (Tuyup'o), North Korea
 +08:00 :Asia/Pyongyang
 2.5900 meters
 x 0 0
@@ -30964,8 +30971,8 @@ N2              0.3021  234.70
 x 0 0
 O1              0.2700  305.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.1125  349.00
+Q1              0.0524  305.00
 x 0 0
 x 0 0
 x 0 0

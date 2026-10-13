@@ -14533,8 +14533,9 @@ x 0 0
 # !latitude: 40.7095
 # region: Liaoning
 # admin1_quelle: Name
+# note: 20261013 Zeitzone Asia/Taipei -> Asia/Shanghai (Rest aus "Huludao, Taiwan"); Phasenbezug +09:00 bleibt (Oliver).
 Huludao, Liaoning, China
-+09:00 :Asia/Taipei
++09:00 :Asia/Shanghai
 1.8400 meters
 J1              0.0220  142.80
 K1              0.3600  118.00
@@ -36265,8 +36266,8 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: 125.7167
-# !latitude: 37.6667
+# !longitude: 125.7121
+# !latitude: 37.6559
 # province: Gyeonggi
 # admin1_quelle: Ufer 1.1 km
 Taeyonp'yong Do (Daeyeonpyeongdo), South Korea
