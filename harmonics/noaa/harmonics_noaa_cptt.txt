@@ -82775,8 +82775,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.2333
-# !latitude: 34.8500
+# !longitude: 128.2242
+# !latitude: 34.8441
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -82793,6 +82793,7 @@ x 0 0
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.849,
 # note: Zielwert F=0.218 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 3.25 -> 3.09 %.
 # note: 20261013 umbenannt "Wis-som, Saryang-do, Busan" -> "Witseom (Saryangdo)" (GeoNames, heutige Umschrift); region South Gyeongsang (Oliver).
+# note: 20261013 Position 34.8500/128.2333 (Buchraster) -> 34.8441/128.2242 Anleger ferry_terminal (OSM, 1.06 km).
 Witseom (Saryangdo), South Korea
 +00:00 :Asia/Seoul
 1.5850 meters
@@ -84415,8 +84416,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 127.3667
-# !latitude: 34.2833
+# !longitude: 127.3599
+# !latitude: 34.2903
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -84429,6 +84430,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261013 umbenannt "Sonjuk-to, Sonjuk-yolto, Jeju-do" -> "Seonjukdo" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
+# note: 20261013 Position 34.2833/127.3667 (Buchraster) -> 34.2903/127.3599 Anleger pier (OSM, 1.0 km).
 Seonjukdo, South Korea
 +00:00 :Asia/Seoul
 1.8288 meters
