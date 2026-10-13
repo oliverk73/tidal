@@ -87853,7 +87853,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
 # note: 20261013 Position 36.7833/126.1333 -> 36.7786/126.1314 Mohang-hang (GeoNames HBR, 0.55 km) (Oliver).
 # note: 20261013 umbenannt "Mohang-ni" -> "Mohang-hang" (GeoNames, heutige Umschrift); region South Chungcheong (Oliver).
-Mohang-hang, South Korea
+# note: 20261013 umbenannt -> "Mohang-hang (Taean)": Abgrenzung zu Mohang (Buan); Dorf Mohang-ri 0.8 km (OSM) (Oliver).
+Mohang-hang (Taean), South Korea
 +00:00 :Asia/Seoul
 3.6271 meters
 J1              0.0149  168.87
@@ -88040,8 +88041,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 126.4500
-# !latitude: 37.0333
+# !longitude: 126.4540
+# !latitude: 37.0331
 # province: South Chungcheong
 # admin1_quelle: Ufer 3.3 km
 # note: 20260913 S2/K2 x 1.92 auf den Springhub des Buchs (cptt-1135); der Bau
@@ -88049,7 +88050,9 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Inch'on, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
-Umo-do, South Korea
+# note: 20261013 umbenannt "Umo-do" -> "Umudo" (OSM/GeoNames); Position 37.0333/126.4500 -> 37.0314/126.4465 (Oliver).
+# note: 20261013 -> "Umudo (Sonanjido)", Position auf Faehranleger Sonanjido 37.0331/126.4540 (OSM), Umudo zu klein fuer Pegel (Oliver).
+Umudo (Sonanjido), South Korea
 +00:00 :Asia/Seoul
 4.2367 meters
 J1              0.0178  176.54
@@ -88246,7 +88249,8 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Inch'on, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
 # note: 20261013 umbenannt "Taemuui-do, (Marie Fortunee Arch.)" -> "Daemuuido" (GeoNames, heutige Umschrift); region Incheon (Oliver).
-Daemuuido, South Korea
+# note: 20261013 umbenannt "Daemuuido" -> "Muui-do (Gwangmyeonghang)"; Hafen Gwangmyeonghang 0.2 km (OSM) (Oliver).
+Muui-do (Gwangmyeonghang), South Korea
 +00:00 :Asia/Seoul
 4.5415 meters
 J1              0.0189  181.34
@@ -100246,8 +100250,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.6167
-# !latitude: 23.9667
+# !longitude: 121.6236
+# !latitude: 23.9806
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
@@ -100260,7 +100264,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Naha, Okinawa, Japan [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Hua-lien Kang, Okinawa, Japan
+Hualien, Taiwan
 +09:00 :Asia/Taipei
 0.9754 meters
 J1              0.0088  238.59
@@ -100439,207 +100443,6 @@ x 0 0
 x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
-# country: Japan
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 1435
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Naha, Japan (no.1435). M2=0.54 S2=0.09 k=0.94 dt=-80min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 121.4000
-# !latitude: 23.1333
-# fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
-# note: 20260903 Phasen um +1.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Okinawa
-# admin1_quelle: Name
-# note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (cptt-1435); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Naha, Okinawa, Japan [harmonics_ticon4_worldwide.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
-Ch'eng-kuang-ao Po-ti, Okinawa, Japan
-+09:00 :Asia/Taipei
-1.0058 meters
-J1              0.0093  237.42
-K1              0.1820  213.43
-K2              0.0541  223.65
-L2              0.0149  207.06
-M1              0.0084  108.95
-M2              0.5047  194.54
-M3              0.0067  202.26
-M4              0.0016  283.33
-M6              0.0002  119.23
-M8              0.0001  42.04
-N2              0.0975  181.22
-2N2             0.0132  165.90
-O1              0.1387  184.38
-OO1             0.0056  263.29
-P1              0.0593  211.38
-Q1              0.0290  168.45
-2Q1             0.0040  155.62
-R2              0.0013  213.43
-S1              0.0023  19.87
-S2              0.1933  227.62
-S4              0.0003  214.80
-x 0 0
-T2              0.0135  219.10
-LDA2            0.0049  205.25
-MU2             0.0127  178.85
-NU2             0.0190  182.94
-RHO1            0.0054  170.09
-x 0 0
-x 0 0
-MN4             0.0006  274.23
-MS4             0.0010  334.71
-2SM2            0.0018  115.55
-MF              0.0024  48.04
-MSF             0.0019  3.11
-MM              0.0022  58.68
-SA              0.1439  146.43
-SSA             0.0133  309.20
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0005  7.10
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0004  187.34
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0010  266.79
-x 0 0
-EPS2            0.0032  167.80
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0012  269.21
-SIG1            0.0056  331.67
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0003  244.97
-x 0 0
-x 0 0
-2MO5            0.0003  130.88
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
 # country: Taiwan
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 1445
@@ -100648,8 +100451,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 120.7000
-# !latitude: 22.0667
+# !longitude: 120.7073
+# !latitude: 22.0652
 # region: Pingtung
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
@@ -101047,8 +100850,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.1667
-# !latitude: 23.7000
+# !longitude: 120.1719
+# !latitude: 23.7034
 # fixes: Gruppen-Shift -55min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Yunlin
 # admin1_quelle: Ufer 0.4 km
@@ -101246,8 +101049,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 120.5667
-# !latitude: 24.3833
+# !longitude: 120.5845
+# !latitude: 24.3824
 # fixes: Gruppen-Shift -55min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Taichung City
 # admin1_quelle: Polygon
@@ -101445,8 +101248,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 119.5186
-# !latitude: 23.5118
+# !longitude: 119.5188
+# !latitude: 23.5125
 # fixes: Gruppen-Shift -55min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Penghu
 # admin1_quelle: Ufer 2.8 km
@@ -101643,8 +101446,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 119.6703
-# !latitude: 23.5977
+# !longitude: 119.6686
+# !latitude: 23.5969
 # fixes: Gruppen-Shift -55min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Penghu
 # admin1_quelle: Ufer 1.9 km

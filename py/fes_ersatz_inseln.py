@@ -75,7 +75,9 @@ def main(argv):
     for r in sel:
         V = open(os.path.join(ROOT, r['file']), encoding='iso-8859-1').read().split('\n')
         i = V.index(r['name'])
-        tz = V[i + 1].split(':', 1)[1] if ':' in V[i + 1] else 'UTC'
+        # "-01:00 :Atlantic/Cape_Verde" -> Zone nach " :" (bis 13.10.2026 am ersten
+        # Doppelpunkt getrennt, das ergab "+00:00 :00 :Atlantic/Cape_Verde").
+        tz = V[i + 1].split(' :', 1)[1] if ' :' in V[i + 1] else 'UTC'
         z0 = V[i + 2]
         kopf = '\n'.join(V[max(0, i - 40):i])
         land = re.findall(r'# country: (.*)', kopf)[-1]
