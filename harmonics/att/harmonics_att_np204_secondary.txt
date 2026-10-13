@@ -28635,6 +28635,7 @@ x 0 0
 # !latitude: 38.7500
 # province: Gangwon
 # admin1_quelle: Ufer 19.0 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Changjon (Kangwon-do), North Korea
 +09:00 :Asia/Seoul
 0.2000 meters
@@ -28652,8 +28653,8 @@ N2              0.0133  71.14
 x 0 0
 O1              0.0500  320.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0166  5.00
+Q1              0.0097  320.00
 x 0 0
 x 0 0
 x 0 0
@@ -28827,6 +28828,7 @@ x 0 0
 # !latitude: 39.8195
 # province: Hamgyong-namdo
 # admin1_quelle: Ufer 1.4 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Heungham (Seoho), North Korea
 +08:30 :Asia/Pyongyang
 0.2100 meters
@@ -28844,8 +28846,8 @@ N2              0.0152  55.99
 x 0 0
 O1              0.0500  314.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0166  355.00
+Q1              0.0097  314.00
 x 0 0
 x 0 0
 x 0 0
@@ -29019,6 +29021,7 @@ x 0 0
 # !latitude: 40.0170
 # province: Hamgyong-namdo
 # admin1_quelle: Ufer 3.3 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Sinpo, North Korea
 +08:30 :Asia/Pyongyang
 0.2200 meters
@@ -29036,8 +29039,8 @@ N2              0.0152  55.85
 x 0 0
 O1              0.0500  310.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0199  353.00
+Q1              0.0097  310.00
 x 0 0
 x 0 0
 x 0 0
@@ -29211,6 +29214,7 @@ x 0 0
 # !latitude: 40.2023
 # province: Hamgyong-namdo
 # admin1_quelle: Polygon
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Chaho (Nahung), North Korea
 +08:30 :Asia/Pyongyang
 0.2100 meters
@@ -29228,8 +29232,8 @@ N2              0.0133  55.53
 x 0 0
 O1              0.0500  309.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0199  356.00
+Q1              0.0097  309.00
 x 0 0
 x 0 0
 x 0 0
@@ -29403,6 +29407,7 @@ x 0 0
 # !latitude: 40.6641
 # province: Hamgyong-bukto
 # admin1_quelle: Ufer 0.9 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Kimch'aek (Seongjin), North Korea
 +08:30 :Asia/Pyongyang
 0.2300 meters
@@ -29420,8 +29425,8 @@ N2              0.0152  57.92
 x 0 0
 O1              0.0600  314.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0199  355.00
+Q1              0.0116  314.00
 x 0 0
 x 0 0
 x 0 0
@@ -29596,6 +29601,7 @@ x 0 0
 # province: Hamgyong-bukto
 # admin1_quelle: Ufer 1.1 km
 # note: 20261013 Position 41.1667/129.7333 -> 41.2100/129.7402 Bucht Taeryanghwa-man (GeoNames) (Oliver).
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Daeyanghwa Man, North Korea
 +08:30 :Asia/Pyongyang
 0.2000 meters
@@ -29613,8 +29619,8 @@ N2              0.0133  54.24
 x 0 0
 O1              0.0500  314.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0166  0.00
+Q1              0.0097  314.00
 x 0 0
 x 0 0
 x 0 0
@@ -29789,6 +29795,7 @@ x 0 0
 # province: Hamgyong-bukto
 # admin1_quelle: Ufer 0.8 km
 # note: 20261013 Position 41.9833/130.0000 -> 42.0046/130.0119 Bucht Sajin-man (GeoNames) (Oliver).
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Sajin, North Korea
 +08:30 :Asia/Pyongyang
 0.2000 meters
@@ -29806,8 +29813,8 @@ N2              0.0133  55.78
 x 0 0
 O1              0.0500  319.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0166  354.00
+Q1              0.0097  319.00
 x 0 0
 x 0 0
 x 0 0
@@ -29981,6 +29988,7 @@ x 0 0
 # !latitude: 42.3309
 # province: Rason
 # admin1_quelle: Polygon
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Sonbong-guyok (Unggi), North Korea
 +08:30 :Asia/Pyongyang
 0.2000 meters
@@ -29998,8 +30006,8 @@ N2              0.0133  59.46
 x 0 0
 O1              0.0500  319.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0166  359.00
+Q1              0.0097  319.00
 x 0 0
 x 0 0
 x 0 0
@@ -31148,35 +31156,44 @@ x 0 0
 # !latitude: 39.6881
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 13.8 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
 Suun-do, North Korea
 +08:00 :Asia/Pyongyang
 3.5400 meters
 x 0 0
 K1              0.3700  328.00
-K2              0.1755  295.00
-x 0 0
+K2              0.1663  293.66
+L2              0.1648  269.73
 x 0 0
 M2              2.0600  239.00
 x 0 0
+M4              0.0348  28.01
 x 0 0
 x 0 0
-x 0 0
-N2              0.3914  208.98
+N2              0.3601  213.30
 x 0 0
 O1              0.2900  295.00
 x 0 0
+P1              0.1212  320.38
+Q1              0.0467  267.18
 x 0 0
-x 0 0
-x 0 0
-x 0 0
+R2              0.0008  232.86
 x 0 0
 S2              0.6500  295.00
 x 0 0
 x 0 0
+T2              0.0002  179.64
+LDA2            0.0002  351.92
+MU2             0.1037  349.02
+NU2             0.1025  245.72
+RHO1            0.0001  76.06
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+2SM2            0.0003  324.83
 x 0 0
 x 0 0
 x 0 0
@@ -31189,6 +31206,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+2MK6            0.0001  276.38
 x 0 0
 x 0 0
 x 0 0
@@ -31200,16 +31218,24 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0001  268.50
+BET1            0.0002  199.16
+CHI1            0.0002  215.85
+H1              0.0006  75.85
+H2              0.0009  355.60
 x 0 0
+ETA2            0.0001  24.75
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0008  151.05
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+TAU1            0.0002  9.81
 x 0 0
 x 0 0
 x 0 0
@@ -31217,8 +31243,11 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+OP2             0.0002  74.40
 x 0 0
+PHI1            0.0001  136.58
 x 0 0
+PI1             0.0001  53.04
 x 0 0
 x 0 0
 x 0 0
@@ -31228,27 +31257,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+SO1             0.0001  285.15
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+THE1            0.0001  206.64
 x 0 0
 x 0 0
 x 0 0
@@ -31340,35 +31351,44 @@ x 0 0
 # !latitude: 39.5397
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 1.4 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
 Ka-do, North Korea
 +08:30 :Asia/Pyongyang
 3.4500 meters
 x 0 0
 K1              0.4200  339.00
-K2              0.1836  306.00
-x 0 0
+K2              0.1740  304.70
+L2              0.1664  282.97
 x 0 0
 M2              2.0800  252.00
 x 0 0
+M4              0.0131  54.00
 x 0 0
 x 0 0
-x 0 0
-N2              0.3952  223.06
+N2              0.3636  226.06
 x 0 0
 O1              0.2700  296.00
 x 0 0
+P1              0.1375  331.35
+Q1              0.0435  267.94
 x 0 0
-x 0 0
-x 0 0
-x 0 0
+R2              0.0008  243.88
 x 0 0
 S2              0.6800  306.00
 x 0 0
 x 0 0
+T2              0.0003  190.62
+LDA2            0.0002  5.13
+MU2             0.1047  1.56
+NU2             0.1035  258.52
+RHO1            0.0001  76.86
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+2SM2            0.0003  338.72
 x 0 0
 x 0 0
 x 0 0
@@ -31381,6 +31401,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+2MK6            0.0001  315.86
 x 0 0
 x 0 0
 x 0 0
@@ -31392,16 +31413,24 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0001  268.81
+BET1            0.0002  200.35
+CHI1            0.0002  226.65
+H1              0.0006  88.83
+H2              0.0009  8.62
 x 0 0
+ETA2            0.0001  38.47
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0008  164.09
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+TAU1            0.0002  10.84
 x 0 0
 x 0 0
 x 0 0
@@ -31409,8 +31438,11 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+OP2             0.0002  87.37
 x 0 0
+PHI1            0.0001  147.62
 x 0 0
+PI1             0.0001  63.99
 x 0 0
 x 0 0
 x 0 0
@@ -31420,27 +31452,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+SO1             0.0001  296.60
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+THE1            0.0001  217.85
 x 0 0
 x 0 0
 x 0 0
@@ -31532,35 +31546,44 @@ x 0 0
 # !latitude: 39.2686
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 20.3 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
 Nap-to (Yop-to), North Korea
 +08:30 :Asia/Pyongyang
 3.3000 meters
 x 0 0
 K1              0.4000  334.00
-K2              0.1890  298.00
-x 0 0
+K2              0.1791  296.67
+L2              0.1536  274.82
 x 0 0
 M2              1.9200  244.00
 x 0 0
+M4              0.0162  38.00
 x 0 0
 x 0 0
-x 0 0
-N2              0.3648  215.06
+N2              0.3357  218.21
 x 0 0
 O1              0.2800  289.00
 x 0 0
+P1              0.1310  326.36
+Q1              0.0451  261.08
 x 0 0
-x 0 0
-x 0 0
-x 0 0
+R2              0.0008  235.87
 x 0 0
 S2              0.7000  298.00
 x 0 0
 x 0 0
+T2              0.0002  182.63
+LDA2            0.0002  357.00
+MU2             0.0966  353.84
+NU2             0.0955  250.65
+RHO1            0.0001  69.98
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+2SM2            0.0003  330.16
 x 0 0
 x 0 0
 x 0 0
@@ -31573,6 +31596,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+2MK6            0.0001  291.56
 x 0 0
 x 0 0
 x 0 0
@@ -31584,16 +31608,24 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+ALP1            0.0001  262.23
+BET1            0.0002  193.22
+CHI1            0.0002  221.77
+H1              0.0005  80.85
+H2              0.0008  0.61
 x 0 0
+ETA2            0.0001  30.02
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  156.06
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+TAU1            0.0002  3.82
 x 0 0
 x 0 0
 x 0 0
@@ -31601,8 +31633,11 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+OP2             0.0002  79.39
 x 0 0
+PHI1            0.0001  142.59
 x 0 0
+PI1             0.0001  59.02
 x 0 0
 x 0 0
 x 0 0
@@ -31612,27 +31647,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+SO1             0.0001  291.31
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+THE1            0.0001  212.71
 x 0 0
 x 0 0
 x 0 0
@@ -31724,40 +31741,43 @@ x 0 0
 # !latitude: 39.4147
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 16.4 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
 Unmu-do, North Korea
 +08:30 :Asia/Pyongyang
 3.7600 meters
-x 0 0
+J1              0.0260  7.12
 K1              0.4800  345.00
-K2              0.2052  305.00
-x 0 0
-x 0 0
+K2              0.2061  306.17
+L2              0.0551  277.82
+M1              0.0216  319.31
 M2              2.2200  252.00
 x 0 0
+M4              0.0621  307.00
 x 0 0
 x 0 0
-x 0 0
-N2              0.4218  223.59
-x 0 0
+N2              0.3890  226.18
+2N2             0.0514  200.37
 O1              0.3000  297.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+OO1             0.0143  29.62
+P1              0.1587  341.63
+Q1              0.0492  268.18
+2Q1             0.0084  252.77
+R2              0.0051  305.59
 x 0 0
 S2              0.7600  305.00
 x 0 0
 x 0 0
+T2              0.0358  304.41
+LDA2            0.0159  258.83
+MU2             0.0539  237.35
+NU2             0.0759  229.66
+RHO1            0.0120  277.86
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+MS4             0.0572  267.65
 x 0 0
 x 0 0
 x 0 0
@@ -31916,40 +31936,43 @@ x 0 0
 # !latitude: 38.6330
 # province: Hwanghae-namdo
 # admin1_quelle: Ufer 4.5 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
 Sok-to, North Korea
 +08:30 :Asia/Pyongyang
 2.7100 meters
-x 0 0
+J1              0.0206  342.65
 K1              0.3800  321.00
-K2              0.1431  278.00
-x 0 0
-x 0 0
+K2              0.1437  279.10
+L2              0.0387  252.35
+M1              0.0173  303.83
 M2              1.5600  227.00
 x 0 0
+M4              0.0435  257.00
 x 0 0
 x 0 0
-x 0 0
-N2              0.2964  199.66
-x 0 0
+N2              0.2733  201.65
+2N2             0.0361  176.30
 O1              0.2400  282.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+OO1             0.0113  4.68
+P1              0.1257  317.70
+Q1              0.0394  253.65
+2Q1             0.0068  238.70
+R2              0.0037  278.55
 x 0 0
 S2              0.5300  278.00
 x 0 0
 x 0 0
+T2              0.0258  277.45
+LDA2            0.0112  233.43
+MU2             0.0378  213.22
+NU2             0.0533  205.07
+RHO1            0.0096  263.27
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+MS4             0.0401  216.78
 x 0 0
 x 0 0
 x 0 0
@@ -32108,40 +32131,44 @@ x 0 0
 # !latitude: 38.6801
 # province: Hwanghae-namdo
 # admin1_quelle: Ufer 1.2 km
-P'i Do, North Korea
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 umbenannt "P'i Do" -> "P'i-do" wie die uebrigen Inselnamen (Oliver).
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
+P'i-do, North Korea
 +08:30 :Asia/Pyongyang
 3.2100 meters
-x 0 0
+J1              0.0222  352.80
 K1              0.4100  331.00
-K2              0.1431  292.00
-x 0 0
-x 0 0
+K2              0.1438  293.13
+L2              0.0489  259.50
+M1              0.0223  308.99
 M2              1.9700  234.00
 x 0 0
+M4              0.0561  271.00
 x 0 0
 x 0 0
-x 0 0
-N2              0.3743  202.91
-x 0 0
+N2              0.3451  208.50
+2N2             0.0456  183.00
 O1              0.3100  287.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+OO1             0.0122  14.98
+P1              0.1355  327.67
+Q1              0.0508  258.51
+2Q1             0.0087  243.41
+R2              0.0042  292.56
 x 0 0
 S2              0.5300  292.00
 x 0 0
 x 0 0
+T2              0.0300  291.44
+LDA2            0.0141  240.56
+MU2             0.0477  219.94
+NU2             0.0673  211.94
+RHO1            0.0124  268.14
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+MS4             0.0517  231.06
 x 0 0
 x 0 0
 x 0 0
@@ -32300,32 +32327,44 @@ x 0 0
 # !latitude: 38.1858
 # province: Hwanghae-namdo
 # admin1_quelle: Ufer 0.6 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
 Monggum-do, North Korea
 +08:30 :Asia/Pyongyang
 2.1100 meters
-x 0 0
+J1              0.0186  355.96
 K1              0.3700  316.00
-K2              0.0999  250.00
-x 0 0
-x 0 0
+K2              0.1034  247.47
+L2              0.0547  239.24
+M1              0.0153  198.08
 M2              1.1400  202.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2166  176.27
-x 0 0
+M3              0.0006  114.63
+M4              0.0097  301.94
+M6              0.0114  185.45
+M8              0.0014  335.45
+N2              0.2148  173.76
+2N2             0.0289  140.71
 O1              0.2600  273.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+OO1             0.0089  37.95
+P1              0.1082  308.74
+Q1              0.0513  250.07
+2Q1             0.0062  240.93
+R2              0.0075  24.18
+S1              0.0121  254.39
 S2              0.3700  250.00
+S4              0.0004  93.50
 x 0 0
+T2              0.0228  227.83
+LDA2            0.0271  240.93
+MU2             0.0483  358.98
+NU2             0.0565  182.65
+RHO1            0.0122  249.14
 x 0 0
 x 0 0
+MN4             0.0037  254.50
+MS4             0.0032  26.55
+2SM2            0.0172  159.05
 x 0 0
 x 0 0
 x 0 0
@@ -32337,9 +32376,11 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0016  83.71
 x 0 0
 x 0 0
 x 0 0
+2MS6            0.0139  240.90
 x 0 0
 x 0 0
 x 0 0
@@ -32360,7 +32401,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0067  1.51
 x 0 0
+EPS2            0.0120  326.94
 x 0 0
 x 0 0
 x 0 0
@@ -32379,6 +32422,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0010  165.17
+SIG1            0.0039  257.75
 x 0 0
 x 0 0
 x 0 0
@@ -32399,25 +32444,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+N4              0.0008  204.59
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+2MO5            0.0017  199.14
 x 0 0
 x 0 0
 x 0 0
@@ -32492,32 +32522,44 @@ x 0 0
 # !latitude: 38.0586
 # province: Hwanghae-namdo
 # admin1_quelle: Ufer 5.7 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
 Wollae-do, North Korea
 +08:30 :Asia/Pyongyang
 2.0600 meters
-x 0 0
+J1              0.0197  0.13
 K1              0.3900  321.00
-K2              0.0945  217.00
-x 0 0
-x 0 0
+K2              0.0978  214.35
+L2              0.0508  194.41
+M1              0.0151  192.25
 M2              1.0600  158.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2014  126.38
-x 0 0
+M3              0.0006  48.61
+M4              0.0090  213.95
+M6              0.0104  53.45
+M8              0.0013  159.45
+N2              0.1997  130.58
+2N2             0.0268  98.36
 O1              0.2600  268.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+OO1             0.0093  41.28
+P1              0.1139  313.86
+Q1              0.0513  245.89
+2Q1             0.0062  237.58
+R2              0.0070  351.11
+S1              0.0127  259.45
 S2              0.3500  217.00
+S4              0.0003  2.42
 x 0 0
+T2              0.0212  194.90
+LDA2            0.0252  196.22
+MU2             0.0449  316.53
+NU2             0.0526  139.37
+RHO1            0.0122  244.86
 x 0 0
 x 0 0
+MN4             0.0033  167.33
+MS4             0.0030  297.01
+2SM2            0.0161  111.97
 x 0 0
 x 0 0
 x 0 0
@@ -32529,9 +32571,11 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0015  332.85
 x 0 0
 x 0 0
 x 0 0
+2MS6            0.0127  107.37
 x 0 0
 x 0 0
 x 0 0
@@ -32552,7 +32596,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0062  317.39
 x 0 0
+EPS2            0.0111  285.31
 x 0 0
 x 0 0
 x 0 0
@@ -32571,6 +32617,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+S3              0.0009  96.84
+SIG1            0.0039  254.30
 x 0 0
 x 0 0
 x 0 0
@@ -32591,25 +32639,10 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+N4              0.0007  118.24
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+2MO5            0.0016  90.00
 x 0 0
 x 0 0
 x 0 0
@@ -32684,6 +32717,7 @@ x 0 0
 # !latitude: 37.7430
 # province: Hwanghae-namdo
 # admin1_quelle: Ufer 3.5 km
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Mu Do, North Korea
 +08:30 :Asia/Pyongyang
 3.5900 meters
@@ -32701,8 +32735,8 @@ N2              0.4047  103.98
 x 0 0
 O1              0.2700  259.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.1258  305.00
+Q1              0.0524  259.00
 x 0 0
 x 0 0
 x 0 0

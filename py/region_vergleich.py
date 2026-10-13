@@ -211,6 +211,14 @@ def main(argv):
             befund.append('Dublette zu %s [%s] %.1f km: M2 %+.0f %%, %+.0f Grad'
                           % (n['name'], kurz(n['file']), d, 100 * a, p))
             vorschlag = 'archivieren (nach Rang)'
+            # Handarbeit nicht verlieren: weicht der zu archivierende Satz in Name
+            # oder Position vom behaltenen ab, wird das als Uebernahme vorgeschlagen.
+            if km(r, n) > 0.05:
+                befund.append('UEBERNEHMEN? Position %.4f/%.4f statt %.4f/%.4f' % (r['lat'], r['lon'], n['lat'], n['lon']))
+            if r['name'] != n['name']:
+                befund.append('UEBERNEHMEN? Name "%s" statt "%s"' % (r['name'], n['name']))
+            if 'P1' in r['amp'] and 'P1' not in n['amp']:
+                befund.append('behaltener Satz ohne P1/Q1 -> inferieren')
             # Schiedsrichter: zwei Saetze aus Messung/Analyse und ein IOC-Pegel daneben
             code = ioc_station(n['lat'], n['lon']) if mit_ioc and rg <= 3 else None
             reihe = ioc_reihe(code) if code else None
