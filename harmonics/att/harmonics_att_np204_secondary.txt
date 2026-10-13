@@ -29796,7 +29796,7 @@ x 0 0
 # admin1_quelle: Ufer 0.8 km
 # note: 20261013 Position 41.9833/130.0000 -> 42.0046/130.0119 Bucht Sajin-man (GeoNames) (Oliver).
 # note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
-Sajin, North Korea
+Sajin (Chongjin), North Kore
 +08:30 :Asia/Pyongyang
 0.2000 meters
 x 0 0
@@ -32718,40 +32718,42 @@ x 0 0
 # province: Hwanghae-namdo
 # admin1_quelle: Ufer 3.5 km
 # note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
-Mu Do, North Korea
+# note: 20261013 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
+# note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
+Mu-do, North Korea
 +08:30 :Asia/Pyongyang
 3.5900 meters
-x 0 0
+J1              0.0193  324.20
 K1              0.3800  305.00
-K2              0.2187  190.00
-x 0 0
-x 0 0
+K2              0.2207  194.78
+L2              0.0536  151.89
+M1              0.0192  278.39
 M2              2.1300  134.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.4047  103.98
-x 0 0
+N2              0.3758  116.10
+2N2             0.0499  98.22
 O1              0.2700  259.00
-x 0 0
-P1              0.1258  305.00
-Q1              0.0524  259.00
-x 0 0
-x 0 0
+OO1             0.0106  343.78
+P1              0.1254  302.12
+Q1              0.0535  233.10
+2Q1             0.0075  220.52
+R2              0.0064  192.39
 x 0 0
 S2              0.8100  190.00
 x 0 0
 x 0 0
+T2              0.0468  187.61
+LDA2            0.0149  161.31
+MU2             0.0514  75.20
+NU2             0.0729  118.49
+RHO1            0.0108  242.39
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+MN4             0.0252  47.10
+MS4             0.0634  141.80
 x 0 0
 x 0 0
 x 0 0

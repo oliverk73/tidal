@@ -91361,7 +91361,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Inch'on, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
-Jumun-do, Songmo-sudo, South Korea
+Jumundo, South Korea
 +00:00 :Asia/Seoul
 4.3891 meters
 J1              0.0184  187.58
@@ -91559,7 +91559,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.281,
 # note: Zielwert F=0.211 aus Wahrheit statt F=0.158 des Bezugsorts; Beleg: Wahrheit 1.63 -> 1.36 %.
-Taeyonp'yong-do, Yonp'yong-yolto, South Korea
+Daeyeonpyeongdo, South Korea
 +00:00 :Asia/Seoul
 3.6881 meters
 J1              0.0195  187.19
@@ -91593,202 +91593,6 @@ x 0 0
 x 0 0
 MN4             0.0250  271.50
 MS4             0.0630  352.87
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.2110  2.64
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: South Korea
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 1153
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Incheon, South Korea (no.1153). M2=2.29 S2=0.51 k=0.80 dt=+18min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 125.5796
-# !latitude: 37.7430
-# region: Haeju-man
-# admin1_quelle: Name
-# note: 20260913 S2/K2 x 1.89 auf den Springhub des Buchs (cptt-1153); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.38. Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Inch'on, South Korea [harmonics-1997-05-25_mod.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
-Mu-do, Haeju-man, South Korea
-+00:00 :Asia/Pyongyang
-3.5966 meters
-J1              0.0145  187.71
-K1              0.2855  173.14
-K2              0.2255  299.08
-L2              0.0522  258.10
-M1              0.0130  158.38
-M2              2.0739  244.84
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.3659  231.57
-2N2             0.0486  218.31
-O1              0.1826  143.70
-OO1             0.0080  202.59
-P1              0.0942  170.96
-Q1              0.0362  122.43
-2Q1             0.0051  114.47
-R2              0.0065  297.04
-x 0 0
-S2              0.8276  295.00
-x 0 0
-x 0 0
-T2              0.0478  292.96
-LDA2            0.0145  268.14
-MU2             0.0500  194.68
-NU2             0.0710  233.34
-RHO1            0.0073  131.10
-x 0 0
-x 0 0
-MN4             0.0239  273.41
-MS4             0.0601  354.84
 x 0 0
 x 0 0
 x 0 0
@@ -92150,11 +91954,12 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Inch'on, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
 # note: 20261013 Land South Korea -> North Korea; Position 37.6833/125.3667 -> Kap Tungsan-got 37.6775/125.3439 (GeoNames) (Oliver).
+# note: 20261013 Tagestiden x 1.54 (K1) / x 1.73 (O1) auf Nachbarn Mu-do (ATT), Daeyeonpyeongdo (classic): K1 0.375, O1 0.27 (Oliver).
 Tungsan-got, North Korea
 +00:00 :Asia/Pyongyang
 3.2004 meters
-J1              0.0124  189.00
-K1              0.2436  174.40
+J1              0.0191  189.00
+K1              0.3750  174.40
 K2              0.1919  301.59
 L2              0.0445  260.56
 M1              0.0111  159.59
@@ -92165,11 +91970,11 @@ x 0 0
 x 0 0
 N2              0.3123  233.94
 2N2             0.0414  220.63
-O1              0.1558  144.86
-OO1             0.0068  203.94
-P1              0.0804  172.20
-Q1              0.0309  123.55
-2Q1             0.0043  115.54
+O1              0.2700  144.86
+OO1             0.0105  203.94
+P1              0.1238  172.20
+Q1              0.0535  123.55
+2Q1             0.0075  115.54
 R2              0.0056  299.55
 x 0 0
 S2              0.7044  297.50
@@ -92179,7 +91984,7 @@ T2              0.0408  295.45
 LDA2            0.0124  270.59
 MU2             0.0427  197.01
 NU2             0.0606  235.72
-RHO1            0.0062  132.22
+RHO1            0.0107  132.22
 x 0 0
 x 0 0
 MN4             0.0204  278.20
@@ -92539,8 +92344,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 124.7167
-# !latitude: 37.8333
+# !longitude: 124.7177
+# !latitude: 37.8286
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+9.00 gegen +8.00 nach dem Buch)
@@ -92552,7 +92357,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dalian, Liaoning, China [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Taech'ong-do, Taech'ong-kundo, South Korea
+Daecheongdo, South Korea
 +00:00 :Asia/Seoul
 2.0726 meters
 J1              0.0147  199.65
