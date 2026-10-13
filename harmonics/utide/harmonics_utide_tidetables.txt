@@ -390590,7 +390590,7 @@ x 0 0
 # region: New Taipei City
 # admin1_quelle: Polygon
 Danhai, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.0602 meters
 J1              0.0117  143.88
 K1              0.2167  122.46
@@ -390786,7 +390786,7 @@ x 0 0
 # region: New Taipei City
 # admin1_quelle: Polygon
 Tamsui, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.8653 meters
 J1              0.0093  153.95
 K1              0.2030  125.56
@@ -390982,7 +390982,7 @@ x 0 0
 # region: Taoyuan
 # admin1_quelle: Ufer 3.3 km
 Zhuwei, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.4168 meters
 J1              0.0117  150.56
 K1              0.2231  125.41
@@ -391178,7 +391178,7 @@ x 0 0
 # region: Hsinchu City
 # admin1_quelle: Polygon
 Hsinchu, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.9582 meters
 J1              0.0096  260.49
 K1              0.1751  142.43
@@ -391374,7 +391374,7 @@ x 0 0
 # region: Miaoli
 # admin1_quelle: Polygon
 Waipu, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.7770 meters
 J1              0.0064  302.23
 K1              0.1765  138.69
@@ -391555,7 +391555,7 @@ x 0 0
 # 1411 HW/NW points -> 35026 interpolated points
 # BEGIN HOT COMMENTS
 # country: Taiwan
-# source: CWA tide predictions, UTide analysis
+# source: IOC sea level monitoring (tboz, CWA radar gauge), hourly, UTide
 # station_id_context: CWA-1156
 # date_imported: 20260409
 # datum: CD
@@ -391563,127 +391563,129 @@ x 0 0
 # cwa_code: 1156
 # ssc_id: SSC-tboz
 # ioc_code: tboz
-# utide: period=2025-12-31..2026-12-31 r2=0.9988 rms=0.0269m const=68
+# utide: pts=6002 period=2026-02-01..2026-10-12 r2=0.9944 rms=0.0647m const=68
 # !units: meters
 # !longitude: 120.134900
 # !latitude: 23.619600
 # region: Yunlin
 # admin1_quelle: Ufer 2.2 km
+# note: 20261013 neu gefittet aus IOC-Messung tboz 2026-02..10 (Pegelsprung im Jan. 2026 ausgelassen); alter CWA-Satz
+# note: lag 40 min und 11 %% im Hub neben der Messung. Z0 2.4151 m (CWA-Kartennull) behalten (Oliver).
 Boziliao, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.4151 meters
-J1              0.0110  242.06
-K1              0.1927  173.52
-K2              0.0717  137.44
-L2              0.0671  138.70
+J1              0.0146  175.55
+K1              0.2249  154.47
+K2              0.0883  116.75
+L2              0.0442  115.05
 x 0 0
-M2              0.9830  99.12
-M3              0.0075  344.13
-M4              0.0236  128.64
-M6              0.0020  148.63
-M8              0.0007  1.16
-N2              0.1762  78.91
-2N2             0.0316  97.64
-O1              0.1687  141.59
-OO1             0.0042  225.31
-P1              0.0554  170.99
-Q1              0.0321  121.68
-2Q1             0.0029  81.07
-R2              0.0178  236.66
+M2              1.1170  79.98
+M3              0.0024  269.13
+M4              0.0470  192.57
+M6              0.0130  104.08
+M8              0.0031  254.88
+N2              0.2014  58.08
+2N2             0.0442  26.77
+O1              0.1974  121.54
+OO1             0.0051  196.04
+P1              0.0678  157.51
+Q1              0.0411  105.70
+2Q1             0.0076  76.08
+R2              0.0134  285.46
 x 0 0
-S2              0.2711  146.28
-S4              0.0039  179.96
+S2              0.3052  122.17
+S4              0.0053  250.51
 x 0 0
-T2              0.0331  128.52
-LDA2            0.0288  122.95
-MU2             0.0770  213.65
-NU2             0.0420  66.40
-RHO1            0.0037  110.40
-MK3             0.0325  209.31
+T2              0.0255  88.87
+LDA2            0.0483  107.29
+MU2             0.0551  194.46
+NU2             0.0597  66.12
+RHO1            0.0066  107.08
+MK3             0.0124  255.47
 x 0 0
-MN4             0.0103  78.14
-MS4             0.0169  165.98
-2SM2            0.0044  252.03
-MF              0.0187  31.67
-MSF             0.0457  40.06
-MM              0.0353  339.18
+MN4             0.0164  161.69
+MS4             0.0317  231.65
+2SM2            0.0163  6.14
+MF              0.0164  138.03
+MSF             0.0202  282.73
+MM              0.0030  313.67
 x 0 0
-SSA             0.0410  332.53
-SA-IOS          0.1187  216.14
+SSA             0.0478  341.81
+SA-IOS          0.1246  200.48
 x 0 0
-S1-IOS          0.0144  48.24
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0020  212.90
-2MK6            0.0003  143.75
-x 0 0
-2MN6            0.0011  103.53
-2MS6            0.0018  186.37
-x 0 0
-2SK5            0.0005  275.71
+S1-IOS          0.0015  251.71
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0028  83.97
+2MK6            0.0029  148.48
 x 0 0
-3MS4            0.0025  147.74
+2MN6            0.0066  64.73
+2MS6            0.0104  160.68
 x 0 0
-ALP1            0.0015  143.62
-BET1            0.0039  102.87
-CHI1            0.0024  343.11
-H1              0.0653  203.53
-H2              0.0960  354.16
-x 0 0
-ETA2            0.0047  148.69
-x 0 0
-UPS1            0.0013  162.72
-x 0 0
-x 0 0
-MK4             0.0054  130.61
-MKS2            0.0289  255.18
-x 0 0
-EPS2            0.0264  180.11
-MO3             0.0337  165.74
-x 0 0
-TAU1            0.0206  234.39
-x 0 0
-MSK6            0.0003  159.43
-MSM             0.0134  332.35
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0122  181.97
-OP2             0.0446  133.87
-x 0 0
-PHI1            0.0039  300.58
-x 0 0
-PI1             0.0044  146.60
-x 0 0
-PSI1            0.0131  3.75
-x 0 0
-x 0 0
-SIG1            0.0066  150.03
-SK3             0.0146  247.54
-x 0 0
-SN4             0.0030  37.91
-x 0 0
-SO1             0.0163  329.14
-SO3             0.0170  206.04
-THE1            0.0011  275.23
+2SK5            0.0002  121.10
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SKM2            0.0043  180.08
+3MS4            0.0041  250.84
+x 0 0
+ALP1            0.0004  212.25
+BET1            0.0013  107.73
+CHI1            0.0029  137.47
+H1              0.0353  166.48
+H2              0.0413  339.55
+x 0 0
+ETA2            0.0015  119.24
+x 0 0
+UPS1            0.0006  203.20
+x 0 0
+x 0 0
+MK4             0.0112  224.03
+MKS2            0.0120  27.28
+x 0 0
+EPS2            0.0116  165.21
+MO3             0.0153  213.65
+x 0 0
+TAU1            0.0057  159.78
+x 0 0
+MSK6            0.0016  231.79
+MSM             0.0215  219.67
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0108  152.24
+OP2             0.0071  350.46
+x 0 0
+PHI1            0.0043  132.72
+x 0 0
+PI1             0.0009  257.74
+x 0 0
+PSI1            0.0034  243.65
+x 0 0
+x 0 0
+SIG1            0.0051  97.06
+SK3             0.0041  302.37
+x 0 0
+SN4             0.0025  154.22
+x 0 0
+SO1             0.0064  247.99
+SO3             0.0085  246.59
+THE1            0.0039  185.35
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0077  28.71
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-NO3             0.0063  77.58
+NO3             0.0053  180.55
 x 0 0
 x 0 0
-N4              0.0042  351.24
+N4              0.0061  148.05
 x 0 0
 x 0 0
 x 0 0
@@ -391766,7 +391768,7 @@ x 0 0
 # region: Chiayi
 # admin1_quelle: Polygon
 Dongshih, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.8494 meters
 J1              0.0077  178.08
 K1              0.2005  160.12
@@ -391962,7 +391964,7 @@ x 0 0
 # region: Tainan City
 # admin1_quelle: Polygon
 Jiangjun, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.4193 meters
 J1              0.0092  170.98
 K1              0.2035  156.01
@@ -392158,7 +392160,7 @@ x 0 0
 # region: Pingtung
 # admin1_quelle: Polygon
 Donggang, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 0.8608 meters
 J1              0.0091  194.62
 K1              0.2138  166.32
@@ -392354,7 +392356,7 @@ x 0 0
 # region: Pingtung
 # admin1_quelle: Ufer 1.0 km
 Houbihu, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 0.8900 meters
 J1              0.0145  161.27
 K1              0.2402  136.23
@@ -392550,7 +392552,7 @@ x 0 0
 # region: New Taipei City
 # admin1_quelle: Ufer 1.4 km
 Linshanbi, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.6742 meters
 J1              0.0093  127.67
 K1              0.2073  117.47
@@ -392746,7 +392748,7 @@ x 0 0
 # region: New Taipei City
 # admin1_quelle: Ufer 1.6 km
 Longdong, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.0344 meters
 J1              0.0107  132.47
 K1              0.2102  102.39
@@ -392942,7 +392944,7 @@ x 0 0
 # region: Yilan
 # admin1_quelle: Ufer 0.6 km
 Wushih, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.1341 meters
 J1              0.0099  120.01
 K1              0.2063  98.88
@@ -393137,8 +393139,9 @@ x 0 0
 # !latitude: 24.592470
 # region: Yilan
 # admin1_quelle: Ufer 0.8 km
-Su-ao, Taiwan
-+00:00 :UTC
+# note: 20261013 umbenannt "Su-ao" -> "Su'ao" (Pinyin) (Oliver).
+Su'ao, Taiwan
++00:00 :Asia/Taipei
 1.1747 meters
 J1              0.0103  125.58
 K1              0.2038  105.61
@@ -393334,7 +393337,7 @@ x 0 0
 # region: Hualien
 # admin1_quelle: Polygon
 Heping, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.4522 meters
 J1              0.0088  119.51
 K1              0.1706  106.63
@@ -393530,7 +393533,7 @@ x 0 0
 # region: Hualien
 # admin1_quelle: Ufer 1.3 km
 Hualien, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.3734 meters
 J1              0.0093  119.87
 K1              0.1597  98.91
@@ -393726,7 +393729,7 @@ x 0 0
 # region: Taitung
 # admin1_quelle: Ufer 0.9 km
 Chenggong, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.2118 meters
 J1              0.0088  125.25
 K1              0.1750  101.51
@@ -393920,7 +393923,7 @@ x 0 0
 # region: New Taipei City
 # admin1_quelle: Ufer 59.7 km
 Pengjiayu, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.0559 meters
 J1              0.0135  122.87
 K1              0.2487  106.37
@@ -394116,7 +394119,7 @@ x 0 0
 # region: Penghu
 # admin1_quelle: Ufer 8.1 km
 Jibei, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.4071 meters
 J1              0.0143  183.58
 K1              0.2521  155.64
@@ -394312,7 +394315,7 @@ x 0 0
 # region: Penghu
 # admin1_quelle: Polygon
 Magong (Penghu), Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.7800 meters
 J1              0.0104  184.97
 K1              0.2381  159.40
@@ -394508,7 +394511,7 @@ x 0 0
 # region: Penghu
 # admin1_quelle: Ufer 39.1 km
 Qimei, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.2845 meters
 J1              0.0101  187.42
 K1              0.2196  160.91
@@ -394704,7 +394707,7 @@ x 0 0
 # region: Chiayi
 # admin1_quelle: Ufer 1.5 km
 Wungang, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.8774 meters
 J1              0.0087  190.48
 K1              0.2054  160.80
@@ -394900,7 +394903,7 @@ x 0 0
 # region: Pingtung
 # admin1_quelle: Ufer 13.3 km
 Xiao Liuqiu, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 0.7264 meters
 J1              0.0097  193.55
 K1              0.2100  164.92
@@ -395096,7 +395099,7 @@ x 0 0
 # region: Taitung
 # admin1_quelle: Polygon
 Lanyu, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.0111 meters
 J1              0.0082  142.71
 K1              0.1371  121.85
@@ -395292,7 +395295,7 @@ x 0 0
 # region: Taichung City
 # admin1_quelle: Polygon
 Taichung, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 3.2290 meters
 J1              0.0126  176.09
 K1              0.2455  143.74
@@ -395488,7 +395491,7 @@ x 0 0
 # region: Yunlin
 # admin1_quelle: Ufer 3.2 km
 Mailiao, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.5421 meters
 J1              0.0119  180.74
 K1              0.2291  152.43
@@ -395666,204 +395669,6 @@ x 0 0
 x 0 0
 x 0 0
 #
-# 1223 HW/NW points -> 35025 interpolated points
-# BEGIN HOT COMMENTS
-# country: Taiwan
-# source: CWA tide predictions, UTide analysis
-# station_id_context: CWA-1486
-# date_imported: 20260409
-# datum: CD
-# confidence: 7
-# cwa_code: 1486
-# ssc_id: SSC-kaoh
-# ioc_code: tkao
-# psmsl_id: 1356, 152
-# uhslc_id: 340
-# utide: period=2025-12-31..2026-12-31 r2=0.9879 rms=0.0295m const=68
-# !units: meters
-# !longitude: 120.288300
-# !latitude: 22.614400
-# region: Kaohsiung City
-# admin1_quelle: Polygon
-Kaohsiung, Taiwan
-+00:00 :UTC
-0.7815 meters
-J1              0.0081  188.29
-K1              0.1898  161.57
-K2              0.0286  11.53
-L2              0.0018  131.97
-x 0 0
-M2              0.1613  353.92
-M3              0.0012  237.19
-M4              0.0019  75.70
-M6              0.0006  16.89
-x 0 0
-N2              0.0403  338.62
-2N2             0.0080  130.22
-O1              0.1761  124.89
-OO1             0.0046  292.18
-P1              0.0602  158.68
-Q1              0.0340  105.78
-2Q1             0.0114  50.18
-R2              0.0026  164.78
-x 0 0
-S2              0.0659  353.32
-S4              0.0003  359.49
-x 0 0
-T2              0.0041  21.27
-LDA2            0.0077  119.94
-MU2             0.0138  327.88
-NU2             0.0080  15.86
-RHO1            0.0046  85.97
-MK3             0.0050  286.81
-x 0 0
-MN4             0.0009  72.11
-MS4             0.0011  65.92
-2SM2            0.0041  358.51
-MF              0.0023  214.58
-MSF             0.0047  331.54
-MM              0.0062  316.26
-x 0 0
-SSA             0.0229  346.07
-SA-IOS          0.1277  215.15
-x 0 0
-S1-IOS          0.0038  341.67
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0003  133.50
-2MK6            0.0003  263.65
-x 0 0
-2MN6            0.0003  346.56
-2MS6            0.0005  14.79
-x 0 0
-2SK5            0.0001  77.68
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0004  336.74
-x 0 0
-ALP1            0.0020  342.47
-BET1            0.0055  56.02
-CHI1            0.0006  6.51
-H1              0.0040  230.13
-H2              0.0095  313.00
-x 0 0
-ETA2            0.0018  24.05
-x 0 0
-UPS1            0.0005  145.27
-x 0 0
-x 0 0
-MK4             0.0005  297.61
-MKS2            0.0024  10.53
-x 0 0
-EPS2            0.0024  9.05
-MO3             0.0042  294.06
-x 0 0
-TAU1            0.0046  323.54
-x 0 0
-MSK6            0.0002  256.50
-MSM             0.0056  21.97
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0094  164.73
-OP2             0.0049  179.59
-x 0 0
-PHI1            0.0028  301.11
-x 0 0
-PI1             0.0022  79.40
-x 0 0
-PSI1            0.0033  132.60
-x 0 0
-x 0 0
-SIG1            0.0029  238.32
-SK3             0.0024  9.37
-x 0 0
-SN4             0.0001  345.08
-x 0 0
-SO1             0.0015  80.14
-SO3             0.0023  327.55
-THE1            0.0056  217.18
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0005  215.88
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0007  297.24
-x 0 0
-x 0 0
-N4              0.0017  31.56
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
 # 1189 HW/NW points -> 35025 interpolated points
 # BEGIN HOT COMMENTS
 # country: Taiwan
@@ -395882,7 +395687,7 @@ x 0 0
 # region: Pingtung
 # admin1_quelle: Polygon
 Xunguangzui, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 0.7084 meters
 J1              0.0087  175.99
 K1              0.2387  151.14
@@ -396080,7 +395885,7 @@ x 0 0
 # region: New Taipei City
 # admin1_quelle: Ufer 1.7 km
 Keelung, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 0.9610 meters
 J1              0.0106  148.28
 K1              0.2014  104.61
@@ -396276,7 +396081,7 @@ x 0 0
 # region: Taitung
 # admin1_quelle: Ufer 7.1 km
 Shiti, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.2018 meters
 J1              0.0095  124.67
 K1              0.1690  95.92
@@ -396472,7 +396277,7 @@ x 0 0
 # region: Taitung
 # admin1_quelle: Ufer 0.7 km
 Fugang, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.1629 meters
 J1              0.0083  127.23
 K1              0.1724  110.71
@@ -396668,7 +396473,7 @@ x 0 0
 # region: Taitung
 # admin1_quelle: Ufer 1.9 km
 Dawu, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.2143 meters
 J1              0.0050  158.93
 K1              0.1661  118.59
@@ -396864,7 +396669,7 @@ x 0 0
 # region: Taitung
 # admin1_quelle: Polygon
 Ludao, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.1340 meters
 J1              0.0076  128.08
 K1              0.1453  106.75
@@ -397060,7 +396865,7 @@ x 0 0
 # region: Kaohsiung City
 # admin1_quelle: Polygon
 Yongan, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 0.7421 meters
 J1              0.0088  153.56
 K1              0.2050  156.38
@@ -397256,7 +397061,7 @@ x 0 0
 # region: New Taipei City
 # admin1_quelle: Polygon
 Fulong, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 1.0159 meters
 J1              0.0110  129.31
 K1              0.2017  104.11
@@ -397450,7 +397255,7 @@ x 0 0
 # !longitude: 119.942800
 # !latitude: 26.161700
 Nangan (Matsu), Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 3.7784 meters
 J1              0.0179  153.21
 K1              0.3261  120.07
@@ -397647,7 +397452,7 @@ x 0 0
 # admin1_quelle: Ufer 2.4 km
 # note: 20261011 Umbenannt (Oliver): "Liaoluowan, Fujian, China" -> "Liaoluowan (Kinmen), Taiwan"; CWA-Pegel auf Kinmen, von Taiwan betrieben.
 Liaoluowan (Kinmen), Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.9748 meters
 J1              0.0193  179.30
 K1              0.3268  155.53
@@ -397844,7 +397649,7 @@ x 0 0
 # admin1_quelle: Ufer 0.1 km
 # note: 20261011 Umbenannt (Oliver): "Shuitou, Fujian, China" -> "Shuitou (Kinmen), Taiwan"; CWA-Pegel auf Kinmen, von Taiwan betrieben.
 Shuitou (Kinmen), Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 3.2579 meters
 J1              0.0205  185.87
 K1              0.3379  156.49
@@ -398038,7 +397843,7 @@ x 0 0
 # !longitude: 116.690000
 # !latitude: 20.700000
 Pratas Island, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 0.7438 meters
 J1              0.0126  198.21
 K1              0.2929  177.12
@@ -398833,7 +398638,7 @@ x 0 0
 # region: Tainan City
 # admin1_quelle: Ufer 1.1 km
 Anping, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 0.9586 meters
 J1              0.0075  163.82
 K1              0.1903  157.11
@@ -399027,7 +398832,7 @@ x 0 0
 # region: New Taipei City
 # admin1_quelle: Ufer 2.5 km
 Taipei Port, Taiwan
-+00:00 :UTC
++00:00 :Asia/Taipei
 2.0323 meters
 J1              0.0126  145.64
 K1              0.2221  123.80

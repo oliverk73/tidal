@@ -31142,11 +31142,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 124.4167
-# !latitude: 39.7000
+# !longitude: 124.4120
+# !latitude: 39.6881
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 13.8 km
-Suun Do, North Korea
+Suun-do, North Korea
 +08:00 :Asia/Pyongyang
 3.5400 meters
 x 0 0
@@ -31334,11 +31334,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 124.6667
-# !latitude: 39.5167
+# !longitude: 124.6513
+# !latitude: 39.5397
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 1.4 km
-Ka Do, North Korea
+Ka-do, North Korea
 +08:30 :Asia/Pyongyang
 3.4500 meters
 x 0 0
@@ -31526,11 +31526,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 124.7167
-# !latitude: 39.2667
+# !longitude: 124.7173
+# !latitude: 39.2686
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 20.3 km
-Nap Do, North Korea
+Nap-to (Yop-to), North Korea
 +08:30 :Asia/Pyongyang
 3.3000 meters
 x 0 0
@@ -31718,11 +31718,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 125.1167
-# !latitude: 39.4167
+# !longitude: 125.1170
+# !latitude: 39.4147
 # province: P'yongan-bukto
 # admin1_quelle: Ufer 16.4 km
-Unmu Do, North Korea
+Unmu-do, North Korea
 +08:30 :Asia/Pyongyang
 3.7600 meters
 x 0 0
@@ -33070,6 +33070,7 @@ x 0 0
 # admin1_quelle: Hand (Oliver)
 # note: 20261011 Umbenannt (Oliver): "Wuqiu Yu, Fujian, China" -> "Wuqiu Yu, Taiwan"; ROC-verwaltete Insel, Land Taiwan, Region Kinmen.
 # note: 20261012 N2-Phase 153 -> 320 (Inferenz ohne Normierung von S2-M2) (Oliver).
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Wuqiu, Taiwan
 +08:00 :Asia/Shanghai
 3.2400 meters
@@ -33087,8 +33088,8 @@ N2              0.4047  319.63
 x 0 0
 O1              0.2700  245.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0927  257.00
+Q1              0.0524  245.00
 x 0 0
 x 0 0
 x 0 0
@@ -33658,6 +33659,7 @@ x 0 0
 # note: 20261011 Umbenannt (Oliver): "Baiquan Liedao, Fujian, China" -> "Baiquan Liedao (Matsu), Taiwan"; ROC-verwaltete Insel, Land Taiwan, Region Lienchiang.
 # note: 20261011 Umbenannt (Oliver): "Baiquan Liedao (Matsu), Taiwan" -> "Qingfan Gang (Xiju, Matsu), Taiwan";
 # note: Baiquan (White Dogs) ist der alte Name von Juguang; Position 20261011 von Hand auf den Faehranleger Xiju (Qingfan) gesetzt (25.9678/119.9326).
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
 Qingfan Gang (Xiju, Matsu), Taiwan
 +08:00 :Asia/Shanghai
 3.5000 meters
@@ -33675,8 +33677,8 @@ N2              0.3990  272.81
 x 0 0
 O1              0.2000  215.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0993  232.00
+Q1              0.0388  215.00
 x 0 0
 x 0 0
 x 0 0
@@ -35983,12 +35985,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 119.5167
-# !latitude: 23.3667
+# !longitude: 119.5282
+# !latitude: 23.3663
 # region: Penghu
 # admin1_quelle: Ufer 17.3 km
 # note: 20261012 N2-Phase 129 -> 296 (Inferenz ohne Normierung von S2-M2) (Oliver).
-Chiang-chun Kang-tao, Taiwan
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 umbenannt "Chiang-chun Kang-tao" -> "Jiangjun'ao Yu (Penghu)" (Pinyin); Position 23.3667/119.5167 -> 23.3663/119.5282 (OSM) (Oliver).
+Jiangjun'ao Yu (Penghu), Taiwan
 +08:00 :Asia/Taipei
 1.2000 meters
 x 0 0
@@ -36005,8 +36009,8 @@ N2              0.1140  296.13
 x 0 0
 O1              0.2000  238.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0728  277.00
+Q1              0.0388  238.00
 x 0 0
 x 0 0
 x 0 0
@@ -36176,12 +36180,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 120.4833
-# !latitude: 24.1833
+# !longitude: 120.4919
+# !latitude: 24.1949
 # region: Changhua
 # admin1_quelle: Polygon
 # note: 20261012 N2-Phase 134 -> 301 (Inferenz ohne Normierung von S2-M2) (Oliver).
-T'u-ko-k'u, Taiwan
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 umbenannt "T'u-ko-k'u" -> "Tugeku" (Pinyin); Position 24.1833/120.4833 -> 24.1949/120.4919 (OSM) (Oliver).
+Tugeku, Taiwan
 +08:00 :Asia/Taipei
 2.1800 meters
 x 0 0
@@ -36198,8 +36204,8 @@ N2              0.2812  300.74
 x 0 0
 O1              0.1500  232.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0596  268.00
+Q1              0.0291  232.00
 x 0 0
 x 0 0
 x 0 0
@@ -36374,7 +36380,9 @@ x 0 0
 # region: Changhua
 # admin1_quelle: Polygon
 # note: 20261012 N2-Phase 138 -> 305 (Inferenz ohne Normierung von S2-M2) (Oliver).
-Fang-yuan, Taiwan
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 umbenannt "Fang-yuan" -> "Fangyuan" (Pinyin) (Oliver).
+Fangyuan, Taiwan
 +08:00 :Asia/Taipei
 2.1700 meters
 x 0 0
@@ -36391,8 +36399,8 @@ N2              0.2717  305.27
 x 0 0
 O1              0.2000  235.00
 x 0 0
-x 0 0
-x 0 0
+P1              0.0728  273.00
+Q1              0.0388  235.00
 x 0 0
 x 0 0
 x 0 0
@@ -36562,16 +36570,19 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 120.0167
-# !latitude: 23.1000
+# !longitude: 120.0360
+# !latitude: 23.1007
 # region: Tainan City
 # admin1_quelle: Ufer 4.5 km
-Kuo-sheng Kang, Taiwan
+# note: 20261013 Regionsvergleich: S2 0.040->0.063 nach Jiangjun / Anping (CWA, interpoliert); Phasen unveraendert.
+# note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 20261013 umbenannt "Kuo-sheng Kang" -> "Guosheng Gang" (Pinyin); Position 23.1000/120.0167 -> 23.1007/120.0360 (OSM) (Oliver).
+Guosheng Gang, Taiwan
 +08:00 :Asia/Taipei
 1.7000 meters
 x 0 0
 K1              0.1900  278.00
-K2              0.0108  330.00
+K2              0.0169  330.00
 x 0 0
 x 0 0
 M2              0.2900  295.00
@@ -36583,12 +36594,12 @@ N2              0.0551  276.24
 x 0 0
 O1              0.1800  236.00
 x 0 0
+P1              0.0629  278.00
+Q1              0.0349  236.00
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-S2              0.0400  330.00
+S2              0.0627  330.00
 x 0 0
 x 0 0
 x 0 0
