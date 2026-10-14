@@ -292346,12 +292346,12 @@ x 0 0
 # khoa_code: 1
 # scheitelfit: tafeln=2667 (2025-2026) konst=67 tafel_rms_2026=0.005m (vorher 0.101m) zeitfehler=1min
 # !units: meters
-# !longitude: 129.0348
-# !latitude: 35.0963
+# !longitude: 129.0365
+# !latitude: 35.0947
 # region: Busan
 # admin1_quelle: Name
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.005 statt 0.101 m (Oliver).
-Yeong-do, Busan, South Korea
+Busan (Yeong-do), South Korea
 +00:00 :Asia/Seoul
 0.6513 meters
 J1              0.0035  40.63
@@ -292746,7 +292746,8 @@ x 0 0
 # note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher 35.1500/128.6500,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.006 statt 0.124 m (Oliver).
-Jinhae, South Korea
+# note: 20261014 umbenannt "Jinhae" -> "Jinhae (Hyeon-dong)", Unterscheidung von Jinhae (Myeong-dong) (Oliver).
+Jinhae (Hyeon-dong), South Korea
 +00:00 :Asia/Seoul
 0.9673 meters
 J1              0.0051  35.80
@@ -293333,13 +293334,13 @@ x 0 0
 # sonel_tg_id: 3121
 # scheitelfit: tafeln=2772 (2025-2026) konst=67 tafel_rms_2026=0.009m (vorher 0.116m) zeitfehler=1min
 # !units: meters
-# !longitude: 128.4293
-# !latitude: 34.8360
+# !longitude: 128.4222
+# !latitude: 34.8389
 # province: South Gyeongsang
 # admin1_quelle: Ufer 0.8 km
 # note: 20261013 Position 34.833333/128.433333 -> 34.8360/128.4293 Tongyeong (GeoNames PRT, 0.47 km) (Oliver).
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.009 statt 0.116 m (Oliver).
-Tongyeong, South Korea
+Tongyeong (Hangnam-dong), South Korea
 +00:00 :Asia/Seoul
 1.4070 meters
 J1              0.0081  69.44
@@ -294120,13 +294121,14 @@ x 0 0
 # sonel_tg_id: 2917
 # scheitelfit: tafeln=2794 (2025-2026) konst=67 tafel_rms_2026=0.011m (vorher 0.106m) zeitfehler=1min
 # !units: meters
-# !longitude: 127.7612
-# !latitude: 34.7507
+# !longitude: 127.7610
+# !latitude: 34.7510
 # region: South Jeolla
 # admin1_quelle: Ufer 2.1 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.011 statt 0.106 m (Oliver).
 # note: 20261013 Position 34.750000/127.766667 -> 34.7507/127.7612 vom identischen KHOA-Satz "Yeosu Sinhang Bangpaje" (Oliver).
-Yeosu, South Korea
+# note: 20261014 umbenannt "Yeosu" -> "Yeosu Sinhang" (Neuer Hafen, Pegel am gelben Leuchtturm) (Oliver).
+Yeosu Sinhang, South Korea
 +00:00 :Asia/Seoul
 1.8044 meters
 J1              0.0107  77.64
@@ -294915,13 +294917,13 @@ x 0 0
 # sonel_tg_id: 2911
 # scheitelfit: tafeln=2797 (2025-2026) konst=67 tafel_rms_2026=0.009m (vorher 0.087m) zeitfehler=2min
 # !units: meters
-# !longitude: 126.5450
-# !latitude: 33.5259
+# !longitude: 126.5460
+# !latitude: 33.5261
 # region: Jeju-do
 # admin1_quelle: Name
 # note: 20261013 Position 33.5275/126.5431 -> 33.5259/126.5450 Jeju Port (GeoNames PRT, 0.25 km) (Oliver).
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.009 statt 0.087 m (Oliver).
-Jeju, Jeju-do, South Korea
+Jeju-hang (Jeju-do), South Korea
 +00:00 :Asia/Seoul
 1.6008 meters
 J1              0.0119  101.16
@@ -295117,7 +295119,8 @@ x 0 0
 # admin1_quelle: Name
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.007 statt 0.086 m (Oliver).
 # note: 20261013 Position 33.4667/126.9333 (Buchraster) -> 33.4733/126.9345 Anleger ferry_terminal (OSM, 0.75 km).
-Seongsan, Jeju-do, South Korea
+# note: 20261014 umbenannt "Seongsan" -> "Seongsanpo-hang (Jeju-do)": Pegel am Faehrhafen Seongsanpo (Oliver).
+Seongsanpo-hang (Jeju-do), South Korea
 +00:00 :Asia/Seoul
 1.3310 meters
 J1              0.0117  99.65
@@ -295317,7 +295320,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20261013 Position 33.2332/126.5673 -> 33.2375/126.5645 Seogwipohang (GeoNames HBR, 0.54 km) (Oliver).
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.008 statt 0.107 m (Oliver).
-Seogwipo, Jeju-do, South Korea
+Seogwipo (Jeju-do), South Korea
 +00:00 :Asia/Seoul
 1.6498 meters
 J1              0.0138  92.80
@@ -295515,7 +295518,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.011 statt 0.080 m (Oliver).
 # note: 20261013 Position 33.2167/126.2500 (Buchraster) -> 33.2164/126.2503 Anleger ferry_terminal (OSM, 0.04 km).
-Moseulpo, Jeju-do, South Korea
+Moseulpo (Jeju-do), South Korea
 +00:00 :Asia/Seoul
 1.4659 meters
 J1              0.0136  113.03
@@ -296895,8 +296898,8 @@ x 0 0
 # psmsl_id: 1527
 # scheitelfit: tafeln=2804 (2025-2026) konst=67 tafel_rms_2026=0.021m (vorher 0.164m) zeitfehler=2min
 # !units: meters
-# !longitude: 126.566667
-# !latitude: 35.983333
+# !longitude: 126.5261
+# !latitude: 35.9731
 # province: North Jeolla
 # admin1_quelle: Ufer 4.1 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.021 statt 0.164 m (Oliver).
@@ -301027,8 +301030,8 @@ x 0 0
 # sonel_tg_id: 3123
 # scheitelfit: tafeln=1947 (2025-2026) konst=67 tafel_rms_2026=0.003m (vorher 0.019m) zeitfehler=7min
 # !units: meters
-# !longitude: 129.383333
-# !latitude: 36.050000
+# !longitude: 129.3801
+# !latitude: 36.0464
 # region: North Gyeongsang
 # admin1_quelle: Ufer 0.6 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.003 statt 0.019 m (Oliver).
@@ -301226,15 +301229,15 @@ x 0 0
 # sonel_tg_id: 2913
 # scheitelfit: tafeln=2542 (2025-2026) konst=67 tafel_rms_2026=0.004m (vorher 0.055m) zeitfehler=2min
 # !units: meters
-# !longitude: 129.3886
-# !latitude: 35.5176
+# !longitude: 129.3858
+# !latitude: 35.5159
 # region: Ulsan
 # admin1_quelle: Polygon
 # note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 35.5000/129.3833,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 # note: 20261013 Position 35.501800/129.387300 -> 35.5176/129.3886 Ulsanbonhang (GeoNames HBR, 1.76 km) (Oliver).
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.004 statt 0.055 m (Oliver).
-Ulsan, South Korea
+Ulsan (Maeam-dong), South Korea
 +00:00 :Asia/Seoul
 0.2987 meters
 J1              0.0019  322.95
@@ -301817,14 +301820,15 @@ x 0 0
 # khoa_code: 231
 # scheitelfit: tafeln=2801 (2025-2026) konst=67 tafel_rms_2026=0.021m (vorher 0.184m) zeitfehler=2min
 # !units: meters
-# !longitude: 126.2283
-# !latitude: 36.9139
+# !longitude: 126.2357
+# !latitude: 36.9120
 # province: South Chungcheong
 # admin1_quelle: Ufer 1.4 km
 # note: 20261013 Position 36.916667/126.238611 -> 36.9139/126.2283 Taean-hang (GeoNames HBR, 0.96 km) (Oliver).
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.021 statt 0.184 m (Oliver).
 # note: 20261013 umbenannt "Taean" -> "Taean (Banggal-ri)": Dorf Banggal-ri, Kreis Taean (OSM) (Oliver).
-Taean (Banggal-ri), South Korea
+# note: 20261014 Taean (Banggal-ri) -> Taean Power Plant (Banggal-ri): Pegel am Waermekraftwerk Taean (Oliver).
+Taean Power Plant (Banggal-ri), South Korea
 +00:00 :Asia/Seoul
 3.8767 meters
 J1              0.0167  188.90
@@ -303187,12 +303191,13 @@ x 0 0
 # khoa_code: 391
 # scheitelfit: tafeln=2737 (2025-2026) konst=67 tafel_rms_2026=0.007m (vorher 0.123m) zeitfehler=1min
 # !units: meters
-# !longitude: 128.721837
-# !latitude: 35.095378
+# !longitude: 128.7222
+# !latitude: 35.0963
 # province: South Gyeongsang
 # admin1_quelle: Ufer 1.2 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.007 statt 0.123 m (Oliver).
-Jinhae Dongseom, South Korea
+# note: 20261014 umbenannt "Jinhae Dongseom" -> "Jinhae (Myeong-dong)": Dongseom ist nur ein Fels, Myeong-dong der Ort am Pegel (Oliver).
+Jinhae (Myeong-dong), South Korea
 +00:00 :Asia/Seoul
 1.0552 meters
 J1              0.0048  51.90

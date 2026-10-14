@@ -81766,8 +81766,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.4833
-# !latitude: 35.1000
+# !longitude: 128.4808
+# !latitude: 35.0990
 # region: South Gyeongsang
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.82 auf den Springhub des Buchs (cptt-1029); der Bau
@@ -81777,7 +81777,8 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -2.02 Punkte.
 # note: 20261013 Regionsvergleich: O1 0.027->0.043 nach Masan / Jinhae (interpoliert); Phasen unveraendert (Oliver).
 # note: 20261014 Zusatz "Busan" entfernt (liegt nicht in Busan) (Oliver).
-Unp'ung-p'o, Chinhae-man, South Korea
+# note: 20261014 umbenannt "Unp'ung-p'o" -> "Gohyeon-ri (Jinhae-man)": Dorf am Pegel, Bucht in RR-Umschrift (Oliver).
+Gohyeon-ri (Jinhae-man), South Korea
 +00:00 :Asia/Seoul
 1.1278 meters
 J1              0.0017  22.75
@@ -83005,7 +83006,7 @@ x 0 0
 # note: Zielwert F=0.21 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 4.78 -> 4.62 %.
 # note: 20261013 Position 34.9167/128.3500 -> 34.9315/128.3256 Kosng-man (GeoNames BAY, 2.77 km) (Oliver).
 # note: 20261013 umbenannt "Kosong-man, Busan" -> "Goseong-man" (GeoNames, heutige Umschrift); region South Gyeongsang (Oliver).
-Goseong-man, South Korea
+Goseong-man (Goseong-gun), South Korea
 +00:00 :Asia/Seoul
 1.5850 meters
 J1              0.0127  86.37
@@ -83193,7 +83194,7 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 128.0457
-# !latitude: 34.7237
+# !latitude: 34.7165
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -83806,8 +83807,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 127.8833
-# !latitude: 34.9500
+# !longitude: 127.8755
+# !latitude: 34.9427
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -84823,8 +84824,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 126.6106
-# !latitude: 34.1377
+# !longitude: 126.6337
+# !latitude: 34.1490
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name

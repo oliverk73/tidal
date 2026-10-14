@@ -213,7 +213,7 @@ def pruefe(name, lat, lon):
         if 'island' in o['art'] or re.search(r'(do|seom|to)$', norm(t)):
             return 10000   # Inseln: Abstand zur Inselmitte, Station liegt an der Kueste
         if norm(t) in {norm(x) for x in toks[:1]} and any(norm(w) in GENERISCH for w in haupt.split()):
-            return 10000   # "Gunsan Naehang": Stadt als Vorsatz vor einer Hafenbezeichnung
+            return 15000   # "Gunsan Naehang/Oehang": Stadt als Vorsatz vor einer Hafenbezeichnung (Aussenhafen liegt weit draussen)
         return GRENZE.get(o['art'], 2500)
     nah = [t for t, x in naechste.items() if x and x[0] <= grenze(t, x[2])]
     if not nah:
@@ -319,6 +319,13 @@ if __name__ == '__main__':
                 quelle = lambda s_: os.path.basename(s_['file']).replace('harmonics_', '').replace('.txt', '')
                 proz[a['name']]['befunde'].append('%s mit "%s" (%s): %.1f km, Kurvenabweichung %.0f %% [%s]; %s gegen %s' % (
                     art_, b['name'], quelle(b), D.km(a, b), 100 * D.abw(a, b), D.detail(a, b), quelle(a), quelle(b)))
+    # Von Oliver bestaetigte Befunde nicht mehr melden (harmonics/help/pruefliste_bestaetigt.csv: satz;befund;notiz)
+    bpfad = os.path.join(ROOT, 'harmonics/help/pruefliste_bestaetigt.csv')
+    if os.path.exists(bpfad):
+        import csv as _csv
+        best = [(r_['satz'], r_['befund']) for r_ in _csv.DictReader(open(bpfad, encoding='utf-8'), delimiter=';')]
+        for z in zeilen:
+            z['befunde'] = [b for b in z['befunde'] if not any(z['satz'] == s_ and b.startswith(p_) for s_, p_ in best)]
     stem = 'harmonics/help/pruefliste_%s_%s' % (re.sub(r'\W+', '_', land.lower()), date.today().strftime('%Y%m%d'))
     json.dump(zeilen, open(os.path.join(ROOT, stem + '.json'), 'w'), ensure_ascii=False, indent=0)
     html(zeilen, land, os.path.join(ROOT, stem + '.html'))

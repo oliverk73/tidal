@@ -28250,12 +28250,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 2
 # !units: meters
-# !longitude: 129.4333
-# !latitude: 37.0500
+# !longitude: 129.4220
+# !latitude: 37.0537
 # province: North Gyeongsang
 # admin1_quelle: Ufer 0.5 km
 # note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
-Jukbyeon, South Korea
+# note: 20261014 Jukbyeon -> Jukbyeon-hang (Hafen statt Gemeindename) (Oliver).
+Jukbyeon-hang, South Korea
 +09:00 :Asia/Seoul
 0.1300 meters
 x 0 0
@@ -28443,8 +28444,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 2
 # !units: meters
-# !longitude: 128.8310
-# !latitude: 37.8900
+# !longitude: 128.8319
+# !latitude: 37.8869
 # province: Gangwon
 # admin1_quelle: Polygon
 # note: 20261013 Position 37.8833/128.8333 -> 37.8900/128.8310 Chumunjin-hang (GeoNames HBR, 0.77 km) (Oliver).
