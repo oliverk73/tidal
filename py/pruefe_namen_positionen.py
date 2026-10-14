@@ -267,7 +267,8 @@ def pruefe(name, lat, lon):
 def html(zeilen, land, pfad):
     import html as H
     GRUPPEN = [('KOPIE', 'Identische Tafel (Kopie)'), ('AEHNLICH', 'Aehnlicher Satz am selben Ort/Namen (andere Quelle) -- Qualitaet vergleichen'),
-               ('PRUEFEN', 'Gleicher Ort/Name, Kurven widersprechen sich'),('LAND', 'Position an Land'), ('MEER', 'Position auf dem Meer'), ('NAME passt', 'Name passt nicht zur Position'),
+               ('PRUEFEN', 'Gleicher Ort/Name, Kurven widersprechen sich'),
+               ('ZEIT', 'Tidenzeiten gegen die Landesquelle verschoben (FES erklaert es nicht)'),('LAND', 'Position an Land'), ('MEER', 'Position auf dem Meer'), ('NAME passt', 'Name passt nicht zur Position'),
                ('NAME nicht', 'Name nicht gefunden'), ('NAME nur', 'Nur Stadt-/Kreisname, Ortsteil fehlt'), ('UMSCHRIFT', 'Umschrift weicht von RR ab'),
                ('GEWAESSER', 'Gewaessername statt Insel/Ort'), ('ANLEGER', 'Anleger in der Naehe (Feinschliff, niedrige Prioritaet)')]
     osm = lambda la, lo: 'https://www.openstreetmap.org/?mlat=%.5f&mlon=%.5f#map=16/%.5f/%.5f' % (la, lo, la, lo)
@@ -319,6 +320,11 @@ if __name__ == '__main__':
                 quelle = lambda s_: os.path.basename(s_['file']).replace('harmonics_', '').replace('.txt', '')
                 proz[a['name']]['befunde'].append('%s mit "%s" (%s): %.1f km, Kurvenabweichung %.0f %% [%s]; %s gegen %s' % (
                     art_, b['name'], quelle(b), D.km(a, b), 100 * D.abw(a, b), D.detail(a, b), quelle(a), quelle(b)))
+    # Zeitversatz von Uebertragungssaetzen gegen Pegel der Landesquelle (py/zeit_pruefung.py)
+    import zeit_pruefung as Z
+    for n_, txt_ in Z.pruefe(land, sorted({r['file'] for r in rs})).items():
+        if n_ in proz:
+            proz[n_]['befunde'].append(txt_)
     # Von Oliver bestaetigte Befunde nicht mehr melden (harmonics/help/pruefliste_bestaetigt.csv: satz;befund;notiz)
     bpfad = os.path.join(ROOT, 'harmonics/help/pruefliste_bestaetigt.csv')
     if os.path.exists(bpfad):
