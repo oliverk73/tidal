@@ -81776,7 +81776,8 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -2.02 Punkte.
 # note: 20261013 Regionsvergleich: O1 0.027->0.043 nach Masan / Jinhae (interpoliert); Phasen unveraendert (Oliver).
-Unp'ung-p'o, Chinhae-man, Busan, South Korea
+# note: 20261014 Zusatz "Busan" entfernt (liegt nicht in Busan) (Oliver).
+Unp'ung-p'o, Chinhae-man, South Korea
 +00:00 :Asia/Seoul
 1.1278 meters
 J1              0.0017  22.75
@@ -82160,8 +82161,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.5947
-# !latitude: 34.7286
+# !longitude: 128.6005
+# !latitude: 34.7276
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -82179,112 +82180,49 @@ x 0 0
 # note: Zielwert F=0.21 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 6.55 -> 6.31 %.
 # note: 20261013 Position 34.7167/128.6000 -> 34.7286/128.5947 Tokkuri-mang (GeoNames BAY, 1.41 km) (Oliver).
 # note: 20261013 Regionsvergleich: M2 0.745->0.601, K1 0.141->0.089, O1 0.084->0.055 nach Chise P'o / Tongyeong Jukdo (interpoliert); Phasen unveraendert (Oliver).
-Choguri-man, Koje-do, Busan, South Korea
+# note: 20261014 Zusatz "Busan" entfernt (liegt nicht in Busan) (Oliver).
+# note: 20261014 Choguri-man, Koje-do -> Myeongsa (Geojedo) (Oliver).
+# note: 20261014 neu von Tongyeong (KHOA) mit Buchdifferenzen cptt-1035 zu Ch'ungmu-hang: dt -16.0 min, Hub x0.931 (Oliver).
+Myeongsa (Geojedo), South Korea
 +00:00 :Asia/Seoul
-1.3411 meters
-J1              0.0067  82.34
-K1              0.0887  39.68
-K2              0.0769  19.68
-L2              0.0162  354.23
+1.3172 meters
+J1              0.0075  65.28
+K1              0.1324  40.76
+K2              0.0906  0.36
+L2              0.0111  318.22
 x 0 0
-M2              0.6013  350.45
-M3              0.0048  292.48
-M4              0.0267  231.59
-M6              0.0034  95.32
-M8              0.0001  308.56
-N2              0.1047  339.18
-2N2             0.0084  323.20
-O1              0.0549  7.49
-OO1             0.0026  138.87
-P1              0.0253  43.83
-Q1              0.0088  356.03
-2Q1             0.0012  316.41
-R2              0.0029  257.64
+M2              0.6845  343.17
+M3              0.0158  310.35
+M4              0.0187  66.50
+M6              0.0027  354.67
+M8              0.0007  176.17
+N2              0.1422  338.74
+2N2             0.0252  328.72
+O1              0.0887  18.97
+OO1             0.0050  97.63
+P1              0.0453  39.50
+Q1              0.0184  6.68
+2Q1             0.0006  324.00
+R2              0.0124  317.32
 x 0 0
-S2              0.2625  25.22
-S4              0.0025  296.46
+S2              0.3201  8.94
+S4              0.0013  161.61
 x 0 0
-T2              0.0157  15.17
-LDA2            0.0052  331.76
-MU2             0.0211  19.85
-NU2             0.0194  332.68
-RHO1            0.0010  76.01
-MK3             0.0045  205.07
+T2              0.0229  0.89
+LDA2            0.0050  256.47
+MU2             0.0362  326.23
+NU2             0.0223  344.56
+RHO1            0.0026  20.52
+MK3             0.0047  80.62
 x 0 0
-MN4             0.0085  214.00
-MS4             0.0212  268.22
-2SM2            0.0040  220.01
-MF              0.0202  171.38
-MSF             0.0544  65.44
-MM              0.0160  307.95
+MN4             0.0076  56.49
+MS4             0.0078  97.88
+2SM2            0.0065  106.63
+MF              0.0039  22.43
+MSF             0.0169  157.80
+MM              0.0077  207.33
 x 0 0
-SSA             0.0378  54.52
-SA-IOS          0.0895  241.58
-x 0 0
-S1-IOS          0.0106  164.15
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK6            0.0018  151.06
-x 0 0
-2MN6            0.0020  47.93
-2MS6            0.0041  164.23
-x 0 0
-2SK5            0.0001  256.78
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0001  109.99
-x 0 0
-x 0 0
-BET1            0.0001  322.00
-CHI1            0.0019  78.82
-H1              0.0002  200.03
-H2              0.0001  156.32
-x 0 0
-ETA2            0.0050  48.76
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MK4             0.0062  253.00
-MKS2            0.0023  31.14
-x 0 0
-EPS2            0.0050  48.99
-MO3             0.0015  139.83
-x 0 0
-TAU1            0.0119  303.06
-x 0 0
-MSK6            0.0018  205.06
-MSM             0.0002  262.14
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0104  78.94
-OP2             0.0096  260.08
-x 0 0
-PHI1            0.0038  357.38
-x 0 0
-PI1             0.0051  84.86
-x 0 0
-PSI1            0.0019  243.12
-x 0 0
-x 0 0
-SIG1            0.0031  99.03
-SK3             0.0027  92.14
-x 0 0
-SN4             0.0033  241.63
-x 0 0
-SO1             0.0084  185.61
-SO3             0.0025  292.03
-THE1            0.0043  80.71
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0001  106.49
+SSA             0.0075  197.40
 x 0 0
 x 0 0
 x 0 0
@@ -82292,8 +82230,74 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+2MK6            0.0007  155.40
 x 0 0
-N4              0.0001  291.13
+2MN6            0.0037  262.15
+2MS6            0.0043  28.01
+x 0 0
+2SK5            0.0002  22.29
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+3MS4            0.0006  12.15
+x 0 0
+x 0 0
+BET1            0.0003  144.10
+CHI1            0.0020  44.53
+H1              0.0058  139.32
+H2              0.0215  55.02
+x 0 0
+ETA2            0.0088  19.89
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+MK4             0.0033  72.66
+MKS2            0.0026  48.54
+x 0 0
+EPS2            0.0133  311.53
+MO3             0.0063  98.48
+x 0 0
+TAU1            0.0023  17.50
+x 0 0
+MSK6            0.0016  50.60
+MSM             0.0003  161.16
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0068  34.92
+OP2             0.0020  308.02
+x 0 0
+PHI1            0.0045  51.38
+x 0 0
+PI1             0.0028  49.39
+x 0 0
+PSI1            0.0007  249.72
+x 0 0
+x 0 0
+SIG1            0.0022  42.73
+SK3             0.0068  104.56
+x 0 0
+SN4             0.0005  106.20
+x 0 0
+SO1             0.0038  128.44
+SO3             0.0048  40.55
+THE1            0.0027  48.52
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0004  240.63
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N4              0.0003  290.70
 x 0 0
 x 0 0
 x 0 0
@@ -82366,8 +82370,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.5664
-# !latitude: 34.8181
+# !longitude: 128.5823
+# !latitude: 34.8464
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -82385,112 +82389,47 @@ x 0 0
 # note: Zielwert F=0.174 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 9.14 -> 8.52 %.
 # note: 20261013 Position 34.8333/128.5833 -> 34.8181/128.5664 Kyosai-wan (GeoNames BAY, 2.29 km) (Oliver).
 # note: 20261013 umbenannt "Koje-man, Koje-do, Busan" -> "Geoje-man (Geojedo)" (GeoNames, heutige Umschrift); region South Gyeongsang (Oliver).
+# note: 20261014 neu von Tongyeong (KHOA) mit Buchdifferenzen cptt-1037 zu Ch'ungmu-hang: dt -13.5 min, Hub x1.000 (Oliver).
 Geoje-man (Geojedo), South Korea
 +00:00 :Asia/Seoul
-1.4326 meters
-J1              0.0094  82.99
-K1              0.1252  40.31
-K2              0.1002  20.94
-L2              0.0216  355.46
+1.4070 meters
+J1              0.0081  65.93
+K1              0.1422  41.39
+K2              0.0973  1.61
+L2              0.0119  319.45
 x 0 0
-M2              0.8000  351.66
-M3              0.0052  294.29
-M4              0.0287  234.01
-M6              0.0036  98.95
-M8              0.0001  313.38
-N2              0.1393  340.37
-2N2             0.0112  324.36
-O1              0.0740  8.07
-OO1             0.0036  139.55
-P1              0.0357  44.45
-Q1              0.0119  356.59
-2Q1             0.0016  316.94
-R2              0.0031  258.89
+M2              0.7352  344.38
+M3              0.0170  312.16
+M4              0.0201  68.92
+M6              0.0029  358.30
+M8              0.0008  181.00
+N2              0.1527  339.92
+2N2             0.0271  329.88
+O1              0.0953  19.55
+OO1             0.0054  98.30
+P1              0.0487  40.12
+Q1              0.0198  7.24
+2Q1             0.0006  324.54
+R2              0.0133  318.57
 x 0 0
-S2              0.3423  26.47
-S4              0.0027  298.96
+S2              0.3438  10.19
+S4              0.0014  164.11
 x 0 0
-T2              0.0210  16.42
-LDA2            0.0070  332.99
-MU2             0.0280  21.02
-NU2             0.0258  333.87
-RHO1            0.0013  76.57
-MK3             0.0048  206.91
+T2              0.0246  2.14
+LDA2            0.0054  257.69
+MU2             0.0389  327.40
+NU2             0.0239  345.74
+RHO1            0.0028  21.08
+MK3             0.0050  82.45
 x 0 0
-MN4             0.0091  216.39
-MS4             0.0227  270.68
-2SM2            0.0043  221.30
-MF              0.0202  171.43
-MSF             0.0544  65.48
-MM              0.0160  307.97
+MN4             0.0082  58.88
+MS4             0.0084  100.34
+2SM2            0.0070  107.92
+MF              0.0042  22.47
+MSF             0.0182  157.84
+MM              0.0083  207.36
 x 0 0
-SSA             0.0378  54.53
-SA-IOS          0.0962  241.58
-x 0 0
-S1-IOS          0.0094  164.77
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK6            0.0019  154.73
-x 0 0
-2MN6            0.0022  51.53
-2MS6            0.0044  167.90
-x 0 0
-2SK5            0.0001  259.91
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0001  112.37
-x 0 0
-x 0 0
-BET1            0.0001  322.60
-CHI1            0.0017  79.43
-H1              0.0002  201.23
-H2              0.0001  157.53
-x 0 0
-ETA2            0.0053  50.03
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MK4             0.0067  255.47
-MKS2            0.0025  32.35
-x 0 0
-EPS2            0.0054  50.13
-MO3             0.0016  141.62
-x 0 0
-TAU1            0.0105  303.65
-x 0 0
-MSK6            0.0019  208.78
-MSM             0.0002  262.16
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0093  79.54
-OP2             0.0103  261.28
-x 0 0
-PHI1            0.0034  358.01
-x 0 0
-PI1             0.0046  85.48
-x 0 0
-PSI1            0.0016  243.75
-x 0 0
-x 0 0
-SIG1            0.0028  99.57
-SK3             0.0029  94.02
-x 0 0
-SN4             0.0035  244.06
-x 0 0
-SO1             0.0075  186.28
-SO3             0.0027  293.86
-THE1            0.0038  81.36
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0001  107.79
+SSA             0.0081  197.40
 x 0 0
 x 0 0
 x 0 0
@@ -82498,8 +82437,74 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+2MK6            0.0008  159.07
 x 0 0
-N4              0.0001  293.50
+2MN6            0.0040  265.75
+2MS6            0.0046  31.68
+x 0 0
+2SK5            0.0002  25.42
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+3MS4            0.0006  14.53
+x 0 0
+x 0 0
+BET1            0.0003  144.70
+CHI1            0.0022  45.14
+H1              0.0062  140.53
+H2              0.0231  56.23
+x 0 0
+ETA2            0.0094  21.17
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+MK4             0.0035  75.12
+MKS2            0.0028  49.75
+x 0 0
+EPS2            0.0143  312.67
+MO3             0.0068  100.27
+x 0 0
+TAU1            0.0025  18.08
+x 0 0
+MSK6            0.0017  54.31
+MSM             0.0003  161.18
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0073  35.53
+OP2             0.0022  309.23
+x 0 0
+PHI1            0.0048  52.01
+x 0 0
+PI1             0.0030  50.01
+x 0 0
+PSI1            0.0008  250.35
+x 0 0
+x 0 0
+SIG1            0.0024  43.27
+SK3             0.0073  106.44
+x 0 0
+SN4             0.0005  108.63
+x 0 0
+SO1             0.0041  129.11
+SO3             0.0052  42.38
+THE1            0.0029  49.17
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0004  241.92
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+N4              0.0003  293.07
 x 0 0
 x 0 0
 x 0 0
@@ -82572,8 +82577,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.2667
-# !latitude: 34.6500
+# !longitude: 128.2666
+# !latitude: 34.6343
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -83393,8 +83398,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.0500
-# !latitude: 35.0500
+# !longitude: 128.0387
+# !latitude: 35.0540
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -83410,7 +83415,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (4).
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.856,
 # note: Zielwert F=0.218 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 8.57 -> 8.39 %.
-Ch'ojon-ni, Busan, South Korea
+Chojeon-ri, South Korea
 +00:00 :Asia/Seoul
 1.8898 meters
 J1              0.0157  92.60
@@ -83597,8 +83602,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 127.8500
-# !latitude: 34.7667
+# !longitude: 127.8491
+# !latitude: 34.7677
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -83614,7 +83619,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (5).
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.890,
 # note: Zielwert F=0.223 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 4.30 -> 4.16 %.
-P'yougsan-ni, Namhae-do, Busan, South Korea
+Pyeongsan-ri (Namhaedo), South Korea
 +00:00 :Asia/Seoul
 1.7983 meters
 J1              0.0154  85.33
@@ -83729,211 +83734,6 @@ x 0 0
 x 0 0
 x 0 0
 N4              0.0001  302.03
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: South Korea
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 1057
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Luhuashan, Zhejiang, China (no.1057). M2=1.16 S2=0.30 k=0.98 dt=-46min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 127.7500
-# !latitude: 34.8500
-# fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
-# region: South Jeolla
-# admin1_quelle: Name
-# note: 20260911 Bezugsort berichtigt: das Buch nennt "Ch'ang Chiang Approach"
-# note: -- gemeint ist Ch'ang Chiang Approach (Side Saddle); der Import hatte per
-# note: -- Namensgleichheit "Changjiang Ao, China" genommen.
-# note: -- Neu uebertragen, Zonendifferenz des Buches -1.00 h.
-# note: -- Siehe py/noaa_referenz_verwechslung.py.
-# note: 20260913 S2/K2 x 1.75 auf den Springhub des Buchs (cptt-1057); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Luhuashan, Zhejiang, China [harmonics_utide_tidetables.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (5).
-# note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.873,
-# note: Zielwert F=0.222 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 5.84 -> 5.63 %.
-# note: 20261013 umbenannt "Kwangyang-man, Busan" -> "Gwangyang-man" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Gwangyang-man, South Korea
-+00:00 :Asia/Seoul
-1.9202 meters
-J1              0.0164  90.14
-K1              0.2189  47.20
-K2              0.1453  34.72
-L2              0.0290  9.00
-x 0 0
-M2              1.0759  4.94
-M3              0.0070  314.22
-M4              0.0386  260.58
-M6              0.0049  138.80
-M8              0.0001  6.52
-N2              0.1874  353.40
-2N2             0.0151  337.15
-O1              0.1295  14.46
-OO1             0.0064  146.94
-P1              0.0625  51.31
-Q1              0.0208  2.73
-2Q1             0.0028  322.83
-R2              0.0042  272.66
-x 0 0
-S2              0.4964  40.22
-S4              0.0036  326.46
-x 0 0
-T2              0.0282  30.15
-LDA2            0.0094  346.49
-MU2             0.0376  33.84
-NU2             0.0347  346.94
-RHO1            0.0023  82.75
-MK3             0.0064  227.09
-x 0 0
-MN4             0.0122  242.71
-MS4             0.0306  297.71
-2SM2            0.0058  235.52
-MF              0.0202  171.93
-MSF             0.0544  65.95
-MM              0.0160  308.22
-x 0 0
-SSA             0.0378  54.56
-SA-IOS          0.1293  241.60
-x 0 0
-S1-IOS          0.0164  171.65
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK6            0.0025  195.09
-x 0 0
-2MN6            0.0029  91.14
-2MS6            0.0060  208.22
-x 0 0
-2SK5            0.0001  294.30
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0001  138.47
-x 0 0
-x 0 0
-BET1            0.0002  329.20
-CHI1            0.0030  86.11
-H1              0.0003  214.50
-H2              0.0002  170.83
-x 0 0
-ETA2            0.0072  64.07
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MK4             0.0090  282.54
-MKS2            0.0034  45.68
-x 0 0
-EPS2            0.0073  62.70
-MO3             0.0022  161.29
-x 0 0
-TAU1            0.0183  310.07
-x 0 0
-MSK6            0.0025  249.60
-MSM             0.0002  262.37
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0161  86.19
-OP2             0.0139  274.53
-x 0 0
-PHI1            0.0059  4.95
-x 0 0
-PI1             0.0080  92.32
-x 0 0
-PSI1            0.0029  250.66
-x 0 0
-x 0 0
-SIG1            0.0048  105.49
-SK3             0.0039  114.66
-x 0 0
-SN4             0.0047  270.85
-x 0 0
-SO1             0.0130  193.64
-SO3             0.0036  314.00
-THE1            0.0067  88.47
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0001  122.04
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0001  319.57
 x 0 0
 x 0 0
 x 0 0
@@ -84211,8 +84011,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 127.5667
-# !latitude: 34.6333
+# !longitude: 127.5550
+# !latitude: 34.6391
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -84229,7 +84029,8 @@ x 0 0
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.882,
 # note: Zielwert F=0.223 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 8.46 -> 8.31 %.
 # note: 20261013 umbenannt "Chobal-to, Yoja-man, Jeju-do" -> "Jobaldo (Yeoja-man)" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Jobaldo (Yeoja-man), South Korea
+# note: 20261014 umbenannt "Jobaldo (Yeoja-man)" -> "Jobaldo" (Bucht in OSM unbenannt, Insel eindeutig) (Oliver).
+Jobaldo, South Korea
 +00:00 :Asia/Seoul
 2.0117 meters
 J1              0.0170  95.85
@@ -85228,8 +85029,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 126.1500
-# !latitude: 33.3000
+# !longitude: 126.1509
+# !latitude: 33.3110
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: Jeju-do
 # admin1_quelle: Name
@@ -85430,8 +85231,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 126.4833
-# !latitude: 34.3500
+# !longitude: 126.4725
+# !latitude: 34.3485
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -85446,7 +85247,8 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Luhuashan, Zhejiang, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (4).
 # note: 20261013 Regionsvergleich: O1 0.143->0.212 nach Jindo Supum / Jindo (interpoliert); Phasen unveraendert (Oliver).
-Oran-ni, Maro-hae, Jeju-do, South Korea
+# note: 20261014 Zusatz "Jeju-do" entfernt (liegt nicht auf Jeju, Region South Jeolla) (Oliver).
+Eoran-ri, South Korea
 +00:00 :Asia/Seoul
 2.0117 meters
 J1              0.0181  122.22
@@ -85633,8 +85435,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 126.4167
-# !latitude: 34.4500
+# !longitude: 126.4138
+# !latitude: 34.4588
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -85649,7 +85451,8 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Luhuashan, Zhejiang, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
 # note: 20261013 umbenannt "Sangma-do, Samma-do, Jeju-do" -> "Sangmado" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Sangmado, South Korea
+# note: 20261014 Sangmado -> Sangmado (Samma-ri); Position 34.4500/126.4167 (Minutenraster) -> Kueste Dorf Samma-ri 34.4588/126.4138 (Oliver).
+Sangmado (Samma-ri), South Korea
 +00:00 :Asia/Seoul
 2.1336 meters
 J1              0.0197  122.48
@@ -85836,8 +85639,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 126.0500
-# !latitude: 34.5333
+# !longitude: 126.0528
+# !latitude: 34.5490
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -85854,7 +85657,8 @@ x 0 0
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.200,
 # note: Zielwert F=0.329 aus Nachbarn statt F=0.256 des Bezugsorts; Beleg: Nachbarn 7.63 -> 7.62 %.
 # note: 20261013 umbenannt "Hat'ae-do, Naju-kundo, Jeju-do" -> "Hataedo" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Hataedo, South Korea
+# note: 20261014 Hataedo -> Hataeseo-ri (Sinuido): Hataedo ist heute Suedteil von Sinuido; Position 34.5333/126.0500 -> Kueste 34.5490/126.0528 (Oliver).
+Hataeseo-ri (Sinuido), South Korea
 +00:00 :Asia/Seoul
 2.0117 meters
 J1              0.0222  149.49
@@ -86042,7 +85846,7 @@ x 0 0
 # confidence: 4
 # !units: meters
 # !longitude: 126.2000
-# !latitude: 34.5000
+# !latitude: 34.5053
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -86057,7 +85861,9 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Luhuashan, Zhejiang, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (5).
 # note: 20261013 Regionsvergleich: O1 0.152->0.209 nach Usuyong / Jindo (interpoliert); Phasen unveraendert (Oliver).
-Chin-do, Jeju-do, South Korea
+# note: 20261014 Zusatz "Jeju-do" entfernt (liegt nicht auf Jeju, Region South Jeolla) (Oliver).
+# note: 20261014 Chin-do -> Swimihang (Jindo); Position 34.5000/126.2000 (Meer zwischen Swimi und Sopo) -> Anleger Swimihang 34.5053/126.2000 (Oliver).
+Swimihang (Jindo), South Korea
 +00:00 :Asia/Seoul
 2.0726 meters
 J1              0.0193  163.52
@@ -86445,8 +86251,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 126.2500
-# !latitude: 34.7000
+# !longitude: 126.2427
+# !latitude: 34.6978
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -86459,7 +86265,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261013 umbenannt "Siha-do, Jeju-do" -> "Sihado" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Sihado, South Korea
+Chiha-ri (Sihado), South Korea
 +00:00 :Asia/Seoul
 2.1641 meters
 J1              0.0224  165.07
@@ -86847,8 +86653,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 126.1000
-# !latitude: 34.8833
+# !longitude: 126.0954
+# !latitude: 34.8761
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -86861,7 +86667,9 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261013 umbenannt "Chaun-do, Naju-kundo, Jeju-do" -> "Jaeundo" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Jaeundo, South Korea
+# note: 20261014 Position 34.8833/126.1000 (Minutenraster) -> Anleger Yucheon-ri, Ostkueste Jaeundo 34.8761/126.0954 (Google 8Q68V3GW+C5) (Oliver).
+# note: 20261014 Jaeundo -> Jaeundo (Yucheon-ri) (Oliver).
+Jaeundo (Yucheon-ri), South Korea
 +00:00 :Asia/Seoul
 2.4689 meters
 J1              0.0260  165.07
@@ -87048,8 +86856,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 126.0833
-# !latitude: 35.0500
+# !longitude: 126.1219
+# !latitude: 35.0814
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -87062,7 +86870,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261013 umbenannt "Imja-do, Jeju-do" -> "Imjado" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Imjado, South Korea
+Imjado (Jinli Dock), South Korea
 +00:00 :Asia/Seoul
 2.4384 meters
 J1              0.0263  171.05
@@ -87249,8 +87057,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 126.3500
-# !latitude: 35.1500
+# !longitude: 126.3595
+# !latitude: 35.1681
 # region: South Jeolla
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.88 auf den Springhub des Buchs (cptt-1117); der Bau
@@ -87261,7 +87069,8 @@ x 0 0
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.478,
 # note: Zielwert F=0.249 aus Nachbarn statt F=0.158 des Bezugsorts; Beleg: Nachbarn 10.67 -> 10.62 %.
 # note: 20261013 umbenannt "Hamp'yong-man, Jeju-do" -> "Hampyeong-man" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Hampyeong-man, South Korea
+# note: 20261014 Hampyeong-man -> Hyanghwado-hang (Hampyeong-man); Position 35.1500/126.3500 (Buchtmuendung) -> Faehrhafen 35.1681/126.3595 (OSM) (Oliver).
+Hyanghwado-hang (Hampyeong-man), South Korea
 +00:00 :Asia/Seoul
 3.1394 meters
 J1              0.0188  143.42
@@ -87448,8 +87257,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 126.4000
-# !latitude: 35.8167
+# !longitude: 126.3947
+# !latitude: 35.8103
 # region: North Jeolla
 # admin1_quelle: Ufer 17.8 km
 # note: 20260913 S2/K2 x 1.88 auf den Springhub des Buchs (cptt-1121); der Bau
@@ -87458,7 +87267,7 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Inch'on, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
 # note: 20261013 umbenannt "Kogunsan-kundo" -> "Gogunsan-gundo" (GeoNames, heutige Umschrift); region North Jeolla (Oliver).
-Gogunsan-gundo, South Korea
+Jangjado (Gogunsan-gundo), South Korea
 +00:00 :Asia/Seoul
 3.3528 meters
 J1              0.0138  153.03
@@ -88286,202 +88095,6 @@ x 0 0
 x 0 0
 MN4             0.0312  249.97
 MS4             0.0786  330.75
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.2110  2.63
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: South Korea
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 1145
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Incheon, South Korea (no.1145). M2=3.16 S2=0.70 k=1.11 dt=+6min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 126.5819
-# !latitude: 37.4936
-# region: Incheon
-# admin1_quelle: Name
-# note: 20260913 S2/K2 x 1.90 auf den Springhub des Buchs (cptt-1145); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.394. Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Inch'on, South Korea [harmonics-1997-05-25_mod.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
-Yeongjongdo (Yeomha), South Korea
-+00:00 :Asia/Seoul
-4.7549 meters
-J1              0.0200  184.59
-K1              0.3940  170.13
-K2              0.3118  293.07
-L2              0.0720  252.20
-M1              0.0180  155.48
-M2              2.8620  239.04
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.5050  225.89
-2N2             0.0670  212.73
-O1              0.2520  140.91
-OO1             0.0110  199.36
-P1              0.1300  167.97
-Q1              0.0500  119.75
-2Q1             0.0070  111.90
-R2              0.0090  291.04
-x 0 0
-S2              1.1446  289.00
-x 0 0
-x 0 0
-T2              0.0660  286.96
-LDA2            0.0200  262.25
-MU2             0.0690  189.08
-NU2             0.0980  227.64
-RHO1            0.0100  128.40
-x 0 0
-x 0 0
-MN4             0.0330  261.93
-MS4             0.0830  343.04
 x 0 0
 x 0 0
 x 0 0

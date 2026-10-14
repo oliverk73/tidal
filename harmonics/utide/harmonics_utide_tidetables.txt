@@ -293529,13 +293529,14 @@ x 0 0
 # khoa_code: 31
 # scheitelfit: tafeln=2757 (2025-2026) konst=67 tafel_rms_2026=0.009m (vorher 0.158m) zeitfehler=1min
 # !units: meters
-# !longitude: 128.0705
-# !latitude: 34.9230
+# !longitude: 128.0699
+# !latitude: 34.9241
 # province: South Gyeongsang
 # admin1_quelle: Ufer 1.3 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.009 statt 0.158 m (Oliver).
 # note: 20261013 Position 34.916667/128.066667 -> 34.9230/128.0705 vom identischen KHOA-Satz "Samcheonpo Bangpaje" (Oliver).
-Samcheonpo, South Korea
+# note: 20261014 Samcheonpo -> Samcheonpo (Seogeum-dong) (Abgrenzung zu Samcheonpo Sinhang) (Oliver).
+Samcheonpo (Seogeum-dong), South Korea
 +00:00 :Asia/Seoul
 1.5821 meters
 J1              0.0105  64.97
@@ -293725,12 +293726,12 @@ x 0 0
 # khoa_code: 33
 # scheitelfit: tafeln=2788 (2025-2026) konst=67 tafel_rms_2026=0.010m (vorher 0.117m) zeitfehler=1min
 # !units: meters
-# !longitude: 126.307778
-# !latitude: 34.403025
+# !longitude: 126.3064
+# !latitude: 34.4020
 # region: South Jeolla
 # admin1_quelle: Ufer 0.3 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.010 statt 0.117 m (Oliver).
-Jindo, South Korea
+Uisin-myeon (Jindo), South Korea
 +00:00 :Asia/Seoul
 2.0017 meters
 J1              0.0144  91.44
@@ -293920,12 +293921,12 @@ x 0 0
 # khoa_code: 39
 # scheitelfit: tafeln=2794 (2025-2026) konst=67 tafel_rms_2026=0.010m (vorher 0.126m) zeitfehler=1min
 # !units: meters
-# !longitude: 127.750000
-# !latitude: 34.900000
+# !longitude: 127.7626
+# !latitude: 34.8925
 # region: South Jeolla
 # admin1_quelle: Ufer 5.8 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.010 statt 0.126 m (Oliver).
-Gwangyang, South Korea
+Gwangyang (Geumho-dong), South Korea
 +00:00 :Asia/Seoul
 2.0259 meters
 J1              0.0107  70.37
@@ -294515,13 +294516,14 @@ x 0 0
 # psmsl_id: 1568
 # scheitelfit: tafeln=2792 (2025-2026) konst=67 tafel_rms_2026=0.010m (vorher 0.116m) zeitfehler=1min
 # !units: meters
-# !longitude: 126.7530
-# !latitude: 34.3248
+# !longitude: 126.7598
+# !latitude: 34.3165
 # region: South Jeolla
 # admin1_quelle: Ufer 0.9 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.010 statt 0.116 m (Oliver).
 # note: 20261013 Position 34.316667/126.766667 -> 34.3248/126.7530 vom identischen KHOA-Satz "Wando Bangpaje" (Oliver).
-Wando, South Korea
+# note: 20261014 Wando -> Wando-hang (Hafen statt Insel-/Kreisname) (Oliver).
+Wando-hang, South Korea
 +00:00 :Asia/Seoul
 1.9972 meters
 J1              0.0128  87.47
@@ -295713,7 +295715,7 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.011 statt 0.131 m (Oliver).
 # note: 20261013 Position 34.6833/125.4333 (Buchraster) -> 34.6846/125.4416 Anleger ferry_terminal (OSM, 0.77 km).
-Heuksando, South Korea
+Heuksando (Jin-ri), South Korea
 +00:00 :Asia/Seoul
 1.8481 meters
 J1              0.0163  149.73
@@ -295907,13 +295909,14 @@ x 0 0
 # sonel_tg_id: 2919
 # scheitelfit: tafeln=2770 (2025-2026) konst=67 tafel_rms_2026=0.015m (vorher 0.166m) zeitfehler=1min
 # !units: meters
-# !longitude: 126.3924
-# !latitude: 34.7816
+# !longitude: 126.3844
+# !latitude: 34.7818
 # region: South Jeolla
 # admin1_quelle: Ufer 0.3 km
 # note: 20261013 Position 34.783333/126.383333 -> 34.7816/126.3924 Mokpooehangbudu (GeoNames PRT, 0.85 km) (Oliver).
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.015 statt 0.166 m (Oliver).
-Mokpo, South Korea
+# note: 20261014 Mokpo -> Mokpo (Hang-dong) (Abgrenzung zu Bukhang/Sinhang); Position 34.7816/126.3924 -> Anleger Mokpo-hang 34.7818/126.3844 (Oliver).
+Mokpo (Hang-dong), South Korea
 +00:00 :Asia/Seoul
 2.4081 meters
 J1              0.0155  148.65
@@ -296105,12 +296108,13 @@ x 0 0
 # psmsl_id: 1924
 # scheitelfit: tafeln=2804 (2025-2026) konst=67 tafel_rms_2026=0.022m (vorher 0.156m) zeitfehler=1min
 # !units: meters
-# !longitude: 126.416667
-# !latitude: 35.433333
+# !longitude: 126.4199
+# !latitude: 35.4259
 # province: North Jeolla
 # admin1_quelle: Ufer 1.9 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.022 statt 0.156 m (Oliver).
-Yeonggwang, South Korea
+# note: 20261014 Yeonggwang -> Hanbit Power Plant (Yeonggwang): Pegel KHOA 111 am Kernkraftwerk Hanbit, Stadt 18 km landeinwaerts (Oliver).
+Hanbit Power Plant (Yeonggwang), South Korea
 +00:00 :Asia/Seoul
 3.4232 meters
 J1              0.0206  164.68
@@ -300032,13 +300036,13 @@ x 0 0
 # khoa_code: 184
 # scheitelfit: tafeln=2795 (2025-2026) konst=67 tafel_rms_2026=0.021m (vorher 0.227m) zeitfehler=2min
 # !units: meters
-# !longitude: 126.616667
-# !latitude: 35.966667
+# !longitude: 126.6184
+# !latitude: 35.9706
 # province: North Jeolla
 # admin1_quelle: Polygon
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.021 statt 0.227 m (Oliver).
 # note: 20261013 umbenannt "Gunsan Wharf 1" -> "Gunsan Je1-budu" (koreanische Bezeichnung statt englischem Zusatz) (Oliver).
-Gunsan Je1-budu, South Korea
+Gunsan-hang (1-budu), South Korea
 +00:00 :Asia/Seoul
 3.6200 meters
 J1              0.0157  171.05
@@ -302401,8 +302405,8 @@ x 0 0
 # khoa_code: 235
 # scheitelfit: tafeln=2791 (2025-2026) konst=67 tafel_rms_2026=0.015m (vorher 0.139m) zeitfehler=2min
 # !units: meters
-# !longitude: 127.300000
-# !latitude: 34.716667
+# !longitude: 127.3086
+# !latitude: 34.7193
 # region: South Jeolla
 # admin1_quelle: Ufer 1.0 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.015 statt 0.139 m (Oliver).
@@ -302791,12 +302795,13 @@ x 0 0
 # khoa_code: 268
 # scheitelfit: tafeln=2784 (2025-2026) konst=67 tafel_rms_2026=0.011m (vorher 0.114m) zeitfehler=1min
 # !units: meters
-# !longitude: 127.800000
-# !latitude: 34.433333
+# !longitude: 127.8008
+# !latitude: 34.4318
 # region: South Jeolla
 # admin1_quelle: Ufer 6.4 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.011 statt 0.114 m (Oliver).
-Yeosu Yeondo, South Korea
+# note: 20261014 Yeosu Yeondo -> Yeondo-hang (Sorido) (KHOA 268 Yeosu Yeondo-hang; Yeondo mehrfach, Sorido eindeutig) (Oliver).
+Yeondo-hang (Sorido), South Korea
 +00:00 :Asia/Seoul
 1.6348 meters
 J1              0.0103  80.96
@@ -303377,12 +303382,13 @@ x 0 0
 # khoa_code: 400
 # scheitelfit: tafeln=2761 (2025-2026) konst=67 tafel_rms_2026=0.009m (vorher 0.152m) zeitfehler=1min
 # !units: meters
-# !longitude: 128.083333
-# !latitude: 34.933333
+# !longitude: 128.0881
+# !latitude: 34.9262
 # province: South Gyeongsang
 # admin1_quelle: Polygon
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.009 statt 0.152 m (Oliver).
 # note: 20261013 umbenannt "Samcheonpo New Port" -> "Samcheonpo Sinhang" (koreanische Bezeichnung statt englischem Zusatz) (Oliver).
+# note: 20261014 Position 34.933333/128.083333 (Buchraster, im Stadtgebiet) -> Neuer Hafen 34.9262/128.0881 (Google Maps W3GQ+F7J) (Oliver).
 Samcheonpo Sinhang, South Korea
 +00:00 :Asia/Seoul
 1.5714 meters
@@ -303578,7 +303584,8 @@ x 0 0
 # region: South Jeolla
 # admin1_quelle: Ufer 0.8 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.015 statt 0.136 m (Oliver).
-Wando Sadong, South Korea
+# note: 20261014 Wando Sadong -> Sadong-ri (Pyeongildo): KHOA 413 liegt auf Pyeongildo (Geumil-eup), Wando = Kreisname (Oliver).
+Sadong-ri (Pyeongildo), South Korea
 +00:00 :Asia/Seoul
 1.9202 meters
 J1              0.0144  72.27
@@ -304553,8 +304560,8 @@ x 0 0
 # khoa_code: 516
 # scheitelfit: tafeln=2767 (2025-2026) konst=67 tafel_rms_2026=0.015m (vorher 0.167m) zeitfehler=1min
 # !units: meters
-# !longitude: 126.366667
-# !latitude: 34.800000
+# !longitude: 126.3648
+# !latitude: 34.8043
 # region: South Jeolla
 # admin1_quelle: Ufer 0.3 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.015 statt 0.167 m (Oliver).
