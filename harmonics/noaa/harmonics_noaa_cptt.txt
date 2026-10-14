@@ -82775,8 +82775,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 128.2242
-# !latitude: 34.8441
+# !longitude: 128.2239
+# !latitude: 34.8437
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Gyeongsang
 # admin1_quelle: Name
@@ -84431,7 +84431,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261013 umbenannt "Sonjuk-to, Sonjuk-yolto, Jeju-do" -> "Seonjukdo" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
 # note: 20261013 Position 34.2833/127.3667 (Buchraster) -> 34.2903/127.3599 Anleger pier (OSM, 1.0 km).
-Seonjukdo, South Korea
+Sonjugdo, South Korea
 +00:00 :Asia/Seoul
 1.8288 meters
 J1              0.0177  100.39
@@ -84618,8 +84618,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 127.4500
-# !latitude: 34.4667
+# !longitude: 127.4465
+# !latitude: 34.4735
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -86646,8 +86646,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 125.9333
-# !latitude: 34.7167
+# !longitude: 125.9360
+# !latitude: 34.7156
 # fixes: Gruppen-Shift -48min (empirische Kalibrierung gegen Messnachbarn), 2026-07-19
 # region: South Jeolla
 # admin1_quelle: Name
@@ -86660,7 +86660,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261013 umbenannt "Pigum-sudo, Naju-kundo, Jeju-do" -> "Bigeum-sudo" (GeoNames, heutige Umschrift); region South Jeolla (Oliver).
-Bigeum-sudo, South Korea
+Dochodo (Bigeum-sudo), South Korea
 +00:00 :Asia/Seoul
 2.1946 meters
 J1              0.0227  157.80
@@ -87645,8 +87645,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 126.0667
-# !latitude: 36.2167
+# !longitude: 126.0807
+# !latitude: 36.2239
 # region: South Chungcheong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.89 auf den Springhub des Buchs (cptt-1129); der Bau
