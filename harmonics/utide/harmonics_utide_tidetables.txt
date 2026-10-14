@@ -293140,7 +293140,8 @@ x 0 0
 # province: South Gyeongsang
 # admin1_quelle: Ufer 0.4 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.007 statt 0.094 m (Oliver).
-Tongyeong Jukdo, South Korea
+# note: 20261014 umbenannt "Tongyeong Jukdo" -> "Gohyeon-hang (Geojedo)": Position in der Gohyeon-Bucht, Tiden wie Jinhae-Bucht (Oliver).
+Gohyeon-hang (Geojedo), South Korea
 +00:00 :Asia/Seoul
 1.2128 meters
 J1              0.0052  52.20
@@ -302609,7 +302610,8 @@ x 0 0
 # province: South Gyeongsang
 # admin1_quelle: Ufer 21.8 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.008 statt 0.120 m (Oliver).
-Tongyeong Hongdo, South Korea
+# note: 20261014 umbenannt "Tongyeong Hongdo" -> "Hongdo (Daehan-haehyeop)": Insel in der Koreastrasse, nicht Hongdo/Sinan (Oliver).
+Hongdo (Daehan-haehyeop), South Korea
 +00:00 :Asia/Seoul
 1.1081 meters
 J1              0.0069  70.39
@@ -303584,13 +303586,14 @@ x 0 0
 # khoa_code: 413
 # scheitelfit: tafeln=2784 (2025-2026) konst=67 tafel_rms_2026=0.015m (vorher 0.136m) zeitfehler=2min
 # !units: meters
-# !longitude: 127.083333
-# !latitude: 34.333333
+# !longitude: 127.0800
+# !latitude: 34.3331
 # region: South Jeolla
 # admin1_quelle: Ufer 0.8 km
 # note: 20261013 neu gefittet mit py/scheitelfit.py (HW/LW-Tafel KHOA): Tafelfehler 2026 0.015 statt 0.136 m (Oliver).
 # note: 20261014 Wando Sadong -> Sadong-ri (Pyeongildo): KHOA 413 liegt auf Pyeongildo (Geumil-eup), Wando = Kreisname (Oliver).
-Sadong-ri (Pyeongildo), South Korea
+# note: 20261014 umbenannt -> "Pyeongildo (Sadong-ri)": kleine Insel mit nur einem Pegel, Insel vorne (Oliver).
+Pyeongildo (Sadong-ri), South Korea
 +00:00 :Asia/Seoul
 1.9202 meters
 J1              0.0144  72.27
