@@ -10,7 +10,15 @@ sys.path.insert(0, '/home/oliver/weather/py')
 from hangul_rr import rr, hat_hangul
 
 ROOT = '/home/oliver/weather'
-A = json.load(open(os.environ.get('OSM_AUSZUG', ROOT + '/harmonics/help/osm/kr_auszug.json')))
+# Landesregeln. Korea ist an Olivers Korrekturen geeicht (14.10.2026); andere Laender erst nach Eichung ernst nehmen.
+LAENDER = {
+    'South Korea': dict(iso='KR', auszug='kr_auszug.json', koreanisch=True,
+                        gattung=r'(hang|gang|do|to|ri|ni|li|dong|man|wan|sudo|haehyeop|hae|po|seom|gundo|yeolto|budu|eup|myeon|gun|si)$'),
+    'Philippines': dict(iso='PH', auszug='ph_auszug.json', koreanisch=False, gattung=r'(?!)'),
+}
+LAND = os.environ.get('PRUEF_LAND') or (sys.argv[1] if __name__ == '__main__' and len(sys.argv) > 1 else 'South Korea')
+CFG = LAENDER[LAND]
+A = json.load(open(os.environ.get('OSM_AUSZUG', ROOT + '/harmonics/help/osm/' + CFG['auszug'])))
 ZELLE = 0.05
 
 def xy(lat0, lat, lon):
@@ -75,7 +83,7 @@ def im_gewaesser(lat, lon):
 # --- Infrastruktur (benannt aus Auszug, unbenannt aus Overpass-Cache)
 INFRA = [(o['lat'], o['lon']) for o in A['objekte'] if o['art'] in ('harbour', 'pier', 'breakwater', 'quay', 'ferry_terminal', 'marina', 'power_plant', 'lighthouse')]
 try:
-    INFRA += [(h['lat'], h['lon']) for h in json.load(open(ROOT + '/harmonics/help/geonames/osm_haefen_KR.json'))['haefen']]
+    INFRA += [(h['lat'], h['lon']) for h in json.load(open(ROOT + '/harmonics/help/geonames/osm_haefen_%s.json' % CFG['iso']))['haefen']]
 except Exception:
     pass
 
@@ -115,15 +123,17 @@ for o in A['objekte']:
                          for x in (norm(rr(h_)), norm(rr(h_[:-1]) + rr(h_[-1])))}, rr=norm(rr(o['namen'].get('name:ko') or o['namen'].get('name', ''))) if hat_hangul(o['namen'].get('name:ko') or o['namen'].get('name', '')) else ''))
 try:
     from positionen_geonames import geonames
-    for g in geonames('KR'):
+    for g in geonames(CFG['iso']):
         art = {'P': 'place:gn', 'T': 'island:gn' if g['fcode'].startswith('ISL') else 'terrain:gn', 'H': 'water:gn', 'L': 'area:gn', 'S': 'spot:gn'}.get(g['fcl'])
         if art:
             OBJ.append(dict(art=art, lat=g['lat'], lon=g['lon'], v=set(g['namen']), sk={skelett(x) for x in g['namen']}, anzeige=g['name'], ko='', rr='', rrs=set()))
 except Exception as e:
     print('GeoNames fehlt', e)
 
-GATTUNG = r'(hang|gang|do|to|ri|ni|li|dong|man|wan|sudo|haehyeop|hae|po|seom|gundo|yeolto|budu|eup|myeon|gun|si)$'
-GENERISCH = {'sinhang', 'naehang', 'oehang', 'bukhang', 'guhang', 'je1budu', 'dongbudu', 'bangpaje', 'bangjoje', 'daegyo', 'deungdae',
+GATTUNG = CFG['gattung']
+GENERISCH = {'bay', 'point', 'island', 'islands', 'isla', 'river', 'entrance', 'channel', 'strait', 'sound', 'gulf', 'city', 'north', 'south',
+             'east', 'west', 'pier', 'wharf', 'cove', 'reef', 'islet', 'head', 'cape', 'punta', 'the', 'of', 'de', 'del', 'light', 'anchorage',
+             'passage', 'lagoon', 'creek', 'mouth', 'inner', 'outer', 'approach', 'poblacion', 'puerto', 'port'} | {'sinhang', 'naehang', 'oehang', 'bukhang', 'guhang', 'je1budu', 'dongbudu', 'bangpaje', 'bangjoje', 'daegyo', 'deungdae',
              'powerplant', 'power', 'plant', 'port', 'harbor', 'harbour', 'bridge', 'jejudo', 'busan'}
 
 def treffer(tok, lat, lon, radius_km=40):
@@ -237,7 +247,7 @@ def pruefe(name, lat, lon):
         # Umschrift: Namensteile gegen die RR-Form passender OSM-Objekte in Landesschrift.
         # Gleich, wenn Stamm gleich und die Endung eine RR-Endung ist (do, ri, hang ...; nicht to, ni, kang).
         hier = was_liegt_hier(lat, lon)
-        for t in nah:
+        for t in (nah if CFG['koreanisch'] else []):   # OSM fuehrt auch name:ko fuer Orte im Ausland (Bacolod = 바콜로드)
             nt = norm(t)
             if any(w.lower() in ('power', 'plant', 'port', 'bridge') for w in t.split()):
                 continue
@@ -255,7 +265,7 @@ def pruefe(name, lat, lon):
                 z['befunde'].append('UMSCHRIFT "%s" -- %s = %s' % (t, o['ko'], sorted(o['rrs'], key=len)[-1]))
                 break
         # Nur Stadt-/Kreisname, kein Ortsteil (z. B. "Incheon" -> "Incheon (Wolmido)")
-        if not klammer and len(toks) == 1 and toks[0] == haupt and not re.search(GATTUNG, norm(haupt)):
+        if CFG['koreanisch'] and not klammer and len(toks) == 1 and toks[0] == haupt and not re.search(GATTUNG, norm(haupt)):
             stadt = [o for d0, q, o in treffer(toks[0], lat, lon) if o['art'] in ('place:city', 'place:town', 'place:county') and q == 'exakt']
             if stadt:
                 z['befunde'].append('NAME nur Stadt/Kreis "%s" (%s) -- Ortsteil ergaenzen? hier: %s' % (haupt, stadt[0]['anzeige'], '; '.join('%s %s' % (o['anzeige'], o['ko']) for _, o in hier[:2])))
@@ -302,7 +312,7 @@ if __name__ == '__main__':
         return {re.sub(GATTUNG, '', norm(w_)) for w_ in re.split(r"[\s(),/]+", n_.rsplit(',', 1)[0]) if len(norm(w_)) >= 3}
     for z in zeilen:
         haupt_, klammer_ = teile(z['satz'])
-        if klammer_ or ' ' in haupt_ or not re.search(r'(do|seom)$', norm(haupt_)):
+        if not CFG['koreanisch'] or klammer_ or ' ' in haupt_ or not re.search(r'(do|seom)$', norm(haupt_)):
             continue
         w_ = re.sub(GATTUNG, '', norm(haupt_))
         andere = [y['satz'] for y in zeilen if y is not z and w_ in kennwort(y['satz'])

@@ -27,7 +27,7 @@ import dubletten_kurven as D                                       # noqa: E402
 
 RADIUS_KM = 15
 SCHWELLE_MIN = 20
-LANDESQUELLE = {'South Korea': 'khoa'}
+LANDESQUELLE = {'South Korea': 'khoa', 'Philippines': 'namria'}
 _T = np.arange(0, 30 * 24, 1 / 60)          # 30 Tage, Minutentakt (Stunden)
 
 
