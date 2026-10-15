@@ -149856,13 +149856,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.4982
-# !latitude: 10.4551
+# !longitude: 122.5421
+# !latitude: 10.4067
 # region: Negros Occidental
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=45 -0.35 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+# note: 20261015 Position 10.4551/122.4982 (Bucht bei Tando) -> 10.4067/122.5421 Lugmayan Point (GeoNames PT, 1.4 km vom Buchwert 10.4167/122.5333) (Oliver).
 Lugmayan Point, Guimaras, Philippines
 +00:00 :Asia/Manila
 0.6096 meters
@@ -153727,8 +153728,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 124.4500
-# !latitude: 11.9333
+# !longitude: 124.4495
+# !latitude: 11.9278
 # region: Biliran
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
@@ -153736,7 +153737,7 @@ x 0 0
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.279,
 # note: Zielwert F=0.821 aus Nachbarn statt F=0.943 des Bezugsorts; Beleg: Nachbarn 4.99 -> 4.34 %.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Santo Nino, Santo Nino Island, Samar, Philippines
+Santo Niño (Santo Niño Island), Samar, Philippines
 +00:00 :Asia/Manila
 0.6706 meters
 J1              0.0114  229.57

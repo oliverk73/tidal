@@ -200,6 +200,18 @@ def hand_positionen():
     except OSError:
         return set()
 HAND = set()
+URSPRUNG = {}   # name -> (lat, lon) der ersten eingecheckten Fassung (meist der Buchwert)
+
+def ursprung():
+    import csv as _csv
+    out = {}
+    try:
+        for r in _csv.DictReader(open(ROOT + '/harmonics/help/positions_locked.csv', encoding='utf-8')):
+            if (r.get('orig_lat') or '').strip():
+                out[r['name']] = (float(r['orig_lat']), float(r['orig_lon']))
+    except (OSError, ValueError):
+        pass
+    return out
 
 def pruefe(name, lat, lon):
     z = dict(satz=name, lat=lat, lon=lon, befunde=[], hinweise='')
@@ -248,7 +260,15 @@ def pruefe(name, lat, lon):
         gefunden = [(t, x) for t, x in naechste.items() if x and t not in klammer]
         if gefunden:
             t, (d0, q, o) = min(gefunden, key=lambda tx: tx[1][0])
-            z['befunde'].append('NAME passt nicht zur Position: "%s" liegt %.1f km entfernt (%s %s)' % (t, d0 / 1000, o['art'], o['anzeige']))
+            txt = 'NAME passt nicht zur Position: "%s" liegt %.1f km entfernt (%s %s)' % (t, d0 / 1000, o['art'], o['anzeige'])
+            # Buchwerte sind auf Minuten gerundet (+-1 km): liegt das gleichnamige Objekt nahe der urspruenglichen
+            # Position, ist es gemeint (Lugmayan Point 15.10.2026: 1.4 km vom Buchwert, Pegel war 7 km verschoben)
+            u = URSPRUNG.get(name)
+            if u:
+                du = m(u, (o['lat'], o['lon']))
+                if du <= 2500:
+                    txt += '; liegt %.1f km von der urspruenglichen Position %.4f/%.4f -> Vorschlag %.4f/%.4f' % (du / 1000, u[0], u[1], o['lat'], o['lon'])
+            z['befunde'].append(txt)
         else:
             spez = haupt   # gesucht wird der Name vor der Klammer
             nahobj = [o for o in OBJ if abs(o['lat'] - lat) < 0.05 and abs(o['lon'] - lon) < 0.06 and m((lat, lon), (o['lat'], o['lon'])) < 5000]
@@ -323,6 +343,7 @@ if __name__ == '__main__':
     import subprocess
     subprocess.run([sys.executable, os.path.join(ROOT, 'py/positions_lock.py')], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     HAND = hand_positionen()
+    URSPRUNG = ursprung()
     rs = [r for r in load_records() if r['name'].endswith(', ' + land) and not r['current'] and r['lat'] is not None]
     zeilen = [pruefe(r['name'], r['lat'], r['lon']) for r in sorted(rs, key=lambda r: r['name'])]
     for z, r in zip(zeilen, sorted(rs, key=lambda r: r['name'])):
