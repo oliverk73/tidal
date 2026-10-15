@@ -84,7 +84,7 @@ def main(argv):
                 continue
             f.append(abs(v) / m[0])
             d.append((math.degrees(cmath.phase(v)) - m[1] + 180) % 360 - 180)
-        if len(f) >= 2:
+        if len(f) >= min(2, len(REFERENZ)):
             eich[c] = (float(np.median(f)), float(np.median(d)))
             print('Eichung %-3s Hub x%.3f  Phase %+5.1f Grad  (n=%d: %s)' % (c, eich[c][0], eich[c][1], len(f),
                   ', '.join('%.2f/%+.0f' % x for x in zip(f, d))))
