@@ -10,7 +10,9 @@ Eichung wie Fogo (13.10.2026): je Tide Median von Hubfaktor und Phasendifferenz 
 ueber die Referenzpegel; Tiden ohne eigene Eichung bekommen die ihrer Gruppe (M2/S2/K1/O1).
 Name, Position, Zeitzone und Z0 kommen vom ersetzten Satz.
 
-Usage: venv/bin/python py/fes_ersatz_geeicht.py [--schreiben]
+Usage: venv/bin/python py/fes_ersatz_geeicht.py [--schreiben]          (Dinagat, Voreinstellung)
+       venv/bin/python py/fes_ersatz_geeicht.py --land Indonesia --ersetzen "A, ..., Indonesia" [--ersetzen ...]
+                       --referenz "B, ..., Indonesia" [--referenz ...] --anlass "Text" [--schreiben]
 """
 import cmath
 import datetime as dt
@@ -46,7 +48,16 @@ def gruppe(c, speeds):
     return 'M2'
 
 
+def _liste(argv, k):
+    return [argv[i + 1] for i, a in enumerate(argv) if a == k and i + 1 < len(argv)]
+
+
 def main(argv):
+    global LAND, ERSETZEN, REFERENZ, ANLASS
+    if '--land' in argv:
+        LAND = argv[argv.index('--land') + 1]
+        ERSETZEN, REFERENZ = _liste(argv, '--ersetzen'), _liste(argv, '--referenz')
+        ANLASS = argv[argv.index('--anlass') + 1] if '--anlass' in argv else 'Buchsatz gegen FES und Amtspegel daneben'
     namen, speeds, _, _ = X.kopf_lesen(ZIEL)
     fs = sorted({os.path.relpath(p, ROOT) for p in __import__('glob').glob(ROOT + '/harmonics/*/*.txt')})
     S = {s['name']: s for s in D.saetze(LAND, fs)}
@@ -89,11 +100,12 @@ def main(argv):
         prov = re.findall(r'# (province|state|region): (.*)', s['kopf'])
         blk = ['#', f'# {n}', '# BEGIN HOT COMMENTS', f'# country: {LAND}',
                '# source: FES2022b global ocean tide model (extrapolated), sampled at station location',
-               '# note: MODEL-DERIVED (not observations). Ersetzt NOAA-Table-2-Uebertragung (archiviert):',
+               '# note: MODEL-DERIVED (not observations). Ersetzt %s-Satz (archiviert):' % (
+                   'NOAA-Table-2' if '/noaa/' in s['file'] else 'Admiralty' if '/att/' in s['file'] else os.path.basename(s['file'])),
                f'# note: {ANLASS}.',
-               '# note: FES geeicht an NAMRIA Santa Monica/Tandag/Lawigan/Guiuan (Median je Tide), M2 x%.3f %+.1f Grad (%s, Oliver).' % (
-                   eich['M2'][0], eich['M2'][1], heute),
-               f'# date_imported: {heute}', '# datum: Chart Datum (Z0 = mean tide level above CD, aus NOAA Table 2)',
+               '# note: FES geeicht an %s (Median je Tide), M2 x%.3f %+.1f Grad (%s, Oliver).' % (
+                   '/'.join(n.split(',')[0].split(' (')[0] for n in REFERENZ)[:60], eich['M2'][0], eich['M2'][1], heute),
+               f'# date_imported: {heute}', '# datum: Chart Datum (Z0 = mean tide level above CD, vom ersetzten Satz)',
                '# confidence: 5', '# !units: meters', f"# !longitude: {s['lon']:.4f}", f"# !latitude: {s['lat']:.4f}"]
         blk += [f'# {k}: {v}' for k, v in prov[-1:]]
         blk += [n, V[i + 1], z0]
