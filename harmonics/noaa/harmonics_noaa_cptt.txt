@@ -28575,8 +28575,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 143.0667
-# !latitude: 53.5667
+# !longitude: 143.0598
+# !latitude: 53.5597
 # region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.8 km
 Zaliv Urkt (Vkhod), Sakhalin Oblast, Russia
@@ -28957,8 +28957,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 143.2000
-# !latitude: 52.3833
+# !longitude: 143.1802
+# !latitude: 52.3669
 # region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.4 km
 Zaliv Chayvo, Sakhalin Oblast, Russia
@@ -34502,206 +34502,6 @@ NO3             0.0011  76.71
 x 0 0
 x 0 0
 N4              0.0004  65.89
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Russia
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 231
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Busan New Port, South Korea (no.231). M2=0.41 S2=0.09 k=0.85 dt=-618min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: 142.1500
-# !latitude: 49.7667
-# note: 20260903 Phasen um -2.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin Oblast
-# admin1_quelle: Ufer 2.6 km
-# note: 20260913 S2/K2 x 1.78 auf den Springhub des Buchs (cptt-231); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.356. Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Mys Polevogo, Sakhalin Oblast, Russia
-+00:00 :Asia/Sakhalin
-0.6706 meters
-J1              0.0091  221.78
-K1              0.0708  206.64
-K2              0.0474  350.81
-L2              0.0262  321.17
-x 0 0
-M2              0.4877  347.54
-M3              0.0124  127.35
-M4              0.0112  68.15
-M6              0.0008  144.36
-M8              0.0003  44.48
-N2              0.0876  347.92
-2N2             0.0050  305.58
-O1              0.0536  193.18
-OO1             0.0048  238.82
-P1              0.0322  212.19
-Q1              0.0106  219.63
-2Q1             0.0131  357.74
-R2              0.0152  15.95
-x 0 0
-S2              0.1560  3.52
-S4              0.0018  122.10
-x 0 0
-T2              0.0042  0.07
-LDA2            0.0172  335.55
-MU2             0.0059  48.89
-NU2             0.0098  345.55
-RHO1            0.0130  226.62
-MK3             0.0035  207.89
-x 0 0
-MN4             0.0057  55.17
-MS4             0.0088  84.63
-2SM2            0.0159  146.85
-MF              0.0067  156.30
-MSF             0.0757  356.23
-MM              0.0262  353.56
-x 0 0
-SSA             0.0143  345.85
-SA-IOS          0.1070  230.00
-x 0 0
-S1-IOS          0.0371  309.17
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0002  329.28
-2MK6            0.0002  152.00
-x 0 0
-2MN6            0.0005  130.09
-2MS6            0.0004  157.27
-x 0 0
-2SK5            0.0001  33.89
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0007  295.48
-x 0 0
-ALP1            0.0064  306.73
-BET1            0.0044  118.16
-CHI1            0.0046  217.18
-H1              0.0196  319.68
-H2              0.0090  161.18
-x 0 0
-ETA2            0.0054  318.44
-x 0 0
-UPS1            0.0051  289.06
-x 0 0
-x 0 0
-MK4             0.0031  68.13
-MKS2            0.0010  247.16
-x 0 0
-EPS2            0.0089  230.03
-MO3             0.0089  299.64
-x 0 0
-TAU1            0.0135  237.99
-x 0 0
-MSK6            0.0001  231.77
-MSM             0.0212  7.87
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0055  151.41
-OP2             0.0084  249.17
-x 0 0
-PHI1            0.0064  240.98
-x 0 0
-PI1             0.0102  301.27
-x 0 0
-PSI1            0.0036  267.46
-x 0 0
-x 0 0
-SIG1            0.0066  236.76
-SK3             0.0053  272.72
-x 0 0
-SN4             0.0015  74.92
-x 0 0
-SO1             0.0072  315.29
-SO3             0.0026  275.80
-THE1            0.0114  273.52
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0029  235.16
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0016  70.70
-x 0 0
-x 0 0
-N4              0.0005  57.83
 x 0 0
 x 0 0
 x 0 0
