@@ -70,11 +70,19 @@ def detail(a, b):
             out.append('%s %+.0f%% %+.0f°' % (c, 100 * (abs(va[c]) / abs(vb[c]) - 1), (math.degrees(cmath.phase(va[c] / vb[c])) + 180) % 360 - 180))
     return ', '.join(out)
 STOP = {'pusan', 'chechu', 'chechuto', 'south', 'korea', 'island', 'harbor', 'breakwater', 'new', 'old', 'wharf', 'east', 'power', 'plant',
-        'sinhang', 'naehang', 'oehang', 'pukhang', 'kuhang', 'inner', 'outer', 'nolth', 'pritke', 'pritge', 'lighthouse'}
+        'sinhang', 'naehang', 'oehang', 'pukhang', 'kuhang', 'inner', 'outer', 'nolth', 'pritke', 'pritge', 'lighthouse',
+        # Gattungswoerter (Philippinen 15.10.2026: "Gallo Malo Channel" und "Tandungan Channel" sind kein gleicher Name)
+        'channel', 'chanel', 'bay', 'pel', 'point', 'river', 'liver', 'entrance', 'pass', 'reef', 'anchorage', 'ankolake',
+        'port', 'polt', 'harbour', 'halpol', 'sound', 'strait', 'cove', 'islands', 'islet', 'north', 'sowth', 'south', 'sout', 'east', 'west', 'city'}
+_STOP_SK = None  # Skelettformen der STOP-Woerter, beim ersten Aufruf gebaut
+
 def woerter(n):
+    global _STOP_SK
+    if _STOP_SK is None:
+        _STOP_SK = {re.sub(GATTUNG, '', skelett(w)) for w in STOP} | {skelett(w) for w in STOP}
     t = n.split(',')[0]
     k = [re.sub(GATTUNG, '', skelett(x)) for x in re.split(r"[\s()/]+", t) if len(norm(x)) >= 3]
-    return [x for x in k if x and x not in STOP]
+    return [x for x in k if x and x not in STOP and x not in _STOP_SK]
 def amt_id(s):
     m = re.search(r'# (khoa_code|cwa_code|station_id_context|ioc_code): *(\S+)', s['kopf'])
     return (s['file'], m.group(2)) if m else None
