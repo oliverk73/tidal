@@ -220,6 +220,8 @@ def pruefe(name, lat, lon):
         tr = treffer(t, lat, lon)
         naechste[t] = tr[0] if tr else None
     def grenze(t, o):
+        if o['art'] in ('water:gn', 'natural:bay', 'natural:strait'):
+            return 12000   # Bucht/Kanal/Bank: GeoNames/OSM setzen den Mittelpunkt, der Pegel liegt am Rand (Philippinen 15.10.2026)
         if 'island' in o['art'] or re.search(r'(do|seom|to)$', norm(t)):
             return 10000   # Inseln: Abstand zur Inselmitte, Station liegt an der Kueste
         if norm(t) in {norm(x) for x in toks[:1]} and any(norm(w) in GENERISCH for w in haupt.split()):
