@@ -188,6 +188,18 @@ def ziel_vorschlag(lat, lon, toks):
 
 GRENZE = {'place:city': 6000, 'place:town': 4000}
 LAND_M, MEER_M, MEER_INFRA_M = 100, 300, 500
+HAND_GROB_M = 1000   # von Hand gesetzte Positionen nur noch bei groben Fehlern melden
+
+def hand_positionen():
+    """Saetze, deren Position von Hand geaendert wurde (positions_locked.csv, provenance manual).
+    Oliver 15.10.2026: bereits korrigierte Positionen nicht noch einmal zur Pruefung vorlegen."""
+    import csv as _csv
+    try:
+        return {r['name'] for r in _csv.DictReader(open(ROOT + '/harmonics/help/positions_locked.csv', encoding='utf-8'))
+                if r.get('provenance') == 'manual' and (r.get('moved_m') or '').strip() not in ('', '0')}
+    except OSError:
+        return set()
+HAND = set()
 
 def pruefe(name, lat, lon):
     z = dict(satz=name, lat=lat, lon=lon, befunde=[], hinweise='')
@@ -198,7 +210,10 @@ def pruefe(name, lat, lon):
     haupt, klammer = teile(name)
     toks = [t for t in re.split(r'\s+', haupt) if norm(t) not in GENERISCH and len(norm(t)) >= 3]
     pos = None
-    if seite == 'land' and not gew and d > LAND_M and inf > 50:
+    hand = name in HAND
+    if hand and d <= HAND_GROB_M:
+        pass
+    elif seite == 'land' and not gew and d > LAND_M and inf > 50:
         pos = 'LAND %d m hinter der Kueste' % d
     # Weit draussen entwarnt eine Mole in der Naehe nur bei von Hand gesetzten Punkten (Pierende, Daesan);
     # Mittelpunkte langer Piers liegen weit vom Pierende, darum zaehlt dort die Handarbeit.
@@ -206,12 +221,12 @@ def pruefe(name, lat, lon):
         pos = 'MEER %d m vor der Kueste, naechste Hafenanlage %d m' % (d, inf)
     # Feinschliff nur fuer gerundete Buchpositionen; von Hand gesetzte Positionen gelten als geprueft
     from health_check import auf_raster
-    if not pos and seite == 'wasser' and d > 100 and auf_raster(lat, lon):
-        v = ziel_vorschlag(lat, lon, toks + klammer)
+    if not pos and not hand and seite == 'wasser' and d > 100 and auf_raster(lat, lon):
+        v = ziel_vorschlag(lat, lon, toks)
         if v and re.search(r'\[(ferry_terminal|harbour|pier|quay|marina)\]', v) and int(re.search(r'(\d+)m', v.split(']')[1]).group(1)) <= 1000:
             z['befunde'].append('ANLEGER in der Naehe (Punkt %d m vor der Kueste); Vorschlag %s' % (d, v))
     if pos:
-        v = ziel_vorschlag(lat, lon, toks + klammer)
+        v = ziel_vorschlag(lat, lon, toks)   # Klammer ist nur Kontext, kein Ziel (Oliver 15.10.2026)
         z['befunde'].append(pos + ('; Vorschlag ' + v if v else '; kein Hafen in der Naehe'))
     # Name: mindestens ein Teil (ganzer Name, Klammer, einzelne Woerter) muss nah liegen
     teile_ = [haupt] + klammer + toks
@@ -229,12 +244,13 @@ def pruefe(name, lat, lon):
         return GRENZE.get(o['art'], 2500)
     nah = [t for t, x in naechste.items() if x and x[0] <= grenze(t, x[2])]
     if not nah:
-        gefunden = [(t, x) for t, x in naechste.items() if x]
+        # Klammerinhalt (Bucht, Insel als Kontext) begruendet keinen Befund "passt nicht" (Camayan (Subic Bay))
+        gefunden = [(t, x) for t, x in naechste.items() if x and t not in klammer]
         if gefunden:
             t, (d0, q, o) = min(gefunden, key=lambda tx: tx[1][0])
             z['befunde'].append('NAME passt nicht zur Position: "%s" liegt %.1f km entfernt (%s %s)' % (t, d0 / 1000, o['art'], o['anzeige']))
         else:
-            spez = klammer[0] if klammer else haupt
+            spez = haupt   # gesucht wird der Name vor der Klammer
             nahobj = [o for o in OBJ if abs(o['lat'] - lat) < 0.05 and abs(o['lon'] - lon) < 0.06 and m((lat, lon), (o['lat'], o['lon'])) < 5000]
             cand = difflib.get_close_matches(norm(spez), [x for o in nahobj for x in o['v'] | {o['rr']}], n=1, cutoff=0.75)
             hint = ''
@@ -304,6 +320,9 @@ if __name__ == '__main__':
     from health_check import load_records
     from datetime import date
     land = sys.argv[1]
+    import subprocess
+    subprocess.run([sys.executable, os.path.join(ROOT, 'py/positions_lock.py')], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    HAND = hand_positionen()
     rs = [r for r in load_records() if r['name'].endswith(', ' + land) and not r['current'] and r['lat'] is not None]
     zeilen = [pruefe(r['name'], r['lat'], r['lon']) for r in sorted(rs, key=lambda r: r['name'])]
     for z, r in zip(zeilen, sorted(rs, key=lambda r: r['name'])):
