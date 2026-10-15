@@ -30882,13 +30882,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 142.5667
-# !latitude: 48.1000
+# note: 20261015 Name und Position nach OSM (Burunnyy mys), vorher Buruny 48.1000/142.5667 (Oliver).
+# !longitude: 142.5696
+# !latitude: 48.1237
 # region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Buruny, Sakhalin Oblast, Russia
+Mys Burunnyy, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6401 meters
 J1              0.0147  234.70
