@@ -1,0 +1,40 @@
+satz,datei,rang,lat,lon,raster,lage,lage_detail,m2,s2m2,k1,o1,p1q1,name_hinweis,befund,vorschlag
+"Tungsan-got, North Korea",noaa_cptt,5,37.6775,125.3439,,,,1.770/247,0.40,0.244/174,0.156/145,,Wade-Giles,"gegen Sunwi-do 8 km: M2 +15 % -7 Grad, S2/M2 +4 %, K1 -36 % +2 Grad, O1 -44 %",Hube korrigieren
+"Mu Do, North Korea",att_np204_secondary,4,37.743,125.5796,,,,2.130/248,0.38,0.380/177,0.270/140,fehlt,,"gegen Sunwi-do 23 km: M2 +38 % -7 Grad, S2/M2 -1 %, K1 -0 % +5 Grad, O1 -4 %",M2-Hub pruefen
+"Sunwi-do, North Korea",harmonics-1997-05-25_mod,3,37.7504,125.3237,,,,1.540/254,0.38,0.380/173,0.280/149,,Wade-Giles,,behalten
+"Kirin-do, North Korea",noaa_cptt,5,37.8323,125.0459,,,,1.382/259,0.35,0.338/160,0.239/135,,Wade-Giles,"gegen Sunwi-do 26 km: M2 -10 % +5 Grad, S2/M2 -9 %, K1 -11 % -13 Grad, O1 -15 %",behalten
+"Haeju, North Korea",noaa_cptt,5,37.994,125.7014,,,,2.337/259,0.38,0.415/180,0.266/150,,,"gegen Sunwi-do 43 km: M2 +52 % +4 Grad, S2/M2 +0 %, K1 +9 % +8 Grad, O1 -5 %",M2-Hub pruefen
+"Wollae-do, North Korea",att_np204_secondary,4,38.0586,124.8169,,,,1.060/272,0.33,0.390/193,0.260/149,fehlt,Wade-Giles,"gegen Sunwi-do 56 km: M2 -31 % +17 Grad, S2/M2 -14 %, K1 +3 % +21 Grad, O1 -7 %",M2-Hub pruefen
+"Ch'angam-dong, North Korea",noaa_cptt,5,38.1119,124.7039,,,,1.132/287,0.33,0.299/175,0.211/148,,Wade-Giles,,behalten (kein Nachbar)
+"Monggum-do, North Korea",att_np204_secondary,4,38.1858,124.7836,,,,1.140/316,0.32,0.370/188,0.260/154,fehlt,Wade-Giles,,behalten (kein Nachbar) + P1/Q1
+"Yongsu-p'o (Yonghak-ri), North Korea",noaa_cptt,5,38.444,124.9374,,,,1.412/321,0.31,0.373/192,0.264/164,,Wade-Giles,"gegen Nampo (Taedong) 51 km: M2 -22 % -39 Grad, S2/M2 -7 %, K1 +1 % -17 Grad, O1 +5 %",Zeit pruefen
+"Sokhae-ri (Sokhae-dong), North Korea",noaa_cptt,5,38.5246,125.671,,,,2.372/8,0.34,0.482/213,0.327/177,,Wade-Giles,"gegen Nampo (Taedong) 32 km: M2 +31 % +8 Grad, S2/M2 +3 %, K1 +31 % +4 Grad, O1 +31 %",M2-Hub pruefen
+"Sok-to, North Korea",att_np204_secondary,4,38.633,125.0029,,,,1.560/341,0.34,0.380/193,0.240/163,fehlt,Wade-Giles,"gegen Nampo (Taedong) 37 km: M2 -14 % -19 Grad, S2/M2 +3 %, K1 +3 % -16 Grad, O1 -4 %",behalten + P1/Q1
+"Cheolcha-ri (Taedong / Jaeryeong), North Korea",noaa_cptt,5,38.6542,125.6293,,,,2.029/11,0.38,0.413/214,0.280/179,,Wade-Giles,"gegen Nampo (Taedong) 21 km: M2 +12 % +11 Grad, S2/M2 +14 %, K1 +12 % +5 Grad, O1 +12 %",behalten
+"P'i Do, North Korea",att_np204_secondary,4,38.6801,125.177,,,,1.970/348,0.27,0.410/203,0.310/168,fehlt,Wade-Giles,"gegen Nampo (Taedong) 21 km: M2 +9 % -12 Grad, S2/M2 -19 %, K1 +11 % -6 Grad, O1 +24 %",behalten + P1/Q1
+"Nampo (Taedong), North Korea",harmonics-1997-05-25_mod,3,38.7233,125.4079,,,,1.815/0,0.33,0.369/209,0.250/174,,,"Dublette zu Nampo (Taedong), North Korea [utide_tidetables] 0.0 km: M2 +0 %, +0 Grad",archivieren (nach Rang)
+"Nampo (Taedong), North Korea",utide_tidetables,1,38.7233,125.4079,,,,1.814/360,0.33,0.369/209,0.250/173,,,,behalten
+"Songnim (Taedong), North Korea",noaa_cptt,5,38.7341,125.6233,,,,2.201/15,0.37,0.448/216,0.303/181,,,"gegen Nampo (Taedong) 19 km: M2 +21 % +15 Grad, S2/M2 +11 %, K1 +21 % +8 Grad, O1 +21 %",behalten
+"Changjon (Kangwon-do), North Korea",att_np204_secondary,4,38.75,128.2,ja,,,0.070/183,0.43,0.050/230,0.050/195,fehlt,Wade-Giles,,behalten (kein Nachbar) + P1/Q1
+"Sokhojong (Taedong), North Korea",noaa_cptt,5,38.9453,125.6257,,,,1.986/49,0.31,0.404/234,0.274/197,,,"gegen Nampo (Taedong) 31 km: M2 +10 % +49 Grad, S2/M2 -5 %, K1 +9 % +25 Grad, O1 +9 %",Zeit pruefen
+"P'yongyang, North Korea",noaa_cptt,5,39.0146,125.7551,,,,0.329/114,0.44,0.067/268,0.045/228,,Wade-Giles,"gegen Nampo (Taedong) 44 km: M2 -82 % +115 Grad, S2/M2 +34 %, K1 -82 % +59 Grad, O1 -82 %",Zeit pruefen
+"Wonsan, North Korea",harmonics-1997-05-25_mod,3,39.1749,127.442,,,,0.085/187,0.42,0.053/232,0.045/196,,,,behalten
+"Nap-to (Yop-to), North Korea",att_np204_secondary,4,39.2686,124.7173,,,,1.920/358,0.36,0.400/206,0.280/170,fehlt,Wade-Giles,,behalten (kein Nachbar) + P1/Q1
+"Nap-to (Yop-to), North Korea",noaa_cptt,5,39.2686,124.7173,,,,1.928/357,0.44,0.392/207,0.266/172,,Wade-Giles,"Dublette zu Nap-to (Yop-to), North Korea [att_np204_secondary] 0.0 km: M2 +0 %, -0 Grad",archivieren (nach Rang)
+"Unmu-do, North Korea",att_np204_secondary,4,39.4147,125.117,,,,2.220/6,0.34,0.480/217,0.300/178,fehlt,Wade-Giles,,behalten (kein Nachbar) + P1/Q1
+"Unmu-do, North Korea",noaa_cptt,5,39.4147,125.117,,,,2.229/5,0.41,0.453/211,0.307/176,,Wade-Giles,"Dublette zu Unmu-do, North Korea [att_np204_secondary] 0.0 km: M2 +0 %, -1 Grad",archivieren (nach Rang)
+"Taehwa-do, North Korea",noaa_cptt,5,39.4347,124.618,,,,1.971/3,0.40,0.401/211,0.272/175,,Wade-Giles,,behalten (kein Nachbar)
+"Ka-do, North Korea",att_np204_secondary,4,39.5397,124.6513,,,,2.080/6,0.33,0.420/211,0.270/177,fehlt,Wade-Giles,,behalten (kein Nachbar) + P1/Q1
+"Ka-do, North Korea",noaa_cptt,5,39.5397,124.6513,,,,2.085/5,0.39,0.424/212,0.287/176,,Wade-Giles,"Dublette zu Ka-do, North Korea [att_np204_secondary] 0.0 km: M2 +0 %, -0 Grad",archivieren (nach Rang)
+"Suun-do, North Korea",att_np204_secondary,4,39.6881,124.412,,,,2.060/7,0.32,0.370/208,0.290/183,fehlt,Wade-Giles,,behalten (kein Nachbar) + P1/Q1
+"Suun-do, North Korea",noaa_cptt,5,39.6881,124.412,,,,2.057/7,0.38,0.418/212,0.283/176,,Wade-Giles,"Dublette zu Suun-do, North Korea [att_np204_secondary] 0.0 km: M2 -0 %, -0 Grad",archivieren (nach Rang)
+"Taedasa-do, North Korea",noaa_cptt,5,39.7982,124.4181,,,,2.156/13,0.40,0.439/216,0.297/180,,Wade-Giles,,behalten (kein Nachbar)
+"Shinto / Sindo (Chogumsa), North Korea",noaa_cptt,5,39.8051,124.2469,,,,2.128/14,0.34,0.433/216,0.293/180,,,,behalten (kein Nachbar)
+"Heungham (Seoho), North Korea",att_np204_secondary,4,39.8195,127.6507,,,,0.080/185,0.38,0.050/227,0.050/195,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Yongamp'o (Tuyup'o), North Korea",att_np204_secondary,4,39.9333,124.3333,ja,,,1.590/37,0.30,0.340/229,0.270/193,,Wade-Giles,,behalten (kein Nachbar)
+"Sinpo, North Korea",att_np204_secondary,4,40.017,128.1663,,,,0.080/187,0.38,0.060/225,0.050/191,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Chaho (Nahung), North Korea",att_np204_secondary,4,40.2023,128.6517,,,,0.070/184,0.43,0.060/228,0.050/190,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Kimch'aek (Seongjin), North Korea",att_np204_secondary,4,40.6641,129.2118,,,,0.080/188,0.38,0.060/227,0.060/195,fehlt,Wade-Giles,,behalten (kein Nachbar) + P1/Q1
+"Daeyanghwa Man, North Korea",att_np204_secondary,4,41.21,129.7402,,,,0.070/187,0.43,0.050/232,0.050/195,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Sajin, North Korea",att_np204_secondary,4,42.0046,130.0119,,,,0.070/188,0.43,0.050/226,0.050/200,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Sonbong-guyok (Unggi), North Korea",att_np204_secondary,4,42.3309,130.4014,,,,0.070/189,0.43,0.050/231,0.050/200,fehlt,Wade-Giles,,behalten (kein Nachbar) + P1/Q1

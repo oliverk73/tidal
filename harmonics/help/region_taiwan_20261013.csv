@@ -1,0 +1,55 @@
+satz,datei,rang,lat,lon,raster,lage,lage_detail,m2,s2m2,k1,o1,p1q1,name_hinweis,befund,vorschlag
+"Pratas Island, Taiwan",utide_tidetables,1,20.7,116.69,,,,0.099/32,0.32,0.293/177,0.268/134,,,,behalten
+"Houbihu, Taiwan",utide_tidetables,1,21.9458,120.7453,,,,0.247/319,0.48,0.240/136,0.220/110,,,,behalten
+"Xunguangzui, Taiwan",utide_tidetables,1,21.98583,120.71194,,,,0.169/323,0.51,0.239/151,0.202/120,,,,behalten
+"Lanyu, Taiwan",utide_tidetables,1,22.0577,121.5079,,,,0.447/303,0.43,0.137/122,0.133/98,,,,behalten
+"Checheng, Taiwan",noaa_cptt,5,22.0667,120.7,ja,,,0.216/328,0.49,0.213/141,0.172/102,,,"gegen Xunguangzui 9 km, Houbihu 14 km: M2 +8 % +7 Grad, S2/M2 +0 %, K1 -10 % -4 Grad, O1 -17 %",behalten
+"Dawu, Taiwan",utide_tidetables,1,22.3375,120.8972,,,,0.347/307,0.48,0.166/119,0.173/94,,,,behalten
+"Xiao Liuqiu, Taiwan",utide_tidetables,1,22.3533,120.3833,,,,0.206/351,0.37,0.210/165,0.187/129,,,,behalten
+"Donggang, Taiwan",utide_tidetables,1,22.4651,120.4383,,,,0.210/357,0.33,0.214/166,0.190/129,,,,behalten
+"Kaohsiung, Taiwan",utide_tidetables,1,22.6144,120.2883,,,,0.161/354,0.41,0.190/162,0.176/125,,,,behalten
+"Ludao, Taiwan",utide_tidetables,1,22.66055,121.47305,,,,0.434/299,0.42,0.145/107,0.141/88,,dao angehaengt,,behalten
+"Fugang, Taiwan",utide_tidetables,1,22.79083,121.19222,,,,0.434/302,0.42,0.172/111,0.164/84,,,,behalten
+"Yongan, Taiwan",utide_tidetables,1,22.81888,120.1975,,,,0.180/10,0.30,0.205/156,0.188/123,,,,behalten
+"Anping, Taiwan",utide_tidetables,1,22.98833,120.14972,,,,0.266/28,0.22,0.190/157,0.172/124,,,,behalten
+"Chenggong, Taiwan",utide_tidetables,1,23.0972,121.3799,,,,0.489/303,0.40,0.175/102,0.148/79,,,,behalten
+"Guosheng Gang, Taiwan",att_np204_secondary,4,23.1007,120.036,,,,0.290/63,0.22,0.190/158,0.180/124,,,"gegen Jiangjun 13 km, Anping 17 km: M2 -28 % +11 Grad, S2/M2 +0 %, K1 -4 % +1 Grad, O1 +3 %",M2-Hub pruefen
+"Qimei, Taiwan",utide_tidetables,1,23.19,119.42,,,,0.526/82,0.22,0.220/161,0.183/127,,,,behalten
+"Jiangjun, Taiwan",utide_tidetables,1,23.21163,120.08302,,,,0.536/61,0.23,0.203/156,0.177/123,,,,behalten
+"Jiangjun'ao Yu (Penghu), Taiwan",att_np204_secondary,4,23.3663,119.5282,,,,0.600/92,0.20,0.220/157,0.200/126,,Wade-Giles,"gegen Magong (Penghu) 22 km, Qimei 23 km: M2 -19 % +5 Grad, S2/M2 -21 %, K1 -4 % -3 Grad, O1 +5 %",behalten
+"Budai, Taiwan",noaa_cptt,5,23.3788,120.1382,,,,0.659/77,0.31,0.164/153,0.137/121,,,"gegen Dongshih 8 km, Wungang 10 km: M2 -13 % +5 Grad, S2/M2 +24 %, K1 -19 % -8 Grad, O1 -22 %",behalten
+"Dongshih, Taiwan",utide_tidetables,1,23.45,120.1394,,,,0.740/71,0.25,0.201/160,0.173/128,,,,behalten
+"Wungang, Taiwan",utide_tidetables,1,23.4667,120.1225,,,,0.778/73,0.25,0.205/161,0.176/128,,,,behalten
+"Shiti, Taiwan",utide_tidetables,1,23.49472,121.50611,,,,0.464/294,0.42,0.169/96,0.138/79,,,,behalten
+"Tongpan Yu (Penghu), Taiwan",noaa_cptt,5,23.5118,119.5186,,,,0.957/94,0.27,0.238/161,0.198/129,,Wade-Giles,"gegen Magong (Penghu) 8 km, Jibei 27 km: M2 -7 % +3 Grad, S2/M2 -1 %, K1 -1 % +3 Grad, O1 -1 %",behalten
+"Magong (Penghu), Taiwan",utide_tidetables,1,23.5619,119.5782,,,,0.957/90,0.27,0.238/159,0.198/127,,,,behalten
+"Beiliao (Penghu), Taiwan",noaa_cptt,5,23.5977,119.6703,,,,1.114/91,0.27,0.277/160,0.231/127,,,"gegen Magong (Penghu) 10 km, Jibei 17 km: M2 +3 % -0 Grad, S2/M2 -0 %, K1 +14 % +2 Grad, O1 +14 %",behalten
+"Boziliao, Taiwan",utide_tidetables,1,23.6196,120.1349,,,,0.983/99,0.28,0.193/174,0.169/142,,,,behalten
+"Haikou (Yunlin), Taiwan",noaa_cptt,5,23.7,120.1667,ja,,,1.224/97,0.27,0.207/163,0.180/130,,,"gegen Boziliao 10 km, Mailiao 10 km: M2 +8 % +9 Grad, S2/M2 +0 %, K1 +0 % +1 Grad, O1 -0 %",behalten
+"Jibei, Taiwan",utide_tidetables,1,23.7386,119.6132,,,,1.281/92,0.28,0.252/156,0.209/124,,,,behalten
+"Mailiao, Taiwan",utide_tidetables,1,23.78611,120.16055,,,,1.326/79,0.28,0.229/152,0.197/120,,,,behalten
+"Fangyuan, Taiwan",att_np204_secondary,4,23.9167,120.3,ja,,,1.430/99,0.22,0.220/153,0.200/123,,,"gegen Mailiao 20 km, Boziliao 37 km: M2 +20 % +15 Grad, S2/M2 -19 %, K1 +3 % -6 Grad, O1 +9 %",behalten
+"Hualien, Taiwan",utide_tidetables,1,23.9806,121.6236,,,,0.442/304,0.44,0.160/99,0.143/82,,,,behalten
+"Tugeku, Taiwan",att_np204_secondary,4,24.1949,120.4919,,,,1.480/95,0.25,0.180/148,0.150/120,,,"gegen Taichung 11 km, Mailiao 57 km: M2 -17 % +12 Grad, S2/M2 -15 %, K1 -26 % +3 Grad, O1 -29 %",behalten
+"Taichung, Taiwan",utide_tidetables,1,24.2878,120.5331,,,,1.867/83,0.29,0.245/144,0.213/115,,,,behalten
+"Heping, Taiwan",utide_tidetables,1,24.3031,121.7561,,,,0.480/299,0.44,0.171/107,0.161/85,,,,behalten
+"Da'an Gang, Taiwan",noaa_cptt,5,24.3833,120.5667,ja,,,1.883/88,0.29,0.229/158,0.203/126,,Wade-Giles,"gegen Taichung 11 km, Waipu 36 km: M2 +3 % +4 Grad, S2/M2 -0 %, K1 +0 % +15 Grad, O1 +0 %",behalten
+"Dadan Dao (Kinmen), Taiwan",noaa_cptt,5,24.3878,118.1717,,,,1.934/120,0.29,0.357/160,0.289/126,,,"gegen Shuitou (Kinmen) 12 km, Liaoluowan (Kinmen) 26 km: M2 +3 % +6 Grad, S2/M2 -1 %, K1 +7 % +4 Grad, O1 +13 %",behalten
+"Liaoluowan (Kinmen), Taiwan",utide_tidetables,1,24.4075,118.42666,,,,1.831/109,0.29,0.327/156,0.256/123,,,,behalten
+"Shuitou (Kinmen), Taiwan",utide_tidetables,1,24.42111,118.28916,,,,1.909/115,0.29,0.338/156,0.255/126,,,,behalten
+"Su'ao, Taiwan",utide_tidetables,1,24.59247,121.86577,,,,0.409/299,0.44,0.204/106,0.177/81,,Wade-Giles,,behalten
+"Waipu, Taiwan",utide_tidetables,1,24.6514,120.7714,,,,1.719/86,0.28,0.176/139,0.171/110,,,,behalten
+"Hsinchu, Taiwan",utide_tidetables,1,24.8486,120.9206,,,,1.550/90,0.28,0.175/142,0.166/111,,,,behalten
+"Wushih, Taiwan",utide_tidetables,1,24.8686,121.8396,,,,0.381/316,0.41,0.206/99,0.171/76,,,,behalten
+"Wuqiu, Taiwan",att_np204_secondary,4,24.9883,119.4522,,,,2.130/108,0.26,0.280/137,0.270/133,,,,behalten (kein Nachbar)
+"Fulong, Taiwan",utide_tidetables,1,25.0217,121.9503,,,,0.202/328,0.53,0.202/104,0.163/82,,,,behalten
+"Longdong, Taiwan",utide_tidetables,1,25.0975,121.9181,,,,0.219/340,0.48,0.210/102,0.169/80,,,,behalten
+"Zhuwei, Taiwan",utide_tidetables,1,25.1181,121.2433,,,,1.249/80,0.29,0.223/125,0.185/99,,,,behalten
+"Keelung, Taiwan",utide_tidetables,1,25.155,121.7522,,,,0.237/47,0.24,0.201/105,0.164/80,,,,behalten
+"Taipei Port, Taiwan",utide_tidetables,1,25.1658,121.35,,,,1.150/80,0.28,0.222/124,0.184/98,,,,behalten
+"Tamsui, Taiwan",utide_tidetables,1,25.17569,121.42483,,,,1.044/86,0.28,0.203/126,0.168/100,,,,behalten
+"Danhai, Taiwan",utide_tidetables,1,25.1839,121.4075,,,,1.068/80,0.28,0.217/122,0.178/97,,,,behalten
+"Linshanbi, Taiwan",utide_tidetables,1,25.2839,121.5103,,,,0.793/79,0.27,0.207/117,0.173/91,,,,behalten
+"Pengjiayu, Taiwan",utide_tidetables,1,25.625,122.07694,,,,0.367/15,0.46,0.249/106,0.166/73,,,,behalten
+"Qingfan Gang (Xiju, Matsu), Taiwan",att_np204_secondary,4,25.9678,119.9326,,,,2.100/66,0.33,0.300/112,0.200/103,,,"gegen Nangan (Matsu) 22 km: M2 -2 % +3 Grad, S2/M2 +5 %, K1 -8 % -8 Grad, O1 -22 %",behalten
+"Nangan (Matsu), Taiwan",utide_tidetables,1,26.1617,119.9428,,,,2.135/63,0.32,0.326/120,0.256/91,,,,behalten
