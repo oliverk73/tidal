@@ -1,0 +1,14 @@
+satz,datei,rang,lat,lon,raster,lage,lage_detail,m2,s2m2,k1,o1,p1q1,name_hinweis,befund,vorschlag
+"Raffles Lighthouse, Singapore",att_np203_scs,4,1.1601,103.7415,,,,0.830/101,0.45,0.270/27,0.250/339,fehlt,,"gegen Tanjong Pagar 17 km, Sembawang 34 km: M2 -1 % +6 Grad, S2/M2 +8 %, K1 -4 % +31 Grad, O1 -8 %",Zeit pruefen
+"Pulau Bukom, Singapore",att_np203_scs,4,1.2277,103.7781,,,,0.830/101,0.43,0.260/19,0.240/332,fehlt,,"gegen Tanjong Pagar 9 km, Sembawang 26 km: M2 -0 % +6 Grad, S2/M2 +5 %, K1 -7 % +21 Grad, O1 -11 %",behalten + P1/Q1
+"Pulau Bukom, Singapore",noaa_cptt,5,1.2277,103.7781,,,,0.805/97,0.38,0.234/344,0.233/300,,,"Dublette zu Pulau Bukom, Singapore [att_np203_scs] 0.0 km: M2 -3 %, -4 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Sultan Shoal, Singapore",att_np203_scs,4,1.2333,103.65,ja,,,0.870/101,0.45,0.260/39,0.240/354,fehlt,,"gegen Tanjong Pagar 23 km, Sembawang 30 km: M2 +4 % +7 Grad, S2/M2 +10 %, K1 -8 % +45 Grad, O1 -13 %",Zeit pruefen
+"Tanjong Pagar, Singapore",att_np203_scs,4,1.2615,103.8521,,,,0.800/93,0.41,0.300/356,0.290/309,fehlt,,"Dublette zu Tanjong Pagar, Singapore [ticon4_worldwide] 0.0 km: M2 -2 %, -2 Grad",archivieren (nach Rang)
+"Tanjong Pagar, Singapore",ticon4_worldwide,2,1.2615,103.8521,,,,0.817/95,0.42,0.275/3,0.262/317,,,,behalten
+"Pasir Panjang, Singapore",att_np203_scs,4,1.2929,103.7612,,,,0.840/99,0.44,0.260/23,0.240/336,fehlt,,"gegen Tanjong Pagar 11 km, Sembawang 19 km: M2 +0 % +5 Grad, S2/M2 +7 %, K1 -8 % +27 Grad, O1 -12 %",Zeit pruefen
+"Jurong Wharf, Singapore",att_np203_scs,4,1.3011,103.7209,,,,0.850/100,0.45,0.270/23,0.240/338,fehlt,,"gegen Tanjong Pagar 15 km, Sembawang 20 km: M2 +1 % +6 Grad, S2/M2 +9 %, K1 -5 % +29 Grad, O1 -13 %",Zeit pruefen
+"Pedra Branca (Horsburgh Lighthouse), Singapore",harmonics-1997-05-25_mod,3,1.3299,104.4056,,,,0.565/75,0.34,0.267/316,0.279/277,,,"Dublette zu Horsburgh Lighthouse, Singapore [utide_tidetables] 0.0 km: M2 -1 %, +0 Grad | UEBERNEHMEN? Name ""Pedra Branca (Horsburgh Lighthouse), Singapore"" statt ""Horsburgh Lighthouse, Singapore""",archivieren (nach Rang)
+"Horsburgh Lighthouse, Singapore",utide_tidetables,1,1.3299,104.4056,,,,0.571/74,0.35,0.263/316,0.270/277,,,,behalten
+"Angler Bank, Singapore",att_np203_scs,4,1.3487,104.0421,,,,0.750/89,0.39,0.280/345,0.290/299,fehlt,,"gegen Tanjong Pagar 23 km, Sembawang 31 km: M2 -11 % -5 Grad, S2/M2 -5 %, K1 -1 % -9 Grad, O1 +5 %",behalten + P1/Q1
+"Sembawang, Singapore",ticon4_worldwide,2,1.463,103.7922,,,,0.871/94,0.39,0.306/342,0.304/298,,,,behalten
+"Sembawang Shipyard, Singapore",att_np203_scs,4,1.4667,103.8333,ja,,,0.850/93,0.39,0.310/343,0.300/298,fehlt,,"Dublette zu Sembawang, Singapore [ticon4_worldwide] 4.6 km: M2 -2 %, -1 Grad | UEBERNEHMEN? Position 1.4667/103.8333 statt 1.4630/103.7922 | UEBERNEHMEN? Name ""Sembawang Shipyard, Singapore"" statt ""Sembawang, Singapore""",archivieren (nach Rang)

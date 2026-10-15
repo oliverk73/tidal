@@ -1,0 +1,53 @@
+satz,datei,rang,lat,lon,raster,lage,lage_detail,m2,s2m2,k1,o1,p1q1,name_hinweis,befund,vorschlag
+"Narathiwat (Pak Nam Bang Nara), Narathiwat, Thailand",utide_tidetables,1,6.4311,101.825,,,,0.151/24,0.49,0.207/228,0.101/182,,,,behalten
+"Ko Batong, Satun, Thailand",att_np203_scs,4,6.5307,99.1726,,,,0.700/109,0.57,0.200/231,0.100/184,fehlt,,"gegen Ko Tarutao 56 km: M2 -11 % -3 Grad, S2/M2 +6 %, K1 +32 % -1 Grad, O1 +89 %",Hube korrigieren + P1/Q1
+"Ko Koi Noi, Satun, Thailand",att_np203_scs,4,6.5841,99.8346,,,,0.820/122,0.62,0.150/223,0.060/178,fehlt,,"gegen Ko Tarutao 25 km: M2 +5 % +10 Grad, S2/M2 +15 %, K1 -1 % -9 Grad, O1 +14 %",behalten + P1/Q1
+"Ko Tarutao, Satun, Thailand",utide_tidetables,1,6.7037,99.646,,,,0.783/112,0.54,0.152/232,0.053/189,,,,behalten
+"Ko Lela, Satun, Thailand",att_np203_scs,4,6.7333,99.7045,,,,0.850/112,0.58,0.190/224,0.050/175,fehlt,,"gegen Ko Tarutao 7 km: M2 +9 % -0 Grad, S2/M2 +7 %, K1 +25 % -8 Grad, O1 -5 %",behalten + P1/Q1
+"Ko Lela, Satun, Thailand",noaa_cptt,5,6.7333,99.7045,,,,0.826/121,0.60,0.198/199,0.039/139,,,"Dublette zu Ko Lela, Satun, Thailand [att_np203_scs] 0.0 km: M2 -3 %, +9 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Ko Don (North Cone Island), Satun, Thailand",att_np203_scs,4,6.8557,99.5958,,,,0.830/109,0.54,0.160/233,0.060/192,fehlt,,"gegen Ko Tarutao 18 km, Hat Yao Pier (Ko Libong) 55 km: M2 +4 % -2 Grad, S2/M2 +2 %, K1 +7 % +1 Grad, O1 +16 %",behalten + P1/Q1
+"Pak Nam Pattani, Pattani, Thailand",utide_tidetables,1,6.9044,101.2454,,,,0.153/66,0.40,0.074/193,0.038/115,,,,behalten
+"Ko Phetra (Pulau Kapai), Trang, Thailand",att_np203_scs,4,7.0377,99.4758,,,,0.810/107,0.54,0.150/228,0.040/180,fehlt,,"gegen Hat Yao Pier (Ko Libong) 31 km, Ko Tarutao 42 km: M2 -1 % -2 Grad, S2/M2 +3 %, K1 +2 % -3 Grad, O1 -21 %",behalten + P1/Q1
+"Goh Sukorn (Pulau Babi), Trang, Thailand",att_np203_scs_secondary,4,7.1146,99.5832,,,,0.800/114,0.56,0.266/216,0.067/163,fehlt,,"gegen Hat Yao Pier (Ko Libong) 30 km, Ko Tarutao 46 km: M2 -3 % +5 Grad, S2/M2 +7 %, K1 +82 % -14 Grad, O1 +32 %",Hube korrigieren + P1/Q1
+"Songkhla, Thailand",utide_tidetables,1,7.2169,100.58,,,,0.157/72,0.34,0.059/160,0.049/82,,,,behalten
+"Pramuang Pier (Na Kluea), Trang, Thailand",att_np203_scs,4,7.2952,99.4856,,,,0.870/117,0.59,0.100/224,0.060/211,fehlt,,"gegen Hat Yao Pier (Ko Libong) 9 km: M2 +3 % +9 Grad, S2/M2 +14 %, K1 -30 % -6 Grad, O1 +22 %",Hube korrigieren + P1/Q1
+"Hat Yao Pier (Ko Libong), Trang, Thailand",utide_tidetables,1,7.3108,99.4019,,,,0.848/108,0.52,0.143/230,0.049/194,,,,behalten
+"Ko Taphao Noi (Phuket), Phuket, Thailand",ticon4_worldwide,2,7.8338,98.4216,,,,0.790/99,0.51,0.131/225,0.048/191,,,,behalten
+"Ao Nang (Krabi), Krabi, Thailand",att_np203_scs,4,8.018,98.8307,,,,0.830/91,0.66,0.100/205,0.050/195,fehlt,,"gegen Pak Nam Krabi 9 km, Ko Taphao Noi (Phuket) 49 km: M2 -7 % -15 Grad, S2/M2 +27 %, K1 -30 % -26 Grad, O1 +6 %",Zeit pruefen
+"Pak Nam Krabi, Krabi, Thailand",utide_tidetables,1,8.0459,98.9058,,,,0.910/107,0.53,0.145/232,0.047/207,,,,behalten
+"Pak Nam Pak Phanang, Nakhon Si Thammarat, Thailand",utide_tidetables,1,8.3507,100.1976,,,,0.113/160,0.34,0.172/130,0.137/82,,,,behalten
+"Pak Phun, Nakhon Si Thammarat, Thailand",att_np203_scs,4,8.5677,100.0052,,,,0.100/56,0.60,0.240/94,0.180/48,fehlt,,"gegen Pak Nam Pak Phanang 32 km: M2 -11 % -104 Grad, S2/M2 +74 %, K1 +39 % -36 Grad, O1 +31 %",Zeit pruefen
+"Ko Miang, Phang Nga, Thailand",att_np203_scs,4,8.5712,97.6373,,,,0.700/87,0.57,0.100/225,0.100/178,fehlt,,"Dublette zu Ko Miang, Phang Nga, Thailand [utide_observations] 0.0 km: M2 -2 %, -2 Grad",archivieren (nach Rang)
+"Ko Miang, Phang Nga, Thailand",utide_observations,1,8.5712,97.6373,,,,0.713/89,0.49,0.129/223,0.051/194,,,,behalten
+"Ao Thap Lamu, Phang Nga, Thailand",utide_tidetables,1,8.5756,98.2219,,,,0.732/90,0.49,0.120/223,0.044/194,,,,behalten
+"Khlong Thung Maphrao, Phang Nga, Thailand",att_np203_scs,4,8.5984,98.2405,,,,0.720/88,0.49,0.120/225,0.060/178,fehlt,,"Dublette zu Ao Thap Lamu, Phang Nga, Thailand [utide_tidetables] 3.3 km: M2 -2 %, -2 Grad | UEBERNEHMEN? Position 8.5984/98.2405 statt 8.5756/98.2219 | UEBERNEHMEN? Name ""Khlong Thung Maphrao, Phang Nga, Thailand"" statt ""Ao Thap Lamu, Phang Nga, Thailand""",archivieren (nach Rang)
+"Chong Ko Phra Thong, Phang Nga, Thailand",att_np203_scs,4,9.029,98.2549,,,,0.900/90,0.44,0.100/225,0.100/183,fehlt,,"gegen Bang Wan (Khura Buri) 7 km, Ao Thap Lamu 51 km: M2 +2 % -7 Grad, S2/M2 -12 %, K1 -22 % -4 Grad, O1 +100 %",Hube korrigieren + P1/Q1
+"Bang Wan (Khura Buri), Phang Nga, Thailand",utide_tidetables,1,9.0436,98.3206,,,,0.906/98,0.50,0.130/230,0.051/204,,,,behalten
+"Ko Prap, Surat Thani, Thailand",utide_tidetables,1,9.2649,99.4345,,,,0.211/124,0.64,0.481/76,0.321/32,,,,behalten
+"Ko Surin, Phang Nga, Thailand",att_np203_scs,4,9.4221,97.8701,,,,0.820/92,0.50,0.150/228,0.060/206,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Ko Samui, Surat Thani, Thailand",utide_tidetables,1,9.482,99.9249,,,,0.163/108,0.53,0.365/71,0.253/29,,,,behalten
+"Pak Nam Ranong, Ranong, Thailand",att_np203_scs,4,9.948,98.5947,,,,1.060/88,0.53,0.110/206,0.060/194,fehlt,,"Dublette zu Pak Nam Ranong, Ranong, Thailand [utide_tidetables] 0.0 km: M2 -14 %, -14 Grad",archivieren (nach Rang)
+"Pak Nam Ranong, Ranong, Thailand",utide_tidetables,1,9.948,98.5947,,,,1.234/102,0.50,0.140/232,0.054/205,,,,behalten
+"Lang Suan, Chumphon, Thailand",att_np203_scs,4,9.95,99.1667,ja,,,0.150/102,0.40,0.370/66,0.240/24,fehlt,,"gegen Ko Mattaphon 56 km: M2 +45 % -8 Grad, S2/M2 -44 %, K1 -18 % +0 Grad, O1 -20 %",M2-Hub pruefen
+"Ko Mattaphon, Chumphon, Thailand",utide_tidetables,1,10.4494,99.2533,,,,0.103/110,0.72,0.453/65,0.301/23,,,,behalten
+"Bang Saphan, Prachuap Khiri Khan, Thailand",utide_tidetables,1,11.2061,99.5822,,,,0.034/115,1.08,0.471/61,0.318/20,,,,behalten
+"Ko Lak, Prachuap Khiri Khan, Thailand",utide_observations,1,11.7953,99.8172,,,,0.063/297,0.23,0.504/61,0.338/20,,,,behalten
+"Ko Mak, Trat, Thailand",att_np203_scs,4,11.8039,102.4884,,,,0.090/137,0.67,0.330/27,0.280/336,fehlt,,"gegen Laem Ngop 42 km: M2 -18 % -52 Grad, S2/M2 +19 %, K1 -26 % -20 Grad, O1 -7 %",Zeit pruefen
+"Ao Muang Trat, Trat, Thailand",att_np203_scs,4,12.1167,102.5667,ja,,,0.120/171,0.75,0.420/45,0.310/5,fehlt,,"gegen Laem Ngop 20 km: M2 +9 % -18 Grad, S2/M2 +34 %, K1 -6 % -2 Grad, O1 +2 %",Hube korrigieren + P1/Q1
+"Laem Ngop, Trat, Thailand",utide_tidetables,1,12.1669,102.39,,,,0.110/189,0.56,0.447/47,0.302/6,,,,behalten
+"Laem Sing, Chanthaburi, Thailand",utide_tidetables,1,12.4817,102.0613,,,,0.104/219,0.50,0.477/53,0.314/11,,,,behalten
+"Hua Hin, Prachuap Khiri Khan, Thailand",utide_tidetables,1,12.5758,99.961,,,,0.356/295,0.44,0.615/60,0.393/19,,,,behalten
+"Chong Samet, Rayong, Thailand",att_np203_scs,4,12.5833,101.4333,ja,,,0.240/277,0.33,0.620/55,0.470/16,fehlt,,"gegen Pak Nam Rayong 19 km, Map Ta Phut 33 km: M2 +54 % +23 Grad, S2/M2 -24 %, K1 +19 % +4 Grad, O1 +34 %",Zeit pruefen
+"Sattahip, Chon Buri, Thailand",utide_tidetables,1,12.6486,100.8659,,,,0.261/279,0.47,0.587/56,0.389/15,,,,behalten
+"Pak Nam Rayong, Rayong, Thailand",utide_tidetables,1,12.6561,101.2766,,,,0.146/252,0.43,0.506/52,0.342/12,,,,behalten
+"Map Ta Phut, Rayong, Thailand",utide_tidetables,1,12.6728,101.1389,,,,0.175/256,0.44,0.547/50,0.364/11,,,,behalten
+"Chong Ko Khram Yai, Chon Buri, Thailand",att_np203_scs,4,12.7021,100.8356,,,,0.310/280,0.42,0.470/44,0.400/18,fehlt,,"gegen Sattahip 7 km, Map Ta Phut 33 km: M2 +27 % +4 Grad, S2/M2 -9 %, K1 -19 % -12 Grad, O1 +4 %",M2-Hub pruefen
+"Laem Chabang, Chon Buri, Thailand",utide_tidetables,1,13.0523,100.8892,,,,0.504/290,0.49,0.662/57,0.428/15,,,,behalten
+"Ko Si Chang, Chon Buri, Thailand",utide_tidetables,1,13.1618,100.8108,,,,0.499/289,0.49,0.653/58,0.422/17,,,,behalten
+"Pak Nam Mae Klong, Samut Songkhram, Thailand",utide_tidetables,1,13.3731,99.9918,,,,0.520/309,0.50,0.608/67,0.389/24,,,,behalten
+"Bangkok Bar, Samut Prakan, Thailand",utide_tidetables,1,13.45,100.583333,ja,,,0.563/296,0.49,0.683/62,0.440/20,,,,behalten
+"Pak Nam Bang Pakong, Chachoengsao, Thailand",utide_tidetables,1,13.483333,101.0,ja,,,0.525/307,0.52,0.617/66,0.397/23,,,,behalten
+"Pak Nam Tha Chin, Samut Sakhon, Thailand",utide_tidetables,1,13.5347,100.2789,,,,0.540/305,0.49,0.631/63,0.395/22,,,,behalten
+"Phra Chunlachomklao Fort, Samut Prakan, Thailand",utide_tidetables,1,13.5533,100.5769,,,,0.547/301,0.50,0.663/63,0.423/22,,,,behalten
+"Bangkok Port, Bangkok, Samut Prakan, Thailand",utide_tidetables,1,13.7,100.566667,ja,,,0.494/325,0.50,0.578/77,0.362/34,,,,behalten
+"Royal Thai Navy Headquarters, Bangkok, Samut Prakan, Thailand",utide_tidetables,1,13.7433,100.4903,,,,0.372/345,0.50,0.458/93,0.281/50,,,,behalten
