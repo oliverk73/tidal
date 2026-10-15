@@ -78,7 +78,7 @@ def fes_m2(lat, lon):
 
 
 def pruefe(land, dateien):
-    """-> {satzname: befundtext} fuer Saetze mit unerklaertem Zeitversatz."""
+    """-> {(satzname, datei): befundtext} fuer Saetze mit unerklaertem Zeitversatz."""
     kenn = LANDESQUELLE.get(land)
     if not kenn:
         return {}
@@ -105,7 +105,7 @@ def pruefe(land, dateien):
             zeilen.append('%s %.0f km: HW %+.0f / NW %+.0f min, Hub %+.0f %%, FES %+.0f min' % (
                 r['name'].rsplit(',', 1)[0], D.km(s, r), hw, nw, 100 * hub, fes))
         if all(unerklaert):
-            out[s['name']] = 'ZEIT gegen die Landesquelle verschoben: ' + '; '.join(zeilen)
+            out[(s['name'], s['file'])] = 'ZEIT gegen die Landesquelle verschoben: ' + '; '.join(zeilen)
     return out
 
 
@@ -119,4 +119,4 @@ if __name__ == '__main__':
         j = sorted(glob.glob(os.path.join(D.ROOT, stem + '*.json')))[-1]
         dateien = sorted({z['datei'] for z in json.load(open(j))})
     for n, t in pruefe(land, dateien).items():
-        print(n, '|', t)
+        print(n[0], '|', t)

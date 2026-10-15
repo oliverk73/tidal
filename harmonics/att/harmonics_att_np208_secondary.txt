@@ -14988,38 +14988,6 @@ MNUS2
 #
 # ------------- End congen output -------------
 # BEGIN HOT COMMENTS
-# country: Portugal
-# source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
-# att_number: 1752
-# note: NP208 Part II Sekundaerhafen-Transfer von Lisboa (Alcântara), Portugal (att 1752). fS=0.90 fN=0.80 dt=-22min. ATT Vol.8 (2026).
-# date_imported: 20260701
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -7.8665
-# !latitude: 36.9779
-# region: Faro
-# admin1_quelle: Polygon
-# note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.80 (Nipphub-Differenzen
-# note: sind auf 0.1 m gerundet und verrauschen S2); Wahrheit 3.24 -> 3.4 %.
-# BEGIN HOT COMMENTS
-# country: Spain
-# source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
-# att_number: 1756
-# note: NP208 Part II Sekundaerhafen-Transfer von Lisboa (Alcântara), Portugal (att 1756). fS=0.81 fN=0.80 dt=+12min. ATT Vol.8 (2026).
-# date_imported: 20260701
-# datum: Chart Datum (Z0 = mean level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: -6.4330
-# !latitude: 36.7500
-# region: Cádiz
-# admin1_quelle: Polygon
-# note: 20260910 Zeit berichtigt: -60 min Zonenwechsel (ATT rechnet ihn ein).
-# note: -- Siehe py/np208_zeit_richten.py --zonen.
-# note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.80 (Nipphub-Differenzen
-# note: sind auf 0.1 m gerundet und verrauschen S2); Wahrheit 2.93 -> 2.94 %.
-# BEGIN HOT COMMENTS
 # country: Spain
 # source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Transfer
 # att_number: 1760

@@ -367,19 +367,19 @@ if __name__ == '__main__':
                 haupt_, len(andere), '; '.join(a_.replace(', ' + land, '') for a_ in andere[:4])))
     import dubletten_kurven as D
     S = D.saetze(land, sorted({r['file'] for r in rs}))
-    proz = {z['satz']: z for z in zeilen}
+    proz = {(z['satz'], z['datei']): z for z in zeilen}   # gleicher Name in mehreren Dateien (Jayapura BIG/Pushidrosal/BMKG)
     for i, a in enumerate(S):
         for b in S[i + 1:]:
             art_ = D.kandidat(a, b)
-            if art_ and a['name'] in proz:
+            if art_ and (a['name'], a['file']) in proz:
                 quelle = lambda s_: os.path.basename(s_['file']).replace('harmonics_', '').replace('.txt', '')
-                proz[a['name']]['befunde'].append('%s mit "%s" (%s): %.1f km, Kurvenabweichung %.0f %% [%s]; %s gegen %s' % (
+                proz[(a['name'], a['file'])]['befunde'].append('%s mit "%s" (%s): %.1f km, Kurvenabweichung %.0f %% [%s]; %s gegen %s' % (
                     art_, b['name'], quelle(b), D.km(a, b), 100 * D.abw(a, b), D.detail(a, b), quelle(a), quelle(b)))
     # Zeitversatz von Uebertragungssaetzen gegen Pegel der Landesquelle (py/zeit_pruefung.py)
     import zeit_pruefung as Z
-    for n_, txt_ in Z.pruefe(land, sorted({r['file'] for r in rs})).items():
-        if n_ in proz:
-            proz[n_]['befunde'].append(txt_)
+    for k_, txt_ in Z.pruefe(land, sorted({r['file'] for r in rs})).items():
+        if k_ in proz:
+            proz[k_]['befunde'].append(txt_)
     # Von Oliver bestaetigte Befunde nicht mehr melden (harmonics/help/pruefliste_bestaetigt.csv: satz;befund;notiz)
     bpfad = os.path.join(ROOT, 'harmonics/help/pruefliste_bestaetigt.csv')
     if os.path.exists(bpfad):

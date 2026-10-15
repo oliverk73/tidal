@@ -82,6 +82,14 @@ def block(lines, i):
     """
     a = i
     if not _hat_satz_davor(lines, i):
+        # Seit 15.10.2026: den eigenen Kopf ab der letzten "# BEGIN HOT COMMENTS"-Zeile doch mitnehmen.
+        # Sonst bleibt er als Waise stehen, und Werkzeuge, die den ersten "!latitude" lesen, verorten
+        # den neuen ersten Satz am Platz des archivierten (Pushidrosal Sibolga "in Sabang").
+        k = i
+        while k > 0 and lines[k - 1].startswith('#'):
+            k -= 1
+            if lines[k].strip() == '# BEGIN HOT COMMENTS':
+                return k, _ende(lines, i)
         return a, _ende(lines, i)
     while a > 0 and (lines[a - 1].startswith('#') or not lines[a - 1].strip()):
         a -= 1

@@ -35,7 +35,8 @@ def saetze(land, dateien):
                 while j > 0 and L[j].startswith('#') and L[j] != '#':
                     kopf.append(L[j]); j -= 1
                 h = '\n'.join(reversed(kopf))
-                la = re.search(r'# !latitude: *(-?[\d.]+)', h); lo = re.search(r'# !longitude: *(-?[\d.]+)', h)
+                # die LETZTE Angabe gilt (wie bei XTide); davor koennen Reste eines frueher geloeschten Satzes stehen
+                la = (re.findall(r'# !latitude: *(-?[\d.]+)', h) or [None])[-1]; lo = (re.findall(r'# !longitude: *(-?[\d.]+)', h) or [None])[-1]
                 if not la or not lo: continue
                 kon = {}
                 for x in L[k + 3:min(k + 200, len(L))]:
@@ -47,7 +48,7 @@ def saetze(land, dateien):
                 mer = L[k + 1].split()[0]
                 hh, mm = mer.lstrip('+-').split(':')
                 e = L[k + 2].split()
-                out.append(dict(name=l, file=f, lat=float(la.group(1)), lon=float(lo.group(1)), kopf=h, kon=kon,
+                out.append(dict(name=l, file=f, lat=float(la), lon=float(lo), kopf=h, kon=kon,
                                 meridian=(-1 if mer[0] == '-' else 1) * (int(hh) + int(mm) / 60),
                                 fuss=len(e) > 1 and e[1].startswith('f')))
     return out
