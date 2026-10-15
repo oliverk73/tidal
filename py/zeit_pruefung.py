@@ -27,6 +27,9 @@ import dubletten_kurven as D                                       # noqa: E402
 
 RADIUS_KM = 15
 SCHWELLE_MIN = 20
+# Toleranz je km WASSERWEG (Oliver 15.10.2026: Zeitversatz in Relation zur Entfernung, und zwar entlang des
+# Wassers, nicht Luftlinie). Flaches Kuestenwasser: Tide laeuft ~7-10 m/s -> rund 2 min je km.
+PRO_KM = float(os.environ.get("ZEIT_PRO_KM", "2"))
 LANDESQUELLE = {'South Korea': ('khoa',), 'Philippines': ('namria',),
                 'Indonesia': ('big (badan', 'pushidrosal', 'bmkg', 'uhslc'),
                 'Japan': ('uhslc',), 'Vietnam': ('vho navy', 'icoe', 'nchmf', 'uhslc'),
@@ -105,9 +108,19 @@ def pruefe(land, dateien):
             dt = (hw + nw) / 2
             # Ueberschuss, den FES nicht erklaert (gleiche Richtung wird bis zu ihrem Betrag abgezogen)
             rest = abs(dt) - (abs(fes) if fes * dt > 0 else 0.0)
-            unerklaert.append(abs(dt) >= SCHWELLE_MIN and rest >= SCHWELLE_MIN)
-            zeilen.append('%s %.0f km: HW %+.0f / NW %+.0f min, Hub %+.0f %%, FES %+.0f min' % (
-                r['name'].rsplit(',', 1)[0], D.km(s, r), hw, nw, 100 * hub, fes))
+            weg = D.km(s, r)
+            verdacht = abs(dt) >= SCHWELLE_MIN + PRO_KM * weg and rest >= SCHWELLE_MIN + PRO_KM * weg
+            if verdacht:
+                # erst bei Verdacht den teuren Wasserweg rechnen; ohne Wasserweg nicht vergleichbar
+                import wasserweg as W
+                os.environ.setdefault('PRUEF_LAND', land)
+                weg = W.wasserweg_km((s['lat'], s['lon']), (r['lat'], r['lon']))
+                verdacht = weg is not None and abs(dt) >= SCHWELLE_MIN + PRO_KM * weg and rest >= SCHWELLE_MIN + PRO_KM * weg
+            unerklaert.append(verdacht)
+            zeilen.append('%s %.0f km%s: HW %+.0f / NW %+.0f min, Hub %+.0f %%, FES %+.0f min' % (
+                r['name'].rsplit(',', 1)[0], D.km(s, r),
+                (' (Wasserweg %.0f km)' % weg) if weg is not None and abs(weg - D.km(s, r)) > 0.5 else (' (kein Wasserweg)' if weg is None else ''),
+                hw, nw, 100 * hub, fes))
         if all(unerklaert):
             out[(s['name'], s['file'])] = 'ZEIT gegen die Landesquelle verschoben: ' + '; '.join(zeilen)
     return out
