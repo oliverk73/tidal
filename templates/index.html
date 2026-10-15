@@ -1670,6 +1670,12 @@
 
 <script>
 
+  // Echte Position eines Markers: aufgefaecherte Cluster (Spiderfy) setzen den Marker voruebergehend
+  // auf die Faecherposition; die echte steht dann in _preSpiderfyLatlng (Oliver 15.10.2026).
+  function echteLatLng(m) {
+    return m._preSpiderfyLatlng || m.getLatLng();
+  }
+
   // Hilfsfunktion: offenen Marker in allen Cluster-Gruppen finden
   function findOpenPopupMarker() {
     // Erst direkt am offenen Popup nachsehen (zuverlässig auch bei Spider-Cluster)
@@ -1710,7 +1716,7 @@
     var parentGroup = result.group;
     if (!targetMarker) return;
 
-    var oldLatLng = targetMarker.getLatLng();
+    var oldLatLng = echteLatLng(targetMarker);
     var popupContent = targetMarker.getPopup().getContent();
     // Popup-content can be a string OR a function (since the JSON-loader
     // refactor in 81dac57 binds popupContent as a function). Materialise it.
@@ -1797,7 +1803,7 @@
     var parentGroup = result.group;
     if (!targetMarker) return;
 
-    var oldLatLng = targetMarker.getLatLng();
+    var oldLatLng = echteLatLng(targetMarker);
     var popupContent = targetMarker.getPopup().getContent();
     // Popup-content can be a string OR a function (since the JSON-loader
     // refactor in 81dac57 binds popupContent as a function). Materialise it.
@@ -1892,7 +1898,7 @@
     if (!newName || newName.trim() === '' || newName.trim() === oldName) return;
     newName = newName.trim();
 
-    var markerLatLng = targetMarker.getLatLng();
+    var markerLatLng = echteLatLng(targetMarker);
     fetch('/update_station_name', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -1948,7 +1954,7 @@
     var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
     var sourceFile = srcMatch ? srcMatch[1] : '';
 
-    var latlng = targetMarker.getLatLng();
+    var latlng = echteLatLng(targetMarker);
     if (!confirm('Really delete station?\n\n' +
         'Station: ' + stationName + '\n' +
         'Position: ' + latlng.lat.toFixed(4) + ', ' + latlng.lng.toFixed(4) + '\n' +
