@@ -28,7 +28,11 @@ import dubletten_kurven as D                                       # noqa: E402
 RADIUS_KM = 15
 SCHWELLE_MIN = 20
 LANDESQUELLE = {'South Korea': ('khoa',), 'Philippines': ('namria',),
-                'Indonesia': ('big (badan', 'pushidrosal', 'bmkg', 'uhslc')}   # amtliche Pegel/Tafeln und Messreihen
+                'Indonesia': ('big (badan', 'pushidrosal', 'bmkg', 'uhslc'),
+                'Japan': ('uhslc',), 'Vietnam': ('vho navy', 'icoe', 'nchmf', 'uhslc'),
+                'Thailand': ('royal thai navy', 'uhslc'), 'Malaysia': ('nmdis', 'uhslc'), 'Singapore': ('nmdis', 'uhslc'),
+                'Myanmar': ('survey of india', 'nmdis', 'uhslc'), 'Cambodia': ('vho navy',),
+                'China': ('nmdis', 'hko tide', 'cwa tide', 'ioc sea level', 'uhslc')}   # amtliche Pegel/Tafeln und Messreihen
 _T = np.arange(0, 30 * 24, 1 / 60)          # 30 Tage, Minutentakt (Stunden)
 
 

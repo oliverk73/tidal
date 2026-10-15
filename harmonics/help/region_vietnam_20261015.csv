@@ -1,0 +1,139 @@
+satz,datei,rang,lat,lon,raster,lage,lage_detail,m2,s2m2,k1,o1,p1q1,name_hinweis,befund,vorschlag
+"Ba Ke (Truong Sa), Vietnam",utide_tidetables,1,7.85,111.7333,ja,,,0.129/95,0.21,0.368/204,0.333/155,,,,behalten
+"An Bang (Truong Sa), Vietnam",utide_tidetables,1,7.8833,112.9167,ja,,,0.117/63,0.22,0.361/188,0.334/140,,,,behalten
+"DK1-7 Platform (Huyen Tran Bank), Vietnam",utide_tidetables,1,8.0333,110.6167,ja,,,0.164/103,0.46,0.382/198,0.323/156,,,,behalten
+"Phuc Tan (Truong Sa), Vietnam",utide_tidetables,1,8.1667,111.5,ja,,,0.117/90,0.22,0.361/202,0.334/152,,,,behalten
+"Thuyen Chai (Truong Sa), Vietnam",utide_tidetables,1,8.2667,113.4667,ja,,,0.116/89,0.21,0.331/202,0.298/152,,,,behalten
+"Da Lat (Truong Sa), Vietnam",utide_tidetables,1,8.5167,114.6667,ja,,,0.118/97,0.22,0.359/206,0.330/156,,,,behalten
+"Truong Sa (Spratly Island), Vietnam",utide_tidetables,1,8.6433,111.9216,,,,0.187/100,0.26,0.369/198,0.315/148,,,,behalten
+"Poulo Condore, Vietnam",att_np203_scs,4,8.6667,106.6333,ja,,,0.800/209,0.35,0.640/213,0.450/176,fehlt,,"Dublette zu Con Dao, Vietnam [utide_tidetables] 2.1 km: M2 +18 %, -1 Grad | UEBERNEHMEN? Position 8.6667/106.6333 statt 8.6730/106.6150 | UEBERNEHMEN? Name ""Poulo Condore, Vietnam"" statt ""Con Dao, Vietnam""",archivieren (nach Rang)
+"Con Dao, Vietnam",utide_tidetables,1,8.673,106.615,,,,0.678/210,0.42,0.564/220,0.424/176,,,,behalten
+"Con Son, Tien Giang, Vietnam",noaa_cptt,5,8.6833,106.6,ja,,,0.585/210,0.39,0.450/215,0.338/173,,,"Dublette zu Con Dao, Vietnam [utide_tidetables] 2.0 km: M2 -14 %, -0 Grad | UEBERNEHMEN? Position 8.6833/106.6000 statt 8.6730/106.6150 | UEBERNEHMEN? Name ""Con Son, Tien Giang, Vietnam"" statt ""Con Dao, Vietnam""",archivieren (nach Rang)
+"Cau Lon River entrance, Vietnam",noaa_cptt,5,8.7253,104.8008,,,,0.287/194,0.39,0.221/207,0.166/165,,,"gegen Nam Can (Song Cua Lon) 21 km, Song Doc 35 km: M2 -26 % -67 Grad, S2/M2 +14 %, K1 -40 % -54 Grad, O1 -21 %",Zeit pruefen
+"Nui Le (Truong Sa), Vietnam",utide_tidetables,1,8.75,114.2,ja,,,0.134/68,0.22,0.397/190,0.363/141,,,,behalten
+"Nam Can (Song Cua Lon), Vietnam",utide_tidetables,1,8.7565,104.9903,,,,0.555/262,0.35,0.482/253,0.294/211,,,,behalten
+"Toc Tan (Truong Sa), Vietnam",utide_tidetables,1,8.8,114.0,ja,,,0.114/73,0.21,0.346/193,0.318/144,,,,behalten
+"Da Dong (Truong Sa), Vietnam",utide_tidetables,1,8.8333,112.55,ja,,,0.123/100,0.21,0.357/207,0.326/157,,,,behalten
+"Tien Nu (Truong Sa), Vietnam",utide_tidetables,1,8.8667,114.65,ja,,,0.132/68,0.21,0.384/190,0.350/141,,,,behalten
+"Da Tay (Truong Sa), Vietnam",utide_tidetables,1,8.9,112.25,ja,,,0.133/90,0.22,0.397/202,0.363/152,,,,behalten
+"Phan Vinh (Truong Sa), Vietnam",utide_tidetables,1,8.9667,113.6833,ja,,,0.114/72,0.21,0.345/193,0.318/144,,,,behalten
+"Ganh Hao, Vietnam",utide_tidetables,1,9.0314,105.4195,,,,0.930/242,0.40,0.643/235,0.431/195,,,,behalten
+"Song Doc, Vietnam",utide_tidetables,1,9.0412,104.8332,,,,0.106/252,0.25,0.212/291,0.110/265,,,,behalten
+"Hon Tho Chau, Vietnam",att_np203_scs,4,9.3,103.4667,ja,,,0.000/180,0.00,0.200/304,0.100/282,fehlt,,"Dublette zu Tho Chau, Vietnam [utide_tidetables] 0.8 km: M2 -100 %, +37 Grad | UEBERNEHMEN? Position 9.3000/103.4667 statt 9.3014/103.4737 | UEBERNEHMEN? Name ""Hon Tho Chau, Vietnam"" statt ""Tho Chau, Vietnam""",archivieren (nach Rang)
+"Pulau Panjang, Gulf of Siam, Vietnam",noaa_cptt,5,9.3,103.4667,ja,,,0.099/194,0.39,0.076/207,0.057/165,,,"Dublette zu Hon Tho Chau, Vietnam [att_np203_scs] 0.0 km: M2 +9810 %, +14 Grad | UEBERNEHMEN? Name ""Pulau Panjang, Gulf of Siam, Vietnam"" statt ""Hon Tho Chau, Vietnam"" | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Tho Chau, Vietnam",utide_tidetables,1,9.3014,103.4737,,,,0.034/143,0.28,0.105/317,0.085/294,,,,behalten
+"Hau Giang River entrance, Tien Giang, Vietnam",noaa_cptt,5,9.4,106.45,ja,,,0.773/218,0.39,0.595/219,0.447/177,,,"gegen Tran De (Song Hau) 29 km, My Thanh 31 km: M2 -12 % -15 Grad, S2/M2 +9 %, K1 +0 % -11 Grad, O1 +11 %",behalten
+"My Thanh, Vietnam",utide_tidetables,1,9.4248,106.1709,,,,0.861/229,0.37,0.579/228,0.397/187,,,,behalten
+"Cua Batak, Vietnam",att_np203_scs_secondary,4,9.4667,106.2167,ja,,,1.063/237,0.39,0.808/229,0.606/186,fehlt,,"Dublette zu Tran De (Song Hau), Vietnam [utide_tidetables] 4.1 km: M2 +18 %, +1 Grad | UEBERNEHMEN? Position 9.4667/106.2167 statt 9.5003/106.2014 | UEBERNEHMEN? Name ""Cua Batak, Vietnam"" statt ""Tran De (Song Hau), Vietnam""",archivieren (nach Rang)
+"Tran De (Song Hau), Vietnam",utide_tidetables,1,9.5003,106.2014,,,,0.902/235,0.35,0.610/231,0.410/189,,,,behalten
+"Dai Ngai (Song Hau), Vietnam",utide_tidetables,1,9.7346,106.0742,,,,0.824/256,0.34,0.551/241,0.363/197,,,,behalten
+"Hon Rai (Gulf of Siam), Vietnam",noaa_cptt,5,9.7974,104.6299,,,,0.208/194,0.39,0.160/207,0.120/165,,,"gegen Xeo Ro (Song Cai Lon) 53 km, Rach Gia 54 km: M2 +64 % -67 Grad, S2/M2 +112 %, K1 -53 % -87 Grad, O1 +46 %",Zeit pruefen
+"Xeo Ro (Song Cai Lon), Vietnam",utide_tidetables,1,9.8647,105.1109,,,,0.178/262,0.18,0.629/288,0.116/312,,,,behalten
+"Ben Trai (Cua Co Chien), Vietnam",utide_tidetables,1,9.8809,106.529,,,,0.773/224,0.36,0.571/222,0.405/180,,,,behalten
+"An Thuan (Cua Ham Luong), Vietnam",utide_tidetables,1,9.9758,106.6052,,,,0.768/216,0.36,0.577/219,0.415/175,,,,behalten
+"Tra Vinh, Vietnam",utide_tidetables,1,9.9767,106.3533,,,,0.753/245,0.34,0.547/233,0.372/188,,,,behalten
+"Rach Gia, Vietnam",utide_tidetables,1,10.0101,105.0769,,,,0.074/257,0.20,0.081/343,0.048/318,,,,behalten
+"Phu Quoc (An Thoi), Vietnam",utide_tidetables,1,10.0333,104.0333,ja,,,0.065/174,0.42,0.173/355,0.130/330,,,,behalten
+"Can Tho, Vietnam",utide_tidetables,1,10.0334,105.7889,,,,0.590/303,0.28,0.592/289,0.226/220,,,,behalten
+"Nam Yet (Namyit Island, Spratly Islands), Vietnam",utide_tidetables,1,10.1833,114.35,ja,,,0.160/84,0.41,0.303/188,0.267/158,,,,behalten
+"Binh Dai (Cua Dai), Vietnam",utide_tidetables,1,10.197,106.7112,,,,0.783/217,0.37,0.583/218,0.420/175,,,,behalten
+"My Hoa (Ben Tre), Vietnam",utide_tidetables,1,10.2182,106.3523,,,,0.780/254,0.33,0.675/245,0.360/190,,,,behalten
+"Cua Tieu entrance, Tien Giang, Vietnam",noaa_cptt,5,10.25,106.7833,ja,,,0.654/214,0.39,0.503/217,0.378/175,,,"gegen Vam Kenh (Cua Tieu) 5 km, Binh Dai (Cua Dai) 10 km: M2 -15 % -4 Grad, S2/M2 +4 %, K1 -13 % -2 Grad, O1 -9 %",behalten
+"Vam Kenh (Cua Tieu), Vietnam",utide_tidetables,1,10.2699,106.7402,,,,0.767/219,0.38,0.581/220,0.410/177,,,,behalten
+"My Thuan, Vietnam",utide_tidetables,1,10.2718,105.9117,,,,0.697/289,0.30,0.609/270,0.281/207,,,,behalten
+"Cho Lach, Vietnam",utide_tidetables,1,10.2751,106.1267,,,,0.774/274,0.31,0.614/257,0.316/200,,,,behalten
+"Hoa Binh, Tien Giang, Vietnam",utide_tidetables,1,10.2861,106.5913,,,,0.756/237,0.34,0.554/229,0.387/185,,,,behalten
+"Vung Tau, Vietnam",utide_observations,1,10.34,107.072,,,,0.773/194,0.39,0.595/207,0.447/165,,,,behalten
+"My Tho, Vietnam",utide_tidetables,1,10.3475,106.3647,,,,0.763/257,0.31,0.651/249,0.337/193,,,,behalten
+"Ha Tien, Vietnam",att_np203_scs,4,10.3667,104.4667,ja,,,0.100/247,0.20,0.260/321,0.130/300,fehlt,,"Dublette zu Ha Tien, Vietnam [utide_tidetables] 0.0 km: M2 -19 %, -1 Grad",archivieren (nach Rang)
+"Ha Tien, Tien Giang, Vietnam",noaa_cptt,5,10.3667,104.4667,ja,,,0.081/226,0.48,0.265/347,0.181/290,fehlt,,"Dublette zu Ha Tien, Vietnam [att_np203_scs] 0.0 km: M2 -19 %, -21 Grad | UEBERNEHMEN? Name ""Ha Tien, Tien Giang, Vietnam"" statt ""Ha Tien, Vietnam""",archivieren (nach Rang)
+"Ha Tien, Vietnam",utide_tidetables,1,10.3667,104.4667,ja,,,0.124/248,0.06,0.303/328,0.159/302,,,,behalten
+"Cua Soirap, Vietnam",att_np203_scs_secondary,4,10.3833,106.8,ja,,,0.790/220,0.39,0.600/221,0.450/179,fehlt,,"gegen Vam Kenh (Cua Tieu) 14 km, Binh Dai (Cua Dai) 23 km: M2 +2 % +2 Grad, S2/M2 +5 %, K1 +3 % +1 Grad, O1 +9 %",behalten + P1/Q1
+"Nha Be River entrance, Tien Giang, Vietnam",noaa_cptt,5,10.3833,106.8,ja,,,0.585/221,0.39,0.450/221,0.338/178,,,"Dublette zu Cua Soirap, Vietnam [att_np203_scs_secondary] 0.0 km: M2 -26 %, +1 Grad | UEBERNEHMEN? Name ""Nha Be River entrance, Tien Giang, Vietnam"" statt ""Cua Soirap, Vietnam"" | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Can Gio, Vietnam",att_np203_scs,4,10.4182,106.9716,,,,0.800/200,0.40,0.700/202,0.440/167,fehlt,,"gegen Vung Tau 14 km, Vam Kenh (Cua Tieu) 30 km: M2 +6 % -1 Grad, S2/M2 +4 %, K1 +19 % -9 Grad, O1 +2 %",behalten + P1/Q1
+"Hai dang Ba Kiem, Vietnam",att_np203_scs,4,10.5,107.5,ja,,,0.600/176,0.33,0.500/197,0.400/160,fehlt,,"gegen Vung Tau 50 km: M2 -22 % -18 Grad, S2/M2 -15 %, K1 -16 % -10 Grad, O1 -10 %",behalten + P1/Q1
+"Hai dang Ba Kiem, Vietnam",noaa_cptt,5,10.5,107.5,ja,,,0.496/179,0.39,0.381/199,0.286/158,,,"Dublette zu Hai dang Ba Kiem, Vietnam [att_np203_scs] 0.0 km: M2 -17 %, +3 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Phu Quy, Vietnam",att_np203_scs,4,10.5,108.95,ja,,,0.190/113,0.42,0.370/184,0.200/152,fehlt,,"Dublette zu Phu Quy, Vietnam [utide_tidetables] 0.0 km: M2 -9 %, -5 Grad",archivieren (nach Rang)
+"Phu Quy, Vietnam",noaa_cptt,5,10.5,108.95,ja,,,0.183/78,0.35,0.291/207,0.267/163,,,"Dublette zu Phu Quy, Vietnam [att_np203_scs] 0.0 km: M2 -3 %, -35 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Phu Quy, Vietnam",utide_tidetables,1,10.5,108.95,ja,,,0.208/118,0.42,0.407/205,0.280/158,,,,behalten
+"Tan An (Vam Co Tay), Vietnam",utide_tidetables,1,10.5366,106.4187,,,,0.552/282,0.34,0.318/251,0.203/200,,,,behalten
+"Coral Bank, Tien Giang, Vietnam",noaa_cptt,5,10.6167,106.85,ja,,,0.631/226,0.39,0.427/223,0.321/181,,,"gegen Nha Be 11 km, Sai Gon (Ho Chi Minh City) 24 km: M2 -20 % -24 Grad, S2/M2 +11 %, K1 -24 % -10 Grad, O1 -20 %",Zeit pruefen
+"Ben Luc (Vam Co Dong), Vietnam",utide_tidetables,1,10.6341,106.4786,,,,0.618/270,0.34,0.397/244,0.265/200,,,,behalten
+"Nha Be, Vietnam",utide_tidetables,1,10.6745,106.7677,,,,0.877/242,0.36,0.596/229,0.419/184,,,,behalten
+"Mui Ke Ga, Vietnam",att_np203_scs,4,10.6997,107.993,,,,0.360/151,0.44,0.450/182,0.380/154,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Mui Ke Ga, Vietnam",noaa_cptt,5,10.6997,107.993,,,,0.297/152,0.39,0.229/185,0.172/145,,,"Dublette zu Mui Ke Ga, Vietnam [att_np203_scs] 0.0 km: M2 -17 %, +0 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Ho Chi Minh City (Sai Gon), Vietnam",att_np203_scs_secondary,4,10.7667,106.7,ja,,,0.875/324,0.39,0.440/274,0.330/228,fehlt,,"Dublette zu Sai Gon (Ho Chi Minh City), Vietnam [utide_tidetables] 2.0 km: M2 +31 %, +51 Grad | UEBERNEHMEN? Position 10.7667/106.7000 statt 10.7820/106.7092 | UEBERNEHMEN? Name ""Ho Chi Minh City (Sai Gon), Vietnam"" statt ""Sai Gon (Ho Chi Minh City), Vietnam""",archivieren (nach Rang)
+"Ho Chi Minh City, Tien Giang, Vietnam",noaa_cptt,5,10.7667,106.7,ja,,,0.684/264,0.39,0.526/243,0.395/199,,,"Dublette zu Ho Chi Minh City (Sai Gon), Vietnam [att_np203_scs_secondary] 0.0 km: M2 -22 %, -60 Grad | UEBERNEHMEN? Name ""Ho Chi Minh City, Tien Giang, Vietnam"" statt ""Ho Chi Minh City (Sai Gon), Vietnam"" | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Sai Gon (Ho Chi Minh City), Vietnam",utide_tidetables,1,10.782,106.7092,,,,0.671/273,0.33,0.502/244,0.369/197,,,,behalten
+"Phan Thiet, Vietnam",att_np203_scs,4,10.9187,108.1058,,,,0.300/137,0.33,0.400/182,0.400/150,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Phan Thiet, Vietnam",noaa_cptt,5,10.9187,108.1058,,,,0.232/99,0.35,0.368/218,0.337/173,,,"Dublette zu Phan Thiet, Vietnam [att_np203_scs] 0.0 km: M2 -23 %, -38 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Bien Hoa (Dong Nai River), Vietnam",utide_tidetables,1,10.9408,106.8228,,,,0.808/300,0.34,0.497/259,0.336/209,,,,behalten
+"Thu Dau Mot (Saigon River), Vietnam",utide_tidetables,1,10.9765,106.6507,,,,0.663/308,0.29,0.426/267,0.301/217,,,,behalten
+"Mui La Gan, Vietnam",att_np203_scs,4,11.1652,108.7036,,,,0.210/113,0.48,0.400/183,0.330/151,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Mui La Gan, Vietnam",noaa_cptt,5,11.1652,108.7036,,,,0.221/75,0.35,0.351/205,0.322/161,,,"Dublette zu Mui La Gan, Vietnam [att_np203_scs] 0.0 km: M2 +5 %, -38 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Mui Dinh, Vietnam",att_np203_scs,4,11.367,109.0204,,,,0.200/105,0.50,0.400/185,0.300/146,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Mui Dinh, Vietnam",noaa_cptt,5,11.367,109.0204,,,,0.194/76,0.35,0.308/206,0.282/162,,,"Dublette zu Mui Dinh, Vietnam [att_np203_scs] 0.0 km: M2 -3 %, -29 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Song Tu Tay (Southwest Cay, Spratly Islands), Vietnam",utide_tidetables,1,11.4302,114.3289,,,,0.170/82,0.40,0.338/192,0.267/153,,,,behalten
+"Cone Island, Vietnam",noaa_cptt,5,11.4333,103.0,ja,,,0.102/145,0.35,0.274/55,0.251/22,,,,behalten (kein Nachbar)
+"Cam Ranh, Vietnam",utide_tidetables,1,11.896,109.1429,,,,0.174/92,0.41,0.372/191,0.287/147,,,,behalten
+"Nha Trang (Cau Da), Vietnam",utide_tidetables,1,12.2026,109.218,,,,0.168/95,0.38,0.342/198,0.272/153,,,,behalten
+"Cang Bac Van Phong, Vietnam",att_np203_scs,4,12.6649,109.4049,,,,0.200/89,0.50,0.300/189,0.300/149,fehlt,,"gegen Vung Ro 22 km, Nha Trang (Cau Da) 55 km: M2 +43 % -6 Grad, S2/M2 +28 %, K1 -14 % -12 Grad, O1 -1 %",M2-Hub pruefen
+"Cang Bac Van Phong, Vietnam",noaa_cptt,5,12.6649,109.4049,,,,0.183/66,0.35,0.291/201,0.267/157,,,"Dublette zu Cang Bac Van Phong, Vietnam [att_np203_scs] 0.0 km: M2 -8 %, -23 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Vung Ro, Vietnam",utide_tidetables,1,12.8672,109.4073,,,,0.128/95,0.40,0.352/202,0.315/159,,,,behalten
+"Vinh Xuan Dai, Vietnam",att_np203_scs,4,13.3833,109.2667,ja,,,0.200/89,0.50,0.300/193,0.300/154,fehlt,,"gegen Qui Nhon 43 km, Vung Ro 59 km: M2 +31 % +0 Grad, S2/M2 +24 %, K1 -11 % -4 Grad, O1 +3 %",M2-Hub pruefen
+"Vinh Xuan Dai, Vietnam",noaa_cptt,5,13.3833,109.2667,ja,,,0.194/70,0.35,0.274/203,0.251/159,,,"Dublette zu Vinh Xuan Dai, Vietnam [att_np203_scs] 0.0 km: M2 -3 %, -19 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Qui Nhon, Vietnam",utide_observations,1,13.768,109.2513,,,,0.172/86,0.41,0.328/193,0.278/153,,,,behalten
+"Tam Quan (Truong Xuan), Vietnam",att_np203_scs,4,14.5825,109.0655,,,,0.200/92,0.50,0.300/195,0.300/159,fehlt,,,behalten (kein Nachbar) + P1/Q1
+"Tam Quan (Truong Xuan), Vietnam",noaa_cptt,5,14.5825,109.0655,,,,0.194/73,0.35,0.274/204,0.251/160,,,"Dublette zu Tam Quan (Truong Xuan), Vietnam [att_np203_scs] 0.0 km: M2 -3 %, -19 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Dao Ly Son, Vietnam",utide_tidetables,1,15.3742,109.1047,,,,0.184/80,0.38,0.306/187,0.250/148,,,,behalten
+"Dung Quat Bay, Vietnam",utide_tidetables,1,15.4,108.75,ja,,,0.198/86,0.37,0.218/175,0.134/137,,,,behalten
+"Cu Lao Cham (Tan Hiep), Vietnam",utide_tidetables,1,15.9572,108.5053,,,,0.198/114,0.37,0.218/190,0.134/151,,,,behalten
+"Da Nang, Vietnam",att_np203_scs,4,16.1167,108.2167,ja,,,0.170/98,0.35,0.190/184,0.130/146,fehlt,,"Dublette zu Da Nang, Vietnam [harmonics-1997-05-25_mod] 0.0 km: M2 -1 %, +0 Grad",archivieren (nach Rang)
+"Da Nang, Vietnam",harmonics-1997-05-25_mod,3,16.1167,108.2167,ja,,,0.172/98,0.34,0.195/185,0.129/146,,,"Dublette zu Da Nang, Vietnam [utide_tidetables] 0.0 km: M2 -1 %, -4 Grad",archivieren (nach Rang)
+"Da Nang, Vietnam",noaa_cptt,5,16.1167,108.2167,ja,,,0.124/76,0.35,0.197/206,0.180/162,,,"Dublette zu Da Nang, Vietnam [att_np203_scs] 0.0 km: M2 -27 %, -22 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Da Nang, Vietnam",utide_tidetables,1,16.1167,108.2167,ja,,,0.174/102,0.34,0.190/181,0.118/140,,,,behalten
+"Chan May Bay, Vietnam",utide_tidetables,1,16.3333,108.0167,ja,,,0.121/117,0.40,0.187/191,0.117/152,,,,behalten
+"Hoang Sa (Paracel Islands), Vietnam",att_np203_scs,4,16.55,111.6167,ja,,,0.170/69,0.47,0.270/185,0.230/149,fehlt,,"Dublette zu Hoang Sa (Paracel Islands), Vietnam [utide_tidetables] 0.0 km: M2 -4 %, +3 Grad",archivieren (nach Rang)
+"Hoang Sa (Paracel Islands), Vietnam",noaa_cptt,5,16.55,111.6167,ja,,,0.167/55,0.35,0.266/195,0.243/152,,,"Dublette zu Hoang Sa (Paracel Islands), Vietnam [att_np203_scs] 0.0 km: M2 -2 %, -14 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Hoang Sa (Paracel Islands), Vietnam",utide_tidetables,1,16.55,111.6167,ja,,,0.178/66,0.35,0.304/197,0.229/140,,,,behalten
+"Thuan An, Vietnam",att_np203_scs,4,16.5604,107.6357,,,,0.180/119,0.22,0.030/150,0.020/267,fehlt,,"gegen Chan May Bay 48 km: M2 +48 % +3 Grad, S2/M2 -45 %, K1 -84 % -41 Grad, O1 -83 %",Zeit pruefen
+"Cua Viet, Vietnam",utide_tidetables,1,16.9041,107.1884,,,,0.210/139,0.24,0.067/357,0.144/319,,,,behalten
+"Con Co, Vietnam",utide_tidetables,1,17.1536,107.3329,,,,0.208/131,0.27,0.074/342,0.164/283,,,,behalten
+"Cua Nhat Le, Vietnam",utide_tidetables,1,17.5173,106.6105,,,,0.146/166,0.28,0.206/352,0.281/291,,,,behalten
+"Cua Gianh (Thanh Gianh), Vietnam",utide_tidetables,1,17.7023,106.4809,,,,0.227/153,0.26,0.227/1,0.314/297,,,,behalten
+"Vung Chua, Vietnam",att_np203_scs,4,17.9354,106.5095,,,,0.200/167,0.50,0.200/25,0.400/299,fehlt,,"gegen Vung Ang 23 km, Cua Gianh (Thanh Gianh) 26 km: M2 -16 % +15 Grad, S2/M2 +88 %, K1 -28 % +29 Grad, O1 +10 %",Zeit pruefen
+"Vung Ang, Vietnam",utide_observations,1,18.113,106.4044,,,,0.247/150,0.27,0.326/353,0.405/293,,,,behalten
+"Cua Hoi, Vietnam",att_np203_scs,4,18.7647,105.759,,,,0.250/169,0.36,0.410/24,0.500/299,fehlt,,"Dublette zu Cua Hoi, Vietnam [utide_tidetables] 0.0 km: M2 -11 %, +2 Grad",archivieren (nach Rang)
+"Cua Hoi, Vietnam",utide_tidetables,1,18.7647,105.759,,,,0.282/167,0.33,0.494/358,0.603/300,,,,behalten
+"Hon Ngu (Cua Lo), Vietnam",att_np203_scs,4,18.7981,105.77,,,,0.300/159,0.33,0.500/342,0.590/305,fehlt,,"Dublette zu Hon Ngu (Cua Lo), Vietnam [harmonics-1997-05-25_mod] 0.0 km: M2 -1 %, +0 Grad",archivieren (nach Rang)
+"Hon Ngu (Cua Lo), Vietnam",harmonics-1997-05-25_mod,3,18.7981,105.77,,,,0.303/159,0.33,0.496/343,0.589/294,,,"Dublette zu Cua Hoi, Vietnam [utide_tidetables] 3.9 km: M2 +7 %, -8 Grad | UEBERNEHMEN? Position 18.7981/105.7700 statt 18.7647/105.7590 | UEBERNEHMEN? Name ""Hon Ngu (Cua Lo), Vietnam"" statt ""Cua Hoi, Vietnam""",archivieren (nach Rang)
+"Hon Me, Vietnam",utide_tidetables,1,19.3592,105.9275,,,,0.148/182,0.23,0.626/345,0.735/288,,,,behalten
+"Sam Son, Vietnam",utide_tidetables,1,19.737,105.91,,,,0.251/154,0.38,0.699/1,0.721/301,,,,behalten
+"Lach Truong, Vietnam",utide_tidetables,1,19.8922,105.9593,,,,0.110/175,0.27,0.698/341,0.817/285,,,,behalten
+"Hon Ne, Vietnam",att_np203_scs,4,19.9136,106.0111,,,,0.180/147,0.39,0.680/347,0.690/279,fehlt,,"gegen Lach Truong 6 km, Sam Son 22 km: M2 +31 % -20 Grad, S2/M2 +24 %, K1 -2 % +1 Grad, O1 -13 %",M2-Hub pruefen
+"Van Ly, Vietnam",utide_tidetables,1,20.1153,106.3084,,,,0.130/181,0.26,0.697/344,0.817/287,,,,behalten
+"Bach Long Vi, Vietnam",utide_tidetables,1,20.1251,107.7238,,,,0.038/172,0.46,0.700/340,0.820/283,,,,behalten
+"Cua Ba Lat, Vietnam",utide_tidetables,1,20.2529,106.5918,,,,0.090/192,0.30,0.723/350,0.848/293,,,,behalten
+"Dao Long Chau, Vietnam",att_np203_scs_secondary,4,20.6172,107.1675,,,,0.037/198,0.80,0.547/343,0.555/289,fehlt,,"gegen Pho Cat Ba 17 km, Hon Dau 37 km: M2 -23 % +5 Grad, S2/M2 +39 %, K1 -28 % -6 Grad, O1 -37 %",Hube korrigieren + P1/Q1
+"Hon Dau, Vietnam",utide_observations,1,20.6685,106.8138,,,,0.060/198,0.75,0.712/347,0.797/291,,,,behalten
+"Do Son, Vietnam",harmonics-1997-05-25_mod,3,20.6721,106.809,,,,0.054/204,0.80,0.725/346,0.741/290,,,"Dublette zu Hon Dau, Vietnam [utide_observations] 0.6 km: M2 -11 %, +7 Grad | UEBERNEHMEN? Position 20.6721/106.8090 statt 20.6685/106.8138 | UEBERNEHMEN? Name ""Do Son, Vietnam"" statt ""Hon Dau, Vietnam""",archivieren (nach Rang)
+"Pho Cat Ba, Vietnam",utide_tidetables,1,20.7173,107.0453,,,,0.043/191,0.47,0.777/350,0.911/293,,,,behalten
+"Do Son, Vietnam",att_np203_scs,4,20.7203,106.7886,,,,0.040/259,0.75,0.720/344,0.700/288,fehlt,,"gegen Hon Dau 6 km, Haiphong (Song Cam) 20 km: M2 -28 % +56 Grad, S2/M2 -6 %, K1 +4 % -7 Grad, O1 -10 %",Zeit pruefen
+"Passe des Hydres, Vietnam",att_np203_scs,4,20.7667,107.1333,ja,,,0.050/303,0.40,0.690/333,0.740/284,fehlt,,"gegen Pho Cat Ba 11 km, Hong Gai (Ha Long) 22 km: M2 +34 % +74 Grad, S2/M2 -17 %, K1 -11 % -16 Grad, O1 -17 %",Zeit pruefen
+"Cau Tan Vu (Hai Phong), Vietnam",att_np203_scs_secondary,4,20.7848,106.8359,,,,0.040/193,0.80,0.584/340,0.592/286,fehlt,,"gegen Hon Dau 13 km, Haiphong (Song Cam) 19 km: M2 -23 % -15 Grad, S2/M2 -5 %, K1 -14 % -13 Grad, O1 -22 %",behalten + P1/Q1
+"Cau Tan Vu (Hai Phong), Vietnam",noaa_cptt,5,20.7848,106.8359,,,,0.060/208,0.75,0.712/352,0.797/296,,,"Dublette zu Cau Tan Vu (Hai Phong), Vietnam [att_np203_scs_secondary] 0.0 km: M2 +51 %, +16 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Haiphong (Song Cam), Vietnam",att_np203_scs,4,20.8685,106.6714,,,,0.040/227,1.25,0.640/4,0.730/304,fehlt,,"Dublette zu Haiphong (Song Cam), Vietnam [harmonics-1997-05-25_mod] 0.0 km: M2 -9 %, +0 Grad",archivieren (nach Rang)
+"Haiphong (Song Cam), Vietnam",harmonics-1997-05-25_mod,3,20.8685,106.6714,,,,0.044/227,1.07,0.639/4,0.729/305,,,,behalten
+"Hong Gai (Ha Long), Vietnam",att_np203_scs,4,20.9538,107.0678,,,,0.070/272,0.57,0.850/343,0.900/296,fehlt,,"Dublette zu Hong Gai (Ha Long), Vietnam [harmonics-1997-05-25_mod] 0.0 km: M2 +4 %, +0 Grad",archivieren (nach Rang)
+"Hong Gai (Ha Long), Vietnam",harmonics-1997-05-25_mod,3,20.9538,107.0678,,,,0.067/272,0.66,0.846/343,0.897/296,,,"Dublette zu Hong Gai (Ha Long), Vietnam [utide_tidetables] 0.0 km: M2 -5 %, -9 Grad",archivieren (nach Rang)
+"Hong Gai (Ha Long), Vietnam",noaa_cptt,5,20.9538,107.0678,,,,0.064/200,0.75,0.843/348,0.944/292,,,"Dublette zu Hong Gai (Ha Long), Vietnam [att_np203_scs] 0.0 km: M2 -8 %, -72 Grad | behaltener Satz ohne P1/Q1 -> inferieren",archivieren (nach Rang)
+"Hong Gai (Ha Long), Vietnam",utide_tidetables,1,20.9538,107.0678,,,,0.071/281,0.24,0.778/348,0.849/290,,,,behalten
+"Dao Co To, Vietnam",att_np203_scs,4,20.9692,107.7595,,,,0.200/307,0.50,0.800/325,0.800/281,fehlt,,"gegen Dao Tran 37 km, Cam Pha (Bien Dong Viet Nam) 41 km: M2 +87 % -25 Grad, S2/M2 +99 %, K1 -2 % -8 Grad, O1 -7 %",Zeit pruefen
+"Cam Pha (Bien Dong Viet Nam), Vietnam",att_np203_scs,4,21.0216,107.3723,,,,0.140/321,0.36,0.760/329,0.680/285,fehlt,,"Dublette zu Cam Pha (Bien Dong Viet Nam), Vietnam [harmonics-1997-05-25_mod] 0.0 km: M2 +4 %, +0 Grad",archivieren (nach Rang)
+"Cam Pha (Bien Dong Viet Nam), Vietnam",harmonics-1997-05-25_mod,3,21.0216,107.3723,,,,0.135/321,0.37,0.762/327,0.681/285,,,,behalten
+"Cam Pha (Bien Dong Viet Nam), Vietnam",noaa_cptt,5,21.0216,107.3723,,,,0.048/235,0.75,0.868/331,0.844/277,fehlt,,"Dublette zu Cam Pha (Bien Dong Viet Nam), Vietnam [att_np203_scs] 0.0 km: M2 -66 %, -86 Grad",archivieren (nach Rang)
+"Dao Cai Bau, Vietnam",att_np203_scs,4,21.1167,107.5,ja,,,0.200/302,0.50,0.700/338,0.800/280,fehlt,,"gegen Cam Pha (Bien Dong Viet Nam) 17 km, Hong Gai (Ha Long) 48 km: M2 +75 % -13 Grad, S2/M2 +47 %, K1 -7 % +6 Grad, O1 +10 %",M2-Hub pruefen
+"Dao Cai Bau, Vietnam",noaa_cptt,5,21.1167,107.5,ja,,,0.049/241,0.75,0.881/334,0.857/280,fehlt,,"Dublette zu Dao Cai Bau, Vietnam [att_np203_scs] 0.0 km: M2 -76 %, -61 Grad",archivieren (nach Rang)
+"Tsieng Mun, Vietnam",att_np203_scs,4,21.1333,107.6167,ja,,,0.190/307,0.37,0.720/336,0.810/278,fehlt,,"gegen Cam Pha (Bien Dong Viet Nam) 28 km, Dao Tran 38 km: M2 +70 % -22 Grad, S2/M2 +33 %, K1 -11 % +4 Grad, O1 -2 %",Zeit pruefen
+"Tsieng Mun, Vietnam",noaa_cptt,5,21.1333,107.6167,ja,,,0.052/221,0.75,0.933/324,0.907/270,fehlt,,"Dublette zu Tsieng Mun, Vietnam [att_np203_scs] 0.0 km: M2 -73 %, -86 Grad",archivieren (nach Rang)
+"Dao Tran, Vietnam",utide_tidetables,1,21.244,107.959,,,,0.087/347,0.08,0.869/337,1.024/281,,,,behalten

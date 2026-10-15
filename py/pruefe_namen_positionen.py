@@ -16,6 +16,15 @@ LAENDER = {
                         gattung=r'(hang|gang|do|to|ri|ni|li|dong|man|wan|sudo|haehyeop|hae|po|seom|gundo|yeolto|budu|eup|myeon|gun|si)$'),
     'Philippines': dict(iso='PH', auszug='ph_auszug.json', koreanisch=False, gattung=r'(?!)'),
     'Indonesia': dict(iso='ID', auszug='id_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Japan': dict(iso='JP', auszug='jp_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Vietnam': dict(iso='VN', auszug='vn_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Thailand': dict(iso='TH', auszug='th_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Malaysia': dict(iso='MY', auszug='mysgbn_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Singapore': dict(iso='SG', auszug='mysgbn_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Brunei': dict(iso='BN', auszug='mysgbn_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Myanmar': dict(iso='MM', auszug='mm_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Cambodia': dict(iso='KH', auszug='kh_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'China': dict(iso='CN', auszug='cn_auszug.json', koreanisch=False, gattung=r'(?!)'),
 }
 LAND = os.environ.get('PRUEF_LAND') or (sys.argv[1] if __name__ == '__main__' and len(sys.argv) > 1 else 'South Korea')
 CFG = LAENDER[LAND]
