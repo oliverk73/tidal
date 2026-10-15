@@ -27,7 +27,8 @@ import dubletten_kurven as D                                       # noqa: E402
 
 RADIUS_KM = 15
 SCHWELLE_MIN = 20
-LANDESQUELLE = {'South Korea': 'khoa', 'Philippines': 'namria'}
+LANDESQUELLE = {'South Korea': ('khoa',), 'Philippines': ('namria',),
+                'Indonesia': ('big (badan', 'pushidrosal', 'bmkg', 'uhslc')}   # amtliche Pegel/Tafeln und Messreihen
 _T = np.arange(0, 30 * 24, 1 / 60)          # 30 Tage, Minutentakt (Stunden)
 
 
@@ -82,10 +83,11 @@ def pruefe(land, dateien):
     if not kenn:
         return {}
     S = D.saetze(land, dateien)
-    ref = [s for s in S if kenn in s['kopf'].lower()]
+    amtlich = lambda s: any(k in s['kopf'].lower() for k in kenn)
+    ref = [s for s in S if amtlich(s)]
     out = {}
     for s in S:
-        if kenn in s['kopf'].lower():
+        if amtlich(s):
             continue
         nb = [r for r in sorted(ref, key=lambda r: D.km(s, r)) if D.km(s, r) <= RADIUS_KM][:3]
         if not nb:

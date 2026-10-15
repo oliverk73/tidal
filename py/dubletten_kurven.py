@@ -73,7 +73,8 @@ STOP = {'pusan', 'chechu', 'chechuto', 'south', 'korea', 'island', 'harbor', 'br
         'sinhang', 'naehang', 'oehang', 'pukhang', 'kuhang', 'inner', 'outer', 'nolth', 'pritke', 'pritge', 'lighthouse',
         # Gattungswoerter (Philippinen 15.10.2026: "Gallo Malo Channel" und "Tandungan Channel" sind kein gleicher Name)
         'channel', 'chanel', 'bay', 'pel', 'point', 'river', 'liver', 'entrance', 'pass', 'reef', 'anchorage', 'ankolake',
-        'port', 'polt', 'harbour', 'halpol', 'sound', 'strait', 'cove', 'islands', 'islet', 'north', 'sowth', 'south', 'sout', 'east', 'west', 'city'}
+        'port', 'polt', 'harbour', 'halpol', 'sound', 'strait', 'cove', 'islands', 'islet', 'north', 'sowth', 'south', 'sout', 'east', 'west', 'city',
+        'pulau', 'teluk', 'tanjung', 'selat', 'pelabuhan', 'muara', 'sungai', 'kepulauan'}
 _STOP_SK = None  # Skelettformen der STOP-Woerter, beim ersten Aufruf gebaut
 
 def woerter(n):

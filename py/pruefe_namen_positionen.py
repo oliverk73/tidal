@@ -15,6 +15,7 @@ LAENDER = {
     'South Korea': dict(iso='KR', auszug='kr_auszug.json', koreanisch=True,
                         gattung=r'(hang|gang|do|to|ri|ni|li|dong|man|wan|sudo|haehyeop|hae|po|seom|gundo|yeolto|budu|eup|myeon|gun|si)$'),
     'Philippines': dict(iso='PH', auszug='ph_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    'Indonesia': dict(iso='ID', auszug='id_auszug.json', koreanisch=False, gattung=r'(?!)'),
 }
 LAND = os.environ.get('PRUEF_LAND') or (sys.argv[1] if __name__ == '__main__' and len(sys.argv) > 1 else 'South Korea')
 CFG = LAENDER[LAND]
@@ -133,7 +134,9 @@ except Exception as e:
 GATTUNG = CFG['gattung']
 GENERISCH = {'bay', 'point', 'island', 'islands', 'isla', 'river', 'entrance', 'channel', 'strait', 'sound', 'gulf', 'city', 'north', 'south',
              'east', 'west', 'pier', 'wharf', 'cove', 'reef', 'islet', 'head', 'cape', 'punta', 'the', 'of', 'de', 'del', 'light', 'anchorage',
-             'passage', 'lagoon', 'creek', 'mouth', 'inner', 'outer', 'approach', 'poblacion', 'puerto', 'port'} | {'sinhang', 'naehang', 'oehang', 'bukhang', 'guhang', 'je1budu', 'dongbudu', 'bangpaje', 'bangjoje', 'daegyo', 'deungdae',
+             'passage', 'lagoon', 'creek', 'mouth', 'inner', 'outer', 'approach', 'poblacion', 'puerto', 'port',
+             # Indonesisch (15.10.2026): Pulau, Teluk, Tanjung, Selat, Pelabuhan, Muara, Sungai ...
+             'pulau', 'teluk', 'tanjung', 'tg', 'selat', 'pelabuhan', 'muara', 'sungai', 'kepulauan', 'pantai'} | {'sinhang', 'naehang', 'oehang', 'bukhang', 'guhang', 'je1budu', 'dongbudu', 'bangpaje', 'bangjoje', 'daegyo', 'deungdae',
              'powerplant', 'power', 'plant', 'port', 'harbor', 'harbour', 'bridge', 'jejudo', 'busan'}
 
 def treffer(tok, lat, lon, radius_km=40):

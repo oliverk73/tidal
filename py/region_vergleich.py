@@ -247,7 +247,9 @@ def main(argv):
         else:
             ref = [(d, n) for d, n in besser
                    if d <= NACHBAR_KM and rang(n) <= 3 and id(n) not in dubl][:2]
-            if rg >= 4 and ref:
+            if rg >= 4 and ref and min(amp(r, 'M2'), amp(r, 'K1')) > 0 and all(
+                    abs(interpol(ref, r)[c]) > 0 for c in ('M2', 'S2', 'K1', 'O1')):
+                # Saetze mit fehlender Haupttide (Hub 0) fallen sonst mit Division durch null heraus (Indonesien 15.10.2026)
                 iz = interpol(ref, r)
                 ia = {c: abs(iz[c]) for c in iz}
                 ip = {c: (-math.degrees(cmath.phase(iz[c]))) % 360 for c in iz}
