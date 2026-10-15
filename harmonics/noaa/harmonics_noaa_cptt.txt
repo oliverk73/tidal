@@ -34186,8 +34186,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 142.1167
-# !latitude: 49.4500
+# !longitude: 142.1235
+# !latitude: 49.4460
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
@@ -34199,7 +34199,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.375. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Lesogorsk, Sakhalin Oblast, Russia
+Lesogorskoe, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.4877 meters
 J1              0.0065  223.99
@@ -34380,214 +34380,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Russia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 233
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Busan New Port, South Korea (no.233). M2=0.47 S2=0.09 k=0.97 dt=-616min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: 142.1667
-# !latitude: 49.9833
-# note: 20260903 Phasen um -2.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin Oblast
-# admin1_quelle: Polygon
-# note: 20260913 S2/K2 x 1.74 auf den Springhub des Buchs (cptt-233); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Vozvrashcheniye, Sakhalin Oblast, Russia
-+00:00 :Asia/Sakhalin
-0.7315 meters
-J1              0.0104  222.17
-K1              0.0809  207.02
-K2              0.0474  351.56
-L2              0.0299  321.90
-x 0 0
-M2              0.5574  348.26
-M3              0.0142  128.43
-M4              0.0128  69.60
-M6              0.0009  146.53
-M8              0.0003  47.38
-N2              0.1001  348.63
-2N2             0.0057  306.28
-O1              0.0613  193.53
-OO1             0.0055  239.23
-P1              0.0368  212.56
-Q1              0.0121  219.96
-2Q1             0.0150  358.06
-R2              0.0174  16.70
-x 0 0
-S2              0.1560  4.27
-S4              0.0021  123.60
-x 0 0
-T2              0.0048  0.82
-LDA2            0.0197  336.29
-MU2             0.0067  49.59
-NU2             0.0112  346.27
-RHO1            0.0149  226.96
-MK3             0.0040  208.99
-x 0 0
-MN4             0.0065  56.61
-MS4             0.0101  86.10
-2SM2            0.0182  147.63
-MF              0.0067  156.33
-MSF             0.0757  356.26
-MM              0.0262  353.57
-x 0 0
-SSA             0.0143  345.85
-SA-IOS          0.1223  230.00
-x 0 0
-S1-IOS          0.0424  309.54
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0002  331.11
-2MK6            0.0002  154.20
-x 0 0
-2MN6            0.0006  132.25
-2MS6            0.0005  159.47
-x 0 0
-2SK5            0.0001  35.77
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0008  296.90
-x 0 0
-ALP1            0.0073  307.04
-BET1            0.0050  118.52
-CHI1            0.0053  217.54
-H1              0.0224  320.40
-H2              0.0103  161.91
-x 0 0
-ETA2            0.0062  319.20
-x 0 0
-UPS1            0.0058  289.48
-x 0 0
-x 0 0
-MK4             0.0035  69.60
-MKS2            0.0011  247.88
-x 0 0
-EPS2            0.0102  230.71
-MO3             0.0102  300.72
-x 0 0
-TAU1            0.0154  238.34
-x 0 0
-MSK6            0.0001  233.99
-MSM             0.0212  7.89
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0063  151.77
-OP2             0.0096  249.89
-x 0 0
-PHI1            0.0073  241.36
-x 0 0
-PI1             0.0117  301.65
-x 0 0
-PSI1            0.0041  267.84
-x 0 0
-x 0 0
-SIG1            0.0075  237.09
-SK3             0.0061  273.85
-x 0 0
-SN4             0.0017  76.38
-x 0 0
-SO1             0.0082  315.69
-SO3             0.0030  276.89
-THE1            0.0130  273.91
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0033  235.94
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0018  71.77
-x 0 0
-x 0 0
-N4              0.0006  59.25
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Russia
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 235
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Busan New Port, South Korea (no.235). M2=0.46 S2=0.08 k=0.94 dt=-601min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 142.1500
-# !latitude: 50.0333
+# !longitude: 142.1699
+# !latitude: 50.0426
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
