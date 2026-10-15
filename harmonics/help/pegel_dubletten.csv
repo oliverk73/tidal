@@ -91,7 +91,7 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 42,GN,"Ambon, Maluku, Indonesia",harmonics/att/harmonics_att_np203_scs.txt,135201,-3.6885,128.1817,,-3.6833,128.1833,5.88,0.071,1,gleich
 42,GN,"Ambon, Maluku, Indonesia",harmonics/ticon/harmonics_ticon4_worldwide.txt,19649,-3.6885,128.1817,,-3.7000,128.2000,5.88,0.071,1,gleich
 42,GN,"Ambon, Maluku, Indonesia",harmonics/utide/harmonics_utide_big_srgi.txt,15974,-3.6391,128.2004,,,,5.88,0.071,1,gleich
-42,GN,"Ambon, Maluku, Indonesia",harmonics/utide/harmonics_utide_observations.txt,89027,-3.6885,128.1817,,-3.7000,128.2000,5.88,0.071,1,gleich
+42,GN,"Ambon (Slamet Riyadi), Maluku, Indonesia",harmonics/utide/harmonics_utide_observations.txt,89027,-3.6885,128.1817,,-3.7000,128.2000,5.88,0.071,1,gleich
 42,GN,"Ambon, Maluku, Indonesia",harmonics/utide/harmonics_utide_pushidrosal_tables.txt,20655,-3.6694,128.1792,,,,5.88,0.071,1,gleich
 43,N,"Ambriz, Angola",harmonics/att/harmonics_att_np208_secondary.txt,44687,-7.8339,13.1018,,-7.8670,13.1330,0.00,0.060,,gleich
 43,N,"Ambriz, Angola",harmonics/noaa/harmonics_noaa_eutt.txt,17774,-7.8339,13.1018,1,,,0.00,0.060,,gleich
@@ -2560,9 +2560,9 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 1164,N,"Kurihama, Kanagawa, Japan",harmonics/classic/harmonics-2004-06-14_mod.txt,144851,35.2275,139.7211,,35.2167,139.7170,0.76,0.042,,verschieden
 1164,N,"Uraga Ko, Kanagawa, Japan",harmonics/noaa/harmonics_noaa_cptt.txt,51669,35.2333,139.7167,1,,,0.76,0.042,,verschieden
 1164,N,"Uraga, Kanagawa, Japan",harmonics/ticon/harmonics_ticon4_worldwide.txt,99028,35.2275,139.7211,,,,0.76,0.042,,verschieden
-1165,N,"Kurilsk (Iturup), Kuril Islands, Russia",harmonics/classic/harmonics-2004-06-14_mod.txt,181944,45.2570,147.8811,,45.2667,147.8670,0.80,0.076,,verschieden
+1165,N,"Kurilsk (Iturup, Kuril Islands), Sakhalin Oblast, Russia",harmonics/classic/harmonics-2004-06-14_mod.txt,181944,45.2570,147.8811,,45.2667,147.8670,0.80,0.076,,verschieden
 1165,N,"Kitovyy, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,43607,45.2500,147.8833,1,,,0.80,0.076,,verschieden
-1165,N,"Kurilsk (Iturup), Kuril Islands, Russia",harmonics/utide/harmonics_utide_observations.txt,211187,45.2570,147.8811,,,,0.80,0.076,,verschieden
+1165,N,"Kurilsk (Iturup, Kuril Islands), Sakhalin Oblast, Russia",harmonics/utide/harmonics_utide_observations.txt,211187,45.2570,147.8811,,,,0.80,0.076,,verschieden
 1166,N,"Kushima, Miyazaki, Japan",harmonics/classic/harmonics-2004-06-14_mod.txt,110941,31.4480,131.2053,,31.4500,131.2000,0.55,0.072,,verschieden
 1166,N,"Fukushima Inamachi, Ariake Wan, Miyazaki, Japan",harmonics/noaa/harmonics_noaa_cptt.txt,70352,31.4500,131.2000,1,,,0.55,0.072,,verschieden
 1167,N,"Kushimoto, Fukuro Ko, Wakayama, Japan",harmonics/noaa/harmonics_noaa_cptt.txt,55414,33.4667,135.7667,1,,,1.18,0.037,,gleich
@@ -3496,7 +3496,7 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 1589,N,"Niihama, Ehime, Japan",harmonics/classic/harmonics-2004-06-14_mod.txt,185396,33.9676,133.2678,,33.9667,133.2670,0.00,0.000,,gleich
 1589,N,"Niihama, Ehime, Japan",harmonics/utide/harmonics_utide_observations.txt,120925,33.9676,133.2678,,,,0.00,0.000,,gleich
 1590,H,"Nikolski, Bering Island, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,23705,55.2000,165.9833,1,,,2.33,0.217,,aehnlich
-1590,H,"Nikol'skoe, Russia",harmonics/utide/harmonics_utide_observations.txt,185243,55.2000,166.0200,,,,2.33,0.217,,aehnlich
+1590,H,"Nikol'skoe, Kamchatka Krai, Russia",harmonics/utide/harmonics_utide_observations.txt,185243,55.2000,166.0200,,,,2.33,0.217,,aehnlich
 1591,H,"Nishi Notoro Misaki, East coast, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,32434,45.9000,142.0833,1,,,0.00,0.184,,gleich
 1591,H,"Nishi Notoro Misaki, West coast, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,32627,45.9000,142.0833,1,,,0.00,0.184,,gleich
 1592,N,"Nishikomi Wan (Amami Oshima), Kagoshima, Japan",harmonics/classic/harmonics-2004-06-14_mod.txt,186170,28.2393,129.1717,,28.2500,129.1670,0.83,0.070,,aehnlich
@@ -3957,7 +3957,7 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 1798,G,"Petit De Grat, Nova Scotia, Canada",harmonics/classic/harmonics-2004-06-14_mod.txt,210999,45.5069,-60.9615,,45.5000,-60.9667,0.01,0.027,,gleich
 1798,G,"Petit De Grat, Nova Scotia, Canada",harmonics/utide/harmonics_utide_tidetables.txt,217700,45.5069,-60.9616,,,,0.01,0.027,,gleich
 1799,N,"Petropavlovsk, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,24099,53.0167,158.6500,1,,,0.00,0.057,,gleich
-1799,N,"Petropavlovsk, Russia",harmonics/utide/harmonics_utide_observations.txt,185440,53.0167,158.6500,,,,0.00,0.057,,gleich
+1799,N,"Petropavlovsk, Kamchatka Krai, Russia",harmonics/utide/harmonics_utide_observations.txt,185440,53.0167,158.6500,,,,0.00,0.057,,gleich
 1800,G,"Petten, Netherlands",harmonics/ticon/harmonics_ticon4_worldwide.txt,143166,52.7884,4.6649,,,,2.02,0.025,,gleich
 1800,G,"Petten, zuid, Netherlands",harmonics/utide/harmonics_utide_observations.txt,158394,52.7727,4.6497,,,,2.02,0.025,,gleich
 1801,H,"Phan Thiet, Vietnam",harmonics/att/harmonics_att_np203_scs.txt,152869,10.9187,108.1058,,10.9167,108.1000,0.00,0.211,,gleich
@@ -4696,8 +4696,8 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 2131,N,"Sakaiminato, Tottori, Japan",harmonics/utide/harmonics_utide_observations.txt,128347,35.5478,133.2431,,,,0.00,0.004,,gleich
 2132,N,"Sakata, Yamagata, Japan",harmonics/ticon/harmonics_ticon4_worldwide.txt,169513,38.9175,139.8236,,,,0.00,0.012,,gleich
 2132,N,"Sakata, Yamagata, Japan",harmonics/utide/harmonics_utide_observations.txt,128541,38.9175,139.8236,,,,0.00,0.012,,gleich
-2133,N,"Sakayehama, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,31083,47.4167,142.8167,1,,,0.79,0.048,,verschieden
-2133,N,"Starodubskoe, Russia",harmonics/utide/harmonics_utide_observations.txt,186031,47.4100,142.8200,,,,0.79,0.048,,verschieden
+2133,N,"Sakayehama, Sakhalin Oblast, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,31083,47.4167,142.8167,1,,,0.79,0.048,,verschieden
+2133,N,"Starodubskoe, Sakhalin Oblast, Russia",harmonics/utide/harmonics_utide_observations.txt,186031,47.4100,142.8200,,,,0.79,0.048,,verschieden
 2134,N,"Sakitu Wan, Kumamoto, Japan",harmonics/classic/harmonics-2004-06-14_mod.txt,238552,32.3167,130.0170,,,,0.03,0.076,,aehnlich
 2134,N,"Sakitsu Wan, Amakusa Shimo Shima, Kumamoto, Japan",harmonics/noaa/harmonics_noaa_cptt.txt,71927,32.3167,130.0167,1,,,0.03,0.076,,aehnlich
 2135,N,"Salalah, Oman",harmonics/ticon/harmonics_ticon4_worldwide.txt,169718,16.9350,54.0070,,,,0.00,0.002,,gleich
@@ -4965,8 +4965,8 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 2252,N,"Shijiki Wan, Hirado Shima, Nagasaki, Japan",harmonics/noaa/harmonics_noaa_cptt.txt,73885,33.2000,129.3833,1,,,1.22,0.078,,gleich
 2253,N,"Shikine-jima, Tokyo, Japan",harmonics/classic/harmonics-2004-06-14_mod.txt,253911,34.3351,139.2158,,34.3167,139.2170,2.05,0.049,,aehnlich
 2253,N,"Shikine Shima, Tokyo, Japan",harmonics/noaa/harmonics_noaa_cptt.txt,56404,34.3167,139.2167,1,,,2.05,0.049,,aehnlich
-2254,N,"Shikuka, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,30504,49.2333,143.1333,1,,,1.19,0.079,,verschieden
-2254,N,"Poronaysk (Sakhalin), Russia",harmonics/utide/harmonics_utide_observations.txt,211389,49.2270,143.1200,,,,1.19,0.079,,verschieden
+2254,N,"Shikuka, Sakhalin Oblast, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,30504,49.2333,143.1333,1,,,1.19,0.079,,verschieden
+2254,N,"Poronaysk (Sakhalin), Sakhalin Oblast, Russia",harmonics/utide/harmonics_utide_observations.txt,211389,49.2270,143.1200,,,,1.19,0.079,,verschieden
 2255,N,"Shimoda Ko, Shizuoka, Japan",harmonics/noaa/harmonics_noaa_cptt.txt,52656,34.6667,138.9500,1,,,1.27,0.033,,gleich
 2255,N,"Shimoda, Shizuoka, Japan",harmonics/ticon/harmonics_ticon4_worldwide.txt,177159,34.6753,138.9592,,,,1.27,0.033,,gleich
 2255,N,"Shimoda, Shizuoka, Japan",harmonics/utide/harmonics_utide_observations.txt,130298,34.6753,138.9592,,,,1.27,0.033,,gleich
@@ -5101,8 +5101,8 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 2313,N,"Pilots Station (east), Southwest Pass, Louisiana",harmonics/classic/harmonics-dwf-20251228-free.txt,152483,28.9322,-89.4075,,,,2.51,0.082,,verschieden
 2313,N,"Pilot Station, Southwest Pass, Louisiana",harmonics/classic/harmonics-dwf-20251228-free.txt,152678,28.9250,-89.4183,,,,2.51,0.082,,verschieden
 2314,GH,"Sovetskaya Gavan, Russia",harmonics/classic/harmonics-1997-05-25_mod.txt,34548,49.0052,140.3062,,49.0000,140.3000,4.09,0.138,1,aehnlich
-2314,GH,"Sovetskaya Harbor, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,38567,48.9833,140.2833,1,,,4.09,0.138,1,aehnlich
-2314,GH,"Sovetskaya Gavan', Russia",harmonics/utide/harmonics_utide_observations.txt,185834,48.9700,140.2900,,,,4.09,0.138,1,aehnlich
+2314,GH,"Sovetskaya Gavan', Khabarovsk Krai, Russia",harmonics/noaa/harmonics_noaa_cptt.txt,38567,48.9833,140.2833,1,,,4.09,0.138,1,aehnlich
+2314,GH,"Sovetskaya Gavan', Khabarovsk Krai, Russia",harmonics/utide/harmonics_utide_observations.txt,185834,48.9700,140.2900,,,,4.09,0.138,1,aehnlich
 2315,N,"Spit Wharf, New Zealand",harmonics/utide/harmonics_utide_tidetables.txt,547463,-45.7869,170.7183,,,,1.30,0.027,,verschieden
 2315,N,"Taiaroa Head, New Zealand",harmonics/utide/harmonics_utide_tidetables.txt,558300,-45.7773,170.7279,,,,1.30,0.027,,verschieden
 2316,N,"Split, Croatia",harmonics/att/harmonics_att_np208.txt,21709,43.5012,16.4361,,43.5000,16.4330,0.00,0.040,,gleich

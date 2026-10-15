@@ -7,7 +7,7 @@ station,lat,lon,jahr,satz,datei,abstand_m,n,rms_m,max_m,zeit_min,hoehe_off_m,hub
 907_Akyab_Sittwe.csv,20.1405,92.9034,2018,"Sittwe (Akyab), Myanmar",harmonics_utide_observations.txt,0,6898,0.087,0.338,0,0.031,3.238,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
 907_Akyab_Sittwe.csv,20.1405,92.9034,2018,"Sittwe (Akyab), Myanmar",harmonics_utide_tidetables.txt,0,6898,0.0998,0.437,0,2.112,3.33,IndianOcean_UHSLC_BD_MM_MG_MZ,0,nein
 133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_ticon4_worldwide.txt,0,4078,0.0843,0.296,-10,0.085,2.481,Indonesia_UHSLC,1,nein
-133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_utide_observations.txt,0,4078,0.0772,0.313,-10,0.083,2.508,Indonesia_UHSLC,0,nein
+133_Ambon.csv,-3.7000,128.2000,2026,"Ambon (Slamet Riyadi), Maluku, Indonesia",harmonics_utide_observations.txt,0,4078,0.0772,0.313,-10,0.083,2.508,Indonesia_UHSLC,0,nein
 133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_att_np203_scs.txt,2623,4078,0.1496,0.479,0,0.596,2.252,Indonesia_UHSLC,0,nein
 70_Auckland.csv,-36.8429,174.7669,1988,"Auckland (Queens Wharf), New Zealand",harmonics_utide_observations.txt,0,8761,0.0969,0.471,0,-0.026,3.447,New_Zealand_UHSLC,0,nein
 70_Auckland.csv,-36.8429,174.7669,1988,"Westhaven Inlet, New Zealand",harmonics_utide_tidetables.txt,1826,8761,0.1149,0.571,-10,1.793,3.372,New_Zealand_UHSLC,0,nein
@@ -387,7 +387,7 @@ mini_minicoy.csv,8.2824,73.0530,2025,"Minicoy, Lakshadweep, India",harmonics_att
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi (Java), Jawa Timur, Indonesia",harmonics_utide_observations.txt,0,8743,0.1072,0.303,0,0.149,2.862,Indonesia_UHSLC,1,nein
 125_Prigi.csv,-8.2830,111.7330,2026,"Prigi (Java), Jawa Timur, Indonesia",harmonics_att_np203_scs.txt,2606,8743,0.2,0.575,10,0.378,2.159,Indonesia_UHSLC,0,nein
 133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_ticon4_worldwide.txt,0,4078,0.0843,0.296,-10,0.085,2.481,Indonesia_UHSLC,0,nein
-133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_utide_observations.txt,0,4078,0.0772,0.313,-10,0.083,2.508,Indonesia_UHSLC,1,nein
+133_Ambon.csv,-3.7000,128.2000,2026,"Ambon (Slamet Riyadi), Maluku, Indonesia",harmonics_utide_observations.txt,0,4078,0.0772,0.313,-10,0.083,2.508,Indonesia_UHSLC,1,nein
 133_Ambon.csv,-3.7000,128.2000,2026,"Ambon, Maluku, Indonesia",harmonics_att_np203_scs.txt,2623,4078,0.1496,0.479,0,0.596,2.252,Indonesia_UHSLC,0,nein
 160_Surabaya.csv,-7.2080,112.7250,1985,"Surabaya (Tanjung Perak), Jawa Timur, Indonesia",harmonics_ticon4_worldwide.txt,0,8761,0.0918,0.4,0,0.03,2.76,Indonesia_UHSLC,0,ja
 160_Surabaya.csv,-7.2080,112.7250,1985,"Surabaya (Tanjung Perak), Jawa Timur, Indonesia",harmonics_utide_observations.txt,0,8761,0.0768,0.338,0,0.03,2.673,Indonesia_UHSLC,1,ja
@@ -4582,24 +4582,24 @@ Southport.npz,-27.9400,153.4300,2025,"Gold Coast Operations Base, Queensland, Au
 Urangan.npz,-25.2900,152.9100,2025,"Urangan, Queensland, Australia",harmonics_utide_observations.txt,356,52561,0.0807,0.383,0,0.031,3.835,Australia_QLD,1,nein
 Weipa.npz,-12.6700,141.8700,2025,"Weipa, Queensland, Australia",harmonics_utide_observations.txt,277,52525,0.1343,0.489,0,0.07,3.233,Australia_QLD,1,nein
 ioc_khol_Kholmsk.csv,41.0019,39.7445,2025,"Trabzon, Turkey",harmonics_ticon4_worldwide.txt,0,8585,0.4153,1.706,420,4.52,0.379,Russia_IOC,1,nein
-ioc_naho_Nakhodka.csv,42.7800,132.8600,2025,"Nakhodka, Russia",harmonics_utide_observations.txt,0,8271,0.077,0.36,0,0.009,0.679,Russia_IOC,1,nein
-ioc_nksk_Nikolskoe.csv,55.2000,166.0200,2025,"Nikol'skoe, Russia",harmonics_utide_observations.txt,0,7967,0.1131,0.637,0,-0.004,1.875,Russia_IOC,1,nein
+ioc_naho_Nakhodka.csv,42.7800,132.8600,2025,"Nakhodka, Primorsky Krai, Russia",harmonics_utide_observations.txt,0,8271,0.077,0.36,0,0.009,0.679,Russia_IOC,1,nein
+ioc_nksk_Nikolskoe.csv,55.2000,166.0200,2025,"Nikol'skoe, Kamchatka Krai, Russia",harmonics_utide_observations.txt,0,7967,0.1131,0.637,0,-0.004,1.875,Russia_IOC,1,nein
 ioc_nksk_Nikolskoe.csv,55.2000,166.0200,2025,"Nikolski, Bering Island, Russia",harmonics_noaa_cptt.txt,2329,7967,0.1595,0.726,-100,-0.047,1.694,Russia_IOC,0,nein
 ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk, Russia",harmonics_noaa_cptt.txt,0,7179,0.2519,0.948,-10,1.021,1.923,Russia_IOC,0,nein
-ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk, Russia",harmonics_utide_observations.txt,0,7179,0.2118,0.655,-10,-0.216,2.207,Russia_IOC,1,nein
-ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk-Kamchatsky, Russia",harmonics-1997-05-25_mod.txt,157,7179,0.2481,0.857,-60,1.026,2.136,Russia_IOC,0,nein
-ioc_posi_Poset.csv,42.6500,130.8000,2025,"Pos'et, Russia",harmonics_utide_observations.txt,0,8221,0.085,0.55,0,0.014,0.756,Russia_IOC,1,nein
-ioc_sove_Sovetskaya_Gavan.csv,48.9700,140.2900,2025,"Sovetskaya Gavan', Russia",harmonics_utide_observations.txt,0,8211,0.0883,0.389,0,0.018,1.005,Russia_IOC,1,nein
-ioc_sove_Sovetskaya_Gavan.csv,48.9700,140.2900,2025,"Sovetskaya Harbor, Russia",harmonics_noaa_cptt.txt,1558,8211,0.1408,0.481,10,1.398,0.836,Russia_IOC,0,nein
-ioc_star_Starodubskoe.csv,47.4100,142.8200,2025,"Starodubskoe, Russia",harmonics_utide_observations.txt,0,8195,0.2394,1.649,0,0.049,1.417,Russia_IOC,1,nein
-ioc_star_Starodubskoe.csv,47.4100,142.8200,2025,"Sakayehama, Russia",harmonics_noaa_cptt.txt,785,8195,0.2511,1.623,0,0.018,1.509,Russia_IOC,0,nein
-ioc_ugle_Uglegorsk.csv,49.0800,142.0700,2025,"Uglegorsk, Russia",harmonics_utide_observations.txt,0,8109,0.1345,1.007,0,0.003,1.274,Russia_IOC,1,nein
-ioc_vlad_Vladivostok.csv,43.1300,131.9200,2025,"Vladivostok, Russia",harmonics_utide_observations.txt,0,8272,0.0809,0.467,0,0.032,0.811,Russia_IOC,1,nein
-ioc_kors_Korsakov.csv,46.6279,142.7563,2025,"Korsakov (Sakhalin), Russia",harmonics-1997-05-25_mod.txt,0,5897,1.2673,11.149,0,3.486,1.67,Russia_IOC,0,nein
+ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk, Kamchatka Krai, Russia",harmonics_utide_observations.txt,0,7179,0.2118,0.655,-10,-0.216,2.207,Russia_IOC,1,nein
+ioc_petr_Petropavlovsk.csv,53.0167,158.6500,2025,"Petropavlovsk-Kamchatsky, Kamchatka Krai, Russia",harmonics-1997-05-25_mod.txt,157,7179,0.2481,0.857,-60,1.026,2.136,Russia_IOC,0,nein
+ioc_posi_Poset.csv,42.6500,130.8000,2025,"Pos'et, Primorsky Krai, Russia",harmonics_utide_observations.txt,0,8221,0.085,0.55,0,0.014,0.756,Russia_IOC,1,nein
+ioc_sove_Sovetskaya_Gavan.csv,48.9700,140.2900,2025,"Sovetskaya Gavan', Khabarovsk Krai, Russia",harmonics_utide_observations.txt,0,8211,0.0883,0.389,0,0.018,1.005,Russia_IOC,1,nein
+ioc_sove_Sovetskaya_Gavan.csv,48.9700,140.2900,2025,"Sovetskaya Gavan', Khabarovsk Krai, Russia",harmonics_noaa_cptt.txt,1558,8211,0.1408,0.481,10,1.398,0.836,Russia_IOC,0,nein
+ioc_star_Starodubskoe.csv,47.4100,142.8200,2025,"Starodubskoe, Sakhalin Oblast, Russia",harmonics_utide_observations.txt,0,8195,0.2394,1.649,0,0.049,1.417,Russia_IOC,1,nein
+ioc_star_Starodubskoe.csv,47.4100,142.8200,2025,"Sakayehama, Sakhalin Oblast, Russia",harmonics_noaa_cptt.txt,785,8195,0.2511,1.623,0,0.018,1.509,Russia_IOC,0,nein
+ioc_ugle_Uglegorsk.csv,49.0800,142.0700,2025,"Uglegorsk, Sakhalin Oblast, Russia",harmonics_utide_observations.txt,0,8109,0.1345,1.007,0,0.003,1.274,Russia_IOC,1,nein
+ioc_vlad_Vladivostok.csv,43.1300,131.9200,2025,"Vladivostok, Primorsky Krai, Russia",harmonics_utide_observations.txt,0,8272,0.0809,0.467,0,0.032,0.811,Russia_IOC,1,nein
+ioc_kors_Korsakov.csv,46.6279,142.7563,2025,"Korsakov (Sakhalin), Sakhalin Oblast, Russia",harmonics-1997-05-25_mod.txt,0,5897,1.2673,11.149,0,3.486,1.67,Russia_IOC,0,nein
 ioc_kors_Korsakov.csv,46.6279,142.7563,2025,"Korsakov (Sakhalin), Russia",harmonics_utide_observations.txt,0,5897,1.2607,11.136,-40,4.175,1.534,Russia_IOC,1,nein
-ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kurilsk (Iturup), Kuril Islands, Russia",harmonics-2004-06-14_mod.txt,0,8704,0.1196,0.434,10,0.505,1.442,Russia_IOC,0,nein
-ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kurilsk (Iturup), Kuril Islands, Russia",harmonics_utide_observations.txt,0,8704,0.0927,0.436,0,0.007,1.532,Russia_IOC,1,nein
+ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kurilsk (Iturup, Kuril Islands), Sakhalin Oblast, Russia",harmonics-2004-06-14_mod.txt,0,8704,0.1196,0.434,10,0.505,1.442,Russia_IOC,0,nein
+ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kurilsk (Iturup, Kuril Islands), Sakhalin Oblast, Russia",harmonics_utide_observations.txt,0,8704,0.0927,0.436,0,0.007,1.532,Russia_IOC,1,nein
 ioc_kuri_Kurilsk.csv,45.2570,147.8811,2025,"Kitovyy, Russia",harmonics_noaa_cptt.txt,797,8704,0.1163,0.546,10,0.505,1.509,Russia_IOC,0,nein
-ioc_poro_Poronajsk.csv,49.2270,143.1200,2025,"Poronaysk (Sakhalin), Russia",harmonics_utide_observations.txt,0,7749,0.7127,4.445,10,1.277,1.389,Russia_IOC,1,nein
-ioc_poro_Poronajsk.csv,49.2270,143.1200,2025,"Shikuka, Russia",harmonics_noaa_cptt.txt,1193,7749,0.7078,4.407,-10,0.581,1.616,Russia_IOC,0,nein
-ioc_preo_Preobrazheniye.csv,42.8969,133.9028,2025,"Preobrazheniye, Russia",harmonics_utide_observations.txt,0,8560,0.4557,0.905,0,2.234,0.449,Russia_IOC,1,nein
+ioc_poro_Poronajsk.csv,49.2270,143.1200,2025,"Poronaysk (Sakhalin), Sakhalin Oblast, Russia",harmonics_utide_observations.txt,0,7749,0.7127,4.445,10,1.277,1.389,Russia_IOC,1,nein
+ioc_poro_Poronajsk.csv,49.2270,143.1200,2025,"Shikuka, Sakhalin Oblast, Russia",harmonics_noaa_cptt.txt,1193,7749,0.7078,4.407,-10,0.581,1.616,Russia_IOC,0,nein
+ioc_preo_Preobrazheniye.csv,42.8969,133.9028,2025,"Preobrazheniye, Primorsky Krai, Russia",harmonics_utide_observations.txt,0,8560,0.4557,0.905,0,2.234,0.449,Russia_IOC,1,nein

@@ -185041,11 +185041,11 @@ x 0 0
 # datum: Mean Sea Level
 # confidence: 8
 # !units: meters
-# !longitude: 132.860000
-# !latitude: 42.780000
-# region: Primor'ye
+# !longitude: 132.8659
+# !latitude: 42.7848
+# region: Primorsky Krai
 # admin1_quelle: Polygon
-Nakhodka, Russia
+Nakhodka, Primorsky Krai, Russia
 +00:00 :UTC
 4.5434 meters
 J1              0.0022  242.54
@@ -185240,9 +185240,9 @@ x 0 0
 # !units: meters
 # !longitude: 166.020000
 # !latitude: 55.200000
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Nikol'skoe, Russia
+Nikol'skoe, Kamchatka Krai, Russia
 +00:00 :UTC
 1.2697 meters
 J1              0.0190  9.55
@@ -185437,9 +185437,9 @@ x 0 0
 # !units: meters
 # !longitude: 158.650000
 # !latitude: 53.016700
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Petropavlovsk, Russia
+Petropavlovsk, Kamchatka Krai, Russia
 +00:00 :UTC
 2.6010 meters
 J1              0.0166  20.65
@@ -185634,9 +185634,9 @@ x 0 0
 # !units: meters
 # !longitude: 130.800000
 # !latitude: 42.650000
-# region: Primor'ye
+# region: Primorsky Krai
 # admin1_quelle: Ufer 0.3 km
-Pos'et, Russia
+Pos'et, Primorsky Krai, Russia
 +00:00 :UTC
 4.2658 meters
 J1              0.0022  211.37
@@ -185829,11 +185829,11 @@ x 0 0
 # datum: Mean Sea Level
 # confidence: 8
 # !units: meters
-# !longitude: 140.290000
-# !latitude: 48.970000
-# region: Khabarovsk
+# !longitude: 140.2856
+# !latitude: 48.9791
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 0.6 km
-Sovetskaya Gavan', Russia
+Sovetskaya Gavan', Khabarovsk Krai, Russia
 +00:00 :UTC
 1.7172 meters
 J1              0.0017  230.48
@@ -186028,9 +186028,9 @@ x 0 0
 # !units: meters
 # !longitude: 142.820000
 # !latitude: 47.410000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
-Starodubskoe, Russia
+Starodubskoe, Sakhalin Oblast, Russia
 +00:00 :UTC
 0.6068 meters
 J1              0.0071  72.09
@@ -186225,9 +186225,9 @@ x 0 0
 # !units: meters
 # !longitude: 142.070000
 # !latitude: 49.080000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
-Uglegorsk, Russia
+Uglegorsk, Sakhalin Oblast, Russia
 +00:00 :UTC
 1.0110 meters
 J1              0.0015  216.44
@@ -186420,11 +186420,11 @@ x 0 0
 # datum: Mean Sea Level
 # confidence: 8
 # !units: meters
-# !longitude: 131.920000
-# !latitude: 43.130000
-# region: Primor'ye
+# !longitude: 131.9045
+# !latitude: 43.1117
+# region: Primorsky Krai
 # admin1_quelle: Polygon
-Vladivostok, Russia
+Vladivostok, Primorsky Krai, Russia
 +00:00 :UTC
 4.6498 meters
 J1              0.0018  234.82
@@ -211184,9 +211184,9 @@ x 0 0
 # !units: meters
 # !longitude: 147.8811
 # !latitude: 45.2570
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
-Kurilsk (Iturup), Kuril Islands, Russia
+Kurilsk (Iturup, Kuril Islands), Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 1.1680 meters
 J1              0.0111  43.70
@@ -211382,13 +211382,13 @@ x 0 0
 # !units: meters
 # !longitude: 143.1200
 # !latitude: 49.2270
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260913 um 30 min spaeter gelegt: gefittet auf dem alten IOC-Abzug (bak-bug,
 # note: Stundenmittel 30 min zu frueh beschriftet), gegen die aktuelle Reihe jeden Monat
 # note: -20..-30 min. An der sauberen Reihe 2024-01..2025-02: 12.6 -> 11.9 cm;
 # note: NOAA Shikuka (1.2 km) 14.6 cm. Siehe py/zeitfehler_drehen.py.
-Poronaysk (Sakhalin), Russia
+Poronaysk (Sakhalin), Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.0045 meters
 J1              0.0086  64.12
@@ -211584,13 +211584,13 @@ x 0 0
 # !units: meters
 # !longitude: 133.9028
 # !latitude: 42.8969
-# region: Primor'ye
+# region: Primorsky Krai
 # admin1_quelle: Polygon
 # note: 20260913 um 30 min spaeter gelegt: gefittet auf dem alten IOC-Abzug (bak-bug,
 # note: Stundenmittel 30 min zu frueh beschriftet), gegen die aktuelle Reihe jeden Monat
 # note: -30 min. An der sauberen Reihe 2024-01..2025-05: 11.4 -> 11.3 cm; kein anderer
 # note: Satz im Umkreis von 40 km. Siehe py/zeitfehler_drehen.py.
-Preobrazheniye, Russia
+Preobrazheniye, Primorsky Krai, Russia
 +00:00 :Asia/Vladivostok
 0.0027 meters
 J1              0.0031  236.89

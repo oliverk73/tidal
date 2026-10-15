@@ -27771,7 +27771,8 @@ x 0 0
 # !latitude: 67.0500
 # note: 20260906 country "Atlantic" -> "Russia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Chukchi Autonomous Okrug".
-Pitlekaj, Russia
+# region: Chukotka Autonomous Okrug
+Pitlekaj, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.2000 meters
 J1               0.0000   85.64
@@ -27963,9 +27964,9 @@ x 0 0
 # !units: meters
 # !longitude: 55.5000
 # !latitude: 72.4333
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 1.2 km
-Zaliv Litke, Russia
+Zaliv Litke, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.2700 meters
 J1               0.0002  129.15
@@ -28157,9 +28158,9 @@ x 0 0
 # !units: meters
 # !longitude: 68.6333
 # !latitude: 76.9500
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 3.0 km
-Mys Zhelaniya, Russia
+Mys Zhelaniya, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.4000 meters
 J1               0.0002  252.27
@@ -28351,9 +28352,9 @@ x 0 0
 # !units: meters
 # !longitude: 55.5000
 # !latitude: 74.1167
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Guba Krestovaya, Russia
+Guba Krestovaya, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.5100 meters
 J1               0.0004  245.78
@@ -28545,9 +28546,9 @@ x 0 0
 # !units: meters
 # !longitude: 54.8000
 # !latitude: 73.6500
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Guba Mityushikha, Russia
+Guba Mityushikha, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.5500 meters
 J1               0.0006  248.38
@@ -28739,9 +28740,9 @@ x 0 0
 # !units: meters
 # !longitude: 52.7000
 # !latitude: 72.6500
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 2.2 km
-Zaliv Pukhovyy, Russia
+Zaliv Pukhovyy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.5500 meters
 J1               0.0005  241.88
@@ -28933,9 +28934,9 @@ x 0 0
 # !units: meters
 # !longitude: 52.3167
 # !latitude: 71.5333
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Guba Belushya, Russia
+Guba Belushya, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.3600 meters
 J1               0.0002  246.43
@@ -29127,9 +29128,9 @@ x 0 0
 # !units: meters
 # !longitude: 53.5000
 # !latitude: 71.2667
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Guba Nekhvatova, Russia
+Guba Nekhvatova, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.1800 meters
 J1               0.0001  250.46
@@ -29321,9 +29322,9 @@ x 0 0
 # !units: meters
 # !longitude: 57.4500
 # !latitude: 70.6000
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 0.7 km
-Guba Kamyenka, Russia
+Guba Kamyenka, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.4000 meters
 J1               0.0003  340.59
@@ -29515,9 +29516,9 @@ x 0 0
 # !units: meters
 # !longitude: 58.7167
 # !latitude: 70.2500
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 2.4 km
-Guba Dolgaya, Russia
+Guba Dolgaya, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.3000 meters
 J1               0.0002  131.75
@@ -29709,9 +29710,9 @@ x 0 0
 # !units: meters
 # !longitude: 60.0667
 # !latitude: 69.7000
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 2.0 km
-Bukhta Varneka, Russia
+Bukhta Varneka, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.4600 meters
 J1               0.0004  187.72
@@ -29903,9 +29904,9 @@ x 0 0
 # !units: meters
 # !longitude: 60.7333
 # !latitude: 69.8333
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Polygon
-Ostrov Sokoliy, Russia
+Ostrov Sokoliy, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.4700 meters
 J1               0.0004  152.27
@@ -30097,9 +30098,9 @@ x 0 0
 # !units: meters
 # !longitude: 60.4167
 # !latitude: 69.6500
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Polygon
-Khabarovo, Russia
+Khabarovo, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.3600 meters
 J1               0.0003  167.85
@@ -30291,9 +30292,9 @@ x 0 0
 # !units: meters
 # !longitude: 59.1667
 # !latitude: 69.2000
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Polygon
-Ostrov Dolgiy, Russia
+Ostrov Dolgiy, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.6000 meters
 J1               0.0005  168.89
@@ -30485,9 +30486,9 @@ x 0 0
 # !units: meters
 # !longitude: 58.0000
 # !latitude: 68.8167
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Polygon
-Ostrov Varanduyey, Russia
+Ostrov Varanduyey, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.6000 meters
 J1               0.0005  169.41
@@ -30679,9 +30680,9 @@ x 0 0
 # !units: meters
 # !longitude: 54.5667
 # !latitude: 68.9833
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 0.8 km
-Mys Russki Zavorot, Russia
+Mys Russki Zavorot, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.6000 meters
 J1               0.0005  141.88
@@ -30873,9 +30874,9 @@ x 0 0
 # !units: meters
 # !longitude: 54.4333
 # !latitude: 68.3833
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 7.2 km
-Reka Pechora, Russia
+Reka Pechora, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.5600 meters
 J1               0.0004  192.01
@@ -31067,9 +31068,9 @@ x 0 0
 # !units: meters
 # !longitude: 49.2667
 # !latitude: 68.8000
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Polygon
-Bugrino, Russia
+Bugrino, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.9300 meters
 J1               0.0008  308.90
@@ -31261,9 +31262,9 @@ x 0 0
 # !units: meters
 # !longitude: 48.7667
 # !latitude: 67.7000
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 1.0 km
-Reka Indiga, Russia
+Reka Indiga, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 1.3100 meters
 J1               0.0010  358.25
@@ -31455,9 +31456,9 @@ x 0 0
 # !units: meters
 # !longitude: 46.1667
 # !latitude: 68.3833
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 6.5 km
-Ostrov Korga, Russia
+Ostrov Korga, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 1.4500 meters
 J1               0.0012  311.89
@@ -31649,9 +31650,9 @@ x 0 0
 # !units: meters
 # !longitude: 43.2833
 # !latitude: 68.6667
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 1.0 km
-Mys Kanin Nos, Russia
+Mys Kanin Nos, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 1.7700 meters
 J1               0.0017  271.50
@@ -31843,9 +31844,9 @@ x 0 0
 # !units: meters
 # !longitude: 44.1000
 # !latitude: 67.6667
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Polygon
-Reka Kiya Mouth, Russia
+Reka Kiya Mouth, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 2.6500 meters
 J1               0.0021  296.56
@@ -32037,9 +32038,9 @@ x 0 0
 # !units: meters
 # !longitude: 42.8000
 # !latitude: 67.1833
-# region: Nenets
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 41.6 km
-Banka Litke, Russia
+Banka Litke, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 3.4800 meters
 J1               0.0032  289.16
@@ -32231,9 +32232,9 @@ x 0 0
 # !units: meters
 # !longitude: 43.7833
 # !latitude: 67.1833
-# region: Nenets
+# region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 1.5 km
-Mys Konushin, Russia
+Mys Konushin, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 4.1500 meters
 J1               0.0039  316.56
@@ -32425,9 +32426,9 @@ x 0 0
 # !units: meters
 # !longitude: 44.1000
 # !latitude: 66.1500
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Semzha, Russia
+Semzha, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 4.4600 meters
 J1               0.0050  325.40
@@ -32619,9 +32620,9 @@ x 0 0
 # !units: meters
 # !longitude: 44.1333
 # !latitude: 65.8833
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Kamenka, Russia
+Kamenka, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.4000 meters
 J1               0.0012  346.70
@@ -32813,9 +32814,9 @@ x 0 0
 # !units: meters
 # !longitude: 42.4500
 # !latitude: 66.7333
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Ostrov Morzhovets, Russia
+Ostrov Morzhovets, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 3.4000 meters
 J1               0.0033  301.63
@@ -33007,9 +33008,9 @@ x 0 0
 # !units: meters
 # !longitude: 42.2333
 # !latitude: 66.5167
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Mys Voronov, Russia
+Mys Voronov, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 3.9300 meters
 J1               0.0037  283.18
@@ -33201,9 +33202,9 @@ x 0 0
 # !units: meters
 # !longitude: 41.6000
 # !latitude: 66.1500
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Reka Megra, Russia
+Reka Megra, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1000 meters
 x 0 0
@@ -33395,9 +33396,9 @@ x 0 0
 # !units: meters
 # !longitude: 40.7500
 # !latitude: 65.9833
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 2.2 km
-Mys Insty, Russia
+Mys Insty, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.2500 meters
 x 0 0
@@ -33589,9 +33590,9 @@ x 0 0
 # !units: meters
 # !longitude: 40.1833
 # !latitude: 65.6833
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Zimnyaya Zolotitsa, Russia
+Zimnyaya Zolotitsa, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.3000 meters
 x 0 0
@@ -33783,9 +33784,9 @@ x 0 0
 # !units: meters
 # !longitude: 39.7333
 # !latitude: 65.3333
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 2.5 km
-Mys Kerets, Russia
+Mys Kerets, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.2500 meters
 x 0 0
@@ -33977,9 +33978,9 @@ x 0 0
 # !units: meters
 # !longitude: 40.1833
 # !latitude: 64.9000
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 9.5 km
-Berezovyy Bar, Russia
+Berezovyy Bar, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.8500 meters
 x 0 0
@@ -34171,9 +34172,9 @@ x 0 0
 # !units: meters
 # !longitude: 40.2833
 # !latitude: 64.8500
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 7.1 km
-Mys Yuzhnyy, Russia
+Mys Yuzhnyy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.6200 meters
 x 0 0
@@ -34365,9 +34366,9 @@ x 0 0
 # !units: meters
 # !longitude: 40.4667
 # !latitude: 64.7833
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 1.3 km
-Lapominka, Russia
+Lapominka, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.6900 meters
 x 0 0
@@ -34559,9 +34560,9 @@ x 0 0
 # !units: meters
 # !longitude: 39.7833
 # !latitude: 64.5833
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 0.8 km
-Severodvinsk, Russia
+Severodvinsk, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7000 meters
 x 0 0
@@ -34753,9 +34754,9 @@ x 0 0
 # !units: meters
 # !longitude: 38.4167
 # !latitude: 64.7667
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 1.1 km
-Unskaya Guba, Russia
+Unskaya Guba, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7400 meters
 x 0 0
@@ -34947,9 +34948,9 @@ x 0 0
 # !units: meters
 # !longitude: 37.7000
 # !latitude: 64.9667
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Lopshen'ga, Russia
+Lopshen'ga, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7500 meters
 x 0 0
@@ -35141,9 +35142,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.8167
 # !latitude: 65.2000
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 5.9 km
-Ostrov Zhizhginskiy, Russia
+Ostrov Zhizhginskiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.8100 meters
 x 0 0
@@ -35335,9 +35336,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.4500
 # !latitude: 64.9333
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 0.8 km
-Mys Letniy Orlov, Russia
+Mys Letniy Orlov, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.8500 meters
 x 0 0
@@ -35529,9 +35530,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.5333
 # !latitude: 64.8167
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Guba Pushlakhta, Russia
+Guba Pushlakhta, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7000 meters
 x 0 0
@@ -35723,9 +35724,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.5333
 # !latitude: 64.7167
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 1.3 km
-Mys Chesmenskiy, Russia
+Mys Chesmenskiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.6900 meters
 x 0 0
@@ -35917,9 +35918,9 @@ x 0 0
 # !units: meters
 # !longitude: 37.3333
 # !latitude: 64.3333
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 0.8 km
-Mys Glubokiy, Russia
+Mys Glubokiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.4500 meters
 x 0 0
@@ -36111,9 +36112,9 @@ x 0 0
 # !units: meters
 # !longitude: 37.9000
 # !latitude: 64.0000
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 7.0 km
-Ostrov Kiy, Russia
+Ostrov Kiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.7500 meters
 x 0 0
@@ -36305,9 +36306,9 @@ x 0 0
 # !units: meters
 # !longitude: 38.0333
 # !latitude: 63.9667
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
-Onega, Russia
+Onega, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 2.2700 meters
 x 0 0
@@ -36499,9 +36500,9 @@ x 0 0
 # !units: meters
 # !longitude: 37.2833
 # !latitude: 63.8833
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 3.4 km
-Ostrov Paskanets, Russia
+Ostrov Paskanets, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 2.0000 meters
 x 0 0
@@ -36693,9 +36694,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.5833
 # !latitude: 64.0167
-# region: Arkhangel'sk
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 5.0 km
-Ostrov Mal Korepalka, Russia
+Ostrov Mal Korepalka, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.6200 meters
 x 0 0
@@ -36887,9 +36888,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.1167
 # !latitude: 64.3500
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Ufer 3.6 km
-Ostrov Berezhnoy Borshovets, Russia
+Ostrov Berezhnoy Borshovets, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 0.9500 meters
 x 0 0
@@ -37081,9 +37082,9 @@ x 0 0
 # !units: meters
 # !longitude: 35.2333
 # !latitude: 64.3833
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Ufer 2.4 km
-Ostrov Sumostrov, Russia
+Ostrov Sumostrov, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.1200 meters
 x 0 0
@@ -37275,9 +37276,9 @@ x 0 0
 # !units: meters
 # !longitude: 35.0333
 # !latitude: 64.5000
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Ufer 1.3 km
-Ostrov Molchanov, Russia
+Ostrov Molchanov, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.0000 meters
 x 0 0
@@ -37469,9 +37470,9 @@ x 0 0
 # !units: meters
 # !longitude: 34.9500
 # !latitude: 64.8000
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Ufer 3.3 km
-Ostrov Konev, Russia
+Ostrov Konev, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 0.9000 meters
 x 0 0
@@ -37663,9 +37664,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.2000
 # !latitude: 65.1333
-# region: Karelia
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 0.6 km
-Ostrov Anzerskiy, Russia
+Ostrov Anzerskiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.8500 meters
 x 0 0
@@ -37857,9 +37858,9 @@ x 0 0
 # !units: meters
 # !longitude: 35.7000
 # !latitude: 65.0167
-# region: Karelia
+# region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 1.1 km
-Ostrov Solovetskiy (Solovetskiy), Russia
+Ostrov Solovetskiy (Solovetskiy), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.6000 meters
 x 0 0
@@ -38051,9 +38052,9 @@ x 0 0
 # !units: meters
 # !longitude: 35.0333
 # !latitude: 65.0333
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Ufer 10.2 km
-Ostrov Yuzhnyy Rombak, Russia
+Ostrov Yuzhnyy Rombak, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.1200 meters
 x 0 0
@@ -38245,9 +38246,9 @@ x 0 0
 # !units: meters
 # !longitude: 34.5333
 # !latitude: 65.3333
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Ufer 2.5 km
-Mys Pon'goma Navolok, Russia
+Mys Pon'goma Navolok, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.0700 meters
 x 0 0
@@ -38439,9 +38440,9 @@ x 0 0
 # !units: meters
 # !longitude: 34.8833
 # !latitude: 65.6833
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Ufer 2.6 km
-Mys Solomenny, Russia
+Mys Solomenny, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.0700 meters
 x 0 0
@@ -38633,9 +38634,9 @@ x 0 0
 # !units: meters
 # !longitude: 34.6833
 # !latitude: 65.7500
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Polygon
-Kalgalaksha, Russia
+Kalgalaksha, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 0.9300 meters
 x 0 0
@@ -38827,9 +38828,9 @@ x 0 0
 # !units: meters
 # !longitude: 34.6833
 # !latitude: 65.9167
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Polygon
-Gridina, Russia
+Gridina, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 0.9400 meters
 x 0 0
@@ -39021,9 +39022,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.6500
 # !latitude: 66.3000
-# region: Karelia
+# region: Republic of Karelia
 # admin1_quelle: Polygon
-Ostrov Sredniy Guba Keret, Russia
+Ostrov Sredniy Guba Keret, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.2300 meters
 x 0 0
@@ -39215,9 +39216,9 @@ x 0 0
 # !units: meters
 # !longitude: 32.8667
 # !latitude: 66.7000
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Reka Kovda, Russia
+Reka Kovda, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.4000 meters
 x 0 0
@@ -39409,9 +39410,9 @@ x 0 0
 # !units: meters
 # !longitude: 32.4167
 # !latitude: 67.1333
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 1.0 km
-Kandalaksha, Russia
+Kandalaksha, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.2500 meters
 x 0 0
@@ -39603,9 +39604,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.8000
 # !latitude: 66.7667
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Porya, Russia
+Guba Porya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 0.8500 meters
 x 0 0
@@ -39797,9 +39798,9 @@ x 0 0
 # !units: meters
 # !longitude: 34.3333
 # !latitude: 66.6667
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Malaya Pirya, Russia
+Guba Malaya Pirya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 0.9500 meters
 x 0 0
@@ -39991,9 +39992,9 @@ x 0 0
 # !units: meters
 # !longitude: 40.6833
 # !latitude: 66.5000
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 1.5 km
-Ostrov Sosnovets, Russia
+Ostrov Sosnovets, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.0000 meters
 J1               0.0024  297.08
@@ -40185,9 +40186,9 @@ x 0 0
 # !units: meters
 # !longitude: 41.3833
 # !latitude: 67.1000
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 0.7 km
-Ostrov Velikiy, Russia
+Ostrov Velikiy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 3.0000 meters
 J1               0.0037  286.43
@@ -40379,9 +40380,9 @@ x 0 0
 # !units: meters
 # !longitude: 41.3333
 # !latitude: 67.2000
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Mys Orlov-Terskiy Tonkiy, Russia
+Mys Orlov-Terskiy Tonkiy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 3.0900 meters
 J1               0.0035  282.28
@@ -40573,9 +40574,9 @@ x 0 0
 # !units: meters
 # !longitude: 40.9167
 # !latitude: 67.7167
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Mys Bol'shoy Gorodetskiy, Russia
+Mys Bol'shoy Gorodetskiy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 3.8300 meters
 J1               0.0035  258.25
@@ -40767,9 +40768,9 @@ x 0 0
 # !units: meters
 # !longitude: 39.5000
 # !latitude: 68.0667
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Gremikha, Russia
+Guba Gremikha, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 3.3500 meters
 J1               0.0029  253.31
@@ -40961,9 +40962,9 @@ x 0 0
 # !units: meters
 # !longitude: 39.1167
 # !latitude: 68.1833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Savikha, Russia
+Guba Savikha, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 3.2000 meters
 J1               0.0029  249.81
@@ -41155,9 +41156,9 @@ x 0 0
 # !units: meters
 # !longitude: 38.4167
 # !latitude: 68.3333
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Reka Drozdovka, Russia
+Reka Drozdovka, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.8100 meters
 J1               0.0021  245.26
@@ -41349,9 +41350,9 @@ x 0 0
 # !units: meters
 # !longitude: 38.2000
 # !latitude: 68.4000
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Vostochnaya Litsa, Russia
+Guba Vostochnaya Litsa, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.7500 meters
 J1               0.0025  244.61
@@ -41543,9 +41544,9 @@ x 0 0
 # !units: meters
 # !longitude: 37.3167
 # !latitude: 68.7833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Reka Kharlovka, Russia
+Reka Kharlovka, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.3700 meters
 J1               0.0020  241.36
@@ -41737,9 +41738,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.8333
 # !latitude: 68.9167
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Rynda, Russia
+Guba Rynda, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.3200 meters
 J1               0.0022  239.03
@@ -41931,9 +41932,9 @@ x 0 0
 # !units: meters
 # !longitude: 36.2667
 # !latitude: 69.0833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Porchnikha, Russia
+Guba Porchnikha, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.3200 meters
 J1               0.0023  235.00
@@ -42125,9 +42126,9 @@ x 0 0
 # !units: meters
 # !longitude: 35.9333
 # !latitude: 69.1500
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Podpakhta, Russia
+Guba Podpakhta, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.3000 meters
 J1               0.0022  234.74
@@ -42319,9 +42320,9 @@ x 0 0
 # !units: meters
 # !longitude: 35.1333
 # !latitude: 69.1833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Teriberskaya, Russia
+Guba Teriberskaya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.2300 meters
 J1               0.0020  228.90
@@ -42513,9 +42514,9 @@ x 0 0
 # !units: meters
 # !longitude: 34.6833
 # !latitude: 69.2500
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 0.8 km
-Proliv Malyy Oleniy, Russia
+Proliv Malyy Oleniy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1000 meters
 J1               0.0019  227.60
@@ -42707,9 +42708,9 @@ x 0 0
 # !units: meters
 # !longitude: 34.3333
 # !latitude: 69.3167
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 3.3 km
-Guba Mogil'naya, Russia
+Guba Mogil'naya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.2700 meters
 J1               0.0022  228.12
@@ -42901,9 +42902,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.7500
 # !latitude: 69.3000
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Zelenetskaya Zapadnaya, Russia
+Guba Zelenetskaya Zapadnaya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  223.44
@@ -43095,9 +43096,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.2500
 # !latitude: 69.2500
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Sayda, Russia
+Guba Sayda, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  224.48
@@ -43289,9 +43290,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.2833
 # !latitude: 69.0833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Mys Velikiy, Russia
+Mys Velikiy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  223.96
@@ -43483,9 +43484,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.0667
 # !latitude: 69.0167
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Mys Bezlavnyy, Russia
+Mys Bezlavnyy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  228.12
@@ -43677,9 +43678,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.0500
 # !latitude: 68.9667
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Murmansk, Russia
+Murmansk, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.0900 meters
 J1               0.0016  226.43
@@ -43871,9 +43872,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.4167
 # !latitude: 69.4167
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Korelinskiy, Russia
+Guba Korelinskiy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  222.92
@@ -44065,9 +44066,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.1500
 # !latitude: 69.4167
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Port Vladimir, Russia
+Port Vladimir, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.0100 meters
 J1               0.0015  224.22
@@ -44259,9 +44260,9 @@ x 0 0
 # !units: meters
 # !longitude: 32.9167
 # !latitude: 69.3833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 1.6 km
-Bukhta Nasha, Russia
+Bukhta Nasha, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  222.92
@@ -44453,9 +44454,9 @@ x 0 0
 # !units: meters
 # !longitude: 32.5000
 # !latitude: 69.4833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Zapadnaya Litsa, Russia
+Guba Zapadnaya Litsa, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  222.92
@@ -44647,9 +44648,9 @@ x 0 0
 # !units: meters
 # !longitude: 32.1500
 # !latitude: 69.7333
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 1.0 km
-Bukhta Ozerko, Russia
+Bukhta Ozerko, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  221.10
@@ -44841,9 +44842,9 @@ x 0 0
 # !units: meters
 # !longitude: 32.7500
 # !latitude: 69.5833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 4.7 km
-Bukhta Malyy Korabel'naya, Russia
+Bukhta Malyy Korabel'naya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  223.44
@@ -45035,9 +45036,9 @@ x 0 0
 # !units: meters
 # !longitude: 33.1000
 # !latitude: 69.6833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Bol'shoy Korabel'naya, Russia
+Guba Bol'shoy Korabel'naya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1200 meters
 J1               0.0020  222.40
@@ -45229,9 +45230,9 @@ x 0 0
 # !units: meters
 # !longitude: 32.6667
 # !latitude: 69.7833
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Zubovskaya, Russia
+Guba Zubovskaya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1600 meters
 J1               0.0020  220.06
@@ -45423,9 +45424,9 @@ x 0 0
 # !units: meters
 # !longitude: 32.0000
 # !latitude: 69.9333
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
-Guba Vayda, Russia
+Guba Vayda, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.0800 meters
 J1               0.0019  217.73
@@ -45617,11 +45618,11 @@ x 0 0
 # !units: meters
 # !longitude: 31.3667
 # !latitude: 69.6500
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Ufer 0.2 km
 # note: 20260906 country "Norway" -> "Russia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Finnmark" -> "Murmansk".
-Linakhamar (Pechenga Bay), Russia
+Linakhamar (Pechenga Bay), Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.0000 meters
 J1               0.0018  215.26
@@ -45813,11 +45814,11 @@ x 0 0
 # !units: meters
 # !longitude: 31.0333
 # !latitude: 69.7667
-# region: Murmansk
+# region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260906 country "Norway" -> "Russia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Finnmark" -> "Murmansk".
-Guba Bazarnava, Russia
+Guba Bazarnava, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.9500 meters
 J1               0.0018  216.17
@@ -74723,7 +74724,8 @@ x 0 0
 # !latitude: 54.6386
 # note: 20260906 country "Atlantic" -> "Russia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Kaliningrad".
-Baltiysk, Russia
+# region: Kaliningrad Oblast
+Baltiysk, Kaliningrad Oblast, Russia
 +00:00 :Europe/Kaliningrad
 0.0000 meters
 J1               0.0001  212.09

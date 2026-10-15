@@ -15002,11 +15002,11 @@ MNUS2
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Severnaya Zemlya
+# region: Krasnoyarsk Krai
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Domashnii I., Severnaya Zemlya, Russia
+Domashnii I. (Severnaya Zemlya), Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.1829 meters
 J1              0.0003  139.90
@@ -15199,14 +15199,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 0.5 km
 # note: 20260913 S2/K2 x 1.70 auf den Springhub des Buchs (cptt-3); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.444. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Zarya Road, Russia
+Zarya Road, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.3962 meters
 J1              0.0005  138.21
@@ -15399,12 +15399,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.86 auf den Springhub des Buchs (cptt-5); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.444. Siehe py/noaa_s2_nachziehen.py.
-Bonevi Island, Russia
+Bonevi Island, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.3353 meters
 J1              0.0036  148.81
@@ -15597,14 +15597,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 14.6 km
 # note: 20260913 S2/K2 x 1.77 auf den Springhub des Buchs (cptt-7); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.94 Punkte.
-Dzhekman Island, Russia
+Dzhekman Island, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.3962 meters
 J1              0.0005  123.53
@@ -15797,14 +15797,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.75 auf den Springhub des Buchs (cptt-9); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.47 Punkte.
-Russki Island, Russia
+Russki Island, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.3353 meters
 J1              0.0004  134.96
@@ -15997,14 +15997,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 1.9 km
 # note: 20260913 S2/K2 x 1.71 auf den Springhub des Buchs (cptt-11); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.94 Punkte.
-Taimyra River mouth, Russia
+Taimyra River mouth, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.4572 meters
 J1              0.0005  128.47
@@ -16197,14 +16197,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 1.2 km
 # note: 20260913 S2/K2 x 1.95 auf den Springhub des Buchs (cptt-13); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.43 Punkte.
-Cape Olovyanny, Shokalskogo Strait, Russia
+Cape Olovyanny (Shokalskogo Strait), Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.2743 meters
 J1              0.0004  105.09
@@ -16397,14 +16397,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 2.4 km
 # note: 20260913 S2/K2 x 1.57 auf den Springhub des Buchs (cptt-15); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.94 Punkte.
-Gansena (Hansen) Island, Russia
+Gansena (Hansen) Island, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.1219 meters
 J1              0.0002  129.77
@@ -16597,14 +16597,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.86 auf den Springhub des Buchs (cptt-17); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.385. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Cape Chelyuskina, Russia
+Cape Chelyuskina, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.2438 meters
 J1              0.0003  93.27
@@ -16797,12 +16797,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 0.9 km
 # note: 20260913 S2/K2 x 1.98 auf den Springhub des Buchs (cptt-19); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Samuila I., Komsomolskoi Pravdy Island, Russia
+Samuila I. (Komsomolskoi Pravdy Island), Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.2743 meters
 J1              0.0028  117.12
@@ -16995,12 +16995,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 1.0 km
 # note: 20260913 S2/K2 x 1.75 auf den Springhub des Buchs (cptt-21); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Starokadomskogo Island, Russia
+Starokadomskogo Island, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.4572 meters
 J1              0.0047  126.48
@@ -17193,12 +17193,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 2.4 km
 # note: 20260913 S2/K2 x 1.75 auf den Springhub des Buchs (cptt-23); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Pronchishchevoi Bay, Russia
+Pronchishchevoi Bay, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 1.0058 meters
 J1              0.0091  325.95
@@ -17387,12 +17387,12 @@ x 0 0
 # !units: meters
 # !longitude: 112.7500
 # !latitude: 74.6667
-# region: Sakha (Yakutia)
+# region: Sakha Republic
 # admin1_quelle: Ufer 17.8 km
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (cptt-25); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Preobrazheniya Island, Russia
+Preobrazheniya Island, Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 0.8230 meters
 J1              0.0086  357.63
@@ -17581,12 +17581,12 @@ x 0 0
 # !units: meters
 # !longitude: 111.0667
 # !latitude: 74.3000
-# region: Sakha (Yakutia)
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 11.9 km
 # note: 20260913 S2/K2 x 2.06 auf den Springhub des Buchs (cptt-27); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Mali (Small) Begichev Island, Russia
+Mali (Small) Begichev Island, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Yakutsk
 0.9449 meters
 J1              0.0099  15.56
@@ -17776,12 +17776,12 @@ x 0 0
 # !units: meters
 # !longitude: 111.6667
 # !latitude: 74.0167
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 2.8 km
 # note: 20260913 S2/K2 x 2.02 auf den Springhub des Buchs (cptt-29); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Nordvik Bay, Russia
+Nordvik Bay, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 1.5850 meters
 J1              0.0166  8.93
@@ -17974,12 +17974,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 2.4 km
 # note: 20260913 S2/K2 x 1.89 auf den Springhub des Buchs (cptt-31); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Khara-Tumus Peninsula, Russia
+Khara-Tumus Peninsula, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.7620 meters
 J1              0.0077  21.79
@@ -18172,12 +18172,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.93 auf den Springhub des Buchs (cptt-33); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Kozhevnikova Bay, Russia
+Kozhevnikova Bay, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.5791 meters
 J1              0.0052  91.15
@@ -18370,12 +18370,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.92 auf den Springhub des Buchs (cptt-35); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Syndaska Bay entrance, Russia
+Syndaska Bay entrance, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.8839 meters
 J1              0.0080  96.99
@@ -18568,12 +18568,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.93 auf den Springhub des Buchs (cptt-37); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Cape Bolshaya Karga, Russia
+Cape Bolshaya Karga, Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.7010 meters
 J1              0.0064  120.50
@@ -18766,12 +18766,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk
+# region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.81 auf den Springhub des Buchs (cptt-39); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Kresty Peninsula, Khatanga River, Russia
+Kresty Peninsula (Khatanga River), Krasnoyarsk Krai, Russia
 +00:00 :Asia/Krasnoyarsk
 0.3962 meters
 J1              0.0044  181.67
@@ -18960,12 +18960,12 @@ x 0 0
 # !units: meters
 # !longitude: 113.4000
 # !latitude: 73.5167
-# region: Sakha (Yakutia)
+# region: Sakha Republic
 # admin1_quelle: Ufer 2.5 km
 # note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (cptt-41); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Cape Khorgo, Anabarski Bay, Russia
+Cape Khorgo (Anabarski Bay), Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 1.0973 meters
 J1              0.0116  24.00
@@ -19154,12 +19154,12 @@ x 0 0
 # !units: meters
 # !longitude: 128.9667
 # !latitude: 71.6667
-# region: Sakha (Yakutia)
+# region: Sakha Republic
 # admin1_quelle: Ufer 4.7 km
 # note: 20260913 S2/K2 x 1.93 auf den Springhub des Buchs (cptt-45); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Bulunkan Bay, Tiksi Bay, Russia
+Bulunkan Bay (Tiksi Bay), Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 0.2438 meters
 J1              0.0025  85.30
@@ -19352,12 +19352,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakha (Yakutia)
+# region: Sakha Republic
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.79 auf den Springhub des Buchs (cptt-47); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Omoloi River entrance, Russia
+Omoloi River entrance, Sakha Republic, Russia
 +00:00 :Asia/Vladivostok
 0.3048 meters
 J1              0.0030  105.56
@@ -19550,14 +19550,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakha (Yakutia)
+# region: Sakha Republic
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.89 auf den Springhub des Buchs (cptt-51); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
-Kotel'nyy Island Polar Station, Russia
+Kotel'nyy Island Polar Station, Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 0.4267 meters
 J1              0.0005  80.67
@@ -19750,7 +19750,7 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakha (Yakutia)
+# region: Sakha Republic
 # admin1_quelle: Ufer 2.9 km
 # note: 20260913 S2/K2 x 2.46 auf den Springhub des Buchs (cptt-53); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
@@ -19759,7 +19759,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.916,
 # note: Zielwert F=0.083 aus Wahrheit statt F=0.102 des Bezugsorts; Beleg: Wahrheit 9.60 -> 9.57 %.
-Nerpalakh Lagoon, Kotel'nyy Island, Russia
+Nerpalakh Lagoon (Kotel'nyy Island), Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 0.1524 meters
 J1              0.0002  88.73
@@ -19952,12 +19952,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakha (Yakutia)
+# region: Sakha Republic
 # admin1_quelle: Ufer 2.8 km
 # note: 20260913 S2/K2 x 1.80 auf den Springhub des Buchs (cptt-55); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Cape Medvezhi, Kotel'nyy Island, Russia
+Cape Medvezhi (Kotel'nyy Island), Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 0.1829 meters
 J1              0.0017  57.24
@@ -20150,12 +20150,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakha (Yakutia)
+# region: Sakha Republic
 # admin1_quelle: Ufer 1.6 km
 # note: 20260913 S2/K2 x 1.74 auf den Springhub des Buchs (cptt-59); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Cape Shalaurova, Russia
+Cape Shalaurova, Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 0.2438 meters
 J1              0.0025  315.42
@@ -20348,12 +20348,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.40 auf den Springhub des Buchs (cptt-69); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Cape Billingsa, Russia
+Cape Billingsa, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.1524 meters
 J1              0.0014  80.24
@@ -20546,12 +20546,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Ufer 3.7 km
 # note: 20260913 S2/K2 x 1.85 auf den Springhub des Buchs (cptt-71); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Wrangell Island, Russia
+Wrangell Island, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.3962 meters
 J1              0.0041  53.22
@@ -20744,12 +20744,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.82 auf den Springhub des Buchs (cptt-73); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Cape Shmidta, Russia
+Cape Shmidta, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.5182 meters
 J1              0.0047  81.93
@@ -20942,12 +20942,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.75 auf den Springhub des Buchs (cptt-81); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Alera Bay, Penkegnei Bay, Russia
+Alera Bay (Penkegnei Bay), Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.1829 meters
 J1              0.0019  337.50
@@ -21140,12 +21140,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.84 auf den Springhub des Buchs (cptt-87); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Cape Razdelny, Kresta Bay, Russia
+Cape Razdelny (Kresta Bay), Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 1.8288 meters
 J1              0.0185  7.11
@@ -21338,12 +21338,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.84 auf den Springhub des Buchs (cptt-89); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Engaugin Bay, Kresta Bay, Russia
+Engaugin Bay (Kresta Bay), Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 1.6764 meters
 J1              0.0188  5.04
@@ -21536,12 +21536,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Ufer 0.8 km
 # note: 20260913 S2/K2 x 1.88 auf den Springhub des Buchs (cptt-91); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Russkaya Koshka Spit, Russia
+Russkaya Koshka Spit, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 1.1582 meters
 J1              0.0130  35.17
@@ -21734,12 +21734,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Ufer 4.7 km
 # note: 20260913 S2/K2 x 1.76 auf den Springhub des Buchs (cptt-93); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Salomatova Spit, Russia
+Salomatova Spit, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 1.2497 meters
 J1              0.0138  43.74
@@ -21932,12 +21932,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.80 auf den Springhub des Buchs (cptt-95); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Melkaya Bay, Russia
+Melkaya Bay, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 1.0058 meters
 J1              0.0108  58.55
@@ -22130,12 +22130,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Ufer 1.1 km
 # note: 20260913 S2/K2 x 1.79 auf den Springhub des Buchs (cptt-99); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Strelka Spit, Anadyr Gulf, Russia
+Strelka Spit (Anadyr Gulf), Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.7010 meters
 J1              0.0075  65.43
@@ -22328,12 +22328,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Chukchi Autonomous Okrug
+# region: Chukotka Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.75 auf den Springhub des Buchs (cptt-101); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Ugolnaya Bay, Russia
+Ugolnaya Bay, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.3353 meters
 J1              0.0036  55.69
@@ -22526,9 +22526,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Ufer 3.2 km
-Anastasii Bay, Russia
+Anastasii Bay, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.4630 meters
 J1              0.0001  139.73
@@ -22721,9 +22721,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Imatra Bay, Glubokaya Bay, Russia
+Imatra Bay (Glubokaya Bay), Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.3411 meters
 J1              0.0001  139.34
@@ -22916,9 +22916,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Ufer 3.8 km
-Cape Olyutorski, Russia
+Cape Olyutorski, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.2192 meters
 J1              0.0001  144.54
@@ -23111,9 +23111,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Ufer 1.6 km
-Lavora Harbor, Russia
+Lavora Harbor, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.2802 meters
 J1              0.0001  137.13
@@ -23306,9 +23306,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Ufer 1.4 km
-Sibir Harbor, Russia
+Sibir Harbor, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.5240 meters
 J1              0.0001  141.94
@@ -23501,9 +23501,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Cape Kryugera, Russia
+Cape Kryugera, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.3106 meters
 J1              0.0001  146.22
@@ -23696,13 +23696,13 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Paramushir, Kuril Islands, Russia [harmonics_utide_ti,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.659,
 # note: Zielwert F=2.211 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 12.57 -> 11.67 %.
-Nikolski, Bering Island, Russia
+Nikolski (Bering Island), Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.3106 meters
 J1              0.0001  140.00
@@ -23895,9 +23895,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Ufer 1.5 km
-Morzhovaya Bay, Russia
+Morzhovaya Bay, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.3411 meters
 J1              0.0001  155.58
@@ -24090,13 +24090,13 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Paramushir, Kuril Islands, Russia [harmonics_utide_ti,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.833,
 # note: Zielwert F=1.748 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 6.65 -> 5.76 %.
-Petropavlovsk, Russia
+Petropavlovsk, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.3716 meters
 J1              0.0001  169.22
@@ -24289,9 +24289,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Ufer 1.2 km
-Tarya Bay, Russia
+Tarya Bay, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.4326 meters
 J1              0.0001  171.81
@@ -24484,9 +24484,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Ufer 0.3 km
-Akhomten Bay, Russia
+Akhomten Bay, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.3106 meters
 J1              0.0001  165.32
@@ -24679,9 +24679,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Vestnik Bay, Russia
+Vestnik Bay, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.2497 meters
 J1              0.0001  174.41
@@ -24874,9 +24874,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Golygina River entrance, Russia
+Golygina River entrance, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.5240 meters
 J1              0.0001  174.93
@@ -25069,9 +25069,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Ust Bolsheretsk, Bolshaya River, Russia
+Ust Bolsheretsk (Bolshaya River), Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.5850 meters
 J1              0.0001  220.90
@@ -25264,9 +25264,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Kompakova River entrance, Russia
+Kompakova River entrance, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 4.2672 meters
 J1              0.0003  210.00
@@ -25459,9 +25459,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
-Oblukovina River entrance, Russia
+Oblukovina River entrance, Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 3.3223 meters
 J1              0.0003  228.18
@@ -25654,11 +25654,11 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Kamchatka
+# region: Kamchatka Krai
 # admin1_quelle: Polygon
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 1.478,
 # note: Zielwert F=2.568 aus Wahrheit statt F=3.7 des Bezugsorts; Beleg: Wahrheit 6.81 -> 6.59 %.
-Cape Astronomicheski, Russia
+Cape Astronomicheski, Kamchatka Krai, Russia
 +07:00 :Asia/Kamchatka
 5.4254 meters
 J1              0.1486  315.75
@@ -25851,9 +25851,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Maga Buryatdan
+# region: Magadan Oblast
 # admin1_quelle: Ufer 0.9 km
-Matugin Point, Russia
+Matugin Point, Magadan Oblast, Russia
 +07:00 :Asia/Magadan
 4.1148 meters
 J1              0.1110  248.88
@@ -26046,9 +26046,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Maga Buryatdan
+# region: Magadan Oblast
 # admin1_quelle: Polygon
-Gizhiga River entrance, Russia
+Gizhiga River entrance, Magadan Oblast, Russia
 +07:00 :Asia/Magadan
 4.2672 meters
 J1              0.1110  257.45
@@ -26241,9 +26241,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Maga Buryatdan
+# region: Magadan Oblast
 # admin1_quelle: Ufer 0.7 km
-Nayakhanskaya Bay, Russia
+Nayakhanskaya Bay, Magadan Oblast, Russia
 +07:00 :Asia/Magadan
 3.9929 meters
 J1              0.1079  255.51
@@ -26436,9 +26436,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Maga Buryatdan
+# region: Magadan Oblast
 # admin1_quelle: Ufer 0.7 km
-Udacha Bay, Russia
+Udacha Bay, Magadan Oblast, Russia
 +07:00 :Asia/Magadan
 2.4994 meters
 J1              0.0598  257.46
@@ -26628,12 +26628,12 @@ x 0 0
 # !longitude: 151.2667
 # !latitude: 59.5667
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
-# region: Maga Buryatdan
+# region: Magadan Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.96 auf den Springhub des Buchs (cptt-145); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Ola Anchorage, Tauiskaya Bay, Russia
+Ola Anchorage (Tauiskaya Bay), Magadan Oblast, Russia
 +09:00 :Asia/Magadan
 2.2555 meters
 J1              0.0163  275.50
@@ -26823,12 +26823,12 @@ x 0 0
 # !longitude: 143.1667
 # !latitude: 59.3500
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 0.6 km
 # note: 20260913 S2/K2 x 1.97 auf den Springhub des Buchs (cptt-149); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Okhotsk, Russia
+Okhotsk, Khabarovsk Krai, Russia
 +09:00 :Asia/Vladivostok
 2.2555 meters
 J1              0.0163  317.19
@@ -27017,12 +27017,12 @@ x 0 0
 # !units: meters
 # !longitude: 138.1500
 # !latitude: 56.4500
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 3.20 auf den Springhub des Buchs (cptt-151); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.368. Siehe py/noaa_s2_nachziehen.py.
-Ayan Bay, Russia
+Ayan Bay, Khabarovsk Krai, Russia
 +10:00 :Asia/Vladivostok
 1.7374 meters
 J1              0.0160  263.04
@@ -27211,12 +27211,12 @@ x 0 0
 # !units: meters
 # !longitude: 135.3000
 # !latitude: 54.7000
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 3.59 auf den Springhub des Buchs (cptt-153); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.505. Siehe py/noaa_s2_nachziehen.py.
-Udskaya Bay, Russia
+Udskaya Bay, Khabarovsk Krai, Russia
 +10:00 :Asia/Vladivostok
 1.7678 meters
 J1              0.0181  318.76
@@ -27405,12 +27405,12 @@ x 0 0
 # !units: meters
 # !longitude: 136.7667
 # !latitude: 54.9000
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 0.9 km
 # note: 20260913 S2/K2 x 3.44 auf den Springhub des Buchs (cptt-155); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.365. Siehe py/noaa_s2_nachziehen.py.
-Levyazhya Bay, Feklistov Island, Russia
+Levyazhya Bay (Feklistov Island), Khabarovsk Krai, Russia
 +10:00 :Asia/Vladivostok
 3.2004 meters
 J1              0.0338  310.83
@@ -27599,12 +27599,12 @@ x 0 0
 # !units: meters
 # !longitude: 137.6167
 # !latitude: 54.4000
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 0.9 km
 # note: 20260913 S2/K2 x 3.40 auf den Springhub des Buchs (cptt-157); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.305. Siehe py/noaa_s2_nachziehen.py.
-Abrek Bay, Little Shantar Island, Russia
+Abrek Bay (Little Shantar Island), Khabarovsk Krai, Russia
 +10:00 :Asia/Vladivostok
 2.5908 meters
 J1              0.0287  314.21
@@ -27791,15 +27791,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.4667
-# !latitude: 53.3000
+# !longitude: 141.4613
+# !latitude: 53.2977
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 3.7 km
-Baldukov Island, Russia
+Ostrov Baidukov, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.8534 meters
 J1              0.0147  150.72
@@ -27992,9 +27992,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 2.3 km
-Cape Tamlevo, Russia
+Cape Tamlevo, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.7925 meters
 J1              0.0137  154.88
@@ -28187,13 +28187,13 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.7 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.848,
 # note: Zielwert F=2.164 aus Wahrheit statt F=1.836 des Bezugsorts; Beleg: Wahrheit 4.61 -> 4.21 %.
-Baikal Bay, Russia
+Baikal Bay, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.8230 meters
 J1              0.0138  164.10
@@ -28386,9 +28386,9 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.8 km
-Kuegda Bay, Russia
+Kuegda Bay, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.3658 meters
 J1              0.0058  178.25
@@ -28577,9 +28577,9 @@ x 0 0
 # !units: meters
 # !longitude: 143.0667
 # !latitude: 53.5667
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.8 km
-Urkt Bay entrance, Russia
+Urkt Bay entrance, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.7315 meters
 J1              0.0216  234.54
@@ -28768,9 +28768,9 @@ x 0 0
 # !units: meters
 # !longitude: 143.3167
 # !latitude: 52.8667
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
-Kyakrvo Anchorage, Russia
+Kyakrvo Anchorage, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.8230 meters
 J1              0.0216  250.39
@@ -28959,9 +28959,9 @@ x 0 0
 # !units: meters
 # !longitude: 143.2000
 # !latitude: 52.3833
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.4 km
-Chaivo Bay, Russia
+Chaivo Bay, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.9449 meters
 J1              0.0229  287.27
@@ -29150,9 +29150,9 @@ x 0 0
 # !units: meters
 # !longitude: 143.1833
 # !latitude: 51.9667
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 2.1 km
-Niski Bay, Russia
+Niski Bay, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.9754 meters
 J1              0.0290  301.56
@@ -29341,9 +29341,9 @@ x 0 0
 # !units: meters
 # !longitude: 143.5000
 # !latitude: 51.3000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
-Luniski Bay entrance, Russia
+Luniski Bay entrance, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.3353 meters
 J1              0.0088  312.47
@@ -29532,11 +29532,11 @@ x 0 0
 # !units: meters
 # !longitude: 144.4000
 # !latitude: 49.0500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Mys Popova, Russia
+Mys Popova, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.4267 meters
 J1              0.0085  233.41
@@ -29725,11 +29725,11 @@ x 0 0
 # !units: meters
 # !longitude: 144.6333
 # !latitude: 48.5000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 16.6 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Tyuleniy, Russia
+Tyuleniy, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6706 meters
 J1              0.0147  225.22
@@ -29918,11 +29918,11 @@ x 0 0
 # !units: meters
 # !longitude: 144.6500
 # !latitude: 48.7000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.0 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Mys Obshirnyy, Russia
+Mys Obshirnyy, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6401 meters
 J1              0.0147  225.74
@@ -30111,11 +30111,11 @@ x 0 0
 # !units: meters
 # !longitude: 144.2500
 # !latitude: 49.1167
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.8 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Noto, Russia
+Noto, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.7010 meters
 J1              0.0164  227.17
@@ -30304,11 +30304,11 @@ x 0 0
 # !units: meters
 # !longitude: 143.3167
 # !latitude: 49.3167
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Ozero Nevskoye, Russia
+Ozero Nevskoye, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6706 meters
 J1              0.0159  231.72
@@ -30497,11 +30497,11 @@ x 0 0
 # !units: meters
 # !longitude: 143.1333
 # !latitude: 49.2333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Shikuka, Russia
+Shikuka, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.7010 meters
 J1              0.0164  232.24
@@ -30690,11 +30690,11 @@ x 0 0
 # !units: meters
 # !longitude: 142.8000
 # !latitude: 48.6333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Higashi Chutoru, Russia
+Higashi Chutoru, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.7010 meters
 J1              0.0159  235.35
@@ -30883,11 +30883,11 @@ x 0 0
 # !units: meters
 # !longitude: 142.5667
 # !latitude: 48.1000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Buruny, Russia
+Buruny, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6401 meters
 J1              0.0147  234.70
@@ -31076,11 +31076,11 @@ x 0 0
 # !units: meters
 # !longitude: 142.8167
 # !latitude: 47.4167
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Sakayehama, Russia
+Sakayehama, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6401 meters
 J1              0.0153  234.31
@@ -31269,11 +31269,11 @@ x 0 0
 # !units: meters
 # !longitude: 143.0167
 # !latitude: 47.2500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.11 Punkte.
-Noho Misaki, Russia
+Noho Misaki, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6401 meters
 J1              0.0142  233.41
@@ -31462,11 +31462,11 @@ x 0 0
 # !units: meters
 # !longitude: 143.1333
 # !latitude: 46.8667
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.3 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.90 Punkte.
-Onto Numa, Russia
+Onto Numa, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.3658 meters
 J1              0.0079  268.73
@@ -31655,11 +31655,11 @@ x 0 0
 # !units: meters
 # !longitude: 143.1667
 # !latitude: 46.8500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.90 Punkte.
-Tomunai Hakuchi, Russia
+Tomunai Hakuchi, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6401 meters
 J1              0.0142  233.93
@@ -31848,11 +31848,11 @@ x 0 0
 # !units: meters
 # !longitude: 143.4167
 # !latitude: 46.8167
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.9 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.90 Punkte.
-Airo Wan, Russia
+Airo Wan, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6401 meters
 J1              0.0147  234.70
@@ -32041,11 +32041,11 @@ x 0 0
 # !units: meters
 # !longitude: 143.5833
 # !latitude: 46.3833
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.51 Punkte.
-Mys Menaputsy, Russia
+Mys Menaputsy, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.7010 meters
 J1              0.0159  227.56
@@ -32234,11 +32234,11 @@ x 0 0
 # !units: meters
 # !longitude: 143.3333
 # !latitude: 46.5000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.3 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.51 Punkte.
-Tobuchi Ko, Russia
+Tobuchi Ko, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.6401 meters
 J1              0.0142  251.07
@@ -32427,11 +32427,11 @@ x 0 0
 # !units: meters
 # !longitude: 142.0833
 # !latitude: 45.9000
-# region: East coast
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.51 Punkte.
-Nishi Notoro Misaki, East coast, Russia
+Nishi Notoro Misaki (East coast), Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.7315 meters
 J1              0.0159  253.54
@@ -32620,11 +32620,11 @@ x 0 0
 # !units: meters
 # !longitude: 142.0833
 # !latitude: 45.9000
-# region: West coast
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.51 Punkte.
-Nishi Notoro Misaki, West coast, Russia
+Nishi Notoro Misaki (West coast), Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.4572 meters
 J1              0.0102  266.14
@@ -32813,11 +32813,11 @@ x 0 0
 # !units: meters
 # !longitude: 141.9167
 # !latitude: 46.0500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 2.0 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.51 Punkte.
-Soni Misaki, Russia
+Soni Misaki, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.3353 meters
 J1              0.0068  284.84
@@ -33006,11 +33006,11 @@ x 0 0
 # !units: meters
 # !longitude: 141.2667
 # !latitude: 46.2500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 47.5 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.69 Punkte.
-Kaiba To (Todo Shima), Russia
+Kaiba To (Todo Shima), Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.1219 meters
 J1              0.0028  239.90
@@ -33199,11 +33199,11 @@ x 0 0
 # !units: meters
 # !longitude: 141.8500
 # !latitude: 46.6667
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.3 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.69 Punkte.
-Tokombo Road, Russia
+Tokombo Road, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.2134 meters
 J1              0.0045  239.90
@@ -33392,11 +33392,11 @@ x 0 0
 # !units: meters
 # !longitude: 142.0330
 # !latitude: 47.0500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.8 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.11 Punkte.
-Port Kholmnsk, Russia
+Port Kholmnsk, Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.1829 meters
 J1              0.0040  239.90
@@ -33585,11 +33585,11 @@ x 0 0
 # !units: meters
 # !longitude: 141.9667
 # !latitude: 47.4333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.24 Punkte.
-Nodasan (Noda), Russia
+Nodasan (Noda), Sakhalin Oblast, Russia
 +11:00 :Asia/Sakhalin
 0.1829 meters
 J1              0.0040  239.90
@@ -33782,12 +33782,12 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 2.0 km
 # note: 20260913 S2/K2 x 1.85 auf den Springhub des Buchs (cptt-223); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.273. Siehe py/noaa_s2_nachziehen.py.
-Yatsu Misaki, Russia
+Yatsu Misaki, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.2438 meters
 J1              0.0022  199.57
@@ -33980,14 +33980,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.83 auf den Springhub des Buchs (cptt-225); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.348. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Ushiro Wan, Russia
+Ushiro Wan, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.4267 meters
 J1              0.0052  213.21
@@ -34180,14 +34180,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.78 auf den Springhub des Buchs (cptt-227); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Toro Numa, Russia
+Toro Numa, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.4877 meters
 J1              0.0065  216.97
@@ -34380,14 +34380,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.3 km
 # note: 20260913 S2/K2 x 1.79 auf den Springhub des Buchs (cptt-229); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.375. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Lesogorsk, Russia
+Lesogorsk, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.4877 meters
 J1              0.0065  223.99
@@ -34580,14 +34580,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 2.6 km
 # note: 20260913 S2/K2 x 1.78 auf den Springhub des Buchs (cptt-231); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.356. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Mys Polevogo, Russia
+Mys Polevogo, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.6706 meters
 J1              0.0091  221.78
@@ -34780,14 +34780,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.74 auf den Springhub des Buchs (cptt-233); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Anbetsu, Russia
+Anbetsu, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.7315 meters
 J1              0.0104  222.17
@@ -34980,14 +34980,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.8 km
 # note: 20260913 S2/K2 x 1.75 auf den Springhub des Buchs (cptt-235); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.358. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Pilevo Bay, Russia
+Pilevo Bay, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.7620 meters
 J1              0.0011  192.35
@@ -35180,11 +35180,11 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.7 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Alexandrovski, Russia
+Alexandrovski, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 1.0668 meters
 J1              0.0016  192.61
@@ -35377,14 +35377,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 2.5 km
 # note: 20260913 S2/K2 x 1.72 auf den Springhub des Buchs (cptt-239); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.333. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.66 Punkte.
-Viyakhtu Bay, Russia
+Viyakhtu Bay, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 1.4326 meters
 J1              0.0021  195.20
@@ -35577,14 +35577,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.6 km
 # note: 20260913 S2/K2 x 1.74 auf den Springhub des Buchs (cptt-241); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.329. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.66 Punkte.
-Cape Tik, Russia
+Cape Tik, Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 1.3411 meters
 J1              0.0020  197.02
@@ -35777,14 +35777,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.6 km
 # note: 20260913 S2/K2 x 1.81 auf den Springhub des Buchs (cptt-243); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.66 Punkte.
-Cape Pogobi, Strait of Tartary, Russia
+Cape Pogobi (Strait of Tartary), Sakhalin Oblast, Russia
 +00:00 :Asia/Sakhalin
 0.8839 meters
 J1              0.0013  226.37
@@ -35971,15 +35971,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.2333
+# !longitude: 141.2394
 # !latitude: 52.8667
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 2.4 km
-Amur River entrance, Russia
+Mys Pronge (Reka Amur), Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.3962 meters
 J1              0.0051  253.46
@@ -36166,15 +36166,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 140.7500
-# !latitude: 53.1333
+# !longitude: 140.7363
+# !latitude: 53.1329
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
-Nikolayevsk, Amur River, Russia
+Nikolajewsk-na-Amure, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.9449 meters
 J1              0.0031  274.24
@@ -36361,15 +36361,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.2000
-# !latitude: 52.8167
+# !longitude: 141.1975
+# !latitude: 52.8200
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
-Uyuzyut Island, Russia
+Ostrov Uyuzyut, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.5182 meters
 J1              0.0068  252.16
@@ -36556,15 +36556,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.2833
-# !latitude: 52.6667
+# !longitude: 141.2842
+# !latitude: 52.6587
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +8.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
-Cape Dzhaore, Russia
+Mys Dzhaore, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.6401 meters
 J1              0.0089  257.35
@@ -36751,20 +36751,20 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.5167
-# !latitude: 52.2333
+# !longitude: 141.5293
+# !latitude: 52.2352
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 1.5 km
 # note: 20260913 S2/K2 x 1.86 auf den Springhub des Buchs (cptt-253); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.429. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.66 Punkte.
-Cape Lazareva, Russia
+Cape Lazareva, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.9754 meters
 J1              0.0011  231.57
@@ -36951,20 +36951,20 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.5500
-# !latitude: 52.1500
+# !longitude: 141.5439
+# !latitude: 52.1510
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 0.0 km
 # note: 20260913 S2/K2 x 1.81 auf den Springhub des Buchs (cptt-255); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.389. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.66 Punkte.
-Cape Muraveva, Russia
+Mys Muraveva, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.9144 meters
 J1              0.0014  216.11
@@ -37151,20 +37151,20 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.1833
-# !latitude: 51.7833
+# !longitude: 141.1804
+# !latitude: 51.7837
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.82 auf den Springhub des Buchs (cptt-257); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.382. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.66 Punkte.
-Cape Chikacheva, Russia
+Mys Chikacheva, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 1.2802 meters
 J1              0.0019  203.52
@@ -37357,14 +37357,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.74 auf den Springhub des Buchs (cptt-259); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.371. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -1.66 Punkte.
-Cape Sushcheva, Russia
+Mys Sushcheva, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 1.0668 meters
 J1              0.0016  193.51
@@ -37557,14 +37557,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.76 auf den Springhub des Buchs (cptt-261); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Taba Bay, Russia
+Taba Bay, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 1.2497 meters
 J1              0.0018  197.80
@@ -37751,20 +37751,20 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 140.8333
-# !latitude: 51.4500
+# !longitude: 140.8278
+# !latitude: 51.4535
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 2.3 km
 # note: 20260913 S2/K2 x 1.74 auf den Springhub des Buchs (cptt-263); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.316. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Zaliv Chikhacheva, Russia
+Zaliv Chikhacheva (De-Kastri), Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 1.2497 meters
 J1              0.0018  199.10
@@ -37957,14 +37957,14 @@ x 0 0
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 2.3 km
 # note: 20260913 S2/K2 x 1.77 auf den Springhub des Buchs (cptt-265); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.388. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Starka Bay, Russia
+Starka Bay, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.8230 meters
 J1              0.0012  200.92
@@ -38151,20 +38151,20 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 140.4000
-# !latitude: 49.2833
+# !longitude: 140.3723
+# !latitude: 49.2848
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 1.1 km
 # note: 20260913 S2/K2 x 1.83 auf den Springhub des Buchs (cptt-267); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Datta Bay, Russia
+Datta, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.4572 meters
 J1              0.0062  238.01
@@ -38351,20 +38351,20 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 140.2833
-# !latitude: 49.1000
+# !longitude: 140.2770
+# !latitude: 49.0898
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.84 auf den Springhub des Buchs (cptt-269); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -1.87 Punkte.
-Vanina Bay, Russia
+Vanino, Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.3048 meters
 J1              0.0042  240.35
@@ -38551,20 +38551,20 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 140.2833
-# !latitude: 48.9833
+# !longitude: 140.2856
+# !latitude: 48.9791
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +9.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Khabarovsk
+# region: Khabarovsk Krai
 # admin1_quelle: Ufer 0.7 km
 # note: 20260913 S2/K2 x 1.94 auf den Springhub des Buchs (cptt-271); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Pegel), Pegel 14.8 -> 14.9 cm, S2/M2 Nachbarn 0.304. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Busan New Port, South Korea [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
-Sovetskaya Harbor, Russia
+Sovetskaya Gavan', Khabarovsk Krai, Russia
 +00:00 :Asia/Vladivostok
 0.3353 meters
 J1              0.0039  243.08
@@ -38753,11 +38753,11 @@ x 0 0
 # !units: meters
 # !longitude: 156.5000
 # !latitude: 50.8333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.8 km
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.619,
 # note: Zielwert F=2.355 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 6.36 -> 4.97 %.
-Kotomari Zaki, Russia
+Kotomari Zaki, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.0363 meters
 J1              0.0001  177.27
@@ -38946,11 +38946,11 @@ x 0 0
 # !units: meters
 # !longitude: 156.4000
 # !latitude: 50.6500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.770,
 # note: Zielwert F=1.892 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 4.03 -> 2.67 %.
-Nakagawa Wan, Russia
+Nakagawa Wan, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.0668 meters
 J1              0.0001  161.68
@@ -39139,11 +39139,11 @@ x 0 0
 # !units: meters
 # !longitude: 156.2000
 # !latitude: 50.7167
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.705,
 # note: Zielwert F=2.067 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 5.83 -> 4.75 %.
-Kozyrevskoye, Russia
+Kozyrevskoye, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.1887 meters
 J1              0.0001  187.66
@@ -39332,13 +39332,13 @@ x 0 0
 # !units: meters
 # !longitude: 155.6500
 # !latitude: 50.8333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Paramushir, Kuril Islands, Russia [harmonics_utide_ti,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.787,
 # note: Zielwert F=1.851 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 7.34 -> 6.91 %.
-Araido To, Russia
+Araido To, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.3411 meters
 J1              0.0001  196.75
@@ -39527,13 +39527,13 @@ x 0 0
 # !units: meters
 # !longitude: 156.1333
 # !latitude: 50.7500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.1 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Paramushir, Kuril Islands, Russia [harmonics_utide_ti,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.837,
 # note: Zielwert F=1.739 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 6.24 -> 6.01 %.
-Banjo Zaki, Russia
+Banjo Zaki, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.2497 meters
 J1              0.0001  191.56
@@ -39722,9 +39722,9 @@ x 0 0
 # !units: meters
 # !longitude: 155.9167
 # !latitude: 50.2833
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.6 km
-Yotsuiwa, Russia
+Yotsuiwa, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.0363 meters
 J1              0.0001  160.39
@@ -39913,13 +39913,13 @@ x 0 0
 # !units: meters
 # !longitude: 155.2167
 # !latitude: 50.0667
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.0 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Paramushir, Kuril Islands, Russia [harmonics_utide_ti,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.805,
 # note: Zielwert F=1.81 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 5.98 -> 5.66 %.
-Mys Kapustnyy, Russia
+Mys Kapustnyy, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.1887 meters
 J1              0.0001  188.96
@@ -40108,11 +40108,11 @@ x 0 0
 # !units: meters
 # !longitude: 155.3333
 # !latitude: 50.2833
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.832,
 # note: Zielwert F=1.75 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 4.01 -> 3.20 %.
-Kujira Wan, Russia
+Kujira Wan, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.2192 meters
 J1              0.0001  190.26
@@ -40301,13 +40301,13 @@ x 0 0
 # !units: meters
 # !longitude: 155.5833
 # !latitude: 50.3833
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Paramushir, Kuril Islands, Russia [harmonics_utide_ti,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.805,
 # note: Zielwert F=1.809 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 6.25 -> 5.97 %.
-Kakumabetsu Wan, Russia
+Kakumabetsu Wan, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.3106 meters
 J1              0.0001  192.86
@@ -40496,13 +40496,13 @@ x 0 0
 # !units: meters
 # !longitude: 154.8333
 # !latitude: 49.4833
-# region: Onekotan To
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Mamya, Kuril Islands, Russia [harmonics-2004-06-14_mo,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.818,
 # note: Zielwert F=2.591 aus Wahrheit statt F=2.07 des Bezugsorts; Beleg: Wahrheit 6.06 -> 5.97 %.
-Kuroishi Wan, Onekotan To, Russia
+Kuroishi Wan (Onekotan To), Sakhalin Oblast, Russia
 +11:00 :Asia/Srednekolymsk
 0.7925 meters
 x 0 0
@@ -40691,11 +40691,11 @@ x 0 0
 # !units: meters
 # !longitude: 154.7333
 # !latitude: 49.5167
-# region: Onekotan To
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.688,
 # note: Zielwert F=2.118 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 4.86 -> 3.40 %.
-Shiomi Wan, Onekotan To, Russia
+Shiomi Wan (Onekotan To), Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.0668 meters
 J1              0.0001  187.66
@@ -40884,11 +40884,11 @@ x 0 0
 # !units: meters
 # !longitude: 154.4833
 # !latitude: 49.1667
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.822,
 # note: Zielwert F=1.771 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 3.68 -> 2.91 %.
-Kharimkotan, Russia
+Kharimkotan, Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 0.9754 meters
 J1              0.0001  185.06
@@ -41077,11 +41077,11 @@ x 0 0
 # !units: meters
 # !longitude: 154.083000
 # !latitude: 48.783300
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.3 km
 # note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 48.7833/154.0833,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
-Shiashkotan (Southeast coast), Kuril Islands, Russia
+Shiashkotan (Southeast coast, Kuril Islands), Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 0.9144 meters
 J1              0.0001  173.37
@@ -41270,11 +41270,11 @@ x 0 0
 # !units: meters
 # !longitude: 154.0500
 # !latitude: 48.7833
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.678,
 # note: Zielwert F=2.147 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 5.47 -> 3.97 %.
-Shiashkotan (Northwest coast), Kuril Islands, Russia
+Shiashkotan (Northwest coast, Kuril Islands), Sakhalin Oblast, Russia
 +00:00 :Asia/Srednekolymsk
 1.0668 meters
 J1              0.0001  182.47
@@ -41463,11 +41463,11 @@ x 0 0
 # !units: meters
 # !longitude: 152.8167
 # !latitude: 47.5333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 20.7 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Mamya, Kuril Islands, Russia [harmonics-2004-06-14_mo,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Ushishiro To, Russia
+Ushishiro To, Sakhalin Oblast, Russia
 +11:00 :Asia/Srednekolymsk
 0.9144 meters
 x 0 0
@@ -41656,11 +41656,11 @@ x 0 0
 # !units: meters
 # !longitude: 152.2500
 # !latitude: 47.1500
-# region: Shimushiru To
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Mamya, Kuril Islands, Russia [harmonics-2004-06-14_mo,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Bukhta Broutona, Shimushiru To, Russia
+Bukhta Broutona (Shimushiru To), Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.6401 meters
 x 0 0
@@ -41849,13 +41849,13 @@ x 0 0
 # !units: meters
 # !longitude: 151.8667
 # !latitude: 46.8667
-# region: Shimushiru To
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Mamya, Kuril Islands, Russia [harmonics-2004-06-14_mo,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.862,
 # note: Zielwert F=2.458 aus Wahrheit statt F=2.07 des Bezugsorts; Beleg: Wahrheit 3.73 -> 3.61 %.
-Shimushiru Wan, Shimushiru To, Russia
+Shimushiru Wan (Shimushiru To), Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.8230 meters
 x 0 0
@@ -42044,11 +42044,11 @@ x 0 0
 # !units: meters
 # !longitude: 150.9000
 # !latitude: 46.5333
-# region: Kita Jima
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Mamya, Kuril Islands, Russia [harmonics-2004-06-14_mo,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Suna Wan, Kita Jima, Russia
+Suna Wan (Kita Jima), Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.7010 meters
 x 0 0
@@ -42237,11 +42237,11 @@ x 0 0
 # !units: meters
 # !longitude: 150.5167
 # !latitude: 46.2000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Zaliv Tukharka (Paramushir), Kuril Islands, Russia [harmonic,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Yosinohama, Russia
+Yosinohama, Sakhalin Oblast, Russia
 +00:00 :Asia/Magadan
 0.6706 meters
 x 0 0
@@ -42430,11 +42430,11 @@ x 0 0
 # !units: meters
 # !longitude: 149.9333
 # !latitude: 45.8000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.2 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Paramushir, Kuril Islands, Russia [harmonics_utide_ti,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Garan Zaki, Russia
+Garan Zaki, Sakhalin Oblast, Russia
 +00:00 :Asia/Magadan
 0.7620 meters
 J1              0.0001  170.78
@@ -42623,13 +42623,13 @@ x 0 0
 # !units: meters
 # !longitude: 149.7333
 # !latitude: 45.8500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.786,
 # note: Zielwert F=1.885 aus Wahrheit statt F=1.481 des Bezugsorts; Beleg: Wahrheit 4.38 -> 4.04 %.
-Tokotan Wan, Russia
+Tokotan Wan, Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.7620 meters
 J1              0.0170  236.00
@@ -42818,13 +42818,13 @@ x 0 0
 # !units: meters
 # !longitude: 150.1667
 # !latitude: 46.1000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.831,
 # note: Zielwert F=1.783 aus Wahrheit statt F=1.481 des Bezugsorts; Beleg: Wahrheit 4.91 -> 4.63 %.
-Tsurigane Wan, Russia
+Tsurigane Wan, Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.6401 meters
 J1              0.0147  236.00
@@ -43013,13 +43013,13 @@ x 0 0
 # !units: meters
 # !longitude: 147.6333
 # !latitude: 44.9333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.5 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Zaliv Tukharka (Paramushir), Kuril Islands, Russia [harmonic,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 1.155,
 # note: Zielwert F=1.263 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 4.85 -> 4.78 %.
-Zaliv Kasatka, Russia
+Zaliv Kasatka, Sakhalin Oblast, Russia
 +00:00 :Asia/Magadan
 0.8534 meters
 x 0 0
@@ -43208,13 +43208,13 @@ x 0 0
 # !units: meters
 # !longitude: 147.3500
 # !latitude: 44.7167
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Zaliv Tukharka (Paramushir), Kuril Islands, Russia [harmonic,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 1.088,
 # note: Zielwert F=1.341 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 6.29 -> 6.27 %.
-Kodnyy, Russia
+Kodnyy, Sakhalin Oblast, Russia
 +00:00 :Asia/Magadan
 0.9754 meters
 x 0 0
@@ -43403,13 +43403,13 @@ x 0 0
 # !units: meters
 # !longitude: 147.2000
 # !latitude: 44.7667
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.930,
 # note: Zielwert F=1.593 aus Wahrheit statt F=1.481 des Bezugsorts; Beleg: Wahrheit 3.64 -> 3.55 %.
-Naibo Wan, Russia
+Naibo Wan, Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.7010 meters
 J1              0.0159  236.00
@@ -43598,13 +43598,13 @@ x 0 0
 # !units: meters
 # !longitude: 147.8833
 # !latitude: 45.2500
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.827,
 # note: Zielwert F=1.792 aus Wahrheit statt F=1.481 des Bezugsorts; Beleg: Wahrheit 5.04 -> 4.82 %.
-Kitovyy, Russia
+Kitovyy, Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.6706 meters
 J1              0.0153  234.70
@@ -43793,13 +43793,13 @@ x 0 0
 # !units: meters
 # !longitude: 148.0167
 # !latitude: 45.3333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 1.4 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.805,
 # note: Zielwert F=1.84 aus Wahrheit statt F=1.481 des Bezugsorts; Beleg: Wahrheit 4.19 -> 3.93 %.
-Shamambe Byochi, Russia
+Shamambe Byochi, Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.7010 meters
 J1              0.0159  234.70
@@ -43988,13 +43988,13 @@ x 0 0
 # !units: meters
 # !longitude: 148.6167
 # !latitude: 45.5000
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 0.4 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.852,
 # note: Zielwert F=1.739 aus Wahrheit statt F=1.481 des Bezugsorts; Beleg: Wahrheit 4.17 -> 3.82 %.
-Shibetoro, Russia
+Shibetoro, Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.6401 meters
 J1              0.0147  236.00
@@ -44183,11 +44183,11 @@ x 0 0
 # !units: meters
 # !longitude: 148.8500
 # !latitude: 45.4333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Ufer 2.1 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Korsakov (Sakhalin), Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Moyoro Wan, Russia
+Moyoro Wan, Sakhalin Oblast, Russia
 +11:00 :Asia/Magadan
 0.6401 meters
 J1              0.0159  233.41
@@ -44376,11 +44376,11 @@ x 0 0
 # !units: meters
 # !longitude: 145.8500
 # !latitude: 44.0333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Zaliv Tukharka (Paramushir), Kuril Islands, Russia [harmonic,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Yuzhno Kurilsk, Russia
+Yuzhno Kurilsk, Sakhalin Oblast, Russia
 +00:00 :Asia/Magadan
 0.8839 meters
 x 0 0
@@ -44569,13 +44569,13 @@ x 0 0
 # !units: meters
 # !longitude: 145.4500
 # !latitude: 43.7333
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260907 Land im Namen berichtigt (vorher "Tomari Wan, Hokkaido, Japan"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Zaliv Tukharka (Paramushir), Kuril Islands, Russia [harmonic,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Tomari Wan, Sakhalin, Russia
+Tomari Wan, Sakhalin Oblast, Russia
 +00:00 :Asia/Magadan
 0.9144 meters
 x 0 0
@@ -44764,11 +44764,11 @@ x 0 0
 # !units: meters
 # !longitude: 146.8167
 # !latitude: 43.8667
-# region: Shikotan Jima
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Zaliv Tukharka (Paramushir), Kuril Islands, Russia [harmonic,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Shakotan Ko, Shikotan Jima, Russia
+Shakotan Ko (Shikotan Jima), Sakhalin Oblast, Russia
 +00:00 :Asia/Magadan
 0.7925 meters
 x 0 0
@@ -44957,7 +44957,7 @@ x 0 0
 # !units: meters
 # !longitude: 146.3533
 # !latitude: 43.6332
-# region: Sakhalin
+# region: Sakhalin Oblast
 # admin1_quelle: Name
 # note: 20260907 Land im Namen berichtigt (vorher "Taraku Jima, Hokkaido, Japan"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
@@ -44965,7 +44965,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 1.219,
 # note: Zielwert F=1.197 aus Wahrheit statt F=1.459 des Bezugsorts; Beleg: Wahrheit 4.71 -> 4.71 %.
-Taraku-jima (Polonskogo), Sakhalin, Russia
+Taraku-jima (Polonskogo), Sakhalin Oblast, Russia
 +00:00 :Asia/Magadan
 0.8534 meters
 x 0 0
