@@ -141325,7 +141325,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.84 Punkte.
-Tataan Pass, Tawi-Tawi, Philippines
+Tataan Pass (Simalak), Tawi-Tawi, Philippines
 +00:00 :Asia/Manila
 0.3048 meters
 J1              0.0077  199.95
@@ -143073,7 +143073,8 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=26 -0.33 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
-Jiminez, Misamis Occidental, Philippines
+# note: 20261015 umbenannt "Jiminez" -> "Jimenez" (amtliche Schreibweise der Gemeinde) (Oliver).
+Jimenez, Misamis Occidental, Philippines
 +00:00 :Asia/Manila
 0.5486 meters
 J1              0.0096  226.97
@@ -148691,8 +148692,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.2333
-# !latitude: 9.5833
+# !longitude: 121.2154
+# !latitude: 9.5837
 # region: Negros Occidental
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
