@@ -27,8 +27,11 @@ import dubletten_kurven as D                                       # noqa: E402
 
 RADIUS_KM = 15
 SCHWELLE_MIN = 20
-# Toleranz je km WASSERWEG (Oliver 15.10.2026: Zeitversatz in Relation zur Entfernung, und zwar entlang des
-# Wassers, nicht Luftlinie). Flaches Kuestenwasser: Tide laeuft ~7-10 m/s -> rund 2 min je km.
+# Toleranz je km UMWEG (Oliver 15.10.2026: Zeitversatz in Relation zur Entfernung, entlang des Wassers).
+# Den geraden Teil der Strecke erklaert FES; zusaetzlich erlaubt sind 2 min je km, die der Wasserweg laenger
+# ist als die Luftlinie (um Inseln herum, Fluesse hinauf). Gegen bekannte Faelle geprueft: 2 min je km des
+# ganzen Wasserwegs uebersah 10 echte Fehler (Lirung, Ambunten, Chong Ko Khram Yai ...); die Umweg-Regel
+# findet alle bis auf Cau Tan Vu und laesst Labuha/Babang und Cotabato als natuerlich durch.
 PRO_KM = float(os.environ.get("ZEIT_PRO_KM", "2"))
 LANDESQUELLE = {'South Korea': ('khoa',), 'Philippines': ('namria',),
                 'Indonesia': ('big (badan', 'pushidrosal', 'bmkg', 'uhslc'),
@@ -109,13 +112,18 @@ def pruefe(land, dateien):
             # Ueberschuss, den FES nicht erklaert (gleiche Richtung wird bis zu ihrem Betrag abgezogen)
             rest = abs(dt) - (abs(fes) if fes * dt > 0 else 0.0)
             weg = D.km(s, r)
-            verdacht = abs(dt) >= SCHWELLE_MIN + PRO_KM * weg and rest >= SCHWELLE_MIN + PRO_KM * weg
+            vor = SCHWELLE_MIN if os.environ.get('ZEIT_MODUS', 'umweg') == 'umweg' else SCHWELLE_MIN + PRO_KM * weg
+            verdacht = abs(dt) >= vor and rest >= vor
             if verdacht:
                 # erst bei Verdacht den teuren Wasserweg rechnen; ohne Wasserweg nicht vergleichbar
                 import wasserweg as W
                 os.environ.setdefault('PRUEF_LAND', land)
                 weg = W.wasserweg_km((s['lat'], s['lon']), (r['lat'], r['lon']))
-                verdacht = weg is not None and abs(dt) >= SCHWELLE_MIN + PRO_KM * weg and rest >= SCHWELLE_MIN + PRO_KM * weg
+                if os.environ.get('ZEIT_MODUS', 'umweg') == 'umweg' and weg is not None:
+                    tol = SCHWELLE_MIN + PRO_KM * max(0.0, weg - D.km(s, r))     # nur der Umweg zaehlt, Rest erklaert FES
+                else:
+                    tol = SCHWELLE_MIN + PRO_KM * (weg or 0)
+                verdacht = weg is not None and abs(dt) >= tol and rest >= tol
             unerklaert.append(verdacht)
             zeilen.append('%s %.0f km%s: HW %+.0f / NW %+.0f min, Hub %+.0f %%, FES %+.0f min' % (
                 r['name'].rsplit(',', 1)[0], D.km(s, r),
