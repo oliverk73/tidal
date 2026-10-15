@@ -45356,7 +45356,8 @@ x 0 0
 # note: 20260913 S2/K2 x 2.45 auf den Springhub des Buchs (cptt-557); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Muko Jima, Ogasawara Gunto, Tokyo, Japan
+# note: 20261015 umbenannt -> "Mukojima": Schreibweise wie Chichijima/Hahajima (Oliver).
+Mukojima, Tokyo, Japan
 +00:00 :Asia/Tokyo
 0.7010 meters
 J1              0.0091  62.90
@@ -45552,7 +45553,8 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yokohama (Shinko), Kanagawa, Japan [harmonics_ticon4_worldwi,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.64 Punkte.
-Ishino, Kita Iwo Jima, Kazan Retto, Tokyo, Japan
+# note: 20261015 umbenannt -> "Kita-Iwojima": Insel (GeoNames Kitaio Jima), Schreibweise wie Iwojima/Chichijima; Dorf Ishino ist verlassen (Oliver).
+Kita-Iwojima, Tokyo, Japan
 +00:00 :Asia/Tokyo
 0.5791 meters
 J1              0.0064  75.63
@@ -45739,8 +45741,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 130.0000
-# !latitude: 28.3333
+# !longitude: 130.0058
+# !latitude: 28.3327
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Kagoshima
 # admin1_quelle: Name
@@ -45749,7 +45751,9 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Naha, Okinawa, Japan [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=14 -0.63 Punkte.
-Somachi Hakuchi, Kikai Jima, Kagoshima, Japan
+# note: 20261015 umbenannt -> "Kikaijima (Somachi)", Position 28.3333/130.0000 -> 28.3327/130.0058: kleine Insel, ein Pegel;
+# note: Position Fischereihafen Somachi (GeoNames HBR) (Oliver).
+Kikaijima (Somachi), Kagoshima, Japan
 +09:00 :Asia/Tokyo
 1.0058 meters
 J1              0.0080  250.28
@@ -45930,211 +45934,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Japan
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 951
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Naha, Japan (no.951). M2=0.62 S2=0.10 k=1.07 dt=-4min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 5
-# !units: meters
-# !longitude: 129.2333
-# !latitude: 28.3000
-# fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
-# region: Kagoshima
-# admin1_quelle: Name
-# note: 20260913 S2/K2 x 2.08 auf den Springhub des Buchs (cptt-951); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Naha, Okinawa, Japan [harmonics_ticon4_worldwide.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=14 -0.63 Punkte.
-Uken, Yakiuchi Wan, Kagoshima, Japan
-+09:00 :Asia/Tokyo
-1.1887 meters
-J1              0.0106  241.32
-K1              0.2073  217.19
-K2              0.0586  231.17
-L2              0.0170  214.44
-M1              0.0096  112.57
-M2              0.5748  201.78
-M3              0.0076  213.12
-M4              0.0018  297.83
-M6              0.0002  140.97
-M8              0.0001  71.02
-N2              0.1111  188.33
-2N2             0.0150  172.88
-O1              0.1580  187.86
-OO1             0.0064  267.32
-P1              0.0675  215.12
-Q1              0.0330  171.80
-2Q1             0.0046  158.83
-R2              0.0015  220.94
-S1              0.0026  23.62
-S2              0.2094  235.12
-S4              0.0003  229.80
-x 0 0
-T2              0.0154  226.59
-LDA2            0.0056  212.61
-MU2             0.0145  185.85
-NU2             0.0216  190.07
-RHO1            0.0061  173.45
-x 0 0
-x 0 0
-MN4             0.0007  288.59
-MS4             0.0011  349.45
-2SM2            0.0020  123.31
-MF              0.0024  48.31
-MSF             0.0019  3.37
-MM              0.0022  58.82
-SA              0.1439  146.44
-SSA             0.0133  309.22
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0006  25.35
-x 0 0
-x 0 0
-x 0 0
-2MS6            0.0005  209.34
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MKS2            0.0012  274.06
-x 0 0
-EPS2            0.0037  174.66
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-S3              0.0014  280.46
-SIG1            0.0064  334.90
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N4              0.0003  259.19
-x 0 0
-x 0 0
-2MO5            0.0004  148.86
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Japan
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 965
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Naha, Japan (no.965). M2=0.62 S2=0.10 k=1.07 dt=-43min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 127.7667
-# !latitude: 26.2000
+# !longitude: 127.7706
+# !latitude: 26.2040
 # fixes: Phasen +9h (Referenz war JST/UTC-defekter utide-Japan-Batch), 2026-07-19
 # region: Okinawa
 # admin1_quelle: Name
@@ -46143,7 +45950,9 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Naha, Okinawa, Japan [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=12 -0.66 Punkte.
-Yonabaru, Buckner Bay, Okinawa, Japan
+# note: 20261015 umbenannt -> "Yonabaru (Nakagusuku Wan)", Position 26.2000/127.7667 -> 26.2040/127.7706: Buckner Bay = Nakagusuku Wan;
+# note: Position Hafen Yonabaru (GeoNames HBR) (Oliver).
+Yonabaru (Nakagusuku Wan), Okinawa, Japan
 +09:00 :Asia/Tokyo
 1.1278 meters
 J1              0.0106  231.32
