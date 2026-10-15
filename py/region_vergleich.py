@@ -120,7 +120,7 @@ def ioc_reihe(code, tage=60):
     import numpy as np
     from datetime import datetime, timedelta, timezone
     ende = datetime.now(timezone.utc).date()
-    t, h = [], []
+    t, h, sens = [], [], []
     for k in range(0, tage, 30):
         a, b = ende - timedelta(days=tage - k), ende - timedelta(days=max(0, tage - k - 30))
         url = IOC + '?' + urllib.parse.urlencode(dict(query='data', code=code, timestart=a, timestop=b, format='json'))
@@ -130,9 +130,24 @@ def ioc_reihe(code, tage=60):
                     t.append(datetime.strptime(r['stime'], '%Y-%m-%d %H:%M:%S')
                              .replace(tzinfo=timezone.utc).timestamp())
                     h.append(float(r['slevel']))
+                    sens.append(r.get('sensor') or '')
         except Exception:  # noqa: BLE001
             pass
-    t, h = np.array(t), np.array(h)
+    t, h, sens = np.array(t), np.array(h), np.array(sens)
+    # Ein Sensor, nicht alle gemischt: IOC liefert rad/ra2/prs/bat/sw* nebeneinander (Manila: Radar 8 m,
+    # Druck 11 m, Batterie 0.1 m -> RMS ueber 1 m, 15.10.2026). Bevorzugt Radar, sonst der Sensor mit
+    # den meisten Werten, der eine Tide zeigt (Streuung > 5 cm).
+    kand = []
+    for s in sorted(set(sens)):
+        if s == 'bat' or s.startswith('sw'):
+            continue
+        m = sens == s
+        if m.sum() >= 24 * 14 and np.std(h[m]) > 0.05:
+            kand.append((s not in ('rad', 'ra2'), -int(m.sum()), s))
+    if not kand:
+        return None
+    m = sens == sorted(kand)[0][2]
+    t, h = t[m], h[m]
     if len(t) < 24 * 14:
         return None
     o = np.argsort(t)
