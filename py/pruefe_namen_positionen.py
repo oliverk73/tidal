@@ -25,6 +25,11 @@ LAENDER = {
     'Myanmar': dict(iso='MM', auszug='mm_auszug.json', koreanisch=False, gattung=r'(?!)'),
     'Cambodia': dict(iso='KH', auszug='kh_auszug.json', koreanisch=False, gattung=r'(?!)'),
     'China': dict(iso='CN', auszug='cn_auszug.json', koreanisch=False, gattung=r'(?!)'),
+    # Ferner Osten (16.10.2026): nur das noch nicht von Oliver gepruefte Gebiet (Kamtschatka, Magadan,
+    # Ochotsk-Nordkueste, Tschukotka, Arktis); Sachalin, Kurilen, Primorje und Chabarowsk bis Baidukov sind fertig.
+    'Russia': dict(iso='RU', auszug='ru_fe_auszug.json', koreanisch=False, gattung=r'(?!)',
+                   filter=lambda r: r['lon'] >= 110 and 'Sakhalin Oblast' not in r['name'] and 'Primorsky' not in r['name']
+                   and not ('Khabarovsk' in r['name'] and r['lat'] < 53.31)),
 }
 LAND = os.environ.get('PRUEF_LAND') or (sys.argv[1] if __name__ == '__main__' and len(sys.argv) > 1 else 'South Korea')
 CFG = LAENDER[LAND]
@@ -101,6 +106,20 @@ def infra_abstand(lat, lon):
     return min((m((lat, lon), p) for p in INFRA if abs(p[0] - lat) < 0.1 and abs(p[1] - lon) < 0.1), default=99999)
 
 # --- Namen
+BGN = dict(zip('абвгдеёжзийклмнопрстуфхцчшщъыьэюя',
+               ['a', 'b', 'v', 'g', 'd', 'e', 'e', 'zh', 'z', 'i', 'y', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f',
+                'kh', 'ts', 'ch', 'sh', 'shch', '', 'y', '', 'e', 'yu', 'ya']))
+
+
+def kyrillisch(n):
+    return bool(re.search('[\u0400-\u04ff]', n))
+
+
+def bgn(n):
+    """Kyrillisch -> BGN/PCGN (vereinfacht, ohne Apostrophe), wie die Namen im Bestand."""
+    return ''.join(BGN.get(c, BGN.get(c.lower(), c)) for c in n.lower())
+
+
 def norm(s):
     return re.sub(r'[^a-z0-9]', '', s.lower())
 
@@ -116,6 +135,8 @@ for o in A['objekte']:
     for k, n in o['namen'].items():
         if hat_hangul(n):
             v.add(norm(rr(n)))
+        elif kyrillisch(n):
+            v.add(norm(bgn(n)))
         elif re.match(r'^[\x00-\x7fÀ-ɏʼ’\s]+$', n):
             v.add(norm(n))
     # Anlagen (Kraftwerk, Hafen): auch das erste Namenswort ("Hanbit" aus "Hanbit Nuclear Power Site")
@@ -145,7 +166,10 @@ GENERISCH = {'bay', 'point', 'island', 'islands', 'isla', 'river', 'entrance', '
              'east', 'west', 'pier', 'wharf', 'cove', 'reef', 'islet', 'head', 'cape', 'punta', 'the', 'of', 'de', 'del', 'light', 'anchorage',
              'passage', 'lagoon', 'creek', 'mouth', 'inner', 'outer', 'approach', 'poblacion', 'puerto', 'port',
              # Indonesisch (15.10.2026): Pulau, Teluk, Tanjung, Selat, Pelabuhan, Muara, Sungai ...
-             'pulau', 'teluk', 'tanjung', 'tg', 'selat', 'pelabuhan', 'muara', 'sungai', 'kepulauan', 'pantai'} | {'sinhang', 'naehang', 'oehang', 'bukhang', 'guhang', 'je1budu', 'dongbudu', 'bangpaje', 'bangjoje', 'daegyo', 'deungdae',
+             'pulau', 'teluk', 'tanjung', 'tg', 'selat', 'pelabuhan', 'muara', 'sungai', 'kepulauan', 'pantai',
+             # Russisch (16.10.2026)
+             'bukhta', 'zaliv', 'mys', 'ostrov', 'ostrova', 'guba', 'reka', 'gavan', 'reyd', 'proliv', 'kosa', 'poluostrov',
+             'ozero', 'laguna', 'ustye', 'liman', 'kray', 'krai', 'oblast', 'okrug', 'autonomous', 'republic'} | {'sinhang', 'naehang', 'oehang', 'bukhang', 'guhang', 'je1budu', 'dongbudu', 'bangpaje', 'bangjoje', 'daegyo', 'deungdae',
              'powerplant', 'power', 'plant', 'port', 'harbor', 'harbour', 'bridge', 'jejudo', 'busan'}
 
 def treffer(tok, lat, lon, radius_km=40):
@@ -357,6 +381,8 @@ if __name__ == '__main__':
     HAND = hand_positionen()
     URSPRUNG = ursprung()
     rs = [r for r in load_records() if r['name'].endswith(', ' + land) and not r['current'] and r['lat'] is not None]
+    if CFG.get('filter'):
+        rs = [r for r in rs if CFG['filter'](r)]
     zeilen = [pruefe(r['name'], r['lat'], r['lon']) for r in sorted(rs, key=lambda r: r['name'])]
     for z, r in zip(zeilen, sorted(rs, key=lambda r: r['name'])):
         z['datei'] = r['file']

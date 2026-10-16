@@ -7,16 +7,19 @@ wichtiger, weil die Stroemung an einer Meerenge (Flaschenhals) viel staerker sei
 dem offenen Meer." Bei den Laenderpruefungen waren die Stroeme zunaechst uebersehen worden.
 
 Befunde je Satz:
-  LAND      Position an Land (Landmaske GLOBE ~1 km), Abstand zum naechsten Wasser > 1 km.
-            Tidefluesse sind in der Maske oft Land -- "Einsamkeit" (Stroeme/Pegel in der Naehe)
-            steht dabei; eine Kette von Stationen spricht fuer einen echten Fluss.
+  LAND      Position bis 3 km hinter der OSM-Kuestenlinie und keine Stationskette (3+ Saetze in 5 km).
+  BINNEN    weiter landeinwaerts ohne Kette: die OSM-Kueste endet an Flussmuendungen, Tidefluesse
+            (Hudson, Cape Fear) liegen ausserhalb -- nur Hinweis.
   RASTER    Breite und Laenge auf volle Bogenminuten (Buchwert, ~1.8 km Unsicherheit) und
             Engstelle (Wasserbreite quer zur Hauptrichtung unter 4 km): Position kritisch.
   DUBLETTE  zweite Stroemungsstation aus anderer Datei bis 1 km, gleiche Tiefe/kein Tiefenpaar.
   NAME      nicht nach der Klammer-Regel ("Fort Independence, 0.1 nmi north of") -> Vorschlag.
   RICHTUNG  Flut- und Ebbrichtung nicht rund 180 Grad auseinander (> 45 Grad Abweichung).
+  KURVE     Scheintiden (S2 > M2, grosses S4/S1: Feuerschiff-Ablesungen zu festen Uhrzeiten),
+            SA/SSA aus Reihen unter 330 Tagen, Restgeschwindigkeit Z0 ueber 1 kn.
 
-Usage: python3 py/stroemungen_pruefen.py   (global_land_mask liegt nur im System-Python)
+Usage: venv/bin/python py/stroemungen_pruefen.py
+       Land/Breite mit den OSM-Landpolygonen (py/osm_land.py), sonst grob mit der GLOBE-Maske.
        -> harmonics/help/pruefliste_stroemungen_<datum>.html/.json
 """
 import collections
@@ -32,6 +35,7 @@ from global_land_mask import globe
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import load_records, ROOT                      # noqa: E402
+import osm_land                                                    # noqa: E402
 
 RICHTUNGEN = {'north': 'N', 'south': 'S', 'east': 'E', 'west': 'W', 'northeast': 'NE', 'northwest': 'NW',
               'southeast': 'SE', 'southwest': 'SW'}
@@ -141,6 +145,11 @@ def main(argv):
                         out.append((d, x))
         return sorted(out, key=lambda t: t[0])
 
+    LAND = None
+    if os.path.exists(osm_land.SHP):
+        print('lade OSM-Landpolygone ...', flush=True)
+        LAND = osm_land.Land([(r['lat'], r['lon']) for r in S])
+        print(len(LAND.geo), 'Polygone', flush=True)
     zeilen = []
     for r in S:
         k = kopf(texte, r)
@@ -148,14 +157,22 @@ def main(argv):
         mx = float(kv['max_direction']) if kv.get('max_direction', '').replace('.', '').isdigit() else None
         mn = float(kv['min_direction']) if kv.get('min_direction', '').replace('.', '').isdigit() else None
         b = []
-        wd = wasser_abstand(r['lat'], r['lon'])
-        if wd > 1.0:
+        if LAND is not None:
+            wd = LAND.kueste_km(r['lat'], r['lon']) if LAND.ist_land(r['lat'], r['lon']) else 0.0
+        else:
+            wd = wasser_abstand(r['lat'], r['lon'])
+        if wd > (0.2 if LAND is not None else 1.0):
             nb = nachbarn(r, 5.0)
-            b.append('LAND: %.1f km bis Wasser (Landmaske 1 km); in 5 km %d Stroeme, %d Pegel%s' % (
-                wd, sum(1 for _, x in nb if x['current']), sum(1 for _, x in nb if not x['current']),
-                ' -- Kette, wohl Tidefluss' if len(nb) >= 3 else ''))
+            ns, npg = sum(1 for _, x in nb if x['current']), sum(1 for _, x in nb if not x['current'])
+            quelle = 'OSM-Kueste' if LAND is not None else 'Landmaske 1 km'
+            if len(nb) >= 3:
+                pass                                      # Kette von Stationen: Tidefluss (Hudson, Cape Fear)
+            elif wd < 3.0:
+                b.append('LAND: %.1f km hinter der Kueste (%s), in 5 km %d Stroeme, %d Pegel' % (wd, quelle, ns, npg))
+            else:
+                b.append('BINNEN: %.0f km hinter der Kuestenlinie (%s), keine Stationskette -- Tidefluss pruefen' % (wd, quelle))
         if auf_minuten(r['lat']) and auf_minuten(r['lon']):
-            w = breite(r['lat'], r['lon'], mx)
+            w = LAND.breite_km(r['lat'], r['lon'], mx) if LAND is not None else breite(r['lat'], r['lon'], mx)
             if w is not None and w < 4.0:
                 b.append('RASTER: Position auf volle Bogenminuten (~1.8 km unsicher) an Engstelle '
                          '(Wasser quer zur Flutrichtung %.1f km)' % w)
@@ -171,6 +188,8 @@ def main(argv):
             if d > 0.3 and kern(r['name']) != kern(x['name']):
                 continue                                  # Nebenstationen liegen absichtlich > 300 m daneben
             b.append('DUBLETTE: "%s" (%s) %.2f km' % (x['name'], os.path.basename(x['file']), d))
+        if not re.search(r'[A-Za-z]{3}', r['name'].rsplit(', ', 1)[0]):
+            b.append('NAME: kein Ortsname, nur Kennung')
         nv = name_vorschlag(r['name'])
         if nv and nv != r['name']:
             b.append('NAME: Klammer-Regel -> "%s"' % nv)
@@ -178,6 +197,38 @@ def main(argv):
             diff = abs(((mx - mn) % 360) - 180)
             if diff > 45:
                 b.append('RICHTUNG: Flut %.0f, Ebbe %.0f Grad (%.0f Grad neben Gegenrichtung)' % (mx, mn, diff))
+        A = {}
+        L = texte[r['file']]
+        i0 = L.index(r['name'], max(0, (r.get('line') or 0) - 5)) if r['name'] in L else None
+        if i0 is not None:
+            for x in L[i0 + 3:i0 + 200]:
+                mm = re.match(r'^(\S+)\s+([\d.]+)\s+([\d.]+)$', x)
+                if mm:
+                    A[mm.group(1)] = float(mm.group(2))
+                elif x != 'x 0 0':
+                    break
+            try:
+                z0 = float(L[i0 + 2].split()[0])
+            except (ValueError, IndexError):
+                z0 = 0.0
+            m2, s2, s4 = A.get('M2', 0), A.get('S2', 0), A.get('S4', 0)
+            s1 = max(A.get('S1', 0), A.get('S1-IOS', 0))
+            sa, ssa = max(A.get('SA', 0), A.get('SA-IOS', 0)), A.get('SSA', 0)
+            per = re.search(r'period=(\d{4}-\d\d-\d\d)\.\.(\d{4}-\d\d-\d\d)', ' '.join(k))
+            tage = (dt.date.fromisoformat(per.group(2)) - dt.date.fromisoformat(per.group(1))).days if per else None
+            kb = []
+            if s2 > 1.2 * m2 and s2 > 0.2:
+                kb.append('S2 %.2f > M2 %.2f' % (s2, m2))
+            if s4 > 0.3 * max(m2, 0.01) and s4 > 0.1:
+                kb.append('S4 %.2f' % s4)
+            if s1 > 0.5 * max(m2, 0.01) and s1 > 0.1:
+                kb.append('S1 %.2f' % s1)
+            if tage and tage < 330 and (sa > 0.2 or ssa > 0.2):
+                kb.append('SA/SSA %.2f/%.2f aus %d Tagen' % (sa, ssa, tage))
+            if abs(z0) > 1.0:
+                kb.append('Restgeschwindigkeit Z0 %.2f kn' % z0)
+            if kb:
+                b.append('KURVE: ' + '; '.join(kb))
         zeilen.append(dict(satz=r['name'], datei=r['file'], lat=r['lat'], lon=r['lon'], befunde=b,
                            land=r['name'].rsplit(', ', 1)[-1].replace(' Current', '')))
     heute = dt.date.today().strftime('%Y%m%d')
