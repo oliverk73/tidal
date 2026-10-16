@@ -9,8 +9,8 @@ abarbeiten?" Nach seinen Positions- und Namenskorrekturen koennen neue Dubletten
 Je Satz (keine Stroeme): 60 Tage ganze Kurve gegen FES2022 an der eigenen Position
 (RMS ohne Mittel, Hub 92/8-Perzentil, Median und 90-%-Wert der Scheitelzeit-Abweichung).
 
-Dubletten (Regeln aus Olivers Vorgaben, Memory "eigene-pegel-keine-duplikate", "zwillinge-vor-fes"):
-  - Paar bis 0.5 km, oder bis 2 km bei gleichem Namenskern, verschiedene Dateien.
+Dubletten (Regeln aus Olivers Vorgaben; Urteil 'sicher' kommt in die Loeschliste, 'offen' nicht):
+  - Paar bis 0.5 km, oder bis 2 km bei gleichem Namen, verschiedene Dateien.
   - Messung (utide/ticon/classic-Messsatz) gegen Uebertragung (noaa/att-Nebenhafen): Messung bleibt,
     ausser die Uebertragung liegt mindestens 2 cm naeher an FES.
   - gleichrangig: der FES-naehere bleibt; unter 1 cm Unterschied entscheidet der Rang.
@@ -126,38 +126,48 @@ def main(argv):
                 if a['file'] == b['file']:
                     continue
                 d = km(a, b)
-                if d > 2.0 or (d > 0.5 and kern(a['name']) != kern(b['name'])):
-                    continue
+                if d > 2.0 or (d > 0.5 and a['name'] != b['name']):
+                    continue                          # ueber 0.5 km nur gleichnamig (Norddeich / Norddeich (Westerriede) sind zwei Pegel)
                 if 'rms' not in a or 'rms' not in b:
                     continue
                 abw = float(np.sqrt(np.mean((a['_kurve'] - a['_kurve'].mean() - b['_kurve'] + b['_kurve'].mean()) ** 2))
                             / max(np.std(a['_kurve']), 1e-6))
-                bucht = abs(a['hub'] / a['fhub'] - 1) > 0.25 and abs(b['hub'] / b['fhub'] - 1) > 0.25
                 ra, rb = rang(a['file']), rang(b['file'])
                 ma, mb = messung(a), messung(b)
+                # FES glaubwuerdig, wenn wenigstens ein Satz FES auf 15 % Hub und 20 min trifft (Europa 16.10.2026:
+                # in Watt/Aestuaren widersprach die FES- und die Nachbar-Wahl der Messung am Pegel)
+                fes_gilt = any(abs(x['hub'] / x['fhub'] - 1) <= 0.15 and abs(x['dtm']) <= 20 for x in (a, b))
+                fes_partner = 'fes2022' in a['file'] or 'fes2022' in b['file']
+                urteil = 'sicher'
                 if abw < 0.03:
                     gut, weg = (a, b) if ra <= rb else (b, a)
                     grund = 'identische Tafel (%.0f %%), Rang' % (100 * abw)
-                elif bucht:
-                    paare.append((a, b, d, abw, 'Bucht/Fluss: FES kein Schiedsrichter, nichts entschieden'))
-                    continue
+                elif fes_partner:
+                    gut, weg, grund, urteil = a, b, 'Partner ist ein FES-Satz, FES kein Schiedsrichter', 'offen'
                 elif ma != mb:
                     mess, ueb = (a, b) if ma else (b, a)
-                    if ueb['rms'] <= mess['rms'] - 0.02:
+                    if fes_gilt and ueb['rms'] <= mess['rms'] - 0.02:
                         gut, weg, grund = ueb, mess, 'Uebertragung %.1f cm naeher an FES als die Messung' % (100 * (mess['rms'] - ueb['rms']))
                     else:
-                        gut, weg, grund = mess, ueb, 'Messung vor Uebertragung (%.1f gegen %.1f cm)' % (100 * mess['rms'], 100 * ueb['rms'])
+                        gut, weg, grund = mess, ueb, 'Messung vor Uebertragung (%.1f gegen %.1f cm%s)' % (
+                            100 * mess['rms'], 100 * ueb['rms'], '' if fes_gilt else ', FES hier nicht massgeblich')
+                elif ma and mb:
+                    gut, weg = (a, b) if a['rms'] < b['rms'] else (b, a)
+                    grund, urteil = 'Messung gegen Messung (%.1f/%.1f cm gegen FES): nur am Messpegel entscheidbar' % (
+                        100 * gut['rms'], 100 * weg['rms']), 'offen'
+                elif not fes_gilt:
+                    gut, weg = (a, b) if a['rms'] < b['rms'] else (b, a)
+                    grund, urteil = 'Bucht/Aestuar: FES trifft keinen der beiden Saetze, nichts entschieden', 'offen'
+                elif abs(a['rms'] - b['rms']) < 0.01:
+                    gut, weg = (a, b) if ra <= rb else (b, a)
+                    grund = 'gleich gut (%.1f/%.1f cm), Rang' % (100 * gut['rms'], 100 * weg['rms'])
                 else:
-                    if abs(a['rms'] - b['rms']) < 0.01:
-                        gut, weg = (a, b) if ra <= rb else (b, a)
-                        grund = 'gleich gut (%.1f/%.1f cm), Rang' % (100 * gut['rms'], 100 * weg['rms'])
-                    else:
-                        gut, weg = (a, b) if a['rms'] < b['rms'] else (b, a)
-                        grund = 'FES naeher (%.1f gegen %.1f cm)' % (100 * gut['rms'], 100 * weg['rms'])
-                paare.append((gut, weg, d, abw, grund))
+                    gut, weg = (a, b) if a['rms'] < b['rms'] else (b, a)
+                    grund = 'FES naeher (%.1f gegen %.1f cm)' % (100 * gut['rms'], 100 * weg['rms'])
+                paare.append((gut, weg, d, abw, grund, urteil))
         weg_ids = set()
-        for gut, weg, d, abw, grund in paare:
-            if grund.startswith('Bucht'):
+        for gut, weg, d, abw, grund, urteil in paare:
+            if urteil != 'sicher':
                 continue
             k = (weg['file'], weg['name'])
             if k in weg_ids or (gut['file'], gut['name']) in weg_ids:
@@ -196,12 +206,12 @@ def main(argv):
             w = csv.DictWriter(fh, fieldnames=['datei', 'name', 'fehler_prozent', 'begruendung'])
             w.writeheader()
             w.writerows(raus)
-        json.dump(dict(paare=[dict(behalten=g['name'], bdatei=g['file'], weg=w_['name'], wdatei=w_['file'], km=d, abw=abw, grund=gr)
-                              for g, w_, d, abw, gr in paare],
+        json.dump(dict(paare=[dict(behalten=g['name'], bdatei=g['file'], weg=w_['name'], wdatei=w_['file'], km=d, abw=abw, grund=gr, urteil=u)
+                              for g, w_, d, abw, gr, u in paare],
                        ausreisser=[dict(name=s['name'], datei=s['file'], lat=s['lat'], lon=s['lon'], befund=b) for s, b in ausreisser]),
                   open(stem + '.json', 'w'), ensure_ascii=False, indent=0)
-        print('   %d Paare, %d zum Archivieren vorgeschlagen, %d offen (Bucht), %d Zeit-Ausreisser' % (
-            len(paare), len(raus), sum(1 for p in paare if p[4].startswith('Bucht')), len(ausreisser)))
+        print('   %d Paare, %d sicher zum Archivieren, %d offen, %d Zeit-Ausreisser' % (
+            len(paare), len(raus), sum(1 for p in paare if p[5] == 'offen'), len(ausreisser)))
         for r in raus:
             print('   - %s [%s]: %s' % (r['name'], os.path.basename(r['datei']), r['begruendung'][:150]))
         for s, b in ausreisser[:40]:
