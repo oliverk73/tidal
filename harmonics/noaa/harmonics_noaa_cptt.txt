@@ -23885,8 +23885,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 158.6500
-# !latitude: 53.0167
+# !longitude: 158.6477
+# !latitude: 53.0164
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
@@ -24084,15 +24084,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 158.5000
-# !latitude: 52.9167
+# !longitude: 158.4683
+# !latitude: 52.9126
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Kamchatka Krai
 # admin1_quelle: Ufer 1.2 km
-Bukhta Tar'ya, Kamchatka Krai, Russia
+# note: 20261016 Tar'ya ist der alte Name der Bukhta Krasheninnikova; von 52.9167/158.5000 (an Land) in die Bucht (OSM) (Oliver).
+Bukhta Krasheninnikova (Bukhta Tar'ya), Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.4326 meters
 J1              0.0001  171.81
