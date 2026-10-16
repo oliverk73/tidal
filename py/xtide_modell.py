@@ -109,9 +109,9 @@ def satz_lesen(pfad, name):
         f = zeilen[j].split()
         if len(f) < 3:
             break
-        # "x 0 0" steht fuer eine ausgelassene Konstituente.
+        # "x 0 0" steht fuer eine ausgelassene Konstituente, in den NP203-Stromdateien "J1 x 0 0".
         try:
-            if f[0] != 'x':
+            if f[0] != 'x' and f[1] != 'x':
                 werte[f[0]] = (float(f[1]), float(f[2]))
         except ValueError:
             break

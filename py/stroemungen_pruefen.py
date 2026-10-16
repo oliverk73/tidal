@@ -205,7 +205,7 @@ def main(argv):
                 mm = re.match(r'^(\S+)\s+([\d.]+)\s+([\d.]+)$', x)
                 if mm:
                     A[mm.group(1)] = float(mm.group(2))
-                elif x != 'x 0 0':
+                elif not re.match(r'^(\S+\s+)?x 0 0$', x):
                     break
             try:
                 z0 = float(L[i0 + 2].split()[0])
