@@ -17697,6 +17697,7 @@ x 0 0
 # !units: feet
 # !longitude: 144.6564
 # !latitude: 13.4434
+# state: Guam
 Apra Harbor, Guam
 +00:00 :Pacific/Guam
 1.3700 feet
@@ -17898,6 +17899,7 @@ x 0 0
 # !units: feet
 # !longitude: 144.7989
 # !latitude: 13.4283
+# state: Guam
 Pago Bay, Guam
 +00:00 :Pacific/Guam
 1.0100 feet
@@ -18099,6 +18101,7 @@ x 0 0
 # !units: feet
 # !longitude: 145.7370
 # !latitude: 15.2267
+# state: Northern Mariana Islands
 Tanapag Harbor, Saipan Island, Marianas
 +00:00 :Pacific/Saipan
 1.2900 feet
@@ -18301,6 +18304,7 @@ x 0 0
 # !units: feet
 # !longitude: -170.6900
 # !latitude: -14.2800
+# state: American Samoa
 Pago Pago, American Samoa
 +00:00 :Pacific/Pago_Pago
 1.3600 feet
@@ -18890,10 +18894,11 @@ x 0 0
 # confidence: 10
 # noaa_station_id: 1841367
 # !units: feet
-# !longitude: 134.4667
-# !latitude: 7.3333
+# !longitude: 134.4574
+# !latitude: 7.3337
 # region: Koror
 # admin1_quelle: Ufer 1.2 km
+# note: 20261016 Position 7.3333/134.4667 (Bogenminute) -> Hafen 7.3337/134.4574 (Oliver).
 Malakal Harbor, Palau
 +00:00 :Pacific/Palau
 3.6400 feet
@@ -19489,7 +19494,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.1083
 # !latitude: 44.8700
-# region: Coffin Neck
+# state: Maine
 # admin1_quelle: Name
 Coffin Point, Coffin Neck, Maine
 +00:00 :America/New_York
@@ -27521,7 +27526,7 @@ x 0 0
 # !units: feet
 # !longitude: -70.6767
 # !latitude: 42.6550
-# region: Lobster Cove
+# state: Massachusetts
 # admin1_quelle: Name
 Annisquam, Lobster Cove, Massachusetts
 +00:00 :America/New_York
@@ -28106,7 +28111,7 @@ x 0 0
 # !units: feet
 # !longitude: -70.8867
 # !latitude: 42.5400
-# region: Beverly
+# state: Massachusetts
 # admin1_quelle: Name
 Beverly Harbor, Beverly, Massachusetts
 +00:00 :America/New_York
@@ -34569,7 +34574,7 @@ x 0 0
 # !units: feet
 # !longitude: -70.6000
 # !latitude: 41.4583
-# region: Vineyard Haven
+# state: Massachusetts
 # admin1_quelle: Name
 Vineyard Haven Harbor, Vineyard Haven, Massachusetts
 +00:00 :America/New_York
@@ -34959,7 +34964,7 @@ x 0 0
 # !units: feet
 # !longitude: -70.5117
 # !latitude: 41.3883
-# region: Martha's Vineyard
+# state: Massachusetts
 # admin1_quelle: Name
 Edgartown, Martha's Vineyard, Massachusetts
 +00:00 :America/New_York
@@ -35349,7 +35354,7 @@ x 0 0
 # !units: feet
 # !longitude: -70.5903
 # !latitude: 41.3262
-# region: Martha's Vineyard
+# state: Massachusetts
 # admin1_quelle: Name
 Martha's Vineyard GPS buoy, Martha's Vineyard, Massachusetts
 +00:00 :America/New_York
@@ -39479,7 +39484,7 @@ x 0 0
 # !units: knots
 # !longitude: -71.0089
 # !latitude: 42.3418
-# region: 0.1 nmi north of (depth 16 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Fort Independence, 0.1 nmi north of (depth 16 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -40458,7 +40463,7 @@ x 0 0
 # !units: feet
 # !longitude: -72.9083
 # !latitude: 41.2833
-# region: New Haven Reach
+# state: Connecticut
 # admin1_quelle: Name
 New Haven Harbor, New Haven Reach, Connecticut
 +00:00 :America/New_York
@@ -40658,7 +40663,7 @@ x 0 0
 # !units: feet
 # !longitude: -73.1840
 # !latitude: 41.1758
-# region: Bridgeport
+# state: Connecticut
 # admin1_quelle: Name
 Bridgeport Harbor, Bridgeport, Connecticut
 +00:00 :America/New_York
@@ -40854,7 +40859,7 @@ x 0 0
 # !units: feet
 # !longitude: -73.2133
 # !latitude: 41.1567
-# region: Cedar Creek
+# state: Connecticut
 # admin1_quelle: Name
 Black Rock Harbor, Cedar Creek, Connecticut
 +00:00 :America/New_York
@@ -42224,7 +42229,7 @@ x 0 0
 # !units: feet
 # !longitude: -73.5467
 # !latitude: 41.0383
-# region: Stamford
+# state: Connecticut
 # admin1_quelle: Name
 Stamford Harbor, Stamford, Connecticut
 +00:00 :America/New_York
@@ -52421,7 +52426,7 @@ x 0 0
 # !units: feet
 # !longitude: -73.9417
 # !latitude: 40.7767
-# region: New York
+# state: New York
 # admin1_quelle: Name
 Horns Hook, East 90th Street, East River, New York, New York
 +00:00 :America/New_York
@@ -54980,7 +54985,7 @@ x 0 0
 # !units: feet
 # !longitude: -74.0599
 # !latitude: 40.6120
-# region: The Narrows
+# state: New York
 # admin1_quelle: Name
 USCG station, The Narrows, New York
 +00:00 :America/New_York
@@ -55770,7 +55775,7 @@ x 0 0
 # !units: feet
 # !longitude: -74.2450
 # !latitude: 40.5550
-# region: Arthur Kill
+# state: New Jersey
 # admin1_quelle: Name
 Port Reading, Arthur Kill, New Jersey
 +00:00 :America/New_York
@@ -55965,7 +55970,7 @@ x 0 0
 # !units: feet
 # !longitude: -74.2733
 # !latitude: 40.4533
-# region: Garden State Parkway
+# state: New Jersey
 # admin1_quelle: Name
 Cheesequake Creek, Garden State Parkway, New Jersey
 +00:00 :America/New_York
@@ -57146,7 +57151,7 @@ x 0 0
 # !units: feet
 # !longitude: -74.0094
 # !latitude: 40.4669
-# region: Fort Hancock
+# state: New Jersey
 # admin1_quelle: Name
 Sandy Hook, Fort Hancock, New Jersey
 +00:00 :America/New_York
@@ -58921,7 +58926,7 @@ x 0 0
 # !units: feet
 # !longitude: -74.4767
 # !latitude: 39.3350
-# region: ocean pier
+# state: New Jersey
 # admin1_quelle: Name
 Ventnor City, ocean pier, New Jersey
 +00:00 :America/New_York
@@ -60500,7 +60505,7 @@ x 0 0
 # !units: feet
 # !longitude: -74.8233
 # !latitude: 38.9750
-# region: ocean pier
+# state: New Jersey
 # admin1_quelle: Name
 Wildwood Crest, ocean pier, New Jersey
 +00:00 :America/New_York
@@ -61486,7 +61491,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.2383
 # !latitude: 39.8350
-# region: Mantua Creek
+# state: New Jersey
 # admin1_quelle: Name
 Paulsboro, Mantua Creek, New Jersey
 +00:00 :America/New_York
@@ -62275,7 +62280,7 @@ x 0 0
 # !units: feet
 # !longitude: -74.7550
 # !latitude: 40.1883
-# region: Trenton
+# state: New Jersey
 # admin1_quelle: Name
 Trenton Marine Terminal, Trenton, New Jersey
 +00:00 :America/New_York
@@ -62872,7 +62877,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.1383
 # !latitude: 39.9533
-# region: Municipal Pier 11
+# state: Pennsylvania
 # admin1_quelle: Name
 Philadelphia, Municipal Pier 11, Pennsylvania
 +00:00 :America/New_York
@@ -63067,7 +63072,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.0793
 # !latitude: 39.9797
-# region: Philadelphia
+# state: Pennsylvania
 # admin1_quelle: Name
 Bridesburg, Philadelphia, Pennsylvania
 +00:00 :America/New_York
@@ -63662,7 +63667,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.5719
 # !latitude: 39.5583
-# region: C&D Canal
+# state: Delaware
 # admin1_quelle: Name
 Reedy Point, C&D Canal, Delaware
 +00:00 :America/New_York
@@ -64251,7 +64256,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.1193
 # !latitude: 38.7828
-# region: Fort Miles
+# state: Delaware
 # admin1_quelle: Name
 Lewes, Fort Miles, Delaware
 +00:00 :America/New_York
@@ -68991,7 +68996,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.9450
 # !latitude: 38.9167
-# region: Tuckahoe Creek
+# state: Maryland
 # admin1_quelle: Name
 Hillsboro, Tuckahoe Creek, Maryland
 +00:00 :America/New_York
@@ -70363,7 +70368,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.8100
 # !latitude: 39.5267
-# region: Chesapeake and Delaware Canal
+# state: Maryland
 # admin1_quelle: Name
 Chesapeake City, Chesapeake and Delaware Canal, Maryland
 +00:00 :America/New_York
@@ -72544,7 +72549,7 @@ x 0 0
 # !units: feet
 # !longitude: -77.0217
 # !latitude: 38.8733
-# region: District of Columbia
+# state: District of Columbia
 # admin1_quelle: Polygon
 Washington, Potomac River, DC
 +00:00 :America/New_York
@@ -72935,7 +72940,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.3833
 # !latitude: 37.9317
-# region: USCG station
+# state: Virginia
 # admin1_quelle: Name
 Chincoteague Island, USCG station, Virginia
 +00:00 :America/New_York
@@ -73928,6 +73933,7 @@ x 0 0
 # !units: knots
 # !longitude: -65.6183
 # !latitude: 18.1883
+# state: Puerto Rico
 Vieques Passage (depth 5 ft), Puerto Rico Current
 +00:00 :America/Puerto_Rico
 -0.0300 knots
@@ -77076,7 +77082,7 @@ x 0 0
 # !units: feet
 # !longitude: -76.7914
 # !latitude: 37.2201
-# region: Jamestown
+# state: Virginia
 # admin1_quelle: Name
 Jamestown Wharf, Jamestown, Virginia
 +00:00 :America/New_York
@@ -79630,7 +79636,7 @@ x 0 0
 # !units: feet
 # !longitude: -76.3286
 # !latitude: 36.9428
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 Sewells Point, Hampton Roads, Virginia
 +00:00 :America/New_York
@@ -81018,7 +81024,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.7467
 # !latitude: 36.1833
-# region: Duck
+# state: North Carolina
 # admin1_quelle: Name
 FRF Pier, Duck, North Carolina
 +00:00 :America/New_York
@@ -82586,7 +82592,7 @@ x 0 0
 # !units: feet
 # !longitude: -76.4856
 # !latitude: 35.5852
-# region: Route 45
+# state: North Carolina
 # admin1_quelle: Name
 Pungo River, Route 45, North Carolina
 +00:00 :America/New_York
@@ -82976,7 +82982,7 @@ x 0 0
 # !units: feet
 # !longitude: -75.5120
 # !latitude: 35.3501
-# region: Avon
+# state: North Carolina
 # admin1_quelle: Name
 Avon Seafood dock, Peter's Ditch, Avon, North Carolina
 +00:00 :America/New_York
@@ -84739,7 +84745,7 @@ x 0 0
 # !units: feet
 # !longitude: -76.6707
 # !latitude: 34.7173
-# region: Beaufort
+# state: North Carolina
 # admin1_quelle: Name
 Duke Marine Lab, Beaufort, North Carolina
 +00:00 :America/New_York
@@ -85130,7 +85136,7 @@ x 0 0
 # !units: feet
 # !longitude: -76.7117
 # !latitude: 34.6933
-# region: Atlantic Beach
+# state: North Carolina
 # admin1_quelle: Name
 Triple S Pier, Atlantic Beach, North Carolina
 +00:00 :America/New_York
@@ -85326,7 +85332,7 @@ x 0 0
 # !units: feet
 # !longitude: -77.1181
 # !latitude: 34.6866
-# region: East Corbett Ave. Bridge
+# state: North Carolina
 # admin1_quelle: Name
 Swansboro, East Corbett Ave. Bridge, North Carolina
 +00:00 :America/New_York
@@ -85914,7 +85920,7 @@ x 0 0
 # !units: feet
 # !longitude: -77.7060
 # !latitude: 34.3394
-# region: ICWW
+# state: North Carolina
 # admin1_quelle: Name
 Hampstead, ICWW, North Carolina
 +00:00 :America/New_York
@@ -86312,7 +86318,7 @@ x 0 0
 # !units: feet
 # !longitude: -77.8123
 # !latitude: 34.2179
-# region: ICWW
+# state: North Carolina
 # admin1_quelle: Name
 Shinn Point, ICWW, North Carolina
 +00:00 :America/New_York
@@ -87294,7 +87300,7 @@ x 0 0
 # !units: feet
 # !longitude: -78.0817
 # !latitude: 33.9017
-# region: Yaupon Beach
+# state: North Carolina
 # admin1_quelle: Name
 Oak Island, Yaupon Beach, North Carolina
 +00:00 :America/New_York
@@ -88080,7 +88086,7 @@ x 0 0
 # !units: feet
 # !longitude: -78.9183
 # !latitude: 33.6550
-# region: Springmaid Beach
+# state: South Carolina
 # admin1_quelle: Name
 Springmaid Pier, Springmaid Beach, South Carolina
 +00:00 :America/New_York
@@ -90037,7 +90043,7 @@ x 0 0
 # !units: feet
 # !longitude: -79.1867
 # !latitude: 33.3517
-# region: Oyster Landing
+# state: South Carolina
 # admin1_quelle: Name
 Crab Haul Creek north inlet estuary, Oyster Landing, South Carolina
 +00:00 :America/New_York
@@ -91211,7 +91217,7 @@ x 0 0
 # !units: feet
 # !longitude: -79.3544
 # !latitude: 33.1542
-# region: ICWW (Fourmile Creek Canal)
+# state: South Carolina
 # admin1_quelle: Name
 South Santee River, ICWW (Fourmile Creek Canal), South Carolina
 +00:00 :America/New_York
@@ -93368,7 +93374,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.6849
 # !latitude: 32.5019
-# region: McCalleys Creek
+# state: South Carolina
 # admin1_quelle: Name
 Air Station Beaufort, McCalleys Creek, South Carolina
 +00:00 :America/New_York
@@ -96115,7 +96121,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.1817
 # !latitude: 31.7933
-# region: Range A Light
+# state: Georgia
 # admin1_quelle: Name
 Bear River, Range A Light, Georgia
 +00:00 :America/New_York
@@ -97882,7 +97888,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.4968
 # !latitude: 31.1446
-# region: Brunswick
+# state: Georgia
 # admin1_quelle: Name
 Howe Street Pier, Brunswick, Georgia
 +00:00 :America/New_York
@@ -98469,7 +98475,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.5150
 # !latitude: 30.7967
-# region: Navy Base
+# state: Georgia
 # admin1_quelle: Name
 Kings Bay, Navy Base, Georgia
 +00:00 :America/New_York
@@ -98859,7 +98865,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.4717
 # !latitude: 30.7633
-# region: Seacamp Dock
+# state: Georgia
 # admin1_quelle: Name
 Dungeness, Seacamp Dock, Georgia
 +00:00 :America/New_York
@@ -100238,7 +100244,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.5233
 # !latitude: 30.6433
-# region: Lanceford Creek
+# state: Florida
 # admin1_quelle: Name
 Lofton, Lanceford Creek, Florida
 +00:00 :America/New_York
@@ -102013,7 +102019,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.3950
 # !latitude: 30.3967
-# region: Mayport Naval Station
+# state: Florida
 # admin1_quelle: Name
 Degaussing structure, Mayport Naval Station, Florida
 +00:00 :America/New_York
@@ -103394,7 +103400,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.6200
 # !latitude: 30.3600
-# region: Long Branch
+# state: Florida
 # admin1_quelle: Name
 Jacksonville, Long Branch, Florida
 +00:00 :America/New_York
@@ -104177,7 +104183,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.7617
 # !latitude: 30.0800
-# region: S.C.L. RR. bridge
+# state: Florida
 # admin1_quelle: Name
 Black Creek, S.C.L. RR. bridge, Florida
 +00:00 :America/New_York
@@ -104372,7 +104378,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.3295
 # !latitude: 29.9944
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 Tolomato River, ICWW, Florida
 +00:00 :America/New_York
@@ -104975,7 +104981,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.3067
 # !latitude: 29.8667
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 State Road 312, Matanzas River, ICWW, Florida
 +00:00 :America/New_York
@@ -105572,7 +105578,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.2583
 # !latitude: 29.7683
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 Crescent Beach, Matanzas River, ICWW, Florida
 +00:00 :America/New_York
@@ -105981,7 +105987,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.2050
 # !latitude: 29.6150
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 Bings Landing, Matanzas River, ICWW, Florida
 +00:00 :America/New_York
@@ -107186,7 +107192,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.9633
 # !latitude: 29.1467
-# region: Sunglow Pier
+# state: Florida
 # admin1_quelle: Name
 Daytona Beach Shores, Sunglow Pier, Florida
 +00:00 :America/New_York
@@ -107576,7 +107582,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.9183
 # !latitude: 29.0233
-# region: New Smyrna Beach
+# state: Florida
 # admin1_quelle: Name
 Mosquito Lagoon, New Smyrna Beach, Florida
 +00:00 :America/New_York
@@ -108169,7 +108175,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.5931
 # !latitude: 28.4158
-# region: Port Canaveral
+# state: Florida
 # admin1_quelle: Name
 Trident Pier, Port Canaveral, Florida
 +00:00 :America/New_York
@@ -108954,7 +108960,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.3000
 # !latitude: 27.4683
-# region: Binney Dock
+# state: Florida
 # admin1_quelle: Name
 Fort Pierce Inlet, Binney Dock, Florida
 +00:00 :America/New_York
@@ -109540,7 +109546,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.2183
 # !latitude: 27.2517
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 Jensen Beach Causeway Park, ICWW, Florida
 +00:00 :America/New_York
@@ -110326,7 +110332,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.0667
 # !latitude: 26.8433
-# region: Palm Beach
+# state: Florida
 # admin1_quelle: Name
 PGA Boulevard Bridge, Palm Beach, Florida
 +00:00 :America/New_York
@@ -111110,7 +111116,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.0533
 # !latitude: 26.5267
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 Ocean Ridge, ICWW, Florida
 +00:00 :America/New_York
@@ -111305,7 +111311,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.0650
 # !latitude: 26.4467
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 South Delray Beach, ICWW, Florida
 +00:00 :America/New_York
@@ -111500,7 +111506,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.0700
 # !latitude: 26.3700
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 Lake Wyman, ICWW, Florida
 +00:00 :America/New_York
@@ -112280,7 +112286,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.0933
 # !latitude: 26.1883
-# region: Anglin Fishing Pier
+# state: Florida
 # admin1_quelle: Name
 Lauderdale-by-the-Sea, Anglin Fishing Pier, Florida
 +00:00 :America/New_York
@@ -112475,7 +112481,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.1450
 # !latitude: 26.1183
-# region: Fort Lauderdale
+# state: Florida
 # admin1_quelle: Name
 Andrews Avenue bridge, New River, Fort Lauderdale, Florida
 +00:00 :America/New_York
@@ -112670,7 +112676,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.1167
 # !latitude: 26.0817
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 South Port Everglades, ICWW, Florida
 +00:00 :America/New_York
@@ -112870,7 +112876,7 @@ x 0 0
 # !units: feet
 # !longitude: -80.1200
 # !latitude: 25.9033
-# region: N. Miami Beach
+# state: Florida
 # admin1_quelle: Name
 Haulover Pier, N. Miami Beach, Florida
 +00:00 :America/New_York
@@ -115813,7 +115819,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.7950
 # !latitude: 24.5917
-# region: north end
+# state: Florida
 # admin1_quelle: Name
 Fleming Key, north end, Florida
 +00:00 :America/New_York
@@ -116604,7 +116610,7 @@ x 0 0
 # !units: feet
 # !longitude: -82.9200
 # !latitude: 24.6317
-# region: Dry Tortugas
+# state: Florida
 # admin1_quelle: Name
 Loggerhead Key, Dry Tortugas, Florida
 +00:00 :America/New_York
@@ -117191,7 +117197,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.7283
 # !latitude: 25.9083
-# region: Caxambas Pass
+# state: Florida
 # admin1_quelle: Name
 Marco Island, Caxambas Pass, Florida
 +00:00 :America/New_York
@@ -118175,7 +118181,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.7883
 # !latitude: 26.1367
-# region: north end
+# state: Florida
 # admin1_quelle: Name
 Naples, Naples Bay, north end, Florida
 +00:00 :America/New_York
@@ -121504,7 +121510,7 @@ x 0 0
 # !units: feet
 # !longitude: -82.3033
 # !latitude: 26.8550
-# region: cutoff (south)
+# state: Florida
 # admin1_quelle: Name
 Don Pedro Island State Park, cutoff (south), Florida
 +00:00 :America/New_York
@@ -122483,7 +122489,7 @@ x 0 0
 # !units: feet
 # !longitude: -82.4533
 # !latitude: 27.0717
-# region: Venice
+# state: Florida
 # admin1_quelle: Name
 Venice Fishing Pier, Venice, Florida
 +00:00 :America/New_York
@@ -122678,7 +122684,7 @@ x 0 0
 # !units: feet
 # !longitude: -82.5650
 # !latitude: 27.2839
-# region: Big Sarasota Pass
+# state: Florida
 # admin1_quelle: Name
 Siesta Key, Big Sarasota Pass, Florida
 +00:00 :America/New_York
@@ -124445,7 +124451,7 @@ x 0 0
 # !units: feet
 # !longitude: -82.4800
 # !latitude: 27.8900
-# region: Tampa
+# state: Florida
 # admin1_quelle: Name
 Ballast Point, Tampa, Florida
 +00:00 :America/New_York
@@ -125428,7 +125434,7 @@ x 0 0
 # !units: feet
 # !longitude: -82.8433
 # !latitude: 28.1650
-# region: Anclote Key
+# state: Florida
 # admin1_quelle: Name
 Anclote Lighthouse, Anclote Key, Florida
 +00:00 :America/New_York
@@ -128358,7 +128364,7 @@ x 0 0
 # !units: feet
 # !longitude: -83.0697
 # !latitude: 29.2064
-# region: Cedar Keys NWR
+# state: Florida
 # admin1_quelle: Name
 Shell Mound, Cedar Keys NWR, Florida
 +00:00 :America/New_York
@@ -134437,7 +134443,7 @@ x 0 0
 # !units: feet
 # !longitude: -85.2214
 # !latitude: 29.8807
-# region: ICWW
+# state: Florida
 # admin1_quelle: Name
 White City, ICWW, Florida
 +00:00 :America/Chicago
@@ -139345,7 +139351,7 @@ x 0 0
 # !units: knots
 # !longitude: -71.0089
 # !latitude: 42.3418
-# region: 0.1 nmi north of (depth 6 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Fort Independence, 0.1 nmi north of (depth 6 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -141893,7 +141899,7 @@ x 0 0
 # !units: feet
 # !longitude: -87.5550
 # !latitude: 30.2786
-# region: Perdido Pass
+# state: Alabama
 # admin1_quelle: Name
 Alabama Point, Perdido Pass, Alabama
 +00:00 :America/Chicago
@@ -142478,7 +142484,7 @@ x 0 0
 # !units: feet
 # !longitude: -87.6843
 # !latitude: 30.2799
-# region: ICWW
+# state: Alabama
 # admin1_quelle: Name
 Gulf Shores, ICWW, Alabama
 +00:00 :America/Chicago
@@ -144243,7 +144249,7 @@ x 0 0
 # !units: feet
 # !longitude: -88.0581
 # !latitude: 30.6495
-# region: Mobile
+# state: Alabama
 # admin1_quelle: Name
 Coast Guard sector, Mobile, Alabama
 +00:00 :America/Chicago
@@ -145812,7 +145818,7 @@ x 0 0
 # !units: feet
 # !longitude: -88.5080
 # !latitude: 30.3222
-# region: south side
+# state: Mississippi
 # admin1_quelle: Name
 Pascagoula, south side, Mississippi
 +00:00 :America/Chicago
@@ -146007,7 +146013,7 @@ x 0 0
 # !units: feet
 # !longitude: -88.5058
 # !latitude: 30.3478
-# region: Port of Pascagoula
+# state: Mississippi
 # admin1_quelle: Name
 Dock E, Port of Pascagoula, Mississippi
 +00:00 :America/Chicago
@@ -147962,7 +147968,7 @@ x 0 0
 # !units: feet
 # !longitude: -88.8000
 # !latitude: 30.4300
-# region: Biloxi
+# state: Mississippi
 # admin1_quelle: Name
 Bayou Talla, Back Bay, Biloxi, Mississippi
 +00:00 :America/Chicago
@@ -148353,7 +148359,7 @@ x 0 0
 # !units: feet
 # !longitude: -88.8450
 # !latitude: 30.4383
-# region: Biloxi
+# state: Mississippi
 # admin1_quelle: Name
 Bayou Poito, Back Bay, Biloxi, Mississippi
 +00:00 :America/Chicago
@@ -149528,7 +149534,7 @@ x 0 0
 # !units: feet
 # !longitude: -88.9750
 # !latitude: 30.4133
-# region: Biloxi
+# state: Mississippi
 # admin1_quelle: Name
 Popps Ferry, Back Bay, Biloxi, Mississippi
 +00:00 :America/Chicago
@@ -149919,7 +149925,7 @@ x 0 0
 # !units: feet
 # !longitude: -89.0083
 # !latitude: 30.4350
-# region: lower end
+# state: Mississippi
 # admin1_quelle: Name
 Biloxi River, lower end, Mississippi
 +00:00 :America/Chicago
@@ -152478,7 +152484,7 @@ x 0 0
 # !units: feet
 # !longitude: -89.4075
 # !latitude: 28.9322
-# region: Southwest Pass
+# state: Louisiana
 # admin1_quelle: Name
 Pilots Station (east), Southwest Pass, Louisiana
 +00:00 :America/Chicago
@@ -152673,7 +152679,7 @@ x 0 0
 # !units: feet
 # !longitude: -89.4183
 # !latitude: 28.9250
-# region: Southwest Pass
+# state: Louisiana
 # admin1_quelle: Name
 Pilot Station, Southwest Pass, Louisiana
 +00:00 :America/Chicago
@@ -153261,7 +153267,7 @@ x 0 0
 # !units: feet
 # !longitude: -89.8021
 # !latitude: 30.0688
-# region: Chef Menteur Pass
+# state: Louisiana
 # admin1_quelle: Name
 University of New Orleans vicinity, Chef Menteur Pass, Louisiana
 +00:00 :America/Chicago
@@ -153456,7 +153462,7 @@ x 0 0
 # !units: feet
 # !longitude: -89.7367
 # !latitude: 30.1667
-# region: US Highway 90
+# state: Louisiana
 # admin1_quelle: Name
 The Rigolets, US Highway 90, Louisiana
 +00:00 :America/Chicago
@@ -155028,7 +155034,7 @@ x 0 0
 # !units: feet
 # !longitude: -90.1117
 # !latitude: 29.6667
-# region: Barataria Waterway
+# state: Louisiana
 # admin1_quelle: Name
 Lafitte, Barataria Waterway, Louisiana
 +00:00 :America/Chicago
@@ -155425,7 +155431,7 @@ x 0 0
 # !units: feet
 # !longitude: -90.1993
 # !latitude: 29.1142
-# region: Belle Pass
+# state: Louisiana
 # admin1_quelle: Name
 Port Fourchon, Belle Pass, Louisiana
 +00:00 :America/Chicago
@@ -155816,7 +155822,7 @@ x 0 0
 # !units: feet
 # !longitude: -90.2650
 # !latitude: 29.3733
-# region: Plaisance Canal
+# state: Louisiana
 # admin1_quelle: Name
 Golden Meadow, Plaisance Canal, Louisiana
 +00:00 :America/Chicago
@@ -156601,7 +156607,7 @@ x 0 0
 # !units: feet
 # !longitude: -90.4467
 # !latitude: 29.4167
-# region: Cutoff Canal
+# state: Louisiana
 # admin1_quelle: Name
 Pointe au Chien, Cutoff Canal, Louisiana
 +00:00 :America/Chicago
@@ -158572,7 +158578,7 @@ x 0 0
 # !units: feet
 # !longitude: -91.3839
 # !latitude: 29.3675
-# region: north of
+# state: Louisiana
 # admin1_quelle: Name
 Eugene Island, north of, Louisiana
 +00:00 :America/Chicago
@@ -160525,7 +160531,7 @@ x 0 0
 # !units: feet
 # !longitude: -93.0083
 # !latitude: 29.7750
-# region: Grand Chenier
+# state: Louisiana
 # admin1_quelle: Name
 Mermentau River, Grand Chenier, Louisiana
 +00:00 :America/Chicago
@@ -161316,7 +161322,7 @@ x 0 0
 # !units: feet
 # !longitude: -93.3429
 # !latitude: 29.7682
-# region: east jetty
+# state: Louisiana
 # admin1_quelle: Name
 Calcasieu Pass, east jetty, Louisiana
 +00:00 :America/Chicago
@@ -161511,7 +161517,7 @@ x 0 0
 # !units: feet
 # !longitude: -93.5226
 # !latitude: 30.0587
-# region: ICWW
+# state: Louisiana
 # admin1_quelle: Name
 Gum Cove, ICWW, Louisiana
 +00:00 :America/Chicago
@@ -161910,7 +161916,7 @@ x 0 0
 # !units: feet
 # !longitude: -93.9300
 # !latitude: 29.8667
-# region: Port Arthur
+# state: Texas
 # admin1_quelle: Name
 Sabine Naches Canal, Port Arthur, Texas
 +00:00 :America/Chicago
@@ -162317,7 +162323,7 @@ x 0 0
 # !units: feet
 # !longitude: -93.8950
 # !latitude: 29.7667
-# region: Sabine Pass
+# state: Texas
 # admin1_quelle: Name
 Mesquite Point, Sabine Pass, Texas
 +00:00 :America/Chicago
@@ -164912,7 +164918,7 @@ x 0 0
 # !units: feet
 # !longitude: -95.2658
 # !latitude: 29.7263
-# region: Manchester
+# state: Texas
 # admin1_quelle: Name
 Houston Ship Channel, Galveston Bay, Manchester, Texas
 +00:00 :America/Chicago
@@ -165320,7 +165326,7 @@ x 0 0
 # !units: feet
 # !longitude: -93.8418
 # !latitude: 29.6893
-# region: Sabine Pass
+# state: Texas
 # admin1_quelle: Name
 Texas Point, Sabine Pass, Texas
 +00:00 :America/Chicago
@@ -167302,7 +167308,7 @@ x 0 0
 # !units: feet
 # !longitude: -94.7247
 # !latitude: 29.3575
-# region: north jetty
+# state: Texas
 # admin1_quelle: Name
 Galveston Bay entrance, north jetty, Texas
 +00:00 :America/Chicago
@@ -167692,7 +167698,7 @@ x 0 0
 # !units: feet
 # !longitude: -94.6933
 # !latitude: 29.3267
-# region: south jetty
+# state: Texas
 # admin1_quelle: Name
 Galveston Bay entrance, south jetty, Texas
 +00:00 :America/Chicago
@@ -168304,7 +168310,7 @@ x 0 0
 # !units: feet
 # !longitude: -94.7894
 # !latitude: 29.2853
-# region: Galveston
+# state: Texas
 # admin1_quelle: Name
 Galveston Pleasure Pier, Galveston, Texas
 +00:00 :America/Chicago
@@ -168898,7 +168904,7 @@ x 0 0
 # !units: feet
 # !longitude: -95.3674
 # !latitude: 28.9611
-# region: Freeport
+# state: Texas
 # admin1_quelle: Name
 Old Brazos River, Freeport, Texas
 +00:00 :America/Chicago
@@ -169098,7 +169104,7 @@ x 0 0
 # !units: feet
 # !longitude: -95.3083
 # !latitude: 28.9483
-# region: DOW Barge Canal
+# state: Texas
 # admin1_quelle: Name
 Freeport, DOW Barge Canal, Texas
 +00:00 :America/Chicago
@@ -172496,7 +172502,7 @@ x 0 0
 # !units: feet
 # !longitude: -97.1353
 # !latitude: 27.9081
-# region: Aransas Pass
+# state: Texas
 # admin1_quelle: Name
 Conn Brown Harbor, Aransas Pass, Texas
 +00:00 :America/Chicago
@@ -173693,7 +173699,7 @@ x 0 0
 # !units: feet
 # !longitude: -97.0391
 # !latitude: 27.8366
-# region: Aransas Pass
+# state: Texas
 # admin1_quelle: Name
 Aransas, Aransas Pass, Texas
 +00:00 :America/Chicago
@@ -174699,7 +174705,7 @@ x 0 0
 # !units: feet
 # !longitude: -97.3892
 # !latitude: 27.8149
-# region: Corpus Christi
+# state: Texas
 # admin1_quelle: Name
 Texas State Aquarium, Corpus Christi, Texas
 +00:00 :America/Chicago
@@ -175307,7 +175313,7 @@ x 0 0
 # !units: feet
 # !longitude: -97.2167
 # !latitude: 27.5800
-# region: Corpus Christi
+# state: Texas
 # admin1_quelle: Name
 Bob Hall Pier, Corpus Christi, Texas
 +00:00 :America/Chicago
@@ -176105,7 +176111,7 @@ x 0 0
 # !units: feet
 # !longitude: -97.1548
 # !latitude: 26.0675
-# region: Brazos Santiago Pass
+# state: Texas
 # admin1_quelle: Name
 South Padre Island, Brazos Santiago Pass, Texas
 +00:00 :America/Chicago
@@ -176300,7 +176306,7 @@ x 0 0
 # !units: feet
 # !longitude: -97.1567
 # !latitude: 26.0683
-# region: Brazos Santiago Pass
+# state: Texas
 # admin1_quelle: Name
 Padre Island, Brazos Santiago Pass, Texas
 +00:00 :America/Chicago
@@ -176503,7 +176509,7 @@ x 0 0
 # !units: feet
 # !longitude: -97.2155
 # !latitude: 26.0612
-# region: Laguna Madre
+# state: Texas
 # admin1_quelle: Name
 Port Isabel, Laguna Madre, Texas
 +00:00 :America/Chicago
@@ -177888,7 +177894,7 @@ x 0 0
 # !units: feet
 # !longitude: -117.8830
 # !latitude: 33.6033
-# region: Corona del Mar
+# state: California
 # admin1_quelle: Name
 Newport Beach, Newport Bay entrance, Corona del Mar, California
 +00:00 :America/Los_Angeles
@@ -180271,7 +180277,7 @@ x 0 0
 # !units: feet
 # !longitude: -121.7450
 # !latitude: 36.8333
-# region: Port San Luis
+# state: California
 # admin1_quelle: Name
 Tidal Creek, Elkhorn Slough, Monterey Bay, Port San Luis, California
 +00:00 :America/Los_Angeles
@@ -180467,7 +180473,7 @@ x 0 0
 # !units: feet
 # !longitude: -121.7453
 # !latitude: 36.8413
-# region: Port San Luis
+# state: California
 # admin1_quelle: Name
 Kirby Park, Elkhorn Slough, Monterey Bay, Port San Luis, California
 +00:00 :America/Los_Angeles
@@ -189514,7 +189520,7 @@ x 0 0
 # !units: feet
 # !longitude: -123.8051
 # !latitude: 39.4258
-# region: Fort Bragg
+# state: California
 # admin1_quelle: Name
 Noyo Harbor, Fort Bragg, California
 +00:00 :America/Los_Angeles
@@ -189906,7 +189912,7 @@ x 0 0
 # !units: feet
 # !longitude: -124.2822
 # !latitude: 40.6372
-# region: San Francisco
+# state: California
 # admin1_quelle: Name
 Cockrobin Island Bridge, Eel River, San Francisco, California
 +00:00 :America/Los_Angeles
@@ -195653,7 +195659,7 @@ x 0 0
 # !units: feet
 # !longitude: -122.6730
 # !latitude: 45.5100
-# region: Morrison Street Bridge
+# state: Oregon
 # admin1_quelle: Name
 Portland, Morrison Street Bridge, Oregon
 +00:00 :America/Los_Angeles
@@ -200997,7 +201003,7 @@ x 0 0
 # !units: feet
 # !longitude: -123.0980
 # !latitude: 47.3583
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 Union, Hood Canal, Washington
 +00:00 :America/Los_Angeles
@@ -203746,7 +203752,7 @@ x 0 0
 # !units: feet
 # !longitude: -122.3473
 # !latitude: 48.1068
-# region: Port Susan
+# state: Washington
 # admin1_quelle: Name
 Tulare Beach, Port Susan, Washington
 +00:00 :America/Los_Angeles
@@ -204335,7 +204341,7 @@ x 0 0
 # !units: feet
 # !longitude: -122.6520
 # !latitude: 48.4150
-# region: Fidalgo I.
+# state: Washington
 # admin1_quelle: Name
 Deception Pass St. Park, Bowman Bay, Fidalgo I., Washington
 +00:00 :America/Los_Angeles
@@ -206890,7 +206896,7 @@ x 0 0
 # !units: feet
 # !longitude: -122.7970
 # !latitude: 48.5350
-# region: Thatcher Pass
+# state: Washington
 # admin1_quelle: Name
 Armitage Island, Thatcher Pass, Washington
 +00:00 :America/Los_Angeles
@@ -208063,7 +208069,7 @@ x 0 0
 # !units: feet
 # !longitude: -131.5670
 # !latitude: 55.1283
-# region: Port Chester
+# state: Alaska
 # admin1_quelle: Name
 Metlakatla, Port Chester, Alaska
 +00:00 :America/Juneau
@@ -208462,7 +208468,7 @@ x 0 0
 # !units: feet
 # !longitude: -131.6261
 # !latitude: 55.3319
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 Ketchikan, Tongass Narrows, Alaska
 +00:00 :America/Juneau
@@ -209827,7 +209833,7 @@ x 0 0
 # !units: feet
 # !longitude: -130.0108
 # !latitude: 55.9045
-# region: Portland Canal
+# state: Alaska
 # admin1_quelle: Name
 Hyder, Portland Canal, Alaska
 +00:00 :America/Juneau
@@ -210022,7 +210028,7 @@ x 0 0
 # !units: feet
 # !longitude: -131.0950
 # !latitude: 56.0383
-# region: Behm Canal
+# state: Alaska
 # admin1_quelle: Name
 Burrough Bay, Behm Canal, Alaska
 +00:00 :America/Juneau
@@ -212563,7 +212569,7 @@ x 0 0
 # !units: feet
 # !longitude: -132.9630
 # !latitude: 56.5583
-# region: Wrangell Narrows
+# state: Alaska
 # admin1_quelle: Name
 Point Lockwood, Woewodski Island, Wrangell Narrows, Alaska
 +00:00 :America/Juneau
@@ -212954,7 +212960,7 @@ x 0 0
 # !units: feet
 # !longitude: -132.9870
 # !latitude: 56.5950
-# region: Wrangell Narrows
+# state: Alaska
 # admin1_quelle: Name
 Beecher Pass, Wrangell Narrows, Alaska
 +00:00 :America/Juneau
@@ -213149,7 +213155,7 @@ x 0 0
 # !units: feet
 # !longitude: -132.9270
 # !latitude: 56.6383
-# region: Wrangell Narrows
+# state: Alaska
 # admin1_quelle: Name
 Anchor Point, Wrangell Narrows, Alaska
 +00:00 :America/Juneau
@@ -213345,7 +213351,7 @@ x 0 0
 # !units: feet
 # !longitude: -133.1520
 # !latitude: 56.6433
-# region: Wrangell Narrows
+# state: Alaska
 # admin1_quelle: Name
 Castle Islands, Duncan Canal, Wrangell Narrows, Alaska
 +00:00 :America/Juneau
@@ -213540,7 +213546,7 @@ x 0 0
 # !units: feet
 # !longitude: -132.9330
 # !latitude: 56.6767
-# region: Wrangell Narrows
+# state: Alaska
 # admin1_quelle: Name
 Papke's Landing, Wrangell Narrows, Alaska
 +00:00 :America/Juneau
@@ -217657,7 +217663,7 @@ x 0 0
 # !units: feet
 # !longitude: -134.4106
 # !latitude: 58.2988
-# region: Stephens Pass
+# state: Alaska
 # admin1_quelle: Name
 Juneau, Gastineau Channel, Stephens Pass, Alaska
 +00:00 :America/Juneau
@@ -218444,7 +218450,7 @@ x 0 0
 # !units: feet
 # !longitude: -135.3280
 # !latitude: 59.4508
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Skagway, Taiya Inlet, Lynn Canal, Alaska
 +00:00 :America/Juneau
@@ -218639,7 +218645,7 @@ x 0 0
 # !units: feet
 # !longitude: -135.4000
 # !latitude: 59.1700
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Chilkat Inlet, Lynn Canal, Alaska
 +00:00 :America/Juneau
@@ -218834,7 +218840,7 @@ x 0 0
 # !units: feet
 # !longitude: -135.4442
 # !latitude: 58.1076
-# region: Port Fredrick
+# state: Alaska
 # admin1_quelle: Name
 Hoonah, Port Fredrick, Alaska
 +00:00 :America/Juneau
@@ -220412,7 +220418,7 @@ x 0 0
 # !units: feet
 # !longitude: -145.7554
 # !latitude: 60.5575
-# region: Prince William Sd
+# state: Alaska
 # admin1_quelle: Name
 Cordova, Orca Inlet, Prince William Sd, Alaska
 +00:00 :America/Anchorage
@@ -224726,7 +224732,7 @@ x 0 0
 # !units: feet
 # !longitude: -149.7150
 # !latitude: 59.9533
-# region: north end
+# state: Alaska
 # admin1_quelle: Name
 Aialik Bay, north end, Alaska
 +00:00 :America/Anchorage
@@ -234734,7 +234740,7 @@ x 0 0
 # !units: feet
 # !longitude: -158.3470
 # !latitude: 56.2317
-# region: Northwest Arm
+# state: Alaska
 # admin1_quelle: Name
 Castle Bay, Northwest Arm, Alaska
 +00:00 :America/Anchorage
@@ -244169,7 +244175,7 @@ x 0 0
 # !units: feet
 # !longitude: -158.4470
 # !latitude: 59.0400
-# region: Dillingham
+# state: Alaska
 # admin1_quelle: Name
 Snag Point, Dillingham, Alaska
 +00:00 :America/Anchorage
@@ -246133,7 +246139,7 @@ x 0 0
 # !units: feet
 # !longitude: -164.0434
 # !latitude: 59.9432
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Kipnuk, Kugkaktlik River, Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -246328,7 +246334,7 @@ x 0 0
 # !units: feet
 # !longitude: -164.2107
 # !latitude: 59.9475
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Kinak Bay, Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -247110,7 +247116,7 @@ x 0 0
 # !units: feet
 # !longitude: -164.2726
 # !latitude: 60.1594
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Chefornak, Kinia River, Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -247893,7 +247899,7 @@ x 0 0
 # !units: feet
 # !longitude: -165.1330
 # !latitude: 60.5167
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Tooksook Bay, Nelson Island, Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -248479,7 +248485,7 @@ x 0 0
 # !units: feet
 # !longitude: -164.6387
 # !latitude: 60.9345
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Newtok, Ningliq River, Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -248674,7 +248680,7 @@ x 0 0
 # !units: feet
 # !longitude: -166.1480
 # !latitude: 61.5317
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Dall Point, Hooper Bay, Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -248869,7 +248875,7 @@ x 0 0
 # !units: feet
 # !longitude: -165.5670
 # !latitude: 61.8417
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Kun River, Scammon Bay, Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -249065,7 +249071,7 @@ x 0 0
 # !units: feet
 # !longitude: -164.8453
 # !latitude: 62.5329
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Nunam Iqua (Sheldon Point), Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -249455,7 +249461,7 @@ x 0 0
 # !units: feet
 # !longitude: -164.5469
 # !latitude: 62.7775
-# region: Yukon Delta
+# state: Alaska
 # admin1_quelle: Name
 Emmonak, Kwiguk Pass, Yukon Delta, Alaska
 +00:00 :America/Nome
@@ -252597,7 +252603,7 @@ x 0 0
 # !units: feet
 # !longitude: -166.3530
 # !latitude: 65.2667
-# region: Port Clarence
+# state: Alaska
 # admin1_quelle: Name
 Teller, Port Clarence, Alaska
 +00:00 :America/Nome
@@ -252988,7 +252994,7 @@ x 0 0
 # !units: feet
 # !longitude: -167.9750
 # !latitude: 65.5583
-# region: Bering Sea
+# state: Alaska
 # admin1_quelle: Name
 Tin City, Bering Sea, Alaska
 +00:00 :America/Nome
@@ -255135,7 +255141,7 @@ x 0 0
 # !units: feet
 # !longitude: -166.8080
 # !latitude: 68.3417
-# region: Chukchi Sea
+# state: Alaska
 # admin1_quelle: Name
 Point Hope, Chukchi Sea, Alaska
 +00:00 :America/Nome
@@ -255330,7 +255336,7 @@ x 0 0
 # !units: feet
 # !longitude: -160.0651
 # !latitude: 70.6438
-# region: Chukchi Sea
+# state: Alaska
 # admin1_quelle: Name
 Wainwright, Chukchi Sea, Alaska
 +00:00 :America/Anchorage
@@ -255927,7 +255933,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9319
 # !latitude: 42.3550
-# region: 1.3 nmi north of (depth 30 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Lovell Island, 1.3 nmi north of (depth 30 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -256125,7 +256131,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9319
 # !latitude: 42.3550
-# region: 1.3 nmi north of (depth 20 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Lovell Island, 1.3 nmi north of (depth 20 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -256516,7 +256522,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.6058
 # !latitude: 17.7407
-# region: St. Croix
+# state: Virgin Islands
 # admin1_quelle: Name
 Grapetree Bay, St. Croix, Virgin Islands
 +00:00 :America/St_Thomas
@@ -256711,7 +256717,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.6024
 # !latitude: 17.7550
-# region: St. Croix
+# state: Virgin Islands
 # admin1_quelle: Name
 Teague Bay, St. Croix, Virgin Islands
 +00:00 :America/St_Thomas
@@ -256906,7 +256912,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.6828
 # !latitude: 17.7100
-# region: St. Croix
+# state: Virgin Islands
 # admin1_quelle: Name
 Fareham Bay, St. Croix, Virgin Islands
 +00:00 :America/St_Thomas
@@ -257102,7 +257108,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.7021
 # !latitude: 18.3170
-# region: St. John
+# state: Virgin Islands
 # admin1_quelle: Name
 Johns Folly Bay, St. John, Virgin Islands
 +00:00 :America/St_Thomas
@@ -257298,7 +257304,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.7207
 # !latitude: 18.3676
-# region: St. John
+# state: Virgin Islands
 # admin1_quelle: Name
 Leinster Point, Leinster Bay, St. John, Virgin Islands
 +00:00 :America/St_Thomas
@@ -257501,7 +257507,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.6984
 # !latitude: 17.7477
-# region: St. Croix
+# state: Virgin Islands
 # admin1_quelle: Name
 Christiansted Harbor, St. Croix, Virgin Islands
 +00:00 :America/St_Thomas
@@ -257696,7 +257702,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.7167
 # !latitude: 18.3483
-# region: St. John
+# state: Virgin Islands
 # admin1_quelle: Name
 Coral Harbor, St. John, Virgin Islands
 +00:00 :America/St_Thomas
@@ -257896,7 +257902,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.7242
 # !latitude: 18.3182
-# region: St. John
+# state: Virgin Islands
 # admin1_quelle: Name
 Lameshur Bay, St. John, Virgin Islands
 +00:00 :America/St_Thomas
@@ -258091,7 +258097,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.7623
 # !latitude: 17.7753
-# region: St. Croix
+# state: Virgin Islands
 # admin1_quelle: Name
 Salt River Bay, St. Croix, Virgin Islands
 +00:00 :America/St_Thomas
@@ -258291,7 +258297,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.7538
 # !latitude: 17.6947
-# region: St. Croix
+# state: Virgin Islands
 # admin1_quelle: Name
 Lime Tree Bay, St. Croix, Virgin Islands
 +00:00 :America/St_Thomas
@@ -258486,7 +258492,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.7774
 # !latitude: 18.3489
-# region: St. John
+# state: Virgin Islands
 # admin1_quelle: Name
 Hawksnest Beach, St. John, Virgin Islands
 +00:00 :America/St_Thomas
@@ -258681,7 +258687,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.6796
 # !latitude: 18.3497
-# region: St. John
+# state: Virgin Islands
 # admin1_quelle: Name
 Haulover Bay, St. John, Virgin Islands
 +00:00 :America/St_Thomas
@@ -258876,7 +258882,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.8035
 # !latitude: 18.3607
-# region: St. John
+# state: Virgin Islands
 # admin1_quelle: Name
 Lovango Cay, St. John, Virgin Islands
 +00:00 :America/St_Thomas
@@ -259071,7 +259077,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.7941
 # !latitude: 18.3329
-# region: St. John
+# state: Virgin Islands
 # admin1_quelle: Name
 Cruz Bay, St. John, Virgin Islands
 +00:00 :America/St_Thomas
@@ -259266,7 +259272,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.8178
 # !latitude: 18.2971
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Dog Island, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -259461,7 +259467,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.8524
 # !latitude: 18.3399
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Pavilion Point, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -259659,7 +259665,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9319
 # !latitude: 42.3550
-# region: 1.3 nmi north of (depth 4 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Lovell Island, 1.3 nmi north of (depth 4 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -259854,7 +259860,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.8595
 # !latitude: 18.3181
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Jersey Bay, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -260050,7 +260056,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.8642
 # !latitude: 18.3489
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Water Bay, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -260245,7 +260251,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.8833
 # !latitude: 17.7133
-# region: St. Croix
+# state: Virgin Islands
 # admin1_quelle: Name
 Fredericksted, St. Croix, Virgin Islands
 +00:00 :America/St_Thomas
@@ -260441,7 +260447,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.9258
 # !latitude: 18.3306
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Charlotte Amalie, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -260636,7 +260642,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.9221
 # !latitude: 18.3663
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Magens Bay, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -260831,7 +260837,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.9517
 # !latitude: 18.3329
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Crown Bay, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -261028,7 +261034,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.9635
 # !latitude: 18.3712
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Dorothea Bay, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -261223,7 +261229,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.0350
 # !latitude: 18.3633
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Botany Bay, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -261418,6 +261424,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.2381
 # !latitude: 18.3194
+# state: Puerto Rico
 Culebrita, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.5800 feet
@@ -261619,6 +261626,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.3025
 # !latitude: 18.3009
+# state: Puerto Rico
 Culebra, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.5400 feet
@@ -261812,7 +261820,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.3729
 # !latitude: 18.1166
-# region: Vieques
+# state: Puerto Rico
 # admin1_quelle: Name
 Punta la Plata, Vieques, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -262016,7 +262024,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.4438
 # !latitude: 18.1525
-# region: Vieques
+# state: Puerto Rico
 # admin1_quelle: Name
 Isabel Segunda, Vieques, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -262215,7 +262223,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.4714
 # !latitude: 18.0939
-# region: Vieques
+# state: Puerto Rico
 # admin1_quelle: Name
 Esperanza, Vieques, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -262410,7 +262418,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.5149
 # !latitude: 18.1489
-# region: Vieques
+# state: Puerto Rico
 # admin1_quelle: Name
 Mosquito Pier, Vieques, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -262605,6 +262613,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.5695
 # !latitude: 18.3450
+# state: Puerto Rico
 Isla Palominos, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.7100 feet
@@ -262798,7 +262807,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.5759
 # !latitude: 18.1124
-# region: Vieques
+# state: Puerto Rico
 # admin1_quelle: Name
 Punta Arenas, Vieques, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -262993,7 +263002,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.6197
 # !latitude: 18.2281
-# region: Roosevelt Roads
+# state: Puerto Rico
 # admin1_quelle: Name
 Ceiba, Roosevelt Roads, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -263199,6 +263208,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.6311
 # !latitude: 18.3353
+# state: Puerto Rico
 Fajardo, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.7300 feet
@@ -263392,6 +263402,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.7114
 # !latitude: 18.1871
+# state: Puerto Rico
 Naguabo, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3900 feet
@@ -263586,6 +263597,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.7365
 # !latitude: 18.3817
+# state: Puerto Rico
 Luquillo, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.7400 feet
@@ -263779,6 +263791,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.7956
 # !latitude: 18.0781
+# state: Puerto Rico
 Palmas del Mar, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3600 feet
@@ -263982,6 +263995,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.8330
 # !latitude: 18.0551
+# state: Puerto Rico
 Yabucoa Harbor, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3500 feet
@@ -264175,6 +264189,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.8888
 # !latitude: 17.9914
+# state: Puerto Rico
 Puerto Maunabo, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3700 feet
@@ -264368,6 +264383,7 @@ x 0 0
 # !units: feet
 # !longitude: -65.9915
 # !latitude: 18.4566
+# state: Puerto Rico
 Boca de Cangrejos, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.6900 feet
@@ -264570,6 +264586,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.1164
 # !latitude: 18.4589
+# state: Puerto Rico
 San Juan, La Puntilla, San Juan Bay, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.7600 feet
@@ -264763,6 +264780,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.1583
 # !latitude: 17.9283
+# state: Puerto Rico
 Las Mareas, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3300 feet
@@ -264960,6 +264978,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.2264
 # !latitude: 17.9500
+# state: Puerto Rico
 Central Aguirre, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3300 feet
@@ -265153,6 +265172,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.3844
 # !latitude: 18.4852
+# state: Puerto Rico
 Boca del Cibuco, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.8400 feet
@@ -265346,6 +265366,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.4067
 # !latitude: 17.9550
+# state: Puerto Rico
 Santa Isabel, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3600 feet
@@ -265539,6 +265560,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.6199
 # !latitude: 17.9696
+# state: Puerto Rico
 Ponce, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3400 feet
@@ -265742,6 +265764,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.7024
 # !latitude: 18.4805
+# state: Puerto Rico
 Arecibo, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.8200 feet
@@ -265944,6 +265967,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.7618
 # !latitude: 17.9725
+# state: Puerto Rico
 Peñuelas (Punta Guayanilla), Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3500 feet
@@ -266137,6 +266161,7 @@ x 0 0
 # !units: feet
 # !longitude: -66.9068
 # !latitude: 17.9580
+# state: Puerto Rico
 Guánica, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3500 feet
@@ -266338,7 +266363,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.0464
 # !latitude: 17.9701
-# region: Caribbean Sea
+# state: Puerto Rico
 # admin1_quelle: Name
 Magueyes Island, Caribbean Sea, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -266533,6 +266558,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.1731
 # !latitude: 18.0240
+# state: Puerto Rico
 Boquerón, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.4000 feet
@@ -266726,6 +266752,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.1832
 # !latitude: 18.1158
+# state: Puerto Rico
 Joyuda, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.5000 feet
@@ -266919,6 +266946,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.1888
 # !latitude: 18.0748
+# state: Puerto Rico
 Puerto Real, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.4200 feet
@@ -267112,6 +267140,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.1966
 # !latitude: 17.9514
+# state: Puerto Rico
 Bahía Salinas, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3200 feet
@@ -267312,6 +267341,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.1624
 # !latitude: 18.2188
+# state: Puerto Rico
 Mayagüez, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.6300 feet
@@ -267512,7 +267542,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.1646
 # !latitude: 18.4566
-# region: Crashboat Beach
+# state: Puerto Rico
 # admin1_quelle: Name
 Aguadilla, Crashboat Beach, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -267708,7 +267738,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.1817
 # !latitude: 18.1650
-# region: Mayagüez
+# state: Puerto Rico
 # admin1_quelle: Name
 Punta Guanajibo, Mayagüez, Puerto Rico
 +00:00 :America/Puerto_Rico
@@ -267903,6 +267933,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.8661
 # !latitude: 18.0653
+# state: Puerto Rico
 Southeast Mona Island, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.3200 feet
@@ -268103,6 +268134,7 @@ x 0 0
 # !units: feet
 # !longitude: -67.9382
 # !latitude: 18.0893
+# state: Puerto Rico
 Mona Island, Puerto Rico
 +00:00 :America/Puerto_Rico
 0.4100 feet
@@ -268296,7 +268328,7 @@ x 0 0
 # !units: feet
 # !longitude: -81.5733
 # !latitude: 29.5583
-# region: Dunns Creek
+# state: Florida
 # admin1_quelle: Name
 Piney Bluff Landing, Dunns Creek, Florida
 +00:00 :America/New_York
@@ -272658,7 +272690,7 @@ x 0 0
 # !units: feet
 # !longitude: -88.9250
 # !latitude: 30.4183
-# region: Biloxi
+# state: Mississippi
 # admin1_quelle: Name
 Keesler AFB, Back Bay, Biloxi, Mississippi
 +00:00 :America/Chicago
@@ -273054,7 +273086,7 @@ x 0 0
 # !units: feet
 # !longitude: -89.3517
 # !latitude: 29.2733
-# region: Grand Pass
+# state: Louisiana
 # admin1_quelle: Name
 Venice, Grand Pass, Louisiana
 +00:00 :America/Chicago
@@ -274448,7 +274480,7 @@ x 0 0
 # !units: feet
 # !longitude: -122.6150
 # !latitude: 48.4133
-# region: Deception Pass
+# state: Washington
 # admin1_quelle: Name
 Yokeko Point, Deception Pass, Washington
 +00:00 :America/Los_Angeles
@@ -275440,7 +275472,7 @@ x 0 0
 # !units: feet
 # !longitude: -157.3270
 # !latitude: 56.5400
-# region: west end
+# state: Alaska
 # admin1_quelle: Name
 Sutwik Island, west end, Alaska
 +00:00 :America/Anchorage
@@ -276641,7 +276673,7 @@ x 0 0
 # !units: feet
 # !longitude: -64.8700
 # !latitude: 18.3200
-# region: St. Thomas
+# state: Virgin Islands
 # admin1_quelle: Name
 Benner Bay, St. Thomas, Virgin Islands
 +00:00 :America/St_Thomas
@@ -277433,7 +277465,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9389
 # !latitude: 42.3441
-# region: 0.7 nmi ESE of (depth 36 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Deer Island, 0.7 nmi ESE of (depth 36 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -277631,7 +277663,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9389
 # !latitude: 42.3441
-# region: 0.7 nmi ESE of (depth 16 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Deer Island, 0.7 nmi ESE of (depth 16 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -277829,7 +277861,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9389
 # !latitude: 42.3441
-# region: 0.7 nmi ESE of (depth 7 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Deer Island, 0.7 nmi ESE of (depth 7 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -278621,7 +278653,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9860
 # !latitude: 42.3342
-# region: 0.4 nmi north of (depth 33 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Spectacle Island, 0.4 nmi north of (depth 33 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -278819,7 +278851,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9860
 # !latitude: 42.3342
-# region: 0.4 nmi north of (depth 16 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Spectacle Island, 0.4 nmi north of (depth 16 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -279017,7 +279049,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.9860
 # !latitude: 42.3342
-# region: 0.4 nmi north of (depth 3 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Spectacle Island, 0.4 nmi north of (depth 3 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -279809,7 +279841,7 @@ x 0 0
 # !units: knots
 # !longitude: -71.0089
 # !latitude: 42.3418
-# region: 0.1 nmi north of (depth 26 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Fort Independence, 0.1 nmi north of (depth 26 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -284364,7 +284396,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8871
 # !latitude: 42.3193
-# region: 0.65 nmi NNW of (depth 30 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Point Allerton, 0.65 nmi NNW of (depth 30 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -284562,7 +284594,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8871
 # !latitude: 42.3193
-# region: 0.65 nmi NNW of (depth 17 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Point Allerton, 0.65 nmi NNW of (depth 17 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -284760,7 +284792,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8871
 # !latitude: 42.3193
-# region: 0.65 nmi NNW of (depth 4 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Point Allerton, 0.65 nmi NNW of (depth 4 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -285356,7 +285388,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.5320
 # !latitude: 42.3381
-# region: east end (depth 30 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Stellwagen Basin, east end (depth 30 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -316687,7 +316719,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.4435
 # !latitude: 36.9793
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 0.15 nmi WSW of Pier No. 2 (depth 42 ft), Newport News, Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -316885,7 +316917,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.4435
 # !latitude: 36.9793
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 0.15 nmi WSW of Pier No. 2 (depth 29 ft), Newport News, Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -317083,7 +317115,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.4435
 # !latitude: 36.9793
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 0.15 nmi WSW of Pier No. 2 (depth 15 ft), Newport News, Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -317281,7 +317313,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.4435
 # !latitude: 36.9793
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 0.15 nmi WSW of Pier No. 2 (depth 6 ft), Newport News, Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -318273,7 +318305,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.4993
 # !latitude: 41.7755
-# region: east end (depth 34 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Cape Cod Canal, east end (depth 34 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -318473,7 +318505,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.4993
 # !latitude: 41.7755
-# region: east end (depth 15 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Cape Cod Canal, east end (depth 15 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -318673,7 +318705,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.4993
 # !latitude: 41.7755
-# region: east end (depth 8 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Cape Cod Canal, east end (depth 8 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -323630,7 +323662,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.6930
 # !latitude: 41.5230
-# region: Woods Hole
+# state: Massachusetts
 # admin1_quelle: Name
 North end (depth 17 ft), Woods Hole, Massachusetts Current
 +00:00 :America/New_York
@@ -323828,7 +323860,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.6930
 # !latitude: 41.5230
-# region: Woods Hole
+# state: Massachusetts
 # admin1_quelle: Name
 North end (depth 4 ft), Woods Hole, Massachusetts Current
 +00:00 :America/New_York
@@ -324625,7 +324657,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.6717
 # !latitude: 41.5159
-# region: Woods Hole
+# state: Massachusetts
 # admin1_quelle: Name
 Juniper Point (depth 29 ft), Woods Hole, Massachusetts Current
 +00:00 :America/New_York
@@ -324828,7 +324860,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.6717
 # !latitude: 41.5159
-# region: Woods Hole
+# state: Massachusetts
 # admin1_quelle: Name
 Juniper Point (depth 15 ft), Woods Hole, Massachusetts Current
 +00:00 :America/New_York
@@ -325031,7 +325063,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.6717
 # !latitude: 41.5159
-# region: Woods Hole
+# state: Massachusetts
 # admin1_quelle: Name
 Juniper Point (depth 5 ft), Woods Hole, Massachusetts Current
 +00:00 :America/New_York
@@ -325823,7 +325855,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8482
 # !latitude: 41.4427
-# region: Quicks Hole
+# state: Massachusetts
 # admin1_quelle: Name
 Middle (depth 40 ft), Quicks Hole, Massachusetts Current
 +00:00 :America/New_York
@@ -326021,7 +326053,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8482
 # !latitude: 41.4427
-# region: Quicks Hole
+# state: Massachusetts
 # admin1_quelle: Name
 Middle (depth 17 ft), Quicks Hole, Massachusetts Current
 +00:00 :America/New_York
@@ -326219,7 +326251,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8482
 # !latitude: 41.4427
-# region: Quicks Hole
+# state: Massachusetts
 # admin1_quelle: Name
 Middle (depth 7 ft), Quicks Hole, Massachusetts Current
 +00:00 :America/New_York
@@ -354162,7 +354194,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.0528
 # !latitude: 38.8199
-# region: 2 mi NE of (depth 78 ft)
+# state: Delaware
 # admin1_quelle: Name
 Cape Henlopen, 2 mi NE of (depth 78 ft), Delaware Current
 +00:00 :America/New_York
@@ -354360,7 +354392,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.0528
 # !latitude: 38.8199
-# region: 2 mi NE of (depth 28 ft)
+# state: Delaware
 # admin1_quelle: Name
 Cape Henlopen, 2 mi NE of (depth 28 ft), Delaware Current
 +00:00 :America/New_York
@@ -354558,7 +354590,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.0528
 # !latitude: 38.8199
-# region: 2 mi NE of (depth 15 ft)
+# state: Delaware
 # admin1_quelle: Name
 Cape Henlopen, 2 mi NE of (depth 15 ft), Delaware Current
 +00:00 :America/New_York
@@ -354756,7 +354788,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.0833
 # !latitude: 38.8834
-# region: 5 mi north of (depth 61 ft)
+# state: Delaware
 # admin1_quelle: Name
 Cape Henlopen, 5 mi north of (depth 61 ft), Delaware Current
 +00:00 :America/New_York
@@ -354954,7 +354986,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.0833
 # !latitude: 38.8834
-# region: 5 mi north of (depth 15 ft)
+# state: Delaware
 # admin1_quelle: Name
 Cape Henlopen, 5 mi north of (depth 15 ft), Delaware Current
 +00:00 :America/New_York
@@ -355152,7 +355184,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.0833
 # !latitude: 38.8834
-# region: 5 mi north of (depth 9 ft)
+# state: Delaware
 # admin1_quelle: Name
 Cape Henlopen, 5 mi north of (depth 9 ft), Delaware Current
 +00:00 :America/New_York
@@ -355350,7 +355382,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.9724
 # !latitude: 38.9684
-# region: west end (depth 16 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Cape May Canal, west end (depth 16 ft), New Jersey Current
 +00:00 :America/New_York
@@ -355548,7 +355580,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.9724
 # !latitude: 38.9684
-# region: west end (depth 5 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Cape May Canal, west end (depth 5 ft), New Jersey Current
 +00:00 :America/New_York
@@ -355746,7 +355778,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.9724
 # !latitude: 38.9684
-# region: west end (depth 2 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Cape May Canal, west end (depth 2 ft), New Jersey Current
 +00:00 :America/New_York
@@ -355944,7 +355976,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.1265
 # !latitude: 38.9882
-# region: 0.5 nmi west of (depth 41 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Brandywine Shoal Light, 0.5 nmi west of (depth 41 ft), New Jersey Current
 +00:00 :America/New_York
@@ -356142,7 +356174,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.1265
 # !latitude: 38.9882
-# region: 0.5 nmi west of (depth 15 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Brandywine Shoal Light, 0.5 nmi west of (depth 15 ft), New Jersey Current
 +00:00 :America/New_York
@@ -356340,7 +356372,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.1265
 # !latitude: 38.9882
-# region: 0.5 nmi west of (depth 5 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Brandywine Shoal Light, 0.5 nmi west of (depth 5 ft), New Jersey Current
 +00:00 :America/New_York
@@ -356538,7 +356570,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.1794
 # !latitude: 38.9632
-# region: Buoy G (depth 41 ft)
+# state: Delaware
 # admin1_quelle: Name
 Big Stone Beach Anchorage, Buoy G (depth 41 ft), Delaware Current
 +00:00 :America/New_York
@@ -356736,7 +356768,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.1794
 # !latitude: 38.9632
-# region: Buoy G (depth 15 ft)
+# state: Delaware
 # admin1_quelle: Name
 Big Stone Beach Anchorage, Buoy G (depth 15 ft), Delaware Current
 +00:00 :America/New_York
@@ -356934,7 +356966,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.1794
 # !latitude: 38.9632
-# region: Buoy G (depth 8 ft)
+# state: Delaware
 # admin1_quelle: Name
 Big Stone Beach Anchorage, Buoy G (depth 8 ft), Delaware Current
 +00:00 :America/New_York
@@ -358914,7 +358946,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.4662
 # !latitude: 39.3768
-# region: 1.8 nmi WSW of (depth 35 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Arnold Point, 1.8 nmi WSW of (depth 35 ft), New Jersey Current
 +00:00 :America/New_York
@@ -359112,7 +359144,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.4662
 # !latitude: 39.3768
-# region: 1.8 nmi WSW of (depth 15 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Arnold Point, 1.8 nmi WSW of (depth 15 ft), New Jersey Current
 +00:00 :America/New_York
@@ -359310,7 +359342,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.4662
 # !latitude: 39.3768
-# region: 1.8 nmi WSW of (depth 6 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Arnold Point, 1.8 nmi WSW of (depth 6 ft), New Jersey Current
 +00:00 :America/New_York
@@ -361291,7 +361323,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5022
 # !latitude: 39.5708
-# region: east of marker 11 (depth 20 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Salem River entrance, east of marker 11 (depth 20 ft), New Jersey Current
 +00:00 :America/New_York
@@ -361489,7 +361521,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5022
 # !latitude: 39.5708
-# region: east of marker 11 (depth 15 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Salem River entrance, east of marker 11 (depth 15 ft), New Jersey Current
 +00:00 :America/New_York
@@ -361687,7 +361719,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5022
 # !latitude: 39.5708
-# region: east of marker 11 (depth 1 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Salem River entrance, east of marker 11 (depth 1 ft), New Jersey Current
 +00:00 :America/New_York
@@ -362479,7 +362511,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5410
 # !latitude: 39.6568
-# region: 0.7 nmi N of (depth 7 ft)
+# state: Delaware
 # admin1_quelle: Name
 Kelly Point, 0.7 nmi N of (depth 7 ft), Delaware Current
 +00:00 :America/New_York
@@ -362677,7 +362709,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5410
 # !latitude: 39.6568
-# region: 0.7 nmi N of (depth 15 ft)
+# state: Delaware
 # admin1_quelle: Name
 Kelly Point, 0.7 nmi N of (depth 15 ft), Delaware Current
 +00:00 :America/New_York
@@ -362875,7 +362907,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5410
 # !latitude: 39.6568
-# region: 0.7 nmi N of (depth 41 ft)
+# state: Delaware
 # admin1_quelle: Name
 Kelly Point, 0.7 nmi N of (depth 41 ft), Delaware Current
 +00:00 :America/New_York
@@ -363073,7 +363105,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5106
 # !latitude: 39.7013
-# region: 0.5 nmi NW of (depth 47 ft)
+# state: Delaware
 # admin1_quelle: Name
 Deepwater Point, 0.5 nmi NW of (depth 47 ft), Delaware Current
 +00:00 :America/New_York
@@ -363271,7 +363303,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5106
 # !latitude: 39.7013
-# region: 0.5 nmi NW of (depth 14 ft)
+# state: Delaware
 # admin1_quelle: Name
 Deepwater Point, 0.5 nmi NW of (depth 14 ft), Delaware Current
 +00:00 :America/New_York
@@ -363469,7 +363501,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.5106
 # !latitude: 39.7013
-# region: 0.5 nmi NW of (depth 8 ft)
+# state: Delaware
 # admin1_quelle: Name
 Deepwater Point, 0.5 nmi NW of (depth 8 ft), Delaware Current
 +00:00 :America/New_York
@@ -365449,7 +365481,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.2830
 # !latitude: 39.8468
-# region: 0.5 mi east of (depth 48 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Crab Point, 0.5 mi east of (depth 48 ft), New Jersey Current
 +00:00 :America/New_York
@@ -365647,7 +365679,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.2830
 # !latitude: 39.8468
-# region: 0.5 mi east of (depth 15 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Crab Point, 0.5 mi east of (depth 15 ft), New Jersey Current
 +00:00 :America/New_York
@@ -365845,7 +365877,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.2830
 # !latitude: 39.8468
-# region: 0.5 mi east of (depth 9 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Crab Point, 0.5 mi east of (depth 9 ft), New Jersey Current
 +00:00 :America/New_York
@@ -366044,7 +366076,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.2360
 # !latitude: 39.8315
-# region: Paulsboro (depth 13 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Mantua Creek, US 44 Bridge, Paulsboro (depth 13 ft), New Jersey Current
 +00:00 :America/New_York
@@ -371216,7 +371248,7 @@ x 0 0
 # !units: knots
 # !longitude: -66.9956
 # !latitude: 44.8879
-# region: Eastport (depth 78 ft)
+# state: Maine
 # admin1_quelle: Name
 Estes Head, Eastport (depth 78 ft), Maine Current
 +00:00 :America/New_York
@@ -371414,7 +371446,7 @@ x 0 0
 # !units: knots
 # !longitude: -66.9956
 # !latitude: 44.8879
-# region: Eastport (depth 52 ft)
+# state: Maine
 # admin1_quelle: Name
 Estes Head, Eastport (depth 52 ft), Maine Current
 +00:00 :America/New_York
@@ -371612,7 +371644,7 @@ x 0 0
 # !units: knots
 # !longitude: -66.9956
 # !latitude: 44.8879
-# region: Eastport (depth 32 ft)
+# state: Maine
 # admin1_quelle: Name
 Estes Head, Eastport (depth 32 ft), Maine Current
 +00:00 :America/New_York
@@ -371810,7 +371842,7 @@ x 0 0
 # !units: knots
 # !longitude: -66.9956
 # !latitude: 44.8879
-# region: Eastport (depth 13 ft)
+# state: Maine
 # admin1_quelle: Name
 Estes Head, Eastport (depth 13 ft), Maine Current
 +00:00 :America/New_York
@@ -373792,7 +373824,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.4607
 # !latitude: 30.6860
-# region: Old Town Reach (depth 24 ft)
+# state: Florida
 # admin1_quelle: Name
 Old Fernandina, Amelia River, Old Town Reach (depth 24 ft), Florida Current
 +00:00 :America/New_York
@@ -373990,7 +374022,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.4607
 # !latitude: 30.6860
-# region: Old Town Reach (depth 14 ft)
+# state: Florida
 # admin1_quelle: Name
 Old Fernandina, Amelia River, Old Town Reach (depth 14 ft), Florida Current
 +00:00 :America/New_York
@@ -374188,7 +374220,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.4607
 # !latitude: 30.6860
-# region: Old Town Reach (depth 4 ft)
+# state: Florida
 # admin1_quelle: Name
 Old Fernandina, Amelia River, Old Town Reach (depth 4 ft), Florida Current
 +00:00 :America/New_York
@@ -375986,7 +376018,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8118
 # !latitude: 24.4707
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Main Ship Channel entrance (depth 17 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -376184,7 +376216,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8118
 # !latitude: 24.4707
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Main Ship Channel entrance (depth 4 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -376382,7 +376414,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8182
 # !latitude: 24.5260
-# region: Cut-A Cut-B Turn (depth 26 ft)
+# state: Florida
 # admin1_quelle: Name
 Key West Channel, Cut-A Cut-B Turn (depth 26 ft), Florida Current
 +00:00 :America/New_York
@@ -376580,7 +376612,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8182
 # !latitude: 24.5260
-# region: Cut-A Cut-B Turn (depth 6 ft)
+# state: Florida
 # admin1_quelle: Name
 Key West Channel, Cut-A Cut-B Turn (depth 6 ft), Florida Current
 +00:00 :America/New_York
@@ -376778,7 +376810,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8321
 # !latitude: 24.5342
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Southwest channel (depth 20 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -376976,7 +377008,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8321
 # !latitude: 24.5342
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Southwest channel (depth 3 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -377570,7 +377602,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8062
 # !latitude: 24.5639
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Turning Basin (depth 23 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -377768,7 +377800,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8062
 # !latitude: 24.5639
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Turning Basin (depth 6 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -378362,7 +378394,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.7986
 # !latitude: 24.5967
-# region: north of (depth 9 ft)
+# state: Florida
 # admin1_quelle: Name
 Fleming Key, north of (depth 9 ft), Florida Current
 +00:00 :America/New_York
@@ -378560,7 +378592,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.7986
 # !latitude: 24.5967
-# region: north of (depth 2 ft)
+# state: Florida
 # admin1_quelle: Name
 Fleming Key, north of (depth 2 ft), Florida Current
 +00:00 :America/New_York
@@ -379154,7 +379186,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8715
 # !latitude: 24.6154
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Northwest Channel, W of Calda Bank (depth 22 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -379352,7 +379384,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8715
 # !latitude: 24.6154
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Northwest Channel, W of Calda Bank (depth 5 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -379550,7 +379582,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8350
 # !latitude: 24.5683
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Northwest Channel, W of Middle Ground (depth 17 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -379748,7 +379780,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.8350
 # !latitude: 24.5683
-# region: Key West
+# state: Florida
 # admin1_quelle: Name
 Northwest Channel, W of Middle Ground (depth 4 ft), Key West, Florida Current
 +00:00 :America/New_York
@@ -381134,7 +381166,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.4532
 # !latitude: 24.6162
-# region: east of (depth 8 ft)
+# state: Florida
 # admin1_quelle: Name
 Loggerhead Key, east of (depth 8 ft), Florida Current
 +00:00 :America/New_York
@@ -381332,7 +381364,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.4532
 # !latitude: 24.6162
-# region: east of (depth 2 ft)
+# state: Florida
 # admin1_quelle: Name
 Loggerhead Key, east of (depth 2 ft), Florida Current
 +00:00 :America/New_York
@@ -403908,7 +403940,7 @@ x 0 0
 # !units: knots
 # !longitude: -82.7822
 # !latitude: 27.7833
-# region: north span (depth 16 ft)
+# state: Florida
 # admin1_quelle: Name
 Johns Pass Bridge, north span (depth 16 ft), Florida Current
 +00:00 :America/New_York
@@ -404106,7 +404138,7 @@ x 0 0
 # !units: knots
 # !longitude: -82.7822
 # !latitude: 27.7833
-# region: north span (depth 3 ft)
+# state: Florida
 # admin1_quelle: Name
 Johns Pass Bridge, north span (depth 3 ft), Florida Current
 +00:00 :America/New_York
@@ -404304,7 +404336,7 @@ x 0 0
 # !units: knots
 # !longitude: -82.7799
 # !latitude: 27.7850
-# region: 0.3 nmi north of (depth 11 ft)
+# state: Florida
 # admin1_quelle: Name
 Johns Pass Bridge, 0.3 nmi north of (depth 11 ft), Florida Current
 +00:00 :America/New_York
@@ -404502,7 +404534,7 @@ x 0 0
 # !units: knots
 # !longitude: -82.7799
 # !latitude: 27.7850
-# region: 0.3 nmi north of (depth 3 ft)
+# state: Florida
 # admin1_quelle: Name
 Johns Pass Bridge, 0.3 nmi north of (depth 3 ft), Florida Current
 +00:00 :America/New_York
@@ -433226,7 +433258,7 @@ x 0 0
 # !units: knots
 # !longitude: -72.3696
 # !latitude: 41.1895
-# region: Buoy CF (depth 71 ft)
+# state: New York
 # admin1_quelle: Name
 Cornfield Point, 4 mi south of, Buoy CF (depth 71 ft), New York Current
 +00:00 :America/New_York
@@ -433424,7 +433456,7 @@ x 0 0
 # !units: knots
 # !longitude: -72.3696
 # !latitude: 41.1895
-# region: Buoy CF (depth 19 ft)
+# state: New York
 # admin1_quelle: Name
 Cornfield Point, 4 mi south of, Buoy CF (depth 19 ft), New York Current
 +00:00 :America/New_York
@@ -454230,7 +454262,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1339
 # !latitude: 25.7641
-# region: Government Cut
+# state: Florida
 # admin1_quelle: Name
 Miami Harbor entrance (depth 35 ft), Government Cut, Florida Current
 +00:00 :America/New_York
@@ -454428,7 +454460,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1339
 # !latitude: 25.7641
-# region: Government Cut
+# state: Florida
 # admin1_quelle: Name
 Miami Harbor entrance (depth 22 ft), Government Cut, Florida Current
 +00:00 :America/New_York
@@ -454626,7 +454658,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1339
 # !latitude: 25.7641
-# region: Government Cut
+# state: Florida
 # admin1_quelle: Name
 Miami Harbor entrance (depth 15 ft), Government Cut, Florida Current
 +00:00 :America/New_York
@@ -454824,7 +454856,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1339
 # !latitude: 25.7641
-# region: Government Cut
+# state: Florida
 # admin1_quelle: Name
 Miami Harbor entrance (depth 8 ft), Government Cut, Florida Current
 +00:00 :America/New_York
@@ -455616,7 +455648,7 @@ x 0 0
 # !units: knots
 # !longitude: -88.3708
 # !latitude: 30.2218
-# region: between (depth 5 ft)
+# state: Alabama
 # admin1_quelle: Name
 Petit Bois Island, Dauphin Island, between (depth 5 ft), Alabama Current
 +00:00 :America/Chicago
@@ -455814,7 +455846,7 @@ x 0 0
 # !units: knots
 # !longitude: -88.5399
 # !latitude: 30.2257
-# region: between (depth 7 ft)
+# state: Mississippi
 # admin1_quelle: Name
 Horn Island, Petit Bois Island, between (depth 7 ft), Mississippi Current
 +00:00 :America/Chicago
@@ -459774,7 +459806,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.2060
 # !latitude: 40.5889
-# region: Arthur Kill
+# state: New York
 # admin1_quelle: Name
 Tremley Point (depth 27 ft), Arthur Kill, New York Current
 +00:00 :America/New_York
@@ -459972,7 +460004,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.2060
 # !latitude: 40.5889
-# region: Arthur Kill
+# state: New York
 # admin1_quelle: Name
 Tremley Point (depth 7 ft), Arthur Kill, New York Current
 +00:00 :America/New_York
@@ -460170,7 +460202,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.2032
 # !latitude: 40.6289
-# region: Arthur Kill (depth 21 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Gulfport, Arthur Kill (depth 21 ft), New Jersey Current
 +00:00 :America/New_York
@@ -460368,7 +460400,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.2032
 # !latitude: 40.6289
-# region: Arthur Kill (depth 8 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Gulfport, Arthur Kill (depth 8 ft), New Jersey Current
 +00:00 :America/New_York
@@ -465933,7 +465965,7 @@ x 0 0
 # !units: knots
 # !longitude: -73.9369
 # !latitude: 40.7861
-# region: south end (depth 5 ft)
+# state: New York
 # admin1_quelle: Name
 Harlem River, south end (depth 5 ft), New York Current
 +00:00 :America/New_York
@@ -468528,7 +468560,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.2906
 # !latitude: 40.5092
-# region: Victory Bridge (depth 14 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Raritan River entrance, Victory Bridge (depth 14 ft), New Jersey Current
 +00:00 :America/New_York
@@ -468726,7 +468758,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.2906
 # !latitude: 40.5092
-# region: Victory Bridge (depth 3 ft)
+# state: New Jersey
 # admin1_quelle: Name
 Raritan River entrance, Victory Bridge (depth 3 ft), New Jersey Current
 +00:00 :America/New_York
@@ -475261,7 +475293,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1174
 # !latitude: 26.0949
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 Turning Basin (depth 34 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -475459,7 +475491,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1174
 # !latitude: 26.0949
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 Turning Basin (depth 14 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -475657,7 +475689,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1174
 # !latitude: 26.0949
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 Turning Basin (depth 4 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -475855,7 +475887,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1191
 # !latitude: 26.0997
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 17th Street Bridge (depth 12 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -476053,7 +476085,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1191
 # !latitude: 26.0997
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 17th Street Bridge (depth 9 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -476251,7 +476283,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1191
 # !latitude: 26.0997
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 17th Street Bridge (depth 6 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -476449,7 +476481,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1131
 # !latitude: 26.0873
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 South entrance (ICW) (depth 31 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -476648,7 +476680,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1131
 # !latitude: 26.0873
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 South entrance (ICW) (depth 15 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -476846,7 +476878,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1131
 # !latitude: 26.0873
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 South entrance (ICW) (depth 5 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -477044,7 +477076,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1138
 # !latitude: 26.0744
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 South Port, at the terminals (depth 26 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -477242,7 +477274,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1138
 # !latitude: 26.0744
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 South Port, at the terminals (depth 16 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -477440,7 +477472,7 @@ x 0 0
 # !units: knots
 # !longitude: -80.1138
 # !latitude: 26.0744
-# region: Port Everglades
+# state: Florida
 # admin1_quelle: Name
 South Port, at the terminals (depth 6 ft), Port Everglades, Florida Current
 +00:00 :America/New_York
@@ -482216,7 +482248,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8053
 # !latitude: 43.1141
-# region: south of (depth 37 ft)
+# state: New Hampshire
 # admin1_quelle: Name
 Frankfort Island, south of (depth 37 ft), New Hampshire Current
 +00:00 :America/New_York
@@ -482414,7 +482446,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8053
 # !latitude: 43.1141
-# region: south of (depth 24 ft)
+# state: New Hampshire
 # admin1_quelle: Name
 Frankfort Island, south of (depth 24 ft), New Hampshire Current
 +00:00 :America/New_York
@@ -482612,7 +482644,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.8053
 # !latitude: 43.1141
-# region: south of (depth 7 ft)
+# state: New Hampshire
 # admin1_quelle: Name
 Frankfort Island, south of (depth 7 ft), New Hampshire Current
 +00:00 :America/New_York
@@ -508946,7 +508978,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.6307
 # !latitude: 47.5796
-# region: Warren Ave. Bridge (depth 4 ft)
+# state: Washington
 # admin1_quelle: Name
 Port Washington Narrows, Warren Ave. Bridge (depth 4 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -566960,7 +566992,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7628
 # !latitude: 47.6912
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 Hazel Point (depth 154 ft), Hood Canal, Washington Current
 +00:00 :America/Los_Angeles
@@ -567158,7 +567190,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7628
 # !latitude: 47.6912
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 Hazel Point (depth 88 ft), Hood Canal, Washington Current
 +00:00 :America/Los_Angeles
@@ -567356,7 +567388,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7628
 # !latitude: 47.6912
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 Hazel Point (depth 23 ft), Hood Canal, Washington Current
 +00:00 :America/Los_Angeles
@@ -567554,7 +567586,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.6767
 # !latitude: 47.8217
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 South Point (depth 178 ft), Hood Canal, Washington Current
 +00:00 :America/Los_Angeles
@@ -567752,7 +567784,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.6767
 # !latitude: 47.8217
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 South Point (depth 43 ft), Hood Canal, Washington Current
 +00:00 :America/Los_Angeles
@@ -567950,7 +567982,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.6767
 # !latitude: 47.8217
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 South Point (depth 24 ft), Hood Canal, Washington Current
 +00:00 :America/Los_Angeles
@@ -568346,7 +568378,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.5782
 # !latitude: 47.8547
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 Port Gamble Bay entrance (depth 32 ft), Hood Canal, Washington Current
 +00:00 :America/Los_Angeles
@@ -568544,7 +568576,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.5782
 # !latitude: 47.8547
-# region: Hood Canal
+# state: Washington
 # admin1_quelle: Name
 Port Gamble Bay entrance (depth 10 ft), Hood Canal, Washington Current
 +00:00 :America/Los_Angeles
@@ -570722,7 +570754,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.6388
 # !latitude: 47.9284
-# region: Foulweather Bluff (depth 78 ft)
+# state: Washington
 # admin1_quelle: Name
 Hood Canal entrance, Foulweather Bluff (depth 78 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -570920,7 +570952,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.6388
 # !latitude: 47.9284
-# region: Foulweather Bluff (depth 32 ft)
+# state: Washington
 # admin1_quelle: Name
 Hood Canal entrance, Foulweather Bluff (depth 32 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -584780,7 +584812,7 @@ x 0 0
 # !units: knots
 # !longitude: -123.1334
 # !latitude: 48.2335
-# region: 2.8 mi NNW of (depth 71 ft)
+# state: Washington
 # admin1_quelle: Name
 New Dungeness Light, 2.8 mi NNW of (depth 71 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -584978,7 +585010,7 @@ x 0 0
 # !units: knots
 # !longitude: -123.1334
 # !latitude: 48.2335
-# region: 2.8 mi NNW of (depth 52 ft)
+# state: Washington
 # admin1_quelle: Name
 New Dungeness Light, 2.8 mi NNW of (depth 52 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -585572,7 +585604,7 @@ x 0 0
 # !units: knots
 # !longitude: -123.1672
 # !latitude: 48.3002
-# region: 7.6 mi SSE of (depth 28 ft)
+# state: Washington
 # admin1_quelle: Name
 Discovery Island, 7.6 mi SSE of (depth 28 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -606165,7 +606197,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7147
 # !latitude: 48.6794
-# region: 1.3 nmi NE of (depth 89 ft)
+# state: Washington
 # admin1_quelle: Name
 Lawrence Point, Orcas Island, 1.3 nmi NE of (depth 89 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -606363,7 +606395,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7147
 # !latitude: 48.6794
-# region: 1.3 nmi NE of (depth 76 ft)
+# state: Washington
 # admin1_quelle: Name
 Lawrence Point, Orcas Island, 1.3 nmi NE of (depth 76 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -606561,7 +606593,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7147
 # !latitude: 48.6794
-# region: 1.3 nmi NE of (depth 63 ft)
+# state: Washington
 # admin1_quelle: Name
 Lawrence Point, Orcas Island, 1.3 nmi NE of (depth 63 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -606759,7 +606791,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7147
 # !latitude: 48.6794
-# region: 1.3 nmi NE of (depth 50 ft)
+# state: Washington
 # admin1_quelle: Name
 Lawrence Point, Orcas Island, 1.3 nmi NE of (depth 50 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -606957,7 +606989,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7147
 # !latitude: 48.6794
-# region: 1.3 nmi NE of (depth 37 ft)
+# state: Washington
 # admin1_quelle: Name
 Lawrence Point, Orcas Island, 1.3 nmi NE of (depth 37 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -648735,7 +648767,7 @@ x 0 0
 # !units: knots
 # !longitude: -123.1554
 # !latitude: 48.4521
-# region: 3.0 nmi NE of (depth 68 ft)
+# state: Washington
 # admin1_quelle: Name
 Discovery Island, 3.0 nmi NE of (depth 68 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -648933,7 +648965,7 @@ x 0 0
 # !units: knots
 # !longitude: -123.1554
 # !latitude: 48.4521
-# region: 3.0 nmi NE of (depth 41 ft)
+# state: Washington
 # admin1_quelle: Name
 Discovery Island, 3.0 nmi NE of (depth 41 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -665366,7 +665398,7 @@ x 0 0
 # !units: knots
 # !longitude: -147.3048
 # !latitude: 60.7267
-# region: between (depth 46 ft)
+# state: Alaska
 # admin1_quelle: Name
 Storey Island and Peak Island, between (depth 46 ft), Alaska Current
 +00:00 :America/Anchorage
@@ -672897,7 +672929,7 @@ x 0 0
 # !units: knots
 # !longitude: -132.9634
 # !latitude: 56.6206
-# region: Wrangell Narrows
+# state: Alaska
 # admin1_quelle: Name
 South Ledge (depth 23 ft), Wrangell Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -673095,7 +673127,7 @@ x 0 0
 # !units: knots
 # !longitude: -132.9634
 # !latitude: 56.6206
-# region: Wrangell Narrows
+# state: Alaska
 # admin1_quelle: Name
 South Ledge (depth 16 ft), Wrangell Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -673293,7 +673325,7 @@ x 0 0
 # !units: knots
 # !longitude: -132.9634
 # !latitude: 56.6206
-# region: Wrangell Narrows
+# state: Alaska
 # admin1_quelle: Name
 South Ledge (depth 7 ft), Wrangell Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -695275,7 +695307,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.6750
 # !latitude: 55.8334
-# region: 1.0 nmi SE of (depth 42 ft)
+# state: Alaska
 # admin1_quelle: Name
 Whale Rock, 1.0 nmi SE of (depth 42 ft), Alaska Current
 +00:00 :America/Juneau
@@ -700621,7 +700653,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.5627
 # !latitude: 55.5296
-# region: north (depth 81 ft)
+# state: Alaska
 # admin1_quelle: Name
 Saint Nicholas Channel, north (depth 81 ft), Alaska Current
 +00:00 :America/Juneau
@@ -700819,7 +700851,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.5627
 # !latitude: 55.5296
-# region: north (depth 22 ft)
+# state: Alaska
 # admin1_quelle: Name
 Saint Nicholas Channel, north (depth 22 ft), Alaska Current
 +00:00 :America/Juneau
@@ -701215,7 +701247,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.6308
 # !latitude: 55.4550
-# region: south end (depth 87 ft)
+# state: Alaska
 # admin1_quelle: Name
 Saint Nicholas Channel, south end (depth 87 ft), Alaska Current
 +00:00 :America/Juneau
@@ -701413,7 +701445,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.6308
 # !latitude: 55.4550
-# region: south end (depth 28 ft)
+# state: Alaska
 # admin1_quelle: Name
 Saint Nicholas Channel, south end (depth 28 ft), Alaska Current
 +00:00 :America/Juneau
@@ -702403,7 +702435,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.3305
 # !latitude: 55.5882
-# region: 0.25 nmi N of (depth 65 ft)
+# state: Alaska
 # admin1_quelle: Name
 San Christoval Chanel, Larz Lt., 0.25 nmi N of (depth 65 ft), Alaska Current
 +00:00 :America/Juneau
@@ -702601,7 +702633,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.3305
 # !latitude: 55.5882
-# region: 0.25 nmi N of (depth 16 ft)
+# state: Alaska
 # admin1_quelle: Name
 San Christoval Chanel, Larz Lt., 0.25 nmi N of (depth 16 ft), Alaska Current
 +00:00 :America/Juneau
@@ -703393,7 +703425,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.7331
 # !latitude: 55.5719
-# region: west end (depth 95 ft)
+# state: Alaska
 # admin1_quelle: Name
 Arriaga Passage, west end (depth 95 ft), Alaska Current
 +00:00 :America/Juneau
@@ -703591,7 +703623,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.7331
 # !latitude: 55.5719
-# region: west end (depth 62 ft)
+# state: Alaska
 # admin1_quelle: Name
 Arriaga Passage, west end (depth 62 ft), Alaska Current
 +00:00 :America/Juneau
@@ -703789,7 +703821,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.7331
 # !latitude: 55.5719
-# region: west end (depth 29 ft)
+# state: Alaska
 # admin1_quelle: Name
 Arriaga Passage, west end (depth 29 ft), Alaska Current
 +00:00 :America/Juneau
@@ -704383,7 +704415,7 @@ x 0 0
 # !units: knots
 # !longitude: -133.5224
 # !latitude: 55.2704
-# region: west of (depth 48 ft)
+# state: Alaska
 # admin1_quelle: Name
 Point Rosary, west of (depth 48 ft), Alaska Current
 +00:00 :America/Juneau
@@ -708344,7 +708376,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.6997
 # !latitude: 55.3541
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 East of the airport (depth 87 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -708542,7 +708574,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.6997
 # !latitude: 55.3541
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 East of the airport (depth 55 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -708740,7 +708772,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.6997
 # !latitude: 55.3541
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 East of the airport (depth 15 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -708938,7 +708970,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.5964
 # !latitude: 55.3123
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 Pennock Island, east channel (depth 101 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -709136,7 +709168,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.5964
 # !latitude: 55.3123
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 Pennock Island, east channel (depth 62 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -709334,7 +709366,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.5964
 # !latitude: 55.3123
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 Pennock Island, east channel (depth 16 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -710126,7 +710158,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.6160
 # !latitude: 55.3014
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 Pennock Island, west channel (depth 80 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -710324,7 +710356,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.6160
 # !latitude: 55.3014
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 Pennock Island, west channel (depth 41 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -710522,7 +710554,7 @@ x 0 0
 # !units: knots
 # !longitude: -131.6160
 # !latitude: 55.3014
-# region: Tongass Narrows
+# state: Alaska
 # admin1_quelle: Name
 Pennock Island, west channel (depth 14 ft), Tongass Narrows, Alaska Current
 +00:00 :America/Juneau
@@ -716883,7 +716915,7 @@ x 0 0
 # !units: knots
 # !longitude: -134.9323
 # !latitude: 58.4747
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 North Pass, Lincoln Island (depth 230 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -717081,7 +717113,7 @@ x 0 0
 # !units: knots
 # !longitude: -134.9323
 # !latitude: 58.4747
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 North Pass, Lincoln Island (depth 131 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -717477,7 +717509,7 @@ x 0 0
 # !units: knots
 # !longitude: -134.9323
 # !latitude: 58.4747
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 North Pass, Lincoln Island (depth 33 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -717675,7 +717707,7 @@ x 0 0
 # !units: knots
 # !longitude: -134.9666
 # !latitude: 58.4168
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Point Retreat, 1 mi west of (depth 413 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -717873,7 +717905,7 @@ x 0 0
 # !units: knots
 # !longitude: -134.9666
 # !latitude: 58.4168
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Point Retreat, 1 mi west of (depth 232 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -718071,7 +718103,7 @@ x 0 0
 # !units: knots
 # !longitude: -134.9666
 # !latitude: 58.4168
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Point Retreat, 1 mi west of (depth 52 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -718269,7 +718301,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.0431
 # !latitude: 58.6035
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Vanderbilt Reef, 2 mi west of (depth 534 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -718467,7 +718499,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.0431
 # !latitude: 58.6035
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Vanderbilt Reef, 2 mi west of (depth 298 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -718665,7 +718697,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.0431
 # !latitude: 58.6035
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Vanderbilt Reef, 2 mi west of (depth 88 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -718863,7 +718895,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3809
 # !latitude: 59.2672
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Low Point, Taiya Inlet entrance (depth 185 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -719061,7 +719093,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3809
 # !latitude: 59.2672
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Low Point, Taiya Inlet entrance (depth 106 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -719259,7 +719291,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3809
 # !latitude: 59.2672
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Low Point, Taiya Inlet entrance (depth 37 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -719457,7 +719489,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3504
 # !latitude: 59.2169
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Battery Point, Chilkoot Inlet (depth 241 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -719655,7 +719687,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3504
 # !latitude: 59.2169
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Battery Point, Chilkoot Inlet (depth 133 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -719853,7 +719885,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3504
 # !latitude: 59.2169
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Battery Point, Chilkoot Inlet (depth 35 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -720051,7 +720083,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3732
 # !latitude: 59.1047
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Glacier Point, Chilkat Inlet (depth 341 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -720249,7 +720281,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3732
 # !latitude: 59.1047
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Glacier Point, Chilkat Inlet (depth 194 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -720447,7 +720479,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.3732
 # !latitude: 59.1047
-# region: Lynn Canal
+# state: Alaska
 # admin1_quelle: Name
 Glacier Point, Chilkat Inlet (depth 46 ft), Lynn Canal, Alaska Current
 +00:00 :America/Juneau
@@ -729357,7 +729389,7 @@ x 0 0
 # !units: knots
 # !longitude: -135.7382
 # !latitude: 58.3097
-# region: southwest of (depth 48 ft)
+# state: Alaska
 # admin1_quelle: Name
 Pleasant Island, southwest of (depth 48 ft), Alaska Current
 +00:00 :America/Juneau
@@ -735099,7 +735131,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.4620
 # !latitude: 37.8292
-# region: 0.88 nmi NE of (depth 54 ft)
+# state: California
 # admin1_quelle: Name
 Golden Gate Bridge, 0.88 nmi NE of (depth 54 ft), California Current
 +00:00 :America/Los_Angeles
@@ -735297,7 +735329,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.4620
 # !latitude: 37.8292
-# region: 0.88 nmi NE of (depth 21 ft)
+# state: California
 # admin1_quelle: Name
 Golden Gate Bridge, 0.88 nmi NE of (depth 21 ft), California Current
 +00:00 :America/Los_Angeles
@@ -735693,7 +735725,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.4730
 # !latitude: 37.8201
-# region: 0.46 nmi E of (depth 69 ft)
+# state: California
 # admin1_quelle: Name
 Golden Gate Bridge, 0.46 nmi E of (depth 69 ft), California Current
 +00:00 :America/Los_Angeles
@@ -735891,7 +735923,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.4730
 # !latitude: 37.8201
-# region: 0.46 nmi E of (depth 30 ft)
+# state: California
 # admin1_quelle: Name
 Golden Gate Bridge, 0.46 nmi E of (depth 30 ft), California Current
 +00:00 :America/Los_Angeles
@@ -744008,7 +744040,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.5184
 # !latitude: 37.8011
-# region: 0.95 nmi SSE of (depth 96 ft)
+# state: California
 # admin1_quelle: Name
 Point Bonita, 0.95 nmi SSE of (depth 96 ft), California Current
 +00:00 :America/Los_Angeles
@@ -744206,7 +744238,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.5184
 # !latitude: 37.8011
-# region: 0.95 nmi SSE of (depth 44 ft)
+# state: California
 # admin1_quelle: Name
 Point Bonita, 0.95 nmi SSE of (depth 44 ft), California Current
 +00:00 :America/Los_Angeles
@@ -744404,7 +744436,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.5184
 # !latitude: 37.8011
-# region: 0.95 nmi SSE of (depth 17 ft)
+# state: California
 # admin1_quelle: Name
 Point Bonita, 0.95 nmi SSE of (depth 17 ft), California Current
 +00:00 :America/Los_Angeles
@@ -745986,7 +746018,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.6954
 # !latitude: 37.6446
-# region: N end (depth 53 ft)
+# state: California
 # admin1_quelle: Name
 San Francisco southern traffic lane, N end (depth 53 ft), California Current
 +00:00 :America/Los_Angeles
@@ -746184,7 +746216,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.6954
 # !latitude: 37.6446
-# region: N end (depth 13 ft)
+# state: California
 # admin1_quelle: Name
 San Francisco southern traffic lane, N end (depth 13 ft), California Current
 +00:00 :America/Los_Angeles
@@ -766996,7 +767028,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.0548
 # !latitude: 27.8526
-# region: S end (depth 3 ft)
+# state: Texas
 # admin1_quelle: Name
 Lydia Ann Channel, S end (depth 3 ft), Texas Current
 +00:00 :America/Chicago
@@ -767590,7 +767622,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.2116
 # !latitude: 26.1075
-# region: Light 69 (depth 4 ft)
+# state: Texas
 # admin1_quelle: Name
 ICW Laguna Madre, Light 69 (depth 4 ft), Texas Current
 +00:00 :America/Chicago
@@ -767789,7 +767821,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.1978
 # !latitude: 26.0824
-# region: Laguna Madre
+# state: Texas
 # admin1_quelle: Name
 Queen Isabella Causeway Bridge (depth 17 ft), Laguna Madre, Texas Current
 +00:00 :America/Chicago
@@ -768185,7 +768217,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.2197
 # !latitude: 26.0350
-# region: east end (depth 18 ft)
+# state: Texas
 # admin1_quelle: Name
 Brownsville Ship Channel, east end (depth 18 ft), Texas Current
 +00:00 :America/Chicago
@@ -768383,7 +768415,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.1981
 # !latitude: 26.0466
-# region: SW end (depth 3 ft)
+# state: Texas
 # admin1_quelle: Name
 Laguna Madre Channel, SW end (depth 3 ft), Texas Current
 +00:00 :America/Chicago
@@ -768581,7 +768613,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.1675
 # !latitude: 26.0665
-# region: NE end (depth 8 ft)
+# state: Texas
 # admin1_quelle: Name
 Laguna Madre Channel, NE end (depth 8 ft), Texas Current
 +00:00 :America/Chicago
@@ -768779,7 +768811,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.1675
 # !latitude: 26.0665
-# region: NE end (depth 15 ft)
+# state: Texas
 # admin1_quelle: Name
 Laguna Madre Channel, NE end (depth 15 ft), Texas Current
 +00:00 :America/Chicago
@@ -769778,7 +769810,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.2115
 # !latitude: 26.0542
-# region: north end (depth 28 ft)
+# state: Texas
 # admin1_quelle: Name
 Port Isabel Channel, north end (depth 28 ft), Texas Current
 +00:00 :America/Chicago
@@ -783050,7 +783082,7 @@ x 0 0
 # !units: knots
 # !longitude: -70.6249
 # !latitude: 41.7375
-# region: west end (depth 13 ft)
+# state: Massachusetts
 # admin1_quelle: Name
 Cape Cod Canal, west end (depth 13 ft), Massachusetts Current
 +00:00 :America/New_York
@@ -785229,7 +785261,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.3339
 # !latitude: 36.9629
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 Sewells Point (Naval Station Norfolk) (depth 21 ft), Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -785427,7 +785459,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.3339
 # !latitude: 36.9629
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 Sewells Point (Naval Station Norfolk) (depth 34 ft), Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -785625,7 +785657,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.3339
 # !latitude: 36.9629
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 Sewells Point (Naval Station Norfolk) (depth 44 ft), Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -785823,7 +785855,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.4145
 # !latitude: 36.9560
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 Newport News Channel, west end (depth 15 ft), Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -786021,7 +786053,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.4145
 # !latitude: 36.9560
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 Newport News Channel, west end (depth 21 ft), Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -786219,7 +786251,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.4145
 # !latitude: 36.9560
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 Newport News Channel, west end (depth 31 ft), Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -789785,7 +789817,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.8276
 # !latitude: 39.5305
-# region: Chesapeake City (depth 59 ft)
+# state: Maryland
 # admin1_quelle: Name
 Chesapeake and Delaware Canal, Chesapeake City (depth 59 ft), Maryland Current
 +00:00 :America/New_York
@@ -790182,7 +790214,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.8276
 # !latitude: 39.5305
-# region: Chesapeake City (depth 8 ft)
+# state: Maryland
 # admin1_quelle: Name
 Chesapeake and Delaware Canal, Chesapeake City (depth 8 ft), Maryland Current
 +00:00 :America/New_York
@@ -790381,7 +790413,7 @@ x 0 0
 # !units: knots
 # !longitude: -76.4436
 # !latitude: 36.9838
-# region: Hampton Roads
+# state: Virginia
 # admin1_quelle: Name
 Newport News Shipbuilding (depth 22 ft), Hampton Roads, Virginia Current
 +00:00 :America/New_York
@@ -790580,7 +790612,7 @@ x 0 0
 # !units: knots
 # !longitude: -97.0520
 # !latitude: 27.8381
-# region: Port Aransas
+# state: Texas
 # admin1_quelle: Name
 UTMSI Research Pier (midchannel) (depth 20 ft), Port Aransas, Texas Current
 +00:00 :America/Chicago
@@ -792371,7 +792403,7 @@ x 0 0
 # !units: knots
 # !longitude: -75.1396
 # !latitude: 39.9462
-# region: Penns Landing (depth 39 ft)
+# state: Pennsylvania
 # admin1_quelle: Name
 Philadelphia, Penns Landing (depth 39 ft), Pennsylvania Current
 +00:00 :America/New_York
@@ -793361,7 +793393,7 @@ x 0 0
 # !units: knots
 # !longitude: -95.2939
 # !latitude: 28.9550
-# region: Freeport
+# state: Texas
 # admin1_quelle: Name
 Surfside Bridge (depth 30 ft), Freeport, Texas Current
 +00:00 :America/Chicago
@@ -793560,7 +793592,7 @@ x 0 0
 # !units: knots
 # !longitude: -95.2939
 # !latitude: 28.9550
-# region: Freeport
+# state: Texas
 # admin1_quelle: Name
 Surfside Bridge (depth 15 ft), Freeport, Texas Current
 +00:00 :America/Chicago
@@ -793758,7 +793790,7 @@ x 0 0
 # !units: knots
 # !longitude: -95.2939
 # !latitude: 28.9550
-# region: Freeport
+# state: Texas
 # admin1_quelle: Name
 Surfside Bridge (depth 135 ft), Freeport, Texas Current
 +00:00 :America/Chicago
@@ -794551,7 +794583,7 @@ x 0 0
 # !units: knots
 # !longitude: -94.7408
 # !latitude: 29.3422
-# region: LB 11 (depth 13 ft)
+# state: Texas
 # admin1_quelle: Name
 Galveston Bay entrance channel, LB 11 (depth 13 ft), Texas Current
 +00:00 :America/Chicago
@@ -805846,7 +805878,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.4148
 # !latitude: 30.7089
-# region: LB 19 (depth 11 ft)
+# state: Florida
 # admin1_quelle: Name
 St. Marys entrance, LB 19 (depth 11 ft), Florida Current
 +00:00 :America/New_York
@@ -806044,7 +806076,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.4148
 # !latitude: 30.7089
-# region: LB 19 (depth 21 ft)
+# state: Florida
 # admin1_quelle: Name
 St. Marys entrance, LB 19 (depth 21 ft), Florida Current
 +00:00 :America/New_York
@@ -806242,7 +806274,7 @@ x 0 0
 # !units: knots
 # !longitude: -81.4148
 # !latitude: 30.7089
-# region: LB 19 (depth 34 ft)
+# state: Florida
 # admin1_quelle: Name
 St. Marys entrance, LB 19 (depth 34 ft), Florida Current
 +00:00 :America/New_York
@@ -809412,7 +809444,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7306
 # !latitude: 47.7578
-# region: Hood Canal LB B (depth 14 ft)
+# state: Washington
 # admin1_quelle: Name
 Bangor, Hood Canal LB B (depth 14 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -809611,7 +809643,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7306
 # !latitude: 47.7578
-# region: Hood Canal LB B (depth 28 ft)
+# state: Washington
 # admin1_quelle: Name
 Bangor, Hood Canal LB B (depth 28 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -809810,7 +809842,7 @@ x 0 0
 # !units: knots
 # !longitude: -122.7306
 # !latitude: 47.7578
-# region: Hood Canal LB B (depth 41 ft)
+# state: Washington
 # admin1_quelle: Name
 Bangor, Hood Canal LB B (depth 41 ft), Washington Current
 +00:00 :America/Los_Angeles
@@ -811010,7 +811042,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.1513
 # !latitude: 40.6422
-# region: Kill Van Kull
+# state: New York
 # admin1_quelle: Name
 Bergen Point (depth 37 ft), Kill Van Kull, New York Current
 +00:00 :America/New_York
@@ -811213,7 +811245,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.1513
 # !latitude: 40.6422
-# region: Kill Van Kull
+# state: New York
 # admin1_quelle: Name
 Bergen Point (depth 14 ft), Kill Van Kull, New York Current
 +00:00 :America/New_York
@@ -811416,7 +811448,7 @@ x 0 0
 # !units: knots
 # !longitude: -74.1433
 # !latitude: 40.6417
-# region: Kill Van Kull
+# state: New York
 # admin1_quelle: Name
 Bayonne Bridge (depth 16 ft), Kill Van Kull, New York Current
 +00:00 :America/New_York
@@ -818594,7 +818626,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.8700
 # !latitude: 29.7286
-# region: USCG base (depth 4 ft)
+# state: Texas
 # admin1_quelle: Name
 Sabine Pass, USCG base (depth 4 ft), Texas Current
 +00:00 :America/Chicago
@@ -818996,7 +819028,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.8900
 # !latitude: 29.7581
-# region: Sabine Pass
+# state: Louisiana
 # admin1_quelle: Name
 Sabine Front Range, Point Hunt, NW of (depth 7 ft), Sabine Pass, Louisiana Current
 +00:00 :America/Chicago
@@ -819194,7 +819226,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.8900
 # !latitude: 29.7581
-# region: Sabine Pass
+# state: Louisiana
 # admin1_quelle: Name
 Sabine Front Range, Point Hunt, NW of (depth 136 ft), Sabine Pass, Louisiana Current
 +00:00 :America/Chicago
@@ -819392,7 +819424,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.8900
 # !latitude: 29.7581
-# region: Sabine Pass
+# state: Louisiana
 # admin1_quelle: Name
 Sabine Front Range, Point Hunt, NW of (depth 202 ft), Sabine Pass, Louisiana Current
 +00:00 :America/Chicago
@@ -819590,7 +819622,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.8711
 # !latitude: 29.9811
-# region: Sabine Pass
+# state: Texas
 # admin1_quelle: Name
 Rainbow Bridge (depth 71 ft), Sabine Pass, Texas Current
 +00:00 :America/Chicago
@@ -819789,7 +819821,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.8711
 # !latitude: 29.9811
-# region: Sabine Pass
+# state: Texas
 # admin1_quelle: Name
 Rainbow Bridge (depth 12 ft), Sabine Pass, Texas Current
 +00:00 :America/Chicago
@@ -819987,7 +820019,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.8711
 # !latitude: 29.9811
-# region: Sabine Pass
+# state: Texas
 # admin1_quelle: Name
 Rainbow Bridge (depth 307 ft), Sabine Pass, Texas Current
 +00:00 :America/Chicago
@@ -820186,7 +820218,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.9311
 # !latitude: 29.8667
-# region: Sabine Pass
+# state: Texas
 # admin1_quelle: Name
 Port Arthur (depth 16 ft), Sabine Pass, Texas Current
 +00:00 :America/Chicago
@@ -820781,7 +820813,7 @@ x 0 0
 # !units: knots
 # !longitude: -93.8737
 # !latitude: 29.7424
-# region: Cheniere LNG (depth 8 ft)
+# state: Louisiana
 # admin1_quelle: Name
 Sabine Pass, Cheniere LNG (depth 8 ft), Louisiana Current
 +00:00 :America/Chicago
