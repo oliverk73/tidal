@@ -28,7 +28,7 @@ LAENDER = {
     # Ferner Osten (16.10.2026): nur das noch nicht von Oliver gepruefte Gebiet (Kamtschatka, Magadan,
     # Ochotsk-Nordkueste, Tschukotka, Arktis); Sachalin, Kurilen, Primorje und Chabarowsk bis Baidukov sind fertig.
     'Russia': dict(iso='RU', auszug='ru_fe_auszug.json', koreanisch=False, gattung=r'(?!)',
-                   filter=lambda r: r['lon'] >= 110 and 'Sakhalin Oblast' not in r['name'] and 'Primorsky' not in r['name']
+                   filter=lambda r: r['lon'] >= 110 and 'Krasnoyarsk' not in r['name'] and 'Sakhalin Oblast' not in r['name'] and 'Primorsky' not in r['name']
                    and not ('Khabarovsk' in r['name'] and r['lat'] < 53.31)),
 }
 LAND = os.environ.get('PRUEF_LAND') or (sys.argv[1] if __name__ == '__main__' and len(sys.argv) > 1 else 'South Korea')
