@@ -36,6 +36,7 @@ from global_land_mask import globe
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import load_records, ROOT                      # noqa: E402
 import osm_land                                                    # noqa: E402
+from stromnamen import kurz                                        # noqa: E402
 
 RICHTUNGEN = {'north': 'N', 'south': 'S', 'east': 'E', 'west': 'W', 'northeast': 'NE', 'northwest': 'NW',
               'southeast': 'SE', 'southwest': 'SW'}
@@ -100,28 +101,27 @@ def kern(n):
 
 
 def name_vorschlag(n):
-    """NOAA-Altform -> Klammer-Regel. None, wenn der Name schon passt."""
-    rumpf, land = n.rsplit(', ', 1) if ', ' in n else (n, '')
-    tiefe = re.search(r'\s*\((depth [^)]*)\)\s*$', rumpf)
-    if tiefe:
-        rumpf = rumpf[:tiefe.start()]
-    teile = [t.strip() for t in rumpf.split(',')]
-    if len(teile) < 2:
+    """NOAA-Altform -> Klammer-Regel. None, wenn nichts zu tun ist.
+
+    "Agate Passage, south end (depth 15 ft), Puget Sound, Washington Current"
+      -> "Agate Passage (south end, Puget Sound, depth 15 ft), Washington Current"
+    """
+    if ', ' not in n:
         return None
-    vorn, ctx = teile[0], []
-    for t in teile[1:]:
-        t = re.sub(r'\b(\d[\d.]*)\s*(?:n\.?\s?mi\.?|nmi|miles?)\b', r'\1 mi', t)
-        t = re.sub(r'\b(north|south|east|west|northeast|northwest|southeast|southwest)\b(?=\s+of\b)',
-                   lambda m: RICHTUNGEN[m.group(1).lower()], t, flags=re.I)
-        ctx.append(t)
-    if tiefe:
-        ctx.append(tiefe.group(1))
-    # eine vorhandene Klammer im Kopfteil bleibt Kontext
+    rumpf, land = n.rsplit(', ', 1)
+    if land == 'Current' or not land.endswith('Current'):
+        return None
+    tiefen = re.findall(r'\((depth [^)]*)\)', rumpf)
+    rumpf = re.sub(r'\s*\(depth [^)]*\)', '', rumpf)
+    teile = [t.strip() for t in rumpf.split(',') if t.strip()]
+    vorn, ctx = kurz(teile[0]), [kurz(t) for t in teile[1:]]
     m = re.match(r'^(.*?)\s*\((.*)\)$', vorn)
     if m:
         vorn, ctx = m.group(1), [m.group(2)] + ctx
-    neu = '%s (%s)' % (vorn, ', '.join(ctx))
-    return neu + (', ' + land if land else '')
+    ctx += tiefen
+    if not ctx:
+        return None
+    return '%s (%s), %s' % (vorn, ', '.join(ctx), land)
 
 
 def main(argv):
