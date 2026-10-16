@@ -25254,8 +25254,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 155.5667
-# !latitude: 55.3167
+# !longitude: 155.5534
+# !latitude: 55.2909
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
@@ -25449,8 +25449,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 164.4667
-# !latitude: 62.3833
+# !longitude: 164.4490
+# !latitude: 62.3990
 # note: 20260903 Phasen um -5.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +7.00 nach dem Buch)
@@ -25646,15 +25646,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 160.2500
-# !latitude: 61.6833
+# !longitude: 160.2566
+# !latitude: 61.6894
 # note: 20260903 Phasen um -5.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +7.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Magadan Oblast
 # admin1_quelle: Ufer 0.9 km
-Mys Matugin, Magadan Oblast, Russia
+# note: 20261016 Name "Mys Matugin" -> Kap mit Bucht; ATT 8319 und NOAA 137 sind derselbe Pegel (Oliver).
+Mys Matugin (Bukhta Matuga), Magadan Oblast, Russia
 +07:00 :Asia/Magadan
 4.1148 meters
 J1              0.1110  248.88
@@ -25841,8 +25842,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 160.4000
-# !latitude: 61.9667
+# !longitude: 160.4028
+# !latitude: 61.9652
 # note: 20260903 Phasen um -5.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +7.00 nach dem Buch)
