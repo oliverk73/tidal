@@ -98,19 +98,7 @@ def kenterfehler(coef, t, v):
     return float(np.sqrt(np.mean(np.square(fehler)))) if fehler else None
 
 
-ABSTAND = re.compile(r'^\s*(\d[\d.]*\s*(?:miles?|mi\.?|nmi\.?|nm|n\.\s?mi\.?|yds?\.?)\s+[A-Za-z]{1,3}\.?\s+of|'
-                     r'(?:north|south|east|west|NE|NW|SE|SW|N|S|E|W)\.?\s+of|off\s.*|midchannel.*|between.*)\s*$', re.I)
-
-
-def klammer(n, zusatz=None):
-    """Klammer-Regel: "Pond Point, 7.6 miles SSE of" -> "Pond Point (7.6 mi SSE of)"."""
-    teile = [t.strip() for t in re.sub(r'\s+', ' ', n).split(',')]
-    vorn, ctx = teile[0], []
-    for t in teile[1:]:
-        ctx.append(re.sub(r'\b(\d[\d.]*) miles?\b', r'\1 mi', t))
-    if zusatz:
-        ctx.append(zusatz)
-    return '%s (%s)' % (vorn, ', '.join(ctx)) if ctx else vorn
+from stromnamen import klammer, kurz                          # noqa: E402
 
 
 # NOAA-Namen ohne Bezugspunkt ("2.4 miles southwest of"); Bezugsort aus der Ueberschrift im Buch
@@ -142,7 +130,43 @@ def staat(P, la, lo):
     return n, g.distance(pt) * 111.2
 
 
+def nur_namen(argv):
+    """Namen in der fertigen Datei nach stromnamen.py erneuern, ohne neu zu fitten (16.10.2026)."""
+    meta = {s['id']: s for s in json.load(open(os.path.join(QUELLE, 'stations.json')))['stations'] if s['type'] == 'S'}
+    L = open(OUT, encoding='iso-8859-1').read().split('\n')
+    andere = set()
+    for f in glob.glob(os.path.join(ROOT, 'harmonics/*/*.txt')):
+        if '/backup/' in f or os.path.abspath(f) == os.path.abspath(OUT):
+            continue
+        for z in open(f, encoding='iso-8859-1'):
+            if z.rstrip().endswith('Current'):
+                andere.add(z.rstrip())
+    neu, sid, n = set(), None, 0
+    for i, z in enumerate(L):
+        if z.startswith('# station_id: '):
+            sid = z.split(': ', 1)[1].strip()
+        elif z.endswith(' Current') and not z.startswith('#') and sid:
+            st = z.rsplit(', ', 1)[1][:-len(' Current')]
+            basis = kurz(HAND[sid]) if sid in HAND else klammer(meta[sid]['name'])
+            name = '%s, %s Current' % (basis, st)
+            if name in neu or name in andere:
+                name = '%s, %s Current' % (klammer(meta[sid]['name'], sid), st)
+            name = name.encode('iso-8859-1', 'replace').decode('iso-8859-1')
+            neu.add(name)
+            if name != z:
+                if n < 12 or '-v' in argv:
+                    print('  %s\n   -> %s' % (z, name))
+                L[i] = name
+                n += 1
+            sid = None
+    print(n, 'Namen geaendert')
+    if '--schreiben' in argv:
+        schreiben(OUT, '\n'.join(L))
+
+
 def main(argv):
+    if '--nur-namen' in argv:
+        return nur_namen(argv)
     mx = int(argv[argv.index('--max') + 1]) if '--max' in argv else None
     kopf, order = kopf_und_reihenfolge()
     meta = {s['id']: s for s in json.load(open(os.path.join(QUELLE, 'stations.json')))['stations'] if s['type'] == 'S'}
@@ -178,7 +202,7 @@ def main(argv):
             continue
         st, dkm = staat(P, s['lat'], s['lng'])
         tz = tf.timezone_at(lat=s['lat'], lng=s['lng']) or tf.closest_timezone_at(lat=s['lat'], lng=s['lng']) or 'UTC'
-        basis = HAND.get(sid) or klammer(s['name'])
+        basis = kurz(HAND[sid]) if sid in HAND else klammer(s['name'])
         name = '%s, %s Current' % (basis, st)
         if name in namen:
             name = '%s, %s Current' % (klammer(s['name'], sid), st)
