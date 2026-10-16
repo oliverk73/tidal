@@ -35618,8 +35618,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 155.6500
-# !latitude: 50.8333
+# !longitude: 155.6709
+# !latitude: 50.8443
 # region: Sakhalin Oblast
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ostrov Paramushir, Kuril Islands, Russia [harmonics_utide_ti,
@@ -41249,8 +41249,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 141.3000
-# !latitude: 25.4333
+# !longitude: 141.2925
+# !latitude: 25.4332
 # region: Tokyo
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.54 auf den Springhub des Buchs (cptt-563); der Bau
@@ -85977,8 +85977,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 134.4833
-# !latitude: 7.3500
+# !longitude: 134.4786
+# !latitude: 7.3520
 # note: 20260907 Land im Namen berichtigt (vorher "Koror, Indonesia"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
 # note: 20260913 S2/K2 x 2.68 auf den Springhub des Buchs (cptt-2637); der Bau
@@ -135259,14 +135259,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 73.1500
-# !latitude: 0.8333
+# !longitude: 73.1865
+# !latitude: 0.8385
 # region: Gaafu Alifu
 # admin1_quelle: Ufer 22.2 km
 # note: 20260913 S2/K2 x 1.85 auf den Springhub des Buchs (cptt-3565); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Suvadiva Atoll, Maldive Islands, Maldives
+Kolamaafushi (Huvadhu Atoll), Maldives
 +05:30 :Indian/Maldives
 0.6706 meters
 J1              0.0020  75.42
@@ -135453,14 +135453,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 72.9500
-# !latitude: 4.9000
+# !longitude: 72.9379
+# !latitude: 4.8831
 # region: Baa
 # admin1_quelle: Ufer 2.5 km
 # note: 20260913 S2/K2 x 1.79 auf den Springhub des Buchs (cptt-3567); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Horsburgh Atoll, Maldive Islands, Maldives
+Goidhoo Atoll (Horsburgh Atoll), Maldives
 +00:00 :Indian/Maldives
 0.6401 meters
 J1              0.0035  292.62

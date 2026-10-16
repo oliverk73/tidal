@@ -1,15 +1,15 @@
 fingerprint,file,name,lat,lon,n_identical
-0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Korelinskiy, Russia",69.4167,33.4167,3
-0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Bukhta Nasha, Russia",69.3833,32.9167,3
-0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Zapadnaya Litsa, Russia",69.4833,32.5,3
+0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Korelinskiy, Murmansk Oblast, Russia",69.4167,33.4167,3
+0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Bukhta Nasha, Murmansk Oblast, Russia",69.3833,32.9167,3
+0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Zapadnaya Litsa, Murmansk Oblast, Russia",69.4833,32.5,3
 0f8ff885c198289b1f210bddeed29a4a,harmonics/att/harmonics_att_np202_secondary.txt,"Risør, Norway",58.7184,9.2404,4
 0f8ff885c198289b1f210bddeed29a4a,harmonics/att/harmonics_att_np202_secondary.txt,"Porsgrunn, Norway",59.1336,9.6302,4
 0f8ff885c198289b1f210bddeed29a4a,harmonics/att/harmonics_att_np202_secondary.txt,"Larvik, Norway",59.0417,10.0447,4
 0f8ff885c198289b1f210bddeed29a4a,harmonics/att/harmonics_att_np202_secondary.txt,"Sandjefjord, Norway",59.1254,10.2276,4
 15edb660fb2b73d770cf7a2ffde53b6a,harmonics/att/harmonics_att_np202_secondary.txt,"Kjeldebotn, Norway",68.4082,16.6728,2
 15edb660fb2b73d770cf7a2ffde53b6a,harmonics/att/harmonics_att_np202_secondary.txt,"Kjøpsvik, Norway",68.0934,16.3595,2
-24db30c4e7e1c8e7b097083b19ad6aee,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Zelenetskaya Zapadnaya, Russia",69.3,33.75,2
-24db30c4e7e1c8e7b097083b19ad6aee,harmonics/att/harmonics_att_np202_secondary.txt,"Bukhta Malyy Korabel'naya, Russia",69.5833,32.75,2
+24db30c4e7e1c8e7b097083b19ad6aee,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Zelenetskaya Zapadnaya, Murmansk Oblast, Russia",69.3,33.75,2
+24db30c4e7e1c8e7b097083b19ad6aee,harmonics/att/harmonics_att_np202_secondary.txt,"Bukhta Malyy Korabel'naya, Murmansk Oblast, Russia",69.5833,32.75,2
 333e51c89129044233ceb8ea10dea0aa,harmonics/att/harmonics_att_np202_secondary.txt,"Kopervik, Norway",59.2839,5.3164,2
 333e51c89129044233ceb8ea10dea0aa,harmonics/att/harmonics_att_np202_secondary.txt,"Kårstø, Norway",59.2708,5.4965,2
 453a8c26bb2502578e14f4b21b012421,harmonics/att/harmonics_att_np202_secondary.txt,"Sunndalsøra, Norway",62.6833,8.55,2
@@ -37,7 +37,7 @@ b93480bd16766728a6e780240e35c1c2,harmonics/att/harmonics_att_np202_secondary.txt
 b93480bd16766728a6e780240e35c1c2,harmonics/att/harmonics_att_np202_secondary.txt,"Tallinn, Estonia",59.4493,24.7755,12
 b93480bd16766728a6e780240e35c1c2,harmonics/att/harmonics_att_np202_secondary.txt,"Liepaja, Latvia",56.5333,20.9833,12
 b93480bd16766728a6e780240e35c1c2,harmonics/att/harmonics_att_np202_secondary.txt,"Klaipeda (Memel), Lithuania",55.7269,21.0925,12
-b93480bd16766728a6e780240e35c1c2,harmonics/att/harmonics_att_np202_secondary.txt,"Baltiysk, Russia",54.6386,19.8898,12
+b93480bd16766728a6e780240e35c1c2,harmonics/att/harmonics_att_np202_secondary.txt,"Baltiysk, Kaliningrad Oblast, Russia",54.6386,19.8898,12
 b93480bd16766728a6e780240e35c1c2,harmonics/att/harmonics_att_np202_secondary.txt,"Swinoujscie, Poland",53.9307,14.279,12
 b93480bd16766728a6e780240e35c1c2,harmonics/att/harmonics_att_np202_secondary.txt,"Arkona, Germany",54.6833,13.4333,12
 cb5d9d3a431bfa18f8d3cce34fff6be6,harmonics/att/harmonics_att_np202_secondary.txt,"Rutledal (Rutletangen), Norway",61.0701,5.1844,2
@@ -106,11 +106,9 @@ ac535597e4a6fc3a926cb5a7b5a603ab,harmonics/noaa/harmonics_noaa_amtt.txt,"Bahía 
 00320883ea95c5636d5cedfb0feb6eed,harmonics/noaa/harmonics_noaa_cptt.txt,"Sirawai (Panabutan Bay), Zamboanga del Norte, Philippines",7.5868,122.1358,1
 004355bfebf21da6463234e88d901956,harmonics/noaa/harmonics_noaa_cptt.txt,"General Island, Surigao del Sur, Philippines",9.414,126.0029,1
 2c44168cd154a9f0306bf83aa07c58be,harmonics/noaa/harmonics_noaa_cptt.txt,"Sablayan, Occidental Mindoro, Philippines",12.8318,120.7699,1
-39a1cdbe5a27bf4b7646cf41a7dde8d5,harmonics/noaa/harmonics_noaa_cptt.txt,"Port Kholmnsk, Russia",47.05,142.033,2
-39a1cdbe5a27bf4b7646cf41a7dde8d5,harmonics/noaa/harmonics_noaa_cptt.txt,"Nodasan (Noda), Russia",47.4333,141.9667,2
 5e6f87e2d926a3f999d90082360a483e,harmonics/noaa/harmonics_noaa_cptt.txt,"Araceli (Dumaran Island), Palawan, Philippines",10.55,119.9865,1
-5fbc5553b121204371b64797e07520bc,harmonics/noaa/harmonics_noaa_cptt.txt,"Buruny, Russia",48.1,142.5667,2
-5fbc5553b121204371b64797e07520bc,harmonics/noaa/harmonics_noaa_cptt.txt,"Airo Wan, Russia",46.8167,143.4167,2
+5fbc5553b121204371b64797e07520bc,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Burunnyy, Sakhalin Oblast, Russia",48.1237,142.5696,2
+5fbc5553b121204371b64797e07520bc,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Svobodnyy, Sakhalin Oblast, Russia",46.8232,143.4285,2
 66bbe040bcc0eb1f7a6002386de0aa76,harmonics/noaa/harmonics_noaa_cptt.txt,"Mercedes, Camarines Norte, Philippines",14.1084,123.0128,1
 6fa023531b451e4c598f9ff035a1a1a8,harmonics/noaa/harmonics_noaa_cptt.txt,"Maribojoc, Bohol, Philippines",9.736,123.8389,1
 7c9e8962c343b62028c5fb7305e800cf,harmonics/noaa/harmonics_noaa_cptt.txt,"San Miguel Island (Ticao Island), Masbate, Philippines",12.7177,123.5892,1
@@ -149,22 +147,22 @@ c40e6b483faf3f5173e633567b9be792,harmonics/noaa/harmonics_noaa_currents.txt,"Moi
 c40e6b483faf3f5173e633567b9be792,harmonics/noaa/harmonics_noaa_currents.txt,"Grand Island, 2 miles north of, Alaska Current",55.0,-132.8667,2
 fbfc80e54e21f9406714284267535ba0,harmonics/noaa/harmonics_noaa_currents.txt,"Robson Bight (off), Canada Current",50.5,-126.5833,2
 fbfc80e54e21f9406714284267535ba0,harmonics/noaa/harmonics_noaa_currents.txt,"Ripple Bluff, Knight Inlet, Canada Current",50.6333,-126.5167,2
-1d21e50c6ad0becb15f800fc748b1fdb,harmonics/noaa/harmonics_noaa_eutt.txt,"Bolshaya Korabelnaya Bay, Russia",69.6833,33.1,2
-1d21e50c6ad0becb15f800fc748b1fdb,harmonics/noaa/harmonics_noaa_eutt.txt,"Ara Bay, Russia",69.4333,32.85,2
-2961629b52e8e04314725b8929272224,harmonics/noaa/harmonics_noaa_eutt.txt,"Zapadnaya Bay, Russia",69.4833,32.5,2
-2961629b52e8e04314725b8929272224,harmonics/noaa/harmonics_noaa_eutt.txt,"Nasha Bay, Ura Bay, Russia",69.3833,32.9167,2
+1d21e50c6ad0becb15f800fc748b1fdb,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Bol'shaya Korabel'naya, Murmansk Oblast, Russia",69.6833,33.1,2
+1d21e50c6ad0becb15f800fc748b1fdb,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Ara, Murmansk Oblast, Russia",69.4333,32.85,2
+2961629b52e8e04314725b8929272224,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Zapadnaya Litsa, Murmansk Oblast, Russia",69.4833,32.5,2
+2961629b52e8e04314725b8929272224,harmonics/noaa/harmonics_noaa_eutt.txt,"Bukhta Nasha (Guba Ura), Murmansk Oblast, Russia",69.3833,32.9167,2
 2996ffdffc85217f2f87a95be7c794cf,harmonics/noaa/harmonics_noaa_eutt.txt,"Deba, Spain",43.3016,-2.3541,2
 2996ffdffc85217f2f87a95be7c794cf,harmonics/noaa/harmonics_noaa_eutt.txt,"Getaria, Spain",43.3039,-2.1993,2
-310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Titovka Bay, Russia",69.5833,32.0667,3
-310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Port Vladimirski, Russia",69.4167,33.15,3
-310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Dolgaya Bay, Russia",69.2833,33.8667,3
-3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Eyna Bay, Russia",69.6333,32.4167,3
-3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Bolshaya Volokovaya Bay, Russia",69.2667,33.6,3
-3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Veliki Point, Russia",69.0833,33.2833,3
-89771ee57b78dff3746f757bab7e0cbf,harmonics/noaa/harmonics_noaa_eutt.txt,"Bazisnyy Point, Russia",69.0167,33.0667,2
-89771ee57b78dff3746f757bab7e0cbf,harmonics/noaa/harmonics_noaa_eutt.txt,"Murmansk, Russia",68.9833,33.0667,2
-f4177b5f916ce9d30c5290024a0adf3a,harmonics/noaa/harmonics_noaa_eutt.txt,"Malaya Korabelnaya Bay, Russia",69.5833,32.75,2
-f4177b5f916ce9d30c5290024a0adf3a,harmonics/noaa/harmonics_noaa_eutt.txt,"Zyelyenyets Bay, Russia",69.3,33.75,2
+310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Titovka, Murmansk Oblast, Russia",69.5833,32.0667,3
+310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Port-Vladimir, Murmansk Oblast, Russia",69.4167,33.15,3
+310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Dolgaya Zapadnaya, Murmansk Oblast, Russia",69.2833,33.8667,3
+3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Eyna, Murmansk Oblast, Russia",69.6333,32.4167,3
+3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Bol'shaya Volokovaya, Murmansk Oblast, Russia",69.2667,33.6,3
+3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Velikiy, Murmansk Oblast, Russia",69.0833,33.2833,3
+89771ee57b78dff3746f757bab7e0cbf,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Bazisnyy, Murmansk Oblast, Russia",69.0167,33.0667,2
+89771ee57b78dff3746f757bab7e0cbf,harmonics/noaa/harmonics_noaa_eutt.txt,"Murmansk, Murmansk Oblast, Russia",68.9833,33.0667,2
+f4177b5f916ce9d30c5290024a0adf3a,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Malaya Korabel'naya, Murmansk Oblast, Russia",69.5833,32.75,2
+f4177b5f916ce9d30c5290024a0adf3a,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Zelenetskaya Zapadnaya, Murmansk Oblast, Russia",69.3,33.75,2
 03c6d30240d429252b95a8f9030135cc,harmonics/utide/harmonics_utide_tidetables.txt,"Lulworth Cove, England, United Kingdom",50.617,-2.247,2
 03c6d30240d429252b95a8f9030135cc,harmonics/utide/harmonics_utide_tidetables.txt,"Mupe Bay, England, United Kingdom",50.616667,-2.216667,2
 13c8b7c9e42cd9030e2e81c834c1b965,harmonics/utide/harmonics_utide_tidetables.txt,"Unahi Jetty, New Zealand",-35.0033,173.2545,2
