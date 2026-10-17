@@ -10,7 +10,7 @@ Vor dem Fit wird je Monat der Zeitversatz Reihe gegen FES geprueft (Kreuzkorrela
 Monate mit Datumssprung (Tagesmittel springt > 0.3 m) oder grossem Rest fliegen raus.
 Phasen in UTC (+00:00), Z0 ueber CD~LAT (19 Jahre rekonstruiert, wie fit_ioc_gaps.py).
 
-Usage: venv/bin/python py/ioc_russland_fit.py [--schreiben]
+Usage: venv/bin/python py/ioc_russland_fit.py [code ...] [--schreiben]
        schreibt harmonics/utide/harmonics_utide_observations.txt
 """
 import contextlib
@@ -38,9 +38,23 @@ PEGEL = [
      'IOC 44.35/135.80 (gerundet, an Land); vor das Ufer des Orts gelegt, bitte pruefen'),
     ('sosu', 'ioc_sosu_Sosunovo.csv', 'Mys Sosunova, Primorsky Krai, Russia', 46.5320, 138.3500,
      'IOC "Sosunovo" 46.53/138.33 (gerundet, an Land); Siedlung/Leuchtturm Mys Sosunova, bitte pruefen'),
+    # 17.10.2026 (PSMSL-Frage: dort nur Monatsmittel; Stundenwerte beim IOC, py/download_ioc_monate.py)
+    ('star', 'ioc_star_monate.csv', 'Starodubskoye, Sakhalin Oblast, Russia', 47.4154, 142.8132,
+     'IOC star 47.41/142.82 (an Land); naechstes Wasser beim Ort (GeoNames), bitte pruefen'),
+    ('seve2', 'ioc_seve2_monate.csv', "Severo-Kuril'sk (Paramushir, Kuril'skiye Ostrova), Sakhalin Oblast, Russia", 50.6785, 156.1404,
+     'IOC seve2 50.678/156.1388 (7 m an Land), Hafen; bitte pruefen'),
+    ('vodo', 'ioc_vodo_monate.csv', 'Vodopadnaya, Kamchatka Krai, Russia', 51.7243, 157.9865,
+     'IOC-Name Vodopadnaya (kein GeoNames-Eintrag am Ort), IOC 51.7268/157.9889 an Land; bitte Name und Position pruefen'),
+    ('kril', 'ioc_kril_monate.csv', "Mys Kril'on, Sakhalin Oblast, Russia", 45.8922, 142.0809,
+     'IOC Cape Kril\'on 45.9/142.08, GeoNames-Kap 45.8927/142.0809; bitte pruefen'),
 ]
-REGION = {'khol': 'Sakhalin Oblast', 'rudn': 'Primorsky Krai', 'sosu': 'Primorsky Krai'}
-TZ = {'khol': 'Asia/Sakhalin', 'rudn': 'Asia/Vladivostok', 'sosu': 'Asia/Vladivostok'}
+# Erwarteter Versatz gegen FES, wo FES nachweislich daneben liegt: Severo-Kuril'sk 2010 gegen die JHD-Nachbarn
+# Zaliv Kozyrevskogo (5 km) und Mys Savushkina +-16 min, gegen FES +22..+46 min (Kurilenstrasse)
+SOLL = {'seve2': 35}
+REGION = {'khol': 'Sakhalin Oblast', 'rudn': 'Primorsky Krai', 'sosu': 'Primorsky Krai', 'star': 'Sakhalin Oblast',
+          'seve2': 'Sakhalin Oblast', 'vodo': 'Kamchatka Krai', 'kril': 'Sakhalin Oblast'}
+TZ = {'khol': 'Asia/Sakhalin', 'rudn': 'Asia/Vladivostok', 'sosu': 'Asia/Vladivostok', 'star': 'Asia/Sakhalin',
+      'seve2': 'Asia/Srednekolymsk', 'vodo': 'Asia/Kamchatka', 'kril': 'Asia/Sakhalin'}
 FESC = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1')
 
 
@@ -76,7 +90,10 @@ def main(argv):
     namen, speeds, arg, fak = X.kopf_lesen(ZIEL)
     L = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
     heute = dt.date.today().strftime('%Y%m%d')
+    wahl = [a for a in argv if not a.startswith('--')]
     for code, datei, name, lat, lon, posnote in PEGEL:
+        if wahl and code not in wahl:
+            continue
         s = reihe(datei)
         tag = s.resample('D').mean()
         sprung = tag.diff().abs() > 0.3
@@ -91,7 +108,7 @@ def main(argv):
             lg = lag_min(reg.values, ff.values)
             r = np.corrcoef(reg.values, ff.values)[0, 1]
             spr = bool(sprung[str(m)].any()) if str(m) in sprung else False
-            ok = abs(lg) <= 30 and r > 0.3 and not spr
+            ok = abs(lg - SOLL.get(code, 0)) <= (25 if code in SOLL else 30) and r > 0.3 and not spr
             print('   %s  %4d h  Versatz %+5.0f min  r %.2f %s' % (m, len(g), lg, r, '' if ok else ' <- raus'))
             if ok:
                 gut.append(g)
