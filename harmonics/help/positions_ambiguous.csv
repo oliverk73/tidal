@@ -87,6 +87,7 @@ e46dbd519a3a994ac8381c336e42d2c4,harmonics/ih/harmonics_ih_tabelas.txt,"Barra de
 27f9ecb4f95c2a7b654d6a34241aef5c,harmonics/noaa/harmonics_noaa_amtt.txt,"Bahía Wood, Chile",-53.8167,-71.6333,2
 27f9ecb4f95c2a7b654d6a34241aef5c,harmonics/noaa/harmonics_noaa_amtt.txt,"Puerto Gallant, Chile",-53.7,-72.0,2
 3bed9205e947bdd2be204efff58e368d,harmonics/noaa/harmonics_noaa_amtt.txt,"Puerto de San Jose, Guatemala",13.9167,-90.8333,1
+57502dc7bd114b0b9345507bf6c1f5fc,harmonics/noaa/harmonics_noaa_amtt.txt,"North side, Alaska",52.6833,-170.7,1
 58b52cc8c098831b6121095a89d0b053,harmonics/noaa/harmonics_noaa_amtt.txt,"Cobija, Chile",-22.5667,-70.3,1
 80d5985ff1f49d908092cc135e4515f8,harmonics/noaa/harmonics_noaa_amtt.txt,"Zapallar, Chile",-32.5333,-71.4833,2
 80d5985ff1f49d908092cc135e4515f8,harmonics/noaa/harmonics_noaa_amtt.txt,"Papudo, Chile",-32.5,-71.4667,2
@@ -94,6 +95,8 @@ a296356184debde413cd52dac5fe5675,harmonics/noaa/harmonics_noaa_amtt.txt,"Keete I
 a296356184debde413cd52dac5fe5675,harmonics/noaa/harmonics_noaa_amtt.txt,"Copper Harbor, Alaska",55.2167,-132.6167,2
 ac535597e4a6fc3a926cb5a7b5a603ab,harmonics/noaa/harmonics_noaa_amtt.txt,"Río Imperial entrance, Chile",-38.8,-73.3833,2
 ac535597e4a6fc3a926cb5a7b5a603ab,harmonics/noaa/harmonics_noaa_amtt.txt,"Bahía Coliumo, Chile",-36.5333,-72.9667,2
+d15b6406bc8f8e4ce4a51fcf93f61768,harmonics/noaa/harmonics_noaa_amtt.txt,"East Cove, Alaska",52.6667,-170.5667,1
+fa6f11faf04a2a0adab8097aa1fd4c0b,harmonics/noaa/harmonics_noaa_amtt.txt,"Amukta Island, north side, Alaska",52.5167,-171.2333,1
 00320883ea95c5636d5cedfb0feb6eed,harmonics/noaa/harmonics_noaa_cptt.txt,"Sirawai (Panabutan Bay), Zamboanga del Norte, Philippines",7.5868,122.1358,1
 004355bfebf21da6463234e88d901956,harmonics/noaa/harmonics_noaa_cptt.txt,"General Island, Surigao del Sur, Philippines",9.414,126.0029,1
 2c44168cd154a9f0306bf83aa07c58be,harmonics/noaa/harmonics_noaa_cptt.txt,"Sablayan, Occidental Mindoro, Philippines",12.8318,120.7699,1
@@ -101,6 +104,7 @@ ac535597e4a6fc3a926cb5a7b5a603ab,harmonics/noaa/harmonics_noaa_amtt.txt,"Bahía 
 5fbc5553b121204371b64797e07520bc,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Burunnyy, Sakhalin Oblast, Russia",48.1237,142.5696,2
 5fbc5553b121204371b64797e07520bc,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Svobodnyy, Sakhalin Oblast, Russia",46.8232,143.4285,2
 66bbe040bcc0eb1f7a6002386de0aa76,harmonics/noaa/harmonics_noaa_cptt.txt,"Mercedes, Camarines Norte, Philippines",14.1084,123.0128,1
+6b62ef66c8d36dfadb22717e500d2c72,harmonics/noaa/harmonics_noaa_cptt.txt,"Okhotsk, Khabarovsk Krai, Russia",59.3568,143.2019,1
 6fa023531b451e4c598f9ff035a1a1a8,harmonics/noaa/harmonics_noaa_cptt.txt,"Maribojoc, Bohol, Philippines",9.736,123.8389,1
 7c9e8962c343b62028c5fb7305e800cf,harmonics/noaa/harmonics_noaa_cptt.txt,"San Miguel Island (Ticao Island), Masbate, Philippines",12.7177,123.5892,1
 819a618ee0225ec034cd0dde4c882df2,harmonics/noaa/harmonics_noaa_cptt.txt,"Inampulugan Island, Guimaras, Philippines",10.4548,122.727,2
@@ -110,6 +114,7 @@ bcfed480aa0c84ab2410862ef5080461,harmonics/noaa/harmonics_noaa_cptt.txt,"Malalag
 bf93e1f4a79004041abbd4dd55632ca7,harmonics/noaa/harmonics_noaa_cptt.txt,"Kita-Iwojima, Tokyo, Japan",25.4332,141.2925,1
 c64f54288d9d019764a962fada19b7d4,harmonics/noaa/harmonics_noaa_cptt.txt,"Japitan (Barili Bay), Cebu, Philippines",10.1244,123.4907,1
 ca62ebc1b19584eea9c3e92670d7d4c4,harmonics/noaa/harmonics_noaa_cptt.txt,"Parasan Harbor (Daram Island), Samar, Philippines",11.7,124.75,1
+e29c646e7b98ac854ee75e57ab02b177,harmonics/noaa/harmonics_noaa_cptt.txt,"Ola (Tauskaya Guba), Magadan Oblast, Russia",59.571,151.2785,1
 e3bc794041a9cfd3caaa6da0843d3fad,harmonics/noaa/harmonics_noaa_cptt.txt,"Cavite, Manila Bay, Philippines",14.4846,120.9091,1
 ec62255c743ec4c21501f06a9d14fb34,harmonics/noaa/harmonics_noaa_cptt.txt,"Medellin, Cebu, Philippines",11.1255,123.9612,1
 072975161755e9ee9625f6bee4cd2d3c,harmonics/noaa/harmonics_noaa_currents.txt,"Boston Islands, 1 mile south from, Canada Current",54.6833,-130.5667,2
@@ -140,27 +145,18 @@ fbfc80e54e21f9406714284267535ba0,harmonics/noaa/harmonics_noaa_currents.txt,"Rob
 fbfc80e54e21f9406714284267535ba0,harmonics/noaa/harmonics_noaa_currents.txt,"Ripple Bluff, Knight Inlet, Canada Current",50.6333,-126.5167,2
 1d21e50c6ad0becb15f800fc748b1fdb,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Bol'shaya Korabel'naya, Murmansk Oblast, Russia",69.6833,33.1,2
 1d21e50c6ad0becb15f800fc748b1fdb,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Ara, Murmansk Oblast, Russia",69.4333,32.85,2
-1e6ee50181b3a192a0d3af41bdf898d3,harmonics/noaa/harmonics_noaa_eutt.txt,"Reka Payndteyakha, Yamalo-Nenets Autonomous Okrug, Russia",72.65,69.0,1
 2961629b52e8e04314725b8929272224,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Zapadnaya Litsa, Murmansk Oblast, Russia",69.4833,32.5,2
 2961629b52e8e04314725b8929272224,harmonics/noaa/harmonics_noaa_eutt.txt,"Bukhta Nasha (Guba Ura), Murmansk Oblast, Russia",69.3833,32.9167,2
 2996ffdffc85217f2f87a95be7c794cf,harmonics/noaa/harmonics_noaa_eutt.txt,"Deba, Spain",43.3016,-2.3541,2
 2996ffdffc85217f2f87a95be7c794cf,harmonics/noaa/harmonics_noaa_eutt.txt,"Getaria, Spain",43.3039,-2.1993,2
-300e9e2b32703b50b3dbbd0b26c41347,harmonics/noaa/harmonics_noaa_eutt.txt,"Ostrov Oleniy, Yamalo-Nenets Autonomous Okrug, Russia",72.6008,77.683,1
 310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Titovka, Murmansk Oblast, Russia",69.5833,32.0667,3
 310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Port-Vladimir, Murmansk Oblast, Russia",69.4167,33.15,3
 310d03d2dc7377cff7d6aa2c10ecf8ea,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Dolgaya Zapadnaya, Murmansk Oblast, Russia",69.2833,33.8667,3
 3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Eyna, Murmansk Oblast, Russia",69.6333,32.4167,3
 3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Bol'shaya Volokovaya, Murmansk Oblast, Russia",69.2667,33.6,3
 3539e302ec69c50e621fbc67e8e937c7,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Velikiy, Murmansk Oblast, Russia",69.0833,33.2833,3
-43bd14e0bf1c4f8c4bee965f62cc56ba,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Yam-Sale, Yamalo-Nenets Autonomous Okrug, Russia",66.9038,71.735,1
-66b74a5131cc181ab2535359cf84c1b0,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Chernyy, Yamalo-Nenets Autonomous Okrug, Russia",71.1644,77.4399,1
-6fea945c60ef7ee6ce01c26c41646fbd,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Marre-Salya, Yamalo-Nenets Autonomous Okrug, Russia",69.6167,66.8333,1
-80d83436c5febb0409109ef6a6a51fb7,harmonics/noaa/harmonics_noaa_eutt.txt,"Reka Khampyl-Yaga, Yamalo-Nenets Autonomous Okrug, Russia",69.3984,73.9069,1
 89771ee57b78dff3746f757bab7e0cbf,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Bazisnyy, Murmansk Oblast, Russia",69.0167,33.0667,2
 89771ee57b78dff3746f757bab7e0cbf,harmonics/noaa/harmonics_noaa_eutt.txt,"Murmansk, Murmansk Oblast, Russia",68.9833,33.0667,2
-9134b254a87c2382e95d0daa5373214b,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Rogozina (Ostrov Belyy), Yamalo-Nenets Autonomous Okrug, Russia",73.3333,70.0333,1
-a384e12908752a85ebc8d8c81f61902b,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Dalekiy, Yamalo-Nenets Autonomous Okrug, Russia",72.2667,75.7051,1
-d02be8bc05ed1ea4e14d9082e6365609,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Drovyanoy (Poluostrov Yamal), Yamalo-Nenets Autonomous Okrug, Russia",72.6575,72.97,1
 f4177b5f916ce9d30c5290024a0adf3a,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Malaya Korabel'naya, Murmansk Oblast, Russia",69.5833,32.75,2
 f4177b5f916ce9d30c5290024a0adf3a,harmonics/noaa/harmonics_noaa_eutt.txt,"Guba Zelenetskaya Zapadnaya, Murmansk Oblast, Russia",69.3,33.75,2
 29df4cf45c1c973c68c48a21c9d0a345,harmonics/noaa/harmonics_noaa_nebenstroeme.txt,"Point Alexander, Alaska Current",56.5103,-132.9583,2
