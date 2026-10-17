@@ -23495,15 +23495,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 161.9500
-# !latitude: 56.0167
+# !longitude: 162.0658
+# !latitude: 56.0317
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Kamchatka Krai
 # admin1_quelle: Polygon
-Mys Kryugera, Kamchatka Krai, Russia
+# note: 20261017 Buchposition 56.0167/161.9500 lag 6.9 km im Land (Laenge verdruckt); in die Bukhta Kryugera am Mys Osypnoy (OSM), dort auch ATT 8346 (Oliver).
+Mys Kryugera (Bukhta Kryugera), Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.3106 meters
 J1              0.0001  146.22
