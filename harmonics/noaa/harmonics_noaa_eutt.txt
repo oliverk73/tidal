@@ -84448,8 +84448,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 72.9167
-# !latitude: 67.6667
+# !longitude: 72.9006
+# !latitude: 67.6880
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
@@ -84648,8 +84648,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 71.7500
-# !latitude: 66.9000
+# !longitude: 71.7350
+# !latitude: 66.9038
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
@@ -84846,8 +84846,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 75.7500
-# !latitude: 68.9000
+# !longitude: 75.7350
+# !latitude: 68.9250
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
@@ -84859,7 +84859,8 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
-Reka Shirokaya, Yamalo-Nenets Autonomous Okrug, Russia
+# note: 20261017 Shirokaya = Aderpayota (GeoNames-Altname, OSM); Position vor die Muendung, Buchort 2 km an Land (Oliver).
+Reka Aderpayota (Shirokaya), Yamalo-Nenets Autonomous Okrug, Russia
 +03:00 :Asia/Yekaterinburg
 0.3353 meters
 J1              0.0003  142.66
