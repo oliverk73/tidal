@@ -11,7 +11,7 @@ fingerprint,file,name,lat,lon,provenance,orig_name,orig_lat,orig_lon,moved_m,fir
 41371689ecca13d39a872adf309f3384,harmonics/att/harmonics_att_np202.txt,"Mys Ragozina, Yamalo-Nenets Autonomous Okrug, Russia",73.3833,70.1167,manual,Mys Ragozina (NP202 995) Tide,,,,14fdab51 2026-06-17
 441c2d2665bd7f267f58709da0658c7a,harmonics/att/harmonics_att_np202.txt,"Mys Chelyuskin, Krasnoyarsk Krai, Russia",77.717,104.2851,manual,Mys Chelyuskin (NP202 972) Tide,77.7167,104.3167,748,14fdab51 2026-06-17
 45b407ec90516cc0bc79de5da8be8afd,harmonics/att/harmonics_att_np202.txt,"Ostrov Samuila (Ostrova Komsomol'skoy Pravdy), Krasnoyarsk Krai, Russia",77.4167,106.9,manual,Komsomolskaya Pravda Islands (NP202 971) Tide,77.4333,106.6667,5938,14fdab51 2026-06-17
-4edadbb3fe83fef544a4d8f8a7f0fc8d,harmonics/att/harmonics_att_np202.txt,"Mys Kharse (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia",70.1132,73.6776,manual,"Mys Kharse, Obskaya Guba (NP202 990) Tide",70.1,73.7167,2084,14fdab51 2026-06-17
+4edadbb3fe83fef544a4d8f8a7f0fc8d,harmonics/att/harmonics_att_np202.txt,"Mys Khasre (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia",70.1132,73.6776,manual,"Mys Kharse, Obskaya Guba (NP202 990) Tide",70.1,73.7167,2084,14fdab51 2026-06-17
 626817daa260d279957550a0a9776868,harmonics/att/harmonics_att_np202.txt,"Puerto Carúpano, Venezuela",10.6759,-63.2452,manual,"Puerto Carúpano, Venezuela (NP202 2344) Tide",10.6667,-63.25,1150,14fdab51 2026-06-17
 651cb51d3fb747a9f492964e4090162e,harmonics/att/harmonics_att_np202.txt,"Bukhta Teplits (Franz Josef Land), Arkhangelsk Oblast, Russia",81.7833,57.9333,manual,"Bukhta Teplits, Franz Josef Land (NP202 912) Tide",,,,14fdab51 2026-06-17
 68602b558ae213cc7b7f72898943f7bb,harmonics/att/harmonics_att_np202.txt,"Las Cuevas Bay, Trinidad and Tobago",10.7833,-61.4,manual,"Las Cuevas Bay, Trinidad and Tobago (NP202 2335) Tide",,,,14fdab51 2026-06-17
@@ -9716,7 +9716,6 @@ fd89bb0f5c884a1a011f38fead68c9b5,harmonics/noaa/harmonics_noaa_currents.txt,"Fla
 0d731a1c1865a2d85fc03a16fe5d14a9,harmonics/noaa/harmonics_noaa_eutt.txt,"Sunderland, England, United Kingdom",54.9187,-1.3601,source,,,,,dd5f962f 2026-09-20
 0e1cf07789dee9c3252b90aa0dadb206,harmonics/noaa/harmonics_noaa_eutt.txt,"La Cayenne (Seudre), France",45.7889,-1.1255,source,,,,,083ce97a 2026-09-14
 0f454e1449d17aeb626ce18d64fbd76d,harmonics/noaa/harmonics_noaa_eutt.txt,"Gridina Guba, Republic of Karelia, Russia",65.9,34.6667,manual,"Gridina Bay, Russia",,,,22fe2ea3 2026-09-13
-1047b16563c9a44f11584b54a9489359,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Khasre (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia",70.1132,73.6776,manual,"Cape Kharse, Obskaya Gulf, Russia",70.1667,73.7167,6129,083ce97a 2026-09-14
 10558bc5804b16202916bad2381e06b6,harmonics/noaa/harmonics_noaa_eutt.txt,"Mys Kanin Nos, Nenets Autonomous Okrug, Russia",68.6667,43.25,manual,"Cape Kanin, Russia",,,,22fe2ea3 2026-09-13
 10bb2501ffe84805560cd07b81909061,harmonics/noaa/harmonics_noaa_eutt.txt,"Reka Vostochnaya Kambal'nitsa, Nenets Autonomous Okrug, Russia",68.3167,45.9667,manual,"Kambalnitsa River entrance, Russia",,,,22fe2ea3 2026-09-13
 1106919ce9c4e8bd762bb1a443ed485b,harmonics/noaa/harmonics_noaa_eutt.txt,"Reka Kovda, Murmansk Oblast, Russia",66.7,32.8833,manual,"Kovda River entrance, Russia",,,,22fe2ea3 2026-09-13
@@ -12480,7 +12479,7 @@ ff9f1fdb868fa2436f354b1779d1b405,harmonics/ticon/harmonics_ticon4_worldwide.txt,
 52b64282320a47b540ddd7f164815729,harmonics/utide/harmonics_fes2022.txt,"Vale de Cavaleiros (Fogo), Cape Verde",14.9204,-24.5036,source,,,,,8d8ed51f 2026-10-13
 5a29c0646ebaa3b54e81e88ea55ac490,harmonics/utide/harmonics_fes2022.txt,"Kajang, Sulawesi Selatan, Indonesia",-5.3216,120.3653,source,,,,,aca8ce72 2026-10-15
 5e0de06d08cbf9e6656335f9cca20561,harmonics/utide/harmonics_fes2022.txt,"Fajã de Água (Brava), Cape Verde",14.8704,-24.7321,source,,,,,0c184920 2026-09-15
-6120897fb1f2026baeb3d970079652f7,harmonics/utide/harmonics_fes2022.txt,"Ain Sukhna, Egypt",29.64,32.38,ambiguous,,,,,
+6120897fb1f2026baeb3d970079652f7,harmonics/utide/harmonics_fes2022.txt,"Ain Sukhna, Egypt",29.64,32.38,source,,,,,6ea1e430 2026-10-17
 6b14b9c19b2f873c358d31b18b154548,harmonics/utide/harmonics_fes2022.txt,"Tepa (Pulau Babar), Maluku, Indonesia",-7.8698,129.5906,source,,,,,aca8ce72 2026-10-15
 6b825e1d403514089a1b80fb6ea5fead,harmonics/utide/harmonics_fes2022.txt,"Punta Burica, Panama",8.04,-82.88,source,,,,,689b05f4 2026-06-22
 6c2f3053c706df2c59d5f11767d4d54c,harmonics/utide/harmonics_fes2022.txt,"Pante Macassar (Oecusse), Timor-Leste",-9.175,124.375,source,,,,,8bfa5096 2026-06-12
