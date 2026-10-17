@@ -57487,15 +57487,16 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 34.3526
-# !latitude: 66.6964
+# !longitude: 34.3417
+# !latitude: 66.6841
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (eutt-1663); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.343. Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
-Guba Malaya Pir'ya, Murmansk Oblast, Russia
+# note: 20261017 Pegel beim Ort Umba (Oliver): Position vor den Ort, Name von der archivierten ATT-Dublette (Oliver).
+Umba (Guba Malaya Pir'ya), Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
 x 0 0
