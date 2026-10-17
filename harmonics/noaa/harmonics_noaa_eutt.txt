@@ -59639,8 +59639,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 36.2463
-# !latitude: 64.1256
+# !longitude: 36.2428
+# !latitude: 64.1260
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -60643,7 +60643,8 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.233. Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Position auf GeoNames Mys Glubokiy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
-Mys Glubokiy, Arkhangelsk Oblast, Russia
+# note: 20261017 Klammer mit dem naechsten Ort Purnema (6 km NO) ergaenzt (Oliver).
+Mys Glubokiy (Purnema), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.4326 meters
 x 0 0
