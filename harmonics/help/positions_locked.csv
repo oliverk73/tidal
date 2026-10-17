@@ -1775,7 +1775,7 @@ ef3d7f1a0dd657316fdec6956e4db12a,harmonics/att/harmonics_att_np204_secondary.txt
 f0de829982df41ed04ba545df3232712,harmonics/att/harmonics_att_np204_secondary.txt,"Unmu-do, North Korea",39.4147,125.117,source,,,,,0e8b6a74 2026-10-13
 f4a2ec8e8151b8150bcc516e98b16e54,harmonics/att/harmonics_att_np204_secondary.txt,"Zhao'an Wan, Fujian, China",23.6,117.2833,manual,"Zhaoan Wan, China",,,,8b202ee5 2026-06-21
 f7d770a6736b22bbea043b557545bc66,harmonics/att/harmonics_att_np204_secondary.txt,"Wuqiu, Taiwan",24.9883,119.4522,source,,,,,3203de32 2026-10-13
-fb517481c5cfe719b2c68dea157bcfb3,harmonics/att/harmonics_att_np204_secondary.txt,"Anadyr, Chukotka Autonomous Okrug, Russia",64.7333,177.533,manual,"Anadyr, Russia",,,,e91cedbd 2026-10-12
+fb517481c5cfe719b2c68dea157bcfb3,harmonics/att/harmonics_att_np204_secondary.txt,"Anadyr, Chukotka Autonomous Okrug, Russia",64.7365,177.5321,manual,"Anadyr, Russia",64.7333,177.533,358,e91cedbd 2026-10-12
 fd55184cb280afbd073a12eff77f1c2c,harmonics/att/harmonics_att_np204_secondary.txt,"Mys Tyk, Sakhalin Oblast, Russia",51.7493,141.6689,manual,"Cape Tuik, Russia",51.7333,141.6833,2037,e91cedbd 2026-10-12
 042bda71f0e99c348aeb04b54c82f52c,harmonics/att/harmonics_att_np207.txt,"Caleta Carolina, Chubut, Argentina",-44.9,-65.6,manual,"Caleta Carolina, Argentina (NP207 2120) Tide",,,,bfe2acfc 2026-06-19
 052e31ebab8ad231ad208742bf4f36f8,harmonics/att/harmonics_att_np207.txt,"Canal Punta Indio (East), Uruguay",-35.1667,-56.3667,manual,"CANAL PUNTA INDIO (EAST), Uruguay (NP207 2161) Tide",,,,bfe2acfc 2026-06-19
@@ -9216,6 +9216,7 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 071124d3a34ebfece455ac6a5d5bb307,harmonics/noaa/harmonics_noaa_cptt.txt,"East Point, Bynoe Harbor, Northern Territory, Australia",-12.5833,130.5667,source,,,,,dd5f962f 2026-09-20
 075b017a0f9a5065610add6c7a6a3ac8,harmonics/noaa/harmonics_noaa_cptt.txt,"Shiashkotan (Severo-zapadnyy Bereg, Kuril'skiye Ostrova), Sakhalin Oblast, Russia",48.7833,154.05,manual,"Shiashkotan (Northwest coast), Kuril Islands, Russia",,,,dd5f962f 2026-09-20
 07abadb41e83583e62a63262c7cb6391,harmonics/noaa/harmonics_noaa_cptt.txt,"Gladstone, Port Curtis, Queensland, Australia",-23.8333,151.25,source,,,,,dd5f962f 2026-09-20
+07b6415cb7afc0b8edd1de112318b9f4,harmonics/noaa/harmonics_noaa_cptt.txt,"Bukhta Melkaya, Chukotka Autonomous Okrug, Russia",64.7833,177.5667,source,,,,,18455fce 2026-10-17
 08a37b8ea6dd2f289fa60f3e463016ad,harmonics/noaa/harmonics_noaa_cptt.txt,"Norfolk Island, Australia",-29.067,167.95,source,,,,,dd5f962f 2026-09-20
 0934d1c50ff72a318df65cc100b712fb,harmonics/noaa/harmonics_noaa_cptt.txt,"Kutubdia Island (Lighthouse), Bangladesh",21.8649,91.8413,source,,,,,22fe2ea3 2026-09-13
 0970e0eb363e16c59e7cc495049b95e5,harmonics/noaa/harmonics_noaa_cptt.txt,"Tapa Bay, Bynoe Harbor, Northern Territory, Australia",-12.45,130.6,source,,,,,dd5f962f 2026-09-20
@@ -9233,6 +9234,7 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 0e0a4205d7881857e505d889a403c72f,harmonics/noaa/harmonics_noaa_cptt.txt,"Sanshakou (Dongchong), Guangdong, China",22.8946,113.4957,manual,"Sanshakou, Guangdong, China",22.8833,113.5167,2491,c295bd68 2026-09-14
 0ed6d0619922e5de732635307d96d884,harmonics/noaa/harmonics_noaa_cptt.txt,"Nagle Cove, Great Barrier Island, Northland, New Zealand",-36.15,175.35,source,,,,,dd5f962f 2026-09-20
 0ee12ab30b03551d7867d1e7776988e6,harmonics/noaa/harmonics_noaa_cptt.txt,"Navlakhi, Gujarat, India",22.9593,70.4441,source,,,,,dd5f962f 2026-09-20
+0f04caf6d439dc37189f765cdee4424d,harmonics/noaa/harmonics_noaa_cptt.txt,"Kosa Salomatova, Chukotka Autonomous Okrug, Russia",64.637,178.0115,source,,,,,18455fce 2026-10-17
 0f54fda43191dc53516d996639510eb7,harmonics/noaa/harmonics_noaa_cptt.txt,"Andis Island (Port Borongan), Eastern Samar, Philippines",11.6428,125.4779,manual,"Andis Island, Port Borongan, Eastern Samar, Philippines",11.65,125.4833,993,083ce97a 2026-09-14
 0f5684ba52fa3ddcbee06126a3f01a91,harmonics/noaa/harmonics_noaa_cptt.txt,"Mc Donald Bay, Antarctica",-66.55,93.0167,source,,,,,7a7ed8e0 2026-07-01
 0fdef217b91ad4ff317a13c79c575c5d,harmonics/noaa/harmonics_noaa_cptt.txt,"Gyeonnaeryang (Geojedo), South Korea",34.884,128.4738,source,,,,,569b7372 2026-10-13
@@ -9509,7 +9511,6 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 7c61d9e46638b4de57de55225dd3e64e,harmonics/noaa/harmonics_noaa_cptt.txt,"Eoran-ri, South Korea",34.3485,126.4725,manual,"Oran-ni, Maro-hae, Jeju-do, South Korea",34.35,126.4833,1005,569b7372 2026-10-13
 7c9e8962c343b62028c5fb7305e800cf,harmonics/noaa/harmonics_noaa_cptt.txt,"San Miguel Island (Ticao Island), Masbate, Philippines",12.7177,123.5892,ambiguous,,,,,
 7d36caca59134fc9960beb8d37359fc9,harmonics/noaa/harmonics_noaa_cptt.txt,"Akaroa, Canterbury, New Zealand",-43.8,172.9167,source,,,,,083ce97a 2026-09-14
-7d75cad469c5b71a4b21aa36dc35cbea,harmonics/noaa/harmonics_noaa_cptt.txt,"Kosa Russkaya Koshka, Chukotka Autonomous Okrug, Russia",64.5833,178.5167,manual,"Russkaya Koshka Spit, Russia",,,,22fe2ea3 2026-09-13
 7dba36dd2a398ae841d9b81a42ac4287,harmonics/noaa/harmonics_noaa_cptt.txt,"Gulong Zui, Shandong, China",36.736,121.644,manual,"Gulongzui [Niao-tsui Head], Shandong, China",36.75,121.6333,1825,083ce97a 2026-09-14
 7dc7ce63b835ac9cc778eaa13a896066,harmonics/noaa/harmonics_noaa_cptt.txt,"Dinagat, Dinagat Islands, Philippines",9.9595,125.5901,manual,"Dinagat, Dinagat Island, Dinagat Islands, Philippines",9.9667,125.5833,1093,c295bd68 2026-09-14
 7e69ced134b2b70773c68093d0ac5c52,harmonics/noaa/harmonics_noaa_cptt.txt,"Tung Ping Chau, Hong Kong, China",22.5451,114.4335,manual,"Peng Chau, Hong Kong",22.55,114.4333,545,dd5f962f 2026-09-20
@@ -9602,6 +9603,7 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 a068996401e2d8978f6ac68ca25cc893,harmonics/noaa/harmonics_noaa_cptt.txt,"Goseong-man (Goseong-gun), South Korea",34.9315,128.3256,manual,"Kosong-man, Busan, South Korea",34.9167,128.35,2767,dd5f962f 2026-09-20
 a08a1b8b7d395b87f7522288dcffad6f,harmonics/noaa/harmonics_noaa_cptt.txt,"Tai Tam Bay, Hong Kong",22.2338,114.2349,manual,"Taitam Bay, Hong Kong",22.2333,114.2333,174,77818394 2026-09-10
 a0ad96f07e5fc85a5991da9be443a900,harmonics/noaa/harmonics_noaa_cptt.txt,"Rounders Bay (Masirah Island), Oman",20.2147,58.6339,source,,,,,22fe2ea3 2026-09-13
+a0bcc41e49b99391a72812c94250106f,harmonics/noaa/harmonics_noaa_cptt.txt,"Kosa Strelka (Anadyrskiy Zaliv), Chukotka Autonomous Okrug, Russia",64.4173,178.2509,source,,,,,18455fce 2026-10-17
 a282ebe9e78bc473da49daff4908809d,harmonics/noaa/harmonics_noaa_cptt.txt,"Chu Dao, Shandong, China",37.5684,122.081,source,,,,,e91cedbd 2026-10-12
 a28de997cd569938637a273a88828ddb,harmonics/noaa/harmonics_noaa_cptt.txt,"Aesi, Vanuatu",-15.4333,167.2333,source,,,,,22fe2ea3 2026-09-13
 a2d9d8c0ec70032ced8f53345c464ac3,harmonics/noaa/harmonics_noaa_cptt.txt,"Jimenez, Misamis Occidental, Philippines",8.3321,123.8588,manual,"Jiminez, Misamis Occidental, Philippines",8.3333,123.85,977,083ce97a 2026-09-14
@@ -9618,7 +9620,6 @@ a7c48adb93abe0e1492cf4cc1f69d0b0,harmonics/noaa/harmonics_noaa_cptt.txt,"Bukhta 
 a81ef7d4c648d27196e506359cdc3bd7,harmonics/noaa/harmonics_noaa_cptt.txt,"North Barnard Island, Queensland, Australia",-17.6833,146.1833,source,,,,,dd5f962f 2026-09-20
 a81f6465a76212c8fc41a772851d0bf2,harmonics/noaa/harmonics_noaa_cptt.txt,"Shinto / Sindo (Chogumsa), North Korea",39.8051,124.2469,manual,"Shinto Islands, North Korea",39.8,124.2667,1784,c471ae41 2026-10-13
 a8b1ec9973478ee75c7600a811546acf,harmonics/noaa/harmonics_noaa_cptt.txt,"Lady Elliot Island, Queensland, Australia",-24.1167,152.7167,source,,,,,22fe2ea3 2026-09-13
-a96d8f25ac9c1a40433015bd5e01ae94,harmonics/noaa/harmonics_noaa_cptt.txt,"Bukhta Melkaya, Chukotka Autonomous Okrug, Russia",64.7833,177.5667,manual,"Melkaya Bay, Russia",,,,22fe2ea3 2026-09-13
 aa0acd5599b9e4aa5e95eab131ccfc32,harmonics/noaa/harmonics_noaa_cptt.txt,"Chojeon-ri, South Korea",35.054,128.0387,manual,"Ch'ojon-ni, Busan, South Korea",35.05,128.05,1121,dd5f962f 2026-09-20
 aa3ab70dffa8fa01b7c8b3d6915c7a37,harmonics/noaa/harmonics_noaa_cptt.txt,"Karrakatta Bay, Western Australia, Australia",-16.3667,123.0333,source,,,,,dd5f962f 2026-09-20
 ab170591e25eb3eb9fd81b5697d7e2e0,harmonics/noaa/harmonics_noaa_cptt.txt,"Reka Kolpakova, Kamchatka Krai, Russia",54.6685,155.6737,manual,"Kompakova River entrance, Russia",54.6667,155.7,1703,3f8410d9 2026-09-03
@@ -9650,7 +9651,6 @@ b6d7ae0ff731b94289c9d6664166f96f,harmonics/noaa/harmonics_noaa_cptt.txt,"Changsh
 b7940eb1406e0e247d6eb9f8dace5edf,harmonics/noaa/harmonics_noaa_cptt.txt,"Pulandian Wan (Chang Dao), Liaoning, China",39.3107,121.6688,source,,,,,c471ae41 2026-10-13
 b7b4d458883040fe709a743ae0e1fb41,harmonics/noaa/harmonics_noaa_cptt.txt,"Saint Martin's Island, Bangladesh",20.6324,92.3294,source,,,,,dd5f962f 2026-09-20
 b7c90578c9595c2cecfc7f22722be8ec,harmonics/noaa/harmonics_noaa_cptt.txt,"Elmslie Bay, Nelson, New Zealand",-40.9333,173.85,source,,,,,dd5f962f 2026-09-20
-b93a0f81154e2e6805e4cdc1caa646b2,harmonics/noaa/harmonics_noaa_cptt.txt,"Kosa Salomatova, Chukotka Autonomous Okrug, Russia",64.6333,178.0167,manual,"Salomatova Spit, Russia",,,,22fe2ea3 2026-09-13
 b946d957f4f9e71e63974da3be82c038,harmonics/noaa/harmonics_noaa_cptt.txt,"Polillo (Polillo Island), Quezon, Philippines",14.7146,121.9349,manual,"Polillo, Polillo Island, Quezon, Philippines",14.7167,121.9333,290,083ce97a 2026-09-14
 b94c2bd6d5b28d8fe5b076bbe2384d3e,harmonics/noaa/harmonics_noaa_cptt.txt,"Shortt Island, Odisha, India",20.7833,87.0667,source,,,,,dd5f962f 2026-09-20
 b9872fbab77338a99bc78d38055b408a,harmonics/noaa/harmonics_noaa_cptt.txt,"Palembang (Palembang River), Sumatera Selatan, Indonesia",-2.9833,104.7167,manual,"Palembang, Palembang River, Indonesia",,,,083ce97a 2026-09-14
@@ -9670,7 +9670,6 @@ c0609890061253ec76f3f93f24c0ba45,harmonics/noaa/harmonics_noaa_cptt.txt,"Warshei
 c08385505a8f6fcd401523e11e7f7a5f,harmonics/noaa/harmonics_noaa_cptt.txt,"Finsch Harbor, Papua New Guinea",-6.55,147.8667,source,,,,,7a7ed8e0 2026-07-01
 c089d0cc2cf50b4fb36aff7892734e86,harmonics/noaa/harmonics_noaa_cptt.txt,"Dongjia Wan (Shazikou), Shandong, China",36.1112,120.5573,source,,,,,e91cedbd 2026-10-12
 c0ed07e3a213926a3b4970f69167af01,harmonics/noaa/harmonics_noaa_cptt.txt,"Budai, Taiwan",23.3788,120.1382,manual,"Pu-tai Po-ti, Taiwan",23.3833,120.15,1304,083ce97a 2026-09-14
-c1f687ab81f4404b12bbd23fce39842e,harmonics/noaa/harmonics_noaa_cptt.txt,"Kosa Strelka (Anadyrskiy Zaliv), Chukotka Autonomous Okrug, Russia",64.4167,178.25,manual,"Strelka Spit, Anadyr Gulf, Russia",,,,22fe2ea3 2026-09-13
 c23c707a643cc068879c38e85c621687,harmonics/noaa/harmonics_noaa_cptt.txt,"Chenjiawu, Jiangsu, China",33.1,121.2167,source,,,,,22fe2ea3 2026-09-13
 c280583930ede76baedd6db1ee0a2ca8,harmonics/noaa/harmonics_noaa_cptt.txt,"Dahao Dock, Guangdong, China",23.2275,116.7662,manual,,23.25,116.75,3000,c295bd68 2026-09-14
 c2a76ed95552c79bce9fc7606d68d7c5,harmonics/noaa/harmonics_noaa_cptt.txt,"Karwar, Karnataka, India",14.7983,74.1117,source,,,,,22fe2ea3 2026-09-13
@@ -9680,7 +9679,7 @@ c36523191cd2f98ddf9f01340a255468,harmonics/noaa/harmonics_noaa_cptt.txt,"Waikato
 c37aa84b330576efa0cf23f91a7119fe,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Olyutorskiy, Kamchatka Krai, Russia",59.9255,170.2891,manual,"Cape Olyutorski, Russia",59.9167,170.3333,2651,3f8410d9 2026-09-03
 c3e2b28d920e1f0b2f6be105a0532d74,harmonics/noaa/harmonics_noaa_cptt.txt,"San Nicolas (Linapacan Island), Palawan, Philippines",11.386,119.812,manual,"San Nicolas, Linapacan Island, Palawan, Philippines",11.45,119.8167,7135,dd5f962f 2026-09-20
 c41c0b2f1d7b68ab9171056925de7c96,harmonics/noaa/harmonics_noaa_cptt.txt,"Totoya Island, Fiji",-18.9833,-179.8833,source,,,,,22fe2ea3 2026-09-13
-c42054410b5f65c7b9c6776a3eeb7cef,harmonics/noaa/harmonics_noaa_cptt.txt,"Bukhta Ugol'naya, Chukotka Autonomous Okrug, Russia",63.0667,179.3833,manual,"Ugolnaya Bay, Russia",,,,22fe2ea3 2026-09-13
+c42054410b5f65c7b9c6776a3eeb7cef,harmonics/noaa/harmonics_noaa_cptt.txt,"Beringowski (Bukhta Ugol'naya), Chukotka Autonomous Okrug, Russia",63.0634,179.3673,manual,"Ugolnaya Bay, Russia",63.0667,179.3833,885,22fe2ea3 2026-09-13
 c46a3155c1df86b87302e8ac99ac68c1,harmonics/noaa/harmonics_noaa_cptt.txt,"Secam Island (N Balabac Strait), Palawan, Philippines",8.1764,117.0183,manual,"Secam Island, N. Balabac Strait, Palawan, Philippines",8.1833,117.0167,787,083ce97a 2026-09-14
 c480a6acd87319094ebf1b3758c9ac05,harmonics/noaa/harmonics_noaa_cptt.txt,"Tulagi Island, Solomon Islands",-9.1,160.15,source,,,,,7a7ed8e0 2026-07-01
 c488297685ec106b59658cf90ff2ec28,harmonics/noaa/harmonics_noaa_cptt.txt,"Ust'-Bol'sheretsk (Reka Bol'shaya), Kamchatka Krai, Russia",52.755,156.2009,manual,"Ust Bolsheretsk, Bolshaya River, Russia",52.7667,156.2333,2539,3f8410d9 2026-09-03
@@ -9688,12 +9687,13 @@ c508aebca8171e00c778e3081ff54933,harmonics/noaa/harmonics_noaa_cptt.txt,"Boca En
 c51289458bba957139c263d7805011b2,harmonics/noaa/harmonics_noaa_cptt.txt,"Chandbali, Odisha, India",20.7714,86.7393,source,,,,,dd5f962f 2026-09-20
 c5397bbc539bd3e4dc1d6f0b77b424f2,harmonics/noaa/harmonics_noaa_cptt.txt,"Byeokpajin (Jindo), South Korea",34.5392,126.3461,source,,,,,569b7372 2026-10-13
 c59a2d60dd45071e1720ec9c2217cf30,harmonics/noaa/harmonics_noaa_cptt.txt,"Beypore, Kerala, India",11.1631,75.8037,source,,,,,083ce97a 2026-09-14
-c5cc68a7aed52e4095c6a86af2e817b8,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Razdel'nyy (Zaliv Kresta), Chukotka Autonomous Okrug, Russia",66.1833,-179.0,manual,"Cape Razdelny, Kresta Bay, Russia",,,,22fe2ea3 2026-09-13
+c5cc68a7aed52e4095c6a86af2e817b8,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Razdel'nyy (Zaliv Kresta), Chukotka Autonomous Okrug, Russia",66.1536,-178.9206,manual,"Cape Razdelny, Kresta Bay, Russia",66.1833,-179.0,4860,22fe2ea3 2026-09-13
 c615962f38aa3df9fcedc3e3036c9d97,harmonics/noaa/harmonics_noaa_cptt.txt,"Whangaroa, Northland, New Zealand",-35.0333,173.7833,source,,,,,083ce97a 2026-09-14
 c63d9f6bae51d98a8afadbd5de4d810b,harmonics/noaa/harmonics_noaa_cptt.txt,"Mercury Bay, Auckland, New Zealand",-36.8333,175.7167,source,,,,,dd5f962f 2026-09-20
 c64f54288d9d019764a962fada19b7d4,harmonics/noaa/harmonics_noaa_cptt.txt,"Japitan (Barili Bay), Cebu, Philippines",10.1244,123.4907,ambiguous,,,,,
 c69d5287b334a941ca568e993cd1095b,harmonics/noaa/harmonics_noaa_cptt.txt,"Nelson's Bay, New South Wales, Australia",-32.7167,152.15,source,,,,,dd5f962f 2026-09-20
 c7d35a3729c90c29474c7bccb0abde26,harmonics/noaa/harmonics_noaa_cptt.txt,"Enewetak, Marshall Islands",11.35,162.35,source,,,,,22fe2ea3 2026-09-13
+c89f2d4ab87d781774d08c222ba877d3,harmonics/noaa/harmonics_noaa_cptt.txt,"Kosa Russkaya Koshka, Chukotka Autonomous Okrug, Russia",64.5833,178.5167,source,,,,,18455fce 2026-10-17
 c8a9dd48127352bd914d5a123457ce31,harmonics/noaa/harmonics_noaa_cptt.txt,"Kuataokou, Jiangsu, China",34.1137,120.3265,source,,,,,e91cedbd 2026-10-12
 c8cb18e4ad67b2bddfaefded057de667,harmonics/noaa/harmonics_noaa_cptt.txt,"Dunk Island, Queensland, Australia",-17.9333,146.15,source,,,,,083ce97a 2026-09-14
 c9936736c0f4d785e709ced8ccb02cc0,harmonics/noaa/harmonics_noaa_cptt.txt,"Fort Dauphin, Madagascar",-25.0269,46.9969,source,,,,,22fe2ea3 2026-09-13
@@ -12380,7 +12380,7 @@ fce7f17dd4f6bcc356b9a50f02ad81d7,harmonics/noaa/harmonics_noaa_pacif.txt,"Makin 
 5f15fb4330cd6651ff95b7a51fffd73e,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Mar del Plata, Buenos Aires, Argentina",-38.0358,-57.5315,manual,"Mar Del Plata, Argentina",-38.035,-57.538,576,be5dbfbe 2026-03-23
 5fb16673750e508495edbcd462390153,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Smögen, Sweden",58.3536,11.2178,manual,"Smogen, Sweden",,,,be5dbfbe 2026-03-23
 5ff342faa601b3928dbb0252ac634160,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Vardø, Norway",70.3745,31.1044,manual,"Vardo, Norway",70.333,31.1,4618,be5dbfbe 2026-03-23
-605debe633cdd83a57e158c4cd6f649e,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Providenya, Chukotka Autonomous Okrug, Russia",64.4,-173.2,manual,"Providenya 626A, Russia",,,,be5dbfbe 2026-03-23
+605debe633cdd83a57e158c4cd6f649e,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Providenya, Chukotka Autonomous Okrug, Russia",64.4038,-173.2174,manual,"Providenya 626A, Russia",64.4,-173.2,937,be5dbfbe 2026-03-23
 607299f15069b8cee7035eacf1e4a656,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Valparaíso, Chile",-33.0275,-71.6279,manual,"Valparaiso, Chile",-33.033,-71.633,775,be5dbfbe 2026-03-23
 60771e7921b185207e364c83c20fcdf2,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Travemünde, Germany",53.958024,10.872182,source,,,,,d41216ac 2026-04-23
 60821584c351436b72804201ce947bc4,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Tangudden, Sweden",57.6821,11.8722,manual,"Tangudden Sjov, Sweden",,,,be5dbfbe 2026-03-23
