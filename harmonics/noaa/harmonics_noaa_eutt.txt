@@ -92974,8 +92974,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 81.1000
-# !latitude: 72.2333
+# !longitude: 81.1033
+# !latitude: 72.2380
 # note: 20260904 Phasen um -4.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
@@ -93217,204 +93217,6 @@ x 0 0
 x 0 0
 MN4             0.0023  181.43
 MS4             0.0055  258.35
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.0570  324.95
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Russia
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1923
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1923). M2=0.20 S2=0.04 k=0.17 dt=+156min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 82.7500
-# !latitude: 71.8833
-# note: 20260904 Phasen um -4.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk Krai
-# admin1_quelle: Ufer 1.0 km
-# note: 20260913 S2/K2 x 2.24 auf den Springhub des Buchs (eutt-1923); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Mys Sopochnaya Karga (Yeniseyskiy Zaliv), Krasnoyarsk Krai, Russia
-+03:00 :Asia/Krasnoyarsk
-0.3962 meters
-J1              0.0003  201.88
-K1              0.0231  284.95
-K2              0.0255  220.68
-L2              0.0063  202.66
-M1              0.0003  8.70
-M2              0.2031  171.42
-x 0 0
-M4              0.0047  236.85
-x 0 0
-x 0 0
-N2              0.0444  140.18
-x 0 0
-O1              0.0044  92.48
-OO1             0.0002  117.40
-P1              0.0077  297.55
-Q1              0.0044  38.25
-x 0 0
-R2              0.0005  218.85
-x 0 0
-S2              0.0936  217.00
-x 0 0
-x 0 0
-T2              0.0035  215.15
-LDA2            0.0014  192.56
-MU2             0.0049  125.85
-NU2             0.0086  144.38
-RHO1            0.0002  164.34
-x 0 0
-x 0 0
-MN4             0.0017  177.60
-MS4             0.0042  254.42
 x 0 0
 x 0 0
 x 0 0
@@ -93963,8 +93765,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 80.3333
-# !latitude: 73.1667
+# !longitude: 80.3217
+# !latitude: 73.1652
 # note: 20260904 Phasen um -4.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
