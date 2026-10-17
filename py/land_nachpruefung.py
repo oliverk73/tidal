@@ -158,7 +158,7 @@ def main(argv):
                 elif not fes_gilt:
                     gut, weg = (a, b) if a['rms'] < b['rms'] else (b, a)
                     grund, urteil = 'Bucht/Aestuar: FES trifft keinen der beiden Saetze, nichts entschieden', 'offen'
-                elif abs(a['rms'] - b['rms']) < 0.01:
+                elif abs(a['rms'] - b['rms']) < 0.02:          # wie Olivers Messungs-Regel: erst ab 2 cm zaehlt FES
                     gut, weg = (a, b) if ra <= rb else (b, a)
                     grund = 'gleich gut (%.1f/%.1f cm), Rang' % (100 * gut['rms'], 100 * weg['rms'])
                 else:
