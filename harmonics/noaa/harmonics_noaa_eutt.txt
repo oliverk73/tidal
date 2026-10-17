@@ -71102,8 +71102,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 59.0652
-# !latitude: 70.4651
+# !longitude: 54.5084
+# !latitude: 68.2955
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -71113,8 +71113,8 @@ x 0 0
 # note: 20260913 S2/K2 x 2.17 auf den Springhub des Buchs (eutt-1815); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-# note: 20261017 Position auf GeoNames Mys Bolvanskiy Nos (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
-Mys Bolvanskiy Nos, Nenets Autonomous Okrug, Russia
+# note: 20261017 Buch druckt 66 17 N (im Land), gemeint 68 17 N: Mys Bolvanskiy Nos an der Petschora, nicht Waigatsch (Oliver).
+Mys Bolvanskiy Nos (Pechorskaya Guba), Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
 J1              0.0006  195.65

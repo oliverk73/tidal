@@ -126,6 +126,7 @@ REF_BUCHFEHLER.update({('cptt', no): 'Karachi' for no in range(3577, 3618, 2) if
 # Positionen, die das Einlesen der Table 2 verdreht hat (Vorzeichen, Zehnerstelle); gefunden 15.09.2026 ueber
 # den Abstand Buchzeile <-> heutiger Satz bzw. naechster Satz. Die Saetze selbst tragen die richtige Position.
 POS_LESEFEHLER = {
+    ('eutt', 1815): (68.2833, 54.4500),    # Cape Bolvanski, Buch druckt 66 17 N (im Land); Petschora-Bucht (Oliver 17.10.2026)
     ('cptt', 219): (47.0500, 142.0333),    # Port Kholmsk, gelesen 41.05 N
     ('cptt', 1751): (1.2500, 102.1667),    # Siak River entrance, gelesen 105.17 E
     ('ectt', 4975): (2.1500, -50.5000),    # Ilha de Maraca, gelesen 2 09 S
