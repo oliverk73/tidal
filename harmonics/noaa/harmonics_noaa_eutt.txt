@@ -82074,8 +82074,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 60.0500
-# !latitude: 69.7000
+# !longitude: 60.0651
+# !latitude: 69.7072
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -82269,8 +82269,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 60.4167
-# !latitude: 69.6500
+# !longitude: 60.3881
+# !latitude: 69.6636
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -82464,8 +82464,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 60.7500
-# !latitude: 69.8167
+# !longitude: 60.7390
+# !latitude: 69.8278
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -82662,8 +82662,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 61.2000
-# !latitude: 69.8167
+# !longitude: 61.2271
+# !latitude: 69.8332
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -82860,8 +82860,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 64.9450
-# !latitude: 69.2600
+# !longitude: 64.9313
+# !latitude: 69.2538
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -83270,6 +83270,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Phasen um -2 h gedreht: gegen die Buchzone (+6/+7 statt +3) fehlten 2 h, Nachbarn derselben Liste trafen (Oliver).
+# note: 20261017 ATT 995 am selben Ort archiviert: FES-Abstand ATT 17.8 cm, dieser Satz 8.7 cm; Tagestiden hier zu klein (Oliver).
 Mys Ragozina (Ostrov Belyy), Yamalo-Nenets Autonomous Okrug, Russia
 +03:00 :Asia/Yekaterinburg
 0.5486 meters
