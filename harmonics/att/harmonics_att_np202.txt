@@ -16539,8 +16539,9 @@ x 0 0
 # !latitude: 71.5833
 # region: Sakha Republic
 # admin1_quelle: Polygon
+# note: 20261017 Meridian +09:00 -> +00:00: die NP202-Phasen sind Greenwich-Phasen (M2 47/S2 115 = FES 49/115), mit Zone +9 lag der Satz 3 h daneben (Oliver).
 Bukhta Tiksi, Sakha Republic, Russia
-+09:00 :Asia/Yakutsk
++00:00 :Asia/Yakutsk
 0.3000 meters
 x 0 0
 K1              0.0300  111.00
