@@ -9,8 +9,8 @@ fingerprint,file,name,lat,lon,provenance,orig_name,orig_lat,orig_lon,moved_m,fir
 3d3cbd5d1511aaf30a9e96933eeda625,harmonics/att/harmonics_att_np202.txt,"Baracoa, Cuba",20.35,-74.5,manual,"Baracoa, Cuba (NP202 2524) Tide",,,,14fdab51 2026-06-17
 3df7cf454eb1abddd27ca9b52af778df,harmonics/att/harmonics_att_np202.txt,"Cedros (Bonasse) Pier, Trinidad and Tobago",10.0947,-61.8654,manual,"Bonasse Pier, Trinidad and Tobago (NP202 2325) Tide",10.1,-61.8667,606,14fdab51 2026-06-17
 41371689ecca13d39a872adf309f3384,harmonics/att/harmonics_att_np202.txt,"Mys Ragozina, Yamalo-Nenets Autonomous Okrug, Russia",73.3833,70.1167,manual,Mys Ragozina (NP202 995) Tide,,,,14fdab51 2026-06-17
-441c2d2665bd7f267f58709da0658c7a,harmonics/att/harmonics_att_np202.txt,"Mys Chelyuskin, Krasnoyarsk Krai, Russia",77.7167,104.3167,manual,Mys Chelyuskin (NP202 972) Tide,,,,14fdab51 2026-06-17
-45b407ec90516cc0bc79de5da8be8afd,harmonics/att/harmonics_att_np202.txt,"Ostrova Komsomol'skoy Pravdy, Krasnoyarsk Krai, Russia",77.4333,106.6667,manual,Komsomolskaya Pravda Islands (NP202 971) Tide,,,,14fdab51 2026-06-17
+441c2d2665bd7f267f58709da0658c7a,harmonics/att/harmonics_att_np202.txt,"Mys Chelyuskin, Krasnoyarsk Krai, Russia",77.717,104.2851,manual,Mys Chelyuskin (NP202 972) Tide,77.7167,104.3167,748,14fdab51 2026-06-17
+45b407ec90516cc0bc79de5da8be8afd,harmonics/att/harmonics_att_np202.txt,"Ostrov Samuila (Ostrova Komsomol'skoy Pravdy), Krasnoyarsk Krai, Russia",77.4167,106.9,manual,Komsomolskaya Pravda Islands (NP202 971) Tide,77.4333,106.6667,5938,14fdab51 2026-06-17
 4edadbb3fe83fef544a4d8f8a7f0fc8d,harmonics/att/harmonics_att_np202.txt,"Mys Kharse (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia",70.1,73.7167,manual,"Mys Kharse, Obskaya Guba (NP202 990) Tide",,,,14fdab51 2026-06-17
 626817daa260d279957550a0a9776868,harmonics/att/harmonics_att_np202.txt,"Puerto Carúpano, Venezuela",10.6759,-63.2452,manual,"Puerto Carúpano, Venezuela (NP202 2344) Tide",10.6667,-63.25,1150,14fdab51 2026-06-17
 651cb51d3fb747a9f492964e4090162e,harmonics/att/harmonics_att_np202.txt,"Bukhta Teplits (Franz Josef Land), Arkhangelsk Oblast, Russia",81.7833,57.9333,manual,"Bukhta Teplits, Franz Josef Land (NP202 912) Tide",,,,14fdab51 2026-06-17
@@ -9206,7 +9206,7 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 048a3091a8762c744a2f1e1797d7477b,harmonics/noaa/harmonics_noaa_cptt.txt,"Glan (Sarangani Bay), Sarangani, Philippines",5.8277,125.2024,manual,"Sarangani Bay, Sarangani, Philippines",5.8333,125.2,677,f6b2415d 2026-09-24
 04d1b5559dd8c9e02a94ce1b66bde304,harmonics/noaa/harmonics_noaa_cptt.txt,"Pyeongsan-ri (Namhaedo), South Korea",34.7677,127.8491,manual,"P'yougsan-ni, Namhae-do, Busan, South Korea",34.7667,127.85,138,dd5f962f 2026-09-20
 053684e60b7bae392a26b282d83d6a80,harmonics/noaa/harmonics_noaa_cptt.txt,"Wanganui River entrance, Manawatu-Whanganui, New Zealand",-39.95,174.8167,source,,,,,083ce97a 2026-09-14
-05541651102ce6f133f52aeadc7c7848,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Chelyuskin, Krasnoyarsk Krai, Russia",77.7167,104.2833,manual,"Cape Chelyuskina, Russia",,,,083ce97a 2026-09-14
+05541651102ce6f133f52aeadc7c7848,harmonics/noaa/harmonics_noaa_cptt.txt,"Mys Chelyuskin, Krasnoyarsk Krai, Russia",77.717,104.2851,manual,"Cape Chelyuskina, Russia",77.7167,104.2833,54,083ce97a 2026-09-14
 05a00eaef739e670e2d85ddb6dc0aacb,harmonics/noaa/harmonics_noaa_cptt.txt,"Bazhou, Guangzhou, Guangdong, China",23.1167,113.3667,source,,,,,c295bd68 2026-09-14
 05caf07cde523b6a1d0b97d311c81073,harmonics/noaa/harmonics_noaa_cptt.txt,"Haian (New Port), Guangdong, China",20.2664,110.2133,manual,"Haian, Guangdong, China",20.2667,110.2167,356,7a7ed8e0 2026-07-01
 06afb440728ecc1abc91275a18b046bb,harmonics/noaa/harmonics_noaa_cptt.txt,"Hao (Bow or La Harpe) Island, French Polynesia",-18.0667,-140.9833,source,,,,,dd5f962f 2026-09-20
@@ -9248,7 +9248,6 @@ fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Calet
 14045742ac415bcafa9bea30dfd23b09,harmonics/noaa/harmonics_noaa_cptt.txt,"Dafengjiang, Guangxi, China",21.6333,108.8667,manual,"Dafeng Jiang, Vietnam",,,,c295bd68 2026-09-14
 144124851e128b40f38b3b42ced91922,harmonics/noaa/harmonics_noaa_cptt.txt,"Port Augusta, Spencer Gulf, South Australia, Australia",-32.5,137.7667,source,,,,,22fe2ea3 2026-09-13
 14be254017ab7d256692be36719835e9,harmonics/noaa/harmonics_noaa_cptt.txt,"Jones Cove, Hong Kong",22.4667,114.3333,source,,,,,083ce97a 2026-09-14
-14fa45ca284b4c97650d9aefcf7db264,harmonics/noaa/harmonics_noaa_cptt.txt,"Ostrov Samuila (Ostrova Komsomol'skoy Pravdy), Krasnoyarsk Krai, Russia",77.4167,106.9,manual,"Samuila I., Komsomolskoi Pravdy Island, Russia",,,,22fe2ea3 2026-09-13
 150b31425b2b1bb07ff53e856114b709,harmonics/noaa/harmonics_noaa_cptt.txt,"Cone Island, Vietnam",11.4333,103.0,source,,,,,dd5f962f 2026-09-20
 1557f6f158dde388495f926350102fb5,harmonics/noaa/harmonics_noaa_cptt.txt,"Bajiao, Shandong, China",37.6308,121.1375,source,,,,,3480bb10 2026-10-12
 15619d45c14ae98d384996c8386f0663,harmonics/noaa/harmonics_noaa_cptt.txt,"Sokhae-ri (Sokhae-dong), North Korea",38.5246,125.671,manual,"Sokhae-dong, North Korea",38.5167,125.6667,955,083ce97a 2026-09-14
@@ -13738,7 +13737,7 @@ f63e87f819cf3d4f6ffa38157acffee5,harmonics/utide/harmonics_utide_current_tables.
 4d7d221c7737112c12db3e881ec700b6,harmonics/utide/harmonics_utide_observations.txt,"Bremen-Oslebshausen (Weser), Germany",53.1198,8.7122,manual,"Oslebshausen (Weser), Germany",,,,17ebcd18 2026-05-01
 4dadd91d0fd03135faaad3b5ba3794cc,harmonics/utide/harmonics_utide_observations.txt,"Puerto Morelos, Quintana Roo, Mexico",20.868,-86.867,source,,,,,17ebcd18 2026-05-01
 4dca58b5a268fb7883d5f90cea44ea96,harmonics/utide/harmonics_utide_observations.txt,"Saint-Jean-de-Luz (Ciboure), France",43.3848,-1.664,source,,,,,bfc845b5 2026-05-20
-4ef048c6fe75a3be961cd8b4a30f498f,harmonics/utide/harmonics_utide_observations.txt,"Vodopadnaya, Kamchatka Krai, Russia",51.7243,157.9865,source,,,,,8a8d7870 2026-10-17
+4ef048c6fe75a3be961cd8b4a30f498f,harmonics/utide/harmonics_utide_observations.txt,"Vodopadnaya, Kamchatka Krai, Russia",51.7248,157.9865,manual,,51.7243,157.9865,56,8a8d7870 2026-10-17
 4ef7134ccdd0d9ebc25ad65e10b489fc,harmonics/utide/harmonics_utide_observations.txt,"Moçâmedes (Namibe), Angola",-15.1929,12.1462,manual,"Moçâmedes, Angola",,,,17ebcd18 2026-05-01
 4ef8d9d499f09d605cb89c9b337d4d66,harmonics/utide/harmonics_utide_observations.txt,"Tobishima, Yamagata, Japan",39.1855,139.5478,source,,,,,17ebcd18 2026-05-01
 4f3fd87a275b74ecc3fad11504185a26,harmonics/utide/harmonics_utide_observations.txt,"Swanage, England, United Kingdom",50.6093,-1.9492,source,,,,,17ebcd18 2026-05-01
