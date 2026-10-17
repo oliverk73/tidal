@@ -30,6 +30,20 @@ TAFELN = os.path.join(ROOT, 'tide_tables/france/haropa_rouen/haropa_hwlw.json')
 # code -> (Satzname, Breite, Laenge, Ort in der HAROPA-Tafel); Position = Hub'Eau-Stationskoordinate
 PEGEL = {
     'H503011001': ('Rouen, France', 49.4433, 1.0720, 'Rouen'),
+    # Oliver 17.10.2026 "Ja": alle HAROPA-Pegel; ersetzen die NP202-Uebertragungen von Le Havre (Duclair an der
+    # Messung 2026: Messfit 28 cm, NP202 53 cm). Gemeinde laut OSM, Namen der Altsaetze beibehalten.
+    'H501011001': ('Elbeuf, France', 49.2925, 1.0131, None),
+    'H501012001': ('Oissel-sur-Seine, France', 49.3385, 1.1034, None),
+    'H505011001': ('Petit-Couronne, France', 49.3858, 1.0118, None),
+    'H505012001': ('La Bouille, France', 49.3539, 0.9281, None),
+    'H505013001': ('Mauny (Val-des-Leux), France', 49.4025, 0.9216, None),
+    'H505104001': ('Duclair, France', 49.4804, 0.8742, 'Duclair'),
+    'H510011001': ('Le Mesnil-sous-Jumièges, France', 49.4131, 0.8669, None),
+    'H510012001': ('Heurteauville, France', 49.4481, 0.8157, None),
+    'H512011001': ('Caudebec-en-Caux, France', 49.5236, 0.7143, 'Caudebec-en-Caux'),
+    'H512012001': ('Vatteville-la-Rue, France', 49.4804, 0.6692, None),
+    'H512014001': ('Petiville (Saint-Léonard), France', 49.4603, 0.5497, 'Saint Léonard'),
+    'H514011001': ('Tancarville, France', 49.4769, 0.4672, None),
 }
 OBERTIDEN = ['S6', '2SM6', '2NM6', 'MSN6', 'M7', '3MK7', '2MSN8', '2(MS)8', '3MN8', '3MS8', '2(MN)8', 'M10', '4MS10',
              '4MN10', '3MNS10', 'M12', '5MS12', '4MNS12', '4M2S12', '2MN2', '3MS2', 'MNS2', 'MSN2', '2MS2K2']
@@ -57,6 +71,8 @@ def main(argv):
         name, lat, lon, tafelort = PEGEL[code]
         s = pd.read_csv(os.path.join(REIHEN, 'hp_%s.csv' % code), parse_dates=['time']).set_index('time')['waterlevel_m']
         tr, te = s[FIT[0]:FIT[1]], s['2026-01-01':]
+        jm = s.groupby(s.index.year).agg(['median', 'count'])
+        print('   Jahresmedian/Anzahl: ' + ' '.join('%d:%.2f/%d' % (j, r['median'], r['count']) for j, r in jm.iterrows()))
         t = np.array([i.timestamp() for i in tr.index])
         z0, w = kq(t, tr.values, nutz, speeds, arg, fak)
         h = SF.hoehe_und_ableitungen(t, z0, w, kopf)[0]
@@ -81,7 +97,7 @@ def main(argv):
                '# station_id_context: HydroPortail-%s' % code, '# date_imported: %s' % heute,
                '# datum: CMH (Cote marine du Havre, 4.38 m unter NGF)', '# confidence: 7',
                '# utide: pts=%d period=%s..%s r2=%.4f rms=%.4fm const=%d' % (len(tr), tr.index[0].date(), tr.index[-1].date(), r2, rms, len(nutz)),
-               '# note: %s Seine, Flusstide mit Saegezahn, NW im Modell ~35 min zu frueh (py/seine_haropa_fit.py) (Oliver).' % heute,
+               '# note: %s Seine, Flusstide mit Saegezahn: NW im Modell zu frueh (Rouen ~35 min) (py/seine_haropa_fit.py) (Oliver).' % heute,
                '# note: %s.' % probe,
                '# !units: meters', '# !longitude: %.4f' % lon, '# !latitude: %.4f' % lat,
                '# region: Seine-Maritime', name, '+00:00 :Europe/Paris', '%.4f meters' % z0]
