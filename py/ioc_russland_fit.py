@@ -39,8 +39,7 @@ PEGEL = [
     ('sosu', 'ioc_sosu_Sosunovo.csv', 'Mys Sosunova, Primorsky Krai, Russia', 46.5320, 138.3500,
      'IOC "Sosunovo" 46.53/138.33 (gerundet, an Land); Siedlung/Leuchtturm Mys Sosunova, bitte pruefen'),
     # 17.10.2026 (PSMSL-Frage: dort nur Monatsmittel; Stundenwerte beim IOC, py/download_ioc_monate.py)
-    ('star', 'ioc_star_monate.csv', 'Starodubskoye, Sakhalin Oblast, Russia', 47.4154, 142.8132,
-     'IOC star 47.41/142.82 (an Land); naechstes Wasser beim Ort (GeoNames), bitte pruefen'),
+    # star (Starodubskoe) NICHT: steht seit 20.05.2026 im Bestand (IOC-star); am 17.10. versehentlich doppelt gefittet
     ('seve2', 'ioc_seve2_monate.csv', "Severo-Kuril'sk (Paramushir, Kuril'skiye Ostrova), Sakhalin Oblast, Russia", 50.6785, 156.1404,
      'IOC seve2 50.678/156.1388 (7 m an Land), Hafen; bitte pruefen'),
     ('vodo', 'ioc_vodo_monate.csv', 'Vodopadnaya, Kamchatka Krai, Russia', 51.7243, 157.9865,
