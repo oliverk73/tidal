@@ -227970,8 +227970,8 @@ x 0 0
 # utide: pts=3410 period=2026-05-01..2026-09-30 r2=0.9834 rms=0.1845m const=35
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC -2.5600/-44.0500; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: -44.0500
-# !latitude: -2.5600
+# !longitude: -44.0565
+# !latitude: -2.5664
 # region: Maranhão
 São José de Ribamar, Maranhão, Brazil
 +00:00 :America/Fortaleza
@@ -229128,8 +229128,8 @@ x 0 0
 # utide: pts=12964 period=2024-10-02..2026-09-30 r2=0.9795 rms=0.0972m const=67
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC -0.9300/-80.6700; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: -80.6700
-# !latitude: -0.9300
+# !longitude: -80.6710
+# !latitude: -0.9306
 # region: Manabí
 Puerto Atún (Manta), Ecuador
 +00:00 :America/Guayaquil
@@ -229514,8 +229514,8 @@ x 0 0
 # utide: pts=12665 period=2022-03-03..2023-10-31 r2=0.9712 rms=0.0782m const=67
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC 28.6400/-17.9400; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: -17.9400
-# !latitude: 28.6400
+# !longitude: -17.9431
+# !latitude: 28.6411
 # region: Canarias
 Puerto de Tazacorte (La Palma), Islas Canarias, Spain
 +00:00 :Atlantic/Canary
@@ -229707,8 +229707,8 @@ x 0 0
 # utide: pts=7654 period=2022-01-01..2022-12-28 r2=0.9790 rms=0.0774m const=59
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC 28.3700/-16.7500 an Land, 165 m ins Wasser; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: -16.7500
-# !latitude: 28.3715
+# !longitude: -16.7533
+# !latitude: 28.3728
 # region: Canarias
 Garachico (Tenerife), Islas Canarias, Spain
 +00:00 :Atlantic/Canary
@@ -229900,8 +229900,8 @@ x 0 0
 # utide: pts=8433 period=2025-09-01..2026-08-31 r2=0.9152 rms=0.1884m const=59
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC -8.7600/115.1700 an Land, 198 m ins Wasser; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: 115.1685
-# !latitude: -8.7610
+# !longitude: 115.1665
+# !latitude: -8.7577
 # region: Bali
 Kedonganan (Jimbaran), Bali, Indonesia
 +00:00 :Asia/Makassar
@@ -230093,8 +230093,8 @@ x 0 0
 # utide: pts=4243 period=2025-09-01..2026-02-28 r2=0.9439 rms=0.1277m const=35
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC 4.2300/126.7900; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: 126.7900
-# !latitude: 4.2300
+# !longitude: 126.7890
+# !latitude: 4.2295
 # region: Sulawesi Utara
 Beo (Pulau Karakelang), Sulawesi Utara, Indonesia
 +00:00 :Asia/Makassar
@@ -230270,6 +230270,200 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+#
+# Rouen, France
+# BEGIN HOT COMMENTS
+# country: France
+# source: HAROPA gauge (Vigicrues/HydroPortail H503011001) measurements, least squares
+# station_id_context: HydroPortail-H503011001
+# date_imported: 20261017
+# datum: CMH (Cote marine du Havre, 4.38 m unter NGF)
+# confidence: 7
+# utide: pts=87144 period=2016-01-01..2025-12-31 r2=0.8728 rms=0.3867m const=92
+# note: 20261017 Seine, Flusstide mit Saegezahn, NW im Modell ~35 min zu frueh (py/seine_haropa_fit.py) (Oliver).
+# note: Probe Messung 2026: 35 cm (sd 30), HAROPA-Tafel 2026-30: 62 cm, 33 min.
+# !units: meters
+# !longitude: 1.0720
+# !latitude: 49.4433
+# region: Seine-Maritime
+Rouen, France
++00:00 :Europe/Paris
+6.3509 meters
+J1              0.0036  315.26
+K1              0.0464  195.69
+K2              0.0926  95.31
+L2              0.0064  145.69
+x 0 0
+M2              1.2166  42.16
+M3              0.0048  78.27
+M4              0.2172  347.60
+M6              0.0931  228.22
+M8              0.0481  175.58
+N2              0.1943  23.42
+2N2             0.0197  354.32
+O1              0.0195  73.73
+OO1             0.0052  350.24
+P1              0.0188  207.08
+Q1              0.0070  42.31
+2Q1             0.0009  317.86
+R2              0.0185  183.00
+S1              0.0038  88.15
+S2              0.3124  96.61
+S4              0.0103  176.10
+S6              0.0011  201.23
+T2              0.0096  88.22
+LDA2            0.0431  52.80
+MU2             0.1257  151.89
+NU2             0.0766  5.98
+RHO1            0.0013  319.11
+MK3             0.0190  176.71
+x 0 0
+MN4             0.0705  329.66
+MS4             0.1257  46.64
+2SM2            0.0296  310.92
+MF              0.0718  47.50
+MSF             0.3521  51.68
+MM              0.1754  29.64
+SA              0.3497  319.03
+SSA             0.0869  272.53
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0005  76.36
+2MK6            0.0249  280.32
+2MN2            0.1059  230.23
+2MN6            0.0499  203.70
+2MS6            0.0818  280.61
+2NM6            0.0136  175.63
+2SK5            0.0007  248.37
+2SM6            0.0097  359.36
+3MK7            0.0045  330.49
+3MN8            0.0368  148.27
+3MS2            0.0346  275.72
+3MS4            0.0527  81.09
+3MS8            0.0691  221.77
+ALP1            0.0008  116.36
+BET1            0.0024  117.74
+CHI1            0.0017  130.62
+H1              0.0315  18.80
+H2              0.0439  291.34
+x 0 0
+ETA2            0.0027  244.95
+x 0 0
+UPS1            0.0008  134.17
+M10             0.0152  97.43
+M12             0.0090  26.93
+MK4             0.0365  41.50
+MKS2            0.0184  175.31
+MNS2            0.1821  272.83
+EPS2            0.1985  100.37
+MO3             0.0154  61.25
+x 0 0
+TAU1            0.0132  287.32
+x 0 0
+MSK6            0.0068  357.52
+MSM             0.0110  85.13
+MSN2            0.0224  296.36
+MSN6            0.0111  290.73
+x 0 0
+NO1             0.0027  309.14
+OP2             0.0086  89.29
+x 0 0
+PHI1            0.0014  205.94
+x 0 0
+PI1             0.0020  221.67
+x 0 0
+PSI1            0.0040  30.74
+x 0 0
+x 0 0
+SIG1            0.0042  96.92
+SK3             0.0047  251.74
+x 0 0
+SN4             0.0136  107.21
+x 0 0
+SO1             0.0100  19.98
+SO3             0.0083  147.88
+THE1            0.0011  157.32
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0166  303.86
+2MS2K2          0.0007  26.53
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO3             0.0060  26.29
+x 0 0
+x 0 0
+N4              0.0120  309.99
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MSN8           0.0253  212.63
+2(MS)8          0.0224  285.29
+2(MN)8          0.0146  120.79
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+4MN10           0.0146  59.09
+3MNS10          0.0176  123.73
+4MS10           0.0305  131.92
+x 0 0
+x 0 0
+x 0 0
+4MNS12          0.0189  33.05
+5MS12           0.0229  49.83
+x 0 0
+4M2S12          0.0162  103.66
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+M7              0.0014  282.42
 x 0 0
 x 0 0
 x 0 0
