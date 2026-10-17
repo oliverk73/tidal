@@ -22715,8 +22715,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 172.1167
-# !latitude: 61.0000
+# !longitude: 172.1887
+# !latitude: 61.0244
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
@@ -22910,8 +22910,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 170.3333
-# !latitude: 59.9167
+# !longitude: 170.2891
+# !latitude: 59.9255
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
@@ -23495,8 +23495,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 162.0658
-# !latitude: 56.0317
+# !longitude: 162.0795
+# !latitude: 56.0252
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +11.00 nach dem Buch)
@@ -23504,7 +23504,8 @@ x 0 0
 # region: Kamchatka Krai
 # admin1_quelle: Polygon
 # note: 20261017 Buchposition 56.0167/161.9500 lag 6.9 km im Land (Laenge verdruckt); in die Bukhta Kryugera am Mys Osypnoy (OSM), dort auch ATT 8346 (Oliver).
-Mys Kryugera (Bukhta Kryugera), Kamchatka Krai, Russia
+# note: 20261017 ATT 8346 und NOAA 113 (Cape Kryugera) sind derselbe Pegel; Name und Position am Kap nach Oliver.
+Mys Osypnoy (Bukhta Kryugera), Kamchatka Krai, Russia
 +00:00 :Asia/Kamchatka
 1.3106 meters
 J1              0.0001  146.22
