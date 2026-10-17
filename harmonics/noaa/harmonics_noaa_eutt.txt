@@ -56506,209 +56506,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Russia
 # source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1649
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1649). M2=2.30 S2=0.24 k=1.98 dt=+233min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: 41.3426
-# !latitude: 67.2036
-# region: Murmansk Oblast
-# admin1_quelle: Polygon
-# note: 20260913 S2/K2 x 2.00 auf den Springhub des Buchs (eutt-1649); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.271. Siehe py/noaa_s2_nachziehen.py.
-# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
-Mys Orlovskiy, Murmansk Oblast, Russia
-+03:00 :Europe/Moscow
-3.5966 meters
-J1              0.0040  284.22
-K1              0.2611  4.41
-K2              0.1316  19.62
-L2              0.0712  358.67
-M1              0.0040  85.30
-M2              2.2968  324.55
-x 0 0
-M4              0.0534  183.11
-x 0 0
-x 0 0
-N2              0.5025  290.44
-x 0 0
-O1              0.0495  166.15
-OO1             0.0020  202.67
-P1              0.0870  16.59
-Q1              0.0495  109.03
-x 0 0
-R2              0.0059  17.56
-x 0 0
-S2              0.4852  15.50
-x 0 0
-x 0 0
-T2              0.0396  13.44
-LDA2            0.0158  348.19
-MU2             0.0554  273.61
-NU2             0.0969  295.02
-RHO1            0.0020  235.51
-x 0 0
-x 0 0
-MN4             0.0198  121.00
-MS4             0.0475  206.05
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.0570  325.16
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Russia
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1653
 # note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1653). M2=1.56 S2=0.17 k=1.35 dt=+287min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 40.6833
-# !latitude: 66.4833
+# !longitude: 40.6805
+# !latitude: 66.4851
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 3.3 km
 # note: 20260913 S2/K2 x 1.88 auf den Springhub des Buchs (eutt-1653); der Bau
@@ -56901,8 +56706,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 38.2388
-# !latitude: 66.0630
+# !longitude: 38.2404
+# !latitude: 66.0622
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 2.0 km
 # note: 20260913 S2/K2 x 2.15 auf den Springhub des Buchs (eutt-1655); der Bau
@@ -57104,7 +56909,8 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Position auf GeoNames Varzuga (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
-Reka Varzuga, Murmansk Oblast, Russia
+# note: 20261017 Ort Kuzomen' an der Varzuga-Muendung (4.8 km) vor die Klammer (Oliver).
+Kuzomen' (Reka Varzuga), Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 0.9144 meters
 x 0 0
@@ -59056,7 +58862,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Position auf GeoNames Bol'shoy Sorokskiy Reyd (RDST), ins Wasser (Nordkuesten-Pruefung) (Oliver).
-Bol'shoy Sorokskiy Reyd, Republic of Karelia, Russia
+Bol'shoy Sorokskiy Reyd (Belomorsk), Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.0363 meters
 x 0 0
@@ -59243,8 +59049,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 35.4333
-# !latitude: 64.4000
+# !longitude: 35.4414
+# !latitude: 64.4004
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
