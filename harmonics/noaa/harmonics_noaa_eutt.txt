@@ -52616,7 +52616,7 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 31.3667
-# !latitude: 69.6500
+# !latitude: 69.6460
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 0.2 km
 # note: 20260906 country "Norway" -> "Russia" nach dem Namen berichtigt,
@@ -52624,6 +52624,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.12 auf den Springhub des Buchs (eutt-1563); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.241. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Linakhamar (Guba Pechenga), Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.9507 meters
@@ -52811,13 +52812,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 31.9333
-# !latitude: 69.7833
+# !longitude: 31.9645
+# !latitude: 69.7837
 # region: Murmansk Oblast
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1565); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Pummanki (Bolshaya Volokovaya), Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.0117 meters
@@ -53199,13 +53201,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 32.6833
-# !latitude: 69.7833
+# !longitude: 32.6768
+# !latitude: 69.7860
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.13 auf den Springhub des Buchs (eutt-1569); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Zubovskaya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1641 meters
@@ -53393,13 +53396,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.1000
-# !latitude: 69.6833
+# !longitude: 33.1039
+# !latitude: 69.6842
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.13 auf den Springhub des Buchs (eutt-1571); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Bol'shaya Korabel'naya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -53588,12 +53592,13 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 32.7500
-# !latitude: 69.5833
+# !latitude: 69.5811
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 4.7 km
 # note: 20260913 S2/K2 x 2.12 auf den Springhub des Buchs (eutt-1573); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Malaya Korabel'naya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -53975,13 +53980,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 32.1667
-# !latitude: 69.6667
+# !longitude: 32.1576
+# !latitude: 69.6676
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.13 auf den Springhub des Buchs (eutt-1577); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Bol'shaya Motka, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -54169,13 +54175,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 32.1500
-# !latitude: 69.7333
+# !longitude: 32.1435
+# !latitude: 69.7311
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 1.0 km
 # note: 20260913 S2/K2 x 2.13 auf den Springhub des Buchs (eutt-1579); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Bukhta Ozerko, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -54363,13 +54370,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 32.0667
-# !latitude: 69.5833
+# !longitude: 32.0628
+# !latitude: 69.5842
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.12 auf den Springhub des Buchs (eutt-1581); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Titovka, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -54557,13 +54565,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 32.5000
-# !latitude: 69.4833
+# !longitude: 32.4974
+# !latitude: 69.4824
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.12 auf den Springhub des Buchs (eutt-1583); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Zapadnaya Litsa, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -54751,13 +54760,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 32.6500
-# !latitude: 69.4667
+# !longitude: 32.6397
+# !latitude: 69.4685
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.14 auf den Springhub des Buchs (eutt-1585); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Ostrova Vichany, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -55140,12 +55150,13 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 32.9167
-# !latitude: 69.3833
+# !latitude: 69.3820
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 1.6 km
 # note: 20260913 S2/K2 x 2.12 auf den Springhub des Buchs (eutt-1589); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Bukhta Nasha (Guba Ura), Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -55333,14 +55344,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.1500
-# !latitude: 69.4167
+# !longitude: 33.1225
+# !latitude: 69.4148
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.12 auf den Springhub des Buchs (eutt-1591); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.319. Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-15 Name nach GeoNames, 'Port' entfernt bzw. Bindestrich (Oliver).
+# note: 20261017 Position auf GeoNames Port-Vladimir (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Port-Vladimir, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -55528,13 +55540,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.0833
-# !latitude: 69.3833
+# !longitude: 33.0807
+# !latitude: 69.3842
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.13 auf den Springhub des Buchs (eutt-1593); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.319. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Kislaya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.0117 meters
@@ -55723,12 +55736,13 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 33.4167
-# !latitude: 69.3000
+# !latitude: 69.3018
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 1.2 km
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1595); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Kuvshinskaya Salma, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -56110,13 +56124,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.6000
-# !latitude: 69.2667
+# !longitude: 33.6038
+# !latitude: 69.2654
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1599); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Bol'shaya Volokovaya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -56304,7 +56319,7 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.3500
+# !longitude: 33.3525
 # !latitude: 69.2167
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
@@ -56313,6 +56328,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Olen'ya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -56500,13 +56516,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.2833
-# !latitude: 69.0833
+# !longitude: 33.2787
+# !latitude: 69.0836
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1605); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Velikiy (PT), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Velikiy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -56694,13 +56711,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.0667
-# !latitude: 69.0167
+# !longitude: 33.0614
+# !latitude: 69.0209
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1607); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Bazisnyy (PT), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Bazisnyy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -56888,13 +56906,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.0667
-# !latitude: 68.9833
+# !longitude: 33.0613
+# !latitude: 68.9810
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1609); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.28. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Murmansk (PRT), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Murmansk, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -57082,13 +57101,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.0167
-# !latitude: 68.9333
+# !longitude: 33.0168
+# !latitude: 68.9267
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (eutt-1611); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.268. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Drovyanoy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Drovyanoy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -57276,13 +57296,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.0167
-# !latitude: 68.8833
+# !longitude: 33.0090
+# !latitude: 68.8863
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.08 auf den Springhub des Buchs (eutt-1613); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Kola (PPLA2), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Kola, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -57664,13 +57685,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.8667
-# !latitude: 69.2833
+# !longitude: 33.8464
+# !latitude: 69.2806
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.12 auf den Springhub des Buchs (eutt-1617); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.292. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Dolgaya Zapadnaya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1336 meters
@@ -58246,13 +58268,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 34.7000
-# !latitude: 69.2500
+# !longitude: 34.6962
+# !latitude: 69.2464
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 1.5 km
 # note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (eutt-1623); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.29. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Proliv Malyy Oleniy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.2250 meters
@@ -58829,12 +58852,13 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 36.3000
-# !latitude: 69.0833
+# !latitude: 69.0855
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 1.5 km
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (eutt-1629); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.258. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Porchnikha Cove, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.4384 meters
@@ -59022,13 +59046,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 36.8333
-# !latitude: 68.9167
+# !longitude: 36.8296
+# !latitude: 68.9158
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (eutt-1631); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.282. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Rynda, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.4079 meters
@@ -59216,13 +59241,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 37.3333
-# !latitude: 68.7833
+# !longitude: 37.3185
+# !latitude: 68.7858
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (eutt-1633); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.277. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Kharlovka (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Kharlovka, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 2.5908 meters
@@ -59992,13 +60018,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 39.1167
-# !latitude: 68.1833
+# !longitude: 39.1143
+# !latitude: 68.1842
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.07 auf den Springhub des Buchs (eutt-1641); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.291. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Savikha, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 3.2004 meters
@@ -60768,13 +60795,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 41.3333
-# !latitude: 67.2000
+# !longitude: 41.3426
+# !latitude: 67.2036
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.00 auf den Springhub des Buchs (eutt-1649); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.271. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Mys Orlovskiy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 3.5966 meters
@@ -61350,13 +61378,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 38.2833
-# !latitude: 66.0667
+# !longitude: 38.2388
+# !latitude: 66.0630
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 2.0 km
 # note: 20260913 S2/K2 x 2.15 auf den Springhub des Buchs (eutt-1655); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Tetrino (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Tetrino, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.0973 meters
@@ -61544,13 +61573,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 36.9667
-# !latitude: 66.2667
+# !longitude: 36.9415
+# !latitude: 66.2663
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 4.1 km
 # note: 20260913 S2/K2 x 2.17 auf den Springhub des Buchs (eutt-1657); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Varzuga (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Varzuga, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 0.9144 meters
@@ -61738,13 +61768,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 34.5167
-# !latitude: 66.5500
+# !longitude: 34.4548
+# !latitude: 66.5424
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1659); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Turiy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Turiy, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.1887 meters
@@ -61932,13 +61963,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 34.3500
-# !latitude: 66.6167
+# !longitude: 34.3613
+# !latitude: 66.6149
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 1.0 km
 # note: 20260913 S2/K2 x 2.18 auf den Springhub des Buchs (eutt-1661); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Volostrov, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -62126,13 +62158,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 34.3333
-# !latitude: 66.7000
+# !longitude: 34.3526
+# !latitude: 66.6964
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (eutt-1663); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.343. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Malaya Pir'ya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -62514,13 +62547,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.8000
-# !latitude: 66.7667
+# !longitude: 33.7897
+# !latitude: 66.7631
 # region: Murmansk Oblast
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.16 auf den Springhub des Buchs (eutt-1667); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.324. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Por'ya, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.2497 meters
@@ -62708,13 +62742,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 32.4167
-# !latitude: 67.1333
+# !longitude: 32.4201
+# !latitude: 67.1311
 # region: Murmansk Oblast
 # admin1_quelle: Ufer 1.0 km
 # note: 20260913 S2/K2 x 2.16 auf den Springhub des Buchs (eutt-1669); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.265. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Kandalaksha (PRT), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Kandalaksha, Murmansk Oblast, Russia
 +03:00 :Europe/Moscow
 1.8593 meters
@@ -63096,13 +63131,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 33.6000
-# !latitude: 66.3000
+# !longitude: 33.5966
+# !latitude: 66.2960
 # region: Republic of Karelia
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (eutt-1673); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.231. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Sredniy Reyd (Guba Keret'), Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -63290,13 +63326,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 34.6667
-# !latitude: 65.9000
+# !longitude: 34.6700
+# !latitude: 65.9022
 # region: Republic of Karelia
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.14 auf den Springhub des Buchs (eutt-1675); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.295. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Gridina Guba, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.1278 meters
@@ -63678,13 +63715,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 34.6833
-# !latitude: 65.7667
+# !longitude: 34.6770
+# !latitude: 65.7640
 # region: Republic of Karelia
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.19 auf den Springhub des Buchs (eutt-1679); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.283. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Kalgalaksha (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Kalgalaksha (Guba Kalgalaksha), Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.0363 meters
@@ -64857,6 +64895,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.22 auf den Springhub des Buchs (eutt-1693); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Bol'shoy Sorokskiy Reyd (RDST), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Bol'shoy Sorokskiy Reyd, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 1.0363 meters
@@ -65044,8 +65083,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 35.0333
-# !latitude: 64.5000
+# !longitude: 35.0354
+# !latitude: 64.4987
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -65055,6 +65094,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.25 auf den Springhub des Buchs (eutt-1695); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.317. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Ostrov Molchanov, Republic of Karelia, Russia
 +03:00 :Europe/Moscow
 0.9754 meters
@@ -67816,8 +67856,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 36.5333
-# !latitude: 64.7167
+# !longitude: 36.5352
+# !latitude: 64.7150
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -67827,6 +67867,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.08 auf den Springhub des Buchs (eutt-1723); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.294. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Chesmenskiy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Chesmenskiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7010 meters
@@ -68212,8 +68253,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 36.4500
-# !latitude: 64.9167
+# !longitude: 36.4418
+# !latitude: 64.9247
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -68223,6 +68264,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.27 auf den Springhub des Buchs (eutt-1727); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.268. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Letniy Orlov (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Letniy Orlov, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.8230 meters
@@ -68410,8 +68452,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 36.0000
-# !latitude: 65.0167
+# !longitude: 36.0021
+# !latitude: 65.0185
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -68421,6 +68463,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.23 auf den Springhub des Buchs (eutt-1729); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Ostrov Malaya Muksalma, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -68608,8 +68651,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 35.7000
-# !latitude: 65.0167
+# !longitude: 35.7033
+# !latitude: 65.0257
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -68619,6 +68662,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.19 auf den Springhub des Buchs (eutt-1731); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.19. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Solovetsky (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Solovetskiy Reyd (Ostrov Solovetskiy), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -68806,8 +68850,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 35.6333
-# !latitude: 65.1333
+# !longitude: 35.6258
+# !latitude: 65.1351
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -68819,6 +68863,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Port Kem, Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (2) und FES.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Sosnovaya Guba (Ostrov Solovetskiy), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.0973 meters
@@ -69204,8 +69249,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 36.8167
-# !latitude: 65.2000
+# !longitude: 36.8178
+# !latitude: 65.1973
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -69215,6 +69260,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.14 auf den Springhub des Buchs (eutt-1737); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.375. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Ostrov Zhizhginskiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.8534 meters
@@ -69402,8 +69448,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 37.7000
-# !latitude: 64.9500
+# !longitude: 37.7010
+# !latitude: 64.9653
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -69413,6 +69459,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.19 auf den Springhub des Buchs (eutt-1739); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.158. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Lopshen'ga (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Lopshen'ga, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7315 meters
@@ -69600,8 +69647,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 38.4500
-# !latitude: 64.7833
+# !longitude: 38.4215
+# !latitude: 64.7802
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -69611,6 +69658,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.26 auf den Springhub des Buchs (eutt-1741); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.246. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Unskaya Guba, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.6706 meters
@@ -69798,7 +69846,7 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 39.7833
+# !longitude: 39.7728
 # !latitude: 64.5833
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
@@ -69809,6 +69857,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.22 auf den Springhub des Buchs (eutt-1743); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.294. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Nikolskoi Bar, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7010 meters
@@ -70792,8 +70841,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 40.2833
-# !latitude: 64.8500
+# !longitude: 40.2801
+# !latitude: 64.8491
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -70803,6 +70852,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.22 auf den Springhub des Buchs (eutt-1753); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.294. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Ostrov Mud'yugskiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7620 meters
@@ -71188,8 +71238,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 40.1000
-# !latitude: 65.0833
+# !longitude: 40.0936
+# !latitude: 65.0806
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -71201,6 +71251,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Port Kem, Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Reka Kuya, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.9144 meters
@@ -71388,8 +71439,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 39.7500
-# !latitude: 65.3333
+# !longitude: 39.7218
+# !latitude: 65.3362
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -71401,6 +71452,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.26. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Port Kem, Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
+# note: 20261017 Position auf GeoNames Mys Kerets (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Kerets, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.2192 meters
@@ -71588,8 +71640,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 39.7833
-# !latitude: 65.5667
+# !longitude: 39.7652
+# !latitude: 65.5677
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -71599,6 +71651,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.26 auf den Springhub des Buchs (eutt-1761); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Lysunov (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Lysunov, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -71786,8 +71839,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 40.4333
-# !latitude: 65.7833
+# !longitude: 40.4191
+# !latitude: 65.7866
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -71797,6 +71850,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.21 auf den Springhub des Buchs (eutt-1763); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Tova (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Tova, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.8230 meters
@@ -71984,8 +72038,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 40.7833
-# !latitude: 65.9833
+# !longitude: 40.7522
+# !latitude: 65.9880
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -71995,6 +72049,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.14 auf den Springhub des Buchs (eutt-1765); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.295. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Intsy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Intsy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.3411 meters
@@ -72182,8 +72237,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 41.2667
-# !latitude: 66.0500
+# !longitude: 41.2543
+# !latitude: 66.0490
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -72193,6 +72248,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.05 auf den Springhub des Buchs (eutt-1767); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Ruch'i (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Ruch'i, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 1.4630 meters
@@ -72578,8 +72634,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 41.9333
-# !latitude: 66.3333
+# !longitude: 41.8985
+# !latitude: 66.3327
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -72589,6 +72645,7 @@ x 0 0
 # note: 20260913 S2/K2 x 1.98 auf den Springhub des Buchs (eutt-1771); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mayda (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Mayda, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 2.1946 meters
@@ -72776,8 +72833,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 42.1333
-# !latitude: 66.5000
+# !longitude: 42.1494
+# !latitude: 66.5020
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -72787,6 +72844,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.07 auf den Springhub des Buchs (eutt-1773); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.282. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Bol'shaya Kedovka (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Bol'shaya Kedovka, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 2.5603 meters
@@ -72974,8 +73032,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 42.2833
-# !latitude: 66.5167
+# !longitude: 42.2623
+# !latitude: 66.5149
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -72985,6 +73043,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1775); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.282. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Voronov (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Voronov, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 3.9624 meters
@@ -73568,8 +73627,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 43.2667
-# !latitude: 66.4167
+# !longitude: 43.2692
+# !latitude: 66.4093
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -73579,6 +73638,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (eutt-1781); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Abramovskiy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Abramovskiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 5.1511 meters
@@ -73766,8 +73826,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 43.6667
-# !latitude: 66.2333
+# !longitude: 43.6797
+# !latitude: 66.2376
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -73777,6 +73837,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.05 auf den Springhub des Buchs (eutt-1783); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Nerpinskiy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Nerpinskiy, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 5.8826 meters
@@ -74162,7 +74223,7 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 44.1167
+# !longitude: 44.1134
 # !latitude: 66.1500
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
@@ -74170,6 +74231,7 @@ x 0 0
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Reka Semzha, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 6.0960 meters
@@ -74555,14 +74617,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 44.1333
-# !latitude: 65.8833
+# !longitude: 44.1316
+# !latitude: 65.8839
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
+# note: 20261017 Position auf GeoNames Kamenka (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Kamenka (Reka Mezen'), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 2.4079 meters
@@ -74750,8 +74813,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 43.7833
-# !latitude: 67.1833
+# !longitude: 43.7762
+# !latitude: 67.1969
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -74761,6 +74824,7 @@ x 0 0
 # note: 20260913 S2/K2 x 1.99 auf den Springhub des Buchs (eutt-1793); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.277. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Konushin (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Konushin, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 3.7490 meters
@@ -75146,8 +75210,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 44.1000
-# !latitude: 67.6667
+# !longitude: 44.0676
+# !latitude: 67.6605
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -75157,6 +75221,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.06 auf den Springhub des Buchs (eutt-1797); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.266. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Kiya (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Kiya, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 2.5298 meters
@@ -75344,8 +75409,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 43.6500
-# !latitude: 68.5000
+# !longitude: 43.6378
+# !latitude: 68.4999
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -75355,6 +75420,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.11 auf den Springhub des Buchs (eutt-1799); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Tarkhanovo (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Tarkhanovo, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 2.0117 meters
@@ -75542,8 +75608,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 43.2500
-# !latitude: 68.6667
+# !longitude: 43.2678
+# !latitude: 68.6575
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -75553,6 +75619,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.08 auf den Springhub des Buchs (eutt-1801); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.303. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Kanin Nos (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Kanin Nos, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 1.7983 meters
@@ -75740,8 +75807,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 45.9667
-# !latitude: 68.3167
+# !longitude: 46.0062
+# !latitude: 68.3151
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -75751,6 +75818,7 @@ x 0 0
 # note: 20260913 S2/K2 x 1.99 auf den Springhub des Buchs (eutt-1803); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Vostochnaya Kambal'nitsa (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Vostochnaya Kambal'nitsa, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 1.7374 meters
@@ -75938,14 +76006,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 48.7667
-# !latitude: 67.7000
+# !longitude: 48.7244
+# !latitude: 67.6939
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
 # region: Nenets Autonomous Okrug
 # admin1_quelle: Ufer 1.0 km
+# note: 20261017 Position auf GeoNames Indiga (STM), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Reka Indiga, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 1.4630 meters
@@ -76133,8 +76202,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 49.3500
-# !latitude: 68.8000
+# !longitude: 49.3078
+# !latitude: 68.7796
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -76144,6 +76213,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (eutt-1807); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.355. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Bugrino (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Bugrino (Ostrov Kolguyev), Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.8839 meters
@@ -76332,7 +76402,7 @@ x 0 0
 # confidence: 4
 # !units: meters
 # !longitude: 54.3333
-# !latitude: 68.9833
+# !latitude: 68.9891
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -76342,6 +76412,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.14 auf den Springhub des Buchs (eutt-1809); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Russki Zavorot, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -76529,8 +76600,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 54.6667
-# !latitude: 68.9667
+# !longitude: 54.6842
+# !latitude: 68.9703
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -76540,6 +76611,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.13 auf den Springhub des Buchs (eutt-1811); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.319. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Gulyayevskiye Koshki, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -76925,8 +76997,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 59.0667
-# !latitude: 70.4667
+# !longitude: 59.0652
+# !latitude: 70.4651
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -76936,6 +77008,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.17 auf den Springhub des Buchs (eutt-1815); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Bolvanskiy Nos (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Bolvanskiy Nos, Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.5791 meters
@@ -77717,8 +77790,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 59.1833
-# !latitude: 69.8500
+# !longitude: 59.1836
+# !latitude: 69.8521
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -77728,6 +77801,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.21 auf den Springhub des Buchs (eutt-1823); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Bol'shoy Lyamchin Nos (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Bol'shoy Lyamchin Nos (Ostrov Vaygach), Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -77916,7 +77990,7 @@ x 0 0
 # confidence: 3
 # !units: meters
 # !longitude: 56.4000
-# !latitude: 70.5667
+# !latitude: 70.5658
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -77926,6 +78000,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (eutt-1825); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Proliv Petukhovskiy Shar, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.3962 meters
@@ -78113,8 +78188,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 55.6333
-# !latitude: 70.6333
+# !longitude: 55.6306
+# !latitude: 70.6337
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -78124,6 +78199,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.02 auf den Springhub des Buchs (eutt-1827); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Rakhmanova (Guba Sakhanikha), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.2438 meters
@@ -78311,8 +78387,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 53.7167
-# !latitude: 71.0500
+# !longitude: 53.7333
+# !latitude: 71.0585
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -78322,6 +78398,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.08 auf den Springhub des Buchs (eutt-1829); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Propashchaya, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.2134 meters
@@ -78905,8 +78982,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 52.7500
-# !latitude: 72.3833
+# !longitude: 52.7100
+# !latitude: 72.3755
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -78916,6 +78993,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.07 auf den Springhub des Buchs (eutt-1835); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Malye Karmakuly (STNB), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Malyye Karmakuly (Zaliv Mollera), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.4267 meters
@@ -79501,8 +79579,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 54.3667
-# !latitude: 73.3333
+# !longitude: 54.3737
+# !latitude: 73.3334
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -79512,6 +79590,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.07 auf den Springhub des Buchs (eutt-1841); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Lagernyy (PPL), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Lagernyy (Proliv Matochkin Shar), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.4267 meters
@@ -79699,8 +79778,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 55.6000
-# !latitude: 73.3167
+# !longitude: 55.5849
+# !latitude: 73.3171
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -79710,6 +79789,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.12 auf den Springhub des Buchs (eutt-1843); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Uzkiy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Uzkiy (Proliv Matochkin Shar), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -80093,7 +80173,7 @@ x 0 0
 # confidence: 3
 # !units: meters
 # !longitude: 55.5000
-# !latitude: 74.1167
+# !latitude: 74.1221
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -80103,6 +80183,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.07 auf den Springhub des Buchs (eutt-1849); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.319. Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Krestovaya Guba, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.4267 meters
@@ -81480,8 +81561,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 59.0833
-# !latitude: 70.4667
+# !longitude: 59.0652
+# !latitude: 70.4651
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -81491,6 +81572,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.18 auf den Springhub des Buchs (eutt-1867); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position auf GeoNames Mys Bolvanskiy Nos (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Bolvanskiy Nos (Ostrov Vaygach), Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.4877 meters
@@ -81876,8 +81958,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 58.4833
-# !latitude: 70.2500
+# !longitude: 58.4740
+# !latitude: 70.2496
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -81887,6 +81969,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.21 auf den Springhub des Buchs (eutt-1871); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Guba Dolgaya (Ostrov Vaygach), Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.3048 meters
@@ -88027,7 +88110,7 @@ x 0 0
 # confidence: 3
 # !units: meters
 # !longitude: 76.8833
-# !latitude: 79.4833
+# !latitude: 79.4824
 # region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (eutt-1951); der Bau
@@ -88035,6 +88118,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Phasen um -3.00 h gedreht (Zeitfehler): Wie Mys Zveroboy, Buchzone Ort +6, Bezug +3 (am 04.09. als u
 # note: -- Siehe py/ticon_zeitpruefung.py und py/zeitfehler_drehen.py.
+# note: 20261017 Buchort lag an Land, ins naechste Wasser verschoben (Nordkuesten-Pruefung) (Oliver).
 Ostrov Vize, Krasnoyarsk Krai, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2438 meters
@@ -88222,8 +88306,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 49.9833
-# !latitude: 79.9500
+# !longitude: 50.0821
+# !latitude: 79.9479
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -88235,6 +88319,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.308. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 20261017 Position auf GeoNames Mys Flora (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
 Mys Flora, Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.2438 meters
