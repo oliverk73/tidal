@@ -14990,203 +14990,6 @@ MNUS2
 # BEGIN HOT COMMENTS
 # country: Russia
 # source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
-# noaa_number: 1
-# note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Busan New Port, South Korea (no.1). M2=0.10 S2=0.03 k=0.21 dt=+403min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 91.1333
-# !latitude: 79.5000
-# note: 20260903 Phasen um +1.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Krasnoyarsk Krai
-# admin1_quelle: Name
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yeong-do, Busan, South Korea [harmonics-1997-05-25_mod.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Domashnii I. (Severnaya Zemlya), Krasnoyarsk Krai, Russia
-+00:00 :Asia/Krasnoyarsk
-0.1829 meters
-J1              0.0003  139.90
-K1              0.0110  123.70
-K2              0.0127  237.40
-L2              0.0027  211.10
-M1              0.0003  107.40
-M2              0.1000  198.80
-x 0 0
-M4              0.0027  115.61
-x 0 0
-x 0 0
-N2              0.0198  186.50
-2N2             0.0027  174.20
-O1              0.0040  91.11
-OO1             0.0003  156.29
-P1              0.0037  121.30
-Q1              0.0003  183.81
-x 0 0
-R2              0.0005  235.95
-x 0 0
-S2              0.0473  234.50
-x 0 0
-x 0 0
-T2              0.0027  233.05
-LDA2            0.0008  215.40
-MU2             0.0025  163.11
-NU2             0.0037  188.11
-RHO1            0.0003  77.11
-x 0 0
-x 0 0
-MN4             0.0013  99.31
-MS4             0.0030  156.30
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.1020  130.95
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Russia
-# source: NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer
 # noaa_number: 3
 # note: NOAA Tide Tables (C&GS/NOS) Pacific+Indian 2018 Table 2 transfer from Busan New Port, South Korea (no.3). M2=0.19 S2=0.04 k=0.39 dt=+336min.
 # date_imported: 20260630
@@ -16191,8 +15994,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 99.9333
-# !latitude: 78.9333
+# !longitude: 99.9859
+# !latitude: 78.9233
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
@@ -16391,8 +16194,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 105.9667
-# !latitude: 78.2333
+# !longitude: 106.1382
+# !latitude: 78.2368
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+8.00 gegen +9.00 nach dem Buch)
