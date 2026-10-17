@@ -83844,214 +83844,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Russia
 # source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1891
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1891). M2=0.34 S2=0.07 k=0.30 dt=-54min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 4
-# !units: meters
-# !longitude: 75.0000
-# !latitude: 72.1667
-# note: 20260903 Phasen um -1.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Yamalo-Nenets Autonomous Okrug
-# admin1_quelle: Ufer 3.2 km
-# note: 20260913 S2/K2 x 2.25 auf den Springhub des Buchs (eutt-1891); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.469. Siehe py/noaa_s2_nachziehen.py.
-# note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yekaterininskaya, Russia [harmonics-1997-05-25_mod.txt],
-# note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
-Reka Sabule-Yaga (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia
-+03:00 :Asia/Yekaterinburg
-0.6706 meters
-J1              0.0006  162.79
-K1              0.0368  247.21
-K2              0.0368  145.23
-L2              0.0100  128.59
-M1              0.0006  332.34
-M2              0.3233  98.72
-x 0 0
-M4              0.0075  91.44
-x 0 0
-x 0 0
-N2              0.0707  68.85
-2N2             0.0095  38.98
-O1              0.0070  57.51
-OO1             0.0003  76.92
-P1              0.0123  260.04
-Q1              0.0070  4.63
-2Q1             0.0003  226.46
-R2              0.0008  143.49
-x 0 0
-S2              0.1356  141.75
-x 0 0
-x 0 0
-T2              0.0056  140.01
-LDA2            0.0022  118.68
-MU2             0.0078  55.69
-NU2             0.0137  72.86
-RHO1            0.0003  130.55
-x 0 0
-x 0 0
-MN4             0.0028  33.57
-MS4             0.0067  106.47
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.0570  324.84
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Russia
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1893
 # note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1893). M2=0.20 S2=0.04 k=0.17 dt=+170min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 73.9333
-# !latitude: 70.9667
+# !longitude: 73.8652
+# !latitude: 70.9813
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
@@ -84250,8 +84050,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 73.7167
-# !latitude: 70.1667
+# !longitude: 73.6776
+# !latitude: 70.1132
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
@@ -84450,8 +84250,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 73.9333
-# !latitude: 69.3833
+# !longitude: 73.9069
+# !latitude: 69.3984
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)

@@ -33,6 +33,11 @@ TXT = '/home/oliver/weather/harmonics/utide/harmonics_fes2022.txt'
 STATIONS = [
     ('Safaga (Bur Safajah), Egypt',    26.7420, 33.9450, 'Africa/Cairo', 'Egypt', 'Red Sea'),
     ('Soma Bay (Ra\'s Abu Suma), Egypt', 26.8420, 33.9880, 'Africa/Cairo', 'Egypt', 'Red Sea'),
+    # Oliver 17.10.2026: Ain Sukhna (Hafen am Golf von Suez) fehlte; weder Pegel noch NP203-Eintrag. FES trifft
+    # die Nachbarn: Suez M2 0.555 gegen 0.56 m, Phase 4 Grad; Za'farana 8 % und 5 Grad. 0.5 km vor dem Kai (OSM).
+    ('Ain Sukhna, Egypt', 29.6400, 32.3800, 'Africa/Cairo', 'Egypt', 'Gulf of Suez',
+     ['# note: 20261017 FES2022, kein Pegel/ATT; FES trifft Suez (M2 0.555/0.56 m, 4 Grad) und Za\'farana (8 %, 5 Grad) (Oliver).',
+      '# region: Suez Governorate']),
 ]
 
 NOTE = [
@@ -112,20 +117,22 @@ def z0_lat(cm, lat):
     return -float(np.min(rec['h']))
 
 
-def build_block(name, lat, lon, tz, country, wb, cm, z0):
+def build_block(name, lat, lon, tz, country, wb, cm, z0, note=None):
     n = sum(1 for cn, _ in CONSTITUENTS_175 if cn in cm)
     L = [
         '#', f'# {name}', '# BEGIN HOT COMMENTS', f'# country: {country}',
         f'# water_body: {wb}',
         '# source: FES2022b global ocean tide model (extrapolated), sampled at port location',
-        *NOTE,
+        *(note or NOTE),
         f'# date_imported: {datetime.now():%Y%m%d}',
         '# datum: Chart Datum (approx., CD~LAT from constituents)',
         '# confidence: 5',
         f'# fes: const={n} M2={cm.get("M2",(0,0))[0]:.3f}@{cm.get("M2",(0,0))[1]:.0f}',
         '# !units: meters', f'# !longitude: {lon:.6f}', f'# !latitude: {lat:.6f}',
+        *[x for x in (note or []) if x.startswith('# region:')],
         name, f'+00:00 :{tz}', f'{z0:.4f} meters',
     ]
+    L = [x for i, x in enumerate(L) if not (x.startswith('# region:') and i < len(L) - 4)]
     for cn, _sp in CONSTITUENTS_175:
         if cn in cm and cm[cn][0] >= 0.00005:
             L.append(f'{cn:15s} {cm[cn][0]:.4f}  {cm[cn][1]:.2f}')
@@ -138,7 +145,7 @@ def main():
     write = '--write' in sys.argv
     data = sample_all()
     blocks = []
-    for i, (name, lat, lon, tz, country, wb) in enumerate(STATIONS):
+    for i, (name, lat, lon, tz, country, wb, *rest) in enumerate(STATIONS):
         cm = data[i]
         if 'M2' not in cm:
             print(f'{name}: KEIN M2 (Land/maskiert) -> uebersprungen'); continue
@@ -148,7 +155,7 @@ def main():
         f = (k1[0] + o1[0]) / (m2[0] + s2[0])
         print(f'{name}: {len(cm)} Konst., M2={m2[0]:.4f}@{m2[1]:.1f}, '
               f'Springhub={2*(m2[0]+s2[0]):.3f} m, F={f:.3f}, Z0={z0:.3f}')
-        blocks.append((name, build_block(name, lat, lon, tz, country, wb, cm, z0)))
+        blocks.append((name, build_block(name, lat, lon, tz, country, wb, cm, z0, rest[0] if rest else None)))
     if write and blocks:
         lines = open(TXT, encoding='iso-8859-1').read().split('\n')
         existing = set(lines)
@@ -161,7 +168,8 @@ def main():
                 print(f'  SKIP (existiert): {name}'); continue
             add += blk
         lines = lines[:end] + add + lines[end:]
-        open(TXT, 'w', encoding='iso-8859-1').write('\n'.join(lines))
+        from sicher_schreiben import schreiben
+        schreiben(TXT, '\n'.join(lines))
         n = sum(1 for l in lines if l.startswith('# !latitude:'))
         print(f'\nGeschrieben. !latitude jetzt {n}')
     else:
