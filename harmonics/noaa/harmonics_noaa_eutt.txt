@@ -61630,8 +61630,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 40.4167
-# !latitude: 64.7000
+# !longitude: 40.4134
+# !latitude: 64.6987
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+4.00 gegen +3.00 nach dem Buch)
@@ -61641,7 +61641,8 @@ x 0 0
 # note: 20260913 S2/K2 x 2.28 auf den Springhub des Buchs (eutt-1749); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Novo Dvina Fortress, Arkhangelsk Oblast, Russia
+# note: 20261017 Name: russischer Name der Festung (Ostrov Linskiy Priluk, Stadtgebiet Archangelsk) statt Buchenglisch (Oliver).
+Arkhangelsk (Novodvinskaya Krepost'), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.7010 meters
 x 0 0
