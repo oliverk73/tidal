@@ -94161,8 +94161,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 84.0667
-# !latitude: 73.9833
+# !longitude: 84.0761
+# !latitude: 73.9904
 # note: 20260904 Phasen um -4.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
@@ -94359,52 +94359,54 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 85.5667
-# !latitude: 73.8000
+# !longitude: 85.5650
+# !latitude: 73.7980
 # region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.15 auf den Springhub des Buchs (eutt-1935); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Phasen um -4.00 h gedreht (Zeitfehler): Table-2-Uebertragung von Yekaterininskaya ohne Zonendifferen
+# note: -- Siehe py/ticon_zeitpruefung.py und py/zeitfehler_drehen.py.
 Mys Zveroboy, Krasnoyarsk Krai, Russia
 +03:00 :Asia/Krasnoyarsk
 0.3048 meters
-J1              0.0003  160.97
-K1              0.0178  245.46
-K2              0.0146  141.72
-L2              0.0048  125.15
-M1              0.0003  330.65
-M2              0.1562  95.34
+J1              0.0003  98.63
+K1              0.0178  185.30
+K2              0.0146  21.39
+L2              0.0048  7.04
+M1              0.0003  272.66
+M2              0.1562  339.40
 x 0 0
-M4              0.0036  84.68
-x 0 0
-x 0 0
-N2              0.0342  65.53
-x 0 0
-O1              0.0034  55.88
-OO1             0.0001  75.04
-P1              0.0059  258.29
-Q1              0.0034  3.07
-x 0 0
-R2              0.0004  139.98
-x 0 0
-S2              0.0541  138.25
+M4              0.0036  212.81
 x 0 0
 x 0 0
-T2              0.0027  136.52
-LDA2            0.0011  115.24
-MU2             0.0038  52.43
-NU2             0.0066  69.54
-RHO1            0.0001  128.98
+N2              0.0342  311.77
+x 0 0
+O1              0.0034  0.11
+OO1             0.0001  10.48
+P1              0.0059  198.45
+Q1              0.0034  309.48
+x 0 0
+R2              0.0004  19.82
+x 0 0
+S2              0.0541  18.25
 x 0 0
 x 0 0
-MN4             0.0013  26.87
-MS4             0.0032  99.59
+T2              0.0027  16.68
+LDA2            0.0011  357.42
+MU2             0.0038  300.56
+NU2             0.0066  315.49
+RHO1            0.0001  75.09
+x 0 0
+x 0 0
+MN4             0.0013  157.17
+MS4             0.0032  223.65
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0570  324.83
+SA              0.0570  324.67
 x 0 0
 x 0 0
 x 0 0
@@ -94751,8 +94753,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 85.6000
-# !latitude: 74.2833
+# !longitude: 85.5995
+# !latitude: 74.2841
 # note: 20260904 Phasen um -4.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
@@ -94949,8 +94951,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 84.9167
-# !latitude: 74.5500
+# !longitude: 84.9121
+# !latitude: 74.5503
 # note: 20260904 Phasen um -4.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
@@ -95352,45 +95354,47 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # region: Krasnoyarsk Krai
+# note: 20261017 Phasen um -3.00 h gedreht (Zeitfehler): Wie Mys Zveroboy, Buchzone Ort +6, Bezug +3 (am 04.09. als u
+# note: -- Siehe py/ticon_zeitpruefung.py und py/zeitfehler_drehen.py.
 Ostrov Uyedineniya, Krasnoyarsk Krai, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2134 meters
-J1              0.0002  306.30
-K1              0.0124  25.72
-K2              0.0090  62.24
-L2              0.0034  40.50
-M1              0.0002  105.83
-M2              0.1094  5.62
+J1              0.0002  259.54
+K1              0.0124  340.60
+K2              0.0090  331.99
+L2              0.0034  311.91
+M1              0.0002  62.34
+M2              0.1094  278.67
 x 0 0
-M4              0.0025  265.23
-x 0 0
-x 0 0
-N2              0.0239  330.73
-x 0 0
-O1              0.0024  185.90
-OO1             0.0001  225.54
-P1              0.0041  37.78
-Q1              0.0024  128.01
-x 0 0
-R2              0.0003  60.12
-x 0 0
-S2              0.0332  58.00
+M4              0.0025  91.33
 x 0 0
 x 0 0
-T2              0.0019  55.88
-LDA2            0.0008  29.91
-MU2             0.0026  313.23
-NU2             0.0046  335.42
-RHO1            0.0001  254.60
+N2              0.0239  245.41
+x 0 0
+O1              0.0024  144.07
+OO1             0.0001  177.12
+P1              0.0041  352.90
+Q1              0.0024  87.81
+x 0 0
+R2              0.0003  330.00
+x 0 0
+S2              0.0332  328.00
 x 0 0
 x 0 0
-MN4             0.0009  202.35
-MS4             0.0023  289.62
+T2              0.0019  326.00
+LDA2            0.0008  301.54
+MU2             0.0026  229.33
+NU2             0.0046  249.88
+RHO1            0.0001  214.19
+x 0 0
+x 0 0
+MN4             0.0009  30.08
+MS4             0.0023  112.67
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0570  325.22
+SA              0.0570  325.10
 x 0 0
 x 0 0
 x 0 0
@@ -95546,45 +95550,47 @@ x 0 0
 # note: 20260913 S2/K2 x 2.09 auf den Springhub des Buchs (eutt-1951); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Phasen um -3.00 h gedreht (Zeitfehler): Wie Mys Zveroboy, Buchzone Ort +6, Bezug +3 (am 04.09. als u
+# note: -- Siehe py/ticon_zeitpruefung.py und py/zeitfehler_drehen.py.
 Ostrov Vize, Krasnoyarsk Krai, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2438 meters
-J1              0.0002  298.77
-K1              0.0160  18.45
-K2              0.0142  47.70
-L2              0.0044  26.23
-M1              0.0002  98.83
-M2              0.1406  351.61
+J1              0.0002  252.01
+K1              0.0160  333.33
+K2              0.0142  317.45
+L2              0.0044  297.64
+M1              0.0002  55.34
+M2              0.1406  264.66
 x 0 0
-M4              0.0033  237.21
-x 0 0
-x 0 0
-N2              0.0308  316.98
-x 0 0
-O1              0.0030  179.16
-OO1             0.0001  217.74
-P1              0.0053  30.55
-Q1              0.0030  121.54
-x 0 0
-R2              0.0004  45.60
-x 0 0
-S2              0.0524  43.50
+M4              0.0033  63.31
 x 0 0
 x 0 0
-T2              0.0024  41.40
-LDA2            0.0010  15.68
-MU2             0.0034  299.71
-NU2             0.0059  321.64
-RHO1            0.0001  248.09
+N2              0.0308  231.66
+x 0 0
+O1              0.0030  137.33
+OO1             0.0001  169.32
+P1              0.0053  345.67
+Q1              0.0030  81.34
+x 0 0
+R2              0.0004  315.48
+x 0 0
+S2              0.0524  313.50
 x 0 0
 x 0 0
-MN4             0.0012  174.59
-MS4             0.0029  261.11
+T2              0.0024  311.52
+LDA2            0.0010  287.31
+MU2             0.0034  215.81
+NU2             0.0059  236.10
+RHO1            0.0001  207.68
+x 0 0
+x 0 0
+MN4             0.0012  2.32
+MS4             0.0029  84.16
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.0570  325.20
+SA              0.0570  325.08
 x 0 0
 x 0 0
 x 0 0
