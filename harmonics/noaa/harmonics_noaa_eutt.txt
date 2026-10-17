@@ -95147,8 +95147,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 88.9000
-# !latitude: 75.4167
+# !longitude: 88.7336
+# !latitude: 75.3983
 # note: 20260904 Phasen um -4.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
@@ -95158,7 +95158,8 @@ x 0 0
 # note: 20260913 S2/K2 x 2.36 auf den Springhub des Buchs (eutt-1943); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Mys Sterlegova, Krasnoyarsk Krai, Russia
+# note: 20261017 Kap an der Karasee (GeoNames 75.3983/88.7336; das gleichnamige Kap bei 76.85/100.94 ist ein anderes), Meer in der Klammer (Oliver).
+Mys Sterlegova (Karskoye More), Krasnoyarsk Krai, Russia
 +03:00 :Asia/Krasnoyarsk
 0.2134 meters
 J1              0.0002  250.46
@@ -95345,8 +95346,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 82.2000
-# !latitude: 77.5000
+# !longitude: 82.2313
+# !latitude: 77.5013
 # note: 20260913 S2/K2 x 1.99 auf den Springhub des Buchs (eutt-1949); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
