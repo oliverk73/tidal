@@ -83052,213 +83052,14 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Russia
 # source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
-# noaa_number: 1883
-# note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1883). M2=0.16 S2=0.03 k=0.13 dt=-114min.
-# date_imported: 20260630
-# datum: Chart Datum (Z0 = mean tide level above CD)
-# confidence: 3
-# !units: meters
-# !longitude: 66.8333
-# !latitude: 69.6167
-# note: 20260903 Phasen um -1.00 h gedreht: die
-# note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
-# note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
-# note: fehlte. Siehe py/transfer_zonen_richten.py.
-# region: Yamalo-Nenets Autonomous Okrug
-# admin1_quelle: Polygon
-# note: 20260913 S2/K2 x 2.17 auf den Springhub des Buchs (eutt-1883); der Bau
-# note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
-# note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-# note: 20261017 Phasen um -2 h gedreht: gegen die Buchzone (+6/+7 statt +3) fehlten 2 h, Nachbarn derselben Liste trafen (Oliver).
-Mys Marre-Salya, Yamalo-Nenets Autonomous Okrug, Russia
-+03:00 :Asia/Yekaterinburg
-0.3048 meters
-J1              0.0003  147.33
-K1              0.0178  232.30
-K2              0.0148  115.40
-L2              0.0048  99.31
-M1              0.0003  317.97
-M2              0.1562  69.98
-x 0 0
-M4              0.0036  33.95
-x 0 0
-x 0 0
-N2              0.0342  40.64
-x 0 0
-O1              0.0034  43.68
-OO1             0.0001  60.92
-P1              0.0059  245.20
-Q1              0.0034  351.34
-x 0 0
-R2              0.0004  113.70
-x 0 0
-S2              0.0546  112.00
-x 0 0
-x 0 0
-T2              0.0027  110.30
-LDA2            0.0011  89.46
-MU2             0.0038  27.95
-NU2             0.0066  44.59
-RHO1            0.0001  117.19
-x 0 0
-x 0 0
-MN4             0.0013  336.62
-MS4             0.0032  47.98
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.0570  324.80
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-# BEGIN HOT COMMENTS
-# country: Russia
-# source: NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table 2 transfer
 # noaa_number: 1885
 # note: NOAA Tide Tables (C&GS/NOS) Europe & W Coast of Africa 2020 Table 2 transfer from Yekaterininskaya, Russia (no.1885). M2=0.19 S2=0.03 k=0.16 dt=+58min.
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 69.0000
-# !latitude: 72.6500
+# !longitude: 68.9862
+# !latitude: 72.6435
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
@@ -83456,8 +83257,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 70.0333
-# !latitude: 73.3333
+# !longitude: 70.0152
+# !latitude: 73.3776
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
@@ -83468,7 +83269,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Phasen um -2 h gedreht: gegen die Buchzone (+6/+7 statt +3) fehlten 2 h, Nachbarn derselben Liste trafen (Oliver).
-Mys Rogozina (Ostrov Belyy), Yamalo-Nenets Autonomous Okrug, Russia
+Mys Ragozina (Ostrov Belyy), Yamalo-Nenets Autonomous Okrug, Russia
 +03:00 :Asia/Yekaterinburg
 0.5486 meters
 J1              0.0005  234.87
