@@ -82860,8 +82860,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 64.9500
-# !latitude: 69.2500
+# !longitude: 64.9450
+# !latitude: 69.2600
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +3.00 nach dem Buch)
@@ -82871,7 +82871,8 @@ x 0 0
 # note: 20260913 S2/K2 x 2.26 auf den Springhub des Buchs (eutt-1881); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Karskaya Guba, Nenets Autonomous Okrug, Russia
+# note: 20261017 Name: Ort Ust'-Kara (OSM) an der Muendung der Karskaya Guba; Position ins Wasser, Buchort 0.8 km an Land (Oliver).
+Ust'-Kara (Karskaya Guba), Nenets Autonomous Okrug, Russia
 +03:00 :Europe/Moscow
 0.3658 meters
 J1              0.0004  178.50
