@@ -94,8 +94,9 @@ def main(argv):
         if wahl and code not in wahl:
             continue
         s = reihe(datei)
+        # Pegelnull-Sprung = anhaltende Verschiebung (Wochenmedian), nicht ein Sturmflut-Tag (Nordsee 17.10.2026)
         tag = s.resample('D').mean()
-        sprung = tag.diff().abs() > 0.3
+        sprung = tag.rolling(7, center=True, min_periods=4).median().diff().abs() > 0.4
         f = pd.Series(fes_kurve(s.index, lat, lon, namen, speeds, arg, fak), index=s.index)
         gut = []
         print('==', name)
@@ -123,6 +124,9 @@ def main(argv):
                 basis = m - (stufen[0][1] if stufen else m)
             stufen.append((g - basis, m - basis))
             vor = m
+        if not stufen:
+            print('   keine gueltigen Monate -- uebersprungen')
+            continue
         s = pd.concat([g for g, _ in stufen])
         with contextlib.redirect_stdout(io.StringIO()):
             co = utide.solve(s.index.tz_convert(None).to_pydatetime(), s.values, lat=lat, method='ols',

@@ -21,7 +21,7 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'water_levels/Russia_IOC')
-SENSOR = ['rad', 'ra2', 'prs', 'pr1', 'enc', 'flt', 'bub']
+SENSOR = ['rad', 'ra2', 'prs', 'pr1', 'pwl', 'ras', 'enc', 'flt', 'bub']
 
 
 def monat(code, y, m):
