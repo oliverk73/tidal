@@ -15001,8 +15001,9 @@ MNUS2
 # !latitude: 79.9500
 # region: Arkhangelsk Oblast
 # admin1_quelle: Name
+# note: 20261017 Meridian +00:00 -> +05:00: M2/S2 lagen gleichmaessig 145-156 Grad (5 h) neben FES, die NP202-Phasen gelten fuer Zone +5 (Oliver).
 Mys Flora (Franz Josef Land), Arkhangelsk Oblast, Russia
-+00:00 :Europe/Moscow
++05:00 :Europe/Moscow
 0.3000 meters
 x 0 0
 K1              0.0700  55.00
@@ -15193,8 +15194,9 @@ x 0 0
 # !latitude: 80.3333
 # region: Arkhangelsk Oblast
 # admin1_quelle: Name
+# note: 20261017 Meridian +00:00 -> +05:00: M2/S2 lagen gleichmaessig 145-156 Grad (5 h) neben FES, die NP202-Phasen gelten fuer Zone +5 (Oliver).
 Bukhta Tikhaya (Franz Josef Land), Arkhangelsk Oblast, Russia
-+00:00 :Europe/Moscow
++05:00 :Europe/Moscow
 0.3000 meters
 x 0 0
 K1              0.0700  58.00
@@ -15385,8 +15387,9 @@ x 0 0
 # !latitude: 81.7833
 # region: Arkhangelsk Oblast
 # admin1_quelle: Name
+# note: 20261017 Meridian +00:00 -> +05:00: M2/S2 lagen gleichmaessig 145-156 Grad (5 h) neben FES, die NP202-Phasen gelten fuer Zone +5 (Oliver).
 Bukhta Teplits (Franz Josef Land), Arkhangelsk Oblast, Russia
-+00:00 :Europe/Moscow
++05:00 :Europe/Moscow
 0.4000 meters
 x 0 0
 K1              0.0300  62.00
@@ -16535,12 +16538,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 128.9167
-# !latitude: 71.5833
+# !longitude: 128.8870
+# !latitude: 71.6450
 # region: Sakha Republic
 # admin1_quelle: Polygon
 # note: 20261017 Meridian +09:00 -> +00:00: die NP202-Phasen sind Greenwich-Phasen (M2 47/S2 115 = FES 49/115), mit Zone +9 lag der Satz 3 h daneben (Oliver).
-Bukhta Tiksi, Sakha Republic, Russia
+# note: 20261017 von 71.5833/128.9167 (an Land) an den Hafen Tiksi im Zaliv Bulunkan (GeoNames), Name wie NOAA 45 (Oliver).
+Zaliv Bulunkan (Bukhta Tiksi), Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 0.3000 meters
 x 0 0
