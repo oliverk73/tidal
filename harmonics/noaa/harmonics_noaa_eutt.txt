@@ -83652,8 +83652,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 72.9000
-# !latitude: 72.6333
+# !longitude: 72.9700
+# !latitude: 72.6575
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
@@ -83663,6 +83663,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.21 auf den Springhub des Buchs (eutt-1889); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 20261017 Position ans Kap (GeoNames Mys Drovyanoy = Mys Nadu-Sale, Bake Drovyanoy-Obskiy), Buchort 3 km SW an Land (Oliver).
 Mys Drovyanoy (Poluostrov Yamal), Yamalo-Nenets Autonomous Okrug, Russia
 +03:00 :Asia/Yekaterinburg
 1.1582 meters
@@ -84248,8 +84249,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 73.5833
-# !latitude: 68.5000
+# !longitude: 73.5802
+# !latitude: 68.5120
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+6.00 gegen +3.00 nach dem Buch)
