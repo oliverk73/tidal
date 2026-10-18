@@ -7681,8 +7681,8 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 137.7667
-# !latitude: -35.8000
+# !longitude: 137.7728
+# !latitude: -35.7877
 # state: South Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM SA_TP067 geprueft: gleich, Kurve 0.8 cm, FES 3.2/3.4 cm; dieser Satz bleibt.
@@ -10769,11 +10769,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 137.9167
-# !latitude: -34.4333
+# !longitude: 137.9250
+# !latitude: -34.4417
 # state: South Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM SA_TP054 geprueft: gleich, Kurve 1.4 cm, FES 12.0/12.4 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste SA_TP054, Sekundenangabe (vorher -34.4393 137.9260) (Oliver).
 Ardrossan, South Australia, Australia
 +09:30 :Australia/Adelaide
 1.6400 meters
@@ -16329,11 +16330,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 153.5769
-# !latitude: -28.8696
+# !longitude: 153.5827
+# !latitude: -28.8749
 # state: New South Wales
 # admin1_quelle: Name
 # note: 2026-10-18 BOM NSW_TP009 geprueft: gleich, Kurve 1.2 cm, FES 8.0/7.2 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste NSW_TP009, Sekundenangabe (vorher -28.8696 153.5769, laut OSM an Land (Fluss/Hafen)) (Oliver).
 Ballina, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.7900 meters
@@ -27455,10 +27457,11 @@ x 0 0
 # confidence: 10
 # bom_id: QLD-TP138
 # !units: meters
-# !longitude: 153.0335
-# !latitude: -27.4658
+# !longitude: 153.0308
+# !latitude: -27.4717
 # state: Queensland
 # admin1_quelle: Name
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP138, Sekundenangabe (vorher -27.4658 153.0335, laut OSM an Land (Fluss/Hafen)) (Oliver).
 Brisbane Port Office., Queensland, Australia
 +10:00 :Australia/Brisbane
 1.2510 meters
@@ -28416,10 +28419,11 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 153.5521
-# !latitude: -28.5368
+# !longitude: 153.5528
+# !latitude: -28.5370
 # state: New South Wales
 # admin1_quelle: Name
+# note: 2026-10-18 Position aus BOM-Stationsliste NSW_TP016, Sekundenangabe (vorher -28.5368 153.5521, laut OSM an Land (Fluss/Hafen)) (Oliver).
 Brunswick Heads, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.8600 meters
@@ -36071,8 +36075,8 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 137.3333
-# !latitude: -34.2500
+# !longitude: 137.4500
+# !latitude: -34.1374
 # state: South Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM SA_TP011 geprueft: gleich, Kurve 1.8 cm, FES 3.1/3.3 cm; dieser Satz bleibt.
@@ -40692,11 +40696,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 136.8167
-# !latitude: -15.7500
+# !longitude: 136.8125
+# !latitude: -15.7458
 # state: Northern Territory
 # admin1_quelle: Name
 # note: 2026-10-18 BOM NT_TP014 geprueft: unentschieden, Kurve 5.2 cm, FES 32.1/32.0 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste NT_TP014, Sekundenangabe (vorher -15.7500 136.8167) (Oliver).
 Centre Island, Northern Territory, Australia
 +09:30 :Australia/Darwin
 1.8400 meters
@@ -46600,14 +46605,15 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: 142.1167
-# !latitude: -10.9667
+# !longitude: 142.1122
+# !latitude: -10.9741
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
 # admin1_quelle: Ufer 3.6 km
 # note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 # note: 2026-10-18 BOM QLD_TP055 geprueft: gleich, Kurve 5.0 cm, FES 9.1/10.9 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP055, Sekundenangabe (vorher -10.9667 142.1167, knapp ins Wasser) (Oliver).
 Crab Island, Endeavour Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.0320 meters
@@ -46799,11 +46805,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 150.3667
-# !latitude: -20.5333
+# !longitude: 150.3743
+# !latitude: -20.5320
 # state: Queensland
 # admin1_quelle: Name
 # note: 2026-10-18 BOM QLD_TP056 geprueft: unentschieden, Kurve 15.0 cm, FES 18.5/17.6 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP056, Sekundenangabe (vorher -20.5333 150.3667) (Oliver).
 Creal Reef, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.9420 meters
@@ -49868,10 +49875,11 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: 143.2000
-# !latitude: -9.0667
+# !longitude: 143.2075
+# !latitude: -9.0644
 # province: Western
 # admin1_quelle: Ufer 2.8 km
+# note: 2026-10-18 Position aus BOM-Stationsliste INT_TP034, Sekundenangabe (vorher -9.0667 143.2000) (Oliver).
 Daru, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 1.9400 meters
@@ -56971,8 +56979,8 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 137.7500
-# !latitude: -35.0833
+# !longitude: 137.7506
+# !latitude: -35.0849
 # state: South Australia
 # admin1_quelle: Name
 Edithburgh, South Australia, Australia
@@ -71413,10 +71421,11 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: 144.2000
-# !latitude: -7.7500
+# !longitude: 144.2046
+# !latitude: -7.7493
 # province: Gulf
 # admin1_quelle: Polygon
+# note: 2026-10-18 Position aus BOM-Stationsliste INT_TP037, Sekundenangabe (vorher -7.7500 144.2000, knapp ins Wasser) (Oliver).
 Goaribari Island, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 2.2900 meters
@@ -74502,10 +74511,11 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 145.9692
-# !latitude: -16.7582
+# !longitude: 145.9700
+# !latitude: -16.7600
 # state: Queensland
 # admin1_quelle: Name
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP073, Sekundenangabe (vorher -16.7582 145.9692) (Oliver).
 Green Island, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.5900 meters
@@ -79889,11 +79899,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 152.6857
-# !latitude: -31.8721
+# !longitude: 152.6855
+# !latitude: -31.8749
 # state: New South Wales
 # admin1_quelle: Name
 # note: 2026-10-18 BOM NSW_TP019 geprueft: gleich, Kurve 1.0 cm, FES 11.7/11.8 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste NSW_TP019, Sekundenangabe (vorher -31.8721 152.6857, laut OSM an Land (Fluss/Hafen)) (Oliver).
 Harrington Inlet, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.7400 meters
@@ -85873,11 +85884,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 150.6833
-# !latitude: -21.9500
+# !longitude: 150.6916
+# !latitude: -21.9545
 # state: Queensland
 # admin1_quelle: Name
 # note: 2026-10-18 BOM QLD_TP077 geprueft: unentschieden, Kurve 9.0 cm, FES 10.1/9.2 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP077, Sekundenangabe (vorher -21.9500 150.6833, knapp ins Wasser) (Oliver).
 High Peak Island, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.8400 meters
@@ -117084,11 +117096,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 153.5807
+# !longitude: 153.5800
 # !latitude: -28.2622
 # state: New South Wales
 # admin1_quelle: Name
 # note: 2026-10-18 BOM NSW_TP029 geprueft: gleich, Kurve 4.8 cm, FES 13.6/9.2 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste NSW_TP029, Sekundenangabe (vorher -28.2622 153.5807, laut OSM an Land (Fluss/Hafen)) (Oliver).
 Kingscliff, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.7500 meters
@@ -130188,11 +130201,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 145.5667
-# !latitude: -16.3833
+# !longitude: 145.5683
+# !latitude: -16.3817
 # state: Queensland
 # admin1_quelle: Name
 # note: 2026-10-18 BOM QLD_TP213 geprueft: gleich, Kurve 4.0 cm, FES 3.6/5.0 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP213, Sekundenangabe (vorher -16.3833 145.5667) (Oliver).
 Low Islets, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.6100 meters
@@ -158264,11 +158278,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 153.0968
-# !latitude: -26.3831
+# !longitude: 153.1033
+# !latitude: -26.3783
 # state: Queensland
 # admin1_quelle: Name
 # note: 2026-10-18 BOM QLD_TP021 geprueft: gleich, Kurve 0.4 cm, FES 2.4/2.5 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP021, Sekundenangabe (vorher -26.3831 153.0968) (Oliver).
 Noosa Head, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.0680 meters
@@ -182719,8 +182734,8 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 136.8167
-# !latitude: -35.2500
+# !longitude: 136.8374
+# !latitude: -35.2290
 # state: South Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM SA_TP059 geprueft: gleich, Kurve 1.1 cm, FES 2.0/2.0 cm; dieser Satz bleibt.
@@ -183683,11 +183698,12 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 137.7833
-# !latitude: -32.5500
+# !longitude: 137.7792
+# !latitude: -32.5458
 # state: South Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM SA_TP025 geprueft: FES, Kurve 8.0 cm, FES 30.1/26.9 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste SA_TP025, Sekundenangabe (vorher -32.5500 137.7833) (Oliver).
 Port Augusta, South Australia, Australia
 +09:30 :Australia/Adelaide
 1.8360 meters
@@ -183879,8 +183895,8 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 137.9333
-# !latitude: -33.6000
+# !longitude: 137.9258
+# !latitude: -33.5989
 # state: South Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM SA_TP027 geprueft: unentschieden, Kurve 10.4 cm, FES 22.2/23.8 cm; dieser Satz bleibt.
@@ -187933,7 +187949,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 137.3500
+# !longitude: 137.3530
 # !latitude: -34.9333
 # state: South Australia
 # admin1_quelle: Name
@@ -249545,14 +249561,15 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
-# !longitude: 142.4333
-# !latitude: -10.4667
+# !longitude: 142.4443
+# !latitude: -10.4577
 # note: 20260903 Provinz "Queensland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Queensland
 # admin1_quelle: Ufer 18.4 km
 # note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 # note: 2026-10-18 BOM QLD_TP032 geprueft: FES, Kurve 5.6 cm, FES 5.9/3.8 cm; dieser Satz bleibt.
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP032, Sekundenangabe (vorher -10.4667 142.4333) (Oliver).
 Twin Island, Torres Strait, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.6290 meters
@@ -262646,8 +262663,8 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 136.5667
-# !latitude: -35.1667
+# !longitude: 136.4948
+# !latitude: -35.1617
 # state: South Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM SA_TP042 geprueft: gleich, Kurve 1.6 cm, FES 1.9/2.0 cm; dieser Satz bleibt.
@@ -267820,10 +267837,11 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
-# !longitude: 153.3619
-# !latitude: -29.4297
+# !longitude: 153.3644
+# !latitude: -29.4292
 # state: New South Wales
 # admin1_quelle: Name
+# note: 2026-10-18 Position aus BOM-Stationsliste NSW_TP008, Sekundenangabe (vorher -29.4297 153.3619, knapp ins Wasser) (Oliver).
 Yamba, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.9000 meters
