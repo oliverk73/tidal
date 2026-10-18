@@ -50848,8 +50848,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 8.1904
-# !latitude: 55.8178
+# !longitude: 8.1650
+# !latitude: 55.8000
 # region: Midtjylland
 # admin1_quelle: Ufer 0.5 km
 # note: 20260913 S2/K2 x 3.67 auf den Springhub des Buchs (eutt-1507); der Bau
@@ -50857,6 +50857,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Esbjerg, Denmark [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.09 Punkte.
+# note: 20261018 Position an die Nordseekueste vor Nymindegab (Buch 55 48 N); Satz traegt Esbjerg-Tide, im Ringkoebing Fjord fast keine (Oliver).
 Nymindegab, Denmark
 +01:00 :Europe/Copenhagen
 0.4572 meters
