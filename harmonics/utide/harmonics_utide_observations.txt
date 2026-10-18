@@ -228353,9 +228353,10 @@ x 0 0
 # utide: pts=24243 period=2023-11-01..2026-09-30 r2=0.9663 rms=0.2328m const=67
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC 51.3600/3.1200; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: 3.1200
-# !latitude: 51.3600
+# !longitude: 3.1182
+# !latitude: 51.3605
 # region: West-Vlaanderen
+# note: 20261018 Position des Messpfahls aus OSM (node 1431623943, Meetnet Vlaamse Banken) statt IOC-Rundwert (Oliver).
 A2 (Meetpaal), Belgium
 +00:00 :Europe/Brussels
 2.6286 meters
@@ -228546,9 +228547,10 @@ x 0 0
 # utide: pts=19481 period=2024-07-01..2026-09-30 r2=0.9677 rms=0.2214m const=67
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC 51.3900/3.0500; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: 3.0500
-# !latitude: 51.3900
+# !longitude: 3.0458
+# !latitude: 51.3945
 # region: West-Vlaanderen
+# note: 20261018 Position des Messpfahls aus OSM (node 1431623942, Meetnet Vlaamse Banken) statt IOC-Rundwert (Oliver).
 Wandelaar (Meetpaal), Belgium
 +00:00 :Europe/Brussels
 2.5978 meters
