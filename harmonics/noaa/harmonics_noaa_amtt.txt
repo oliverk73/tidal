@@ -16198,8 +16198,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -81.6167
-# !latitude: 69.3500
+# !longitude: -81.6157
+# !latitude: 69.3394
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
@@ -16213,6 +16213,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Harrington Harbour, Québec, Canada [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 69.3500/-81.6167, Kueste 1.08 km) (Oliver).
 Igloolik, Fury and Hecla Strait, Nunavut, Canada
 +00:00 :America/Iqaluit
 1.4326 meters
@@ -16595,8 +16596,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -92.6000
-# !latitude: 57.0833
+# !longitude: -92.5865
+# !latitude: 57.0599
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -5.00 nach dem Buch)
@@ -16608,6 +16609,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.89 auf den Springhub des Buchs (ectt-139); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.248. Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.0833/-92.6000, Kueste 2.62 km) (Oliver).
 Port Nelson, Nelson River entrance, Manitoba, Canada
 +00:00 :America/Winnipeg
 1.9507 meters
@@ -16993,14 +16995,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -79.2667
-# !latitude: 51.9500
+# !longitude: -79.2677
+# !latitude: 51.9597
 # note: 20260903 Provinz "Nunavut" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nunavut
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Saint-Romuald, Québec, Canada [harmonics_utide_tidetables.tx,
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 51.9500/-79.2667, Kueste 0.98 km) (Oliver).
 Charlton Island, James Bay, Nunavut, Canada
 +00:00 :America/Iqaluit
 1.1887 meters
@@ -17981,8 +17984,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -58.0333
-# !latitude: 54.9000
+# !longitude: -58.0332
+# !latitude: 54.9027
 # note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Labrador
@@ -17990,6 +17993,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.94 auf den Springhub des Buchs (ectt-185); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.9000/-58.0333, Kueste 0.20 km) (Oliver).
 Webeck Harbour, Labrador, Canada
 +00:00 :America/Goose_Bay
 1.0058 meters
@@ -18376,7 +18380,7 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: -88.9167
-# !latitude: 73.2333
+# !latitude: 73.2250
 # note: 20260903 Phasen um +2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -4.00 nach dem Buch)
@@ -18388,6 +18392,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.73 auf den Springhub des Buchs (ectt-19); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 73.2333/-88.9167, Kueste 0.82 km) (Oliver).
 Port Bowen, Prince Regent Inlet, Nunavut, Canada
 +00:00 :America/Rankin_Inlet
 1.4021 meters
@@ -18576,8 +18581,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -56.5500
-# !latitude: 53.7500
+# !longitude: -56.5516
+# !latitude: 53.7524
 # note: 20260903 Provinz "Labrador" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Labrador
@@ -18587,6 +18592,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Halifax, Nova Scotia, Canada [harmonics_utide_tidetables.txt,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.7500/-56.5500, Kueste 0.18 km) (Oliver).
 Curlew Harbour, Labrador, Canada
 +00:00 :America/Goose_Bay
 0.9449 meters
@@ -19579,7 +19585,7 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -56.0000
+# !longitude: -55.9980
 # !latitude: 51.1667
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
@@ -19588,6 +19594,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.98 auf den Springhub des Buchs (ectt-215); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 51.1667/-56.0000, Kueste 0.04 km) (Oliver).
 Ariege Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7010 meters
@@ -20174,8 +20181,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -53.5667
-# !latitude: 48.1000
+# !longitude: -53.5648
+# !latitude: 48.0996
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -20183,6 +20190,7 @@ x 0 0
 # note: 20260913 S2/K2 x 3.08 auf den Springhub des Buchs (ectt-229); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 48.1000/-53.5667, Kueste 0.05 km) (Oliver).
 Random Head Harbour, Trinity Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.5791 meters
@@ -20371,14 +20379,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -53.3833
-# !latitude: 46.7167
+# !longitude: -53.3868
+# !latitude: 46.7177
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Argentia, Newfoundland, Canada [harmonics_utide_tidetables.t,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 46.7167/-53.3833, Kueste 0.19 km) (Oliver).
 Trepassey Harbour, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.0668 meters
@@ -21358,8 +21367,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -56.1833
-# !latitude: 47.6500
+# !longitude: -56.1820
+# !latitude: 47.6456
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -21369,6 +21378,7 @@ x 0 0
 # note: Probe: anwenden (Pegel), Pegel 12.5 -> 11.0 cm. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.896,
 # note: Zielwert F=0.158 aus Wahrheit statt F=0.18 des Bezugsorts; Beleg: Wahrheit 4.93 -> 4.91 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 47.6500/-56.1833, Kueste 0.30 km) (Oliver).
 Great Jervis Harbour, Bay d'Espoir, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.1887 meters
@@ -21955,8 +21965,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -57.9000
-# !latitude: 47.6667
+# !longitude: -57.9027
+# !latitude: 47.6676
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -21964,6 +21974,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.08 auf den Springhub des Buchs (ectt-261); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 47.6667/-57.9000, Kueste 0.13 km) (Oliver).
 Connoire Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 1.0058 meters
@@ -22548,8 +22559,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -59.4000
-# !latitude: 47.8833
+# !longitude: -59.4004
+# !latitude: 47.8820
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -22557,6 +22568,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.69 auf den Springhub des Buchs (ectt-267); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 47.8833/-59.4000, Kueste 0.05 km) (Oliver).
 Codroy Road, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7925 meters
@@ -22943,8 +22955,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -79.6167
-# !latitude: 32.9167
+# !longitude: -79.6061
+# !latitude: 32.9253
 # fixes: Referenz korrigiert: Charleston SC (Cooper River) statt Charleston NZ, 2026-07-19
 # state: South Carolina
 # admin1_quelle: Polygon
@@ -22953,6 +22965,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Charleston, Cooper River entrance, South Carolina [harmonics,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (4).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 32.9167/-79.6167, Kueste 1.28 km) (Oliver).
 Wharf Creek entrance, South Carolina
 +00:00 :America/New_York
 0.8230 meters
@@ -23342,8 +23355,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -58.7500
-# !latitude: 48.5500
+# !longitude: -58.7523
+# !latitude: 48.5612
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -23353,6 +23366,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Harrington Harbour, Québec, Canada [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (4).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 48.5500/-58.7500, Kueste 1.16 km) (Oliver).
 Port-au-Port, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7315 meters
@@ -23740,8 +23754,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -57.6000
-# !latitude: 50.1833
+# !longitude: -57.6077
+# !latitude: 50.1801
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -23751,6 +23765,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Harrington Harbour, Québec, Canada [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 50.1833/-57.6000, Kueste 0.55 km) (Oliver).
 Portland Cove, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.9144 meters
@@ -26331,8 +26346,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -67.3667
-# !latitude: 49.3333
+# !longitude: -67.3647
+# !latitude: 49.3342
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
@@ -26344,6 +26359,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.64 auf den Springhub des Buchs (ectt-319); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 49.3333/-67.3667, Kueste 0.08 km) (Oliver).
 Pointe des Monts, Québec, Canada
 +00:00 :America/Toronto
 1.8593 meters
@@ -29493,12 +29509,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -82.6833
-# !latitude: 27.4667
+# !longitude: -82.6839
+# !latitude: 27.4653
 # state: Florida
 # admin1_quelle: Polygon
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.931,
 # note: Zielwert F=1.324 aus Nachbarn statt F=1.423 des Bezugsorts; Beleg: Nachbarn 5.09 -> 4.67 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 27.4667/-82.6833, Kueste 0.07 km) (Oliver).
 Cortez, Sarasota Bay, Florida
 +00:00 :America/New_York
 0.3353 meters
@@ -29687,10 +29704,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -82.8500
-# !latitude: 27.8667
+# !longitude: -82.8513
+# !latitude: 27.8664
 # state: Florida
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 27.8667/-82.8500, Kueste 0.03 km) (Oliver).
 Indian Rocks Beach (inside), Florida
 +00:00 :America/New_York
 0.3962 meters
@@ -31053,8 +31071,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -61.4667
-# !latitude: 46.1000
+# !longitude: -61.4757
+# !latitude: 46.1029
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -31062,6 +31080,7 @@ x 0 0
 # note: 20260913 S2/K2 x 4.00 auf den Springhub des Buchs (ectt-451); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 46.1000/-61.4667, Kueste 0.66 km) (Oliver).
 Mabou River entrance, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.7620 meters
@@ -33014,8 +33033,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -60.8667
-# !latitude: 45.6333
+# !longitude: -60.8674
+# !latitude: 45.6341
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -33025,6 +33044,7 @@ x 0 0
 # note: Probe: anwenden (Pegel), Pegel 14.1 -> 13.3 cm. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Halifax, Nova Scotia, Canada [harmonics_utide_tidetables.txt,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Pegel ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 45.6333/-60.8667, Kueste 0.01 km) (Oliver).
 St. Peter Bay, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 1.1582 meters
@@ -33808,12 +33828,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -61.7500
-# !latitude: 12.0667
+# !longitude: -61.7547
+# !latitude: 12.0691
 # region: Saint George
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Key West, Florida [harmonics-dwf-20251228-free.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 12.0667/-61.7500, Kueste 0.48 km) (Oliver).
 Grenada, Grenada
 +00:00 :America/Grenada
 0.2438 meters
@@ -34002,8 +34023,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -62.8167
-# !latitude: 44.7833
+# !longitude: -62.8177
+# !latitude: 44.7824
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -34013,6 +34034,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.257. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.870,
 # note: Zielwert F=0.169 aus Nachbarn statt F=0.197 des Bezugsorts; Beleg: Nachbarn 4.75 -> 4.72 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 44.7833/-62.8167, Kueste 0.03 km) (Oliver).
 Ship Harbour, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.1582 meters
@@ -35006,8 +35028,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -62.2000
-# !latitude: 10.0167
+# !longitude: -62.2014
+# !latitude: 10.0205
 # state: Delta Amacuro
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
@@ -35020,6 +35042,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.33 auf den Springhub des Buchs (ectt-4937); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 10.0167/-62.2000, Kueste 0.35 km) (Oliver).
 Boca Pedernales entrance, Venezuela
 +00:00 :America/Caracas
 0.7925 meters
@@ -35208,8 +35231,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -61.6500
-# !latitude: 10.6833
+# !longitude: -61.6501
+# !latitude: 10.6801
 # region: Diego Martin
 # admin1_quelle: Ufer 0.5 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
@@ -35219,6 +35242,7 @@ x 0 0
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.571,
 # note: Zielwert F=0.342 aus Wahrheit statt F=0.199 des Bezugsorts; Beleg: Wahrheit 4.00 -> 3.67 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 10.6833/-61.6500, Kueste 0.25 km) (Oliver).
 Staubles Bay, Trinidad and Tobago
 +00:00 :America/Port_of_Spain
 0.8534 meters
@@ -35407,8 +35431,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -61.8667
-# !latitude: 10.0833
+# !longitude: -61.8675
+# !latitude: 10.0938
 # region: Siparia
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
@@ -35419,6 +35443,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.36 auf den Springhub des Buchs (ectt-4947); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.404. Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 10.0833/-61.8667, Kueste 1.07 km) (Oliver).
 Bonasse pier, Trinidad and Tobago
 +00:00 :America/Port_of_Spain
 1.0363 meters
@@ -35607,8 +35632,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -61.6500
-# !latitude: 10.0667
+# !longitude: -61.6538
+# !latitude: 10.0651
 # region: Siparia
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
@@ -35623,6 +35648,7 @@ x 0 0
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.192,
 # note: Zielwert F=0.22 aus Wahrheit statt F=0.199 des Bezugsorts; Beleg: Wahrheit 4.40 -> 4.38 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 10.0667/-61.6500, Kueste 0.35 km) (Oliver).
 Erin Bay, Trinidad and Tobago
 +00:00 :America/Port_of_Spain
 1.0973 meters
@@ -36008,8 +36034,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -61.0333
-# !latitude: 10.4000
+# !longitude: -61.0219
+# !latitude: 10.4036
 # region: Rio Claro-Mayaro
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
@@ -36020,6 +36046,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.35 auf den Springhub des Buchs (ectt-4953); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.286. Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 10.4000/-61.0333, Kueste 1.21 km) (Oliver).
 Nariva River, Trinidad and Tobago
 +00:00 :America/Port_of_Spain
 0.7620 meters
@@ -36208,8 +36235,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -58.1667
-# !latitude: 6.8000
+# !longitude: -58.1695
+# !latitude: 6.8083
 # note: 20260903 Phasen um +0.75 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-3.75 gegen -3.00 nach dem Buch)
@@ -36223,6 +36250,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 2.023,
 # note: Zielwert F=0.163 aus Nachbarn statt F=0.085 des Bezugsorts; Beleg: Nachbarn 8.78 -> 8.58 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 6.8000/-58.1667, Kueste 0.87 km) (Oliver).
 Georgetown, Guyana
 +00:00 :America/Guyana
 1.6154 meters
@@ -36411,8 +36439,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -59.9000
-# !latitude: 43.9333
+# !longitude: -59.9004
+# !latitude: 43.9373
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -36420,6 +36448,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.86 auf den Springhub des Buchs (ectt-497); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.9333/-59.9000, Kueste 0.35 km) (Oliver).
 Sable Island, south side, Nova Scotia, Canada
 +00:00 :America/Halifax
 0.7620 meters
@@ -38190,8 +38219,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -44.9167
-# !latitude: -1.2833
+# !longitude: -44.9078
+# !latitude: -1.2872
 # note: 20260903 Provinz "Maranhão" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Maranhão
@@ -38199,6 +38228,7 @@ x 0 0
 # note: 20260913 S2/K2 x 1.80 auf den Springhub des Buchs (ectt-4989); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -1.2833/-44.9167, Kueste 0.98 km) (Oliver).
 Ilhas de São João, Maranhão, Brazil
 +00:00 :America/Fortaleza
 2.1336 meters
@@ -38387,8 +38417,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -42.2333
-# !latitude: -2.7667
+# !longitude: -42.2498
+# !latitude: -2.7518
 # note: 20260903 Provinz "Maranhão" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Maranhão
@@ -38398,6 +38428,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Suriname Rivier Entrance, Suriname [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -2.7667/-42.2333, Kueste 2.36 km) (Oliver).
 Tutóia, Baía da, Maranhão, Brazil
 +00:00 :America/Fortaleza
 1.7374 meters
@@ -38586,8 +38617,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -41.6667
-# !latitude: -2.8833
+# !longitude: -41.6502
+# !latitude: -2.8648
 # note: 20260903 Provinz "Maranhão" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Maranhão
@@ -38599,6 +38630,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.464,
 # note: Zielwert F=0.125 aus Nachbarn statt F=0.085 des Bezugsorts; Beleg: Nachbarn 6.79 -> 6.74 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -2.8833/-41.6667, Kueste 2.36 km) (Oliver).
 Luís Correia, Maranhão, Brazil
 +00:00 :America/Fortaleza
 1.6459 meters
@@ -38984,8 +39016,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -64.3000
-# !latitude: 44.5667
+# !longitude: -64.3019
+# !latitude: 44.5646
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -38993,6 +39025,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.77 auf den Springhub des Buchs (ectt-501); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 44.5667/-64.3000, Kueste 0.18 km) (Oliver).
 Chester, Mahone Bay, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.2497 meters
@@ -39181,8 +39214,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -34.8333
-# !latitude: -7.1000
+# !longitude: -34.8309
+# !latitude: -7.0993
 # note: 20260903 Provinz "Paraíba" ergaenzt (Nachbarn ab 2 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Paraíba
@@ -39194,6 +39227,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.753,
 # note: Zielwert F=0.07 aus Wahrheit statt F=0.088 des Bezugsorts; Beleg: Wahrheit 3.71 -> 3.65 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -7.1000/-34.8333, Kueste 0.17 km) (Oliver).
 Tambau, Paraíba, Brazil
 +00:00 :America/Fortaleza
 1.2497 meters
@@ -39382,8 +39416,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -35.7167
-# !latitude: -9.6667
+# !longitude: -35.7127
+# !latitude: -9.6701
 # note: 20260903 Provinz "Alagoas" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Alagoas
@@ -39393,6 +39427,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Recife (Farol), Pernambuco, Brazil [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -9.6667/-35.7167, Kueste 0.48 km) (Oliver).
 Maceio, Alagoas, Brazil
 +00:00 :America/Maceio
 1.0973 meters
@@ -39979,8 +40014,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -39.0333
-# !latitude: -14.8000
+# !longitude: -39.0282
+# !latitude: -14.8010
 # note: 20260903 Provinz "Bahia" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Bahia
@@ -39990,6 +40025,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Recife (Farol), Pernambuco, Brazil [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -14.8000/-39.0333, Kueste 0.46 km) (Oliver).
 Ilheus, Bahia, Brazil
 +00:00 :America/Bahia
 0.9754 meters
@@ -40178,8 +40214,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -39.0333
-# !latitude: -16.2833
+# !longitude: -39.0211
+# !latitude: -16.2860
 # note: 20260903 Provinz "Bahia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Bahia
@@ -40189,6 +40225,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Recife (Farol), Pernambuco, Brazil [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.74 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -16.2833/-39.0333, Kueste 1.24 km) (Oliver).
 Santa Cruz Cabrália, Bahia, Brazil
 +00:00 :America/Bahia
 0.8839 meters
@@ -40576,8 +40613,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -40.3167
-# !latitude: -20.3167
+# !longitude: -40.3164
+# !latitude: -20.3184
 # note: 20260903 Provinz "Espírito Santo" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Espírito Santo
@@ -40587,6 +40624,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.435. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Recife (Farol), Pernambuco, Brazil [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -20.3167/-40.3167, Kueste 0.09 km) (Oliver).
 Vitoria, Espírito Santo, Brazil
 +00:00 :America/Sao_Paulo
 0.7925 meters
@@ -41374,8 +41412,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -44.7167
-# !latitude: -23.2333
+# !longitude: -44.7141
+# !latitude: -23.2307
 # note: 20260903 Provinz "Rio de Janeiro" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Rio de Janeiro
@@ -41385,6 +41423,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.636. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Paraty, Rio de Janeiro, Brazil [harmonics_att_np207.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -23.2333/-44.7167, Kueste 0.29 km) (Oliver).
 Parati, Rio de Janeiro, Brazil
 -03:00 :America/Sao_Paulo
 0.6706 meters
@@ -42379,13 +42418,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -66.4833
-# !latitude: -48.3833
+# !longitude: -66.4757
+# !latitude: -48.3750
 # province: Santa Cruz
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.29 auf den Springhub des Buchs (ectt-5193); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -48.3833/-66.4833, Kueste 0.98 km) (Oliver).
 Bahía Laura, Santa Cruz, Argentina
 -03:00 :America/Buenos_Aires
 3.8710 meters
@@ -42574,8 +42614,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -58.4000
-# !latitude: -62.0500
+# !longitude: -58.3927
+# !latitude: -62.0680
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-3.00 gegen -4.00 nach dem Buch)
@@ -42584,6 +42624,7 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Pictou, Nova Scotia, Canada [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -62.0500/-58.4000, Kueste 1.93 km) (Oliver).
 Admiralty Bay, Antarctica
 +00:00 :America/Buenos_Aires
 1.0668 meters
@@ -42772,8 +42813,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -25.2833
-# !latitude: 73.3500
+# !longitude: -25.2855
+# !latitude: 73.3476
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-3.00 gegen -4.00 nach dem Buch)
@@ -42783,6 +42824,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.88 auf den Springhub des Buchs (ectt-53); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 73.3500/-25.2833, Kueste 0.17 km) (Oliver).
 Blomsterbugten, Greenland
 +00:00 :America/Nuuk
 0.9754 meters
@@ -44365,8 +44407,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -52.6167
-# !latitude: 66.9333
+# !longitude: -52.6046
+# !latitude: 66.9074
 # note: 20260903 Phasen um -0.50 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-3.00 gegen -3.50 nach dem Buch)
@@ -44376,6 +44418,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.16 auf den Springhub des Buchs (ectt-83); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 66.9333/-52.6167, Kueste 2.82 km) (Oliver).
 Camp Michigan, Maligiak Fjord, Greenland
 +00:00 :America/Nuuk
 1.5545 meters
@@ -45562,12 +45605,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -74.6000
-# !latitude: -43.6167
+# !longitude: -74.5949
+# !latitude: -43.6311
 # region: Aisén del General Carlos Ibáñez del Campo
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cabo de Hornos, Magallanes, Chile [harmonics_noaa_refs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -43.6167/-74.6000, Kueste 1.55 km) (Oliver).
 Isla Guafo, Chile
 +00:00 :America/Santiago
 1.1582 meters
@@ -46334,12 +46378,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -73.7000
-# !latitude: -43.3333
+# !longitude: -73.7003
+# !latitude: -43.3342
 # region: Los Lagos
 # admin1_quelle: Ufer 0.8 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cabo de Hornos, Magallanes, Chile [harmonics_noaa_refs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (2) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -43.3333/-73.7000, Kueste 0.00 km) (Oliver).
 Puerto San Pedro, Chile
 +00:00 :America/Santiago
 1.4021 meters
@@ -46723,8 +46768,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -73.6333
-# !latitude: -43.1167
+# !longitude: -73.6319
+# !latitude: -43.1183
 # region: Los Lagos
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.79 auf den Springhub des Buchs (wctt-111); der Bau
@@ -46732,6 +46777,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Puerto Montt, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (2) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -43.1167/-73.6333, Kueste 0.11 km) (Oliver).
 Puerto Quellón, Chile
 +00:00 :America/Santiago
 2.4994 meters
@@ -47310,8 +47356,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -73.5500
-# !latitude: -41.9333
+# !longitude: -73.5477
+# !latitude: -41.9340
 # region: Los Lagos
 # admin1_quelle: Ufer 0.5 km
 # note: 20260913 S2/K2 x 1.84 auf den Springhub des Buchs (wctt-119); der Bau
@@ -47319,6 +47365,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Puerto Montt, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -41.9333/-73.5500, Kueste 0.11 km) (Oliver).
 Bahía Linao, Chile
 +00:00 :America/Santiago
 2.5908 meters
@@ -48878,13 +48925,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -73.6000
-# !latitude: -41.6167
+# !longitude: -73.5987
+# !latitude: -41.6142
 # region: Río Maullín
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.95 auf den Springhub des Buchs (wctt-133); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -41.6167/-73.6000, Kueste 0.20 km) (Oliver).
 Maullín, Río Maullín, Chile
 +00:00 :America/Santiago
 1.1887 meters
@@ -49276,8 +49324,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -124.8500
-# !latitude: 50.9333
+# !longitude: -124.8502
+# !latitude: 50.9310
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
@@ -49287,6 +49335,7 @@ x 0 0
 # note: -- Namensgleichheit "Vancouver, Columbia River, Washington" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 50.9333/-124.8500, Kueste 0.15 km) (Oliver).
 Waddington Harbor, Bute Inlet, British Columbia, Canada
 +00:00 :America/Vancouver
 3.0785 meters
@@ -49475,8 +49524,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -126.2000
-# !latitude: 50.5833
+# !longitude: -126.2009
+# !latitude: 50.5799
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
@@ -49484,6 +49533,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.48 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 50.5833/-126.2000, Kueste 0.28 km) (Oliver).
 Chatham Channel (Root Point), British Columbia, Canada
 -09:00 :America/Vancouver
 2.8956 meters
@@ -49869,8 +49919,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -127.2833
-# !latitude: 50.9000
+# !longitude: -127.2832
+# !latitude: 50.8974
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
@@ -49878,6 +49928,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 50.9000/-127.2833, Kueste 0.19 km) (Oliver).
 Blunden Harbor, British Columbia, Canada
 -09:00 :America/Vancouver
 2.8651 meters
@@ -50066,8 +50117,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -124.7500
-# !latitude: 48.6167
+# !longitude: -124.7480
+# !latitude: 48.6114
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
@@ -50075,6 +50126,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.48 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 48.6167/-124.7500, Kueste 0.51 km) (Oliver).
 Carmanah Point, British Columbia, Canada
 -09:00 :America/Vancouver
 1.8898 meters
@@ -50263,8 +50315,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -127.3000
-# !latitude: 50.1333
+# !longitude: -127.3009
+# !latitude: 50.1317
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
@@ -50272,6 +50324,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.48 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 50.1333/-127.3000, Kueste 0.09 km) (Oliver).
 Kyuquot Sound, British Columbia, Canada
 -09:00 :America/Vancouver
 2.2555 meters
@@ -51054,8 +51107,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -73.3833
-# !latitude: -38.8000
+# !longitude: -73.4041
+# !latitude: -38.8108
 # region: La Araucanía
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.88 auf den Springhub des Buchs (wctt-141); der Bau
@@ -51063,6 +51116,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Valparaíso, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.20 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -38.8000/-73.3833, Kueste 2.06 km) (Oliver).
 Río Imperial entrance, Chile
 +00:00 :America/Santiago
 0.7315 meters
@@ -51251,8 +51305,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -128.4000
-# !latitude: 52.8333
+# !longitude: -128.3962
+# !latitude: 52.8310
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
@@ -51263,6 +51317,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ketchikan, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.52 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.8333/-128.4000, Kueste 0.26 km) (Oliver).
 Carter Bay, British Columbia, Canada
 -09:00 :America/Vancouver
 2.8346 meters
@@ -51651,8 +51706,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -129.7167
-# !latitude: 53.3500
+# !longitude: -129.7065
+# !latitude: 53.3361
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
@@ -51663,6 +51718,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ketchikan, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.52 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.3500/-129.7167, Kueste 1.58 km) (Oliver).
 Port Stephens, British Columbia, Canada
 -09:00 :America/Vancouver
 3.0175 meters
@@ -51851,8 +51907,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -130.1500
-# !latitude: 53.5833
+# !longitude: -130.1631
+# !latitude: 53.5825
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
@@ -51863,6 +51919,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ketchikan, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.52 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.5833/-130.1500, Kueste 0.77 km) (Oliver).
 Port Canaveral, British Columbia, Canada
 -09:00 :America/Vancouver
 3.0175 meters
@@ -52051,8 +52108,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -73.9333
-# !latitude: -38.3333
+# !longitude: -73.9270
+# !latitude: -38.3247
 # region: Isla Mocha
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.91 auf den Springhub des Buchs (wctt-143); der Bau
@@ -52060,6 +52117,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Valparaíso, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.20 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -38.3333/-73.9333, Kueste 1.00 km) (Oliver).
 Caleta La Hacienda, Isla Mocha, Chile
 +00:00 :America/Santiago
 0.7925 meters
@@ -52449,8 +52507,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -132.1333
-# !latitude: 53.9833
+# !longitude: -132.1347
+# !latitude: 53.9822
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
@@ -52463,6 +52521,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.240,
 # note: Zielwert F=0.427 aus Nachbarn statt F=0.328 des Bezugsorts; Beleg: Nachbarn 3.04 -> 2.39 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.9833/-132.1333, Kueste 0.06 km) (Oliver).
 Masset Harbor, British Columbia, Canada
 -09:00 :America/Vancouver
 2.0117 meters
@@ -53050,8 +53109,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -130.5500
-# !latitude: 54.7833
+# !longitude: -130.5516
+# !latitude: 54.7890
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
@@ -53062,6 +53121,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ketchikan, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.52 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.7833/-130.5500, Kueste 0.55 km) (Oliver).
 Wales Island (Cannery), Pearse Canal, British Columbia, Canada
 -09:00 :America/Vancouver
 2.4079 meters
@@ -53648,8 +53708,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -73.5333
-# !latitude: -36.9833
+# !longitude: -73.5341
+# !latitude: -36.9783
 # region: Bío-Bío
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.89 auf den Springhub des Buchs (wctt-149); der Bau
@@ -53657,6 +53717,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Valparaíso, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.20 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -36.9833/-73.5333, Kueste 0.46 km) (Oliver).
 Isla Santa María, Chile
 +00:00 :America/Santiago
 0.9449 meters
@@ -54237,8 +54298,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -132.3000
-# !latitude: 54.7167
+# !longitude: -132.2995
+# !latitude: 54.7144
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Ufer 1.3 km
@@ -54247,6 +54308,7 @@ x 0 0
 # note: -- Siehe py/fes_gruppenpruefung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.7167/-132.3000, Kueste 0.16 km) (Oliver).
 Minnie Bay, Alaska
 -09:00 :America/Sitka
 2.0117 meters
@@ -54632,13 +54694,14 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: -132.3167
-# !latitude: 54.8667
+# !latitude: 54.8679
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260911 Phasen um +1.00 h gedreht: beim Bau im Juli war der Bezug Sitka
 # note: -- eine Stunde frueher als der heutige Satz (Neubau-Abgleich); FES -61 -> -1 min.
 # note: -- Siehe py/fes_gruppenpruefung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.8667/-132.3167, Kueste 0.03 km) (Oliver).
 Hunter Bay, Alaska
 -09:00 :America/Sitka
 2.0117 meters
@@ -55023,8 +55086,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -72.9667
-# !latitude: -36.5333
+# !longitude: -72.9720
+# !latitude: -36.5261
 # region: Bío-Bío
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.88 auf den Springhub des Buchs (wctt-155); der Bau
@@ -55032,6 +55095,7 @@ x 0 0
 # note: Probe: anwenden (Pegel), Pegel 16.0 -> 14.9 cm, S2/M2 Nachbarn 0.36. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Valparaíso, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -36.5333/-72.9667, Kueste 0.83 km) (Oliver).
 Bahía Coliumo, Chile
 +00:00 :America/Santiago
 0.7315 meters
@@ -55220,14 +55284,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -132.6500
-# !latitude: 54.9000
+# !longitude: -132.6521
+# !latitude: 54.8967
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260911 Phasen um +1.00 h gedreht: beim Bau im Juli war der Bezug Sitka
 # note: -- eine Stunde frueher als der heutige Satz (Neubau-Abgleich); FES -61 -> -1 min.
 # note: -- Siehe py/fes_gruppenpruefung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.9000/-132.6500, Kueste 0.29 km) (Oliver).
 Elbow Bay, Alaska
 -09:00 :America/Sitka
 2.0117 meters
@@ -55416,14 +55481,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -132.6000
-# !latitude: 55.0000
+# !longitude: -132.6008
+# !latitude: 54.9971
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Ufer 1.2 km
 # note: 20260911 Phasen um +1.00 h gedreht: beim Bau im Juli war der Bezug Sitka
 # note: -- eine Stunde frueher als der heutige Satz (Neubau-Abgleich); FES -61 -> -1 min.
 # note: -- Siehe py/fes_gruppenpruefung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 55.0000/-132.6000, Kueste 0.23 km) (Oliver).
 Mabel Island, Alaska
 -09:00 :America/Sitka
 2.0422 meters
@@ -56396,8 +56462,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -132.6167
-# !latitude: 55.2833
+# !longitude: -132.6164
+# !latitude: 55.2855
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Polygon
@@ -56406,6 +56472,7 @@ x 0 0
 # note: -- Siehe py/fes_gruppenpruefung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 55.2833/-132.6167, Kueste 0.14 km) (Oliver).
 Sulzer, Alaska
 -09:00 :America/Sitka
 2.0422 meters
@@ -56595,13 +56662,14 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: -132.8333
-# !latitude: 54.8500
+# !latitude: 54.8483
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260911 Phasen um +1.00 h gedreht: beim Bau im Juli war der Bezug Sitka
 # note: -- eine Stunde frueher als der heutige Satz (Neubau-Abgleich); FES -61 -> -1 min.
 # note: -- Siehe py/fes_gruppenpruefung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.8500/-132.8333, Kueste 0.09 km) (Oliver).
 American Bay, Kaigani Strait, Alaska
 -09:00 :America/Sitka
 1.9812 meters
@@ -56790,8 +56858,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -72.7833
-# !latitude: -36.0667
+# !longitude: -72.7904
+# !latitude: -36.0651
 # region: Ñuble
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.65 auf den Springhub des Buchs (wctt-157); der Bau
@@ -56799,6 +56867,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Valparaíso, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.93 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -36.0667/-72.7833, Kueste 0.56 km) (Oliver).
 Buchupureo, Chile
 +00:00 :America/Santiago
 0.3048 meters
@@ -56987,14 +57056,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -132.8500
-# !latitude: 54.7500
+# !longitude: -132.8505
+# !latitude: 54.7474
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260911 Phasen um +1.00 h gedreht: beim Bau im Juli war der Bezug Sitka
 # note: -- eine Stunde frueher als der heutige Satz (Neubau-Abgleich); FES -61 -> -1 min.
 # note: -- Siehe py/fes_gruppenpruefung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.7500/-132.8500, Kueste 0.19 km) (Oliver).
 Security Cove, Alaska
 -09:00 :America/Sitka
 1.7374 meters
@@ -57183,8 +57253,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -133.2000
-# !latitude: 55.0667
+# !longitude: -133.2002
+# !latitude: 55.0655
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Ufer 0.2 km
@@ -57193,6 +57263,7 @@ x 0 0
 # note: -- Siehe py/fes_gruppenpruefung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 55.0667/-133.2000, Kueste 0.03 km) (Oliver).
 Sakie Bay, Alaska
 -09:00 :America/Sitka
 1.6459 meters
@@ -57381,8 +57452,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -133.1667
-# !latitude: 55.1167
+# !longitude: -133.1681
+# !latitude: 55.1193
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Ufer 1.5 km
@@ -57391,6 +57462,7 @@ x 0 0
 # note: -- Siehe py/fes_gruppenpruefung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 55.1167/-133.1667, Kueste 0.21 km) (Oliver).
 Sea Otter Harbor, Alaska
 -09:00 :America/Sitka
 1.5545 meters
@@ -57776,8 +57848,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -133.6667
-# !latitude: 55.9500
+# !longitude: -133.6628
+# !latitude: 55.9501
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Polygon
@@ -57786,6 +57858,7 @@ x 0 0
 # note: -- Siehe py/fes_gruppenpruefung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 55.9500/-133.6667, Kueste 0.14 km) (Oliver).
 Edna Bay, Alaska
 -09:00 :America/Sitka
 1.7374 meters
@@ -57974,8 +58047,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -133.3167
-# !latitude: 56.0667
+# !longitude: -133.3165
+# !latitude: 56.0705
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Polygon
@@ -57984,6 +58057,7 @@ x 0 0
 # note: -- Siehe py/fes_gruppenpruefung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 56.0667/-133.3167, Kueste 0.32 km) (Oliver).
 South of Devilfish Bay, Alaska
 -09:00 :America/Sitka
 1.7069 meters
@@ -58567,8 +58641,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -71.9833
-# !latitude: -34.3833
+# !longitude: -71.9922
+# !latitude: -34.3735
 # region: Libertador General Bernardo O'Higgins
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.84 auf den Springhub des Buchs (wctt-165); der Bau
@@ -58576,6 +58650,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Valparaíso, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -1.07 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -34.3833/-71.9833, Kueste 1.26 km) (Oliver).
 Rada Pichilemu, Chile
 +00:00 :America/Santiago
 0.7315 meters
@@ -58961,10 +59036,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -132.6333
-# !latitude: 56.6667
+# !longitude: -132.6346
+# !latitude: 56.6680
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 56.6667/-132.6333, Kueste 0.06 km) (Oliver).
 Ideal Cove, Mitkof Island, Alaska
 -09:00 :America/Sitka
 2.5298 meters
@@ -59153,10 +59229,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -132.8000
-# !latitude: 56.8833
+# !longitude: -132.8021
+# !latitude: 56.8797
 # state: Alaska
 # admin1_quelle: Ufer 0.6 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 56.8833/-132.8000, Kueste 0.32 km) (Oliver).
 Brown Cove, Alaska
 -09:00 :America/Sitka
 2.4994 meters
@@ -59537,12 +59614,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.2833
-# !latitude: 57.1667
+# !longitude: -134.2824
+# !latitude: 57.1625
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.1667/-134.2833, Kueste 0.37 km) (Oliver).
 Eliza Harbor, Liesnoi Island, Alaska
 -09:00 :America/Juneau
 2.2555 meters
@@ -59731,12 +59809,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -133.4167
-# !latitude: 57.4000
+# !longitude: -133.4219
+# !latitude: 57.4029
 # state: Alaska
 # admin1_quelle: Ufer 0.6 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.4000/-133.4167, Kueste 0.35 km) (Oliver).
 Hobart Bay, Alaska
 -09:00 :America/Juneau
 2.3774 meters
@@ -60899,12 +60978,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.0667
-# !latitude: 58.2167
+# !longitude: -134.0688
+# !latitude: 58.2214
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 58.2167/-134.0667, Kueste 0.44 km) (Oliver).
 Greely Point, Taku Inlet, Alaska
 -09:00 :America/Juneau
 2.4689 meters
@@ -61872,14 +61952,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.6667
-# !latitude: 56.3833
+# !longitude: -134.6663
+# !latitude: 56.3842
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260911 Phasen um +1.00 h gedreht: beim Bau im Juli war der Bezug Sitka
 # note: -- eine Stunde frueher als der heutige Satz (Neubau-Abgleich); FES -61 -> -1 min.
 # note: -- Siehe py/fes_gruppenpruefung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 56.3833/-134.6667, Kueste 0.01 km) (Oliver).
 Port Walter, Baranof Island, Alaska
 -09:00 :America/Sitka
 1.8288 meters
@@ -62854,10 +62935,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.8667
-# !latitude: 57.2167
+# !longitude: -134.8669
+# !latitude: 57.2158
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.2167/-134.8667, Kueste 0.00 km) (Oliver).
 Kasnyku Bay, Alaska
 -09:00 :America/Sitka
 2.1946 meters
@@ -63629,8 +63711,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -135.5167
-# !latitude: 56.8500
+# !longitude: -135.5189
+# !latitude: 56.8516
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Ufer 9.4 km
@@ -63639,6 +63721,7 @@ x 0 0
 # note: -- Siehe py/fes_gruppenpruefung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 56.8500/-135.5167, Kueste 0.12 km) (Oliver).
 Symonds Bay, Biorka Island, Alaska
 -09:00 :America/Sitka
 1.5850 meters
@@ -64996,12 +65079,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -135.9333
-# !latitude: 57.5500
+# !longitude: -135.9350
+# !latitude: 57.5488
 # region: Slocum Arm
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Elfin Cove, Port Althorp, Cross Sound, Alaska [harmonics-dwf,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.5500/-135.9333, Kueste 0.07 km) (Oliver).
 Falcon Arm, Slocum Arm, Alaska
 +00:00 :America/Sitka
 1.7069 meters
@@ -65190,12 +65274,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -136.4167
-# !latitude: 57.8500
+# !longitude: -136.4186
+# !latitude: 57.8529
 # region: North Pass
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Elfin Cove, Port Althorp, Cross Sound, Alaska [harmonics-dwf,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.8500/-136.4167, Kueste 0.24 km) (Oliver).
 Canoe Cove, North Pass, Alaska
 +00:00 :America/Juneau
 1.5850 meters
@@ -65775,10 +65860,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -136.8667
-# !latitude: 58.3833
+# !longitude: -136.8685
+# !latitude: 58.3809
 # state: Alaska
 # admin1_quelle: Ufer 0.4 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 58.3833/-136.8667, Kueste 0.09 km) (Oliver).
 Dixon Harbor, Alaska
 +00:00 :America/Juneau
 1.5850 meters
@@ -66550,12 +66636,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -145.6667
-# !latitude: 60.4667
+# !longitude: -145.6649
+# !latitude: 60.4610
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cordova, Orca Inlet, Prince William Sd, Alaska [harmonics-dw,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 60.4667/-145.6667, Kueste 0.54 km) (Oliver).
 Eyak River entrance, Alaska
 +00:00 :America/Anchorage
 1.7374 meters
@@ -67329,8 +67416,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -70.3000
-# !latitude: -52.7500
+# !longitude: -70.3002
+# !latitude: -52.7410
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.84 auf den Springhub des Buchs (wctt-19); der Bau
@@ -67338,6 +67425,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Puerto Montt, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -52.7500/-70.3000, Kueste 0.90 km) (Oliver).
 Segunda Angostura, Chile
 +00:00 :America/Punta_Arenas
 3.9014 meters
@@ -68307,10 +68395,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -148.4667
-# !latitude: 60.5333
+# !longitude: -148.4700
+# !latitude: 60.5370
 # region: Port Nellie Juan
 # admin1_quelle: Name
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 60.5333/-148.4667, Kueste 0.35 km) (Oliver).
 Kings Bay, Port Nellie Juan, Alaska
 +00:00 :America/Anchorage
 1.8898 meters
@@ -71017,10 +71106,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -153.5167
-# !latitude: 57.1167
+# !longitude: -153.5128
+# !latitude: 57.1242
 # state: Alaska
 # admin1_quelle: Ufer 0.2 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.1167/-153.5167, Kueste 0.76 km) (Oliver).
 Three Saints Bay, Alaska
 +00:00 :America/Anchorage
 1.3411 meters
@@ -71209,8 +71299,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.5333
-# !latitude: -24.3667
+# !longitude: -70.5426
+# !latitude: -24.3649
 # region: Antofagasta
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.56 auf den Springhub des Buchs (wctt-211); der Bau
@@ -71218,6 +71308,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Antofagasta, Chile [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.07 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -24.3667/-70.5333, Kueste 0.87 km) (Oliver).
 Blanco Encalada, Chile
 +00:00 :America/Santiago
 0.8230 meters
@@ -71600,12 +71691,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -153.8167
-# !latitude: 57.4667
+# !longitude: -153.8204
+# !latitude: 57.4658
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Seldovia, Cook Inlet, Alaska [harmonics-dwf-20251228-free.tx,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.4667/-153.8167, Kueste 0.14 km) (Oliver).
 Mining Camp, Alaska
 +00:00 :America/Anchorage
 2.2250 meters
@@ -71988,10 +72080,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -153.5500
-# !latitude: 57.7833
+# !longitude: -153.5473
+# !latitude: 57.7825
 # state: Alaska
 # admin1_quelle: Ufer 0.9 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.7833/-153.5500, Kueste 0.08 km) (Oliver).
 Village Islands, Alaska
 +00:00 :America/Anchorage
 2.2860 meters
@@ -72568,12 +72661,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -152.5167
-# !latitude: 58.5833
+# !longitude: -152.5165
+# !latitude: 58.5850
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Seldovia, Cook Inlet, Alaska [harmonics-dwf-20251228-free.tx,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 58.5833/-152.5167, Kueste 0.09 km) (Oliver).
 Carry Inlet, Alaska
 +00:00 :America/Anchorage
 2.1031 meters
@@ -73146,10 +73240,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -156.0667
-# !latitude: 57.5167
+# !longitude: -156.0666
+# !latitude: 57.5196
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.5167/-156.0667, Kueste 0.22 km) (Oliver).
 Kanatak Lagoon, Portage Bay, Alaska
 +00:00 :America/Anchorage
 1.8593 meters
@@ -73535,10 +73630,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -156.3000
-# !latitude: 57.4333
+# !longitude: -156.2976
+# !latitude: 57.4287
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 57.4333/-156.3000, Kueste 0.43 km) (Oliver).
 Lees Cabins, Wide Bay, Alaska
 +00:00 :America/Anchorage
 1.8898 meters
@@ -73727,10 +73823,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -159.1667
-# !latitude: 55.9000
+# !longitude: -159.1658
+# !latitude: 55.8992
 # state: Alaska
 # admin1_quelle: Ufer 1.3 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 55.9000/-159.1667, Kueste 0.00 km) (Oliver).
 Three Star Point, Alaska
 +00:00 :America/Anchorage
 1.2802 meters
@@ -74687,8 +74784,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -159.9833
-# !latitude: 55.1500
+# !longitude: -159.9935
+# !latitude: 55.1547
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -74696,6 +74793,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 55.1500/-159.9833, Kueste 0.73 km) (Oliver).
 Sanborn Harbor, Nagai Island, Alaska
 +00:00 :America/Anchorage
 1.1887 meters
@@ -75278,8 +75376,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -160.6167
-# !latitude: 55.5833
+# !longitude: -160.6166
+# !latitude: 55.5853
 # state: Alaska
 # admin1_quelle: Ufer 1.1 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -75287,6 +75385,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 55.5833/-160.6167, Kueste 0.12 km) (Oliver).
 Albatross Anchorage, Balboa Bay, Alaska
 +00:00 :America/Anchorage
 1.2497 meters
@@ -76263,8 +76362,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -162.6333
-# !latitude: 54.4000
+# !longitude: -162.6337
+# !latitude: 54.3940
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -76272,6 +76371,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.4000/-162.6333, Kueste 0.57 km) (Oliver).
 Peterson Bay, Alaska
 +00:00 :America/Nome
 1.0363 meters
@@ -77629,10 +77729,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -167.0833
-# !latitude: 53.4667
+# !longitude: -167.0587
+# !latitude: 53.4579
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.4667/-167.0833, Kueste 1.80 km) (Oliver).
 Kashega Bay, Alaska
 -09:00 :America/Nome
 0.7620 meters
@@ -78013,10 +78114,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -167.0167
-# !latitude: 53.4667
+# !longitude: -167.0175
+# !latitude: 53.4675
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.4667/-167.0167, Kueste 0.00 km) (Oliver).
 Kuliliak Bay, Alaska
 -09:00 :America/Nome
 0.9754 meters
@@ -78205,10 +78307,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -166.9333
-# !latitude: 53.4833
+# !longitude: -166.9375
+# !latitude: 53.4768
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.4833/-166.9333, Kueste 0.67 km) (Oliver).
 Eagle Bay, Alaska
 -09:00 :America/Nome
 0.9449 meters
@@ -78589,10 +78692,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -166.8000
-# !latitude: 53.5167
+# !longitude: -166.7924
+# !latitude: 53.5131
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.5167/-166.8000, Kueste 0.54 km) (Oliver).
 Usof Bay, Alaska
 -09:00 :America/Nome
 1.0058 meters
@@ -79359,10 +79463,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -168.3500
-# !latitude: 53.3000
+# !longitude: -168.3503
+# !latitude: 53.2958
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.3000/-168.3500, Kueste 0.36 km) (Oliver).
 Inanudak Bay, Alaska
 -09:00 :America/Nome
 0.6706 meters
@@ -79743,10 +79848,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -169.0500
-# !latitude: 52.8333
+# !longitude: -169.0492
+# !latitude: 52.8320
 # state: Alaska
 # admin1_quelle: Ufer 1.1 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.8333/-169.0500, Kueste 0.05 km) (Oliver).
 Cape Sagak, Alaska
 -09:00 :America/Nome
 0.7925 meters
@@ -79935,10 +80041,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -168.7167
-# !latitude: 52.9500
+# !longitude: -168.7156
+# !latitude: 52.9491
 # state: Alaska
 # admin1_quelle: Ufer 2.6 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.9500/-168.7167, Kueste 0.03 km) (Oliver).
 Driftwood Bay, Alaska
 -09:00 :America/Nome
 0.8839 meters
@@ -80319,12 +80426,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -169.8667
-# !latitude: 52.8667
+# !longitude: -169.8677
+# !latitude: 52.8660
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Unalaska, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.8667/-169.8667, Kueste 0.00 km) (Oliver).
 Applegate Cove, Chuginadak Island, Alaska
 -09:00 :America/Adak
 0.7925 meters
@@ -80707,11 +80815,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -170.5667
-# !latitude: 52.6667
+# !longitude: -170.5658
+# !latitude: 52.6703
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20261017 Phasen um +1 h gedreht: Buchzone -10 gegen Unalaska -9 fehlte; FES K1 -187 -> -127 min (py/noaa_buchzeilen_probe.py) (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.6667/-170.5667, Kueste 0.30 km) (Oliver).
 East Cove, Alaska
 -09:00 :America/Adak
 0.6096 meters
@@ -81093,11 +81202,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -171.2333
-# !latitude: 52.5167
+# !longitude: -171.2319
+# !latitude: 52.5181
 # region: north side
 # admin1_quelle: Name
 # note: 20261017 Phasen um +1 h gedreht: Buchzone -10 gegen Unalaska -9 fehlte; FES K1 -135 -> -75 min (py/noaa_buchzeilen_probe.py) (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.5167/-171.2333, Kueste 0.08 km) (Oliver).
 Amukta Island, north side, Alaska
 -09:00 :America/Adak
 0.6706 meters
@@ -82632,10 +82742,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -175.9833
-# !latitude: 52.0333
+# !longitude: -175.9789
+# !latitude: 52.0324
 # state: Alaska
 # admin1_quelle: Ufer 0.8 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.0333/-175.9833, Kueste 0.22 km) (Oliver).
 Bugle Point, Great Sitkin Island #, Alaska
 +00:00 :America/Adak
 0.4877 meters
@@ -83400,10 +83511,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -176.4333
-# !latitude: 51.7667
+# !longitude: -176.4310
+# !latitude: 51.7671
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 51.7667/-176.4333, Kueste 0.06 km) (Oliver).
 Adak Bight #, Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -85128,10 +85240,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -178.0000
-# !latitude: 51.7167
+# !longitude: -177.9995
+# !latitude: 51.7185
 # state: Alaska
 # admin1_quelle: Ufer 0.6 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 51.7167/-178.0000, Kueste 0.10 km) (Oliver).
 Tanaga Bay #, Alaska
 +00:00 :America/Adak
 0.6096 meters
@@ -85704,10 +85817,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -178.8000
-# !latitude: 51.7500
+# !longitude: -178.8006
+# !latitude: 51.7456
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 51.7500/-178.8000, Kueste 0.39 km) (Oliver).
 Gareloi Island #, Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -86088,10 +86202,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 177.5500
-# !latitude: 51.9833
+# !longitude: 177.5497
+# !latitude: 51.9817
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 51.9833/177.5500, Kueste 0.08 km) (Oliver).
 Kiska Harbor, Kiska Island #, Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -86472,10 +86587,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 173.6333
-# !latitude: 52.3833
+# !longitude: 173.6319
+# !latitude: 52.3750
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.3833/173.6333, Kueste 0.82 km) (Oliver).
 Otkriti Bay, Agattu Island #, Alaska
 +00:00 :America/Adak
 0.5182 meters
@@ -86664,12 +86780,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 173.2333
-# !latitude: 52.9333
+# !longitude: 173.2372
+# !latitude: 52.9295
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Attu, Massacre Bay, Alaska [harmonics-dwf-20251228-free.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.9333/173.2333, Kueste 0.39 km) (Oliver).
 Chichagof Harbor #, Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -87052,10 +87169,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 172.9000
-# !latitude: 52.9833
+# !longitude: 172.9023
+# !latitude: 52.9812
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.9833/172.9000, Kueste 0.18 km) (Oliver).
 Steller Cove #, Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -87244,10 +87362,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 172.6167
-# !latitude: 52.9333
+# !longitude: 172.6204
+# !latitude: 52.9231
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 52.9333/172.6167, Kueste 1.06 km) (Oliver).
 Etienne Bay #, Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -87822,9 +87941,10 @@ x 0 0
 # confidence: 4
 # !units: meters
 # !longitude: -172.7167
-# !latitude: 60.3667
+# !latitude: 60.3585
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 60.3667/-172.7167, Kueste 0.81 km) (Oliver).
 St. Matthew Island, Alaska
 +00:00 :America/Nome
 0.3658 meters
@@ -88205,10 +88325,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -162.5000
-# !latitude: 63.6167
+# !longitude: -162.4994
+# !latitude: 63.6227
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 63.6167/-162.5000, Kueste 0.57 km) (Oliver).
 North Bay, Stuart Island #, Alaska
 +00:00 :America/Nome
 0.4267 meters
@@ -88397,8 +88518,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -80.0167
-# !latitude: -3.2667
+# !longitude: -80.0141
+# !latitude: -3.2683
 # state: El Oro
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.07 auf den Springhub des Buchs (wctt-261); der Bau
@@ -88406,6 +88527,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.295. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug La Libertad, Ecuador [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -3.2667/-80.0167, Kueste 0.23 km) (Oliver).
 Puerto Bolivar, Ecuador
 +00:00 :America/Guayaquil
 1.4326 meters
@@ -88786,8 +88908,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -80.7333
-# !latitude: -0.9500
+# !longitude: -80.7372
+# !latitude: -0.9406
 # state: Manabi
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (wctt-271); der Bau
@@ -88797,6 +88919,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.779,
 # note: Zielwert F=0.112 aus Wahrheit statt F=0.14 des Bezugsorts; Beleg: Wahrheit 1.66 -> 1.53 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -0.9500/-80.7333, Kueste 1.04 km) (Oliver).
 Bahía Manta, Ecuador
 +00:00 :America/Guayaquil
 1.2192 meters
@@ -89184,12 +89307,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.9000
-# !latitude: -53.9000
+# !longitude: -70.9007
+# !latitude: -53.9026
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Ufer 1.1 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Punta Arenas, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -53.9000/-70.9000, Kueste 0.20 km) (Oliver).
 Puerto San Antonio, Chile
 +00:00 :America/Punta_Arenas
 1.3716 meters
@@ -89774,8 +89898,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -77.5000
-# !latitude: 4.2833
+# !longitude: -77.5053
+# !latitude: 4.2889
 # region: Chocó
 # admin1_quelle: Ufer 2.5 km
 # note: 20260913 S2/K2 x 2.01 auf den Springhub des Buchs (wctt-301); der Bau
@@ -89783,6 +89907,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Buenaventura, Colombia [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (4) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 4.2833/-77.5000, Kueste 0.76 km) (Oliver).
 Río San Juan, Colombia
 +00:00 :America/Bogota
 1.9202 meters
@@ -91538,10 +91663,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -72.5000
-# !latitude: -53.5333
+# !longitude: -72.4994
+# !latitude: -53.5342
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -53.5333/-72.5000, Kueste 0.01 km) (Oliver).
 Bahía Borja, Chile
 +00:00 :America/Punta_Arenas
 0.7315 meters
@@ -91730,10 +91856,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -72.7833
-# !latitude: -53.5000
+# !longitude: -72.7796
+# !latitude: -53.4992
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -53.5000/-72.7833, Kueste 0.16 km) (Oliver).
 Bahía Swallow, Chile
 +00:00 :America/Punta_Arenas
 0.7315 meters
@@ -92312,10 +92439,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -117.6167
-# !latitude: 33.4167
+# !longitude: -117.6185
+# !latitude: 33.4152
 # state: California
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 33.4167/-117.6167, Kueste 0.14 km) (Oliver).
 San Clemente, California
 -08:00 :America/Los_Angeles
 0.8230 meters
@@ -92504,10 +92632,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -73.3667
-# !latitude: -53.2333
+# !longitude: -73.3676
+# !latitude: -53.2218
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -53.2333/-73.3667, Kueste 1.19 km) (Oliver).
 Puerto Angosto, Chile
 +00:00 :America/Punta_Arenas
 0.6096 meters
@@ -92696,13 +92825,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -118.0500
-# !latitude: 33.7167
+# !longitude: -118.0543
+# !latitude: 33.7126
 # state: California
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 3.54 auf den Springhub des Buchs (wctt-433); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 33.7167/-118.0500, Kueste 0.50 km) (Oliver).
 Los Patos (highway bridge), California
 +00:00 :America/Los_Angeles
 0.7010 meters
@@ -93088,12 +93218,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -73.5500
-# !latitude: -52.9667
+# !longitude: -73.5572
+# !latitude: -52.9672
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Ufer 5.5 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cabo de Hornos, Magallanes, Chile [harmonics_noaa_refs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -52.9667/-73.5500, Kueste 0.38 km) (Oliver).
 Caleta Sylvia, Chile
 +00:00 :America/Punta_Arenas
 0.6706 meters
@@ -93282,8 +93413,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -119.1000
-# !latitude: 34.1000
+# !longitude: -119.0994
+# !latitude: 34.0985
 # state: California
 # admin1_quelle: Ufer 0.1 km
 # note: 20260913 S2/K2 x 3.98 auf den Springhub des Buchs (wctt-451); der Bau
@@ -93291,6 +93422,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Los Angeles (outer harbor), California [harmonics-dwf-202512,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 34.1000/-119.1000, Kueste 0.08 km) (Oliver).
 Mugu Lagoon (ocean pier), California
 +00:00 :America/Los_Angeles
 0.8230 meters
@@ -93479,10 +93611,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -119.2000
-# !latitude: 34.1500
+# !longitude: -119.2021
+# !latitude: 34.1481
 # state: California
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 34.1500/-119.2000, Kueste 0.19 km) (Oliver).
 Port Hueneme, California
 +00:00 :America/Los_Angeles
 0.8534 meters
@@ -94055,10 +94188,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -119.0333
-# !latitude: 33.4833
+# !longitude: -119.0356
+# !latitude: 33.4851
 # state: California
 # admin1_quelle: Ufer 39.8 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 33.4833/-119.0333, Kueste 0.19 km) (Oliver).
 Santa Barbara Island, California
 +00:00 :America/Los_Angeles
 0.7925 meters
@@ -94247,10 +94381,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -119.5000
-# !latitude: 33.2667
+# !longitude: -119.4981
+# !latitude: 33.2672
 # state: California
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 33.2667/-119.5000, Kueste 0.09 km) (Oliver).
 San Nicolas Island, California
 +00:00 :America/Los_Angeles
 0.7620 meters
@@ -95015,10 +95150,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -121.9333
-# !latitude: 36.5167
+# !longitude: -121.9380
+# !latitude: 36.5201
 # state: California
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 36.5167/-121.9333, Kueste 0.46 km) (Oliver).
 Carmel Cove, Carmel Bay, California
 +00:00 :America/Los_Angeles
 0.8534 meters
@@ -95594,9 +95730,10 @@ x 0 0
 # confidence: 4
 # !units: meters
 # !longitude: -122.0167
-# !latitude: 36.9667
+# !latitude: 36.9623
 # state: California
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 36.9667/-122.0167, Kueste 0.39 km) (Oliver).
 Santa Cruz, Monterey Bay, California
 +00:00 :America/Los_Angeles
 0.8534 meters
@@ -95785,10 +95922,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -73.8167
-# !latitude: -52.7167
+# !longitude: -73.8125
+# !latitude: -52.7223
 # region: Canal Smyth
 # admin1_quelle: Name
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -52.7167/-73.8167, Kueste 0.58 km) (Oliver).
 Punta Ancud, Canal Smyth, Chile
 +00:00 :America/Punta_Arenas
 0.9449 meters
@@ -96371,12 +96509,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -74.4500
-# !latitude: -52.8500
+# !longitude: -74.4514
+# !latitude: -52.8486
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cabo de Hornos, Magallanes, Chile [harmonics_noaa_refs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -52.8500/-74.4500, Kueste 0.08 km) (Oliver).
 Bahía Tuesday, Chile
 +00:00 :America/Punta_Arenas
 1.0973 meters
@@ -96759,14 +96898,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -67.2333
-# !latitude: -55.3167
+# !longitude: -67.2321
+# !latitude: -55.3233
 # region: Bahía Nassau
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cabo de Hornos, Magallanes, Chile [harmonics_noaa_refs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.929,
 # note: Zielwert F=0.565 aus Nachbarn statt F=0.58 des Bezugsorts; Beleg: Nachbarn 10.55 -> 10.08 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -55.3167/-67.2333, Kueste 0.64 km) (Oliver).
 Paso Goree, Bahía Nassau, Chile
 +00:00 :America/Punta_Arenas
 1.4326 meters
@@ -96955,12 +97095,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -67.5667
-# !latitude: -55.8500
+# !longitude: -67.5647
+# !latitude: -55.8572
 # region: Isla Hermite
 # admin1_quelle: Name
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.881,
 # note: Zielwert F=0.592 aus Nachbarn statt F=0.58 des Bezugsorts; Beleg: Nachbarn 4.43 -> 4.21 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -55.8500/-67.5667, Kueste 0.71 km) (Oliver).
 Caleta Saint Martin, Isla Hermite, Chile
 +00:00 :America/Punta_Arenas
 1.4935 meters
@@ -98506,7 +98647,7 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -122.9000
+# !longitude: -122.9021
 # !latitude: 38.1667
 # state: California
 # admin1_quelle: Ufer 1.7 km
@@ -98515,6 +98656,7 @@ x 0 0
 # note: -- Namensgleichheit "Alameda, San Francisco Bay, California" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 38.1667/-122.9000, Kueste 0.08 km) (Oliver).
 Marshall, Tomales Bay, California
 +00:00 :America/Los_Angeles
 0.8534 meters
@@ -98900,8 +99042,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -123.2500
-# !latitude: 38.5167
+# !longitude: -123.2469
+# !latitude: 38.5124
 # state: California
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "San Francisco"
@@ -98909,6 +99051,7 @@ x 0 0
 # note: -- Namensgleichheit "Alameda, San Francisco Bay, California" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 38.5167/-123.2500, Kueste 0.45 km) (Oliver).
 Fort Ross, California
 +00:00 :America/Los_Angeles
 0.9144 meters
@@ -99481,10 +99624,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -123.7833
-# !latitude: 39.6333
+# !longitude: -123.7867
+# !latitude: 39.6332
 # state: California
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 39.6333/-123.7833, Kueste 0.19 km) (Oliver).
 Westport, California
 +00:00 :America/Los_Angeles
 0.9449 meters
@@ -99865,10 +100009,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -124.2833
-# !latitude: 42.0500
+# !longitude: -124.2836
+# !latitude: 42.0454
 # region: Chetco Cove
 # admin1_quelle: Name
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 42.0500/-124.2833, Kueste 0.41 km) (Oliver).
 Brookings, Chetco Cove, California
 +00:00 :America/Los_Angeles
 1.1278 meters
@@ -100057,10 +100202,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -75.5500
-# !latitude: -46.8167
+# !longitude: -75.5567
+# !latitude: -46.8033
 # region: Golfo Tres Montes
 # admin1_quelle: Name
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -46.8167/-75.5500, Kueste 1.48 km) (Oliver).
 Puerto Slight, Golfo Tres Montes, Chile
 +00:00 :America/Coyhaique
 0.8230 meters
@@ -100249,10 +100395,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -75.5167
-# !latitude: -46.6000
+# !longitude: -75.5169
+# !latitude: -46.5947
 # region: Bahía San Andres
 # admin1_quelle: Name
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -46.6000/-75.5167, Kueste 0.49 km) (Oliver).
 Caleta Pascuas, Bahía San Andres, Chile
 +00:00 :America/Coyhaique
 0.7010 meters
@@ -100633,10 +100780,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -123.9667
-# !latitude: 45.1667
+# !longitude: -123.9735
+# !latitude: 45.1674
 # state: Oregon
 # admin1_quelle: Polygon
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 45.1667/-123.9667, Kueste 0.44 km) (Oliver).
 Nestucca Bay entrance, Oregon
 +00:00 :America/Los_Angeles
 1.2192 meters
@@ -101409,11 +101557,12 @@ x 0 0
 # confidence: 4
 # !units: meters
 # !longitude: -74.1333
-# !latitude: -45.3667
+# !latitude: -45.3700
 # region: Canal Darwin
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cabo de Hornos, Magallanes, Chile [harmonics_noaa_refs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -45.3667/-74.1333, Kueste 0.26 km) (Oliver).
 Puerto Italiano, Canal Darwin, Chile
 +00:00 :America/Coyhaique
 0.9449 meters
@@ -101602,12 +101751,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -123.5833
-# !latitude: 46.1833
+# !longitude: -123.5889
+# !latitude: 46.1889
 # region: Knappa Slough
 # admin1_quelle: Name
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.104,
 # note: Zielwert F=0.485 aus Nachbarn statt F=0.549 des Bezugsorts; Beleg: Nachbarn 7.58 -> 7.50 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 46.1833/-123.5833, Kueste 0.65 km) (Oliver).
 Knappa, Knappa Slough, Washington
 -08:00 :America/Los_Angeles
 1.2802 meters
@@ -101796,12 +101946,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -123.6500
-# !latitude: 46.2667
+# !longitude: -123.6489
+# !latitude: 46.2651
 # region: Wash
 # admin1_quelle: Name
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.185,
 # note: Zielwert F=0.522 aus Nachbarn statt F=0.549 des Bezugsorts; Beleg: Nachbarn 6.45 -> 6.27 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 46.2667/-123.6500, Kueste 0.10 km) (Oliver).
 Harrington Point, Wash, Oregon
 -08:00 :America/Los_Angeles
 1.1887 meters
@@ -102182,10 +102333,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -73.7500
-# !latitude: -45.0500
+# !longitude: -73.7511
+# !latitude: -45.0454
 # region: Aisén del General Carlos Ibáñez del Campo
 # admin1_quelle: Ufer 1.5 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -45.0500/-73.7500, Kueste 0.42 km) (Oliver).
 Puerto Americano, Chile
 +00:00 :America/Coyhaique
 0.9754 meters
@@ -102761,9 +102913,10 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -65.5000
-# !latitude: 44.7500
+# !longitude: -65.5132
+# !latitude: 44.7511
 # province: Nova Scotia
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 44.7500/-65.5000, Kueste 0.95 km) (Oliver).
 Annapolis Royal, Annapolis River, Nova Scotia, Canada
 +00:00 :America/Halifax
 4.7854 meters
@@ -103147,11 +103300,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -64.2167
-# !latitude: 45.1000
+# !longitude: -64.2147
+# !latitude: 45.1010
 # province: Nova Scotia
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.772,
 # note: Zielwert F=0.059 aus Nachbarn statt F=0.076 des Bezugsorts; Beleg: Nachbarn 5.74 -> 5.71 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 45.1000/-64.2167, Kueste 0.09 km) (Oliver).
 Horton Bluff, Avon River, Nova Scotia, Canada
 +00:00 :America/Halifax
 7.4981 meters
@@ -103727,11 +103881,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -66.9000
-# !latitude: 45.1167
+# !longitude: -66.9028
+# !latitude: 45.1211
 # province: New Brunswick
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.163,
 # note: Zielwert F=0.089 aus Nachbarn statt F=0.076 des Bezugsorts; Beleg: Nachbarn 3.19 -> 3.18 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 45.1167/-66.9000, Kueste 0.44 km) (Oliver).
 Midjik Bluff, Passamaquoddy Bay, New Brunswick, Canada
 +00:00 :America/Moncton
 3.9929 meters

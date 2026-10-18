@@ -20936,8 +20936,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 178.2509
-# !latitude: 64.4173
+# !longitude: 178.2516
+# !latitude: 64.4182
 # note: 20260903 Phasen um -4.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
@@ -20948,6 +20948,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 neu von Admiralty Anadyr (8369) statt Pusan uebertragen: Buch Nr.99 minus Nr.97 +64 min, Hub x0.77 (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 64.4173/178.2509, Kueste 0.01 km) (Oliver).
 Kosa Strelka (Anadyrskiy Zaliv), Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.8296 meters
@@ -36976,8 +36977,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 125.3439
-# !latitude: 37.6775
+# !longitude: 125.3438
+# !latitude: 37.6761
 # region: South Hwanghae
 # admin1_quelle: GeoNames (Kap Tungsan-got)
 # note: 20260913 S2/K2 x 1.88 auf den Springhub des Buchs (cptt-1157); der Bau
@@ -36987,6 +36988,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=8 -1.96 Punkte.
 # note: 20261013 Land South Korea -> North Korea; Position 37.6833/125.3667 -> Kap Tungsan-got 37.6775/125.3439 (GeoNames) (Oliver).
 # note: 20261013 Tagestiden x 1.54 (K1) / x 1.73 (O1) auf Nachbarn Mu-do (ATT), Daeyeonpyeongdo (classic): K1 0.375, O1 0.27 (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 37.6775/125.3439, Kueste 0.05 km) (Oliver).
 Tungsan-got, North Korea
 +00:00 :Asia/Pyongyang
 3.2004 meters
@@ -39943,8 +39945,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 122.5876
-# !latitude: 39.2640
+# !longitude: 122.5874
+# !latitude: 39.2650
 # region: Liaoning
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.97 auf den Springhub des Buchs (cptt-1223); der Bau
@@ -39953,6 +39955,7 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dalian, Liaoning, China [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -0.24 Punkte.
 # note: 20261013 S2/K2/T2 x 1.212 auf S2/M2=0.33 wie Nachbarn (NMDIS Xiaochangshan, Admiralty); Phasen unveraendert (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 39.2640/122.5876, Kueste 0.01 km) (Oliver).
 Dachangshan Dao, Liaoning, China
 +00:00 :Asia/Shanghai
 2.2860 meters
@@ -40339,7 +40342,7 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: 121.8286
-# !latitude: 38.9647
+# !latitude: 38.9637
 # region: Liaoning
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.15 auf den Springhub des Buchs (cptt-1229); der Bau
@@ -40348,6 +40351,7 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dalian, Liaoning, China [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -0.24 Punkte.
 # note: 20261013 S2/K2/T2 x 1.267 auf S2/M2=0.32 wie NMDIS Laohutan/Dayaowan; Phasen unveraendert (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 38.9647/121.8286, Kueste 0.01 km) (Oliver).
 Dagushan Wan (Dalian), Liaoning, China
 +00:00 :Asia/Shanghai
 1.7983 meters
@@ -40535,8 +40539,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.8277
-# !latitude: 38.8820
+# !longitude: 121.8265
+# !latitude: 38.8823
 # region: Liaoning
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.07 auf den Springhub des Buchs (cptt-1231); der Bau
@@ -40545,6 +40549,7 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dalian, Liaoning, China [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=9 -0.24 Punkte.
 # note: 20261013 S2/K2/T2 x 1.267 auf S2/M2=0.32 wie NMDIS Laohutan/Dayaowan; Phasen unveraendert (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 38.8820/121.8277, Kueste 0.01 km) (Oliver).
 Sanshan Dao, Liaoning, China
 +00:00 :Asia/Shanghai
 1.9202 meters
@@ -40732,8 +40737,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 121.3196
-# !latitude: 38.9698
+# !longitude: 121.3197
+# !latitude: 38.9707
 # region: Liaoning
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.01 auf den Springhub des Buchs (cptt-1239); der Bau
@@ -40746,6 +40751,7 @@ x 0 0
 # note: 20261013 k-Fehler Dalian-Uebertragung: M2-Gruppe x 0.735 auf Buchverhaeltnis (M2 0.573);
 # note: S2 S2/M2=0.34, K1/O1 zwischen Yangtouwa und Jinxian (NMDIS); Phasen unveraendert (Oliver).
 # note: 20261013 Tagesphasen K1/P1 +23, O1/Q1 +20 Grad auf Interpolation der NMDIS-Nachbarn (Buch-dt auf beide Baender) (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 38.9698/121.3196, Kueste 0.01 km) (Oliver).
 Yingchengzi Wan, Liaoning, China
 +00:00 :Asia/Shanghai
 1.1887 meters
@@ -40933,8 +40939,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 121.6688
-# !latitude: 39.3107
+# !longitude: 121.6683
+# !latitude: 39.3119
 # region: Liaoning
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.52 auf den Springhub des Buchs (cptt-1243); der Bau
@@ -40945,6 +40951,7 @@ x 0 0
 # note: 20261013 k-Fehler Dalian-Uebertragung: M2-Gruppe x 0.772 auf Buchverhaeltnis (M2 0.670);
 # note: S2 S2/M2=0.33, K1/O1 wie Pulandian Wan Kou (NMDIS); Phasen unveraendert (Oliver).
 # note: 20261013 umbenannt "Pulandian Wan (Changdao)" -> "Pulandian Wan (Chang Dao)" (GB/T 16159) (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 39.3107/121.6688, Kueste 0.04 km) (Oliver).
 Pulandian Wan (Chang Dao), Liaoning, China
 +00:00 :Asia/Shanghai
 1.3106 meters
@@ -41331,8 +41338,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 121.2496
-# !latitude: 39.4232
+# !longitude: 121.2488
+# !latitude: 39.4244
 # region: Liaoning
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.32 auf den Springhub des Buchs (cptt-1247); der Bau
@@ -41343,6 +41350,7 @@ x 0 0
 # note: 20261013 M2/N2-Gruppe x 0.715 auf Buchverhaeltnis 0.53 zu Dalian (M2 0.515); k=0.78 war zu gross.
 # note: K1/P1 und O1/Q1 auf Mittel Pulandian Wan Kou/Changxingdao (NMDIS) angehoben; S2, Phasen unveraendert (Oliver).
 # note: 20261013 Tagesphasen K1/P1 +15, O1/Q1 +11 Grad auf Interpolation der NMDIS-Nachbarn (Buch-dt auf beide Baender) (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 39.4232/121.2496, Kueste 0.05 km) (Oliver).
 Xizhong Dao, Liaoning, China
 +00:00 :Asia/Shanghai
 1.1887 meters
@@ -42505,12 +42513,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 117.8500
-# !latitude: 38.2500
+# !longitude: 117.8497
+# !latitude: 38.2636
 # region: Hebei
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Tanggu, Tianjin, China [harmonics_utide_tidetables.txt],
 # note: Flach weg + HW/NW, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -4.22 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 38.2500/117.8500, Kueste 1.41 km) (Oliver).
 Dakou He (Bar), Hebei, China
 +00:00 :Asia/Shanghai
 2.4079 meters
@@ -43097,8 +43106,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.1375
-# !latitude: 37.6308
+# !longitude: 121.1391
+# !latitude: 37.6311
 # region: Shandong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.31 auf den Springhub des Buchs (cptt-1321); der Bau
@@ -43107,6 +43116,7 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yantai, Shandong, China [harmonics_utide_tidetables.txt],
 # note: Flach weg + HW/NW, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -5.14 Punkte.
 # note: 20261012 S2/K2 auf Yantai Gangkou (NMDIS) angehoben: S2 0.187->0.270, K2 0.054->0.078 (S2/M2 0.33).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 37.6308/121.1375, Kueste 0.04 km) (Oliver).
 Bajiao, Shandong, China
 +00:00 :Asia/Shanghai
 1.3106 meters
@@ -43294,8 +43304,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 121.4994
-# !latitude: 37.5525
+# !longitude: 121.4983
+# !latitude: 37.5523
 # region: Shandong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.31 auf den Springhub des Buchs (cptt-1325); der Bau
@@ -43304,6 +43314,7 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Yantai, Shandong, China [harmonics_utide_tidetables.txt],
 # note: Flach weg + HW/NW, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -5.14 Punkte.
 # note: 20261012 Namenswerkstatt (Oliver): Name "Kongdong Dao, Shandong, China" -> "Kongtong Dao, Shandong, China"; S2/K2 x 1.46 auf S2/M2 0.33 (Yantai NMDIS).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 37.5525/121.4994, Kueste 0.00 km) (Oliver).
 Kongtong Dao, Shandong, China
 +00:00 :Asia/Shanghai
 1.4021 meters
@@ -45256,8 +45267,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 120.1500
-# !latitude: 35.9167
+# !longitude: 120.1543
+# !latitude: 35.9144
 # region: Shandong
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.43 auf den Springhub des Buchs (cptt-1361); der Bau
@@ -45265,6 +45276,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Huangdao, Shandong, China [harmonics_utide_tidetables.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -3.69 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 35.9167/120.1500, Kueste 0.37 km) (Oliver).
 Tangdao Wan, Shandong, China
 +08:00 :Asia/Shanghai
 2.4079 meters
@@ -46233,14 +46245,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 120.3265
-# !latitude: 34.1137
+# !longitude: 120.3277
+# !latitude: 34.1140
 # region: Jiangsu
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.00 auf den Springhub des Buchs (cptt-1377); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261012 S2/K2 x 2.10 auf S2/M2 0.309 der NMDIS-Nachbarn Binhai Gang und Sheyang Hekou (24/30 km); Buch-S2 0.05 zu klein (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 34.1137/120.3265, Kueste 0.01 km) (Oliver).
 Kuataokou, Jiangsu, China
 +00:00 :Asia/Shanghai
 1.4935 meters
@@ -49188,8 +49201,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 117.8611
-# !latitude: 23.9127
+# !longitude: 117.8619
+# !latitude: 23.9133
 # region: Fujian
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.41 auf den Springhub des Buchs (cptt-1491); der Bau
@@ -49200,6 +49213,7 @@ x 0 0
 # note: ueberein (M2 1.34, S2/M2 0.27-0.31). Z0 aus dem Buch behalten. Siehe py/qianyan_an_jiangjunao.py.
 # note: 20261011 Umbenannt (Oliver): Buch "Qianyan [Knob Rock]", NP204 "Bai Yu" -> "Baijiao Reef (Liu'ao)";
 # note: Felsen ~12 km vor Liu'ao, unter den Buchnamen nicht auffindbar. Bai Yu archiviert (11.10.2026).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 23.9127/117.8611, Kueste 0.01 km) (Oliver).
 Baijiao Reef (Liu'ao), Fujian, China
 +00:00 :Asia/Shanghai
 2.4079 meters
@@ -50173,8 +50187,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 114.2000
-# !latitude: 22.4000
+# !longitude: 114.2058
+# !latitude: 22.3945
 # region: Sha Tin
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Hong Kong"
@@ -50182,6 +50196,7 @@ x 0 0
 # note: -- Namensgleichheit "Tai O, Hong Kong, China" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 22.4000/114.2000, Kueste 0.76 km) (Oliver).
 Tide Cove, Hong Kong
 +00:00 :Asia/Hong_Kong
 1.3411 meters
@@ -59503,14 +59518,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 123.2604
-# !latitude: 7.5348
+# !longitude: 123.2597
+# !latitude: 7.5354
 # region: Zamboanga del Sur
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Davao, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=7 -0.37 Punkte.
 # note: 20260924 Tagestiden ersetzt (Davao-Uebertragung, K1 war 102.49 Grad): 1/Abstand-Mittel aus
 # note: Margosatubig (Dumanquilas Bay) 11 km; Pagadian City 37 km
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 7.5348/123.2604, Kueste 0.00 km) (Oliver).
 Saloagan (Maligay Bay), Zamboanga del Sur, Philippines
 +00:00 :Asia/Manila
 0.8230 meters
@@ -68606,13 +68622,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 123.5892
-# !latitude: 12.7177
+# !longitude: 123.5881
+# !latitude: 12.7180
 # region: Sorsogon
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=38 -0.36 Punkte.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 12.7177/123.5892, Kueste 0.02 km) (Oliver).
 San Miguel Island (Ticao Island), Masbate, Philippines
 +00:00 :Asia/Manila
 0.7620 meters
@@ -74430,8 +74447,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 151.8500
-# !latitude: 7.4500
+# !longitude: 151.8412
+# !latitude: 7.4501
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 7.4500/151.8500, Kueste 0.87 km) (Oliver).
 Moen Island, Truk Islands, FSM
 +00:00 :Pacific/Chuuk
 0.4877 meters
@@ -76362,8 +76380,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -174.3500
-# !latitude: -19.8000
+# !longitude: -174.3511
+# !latitude: -19.7995
 # region: Ha'apai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.19 auf den Springhub des Buchs (cptt-2867); der Bau
@@ -76373,6 +76391,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.703,
 # note: Zielwert F=0.12 aus Wahrheit statt F=0.153 des Bezugsorts; Beleg: Wahrheit 6.81 -> 6.49 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -19.8000/-174.3500, Kueste 0.03 km) (Oliver).
 Lifuka Island, Tonga
 -11:00 :Pacific/Tongatapu
 0.9754 meters
@@ -76950,13 +76969,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -179.8833
-# !latitude: -18.9833
+# !longitude: -179.8848
+# !latitude: -18.9842
 # note: 20260906 country "Tonga" -> "Fiji" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Eastern".
 # note: 20260913 S2/K2 x 2.56 auf den Springhub des Buchs (cptt-2883); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -18.9833/-179.8833, Kueste 0.09 km) (Oliver).
 Totoya Island, Fiji
 +12:00 :Pacific/Fiji
 0.9144 meters
@@ -77339,8 +77359,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 170.5500
-# !latitude: -45.8833
+# !longitude: 170.5499
+# !latitude: -45.8791
 # region: Otago
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.28 auf den Springhub des Buchs (cptt-2931); der Bau
@@ -77350,6 +77370,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.825,
 # note: Zielwert F=0.058 aus Wahrheit statt F=0.067 des Bezugsorts; Beleg: Wahrheit 6.26 -> 6.23 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -45.8833/170.5500, Kueste 0.37 km) (Oliver).
 Dunedin, Otago Harbor, Otago, New Zealand
 +00:00 :Pacific/Auckland
 0.9754 meters
@@ -77537,8 +77558,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 168.2500
-# !latitude: -46.5333
+# !longitude: 168.2351
+# !latitude: -46.5407
 # region: Southland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.47 auf den Springhub des Buchs (cptt-2939); der Bau
@@ -77548,6 +77569,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.894,
 # note: Zielwert F=0.061 aus Wahrheit statt F=0.067 des Bezugsorts; Beleg: Wahrheit 9.96 -> 9.94 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -46.5333/168.2500, Kueste 1.31 km) (Oliver).
 New River, Southland, New Zealand
 +00:00 :Pacific/Auckland
 1.5850 meters
@@ -78327,13 +78349,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 167.5333
-# !latitude: -44.8833
+# !longitude: 167.5315
+# !latitude: -44.8804
 # region: Southland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.62 auf den Springhub des Buchs (cptt-2949); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -44.8833/167.5333, Kueste 0.25 km) (Oliver).
 Bligh Sound, Southland, New Zealand
 +00:00 :Pacific/Auckland
 1.2192 meters
@@ -78521,8 +78544,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 169.0500
-# !latitude: -43.8333
+# !longitude: 169.0480
+# !latitude: -43.8271
 # region: Canterbury
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.65 auf den Springhub des Buchs (cptt-2955); der Bau
@@ -78530,6 +78553,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.457,
 # note: Zielwert F=0.029 aus Wahrheit statt F=0.067 des Bezugsorts; Beleg: Wahrheit 4.99 -> 4.77 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -43.8333/169.0500, Kueste 0.61 km) (Oliver).
 Haast River entrance, Canterbury, New Zealand
 +00:00 :Pacific/Auckland
 1.2192 meters
@@ -78911,8 +78935,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 170.1833
-# !latitude: -43.2167
+# !longitude: 170.1748
+# !latitude: -43.2088
 # region: Canterbury
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.64 auf den Springhub des Buchs (cptt-2959); der Bau
@@ -78920,6 +78944,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.515,
 # note: Zielwert F=0.033 aus Wahrheit statt F=0.067 des Bezugsorts; Beleg: Wahrheit 4.81 -> 4.63 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -43.2167/170.1833, Kueste 1.02 km) (Oliver).
 Okarito, Canterbury, New Zealand
 +00:00 :Pacific/Auckland
 1.2497 meters
@@ -79107,8 +79132,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 171.2167
-# !latitude: -42.4333
+# !longitude: 171.2039
+# !latitude: -42.4276
 # region: Canterbury
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.79 auf den Springhub des Buchs (cptt-2963); der Bau
@@ -79116,6 +79141,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.584,
 # note: Zielwert F=0.036 aus Wahrheit statt F=0.067 des Bezugsorts; Beleg: Wahrheit 4.98 -> 4.84 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -42.4333/171.2167, Kueste 1.13 km) (Oliver).
 Greymouth, Canterbury, New Zealand
 +00:00 :Pacific/Auckland
 1.2192 meters
@@ -79303,8 +79329,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 173.8000
-# !latitude: -40.8667
+# !longitude: 173.7960
+# !latitude: -40.8575
 # region: Nelson
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.97 auf den Springhub des Buchs (cptt-2977); der Bau
@@ -79314,6 +79340,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.758,
 # note: Zielwert F=0.044 aus Wahrheit statt F=0.067 des Bezugsorts; Beleg: Wahrheit 8.34 -> 8.32 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -40.8667/173.8000, Kueste 0.98 km) (Oliver).
 Greville Harbor, D'Urville Island, Nelson, New Zealand
 +00:00 :Pacific/Auckland
 1.6154 meters
@@ -79894,14 +79921,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 177.4333
-# !latitude: -39.0500
+# !longitude: 177.4357
+# !latitude: -39.0624
 # region: Gisborne
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Wellington, Wellington, New Zealand [harmonics_ticon4_worldw,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.342,
 # note: Zielwert F=0.149 aus Wahrheit statt F=0.111 des Bezugsorts; Beleg: Wahrheit 5.55 -> 5.52 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -39.0500/177.4333, Kueste 1.29 km) (Oliver).
 Clyde, Wairoa River, Gisborne, New Zealand
 +00:00 :Pacific/Auckland
 0.9144 meters
@@ -80089,8 +80117,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 175.2167
-# !latitude: -40.4667
+# !longitude: 175.2126
+# !latitude: -40.4660
 # region: Manawatu-Whanganui
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.90 auf den Springhub des Buchs (cptt-3007); der Bau
@@ -80100,6 +80128,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.937,
 # note: Zielwert F=0.056 aus Wahrheit statt F=0.067 des Bezugsorts; Beleg: Wahrheit 12.25 -> 12.24 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -40.4667/175.2167, Kueste 0.26 km) (Oliver).
 Manawatu River entrance, Manawatu-Whanganui, New Zealand
 +00:00 :Pacific/Auckland
 1.3106 meters
@@ -80679,8 +80708,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 174.7500
-# !latitude: -37.4000
+# !longitude: 174.7409
+# !latitude: -37.3845
 # region: Auckland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.85 auf den Springhub des Buchs (cptt-3021); der Bau
@@ -80688,6 +80717,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Auckland (Queens Wharf), New Zealand [harmonics_utide_observ,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -37.4000/174.7500, Kueste 1.80 km) (Oliver).
 Waikato River, Auckland, New Zealand
 +00:00 :Pacific/Auckland
 2.1336 meters
@@ -80875,13 +80905,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 174.6000
-# !latitude: -37.0000
+# !longitude: 174.6044
+# !latitude: -37.0010
 # region: Auckland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.78 auf den Springhub des Buchs (cptt-3025); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -37.0000/174.6000, Kueste 0.31 km) (Oliver).
 Cornwallis, Manukau Harbor, Auckland, New Zealand
 +00:00 :Pacific/Auckland
 1.9812 meters
@@ -81663,8 +81694,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 173.7833
-# !latitude: -35.0333
+# !longitude: 173.7819
+# !latitude: -35.0364
 # region: Northland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.53 auf den Springhub des Buchs (cptt-3039); der Bau
@@ -81672,6 +81703,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Auckland (Queens Wharf), New Zealand [harmonics_utide_observ,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -35.0333/173.7833, Kueste 0.27 km) (Oliver).
 Whangaroa, Northland, New Zealand
 +00:00 :Pacific/Auckland
 1.3411 meters
@@ -82057,8 +82089,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 174.3333
-# !latitude: -35.7500
+# !longitude: 174.3368
+# !latitude: -35.7545
 # region: Northland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.60 auf den Springhub des Buchs (cptt-3045); der Bau
@@ -82066,6 +82098,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.137. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Auckland (Queens Wharf), New Zealand [harmonics_utide_observ,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -35.7500/174.3333, Kueste 0.49 km) (Oliver).
 Port Whangarei, railway wharf, Northland, New Zealand
 +00:00 :Pacific/Auckland
 1.6459 meters
@@ -82649,8 +82682,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 175.5000
-# !latitude: -36.7667
+# !longitude: 175.5003
+# !latitude: -36.7689
 # region: Auckland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.55 auf den Springhub des Buchs (cptt-3055); der Bau
@@ -82658,6 +82691,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Auckland (Queens Wharf), New Zealand [harmonics_utide_observ,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=16 -1.02 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -36.7667/175.5000, Kueste 0.15 km) (Oliver).
 Coromandel, Auckland, New Zealand
 +00:00 :Pacific/Auckland
 1.8898 meters
@@ -83042,8 +83076,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 166.4500
-# !latitude: -22.2667
+# !longitude: 166.4424
+# !latitude: -22.2614
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
@@ -83057,6 +83091,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.539,
 # note: Zielwert F=0.371 aus Nachbarn statt F=0.658 des Bezugsorts; Beleg: Nachbarn 7.58 -> 5.28 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -22.2667/166.4500, Kueste 0.88 km) (Oliver).
 Noumea, New Caledonia
 +00:00 :Pacific/Noumea
 1.2192 meters
@@ -83244,8 +83279,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 164.9667
-# !latitude: -21.3500
+# !longitude: 164.9673
+# !latitude: -21.3521
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
@@ -83259,6 +83294,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.557,
 # note: Zielwert F=0.392 aus Wahrheit statt F=0.658 des Bezugsorts; Beleg: Wahrheit 7.83 -> 5.20 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -21.3500/164.9667, Kueste 0.15 km) (Oliver).
 Port Nepui, New Caledonia
 +00:00 :Pacific/Noumea
 1.1278 meters
@@ -83446,8 +83482,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 168.3167
-# !latitude: -17.7333
+# !longitude: 168.3100
+# !latitude: -17.7332
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
@@ -83461,6 +83497,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.709,
 # note: Zielwert F=0.52 aus Nachbarn statt F=0.658 des Bezugsorts; Beleg: Nachbarn 6.47 -> 5.31 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -17.7333/168.3167, Kueste 0.61 km) (Oliver).
 Vila Harbor, Efate Island, Vanuatu
 +00:00 :Pacific/Efate
 0.7010 meters
@@ -83648,8 +83685,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 168.2500
-# !latitude: -17.5833
+# !longitude: 168.2440
+# !latitude: -17.5822
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
@@ -83661,6 +83698,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.645,
 # note: Zielwert F=0.52 aus Nachbarn statt F=0.658 des Bezugsorts; Beleg: Nachbarn 6.48 -> 5.40 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -17.5833/168.2500, Kueste 0.54 km) (Oliver).
 Havannah Harbor, Efate Island, Vanuatu
 +00:00 :Pacific/Efate
 0.7925 meters
@@ -84442,8 +84480,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 166.9167
-# !latitude: -11.6333
+# !longitude: 166.9271
+# !latitude: -11.6338
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+11.00 gegen +9.00 nach dem Buch)
@@ -84453,6 +84491,7 @@ x 0 0
 # note: 20260913 S2/K2 x 1.78 auf den Springhub des Buchs (cptt-3089); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -11.6333/166.9167, Kueste 1.03 km) (Oliver).
 Manevai Bay, Solomon Islands
 +00:00 :Pacific/Guadalcanal
 0.6096 meters
@@ -84640,12 +84679,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 160.0167
-# !latitude: -9.4167
+# !longitude: 160.0140
+# !latitude: -9.4152
 # province: Capital Territory (Honiara)
 # admin1_quelle: Ufer 1.3 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dreger Harbour, Papua New Guinea [harmonics-1997-05-25_mod.t,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: ein Nachbar unter 10 km.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -9.4167/160.0167, Kueste 0.24 km) (Oliver).
 Kukum, Guadalcanal Island, Solomon Islands
 +10:00 :Pacific/Guadalcanal
 0.4267 meters
@@ -85215,8 +85255,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 160.7000
-# !latitude: -8.7833
+# !longitude: 160.6991
+# !latitude: -8.7827
 # province: Malaita
 # admin1_quelle: Ufer 3.6 km
 # note: 20260913 S2/K2 x 3.86 auf den Springhub des Buchs (cptt-3097); der Bau
@@ -85224,6 +85264,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cebu, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (3) und FES.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -8.7833/160.7000, Kueste 0.02 km) (Oliver).
 Auki Harbor, Malaita Island, Solomon Islands
 +00:00 :Pacific/Guadalcanal
 0.7925 meters
@@ -85411,14 +85452,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 152.2833
-# !latitude: -4.3500
+# !longitude: 152.2820
+# !latitude: -4.3423
 # province: East New Britain
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dreger Harbour, Papua New Guinea [harmonics-1997-05-25_mod.t,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.706,
 # note: Zielwert F=3.344 aus Wahrheit statt F=2.423 des Bezugsorts; Beleg: Wahrheit 9.04 -> 7.92 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -4.3500/152.2833, Kueste 0.77 km) (Oliver).
 Kokopo, New Britain Island, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.5486 meters
@@ -85606,14 +85648,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 152.2000
-# !latitude: -4.2000
+# !longitude: 152.2065
+# !latitude: -4.1941
 # province: East New Britain
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dreger Harbour, Papua New Guinea [harmonics-1997-05-25_mod.t,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 0.795,
 # note: Zielwert F=2.971 aus Wahrheit statt F=2.423 des Bezugsorts; Beleg: Wahrheit 6.63 -> 6.46 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -4.2000/152.2000, Kueste 0.88 km) (Oliver).
 Rabaul, New Britain Island, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.3048 meters
@@ -85801,12 +85844,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 151.0000
-# !latitude: -2.7833
+# !longitude: 150.9964
+# !latitude: -2.7943
 # region: New Ireland I
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Dreger Harbour, Papua New Guinea [harmonics-1997-05-25_mod.t,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.98 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -2.7833/151.0000, Kueste 1.18 km) (Oliver).
 Bagaterre Haven, New Ireland I, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.3658 meters
@@ -88318,8 +88362,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 150.8667
-# !latitude: -23.5667
+# !longitude: 150.8757
+# !latitude: -23.5645
 # state: Queensland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.55 auf den Springhub des Buchs (cptt-3227); der Bau
@@ -88329,6 +88373,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.761,
 # note: Zielwert F=0.236 aus Wahrheit statt F=0.365 des Bezugsorts; Beleg: Wahrheit 3.58 -> 3.38 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -23.5667/150.8667, Kueste 0.85 km) (Oliver).
 Port Alma, Fitzroy River, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.5908 meters
@@ -88516,8 +88561,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 152.8667
-# !latitude: -25.5000
+# !longitude: 152.8960
+# !latitude: -25.5024
 # state: Queensland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.47 auf den Springhub des Buchs (cptt-3241); der Bau
@@ -88525,6 +88570,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.766,
 # note: Zielwert F=0.256 aus Nachbarn statt F=0.365 des Bezugsorts; Beleg: Nachbarn 14.49 -> 13.92 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -25.5000/152.8667, Kueste 2.86 km) (Oliver).
 Mary River, Middle Bank, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.7069 meters
@@ -89106,8 +89152,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 150.1333
-# !latitude: -35.9000
+# !longitude: 150.1506
+# !latitude: -35.8987
 # fixes: Referenz korrigiert: Fort Denison (Sydney NSW) statt Sydney Nova Scotia, 2026-07-19
 # state: New South Wales
 # admin1_quelle: Name
@@ -89116,6 +89162,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.22. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Fort Denison, New South Wales, Australia [harmonics_utide_ob,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -35.9000/150.1333, Kueste 1.47 km) (Oliver).
 Moruya River bar, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.8839 meters
@@ -89499,14 +89546,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 147.3500
-# !latitude: -39.4667
+# !longitude: 147.3507
+# !latitude: -39.4706
 # state: Tasmania
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Point Lonsdale (Port Phillip Heads), Victoria, Australia [ha,
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.858,
 # note: Zielwert F=0.405 aus Wahrheit statt F=0.434 des Bezugsorts; Beleg: Wahrheit 10.68 -> 10.02 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -39.4667/147.3500, Kueste 0.34 km) (Oliver).
 Winter Cove, Kent Islands, Tasmania, Australia
 +10:00 :Australia/Hobart
 1.3716 meters
@@ -90274,8 +90322,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 137.9500
-# !latitude: -35.7333
+# !longitude: 137.9504
+# !latitude: -35.7208
 # state: South Australia
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.16 auf den Springhub des Buchs (cptt-3315); der Bau
@@ -90285,6 +90333,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 2.396,
 # note: Zielwert F=0.984 aus Wahrheit statt F=0.405 des Bezugsorts; Beleg: Wahrheit 8.07 -> 6.31 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -35.7333/137.9500, Kueste 1.29 km) (Oliver).
 Hog Bay, Kangaroo Island, South Australia, Australia
 +09:30 :Australia/Adelaide
 1.1582 meters
@@ -90864,13 +90913,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 137.7667
-# !latitude: -32.5000
+# !longitude: 137.7659
+# !latitude: -32.5013
 # state: South Australia
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.69 auf den Springhub des Buchs (cptt-3333); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -32.5000/137.7667, Kueste 0.07 km) (Oliver).
 Port Augusta, Spencer Gulf, South Australia, Australia
 +09:30 :Australia/Adelaide
 1.6154 meters
@@ -91446,11 +91496,12 @@ x 0 0
 # confidence: 4
 # !units: meters
 # !longitude: 114.5833
-# !latitude: -28.7833
+# !latitude: -28.7850
 # state: Western Australia
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Tanjung Priok, Indonesia [harmonics_att_np203_scs.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -28.7833/114.5833, Kueste 0.08 km) (Oliver).
 Champion Bay, Western Australia, Australia
 +00:00 :Australia/Perth
 0.2743 meters
@@ -91638,13 +91689,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 113.6500
-# !latitude: -24.8667
+# !longitude: 113.6484
+# !latitude: -24.8689
 # state: Western Australia
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.73 auf den Springhub des Buchs (cptt-3347); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.44. Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -24.8667/113.6500, Kueste 0.19 km) (Oliver).
 Carnarvon, Shark Bay, Western Australia, Australia
 +00:00 :Australia/Perth
 1.0668 meters
@@ -91832,13 +91884,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 113.6667
-# !latitude: -25.8000
+# !longitude: 113.6836
+# !latitude: -25.7816
 # state: Western Australia
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.50 auf den Springhub des Buchs (cptt-3349); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -25.8000/113.6667, Kueste 2.55 km) (Oliver).
 Red Cliff Bay, Shark Bay, Western Australia, Australia
 +00:00 :Australia/Perth
 0.9754 meters
@@ -93794,8 +93847,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 166.0833
-# !latitude: -50.8667
+# !longitude: 166.0901
+# !latitude: -50.8539
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +13.00 nach dem Buch)
@@ -93807,6 +93860,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Apia, Samoa Islands [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -50.8667/166.0833, Kueste 1.40 km) (Oliver).
 Auckland Island, New Zealand
 -11:00 :Pacific/Auckland
 0.5791 meters
@@ -93994,8 +94048,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 169.1167
-# !latitude: -52.5667
+# !longitude: 169.1342
+# !latitude: -52.5615
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+12.00 gegen +13.00 nach dem Buch)
@@ -94007,6 +94061,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Apia, Samoa Islands [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -52.5667/169.1167, Kueste 1.22 km) (Oliver).
 Perseverance Harbor, Campbell Island, New Zealand
 -11:00 :Pacific/Auckland
 0.7010 meters
@@ -94194,8 +94249,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 71.5589
-# !latitude: 20.9711
+# !longitude: 71.5553
+# !latitude: 20.9522
 # state: Gujarat
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.43 auf den Springhub des Buchs (cptt-3543); der Bau
@@ -94203,6 +94258,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Mumbai (Colaba), Maharashtra, India [harmonics-1997-05-25_mo,
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=5 -0.74 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 20.9711/71.5589, Kueste 2.03 km) (Oliver).
 Port Albert Victor (Gulf of Cambay), Gujarat, India
 +05:30 :Asia/Kolkata
 1.7678 meters
@@ -94588,8 +94644,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 70.3500
-# !latitude: 22.9333
+# !longitude: 70.3501
+# !latitude: 22.9312
 # state: Gujarat
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (cptt-3557); der Bau
@@ -94599,6 +94655,7 @@ x 0 0
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=4 -0.77 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.536,
 # note: Zielwert F=0.233 aus Nachbarn statt F=0.367 des Bezugsorts; Beleg: Nachbarn 6.31 -> 5.45 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 22.9333/70.3500, Kueste 0.14 km) (Oliver).
 Hansthal Point, Gujarat, India
 +05:30 :Asia/Kolkata
 3.3833 meters
@@ -94984,8 +95041,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 50.8500
-# !latitude: 28.9833
+# !longitude: 50.8490
+# !latitude: 28.9817
 # note: 20260903 Phasen um +4.50 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+3.50 gegen +8.00 nach dem Buch)
@@ -94999,6 +95056,7 @@ x 0 0
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Quarry Bay, Hong Kong, China [harmonics_utide_tidetables.txt,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 28.9833/50.8500, Kueste 0.10 km) (Oliver).
 Bushahr, Persian Gulf, Iran
 +00:00 :Asia/Tehran
 0.7925 meters
@@ -95186,8 +95244,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 50.5833
-# !latitude: 26.2333
+# !longitude: 50.5773
+# !latitude: 26.2419
 # region: Al Manamah
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.58 auf den Springhub des Buchs (cptt-3685); der Bau
@@ -95195,6 +95253,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.356. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Mina Salman, Manamah, Bahrain [harmonics_ticon4_worldwide.tx,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 26.2333/50.5833, Kueste 1.03 km) (Oliver).
 Al Manamah Harbor, Bahrain
 +00:00 :Asia/Bahrain
 1.2497 meters
@@ -95964,13 +96023,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 45.7981
-# !latitude: 2.2951
+# !longitude: 45.7971
+# !latitude: 2.2955
 # region: Shabeellaha Dhexe
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.66 auf den Springhub des Buchs (cptt-3829); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 2.2951/45.7981, Kueste 0.02 km) (Oliver).
 Warsheikh, Somalia
 +00:00 :Africa/Mogadishu
 0.8839 meters
@@ -96352,13 +96412,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 42.6333
-# !latitude: -0.2500
+# !longitude: 42.6347
+# !latitude: -0.2519
 # region: Jubbada Hoose
 # admin1_quelle: Ufer 2.8 km
 # note: 20260913 S2/K2 x 1.69 auf den Springhub des Buchs (cptt-3835); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -0.2500/42.6333, Kueste 0.17 km) (Oliver).
 Giuba River, Somalia
 +00:00 :Africa/Mogadishu
 1.5240 meters
@@ -97717,8 +97778,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 141.4167
-# !latitude: -66.8333
+# !longitude: 141.4127
+# !latitude: -66.8221
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+10.00 gegen +8.00 nach dem Buch)
@@ -97727,6 +97788,7 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Jolo, Philippines [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -66.8333/141.4167, Kueste 1.16 km) (Oliver).
 Cape Margerie (Port Martin), Antarctica
 +00:00 :Antarctica/DumontDUrville
 1.5850 meters

@@ -16,6 +16,7 @@ Usage: python3 py/noaa_nachbar_abgleich.py
 """
 import cmath
 import csv
+import glob
 import math
 import os
 import sys
@@ -32,15 +33,36 @@ def ist_noaa_buch(f):
     return any(f.endswith('harmonics_noaa_%s.txt' % t) for t in NOAA)
 
 
+def uebernommene_namen():
+    """Namen gepruefter Saetze, die archiviert wurden und deren Name ein NOAA-Satz traegt.
+
+    Beim Tausch (FES oder Messprobe spricht fuer NOAA) uebernimmt der NOAA-Satz Name und
+    Position des geprueften Satzes. Sein Fingerabdruck ist neu, positions_locked fuehrt ihn
+    deshalb als 'source' -- geprueft ist er trotzdem.
+    """
+    out = set()
+    for f in glob.glob(os.path.join(ROOT, 'harmonics/help/*_loeschen.csv')):
+        for z in csv.DictReader(open(f, encoding='utf-8')):
+            if z.get('datei') and not ist_noaa_buch(z['datei']):
+                out.add(z['name'])
+    return out
+
+
+def ungeprueft(recs, prov):
+    """NOAA-Buchsaetze ohne Olivers Pruefung."""
+    uebern = uebernommene_namen()
+    return [r for r in recs if ist_noaa_buch(r['file']) and prov.get((r['fp'], r['name']), 'source') != 'manual'
+            and r['name'] not in uebern]
+
+
 def main():
     prov = {}
     for r in csv.DictReader(open(os.path.join(ROOT, 'harmonics/help/positions_locked.csv'), encoding='utf-8')):
         prov[(r['fingerprint'], r['name'])] = r['provenance']
     recs = [r for r in load_records() if not r['current'] and r['lat'] is not None]
-    offen, gep = [], []
-    for r in recs:
-        p = prov.get((r['fp'], r['name']), 'source')
-        (offen if ist_noaa_buch(r['file']) and p != 'manual' else gep).append(r)
+    offen = ungeprueft(recs, prov)
+    ids = {id(r) for r in offen}
+    gep = [r for r in recs if id(r) not in ids]
     gep.sort(key=lambda r: r['lat'])
     lats = [r['lat'] for r in gep]
     import bisect

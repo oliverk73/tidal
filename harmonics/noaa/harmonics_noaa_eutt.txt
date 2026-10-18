@@ -15394,8 +15394,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 12.3325
-# !latitude: -6.0789
+# !longitude: 12.3294
+# !latitude: -6.0771
 # note: 20260904 Phasen um -0.98 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
@@ -15407,6 +15407,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.635,
 # note: Zielwert F=0.148 aus Nachbarn statt F=0.228 des Bezugsorts; Beleg: Nachbarn 4.65 -> 3.78 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher -6.0789/12.3325, Kueste 0.30 km) (Oliver).
 Ponta do Padrão (Congo River entrance), Angola
 +00:00 :Africa/Luanda
 1.0668 meters
@@ -16995,8 +16996,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 8.3333
-# !latitude: 4.6000
+# !longitude: 8.3377
+# !latitude: 4.5962
 # note: 20260904 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+1.00 gegen +0.00 nach dem Buch)
@@ -17008,6 +17009,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Takoradi, Ghana [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.26 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 4.6000/8.3333, Kueste 0.54 km) (Oliver).
 Tom Shot Point, Calabar River, Nigeria
 +00:00 :Africa/Lagos
 1.0973 meters
@@ -18583,13 +18585,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -10.3803
-# !latitude: 6.1337
+# !longitude: -10.3809
+# !latitude: 6.1330
 # region: Margibi
 # admin1_quelle: Ufer 0.5 km
 # note: 20260913 S2/K2 x 2.08 auf den Springhub des Buchs (eutt-213); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.332. Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 6.1337/-10.3803, Kueste 0.01 km) (Oliver).
 Junk River entrance, Liberia
 +00:00 :Africa/Monrovia
 0.6096 meters
@@ -21317,13 +21320,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 11.1201
-# !latitude: 33.4909
+# !longitude: 11.1206
+# !latitude: 33.4918
 # region: Médenine
 # admin1_quelle: Ufer 0.3 km
 # note: 20260913 S2/K2 x 1.55 auf den Springhub des Buchs (eutt-357); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 33.4909/11.1201, Kueste 0.01 km) (Oliver).
 Zarzis (Jarjis), Tunisia
 +01:00 :Africa/Tunis
 0.6401 meters
@@ -21707,8 +21711,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 13.3833
-# !latitude: 45.6833
+# !longitude: 13.3811
+# !latitude: 45.6779
 # province: Gorizia
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 3.65 auf den Springhub des Buchs (eutt-407); der Bau
@@ -21718,6 +21722,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.68 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.933,
 # note: Zielwert F=0.554 aus Nachbarn statt F=0.602 des Bezugsorts; Beleg: Nachbarn 7.41 -> 7.33 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 45.6833/13.3833, Kueste 0.52 km) (Oliver).
 Grado, Italy
 +01:00 :Europe/Rome
 0.5182 meters
@@ -22099,14 +22104,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -6.3500
-# !latitude: 36.7833
+# !longitude: -6.3515
+# !latitude: 36.7906
 # region: Río Guadalquivir
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Lisboa (Alcântara), Portugal [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.269,
 # note: Zielwert F=0.101 aus Wahrheit statt F=0.083 des Bezugsorts; Beleg: Wahrheit 2.39 -> 2.37 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 36.7833/-6.3500, Kueste 0.72 km) (Oliver).
 Sanlúcar, Río Guadalquivir, Spain
 +01:00 :Europe/Madrid
 1.7678 meters
@@ -23090,7 +23096,7 @@ x 0 0
 # confidence: 5
 # !units: meters
 # !longitude: -9.0512
-# !latitude: 42.7766
+# !latitude: 42.7775
 # region: La Coruña
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.03 auf den Springhub des Buchs (eutt-531); der Bau
@@ -23100,6 +23106,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=5 -0.33 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.180,
 # note: Zielwert F=0.095 aus Nachbarn statt F=0.083 des Bezugsorts; Beleg: Nachbarn 1.82 -> 1.82 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 42.7766/-9.0512, Kueste 0.00 km) (Oliver).
 Muros, Spain
 +01:00 :Europe/Madrid
 1.9507 meters
@@ -23877,8 +23884,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -5.7831
-# !latitude: 43.6200
+# !longitude: -5.7833
+# !latitude: 43.6209
 # region: Asturias
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.02 auf den Springhub des Buchs (eutt-559); der Bau
@@ -23886,6 +23893,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Lisboa (Alcântara), Portugal [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=5 -0.65 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.6200/-5.7831, Kueste 0.00 km) (Oliver).
 Luanco, Spain
 +01:00 :Europe/Madrid
 2.1946 meters
@@ -24074,8 +24082,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -4.3932
-# !latitude: 43.3892
+# !longitude: -4.3905
+# !latitude: 43.3939
 # region: Cantabria
 # admin1_quelle: Ufer 0.9 km
 # note: 20260913 S2/K2 x 2.03 auf den Springhub des Buchs (eutt-567); der Bau
@@ -24083,6 +24091,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Lisboa (Alcântara), Portugal [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.65 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.3892/-4.3932, Kueste 0.47 km) (Oliver).
 San Vicente de la Barquera, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -24271,8 +24280,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -4.0419
-# !latitude: 43.4408
+# !longitude: -4.0411
+# !latitude: 43.4401
 # region: Cantabria
 # admin1_quelle: Ufer 1.1 km
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (eutt-569); der Bau
@@ -24280,6 +24289,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Lisboa (Alcântara), Portugal [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.65 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.4408/-4.0419, Kueste 0.00 km) (Oliver).
 Suances, Spain
 +01:00 :Europe/Madrid
 2.1641 meters
@@ -24468,8 +24478,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -3.4550
-# !latitude: 43.4390
+# !longitude: -3.4497
+# !latitude: 43.4373
 # region: Cantabria
 # admin1_quelle: Ufer 0.9 km
 # note: 20260913 S2/K2 x 2.03 auf den Springhub des Buchs (eutt-573); der Bau
@@ -24477,6 +24487,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Lisboa (Alcântara), Portugal [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.65 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.4390/-3.4550, Kueste 0.37 km) (Oliver).
 Santoña, Spain
 +01:00 :Europe/Madrid
 2.2555 meters
@@ -24862,8 +24873,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -3.0266
-# !latitude: 43.3321
+# !longitude: -3.0276
+# !latitude: 43.3315
 # region: Abra Bilbao
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.02 auf den Springhub des Buchs (eutt-579); der Bau
@@ -24873,6 +24884,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.932,
 # note: Zielwert F=0.076 aus Wahrheit statt F=0.083 des Bezugsorts; Beleg: Wahrheit 1.34 -> 1.34 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.3321/-3.0266, Kueste 0.00 km) (Oliver).
 Portugalete (Abra Bilbao), Spain
 +01:00 :Europe/Madrid
 2.2250 meters
@@ -25061,8 +25073,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -2.4989
-# !latitude: 43.3667
+# !longitude: -2.4990
+# !latitude: 43.3676
 # region: Bizkaia
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (eutt-585); der Bau
@@ -25070,6 +25082,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Lisboa (Alcântara), Portugal [harmonics-1997-05-25_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.65 Punkte.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.3667/-2.4989, Kueste 0.00 km) (Oliver).
 Lekeitio, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -25455,8 +25468,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -2.3541
-# !latitude: 43.3016
+# !longitude: -2.3543
+# !latitude: 43.3026
 # region: Gipuzkoa
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (eutt-589); der Bau
@@ -25466,6 +25479,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=6 -0.65 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.931,
 # note: Zielwert F=0.074 aus Nachbarn statt F=0.083 des Bezugsorts; Beleg: Nachbarn 2.59 -> 2.59 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.3016/-2.3541, Kueste 0.01 km) (Oliver).
 Deba, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -25654,8 +25668,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -2.1993
-# !latitude: 43.3039
+# !longitude: -2.1987
+# !latitude: 43.3030
 # region: Gipuzkoa
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (eutt-591); der Bau
@@ -25665,6 +25679,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=5 -0.65 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.931,
 # note: Zielwert F=0.074 aus Nachbarn statt F=0.083 des Bezugsorts; Beleg: Nachbarn 2.59 -> 2.59 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.3039/-2.1993, Kueste 0.01 km) (Oliver).
 Getaria, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -25853,8 +25868,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -2.1285
-# !latitude: 43.2838
+# !longitude: -2.1275
+# !latitude: 43.2855
 # region: Gipuzkoa
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.04 auf den Springhub des Buchs (eutt-593); der Bau
@@ -25864,6 +25879,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=5 -0.65 Punkte.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.923,
 # note: Zielwert F=0.074 aus Nachbarn statt F=0.083 des Bezugsorts; Beleg: Nachbarn 2.08 -> 2.08 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 43.2838/-2.1285, Kueste 0.00 km) (Oliver).
 Ría de Orio, Spain
 +01:00 :Europe/Madrid
 2.2860 meters
@@ -27038,8 +27054,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -3.2110
-# !latitude: 48.8529
+# !longitude: -3.2099
+# !latitude: 48.8523
 # region: Côtes-d'Armor
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.76 auf den Springhub des Buchs (eutt-709); der Bau
@@ -27049,6 +27065,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok, Pegel ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.888,
 # note: Zielwert F=0.041 aus Wahrheit statt F=0.047 des Bezugsorts; Beleg: Wahrheit 4.60 -> 4.60 %.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 48.8529/-3.2110, Kueste 0.00 km) (Oliver).
 Port Castel (Plougrescant), France
 +00:00 :Europe/Paris
 5.5474 meters
@@ -27636,8 +27653,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -3.829800
-# !latitude: 57.837700
+# !longitude: -3.8298
+# !latitude: 57.8377
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
@@ -28040,8 +28057,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -3.279000
-# !latitude: 57.723900
+# !longitude: -3.2790
+# !latitude: 57.7239
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
@@ -28839,8 +28856,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -2.516900
-# !latitude: 56.005900
+# !longitude: -2.5169
+# !latitude: 56.0059
 # note: 20260903 Provinz "Scotland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Scotland
@@ -29636,8 +29653,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -1.325900
-# !latitude: 54.836800
+# !longitude: -1.3259
+# !latitude: 54.8368
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
@@ -29836,8 +29853,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -1.198100
-# !latitude: 54.690400
+# !longitude: -1.1981
+# !latitude: 54.6904
 # note: 20260903 Provinz "England" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: England
@@ -32030,8 +32047,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -5.476300
-# !latitude: 50.215200
+# !longitude: -5.4763
+# !latitude: 50.2152
 # note: 20260903 Provinz "England" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # note: 20260904 Phasen um +1.00 h gedreht: die
@@ -34044,8 +34061,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -4.694600
-# !latitude: 54.227900
+# !longitude: -4.6946
+# !latitude: 54.2279
 # region: Isle of Man
 # admin1_quelle: Ufer 1.3 km
 # note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher 54.2333/-4.7000,
@@ -36028,8 +36045,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -5.531000
-# !latitude: 54.645000
+# !longitude: -5.5310
+# !latitude: 54.6450
 # note: 20260903 Provinz "Northern Ireland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Northern Ireland
@@ -38212,12 +38229,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -8.4667
-# !latitude: 71.0000
+# !longitude: -8.4707
+# !latitude: 71.0112
 # note: 20260903 Phasen um +2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-1.00 gegen +1.00 nach dem Buch)
 # note: fehlte. Siehe py/transfer_zonen_richten.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 71.0000/-8.4667, Kueste 1.16 km) (Oliver).
 Mary Muss Bay, Jan Mayen
 +00:00 :Europe/Oslo
 0.5486 meters
@@ -38405,8 +38423,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -22.5500
-# !latitude: 64.0000
+# !longitude: -22.5494
+# !latitude: 64.0040
 # region: Suðurnes
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.76 auf den Springhub des Buchs (eutt-1311); der Bau
@@ -38414,6 +38432,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.376. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Reykjavik, Iceland [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Wahrheit ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 64.0000/-22.5500, Kueste 0.34 km) (Oliver).
 Keflavík Harbor, Iceland
 +00:00 :Atlantic/Reykjavik
 1.9812 meters
@@ -39582,8 +39601,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 7.3626
-# !latitude: 53.7220
+# !longitude: 7.3619
+# !latitude: 53.7229
 # state: Niedersachsen
 # admin1_quelle: Ufer 0.6 km
 # note: 20260913 S2/K2 x 3.72 auf den Springhub des Buchs (eutt-1383); der Bau
@@ -39591,6 +39610,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Helgoland (Binnenhafen), Germany [harmonics_utide_observatio,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 53.7220/7.3626, Kueste 0.01 km) (Oliver).
 Baltrum (Westende), Germany
 +00:00 :Europe/Berlin
 1.2802 meters
@@ -41738,13 +41758,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 8.2500
-# !latitude: 56.7833
+# !longitude: 8.2560
+# !latitude: 56.7776
 # region: Nordjylland
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 1.55 auf den Springhub des Buchs (eutt-1511); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 56.7833/8.2500, Kueste 0.64 km) (Oliver).
 Agger, Denmark
 +01:00 :Europe/Copenhagen
 0.1829 meters
@@ -59113,7 +59134,7 @@ x 0 0
 # confidence: 3
 # !units: meters
 # !longitude: 77.6830
-# !latitude: 72.6008
+# !latitude: 72.6018
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
@@ -59124,6 +59145,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Phasen um -2 h gedreht: gegen die Buchzone (+6/+7 statt +3) fehlten 2 h, Nachbarn derselben Liste trafen (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 72.6008/77.6830, Kueste 0.01 km) (Oliver).
 Ostrov Oleniy, Yamalo-Nenets Autonomous Okrug, Russia
 +03:00 :Asia/Yekaterinburg
 0.3962 meters
@@ -59311,8 +59333,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 75.7051
-# !latitude: 72.2667
+# !longitude: 75.7080
+# !latitude: 72.2663
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
@@ -59323,6 +59345,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Phasen um -2 h gedreht: gegen die Buchzone (+6/+7 statt +3) fehlten 2 h, Nachbarn derselben Liste trafen (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 72.2667/75.7051, Kueste 0.01 km) (Oliver).
 Mys Dalekiy, Yamalo-Nenets Autonomous Okrug, Russia
 +03:00 :Asia/Yekaterinburg
 0.5486 meters
@@ -59710,8 +59733,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 77.4399
-# !latitude: 71.1644
+# !longitude: 77.4400
+# !latitude: 71.1654
 # note: 20260903 Phasen um -2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+7.00 gegen +3.00 nach dem Buch)
@@ -59722,6 +59745,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Phasen um -2 h gedreht: gegen die Buchzone (+6/+7 statt +3) fehlten 2 h, Nachbarn derselben Liste trafen (Oliver).
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 71.1644/77.4399, Kueste 0.01 km) (Oliver).
 Mys Chernyy, Yamalo-Nenets Autonomous Okrug, Russia
 +03:00 :Asia/Yekaterinburg
 0.3353 meters
@@ -61097,8 +61121,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 85.5650
-# !latitude: 73.7980
+# !longitude: 85.5649
+# !latitude: 73.7989
 # region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20260913 S2/K2 x 2.15 auf den Springhub des Buchs (eutt-1935); der Bau
@@ -61106,6 +61130,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 Phasen um -4.00 h gedreht (Zeitfehler): Table-2-Uebertragung von Yekaterininskaya ohne Zonendifferen
 # note: -- Siehe py/ticon_zeitpruefung.py und py/zeitfehler_drehen.py.
+# note: 2026-10-18 an Land, automatisch ans Ufer (vorher 73.7980/85.5650, Kueste 0.00 km) (Oliver).
 Mys Zveroboy, Krasnoyarsk Krai, Russia
 +03:00 :Asia/Krasnoyarsk
 0.3048 meters

@@ -172,6 +172,9 @@ SOURCE_GROUPS = OrderedDict([
                                                       'harmonics_noaa_censam.tcd',
                                                       'harmonics_noaa_carib.tcd',
                                                       'harmonics_noaa_pacif.tcd']}),
+    # Oliver 18.10.2026: automatisch ans Ufer geholte NOAA-Saetze, bis er sie geprueft hat
+    # (py/noaa_land_ans_ufer.py, Liste harmonics/help/noaa_auto_verschoben.csv)
+    ('NOAA verschoben (prüfen)', {'color': '#FF00FF', 'files': []}),
 ])
 
 # Group order: predefined + 'Other' fallback (für nicht zugeordnete Quellen)
@@ -209,6 +212,13 @@ def display_name_for(name, source_file):
     return name
 
 
+AUTO_VERSCHOBEN = set()
+_av = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'harmonics/help/noaa_auto_verschoben.csv')
+if os.path.exists(_av):
+    import csv as _csv
+    AUTO_VERSCHOBEN = {(os.path.splitext(os.path.basename(z['datei']))[0] + '.tcd', z['name'])
+                       for z in _csv.DictReader(open(_av, encoding='utf-8')) if z['aktion'] == 'verschoben'}
+
 # Build columnar JSON payload
 station_rows = []
 for name, lat, lon, source_file, is_current in all_stations:
@@ -216,6 +226,8 @@ for name, lat, lon, source_file, is_current in all_stations:
     slug = to_slug(display_name_raw)
     needs_source = name in duplicate_names
     group_name = get_group_for_source(source_file)
+    if (source_file, name) in AUTO_VERSCHOBEN:
+        group_name = 'NOAA verschoben (prüfen)'
     group_idx = GROUP_INDEX[group_name]
     # Round coords to ~5m precision (5 decimals) — saves bytes vs full precision
     station_rows.append([
