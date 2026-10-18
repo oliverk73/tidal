@@ -118169,8 +118169,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 69.8833
-# !latitude: -49.4167
+# !longitude: 69.9062
+# !latitude: -49.4145
 # note: 20260903 Phasen um -3.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+5.00 gegen +2.00 nach dem Buch)
@@ -118179,7 +118179,8 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261018 Name vereinheitlicht (Land French Southern Territories, Inselgruppe als Region, franz. Schreibung) (Oliver).
-Observatory Bay, Kerguelen, French Southern Territories
+# note: 20261018 Position: Baie de l'Observatoire (GeoNames, franz. Name) (Oliver).
+Baie de l'Observatoire, Kerguelen, French Southern Territories
 +00:00 :Indian/Kerguelen
 1.0668 meters
 J1              0.0038  57.58
