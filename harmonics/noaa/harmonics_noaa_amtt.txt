@@ -48949,8 +48949,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -53.8333
-# !latitude: 67.9167
+# !longitude: -53.8370
+# !latitude: 67.9444
 # note: 20260903 Phasen um -1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-3.00 gegen -4.00 nach dem Buch)
@@ -48960,7 +48960,8 @@ x 0 0
 # note: 20260913 S2/K2 x 2.54 auf den Springhub des Buchs (ectt-85); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.39. Siehe py/noaa_s2_nachziehen.py.
-Aningaq, Rifkol, Greenland
+# note: 20261018 Buch "Aningaq, Rifkol" = Insel Aanningaq (OSM) bei Uummannaq/Rifkol; alte Position lag an der Insel Angisut (Oliver).
+Aanningaq (Rifkol), Greenland
 +00:00 :America/Nuuk
 1.0973 meters
 J1              0.0132  219.33
