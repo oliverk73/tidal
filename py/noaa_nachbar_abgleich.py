@@ -48,11 +48,18 @@ def uebernommene_namen():
     return out
 
 
-def ungeprueft(recs, prov):
-    """NOAA-Buchsaetze ohne Olivers Pruefung."""
+def ungeprueft(recs, prov=None):
+    """NOAA-Buchsaetze ohne Olivers Pruefung.
+
+    Massgeblich ist der Stand vom Morgen des 18.10.2026 (harmonics/help/noaa_ungeprueft_20261018.csv,
+    Fingerabdruck = Konstituentenblock, aendert sich bei Umbenennung/Verschiebung nicht).
+    positions_locked.csv taugt dafuer nicht mehr: jede automatische Verschiebung macht dort
+    aus 'source' ein 'manual'. prov wird nur noch fuer alte Aufrufe angenommen.
+    """
+    fp = {z['fingerprint'] for z in csv.DictReader(open(os.path.join(ROOT, 'harmonics/help/noaa_ungeprueft_20261018.csv'),
+                                                         encoding='utf-8'))}
     uebern = uebernommene_namen()
-    return [r for r in recs if ist_noaa_buch(r['file']) and prov.get((r['fp'], r['name']), 'source') != 'manual'
-            and r['name'] not in uebern]
+    return [r for r in recs if ist_noaa_buch(r['file']) and r['fp'] in fp and r['name'] not in uebern]
 
 
 def main():
