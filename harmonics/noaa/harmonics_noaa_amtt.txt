@@ -34629,8 +34629,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -47.3833
-# !latitude: -0.6500
+# !longitude: -47.3873
+# !latitude: -0.6460
 # note: 20260903 Provinz "Pará" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Pará
@@ -34638,6 +34638,7 @@ x 0 0
 # note: 20260913 S2/K2 x 1.76 auf den Springhub des Buchs (ectt-4985); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 Minutenposition lag 0.53 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.07) (Oliver).
 Salinópolis, Pará, Brazil
 +00:00 :America/Belem
 2.5298 meters
@@ -36612,8 +36613,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -65.6167
-# !latitude: -45.0500
+# !longitude: -65.6190
+# !latitude: -45.0465
 # province: Chubut
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.75 auf den Springhub des Buchs (ectt-5173); der Bau
@@ -36623,6 +36624,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.937,
 # note: Zielwert F=0.131 aus Nachbarn statt F=0.131 des Bezugsorts; Beleg: Nachbarn 7.75 -> 7.73 %.
+# note: 2026-10-18 Minutenposition lag 0.33 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.04) (Oliver).
 Caleta Leones, Chubut, Argentina
 -03:00 :America/Buenos_Aires
 2.9870 meters
@@ -43506,13 +43508,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -127.7333
-# !latitude: 50.2500
+# !longitude: -127.7338
+# !latitude: 50.2509
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: British Columbia
 # admin1_quelle: Name
+# note: 2026-10-18 Minutenposition lag 0.01 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.03) (Oliver).
 Klaskish Inlet, British Columbia, Canada
 -09:00 :America/Vancouver
 2.3165 meters

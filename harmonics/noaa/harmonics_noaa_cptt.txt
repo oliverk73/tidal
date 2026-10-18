@@ -19349,8 +19349,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -178.5500
-# !latitude: 70.9667
+# !longitude: -178.5498
+# !latitude: 70.9658
 # note: 20260903 Phasen um -4.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (+13.00 gegen +9.00 nach dem Buch)
@@ -19360,6 +19360,7 @@ x 0 0
 # note: 20260913 S2/K2 x 1.85 auf den Springhub des Buchs (cptt-71); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-18 Minutenposition lag 0.00 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.97) (Oliver).
 Ostrov Vrangelya, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 0.3962 meters
@@ -53509,12 +53510,13 @@ x 0 0
 # confidence: 5
 # note: 20260915 Land/Name berichtigt: Muendung des Dafengjiang (Guangxi, China), nicht Vietnam.
 # !units: meters
-# !longitude: 108.8667
-# !latitude: 21.6333
+# !longitude: 108.8688
+# !latitude: 21.6338
 # province: Guangxi
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Beihai, Guangxi, China [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
+# note: 2026-10-18 Minutenposition lag 0.12 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.99) (Oliver).
 Dafengjiang, Guangxi, China
 +00:00 :Asia/Shanghai
 2.4079 meters
@@ -84018,7 +84020,7 @@ x 0 0
 # note: Zielwert F=0.08 aus Wahrheit statt F=0.143 des Bezugsorts; Beleg: Wahrheit 3.98 -> 3.33 %.
 # note: 2026-10-18 Name/Position vom archivierten harmonics-2004-06-14_mod-Satz uebernommen; FES 12.3 gegen 41.4 cm (Oliver).
 # note: 2026-10-18 BOM WA_TP123 geprueft: unentschieden), Kurve 18.3 cm, FES 13.0/12.3 cm; dieser Satz bleibt.
-Bedford Island, Western Australia, Australia
+Bedford Islands, Western Australia, Australia
 +08:00 :Australia/Perth
 4.3282 meters
 J1              0.0117  329.51

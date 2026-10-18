@@ -14997,10 +14997,11 @@ MNUS2
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 168.7500
-# !latitude: 7.2833
+# !longitude: 168.7518
+# !latitude: 7.2855
 # region: Railik Chain
 # admin1_quelle: Ufer 2.4 km
+# note: 2026-10-18 Minutenposition lag 0.21 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.98) (Oliver).
 Ailinglapalap Atoll, Marshall Islands
 +12:00 :Pacific/Kwajalein
 0.9200 meters
@@ -16721,8 +16722,9 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 162.3500
-# !latitude: 11.5500
+# !longitude: 162.3509
+# !latitude: 11.5507
+# note: 2026-10-18 Minutenposition lag 0.03 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.02) (Oliver).
 Runit Island, Marshall Islands
 +12:00 :Pacific/Kwajalein
 0.7900 meters
@@ -17485,10 +17487,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 2
 # !units: meters
-# !longitude: 154.7833
-# !latitude: 1.1000
+# !longitude: 154.7824
+# !latitude: 1.1008
 # region: Pohnpei
 # admin1_quelle: Ufer 13.8 km
+# note: 2026-10-18 Minutenposition lag 0.04 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.95) (Oliver).
 Kapingamarangi, Micronesia
 +11:00 :Pacific/Pohnpei
 0.6500 meters
@@ -24791,10 +24794,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 141.1167
-# !latitude: 51.7000
+# !longitude: 141.1176
+# !latitude: 51.6989
 # region: Khabarovsk Krai
 # admin1_quelle: Polygon
+# note: 2026-10-18 Minutenposition lag 0.03 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.83) (Oliver).
 Mys Sushcheva, Khabarovsk Krai, Russia
 +10:00 :Asia/Vladivostok
 1.1000 meters
@@ -28854,14 +28858,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: 123.5500
-# !latitude: 39.7667
+# !longitude: 123.5436
+# !latitude: 39.7684
 # note: 20260903 Provinz "Liaoning" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # region: Liaoning
 # admin1_quelle: Name
 # note: 20261013 umbenannt "Qianyang" -> "Dagushan (Shuikou)": Position = Reede Dagushan, M2 gleich NOAA 1213 (Oliver).
 # note: 20261013 P1/Q1 inferiert (P1=0.331*K1, Q1=0.194*O1, Phasen wie K1/O1) (Oliver).
+# note: 2026-10-18 Minutenposition lag 0.48 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.01) (Oliver).
 Dagushan (Shuikou), Liaoning, China
 +08:00 :Asia/Shanghai
 2.9600 meters

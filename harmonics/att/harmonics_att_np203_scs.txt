@@ -23359,12 +23359,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 98.2833
-# !latitude: 10.1167
+# !longitude: 98.2824
+# !latitude: 10.1173
 # region: Tanintharyi
 # admin1_quelle: Ufer 6.2 km
 # note: 20261015 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
 # note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
+# note: 2026-10-18 Minutenposition lag 0.02 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.96) (Oliver).
 Za Det Nge Kyun (Hastings Harbour), Myanmar
 +06:30 :Asia/Yangon
 1.6500 meters
@@ -23749,10 +23750,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 93.3667
-# !latitude: 14.1833
+# !longitude: 93.3643
+# !latitude: 14.1813
 # region: Ayeyarwady
 # admin1_quelle: Ufer 4.1 km
+# note: 2026-10-18 Minutenposition lag 0.24 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.99) (Oliver).
 Mingalakyun, Myanmar
 +06:30 :Asia/Yangon
 1.4000 meters
@@ -24335,12 +24337,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 92.7167
-# !latitude: 12.3167
+# !longitude: 92.7152
+# !latitude: 12.3113
 # note: 20260903 Provinz "Andaman and Nicobar" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Andaman and Nicobar
 # admin1_quelle: Name
+# note: 2026-10-18 Minutenposition lag 0.53 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.97) (Oliver).
 Port Anson, Andaman and Nicobar, India
 +05:30 :Asia/Kolkata
 1.3100 meters
@@ -25119,12 +25122,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 92.9667
-# !latitude: 13.0167
+# !longitude: 92.9682
+# !latitude: 13.0188
 # note: 20260903 Provinz "Andaman and Nicobar" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Andaman and Nicobar
 # admin1_quelle: Name
+# note: 2026-10-18 Minutenposition lag 0.19 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.04) (Oliver).
 Stewart Sound, Andaman and Nicobar, India
 +05:30 :Asia/Kolkata
 1.2800 meters
@@ -44796,12 +44800,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 105.4000
-# !latitude: -1.7500
+# !longitude: 105.3919
+# !latitude: -1.7543
 # state: Kepulauan Bangka Belitung
 # admin1_quelle: Polygon
 # note: 20261015 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
 # note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
+# note: 2026-10-18 Minutenposition lag 0.92 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.06) (Oliver).
 Teluk Bulu, Kepulauan Bangka Belitung, Indonesia
 +07:00 :Asia/Jakarta
 1.7000 meters
@@ -63230,12 +63235,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 125.2000
-# !latitude: 10.4000
+# !longitude: 125.2009
+# !latitude: 10.4005
 # province: Southern Leyte
 # admin1_quelle: Polygon
 # note: 20260923 Provinz ergaenzt (Polygon), py/provinz_ergaenzen.py.
 # note: 20260924 Provinz nach OSM-Verwaltungsgrenzen (berichtigt), py/provinz_ph_osm.py.
+# note: 2026-10-18 Minutenposition lag 0.01 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.08) (Oliver).
 Hinunangan, Southern Leyte, Philippines
 +08:00 :Asia/Manila
 0.3000 meters
@@ -72639,14 +72645,15 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 115.5500
-# !latitude: 5.0833
+# !longitude: 115.5491
+# !latitude: 5.0835
 # region: Sabah
 # admin1_quelle: Ufer 1.4 km
 # note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Temburong" -> "Sabah".
 # note: 20261015 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
 # note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
+# note: 2026-10-18 Minutenposition lag 0.00 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.00) (Oliver).
 Sipitang, Malaysia
 +08:00 :Asia/Brunei
 1.3800 meters
@@ -73229,12 +73236,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 115.0167
-# !latitude: 4.8500
+# !longitude: 115.0231
+# !latitude: 4.8469
 # region: Sarawak
 # admin1_quelle: Polygon
 # note: 20260906 country "Brunei" -> "Malaysia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Temburong" -> "Sarawak".
+# note: 2026-10-18 Minutenposition lag 0.69 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.06) (Oliver).
 Kuala Limbang, Malaysia
 +08:00 :Asia/Brunei
 1.6700 meters
@@ -73815,10 +73823,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 115.1333
+# !longitude: 115.1344
 # !latitude: 5.0000
 # region: Brunei and Muara
 # admin1_quelle: Ufer 5.3 km
+# note: 2026-10-18 Minutenposition lag 0.02 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.06) (Oliver).
 Tanjung Sapo, Brunei
 +08:00 :Asia/Brunei
 1.3900 meters
@@ -74399,12 +74408,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 114.3167
-# !latitude: 4.6167
+# !longitude: 114.3163
+# !latitude: 4.6179
 # state: Belait
 # admin1_quelle: Ufer 1.6 km
 # note: 20260906 country "Malaysia" -> "Brunei" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Sarawak" -> "Belait".
+# note: 2026-10-18 Minutenposition lag 0.04 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.98) (Oliver).
 Seria, Brunei
 +08:00 :Asia/Kuching
 1.2100 meters
@@ -98104,10 +98114,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 112.9167
-# !latitude: -7.6333
+# !longitude: 112.9145
+# !latitude: -7.6264
 # state: Jawa Timur
 # admin1_quelle: Polygon
+# note: 2026-10-18 Minutenposition lag 0.70 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.07) (Oliver).
 Pasuruan, Jawa Timur, Indonesia
 +07:00 :Asia/Jakarta
 1.6000 meters
@@ -98494,10 +98505,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 112.5667
-# !latitude: -6.8667
+# !longitude: 112.5755
+# !latitude: -6.8656
 # state: Jawa Timur
 # admin1_quelle: Polygon
+# note: 2026-10-18 Minutenposition lag 0.88 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.00) (Oliver).
 Ujung Pangka, Jawa Timur, Indonesia
 +07:00 :Asia/Jakarta
 1.0500 meters
@@ -101403,10 +101415,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 119.8333
-# !latitude: -8.7833
+# !longitude: 119.8291
+# !latitude: -8.7879
 # state: Nusa Tenggara Timur
 # admin1_quelle: Polygon
+# note: 2026-10-18 Minutenposition lag 0.59 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.10) (Oliver).
 Teluk Perapat, Nusa Tenggara Timur, Indonesia
 +08:00 :Asia/Makassar
 1.9000 meters
@@ -113443,10 +113456,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 136.8000
-# !latitude: -4.9000
+# !longitude: 136.7980
+# !latitude: -4.9042
 # state: Papua Tengah
 # admin1_quelle: Ufer 0.1 km
+# note: 2026-10-18 Minutenposition lag 0.42 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 0.96) (Oliver).
 Aika, Papua Tengah, Indonesia
 +09:00 :Asia/Jayapura
 1.5000 meters
@@ -115577,12 +115591,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
 # !units: meters
-# !longitude: 107.5000
-# !latitude: 10.5000
+# !longitude: 107.4993
+# !latitude: 10.4989
 # province: Ba Ria - Vung Tau
 # admin1_quelle: Polygon
 # note: 20261015 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
 # note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
+# note: 2026-10-18 Minutenposition lag 0.05 km an Land; ans naechste Ufer, Seetide passt (FES-Verhaeltnis 1.01) (Oliver).
 Hai dang Ba Kiem, Vietnam
 +07:00 :Asia/Ho_Chi_Minh
 2.3000 meters
