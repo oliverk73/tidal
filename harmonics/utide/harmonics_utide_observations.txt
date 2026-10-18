@@ -228160,9 +228160,10 @@ x 0 0
 # utide: pts=22105 period=2023-11-01..2026-09-30 r2=0.9756 rms=0.2003m const=67
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC 51.3900/2.4400; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: 2.4400
+# !longitude: 2.4335
 # !latitude: 51.3900
 # region: West-Vlaanderen
+# note: 20261018 BaZ-Meldung 51-23.40N 002-26.01E passt zum IOC-Rundwert, Messpfahl MOW 7 nicht sicher belegt (Oliver).
 Westhinder (Meetpaal), Belgium
 +00:00 :Etc/GMT
 2.6860 meters
@@ -228741,9 +228742,10 @@ x 0 0
 # utide: pts=18044 period=2024-08-01..2026-09-30 r2=0.9667 rms=0.2243m const=67
 # note: 20261017 Monate mit Versatz > 30 min oder Datumssprung verworfen; IOC 51.4200/3.3000; bitte pruefen (Oliver).
 # !units: meters
-# !longitude: 3.3000
-# !latitude: 51.4200
+# !longitude: 3.1987
+# !latitude: 51.3897
 # region: West-Vlaanderen
+# note: 20261018 BaZ 22/209 Wielingen MOW 3 Meetpaal 51-23.38N 003-11.92E; IOC-Wert 51.42/3.30 lag 7 km daneben (Oliver).
 Scheur Wielingen (Meetpaal), Belgium
 +00:00 :Europe/Brussels
 2.5739 meters
