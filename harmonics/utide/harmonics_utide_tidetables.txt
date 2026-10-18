@@ -15225,9 +15225,9 @@ x 0 0
 # bom_id: NSW-TP022
 # utide: period=2024-12-31..2027-12-31 r2=0.9998 rms=0.0048m const=68
 # !units: meters
-# !longitude: 150.1798
-# !latitude: -35.7058
-# note: 2026-10-18 Position aus BOM-Stationsliste NSW_TP022, Sekundenangabe (vorher -35.7037 150.1778, knapp ins Wasser) (Oliver).
+# !longitude: 150.1780
+# !latitude: -35.7044
+# note: 2026-10-18 Position aus BOM-Stationsliste NSW_TP022, Sekundenangabe (vorher -35.7037 150.1778) (Oliver); exakte BOM-Position ohne Verschiebung.
 Princess Jetty (Batemans Bay), New South Wales, Australia
 +00:00 :UTC
 0.8560 meters
@@ -19092,9 +19092,9 @@ x 0 0
 # bom_id: QLD-TP046
 # utide: period=2024-12-31..2027-12-31 r2=0.9860 rms=0.0678m const=68
 # !units: meters
-# !longitude: 141.6252
-# !latitude: -12.9218
-# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP046, Sekundenangabe (vorher -12.9167 141.6333, knapp ins Wasser) (Oliver).
+# !longitude: 141.6260
+# !latitude: -12.9222
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP046, Sekundenangabe (vorher -12.9167 141.6333) (Oliver); exakte BOM-Position ohne Verschiebung.
 Amrun (Boyd Point), Queensland, Australia
 +00:00 :UTC
 1.8984 meters
@@ -40919,9 +40919,9 @@ x 0 0
 # bom_id: SA-TP066
 # utide: period=2024-12-31..2027-12-31 r2=0.9880 rms=0.0655m const=68
 # !units: meters
-# !longitude: 138.5310
-# !latitude: -34.8026
-# note: 2026-10-18 Position aus BOM-Stationsliste SA_TP066, Sekundenangabe (vorher -34.8000 138.5333, knapp ins Wasser) (Oliver).
+# !longitude: 138.5320
+# !latitude: -34.8029
+# note: 2026-10-18 Position aus BOM-Stationsliste SA_TP066, Sekundenangabe (vorher -34.8000 138.5333) (Oliver); exakte BOM-Position ohne Verschiebung.
 Angus Inlet (Garden Island), South Australia, Australia
 +00:00 :UTC
 1.3723 meters
@@ -47299,8 +47299,8 @@ x 0 0
 # bom_id: WA-TP022
 # utide: period=2024-12-31..2027-12-31 r2=0.9991 rms=0.0155m const=68
 # !units: meters
-# !longitude: 115.016700
-# !latitude: -21.466700
+# !longitude: 115.0201
+# !latitude: -21.4639
 Thevenard Island, Western Australia, Australia
 +00:00 :UTC
 1.5300 meters
@@ -48845,8 +48845,8 @@ x 0 0
 # bom_id: WA-TP055
 # utide: period=2024-12-31..2027-12-31 r2=0.9998 rms=0.0136m const=68
 # !units: meters
-# !longitude: 116.683300
-# !latitude: -20.516700
+# !longitude: 116.6921
+# !latitude: -20.5197
 Mawby Island, Western Australia, Australia
 +00:00 :UTC
 2.5302 meters
@@ -50004,8 +50004,8 @@ x 0 0
 # bom_id: WA-TP078
 # utide: period=2024-12-31..2027-12-31 r2=0.9998 rms=0.0133m const=68
 # !units: meters
-# !longitude: 116.766700
-# !latitude: -20.566700
+# !longitude: 116.7790
+# !latitude: -20.5794
 Withnell Bay, Western Australia, Australia
 +00:00 :UTC
 2.5184 meters
@@ -75494,8 +75494,8 @@ x 0 0
 # bom_id: WA-TP058
 # utide: period=2024-12-31..2027-12-31 r2=0.9951 rms=0.0636m const=68
 # !units: meters
-# !longitude: 115.650000
-# !latitude: -21.100000
+# !longitude: 115.6513
+# !latitude: -21.1015
 North Sandy Island, Western Australia, Australia
 +00:00 :UTC
 2.3065 meters
@@ -76073,8 +76073,8 @@ x 0 0
 # bom_id: WA-TP069
 # utide: period=2024-12-31..2027-12-31 r2=0.9942 rms=0.0709m const=68
 # !units: meters
-# !longitude: 115.883333
-# !latitude: -20.950000
+# !longitude: 115.8828
+# !latitude: -20.9493
 Sholl Island, Western Australia, Australia
 +00:00 :UTC
 2.3777 meters
@@ -698120,8 +698120,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 119.1000
-# !latitude: -19.6000
+# !longitude: 119.1010
+# !latitude: -19.5938
 # note: 2026-10-18 BOM-Tafelfit WA_TP028 ersetzt harmonics-2004-06-14_mod; FES 8.2 gegen 74.8 cm; Name/Position uebernommen (Oliver).
 Bedout Islet, Western Australia, Australia
 +00:00 :UTC
@@ -698516,8 +698516,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 116.9633
-# !latitude: -20.4250
+# !longitude: 116.9636
+# !latitude: -20.4262
 # note: 2026-10-18 BOM-Tafelfit WA_TP048 ersetzt harmonics-2004-06-14_mod; FES 4.6 gegen 183.1 cm; Name/Position uebernommen (Oliver).
 Hauy Islet, Western Australia, Australia
 +00:00 :UTC
@@ -698912,8 +698912,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 115.5167
-# !latitude: -20.3667
+# !longitude: 115.5168
+# !latitude: -20.3658
 # note: 2026-10-18 BOM-Tafelfit WA_TP059 ersetzt harmonics-2004-06-14_mod; FES 6.0 gegen 30.4 cm; Name/Position uebernommen (Oliver).
 North West Island, Western Australia, Australia
 +00:00 :UTC
@@ -699704,8 +699704,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 116.0667
-# !latitude: -20.8167
+# !longitude: 116.0642
+# !latitude: -20.8187
 # note: 2026-10-18 BOM-Tafelfit WA_TP071 ersetzt harmonics-2004-06-14_mod; FES 6.7 gegen 20.1 cm; Name/Position uebernommen (Oliver).
 Steamboat Island, Western Australia, Australia
 +00:00 :UTC
@@ -701288,8 +701288,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 117.7500
-# !latitude: -20.6167
+# !longitude: 117.7428
+# !latitude: -20.6280
 # note: 2026-10-18 BOM-Tafelfit WA_TP116 ersetzt harmonics-2004-06-14_mod; FES 21.3 gegen 31.8 cm; Name/Position uebernommen (Oliver).
 Depuch Island, Western Australia, Australia
 +00:00 :UTC
@@ -704062,10 +704062,10 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 149.8955
-# !latitude: -21.0049
+# !longitude: 149.8967
+# !latitude: -21.0050
 # note: 2026-10-18 BOM-Tafelfit QLD_TP093 ersetzt harmonics-2004-06-14_mod; FES 7.1 gegen 10.0 cm; Name/Position uebernommen (Oliver).
-# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP093, Sekundenangabe (vorher -21.0000 149.9000, knapp ins Wasser) (Oliver).
+# note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP093, Sekundenangabe (vorher -21.0000 149.9000) (Oliver); exakte BOM-Position ohne Verschiebung.
 Penrith Island, Queensland, Australia
 +00:00 :UTC
 2.8704 meters
