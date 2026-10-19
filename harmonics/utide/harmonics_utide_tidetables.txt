@@ -23728,8 +23728,8 @@ x 0 0
 # bom_id: QLD-TP139
 # utide: period=2025-01-01..2027-12-31 r2=0.9888 rms=0.1109m const=68
 # !units: meters
-# !longitude: 139.766700
-# !latitude: -17.550000
+# !longitude: 139.7598
+# !latitude: -17.5661
 Albert River Mouth, Queensland, Australia
 +00:00 :UTC
 2.5313 meters
@@ -23921,8 +23921,8 @@ x 0 0
 # bom_id: QLD-TP140
 # utide: period=2025-01-01..2027-12-31 r2=0.9876 rms=0.1026m const=68
 # !units: meters
-# !longitude: 139.600000
-# !latitude: -17.733300
+# !longitude: 139.5926
+# !latitude: -17.7332
 Burketown, Queensland, Australia
 +00:00 :UTC
 2.3183 meters
@@ -67968,7 +67968,8 @@ x 0 0
 # !units: meters
 # !longitude: 138.963783
 # !latitude: -16.795700
-West Wellesley Islands, Queensland, Australia
+# note: 2026-10-19 BOM-Sekundenposition (QLD_TP142, New site) liegt 9,5 km westlich der Inseln; Position bleibt, Name ergaenzt (Oliver).
+West Wellesley Islands (10 km W), Queensland, Australia
 +00:00 :UTC
 1.9409 meters
 J1              0.0212  294.66
