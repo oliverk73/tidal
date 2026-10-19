@@ -132,7 +132,8 @@ def reihe(pfad):
     return df, lat, lon, tiefe
 
 
-def analyse(df, lat):
+def analyse(df, lat, konst=None):
+    """konst=None: feste Liste KONST; 'auto': UTide waehlt nach Rayleigh (kurze Reihen)."""
     u, v = df['u'].values, df['v'].values
     cov = np.cov(np.vstack([u, v]))
     w, V = np.linalg.eigh(cov)
@@ -141,7 +142,7 @@ def analyse(df, lat):
     s = (u * np.sin(np.radians(achse)) + v * np.cos(np.radians(achse))) * MS_KN
     zeiten = df.index.to_pydatetime()
     coef = utide.solve(zeiten, s, lat=lat, nodal=True, trend=False, method='ols', conf_int='none',
-                       verbose=False, constit=KONST)
+                       verbose=False, constit=konst or KONST)
     from utide._ut_constants import ut_constants
     tab = ut_constants['const']
     namen = [x.strip() for x in tab.name]
