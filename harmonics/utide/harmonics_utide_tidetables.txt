@@ -56181,8 +56181,8 @@ x 0 0
 # bom_id: NT-TP029
 # utide: period=2024-12-31..2027-12-31 r2=0.9988 rms=0.0737m const=68
 # !units: meters
-# !longitude: 129.566667
-# !latitude: -14.816667
+# !longitude: 129.5477
+# !latitude: -14.8170
 Quoin Island, Northern Territory, Australia
 +00:00 :UTC
 5.3002 meters
@@ -74723,8 +74723,8 @@ x 0 0
 # bom_id: WA-TP032
 # utide: period=2024-12-31..2027-12-31 r2=0.9998 rms=0.0238m const=68
 # !units: meters
-# !longitude: 128.300000
-# !latitude: -14.833333
+# !longitude: 128.3797
+# !latitude: -14.8157
 Cape Domett, Western Australia, Australia
 +00:00 :UTC
 4.2401 meters
@@ -75688,8 +75688,8 @@ x 0 0
 # bom_id: WA-TP066
 # utide: period=2024-12-31..2027-12-31 r2=0.9954 rms=0.0709m const=68
 # !units: meters
-# !longitude: 127.900000
-# !latitude: -14.333333
+# !longitude: 127.8099
+# !latitude: -14.3535
 Reveley Island, Western Australia, Australia
 +00:00 :UTC
 2.7638 meters
@@ -75881,8 +75881,8 @@ x 0 0
 # bom_id: WA-TP067
 # utide: period=2024-12-31..2027-12-31 r2=0.9843 rms=0.0804m const=68
 # !units: meters
-# !longitude: 127.566667
-# !latitude: -14.066667
+# !longitude: 127.5499
+# !latitude: -14.0934
 Rocky Island, Western Australia, Australia
 +00:00 :UTC
 1.4267 meters
@@ -78004,8 +78004,8 @@ x 0 0
 # bom_id: WA-TP140
 # utide: period=2024-12-31..2027-12-31 r2=0.9890 rms=0.0740m const=68
 # !units: meters
-# !longitude: 126.616667
-# !latitude: -13.933300
+# !longitude: 126.6030
+# !latitude: -13.9400
 Carronade Island, Western Australia, Australia
 +00:00 :UTC
 1.3710 meters
@@ -78197,8 +78197,8 @@ x 0 0
 # bom_id: WA-TP141
 # utide: period=2024-12-31..2027-12-31 r2=0.9920 rms=0.0647m const=68
 # !units: meters
-# !longitude: 126.500000
-# !latitude: -14.083300
+# !longitude: 126.5163
+# !latitude: -14.0750
 Guy Point, Western Australia, Australia
 +00:00 :UTC
 1.5700 meters
@@ -556342,11 +556342,11 @@ x 0 0
 # note: 20260917 neu gefittet mit Jahrestide SA/SSA (fehlte), rms 0.0207 -> 0.0054 m; py/jahrestide_nachfitten.py.
 # note: 20260917 neu gefittet mit Rayleigh 0.9 (T2, R2 u.a. dazu), rms 0.0054 -> 0.0036 m; py/jahrestide_nachfitten.py.
 # !units: meters
-# !longitude: -134.9667
-# !latitude: -23.1167
+# !longitude: -134.9689
+# !latitude: -23.1178
 # region: Tuamotu-Gambier
 # admin1_quelle: Polygon
-Rikitea, French Polynesia
+Rikitea, Mangareva, Gambier Islands
 +00:00 :UTC
 0.6819 meters
 J1              0.0023  17.65
@@ -622321,8 +622321,8 @@ x 0 0
 # confidence: 6
 # utide: pts=8760 period=2025-07-01..2026-07-01 r2=0.9991 rms=0.0042m const=68
 # !units: meters
-# !longitude: -81.5500
-# !latitude: 23.0667
+# !longitude: -81.5440
+# !latitude: 23.0610
 # province: Matanzas
 # admin1_quelle: Polygon
 Matanzas, Cuba
@@ -698715,8 +698715,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 128.3333
-# !latitude: -14.7500
+# !longitude: 128.3294
+# !latitude: -14.7520
 # note: 2026-10-18 BOM-Tafelfit WA_TP050 ersetzt harmonics-2004-06-14_mod; FES 17.2 gegen 26.1 cm; Name/Position uebernommen (Oliver).
 Lacrosse Island, Western Australia, Australia
 +00:00 :UTC
@@ -699111,8 +699111,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 128.7833
-# !latitude: -14.7667
+# !longitude: 128.7763
+# !latitude: -14.7678
 # note: 2026-10-18 BOM-Tafelfit WA_TP061 ersetzt harmonics-2004-06-14_mod; FES 11.7 gegen 20.3 cm; Name/Position uebernommen (Oliver).
 Pelican Island (North Coast), Western Australia, Australia
 +00:00 :UTC
@@ -700299,8 +700299,8 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 126.7000
-# !latitude: -14.1000
+# !longitude: 126.6490
+# !latitude: -14.0473
 # note: 2026-10-18 BOM-Tafelfit WA_TP080 ersetzt harmonics-2004-06-14_mod; FES 4.6 gegen 6.8 cm; Name/Position uebernommen (Oliver).
 Napier Broome Bay, Western Australia, Australia
 +00:00 :UTC
@@ -709611,9 +709611,10 @@ x 0 0
 # datum: LAT
 # confidence: 7
 # !units: meters
-# !longitude: 131.7667
-# !latitude: -11.3167
+# !longitude: 131.7708
+# !latitude: -11.3109
 # note: 2026-10-18 BOM-Tafelfit NT_TP040 ersetzt harmonics-2004-06-14_mod; FES 4.7 gegen 12.6 cm; Name/Position uebernommen (Oliver).
+# note: 2026-10-19 Nordseite des Kaps: Satz passt zu FES dort (-6 min), nicht zur Suedseite/Dundas Strait (+40 min); Minutenposition lag an Land (Oliver).
 Cape Don, Northern Territory, Australia
 +00:00 :UTC
 1.8745 meters
