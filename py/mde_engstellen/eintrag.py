@@ -21,7 +21,7 @@ def geo(a, b, c, d):
 
 
 def fit(st):
-    teile = [pickle.load(open(S + 'mde2/' + p, 'rb'))[k] for p, k in st['teile']]
+    teile = [pickle.load(open(S + p, 'rb'))[k] for p, k in st['teile']]
     dfs = [t['df'] for t in teile]
     df = pd.concat(dfs).sort_index()
     df = df[~df.index.duplicated()]
@@ -38,7 +38,7 @@ def fit(st):
     else:
         L = max(dfs, key=len)
         konst = list(utide.solve(L.index.to_pydatetime(), L['u'].values, lat=la, constit='auto', nodal=True, trend=False,
-                                 method='ols', conf_int='none', verbose=False)['name'])
+                                 method='ols', conf_int='none', verbose=False)['name']) + st.get('plus', [])
     return C.analyse(df, la, konst), la, lo, None
 
 
