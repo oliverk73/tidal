@@ -135,7 +135,8 @@ class Atlas:
                 km = np.hypot((self.lat[j] - lat) * 111.2, (self.lon[i] - lon) * 111.2 * np.cos(np.radians(lat)))
                 if km > max_km or (best and km >= best[0]):
                     continue
-                if np.ma.is_masked(U[0, 0, 0, j, i]) or U[0, 0, 0, j, i] < -999:
+                z = np.ma.filled(U[:, :, 0, j, i].astype(float), np.nan)
+                if not np.isfinite(z).all() or (z < -999).any():      # auch trockenfallende Zellen meiden
                     continue
                 best = (km, j, i)
         if not best:
