@@ -114,7 +114,9 @@ class Atlas:
     def __init__(self, pfad):
         self.pfad = pfad
         d = netCDF4.Dataset(pfad)
-        self.port = d.getncattr('Portref').strip().upper()
+        self.port = d.getncattr('Portref').strip().upper().replace('-', ' ')
+        if self.port == 'SAINT MALO':
+            self.port = 'SAINT-MALO'
         self.bm = int(getattr(d, 'isBM', 0)) == 1
         self.lat = d['latitude'][:].astype(float)
         self.lon = d['longitude'][:].astype(float)
@@ -147,13 +149,17 @@ class Atlas:
         return u, v
 
 
-def reihe(atlas, j, i, jahr=2026, schritt_min=10):
-    """Synthetische Jahresreihe nach der Atlas-Regel."""
+def reihe(atlas, j, i, jahr=2026, schritt_min=10, versatz_min=0.0):
+    """Synthetische Jahresreihe nach der Atlas-Regel.
+
+    versatz_min: Zeitkorrektur des Atlas (negativ = Strom kommt frueher als der Atlas sagt).
+    """
     pfad = _hafen_finden(HAFEN[atlas.port][1])
     t0 = dt.datetime(jahr, 1, 1, tzinfo=dt.timezone.utc).timestamp()
     t = np.arange(t0 - 86400, t0 + 366 * 86400, 120.0)
     h = gezeit(pfad, HAFEN[atlas.port][1], t)
     tp, _ = scheitel(t, h, not atlas.bm)
+    tp = tp + versatz_min * 60.0
     tb, kb = koeffizient(jahr)
     kp = np.interp(tp, tb, kb)
     ts = np.arange(t0, t0 + 365 * 86400, schritt_min * 60.0)
@@ -169,12 +175,12 @@ def reihe(atlas, j, i, jahr=2026, schritt_min=10):
     return pd.DataFrame({'u': uu, 'v': vv}, index=idx)
 
 
-def fit(atlas, lat, lon, jahr=2026):
-    z = atlas.zelle(lat, lon)
+def fit(atlas, lat, lon, jahr=2026, versatz_min=0.0, max_km=3.0):
+    z = atlas.zelle(lat, lon, max_km)
     if not z:
         return None
     j, i, la, lo = z
-    df = reihe(atlas, j, i, jahr)
+    df = reihe(atlas, j, i, jahr, versatz_min=versatz_min)
     r = C.analyse(df, la, KONST)
     r['lat'], r['lon'] = la, lo
     return r
