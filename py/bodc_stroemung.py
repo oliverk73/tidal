@@ -83,6 +83,9 @@ def reihe(pfad, boden=float('nan')):
         if dep.ndim == 1:
             dep = np.tile(dep, (u.shape[0], 1)) if dep.shape[0] == u.shape[1] else np.tile(dep[:, None], (1, u.shape[1]))
         kand = [j for j in range(u.shape[1]) if n[j] >= 0.8 * n.max()]
+        if 'HBINAA01' in v:                              # Reichweite: ferne Zellen messen fast nichts (Dover 1 MHz)
+            sp = np.nanmedian(np.hypot(u, w), axis=0)
+            kand = [j for j in kand if sp[j] >= 0.8 * np.nanmax(sp[kand])]
         tiefen = [np.nanmedian(dep[:, j]) if np.isfinite(dep[:, j]).any() else np.inf for j in kand]
         j = kand[int(np.argmin(np.abs(tiefen)))]
         u, w, tiefe = u[:, j], w[:, j], tiefen[int(np.argmin(np.abs(tiefen)))]
