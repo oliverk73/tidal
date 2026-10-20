@@ -21685,7 +21685,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 561 (ATLASDYN-SURF_TELEMAC3D-SURF_R1122000_BAIE-DE-SEINE-561-500M-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -21703,7 +21703,7 @@ x 0 0
 # major_axis_deg_true: 132.4
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1122000_BAIE-DE-SEINE-561-500M-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -1.2289
@@ -21713,16 +21713,16 @@ Raz de Barfleur (SHOM atlas 561), France Current
 -0.0461 knots
 x 0 0
 x 0 0
-K2              0.4351  228.22
-L2              0.1659  203.53
+K2              0.4351  242.26
+L2              0.1659  217.31
 x 0 0
-M2              4.1000  191.39
+M2              4.1000  204.92
 x 0 0
-M4              0.1964  332.39
-M6              0.2369  115.48
-M8              0.0036  57.93
-N2              0.8131  169.82
-2N2             0.1567  148.25
+M4              0.1964  359.44
+M6              0.2369  156.06
+M8              0.0036  112.03
+N2              0.8131  183.09
+2N2             0.1567  161.27
 x 0 0
 x 0 0
 x 0 0
@@ -21730,22 +21730,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              1.4798  231.41
-S4              0.0183  55.01
+S2              1.4798  245.41
+S4              0.0183  83.01
 x 0 0
-T2              0.0867  225.04
-LDA2            0.0386  168.32
-MU2             0.0999  273.90
-NU2             0.1941  172.56
+T2              0.0867  239.02
+LDA2            0.0386  182.07
+MU2             0.0999  286.95
+NU2             0.1941  185.87
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0912  326.91
-MS4             0.1452  353.39
+MN4             0.0912  353.71
+MS4             0.1452  20.92
 x 0 0
 x 0 0
-MSF             0.1126  220.89
-MM              0.0878  205.05
+MSF             0.1126  221.36
+MM              0.0878  205.30
 x 0 0
 x 0 0
 x 0 0
@@ -21757,8 +21757,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.1358  93.35
-2MS6            0.2430  156.86
+2MN6            0.1358  133.67
+2MS6            0.2430  197.91
 x 0 0
 x 0 0
 x 0 0
@@ -21778,18 +21778,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0420  349.66
+MK4             0.0420  17.22
 x 0 0
 x 0 0
-EPS2            0.0405  216.47
+EPS2            0.0405  229.27
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0473  20.59
-MSN6            0.0698  130.02
+MSN2            0.0473  34.84
+MSN6            0.0698  170.82
 x 0 0
 x 0 0
 x 0 0
@@ -21804,7 +21804,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0267  9.66
+SN4             0.0267  36.93
 x 0 0
 x 0 0
 x 0 0
@@ -21888,7 +21888,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 561 (ATLASDYN-SURF_TELEMAC3D-SURF_R1122000_BAIE-DE-SEINE-561-500M-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -21906,7 +21906,7 @@ x 0 0
 # major_axis_deg_true: 93.8
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1122000_BAIE-DE-SEINE-561-500M-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -1.6179
@@ -21916,16 +21916,16 @@ Cherbourg (6 km N; SHOM atlas 561), France Current
 0.2060 knots
 x 0 0
 x 0 0
-K2              0.2500  220.88
-L2              0.0914  220.06
+K2              0.2500  234.92
+L2              0.0914  233.84
 x 0 0
-M2              2.3490  189.58
+M2              2.3490  203.11
 x 0 0
-M4              0.0457  279.92
-M6              0.0758  122.51
-M8              0.0120  90.64
-N2              0.4711  162.37
-2N2             0.0907  158.82
+M4              0.0457  306.97
+M6              0.0758  163.09
+M8              0.0120  144.74
+N2              0.4711  175.64
+2N2             0.0907  171.84
 x 0 0
 x 0 0
 x 0 0
@@ -21933,22 +21933,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.8457  223.43
-S4              0.0030  354.63
+S2              0.8457  237.43
+S4              0.0030  22.63
 x 0 0
-T2              0.0482  217.38
-LDA2            0.0134  238.74
-MU2             0.0577  43.23
-NU2             0.1113  182.56
+T2              0.0482  231.36
+LDA2            0.0134  252.49
+MU2             0.0577  56.28
+NU2             0.1113  195.87
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0174  306.05
-MS4             0.0475  296.95
+MN4             0.0174  332.85
+MS4             0.0475  324.48
 x 0 0
 x 0 0
-MSF             0.0454  22.83
-MM              0.0040  235.46
+MSF             0.0454  23.30
+MM              0.0040  235.71
 x 0 0
 x 0 0
 x 0 0
@@ -21960,8 +21960,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0442  96.93
-2MS6            0.0762  168.27
+2MN6            0.0442  137.25
+2MS6            0.0762  209.32
 x 0 0
 x 0 0
 x 0 0
@@ -21981,18 +21981,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0142  291.14
+MK4             0.0142  318.70
 x 0 0
 x 0 0
-EPS2            0.0174  189.43
+EPS2            0.0174  202.23
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0165  35.84
-MSN6            0.0242  133.88
+MSN2            0.0165  50.09
+MSN6            0.0242  174.68
 x 0 0
 x 0 0
 x 0 0
@@ -22007,7 +22007,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0041  356.82
+SN4             0.0041  24.09
 x 0 0
 x 0 0
 x 0 0
@@ -24730,7 +24730,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 561 (ATLASDYN-SURF_TELEMAC3D-SURF_R1122000_BAIE-DE-SEINE-561-500M-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -24748,7 +24748,7 @@ x 0 0
 # major_axis_deg_true: 39.0
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1122000_BAIE-DE-SEINE-561-500M-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: 0.0770
@@ -24758,16 +24758,16 @@ Cap d'Antifer (7 km W; SHOM atlas 561), France Current
 0.0855 knots
 x 0 0
 x 0 0
-K2              0.1483  276.63
-L2              0.0649  255.77
+K2              0.1483  290.67
+L2              0.0649  269.55
 x 0 0
-M2              1.4418  239.66
+M2              1.4418  253.19
 x 0 0
-M4              0.1740  101.07
-M6              0.0817  319.10
-M8              0.0091  107.62
-N2              0.2764  217.62
-2N2             0.0579  193.85
+M4              0.1740  128.12
+M6              0.0817  359.68
+M8              0.0091  161.72
+N2              0.2764  230.89
+2N2             0.0579  206.87
 x 0 0
 x 0 0
 x 0 0
@@ -24775,22 +24775,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5016  279.82
-S4              0.0188  225.19
+S2              0.5016  293.82
+S4              0.0188  253.19
 x 0 0
-T2              0.0296  273.97
-LDA2            0.0167  231.89
-MU2             0.0502  335.16
-NU2             0.0725  219.95
+T2              0.0296  287.95
+LDA2            0.0167  245.64
+MU2             0.0502  348.21
+NU2             0.0725  233.26
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0768  89.09
-MS4             0.1231  151.98
+MN4             0.0768  115.89
+MS4             0.1231  179.51
 x 0 0
 x 0 0
-MSF             0.0230  198.51
-MM              0.0217  199.58
+MSF             0.0230  198.98
+MM              0.0217  199.83
 x 0 0
 x 0 0
 x 0 0
@@ -24802,8 +24802,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0456  298.96
-2MS6            0.0974  354.25
+2MN6            0.0456  339.28
+2MS6            0.0974  35.30
 x 0 0
 x 0 0
 x 0 0
@@ -24823,18 +24823,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0355  149.14
+MK4             0.0355  176.70
 x 0 0
 x 0 0
-EPS2            0.0147  269.15
+EPS2            0.0147  281.95
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0180  80.27
-MSN6            0.0241  336.92
+MSN2            0.0180  94.52
+MSN6            0.0241  17.72
 x 0 0
 x 0 0
 x 0 0
@@ -24849,7 +24849,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0245  155.55
+SN4             0.0245  182.82
 x 0 0
 x 0 0
 x 0 0
@@ -27572,7 +27572,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 564 (ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -27590,7 +27590,7 @@ x 0 0
 # major_axis_deg_true: 82.7
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: 0.2505
@@ -27600,16 +27600,16 @@ Beachy Head (3 km SSE; SHOM atlas 564), England, United Kingdom Current
 -0.0248 knots
 x 0 0
 x 0 0
-K2              0.1813  265.93
-L2              0.0671  226.19
+K2              0.1813  279.97
+L2              0.0671  239.97
 x 0 0
-M2              1.6587  225.07
+M2              1.6587  238.60
 x 0 0
-M4              0.2757  86.55
-M6              0.0521  262.56
-M8              0.0094  111.61
-N2              0.3379  206.81
-2N2             0.0596  170.85
+M4              0.2757  113.60
+M6              0.0521  303.14
+M8              0.0094  165.71
+N2              0.3379  220.08
+2N2             0.0596  183.87
 x 0 0
 x 0 0
 x 0 0
@@ -27617,22 +27617,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.6203  269.26
-S4              0.0206  208.10
+S2              0.6203  283.26
+S4              0.0206  236.10
 x 0 0
-T2              0.0370  262.06
-LDA2            0.0232  179.19
-MU2             0.0902  276.31
-NU2             0.0753  196.90
+T2              0.0370  276.04
+LDA2            0.0232  192.94
+MU2             0.0902  289.36
+NU2             0.0753  210.21
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1124  72.76
-MS4             0.1826  133.71
+MN4             0.1124  99.56
+MS4             0.1826  161.24
 x 0 0
 x 0 0
-MSF             0.0161  71.66
-MM              0.0089  189.00
+MSF             0.0161  72.13
+MM              0.0089  189.25
 x 0 0
 x 0 0
 x 0 0
@@ -27644,8 +27644,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0291  241.31
-2MS6            0.0656  299.83
+2MN6            0.0291  281.63
+2MS6            0.0656  340.88
 x 0 0
 x 0 0
 x 0 0
@@ -27665,18 +27665,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0534  130.44
+MK4             0.0534  158.00
 x 0 0
 x 0 0
-EPS2            0.0227  252.53
+EPS2            0.0227  265.33
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0237  46.04
-MSN6            0.0163  274.90
+MSN2            0.0237  60.29
+MSN6            0.0163  315.70
 x 0 0
 x 0 0
 x 0 0
@@ -27691,7 +27691,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0293  136.42
+SN4             0.0293  163.69
 x 0 0
 x 0 0
 x 0 0
@@ -27775,7 +27775,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 564 (ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -27793,7 +27793,7 @@ x 0 0
 # major_axis_deg_true: 63.9
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -0.7822
@@ -27803,16 +27803,16 @@ Selsey Bill (4 km S; SHOM atlas 564), England, United Kingdom Current
 -0.1026 knots
 x 0 0
 x 0 0
-K2              0.1477  215.03
-L2              0.0777  184.06
+K2              0.1477  229.07
+L2              0.0777  197.84
 x 0 0
-M2              1.4987  175.33
+M2              1.4987  188.86
 x 0 0
-M4              0.0982  88.09
-M6              0.0569  110.05
-M8              0.0037  319.75
-N2              0.2760  156.20
-2N2             0.0646  128.07
+M4              0.0982  115.14
+M6              0.0569  150.63
+M8              0.0037  13.85
+N2              0.2760  169.47
+2N2             0.0646  141.09
 x 0 0
 x 0 0
 x 0 0
@@ -27820,22 +27820,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.4998  218.85
-S4              0.0076  235.90
+S2              0.4998  232.85
+S4              0.0076  263.90
 x 0 0
-T2              0.0299  213.41
-LDA2            0.0259  162.60
-MU2             0.0827  275.88
-NU2             0.0811  152.63
+T2              0.0299  227.39
+LDA2            0.0259  176.35
+MU2             0.0827  288.93
+NU2             0.0811  165.94
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0394  69.26
-MS4             0.0631  151.73
+MN4             0.0394  96.06
+MS4             0.0631  179.26
 x 0 0
 x 0 0
-MSF             0.0481  224.08
-MM              0.0323  206.32
+MSF             0.0481  224.55
+MM              0.0323  206.57
 x 0 0
 x 0 0
 x 0 0
@@ -27847,8 +27847,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0305  87.22
-2MS6            0.0579  157.70
+2MN6            0.0305  127.54
+2MS6            0.0579  198.75
 x 0 0
 x 0 0
 x 0 0
@@ -27868,18 +27868,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0186  148.96
+MK4             0.0186  176.52
 x 0 0
 x 0 0
-EPS2            0.0144  217.38
+EPS2            0.0144  230.18
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0238  14.65
-MSN6            0.0121  128.80
+MSN2            0.0238  28.90
+MSN6            0.0121  169.60
 x 0 0
 x 0 0
 x 0 0
@@ -27894,7 +27894,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0095  149.73
+SN4             0.0095  177.00
 x 0 0
 x 0 0
 x 0 0
@@ -27978,7 +27978,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 564 (ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -27996,7 +27996,7 @@ x 0 0
 # major_axis_deg_true: 101.8
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -1.3124
@@ -28006,16 +28006,16 @@ St Catherine's Point (4 km SSW; SHOM atlas 564), England, United Kingdom Current
 0.1210 knots
 x 0 0
 x 0 0
-K2              0.3576  240.89
-L2              0.1492  208.52
+K2              0.3576  254.93
+L2              0.1492  222.30
 x 0 0
-M2              3.4283  201.58
+M2              3.4283  215.11
 x 0 0
-M4              0.1206  103.86
-M6              0.1713  130.50
-M8              0.0092  93.25
-N2              0.6745  182.10
-2N2             0.1340  152.78
+M4              0.1206  130.91
+M6              0.1713  171.08
+M8              0.0092  147.35
+N2              0.6745  195.37
+2N2             0.1340  165.80
 x 0 0
 x 0 0
 x 0 0
@@ -28023,22 +28023,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              1.2182  244.31
-S4              0.0058  225.58
+S2              1.2182  258.31
+S4              0.0058  253.58
 x 0 0
-T2              0.0724  237.92
-LDA2            0.0448  173.24
-MU2             0.1480  276.24
-NU2             0.1671  177.88
+T2              0.0724  251.90
+LDA2            0.0448  186.99
+MU2             0.1480  289.29
+NU2             0.1671  191.19
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0570  72.14
-MS4             0.0647  171.32
+MN4             0.0570  98.94
+MS4             0.0647  198.85
 x 0 0
 x 0 0
-MSF             0.0680  40.81
-MM              0.0035  173.93
+MSF             0.0680  41.28
+MM              0.0035  174.18
 x 0 0
 x 0 0
 x 0 0
@@ -28050,8 +28050,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0959  108.55
-2MS6            0.1799  174.83
+2MN6            0.0959  148.87
+2MS6            0.1799  215.88
 x 0 0
 x 0 0
 x 0 0
@@ -28071,18 +28071,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0194  170.01
+MK4             0.0194  197.57
 x 0 0
 x 0 0
-EPS2            0.0390  232.59
+EPS2            0.0390  245.39
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0465  30.90
-MSN6            0.0462  148.55
+MSN2            0.0465  45.15
+MSN6            0.0462  189.35
 x 0 0
 x 0 0
 x 0 0
@@ -28097,7 +28097,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0123  125.64
+SN4             0.0123  152.91
 x 0 0
 x 0 0
 x 0 0
@@ -28181,7 +28181,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 564 (ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -28199,7 +28199,7 @@ x 0 0
 # major_axis_deg_true: 96.9
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -2.0660
@@ -28209,16 +28209,16 @@ St Alban's Head (4 km S; SHOM atlas 564), England, United Kingdom Current
 -0.0458 knots
 x 0 0
 x 0 0
-K2              0.2827  237.61
-L2              0.1127  213.57
+K2              0.2827  251.65
+L2              0.1127  227.35
 x 0 0
-M2              2.7164  200.55
+M2              2.7164  214.08
 x 0 0
-M4              0.1013  199.33
-M6              0.0844  141.80
-M8              0.0189  140.16
-N2              0.5359  178.93
-2N2             0.1069  156.46
+M4              0.1013  226.38
+M6              0.0844  182.38
+M8              0.0189  194.26
+N2              0.5359  192.20
+2N2             0.1069  169.48
 x 0 0
 x 0 0
 x 0 0
@@ -28226,22 +28226,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.9612  240.81
-S4              0.0089  320.78
+S2              0.9612  254.81
+S4              0.0089  348.78
 x 0 0
-T2              0.0564  234.67
-LDA2            0.0272  182.22
-MU2             0.0776  288.88
-NU2             0.1319  181.30
+T2              0.0564  248.65
+LDA2            0.0272  195.97
+MU2             0.0776  301.93
+NU2             0.1319  194.61
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0262  174.53
-MS4             0.0975  253.28
+MN4             0.0262  201.33
+MS4             0.0975  280.81
 x 0 0
 x 0 0
-MSF             0.0029  36.45
-MM              0.0272  203.19
+MSF             0.0029  36.92
+MM              0.0272  203.44
 x 0 0
 x 0 0
 x 0 0
@@ -28253,8 +28253,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0454  117.90
-2MS6            0.0836  194.66
+2MN6            0.0454  158.22
+2MS6            0.0836  235.71
 x 0 0
 x 0 0
 x 0 0
@@ -28274,18 +28274,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0292  249.40
+MK4             0.0292  276.96
 x 0 0
 x 0 0
-EPS2            0.0273  228.11
+EPS2            0.0273  240.91
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0314  33.26
-MSN6            0.0171  155.30
+MSN2            0.0314  47.51
+MSN6            0.0171  196.10
 x 0 0
 x 0 0
 x 0 0
@@ -28300,7 +28300,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0071  247.67
+SN4             0.0071  274.94
 x 0 0
 x 0 0
 x 0 0
@@ -28384,7 +28384,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 564 (ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -28402,7 +28402,7 @@ x 0 0
 # major_axis_deg_true: 100.5
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -2.4567
@@ -28412,16 +28412,16 @@ Portland Bill (2 km S; SHOM atlas 564), England, United Kingdom Current
 0.1186 knots
 x 0 0
 x 0 0
-K2              0.3260  224.11
-L2              0.1550  205.07
+K2              0.3260  238.15
+L2              0.1550  218.85
 x 0 0
-M2              3.2744  188.14
+M2              3.2744  201.67
 x 0 0
-M4              0.1917  136.00
-M6              0.1041  97.70
-M8              0.0128  135.16
-N2              0.6165  165.56
-2N2             0.1380  146.55
+M4              0.1917  163.05
+M6              0.1041  138.28
+M8              0.0128  189.26
+N2              0.6165  178.83
+2N2             0.1380  159.57
 x 0 0
 x 0 0
 x 0 0
@@ -28429,22 +28429,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              1.1004  227.42
-S4              0.0038  278.94
+S2              1.1004  241.42
+S4              0.0038  306.94
 x 0 0
-T2              0.0646  222.13
-LDA2            0.0409  189.23
-MU2             0.1185  308.08
-NU2             0.1713  171.10
+T2              0.0646  236.11
+LDA2            0.0409  202.98
+MU2             0.1185  321.13
+NU2             0.1713  184.41
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0566  103.43
-MS4             0.1236  193.05
+MN4             0.0566  130.23
+MS4             0.1236  220.58
 x 0 0
 x 0 0
-MSF             0.0800  31.92
-MM              0.0049  13.62
+MSF             0.0800  32.39
+MM              0.0049  13.87
 x 0 0
 x 0 0
 x 0 0
@@ -28456,8 +28456,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0544  73.55
-2MS6            0.0932  145.15
+2MN6            0.0544  113.87
+2MS6            0.0932  186.20
 x 0 0
 x 0 0
 x 0 0
@@ -28477,18 +28477,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0378  189.13
+MK4             0.0378  216.69
 x 0 0
 x 0 0
-EPS2            0.0269  219.15
+EPS2            0.0269  231.95
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0406  32.32
-MSN6            0.0163  94.88
+MSN2            0.0406  46.57
+MSN6            0.0163  135.68
 x 0 0
 x 0 0
 x 0 0
@@ -28503,7 +28503,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0053  135.48
+SN4             0.0053  162.75
 x 0 0
 x 0 0
 x 0 0
@@ -28587,7 +28587,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 564 (ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -28605,7 +28605,7 @@ x 0 0
 # major_axis_deg_true: 69.6
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -3.6289
@@ -28615,16 +28615,16 @@ Start Point (4 km SSE; SHOM atlas 564), England, United Kingdom Current
 -0.0132 knots
 x 0 0
 x 0 0
-K2              0.1914  203.42
-L2              0.0465  228.12
+K2              0.1914  217.46
+L2              0.0465  241.90
 x 0 0
-M2              1.6233  175.87
+M2              1.6233  189.40
 x 0 0
-M4              0.1327  259.05
-M6              0.0257  348.20
-M8              0.0012  192.20
-N2              0.3601  145.14
-2N2             0.0546  160.89
+M4              0.1327  286.10
+M6              0.0257  28.78
+M8              0.0012  246.30
+N2              0.3601  158.41
+2N2             0.0546  173.91
 x 0 0
 x 0 0
 x 0 0
@@ -28632,22 +28632,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.6527  205.34
-S4              0.0158  352.26
+S2              0.6527  219.34
+S4              0.0158  20.26
 x 0 0
-T2              0.0363  197.75
-LDA2            0.0167  318.33
-MU2             0.1148  79.36
-NU2             0.0656  182.98
+T2              0.0363  211.73
+LDA2            0.0167  332.08
+MU2             0.1148  92.41
+NU2             0.0656  196.29
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0562  250.78
-MS4             0.1172  293.32
+MN4             0.0562  277.58
+MS4             0.1172  320.85
 x 0 0
 x 0 0
-MSF             0.0217  268.43
-MM              0.0222  213.65
+MSF             0.0217  268.90
+MM              0.0222  213.90
 x 0 0
 x 0 0
 x 0 0
@@ -28659,8 +28659,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0168  343.52
-2MS6            0.0309  6.48
+2MN6            0.0168  23.84
+2MS6            0.0309  47.53
 x 0 0
 x 0 0
 x 0 0
@@ -28680,18 +28680,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0340  289.88
+MK4             0.0340  317.44
 x 0 0
 x 0 0
-EPS2            0.0170  146.50
+EPS2            0.0170  159.30
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0021  310.68
-MSN6            0.0091  44.28
+MSN2            0.0021  324.93
+MSN6            0.0091  85.08
 x 0 0
 x 0 0
 x 0 0
@@ -28706,7 +28706,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0200  299.04
+SN4             0.0200  326.31
 x 0 0
 x 0 0
 x 0 0
@@ -28790,7 +28790,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 564 (ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -28808,7 +28808,7 @@ x 0 0
 # major_axis_deg_true: 109.8
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -4.2429
@@ -28818,16 +28818,16 @@ Rame Head (4 km SSW; SHOM atlas 564), England, United Kingdom Current
 -0.0009 knots
 x 0 0
 x 0 0
-K2              0.0644  183.02
-L2              0.0102  247.08
+K2              0.0644  197.06
+L2              0.0102  260.86
 x 0 0
-M2              0.4841  156.71
+M2              0.4841  170.24
 x 0 0
-M4              0.0452  248.81
-M6              0.0086  27.64
-M8              0.0031  357.41
-N2              0.1208  124.46
-2N2             0.0130  163.79
+M4              0.0452  275.86
+M6              0.0086  68.22
+M8              0.0031  51.51
+N2              0.1208  137.73
+2N2             0.0130  176.81
 x 0 0
 x 0 0
 x 0 0
@@ -28835,22 +28835,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2216  184.53
-S4              0.0039  343.30
+S2              0.2216  198.53
+S4              0.0039  11.30
 x 0 0
-T2              0.0122  175.10
-LDA2            0.0107  325.47
-MU2             0.0638  79.41
-NU2             0.0152  183.21
+T2              0.0122  189.08
+LDA2            0.0107  339.22
+MU2             0.0638  92.46
+NU2             0.0152  196.52
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0180  242.94
-MS4             0.0361  283.47
+MN4             0.0180  269.74
+MS4             0.0361  311.00
 x 0 0
 x 0 0
-MSF             0.0085  308.98
-MM              0.0040  232.32
+MSF             0.0085  309.45
+MM              0.0040  232.57
 x 0 0
 x 0 0
 x 0 0
@@ -28862,8 +28862,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0061  15.29
-2MS6            0.0070  63.02
+2MN6            0.0061  55.61
+2MS6            0.0070  104.07
 x 0 0
 x 0 0
 x 0 0
@@ -28883,18 +28883,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0105  279.39
+MK4             0.0105  306.95
 x 0 0
 x 0 0
-EPS2            0.0084  118.78
+EPS2            0.0084  131.58
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0037  220.68
-MSN6            0.0032  86.57
+MSN2            0.0037  234.93
+MSN6            0.0032  127.37
 x 0 0
 x 0 0
 x 0 0
@@ -28909,7 +28909,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0053  294.01
+SN4             0.0053  321.28
 x 0 0
 x 0 0
 x 0 0
@@ -28993,7 +28993,7 @@ x 0 0
 x 0 0
 # Harmonic constants derived from the Shom tidal stream atlas 564 (ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min), surface layer, model output
 # Atlas rule: hours from HW Cherbourg, coefficients 45/95 interpolated (Brest coefficient), one synthetic year 2026
-# -28 min time correction (Cherbourg-referenced atlases late vs 6 UK ADCP sites)
+# no time correction (20261020: earlier -28 min came from our own hourly-mean time stamps; atlas 564 within +3 min of 6 UK ADCP sites)
 # Shom, 2026. Atlas de courants de maree 2D au format netcdf, https://dx.doi.org/10.17183/ATLASCOURANTS2D_NETCDF (Licence Ouverte 2.0)
 # (UTide v0.3.1, principal-axis projection)
 # 52560 10-minute samples, surface
@@ -29011,7 +29011,7 @@ x 0 0
 # major_axis_deg_true: 76.6
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1120000_MANCHE-564-2KM-5min
-# time_correction_min: -28
+# time_correction_min: 0
 # utide: period=2026-01-01..2026-12-31 const=25
 # !units: knots
 # !longitude: -5.1918
@@ -29021,16 +29021,16 @@ Lizard Point (3 km SSE; SHOM atlas 564), England, United Kingdom Current
 -0.4599 knots
 x 0 0
 x 0 0
-K2              0.2144  125.05
-L2              0.0097  288.58
+K2              0.2144  139.09
+L2              0.0097  302.36
 x 0 0
-M2              1.4785  90.93
+M2              1.4785  104.46
 x 0 0
-M4              0.0625  305.18
-M6              0.0158  88.83
-M8              0.0044  334.69
-N2              0.4011  66.07
-2N2             0.0094  77.89
+M4              0.0625  332.23
+M6              0.0158  129.41
+M8              0.0044  28.79
+N2              0.4011  79.34
+2N2             0.0094  90.91
 x 0 0
 x 0 0
 x 0 0
@@ -29038,22 +29038,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.7468  126.83
-S4              0.0038  106.63
+S2              0.7468  140.83
+S4              0.0038  134.63
 x 0 0
-T2              0.0425  116.23
-LDA2            0.0424  301.73
-MU2             0.2370  54.19
-NU2             0.0156  91.57
+T2              0.0425  130.21
+LDA2            0.0424  315.48
+MU2             0.2370  67.24
+NU2             0.0156  104.88
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0333  288.11
-MS4             0.0289  10.93
+MN4             0.0333  314.91
+MS4             0.0289  38.46
 x 0 0
 x 0 0
-MSF             0.0470  359.25
-MM              0.0241  8.08
+MSF             0.0470  359.72
+MM              0.0241  8.33
 x 0 0
 x 0 0
 x 0 0
@@ -29065,8 +29065,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0097  54.58
-2MS6            0.0312  136.95
+2MN6            0.0097  94.90
+2MS6            0.0312  178.00
 x 0 0
 x 0 0
 x 0 0
@@ -29086,18 +29086,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0080  8.44
+MK4             0.0080  36.00
 x 0 0
 x 0 0
-EPS2            0.0370  77.99
+EPS2            0.0370  90.79
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0220  191.50
-MSN6            0.0087  115.19
+MSN2            0.0220  205.75
+MSN6            0.0087  155.99
 x 0 0
 x 0 0
 x 0 0
@@ -29112,7 +29112,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0076  357.21
+SN4             0.0076  24.48
 x 0 0
 x 0 0
 x 0 0

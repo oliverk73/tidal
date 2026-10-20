@@ -94,12 +94,33 @@ def laden(k):
     return ziel
 
 
+def stundenmittel(df):
+    """Stundenmittel, gestempelt mit der mittleren Zeit der gemittelten Werte.
+
+    df.resample('1h').mean() stempelt an den Beginn der Stunde: bei 10-min-Werten liegt das
+    Mittel 25 min spaeter als sein Stempel, der Fit kommt 25 min zu frueh heraus (bis 20.10.2026
+    so in BODC/CMEMS/MDE-Fits; Gegenprobe ueber den Druck der Anglian-ADCPs).
+    """
+    t = pd.DatetimeIndex(df.index).as_unit('ns')
+    g = t.floor('1h')
+    m = df.groupby(g).mean()
+    tm = pd.Series(t.asi8, index=t).groupby(g).mean()
+    m.index = pd.to_datetime(tm.values.astype('int64'))
+    return m.dropna()
+
+
+def stempelfehler_min(t):
+    """Minuten, um die resample('1h').mean() die Reihe zu frueh stempelt (Mittel ueber die Stunden)."""
+    t = pd.DatetimeIndex(t)
+    return float(pd.Series((t - t.floor('1h')).total_seconds() / 60, index=t).groupby(t.floor('1h')).mean().mean())
+
+
 def gut(qc):
     return np.isin(np.asarray(qc), [1, 2]) if qc is not None else True
 
 
-def reihe(pfad):
-    """-> (DataFrame u,v in m/s stuendlich, lat, lon, tiefe) oder None."""
+def reihe(pfad, roh=False):
+    """-> (DataFrame u,v in m/s stuendlich -- roh=True: ungemittelt, lat, lon, tiefe) oder None."""
     ds = xr.open_dataset(pfad, decode_times=True)
     if 'EWCT' in ds and 'NSCT' in ds:
         u, v = ds['EWCT'].values, ds['NSCT'].values
@@ -125,7 +146,7 @@ def reihe(pfad):
     t = pd.to_datetime(ds['TIME'].values)
     df = pd.DataFrame({'u': u[:, j], 'v': v[:, j]}, index=t).dropna()
     df = df[(df['u'].abs() < 5) & (df['v'].abs() < 5)]
-    df = df.resample('1h').mean().dropna()
+    df = df if roh else stundenmittel(df)
     lat = float(np.nanmedian(ds['LATITUDE'].values))
     lon = float(np.nanmedian(ds['LONGITUDE'].values))
     tiefe = float(np.nanmedian(deph[:, j])) if np.isfinite(deph[:, j]).any() else float('nan')

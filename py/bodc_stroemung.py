@@ -45,8 +45,8 @@ def metadaten():
     return out
 
 
-def reihe(pfad, boden=float('nan')):
-    """-> (DataFrame u,v m/s stuendlich, Tiefe der gewaehlten Ebene) oder None."""
+def reihe(pfad, boden=float('nan'), roh=False):
+    """-> (DataFrame u,v m/s stuendlich -- roh=True: ungemittelt, Tiefe der gewaehlten Ebene) oder None."""
     d = netCDF4.Dataset(pfad)
     v = d.variables
     if 'AADYAA01' not in v or 'ALATGP01' in v:          # Profile ohne Zeit / Schiffs-ADCP in Fahrt
@@ -91,7 +91,7 @@ def reihe(pfad, boden=float('nan')):
         u, w, tiefe = u[:, j], w[:, j], tiefen[int(np.argmin(np.abs(tiefen)))]
     df = pd.DataFrame({'u': u, 'v': w}, index=t).dropna()
     df = df[(df['u'].abs() < 5) & (df['v'].abs() < 5)]
-    return df.resample('1h').mean().dropna(), tiefe
+    return (df if roh else C.stundenmittel(df)), tiefe
 
 
 def main():
