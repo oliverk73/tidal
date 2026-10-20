@@ -45,7 +45,7 @@ def metadaten():
     return out
 
 
-def reihe(pfad):
+def reihe(pfad, boden=float('nan')):
     """-> (DataFrame u,v m/s stuendlich, Tiefe der gewaehlten Ebene) oder None."""
     d = netCDF4.Dataset(pfad)
     v = d.variables
@@ -74,7 +74,12 @@ def reihe(pfad):
         n = np.isfinite(u).sum(axis=0)
         if n.max() == 0:
             return None
-        dep = wert('DBINAA01') if 'DBINAA01' in v else np.tile(np.arange(u.shape[1], dtype=float), (u.shape[0], 1))
+        if 'HBINAA01' in v:                              # Hoehe ueber Grund (Liverpool Bay): Tiefe = Wassertiefe - Hoehe
+            hab = np.asarray(v['HBINAA01'][:], float)
+            wt = np.nanmedian(wert('ASLVMWHA')) if 'ASLVMWHA' in v else boden
+            dep = np.tile((wt if math.isfinite(wt) else 1000) - hab, (u.shape[0], 1))
+        else:
+            dep = wert('DBINAA01') if 'DBINAA01' in v else np.tile(np.arange(u.shape[1], dtype=float), (u.shape[0], 1))
         if dep.ndim == 1:
             dep = np.tile(dep, (u.shape[0], 1)) if dep.shape[0] == u.shape[1] else np.tile(dep[:, None], (1, u.shape[1]))
         kand = [j for j in range(u.shape[1]) if n[j] >= 0.8 * n.max()]
@@ -95,7 +100,7 @@ def main():
         if not os.path.exists(pfad):
             continue
         try:
-            x = reihe(pfad)
+            x = reihe(pfad, float(m['Sea floor depth (m)'] or 'nan'))
             df, adcp_tiefe = x if x else (None, None)
         except Exception as e:                                       # noqa: BLE001
             print('  Fehler', ref, str(e)[:60])
