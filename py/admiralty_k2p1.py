@@ -6,7 +6,7 @@ Die Admiralty-Tafeln (NP201-208, alte TD4-Saetze) fuehren nur M2/S2/K1/O1 (+ Fla
 P1, rechnet XTide ohne sie -- Springhub und Jahresgang der Eintagstide stimmen dann nicht. Ergaenzt wie
 beim NP203-Import: K2 = 0,27*S2, P1 = 0,33*K1, jeweils mit der Greenwich-Phase der Haupttide
 (Gleichgewichtsverhaeltnisse, Admiralty-Verfahren). Nur Admiralty-Herkunft. Mit --stroeme die
-NP203/NP208-Stromsaetze (22.10.2026: dort waren N2/K2 schon inferiert, P1 fehlte); die Regel ist
+NP203/NP208-Stromsaetze (21.10.2026: dort waren N2/K2 schon inferiert, P1 fehlte); die Regel ist
 linear und gilt damit auch fuer die Stromkomponenten.
 
 Usage: python3 py/admiralty_k2p1.py [--stroeme] [--schreiben]

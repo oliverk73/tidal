@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""CSIRO-AusTEN-Stroemungssaetze ohne K2/P1 analytisch koppeln (Oliver 22.10.2026).
+"""CSIRO-AusTEN-Stroemungssaetze ohne K2/P1 analytisch koppeln (Oliver 21.10.2026).
 
 Die AusTEN-Konstanten (harmonics_utide_australia_oceancurrent.txt) stammen aus UTide-Fits an
 Reihen von 48-206 Tagen; bei UTas-ARENA, CSIRO und IMOS SAM6IS fehlen K2 und P1, ihr S2/K1
@@ -29,7 +29,7 @@ import xtide_modell as X                                            # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATEI = 'harmonics/utide/harmonics_utide_australia_oceancurrent.txt'
 NC = os.path.join(ROOT, 'currents/Australia_OceanCurrent/Aust_current_meter_tidal_cnstits_v2.nc')
-NOTIZ = '# note: 20261022 S2/K1 corrected for K2/P1 inside the %d-day window (ratio/lag of %s, %.0f km); K2/P1 added'
+NOTIZ = '# note: 20261021 S2/K1 corrected for K2/P1 inside the %d-day window (ratio/lag of %s, %.0f km); K2/P1 added'
 
 
 def fenster():
@@ -49,7 +49,7 @@ def bearbeite(text):
         kopf = '\n'.join(L[v:k])
         v = k
         m = re.search(r'station_id_context: AUSTEN-(\S+)', kopf)
-        if not m or '20261022 S2/K1 corrected' in kopf:
+        if not m or '20261021 S2/K1 corrected' in kopf:
             continue
         a, b = per[m.group(1)]
         t0, t1 = A.unix(a), A.unix(b) + 86400
