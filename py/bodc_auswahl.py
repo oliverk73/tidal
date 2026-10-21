@@ -11,13 +11,20 @@ def guete(g): return (g['r']['n'], g['r']['r2'])
 kand = []
 for g in G:
     if g['refs'][0] in AUS or any(r in AUS for r in g['refs']): continue
-    if g['r']['r2'] < 0.8 or g['r']['m2'] < 0.15: continue
     ng = min(osm_land.km(g['lat'], g['lon'], t['lat'], t['lon']) for t in PEG)
     g['offshore'] = ng > 30
+    if g['r']['r2'] < (0.8 if g['offshore'] else 0.6) or g['r']['m2'] < 0.15: continue   # Kueste 0,6 / See 0,8
     kand.append(g)
-wahl = []
+# Stationen dieser Lieferung, die schon im Bestand sind, zaehlen wie neue (Abstand 5/40 km statt 3/20 km)
+REFS = {r for r, m in M.items() if m['_dir'].endswith(sys.argv[1])}
+import re as _re
+_txt = open(F, encoding='iso-8859-1').read()
+_eigen = set(_re.findall(r'BODC (\d+)\), [^\n]*Current', _txt)) & REFS
+CUR_ALT = [c for c in CUR if not any('BODC %s)' % r in c['name'] for r in _eigen)]
+CUR_EIGEN = [c for c in CUR if c not in CUR_ALT]
+wahl = [dict(lat=c['lat'], lon=c['lon'], _bestand=True) for c in CUR_EIGEN]
 for g in sorted(kand, key=guete, reverse=True):
-    dmin_b = min(osm_land.km(g['lat'], g['lon'], c['lat'], c['lon']) for c in CUR)
+    dmin_b = min(osm_land.km(g['lat'], g['lon'], c['lat'], c['lon']) for c in CUR_ALT)
     dmin_n = min([osm_land.km(g['lat'], g['lon'], w['lat'], w['lon']) for w in wahl] or [1e9])
     a_b, a_n = (20, 40) if g['offshore'] else (3, 5)
     if dmin_b >= a_b and dmin_n >= a_n: wahl.append(g)
@@ -28,6 +35,7 @@ for g in sorted(kand, key=guete, reverse=True):
         if hs and g['r']['n'] > 1.5 * hs:
             print('BESSER ALS BESTAND? %s n=%d gegen %s n=%d (%.1f km)' % (g['refs'][0], g['r']['n'], c['name'][:50], hs, dmin_b))
 d = lambda x, y: (x - y + 180) % 360 - 180
+wahl = [g for g in wahl if not g.get('_bestand')]
 for g in wahl:
     m2 = g['r']['konst']['M2']; org = M[g['refs'][0]]['Organisation'][:18]
     nb = sorted(CUR, key=lambda c: osm_land.km(g['lat'], g['lon'], c['lat'], c['lon']))[:2]
