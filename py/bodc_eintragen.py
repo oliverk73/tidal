@@ -16,12 +16,14 @@ for x in W:
     if x['refs'][0] in OHNE:
         continue
     p = min(PEG, key=lambda t: osm_land.km(x['lat'], x['lon'], t['lat'], t['lon']))
-    ort = re.split(r' \(|, ', p['name'])[0]
+    ort = re.split(r' \(|, ', p['name'])[0].replace(' Of ', ' of ')
     land = p['name'].split(', ', 1)[1] if ', ' in p['name'] else 'United Kingdom'
     land = re.sub(r'^[^,]*\), ', '', land)
     d, dr = geo(p['lat'], p['lon'], x['lat'], x['lon'])
     ref = x['refs'][0]
     name = '%s (%.0f km %s, %.0f m deep; BODC %s), %s Current' % (ort, d, dr, x['tiefe'], ref, land)
+    if len(name) > 85:                                 # Tiefe steht auch im Kopf
+        name = '%s (%.0f km %s; BODC %s), %s Current' % (ort, d, dr, ref, land)
     assert len(name) <= 85 and name not in namen, name
     namen.add(name)
     k = dict(code='BODC%s' % ref, inst=x['inst'][:60])
