@@ -23940,6 +23940,7 @@ x 0 0
 # admin1_quelle: Ufer 5.7 km
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=1.27 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Rio Nunez Approaches, Guinea
 +00:00 :Africa/Conakry
 2.6500 meters
@@ -23957,7 +23958,7 @@ N2              0.4207  263.75
 x 0 0
 O1              0.0403  288.08
 x 0 0
-x 0 0
+P1              0.0487  18.04
 x 0 0
 x 0 0
 x 0 0
@@ -24135,6 +24136,7 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=1.72 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pointe Malouine, Guinea
 +00:00 :Africa/Conakry
 2.9000 meters
@@ -24152,7 +24154,7 @@ N2              0.4708  265.17
 x 0 0
 O1              0.0450  288.78
 x 0 0
-x 0 0
+P1              0.0545  18.79
 x 0 0
 x 0 0
 x 0 0
@@ -24330,6 +24332,7 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=1.95 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kanfarandé (Rio Nuñez), Guinea
 +00:00 :Africa/Conakry
 3.5000 meters
@@ -24347,7 +24350,7 @@ N2              0.5068  275.59
 x 0 0
 O1              0.0485  293.90
 x 0 0
-x 0 0
+P1              0.0587  24.31
 x 0 0
 x 0 0
 x 0 0
@@ -31106,6 +31109,7 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.85 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Madagho (Escravos River), Nigeria
 +01:00 :Africa/Lagos
 0.8600 meters
@@ -31123,7 +31127,7 @@ N2              0.0798  272.98
 x 0 0
 O1              0.0299  314.84
 x 0 0
-x 0 0
+P1              0.0363  98.48
 x 0 0
 x 0 0
 x 0 0
@@ -31301,6 +31305,7 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.85 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Rugged Point (Escravos River), Nigeria
 +01:00 :Africa/Lagos
 0.7500 meters
@@ -31318,7 +31323,7 @@ N2              0.0639  312.32
 x 0 0
 O1              0.0240  334.13
 x 0 0
-x 0 0
+P1              0.0291  119.29
 x 0 0
 x 0 0
 x 0 0
@@ -31496,6 +31501,7 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=1.00 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Burutu (Forcados River), Nigeria
 +01:00 :Africa/Lagos
 0.7000 meters
@@ -31513,7 +31519,7 @@ N2              0.0877  298.10
 x 0 0
 O1              0.0330  327.16
 x 0 0
-x 0 0
+P1              0.0399  111.78
 x 0 0
 x 0 0
 x 0 0
@@ -35358,6 +35364,7 @@ x 0 0
 # admin1_quelle: Ufer 2.2 km
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.73 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bimbia River Entrance, Cameroon
 +01:00 :Africa/Douala
 1.1000 meters
@@ -35375,7 +35382,7 @@ N2              0.1353  122.09
 x 0 0
 O1              0.0091  333.54
 x 0 0
-x 0 0
+P1              0.0416  18.64
 x 0 0
 x 0 0
 x 0 0
@@ -35551,6 +35558,7 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.82 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Tiko, Cameroon
 +01:00 :Africa/Douala
 1.2000 meters
@@ -35568,7 +35576,7 @@ N2              0.1500  155.27
 x 0 0
 O1              0.0100  349.81
 x 0 0
-x 0 0
+P1              0.0462  36.19
 x 0 0
 x 0 0
 x 0 0
@@ -35742,6 +35750,7 @@ x 0 0
 # !latitude: 3.9102
 # province: Littoral
 # admin1_quelle: Ufer 0.8 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cap Cameroun, Cameroon
 +01:00 :Africa/Douala
 1.4000 meters
@@ -35759,7 +35768,7 @@ N2              0.1501  148.16
 x 0 0
 O1              0.0100  346.32
 x 0 0
-x 0 0
+P1              0.0462  32.43
 x 0 0
 x 0 0
 x 0 0
@@ -35935,6 +35944,7 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=1.00 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Manoka, Cameroon
 +01:00 :Africa/Douala
 1.4200 meters
@@ -35952,7 +35962,7 @@ N2              0.1575  143.89
 x 0 0
 O1              0.0104  344.23
 x 0 0
-x 0 0
+P1              0.0485  30.17
 x 0 0
 x 0 0
 x 0 0
@@ -36128,6 +36138,7 @@ x 0 0
 # admin1_quelle: Ufer 1.1 km
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.64 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Malimba (Sanage River mouth), Cameroon
 +01:00 :Africa/Douala
 1.3200 meters
@@ -36145,7 +36156,7 @@ N2              0.0989  122.56
 x 0 0
 O1              0.0066  333.78
 x 0 0
-x 0 0
+P1              0.0304  18.89
 x 0 0
 x 0 0
 x 0 0
@@ -36321,6 +36332,7 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=1.00 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kribi, Cameroon
 +01:00 :Africa/Douala
 1.0000 meters
@@ -36338,7 +36350,7 @@ N2              0.1281  140.10
 x 0 0
 O1              0.0085  342.37
 x 0 0
-x 0 0
+P1              0.0394  28.17
 x 0 0
 x 0 0
 x 0 0

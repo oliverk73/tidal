@@ -14999,6 +14999,7 @@ MNUS2
 # !units: meters
 # !longitude: -15.9900
 # !latitude: 23.6050
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Dakhla Bar, Western Sahara
 +00:00 :Africa/El_Aaiun
 1.2800 meters
@@ -15016,7 +15017,7 @@ N2              0.1273  353.85
 x 0 0
 O1              0.0400  266.00
 x 0 0
-x 0 0
+P1              0.0198  34.00
 x 0 0
 x 0 0
 x 0 0
@@ -15190,6 +15191,7 @@ x 0 0
 # !latitude: 13.4440
 # region: Banjul
 # admin1_quelle: Ufer 1.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Banjul, Gambia
 +00:00 :Africa/Banjul
 0.9800 meters
@@ -15207,7 +15209,7 @@ N2              0.1026  267.10
 x 0 0
 O1              0.0400  269.00
 x 0 0
-x 0 0
+P1              0.0198  13.00
 x 0 0
 x 0 0
 x 0 0
@@ -15381,6 +15383,7 @@ x 0 0
 # !latitude: 10.6500
 # region: Boke
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Port Kamsar (Rio Nunez), Guinea
 +00:00 :Africa/Conakry
 3.0300 meters
@@ -15398,7 +15401,7 @@ N2              0.3135  239.10
 x 0 0
 O1              0.0300  276.00
 x 0 0
-x 0 0
+P1              0.0363  5.00
 x 0 0
 x 0 0
 x 0 0
@@ -15572,6 +15575,7 @@ x 0 0
 # !latitude: 8.4920
 # province: Western
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Freetown, Sierra Leone
 +00:00 :Africa/Freetown
 1.7600 meters
@@ -15589,7 +15593,7 @@ N2              0.1862  210.46
 x 0 0
 O1              0.0300  252.00
 x 0 0
-x 0 0
+P1              0.0363  0.00
 x 0 0
 x 0 0
 x 0 0
@@ -15763,6 +15767,7 @@ x 0 0
 # !latitude: 6.3330
 # region: Montserrado
 # admin1_quelle: Ufer 0.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Monrovia, Liberia
 +00:00 :Africa/Monrovia
 0.9000 meters
@@ -15780,7 +15785,7 @@ N2              0.0760  174.38
 x 0 0
 O1              0.0200  265.00
 x 0 0
-x 0 0
+P1              0.0264  352.00
 x 0 0
 x 0 0
 x 0 0
@@ -15954,6 +15959,7 @@ x 0 0
 # !latitude: 5.2503
 # region: Lagunes
 # admin1_quelle: Ufer 1.8 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Abidjan (Canal de Vridi), Ivory Coast
 +00:00 :Africa/Abidjan
 0.7200 meters
@@ -15971,7 +15977,7 @@ N2              0.0551  124.46
 x 0 0
 O1              0.0100  321.00
 x 0 0
-x 0 0
+P1              0.0297  343.00
 x 0 0
 x 0 0
 x 0 0
@@ -16145,6 +16151,7 @@ x 0 0
 # !latitude: 5.6393
 # region: Greater Accra
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Tema, Ghana
 +00:00 :Africa/Accra
 0.8800 meters
@@ -16162,7 +16169,7 @@ N2              0.0931  91.99
 x 0 0
 O1              0.0300  329.00
 x 0 0
-x 0 0
+P1              0.0429  354.00
 x 0 0
 x 0 0
 x 0 0
@@ -16336,6 +16343,7 @@ x 0 0
 # !latitude: 6.1346
 # region: Maritime
 # admin1_quelle: Ufer 1.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Lomé, Togo
 +00:00 :Africa/Lome
 1.1500 meters
@@ -16353,7 +16361,7 @@ N2              0.0950  89.24
 x 0 0
 O1              0.0200  340.00
 x 0 0
-x 0 0
+P1              0.0594  352.00
 x 0 0
 x 0 0
 x 0 0
@@ -16527,6 +16535,7 @@ x 0 0
 # !latitude: 4.3285
 # state: Bayelsa
 # admin1_quelle: Ufer 0.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Akassa (Nun River), Nigeria
 +01:00 :Africa/Lagos
 0.9800 meters
@@ -16544,7 +16553,7 @@ N2              0.1007  127.78
 x 0 0
 O1              0.0300  314.00
 x 0 0
-x 0 0
+P1              0.0396  27.92
 x 0 0
 x 0 0
 x 0 0
@@ -16718,6 +16727,7 @@ x 0 0
 # !latitude: 4.4571
 # state: Rivers
 # admin1_quelle: Ufer 1.3 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bonny (Eyamba Town), Nigeria
 +01:00 :Africa/Lagos
 1.4600 meters
@@ -16735,7 +16745,7 @@ N2              0.1349  128.63
 x 0 0
 O1              0.0200  343.00
 x 0 0
-x 0 0
+P1              0.0429  17.92
 x 0 0
 x 0 0
 x 0 0
@@ -16909,6 +16919,7 @@ x 0 0
 # !latitude: 6.4525
 # state: Lagos
 # admin1_quelle: Ufer 0.9 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Lagos (Apapa), Nigeria
 +01:00 :Africa/Lagos
 0.8800 meters
@@ -16926,7 +16937,7 @@ N2              0.0456  134.92
 x 0 0
 O1              0.0100  12.00
 x 0 0
-x 0 0
+P1              0.0231  30.92
 x 0 0
 x 0 0
 x 0 0
@@ -17100,6 +17111,7 @@ x 0 0
 # !latitude: 5.5147
 # state: Delta
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Warri, Nigeria
 +01:00 :Africa/Lagos
 1.0400 meters
@@ -17117,7 +17129,7 @@ N2              0.0798  228.42
 x 0 0
 O1              0.0300  293.00
 x 0 0
-x 0 0
+P1              0.0363  74.92
 x 0 0
 x 0 0
 x 0 0
@@ -17291,6 +17303,7 @@ x 0 0
 # !latitude: 3.9610
 # province: Sud-Ouest
 # admin1_quelle: Ufer 0.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Man O' War Bay, Cameroon
 +01:00 :Africa/Douala
 1.2000 meters
@@ -17308,7 +17321,7 @@ N2              0.1064  113.38
 x 0 0
 O1              0.0300  318.00
 x 0 0
-x 0 0
+P1              0.0363  9.92
 x 0 0
 x 0 0
 x 0 0
@@ -17482,6 +17495,7 @@ x 0 0
 # !latitude: 4.0410
 # province: Littoral
 # admin1_quelle: Ufer 0.8 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Douala (Cameroon River), Cameroon
 +01:00 :Africa/Douala
 1.6200 meters
@@ -17499,7 +17513,7 @@ N2              0.1501  143.42
 x 0 0
 O1              0.0100  344.00
 x 0 0
-x 0 0
+P1              0.0462  29.92
 x 0 0
 x 0 0
 x 0 0
@@ -17673,6 +17687,7 @@ x 0 0
 # !latitude: 3.4610
 # province: Bioko Sur
 # admin1_quelle: Ufer 1.0 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Luba (Bioko), Equatorial Guinea
 +01:00 :Africa/Malabo
 1.0200 meters
@@ -17690,7 +17705,7 @@ N2              0.0988  112.78
 x 0 0
 O1              0.0300  328.00
 x 0 0
-x 0 0
+P1              0.0363  13.92
 x 0 0
 x 0 0
 x 0 0
@@ -17864,6 +17879,7 @@ x 0 0
 # !latitude: 1.8732
 # province: Litoral
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bata, Equatorial Guinea
 +01:00 :Africa/Malabo
 1.0200 meters
@@ -17881,7 +17897,7 @@ N2              0.0931  107.38
 x 0 0
 O1              0.0600  280.00
 x 0 0
-x 0 0
+P1              0.0330  12.92
 x 0 0
 x 0 0
 x 0 0
@@ -18055,6 +18071,7 @@ x 0 0
 # !latitude: 1.0829
 # province: Litoral
 # admin1_quelle: Ufer 2.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cogo (Puerto Iradier), Equatorial Guinea
 +01:00 :Africa/Malabo
 1.4900 meters
@@ -18072,7 +18089,7 @@ N2              0.1444  128.70
 x 0 0
 O1              0.0200  347.00
 x 0 0
-x 0 0
+P1              0.0396  17.92
 x 0 0
 x 0 0
 x 0 0
@@ -18246,6 +18263,7 @@ x 0 0
 # !latitude: 0.2838
 # province: Estuaire
 # admin1_quelle: Ufer 0.9 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pointe Owendo (Estuaire du Gabon), Gabon
 +01:00 :Africa/Libreville
 1.5600 meters
@@ -18263,7 +18281,7 @@ N2              0.1406  123.27
 x 0 0
 O1              0.0200  357.00
 x 0 0
-x 0 0
+P1              0.0396  14.92
 x 0 0
 x 0 0
 x 0 0
@@ -18437,6 +18455,7 @@ x 0 0
 # !latitude: -0.6195
 # province: Ogooué-Maritime
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cap Lopez (Pointe Renard), Gabon
 +01:00 :Africa/Libreville
 1.2100 meters
@@ -18454,7 +18473,7 @@ N2              0.1045  116.14
 x 0 0
 O1              0.0200  302.00
 x 0 0
-x 0 0
+P1              0.0396  6.92
 x 0 0
 x 0 0
 x 0 0
@@ -18628,6 +18647,7 @@ x 0 0
 # !latitude: -4.7830
 # region: Pointe Noire
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pointe-Noire, Republic of the Congo
 +01:00 :Africa/Brazzaville
 0.9600 meters
@@ -18645,7 +18665,7 @@ N2              0.0988  96.92
 x 0 0
 O1              0.0100  302.00
 x 0 0
-x 0 0
+P1              0.0330  14.92
 x 0 0
 x 0 0
 x 0 0
@@ -18819,6 +18839,7 @@ x 0 0
 # !latitude: -5.5481
 # province: Cabinda
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cabinda, Angola
 +01:00 :Africa/Luanda
 1.1000 meters
@@ -18836,7 +18857,7 @@ N2              0.0988  101.60
 x 0 0
 O1              0.0200  306.00
 x 0 0
-x 0 0
+P1              0.0297  13.92
 x 0 0
 x 0 0
 x 0 0
@@ -19010,12 +19031,13 @@ x 0 0
 # !latitude: -7.9251
 # region: Ascension
 # admin1_quelle: Ufer 0.8 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Georgetown, Ascension Island
 +00:00 :Atlantic/St_Helena
 0.7000 meters
 x 0 0
 K1              0.0500  326.00
-x 0 0
+K2              0.0324  201.00
 x 0 0
 x 0 0
 M2              0.3300  178.00
@@ -19027,7 +19049,7 @@ x 0 0
 x 0 0
 O1              0.0300  194.00
 x 0 0
-x 0 0
+P1              0.0165  326.00
 x 0 0
 x 0 0
 x 0 0
@@ -19201,12 +19223,13 @@ x 0 0
 # !latitude: -15.9234
 # region: Saint Helena
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Jamestown, Saint Helena
 +00:00 :Atlantic/St_Helena
 0.5500 meters
 x 0 0
 K1              0.0300  349.00
-x 0 0
+K2              0.0270  99.00
 x 0 0
 x 0 0
 M2              0.3200  80.00
@@ -19218,7 +19241,7 @@ x 0 0
 x 0 0
 O1              0.0200  188.00
 x 0 0
-x 0 0
+P1              0.0099  349.00
 x 0 0
 x 0 0
 x 0 0
@@ -19392,12 +19415,13 @@ x 0 0
 # !latitude: 28.1407
 # region: Islas Canarias
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Puerto de la Luz (Gran Canaria), Islas Canarias, Spain
 +00:00 :Atlantic/Canary
 1.4200 meters
 x 0 0
 K1              0.0600  39.00
-x 0 0
+K2              0.0783  51.00
 x 0 0
 x 0 0
 M2              0.7700  28.00
@@ -19409,7 +19433,7 @@ x 0 0
 x 0 0
 O1              0.0500  293.00
 x 0 0
-x 0 0
+P1              0.0198  39.00
 x 0 0
 x 0 0
 x 0 0
@@ -19583,12 +19607,13 @@ x 0 0
 # !latitude: 45.5503
 # region: Koper
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Koper, Slovenia
 +01:00 :Europe/Ljubljana
 0.7000 meters
 x 0 0
 K1              0.1800  70.00
-x 0 0
+K2              0.0432  284.08
 x 0 0
 x 0 0
 M2              0.2500  277.00
@@ -19600,7 +19625,7 @@ x 0 0
 x 0 0
 O1              0.0500  62.00
 x 0 0
-x 0 0
+P1              0.0594  69.92
 x 0 0
 x 0 0
 x 0 0
@@ -19774,12 +19799,13 @@ x 0 0
 # !latitude: 45.3294
 # region: Primorsko-Goranska
 # admin1_quelle: Ufer 1.8 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Rijeka, Croatia
 +01:00 :Europe/Zagreb
 0.3000 meters
 x 0 0
 K1              0.1400  66.00
-x 0 0
+K2              0.0162  250.08
 x 0 0
 x 0 0
 M2              0.1000  249.00
@@ -19791,7 +19817,7 @@ x 0 0
 x 0 0
 O1              0.0400  55.00
 x 0 0
-x 0 0
+P1              0.0462  65.92
 x 0 0
 x 0 0
 x 0 0
@@ -19965,12 +19991,13 @@ x 0 0
 # !latitude: 44.5353
 # region: Primorsko-Goranska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mali Losinj, Croatia
 +01:00 :Europe/Zagreb
 0.3400 meters
 x 0 0
 K1              0.1300  64.00
-x 0 0
+K2              0.0135  245.08
 x 0 0
 x 0 0
 M2              0.0800  240.00
@@ -19982,7 +20009,7 @@ x 0 0
 x 0 0
 O1              0.0400  49.00
 x 0 0
-x 0 0
+P1              0.0429  63.92
 x 0 0
 x 0 0
 x 0 0
@@ -20156,12 +20183,13 @@ x 0 0
 # !latitude: 44.1179
 # region: Zadarska
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Zadar, Croatia
 +01:00 :Europe/Zagreb
 0.3000 meters
 x 0 0
 K1              0.1300  68.00
-x 0 0
+K2              0.0081  235.08
 x 0 0
 x 0 0
 M2              0.0600  232.00
@@ -20173,7 +20201,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0429  67.92
 x 0 0
 x 0 0
 x 0 0
@@ -20347,12 +20375,13 @@ x 0 0
 # !latitude: 43.5012
 # region: Splitsko-Dalmatinska
 # admin1_quelle: Ufer 2.3 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Split, Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
 x 0 0
 K1              0.0900  56.00
-x 0 0
+K2              0.0162  131.08
 x 0 0
 x 0 0
 M2              0.0800  129.00
@@ -20364,7 +20393,7 @@ x 0 0
 x 0 0
 O1              0.0300  48.00
 x 0 0
-x 0 0
+P1              0.0297  55.92
 x 0 0
 x 0 0
 x 0 0
@@ -20538,12 +20567,13 @@ x 0 0
 # !latitude: 31.2667
 # region: Bur Sa`id
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Port Said, Egypt
 +02:00 :Africa/Cairo
 0.4500 meters
 x 0 0
 K1              0.0200  303.00
-x 0 0
+K2              0.0189  314.16
 x 0 0
 x 0 0
 M2              0.1200  298.00
@@ -20555,7 +20585,7 @@ x 0 0
 x 0 0
 O1              0.0200  273.00
 x 0 0
-x 0 0
+P1              0.0066  302.84
 x 0 0
 x 0 0
 x 0 0
@@ -20729,6 +20759,7 @@ x 0 0
 # !latitude: 34.7276
 # region: Sfax
 # admin1_quelle: Ufer 1.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sfax, Tunisia
 +01:00 :Africa/Tunis
 0.9900 meters
@@ -20746,7 +20777,7 @@ N2              0.0798  90.99
 x 0 0
 O1              0.0100  95.00
 x 0 0
-x 0 0
+P1              0.0066  18.92
 x 0 0
 x 0 0
 x 0 0
@@ -20920,6 +20951,7 @@ x 0 0
 # !latitude: 33.8880
 # region: Médenine
 # admin1_quelle: Ufer 0.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Houmt Souk (Djerba), Tunisia
 +01:00 :Africa/Tunis
 1.1400 meters
@@ -20937,7 +20969,7 @@ N2              0.0589  115.85
 x 0 0
 O1              0.0200  89.00
 x 0 0
-x 0 0
+P1              0.0066  8.92
 x 0 0
 x 0 0
 x 0 0
@@ -21111,6 +21143,7 @@ x 0 0
 # !latitude: 38.6948
 # region: Lisboa
 # admin1_quelle: Ufer 0.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Paço de Arcos, Portugal
 +00:00 :Europe/Lisbon
 2.0000 meters
@@ -21128,7 +21161,7 @@ N2              0.1919  55.99
 x 0 0
 O1              0.0600  318.00
 x 0 0
-x 0 0
+P1              0.0231  57.00
 x 0 0
 x 0 0
 x 0 0
@@ -21302,6 +21335,7 @@ x 0 0
 # !latitude: 38.9523
 # region: Lisboa
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Vila Franca de Xira (Rio Tejo), Portugal
 +00:00 :Europe/Lisbon
 2.4700 meters
@@ -21319,7 +21353,7 @@ N2              0.2280  84.70
 x 0 0
 O1              0.0600  336.00
 x 0 0
-x 0 0
+P1              0.0231  80.00
 x 0 0
 x 0 0
 x 0 0
@@ -21493,6 +21527,7 @@ x 0 0
 # !latitude: 38.7570
 # region: Setúbal
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Alcochete, Portugal
 +00:00 :Europe/Lisbon
 2.4000 meters
@@ -21510,7 +21545,7 @@ N2              0.2413  67.38
 x 0 0
 O1              0.0700  321.00
 x 0 0
-x 0 0
+P1              0.0231  65.00
 x 0 0
 x 0 0
 x 0 0
@@ -21684,6 +21719,7 @@ x 0 0
 # !latitude: 36.1827
 # region: Cádiz
 # admin1_quelle: Ufer 0.8 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cabo Trafalgar (Los Caños de Meca), Spain
 +01:00 :Europe/Madrid
 1.4000 meters
@@ -21701,7 +21737,7 @@ N2              0.1444  68.60
 x 0 0
 O1              0.0200  312.00
 x 0 0
-x 0 0
+P1              0.0099  73.92
 x 0 0
 x 0 0
 x 0 0
@@ -21875,6 +21911,7 @@ x 0 0
 # !latitude: 36.0776
 # region: Cádiz
 # admin1_quelle: Ufer 0.9 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Punta Camarinal, Spain
 +01:00 :Europe/Madrid
 1.2000 meters
@@ -21892,7 +21929,7 @@ N2              0.1235  64.06
 x 0 0
 O1              0.0200  327.00
 x 0 0
-x 0 0
+P1              0.0132  89.92
 x 0 0
 x 0 0
 x 0 0
@@ -22066,6 +22103,7 @@ x 0 0
 # !latitude: 36.0670
 # region: Cádiz
 # admin1_quelle: Ufer 0.3 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Punta Carnero, Spain
 +01:00 :Europe/Madrid
 0.6000 meters
@@ -22083,7 +22121,7 @@ N2              0.0589  62.60
 x 0 0
 O1              0.0100  195.00
 x 0 0
-x 0 0
+P1              0.0066  159.92
 x 0 0
 x 0 0
 x 0 0
@@ -22257,6 +22295,7 @@ x 0 0
 # !latitude: 36.1297
 # region: Gibraltar
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sandy Bay, Gibraltar
 +01:00 :Europe/Gibraltar
 0.4500 meters
@@ -22274,7 +22313,7 @@ N2              0.0513  59.46
 x 0 0
 O1              0.0100  173.00
 x 0 0
-x 0 0
+P1              0.0066  155.92
 x 0 0
 x 0 0
 x 0 0
@@ -22448,12 +22487,13 @@ x 0 0
 # !latitude: 35.1830
 # region: Melilla
 # admin1_quelle: Ufer 44.8 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Islas Chafarinas, Spain
 +01:00 :Europe/Madrid
 0.2300 meters
 x 0 0
 K1              0.0300  185.00
-x 0 0
+K2              0.0135  159.08
 x 0 0
 x 0 0
 M2              0.1200  129.00
@@ -22465,7 +22505,7 @@ x 0 0
 x 0 0
 O1              0.0100  105.00
 x 0 0
-x 0 0
+P1              0.0099  184.92
 x 0 0
 x 0 0
 x 0 0
@@ -22639,6 +22679,7 @@ x 0 0
 # !latitude: 35.8385
 # region: Tanger - Tétouan
 # admin1_quelle: Ufer 1.0 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Hejar Lesfar, Morocco
 +01:00 :Africa/Casablanca
 1.0000 meters
@@ -22656,7 +22697,7 @@ N2              0.0988  86.21
 x 0 0
 O1              0.0300  357.00
 x 0 0
-x 0 0
+P1              0.0165  102.92
 x 0 0
 x 0 0
 x 0 0
@@ -22830,12 +22871,13 @@ x 0 0
 # !latitude: 36.8071
 # region: Tunis
 # admin1_quelle: Ufer 1.9 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 La Goulette (Halq-al-Wadi), Tunisia
 +01:00 :Africa/Tunis
 0.3000 meters
 x 0 0
 K1              0.0300  211.00
-x 0 0
+K2              0.0081  304.08
 x 0 0
 x 0 0
 M2              0.0800  278.00
@@ -22847,7 +22889,7 @@ x 0 0
 x 0 0
 O1              0.0100  130.00
 x 0 0
-x 0 0
+P1              0.0099  210.92
 x 0 0
 x 0 0
 x 0 0
@@ -23021,6 +23063,7 @@ x 0 0
 # !latitude: 34.7137
 # region: Sfax
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 El Abassia (Kerkennah), Tunisia
 +01:00 :Africa/Tunis
 0.6300 meters
@@ -23038,7 +23081,7 @@ N2              0.0494  98.06
 x 0 0
 O1              0.0100  92.00
 x 0 0
-x 0 0
+P1              0.0066  40.92
 x 0 0
 x 0 0
 x 0 0
@@ -23212,6 +23255,7 @@ x 0 0
 # !latitude: 33.7161
 # region: Médenine
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Houmt Ajim (Djerba), Tunisia
 +01:00 :Africa/Tunis
 0.6400 meters
@@ -23229,7 +23273,7 @@ N2              0.0589  117.53
 x 0 0
 O1              0.0100  114.00
 x 0 0
-x 0 0
+P1              0.0033  49.92
 x 0 0
 x 0 0
 x 0 0
@@ -23403,12 +23447,13 @@ x 0 0
 # !latitude: 44.3166
 # province: Savona
 # admin1_quelle: Ufer 3.0 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Savona, Italy
 +01:00 :Europe/Rome
 0.1500 meters
 x 0 0
 K1              0.0400  180.00
-x 0 0
+K2              0.0108  269.08
 x 0 0
 x 0 0
 M2              0.0800  228.00
@@ -23420,7 +23465,7 @@ x 0 0
 x 0 0
 O1              0.0200  119.00
 x 0 0
-x 0 0
+P1              0.0132  179.92
 x 0 0
 x 0 0
 x 0 0
@@ -23594,12 +23639,13 @@ x 0 0
 # !latitude: 44.0966
 # province: La Spezia
 # admin1_quelle: Ufer 1.7 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 La Spezia, Italy
 +01:00 :Europe/Rome
 0.2000 meters
 x 0 0
 K1              0.0400  198.00
-x 0 0
+K2              0.0081  267.08
 x 0 0
 x 0 0
 M2              0.0900  244.00
@@ -23611,7 +23657,7 @@ x 0 0
 x 0 0
 O1              0.0100  116.00
 x 0 0
-x 0 0
+P1              0.0132  197.92
 x 0 0
 x 0 0
 x 0 0
@@ -23785,12 +23831,13 @@ x 0 0
 # !latitude: 42.9297
 # province: Livorno
 # admin1_quelle: Ufer 0.6 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Piombino, Italy
 +01:00 :Europe/Rome
 0.1900 meters
 x 0 0
 K1              0.0300  193.00
-x 0 0
+K2              0.0108  278.08
 x 0 0
 x 0 0
 M2              0.1100  257.00
@@ -23802,7 +23849,7 @@ x 0 0
 x 0 0
 O1              0.0100  110.00
 x 0 0
-x 0 0
+P1              0.0099  192.92
 x 0 0
 x 0 0
 x 0 0
@@ -23976,12 +24023,13 @@ x 0 0
 # !latitude: 40.9236
 # region: Sardinia
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Olbia, Sardinia, Italy
 +01:00 :Europe/Rome
 0.1600 meters
 x 0 0
 K1              0.0300  187.00
-x 0 0
+K2              0.0108  257.08
 x 0 0
 x 0 0
 M2              0.1100  236.00
@@ -23993,7 +24041,7 @@ x 0 0
 x 0 0
 O1              0.0100  101.00
 x 0 0
-x 0 0
+P1              0.0099  186.92
 x 0 0
 x 0 0
 x 0 0
@@ -24167,12 +24215,13 @@ x 0 0
 # !latitude: 40.7443
 # province: Napoli
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ischia, Italy
 +01:00 :Europe/Rome
 0.1600 meters
 x 0 0
 K1              0.0300  207.00
-x 0 0
+K2              0.0135  282.08
 x 0 0
 x 0 0
 M2              0.1200  261.00
@@ -24184,7 +24233,7 @@ x 0 0
 x 0 0
 O1              0.0100  120.00
 x 0 0
-x 0 0
+P1              0.0099  206.92
 x 0 0
 x 0 0
 x 0 0
@@ -24358,12 +24407,13 @@ x 0 0
 # !latitude: 38.6815
 # province: Vibo Valentia
 # admin1_quelle: Ufer 0.3 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Tropea, Italy
 +01:00 :Europe/Rome
 0.2000 meters
 x 0 0
 K1              0.0400  218.00
-x 0 0
+K2              0.0135  294.08
 x 0 0
 x 0 0
 M2              0.1500  271.00
@@ -24375,7 +24425,7 @@ x 0 0
 x 0 0
 O1              0.0100  158.00
 x 0 0
-x 0 0
+P1              0.0132  217.92
 x 0 0
 x 0 0
 x 0 0
@@ -24549,12 +24599,13 @@ x 0 0
 # !latitude: 38.4360
 # province: Reggio Calabria
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Gioia Tauro, Italy
 +01:00 :Europe/Rome
 0.1700 meters
 x 0 0
 K1              0.0300  35.00
-x 0 0
+K2              0.0135  110.08
 x 0 0
 x 0 0
 M2              0.1200  88.00
@@ -24566,7 +24617,7 @@ x 0 0
 x 0 0
 O1              0.0100  315.00
 x 0 0
-x 0 0
+P1              0.0099  34.92
 x 0 0
 x 0 0
 x 0 0
@@ -24740,12 +24791,13 @@ x 0 0
 # !latitude: 38.2170
 # province: Reggio Calabria
 # admin1_quelle: Ufer 0.4 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Villa San Giovanni, Italy
 +01:00 :Europe/Rome
 0.1200 meters
 x 0 0
 K1              0.0100  47.00
-x 0 0
+K2              0.0027  103.08
 x 0 0
 x 0 0
 M2              0.0300  114.00
@@ -24757,7 +24809,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0033  46.92
 x 0 0
 x 0 0
 x 0 0
@@ -24931,12 +24983,13 @@ x 0 0
 # !latitude: 37.8410
 # region: Sicily
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Taormina, Sicily, Italy
 +01:00 :Europe/Rome
 0.1200 meters
 x 0 0
 K1              0.0300  101.00
-x 0 0
+K2              0.0108  88.08
 x 0 0
 x 0 0
 M2              0.0900  86.00
@@ -24948,7 +25001,7 @@ x 0 0
 x 0 0
 O1              0.0100  49.00
 x 0 0
-x 0 0
+P1              0.0099  100.92
 x 0 0
 x 0 0
 x 0 0
@@ -25122,12 +25175,13 @@ x 0 0
 # !latitude: 38.2677
 # region: Sicily
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Capo Peloro (Torre Faro), Sicily, Italy
 +01:00 :Europe/Rome
 0.2000 meters
 x 0 0
 K1              0.0200  231.00
-x 0 0
+K2              0.0081  313.08
 x 0 0
 x 0 0
 M2              0.0500  267.00
@@ -25139,7 +25193,7 @@ x 0 0
 x 0 0
 O1              0.0100  249.00
 x 0 0
-x 0 0
+P1              0.0066  230.92
 x 0 0
 x 0 0
 x 0 0
@@ -25313,12 +25367,13 @@ x 0 0
 # !latitude: 38.4714
 # province: Messina
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Lipari, Italy
 +01:00 :Europe/Rome
 0.2000 meters
 x 0 0
 K1              0.0300  214.00
-x 0 0
+K2              0.0108  284.08
 x 0 0
 x 0 0
 M2              0.1200  261.00
@@ -25330,7 +25385,7 @@ x 0 0
 x 0 0
 O1              0.0100  125.00
 x 0 0
-x 0 0
+P1              0.0099  213.92
 x 0 0
 x 0 0
 x 0 0
@@ -25504,12 +25559,13 @@ x 0 0
 # !latitude: 38.2170
 # region: Sicily
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Milazzo, Sicily, Italy
 +01:00 :Europe/Rome
 0.2000 meters
 x 0 0
 K1              0.0300  215.00
-x 0 0
+K2              0.0135  282.08
 x 0 0
 x 0 0
 M2              0.1200  263.00
@@ -25521,7 +25577,7 @@ x 0 0
 x 0 0
 O1              0.0100  130.00
 x 0 0
-x 0 0
+P1              0.0099  214.92
 x 0 0
 x 0 0
 x 0 0
@@ -25695,12 +25751,13 @@ x 0 0
 # !latitude: 38.1214
 # region: Sicily
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Palermo, Sicily, Italy
 +01:00 :Europe/Rome
 0.2100 meters
 x 0 0
 K1              0.0300  208.00
-x 0 0
+K2              0.0108  283.08
 x 0 0
 x 0 0
 M2              0.1100  261.00
@@ -25712,7 +25769,7 @@ x 0 0
 x 0 0
 O1              0.0100  126.00
 x 0 0
-x 0 0
+P1              0.0099  207.92
 x 0 0
 x 0 0
 x 0 0
@@ -25886,12 +25943,13 @@ x 0 0
 # !latitude: 37.7874
 # region: Sicily
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Marsala, Sicily, Italy
 +01:00 :Europe/Rome
 0.1500 meters
 x 0 0
 K1              0.0400  163.00
-x 0 0
+K2              0.0054  277.08
 x 0 0
 x 0 0
 M2              0.0700  265.00
@@ -25903,7 +25961,7 @@ x 0 0
 x 0 0
 O1              0.0200  123.00
 x 0 0
-x 0 0
+P1              0.0132  162.92
 x 0 0
 x 0 0
 x 0 0
@@ -26077,12 +26135,13 @@ x 0 0
 # !latitude: 37.6510
 # region: Sicily
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mazara del Vallo, Sicily, Italy
 +01:00 :Europe/Rome
 0.1500 meters
 x 0 0
 K1              0.0300  100.00
-x 0 0
+K2              0.0054  133.08
 x 0 0
 x 0 0
 M2              0.0400  157.00
@@ -26094,7 +26153,7 @@ x 0 0
 x 0 0
 O1              0.0200  75.00
 x 0 0
-x 0 0
+P1              0.0099  99.92
 x 0 0
 x 0 0
 x 0 0
@@ -26268,12 +26327,13 @@ x 0 0
 # !latitude: 35.8830
 # region: Cospicua
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Valletta, Malta
 +01:00 :Europe/Malta
 0.6300 meters
 x 0 0
 K1              0.0200  36.00
-x 0 0
+K2              0.0189  92.08
 x 0 0
 x 0 0
 M2              0.1200  83.00
@@ -26285,7 +26345,7 @@ x 0 0
 x 0 0
 O1              0.0100  81.00
 x 0 0
-x 0 0
+P1              0.0066  35.92
 x 0 0
 x 0 0
 x 0 0
@@ -26459,12 +26519,13 @@ x 0 0
 # !latitude: 40.6472
 # province: Brindisi
 # admin1_quelle: Ufer 0.3 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Brindisi, Italy
 +01:00 :Europe/Rome
 0.1500 meters
 x 0 0
 K1              0.0500  69.00
-x 0 0
+K2              0.0135  111.08
 x 0 0
 x 0 0
 M2              0.0900  102.00
@@ -26476,7 +26537,7 @@ x 0 0
 x 0 0
 O1              0.0100  57.00
 x 0 0
-x 0 0
+P1              0.0165  68.92
 x 0 0
 x 0 0
 x 0 0
@@ -26650,12 +26711,13 @@ x 0 0
 # !latitude: 43.9230
 # province: Pesaro e Urbino
 # admin1_quelle: Ufer 2.0 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pesaro, Italy
 +01:00 :Europe/Rome
 0.3700 meters
 x 0 0
 K1              0.1500  88.00
-x 0 0
+K2              0.0189  321.08
 x 0 0
 x 0 0
 M2              0.1300  317.00
@@ -26667,7 +26729,7 @@ x 0 0
 x 0 0
 O1              0.0400  58.00
 x 0 0
-x 0 0
+P1              0.0495  87.92
 x 0 0
 x 0 0
 x 0 0
@@ -26841,12 +26903,13 @@ x 0 0
 # !latitude: 45.2170
 # province: Venezia
 # admin1_quelle: Ufer 0.9 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Chioggia, Italy
 +01:00 :Europe/Rome
 0.5200 meters
 x 0 0
 K1              0.1600  88.00
-x 0 0
+K2              0.0324  314.08
 x 0 0
 x 0 0
 M2              0.2200  302.00
@@ -26858,7 +26921,7 @@ x 0 0
 x 0 0
 O1              0.0500  73.00
 x 0 0
-x 0 0
+P1              0.0528  87.92
 x 0 0
 x 0 0
 x 0 0
@@ -27032,12 +27095,13 @@ x 0 0
 # !latitude: 45.3376
 # province: Venezia
 # admin1_quelle: Ufer 1.2 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Porto di Malamocco, Italy
 +01:00 :Europe/Rome
 0.5200 meters
 x 0 0
 K1              0.1800  82.00
-x 0 0
+K2              0.0378  305.08
 x 0 0
 x 0 0
 M2              0.2300  296.00
@@ -27049,7 +27113,7 @@ x 0 0
 x 0 0
 O1              0.0500  65.00
 x 0 0
-x 0 0
+P1              0.0594  81.92
 x 0 0
 x 0 0
 x 0 0
@@ -27223,12 +27287,13 @@ x 0 0
 # !latitude: 44.8761
 # region: Istarska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pula, Croatia
 +01:00 :Europe/Zagreb
 0.3400 meters
 x 0 0
 K1              0.1600  69.00
-x 0 0
+K2              0.0243  273.08
 x 0 0
 x 0 0
 M2              0.1500  265.00
@@ -27240,7 +27305,7 @@ x 0 0
 x 0 0
 O1              0.0500  62.00
 x 0 0
-x 0 0
+P1              0.0528  68.92
 x 0 0
 x 0 0
 x 0 0
@@ -27414,12 +27479,13 @@ x 0 0
 # !latitude: 45.0810
 # region: Istarska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Rovinj, Croatia
 +01:00 :Europe/Zagreb
 0.4800 meters
 x 0 0
 K1              0.1600  72.00
-x 0 0
+K2              0.0297  280.08
 x 0 0
 x 0 0
 M2              0.1900  272.00
@@ -27431,7 +27497,7 @@ x 0 0
 x 0 0
 O1              0.0500  58.00
 x 0 0
-x 0 0
+P1              0.0528  71.92
 x 0 0
 x 0 0
 x 0 0
@@ -27605,12 +27671,13 @@ x 0 0
 # !latitude: 44.9916
 # region: Licko-Senjska
 # admin1_quelle: Ufer 1.6 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Senj, Croatia
 +01:00 :Europe/Zagreb
 0.3500 meters
 x 0 0
 K1              0.1400  64.00
-x 0 0
+K2              0.0135  236.08
 x 0 0
 x 0 0
 M2              0.1000  240.00
@@ -27622,7 +27689,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0462  63.92
 x 0 0
 x 0 0
 x 0 0
@@ -27796,12 +27863,13 @@ x 0 0
 # !latitude: 44.1429
 # region: Zadarska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Zaliv Pantera (Dugi Otok), Croatia
 +01:00 :Europe/Zagreb
 0.3000 meters
 x 0 0
 K1              0.1200  60.00
-x 0 0
+K2              0.0081  204.08
 x 0 0
 x 0 0
 M2              0.0400  194.00
@@ -27813,7 +27881,7 @@ x 0 0
 x 0 0
 O1              0.0400  67.00
 x 0 0
-x 0 0
+P1              0.0396  59.92
 x 0 0
 x 0 0
 x 0 0
@@ -27987,12 +28055,13 @@ x 0 0
 # !latitude: 44.0866
 # region: Zadarska
 # admin1_quelle: Ufer 1.0 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Gazenica (Zadar), Croatia
 +01:00 :Europe/Zagreb
 0.2400 meters
 x 0 0
 K1              0.1300  63.00
-x 0 0
+K2              0.0081  226.08
 x 0 0
 x 0 0
 M2              0.0600  230.00
@@ -28004,7 +28073,7 @@ x 0 0
 x 0 0
 O1              0.0400  56.00
 x 0 0
-x 0 0
+P1              0.0429  62.92
 x 0 0
 x 0 0
 x 0 0
@@ -28178,12 +28247,13 @@ x 0 0
 # !latitude: 43.7307
 # region: Sibensko-Kninska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sibenik, Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
 x 0 0
 K1              0.0900  57.00
-x 0 0
+K2              0.0108  132.08
 x 0 0
 x 0 0
 M2              0.0600  135.00
@@ -28195,7 +28265,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0297  56.92
 x 0 0
 x 0 0
 x 0 0
@@ -28369,12 +28439,13 @@ x 0 0
 # !latitude: 43.5322
 # region: Sibensko-Kninska
 # admin1_quelle: Ufer 0.7 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Rogoznica, Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
 x 0 0
 K1              0.0900  67.00
-x 0 0
+K2              0.0135  137.08
 x 0 0
 x 0 0
 M2              0.0600  140.00
@@ -28386,7 +28457,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0297  66.92
 x 0 0
 x 0 0
 x 0 0
@@ -28560,12 +28631,13 @@ x 0 0
 # !latitude: 43.0615
 # region: Splitsko-Dalmatinska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Vis, Croatia
 +01:00 :Europe/Zagreb
 0.1700 meters
 x 0 0
 K1              0.0800  56.00
-x 0 0
+K2              0.0135  111.08
 x 0 0
 x 0 0
 M2              0.0700  107.00
@@ -28577,7 +28649,7 @@ x 0 0
 x 0 0
 O1              0.0200  42.00
 x 0 0
-x 0 0
+P1              0.0264  55.92
 x 0 0
 x 0 0
 x 0 0
@@ -28751,12 +28823,13 @@ x 0 0
 # !latitude: 43.0444
 # region: Splitsko-Dalmatinska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Komiza (Vis), Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
 x 0 0
 K1              0.0800  57.00
-x 0 0
+K2              0.0135  119.08
 x 0 0
 x 0 0
 M2              0.0700  108.00
@@ -28768,7 +28841,7 @@ x 0 0
 x 0 0
 O1              0.0200  40.00
 x 0 0
-x 0 0
+P1              0.0264  56.92
 x 0 0
 x 0 0
 x 0 0
@@ -28942,12 +29015,13 @@ x 0 0
 # !latitude: 43.0211
 # region: Splitsko-Dalmatinska
 # admin1_quelle: Ufer 24.1 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Otok Svetac, Croatia
 +01:00 :Europe/Zagreb
 0.5200 meters
 x 0 0
 K1              0.0700  69.00
-x 0 0
+K2              0.0108  125.08
 x 0 0
 x 0 0
 M2              0.0700  122.00
@@ -28959,7 +29033,7 @@ x 0 0
 x 0 0
 O1              0.0200  56.00
 x 0 0
-x 0 0
+P1              0.0231  68.92
 x 0 0
 x 0 0
 x 0 0
@@ -29133,12 +29207,13 @@ x 0 0
 # !latitude: 43.0506
 # region: Dubrovacko-Neretvanska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ploce, Croatia
 +01:00 :Europe/Zagreb
 0.2200 meters
 x 0 0
 K1              0.0800  52.00
-x 0 0
+K2              0.0162  122.08
 x 0 0
 x 0 0
 M2              0.0900  120.00
@@ -29150,7 +29225,7 @@ x 0 0
 x 0 0
 O1              0.0300  40.00
 x 0 0
-x 0 0
+P1              0.0264  51.92
 x 0 0
 x 0 0
 x 0 0
@@ -29324,12 +29399,13 @@ x 0 0
 # !latitude: 42.6605
 # region: Dubrovacko-Neretvanska
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Dubrovnik (Luka Gruz), Croatia
 +01:00 :Europe/Zagreb
 0.1800 meters
 x 0 0
 K1              0.0500  62.00
-x 0 0
+K2              0.0162  120.08
 x 0 0
 x 0 0
 M2              0.0900  115.00
@@ -29341,7 +29417,7 @@ x 0 0
 x 0 0
 O1              0.0200  47.00
 x 0 0
-x 0 0
+P1              0.0165  61.92
 x 0 0
 x 0 0
 x 0 0
@@ -29515,12 +29591,13 @@ x 0 0
 # !latitude: 42.4530
 # region: Herceg Novi
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Meljine (Boka Kotorska), Montenegro
 +01:00 :Europe/Podgorica
 0.2000 meters
 x 0 0
 K1              0.0500  52.00
-x 0 0
+K2              0.0162  103.08
 x 0 0
 x 0 0
 M2              0.0900  99.00
@@ -29532,7 +29609,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0165  51.92
 x 0 0
 x 0 0
 x 0 0
@@ -29706,12 +29783,13 @@ x 0 0
 # !latitude: 42.0957
 # region: Bar
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bar, Montenegro
 +01:00 :Europe/Podgorica
 0.1800 meters
 x 0 0
 K1              0.0500  57.00
-x 0 0
+K2              0.0162  115.08
 x 0 0
 x 0 0
 M2              0.0900  109.00
@@ -29723,7 +29801,7 @@ x 0 0
 x 0 0
 O1              0.0200  48.00
 x 0 0
-x 0 0
+P1              0.0165  56.92
 x 0 0
 x 0 0
 x 0 0
@@ -29897,12 +29975,13 @@ x 0 0
 # !latitude: 41.8110
 # region: Lezhë
 # admin1_quelle: Ufer 0.8 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Shëngjin, Albania
 +01:00 :Europe/Tirane
 0.1900 meters
 x 0 0
 K1              0.0500  59.00
-x 0 0
+K2              0.0162  108.08
 x 0 0
 x 0 0
 M2              0.0900  104.00
@@ -29914,7 +29993,7 @@ x 0 0
 x 0 0
 O1              0.0200  38.00
 x 0 0
-x 0 0
+P1              0.0165  58.92
 x 0 0
 x 0 0
 x 0 0
@@ -30088,12 +30167,13 @@ x 0 0
 # !latitude: 41.3144
 # region: Durrës
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Durrës, Albania
 +01:00 :Europe/Tirane
 0.1500 meters
 x 0 0
 K1              0.0500  48.00
-x 0 0
+K2              0.0135  104.08
 x 0 0
 x 0 0
 M2              0.0900  102.00
@@ -30105,7 +30185,7 @@ x 0 0
 x 0 0
 O1              0.0100  27.00
 x 0 0
-x 0 0
+P1              0.0165  47.92
 x 0 0
 x 0 0
 x 0 0
@@ -30279,12 +30359,13 @@ x 0 0
 # !latitude: 37.1582
 # region: Notio Aigaio
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Agia Marina (Leros), Greece
 +02:00 :Europe/Athens
 0.1000 meters
 x 0 0
 K1              0.0200  327.00
-x 0 0
+K2              0.0027  8.16
 x 0 0
 x 0 0
 M2              0.0300  2.00
@@ -30296,7 +30377,7 @@ x 0 0
 x 0 0
 O1              0.0200  303.00
 x 0 0
-x 0 0
+P1              0.0066  326.84
 x 0 0
 x 0 0
 x 0 0
@@ -30470,12 +30551,13 @@ x 0 0
 # !latitude: 36.5472
 # region: Notio Aigaio
 # admin1_quelle: Ufer 0.9 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Astypalaia, Greece
 +02:00 :Europe/Athens
 0.1000 meters
 x 0 0
 K1              0.0200  5.00
-x 0 0
+K2              0.0054  349.16
 x 0 0
 x 0 0
 M2              0.0300  353.00
@@ -30487,7 +30569,7 @@ x 0 0
 x 0 0
 O1              0.0100  344.00
 x 0 0
-x 0 0
+P1              0.0066  4.84
 x 0 0
 x 0 0
 x 0 0
@@ -30661,12 +30743,13 @@ x 0 0
 # !latitude: 36.8982
 # region: Notio Aigaio
 # admin1_quelle: Ufer 0.7 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kos, Greece
 +02:00 :Europe/Athens
 0.1000 meters
 x 0 0
 K1              0.0200  355.00
-x 0 0
+K2              0.0054  347.16
 x 0 0
 x 0 0
 M2              0.0400  329.00
@@ -30678,7 +30761,7 @@ x 0 0
 x 0 0
 O1              0.0100  310.00
 x 0 0
-x 0 0
+P1              0.0066  354.84
 x 0 0
 x 0 0
 x 0 0
@@ -30852,12 +30935,13 @@ x 0 0
 # !latitude: 36.6181
 # region: Notio Aigaio
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Symi, Greece
 +02:00 :Europe/Athens
 0.1000 meters
 x 0 0
 K1              0.0100  353.00
-x 0 0
+K2              0.0081  345.16
 x 0 0
 x 0 0
 M2              0.0400  327.00
@@ -30869,7 +30953,7 @@ x 0 0
 x 0 0
 O1              0.0100  299.00
 x 0 0
-x 0 0
+P1              0.0033  352.84
 x 0 0
 x 0 0
 x 0 0
@@ -31043,12 +31127,13 @@ x 0 0
 # !latitude: 36.4471
 # region: Notio Aigaio
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ródos, Greece
 +02:00 :Europe/Athens
 0.2000 meters
 x 0 0
 K1              0.0200  330.00
-x 0 0
+K2              0.0081  321.16
 x 0 0
 x 0 0
 M2              0.0500  308.00
@@ -31060,7 +31145,7 @@ x 0 0
 x 0 0
 O1              0.0100  332.00
 x 0 0
-x 0 0
+P1              0.0066  329.84
 x 0 0
 x 0 0
 x 0 0
@@ -31234,12 +31319,13 @@ x 0 0
 # !latitude: 36.0951
 # region: Notio Aigaio
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Lindos (Rodos), Greece
 +02:00 :Europe/Athens
 0.2000 meters
 x 0 0
 K1              0.0300  342.00
-x 0 0
+K2              0.0108  329.16
 x 0 0
 x 0 0
 M2              0.0600  307.00
@@ -31251,7 +31337,7 @@ x 0 0
 x 0 0
 O1              0.0200  301.00
 x 0 0
-x 0 0
+P1              0.0099  341.84
 x 0 0
 x 0 0
 x 0 0
@@ -31423,12 +31509,13 @@ x 0 0
 # !units: meters
 # !longitude: 29.5924
 # !latitude: 36.1505
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Megisti (Kastellorizo), Greece
 +02:00 :Europe/Athens
 0.2000 meters
 x 0 0
 K1              0.0200  332.00
-x 0 0
+K2              0.0108  313.16
 x 0 0
 x 0 0
 M2              0.0700  303.00
@@ -31440,7 +31527,7 @@ x 0 0
 x 0 0
 O1              0.0200  289.00
 x 0 0
-x 0 0
+P1              0.0066  331.84
 x 0 0
 x 0 0
 x 0 0
@@ -31614,12 +31701,13 @@ x 0 0
 # !latitude: 35.4286
 # region: Northern Cyprus
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kaplica (Davlos), Cyprus
 +02:00 :Asia/Nicosia
 0.4900 meters
 x 0 0
 K1              0.0200  303.00
-x 0 0
+K2              0.0162  315.16
 x 0 0
 x 0 0
 M2              0.1000  299.00
@@ -31631,7 +31719,7 @@ x 0 0
 x 0 0
 O1              0.0200  288.00
 x 0 0
-x 0 0
+P1              0.0066  302.84
 x 0 0
 x 0 0
 x 0 0
@@ -31805,12 +31893,13 @@ x 0 0
 # !latitude: 35.3411
 # region: Nicosia
 # admin1_quelle: Ufer 4.9 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Girne (Kyrenia), Cyprus
 +02:00 :Asia/Nicosia
 0.4800 meters
 x 0 0
 K1              0.0300  306.00
-x 0 0
+K2              0.0162  316.16
 x 0 0
 x 0 0
 M2              0.1000  293.00
@@ -31822,7 +31911,7 @@ x 0 0
 x 0 0
 O1              0.0200  287.00
 x 0 0
-x 0 0
+P1              0.0099  305.84
 x 0 0
 x 0 0
 x 0 0
@@ -31996,12 +32085,13 @@ x 0 0
 # !latitude: 34.5721
 # region: Limassol
 # admin1_quelle: Ufer 7.1 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Akrotiri, Cyprus
 +02:00 :Asia/Nicosia
 0.4000 meters
 x 0 0
 K1              0.0300  301.00
-x 0 0
+K2              0.0162  310.16
 x 0 0
 x 0 0
 M2              0.1000  296.00
@@ -32013,7 +32103,7 @@ x 0 0
 x 0 0
 O1              0.0200  280.00
 x 0 0
-x 0 0
+P1              0.0099  300.84
 x 0 0
 x 0 0
 x 0 0
@@ -32187,12 +32277,13 @@ x 0 0
 # !latitude: 34.6686
 # region: Limassol
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Limassol, Cyprus
 +02:00 :Asia/Nicosia
 0.3800 meters
 x 0 0
 K1              0.0300  301.00
-x 0 0
+K2              0.0162  308.16
 x 0 0
 x 0 0
 M2              0.1000  294.00
@@ -32204,7 +32295,7 @@ x 0 0
 x 0 0
 O1              0.0200  273.00
 x 0 0
-x 0 0
+P1              0.0099  300.84
 x 0 0
 x 0 0
 x 0 0
@@ -32378,12 +32469,13 @@ x 0 0
 # !latitude: 35.1234
 # region: Famagusta
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Famagusta, Cyprus
 +02:00 :Asia/Nicosia
 0.4000 meters
 x 0 0
 K1              0.0200  308.00
-x 0 0
+K2              0.0189  320.16
 x 0 0
 x 0 0
 M2              0.1100  292.00
@@ -32395,7 +32487,7 @@ x 0 0
 x 0 0
 O1              0.0200  291.00
 x 0 0
-x 0 0
+P1              0.0066  307.84
 x 0 0
 x 0 0
 x 0 0
@@ -32569,12 +32661,13 @@ x 0 0
 # !latitude: 33.9863
 # province: Mount Lebanon
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Jounieh, Lebanon
 +02:00 :Asia/Beirut
 0.2900 meters
 x 0 0
 K1              0.0300  297.00
-x 0 0
+K2              0.0189  306.16
 x 0 0
 x 0 0
 M2              0.1200  293.00
@@ -32586,7 +32679,7 @@ x 0 0
 x 0 0
 O1              0.0200  269.00
 x 0 0
-x 0 0
+P1              0.0099  296.84
 x 0 0
 x 0 0
 x 0 0
@@ -32760,12 +32853,13 @@ x 0 0
 # !latitude: 33.2745
 # province: South Lebanon
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sour (Tyre), Lebanon
 +02:00 :Asia/Beirut
 0.3000 meters
 x 0 0
 K1              0.0300  293.00
-x 0 0
+K2              0.0189  306.16
 x 0 0
 x 0 0
 M2              0.1200  294.00
@@ -32777,7 +32871,7 @@ x 0 0
 x 0 0
 O1              0.0200  292.00
 x 0 0
-x 0 0
+P1              0.0099  292.84
 x 0 0
 x 0 0
 x 0 0
@@ -32951,12 +33045,13 @@ x 0 0
 # !latitude: 31.4670
 # region: Dumyat
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mina Dumyat (Damietta), Egypt
 +02:00 :Africa/Cairo
 0.4000 meters
 x 0 0
 K1              0.0200  324.00
-x 0 0
+K2              0.0189  313.16
 x 0 0
 x 0 0
 M2              0.1100  294.00
@@ -32968,7 +33063,7 @@ x 0 0
 x 0 0
 O1              0.0200  252.00
 x 0 0
-x 0 0
+P1              0.0066  323.84
 x 0 0
 x 0 0
 x 0 0
@@ -33142,12 +33237,13 @@ x 0 0
 # !latitude: 31.2165
 # region: Al Iskandariyah
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Alexandria (Al Iskandariyah), Egypt
 +02:00 :Africa/Cairo
 0.3000 meters
 x 0 0
 K1              0.0200  303.00
-x 0 0
+K2              0.0108  319.16
 x 0 0
 x 0 0
 M2              0.0700  303.00
@@ -33159,7 +33255,7 @@ x 0 0
 x 0 0
 O1              0.0100  269.00
 x 0 0
-x 0 0
+P1              0.0066  302.84
 x 0 0
 x 0 0
 x 0 0
@@ -33333,12 +33429,13 @@ x 0 0
 # !latitude: 31.7542
 # region: Al Butnan
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mina Bardiyah (Bardia), Libya
 +02:00 :Africa/Tripoli
 0.1000 meters
 x 0 0
 K1              0.0100  337.00
-x 0 0
+K2              0.0081  332.16
 x 0 0
 x 0 0
 M2              0.0300  294.00
@@ -33350,7 +33447,7 @@ x 0 0
 x 0 0
 O1              0.0100  288.00
 x 0 0
-x 0 0
+P1              0.0033  336.84
 x 0 0
 x 0 0
 x 0 0
@@ -33524,12 +33621,13 @@ x 0 0
 # !latitude: 30.4170
 # region: Ajdabiya
 # admin1_quelle: Ufer 1.4 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Marsa al Burayqah (Brega), Libya
 +02:00 :Africa/Tripoli
 0.3400 meters
 x 0 0
 K1              0.0100  30.00
-x 0 0
+K2              0.0054  142.16
 x 0 0
 x 0 0
 M2              0.0500  118.00
@@ -33541,7 +33639,7 @@ x 0 0
 x 0 0
 O1              0.0100  136.00
 x 0 0
-x 0 0
+P1              0.0033  29.84
 x 0 0
 x 0 0
 x 0 0
@@ -33715,12 +33813,13 @@ x 0 0
 # !latitude: 32.3670
 # region: Misratah
 # admin1_quelle: Ufer 2.7 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Misrata, Libya
 +02:00 :Africa/Tripoli
 0.3700 meters
 x 0 0
 K1              0.0200  96.00
-x 0 0
+K2              0.0108  132.16
 x 0 0
 x 0 0
 M2              0.0700  111.00
@@ -33732,7 +33831,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0066  95.84
 x 0 0
 x 0 0
 x 0 0
@@ -33906,12 +34005,13 @@ x 0 0
 # !latitude: 32.9000
 # region: Tajura' wa an Nawahi al Arba
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Tripoli (Tarabulus), Libya
 +02:00 :Africa/Tripoli
 0.3000 meters
 x 0 0
 K1              0.0200  36.00
-x 0 0
+K2              0.0216  147.16
 x 0 0
 x 0 0
 M2              0.1300  123.00
@@ -33923,7 +34023,7 @@ x 0 0
 x 0 0
 O1              0.0100  201.00
 x 0 0
-x 0 0
+P1              0.0066  35.84
 x 0 0
 x 0 0
 x 0 0

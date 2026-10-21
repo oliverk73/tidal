@@ -15002,6 +15002,7 @@ MNUS2
 # !latitude: 15.3343
 # region: Al Hudaydah
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kamaran (Passage), Yemen
 +03:00 :Asia/Aden
 1.0000 meters
@@ -15019,7 +15020,7 @@ N2              0.0627  13.38
 x 0 0
 O1              0.0100  181.00
 x 0 0
-x 0 0
+P1              0.0066  78.75
 x 0 0
 x 0 0
 x 0 0
@@ -15197,6 +15198,7 @@ x 0 0
 # !latitude: 14.8322
 # region: Al Hudaydah
 # admin1_quelle: Ufer 1.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Hudaydah, Yemen
 +03:00 :Asia/Aden
 0.5800 meters
@@ -15214,7 +15216,7 @@ N2              0.0589  11.85
 x 0 0
 O1              0.0100  134.00
 x 0 0
-x 0 0
+P1              0.0066  65.75
 x 0 0
 x 0 0
 x 0 0
@@ -15392,6 +15394,7 @@ x 0 0
 # !latitude: 14.9144
 # region: Al Hudaydah
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ras al Katib, Yemen
 +03:00 :Asia/Aden
 0.4600 meters
@@ -15409,7 +15412,7 @@ N2              0.0494  1.49
 x 0 0
 O1              0.0100  124.00
 x 0 0
-x 0 0
+P1              0.0132  113.75
 x 0 0
 x 0 0
 x 0 0
@@ -15584,12 +15587,13 @@ x 0 0
 # !latitude: 13.3130
 # region: Ta`izz
 # admin1_quelle: Ufer 0.9 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mokha (Al Mukha), Yemen
 +03:00 :Asia/Aden
 0.5800 meters
 x 0 0
 K1              0.1900  38.00
-x 0 0
+K2              0.0108  274.25
 x 0 0
 x 0 0
 M2              0.1000  328.00
@@ -15601,7 +15605,7 @@ x 0 0
 x 0 0
 O1              0.0800  34.00
 x 0 0
-x 0 0
+P1              0.0627  37.75
 x 0 0
 x 0 0
 x 0 0
@@ -15775,12 +15779,13 @@ x 0 0
 # !latitude: 14.5215
 # region: Hadramawt
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mukalla, Yemen
 +03:00 :Asia/Aden
 1.2200 meters
 x 0 0
 K1              0.3400  33.00
-x 0 0
+K2              0.0324  254.25
 x 0 0
 x 0 0
 M2              0.4000  223.00
@@ -15792,7 +15797,7 @@ x 0 0
 x 0 0
 O1              0.2400  36.00
 x 0 0
-x 0 0
+P1              0.1122  32.75
 x 0 0
 x 0 0
 x 0 0
@@ -15966,12 +15971,13 @@ x 0 0
 # !latitude: 12.6920
 # region: Hadramawt
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ras Qalansiyah (Socotra), Yemen
 +03:00 :Asia/Aden
 1.5000 meters
 x 0 0
 K1              0.4000  6.42
-x 0 0
+K2              0.0567  190.25
 x 0 0
 x 0 0
 M2              0.4700  169.86
@@ -15983,7 +15989,7 @@ x 0 0
 x 0 0
 O1              0.2000  8.44
 x 0 0
-x 0 0
+P1              0.1320  6.17
 x 0 0
 x 0 0
 x 0 0
@@ -16157,12 +16163,13 @@ x 0 0
 # !latitude: 12.4399
 # region: Hadramawt
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ghubbat di-Net (Socotra), Yemen
 +03:00 :Asia/Aden
 1.2000 meters
 x 0 0
 K1              0.4000  1.41
-x 0 0
+K2              0.0567  180.25
 x 0 0
 x 0 0
 M2              0.4700  160.20
@@ -16174,7 +16181,7 @@ x 0 0
 x 0 0
 O1              0.2000  3.79
 x 0 0
-x 0 0
+P1              0.1320  1.16
 x 0 0
 x 0 0
 x 0 0
@@ -16348,6 +16355,7 @@ x 0 0
 # !latitude: -14.4665
 # province: Nampula
 # admin1_quelle: Ufer 3.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Nacala (Fernao Veloso), Mozambique
 +02:00 :Africa/Maputo
 2.2500 meters
@@ -16365,7 +16373,7 @@ N2              0.1995  63.49
 x 0 0
 O1              0.0900  36.00
 x 0 0
-x 0 0
+P1              0.0330  20.84
 x 0 0
 x 0 0
 x 0 0
@@ -16539,6 +16547,7 @@ x 0 0
 # !latitude: -10.2673
 # region: Mtwara
 # admin1_quelle: Ufer 0.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mtwara, Tanzania
 +03:00 :Africa/Dar_es_Salaam
 2.0000 meters
@@ -16556,7 +16565,7 @@ N2              0.2071  89.95
 x 0 0
 O1              0.1100  49.00
 x 0 0
-x 0 0
+P1              0.0561  30.75
 x 0 0
 x 0 0
 x 0 0
@@ -16730,6 +16739,7 @@ x 0 0
 # !latitude: -15.7270
 # region: Boeny
 # admin1_quelle: Ufer 1.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mahajanga, Madagascar
 +03:00 :Indian/Antananarivo
 2.9300 meters
@@ -16747,7 +16757,7 @@ N2              0.2394  85.66
 x 0 0
 O1              0.0700  52.00
 x 0 0
-x 0 0
+P1              0.0462  54.75
 x 0 0
 x 0 0
 x 0 0
@@ -16921,6 +16931,7 @@ x 0 0
 # !latitude: 25.3667
 # region: Sharjah
 # admin1_quelle: Ufer 0.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sharjah (Ash Shariqah), United Arab Emirates
 +04:00 :Asia/Dubai
 1.1800 meters
@@ -16938,7 +16949,7 @@ N2              0.0836  352.34
 x 0 0
 O1              0.1500  108.00
 x 0 0
-x 0 0
+P1              0.0594  164.67
 x 0 0
 x 0 0
 x 0 0
@@ -17113,6 +17124,7 @@ x 0 0
 # !latitude: 25.2650
 # region: Dubay
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Dubai (Mina Rashid), United Arab Emirates
 +04:00 :Asia/Dubai
 1.0300 meters
@@ -17130,7 +17142,7 @@ N2              0.0836  327.27
 x 0 0
 O1              0.1600  97.00
 x 0 0
-x 0 0
+P1              0.0759  150.67
 x 0 0
 x 0 0
 x 0 0
@@ -17304,6 +17316,7 @@ x 0 0
 # !latitude: 24.5132
 # region: Abu Dhabi
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mina Zayid (Abu Dhabi), United Arab Emirates
 +04:00 :Asia/Dubai
 1.4200 meters
@@ -17321,7 +17334,7 @@ N2              0.0798  350.59
 x 0 0
 O1              0.1800  108.00
 x 0 0
-x 0 0
+P1              0.1056  161.67
 x 0 0
 x 0 0
 x 0 0
@@ -17495,6 +17508,7 @@ x 0 0
 # !latitude: 30.5167
 # province: Al-Basrah
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Basra, Iraq
 +03:00 :Asia/Baghdad
 1.4900 meters
@@ -17512,7 +17526,7 @@ N2              0.0627  40.05
 x 0 0
 O1              0.1200  351.00
 x 0 0
-x 0 0
+P1              0.0693  27.75
 x 0 0
 x 0 0
 x 0 0
@@ -17686,6 +17700,7 @@ x 0 0
 # !latitude: 27.1100
 # province: Hormozgan
 # admin1_quelle: Ufer 1.0 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bandar-e Shahid Rajai, Iran
 +03:30 :Asia/Tehran
 2.1900 meters
@@ -17703,7 +17718,7 @@ N2              0.2090  281.10
 x 0 0
 O1              0.2300  58.00
 x 0 0
-x 0 0
+P1              0.1155  69.71
 x 0 0
 x 0 0
 x 0 0
@@ -17877,6 +17892,7 @@ x 0 0
 # !latitude: 22.7350
 # region: Makkah
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sharm Rabigh, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.8000 meters
@@ -17894,7 +17910,7 @@ N2              0.0247  183.60
 x 0 0
 O1              0.0200  204.00
 x 0 0
-x 0 0
+P1              0.0132  201.75
 x 0 0
 x 0 0
 x 0 0
@@ -18068,6 +18084,7 @@ x 0 0
 # !latitude: 25.1642
 # region: Fujayrah
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Fujairah, United Arab Emirates
 +04:00 :Asia/Dubai
 1.7400 meters
@@ -18085,7 +18102,7 @@ N2              0.1273  258.17
 x 0 0
 O1              0.2000  40.00
 x 0 0
-x 0 0
+P1              0.1287  39.67
 x 0 0
 x 0 0
 x 0 0
@@ -18259,6 +18276,7 @@ x 0 0
 # !latitude: 25.3513
 # region: Sharjah
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khor Fakkan, United Arab Emirates
 +04:00 :Asia/Dubai
 1.7300 meters
@@ -18276,7 +18294,7 @@ N2              0.1254  259.78
 x 0 0
 O1              0.1900  42.00
 x 0 0
-x 0 0
+P1              0.1155  39.67
 x 0 0
 x 0 0
 x 0 0
@@ -18450,6 +18468,7 @@ x 0 0
 # !latitude: 25.4223
 # region: Ajman
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ajman, United Arab Emirates
 +04:00 :Asia/Dubai
 1.1700 meters
@@ -18467,7 +18486,7 @@ N2              0.0817  333.45
 x 0 0
 O1              0.1500  106.00
 x 0 0
-x 0 0
+P1              0.0561  162.67
 x 0 0
 x 0 0
 x 0 0
@@ -18641,6 +18660,7 @@ x 0 0
 # !latitude: 24.7956
 # region: Abu Dhabi
 # admin1_quelle: Ufer 4.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khalifa Port, United Arab Emirates
 +04:00 :Asia/Dubai
 1.3200 meters
@@ -18658,7 +18678,7 @@ N2              0.0798  334.13
 x 0 0
 O1              0.1900  100.00
 x 0 0
-x 0 0
+P1              0.0990  155.67
 x 0 0
 x 0 0
 x 0 0
@@ -18832,6 +18852,7 @@ x 0 0
 # !latitude: 24.4562
 # region: Abu Dhabi
 # admin1_quelle: Ufer 6.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Halat al Mubarraz, United Arab Emirates
 +04:00 :Asia/Dubai
 1.2100 meters
@@ -18849,7 +18870,7 @@ N2              0.0551  344.84
 x 0 0
 O1              0.2200  113.00
 x 0 0
-x 0 0
+P1              0.1419  157.67
 x 0 0
 x 0 0
 x 0 0
@@ -19023,6 +19044,7 @@ x 0 0
 # !latitude: 24.9677
 # region: Al Wakrah
 # admin1_quelle: Ufer 2.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mesaieed, Qatar
 +03:00 :Asia/Qatar
 1.1700 meters
@@ -19040,7 +19062,7 @@ N2              0.0551  135.38
 x 0 0
 O1              0.1900  71.00
 x 0 0
-x 0 0
+P1              0.1419  123.75
 x 0 0
 x 0 0
 x 0 0
@@ -19214,6 +19236,7 @@ x 0 0
 # !latitude: 25.2945
 # region: Ad Dawhah
 # admin1_quelle: Ufer 0.3 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Doha (Ad Dawhah), Qatar
 +03:00 :Asia/Qatar
 0.8800 meters
@@ -19231,7 +19254,7 @@ N2              0.0608  121.31
 x 0 0
 O1              0.1700  66.00
 x 0 0
-x 0 0
+P1              0.1221  119.75
 x 0 0
 x 0 0
 x 0 0
@@ -19405,6 +19428,7 @@ x 0 0
 # !latitude: 25.9190
 # region: Al Khawr
 # admin1_quelle: Ufer 2.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ras Laffan, Qatar
 +03:00 :Asia/Qatar
 0.8900 meters
@@ -19422,7 +19446,7 @@ N2              0.0684  98.95
 x 0 0
 O1              0.1200  47.00
 x 0 0
-x 0 0
+P1              0.0825  101.75
 x 0 0
 x 0 0
 x 0 0
@@ -19597,6 +19621,7 @@ x 0 0
 # !latitude: 26.5000
 # region: Ash Sharqiyah
 # admin1_quelle: Ufer 9.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ad Dammam (K.A.A.P.), Saudi Arabia
 +03:00 :Asia/Riyadh
 1.4300 meters
@@ -19614,7 +19639,7 @@ N2              0.1197  105.91
 x 0 0
 O1              0.1100  286.00
 x 0 0
-x 0 0
+P1              0.0429  344.75
 x 0 0
 x 0 0
 x 0 0
@@ -19788,6 +19813,7 @@ x 0 0
 # !latitude: 30.0157
 # province: Al-Basrah
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Umm Qasr, Iraq
 +03:00 :Asia/Baghdad
 2.8900 meters
@@ -19805,7 +19831,7 @@ N2              0.2717  321.87
 x 0 0
 O1              0.2700  270.00
 x 0 0
-x 0 0
+P1              0.1881  320.75
 x 0 0
 x 0 0
 x 0 0
@@ -19980,6 +20006,7 @@ x 0 0
 # !latitude: 29.9756
 # province: Al-Basrah
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Faw, Iraq
 +03:00 :Asia/Baghdad
 1.8800 meters
@@ -19997,7 +20024,7 @@ N2              0.1558  303.77
 x 0 0
 O1              0.2500  268.00
 x 0 0
-x 0 0
+P1              0.1452  314.75
 x 0 0
 x 0 0
 x 0 0
@@ -20172,6 +20199,7 @@ x 0 0
 # !latitude: 30.4630
 # province: Khuzestan
 # admin1_quelle: Ufer 1.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bandar-e Mahshahr, Iran
 +03:30 :Asia/Tehran
 3.2400 meters
@@ -20189,7 +20217,7 @@ N2              0.2926  306.55
 x 0 0
 O1              0.3100  270.00
 x 0 0
-x 0 0
+P1              0.1749  313.71
 x 0 0
 x 0 0
 x 0 0
@@ -20363,6 +20391,7 @@ x 0 0
 # !latitude: 27.0117
 # region: Ash Sharqiyah
 # admin1_quelle: Ufer 2.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Jubayl, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.8200 meters
@@ -20380,7 +20409,7 @@ N2              0.0855  93.45
 x 0 0
 O1              0.1400  275.00
 x 0 0
-x 0 0
+P1              0.0627  318.75
 x 0 0
 x 0 0
 x 0 0
@@ -20745,6 +20774,7 @@ x 0 0
 # !latitude: -18.0063
 # province: Zambezia
 # admin1_quelle: Ufer 1.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Morrubune (Rio dos Bons Sinais mouth), Mozambique
 +02:00 :Africa/Maputo
 2.6000 meters
@@ -20762,7 +20792,7 @@ N2              0.2223  86.56
 x 0 0
 O1              0.0500  14.00
 x 0 0
-x 0 0
+P1              0.0066  83.84
 x 0 0
 x 0 0
 x 0 0
@@ -20936,6 +20966,7 @@ x 0 0
 # !latitude: -17.2678
 # province: Zambezia
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pebane (Rio Moniga), Mozambique
 +02:00 :Africa/Maputo
 2.4300 meters
@@ -20953,7 +20984,7 @@ N2              0.2204  86.42
 x 0 0
 O1              0.0600  29.00
 x 0 0
-x 0 0
+P1              0.0165  70.84
 x 0 0
 x 0 0
 x 0 0
@@ -21127,6 +21158,7 @@ x 0 0
 # !latitude: -12.3457
 # province: Cabo Delgado
 # admin1_quelle: Ufer 5.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ibo, Mozambique
 +02:00 :Africa/Maputo
 2.3800 meters
@@ -21144,7 +21176,7 @@ N2              0.2166  43.23
 x 0 0
 O1              0.0800  351.00
 x 0 0
-x 0 0
+P1              0.0264  75.84
 x 0 0
 x 0 0
 x 0 0
@@ -21318,6 +21350,7 @@ x 0 0
 # !latitude: -11.3365
 # province: Cabo Delgado
 # admin1_quelle: Ufer 0.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mocímboa da Praia, Mozambique
 +02:00 :Africa/Maputo
 2.6000 meters
@@ -21335,7 +21368,7 @@ N2              0.2261  65.95
 x 0 0
 O1              0.0900  31.00
 x 0 0
-x 0 0
+P1              0.0462  22.84
 x 0 0
 x 0 0
 x 0 0
@@ -21510,6 +21543,7 @@ x 0 0
 # !latitude: -12.2672
 # region: Diana
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Antsiranana (Diego-Suarez), Madagascar
 +03:00 :Indian/Antananarivo
 1.4300 meters
@@ -21527,7 +21561,7 @@ N2              0.1121  75.95
 x 0 0
 O1              0.0700  58.00
 x 0 0
-x 0 0
+P1              0.0363  52.75
 x 0 0
 x 0 0
 x 0 0
@@ -21701,6 +21735,7 @@ x 0 0
 # !latitude: 2.0349
 # region: Shabeellaha Hoose
 # admin1_quelle: Ufer 10.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mogadishu, Somalia
 +03:00 :Africa/Mogadishu
 1.6300 meters
@@ -21718,7 +21753,7 @@ N2              0.1292  92.10
 x 0 0
 O1              0.1200  41.00
 x 0 0
-x 0 0
+P1              0.0693  35.75
 x 0 0
 x 0 0
 x 0 0
@@ -21892,6 +21927,7 @@ x 0 0
 # !latitude: 5.3416
 # region: Mudug
 # admin1_quelle: Ufer 4.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Hobyo, Somalia
 +03:00 :Africa/Mogadishu
 0.7900 meters
@@ -21909,7 +21945,7 @@ N2              0.0817  82.81
 x 0 0
 O1              0.1100  34.00
 x 0 0
-x 0 0
+P1              0.1089  47.75
 x 0 0
 x 0 0
 x 0 0
@@ -22081,6 +22117,7 @@ x 0 0
 # !units: meters
 # !longitude: 45.0030
 # !latitude: 10.4410
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Berbera (Gulf of Aden), Somalia
 +03:00 :Africa/Mogadishu
 1.5600 meters
@@ -22098,7 +22135,7 @@ N2              0.0893  213.21
 x 0 0
 O1              0.1900  38.00
 x 0 0
-x 0 0
+P1              0.1518  33.75
 x 0 0
 x 0 0
 x 0 0
@@ -22273,6 +22310,7 @@ x 0 0
 # !latitude: 29.9356
 # region: As Suways
 # admin1_quelle: Ufer 1.0 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Suez (As Suways), Egypt
 +02:00 :Africa/Cairo
 1.1400 meters
@@ -22290,7 +22328,7 @@ N2              0.1064  320.99
 x 0 0
 O1              0.0100  198.00
 x 0 0
-x 0 0
+P1              0.0132  183.84
 x 0 0
 x 0 0
 x 0 0
@@ -22464,6 +22502,7 @@ x 0 0
 # !latitude: 16.9873
 # province: Dhofar
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mirbat (Marbat), Oman
 +04:00 :Asia/Muscat
 1.3200 meters
@@ -22481,7 +22520,7 @@ N2              0.0608  243.92
 x 0 0
 O1              0.1900  41.00
 x 0 0
-x 0 0
+P1              0.1089  44.67
 x 0 0
 x 0 0
 x 0 0
@@ -22656,6 +22695,7 @@ x 0 0
 # !latitude: 17.5244
 # province: Dhofar
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Hallaniyah, Oman
 +04:00 :Asia/Muscat
 1.2800 meters
@@ -22673,7 +22713,7 @@ N2              0.0627  245.85
 x 0 0
 O1              0.1800  41.00
 x 0 0
-x 0 0
+P1              0.1254  38.67
 x 0 0
 x 0 0
 x 0 0
@@ -22847,6 +22887,7 @@ x 0 0
 # !latitude: 18.9815
 # region: Al Wusta
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ras al Madrakah, Oman
 +04:00 :Asia/Muscat
 1.5600 meters
@@ -22864,7 +22905,7 @@ N2              0.0817  254.38
 x 0 0
 O1              0.1900  38.00
 x 0 0
-x 0 0
+P1              0.1287  40.67
 x 0 0
 x 0 0
 x 0 0
@@ -23039,6 +23080,7 @@ x 0 0
 # !latitude: 20.5643
 # region: Al Wusta
 # admin1_quelle: Ufer 4.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mahawt (Jazirat Muhut), Oman
 +04:00 :Asia/Muscat
 1.7900 meters
@@ -23056,7 +23098,7 @@ N2              0.1197  259.24
 x 0 0
 O1              0.2000  42.00
 x 0 0
-x 0 0
+P1              0.1320  42.67
 x 0 0
 x 0 0
 x 0 0
@@ -23231,6 +23273,7 @@ x 0 0
 # !latitude: 23.7814
 # region: Al Batnah South
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Sawadi, Oman
 +04:00 :Asia/Muscat
 1.8600 meters
@@ -23248,7 +23291,7 @@ N2              0.1235  256.31
 x 0 0
 O1              0.2000  37.00
 x 0 0
-x 0 0
+P1              0.1254  35.67
 x 0 0
 x 0 0
 x 0 0
@@ -23423,6 +23466,7 @@ x 0 0
 # !latitude: 23.9720
 # region: Al Batnah North
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Khaburah, Oman
 +04:00 :Asia/Muscat
 1.9000 meters
@@ -23440,7 +23484,7 @@ N2              0.1311  257.85
 x 0 0
 O1              0.2000  40.00
 x 0 0
-x 0 0
+P1              0.1320  47.67
 x 0 0
 x 0 0
 x 0 0
@@ -23615,6 +23659,7 @@ x 0 0
 # !latitude: 24.1535
 # region: Al Batnah North
 # admin1_quelle: Ufer 5.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Saham, Oman
 +04:00 :Asia/Muscat
 1.9000 meters
@@ -23632,7 +23677,7 @@ N2              0.1292  256.78
 x 0 0
 O1              0.2200  39.00
 x 0 0
-x 0 0
+P1              0.1320  38.67
 x 0 0
 x 0 0
 x 0 0
@@ -23807,6 +23852,7 @@ x 0 0
 # !latitude: 24.7475
 # region: Al Batnah North
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Shinas, Oman
 +04:00 :Asia/Muscat
 2.1000 meters
@@ -23824,7 +23870,7 @@ N2              0.1292  256.31
 x 0 0
 O1              0.2100  35.00
 x 0 0
-x 0 0
+P1              0.1353  38.67
 x 0 0
 x 0 0
 x 0 0
@@ -23998,6 +24044,7 @@ x 0 0
 # !latitude: 22.4688
 # state: Gujarat
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Okha, Gujarat, India
 +05:30 :Asia/Kolkata
 2.0400 meters
@@ -24015,7 +24062,7 @@ N2              0.2128  350.31
 x 0 0
 O1              0.2100  65.00
 x 0 0
-x 0 0
+P1              0.1419  66.55
 x 0 0
 x 0 0
 x 0 0
@@ -24190,6 +24237,7 @@ x 0 0
 # !latitude: 20.8996
 # state: Gujarat
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Veraval, Gujarat, India
 +05:30 :Asia/Kolkata
 1.3300 meters
@@ -24207,7 +24255,7 @@ N2              0.1026  306.63
 x 0 0
 O1              0.1800  58.00
 x 0 0
-x 0 0
+P1              0.1188  62.55
 x 0 0
 x 0 0
 x 0 0
@@ -24386,6 +24434,7 @@ x 0 0
 # !latitude: 24.8000
 # province: Sind
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Karachi (Entrance), Pakistan
 +05:00 :Asia/Karachi
 1.6700 meters
@@ -24403,7 +24452,7 @@ N2              0.1520  284.10
 x 0 0
 O1              0.2100  45.00
 x 0 0
-x 0 0
+P1              0.1320  57.59
 x 0 0
 x 0 0
 x 0 0
@@ -24578,6 +24627,7 @@ x 0 0
 # !latitude: 23.5167
 # state: Gujarat
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kori Creek Entrance, Gujarat, India
 +05:30 :Asia/Kolkata
 1.9400 meters
@@ -24595,7 +24645,7 @@ N2              0.1900  327.02
 x 0 0
 O1              0.1900  74.00
 x 0 0
-x 0 0
+P1              0.1221  63.55
 x 0 0
 x 0 0
 x 0 0
@@ -24769,6 +24819,7 @@ x 0 0
 # !latitude: 22.8217
 # state: Gujarat
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mandvi, Gujarat, India
 +05:30 :Asia/Kolkata
 2.5900 meters
@@ -24786,7 +24837,7 @@ N2              0.2356  21.63
 x 0 0
 O1              0.2200  79.00
 x 0 0
-x 0 0
+P1              0.1452  74.55
 x 0 0
 x 0 0
 x 0 0
@@ -24961,6 +25012,7 @@ x 0 0
 # !latitude: 22.3188
 # state: Gujarat
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Salaya, Gujarat, India
 +05:30 :Asia/Kolkata
 3.1100 meters
@@ -24978,7 +25030,7 @@ N2              0.3021  21.49
 x 0 0
 O1              0.2500  73.00
 x 0 0
-x 0 0
+P1              0.1584  76.55
 x 0 0
 x 0 0
 x 0 0
@@ -25152,6 +25204,7 @@ x 0 0
 # !latitude: 20.6299
 # state: Gujarat
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Valsad, Gujarat, India
 +05:30 :Asia/Kolkata
 3.8400 meters
@@ -25169,7 +25222,7 @@ N2              0.3534  47.10
 x 0 0
 O1              0.2500  65.00
 x 0 0
-x 0 0
+P1              0.2442  70.55
 x 0 0
 x 0 0
 x 0 0
@@ -25344,6 +25397,7 @@ x 0 0
 # !latitude: 19.9725
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Dahanu, Maharashtra, India
 +05:30 :Asia/Kolkata
 2.8400 meters
@@ -25361,7 +25415,7 @@ N2              0.2755  20.10
 x 0 0
 O1              0.2500  60.00
 x 0 0
-x 0 0
+P1              0.1749  61.55
 x 0 0
 x 0 0
 x 0 0
@@ -25536,6 +25590,7 @@ x 0 0
 # !latitude: 19.7272
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Satpati, Maharashtra, India
 +05:30 :Asia/Kolkata
 3.0900 meters
@@ -25553,7 +25608,7 @@ N2              0.2470  356.17
 x 0 0
 O1              0.2100  56.00
 x 0 0
-x 0 0
+P1              0.1617  52.55
 x 0 0
 x 0 0
 x 0 0
@@ -25728,6 +25783,7 @@ x 0 0
 # !latitude: 19.3248
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Vasai (Bassein), Maharashtra, India
 +05:30 :Asia/Kolkata
 2.5300 meters
@@ -25745,7 +25801,7 @@ N2              0.2280  345.10
 x 0 0
 O1              0.2100  50.00
 x 0 0
-x 0 0
+P1              0.1584  59.55
 x 0 0
 x 0 0
 x 0 0
@@ -25920,6 +25976,7 @@ x 0 0
 # !latitude: 18.9989
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Trombay (Mumbai), Maharashtra, India
 +05:30 :Asia/Kolkata
 2.5200 meters
@@ -25937,7 +25994,7 @@ N2              0.2546  328.56
 x 0 0
 O1              0.1800  55.00
 x 0 0
-x 0 0
+P1              0.1551  63.55
 x 0 0
 x 0 0
 x 0 0
@@ -26112,6 +26169,7 @@ x 0 0
 # !latitude: 18.5417
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Revadanda (Chaul), Maharashtra, India
 +05:30 :Asia/Kolkata
 2.4100 meters
@@ -26129,7 +26187,7 @@ N2              0.1957  315.17
 x 0 0
 O1              0.1900  48.00
 x 0 0
-x 0 0
+P1              0.1485  57.55
 x 0 0
 x 0 0
 x 0 0
@@ -26304,6 +26362,7 @@ x 0 0
 # !latitude: 17.9814
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bankot (Savitri River), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.9600 meters
@@ -26321,7 +26380,7 @@ N2              0.1596  307.63
 x 0 0
 O1              0.1700  57.00
 x 0 0
-x 0 0
+P1              0.1188  55.55
 x 0 0
 x 0 0
 x 0 0
@@ -26495,6 +26554,7 @@ x 0 0
 # !latitude: 16.5561
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Vijayadurg (Vagothan River), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.3700 meters
@@ -26512,7 +26572,7 @@ N2              0.1216  290.70
 x 0 0
 O1              0.1600  55.00
 x 0 0
-x 0 0
+P1              0.1287  51.55
 x 0 0
 x 0 0
 x 0 0
@@ -26687,6 +26747,7 @@ x 0 0
 # !latitude: 16.3806
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Devgad (Devgarh), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.3800 meters
@@ -26704,7 +26765,7 @@ N2              0.1121  288.02
 x 0 0
 O1              0.1600  49.00
 x 0 0
-x 0 0
+P1              0.1056  51.55
 x 0 0
 x 0 0
 x 0 0
@@ -26879,6 +26940,7 @@ x 0 0
 # !latitude: 16.0544
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Malvan, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.1700 meters
@@ -26896,7 +26958,7 @@ N2              0.1064  290.10
 x 0 0
 O1              0.1600  51.00
 x 0 0
-x 0 0
+P1              0.1056  50.55
 x 0 0
 x 0 0
 x 0 0
@@ -27070,6 +27132,7 @@ x 0 0
 # !latitude: 15.8569
 # state: Maharashtra
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Vengurla, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.1900 meters
@@ -27087,7 +27150,7 @@ N2              0.1045  291.70
 x 0 0
 O1              0.1600  51.00
 x 0 0
-x 0 0
+P1              0.1023  53.55
 x 0 0
 x 0 0
 x 0 0
@@ -27262,6 +27325,7 @@ x 0 0
 # !latitude: 15.1471
 # state: Goa
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Betul, Goa, India
 +05:30 :Asia/Kolkata
 1.0000 meters
@@ -27279,7 +27343,7 @@ N2              0.0931  294.95
 x 0 0
 O1              0.1500  55.00
 x 0 0
-x 0 0
+P1              0.1122  58.55
 x 0 0
 x 0 0
 x 0 0
@@ -27454,6 +27518,7 @@ x 0 0
 # !latitude: 14.7984
 # state: Karnataka
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Karwar, Karnataka, India
 +05:30 :Asia/Kolkata
 1.1800 meters
@@ -27471,7 +27536,7 @@ N2              0.0988  304.10
 x 0 0
 O1              0.1500  59.00
 x 0 0
-x 0 0
+P1              0.0990  60.55
 x 0 0
 x 0 0
 x 0 0
@@ -27646,6 +27711,7 @@ x 0 0
 # !latitude: 13.9681
 # state: Karnataka
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bhatkal, Karnataka, India
 +05:30 :Asia/Kolkata
 0.7000 meters
@@ -27663,7 +27729,7 @@ N2              0.0684  297.66
 x 0 0
 O1              0.0800  49.00
 x 0 0
-x 0 0
+P1              0.0792  57.55
 x 0 0
 x 0 0
 x 0 0
@@ -27838,6 +27904,7 @@ x 0 0
 # !latitude: 12.4753
 # state: Kerala
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kasaragod, Kerala, India
 +05:30 :Asia/Kolkata
 0.8900 meters
@@ -27855,7 +27922,7 @@ N2              0.0665  294.66
 x 0 0
 O1              0.1300  56.00
 x 0 0
-x 0 0
+P1              0.0825  53.55
 x 0 0
 x 0 0
 x 0 0
@@ -28030,6 +28097,7 @@ x 0 0
 # !latitude: 11.2492
 # state: Kerala
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Calicut (Kozhikode), Kerala, India
 +05:30 :Asia/Kolkata
 0.9600 meters
@@ -28047,7 +28115,7 @@ N2              0.0608  291.38
 x 0 0
 O1              0.1000  59.00
 x 0 0
-x 0 0
+P1              0.0528  48.55
 x 0 0
 x 0 0
 x 0 0
@@ -28222,6 +28290,7 @@ x 0 0
 # !latitude: 9.4999
 # state: Kerala
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Alappuzha (Alleppey), Kerala, India
 +05:30 :Asia/Kolkata
 0.5500 meters
@@ -28239,7 +28308,7 @@ N2              0.0475  303.62
 x 0 0
 O1              0.0800  50.00
 x 0 0
-x 0 0
+P1              0.0693  50.55
 x 0 0
 x 0 0
 x 0 0
@@ -28414,6 +28483,7 @@ x 0 0
 # !latitude: 8.3742
 # state: Kerala
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Trivandrum (Vizhinjam), Kerala, India
 +05:30 :Asia/Kolkata
 0.5500 meters
@@ -28431,7 +28501,7 @@ N2              0.0399  303.76
 x 0 0
 O1              0.0700  45.00
 x 0 0
-x 0 0
+P1              0.0495  54.55
 x 0 0
 x 0 0
 x 0 0
@@ -28605,6 +28675,7 @@ x 0 0
 # !latitude: 10.7649
 # state: Tamil Nadu
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Nagapattinam, Tamil Nadu, India
 +05:30 :Asia/Kolkata
 0.3400 meters
@@ -28622,7 +28693,7 @@ N2              0.0380  234.17
 x 0 0
 O1              0.0300  319.00
 x 0 0
-x 0 0
+P1              0.0198  350.55
 x 0 0
 x 0 0
 x 0 0
@@ -28797,6 +28868,7 @@ x 0 0
 # !latitude: 9.8303
 # region: Yapanaya
 # admin1_quelle: Ufer 0.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Point Pedro, Sri Lanka
 +05:30 :Asia/Colombo
 0.3700 meters
@@ -28814,7 +28886,7 @@ N2              0.0399  226.99
 x 0 0
 O1              0.0100  3.00
 x 0 0
-x 0 0
+P1              0.0165  327.55
 x 0 0
 x 0 0
 x 0 0
@@ -28989,6 +29061,7 @@ x 0 0
 # !latitude: 9.6489
 # region: Yapanaya
 # admin1_quelle: Ufer 2.3 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Jaffna, Sri Lanka
 +05:30 :Asia/Colombo
 0.4000 meters
@@ -29006,7 +29079,7 @@ N2              0.0285  55.42
 x 0 0
 O1              0.0300  43.00
 x 0 0
-x 0 0
+P1              0.0264  90.55
 x 0 0
 x 0 0
 x 0 0
@@ -29181,6 +29254,7 @@ x 0 0
 # !latitude: 11.4868
 # state: Tamil Nadu
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Parangipettai (Porto Novo), Tamil Nadu, India
 +05:30 :Asia/Kolkata
 0.7100 meters
@@ -29198,7 +29272,7 @@ N2              0.0494  230.17
 x 0 0
 O1              0.0300  331.00
 x 0 0
-x 0 0
+P1              0.0264  342.55
 x 0 0
 x 0 0
 x 0 0
@@ -29373,6 +29447,7 @@ x 0 0
 # !latitude: 16.9382
 # state: Andhra Pradesh
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kakinada (Cocanada), Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 0.8700 meters
@@ -29390,7 +29465,7 @@ N2              0.0874  228.17
 x 0 0
 O1              0.0400  328.00
 x 0 0
-x 0 0
+P1              0.0330  338.55
 x 0 0
 x 0 0
 x 0 0
@@ -29564,6 +29639,7 @@ x 0 0
 # !latitude: 17.8908
 # state: Andhra Pradesh
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bheemunipatnam (Bheemili), Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 1.1400 meters
@@ -29581,7 +29657,7 @@ N2              0.0836  218.10
 x 0 0
 O1              0.0400  325.00
 x 0 0
-x 0 0
+P1              0.0363  329.55
 x 0 0
 x 0 0
 x 0 0
@@ -29755,6 +29831,7 @@ x 0 0
 # !latitude: 18.3434
 # state: Andhra Pradesh
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kalingapatnam, Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 1.0100 meters
@@ -29772,7 +29849,7 @@ N2              0.0912  225.70
 x 0 0
 O1              0.0500  314.00
 x 0 0
-x 0 0
+P1              0.0330  346.55
 x 0 0
 x 0 0
 x 0 0
@@ -29946,6 +30023,7 @@ x 0 0
 # !latitude: 18.8727
 # state: Andhra Pradesh
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Baruva, Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 1.0400 meters
@@ -29963,7 +30041,7 @@ N2              0.0855  225.78
 x 0 0
 O1              0.0500  308.00
 x 0 0
-x 0 0
+P1              0.0363  336.55
 x 0 0
 x 0 0
 x 0 0
@@ -30137,6 +30215,7 @@ x 0 0
 # !latitude: 19.6780
 # state: Odisha
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Chilka Lake (Sea Mouth), Odisha, India
 +05:30 :Asia/Kolkata
 0.9800 meters
@@ -30154,7 +30233,7 @@ N2              0.0589  231.34
 x 0 0
 O1              0.0300  309.00
 x 0 0
-x 0 0
+P1              0.0165  9.55
 x 0 0
 x 0 0
 x 0 0
@@ -30328,6 +30407,7 @@ x 0 0
 # !latitude: 19.9686
 # state: Odisha
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Devi River Entrance, Odisha, India
 +05:30 :Asia/Kolkata
 1.6500 meters
@@ -30345,7 +30425,7 @@ N2              0.1102  220.88
 x 0 0
 O1              0.0400  332.00
 x 0 0
-x 0 0
+P1              0.0264  322.55
 x 0 0
 x 0 0
 x 0 0
@@ -30519,6 +30599,7 @@ x 0 0
 # !latitude: 20.3556
 # state: Odisha
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 False Point, Odisha, India
 +05:30 :Asia/Kolkata
 1.5400 meters
@@ -30536,7 +30617,7 @@ N2              0.1311  234.63
 x 0 0
 O1              0.0500  325.00
 x 0 0
-x 0 0
+P1              0.0396  339.55
 x 0 0
 x 0 0
 x 0 0
@@ -30710,6 +30791,7 @@ x 0 0
 # !latitude: 20.7833
 # state: Odisha
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Shortt Island, Odisha, India
 +05:30 :Asia/Kolkata
 1.9200 meters
@@ -30727,7 +30809,7 @@ N2              0.1748  241.10
 x 0 0
 O1              0.0400  328.00
 x 0 0
-x 0 0
+P1              0.0363  346.55
 x 0 0
 x 0 0
 x 0 0
@@ -30901,6 +30983,7 @@ x 0 0
 # !latitude: 25.9374
 # province: Musandam
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Lima, Oman
 +04:00 :Asia/Muscat
 1.8400 meters
@@ -30918,7 +31001,7 @@ N2              0.1330  268.24
 x 0 0
 O1              0.1900  42.00
 x 0 0
-x 0 0
+P1              0.0990  45.67
 x 0 0
 x 0 0
 x 0 0
@@ -31093,6 +31176,7 @@ x 0 0
 # !latitude: 26.2079
 # province: Musandam
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khasab, Oman
 +04:00 :Asia/Muscat
 1.5500 meters
@@ -31110,7 +31194,7 @@ N2              0.1292  288.63
 x 0 0
 O1              0.1800  63.00
 x 0 0
-x 0 0
+P1              0.0693  78.67
 x 0 0
 x 0 0
 x 0 0
@@ -31284,6 +31368,7 @@ x 0 0
 # !latitude: 26.1493
 # province: Musandam
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bukha, Oman
 +04:00 :Asia/Muscat
 1.4600 meters
@@ -31301,7 +31386,7 @@ N2              0.1216  295.02
 x 0 0
 O1              0.1500  81.00
 x 0 0
-x 0 0
+P1              0.0594  90.67
 x 0 0
 x 0 0
 x 0 0
@@ -31476,6 +31561,7 @@ x 0 0
 # !latitude: 25.9801
 # region: Ras Al Khaymah
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Saqr Port (Mina Saqr), United Arab Emirates
 +04:00 :Asia/Dubai
 1.4000 meters
@@ -31493,7 +31579,7 @@ N2              0.1140  304.10
 x 0 0
 O1              0.1500  75.00
 x 0 0
-x 0 0
+P1              0.0561  109.67
 x 0 0
 x 0 0
 x 0 0
@@ -31668,6 +31754,7 @@ x 0 0
 # !latitude: 25.8070
 # region: Ras Al Khaymah
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ras al Khaymah, United Arab Emirates
 +04:00 :Asia/Dubai
 1.3700 meters
@@ -31685,7 +31772,7 @@ N2              0.1026  301.88
 x 0 0
 O1              0.1600  88.00
 x 0 0
-x 0 0
+P1              0.0429  110.67
 x 0 0
 x 0 0
 x 0 0
@@ -31860,6 +31947,7 @@ x 0 0
 # !latitude: 25.5982
 # region: Umm Al Qaywayn
 # admin1_quelle: Ufer 2.0 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Umm al-Qaiwain, United Arab Emirates
 +04:00 :Asia/Dubai
 1.1000 meters
@@ -31877,7 +31965,7 @@ N2              0.0855  327.49
 x 0 0
 O1              0.1700  95.00
 x 0 0
-x 0 0
+P1              0.0627  135.67
 x 0 0
 x 0 0
 x 0 0
@@ -32052,6 +32140,7 @@ x 0 0
 # !latitude: 26.0510
 # region: Madinat ach Shamal
 # admin1_quelle: Ufer 1.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Fuwayrit (Jabal al Fuwayrit), Qatar
 +03:00 :Asia/Qatar
 0.9000 meters
@@ -32069,7 +32158,7 @@ N2              0.0798  105.81
 x 0 0
 O1              0.0900  42.00
 x 0 0
-x 0 0
+P1              0.0660  98.75
 x 0 0
 x 0 0
 x 0 0
@@ -32243,6 +32332,7 @@ x 0 0
 # !latitude: 26.1453
 # region: Madinat ach Shamal
 # admin1_quelle: Ufer 0.8 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ar Ru'ays, Qatar
 +03:00 :Asia/Qatar
 1.2000 meters
@@ -32260,7 +32350,7 @@ N2              0.1026  116.13
 x 0 0
 O1              0.0700  343.00
 x 0 0
-x 0 0
+P1              0.0495  63.75
 x 0 0
 x 0 0
 x 0 0
@@ -32435,6 +32525,7 @@ x 0 0
 # !latitude: 29.0662
 # province: Al Ahmadi
 # admin1_quelle: Ufer 5.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mina Al Ahmadi Refinery, Kuwait
 +03:00 :Asia/Kuwait
 1.7200 meters
@@ -32452,7 +32543,7 @@ N2              0.1254  305.06
 x 0 0
 O1              0.3200  256.00
 x 0 0
-x 0 0
+P1              0.1551  304.75
 x 0 0
 x 0 0
 x 0 0
@@ -32627,6 +32718,7 @@ x 0 0
 # !latitude: 29.3504
 # province: Al Asimah
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ash Shuwaykh (Kuwait), Kuwait
 +03:00 :Asia/Kuwait
 2.3000 meters
@@ -32644,7 +32736,7 @@ N2              0.1805  309.77
 x 0 0
 O1              0.3300  261.00
 x 0 0
-x 0 0
+P1              0.1716  309.75
 x 0 0
 x 0 0
 x 0 0
@@ -32819,6 +32911,7 @@ x 0 0
 # !latitude: 29.3830
 # province: Al Jahrah
 # admin1_quelle: Ufer 1.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mina al Dawhah (Doha), Kuwait
 +03:00 :Asia/Kuwait
 2.1700 meters
@@ -32836,7 +32929,7 @@ N2              0.1881  301.87
 x 0 0
 O1              0.3300  267.00
 x 0 0
-x 0 0
+P1              0.1683  308.75
 x 0 0
 x 0 0
 x 0 0
@@ -33013,6 +33106,7 @@ x 0 0
 # admin1_quelle: Ufer 1.1 km
 # note: 20260906 country "Iraq" -> "Kuwait" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al-Basrah" -> "Al Jahrah".
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 al-Warba, Kuwait
 +03:00 :Asia/Baghdad
 2.4400 meters
@@ -33030,7 +33124,7 @@ N2              0.2394  303.34
 x 0 0
 O1              0.3100  264.00
 x 0 0
-x 0 0
+P1              0.2178  305.75
 x 0 0
 x 0 0
 x 0 0
@@ -33205,6 +33299,7 @@ x 0 0
 # !latitude: 29.8335
 # province: Al-Basrah
 # admin1_quelle: Ufer 19.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Shatt al Arab Outer Bar, Iraq
 +03:00 :Asia/Baghdad
 1.7400 meters
@@ -33222,7 +33317,7 @@ N2              0.1596  275.30
 x 0 0
 O1              0.3000  247.00
 x 0 0
-x 0 0
+P1              0.1650  294.75
 x 0 0
 x 0 0
 x 0 0
@@ -33397,6 +33492,7 @@ x 0 0
 # !latitude: 29.6800
 # province: Al-Basrah
 # admin1_quelle: Ufer 37.4 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Basrah (Al Bakr) Terminal, Iraq
 +03:00 :Asia/Baghdad
 1.7700 meters
@@ -33414,7 +33510,7 @@ N2              0.1824  273.30
 x 0 0
 O1              0.3300  246.00
 x 0 0
-x 0 0
+P1              0.2013  293.75
 x 0 0
 x 0 0
 x 0 0
@@ -33589,6 +33685,7 @@ x 0 0
 # !latitude: 29.9998
 # province: Khuzestan
 # admin1_quelle: Ufer 13.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khowr-e Musa Bar, Iran
 +03:30 :Asia/Tehran
 2.2000 meters
@@ -33606,7 +33703,7 @@ N2              0.1653  281.30
 x 0 0
 O1              0.3100  253.00
 x 0 0
-x 0 0
+P1              0.1617  300.71
 x 0 0
 x 0 0
 x 0 0
@@ -33781,6 +33878,7 @@ x 0 0
 # !latitude: 30.0478
 # province: Bushehr
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bandar Deylam, Iran
 +03:30 :Asia/Tehran
 1.4500 meters
@@ -33798,7 +33896,7 @@ N2              0.1235  244.91
 x 0 0
 O1              0.3000  252.00
 x 0 0
-x 0 0
+P1              0.1386  289.71
 x 0 0
 x 0 0
 x 0 0

@@ -7488,6 +7488,7 @@ x 0 0
 # state: South Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM SA_TP067 geprueft: gleich, Kurve 0.8 cm, FES 3.2/3.4 cm; dieser Satz bleibt.
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 American River, South Australia, Australia
 +09:30 :Australia/Adelaide
 0.7700 meters
@@ -7505,7 +7506,7 @@ N2              0.0160  191.00
 2N2             0.0130  158.00
 O1              0.1500   20.00
 x 0 0
-x 0 0
+P1              0.0743  47.22
 Q1              0.0350    5.00
 x 0 0
 x 0 0
@@ -12493,12 +12494,13 @@ x 0 0
 # !latitude: 35.1700
 # state: California
 # admin1_quelle: Ufer 1.2 km
+# note: 20261021 K2 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Avila, California
 -08:00 :America/Los_Angeles
 0.0000 feet
 x 0 0
 K1              1.1600   94.00
-x 0 0
+K2              0.1296  280.34
 x 0 0
 x 0 0
 M2              1.6000  287.00
@@ -21709,12 +21711,13 @@ x 0 0
 # state: Tasmania
 # admin1_quelle: Name
 # note: 2026-10-18 BOM TAS_TP031 geprueft: gleich, Kurve 4.6 cm, FES 7.6/8.0 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Big River Cove, Tasmania, Australia
 +10:00 :Australia/Hobart
 1.6137 meters
 x 0 0
 K1              0.1727  106.01
-x 0 0
+K2              0.0303  164.41
 L2              0.0995  347.52
 x 0 0
 M2              0.9330  322.29
@@ -21726,7 +21729,7 @@ N2              0.2473  287.30
 x 0 0
 O1              0.1174   54.18
 x 0 0
-x 0 0
+P1              0.0570  105.19
 Q1              0.0375   27.23
 x 0 0
 x 0 0
@@ -25920,6 +25923,7 @@ x 0 0
 # !latitude: -9.5000
 # province: National Capital District
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bootless Inlet, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 1.2600 meters
@@ -25937,7 +25941,7 @@ N2              0.1305  245.21
 x 0 0
 O1              0.1145  140.78
 x 0 0
-x 0 0
+P1              0.0857  212.26
 Q1              0.0211  108.88
 x 0 0
 x 0 0
@@ -26492,12 +26496,13 @@ x 0 0
 # state: Tasmania
 # admin1_quelle: Name
 # note: 2026-10-18 BOM TAS_TP017 geprueft: unentschieden, Kurve 6.0 cm, FES 5.6/6.2 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bramble Cove, Tasmania, Australia
 +10:00 :Australia/Hobart
 0.5007 meters
 x 0 0
 K1              0.1236   48.80
-x 0 0
+K2              0.0200  90.27
 x 0 0
 x 0 0
 M2              0.0744  310.03
@@ -26509,7 +26514,7 @@ N2              0.0161  250.93
 x 0 0
 O1              0.1190   12.15
 x 0 0
-x 0 0
+P1              0.0408  47.98
 Q1              0.0384   11.73
 x 0 0
 x 0 0
@@ -27839,12 +27844,13 @@ x 0 0
 # !latitude: -32.6167
 # state: New South Wales
 # admin1_quelle: Name
+# note: 20261021 K2 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Broughton Island, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.9290 meters
 x 0 0
 K1              0.1840  118.00
-x 0 0
+K2              0.0354  264.82
 x 0 0
 x 0 0
 M2              0.5580  235.00
@@ -35108,12 +35114,13 @@ x 0 0
 # !latitude: -10.9704
 # state: Northern Territory
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cape Croker, Northern Territory, Australia
 +09:30 :Australia/Darwin
 1.4269 meters
 x 0 0
 K1              0.1702  348.58
-x 0 0
+K2              0.0588  172.34
 x 0 0
 x 0 0
 M2              0.5394  111.86
@@ -35125,7 +35132,7 @@ N2              0.1222   76.33
 x 0 0
 O1              0.1925  333.05
 x 0 0
-x 0 0
+P1              0.0562  347.80
 Q1              0.0226  239.45
 x 0 0
 x 0 0
@@ -35492,12 +35499,13 @@ x 0 0
 # !latitude: -11.4000
 # province: Milne Bay
 # admin1_quelle: Polygon
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cape Deliverance, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.5350 meters
 x 0 0
 K1              0.1941  194.24
-x 0 0
+K2              0.0238  222.07
 x 0 0
 x 0 0
 M2              0.0759  277.39
@@ -35509,7 +35517,7 @@ N2              0.0350  231.73
 x 0 0
 O1              0.1316  163.92
 x 0 0
-x 0 0
+P1              0.0641  193.42
 Q1              0.0053  273.81
 x 0 0
 x 0 0
@@ -36275,12 +36283,13 @@ x 0 0
 # state: Northern Territory
 # admin1_quelle: Name
 # note: 2026-10-18 BOM NT_TP010 geprueft: unentschieden, Kurve 6.6 cm, FES 5.1/5.8 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cape Grey, Northern Territory, Australia
 +09:30 :Australia/Darwin
 1.1000 meters
 x 0 0
 K1              0.2100   40.54
-x 0 0
+K2              0.0311  327.02
 x 0 0
 x 0 0
 M2              0.3509  252.03
@@ -36292,7 +36301,7 @@ N2              0.0401  224.15
 x 0 0
 O1              0.1664  314.22
 x 0 0
-x 0 0
+P1              0.0693  39.76
 Q1              0.0101  234.16
 x 0 0
 x 0 0
@@ -44689,12 +44698,13 @@ x 0 0
 # !latitude: -67.0000
 # region: Antarctica
 # admin1_quelle: Ufer 7.1 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Commonwealth Bay, Antarctica
 +10:00 :Antarctica/DumontDUrville
 0.7700 meters
 x 0 0
 K1              0.3070    3.00
-x 0 0
+K2              0.0362  27.82
 x 0 0
 x 0 0
 M2              0.2800  332.00
@@ -44706,7 +44716,7 @@ N2              0.0670  316.00
 x 0 0
 O1              0.2990  343.00
 x 0 0
-x 0 0
+P1              0.1013  2.18
 Q1              0.0640  337.00
 x 0 0
 x 0 0
@@ -46616,12 +46626,13 @@ x 0 0
 # admin1_quelle: Name
 # note: 2026-10-18 BOM QLD_TP056 geprueft: unentschieden, Kurve 15.0 cm, FES 18.5/17.6 cm; dieser Satz bleibt.
 # note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP056, Sekundenangabe (vorher -20.5333 150.3667) (Oliver).
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Creal Reef, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.9420 meters
 x 0 0
 K1              0.2408  164.89
-x 0 0
+K2              0.1285  296.82
 L2              0.0587  212.92
 x 0 0
 M2              1.0341  312.28
@@ -46633,7 +46644,7 @@ N2              0.2556  310.35
 x 0 0
 O1              0.1983  146.69
 x 0 0
-x 0 0
+P1              0.0795  164.07
 Q1              0.0577   63.01
 x 0 0
 x 0 0
@@ -51400,12 +51411,13 @@ x 0 0
 # !latitude: -10.2333
 # province: Central
 # admin1_quelle: Ufer 2.3 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Dedele Point, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 1.3300 meters
 x 0 0
 K1              0.2924  209.06
-x 0 0
+K2              0.0770  265.01
 L2              0.0259  141.85
 x 0 0
 M2              0.4636  274.86
@@ -51417,7 +51429,7 @@ N2              0.1465  259.79
 x 0 0
 O1              0.1514  148.80
 x 0 0
-x 0 0
+P1              0.0965  208.24
 Q1              0.0115  116.77
 x 0 0
 x 0 0
@@ -54670,12 +54682,13 @@ x 0 0
 # !latitude: -10.2333
 # province: Milne Bay
 # admin1_quelle: Ufer 1.4 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 East Cape, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.6690 meters
 x 0 0
 K1              0.3260  188.05
-x 0 0
+K2              0.0149  153.20
 x 0 0
 x 0 0
 M2              0.0125   12.61
@@ -54687,7 +54700,7 @@ N2              0.0134  203.38
 x 0 0
 O1              0.1290  158.15
 x 0 0
-x 0 0
+P1              0.1076  187.23
 Q1              0.0109  154.34
 x 0 0
 x 0 0
@@ -61437,6 +61450,7 @@ x 0 0
 # !latitude: -6.6013
 # province: Morobe
 # admin1_quelle: Ufer 0.9 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Finsch Harbour, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.4700 meters
@@ -61454,7 +61468,7 @@ N2              0.0120  120.00
 x 0 0
 O1              0.0700  272.00
 x 0 0
-x 0 0
+P1              0.0842  204.18
 x 0 0
 x 0 0
 x 0 0
@@ -62019,12 +62033,13 @@ x 0 0
 # !latitude: -14.1667
 # state: Queensland
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Flinders Island, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.3500 meters
 x 0 0
 K1              0.3242  182.16
-x 0 0
+K2              0.0955  240.29
 L2              0.0292  238.29
 x 0 0
 M2              0.5452  287.30
@@ -62036,7 +62051,7 @@ N2              0.2052  274.04
 x 0 0
 O1              0.1443  150.78
 x 0 0
-x 0 0
+P1              0.1070  181.34
 Q1              0.0282   95.68
 x 0 0
 x 0 0
@@ -71036,12 +71051,13 @@ x 0 0
 # province: Gulf
 # admin1_quelle: Polygon
 # note: 2026-10-18 Position aus BOM-Stationsliste INT_TP037, Sekundenangabe (vorher -7.7500 144.2000) (Oliver); exakte BOM-Position ohne Verschiebung.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Goaribari Island, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 2.2900 meters
 x 0 0
 K1              0.2684  189.73
-x 0 0
+K2              0.1719  291.32
 x 0 0
 x 0 0
 M2              1.0413  323.26
@@ -71053,7 +71069,7 @@ N2              0.4347  308.16
 x 0 0
 O1              0.1674  151.52
 x 0 0
-x 0 0
+P1              0.0886  188.91
 Q1              0.0705   91.00
 x 0 0
 x 0 0
@@ -73357,12 +73373,13 @@ x 0 0
 # state: Tasmania
 # admin1_quelle: Name
 # note: 2026-10-18 BOM TAS_TP023 geprueft: gleich, Kurve 4.5 cm, FES 10.2/6.9 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Grassy (King Island), Tasmania, Australia
 +10:00 :Australia/Hobart
 0.8400 meters
 x 0 0
 K1              0.1910   50.00
-x 0 0
+K2              0.0343  78.82
 L2              0.0270  321.00
 x 0 0
 M2              0.3740  324.00
@@ -73374,7 +73391,7 @@ N2              0.0650  272.00
 x 0 0
 O1              0.1300   20.00
 x 0 0
-x 0 0
+P1              0.0630  49.18
 Q1              0.0300    5.00
 x 0 0
 x 0 0
@@ -82032,12 +82049,13 @@ x 0 0
 # note: 20260910 Position vom gleichnamigen Satz uebernommen (vorher -53.0167/73.3833,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
 # note: 20261018 Zusatz (Atlas Cove) von der archivierten NOAA-Dublette (Oliver).
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Heard Island (Atlas Cove), Australia
 +06:00 :Etc/GMT-5
 0.8320 meters
 x 0 0
 K1              0.1334  296.94
-x 0 0
+K2              0.0290  88.59
 x 0 0
 x 0 0
 M2              0.2581    8.08
@@ -82049,7 +82067,7 @@ N2              0.0676  344.94
 x 0 0
 O1              0.0907  258.94
 x 0 0
-x 0 0
+P1              0.0440  296.45
 Q1              0.0249  249.20
 x 0 0
 x 0 0
@@ -85500,12 +85518,13 @@ x 0 0
 # admin1_quelle: Name
 # note: 2026-10-18 BOM QLD_TP077 geprueft: unentschieden, Kurve 9.0 cm, FES 10.1/9.2 cm; dieser Satz bleibt.
 # note: 2026-10-18 Position aus BOM-Stationsliste QLD_TP077, Sekundenangabe (vorher -21.9500 150.6833) (Oliver); exakte BOM-Position ohne Verschiebung.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 High Peak Island, Queensland, Australia
 +10:00 :Australia/Brisbane
 2.8400 meters
 x 0 0
 K1              0.3703  168.11
-x 0 0
+K2              0.1411  301.62
 L2              0.0815  287.48
 x 0 0
 M2              1.4780  298.64
@@ -85517,7 +85536,7 @@ N2              0.3950  288.90
 x 0 0
 O1              0.1622  136.33
 x 0 0
-x 0 0
+P1              0.1222  167.29
 Q1              0.0450  131.59
 x 0 0
 x 0 0
@@ -88588,12 +88607,13 @@ x 0 0
 # state: Northern Territory
 # admin1_quelle: Name
 # note: 2026-10-18 BOM NT_TP092 geprueft: FES, Kurve 14.7 cm, FES 21.9/18.7 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Hopeful Bay (Marchinbar Island), Northern Territory, Australia
 +09:30 :Australia/Darwin
 2.1500 meters
 x 0 0
 K1              0.3860   68.81
-x 0 0
+K2              0.0619  311.11
 L2              0.0815  258.09
 x 0 0
 M2              0.9680  216.99
@@ -88605,7 +88625,7 @@ N2              0.1513  173.83
 x 0 0
 O1              0.2958   17.95
 x 0 0
-x 0 0
+P1              0.1274  68.03
 Q1              0.0710  318.98
 x 0 0
 x 0 0
@@ -103021,12 +103041,13 @@ x 0 0
 # state: Western Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM WA_TP131 geprueft: gleich, Kurve 1.6 cm, FES 5.2/4.9 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Jabiru, Western Australia, Australia
 +08:00 :Australia/Darwin
 1.9600 meters
 x 0 0
 K1              0.3662  303.24
-x 0 0
+K2              0.1245  7.46
 L2              0.0488  325.51
 x 0 0
 M2              0.8830  312.32
@@ -103038,7 +103059,7 @@ N2              0.1376  289.94
 x 0 0
 O1              0.2051  283.09
 x 0 0
-x 0 0
+P1              0.1208  302.58
 Q1              0.0417  268.90
 x 0 0
 x 0 0
@@ -115556,12 +115577,13 @@ x 0 0
 # !latitude: -5.5476
 # region: New Britain
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kimbe (New Britain), Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.6333 meters
 x 0 0
 K1              0.2795  209.74
-x 0 0
+K2              0.0164  112.72
 x 0 0
 x 0 0
 M2              0.0480  222.19
@@ -115573,7 +115595,7 @@ N2              0.0344  171.75
 x 0 0
 O1              0.1433  189.81
 x 0 0
-x 0 0
+P1              0.0922  208.92
 Q1              0.0258  137.34
 x 0 0
 x 0 0
@@ -121932,12 +121954,13 @@ x 0 0
 # !latitude: -8.1333
 # province: Gulf
 # admin1_quelle: Ufer 37.8 km
+# note: 20261021 K2 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kumul Tkr Mrg, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 2.1520 meters
 x 0 0
 K1              0.3134  196.91
-x 0 0
+K2              0.1131  275.72
 L2              0.0473   12.88
 x 0 0
 M2              0.7404  298.34
@@ -125398,12 +125421,13 @@ x 0 0
 # state: Tasmania
 # admin1_quelle: Name
 # note: 2026-10-18 BOM TAS_TP019 geprueft: FES, Kurve 14.4 cm, FES 81.8/71.2 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Launceston, Tasmania, Australia
 +10:00 :Australia/Hobart
 2.4087 meters
 x 0 0
 K1              0.1887  158.90
-x 0 0
+K2              0.0305  182.22
 L2              0.1320   59.40
 x 0 0
 M2              1.4057    7.80
@@ -125415,7 +125439,7 @@ N2              0.3307  314.70
 x 0 0
 O1              0.0847   27.60
 x 0 0
-x 0 0
+P1              0.0623  158.08
 Q1              0.0460  339.80
 x 0 0
 x 0 0
@@ -125978,12 +126002,13 @@ x 0 0
 # state: Western Australia
 # admin1_quelle: Name
 # note: 2026-10-18 BOM WA_TP051 geprueft: unentschieden, Kurve 7.7 cm, FES 7.2/8.6 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Lesueur Island, Western Australia, Australia
 +08:00 :Australia/Perth
 1.4710 meters
 x 0 0
 K1              0.6120  313.44
-x 0 0
+K2              0.0143  236.06
 x 0 0
 x 0 0
 M2              0.3878  177.42
@@ -125995,7 +126020,7 @@ N2              0.0661  152.74
 x 0 0
 O1              0.3246  309.79
 x 0 0
-x 0 0
+P1              0.2020  312.78
 Q1              0.0391  309.20
 x 0 0
 x 0 0
@@ -141722,12 +141747,13 @@ x 0 0
 # !latitude: -10.7000
 # province: Milne Bay
 # admin1_quelle: Ufer 0.3 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Misima, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.4600 meters
 x 0 0
 K1              0.2241  203.28
-x 0 0
+K2              0.0103  195.19
 L2              0.0056   93.53
 x 0 0
 M2              0.0336  310.41
@@ -141739,7 +141765,7 @@ N2              0.0282  241.61
 x 0 0
 O1              0.0954  163.13
 x 0 0
-x 0 0
+P1              0.0740  202.46
 Q1              0.0463  156.96
 x 0 0
 x 0 0
@@ -155001,12 +155027,13 @@ x 0 0
 # !latitude: -13.1833
 # state: Queensland
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Night Island, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.2400 meters
 x 0 0
 K1              0.3325  194.00
-x 0 0
+K2              0.0547  266.62
 L2              0.0088  108.44
 x 0 0
 M2              0.4697  287.83
@@ -155018,7 +155045,7 @@ N2              0.1715  273.25
 x 0 0
 O1              0.1434  156.84
 x 0 0
-x 0 0
+P1              0.1097  193.18
 Q1              0.0343  173.85
 x 0 0
 x 0 0
@@ -158279,12 +158306,13 @@ x 0 0
 # !latitude: -11.5237
 # state: Northern Territory
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 North Goulburn Island, Northern Territory, Australia
 +09:30 :Australia/Darwin
 1.6155 meters
 x 0 0
 K1              0.2557   18.40
-x 0 0
+K2              0.0450  230.10
 L2              0.0195  190.46
 x 0 0
 M2              0.6032  159.83
@@ -158296,7 +158324,7 @@ N2              0.1198  142.11
 x 0 0
 O1              0.2678    4.56
 x 0 0
-x 0 0
+P1              0.0844  17.62
 Q1              0.0686  347.94
 x 0 0
 x 0 0
@@ -161360,12 +161388,13 @@ x 0 0
 # !latitude: -11.7052
 # state: Northern Territory
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Nw Crocodile Island, Northern Territory, Australia
 +09:30 :Australia/Darwin
 2.5800 meters
 x 0 0
 K1              0.3384   45.84
-x 0 0
+K2              0.1025  266.95
 L2              0.0290  215.49
 x 0 0
 M2              1.1905  201.23
@@ -161377,7 +161406,7 @@ N2              0.2405  185.01
 x 0 0
 O1              0.3451   17.43
 x 0 0
-x 0 0
+P1              0.1117  45.06
 Q1              0.0839  359.90
 x 0 0
 x 0 0
@@ -176580,12 +176609,13 @@ x 0 0
 # !latitude: -13.9000
 # state: Queensland
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pelican Island (East Coast), Queensland, Australia
 +10:00 :Australia/Brisbane
 1.8900 meters
 x 0 0
 K1              0.3340  211.02
-x 0 0
+K2              0.1237  273.60
 L2              0.0337  123.39
 x 0 0
 M2              0.6607  285.82
@@ -176597,7 +176627,7 @@ N2              0.2566  262.73
 x 0 0
 O1              0.1616  156.23
 x 0 0
-x 0 0
+P1              0.1102  210.20
 Q1              0.0391  129.67
 x 0 0
 x 0 0
@@ -176971,12 +177001,13 @@ x 0 0
 # !latitude: -12.2333
 # state: Queensland
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pennefather River, Queensland, Australia
 +10:00 :Australia/Brisbane
 1.7500 meters
 x 0 0
 K1              0.3166  178.20
-x 0 0
+K2              0.0276  194.27
 x 0 0
 x 0 0
 M2              0.3596  123.89
@@ -176988,7 +177019,7 @@ N2              0.1095   67.06
 x 0 0
 O1              0.3087  143.07
 x 0 0
-x 0 0
+P1              0.1045  177.38
 Q1              0.0690  108.98
 x 0 0
 x 0 0
@@ -178709,12 +178740,13 @@ x 0 0
 # state: New South Wales
 # admin1_quelle: Name
 # note: 2026-10-18 BOM NSW_TP032 geprueft: gleich, Kurve 4.4 cm, FES 5.8/6.5 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sand Point (Pittwater), New South Wales, Australia
 +10:00 :Australia/Sydney
 0.8900 meters
 x 0 0
 K1              0.1678  130.03
-x 0 0
+K2              0.0362  280.22
 L2              0.0179  277.56
 x 0 0
 M2              0.5637  237.70
@@ -178726,7 +178758,7 @@ N2              0.1072  216.73
 x 0 0
 O1              0.0965   82.28
 x 0 0
-x 0 0
+P1              0.0554  129.21
 Q1              0.0171   60.25
 x 0 0
 x 0 0
@@ -180046,12 +180078,13 @@ x 0 0
 # !latitude: -23.1141
 # state: Western Australia
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Point Maud, Western Australia, Australia
 +08:00 :Australia/Perth
 0.7100 meters
 x 0 0
 K1              0.1988  286.77
-x 0 0
+K2              0.0220  342.25
 x 0 0
 x 0 0
 M2              0.2750  275.20
@@ -180063,7 +180096,7 @@ N2              0.0548  244.89
 x 0 0
 O1              0.1164  270.92
 x 0 0
-x 0 0
+P1              0.0656  286.11
 Q1              0.0196  273.05
 x 0 0
 x 0 0
@@ -184679,12 +184712,13 @@ x 0 0
 # state: Northern Territory
 # admin1_quelle: Name
 # note: 2026-10-19 vorher "Port Langdon" bei 13 52 S 136 50 E (1,9 km an Land); ins naechste Wasser dazu, Suedteil der Bucht bei Umbakumba (Oliver).
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Umbakumba (Port Langdon, Groote Eylandt), Northern Territory, Australia
 +09:30 :Australia/Darwin
 1.0000 meters
 x 0 0
 K1              0.1722   21.38
-x 0 0
+K2              0.0312  328.41
 x 0 0
 x 0 0
 M2              0.3080  264.93
@@ -184696,7 +184730,7 @@ N2              0.0563  247.54
 x 0 0
 O1              0.1684  302.44
 x 0 0
-x 0 0
+P1              0.0568  20.60
 Q1              0.0216  277.64
 x 0 0
 x 0 0
@@ -193367,12 +193401,13 @@ x 0 0
 # !latitude: -14.3535
 # state: Western Australia
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Reveley Island, Western Australia, Australia
 +09:30 :Australia/Perth
 2.6100 meters
 x 0 0
 K1              0.6740  312.24
-x 0 0
+K2              0.1064  202.58
 L2              0.0200  166.51
 x 0 0
 M2              1.1600  150.62
@@ -193384,7 +193419,7 @@ N2              0.2010  124.04
 x 0 0
 O1              0.3070  301.69
 x 0 0
-x 0 0
+P1              0.2224  311.46
 Q1              0.0380  290.10
 x 0 0
 x 0 0
@@ -195477,12 +195512,13 @@ x 0 0
 # !latitude: -14.2848
 # state: Northern Territory
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Numbulwar, Northern Territory, Australia
 +09:30 :Australia/Darwin
 1.3014 meters
 x 0 0
 K1              0.5088  340.67
-x 0 0
+K2              0.0178  126.79
 L2              0.0576   76.97
 x 0 0
 M2              0.2630   14.13
@@ -195494,7 +195530,7 @@ N2              0.0756  332.89
 x 0 0
 O1              0.2845  263.95
 x 0 0
-x 0 0
+P1              0.1679  339.89
 Q1              0.0686  209.67
 x 0 0
 x 0 0
@@ -198377,12 +198413,13 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20260906 country "Unknown" -> "Australia" nach dem Namen berichtigt,
 # note: 2026-10-18 BOM QLD_TP265 geprueft: FES, Kurve 26.9 cm, FES 27.6/18.1 cm; dieser Satz bleibt.
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Saibai Island (Torres Strait), Queensland, Australia
 +10:00 :Australia/Brisbane
 1.8400 meters
 x 0 0
 K1              0.5453  245.15
-x 0 0
+K2              0.1993  31.88
 L2              0.0977  238.58
 x 0 0
 M2              0.2145   30.38
@@ -198394,7 +198431,7 @@ N2              0.1480   44.19
 x 0 0
 O1              0.3355  178.40
 x 0 0
-x 0 0
+P1              0.1799  244.33
 Q1              0.0596  179.64
 x 0 0
 x 0 0
@@ -211642,12 +211679,13 @@ x 0 0
 # !longitude: 151.0833
 # !latitude: -10.5333
 # note: 20261020 Land "Solomon Islands" -> "Papua New Guinea" (Position in Milne Bay, Louisiaden; Quelle nennt PNG) (Oliver).
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Kanawea (Shortland Island), Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.5800 meters
 x 0 0
 K1              0.2178  214.68
-x 0 0
+K2              0.0228  181.70
 x 0 0
 x 0 0
 M2              0.0736  303.79
@@ -211659,7 +211697,7 @@ N2              0.0232  232.34
 x 0 0
 O1              0.1509  163.38
 x 0 0
-x 0 0
+P1              0.0719  213.86
 Q1              0.0140  175.04
 x 0 0
 x 0 0
@@ -239347,12 +239385,13 @@ x 0 0
 # !latitude: -35.0068
 # state: South Australia
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Thistle Island, South Australia, Australia
 +09:30 :Australia/Adelaide
 0.6500 meters
 x 0 0
 K1              0.1599   21.66
-x 0 0
+K2              0.0669  67.38
 L2              0.0351   41.57
 x 0 0
 M2              0.1671    8.72
@@ -239364,7 +239403,7 @@ N2              0.0283   79.36
 x 0 0
 O1              0.1518  352.26
 x 0 0
-x 0 0
+P1              0.0528  20.88
 Q1              0.0323  340.10
 x 0 0
 x 0 0
@@ -246471,12 +246510,13 @@ x 0 0
 # !latitude: -9.0833
 # province: Northern
 # admin1_quelle: Ufer 1.2 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Tufi Harbour, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.9130 meters
 x 0 0
 K1              0.2983  224.92
-x 0 0
+K2              0.0288  153.89
 x 0 0
 x 0 0
 M2              0.0445   74.73
@@ -246488,7 +246528,7 @@ N2              0.0235  184.19
 x 0 0
 O1              0.3513  158.87
 x 0 0
-x 0 0
+P1              0.0984  224.10
 Q1              0.0059  121.46
 x 0 0
 x 0 0
@@ -249961,12 +250001,13 @@ x 0 0
 # !latitude: -8.5000
 # province: Western
 # admin1_quelle: Ufer 1.1 km
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Umuda Island, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 2.1800 meters
 x 0 0
 K1              0.3120  199.69
-x 0 0
+K2              0.1543  301.21
 L2              0.0221   45.48
 x 0 0
 M2              0.9196  320.64
@@ -249978,7 +250019,7 @@ N2              0.3467  303.94
 x 0 0
 O1              0.1490  159.12
 x 0 0
-x 0 0
+P1              0.1030  198.87
 Q1              0.0466  135.89
 x 0 0
 x 0 0
@@ -263417,12 +263458,13 @@ x 0 0
 # !latitude: -15.0611
 # state: Western Australia
 # admin1_quelle: Name
+# note: 20261021 K2/P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 White Island, Western Australia, Australia
 +08:00 :Australia/Perth
 4.6840 meters
 x 0 0
 K1              0.2390  285.80
-x 0 0
+K2              0.4188  8.26
 L2              0.0530   32.40
 x 0 0
 M2              2.2510  305.80
@@ -263434,7 +263476,7 @@ N2              0.3240  264.80
 x 0 0
 O1              0.1700  282.00
 x 0 0
-x 0 0
+P1              0.0789  285.14
 Q1              0.0340  271.40
 x 0 0
 x 0 0

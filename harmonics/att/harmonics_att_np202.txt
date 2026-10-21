@@ -15003,6 +15003,7 @@ MNUS2
 # admin1_quelle: Name
 # note: 20261017 Meridian +00:00 -> +05:00: M2/S2 lagen gleichmaessig 145-156 Grad (5 h) neben FES, die NP202-Phasen gelten fuer Zone +5 (Oliver).
 # note: 20261017 Position auf GeoNames Mys Flora (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mys Flora (Franz Josef Land), Arkhangelsk Oblast, Russia
 +05:00 :Europe/Moscow
 0.3000 meters
@@ -15020,7 +15021,7 @@ N2              0.0247  125.34
 x 0 0
 O1              0.0200  67.00
 x 0 0
-x 0 0
+P1              0.0231  54.59
 x 0 0
 x 0 0
 x 0 0
@@ -15196,6 +15197,7 @@ x 0 0
 # region: Arkhangelsk Oblast
 # admin1_quelle: Name
 # note: 20261017 Meridian +00:00 -> +05:00: M2/S2 lagen gleichmaessig 145-156 Grad (5 h) neben FES, die NP202-Phasen gelten fuer Zone +5 (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bukhta Tikhaya (Franz Josef Land), Arkhangelsk Oblast, Russia
 +05:00 :Europe/Moscow
 0.3000 meters
@@ -15213,7 +15215,7 @@ N2              0.0171  259.38
 x 0 0
 O1              0.0200  59.00
 x 0 0
-x 0 0
+P1              0.0231  57.59
 x 0 0
 x 0 0
 x 0 0
@@ -15389,6 +15391,7 @@ x 0 0
 # region: Arkhangelsk Oblast
 # admin1_quelle: Name
 # note: 20261017 Meridian +00:00 -> +05:00: M2/S2 lagen gleichmaessig 145-156 Grad (5 h) neben FES, die NP202-Phasen gelten fuer Zone +5 (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bukhta Teplits (Franz Josef Land), Arkhangelsk Oblast, Russia
 +05:00 :Europe/Moscow
 0.4000 meters
@@ -15406,7 +15409,7 @@ N2              0.0323  180.45
 x 0 0
 O1              0.0100  33.00
 x 0 0
-x 0 0
+P1              0.0099  61.59
 x 0 0
 x 0 0
 x 0 0
@@ -15581,6 +15584,7 @@ x 0 0
 # !latitude: 79.5004
 # region: Krasnoyarsk Krai
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ostrov Domashniy (Severnaya Zemlya), Krasnoyarsk Krai, Russia
 +06:00 :Asia/Krasnoyarsk
 0.3000 meters
@@ -15598,7 +15602,7 @@ N2              0.0190  356.91
 x 0 0
 O1              0.0200  36.00
 x 0 0
-x 0 0
+P1              0.0198  45.51
 x 0 0
 x 0 0
 x 0 0
@@ -15774,6 +15778,7 @@ x 0 0
 # region: Sakha Republic
 # admin1_quelle: Ufer 2.9 km
 # note: 20261017 Name 'Ostrov Kotelny' -> Ort des Pegels (NOAA 53 Nerpalakh Lagoon, gleiche Position; GeoNames Laguna Nerpalakh) (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Laguna Nerpalakh (Ostrov Kotel'nyy), Sakha Republic, Russia
 +10:00 :Asia/Yakutsk
 0.3000 meters
@@ -15791,7 +15796,7 @@ N2              0.0133  0.26
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0033  305.18
 x 0 0
 x 0 0
 x 0 0
@@ -15966,6 +15971,7 @@ x 0 0
 # !latitude: 66.9100
 # region: Chukotka Autonomous Okrug
 # admin1_quelle: Ufer 2.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mys Serdtse-Kamen, Chukotka Autonomous Okrug, Russia
 +12:00 :Asia/Anadyr
 0.2000 meters
@@ -15983,7 +15989,7 @@ N2              0.0076  139.47
 x 0 0
 O1              0.0100  56.00
 x 0 0
-x 0 0
+P1              0.0033  68.01
 x 0 0
 x 0 0
 x 0 0
@@ -16159,6 +16165,7 @@ x 0 0
 # region: Chukotka Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20261017 von 67.0500/-173.8833 nach Pitlekaj (GM 67.0767/-173.3866, Vega-Winterlager 1878/79), 350 m vor die Kueste (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pitlekaj, Chukotka Autonomous Okrug, Russia
 +12:00 :Asia/Anadyr
 0.2000 meters
@@ -16176,7 +16183,7 @@ N2              0.0038  122.55
 x 0 0
 O1              0.0100  43.00
 x 0 0
-x 0 0
+P1              0.0033  45.01
 x 0 0
 x 0 0
 x 0 0
@@ -16545,6 +16552,7 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20261017 Meridian +09:00 -> +00:00: die NP202-Phasen sind Greenwich-Phasen (M2 47/S2 115 = FES 49/115), mit Zone +9 lag der Satz 3 h daneben (Oliver).
 # note: 20261017 von 71.5833/128.9167 (an Land) an den Hafen Tiksi im Zaliv Bulunkan (GeoNames), Name wie NOAA 45 (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Zaliv Bulunkan (Bukhta Tiksi), Sakha Republic, Russia
 +00:00 :Asia/Yakutsk
 0.3000 meters
@@ -16562,7 +16570,7 @@ N2              0.0266  10.55
 x 0 0
 O1              0.0100  90.00
 x 0 0
-x 0 0
+P1              0.0099  111.00
 x 0 0
 x 0 0
 x 0 0
@@ -16738,6 +16746,7 @@ x 0 0
 # region: Krasnoyarsk Krai
 # admin1_quelle: Polygon
 # note: 20261017 Name und Position (77.4333/106.6667 -> 77.4167/106.9000) vom NOAA-Satz 19 Samuila I., derselbe Pegel (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ostrov Samuila (Ostrova Komsomol'skoy Pravdy), Krasnoyarsk Krai, Russia
 +07:00 :Asia/Krasnoyarsk
 0.4000 meters
@@ -16755,7 +16764,7 @@ N2              0.0285  291.49
 x 0 0
 O1              0.0100  30.00
 x 0 0
-x 0 0
+P1              0.0198  10.43
 x 0 0
 x 0 0
 x 0 0
@@ -16930,6 +16939,7 @@ x 0 0
 # !latitude: 77.7170
 # region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 0.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mys Chelyuskin, Krasnoyarsk Krai, Russia
 +07:00 :Asia/Krasnoyarsk
 0.4000 meters
@@ -16947,7 +16957,7 @@ N2              0.0247  140.62
 x 0 0
 O1              0.0300  17.00
 x 0 0
-x 0 0
+P1              0.0099  24.43
 x 0 0
 x 0 0
 x 0 0
@@ -17122,6 +17132,7 @@ x 0 0
 # !latitude: 77.5111
 # region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 8.3 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ostrov Gellanda-Gansena, Krasnoyarsk Krai, Russia
 +07:00 :Asia/Krasnoyarsk
 0.3000 meters
@@ -17139,7 +17150,7 @@ N2              0.0133  24.99
 x 0 0
 O1              0.0300  7.00
 x 0 0
-x 0 0
+P1              0.0099  24.43
 x 0 0
 x 0 0
 x 0 0
@@ -17314,6 +17325,7 @@ x 0 0
 # !latitude: 76.1333
 # region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Reyd Zarya, Krasnoyarsk Krai, Russia
 +07:00 :Asia/Krasnoyarsk
 0.4000 meters
@@ -17331,7 +17343,7 @@ N2              0.0342  356.12
 x 0 0
 O1              0.0200  11.00
 x 0 0
-x 0 0
+P1              0.0132  12.43
 x 0 0
 x 0 0
 x 0 0
@@ -17507,6 +17519,7 @@ x 0 0
 # !latitude: 73.5066
 # region: Krasnoyarsk Krai
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Dikson (Bukhta Dikson), Krasnoyarsk Krai, Russia
 +07:00 :Asia/Krasnoyarsk
 0.3000 meters
@@ -17524,7 +17537,7 @@ N2              0.0190  126.70
 x 0 0
 O1              0.0100  293.00
 x 0 0
-x 0 0
+P1              0.0066  49.43
 x 0 0
 x 0 0
 x 0 0
@@ -17700,6 +17713,7 @@ x 0 0
 # region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 5.1 km
 # note: 20261017 Name von Olivers NOAA-Satz 1923 uebernommen (dieser archiviert, derselbe Pegel) (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mys Sopochnaya Karga (Yeniseyskiy Zaliv), Krasnoyarsk Krai, Russia
 +07:00 :Asia/Krasnoyarsk
 0.5000 meters
@@ -17717,7 +17731,7 @@ N2              0.0380  67.50
 x 0 0
 O1              0.0200  196.00
 x 0 0
-x 0 0
+P1              0.0132  295.43
 x 0 0
 x 0 0
 x 0 0
@@ -17892,6 +17906,7 @@ x 0 0
 # !latitude: 70.8642
 # region: Krasnoyarsk Krai
 # admin1_quelle: Ufer 5.1 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ostrov Nasonovskiy (Reka Yenisey), Krasnoyarsk Krai, Russia
 +07:00 :Asia/Krasnoyarsk
 0.3700 meters
@@ -17909,7 +17924,7 @@ N2              0.0209  65.80
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+P1              0.0132  146.43
 x 0 0
 x 0 0
 x 0 0
@@ -18085,6 +18100,7 @@ x 0 0
 # region: Yamalo-Nenets Autonomous Okrug
 # admin1_quelle: Name
 # note: 20261017 Position 0.5 km vor die Muendung der Sabule-Yaga (GeoNames), Buchort lag an Land (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Reka Sabule-Yaga (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia
 +05:00 :Asia/Yekaterinburg
 0.4600 meters
@@ -18102,7 +18118,7 @@ N2              0.0608  121.56
 x 0 0
 O1              0.0300  181.00
 x 0 0
-x 0 0
+P1              0.0198  238.59
 x 0 0
 x 0 0
 x 0 0
@@ -18278,6 +18294,7 @@ x 0 0
 # region: Yamalo-Nenets Autonomous Okrug
 # admin1_quelle: Name
 # note: 20261017 Name Kharse -> Khasre (OSM: mys Khasryo); NOAA-Satz Mys Khasre archiviert, ATT-Konstanten bleiben (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mys Khasre (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia
 +05:00 :Asia/Yekaterinburg
 0.3700 meters
@@ -18295,7 +18312,7 @@ N2              0.0494  142.34
 x 0 0
 O1              0.0100  353.00
 x 0 0
-x 0 0
+P1              0.0165  239.59
 x 0 0
 x 0 0
 x 0 0
@@ -18470,6 +18487,7 @@ x 0 0
 # !latitude: 68.5120
 # region: Yamalo-Nenets Autonomous Okrug
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mys Kamennyy (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia
 +05:00 :Asia/Yekaterinburg
 0.3500 meters
@@ -18487,7 +18505,7 @@ N2              0.0342  52.69
 x 0 0
 O1              0.0100  297.00
 x 0 0
-x 0 0
+P1              0.0066  150.59
 x 0 0
 x 0 0
 x 0 0
@@ -18663,6 +18681,7 @@ x 0 0
 # region: Yamalo-Nenets Autonomous Okrug
 # admin1_quelle: Polygon
 # note: 20261017 Name nach OSM (Polarstation Marre-Sale, 0.3 km); NOAA-Satz Cape Morrasale (11 km S) archiviert (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Marre-Sale, Yamalo-Nenets Autonomous Okrug, Russia
 +05:00 :Asia/Yekaterinburg
 0.4000 meters
@@ -18680,7 +18699,7 @@ N2              0.0209  132.30
 x 0 0
 O1              0.0500  86.00
 x 0 0
-x 0 0
+P1              0.0132  273.59
 x 0 0
 x 0 0
 x 0 0
@@ -18856,6 +18875,7 @@ x 0 0
 # region: Arkhangelsk Oblast
 # admin1_quelle: Polygon
 # note: 20261017 Position auf GeoNames Mys Byk (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mys Byk (Novaya Zemlya), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.4000 meters
@@ -18873,7 +18893,7 @@ N2              0.0285  358.77
 x 0 0
 O1              0.0500  16.00
 x 0 0
-x 0 0
+P1              0.0099  231.75
 x 0 0
 x 0 0
 x 0 0
@@ -19048,6 +19068,7 @@ x 0 0
 # !latitude: 76.2333
 # region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 1.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Zaliv Russkaya Gavan (Novaya Zemlya), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.4000 meters
@@ -19065,7 +19086,7 @@ N2              0.0285  229.34
 x 0 0
 O1              0.0300  249.00
 x 0 0
-x 0 0
+P1              0.0099  129.75
 x 0 0
 x 0 0
 x 0 0
@@ -19240,6 +19261,7 @@ x 0 0
 # !latitude: 75.9667
 # region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 1.0 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bukhta Foki (Novaya Zemlya), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.4000 meters
@@ -19257,7 +19279,7 @@ N2              0.0285  243.70
 x 0 0
 O1              0.0100  284.00
 x 0 0
-x 0 0
+P1              0.0099  113.75
 x 0 0
 x 0 0
 x 0 0
@@ -19433,6 +19455,7 @@ x 0 0
 # region: Arkhangelsk Oblast
 # admin1_quelle: Ufer 2.9 km
 # note: 20261017 Position auf GeoNames Mys Serebryanyy (CAPE), ins Wasser (Nordkuesten-Pruefung) (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mys Seryebryany (Novaya Zemlya), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.3900 meters
@@ -19450,7 +19473,7 @@ N2              0.0456  214.12
 x 0 0
 O1              0.0100  81.00
 x 0 0
-x 0 0
+P1              0.0165  213.75
 x 0 0
 x 0 0
 x 0 0
@@ -19624,6 +19647,7 @@ x 0 0
 # !longitude: 5.2646
 # !latitude: 59.4145
 # note: 20261016 Namensformat berichtigt (vorher "Haugesund"): Land bzw. Klammer-Regel (Oliver).
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Haugesund, Norway
 +01:00 :Europe/Oslo
 0.5500 meters
@@ -19641,7 +19665,7 @@ N2              0.0437  279.34
 x 0 0
 O1              0.0200  19.00
 x 0 0
-x 0 0
+P1              0.0066  184.92
 x 0 0
 x 0 0
 x 0 0
@@ -19816,6 +19840,7 @@ x 0 0
 # !latitude: 9.9719
 # state: Delta Amacuro
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Río Pedernales (Lagoven Jetty), Venezuela
 -04:30 :America/Caracas
 0.8000 meters
@@ -19833,7 +19858,7 @@ N2              0.1121  120.06
 x 0 0
 O1              0.0800  202.00
 x 0 0
-x 0 0
+P1              0.0462  194.37
 x 0 0
 x 0 0
 x 0 0
@@ -20011,6 +20036,7 @@ x 0 0
 # note: 20260907 Name "Puerto de Hierro (Güiria), Venezuela" -> "Güiria, Venezuela":
 # note: -- die Position liegt 5.9 km von Guiria und 18.3 km von Puerto de
 # note: -- Hierro; NP202 fuehrt beide unter einer Ueberschrift. Von Hand entschieden.
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Güiria, Venezuela
 -04:30 :America/Caracas
 0.5800 meters
@@ -20028,7 +20054,7 @@ N2              0.0855  95.53
 x 0 0
 O1              0.0800  172.00
 x 0 0
-x 0 0
+P1              0.0363  177.37
 x 0 0
 x 0 0
 x 0 0
@@ -20203,6 +20229,7 @@ x 0 0
 # !latitude: 10.6667
 # region: Diego Martin
 # admin1_quelle: Ufer 2.8 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Gaspar Grande, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8800 meters
@@ -20220,7 +20247,7 @@ N2              0.0570  88.02
 x 0 0
 O1              0.0600  191.00
 x 0 0
-x 0 0
+P1              0.0231  183.33
 x 0 0
 x 0 0
 x 0 0
@@ -20395,6 +20422,7 @@ x 0 0
 # !latitude: 10.6833
 # region: Diego Martin
 # admin1_quelle: Ufer 0.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Carenage Bay, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.7300 meters
@@ -20412,7 +20440,7 @@ N2              0.0513  105.21
 x 0 0
 O1              0.0700  183.00
 x 0 0
-x 0 0
+P1              0.0363  188.33
 x 0 0
 x 0 0
 x 0 0
@@ -20587,6 +20615,7 @@ x 0 0
 # !latitude: 10.3833
 # region: Couva-Tabaquite-Talparo
 # admin1_quelle: Ufer 0.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Lisas Point, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8000 meters
@@ -20604,7 +20633,7 @@ N2              0.0722  109.67
 x 0 0
 O1              0.0800  173.00
 x 0 0
-x 0 0
+P1              0.0396  184.33
 x 0 0
 x 0 0
 x 0 0
@@ -20779,6 +20808,7 @@ x 0 0
 # !latitude: 10.3167
 # region: Couva-Tabaquite-Talparo
 # admin1_quelle: Ufer 0.6 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pointe-à-Pierre, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8100 meters
@@ -20796,7 +20826,7 @@ N2              0.0741  104.53
 x 0 0
 O1              0.1000  162.00
 x 0 0
-x 0 0
+P1              0.0363  189.33
 x 0 0
 x 0 0
 x 0 0
@@ -20971,6 +21001,7 @@ x 0 0
 # !latitude: 10.0947
 # region: Siparia
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cedros (Bonasse) Pier, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 1.1300 meters
@@ -20988,7 +21019,7 @@ N2              0.0893  106.70
 x 0 0
 O1              0.0900  173.00
 x 0 0
-x 0 0
+P1              0.0363  185.33
 x 0 0
 x 0 0
 x 0 0
@@ -21163,6 +21194,7 @@ x 0 0
 # !latitude: 10.0712
 # region: Siparia
 # admin1_quelle: Ufer 0.5 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Herine (Erin) Bay, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 1.1200 meters
@@ -21180,7 +21212,7 @@ N2              0.1159  103.67
 x 0 0
 O1              0.0900  173.00
 x 0 0
-x 0 0
+P1              0.0297  191.33
 x 0 0
 x 0 0
 x 0 0
@@ -21355,6 +21387,7 @@ x 0 0
 # !latitude: 10.1500
 # region: Rio Claro-Mayaro
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Guayaguayare Bay, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.7600 meters
@@ -21372,7 +21405,7 @@ N2              0.0779  77.10
 x 0 0
 O1              0.0300  183.00
 x 0 0
-x 0 0
+P1              0.0165  165.33
 x 0 0
 x 0 0
 x 0 0
@@ -21547,6 +21580,7 @@ x 0 0
 # !latitude: 10.3925
 # region: Rio Claro-Mayaro
 # admin1_quelle: Ufer 0.3 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Nariva River (Cocal), Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8000 meters
@@ -21564,7 +21598,7 @@ N2              0.0665  95.96
 x 0 0
 O1              0.0700  182.00
 x 0 0
-x 0 0
+P1              0.0264  187.33
 x 0 0
 x 0 0
 x 0 0
@@ -21739,6 +21773,7 @@ x 0 0
 # !latitude: 10.7766
 # region: Sangre Grande
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Guayamare Point, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8500 meters
@@ -21756,7 +21791,7 @@ N2              0.0589  87.96
 x 0 0
 O1              0.0500  179.00
 x 0 0
-x 0 0
+P1              0.0264  184.33
 x 0 0
 x 0 0
 x 0 0
@@ -21931,6 +21966,7 @@ x 0 0
 # !latitude: 10.8349
 # region: Sangre Grande
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Toco, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.7000 meters
@@ -21948,7 +21984,7 @@ N2              0.0532  80.60
 x 0 0
 O1              0.0800  172.00
 x 0 0
-x 0 0
+P1              0.0330  183.33
 x 0 0
 x 0 0
 x 0 0
@@ -22123,6 +22159,7 @@ x 0 0
 # !latitude: 10.7833
 # region: San Juan-Laventille
 # admin1_quelle: Ufer 1.2 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Las Cuevas Bay, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.4200 meters
@@ -22140,7 +22177,7 @@ N2              0.0437  94.78
 x 0 0
 O1              0.0400  173.00
 x 0 0
-x 0 0
+P1              0.0165  178.33
 x 0 0
 x 0 0
 x 0 0
@@ -22315,6 +22352,7 @@ x 0 0
 # !latitude: 11.1804
 # region: Tobago
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Scarborough, Tobago, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.6900 meters
@@ -22332,7 +22370,7 @@ N2              0.0532  100.50
 x 0 0
 O1              0.0800  177.00
 x 0 0
-x 0 0
+P1              0.0264  181.33
 x 0 0
 x 0 0
 x 0 0
@@ -22507,6 +22545,7 @@ x 0 0
 # !latitude: 11.2198
 # region: Tobago
 # admin1_quelle: Name
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Plymouth, Tobago, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.6200 meters
@@ -22524,7 +22563,7 @@ N2              0.0475  80.46
 x 0 0
 O1              0.0800  168.00
 x 0 0
-x 0 0
+P1              0.0297  174.33
 x 0 0
 x 0 0
 x 0 0
@@ -22699,6 +22738,7 @@ x 0 0
 # !latitude: 10.6759
 # state: Sucre
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Puerto Carúpano, Venezuela
 -04:30 :America/Caracas
 0.2000 meters
@@ -22716,7 +22756,7 @@ N2              0.0209  48.21
 x 0 0
 O1              0.0700  167.00
 x 0 0
-x 0 0
+P1              0.0330  170.37
 x 0 0
 x 0 0
 x 0 0
@@ -22891,6 +22931,7 @@ x 0 0
 # !latitude: 10.4697
 # state: Sucre
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Cumaná, Venezuela
 -04:30 :America/Caracas
 0.1500 meters
@@ -22908,7 +22949,7 @@ N2              0.0114  38.43
 x 0 0
 O1              0.0700  172.00
 x 0 0
-x 0 0
+P1              0.0330  171.37
 x 0 0
 x 0 0
 x 0 0
@@ -23083,6 +23124,7 @@ x 0 0
 # !latitude: 10.8833
 # state: Zulia
 # admin1_quelle: Ufer 9.0 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bahía El Tablazo (Lago de Maracaibo), Venezuela
 -04:30 :America/Caracas
 0.4500 meters
@@ -23100,7 +23142,7 @@ N2              0.0456  210.49
 x 0 0
 O1              0.0300  185.00
 x 0 0
-x 0 0
+P1              0.0165  178.37
 x 0 0
 x 0 0
 x 0 0
@@ -23275,6 +23317,7 @@ x 0 0
 # !latitude: 10.8000
 # state: Zulia
 # admin1_quelle: Ufer 3.7 km
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Punta de Palmas, Venezuela
 -04:30 :America/Caracas
 0.3700 meters
@@ -23292,7 +23335,7 @@ N2              0.0437  197.88
 x 0 0
 O1              0.0200  163.00
 x 0 0
-x 0 0
+P1              0.0132  163.37
 x 0 0
 x 0 0
 x 0 0
@@ -23467,6 +23510,7 @@ x 0 0
 # !latitude: 20.3500
 # province: Guantánamo
 # admin1_quelle: Polygon
+# note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Baracoa, Cuba
 -05:00 :America/Havana
 0.2400 meters
@@ -23484,7 +23528,7 @@ N2              0.0475  216.14
 x 0 0
 O1              0.0600  147.00
 x 0 0
-x 0 0
+P1              0.0264  139.41
 x 0 0
 x 0 0
 x 0 0
