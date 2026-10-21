@@ -15612,7 +15612,7 @@ x 0 0
 # province: New Brunswick
 # admin1_quelle: Ufer 6.2 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Grand Manan Channel, Canada Current
+Grand Manan Channel (Bay of Fundy Entrance), New Brunswick, Canada Current
 +00:00 :UTC
 0.0797 knots
 x 0 0
@@ -15809,7 +15809,7 @@ x 0 0
 # admin1_quelle: Ufer 0.3 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
 # note: 20261016 Flut/Ebbe vertauscht gegen CHS-Ereignisse (0 von 26-28 richtig): Phasen +180 Grad, Z0 und Richtungen getauscht (Oliver).
-Big Bras D'Or, Canada Current
+Big Bras d'Or, Nova Scotia, Canada Current
 +00:00 :UTC
 -0.1545 knots
 J1              0.0212  206.14
@@ -16005,7 +16005,7 @@ x 0 0
 # province: New Brunswick
 # admin1_quelle: Ufer 5.9 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Abegweit Passage, Canada Current
+Abegweit Passage, Prince Edward Island, Canada Current
 +00:00 :UTC
 0.0097 knots
 x 0 0
@@ -16201,7 +16201,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 1.2 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Race Passage, Canada Current
+Race Passage, British Columbia, Canada Current
 +00:00 :UTC
 -0.7590 knots
 J1              0.0679  182.12
@@ -16397,7 +16397,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 8.8 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Juan de Fuca - East, Canada Current
+Juan de Fuca Strait (East), British Columbia, Canada Current
 +00:00 :UTC
 -0.4291 knots
 J1              0.0543  236.05
@@ -16580,203 +16580,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Canada
 # source: Canadian Hydrographic Service (CHS) IWLS API predictions, UTide analysis
-# station_id_context: CHS-07129
-# datum: n/a
-# station_type: current
-# major_axis_deg_true: 109.2
-# confidence: 9
-# chs_id: 07129
-# utide: period=2024-05-01..2027-01-01 const=68
-# !units: knots
-# !longitude: -123.400167
-# !latitude: 48.446372
-# province: British Columbia
-# admin1_quelle: Polygon
-# note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-# note: 20261016 Flut/Ebbe vertauscht gegen CHS-Ereignisse (0 von 26-28 richtig): Phasen +180 Grad, Z0 und Richtungen getauscht (Oliver).
-Tillicum Bridge, Canada Current
-+00:00 :UTC
--0.8380 knots
-J1              0.1455  274.24
-K1              2.6078  227.08
-K2              0.3988  287.08
-L2              0.0673  350.38
-x 0 0
-M2              1.6011  296.11
-M3              0.0543  219.15
-M4              0.1480  140.66
-M6              0.1009  195.49
-M8              0.0173  344.02
-N2              0.3139  267.61
-2N2             0.1780  266.00
-O1              1.4880  214.71
-OO1             0.1302  255.54
-P1              0.7805  231.34
-Q1              0.2710  213.33
-2Q1             0.0692  214.13
-R2              0.0542  188.10
-x 0 0
-S2              0.4684  308.52
-S4              0.0418  115.02
-x 0 0
-T2              0.0253  290.88
-LDA2            0.0311  10.53
-MU2             0.1543  224.96
-NU2             0.0518  289.62
-RHO1            0.0019  348.26
-MK3             0.1319  110.75
-x 0 0
-MN4             0.0494  86.88
-MS4             0.1094  138.50
-2SM2            0.0019  48.93
-MF              0.3090  30.83
-MSF             0.2193  215.16
-MM              0.1774  197.95
-x 0 0
-SSA             0.1359  357.77
-SA-IOS          0.1031  219.34
-x 0 0
-S1-IOS          0.1505  182.56
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0693  7.94
-2MK6            0.0139  259.35
-x 0 0
-2MN6            0.0589  183.57
-2MS6            0.0891  231.54
-x 0 0
-2SK5            0.0050  146.94
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-3MS4            0.0008  241.84
-x 0 0
-ALP1            0.0512  204.76
-BET1            0.0270  198.36
-CHI1            0.0228  187.69
-H1              0.0184  135.77
-H2              0.0391  358.73
-x 0 0
-ETA2            0.0161  266.84
-x 0 0
-UPS1            0.0147  12.92
-x 0 0
-x 0 0
-MK4             0.0700  30.05
-MKS2            0.0437  213.99
-x 0 0
-EPS2            0.0552  229.32
-MO3             0.1975  102.24
-x 0 0
-TAU1            0.2588  297.11
-x 0 0
-MSK6            0.0010  84.28
-MSM             0.0017  0.22
-x 0 0
-x 0 0
-x 0 0
-NO1             0.1451  226.27
-OP2             0.0026  205.48
-x 0 0
-PHI1            0.0717  206.11
-x 0 0
-PI1             0.0665  212.21
-x 0 0
-PSI1            0.0889  214.52
-x 0 0
-x 0 0
-SIG1            0.0492  217.22
-SK3             0.0708  109.80
-x 0 0
-SN4             0.0340  67.99
-x 0 0
-SO1             0.1685  344.02
-SO3             0.1238  103.96
-THE1            0.0324  195.67
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0013  257.35
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO3             0.0003  55.56
-x 0 0
-x 0 0
-N4              0.0005  229.82
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# (UTide v0.3.1, principal-axis projection, 6-min subsample)
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: Canadian Hydrographic Service (CHS) IWLS API predictions, UTide analysis
 # station_id_context: CHS-07438
 # datum: n/a
 # station_type: current
@@ -16790,7 +16593,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 2.8 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Porlier Pass, Canada Current
+Porlier Pass, British Columbia, Canada Current
 +00:00 :UTC
 0.2721 knots
 J1              0.0642  236.10
@@ -16987,7 +16790,7 @@ x 0 0
 # admin1_quelle: Ufer 1.0 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
 # note: 20261016 Flut/Ebbe vertauscht gegen CHS-Ereignisse (0 von 26-28 richtig): Phasen +180 Grad, Z0 und Richtungen getauscht (Oliver).
-Dodd Narrows, Canada Current
+Dodd Narrows, British Columbia, Canada Current
 +00:00 :UTC
 0.0162 knots
 J1              0.0732  231.92
@@ -17379,7 +17182,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 0.4 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Gabriola Passage, Canada Current
+Gabriola Passage, British Columbia, Canada Current
 +00:00 :UTC
 -0.2721 knots
 J1              0.0563  254.19
@@ -17575,7 +17378,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 0.8 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-First Narrows, Canada Current
+First Narrows (Burrard Inlet), British Columbia, Canada Current
 +00:00 :UTC
 -0.1516 knots
 J1              0.0739  260.69
@@ -17758,398 +17561,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Canada
 # source: Canadian Hydrographic Service (CHS) IWLS API predictions, UTide analysis
-# station_id_context: CHS-07724
-# datum: n/a
-# station_type: current
-# major_axis_deg_true: 128.3
-# confidence: 9
-# chs_id: 07724
-# utide: period=2025-01-01..2027-01-01 const=68
-# !units: knots
-# !longitude: -123.127678
-# !latitude: 49.312570
-# province: British Columbia
-# admin1_quelle: Ufer 0.9 km
-# note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Calamity Point, Canada Current
-+00:00 :UTC
-0.2209 knots
-J1              0.0677  235.34
-K1              1.0185  202.02
-K2              0.1380  342.40
-L2              0.0563  333.52
-x 0 0
-M2              1.9672  317.28
-M3              0.0428  246.63
-M4              0.0834  273.98
-M6              0.1144  55.14
-M8              0.0193  296.06
-N2              0.4121  292.02
-2N2             0.0505  266.59
-O1              0.5947  171.69
-OO1             0.0486  256.05
-P1              0.3227  209.97
-Q1              0.0991  160.19
-2Q1             0.0116  150.26
-R2              0.0154  224.67
-x 0 0
-S2              0.5403  347.31
-S4              0.0138  276.07
-x 0 0
-T2              0.0464  325.70
-LDA2            0.0150  307.34
-MU2             0.0162  284.59
-NU2             0.0795  301.59
-RHO1            0.0175  153.82
-MK3             0.1667  157.75
-x 0 0
-MN4             0.0413  237.56
-MS4             0.0464  284.79
-2SM2            0.0001  148.86
-MF              0.0202  39.52
-MSF             0.0683  31.53
-MM              0.0465  41.88
-x 0 0
-SSA             0.0415  52.52
-SA-IOS          0.0896  7.51
-x 0 0
-S1-IOS          0.1224  182.07
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.1144  268.27
-2MK6            0.0466  28.00
-x 0 0
-2MN6            0.0544  31.55
-2MS6            0.0893  87.42
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-ALP1            0.0155  239.85
-BET1            0.0153  189.14
-CHI1            0.0097  216.40
-H1              0.1004  98.17
-H2              0.1029  339.60
-x 0 0
-ETA2            0.0119  333.83
-x 0 0
-UPS1            0.0058  293.38
-x 0 0
-x 0 0
-MK4             0.0816  312.29
-MKS2            0.0563  11.26
-x 0 0
-EPS2            0.0032  349.27
-MO3             0.1108  142.05
-x 0 0
-TAU1            0.0233  150.66
-x 0 0
-MSK6            0.0227  79.20
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0486  196.96
-OP2             0.0001  257.29
-x 0 0
-PHI1            0.0486  267.88
-x 0 0
-PI1             0.0208  147.07
-x 0 0
-PSI1            0.0579  219.89
-x 0 0
-x 0 0
-SIG1            0.0330  248.34
-SK3             0.0341  188.53
-x 0 0
-SN4             0.0173  235.84
-x 0 0
-SO1             0.0327  301.31
-SO3             0.0732  176.01
-THE1            0.0094  183.46
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0001  335.09
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# (UTide v0.3.1, principal-axis projection, 6-min subsample)
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: Canadian Hydrographic Service (CHS) IWLS API predictions, UTide analysis
-# station_id_context: CHS-07745
-# datum: n/a
-# station_type: current
-# major_axis_deg_true: 86.3
-# confidence: 9
-# chs_id: 07745
-# utide: period=2023-01-01..2027-01-01 const=68
-# !units: knots
-# !longitude: -123.024500
-# !latitude: 49.294667
-# province: British Columbia
-# admin1_quelle: Ufer 0.3 km
-# note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Second Narrows, Canada Current
-+00:00 :UTC
--0.3839 knots
-J1              0.0875  287.05
-K1              1.3975  212.43
-K2              0.2294  337.85
-L2              0.1438  326.11
-x 0 0
-M2              3.0791  317.98
-M3              0.0253  17.71
-M4              0.1905  176.35
-M6              0.2585  46.62
-M8              0.0505  297.92
-N2              0.6045  295.62
-2N2             0.0632  304.47
-O1              0.7231  198.83
-OO1             0.0681  229.74
-P1              0.3827  213.16
-Q1              0.1536  206.51
-2Q1             0.0407  231.52
-R2              0.0109  284.59
-x 0 0
-S2              0.7678  350.20
-S4              0.0081  178.32
-x 0 0
-T2              0.0519  354.70
-LDA2            0.0836  291.32
-MU2             0.0486  65.44
-NU2             0.1303  284.88
-RHO1            0.0175  351.14
-MK3             0.0835  93.75
-x 0 0
-MN4             0.0563  154.30
-MS4             0.0894  188.87
-2SM2            0.0003  193.94
-MF              0.0503  353.91
-MSF             0.1188  211.08
-MM              0.0812  209.85
-x 0 0
-SSA             0.0673  348.18
-SA-IOS          0.0297  347.80
-x 0 0
-S1-IOS          0.0428  162.06
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.2274  282.78
-2MK6            0.0718  69.86
-x 0 0
-2MN6            0.1341  23.87
-2MS6            0.2099  79.62
-x 0 0
-2SK5            0.0058  113.47
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-ALP1            0.0252  259.78
-BET1            0.0486  151.22
-x 0 0
-H1              0.0341  7.43
-H2              0.0433  28.08
-x 0 0
-ETA2            0.0336  355.56
-x 0 0
-UPS1            0.0193  278.00
-x 0 0
-x 0 0
-MK4             0.0678  300.83
-MKS2            0.0234  331.68
-x 0 0
-EPS2            0.0466  59.11
-MO3             0.1010  172.75
-x 0 0
-TAU1            0.1205  267.74
-x 0 0
-MSK6            0.0280  107.37
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO1             0.1069  248.18
-OP2             0.0001  331.20
-x 0 0
-PHI1            0.0310  210.70
-x 0 0
-PI1             0.0167  240.53
-x 0 0
-PSI1            0.0340  232.42
-x 0 0
-x 0 0
-SIG1            0.0613  247.62
-SK3             0.0505  217.83
-x 0 0
-SN4             0.0116  103.95
-x 0 0
-SO1             0.1182  347.76
-SO3             0.0253  188.96
-THE1            0.0310  283.29
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0001  340.33
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# (UTide v0.3.1, principal-axis projection, 6-min subsample)
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: Canadian Hydrographic Service (CHS) IWLS API predictions, UTide analysis
 # station_id_context: CHS-07840
 # datum: n/a
 # station_type: current
@@ -18163,7 +17574,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 0.8 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Beazley Passage, Canada Current
+Beazley Passage, British Columbia, Canada Current
 +00:00 :UTC
 0.3032 knots
 J1              0.0505  159.58
@@ -18359,7 +17770,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 1.1 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Sechelt Rapids, Canada Current
+Sechelt Rapids, British Columbia, Canada Current
 +00:00 :UTC
 -0.0544 knots
 J1              0.2254  309.59
@@ -18555,7 +17966,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 2.0 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Hole in the Wall, Canada Current
+Hole in the Wall, British Columbia, Canada Current
 +00:00 :UTC
 0.1322 knots
 J1              0.0466  157.47
@@ -18751,7 +18162,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 1.1 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Gillard Passage, Canada Current
+Gillard Passage, British Columbia, Canada Current
 +00:00 :UTC
 0.5442 knots
 J1              0.0738  183.64
@@ -18947,7 +18358,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 1.2 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Arran Rapids, Canada Current
+Arran Rapids, British Columbia, Canada Current
 +00:00 :UTC
 -0.1089 knots
 J1              0.0680  182.96
@@ -19143,7 +18554,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 0.9 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Seymour Narrows, Canada Current
+Seymour Narrows (Discovery Passage), British Columbia, Canada Current
 +00:00 :UTC
 -0.2197 knots
 J1              0.0894  179.70
@@ -19339,7 +18750,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 0.3 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Dent Rapids, Canada Current
+Dent Rapids, British Columbia, Canada Current
 +00:00 :UTC
 0.1130 knots
 J1              0.0563  185.77
@@ -19535,7 +18946,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 2.0 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Johnstone Strait - Central, Canada Current
+Johnstone Strait (Central), British Columbia, Canada Current
 +00:00 :UTC
 -0.4915 knots
 J1              0.0078  168.19
@@ -19731,7 +19142,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 2.1 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Blackney passage, Canada Current
+Blackney Passage, British Columbia, Canada Current
 +00:00 :UTC
 -0.2171 knots
 J1              0.0237  201.16
@@ -19928,7 +19339,7 @@ x 0 0
 # admin1_quelle: Ufer 2.8 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
 # note: 20261016 Flut/Ebbe vertauscht gegen CHS-Ereignisse (0 von 26-28 richtig): Phasen +180 Grad, Z0 und Richtungen getauscht (Oliver).
-Weynton Passage, Canada Current
+Weynton Passage, British Columbia, Canada Current
 +00:00 :UTC
 -0.2492 knots
 J1              0.0271  171.74
@@ -20125,7 +19536,7 @@ x 0 0
 # admin1_quelle: Ufer 0.3 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
 # note: 20261016 Flut/Ebbe vertauscht gegen CHS-Ereignisse (0 von 26-28 richtig): Phasen +180 Grad, Z0 und Richtungen getauscht (Oliver).
-Nakwakto Rapids, Canada Current
+Nakwakto Rapids, British Columbia, Canada Current
 +00:00 :UTC
 -0.6900 knots
 J1              0.0681  255.46
@@ -20321,7 +19732,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 1.3 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Quatsino Narrows, Canada Current
+Quatsino Narrows, British Columbia, Canada Current
 +00:00 :UTC
 0.0175 knots
 J1              0.0856  195.54
@@ -20517,7 +19928,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 3.7 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Scott Channel, Canada Current
+Scott Channel, British Columbia, Canada Current
 +00:00 :UTC
 -0.2233 knots
 J1              0.0068  195.10
@@ -20714,7 +20125,7 @@ x 0 0
 # admin1_quelle: Ufer 0.7 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
 # note: 20261016 Flut/Ebbe vertauscht gegen CHS-Ereignisse (0 von 26-28 richtig): Phasen +180 Grad, Z0 und Richtungen getauscht (Oliver).
-Hiekish Narrows, Canada Current
+Hiekish Narrows, British Columbia, Canada Current
 +00:00 :UTC
 -0.2002 knots
 J1              0.0097  188.68
@@ -20897,398 +20308,6 @@ x 0 0
 # BEGIN HOT COMMENTS
 # country: Canada
 # source: Canadian Hydrographic Service (CHS) IWLS API predictions, UTide analysis
-# station_id_context: CHS-09341
-# datum: n/a
-# station_type: current
-# major_axis_deg_true: 28.5
-# confidence: 9
-# chs_id: 09341
-# utide: period=2023-01-01..2026-12-31 const=68
-# !units: knots
-# !longitude: -130.289060
-# !latitude: 54.215150
-# province: British Columbia
-# admin1_quelle: Ufer 0.5 km
-# note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Porpoise Channel East, Canada Current
-+00:00 :UTC
--0.0142 knots
-J1              0.0097  230.57
-K1              0.1594  185.49
-K2              0.1070  225.43
-L2              0.0286  217.39
-x 0 0
-M2              1.0847  198.19
-M3              0.0253  272.71
-M4              0.1769  84.58
-M6              0.0269  309.37
-M8              0.0228  336.50
-N2              0.2020  175.15
-2N2             0.0233  126.24
-O1              0.0913  172.08
-OO1             0.0078  243.42
-P1              0.0505  185.35
-Q1              0.0193  179.59
-2Q1             0.0015  342.77
-R2              0.0056  336.78
-x 0 0
-S2              0.3497  230.52
-S4              0.0101  215.07
-x 0 0
-T2              0.0267  220.42
-LDA2            0.0193  196.56
-MU2             0.0084  284.55
-NU2             0.0464  180.03
-RHO1            0.0039  157.41
-MK3             0.0661  62.50
-x 0 0
-MN4             0.0602  71.72
-MS4             0.0991  126.31
-2SM2            0.0001  89.12
-MF              0.0040  137.28
-MSF             0.0040  213.67
-MM              0.0021  195.26
-x 0 0
-SSA             0.0061  130.26
-SA-IOS          0.0148  200.46
-x 0 0
-S1-IOS          0.0052  261.78
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0213  284.04
-2MK6            0.0127  341.14
-x 0 0
-2MN6            0.0136  295.25
-2MS6            0.0239  341.90
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-ALP1            0.0017  222.95
-x 0 0
-CHI1            0.0077  189.17
-H1              0.0102  192.75
-H2              0.0192  120.74
-x 0 0
-ETA2            0.0095  266.08
-x 0 0
-UPS1            0.0020  290.79
-x 0 0
-x 0 0
-MK4             0.0290  115.24
-MKS2            0.0117  313.44
-x 0 0
-EPS2            0.0054  260.13
-MO3             0.0602  49.27
-x 0 0
-TAU1            0.0114  256.86
-x 0 0
-MSK6            0.0003  168.31
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0110  199.37
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-PI1             0.0096  235.97
-x 0 0
-PSI1            0.0058  238.49
-x 0 0
-x 0 0
-SIG1            0.0112  189.75
-SK3             0.0311  101.83
-x 0 0
-SN4             0.0166  178.21
-x 0 0
-SO1             0.0106  282.15
-SO3             0.0350  81.73
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0001  233.02
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# (UTide v0.3.1, principal-axis projection, 6-min subsample)
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: Canadian Hydrographic Service (CHS) IWLS API predictions, UTide analysis
-# station_id_context: CHS-09348
-# datum: n/a
-# station_type: current
-# major_axis_deg_true: 6.5
-# confidence: 9
-# chs_id: 09348
-# utide: period=2023-01-01..2027-01-01 const=68
-# !units: knots
-# !longitude: -130.359937
-# !latitude: 54.290263
-# province: British Columbia
-# admin1_quelle: Ufer 0.8 km
-# note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Fairview Terminal, Canada Current
-+00:00 :UTC
-0.1569 knots
-J1              0.0136  185.40
-K1              0.1512  170.53
-K2              0.0894  225.78
-L2              0.0272  220.80
-x 0 0
-M2              0.9370  195.38
-M3              0.0097  294.53
-M4              0.1234  80.56
-M6              0.0204  296.81
-M8              0.0133  315.05
-N2              0.1808  170.51
-2N2             0.0111  170.62
-O1              0.0902  157.24
-OO1             0.0058  226.64
-P1              0.0504  146.58
-Q1              0.0061  130.93
-2Q1             0.0116  64.12
-R2              0.0146  242.11
-x 0 0
-S2              0.3400  223.82
-x 0 0
-x 0 0
-T2              0.0083  182.95
-LDA2            0.0253  229.52
-MU2             0.0520  130.63
-NU2             0.0155  119.00
-x 0 0
-MK3             0.0319  27.30
-x 0 0
-MN4             0.0525  58.42
-MS4             0.0733  115.39
-2SM2            0.0003  119.70
-MF              0.0097  245.37
-MSF             0.0408  47.59
-MM              0.0143  329.09
-x 0 0
-SSA             0.0478  69.14
-SA-IOS          0.0169  248.45
-x 0 0
-S1-IOS          0.0539  13.89
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0096  265.07
-x 0 0
-x 0 0
-2MN6            0.0169  253.47
-2MS6            0.0274  328.01
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-ALP1            0.0058  33.22
-x 0 0
-x 0 0
-H1              0.0519  219.79
-H2              0.0318  38.29
-x 0 0
-ETA2            0.0032  51.04
-x 0 0
-UPS1            0.0058  109.01
-x 0 0
-x 0 0
-MK4             0.0119  55.55
-MKS2            0.0185  268.72
-x 0 0
-EPS2            0.0213  20.87
-MO3             0.0308  40.42
-x 0 0
-TAU1            0.0147  40.09
-x 0 0
-MSK6            0.0006  94.76
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0116  287.26
-OP2             0.0001  265.65
-x 0 0
-PHI1            0.0155  267.70
-x 0 0
-x 0 0
-x 0 0
-PSI1            0.0272  296.63
-x 0 0
-x 0 0
-x 0 0
-SK3             0.0174  59.44
-x 0 0
-SN4             0.0168  303.11
-x 0 0
-x 0 0
-SO3             0.0265  12.98
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0002  276.04
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-#
-# (UTide v0.3.1, principal-axis projection, 6-min subsample)
-# BEGIN HOT COMMENTS
-# country: Canada
-# source: Canadian Hydrographic Service (CHS) IWLS API predictions, UTide analysis
 # station_id_context: CHS-09911
 # datum: n/a
 # station_type: current
@@ -21302,7 +20321,7 @@ x 0 0
 # province: British Columbia
 # admin1_quelle: Ufer 0.8 km
 # note: 20261016 Amplituden und Z0 durch 1.943844 geteilt: Fit hatte die CHS-Vorhersage (schon in kn) noch einmal von m/s umgerechnet (Oliver).
-Masset Channel, Canada Current
+Masset Channel, British Columbia, Canada Current
 +00:00 :UTC
 -0.1161 knots
 J1              0.0192  278.85
