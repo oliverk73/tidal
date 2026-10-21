@@ -51,7 +51,10 @@ SUF = re.compile(r'^(.*?)\s*\((\d+|expired[^)]*|use with caution)\)((?:\s*\((?:e
 
 def doppel(name):
     """Aufeinanderfolgende Klammern im Teil vor dem ersten Komma zusammenlegen."""
-    kopf, sep, rest = name.partition(', ')
+    d, i = 0, 0
+    while i < len(name) and not (d == 0 and name[i:i + 2] == ', '):
+        d += (name[i] == '(') - (name[i] == ')'); i += 1
+    kopf, sep, rest = name[:i], name[i:i + 2], name[i + 2:]
     neu = kopf
     while re.search(r'\(([^()]*)\)\s*\(([^()]*)\)', neu):
         neu = re.sub(r'\(([^()]*)\)\s*\(([^()]*)\)', r'(\1, \2)', neu, count=1)
