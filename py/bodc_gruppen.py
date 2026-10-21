@@ -7,7 +7,9 @@ RN, OUT = sys.argv[1], sys.argv[2]
 M = B.metadaten()
 H = 'ref,projekt,lat,lon,tiefe,boden,von,bis,stunden,r2,m2_kn,s2_kn,k1_kn,v95_kn,achse'.split(',')
 refs = {r for r, m in M.items() if m['_dir'].endswith(RN)}
-R = [dict(zip(H, l.strip().split(','))) for l in open('/home/oliver/weather/harmonics/help/bodc_stroemung_20261020.csv') if l.split(',')[0] in refs]
+import glob as _g
+CSV = sorted(_g.glob('/home/oliver/weather/harmonics/help/bodc_stroemung_2*.csv'))[-1]      # neueste Gesamttabelle
+R = [dict(zip(H, l.strip().split(','))) for l in open(CSV) if l.split(',')[0] in refs]
 for r in R:
     for k in ['lat', 'lon', 'tiefe', 'boden', 'r2', 'm2_kn', 'k1_kn']: r[k] = float(r[k])
 grp = []
