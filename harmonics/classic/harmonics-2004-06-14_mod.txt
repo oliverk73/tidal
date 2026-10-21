@@ -10397,10 +10397,11 @@ x 0 0
 # !units: meters
 # !longitude: 123.0167
 # !latitude: -12.2167
-# state: Western Australia
+# state: Ashmore and Cartier Islands
 # admin1_quelle: Name
 # note: 2026-10-18 BOM WA_TP026 geprueft: gleich, Kurve 4.5 cm, FES 15.8/14.4 cm; dieser Satz bleibt.
-Ashmore Reef, Western Australia, Australia
+# note: 20261021 region "Western Australia" -> "Ashmore and Cartier Islands" (position lies there; py/region_gegen_position.py)
+Ashmore Reef, Ashmore and Cartier Islands, Australia
 +08:00 :Australia/Perth
 2.1384 meters
 x 0 0
@@ -83829,9 +83830,10 @@ x 0 0
 # !units: meters
 # !longitude: -86.0000
 # !latitude: 57.0500
-# province: Manitoba
+# province: Nunavut
 # admin1_quelle: Name
-Hudson B (Satellite), Manitoba, Canada
+# note: 20261021 region "Manitoba" -> "Nunavut" (position lies there; py/region_gegen_position.py)
+Hudson B (Satellite), Nunavut, Canada
 -06:00 :America/Winnipeg
 1.0430 meters
 J1              0.0010  241.80

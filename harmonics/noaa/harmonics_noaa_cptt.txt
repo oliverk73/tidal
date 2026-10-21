@@ -54090,11 +54090,11 @@ x 0 0
 # !units: meters
 # !longitude: 106.4500
 # !latitude: 9.4000
-# region: Tien Giang
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Vung Tau, Vietnam [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
-Hau Giang River entrance, Tien Giang, Vietnam
+# note: 20261021 region "Tien Giang" -> "none; lies off Tra Vinh" (position lies there; py/region_gegen_position.py)
+Hau Giang River entrance, Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 2.4079 meters
 J1              0.0235  254.51

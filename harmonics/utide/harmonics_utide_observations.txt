@@ -17436,11 +17436,12 @@ x 0 0
 # !latitude: -12.1167
 # note: 20260903 Provinz "Western Australia" ergaenzt (Nachbarn ab 4 km),
 # note: siehe py/provinz_ergaenzen.py.
-# state: Western Australia
+# state: Cocos (Keeling) Islands
 # admin1_quelle: Name
 # note: 20260909 Name "Bantam, Cocos Islands, Western Australia, Australia" -> "Port Refuge, Cocos Islands, Western Australia, Australia":
 # note: -- Bantam liegt 0.85 km von Port Refuge, Kurve 1.4 % -- derselbe Pegel.
-Port Refuge (Cocos Islands), Western Australia, Australia
+# note: 20261021 region "Western Australia" -> "Cocos (Keeling) Islands" (position lies there; py/region_gegen_position.py)
+Port Refuge, Cocos (Keeling) Islands, Australia
 +06:30 :Indian/Cocos
 0.9246 meters
 J1              0.0091  268.11

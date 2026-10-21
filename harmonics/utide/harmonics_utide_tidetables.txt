@@ -67765,7 +67765,7 @@ x 0 0
 # 4098 HW/NW points -> 105101 interpolated points
 # BEGIN HOT COMMENTS
 # country: Australia
-# state: Queensland
+# state: Coral Sea Islands
 # source: Derived from BOM tide predictions (reverse-engineered) with UTide
 # station_id_context: BOM-QLD-TP134
 # date_imported: 20260409
@@ -67778,7 +67778,8 @@ x 0 0
 # !units: meters
 # !longitude: 149.975000
 # !latitude: -16.313833
-Willis Island, Queensland, Australia
+# note: 20261021 region "Queensland" -> "Coral Sea Islands" (position lies there; py/region_gegen_position.py)
+Willis Island, Coral Sea Islands, Australia
 +00:00 :UTC
 1.2375 meters
 J1              0.0206  53.07
@@ -72207,7 +72208,7 @@ x 0 0
 # 4232 HW/NW points -> 105106 interpolated points
 # BEGIN HOT COMMENTS
 # country: Australia
-# state: Queensland
+# state: Coral Sea Islands
 # source: Derived from BOM tide predictions (reverse-engineered) with UTide
 # station_id_context: BOM-QLD-TP285
 # date_imported: 20260409
@@ -72218,7 +72219,8 @@ x 0 0
 # !units: meters
 # !longitude: 159.066667
 # !latitude: -29.916700
-Elizabeth Reef, Queensland, Australia
+# note: 20261021 region "Queensland" -> "Coral Sea Islands" (position lies there; py/region_gegen_position.py)
+Elizabeth Reef, Coral Sea Islands, Australia
 +00:00 :UTC
 1.2003 meters
 J1              0.0394  358.27
@@ -74913,7 +74915,7 @@ x 0 0
 # 4232 HW/NW points -> 105099 interpolated points
 # BEGIN HOT COMMENTS
 # country: Australia
-# state: Western Australia
+# state: Cocos (Keeling) Islands
 # source: Derived from BOM tide predictions (reverse-engineered) with UTide
 # station_id_context: BOM-WA-TP039
 # date_imported: 20260409
@@ -74924,7 +74926,8 @@ x 0 0
 # !units: meters
 # !longitude: 96.8301
 # !latitude: -12.1566
-West Jetty (Cocos Islands), Western Australia, Australia
+# note: 20261021 region "Western Australia" -> "Cocos (Keeling) Islands" (position lies there; py/region_gegen_position.py)
+West Jetty, Cocos (Keeling) Islands, Australia
 +00:00 :UTC
 0.5623 meters
 J1              0.0041  97.84
@@ -237603,7 +237606,7 @@ x 0 0
 # Stag Island
 # BEGIN HOT COMMENTS
 # country: Canada
-# province: Ontario
+# province: Nunavut
 # source: Derived from CHS tide predictions (reverse-engineered) with UTide harmonic analysis
 # station_id_context: CHS-04740
 # date_imported: 20260415
@@ -237614,7 +237617,8 @@ x 0 0
 # !units: meters
 # !longitude: -79.033333
 # !latitude: 51.633333
-Stag Island, Ontario, Canada
+# note: 20261021 region "Ontario" -> "Nunavut" (position lies there; py/region_gegen_position.py)
+Stag Island, Nunavut, Canada
 +00:00 :UTC
 1.6480 meters
 x 0 0
