@@ -26450,7 +26450,8 @@ x 0 0
 # !latitude: -28.536811
 # state: New South Wales
 # admin1_quelle: Name
-Brunswick, New South Wales, Australia
+# note: 20261021 name "Brunswick" -> "Brunswick Heads" (TICON brunswick_heads-202403)
+Brunswick Heads, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.0000 meters
 J1              0.0100  181.36
@@ -92527,9 +92528,10 @@ x 0 0
 # !units: meters
 # !longitude: 150.866700
 # !latitude: -23.585000
-# state: South Australia
+# state: Queensland
 # admin1_quelle: Name
-Port, South Australia, Australia
+# note: 20261021 name "Port, South Australia" -> "Port Alma" (TICON port_alma-59690, BOM QLD_TP022), state Queensland
+Port Alma, Queensland, Australia
 +10:00 :Australia/Brisbane
 0.0000 meters
 J1              0.0185  200.70
