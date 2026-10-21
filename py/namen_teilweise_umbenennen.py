@@ -5,6 +5,9 @@
 Arbeitskopie und HEAD bekommen dieselbe Umbenennung; gestaged wird HEAD + Umbenennung, so bleiben
 Olivers offene Aenderungen in derselben Datei ungestaged.
 
+Achtung: stagt HEAD + Umbenennung. Wurden in derselben Datei vorher Saetze geloescht (saetze_loeschen.py), fehlen
+die Loeschungen im Index -- dann die Datei voll stagen (git add), wenn sie sonst keine offenen Aenderungen hat.
+
 Usage: python3 py/namen_teilweise_umbenennen.py liste.tsv     (je Zeile: alter Name <TAB> neuer Name)
 """
 import glob
