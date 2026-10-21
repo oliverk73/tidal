@@ -16,7 +16,7 @@ for x in W:
     if x['refs'][0] in OHNE:
         continue
     p = min(PEG, key=lambda t: osm_land.km(x['lat'], x['lon'], t['lat'], t['lon']))
-    ort = re.split(r' \(|, ', p['name'])[0].replace(' Of ', ' of ')
+    ort = re.split(r' \(|, ', p['name'])[0].replace(' Of ', ' of ').replace('-On-', '-on-')
     land = p['name'].split(', ', 1)[1] if ', ' in p['name'] else 'United Kingdom'
     land = re.sub(r'^[^,]*\), ', '', land)
     d, dr = geo(p['lat'], p['lon'], x['lat'], x['lon'])
