@@ -15002,6 +15002,7 @@ MNUS2
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # note: 20260906 country "Red Sea" -> "Yemen" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Ta`izz".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mayyun / Perim (Bab el Mandeb Strait), Yemen Current
 +04:00 :Africa/Djibouti
 0.0000 knots
@@ -15019,7 +15020,7 @@ N2           0.0475  300.25
 2N2          x 0 0
 O1           0.1400  141.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1353  144.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -15193,6 +15194,7 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 42.9333
 # !latitude: 13.3967
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mokha (west off, Red Sea), Yemen Current
 +04:00 :Africa/Djibouti
 0.0000 knots
@@ -15210,7 +15212,7 @@ N2           0.0437  114.62
 2N2          x 0 0
 O1           0.1600  147.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0792  154.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -15386,6 +15388,7 @@ MNUS2        x 0 0
 # !latitude: 14.053333
 # note: 20260906 country "Red Sea" -> "Yemen" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Al Hudaydah".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Zuqar / Abu Ali Islands, Yemen Current
 +04:00 :Africa/Djibouti
 0.0000 knots
@@ -15403,7 +15406,7 @@ N2           0.0380  278.70
 2N2          x 0 0
 O1           0.1200  133.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0693  126.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -15579,6 +15582,7 @@ MNUS2        x 0 0
 # !latitude: 20.698333
 # region: Ash Sharqiyah South
 # admin1_quelle: Ufer 2.5 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ras Hilf (Masirah Island), Oman Current
 +04:00 :Asia/Muscat
 0.0000 knots
@@ -15596,7 +15600,7 @@ N2           0.2774  182.17
 2N2          x 0 0
 O1           0.2200  316.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1353  308.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -15775,6 +15779,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # province: Muscat
 # admin1_quelle: Polygon
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khawr Riyam / Al Jazirah, Oman Current
 +04:00 :Asia/Muscat
 0.0000 knots
@@ -15792,7 +15797,7 @@ N2           0.0532  153.24
 2N2          x 0 0
 O1           0.0800  170.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0528  174.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -15972,6 +15977,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # province: Musandam
 # admin1_quelle: Ufer 18.7 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Strait of Hormuz (Jazirat Musandam), Oman Current
 +04:00 :Asia/Muscat
 0.0000 knots
@@ -15989,7 +15995,7 @@ N2           0.0851  275.36
 2N2          x 0 0
 O1           0.3323  83.09
 OO1          x 0 0
-P1           x 0 0
+P1              0.2065  86.87
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -16168,6 +16174,7 @@ MNUS2        x 0 0
 # admin1_quelle: Polygon
 # note: 20260906 country "United Arab Emirates" -> "Oman" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Ras Al Khaymah" -> "Musandam".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khawr Quway, Oman Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -16185,7 +16192,7 @@ N2           0.1333  92.98
 2N2          x 0 0
 O1           0.4826  214.50
 OO1          x 0 0
-P1           x 0 0
+P1              0.2587  217.25
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -16363,6 +16370,7 @@ MNUS2        x 0 0
 # !latitude: 24.863333
 # region: Abu Dhabi
 # admin1_quelle: Ufer 57.8 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Ghallan / Al Tok Island, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -16380,7 +16388,7 @@ N2           0.0878  235.60
 2N2          x 0 0
 O1           0.0969  34.50
 OO1          x 0 0
-P1           x 0 0
+P1              0.0587  30.36
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -16558,6 +16566,7 @@ MNUS2        x 0 0
 # !latitude: 25.300000
 # region: Abu Dhabi
 # admin1_quelle: Ufer 6.0 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sir Abu Nu'ayr N, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -16575,7 +16584,7 @@ N2           0.0626  217.78
 2N2          x 0 0
 O1           0.1892  318.28
 OO1          x 0 0
-P1           x 0 0
+P1              0.1051  3.82
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -16753,6 +16762,7 @@ MNUS2        x 0 0
 # !latitude: 25.216667
 # region: Abu Dhabi
 # admin1_quelle: Ufer 4.5 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sir Abu Nu'ayr E, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -16770,7 +16780,7 @@ N2           0.0513  118.05
 2N2          x 0 0
 O1           0.1686  28.54
 OO1          x 0 0
-P1           x 0 0
+P1              0.0916  74.21
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -16951,6 +16961,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Abu Dhabi
 # admin1_quelle: Ufer 2.4 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sir Bani Yas / Ghashshah (Persian Gulf), United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -16968,7 +16979,7 @@ N2           0.1121  43.19
 2N2          x 0 0
 O1           0.1400  301.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0891  252.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -17145,6 +17156,7 @@ MNUS2        x 0 0
 # !latitude: 24.653333
 # region: Abu Dhabi
 # admin1_quelle: Ufer 28.6 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Jazirat Arzanah S, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17162,7 +17174,7 @@ N2           0.0829  229.72
 2N2          x 0 0
 O1           0.2149  242.95
 OO1          x 0 0
-P1           x 0 0
+P1              0.1024  245.55
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -17340,6 +17352,7 @@ MNUS2        x 0 0
 # !latitude: 24.821667
 # region: Abu Dhabi
 # admin1_quelle: Ufer 14.0 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Zirku SW, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17357,7 +17370,7 @@ N2           0.0704  253.40
 2N2          x 0 0
 O1           0.3390  258.69
 OO1          x 0 0
-P1           x 0 0
+P1              0.1597  261.24
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -17534,6 +17547,7 @@ MNUS2        x 0 0
 # !latitude: 24.938333
 # region: Abu Dhabi
 # admin1_quelle: Ufer 11.8 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Zirku NW, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17551,7 +17565,7 @@ N2           0.0533  260.85
 2N2          x 0 0
 O1           0.1310  290.73
 OO1          x 0 0
-P1           x 0 0
+P1              0.0902  312.47
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -17728,6 +17742,7 @@ MNUS2        x 0 0
 # !latitude: 25.100000
 # region: Abu Dhabi
 # admin1_quelle: Ufer 50.2 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 El Bunduq Oilfield, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -17745,7 +17760,7 @@ N2           0.0603  278.11
 2N2          x 0 0
 O1           0.1552  224.24
 OO1          x 0 0
-P1           x 0 0
+P1              0.1105  271.40
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -17922,6 +17937,7 @@ MNUS2        x 0 0
 # !latitude: 25.218333
 # region: Al Wakrah
 # admin1_quelle: Ufer 12.8 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Doha SE (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -17939,7 +17955,7 @@ N2           0.0750  6.42
 2N2          x 0 0
 O1           0.1637  222.51
 OO1          x 0 0
-P1           x 0 0
+P1              0.1821  270.20
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -18117,6 +18133,7 @@ MNUS2        x 0 0
 # !latitude: 25.360000
 # region: Ad Dawhah
 # admin1_quelle: Ufer 42.2 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Doha Offshore (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -18134,7 +18151,7 @@ N2           0.0548  345.90
 2N2          x 0 0
 O1           0.0441  179.38
 OO1          x 0 0
-P1           x 0 0
+P1              0.0926  229.97
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -18315,6 +18332,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Al Wakrah
 # admin1_quelle: Ufer 15.5 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Mesaieed offshore (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -18332,7 +18350,7 @@ N2           0.1653  223.02
 2N2          x 0 0
 O1           0.2900  77.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.2805  91.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -18509,6 +18527,7 @@ MNUS2        x 0 0
 # !latitude: 26.180000
 # note: 20260906 country "Bahrain" -> "Qatar" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Al Khawr".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ras Laffan NE (Persian Gulf), Qatar Current
 +04:00 :Asia/Bahrain
 0.0000 knots
@@ -18526,7 +18545,7 @@ N2           0.0757  243.13
 2N2          x 0 0
 O1           0.2361  13.38
 OO1          x 0 0
-P1           x 0 0
+P1              0.1429  42.52
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -18704,6 +18723,7 @@ MNUS2        x 0 0
 # !latitude: 25.293333
 # region: Ad Dawhah
 # admin1_quelle: Ufer 18.1 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Doha E (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -18721,7 +18741,7 @@ N2           0.0344  169.41
 2N2          x 0 0
 O1           0.1418  227.68
 OO1          x 0 0
-P1           x 0 0
+P1              0.1696  274.06
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -18898,6 +18918,7 @@ MNUS2        x 0 0
 # !latitude: 25.773333
 # region: Al Khawr
 # admin1_quelle: Ufer 44.5 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Al Chaur E (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
 0.0000 knots
@@ -18915,7 +18936,7 @@ N2           0.0627  244.02
 2N2          x 0 0
 O1           0.0393  260.81
 OO1          x 0 0
-P1           x 0 0
+P1              0.0292  316.89
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -19089,6 +19110,7 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 52.400000
 # !latitude: 26.286667
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Ras Laffan <-> Lavan Island (Persian Gulf) Current
 +04:00 :Asia/Bahrain
 0.0000 knots
@@ -19106,7 +19128,7 @@ N2           0.0627  251.49
 2N2          x 0 0
 O1           0.1200  20.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0858  68.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -19282,6 +19304,7 @@ MNUS2        x 0 0
 # !latitude: 25.496667
 # region: Abu Dhabi
 # admin1_quelle: Ufer 53.5 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sir Abu Nu'ayr NW, United Arab Emirates Current
 +04:00 :Asia/Dubai
 0.0000 knots
@@ -19299,7 +19322,7 @@ N2           0.0779  240.95
 2N2          x 0 0
 O1           0.1300  298.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0792  339.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -19478,6 +19501,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 7.6 km
 # note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khafji, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0000 knots
@@ -19495,7 +19519,7 @@ N2           0.0662  1.90
 2N2          x 0 0
 O1           0.0413  323.96
 OO1          x 0 0
-P1           x 0 0
+P1              0.0798  335.72
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -19674,6 +19698,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 39.9 km
 # note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khafji Oilfield, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0000 knots
@@ -19691,7 +19716,7 @@ N2           0.0853  4.76
 2N2          x 0 0
 O1           0.1482  308.60
 OO1          x 0 0
-P1           x 0 0
+P1              0.0984  22.03
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -19872,6 +19897,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 23.2 km
 # note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khafji N, Saudi Arabia Current
 +03:00 :Asia/Riyadh
 0.0415 knots
@@ -19889,7 +19915,7 @@ N2           0.1288  9.86
 2N2          x 0 0
 O1           0.1250  337.25
 OO1          x 0 0
-P1           x 0 0
+P1              0.0941  8.87
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -20070,6 +20096,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 50.0 km
 # note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khafji NE, Saudi Arabia Current
 +03:00 :Asia/Kuwait
 0.0067 knots
@@ -20087,7 +20114,7 @@ N2           0.1030  9.85
 2N2          x 0 0
 O1           0.1224  348.89
 OO1          x 0 0
-P1           x 0 0
+P1              0.0879  16.62
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -20270,6 +20297,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 22.8 km
 # note: 20260906 country "Iraq" -> "Iran" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al-Basrah" -> "Khuzestan".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Khowr-e Musa, Iran Current
 +03:00 :Asia/Baghdad
 0.0000 knots
@@ -20287,7 +20315,7 @@ N2           0.1084  7.98
 2N2          x 0 0
 O1           0.1296  335.40
 OO1          x 0 0
-P1           x 0 0
+P1              0.0597  16.42
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -20464,6 +20492,7 @@ MNUS2        x 0 0
 # !latitude: 27.448333
 # province: Bushehr
 # admin1_quelle: Ufer 47.4 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Nakhiloo / Thamadoo S, Iran Current
 +03:30 :Asia/Tehran
 0.0000 knots
@@ -20481,7 +20510,7 @@ N2           0.0568  141.49
 2N2          x 0 0
 O1           0.4482  29.66
 OO1          x 0 0
-P1           x 0 0
+P1              0.2050  34.42
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -20658,6 +20687,7 @@ MNUS2        x 0 0
 # !latitude: 26.583333
 # province: Hormozgan
 # admin1_quelle: Ufer 21.2 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Lavan / Hendorabi S, Iran Current
 +04:00 :Asia/Tehran
 0.0000 knots
@@ -20675,7 +20705,7 @@ N2           0.0757  221.51
 2N2          x 0 0
 O1           0.0195  344.75
 OO1          x 0 0
-P1           x 0 0
+P1              0.1713  17.72
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -20858,6 +20888,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 12.6 km
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South West" -> "Kepulauan Riau".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Posal Piya (Singapore Strait), Kepulauan Riau, Indonesia Current
 +08:00 :Asia/Singapore
 0.0800 knots
@@ -20875,7 +20906,7 @@ N2           0.1083  103.20
 2N2          x 0 0
 O1           0.2700  98.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0693  243.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -21054,6 +21085,7 @@ MNUS2        x 0 0
 # note: -- der Name war sonst mehrfach vergeben und der Satz fuer XTide nicht erreichbar.
 # region: South West
 # admin1_quelle: Ufer 19.5 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Nipa (Singapore Strait), Kepulauan Riau, Indonesia Current
 +08:00 :Asia/Singapore
 -0.1740 knots
@@ -21071,7 +21103,7 @@ N2           0.1122  168.27
 2N2          x 0 0
 O1           0.1612  312.71
 OO1          x 0 0
-P1           x 0 0
+P1              0.0747  99.94
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -21256,6 +21288,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 18.7 km
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South West" -> "Kepulauan Riau".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Takong Besar (Singapore Strait), Kepulauan Riau, Indonesia Current
 +08:00 :Asia/Singapore
 0.0977 knots
@@ -21273,7 +21306,7 @@ N2           0.0670  106.34
 2N2          x 0 0
 O1           0.2570  304.20
 OO1          x 0 0
-P1           x 0 0
+P1              0.0822  39.65
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -21449,6 +21482,7 @@ MNUS2        x 0 0
 # !latitude: 1.000000
 # state: Kepulauan Riau
 # admin1_quelle: Ufer 13.5 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Selat Karimun, Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -21466,7 +21500,7 @@ N2           0.1995  132.55
 2N2          x 0 0
 O1           0.4600  320.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1749  54.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -21649,6 +21683,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 15.7 km
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South West" -> "Kepulauan Riau".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Takong Kecil Lighthouse (Singapore Strait), Kepulauan Riau, Indonesia Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -21666,7 +21701,7 @@ N2           0.1330  290.31
 2N2          x 0 0
 O1           0.8800  22.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.3630  72.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -21847,6 +21882,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: South West
 # admin1_quelle: Ufer 3.6 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Terumbu Selegi / Sentosa (Singapore Strait), Singapore Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -21864,7 +21900,7 @@ N2           0.0874  67.35
 2N2          x 0 0
 O1           0.8100  211.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.2805  261.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -22047,6 +22083,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 14.1 km
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South West" -> "Kepulauan Riau".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Semakau & Sebarok / Pulau Subar (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 -0.2500 knots
@@ -22064,7 +22101,7 @@ N2           0.0665  100.00
 2N2          x 0 0
 O1           0.6200  212.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1881  257.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -22246,6 +22283,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: South West
 # admin1_quelle: Ufer 1.9 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Palawan / Sentosa (Singapore Strait), Singapore Current
 +08:00 :Asia/Singapore
 -0.1253 knots
@@ -22263,7 +22301,7 @@ N2           0.0681  17.29
 2N2          x 0 0
 O1           0.5051  196.02
 OO1          x 0 0
-P1           x 0 0
+P1              0.1491  239.96
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -22445,6 +22483,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: South West
 # admin1_quelle: Ufer 2.8 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Buran / Sentosa (Cooper Channel), Singapore Current
 +08:00 :Asia/Singapore
 0.0877 knots
@@ -22462,7 +22501,7 @@ N2           0.0856  9.13
 2N2          x 0 0
 O1           0.4901  185.11
 OO1          x 0 0
-P1           x 0 0
+P1              0.1869  237.80
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -22644,6 +22683,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Central Singapore
 # admin1_quelle: Ufer 7.5 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Southeast of Marina South (Cooper Channel), Singapore Current
 +08:00 :Asia/Singapore
 -0.1137 knots
@@ -22661,7 +22701,7 @@ N2           0.0890  73.62
 2N2          x 0 0
 O1           0.7698  208.16
 OO1          x 0 0
-P1           x 0 0
+P1              0.2431  257.44
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -22844,6 +22884,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 6.6 km
 # note: 20260906 country "Singapore" -> "Malaysia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South East" -> "Johor".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pengerang Anchorage (Singapore Strait), Malaysia Current
 +08:00 :Asia/Singapore
 0.0200 knots
@@ -22861,7 +22902,7 @@ N2           0.1539  231.34
 2N2          x 0 0
 O1           0.7400  31.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.2607  75.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -23044,6 +23085,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 8.2 km
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South East" -> "Kepulauan Riau".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Northwest of Pulau Batam (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 -0.5500 knots
@@ -23061,7 +23103,7 @@ N2           0.1292  46.78
 2N2          x 0 0
 O1           0.7500  202.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.2640  240.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -23244,6 +23286,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 10.0 km
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South West" -> "Kepulauan Riau".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Batu Berhanti Lighthouse (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -23261,7 +23304,7 @@ N2           0.2071  249.06
 2N2          x 0 0
 O1           1.6300  31.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.5511  76.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -23444,6 +23487,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 7.3 km
 # note: 20260906 country "Singapore" -> "Malaysia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South East" -> "Johor".
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Falloden Hall Shoal (Singapore Strait), Malaysia Current
 +08:00 :Asia/Singapore
 0.0000 knots
@@ -23461,7 +23505,7 @@ N2           0.2071  56.49
 2N2          x 0 0
 O1           0.7200  196.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.2937  253.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -23642,6 +23686,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Kepulauan Riau
 # admin1_quelle: Ufer 5.4 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Tanjung Talu / Ngenang, Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -23659,7 +23704,7 @@ N2           0.2185  86.23
 2N2          x 0 0
 O1           1.0100  145.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.5280  215.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -23840,6 +23885,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Pulau Garang-baru (Riau)
 # admin1_quelle: Name
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 East of Pantai Cakang / Pulau Garang-baru, Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -23857,7 +23903,7 @@ N2           0.0969  95.98
 2N2          x 0 0
 O1           0.5600  195.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.2706  263.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -24038,6 +24084,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Kepulauan Riau
 # admin1_quelle: Ufer 1.2 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Ngalih / Pulau Kelong, Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24055,7 +24102,7 @@ N2           0.1216  7.34
 2N2          x 0 0
 O1           0.3500  145.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1518  201.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -24234,6 +24281,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Kepulauan Riau
 # admin1_quelle: Ufer 17.2 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Bulungkor (Pulau Lingga), Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24251,7 +24299,7 @@ N2           0.0570  132.15
 2N2          x 0 0
 O1           1.5700  183.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.6468  249.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -24432,6 +24480,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Jambi
 # admin1_quelle: Ufer 18.4 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Berhala (Selat Berhala), Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24449,7 +24498,7 @@ N2           0.1710  129.30
 2N2          x 0 0
 O1           0.4100  56.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1815  123.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -24630,6 +24679,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Jambi
 # admin1_quelle: Ufer 25.4 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Northeast of Kuala Tungkal (Berhala Strait), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24647,7 +24697,7 @@ N2           0.2774  140.23
 2N2          x 0 0
 O1           0.4500  115.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1683  231.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -24829,6 +24879,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Bangka-Belitung
 # admin1_quelle: Ufer 34.2 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Cebia (Selat Bangka), Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -24846,7 +24897,7 @@ N2           0.0285  173.04
 2N2          x 0 0
 O1           0.3700  189.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1815  256.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -25029,6 +25080,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Bangka-Belitung
 # admin1_quelle: Ufer 10.9 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Muntok Tenggara (Selat Bangka), Kepulauan Bangka Belitung, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -25046,7 +25098,7 @@ N2           0.0817  342.55
 2N2          x 0 0
 O1           0.4000  41.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1419  81.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -25225,6 +25277,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Bangka-Belitung
 # admin1_quelle: Ufer 5.8 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Besar (Selat Bangka), Kepulauan Bangka Belitung, Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -25242,7 +25295,7 @@ N2           0.0969  253.92
 2N2          x 0 0
 O1           0.5000  147.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0462  225.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -25421,6 +25474,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Pahang
 # admin1_quelle: Ufer 2.7 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Tanjung Gelang (Kuantan Port), Malaysia Current
 +08:00 :Asia/Kuala_Lumpur
 0.0000 knots
@@ -25438,7 +25492,7 @@ N2           0.0513  328.90
 2N2          x 0 0
 O1           0.1400  118.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0726  193.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -25619,6 +25673,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # province: Guimaras
 # admin1_quelle: Ufer 1.3 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Iloilo Strait (Iloilo City), Philippines Current
 +08:00 :Asia/Manila
 0.0000 knots
@@ -25636,7 +25691,7 @@ N2           0.2926  212.45
 2N2          x 0 0
 O1           0.3400  204.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1221  240.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -25817,6 +25872,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Cebu
 # admin1_quelle: Ufer 1.1 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Shell Island (Cebu Strait), Philippines Current
 +08:00 :Asia/Manila
 0.0000 knots
@@ -25834,7 +25890,7 @@ N2           0.1349  186.84
 2N2          x 0 0
 O1           0.1200  209.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0330  265.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -26013,6 +26069,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Capul Lighthouse)
 # admin1_quelle: Name
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 San Bernardino Strait (Calintaan, Capul Lighthouse), Philippines Current
 +08:00 :Asia/Manila
 1.1600 knots
@@ -26030,7 +26087,7 @@ N2           0.5795  218.60
 2N2          x 0 0
 O1           1.3800  184.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.5874  222.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -26211,6 +26268,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Tacloban
 # admin1_quelle: Ufer 0.9 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Tacloban / Bintac Point (San Juanico Strait), Samar, Philippines Current
 +08:00 :Asia/Manila
 0.0000 knots
@@ -26228,7 +26286,7 @@ N2           0.0741  233.12
 2N2          x 0 0
 O1           0.3000  164.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1287  218.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -26409,6 +26467,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Leyte
 # admin1_quelle: Name
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Uban Point (San Juanico Strait), Leyte, Philippines Current
 +08:00 :Asia/Manila
 0.0000 knots
@@ -26426,7 +26485,7 @@ N2           0.2660  182.74
 2N2          x 0 0
 O1           0.4000  162.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1155  204.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -26607,6 +26666,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Sabah
 # admin1_quelle: Ufer 2.8 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Teluk Sandakan, Malaysia Current
 +08:00 :Asia/Kuching
 0.0000 knots
@@ -26624,7 +26684,7 @@ N2           0.1254  8.84
 2N2          x 0 0
 O1           0.3200  343.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1122  50.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -26806,6 +26866,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Labuan
 # admin1_quelle: Ufer 2.9 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Kuraman (north), Malaysia Current
 +08:00 :Asia/Kuching
 0.0000 knots
@@ -26823,7 +26884,7 @@ N2           0.0635  211.16
 2N2          x 0 0
 O1           0.1155  151.42
 OO1          x 0 0
-P1           x 0 0
+P1              0.0594  229.93
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -27004,6 +27065,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # region: Labuan
 # admin1_quelle: Ufer 2.8 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Kuraman (northeast), Malaysia Current
 +08:00 :Asia/Kuching
 0.0000 knots
@@ -27021,7 +27083,7 @@ N2           0.0456  25.74
 2N2          x 0 0
 O1           0.0600  14.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0264  48.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -27202,6 +27264,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Maluku Utara
 # admin1_quelle: Ufer 28.4 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Pulau Taliabu (northeast), Indonesia Current
 +08:00 :Asia/Makassar
 0.0000 knots
@@ -27219,7 +27282,7 @@ N2           0.1064  44.89
 2N2          x 0 0
 O1           0.1800  160.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1617  277.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -27400,6 +27463,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Maluku Utara
 # admin1_quelle: Ufer 1.7 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Selat Capalulu (Pulau Taliabu / Mangoli), Indonesia Current
 +08:00 :Asia/Makassar
 0.0000 knots
@@ -27417,7 +27481,7 @@ N2           0.8930  2.23
 2N2          x 0 0
 O1           1.6000  0.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.5610  26.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -27595,6 +27659,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Banten
 # admin1_quelle: Ufer 5.7 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sangiang (Selat Sunda), Indonesia Current
 +07:00 :Asia/Jakarta
 0.0000 knots
@@ -27612,7 +27677,7 @@ N2           x 0 0
 2N2          x 0 0
 O1           0.6000  351.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.3630  10.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -27791,6 +27856,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Jawa Timur
 # admin1_quelle: Ufer 3.9 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Gresik / Junganyar (Selaut Madura), Indonesia Current
 +07:00 :Asia/Jakarta
 0.1500 knots
@@ -27808,7 +27874,7 @@ N2           0.3458  15.61
 2N2          x 0 0
 O1           0.0800  33.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.1155  234.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -27988,6 +28054,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Nusa Tenggara Barat
 # admin1_quelle: Ufer 9.1 km
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Nusa Penida / Tanjung Pandanan (Selat Lombok), Indonesia Current
 +08:00 :Asia/Makassar
 0.0000 knots
@@ -28005,7 +28072,7 @@ N2           0.3040  179.78
 2N2          x 0 0
 O1           0.6000  180.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.4620  191.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -28186,6 +28253,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: Papua Barat
 # admin1_quelle: Polygon
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Selat Sele (Seget), Indonesia Current
 +09:00 :Asia/Jayapura
 0.1500 knots
@@ -28203,7 +28271,7 @@ N2           0.2318  55.59
 2N2          x 0 0
 O1           0.4000  350.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.2079  29.26
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
@@ -28384,6 +28452,7 @@ MNUS2        x 0 0
 # note: -- siehe harmonics/help/stroemungsnamen_gesetzt.csv
 # state: New Guinea
 # admin1_quelle: Name
+# note: 20261022 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 Sungai Muturi, Papua Barat, Indonesia Current
 +09:00 :Asia/Jayapura
 0.0000 knots
@@ -28401,7 +28470,7 @@ N2           0.2318  68.83
 2N2          x 0 0
 O1           0.1500  226.00
 OO1          x 0 0
-P1           x 0 0
+P1              0.0561  253.26
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
