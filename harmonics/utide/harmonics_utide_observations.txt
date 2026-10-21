@@ -37922,12 +37922,13 @@ x 0 0
 # !latitude: 18.4275
 # region: Tortola
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 90-day window (ratio/lag of Blowing Point, 168 km); K2/P1 added
 Cane Garden Bay, Tortola, British Virgin Islands
 +00:00 :UTC
 3.0909 meters
 J1              0.0024  209.52
-K1              0.0912  215.75
-x 0 0
+K1              0.0777  213.36
+K2              0.0051  62.45
 L2              0.0040  23.95
 x 0 0
 M2              0.1313  17.81
@@ -37939,12 +37940,12 @@ N2              0.0266  359.62
 x 0 0
 O1              0.0579  211.35
 OO1             0.0023  194.11
-x 0 0
+P1              0.0240  213.60
 Q1              0.0102  203.14
 2Q1             0.0004  287.34
 x 0 0
 x 0 0
-S2              0.0141  58.45
+S2              0.0184  56.12
 S4              0.0002  69.60
 x 0 0
 x 0 0
@@ -200858,12 +200859,13 @@ x 0 0
 # !latitude: 38.9771
 # region: Baleares
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 60-day window (ratio/lag of Andratx (Mallorca), 112 km); K2/P1 added
 Sant Antoni de Portmany (Ibiza), Baleares, Spain
 +00:00 :UTC
 0.0923 meters
 J1              0.0002  248.24
-K1              0.0438  183.09
-x 0 0
+K1              0.0385  170.74
+K2              0.0023  206.96
 L2              0.0012  262.00
 x 0 0
 M2              0.0232  200.40
@@ -200875,12 +200877,12 @@ N2              0.0052  193.78
 x 0 0
 O1              0.0206  94.57
 OO1             0.0016  289.93
-x 0 0
+P1              0.0126  165.44
 Q1              0.0028  96.81
 2Q1             0.0022  252.51
 x 0 0
 x 0 0
-S2              0.0068  226.53
+S2              0.0073  211.55
 S4              0.0007  316.18
 x 0 0
 x 0 0
@@ -201461,12 +201463,13 @@ x 0 0
 # !latitude: 39.3603
 # region: Baleares
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 60-day window (ratio/lag of Colònia de Sant Pere, 50 km); K2/P1 added
 Sa Rapita (Mallorca), Baleares, Spain
 +00:00 :UTC
 0.1109 meters
 J1              0.0015  151.08
-K1              0.0447  186.78
-x 0 0
+K1              0.0389  170.29
+K2              0.0029  233.42
 L2              0.0006  251.98
 x 0 0
 M2              0.0296  215.22
@@ -201478,12 +201481,12 @@ N2              0.0059  212.52
 x 0 0
 O1              0.0187  97.87
 OO1             0.0008  263.68
-x 0 0
+P1              0.0163  172.22
 Q1              0.0042  110.63
 2Q1             0.0016  151.93
 x 0 0
 x 0 0
-S2              0.0098  248.22
+S2              0.0107  235.16
 S4              0.0003  279.36
 x 0 0
 x 0 0
@@ -224266,12 +224269,13 @@ x 0 0
 # !latitude: 36.720245
 # province: Ragusa
 # admin1_quelle: Polygon
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 122-day window (ratio/lag of Catania, 90 km); K2/P1 added
 Pozzallo, Italy
 +00:00 :Europe/Rome
 0.0454 meters
 J1              0.0170  196.77
-K1              0.0240  124.49
-x 0 0
+K1              0.0225  131.37
+K2              0.0150  52.17
 L2              0.0139  183.34
 x 0 0
 M2              0.0674  69.10
@@ -224283,12 +224287,12 @@ N2              0.0252  44.79
 x 0 0
 O1              0.0230  33.71
 OO1             0.0027  112.30
-x 0 0
+P1              0.0085  118.96
 Q1              0.0031  304.44
 2Q1             0.0026  81.85
 x 0 0
 x 0 0
-S2              0.0495  52.22
+S2              0.0550  58.48
 S4              0.0117  124.60
 x 0 0
 x 0 0
@@ -227414,12 +227418,13 @@ x 0 0
 # !longitude: -44.0565
 # !latitude: -2.5664
 # region: Maranhão
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 153-day window (ratio/lag of Sao Luis, 28 km); K2/P1 added
 São José de Ribamar, Maranhão, Brazil
 +00:00 :America/Fortaleza
 3.1876 meters
 J1              0.0048  2.91
-K1              0.1089  285.28
-x 0 0
+K1              0.1048  283.60
+K2              0.1391  319.59
 L2              0.0876  286.44
 x 0 0
 M2              1.9443  279.53
@@ -227431,12 +227436,12 @@ N2              0.3566  263.64
 x 0 0
 O1              0.0931  251.87
 OO1             0.0017  301.27
-x 0 0
+P1              0.0305  269.90
 Q1              0.0167  235.96
 2Q1             0.0039  175.50
 x 0 0
 x 0 0
-S2              0.5172  322.89
+S2              0.5347  319.84
 S4              0.0067  137.99
 x 0 0
 x 0 0
@@ -229541,12 +229546,13 @@ x 0 0
 # !longitude: 126.7890
 # !latitude: 4.2295
 # region: Sulawesi Utara
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 181-day window (ratio/lag of General Santos City (South Cotabato), 275 km); K2/P1 added
 Beo (Pulau Karakelang), Sulawesi Utara, Indonesia
 +00:00 :Asia/Makassar
 1.3685 meters
 J1              0.0201  130.49
-K1              0.1985  92.12
-x 0 0
+K1              0.1988  92.14
+K2              0.1004  323.57
 L2              0.0152  314.73
 x 0 0
 M2              0.6035  288.92
@@ -229558,12 +229564,12 @@ N2              0.1057  274.54
 x 0 0
 O1              0.1059  73.71
 OO1             0.0046  123.23
-x 0 0
+P1              0.0630  84.21
 Q1              0.0247  78.87
 2Q1             0.0088  70.10
 x 0 0
 x 0 0
-S2              0.3584  323.80
+S2              0.3560  324.01
 S4              0.0043  300.53
 x 0 0
 x 0 0

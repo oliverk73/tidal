@@ -570642,12 +570642,13 @@ x 0 0
 # !latitude: -35.35573
 # region: Maule
 # admin1_quelle: Polygon
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Boyeruca, 83 km); K2/P1 added
 Constitución, Chile
 +00:00 :UTC
 0.9804 meters
 J1              0.0067  65.68
-K1              0.1805  36.30
-x 0 0
+K1              0.1648  46.35
+K2              0.0438  90.85
 L2              0.0053  298.10
 x 0 0
 M2              0.4494  71.40
@@ -570659,12 +570660,12 @@ N2              0.1120  46.73
 x 0 0
 O1              0.1095  358.44
 OO1             0.0030  119.01
-x 0 0
+P1              0.0594  45.67
 Q1              0.0228  329.03
 2Q1             0.0049  355.43
 x 0 0
 x 0 0
-S2              0.1369  80.02
+S2              0.1507  93.09
 S4              0.0003  216.89
 x 0 0
 x 0 0
@@ -638456,12 +638457,13 @@ x 0 0
 # !latitude: -51.72913
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Ufer 0.4 km
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Caleta Meteoro (Estrecho de Magallanes), 173 km); K2/P1 added
 Puerto Natales, Chile
 +00:00 :America/Punta_Arenas
 0.4039 meters
 J1              0.0026  60.73
-K1              0.0739  160.15
-x 0 0
+K1              0.0628  162.23
+K2              0.0129  245.15
 L2              0.0034  254.32
 x 0 0
 M2              0.0903  280.94
@@ -638473,12 +638475,12 @@ N2              0.0200  251.98
 x 0 0
 O1              0.0570  130.61
 OO1             0.0030  13.61
-x 0 0
+P1              0.0198  156.43
 Q1              0.0093  141.19
 2Q1             0.0065  227.91
 x 0 0
 x 0 0
-S2              0.0306  246.15
+S2              0.0410  246.88
 S4              0.0005  208.27
 x 0 0
 x 0 0
@@ -638655,12 +638657,13 @@ x 0 0
 # !latitude: -23.09771
 # region: Antofagasta
 # admin1_quelle: Polygon
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 93-day window (ratio/lag of Antofagasta, 62 km); K2/P1 added
 Mejillones del Sur, Chile
 +00:00 :America/Santiago
 0.8047 meters
 J1              0.0091  68.42
-K1              0.1855  32.79
-x 0 0
+K1              0.1589  34.58
+K2              0.0327  50.74
 L2              0.0058  281.21
 x 0 0
 M2              0.3712  34.81
@@ -638672,12 +638675,12 @@ N2              0.0848  358.99
 x 0 0
 O1              0.0908  349.74
 OO1             0.0072  98.60
-x 0 0
+P1              0.0479  29.12
 Q1              0.0168  315.63
 2Q1             0.0028  311.11
 x 0 0
 x 0 0
-S2              0.0777  62.29
+S2              0.1037  60.11
 S4              0.0002  92.95
 x 0 0
 x 0 0
@@ -638854,12 +638857,13 @@ x 0 0
 # !latitude: -33.63602
 # region: Juan Fernández)
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Bahía Cumberland (Isla Robinson Crusoe, 0 km); K2/P1 added
 Bahía Cumberland (Isla Robinson Crusoe, Juan Fernández), Chile
 +00:00 :America/Santiago
 0.7670 meters
 J1              0.0070  66.09
-K1              0.1772  43.47
-x 0 0
+K1              0.1510  45.37
+K2              0.0343  87.89
 L2              0.0013  206.11
 x 0 0
 M2              0.3240  69.44
@@ -638871,12 +638875,12 @@ N2              0.0766  33.98
 x 0 0
 O1              0.1029  3.52
 OO1             0.0051  102.85
-x 0 0
+P1              0.0467  40.57
 Q1              0.0200  333.25
 2Q1             0.0034  318.12
 x 0 0
 x 0 0
-S2              0.0916  98.48
+S2              0.1192  96.92
 S4              0.0004  213.10
 x 0 0
 x 0 0
@@ -639053,12 +639057,13 @@ x 0 0
 # !latitude: -39.8866
 # region: Los Ríos
 # admin1_quelle: Polygon
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Queule, 57 km); K2/P1 added
 Corral, Chile
 +00:00 :America/Santiago
 0.9823 meters
 J1              0.0074  75.02
-K1              0.1944  51.04
-x 0 0
+K1              0.1650  52.61
+K2              0.0493  103.43
 L2              0.0033  246.54
 x 0 0
 M2              0.4349  89.55
@@ -639070,12 +639075,12 @@ N2              0.1152  60.71
 x 0 0
 O1              0.1181  10.97
 OO1             0.0069  114.94
-x 0 0
+P1              0.0521  50.19
 Q1              0.0234  337.55
 2Q1             0.0045  336.44
 x 0 0
 x 0 0
-S2              0.1226  103.92
+S2              0.1625  104.75
 S4              0.0005  238.25
 x 0 0
 x 0 0
@@ -639252,12 +639257,13 @@ x 0 0
 # !latitude: -41.8288
 # region: Los Lagos
 # admin1_quelle: Ufer 0.6 km
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 93-day window (ratio/lag of Ancud, 27 km); K2/P1 added
 Puerto Chacao, Chile
 +00:00 :America/Santiago
 3.1657 meters
 J1              0.0240  77.40
-K1              0.1593  70.10
-x 0 0
+K1              0.1363  71.82
+K2              0.3551  183.57
 L2              0.0024  209.49
 x 0 0
 M2              1.6624  161.06
@@ -639269,12 +639275,12 @@ N2              0.3333  132.63
 x 0 0
 O1              0.1699  26.66
 OO1             0.0173  119.47
-x 0 0
+P1              0.0414  66.94
 Q1              0.0222  339.84
 2Q1             0.0047  234.27
 x 0 0
 x 0 0
-S2              0.8989  187.57
+S2              1.1832  187.30
 S4              0.0116  279.42
 x 0 0
 x 0 0
@@ -639451,12 +639457,13 @@ x 0 0
 # !latitude: -48.980571
 # region: Canal Messier
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 93-day window (ratio/lag of Puerto Edén, 17 km); K2/P1 added
 Angostura Inglesa (Canal Messier), Chile
 +00:00 :America/Punta_Arenas
 1.1808 meters
 J1              0.0022  349.79
-K1              0.2385  64.32
-x 0 0
+K1              0.2034  65.98
+K2              0.0696  123.86
 L2              0.0142  140.40
 x 0 0
 M2              0.4785  148.94
@@ -639468,12 +639475,12 @@ N2              0.1571  125.22
 x 0 0
 O1              0.1514  37.77
 OO1             0.0075  137.56
-x 0 0
+P1              0.0630  61.68
 Q1              0.0300  14.43
 2Q1             0.0016  139.28
 x 0 0
 x 0 0
-S2              0.1677  126.54
+S2              0.2234  126.59
 S4              0.0016  108.51
 x 0 0
 x 0 0
@@ -639650,12 +639657,13 @@ x 0 0
 # !latitude: -52.456936
 # region: Estrecho de Magallanes
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 93-day window (ratio/lag of Bahía Gregorio, 50 km); K2/P1 added
 Punta Delgada (Estrecho de Magallanes), Chile
 +00:00 :America/Punta_Arenas
 5.0830 meters
 J1              0.0252  221.11
-K1              0.2761  134.62
-x 0 0
+K1              0.2385  136.25
+K2              0.2617  88.01
 L2              0.0834  62.85
 x 0 0
 M2              2.8508  25.64
@@ -639667,12 +639675,12 @@ N2              0.6857  347.66
 x 0 0
 O1              0.2616  75.24
 OO1             0.0073  86.30
-x 0 0
+P1              0.0676  131.33
 Q1              0.0504  52.06
 2Q1             0.0054  276.56
 x 0 0
 x 0 0
-S2              0.7669  85.58
+S2              0.9758  86.72
 S4              0.0114  67.13
 x 0 0
 x 0 0
@@ -639849,12 +639857,13 @@ x 0 0
 # !latitude: -52.900000
 # region: Bahía Gente Grande
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 93-day window (ratio/lag of Bahía Gregorio, 28 km); K2/P1 added
 Caleta Percy (Bahía Gente Grande), Chile
 +00:00 :America/Punta_Arenas
 1.5644 meters
 J1              0.0147  23.23
-K1              0.3836  127.65
-x 0 0
+K1              0.3313  129.28
+K2              0.0447  202.17
 L2              0.1101  148.09
 x 0 0
 M2              0.5381  88.21
@@ -639866,12 +639875,12 @@ N2              0.1673  33.96
 x 0 0
 O1              0.2408  77.61
 OO1             0.0224  204.91
-x 0 0
+P1              0.0940  124.36
 Q1              0.0581  23.44
 2Q1             0.0329  350.92
 x 0 0
 x 0 0
-S2              0.1309  199.74
+S2              0.1665  200.88
 S4              0.0009  336.72
 x 0 0
 x 0 0
@@ -640048,12 +640057,13 @@ x 0 0
 # !latitude: 22.533280
 # region: Khulna
 # admin1_quelle: Polygon
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 182-day window (ratio/lag of Hiron Point (Pasur River), 81 km); K2/P1 added
 Mongla, Bangladesh
 +00:00 :Asia/Dhaka
 2.2647 meters
 J1              0.0051  325.05
-K1              0.1444  299.50
-x 0 0
+K1              0.1445  299.52
+K2              0.1448  253.75
 L2              0.0646  189.45
 x 0 0
 M2              1.3275  207.05
@@ -640065,12 +640075,12 @@ N2              0.2392  201.91
 x 0 0
 O1              0.0433  283.06
 OO1             0.0058  261.03
-x 0 0
+P1              0.0452  296.33
 Q1              0.0030  287.20
 2Q1             0.0021  277.42
 x 0 0
 x 0 0
-S2              0.5001  254.56
+S2              0.4996  254.60
 S4              0.0160  32.88
 x 0 0
 x 0 0
@@ -643623,12 +643633,13 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260907 Land im Namen berichtigt (vorher "Base Frei (Bahía Fildes, Isla Rey Jorge), Chile"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Refugio Ballvé (Caleta Ardley, 2 km); K2/P1 added
 Base Frei (Bahía Fildes, Antarctica
 +00:00 :UTC
 1.4153 meters
 J1              0.0021  187.86
-K1              0.3518  57.91
-x 0 0
+K1              0.3039  61.08
+K2              0.0719  324.48
 L2              0.0206  342.43
 x 0 0
 M2              0.4389  281.90
@@ -643640,12 +643651,12 @@ N2              0.0524  242.17
 x 0 0
 O1              0.3068  46.80
 OO1             0.0023  92.71
-x 0 0
+P1              0.0894  46.64
 Q1              0.0614  27.20
 2Q1             0.0145  327.31
 x 0 0
 x 0 0
-S2              0.1905  327.41
+S2              0.2487  327.63
 S4              0.0005  32.51
 x 0 0
 x 0 0
@@ -643822,12 +643833,13 @@ x 0 0
 # !latitude: -62.3738
 # region: Isla Robert)
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Captain Arturo Prat Base (Isla Greenwich, 12 km); K2/P1 added
 Base Risopatrón (Caleta Cooper Mine, Isla Robert), Chile
 +00:00 :UTC
 1.1284 meters
 J1              0.0034  118.36
-K1              0.2990  89.24
-x 0 0
+K1              0.2527  90.81
+K2              0.0546  10.29
 L2              0.0004  37.03
 x 0 0
 M2              0.3236  283.63
@@ -643839,12 +643851,12 @@ N2              0.0449  252.44
 x 0 0
 O1              0.2239  65.47
 OO1             0.0044  270.73
-x 0 0
+P1              0.0820  88.63
 Q1              0.0547  57.97
 2Q1             0.0086  182.22
 x 0 0
 x 0 0
-S2              0.1486  9.35
+S2              0.1927  10.45
 S4              0.0024  64.28
 x 0 0
 x 0 0
@@ -644019,12 +644031,13 @@ x 0 0
 # !units: meters
 # !longitude: -61.3830
 # !latitude: -62.7830
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Puerto Foster (Isla Decepción), 40 km); K2/P1 added
 Caleta Snow (Isla Snow), Chile
 +00:00 :UTC
 1.2457 meters
 J1              0.0058  63.43
-K1              0.1876  69.58
-x 0 0
+K1              0.1572  70.87
+K2              0.0769  351.07
 L2              0.0028  278.66
 x 0 0
 M2              0.3559  276.69
@@ -644036,12 +644049,12 @@ N2              0.0568  234.21
 x 0 0
 O1              0.2540  49.97
 OO1             0.0125  49.21
-x 0 0
+P1              0.0536  70.81
 Q1              0.0709  42.19
 2Q1             0.0181  48.78
 x 0 0
 x 0 0
-S2              0.2567  349.82
+S2              0.3187  350.82
 S4              0.0009  15.27
 x 0 0
 x 0 0
@@ -644216,12 +644229,13 @@ x 0 0
 # !units: meters
 # !longitude: -60.5670
 # !latitude: -62.9830
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Puerto Foster (Isla Decepción), 7 km); K2/P1 added
 Caleta Balleneros (Isla Decepción), Chile
 +00:00 :UTC
 1.3943 meters
 J1              0.0212  87.01
-K1              0.2470  84.85
-x 0 0
+K1              0.2069  86.14
+K2              0.0801  359.50
 L2              0.0008  271.23
 x 0 0
 M2              0.3954  281.13
@@ -644233,12 +644247,12 @@ N2              0.0465  233.76
 x 0 0
 O1              0.2811  53.08
 OO1             0.0048  142.40
-x 0 0
+P1              0.0705  86.08
 Q1              0.0724  32.91
 2Q1             0.0232  343.68
 x 0 0
 x 0 0
-S2              0.2675  358.25
+S2              0.3321  359.25
 S4              0.0015  333.67
 x 0 0
 x 0 0
@@ -644413,12 +644427,13 @@ x 0 0
 # !units: meters
 # !longitude: -57.8990
 # !latitude: -63.3200
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Base Esperanza (Bahía Esperanza), 46 km); K2/P1 added
 Base O'Higgins (Rada Covadonga), Chile
 +00:00 :UTC
 1.9034 meters
 J1              0.0097  353.42
-K1              0.4180  57.54
-x 0 0
+K1              0.3526  59.34
+K2              0.0881  336.96
 L2              0.0130  286.40
 x 0 0
 M2              0.4654  287.85
@@ -644430,12 +644445,12 @@ N2              0.0595  266.09
 x 0 0
 O1              0.3890  45.59
 OO1             0.0135  93.44
-x 0 0
+P1              0.1162  55.85
 Q1              0.1141  29.83
 2Q1             0.0410  356.37
 x 0 0
 x 0 0
-S2              0.2330  339.84
+S2              0.3043  340.07
 S4              0.0003  200.63
 x 0 0
 x 0 0
@@ -644610,12 +644625,13 @@ x 0 0
 # !units: meters
 # !longitude: -62.8570
 # !latitude: -64.8240
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Base Brown (Bahía Paraíso), 8 km); K2/P1 added
 Base González Videla (Bahía Paraíso), Chile
 +00:00 :UTC
 1.2811 meters
 J1              0.0230  76.19
-K1              0.3045  88.04
-x 0 0
+K1              0.2584  89.75
+K2              0.0797  33.02
 L2              0.0213  307.18
 x 0 0
 M2              0.2534  290.91
@@ -644627,12 +644643,12 @@ N2              0.0158  225.31
 x 0 0
 O1              0.3389  60.02
 OO1             0.0171  84.50
-x 0 0
+P1              0.0818  86.43
 Q1              0.0796  57.40
 2Q1             0.0189  51.24
 x 0 0
 x 0 0
-S2              0.2387  28.94
+S2              0.3027  30.63
 S4              0.0010  134.42
 x 0 0
 x 0 0
@@ -644809,12 +644825,13 @@ x 0 0
 # !latitude: -64.8760
 # region: Isla Doumer)
 # admin1_quelle: Name
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 92-day window (ratio/lag of Puerto Lockroy (Isla Wiencke), 6 km); K2/P1 added
 Base Yelcho (Bahía Sur, Isla Doumer), Chile
 +00:00 :UTC
 1.1890 meters
 J1              0.0213  109.95
-K1              0.2971  94.27
-x 0 0
+K1              0.2521  95.97
+K2              0.0676  44.49
 L2              0.0328  326.44
 x 0 0
 M2              0.2027  284.56
@@ -644826,12 +644843,12 @@ N2              0.0238  184.68
 x 0 0
 O1              0.3194  64.38
 OO1             0.0097  54.23
-x 0 0
+P1              0.0799  92.76
 Q1              0.0828  69.15
 2Q1             0.0242  84.27
 x 0 0
 x 0 0
-S2              0.2018  40.42
+S2              0.2561  42.11
 S4              0.0006  135.29
 x 0 0
 x 0 0

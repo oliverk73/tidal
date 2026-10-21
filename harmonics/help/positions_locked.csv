@@ -1,5 +1,6 @@
 856c5dc7f5e56efa82d8386cbc8630e1,harmonics/att/harmonics_att_np202.txt,"Bahía El Tablazo (Lago de Maracaibo), Venezuela",10.8833,-71.6167,manual,"Bahía el Tablazo, Venezuela (NP202 2381) Tide",,,,14fdab51 2026-06-17
 8e938bd4c9eae9cd03599bbc985fb502,harmonics/att/harmonics_att_np202_secondary.txt,"Port Royal (Roatán), Honduras",16.4,-86.3,manual,"Port Royal, Honduras",,,,ad4600a5 2026-08-18
+99560460c9e83a0d1535d6ef5e8a45dd,harmonics/att/harmonics_att_np203_scs.txt,"Mongla, Bangladesh",22.4727,89.5984,manual,,22.45,89.5833,2963,c0ab599a 2026-08-03
 e34e6c91ce8a4f0d925220febb8dac6d,harmonics/att/harmonics_att_np203_secondary.txt,"Kadmat (Cardamom Island, Laccadive Islands), Lakshadweep, India",11.2249,72.7737,manual,"Kadmat, Lakshadweep, India",11.217,72.783,1342,004d889e 2026-08-01
 1fd6f54e9e9f43f02eee3724e08fcb6a,harmonics/att/harmonics_att_np207.txt,"Calshot Harbour (Edinburgh of the Seven Seas), Tristan da Cunha Island",-37.0637,-12.3133,manual,"Tristan da Cunha, Saint Helena, Ascension and Tristan da Cunha (NP207 2060) Tide",-37.0667,-12.3,1226,bfe2acfc 2026-06-19
 02d2e68ab13f302530e2bc197c521480,harmonics/classic/harmonics-1997-05-25_mod.txt,"Puerto Baquerizo Moreno (San Cristóbal), Galapagos, Ecuador",-0.899,-89.6099,manual,"Puerto Baquerizo Moreno, San Cristóbal, Galapagos Islands, Ecuador",-0.9,-89.6167,764,87be3e0e 2026-03-25
@@ -3805,6 +3806,8 @@ fe25a73338b4c7734e0680fa2fc069f2,harmonics/ticon/harmonics_ticon4_worldwide.txt,
 03685833926a3c11818fc47e0157c7af,harmonics/utide/harmonics_fes2022.txt,"Kadmat (Cardamom Island, Laccadive Islands), Lakshadweep, India",11.2249,72.7737,manual,"Kardamum Island, Laccadive Islands, Lakshadweep, India",11.2167,72.7667,1189,0c184920 2026-09-15
 d9eb4f5457ba1600649872fc3c4b88c2,harmonics/utide/harmonics_fes2022.txt,"Atol das Rocas, Rio Grande do Norte, Brazil",-3.85,-33.8167,manual,"Rocas, Atol das, Brazil",,,,0c184920 2026-09-15
 134cfcdfa5f09299ba2ce33daa886ed1,harmonics/utide/harmonics_utide_big_srgi.txt,"Marore, Sulawesi Utara, Indonesia",4.7299,125.4776,manual,"Marore, , Indonesia",,,,8aa54c70 2026-09-21
+69ed6dddd1093bd7b1f61fa41cb7f17b,harmonics/utide/harmonics_utide_chile_shoa.txt,"Mejillones del Sur, Chile",-23.09771,-70.45066,manual,,-23.1,-70.45,263,fa9229d9 2026-08-20
+c11dd57eb4c37926bd0f2250cddb0661,harmonics/utide/harmonics_utide_chile_shoa.txt,"Corral, Chile",-39.8866,-73.4275,source,,,,,fa9229d9 2026-08-20
 000ac62255ff46eed6970c005e18c904,harmonics/utide/harmonics_utide_current_observations.txt,"Sylt (31 km WNW, 11 m deep; BODC 26463), Germany Current",55.005,7.8133,ambiguous,,,,,
 000f484fac40c454475f1028ec0d453e,harmonics/utide/harmonics_utide_current_observations.txt,"Visundfeltet, Norway Current",61.3648,2.4327,source,,,,,8407a3fa 2026-05-12
 00ca54117b32134c6ee7f9dfbd322dd6,harmonics/utide/harmonics_utide_current_observations.txt,"Kiel 276 (Canary Basin), Portugal Current",32.959,-21.993,manual,"K276, Portugal Current",32.8183,-22.136,20575,8407a3fa 2026-05-12
@@ -4241,6 +4244,7 @@ f5497f7f7956a7a261e4b407c9d3c44f,harmonics/utide/harmonics_utide_current_tables.
 f60465568f832d5cfb542e120c94a493,harmonics/utide/harmonics_utide_current_tables.txt,"St Alban's Head (4 km S; SHOM atlas 564), England, United Kingdom Current",50.5446,-2.066,source,,,,,76cfdf23 2026-10-20
 f63e87f819cf3d4f6ffa38157acffee5,harmonics/utide/harmonics_utide_current_tables.txt,"Weynton Passage, Canada Current",50.603333,-126.811667,source,,,,,1039256e 2026-10-16
 00edbd389a611bdc0a5d812a0515b53b,harmonics/utide/harmonics_utide_observations.txt,"Texel (Oudeschild), Netherlands",53.038835,4.850192,manual,"Texel, Oudeschild, Netherlands",,,,17ebcd18 2026-05-01
+043eb89d19b187f4588065ed4e8686ce,harmonics/utide/harmonics_utide_observations.txt,"Sant Antoni de Portmany (Ibiza), Baleares, Spain",38.9771,1.2988,ambiguous,,,,,
 05f047e17b4a1c86f8dd1ef421185816,harmonics/utide/harmonics_utide_observations.txt,"Rozenburgsesluis (noordzijde), Netherlands",51.895774,4.228892,manual,"Rozenburgsesluis, noordzijde, Netherlands",,,,17ebcd18 2026-05-01
 075158ee9b9b2e22f0a8b1a2196fed87,harmonics/utide/harmonics_utide_observations.txt,"Delfzijl (Eems), Netherlands",53.328,6.931,manual,"Delfzijl, Netherlands",,,,17ebcd18 2026-05-01
 0a9424cf61d641e264830695f2542d5e,harmonics/utide/harmonics_utide_observations.txt,"Den Oever (Waddenzee voorhaven), Netherlands",52.931538,5.045596,manual,"Den Oever, Waddenzee voorhaven, Netherlands",,,,17ebcd18 2026-05-01
@@ -4263,6 +4267,7 @@ f63e87f819cf3d4f6ffa38157acffee5,harmonics/utide/harmonics_utide_current_tables.
 4aa083907123e89a92a8a28752e341a8,harmonics/utide/harmonics_utide_observations.txt,"Harlingen (Waddenzee), Netherlands",53.175634,5.409342,manual,"Harlingen, Waddenzee, Netherlands",,,,17ebcd18 2026-05-01
 4d79541db7beb004f13326332ebfac14,harmonics/utide/harmonics_utide_observations.txt,"Willemstad (Hollandsch Diep), Netherlands",51.696401,4.40689,manual,"Willemstad, Hollandsch Diep, Netherlands",,,,17ebcd18 2026-05-01
 59c935602584ea93626396fac4afebad,harmonics/utide/harmonics_utide_observations.txt,"Tadine (Maré, Îles Loyauté), New Caledonia",-21.5478,167.8771,manual,"Tadine, Maré (Îles Loyauté), New Caledonia",,,,95bc048d 2026-09-04
+5e641a76ee5e3de65ad46a33494c2eac,harmonics/utide/harmonics_utide_observations.txt,"Cane Garden Bay, Tortola, British Virgin Islands",18.4275,-64.6578,ambiguous,,,,,
 5fbdf3107b3ac13ea8617032138849dc,harmonics/utide/harmonics_utide_observations.txt,"Port Chalmers (Otago Harbour), Otago, New Zealand",-45.8147,170.6241,manual,"Port Chalmers, Otago, New Zealand",-45.817,170.65,2023,17ebcd18 2026-05-01
 637fe56ea43be816105b6793d1861971,harmonics/utide/harmonics_utide_observations.txt,"Ameland (Nes), Netherlands",53.429766,5.759448,manual,"Ameland, Nes, Netherlands",,,,17ebcd18 2026-05-01
 6e7645c7cbc67596fbd946bd62b18adc,harmonics/utide/harmonics_utide_observations.txt,"Caleta Meteoro (Estrecho de Magallanes), Chile",-52.961,-74.0722,manual,"Caleta Meteoro, Chile",,,,f8efb887 2026-05-20
@@ -4272,18 +4277,19 @@ f63e87f819cf3d4f6ffa38157acffee5,harmonics/utide/harmonics_utide_current_tables.
 818b526cf80cecdc585649b50fe79102,harmonics/utide/harmonics_utide_observations.txt,"Lith (beneden dorp), Netherlands",51.8105,5.433,manual,"Lith, beneden dorp, Netherlands",,,,17ebcd18 2026-05-01
 8b6368d9613cb36ba4018e3ddc05be7e,harmonics/utide/harmonics_utide_observations.txt,"Europoort (Harmsenbrug), Netherlands",51.901771,4.210879,manual,"Europoort, Harmsenbrug, Netherlands",,,,17ebcd18 2026-05-01
 8ec56b75e2c0b1f0f51fb98a5c84248d,harmonics/utide/harmonics_utide_observations.txt,"Krimpen aan de IJssel (Hollandsche IJssel), Netherlands",51.9165,4.579,manual,"Krimpen aan de IJssel, Hollandsche IJssel, Netherlands",,,,17ebcd18 2026-05-01
-8faf2728c2ddb62a9362649400c6ea85,harmonics/utide/harmonics_utide_observations.txt,"Sa Rapita (Mallorca), Baleares, Spain",39.3603,2.9533,manual,"Sa Rapita, Mallorca, Baleares, Spain",,,,676eeb74 2026-05-06
+8f7b36971587b73c602eb7155498a1e1,harmonics/utide/harmonics_utide_observations.txt,"Sa Rapita (Mallorca), Baleares, Spain",39.3603,2.9533,ambiguous,,,,,
 8fde50187514ccd832a9daa9c9804bdd,harmonics/utide/harmonics_utide_observations.txt,"Nieuwe Statenzijl (Dollard), Netherlands",53.231562,7.207423,manual,"Nieuwe Statenzijl, Dollard, Netherlands",,,,17ebcd18 2026-05-01
 9268e8210496f1cd94593e26c620e55b,harmonics/utide/harmonics_utide_observations.txt,"Europoort (Hartelbrug), Netherlands",51.86635,4.307781,manual,"Europoort, Hartelbrug, Netherlands",,,,17ebcd18 2026-05-01
 9465f8318fa557218f140b42f64778bc,harmonics/utide/harmonics_utide_observations.txt,"Hoek van Holland (Maeslantkering, Beneden, noord), Netherlands",51.958239,4.161443,manual,"Hoek van Holland, Maeslantkering, Beneden, noord, Netherlands",,,,17ebcd18 2026-05-01
 9932ae2b26e9e070854cbc7a5d46a371,harmonics/utide/harmonics_utide_observations.txt,"Andratx (Mallorca), Baleares, Spain",39.5442,2.3785,manual,"Andratx, Mallorca, Baleares, Spain",,,,676eeb74 2026-05-06
 9c8b74d88f54409d57ec95029bad9e4d,harmonics/utide/harmonics_utide_observations.txt,"Rozenburgsesluis (zuidzijde), Netherlands",51.891244,4.229823,manual,"Rozenburgsesluis, zuidzijde, Netherlands",,,,17ebcd18 2026-05-01
+a1a764a1e95f88fa973049e40180c677,harmonics/utide/harmonics_utide_observations.txt,"Beo (Pulau Karakelang), Sulawesi Utara, Indonesia",4.2295,126.789,ambiguous,,,,,
 a66d26996826defb4a60ae5a04c3cd7d,harmonics/utide/harmonics_utide_observations.txt,"Hank (Bergsche Maas), Netherlands",51.7191,4.894,manual,"Hank, Bergsche Maas, Netherlands",,,,17ebcd18 2026-05-01
-a8b56212cb68678c03e3d3b677e320db,harmonics/utide/harmonics_utide_observations.txt,"Sant Antoni de Portmany (Ibiza), Baleares, Spain",38.9771,1.2988,manual,"Sant Antoni de Portmany, Ibiza, Baleares, Spain",,,,676eeb74 2026-05-06
 b1aed3541a6e26a5f1b10267298d4ca9,harmonics/utide/harmonics_utide_observations.txt,"Golfito (Golfo Dulce), Costa Rica",8.6359,-83.1685,manual,"Golfito, Costa Rica",8.64,-83.17,485,08516a37 2026-06-13
 b610f1be986234ae5923a8ba84a1bb49,harmonics/utide/harmonics_utide_observations.txt,"Hartelkanaal (Kuwait Petroleum), Netherlands",51.930255,4.163079,manual,"Hartelkanaal, Kuwait Petroleum, Netherlands",,,,17ebcd18 2026-05-01
 c321a1bcb48c45d9ea139c0bee351808,harmonics/utide/harmonics_utide_observations.txt,"Pollença (Mallorca), Baleares, Spain",39.9046,3.0885,manual,"Pollença, Mallorca, Baleares, Spain",,,,676eeb74 2026-05-06
 c7a5c1d8557cd5a8245f16e7ed7d666e,harmonics/utide/harmonics_utide_observations.txt,"Heinenoord (Goidschalxoord), Netherlands",51.830298,4.451622,manual,"Heinenoord, Goidschalxoord, Netherlands",,,,17ebcd18 2026-05-01
+c82e9f06e0a7f7387060d9b7570f0efe,harmonics/utide/harmonics_utide_observations.txt,"Pozzallo, Italy",36.720245,14.827313,ambiguous,,,,,
 d20ac3efbbe002588327162b0e73fb6d,harmonics/utide/harmonics_utide_observations.txt,"Spijkenisse (Oude Maas), Netherlands",51.861661,4.333954,manual,"Spijkenisse, Oude Maas, Netherlands",,,,17ebcd18 2026-05-01
 da4f00f1e8651a2da504ddde52774b9d,harmonics/utide/harmonics_utide_observations.txt,"Stellendam (buitenhaven), Netherlands",51.827028,4.033445,manual,"Stellendam, buitenhaven, Netherlands",,,,17ebcd18 2026-05-01
 dc453f4deadd0ff85b48ab8d3ece23a5,harmonics/utide/harmonics_utide_observations.txt,"Bella Bella (Lama Passage), British Columbia, Canada",52.163,-128.143,manual,"Bella Bella, British Columbia, Canada",,,,17ebcd18 2026-05-01
@@ -4298,12 +4304,18 @@ fe081479535546863633b99ff7035c59,harmonics/utide/harmonics_utide_observations.tx
 014fea18f88787723862be2d6ee8f7fc,harmonics/utide/harmonics_utide_tidetables.txt,"Estação Antártica Comandante Ferraz (Antártica), Brazil",-62.085,-58.3917,manual,"Estação Antártica Comandante Ferraz, Antártica, Brazil",,,,17ebcd18 2026-05-01
 0190456f1be9de5dda3200e2770aa0fa,harmonics/utide/harmonics_utide_tidetables.txt,"Dungeness Reef (Torres Strait), Queensland, Australia",-9.9833,142.9833,manual,"Dungeness Reef, Coral Sea, Australia",,,,9a3ee7b3 2026-10-18
 0203a00fd52a50a29b8a346be10951a4,harmonics/utide/harmonics_utide_tidetables.txt,"Darnley Island (Torres Strait), Queensland, Australia",-9.5987,143.766,manual,"Darnley Island, Coral Sea, Australia",-9.6,143.7667,164,9a3ee7b3 2026-10-18
+04d6d20a40c3ff58bd67bdcf9244e00b,harmonics/utide/harmonics_utide_tidetables.txt,"Base O'Higgins (Rada Covadonga), Chile",-63.32,-57.899,ambiguous,,,,,
+0de6cada627863b9e62ee9c25bf458e5,harmonics/utide/harmonics_utide_tidetables.txt,"Angostura Inglesa (Canal Messier), Chile",-48.980571,-74.421297,ambiguous,,,,,
 101b78dc239a50fa75f8f9efd8afb2c5,harmonics/utide/harmonics_utide_tidetables.txt,"Orange Bay (Bahía Orange, Cape Horn), Chile",-55.5305,-68.0388,manual,"Cape Horn (Orange Bay), Chile",-55.5167,-68.0833,3194,c4cbd789 2026-06-11
+18317229b4c5620be929858689b70407,harmonics/utide/harmonics_utide_tidetables.txt,"Corral, Chile",-39.8866,-73.4275,ambiguous,,,,,
 18628ba4c6a2cedc2e2ba15b6d4a9e5e,harmonics/utide/harmonics_utide_tidetables.txt,"Mambajao (Camiguin), Philippines",9.243667,124.7375,manual,"Mambajao, Camiguin, Philippines",,,,17ebcd18 2026-05-01
+2204848d76b08839635d6cb783054560,harmonics/utide/harmonics_utide_tidetables.txt,"Mongla, Bangladesh",22.53328,89.580286,ambiguous,,,,,
 25d68fe2e50ba3e75086442d05de1394,harmonics/utide/harmonics_utide_tidetables.txt,"Polloc Port (Parang, Maguindanao del Norte), Philippines",7.3541,124.2238,manual,"Polloc Port (Parang), Maguindanao del Norte, Philippines",7.35,124.216667,909,2c195396 2026-09-23
 276a25f55048bf0e521ecf40c5db5fa3,harmonics/utide/harmonics_utide_tidetables.txt,"Port Nelson (Nelson River), Manitoba, Canada",57.0396,-92.5945,manual,"Port Nelson, Manitoba, Canada",,,,17ebcd18 2026-05-01
+289687aaad55d8bbf13a19d2b8be9528,harmonics/utide/harmonics_utide_tidetables.txt,"Caleta Snow (Isla Snow), Chile",-62.783,-61.383,ambiguous,,,,,
 2d97cb00e54675154c6db75382e3d143,harmonics/utide/harmonics_utide_tidetables.txt,"Tanggu (Tianjin), China",38.9833,117.7833,manual,"Tanggu, Tianjin, China",,,,0c3cfdde 2026-06-11
 2f63f461b476135dffdf9bf38ad1a9f3,harmonics/utide/harmonics_utide_tidetables.txt,"Jeanette Bay (Lab), Labrador, Canada",54.749478,-57.891383,manual,"Jeanette Bay, Lab, Labrador, Canada",,,,17ebcd18 2026-05-01
+32bbd0851dad2dee8905a9886f8e9ea0,harmonics/utide/harmonics_utide_tidetables.txt,"Puerto Natales, Chile",-51.72913,-72.51567,ambiguous,,,,,
 33e3ba321a83c5fd8d496ddbae376e15,harmonics/utide/harmonics_utide_tidetables.txt,"Bon Accord Harbour - Mansion House Bay (Kawau Island), New Zealand",-36.4297,174.8187,manual,"Bon Accord Harbour - Mansion House Bay, New Zealand",,,,09ee867b 2026-05-03
 341e84e2eee94610007fa5da3fa5a3ae,harmonics/utide/harmonics_utide_tidetables.txt,"Rikitea (Mangareva), Gambier Islands",-23.1178,-134.9689,manual,"Rikitea, French Polynesia",-23.1167,-134.9667,256,dd5f962f 2026-09-20
 34d2e8537585bb935736e25115d44bbd,harmonics/utide/harmonics_utide_tidetables.txt,"Iligan (Lanao del Norte), Philippines",8.2314,124.2317,manual,"Iligan Bay, Lanao del Norte, Philippines",8.216667,124.216667,2328,2c195396 2026-09-23
@@ -4319,6 +4331,7 @@ fe081479535546863633b99ff7035c59,harmonics/utide/harmonics_utide_observations.tx
 46b4a28fdac446d61f5a50cb79873cde,harmonics/utide/harmonics_utide_tidetables.txt,"Pak Nam Ranong (Ranong), Thailand",9.948,98.5947,manual,"Pak Nam Ranong, Ranong, Thailand",,,,17ebcd18 2026-05-01
 49415066fcc2091be1aaa41df0381e42,harmonics/utide/harmonics_utide_tidetables.txt,"Frederick Point (Albany Island), Queensland, Australia",-10.716667,142.596667,manual,"Frederick Point, Queensland, Australia",,,,17ebcd18 2026-05-01
 4a0b634bde648c60a45b7e7d786fc5e0,harmonics/utide/harmonics_utide_tidetables.txt,"Pohnpei C (Caroline Islands), Confederated States of Micronesia",6.9809,158.2001,manual,"Pohnpei C, Caroline Islands, Confederated States of Micronesia",,,,17ebcd18 2026-05-01
+536a350e588b43618c5d7c78dc6376ec,harmonics/utide/harmonics_utide_tidetables.txt,"Mejillones del Sur, Chile",-23.09771,-70.45066,ambiguous,,,,,
 5788441050255b6a4100414c477d7085,harmonics/utide/harmonics_utide_tidetables.txt,"Cornwallis (Manukau Harbour), New Zealand",-37.0118,174.6075,manual,"Cornwallis, New Zealand",,,,09ee867b 2026-05-03
 582932359bf574e85ec7444658470947,harmonics/utide/harmonics_utide_tidetables.txt,"Pak Nam Tha Chin (Samut Sakhon), Thailand",13.5347,100.2789,manual,"Pak Nam Tha Chin, Samut Sakhon, Thailand",,,,17ebcd18 2026-05-01
 5e01eac7b16374d05f82136016ee3af5,harmonics/utide/harmonics_utide_tidetables.txt,"Carantec (Château du Taureau), France",48.6757,-3.8843,manual,"Carantec, Château du Taureau, France",,,,dd5f962f 2026-09-20
@@ -4337,6 +4350,8 @@ fe081479535546863633b99ff7035c59,harmonics/utide/harmonics_utide_observations.tx
 82d3ea8652136526ed47a711f55f635f,harmonics/utide/harmonics_utide_tidetables.txt,"Flower Pot (Onoua, Pitt Island), New Zealand",-44.2398,-176.2388,manual,"Flower Pot (Onoua), New Zealand",,,,09ee867b 2026-05-03
 82ef267d7106579dbfd8b24051f61aba,harmonics/utide/harmonics_utide_tidetables.txt,"Sada Fontán (Ría de Betanzos), Spain",43.3617,-8.2467,manual,"Sada Fontán, Ría de Betanzos, Spain",,,,17ebcd18 2026-05-01
 8327fbfdb7aabe4c81b766f79387407c,harmonics/utide/harmonics_utide_tidetables.txt,"Luís Correia (Piauí), Brazil",-2.8526,-41.6434,manual,"Luís Correia, Piauí, Brazil",,,,17ebcd18 2026-05-01
+8382072df999cb50365a52b484d8579d,harmonics/utide/harmonics_utide_tidetables.txt,"Punta Delgada (Estrecho de Magallanes), Chile",-52.456936,-69.545627,ambiguous,,,,,
+88a3322cf2388fee6aa541b240ad2d02,harmonics/utide/harmonics_utide_tidetables.txt,"Puerto Chacao, Chile",-41.8288,-73.5153,ambiguous,,,,,
 8d42b5c306d667a69fde5605ce10bd4c,harmonics/utide/harmonics_utide_tidetables.txt,"Corregidor Island (Manila Bay, Cavite), Philippines",14.3883,120.5861,manual,"Corregidor Island, Cavite, Philippines",14.383333,120.583333,628,2c195396 2026-09-23
 906773c992b066a678739f5445fa8f1e,harmonics/utide/harmonics_utide_tidetables.txt,"Kalamansig (Sultan Kudarat), Philippines",6.552528,124.044278,manual,"Kalamansig, Sultan Kudarat, Philippines",,,,17ebcd18 2026-05-01
 9110b28d638a8bcef772234f587e0a3c,harmonics/utide/harmonics_utide_tidetables.txt,"Narathiwat (Pak Nam Bang Nara, Narathiwat), Thailand",6.4311,101.825,manual,"Pak Nam Bang Nara, Narathiwat, Thailand",,,,17ebcd18 2026-05-01
@@ -4348,7 +4363,6 @@ fe081479535546863633b99ff7035c59,harmonics/utide/harmonics_utide_observations.tx
 9b1b77c45b1c1698b05935134afa5b07,harmonics/utide/harmonics_utide_tidetables.txt,"Tarilag Island (Packe Island, Endeavour Strait), Queensland, Australia",-10.7459,142.2264,manual,"Tarilag Island, Endeavour Strait, Queensland, Australia",-10.75,142.2333,881,9a3ee7b3 2026-10-18
 a01d969299808f968ed449da910cc543,harmonics/utide/harmonics_utide_tidetables.txt,"Winter Harbour (Melville Island), Northwest Territories, Canada",74.7746,-110.6509,manual,"Winter Harbour, Melville Island, Northwest Territories, Canada",,,,17ebcd18 2026-05-01
 a1f2295005fb94be3f86fc32fc00e9a2,harmonics/utide/harmonics_utide_tidetables.txt,"Pak Nam Bang Pakong (Chachoengsao), Thailand",13.483333,101.0,manual,"Pak Nam Bang Pakong, Chachoengsao, Thailand",,,,17ebcd18 2026-05-01
-a46bc4f7964c5228346b2abb3b688172,harmonics/utide/harmonics_utide_tidetables.txt,"Punta Delgada (Estrecho de Magallanes), Chile",-52.456936,-69.545627,manual,"Punta Delgada, Estrecho de Magallanes, Chile",,,,f6840aeb 2026-06-13
 a9cb37c5b61128e319463d65778744dd,harmonics/utide/harmonics_utide_tidetables.txt,"Karaikal Port (Puducherry), India",10.9147,79.854,manual,"Karaikal Port, Puducherry, India",10.9167,79.85,490,8b404fad 2026-06-12
 b5a0a87d31f8aeec0c5d0282639036f7,harmonics/utide/harmonics_utide_tidetables.txt,"Augusta (Flinders Bay), Western Australia, Australia",-34.35442,115.16783,manual,"Augusta, Western Australia, Australia",,,,17ebcd18 2026-05-01
 b86af76a9b9f19e9509977e173126cae,harmonics/utide/harmonics_utide_tidetables.txt,"Pak Nam Pattani (Pattani), Thailand",6.9044,101.2454,manual,"Pak Nam Pak Phanang, Nakhon Si Thammarat, Thailand",,,,17ebcd18 2026-05-01
@@ -4357,7 +4371,6 @@ bc1aecfbf98beea9e069debbefeb23db,harmonics/utide/harmonics_utide_tidetables.txt,
 c06103d41d78ea07d17662f5e6fad5bf,harmonics/utide/harmonics_utide_tidetables.txt,"Puerto Grau (Tacna), Peru",-17.9935,-70.8843,manual,"Puerto Grau, Tacna, Peru",,,,20f1a9ee 2026-10-10
 c0af9e078f641e9bb7caa77eb190ac4e,harmonics/utide/harmonics_utide_tidetables.txt,"Playa Bagdad (Matamoros, Tamaulipas), México",25.823,-97.1522,manual,"Matamoros, Tamaulipas, México",25.8833,-97.5167,37076,0fe96976 2026-09-02
 c0bd1677cc6da37748433cb9d0831ba5,harmonics/utide/harmonics_utide_tidetables.txt,"Whaler Point (Port Leopold), Nunavut, Canada",73.816666,-90.283333,manual,"Whaler Point, Nunavut, Canada",,,,17ebcd18 2026-05-01
-c9abfc26428e1d71ed31325a1df9c909,harmonics/utide/harmonics_utide_tidetables.txt,"Angostura Inglesa (Canal Messier), Chile",-48.980571,-74.421297,manual,"Angostura Inglesa, Canal Messier, Chile",,,,a4c96538 2026-06-13
 d44e257cd6c96356faf657262236b6c5,harmonics/utide/harmonics_utide_tidetables.txt,"Royal Thai Navy Headquarters (Bangkok), Samut Prakan, Thailand",13.7433,100.4903,manual,"Royal Thai Navy Headquarters, Bangkok, Thailand",,,,46641cb7 2026-06-12
 d4e747c729e2699a5cf8f69f2852490b,harmonics/utide/harmonics_utide_tidetables.txt,"Port Victoria (Spencer Gulf), South Australia, Australia",-34.4948,137.4797,manual,"Port Victoria, South Australia, Australia",-34.5,137.4833,666,17ebcd18 2026-05-01
 da32b5c5545f0ccd741becc03c5610a2,harmonics/utide/harmonics_utide_tidetables.txt,"Nagle Cove (Great Barrier Island), New Zealand",-36.1431,175.3196,manual,"Nagle Cove, New Zealand",,,,09ee867b 2026-05-03
@@ -5321,7 +5334,6 @@ fd5e2cf0ea8c3d32a9e302c1b5c41db3,harmonics/att/harmonics_att_np203_currents.txt,
 982d68ba1802dce20ca19227b8bce6f4,harmonics/att/harmonics_att_np203_scs.txt,"Tanjung Saleh (Kuala Kapuas), Kalimantan Barat, Indonesia",-0.1378,109.131,manual,"Tanjung Saleh, Indonesia",-0.0833,109.1667,7245,c0ab599a 2026-08-03
 988a6c5cd992fdd23c8740259a956548,harmonics/att/harmonics_att_np203_scs.txt,"Jurong Wharf, Singapore",1.3011,103.7209,manual,,1.3,103.7167,483,c0ab599a 2026-08-03
 98ac2d08186ab0ed87822d7dbf96bd8a,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Togian, Sulawesi Tengah, Indonesia",-0.4035,122.0073,manual,"Teluk Togian, Indonesia",-0.4,122.0,900,c0ab599a 2026-08-03
-99560460c9e83a0d1535d6ef5e8a45dd,harmonics/att/harmonics_att_np203_scs.txt,"Mongla, Bangladesh",22.4727,89.5984,manual,,22.45,89.5833,2963,c0ab599a 2026-08-03
 99bde35cb3a431cb022449fd1dcf5b76,harmonics/att/harmonics_att_np203_scs.txt,"Tanjung Sinaboi, Riau, Indonesia",2.2936,101.0439,manual,"Tanjung Sinaboi, Indonesia",2.3,101.05,983,c0ab599a 2026-08-03
 9a8c241c9f21283d4863c06d8672843c,harmonics/att/harmonics_att_np203_scs.txt,"Dao Cai Bau, Vietnam",21.1167,107.5,manual,"Ke Bao, Vietnam",21.1333,107.4833,2531,c0ab599a 2026-08-03
 9c0a545e4d1bab88d119c83708240909,harmonics/att/harmonics_att_np203_scs.txt,"Kuala Lundu, Malaysia",1.6986,109.9241,manual,,1.7,109.9167,837,c0ab599a 2026-08-03
@@ -12428,10 +12440,8 @@ fb4571abba12d297a12d4dd9239a5341,harmonics/utide/harmonics_utide_big_srgi.txt,"T
 fcfb8d1117f3d48bce79aae753517487,harmonics/utide/harmonics_utide_big_srgi.txt,"Cirebon, Jawa Barat, Indonesia",-6.73386,108.5846,source,,,,,8aa54c70 2026-09-21
 fd9b0fa9d2de79fa05407671d43c18c1,harmonics/utide/harmonics_utide_big_srgi.txt,"Pelabuhan Ciwandan, Banten, Indonesia",-6.01769,105.9526,source,,,,,8aa54c70 2026-09-21
 fe99f38b89bc2e131148cef54a628559,harmonics/utide/harmonics_utide_big_srgi.txt,"Amurang, Sulawesi Utara, Indonesia",1.19911,124.5504,source,,,,,8aa54c70 2026-09-21
-69ed6dddd1093bd7b1f61fa41cb7f17b,harmonics/utide/harmonics_utide_chile_shoa.txt,"Mejillones del Sur, Chile",-23.09771,-70.45066,manual,,-23.1,-70.45,263,fa9229d9 2026-08-20
 6e7b2ea7d94747d890c0dfb4534ad56a,harmonics/utide/harmonics_utide_chile_shoa.txt,"Valdivia (Río Calle-Calle), Chile",-39.814,-73.245,source,,,,,fa9229d9 2026-08-20
 9a135d4b02685fb0cd45bdb53776ac88,harmonics/utide/harmonics_utide_chile_shoa.txt,"Constitución, Chile",-35.331,-72.408,source,,,,,0f3724c4 2026-05-12
-c11dd57eb4c37926bd0f2250cddb0661,harmonics/utide/harmonics_utide_chile_shoa.txt,"Corral, Chile",-39.8866,-73.4275,source,,,,,fa9229d9 2026-08-20
 00271862ae34e410e7523bb6d1ce62e9,harmonics/utide/harmonics_utide_observations.txt,"Oma, Aomori, Japan",41.5265,140.8991,source,,,,,17ebcd18 2026-05-01
 005c292322926565eb76d1067cc2d100,harmonics/utide/harmonics_utide_observations.txt,"Ratnagiri, Maharashtra, India",16.9878,73.2835,manual,,16.99,73.27,1456,6e3397c1 2026-06-12
 006ab85e0bcfd230d239d0579d3c5c9d,harmonics/utide/harmonics_utide_observations.txt,"Howth, Ireland",53.391335,-6.06809,source,,,,,17ebcd18 2026-05-01
@@ -12482,7 +12492,6 @@ c11dd57eb4c37926bd0f2250cddb0661,harmonics/utide/harmonics_utide_chile_shoa.txt,
 0aba85ed3a509c924c8ba5c251664451,harmonics/utide/harmonics_utide_observations.txt,"Lühort (Lühe), Germany",53.571,9.634,source,,,,,17ebcd18 2026-05-01
 0b7220695ed564ce06927f240cf5a0ae,harmonics/utide/harmonics_utide_observations.txt,"Saeki (Tsurumi Okimatsuura), Oita, Japan",32.9461,131.9608,manual,"Saeki (Tsurumi Okimatsuura), Japan",,,,17ebcd18 2026-05-01
 0b82759ca318a99b20363cfc5a86524e,harmonics/utide/harmonics_utide_observations.txt,"Antalya, Turkey",36.8355,30.6126,source,,,,,d62e19a9 2026-05-12
-0bac4bd5998a0138dc1ad4b45fa3bf14,harmonics/utide/harmonics_utide_observations.txt,"Beo (Pulau Karakelang), Sulawesi Utara, Indonesia",4.2295,126.789,manual,,4.23,126.79,124,4faf62b7 2026-10-17
 0bc3a8848b511f8a34f3720a93f587d7,harmonics/utide/harmonics_utide_observations.txt,"Rochefort (Charente), France",45.946335,-0.953483,source,,,,,4a050e04 2026-09-13
 0be985bd8e0d10ad636f42833797ab07,harmonics/utide/harmonics_utide_observations.txt,"Chittagong (Dry Dock, Kharnapuli River), Bangladesh",22.2691,91.8191,manual,,22.2687,91.8203,131,17ebcd18 2026-05-01
 0c264e298bdc78913499d3719bf5c9db,harmonics/utide/harmonics_utide_observations.txt,"Kashiwazaki, Niigata, Japan",37.3567,138.5086,source,,,,,17ebcd18 2026-05-01
@@ -13234,7 +13243,6 @@ c4746189dcd8ac07fedebe7fdfa54fcc,harmonics/utide/harmonics_utide_observations.tx
 c4c74ee598395b64779b8b494405364f,harmonics/utide/harmonics_utide_observations.txt,"Elbeuf, France",49.2925,1.0131,source,,,,,cfdfe951 2026-10-17
 c4cec1d363739e8cbe79bb8db111cc93,harmonics/utide/harmonics_utide_observations.txt,"Base Carlini (Caleta Potter, Isla 25 de Mayo), Antártida Argentina, Argentina",-62.233,-58.683,manual,"Dallmann, Argentina",,,,17ebcd18 2026-05-01
 c4eef7c83d9cf67cdfd33009aa28cd8e,harmonics/utide/harmonics_utide_observations.txt,"Rechtenfleth (Weser), Germany",53.3812,8.5006,source,,,,,17ebcd18 2026-05-01
-c53da90e80461ae3a86cd512c8032991,harmonics/utide/harmonics_utide_observations.txt,"Cane Garden Bay, Tortola, British Virgin Islands",18.4275,-64.6578,manual,,18.4283,-64.6539,421,d74103b9 2026-05-20
 c58ac21243393dbeb4ff13fe30d9b8c5,harmonics/utide/harmonics_utide_observations.txt,"Rosslare, Ireland",52.2546,-6.334861,source,,,,,17ebcd18 2026-05-01
 c5bc3c1e6c66d9d292a4fd9e52a6a577,harmonics/utide/harmonics_utide_observations.txt,"Shinminato (Horioka), Toyama, Japan",36.7752,137.1181,source,,,,,17ebcd18 2026-05-01
 c5d1e0487aad1d644e0415459611964d,harmonics/utide/harmonics_utide_observations.txt,"Mechelen Stuw Afwaarts, Belgium",51.023641,4.496889,source,,,,,17ebcd18 2026-05-01
@@ -13439,7 +13447,6 @@ f3546dbcc4f1fd61a4b421d55255e1cc,harmonics/utide/harmonics_utide_observations.tx
 f44b1709e2c7e0565a28f005130695d1,harmonics/utide/harmonics_utide_observations.txt,"Buttelerhörne (Hunte), Germany",53.1799,8.4126,source,,,,,17ebcd18 2026-05-01
 f44ea6de752ef5b2acb680efc7208580,harmonics/utide/harmonics_utide_observations.txt,"Portpatrick, Scotland, United Kingdom",54.84256,-5.12003,source,,,,,17ebcd18 2026-05-01
 f4500b920a9924ba40cff7c6db3275c7,harmonics/utide/harmonics_utide_observations.txt,"Dendermonde Afwaarts DVW, Belgium",51.04379,4.086837,source,,,,,17ebcd18 2026-05-01
-f4800d683e178e0bb369d0288efa32ba,harmonics/utide/harmonics_utide_observations.txt,"Pozzallo, Italy",36.720245,14.827313,source,,,,,6d965039 2026-07-23
 f486cbc344bf5e644530278189f503f9,harmonics/utide/harmonics_utide_observations.txt,"Baie-Sainte-Catherine, Québec, Canada",48.126333,-69.72975,source,,,,,17ebcd18 2026-05-01
 f4faf512b2dc2f696900d251846713fb,harmonics/utide/harmonics_utide_observations.txt,"Cromarty, Scotland, United Kingdom",57.682814,-4.038547,source,,,,,82f073fc 2026-06-09
 f51171de055166bd894dcabcf077e5f7,harmonics/utide/harmonics_utide_observations.txt,"Petit-Couronne, France",49.3858,1.0118,source,,,,,cfdfe951 2026-10-17
@@ -13716,7 +13723,6 @@ f480dadee45057a3f35ab65085a6a4db,harmonics/utide/harmonics_utide_pushidrosal_tab
 0fb747351605d04c5537a322bd41d7bd,harmonics/utide/harmonics_utide_tidetables.txt,"Hampden, Newfoundland, Canada",49.545269,-56.853341,source,,,,,17ebcd18 2026-05-01
 0fbb45181ca923577a7fba056510c32f,harmonics/utide/harmonics_utide_tidetables.txt,"Arromanches-les-Bains, France",49.3555,-0.62,source,,,,,dd5f962f 2026-09-20
 0fbce56b46546d0ff3241690a3cbb61c,harmonics/utide/harmonics_utide_tidetables.txt,"Hannibal Island, Queensland, Australia",-11.6,142.9333,source,,,,,9a3ee7b3 2026-10-18
-0fd6dd763a40cb71e59e35ab805f5711,harmonics/utide/harmonics_utide_tidetables.txt,"Mejillones del Sur, Chile",-23.09771,-70.45066,source,,,,,9f545995 2026-06-13
 0fdbd7515009157cb4b3107e24a26862,harmonics/utide/harmonics_utide_tidetables.txt,"Nukariit (Tre Brødre), Greenland",63.5167,-51.3833,source,,,,,3de1ccdb 2026-09-17
 0fe0fa778da617736a13858834ef0743,harmonics/utide/harmonics_utide_tidetables.txt,"La Grande Riviere, Québec, Canada",53.85,-79.15,manual,"La Grande Riviere , Québec, Canada",,,,17ebcd18 2026-05-01
 0fe5d275ff785dfd047ddf7d8a1b6bb4,harmonics/utide/harmonics_utide_tidetables.txt,"East Moncoeur Island, Tasmania, Australia",-39.2167,146.5833,source,,,,,17ebcd18 2026-05-01
@@ -13798,7 +13804,6 @@ f480dadee45057a3f35ab65085a6a4db,harmonics/utide/harmonics_utide_pushidrosal_tab
 1526aa72176d38d679ff8d164c7a9d9b,harmonics/utide/harmonics_utide_tidetables.txt,"Bude, England, United Kingdom",50.8296,-4.5521,source,,,,,4ffe724c 2026-06-10
 156ab1d5970a4494338b99b6c8cd2486,harmonics/utide/harmonics_utide_tidetables.txt,"Beaumaris, Wales, United Kingdom",53.2611,-4.09,source,,,,,ef775bdb 2026-09-07
 15888cb880e4e35333f6c2dac6a10295,harmonics/utide/harmonics_utide_tidetables.txt,"Ternate (Dufa Dufa), Maluku Utara, Indonesia",0.814,127.389,manual,"Ternate, Indonesia",,,,a9006d0f 2026-06-22
-15bdcb87705ac4d6a333e5f2f9b0db31,harmonics/utide/harmonics_utide_tidetables.txt,"Corral, Chile",-39.8866,-73.4275,source,,,,,9f545995 2026-06-13
 15cb3121970c097e9ab962ff598e1c49,harmonics/utide/harmonics_utide_tidetables.txt,"Bonilla Island, British Columbia, Canada",53.493806,-130.636972,source,,,,,17ebcd18 2026-05-01
 15d36377b0f5126fad73339bbcd96304,harmonics/utide/harmonics_utide_tidetables.txt,"Loch Creran Head, Scotland, United Kingdom",56.55,-5.266667,source,,,,,ef775bdb 2026-09-07
 15d3f587c1c6ac1362701c05f67eec1b,harmonics/utide/harmonics_utide_tidetables.txt,"Warren Lighthouse, Ireland",55.2096,-6.9518,manual,,55.216667,-6.95,794,4ffe724c 2026-06-10
@@ -15516,7 +15521,6 @@ f480dadee45057a3f35ab65085a6a4db,harmonics/utide/harmonics_utide_pushidrosal_tab
 8eeecf92a457971249806bce7a9b865e,harmonics/utide/harmonics_utide_tidetables.txt,"Qianli Yan, Shandong, China",36.2663,121.3869,manual,"Qianliyan, Shandong, China",36.2667,121.3833,326,0c3cfdde 2026-06-11
 8ef3f0f7ede1af867642a52fb98f29d2,harmonics/utide/harmonics_utide_tidetables.txt,"Schooner Harbour (Baffin Island), Nunavut, Canada",64.4035,-77.875,manual,"Schooner Harbour, Nunavut, Canada",,,,17ebcd18 2026-05-01
 8f0ba281f538108f5fb14a4c59eca571,harmonics/utide/harmonics_utide_tidetables.txt,"Shrimp Reef, Queensland, Australia",-18.933333,148.066667,source,,,,,17ebcd18 2026-05-01
-8f2b8de0955627a851d63a3b3dcea8eb,harmonics/utide/harmonics_utide_tidetables.txt,"Puerto Natales, Chile",-51.72913,-72.51567,source,,,,,9f545995 2026-06-13
 8f35d8e6090cbebb5939ff42f06e9237,harmonics/utide/harmonics_utide_tidetables.txt,"Welshpool (Campobello Island), New Brunswick, Canada",44.888903,-66.957557,manual,"Welshpool, New Brunswick, Canada",,,,17ebcd18 2026-05-01
 8f6b80e9120c1d9ea592e6795e414988,harmonics/utide/harmonics_utide_tidetables.txt,"Bay Of Laig (Eigg), Scotland, United Kingdom",56.916667,-6.166667,source,,,,,ef775bdb 2026-09-07
 8f8f3d0ee6a5ca3580b24e75ebacbc46,harmonics/utide/harmonics_utide_tidetables.txt,"Duncan Bay, British Columbia, Canada",50.076,-125.301,source,,,,,17ebcd18 2026-05-01
@@ -15896,7 +15900,6 @@ ab486f8489db0cd104da910bb693aeef,harmonics/utide/harmonics_utide_tidetables.txt,
 ab48b0e027d7ecc6f739f722a083dbf0,harmonics/utide/harmonics_utide_tidetables.txt,"Crookhaven, Ireland",51.4691,-9.726,source,,,,,ef775bdb 2026-09-07
 ab53a3b7ade881616c2dd02c4148bf1f,harmonics/utide/harmonics_utide_tidetables.txt,"Bucklers Hard, England, United Kingdom",50.8009,-1.4234,source,,,,,ef775bdb 2026-09-07
 ab549361e85f8f2d2cf67ac59f7ee84d,harmonics/utide/harmonics_utide_tidetables.txt,"Manawatawhi / Great Island - North West Bay, New Zealand",-34.1508,172.1414,source,,,,,09ee867b 2026-05-03
-ab5695c5c5b78a927cd8b4744c7c2847,harmonics/utide/harmonics_utide_tidetables.txt,"Base O'Higgins (Rada Covadonga), Chile",-63.32,-57.899,source,,,,,2d16057a 2026-06-14
 ab5c87d8f0212995e7ced50cf46faef9,harmonics/utide/harmonics_utide_tidetables.txt,"Jianggangzhen, Jiangsu, China",32.7214,120.9426,manual,"Jianggang, Jiangsu, China",32.7333,120.8667,7222,0c3cfdde 2026-06-11
 ab5e53cb247f12c1e579662d57ca0caf,harmonics/utide/harmonics_utide_tidetables.txt,"Greville Harbour / Wharariki, New Zealand",-40.8587,173.8096,source,,,,,09ee867b 2026-05-03
 ab62143249ad2bb156683ca0f1299327,harmonics/utide/harmonics_utide_tidetables.txt,"Rangitaiki River Entrance, New Zealand",-37.9171,176.8743,source,,,,,09ee867b 2026-05-03
@@ -16068,7 +16071,6 @@ b6dd9ed0371c3c6c221fc0007a2d0425,harmonics/utide/harmonics_utide_tidetables.txt,
 b6e0ca515497206c448770361d15afda,harmonics/utide/harmonics_utide_tidetables.txt,"Haldia Port Lighthouse, West Bengal, India",21.9458,88.0201,manual,"Gangra, West Bengal, India",,,,3c829665 2026-06-12
 b6f665504694aa15f0bafa5c40d83024,harmonics/utide/harmonics_utide_tidetables.txt,"Brown Bay, British Columbia, Canada",50.162,-125.375,source,,,,,17ebcd18 2026-05-01
 b71f8c85332620b478393e593c162bd1,harmonics/utide/harmonics_utide_tidetables.txt,"Port-Maria, France",47.4756,-3.122,source,,,,,dd5f962f 2026-09-20
-b724632df823a2453e9c96c4c4af2a8f,harmonics/utide/harmonics_utide_tidetables.txt,"Caleta Snow (Isla Snow), Chile",-62.783,-61.383,source,,,,,2d16057a 2026-06-14
 b72ff6b332bfd9c30235a28408d2396b,harmonics/utide/harmonics_utide_tidetables.txt,"Bobo Island, Papua New Guinea",-9.1,143.283333,source,,,,,17ebcd18 2026-05-01
 b7444573444690c7dff152d6538a786f,harmonics/utide/harmonics_utide_tidetables.txt,"Chelsea Bridge, England, United Kingdom",51.483333,-0.15,source,,,,,9b733102 2026-06-10
 b74d663b1f36f7c4bed1782864e4d1aa,harmonics/utide/harmonics_utide_tidetables.txt,"My Tho, Vietnam",10.3475,106.3647,source,,,,,bcdd5847 2026-06-12
@@ -16521,7 +16523,6 @@ d8836dccbd26636434fe8a36cea17378,harmonics/utide/harmonics_utide_tidetables.txt,
 d8924f268898adbc728e158468c295f2,harmonics/utide/harmonics_utide_tidetables.txt,"North Head, New Brunswick, Canada",44.763118,-66.749,source,,,,,17ebcd18 2026-05-01
 d8ac2dd52916181570cca21ced8e3502,harmonics/utide/harmonics_utide_tidetables.txt,"Miminegash, Prince Edward Island, Canada",46.8801,-64.2344,source,,,,,17ebcd18 2026-05-01
 d8b0af66f073371872f9b30a71262c66,harmonics/utide/harmonics_utide_tidetables.txt,"Bo'aozhen, Hainan, China",19.1949,110.5978,manual,"Boao, Hainan, China",19.2,110.6,612,0c3cfdde 2026-06-11
-d8b8b4c67ecbf1eb9a1f07bdf6bb433d,harmonics/utide/harmonics_utide_tidetables.txt,"Puerto Chacao, Chile",-41.8288,-73.5153,source,,,,,9f545995 2026-06-13
 d8bf1032a1d11e7e9749f1821bb4136e,harmonics/utide/harmonics_utide_tidetables.txt,"Laguna Quays, Queensland, Australia",-20.6,148.6667,source,,,,,17ebcd18 2026-05-01
 d8e099f68ad5c3087b2518ab495c0272,harmonics/utide/harmonics_utide_tidetables.txt,"Barfleur, France",49.6719,-1.2577,source,,,,,dd5f962f 2026-09-20
 d8e1f07e7fc1768dc30c5efedcf0799b,harmonics/utide/harmonics_utide_tidetables.txt,"Lianyun Gang, Jiangsu, China",34.7496,119.4156,manual,"Lianyungang, Jiangsu, China",34.75,119.4167,110,0c3cfdde 2026-06-11
@@ -16720,7 +16721,6 @@ e960c2384fbaa75de424f6616f7b1b43,harmonics/utide/harmonics_utide_tidetables.txt,
 e9660c7aaca24dc7c8a647d8ddd6218b,harmonics/utide/harmonics_utide_tidetables.txt,"Hat Yao Pier (Ko Libong), Trang, Thailand",7.3108,99.4019,source,,,,,64032f7f 2026-08-19
 e982df845e4d9e963815c3165f88dfe2,harmonics/utide/harmonics_utide_tidetables.txt,"Hurst Point, England, United Kingdom",50.708,-1.5472,manual,,50.7,-1.55,911,ef775bdb 2026-09-07
 e99e2fc0c4ef5ed05574f26de5daa3fc,harmonics/utide/harmonics_utide_tidetables.txt,"Phu Quy, Vietnam",10.5,108.95,manual,,10.5333,108.9333,4128,7a436dc1 2026-06-11
-e9a1372a2817d9be45b500ae06c6e5fe,harmonics/utide/harmonics_utide_tidetables.txt,"Mongla, Bangladesh",22.53328,89.580286,source,,,,,a5d32940 2026-08-18
 e9a540bacebf28fe9344915e82948994,harmonics/utide/harmonics_utide_tidetables.txt,"Musay'id (Outer Channel Entrance), Qatar",25.0304,51.6548,manual,,25.0333,51.65,581,c4cbd789 2026-06-11
 e9af72c23bd3c8a56693a4881a8db318,harmonics/utide/harmonics_utide_tidetables.txt,"Toft Pier, Scotland, United Kingdom",60.4661,-1.2056,source,,,,,ef775bdb 2026-09-07
 e9b46d91cc35a0790bcee045879e8e73,harmonics/utide/harmonics_utide_tidetables.txt,"Loch Harport (Portnalong), Scotland, United Kingdom",57.3365,-6.4192,source,,,,,ef775bdb 2026-09-07
