@@ -42015,7 +42015,7 @@ x 0 0
 x 0 0
 # BEGIN HOT COMMENTS
 # country: Indonesia
-# state: Yogyakarta
+# state: Jawa Timur
 # source: BIG (Badan Informasi Geospasial) SRGI tide gauge, harmonic constants from observations
 # station_id_context: BIG-PCTN
 # note: BIG-Messpegel PCTN "Pacitan". Konstanten aus BIGs Auswertung der Messungen
@@ -42028,7 +42028,8 @@ x 0 0
 # !units: meters
 # !longitude: 111.07421
 # !latitude: -8.22724
-Pacitan, Yogyakarta, Indonesia
+# note: 20261021 region "Yogyakarta" -> "Jawa Timur" (position lies there; py/region_gegen_position.py)
+Pacitan, Jawa Timur, Indonesia
 +00:00 :Asia/Jakarta
 1.1980 meters
 J1              0.0002  306.36
