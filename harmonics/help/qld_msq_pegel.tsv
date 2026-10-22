@@ -1,0 +1,53 @@
+# MSQ-Archivreihen (py/download_qld_msq_archiv.py), 22.10.2026. aktion: neu = eigener Satz, ersetzt = Messfit statt Tafel-/Buchsatz am selben Pegel,
+# vergleich = Messsatz (utide_observations/TICON) liegt schon vor, nur Gegenprobe; weg = zu alt/zu kurz.
+# posquelle: qldgov = qld.gov.au/tide-sites (0,001'), cds = Echtzeit-Feed Coastal Data System (4 Stellen), bestand = gepruefter Satz am selben Pegel,
+# msq_min = MSQ Tidal Planes 2026 (nur Bogenminuten), bom = BOM tide_prediction_sites.json
+datei	name	lat	lon	posquelle	aktion	bemerkung
+abbot-point-tide-gauge-archived-interval-recordings	Abbot Point, Queensland, Australia	-19.8831	148.0820	bestand	ersetzt	dwf-2004-Satz am selben Ort
+amrun-tide-gauge-archived-interval-recordings	Amrun (Boyd Point), Queensland, Australia	-12.92223	141.62605	bom	ersetzt	BOM-Tafelfit am selben Ort
+aurukun-archer-river-tide-gauge-archived-interval-recordings	Aurukun (Archer River), Queensland, Australia	-13.3418	141.6563	bestand	weg	1995, 4 Monate stuendlich; dwf-Satz bleibt
+brisbane-bar-tide-gauge-archived-interval-recordings	Brisbane Bar, Queensland, Australia	-27.40160	153.15740	qldgov	vergleich	Pegel am Kai Whyte Island; Bestandssatz steht bei -27.3608/153.1718
+burnett-heads-tide-gauge-archived-interval-recordings	Burnett Heads, Queensland, Australia	-24.7612	152.4005	cds	neu	eigener Pegel neben Bundaberg (Port), 2 km
+cairns-beacon-c1-tide-gauge-archived-interval-recordings	Cairns (Beacon C1), Queensland, Australia	-16.82	145.83	geschaetzt	neu	Kanalbake vor Cairns, Position bitte pruefen
+cape-ferguson-tide-gauge-archived-interval-recordings	Cape Ferguson, Queensland, Australia	-19.2774	147.0585	cds	vergleich
+cape-flattery-tide-gauge-archived-interval-recordings	Cape Flattery, Queensland, Australia	-14.9456	145.3471	bestand	weg	1983, ein Jahr stuendlich; dwf-Satz bleibt
+clump-point-tide-gauge-archived-interval-recordings	Clump Point (Mission Beach), Queensland, Australia	-17.8515	146.10533	bom	vergleich
+dauan-island-tide-gauge-archived-interval-recordings	Dauan Island, Queensland, Australia	-9.4112	142.53833	bom	vergleich	Messung 2011-2012 nur 169 Tage; BOM-Tafelfit bleibt
+deep-water-bend-pine-river-tide-gauge-archived-interval-recordings	Deepwater Bend (North Pine River), Queensland, Australia	-27.3000	153.0333	msq_min	neu	1995-1996 stuendlich; MSQ Deepwater Bend 27 18 S 153 02 E
+fishermans-landing-tide-gauge-archived-interval-recordings	Fisherman's Landing, Queensland, Australia	-23.7859	151.1738	bestand	vergleich
+gladstone-auckland-point-tide-gauge-archived-interval-recordings	Gladstone (Auckland Point), Queensland, Australia	-23.8332	151.2483	bestand	vergleich
+gold-coast-seaway-tide-gauge-archived-interval-recordings	Gold Coast Seaway, Queensland, Australia	-27.9386	153.4326	cds	vergleich
+golding-channel-tide-gauge-archived-interval-recordings	Golding Channel (Gladstone), Queensland, Australia	-23.80	151.17	geschaetzt	neu	Golding Reciprocal F/L, 2011-2012, Position bitte pruefen
+half-tide-tug-harbour-tide-gauge-archived-interval-recordings	Half Tide Tug Harbour (Hay Point), Queensland, Australia	-21.2906	149.3010	bestand	ersetzt	TICON-Satz 44 % neben der Messung, die auf 1 % zu Hay Point passt
+hay-point-offshore-port-beacon-2-tide-gauge-archived-interval-recordings	Hay Point (Offshore Port Beacon 2), Queensland, Australia	-21.24	149.36	geschaetzt	neu	Bake vor Hay Point, Position bitte pruefen
+hay-point-tide-gauge-archived-interval-recordings	Hay Point, Queensland, Australia	-21.2626	149.3109	bestand	vergleich
+inscription-point-sweers-island-tide-gauge-archived-interval-recordings	Sweers Island, Queensland, Australia	-17.11333	139.595	bom	vergleich	Messung 1999 nur 61 Tage; BOM-Tafelfit bleibt
+karumba-bar-tide-gauge-archived-interval-recordings	Karumba Bar, Queensland, Australia	-17.43	140.77	geschaetzt	neu	Barre vor der Norman-Muendung, Position bitte pruefen
+kingfisher-bay-jetty-tide-gauge-archived-interval-recordings	Kingfisher Bay (K'gari), Queensland, Australia	-25.3890	153.0240	geschaetzt	neu	2001; MSQ nennt 25 24 S 153 06 E (Land), Resortsteg angenommen
+kubin-moa-is-tide-gauge-archived-interval-recordings	Kubin (Moa Island, Torres Strait), Queensland, Australia	-10.2360	142.2145	cds	vergleich	Messung 2011-2012 nur 123 Tage; BOM-Tafelfit bleibt
+lizard-island-tide-gauge-archived-interval-recordings	Lizard Island, Queensland, Australia	-14.6661	145.4485	bestand	vergleich	Messung 2010 nur 79 Tage; dwf-Satz bleibt
+military-jetty-pumicestone-passage-tide-gauge-archived-interval-recordings	Golden Beach (Military Jetty), Queensland, Australia	-26.8336	153.1196	cds	neu	ab=2022-02-01; Tide seit dem Bribie-Durchbruch 01/2022 veraendert (M2 0.21 -> 0.39 m); Pegel = CDS goldenbeach angenommen, bitte pruefen
+mornington-island-tide-gauge-archived-interval-recordings	Gununa (Mornington Island), Queensland, Australia	-16.6678	139.1706	cds	vergleich
+mossman-tide-gauge-archived-interval-recordings	Mossman, Queensland, Australia	-16.4358	145.4032	cds	neu
+munna-point-noosa-river-tide-gauge-archived-interval-recordings	Munna Point (Noosa River), Queensland, Australia	-26.39437	153.07837	qldgov	neu
+noosa-head-tide-gauge-archived-interval-recordings	Noosa Heads, Queensland, Australia	-26.3845	153.0945	bestand	weg	1970-1973; dwf-Satz bleibt
+noosa-river-mouth-tide-gauge-archived-interval-recordings	Noosa River Mouth, Queensland, Australia	-26.3830	153.0802	cds	neu	cds noosasandstg
+number-2-beacon-weipa-tide-gauge-archived-interval-recordings	Weipa (No. 2 Beacon), Queensland, Australia	-12.60	141.75	geschaetzt	weg	nur Trockenzeit-Kampagnen 1992-2011 (2-3 Monate, Pegelnull wechselnd), Probe 39 cm; Weipa (Humbug Point) ist Messsatz
+pinkenba-tide-gauge-archived-interval-recordings	Pinkenba (Brisbane River), Queensland, Australia	-27.43192	153.11147	qldgov	neu	MSQ-Kai Pinkenba
+port-alma-tide-gauge-archived-interval-recordings	Port Alma (Fitzroy River), Queensland, Australia	-23.5857	150.8618	cds	vergleich
+port-douglas-tide-gauge-archived-interval-recordings	Port Douglas, Queensland, Australia	-16.4820	145.4603	bestand	vergleich
+port-office-brisbane-river-tide-gauge-archived-interval-recordings	Brisbane Port Office, Queensland, Australia	-27.47171	153.03084	bom	vergleich	Messung 2003-2013 weicht nur 1-2 % von dwf/BOM ab
+portland-roads-tide-gauge-archived-interval-recordings	Rocky Island (Portland Roads), Queensland, Australia	-12.5904	143.4154	bestand	weg	1968
+red-island-point-bamaga-tide-gauge-archived-interval-recordings	Red Island (Seisia, Endeavour Strait), Queensland, Australia	-10.8467	142.3653	bestand	vergleich	Messung nur 40 Tage (1995, Rest verstreut); BOM-Tafelfit bleibt (7 %)
+rosslyn-bay-tide-gauge-archived-interval-recordings	Rosslyn Bay, Queensland, Australia	-23.1667	150.7917	cds	vergleich
+shute-harbour-tide-gauge-archived-interval-recordings	Shute Harbour, Queensland, Australia	-20.2921	148.7882	bestand	vergleich
+skardon-river-offshore-tide-gauge-archived-interval-recordings	Skardon River (Offshore), Queensland, Australia	-11.75	141.95	geschaetzt	neu	Position bitte pruefen
+skardon-river-tide-gauge-archived-interval-recordings	Skardon River, Queensland, Australia	-11.78	142.00	geschaetzt	weg	1998-2002 verstreut, laengstes Stueck 44 Tage, Pegelnull unklar; Skardon River (Offshore) genuegt
+south-trees-tide-gauge-archived-interval-recordings	South Trees (Storm Surge), Queensland, Australia	-23.8538	151.3137	cds	vergleich
+st-pauls-moa-is-tide-gauge-archived-interval-recordings	St Pauls (Moa Island), Queensland, Australia	-10.19568	142.33412	bom	weg	Datensatz enthaelt die Kubin-Reihe (Code 100542, identische Werte); BOM-Tafelfit bleibt
+tangalooma-jetty-tide-gauge-archived-interval-recordings	Tangalooma Jetty, Queensland, Australia	-27.17510	153.36873	qldgov	ersetzt	dwf Tangalooma Point 600 m
+tewantin-noosa-river-tide-gauge-archived-interval-recordings	Tewantin (Noosa River), Queensland, Australia	-26.39542	153.04210	qldgov	neu	Tewantin Marina
+thursday-island-tide-gauge-archived-interval-recordings	Thursday Island, Queensland, Australia	-10.5863	142.2216	cds	vergleich
+tin-can-bay-snapper-creek-tide-gauge-archived-interval-recordings	Tin Can Bay (Snapper Creek), Queensland, Australia	-25.89905	153.01392	qldgov	weg	1985-2005 verstreut, laengstes Stueck 24 Tage
+townsville-north-cardinal-beacon	Townsville (North Cardinal Beacon), Queensland, Australia	-19.1266	146.9095	cds	neu	MSQ: Townsville Fairway Beacon
+waddy-point-k-gari-tide-gauge-archived-interval-recordings	Waddy Point (K'gari), Queensland, Australia	-24.9667	153.3500	bestand	weg	1976-1989 stuendlich; dwf-Satz bleibt

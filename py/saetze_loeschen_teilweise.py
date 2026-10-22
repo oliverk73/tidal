@@ -3,7 +3,7 @@
 """Wie py/saetze_loeschen.py, stagt aber nur die Loeschungen (Oliver 21.10.2026).
 
 Fuer Dateien mit Olivers ungecommitteten Aenderungen: die Arbeitskopie wird mit
-saetze_loeschen.py bearbeitet (Archiv + Backup), gestaged wird HEAD mit denselben Saetzen
+saetze_loeschen.py bearbeitet (Archiv + Backup), gestaged wird der Index (anfangs = HEAD) mit denselben Saetzen
 entfernt -- seine offenen Aenderungen bleiben ungestaged.
 
 Usage: python3 py/saetze_loeschen_teilweise.py <liste.csv> [--schreiben]
@@ -43,8 +43,10 @@ def main(argv):
     if '--schreiben' not in argv:
         return 0
     subprocess.run([sys.executable, os.path.join(ROOT, 'py/saetze_loeschen.py'), liste, '--schreiben'], check=True, cwd=ROOT)
+    # Basis ist der Index, nicht HEAD: sonst fallen fruehere, noch nicht committete Loeschungen in derselben Datei
+    # wieder aus dem Index (22.10.2026: zweiter Lauf WA holte die QLD-Loeschungen Amrun/Abbot Point zurueck)
     for datei, namen in pro.items():
-        head = subprocess.run(['git', 'show', 'HEAD:' + datei], capture_output=True, cwd=ROOT).stdout.decode('iso-8859-1')
+        head = subprocess.run(['git', 'show', ':' + datei], capture_output=True, cwd=ROOT).stdout.decode('iso-8859-1')
         h, n = ohne(head, namen)
         blob = subprocess.run(['git', 'hash-object', '-w', '--stdin'], input=h.encode('iso-8859-1'), capture_output=True,
                               cwd=ROOT).stdout.decode().strip()
