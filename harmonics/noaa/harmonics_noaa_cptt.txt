@@ -81261,8 +81261,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: 150.4667
-# !latitude: -22.2333
+# !longitude: 150.4219
+# !latitude: -22.3005
 # state: Queensland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.48 auf den Springhub des Buchs (cptt-3219); der Bau
@@ -81457,8 +81457,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 152.8960
-# !latitude: -25.5024
+# !longitude: 152.8643
+# !latitude: -25.4752
 # state: Queensland
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 3.47 auf den Springhub des Buchs (cptt-3241); der Bau
@@ -81654,8 +81654,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 152.1500
-# !latitude: -32.7167
+# !longitude: 152.1468
+# !latitude: -32.7179
 # fixes: Referenz korrigiert: Fort Denison (Sydney NSW) statt Sydney Nova Scotia, 2026-07-19
 # state: New South Wales
 # admin1_quelle: Name
@@ -81664,7 +81664,7 @@ x 0 0
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.25. Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.077,
 # note: Zielwert F=0.425 aus Wahrheit statt F=0.385 des Bezugsorts; Beleg: Wahrheit 2.66 -> 2.65 %.
-Nelson's Bay, New South Wales, Australia
+Nelson Bay, New South Wales, Australia
 +10:00 :Australia/Sydney
 0.9754 meters
 J1              0.0110  146.55
