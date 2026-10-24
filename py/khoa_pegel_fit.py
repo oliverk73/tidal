@@ -47,6 +47,9 @@ NAMEN = {
     '향화도': ('Hyanghwado-hang (Hampyeong-man), South Korea', 'South Jeolla'),
     '후포': ('Hupo-hang, South Korea', 'North Gyeongsang'),
     '서거차도': ('Seogeochado, South Korea', 'South Jeolla'),
+    '교본초': ('Gyoboncho (Ocean Observatory), South Korea', 'South Gyeongsang'),
+    '복사초': ('Boksacho (Ocean Observatory), South Korea', 'South Jeolla'),
+    # 왕돌초 (Wangdolcho): M2 4 cm, R2 0.39, 25 km von Hupo-hang mit 3 % Kurvenabstand -> nicht aufgenommen
 }
 
 
