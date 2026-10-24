@@ -46,6 +46,8 @@ NAMEN = {
     '감천항': ('GAMCHEON', 'Gamcheon-hang'), '마산항': ('MASAN', 'Masan-hang'),
     '부산항': ('BUSAN', 'Busan-hang'), '부산항신항': ('BUSANNEW', 'Busan Sinhang'),
     '제주해협': ('KG_0028', 'Jeju Strait'), '대한해협': ('KG_0024', 'Korea Strait'),
+    '남해동부': ('KG_0025', 'Namhae East'), '제주남부': ('KG_0021', 'Jeju South'),
+    '대천해수욕장': ('DAECHEON', 'Daecheon Beach'), '중문해수욕장': ('JUNGMUN', 'Jungmun Beach'),
 }
 
 
