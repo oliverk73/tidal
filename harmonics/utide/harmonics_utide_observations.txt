@@ -18035,12 +18035,12 @@ x 0 0
 # psmsl_id: 1836
 # utide: pts=155372 period=2008-01-17..2025-12-31 r2=0.9276 rms=0.1418m const=92
 # !units: meters
-# !longitude: 143.9888
-# !latitude: -38.5472
+# !longitude: 143.9881
+# !latitude: -38.5470
 # state: Victoria
 # admin1_quelle: Name
 # note: 2026-10-18 Position aus BOM-Stationsliste VIC_TP002, Sekundenangabe (vorher -38.5470 143.9882) (Oliver).
-Lorne, Victoria, Australia
+Lorne (Louttit Bay), Victoria, Australia
 +10:00 :Australia/Melbourne
 1.5165 meters
 J1              0.0114  81.05
@@ -18843,7 +18843,7 @@ x 0 0
 # !latitude: -38.3730
 # state: Victoria
 # admin1_quelle: Name
-Stony Point (Westernport), Victoria, Australia
+Stony Point (Western Port), Victoria, Australia
 +10:00 :Australia/Melbourne
 1.7404 meters
 J1              0.0103  108.88
@@ -23973,12 +23973,12 @@ x 0 0
 # sonel_tg_id: 2116
 # utide: pts=164024 period=2007-02-01..2026-01-31 r2=0.8178 rms=0.1183m const=92
 # !units: meters
-# !longitude: 147.9283
-# !latitude: -42.5486
+# !longitude: 147.9299
+# !latitude: -42.5475
 # state: Tasmania
 # admin1_quelle: Name
 # note: 2026-10-18 Position aus BOM-Stationsliste TAS_TP007, Sekundenangabe (vorher -42.5482 147.9299) (Oliver).
-Spring Bay, Tasmania, Australia
+Freestone Point (Spring Bay), Tasmania, Australia
 +10:00 :Australia/Hobart
 1.1916 meters
 J1              0.0081  106.99
@@ -165022,7 +165022,7 @@ x 0 0
 # !units: meters
 # !longitude: 176.183000
 # !latitude: -37.650000
-Tauranga, Bay of Plenty, New Zealand
+Tauranga, New Zealand
 +00:00 :UTC
 1.1471 meters
 J1              0.0041  26.77
@@ -165217,8 +165217,8 @@ x 0 0
 # ptwc_code: gist
 # utide: pts=87660 period=2014-01-22..2024-12-31 r2=0.9589 rms=0.0971m const=67
 # !units: meters
-# !longitude: 178.033000
-# !latitude: -38.683000
+# !longitude: 178.0227
+# !latitude: -38.6756
 Gisborne, Gisborne, New Zealand
 +00:00 :UTC
 1.2764 meters
@@ -165414,9 +165414,9 @@ x 0 0
 # ptwc_code: napt
 # utide: pts=87660 period=2014-12-19..2024-12-31 r2=0.9648 rms=0.0949m const=67
 # !units: meters
-# !longitude: 176.917000
-# !latitude: -39.483000
-Napier, Hawke's Bay, New Zealand
+# !longitude: 176.9201
+# !latitude: -39.4756
+Napier (Hawke's Bay), New Zealand
 +00:00 :UTC
 1.0397 meters
 J1              0.0021  352.15
@@ -165615,7 +165615,7 @@ x 0 0
 # !units: meters
 # !longitude: 174.0344
 # !latitude: -39.0562
-Taranaki, Taranaki, New Zealand
+Pot Taranaki, New Zealand
 +00:00 :UTC
 2.0313 meters
 J1              0.0045  26.03
@@ -165808,9 +165808,9 @@ x 0 0
 # psmsl_id: 1621
 # utide: pts=11307 period=1984-09-01..1985-12-31 r2=0.9250 rms=0.1723m const=67
 # !units: meters
-# !longitude: 174.990000
-# !latitude: -39.947000
-Wanganui, Manawatu-Whanganui, New Zealand
+# !longitude: 174.9898
+# !latitude: -39.9454
+Whanganui River Entrance, New Zealand
 +00:00 :UTC
 1.7513 meters
 J1              0.0045  87.47
@@ -166010,7 +166010,7 @@ x 0 0
 # !units: meters
 # !longitude: 174.7798
 # !latitude: -41.2843
-Wellington, Wellington, New Zealand
+Wellington, New Zealand
 +00:00 :UTC
 1.1734 meters
 J1              0.0016  332.46
@@ -234410,8 +234410,8 @@ x 0 0
 # note: Probe am letzten Messjahr 12 cm RMS.
 # note: Position cds; eigener Pegel neben Bundaberg (Port), 2 km.
 # !units: meters
-# !longitude: 152.4005
-# !latitude: -24.7612
+# !longitude: 152.4012
+# !latitude: -24.7599
 # state: Queensland
 Burnett Heads, Queensland, Australia
 +00:00 :Australia/Brisbane
@@ -234802,8 +234802,8 @@ x 0 0
 # note: Reihe kuerzer als zwei Jahre, keine Probe.
 # note: Position msq_min; 1995-1996 stuendlich; MSQ Deepwater Bend 27 18 S 153 02 E.
 # !units: meters
-# !longitude: 153.0333
-# !latitude: -27.3000
+# !longitude: 153.0336
+# !latitude: -27.2994
 # state: Queensland
 Deepwater Bend (North Pine River), Queensland, Australia
 +00:00 :Australia/Brisbane
@@ -234998,11 +234998,11 @@ x 0 0
 # note: Reihe kuerzer als zwei Jahre, keine Probe.
 # note: Position geschaetzt; Golding Reciprocal F/L, 2011-2012, Position bitte pruefen.
 # !units: meters
-# !longitude: 151.1700
-# !latitude: -23.8000
+# !longitude: 151.4263
+# !latitude: -23.9208
 # state: Queensland
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 58-day window (ratio/lag of Fisherman's Landing, 2 km); K2/P1 added
-Golding Channel (Gladstone), Queensland, Australia
+Golding Channel (Tannum Sands), Queensland, Australia
 +00:00 :Australia/Brisbane
 2.0709 meters
 J1              0.0030  23.42
@@ -235983,7 +235983,7 @@ x 0 0
 # !longitude: 153.1196
 # !latitude: -26.8336
 # state: Queensland
-Golden Beach (Military Jetty), Queensland, Australia
+Golden Beach (Pumicestone Passage), Queensland, Australia
 +00:00 :Australia/Brisbane
 0.7445 meters
 J1              0.0111  56.09
@@ -236764,8 +236764,8 @@ x 0 0
 # note: Probe am letzten Messjahr 11 cm RMS.
 # note: Position qldgov; MSQ-Kai Pinkenba.
 # !units: meters
-# !longitude: 153.1115
-# !latitude: -27.4319
+# !longitude: 153.1162
+# !latitude: -27.4327
 # state: Queensland
 Pinkenba (Brisbane River), Queensland, Australia
 +00:00 :Australia/Brisbane
@@ -237551,7 +237551,7 @@ x 0 0
 # !longitude: 146.9095
 # !latitude: -19.1266
 # state: Queensland
-Townsville (North Cardinal Beacon), Queensland, Australia
+Magnetic Island (North Cardinal Beacon), Queensland, Australia
 +00:00 :Australia/Brisbane
 2.0272 meters
 J1              0.0203  58.79
@@ -238531,7 +238531,7 @@ x 0 0
 # !longitude: 115.6432
 # !latitude: -32.6096
 # state: Western Australia
-Caddadup, Western Australia, Australia
+Caddadup (Dawesville), Western Australia, Australia
 +00:00 :Australia/Perth
 0.6648 meters
 J1              0.0045  223.36
@@ -239709,7 +239709,7 @@ x 0 0
 # !latitude: -20.8773
 # state: Western Australia
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 121-day window (ratio/lag of North Sandy Island, 36 km); K2/P1 added
-Perentie, Western Australia, Australia
+Perentie (Barrow Island), Western Australia, Australia
 +00:00 :Australia/Perth
 1.5099 meters
 J1              0.0114  205.85
@@ -240297,7 +240297,7 @@ x 0 0
 # !longitude: 115.7033
 # !latitude: -32.2744
 # state: Western Australia
-Mangles Bay, Western Australia, Australia
+Peron (Mangles Bay), Western Australia, Australia
 +00:00 :Australia/Perth
 0.7340 meters
 J1              0.0094  199.90
