@@ -38815,3 +38815,207 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+# Harmonic constants derived from the CHM/DHN tidal stream charts "Cartas de Correntes de Mare"
+# Correntes de Maré Itapessoca e Luís Correia, velocity table of the measured station (ccm-itapessoca-e-luis-correia.pdf), point T, mean spring values
+# Chart rule: hours from HW Luís Correia (Piauí) (13 charts HW-6..HW+6), signed speeds from the booklet table (tidal range, hour), direction from the channel,
+# one synthetic year 2026; no time correction
+# Chart values (kn@deg, HW-6..HW+6): table 102-312 cm, flood 205 deg (from the channel in the chart)
+# (UTide v0.3.1, principal-axis projection)
+# 52560 10-minute samples, surface
+# from 2026-01-01 to 2026-12-31
+# R^2 = 0.9759, RMS error = 0.2361 knots
+# Major axis: 25.0 deg true
+#
+# BEGIN HOT COMMENTS
+# country: Brazil
+# source: CHM/DHN Cartas de Correntes de Mare (charts), UTide analysis
+# station_id_context: CHM-CCM-LUIS-CORREIA-T
+# institution: Centro de Hidrografia da Marinha (DHN)
+# datum: n/a
+# station_type: current
+# major_axis_deg_true: 25.0
+# confidence: 5
+# chm_ccm: ccm-itapessoca-e-luis-correia.pdf point T
+# time_correction_min: 0
+# utide: period=2026-01-01..2026-12-31 const=25
+# !units: knots
+# !longitude: -41.6652
+# !latitude: -2.8763
+Luís Correia (Fundeadouro), Piauí, Brazil Current
++00:00 :UTC
+0.3838 knots
+x 0 0
+x 0 0
+K2              0.2085  345.71
+L2              0.0225  300.03
+x 0 0
+M2              1.8792  326.83
+x 0 0
+M4              0.4106  201.09
+M6              0.1249  104.95
+M8              0.0537  348.03
+N2              0.4401  308.35
+2N2             0.0333  310.49
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.7219  348.72
+S4              0.0566  216.62
+x 0 0
+T2              0.0417  331.56
+LDA2            0.0246  80.09
+MU2             0.2071  288.64
+NU2             0.0533  295.09
+x 0 0
+x 0 0
+x 0 0
+MN4             0.1867  178.28
+MS4             0.2641  216.82
+x 0 0
+x 0 0
+MSF             0.1548  35.58
+MM              0.0783  25.55
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MN6            0.0829  78.35
+2MS6            0.1349  127.15
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+MK4             0.0785  214.06
+x 0 0
+x 0 0
+EPS2            0.0383  256.62
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+MSN2            0.0186  338.74
+MSN6            0.0683  87.98
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SN4             0.0709  172.29
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0

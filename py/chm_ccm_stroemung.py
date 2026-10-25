@@ -217,7 +217,7 @@ class Korrektur:
     def __init__(self, pdf, seiten, farbe='rot'):
         self.tab = {}
         d = fitz.open(pdf)
-        test = _blaeulich if farbe == 'blau' else _roetlich
+        test = {'blau': _blaeulich, 'rotblau': lambda c: _roetlich(c) or _blaeulich(c)}.get(farbe, _roetlich)
         for gebiet, seite in seiten.items():
             p = d[seite - 1]
             hub, kopf, werte, pm = [], [], [], []
@@ -240,9 +240,9 @@ class Korrektur:
                         elif dunkel and t == 'Preamar':
                             pm = c
                         elif test(sp['color']) or (farbe == 'alle' and dunkel):
-                            m = re.fullmatch(r'\(?([+\u2013-]?)(\d),(\d)\)?', t.replace(' ', ''))
+                            m = re.fullmatch(r'\(?([+\u2013-]?)(\d),(\d+)\)?', t.replace(' ', ''))
                             if m:
-                                v = int(m.group(2)) + int(m.group(3)) / 10
+                                v = int(m.group(2)) + int(m.group(3)) / 10 ** len(m.group(3))
                                 werte.append((c, -v if m.group(1) in ('\u2013', '-') else v))
                             elif re.fullmatch(r'\(?0\)?', t):
                                 werte.append((c, 0.0))
@@ -351,6 +351,11 @@ HEFTE = {
                   farbe='blau', pfeilfarbe='blau', faktor=lambda h, d: gerade('ccm-salinopolis-a-belem.pdf', 7)(h, d),
                   gitter=(((160.5, 0.5), (542.5, 1.5)), ((208.5, 48.5), (594.0, 47.5))),
                   marken={'x': ('48\u00ba', 401.9), 'y': ('48\u00ba', 65.8)}),
+    # Luis Correia: gemessene Station (30 h Sizigia + 30 h Quadratura), Fundeadouro 02 52 34,5 S 41 39 54,7 W.
+    # Flut nach SSW in die Rinne des Rio Igaracu (Karte S. 15), Ebbe NNE. Itapessoca: Bezugspegel Ponta de
+    # Pedras fehlt im Bestand -> weggelassen.
+    'luis-correia': dict(pdf='ccm-itapessoca-e-luis-correia.pdf', hafen=(S.TAFELN, 'Lu\u00eds Correia (Piau\u00ed), Brazil'),
+                         tabelle=13, flut=205, lat=-(2 + 52 / 60 + 34.5 / 3600), lon=-(41 + 39 / 60 + 54.7 / 3600)),
     # Vitoria: blaue Zahlen = 5 m Tiefgang (oberflaechennah); Tabelle I westlich, II oestlich der
     # gestrichelten Linie bei der Ilha das Cobras. Bezug PM Vitoria (Ilha do Urubu).
     'vitoria': dict(pdf='ccm-porto-de-vitoria.pdf', hafen=(S.TAFELN, 'Vit\u00f3ria (Porto), Esp\u00edrito Santo, Brazil'),
@@ -446,6 +451,9 @@ NAMEN = {
         '1.4': 'Rio Amazonas (Macapá)',
         '1.3': 'Rio Amazonas (Fazendinha)',
     },
+    'luis-correia': {
+        'T': 'Luís Correia (Fundeadouro)',
+    },
     'salinopolis': {
         '1.1': 'Salinópolis (ao largo)',
     },
@@ -470,12 +478,14 @@ HEFT_TITEL = {'sao-marcos': 'DG 10-V-1 Proximidades da Baía de São Marcos / Po
               'amazonas-norte': 'Rio Amazonas, Barra Norte part (red arrows), mean of wet and dry season',
               'amazonas-santana': 'Rio Amazonas, Santana part (blue arrows), mean of wet and dry season',
               'salinopolis': 'Rio Pará de Salinópolis a Belém, Salinópolis part (red arrows)',
-              'belem': 'Rio Pará de Salinópolis a Belém, Belém part (blue arrows)'}
+              'belem': 'Rio Pará de Salinópolis a Belém, Belém part (blue arrows)',
+              'luis-correia': 'Correntes de Maré Itapessoca e Luís Correia, velocity table of the measured station'}
 REGION = {'sao-marcos': 'Maranh\u00e3o, Brazil', 'guanabara': 'Rio de Janeiro, Brazil',
           'vitoria': 'Esp\u00edrito Santo, Brazil', 'madre-de-deus': 'Bahia, Brazil',
           'santos': 'S\u00e3o Paulo, Brazil', 'paranagua': 'Paran\u00e1, Brazil', 'salvador': 'Bahia, Brazil',
           'natal': 'Rio Grande do Norte, Brazil', 'amazonas-norte': 'Amap\u00e1, Brazil',
-          'amazonas-santana': 'Amap\u00e1, Brazil', 'salinopolis': 'Par\u00e1, Brazil', 'belem': 'Par\u00e1, Brazil'}
+          'amazonas-santana': 'Amap\u00e1, Brazil', 'salinopolis': 'Par\u00e1, Brazil', 'belem': 'Par\u00e1, Brazil',
+          'luis-correia': 'Piau\u00ed, Brazil'}
 REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'santos': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'paranagua': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
@@ -485,6 +495,7 @@ REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-
          'amazonas-santana': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'salinopolis': 'speed factor from the booklet graph (mean tidal range of the day)',
          'belem': 'speed factor from the booklet graph (mean tidal range of the day)',
+         'luis-correia': 'signed speeds from the booklet table (tidal range, hour), direction from the channel',
          'vitoria': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
          'madre-de-deus': 'additive speed corrections from the booklet tables I/II (tidal range, hour)'}
 
@@ -965,9 +976,45 @@ def reihe(hafen, faktor, zyklus, jahr=2026, schritt_min=10, korrektur=None, gebi
         float(np.mean(hub)), float(np.percentile(hub, 90))
 
 
+def tabellenstation(kurz, cfg, heute):
+    """Luis Correia: keine Karten, sondern eine Tabelle der gemessenen Geschwindigkeit (+ Flut, - Ebbe)
+    nach Tidenhub und Stunde zur PM. Richtung aus dem Verlauf der Rinne in der Karte (flut)."""
+    K = Korrektur(os.path.join(PDF, cfg['pdf']), {'T': cfg['tabelle']}, 'rotblau')
+    pfad, name = cfg['hafen']
+    t0 = dt.datetime(2026, 1, 1, tzinfo=dt.timezone.utc).timestamp()
+    t = np.arange(t0 - 2 * 86400, t0 + 367 * 86400, 120.0)
+    h = S.gezeit(pfad, name, t)
+    tp, hp = S.scheitel(t, h, True)
+    tl, hl = S.scheitel(t, h, False)
+    hub = hp - np.interp(tp, tl, hl)
+    ts = np.arange(t0, t0 + 365 * 86400, 600.0)
+    k = np.clip(np.searchsorted(tp, ts), 1, len(tp) - 1)
+    k -= (ts - tp[k - 1]) < (tp[k] - ts)
+    tau = np.clip((ts - tp[k]) / 3600.0, -6, 6)
+    sp = K('T', hub[k] * 100.0, tau)
+    fl = math.radians(cfg['flut'])
+    df = pd.DataFrame({'u': sp * math.sin(fl) / MS_KN, 'v': sp * math.cos(fl) / MS_KN},
+                      index=pd.to_datetime(ts, unit='s'))
+    r = C.analyse(df, cfg['lat'], S.KONST)
+    hubs, T = K.tab['T']
+    zeile = dict(punkt='T', lat=cfg['lat'], lon=cfg['lon'], vmax=float(np.abs(T).max()), sprung=0, fehlt='',
+                 pdf='seite %d' % cfg['tabelle'],
+                 werte='table %d-%d cm, flood %d deg (from the channel in the chart)' % (hubs[0], hubs[-1], cfg['flut']),
+                 achse=round(r['achse'], 1), r2=round(r['r2'], 4), m2=round(r['m2'], 3), s2=round(r['s2'], 3),
+                 m2_phase=round(r['konst'].get('M2', (0, 0))[1], 1), mean=round(r['mean'], 3),
+                 hub_mittel=round(float(np.mean(hub)), 2))
+    print('  %s' % zeile)
+    out = os.path.join(HILFE, 'chm_ccm_%s_%s' % (kurz, heute))
+    with open(out + '.txt', 'w', encoding='iso-8859-1') as f:
+        f.write(block(kurz, cfg['pdf'], cfg['hafen'], zeile, r, NAMEN[kurz]['T']) + '\n')
+    print('->', out + '.txt')
+
+
 def main(argv):
     kurz = argv[1]
     cfg = HEFTE[kurz]
+    if cfg.get('tabelle'):
+        return tabellenstation(kurz, cfg, dt.date.today().strftime('%Y%m%d'))
     GRUPPE_PT[:] = cfg.get('gruppe', [28, False])
     pdfname, hafen, faktor = cfg['pdf'], cfg['hafen'], cfg.get('faktor')
     gitter = None
