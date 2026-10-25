@@ -62,6 +62,18 @@ def faktor_sao_marcos(hub, dauer):
     return 0.2 * hub + 0.1
 
 
+def faktor_salvador(hub, dauer):
+    # Stufenskala im Heft (S. 4): Faktor 0,5..1,1 nach mittlerem Tidenhub. Stufengrenzen aus den
+    # Strichen der Vektorgrafik: 0,735 / 1,036 / 1,399 / 1,791 / 2,225 / 2,701 m (Beispiel 1,5 m -> 0,8).
+    # Stetig: an jeder Grenze der Mittelwert der beiden Stufen, dazwischen linear.
+    grenzen = np.array([0.735, 1.036, 1.399, 1.791, 2.225, 2.701])
+    werte = np.array([0.55, 0.65, 0.75, 0.85, 0.95, 1.05])
+    steig = 0.1 / np.diff(grenzen).mean()
+    h = np.asarray(hub, float)
+    return np.where(h < grenzen[0], werte[0] + (h - grenzen[0]) * steig,
+                    np.where(h > grenzen[-1], werte[-1] + (h - grenzen[-1]) * steig, np.interp(h, grenzen, werte)))
+
+
 class Abaco:
     """Faktor-Abakus (Santos, Guanabara, Paranagua) ueber Tidenhub (oben, m) und Dauer PM<->BM (links, h).
     Die Linien sind Grenzen zwischen Faktorstufen: die Zahlen 0,1 .. 1,3 stehen ZWISCHEN den 12 Linien
@@ -236,6 +248,20 @@ HEFTE = {
                        faktor=faktor_sao_marcos),
     'guanabara': dict(pdf='ccm-baia-de-guanabara.pdf', hafen=(S.OBS, 'Ilha Fiscal, Rio de Janeiro, Brazil'),
                       faktor=lambda h, d: abaco('ccm-baia-de-guanabara.pdf', 5)(h, d)),
+    'santos': dict(pdf='ccm-porto-de-santos.pdf', hafen=(S.TAFELN, 'Santos (Macuco), S\u00e3o Paulo, Brazil'),
+                   faktor=lambda h, d: abaco('ccm-porto-de-santos.pdf', 5)(h, d)),
+    'paranagua': dict(pdf='ccm-porto-de-paranagua.pdf', hafen=(S.TAFELN, 'Paranagu\u00e1 (Cais Oeste), Paran\u00e1, Brazil'),
+                      faktor=lambda h, d: abaco('ccm-porto-de-paranagua.pdf', 4)(h, d)),
+    'salvador': dict(pdf='ccm-porto-de-salvador.pdf',
+                     hafen=(os.path.join(ROOT, 'harmonics/ticon/harmonics_ticon4_worldwide.txt'), 'Salvador (Porto), Bahia, Brazil'),
+                     faktor=faktor_salvador),
+    'santos': dict(pdf='ccm-porto-de-santos.pdf', hafen=(S.TAFELN, 'Santos (Macuco), S\u00e3o Paulo, Brazil'),
+                   faktor=lambda h, d: abaco('ccm-porto-de-santos.pdf', 5)(h, d)),
+    'paranagua': dict(pdf='ccm-porto-de-paranagua.pdf', hafen=(S.TAFELN, 'Paranagu\u00e1 (Cais Oeste), Paran\u00e1, Brazil'),
+                      faktor=lambda h, d: abaco('ccm-porto-de-paranagua.pdf', 4)(h, d)),
+    'salvador': dict(pdf='ccm-porto-de-salvador.pdf',
+                     hafen=(os.path.join(ROOT, 'harmonics/ticon/harmonics_ticon4_worldwide.txt'), 'Salvador (Porto), Bahia, Brazil'),
+                     faktor=faktor_salvador),
     # Vitoria: blaue Zahlen = 5 m Tiefgang (oberflaechennah); Tabelle I westlich, II oestlich der
     # gestrichelten Linie bei der Ilha das Cobras. Bezug PM Vitoria (Ilha do Urubu).
     'vitoria': dict(pdf='ccm-porto-de-vitoria.pdf', hafen=(S.TAFELN, 'Vit\u00f3ria (Porto), Esp\u00edrito Santo, Brazil'),
@@ -298,6 +324,19 @@ NAMEN = {
         '1.3': 'Ilha do Urubu (Porto de Vitória)',
         '1.7': 'Cais da Usiminas (Porto de Vitória)',
     },
+    'santos': {
+        '1.2': 'Ponta da Praia (Canal do Porto de Santos)',
+        '1.3': 'Canal do Porto de Santos (Macuco)',
+        '1.4': 'Canal do Porto de Santos (Ilha Barnabé)',
+    },
+    'paranagua': {
+        '1.3': 'Baía de Paranaguá (Ilha do Mel)',
+        '1.2': 'Porto de Paranaguá',
+    },
+    'salvador': {
+        '1.1': 'Entrada da Baía de Todos os Santos',
+        '1.2': 'Banco da Panela (Baía de Todos os Santos)',
+    },
     'madre-de-deus': {
         '1.9': 'Madre de Deus (Praia do Loreto)',
         '1.2': 'Terminal de Madre de Deus (Posto S-2)',
@@ -307,10 +346,15 @@ NAMEN = {
 HEFT_TITEL = {'sao-marcos': 'DG 10-V-1 Proximidades da Baía de São Marcos / Portos de São Luís e Itaqui',
               'guanabara': 'Baía de Guanabara',
               'vitoria': 'Pôrto de Vitória (blue values, ships of 5 m draft)',
-              'madre-de-deus': 'Porto de Madre de Deus (layer 0-8 m)'}
+              'madre-de-deus': 'Porto de Madre de Deus (layer 0-8 m)',
+              'santos': 'Porto de Santos', 'paranagua': 'Porto de Paranaguá', 'salvador': 'Porto de Salvador'}
 REGION = {'sao-marcos': 'Maranh\u00e3o, Brazil', 'guanabara': 'Rio de Janeiro, Brazil',
-          'vitoria': 'Esp\u00edrito Santo, Brazil', 'madre-de-deus': 'Bahia, Brazil'}
+          'vitoria': 'Esp\u00edrito Santo, Brazil', 'madre-de-deus': 'Bahia, Brazil',
+          'santos': 'S\u00e3o Paulo, Brazil', 'paranagua': 'Paran\u00e1, Brazil', 'salvador': 'Bahia, Brazil'}
 REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
+         'santos': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
+         'paranagua': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
+         'salvador': 'speed factor from the booklet scale (mean tidal range)',
          'vitoria': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
          'madre-de-deus': 'additive speed corrections from the booklet tables I/II (tidal range, hour)'}
 
