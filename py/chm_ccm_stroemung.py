@@ -74,6 +74,43 @@ def faktor_salvador(hub, dauer):
                     np.where(h > grenzen[-1], werte[-1] + (h - grenzen[-1]) * steig, np.interp(h, grenzen, werte)))
 
 
+class Gerade:
+    """Faktor als Gerade ueber dem mittleren Tidenhub des Tages (Salinopolis, Belem): die laengste
+    farbige Linie im Diagramm, Achsen aus der Beschriftung (unten cm, links Faktor)."""
+
+    def __init__(self, pdf, seite):
+        p = fitz.open(pdf)[seite - 1]
+        m = _dreh(p)
+        best = None
+        for g in p.get_drawings():
+            c = g.get('color')
+            if g['type'] == 's' and c and (_rot(c) or _blau(c)) and g['items'][0][0] == 'l':
+                a, b = g['items'][0][1] * m, g['items'][0][2] * m
+                if best is None or math.hypot(b.x - a.x, b.y - a.y) > math.hypot(best[1].x - best[0].x, best[1].y - best[0].y):
+                    best = (a, b)
+        unten, links = [], []
+        for b in p.get_text('dict')['blocks']:
+            for l in b.get('lines', []):
+                t = ''.join(s['text'] for s in l['spans']).strip()
+                r = _rect(p, l['bbox'])
+                if re.fullmatch(r'\d{3}', t):
+                    unten.append(((r.x0 + r.x1) / 2, float(t)))
+                elif re.fullmatch(r'\d,\d', t):
+                    links.append(((r.y0 + r.y1) / 2, float(t.replace(',', '.'))))
+        bx, ax = np.polyfit([x for x, _ in unten], [v for _, v in unten], 1)
+        by, ay = np.polyfit([y for y, _ in links], [v for _, v in links], 1)
+        a, b = best
+        self.h = (ax + bx * a.x, ax + bx * b.x)
+        self.f = (ay + by * a.y, ay + by * b.y)
+
+    def __call__(self, hub, dauer):
+        h = np.asarray(hub, float) * 100.0
+        return self.f[0] + (h - self.h[0]) * (self.f[1] - self.f[0]) / (self.h[1] - self.h[0])
+
+    def __repr__(self):
+        return 'Gerade %.0f cm -> %.2f, %.0f cm -> %.2f' % (self.h[0], self.f[0], self.h[1], self.f[1])
+
+
 class Abaco:
     """Faktor-Abakus (Santos, Guanabara, Paranagua) ueber Tidenhub (oben, m) und Dauer PM<->BM (links, h).
     Die Linien sind Grenzen zwischen Faktorstufen: die Zahlen 0,1 .. 1,3 stehen ZWISCHEN den 12 Linien
@@ -251,6 +288,13 @@ class Korrektur:
 _ABACI = {}
 
 
+def gerade(pdfname, seite):
+    k = ('gerade', pdfname, seite)
+    if k not in _ABACI:
+        _ABACI[k] = Gerade(os.path.join(PDF, pdfname), seite)
+    return _ABACI[k]
+
+
 def abaco(pdfname, seite):
     k = (pdfname, seite)
     if k not in _ABACI:
@@ -296,6 +340,17 @@ HEFTE = {
                              farbe='blau', saisons=True, faktor=lambda h, d: abaco('ccm-rio-amazonas.pdf', 7)(h, d),
                              gitter=(((480.5, 0.0), (199.0, -40 / 60)), ((214.0, 51.0), (639.5, 50.0))),
                              marken={'x': ('51\u00ba', 214.0), 'y': ('0\u00ba', 480.5)}),
+    # Rio Para: oben rote Pfeile, Bezug PM Salinopolis; unten blaue, Bezug PM Belem; Faktor je eine Gerade.
+    # Breiten-Beschriftung "1º" ist im PDF als "48º" gesetzt -> Gitter von Hand (Sued positiv).
+    'salinopolis': dict(pdf='ccm-salinopolis-a-belem.pdf', hafen=(S.TAFELN, 'Salin\u00f3polis, Par\u00e1, Brazil'),
+                        farbe='rot', pfeilfarbe='rot', faktor=lambda h, d: gerade('ccm-salinopolis-a-belem.pdf', 5)(h, d),
+                        gruppe=[60, True],      # Pfeile wandern bis 50 pt; zwei Flusspfeile nicht trennbar
+                        gitter=(((160.5, 0.5), (542.5, 1.5)), ((208.5, 48.5), (594.0, 47.5))),
+                        marken={'x': ('48\u00ba', 401.9), 'y': ('48\u00ba', 65.8)}),
+    'belem': dict(pdf='ccm-salinopolis-a-belem.pdf', hafen=(S.TAFELN, 'Bel\u00e9m, Par\u00e1, Brazil'),
+                  farbe='blau', pfeilfarbe='blau', faktor=lambda h, d: gerade('ccm-salinopolis-a-belem.pdf', 7)(h, d),
+                  gitter=(((160.5, 0.5), (542.5, 1.5)), ((208.5, 48.5), (594.0, 47.5))),
+                  marken={'x': ('48\u00ba', 401.9), 'y': ('48\u00ba', 65.8)}),
     # Vitoria: blaue Zahlen = 5 m Tiefgang (oberflaechennah); Tabelle I westlich, II oestlich der
     # gestrichelten Linie bei der Ilha das Cobras. Bezug PM Vitoria (Ilha do Urubu).
     'vitoria': dict(pdf='ccm-porto-de-vitoria.pdf', hafen=(S.TAFELN, 'Vit\u00f3ria (Porto), Esp\u00edrito Santo, Brazil'),
@@ -391,6 +446,13 @@ NAMEN = {
         '1.4': 'Rio Amazonas (Macapá)',
         '1.3': 'Rio Amazonas (Fazendinha)',
     },
+    'salinopolis': {
+        '1.1': 'Salinópolis (ao largo)',
+    },
+    'belem': {
+        '1.1': 'Baía do Marajó (Ilha de Colares)',
+        '1.2': 'Baía do Guajará (Belém)',
+    },
     'natal': {
         '1.2': 'Barra do Rio Potengi',
         '1.1': 'Rio Potengi (Redinha)',
@@ -406,12 +468,14 @@ HEFT_TITEL = {'sao-marcos': 'DG 10-V-1 Proximidades da Baía de São Marcos / Po
               'santos': 'Porto de Santos', 'paranagua': 'Porto de Paranaguá', 'salvador': 'Porto de Salvador',
               'natal': 'Porto de Natal (layer 0-6 m)',
               'amazonas-norte': 'Rio Amazonas, Barra Norte part (red arrows), mean of wet and dry season',
-              'amazonas-santana': 'Rio Amazonas, Santana part (blue arrows), mean of wet and dry season'}
+              'amazonas-santana': 'Rio Amazonas, Santana part (blue arrows), mean of wet and dry season',
+              'salinopolis': 'Rio Pará de Salinópolis a Belém, Salinópolis part (red arrows)',
+              'belem': 'Rio Pará de Salinópolis a Belém, Belém part (blue arrows)'}
 REGION = {'sao-marcos': 'Maranh\u00e3o, Brazil', 'guanabara': 'Rio de Janeiro, Brazil',
           'vitoria': 'Esp\u00edrito Santo, Brazil', 'madre-de-deus': 'Bahia, Brazil',
           'santos': 'S\u00e3o Paulo, Brazil', 'paranagua': 'Paran\u00e1, Brazil', 'salvador': 'Bahia, Brazil',
           'natal': 'Rio Grande do Norte, Brazil', 'amazonas-norte': 'Amap\u00e1, Brazil',
-          'amazonas-santana': 'Amap\u00e1, Brazil'}
+          'amazonas-santana': 'Amap\u00e1, Brazil', 'salinopolis': 'Par\u00e1, Brazil', 'belem': 'Par\u00e1, Brazil'}
 REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'santos': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'paranagua': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
@@ -419,6 +483,8 @@ REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-
          'natal': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
          'amazonas-norte': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'amazonas-santana': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
+         'salinopolis': 'speed factor from the booklet graph (mean tidal range of the day)',
+         'belem': 'speed factor from the booklet graph (mean tidal range of the day)',
          'vitoria': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
          'madre-de-deus': 'additive speed corrections from the booklet tables I/II (tidal range, hour)'}
 
@@ -753,7 +819,7 @@ def spuren(satz, anker='fuss', max_pt=20):
     """
     kx, ky = ('x', 'y') if anker == 'fuss' else ('mx', 'my')
     if anker == 'mitte':
-        return _gruppen(satz)
+        return _gruppen(satz, GRUPPE_PT[0], GRUPPE_PT[1])
     sp = []
     for h in sorted(satz):
         B = satz[h][1]
@@ -774,7 +840,7 @@ def spuren(satz, anker='fuss', max_pt=20):
     return sp
 
 
-def _gruppen(satz, abstand_pt=28):
+def _gruppen(satz, abstand_pt=28, eindeutig=False):
     """Stroemungsbild: beschriftete Pfeile aller Stunden nach Lage der Pfeilmitte gruppieren
     (die Pfeile stehen nur ungefaehr an derselben Stelle). Je Stunde zaehlt der Pfeil, der der
     Gruppenmitte am naechsten liegt."""
@@ -788,6 +854,8 @@ def _gruppen(satz, abstand_pt=28):
     for g in sorted(set(lab)):
         idx = np.where(lab == g)[0]
         mx, my = xy[idx].mean(axis=0)
+        if eindeutig and len(idx) > len(set(alle[i][0] for i in idx)) + 1:
+            continue                    # zwei wandernde Pfeile in einer Gruppe: nicht trennbar
         s = {}
         for i in sorted(idx, key=lambda i: math.hypot(xy[i, 0] - mx, xy[i, 1] - my)):
             h, a = alle[i]
@@ -828,6 +896,7 @@ def saisonen_mitteln(satz, abstand_pt=40):
     return out, 'mitte'
 
 
+GRUPPE_PT = [28, False]         # Abstand und Eindeutigkeit der Pfeilmitte-Gruppen (je Heft einstellbar)
 PERIODE_H = 12.42                       # M2: -6 h und +6 h liegen einen Zyklus auseinander
 
 
@@ -899,6 +968,7 @@ def reihe(hafen, faktor, zyklus, jahr=2026, schritt_min=10, korrektur=None, gebi
 def main(argv):
     kurz = argv[1]
     cfg = HEFTE[kurz]
+    GRUPPE_PT[:] = cfg.get('gruppe', [28, False])
     pdfname, hafen, faktor = cfg['pdf'], cfg['hafen'], cfg.get('faktor')
     gitter = None
     if cfg.get('gitter'):
