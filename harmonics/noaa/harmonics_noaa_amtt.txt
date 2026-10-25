@@ -34032,18 +34032,19 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -50.7167
-# !latitude: -0.1833
+# !longitude: -50.7695
+# !latitude: 0.2159
 # note: 20260903 Provinz "Pará" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
-# state: Pará
+# state: Amapá
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 1.80 auf den Springhub des Buchs (ectt-4979); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Braamspunt (Suriname River), Suriname [harmonics-2004-06-14_,
 # note: Flach weg + HW/NW, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -2.81 Punkte.
-Ponta Pedreira (Amazon River), Pará, Brazil
+# note: 20261025 Breite war Sued statt Nord (Buch 0 11 / 50 43 W ohne Vorzeichen); an die Muendung des Rio Pedreira (Oliver), vorher -0.1833/-50.7167, Para
+Ponta Pedreira (Rio Amazonas), Amapá, Brazil
 +00:00 :America/Belem
 2.7432 meters
 J1              0.0081  349.67
