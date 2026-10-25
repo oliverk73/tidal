@@ -15222,121 +15222,122 @@ x 0 0
 # !units: knots
 # !longitude: 149.283300
 # !latitude: -21.050000
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Oom Shoal - Mackay, Queensland, Australia Current
 +00:00 :UTC
--0.0023 knots
-J1              0.0016  266.74
-K1              0.0355  31.35
-K2              0.0905  88.66
-L2              0.0422  95.56
+0.0023 knots
+J1              0.0016  86.74
+K1              0.0355  211.35
+K2              0.0905  268.66
+L2              0.0422  275.56
 x 0 0
-M2              0.5936  101.67
-M3              0.0054  155.13
-M4              0.0120  321.54
-M6              0.0619  301.15
-M8              0.0024  160.73
-N2              0.1329  93.84
-2N2             0.0189  141.06
-O1              0.0204  11.30
-OO1             0.0023  28.26
-P1              0.0025  101.19
-Q1              0.0040  330.59
-2Q1             0.0049  222.02
-R2              0.0001  127.38
+M2              0.5936  281.67
+M3              0.0054  335.13
+M4              0.0120  141.54
+M6              0.0619  121.15
+M8              0.0024  340.73
+N2              0.1329  273.84
+2N2             0.0189  321.06
+O1              0.0204  191.30
+OO1             0.0023  208.26
+P1              0.0025  281.19
+Q1              0.0040  150.59
+2Q1             0.0049  42.02
+R2              0.0001  307.38
 x 0 0
-S2              0.2529  101.96
-S4              0.0010  154.99
+S2              0.2529  281.96
+S4              0.0010  334.99
 x 0 0
-T2              0.0155  106.63
-LDA2            0.0114  97.56
-MU2             0.0180  92.98
-NU2             0.0266  93.76
-RHO1            0.0002  347.94
-MK3             0.0052  143.19
+T2              0.0155  286.63
+LDA2            0.0114  277.56
+MU2             0.0180  272.98
+NU2             0.0266  273.76
+RHO1            0.0002  167.94
+MK3             0.0052  323.19
 x 0 0
-MN4             0.0066  271.08
-MS4             0.0142  315.50
-2SM2            0.0181  256.11
-MF              0.0262  75.73
-MSF             0.0113  204.30
-MM              0.0085  321.63
+MN4             0.0066  91.08
+MS4             0.0142  135.50
+2SM2            0.0181  76.11
+MF              0.0262  255.73
+MSF             0.0113  24.30
+MM              0.0085  141.63
 x 0 0
-SSA             0.0277  247.84
-SA-IOS          0.0001  102.97
+SSA             0.0277  67.84
+SA-IOS          0.0001  282.97
 x 0 0
-S1-IOS          0.0008  235.65
-x 0 0
-x 0 0
-x 0 0
-2MK5            0.0100  243.74
-2MK6            0.0322  278.21
-x 0 0
-2MN6            0.0399  293.68
-2MS6            0.0844  300.10
-x 0 0
-2SK5            0.0009  29.38
+S1-IOS          0.0008  55.65
 x 0 0
 x 0 0
 x 0 0
+2MK5            0.0100  63.74
+2MK6            0.0322  98.21
 x 0 0
-3MS4            0.0036  326.41
+2MN6            0.0399  113.68
+2MS6            0.0844  120.10
 x 0 0
-ALP1            0.0002  156.28
-BET1            0.0001  112.87
-CHI1            0.0001  132.08
-H1              0.0002  283.53
-H2              0.0004  328.65
-x 0 0
-ETA2            0.0009  93.11
+2SK5            0.0009  209.38
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0053  313.02
-MKS2            0.0573  53.85
+3MS4            0.0036  146.41
 x 0 0
-EPS2            0.0116  246.15
-MO3             0.0078  343.71
+ALP1            0.0002  336.28
+BET1            0.0001  292.87
+CHI1            0.0001  312.08
+H1              0.0002  103.53
+H2              0.0004  148.65
 x 0 0
-TAU1            0.0037  105.46
-x 0 0
-MSK6            0.0143  288.13
-MSM             0.0005  183.19
-x 0 0
-x 0 0
-x 0 0
-NO1             0.0030  41.65
-OP2             0.0438  343.44
-x 0 0
-PHI1            0.0019  270.10
+ETA2            0.0009  273.11
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+MK4             0.0053  133.02
+MKS2            0.0573  233.85
+x 0 0
+EPS2            0.0116  66.15
+MO3             0.0078  163.71
+x 0 0
+TAU1            0.0037  285.46
+x 0 0
+MSK6            0.0143  108.13
+MSM             0.0005  3.19
 x 0 0
 x 0 0
-SIG1            0.0004  176.54
-SK3             0.0006  335.59
 x 0 0
-SN4             0.0022  290.50
+NO1             0.0030  221.65
+OP2             0.0438  163.44
 x 0 0
-SO1             0.0065  198.35
-SO3             0.0067  289.63
-THE1            0.0001  13.38
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SKM2            0.0002  152.42
+PHI1            0.0019  90.10
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-NO3             0.0008  186.60
+x 0 0
+SIG1            0.0004  356.54
+SK3             0.0006  155.59
+x 0 0
+SN4             0.0022  110.50
+x 0 0
+SO1             0.0065  18.35
+SO3             0.0067  109.63
+THE1            0.0001  193.38
 x 0 0
 x 0 0
-N4              0.0026  255.05
+x 0 0
+x 0 0
+SKM2            0.0002  332.42
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO3             0.0008  6.60
+x 0 0
+x 0 0
+N4              0.0026  75.05
 x 0 0
 x 0 0
 x 0 0
@@ -22740,7 +22741,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9973, RMS error = 0.0887 knots
-# Major axis: 178.0 deg true
+# Major axis: 358.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: France
@@ -22749,7 +22750,7 @@ x 0 0
 # institution: Shom
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 178.0
+# major_axis_deg_true: 358.0
 # confidence: 5
 # shom_atlas: ATLASDYN-SURF_TELEMAC3D-SURF_R1111100_IROISE-560-250M-5min
 # time_correction_min: 0
@@ -22757,21 +22758,22 @@ x 0 0
 # !units: knots
 # !longitude: -4.8029
 # !latitude: 48.3832
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Chenal du Four (SHOM atlas 560), France Current
 +00:00 :UTC
--0.4116 knots
+0.4116 knots
 x 0 0
 x 0 0
-K2              0.2170  247.46
-L2              0.0823  217.67
+K2              0.2170  67.46
+L2              0.0823  37.67
 x 0 0
-M2              2.2806  214.54
+M2              2.2806  34.54
 x 0 0
-M4              0.1557  275.65
-M6              0.0662  179.96
-M8              0.0083  269.17
-N2              0.4175  194.67
-2N2             0.0709  185.67
+M4              0.1557  95.65
+M6              0.0662  359.96
+M8              0.0083  89.17
+N2              0.4175  14.67
+2N2             0.0709  5.67
 x 0 0
 x 0 0
 x 0 0
@@ -22779,22 +22781,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.7609  250.27
-S4              0.0128  29.26
+S2              0.7609  70.27
+S4              0.0128  209.26
 x 0 0
-T2              0.0413  241.53
-LDA2            0.0379  211.50
-MU2             0.0197  357.85
-NU2             0.1050  199.27
+T2              0.0413  61.53
+LDA2            0.0379  31.50
+MU2             0.0197  177.85
+NU2             0.1050  19.27
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0712  270.97
-MS4             0.0888  316.82
+MN4             0.0712  90.97
+MS4             0.0888  136.82
 x 0 0
 x 0 0
-MSF             0.0895  204.64
-MM              0.0303  198.03
+MSF             0.0895  24.64
+MM              0.0303  18.03
 x 0 0
 x 0 0
 x 0 0
@@ -22806,8 +22808,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0363  164.21
-2MS6            0.0661  206.73
+2MN6            0.0363  344.21
+2MS6            0.0661  26.73
 x 0 0
 x 0 0
 x 0 0
@@ -22827,18 +22829,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0248  313.40
+MK4             0.0248  133.40
 x 0 0
 x 0 0
-EPS2            0.0158  157.00
+EPS2            0.0158  337.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0241  75.41
-MSN6            0.0143  198.57
+MSN2            0.0241  255.41
+MSN6            0.0143  18.57
 x 0 0
 x 0 0
 x 0 0
@@ -22853,7 +22855,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0186  340.33
+SN4             0.0186  160.33
 x 0 0
 x 0 0
 x 0 0
@@ -29440,7 +29442,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9854, RMS error = 0.2217 knots
-# Major axis: 9.2 deg true
+# Major axis: 189.2 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -29449,7 +29451,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 9.2
+# major_axis_deg_true: 189.2
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 1.10
 # time_correction_min: 0
@@ -29457,21 +29459,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.2413
 # !latitude: -2.2982
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Baía de São Marcos (Farol Itacolomi), Maranhão, Brazil Current
 +00:00 :UTC
-1.0245 knots
+-1.0245 knots
 x 0 0
 x 0 0
-K2              0.1688  78.90
-L2              0.0933  37.82
+K2              0.1688  258.90
+L2              0.0933  217.82
 x 0 0
-M2              2.4494  38.80
+M2              2.4494  218.80
 x 0 0
-M4              0.4539  171.33
-M6              0.1808  31.20
-M8              0.0550  58.83
-N2              0.4223  24.31
-2N2             0.0677  9.92
+M4              0.4539  351.33
+M6              0.1808  211.20
+M8              0.0550  238.83
+N2              0.4223  204.31
+2N2             0.0677  189.92
 x 0 0
 x 0 0
 x 0 0
@@ -29479,22 +29482,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.6340  77.92
-S4              0.0234  240.71
+S2              0.6340  257.92
+S4              0.0234  60.71
 x 0 0
-T2              0.0245  40.44
-LDA2            0.0186  62.83
-MU2             0.1380  185.07
-NU2             0.0852  25.18
+T2              0.0245  220.44
+LDA2            0.0186  242.83
+MU2             0.1380  5.07
+NU2             0.0852  205.18
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1231  163.24
-MS4             0.2324  206.66
+MN4             0.1231  343.24
+MS4             0.2324  26.66
 x 0 0
 x 0 0
-MSF             0.1802  46.38
-MM              0.1266  22.33
+MSF             0.1802  226.38
+MM              0.1266  202.33
 x 0 0
 x 0 0
 x 0 0
@@ -29506,8 +29509,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0838  23.49
-2MS6            0.1170  63.21
+2MN6            0.0838  203.49
+2MS6            0.1170  243.21
 x 0 0
 x 0 0
 x 0 0
@@ -29527,18 +29530,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0609  207.53
+MK4             0.0609  27.53
 x 0 0
 x 0 0
-EPS2            0.0058  218.53
+EPS2            0.0058  38.53
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0055  297.08
-MSN6            0.0237  52.93
+MSN2            0.0055  117.08
+MSN6            0.0237  232.93
 x 0 0
 x 0 0
 x 0 0
@@ -29553,7 +29556,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0177  187.35
+SN4             0.0177  7.35
 x 0 0
 x 0 0
 x 0 0
@@ -29644,7 +29647,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9930, RMS error = 0.2476 knots
-# Major axis: 1.9 deg true
+# Major axis: 181.9 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -29653,7 +29656,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 1.9
+# major_axis_deg_true: 181.9
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 2.1
 # time_correction_min: 0
@@ -29661,21 +29664,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.3386
 # !latitude: -2.4241
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Baía de São Marcos (Banco da Cerca), Maranhão, Brazil Current
 +00:00 :UTC
-0.4650 knots
+-0.4650 knots
 x 0 0
 x 0 0
-K2              0.2803  87.03
-L2              0.1548  47.30
+K2              0.2803  267.03
+L2              0.1548  227.30
 x 0 0
-M2              4.0536  46.49
+M2              4.0536  226.49
 x 0 0
-M4              0.3352  44.32
-M6              0.2125  196.10
-M8              0.0844  68.16
-N2              0.6978  31.67
-2N2             0.1089  14.98
+M4              0.3352  224.32
+M6              0.2125  16.10
+M8              0.0844  248.16
+N2              0.6978  211.67
+2N2             0.1089  194.98
 x 0 0
 x 0 0
 x 0 0
@@ -29683,22 +29687,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              1.0529  86.15
-S4              0.0138  146.26
+S2              1.0529  266.15
+S4              0.0138  326.26
 x 0 0
-T2              0.0403  48.68
-LDA2            0.0308  71.36
-MU2             0.2224  188.72
-NU2             0.1398  31.89
+T2              0.0403  228.68
+LDA2            0.0308  251.36
+MU2             0.2224  8.72
+NU2             0.1398  211.89
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1004  26.64
-MS4             0.1439  96.32
+MN4             0.1004  206.64
+MS4             0.1439  276.32
 x 0 0
 x 0 0
-MSF             0.0728  61.82
-MM              0.0629  26.31
+MSF             0.0728  241.82
+MM              0.0629  206.31
 x 0 0
 x 0 0
 x 0 0
@@ -29710,8 +29714,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0869  184.94
-2MS6            0.1685  238.26
+2MN6            0.0869  4.94
+2MS6            0.1685  58.26
 x 0 0
 x 0 0
 x 0 0
@@ -29731,18 +29735,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0367  98.60
+MK4             0.0367  278.60
 x 0 0
 x 0 0
-EPS2            0.0073  211.22
+EPS2            0.0073  31.22
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0114  313.77
-MSN6            0.0290  223.81
+MSN2            0.0114  133.77
+MSN6            0.0290  43.81
 x 0 0
 x 0 0
 x 0 0
@@ -29757,7 +29761,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0115  63.68
+SN4             0.0115  243.68
 x 0 0
 x 0 0
 x 0 0
@@ -29848,7 +29852,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9917, RMS error = 0.1309 knots
-# Major axis: 39.8 deg true
+# Major axis: 219.8 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -29857,7 +29861,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 39.8
+# major_axis_deg_true: 219.8
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 2.2
 # time_correction_min: 0
@@ -29865,21 +29869,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.3039
 # !latitude: -2.4498
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Baía de São Marcos (Rota Aconselhada), Maranhão, Brazil Current
 +00:00 :UTC
--0.2525 knots
+0.2525 knots
 x 0 0
 x 0 0
-K2              0.1359  57.07
-L2              0.0758  19.85
+K2              0.1359  237.07
+L2              0.0758  199.85
 x 0 0
-M2              1.9539  17.20
+M2              1.9539  197.20
 x 0 0
-M4              0.2399  333.94
-M6              0.0531  281.79
-M8              0.0471  111.26
-N2              0.3351  2.52
-2N2             0.0495  343.53
+M4              0.2399  153.94
+M6              0.0531  101.79
+M8              0.0471  291.26
+N2              0.3351  182.52
+2N2             0.0495  163.53
 x 0 0
 x 0 0
 x 0 0
@@ -29887,22 +29892,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5108  56.33
-S4              0.0080  68.47
+S2              0.5108  236.33
+S4              0.0080  248.47
 x 0 0
-T2              0.0196  18.59
-LDA2            0.0151  43.26
-MU2             0.1012  155.42
-NU2             0.0664  2.10
+T2              0.0196  198.59
+LDA2            0.0151  223.26
+MU2             0.1012  335.42
+NU2             0.0664  182.10
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0740  319.30
-MS4             0.0971  21.10
+MN4             0.0740  139.30
+MS4             0.0971  201.10
 x 0 0
 x 0 0
-MSF             0.0516  206.51
-MM              0.0293  193.30
+MSF             0.0516  26.51
+MM              0.0293  13.30
 x 0 0
 x 0 0
 x 0 0
@@ -29914,8 +29919,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0232  279.68
-2MS6            0.0400  306.02
+2MN6            0.0232  99.68
+2MS6            0.0400  126.02
 x 0 0
 x 0 0
 x 0 0
@@ -29935,18 +29940,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0248  22.79
+MK4             0.0248  202.79
 x 0 0
 x 0 0
-EPS2            0.0021  140.05
+EPS2            0.0021  320.05
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0068  289.07
-MSN6            0.0072  300.81
+MSN2            0.0068  109.07
+MSN6            0.0072  120.81
 x 0 0
 x 0 0
 x 0 0
@@ -29961,7 +29966,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0085  353.38
+SN4             0.0085  173.38
 x 0 0
 x 0 0
 x 0 0
@@ -30052,7 +30057,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9925, RMS error = 0.1303 knots
-# Major axis: 55.6 deg true
+# Major axis: 235.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -30061,7 +30066,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 55.6
+# major_axis_deg_true: 235.6
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 2.3
 # time_correction_min: 0
@@ -30069,21 +30074,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.3218
 # !latitude: -2.4783
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Banco do Cotovelo (Baía de São Marcos), Maranhão, Brazil Current
 +00:00 :UTC
--0.0556 knots
+0.0556 knots
 x 0 0
 x 0 0
-K2              0.1421  56.28
-L2              0.0794  18.46
+K2              0.1421  236.28
+L2              0.0794  198.46
 x 0 0
-M2              2.0465  16.64
+M2              2.0465  196.64
 x 0 0
-M4              0.1687  291.03
-M6              0.1628  303.06
-M8              0.0257  163.65
-N2              0.3513  2.13
-2N2             0.0524  344.48
+M4              0.1687  111.03
+M6              0.1628  123.06
+M8              0.0257  343.65
+N2              0.3513  182.13
+2N2             0.0524  164.48
 x 0 0
 x 0 0
 x 0 0
@@ -30091,22 +30097,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5341  55.51
-S4              0.0036  14.88
+S2              0.5341  235.51
+S4              0.0036  194.88
 x 0 0
-T2              0.0205  17.79
-LDA2            0.0158  42.25
-MU2             0.1064  156.87
-NU2             0.0697  2.00
+T2              0.0205  197.79
+LDA2            0.0158  222.25
+MU2             0.1064  336.87
+NU2             0.0697  182.00
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0555  279.12
-MS4             0.0577  332.54
+MN4             0.0555  99.12
+MS4             0.0577  152.54
 x 0 0
 x 0 0
-MSF             0.0201  177.36
-MM              0.0064  163.02
+MSF             0.0201  357.36
+MM              0.0064  343.02
 x 0 0
 x 0 0
 x 0 0
@@ -30118,8 +30124,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0706  295.37
-2MS6            0.1194  337.94
+2MN6            0.0706  115.37
+2MS6            0.1194  157.94
 x 0 0
 x 0 0
 x 0 0
@@ -30139,18 +30145,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0145  333.35
+MK4             0.0145  153.35
 x 0 0
 x 0 0
-EPS2            0.0022  161.56
+EPS2            0.0022  341.56
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0068  285.38
-MSN6            0.0221  327.17
+MSN2            0.0068  105.38
+MSN6            0.0221  147.17
 x 0 0
 x 0 0
 x 0 0
@@ -30165,7 +30171,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0057  308.44
+SN4             0.0057  128.44
 x 0 0
 x 0 0
 x 0 0
@@ -30256,7 +30262,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9875, RMS error = 0.1682 knots
-# Major axis: 47.0 deg true
+# Major axis: 227.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -30265,7 +30271,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 47.0
+# major_axis_deg_true: 227.0
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 2.4
 # time_correction_min: 0
@@ -30273,21 +30279,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.3340
 # !latitude: -2.4992
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Ponta d'Areia (Baía de São Marcos), Maranhão, Brazil Current
 +00:00 :UTC
-0.0450 knots
+-0.0450 knots
 x 0 0
 x 0 0
-K2              0.1408  48.23
-L2              0.0790  11.15
+K2              0.1408  228.23
+L2              0.0790  191.15
 x 0 0
-M2              2.0556  7.78
+M2              2.0556  187.78
 x 0 0
-M4              0.1039  101.90
-M6              0.1234  212.23
-M8              0.0952  289.46
-N2              0.3551  352.77
-2N2             0.0529  332.73
+M4              0.1039  281.90
+M6              0.1234  32.23
+M8              0.0952  109.46
+N2              0.3551  172.77
+2N2             0.0529  152.73
 x 0 0
 x 0 0
 x 0 0
@@ -30295,22 +30302,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5301  47.49
-S4              0.0069  189.96
+S2              0.5301  227.49
+S4              0.0069  9.96
 x 0 0
-T2              0.0203  9.40
-LDA2            0.0158  34.37
-MU2             0.1085  144.06
-NU2             0.0703  352.14
+T2              0.0203  189.40
+LDA2            0.0158  214.37
+MU2             0.1085  324.06
+NU2             0.0703  172.14
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0253  85.98
-MS4             0.0610  146.51
+MN4             0.0253  265.98
+MS4             0.0610  326.51
 x 0 0
 x 0 0
-MSF             0.0209  89.38
-MM              0.0061  77.45
+MSF             0.0209  269.38
+MM              0.0061  257.45
 x 0 0
 x 0 0
 x 0 0
@@ -30322,8 +30329,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0514  200.61
-2MS6            0.0961  253.70
+2MN6            0.0514  20.61
+2MS6            0.0961  73.70
 x 0 0
 x 0 0
 x 0 0
@@ -30343,18 +30350,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0158  147.72
+MK4             0.0158  327.72
 x 0 0
 x 0 0
-EPS2            0.0024  124.44
+EPS2            0.0024  304.44
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0076  284.01
-MSN6            0.0169  238.86
+MSN2            0.0076  104.01
+MSN6            0.0169  58.86
 x 0 0
 x 0 0
 x 0 0
@@ -30369,7 +30376,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0042  119.93
+SN4             0.0042  299.93
 x 0 0
 x 0 0
 x 0 0
@@ -30460,7 +30467,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9726, RMS error = 0.1370 knots
-# Major axis: 71.9 deg true
+# Major axis: 251.9 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -30469,7 +30476,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 71.9
+# major_axis_deg_true: 251.9
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 2.5
 # time_correction_min: 0
@@ -30477,21 +30484,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.3499
 # !latitude: -2.5055
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Pedra do Severino (Baía de São Marcos), Maranhão, Brazil Current
 +00:00 :UTC
--0.2641 knots
+0.2641 knots
 x 0 0
 x 0 0
-K2              0.0776  47.08
-L2              0.0430  10.98
+K2              0.0776  227.08
+L2              0.0430  190.98
 x 0 0
-M2              1.1127  7.32
+M2              1.1127  187.32
 x 0 0
-M4              0.1106  278.30
-M6              0.0831  101.24
-M8              0.0821  136.95
-N2              0.1907  352.61
-2N2             0.0280  331.72
+M4              0.1106  98.30
+M6              0.0831  281.24
+M8              0.0821  316.95
+N2              0.1907  172.61
+2N2             0.0280  151.72
 x 0 0
 x 0 0
 x 0 0
@@ -30499,22 +30507,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2916  46.42
-S4              0.0027  337.53
+S2              0.2916  226.42
+S4              0.0027  157.53
 x 0 0
-T2              0.0112  8.55
-LDA2            0.0086  34.14
-MU2             0.0579  142.81
-NU2             0.0378  351.74
+T2              0.0112  188.55
+LDA2            0.0086  214.14
+MU2             0.0579  322.81
+NU2             0.0378  171.74
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0359  269.38
-MS4             0.0390  312.14
+MN4             0.0359  89.38
+MS4             0.0390  132.14
 x 0 0
 x 0 0
-MSF             0.0495  212.81
-MM              0.0317  196.55
+MSF             0.0495  32.81
+MM              0.0317  16.55
 x 0 0
 x 0 0
 x 0 0
@@ -30526,8 +30534,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0369  88.73
-2MS6            0.0586  145.89
+2MN6            0.0369  268.73
+2MS6            0.0586  325.89
 x 0 0
 x 0 0
 x 0 0
@@ -30547,18 +30555,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0099  313.05
+MK4             0.0099  133.05
 x 0 0
 x 0 0
-EPS2            0.0015  110.30
+EPS2            0.0015  290.30
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0042  284.17
-MSN6            0.0111  129.58
+MSN2            0.0042  104.17
+MSN6            0.0111  309.58
 x 0 0
 x 0 0
 x 0 0
@@ -30573,7 +30581,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0036  293.27
+SN4             0.0036  113.27
 x 0 0
 x 0 0
 x 0 0
@@ -30664,7 +30672,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9667, RMS error = 0.3961 knots
-# Major axis: 36.3 deg true
+# Major axis: 216.3 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -30673,7 +30681,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 36.3
+# major_axis_deg_true: 216.3
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 2.6
 # time_correction_min: 0
@@ -30681,21 +30689,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.3790
 # !latitude: -2.5132
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Ilha do Medo (Baía de São Marcos), Maranhão, Brazil Current
 +00:00 :UTC
--0.4084 knots
+0.4084 knots
 x 0 0
 x 0 0
-K2              0.1939  61.29
-L2              0.1093  23.32
+K2              0.1939  241.29
+L2              0.1093  203.32
 x 0 0
-M2              2.8356  22.06
+M2              2.8356  202.06
 x 0 0
-M4              0.1612  281.21
-M6              0.6446  250.19
-M8              0.1220  338.20
-N2              0.4901  7.78
-2N2             0.0743  350.77
+M4              0.1612  101.21
+M6              0.6446  70.19
+M8              0.1220  158.20
+N2              0.4901  187.78
+2N2             0.0743  170.77
 x 0 0
 x 0 0
 x 0 0
@@ -30703,22 +30712,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.7302  60.57
-S4              0.0047  14.25
+S2              0.7302  240.57
+S4              0.0047  194.25
 x 0 0
-T2              0.0279  22.74
-LDA2            0.0218  46.94
-MU2             0.1504  163.04
-NU2             0.0973  7.59
+T2              0.0279  202.74
+LDA2            0.0218  226.94
+MU2             0.1504  343.04
+NU2             0.0973  187.59
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0509  267.87
-MS4             0.0631  326.08
+MN4             0.0509  87.87
+MS4             0.0631  146.08
 x 0 0
 x 0 0
-MSF             0.0915  207.39
-MM              0.0438  193.02
+MSF             0.0915  27.39
+MM              0.0438  13.02
 x 0 0
 x 0 0
 x 0 0
@@ -30730,8 +30739,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.2792  240.68
-2MS6            0.4700  288.60
+2MN6            0.2792  60.68
+2MS6            0.4700  108.60
 x 0 0
 x 0 0
 x 0 0
@@ -30751,18 +30760,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0164  327.18
+MK4             0.0164  147.18
 x 0 0
 x 0 0
-EPS2            0.0034  179.98
+EPS2            0.0034  359.98
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0096  290.12
-MSN6            0.0868  275.92
+MSN2            0.0096  110.12
+MSN6            0.0868  95.92
 x 0 0
 x 0 0
 x 0 0
@@ -30777,7 +30786,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0062  299.19
+SN4             0.0062  119.19
 x 0 0
 x 0 0
 x 0 0
@@ -30868,7 +30877,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9879, RMS error = 0.2753 knots
-# Major axis: 56.4 deg true
+# Major axis: 236.4 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -30877,7 +30886,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 56.4
+# major_axis_deg_true: 236.4
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 2.7
 # time_correction_min: 0
@@ -30885,21 +30894,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.3717
 # !latitude: -2.5331
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Canal do Boqueirão (Baía de São Marcos), Maranhão, Brazil Current
 +00:00 :UTC
--0.0128 knots
+0.0128 knots
 x 0 0
 x 0 0
-K2              0.2330  59.69
-L2              0.1312  21.71
+K2              0.2330  239.69
+L2              0.1312  201.71
 x 0 0
-M2              3.3993  19.64
+M2              3.3993  199.64
 x 0 0
-M4              0.3607  123.04
-M6              0.1852  104.84
-M8              0.0988  354.59
-N2              0.5868  4.92
-2N2             0.0882  346.93
+M4              0.3607  303.04
+M6              0.1852  284.84
+M8              0.0988  174.59
+N2              0.5868  184.92
+2N2             0.0882  166.93
 x 0 0
 x 0 0
 x 0 0
@@ -30907,22 +30917,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.8772  58.93
-S4              0.0212  201.04
+S2              0.8772  238.93
+S4              0.0212  21.04
 x 0 0
-T2              0.0335  21.10
-LDA2            0.0262  45.17
-MU2             0.1790  159.11
-NU2             0.1164  4.69
+T2              0.0335  201.10
+LDA2            0.0262  225.17
+MU2             0.1790  339.11
+NU2             0.1164  184.69
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0927  111.82
-MS4             0.1963  162.78
+MN4             0.0927  291.82
+MS4             0.1963  342.78
 x 0 0
 x 0 0
-MSF             0.0267  145.57
-MM              0.0075  108.46
+MSF             0.0267  325.57
+MM              0.0075  288.46
 x 0 0
 x 0 0
 x 0 0
@@ -30934,8 +30944,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0823  91.34
-2MS6            0.1299  150.33
+2MN6            0.0823  271.34
+2MS6            0.1299  330.33
 x 0 0
 x 0 0
 x 0 0
@@ -30955,18 +30965,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0510  163.90
+MK4             0.0510  343.90
 x 0 0
 x 0 0
-EPS2            0.0037  167.50
+EPS2            0.0037  347.50
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0116  289.79
-MSN6            0.0245  131.85
+MSN2            0.0116  109.79
+MSN6            0.0245  311.85
 x 0 0
 x 0 0
 x 0 0
@@ -30981,7 +30991,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0142  140.26
+SN4             0.0142  320.26
 x 0 0
 x 0 0
 x 0 0
@@ -31684,7 +31694,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9895, RMS error = 0.1657 knots
-# Major axis: 14.0 deg true
+# Major axis: 194.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -31693,7 +31703,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 14.0
+# major_axis_deg_true: 194.0
 # confidence: 5
 # chm_ccm: ccm-baia-sao-marcos.pdf point 2.12
 # time_correction_min: 0
@@ -31701,21 +31711,22 @@ x 0 0
 # !units: knots
 # !longitude: -44.3863
 # !latitude: -2.5459
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Cabeço Mearim (Baía de São Marcos), Maranhão, Brazil Current
 +00:00 :UTC
--0.0519 knots
+0.0519 knots
 x 0 0
 x 0 0
-K2              0.1523  83.13
-L2              0.0843  43.81
+K2              0.1523  263.13
+L2              0.0843  223.81
 x 0 0
-M2              2.2063  43.64
+M2              2.2063  223.64
 x 0 0
-M4              0.1137  307.36
-M6              0.1706  346.96
-M8              0.0770  96.72
-N2              0.3801  29.35
-2N2             0.0594  13.35
+M4              0.1137  127.36
+M6              0.1706  166.96
+M8              0.0770  276.72
+N2              0.3801  209.35
+2N2             0.0594  193.35
 x 0 0
 x 0 0
 x 0 0
@@ -31723,22 +31734,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5725  82.30
-S4              0.0011  49.93
+S2              0.5725  262.30
+S4              0.0011  229.93
 x 0 0
-T2              0.0220  44.78
-LDA2            0.0168  68.15
-MU2             0.1212  187.16
-NU2             0.0762  29.61
+T2              0.0220  224.78
+LDA2            0.0168  248.15
+MU2             0.1212  7.16
+NU2             0.0762  209.61
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0401  295.19
-MS4             0.0311  347.59
+MN4             0.0401  115.19
+MS4             0.0311  167.59
 x 0 0
 x 0 0
-MSF             0.0286  193.99
-MM              0.0028  112.69
+MSF             0.0286  13.99
+MM              0.0028  292.69
 x 0 0
 x 0 0
 x 0 0
@@ -31750,8 +31761,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0763  338.58
-2MS6            0.1196  22.27
+2MN6            0.0763  158.58
+2MS6            0.1196  202.27
 x 0 0
 x 0 0
 x 0 0
@@ -31771,18 +31782,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0076  347.24
+MK4             0.0076  167.24
 x 0 0
 x 0 0
-EPS2            0.0040  211.20
+EPS2            0.0040  31.20
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0060  308.73
-MSN6            0.0231  11.05
+MSN2            0.0060  128.73
+MSN6            0.0231  191.05
 x 0 0
 x 0 0
 x 0 0
@@ -31797,7 +31808,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0038  321.32
+SN4             0.0038  141.32
 x 0 0
 x 0 0
 x 0 0
@@ -32092,7 +32103,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9151, RMS error = 0.1059 knots
-# Major axis: 157.8 deg true
+# Major axis: 337.8 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -32101,7 +32112,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 157.8
+# major_axis_deg_true: 337.8
 # confidence: 5
 # chm_ccm: ccm-baia-de-guanabara.pdf point 1.2
 # time_correction_min: 0
@@ -32109,21 +32120,22 @@ x 0 0
 # !units: knots
 # !longitude: -43.1646
 # !latitude: -22.8791
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Baía de Guanabara (Ponte Rio-Niterói), Rio de Janeiro, Brazil Current
 +00:00 :UTC
-0.0457 knots
+-0.0457 knots
 x 0 0
 x 0 0
-K2              0.0741  285.33
-L2              0.0128  301.60
+K2              0.0741  105.33
+L2              0.0128  121.60
 x 0 0
-M2              0.3784  278.66
+M2              0.3784  98.66
 x 0 0
-M4              0.1216  15.73
-M6              0.0272  259.13
-M8              0.0089  21.93
-N2              0.0268  315.74
-2N2             0.0247  349.90
+M4              0.1216  195.73
+M6              0.0272  79.13
+M8              0.0089  201.93
+N2              0.0268  135.74
+2N2             0.0247  169.90
 x 0 0
 x 0 0
 x 0 0
@@ -32131,22 +32143,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2420  291.43
-S4              0.0288  11.29
+S2              0.2420  111.43
+S4              0.0288  191.29
 x 0 0
-T2              0.0077  315.03
-LDA2            0.0074  111.39
-MU2             0.0257  260.69
-NU2             0.0058  319.62
+T2              0.0077  135.03
+LDA2            0.0074  291.39
+MU2             0.0257  80.69
+NU2             0.0058  139.62
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0105  283.63
-MS4             0.1283  54.77
+MN4             0.0105  103.63
+MS4             0.1283  234.77
 x 0 0
 x 0 0
-MSF             0.0320  15.62
-MM              0.0034  258.76
+MSF             0.0320  195.62
+MM              0.0034  78.76
 x 0 0
 x 0 0
 x 0 0
@@ -32158,8 +32170,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0036  186.35
-2MS6            0.0542  301.89
+2MN6            0.0036  6.35
+2MS6            0.0542  121.89
 x 0 0
 x 0 0
 x 0 0
@@ -32179,18 +32191,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0407  57.84
+MK4             0.0407  237.84
 x 0 0
 x 0 0
-EPS2            0.0108  161.88
+EPS2            0.0108  341.88
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0107  287.48
-MSN6            0.0047  342.02
+MSN2            0.0107  107.48
+MSN6            0.0047  162.02
 x 0 0
 x 0 0
 x 0 0
@@ -32205,7 +32217,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0236  90.23
+SN4             0.0236  270.23
 x 0 0
 x 0 0
 x 0 0
@@ -32296,7 +32308,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9254, RMS error = 0.1313 knots
-# Major axis: 157.0 deg true
+# Major axis: 337.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -32305,7 +32317,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 157.0
+# major_axis_deg_true: 337.0
 # confidence: 5
 # chm_ccm: ccm-baia-de-guanabara.pdf point 1.3
 # time_correction_min: 0
@@ -32313,21 +32325,22 @@ x 0 0
 # !units: knots
 # !longitude: -43.1323
 # !latitude: -22.9652
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Entrada da Baía de Guanabara, Rio de Janeiro, Brazil Current
 +00:00 :UTC
-0.1853 knots
+-0.1853 knots
 x 0 0
 x 0 0
-K2              0.1013  283.55
-L2              0.0178  301.41
+K2              0.1013  103.55
+L2              0.0178  121.41
 x 0 0
-M2              0.5124  276.80
+M2              0.5124  96.80
 x 0 0
-M4              0.1289  350.46
-M6              0.0249  103.19
-M8              0.0161  344.31
-N2              0.0363  316.80
-2N2             0.0331  349.58
+M4              0.1289  170.46
+M6              0.0249  283.19
+M8              0.0161  164.31
+N2              0.0363  136.80
+2N2             0.0331  169.58
 x 0 0
 x 0 0
 x 0 0
@@ -32335,22 +32348,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.3329  290.08
-S4              0.0360  343.68
+S2              0.3329  110.08
+S4              0.0360  163.68
 x 0 0
-T2              0.0105  315.01
-LDA2            0.0103  101.82
-MU2             0.0385  260.32
-NU2             0.0083  326.18
+T2              0.0105  135.01
+LDA2            0.0103  281.82
+MU2             0.0385  80.32
+NU2             0.0083  146.18
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0143  276.41
-MS4             0.1267  26.32
+MN4             0.0143  96.41
+MS4             0.1267  206.32
 x 0 0
 x 0 0
-MSF             0.1092  13.00
-MM              0.0118  309.89
+MSF             0.1092  193.00
+MM              0.0118  129.89
 x 0 0
 x 0 0
 x 0 0
@@ -32362,8 +32375,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0041  50.27
-2MS6            0.0298  149.99
+2MN6            0.0041  230.27
+2MS6            0.0298  329.99
 x 0 0
 x 0 0
 x 0 0
@@ -32383,18 +32396,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0399  30.18
+MK4             0.0399  210.18
 x 0 0
 x 0 0
-EPS2            0.0147  166.32
+EPS2            0.0147  346.32
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0151  285.54
-MSN6            0.0071  223.03
+MSN2            0.0151  105.54
+MSN6            0.0071  43.03
 x 0 0
 x 0 0
 x 0 0
@@ -32409,7 +32422,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0258  72.48
+SN4             0.0258  252.48
 x 0 0
 x 0 0
 x 0 0
@@ -32500,7 +32513,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9277, RMS error = 0.1195 knots
-# Major axis: 164.7 deg true
+# Major axis: 344.7 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -32509,7 +32522,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 164.7
+# major_axis_deg_true: 344.7
 # confidence: 5
 # chm_ccm: ccm-baia-de-guanabara.pdf point 1.9
 # time_correction_min: 0
@@ -32517,21 +32530,22 @@ x 0 0
 # !units: knots
 # !longitude: -43.1495
 # !latitude: -22.9202
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Baía de Guanabara (Ilha de Villegagnon), Rio de Janeiro, Brazil Current
 +00:00 :UTC
-0.1818 knots
+-0.1818 knots
 x 0 0
 x 0 0
-K2              0.0916  274.24
-L2              0.0154  290.44
+K2              0.0916  94.24
+L2              0.0154  110.44
 x 0 0
-M2              0.4574  266.84
+M2              0.4574  86.84
 x 0 0
-M4              0.1460  27.12
-M6              0.0171  147.74
-M8              0.0079  6.57
-N2              0.0324  306.32
-2N2             0.0302  336.23
+M4              0.1460  207.12
+M6              0.0171  327.74
+M8              0.0079  186.57
+N2              0.0324  126.32
+2N2             0.0302  156.23
 x 0 0
 x 0 0
 x 0 0
@@ -32539,22 +32553,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2979  280.65
-S4              0.0304  16.14
+S2              0.2979  100.65
+S4              0.0304  196.14
 x 0 0
-T2              0.0090  303.53
-LDA2            0.0092  92.61
-MU2             0.0327  251.09
-NU2             0.0062  315.07
+T2              0.0090  123.53
+LDA2            0.0092  272.61
+MU2             0.0327  71.09
+NU2             0.0062  135.07
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0128  273.97
-MS4             0.1678  66.70
+MN4             0.0128  93.97
+MS4             0.1678  246.70
 x 0 0
 x 0 0
-MSF             0.1016  13.32
-MM              0.0122  323.30
+MSF             0.1016  193.32
+MM              0.0122  143.30
 x 0 0
 x 0 0
 x 0 0
@@ -32566,8 +32580,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0043  97.06
-2MS6            0.0184  204.26
+2MN6            0.0043  277.06
+2MS6            0.0184  24.26
 x 0 0
 x 0 0
 x 0 0
@@ -32587,18 +32601,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0533  68.00
+MK4             0.0533  248.00
 x 0 0
 x 0 0
-EPS2            0.0128  151.72
+EPS2            0.0128  331.72
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0129  273.94
-MSN6            0.0056  261.35
+MSN2            0.0129  93.94
+MSN6            0.0056  81.35
 x 0 0
 x 0 0
 x 0 0
@@ -32613,7 +32627,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0304  91.62
+SN4             0.0304  271.62
 x 0 0
 x 0 0
 x 0 0
@@ -32908,7 +32922,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9105, RMS error = 0.1355 knots
-# Major axis: 158.9 deg true
+# Major axis: 338.9 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -32917,7 +32931,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 158.9
+# major_axis_deg_true: 338.9
 # confidence: 5
 # chm_ccm: ccm-porto-de-santos.pdf point 1.3
 # time_correction_min: 0
@@ -32925,21 +32939,22 @@ x 0 0
 # !units: knots
 # !longitude: -46.3085
 # !latitude: -23.9499
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Canal do Porto de Santos (Macuco), São Paulo, Brazil Current
 +00:00 :UTC
-0.0609 knots
+-0.0609 knots
 x 0 0
 x 0 0
-K2              0.0912  295.45
-L2              0.0006  80.62
+K2              0.0912  115.45
+L2              0.0006  260.62
 x 0 0
-M2              0.4740  291.11
+M2              0.4740  111.11
 x 0 0
-M4              0.0899  70.35
-M6              0.0180  292.08
-M8              0.0005  354.85
-N2              0.0684  358.35
-2N2             0.0136  33.06
+M4              0.0899  250.35
+M6              0.0180  112.08
+M8              0.0005  174.85
+N2              0.0684  178.35
+2N2             0.0136  213.06
 x 0 0
 x 0 0
 x 0 0
@@ -32947,22 +32962,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.3335  293.04
-S4              0.0331  61.91
+S2              0.3335  113.04
+S4              0.0331  241.91
 x 0 0
-T2              0.0206  294.56
-LDA2            0.0156  246.48
-MU2             0.0118  170.42
-NU2             0.0164  339.58
+T2              0.0206  114.56
+LDA2            0.0156  66.48
+MU2             0.0118  350.42
+NU2             0.0164  159.58
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0282  149.81
-MS4             0.1299  65.84
+MN4             0.0282  329.81
+MS4             0.1299  245.84
 x 0 0
 x 0 0
-MSF             0.0325  20.08
-MM              0.0087  319.98
+MSF             0.0325  200.08
+MM              0.0087  139.98
 x 0 0
 x 0 0
 x 0 0
@@ -32974,8 +32989,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0098  23.45
-2MS6            0.0677  303.58
+2MN6            0.0098  203.45
+2MS6            0.0677  123.58
 x 0 0
 x 0 0
 x 0 0
@@ -32995,18 +33010,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0352  68.68
+MK4             0.0352  248.68
 x 0 0
 x 0 0
-EPS2            0.0108  221.79
+EPS2            0.0108  41.79
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0095  103.83
-MSN6            0.0165  24.62
+MSN2            0.0095  283.83
+MSN6            0.0165  204.62
 x 0 0
 x 0 0
 x 0 0
@@ -33021,7 +33036,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0174  157.84
+SN4             0.0174  337.84
 x 0 0
 x 0 0
 x 0 0
@@ -33112,7 +33127,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9034, RMS error = 0.1578 knots
-# Major axis: 163.5 deg true
+# Major axis: 343.5 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -33121,7 +33136,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 163.5
+# major_axis_deg_true: 343.5
 # confidence: 5
 # chm_ccm: ccm-porto-de-santos.pdf point 1.4
 # time_correction_min: 0
@@ -33129,21 +33144,22 @@ x 0 0
 # !units: knots
 # !longitude: -46.3115
 # !latitude: -23.9369
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Canal do Porto de Santos (Ilha Barnabé), São Paulo, Brazil Current
 +00:00 :UTC
-0.0322 knots
+-0.0322 knots
 x 0 0
 x 0 0
-K2              0.1028  288.68
-L2              0.0016  347.91
+K2              0.1028  108.68
+L2              0.0016  167.91
 x 0 0
-M2              0.5300  284.08
+M2              0.5300  104.08
 x 0 0
-M4              0.1053  98.43
-M6              0.0143  312.14
-M8              0.0028  0.55
-N2              0.0755  352.02
-2N2             0.0158  23.95
+M4              0.1053  278.43
+M6              0.0143  132.14
+M8              0.0028  180.55
+N2              0.0755  172.02
+2N2             0.0158  203.95
 x 0 0
 x 0 0
 x 0 0
@@ -33151,22 +33167,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.3758  286.03
-S4              0.0340  94.05
+S2              0.3758  106.03
+S4              0.0340  274.05
 x 0 0
-T2              0.0229  287.38
-LDA2            0.0174  241.18
-MU2             0.0108  162.59
-NU2             0.0189  333.41
+T2              0.0229  107.38
+LDA2            0.0174  61.18
+MU2             0.0108  342.59
+NU2             0.0189  153.41
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0336  172.26
-MS4             0.1435  98.04
+MN4             0.0336  352.26
+MS4             0.1435  278.04
 x 0 0
 x 0 0
-MSF             0.0206  27.80
-MM              0.0053  319.04
+MSF             0.0206  207.80
+MM              0.0053  139.04
 x 0 0
 x 0 0
 x 0 0
@@ -33178,8 +33194,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0113  46.72
-2MS6            0.0528  322.97
+2MN6            0.0113  226.72
+2MS6            0.0528  142.97
 x 0 0
 x 0 0
 x 0 0
@@ -33199,18 +33215,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0384  99.91
+MK4             0.0384  279.91
 x 0 0
 x 0 0
-EPS2            0.0103  218.17
+EPS2            0.0103  38.17
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0100  102.13
-MSN6            0.0128  52.13
+MSN2            0.0100  282.13
+MSN6            0.0128  232.13
 x 0 0
 x 0 0
 x 0 0
@@ -33225,7 +33241,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0200  186.44
+SN4             0.0200  6.44
 x 0 0
 x 0 0
 x 0 0
@@ -33316,7 +33332,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.7394, RMS error = 0.2042 knots
-# Major axis: 90.4 deg true
+# Major axis: 270.4 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -33325,7 +33341,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 90.4
+# major_axis_deg_true: 270.4
 # confidence: 5
 # chm_ccm: ccm-porto-de-paranagua.pdf point 1.2
 # time_correction_min: 0
@@ -33333,21 +33349,22 @@ x 0 0
 # !units: knots
 # !longitude: -48.5225
 # !latitude: -25.4963
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Porto de Paranaguá, Paraná, Brazil Current
 +00:00 :UTC
--0.1153 knots
+0.1153 knots
 x 0 0
 x 0 0
-K2              0.0564  274.06
-L2              0.0196  251.28
+K2              0.0564  94.06
+L2              0.0196  71.28
 x 0 0
-M2              0.3568  277.69
+M2              0.3568  97.69
 x 0 0
-M4              0.2035  220.87
-M6              0.0403  306.53
-M8              0.0197  20.36
-N2              0.0536  329.25
-2N2             0.0083  27.44
+M4              0.2035  40.87
+M6              0.0403  126.53
+M8              0.0197  200.36
+N2              0.0536  149.25
+2N2             0.0083  207.44
 x 0 0
 x 0 0
 x 0 0
@@ -33355,22 +33372,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2090  281.31
-S4              0.0391  212.03
+S2              0.2090  101.31
+S4              0.0391  32.03
 x 0 0
-T2              0.0082  314.81
-LDA2            0.0217  268.10
-MU2             0.0661  294.49
-NU2             0.0094  177.65
+T2              0.0082  134.81
+LDA2            0.0217  88.10
+MU2             0.0661  114.49
+NU2             0.0094  357.65
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0620  234.37
-MS4             0.1002  244.98
+MN4             0.0620  54.37
+MS4             0.1002  64.98
 x 0 0
 x 0 0
-MSF             0.0624  187.11
-MM              0.0017  164.70
+MSF             0.0624  7.11
+MM              0.0017  344.70
 x 0 0
 x 0 0
 x 0 0
@@ -33382,8 +33399,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0178  33.97
-2MS6            0.0131  226.07
+2MN6            0.0178  213.97
+2MS6            0.0131  46.07
 x 0 0
 x 0 0
 x 0 0
@@ -33403,18 +33420,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0283  231.54
+MK4             0.0283  51.54
 x 0 0
 x 0 0
-EPS2            0.0253  277.10
+EPS2            0.0253  97.10
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0175  43.12
-MSN6            0.0155  242.26
+MSN2            0.0175  223.12
+MSN6            0.0155  62.26
 x 0 0
 x 0 0
 x 0 0
@@ -33429,7 +33446,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0386  324.61
+SN4             0.0386  144.61
 x 0 0
 x 0 0
 x 0 0
@@ -33520,7 +33537,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.7504, RMS error = 0.5052 knots
-# Major axis: 129.2 deg true
+# Major axis: 309.2 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -33529,7 +33546,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 129.2
+# major_axis_deg_true: 309.2
 # confidence: 5
 # chm_ccm: ccm-porto-de-paranagua.pdf point 1.3
 # time_correction_min: 0
@@ -33537,21 +33554,22 @@ x 0 0
 # !units: knots
 # !longitude: -48.3446
 # !latitude: -25.5460
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Baía de Paranaguá (Ilha do Mel), Paraná, Brazil Current
 +00:00 :UTC
-0.0091 knots
+-0.0091 knots
 x 0 0
 x 0 0
-K2              0.1488  293.22
-L2              0.0582  271.88
+K2              0.1488  113.22
+L2              0.0582  91.88
 x 0 0
-M2              0.9492  297.28
+M2              0.9492  117.28
 x 0 0
-M4              0.4697  204.91
-M6              0.0610  319.87
-M8              0.0295  343.15
-N2              0.1492  347.02
-2N2             0.0196  36.82
+M4              0.4697  24.91
+M6              0.0610  139.87
+M8              0.0295  163.15
+N2              0.1492  167.02
+2N2             0.0196  216.82
 x 0 0
 x 0 0
 x 0 0
@@ -33559,22 +33577,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5669  301.87
-S4              0.0981  190.13
+S2              0.5669  121.87
+S4              0.0981  10.13
 x 0 0
-T2              0.0227  333.00
-LDA2            0.0626  279.16
-MU2             0.1775  324.96
-NU2             0.0263  210.53
+T2              0.0227  153.00
+LDA2            0.0626  99.16
+MU2             0.1775  144.96
+NU2             0.0263  30.53
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1557  215.60
-MS4             0.1529  240.84
+MN4             0.1557  35.60
+MS4             0.1529  60.84
 x 0 0
 x 0 0
-MSF             0.0346  344.74
-MM              0.0101  207.64
+MSF             0.0346  164.74
+MM              0.0101  27.64
 x 0 0
 x 0 0
 x 0 0
@@ -33586,8 +33604,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0381  54.62
-2MS6            0.0423  164.64
+2MN6            0.0381  234.62
+2MS6            0.0423  344.64
 x 0 0
 x 0 0
 x 0 0
@@ -33607,18 +33625,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0454  215.19
+MK4             0.0454  35.19
 x 0 0
 x 0 0
-EPS2            0.0594  293.55
+EPS2            0.0594  113.55
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0436  66.60
-MSN6            0.0363  231.77
+MSN2            0.0436  246.60
+MSN6            0.0363  51.77
 x 0 0
 x 0 0
 x 0 0
@@ -33633,7 +33651,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0963  323.89
+SN4             0.0963  143.89
 x 0 0
 x 0 0
 x 0 0
@@ -33724,7 +33742,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9594, RMS error = 0.1113 knots
-# Major axis: 177.4 deg true
+# Major axis: 357.4 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -33733,7 +33751,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 177.4
+# major_axis_deg_true: 357.4
 # confidence: 5
 # chm_ccm: ccm-porto-de-salvador.pdf point 1.1
 # time_correction_min: 0
@@ -33741,21 +33759,22 @@ x 0 0
 # !units: knots
 # !longitude: -38.5682
 # !latitude: -12.9926
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Entrada da Baía de Todos os Santos, Bahia, Brazil Current
 +00:00 :UTC
-0.0320 knots
+-0.0320 knots
 x 0 0
 x 0 0
-K2              0.0616  290.60
-L2              0.0346  276.85
+K2              0.0616  110.60
+L2              0.0346  96.85
 x 0 0
-M2              0.7121  278.78
+M2              0.7121  98.78
 x 0 0
-M4              0.1665  299.55
-M6              0.0623  113.51
-M8              0.0439  351.19
-N2              0.1025  273.08
-2N2             0.0342  264.04
+M4              0.1665  119.55
+M6              0.0623  293.51
+M8              0.0439  171.19
+N2              0.1025  93.08
+2N2             0.0342  84.04
 x 0 0
 x 0 0
 x 0 0
@@ -33763,22 +33782,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2066  298.17
-S4              0.0041  30.05
+S2              0.2066  118.17
+S4              0.0041  210.05
 x 0 0
-T2              0.0116  299.01
-LDA2            0.0175  275.80
-MU2             0.0407  56.51
-NU2             0.0321  268.71
+T2              0.0116  119.01
+LDA2            0.0175  95.80
+MU2             0.0407  236.51
+NU2             0.0321  88.71
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0406  296.89
-MS4             0.0993  318.10
+MN4             0.0406  116.89
+MS4             0.0993  138.10
 x 0 0
 x 0 0
-MSF             0.0099  56.96
-MM              0.0022  39.00
+MSF             0.0099  236.96
+MM              0.0022  219.00
 x 0 0
 x 0 0
 x 0 0
@@ -33790,8 +33809,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0271  109.90
-2MS6            0.0535  130.83
+2MN6            0.0271  289.90
+2MS6            0.0535  310.83
 x 0 0
 x 0 0
 x 0 0
@@ -33811,18 +33830,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0302  311.01
+MK4             0.0302  131.01
 x 0 0
 x 0 0
-EPS2            0.0029  60.26
+EPS2            0.0029  240.26
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0089  134.42
-MSN6            0.0064  144.75
+MSN2            0.0089  314.42
+MSN6            0.0064  324.75
 x 0 0
 x 0 0
 x 0 0
@@ -33837,7 +33856,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0023  6.55
+SN4             0.0023  186.55
 x 0 0
 x 0 0
 x 0 0
@@ -34132,7 +34151,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9712, RMS error = 0.1453 knots
-# Major axis: 82.5 deg true
+# Major axis: 262.5 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -34141,7 +34160,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 82.5
+# major_axis_deg_true: 262.5
 # confidence: 5
 # chm_ccm: ccm-porto-de-vitoria.pdf point 1.2
 # time_correction_min: 0
@@ -34149,21 +34168,22 @@ x 0 0
 # !units: knots
 # !longitude: -40.3260
 # !latitude: -20.3220
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Ilha do Urubu (Porto de Vitória), Espírito Santo, Brazil Current
 +00:00 :UTC
-0.0795 knots
+-0.0795 knots
 x 0 0
 x 0 0
-K2              0.1225  307.19
-L2              0.0721  279.71
+K2              0.1225  127.19
+L2              0.0721  99.71
 x 0 0
-M2              1.1262  291.25
+M2              1.1262  111.25
 x 0 0
-M4              0.0292  176.17
-M6              0.0134  148.27
-M8              0.0071  325.51
-N2              0.1576  297.30
-2N2             0.0591  280.45
+M4              0.0292  356.17
+M6              0.0134  328.27
+M8              0.0071  145.51
+N2              0.1576  117.30
+2N2             0.0591  100.45
 x 0 0
 x 0 0
 x 0 0
@@ -34171,22 +34191,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.4027  305.65
-S4              0.0042  80.77
+S2              0.4027  125.65
+S4              0.0042  260.77
 x 0 0
-T2              0.0251  304.32
-LDA2            0.0178  307.64
-MU2             0.0532  74.03
-NU2             0.0571  281.96
+T2              0.0251  124.32
+LDA2            0.0178  127.64
+MU2             0.0532  254.03
+NU2             0.0571  101.96
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0096  151.16
-MS4             0.0116  196.02
+MN4             0.0096  331.16
+MS4             0.0116  16.02
 x 0 0
 x 0 0
-MSF             0.0426  180.22
-MM              0.0052  183.78
+MSF             0.0426  0.22
+MM              0.0052  3.78
 x 0 0
 x 0 0
 x 0 0
@@ -34198,8 +34218,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0061  157.37
-2MS6            0.0134  181.24
+2MN6            0.0061  337.37
+2MS6            0.0134  1.24
 x 0 0
 x 0 0
 x 0 0
@@ -34219,18 +34239,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0036  221.01
+MK4             0.0036  41.01
 x 0 0
 x 0 0
-EPS2            0.0179  124.32
+EPS2            0.0179  304.32
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0080  128.72
-MSN6            0.0020  155.60
+MSN2            0.0080  308.72
+MSN6            0.0020  335.60
 x 0 0
 x 0 0
 x 0 0
@@ -34245,7 +34265,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0051  108.53
+SN4             0.0051  288.53
 x 0 0
 x 0 0
 x 0 0
@@ -34336,7 +34356,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9682, RMS error = 0.1371 knots
-# Major axis: 83.7 deg true
+# Major axis: 263.7 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -34345,7 +34365,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 83.7
+# major_axis_deg_true: 263.7
 # confidence: 5
 # chm_ccm: ccm-porto-de-vitoria.pdf point 1.3
 # time_correction_min: 0
@@ -34353,21 +34373,22 @@ x 0 0
 # !units: knots
 # !longitude: -40.3382
 # !latitude: -20.3237
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Cais de Paul (Porto de Vitória), Espírito Santo, Brazil Current
 +00:00 :UTC
-0.0685 knots
+-0.0685 knots
 x 0 0
 x 0 0
-K2              0.1120  303.16
-L2              0.0621  273.14
+K2              0.1120  123.16
+L2              0.0621  93.14
 x 0 0
-M2              1.0007  286.27
+M2              1.0007  106.27
 x 0 0
-M4              0.0831  185.00
-M6              0.0277  35.79
-M8              0.0061  283.69
-N2              0.1434  292.63
-2N2             0.0476  273.40
+M4              0.0831  5.00
+M6              0.0277  215.79
+M8              0.0061  103.69
+N2              0.1434  112.63
+2N2             0.0476  93.40
 x 0 0
 x 0 0
 x 0 0
@@ -34375,22 +34396,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.3729  302.14
-S4              0.0044  61.31
+S2              0.3729  122.14
+S4              0.0044  241.31
 x 0 0
-T2              0.0230  300.64
-LDA2            0.0136  297.88
-MU2             0.0399  43.84
-NU2             0.0471  275.61
+T2              0.0230  120.64
+LDA2            0.0136  117.88
+MU2             0.0399  223.84
+NU2             0.0471  95.61
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0205  182.24
-MS4             0.0483  203.06
+MN4             0.0205  2.24
+MS4             0.0483  23.06
 x 0 0
 x 0 0
-MSF             0.0434  179.85
-MM              0.0063  182.29
+MSF             0.0434  359.85
+MM              0.0063  2.29
 x 0 0
 x 0 0
 x 0 0
@@ -34402,8 +34423,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0121  47.05
-2MS6            0.0320  48.12
+2MN6            0.0121  227.05
+2MS6            0.0320  228.12
 x 0 0
 x 0 0
 x 0 0
@@ -34423,18 +34444,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0161  210.35
+MK4             0.0161  30.35
 x 0 0
 x 0 0
-EPS2            0.0143  112.29
+EPS2            0.0143  292.29
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0070  116.93
-MSN6            0.0057  81.32
+MSN2            0.0070  296.93
+MSN6            0.0057  261.32
 x 0 0
 x 0 0
 x 0 0
@@ -34449,7 +34470,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0044  116.37
+SN4             0.0044  296.37
 x 0 0
 x 0 0
 x 0 0
@@ -34540,7 +34561,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9565, RMS error = 0.1480 knots
-# Major axis: 90.8 deg true
+# Major axis: 270.8 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -34549,7 +34570,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 90.8
+# major_axis_deg_true: 270.8
 # confidence: 5
 # chm_ccm: ccm-porto-de-vitoria.pdf point 1.4
 # time_correction_min: 0
@@ -34557,21 +34578,22 @@ x 0 0
 # !units: knots
 # !longitude: -40.3169
 # !latitude: -20.3212
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Ilha das Tendas (Porto de Vitória), Espírito Santo, Brazil Current
 +00:00 :UTC
-0.0987 knots
+-0.0987 knots
 x 0 0
 x 0 0
-K2              0.1064  304.06
-L2              0.0550  273.64
+K2              0.1064  124.06
+L2              0.0550  93.64
 x 0 0
-M2              0.9086  286.79
+M2              0.9086  106.79
 x 0 0
-M4              0.1068  148.70
-M6              0.0371  139.46
-M8              0.0115  139.95
-N2              0.1320  292.43
-2N2             0.0387  276.48
+M4              0.1068  328.70
+M6              0.0371  319.46
+M8              0.0115  319.95
+N2              0.1320  112.43
+2N2             0.0387  96.48
 x 0 0
 x 0 0
 x 0 0
@@ -34579,22 +34601,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.3542  302.71
-S4              0.0046  48.46
+S2              0.3542  122.71
+S4              0.0046  228.46
 x 0 0
-T2              0.0216  300.81
-LDA2            0.0103  298.75
-MU2             0.0291  20.35
-NU2             0.0399  277.33
+T2              0.0216  120.81
+LDA2            0.0103  118.75
+MU2             0.0291  200.35
+NU2             0.0399  97.33
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0302  153.17
-MS4             0.0560  164.84
+MN4             0.0302  333.17
+MS4             0.0560  344.84
 x 0 0
 x 0 0
-MSF             0.0378  178.54
-MM              0.0064  179.61
+MSF             0.0378  358.54
+MM              0.0064  359.61
 x 0 0
 x 0 0
 x 0 0
@@ -34606,8 +34628,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0166  149.76
-2MS6            0.0384  163.51
+2MN6            0.0166  329.76
+2MS6            0.0384  343.51
 x 0 0
 x 0 0
 x 0 0
@@ -34627,18 +34649,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0168  172.95
+MK4             0.0168  352.95
 x 0 0
 x 0 0
-EPS2            0.0104  103.06
+EPS2            0.0104  283.06
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0059  112.47
-MSN6            0.0057  181.87
+MSN2            0.0059  292.47
+MSN6            0.0057  1.87
 x 0 0
 x 0 0
 x 0 0
@@ -34653,7 +34675,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0039  115.11
+SN4             0.0039  295.11
 x 0 0
 x 0 0
 x 0 0
@@ -34744,7 +34766,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9517, RMS error = 0.1179 knots
-# Major axis: 77.6 deg true
+# Major axis: 257.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -34753,7 +34775,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 77.6
+# major_axis_deg_true: 257.6
 # confidence: 5
 # chm_ccm: ccm-porto-de-vitoria.pdf point 1.5
 # time_correction_min: 0
@@ -34761,21 +34783,22 @@ x 0 0
 # !units: knots
 # !longitude: -40.2810
 # !latitude: -20.3207
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Baía de Vitória (Terceira Ponte), Espírito Santo, Brazil Current
 +00:00 :UTC
-0.0871 knots
+-0.0871 knots
 x 0 0
 x 0 0
-K2              0.0859  307.72
-L2              0.0306  277.51
+K2              0.0859  127.72
+L2              0.0306  97.51
 x 0 0
-M2              0.6543  292.14
+M2              0.6543  112.14
 x 0 0
-M4              0.0734  233.26
-M6              0.0138  210.41
-M8              0.0078  117.91
-N2              0.1044  295.24
-2N2             0.0197  314.40
+M4              0.0734  53.26
+M6              0.0138  30.41
+M8              0.0078  297.91
+N2              0.1044  115.24
+2N2             0.0197  134.40
 x 0 0
 x 0 0
 x 0 0
@@ -34783,22 +34806,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2983  306.17
-S4              0.0249  208.66
+S2              0.2983  126.17
+S4              0.0249  28.66
 x 0 0
-T2              0.0174  299.17
-LDA2            0.0079  112.26
-MU2             0.0504  278.23
-NU2             0.0231  289.60
+T2              0.0174  119.17
+LDA2            0.0079  292.26
+MU2             0.0504  98.23
+NU2             0.0231  109.60
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0199  211.59
-MS4             0.0704  240.55
+MN4             0.0199  31.59
+MS4             0.0704  60.55
 x 0 0
 x 0 0
-MSF             0.1198  18.20
-MM              0.0260  4.81
+MSF             0.1198  198.20
+MM              0.0260  184.81
 x 0 0
 x 0 0
 x 0 0
@@ -34810,8 +34833,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0020  55.75
-2MS6            0.0230  242.83
+2MN6            0.0020  235.75
+2MS6            0.0230  62.83
 x 0 0
 x 0 0
 x 0 0
@@ -34831,18 +34854,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0184  242.40
+MK4             0.0184  62.40
 x 0 0
 x 0 0
-EPS2            0.0101  248.05
+EPS2            0.0101  68.05
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0035  324.16
-MSN6            0.0042  127.71
+MSN2            0.0035  144.16
+MSN6            0.0042  307.71
 x 0 0
 x 0 0
 x 0 0
@@ -34857,7 +34880,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0162  193.40
+SN4             0.0162  13.40
 x 0 0
 x 0 0
 x 0 0
@@ -34948,7 +34971,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9588, RMS error = 0.2162 knots
-# Major axis: 86.1 deg true
+# Major axis: 266.1 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -34957,7 +34980,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 86.1
+# major_axis_deg_true: 266.1
 # confidence: 5
 # chm_ccm: ccm-porto-de-vitoria.pdf point 1.6
 # time_correction_min: 0
@@ -34965,21 +34988,22 @@ x 0 0
 # !units: knots
 # !longitude: -40.3001
 # !latitude: -20.3222
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Porto de Vitória (Canal de Acesso), Espírito Santo, Brazil Current
 +00:00 :UTC
-0.3129 knots
+-0.3129 knots
 x 0 0
 x 0 0
-K2              0.1490  301.20
-L2              0.0913  268.42
+K2              0.1490  121.20
+L2              0.0913  88.42
 x 0 0
-M2              1.3670  281.62
+M2              1.3670  101.62
 x 0 0
-M4              0.2185  169.97
-M6              0.0313  113.57
-M8              0.0088  4.12
-N2              0.1883  288.83
-2N2             0.0711  265.66
+M4              0.2185  349.97
+M6              0.0313  293.57
+M8              0.0088  184.12
+N2              0.1883  108.83
+2N2             0.0711  85.66
 x 0 0
 x 0 0
 x 0 0
@@ -34987,22 +35011,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.4773  300.42
-S4              0.0181  215.09
+S2              0.4773  120.42
+S4              0.0181  35.09
 x 0 0
-T2              0.0296  295.61
-LDA2            0.0170  283.77
-MU2             0.0846  51.82
-NU2             0.0742  265.15
+T2              0.0296  115.61
+LDA2            0.0170  103.77
+MU2             0.0846  231.82
+NU2             0.0742  85.15
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0637  176.06
-MS4             0.1517  195.76
+MN4             0.0637  356.06
+MS4             0.1517  15.76
 x 0 0
 x 0 0
-MSF             0.1296  17.83
-MM              0.0272  5.09
+MSF             0.1296  197.83
+MM              0.0272  185.09
 x 0 0
 x 0 0
 x 0 0
@@ -35014,8 +35038,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0169  94.28
-2MS6            0.0353  144.42
+2MN6            0.0169  274.28
+2MS6            0.0353  324.42
 x 0 0
 x 0 0
 x 0 0
@@ -35035,18 +35059,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0490  194.93
+MK4             0.0490  14.93
 x 0 0
 x 0 0
-EPS2            0.0174  131.67
+EPS2            0.0174  311.67
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0063  130.28
-MSN6            0.0102  139.28
+MSN2            0.0063  310.28
+MSN6            0.0102  319.28
 x 0 0
 x 0 0
 x 0 0
@@ -35061,7 +35085,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0157  193.96
+SN4             0.0157  13.96
 x 0 0
 x 0 0
 x 0 0
@@ -35152,7 +35176,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9716, RMS error = 0.1128 knots
-# Major axis: 133.0 deg true
+# Major axis: 313.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -35161,7 +35185,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 133.0
+# major_axis_deg_true: 313.0
 # confidence: 5
 # chm_ccm: ccm-porto-de-madre-de-deus.pdf point 1.3
 # time_correction_min: 0
@@ -35169,21 +35193,22 @@ x 0 0
 # !units: knots
 # !longitude: -38.6302
 # !latitude: -12.7492
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Terminal de Madre de Deus (Norte), Bahia, Brazil Current
 +00:00 :UTC
-0.0519 knots
+-0.0519 knots
 x 0 0
 x 0 0
-K2              0.0879  294.82
-L2              0.0227  278.75
+K2              0.0879  114.82
+L2              0.0227  98.75
 x 0 0
-M2              0.8754  280.11
+M2              0.8754  100.11
 x 0 0
-M4              0.0892  14.14
-M6              0.0548  148.19
-M8              0.0245  343.59
-N2              0.1422  278.04
-2N2             0.0280  265.56
+M4              0.0892  194.14
+M6              0.0548  328.19
+M8              0.0245  163.59
+N2              0.1422  98.04
+2N2             0.0280  85.56
 x 0 0
 x 0 0
 x 0 0
@@ -35191,22 +35216,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.3052  299.38
-S4              0.0181  332.41
+S2              0.3052  119.38
+S4              0.0181  152.41
 x 0 0
-T2              0.0174  299.09
-LDA2            0.0118  193.74
-MU2             0.0251  336.53
-NU2             0.0434  271.02
+T2              0.0174  119.09
+LDA2            0.0118  13.74
+MU2             0.0251  156.53
+NU2             0.0434  91.02
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0196  351.53
-MS4             0.0603  355.61
+MN4             0.0196  171.53
+MS4             0.0603  175.61
 x 0 0
 x 0 0
-MSF             0.0359  35.93
-MM              0.0137  7.18
+MSF             0.0359  215.93
+MM              0.0137  187.18
 x 0 0
 x 0 0
 x 0 0
@@ -35218,8 +35243,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0221  139.10
-2MS6            0.0418  155.74
+2MN6            0.0221  319.10
+2MS6            0.0418  335.74
 x 0 0
 x 0 0
 x 0 0
@@ -35239,18 +35264,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0175  357.89
+MK4             0.0175  177.89
 x 0 0
 x 0 0
-EPS2            0.0238  276.99
+EPS2            0.0238  96.99
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0091  335.86
-MSN6            0.0059  77.70
+MSN2            0.0091  155.86
+MSN6            0.0059  257.70
 x 0 0
 x 0 0
 x 0 0
@@ -35265,7 +35290,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0131  304.15
+SN4             0.0131  124.15
 x 0 0
 x 0 0
 x 0 0
@@ -35356,7 +35381,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9862, RMS error = 0.1243 knots
-# Major axis: 101.9 deg true
+# Major axis: 281.9 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -35365,7 +35390,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 101.9
+# major_axis_deg_true: 281.9
 # confidence: 5
 # chm_ccm: ccm-porto-de-madre-de-deus.pdf point 1.15
 # time_correction_min: 0
@@ -35373,21 +35398,22 @@ x 0 0
 # !units: knots
 # !longitude: -38.6292
 # !latitude: -12.7530
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Terminal de Madre de Deus (Posto S-2), Bahia, Brazil Current
 +00:00 :UTC
--0.1495 knots
+0.1495 knots
 x 0 0
 x 0 0
-K2              0.1462  299.27
-L2              0.0297  297.16
+K2              0.1462  119.27
+L2              0.0297  117.16
 x 0 0
-M2              1.3766  286.42
+M2              1.3766  106.42
 x 0 0
-M4              0.1407  241.28
-M6              0.1114  50.91
-M8              0.0207  300.65
-N2              0.2368  281.48
-2N2             0.0382  278.99
+M4              0.1407  61.28
+M6              0.1114  230.91
+M8              0.0207  120.65
+N2              0.2368  101.48
+2N2             0.0382  98.99
 x 0 0
 x 0 0
 x 0 0
@@ -35395,22 +35421,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5170  305.41
-S4              0.0170  310.07
+S2              0.5170  125.41
+S4              0.0170  130.07
 x 0 0
-T2              0.0291  305.32
-LDA2            0.0083  147.51
-MU2             0.0565  300.58
-NU2             0.0583  269.52
+T2              0.0291  125.32
+LDA2            0.0083  327.51
+MU2             0.0565  120.58
+NU2             0.0583  89.52
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0354  239.46
-MS4             0.0947  271.13
+MN4             0.0354  59.46
+MS4             0.0947  91.13
 x 0 0
 x 0 0
-MSF             0.0205  111.67
-MM              0.0073  152.43
+MSF             0.0205  291.67
+MM              0.0073  332.43
 x 0 0
 x 0 0
 x 0 0
@@ -35422,8 +35448,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0487  49.67
-2MS6            0.1031  68.46
+2MN6            0.0487  229.67
+2MS6            0.1031  248.46
 x 0 0
 x 0 0
 x 0 0
@@ -35443,18 +35469,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0279  266.43
+MK4             0.0279  86.43
 x 0 0
 x 0 0
-EPS2            0.0343  256.82
+EPS2            0.0343  76.82
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0092  281.18
-MSN6            0.0129  71.07
+MSN2            0.0092  101.18
+MSN6            0.0129  251.07
 x 0 0
 x 0 0
 x 0 0
@@ -35469,7 +35495,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0102  293.39
+SN4             0.0102  113.39
 x 0 0
 x 0 0
 x 0 0
@@ -35560,7 +35586,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9358, RMS error = 0.3905 knots
-# Major axis: 93.0 deg true
+# Major axis: 273.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -35569,7 +35595,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 93.0
+# major_axis_deg_true: 273.0
 # confidence: 5
 # chm_ccm: ccm-porto-de-madre-de-deus.pdf point 1.19
 # time_correction_min: 0
@@ -35577,21 +35603,22 @@ x 0 0
 # !units: knots
 # !longitude: -38.6234
 # !latitude: -12.7545
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Madre de Deus (Praia do Loreto), Bahia, Brazil Current
 +00:00 :UTC
-0.0586 knots
+-0.0586 knots
 x 0 0
 x 0 0
-K2              0.1843  302.73
-L2              0.0712  301.71
+K2              0.1843  122.73
+L2              0.0712  121.71
 x 0 0
-M2              1.9778  290.43
+M2              1.9778  110.43
 x 0 0
-M4              0.0297  323.38
-M6              0.3304  308.85
-M8              0.0822  327.50
-N2              0.2984  283.67
-2N2             0.0831  277.11
+M4              0.0297  143.38
+M6              0.3304  128.85
+M8              0.0822  147.50
+N2              0.2984  103.67
+2N2             0.0831  97.11
 x 0 0
 x 0 0
 x 0 0
@@ -35599,22 +35626,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.6372  308.86
-S4              0.0152  304.29
+S2              0.6372  128.86
+S4              0.0152  124.29
 x 0 0
-T2              0.0368  309.20
-LDA2            0.0156  301.63
-MU2             0.0590  66.00
-NU2             0.0988  276.90
+T2              0.0368  129.20
+LDA2            0.0156  121.63
+MU2             0.0590  246.00
+NU2             0.0988  96.90
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0089  268.25
-MS4             0.0324  347.82
+MN4             0.0089  88.25
+MS4             0.0324  167.82
 x 0 0
 x 0 0
-MSF             0.0282  68.47
-MM              0.0067  146.93
+MSF             0.0282  248.47
+MM              0.0067  326.93
 x 0 0
 x 0 0
 x 0 0
@@ -35626,8 +35653,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.1271  310.39
-2MS6            0.2986  333.45
+2MN6            0.1271  130.39
+2MS6            0.2986  153.45
 x 0 0
 x 0 0
 x 0 0
@@ -35647,18 +35674,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0109  345.79
+MK4             0.0109  165.79
 x 0 0
 x 0 0
-EPS2            0.0301  252.18
+EPS2            0.0301  72.18
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0104  193.29
-MSN6            0.0285  27.62
+MSN2            0.0104  13.29
+MSN6            0.0285  207.62
 x 0 0
 x 0 0
 x 0 0
@@ -35673,7 +35700,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0102  276.05
+SN4             0.0102  96.05
 x 0 0
 x 0 0
 x 0 0
@@ -35764,7 +35791,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9906, RMS error = 0.1081 knots
-# Major axis: 46.4 deg true
+# Major axis: 226.4 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -35773,7 +35800,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 46.4
+# major_axis_deg_true: 226.4
 # confidence: 5
 # chm_ccm: ccm-porto-de-natal.pdf point 1.1
 # time_correction_min: 0
@@ -35781,21 +35808,22 @@ x 0 0
 # !units: knots
 # !longitude: -35.2033
 # !latitude: -5.7546
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Rio Potengi (Redinha), Rio Grande do Norte, Brazil Current
 +00:00 :UTC
--0.0690 knots
+0.0690 knots
 x 0 0
 x 0 0
-K2              0.1230  313.86
-L2              0.0819  295.22
+K2              0.1230  133.86
+L2              0.0819  115.22
 x 0 0
-M2              1.4882  293.56
+M2              1.4882  113.56
 x 0 0
-M4              0.2212  200.89
-M6              0.0693  332.62
-M8              0.0349  195.62
-N2              0.2615  283.05
-2N2             0.0659  269.25
+M4              0.2212  20.89
+M6              0.0693  152.62
+M8              0.0349  15.62
+N2              0.2615  103.05
+2N2             0.0659  89.25
 x 0 0
 x 0 0
 x 0 0
@@ -35803,22 +35831,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.4306  317.33
-S4              0.0102  248.36
+S2              0.4306  137.33
+S4              0.0102  68.36
 x 0 0
-T2              0.0305  317.73
-LDA2            0.0225  272.25
-MU2             0.0502  47.20
-NU2             0.0733  280.00
+T2              0.0305  137.73
+LDA2            0.0225  92.25
+MU2             0.0502  227.20
+NU2             0.0733  100.00
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0776  188.21
-MS4             0.1156  225.82
+MN4             0.0776  8.21
+MS4             0.1156  45.82
 x 0 0
 x 0 0
-MSF             0.0229  53.33
-MM              0.0060  36.46
+MSF             0.0229  233.33
+MM              0.0060  216.46
 x 0 0
 x 0 0
 x 0 0
@@ -35830,8 +35858,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0254  321.17
-2MS6            0.0594  353.74
+2MN6            0.0254  141.17
+2MS6            0.0594  173.74
 x 0 0
 x 0 0
 x 0 0
@@ -35851,18 +35879,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0329  224.06
+MK4             0.0329  44.06
 x 0 0
 x 0 0
-EPS2            0.0027  285.51
+EPS2            0.0027  105.51
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0082  117.73
-MSN6            0.0053  333.18
+MSN2            0.0082  297.73
+MSN6            0.0053  153.18
 x 0 0
 x 0 0
 x 0 0
@@ -35877,7 +35905,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0136  215.47
+SN4             0.0136  35.47
 x 0 0
 x 0 0
 x 0 0
@@ -35968,7 +35996,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9790, RMS error = 0.0998 knots
-# Major axis: 44.3 deg true
+# Major axis: 224.3 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -35977,7 +36005,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 44.3
+# major_axis_deg_true: 224.3
 # confidence: 5
 # chm_ccm: ccm-porto-de-natal.pdf point 1.2
 # time_correction_min: 0
@@ -35985,21 +36013,22 @@ x 0 0
 # !units: knots
 # !longitude: -35.1968
 # !latitude: -5.7509
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Barra do Rio Potengi, Rio Grande do Norte, Brazil Current
 +00:00 :UTC
-0.1416 knots
+-0.1416 knots
 x 0 0
 x 0 0
-K2              0.0891  311.37
-L2              0.0265  280.83
+K2              0.0891  131.37
+L2              0.0265  100.83
 x 0 0
-M2              0.8596  290.59
+M2              0.8596  110.59
 x 0 0
-M4              0.2341  177.90
-M6              0.0519  222.78
-M8              0.0358  60.84
-N2              0.1848  279.79
-2N2             0.0216  268.42
+M4              0.2341  357.90
+M6              0.0519  42.78
+M8              0.0358  240.84
+N2              0.1848  99.79
+2N2             0.0216  88.42
 x 0 0
 x 0 0
 x 0 0
@@ -36007,22 +36036,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.3186  314.17
-S4              0.0086  248.00
+S2              0.3186  134.17
+S4              0.0086  68.00
 x 0 0
-T2              0.0223  315.84
-LDA2            0.0106  193.81
-MU2             0.0609  293.12
-NU2             0.0276  272.64
+T2              0.0223  135.84
+LDA2            0.0106  13.81
+MU2             0.0609  113.12
+NU2             0.0276  92.64
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0778  171.36
-MS4             0.1171  205.09
+MN4             0.0778  351.36
+MS4             0.1171  25.09
 x 0 0
 x 0 0
-MSF             0.0285  45.46
-MM              0.0104  27.19
+MSF             0.0285  225.46
+MM              0.0104  207.19
 x 0 0
 x 0 0
 x 0 0
@@ -36034,8 +36063,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0249  217.32
-2MS6            0.0469  251.59
+2MN6            0.0249  37.32
+2MS6            0.0469  71.59
 x 0 0
 x 0 0
 x 0 0
@@ -36055,18 +36084,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0335  202.65
+MK4             0.0335  22.65
 x 0 0
 x 0 0
-EPS2            0.0120  273.88
+EPS2            0.0120  93.88
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0063  20.18
-MSN6            0.0104  267.84
+MSN2            0.0063  200.18
+MSN6            0.0104  87.84
 x 0 0
 x 0 0
 x 0 0
@@ -36081,7 +36110,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0113  215.64
+SN4             0.0113  35.64
 x 0 0
 x 0 0
 x 0 0
@@ -36172,7 +36201,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9716, RMS error = 0.1259 knots
-# Major axis: 21.6 deg true
+# Major axis: 201.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -36181,7 +36210,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 21.6
+# major_axis_deg_true: 201.6
 # confidence: 5
 # chm_ccm: ccm-porto-de-natal.pdf point 1.3
 # time_correction_min: 0
@@ -36189,21 +36218,22 @@ x 0 0
 # !units: knots
 # !longitude: -35.2067
 # !latitude: -5.7718
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Porto de Natal (Rio Potengi), Rio Grande do Norte, Brazil Current
 +00:00 :UTC
-0.0110 knots
+-0.0110 knots
 x 0 0
 x 0 0
-K2              0.0838  311.37
-L2              0.0470  285.96
+K2              0.0838  131.37
+L2              0.0470  105.96
 x 0 0
-M2              0.9418  289.97
+M2              0.9418  109.97
 x 0 0
-M4              0.3001  156.28
-M6              0.0471  60.70
-M8              0.0374  350.02
-N2              0.1748  281.03
-2N2             0.0366  263.55
+M4              0.3001  336.28
+M6              0.0471  240.70
+M8              0.0374  170.02
+N2              0.1748  101.03
+2N2             0.0366  83.55
 x 0 0
 x 0 0
 x 0 0
@@ -36211,22 +36241,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2946  314.90
-S4              0.0098  239.79
+S2              0.2946  134.90
+S4              0.0098  59.79
 x 0 0
-T2              0.0210  315.86
-LDA2            0.0122  249.09
-MU2             0.0315  0.41
-NU2             0.0424  273.37
+T2              0.0210  135.86
+LDA2            0.0122  69.09
+MU2             0.0315  180.41
+NU2             0.0424  93.37
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0945  152.33
-MS4             0.1440  183.93
+MN4             0.0945  332.33
+MS4             0.1440  3.93
 x 0 0
 x 0 0
-MSF             0.0094  84.85
-MM              0.0019  113.26
+MSF             0.0094  264.85
+MM              0.0019  293.26
 x 0 0
 x 0 0
 x 0 0
@@ -36238,8 +36268,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0193  57.48
-2MS6            0.0336  88.42
+2MN6            0.0193  237.48
+2MS6            0.0336  268.42
 x 0 0
 x 0 0
 x 0 0
@@ -36259,18 +36289,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0419  181.22
+MK4             0.0419  1.22
 x 0 0
 x 0 0
-EPS2            0.0049  278.59
+EPS2            0.0049  98.59
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0047  81.87
-MSN6            0.0038  116.66
+MSN2            0.0047  261.87
+MSN6            0.0038  296.66
 x 0 0
 x 0 0
 x 0 0
@@ -36285,7 +36315,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0122  211.57
+SN4             0.0122  31.57
 x 0 0
 x 0 0
 x 0 0
@@ -36376,7 +36406,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9674, RMS error = 0.0852 knots
-# Major axis: 44.9 deg true
+# Major axis: 224.9 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -36385,7 +36415,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 44.9
+# major_axis_deg_true: 224.9
 # confidence: 5
 # chm_ccm: ccm-porto-de-natal.pdf point 1.4
 # time_correction_min: 0
@@ -36393,21 +36423,22 @@ x 0 0
 # !units: knots
 # !longitude: -35.2126
 # !latitude: -5.7829
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Rio Potengi (Base Naval de Natal), Rio Grande do Norte, Brazil Current
 +00:00 :UTC
--0.0456 knots
+0.0456 knots
 x 0 0
 x 0 0
-K2              0.0632  321.36
-L2              0.0128  321.41
+K2              0.0632  141.36
+L2              0.0128  141.41
 x 0 0
-M2              0.5736  306.66
+M2              0.5736  126.66
 x 0 0
-M4              0.1761  163.63
-M6              0.0180  101.69
-M8              0.0356  324.88
-N2              0.1285  290.75
-2N2             0.0136  310.29
+M4              0.1761  343.63
+M6              0.0180  281.69
+M8              0.0356  144.88
+N2              0.1285  110.75
+2N2             0.0136  130.29
 x 0 0
 x 0 0
 x 0 0
@@ -36415,22 +36446,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2257  323.51
-S4              0.0094  232.89
+S2              0.2257  143.51
+S4              0.0094  52.89
 x 0 0
-T2              0.0161  326.07
-LDA2            0.0066  143.04
-MU2             0.0513  273.26
-NU2             0.0160  305.08
+T2              0.0161  146.07
+LDA2            0.0066  323.04
+MU2             0.0513  93.26
+NU2             0.0160  125.08
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0637  157.73
-MS4             0.0946  189.39
+MN4             0.0637  337.73
+MS4             0.0946  9.39
 x 0 0
 x 0 0
-MSF             0.0085  93.55
-MM              0.0019  86.71
+MSF             0.0085  273.55
+MM              0.0019  266.71
 x 0 0
 x 0 0
 x 0 0
@@ -36442,8 +36473,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0086  97.32
-2MS6            0.0173  126.32
+2MN6            0.0086  277.32
+2MS6            0.0173  306.32
 x 0 0
 x 0 0
 x 0 0
@@ -36463,18 +36494,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0275  186.53
+MK4             0.0275  6.53
 x 0 0
 x 0 0
-EPS2            0.0110  260.44
+EPS2            0.0110  80.44
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0055  342.14
-MSN6            0.0030  106.57
+MSN2            0.0055  162.14
+MSN6            0.0030  286.57
 x 0 0
 x 0 0
 x 0 0
@@ -36489,7 +36520,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0118  203.47
+SN4             0.0118  23.47
 x 0 0
 x 0 0
 x 0 0
@@ -36580,7 +36611,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9757, RMS error = 0.0799 knots
-# Major axis: 3.0 deg true
+# Major axis: 183.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -36589,7 +36620,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 3.0
+# major_axis_deg_true: 183.0
 # confidence: 5
 # chm_ccm: ccm-porto-de-natal.pdf point 1.5
 # time_correction_min: 0
@@ -36597,21 +36628,22 @@ x 0 0
 # !units: knots
 # !longitude: -35.2068
 # !latitude: -5.7620
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Rio Potengi (Farolete Manimbu), Rio Grande do Norte, Brazil Current
 +00:00 :UTC
-0.0847 knots
+-0.0847 knots
 x 0 0
 x 0 0
-K2              0.0752  316.55
-L2              0.0051  252.80
+K2              0.0752  136.55
+L2              0.0051  72.80
 x 0 0
-M2              0.6111  297.72
+M2              0.6111  117.72
 x 0 0
-M4              0.1716  191.45
-M6              0.0265  198.52
-M8              0.0273  155.03
-N2              0.1536  284.70
-2N2             0.0063  313.33
+M4              0.1716  11.45
+M6              0.0265  18.52
+M8              0.0273  335.03
+N2              0.1536  104.70
+2N2             0.0063  133.33
 x 0 0
 x 0 0
 x 0 0
@@ -36619,22 +36651,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2730  318.57
-S4              0.0100  249.11
+S2              0.2730  138.57
+S4              0.0100  69.11
 x 0 0
-T2              0.0189  321.51
-LDA2            0.0142  152.24
-MU2             0.0910  280.23
-NU2             0.0100  279.93
+T2              0.0189  141.51
+LDA2            0.0142  332.24
+MU2             0.0910  100.23
+NU2             0.0100  99.93
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0628  179.05
-MS4             0.0968  215.19
+MN4             0.0628  359.05
+MS4             0.0968  35.19
 x 0 0
 x 0 0
-MSF             0.0248  48.92
-MM              0.0113  26.25
+MSF             0.0248  228.92
+MM              0.0113  206.25
 x 0 0
 x 0 0
 x 0 0
@@ -36646,8 +36678,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0125  187.11
-2MS6            0.0203  233.00
+2MN6            0.0125  7.11
+2MS6            0.0203  53.00
 x 0 0
 x 0 0
 x 0 0
@@ -36667,18 +36699,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0275  212.90
+MK4             0.0275  32.90
 x 0 0
 x 0 0
-EPS2            0.0162  267.60
+EPS2            0.0162  87.60
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0096  352.73
-MSN6            0.0042  269.43
+MSN2            0.0096  172.73
+MSN6            0.0042  89.43
 x 0 0
 x 0 0
 x 0 0
@@ -36693,7 +36725,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0132  213.02
+SN4             0.0132  33.02
 x 0 0
 x 0 0
 x 0 0
@@ -37804,7 +37836,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9819, RMS error = 0.2600 knots
-# Major axis: 57.0 deg true
+# Major axis: 237.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -37813,7 +37845,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 57.0
+# major_axis_deg_true: 237.0
 # confidence: 5
 # chm_ccm: ccm-rio-amazonas.pdf point 1.3
 # time_correction_min: 0
@@ -37821,21 +37853,22 @@ x 0 0
 # !units: knots
 # !longitude: -51.0732
 # !latitude: -0.0635
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Rio Amazonas (Fazendinha), Amapá, Brazil Current
 +00:00 :UTC
-1.3399 knots
+-1.3399 knots
 x 0 0
 x 0 0
-K2              0.1898  3.70
-L2              0.1814  26.62
+K2              0.1898  183.70
+L2              0.1814  206.62
 x 0 0
-M2              2.6165  340.82
+M2              2.6165  160.82
 x 0 0
-M4              0.3342  101.46
-M6              0.0941  309.38
-M8              0.0596  169.69
-N2              0.4403  295.39
-2N2             0.0009  350.99
+M4              0.3342  281.46
+M6              0.0941  129.38
+M8              0.0596  349.69
+N2              0.4403  115.39
+2N2             0.0009  170.99
 x 0 0
 x 0 0
 x 0 0
@@ -37843,22 +37876,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.6019  11.12
-S4              0.0080  96.18
+S2              0.6019  191.12
+S4              0.0080  276.18
 x 0 0
-T2              0.0518  6.22
-LDA2            0.0932  16.41
-MU2             0.1658  174.79
-NU2             0.1195  338.12
+T2              0.0518  186.22
+LDA2            0.0932  196.41
+MU2             0.1658  354.79
+NU2             0.1195  158.12
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1040  57.43
-MS4             0.1323  120.59
+MN4             0.1040  237.43
+MS4             0.1323  300.59
 x 0 0
 x 0 0
-MSF             0.2189  46.36
-MM              0.0994  42.48
+MSF             0.2189  226.36
+MM              0.0994  222.48
 x 0 0
 x 0 0
 x 0 0
@@ -37870,8 +37903,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0444  259.13
-2MS6            0.0625  351.18
+2MN6            0.0444  79.13
+2MS6            0.0625  171.18
 x 0 0
 x 0 0
 x 0 0
@@ -37891,18 +37924,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0393  107.34
+MK4             0.0393  287.34
 x 0 0
 x 0 0
-EPS2            0.0386  141.53
+EPS2            0.0386  321.53
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0434  283.21
-MSN6            0.0148  262.97
+MSN2            0.0434  103.21
+MSN6            0.0148  82.97
 x 0 0
 x 0 0
 x 0 0
@@ -37917,7 +37950,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0206  12.34
+SN4             0.0206  192.34
 x 0 0
 x 0 0
 x 0 0
@@ -38008,7 +38041,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9895, RMS error = 0.1747 knots
-# Major axis: 29.6 deg true
+# Major axis: 209.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -38017,7 +38050,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 29.6
+# major_axis_deg_true: 209.6
 # confidence: 5
 # chm_ccm: ccm-rio-amazonas.pdf point 1.4
 # time_correction_min: 0
@@ -38025,21 +38058,22 @@ x 0 0
 # !units: knots
 # !longitude: -51.0096
 # !latitude: 0.0361
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Rio Amazonas (Macapá), Amapá, Brazil Current
 +00:00 :UTC
-1.1880 knots
+-1.1880 knots
 x 0 0
 x 0 0
-K2              0.1688  355.90
-L2              0.1626  18.39
+K2              0.1688  175.90
+L2              0.1626  198.39
 x 0 0
-M2              2.3364  332.58
+M2              2.3364  152.58
 x 0 0
-M4              0.0337  255.06
-M6              0.0408  230.51
-M8              0.0464  357.66
-N2              0.3932  287.03
-2N2             0.0020  50.68
+M4              0.0337  75.06
+M6              0.0408  50.51
+M8              0.0464  177.66
+N2              0.3932  107.03
+2N2             0.0020  230.68
 x 0 0
 x 0 0
 x 0 0
@@ -38047,22 +38081,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5360  3.23
-S4              0.0021  345.75
+S2              0.5360  183.23
+S4              0.0021  165.75
 x 0 0
-T2              0.0461  358.44
-LDA2            0.0833  8.13
-MU2             0.1472  167.58
-NU2             0.1059  329.93
+T2              0.0461  178.44
+LDA2            0.0833  188.13
+MU2             0.1472  347.58
+NU2             0.1059  149.93
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0109  173.35
-MS4             0.0232  343.11
+MN4             0.0109  353.35
+MS4             0.0232  163.11
 x 0 0
 x 0 0
-MSF             0.1960  46.98
-MM              0.0873  42.71
+MSF             0.1960  226.98
+MM              0.0873  222.71
 x 0 0
 x 0 0
 x 0 0
@@ -38074,8 +38108,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0194  176.22
-2MS6            0.0217  280.33
+2MN6            0.0194  356.22
+2MS6            0.0217  100.33
 x 0 0
 x 0 0
 x 0 0
@@ -38095,18 +38129,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0074  346.37
+MK4             0.0074  166.37
 x 0 0
 x 0 0
-EPS2            0.0338  134.06
+EPS2            0.0338  314.06
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0386  275.09
-MSN6            0.0049  182.71
+MSN2            0.0386  95.09
+MSN6            0.0049  2.71
 x 0 0
 x 0 0
 x 0 0
@@ -38121,7 +38155,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0015  222.75
+SN4             0.0015  42.75
 x 0 0
 x 0 0
 x 0 0
@@ -38620,7 +38654,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9818, RMS error = 0.1779 knots
-# Major axis: 0.6 deg true
+# Major axis: 180.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -38629,7 +38663,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 0.6
+# major_axis_deg_true: 180.6
 # confidence: 5
 # chm_ccm: ccm-salinopolis-a-belem.pdf point 1.2
 # time_correction_min: 0
@@ -38637,21 +38671,22 @@ x 0 0
 # !units: knots
 # !longitude: -48.5176
 # !latitude: -1.4662
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Baía do Guajará (Belém), Pará, Brazil Current
 +00:00 :UTC
-0.0664 knots
+-0.0664 knots
 x 0 0
 x 0 0
-K2              0.1536  249.74
-L2              0.1102  186.37
+K2              0.1536  69.74
+L2              0.1102  6.37
 x 0 0
-M2              1.7499  206.37
+M2              1.7499  26.37
 x 0 0
-M4              0.2144  244.65
-M6              0.1007  175.50
-M8              0.0252  21.93
-N2              0.3457  188.77
-2N2             0.0460  169.38
+M4              0.2144  64.65
+M6              0.1007  355.50
+M8              0.0252  201.93
+N2              0.3457  8.77
+2N2             0.0460  349.38
 x 0 0
 x 0 0
 x 0 0
@@ -38659,22 +38694,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.5183  249.01
-S4              0.0080  324.97
+S2              0.5183  69.01
+S4              0.0080  144.97
 x 0 0
-T2              0.0455  206.01
-LDA2            0.0386  156.81
-MU2             0.1045  274.34
-NU2             0.0826  180.07
+T2              0.0455  26.01
+LDA2            0.0386  336.81
+MU2             0.1045  94.34
+NU2             0.0826  0.07
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0811  232.91
-MS4             0.0881  282.20
+MN4             0.0811  52.91
+MS4             0.0881  102.20
 x 0 0
 x 0 0
-MSF             0.0061  69.35
-MM              0.0141  31.11
+MSF             0.0061  249.35
+MM              0.0141  211.11
 x 0 0
 x 0 0
 x 0 0
@@ -38686,8 +38721,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0552  159.74
-2MS6            0.0714  218.68
+2MN6            0.0552  339.74
+2MS6            0.0714  38.68
 x 0 0
 x 0 0
 x 0 0
@@ -38707,18 +38742,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0262  284.47
+MK4             0.0262  104.47
 x 0 0
 x 0 0
-EPS2            0.0050  193.73
+EPS2            0.0050  13.73
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0410  71.03
-MSN6            0.0198  229.88
+MSN2            0.0410  251.03
+MSN6            0.0198  49.88
 x 0 0
 x 0 0
 x 0 0
@@ -38733,7 +38768,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0126  306.74
+SN4             0.0126  126.74
 x 0 0
 x 0 0
 x 0 0
@@ -39222,7 +39257,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1371 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9939, RMS error = 0.0249 knots
-# Major axis: 115.9 deg true; table maximum 0.9 kn
+# Major axis: 295.9 deg true; table maximum 0.9 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -39231,46 +39266,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 115.9
+# major_axis_deg_true: 295.9
 # confidence: 5
 # shn_corriente: BERN (TOMA BERNAL)
 # !units: knots
 # !longitude: -58.2300
 # !latitude: -34.6800
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Toma Bernal (Río de la Plata), Buenos Aires, Argentina Current
 +00:00 :UTC
--0.0016 knots
+0.0016 knots
 x 0 0
-K1              0.1130  245.61
-K2              0.0002  50.28
-L2              0.0134  14.60
+K1              0.1130  65.61
+K2              0.0002  230.28
+L2              0.0134  194.60
 x 0 0
-M2              0.4035  40.91
+M2              0.4035  220.91
 x 0 0
-M4              0.0515  215.76
-x 0 0
-x 0 0
-N2              0.1126  8.16
-2N2             0.0005  175.69
-O1              0.1167  12.75
-x 0 0
-P1              0.0025  176.06
-Q1              0.0222  288.21
+M4              0.0515  35.76
 x 0 0
 x 0 0
+N2              0.1126  188.16
+2N2             0.0005  355.69
+O1              0.1167  192.75
 x 0 0
-S2              0.0837  150.02
+P1              0.0025  356.06
+Q1              0.0222  108.21
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0029  297.36
-NU2             0.0005  345.12
+S2              0.0837  330.02
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0012  30.48
-MS4             0.0008  254.04
+x 0 0
+MU2             0.0029  117.36
+NU2             0.0005  165.12
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0012  210.48
+MS4             0.0008  74.04
 x 0 0
 x 0 0
 x 0 0
@@ -39420,7 +39456,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1411 maxima, 0 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9992, RMS error = 0.0299 knots
-# Major axis: 153.5 deg true; table maximum 1.5 kn
+# Major axis: 333.5 deg true; table maximum 1.5 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -39429,46 +39465,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 153.5
+# major_axis_deg_true: 333.5
 # confidence: 5
 # shn_corriente: CABN (CABO NOMBRE)
 # !units: knots
 # !longitude: -68.2300
 # !latitude: -52.8200
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Cabo Nombre, Tierra del Fuego, Argentina Current
 +00:00 :UTC
-0.0003 knots
+-0.0003 knots
 x 0 0
-K1              0.0838  248.99
-K2              0.0012  306.74
-L2              0.0369  170.60
+K1              0.0838  68.99
+K2              0.0012  126.74
+L2              0.0369  350.60
 x 0 0
-M2              1.0704  154.56
+M2              1.0704  334.56
 x 0 0
-M4              0.0656  139.19
-x 0 0
-x 0 0
-N2              0.2606  120.82
-2N2             0.0028  72.85
-O1              0.0510  181.64
-x 0 0
-P1              0.0001  129.65
-Q1              0.0130  115.17
+M4              0.0656  319.19
 x 0 0
 x 0 0
+N2              0.2606  300.82
+2N2             0.0028  252.85
+O1              0.0510  1.64
 x 0 0
-S2              0.2347  194.82
+P1              0.0001  309.65
+Q1              0.0130  295.17
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0120  75.99
-NU2             0.0026  167.13
+S2              0.2347  14.82
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0292  150.74
-MS4             0.0071  174.42
+x 0 0
+MU2             0.0120  255.99
+NU2             0.0026  347.13
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0292  330.74
+MS4             0.0071  354.42
 x 0 0
 x 0 0
 x 0 0
@@ -39618,7 +39655,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1411 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9996, RMS error = 0.0240 knots
-# Major axis: 114.1 deg true; table maximum 2.4 kn
+# Major axis: 294.1 deg true; table maximum 2.4 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -39627,46 +39664,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 114.1
+# major_axis_deg_true: 294.1
 # confidence: 5
 # shn_corriente: CIGU (PUNTA CIGÜEÑA)
 # !units: knots
 # !longitude: -62.0500
 # !latitude: -38.9500
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Punta Cigüeña (Bahía Blanca), Buenos Aires, Argentina Current
 +00:00 :UTC
--0.0028 knots
+0.0028 knots
 x 0 0
-K1              0.1224  183.64
-K2              0.0004  313.67
-L2              0.2679  94.32
+K1              0.1224  3.64
+K2              0.0004  133.67
+L2              0.2679  274.32
 x 0 0
-M2              1.7322  4.28
+M2              1.7322  184.28
 x 0 0
-M4              0.1292  32.84
-x 0 0
-x 0 0
-N2              0.3188  276.93
-2N2             0.0005  16.19
-O1              0.0745  134.12
-x 0 0
-P1              0.0007  259.88
-Q1              0.0290  116.42
+M4              0.1292  212.84
 x 0 0
 x 0 0
+N2              0.3188  96.93
+2N2             0.0005  196.19
+O1              0.0745  314.12
 x 0 0
-S2              0.2809  130.09
+P1              0.0007  79.88
+Q1              0.0290  296.42
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0012  56.38
-NU2             0.0006  196.19
+S2              0.2809  310.09
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0025  358.55
-MS4             0.0009  127.13
+x 0 0
+MU2             0.0012  236.38
+NU2             0.0006  16.19
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0025  178.55
+MS4             0.0009  307.13
 x 0 0
 x 0 0
 x 0 0
@@ -40609,7 +40647,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1411 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9876, RMS error = 0.0413 knots
-# Major axis: 146.6 deg true; table maximum 1.0 kn
+# Major axis: 326.6 deg true; table maximum 1.0 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -40618,46 +40656,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 146.6
+# major_axis_deg_true: 326.6
 # confidence: 5
 # shn_corriente: HOND (PLAYA HONDA)
 # !units: knots
 # !longitude: -58.2500
 # !latitude: -34.4200
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Playa Honda (Río de la Plata), Buenos Aires, Argentina Current
 +00:00 :UTC
--0.0015 knots
+0.0015 knots
 x 0 0
-K1              0.0832  184.65
-K2              0.0007  349.00
-L2              0.0641  137.39
+K1              0.0832  4.65
+K2              0.0007  169.00
+L2              0.0641  317.39
 x 0 0
-M2              0.4633  71.85
+M2              0.4633  251.85
 x 0 0
-M4              0.0720  290.22
-x 0 0
-x 0 0
-N2              0.1757  13.30
-2N2             0.0002  36.20
-O1              0.1195  37.40
-x 0 0
-P1              0.0021  68.94
-Q1              0.0606  17.57
+M4              0.0720  110.22
 x 0 0
 x 0 0
+N2              0.1757  193.30
+2N2             0.0002  216.20
+O1              0.1195  217.40
 x 0 0
-S2              0.0685  204.07
+P1              0.0021  248.94
+Q1              0.0606  197.57
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0057  169.63
-NU2             0.0018  260.99
+S2              0.0685  24.07
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0021  154.04
-MS4             0.0013  325.61
+x 0 0
+MU2             0.0057  349.63
+NU2             0.0018  80.99
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0021  334.04
+MS4             0.0013  145.61
 x 0 0
 x 0 0
 x 0 0
@@ -40807,7 +40846,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1201 maxima, 1284 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9969, RMS error = 0.0301 knots
-# Major axis: 132.5 deg true; table maximum 1.6 kn
+# Major axis: 312.5 deg true; table maximum 1.6 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -40816,46 +40855,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 132.5
+# major_axis_deg_true: 312.5
 # confidence: 5
 # shn_corriente: INTE (CANAL INTERMEDIO)
 # !units: knots
 # !longitude: -57.3300
 # !latitude: -34.9800
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Canal Intermedio (Río de la Plata), Buenos Aires, Argentina Current
 +00:00 :UTC
--0.0029 knots
+0.0029 knots
 x 0 0
-K1              0.2634  158.32
-K2              0.0009  302.99
-L2              0.0023  15.30
+K1              0.2634  338.32
+K2              0.0009  122.99
+L2              0.0023  195.30
 x 0 0
-M2              0.5661  345.30
+M2              0.5661  165.30
 x 0 0
-M4              0.0810  41.88
-x 0 0
-x 0 0
-N2              0.2096  310.83
-2N2             0.0023  47.12
-O1              0.3110  341.69
-x 0 0
-P1              0.0005  245.10
-Q1              0.0739  11.23
+M4              0.0810  221.88
 x 0 0
 x 0 0
+N2              0.2096  130.83
+2N2             0.0023  227.12
+O1              0.3110  161.69
 x 0 0
-S2              0.1167  56.36
+P1              0.0005  65.10
+Q1              0.0739  191.23
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0017  317.29
-NU2             0.0031  347.93
+S2              0.1167  236.36
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0012  64.55
-MS4             0.0046  13.52
+x 0 0
+MU2             0.0017  137.29
+NU2             0.0031  167.93
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0012  244.55
+MS4             0.0046  193.52
 x 0 0
 x 0 0
 x 0 0
@@ -41203,7 +41243,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1278 maxima, 1390 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9938, RMS error = 0.0247 knots
-# Major axis: 162.1 deg true; table maximum 0.9 kn
+# Major axis: 342.1 deg true; table maximum 0.9 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -41212,46 +41252,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 162.1
+# major_axis_deg_true: 342.1
 # confidence: 5
 # shn_corriente: NORD (TORRE NORDEN)
 # !units: knots
 # !longitude: -57.9200
 # !latitude: -34.6300
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Torre Norden (Río de la Plata), Buenos Aires, Argentina Current
 +00:00 :UTC
--0.0013 knots
+0.0013 knots
 x 0 0
-K1              0.0869  226.22
-K2              0.0015  330.73
-L2              0.0140  87.34
+K1              0.0869  46.22
+K2              0.0015  150.73
+L2              0.0140  267.34
 x 0 0
-M2              0.3673  51.33
+M2              0.3673  231.33
 x 0 0
-M4              0.0491  213.95
-x 0 0
-x 0 0
-N2              0.1288  6.51
-2N2             0.0009  126.28
-O1              0.1704  20.35
-x 0 0
-P1              0.0013  235.55
-Q1              0.0467  349.02
+M4              0.0491  33.95
 x 0 0
 x 0 0
+N2              0.1288  186.51
+2N2             0.0009  306.28
+O1              0.1704  200.35
 x 0 0
-S2              0.0786  153.97
+P1              0.0013  55.55
+Q1              0.0467  169.02
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0035  219.58
-NU2             0.0006  160.57
+S2              0.0786  333.97
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0011  60.58
-MS4             0.0033  31.48
+x 0 0
+MU2             0.0035  39.58
+NU2             0.0006  340.57
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0011  240.58
+MS4             0.0033  211.48
 x 0 0
 x 0 0
 x 0 0
@@ -41401,7 +41442,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1320 maxima, 1201 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9981, RMS error = 0.0237 knots
-# Major axis: 129.0 deg true; table maximum 1.6 kn
+# Major axis: 309.0 deg true; table maximum 1.6 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -41410,46 +41451,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 129.0
+# major_axis_deg_true: 309.0
 # confidence: 5
 # shn_corriente: ORTI (QUEBRADA DEL BANCO ORTIZ)
 # !units: knots
 # !longitude: -57.3200
 # !latitude: -34.8200
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Quebrada del Banco Ortiz (Río de la Plata), Buenos Aires, Argentina Current
 +00:00 :UTC
--0.0010 knots
+0.0010 knots
 x 0 0
-K1              0.1039  187.62
-K2              0.0011  169.52
-L2              0.0577  19.84
+K1              0.1039  7.62
+K2              0.0011  349.52
+L2              0.0577  199.84
 x 0 0
-M2              0.5984  2.93
+M2              0.5984  182.93
 x 0 0
-M4              0.0601  89.39
-x 0 0
-x 0 0
-N2              0.2409  331.92
-2N2             0.0005  340.21
-O1              0.3228  347.66
-x 0 0
-P1              0.0010  287.91
-Q1              0.1483  341.72
+M4              0.0601  269.39
 x 0 0
 x 0 0
+N2              0.2409  151.92
+2N2             0.0005  160.21
+O1              0.3228  167.66
 x 0 0
-S2              0.1468  87.02
+P1              0.0010  107.91
+Q1              0.1483  161.72
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0007  112.12
-NU2             0.0011  106.77
+S2              0.1468  267.02
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0021  207.34
-MS4             0.0033  269.60
+x 0 0
+MU2             0.0007  292.12
+NU2             0.0011  286.77
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0021  27.34
+MS4             0.0033  89.60
 x 0 0
 x 0 0
 x 0 0
@@ -41599,7 +41641,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1378 maxima, 1414 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9915, RMS error = 0.0300 knots
-# Major axis: 117.2 deg true; table maximum 0.9 kn
+# Major axis: 297.2 deg true; table maximum 0.9 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -41608,46 +41650,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 117.2
+# major_axis_deg_true: 297.2
 # confidence: 5
 # shn_corriente: PALE (PALERMO)
 # !units: knots
 # !longitude: -58.4000
 # !latitude: -34.5500
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Palermo (Puerto de Buenos Aires), Buenos Aires, Argentina Current
 +00:00 :UTC
--0.0024 knots
+0.0024 knots
 x 0 0
-K1              0.1066  250.01
-K2              0.0005  37.77
-L2              0.0128  49.90
+K1              0.1066  70.01
+K2              0.0005  217.77
+L2              0.0128  229.90
 x 0 0
-M2              0.4050  65.65
+M2              0.4050  245.65
 x 0 0
-M4              0.0781  272.27
-x 0 0
-x 0 0
-N2              0.1241  36.81
-2N2             0.0010  225.51
-O1              0.1179  28.66
-x 0 0
-P1              0.0033  169.72
-Q1              0.0226  310.06
+M4              0.0781  92.27
 x 0 0
 x 0 0
+N2              0.1241  216.81
+2N2             0.0010  45.51
+O1              0.1179  208.66
 x 0 0
-S2              0.0895  172.56
+P1              0.0033  349.72
+Q1              0.0226  130.06
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0055  343.94
-NU2             0.0005  11.54
+S2              0.0895  352.56
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0006  88.54
-MS4             0.0008  203.76
+x 0 0
+MU2             0.0055  163.94
+NU2             0.0005  191.54
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0006  268.54
+MS4             0.0008  23.76
 x 0 0
 x 0 0
 x 0 0
@@ -41995,7 +42038,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1408 maxima, 1359 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9939, RMS error = 0.0421 knots
-# Major axis: 146.7 deg true; table maximum 1.4 kn
+# Major axis: 326.7 deg true; table maximum 1.4 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -42004,46 +42047,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 146.7
+# major_axis_deg_true: 326.7
 # confidence: 5
 # shn_corriente: PIED (BANCO PIEDRAS)
 # !units: knots
 # !longitude: -56.8300
 # !latitude: -35.2700
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Banco Piedras (Río de la Plata), Buenos Aires, Argentina Current
 +00:00 :UTC
--0.0096 knots
+0.0096 knots
 x 0 0
-K1              0.1315  85.07
-K2              0.0008  338.68
-L2              0.0297  0.21
+K1              0.1315  265.07
+K2              0.0008  158.68
+L2              0.0297  180.21
 x 0 0
-M2              0.6594  279.12
+M2              0.6594  99.12
 x 0 0
-M4              0.0540  233.40
-x 0 0
-x 0 0
-N2              0.2889  248.06
-2N2             0.0029  143.71
-O1              0.2164  318.41
-x 0 0
-P1              0.0027  103.88
-Q1              0.1218  251.93
+M4              0.0540  53.40
 x 0 0
 x 0 0
+N2              0.2889  68.06
+2N2             0.0029  323.71
+O1              0.2164  138.41
 x 0 0
-S2              0.0706  6.47
+P1              0.0027  283.88
+Q1              0.1218  71.93
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0029  68.88
-NU2             0.0005  134.83
+S2              0.0706  186.47
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0015  316.60
-MS4             0.0049  311.19
+x 0 0
+MU2             0.0029  248.88
+NU2             0.0005  314.83
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0015  136.60
+MS4             0.0049  131.19
 x 0 0
 x 0 0
 x 0 0
@@ -42193,7 +42237,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1411 maxima, 1047 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9993, RMS error = 0.0248 knots
-# Major axis: 136.7 deg true; table maximum 1.9 kn
+# Major axis: 316.7 deg true; table maximum 1.9 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -42202,46 +42246,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 136.7
+# major_axis_deg_true: 316.7
 # confidence: 5
 # shn_corriente: RIOG (RIO GRANDE)
 # !units: knots
 # !longitude: -67.5200
 # !latitude: -53.6800
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Río Grande (Desembocadura), Tierra del Fuego, Argentina Current
 +00:00 :UTC
--0.0062 knots
+0.0062 knots
 x 0 0
-K1              0.0688  263.08
-K2              0.0026  97.86
-L2              0.0519  293.36
+K1              0.0688  83.08
+K2              0.0026  277.86
+L2              0.0519  113.36
 x 0 0
-M2              1.1801  119.05
+M2              1.1801  299.05
 x 0 0
-M4              0.1023  337.94
-x 0 0
-x 0 0
-N2              0.3058  76.37
-2N2             0.0032  30.18
-O1              0.0414  147.82
-x 0 0
-P1              0.0007  103.00
-Q1              0.0483  148.89
+M4              0.1023  157.94
 x 0 0
 x 0 0
+N2              0.3058  256.37
+2N2             0.0032  210.18
+O1              0.0414  327.82
 x 0 0
-S2              0.2462  190.88
+P1              0.0007  283.00
+Q1              0.0483  328.89
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0047  58.90
-NU2             0.0011  167.67
+S2              0.2462  10.88
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0058  252.01
-MS4             0.0071  40.12
+x 0 0
+MU2             0.0047  238.90
+NU2             0.0011  347.67
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0058  72.01
+MS4             0.0071  220.12
 x 0 0
 x 0 0
 x 0 0
@@ -42391,7 +42436,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1410 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9995, RMS error = 0.0208 knots
-# Major axis: 159.8 deg true; table maximum 1.7 kn
+# Major axis: 339.8 deg true; table maximum 1.7 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -42400,47 +42445,48 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 159.8
+# major_axis_deg_true: 339.8
 # confidence: 5
 # shn_corriente: RION (BOCA RIO NEGRO)
 # !units: knots
 # note: SHN-Koordinate -41.0000/-62.8000 liegt an Land (gerundet); in die Rinne/Muendung gesetzt (naechstes Wasser)
 # !longitude: -62.7925
 # !latitude: -41.0250
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Boca del Río Negro, Río Negro, Argentina Current
 +00:00 :UTC
-0.0023 knots
+-0.0023 knots
 x 0 0
-K1              0.0856  151.88
-K2              0.0003  285.29
-L2              0.1751  302.78
+K1              0.0856  331.88
+K2              0.0003  105.29
+L2              0.1751  122.78
 x 0 0
-M2              1.1405  247.45
+M2              1.1405  67.45
 x 0 0
-M4              0.4577  242.89
-x 0 0
-x 0 0
-N2              0.2170  180.80
-2N2             0.0005  158.66
-O1              0.0535  97.53
-x 0 0
-P1              0.0007  139.33
-Q1              0.0010  247.74
+M4              0.4577  62.89
 x 0 0
 x 0 0
+N2              0.2170  0.80
+2N2             0.0005  338.66
+O1              0.0535  277.53
 x 0 0
-S2              0.0642  285.69
+P1              0.0007  319.33
+Q1              0.0010  67.74
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0005  168.64
-NU2             0.0005  351.99
+S2              0.0642  105.69
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0007  293.48
-MS4             0.0005  292.92
+x 0 0
+MU2             0.0005  348.64
+NU2             0.0005  171.99
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0007  113.48
+MS4             0.0005  112.92
 x 0 0
 x 0 0
 x 0 0
@@ -42590,7 +42636,7 @@ x 0 0
 # events (speed, direction), local time UTC-3; 1411 maxima, 1164 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9974, RMS error = 0.0398 knots
-# Major axis: 86.5 deg true; table maximum 1.5 kn
+# Major axis: 266.5 deg true; table maximum 1.5 kn
 #
 # BEGIN HOT COMMENTS
 # country: Argentina
@@ -42599,46 +42645,47 @@ x 0 0
 # institution: Servicio de Hidrografia Naval
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 86.5
+# major_axis_deg_true: 266.5
 # confidence: 5
 # shn_corriente: SEBA (BAHÍA SAN SEBASTIÁN)
 # !units: knots
 # !longitude: -68.2300
 # !latitude: -53.2500
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Bahía San Sebastián (Entrada), Tierra del Fuego, Argentina Current
 +00:00 :UTC
--0.0137 knots
+0.0137 knots
 x 0 0
-K1              0.0349  194.98
-K2              0.0001  70.81
-L2              0.0543  195.42
+K1              0.0349  14.98
+K2              0.0001  250.81
+L2              0.0543  15.42
 x 0 0
-M2              1.0188  90.66
+M2              1.0188  270.66
 x 0 0
-M4              0.1323  277.51
-x 0 0
-x 0 0
-N2              0.1827  49.67
-2N2             0.0017  9.73
-O1              0.0291  172.92
-x 0 0
-P1              0.0028  261.64
-Q1              0.0102  352.66
+M4              0.1323  97.51
 x 0 0
 x 0 0
+N2              0.1827  229.67
+2N2             0.0017  189.73
+O1              0.0291  352.92
 x 0 0
-S2              0.2702  168.70
+P1              0.0028  81.64
+Q1              0.0102  172.66
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0189  105.78
-NU2             0.0021  295.24
+S2              0.2702  348.70
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0089  10.13
-MS4             0.0078  190.54
+x 0 0
+MU2             0.0189  285.78
+NU2             0.0021  115.24
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0089  190.13
+MS4             0.0078  10.54
 x 0 0
 x 0 0
 x 0 0
@@ -43774,7 +43821,7 @@ x 0 0
 # flood 180 deg / ebb 010 deg true (page footer), UTC-4; 1410 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9919, RMS error = 0.0902 knots
-# Major axis: 7.4 deg true; table maximum flood 1.2 kn, ebb 2.3 kn
+# Major axis: 187.4 deg true; table maximum flood 1.2 kn, ebb 2.3 kn
 #
 # BEGIN HOT COMMENTS
 # country: Chile
@@ -43783,45 +43830,46 @@ x 0 0
 # institution: Servicio Hidrografico y Oceanografico de la Armada (SHOA)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 7.4
+# major_axis_deg_true: 187.4
 # confidence: 5
 # !units: knots
 # !longitude: -73.6600
 # !latitude: -45.2600
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Isla Meninea (Canal Moraleda), Chile Current
 +00:00 :UTC
-0.3870 knots
+-0.3870 knots
 x 0 0
-K1              0.1574  176.03
-K2              0.0059  180.89
-L2              0.1555  318.06
+K1              0.1574  356.03
+K2              0.0059  0.89
+L2              0.1555  138.06
 x 0 0
-M2              1.3067  304.49
+M2              1.3067  124.49
 x 0 0
-M4              0.0861  225.91
-x 0 0
-x 0 0
-N2              0.3237  276.37
-2N2             0.0076  9.97
-O1              0.0954  142.96
-x 0 0
-P1              0.0116  304.77
-Q1              0.0253  91.80
+M4              0.0861  45.91
 x 0 0
 x 0 0
+N2              0.3237  96.37
+2N2             0.0076  189.97
+O1              0.0954  322.96
 x 0 0
-S2              0.2996  306.59
+P1              0.0116  124.77
+Q1              0.0253  271.80
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0720  160.12
-NU2             0.0352  318.31
+S2              0.2996  126.59
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0442  189.77
-MS4             0.0352  202.88
+x 0 0
+MU2             0.0720  340.12
+NU2             0.0352  138.31
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0442  9.77
+MS4             0.0352  22.88
 x 0 0
 x 0 0
 x 0 0
@@ -44168,7 +44216,7 @@ x 0 0
 # flood 192 deg / ebb 032 deg true (page footer), UTC-4; 1802 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.8859, RMS error = 0.6527 knots
-# Major axis: 24.0 deg true; table maximum flood 3.6 kn, ebb 4.3 kn
+# Major axis: 204.0 deg true; table maximum flood 3.6 kn, ebb 4.3 kn
 #
 # BEGIN HOT COMMENTS
 # country: Chile
@@ -44177,45 +44225,46 @@ x 0 0
 # institution: Servicio Hidrografico y Oceanografico de la Armada (SHOA)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 24.0
+# major_axis_deg_true: 204.0
 # confidence: 4
 # !units: knots
 # !longitude: -73.7486
 # !latitude: -46.3886
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Paso Quesahuén (Golfo Elefantes), Chile Current
 +00:00 :UTC
--0.3836 knots
+0.3836 knots
 x 0 0
-K1              0.0423  89.73
-K2              0.0144  137.83
-L2              0.2384  321.84
+K1              0.0423  269.73
+K2              0.0144  317.83
+L2              0.2384  141.84
 x 0 0
-M2              2.2800  293.86
+M2              2.2800  113.86
 x 0 0
-M4              1.2363  142.18
-x 0 0
-x 0 0
-N2              0.3347  251.98
-2N2             0.0156  54.99
-O1              0.1725  324.92
-x 0 0
-P1              0.0275  353.19
-Q1              0.0220  310.40
+M4              1.2363  322.18
 x 0 0
 x 0 0
+N2              0.3347  71.98
+2N2             0.0156  234.99
+O1              0.1725  144.92
 x 0 0
-S2              0.5303  306.57
+P1              0.0275  173.19
+Q1              0.0220  130.40
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.3801  120.35
-NU2             0.0586  159.70
+S2              0.5303  126.57
 x 0 0
 x 0 0
 x 0 0
-MN4             0.4871  104.25
-MS4             0.7645  144.42
+x 0 0
+MU2             0.3801  300.35
+NU2             0.0586  339.70
+x 0 0
+x 0 0
+x 0 0
+MN4             0.4871  284.25
+MS4             0.7645  324.42
 x 0 0
 x 0 0
 x 0 0
@@ -44365,7 +44414,7 @@ x 0 0
 # flood 213 deg / ebb 123 deg true (page footer), UTC-4; 1410 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9865, RMS error = 0.1689 knots
-# Major axis: 108.8 deg true; table maximum flood 2.4 kn, ebb 4.7 kn
+# Major axis: 288.8 deg true; table maximum flood 2.4 kn, ebb 4.7 kn
 #
 # BEGIN HOT COMMENTS
 # country: Chile
@@ -44374,45 +44423,46 @@ x 0 0
 # institution: Servicio Hidrografico y Oceanografico de la Armada (SHOA)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 108.8
+# major_axis_deg_true: 288.8
 # confidence: 5
 # !units: knots
 # !longitude: -73.8431
 # !latitude: -46.5308
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Paso De Vidts (Golfo Elefantes), Chile Current
 +00:00 :UTC
-0.9206 knots
+-0.9206 knots
 x 0 0
-K1              0.2350  196.96
-K2              0.0002  252.41
-L2              0.1084  16.47
+K1              0.2350  16.96
+K2              0.0002  72.41
+L2              0.1084  196.47
 x 0 0
-M2              1.7572  336.86
+M2              1.7572  156.86
 x 0 0
-M4              0.4451  309.08
-x 0 0
-x 0 0
-N2              0.2397  312.20
-2N2             0.0030  124.52
-O1              0.1839  154.66
-x 0 0
-P1              0.0078  308.59
-Q1              0.0258  143.35
+M4              0.4451  129.08
 x 0 0
 x 0 0
+N2              0.2397  132.20
+2N2             0.0030  304.52
+O1              0.1839  334.66
 x 0 0
-S2              0.4311  351.38
+P1              0.0078  128.59
+Q1              0.0258  323.35
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.1552  145.27
-NU2             0.0489  317.87
+S2              0.4311  171.38
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1097  262.94
-MS4             0.2556  311.37
+x 0 0
+MU2             0.1552  325.27
+NU2             0.0489  137.87
+x 0 0
+x 0 0
+x 0 0
+MN4             0.1097  82.94
+MS4             0.2556  131.37
 x 0 0
 x 0 0
 x 0 0
@@ -44562,7 +44612,7 @@ x 0 0
 # flood 246 deg / ebb 027 deg true (page footer), UTC-4; 1332 maxima, 1206 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9487, RMS error = 0.3146 knots
-# Major axis: 54.5 deg true; table maximum flood 2.9 kn, ebb 3.4 kn
+# Major axis: 234.5 deg true; table maximum flood 2.9 kn, ebb 3.4 kn
 #
 # BEGIN HOT COMMENTS
 # country: Chile
@@ -44571,45 +44621,46 @@ x 0 0
 # institution: Servicio Hidrografico y Oceanografico de la Armada (SHOA)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 54.5
+# major_axis_deg_true: 234.5
 # confidence: 5
 # !units: knots
 # !longitude: -74.4183
 # !latitude: -48.9703
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Angostura Inglesa (Canal Messier), Chile Current
 +00:00 :UTC
--0.6911 knots
+0.6911 knots
 x 0 0
-K1              0.3122  149.81
-K2              0.0152  8.85
-L2              0.1084  245.44
+K1              0.3122  329.81
+K2              0.0152  188.85
+L2              0.1084  65.44
 x 0 0
-M2              1.6521  261.87
+M2              1.6521  81.87
 x 0 0
-M4              0.1865  304.10
-x 0 0
-x 0 0
-N2              0.4339  229.12
-2N2             0.0134  293.98
-O1              0.2330  111.02
-x 0 0
-P1              0.0055  140.97
-Q1              0.0745  109.77
+M4              0.1865  124.10
 x 0 0
 x 0 0
+N2              0.4339  49.12
+2N2             0.0134  113.98
+O1              0.2330  291.02
 x 0 0
-S2              0.2655  259.63
+P1              0.0055  320.97
+Q1              0.0745  289.77
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0796  233.01
-NU2             0.0384  154.63
+S2              0.2655  79.63
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0707  139.44
-MS4             0.1029  155.16
+x 0 0
+MU2             0.0796  53.01
+NU2             0.0384  334.63
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0707  319.44
+MS4             0.1029  335.16
 x 0 0
 x 0 0
 x 0 0
@@ -45350,7 +45401,7 @@ x 0 0
 # flood 312 deg / ebb 132 deg true (page footer), UTC-4; 1410 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9898, RMS error = 0.3807 knots
-# Major axis: 132.0 deg true; table maximum flood 9.2 kn, ebb 7.8 kn
+# Major axis: 312.0 deg true; table maximum flood 9.2 kn, ebb 7.8 kn
 #
 # BEGIN HOT COMMENTS
 # country: Chile
@@ -45359,45 +45410,46 @@ x 0 0
 # institution: Servicio Hidrografico y Oceanografico de la Armada (SHOA)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 132.0
+# major_axis_deg_true: 312.0
 # confidence: 5
 # !units: knots
 # !longitude: -72.3989
 # !latitude: -53.5058
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Canal Jerónimo (Boca Sur), Chile Current
 +00:00 :UTC
-0.0635 knots
+-0.0635 knots
 x 0 0
-K1              1.0561  248.63
-K2              0.0152  359.14
-L2              0.5573  29.99
+K1              1.0561  68.63
+K2              0.0152  179.14
+L2              0.5573  209.99
 x 0 0
-M2              4.8772  338.57
+M2              4.8772  158.57
 x 0 0
-M4              0.1559  75.41
-x 0 0
-x 0 0
-N2              1.2491  306.57
-2N2             0.0199  31.09
-O1              0.8578  208.06
-x 0 0
-P1              0.0086  233.83
-Q1              0.1593  181.47
+M4              0.1559  255.41
 x 0 0
 x 0 0
+N2              1.2491  126.57
+2N2             0.0199  211.09
+O1              0.8578  28.06
 x 0 0
-S2              1.5653  10.37
+P1              0.0086  53.83
+Q1              0.1593  1.47
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.3230  141.73
-NU2             0.0237  215.51
+S2              1.5653  190.37
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1152  1.73
-MS4             0.0705  48.73
+x 0 0
+MU2             0.3230  321.73
+NU2             0.0237  35.51
+x 0 0
+x 0 0
+x 0 0
+MN4             0.1152  181.73
+MS4             0.0705  228.73
 x 0 0
 x 0 0
 x 0 0
@@ -46532,7 +46584,7 @@ x 0 0
 # flood 301 deg / ebb 112 deg true (page footer), UTC-4; 1410 maxima, 1411 slacks
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9953, RMS error = 0.0607 knots
-# Major axis: 116.5 deg true; table maximum flood 1.9 kn, ebb 1.9 kn
+# Major axis: 296.5 deg true; table maximum flood 1.9 kn, ebb 1.9 kn
 #
 # BEGIN HOT COMMENTS
 # country: Chile
@@ -46541,45 +46593,46 @@ x 0 0
 # institution: Servicio Hidrografico y Oceanografico de la Armada (SHOA)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 116.5
+# major_axis_deg_true: 296.5
 # confidence: 5
 # !units: knots
 # !longitude: -68.6250
 # !latitude: -52.4472
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Punta Wreck (Dungeness), Chile Current
 +00:00 :UTC
-0.0591 knots
+-0.0591 knots
 x 0 0
-K1              0.0676  256.83
-K2              0.0022  37.79
-L2              0.0427  193.18
+K1              0.0676  76.83
+K2              0.0022  217.79
+L2              0.0427  13.18
 x 0 0
-M2              1.1957  162.11
+M2              1.1957  342.11
 x 0 0
-M4              0.0845  91.15
-x 0 0
-x 0 0
-N2              0.2827  125.10
-2N2             0.0028  102.91
-O1              0.0643  191.00
-x 0 0
-P1              0.0027  341.25
-Q1              0.0113  169.31
+M4              0.0845  271.15
 x 0 0
 x 0 0
+N2              0.2827  305.10
+2N2             0.0028  282.91
+O1              0.0643  11.00
 x 0 0
-S2              0.3237  224.56
+P1              0.0027  161.25
+Q1              0.0113  349.31
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0582  186.01
-NU2             0.0048  4.67
+S2              0.3237  44.56
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0637  52.76
-MS4             0.0816  172.63
+x 0 0
+MU2             0.0582  6.01
+NU2             0.0048  184.67
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0637  232.76
+MS4             0.0816  352.63
 x 0 0
 x 0 0
 x 0 0
@@ -47324,7 +47377,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9592, RMS error = 0.0784 knots
-# Major axis: 158.3 deg true
+# Major axis: 338.3 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -47333,7 +47386,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 158.3
+# major_axis_deg_true: 338.3
 # confidence: 5
 # chm_ccm: ccm-porto-de-madre-de-deus.pdf point 1.7
 # time_correction_min: 0
@@ -47341,21 +47394,22 @@ x 0 0
 # !units: knots
 # !longitude: -38.6270
 # !latitude: -12.7486
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Terminal de Madre de Deus (Leste), Bahia, Brazil Current
 +00:00 :UTC
-0.1285 knots
+-0.1285 knots
 x 0 0
 x 0 0
-K2              0.0588  290.51
-L2              0.0068  175.91
+K2              0.0588  110.51
+L2              0.0068  355.91
 x 0 0
-M2              0.4761  269.66
+M2              0.4761  89.66
 x 0 0
-M4              0.0290  247.91
-M6              0.0280  359.82
-M8              0.0232  10.67
-N2              0.0968  273.00
-2N2             0.0043  190.97
+M4              0.0290  67.91
+M6              0.0280  179.82
+M8              0.0232  190.67
+N2              0.0968  93.00
+2N2             0.0043  10.97
 x 0 0
 x 0 0
 x 0 0
@@ -47363,22 +47417,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2117  294.17
-S4              0.0177  332.98
+S2              0.2117  114.17
+S4              0.0177  152.98
 x 0 0
-T2              0.0114  293.89
-LDA2            0.0196  151.33
-MU2             0.0706  286.99
-NU2             0.0178  254.61
+T2              0.0114  113.89
+LDA2            0.0196  331.33
+MU2             0.0706  106.99
+NU2             0.0178  74.61
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0138  265.40
-MS4             0.0433  292.92
+MN4             0.0138  85.40
+MS4             0.0433  112.92
 x 0 0
 x 0 0
-MSF             0.0433  31.26
-MM              0.0162  6.27
+MSF             0.0433  211.26
+MM              0.0162  186.27
 x 0 0
 x 0 0
 x 0 0
@@ -47390,8 +47444,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0119  15.90
-2MS6            0.0333  24.80
+2MN6            0.0119  195.90
+2MS6            0.0333  204.80
 x 0 0
 x 0 0
 x 0 0
@@ -47411,18 +47465,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0103  286.34
+MK4             0.0103  106.34
 x 0 0
 x 0 0
-EPS2            0.0251  276.43
+EPS2            0.0251  96.43
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0159  325.18
-MSN6            0.0088  72.71
+MSN2            0.0159  145.18
+MSN6            0.0088  252.71
 x 0 0
 x 0 0
 x 0 0
@@ -47437,7 +47491,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0135  315.15
+SN4             0.0135  135.15
 x 0 0
 x 0 0
 x 0 0
@@ -47528,7 +47582,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9656, RMS error = 0.0828 knots
-# Major axis: 136.9 deg true
+# Major axis: 316.9 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -47537,7 +47591,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 136.9
+# major_axis_deg_true: 316.9
 # confidence: 5
 # chm_ccm: ccm-porto-de-madre-de-deus.pdf point 1.8
 # time_correction_min: 0
@@ -47545,21 +47599,22 @@ x 0 0
 # !units: knots
 # !longitude: -38.6282
 # !latitude: -12.7493
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Terminal de Madre de Deus (Dolfim), Bahia, Brazil Current
 +00:00 :UTC
-0.0645 knots
+-0.0645 knots
 x 0 0
 x 0 0
-K2              0.0670  295.10
-L2              0.0027  238.20
+K2              0.0670  115.10
+L2              0.0027  58.20
 x 0 0
-M2              0.5604  279.03
+M2              0.5604  99.03
 x 0 0
-M4              0.0379  110.69
-M6              0.0378  29.28
-M8              0.0111  356.52
-N2              0.1088  278.03
-2N2             0.0055  279.65
+M4              0.0379  290.69
+M6              0.0378  209.28
+M8              0.0111  176.52
+N2              0.1088  98.03
+2N2             0.0055  99.65
 x 0 0
 x 0 0
 x 0 0
@@ -47567,22 +47622,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2380  298.35
-S4              0.0183  329.24
+S2              0.2380  118.35
+S4              0.0183  149.24
 x 0 0
-T2              0.0131  298.59
-LDA2            0.0171  153.31
-MU2             0.0598  280.83
-NU2             0.0226  272.08
+T2              0.0131  118.59
+LDA2            0.0171  333.31
+MU2             0.0598  100.83
+NU2             0.0226  92.08
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0024  213.68
-MS4             0.0173  297.54
+MN4             0.0024  33.68
+MS4             0.0173  117.54
 x 0 0
 x 0 0
-MSF             0.0350  35.59
-MM              0.0135  9.02
+MSF             0.0350  215.59
+MM              0.0135  189.02
 x 0 0
 x 0 0
 x 0 0
@@ -47594,8 +47649,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0182  37.36
-2MS6            0.0452  48.46
+2MN6            0.0182  217.36
+2MS6            0.0452  228.46
 x 0 0
 x 0 0
 x 0 0
@@ -47615,18 +47670,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0021  291.61
+MK4             0.0021  111.61
 x 0 0
 x 0 0
-EPS2            0.0259  278.16
+EPS2            0.0259  98.16
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0153  323.56
-MSN6            0.0109  73.80
+MSN2            0.0153  143.56
+MSN6            0.0109  253.80
 x 0 0
 x 0 0
 x 0 0
@@ -47641,7 +47696,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0154  306.71
+SN4             0.0154  126.71
 x 0 0
 x 0 0
 x 0 0
@@ -47732,7 +47787,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9691, RMS error = 0.0947 knots
-# Major axis: 126.0 deg true
+# Major axis: 306.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -47741,7 +47796,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 126.0
+# major_axis_deg_true: 306.0
 # confidence: 5
 # chm_ccm: ccm-porto-de-madre-de-deus.pdf point 1.9
 # time_correction_min: 0
@@ -47749,21 +47804,22 @@ x 0 0
 # !units: knots
 # !longitude: -38.6277
 # !latitude: -12.7505
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Terminal de Madre de Deus (Centro), Bahia, Brazil Current
 +00:00 :UTC
--0.0119 knots
+0.0119 knots
 x 0 0
 x 0 0
-K2              0.0760  297.85
-L2              0.0111  291.42
+K2              0.0760  117.85
+L2              0.0111  111.42
 x 0 0
-M2              0.6958  284.09
+M2              0.6958  104.09
 x 0 0
-M4              0.0714  94.54
-M6              0.0034  58.21
-M8              0.0141  40.21
-N2              0.1227  280.84
-2N2             0.0158  282.02
+M4              0.0714  274.54
+M6              0.0034  238.21
+M8              0.0141  220.21
+N2              0.1227  100.84
+2N2             0.0158  102.02
 x 0 0
 x 0 0
 x 0 0
@@ -47771,22 +47827,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2661  301.38
-S4              0.0186  326.99
+S2              0.2661  121.38
+S4              0.0186  146.99
 x 0 0
-T2              0.0150  301.58
-LDA2            0.0124  164.34
-MU2             0.0362  282.78
-NU2             0.0321  278.24
+T2              0.0150  121.58
+LDA2            0.0124  344.34
+MU2             0.0362  102.78
+NU2             0.0321  98.24
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0061  100.80
-MS4             0.0071  10.55
+MN4             0.0061  280.80
+MS4             0.0071  190.55
 x 0 0
 x 0 0
-MSF             0.0328  37.15
-MM              0.0128  9.53
+MSF             0.0328  217.15
+MM              0.0128  189.53
 x 0 0
 x 0 0
 x 0 0
@@ -47798,8 +47854,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0056  60.35
-2MS6            0.0139  48.72
+2MN6            0.0056  240.35
+2MS6            0.0139  228.72
 x 0 0
 x 0 0
 x 0 0
@@ -47819,18 +47875,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0034  70.00
+MK4             0.0034  250.00
 x 0 0
 x 0 0
-EPS2            0.0249  278.13
+EPS2            0.0249  98.13
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0123  323.66
-MSN6            0.0092  63.72
+MSN2            0.0123  143.66
+MSN6            0.0092  243.72
 x 0 0
 x 0 0
 x 0 0
@@ -47845,7 +47901,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0164  302.32
+SN4             0.0164  122.32
 x 0 0
 x 0 0
 x 0 0
@@ -47936,7 +47992,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9865, RMS error = 0.1035 knots
-# Major axis: 130.6 deg true
+# Major axis: 310.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -47945,7 +48001,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 130.6
+# major_axis_deg_true: 310.6
 # confidence: 5
 # chm_ccm: ccm-porto-de-madre-de-deus.pdf point 1.12
 # time_correction_min: 0
@@ -47953,21 +48009,22 @@ x 0 0
 # !units: knots
 # !longitude: -38.6259
 # !latitude: -12.7524
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Terminal de Madre de Deus (Posto S-1), Bahia, Brazil Current
 +00:00 :UTC
-0.0365 knots
+-0.0365 knots
 x 0 0
 x 0 0
-K2              0.1322  299.45
-L2              0.0160  319.48
+K2              0.1322  119.45
+L2              0.0160  139.48
 x 0 0
-M2              1.1487  288.55
+M2              1.1487  108.55
 x 0 0
-M4              0.0827  132.40
-M6              0.0345  1.89
-M8              0.0173  32.58
-N2              0.2136  282.19
-2N2             0.0244  301.80
+M4              0.0827  312.40
+M6              0.0345  181.89
+M8              0.0173  212.58
+N2              0.2136  102.19
+2N2             0.0244  121.80
 x 0 0
 x 0 0
 x 0 0
@@ -47975,22 +48032,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.4718  304.96
-S4              0.0159  312.65
+S2              0.4718  124.96
+S4              0.0159  132.65
 x 0 0
-T2              0.0259  305.33
-LDA2            0.0160  124.01
-MU2             0.0879  273.42
-NU2             0.0423  274.95
+T2              0.0259  125.33
+LDA2            0.0160  304.01
+MU2             0.0879  93.42
+NU2             0.0423  94.95
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0171  144.25
-MS4             0.0251  186.26
+MN4             0.0171  324.25
+MS4             0.0251  6.26
 x 0 0
 x 0 0
-MSF             0.0215  87.23
-MM              0.0040  116.92
+MSF             0.0215  267.23
+MM              0.0040  296.92
 x 0 0
 x 0 0
 x 0 0
@@ -48002,8 +48059,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0197  12.30
-2MS6            0.0339  15.44
+2MN6            0.0197  192.30
+2MS6            0.0339  195.44
 x 0 0
 x 0 0
 x 0 0
@@ -48023,18 +48080,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0067  170.64
+MK4             0.0067  350.64
 x 0 0
 x 0 0
-EPS2            0.0368  257.82
+EPS2            0.0368  77.82
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0141  289.00
-MSN6            0.0119  36.31
+MSN2            0.0141  109.00
+MSN6            0.0119  216.31
 x 0 0
 x 0 0
 x 0 0
@@ -48049,7 +48106,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0127  289.54
+SN4             0.0127  109.54
 x 0 0
 x 0 0
 x 0 0
@@ -48140,7 +48197,7 @@ x 0 0
 # 52560 10-minute samples, surface
 # from 2026-01-01 to 2026-12-31
 # R^2 = 0.9666, RMS error = 0.1060 knots
-# Major axis: 85.0 deg true
+# Major axis: 265.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Brazil
@@ -48149,7 +48206,7 @@ x 0 0
 # institution: Centro de Hidrografia da Marinha (DHN)
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 85.0
+# major_axis_deg_true: 265.0
 # confidence: 5
 # chm_ccm: ccm-porto-de-vitoria.pdf point 1.1
 # time_correction_min: 0
@@ -48157,21 +48214,22 @@ x 0 0
 # !units: knots
 # !longitude: -40.3330
 # !latitude: -20.3237
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Terminal de Capuaba (Porto de Vitória), Espírito Santo, Brazil Current
 +00:00 :UTC
-0.1027 knots
+-0.1027 knots
 x 0 0
 x 0 0
-K2              0.0899  307.64
-L2              0.0398  280.07
+K2              0.0899  127.64
+L2              0.0398  100.07
 x 0 0
-M2              0.7344  292.51
+M2              0.7344  112.51
 x 0 0
-M4              0.1058  164.17
-M6              0.0245  62.22
-M8              0.0079  287.24
-N2              0.1115  296.62
-2N2             0.0271  292.95
+M4              0.1058  344.17
+M6              0.0245  242.22
+M8              0.0079  107.24
+N2              0.1115  116.62
+2N2             0.0271  112.95
 x 0 0
 x 0 0
 x 0 0
@@ -48179,22 +48237,22 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.3085  306.00
-S4              0.0045  44.24
+S2              0.3085  126.00
+S4              0.0045  224.24
 x 0 0
-T2              0.0185  304.18
-LDA2            0.0048  325.39
-MU2             0.0220  306.57
-NU2             0.0284  291.02
+T2              0.0185  124.18
+LDA2            0.0048  145.39
+MU2             0.0220  126.57
+NU2             0.0284  111.02
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0277  167.40
-MS4             0.0602  180.20
+MN4             0.0277  347.40
+MS4             0.0602  0.20
 x 0 0
 x 0 0
-MSF             0.0408  179.53
-MM              0.0063  181.38
+MSF             0.0408  359.53
+MM              0.0063  1.38
 x 0 0
 x 0 0
 x 0 0
@@ -48206,8 +48264,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MN6            0.0104  72.08
-2MS6            0.0277  72.38
+2MN6            0.0104  252.08
+2MS6            0.0277  252.38
 x 0 0
 x 0 0
 x 0 0
@@ -48227,18 +48285,18 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0195  188.04
+MK4             0.0195  8.04
 x 0 0
 x 0 0
-EPS2            0.0048  111.31
+EPS2            0.0048  291.31
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-MSN2            0.0037  105.21
-MSN6            0.0054  93.38
+MSN2            0.0037  285.21
+MSN6            0.0054  273.38
 x 0 0
 x 0 0
 x 0 0
@@ -48253,7 +48311,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-SN4             0.0038  113.66
+SN4             0.0038  293.66
 x 0 0
 x 0 0
 x 0 0

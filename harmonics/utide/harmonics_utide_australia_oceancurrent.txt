@@ -15026,36 +15026,37 @@ MNUS2
 # station_id_context: AUSTEN-UNSW_Brampton_I
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 170.9
+# major_axis_deg_true: 350.9
 # confidence: 8
 # !units: knots
 # !longitude: 149.271667
 # !latitude: -20.853333
 # state: Queensland
 # admin1_quelle: Ufer 20.2 km
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Brampton I, Australia Current
 +00:00 :UTC
-0.0469 knots
+-0.0469 knots
 x 0 0
-K1              0.0552  44.97
-K2              0.0772  94.74
-x 0 0
-x 0 0
-M2              0.6253  104.98
+K1              0.0552  224.97
+K2              0.0772  274.74
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.1361  94.75
-x 0 0
-O1              0.0320  9.50
-x 0 0
-P1              0.0083  348.31
-Q1              0.0106  349.54
+M2              0.6253  284.98
 x 0 0
 x 0 0
 x 0 0
-S2              0.2550  103.00
+x 0 0
+N2              0.1361  274.75
+x 0 0
+O1              0.0320  189.50
+x 0 0
+P1              0.0083  168.31
+Q1              0.0106  169.54
+x 0 0
+x 0 0
+x 0 0
+S2              0.2550  283.00
 x 0 0
 x 0 0
 x 0 0
@@ -15222,36 +15223,37 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_Wigton_I
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 172.2
+# major_axis_deg_true: 352.2
 # confidence: 8
 # !units: knots
 # !longitude: 149.466660
 # !latitude: -20.666666
 # state: Queensland
 # admin1_quelle: Ufer 42.0 km
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Wigton I, Australia Current
 +00:00 :UTC
-0.0353 knots
+-0.0353 knots
 x 0 0
-K1              0.0740  91.78
-K2              0.0799  109.18
-x 0 0
-x 0 0
-M2              0.7723  116.20
+K1              0.0740  271.78
+K2              0.0799  289.18
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.1455  102.84
-x 0 0
-O1              0.0447  49.80
-x 0 0
-P1              0.0171  46.75
-Q1              0.0050  39.15
+M2              0.7723  296.20
 x 0 0
 x 0 0
 x 0 0
-S2              0.2946  117.11
+x 0 0
+N2              0.1455  282.84
+x 0 0
+O1              0.0447  229.80
+x 0 0
+P1              0.0171  226.75
+Q1              0.0050  219.15
+x 0 0
+x 0 0
+x 0 0
+S2              0.2946  297.11
 x 0 0
 x 0 0
 x 0 0
@@ -15614,34 +15616,35 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_N_Bugatti_Rf
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 19.2
+# major_axis_deg_true: 199.2
 # confidence: 8
 # !units: knots
 # !longitude: 150.303329
 # !latitude: -20.026667
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 N Bugatti Rf, Australia Current
 +00:00 :UTC
-0.1925 knots
+-0.1925 knots
 x 0 0
-K1              0.1369  92.34
-K2              0.1224  94.61
-x 0 0
-x 0 0
-M2              0.9310  107.65
+K1              0.1369  272.34
+K2              0.1224  274.61
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.2251  88.20
-x 0 0
-O1              0.0945  36.70
-x 0 0
-P1              0.0208  87.00
-Q1              0.0117  357.77
+M2              0.9310  287.65
 x 0 0
 x 0 0
 x 0 0
-S2              0.4179  94.99
+x 0 0
+N2              0.2251  268.20
+x 0 0
+O1              0.0945  216.70
+x 0 0
+P1              0.0208  267.00
+Q1              0.0117  177.77
+x 0 0
+x 0 0
+x 0 0
+S2              0.4179  274.99
 x 0 0
 x 0 0
 x 0 0
@@ -15808,34 +15811,35 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_W_Bugatti_Rf
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 32.7
+# major_axis_deg_true: 212.7
 # confidence: 8
 # !units: knots
 # !longitude: 150.246674
 # !latitude: -20.075001
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 W Bugatti Rf, Australia Current
 +00:00 :UTC
--0.2074 knots
+0.2074 knots
 x 0 0
-K1              0.1295  122.44
-K2              0.1493  99.69
-x 0 0
-x 0 0
-M2              1.0714  117.12
+K1              0.1295  302.44
+K2              0.1493  279.69
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.2618  97.33
-x 0 0
-O1              0.0374  95.20
-x 0 0
-P1              0.0721  111.84
-Q1              0.0050  347.13
+M2              1.0714  297.12
 x 0 0
 x 0 0
 x 0 0
-S2              0.5359  101.08
+x 0 0
+N2              0.2618  277.33
+x 0 0
+O1              0.0374  275.20
+x 0 0
+P1              0.0721  291.84
+Q1              0.0050  167.13
+x 0 0
+x 0 0
+x 0 0
+S2              0.5359  281.08
 x 0 0
 x 0 0
 x 0 0
@@ -16002,34 +16006,35 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_Creal_Rf
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 16.9
+# major_axis_deg_true: 196.9
 # confidence: 8
 # !units: knots
 # !longitude: 150.399994
 # !latitude: -20.500000
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Creal Rf, Australia Current
 +00:00 :UTC
--0.0491 knots
+0.0491 knots
 x 0 0
-K1              0.0182  140.29
-K2              0.0601  106.64
-x 0 0
-x 0 0
-M2              0.4513  102.80
+K1              0.0182  320.29
+K2              0.0601  286.64
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0851  91.88
-x 0 0
-O1              0.0078  14.41
-x 0 0
-P1              0.0171  109.92
-Q1              0.0097  111.80
+M2              0.4513  282.80
 x 0 0
 x 0 0
 x 0 0
-S2              0.1931  95.59
+x 0 0
+N2              0.0851  271.88
+x 0 0
+O1              0.0078  194.41
+x 0 0
+P1              0.0171  289.92
+Q1              0.0097  291.80
+x 0 0
+x 0 0
+x 0 0
+S2              0.1931  275.59
 x 0 0
 x 0 0
 x 0 0
@@ -16588,36 +16593,37 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_L_Musgrave_I
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 85.0
+# major_axis_deg_true: 265.0
 # confidence: 8
 # !units: knots
 # !longitude: 152.304993
 # !latitude: -23.928333
 # state: Queensland
 # admin1_quelle: Ufer 47.8 km
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 L Musgrave I, Australia Current
 +00:00 :UTC
-0.0099 knots
+-0.0099 knots
 x 0 0
-K1              0.0855  79.01
-K2              0.0081  152.50
-x 0 0
-x 0 0
-M2              0.2712  55.21
+K1              0.0855  259.01
+K2              0.0081  332.50
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0772  59.69
-x 0 0
-O1              0.0635  42.70
-x 0 0
-P1              0.0591  102.96
-Q1              0.0259  350.31
+M2              0.2712  235.21
 x 0 0
 x 0 0
 x 0 0
-S2              0.1192  73.86
+x 0 0
+N2              0.0772  239.69
+x 0 0
+O1              0.0635  222.70
+x 0 0
+P1              0.0591  282.96
+Q1              0.0259  170.31
+x 0 0
+x 0 0
+x 0 0
+S2              0.1192  253.86
 x 0 0
 x 0 0
 x 0 0
@@ -19344,7 +19350,7 @@ x 0 0
 # station_id_context: AUSTEN-UTas_ARENA_Darwin_CW1
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 90.3
+# major_axis_deg_true: 270.3
 # confidence: 8
 # !units: knots
 # !longitude: 131.121857
@@ -19352,31 +19358,30 @@ x 0 0
 # state: Northern Territory
 # admin1_quelle: Ufer 5.0 km
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 108-day window (ratio/lag of Glyde Point, 6 km); K2/P1 added
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Clarence Strait CW1, Australia Current
 +00:00 :UTC
-0.0451 knots
+-0.0451 knots
 x 0 0
-K1              0.5405  15.66
-K2              0.3116  132.23
-x 0 0
-x 0 0
-M2              2.1086  72.26
-x 0 0
-M4              0.0368  175.36
-M6              0.0147  63.34
-x 0 0
-N2              0.3113  34.62
-2N2             0.1370  77.20
-O1              0.3138  347.81
-x 0 0
-P1              0.1424  19.30
-Q1              0.0667  324.31
+K1              0.5405  195.66
+K2              0.3116  312.23
 x 0 0
 x 0 0
+M2              2.1086  252.26
 x 0 0
-S2              1.1204  129.61
+M4              0.0368  355.36
+M6              0.0147  243.34
+x 0 0
+N2              0.3113  214.62
+2N2             0.1370  257.20
+O1              0.3138  167.81
+x 0 0
+P1              0.1424  199.30
+Q1              0.0667  144.31
 x 0 0
 x 0 0
+x 0 0
+S2              1.1204  309.61
 x 0 0
 x 0 0
 x 0 0
@@ -19385,9 +19390,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0522  233.63
 x 0 0
 x 0 0
+MS4             0.0522  53.63
 x 0 0
 x 0 0
 x 0 0
@@ -19402,7 +19407,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0275  124.39
+x 0 0
+x 0 0
+2MS6            0.0275  304.39
 x 0 0
 x 0 0
 x 0 0
@@ -20721,35 +20728,36 @@ x 0 0
 # station_id_context: AUSTEN-CSIRO_28068
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 126.1
+# major_axis_deg_true: 306.1
 # confidence: 8
 # !units: knots
 # !longitude: 139.026703
 # !latitude: -13.988300
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 96-day window (ratio/lag of Nassau River Offshore, 201 km); K2/P1 added
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Gulf of Carpentaria (CSIRO 28068), Australia Current
 +00:00 :UTC
-0.0184 knots
+-0.0184 knots
 x 0 0
-K1              0.1986  229.95
-K2              0.0085  27.52
-x 0 0
-x 0 0
-M2              0.1269  246.73
+K1              0.1986  49.95
+K2              0.0085  207.52
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0274  226.83
-x 0 0
-O1              0.1507  170.36
-x 0 0
-P1              0.0681  233.60
-Q1              0.0336  143.34
+M2              0.1269  66.73
 x 0 0
 x 0 0
 x 0 0
-S2              0.0449  340.67
+x 0 0
+N2              0.0274  46.83
+x 0 0
+O1              0.1507  350.36
+x 0 0
+P1              0.0681  53.60
+Q1              0.0336  323.34
+x 0 0
+x 0 0
+x 0 0
+S2              0.0449  160.67
 x 0 0
 x 0 0
 x 0 0
@@ -21111,35 +21119,36 @@ x 0 0
 # station_id_context: AUSTEN-CSIRO_28076
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 46.8
+# major_axis_deg_true: 226.8
 # confidence: 8
 # !units: knots
 # !longitude: 125.654999
 # !latitude: -12.755000
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 206-day window (ratio/lag of West Holothuria Reef Offshore, 82 km); K2/P1 added
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 West Holothuria Reef (80 km N, Timor Sea; CSIRO 28076), Australia Current
 +00:00 :UTC
-0.0413 knots
+-0.0413 knots
 x 0 0
-K1              0.1003  146.49
-K2              0.0746  201.94
-x 0 0
-x 0 0
-M2              0.4502  147.59
+K1              0.1003  326.49
+K2              0.0746  21.94
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0837  124.88
-x 0 0
-O1              0.0610  128.89
-x 0 0
-P1              0.0282  147.14
-Q1              0.0147  115.50
+M2              0.4502  327.59
 x 0 0
 x 0 0
 x 0 0
-S2              0.2594  204.68
+x 0 0
+N2              0.0837  304.88
+x 0 0
+O1              0.0610  308.89
+x 0 0
+P1              0.0282  327.14
+Q1              0.0147  295.50
+x 0 0
+x 0 0
+x 0 0
+S2              0.2594  24.68
 x 0 0
 x 0 0
 x 0 0
@@ -21306,7 +21315,7 @@ x 0 0
 # station_id_context: AUSTEN-CSIRO_28084
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 177.7
+# major_axis_deg_true: 357.7
 # confidence: 8
 # !units: knots
 # !longitude: 148.283295
@@ -21314,29 +21323,30 @@ x 0 0
 # state: Tasmania
 # admin1_quelle: Ufer 8.8 km
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 179-day window (ratio/lag of Darlington Jetty, 20 km); K2/P1 added
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Darlington (19 km ESE, Maria Island; CSIRO 28084), Australia Current
 +00:00 :UTC
-0.1646 knots
+-0.1646 knots
 x 0 0
-K1              0.1521  91.29
-K2              0.0078  182.43
-x 0 0
-x 0 0
-M2              0.1092  214.60
+K1              0.1521  271.29
+K2              0.0078  2.43
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0159  171.96
-x 0 0
-O1              0.0886  54.19
-x 0 0
-P1              0.0469  87.25
-Q1              0.0217  39.32
+M2              0.1092  34.60
 x 0 0
 x 0 0
 x 0 0
-S2              0.0242  212.52
+x 0 0
+N2              0.0159  351.96
+x 0 0
+O1              0.0886  234.19
+x 0 0
+P1              0.0469  267.25
+Q1              0.0217  219.32
+x 0 0
+x 0 0
+x 0 0
+S2              0.0242  32.52
 x 0 0
 x 0 0
 x 0 0
@@ -22685,7 +22695,7 @@ x 0 0
 # station_id_context: AUSTEN-CSIRO_28363
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 126.1
+# major_axis_deg_true: 306.1
 # confidence: 8
 # !units: knots
 # !longitude: 116.385002
@@ -22693,29 +22703,30 @@ x 0 0
 # state: Western Australia
 # admin1_quelle: Ufer 98.1 km
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 49-day window (ratio/lag of Mawby Island, 93 km); K2/P1 added
+# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Cape Legendre (85 km NW, North West Shelf; CSIRO 28363), Australia Current
 +00:00 :UTC
--0.0638 knots
+0.0638 knots
 x 0 0
-K1              0.0721  274.96
-K2              0.0866  228.04
-x 0 0
-x 0 0
-M2              0.4928  170.37
+K1              0.0721  94.96
+K2              0.0866  48.04
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0685  134.17
-x 0 0
-O1              0.0295  262.69
-x 0 0
-P1              0.0212  272.16
-Q1              0.0105  357.36
+M2              0.4928  350.37
 x 0 0
 x 0 0
 x 0 0
-S2              0.3048  228.81
+x 0 0
+N2              0.0685  314.17
+x 0 0
+O1              0.0295  82.69
+x 0 0
+P1              0.0212  92.16
+Q1              0.0105  177.36
+x 0 0
+x 0 0
+x 0 0
+S2              0.3048  48.81
 x 0 0
 x 0 0
 x 0 0
