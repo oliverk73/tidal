@@ -8402,7 +8402,7 @@ f99ebc5b166305c38e5b3721585cfc26,harmonics/noaa/harmonics_noaa_carib.txt,"Fresh 
 554426d11bdcbf01e54141b7aabcddd4,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Castilla, Honduras",16.0,-86.033,source,,,,,220f3608 2026-07-02
 5b7e185c904b7c544b8d3a512241bee1,harmonics/noaa/harmonics_noaa_censam.txt,"Cabo Pasado, Ecuador",-0.3649,-80.4881,manual,,-0.35,-80.517,3615,220f3608 2026-07-02
 5b8b6a7336943061ec738ea1572d8102,harmonics/noaa/harmonics_noaa_censam.txt,"Amapala, Honduras",13.3,-87.65,source,,,,,220f3608 2026-07-02
-5c406d3abf0fa15e3da34a6a5fe82274,harmonics/noaa/harmonics_noaa_censam.txt,"San Lorenzo, Ecuador",1.25,-78.833,manual,,1.25,78.833,17527487,220f3608 2026-07-02
+5c406d3abf0fa15e3da34a6a5fe82274,harmonics/noaa/harmonics_noaa_censam.txt,"San Lorenzo, Ecuador",1.293,-78.8388,manual,,1.25,78.833,17528133,220f3608 2026-07-02
 6a59aae0f844b0affa1bd1ab0a2b2d65,harmonics/noaa/harmonics_noaa_censam.txt,"Isla Cébaco, Panama",7.5215,-81.2192,manual,,7.517,-81.217,556,220f3608 2026-07-02
 6ecb3fc957654f75ffd15051cc1b8fb0,harmonics/noaa/harmonics_noaa_censam.txt,"Isla Guadalupe, Baja California, Mexico",28.8833,-116.3,source,,,,,220f3608 2026-07-02
 762a7808d40505f0878f1139053d4ae9,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía de Darwin (Isla Genovesa), Galápagos, Ecuador",0.317,-89.95,manual,"Bahía de Darwin, Isla Genovesa, Galápagos, Ecuador",,,,220f3608 2026-07-02
@@ -8419,7 +8419,7 @@ c31b38ddd88c966edcc2808752af8131,harmonics/noaa/harmonics_noaa_censam.txt,"Tabog
 cf64e6717fc8d30de88bc4ffeb09fc13,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía Honda, Panama",7.7631,-81.5156,manual,,7.767,-81.517,460,220f3608 2026-07-02
 df17300e46cc4923dee0fd40a0169bc3,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía de Perry (Isla Isabela), Galápagos, Ecuador",-0.567,-90.967,manual,"Bahía de Perry, Isla Isabela, Galápagos, Ecuador",,,,220f3608 2026-07-02
 e1dd5f08347223b97adf9c23ca288bf3,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía Isabela (Isla Isabela), Galápagos, Ecuador",-0.6,-91.083,manual,"Bahía Isabela, Isla Isabela, Galápagos, Ecuador",,,,220f3608 2026-07-02
-e21ea7d7aa32de521eddbe343bd1dc62,harmonics/noaa/harmonics_noaa_censam.txt,"Río Santiago, Esmeraldas, Ecuador",1.217,-79.117,source,,,,,220f3608 2026-07-02
+e21ea7d7aa32de521eddbe343bd1dc62,harmonics/noaa/harmonics_noaa_censam.txt,"Río Santiago, Esmeraldas, Ecuador",1.2175,-79.0501,manual,,1.217,-79.117,7437,220f3608 2026-07-02
 f846256d5e2bebeb2d49cea25b99ca9a,harmonics/noaa/harmonics_noaa_censam.txt,"Golfo Elena, Costa Rica",10.9315,-85.8153,manual,,10.933,-85.817,250,220f3608 2026-07-02
 f871e151dd20f8eee8a8361d7a959f4e,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Cayo, Ecuador",-1.3522,-80.7405,manual,"Puerto Cayo, Manabí, Ecuador",-1.35,-80.75,1084,220f3608 2026-07-02
 fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Caleta Tagus (Isla Isabela), Galápagos, Ecuador",-0.2601,-91.3706,manual,"Caleta Tagus, Isla Isabela, Galápagos, Ecuador",-0.25,-91.367,1192,220f3608 2026-07-02
@@ -12303,19 +12303,20 @@ ff5b5de881a4a47b9f1de4f23f0b248e,harmonics/utide/harmonics_utide_current_observa
 00d44eb1bdb949989b61c502809587a5,harmonics/utide/harmonics_utide_current_tables.txt,"Hammond Rock, Queensland, Australia Current",-10.5,142.2167,source,,,,,8407a3fa 2026-05-12
 0408d7fe40faae037891e24c31488fe7,harmonics/utide/harmonics_utide_current_tables.txt,"Boulogne-sur-Mer (4 km WNW; SHOM atlas 557), France Current",50.7347,1.5411,source,,,,,61a0c4af 2026-10-20
 08eba58c5fd859a9d30d733bd703c966,harmonics/utide/harmonics_utide_current_tables.txt,"Le Havre (5 km W; SHOM atlas 561), France Current",49.4798,0.0309,source,,,,,61a0c4af 2026-10-20
-0999ef48ffc282119ca6692dfbea792f,harmonics/utide/harmonics_utide_current_tables.txt,"Terminal de Madre de Deus (Posto S-2), Bahia, Brazil Current",-12.7529,-38.6298,ambiguous,,,,,
+0999ef48ffc282119ca6692dfbea792f,harmonics/utide/harmonics_utide_current_tables.txt,"Terminal de Madre de Deus (Posto S-2), Bahia, Brazil Current",-12.7529,-38.6298,source,,,,,6d2fc200 2026-10-25
 0c04b6c9316b212c2e48ab5939587ce5,harmonics/utide/harmonics_utide_current_tables.txt,"Baía de São Marcos (Banco da Cerca), Maranhão, Brazil Current",-2.4241,-44.3386,source,,,,,8438ca83 2026-10-25
 0dbfc496a0c277edf2a54d1802f8fabc,harmonics/utide/harmonics_utide_current_tables.txt,"Juan de Fuca Strait (East), British Columbia, Canada Current",48.231667,-123.53,manual,"Juan de Fuca - East, Canada Current",,,,1039256e 2026-10-16
 14b0d300db3ba8d6ff49ac3a32b4fb66,harmonics/utide/harmonics_utide_current_tables.txt,"Big Russel (SHOM atlas 562), Guernsey Current",49.4491,-2.408,source,,,,,61a0c4af 2026-10-20
 1872e315fef84959813ec622fa14af95,harmonics/utide/harmonics_utide_current_tables.txt,"Big Bras d'Or, Nova Scotia, Canada Current",46.281566,-60.424734,manual,"Big Bras D'Or, Canada Current",,,,1039256e 2026-10-16
-1b97062f802f857e31a9721117bef522,harmonics/utide/harmonics_utide_current_tables.txt,"Baixio do Tagano (Porto de Vitória), Espírito Santo, Brazil Current",-20.3207,-40.281,ambiguous,,,,,
+1b97062f802f857e31a9721117bef522,harmonics/utide/harmonics_utide_current_tables.txt,"Baixio do Tagano (Porto de Vitória), Espírito Santo, Brazil Current",-20.3207,-40.281,source,,,,,6d2fc200 2026-10-25
+2229047d8ac29af1fea56e834e58eedb,harmonics/utide/harmonics_utide_current_tables.txt,"Baía de Guanabara (Ponte Rio-Niterói), Rio de Janeiro, Brazil Current",-22.8791,-43.1646,ambiguous,,,,,
 249f3d042d3f198800e96cfa5c0ac17e,harmonics/utide/harmonics_utide_current_tables.txt,"Ponta d'Areia (Baía de São Marcos), Maranhão, Brazil Current",-2.4992,-44.334,source,,,,,8438ca83 2026-10-25
 280005eff4f0478e0c8cdbf8a3e7fe8d,harmonics/utide/harmonics_utide_current_tables.txt,"Fromveur (SHOM atlas 560), France Current",48.4552,-5.0191,source,,,,,61a0c4af 2026-10-20
 2829cb0b60797a4655e170fce475fccc,harmonics/utide/harmonics_utide_current_tables.txt,"Beachy Head (3 km SSE; SHOM atlas 564), England, United Kingdom Current",50.7068,0.2505,source,,,,,76cfdf23 2026-10-20
-292f0038c6e6b5c78ae07f23f06cccc0,harmonics/utide/harmonics_utide_current_tables.txt,"Entrada da Baía de Guanabara, Rio de Janeiro, Brazil Current",-22.9652,-43.1323,ambiguous,,,,,
+28d2a199d36575c72b3f2601e2c771d1,harmonics/utide/harmonics_utide_current_tables.txt,"Entrada da Baía de Guanabara, Rio de Janeiro, Brazil Current",-22.9652,-43.1323,ambiguous,,,,,
 29a15cd928b8b264251bc719bc540c4a,harmonics/utide/harmonics_utide_current_tables.txt,"Porto do Itaqui, Maranhão, Brazil Current",-2.5764,-44.3744,source,,,,,8438ca83 2026-10-25
 2aee41928c6e3d2907e0ef7a6548c9fe,harmonics/utide/harmonics_utide_current_tables.txt,"Nakwakto Rapids, British Columbia, Canada Current",51.096667,-127.503333,manual,"Nakwakto Rapids, Canada Current",,,,1039256e 2026-10-16
-2b892d005046740537ee65db35fc0008,harmonics/utide/harmonics_utide_current_tables.txt,"Ilha do Urubu (Porto de Vitória), Espírito Santo, Brazil Current",-20.3217,-40.3223,ambiguous,,,,,
+2b892d005046740537ee65db35fc0008,harmonics/utide/harmonics_utide_current_tables.txt,"Ilha do Urubu (Porto de Vitória), Espírito Santo, Brazil Current",-20.3217,-40.3223,source,,,,,6d2fc200 2026-10-25
 31452b7699838d509b1a9fadcf81168e,harmonics/utide/harmonics_utide_current_tables.txt,"Gabriola Passage, British Columbia, Canada Current",49.129074,-123.704297,manual,"Gabriola Passage, Canada Current",,,,1039256e 2026-10-16
 381c66ebbdab37297f4beaeead423ffa,harmonics/utide/harmonics_utide_current_tables.txt,"Little Russel (SHOM atlas 562), Guernsey Current",49.4761,-2.4769,source,,,,,61a0c4af 2026-10-20
 3f9b3c34fab8fb7aeedbc9e8a47449b2,harmonics/utide/harmonics_utide_current_tables.txt,"Oom Shoal - Mackay, Queensland, Australia Current",-21.05,149.2833,source,,,,,8407a3fa 2026-05-12
@@ -12329,7 +12330,6 @@ ff5b5de881a4a47b9f1de4f23f0b248e,harmonics/utide/harmonics_utide_current_observa
 555b8d3b8d55249a5b03b1fdcdc1c77a,harmonics/utide/harmonics_utide_current_tables.txt,"Start Point (4 km SSE; SHOM atlas 564), England, United Kingdom Current",50.1842,-3.6289,source,,,,,76cfdf23 2026-10-20
 56abb7d605c3e6112de72b616664b2b6,harmonics/utide/harmonics_utide_current_tables.txt,"Quatsino Narrows, British Columbia, Canada Current",50.555,-127.555,manual,"Quatsino Narrows, Canada Current",,,,1039256e 2026-10-16
 5d67906dd3696d3d8b800fe88e9ec549,harmonics/utide/harmonics_utide_current_tables.txt,"Granville (6 km WSW; SHOM atlas 562), France Current",48.8197,-1.6774,source,,,,,61a0c4af 2026-10-20
-602966d78bc273dfcf8e8bcaa0710ecc,harmonics/utide/harmonics_utide_current_tables.txt,"Baía de Guanabara (Ilha de Villegagnon), Rio de Janeiro, Brazil Current",-22.9202,-43.1495,ambiguous,,,,,
 63bacfef7c35a5b24b663fbcbb77da6b,harmonics/utide/harmonics_utide_current_tables.txt,"Passage de la Teignouse (SHOM atlas 565), France Current",47.4404,-3.0575,source,,,,,77977a45 2026-10-20
 65d38c356b6ff4e488b8528f5dbb80d0,harmonics/utide/harmonics_utide_current_tables.txt,"Saint-Nazaire (9 km SW; SHOM atlas 565), France Current",47.2067,-2.2825,source,,,,,77977a45 2026-10-20
 669ece432024e5ff1bd4561f847dc17e,harmonics/utide/harmonics_utide_current_tables.txt,"St Catherine's Point (4 km SSW; SHOM atlas 564), England, United Kingdom Current",50.5446,-1.3124,source,,,,,76cfdf23 2026-10-20
@@ -12339,7 +12339,7 @@ ff5b5de881a4a47b9f1de4f23f0b248e,harmonics/utide/harmonics_utide_current_observa
 6bda5593da302fa5cc344cbae890f2db,harmonics/utide/harmonics_utide_current_tables.txt,"Rio Anil (São Luís), Maranhão, Brazil Current",-2.5221,-44.3115,source,,,,,8438ca83 2026-10-25
 6cfc7f0aceb8b581ebe1c03dde4402c4,harmonics/utide/harmonics_utide_current_tables.txt,"Seymour Narrows (Discovery Passage), British Columbia, Canada Current",50.133333,-125.35,manual,"Seymour Narrows, Canada Current",,,,1039256e 2026-10-16
 6eaf2fa77a2bb560b9e208c63d90fdaa,harmonics/utide/harmonics_utide_current_tables.txt,"Gillard Passage, British Columbia, Canada Current",50.393333,-125.156667,manual,"Gillard Passage, Canada Current",,,,1039256e 2026-10-16
-71351e9a98adad9b90e64eb6994e44f1,harmonics/utide/harmonics_utide_current_tables.txt,"Terminal de Madre de Deus (Norte), Bahia, Brazil Current",-12.7492,-38.6314,ambiguous,,,,,
+71351e9a98adad9b90e64eb6994e44f1,harmonics/utide/harmonics_utide_current_tables.txt,"Terminal de Madre de Deus (Norte), Bahia, Brazil Current",-12.7492,-38.6314,source,,,,,6d2fc200 2026-10-25
 718882f2e458c869142987fcb1433361,harmonics/utide/harmonics_utide_current_tables.txt,"Lizard Point (3 km SSE; SHOM atlas 564), England, United Kingdom Current",49.932,-5.1918,source,,,,,76cfdf23 2026-10-20
 749b79956e65a1c923242580a2c189cf,harmonics/utide/harmonics_utide_current_tables.txt,"Banco da Minerva (São Luís), Maranhão, Brazil Current",-2.508,-44.3187,source,,,,,8438ca83 2026-10-25
 7868027175979f9b5d78af5292b42a90,harmonics/utide/harmonics_utide_current_tables.txt,"Casquets (3 km SW; SHOM atlas 562), Guernsey Current",49.7009,-2.4011,source,,,,,61a0c4af 2026-10-20
@@ -12347,12 +12347,13 @@ ff5b5de881a4a47b9f1de4f23f0b248e,harmonics/utide/harmonics_utide_current_observa
 7ad6086a6b0752bf3f48b9ef397155a0,harmonics/utide/harmonics_utide_current_tables.txt,"Baía de São Marcos (Farol Itacolomi), Maranhão, Brazil Current",-2.2982,-44.2413,source,,,,,8438ca83 2026-10-25
 7e11fd33e72154d48f0e2cb4ca72877f,harmonics/utide/harmonics_utide_current_tables.txt,"Masset Channel, British Columbia, Canada Current",54.002862,-132.154333,manual,"Masset Channel, Canada Current",,,,1039256e 2026-10-16
 84ee1c8352c59a59cbdac4f18b130bbd,harmonics/utide/harmonics_utide_current_tables.txt,"La Corbière (3 km WSW; SHOM atlas 562), Jersey Current",49.1659,-2.277,source,,,,,61a0c4af 2026-10-20
-852c889bed5647c938af6c3f55c0e638,harmonics/utide/harmonics_utide_current_tables.txt,"Madre de Deus (Praia do Loreto), Bahia, Brazil Current",-12.7545,-38.6237,ambiguous,,,,,
+852c889bed5647c938af6c3f55c0e638,harmonics/utide/harmonics_utide_current_tables.txt,"Madre de Deus (Praia do Loreto), Bahia, Brazil Current",-12.7545,-38.6237,source,,,,,6d2fc200 2026-10-25
 87e63b7b78161a54d9f264842e04f9a8,harmonics/utide/harmonics_utide_current_tables.txt,"Grand Manan Channel (Bay of Fundy Entrance), New Brunswick, Canada Current",44.75,-66.933333,manual,"Grand Manan Channel, Canada Current",,,,1039256e 2026-10-16
 90f9975874332107d2b06b47400a5899,harmonics/utide/harmonics_utide_current_tables.txt,"Dungeness (4 km SSE; SHOM atlas 557), England, United Kingdom Current",50.8792,0.9921,source,,,,,61a0c4af 2026-10-20
 92baef664f92556c07c78beb81180bfb,harmonics/utide/harmonics_utide_current_tables.txt,"Hiekish Narrows, British Columbia, Canada Current",52.8705,-128.490667,manual,"Hiekish Narrows, Canada Current",,,,1039256e 2026-10-16
+93f76755d408ecc26c1af7686a924bc2,harmonics/utide/harmonics_utide_current_tables.txt,"Baía de Guanabara (Ilha de Villegagnon), Rio de Janeiro, Brazil Current",-22.9202,-43.1495,ambiguous,,,,,
 96eca1aa40e0e93367bf64d11cd5cba0,harmonics/utide/harmonics_utide_current_tables.txt,"Raz Blanchard (SHOM atlas 562), France Current",49.7098,-2.0358,source,,,,,61a0c4af 2026-10-20
-9898dfd79c486acb713a86fe05a0c4f9,harmonics/utide/harmonics_utide_current_tables.txt,"Cais da Usiminas (Porto de Vitória), Espírito Santo, Brazil Current",-20.3237,-40.3383,ambiguous,,,,,
+9898dfd79c486acb713a86fe05a0c4f9,harmonics/utide/harmonics_utide_current_tables.txt,"Cais da Usiminas (Porto de Vitória), Espírito Santo, Brazil Current",-20.3237,-40.3383,source,,,,,6d2fc200 2026-10-25
 98f4f43804cc0027782af50e185d938e,harmonics/utide/harmonics_utide_current_tables.txt,"Scott Channel, British Columbia, Canada Current",50.7955,-128.520333,manual,"Scott Channel, Canada Current",,,,1039256e 2026-10-16
 9b31c73a1890453f409b6e473d94059e,harmonics/utide/harmonics_utide_current_tables.txt,"Ilha do Medo (Baía de São Marcos), Maranhão, Brazil Current",-2.5132,-44.379,source,,,,,8438ca83 2026-10-25
 9d08c50ccc56df39ddeab013b0aba837,harmonics/utide/harmonics_utide_current_tables.txt,"Gorey (4 km E; SHOM atlas 562), Jersey Current",49.2018,-1.96,source,,,,,61a0c4af 2026-10-20
@@ -12371,7 +12372,6 @@ c20241e441eba80e5107e1f9a1890a59,harmonics/utide/harmonics_utide_current_tables.
 c829d505de069321a64c08d246aa7c3a,harmonics/utide/harmonics_utide_current_tables.txt,"Chenal du Four (SHOM atlas 560), France Current",48.3832,-4.8029,source,,,,,61a0c4af 2026-10-20
 cc6d84352ef3653414989659640c64f3,harmonics/utide/harmonics_utide_current_tables.txt,"Raz de Sein (SHOM atlas 560), France Current",48.0413,-4.759,source,,,,,61a0c4af 2026-10-20
 cc9b702025624681d7cad9a82bf1b2dd,harmonics/utide/harmonics_utide_current_tables.txt,"Banco do Cotovelo (Baía de São Marcos), Maranhão, Brazil Current",-2.4783,-44.3218,source,,,,,8438ca83 2026-10-25
-d1c052f67bed984be07ef3957ad0f775,harmonics/utide/harmonics_utide_current_tables.txt,"Baía de Guanabara (Ponte Rio-Niterói), Rio de Janeiro, Brazil Current",-22.8791,-43.1646,ambiguous,,,,,
 d37a315e6522c90dd409e0bb82673586,harmonics/utide/harmonics_utide_current_tables.txt,"Le Palais (6 km N; SHOM atlas 565), France Current",47.4044,-3.1608,source,,,,,77977a45 2026-10-20
 d39c829ab2007ba26a454e709e48aec1,harmonics/utide/harmonics_utide_current_tables.txt,"Farol de Ponta d'Areia (São Luís), Maranhão, Brazil Current",-2.5045,-44.3254,source,,,,,8438ca83 2026-10-25
 d45033704b6b108bd190f8bfdb16485a,harmonics/utide/harmonics_utide_current_tables.txt,"Cabeço Mearim (Baía de São Marcos), Maranhão, Brazil Current",-2.5459,-44.3863,source,,,,,8438ca83 2026-10-25
@@ -12385,7 +12385,7 @@ dcda09a192b0fbdfdd92fe539883d87f,harmonics/utide/harmonics_utide_current_tables.
 dd7657333e88686ad19fafbd612260d5,harmonics/utide/harmonics_utide_current_tables.txt,"Cap d'Antifer (7 km W; SHOM atlas 561), France Current",49.6788,0.077,source,,,,,76cfdf23 2026-10-20
 e461a68bcb8ede5507dbdb35f865132e,harmonics/utide/harmonics_utide_current_tables.txt,"Cap Fréhel (4 km N; SHOM atlas 562), France Current",48.7208,-2.3184,source,,,,,61a0c4af 2026-10-20
 e8bab257e62872cd042727e0ad2f9135,harmonics/utide/harmonics_utide_current_tables.txt,"Île Vierge (4 km N; SHOM atlas 560), France Current",48.6779,-4.5689,source,,,,,61a0c4af 2026-10-20
-ef36d5f6ef52b2ec47be53615bae37a9,harmonics/utide/harmonics_utide_current_tables.txt,"Porto de Vitória (Canal de Acesso), Espírito Santo, Brazil Current",-20.3221,-40.2999,ambiguous,,,,,
+ef36d5f6ef52b2ec47be53615bae37a9,harmonics/utide/harmonics_utide_current_tables.txt,"Porto de Vitória (Canal de Acesso), Espírito Santo, Brazil Current",-20.3221,-40.2999,source,,,,,6d2fc200 2026-10-25
 f0117dbd12f45e1d480a10555075c3b3,harmonics/utide/harmonics_utide_current_tables.txt,"Blackney Passage, British Columbia, Canada Current",50.555,-126.6842,manual,"Blackney passage, Canada Current",,,,1039256e 2026-10-16
 f069ee42fd20ab8f65b8d333d98b0320,harmonics/utide/harmonics_utide_current_tables.txt,"Rame Head (4 km SSW; SHOM atlas 564), England, United Kingdom Current",50.2743,-4.2429,source,,,,,76cfdf23 2026-10-20
 f148bd7d1c5db101dfaeb0338995d592,harmonics/utide/harmonics_utide_current_tables.txt,"Raz de Barfleur (SHOM atlas 561), France Current",49.7282,-1.2289,source,,,,,76cfdf23 2026-10-20
@@ -14794,7 +14794,7 @@ f480dadee45057a3f35ab65085a6a4db,harmonics/utide/harmonics_utide_pushidrosal_tab
 5676cbeda172ec76a34740d14700e06d,harmonics/utide/harmonics_utide_tidetables.txt,"Torquay, England, United Kingdom",50.4599,-3.5265,source,,,,,ef775bdb 2026-09-07
 56904a2fb0b922f0240c7e787adad79e,harmonics/utide/harmonics_utide_tidetables.txt,"Moturoa Island, New Zealand",-35.2108,174.077,source,,,,,09ee867b 2026-05-03
 569a0f2e6def864670b7d2974b841de9,harmonics/utide/harmonics_utide_tidetables.txt,"Île Surprise, New Caledonia",-18.4795,163.0859,source,,,,,dd5f962f 2026-09-20
-56a71db2a188152c0dee5949783b2575,harmonics/utide/harmonics_utide_tidetables.txt,"Limones, Esmeraldas, Ecuador",1.2486,-78.9797,source,,,,,2c6ad1fd 2026-06-21
+56a71db2a188152c0dee5949783b2575,harmonics/utide/harmonics_utide_tidetables.txt,"Valdez (Limones), Esmeraldas, Ecuador",1.2486,-78.9797,manual,"Limones, Esmeraldas, Ecuador",,,,2c6ad1fd 2026-06-21
 56b3a770a6772175348249425b3e8f20,harmonics/utide/harmonics_utide_tidetables.txt,"Hinoba-an Port, Negros Occidental, Philippines",9.632177,122.450057,manual,"Hinoba-an, Negros Occidental, Philippines",,,,17ebcd18 2026-05-01
 56d3006ce0f4e9ca7742b7d1871e54a1,harmonics/utide/harmonics_utide_tidetables.txt,"Bonaventure, Québec, Canada",48.037623,-65.481124,source,,,,,17ebcd18 2026-05-01
 56dc57ef9099dd8711b792761535b18b,harmonics/utide/harmonics_utide_tidetables.txt,"Courseulles-sur-Mer (Large), France",49.4,-0.4667,source,,,,,dd5f962f 2026-09-20

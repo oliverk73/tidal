@@ -63,16 +63,21 @@ def faktor_sao_marcos(hub, dauer):
 
 
 class Abaco:
-    """Faktor-Abakus (Santos, Guanabara ...): Kurven gleichen Faktors ueber Tidenhub (oben, m) und
-    Dauer PM<->BM (links, h). Die Kurven sind schwarze 1-pt-Linien; Kurve k von links = Faktor 0,1*k
-    (die Beschriftung sitzt neben den Kurven und hilft nicht; geprueft am Rechenbeispiel des Hefts).
-    Angepasst wird f = c * Hub^a * Dauer^b (Abweichung ~5 %)."""
+    """Faktor-Abakus (Santos, Guanabara, Paranagua) ueber Tidenhub (oben, m) und Dauer PM<->BM (links, h).
+    Die Linien sind Grenzen zwischen Faktorstufen: die Zahlen 0,1 .. 1,3 stehen ZWISCHEN den 12 Linien
+    (0,1 links der ersten, 1,3 rechts der letzten). Linie k entspricht also 0,1*k + 0,05; so treffen alle
+    drei Rechenbeispiele (Santos 1,3, Paranagua 0,9, Guanabara 0,4). Ausgewertet wird stetig: je Dauer
+    der Hub jeder Linie, dazwischen linear, ausserhalb mit der Randsteigung."""
 
     def __init__(self, pdf, seite):
         p = fitz.open(pdf)[seite - 1]
+        m = _dreh(p)
         kurven = []
         for g in p.get_drawings():
-            if g['type'] == 's' and g.get('color') and max(g['color']) < 0.3 and abs((g.get('width') or 0) - 1.0) < 0.05:
+            # Kurven bzw. Geraden: dunkle Striche ab 0,5 pt, schraeg (Rahmen und Gitter laufen achsparallel)
+            r = g['rect']
+            if 's' in g['type'] and g.get('color') and max(g['color']) < 0.3 and (g.get('width') or 0) > 0.5 \
+                    and r.width > 5 and r.height > 5 and all(it[0] in ('c', 'l') for it in g['items']):
                 pts = []
                 for it in g['items']:
                     if it[0] == 'c':
@@ -80,16 +85,16 @@ class Abaco:
                         for t in np.linspace(0, 1, 30):
                             pts.append(((1 - t) ** 3 * a.x + 3 * (1 - t) ** 2 * t * b.x + 3 * (1 - t) * t ** 2 * c.x + t ** 3 * d.x,
                                         (1 - t) ** 3 * a.y + 3 * (1 - t) ** 2 * t * b.y + 3 * (1 - t) * t ** 2 * c.y + t ** 3 * d.y))
-                    elif it[0] == 'l':
-                        pts += [(it[1].x, it[1].y), (it[2].x, it[2].y)]
-                if pts:
-                    kurven.append(np.array(pts))
+                    else:
+                        a, b = it[1], it[2]
+                        pts += [(a.x + (b.x - a.x) * t, a.y + (b.y - a.y) * t) for t in np.linspace(0, 1, 30)]
+                kurven.append(np.array([tuple(fitz.Point(x, y) * m) for x, y in pts]))
         oben, links = [], []
         for b in p.get_text('dict')['blocks']:
             for l in b.get('lines', []):
                 t = ''.join(s['text'] for s in l['spans']).strip()
-                x0, y0, x1, y1 = l['bbox']
-                if l['dir'] != (1.0, 0.0):
+                x0, y0, x1, y1 = _rect(p, l['bbox'])
+                if _richtung(p, l['dir']) != (1.0, 0.0):
                     continue
                 if re.fullmatch(r'\d,\d', t):
                     oben.append(((x0 + x1) / 2, (y0 + y1) / 2, float(t.replace(',', '.'))))
@@ -103,22 +108,39 @@ class Abaco:
         bx, ax = np.polyfit([x for x, _ in oben], [v for _, v in oben], 1)
         by, ay = np.polyfit([y for y, _ in links], [v for _, v in links], 1)
         kurven.sort(key=lambda c: c[:, 0].min() + c[:, 0].max())
-        A, T, F = [], [], []
-        for k, c in enumerate(kurven, 1):
-            A += list(ax + bx * c[:, 0])
-            T += list(ay + by * c[:, 1])
-            F += [0.1 * k] * len(c)
-        A, T, F = map(np.array, (A, T, F))
-        M = np.column_stack([np.ones(len(A)), np.log(A), np.log(T)])
-        self.co, *_ = np.linalg.lstsq(M, np.log(F), rcond=None)
-        self.rms = float(np.std(np.log(F) - M @ self.co))
         self.n = len(kurven)
+        # Tabelle: fuer Dauer 1..10 h den Hub jeder Linie (NaN, wo die Linie nicht hinreicht)
+        self.dauer = np.arange(1.0, 10.01, 0.05)
+        self.hub = np.full((len(self.dauer), len(kurven)), np.nan)
+        for k, c in enumerate(kurven):
+            A = ax + bx * c[:, 0]
+            T = ay + by * c[:, 1]
+            o = np.argsort(T)
+            ok = (self.dauer >= T.min()) & (self.dauer <= T.max())
+            self.hub[ok, k] = np.interp(self.dauer[ok], T[o], A[o])
+        self.wert = 0.1 * np.arange(1, len(kurven) + 1) + 0.05
+
+    def _eins(self, hub, dauer):
+        # Dauer ausserhalb des Diagramms (gemischte Tiden): auf den Rand des Diagramms setzen
+        gueltig = np.where((~np.isnan(self.hub)).sum(axis=1) >= 2)[0]
+        i = int(np.clip(round((dauer - 1.0) / 0.05), gueltig[0], gueltig[-1]))
+        z = self.hub[i]
+        ok = ~np.isnan(z)
+        x, f = z[ok], self.wert[ok]
+        if len(x) < 2:
+            return np.nan
+        if hub <= x[0]:
+            return max(0.0, f[0] + (hub - x[0]) * (f[1] - f[0]) / (x[1] - x[0]))
+        if hub >= x[-1]:
+            return f[-1] + (hub - x[-1]) * (f[-1] - f[-2]) / (x[-1] - x[-2])
+        return float(np.interp(hub, x, f))
 
     def __call__(self, hub, dauer):
-        return np.exp(self.co[0]) * np.maximum(hub, 0.01) ** self.co[1] * dauer ** self.co[2]
+        hub, dauer = np.broadcast_arrays(np.atleast_1d(hub).astype(float), np.atleast_1d(dauer).astype(float))
+        return np.array([self._eins(h, d) for h, d in zip(hub, dauer)])
 
     def __repr__(self):
-        return 'f = %.3f * Hub^%.3f * Dauer^%.3f (%d Kurven, rel. %.3f)' % (np.exp(self.co[0]), self.co[1], self.co[2], self.n, self.rms)
+        return 'Abakus mit %d Stufengrenzen (%.2f .. %.2f)' % (self.n, self.wert[0], self.wert[-1])
 
 
 class Korrektur:
