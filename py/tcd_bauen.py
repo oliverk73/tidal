@@ -14,6 +14,9 @@ gebaut wird dorthin, und die fertige Datei wandert anschliessend nach
 Ausliefern wieder jede TCD als "fehlt", und es werden alle 38 neu
 gebaut statt der zwei oder drei, die sich geaendert haben.
 
+Nach jedem Ausliefern laeuft build_tide_station_markers.py, damit die
+Karte (static/js/leaflet_markers_data.json) den neuen Stand zeigt.
+
 Usage: python3 py/tcd_bauen.py [--alle] [--pruefen]
        --alle     auch aktuelle TCDs neu bauen
        --pruefen  nur zeigen, was veraltet ist
@@ -100,6 +103,13 @@ def main(argv):
         print(f'\n{veraltet} veraltet, {aktuell} aktuell')
     else:
         print(f'\n{gebaut} gebaut, {aktuell} waren aktuell, {fehler} Fehler')
+        if gebaut > fehler:
+            # Die Karte liest die TCDs nicht selbst -- ohne diesen Lauf fehlen
+            # neue Stationen und Umbenennungen dort.
+            r = subprocess.run([sys.executable, os.path.join(ROOT, 'py/build_tide_station_markers.py')],
+                               cwd=ROOT)
+            print('Kartenmarker ' + ('neu gebaut' if r.returncode == 0 else 'FEHLER'))
+            fehler += 0 if r.returncode == 0 else 1
     return 1 if fehler else 0
 
 
