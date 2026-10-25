@@ -101,24 +101,39 @@ class Abaco:
                         a, b = it[1], it[2]
                         pts += [(a.x + (b.x - a.x) * t, a.y + (b.y - a.y) * t) for t in np.linspace(0, 1, 30)]
                 kurven.append(np.array([tuple(fitz.Point(x, y) * m) for x, y in pts]))
-        oben, links = [], []
+        oben, links, zonen, meter = [], [], [], []
         for b in p.get_text('dict')['blocks']:
             for l in b.get('lines', []):
                 t = ''.join(s['text'] for s in l['spans']).strip()
                 x0, y0, x1, y1 = _rect(p, l['bbox'])
+                c = ((x0 + x1) / 2, (y0 + y1) / 2)
+                if re.fullmatch(r'\d,\d', t):
+                    zonen.append((c, float(t.replace(',', '.'))))
                 if _richtung(p, l['dir']) != (1.0, 0.0):
                     continue
                 if re.fullmatch(r'\d,\d', t):
-                    oben.append(((x0 + x1) / 2, (y0 + y1) / 2, float(t.replace(',', '.'))))
+                    oben.append((c[0], c[1], float(t.replace(',', '.'))))
                 elif re.fullmatch(r'\d{1,2}', t):
-                    links.append(((y0 + y1) / 2, float(t)))
-        # Hub-Achse: die waagrechte Zahlenreihe mit den meisten Eintraegen
-        zeilen = {}
-        for x, y, v in oben:
-            zeilen.setdefault(round(y), []).append((x, v))
-        oben = max(zeilen.values(), key=len)
+                    links.append((c[1], float(t)))
+                elif re.fullmatch(r'\d+m', t):
+                    meter.append((c[0], float(t[:-1])))                 # Amazonas: "1m" .. "7m"
+                elif re.fullmatch(r'\d{1,2}:\d\dh?', t):
+                    hh, mm = t.rstrip('h').split(':')
+                    links.append((c[1], int(hh) + int(mm) / 60))         # Amazonas: "04:00h"
+        if meter:
+            oben = meter
+        else:
+            # Hub-Achse: die waagrechte Zahlenreihe mit den meisten Eintraegen
+            zeilen = {}
+            for x, y, v in oben:
+                zeilen.setdefault(round(y), []).append((x, v))
+            ya = max(zeilen, key=lambda y: len(zeilen[y]))
+            oben = zeilen[ya]
+            zonen = [(c, v) for c, v in zonen if round(c[1]) != ya]
         bx, ax = np.polyfit([x for x, _ in oben], [v for _, v in oben], 1)
         by, ay = np.polyfit([y for y, _ in links], [v for _, v in links], 1)
+        # kleinste Stufe (links der ersten Linie): 0,1 bei Santos/Guanabara/Paranagua, 0,3 am Amazonas
+        start = min(v for _, v in zonen) if zonen else 0.1
         kurven.sort(key=lambda c: c[:, 0].min() + c[:, 0].max())
         self.n = len(kurven)
         # Tabelle: fuer Dauer 1..10 h den Hub jeder Linie (NaN, wo die Linie nicht hinreicht)
@@ -130,7 +145,7 @@ class Abaco:
             o = np.argsort(T)
             ok = (self.dauer >= T.min()) & (self.dauer <= T.max())
             self.hub[ok, k] = np.interp(self.dauer[ok], T[o], A[o])
-        self.wert = 0.1 * np.arange(1, len(kurven) + 1) + 0.05
+        self.wert = start + 0.1 * np.arange(len(kurven)) + 0.05
 
     def _eins(self, hub, dauer):
         # Dauer ausserhalb des Diagramms (gemischte Tiden): auf den Rand des Diagramms setzen
@@ -270,6 +285,17 @@ HEFTE = {
                   gitter=(((232.0, 5 + 45 / 60), (631.5, 5 + 47 / 60)),
                           ((161.0, 35 + 13 / 60), (358.0, 35 + 12 / 60))),
                   marken={'x': ('12\u2019', 357.7), 'y': ('46\u2019', 432.9)}),
+    # Amazonas: jede Karte zweigeteilt -- oben rote Pfeile, Bezug PM Barra Norte (Pegel Ponta do Ceu, Ilha do
+    # Curua -> unser Igarape Grande do Curua, 3 km), unten blaue Pfeile, Bezug PM Santana. Je ein Abakus.
+    # Gitter beidseits des Aequators: Breite Nord als negativer Wert (lage() kehrt das Vorzeichen um).
+    'amazonas-norte': dict(pdf='ccm-rio-amazonas.pdf', hafen=(S.TAFELN, 'Igarap\u00e9 Grande do Curua, Amap\u00e1, Brazil'),
+                           farbe='rot', saisons=True, faktor=lambda h, d: abaco('ccm-rio-amazonas.pdf', 5)(h, d),
+                           gitter=(((480.5, 0.0), (199.0, -40 / 60)), ((214.0, 51.0), (639.5, 50.0))),
+                           marken={'x': ('51\u00ba', 214.0), 'y': ('0\u00ba', 480.5)}),
+    'amazonas-santana': dict(pdf='ccm-rio-amazonas.pdf', hafen=(S.OBS, 'Santana (Cia Docas), Amap\u00e1, Brazil'),
+                             farbe='blau', saisons=True, faktor=lambda h, d: abaco('ccm-rio-amazonas.pdf', 7)(h, d),
+                             gitter=(((480.5, 0.0), (199.0, -40 / 60)), ((214.0, 51.0), (639.5, 50.0))),
+                             marken={'x': ('51\u00ba', 214.0), 'y': ('0\u00ba', 480.5)}),
     # Vitoria: blaue Zahlen = 5 m Tiefgang (oberflaechennah); Tabelle I westlich, II oestlich der
     # gestrichelten Linie bei der Ilha das Cobras. Bezug PM Vitoria (Ilha do Urubu).
     'vitoria': dict(pdf='ccm-porto-de-vitoria.pdf', hafen=(S.TAFELN, 'Vit\u00f3ria (Porto), Esp\u00edrito Santo, Brazil'),
@@ -354,6 +380,17 @@ NAMEN = {
         '1.15': 'Terminal de Madre de Deus (Posto S-2)',
         '1.3': 'Terminal de Madre de Deus (Norte)',
     },
+    'amazonas-norte': {
+        '1.1': 'Barra Norte do Rio Amazonas (Ilha do Curuá)',
+        '1.2': 'Canal do Norte (Ilha Janaucu)',
+        '1.3': 'Canal do Norte (Ilha Caviana)',
+    },
+    'amazonas-santana': {
+        '1.1': 'Canal do Norte (Caviana de Dentro)',
+        '1.2': 'Canal do Norte (Ilha do Cará)',
+        '1.4': 'Rio Amazonas (Macapá)',
+        '1.3': 'Rio Amazonas (Fazendinha)',
+    },
     'natal': {
         '1.2': 'Barra do Rio Potengi',
         '1.1': 'Rio Potengi (Redinha)',
@@ -367,16 +404,21 @@ HEFT_TITEL = {'sao-marcos': 'DG 10-V-1 Proximidades da Baía de São Marcos / Po
               'vitoria': 'Pôrto de Vitória (blue values, ships of 5 m draft)',
               'madre-de-deus': 'Porto de Madre de Deus (layer 0-8 m)',
               'santos': 'Porto de Santos', 'paranagua': 'Porto de Paranaguá', 'salvador': 'Porto de Salvador',
-              'natal': 'Porto de Natal (layer 0-6 m)'}
+              'natal': 'Porto de Natal (layer 0-6 m)',
+              'amazonas-norte': 'Rio Amazonas, Barra Norte part (red arrows), mean of wet and dry season',
+              'amazonas-santana': 'Rio Amazonas, Santana part (blue arrows), mean of wet and dry season'}
 REGION = {'sao-marcos': 'Maranh\u00e3o, Brazil', 'guanabara': 'Rio de Janeiro, Brazil',
           'vitoria': 'Esp\u00edrito Santo, Brazil', 'madre-de-deus': 'Bahia, Brazil',
           'santos': 'S\u00e3o Paulo, Brazil', 'paranagua': 'Paran\u00e1, Brazil', 'salvador': 'Bahia, Brazil',
-          'natal': 'Rio Grande do Norte, Brazil'}
+          'natal': 'Rio Grande do Norte, Brazil', 'amazonas-norte': 'Amap\u00e1, Brazil',
+          'amazonas-santana': 'Amap\u00e1, Brazil'}
 REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'santos': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'paranagua': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'salvador': 'speed factor from the booklet scale (mean tidal range)',
          'natal': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
+         'amazonas-norte': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
+         'amazonas-santana': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'vitoria': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
          'madre-de-deus': 'additive speed corrections from the booklet tables I/II (tidal range, hour)'}
 
@@ -441,17 +483,59 @@ def _richtung(p, d):
     return (round(x, 3), round(y, 3))
 
 
-def pfeile(p):
-    """-> Liste dict(x, y = Pfeilfuss, mx, my = Pfeilmitte, dir) in PDF-Punkten; dir = wohin, Grad (Kartennord oben)."""
-    schaefte, spitzen = [], []
+def _blau(c):
+    return bool(c) and c[2] > 0.8 and c[0] < 0.3
+
+
+def _ketten(teile, strich, eps=1.0):
+    """Schaftstuecke, die Ende an Ende liegen, zu einem Schaft verbinden (Amazonas: gestrichelte
+    Schaefte bestehen aus kurzen durchgezogenen Enden und gestrichelten Mittelstuecken)."""
+    teile = [list(t) for t in teile]
+    strich = list(strich)
+    nah = lambda a, b: abs(a.x - b.x) < eps and abs(a.y - b.y) < eps
+    weiter = True
+    while weiter:
+        weiter = False
+        for i in range(len(teile)):
+            for j in range(len(teile)):
+                if i == j:
+                    continue
+                a, b = teile[i], teile[j]
+                if nah(a[-1], b[0]):
+                    neu = a + b[1:]
+                elif nah(a[-1], b[-1]):
+                    neu = a + b[::-1][1:]
+                elif nah(a[0], b[-1]):
+                    neu = b + a[1:]
+                elif nah(a[0], b[0]):
+                    neu = b[::-1] + a[1:]
+                else:
+                    continue
+                teile[i], strich[i] = neu, strich[i] or strich[j]
+                del teile[j], strich[j]
+                weiter = True
+                break
+            if weiter:
+                break
+    return teile, strich
+
+
+def pfeile(p, farbe='rot'):
+    """-> Liste dict(x, y = Pfeilfuss, mx, my = Pfeilmitte, dir, seca) in PDF-Punkten; dir = wohin, Grad
+    (Kartennord oben). seca: gestrichelter Schaft (Amazonas: Trockenzeit; durchgezogen = Hochwasserzeit)."""
+    test = _blau if farbe == 'blau' else _rot
+    schaefte, spitzen, strich = [], [], []
     m = _dreh(p)
     for g in p.get_drawings():
-        if g.get('dashes') not in (None, '[] 0'):
+        gestr = g.get('dashes') not in (None, '[] 0')
+        if gestr and max(g['rect'].width, g['rect'].height) > 60:
             continue                                    # gestrichelte Trennlinie der Tabellen-Gebiete
-        if g['type'] == 's' and _rot(g.get('color')):
+        if g['type'] == 's' and test(g.get('color')):
             schaefte.append([q * m for q in _punkte(g)])
-        elif g['type'] == 'f' and _rot(g.get('fill')):
+            strich.append(gestr)
+        elif g['type'] == 'f' and test(g.get('fill')):
             spitzen.append([q * m for q in _punkte(g)])
+    schaefte, strich = _ketten(schaefte, strich)
     out = []
     frei = list(range(len(schaefte)))
     for h in spitzen:
@@ -471,7 +555,8 @@ def pfeile(p):
         spitze = max(h, key=lambda q: math.hypot(q.x - fuss.x, q.y - fuss.y))
         rw = math.degrees(math.atan2(spitze.x - fuss.x, -(spitze.y - fuss.y))) % 360
         # Der Messpunkt ist der Fuss des Pfeils: der bleibt in allen 13 Karten liegen
-        out.append(dict(x=fuss.x, y=fuss.y, mx=(fuss.x + spitze.x) / 2, my=(fuss.y + spitze.y) / 2, dir=rw))
+        out.append(dict(x=fuss.x, y=fuss.y, mx=(fuss.x + spitze.x) / 2, my=(fuss.y + spitze.y) / 2, dir=rw,
+                        tx=spitze.x, ty=spitze.y, seca=strich[k]))
     return out
 
 
@@ -589,6 +674,14 @@ def _achse(lab, lon):
     return a, b
 
 
+def _abstand_strecke(x, y, a):
+    """Abstand eines Punkts von der Strecke Pfeilfuss-Spitze."""
+    ax, ay, bx, by = a['x'], a['y'], a['tx'], a['ty']
+    dx, dy = bx - ax, by - ay
+    t = 0.0 if dx == dy == 0 else max(0.0, min(1.0, ((x - ax) * dx + (y - ay) * dy) / (dx * dx + dy * dy)))
+    return math.hypot(x - ax - t * dx, y - ay - t * dy)
+
+
 def _marke(p, text):
     """Lage (x, y) einer Randbeschriftung in angezeigter Lage oder None."""
     for b in p.get_text('dict')['blocks']:
@@ -599,7 +692,7 @@ def _marke(p, text):
     return None
 
 
-def kartensaetze(pdf, farbe='rot', gitter=None, marken=None):
+def kartensaetze(pdf, farbe='rot', gitter=None, marken=None, pfeilfarbe='rot'):
     """-> Liste von Saetzen; Satz = dict(stunde -> (page, pfeile_mit_v, (lat_ab, lon_ab), nP, nZ)).
 
     Gerade und ungerade Seiten sind gegeneinander versetzt gedruckt (Vitoria, Madre de Deus, Natal:
@@ -616,13 +709,13 @@ def kartensaetze(pdf, farbe='rot', gitter=None, marken=None):
         h = stunde(p)
         if h is None:
             continue
-        P, Z = pfeile(p), zahlen(p, farbe)
+        P, Z = pfeile(p, pfeilfarbe), zahlen(p, farbe)
         if len(P) < 3:
             continue                                # Tabellenseite mit dem Wort "Preamar"
-        # Zahl -> Pfeil (Abstand Textmitte - Pfeilmitte, hoechstens 22 pt)
+        # Zahl -> Pfeil (Abstand Textmitte - Pfeil als Strecke Fuss-Spitze, hoechstens 22 pt)
         mit = []
         if P and Z:
-            M = np.array([[math.hypot(a['mx'] - z['x'], a['my'] - z['y']) for z in Z] for a in P])
+            M = np.array([[_abstand_strecke(z['x'], z['y'], a) for z in Z] for a in P])
             r, c = linear_sum_assignment(M)
             for ri, ci in zip(r, c):
                 if M[ri, ci] <= 22:
@@ -704,6 +797,37 @@ def _gruppen(satz, abstand_pt=28):
     return sp
 
 
+def saisonen_mitteln(satz, abstand_pt=40):
+    """Amazonas: an jedem Ort ein durchgezogener Pfeil (Hochwasserzeit Dez-Mai) und ein gestrichelter
+    (Trockenzeit Jun-Nov). Die Strichart ist im PDF nicht verlaesslich erkennbar; deshalb werden alle
+    Pfeile nach Lage gruppiert und je Stunde u/v aller Pfeile der Gruppe gemittelt (Jahresmittel aus je
+    sechs Monaten)."""
+    from scipy.cluster.hierarchy import fcluster, linkage
+    alle = [(h, a) for h in sorted(satz) for a in satz[h][1]]
+    xy = np.array([[a['mx'], a['my']] for _, a in alle])
+    lab = fcluster(linkage(xy, 'average'), abstand_pt, 'distance')
+    out = []
+    for g in sorted(set(lab)):
+        idx = np.where(lab == g)[0]
+        neu = {}
+        for h in range(-6, 7):
+            teil = [alle[i][1] for i in idx if alle[i][0] == h]
+            if not teil:
+                continue
+            u = np.mean([a['v'] * math.sin(math.radians(a['dir'])) for a in teil])
+            v = np.mean([a['v'] * math.cos(math.radians(a['dir'])) for a in teil])
+            a = dict(teil[0])
+            a['mx'] = float(np.mean([t['mx'] for t in teil]))
+            a['my'] = float(np.mean([t['my'] for t in teil]))
+            a['v'] = round(float(math.hypot(u, v)), 2)
+            a['dir'] = float(math.degrees(math.atan2(u, v)) % 360)
+            a['n'] = len(teil)
+            neu[h] = a
+        out.append(neu)
+    out.sort(key=lambda s: -len(s))
+    return out, 'mitte'
+
+
 PERIODE_H = 12.42                       # M2: -6 h und +6 h liegen einen Zyklus auseinander
 
 
@@ -783,7 +907,8 @@ def main(argv):
         (xa, oa), (xb, ob) = cfg['gitter'][1]
         gitter = ((la - ya * (lb - la) / (yb - ya), (lb - la) / (yb - ya)),
                   (oa - xa * (ob - oa) / (xb - xa), (ob - oa) / (xb - xa)))
-    saetze = kartensaetze(os.path.join(PDF, pdfname), cfg.get('farbe', 'rot'), gitter, cfg.get('marken'))
+    saetze = kartensaetze(os.path.join(PDF, pdfname), cfg.get('farbe', 'rot'), gitter, cfg.get('marken'),
+                          cfg.get('pfeilfarbe', cfg.get('farbe', 'rot') if cfg.get('saisons') else 'rot'))
     korr = Korrektur(os.path.join(PDF, pdfname), cfg['korrektur'], cfg.get('tabfarbe', cfg.get('farbe', 'rot'))) \
         if cfg.get('korrektur') else None
     gebiet_von = teilung(os.path.join(PDF, pdfname)) if korr else None
@@ -797,9 +922,13 @@ def main(argv):
             if len(mit) != nZ:
                 print('  Seite %d: %d Zahlen, nur %d einem Pfeil zugeordnet' % (pg, nZ, len(mit)))
         voll = lambda sp: sum(1 for t in sp if len(t) >= 12)
-        anker = max(('fuss', 'mitte'), key=lambda a: voll(spuren(satz, a)))
+        if cfg.get('saisons'):
+            kandidaten, anker = saisonen_mitteln(satz)
+        else:
+            anker = max(('fuss', 'mitte'), key=lambda a: voll(spuren(satz, a)))
+            kandidaten = spuren(satz, anker)
         print('  Anker: Pfeil%s' % anker)
-        for pi, s in enumerate(spuren(satz, anker), 1):
+        for pi, s in enumerate(kandidaten, 1):
             fehlt = [h for h in range(-6, 7) if h not in s]
             if len(s) < 6 or luecke_max(s) > 2.5:
                 print('  Punkt %d.%d unvollstaendig (%d Stunden) bei %s' % (si, pi, len(s), lage(satz, s, anker)))
