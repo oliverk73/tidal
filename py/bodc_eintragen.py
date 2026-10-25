@@ -12,8 +12,12 @@ def geo(a, b, c, d):
     return osm_land.km(a, b, c, d), D[int(((math.degrees(math.atan2(y, x))+360) % 360+11.25)//22.5) % 16]
 OHNE = set(sys.argv[sys.argv.index('--ohne') + 1].split(',')) if '--ohne' in sys.argv else set()
 neu, namen = [], set()
+_f = '/home/oliver/weather/harmonics/utide/harmonics_utide_current_observations.txt'
+_vorhanden = set(re.findall(r'BODC ?(\d+)', open(_f, encoding='iso-8859-1').read()))
 for x in W:
     if x['refs'][0] in OHNE:
+        continue
+    if any(r in _vorhanden for r in x['refs']):      # schon im Bestand (auch aus einer anderen Lieferung)
         continue
     p = min(PEG, key=lambda t: osm_land.km(x['lat'], x['lon'], t['lat'], t['lon']))
     ort = re.split(r' \(|, ', p['name'])[0].replace(' Of ', ' of ').replace('-On-', '-on-')

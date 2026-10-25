@@ -1,4 +1,4 @@
-"""BODC-Lieferung: Gruppen nach Abstandsregel mit bester-Satz-Vorrang auswaehlen, Phasen gegen Nachbarn (Oliver 21.10.2026).
+"""BODC-Lieferung: Gruppen auswaehlen (Dubletten nach Aehnlichkeit, bester Satz zuerst), Phasen gegen Nachbarn (Oliver 21./25.10.2026).
 Usage: venv/bin/python py/bodc_auswahl.py RN-xxxx [AUSSCHLUSS-REF ...]"""
 import sys, pickle, warnings; warnings.filterwarnings('ignore'); sys.path.insert(0, '/home/oliver/weather/py')
 import health_check as hc, osm_land, xtide_modell as X, bodc_stroemung as B
@@ -15,7 +15,7 @@ for g in G:
     g['offshore'] = ng > 30
     if g['r']['r2'] < (0.8 if g['offshore'] else 0.6) or g['r']['m2'] < 0.15: continue   # Kueste 0,6 / See 0,8
     kand.append(g)
-# Stationen dieser Lieferung, die schon im Bestand sind, zaehlen wie neue (Abstand 5/40 km statt 3/20 km)
+# Stationen dieser Lieferung, die schon im Bestand sind, werden nicht neu gewaehlt
 REFS = {r for r, m in M.items() if m['_dir'].endswith(sys.argv[1])}
 import re as _re
 _txt = open(F, encoding='iso-8859-1').read()
@@ -23,17 +23,35 @@ _eigen = set(_re.findall(r'BODC (\d+)\), [^\n]*Current', _txt)) & REFS
 CUR_ALT = [c for c in CUR if not any('BODC %s)' % r in c['name'] for r in _eigen)]
 CUR_EIGEN = [c for c in CUR if c not in CUR_ALT]
 wahl = [dict(lat=c['lat'], lon=c['lon'], _bestand=True) for c in CUR_EIGEN]
+# Auswahl nach Aehnlichkeit statt festem Abstand (Oliver 25.10.2026: "Wenn eine Meerenge, ein Fjord
+# oder ein Kanal schmaler ist als 3 km, dann kann die Station doch gar nicht mehr Abstand haben?").
+# Dublette = bis 2 km neben einem Strom aus Bestand oder Auswahl UND praktisch gleiche Stroemung
+# (M2-Betrag +-15 %, Phase < 15 Grad modulo 180). Sonst wird der Satz genommen.
+_m2 = {}
+def m2_bestand(c):
+    if c['name'] not in _m2:
+        try:
+            z, w, e, mm = X.satz_lesen('/home/oliver/weather/' + c['file'], c['name'])
+            sp = X.kopf_lesen('/home/oliver/weather/' + c['file'])[1]
+            _m2[c['name']] = (w['M2'][0] * (0.3048 if e.startswith('f') else 1), X.greenwich(w['M2'][1], sp['M2'], mm) % 360)
+        except Exception:
+            _m2[c['name']] = None
+    return _m2[c['name']]
+def gleich(a, b):
+    dg = abs((a[1] - b[1] + 180) % 360 - 180); dg = min(dg, 180 - dg)
+    return min(a[0], b[0]) / max(a[0], b[0]) > 0.85 and dg < 15
 for g in sorted(kand, key=guete, reverse=True):
-    dmin_b = min(osm_land.km(g['lat'], g['lon'], c['lat'], c['lon']) for c in CUR_ALT)
-    dmin_n = min([osm_land.km(g['lat'], g['lon'], w['lat'], w['lon']) for w in wahl] or [1e9])
-    a_b, a_n = (20, 40) if g['offshore'] else (3, 5)
-    if dmin_b >= a_b and dmin_n >= a_n: wahl.append(g)
-    elif dmin_b < a_b:
-        c = min(CUR, key=lambda c: osm_land.km(g['lat'], g['lon'], c['lat'], c['lon']))
+    m = tuple(g['r']['konst']['M2'])
+    nah_b = [c for c in CUR if osm_land.km(g['lat'], g['lon'], c['lat'], c['lon']) < 2 and m2_bestand(c) and gleich(m, m2_bestand(c))]
+    nah_w = [w for w in wahl if not w.get('_bestand') and osm_land.km(g['lat'], g['lon'], w['lat'], w['lon']) < 2 and gleich(m, tuple(w['r']['konst']['M2']))]
+    if not nah_b and not nah_w:
+        wahl.append(g)
+    elif nah_b:
+        c = nah_b[0]
         L_ = open('/home/oliver/weather/' + c['file'], encoding='iso-8859-1').read().split('\n'); k = L_.index(c['name'])
         hs = next((int(l.split()[1]) for l in L_[k - 40:k] if 'hourly samples' in l), None)
         if hs and g['r']['n'] > 1.5 * hs:
-            print('BESSER ALS BESTAND? %s n=%d gegen %s n=%d (%.1f km)' % (g['refs'][0], g['r']['n'], c['name'][:50], hs, dmin_b))
+            print('BESSER ALS BESTAND? %s n=%d gegen %s n=%d' % (g['refs'][0], g['r']['n'], c['name'][:50], hs))
 d = lambda x, y: (x - y + 180) % 360 - 180
 wahl = [g for g in wahl if not g.get('_bestand')]
 for g in wahl:

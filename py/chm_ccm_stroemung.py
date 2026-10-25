@@ -417,10 +417,11 @@ NAMEN = {
     },
     'vitoria': {
         '1.6': 'Porto de Vitória (Canal de Acesso)',
-        '1.5': 'Baixio do Tagano (Porto de Vitória)',
+        '1.5': 'Baía de Vitória (Terceira Ponte)',
         '1.2': 'Ilha do Urubu (Porto de Vitória)',
         '1.4': 'Ilha das Tendas (Porto de Vitória)',
-        '1.3': 'Cais da Usiminas (Porto de Vitória)',
+        '1.3': 'Cais de Paul (Porto de Vitória)',
+        '1.1': 'Cais Comercial (Porto de Vitória)',
     },
     'santos': {
         '1.2': 'Ponta da Praia (Canal do Porto de Santos)',
@@ -439,6 +440,11 @@ NAMEN = {
         '1.19': 'Madre de Deus (Praia do Loreto)',
         '1.15': 'Terminal de Madre de Deus (Posto S-2)',
         '1.3': 'Terminal de Madre de Deus (Norte)',
+        # 25.10. nachgetragen (keine feste Abstandsregel mehr, nur echte Dubletten raus)
+        '1.12': 'Terminal de Madre de Deus (Posto S-1)',
+        '1.9': 'Terminal de Madre de Deus (Centro)',
+        '1.8': 'Terminal de Madre de Deus (Dolfim)',
+        '1.7': 'Terminal de Madre de Deus (Leste)',
     },
     'amazonas-norte': {
         '1.1': 'Barra Norte do Rio Amazonas (Ilha do Curuá)',
