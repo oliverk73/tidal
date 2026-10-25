@@ -42,6 +42,15 @@ def grad(t):
     return -v if m.group(3) in 'SW' else v
 
 
+# 2024 (geladen 25.10.2026) wird NICHT verwendet: Die Seiten tragen "HUSO +3", die Zeiten sind aber UTC
+# (01.03.2024 Punta Ciguena Kenter 01:55, Max 05:00 = unser an SHOA geprueftes 2025-Ergebnis in UTC).
+# Auch korrigiert taugt das Jahr nicht: 9 Orte haben eine andere Vorhersagebasis (Cabo Nombre M2 1,70
+# statt 1,07 kn), und bei den uebrigen liegen die Kenterzeiten 20-30 min neben dem 2025-Satz, der die
+# 2025-Tafel auf 1-4 min trifft. Der gemeinsame Fit wurde ueberall schlechter (Rio Negro R2 0,96).
+UTC_JAHRE = {'2024'}
+JAHRE = {'2025'}
+
+
 def lesen(pfad):
     code, jahr, mon = os.path.basename(pfad)[:-5].split('_')
     roh = open(pfad, 'rb').read()
@@ -53,6 +62,8 @@ def lesen(pfad):
     m = re.search(r'LATITUD:\s*([^L]+?)\s+LONGITUD:\s*([^<]+)<', html)
     lat, lon = grad(m.group(1)), grad(m.group(2))
     huso = int(re.search(r'HUSO\s*([+-]?\d+)', html).group(1))
+    if jahr in UTC_JAHRE:
+        huso = 0
     ev, tag = [], None
     for tr in re.findall(r'<tr>(.*?)</tr>', html, re.S | re.I):
         td = [re.sub(r'<[^>]+>|\s+', ' ', x).strip() for x in re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S | re.I)]
@@ -84,6 +95,8 @@ def achse_guete(ev):
 def main(argv):
     orte = defaultdict(lambda: dict(ev=[]))
     for pfad in sorted(glob.glob(os.path.join(RAW, '*.html'))):
+        if os.path.basename(pfad).split('_')[1] not in JAHRE:
+            continue
         try:
             code, name, lat, lon, huso, ev = lesen(pfad)
         except AttributeError:
