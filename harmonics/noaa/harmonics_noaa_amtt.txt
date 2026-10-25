@@ -31830,8 +31830,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -61.9333
-# !latitude: 10.6500
+# !longitude: -61.9380
+# !latitude: 10.6614
 # region: Sucre
 # admin1_quelle: Ufer 29.7 km
 # note: 20260907 Land im Namen berichtigt (vorher "Macuro, Trinidad and Tobago"):
@@ -32239,8 +32239,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -62.2014
-# !latitude: 10.0205
+# !longitude: -62.2023
+# !latitude: 10.0198
 # state: Delta Amacuro
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
@@ -32254,7 +32254,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 10.0167/-62.2000, Kueste 0.35 km) (Oliver).
-Boca Pedernales entrance, Venezuela
+Boca Pedernales, Venezuela
 +00:00 :America/Caracas
 0.7925 meters
 J1              0.0093  259.80
@@ -32642,8 +32642,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -61.8675
-# !latitude: 10.0938
+# !longitude: -61.8654
+# !latitude: 10.0947
 # region: Siparia
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Punta Gorda"
@@ -32655,7 +32655,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (Nachbarn), S2/M2 Nachbarn 0.404. Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 10.0833/-61.8667, Kueste 1.07 km) (Oliver).
-Bonasse pier, Trinidad and Tobago
+Cedros (Bonasse) Pier, Trinidad and Tobago
 +00:00 :America/Port_of_Spain
 1.0363 meters
 J1              0.0073  249.29
@@ -80711,7 +80711,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Buenaventura, Colombia [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
-Los Negritos, Colombia
+Islote Los Negritos, Colombia
 +00:00 :America/Bogota
 1.9202 meters
 J1              0.0083  89.77
@@ -80899,8 +80899,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -77.5053
-# !latitude: 4.2889
+# !longitude: -77.4917
+# !latitude: 4.2937
 # region: Chocó
 # admin1_quelle: Ufer 2.5 km
 # note: 20260913 S2/K2 x 2.01 auf den Springhub des Buchs (wctt-301); der Bau
@@ -81097,8 +81097,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -77.5167
-# !latitude: 5.4667
+# !longitude: -77.4792
+# !latitude: 5.4785
 # region: Chocó
 # admin1_quelle: Ufer 2.1 km
 # note: 20260913 S2/K2 x 2.08 auf den Springhub des Buchs (wctt-303); der Bau
@@ -81303,7 +81303,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Buenaventura, Colombia [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (1) und FES.
-Ensenada Utría, Colombia
+Ensenada de Utría, Colombia
 +00:00 :America/Bogota
 1.9507 meters
 J1              0.0083  89.77
@@ -81882,8 +81882,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -77.6667
-# !latitude: 6.8667
+# !longitude: -77.6489
+# !latitude: 6.8481
 # region: Chocó
 # admin1_quelle: Ufer 0.7 km
 # note: 20260913 S2/K2 x 2.10 auf den Springhub des Buchs (wctt-311); der Bau
