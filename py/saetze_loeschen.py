@@ -126,6 +126,17 @@ def main(argv):
     for datei, name, warum in liste(csvpfad):
         proDatei.setdefault(datei, []).append((name, warum))
 
+    # Olivers ungecommittete Korrekturen wuerden sonst im selben Commit landen wie
+    # die Loeschung (zweimal passiert am 25.10.2026): erst seine Aenderungen committen.
+    if schreiben and '--trotz-aenderungen' not in argv:
+        import subprocess
+        offen = subprocess.run(['git', 'status', '--porcelain', '--'] + sorted(proDatei),
+                               cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        if offen:
+            print('Abbruch: ungecommittete Aenderungen in\n' + offen +
+                  '\nErst diese committen (eigener Commit), dann loeschen.')
+            return 1
+
     gesamt, schon, mehrdeutig = 0, [], []
     for datei, faelle in sorted(proDatei.items()):
         pfad = os.path.join(ROOT, datei)
