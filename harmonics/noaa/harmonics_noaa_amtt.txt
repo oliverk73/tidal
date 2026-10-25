@@ -33443,12 +33443,12 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -51.0167
-# !latitude: 3.8167
+# !longitude: -51.1036
+# !latitude: 3.9115
 # note: 20260913 S2/K2 x 1.80 auf den Springhub des Buchs (ectt-4971); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Cape Cassipore, French Guiana
+Cabo Cassiporé, Amapá, Brazil
 +00:00 :America/Belem
 1.5850 meters
 J1              0.0093  223.30
@@ -33636,8 +33636,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -50.8833
-# !latitude: 2.8333
+# !longitude: -50.9391
+# !latitude: 2.8168
 # note: 20260903 Provinz "Amapá" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # state: Amapá
