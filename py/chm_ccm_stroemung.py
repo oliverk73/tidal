@@ -352,10 +352,16 @@ HEFTE = {
                   gitter=(((160.5, 0.5), (542.5, 1.5)), ((208.5, 48.5), (594.0, 47.5))),
                   marken={'x': ('48\u00ba', 401.9), 'y': ('48\u00ba', 65.8)}),
     # Luis Correia: gemessene Station (30 h Sizigia + 30 h Quadratura), Fundeadouro 02 52 34,5 S 41 39 54,7 W.
-    # Flut nach SSW in die Rinne des Rio Igaracu (Karte S. 15), Ebbe NNE. Itapessoca: Bezugspegel Ponta de
-    # Pedras fehlt im Bestand -> weggelassen.
+    # Flut nach SSW in die Rinne des Rio Igaracu (Karte S. 15), Ebbe NNE.
     'luis-correia': dict(pdf='ccm-itapessoca-e-luis-correia.pdf', hafen=(S.TAFELN, 'Lu\u00eds Correia (Piau\u00ed), Brazil'),
                          tabelle=13, flut=205, lat=-(2 + 52 / 60 + 34.5 / 3600), lon=-(41 + 39 / 60 + 54.7 / 3600)),
+    # Itapessoca: gemessene Station Cais do porto (25 h Sizigia + 25 h Quadratura, 1962), Bezug PM Ponta de
+    # Pedras (barra) = FEMAR-Tabelle 116 (seit 25.10.2026 in harmonics_literature). Die Rinne laeuft in der
+    # Karte (S. 9) von SSE (Barra de Catuama) nach NNW am Cais vorbei: Flut 335 Grad, Ebbe 155.
+    'itapessoca': dict(pdf='ccm-itapessoca-e-luis-correia.pdf',
+                       hafen=(os.path.join(ROOT, 'harmonics/classic/harmonics_literature.txt'),
+                              'Ponta de Pedras (Itapessoca), Pernambuco, Brazil'),
+                       tabelle=7, flut=335, lat=-(7 + 38 / 60 + 6 / 3600), lon=-(34 + 52 / 60 + 33 / 3600)),
     # Vitoria: blaue Zahlen = 5 m Tiefgang (oberflaechennah); Tabelle I westlich, II oestlich der
     # gestrichelten Linie bei der Ilha das Cobras. Bezug PM Vitoria (Ilha do Urubu).
     'vitoria': dict(pdf='ccm-porto-de-vitoria.pdf', hafen=(S.TAFELN, 'Vit\u00f3ria (Porto), Esp\u00edrito Santo, Brazil'),
@@ -460,6 +466,9 @@ NAMEN = {
     'luis-correia': {
         'T': 'Luís Correia (Fundeadouro)',
     },
+    'itapessoca': {
+        'T': 'Itapessoca (Cais do Porto)',
+    },
     'salinopolis': {
         '1.1': 'Salinópolis (ao largo)',
     },
@@ -485,13 +494,14 @@ HEFT_TITEL = {'sao-marcos': 'DG 10-V-1 Proximidades da Baía de São Marcos / Po
               'amazonas-santana': 'Rio Amazonas, Santana part (blue arrows), mean of wet and dry season',
               'salinopolis': 'Rio Pará de Salinópolis a Belém, Salinópolis part (red arrows)',
               'belem': 'Rio Pará de Salinópolis a Belém, Belém part (blue arrows)',
-              'luis-correia': 'Correntes de Maré Itapessoca e Luís Correia, velocity table of the measured station'}
+              'luis-correia': 'Correntes de Maré Itapessoca e Luís Correia, velocity table of the measured station',
+              'itapessoca': 'Correntes de Maré Itapessoca e Luís Correia, velocity table of the measured station'}
 REGION = {'sao-marcos': 'Maranh\u00e3o, Brazil', 'guanabara': 'Rio de Janeiro, Brazil',
           'vitoria': 'Esp\u00edrito Santo, Brazil', 'madre-de-deus': 'Bahia, Brazil',
           'santos': 'S\u00e3o Paulo, Brazil', 'paranagua': 'Paran\u00e1, Brazil', 'salvador': 'Bahia, Brazil',
           'natal': 'Rio Grande do Norte, Brazil', 'amazonas-norte': 'Amap\u00e1, Brazil',
           'amazonas-santana': 'Amap\u00e1, Brazil', 'salinopolis': 'Par\u00e1, Brazil', 'belem': 'Par\u00e1, Brazil',
-          'luis-correia': 'Piau\u00ed, Brazil'}
+          'luis-correia': 'Piau\u00ed, Brazil', 'itapessoca': 'Pernambuco, Brazil'}
 REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'santos': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'paranagua': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
@@ -502,6 +512,7 @@ REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-
          'salinopolis': 'speed factor from the booklet graph (mean tidal range of the day)',
          'belem': 'speed factor from the booklet graph (mean tidal range of the day)',
          'luis-correia': 'signed speeds from the booklet table (tidal range, hour), direction from the channel',
+         'itapessoca': 'signed speeds from the booklet table (tidal range, hour), direction from the channel',
          'vitoria': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
          'madre-de-deus': 'additive speed corrections from the booklet tables I/II (tidal range, hour)'}
 
@@ -1002,6 +1013,11 @@ def tabellenstation(kurz, cfg, heute):
     df = pd.DataFrame({'u': sp * math.sin(fl) / MS_KN, 'v': sp * math.cos(fl) / MS_KN},
                       index=pd.to_datetime(ts, unit='s'))
     r = C.analyse(df, cfg['lat'], S.KONST)
+    if abs((r['achse'] - cfg['flut'] + 180) % 360 - 180) > 90:
+        # analyse legt die Achse in 0-180 Grad; positiv (XTide "Flood") soll der Flutstrom sein.
+        r['achse'] = (r['achse'] + 180) % 360
+        r['mean'] = -r['mean']
+        r['konst'] = {k: (a, (g + 180) % 360) for k, (a, g) in r['konst'].items()}
     hubs, T = K.tab['T']
     zeile = dict(punkt='T', lat=cfg['lat'], lon=cfg['lon'], vmax=float(np.abs(T).max()), sprung=0, fehlt='',
                  pdf='seite %d' % cfg['tabelle'],
