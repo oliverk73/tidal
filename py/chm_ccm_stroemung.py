@@ -159,12 +159,13 @@ class Korrektur:
     """Additive Korrekturtabellen (Vitoria, Madre de Deus): je Gebiet eine Tabelle Knoten nach
     Tidenhub a (cm, Zeilen) und Stunde zur PM (Spalten). Gelesen wird in den rohen Seiten-
     koordinaten, die Ausrichtung der Tabelle wird aus der Lage der Hub-Beschriftung bestimmt.
-    farbe: 'rot' oder 'blau' (Vitoria: blau = 5 m Tiefgang, rot = 11 m)."""
+    farbe: 'rot' oder 'blau' (Vitoria: blau = 5 m Tiefgang, rot = 11 m); 'alle' (Natal: negative
+    Werte rot, positive schwarz gedruckt)."""
 
     def __init__(self, pdf, seiten, farbe='rot'):
         self.tab = {}
         d = fitz.open(pdf)
-        test = _roetlich if farbe == 'rot' else _blaeulich
+        test = _blaeulich if farbe == 'blau' else _roetlich
         for gebiet, seite in seiten.items():
             p = d[seite - 1]
             hub, kopf, werte, pm = [], [], [], []
@@ -175,18 +176,18 @@ class Korrektur:
                         t = sp['text'].strip()
                         x0, y0, x1, y1 = sp['bbox']
                         c = ((x0 + x1) / 2, (y0 + y1) / 2)
-                        if _dunkel(sp['color']):
-                            if re.fullmatch(r'\d{2,3}', t):
-                                hub.append((c, int(t)))
-                            elif re.fullmatch(r'[1-6]', t):
-                                kopf.append((c, int(t)))
-                            elif t.startswith('Horas antes'):
-                                antes = c
-                            elif t.startswith('Horas depois'):
-                                depois = c
-                            elif t == 'Preamar':
-                                pm = c
-                        elif test(sp['color']):
+                        dunkel = _dunkel(sp['color'])
+                        if dunkel and re.fullmatch(r'\d{2,3}', t):
+                            hub.append((c, int(t)))
+                        elif dunkel and re.fullmatch(r'[1-6]', t):
+                            kopf.append((c, int(t)))
+                        elif dunkel and t.startswith('Horas antes'):
+                            antes = c
+                        elif dunkel and t.startswith('Horas depois'):
+                            depois = c
+                        elif dunkel and t == 'Preamar':
+                            pm = c
+                        elif test(sp['color']) or (farbe == 'alle' and dunkel):
                             m = re.fullmatch(r'\(?([+\u2013-]?)(\d),(\d)\)?', t.replace(' ', ''))
                             if m:
                                 v = int(m.group(2)) + int(m.group(3)) / 10
@@ -211,7 +212,7 @@ class Korrektur:
                 T[hubs.index(zi[1]), st[1] + 6] = v
             lu = [(hubs[i], j - 6) for i, j in zip(*np.where(np.isnan(T)))]
             if len(lu) > 4:
-                raise ValueError('Tabelle %s Seite %d unvollstaendig: %s' % (gebiet, seite, lu))
+                raise ValueError('Tabelle %s Seite %d unvollstaendig: %d Zellen, z. B. %s' % (gebiet, seite, len(lu), lu[:3]))
             for i, j in zip(*np.where(np.isnan(T))):
                 # einzelne Zelle fehlt im Druck (Vitoria 160 cm, -6/-5 h): aus den Nachbarzeilen
                 spalte = T[:, j]
@@ -262,6 +263,13 @@ HEFTE = {
     'salvador': dict(pdf='ccm-porto-de-salvador.pdf',
                      hafen=(os.path.join(ROOT, 'harmonics/ticon/harmonics_ticon4_worldwide.txt'), 'Salvador (Porto), Bahia, Brazil'),
                      faktor=faktor_salvador),
+    # Natal: Tabelle I noerdlich, II suedlich der Foz do Rio Jaguaribe (gestrichelte Linie); Mittel 0-6 m.
+    'natal': dict(pdf='ccm-porto-de-natal.pdf', hafen=(S.TAFELN, 'Natal, Rio Grande do Norte, Brazil'),
+                  korrektur={'I': 5, 'II': 7}, tabfarbe='alle',
+                  # Randbeschriftung mit Sekunden (30"): Minutenlinien aus den Mitten der 30"-Marken
+                  gitter=(((232.0, 5 + 45 / 60), (631.5, 5 + 47 / 60)),
+                          ((161.0, 35 + 13 / 60), (358.0, 35 + 12 / 60))),
+                  marken={'x': ('12\u2019', 357.7), 'y': ('46\u2019', 432.9)}),
     # Vitoria: blaue Zahlen = 5 m Tiefgang (oberflaechennah); Tabelle I westlich, II oestlich der
     # gestrichelten Linie bei der Ilha das Cobras. Bezug PM Vitoria (Ilha do Urubu).
     'vitoria': dict(pdf='ccm-porto-de-vitoria.pdf', hafen=(S.TAFELN, 'Vit\u00f3ria (Porto), Esp\u00edrito Santo, Brazil'),
@@ -271,12 +279,13 @@ HEFTE = {
                           korrektur={'I': 5, 'II': 7},
                           # Randbeschriftung mit Sekunden ("30”", aber "12º 45”" = 12°45'): von Hand, Massstab geprueft
                           gitter=(((284.0, 12 + 45 / 60), (498.0, 12 + 45.5 / 60)),
-                                  ((275.0, 38 + 38 / 60), (488.5, 38 + 37.5 / 60)))),
+                                  ((275.0, 38 + 38 / 60), (488.5, 38 + 37.5 / 60))),
+                          marken={'x': ('38\u00ba38\u2019', 274.9), 'y': ('12\u00ba', 277.6)}),
 }
 
 
 def teilung(pdf):
-    """Gestrichelte rote Trennlinie der Tabellen-Gebiete (angezeigte Lage) -> Funktion (x, y) -> 'I'/'II'.
+    """Rote Trennlinie der Tabellen-Gebiete (angezeigte Lage) -> Funktion (x, y) -> 'I'/'II'.
     Senkrechte Linie: links = I; waagrechte Linie: oben = I."""
     d = fitz.open(pdf)
     for p in d:
@@ -284,9 +293,11 @@ def teilung(pdf):
             continue
         m = _dreh(p)
         for g in p.get_drawings():
-            if g['type'] == 's' and _rot(g.get('color')) and g.get('dashes') not in (None, '[] 0'):
+            # gestrichelt (Vitoria, Madre de Deus) oder durchgezogen 1 pt (Natal; Pfeile sind 0,75 pt)
+            if g['type'] == 's' and _rot(g.get('color')) and (g.get('dashes') not in (None, '[] 0')
+                                                              or (g.get('width') or 0) >= 0.95):
                 r = g['rect'] * m
-                if max(r.width, r.height) > 60:
+                if max(r.width, r.height) > 60 and min(r.width, r.height) < 6:
                     if r.height > r.width:
                         xm = (r.x0 + r.x1) / 2
                         return lambda x, y: 'I' if x < xm else 'II'
@@ -319,10 +330,11 @@ NAMEN = {
         '1.2': 'Baía de Guanabara (Ponte Rio-Niterói)',
     },
     'vitoria': {
-        '1.4': 'Baixio do Tagano (Porto de Vitória)',
         '1.6': 'Porto de Vitória (Canal de Acesso)',
-        '1.3': 'Ilha do Urubu (Porto de Vitória)',
-        '1.7': 'Cais da Usiminas (Porto de Vitória)',
+        '1.5': 'Baixio do Tagano (Porto de Vitória)',
+        '1.2': 'Ilha do Urubu (Porto de Vitória)',
+        '1.4': 'Ilha das Tendas (Porto de Vitória)',
+        '1.3': 'Cais da Usiminas (Porto de Vitória)',
     },
     'santos': {
         '1.2': 'Ponta da Praia (Canal do Porto de Santos)',
@@ -338,23 +350,33 @@ NAMEN = {
         '1.2': 'Banco da Panela (Baía de Todos os Santos)',
     },
     'madre-de-deus': {
-        '1.9': 'Madre de Deus (Praia do Loreto)',
-        '1.2': 'Terminal de Madre de Deus (Posto S-2)',
-        '1.12': 'Terminal de Madre de Deus (Norte)',
+        '1.19': 'Madre de Deus (Praia do Loreto)',
+        '1.15': 'Terminal de Madre de Deus (Posto S-2)',
+        '1.3': 'Terminal de Madre de Deus (Norte)',
+    },
+    'natal': {
+        '1.2': 'Barra do Rio Potengi',
+        '1.1': 'Rio Potengi (Redinha)',
+        '1.5': 'Rio Potengi (Farolete Manimbu)',
+        '1.3': 'Porto de Natal (Rio Potengi)',
+        '1.4': 'Rio Potengi (Base Naval de Natal)',
     },
 }
 HEFT_TITEL = {'sao-marcos': 'DG 10-V-1 Proximidades da Baía de São Marcos / Portos de São Luís e Itaqui',
               'guanabara': 'Baía de Guanabara',
               'vitoria': 'Pôrto de Vitória (blue values, ships of 5 m draft)',
               'madre-de-deus': 'Porto de Madre de Deus (layer 0-8 m)',
-              'santos': 'Porto de Santos', 'paranagua': 'Porto de Paranaguá', 'salvador': 'Porto de Salvador'}
+              'santos': 'Porto de Santos', 'paranagua': 'Porto de Paranaguá', 'salvador': 'Porto de Salvador',
+              'natal': 'Porto de Natal (layer 0-6 m)'}
 REGION = {'sao-marcos': 'Maranh\u00e3o, Brazil', 'guanabara': 'Rio de Janeiro, Brazil',
           'vitoria': 'Esp\u00edrito Santo, Brazil', 'madre-de-deus': 'Bahia, Brazil',
-          'santos': 'S\u00e3o Paulo, Brazil', 'paranagua': 'Paran\u00e1, Brazil', 'salvador': 'Bahia, Brazil'}
+          'santos': 'S\u00e3o Paulo, Brazil', 'paranagua': 'Paran\u00e1, Brazil', 'salvador': 'Bahia, Brazil',
+          'natal': 'Rio Grande do Norte, Brazil'}
 REGEL = {'guanabara': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'santos': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'paranagua': 'speed factor from the booklet abacus (tidal range and PM-BM duration)',
          'salvador': 'speed factor from the booklet scale (mean tidal range)',
+         'natal': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
          'vitoria': 'additive speed corrections from the booklet tables I/II (tidal range, hour)',
          'madre-de-deus': 'additive speed corrections from the booklet tables I/II (tidal range, hour)'}
 
@@ -567,10 +589,26 @@ def _achse(lab, lon):
     return a, b
 
 
-def kartensaetze(pdf, farbe='rot', gitter=None):
-    """-> Liste von Saetzen; Satz = dict(stunde -> (page, pfeile_mit_v, (lat_ab, lon_ab)))."""
+def _marke(p, text):
+    """Lage (x, y) einer Randbeschriftung in angezeigter Lage oder None."""
+    for b in p.get_text('dict')['blocks']:
+        for l in b.get('lines', []):
+            if ''.join(s['text'] for s in l['spans']).strip() == text:
+                r = _rect(p, l['bbox'])
+                return (r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2
+    return None
+
+
+def kartensaetze(pdf, farbe='rot', gitter=None, marken=None):
+    """-> Liste von Saetzen; Satz = dict(stunde -> (page, pfeile_mit_v, (lat_ab, lon_ab), nP, nZ)).
+
+    Gerade und ungerade Seiten sind gegeneinander versetzt gedruckt (Vitoria, Madre de Deus, Natal:
+    ~30 pt). Deshalb wird jede Seite ueber ihr eigenes Gradnetz in das Seitensystem der ersten Karte
+    des Satzes umgerechnet; alle Pfeile eines Satzes liegen dann im selben System.
+    marken (nur mit festem gitter): {'x': (Text, x auf der Gitterseite), 'y': (Text, y)} -- die
+    Verschiebung der Seite wird an diesen Randbeschriftungen gemessen."""
     d = fitz.open(pdf)
-    saetze, aktuell = [], None
+    saetze, aktuell, bezug = [], None, None
     for i in range(d.page_count):
         p = d[i]
         if len(p.get_drawings()) < 20:
@@ -581,9 +619,6 @@ def kartensaetze(pdf, farbe='rot', gitter=None):
         P, Z = pfeile(p), zahlen(p, farbe)
         if len(P) < 3:
             continue                                # Tabellenseite mit dem Wort "Preamar"
-        if h == -6 or aktuell is None or h in aktuell:
-            aktuell = {}
-            saetze.append(aktuell)
         # Zahl -> Pfeil (Abstand Textmitte - Pfeilmitte, hoechstens 22 pt)
         mit = []
         if P and Z:
@@ -592,8 +627,27 @@ def kartensaetze(pdf, farbe='rot', gitter=None):
             for ri, ci in zip(r, c):
                 if M[ri, ci] <= 22:
                     mit.append(dict(P[ri], v=Z[ci]['v']))
-        lat_ab, lon_ab = gitter if gitter else gradnetz(p)
-        aktuell[h] = (i + 1, mit, (lat_ab, lon_ab), len(P), len(Z))
+        if gitter:
+            (aa, ab), (oa, ob) = gitter
+            if marken:
+                mx_, my_ = _marke(p, marken['x'][0]), _marke(p, marken['y'][0])
+                dx = mx_[0] - marken['x'][1] if mx_ else 0.0
+                dy = my_[1] - marken['y'][1] if my_ else 0.0
+                aa, oa = aa - ab * dy, oa - ob * dx
+            geo = ((aa, ab), (oa, ob))
+        else:
+            geo = gradnetz(p)
+        if h == -6 or aktuell is None or h in aktuell:
+            aktuell = {}
+            saetze.append(aktuell)
+            bezug = geo
+        (aa, ab), (oa, ob) = geo
+        (ra, rb), (qa, qb) = bezug
+        for a in mit:
+            for kx, ky in (('x', 'y'), ('mx', 'my')):
+                a[ky] = (aa + ab * a[ky] - ra) / rb
+                a[kx] = (oa + ob * a[kx] - qa) / qb
+        aktuell[h] = (i + 1, mit, bezug, len(P), len(Z))
     return saetze
 
 
@@ -729,8 +783,9 @@ def main(argv):
         (xa, oa), (xb, ob) = cfg['gitter'][1]
         gitter = ((la - ya * (lb - la) / (yb - ya), (lb - la) / (yb - ya)),
                   (oa - xa * (ob - oa) / (xb - xa), (ob - oa) / (xb - xa)))
-    saetze = kartensaetze(os.path.join(PDF, pdfname), cfg.get('farbe', 'rot'), gitter)
-    korr = Korrektur(os.path.join(PDF, pdfname), cfg['korrektur'], cfg.get('farbe', 'rot')) if cfg.get('korrektur') else None
+    saetze = kartensaetze(os.path.join(PDF, pdfname), cfg.get('farbe', 'rot'), gitter, cfg.get('marken'))
+    korr = Korrektur(os.path.join(PDF, pdfname), cfg['korrektur'], cfg.get('tabfarbe', cfg.get('farbe', 'rot'))) \
+        if cfg.get('korrektur') else None
     gebiet_von = teilung(os.path.join(PDF, pdfname)) if korr else None
     heute = dt.date.today().strftime('%Y%m%d')
     zeilen, bloecke = [], []
