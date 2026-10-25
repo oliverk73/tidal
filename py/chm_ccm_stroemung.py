@@ -361,7 +361,9 @@ HEFTE = {
     'itapessoca': dict(pdf='ccm-itapessoca-e-luis-correia.pdf',
                        hafen=(os.path.join(ROOT, 'harmonics/classic/harmonics_literature.txt'),
                               'Ponta de Pedras (Itapessoca), Pernambuco, Brazil'),
-                       tabelle=7, flut=335, lat=-(7 + 38 / 60 + 6 / 3600), lon=-(34 + 52 / 60 + 33 / 3600)),
+                       tabelle=7, flut=335,
+                       # Heft: 07 38 06 S 34 52 33 W (lag an Land) -> Anleger Porto de Itapessoca (OSM), Oliver 25.10.2026
+                       lat=-7.6454, lon=-34.8709),
     # Vitoria: blaue Zahlen = 5 m Tiefgang (oberflaechennah); Tabelle I westlich, II oestlich der
     # gestrichelten Linie bei der Ilha das Cobras. Bezug PM Vitoria (Ilha do Urubu).
     'vitoria': dict(pdf='ccm-porto-de-vitoria.pdf', hafen=(S.TAFELN, 'Vit\u00f3ria (Porto), Esp\u00edrito Santo, Brazil'),
@@ -467,7 +469,7 @@ NAMEN = {
         'T': 'Luís Correia (Fundeadouro)',
     },
     'itapessoca': {
-        'T': 'Itapessoca (Cais do Porto)',
+        'T': 'Rio Itapessoca (Porto de Itapessoca)',
     },
     'salinopolis': {
         '1.1': 'Salinópolis (ao largo)',
