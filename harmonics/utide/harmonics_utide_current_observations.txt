@@ -33576,7 +33576,8 @@ x 0 0
 # !latitude: 54.225000
 # region: Mayo
 # admin1_quelle: Polygon
-AMETSBerthCWaveBuoy, Ireland Current
+# note: 20261026 umbenannt (vorher "AMETSBerthCWaveBuoy, Ireland Current", CMEMS-Projektname), Oliver.
+Béal an Mhuirthead (Belmullet, AMETS Berth C, 7 km W), Mayo, Ireland Current
 +00:00 :UTC
 0.0646 knots
 J1              0.0143  100.33
@@ -33769,9 +33770,10 @@ x 0 0
 # !units: knots
 # !longitude: -9.271000
 # !latitude: 53.227000
-# region: Clare
-# admin1_quelle: Ufer 8.4 km
-SmartBayWaveBuoy, Ireland Current
+# region: Galway
+# admin1_quelle: Name
+# note: 20261026 umbenannt (vorher "SmartBayWaveBuoy, Ireland Current", CMEMS-Projektname), Oliver.
+An Spidéal (Spiddal, SmartBay buoy, 3 km SE), Galway, Ireland Current
 +00:00 :UTC
 -0.0725 knots
 J1              0.0042  140.56
@@ -51235,7 +51237,7 @@ x 0 0
 #
 # ------------- End congen output -------------
 # BEGIN HOT COMMENTS
-# country: United Kingdom
+# country: Ireland
 # source: CMEMS in-situ, UTide analysis
 # station_id_context: CMEMS-WestwaveWaveBuoy
 # datum: n/a
@@ -51247,7 +51249,9 @@ x 0 0
 # !units: knots
 # !longitude: -9.703700
 # !latitude: 52.754700
-WestwaveWaveBuoy, United Kingdom Current
+# region: Clare
+# note: 20261026 umbenannt (vorher "WestwaveWaveBuoy, United Kingdom Current", CMEMS-Projektname), Oliver.
+Killard (WestWave buoy, 10 km W), Clare, Ireland Current
 +00:00 :UTC
 0.1278 knots
 J1              0.0025  4.78
