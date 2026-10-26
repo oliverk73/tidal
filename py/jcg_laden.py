@@ -36,6 +36,12 @@ def holen(url):
     return None
 
 
+def schreiben(pfad, daten):
+    with open(pfad + '.tmp', 'wb') as f:
+        f.write(daten)
+    os.replace(pfad + '.tmp', pfad)
+
+
 def main(argv):
     jahr = int(argv[1]) if len(argv) > 1 else 2026
     for g in GEBIETE:
@@ -50,13 +56,13 @@ def main(argv):
                                  % (g, jahr, mon, tag, h))
                     if not html:
                         continue
-                    open(stamm + '.html', 'wb').write(html)
+                    schreiben(stamm + '.html', html)
                     m = re.search(rb'src="\.\./(CurrPred/curr_img/[^"]+\.png)"', html)
                     if m:
                         time.sleep(0.5)
                         png = holen(BASIS + m.group(1).decode())
                         if png:
-                            open(stamm + '.png', 'wb').write(png)
+                            schreiben(stamm + '.png', png)
                     time.sleep(1)
             print(g, jahr, '%02d' % mon, 'fertig', flush=True)
 
