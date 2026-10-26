@@ -41,9 +41,9 @@ uhslc_878.csv,12.1870,-69.0200,2026,"Bullen Bay, Curaçao",harmonics_utide_obser
 305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_ticon4_worldwide.txt,0,7070,0.066,0.356,0,-0.012,2.703,Mexico_UHSLC,1,nein
 305_Isla_de_Cedros.csv,28.0960,-115.1831,1989,"Isla de Cedros, Baja California, Mexico",harmonics_utide_observations.txt,0,7070,0.0565,0.313,0,-0.012,2.722,Mexico_UHSLC,0,nein
 138_Charchanga.csv,22.2259,91.0654,2000,"Charchenga (Hatiya Island), Bangladesh",harmonics_ticon4_worldwide.txt,0,8710,0.2851,1.431,-10,0.044,4.258,IndianOcean_UHSLC_BD_MM_MG_MZ,1,nein
-79_Chatham_Island.csv,-43.9463,-176.5612,2016,"Waitangi, Chatham Island, New Zealand",harmonics_ticon4_worldwide.txt,0,8761,0.1009,0.423,0,0.051,1.004,New_Zealand_UHSLC,1,nein
+79_Chatham_Island.csv,-43.9463,-176.5612,2016,"Waitangi (Chatham Island), New Zealand",harmonics_ticon4_worldwide.txt,0,8761,0.1009,0.423,0,0.051,1.004,New_Zealand_UHSLC,1,nein
 79_Chatham_Island.csv,-43.9463,-176.5612,2016,"Waitangi, Chatham Islands, New Zealand",harmonics_utide_observations.txt,0,8761,0.0995,0.429,0,0.052,0.992,New_Zealand_UHSLC,0,nein
-79_Chatham_Island.csv,-43.9463,-176.5612,2016,"Waitangi, Chatham Island, New Zealand",harmonics_utide_tidetables.txt,0,8761,0.1118,0.457,0,1.938,0.892,New_Zealand_UHSLC,0,nein
+79_Chatham_Island.csv,-43.9463,-176.5612,2016,"Waitangi (Chatham Island), New Zealand",harmonics_utide_tidetables.txt,0,8761,0.1118,0.457,0,1.938,0.892,New_Zealand_UHSLC,0,nein
 170_Christmas_Island.csv,-10.4170,105.6670,2026,"Christmas Island, Australia",harmonics_ticon4_worldwide.txt,0,8662,0.0969,0.426,0,0.078,1.851,Australia_UHSLC,1,nein
 170_Christmas_Island.csv,-10.4170,105.6670,2026,"Christmas Island, Australia",harmonics_utide_observations.txt,0,8662,0.0931,0.421,0,0.078,1.894,Australia_UHSLC,0,nein
 170_Christmas_Island.csv,-10.4170,105.6670,2026,"Christmas Island, Australia",harmonics_att_np203_scs.txt,40,8662,0.1105,0.482,0,0.116,1.533,Australia_UHSLC,0,nein
@@ -1036,9 +1036,9 @@ said_saidia.csv,35.1119,-2.2929,2020,"Saidia Marina, Morocco",harmonics_utide_ob
 72_Bluff.csv,-46.5977,168.3454,2015,"Bluff, Southland, New Zealand",harmonics_utide_observations.txt,0,8761,0.1384,0.493,0,-0.044,2.817,New_Zealand_UHSLC,1,ja
 72_Bluff.csv,-46.5977,168.3454,2015,"Stirling Point, New Zealand",harmonics_utide_tidetables.txt,1893,8761,0.1817,0.603,-30,1.768,3.164,New_Zealand_UHSLC,0,ja
 72_Bluff.csv,-46.5977,168.3454,2015,"Davey Shoal, New Zealand",harmonics_utide_tidetables.txt,1946,8761,0.1817,0.609,-30,1.768,3.167,New_Zealand_UHSLC,0,ja
-79_Chatham_Island.csv,-43.9463,-176.5612,2004,"Waitangi, Chatham Island, New Zealand",harmonics_ticon4_worldwide.txt,0,5278,0.116,0.337,0,-0.07,1.018,New_Zealand_UHSLC,0,ja
+79_Chatham_Island.csv,-43.9463,-176.5612,2004,"Waitangi (Chatham Island), New Zealand",harmonics_ticon4_worldwide.txt,0,5278,0.116,0.337,0,-0.07,1.018,New_Zealand_UHSLC,0,ja
 79_Chatham_Island.csv,-43.9463,-176.5612,2004,"Waitangi, Chatham Islands, New Zealand",harmonics_utide_observations.txt,0,5278,0.1158,0.337,0,-0.077,1.001,New_Zealand_UHSLC,1,ja
-79_Chatham_Island.csv,-43.9463,-176.5612,2004,"Waitangi, Chatham Island, New Zealand",harmonics_utide_tidetables.txt,0,5278,0.1209,0.36,0,1.802,0.924,New_Zealand_UHSLC,0,ja
+79_Chatham_Island.csv,-43.9463,-176.5612,2004,"Waitangi (Chatham Island), New Zealand",harmonics_utide_tidetables.txt,0,5278,0.1209,0.36,0,1.802,0.924,New_Zealand_UHSLC,0,ja
 663_Scott_Base.csv,-77.8500,166.7670,2017,"Scott Base, Ross Island, New Zealand",harmonics_utide_observations.txt,0,8761,0.0905,0.429,0,0.039,1.145,New_Zealand_UHSLC,1,nein
 pcrt_ioc.csv,12.4830,-87.1670,2026,"Puerto Corinto, Nicaragua",harmonics_utide_observations.txt,0,191886,0.1036,0.418,0,-0.06,3.908,Nicaragua_IOC,1,nein
 pcrt_ioc.csv,12.4830,-87.1670,2026,"Corinto (Isla Cardon), Nicaragua",harmonics_noaa_amtt.txt,47,191886,0.0687,0.249,10,1.353,2.82,Nicaragua_IOC,0,nein
@@ -2670,7 +2670,7 @@ zes57a-1066.csv,51.0043,3.8053,2026,"Melle, Belgium",harmonics_utide_observation
 00247_Diligent_River_wlp.csv,45.3904,-64.4548,2025,"Diligent River, Nova Scotia, Canada",harmonics_utide_tidetables.txt,48,35040,0.1956,0.833,0,0.055,12.872,Canada_IWLS_NS,0,nein
 00250_Cape_Sharp_wlp.csv,45.3644,-64.3919,2025,"Cape Sharp, Nova Scotia, Canada",harmonics_utide_tidetables.txt,51,35040,0.1787,0.765,0,-0.129,12.887,Canada_IWLS_NS,0,nein
 00255_Parrsboro_wlp.csv,45.3900,-64.3187,2025,"Parrsboro, Nova Scotia, Canada",harmonics_utide_tidetables.txt,1563,35040,0.14,0.467,0,-0.08,13.381,Canada_IWLS_NS,0,nein
-00260_Five_Islands_wlp.csv,45.3794,-64.1299,2025,"Five Islands, Nova Scotia (2), Canada",harmonics-2004-06-14_mod.txt,56,35040,0.2557,0.852,0,0.0,15.277,Canada_IWLS_NS,0,nein
+00260_Five_Islands_wlp.csv,45.3794,-64.1299,2025,"Five Islands (2), Nova Scotia, Canada",harmonics-2004-06-14_mod.txt,56,35040,0.2557,0.852,0,0.0,15.277,Canada_IWLS_NS,0,nein
 00270_Burntcoat_Head_wlp.csv,45.3115,-63.8057,2025,"Burntcoat Head, Nova Scotia, Canada",harmonics_utide_tidetables.txt,281,35040,0.2625,1.078,0,-0.002,15.193,Canada_IWLS_NS,0,nein
 00282_Hantsport_wlp.csv,45.0669,-64.1701,2025,"Hantsport, Nova Scotia, Canada",harmonics_utide_tidetables.txt,463,35040,0.1601,0.613,0,0.013,14.674,Canada_IWLS_NS,0,nein
 00290_Cape_Blomidon_wlp.csv,45.3048,-64.3491,2025,"Cape Blomidon, Nova Scotia, Canada",harmonics_utide_tidetables.txt,19,35040,0.1847,0.77,0,-0.072,13.208,Canada_IWLS_NS,0,nein

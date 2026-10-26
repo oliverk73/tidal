@@ -14,7 +14,7 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 5,HLN,"Abidjan (Canal de Vridi), Ivory Coast",harmonics/utide/harmonics_utide_observations.txt,200415,5.2503,-4.0019,,5.2515,-4.0025,0.00,0.141,,gleich
 6,N,"Abott Harbour, Nova Scotia, Canada",harmonics/classic/harmonics-2004-06-14_mod.txt,3646,43.6637,-65.8238,,43.6667,-65.8167,0.02,0.014,,aehnlich
 6,N,"Abbotts Harbour, Nova Scotia, Canada",harmonics/utide/harmonics_utide_tidetables.txt,201791,43.6638,-65.8240,,,,0.02,0.014,,aehnlich
-7,L,"Abrahams Bay, Mayaguana Island, Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,3841,22.3641,-72.9714,,22.3667,-73.0000,2.96,0.056,,aehnlich
+7,L,"Abrahams Bay (Mayaguana Island), Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,3841,22.3641,-72.9714,,22.3667,-73.0000,2.96,0.056,,aehnlich
 7,L,"Abraham Bay, Mayaguana Island, Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,18642,22.3667,-73.0000,,,,2.96,0.056,,aehnlich
 8,N,"Abu Ali Pier, Saudi Arabia",harmonics/att/harmonics_att_np203_secondary.txt,74078,27.3004,49.6453,,27.3000,49.6500,0.00,0.033,,gleich
 8,N,"Abu Ali Pier, Saudi Arabia",harmonics/utide/harmonics_utide_tidetables.txt,686318,27.3004,49.6453,,,,0.00,0.033,,gleich
@@ -1230,8 +1230,8 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 553,N,"Dartmouth, England, United Kingdom",harmonics/utide/harmonics_utide_tidetables.txt,438308,50.3511,-3.5772,,,,0.00,0.052,,gleich
 554,N,"Dassalan Island, Basilan, Philippines",harmonics/att/harmonics_att_np203_scs.txt,85283,6.7339,121.4658,,6.7333,121.4667,0.00,0.091,,gleich
 554,N,"Dassalan Island, Basilan, Philippines",harmonics/noaa/harmonics_noaa_cptt.txt,161249,6.7339,121.4658,1,6.7333,121.4667,0.00,0.091,,gleich
-555,N,"Datum Bay, Acklins Island, Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,59783,22.1657,-74.2920,,22.1667,-74.3000,0.00,0.070,,gleich
-555,N,"Datum Bay, Acklins Island, Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,18260,22.1657,-74.2920,,22.1667,-74.3000,0.00,0.070,,gleich
+555,N,"Datum Bay (Acklins Island), Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,59783,22.1657,-74.2920,,22.1667,-74.3000,0.00,0.070,,gleich
+555,N,"Datum Bay (Acklins Island), Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,18260,22.1657,-74.2920,,22.1667,-74.3000,0.00,0.070,,gleich
 556,N,"Dauphin Island, Mobile Bay, Alabama",harmonics/classic/harmonics-dwf-20251228-free.txt,143462,30.2500,-88.0750,,,,0.46,0.037,,aehnlich
 556,N,"Dauphin Island Hydro, Alabama",harmonics/classic/harmonics-dwf-20251228-free.txt,143659,30.2513,-88.0795,,,,0.46,0.037,,aehnlich
 557,N,"Davao, Davao del Sur, Philippines",harmonics/ticon/harmonics_ticon4_worldwide.txt,47755,7.0774,125.6278,,7.0830,125.6330,0.00,0.005,,gleich
@@ -1557,8 +1557,8 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 705,GN,"Freetown, Sierra Leone",harmonics/classic/harmonics-1997-05-25_mod.txt,12224,8.4925,-13.2747,,8.5000,-13.2333,0.06,0.059,,gleich
 705,GN,"Freetown, Sierra Leone",harmonics/noaa/harmonics_noaa_eutt.txt,28489,8.4920,-13.2750,1,,,0.06,0.059,,gleich
 705,GN,"Freetown, Sierra Leone",harmonics/utide/harmonics_utide_tidetables.txt,667412,8.4925,-13.2747,,8.5000,-13.2333,0.06,0.059,,gleich
-706,N,"Fresh Creek, Andros Island, Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,79603,24.7256,-77.7854,,24.7333,-77.8000,0.00,0.045,,gleich
-706,N,"Fresh Creek, Andros Island, Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,15958,24.7256,-77.7854,,24.7333,-77.8000,0.00,0.045,,gleich
+706,N,"Fresh Creek (Andros Island), Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,79603,24.7256,-77.7854,,24.7333,-77.8000,0.00,0.045,,gleich
+706,N,"Fresh Creek (Andros Island), Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,15958,24.7256,-77.7854,,24.7333,-77.8000,0.00,0.045,,gleich
 707,N,"Friday Harbor, San Juan Channel, Washington (2)",harmonics/classic/harmonics-2004-06-14_mod.txt,79793,48.5500,-123.0000,,,,1.06,0.008,,gleich
 707,N,"Friday Harbor, San Juan Island, San Juan Channel, Washington",harmonics/classic/harmonics-dwf-20251228-free.txt,206503,48.5453,-123.0125,,,,1.06,0.008,,gleich
 708,L,"Friedrichstadt (Eider Strassenbrücke), Germany",harmonics/ticon/harmonics_ticon4_worldwide.txt,59760,54.3688,9.0950,,54.3701,9.0957,0.00,0.172,,gleich
@@ -3026,7 +3026,7 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 1373,N,"Matsumae, Hokkaido, Japan",harmonics/utide/harmonics_utide_observations.txt,114269,41.4220,140.0914,,,,0.01,0.004,,gleich
 1374,N,"Matsuyama, Ehime, Japan",harmonics/ticon/harmonics_ticon4_worldwide.txt,117321,33.8589,132.7122,,,,0.00,0.002,,gleich
 1374,N,"Matsuyama, Ehime, Japan",harmonics/utide/harmonics_utide_observations.txt,114463,33.8589,132.7122,,,,0.00,0.002,,gleich
-1375,L,"Matthew Town, Great Inagua Island, Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,161555,20.9574,-73.6796,,20.9500,-73.6833,0.91,0.104,,aehnlich
+1375,L,"Matthew Town (Great Inagua Island), Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,161555,20.9574,-73.6796,,20.9500,-73.6833,0.91,0.104,,aehnlich
 1375,L,"Mathew Town, Great Inagua Island, Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,18451,20.9500,-73.6833,,,,0.91,0.104,,aehnlich
 1376,G,"Matthews Cove, New Brunswick, Canada",harmonics/classic/harmonics-2004-06-14_mod.txt,161745,45.0520,-66.8945,,45.0500,-66.8667,0.00,0.000,,gleich
 1376,G,"Matthews Cove, New Brunswick, Canada",harmonics/utide/harmonics_utide_tidetables.txt,158524,45.0520,-66.8945,,,,0.00,0.000,,gleich
@@ -3407,7 +3407,7 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 1549,N,"Nasipit Harbor (Butuan Bay), Agusan del Norte, Philippines",harmonics/att/harmonics_att_np203_scs.txt,84695,8.9800,125.3361,,8.9833,125.3333,0.00,0.087,,gleich
 1549,N,"Nasipit Harbor (Butuan Bay), Agusan del Norte, Philippines",harmonics/noaa/harmonics_noaa_cptt.txt,164745,8.9800,125.3361,1,8.9833,125.3333,0.00,0.087,,gleich
 1550,N,"Nassau, New Providence Island, Bahamas (2)",harmonics/classic/harmonics-2004-06-14_mod.txt,181177,25.0799,-77.3483,,25.0833,-77.3500,0.42,0.073,,gleich
-1550,N,"Nassau, New Providence Island, Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,16917,25.0833,-77.3500,,,,0.42,0.073,,gleich
+1550,N,"Nassau (New Providence Island), Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,16917,25.0833,-77.3500,,,,0.42,0.073,,gleich
 1551,N,"Natal (Sumatra), Sumatera Utara, Indonesia",harmonics/att/harmonics_att_np203_scs.txt,50959,0.5525,99.1097,,0.5500,99.1000,0.00,0.068,,gleich
 1551,N,"Natal (Sumatra), Sumatera Utara, Indonesia",harmonics/noaa/harmonics_noaa_cptt.txt,141786,0.5525,99.1097,1,,,0.00,0.068,,gleich
 1552,N,"Natkusiak Peninsula, Northwest Territories, Canada",harmonics/classic/harmonics-2004-06-14_mod.txt,181367,73.0167,-110.4667,,,,0.00,0.000,,gleich
@@ -3925,8 +3925,8 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 1782,N,"Pantoloan (Palu), Sulawesi Tengah, Indonesia",harmonics/utide/harmonics_utide_tidetables.txt,712643,-0.7117,119.8572,,,,0.14,0.046,,verschieden
 1783,N,"Pelabuhan Sekupang (Pulau Batam), Kepulauan Riau, Indonesia",harmonics/att/harmonics_att_np203_scs.txt,41064,1.1238,103.9261,,1.1333,103.9333,0.16,0.042,,verschieden
 1783,N,"Sekupang, Kepulauan Riau, Indonesia",harmonics/utide/harmonics_utide_big_srgi.txt,53416,1.1240,103.9275,,,,0.16,0.042,,verschieden
-1784,N,"Pelican Harbour, Abaco Island, Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,209644,26.3833,-76.9667,,,,0.00,0.039,,gleich
-1784,N,"Pelican Harbour, Abaco Island, Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,16726,26.3833,-76.9667,,,,0.00,0.039,,gleich
+1784,N,"Pelican Harbour (Abaco Island), Bahamas",harmonics/classic/harmonics-2004-06-14_mod.txt,209644,26.3833,-76.9667,,,,0.00,0.039,,gleich
+1784,N,"Pelican Harbour (Abaco Island), Bahamas",harmonics/noaa/harmonics_noaa_carib.txt,16726,26.3833,-76.9667,,,,0.00,0.039,,gleich
 1785,G,"Pellworm (Hoogerfähre), Germany",harmonics/bsh/harmonics_bsh_germany.txt,17881,54.5356,8.5978,,,,7.75,0.093,1,gleich
 1785,G,"Pellworm (Anleger), Germany",harmonics/utide/harmonics_utide_observations.txt,81373,54.5009,8.7020,,,,7.75,0.093,1,gleich
 1786,N,"Pelly Island, Northwest Territories, Canada",harmonics/classic/harmonics-2004-06-14_mod.txt,210224,69.6167,-135.3667,,,,0.00,0.000,,gleich
@@ -5859,9 +5859,9 @@ haufen,spur,name,datei,zeile,lat,lon,abgeleitet,alt_lat,alt_lon,max_km,max_kurve
 2655,N,"Morse Basin, British Columbia, Canada",harmonics/utide/harmonics_utide_tidetables.txt,146352,54.2583,-130.2376,,,,1.81,0.031,,verschieden
 2656,N,"Waipapa Point, Southland, New Zealand",harmonics/noaa/harmonics_noaa_cptt.txt,210181,-46.6500,168.8500,1,,,0.95,0.077,,gleich
 2656,N,"Waipapa Point, New Zealand",harmonics/utide/harmonics_utide_tidetables.txt,527015,-46.6577,168.8446,,,,0.95,0.077,,gleich
-2657,N,"Waitangi, Chatham Island, New Zealand",harmonics/ticon/harmonics_ticon4_worldwide.txt,41331,-43.9463,-176.5612,,-43.9470,-176.5620,0.00,0.042,,gleich
+2657,N,"Waitangi (Chatham Island), New Zealand",harmonics/ticon/harmonics_ticon4_worldwide.txt,41331,-43.9463,-176.5612,,-43.9470,-176.5620,0.00,0.042,,gleich
 2657,N,"Waitangi, Chatham Islands, New Zealand",harmonics/utide/harmonics_utide_observations.txt,167756,-43.9463,-176.5612,,-43.9470,-176.5620,0.00,0.042,,gleich
-2657,N,"Waitangi, Chatham Island, New Zealand",harmonics/utide/harmonics_utide_tidetables.txt,584513,-43.9463,-176.5612,,,,0.00,0.042,,gleich
+2657,N,"Waitangi (Chatham Island), New Zealand",harmonics/utide/harmonics_utide_tidetables.txt,584513,-43.9463,-176.5612,,,,0.00,0.042,,gleich
 2658,N,"Waitara River entrance, Taranaki, New Zealand",harmonics/noaa/harmonics_noaa_cptt.txt,215678,-38.9833,174.2333,1,,,0.67,0.077,,gleich
 2658,N,"Waitara River Entrance, New Zealand",harmonics/utide/harmonics_utide_tidetables.txt,539009,-38.9878,174.2282,,,,0.67,0.077,,gleich
 2659,H,"Waizhe Dao, Shandong, China",harmonics/att/harmonics_att_np204_secondary.txt,35587,37.2667,122.5500,,,,0.00,0.190,,verschieden

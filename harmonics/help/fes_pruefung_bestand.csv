@@ -286,7 +286,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 1,47.5,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Havre-aux-Maisons, Québec, Canada",Canada,47.405333,-61.836,insel,3.1,67,,133,187,0.26,Derived from CHS tide predictions (reverse-engineered) with UTide harm
 1,47.4,gemischt,Uebertragung,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto Cabezas, Nicaragua",Nicaragua,14.0422,-83.3819,gemischt,1.9,146,,,,0.77,"ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer"
 1,47.4,gemischt,Uebertragung,harmonics/att/harmonics_att_np202_secondary.txt,"Port Royal (Roatán), Honduras",Honduras,16.4,-86.3,gemischt,0.0,-149,,,,1.89,"ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer"
-1,47.4,gemischt,Altbestand,harmonics/classic/harmonics-1997-05-25_mod.txt,"Steventon, Great Exuma Island, Bahamas",Bahamas,23.6453,-75.9436,insel,2.6,-18,,13,-5,1.90,
+1,47.4,gemischt,Altbestand,harmonics/classic/harmonics-1997-05-25_mod.txt,"Steventon (Great Exuma Island), Bahamas",Bahamas,23.6453,-75.9436,insel,2.6,-18,,13,-5,1.90,
 1,47.3,gemischt,Uebertragung,harmonics/att/harmonics_att_np208_secondary.txt,"Bizerte, Tunisia",Tunisia,37.2749,9.883,gemischt,3.2,140,,,,0.48,"ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Tran"
 1,47.3,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Playa Bagdad (Matamoros, Tamaulipas), México",Mexico,25.823,-97.1522,offen,2.2,,,,,172200.00,SEMAR Mexico tide tables × UTide
 1,47.2,gemischt,Messung,harmonics/classic/harmonics-dwf-20251228-free.txt,"Moriches USCG station (Long Island), New York",USA,40.7867,-72.75,insel,2.6,107,,,,0.51,CO-OPS Metadata API
@@ -710,7 +710,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 1,27.1,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Anaga (Awaji-shima), Hyogo, Japan",Japan,34.2708,134.6676,insel,3.2,111,187,65,62,1.42,JODC/JHD
 1,27.1,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_cptt.txt,"Navalas, Guimaras, Philippines",Philippines,10.7335,122.6847,gemischt,1.7,-122,-106,-6,-42,0.97,"NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer"
 1,27.1,gemischt,Buch,harmonics/att/harmonics_att_np207.txt,"Vila Faro Recalada, Buenos Aires, Argentina",Argentina,-38.992,-61.2604,offen,1.0,-68,-48,-85,-109,0.85,"ADMIRALTY Tide Tables Vol.7 (NP207), Part III Harmonic Constants"
-1,27.1,gemischt,Altbestand,harmonics/classic/harmonics-1997-05-25_mod.txt,"Freeport Harbour, Grand Bahama Island, Bahamas",Bahamas,26.5187,-78.7779,insel,2.4,-46,,-14,,0.73,
+1,27.1,gemischt,Altbestand,harmonics/classic/harmonics-1997-05-25_mod.txt,"Freeport Harbour (Grand Bahama Island), Bahamas",Bahamas,26.5187,-78.7779,insel,2.4,-46,,-14,,0.73,
 1,27.1,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_amtt.txt,"Puerto Yates, Chile",Chile,-45.4333,-74.4333,insel,0.0,65,110,-11,-22,1.70,"NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 "
 1,27.1,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Wood Bay, Northwest Territories, Canada",Canada,69.7395,-128.8628,gemischt,3.0,-66,22,,,0.82,
 1,27.0,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Cape Whiskey, Western Australia, Australia",Australia,-14.1675,127.6499,offen,1.8,-101,-63,-105,-138,1.02,
@@ -1326,7 +1326,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,17.5,gemischt,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Al Jazeera Port, United Arab Emirates",United Arab Emirates,25.7192,55.7996,offen,1.6,13,29,94,26,1.20,"ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer"
 0,17.5,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Fare (Huahine), French Polynesia",France,-16.721563,-151.032446,offen,2.4,,-27,,,0.90,TICON-4 (GESLA-4 harmonic analysis)
 0,17.5,gemischt,Messung,harmonics/classic/harmonics-dwf-20251228-free.txt,"McCready's Creek (Fishing Bay, Chesapeake Bay), Maryland",USA,38.3,-76.005,insel,2.5,-28,,,,1.10,CO-OPS Metadata API
-0,17.5,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Walton, Nova Scotia (over keel blocks), Canada",Canada,45.2323,-64.0112,gemischt,1.7,-10,-22,-9,-43,0.76,
+0,17.5,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Walton (over keel blocks), Nova Scotia, Canada",Canada,45.2323,-64.0112,gemischt,1.7,-10,-22,-9,-43,0.76,
 0,17.5,gemischt,Uebertragung,harmonics/att/harmonics_att_np202_secondary.txt,"Swinoujscie, Poland",Poland,53.9307,14.279,insel,0.9,,,,,1.47,"ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer"
 0,17.5,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Vidåslusen (Højer), Denmark",Denmark,54.9632,8.6607,insel,1.8,-39,-38,-5,-25,0.86,TICON-4 (GESLA-4 harmonic analysis)
 0,17.5,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_cptt.txt,"Prince Frederick Harbor, Western Australia, Australia",Australia,-15.0833,125.3,insel,1.8,39,34,-54,-42,1.18,"NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer"
@@ -1650,7 +1650,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,14.7,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Stralsund, Germany",Germany,54.305676,13.11901,insel,1.1,,,,,0.85,TICON-4 (GESLA-4 harmonic analysis)
 0,14.7,Zeitversatz +47 min,Uebertragung,harmonics/ih/harmonics_ih_tabelas.txt,"Lisnave (Setenave), Portugal",Portugal,38.47,-8.7917,insel,0.8,34,47,46,51,1.11,"Instituto Hidrografico (PT), Tabela de Mares 2026, Concordancias de ma"
 0,14.7,Zeitversatz +30 min,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"L'Isle-Verte, Québec, Canada",Canada,48.024667,-69.408,insel,1.1,43,37,23,20,0.95,Derived from CHS tide predictions (reverse-engineered) with UTide harm
-0,14.7,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Hawks Nest Anchorage (Grand Turk), Turks Islands, Turks and Caicos Islands",Turks and Caicos Islands,21.4234,-71.1417,offen,2.7,-21,,,,1.06,
+0,14.7,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Hawks Nest Anchorage (Grand Turk), Turks and Caicos Islands",Turks and Caicos Islands,21.4234,-71.1417,offen,2.7,-21,,,,1.06,
 0,14.6,gemischt,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Al Khobar, Saudi Arabia",Saudi Arabia,26.2815,50.223,insel,1.9,-25,-100,-73,44,0.96,"ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)"
 0,14.6,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Murotsu (Awaji-shima), Hyogo, Japan",Japan,34.5253,134.878,insel,1.4,68,32,50,71,1.04,JODC/JHD
 0,14.6,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"No Name Key (east side, Baha Honda Channel), Florida",,24.6983,-81.3183,offen,1.9,-43,,12,16,0.91,
@@ -1852,7 +1852,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,13.4,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Salinópolis, Pará, Brazil",Brazil,-0.612,-47.3503,insel,2.3,32,45,87,39,0.98,Derived from Marinha do Brasil (DHN) tide tables with UTide
 0,13.3,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Pigeon Key (north side, Florida Bay), Florida",,24.705,-81.1567,insel,1.2,-7,,-3,-18,0.73,
 0,13.3,Amplitude x1.32,Uebertragung,harmonics/noaa/harmonics_noaa_amtt.txt,"Bahía Octavia, Colombia",Colombia,6.8667,-77.6667,offen,3.7,3,10,-0,,1.32,"NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 "
-0,13.3,Zeitversatz +37 min,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Pelham Bay (Belcher Channel), Nunavut (2), Canada",Canada,76.75,-96.9,insel,1.9,37,42,29,,1.22,
+0,13.3,Zeitversatz +37 min,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Pelham Bay (Belcher Channel, 2), Nunavut, Canada",Canada,76.75,-96.9,insel,1.9,37,42,29,,1.22,
 0,13.3,gemischt,Buch,harmonics/att/harmonics_att_np207.txt,"Ría Coig, Santa Cruz, Argentina",Argentina,-50.95,-69.1667,offen,1.9,-21,-42,-3,-101,0.80,"ADMIRALTY Tide Tables Vol.7 (NP207), Part III Harmonic Constants"
 0,13.3,gemischt,Uebertragung,harmonics/att/harmonics_att_np204_secondary.txt,"P'i-do, North Korea",North Korea,38.6801,125.177,insel,1.7,28,30,15,-3,1.17,"ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants"
 0,13.3,gemischt,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Mundra Port (Navinal Point), Gujarat, India",India,22.7412,69.7155,insel,1.8,-22,-30,-60,-38,1.23,"ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)"
@@ -2032,7 +2032,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,12.2,gemischt,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Ash Shuwaymiyah, Oman",Oman,17.815,55.424,gemischt,1.9,9,17,-22,-29,1.10,"ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer"
 0,12.2,Zeitversatz -24 min,Tafel-Fit,harmonics/utide/harmonics_utide_observations.txt,"Ossenisse (Westerschelde), Netherlands",Netherlands,51.407884,3.966769,insel,2.5,-24,-24,-9,-24,1.17,Derived from Rijkswaterstaat astronomical tide data with UTide
 0,12.2,gemischt,Messung,harmonics/classic/harmonics-dwf-20251228-free.txt,"Point Lookout (Long Island), New York",USA,40.5939,-73.584,insel,3.3,29,43,6,,0.92,CO-OPS Metadata API
-0,12.2,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Sandy Point, North Caicos Island, Turks and Caicos Islands",Turks and Caicos Islands,21.9354,-72.0463,insel,2.1,19,,61,49,0.80,
+0,12.2,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Sandy Point (North Caicos Island), Turks and Caicos Islands",Turks and Caicos Islands,21.9354,-72.0463,insel,2.1,19,,61,49,0.80,
 0,12.2,gemischt,Messung,harmonics/classic/harmonics-dwf-20251228-free.txt,"Point Spencer (Port Clarence, Norton Sound), Alaska",USA,65.2567,-166.847,gemischt,1.3,9,,,,1.29,CO-OPS Metadata API
 0,12.2,gemischt,Uebertragung,harmonics/att/harmonics_att_np208_secondary.txt,"Sal Rei (Boa Vista), Cape Verde",Cape Verde,16.1748,-22.9184,offen,1.8,27,12,,,1.17,"ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part II Secondary Port Tran"
 0,12.2,gemischt,Uebertragung,harmonics/att/harmonics_att_np204_secondary.txt,"Boge Dao (Sanggou Wan), Shandong, China",China,37.0498,122.4798,insel,2.2,20,37,47,-69,1.14,"ADMIRALTY Tide Tables Vol.4 (NP204), Part III Harmonic Constants"
@@ -2054,7 +2054,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,12.1,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Barra Norte - Arco Lamoso, Amapá, Brazil",Brazil,1.4383,-49.2117,offen,1.4,14,24,-28,-63,1.27,Derived from Marinha do Brasil (DHN) tide tables with UTide
 0,12.1,gemischt,Buch,harmonics/att/harmonics_att_np203_scs.txt,"Pulau Rakit, Jawa Barat, Indonesia",Indonesia,-5.9361,108.3813,offen,1.6,-18,63,27,-73,0.89,"ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic"
 0,12.1,Tagestiden,Messung,harmonics/classic/harmonics-dwf-20251228-free.txt,"West Mystic (Mystic River, Long Island Sound), Connecticut",USA,41.3433,-71.975,insel,4.9,12,7,-33,,0.81,CO-OPS Metadata API
-0,12.1,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Pelican Harbour, Abaco Island, Bahamas",Bahamas,26.3833,-76.9667,insel,1.8,27,,-49,,0.99,
+0,12.1,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Pelican Harbour (Abaco Island), Bahamas",Bahamas,26.3833,-76.9667,insel,1.8,27,,-49,,0.99,
 0,12.1,gemischt,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Baie de Rigny, Madagascar",Madagascar,-12.4305,49.5269,insel,0.8,26,31,57,62,1.18,"ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer"
 0,12.1,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Encantadas (Ilha do Mel / Canal da Galheta), Paraná, Brazil",Brazil,-25.5701,-48.3164,insel,1.7,37,37,-16,31,0.98,Derived from Marinha do Brasil (DHN) tide tables with UTide
 0,12.1,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Austin Bay, Nunavut, Canada",Canada,68.5335,-113.300528,offen,0.0,,,43,,0.84,Derived from CHS tide predictions (reverse-engineered) with UTide harm
@@ -2128,7 +2128,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,11.8,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Bridgeport, Connecticut",,41.1733,-73.1817,insel,4.6,17,5,-10,10,0.87,
 0,11.8,Zeitversatz +40 min,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Yavaros (Isla Las Viejas), Sonora, Mexico",Mexico,26.7061,-109.5135,offen,4.6,35,48,45,28,1.17,
 0,11.8,gemischt,Uebertragung,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Kamenka (Novaya Zemlya), Arkhangelsk Oblast, Russia",Russia,70.6,57.45,insel,0.6,3,-23,,,0.82,"ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer"
-0,11.8,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Datum Bay, Acklins Island, Bahamas",Bahamas,22.1657,-74.292,offen,0.8,-26,,-133,,0.99,
+0,11.8,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Datum Bay (Acklins Island), Bahamas",Bahamas,22.1657,-74.292,offen,0.8,-26,,-133,,0.99,
 0,11.8,Zeitversatz +48 min,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Haysport, British Columbia, Canada",Canada,54.178,-130.009,insel,1.4,32,53,44,54,0.95,Derived from CHS tide predictions (reverse-engineered) with UTide harm
 0,11.7,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Grande-Entrée, Québec, Canada",Canada,47.555842,-61.558949,insel,1.3,32,29,49,87,0.84,Derived from CHS tide predictions (reverse-engineered) with UTide harm
 0,11.7,gemischt,Buch,harmonics/att/harmonics_att_np203_scs.txt,"Dring Harbour (Camorta Island), Andaman and Nicobar, India",India,8.097,93.483,insel,1.8,19,23,73,,1.15,"ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic"
@@ -2360,7 +2360,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,10.8,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Langballigau, Germany",Germany,54.823266,9.654128,insel,1.4,,,,,0.98,TICON-4 (GESLA-4 harmonic analysis)
 0,10.8,gemischt,Buch,harmonics/att/harmonics_att_np208.txt,"Senj, Croatia",Croatia,44.9916,14.9,insel,2.8,-11,,-2,,0.86,"ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Simplified Harmonic Method"
 0,10.8,Zeitversatz -24 min,Uebertragung,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía Uvita, Costa Rica",Costa Rica,9.15,-83.75,offen,2.6,-24,-23,-24,,1.08,"NOAA CO-OPS Tide Predictions, Central and South America"
-0,10.8,Tagestiden,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Matthew Town, Great Inagua Island, Bahamas",Bahamas,20.9574,-73.6796,offen,2.4,2,,-118,,1.12,
+0,10.8,Tagestiden,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Matthew Town (Great Inagua Island), Bahamas",Bahamas,20.9574,-73.6796,offen,2.4,2,,-118,,1.12,
 0,10.8,Zeitversatz -25 min,Uebertragung,harmonics/att/harmonics_att_np202_secondary.txt,"Strucklahnungshörn (Nordstrand), Germany",Germany,54.4977,8.807,offen,0.5,-11,-24,-28,-27,1.24,"ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer"
 0,10.8,Tagestiden,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Red Cliff Point (Beacon 5), South Australia, Australia",Australia,-32.7333,137.8167,gemischt,1.6,-1,11,-105,-84,1.16,
 0,10.8,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Ksar es Sghir, Morocco",Morocco,35.842,-5.5705,insel,2.8,22,12,,,0.94,Derived from SHOM tide predictions with UTide harmonic analysis
@@ -2896,7 +2896,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,8.9,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_cptt.txt,"Mado-sudo, South Korea",South Korea,34.4333,126.85,insel,1.5,3,21,-20,-75,1.16,"NOAA Tide Tables Pacific & Indian Ocean (NOS/C&GS), Table 2 transfer"
 0,8.9,gemischt,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Baie Ambavanibe, Madagascar",Madagascar,-12.0667,49.1667,gemischt,0.0,23,22,56,78,1.09,"ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer"
 0,8.9,gemischt,Buch,harmonics/att/harmonics_att_np208.txt,"La Goulette (Halq-al-Wadi), Tunisia",Tunisia,36.8071,10.3094,gemischt,1.2,-7,,,,0.86,"ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Simplified Harmonic Method"
-0,8.9,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Fresh Creek, Andros Island, Bahamas",Bahamas,24.7256,-77.7854,insel,2.1,-13,-27,-78,,0.86,
+0,8.9,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Fresh Creek (Andros Island), Bahamas",Bahamas,24.7256,-77.7854,insel,2.1,-13,-27,-78,,0.86,
 0,8.9,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_amtt.txt,"Moisie Bay, Québec, Canada",Canada,50.2,-66.0833,gemischt,1.2,-5,-24,172,179,0.98,"NOAA Tide Tables East Coast of N & S America (NOS/C&GS) 2020, Table 2 "
 0,8.9,gemischt,Messung,harmonics/utide/harmonics_utide_observations.txt,"Hadera (Coal Pier), Israel",Israel,32.47053,34.863057,offen,0.5,-25,-29,,,1.01,"SHELDA sub-hourly sea level dataset (IOC station hade), UTide analysis"
 0,8.9,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"La Unión, El Salvador",El Salvador,13.3394,-87.8309,insel,3.0,2,2,-16,-4,1.20,TICON-4 (GESLA-4 harmonic analysis)
@@ -3088,7 +3088,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,8.5,Tagestiden,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Western Shoal Beacon, South Australia, Australia",Australia,-33.1833,137.5333,offen,1.8,2,11,-73,-43,1.11,Derived from BOM tide predictions (reverse-engineered) with UTide harm
 0,8.4,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Bucklers Hard, England, United Kingdom",United Kingdom,50.8009,-1.4234,insel,4.1,-19,-15,-59,,1.08,Derived from tidetimes.co.uk HW/LW predictions with UTide
 0,8.4,gemischt,Buch,harmonics/att/harmonics_att_np203_scs.txt,"Teluk Lamala (Selat Peleng), Sulawesi Tengah, Indonesia",Indonesia,-0.897,123.1425,insel,1.1,-24,-12,-22,-72,0.89,"ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic"
-0,8.4,Tagestiden,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Abrahams Bay, Mayaguana Island, Bahamas",Bahamas,22.3641,-72.9714,gemischt,3.0,-10,,-109,,1.00,
+0,8.4,Tagestiden,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Abrahams Bay (Mayaguana Island), Bahamas",Bahamas,22.3641,-72.9714,gemischt,3.0,-10,,-109,,1.00,
 0,8.4,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Port Cardigan, Wales, United Kingdom",United Kingdom,52.1167,-4.6885,offen,2.0,18,30,,,0.94,Derived from tidetimes.co.uk HW/LW predictions with UTide
 0,8.4,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_eutt.txt,"Vila Nova de Milfontes, Portugal",Portugal,37.7222,-8.7822,gemischt,2.9,19,24,10,,0.93,"NOAA Tide Tables Europe & West Coast of Africa (NOS/C&GS) 2020, Table "
 0,8.4,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Tsuyazaki, Fukuoka, Japan",Japan,33.786,130.4543,gemischt,2.5,5,-0,25,24,1.02,JODC/JHD
@@ -3650,7 +3650,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,7.3,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Whaler Bay, British Columbia, Canada",Canada,48.887,-123.3251,insel,1.6,-26,-27,23,23,0.91,Derived from CHS tide predictions (reverse-engineered) with UTide harm
 0,7.3,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_amtt.txt,"Port Malmesbury (Kuiu Island), Alaska",Alaska,56.3,-134.2333,insel,0.0,-9,-5,9,6,0.85,"NOAA Tide Tables West Coast of N & S America (NOS/C&GS) 2020, Table 2 "
 0,7.3,gemischt,Messung,harmonics/classic/harmonics-dwf-20251228-free.txt,"Village Point (Lummi Island), Washington",USA,48.7167,-122.708,insel,1.9,-36,-41,8,-2,0.97,CO-OPS Metadata API
-0,7.3,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Nassau, New Providence Island, Bahamas",Bahamas,25.0799,-77.3483,gemischt,2.7,-12,-24,-81,,0.93,
+0,7.3,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Nassau (New Providence Island), Bahamas",Bahamas,25.0799,-77.3483,gemischt,2.7,-12,-24,-81,,0.93,
 0,7.3,gemischt,Altbestand,harmonics/classic/harmonics-1997-05-25_mod.txt,"Pebane (Rio Moniga), Mozambique",Mozambique,-17.2678,38.1351,gemischt,3.6,18,19,,48,1.02,
 0,7.3,gemischt,Messung,harmonics/utide/harmonics_utide_observations.txt,"Sittwe (Akyab), Myanmar",Myanmar,20.1405,92.9034,insel,0.9,14,3,24,,1.11,Derived from UHSLC hourly data with UTide harmonic analysis
 0,7.3,gemischt,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Gwatar Bay, Iran",Iran,25.071,61.4207,offen,1.4,27,18,11,14,0.98,"ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)"
@@ -3687,7 +3687,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,7.2,gemischt,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Sitrah (Bapco Causeway), Bahrain",Bahrain,26.1667,50.6667,offen,0.0,11,22,-4,12,0.89,"ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)"
 0,7.2,gemischt,Altbestand,harmonics/classic/harmonics-dwf-20100529-nonfree_mod.txt,"Vlieland haven, Netherlands",Netherlands,53.3,5.1,insel,0.0,15,22,-12,14,0.91,"Koos Doekes, Rijkswaterstaat RIKZ/ZDI"
 0,7.2,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"False Strait, Nunavut, Canada",Canada,71.983333,-95.166667,insel,1.9,24,21,16,11,1.01,Derived from CHS tide predictions (reverse-engineered) with UTide harm
-0,7.2,Tagestiden,Uebertragung,harmonics/noaa/harmonics_noaa_carib.txt,"Datum Bay, Acklins Island, Bahamas",Bahamas,22.1657,-74.292,offen,0.8,-7,,-60,,0.96,"NOAA CO-OPS Tide Predictions, Caribbean Islands"
+0,7.2,Tagestiden,Uebertragung,harmonics/noaa/harmonics_noaa_carib.txt,"Datum Bay (Acklins Island), Bahamas",Bahamas,22.1657,-74.292,offen,0.8,-7,,-60,,0.96,"NOAA CO-OPS Tide Predictions, Caribbean Islands"
 0,7.2,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Lagrange Bay, Western Australia, Australia",Australia,-18.698,121.7326,offen,3.4,-9,-26,-48,26,1.07,
 0,7.2,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Selvagem Grande, Madeira, Portugal",Portugal,30.1383,-15.8683,offen,0.6,19,17,16,,1.03,Derived from IH Tabela de Marés 2026 concordance on Funchal
 0,7.2,gemischt,Buch,harmonics/att/harmonics_att_np207.txt,"Ablation Lake, Antarctica",Antarctica,-70.8333,-68.4167,gemischt,3.0,12,-26,8,6,0.93,"ADMIRALTY Tide Tables Vol.7 (NP207), Part III Harmonic Constants"
@@ -3955,7 +3955,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,6.7,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Hamilton Island, Nunavut, Canada",Canada,74.191667,-99.16,insel,0.9,5,-28,38,,0.89,Derived from CHS tide predictions (reverse-engineered) with UTide harm
 0,6.7,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_big_srgi.txt,"Sunda kelapa, Jakarta, Indonesia",Indonesia,-6.12521,106.8095,gemischt,3.0,39,,-3,-26,0.92,"BIG (Badan Informasi Geospasial) SRGI tide gauge, harmonic constants f"
 0,6.7,Tagestiden,Messung,harmonics/classic/harmonics-dwf-20251228-free.txt,"Hyannis Port (Nantucket Sound), Massachusetts",USA,41.6317,-70.3,insel,3.5,4,,16,96,0.97,CO-OPS Metadata API
-0,6.7,Tagestiden,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Five Islands, Nova Scotia (2), Canada",Canada,45.3794,-64.1306,gemischt,1.4,-13,-4,-20,-35,0.96,
+0,6.7,Tagestiden,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Five Islands (2), Nova Scotia, Canada",Canada,45.3794,-64.1306,gemischt,1.4,-13,-4,-20,-35,0.96,
 0,6.7,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Xiamen (Gulangyu), Fujian, China",China,24.4496,118.0672,insel,1.8,7,10,-14,25,1.09,"CWA tide predictions, UTide analysis"
 0,6.7,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Tumbo Channel, British Columbia, Canada",Canada,48.7932,-123.1088,insel,1.0,-23,-23,24,25,0.93,Derived from CHS tide predictions (reverse-engineered) with UTide harm
 0,6.7,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Rodvig, Denmark",Denmark,55.2542,12.3728,insel,2.4,,,,,0.98,TICON-4 (GESLA-4 harmonic analysis)
@@ -4284,7 +4284,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,6.1,gemischt,Buch,harmonics/att/harmonics_att_np208.txt,"Girne (Kyrenia), Cyprus",Cyprus,35.3411,33.3346,offen,2.8,-5,6,,,0.97,"ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Simplified Harmonic Method"
 0,6.1,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Malahide, Ireland",Ireland,53.4527,-6.1503,offen,3.7,12,16,59,59,0.93,Derived from tidetimes.co.uk HW/LW predictions with UTide
 0,6.1,Tagestiden,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Ile Haute, Nova Scotia, Canada",Canada,45.254,-64.991,insel,1.6,-12,6,5,-31,1.00,Derived from CHS (tides.gc.ca) HW/LW predictions with UTide
-0,6.1,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_carib.txt,"Fresh Creek, Andros Island, Bahamas",Bahamas,24.7256,-77.7854,insel,2.1,-11,-28,-18,,0.95,"NOAA CO-OPS Tide Predictions, Caribbean Islands"
+0,6.1,gemischt,Uebertragung,harmonics/noaa/harmonics_noaa_carib.txt,"Fresh Creek (Andros Island), Bahamas",Bahamas,24.7256,-77.7854,insel,2.1,-11,-28,-18,,0.95,"NOAA CO-OPS Tide Predictions, Caribbean Islands"
 0,6.1,Tagestiden,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Nosy Longany, Madagascar",Madagascar,-15.3083,47.0811,gemischt,1.8,-6,-8,16,44,1.12,"ADMIRALTY Tide Tables Vol.3 (NP203), Part II Secondary Port Transfer"
 0,6.1,gemischt,Uebertragung,harmonics/att/harmonics_att_np202_secondary.txt,"Breidhdalsvik, Iceland",Iceland,64.7833,-14.0,insel,1.8,-0,-20,,,0.88,"ADMIRALTY Tide Tables Vol.2 (NP202), Part II Secondary Port Transfer"
 0,6.1,gemischt,Buch,harmonics/att/harmonics_att_np203_scs.txt,"Dao Cai Bau, Vietnam",Vietnam,21.1167,107.5,insel,1.9,-2,25,-35,-33,1.02,"ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic"
@@ -5428,7 +5428,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,4.4,gemischt,Buch,harmonics/att/harmonics_att_np203_scs.txt,"Iraan Bay, Palawan, Philippines",Philippines,9.0647,117.7039,offen,3.9,4,7,25,25,0.99,"ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic"
 0,4.4,Tagestiden,Uebertragung,harmonics/att/harmonics_att_np203_secondary.txt,"Bahrain Approach Buoy, Bahrain",Bahrain,26.3667,50.7833,offen,1.7,10,-1,71,-18,0.98,"ADMIRALTY Tide Tables Vol.3 (NP203), Table V (Part III)"
 0,4.4,Tagestiden,Buch,harmonics/att/harmonics_att_np203_scs.txt,"Tanjung Tuan (Cape Rachado), Malaysia",Malaysia,2.4088,101.8492,gemischt,2.0,1,5,46,49,0.99,"ADMIRALTY Tide Tables Vol.3 (NP203, Ausgabe 2002), Simplified Harmonic"
-0,4.4,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Waitangi, Chatham Island, New Zealand",New Zealand,-43.9463,-176.5612,insel,1.5,-6,,,,0.98,Derived from NIWA tide predictions (1y hourly) with UTide harmonic ana
+0,4.4,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Waitangi (Chatham Island), New Zealand",New Zealand,-43.9463,-176.5612,insel,1.5,-6,,,,0.98,Derived from NIWA tide predictions (1y hourly) with UTide harmonic ana
 0,4.4,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Saint Peter Port (Guernsey), Channel Islands",Channel Islands,49.4561,-2.5266,offen,2.3,-0,1,2,-5,1.10,Derived from SHOM tide predictions with UTide harmonic analysis
 0,4.4,gemischt,Altbestand,harmonics/classic/harmonics-1997-05-25_mod.txt,"Kuantan, Malaysia",Malaysia,3.8063,103.3423,gemischt,2.8,17,22,19,15,0.96,
 0,4.4,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Cosy Corner, Western Australia, Australia",Australia,-34.257,115.0279,offen,2.8,,,-15,-16,0.90,Derived from BOM tide predictions (reverse-engineered) with UTide harm
@@ -8726,7 +8726,7 @@ verdacht,fehler_prozent,fehlerart,art,datei,name,land,lat,lon,typ,fes_wasser_km,
 0,1.3,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Anheung-hang, South Korea",South Korea,36.6814,126.1342,insel,1.6,2,4,5,6,1.01,Derived from KHOA predictions (badatime.com) with UTide harmonic analy
 0,1.3,gemischt,Tafel-Fit,harmonics/utide/harmonics_utide_tidetables.txt,"Port-Vendres, France",France,42.52,3.1074,offen,1.6,2,,,,0.99,Derived from SHOM tide predictions with UTide harmonic analysis
 0,1.3,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Macquarie Island, Australia",Australia,-54.483,158.967,offen,1.8,0,-5,-9,-19,1.00,TICON-4 (GESLA-4 harmonic analysis)
-0,1.3,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Waitangi, Chatham Island, New Zealand",New Zealand,-43.9463,-176.5612,insel,1.5,0,,,,1.02,TICON-4 (GESLA-4 harmonic analysis)
+0,1.3,gemischt,Messung,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Waitangi (Chatham Island), New Zealand",New Zealand,-43.9463,-176.5612,insel,1.5,0,,,,1.02,TICON-4 (GESLA-4 harmonic analysis)
 0,1.3,gemischt,Messung,harmonics/utide/harmonics_utide_observations.txt,"Sipacate, Guatemala",Russia,13.915,-91.08,offen,2.2,3,-2,3,6,1.01,IOC Sea Level Monitoring gauge measurements with UTide
 0,1.3,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Tiromo (Miseura Wan), Nagasaki, Japan",Japan,34.3907,129.3849,insel,1.7,-1,-3,,,0.98,JODC/JHD
 0,1.3,gemischt,Altbestand,harmonics/classic/harmonics-2004-06-14_mod.txt,"Tsutsu (Tsushima), Nagasaki, Japan",Japan,34.1167,129.183,offen,2.4,-2,-7,11,-9,0.99,JODC/JHD
