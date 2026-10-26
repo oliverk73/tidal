@@ -63,6 +63,7 @@ POSITION = {
     'sue-island-warraber': ("Sue Island (Warraber), Queensland, Australia", -10.2042, 142.8222, 'CDS-Feed'),
     'townsville': ("Townsville, Queensland, Australia", -19.2518, 146.8304, 'CDS-Feed'),
     'urangan': ("Urangan, Queensland, Australia", -25.2962, 152.9105, 'CDS-Feed'),
+    'urangan-fairway-beacon': ("Urangan (Fairway Beacon), Queensland, Australia", -25.1333, 152.8167, 'Oliver (Karte)'),
     'yam-island-iama': ("Yam Island (Iama), Queensland, Australia", -9.8992, 142.7660, 'CDS-Feed'),
     'badu-island': 'Badu Island, Queensland, Australia',
     'booby-island': 'Booby Island, Queensland, Australia',
