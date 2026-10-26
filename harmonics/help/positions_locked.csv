@@ -29,7 +29,7 @@ fingerprint,file,name,lat,lon,provenance,orig_name,orig_lat,orig_lon,moved_m,fir
 921017ee4256318a50f8874570b21b86,harmonics/att/harmonics_att_np202.txt,"Pointe-à-Pierre, Trinidad and Tobago",10.3264,-61.4731,manual,,10.3167,-61.4667,1286,39157d9e 2026-10-21
 9307503646dade613fa1e7a1219397f3,harmonics/att/harmonics_att_np202.txt,"Carenage Bay, Trinidad and Tobago",10.6816,-61.5973,manual,,10.6833,-61.6,350,39157d9e 2026-10-21
 9ad765a4cb1a08ef28cda25e8628b6dd,harmonics/att/harmonics_att_np202.txt,"Guayamara Point, Trinidad and Tobago",10.7655,-60.9479,manual,"Guayamare Point, Trinidad and Tobago",10.7766,-60.9448,1280,39157d9e 2026-10-21
-a23b0e0fcb4562cc0fc1de13e5656ece,harmonics/att/harmonics_att_np202.txt,"Baracoa, Cuba",20.35,-74.5,source,,,,,39157d9e 2026-10-21
+a23b0e0fcb4562cc0fc1de13e5656ece,harmonics/att/harmonics_att_np202.txt,"Baracoa, Cuba",20.3517,-74.5013,manual,,20.35,-74.5,233,39157d9e 2026-10-21
 a451ba477cafa84c2bcfd9e486ff8750,harmonics/att/harmonics_att_np202.txt,"Scarborough, Tobago, Trinidad and Tobago",11.1804,-60.7363,source,,,,,39157d9e 2026-10-21
 a7d03455bcbb0621edf7ec50520097fb,harmonics/att/harmonics_att_np202.txt,"Bahía El Tablazo (Lago de Maracaibo), Venezuela",10.8833,-71.6167,source,,,,,39157d9e 2026-10-21
 b157e735b156a6268eb36de84dcf6851,harmonics/att/harmonics_att_np202.txt,"Toco, Trinidad and Tobago",10.8349,-60.9468,source,,,,,39157d9e 2026-10-21
@@ -54,22 +54,19 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 04c93761221db555aad278bf944d74cd,harmonics/att/harmonics_att_np202_secondary.txt,"Port Morant, Jamaica",17.8833,-76.3167,source,,,,,ad4600a5 2026-08-18
 063326ed1ea3e2df75749be1312d20f1,harmonics/att/harmonics_att_np202_secondary.txt,"Mayaguana Low Point (Start Point), Bahamas",22.3333,-73.05,source,,,,,ad4600a5 2026-08-18
 0674043709f0276773a390d0818df260,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Gremikha (Ostrovnoy), Murmansk Oblast, Russia",68.0667,39.5,manual,"Guba Gremikha, Russia",,,,ad4600a5 2026-08-18
+0a05af045604116b05271936993e0abb,harmonics/att/harmonics_att_np202_secondary.txt,"Fuglafjørður (Eysturoy), Faroe Islands",62.2418,-6.8123,ambiguous,,,,,
 0a533852b718fafc8b738dc5081d2a10,harmonics/att/harmonics_att_np202_secondary.txt,"Kårhamn, Norway",70.5464,23.1583,source,,,,,ad4600a5 2026-08-18
 0b62c322101187ad03c52b62c162f39a,harmonics/att/harmonics_att_np202_secondary.txt,"Breidhdalsvik, Iceland",64.7833,-14.0,source,,,,,ad4600a5 2026-08-18
 0b8d46f48f7d858680d150d77d74f07c,harmonics/att/harmonics_att_np202_secondary.txt,"Ostrov Dolgiy, Nenets Autonomous Okrug, Russia",69.2064,59.2072,manual,"Ostrov Dolgiy, Russia",69.2,59.1667,1750,ad4600a5 2026-08-18
 0d2d00ccd415a56e3a56bd8dc04d11bf,harmonics/att/harmonics_att_np202_secondary.txt,"Mehamn, Norway",71.0414,27.8428,source,,,,,ad4600a5 2026-08-18
 0dfab011d090788d4f83aa15e4fcfc34,harmonics/att/harmonics_att_np202_secondary.txt,"Hamnbukt, Norway",70.0933,25.0763,source,,,,,ad4600a5 2026-08-18
-0e49bbac2c7f12fb2e0a56caabb70a2c,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto Tanamo, Cuba",20.6833,-75.3333,source,,,,,ad4600a5 2026-08-18
-0efb29d9b1aaae0d1eb47ffac5d72c3c,harmonics/att/harmonics_att_np202_secondary.txt,"Bahía Nuevitas Entrance, Cuba",21.5667,-77.1,source,,,,,ad4600a5 2026-08-18
+0e49bbac2c7f12fb2e0a56caabb70a2c,harmonics/att/harmonics_att_np202_secondary.txt,"Bahia de Sagua de Tanamo (Punta Gorda), Cuba",20.6792,-75.3347,manual,"Puerto Tanamo, Cuba",20.6833,-75.3333,479,ad4600a5 2026-08-18
+0efb29d9b1aaae0d1eb47ffac5d72c3c,harmonics/att/harmonics_att_np202_secondary.txt,"Entrada de la Bahía de Nuevitas, Cuba",21.6023,-77.105,manual,"Bahía Nuevitas Entrance, Cuba",21.5667,-77.1,3992,ad4600a5 2026-08-18
 0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Korelinskaya, Murmansk Oblast, Russia",69.4167,33.4167,ambiguous,,,,,
 0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Bukhta Nasha (Guba Ura), Murmansk Oblast, Russia",69.382,32.9167,ambiguous,,,,,
 0f2b765e38c377d335425be6d766ea72,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Zapadnaya Litsa, Murmansk Oblast, Russia",69.4824,32.4974,ambiguous,,,,,
 0f4b460083cd0c1d6700d9f535f7ac5b,harmonics/att/harmonics_att_np202_secondary.txt,"Stykkishólmur, Iceland",65.0833,-22.7,source,,,,,ad4600a5 2026-08-18
 0f5dc629044921ead2a30437a152511f,harmonics/att/harmonics_att_np202_secondary.txt,"Long Island, Bahamas",23.0,-74.95,source,,,,,ad4600a5 2026-08-18
-0f8ff885c198289b1f210bddeed29a4a,harmonics/att/harmonics_att_np202_secondary.txt,"Risør, Norway",58.7184,9.2404,ambiguous,,,,,
-0f8ff885c198289b1f210bddeed29a4a,harmonics/att/harmonics_att_np202_secondary.txt,"Porsgrunn, Norway",59.1336,9.6302,ambiguous,,,,,
-0f8ff885c198289b1f210bddeed29a4a,harmonics/att/harmonics_att_np202_secondary.txt,"Larvik, Norway",59.0417,10.0447,ambiguous,,,,,
-0f8ff885c198289b1f210bddeed29a4a,harmonics/att/harmonics_att_np202_secondary.txt,"Sandjefjord, Norway",59.1254,10.2276,ambiguous,,,,,
 107a4417ecf3fcb746d13ccb23bc8b4b,harmonics/att/harmonics_att_np202_secondary.txt,"Strucklahnungshörn (Nordstrand), Germany",54.4977,8.807,manual,"Nordstrand, Strucklahnungshörn, Germany",,,,ad4600a5 2026-08-18
 10a77c5cb8eca0491ecd3efcdfd4d7f6,harmonics/att/harmonics_att_np202_secondary.txt,"Bolungarvik, Iceland",66.15,-23.25,source,,,,,ad4600a5 2026-08-18
 11e81b58d85739c08bfc1373973b598d,harmonics/att/harmonics_att_np202_secondary.txt,"Alftafjordhur, Iceland",66.0167,-23.0,source,,,,,ad4600a5 2026-08-18
@@ -81,7 +78,7 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 168a8123be03dffc80cb722815047af5,harmonics/att/harmonics_att_np202_secondary.txt,"Hunting Cay, Belize",16.1,-88.2667,source,,,,,ad4600a5 2026-08-18
 16bb8b5bfcc5afb720988aa2fdc6e617,harmonics/att/harmonics_att_np202_secondary.txt,"Stokkseyri, Iceland",63.8333,-21.0667,source,,,,,ad4600a5 2026-08-18
 16f08e23f7c055efde49a09bc1b8bb14,harmonics/att/harmonics_att_np202_secondary.txt,"Nesna, Norway",66.2007,13.011,source,,,,,ad4600a5 2026-08-18
-173cecb3abea2be44ec41755b15fcc05,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto Padre, Cuba",21.2,-76.6,source,,,,,ad4600a5 2026-08-18
+173cecb3abea2be44ec41755b15fcc05,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto Padre, Cuba",21.2016,-76.5981,manual,,21.2,-76.6,265,ad4600a5 2026-08-18
 177112b02eeb144e7cf1c61ca2291897,harmonics/att/harmonics_att_np202_secondary.txt,"Bíldudalur, Iceland",65.6833,-23.6,source,,,,,ad4600a5 2026-08-18
 18c3912242e9225e0a85e68c7a4eaaa1,harmonics/att/harmonics_att_np202_secondary.txt,"Grense Jakobselv, Norway",69.7912,30.7937,source,,,,,ad4600a5 2026-08-18
 198df6b6e3699836e1068f89a672c545,harmonics/att/harmonics_att_np202_secondary.txt,"Cape Farewell, Greenland",59.7667,-43.8833,source,,,,,ad4600a5 2026-08-18
@@ -111,7 +108,7 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 2e0845c69e394efa7e12cf73bf22dd27,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Zubovskaya, Murmansk Oblast, Russia",69.7833,32.6667,manual,"Guba Zubovskaya, Russia",,,,ad4600a5 2026-08-18
 2e4dc8674fe336ada7affc3ba9f20517,harmonics/att/harmonics_att_np202_secondary.txt,"Helligvær, Norway",67.4419,13.8952,source,,,,,ad4600a5 2026-08-18
 2e5fd64921d6749e46e777d5642dc805,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Teriberskaya, Murmansk Oblast, Russia",69.1817,35.1269,manual,"Guba Teriberskaya, Russia",69.1833,35.1333,309,ad4600a5 2026-08-18
-2f16d4e1aecdaf4651eb0d9a6f955bd2,harmonics/att/harmonics_att_np202_secondary.txt,"Escudo de Veragua, Panama",9.1167,-81.5667,source,,,,,ad4600a5 2026-08-18
+2f16d4e1aecdaf4651eb0d9a6f955bd2,harmonics/att/harmonics_att_np202_secondary.txt,"Isla Escudo de Veraguas, Panama",9.1051,-81.5666,manual,"Escudo de Veragua, Panama",9.1167,-81.5667,1290,ad4600a5 2026-08-18
 30996d7a0a1baedea245c7450a05fc91,harmonics/att/harmonics_att_np202_secondary.txt,"Heimaey, Iceland",63.45,-20.2167,source,,,,,ad4600a5 2026-08-18
 311e021738160be1eb0975551a93f2d0,harmonics/att/harmonics_att_np202_secondary.txt,"Grådyb, Denmark",55.4333,8.25,source,,,,,ad4600a5 2026-08-18
 31fbc745d697fecf54b5f9d36b1074ec,harmonics/att/harmonics_att_np202_secondary.txt,"Steinkjer, Norway",64.0118,11.4838,source,,,,,ad4600a5 2026-08-18
@@ -125,27 +122,27 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 35714e9047ca129b6d21ee1cb3178c75,harmonics/att/harmonics_att_np202_secondary.txt,"Florø, Norway",61.6012,5.0328,source,,,,,ad4600a5 2026-08-18
 35d01eda6bf1878f6c89880083791872,harmonics/att/harmonics_att_np202_secondary.txt,"Jorgen Bronlund Fjord, Greenland",82.1833,-30.5,source,,,,,ad4600a5 2026-08-18
 35d254cb4647593fd4efa33e3318ace2,harmonics/att/harmonics_att_np202_secondary.txt,"Hrísey, Iceland",65.9833,-18.3667,source,,,,,ad4600a5 2026-08-18
+36223af120922ce3881872be1d277925,harmonics/att/harmonics_att_np202_secondary.txt,"Halden, Norway",59.1173,11.3841,ambiguous,,,,,
 36a08ac3a179fc183e4103046243d8b4,harmonics/att/harmonics_att_np202_secondary.txt,"Blåvands Huk, Denmark",55.5575,8.0767,manual,,55.55,8.0833,932,ad4600a5 2026-08-18
 372fbe8c2b7175dec325d8751b7e9baa,harmonics/att/harmonics_att_np202_secondary.txt,"Les Saintes, Guadeloupe",15.8667,-61.6,source,,,,,ad4600a5 2026-08-18
-383e5b36ec48c54a1f6b577265d0ce39,harmonics/att/harmonics_att_np202_secondary.txt,"Cayo Paredón Grande, Cuba",22.4833,-78.1667,source,,,,,ad4600a5 2026-08-18
+383e5b36ec48c54a1f6b577265d0ce39,harmonics/att/harmonics_att_np202_secondary.txt,"Cayo Paredón Grande, Cuba",22.4816,-78.1679,manual,,22.4833,-78.1667,226,ad4600a5 2026-08-18
 390a80b206ead322a861925407fb221b,harmonics/att/harmonics_att_np202_secondary.txt,"Kongsmoen, Norway",64.8868,12.4375,source,,,,,ad4600a5 2026-08-18
 3955b81d5e9e2f45e87f98f4f3bc5da7,harmonics/att/harmonics_att_np202_secondary.txt,"Bannerman Town, Bahamas",24.6333,-76.1833,source,,,,,ad4600a5 2026-08-18
 39805c825cf4ff83081baaa26f46e83c,harmonics/att/harmonics_att_np202_secondary.txt,"Saint-Valery-sur-Somme, France",50.1902,1.627,source,,,,,ad4600a5 2026-08-18
 3ab3f6dbc4cb196e33142fa5eee34081,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Porchnikha, Murmansk Oblast, Russia",69.0793,36.2587,manual,"Guba Porchnikha, Russia",69.0833,36.2667,547,ad4600a5 2026-08-18
 3bcfab4217e54cb1470575100b07faba,harmonics/att/harmonics_att_np202_secondary.txt,"Blomvåg, Norway",60.5296,4.8767,source,,,,,ad4600a5 2026-08-18
 3c6bf3a91e6d2ac4a6f068e115bc6b74,harmonics/att/harmonics_att_np202_secondary.txt,"Maria Muschbukhta, Jan Mayen",71.0,-8.5,manual,"Jan Mayen: Maria Muschbukhta, Jan Mayen",,,,ad4600a5 2026-08-18
-3c8b6a6de489c6d852ad3620f08a97c8,harmonics/att/harmonics_att_np202_secondary.txt,"Banco Serranilla, Colombia",15.8,-79.85,source,,,,,ad4600a5 2026-08-18
 3d0cd6d40b3e780d50988710f142bc40,harmonics/att/harmonics_att_np202_secondary.txt,"Neuharlingersiel, Germany",53.7034,7.7047,source,,,,,ad4600a5 2026-08-18
 3d8632b42a89afab875256267a8e6ac8,harmonics/att/harmonics_att_np202_secondary.txt,"Ostrov Paskanets, Arkhangelsk Oblast, Russia",63.8879,37.2903,manual,"Ostrov Paskanets, Russia",63.8833,37.2833,616,ad4600a5 2026-08-18
 3e695ddd167993a7b244ba19c3a18592,harmonics/att/harmonics_att_np202_secondary.txt,"Kamenka (Reka Mezen'), Arkhangelsk Oblast, Russia",65.8839,44.1316,manual,"Kamenka, Russia",65.8833,44.1333,102,ad4600a5 2026-08-18
 3f8d955a46254bb8ee8133adef1fcd9a,harmonics/att/harmonics_att_np202_secondary.txt,"Tobago Cays, Saint Vincent and the Grenadines",12.6333,-61.35,source,,,,,dd72c10b 2026-09-11
-4029c0869393411f3be826c72c18d8f7,harmonics/att/harmonics_att_np202_secondary.txt,"Los Arroyos, Cuba",22.3667,-84.3833,source,,,,,ad4600a5 2026-08-18
+4029c0869393411f3be826c72c18d8f7,harmonics/att/harmonics_att_np202_secondary.txt,"Arroyos de Mantua, Cuba",22.3531,-84.3805,manual,"Los Arroyos, Cuba",22.3667,-84.3833,1539,ad4600a5 2026-08-18
 40320d121a27488d5d2037d6c41c5547,harmonics/att/harmonics_att_np202_secondary.txt,"Juist, Germany",53.6704,6.9962,source,,,,,ad4600a5 2026-08-18
 418354a8bd80a1e808052940f4850f81,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Letniy Orlov, Arkhangelsk Oblast, Russia",64.9213,36.4381,manual,"Mys Letniy Orlov, Russia",64.9333,36.45,1447,ad4600a5 2026-08-18
 4267b6c198a5cbd08e83e73d767499f2,harmonics/att/harmonics_att_np202_secondary.txt,"Île-de-Batz, France",48.7416,-4.0142,source,,,,,ad4600a5 2026-08-18
-4422d05db6a9c2c7fc95dd32bb897186,harmonics/att/harmonics_att_np202_secondary.txt,"Bluefields Bluff, Nicaragua",12.0,-83.6667,source,,,,,ad4600a5 2026-08-18
+4422d05db6a9c2c7fc95dd32bb897186,harmonics/att/harmonics_att_np202_secondary.txt,"El Bluff (Bluefields), Nicaragua",11.998,-83.6926,manual,"Bluefields Bluff, Nicaragua",12.0,-83.6667,2826,ad4600a5 2026-08-18
 44f489ecf433a8844f3594387c37d279,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Kanin Nos, Nenets Autonomous Okrug, Russia",68.6575,43.2678,manual,"Mys Kanin Nos, Russia",68.6667,43.2833,1200,ad4600a5 2026-08-18
-450a7affa449ee462b561ccb7060f1a3,harmonics/att/harmonics_att_np202_secondary.txt,"Cienfuegos, Cuba",22.1333,-80.45,manual,,22.15,-80.45,1857,ad4600a5 2026-08-18
+450a7affa449ee462b561ccb7060f1a3,harmonics/att/harmonics_att_np202_secondary.txt,"Cienfuegos, Cuba",22.1401,-80.4557,manual,,22.15,-80.45,1248,ad4600a5 2026-08-18
 453a8c26bb2502578e14f4b21b012421,harmonics/att/harmonics_att_np202_secondary.txt,"Sunndalsøra, Norway",62.6833,8.55,ambiguous,,,,,
 453a8c26bb2502578e14f4b21b012421,harmonics/att/harmonics_att_np202_secondary.txt,"Molde, Norway",62.7333,7.1667,ambiguous,,,,,
 4559e00d044dad531682de933339b571,harmonics/att/harmonics_att_np202_secondary.txt,"Khabarovo, Nenets Autonomous Okrug, Russia",69.6636,60.3881,manual,"Khabarovo, Russia",69.65,60.4167,1873,ad4600a5 2026-08-18
@@ -166,27 +163,27 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 4f38a32165fbc4f8421ec276a285b6cf,harmonics/att/harmonics_att_np202_secondary.txt,"Tysse (Samnangerfjorden), Norway",60.3772,5.7601,source,,,,,ad4600a5 2026-08-18
 4f7736c4f1d1ae390ad8dd29f906a827,harmonics/att/harmonics_att_np202_secondary.txt,"Kvalvagen, Svalbard",77.5,18.2,source,,,,,ad4600a5 2026-08-18
 4f98d4c3a6f1dcfc6de0b9e882f1144e,harmonics/att/harmonics_att_np202_secondary.txt,"Lærdalsøyri, Norway",61.1,7.4667,source,,,,,ad4600a5 2026-08-18
-516802b34d9238eba9b447892461f746,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto Pilon, Cuba",19.9,-77.3167,source,,,,,ad4600a5 2026-08-18
+516802b34d9238eba9b447892461f746,harmonics/att/harmonics_att_np202_secondary.txt,"Pilón, Cuba",19.9013,-77.3202,manual,"Puerto Pilon, Cuba",19.9,-77.3167,393,ad4600a5 2026-08-18
 517332edc654463c4b7737514223c66f,harmonics/att/harmonics_att_np202_secondary.txt,"Laukvik, Norway",69.5604,17.8994,ambiguous,,,,,
 517332edc654463c4b7737514223c66f,harmonics/att/harmonics_att_np202_secondary.txt,"Skrollsvika, Norway",69.065,16.8158,ambiguous,,,,,
 51a2ac1f3e68d84ec4cf622d6e39b63f,harmonics/att/harmonics_att_np202_secondary.txt,"Kvalrossbukta, Jan Mayen",70.9667,-8.6833,source,,,,,ad4600a5 2026-08-18
 5441e2e6bd18619c44ab788272502095,harmonics/att/harmonics_att_np202_secondary.txt,"Grindavík, Iceland",63.8333,-22.4333,source,,,,,ad4600a5 2026-08-18
 56008372cd7daeee7edddd93bb53b4ab,harmonics/att/harmonics_att_np202_secondary.txt,"Tranøy, Norway",68.1812,15.673,source,,,,,ad4600a5 2026-08-18
-568fe83d54d159cc9cd0690231e0eadd,harmonics/att/harmonics_att_np202_secondary.txt,"Bahía Espíritu Santo, Quintana Roo, Mexico",19.3333,-87.5,ambiguous,,,,,
-568fe83d54d159cc9cd0690231e0eadd,harmonics/att/harmonics_att_np202_secondary.txt,"Cabo Catoche, Quintana Roo, Mexico",21.6,-87.0833,ambiguous,,,,,
 58303f591822083302705d1cc90e538f,harmonics/att/harmonics_att_np202_secondary.txt,"Egersund, Norway",58.4491,5.9928,source,,,,,ad4600a5 2026-08-18
 5915c017d100a5ab9145bde61bbbc02f,harmonics/att/harmonics_att_np202_secondary.txt,"Ifjorden, Norway",70.4697,27.0945,source,,,,,ad4600a5 2026-08-18
 5946f8229e62a9e9bfc6ac824a8859ea,harmonics/att/harmonics_att_np202_secondary.txt,"Geiranger, Norway",62.1023,7.2046,source,,,,,ad4600a5 2026-08-18
 59b399428aacb3afbf2e292ac4a6e7d1,harmonics/att/harmonics_att_np202_secondary.txt,"Åndalsnes, Norway",62.5686,7.6891,source,,,,,ad4600a5 2026-08-18
 5a7c4c3a8786504352ddaa69945a34fe,harmonics/att/harmonics_att_np202_secondary.txt,"Stokksundet, Norway",64.0401,10.0616,source,,,,,ad4600a5 2026-08-18
 5a907354a10152920f86c8f7cd0c1717,harmonics/att/harmonics_att_np202_secondary.txt,"English Harbour, Antigua and Barbuda",17.0167,-61.7667,source,,,,,ad4600a5 2026-08-18
-5d15cfbc7127fec3024b7a13c6ff0722,harmonics/att/harmonics_att_np202_secondary.txt,"Bahía Honda, Cuba",22.9333,-83.1833,source,,,,,ad4600a5 2026-08-18
-61de5083c069a1c6c8808480a5e903a8,harmonics/att/harmonics_att_np202_secondary.txt,"Pearl Cays, Nicaragua",12.4167,-83.4167,source,,,,,ad4600a5 2026-08-18
+5d15cfbc7127fec3024b7a13c6ff0722,harmonics/att/harmonics_att_np202_secondary.txt,"Bahía Honda, Cuba",22.9322,-83.1753,manual,,22.9333,-83.1833,828,ad4600a5 2026-08-18
+61de5083c069a1c6c8808480a5e903a8,harmonics/att/harmonics_att_np202_secondary.txt,"Cayos Perlas (Pearl Cays), Nicaragua",12.4641,-83.3807,manual,"Pearl Cays, Nicaragua",12.4167,-83.4167,6562,ad4600a5 2026-08-18
 64c71df7868fc816bc10827f28494883,harmonics/att/harmonics_att_np202_secondary.txt,"Norheimsund, Norway",60.3719,6.1472,source,,,,,ad4600a5 2026-08-18
 6553a58879dbd51913b29a4e11513feb,harmonics/att/harmonics_att_np202_secondary.txt,"Rif, Iceland",64.9167,-23.8,source,,,,,ad4600a5 2026-08-18
+658ecbdeae06fa4ee4754542c688575f,harmonics/att/harmonics_att_np202_secondary.txt,"Moss, Norway",59.437,10.6592,ambiguous,,,,,
 65bc6750ad1ebba004547a11d19b6539,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Bol'shoy Gorodetskiy, Murmansk Oblast, Russia",67.7134,40.9397,manual,"Mys Bol'shoy Gorodetskiy, Russia",67.7167,40.9167,1037,ad4600a5 2026-08-18
-66ea49b1c449298911d872f3b5098ac0,harmonics/att/harmonics_att_np202_secondary.txt,"Isabela, Cuba",22.9333,-80.0,source,,,,,ad4600a5 2026-08-18
+66ea49b1c449298911d872f3b5098ac0,harmonics/att/harmonics_att_np202_secondary.txt,"Isabela de Sagua, Cuba",22.9387,-80.0095,manual,"Isabela, Cuba",22.9333,-80.0,1143,ad4600a5 2026-08-18
 670dd8f11e51838e4a6db3a96c525202,harmonics/att/harmonics_att_np202_secondary.txt,"Badderen, Norway",69.8456,22.0196,source,,,,,ad4600a5 2026-08-18
+68aa1fe18454e8b7d0078a2a402f4245,harmonics/att/harmonics_att_np202_secondary.txt,"Coxen Hole Pier, Honduras",16.3139,-86.5402,ambiguous,,,,,
 68e1691956e164d120ea23f2f9000977,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Nekhvatova (Novaya Zemlya), Arkhangelsk Oblast, Russia",71.2658,53.4958,manual,"Guba Nekhvatova, Russia",71.2667,53.5,180,ad4600a5 2026-08-18
 698d148863ab13c543cf4c340263c998,harmonics/att/harmonics_att_np202_secondary.txt,"Nåra, Norway",61.0191,4.7412,source,,,,,ad4600a5 2026-08-18
 698e4328fe9d64fe821da2a779bfd9b2,harmonics/att/harmonics_att_np202_secondary.txt,"Forøysæter, Norway",68.6253,15.7757,source,,,,,ad4600a5 2026-08-18
@@ -221,7 +218,7 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 77f98ecb5a74a59fa5c4ca32f68786f5,harmonics/att/harmonics_att_np202_secondary.txt,"Little Pendulum Island, Greenland",74.6667,-18.5,source,,,,,ad4600a5 2026-08-18
 786bbaf9cc1b37aac0ac1db891150402,harmonics/att/harmonics_att_np202_secondary.txt,"Holmiabukta, Svalbard",79.8333,11.55,source,,,,,ad4600a5 2026-08-18
 7ae5d267a679d152a1c36da9c4c42d9c,harmonics/att/harmonics_att_np202_secondary.txt,"Kilstraumen, Norway",60.798,4.9413,source,,,,,ad4600a5 2026-08-18
-7c6d5374faab34dfedb510534e660362,harmonics/att/harmonics_att_np202_secondary.txt,"Greytown, Nicaragua",10.9167,-83.7,source,,,,,ad4600a5 2026-08-18
+7c6d5374faab34dfedb510534e660362,harmonics/att/harmonics_att_np202_secondary.txt,"Greytown, Nicaragua",10.946,-83.709,manual,,10.9167,-83.7,3403,ad4600a5 2026-08-18
 7c6e7d01710367f54680b4f6eb457143,harmonics/att/harmonics_att_np202_secondary.txt,"Vatlestraumen (Bjorøytunnelen), Norway",60.3359,5.1851,source,,,,,ad4600a5 2026-08-18
 7d6c63cbe4db92f471e74090d09a295c,harmonics/att/harmonics_att_np202_secondary.txt,"Cape Borgen, Greenland",75.4333,-18.05,source,,,,,ad4600a5 2026-08-18
 7dcb1fa86a4a8761f0b63b2a53eefac5,harmonics/att/harmonics_att_np202_secondary.txt,"Mørsvikbotn, Norway",67.6957,15.8361,source,,,,,ad4600a5 2026-08-18
@@ -230,7 +227,8 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 80502e44ee7b2e236dfef199b950c964,harmonics/att/harmonics_att_np202_secondary.txt,"Varnek (Ostrov Vaygach), Nenets Autonomous Okrug, Russia",69.7072,60.0651,manual,"Bukhta Varneka, Russia",69.7,60.0667,803,ad4600a5 2026-08-18
 808b8e2cd56249d94459dd2e7ef45136,harmonics/att/harmonics_att_np202_secondary.txt,"Gibostad, Norway",69.354,18.0814,source,,,,,ad4600a5 2026-08-18
 80d67900a2b2ab6e710f4d49e63b5547,harmonics/att/harmonics_att_np202_secondary.txt,"Flatey, Iceland",65.3833,-22.9,source,,,,,ad4600a5 2026-08-18
-81273a38b1e4de8123199244d602bfaa,harmonics/att/harmonics_att_np202_secondary.txt,"Nuevitas, Cuba",21.5667,-77.2333,source,,,,,ad4600a5 2026-08-18
+81273a38b1e4de8123199244d602bfaa,harmonics/att/harmonics_att_np202_secondary.txt,"Nuevitas, Cuba",21.5643,-77.2395,manual,,21.5667,-77.2333,694,ad4600a5 2026-08-18
+824764e82a50c284c8597bc2c415c961,harmonics/att/harmonics_att_np202_secondary.txt,"Cabo Catoche, Quintana Roo, Mexico",21.6,-87.0833,ambiguous,,,,,
 8332096c9266613fe19732160303bdae,harmonics/att/harmonics_att_np202_secondary.txt,"Reykanes, Iceland",65.4167,-22.2,source,,,,,ad4600a5 2026-08-18
 83c97156d388998e1841e7eab744301f,harmonics/att/harmonics_att_np202_secondary.txt,"Stamsund, Norway",68.123,13.8484,source,,,,,ad4600a5 2026-08-18
 83dfe93a55889f301486174153e56e92,harmonics/att/harmonics_att_np202_secondary.txt,"Walker Cay, Bahamas",27.2667,-78.4,source,,,,,ad4600a5 2026-08-18
@@ -248,25 +246,26 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 8a3f017abf29ec8323f6d65f7ffc598f,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Yuzhnyy (Ostrov Mud'yugskiy), Arkhangelsk Oblast, Russia",64.8491,40.2801,manual,"Mys Yuzhnyy, Russia",64.85,40.2833,181,ad4600a5 2026-08-18
 8b1a91b33be21bd755744bf48fc703a2,harmonics/att/harmonics_att_np202_secondary.txt,"Bakkafjordhur, Iceland",66.0167,-14.8833,source,,,,,ad4600a5 2026-08-18
 8b64f6343ce8fa355f6ebd338b4d8d2e,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Konushin, Nenets Autonomous Okrug, Russia",67.1969,43.7762,manual,"Mys Konushin, Russia",67.1833,43.7833,1543,ad4600a5 2026-08-18
+8c21b9ea7e89072958f10d615cf468c4,harmonics/att/harmonics_att_np202_secondary.txt,"Grimstad, Norway",58.3391,8.5965,ambiguous,,,,,
 8e2e919ce73c53b179e98dd6c6a2199f,harmonics/att/harmonics_att_np202_secondary.txt,"Risøyhamn, Norway",68.9678,15.6412,source,,,,,ad4600a5 2026-08-18
-8e938bd4c9eae9cd03599bbc985fb502,harmonics/att/harmonics_att_np202_secondary.txt,"Port Royal (Roatán), Honduras",16.4,-86.3,manual,"Port Royal, Honduras",,,,ad4600a5 2026-08-18
+8e938bd4c9eae9cd03599bbc985fb502,harmonics/att/harmonics_att_np202_secondary.txt,"Port Royal (Roatán), Honduras",16.4048,-86.3059,manual,"Port Royal, Honduras",16.4,-86.3,825,ad4600a5 2026-08-18
+8efb6b9ce781fdc74935856955731505,harmonics/att/harmonics_att_np202_secondary.txt,"Risør, Norway",58.7184,9.2404,ambiguous,,,,,
+8efb6b9ce781fdc74935856955731505,harmonics/att/harmonics_att_np202_secondary.txt,"Porsgrunn, Norway",59.1336,9.6302,ambiguous,,,,,
+8efb6b9ce781fdc74935856955731505,harmonics/att/harmonics_att_np202_secondary.txt,"Larvik, Norway",59.0417,10.0447,ambiguous,,,,,
+8efb6b9ce781fdc74935856955731505,harmonics/att/harmonics_att_np202_secondary.txt,"Sandjefjord, Norway",59.1254,10.2276,ambiguous,,,,,
 8f0e75d77fc15910577081e673b29925,harmonics/att/harmonics_att_np202_secondary.txt,"Finnkroken, Norway",69.8341,19.4361,source,,,,,ad4600a5 2026-08-18
-911b1d5882ec425013cd683cc90e1b6c,harmonics/att/harmonics_att_np202_secondary.txt,"Kristiansand, Norway",58.1425,7.9869,ambiguous,,,,,
-911b1d5882ec425013cd683cc90e1b6c,harmonics/att/harmonics_att_np202_secondary.txt,"Grimstad, Norway",58.3391,8.5965,ambiguous,,,,,
-911e236a059ca1ee4916dc92727c22ab,harmonics/att/harmonics_att_np202_secondary.txt,"Isla del Maíz Grande (Great Corn Island), Nicaragua",12.1667,-83.05,manual,"Great Corn Island, Nicaragua",,,,ad4600a5 2026-08-18
+911e236a059ca1ee4916dc92727c22ab,harmonics/att/harmonics_att_np202_secondary.txt,"Isla del Maíz Grande (Great Corn Island), Nicaragua",12.1754,-83.0648,manual,"Great Corn Island, Nicaragua",12.1667,-83.05,1877,ad4600a5 2026-08-18
 91488964ee36e43dbe9602c985c23f76,harmonics/att/harmonics_att_np202_secondary.txt,"Onega, Arkhangelsk Oblast, Russia",63.9027,38.0943,manual,"Onega, Russia",63.9667,38.0333,7714,ad4600a5 2026-08-18
 91d26cc21900d66e670f658cff60e8c5,harmonics/att/harmonics_att_np202_secondary.txt,"Selva, Norway",63.6159,9.7208,source,,,,,ad4600a5 2026-08-18
 91d9b8455a4c4e889dd8d36659e3850b,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Intsy, Arkhangelsk Oblast, Russia",65.9855,40.7445,manual,"Mys Insty, Russia",65.9833,40.75,349,ad4600a5 2026-08-18
 9210fd5b064446a08096364a01be0c68,harmonics/att/harmonics_att_np202_secondary.txt,"Risavika (Tananger), Norway",58.9208,5.5834,source,,,,,ad4600a5 2026-08-18
 9292c17fd66c7e0bbf7faa7159eec717,harmonics/att/harmonics_att_np202_secondary.txt,"Flatey (Skjálfanda), Iceland",66.15,-17.8333,source,,,,,ad4600a5 2026-08-18
 935ea81ae8bc2ec38cb914f0b3e28bfc,harmonics/att/harmonics_att_np202_secondary.txt,"Kongsfjorden, Norway",70.7163,29.3168,source,,,,,ad4600a5 2026-08-18
-93940a180fa968e6740abba28483d784,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto del Mariel, Cuba",23.0,-82.75,source,,,,,ad4600a5 2026-08-18
 939686c7bbb889f4b548686ddba31803,harmonics/att/harmonics_att_np202_secondary.txt,"Sredniy Reyd (Guba Keret'), Republic of Karelia, Russia",66.2919,33.6464,manual,"Ostrov Sredniy Guba Keret, Russia",66.3,33.65,915,ad4600a5 2026-08-18
 94452871959ba4d62210147f43c58903,harmonics/att/harmonics_att_np202_secondary.txt,"Recherchefjorden, Svalbard",77.5,14.65,source,,,,,ad4600a5 2026-08-18
 9567bda207b3826c364631d01b12f593,harmonics/att/harmonics_att_np202_secondary.txt,"Stranda, Norway",62.3092,6.9496,source,,,,,ad4600a5 2026-08-18
 95fc5d3e821899d3a3f2403aa472ebc9,harmonics/att/harmonics_att_np202_secondary.txt,"Magdalenefjorden, Svalbard",79.55,11.2167,source,,,,,ad4600a5 2026-08-18
 9634ea54aa554a14463d9eb4953fc83c,harmonics/att/harmonics_att_np202_secondary.txt,"Skjerjehamn, Norway",60.9438,4.9535,source,,,,,ad4600a5 2026-08-18
-969f86db6d7db43a9c542f95767e5615,harmonics/att/harmonics_att_np202_secondary.txt,"Sveagruva, Svalbard",77.8833,16.7333,source,,,,,ad4600a5 2026-08-18
 970adfd53cf20ae71285c13ebf001996,harmonics/att/harmonics_att_np202_secondary.txt,"Tennes (Balsfjord), Norway",69.3032,19.3404,source,,,,,ad4600a5 2026-08-18
 973ef27d7567d02fc6041b1f2783c335,harmonics/att/harmonics_att_np202_secondary.txt,"Zaliv Litke (Novaya Zemlya), Arkhangelsk Oblast, Russia",72.4333,55.5,manual,"Zaliv Litke, Russia",,,,ad4600a5 2026-08-18
 982e9b4d2a59a660b5b65b577185fd10,harmonics/att/harmonics_att_np202_secondary.txt,"Vikøyri, Norway",61.0891,6.5803,source,,,,,ad4600a5 2026-08-18
@@ -278,12 +277,10 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 99b7542302569ae4290e583719287971,harmonics/att/harmonics_att_np202_secondary.txt,"Lukksund, Norway",60.0483,5.7065,ambiguous,,,,,
 99b7542302569ae4290e583719287971,harmonics/att/harmonics_att_np202_secondary.txt,"Ølen, Norway",59.6059,5.8046,ambiguous,,,,,
 99edc0854922039a607d2afbf7a9324f,harmonics/att/harmonics_att_np202_secondary.txt,"Sudhureyri, Iceland",66.1333,-23.5333,source,,,,,ad4600a5 2026-08-18
-9a19b5246bb0c4d38bad2ceb00acc2b4,harmonics/att/harmonics_att_np202_secondary.txt,"Carrie Bow Cay, Belize",16.8,-88.0833,source,,,,,ad4600a5 2026-08-18
+9a19b5246bb0c4d38bad2ceb00acc2b4,harmonics/att/harmonics_att_np202_secondary.txt,"Carrie Bow Cay, Belize",16.8018,-88.0818,manual,,16.8,-88.0833,256,ad4600a5 2026-08-18
 9a90ccb54f98807b0f8486753d5bca0f,harmonics/att/harmonics_att_np202_secondary.txt,"Lillefjorden, Norway",70.6974,24.6544,source,,,,,ad4600a5 2026-08-18
 9ba31d291dba53d19ded50015ef7181e,harmonics/att/harmonics_att_np202_secondary.txt,"Hvammsvík, Iceland",64.35,-21.5833,source,,,,,ad4600a5 2026-08-18
 9be5bdc0d05d5c527a6b08eb9ce22339,harmonics/att/harmonics_att_np202_secondary.txt,"Olden (Faleidfjorden), Norway",61.8364,6.8053,source,,,,,ad4600a5 2026-08-18
-9c4a2c977303568b6a087a21391f71e2,harmonics/att/harmonics_att_np202_secondary.txt,"Oyndarfjørður (Eysturoy), Faroe Islands",62.2742,-6.852,ambiguous,,,,,
-9c4a2c977303568b6a087a21391f71e2,harmonics/att/harmonics_att_np202_secondary.txt,"Fuglafjørður (Eysturoy), Faroe Islands",62.2418,-6.8123,ambiguous,,,,,
 9cfe1131bd634530aa1e0379813c4681,harmonics/att/harmonics_att_np202_secondary.txt,"Budhareyri, Iceland",65.0333,-14.2167,source,,,,,ad4600a5 2026-08-18
 9d5fd6aa7586a88567705255b302a81c,harmonics/att/harmonics_att_np202_secondary.txt,"Nordhfjardharfloi: Nordhfjordhur (Nes), Iceland",65.15,-13.7,source,,,,,ad4600a5 2026-08-18
 9df2a1a349fde877d7c164013d7f6776,harmonics/att/harmonics_att_np202_secondary.txt,"Hopen, Svalbard",76.5,25.0667,source,,,,,ad4600a5 2026-08-18
@@ -291,7 +288,7 @@ fcdee8ec488a9954f27b69f119668b42,harmonics/att/harmonics_att_np202.txt,"Cumaná,
 a014b0b15fe85c5798cfbcb78c66ff10,harmonics/att/harmonics_att_np202_secondary.txt,"Zaliv Pukhovyy (Novaya Zemlya), Arkhangelsk Oblast, Russia",72.65,52.7,manual,"Zaliv Pukhovyy, Russia",,,,ad4600a5 2026-08-18
 a07398ccb9a2d7c05119cef9540ccaa3,harmonics/att/harmonics_att_np202_secondary.txt,"Pertominsk (Unskaya Guba), Arkhangelsk Oblast, Russia",64.793,38.4017,manual,"Unskaya Guba, Russia",64.7667,38.4167,3010,ad4600a5 2026-08-18
 a212048269c37cb5176c3108bc87367f,harmonics/att/harmonics_att_np202_secondary.txt,"Støtt, Norway",66.9262,13.4342,source,,,,,ad4600a5 2026-08-18
-a241b41410363209bf706be5df2b8173,harmonics/att/harmonics_att_np202_secondary.txt,"Antilla, Cuba",20.8333,-75.7333,source,,,,,ad4600a5 2026-08-18
+a241b41410363209bf706be5df2b8173,harmonics/att/harmonics_att_np202_secondary.txt,"Antilla, Cuba",20.8223,-75.7442,manual,,20.8333,-75.7333,1667,ad4600a5 2026-08-18
 a2cced7d193278b9a485ffd93aa4008e,harmonics/att/harmonics_att_np202_secondary.txt,"Ostrov Malaya Korepalka, Arkhangelsk Oblast, Russia",64.0162,36.5829,manual,"Ostrov Mal Korepalka, Russia",64.0167,36.5833,59,ad4600a5 2026-08-18
 a33e1a7fe6e9767e9a50f7a6fae9c00d,harmonics/att/harmonics_att_np202_secondary.txt,"Surnadalsøra, Norway",62.9704,8.6589,source,,,,,ad4600a5 2026-08-18
 a3d83481982e783b04929bc3353e3870,harmonics/att/harmonics_att_np202_secondary.txt,"Corniguel (Quimper), France",47.9715,-4.1071,source,,,,,ad4600a5 2026-08-18
@@ -314,7 +311,6 @@ aec57ab9b0beadb598e4390b837880db,harmonics/att/harmonics_att_np202_secondary.txt
 aeddd2a0afa88cd3f3566edf684b213a,harmonics/att/harmonics_att_np202_secondary.txt,"Sortland, Norway",68.6986,15.4207,ambiguous,,,,,
 aeddd2a0afa88cd3f3566edf684b213a,harmonics/att/harmonics_att_np202_secondary.txt,"Eggum, Norway",68.3112,13.6795,ambiguous,,,,,
 af3b4d36692566f1a1581cd8872d9913,harmonics/att/harmonics_att_np202_secondary.txt,"Indre Kvarøy, Norway",66.4875,12.9666,source,,,,,ad4600a5 2026-08-18
-af94dc23228236ede693b654d1b9f361,harmonics/att/harmonics_att_np202_secondary.txt,"Coxen Hole Pier, Honduras",16.3167,-86.5333,source,,,,,ad4600a5 2026-08-18
 af985636e4b5d899472d85e452ad2452,harmonics/att/harmonics_att_np202_secondary.txt,"Havøysund, Norway",70.9942,24.6679,source,,,,,ad4600a5 2026-08-18
 b065032bcb2312503321184a4a37456c,harmonics/att/harmonics_att_np202_secondary.txt,"Stokmarknes, Norway",68.5675,14.9146,source,,,,,ad4600a5 2026-08-18
 b0b673e843512dc85dcdd8c1be606dd5,harmonics/att/harmonics_att_np202_secondary.txt,"Bergsfjord, Norway",70.2519,21.7845,source,,,,,ad4600a5 2026-08-18
@@ -356,18 +352,19 @@ c809aa0242229a17e2bd7ac2198cc650,harmonics/att/harmonics_att_np202_secondary.txt
 c82d7efd7ed9805691c9caa80cd739e6,harmonics/att/harmonics_att_np202_secondary.txt,"Levanger, Norway",63.7496,11.2989,source,,,,,ad4600a5 2026-08-18
 cb5d9d3a431bfa18f8d3cce34fff6be6,harmonics/att/harmonics_att_np202_secondary.txt,"Rutledal (Rutletangen), Norway",61.0701,5.1844,ambiguous,,,,,
 cb5d9d3a431bfa18f8d3cce34fff6be6,harmonics/att/harmonics_att_np202_secondary.txt,"Vadheim, Norway",61.2084,5.822,ambiguous,,,,,
+cc0868d43a6ebf0d6a0d3bf9cb581a70,harmonics/att/harmonics_att_np202_secondary.txt,"Bahía Espíritu Santo, Quintana Roo, Mexico",19.3333,-87.5,ambiguous,,,,,
 cc7ce29a86870f97cad65d4e7e404f6e,harmonics/att/harmonics_att_np202_secondary.txt,"Rystraumenv(Skavberget), Norway",69.5604,18.7416,source,,,,,ad4600a5 2026-08-18
+ce17884ca697e8fd68c8b754dd57c171,harmonics/att/harmonics_att_np202_secondary.txt,"Hidra (Rasvag), Norway",58.2131,6.5811,ambiguous,,,,,
+ce17884ca697e8fd68c8b754dd57c171,harmonics/att/harmonics_att_np202_secondary.txt,"Kristiansand, Norway",58.1425,7.9869,ambiguous,,,,,
 ce8d31949bc10804d5ce45798fc71b1a,harmonics/att/harmonics_att_np202_secondary.txt,"Kjølsdalen (Nordfjorden), Norway",61.916,5.6293,source,,,,,ad4600a5 2026-08-18
 ceb423cddf01bf8c882f888d48147b93,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Mityushikha (Novaya Zemlya), Arkhangelsk Oblast, Russia",73.65,54.8,manual,"Guba Mityushikha, Russia",,,,ad4600a5 2026-08-18
-cfe3bf6e1c426f3375d71b6563a2eb72,harmonics/att/harmonics_att_np202_secondary.txt,"Placencia, Belize",16.5167,-88.3667,source,,,,,ad4600a5 2026-08-18
+cfe3bf6e1c426f3375d71b6563a2eb72,harmonics/att/harmonics_att_np202_secondary.txt,"Placencia, Belize",16.5129,-88.3645,manual,,16.5167,-88.3667,483,ad4600a5 2026-08-18
 d020ce6bd9d4495899cfc721ce2d7951,harmonics/att/harmonics_att_np202_secondary.txt,"Reka Pechora (Bar), Nenets Autonomous Okrug, Russia",68.3833,54.4333,manual,"Reka Pechora, Russia",,,,ad4600a5 2026-08-18
 d0ac5b7e22d8407c6ed83f19207ce874,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Kerets, Arkhangelsk Oblast, Russia",65.3362,39.7218,manual,"Mys Kerets, Russia",65.3333,39.7333,624,ad4600a5 2026-08-18
 d11b76188f85b31caaafedd3b7ce4210,harmonics/att/harmonics_att_np202_secondary.txt,"Wide Opening, Bahamas",24.4167,-76.6833,source,,,,,ad4600a5 2026-08-18
 d1a05429dc95685b851c6a5f2aedb750,harmonics/att/harmonics_att_np202_secondary.txt,"Raufarhöfn, Iceland",66.45,-15.9333,source,,,,,ad4600a5 2026-08-18
 d1c7fdef0320283a2d1f11788efc93a2,harmonics/att/harmonics_att_np202_secondary.txt,"Hafnarfjordur, Iceland",64.0667,-21.95,source,,,,,ad4600a5 2026-08-18
 d1e69c7b7e5cf216c4befd82b53839bd,harmonics/att/harmonics_att_np202_secondary.txt,"Honningsvåg (Stattvagen), Norway",62.1947,5.2032,source,,,,,ad4600a5 2026-08-18
-d2f1132c1d24e2674252fdc45239adfd,harmonics/att/harmonics_att_np202_secondary.txt,"Moss, Norway",59.437,10.6592,ambiguous,,,,,
-d2f1132c1d24e2674252fdc45239adfd,harmonics/att/harmonics_att_np202_secondary.txt,"Halden, Norway",59.1173,11.3841,ambiguous,,,,,
 d33af94bf430239c5e45ea4422fc7fe2,harmonics/att/harmonics_att_np202_secondary.txt,"Anegada, British Virgin Islands",18.7212,-64.3807,source,,,,,ad4600a5 2026-08-18
 d34f027c9d6f63ecb2af8412ce384b6e,harmonics/att/harmonics_att_np202_secondary.txt,"Solovetskiy Reyd (Ostrov Solovetskiy), Arkhangelsk Oblast, Russia",65.0167,35.7,manual,"Ostrov Solovetskiy (Solovetskiy), Russia",,,,ad4600a5 2026-08-18
 d3e8183dff705c1dae1ac7311aec3fc7,harmonics/att/harmonics_att_np202_secondary.txt,"Grønfjorden, Svalbard",78.0667,14.25,source,,,,,ad4600a5 2026-08-18
@@ -378,16 +375,18 @@ d9852a3c6602f0f37a0a8cd28c085851,harmonics/att/harmonics_att_np202_secondary.txt
 d9e4250ce20acfe9fbb5aa6f39945e69,harmonics/att/harmonics_att_np202_secondary.txt,"Russenes (Olderfjord), Norway",70.4857,25.0753,source,,,,,ad4600a5 2026-08-18
 d9edcccd187785d1d0a84834851b9dbd,harmonics/att/harmonics_att_np202_secondary.txt,"Riohacha, Colombia",11.5561,-72.909,manual,"Riohacha, Venezuela",11.55,-72.9167,1079,ad4600a5 2026-08-18
 da85b1ae7e4e90814318da65e439dea5,harmonics/att/harmonics_att_np202_secondary.txt,"Arngerdhareyri, Iceland",65.9,-22.4,source,,,,,ad4600a5 2026-08-18
-da98bae6ea1afa55c1495e2879af9c0a,harmonics/att/harmonics_att_np202_secondary.txt,"Bahía de Cabañas, Cuba",22.9833,-82.9833,source,,,,,ad4600a5 2026-08-18
 db7e0780fba214a58fbc466239ea5849,harmonics/att/harmonics_att_np202_secondary.txt,"Vinjeøra, Norway",63.206,8.9813,source,,,,,ad4600a5 2026-08-18
 dc87b7f5a391c7eb19054763641a9c81,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Bazisnyy, Murmansk Oblast, Russia",69.0163,33.0592,manual,"Mys Bezlavnyy, Russia",69.0167,33.0667,302,ad4600a5 2026-08-18
 df3e1074629e3495efe1144c4c707ab9,harmonics/att/harmonics_att_np202_secondary.txt,"St. David's Island, Bermuda",32.3667,-64.65,source,,,,,ad4600a5 2026-08-18
 dfa8dbb48aff00d89416c6b602ca3689,harmonics/att/harmonics_att_np202_secondary.txt,"Bakkagerdhi, Iceland",65.5167,-13.8167,source,,,,,ad4600a5 2026-08-18
-e0c36ce961598ed9d58506eb59a469df,harmonics/att/harmonics_att_np202_secondary.txt,"Río Dulce Entrance, Guatemala",15.8333,-88.75,source,,,,,ad4600a5 2026-08-18
+e0c36ce961598ed9d58506eb59a469df,harmonics/att/harmonics_att_np202_secondary.txt,"Livingston (Río Dulce), Guatemala",15.8248,-88.7478,manual,"Río Dulce Entrance, Guatemala",15.8333,-88.75,974,ad4600a5 2026-08-18
 e1ddb9285e6d234e44e8c781bd099a2c,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Bol'shaya Korabel'naya, Murmansk Oblast, Russia",69.6842,33.1039,manual,"Guba Bol'shoy Korabel'naya, Russia",69.6833,33.1,181,ad4600a5 2026-08-18
 e25639038d5ccc484d67c11f2df1500b,harmonics/att/harmonics_att_np202_secondary.txt,"Nordskot, Norway",67.8351,14.7883,manual,Nordskot Norway,,,,ad4600a5 2026-08-18
+e2c9a814350d0b8f693c6d8131bb388f,harmonics/att/harmonics_att_np202_secondary.txt,"Bahía de Cabañas, Cuba",22.983,-82.9831,ambiguous,,,,,
+e2c9a814350d0b8f693c6d8131bb388f,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto del Mariel, Cuba",23.0,-82.75,ambiguous,,,,,
+e4a4d48dbdaf260149cc38d9bd0cffcf,harmonics/att/harmonics_att_np202_secondary.txt,"Sveagruva, Svalbard",77.8833,16.7333,ambiguous,,,,,
 e68e462c75e435e47336b2ca3139dc49,harmonics/att/harmonics_att_np202_secondary.txt,"Hommelstø, Norway",65.4067,12.5534,source,,,,,ad4600a5 2026-08-18
-e7504f24481810a528bf8079200e61bd,harmonics/att/harmonics_att_np202_secondary.txt,"Cabo Gracias a Dios, Honduras",15.0,-83.167,manual,"Cabo Gracias a Dios, Nicaragua",15.0,-83.1833,1751,ad4600a5 2026-08-18
+e7504f24481810a528bf8079200e61bd,harmonics/att/harmonics_att_np202_secondary.txt,"Cabo Gracias a Dios, Honduras",15.007,-83.1293,manual,"Cabo Gracias a Dios, Nicaragua",15.0,-83.1833,5852,ad4600a5 2026-08-18
 e7536cca53b62404f939d85509d6caa8,harmonics/att/harmonics_att_np202_secondary.txt,"Finnlandsneset, Norway",69.0939,17.6219,ambiguous,,,,,
 e7536cca53b62404f939d85509d6caa8,harmonics/att/harmonics_att_np202_secondary.txt,"Soløy, Norway",68.7823,17.7806,ambiguous,,,,,
 e77271b845d11abf564f7682f203e108,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Vayda, Murmansk Oblast, Russia",69.9333,32.0,manual,"Guba Vayda, Russia",,,,ad4600a5 2026-08-18
@@ -402,24 +401,23 @@ ebefcdb79292006f9206937b4fa3984e,harmonics/att/harmonics_att_np202_secondary.txt
 ecde774871ce2d8beaff448c63e2379c,harmonics/att/harmonics_att_np202_secondary.txt,"Flateyri, Iceland",66.0333,-23.5167,source,,,,,ad4600a5 2026-08-18
 ed03980a8934275bec39683d7a87f2a0,harmonics/att/harmonics_att_np202_secondary.txt,"Leybucht (Leyhörn), Germany",53.5375,7.0386,manual,"Leybucht, Leyhorn, Germany",,,,ad4600a5 2026-08-18
 ed0d62b2e096f9c8cc3173546d4ef54e,harmonics/att/harmonics_att_np202_secondary.txt,"Kap Morris Jesup, Greenland",83.65,-33.8333,source,,,,,ad4600a5 2026-08-18
-ed98caa864c99b018eb2e168aa56d05e,harmonics/att/harmonics_att_np202_secondary.txt,"Blower Rock, Jamaica",17.05,-77.5333,source,,,,,ad4600a5 2026-08-18
+ed98caa864c99b018eb2e168aa56d05e,harmonics/att/harmonics_att_np202_secondary.txt,"Blower Rock, Jamaica",17.0505,-77.51,manual,,17.05,-77.5333,2478,ad4600a5 2026-08-18
 edb84aeaff54a6853bf4a016a711fc15,harmonics/att/harmonics_att_np202_secondary.txt,"Brønnøysund, Norway",65.474,12.2081,source,,,,,ad4600a5 2026-08-18
 edb97d2d8b3593dadd0549193862e918,harmonics/att/harmonics_att_np202_secondary.txt,"Kap Holbæk, Greenland",80.6667,-23.5,source,,,,,ad4600a5 2026-08-18
 ee4bef6aceeb4eaa1a750b6fff868b50,harmonics/att/harmonics_att_np202_secondary.txt,"Brjánslækur, Iceland",65.5333,-23.1833,source,,,,,ad4600a5 2026-08-18
-ef4a51194ef385d1dcb973697dd67182,harmonics/att/harmonics_att_np202_secondary.txt,"Old Providence, Colombia",13.3333,-81.3833,source,,,,,ad4600a5 2026-08-18
+ef4a51194ef385d1dcb973697dd67182,harmonics/att/harmonics_att_np202_secondary.txt,"Providencia (Old Providence), Colombia",13.3318,-81.391,manual,"Old Providence, Colombia",13.3333,-81.3833,850,ad4600a5 2026-08-18
 ef69758d6bae9ec119e2289c2ab9ccb4,harmonics/att/harmonics_att_np202_secondary.txt,"Bjørnsund, Norway",62.8868,6.8105,source,,,,,ad4600a5 2026-08-18
 f024ce58c8001e63c7cfb53b23033ed1,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Podpakhta, Murmansk Oblast, Russia",69.15,35.9333,manual,"Guba Podpakhta, Russia",,,,ad4600a5 2026-08-18
 f088f6272d8ebf1783926c3575eb1037,harmonics/att/harmonics_att_np202_secondary.txt,"Bukhta Ozerko, Murmansk Oblast, Russia",69.7311,32.1435,manual,"Bukhta Ozerko, Russia",69.7333,32.15,350,ad4600a5 2026-08-18
 f0b109924152d8662df00d4d5f9c87fa,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Orlov-Terskiy Tonkiy, Murmansk Oblast, Russia",67.2162,41.3178,manual,"Mys Orlov-Terskiy Tonkiy, Russia",67.2,41.3333,1921,ad4600a5 2026-08-18
-f2a863f241770ad8d7682cc8ac9f906b,harmonics/att/harmonics_att_np202_secondary.txt,"Isla de Guanaja, Honduras",16.445,-85.915,manual,,16.4833,-85.9,4549,ad4600a5 2026-08-18
+f2a863f241770ad8d7682cc8ac9f906b,harmonics/att/harmonics_att_np202_secondary.txt,"Isla de Guanaja, Honduras",16.4425,-85.9034,manual,,16.4833,-85.9,4551,ad4600a5 2026-08-18
 f2bcb4a5ebe6a2d6b2bf6156879d6c6e,harmonics/att/harmonics_att_np202_secondary.txt,"Lyngseidet, Norway",69.577,20.2253,source,,,,,ad4600a5 2026-08-18
-f2ecec29dd31fdd6698e2e45b80a96e9,harmonics/att/harmonics_att_np202_secondary.txt,"Hidra (Rasvag), Norway",58.2131,6.5811,source,,,,,ad4600a5 2026-08-18
 f34ca7e449f9ed10805856a569ad38bd,harmonics/att/harmonics_att_np202_secondary.txt,"Berlevåg, Norway",70.8589,29.0995,source,,,,,ad4600a5 2026-08-18
 f3a856d5e65a43aa67bfdea5a3e146c1,harmonics/att/harmonics_att_np202_secondary.txt,"Mys Velikiy (Severomorsk), Murmansk Oblast, Russia",69.0846,33.2785,manual,"Mys Velikiy, Russia",69.0833,33.2833,239,ad4600a5 2026-08-18
 f3d13a1a14212188cebe2f7c911565f3,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto El Roque, Venezuela",11.9447,-66.6748,manual,,11.9333,-66.6667,1544,ad4600a5 2026-08-18
 f4e641a343eaa6c8527562074cc54e2c,harmonics/att/harmonics_att_np202_secondary.txt,"Flåm (Aurlandsfjorden), Norway",60.863,7.117,source,,,,,ad4600a5 2026-08-18
 f581e2f970da9ffa8fbb58ad7d41347c,harmonics/att/harmonics_att_np202_secondary.txt,"Stamneshella, Norway",60.6641,5.7469,source,,,,,ad4600a5 2026-08-18
-f5b93716cd9faf6fc567b84bcf7ff92f,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto Cabezas, Nicaragua",14.0422,-83.3819,manual,,14.0167,-83.3833,2839,ad4600a5 2026-08-18
+f5b93716cd9faf6fc567b84bcf7ff92f,harmonics/att/harmonics_att_np202_secondary.txt,"Puerto Cabezas, Nicaragua",14.0175,-83.3821,manual,,14.0167,-83.3833,157,ad4600a5 2026-08-18
 f5e8ae7e622a0b5a0e899de2b4af926c,harmonics/att/harmonics_att_np202_secondary.txt,"Kelanes (Aursfjorden), Norway",69.2721,18.6968,source,,,,,ad4600a5 2026-08-18
 f61d410b231422c7c592dab21302bec6,harmonics/att/harmonics_att_np202_secondary.txt,"Hanstholm, Denmark",57.1203,8.5961,source,,,,,ad4600a5 2026-08-18
 f6d50f530fe25cda548a85b063696563,harmonics/att/harmonics_att_np202_secondary.txt,"Linnenplate, Germany",54.2333,8.7,source,,,,,ad4600a5 2026-08-18
@@ -437,6 +435,7 @@ fc46fb514b2c1f30304a299db9505119,harmonics/att/harmonics_att_np202_secondary.txt
 fd27192d292942078c436ee02a174d1e,harmonics/att/harmonics_att_np202_secondary.txt,"Guba Savikha, Murmansk Oblast, Russia",68.1842,39.1143,manual,"Guba Savikha, Russia",68.1833,39.1167,141,ad4600a5 2026-08-18
 fd6cd7806df1bdabd133553eb2ec5ca4,harmonics/att/harmonics_att_np202_secondary.txt,"Grímsey, Iceland",66.5333,-18.0167,source,,,,,ad4600a5 2026-08-18
 fd7664e52a08e8d6d362dda2c8682d3e,harmonics/att/harmonics_att_np202_secondary.txt,"Great Stirrup Cay, Bahamas",25.8167,-77.9167,source,,,,,ad4600a5 2026-08-18
+fdbc4a78850a83d23a09112a7a3ed099,harmonics/att/harmonics_att_np202_secondary.txt,"Oyndarfjørður (Eysturoy), Faroe Islands",62.2742,-6.852,ambiguous,,,,,
 fea7dba137172329663eec1ef8d0089a,harmonics/att/harmonics_att_np202_secondary.txt,"Mosjøen, Norway",65.8506,13.1914,source,,,,,ad4600a5 2026-08-18
 031ce344379cc41ae2634b3329966dfd,harmonics/att/harmonics_att_np203.txt,"Karwar, Karnataka, India",14.7984,74.1116,source,,,,,39157d9e 2026-10-21
 04d8c7f10b8c1a562490445ebf7bacec,harmonics/att/harmonics_att_np203.txt,"Al Hallaniyah, Oman",17.5244,55.9834,source,,,,,39157d9e 2026-10-21
@@ -2483,7 +2482,7 @@ ff19cc678eb9d31fd8134a42bfe7526e,harmonics/classic/harmonics-1997-05-25_mod.txt,
 181ebd93d782120da2ed75a6f5165626,harmonics/classic/harmonics-2004-06-14_mod.txt,"Skagway (Taiya Inlet), Alaska",59.45,-135.325,manual,"Skagway, Alaska",,,,87be3e0e 2026-03-25
 1822a332a5b632ade4f1a3e15857cfcc,harmonics/classic/harmonics-2004-06-14_mod.txt,"Zamami, Okinawa, Japan",26.2263,127.3016,manual,,26.2167,127.3,1079,87be3e0e 2026-03-25
 189e5bfed4e61315ffbb8af684ee1526,harmonics/classic/harmonics-2004-06-14_mod.txt,"New York, New York",40.7,-74.015,source,,,,,87be3e0e 2026-03-25
-190e451677b4c7b6c6370379bc18f657,harmonics/classic/harmonics-2004-06-14_mod.txt,"Santa Rosalia, Baja California Sur, Mexico",27.3385,-112.2614,manual,,27.3167,-112.25,2673,87be3e0e 2026-03-25
+190e451677b4c7b6c6370379bc18f657,harmonics/classic/harmonics-2004-06-14_mod.txt,"Santa Rosalia, Baja California Sur, Mexico",27.3375,-112.2622,manual,,27.3167,-112.25,2608,87be3e0e 2026-03-25
 196856a7fcf764e28a998fd742d77269,harmonics/classic/harmonics-2004-06-14_mod.txt,"Reveley Island, Western Australia, Australia",-14.3535,127.8099,source,,,,,39157d9e 2026-10-21
 19deb1e53246d1b8af922fa54e3646ca,harmonics/classic/harmonics-2004-06-14_mod.txt,"Piney Point (St. Johns River), Florida",30.2283,-81.6633,manual,"Piney Point, St. Johns River, Florida (2)",,,,87be3e0e 2026-03-25
 19ebaf32eddc27b183ab934bbe76550c,harmonics/classic/harmonics-2004-06-14_mod.txt,"Passaic (Passaic River), New Jersey",40.8483,-74.12,manual,"Passaic, Passaic River, New Jersey",,,,87be3e0e 2026-03-25
@@ -3598,7 +3597,7 @@ eea17d59133b70ad6493421da77499e6,harmonics/classic/harmonics-2004-06-14_mod.txt,
 eeb806c89feac83aa68f3994a9161ad1,harmonics/classic/harmonics-2004-06-14_mod.txt,"Kodai, Nagasaki, Japan",33.0667,129.75,source,,,,,87be3e0e 2026-03-25
 eee438a7fdf6ae14187bd8f67a7b122a,harmonics/classic/harmonics-2004-06-14_mod.txt,"Denton (Choptank River), Maryland",38.8833,-75.8333,manual,"Denton, Choptank River, Maryland",,,,87be3e0e 2026-03-25
 ef06db2bdf1cf04c5794c456635cac42,harmonics/classic/harmonics-2004-06-14_mod.txt,"Pohnpei Harbor (Caroline Islands), Micronesia",6.9693,158.211,manual,"Ponape Harbor, Caroline Islands",6.98,158.22,1550,87be3e0e 2026-03-25
-ef65ff5677087d6d571cb81c1c568319,harmonics/classic/harmonics-2004-06-14_mod.txt,"Belize City, Belize",17.5,-88.183,manual,,17.5,-88.1833,32,87be3e0e 2026-03-25
+ef65ff5677087d6d571cb81c1c568319,harmonics/classic/harmonics-2004-06-14_mod.txt,"Belize City, Belize",17.4935,-88.1793,manual,,17.5,-88.1833,838,87be3e0e 2026-03-25
 ef6deb0c1b24980e8ec52798005fbc0f,harmonics/classic/harmonics-2004-06-14_mod.txt,"Tozaki, Kagoshima, Japan",31.662,130.3032,manual,"Tosaki, Kagosima, Japan",31.65,130.3,1368,87be3e0e 2026-03-25
 ef7148b11e804ce92c2c5f340a136c78,harmonics/classic/harmonics-2004-06-14_mod.txt,"Kawana, Shizuoka, Japan",34.9531,139.1338,manual,"Kawana, Sizuoka, Japan",34.95,139.133,352,87be3e0e 2026-03-25
 ef8688994eb76b23ece25db1ed9d4d05,harmonics/classic/harmonics-2004-06-14_mod.txt,"Miami Harbor Entrance, Florida",25.7683,-80.1317,source,,,,,87be3e0e 2026-03-25
@@ -8354,30 +8353,29 @@ fccfa5d7bcdd923039bc5fd3818762a5,harmonics/noaa/harmonics_noaa_amtt.txt,"Nismeni
 fdb0fc070b48ae2dc2ba8ba285e4f130,harmonics/noaa/harmonics_noaa_amtt.txt,"Kukak (Kukak Bay), Alaska",58.3333,-154.1167,manual,"Kukak, Kukak Bay, Alaska",,,,0ac4263d 2026-07-02
 fe6369a8030fcd19b9739fe40b49805b,harmonics/noaa/harmonics_noaa_amtt.txt,"Wingham Island (Controller Bay), Alaska",60.05,-144.4,manual,"Wingham Island, Controller Bay, Alaska",,,,0ac4263d 2026-07-02
 ff66a2ac73e6f1022c3d8366538dc3fa,harmonics/noaa/harmonics_noaa_amtt.txt,"Leaf Bay (Ungava Bay), Québec, Canada",58.9167,-69.0,manual,"Leaf Bay, Ungava Bay, Québec, Canada",,,,c295bd68 2026-09-14
-0cfea42cc88e5dd8513e79c2a46b1553,harmonics/noaa/harmonics_noaa_carib.txt,"Cárdenas, Cuba",23.0667,-81.2,source,,,,,85c9122d 2026-07-02
-2992d04a0b16d111c3e258059814a9ee,harmonics/noaa/harmonics_noaa_carib.txt,"Carapachibey, Cuba",21.45,-82.9167,manual,"Carapachibey, Isla de la Juventud, Cuba",,,,85c9122d 2026-07-02
+0cfea42cc88e5dd8513e79c2a46b1553,harmonics/noaa/harmonics_noaa_carib.txt,"Cárdenas, Cuba",23.051,-81.1978,manual,,23.0667,-81.2,1760,85c9122d 2026-07-02
+2992d04a0b16d111c3e258059814a9ee,harmonics/noaa/harmonics_noaa_carib.txt,"Carapachibey (Isla de la Juventud), Cuba",21.4434,-82.8991,manual,"Carapachibey, Isla de la Juventud, Cuba",21.45,-82.9167,1964,85c9122d 2026-07-02
 300ca17c89b600f2bd039c1ad1912b12,harmonics/noaa/harmonics_noaa_carib.txt,"Ireland Island (Great Sound), Bermuda",32.3224,-64.8342,manual,,32.3167,-64.8333,639,85c9122d 2026-07-02
-30a416f17f0dbc00df81ee90c4480426,harmonics/noaa/harmonics_noaa_carib.txt,"Casilda, Cuba",21.75,-79.9833,source,,,,,85c9122d 2026-07-02
+30a416f17f0dbc00df81ee90c4480426,harmonics/noaa/harmonics_noaa_carib.txt,"Casilda, Cuba",21.7529,-79.9915,manual,,21.75,-79.9833,906,85c9122d 2026-07-02
 3279ea54677fc1a456eccaa703b8ca3d,harmonics/noaa/harmonics_noaa_carib.txt,"Rivière du Massacre / Río Dajabón (Entrance), Haiti",19.7019,-71.7589,manual,"Rivière du Massacre (Entrance), Haiti",19.7167,-71.7667,1837,85c9122d 2026-07-02
-32cb872398355938ea2992d2edd5eab3,harmonics/noaa/harmonics_noaa_carib.txt,"Cabo San Antonio, Cuba",21.8667,-84.9667,source,,,,,85c9122d 2026-07-02
-3a84c62edb1afb74967639c173e60b9f,harmonics/noaa/harmonics_noaa_carib.txt,"George Town, Grand Cayman, Cayman Islands",19.3333,-81.3333,source,,,,,85c9122d 2026-07-02
+32cb872398355938ea2992d2edd5eab3,harmonics/noaa/harmonics_noaa_carib.txt,"Cabo de San Antonio (Faro Roncali), Cuba",21.867,-84.9518,manual,"Cabo San Antonio, Cuba",21.8667,-84.9667,1538,85c9122d 2026-07-02
+3a84c62edb1afb74967639c173e60b9f,harmonics/noaa/harmonics_noaa_carib.txt,"George Town, Grand Cayman, Cayman Islands",19.295,-81.383,manual,,19.3333,-81.3333,6733,85c9122d 2026-07-02
 406599e1cbbcd0a1a1221d12928f04ca,harmonics/noaa/harmonics_noaa_carib.txt,"Sánchez (Bahía de Samaná), Dominican Republic",19.2167,-69.6,source,,,,,85c9122d 2026-07-02
-473355c897eaafed155524ea30c14dc4,harmonics/noaa/harmonics_noaa_carib.txt,"Bahía de Levisa (Entrance), Cuba",20.75,-75.4667,source,,,,,85c9122d 2026-07-02
-4799b052b96a016a531ffb7df8adc82c,harmonics/noaa/harmonics_noaa_carib.txt,"Bahía de Nuevitas (Entrance), Cuba",21.6333,-77.1167,source,,,,,85c9122d 2026-07-02
+473355c897eaafed155524ea30c14dc4,harmonics/noaa/harmonics_noaa_carib.txt,"Bahía de Levisa (Entrada), Cuba",20.7374,-75.4722,manual,"Bahía de Levisa (Entrance), Cuba",20.75,-75.4667,1513,85c9122d 2026-07-02
 4ae7e03bf83f0313688164d64ba56309,harmonics/noaa/harmonics_noaa_carib.txt,"Vieux Fort Bay, Saint Lucia",13.7299,-60.9663,manual,,13.7333,-60.9667,381,85c9122d 2026-07-02
 4c5a0b724774ab39a5fbf14ba3a5f03f,harmonics/noaa/harmonics_noaa_carib.txt,"St. Ann's Bay, Jamaica",18.4167,-77.2333,source,,,,,85c9122d 2026-07-02
-62030acf2b6cbba46c7e016983ed7105,harmonics/noaa/harmonics_noaa_carib.txt,"Santiago de Cuba, Cuba",19.9833,-75.8667,source,,,,,85c9122d 2026-07-02
+62030acf2b6cbba46c7e016983ed7105,harmonics/noaa/harmonics_noaa_carib.txt,"Santiago de Cuba, Cuba",20.0192,-75.8383,manual,,19.9833,-75.8667,4974,85c9122d 2026-07-02
 64921bee4e5eedcc0975463fdccda318,harmonics/noaa/harmonics_noaa_carib.txt,"Arroyo, Puerto Rico",17.9653,-66.0683,manual,,17.9667,-66.0667,230,85c9122d 2026-07-02
 6de029ce2ef9f4743cbdc91fa253b23b,harmonics/noaa/harmonics_noaa_carib.txt,"Playa Cortada, Puerto Rico",17.9809,-66.4518,manual,,17.9833,-66.45,328,85c9122d 2026-07-02
 77e632416f5cb2b7de665e51032b796c,harmonics/noaa/harmonics_noaa_carib.txt,"San Salvador (Watling Island), Bahamas",24.0578,-74.5379,manual,,24.05,-74.55,1504,85c9122d 2026-07-02
 81158c245a8b1b397c438d50495c9a64,harmonics/noaa/harmonics_noaa_carib.txt,"Montego Bay, Jamaica",18.4682,-77.9259,manual,,18.4667,-77.9167,985,85c9122d 2026-07-02
-855bd6f62ab1c1b1e67d0a0ad282d775,harmonics/noaa/harmonics_noaa_carib.txt,"Punta Pasacaballos, Cuba",22.0719,-80.4489,manual,,22.0667,-80.45,589,85c9122d 2026-07-02
+855bd6f62ab1c1b1e67d0a0ad282d775,harmonics/noaa/harmonics_noaa_carib.txt,"Punta Pasacaballos (Jagua), Cuba",22.0623,-80.4614,manual,"Punta Pasacaballos, Cuba",22.0667,-80.45,1273,85c9122d 2026-07-02
 a4c48df24d3b060f3777285de2308373,harmonics/noaa/harmonics_noaa_carib.txt,"Datum Bay, Acklins Island, Bahamas",22.1657,-74.292,manual,,22.1667,-74.3,831,85c9122d 2026-07-02
-b11b52bbfb6042e5dd04199d3f338a24,harmonics/noaa/harmonics_noaa_carib.txt,"La Coloma, Cuba",22.2333,-83.5667,source,,,,,85c9122d 2026-07-02
-ceb39f4e8e2766d69db2ba8117976a2f,harmonics/noaa/harmonics_noaa_carib.txt,"Manzanillo, Cuba",20.3333,-77.1333,manual,"Manzanillo (Golfo de Guacanayabo), Cuba",20.35,-77.1167,2538,85c9122d 2026-07-02
+b11b52bbfb6042e5dd04199d3f338a24,harmonics/noaa/harmonics_noaa_carib.txt,"La Coloma, Cuba",22.2376,-83.5719,manual,,22.2333,-83.5667,718,85c9122d 2026-07-02
+ceb39f4e8e2766d69db2ba8117976a2f,harmonics/noaa/harmonics_noaa_carib.txt,"Manzanillo, Cuba",20.3419,-77.1402,manual,"Manzanillo (Golfo de Guacanayabo), Cuba",20.35,-77.1167,2610,85c9122d 2026-07-02
 d4627e44fb1458d575efd0b6af2806fa,harmonics/noaa/harmonics_noaa_carib.txt,"South Negril Point, Jamaica",18.3,-78.4,source,,,,,85c9122d 2026-07-02
 dada8f2429825c297d9e31018bacc5b5,harmonics/noaa/harmonics_noaa_carib.txt,"Santa Barbara, Dominican Republic",19.2,-69.3333,manual,"Santa Bárbara de Samaná, Dominican Republic",,,,85c9122d 2026-07-02
-f2760d9d7c3a4e93ac6c8e9468febe24,harmonics/noaa/harmonics_noaa_carib.txt,"Puerto Padre, Cuba",21.2302,-76.5483,manual,,21.2333,-76.55,387,85c9122d 2026-07-02
+f2760d9d7c3a4e93ac6c8e9468febe24,harmonics/noaa/harmonics_noaa_carib.txt,"Puerto Padre, Cuba",21.2016,-76.5981,manual,,21.2333,-76.55,6106,85c9122d 2026-07-02
 f99ebc5b166305c38e5b3721585cfc26,harmonics/noaa/harmonics_noaa_carib.txt,"Fresh Creek, Andros Island, Bahamas",24.7256,-77.7854,manual,,24.7333,-77.8,1705,85c9122d 2026-07-02
 009879286112f8884d808dae16135756,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía de Chame, Panama",8.683,-79.75,source,,,,,220f3608 2026-07-02
 11a61ef35859e4f40146259e9b3580d8,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía de Caledonia, Panama",8.9015,-77.6984,manual,,8.9,-77.6833,1667,220f3608 2026-07-02
@@ -8386,30 +8384,30 @@ f99ebc5b166305c38e5b3721585cfc26,harmonics/noaa/harmonics_noaa_carib.txt,"Fresh 
 2e65044fd2daa40c85d80fd26bc7526b,harmonics/noaa/harmonics_noaa_censam.txt,"Isla Floreana (Santa María), Galápagos, Ecuador",-1.235,-90.4491,manual,"Isla Santa María (Floreana), Galápagos, Ecuador",-1.233,-90.45,244,220f3608 2026-07-02
 362ecab31517a3fbf83cec857e08ccaf,harmonics/noaa/harmonics_noaa_censam.txt,"Isla del Coco (Cocos Island), Costa Rica",5.55,-86.983,source,,,,,220f3608 2026-07-02
 379048bfa2da908aaad803d2000e9ec3,harmonics/noaa/harmonics_noaa_censam.txt,"Punta Mala, Panama",7.4732,-79.9997,manual,,7.467,-80.0,690,220f3608 2026-07-02
-38d03687978890d4d67dd69a15a36f05,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía de Culebra, Costa Rica",10.633,-85.667,source,,,,,220f3608 2026-07-02
-4984fd8c4aeb3476625f7903511c0359,harmonics/noaa/harmonics_noaa_censam.txt,"Harbor Bay (Great Swan Island), Honduras",17.4,-83.933,source,,,,,220f3608 2026-07-02
-554426d11bdcbf01e54141b7aabcddd4,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Castilla, Honduras",16.0,-86.033,source,,,,,220f3608 2026-07-02
+38d03687978890d4d67dd69a15a36f05,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía Culebra, Costa Rica",10.64,-85.6523,manual,"Bahía de Culebra, Costa Rica",10.633,-85.667,1785,220f3608 2026-07-02
+4984fd8c4aeb3476625f7903511c0359,harmonics/noaa/harmonics_noaa_censam.txt,"Isla Cisne Grande (Great Swan Island), Honduras",17.4053,-83.9268,manual,"Harbor Bay (Great Swan Island), Honduras",17.4,-83.933,883,220f3608 2026-07-02
+554426d11bdcbf01e54141b7aabcddd4,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Castilla, Honduras",16.0047,-85.9707,manual,,16.0,-86.033,6680,220f3608 2026-07-02
 5b7e185c904b7c544b8d3a512241bee1,harmonics/noaa/harmonics_noaa_censam.txt,"Cabo Pasado, Ecuador",-0.3649,-80.4881,manual,,-0.35,-80.517,3615,220f3608 2026-07-02
-5b8b6a7336943061ec738ea1572d8102,harmonics/noaa/harmonics_noaa_censam.txt,"Amapala, Honduras",13.3,-87.65,source,,,,,220f3608 2026-07-02
+5b8b6a7336943061ec738ea1572d8102,harmonics/noaa/harmonics_noaa_censam.txt,"Amapala (Isla del Tigre), Honduras",13.296,-87.6528,manual,"Amapala, Honduras",13.3,-87.65,538,220f3608 2026-07-02
 5c406d3abf0fa15e3da34a6a5fe82274,harmonics/noaa/harmonics_noaa_censam.txt,"San Lorenzo, Ecuador",1.293,-78.8388,manual,,1.25,78.833,17528133,220f3608 2026-07-02
 6a59aae0f844b0affa1bd1ab0a2b2d65,harmonics/noaa/harmonics_noaa_censam.txt,"Isla Cébaco, Panama",7.5215,-81.2192,manual,,7.517,-81.217,556,220f3608 2026-07-02
 6ecb3fc957654f75ffd15051cc1b8fb0,harmonics/noaa/harmonics_noaa_censam.txt,"Isla Guadalupe, Baja California, Mexico",28.8833,-116.3,source,,,,,220f3608 2026-07-02
 762a7808d40505f0878f1139053d4ae9,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía de Darwin (Isla Genovesa), Galápagos, Ecuador",0.317,-89.95,manual,"Bahía de Darwin, Isla Genovesa, Galápagos, Ecuador",,,,220f3608 2026-07-02
-78c2b27ade1a0a26d1834b1cdad393ad,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Herradura, Costa Rica",9.6491,-84.6676,manual,,9.65,-84.667,120,220f3608 2026-07-02
-79731bea037d01a837f35009b4f509de,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Somoza (Puerto Sandino), Nicaragua",12.2,-86.767,source,,,,,220f3608 2026-07-02
+78c2b27ade1a0a26d1834b1cdad393ad,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Herradura, Costa Rica",9.6488,-84.6641,manual,,9.65,-84.667,345,220f3608 2026-07-02
+79731bea037d01a837f35009b4f509de,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Sandino (Puerto Somoza), Nicaragua",12.2009,-86.7646,manual,"Puerto Somoza (Puerto Sandino), Nicaragua",12.2,-86.767,279,220f3608 2026-07-02
 8a2bc44704e654dd8f4be70258f99389,harmonics/noaa/harmonics_noaa_censam.txt,"Isla del Rey, Panama",8.3,-78.9,source,,,,,220f3608 2026-07-02
 8d6223a53cd0247e6fea2610d3f234ab,harmonics/noaa/harmonics_noaa_censam.txt,"Isla Parida, Panama",8.1213,-82.3289,manual,,8.133,-82.317,1846,220f3608 2026-07-02
-95a5e50a4e1fa43f70f95ea67521c086,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Cortés, Honduras",15.835,-87.87,source,,,,,220f3608 2026-07-02
-9b4d53506ea6eb7f799c4412ca89dd7d,harmonics/noaa/harmonics_noaa_censam.txt,"Cabo Gracias a Dios, Honduras",15.0,-83.167,manual,"Cabo Gracias a Dios, Nicaragua",,,,220f3608 2026-07-02
-a024763678dae738a2bbf9db363daa24,harmonics/noaa/harmonics_noaa_censam.txt,"Río Dulce Entrance (Livingston), Guatemala",15.8333,-88.8167,source,,,,,220f3608 2026-07-02
+95a5e50a4e1fa43f70f95ea67521c086,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Cortés, Honduras",15.839,-87.9408,manual,,15.835,-87.87,7587,220f3608 2026-07-02
+9b4d53506ea6eb7f799c4412ca89dd7d,harmonics/noaa/harmonics_noaa_censam.txt,"Cabo Gracias a Dios, Honduras",15.007,-83.1293,manual,"Cabo Gracias a Dios, Nicaragua",15.0,-83.167,4123,220f3608 2026-07-02
+a024763678dae738a2bbf9db363daa24,harmonics/noaa/harmonics_noaa_censam.txt,"Livingston (Río Dulce), Guatemala",15.8248,-88.7478,manual,"Río Dulce Entrance (Livingston), Guatemala",15.8333,-88.8167,7431,220f3608 2026-07-02
 aa98805ffaead7c15432c47bfdc24fff,harmonics/noaa/harmonics_noaa_censam.txt,"Río Chepo, Panama",8.9936,-79.115,manual,,8.983,-79.117,1199,220f3608 2026-07-02
-bfea0e81bb319042ef6774a9bc3b30c4,harmonics/noaa/harmonics_noaa_censam.txt,"San Juan del Sur, Nicaragua",11.25,-85.883,source,,,,,220f3608 2026-07-02
+bfea0e81bb319042ef6774a9bc3b30c4,harmonics/noaa/harmonics_noaa_censam.txt,"San Juan del Sur, Nicaragua",11.2517,-85.8762,manual,,11.25,-85.883,765,220f3608 2026-07-02
 c31b38ddd88c966edcc2808752af8131,harmonics/noaa/harmonics_noaa_censam.txt,"Isla de Taboga, Panama",8.798,-79.5543,manual,"Taboga, Panama",8.8,-79.55,522,220f3608 2026-07-02
 cf64e6717fc8d30de88bc4ffeb09fc13,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía Honda, Panama",7.7539,-81.5167,manual,,7.767,-81.517,1457,220f3608 2026-07-02
 df17300e46cc4923dee0fd40a0169bc3,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía de Perry (Isla Isabela), Galápagos, Ecuador",-0.567,-90.967,manual,"Bahía de Perry, Isla Isabela, Galápagos, Ecuador",,,,220f3608 2026-07-02
 e1dd5f08347223b97adf9c23ca288bf3,harmonics/noaa/harmonics_noaa_censam.txt,"Bahía Isabela (Isla Isabela), Galápagos, Ecuador",-0.6,-91.083,manual,"Bahía Isabela, Isla Isabela, Galápagos, Ecuador",,,,220f3608 2026-07-02
 e21ea7d7aa32de521eddbe343bd1dc62,harmonics/noaa/harmonics_noaa_censam.txt,"Río Santiago, Esmeraldas, Ecuador",1.2175,-79.0501,manual,,1.217,-79.117,7437,220f3608 2026-07-02
-f846256d5e2bebeb2d49cea25b99ca9a,harmonics/noaa/harmonics_noaa_censam.txt,"Golfo Elena, Costa Rica",10.9315,-85.8153,manual,,10.933,-85.817,250,220f3608 2026-07-02
+f846256d5e2bebeb2d49cea25b99ca9a,harmonics/noaa/harmonics_noaa_censam.txt,"Golfo Elena, Costa Rica",10.9385,-85.7897,manual,,10.933,-85.817,3043,220f3608 2026-07-02
 f871e151dd20f8eee8a8361d7a959f4e,harmonics/noaa/harmonics_noaa_censam.txt,"Puerto Cayo, Ecuador",-1.3522,-80.7405,manual,"Puerto Cayo, Manabí, Ecuador",-1.35,-80.75,1084,220f3608 2026-07-02
 fd3360f3cafcc0442ffabf4a322a75d1,harmonics/noaa/harmonics_noaa_censam.txt,"Caleta Tagus (Isla Isabela), Galápagos, Ecuador",-0.2601,-91.3706,manual,"Caleta Tagus, Isla Isabela, Galápagos, Ecuador",-0.25,-91.367,1192,220f3608 2026-07-02
 00320883ea95c5636d5cedfb0feb6eed,harmonics/noaa/harmonics_noaa_cptt.txt,"Sirawai (Panabutan Bay), Zamboanga del Norte, Philippines",7.5868,122.1358,ambiguous,,,,,
@@ -10847,7 +10845,7 @@ fce7f17dd4f6bcc356b9a50f02ad81d7,harmonics/noaa/harmonics_noaa_pacif.txt,"Makin 
 0623e73bf2ab91b551bfdda725bb3e25,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Marina di Campo (Elba), Italy",42.742599,10.2383,manual,"Rmn Marinadicampo, Italy",,,,be5dbfbe 2026-03-23
 070b40ddd658e5d9d12b7133d246f386,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Harvey Estuary, Western Australia, Australia",-32.6835,115.6761,manual,"Harvey Dvhar, Western Australia, Australia",,,,0e084421 2026-04-23
 0815c4f90c452ef5bcc410d51f89758e,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Colònia de Sant Pere, Mallorca, Spain",39.737301,3.27335,manual,"Colonia Sant Pere, Spain",,,,be5dbfbe 2026-03-23
-0914f85f3540dd879e94ded5beec9f93,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Puerto San José, Guatemala",13.917,-90.833,manual,"San Jose 675A, Guatemala",,,,be5dbfbe 2026-03-23
+0914f85f3540dd879e94ded5beec9f93,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Puerto San José, Guatemala",13.915635,-90.81908,manual,"San Jose 675A, Guatemala",13.917,-90.833,1510,be5dbfbe 2026-03-23
 091e0c7a27f8ba5c2d43e8f6fb57187f,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Tauranga, New Zealand",-37.65,176.183,manual,"Tauranga 073A, New Zealand",,,,be5dbfbe 2026-03-23
 09bdabdccc2f39794beb04be896b9d7c,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Faaborg, Denmark",55.1,10.25,source,,,,,be5dbfbe 2026-03-23
 0a3e8e4e9d1d59b0bfbd0337b8e2e176,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Nuuk, Greenland",64.172,-51.72,manual,"Nuuk Godthaab, Denmark",,,,be5dbfbe 2026-03-23
@@ -10975,7 +10973,6 @@ fce7f17dd4f6bcc356b9a50f02ad81d7,harmonics/noaa/harmonics_noaa_pacif.txt,"Makin 
 42323320dc6f78ae6ba4d939ab97aca1,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Gedser, Denmark",54.5713,11.9275,source,,,,,2ab58057 2026-04-22
 42d07c258cc3e21cf313abeabd9d6975,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Buenaventura, Colombia",3.891,-77.0814,manual,"Buenaventura 085A, Colombia",3.89,-77.062,2155,be5dbfbe 2026-03-23
 42d147170f2448214d97147b59fa0b7a,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Nordenham (Weser, Unterfeuer), Germany",53.464497,8.488052,manual,"Nordenham (Weser), Germany",,,,efa66b89 2026-03-31
-435e2fa2a8ff180f5be51534325b90d1,harmonics/ticon/harmonics_ticon4_worldwide.txt,"La Unión, El Salvador",13.3394,-87.8309,manual,"La Union 086A, SLV",13.333,-87.817,1664,be5dbfbe 2026-03-23
 437f5dc2333835c12b6269271d402c0c,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Geelong (Corio Bay), Victoria, Australia",-38.1432,144.3624,manual,,-38.1443,144.3646,228,0e084421 2026-04-23
 43aee4a961bcf27fc7ac87a211a954d3,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Syowa Antarctica, Antarctica",-69.0,39.6,source,,,,,be5dbfbe 2026-03-23
 443d3d48b309e70bbd9b5cb0d0218df0,harmonics/ticon/harmonics_ticon4_worldwide.txt,"Lüderitz, Namibia",-26.65,15.15,manual,"Luderitz 702A, South Africa",,,,be5dbfbe 2026-03-23
@@ -12787,7 +12784,7 @@ ff4a66a1072069a09eda26d972e772bd,harmonics/utide/harmonics_utide_current_tables.
 274193f719e090bc12fbac4a34dd86e3,harmonics/utide/harmonics_utide_observations.txt,"Victoria Harbour, British Columbia, Canada",48.424363,-123.370828,source,,,,,17ebcd18 2026-05-01
 274b661a6ef6535106b540cff8704453,harmonics/utide/harmonics_utide_observations.txt,"Paralimni, Cyprus",35.038,34.036,source,,,,,ac6e711f 2026-07-26
 2751c250749ca5e74b0d6f3c66284860,harmonics/utide/harmonics_utide_observations.txt,"Campbell River, British Columbia, Canada",50.042,-125.247,source,,,,,17ebcd18 2026-05-01
-281fd92ef5cc6bc93f014ba38e7b5e5c,harmonics/utide/harmonics_utide_observations.txt,"Gibara, Cuba",21.117,-76.117,source,,,,,17ebcd18 2026-05-01
+281fd92ef5cc6bc93f014ba38e7b5e5c,harmonics/utide/harmonics_utide_observations.txt,"Gibara, Cuba",21.1078,-76.126,manual,,21.117,-76.117,1385,17ebcd18 2026-05-01
 283c1215e2fd5487f6e0fe9cf92ce07e,harmonics/utide/harmonics_utide_observations.txt,"Horneburg (Lühe), Germany",53.5123,9.5911,source,,,,,17ebcd18 2026-05-01
 287e6e1985a887bde4e38c2186f407b3,harmonics/utide/harmonics_utide_observations.txt,"San Quintin (Campo La Chorera), Baja California, Mexico",30.4364,-115.987,manual,"San Quintin, Baja California, Mexico",30.483,-115.983,5196,17ebcd18 2026-05-01
 2881c84af5bb24375729ad00bd896137,harmonics/utide/harmonics_utide_observations.txt,"Hiroshima, Hiroshima, Japan",34.3531,132.4647,source,,,,,17ebcd18 2026-05-01
@@ -12970,7 +12967,6 @@ ff4a66a1072069a09eda26d972e772bd,harmonics/utide/harmonics_utide_current_tables.
 5092c9f0100427927e24fc6374c7faed,harmonics/utide/harmonics_utide_observations.txt,"Oga, Akita, Japan",39.9445,139.705,source,,,,,17ebcd18 2026-05-01
 509789c009047c0c873abcda8cc27d1d,harmonics/utide/harmonics_utide_observations.txt,"Akita, Akita, Japan",39.7461,140.0658,source,,,,,17ebcd18 2026-05-01
 5115e4627f856ef2b8475a57116ae313,harmonics/utide/harmonics_utide_observations.txt,"Hiagari, Fukuoka, Japan",33.9094,130.8793,source,,,,,17ebcd18 2026-05-01
-51593572ea07be486c43950b3d8c7309,harmonics/utide/harmonics_utide_observations.txt,"Bocas del Toro, Panama",9.3509,-82.2577,source,,,,,d74103b9 2026-05-20
 5167888f22137cbce80c664263e50685,harmonics/utide/harmonics_utide_observations.txt,"Rosslyn Bay, Queensland, Australia",-23.16,150.79,source,,,,,17ebcd18 2026-05-01
 520365e69c6d1dfe9cd5b7675307b63a,harmonics/utide/harmonics_utide_observations.txt,"Gwadar, Pakistan",25.1122,62.3394,source,,,,,d74103b9 2026-05-20
 527dfe6e008ff5c2dd06e360345756a7,harmonics/utide/harmonics_utide_observations.txt,"Seogeochado, South Korea",34.2514,125.9154,source,,,,,c9c8b088 2026-10-24
@@ -13065,7 +13061,7 @@ ff4a66a1072069a09eda26d972e772bd,harmonics/utide/harmonics_utide_current_tables.
 67ed987cf1d06aa2b4c15c874212a6ff,harmonics/utide/harmonics_utide_observations.txt,"Niihama, Ehime, Japan",33.9676,133.2678,source,,,,,17ebcd18 2026-05-01
 68040b32c7e2676a7a8b3e6522a7039a,harmonics/utide/harmonics_utide_observations.txt,"Weipa, Queensland, Australia",-12.6687,141.8632,manual,,-12.6722,141.8688,721,17ebcd18 2026-05-01
 6837b7166f7450fd356a8ae2aebf4b6e,harmonics/utide/harmonics_utide_observations.txt,"Puerto Montt, Chile",-41.485,-72.961,source,,,,,f8efb887 2026-05-20
-68aa1fe18454e8b7d0078a2a402f4245,harmonics/utide/harmonics_utide_observations.txt,"La Ceiba, Honduras",15.79,-86.76,source,,,,,c407156c 2026-06-16
+68aa1fe18454e8b7d0078a2a402f4245,harmonics/utide/harmonics_utide_observations.txt,"La Ceiba, Honduras",15.794,-86.7619,manual,,15.79,-86.76,489,c407156c 2026-06-16
 68c10f9806db4ecfa2220ae6689ebcf1,harmonics/utide/harmonics_utide_observations.txt,"Minamiizu, Shizuoka, Japan",34.6288,138.8891,source,,,,,17ebcd18 2026-05-01
 68c469b8037618431ac8ba80739ce910,harmonics/utide/harmonics_utide_observations.txt,"Kedonganan (Jimbaran), Bali, Indonesia",-8.7577,115.1665,manual,,-8.761,115.1685,428,4faf62b7 2026-10-17
 68eed45524e215ecaeffbec5665719c0,harmonics/utide/harmonics_utide_observations.txt,"Imabari Kojima, Ehime, Japan",34.1229,132.9765,source,,,,,17ebcd18 2026-05-01
@@ -13107,7 +13103,7 @@ ff4a66a1072069a09eda26d972e772bd,harmonics/utide/harmonics_utide_current_tables.
 6fe5e761ab4317c875cd736c9a8ba55f,harmonics/utide/harmonics_utide_observations.txt,"Malin Head, Ireland",55.3717,-7.3344,source,,,,,17ebcd18 2026-05-01
 6fef60df8ab3706871a92c1fcf5b4d64,harmonics/utide/harmonics_utide_observations.txt,"Huntebrück (Hunte), Germany",53.2,8.446,source,,,,,17ebcd18 2026-05-01
 70050a6d35b0feb77af4c4b950fb4677,harmonics/utide/harmonics_utide_observations.txt,"Esbjerg Havn I, Denmark",55.4602,8.4397,source,,,,,17ebcd18 2026-05-01
-7017963748e29bbe25bdb36cc4a1f97b,harmonics/utide/harmonics_utide_observations.txt,"Limon, Costa Rica",10.0,-83.033,source,,,,,17ebcd18 2026-05-01
+7017963748e29bbe25bdb36cc4a1f97b,harmonics/utide/harmonics_utide_observations.txt,"Limon, Costa Rica",9.9877,-83.0233,manual,,10.0,-83.033,1732,17ebcd18 2026-05-01
 704c76fbe6517cd42a0cc424246b6fec,harmonics/utide/harmonics_utide_observations.txt,"Chennai, Tamil Nadu, India",13.1,80.3,manual,,13.0827,80.2707,3711,d74103b9 2026-05-20
 704caf1001bd226f5addfe7ae913fd6e,harmonics/utide/harmonics_utide_observations.txt,"Terschelling (Noordzee), Netherlands",53.442486,5.333033,manual,"Terschelling, Noordzee, Netherlands",,,,17ebcd18 2026-05-01
 7062144891f1c94bdffe7ebaa8bdf42e,harmonics/utide/harmonics_utide_observations.txt,"George Town, Grand Cayman, Cayman Islands",19.295,-81.383,source,,,,,17ebcd18 2026-05-01
@@ -13181,7 +13177,7 @@ ff4a66a1072069a09eda26d972e772bd,harmonics/utide/harmonics_utide_current_tables.
 7e89c7fceb8b5d0d9e9262516673e9cb,harmonics/utide/harmonics_utide_observations.txt,"Mentes (Güvendik), Turkey",38.4199,26.7376,manual,"Mentes, Turkey",38.4277,26.7166,2024,d62e19a9 2026-05-12
 7e9f66dcb4e2c0be3c3263717256c548,harmonics/utide/harmonics_utide_observations.txt,"Kariya, Saga, Japan",33.4731,129.8492,source,,,,,17ebcd18 2026-05-01
 7f7b4d3d4be44135d29c5dd0255274b3,harmonics/utide/harmonics_utide_observations.txt,"Zennegat Afwaarts DVW, Belgium",51.064029,4.430267,source,,,,,17ebcd18 2026-05-01
-7fccd402628671e9f3fa1732564cb618,harmonics/utide/harmonics_utide_observations.txt,"La Union, El Salvador",13.3333,-87.8181,source,,,,,06135ef3 2026-05-20
+7fccd402628671e9f3fa1732564cb618,harmonics/utide/harmonics_utide_observations.txt,"La Unión, El Salvador",13.3333,-87.8181,manual,"La Union, El Salvador",,,,06135ef3 2026-05-20
 7fd750ed9b81b7639a283da6caa956c0,harmonics/utide/harmonics_utide_observations.txt,"Îles du Salut, French Guiana",5.2845,-52.5869,source,,,,,95bc048d 2026-09-04
 7ff131cb659d29ed7a2535b2ec74e094,harmonics/utide/harmonics_utide_observations.txt,"Måløy, Norway",61.9338,5.1133,source,,,,,17ebcd18 2026-05-01
 801e0b352182d8918529f4cf87ecd2d6,harmonics/utide/harmonics_utide_observations.txt,"Le Pellerin (Loire), France",47.205383,-1.765133,source,,,,,4a050e04 2026-09-13
@@ -13278,7 +13274,7 @@ ff4a66a1072069a09eda26d972e772bd,harmonics/utide/harmonics_utide_current_tables.
 93e4b69798fe85e6cfe877ede9421745,harmonics/utide/harmonics_utide_observations.txt,"Eider-Sperrwerk (Außenpegel), Germany",54.2659,8.8421,source,,,,,17ebcd18 2026-05-01
 940004e8d0f72d2c10689d62607e0166,harmonics/utide/harmonics_utide_observations.txt,"Scarborough, England, United Kingdom",54.2825,-0.3903,source,,,,,17ebcd18 2026-05-01
 94019d5ab8733d05c87a3331fcd74752,harmonics/utide/harmonics_utide_observations.txt,"Buckie, Scotland, United Kingdom",57.68079,-2.954126,source,,,,,82f073fc 2026-06-09
-941dd825b4180d193ad651fee41d8cee,harmonics/utide/harmonics_utide_observations.txt,"Sipacate, Guatemala",13.915,-91.08,source,,,,,4faf62b7 2026-10-17
+941dd825b4180d193ad651fee41d8cee,harmonics/utide/harmonics_utide_observations.txt,"El Paredón (Sipacate), Guatemala",13.9155,-91.0799,manual,"Sipacate, Guatemala",13.915,-91.08,57,4faf62b7 2026-10-17
 9465f8318fa557218f140b42f64778bc,harmonics/utide/harmonics_utide_observations.txt,"Hoek van Holland (Maeslantkering, Beneden, noord), Netherlands",51.958239,4.161443,manual,"Hoek van Holland, Maeslantkering, Beneden, noord, Netherlands",,,,17ebcd18 2026-05-01
 9476cd47add6275b63a50900949186fe,harmonics/utide/harmonics_utide_observations.txt,"Fahrenholz (Ilmenau Unterpegel), Germany",53.3603,10.3155,manual,"Fahrenholz (Ilmenau), Germany",,,,17ebcd18 2026-05-01
 94e2aba85df5db554dba29f686580a07,harmonics/utide/harmonics_utide_observations.txt,"Cabo San Lucas, Baja California Sur, Mexico",22.88,-109.908,source,,,,,17ebcd18 2026-05-01
@@ -13388,7 +13384,7 @@ acde45bbb9185d1d94fb6de16639264c,harmonics/utide/harmonics_utide_observations.tx
 ad3e94fa9faeea9fff65d39d67bed976,harmonics/utide/harmonics_utide_observations.txt,"Port Moresby, Papua New Guinea",-9.4783,147.1392,manual,,-9.478,147.14,94,17ebcd18 2026-05-01
 ad4269cba87a24f7f9804147447e422e,harmonics/utide/harmonics_utide_observations.txt,"A2 (Meetpaal), Belgium",51.3605,3.1182,manual,,51.36,3.12,137,4faf62b7 2026-10-17
 ade2fcf978b0312604af9f62b5b8261e,harmonics/utide/harmonics_utide_observations.txt,"Kornwerderzand Waddenzee buitenhaven, Netherlands",53.07459,5.334757,source,,,,,17ebcd18 2026-05-01
-adfc30c7e987efbb1f2f11a1e06e9f8d,harmonics/utide/harmonics_utide_observations.txt,"Puerto Barrios, Guatemala",15.695,-88.622,source,,,,,d74103b9 2026-05-20
+adfc30c7e987efbb1f2f11a1e06e9f8d,harmonics/utide/harmonics_utide_observations.txt,"Santo Tomás de Castilla (Puerto Barrios), Guatemala",15.695,-88.622,manual,"Puerto Barrios, Guatemala",,,,d74103b9 2026-05-20
 ae3798187b1960decdc18260446f8830,harmonics/utide/harmonics_utide_observations.txt,"Wangerooge (Ost), Germany",53.7671,7.9849,source,,,,,17ebcd18 2026-05-01
 ae81add7f066bf76ec9bc9bf6e762eb9,harmonics/utide/harmonics_utide_observations.txt,"Simon's Town, South Africa",-34.1866,18.4366,manual,,-34.183,18.433,520,17ebcd18 2026-05-01
 aef6e65398f32f1495882e9a50ed94db,harmonics/utide/harmonics_utide_observations.txt,"Noosa River Mouth, Queensland, Australia",-26.383,153.0802,source,,,,,7d393174 2026-10-22
@@ -13590,6 +13586,7 @@ dde3c0a2066a3495bd05d2646bb9c197,harmonics/utide/harmonics_utide_observations.tx
 de0943105203de6310c106ee2d1a3293,harmonics/utide/harmonics_utide_observations.txt,"Dakar, Senegal",14.677,-17.42,source,,,,,17ebcd18 2026-05-01
 de78ef74a9ed45f61e6bab94da760e3c,harmonics/utide/harmonics_utide_observations.txt,"Ushuaia, Tierra del Fuego, Argentina",-54.8062,-68.2948,manual,"Ushuaia, Argentina",,,,17ebcd18 2026-05-01
 de84f01572571d0056b34fc91ec3a621,harmonics/utide/harmonics_utide_observations.txt,"Libourne (Isle / Dordogne), France",44.9129,-0.2488,source,,,,,0c73a042 2026-10-17
+dfc90f7bba13d746878a7b4c20f03e35,harmonics/utide/harmonics_utide_observations.txt,"Bocas del Toro (STRI), Panama",9.3509,-82.2577,ambiguous,,,,,
 dfe25138847209354c55a03c162f47ba,harmonics/utide/harmonics_utide_observations.txt,"Schiermonnikoog (Waddenzee), Netherlands",53.468937,6.202908,manual,"Schiermonnikoog, Waddenzee, Netherlands",,,,17ebcd18 2026-05-01
 dff6c987befafaf08cc1ae77177f3ae7,harmonics/utide/harmonics_utide_observations.txt,"Cocos Island, Costa Rica",5.557,-87.048,source,,,,,17ebcd18 2026-05-01
 e005b97668ed98375b831527c7979706,harmonics/utide/harmonics_utide_observations.txt,"Rabaul (New Britain), Papua New Guinea",-4.2,152.175,manual,"Rabaul, Papua New Guinea",,,,17ebcd18 2026-05-01
@@ -14864,7 +14861,7 @@ f480dadee45057a3f35ab65085a6a4db,harmonics/utide/harmonics_utide_pushidrosal_tab
 4c0d29093e776985ca0b9e5fcbff8e4d,harmonics/utide/harmonics_utide_tidetables.txt,"Cape Cockburn, Northern Territory, Australia",-11.35,132.866667,source,,,,,17ebcd18 2026-05-01
 4c1af7047671b7ed64b10e0f8a4c86d9,harmonics/utide/harmonics_utide_tidetables.txt,"Douéoulou, New Caledonia",-20.925,167.0833,source,,,,,dd5f962f 2026-09-20
 4c20e5677250ac9d8d05eb60586f4be7,harmonics/utide/harmonics_utide_tidetables.txt,"Vatia (Tavua), Fiji",-17.397807,177.761154,manual,"Vatia, Fiji",,,,17ebcd18 2026-05-01
-4c57e6e02da29956c61bfdbb81783976,harmonics/utide/harmonics_utide_tidetables.txt,"Santiago de Cuba, Cuba",20.0167,-75.8333,source,,,,,c4cbd789 2026-06-11
+4c57e6e02da29956c61bfdbb81783976,harmonics/utide/harmonics_utide_tidetables.txt,"Santiago de Cuba, Cuba",20.0192,-75.8383,manual,,20.0167,-75.8333,592,c4cbd789 2026-06-11
 4c595152d77861b86cbb8ee21ee3651f,harmonics/utide/harmonics_utide_tidetables.txt,"Ship Cove, Newfoundland, Canada",51.602725,-55.62597,source,,,,,17ebcd18 2026-05-01
 4c75162e2d6cdb3af897c58b7952b4c5,harmonics/utide/harmonics_utide_tidetables.txt,"Warrior Reef - West, Queensland, Australia",-9.4833,143.1,source,,,,,17ebcd18 2026-05-01
 4c82ec2459b59df16c0a4758572deb0e,harmonics/utide/harmonics_utide_tidetables.txt,"Richmond Lock, England, United Kingdom",51.4625,-0.3169,source,,,,,9b733102 2026-06-10
@@ -15362,7 +15359,7 @@ f480dadee45057a3f35ab65085a6a4db,harmonics/utide/harmonics_utide_pushidrosal_tab
 6ece5d086f824876fdbf1cdbed5993c6,harmonics/utide/harmonics_utide_tidetables.txt,"Gunsan-hang (1-budu), South Korea",35.9706,126.6184,manual,"Gunsan Wharf 1, South Korea",35.966667,126.616667,464,468ced38 2026-10-13
 6ed07645cf5d4647ff6268d042d726dd,harmonics/utide/harmonics_utide_tidetables.txt,"Pointe-du-Chêne, New Brunswick, Canada",46.240614,-64.530006,source,,,,,17ebcd18 2026-05-01
 6f073f2ed4a6197ed07bb5c40a3debdd,harmonics/utide/harmonics_utide_tidetables.txt,"Snares Islands / Tini Heke - North East Island, New Zealand",-48.0228,166.609,source,,,,,09ee867b 2026-05-03
-6f0a07e03180365c156fb3db3d23cc90,harmonics/utide/harmonics_utide_tidetables.txt,"Maisi, Cuba",20.2333,-74.15,source,,,,,c4cbd789 2026-06-11
+6f0a07e03180365c156fb3db3d23cc90,harmonics/utide/harmonics_utide_tidetables.txt,"Maisi, Cuba",20.244,-74.1423,manual,,20.2333,-74.15,1436,c4cbd789 2026-06-11
 6f103806d404f9a7a6369f6f119d0e81,harmonics/utide/harmonics_utide_tidetables.txt,"Loughros More Bay, Ireland",54.7978,-8.5211,manual,,54.783333,-8.5,2102,4ffe724c 2026-06-10
 6f153161e2d7347009a1b9402e2ae418,harmonics/utide/harmonics_utide_tidetables.txt,"Xige, Guangdong, China",21.465,111.0971,manual,,21.4667,111.1,355,0c3cfdde 2026-06-11
 6f1ec807fafa56a888eb2581190b1db4,harmonics/utide/harmonics_utide_tidetables.txt,"Orford Bay, British Columbia, Canada",50.597969,-124.864385,source,,,,,17ebcd18 2026-05-01

@@ -343,6 +343,12 @@ def main():
         if row['roh'][4] == 'S':
             uebersprungen.append((att, b['name'], 'im Buch selbst Standardhafen'))
             continue
+        if all(x == '-' for x in row['roh'][4:8]):
+            # "-" heisst: das Buch kennt keine Zeitdifferenz. Als 0 gelesen haette das die Phasen
+            # des fernen Bezugshafens uebernommen (Mariel von Port of Spain, 177 Grad falsch).
+            # Solche Saetze repariert py/np202_ohne_zeitdifferenz.py ueber Nachbarn (26.10.2026).
+            uebersprungen.append((att, b['name'], 'keine Zeitdifferenz im Buch'))
+            continue
         g = gruppe(batt, gruppen)
         if g is None or g['ref'] not in donor:
             uebersprungen.append((att, b['name'],

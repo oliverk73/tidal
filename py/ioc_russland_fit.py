@@ -147,7 +147,7 @@ def main(argv):
         fehlt = [n for n in k if n not in namen]
         if fehlt:
             print('   ohne XTide-Namen:', ' '.join(fehlt))
-        blk = ['#', f'# {name}', '# BEGIN HOT COMMENTS', '# country: Russia',
+        blk = ['#', f'# {name}', '# BEGIN HOT COMMENTS', '# country: ' + name.split(',')[-1].strip(),
                '# source: IOC Sea Level Monitoring gauge measurements with UTide',
                f'# station_id_context: IOC-{code}', f'# date_imported: {heute}',
                '# datum: Chart Datum (approx., CD~LAT from constituents)', '# confidence: 7',
