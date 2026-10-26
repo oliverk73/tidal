@@ -17,7 +17,9 @@ wenn der neue Satz die Tafel (auch im Probejahr) besser trifft als der alte und 
 Bereich der Tafel nicht verlaesst.
 
 --alle (Oliver 26.10.2026): jeder BOM-Satz, nicht nur Tagestide -- alle 426 waren
-mit dem falsch gelesenen Jahrgang 2025 gerechnet. Uebersicht in
+mit dem Jahrgang 2025 gerechnet. Der wird richtig gelesen (Sydney 2025 gegen Fit 2026: 0,6 cm), ist
+aber an manchen Orten anders gerechnet: im Golf von Carpentaria ein anderer Jahresgang des Mittelwassers
+(Bountiful Island Jan. -87 cm, Juli 0). Uebersicht in
 harmonics/help/bom_scheitelfit.csv.
 
 Saetze ohne bom_id im Kopf werden ueber die Position zugeordnet (nach_position).
