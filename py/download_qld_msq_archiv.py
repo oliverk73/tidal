@@ -10,8 +10,10 @@ Zeit: Portal liefert AEST (UTC+10, ohne Sommerzeit) -> hier gleich nach UTC umge
 (Falle von 13.09.2026, siehe messreihe_qualitaet._lies_npz). Reading -99 u. a. Fehlwerte verworfen, Ind mitgeschrieben.
 Je Datensatz die Jahrgaenge ab JAHR_AB, bei reinen Altreihen alle.
 
-Usage: venv/bin/python py/download_qld_msq_archiv.py [dataset-name-teil ...]
+Usage: venv/bin/python py/download_qld_msq_archiv.py [dataset-name-teil ...] [--alt] [--ab JAHR] [--ziel DIR]
        -> water_levels/Australia_QLD/msq/<dataset-name>.csv (time_utc, waterlevel_m, ind)
+       --alt: nur die 16 Datensaetze aus py/download_qld_australia.py (dort nur 2023-2025), fuer lange Fits
+       (26.10.2026, Ziel water_levels/Australia_QLD/msq_lang)
 """
 import csv
 import datetime as dt
@@ -53,9 +55,9 @@ def api(action, **params):
     raise RuntimeError('%s %s' % (action, params))
 
 
-def datensaetze():
+def datensaetze(alt=False):
     res = api('package_search', q='title:"archived interval recordings"', rows=200)['results']
-    return [p for p in res if p['id'] not in ALT]
+    return [p for p in res if (p['id'] in ALT) == alt]
 
 
 def jahr(r):
@@ -78,16 +80,20 @@ def zeilen(rid):
 
 
 def main(argv):
-    os.makedirs(ZIEL, exist_ok=True)
-    for p in sorted(datensaetze(), key=lambda p: p['name']):
-        if argv and not any(a in p['name'] for a in argv):
+    ab = int(argv[argv.index('--ab') + 1]) if '--ab' in argv else JAHR_AB
+    ziel = argv[argv.index('--ziel') + 1] if '--ziel' in argv else ZIEL
+    wert = {argv[i + 1] for i, a in enumerate(argv) if a in ('--ab', '--ziel')}
+    namen = [a for a in argv if not a.startswith('--') and a not in wert]
+    os.makedirs(ziel, exist_ok=True)
+    for p in sorted(datensaetze('--alt' in argv), key=lambda p: p['name']):
+        if namen and not any(a in p['name'] for a in namen):
             continue
-        pfad = os.path.join(ZIEL, p['name'] + '.csv')
+        pfad = os.path.join(ziel, p['name'] + '.csv')
         if os.path.exists(pfad):
             print('%s: vorhanden' % p['name'])
             continue
         res = [r for r in p['resources'] if r.get('datastore_active') or r.get('format', '').lower() == 'csv']
-        neu = [r for r in res if jahr(r) >= JAHR_AB]
+        neu = [r for r in res if jahr(r) >= ab]
         res = neu or res
         print('%s: %d Jahrgaenge %s' % (p['name'], len(res), sorted(jahr(r) for r in res)), flush=True)
         werte = {}
