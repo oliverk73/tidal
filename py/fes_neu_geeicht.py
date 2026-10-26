@@ -41,6 +41,7 @@ TZ = {'Ceará': 'America/Fortaleza', 'Rio Grande do Norte': 'America/Fortaleza',
       'São Paulo': 'America/Sao_Paulo', 'Paraná': 'America/Sao_Paulo'}
 # Name, Bundesstaat, Ort (OSM place), Richtung zur See (Grad, nur bei Muendung/Kanal/Bucht)
 ORTE = [
+    ('Jericoacoara (Jijoca de Jericoacoara)', 'Ceará', -2.7956, -40.5136, 0),   # Oliver 26.10.: FES Luís Correia 3,7 %, Pecém 2,8 %
     ('Itarema', 'Ceará', -2.922, -39.915, None), ('Paracuru', 'Ceará', -3.414, -39.030, None),
     ('Aquiraz', 'Ceará', -3.906, -38.388, None), ('Beberibe', 'Ceará', -4.181, -38.130, None),
     ('Fortim', 'Ceará', -4.451, -37.798, 45), ('Icapuí', 'Ceará', -4.716, -37.354, None),
