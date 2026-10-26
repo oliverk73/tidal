@@ -16,7 +16,10 @@ Weltweit (Oliver 26.10.2026): --welt harmonics/help/luecken_fes_welt.csv nimmt d
 "einzeln" mit FES < 2 % aus py/luecken_fes_welt.py (Doppelte unter 5 km: der groessere Ort), Zeitzone aus GeoNames.
 Referenzen weltweit wie dort (Mess-/Amtssaetze, ohne Saetze, deren Kopf FES nennt).
 
-Usage: venv/bin/python py/fes_neu_geeicht.py [--welt CSV] [--schreiben]   -> harmonics/utide/harmonics_fes2022.txt
+Ersetzen (Oliver 26.10.2026, ATT-Nebenorte wie Jamaika): --ersetzen CSV (datei,name[,anlass]) -- Name, Position,
+Zeitzone und Z0 vom alten Satz, Eichung wie oben; den alten Satz archiviert py/saetze_loeschen.py danach.
+
+Usage: venv/bin/python py/fes_neu_geeicht.py [--welt CSV | --ersetzen CSV] [--schreiben]   -> harmonics/utide/harmonics_fes2022.txt
 """
 import cmath
 import datetime as dt
@@ -121,14 +124,29 @@ def main(argv):
         return {c: cmath.rect(w[c][0] * f, math.radians(X.greenwich(w[c][1], speeds[c], mer))) for c in EICH if c in w and c in speeds and w[c][0] > 0}
 
     welt = argv[argv.index('--welt') + 1] if '--welt' in argv else None
-    orte = welt_orte(welt) if welt else [(o, s_, la, lo, ri, 'Brazil', TZ[s_]) for o, s_, la, lo, ri in ORTE]
+    ersetzen = argv[argv.index('--ersetzen') + 1] if '--ersetzen' in argv else None
+    alt = {}
+    if ersetzen:
+        import csv
+        R_ = {(os.path.basename(r['file']), r['name']): r for r in H.load_records()}
+        orte = []
+        for z in csv.DictReader(open(ersetzen, encoding='utf-8')):
+            r = R_[(os.path.basename(z['datei']), z['name'])]
+            V = open(r['file'], encoding='iso-8859-1').read().split('\n')
+            i = V.index(r['name'])
+            k = '\n'.join(V[max(0, i - 40):i])
+            m = re.findall(r'# country: (.*)', k)
+            alt[r['name']] = (V[i + 1].split(' :', 1)[1] if ' :' in V[i + 1] else 'UTC', V[i + 2], os.path.basename(r['file']), z.get('anlass', ''))
+            orte.append((r['name'], None, r['lat'], r['lon'], 'alt', m[-1] if m else '', None))
+    else:
+        orte = welt_orte(welt) if welt else [(o, s_, la, lo, ri, 'Brazil', TZ[s_]) for o, s_, la, lo, ri in ORTE]
     # Referenzen: Messung/amtliche Tafel, die FES selbst gut trifft; Saetze, deren Kopf FES nennt, messen FES an sich selbst
     from luecken_fes_welt import REF_DATEI
     refs, texte = [], {}
     for r in H.load_records():
         if not r['lat'] or r['current'] or 'fes2022' in r['file'] or 'secondary' in r['file']:
             continue
-        if not REF_DATEI.search(os.path.basename(r['file'])) or (not welt and 'Brazil' not in r['name']):
+        if not REF_DATEI.search(os.path.basename(r['file'])) or (not welt and not ersetzen and 'Brazil' not in r['name']):
             continue
         if r['file'] not in texte:
             texte[r['file']] = open(r['file'], encoding='iso-8859-1').read().split('\n')
@@ -153,8 +171,11 @@ def main(argv):
     T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
     tg = np.arange(dt.datetime(2008, 1, 1).timestamp(), dt.datetime(2027, 1, 1).timestamp(), 3600.0)
     for ort, staat, la0, lo0, richtung, land, tz in orte:
-        name = '%s, %s' % (ort, staat) if land == 'United States' else '%s, %s, %s' % (ort, staat, land)
-        sp = seepunkt(L, la0, lo0, richtung)
+        if richtung == 'alt':
+            name, sp = ort, ((la0, lo0), 0.0, 0)
+        else:
+            name = '%s, %s' % (ort, staat) if land == 'United States' else '%s, %s, %s' % (ort, staat, land)
+            sp = seepunkt(L, la0, lo0, richtung)
         if not sp:
             print('%-40s kein Wasserpunkt' % name)
             continue
@@ -182,11 +203,23 @@ def main(argv):
             print('%-44s kein FES am Wasserpunkt' % name)
             continue
         z0 = -float(SF.hoehe_und_ableitungen(tg, 0.0, werte, kopf)[0].min())
+        if richtung == 'alt':
+            tz, z0zeile, altdatei, anlass = alt[name]
         refnamen = ', '.join('%s (%.0f km, FES %.0f %%)' % (r['name'].split(',')[0], H.km({'lat': la, 'lon': lo}, r), f) for r, _v, f in nah)
         print('%-44s %.4f %.4f (%.1f km, %3d Grad)  M2 %.3f@%.0f  Eichung M2 x%.2f %+.0f  Z0 %.2f | %s' % (
             name, la, lo, d, az, *werte['M2'], *eich.get('M2', (1, 0)), z0, refnamen))
         if name in T:
             print('   existiert schon')
+            continue
+        if richtung == 'alt':
+            T += ['#', '# ' + name, '# BEGIN HOT COMMENTS', '# country: %s' % land,
+                  '# source: FES2022b global ocean tide model (extrapolated), sampled at station location',
+                  '# note: MODEL-DERIVED (not observations). Ersetzt %s-Satz (archiviert): %s (Oliver %s).' % (altdatei, anlass, heute),
+                  ('# note: FES geeicht an %s.' % refnamen)[:190] if nah else '# note: FES ungeeicht: kein Mess-/Tafelsatz in %.0f km.' % REF_KM,
+                  '# date_imported: %s' % heute, '# datum: Chart Datum (Z0 vom ersetzten Satz)', '# confidence: 5',
+                  '# !units: meters', '# !longitude: %.4f' % lo, '# !latitude: %.4f' % la,
+                  name, '+00:00 :%s' % tz, z0zeile]
+            T += ['%-15s %.4f  %.2f' % (c, *werte[c]) if c in werte else 'x 0 0' for c in namen]
             continue
         T += ['#', '# ' + name, '# BEGIN HOT COMMENTS', '# country: %s' % land,
               '# source: FES2022b global ocean tide model (extrapolated), sampled at station location',
