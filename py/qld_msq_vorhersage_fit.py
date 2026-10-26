@@ -42,7 +42,9 @@ UMKREIS, FAKTOR, MIND_CM = 3.0, 2.0, 3.0
 # Gegen MSQ-Messreihen geprueft (26.10.2026): MSQ-Fit besser bei Lizard, Kubin, Sweers, Red Island; bei Dauan der
 # BOM-Satz knapp besser (11,6 gegen 12,5 cm) -> bleibt. Skardon River: Fluss, Probe 11,7 cm -> kein Satz.
 AUSNAHMEN = {'dauan-island': 'bleibt (BOM-Satz trifft die Messung 2011/12 besser)',
-             'skardon-river': 'kein Satz (Fluss, Probe 11,7 cm)'}
+             }
+# Skardon River (Fluss): Fit auf 2026 trifft 2027 nur auf 11,7 cm, auch zwei Jahre lassen 6 cm Rest mit halbjaehrlichem
+# Muster (MSQ rechnet dort offenbar mit einer Tide, die XTide nicht kennt). Bei 4 m Hub 1,5 % -> aufgenommen (Oliver 26.10.).
 LOESCHLISTE = os.path.join(ROOT, 'harmonics/help/qld_msq_vorhersage_loeschen.csv')
 MESSUNG = ('harmonics_utide_observations.txt', 'harmonics_ticon4_worldwide.txt')
 # Pegel ohne Eintrag in der Archiv-Liste: (Name, lat, lon, Quelle)
@@ -63,6 +65,7 @@ POSITION = {
     'sue-island-warraber': ("Sue Island (Warraber), Queensland, Australia", -10.2042, 142.8222, 'CDS-Feed'),
     'townsville': ("Townsville, Queensland, Australia", -19.2518, 146.8304, 'CDS-Feed'),
     'urangan': ("Urangan, Queensland, Australia", -25.2962, 152.9105, 'CDS-Feed'),
+    'skardon-river': ("Skardon River (Barge Ramp), Queensland, Australia", -11.7574, 142.0721, 'Oliver (Barge Ramp Bauxite Hills Mine)'),
     'urangan-fairway-beacon': ("Urangan (Fairway Beacon), Queensland, Australia", -25.1333, 152.8167, 'Oliver (Karte)'),
     'yam-island-iama': ("Yam Island (Iama), Queensland, Australia", -9.8992, 142.7660, 'CDS-Feed'),
     'badu-island': 'Badu Island, Queensland, Australia',
@@ -191,6 +194,8 @@ def main(argv):
                 continue
             schreiben(ZIEL, '\n'.join(L + blk) + '\n')
             print('   geschrieben: %s' % ziel_name)
+    if wahl:                                                         # Teillauf: Gesamtliste nicht ueberschreiben
+        return
     with open(ERGEBNIS, 'w', newline='', encoding='utf-8') as fh:
         wr = csv.DictWriter(fh, fieldnames=['datei', 'name', 'lat', 'lon', 'posquelle', 'probe_cm', 'bestand', 'urteil', 'm2', 'z0'])
         wr.writeheader()
