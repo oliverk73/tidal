@@ -1,337 +1,78 @@
 name,bom_id,scheitel,alt_cm,alt_min,neu_cm,neu_min,probe_cm,probe_min,ersetzen
 "Evans Head, New South Wales, Australia",NSW-TP013,2822,3.2,2,3.1,2,6.2,3,
-"Princess Jetty (Batemans Bay), New South Wales, Australia",NSW-TP022,2821,0.6,1,0.5,1,0.5,1,ja
-"Huskisson, New South Wales, Australia",NSW-TP031,2821,1.0,4,0.6,1,0.7,1,ja
-"Kuring-Gai Motor Yacht Club, New South Wales, Australia",NSW-TP033,2821,0.6,1,0.4,1,0.5,1,ja
-"Dangar Island (Hawkesbury River), New South Wales, Australia",NSW-TP034,2821,0.5,1,0.4,1,0.4,1,ja
-"Charles Point Patches, Northern Territory, Australia",NT-TP036,2817,2.2,2,1.2,1,1.4,1,ja
-"Medina Inlet South (Wurumiyanga), Northern Territory, Australia",NT-TP044,2807,3.0,2,1.2,0,1.7,1,ja
-"Fish Reef, Northern Territory, Australia",NT-TP054,2809,2.2,2,1.2,1,1.1,1,ja
-"Point Fawcett (Offshore), Northern Territory, Australia",NT-TP056,2805,1.6,2,0.7,0,0.7,1,ja
-"Munkunuwa (Bathurst Island), Northern Territory, Australia",NT-TP058,2805,4.2,6,1.0,0,1.0,0,ja
-"Beagle A, Northern Territory, Australia",NT-TP059,2799,2.7,2,1.1,1,1.0,1,ja
-"Parsons Bank, Northern Territory, Australia",NT-TP060,2809,2.4,3,1.0,0,1.0,1,ja
-"Hancox Shoal Area, Northern Territory, Australia",NT-TP062,2821,2.2,3,1.2,1,1.1,1,ja
-"Glyde Point, Northern Territory, Australia",NT-TP064,2821,2.9,4,1.9,1,2.6,1,ja
-"Gold Coast Operations Base, Queensland, Australia",QLD-TP009,2821,1.1,1,0.6,1,0.8,1,ja
-"Gold Coast Sand Bypass Jetty, Queensland, Australia",QLD-TP010,2821,12.5,6,0.7,1,1.1,1,ja
-"Leggatt Island, Queensland, Australia",QLD-TP014,2778,1.4,3,1.0,1,1.0,1,ja
-"Lihou Reef, Queensland, Australia",QLD-TP015,2734,1.4,4,0.6,1,0.7,1,ja
-"Nardana Patches, Queensland, Australia",QLD-TP029,2840,5.4,9,3.0,4,3.1,5,ja
-"Albino Rock, Queensland, Australia",QLD-TP037,2806,5.3,3,0.6,1,0.7,1,ja
-"Beaver Reef, Queensland, Australia",QLD-TP039,2774,6.3,3,0.6,0,0.7,1,ja
-"Britomart Reef, Queensland, Australia",QLD-TP047,2792,1.7,4,0.5,1,0.7,1,ja
-"Cape Melville, Queensland, Australia",QLD-TP050,2796,3.3,5,1.1,2,1.1,2,ja
-"Chapman Island, Queensland, Australia",QLD-TP052,2736,3.6,3,0.7,1,0.8,1,ja
 "Christmas Creek, Queensland, Australia",QLD-TP053,1832,35.4,25,28.3,6,57.0,3,
-"Cruiser Passage, Queensland, Australia",QLD-TP057,2740,1.4,3,0.9,1,1.0,1,ja
-"Cullen Point, Queensland, Australia",QLD-TP058,2807,3.5,6,0.9,1,1.2,2,ja
-"Endeavour River North, Queensland, Australia",QLD-TP065,2816,5.4,14,0.8,1,0.9,2,ja
-"Euston Reef, Queensland, Australia",QLD-TP066,2858,4.2,9,2.2,3,2.2,3,ja
 "Harvey Island, Queensland, Australia",QLD-TP074,2792,3.9,4,3.2,2,6.4,4,
-"Hicks Island, Queensland, Australia",QLD-TP076,2780,1.5,3,1.0,1,1.1,2,ja
-"Michaelmas Cay, Queensland, Australia",QLD-TP083,2788,2.2,3,1.8,2,1.8,2,ja
-"Ribbon Reef No.9, Queensland, Australia",QLD-TP100,2750,1.8,3,1.0,1,1.1,1,ja
-"Serpentine Creek, Queensland, Australia",QLD-TP104,2822,3.7,6,1.3,1,1.3,2,ja
-"Papou Point (Horn Island), Queensland, Australia",QLD-TP120,2819,5.8,8,2.1,2,2.5,3,ja
-"Poll Islet (Guijar), Queensland, Australia",QLD-TP122,2731,2.8,3,1.6,1,1.9,2,ja
-"Yam Island, Queensland, Australia",QLD-TP123,2826,5.7,7,2.8,2,3.6,3,ja
-"Zagai Island, Queensland, Australia",QLD-TP124,2785,4.0,6,2.0,2,2.0,2,ja
-"Turtle Head Island, Queensland, Australia",QLD-TP125,2803,5.9,5,2.0,2,2.1,2,ja
-"Vrilya Point, Queensland, Australia",QLD-TP128,2821,2.5,6,1.0,1,1.3,1,ja
-"Whitetip Reef Front, Queensland, Australia",QLD-TP131,2822,2.5,3,0.7,1,0.9,1,ja
-"Whitetip Reef Rear, Queensland, Australia",QLD-TP132,2822,2.0,3,0.7,1,0.8,1,ja
 "Laguna Quays (Repulse Bay Marina), Queensland, Australia",QLD-TP137,2821,4.7,3,4.2,2,6.0,2,
-"Brisbane Port Office, Queensland, Australia",QLD-TP138,2821,6.2,3,1.0,1,1.4,1,ja
 "Albert River Mouth, Queensland, Australia",QLD-TP139,1496,10.5,15,7.0,4,14.2,5,
 "Normanton, Queensland, Australia",QLD-TP141,1535,7.6,26,4.6,7,8.8,8,
-"St Pauls (Moa Island), Queensland, Australia",QLD-TP143,2821,5.2,7,4.0,4,4.5,4,ja
-"Beacon M2 (Moreton Bay), Queensland, Australia",QLD-TP148,2822,4.5,3,0.6,1,0.7,1,ja
-"Round Hill Head (Seventeen Seventy), Queensland, Australia",QLD-TP156,2822,1.4,3,0.7,1,0.8,1,ja
-"Cape Capricorn, Queensland, Australia",QLD-TP164,2822,1.0,1,0.7,1,0.7,1,ja
-"Middle Island (Keppel Isles), Queensland, Australia",QLD-TP165,2822,2.2,2,1.3,1,1.4,1,ja
-"Peaked Island, Queensland, Australia",QLD-TP167,2822,1.6,1,1.1,1,1.1,1,ja
-"Mumford Island, Queensland, Australia",QLD-TP170,2821,1.4,1,0.8,0,0.9,1,ja
-"Osborn Island (Shoalwater Bay), Queensland, Australia",QLD-TP171,2821,1.8,1,1.4,1,1.5,1,ja
-"Reef Point, Queensland, Australia",QLD-TP173,2821,2.1,2,1.6,1,1.6,1,ja
-"Elusive Reef, Queensland, Australia",QLD-TP174,2779,1.3,3,0.4,0,0.4,1,ja
-"Prudhoe Island, Queensland, Australia",QLD-TP175,2821,1.8,2,1.3,1,1.3,1,ja
-"Credlin Reef, Queensland, Australia",QLD-TP180,2821,2.2,3,1.7,1,1.7,1,ja
-"Blacksmith Island, Queensland, Australia",QLD-TP182,2821,2.1,2,1.1,1,1.1,1,ja
-"Tideway Reef, Queensland, Australia",QLD-TP183,2821,1.4,2,0.7,1,0.8,1,ja
-"Square Reef, Queensland, Australia",QLD-TP185,2821,1.6,3,0.7,1,0.8,1,ja
-"Cid Harbour (Whitsunday Island), Queensland, Australia",QLD-TP188,2821,1.7,2,0.8,1,0.8,1,ja
-"Border Island, Queensland, Australia",QLD-TP190,2821,4.5,2,0.7,1,0.7,1,ja
-"Haslewood Island, Queensland, Australia",QLD-TP191,2819,1.0,2,0.7,0,0.7,1,ja
-"Stanley Reef, Queensland, Australia",QLD-TP192,2812,1.2,3,0.6,1,0.7,1,ja
-"Kennedy Reef, Queensland, Australia",QLD-TP193,2814,1.7,5,0.4,0,0.5,0,ja
-"John Brewer Reef, Queensland, Australia",QLD-TP197,2768,10.9,5,0.5,1,0.5,1,ja
-"Dip Reef, Queensland, Australia",QLD-TP198,2716,1.5,3,0.5,1,0.6,1,ja
-"Barnett Patches, Queensland, Australia",QLD-TP199,2768,1.3,3,0.5,0,0.5,1,ja
-"Cowley Beach, Queensland, Australia",QLD-TP202,2786,1.2,3,0.6,1,0.6,1,ja
-"Eddy Reef, Queensland, Australia",QLD-TP203,2770,1.2,2,0.5,1,0.5,1,ja
-"Sudbury Cay, Queensland, Australia",QLD-TP206,2766,1.5,3,0.6,1,0.6,1,ja
-"Palm Cove, Queensland, Australia",QLD-TP209,2768,9.6,5,1.0,1,1.2,2,ja
-"Yorkeys Knob, Queensland, Australia",QLD-TP210,2788,1.6,3,0.9,1,0.9,1,ja
-"East Hope Island, Queensland, Australia",QLD-TP211,2784,3.4,8,0.7,1,0.8,1,ja
-"Holmes Reef, Queensland, Australia",QLD-TP214,2782,1.1,3,0.5,0,0.5,1,ja
-"Cape Bedford, Queensland, Australia",QLD-TP216,2746,1.2,3,0.5,1,0.5,1,ja
-"Carter Reef, Queensland, Australia",QLD-TP218,2776,1.6,3,0.7,1,0.7,1,ja
-"East Petherbridge Island, Queensland, Australia",QLD-TP219,2760,1.4,3,0.6,1,0.6,1,ja
-"North Direction Island, Queensland, Australia",QLD-TP220,2744,1.3,3,0.5,1,0.5,1,ja
-"Munro Reef, Queensland, Australia",QLD-TP222,2764,1.3,3,0.7,1,0.8,1,ja
-"Eden Reef, Queensland, Australia",QLD-TP223,2784,1.8,3,1.2,1,1.2,1,ja
-"Stanley Island, Queensland, Australia",QLD-TP224,2766,1.2,2,0.6,1,0.6,1,ja
-"1st 3 Mile Opening, Queensland, Australia",QLD-TP226,2754,1.7,3,0.5,1,0.5,1,ja
-"Unnamed Reef No. 3, Queensland, Australia",QLD-TP228,2706,1.4,3,0.7,1,0.8,1,ja
-"Jubilee Reef, Queensland, Australia",QLD-TP230,2760,1.5,2,0.5,1,0.6,1,ja
-"Kay Reef, Queensland, Australia",QLD-TP234,2782,2.0,3,1.0,1,1.0,1,ja
-"Mcsweeny Reef, Queensland, Australia",QLD-TP235,2771,1.7,3,1.0,1,1.0,1,ja
-"Collette Reef, Queensland, Australia",QLD-TP236,2788,1.6,2,0.5,1,0.5,1,ja
-"Shadwell Reef, Queensland, Australia",QLD-TP237,2782,1.5,3,0.5,1,0.5,1,ja
-"Round Point, Queensland, Australia",QLD-TP239,2778,1.7,3,0.6,1,0.6,1,ja
-"Maclennan Cay, Queensland, Australia",QLD-TP241,2740,1.9,3,0.9,1,1.3,1,ja
-"Wyborn Reef Light, Queensland, Australia",QLD-TP242,2779,1.8,3,1.1,1,1.2,1,ja
-"Tetley Island, Queensland, Australia",QLD-TP243,2769,1.9,3,1.1,1,1.1,1,ja
-"Triangle Reef, Queensland, Australia",QLD-TP244,2730,1.8,5,1.2,2,1.3,2,ja
-"Alpha Rock, Queensland, Australia",QLD-TP246,2741,3.0,5,0.6,1,0.7,1,ja
-"Red Wallis Island, Queensland, Australia",QLD-TP247,2735,4.6,7,0.9,1,1.0,1,ja
-"Carpentaria, Queensland, Australia",QLD-TP253,2795,2.6,4,0.8,1,0.8,1,ja
-"Badu Island, Queensland, Australia",QLD-TP255,2663,5.5,12,1.5,3,1.8,4,ja
-"Sue Islet (Warraber), Queensland, Australia",QLD-TP258,2743,2.1,4,0.8,1,0.8,1,ja
-"Dugong Islet, Queensland, Australia",QLD-TP260,2757,1.8,3,1.2,1,1.2,1,ja
-"Halfway Island, Queensland, Australia",QLD-TP261,2775,1.9,4,1.4,1,1.5,1,ja
-"Mabuiag Island Barge, Queensland, Australia",QLD-TP262,2763,4.9,11,1.1,2,1.1,2,ja
-"Yorke Island Barge, Queensland, Australia",QLD-TP266,2809,1.8,4,0.8,1,0.8,1,ja
-"Aureed Island, Queensland, Australia",QLD-TP269,2805,1.6,4,0.6,1,0.6,1,ja
-"Kai-Maituine Reef, Queensland, Australia",QLD-TP270,2795,2.1,3,1.7,2,1.8,2,ja
-"Osprey Reef, Queensland, Australia",QLD-TP275,2728,1.9,3,0.5,1,0.5,1,ja
-"Meer Island Barge, Queensland, Australia",QLD-TP276,2800,1.1,3,0.6,1,0.7,1,ja
-"Saumarez Reef, Queensland, Australia",QLD-TP280,2799,0.7,2,0.4,0,0.4,0,ja
-"Magdelaine Cays, Queensland, Australia",QLD-TP284,2730,1.9,4,0.4,1,0.4,1,ja
-"Cape Jaffa, South Australia, Australia",SA-TP012,2620,3.1,10,0.5,1,0.6,2,ja
-"Franklin Harbor, South Australia, Australia",SA-TP016,2541,4.7,6,0.6,1,0.7,1,ja
-"Glenelg, South Australia, Australia",SA-TP017,2829,2.5,2,1.1,1,1.2,1,ja
-"Middle Bank, South Australia, Australia",SA-TP021,2317,7.3,11,0.9,2,1.2,2,ja
 "Port Bonython, South Australia, Australia",SA-TP026,2723,13.1,4,12.8,2,25.5,2,
-"Port Victoria (Spencer Gulf), South Australia, Australia",SA-TP033,2586,2.0,6,0.8,2,0.9,2,ja
-"Robe, South Australia, Australia",SA-TP035,2622,2.1,6,0.6,2,0.7,2,ja
-"Saint Francis Island, South Australia, Australia",SA-TP036,2892,3.3,6,1.2,2,1.7,2,ja
-"Tiparra Reef Light (Moonta), South Australia, Australia",SA-TP040,2370,3.1,8,0.6,1,0.6,1,ja
-"Whalers Bay (Thistle Island), South Australia, Australia",SA-TP043,2576,1.6,5,0.5,1,0.6,1,ja
-"Yarraville Shoal, South Australia, Australia",SA-TP045,2647,3.2,5,1.1,2,1.3,2,ja
-"Coffin Bay Entrance Beacon, South Australia, Australia",SA-TP046,2772,2.0,5,0.5,1,0.6,1,ja
-"Coffin Bay Jetty, South Australia, Australia",SA-TP047,2766,2.3,8,0.8,2,0.9,3,ja
-"Franklin Harbor Entrance Beacon, South Australia, Australia",SA-TP049,2540,3.8,5,0.6,1,0.7,1,ja
-"Cape Hardy, South Australia, Australia",SA-TP050,2608,2.6,4,0.6,1,0.8,1,ja
-"Tumby Bay, South Australia, Australia",SA-TP051,2650,2.5,5,0.8,1,1.0,2,ja
-"Western Shoal Beacon, South Australia, Australia",SA-TP052,2655,3.1,4,0.7,1,0.8,1,ja
-"Brighton, South Australia, Australia",SA-TP056,2835,2.3,2,0.7,1,0.7,1,ja
-"Althorpe Island, South Australia, Australia",SA-TP058,2528,2.3,9,0.4,1,0.5,1,ja
-"Reevesby Island, South Australia, Australia",SA-TP060,2602,1.9,5,0.5,1,0.5,1,ja
-"Port Kenny, South Australia, Australia",SA-TP063,2624,2.4,9,0.5,2,0.5,2,ja
-"Venus Bay, South Australia, Australia",SA-TP064,2822,2.3,6,0.8,2,0.8,2,ja
-"Angas Inlet (Garden Island), South Australia, Australia",SA-TP066,2847,2.5,4,1.3,2,1.4,1,ja
-"Port Wakefield, South Australia, Australia",SA-TP068,2844,9.8,4,1.3,1,1.5,1,ja
-"Darlington Jetty (Maria Island), Tasmania, Australia",TAS-TP002,2820,0.6,2,0.4,1,0.5,1,ja
 "Bell Bay, Tasmania, Australia",TAS-TP016,2821,1.7,2,1.4,1,2.3,2,
-"Granville Harbour, Tasmania, Australia",TAS-TP018,2316,2.3,12,0.5,2,0.5,3,ja
-"Bicheno, Tasmania, Australia",TAS-TP028,2820,7.3,7,0.7,2,0.7,1,ja
-"Bass Pyramid, Tasmania, Australia",TAS-TP030,2821,0.8,1,0.7,1,0.7,1,ja
-"Falmouth, Tasmania, Australia",TAS-TP036,2821,0.7,4,0.3,0,0.4,1,ja
-"Coles Bay, Tasmania, Australia",TAS-TP037,2820,0.7,3,0.3,0,0.3,0,ja
-"East Moncoeur Island, Tasmania, Australia",TAS-TP043,2821,0.9,1,0.7,1,0.6,1,ja
-"Curtis Island, Tasmania, Australia",TAS-TP044,2821,0.9,1,0.7,1,0.8,1,ja
-"Hogan Island, Tasmania, Australia",TAS-TP045,2821,0.8,2,0.6,1,0.6,1,ja
-"Deal Island (Garden Cove), Tasmania, Australia",TAS-TP046,2821,0.7,1,0.6,0,0.6,1,ja
-"Barracouta Platform, Victoria, Australia",VIC-TP015,2842,1.3,8,0.5,2,0.6,2,ja
-"Bouchier Channel, Victoria, Australia",VIC-TP017,2821,2.3,3,1.5,1,1.7,1,ja
-"Cowes Jetty, Victoria, Australia",VIC-TP018,2821,4.7,4,2.1,2,2.3,3,ja
-"Elizabeth Island, Victoria, Australia",VIC-TP019,2821,2.4,4,1.5,1,1.7,1,ja
-"Flinders Jetty, Victoria, Australia",VIC-TP020,2821,2.1,4,1.1,1,1.3,1,ja
-"Mornington, Victoria, Australia",VIC-TP022,2821,1.4,3,0.4,1,0.5,1,ja
-"Rosebud Pier, Victoria, Australia",VIC-TP026,2821,2.4,3,0.4,1,0.5,1,ja
-"St Kilda, Victoria, Australia",VIC-TP027,2821,1.5,5,0.6,2,0.7,3,ja
-"St Leonards, Victoria, Australia",VIC-TP028,2821,1.3,3,0.5,1,0.6,1,ja
-"San Remo, Victoria, Australia",VIC-TP029,2821,2.0,3,1.0,1,1.3,1,ja
-"Sandringham, Victoria, Australia",VIC-TP030,2821,1.7,3,0.6,1,0.7,1,ja
-"Sandy Point (Western Port), Victoria, Australia",VIC-TP031,2821,2.2,2,1.3,1,1.8,1,ja
-"Tooradin (Western Port), Victoria, Australia",VIC-TP033,2821,2.3,2,1.6,1,1.7,1,ja
-"Werribee, Victoria, Australia",VIC-TP034,2821,2.2,7,1.5,5,1.5,6,ja
 "Wilson Spit, Victoria, Australia",VIC-TP037,2821,1.2,4,0.8,2,1.2,3,
 "Point Hicks, Victoria, Australia",VIC-TP041,2821,0.7,2,0.5,1,0.7,2,
-"Cape Cuvier, Western Australia, Australia",WA-TP006,2718,1.2,4,0.6,1,0.9,1,ja
-"Thevenard Island, Western Australia, Australia",WA-TP022,2815,1.4,3,1.1,2,1.3,2,ja
 "Ashburton North, Western Australia, Australia",WA-TP025,2811,4.0,5,3.7,3,7.2,3,
-"Badjirrajirra, Western Australia, Australia",WA-TP027,2809,1.8,2,1.0,1,1.2,2,ja
-"Cape Baskerville, Western Australia, Australia",WA-TP030,2835,2.5,2,1.5,1,1.7,1,ja
-"Cape Boileau, Western Australia, Australia",WA-TP031,2837,3.0,2,1.5,1,1.9,1,ja
-"Fairway Beacon, Western Australia, Australia",WA-TP046,2815,1.4,2,1.2,1,1.3,1,ja
-"Maret Island, Western Australia, Australia",WA-TP054,2819,3.7,1,1.6,1,1.9,1,ja
-"Mawby Island, Western Australia, Australia",WA-TP055,2817,2.0,2,0.8,1,0.8,1,ja
 "Nornalup Inlet, Western Australia, Australia",WA-TP056,1915,2.7,18,1.7,4,3.4,3,
-"Port Usborne, Western Australia, Australia",WA-TP064,2821,3.0,1,2.2,1,2.2,1,ja
-"Twilight Cove, Western Australia, Australia",WA-TP073,2759,1.8,6,0.4,1,0.4,1,ja
 "Valentine Island, Western Australia, Australia",WA-TP074,2821,10.6,4,10.2,2,11.7,4,
-"Withnell Bay, Western Australia, Australia",WA-TP078,2817,1.5,2,1.3,1,1.4,1,ja
-"Daw Island, Western Australia, Australia",WA-TP083,2657,1.8,6,0.4,1,0.4,1,ja
-"Y Island, Western Australia, Australia",WA-TP109,2813,0.8,1,0.5,0,0.5,1,ja
-"North Muiron Island, Western Australia, Australia",WA-TP110,2795,1.5,2,0.4,0,0.4,1,ja
 "Roller, Western Australia, Australia",WA-TP111,2803,3.1,7,3.2,5,3.3,6,
-"Brecknock Harbour, Western Australia, Australia",WA-TP143,2823,6.1,2,2.7,1,2.5,1,ja
-"Auster Point (Marchinbar Island), Northern Territory, Australia",NT-TP005,2821,2.2,3,1.5,1,1.6,1,ja
-"Calder Shoal, Northern Territory, Australia",NT-TP006,2771,2.5,3,0.7,1,0.8,1,ja
-"Cape Arnhem, Northern Territory, Australia",NT-TP007,2820,1.3,4,0.9,2,1.1,2,ja
-"Cape Crocker Offshore, Northern Territory, Australia",NT-TP008,2821,1.5,3,1.1,1,1.3,1,ja
-"Cape Ford, Northern Territory, Australia",NT-TP009,2819,9.3,5,7.3,3,7.6,3,ja
-"Cape Wessel, Northern Territory, Australia",NT-TP012,2817,3.0,5,2.8,2,3.0,3,ja
-"Catfish Island, Northern Territory, Australia",NT-TP013,2821,15.2,6,12.2,5,13.8,6,ja
-"Cuthbert Point, Northern Territory, Australia",NT-TP015,2821,2.3,4,0.8,1,1.0,1,ja
-"East Field Island, Northern Territory, Australia",NT-TP016,2821,2.1,2,1.5,1,1.8,1,ja
-"Elcho Island, Northern Territory, Australia",NT-TP018,2821,2.6,4,1.6,1,1.6,1,ja
-"Guluwuru Island, Northern Territory, Australia",NT-TP019,2820,5.4,3,1.4,1,1.6,1,ja
-"Hogmany Shoal, Northern Territory, Australia",NT-TP020,2821,6.4,7,2.1,1,3.5,2,ja
-"Hutchison River, Northern Territory, Australia",NT-TP021,2821,9.2,5,3.0,3,3.3,3,ja
-"Jones Point, Northern Territory, Australia",NT-TP022,2821,9.4,4,3.3,1,3.4,1,ja
-"Lynedoch Bank, Northern Territory, Australia",NT-TP023,2821,1.5,2,0.7,1,0.9,1,ja
-"Money Shoal, Northern Territory, Australia",NT-TP024,2821,1.1,3,0.6,1,0.8,1,ja
-"North West Crocodile Island, Northern Territory, Australia",NT-TP025,2821,2.8,2,2.0,1,2.0,1,ja
-"Paxie Shoal, Northern Territory, Australia",NT-TP026,2817,1.9,3,0.9,1,1.0,1,ja
-"Point Stuart, Northern Territory, Australia",NT-TP027,2821,2.4,1,1.2,1,1.5,1,ja
-"Quoin Island, Northern Territory, Australia",NT-TP029,2821,10.3,4,5.5,1,6.8,2,ja
-"The Boxers, Northern Territory, Australia",NT-TP031,2712,2.6,4,0.8,1,1.0,1,ja
-"Truant Island, Northern Territory, Australia",NT-TP032,2821,1.6,3,1.2,1,1.3,1,ja
-"West Alligator Head, Northern Territory, Australia",NT-TP034,2821,2.1,1,1.4,1,1.8,1,ja
-"Loxton Shoal, Northern Territory, Australia",NT-TP037,2821,1.0,2,0.6,0,0.7,1,ja
-"Yabooma Island, Northern Territory, Australia",NT-TP038,2821,2.4,2,1.5,1,2.2,1,ja
-"Hawk Island, Northern Territory, Australia",NT-TP041,2804,7.1,9,0.8,2,1.2,2,ja
 "Port Keats (inner), Northern Territory, Australia",NT-TP042,2821,4.9,4,4.8,3,6.0,4,
-"Saint Asaph Bay, Northern Territory, Australia",NT-TP043,2819,2.6,3,1.0,1,1.4,1,ja
-"South Barlow Point (Pirlangimpi), Northern Territory, Australia",NT-TP045,2821,2.8,4,1.0,1,1.3,1,ja
-"Unnamed Shoal, Northern Territory, Australia",NT-TP046,2775,1.8,3,0.5,1,0.6,1,ja
-"Evans Shoal, Northern Territory, Australia",NT-TP047,2821,0.9,2,0.6,1,0.6,1,ja
-"Cape Scott Offshore, Northern Territory, Australia",NT-TP048,2815,2.2,2,1.0,0,0.9,1,ja
-"Anson Bay, Northern Territory, Australia",NT-TP049,2819,3.1,4,1.2,1,1.2,1,ja
-"Goodrich Bank, Northern Territory, Australia",NT-TP050,2819,0.9,2,0.5,0,0.5,1,ja
-"Peron Island North, Northern Territory, Australia",NT-TP051,2809,2.3,2,1.1,1,1.1,1,ja
-"Point Jenny, Northern Territory, Australia",NT-TP052,2805,1.8,2,1.1,1,1.1,1,ja
-"Native Point, Northern Territory, Australia",NT-TP053,2807,1.7,2,1.0,0,1.0,1,ja
-"Fenton Patches, Northern Territory, Australia",NT-TP061,2803,3.3,2,1.4,1,1.4,1,ja
-"Chambers Bay, Northern Territory, Australia",NT-TP065,2821,1.5,2,1.1,1,1.1,1,ja
-"Christine Reef, Northern Territory, Australia",NT-TP066,2821,2.8,2,1.4,1,1.3,1,ja
-"Cape Van Dieman, Northern Territory, Australia",NT-TP069,2821,0.9,2,0.6,1,0.6,1,ja
-"Cache Point (Melville Island), Northern Territory, Australia",NT-TP071,2788,1.8,6,0.6,1,0.6,1,ja
-"Point Jahleel (Off), Northern Territory, Australia",NT-TP072,2781,2.2,8,0.5,1,0.5,1,ja
-"Cadell Strait, Northern Territory, Australia",NT-TP073,2821,4.1,5,0.9,0,0.9,1,ja
-"Port Essington, Northern Territory, Australia",NT-TP074,2779,1.8,5,0.5,1,0.5,1,ja
-"Smith Point - West, Northern Territory, Australia",NT-TP075,2819,1.8,6,0.5,1,0.5,1,ja
-"Nw Peacock Island, Northern Territory, Australia",NT-TP076,2817,0.9,4,0.4,0,0.4,0,ja
-"North Of Jones Shoal, Northern Territory, Australia",NT-TP077,2810,1.1,4,0.4,0,0.4,1,ja
-"Peacock Island, Northern Territory, Australia",NT-TP078,2815,0.5,4,0.3,1,0.3,1,ja
-"Point David (Croker Island), Northern Territory, Australia",NT-TP079,2811,1.3,5,0.9,2,1.0,2,ja
-"D'urville Point, Northern Territory, Australia",NT-TP080,2821,1.0,5,0.5,1,0.6,1,ja
-"Arafura Sea, Northern Territory, Australia",NT-TP081,2813,1.0,3,0.5,1,0.5,1,ja
-"Copeland Island, Northern Territory, Australia",NT-TP082,2815,1.1,5,0.8,1,0.8,1,ja
-"Cape Cockburn, Northern Territory, Australia",NT-TP083,2811,1.3,4,0.7,1,0.7,1,ja
-"One Tree Point (Darch Island), Northern Territory, Australia",NT-TP084,2819,0.9,4,0.5,1,0.5,1,ja
-"New Year Island, Northern Territory, Australia",NT-TP085,2799,1.2,4,0.5,1,0.5,1,ja
-"Grant Island, Northern Territory, Australia",NT-TP086,2795,1.5,4,0.5,1,0.5,1,ja
-"Aurari Bay, Northern Territory, Australia",NT-TP087,2819,1.5,5,0.5,1,0.5,1,ja
-"North Goulburn Island, Northern Territory, Australia",NT-TP088,2821,1.2,5,0.7,1,0.7,1,ja
-"Stevens Island, Northern Territory, Australia",NT-TP091,2821,2.5,3,0.7,0,0.7,0,ja
-"Two Island Bay, Northern Territory, Australia",NT-TP093,2797,2.0,4,0.8,1,0.8,1,ja
-"Bundaberg (Burnett Heads), Queensland, Australia",QLD-TP005,2822,1.3,2,0.9,1,1.2,1,ja
-"Flinders Reef, Queensland, Australia",QLD-TP069,2746,1.7,3,0.6,1,0.7,1,ja
 "Night Island, Queensland, Australia",QLD-TP087,2792,4.8,6,4.3,4,8.0,7,
-"Pennefather River, Queensland, Australia",QLD-TP092,2699,7.2,12,2.0,2,3.5,4,ja
 "Rocky Island (Portland Roads), Queensland, Australia",QLD-TP101,2780,3.6,4,3.3,2,6.4,4,
-"Sharp Point, Queensland, Australia",QLD-TP106,2819,0.9,4,0.6,1,0.6,1,ja
 "Point Danger (Snapper Rocks), Queensland, Australia",QLD-TP108,2821,7.4,4,5.2,3,10.2,5,
-"Stephens Island (Ugar Island), Queensland, Australia",QLD-TP111,2796,2.5,3,0.8,1,1.0,1,ja
-"Thomas Island, Queensland, Australia",QLD-TP114,2821,2.5,2,1.3,1,1.7,1,ja
-"Alert Patches, Queensland, Australia",QLD-TP115,2821,7.5,10,3.4,3,3.6,4,ja
-"East Cay, Queensland, Australia",QLD-TP117,2780,1.7,2,1.1,1,1.2,1,ja
-"Frederick Point (Albany Island), Queensland, Australia",QLD-TP118,2767,3.5,5,2.3,3,2.7,3,ja
-"Phipi Reef, Queensland, Australia",QLD-TP121,2866,9.6,11,3.6,4,3.5,4,ja
-"Wallaby Reef, Queensland, Australia",QLD-TP129,2814,2.4,2,1.1,1,1.2,1,ja
-"Willis Island, Coral Sea Islands, Australia",QLD-TP134,2730,2.1,4,1.7,3,1.7,3,ja
 "West Wellesley Islands (10 km W), Queensland, Australia",QLD-TP142,1899,11.0,14,6.8,4,13.8,3,
-"Dauan Island, Queensland, Australia",QLD-TP144,2893,6.6,10,4.7,5,5.0,5,ja
-"Breaksea Spit, Queensland, Australia",QLD-TP159,2821,0.6,1,0.4,0,0.4,0,ja
-"One Tree Islet, Queensland, Australia",QLD-TP160,2822,1.0,1,0.5,0,0.5,0,ja
-"Polmaise Reef, Queensland, Australia",QLD-TP161,2822,0.9,2,0.6,0,0.6,1,ja
-"Rock Cod Shoal, Queensland, Australia",QLD-TP163,2822,1.4,2,0.9,1,0.9,1,ja
-"Karamea Bank, Queensland, Australia",QLD-TP168,2822,0.9,2,0.7,1,0.7,1,ja
-"Johnson Patch - Nw, Queensland, Australia",QLD-TP169,2822,1.3,2,0.8,1,0.9,1,ja
-"Jaguar Reef, Queensland, Australia",QLD-TP195,2780,1.1,2,0.5,0,0.5,0,ja
-"Shrimp Reef, Queensland, Australia",QLD-TP196,2790,1.2,2,0.5,1,0.5,1,ja
-"Peart Reef, Queensland, Australia",QLD-TP204,2736,1.3,3,0.6,1,0.6,1,ja
-"Nathan Reef, Queensland, Australia",QLD-TP205,2766,1.2,2,0.5,1,0.6,1,ja
-"Swallows Landing (Chinaman Creek), Queensland, Australia",QLD-TP208,2810,2.5,5,1.2,1,1.3,1,ja
-"Ham Reef, Queensland, Australia",QLD-TP229,2696,1.4,3,0.7,1,0.8,1,ja
-"White Rocks Area, Queensland, Australia",QLD-TP252,2777,4.6,8,0.7,1,0.8,1,ja
-"Kirkcaldie Reef, Queensland, Australia",QLD-TP256,2710,2.7,4,0.9,1,0.9,1,ja
-"Warrior Reef - West, Queensland, Australia",QLD-TP264,2838,4.5,9,2.9,2,2.8,2,ja
-"Ashmore Reef North, Queensland, Australia",QLD-TP268,2788,0.9,2,0.4,0,0.4,0,ja
-"Merrie England Shoals, Queensland, Australia",QLD-TP272,2808,2.1,5,0.8,1,0.8,1,ja
-"Mutacomal Reef, Queensland, Australia",QLD-TP273,2816,2.6,5,0.7,1,0.8,1,ja
-"Unnamed Cay, Queensland, Australia",QLD-TP278,2802,1.8,4,0.5,0,0.6,1,ja
-"Pearce Cay, Queensland, Australia",QLD-TP279,2793,2.0,4,1.0,1,1.1,1,ja
-"Elizabeth Reef, Coral Sea Islands, Australia",QLD-TP285,2821,1.4,2,0.6,1,0.6,1,ja
-"Shelf Edge Mooring, South Australia, Australia",SA-TP038,2582,1.3,5,0.5,1,0.6,2,ja
-"Cape Rabelais (Off), South Australia, Australia",SA-TP065,2506,2.0,7,0.4,1,0.4,1,ja
-"Pieman River, Tasmania, Australia",TAS-TP027,2418,2.1,9,0.5,1,0.6,1,ja
-"Seal Bay (King Island), Tasmania, Australia",TAS-TP029,2806,1.3,7,0.6,2,0.6,2,ja
-"St Helens, Tasmania, Australia",TAS-TP035,2821,0.7,3,0.4,1,0.4,1,ja
-"Cape Sorell (Off), Tasmania, Australia",TAS-TP041,2339,2.0,10,0.4,1,0.4,1,ja
 "Three Hummock Island, Tasmania, Australia",TAS-TP042,2821,1.1,3,1.0,1,1.4,1,
-"Altona, Victoria, Australia",VIC-TP014,2821,1.7,3,0.5,1,0.6,1,ja
-"Barwon Heads, Victoria, Australia",VIC-TP016,2821,3.5,5,2.0,4,2.3,4,ja
-"Port Fairy, Victoria, Australia",VIC-TP025,2498,2.7,24,0.5,2,0.6,2,ja
 "South Channel, Victoria, Australia",VIC-TP032,2821,2.8,5,2.4,2,4.6,4,
 "Yampi Sound (Koolan Island), Western Australia, Australia",WA-TP024,2821,3.6,2,3.4,1,3.7,1,
-"Cape Domett, Western Australia, Australia",WA-TP032,2819,2.7,2,2.0,1,2.4,1,ja
-"West Jetty, Cocos (Keeling) Islands, Australia",WA-TP039,2821,9.7,113,0.4,1,0.5,1,ja
-"Dillon Shoal, Western Australia, Australia",WA-TP044,2791,2.5,3,1.2,1,1.6,1,ja
 "Lizard Island, Western Australia, Australia",WA-TP052,2823,5.7,2,4.5,1,6.0,1,
-"North Sandy Island, Western Australia, Australia",WA-TP058,2827,3.7,4,0.9,1,1.0,1,ja
-"Reveley Island, Western Australia, Australia",WA-TP066,2819,2.2,3,1.2,1,1.3,1,ja
-"Rocky Island, Western Australia, Australia",WA-TP067,2819,8.6,9,3.5,3,3.9,3,ja
-"Sholl Island, Western Australia, Australia",WA-TP069,2829,3.8,4,2.9,2,3.1,2,ja
 "Cape Hamelin, Western Australia, Australia",WA-TP070,1898,4.7,20,2.5,3,5.0,3,
-"Van Cloon Shoal, Western Australia, Australia",WA-TP075,2737,2.2,3,0.7,1,0.9,1,ja
 "Coral Bay, Western Australia, Australia",WA-TP105,2736,3.2,3,3.0,1,6.0,2,
-"Imperieuse Reef, Western Australia, Australia",WA-TP117,2815,3.4,2,0.7,0,0.8,1,ja
-"Mermaid Reef, Western Australia, Australia",WA-TP118,2815,1.1,1,0.8,1,0.8,1,ja
-"White Island, Western Australia, Australia",WA-TP129,2821,1.9,1,1.3,0,1.3,1,ja
-"Skua No. 4 Well, Western Australia, Australia",WA-TP130,2817,1.5,2,1.3,1,1.2,1,ja
-"Laminaria, Western Australia, Australia",WA-TP133,2806,40.1,186,0.6,1,0.7,1,ja
-"West Holothuria Reef Offshore, Western Australia, Australia",WA-TP136,2807,1.2,1,0.7,0,0.7,0,ja
-"Carronade Island, Western Australia, Australia",WA-TP140,2741,2.7,8,1.1,1,1.1,1,ja
-"Guy Point, Western Australia, Australia",WA-TP141,2733,3.0,8,0.8,1,0.8,1,ja
 "Cockatoo Island, Western Australia, Australia",WA-TP164,2821,15.3,2,15.3,1,30.3,2,
-"Pohnpei C, Micronesia",INT-TP002,2738,0.9,2,0.5,1,0.6,1,ja
-"Majuro, Marshall Islands",INT-TP006,2821,0.7,1,0.5,1,0.5,1,ja
-"Bobo Island (Birstow Island), Papua New Guinea",INT-TP028,2853,4.1,6,1.6,2,1.6,2,ja
-"Margarida, Papua New Guinea",INT-TP040,2740,5.8,5,0.5,1,0.5,1,ja
-"Omati, Papua New Guinea",INT-TP041,2839,18.8,17,17.2,6,16.9,7,ja
 "Luganville Wharf, Vanuatu",INT-TP049,2821,0.8,2,0.5,1,0.8,1,
-"Lata Wharf (Nendö), Solomon Islands",INT-TP050,2801,4.9,4,0.6,1,0.7,2,ja
-"Choiseul Bay (Tarekukure Wharf), Solomon Islands",INT-TP051,2707,1.8,3,0.6,1,0.8,1,ja
-"Vaitupu, Tuvalu",INT-TP054,2821,0.9,1,0.4,0,0.5,0,ja
-"Ebeye Island, Marshall Islands",INT-TP057,2821,1.7,1,0.5,1,0.6,1,ja
-"Nukulaelae, Tuvalu",INT-TP060,2821,0.7,1,0.4,0,0.5,0,ja
-"Nui, Tuvalu",INT-TP061,2821,1.3,1,0.5,0,0.6,1,ja
-"Niutao, Tuvalu",INT-TP062,2821,1.0,1,0.5,0,0.6,0,ja
-"Nanumea, Tuvalu",INT-TP063,2821,0.8,1,0.5,0,0.6,0,ja
-"Niulakita, Tuvalu",INT-TP064,2821,0.7,1,0.4,0,0.5,1,ja
 "Lenakel, Vanuatu",INT-TP065,2821,1.5,2,1.4,1,2.7,2,
 "Litzlitz (Malekula), Vanuatu",INT-TP066,2821,1.5,2,1.4,1,2.5,1,
 "Vatia (Tavua), Fiji",INT-TP068,2821,1.1,1,1.0,1,1.9,1,
-"Atafu, Tokelau",INT-TP069,2821,0.6,1,0.3,0,0.4,0,ja
-"Nukunono, Tokelau",INT-TP070,2821,0.6,1,0.3,0,0.4,0,ja
-"Fakaofo, Tokelau",INT-TP071,2821,0.6,1,0.3,0,0.3,0,ja
-"Nanumanga, Tuvalu",INT-TP072,2821,1.0,1,0.6,0,0.9,0,ja
-"Nukufetau, Tuvalu",INT-TP073,2821,1.4,2,0.5,0,0.6,1,ja
-"Port Denarau (Nadi), Fiji",INT-TP074,2821,0.7,1,0.4,0,0.5,0,ja
-"Natovi Wharf, Fiji",INT-TP052,2821,6.0,8,0.4,0,0.4,0,ja
+"Bedout Islet, Western Australia, Australia",WA-TP028,2837,8.5,4,5.9,2,10.7,3,
+"Lynher Bank, Western Australia, Australia",WA-TP137,2819,2.1,1,1.0,1,1.0,1,ja
+"Heywood Shoal, Western Australia, Australia",WA-TP138,2831,2.3,2,1.2,1,1.2,1,ja
+"Pee Shoal, Western Australia, Australia",WA-TP139,2805,1.2,2,0.6,0,0.7,1,ja
+"Bell Cay, Queensland, Australia",QLD-TP040,2822,1.5,2,1.2,1,1.4,1,ja
+"Dunk Island, Queensland, Australia",QLD-TP062,2796,2.9,3,0.6,1,0.7,1,ja
+"Fife Island, Queensland, Australia",QLD-TP067,2778,31.0,7,4.4,2,8.5,5,ja
+"Fitzroy Island, Queensland, Australia",QLD-TP068,2816,2.4,4,1.0,1,1.2,1,ja
+"Kubin (Moa Island, Torres Strait), Queensland, Australia",QLD-TP080,2549,8.6,12,1.9,3,2.1,3,ja
+"McEwen Island, Queensland, Australia",QLD-TP082,2821,11.0,4,5.4,2,7.0,3,ja
+"Penrith Island, Queensland, Australia",QLD-TP093,2820,13.0,4,12.2,3,24.1,5,
+"Pipon Island, Queensland, Australia",QLD-TP094,2832,3.8,5,1.4,1,2.0,2,ja
+"Pith Reef, Queensland, Australia",QLD-TP095,2762,2.0,3,0.6,1,0.8,1,ja
+"Raine Island (Endeavour Strait), Queensland, Australia",QLD-TP097,2746,2.1,3,1.6,2,1.7,2,ja
+"Red Island (Seisia, Endeavour Strait), Queensland, Australia",QLD-TP098,2639,6.2,12,2.6,5,3.9,7,ja
+"Sweers Island, Queensland, Australia",QLD-TP112,1482,11.9,9,2.1,2,3.8,2,ja
+"Coconut Island (Torres Strait), Queensland, Australia",QLD-TP116,2755,2.0,4,1.6,1,1.6,2,ja
+"Clews Point, Queensland, Australia",QLD-TP155,2822,1.1,2,0.6,0,0.6,1,ja
+"Tryon Islet, Queensland, Australia",QLD-TP162,2822,0.8,1,0.6,0,0.6,1,ja
+"Marquis Island (Shoalwater Bay), Queensland, Australia",QLD-TP172,2821,2.9,1,2.4,1,2.5,2,ja
+"Middle Percy Island Anchorage, Queensland, Australia",QLD-TP176,2821,1.3,1,1.1,0,1.1,1,ja
+"Carlisle Island, Queensland, Australia",QLD-TP177,2821,7.3,2,1.7,1,1.9,1,ja
+"Normanby River, Queensland, Australia",QLD-TP217,2796,2.5,7,0.8,1,0.8,1,ja
+"Sir Charles Hardy Island, Queensland, Australia",QLD-TP232,2758,1.5,3,0.6,1,0.7,1,ja
+"Hannibal Island, Queensland, Australia",QLD-TP238,2804,2.0,3,0.7,1,0.7,1,ja
+"Tarilag Island (Packe Island, Endeavour Strait), Queensland, Australia",QLD-TP248,2491,7.6,11,1.5,3,1.5,3,ja
+"Rennel Island (Torres Strait), Queensland, Australia",QLD-TP267,2787,2.0,3,1.4,1,1.5,1,ja
+"Dungeness Reef (Torres Strait), Queensland, Australia",QLD-TP271,2784,2.2,4,1.3,1,1.4,1,ja
+"Darnley Island (Torres Strait), Queensland, Australia",QLD-TP274,2808,1.6,3,0.7,1,0.8,1,ja
+"Bramble Cay (Torres Strait), Queensland, Australia",QLD-TP277,2810,1.7,3,0.8,1,0.9,1,ja
+"Mellish Reef, Coral Sea Islands, Australia",QLD-TP282,2736,1.1,4,0.4,1,0.4,1,ja
+"East Diamond Islet, Coral Sea Islands, Australia",QLD-TP283,2782,1.7,4,0.4,1,0.5,1,ja
+"Port Vincent, South Australia, Australia",SA-TP053,2840,6.4,7,2.5,1,4.9,1,ja
+"Kingscote (Kangaroo Island), South Australia, Australia",SA-TP062,2749,1.9,5,0.9,1,1.0,2,ja
+"South West Rocks, New South Wales, Australia",NSW-TP023,2821,0.9,2,0.7,1,0.9,2,
+"Lady Barron (Flinders Island), Tasmania, Australia",TAS-TP032,2821,0.9,2,0.5,0,0.5,1,ja
+"Cape Hotham, Northern Territory, Australia",NT-TP011,2821,2.8,3,1.6,1,2.1,1,ja
+"Two Hills Bay, Northern Territory, Australia",NT-TP033,2821,2.3,3,1.2,1,1.4,1,ja
+"Cape Don, Northern Territory, Australia",NT-TP040,2829,2.5,8,0.9,1,1.3,1,ja
+"Night Cliff, Northern Territory, Australia",NT-TP063,2807,2.3,3,1.4,1,1.6,1,ja
+"Snake Bay, Northern Territory, Australia",NT-TP070,2820,1.3,4,0.6,1,0.6,1,ja
+"Entrance Island, Northern Territory, Australia",NT-TP089,2821,1.7,3,0.9,1,0.9,1,ja
+"Rabbit Island, Victoria, Australia",VIC-TP012,2821,1.6,2,0.9,1,1.0,1,ja
+"Apollo Bay, Victoria, Australia",VIC-TP038,2821,5.3,4,0.6,1,0.7,1,ja
+"Port Campbell, Victoria, Australia",VIC-TP040,2608,1.3,4,0.3,0,0.4,1,ja
+"Walkerville (Waratah Bay), Victoria, Australia",VIC-TP044,2821,0.8,2,0.5,0,0.5,0,ja
+"Warrnambool, Victoria, Australia",VIC-TP047,2476,2.1,10,0.4,1,0.5,1,ja

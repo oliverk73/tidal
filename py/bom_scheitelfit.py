@@ -20,6 +20,8 @@ Bereich der Tafel nicht verlaesst.
 mit dem falsch gelesenen Jahrgang 2025 gerechnet. Uebersicht in
 harmonics/help/bom_scheitelfit.csv.
 
+Saetze ohne bom_id im Kopf werden ueber die Position zugeordnet (nach_position).
+
 Usage: venv/bin/python py/bom_scheitelfit.py [--schreiben] [--formzahl 2 | --alle]
 """
 import calendar
@@ -89,6 +91,24 @@ def scheitel(bom_id):
     return sorted(set(ev))
 
 
+UMKREIS_KM = 8
+_INDEX = []
+
+
+def nach_position(r):
+    """BOM-Kennung fuer Saetze ohne "# bom_id:" (67 Stueck, meist WA/QLD-Inseln): das naechste
+    PDF der Ausgabe 2026 im Umkreis von UMKREIS_KM. Am 26.10.2026 lag jedes innerhalb von 7 km
+    und trug den passenden Namen (Bedout Islet = BEDOUT ISLAND, Night Cliff = NIGHTCLIFF)."""
+    if not _INDEX:
+        for pdf in sorted(glob.glob(os.path.join(PDF_DIR, 'IDO59001_2026_*.pdf'))):
+            k = BR.kopf(pdf)
+            m = re.search(r'2026_([A-Z]+)_(TP\d+)', pdf)
+            if k and m:
+                _INDEX.append(('%s-%s' % m.groups(), k['lat'], k['lon']))
+    d, bid = min((H.km(r, {'lat': la, 'lon': lo}), b) for b, la, lo in _INDEX)
+    return bid if d <= UMKREIS_KM else None
+
+
 def main(argv):
     grenze = float(argv[argv.index('--formzahl') + 1]) if '--formzahl' in argv else 2.0
     kopf = X.kopf_lesen(ZIEL)
@@ -112,12 +132,13 @@ def main(argv):
         k = K[(r['file'], r['name'])]
         if 'BOM tide predictions' not in k:
             continue
-        bid = re.search(r'# bom_id: (\S+)', k)
+        m = re.search(r'# bom_id: (\S+)', k)
+        bid = m.group(1) if m else nach_position(r)
         if not bid:
-            print('\n== %s: keine bom_id' % r['name'])
+            print('\n== %s: keine bom_id, kein PDF im Umkreis von %d km' % (r['name'], UMKREIS_KM))
             continue
-        ev = scheitel(bid.group(1))
-        print('\n== %s (%s)  %d Scheitel' % (r['name'], bid.group(1), len(ev)))
+        ev = scheitel(bid)
+        print('\n== %s (%s%s)  %d Scheitel' % (r['name'], bid, '' if m else ', ueber Position', len(ev)))
         if len(ev) < 500:
             print('   zu wenig Scheitel')
             continue
@@ -137,7 +158,7 @@ def main(argv):
         # Probejahr zaehlt mit: in Flussmuendungen (Christmas Creek, Albert River) trifft der
         # Scheitelfit die eigenen Jahre, verfehlt aber das ungesehene Jahr schlechter als der alte Satz
         gut = rms < arms and prms <= arms and lo >= h.min() - 0.15 and hi <= h.max() + 0.15
-        tabelle.append(dict(name=r['name'], bom_id=bid.group(1), scheitel=len(t), alt_cm=round(arms * 100, 1),
+        tabelle.append(dict(name=r['name'], bom_id=bid, scheitel=len(t), alt_cm=round(arms * 100, 1),
                             alt_min=round(adt), neu_cm=round(rms * 100, 1), neu_min=round(dtm),
                             probe_cm=round(prms * 100, 1), probe_min=round(pdt), ersetzen='ja' if gut else ''))
         if '--schreiben' in argv:
