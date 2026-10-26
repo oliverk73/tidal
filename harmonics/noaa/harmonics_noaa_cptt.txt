@@ -20749,29 +20749,31 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20261017 neu von Admiralty Anadyr (8369) statt Pusan uebertragen: Buch Nr.95 minus Nr.97 +38 min, Hub x1.11 (Oliver).
+# note: 20261026 auf die Buchzeile gerichtet (-33 min): 33 min neben der Buchzeile (cptt-95).
+# note: -- Rueckrechnung py/noaa_buchzeile_probe.py; FES und Nachbar bestaetigen die Richtung.
 Bukhta Melkaya, Chukotka Autonomous Okrug, Russia
 +00:00 :Asia/Anadyr
 1.1904 meters
 x 0 0
-K1              0.1449  17.03
-K2              0.0030  55.07
+K1              0.1449  8.76
+K2              0.0030  38.52
 x 0 0
 x 0 0
-M2              0.7020  0.55
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1334  330.83
-x 0 0
-O1              0.1337  3.51
+M2              0.7020  344.61
 x 0 0
 x 0 0
 x 0 0
 x 0 0
+N2              0.1334  315.19
+x 0 0
+O1              0.1337  355.84
 x 0 0
 x 0 0
-S2              0.0111  56.00
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+S2              0.0111  39.50
 x 0 0
 x 0 0
 x 0 0
@@ -49799,12 +49801,14 @@ x 0 0
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 22.4000/114.2000, Kueste 0.76 km) (Oliver).
+# note: 20261026 S2/K2 x 1.87 auf S2/M2 0.41 (Nachbarn Tai Po Kau 0.41, Quarry Bay 0.43, Kwai Chung 0.41; FES 0.39);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Tide Cove, Hong Kong
 +00:00 :Asia/Hong_Kong
 1.3411 meters
 J1              0.0062  220.99
 K1              0.3996  174.39
-K2              0.0311  59.99
+K2              0.0582  59.99
 L2              0.0044  337.98
 x 0 0
 M2              0.4050  32.07
@@ -49821,7 +49825,7 @@ Q1              0.0639  120.77
 x 0 0
 R2              0.0023  220.97
 x 0 0
-S2              0.0887  52.16
+S2              0.1660  52.16
 S4              0.0008  228.81
 x 0 0
 T2              0.0111  40.79
@@ -50389,12 +50393,14 @@ x 0 0
 # note: -- Namensgleichheit "Tai O, Hong Kong, China" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 20261026 S2/K2 x 2.34 auf S2/M2 0.43 (Nachbarn Quarry Bay 0.43, Kwai Chung 0.41, Cheung Chau 0.44; FES 0.39);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Aberdeen Harbor, Hong Kong
 +00:00 :Asia/Hong_Kong
 1.2497 meters
 J1              0.0058  223.85
 K1              0.3730  177.14
-K2              0.0244  65.51
+K2              0.0571  65.51
 L2              0.0041  343.39
 x 0 0
 M2              0.3780  37.38
@@ -50411,7 +50417,7 @@ Q1              0.0596  123.22
 x 0 0
 R2              0.0022  226.48
 x 0 0
-S2              0.0694  57.66
+S2              0.1625  57.66
 S4              0.0007  239.81
 x 0 0
 T2              0.0103  46.28
@@ -85767,46 +85773,48 @@ x 0 0
 # !latitude: -66.0333
 # region: Wilhelm II Coast
 # admin1_quelle: Name
+# note: 20261026 auf die Buchzeile gerichtet (+60 min): 60 min neben der Buchzeile (cptt-3961).
+# note: -- Rueckrechnung py/noaa_buchzeile_probe.py; FES und Nachbar bestaetigen die Richtung.
 Gauss Station (Wilhelm II Coast), Antarctica
 +00:00 :Antarctica/Vostok
 1.0058 meters
-J1              0.0073  258.40
-K1              0.1840  233.97
-K2              0.0422  187.14
-L2              0.0117  158.56
-M1              0.0087  138.20
-M2              0.2415  139.55
-M3              0.0007  251.67
-M4              0.0024  50.56
-M6              0.0008  98.12
-M8              0.0001  125.13
-N2              0.0374  119.38
+J1              0.0073  273.99
+K1              0.1840  249.01
+K2              0.0422  217.22
+L2              0.0117  188.09
+M1              0.0087  152.70
+M2              0.2415  168.53
+M3              0.0007  295.15
+M4              0.0024  108.53
+M6              0.0008  185.07
+M8              0.0001  241.07
+N2              0.0374  147.82
 x 0 0
-O1              0.1700  195.44
-OO1             0.0032  309.87
-P1              0.0607  234.26
-Q1              0.0343  178.47
+O1              0.1700  209.38
+OO1             0.0032  326.01
+P1              0.0607  249.22
+Q1              0.0343  191.87
 x 0 0
-R2              0.0021  125.47
-S1              0.0009  307.42
-S2              0.1337  187.00
-S4              0.0004  95.51
+R2              0.0021  155.51
+S1              0.0009  322.42
+S2              0.1337  217.00
+S4              0.0004  155.51
 x 0 0
-T2              0.0085  188.34
-LDA2            0.0058  154.10
-MU2             0.0072  245.01
-NU2             0.0087  120.34
-RHO1            0.0062  169.50
+T2              0.0085  218.30
+LDA2            0.0058  183.56
+MU2             0.0072  272.98
+NU2             0.0087  148.85
+RHO1            0.0062  182.97
 x 0 0
 x 0 0
-MN4             0.0009  41.14
-MS4             0.0027  79.54
+MN4             0.0009  98.56
+MS4             0.0027  138.52
 x 0 0
-MF              0.0058  357.02
-MSF             0.0036  32.20
-MM              0.0078  29.10
-SA              0.0846  136.63
-SSA             0.0044  46.44
+MF              0.0058  358.12
+MSF             0.0036  33.22
+MM              0.0078  29.64
+SA              0.0846  136.67
+SSA             0.0044  46.52
 x 0 0
 x 0 0
 x 0 0
@@ -85838,9 +85846,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0008  326.36
+MKS2            0.0008  355.43
 x 0 0
-EPS2            0.0017  227.58
+EPS2            0.0017  255.00
 x 0 0
 x 0 0
 x 0 0
@@ -85859,8 +85867,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0005  36.94
-SIG1            0.0097  25.65
+S3              0.0005  81.94
+SIG1            0.0097  38.58
 x 0 0
 x 0 0
 x 0 0
@@ -85881,7 +85889,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0001  72.19
+N4              0.0001  129.07
 x 0 0
 x 0 0
 x 0 0
@@ -85958,46 +85966,48 @@ x 0 0
 # !latitude: -66.5500
 # region: Antarctica
 # admin1_quelle: Ufer 1.4 km
+# note: 20261026 auf die Buchzeile gerichtet (+60 min): 60 min neben der Buchzeile (cptt-3963).
+# note: -- Rueckrechnung py/noaa_buchzeile_probe.py; FES und Nachbar bestaetigen die Richtung.
 Mc Donald Bay, Antarctica
 +00:00 :Antarctica/Vostok
 1.3106 meters
-J1              0.0094  244.37
-K1              0.2366  220.43
-K2              0.0542  160.06
-L2              0.0151  131.98
-M1              0.0111  125.15
-M2              0.3106  113.46
-M3              0.0009  212.55
-M4              0.0031  358.39
-M6              0.0011  19.86
-M8              0.0001  20.79
-N2              0.0481  93.79
+J1              0.0094  259.96
+K1              0.2366  235.47
+K2              0.0542  190.14
+L2              0.0151  161.51
+M1              0.0111  139.65
+M2              0.3106  142.44
+M3              0.0009  256.03
+M4              0.0031  56.36
+M6              0.0011  106.81
+M8              0.0001  136.73
+N2              0.0481  122.23
 x 0 0
-O1              0.2186  182.89
-OO1             0.0041  295.35
-P1              0.0780  220.80
-Q1              0.0441  166.42
+O1              0.2186  196.83
+OO1             0.0041  311.49
+P1              0.0780  235.76
+Q1              0.0441  179.82
 x 0 0
-R2              0.0027  98.43
-S1              0.0011  293.92
-S2              0.1719  160.00
-S4              0.0005  41.51
+R2              0.0027  128.47
+S1              0.0011  308.92
+S2              0.1719  190.00
+S4              0.0005  101.51
 x 0 0
-T2              0.0109  161.38
-LDA2            0.0075  127.59
-MU2             0.0093  219.84
-NU2             0.0111  94.68
-RHO1            0.0080  157.38
+T2              0.0109  191.34
+LDA2            0.0075  157.05
+MU2             0.0093  247.81
+NU2             0.0111  123.19
+RHO1            0.0080  170.85
 x 0 0
 x 0 0
-MN4             0.0011  349.46
-MS4             0.0034  26.45
+MN4             0.0011  46.88
+MS4             0.0034  85.43
 x 0 0
-MF              0.0058  356.03
-MSF             0.0036  31.29
-MM              0.0078  28.61
-SA              0.0846  136.59
-SSA             0.0044  46.36
+MF              0.0058  357.13
+MSF             0.0036  32.31
+MM              0.0078  29.15
+SA              0.0846  136.63
+SSA             0.0044  46.44
 x 0 0
 x 0 0
 x 0 0
@@ -86029,9 +86039,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0011  300.21
+MKS2            0.0011  329.28
 x 0 0
-EPS2            0.0022  202.90
+EPS2            0.0022  230.32
 x 0 0
 x 0 0
 x 0 0
@@ -86050,8 +86060,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0007  356.44
-SIG1            0.0124  14.02
+S3              0.0007  41.44
+SIG1            0.0124  26.95
 x 0 0
 x 0 0
 x 0 0
@@ -86072,7 +86082,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0002  21.00
+N4              0.0002  77.88
 x 0 0
 x 0 0
 x 0 0

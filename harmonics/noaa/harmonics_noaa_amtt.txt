@@ -18590,46 +18590,48 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 51.1667/-56.0000, Kueste 0.04 km) (Oliver).
+# note: 20261026 auf die Buchzeile gerichtet (-30 min): 30 min neben der Buchzeile (ectt-215, Bezug Halifax; halbstuendige Zone Neufundland).
+# note: -- Rueckrechnung py/noaa_buchzeile_probe.py; FES und Nachbar bestaetigen die Richtung.
 Ariege Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7010 meters
-J1              0.0046  125.52
-K1              0.0862  113.54
-K2              0.0513  2.86
-L2              0.0145  356.31
-M1              0.0032  15.65
-M2              0.5233  334.38
-M3              0.0007  335.55
-M4              0.0312  240.91
-M6              0.0027  51.23
-M8              0.0007  217.82
-N2              0.1162  312.75
+J1              0.0046  117.73
+K1              0.0862  106.02
+K2              0.0513  347.82
+L2              0.0145  341.55
+M1              0.0032  8.40
+M2              0.5233  319.89
+M3              0.0007  313.81
+M4              0.0312  211.93
+M6              0.0027  7.75
+M8              0.0007  159.85
+N2              0.1162  298.53
 x 0 0
-O1              0.0399  87.14
-OO1             0.0039  136.56
-P1              0.0273  112.15
-Q1              0.0038  91.19
+O1              0.0399  80.17
+OO1             0.0039  128.49
+P1              0.0273  104.67
+Q1              0.0038  84.49
 x 0 0
-R2              0.0013  198.12
-S1              0.0052  84.43
-S2              0.1865  5.44
-S4              0.0052  184.83
+R2              0.0013  183.10
+S1              0.0052  76.93
+S2              0.1865  350.44
+S4              0.0052  154.83
 x 0 0
-T2              0.0092  346.93
-LDA2            0.0052  352.87
-MU2             0.0155  316.73
-NU2             0.0227  314.00
-RHO1            0.0009  63.23
+T2              0.0092  331.95
+LDA2            0.0052  338.14
+MU2             0.0155  302.75
+NU2             0.0227  299.74
+RHO1            0.0009  56.49
 x 0 0
 x 0 0
-MN4             0.0163  185.53
-MS4             0.0153  10.37
+MN4             0.0163  156.82
+MS4             0.0153  340.88
 x 0 0
-MF              0.0058  253.30
-MSF             0.0028  214.79
-MM              0.0051  184.65
-SA              0.0441  272.21
-SSA             0.0092  152.66
+MF              0.0058  252.75
+MSF             0.0028  214.28
+MM              0.0051  184.38
+SA              0.0441  272.19
+SSA             0.0092  152.62
 x 0 0
 x 0 0
 x 0 0
@@ -18661,9 +18663,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MKS2            0.0013  156.33
+MKS2            0.0013  141.80
 x 0 0
-EPS2            0.0047  312.55
+EPS2            0.0047  298.84
 x 0 0
 x 0 0
 x 0 0
@@ -18682,8 +18684,8 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S3              0.0015  58.10
-SIG1            0.0013  297.50
+S3              0.0015  35.60
+SIG1            0.0013  291.04
 x 0 0
 x 0 0
 x 0 0
@@ -18704,7 +18706,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N4              0.0041  125.55
+N4              0.0041  97.11
 x 0 0
 x 0 0
 x 0 0
@@ -61934,12 +61936,14 @@ x 0 0
 # !latitude: -52.7833
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
+# note: 20261026 S2/K2 x 3.87 auf S2/M2 0.36 (Nachbarn Caleta Percy 0.31, Punta Arenas 0.41; FES 0.33);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Puerto Zenteno, Chile
 +00:00 :America/Punta_Arenas
 1.3411 meters
 J1              0.0134  147.82
 K1              0.4444  100.69
-K2              0.0195  156.85
+K2              0.0755  156.85
 L2              0.0754  103.49
 x 0 0
 M2              0.7021  58.90
@@ -61956,7 +61960,7 @@ Q1              0.0630  28.27
 x 0 0
 R2              0.0016  183.61
 x 0 0
-S2              0.0653  153.62
+S2              0.2528  153.62
 S4              0.0003  230.07
 x 0 0
 T2              0.0213  138.19
@@ -70291,12 +70295,14 @@ x 0 0
 # !latitude: -53.0500
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Ufer 2.0 km
+# note: 20261026 S2/K2 x 5.51 auf S2/M2 0.31 (Nachbar Caleta Percy 0.31; FES 0.28);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Bahía Gente Grande, Chile
 +00:00 :America/Punta_Arenas
 1.5240 meters
 J1              0.0188  171.71
 K1              0.6222  123.75
-K2              0.0165  202.97
+K2              0.0909  202.97
 L2              0.1055  148.76
 x 0 0
 M2              0.9830  103.34
@@ -70313,7 +70319,7 @@ Q1              0.0881  48.82
 x 0 0
 R2              0.0023  229.67
 x 0 0
-S2              0.0553  199.62
+S2              0.3047  199.62
 S4              0.0004  322.07
 x 0 0
 T2              0.0298  184.13
@@ -79924,12 +79930,14 @@ x 0 0
 # !latitude: -53.6333
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Ufer 2.0 km
+# note: 20261026 S2/K2 x 4.16 auf S2/M2 0.41 (FES 0.41);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Puerto del Hambre, Chile
 +00:00 :America/Punta_Arenas
 1.1887 meters
 J1              0.0108  178.34
 K1              0.3555  130.14
-K2              0.0165  215.76
+K2              0.0687  215.76
 L2              0.0603  161.31
 x 0 0
 M2              0.5617  115.66
@@ -79946,7 +79954,7 @@ Q1              0.0504  54.51
 x 0 0
 R2              0.0013  242.44
 x 0 0
-S2              0.0553  212.37
+S2              0.2303  212.37
 S4              0.0002  347.57
 x 0 0
 T2              0.0170  196.86
@@ -82076,12 +82084,14 @@ x 0 0
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher -53.5333/-72.5000, Kueste 0.01 km) (Oliver).
+# note: 20261026 S2/K2 x 12.64 auf S2/M2 0.28 (FES 0.28);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Bahía Borja, Chile
 +00:00 :America/Punta_Arenas
 0.7315 meters
 J1              0.0143  85.19
 K1              0.2598  71.58
-K2              0.0033  201.54
+K2              0.0417  201.54
 L2              0.0237  183.44
 x 0 0
 M2              0.6952  178.00
@@ -82098,7 +82108,7 @@ Q1              0.0413  6.28
 x 0 0
 R2              0.0007  169.88
 S1              0.0044  58.12
-S2              0.0154  206.48
+S2              0.1947  206.48
 S4              0.0002  43.94
 x 0 0
 T2              0.0313  333.14
@@ -82269,12 +82279,14 @@ x 0 0
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher -53.5000/-72.7833, Kueste 0.16 km) (Oliver).
+# note: 20261026 S2/K2 x 12.64 auf S2/M2 0.28 (FES 0.28);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Bahía Swallow, Chile
 +00:00 :America/Punta_Arenas
 0.7315 meters
 J1              0.0143  86.49
 K1              0.2598  72.83
-K2              0.0033  204.04
+K2              0.0417  204.04
 L2              0.0237  185.90
 x 0 0
 M2              0.6952  180.42
@@ -82291,7 +82303,7 @@ Q1              0.0413  7.40
 x 0 0
 R2              0.0007  172.38
 S1              0.0044  59.37
-S2              0.0154  208.98
+S2              0.1947  208.98
 S4              0.0002  48.94
 x 0 0
 T2              0.0313  335.64
@@ -82656,12 +82668,14 @@ x 0 0
 # state: California
 # admin1_quelle: Polygon
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 33.4167/-117.6167, Kueste 0.14 km) (Oliver).
+# note: 20261026 S2/K2 x 2.51 auf S2/M2 0.40 (Nachbar Newport Bay Entrance 0.40; FES 0.41);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 San Clemente, California
 -08:00 :America/Los_Angeles
 0.8230 meters
 J1              0.0167  89.92
 K1              0.3321  86.94
-K2              0.0242  252.18
+K2              0.0608  252.18
 L2              0.0121  239.10
 M1              0.0106  75.16
 M2              0.5435  270.82
@@ -82678,7 +82692,7 @@ Q1              0.0385  78.70
 x 0 0
 x 0 0
 x 0 0
-S2              0.0865  259.40
+S2              0.2174  259.40
 x 0 0
 x 0 0
 T2              0.0129  259.81
@@ -82849,12 +82863,14 @@ x 0 0
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher -53.2333/-73.3667, Kueste 1.19 km) (Oliver).
+# note: 20261026 S2/K2 x 12.66 auf S2/M2 0.28 (FES-Landzelle; wie Borja/Swallow (gleiche Buchdifferenzen) FES 0.28);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Puerto Angosto, Chile
 +00:00 :America/Punta_Arenas
 0.6096 meters
 J1              0.0114  77.40
 K1              0.2078  64.06
-K2              0.0026  186.49
+K2              0.0329  186.49
 L2              0.0190  168.68
 x 0 0
 M2              0.5562  163.51
@@ -82871,7 +82887,7 @@ Q1              0.0330  359.58
 x 0 0
 R2              0.0006  154.86
 S1              0.0035  50.62
-S2              0.0123  191.48
+S2              0.1557  191.48
 S4              0.0002  13.94
 x 0 0
 T2              0.0250  318.16
@@ -83828,12 +83844,14 @@ x 0 0
 # state: California
 # admin1_quelle: Polygon
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 34.1500/-119.2000, Kueste 0.19 km) (Oliver).
+# note: 20261026 S2/K2 x 2.32 auf S2/M2 0.36 (Nachbar Rincon Island 0.35/0.36; FES 0.38);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Port Hueneme, California
 +00:00 :America/Los_Angeles
 0.8534 meters
 J1              0.0224  222.09
 K1              0.3617  210.58
-K2              0.0251  141.27
+K2              0.0582  141.27
 L2              0.0096  139.86
 M1              0.0128  225.38
 M2              0.5409  151.06
@@ -83850,7 +83868,7 @@ Q1              0.0416  187.57
 x 0 0
 R2              0.0032  173.26
 S1              0.0032  316.98
-S2              0.0840  146.85
+S2              0.1947  146.85
 x 0 0
 x 0 0
 T2              0.0128  135.44
@@ -84020,12 +84038,14 @@ x 0 0
 # !latitude: 34.2667
 # state: California
 # admin1_quelle: Ufer 0.3 km
+# note: 20261026 S2/K2 x 2.32 auf S2/M2 0.36 (Nachbar Rincon Island 0.35/0.36; FES 0.37);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Ventura, California
 +00:00 :America/Los_Angeles
 0.8534 meters
 J1              0.0224  222.35
 K1              0.3617  210.83
-K2              0.0251  141.77
+K2              0.0582  141.77
 L2              0.0096  140.35
 M1              0.0128  225.62
 M2              0.5409  151.54
@@ -84042,7 +84062,7 @@ Q1              0.0416  187.79
 x 0 0
 R2              0.0032  173.76
 S1              0.0032  317.23
-S2              0.0840  147.35
+S2              0.1947  147.35
 x 0 0
 x 0 0
 T2              0.0128  135.94
@@ -84212,12 +84232,14 @@ x 0 0
 # !latitude: -52.9333
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Ufer 2.6 km
+# note: 20261026 S2/K2 x 11.52 auf S2/M2 0.28 (Nachbar Caleta Meteoro 0.28; FES 0.28);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Puerto Tamar, Chile
 +00:00 :America/Punta_Arenas
 1.1278 meters
 J1              0.0130  92.98
 K1              0.2367  79.10
-K2              0.0033  216.58
+K2              0.0380  216.58
 L2              0.0216  198.21
 x 0 0
 M2              0.6334  192.49
@@ -84234,7 +84256,7 @@ Q1              0.0376  12.98
 x 0 0
 R2              0.0007  184.90
 S1              0.0040  65.62
-S2              0.0154  221.48
+S2              0.1774  221.48
 S4              0.0002  73.94
 x 0 0
 T2              0.0285  348.12
@@ -84405,12 +84427,14 @@ x 0 0
 # state: California
 # admin1_quelle: Ufer 39.8 km
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 33.4833/-119.0333, Kueste 0.19 km) (Oliver).
+# note: 20261026 S2/K2 x 2.52 auf S2/M2 0.39 (FES 0.39);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Santa Barbara Island, California
 +00:00 :America/Los_Angeles
 0.7925 meters
 J1              0.0212  219.36
 K1              0.3421  207.95
-K2              0.0236  136.00
+K2              0.0595  136.00
 L2              0.0091  134.69
 M1              0.0121  222.84
 M2              0.5117  145.98
@@ -84427,7 +84451,7 @@ Q1              0.0394  185.22
 x 0 0
 R2              0.0030  168.00
 S1              0.0030  314.35
-S2              0.0791  141.60
+S2              0.1996  141.60
 x 0 0
 x 0 0
 T2              0.0121  130.20
@@ -84598,12 +84622,14 @@ x 0 0
 # state: California
 # admin1_quelle: Polygon
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 33.2667/-119.5000, Kueste 0.09 km) (Oliver).
+# note: 20261026 S2/K2 x 2.32 auf S2/M2 0.38 (FES 0.38);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 San Nicolas Island, California
 +00:00 :America/Los_Angeles
 0.7620 meters
 J1              0.0200  223.13
 K1              0.3226  211.59
-K2              0.0236  143.27
+K2              0.0547  143.27
 L2              0.0086  141.83
 M1              0.0114  226.34
 M2              0.4825  152.99
@@ -84620,7 +84646,7 @@ Q1              0.0371  188.46
 x 0 0
 R2              0.0029  175.26
 S1              0.0029  317.98
-S2              0.0791  148.85
+S2              0.1833  148.85
 x 0 0
 x 0 0
 T2              0.0114  137.44
@@ -87894,12 +87920,14 @@ x 0 0
 # !latitude: -54.4833
 # region: Magallanes y Antártica Chilena
 # admin1_quelle: Polygon
+# note: 20261026 S2/K2 x 8.63 auf S2/M2 0.20 (FES 0.20);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Isla Noir, Chile
 +00:00 :America/Punta_Arenas
 0.7010 meters
 J1              0.0136  102.59
 K1              0.2482  88.37
-K2              0.0033  235.13
+K2              0.0285  235.13
 L2              0.0227  216.42
 x 0 0
 M2              0.6643  210.37
@@ -87916,7 +87944,7 @@ Q1              0.0394  21.24
 x 0 0
 R2              0.0007  203.42
 S1              0.0042  74.87
-S2              0.0154  239.98
+S2              0.1329  239.98
 S4              0.0002  110.94
 x 0 0
 T2              0.0299  6.60
@@ -90804,12 +90832,14 @@ x 0 0
 # !latitude: -45.8667
 # region: Aisén del General Carlos Ibáñez del Campo
 # admin1_quelle: Polygon
+# note: 20261026 S2/K2 x 13.36 auf S2/M2 0.37 (FES 0.37);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Puerto Refugio, Chile
 +00:00 :America/Coyhaique
 0.7315 meters
 J1              0.0136  79.99
 K1              0.2482  66.56
-K2              0.0039  191.51
+K2              0.0521  191.51
 L2              0.0227  173.60
 x 0 0
 M2              0.6643  168.34
@@ -90826,7 +90856,7 @@ Q1              0.0394  1.82
 x 0 0
 R2              0.0007  159.86
 S1              0.0042  53.12
-S2              0.0184  196.48
+S2              0.2458  196.48
 S4              0.0002  23.94
 x 0 0
 T2              0.0299  323.16
@@ -92357,12 +92387,14 @@ x 0 0
 # !latitude: -45.2833
 # region: Aisén del General Carlos Ibáñez del Campo
 # admin1_quelle: Polygon
+# note: 20261026 S2/K2 x 6.94 auf S2/M2 0.37 (Nachbar Puerto Aguirre 0.37; FES 0.37);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Puerto Lagunas, Chile
 +00:00 :America/Coyhaique
 1.0668 meters
 J1              0.0178  85.19
 K1              0.3233  71.58
-K2              0.0099  201.54
+K2              0.0687  201.54
 L2              0.0296  183.44
 x 0 0
 M2              0.8652  178.00
@@ -92379,7 +92411,7 @@ Q1              0.0513  6.28
 x 0 0
 R2              0.0009  169.88
 S1              0.0055  58.12
-S2              0.0461  206.48
+S2              0.3201  206.48
 S4              0.0003  43.94
 x 0 0
 T2              0.0390  333.14
@@ -92742,12 +92774,14 @@ x 0 0
 # !latitude: -44.8167
 # region: Aisén del General Carlos Ibáñez del Campo
 # admin1_quelle: Ufer 2.8 km
+# note: 20261026 S2/K2 x 9.42 auf S2/M2 0.38 (FES 0.38);
+# note: -- Buchspringhub (13.09. "pruefen") lag zu weit daneben. py/noaa_s2_nachziehen.py-Rest.
 Isla Guamblin, Chile
 +00:00 :America/Coyhaique
 1.1582 meters
 J1              0.0203  57.91
 K1              0.3695  45.26
-K2              0.0085  148.89
+K2              0.0800  148.89
 L2              0.0338  131.77
 x 0 0
 M2              0.9888  127.28
@@ -92764,7 +92798,7 @@ Q1              0.0587  342.84
 x 0 0
 R2              0.0010  117.31
 S1              0.0063  31.87
-S2              0.0399  153.98
+S2              0.3757  153.98
 S4              0.0003  298.94
 x 0 0
 T2              0.0445  280.71
