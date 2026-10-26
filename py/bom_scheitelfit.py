@@ -16,7 +16,11 @@ Probe: Fit 2026, gemessen an den Scheiteln von 2027 (2025 bleibt draussen, s. sc
 wenn der neue Satz die Tafel (auch im Probejahr) besser trifft als der alte und die Kurve den
 Bereich der Tafel nicht verlaesst.
 
-Usage: venv/bin/python py/bom_scheitelfit.py [--schreiben] [--formzahl 2]
+--alle (Oliver 26.10.2026): jeder BOM-Satz, nicht nur Tagestide -- alle 426 waren
+mit dem falsch gelesenen Jahrgang 2025 gerechnet. Uebersicht in
+harmonics/help/bom_scheitelfit.csv.
+
+Usage: venv/bin/python py/bom_scheitelfit.py [--schreiben] [--formzahl 2 | --alle]
 """
 import calendar
 import csv
@@ -33,6 +37,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'batch'))
 import batch_utide_bom_australia as BB                              # noqa: E402
+import bom_referenz as BR                                           # noqa: E402
 import health_check as H                                           # noqa: E402
 import scheitelfit as SF                                            # noqa: E402
 import tagestide_kosinus_pruefen as T                               # noqa: E402
@@ -56,8 +61,9 @@ def scheitel(bom_id):
     for pdf in sorted(glob.glob(os.path.join(PDF_DIR, 'IDO59001_*_%s_%s.pdf' % (staat, tp)))):
         jahr = int(re.search(r'_(20\d\d)_', pdf).group(1))
         if jahr < 2026:
-            # 2025 hat ein anderes Seitenformat: parse_pdf_hwlw liest dort nur rund 2/3 der
-            # Scheitel und teils falsche Hoehen (Cape Beatrice 21 cm, West Island 29 cm gegen 2026/27)
+            # Der Jahrgang 2025 ist mit anderen Konstanten oder anderem Bezug gerechnet: gegen einen
+            # Fit auf 2026/27 liegt er 20-50 cm daneben (Cape Beatrice 21, West Island 29, Bountiful
+            # Island 51 cm), ohne Zeitversatz und ohne fehlende Scheitel. Es zaehlt die juengste Ausgabe.
             continue
         txt = subprocess.run(['pdftotext', pdf, '-'], capture_output=True, text=True).stdout
         m = ZONE.search(txt)
@@ -65,7 +71,16 @@ def scheitel(bom_id):
             print('   ohne Zeitzone:', os.path.basename(pdf))
             continue
         off = (1 if m.group(1) == '+' else -1) * (int(m.group(2)) + int(m.group(3)) / 60)
-        for z, h in BB.parse_pdf_hwlw(pdf, jahr):
+        # bom_referenz liest ueber Wortkoordinaten. parse_pdf_hwlw aus dem Batch-Skript nicht: sein
+        # Muster (\d+\.\d+) kennt kein Minus und verwirft jedes Niedrigwasser unter Kartennull --
+        # gerade die tiefsten Springniedrigwasser (Southport 2025: 31 Stueck).
+        k = BR.lies(pdf)
+        if not k:
+            print('   unlesbar:', os.path.basename(pdf))
+            continue
+        lokal = [(dt.datetime(jahr, BB.MONTHS[mon], tag, hh, mm), hoehe)
+                 for (mon, tag), werte in k['tage'].items() for hh, mm, hoehe in werte]
+        for z, h in lokal:
             if m.group(4):
                 z = BB.local_to_utc(z, staat, jahr)
             else:
@@ -81,11 +96,19 @@ def main(argv):
     nutz = SF.konstituenten(namen, SF.CONSTIT_67)
     K = T.koepfe()
     recs = [r for r in H.load_records() if r['lat'] is not None and not r['current']]
-    liste = [z for z in csv.DictReader(open(os.path.join(ROOT, 'harmonics/help/tagestide_kosinus.csv'), encoding='utf-8'))
-             if not z['repariert'] and float(z['formzahl']) >= grenze]
+    if '--alle' in argv:
+        liste = [dict(name=r['name'], datei=os.path.basename(r['file']), m2='', fes_verh='')
+                 for r in recs if 'BOM tide predictions' in K.get((r['file'], r['name']), '')
+                 and not T.REPARIERT.search(K[(r['file'], r['name'])])]
+    else:
+        liste = [z for z in csv.DictReader(open(os.path.join(ROOT, 'harmonics/help/tagestide_kosinus.csv'), encoding='utf-8'))
+                 if not z['repariert'] and float(z['formzahl']) >= grenze]
     heute = dt.date.today().strftime('%Y%m%d')
+    tabelle = []
     for z in liste:
-        r = next(r for r in recs if r['name'] == z['name'] and os.path.basename(r['file']) == z['datei'])
+        r = next((r for r in recs if r['name'] == z['name'] and os.path.basename(r['file']) == z['datei']), None)
+        if r is None:
+            continue
         k = K[(r['file'], r['name'])]
         if 'BOM tide predictions' not in k:
             continue
@@ -109,20 +132,52 @@ def main(argv):
         lo, hi = SF.bandbreite(t, h, z0, w, kopf)
         print('   alt %.1f cm / %.0f min (Versatz %+.1f cm) | neu %.1f cm / %.0f min | Probe 2027 %.1f cm / %.0f min' % (
             arms * 100, adt, aoff * 100, rms * 100, dtm, prms * 100, pdt))
-        print('   M2 alt %s  neu %.3f/%.0f   FES-Verh. alt %s  Kurve %.2f..%.2f, Tafel %.2f..%.2f' % (
-            z['m2'], w['M2'][0], w['M2'][1], z['fes_verh'], lo, hi, h.min(), h.max()))
+        print('   M2 neu %.3f/%.0f  Kurve %.2f..%.2f, Tafel %.2f..%.2f' % (
+            w['M2'][0], w['M2'][1], lo, hi, h.min(), h.max()))
         # Probejahr zaehlt mit: in Flussmuendungen (Christmas Creek, Albert River) trifft der
         # Scheitelfit die eigenen Jahre, verfehlt aber das ungesehene Jahr schlechter als der alte Satz
         gut = rms < arms and prms <= arms and lo >= h.min() - 0.15 and hi <= h.max() + 0.15
+        tabelle.append(dict(name=r['name'], bom_id=bid.group(1), scheitel=len(t), alt_cm=round(arms * 100, 1),
+                            alt_min=round(adt), neu_cm=round(rms * 100, 1), neu_min=round(dtm),
+                            probe_cm=round(prms * 100, 1), probe_min=round(pdt), ersetzen='ja' if gut else ''))
         if '--schreiben' in argv:
             if not gut:
                 print('   NICHT geschrieben')
                 continue
-            SF.satz_schreiben(r['file'], r['name'], z0, w, namen, [
-                '%s Scheitelfit aus den BOM-Tafeln 2026-2027 (py/bom_scheitelfit.py):' % heute,
-                'der vorige UTide-Fit auf Kosinusboegen verlor bei Tagestide M2.',
-                'Tafeltreue %.1f -> %.1f cm an %d Scheiteln, Scheitelzeit %.0f min. Oliver.' % (arms * 100, rms * 100, len(t), dtm)])
+            try:
+                SF.satz_schreiben(r['file'], r['name'], z0, w, namen, [
+                    '%s Scheitelfit aus den BOM-Tafeln 2026-2027 (py/bom_scheitelfit.py):' % heute,
+                    'der vorige UTide-Fit auf Kosinusboegen (mit BOM-Ausgabe 2025, ohne negative NW) traf die Tafel schlechter.',
+                    'Tafeltreue %.1f -> %.1f cm an %d Scheiteln, Scheitelzeit %.0f min. Oliver.' % (arms * 100, rms * 100, len(t), dtm)])
+            except KeyError:
+                # waehrend des Laufs umbenannt (Oliver arbeitet parallel an der Karte)
+                print('   Satz nicht mehr gefunden, uebersprungen')
+                continue
+            kopfzeilen(r['file'], r['name'])
             print('   geschrieben')
+    if tabelle:
+        pfad = os.path.join(ROOT, 'harmonics/help/bom_scheitelfit.csv')
+        with open(pfad, 'w', newline='', encoding='utf-8') as fh:
+            wr = csv.DictWriter(fh, fieldnames=list(tabelle[0].keys()))
+            wr.writeheader()
+            wr.writerows(tabelle)
+        n = sum(1 for x in tabelle if x['ersetzen'])
+        print('\n%d Saetze gemessen, %d besser -> %s' % (len(tabelle), n, os.path.relpath(pfad, ROOT)))
+
+
+def kopfzeilen(datei, name):
+    """Kosinus-Kopfzeilen des Satzes ersetzen; "HW/LW" muss bleiben (tagestide_kosinus_pruefen erkennt daran Tafelsaetze)."""
+    L = open(datei, encoding='iso-8859-1').read().split('\n')
+    i = next(i for i, l in enumerate(L) if l == name and i + 1 < len(L) and L[i + 1][:1] in '+-')
+    j = i
+    while j > 0 and L[j - 1].startswith('#'):
+        j -= 1
+    for k in range(j, i):
+        if re.match(r'# \d+ HW/[LN]W points -> \d+ interpolated points', L[k]):
+            L[k] = '# (former cosine/UTide fit on HW/LW tables replaced %s; see notes)' % dt.date.today().isoformat()
+        elif L[k].startswith('# R^2 = '):
+            L[k] = '#'
+    open(datei, 'w', encoding='iso-8859-1').write('\n'.join(L))
 
 
 if __name__ == '__main__':
