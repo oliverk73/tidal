@@ -50575,7 +50575,7 @@ x 0 0
 # 15th of each month 2025-12-31..2026-12-15 (speed 0.1 kn from the page, direction read from the arrow map)
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9927, RMS error = 0.0540 knots
-# Major axis: 78.6 deg true
+# Major axis: 258.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Japan
@@ -50584,45 +50584,46 @@ x 0 0
 # institution: Japan Coast Guard, Hydrographic and Oceanographic Department
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 78.6
+# major_axis_deg_true: 258.6
 # confidence: 6
 # !units: knots
 # !longitude: 133.6402
 # !latitude: 34.4171
+# note: 20261026 Vorzeichen gedreht: Flut = Laufrichtung der Tidenwelle (FES-Phase 8/15 km vor/hinter dem Punkt)
 Bisan Seto (NW of Aoki), Kagawa, Japan Current
 +00:00 :UTC
-0.0001 knots
+-0.0001 knots
 x 0 0
-K1              0.0843  200.48
-K2              0.0866  158.41
-L2              0.0023  220.01
+K1              0.0843  20.48
+K2              0.0866  338.41
+L2              0.0023  40.01
 x 0 0
-M2              0.7711  115.49
+M2              0.7711  295.49
 x 0 0
-M4              0.0318  130.44
-x 0 0
-x 0 0
-N2              0.0027  69.52
-2N2             0.0057  95.19
-O1              0.0486  141.64
-x 0 0
-P1              0.0289  195.89
-Q1              0.0072  84.54
+M4              0.0318  310.44
 x 0 0
 x 0 0
+N2              0.0027  249.52
+2N2             0.0057  275.19
+O1              0.0486  321.64
 x 0 0
-S2              0.3145  160.82
+P1              0.0289  15.89
+Q1              0.0072  264.54
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0136  218.98
-NU2             0.0040  170.86
+S2              0.3145  340.82
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0060  117.29
-MS4             0.0249  165.90
+x 0 0
+MU2             0.0136  38.98
+NU2             0.0040  350.86
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0060  297.29
+MS4             0.0249  345.90
 x 0 0
 x 0 0
 x 0 0
@@ -52151,7 +52152,7 @@ x 0 0
 # 15th of each month 2025-12-31..2026-12-15 (speed 0.1 kn from the page, direction read from the arrow map)
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9990, RMS error = 0.0300 knots
-# Major axis: 145.5 deg true
+# Major axis: 325.5 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Japan
@@ -52160,45 +52161,46 @@ x 0 0
 # institution: Japan Coast Guard, Hydrographic and Oceanographic Department
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 145.5
+# major_axis_deg_true: 325.5
 # confidence: 6
 # !units: knots
 # !longitude: 132.2101
 # !latitude: 33.1204
+# note: 20261026 Vorzeichen gedreht: Flut = Laufrichtung der Tidenwelle (FES-Phase 8/15 km vor/hinter dem Punkt)
 Bungo Suido (SW of Hiburishima), Ehime, Japan Current
 +00:00 :UTC
-0.0008 knots
+-0.0008 knots
 x 0 0
-K1              0.2406  180.28
-K2              0.1301  140.46
-L2              0.0009  90.67
+K1              0.2406  0.28
+K2              0.1301  320.46
+L2              0.0009  270.67
 x 0 0
-M2              1.0805  125.15
+M2              1.0805  305.15
 x 0 0
-M4              0.0753  37.38
-x 0 0
-x 0 0
-N2              0.0016  71.88
-2N2             0.0018  257.43
-O1              0.1801  157.26
-x 0 0
-P1              0.0819  182.82
-Q1              0.0047  141.89
+M4              0.0753  217.38
 x 0 0
 x 0 0
+N2              0.0016  251.88
+2N2             0.0018  77.43
+O1              0.1801  337.26
 x 0 0
-S2              0.4735  140.85
+P1              0.0819  2.82
+Q1              0.0047  321.89
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.1382  50.75
-NU2             0.0002  262.29
+S2              0.4735  320.85
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0008  62.48
-MS4             0.0079  39.72
+x 0 0
+MU2             0.1382  230.75
+NU2             0.0002  82.29
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0008  242.48
+MS4             0.0079  219.72
 x 0 0
 x 0 0
 x 0 0
@@ -54712,7 +54714,7 @@ x 0 0
 # 15th of each month 2025-12-31..2026-12-15 (speed 0.1 kn from the page, direction read from the arrow map)
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9993, RMS error = 0.0310 knots
-# Major axis: 140.6 deg true
+# Major axis: 320.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Japan
@@ -54721,45 +54723,46 @@ x 0 0
 # institution: Japan Coast Guard, Hydrographic and Oceanographic Department
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 140.6
+# major_axis_deg_true: 320.6
 # confidence: 6
 # !units: knots
 # !longitude: 136.9422
 # !latitude: 34.5398
+# note: 20261026 Vorzeichen gedreht: Flut = Laufrichtung der Tidenwelle (FES-Phase 8/15 km vor/hinter dem Punkt)
 Ise Wan (W of Kamishima), Mie, Japan Current
 +00:00 :UTC
-0.0007 knots
+-0.0007 knots
 x 0 0
-K1              0.2685  133.93
-K2              0.1771  343.23
-L2              0.0030  158.01
+K1              0.2685  313.93
+K2              0.1771  163.23
+L2              0.0030  338.01
 x 0 0
-M2              1.3388  325.49
+M2              1.3388  145.49
 x 0 0
-M4              0.0694  262.83
-x 0 0
-x 0 0
-N2              0.0024  59.05
-2N2             0.0021  95.46
-O1              0.2306  111.13
-x 0 0
-P1              0.0929  136.18
-Q1              0.0017  231.72
+M4              0.0694  82.83
 x 0 0
 x 0 0
+N2              0.0024  239.05
+2N2             0.0021  275.46
+O1              0.2306  291.13
 x 0 0
-S2              0.6545  342.21
+P1              0.0929  316.18
+Q1              0.0017  51.72
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0840  216.28
-NU2             0.0023  126.27
+S2              0.6545  162.21
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0036  282.88
-MS4             0.0553  359.55
+x 0 0
+MU2             0.0840  36.28
+NU2             0.0023  306.27
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0036  102.88
+MS4             0.0553  179.55
 x 0 0
 x 0 0
 x 0 0
@@ -64759,7 +64762,7 @@ x 0 0
 # 15th of each month 2025-12-31..2026-12-15 (speed 0.1 kn from the page, direction read from the arrow map)
 # (UTide v0.3.1, principal-axis projection, 15 fixed constituents)
 # R^2 = 0.9982, RMS error = 0.0500 knots
-# Major axis: 176.4 deg true
+# Major axis: 356.4 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Japan
@@ -64768,45 +64771,46 @@ x 0 0
 # institution: Japan Coast Guard, Hydrographic and Oceanographic Department
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 176.4
+# major_axis_deg_true: 356.4
 # confidence: 6
 # !units: knots
 # !longitude: 127.4076
 # !latitude: 26.2086
+# note: 20261026 Vorzeichen gedreht: Flut = Laufrichtung der Tidenwelle (FES-Phase 8/15 km vor/hinter dem Punkt)
 Kerama Kaikyo (E of Tokashiki), Okinawa, Japan Current
 +00:00 :UTC
-0.4120 knots
+-0.4120 knots
 x 0 0
-K1              0.4424  54.45
-K2              0.1158  140.16
-L2              0.0018  18.41
+K1              0.4424  234.45
+K2              0.1158  320.16
+L2              0.0018  198.41
 x 0 0
-M2              1.3146  102.56
+M2              1.3146  282.56
 x 0 0
-M4              0.0559  44.50
-x 0 0
-x 0 0
-N2              0.3436  129.37
-2N2             0.0075  104.74
-O1              0.3922  261.31
-x 0 0
-P1              0.1411  55.28
-Q1              0.3044  280.67
+M4              0.0559  224.50
 x 0 0
 x 0 0
+N2              0.3436  309.37
+2N2             0.0075  284.74
+O1              0.3922  81.31
 x 0 0
-S2              0.4386  139.50
+P1              0.1411  235.28
+Q1              0.3044  100.67
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-MU2             0.0090  88.29
-NU2             0.0023  289.08
+S2              0.4386  319.50
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0026  26.67
-MS4             0.0223  214.62
+x 0 0
+MU2             0.0090  268.29
+NU2             0.0023  109.08
+x 0 0
+x 0 0
+x 0 0
+MN4             0.0026  206.67
+MS4             0.0223  34.62
 x 0 0
 x 0 0
 x 0 0
