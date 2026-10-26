@@ -573682,11 +573682,11 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from SEMAR Mexico tide predictions
-# using UTide (v0.3.1) with cosine-interpolated HW/LW data
-# 2806 HW/LW points -> 105151 interpolated points
+# by peak fit (py/semar_scheitelfit.py): h(t)=h_i, dh/dt=0 at printed HW/LW
+# 2806 HW/LW points
 # from 2024-01-01 to 2026-12-31
-# R^2 = 0.9552, RMS error = 0.0663 m
-# Constituents analyzed: 68
+# (former cosine/UTide fit replaced 2026-10-26; see notes)
+# Constituents analyzed: 67
 #
 # Santa Rosalía, Baja California Sur, Mexico
 # BEGIN HOT COMMENTS
@@ -575261,11 +575261,11 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from SEMAR Mexico tide predictions
-# using UTide (v0.3.1) with cosine-interpolated HW/LW data
-# 2959 HW/LW points -> 105137 interpolated points
+# by peak fit (py/semar_scheitelfit.py): h(t)=h_i, dh/dt=0 at printed HW/LW
+# 2959 HW/LW points
 # from 2024-01-01 to 2026-12-31
-# R^2 = 0.9708, RMS error = 0.0351 m
-# Constituents analyzed: 68
+# (former cosine/UTide fit replaced 2026-10-26; see notes)
+# Constituents analyzed: 67
 #
 # Altamira, Tamaulipas, Mexico
 # BEGIN HOT COMMENTS
@@ -575658,11 +575658,11 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from SEMAR Mexico tide predictions
-# using UTide (v0.3.1) with cosine-interpolated HW/LW data
-# 2966 HW/LW points -> 105145 interpolated points
+# by peak fit (py/semar_scheitelfit.py): h(t)=h_i, dh/dt=0 at printed HW/LW
+# 2966 HW/LW points
 # from 2024-01-01 to 2026-12-31
-# R^2 = 0.9726, RMS error = 0.0356 m
-# Constituents analyzed: 68
+# (former cosine/UTide fit replaced 2026-10-26; see notes)
+# Constituents analyzed: 67
 #
 # Coatzacoalcos, Veracruz, Mexico
 # BEGIN HOT COMMENTS
@@ -576055,11 +576055,11 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from SEMAR Mexico tide predictions
-# using UTide (v0.3.1) with cosine-interpolated HW/LW data
-# 3042 HW/LW points -> 105140 interpolated points
+# by peak fit (py/semar_scheitelfit.py): h(t)=h_i, dh/dt=0 at printed HW/LW
+# 3042 HW/LW points
 # from 2024-01-01 to 2026-12-31
-# R^2 = 0.9169, RMS error = 0.0647 m
-# Constituents analyzed: 68
+# (former cosine/UTide fit replaced 2026-10-26; see notes)
+# Constituents analyzed: 67
 #
 # Dos Bocas, Tabasco, Mexico
 # BEGIN HOT COMMENTS
@@ -576255,11 +576255,11 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from SEMAR Mexico tide predictions
-# using UTide (v0.3.1) with cosine-interpolated HW/LW data
-# 3129 HW/LW points -> 105143 interpolated points
+# by peak fit (py/semar_scheitelfit.py): h(t)=h_i, dh/dt=0 at printed HW/LW
+# 3129 HW/LW points
 # from 2024-01-01 to 2026-12-31
-# R^2 = 0.9691, RMS error = 0.0367 m
-# Constituents analyzed: 68
+# (former cosine/UTide fit replaced 2026-10-26; see notes)
+# Constituents analyzed: 67
 #
 # Frontera, Tabasco, Mexico
 # BEGIN HOT COMMENTS
@@ -576652,11 +576652,11 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from SEMAR Mexico tide predictions
-# using UTide (v0.3.1) with cosine-interpolated HW/LW data
-# 2663 HW/LW points -> 105144 interpolated points
+# by peak fit (py/semar_scheitelfit.py): h(t)=h_i, dh/dt=0 at printed HW/LW
+# 2663 HW/LW points
 # from 2024-01-01 to 2027-01-01
-# R^2 = 0.9540, RMS error = 0.0261 m
-# Constituents analyzed: 68
+# (former cosine/UTide fit replaced 2026-10-26; see notes)
+# Constituents analyzed: 67
 #
 # La Pesca, Tamaulipas, Mexico
 # BEGIN HOT COMMENTS
@@ -577246,11 +577246,11 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from SEMAR Mexico tide predictions
-# using UTide (v0.3.1) with cosine-interpolated HW/LW data
-# 3095 HW/LW points -> 105136 interpolated points
+# by peak fit (py/semar_scheitelfit.py): h(t)=h_i, dh/dt=0 at printed HW/LW
+# 3095 HW/LW points
 # from 2024-01-01 to 2026-12-31
-# R^2 = 0.9438, RMS error = 0.0475 m
-# Constituents analyzed: 68
+# (former cosine/UTide fit replaced 2026-10-26; see notes)
+# Constituents analyzed: 67
 #
 # Tuxpan, Veracruz, Mexico
 # BEGIN HOT COMMENTS
