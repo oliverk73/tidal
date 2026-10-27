@@ -72459,12 +72459,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -170.7000
-# !latitude: 52.6833
+# !longitude: -170.7070
+# !latitude: 52.6817
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20261017 Phasen um +1 h gedreht: Buchzone -10 gegen Unalaska -9 fehlte; FES K1 -79 -> -19 min (py/noaa_buchzeilen_probe.py) (Oliver).
-North side, Alaska
+# note: 2026-10-27 Name und Position nach NOAA CO-OPS 9462144 "North side" (Yunaska Island; vorher "North side", 52.6833/-170.7000, 0.50 km).
+Yunaska Island (north side), Alaska
 -09:00 :America/Adak
 0.7315 meters
 J1              0.0274  177.40
