@@ -27704,8 +27704,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -82.8513
-# !latitude: 27.8664
+# !longitude: -82.8471
+# !latitude: 27.8672
 # state: Florida
 # admin1_quelle: Polygon
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 27.8667/-82.8500, Kueste 0.03 km) (Oliver).
@@ -42522,8 +42522,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -124.7480
-# !latitude: 48.6114
+# !longitude: -124.7514
+# !latitude: 48.6110
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # note: 20260903 Provinz "British Columbia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
@@ -83705,8 +83705,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -119.0994
-# !latitude: 34.0985
+# !longitude: -119.0932
+# !latitude: 34.0994
 # state: California
 # admin1_quelle: Ufer 0.1 km
 # note: 20260913 S2/K2 x 3.98 auf den Springhub des Buchs (wctt-451); der Bau
@@ -83715,7 +83715,7 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Los Angeles (outer harbor), California [harmonics-dwf-202512,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 34.1000/-119.1000, Kueste 0.08 km) (Oliver).
-Mugu Lagoon (ocean pier), California
+Mugu Lagoon, California
 +00:00 :America/Los_Angeles
 0.8230 meters
 J1              0.0203  220.92
@@ -90313,8 +90313,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -124.2836
-# !latitude: 42.0454
+# !longitude: -124.2705
+# !latitude: 42.0466
 # region: Chetco Cove
 # admin1_quelle: Name
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 42.0500/-124.2833, Kueste 0.41 km) (Oliver).
@@ -91086,8 +91086,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -123.9735
-# !latitude: 45.1674
+# !longitude: -123.9690
+# !latitude: 45.1604
 # state: Oregon
 # admin1_quelle: Polygon
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 45.1667/-123.9667, Kueste 0.44 km) (Oliver).
@@ -92057,8 +92057,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -123.5889
-# !latitude: 46.1889
+# !longitude: -123.5841
+# !latitude: 46.1872
 # region: Knappa Slough
 # admin1_quelle: Name
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.104,
@@ -92252,8 +92252,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -123.6489
-# !latitude: 46.2651
+# !longitude: -123.6685
+# !latitude: 46.2669
 # region: Wash
 # admin1_quelle: Name
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.185,
