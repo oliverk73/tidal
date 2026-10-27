@@ -38,6 +38,9 @@ PEGEL = [
     # verworfen 17.10.: ('PAYJI', 'Pantai Payangan (Teluk Love), Jawa Timur, Indonesia', 'Jawa Timur', -8.44, 113.58),
     ('BETSI', 'Beo (Pulau Karakelang), Sulawesi Utara, Indonesia', 'Sulawesi Utara', 4.23, 126.79),
     # verworfen 17.10.: ('ms002', 'Kerachut (Penang), Malaysia', 'Pulau Pinang', 5.45, 100.18),
+    # 27.10.: ersetzt den ATT-Satz (NP203 2002) am selben Ort, der 2016-2026 gleichmaessig ~13 min zu frueh liegt;
+    # Position = Olivers gepruefte ATT-Position (IOC 14.8167/120.2833, 0.4 km)
+    ('subi', 'Olongapo (Subic Bay), Zambales, Philippines', 'Zambales', 14.8169, 120.2797),
 ]
 
 
