@@ -51604,12 +51604,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -133.5000
-# !latitude: 57.5500
+# !longitude: -133.4980
+# !latitude: 57.5433
 # state: Alaska
 # admin1_quelle: Ufer 1.3 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9451962 "Windham Bay" (vorher 57.5500/-133.5000, 0.75 km).
 Windham Bay, Alaska
 -09:00 :America/Juneau
 2.3774 meters
@@ -51798,12 +51799,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.0333
-# !latitude: 57.6833
+# !longitude: -134.0380
+# !latitude: 57.6783
 # region: Seymour Canal
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9452128 "Rasp Ledge, Seymour Canal" (vorher 57.6833/-134.0333, 0.62 km).
 Rasp Ledge (Seymour Canal), Alaska
 -09:00 :America/Juneau
 2.4994 meters
@@ -52578,12 +52580,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.0167
-# !latitude: 58.4000
+# !longitude: -134.0061
+# !latitude: 58.4087
 # state: Alaska
 # admin1_quelle: Ufer 0.9 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9452124 "Taku Point, Taku Inlet" (vorher 58.4000/-134.0167, 1.14 km).
 Taku Point (Taku Inlet), Alaska
 -09:00 :America/Juneau
 2.6213 meters
@@ -52969,12 +52972,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.9000
-# !latitude: 58.2500
+# !longitude: -134.8950
+# !latitude: 58.2550
 # state: Alaska
 # admin1_quelle: Ufer 0.8 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9452321 "Funter, Funter Bay" (vorher 58.2500/-134.9000, 0.63 km).
 Funter (Funter Bay), Alaska
 -09:00 :America/Juneau
 2.4079 meters
@@ -53163,12 +53167,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -135.2333
-# !latitude: 58.7167
+# !longitude: -135.2320
+# !latitude: 58.7133
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (3).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9452391 "William Henry Bay" (vorher 58.7167/-135.2333, 0.39 km).
 William Henry Bay, Alaska
 -09:00 :America/Juneau
 2.4994 meters
@@ -53752,8 +53757,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.2333
-# !latitude: 56.3000
+# !longitude: -134.2380
+# !latitude: 56.3050
 # fixes: Gruppen-Shift -60min (empirische Kalibrierung gegen Messnachbarn; SE-Alaska: Zonenstunde), 2026-07-19
 # state: Alaska
 # admin1_quelle: Ufer 0.7 km
@@ -53762,6 +53767,7 @@ x 0 0
 # note: -- Siehe py/fes_gruppenpruefung.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sitka, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9451093 "Port Malmesbury, Kuiu Island" (vorher 56.3000/-134.2333, 0.63 km).
 Port Malmesbury (Kuiu Island), Alaska
 -09:00 :America/Sitka
 1.7983 meters
@@ -54533,12 +54539,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -134.8500
-# !latitude: 57.4167
+# !longitude: -134.8392
+# !latitude: 57.4125
 # state: Alaska
 # admin1_quelle: Ufer 5.1 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
+# note: 2026-10-27 Position nach GNIS Cape "Point Thatcher" (vorher 57.4167/-134.8500, 0.80 km).
 Point Thatcher, Alaska
 -09:00 :America/Sitka
 2.3165 meters
@@ -55710,12 +55717,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -135.4167
-# !latitude: 57.5667
+# !longitude: -135.4120
+# !latitude: 57.5617
 # state: Alaska
 # admin1_quelle: Ufer 2.2 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9451979 "Nismeni Cove" (vorher 57.5667/-135.4167, 0.62 km).
 Nismeni Cove, Alaska
 -09:00 :America/Sitka
 2.3470 meters
@@ -55904,12 +55912,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -135.2833
-# !latitude: 57.5167
+# !longitude: -135.2914
+# !latitude: 57.5100
 # state: Alaska
 # admin1_quelle: Ufer 0.7 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Juneau, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach GNIS Cape "Point Elizabeth" (vorher 57.5167/-135.2833, 0.89 km).
 Point Elizabeth, Alaska
 -09:00 :America/Sitka
 2.3165 meters
@@ -56874,12 +56883,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -136.5167
-# !latitude: 57.9167
+# !longitude: -136.5200
+# !latitude: 57.9283
 # state: Alaska
 # admin1_quelle: Ufer 1.0 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Elfin Cove, Port Althorp, Cross Sound, Alaska [harmonics-dwf,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9452671 "Takanis Bay" (vorher 57.9167/-136.5167, 1.30 km).
 Takanis Bay, Alaska
 +00:00 :America/Juneau
 1.6154 meters
@@ -58434,10 +58444,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -145.9833
-# !latitude: 60.4667
+# !longitude: -145.9880
+# !latitude: 60.4650
 # state: Alaska
 # admin1_quelle: Ufer 2.3 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9454125 "Shag Rock" (vorher 60.4667/-145.9833, 0.32 km).
 Shag Rock, Alaska
 +00:00 :America/Anchorage
 1.8288 meters
@@ -58627,12 +58638,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -145.9667
-# !latitude: 60.4667
+# !longitude: -145.9492
+# !latitude: 60.4750
 # state: Alaska
 # admin1_quelle: Ufer 1.5 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cordova, Orca Inlet, Prince William Sd, Alaska [harmonics-dw,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach GNIS Cape "Gravel Point" (vorher 60.4667/-145.9667, 1.33 km).
 Gravel Point, Alaska
 +00:00 :America/Anchorage
 1.9812 meters
@@ -59607,10 +59619,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -146.5333
-# !latitude: 60.8500
+# !longitude: -146.5350
+# !latitude: 60.8533
 # region: Port Fidalgo
 # admin1_quelle: Name
+# note: 2026-10-27 Position nach NOAA CO-OPS 9454296 "Landlocked Bay, Port Fidalgo" (vorher 60.8500/-146.5333, 0.38 km).
 Landlocked Bay (Port Fidalgo), Alaska
 +00:00 :America/Anchorage
 1.8593 meters
@@ -60189,12 +60202,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -148.1500
-# !latitude: 60.3333
+# !longitude: -148.1430
+# !latitude: 60.3300
 # state: Alaska
 # admin1_quelle: Ufer 1.3 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Cordova, Orca Inlet, Prince William Sd, Alaska [harmonics-dw,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9454787 "Chenega Island, Dangerous Passage" (vorher 60.3333/-148.1500, 0.53 km).
 Chenega Island (Dangerous Passage), Alaska
 +00:00 :America/Anchorage
 1.8593 meters
@@ -60578,12 +60592,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -151.4333
-# !latitude: 59.2500
+# !longitude: -151.4200
+# !latitude: 59.2550
 # state: Alaska
 # admin1_quelle: Ufer 1.3 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Seward, Resurrection Bay, Alaska [harmonics-dwf-20251228-fre,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9455399 "Picnic Harbor, Rocky Bay" (vorher 59.2500/-151.4333, 0.94 km).
 Picnic Harbor (Rocky Bay), Alaska
 +00:00 :America/Anchorage
 2.0117 meters
@@ -60772,12 +60787,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -152.2667
-# !latitude: 58.9500
+# !longitude: -152.2680
+# !latitude: 58.9467
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Seldovia, Cook Inlet, Alaska [harmonics-dwf-20251228-free.tx,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9455478 "Ushagat Island, Barren Islands" (vorher 58.9500/-152.2667, 0.37 km).
 Ushagat Island (Barren Islands), Alaska
 +00:00 :America/Anchorage
 2.1946 meters
@@ -61161,12 +61177,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -151.3500
-# !latitude: 59.4333
+# !longitude: -151.3570
+# !latitude: 59.4317
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Seldovia, Cook Inlet, Alaska [harmonics-dwf-20251228-free.tx,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9455506 "Tutka Bay,Kachemak Bay" (vorher 59.4333/-151.3500, 0.43 km).
 Tutka Bay, Alaska
 +00:00 :America/Anchorage
 2.8956 meters
@@ -61355,12 +61372,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -151.3667
-# !latitude: 59.4833
+# !longitude: -151.3650
+# !latitude: 59.4900
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Seldovia, Cook Inlet, Alaska [harmonics-dwf-20251228-free.tx,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9455514 "Sadie Cove, Kachemak Bay" (vorher 59.4833/-151.3667, 0.75 km).
 Sadie Cove, Alaska
 +00:00 :America/Anchorage
 2.8651 meters
@@ -61549,10 +61567,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -153.2667
-# !latitude: 59.6333
+# !longitude: -153.2620
+# !latitude: 59.6400
 # state: Alaska
 # admin1_quelle: Ufer 1.8 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9456463 "Oil Bay, Kamishak Bay" (vorher 59.6333/-153.2667, 0.79 km).
 Oil Bay (Kamishak Bay), Alaska
 +00:00 :America/Anchorage
 2.2250 meters
@@ -61741,10 +61760,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -154.0833
-# !latitude: 59.1833
+# !longitude: -154.0870
+# !latitude: 59.1783
 # state: Alaska
 # admin1_quelle: Ufer 3.9 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9456822 "Nordyke Island, Kamishak Bay" (vorher 59.1833/-154.0833, 0.59 km).
 Nordyke Island (Kamishak Bay), Alaska
 +00:00 :America/Anchorage
 2.4384 meters
@@ -62127,12 +62147,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -152.7333
-# !latitude: 57.4833
+# !longitude: -152.7180
+# !latitude: 57.4817
 # state: Alaska
 # admin1_quelle: Ufer 1.4 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Kodiak, Women's Bay, Alaska [harmonics-dwf-20251228-free.txt,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9457351 "Ugak Bay (Saltery Cove)" (vorher 57.4833/-152.7333, 0.93 km).
 Ugak Bay (Saltery Cove), Alaska
 +00:00 :America/Anchorage
 1.3106 meters
@@ -62321,10 +62342,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -153.1500
-# !latitude: 57.1667
+# !longitude: -153.1520
+# !latitude: 57.1633
 # state: Alaska
 # admin1_quelle: Ufer 0.4 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9457479 "Port Hobron, Sitkalidak Island" (vorher 57.1667/-153.1500, 0.40 km).
 Port Hobron (Sitkalidak Island), Alaska
 +00:00 :America/Anchorage
 1.3411 meters
@@ -63293,12 +63315,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -153.7333
-# !latitude: 57.5500
+# !longitude: -153.7350
+# !latitude: 57.5483
 # state: Alaska
 # admin1_quelle: Ufer 1.1 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Seldovia, Cook Inlet, Alaska [harmonics-dwf-20251228-free.tx,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9457648 "Zachar Bay" (vorher 57.5500/-153.7333, 0.21 km).
 Zachar Bay, Alaska
 +00:00 :America/Anchorage
 2.2250 meters
@@ -64263,10 +64286,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -154.1167
-# !latitude: 58.3333
+# !longitude: -154.1170
+# !latitude: 58.3417
 # state: Alaska
 # admin1_quelle: Ufer 3.2 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9456835 "Kukak, Kukak Bay" (vorher 58.3333/-154.1167, 0.93 km).
 Kukak (Kukak Bay), Alaska
 +00:00 :America/Anchorage
 2.1031 meters
@@ -65423,10 +65447,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -159.1000
-# !latitude: 55.8500
+# !longitude: -159.1050
+# !latitude: 55.8433
 # state: Alaska
 # admin1_quelle: Ufer 6.3 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9459085 "Chiachi Island (east side)" (vorher 55.8500/-159.1000, 0.81 km).
 Chiachi Island (east side), Alaska
 +00:00 :America/Anchorage
 1.2802 meters
@@ -65999,10 +66024,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -159.8833
-# !latitude: 55.7833
+# !longitude: -159.8750
+# !latitude: 55.7892
 # state: Alaska
 # admin1_quelle: Ufer 1.3 km
+# note: 2026-10-27 Position nach GNIS Cape "Dent Point" (vorher 55.7833/-159.8833, 0.83 km).
 Dent Point (Stepovak Bay), Alaska
 +00:00 :America/Anchorage
 1.2192 meters
@@ -66981,8 +67007,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -160.8333
-# !latitude: 55.4667
+# !longitude: -160.8400
+# !latitude: 55.4733
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -66990,6 +67016,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-27 Position nach NOAA CO-OPS 9459522 "Beaver Bay" (vorher 55.4667/-160.8333, 0.85 km).
 Beaver Bay, Alaska
 +00:00 :America/Anchorage
 1.2192 meters
@@ -67178,8 +67205,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -161.3333
-# !latitude: 55.3667
+# !longitude: -161.3250
+# !latitude: 55.3650
 # state: Alaska
 # admin1_quelle: Ufer 0.6 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -67187,6 +67214,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-27 Position nach NOAA CO-OPS 9459643 "Seal Cape, Coal Bay" (vorher 55.3667/-161.3333, 0.56 km).
 Seal Cape (Coal Bay), Alaska
 +00:00 :America/Anchorage
 1.1887 meters
@@ -67375,8 +67403,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -161.5333
-# !latitude: 55.2667
+# !longitude: -161.5370
+# !latitude: 55.2583
 # state: Alaska
 # admin1_quelle: Ufer 1.8 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -67384,6 +67412,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-27 Position nach NOAA CO-OPS 9459696 "Ukolnoi Island" (vorher 55.2667/-161.5333, 0.96 km).
 Ukolnoi Island, Alaska
 +00:00 :America/Anchorage
 1.1582 meters
@@ -67572,8 +67601,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -161.4667
-# !latitude: 55.5000
+# !longitude: -161.4847
+# !latitude: 55.4878
 # state: Alaska
 # admin1_quelle: Ufer 1.8 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -67581,6 +67610,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-27 Position nach GNIS Cape "Settlement Point" (vorher 55.5000/-161.4667, 1.77 km).
 Settlement Point (Pavlof Bay), Alaska
 +00:00 :America/Anchorage
 1.1582 meters
@@ -67967,8 +67997,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -162.8167
-# !latitude: 54.4833
+# !longitude: -162.8120
+# !latitude: 54.4817
 # state: Alaska
 # admin1_quelle: Polygon
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -67976,6 +68006,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-27 Position nach NOAA CO-OPS 9459968 "Sanak Harbor" (vorher 54.4833/-162.8167, 0.35 km).
 Sanak Harbor, Alaska
 +00:00 :America/Nome
 1.0973 meters
@@ -68164,8 +68195,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -163.2667
-# !latitude: 54.7000
+# !longitude: -163.2670
+# !latitude: 54.7100
 # state: Alaska
 # admin1_quelle: Ufer 0.6 km
 # note: 20260910 Bezugsort berichtigt: das Buch nennt "Sand Point"
@@ -68173,6 +68204,7 @@ x 0 0
 # note: -- Namensgleichheit "Sand Point, Nova Scotia, Canada" genommen.
 # note: -- Neu uebertragen, Zonendifferenz des Buches +0.00 h.
 # note: -- Siehe py/noaa_referenz_verwechslung.py.
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462971 "Dora Harbor" (vorher 54.7000/-163.2667, 1.11 km).
 Dora Harbor, Alaska
 +00:00 :America/Nome
 1.0668 meters
@@ -68361,10 +68393,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -164.4667
-# !latitude: 54.9333
+# !longitude: -164.4670
+# !latitude: 54.9283
 # state: Alaska
 # admin1_quelle: Ufer 1.3 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462838 "Cape Mordvinof" (vorher 54.9333/-164.4667, 0.56 km).
 Cape Mordvinof, Alaska
 -09:00 :America/Nome
 1.1278 meters
@@ -68750,10 +68783,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -166.8333
-# !latitude: 53.6833
+# !longitude: -166.8320
+# !latitude: 53.6783
 # state: Alaska
 # admin1_quelle: Ufer 0.9 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462578 "Anderson Bay" (vorher 53.6833/-166.8333, 0.56 km).
 Anderson Bay, Alaska
 -09:00 :America/Nome
 0.7620 meters
@@ -68942,12 +68976,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -167.0500
-# !latitude: 53.6167
+# !longitude: -167.0450
+# !latitude: 53.6100
 # state: Alaska
 # admin1_quelle: Ufer 0.6 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Unalaska, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (6) und FES.
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462554 "Skan Bay" (vorher 53.6167/-167.0500, 0.81 km).
 Skan Bay, Alaska
 -09:00 :America/Nome
 0.7315 meters
@@ -69329,10 +69364,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -167.5333
-# !latitude: 53.4000
+# !longitude: -167.5330
+# !latitude: 53.3950
 # state: Alaska
 # admin1_quelle: Ufer 1.5 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462501 "Chernofski Harbor" (vorher 53.4000/-167.5333, 0.56 km).
 Chernofski Harbor, Alaska
 -09:00 :America/Nome
 0.7315 meters
@@ -69907,10 +69943,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -166.8667
-# !latitude: 53.4667
+# !longitude: -166.8730
+# !latitude: 53.4750
 # state: Alaska
 # admin1_quelle: Ufer 1.0 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462573 "Raven Bay" (vorher 53.4667/-166.8667, 1.01 km).
 Raven Bay, Alaska
 -09:00 :America/Nome
 1.0058 meters
@@ -70486,12 +70523,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -166.5667
-# !latitude: 53.7167
+# !longitude: -166.5720
+# !latitude: 53.7133
 # state: Alaska
 # admin1_quelle: Ufer 0.5 km
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Unalaska, Alaska [harmonics-2004-06-14_mod.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462606 "Kisselen Bay, Beaver Inlet" (vorher 53.7167/-166.5667, 0.51 km).
 Kisselen Bay (Beaver Inlet), Alaska
 -09:00 :America/Nome
 0.9144 meters
@@ -70680,10 +70718,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -168.0333
-# !latitude: 53.9167
+# !longitude: -168.0330
+# !latitude: 53.9300
 # state: Alaska
 # admin1_quelle: Ufer 38.5 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462444 "Bogoslof Island" (vorher 53.9167/-168.0333, 1.48 km).
 Bogoslof Island, Alaska
 -09:00 :America/Nome
 0.7620 meters
@@ -71065,10 +71104,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -169.1667
-# !latitude: 52.9167
+# !longitude: -169.1650
+# !latitude: 52.9117
 # state: Alaska
 # admin1_quelle: Ufer 9.4 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462317 "Adugak Island" (vorher 52.9167/-169.1667, 0.57 km).
 Adugak Islands, Alaska
 -09:00 :America/Nome
 0.7315 meters
@@ -71643,10 +71683,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -168.4333
-# !latitude: 53.0500
+# !longitude: -168.4420
+# !latitude: 53.0450
 # state: Alaska
 # admin1_quelle: Ufer 2.3 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462398 "Kigul Island" (vorher 53.0500/-168.4333, 0.80 km).
 Kigul Island, Alaska
 -09:00 :America/Nome
 0.9449 meters
@@ -72805,10 +72846,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -172.4000
-# !latitude: 52.3833
+# !longitude: -172.4050
+# !latitude: 52.3917
 # state: Alaska
 # admin1_quelle: Ufer 0.5 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461945 "Finch Cove, Seguam Island" (vorher 52.3833/-172.4000, 0.99 km).
 Finch Cove (Seguam Island), Alaska
 +00:00 :America/Adak
 0.4877 meters
@@ -72997,10 +73039,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -174.2000
-# !latitude: 52.1167
+# !longitude: -174.2070
+# !latitude: 52.1183
 # state: Alaska
 # admin1_quelle: Ufer 0.8 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461704 "Cape Utalug (4 miles west of)" (vorher 52.1167/-174.2000, 0.51 km).
 Cape Utalug (4 miles west of), Alaska
 +00:00 :America/Adak
 0.6706 meters
@@ -73189,12 +73232,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -175.3167
-# !latitude: 52.0000
+# !longitude: -175.3200
+# !latitude: 52.0067
 # region: east end #
 # admin1_quelle: Name
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Sweeper Cove, Adak Island, Alaska [harmonics-dwf-20251228-fr,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn 25-100 km (2) und FES.
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461555 "Atka Pass, east end" (vorher 52.0000/-175.3167, 0.78 km).
 Atka Pass (east end), Alaska
 +00:00 :America/Adak
 0.7010 meters
@@ -73383,10 +73427,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -174.4833
-# !latitude: 52.0333
+# !longitude: -174.4800
+# !latitude: 52.0267
 # state: Alaska
 # admin1_quelle: Ufer 0.5 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461667 "Sagchudak Island" (vorher 52.0333/-174.4833, 0.77 km).
 Sagchudak Island, Alaska
 +00:00 :America/Adak
 0.7010 meters
@@ -73575,10 +73620,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -174.5667
-# !latitude: 52.0667
+# !longitude: -174.5680
+# !latitude: 52.0733
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461656 "Explorer Bay" (vorher 52.0667/-174.5667, 0.74 km).
 Explorer Bay, Alaska
 +00:00 :America/Adak
 0.7010 meters
@@ -73767,10 +73813,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -175.1167
-# !latitude: 52.0333
+# !longitude: -175.1150
+# !latitude: 52.0367
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461582 "Bechevin Bay" (vorher 52.0333/-175.1167, 0.40 km).
 Bechevin Bay, Alaska
 +00:00 :America/Adak
 0.5182 meters
@@ -73959,10 +74006,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -175.5833
-# !latitude: 51.9667
+# !longitude: -175.5880
+# !latitude: 51.9600
 # state: Alaska
 # admin1_quelle: Ufer 5.4 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461519 "Fenimore Pass" (vorher 51.9667/-175.5833, 0.81 km).
 Fenimore Pass, Alaska
 +00:00 :America/Adak
 0.4877 meters
@@ -74344,10 +74392,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -176.0833
-# !latitude: 51.9667
+# !longitude: -176.0850
+# !latitude: 51.9733
 # state: Alaska
 # admin1_quelle: Ufer 1.5 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461453 "Sand Bay, Great Sitkin Island" (vorher 51.9667/-176.0833, 0.74 km).
 Sand Bay (Great Sitkin Island), Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -74536,10 +74585,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -175.8667
-# !latitude: 51.9500
+# !longitude: -175.8722
+# !latitude: 51.9450
 # state: Alaska
 # admin1_quelle: Ufer 2.2 km
+# note: 2026-10-27 Position nach GNIS Cape "Tanager Point" (vorher 51.9500/-175.8667, 0.67 km).
 Tanager Point (Chugul Island), Alaska
 +00:00 :America/Adak
 0.5791 meters
@@ -74728,10 +74778,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -176.4000
-# !latitude: 51.8333
+# !longitude: -176.4020
+# !latitude: 51.8250
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461411 "Laska Cove, Kagalaska Island" (vorher 51.8333/-176.4000, 0.93 km).
 Laska Cove (Kagalaska Island), Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -75113,10 +75164,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -176.5333
-# !latitude: 51.7167
+# !longitude: -176.5300
+# !latitude: 51.7133
 # state: Alaska
 # admin1_quelle: Ufer 2.8 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461391 "Boot Bay" (vorher 51.7167/-176.5333, 0.44 km).
 Boot Bay, Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -75305,10 +75357,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -176.8333
-# !latitude: 51.6500
+# !longitude: -176.8250
+# !latitude: 51.6417
 # state: Alaska
 # admin1_quelle: Ufer 1.5 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461337 "Bay of Waterfalls" (vorher 51.6500/-176.8333, 1.09 km).
 Bay of Waterfalls, Alaska
 +00:00 :America/Adak
 0.5182 meters
@@ -75497,10 +75550,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -176.8000
-# !latitude: 51.7833
+# !longitude: -176.8070
+# !latitude: 51.7800
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461341 "Unalga Bight" (vorher 51.7833/-176.8000, 0.61 km).
 Unalga Bight, Alaska
 +00:00 :America/Adak
 0.5486 meters
@@ -75689,10 +75743,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -177.0667
-# !latitude: 51.8667
+# !longitude: -177.0680
+# !latitude: 51.8700
 # state: Alaska
 # admin1_quelle: Ufer 0.1 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461292 "Shoal Point" (vorher 51.8667/-177.0667, 0.38 km).
 Shoal Point, Alaska
 +00:00 :America/Adak
 0.4877 meters
@@ -75881,10 +75936,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -177.1500
-# !latitude: 51.7167
+# !longitude: -177.1450
+# !latitude: 51.7100
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461276 "Cape Chlanak" (vorher 51.7167/-177.1500, 0.82 km).
 Cape Chlanak, Alaska
 +00:00 :America/Adak
 0.5182 meters
@@ -76265,10 +76321,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -177.6333
-# !latitude: 51.6667
+# !longitude: -177.6370
+# !latitude: 51.6650
 # state: Alaska
 # admin1_quelle: Ufer 0.7 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461183 "Cape Chunu" (vorher 51.6667/-177.6333, 0.32 km).
 Cape Chunu, Alaska
 +00:00 :America/Adak
 0.6096 meters
@@ -76842,10 +76899,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -178.0500
-# !latitude: 51.6667
+# !longitude: -178.0450
+# !latitude: 51.6717
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461132 "Lash Bay" (vorher 51.6667/-178.0500, 0.65 km).
 Lash Bay, Alaska
 +00:00 :America/Adak
 0.6401 meters
@@ -77034,10 +77092,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -178.6167
-# !latitude: 51.6000
+# !longitude: -178.6170
+# !latitude: 51.6033
 # state: Alaska
 # admin1_quelle: Ufer 19.6 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9461081 "Ogliuga Island (east coast)" (vorher 51.6000/-178.6167, 0.37 km).
 Ogliuga Island (east coast), Alaska
 +00:00 :America/Adak
 0.5182 meters
@@ -78964,10 +79023,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -163.1167
-# !latitude: 55.4167
+# !longitude: -163.1150
+# !latitude: 55.4133
 # state: Alaska
 # admin1_quelle: Ufer 1.0 km
+# note: 2026-10-27 Position nach NOAA CO-OPS 9462987 "Amak Island" (vorher 55.4167/-163.1167, 0.39 km).
 Amak Island, Alaska
 -09:00 :America/Nome
 1.4326 meters
@@ -79156,10 +79216,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -162.9000
-# !latitude: 55.2667
+# !longitude: -162.8958
+# !latitude: 55.2697
 # state: Alaska
 # admin1_quelle: Ufer 0.2 km
+# note: 2026-10-27 Position nach GNIS Cape "Grant Point" (vorher 55.2667/-162.9000, 0.43 km).
 Grant Point (Izembek Lagoon), Alaska
 -09:00 :America/Nome
 0.7925 meters
@@ -79542,10 +79603,11 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -162.6000
-# !latitude: 63.2667
+# !longitude: -162.6020
+# !latitude: 63.2800
 # state: Alaska
 # admin1_quelle: Polygon
+# note: 2026-10-27 Position nach NOAA CO-OPS 9468011 "Pikmiktalik River entrance" (vorher 63.2667/-162.6000, 1.48 km).
 Pikmiktalik River entrance, Alaska
 +00:00 :America/Nome
 0.6401 meters
