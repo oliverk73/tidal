@@ -175,8 +175,8 @@ SOURCE_GROUPS = OrderedDict([
     # Oliver 18.10.2026: automatisch ans Ufer geholte NOAA-Saetze, bis er sie geprueft hat
     # (py/noaa_land_ans_ufer.py, Liste harmonics/help/noaa_auto_verschoben.csv)
     ('NOAA verschoben (prüfen)', {'color': '#FF00FF', 'files': []}),
-    # Oliver 27.10.2026: US-Stroeme an Engstellen auf Buchminute bzw. an Land, Vorschlag Fahrwassermitte
-    # (py/stroemung_fahrwasser.py, Liste harmonics/help/stroemung_us_pruefen.csv) -- nichts verschoben
+    # Oliver 27.10.2026: Stroeme an Engstellen auf Buchminute bzw. an Land, Vorschlag Fahrwassermitte
+    # (py/stroemung_fahrwasser.py, Liste harmonics/help/stroemung_position_pruefen.csv) -- nichts verschoben
     ('Strömung Position (prüfen)', {'color': '#FF6F00', 'files': []}),
 ])
 
@@ -223,7 +223,7 @@ if os.path.exists(_av):
                        for z in _csv.DictReader(open(_av, encoding='utf-8')) if z['aktion'] == 'verschoben'}
 
 STROM_PRUEFEN = set()
-_sp = os.path.join(os.path.dirname(_av), 'stroemung_us_pruefen.csv')
+_sp = os.path.join(os.path.dirname(_av), 'stroemung_position_pruefen.csv')
 if os.path.exists(_sp):
     import csv as _csv
     STROM_PRUEFEN = {(os.path.splitext(os.path.basename(z['datei']))[0] + '.tcd', z['name'])
