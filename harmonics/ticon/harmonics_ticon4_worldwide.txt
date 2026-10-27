@@ -15013,8 +15013,11 @@ MNUS2
 # !latitude: 56.150002
 # region: Midtjylland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Aarhus, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0010  19.65
 K1              0.0024  334.28
@@ -18656,8 +18659,11 @@ x 0 0
 # !latitude: 55.2667
 # region: Syddanmark
 # admin1_quelle: Ufer 0.1 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Assens, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0025  140.28
 K1              0.0194  213.05
@@ -19248,8 +19254,11 @@ x 0 0
 # !latitude: 54.7524
 # region: Syddanmark
 # admin1_quelle: Ufer 1.1 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Bagenkop, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0021  143.82
 K1              0.0208  208.39
@@ -20452,8 +20461,11 @@ x 0 0
 # !latitude: 55.8174
 # region: Midtjylland
 # admin1_quelle: Ufer 1.6 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Ballen (Samsø), Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0007  30.28
 K1              0.0032  257.64
@@ -20650,8 +20662,11 @@ x 0 0
 # !latitude: 55.130798
 # region: Syddanmark
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Ballum, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0082  191.06
 K1              0.0546  86.53
@@ -21450,8 +21465,11 @@ x 0 0
 # !latitude: 54.8391
 # region: Sjaælland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Bandholm, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0009  134.51
 K1              0.0148  225.46
@@ -22257,8 +22275,11 @@ x 0 0
 # !latitude: 43.4781
 # region: Pyrénées-Atlantiques
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- Messfit-Zwilling Bayonne (Pont Blanc) -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Bayonne (Pont Blanc), France
-+01:00 :Europe/Paris
++00:00 :Europe/Paris
 0.0000 meters
 J1              0.0016  167.76
 K1              0.0541  82.34
@@ -24268,8 +24289,11 @@ x 0 0
 # !latitude: 55.566700
 # region: Syddanmark
 # admin1_quelle: Ufer 2.9 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Bogense, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0016  48.57
 K1              0.0022  231.61
@@ -25860,8 +25884,11 @@ x 0 0
 # !latitude: 55.183300
 # region: Syddanmark
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Brøns, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0085  191.91
 K1              0.0449  93.72
@@ -37675,8 +37702,11 @@ x 0 0
 # !latitude: 55.5943
 # region: Hovedstaden
 # admin1_quelle: Ufer 0.9 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Dragør, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0005  110.25
 K1              0.0092  119.86
@@ -37873,8 +37903,11 @@ x 0 0
 # !latitude: 55.535801
 # region: Hovedstaden
 # admin1_quelle: Ufer 6.5 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Drogden, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0011  157.60
 K1              0.0145  137.02
@@ -41275,8 +41308,11 @@ x 0 0
 # !units: meters
 # !longitude: 4.720000
 # !latitude: 54.849998
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- RWS-Messung F3 -58 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 F3 Platform, Netherlands
-+01:00 :Europe/Amsterdam
++00:00 :Europe/Amsterdam
 0.0000 meters
 J1              0.0023  53.55
 K1              0.0374  335.81
@@ -41473,8 +41509,11 @@ x 0 0
 # !latitude: 55.1000
 # region: Syddanmark
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Faaborg, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0030  142.89
 K1              0.0204  210.88
@@ -44281,8 +44320,11 @@ x 0 0
 # !latitude: 55.5598
 # region: Syddanmark
 # admin1_quelle: Ufer 1.0 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Fredericia, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0011  61.95
 K1              0.0072  228.00
@@ -44482,8 +44524,11 @@ x 0 0
 # !latitude: 57.433300
 # region: Nordjylland
 # admin1_quelle: Ufer 1.2 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Frederikshavn, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0010  235.38
 K1              0.0039  331.91
@@ -45089,8 +45134,11 @@ x 0 0
 # !latitude: 54.9953
 # region: Syddanmark
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Fynshav (Als), Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0021  120.63
 K1              0.0218  209.19
@@ -48699,8 +48747,11 @@ x 0 0
 # !latitude: 57.789700
 # region: Västra Götaland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- SMHI Goeteborg-Agnesberg -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Göteborg Agnesburg, Sweden
-+01:00 :Europe/Stockholm
++00:00 :Europe/Stockholm
 0.0000 meters
 J1              0.0013  296.76
 K1              0.0046  344.36
@@ -49692,8 +49743,11 @@ x 0 0
 # !latitude: 56.411098
 # region: Midtjylland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Grenaa, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0010  330.60
 K1              0.0027  350.18
@@ -53088,8 +53142,11 @@ x 0 0
 # !latitude: 54.8227
 # region: Sjaælland
 # admin1_quelle: Ufer 2.7 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Hesnæs, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0030  125.34
 K1              0.0175  150.29
@@ -53488,8 +53545,11 @@ x 0 0
 # !latitude: 56.6387
 # region: Nordjylland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Hobro, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0008  59.26
 K1              0.0018  33.75
@@ -53686,8 +53746,11 @@ x 0 0
 # !latitude: 55.7224
 # region: Sjaælland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Holbæk, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0017  355.54
 K1              0.0068  328.42
@@ -54695,8 +54758,11 @@ x 0 0
 # !latitude: 55.9126
 # region: Midtjylland
 # admin1_quelle: Ufer 1.0 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Hou, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0019  19.93
 K1              0.0017  316.25
@@ -55696,8 +55762,11 @@ x 0 0
 # !latitude: 55.998798
 # region: Midtjylland
 # admin1_quelle: Ufer 0.4 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Hvide Sande Kyst, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0043  206.85
 K1              0.0354  75.39
@@ -59706,8 +59775,11 @@ x 0 0
 # !latitude: 55.7167
 # region: Midtjylland
 # admin1_quelle: Ufer 0.9 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Juelsminde, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0011  52.66
 K1              0.0022  239.47
@@ -60105,8 +60177,11 @@ x 0 0
 # !latitude: 58.634201
 # region: Östergötland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- SMHI Juten-Djuroekvarn -62 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Norrköping (Juten), Sweden
-+01:00 :Europe/Stockholm
++00:00 :Europe/Stockholm
 0.0000 meters
 J1              0.0009  349.57
 K1              0.0108  77.68
@@ -60903,8 +60978,11 @@ x 0 0
 # !latitude: 54.9928
 # region: Sjaælland
 # admin1_quelle: Ufer 0.7 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Kalvehave, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0014  166.18
 K1              0.0098  200.81
@@ -61707,8 +61785,11 @@ x 0 0
 # !latitude: 55.1763
 # region: Sjaælland
 # admin1_quelle: Ufer 0.7 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Karrebæksminde, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0012  188.57
 K1              0.0114  241.73
@@ -65123,8 +65204,11 @@ x 0 0
 # !latitude: 55.7000
 # region: Hovedstaden
 # admin1_quelle: Ufer 0.5 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 København, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0006  5.89
 K1              0.0037  59.31
@@ -65321,8 +65405,11 @@ x 0 0
 # !latitude: 55.450001
 # region: Sjaælland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Koege, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0017  125.66
 K1              0.0163  129.13
@@ -65918,8 +66005,11 @@ x 0 0
 # !latitude: 55.333302
 # region: Sjaælland
 # admin1_quelle: Ufer 0.6 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Korsør, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0003  93.99
 K1              0.0112  226.78
@@ -66519,8 +66609,11 @@ x 0 0
 # !latitude: 58.250000
 # region: Västra Götaland
 # admin1_quelle: Ufer 2.9 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- SMHI Brofjorden/Smoegen -53..-61 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Kristineberg, Sweden
-+01:00 :Europe/Stockholm
++00:00 :Europe/Stockholm
 0.0000 meters
 J1              0.0016  245.86
 K1              0.0031  316.01
@@ -67719,8 +67812,11 @@ x 0 0
 # province: Friesland
 # admin1_quelle: Ufer 28.6 km
 # note: 2026-10-19 Name bereinigt, vorher "L91Tg L91" (Oliver).
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- RWS-Messung L9 -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 L9-1 Platform, Netherlands
-+01:00 :Europe/Amsterdam
++00:00 :Europe/Amsterdam
 0.0000 meters
 J1              0.0030  72.64
 K1              0.0683  348.70
@@ -75754,8 +75850,11 @@ x 0 0
 # !latitude: 55.283298
 # region: Syddanmark
 # admin1_quelle: Ufer 4.1 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Mandø, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0079  194.16
 K1              0.0531  79.50
@@ -83575,8 +83674,11 @@ x 0 0
 # !latitude: 55.636101
 # region: Hovedstaden
 # admin1_quelle: Ufer 3.5 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Nordre Røse, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0013  41.70
 K1              0.0080  77.66
@@ -99782,8 +99884,11 @@ x 0 0
 # !latitude: 56.4500
 # region: Midtjylland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Randers, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0019  6.31
 K1              0.0040  350.22
@@ -100590,8 +100695,11 @@ x 0 0
 # !latitude: 55.333302
 # region: Syddanmark
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Ribe, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0069  199.61
 K1              0.0568  77.31
@@ -105461,8 +105569,11 @@ x 0 0
 # !latitude: 54.6500
 # region: Sjaælland
 # admin1_quelle: Ufer 1.3 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Rødbyhavn, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0014  146.99
 K1              0.0200  191.97
@@ -105866,8 +105977,11 @@ x 0 0
 # !latitude: 55.254200
 # region: Sjaælland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Rodvig, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0013  117.87
 K1              0.0164  136.54
@@ -106466,8 +106580,11 @@ x 0 0
 # !latitude: 55.6515
 # region: Sjaælland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Roskilde, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0010  56.92
 K1              0.0033  46.01
@@ -112890,8 +113007,11 @@ x 0 0
 # !latitude: 55.9730
 # region: Sjaælland
 # admin1_quelle: Ufer 2.3 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Sjællands Odde (Havnebyen), Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0011  344.42
 K1              0.0071  302.58
@@ -113088,8 +113208,11 @@ x 0 0
 # !latitude: 57.719398
 # region: Nordjylland
 # admin1_quelle: Ufer 0.9 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Skagen, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0007  250.64
 K1              0.0025  325.19
@@ -113690,8 +113813,11 @@ x 0 0
 # !latitude: 55.2878
 # region: Syddanmark
 # admin1_quelle: Ufer 0.3 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Nyborg (Slipshavn), Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0009  60.98
 K1              0.0075  218.84
@@ -114092,8 +114218,11 @@ x 0 0
 # !latitude: 54.9121
 # region: Syddanmark
 # admin1_quelle: Ufer 0.6 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Sønderborg, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0025  136.50
 K1              0.0199  211.38
@@ -114884,8 +115013,11 @@ x 0 0
 # !latitude: 54.933300
 # region: Syddanmark
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Spodsbjerg, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0013  143.51
 K1              0.0160  218.11
@@ -120308,8 +120440,11 @@ x 0 0
 # !latitude: 56.707500
 # region: Midtjylland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Thyborøn Kyst, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0027  219.32
 K1              0.0257  113.29
@@ -121505,8 +121640,11 @@ x 0 0
 # !latitude: 56.369999
 # region: Midtjylland
 # admin1_quelle: Ufer 18.3 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Thorsminde Kyst, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0011  64.26
 K1              0.0286  89.92
@@ -123317,8 +123455,11 @@ x 0 0
 # !latitude: 56.599998
 # region: Midtjylland
 # admin1_quelle: Ufer 0.9 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Udbyhøj, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0010  5.68
 K1              0.0047  6.67
@@ -123518,8 +123659,11 @@ x 0 0
 # !latitude: 58.347500
 # region: Västra Götaland
 # admin1_quelle: Polygon
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- SMHI Uddevalla -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Uddevalla, Sweden
-+01:00 :Europe/Stockholm
++00:00 :Europe/Stockholm
 0.0000 meters
 J1              0.0016  264.04
 K1              0.0039  339.96
@@ -124721,8 +124865,11 @@ x 0 0
 # !latitude: 55.8507
 # region: Hovedstaden
 # admin1_quelle: Ufer 0.4 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Vedbæk, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0006  318.10
 K1              0.0037  32.79
@@ -125118,8 +125265,11 @@ x 0 0
 # !latitude: 54.9632
 # region: Syddanmark
 # admin1_quelle: Ufer 0.7 km
+# note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Vidåslusen (Højer), Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0062  190.10
 K1              0.0559  84.32
