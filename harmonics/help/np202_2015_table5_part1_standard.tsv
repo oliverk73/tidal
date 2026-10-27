@@ -1,0 +1,108 @@
+# ATT NP202, Ausgabe 2015 -- TABLE V PART 1 "Tidal levels in metres at Standard Port"
+# Buchseiten xxxviii-xxxix (PDF-Seiten 3-4 von tide_tables/att/np202_iv_vi.pdf), am 27.10.2026 abgelesen.
+# Alle Hoehen ueber Kartennull (= Nullpunkt der Vorhersagen). Seite xxxix (ab Port of Spain) hat
+# Spalten fuer gemischte Tide: MLLW/MHLW/MLHW/MHHW stehen dort in mlws/mlwn/mhwn/mhws, typ=gemischt.
+# Leere Zelle = im Buch Delta (nicht angegeben). Kuerzel: Beobachtung/Konstanten/Vorhersage siehe Buch (b),
+# methode H = harmonisch, NH = nicht harmonisch; jahre = Beobachtungsjahre (volle Jahre in Klammern).
+# hafen	typ	lat_cd	mlws	mlwn	msl	mhwn	mhws	hat	beob	konst	vorh	methode	jahre
+Torshavn	halbtaegig	-0.1	0.0	0.1	0.2	0.2	0.3	0.5	D	D	D	H	1977
+Reykjavik	halbtaegig	-0.2	0.2	1.3	2.2	3.0	4.0	4.5	I	I	I	H	1956-89
+Arkhangel'sk	halbtaegig	0.5	0.7	0.8	1.0	1.2	1.3	1.4	R	R	Hyd	H	1922 (3 months)
+Port of Kem'	halbtaegig	0.1	0.4	0.6	1.2	1.6	1.9	2.1	R	R	Hyd	H	1910
+Ostrov Yekaterininskiy	halbtaegig	-0.1	0.5	1.3	2.1	3.0	3.7	4.2	R	G	G	H	1906-07
+Kirkenes	halbtaegig	0.0	0.6	1.2	2.0	2.8	3.4	3.9	Nor	Nor	Nor	H	1980
+Hammerfest	halbtaegig	0.0	0.5	1.1	1.7	2.3	2.8	3.2	Nor	Nor	Nor	H	1991-97
+Tromso	halbtaegig	0.0	0.5	1.0	1.6	2.2	2.7	3.2	Nor	Nor	Nor	H	1989-97
+Narvik	halbtaegig	0.0	0.5	1.2	1.8	2.5	3.2	3.8	Nor	Nor	Nor	H	1990-97
+Trondheim	halbtaegig	0.0	0.4	1.0	1.6	2.2	2.9	3.5	Nor	Nor	Nor	H	1990-97
+Alesund	halbtaegig	0.0	0.4	0.8	1.2	1.6	2.0	2.4	Nor	Nor	Nor	H	1987-97
+Bergen	halbtaegig	0.0	0.3	0.6	0.9	1.2	1.5	1.8	Nor	Nor	Nor	H	1989-97
+Haugesund	halbtaegig	0.0	0.2	0.4	0.5	0.7	0.9	1.1	Nor	Nor	Nor	H	1943-44
+Stavanger	halbtaegig	0.2	0.4	0.6	0.7	0.7	0.9	1.1	Nor	Nor	Nor	H	1987-97
+Oslo	halbtaegig	0.3	0.5	0.6	0.7	0.8	0.8	1.0	Nor	Nor	Nor	H	1992-97
+Esbjerg	halbtaegig	-0.2	0.2	0.6	1.1	1.6	2.0	2.2	D	D	D	H	1901-92 (89)
+Helgoland	halbtaegig	0.1	0.4	0.8	1.9	2.8	3.1	3.5	WSA	G	G	NH	2001
+Cuxhaven	halbtaegig	0.0	0.4	0.8	2.2	3.3	3.7	4.1	WSA	G	G	NH	2001
+Brunsbuttel Mole 1	halbtaegig	0.3	0.5	0.7	2.1	3.1	3.6	4.1	WSA	G	G	NH	2001
+Hamburg	halbtaegig	-0.1	0.2	0.5	2.3	3.8	4.2	4.6	WSA	G	G	NH	2001
+Bremerhaven	halbtaegig	0.0	0.5	1.0	2.6	4.2	4.7	5.0	WSA	G	G	NH	2001
+Wilhelmshaven	halbtaegig	-0.1	0.5	1.1	2.7	4.2	4.7	5.1	WSA	G	G	NH	2001
+Emden	halbtaegig	-0.1	0.4	0.8	2.5	3.6	4.0	4.4	WSA	G	G	NH	2001
+Eemshaven	halbtaegig	-0.2	0.4	0.8	1.9	2.9	3.2	3.7	N	N	N	H	1999-02
+Den Helder	halbtaegig	-0.1	0.3	0.5	1.3	1.7	1.9	2.3	N	N	N	H	1999-02
+IJmuiden	halbtaegig	-0.1	0.2	0.3	1.1	1.7	2.1	2.6	N	N	N	H	1999-02
+Hoek van Holland	halbtaegig	0.0	0.3	0.3	1.0	1.8	2.2	2.5	N	N	N	H	2003-07
+Rotterdam	halbtaegig	0.0	0.3	0.3	0.9	1.8	2.1	2.5	N	N	N	H	2003-07
+Vlissingen (Flushing)	halbtaegig	0.0	0.5	1.0	2.6	4.1	4.9	5.4	N	N	N	H	2003-07
+Terneuzen	halbtaegig	-0.2	0.5	1.1	2.8	4.4	5.3	6.2	N	N	N	H	1999-02
+Antwerp (Prosperpolder)	halbtaegig	-0.3	0.5	1.1	3.2	5.2	6.2	7.0	B	POL	Hyd	H	1986-87
+Zeebrugge	halbtaegig	-0.3	0.5	1.1	2.5	4.0	4.8	5.6	B	B	B	H	1983
+Oostende	halbtaegig	-0.1	0.6	1.3	2.8	4.2	5.2	5.9	B	B	B	H	1981-89
+Dunkerque	halbtaegig	0.0	0.6	1.5	3.2	5.0	6.0	6.4	HA	F	F	H	1956-83
+Calais	halbtaegig	0.3	0.8	2.0	4.0	6.0	7.3	7.6	HA	F	F	H	1998-01
+Boulogne-sur-Mer	halbtaegig	0.4	1.1	2.6	4.9	7.2	8.8	9.4	HA	F	F	H	1975-82
+Dieppe	halbtaegig	0.0	0.8	2.5	4.9	7.4	9.3	10.1	HA	F	F	H	1957-85
+Le Havre	halbtaegig	0.3	1.2	2.8	4.9	6.6	7.9	8.4	HA	F	F	H	1972-83
+Cherbourg	halbtaegig	0.3	1.1	2.5	3.8	5.0	6.4	7.0	F	F	F	H	1978-89
+St. Malo	halbtaegig	0.1	1.5	4.2	6.8	9.3	12.2	13.6	F	F	F	H	1996-2000
+Brest	halbtaegig	0.3	1.1	2.7	4.1	5.5	7.0	7.9	F	F	F	H	1846-2005
+Lorient (Arsenal)	halbtaegig	0.2	0.8	2.0	3.1	4.0	5.1	5.7	F	F	F	H	1942-44
+Donges	halbtaegig	-0.1	0.6	2.1	3.6	4.7	5.9	6.7	F	F	F	H	1977
+La Rochelle - La Pallice	halbtaegig	0.2	0.9	2.4	3.9	4.9	6.0	6.8	F	F	F	H	1942-73 (5)
+Pointe de Grave	halbtaegig	0.5	1.0	2.1	3.3	4.4	5.3	6.1	HA	F	F	H	1981-89
+Georgetown (Guyana)	halbtaegig	0.0	0.5	1.2	1.8	2.4	3.0	3.3	HA	Hyd	Hyd	H	1974-75 (2)
+Bermuda (St. Georges Is)	halbtaegig	0.1	0.2	0.4	0.7	0.9	1.1	1.4	HA	Hyd	Hyd	H	1987-89 (3)
+Miami Harbour	halbtaegig	-0.3	0.0	0.1	0.4	0.7	0.8	1.1	US	US	Hyd	H	-
+Palm Beach	halbtaegig	-0.3	0.0	0.1	0.5	0.7	0.9	1.4	-	US	Hyd	NH	-
+Savannah	halbtaegig	-0.6	-0.1	0.2	1.3	2.2	2.5	3.0	US	US	Hyd	H	1980
+Charleston	halbtaegig	-0.5	0.0	0.2	0.9	1.5	1.7	2.2	US	US	US	H	1926-39 (4)
+Hampton Roads	halbtaegig	-0.2	0.0	0.1	0.4	0.7	0.8	1.1	US	US	US	H	1995-1999 (5)
+Baltimore	halbtaegig	-0.2	0.0	0.1	0.2	0.4	0.4	0.7	US	US	US	H	1907, 25, 38, 40
+Marcus Hook	halbtaegig	-0.3	0.0	0.1	0.9	1.5	1.5	2.3	US	US	Hyd	H	2003
+Billingsport	halbtaegig	-0.6	0.0	0.2	0.9	1.6	1.8	2.3	-	US	Hyd	NH	-
+Sandy Hook (New York Bay)	halbtaegig	-0.4	0.0	0.2	0.8	1.3	1.6	2.0	US	US	US	H	1940 (3)
+The Battery	halbtaegig	-0.5	-0.1	0.2	0.7	1.3	1.5	1.9	US	US	Hyd	H	1986-90
+New Haven Harbour	halbtaegig	-0.4	0.0	0.3	1.0	1.8	2.0	2.5	US	US	Hyd	H	2000-01
+Boston	halbtaegig	-0.7	0.0	0.4	1.6	2.7	3.1	3.8	US	US	US	H	1978-83 (6)
+Saint John NB	halbtaegig	-0.2	0.8	1.8	4.4	6.9	7.9	9.0	C	C	C	H	(e)
+Halifax	halbtaegig	-0.1	0.3	0.5	1.0	1.5	1.8	2.1	C	C	C	H	(e)
+Point Tupper	halbtaegig	-0.1	0.2	0.4	0.9	1.3	1.7	2.0	C	C	C	H	1997
+Pointe-au-Pere	halbtaegig	-0.1	0.6	1.4	2.3	3.1	3.9	4.9	C	C	C	H	(e)
+Port Alfred	halbtaegig	-0.3	0.4	1.6	2.8	4.0	5.4	6.4	C	C	C	H	1975
+Quebec	halbtaegig	-0.2	0.3	1.0	2.6	3.9	5.2	6.0	C	C	C	NH	(e)
+Baie Comeau	halbtaegig	-0.3	0.3	1.0	1.8	2.6	3.4	4.4	C	C	C	H	1970
+Harrington Harbour	halbtaegig	0.0	0.3	0.7	1.1	1.4	1.8	2.3	C	C	C	H	(e)
+Argentia	halbtaegig	0.1	0.5	0.9	1.4	1.9	2.3	2.7	C	C	C	H	(e)
+St. John's Harbour (Newfoundland)	halbtaegig	0.0	0.3	0.5	0.8	1.0	1.3	1.6	C	C	C	H	(e)
+Ponta Delgada	halbtaegig	0.1	0.3	0.7	1.0	1.3	1.7	1.9	P	P	P	H	1978
+Port of Spain	gemischt	0.0	0.3	0.5	0.7	1.0	1.1	1.4	HA	Hyd	Hyd	H	1986-88 (3)
+Lisas Point	gemischt	0.0	0.2	0.5	0.8	1.1	1.2	1.5	HA	Hyd	Hyd	H	1961 (1 month)
+Puerto la Guaira	gemischt	0.2	0.3		0.5		0.6	0.8	US	US	Hyd	H	1948
+Amuay	gemischt	-0.2	0.0	0.2	0.2	0.3	0.4	0.5	US	US	Hyd	H	1960
+Malecon (Isla Zapara)	gemischt	-0.1	0.3	0.5	0.8	1.2	1.3	1.6	HA	US	US	H	1958
+Santa Marta	gemischt	-0.2	0.0	0.1	0.1	0.2	0.3	0.6	-	-	Hyd	NH	-
+Cartagena	gemischt	-0.1	0.0	0.1	0.1	0.3	0.4	0.5	US	US	Hyd	H	1951
+Punta Covenas	gemischt	-0.2	0.0	0.1	0.1	0.1	0.3	0.6	-	-	Hyd	NH	-
+Punta Yarumal	gemischt	-0.2	0.0	0.1	0.2	0.2	0.5	1.2	-	-	Hyd	NH	-
+Colon	gemischt	-0.1	0.0	0.1	0.2	0.2	0.3	0.5	US	US	US	H	1950 (1)
+Bridgetown	gemischt	-0.1	0.4	0.6	0.7	0.9	1.0	1.4	HA	Hyd	Hyd	H	1990
+Castries	gemischt	0.2	0.3	0.4	0.5	0.5	0.6	0.8	HA	US	Hyd	H	1956
+Saint Croix (Limetree Bay)	gemischt	-0.2	0.0		0.1		0.2	0.3	HA	US	Hyd	H	1995-97
+Santo Domingo	gemischt	-0.1	0.0		0.1		0.2	0.4	HA	US	Hyd	H	1900-28
+Habana	gemischt	0.0	0.2	0.3	0.3	0.4	0.7	0.7	HA	US	Hyd	H	1947
+Progreso	gemischt	-0.3	-0.1		0.3		0.5	0.8	HA	US	Hyd	H	1946
+Campeche	gemischt	-0.5	-0.2	0.4	0.3	0.5	0.6	0.8	HA	US	Hyd	H	1900 (3 months)
+Dos Bocas	gemischt	-0.4	0.0		0.3		0.5	0.8	M	M	Hyd	H	2013
+Vera Cruz	gemischt	-0.3	0.0		0.3		0.5	0.8	HA	US	Hyd	H	1954
+Tampico	gemischt	-0.3	0.0	0.3	0.2	0.3	0.4	0.7	HA	US	Hyd	H	1942
+Matamaros	gemischt	-0.2	0.0	0.3	0.2	0.3	0.4	0.6	M	M	Hyd	H	1965
+Corpus Christi	gemischt	-0.4	0.0		0.3		0.5	0.8	US	US	Hyd	H	1994-98
+Galveston	gemischt	-0.4	0.0	0.3	0.3	0.4	0.4	0.6	US	US	US	H	1939 (1)
+Manchester	gemischt	-0.4	0.0	0.3	0.3	0.4	0.4	0.7	US	US	Hyd	H	2000
+Sabine Pass	gemischt	-0.4	0.0	0.3	0.3	0.4	0.5	0.8	US	US	Hyd	H	2004
+Mobile	gemischt	-0.4	0.0		0.2		0.5	0.7	US	US	Hyd	H	1985-86
+St. Petersburg	gemischt	-0.4	0.0	0.3	0.4	0.4	0.7	0.9	US	US	US	H	1990-93
+Mckay Bay Entrance	gemischt	-0.4	0.0	0.4	0.4	0.5	0.8	1.1	US	US	Hyd	H	1999-01
+Aulds Cove	gemischt	-0.1	0.3	0.6	0.7	0.9	1.1	1.4	C	C	C	H	1955 (2 months)
+Pictou	gemischt	0.0	0.5	1.0	1.2	1.5	1.7	2.1	C	C	C	H	(e)
+Pointe St. Pierre	gemischt	0.0	0.3	0.4	0.8	0.9	1.3	1.9	C	C	C	H	(e)

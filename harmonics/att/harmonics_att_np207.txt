@@ -20794,9 +20794,10 @@ x 0 0
 # region: Upper Takutu-Upper Essequibo
 # admin1_quelle: Polygon
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261027 Z0 1.2200 -> 1.32 m (mittleres ML) und MSF 0.10 m (Spring-ML minus Mittel, Scheitel zur Springzeit) aus NP202 Table VI (att 2291).
 Linden (Demerara River), Guyana
 -04:00 :America/Guyana
-1.2200 meters
+1.3200 meters
 x 0 0
 K1              0.0600  248.00
 K2              0.0594  255.00
@@ -20830,7 +20831,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+MSF             0.1000  28.00
 x 0 0
 x 0 0
 x 0 0
@@ -24462,9 +24463,10 @@ x 0 0
 # state: Ceará
 # admin1_quelle: Name
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261027 Z0 1.6000 -> 1.49 m (mittleres ML) und MSF 0.10 m (Spring-ML minus Mittel, Scheitel zur Springzeit) aus NP202 Table VI (att 2243).
 Acaraú, Ceará, Brazil
 -03:00 :America/Sao_Paulo
-1.6000 meters
+1.4900 meters
 x 0 0
 K1              0.0900  266.00
 K2              0.0675  168.00
@@ -24498,7 +24500,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
+MSF             0.1000  21.00
 x 0 0
 x 0 0
 x 0 0
