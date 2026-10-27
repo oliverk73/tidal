@@ -175,6 +175,9 @@ SOURCE_GROUPS = OrderedDict([
     # Oliver 18.10.2026: automatisch ans Ufer geholte NOAA-Saetze, bis er sie geprueft hat
     # (py/noaa_land_ans_ufer.py, Liste harmonics/help/noaa_auto_verschoben.csv)
     ('NOAA verschoben (prüfen)', {'color': '#FF00FF', 'files': []}),
+    # Oliver 27.10.2026: US-Stroeme an Engstellen auf Buchminute bzw. an Land, Vorschlag Fahrwassermitte
+    # (py/stroemung_fahrwasser.py, Liste harmonics/help/stroemung_us_pruefen.csv) -- nichts verschoben
+    ('Strömung Position (prüfen)', {'color': '#FF6F00', 'files': []}),
 ])
 
 # Group order: predefined + 'Other' fallback (für nicht zugeordnete Quellen)
@@ -219,6 +222,13 @@ if os.path.exists(_av):
     AUTO_VERSCHOBEN = {(os.path.splitext(os.path.basename(z['datei']))[0] + '.tcd', z['name'])
                        for z in _csv.DictReader(open(_av, encoding='utf-8')) if z['aktion'] == 'verschoben'}
 
+STROM_PRUEFEN = set()
+_sp = os.path.join(os.path.dirname(_av), 'stroemung_us_pruefen.csv')
+if os.path.exists(_sp):
+    import csv as _csv
+    STROM_PRUEFEN = {(os.path.splitext(os.path.basename(z['datei']))[0] + '.tcd', z['name'])
+                     for z in _csv.DictReader(open(_sp, encoding='utf-8'))}
+
 # Build columnar JSON payload
 station_rows = []
 for name, lat, lon, source_file, is_current in all_stations:
@@ -228,6 +238,8 @@ for name, lat, lon, source_file, is_current in all_stations:
     group_name = get_group_for_source(source_file)
     if (source_file, name) in AUTO_VERSCHOBEN:
         group_name = 'NOAA verschoben (prüfen)'
+    elif (source_file, name) in STROM_PRUEFEN:
+        group_name = 'Strömung Position (prüfen)'
     group_idx = GROUP_INDEX[group_name]
     # Round coords to ~5m precision (5 decimals) — saves bytes vs full precision
     station_rows.append([
