@@ -189475,7 +189475,7 @@ x 0 0
 # source: Derived from UHSLC data with UTide harmonic analysis
 # station_id_context: UHSLC-101
 # date_imported: 20260421
-# datum: MSL
+# datum: Chart Datum (KPA Tide Tables 2026, Admiralty-Karte)
 # confidence: 8
 # uhslc_id: 101
 # ssc_id: SSC-momb
@@ -189490,9 +189490,11 @@ x 0 0
 # !latitude: -4.070000
 # province: Coast
 # admin1_quelle: Ufer 0.8 km
+# note: 20261028 Z0 -1.089 m auf Kartennull der KPA-Tafel 2026 (vorher UHSLC-Pegelnull);
+# note: -- Zeit gegen 1374 KPA-Scheitel 4 min, siehe py/kpa_kartennull.py.
 Mombasa (Kilindini Harbour), Kenya
 +00:00 :UTC
-2.9438 meters
+1.8544 meters
 J1              0.0109  3.18
 K1              0.1899  354.73
 K2              0.1401  61.75
@@ -189873,7 +189875,7 @@ x 0 0
 # source: Derived from UHSLC data with UTide harmonic analysis
 # station_id_context: UHSLC-102
 # date_imported: 20260421
-# datum: MSL
+# datum: Chart Datum (KPA Tide Tables 2026, Admiralty-Karte)
 # confidence: 8
 # uhslc_id: 102
 # ssc_id: SSC-dare
@@ -189884,9 +189886,11 @@ x 0 0
 # !latitude: -6.8208
 # region: Dar-Es-Salaam
 # admin1_quelle: Ufer 0.8 km
+# note: 20261028 Z0 -0.415 m auf Kartennull der KPA-Tafel 2026 (vorher UHSLC-Pegelnull);
+# note: -- Zeit gegen 1399 KPA-Scheitel 4 min, siehe py/kpa_kartennull.py.
 Dar es Salaam, Tanzania
 +00:00 :UTC
-2.4600 meters
+2.0453 meters
 J1              0.0115  345.26
 K1              0.1749  357.15
 K2              0.1377  61.50

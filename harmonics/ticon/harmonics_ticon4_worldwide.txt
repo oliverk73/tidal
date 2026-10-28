@@ -34103,7 +34103,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: dar_es_salaam-102a-tza-uhslc_rq
 # date_imported: 20260322
-# datum: MSL
+# datum: Chart Datum (KPA Tide Tables 2026, Admiralty-Karte)
 # confidence: 7
 # ssc_id: SSC-dare
 # psmsl_id: 1694
@@ -34113,9 +34113,11 @@ x 0 0
 # !latitude: -6.8208
 # region: Dar-Es-Salaam
 # admin1_quelle: Ufer 0.8 km
+# note: 20261028 Z0 -0.415 m auf Kartennull der KPA-Tafel 2026 (vorher UHSLC-Pegelnull);
+# note: -- Zeit gegen 1399 KPA-Scheitel 5 min, siehe py/kpa_kartennull.py.
 Dar Es Salaam, Tanzania
 +00:00 :Africa/Dar_es_Salaam
-2.4600 meters
+2.0447 meters
 J1              0.0111  356.28
 K1              0.1747  357.10
 K2              0.1379  61.53
