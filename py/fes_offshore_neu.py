@@ -21,7 +21,7 @@ from sicher_schreiben import schreiben                             # noqa: E402
 
 # Name, Breite, Laenge, Land, Zeitzone, Z0, Begruendung
 PLATTFORMEN = [
-    ('Aukfield Platform, Netherlands', 56.39904, 2.06402, 'Netherlands', 'Europe/London', 0.0,
+    ('Auk Oilfield Platform, United Kingdom', 56.39904, 2.06402, 'United Kingdom', 'Europe/London', 0.0,
      'Ersetzt TICON-RWS-Satz (krumm -24 min, archiviert 27.10.); FES an A12/D15/F3 -7..+3 min'),
 ]
 
