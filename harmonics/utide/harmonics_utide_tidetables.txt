@@ -712456,12 +712456,13 @@ x 0 0
 # !longitude: 50.2167
 # !latitude: 25.6333
 # province: Eastern Province
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Mina Salman, 77 km); K2/P1 added
 Al Uqair, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.3278 meters
 J1              0.0056  275.16
-K1              0.0227  85.05
-x 0 0
+K1              0.0284  92.67
+K2              0.0176  241.61
 x 0 0
 x 0 0
 M2              0.1774  200.87
@@ -712473,12 +712474,12 @@ N2              0.0260  146.26
 2N2             0.0066  83.00
 O1              0.0170  350.66
 OO1             0.0036  303.17
-x 0 0
+P1              0.0076  74.25
 Q1              0.0033  324.97
 2Q1             0.0031  27.42
 x 0 0
 x 0 0
-S2              0.0695  240.01
+S2              0.0547  254.39
 S4              0.0095  178.56
 x 0 0
 x 0 0
@@ -712649,12 +712650,13 @@ x 0 0
 # !longitude: 49.5167
 # !latitude: 27.1167
 # province: Eastern Province
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Al Jubayl, 20 km); K2/P1 added
 Mardumah, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.9735 meters
 J1              0.0189  305.29
-K1              0.2597  287.67
-x 0 0
+K1              0.3147  301.97
+K2              0.0336  131.21
 x 0 0
 x 0 0
 M2              0.3716  78.30
@@ -712666,12 +712668,12 @@ N2              0.0368  14.08
 2N2             0.0470  26.11
 O1              0.2082  249.69
 OO1             0.0189  86.00
-x 0 0
+P1              0.1038  301.97
 Q1              0.0259  237.77
 2Q1             0.0145  157.43
 x 0 0
 x 0 0
-S2              0.1573  121.60
+S2              0.1244  131.46
 S4              0.0204  323.71
 x 0 0
 x 0 0
@@ -712842,12 +712844,13 @@ x 0 0
 # !longitude: 50.7667
 # !latitude: 24.7167
 # province: Eastern Province
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Mesaieed, 89 km); K2/P1 added
 Salwa, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.4463 meters
 J1              0.0118  208.38
-K1              0.0668  102.42
-x 0 0
+K1              0.0809  116.72
+K2              0.0225  241.49
 x 0 0
 x 0 0
 M2              0.3256  188.59
@@ -712859,12 +712862,12 @@ N2              0.0456  160.71
 2N2             0.0079  41.56
 O1              0.0273  321.79
 OO1             0.0124  331.43
-x 0 0
+P1              0.0267  116.72
 Q1              0.0095  7.03
 2Q1             0.0066  228.28
 x 0 0
 x 0 0
-S2              0.1055  231.88
+S2              0.0834  241.74
 S4              0.0069  341.09
 x 0 0
 x 0 0
@@ -713035,12 +713038,13 @@ x 0 0
 # !longitude: 50.2000
 # !latitude: 26.1667
 # province: Eastern Province
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Ad Dammam (K.A.A.P.), 37 km); K2/P1 added
 Al Khobar (south), Saudi Arabia
 +00:00 :Asia/Riyadh
 0.3907 meters
 J1              0.0039  54.12
-K1              0.0085  328.40
-x 0 0
+K1              0.0103  342.70
+K2              0.0115  160.06
 x 0 0
 x 0 0
 M2              0.1128  74.31
@@ -713052,12 +713056,12 @@ N2              0.0213  13.11
 2N2             0.0201  346.73
 O1              0.0008  353.38
 OO1             0.0042  291.62
-x 0 0
+P1              0.0034  342.70
 Q1              0.0060  250.36
 2Q1             0.0026  302.37
 x 0 0
 x 0 0
-S2              0.0537  150.44
+S2              0.0424  160.30
 S4              0.0087  281.89
 x 0 0
 x 0 0
@@ -713228,12 +713232,13 @@ x 0 0
 # !longitude: 50.0333
 # !latitude: 26.2000
 # province: Eastern Province
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Ad Dammam (K.A.A.P.), 38 km); K2/P1 added
 Half Moon Bay (Shati Nisf al Qamar), Saudi Arabia
 +00:00 :Asia/Riyadh
 0.3165 meters
 J1              0.0058  217.14
-K1              0.0110  109.28
-x 0 0
+K1              0.0133  123.58
+K2              0.0219  228.93
 x 0 0
 x 0 0
 M2              0.1634  191.66
@@ -713245,12 +713250,12 @@ N2              0.0440  155.21
 2N2             0.0140  254.22
 O1              0.0224  330.93
 OO1             0.0078  19.50
-x 0 0
+P1              0.0044  123.58
 Q1              0.0044  304.64
 2Q1             0.0072  97.65
 x 0 0
 x 0 0
-S2              0.1027  219.31
+S2              0.0812  229.17
 S4              0.0146  194.60
 x 0 0
 x 0 0
@@ -713421,12 +713426,13 @@ x 0 0
 # !longitude: 37.9333
 # !latitude: 24.1333
 # province: Madinah
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Yanbu Marine Terminal, 37 km); K2/P1 added
 Yanbu (north), Saudi Arabia
 +00:00 :Asia/Riyadh
 0.4250 meters
 J1              0.0087  314.76
-K1              0.0086  198.70
-x 0 0
+K1              0.0108  210.17
+K2              0.0153  159.11
 x 0 0
 x 0 0
 M2              0.1643  130.02
@@ -713438,12 +713444,12 @@ N2              0.0490  78.43
 2N2             0.0133  32.27
 O1              0.0268  137.25
 OO1             0.0051  137.35
-x 0 0
+P1              0.0034  200.70
 Q1              0.0029  127.36
 2Q1             0.0009  91.12
 x 0 0
 x 0 0
-S2              0.0636  150.08
+S2              0.0489  161.70
 S4              0.0170  209.67
 x 0 0
 x 0 0
@@ -713614,12 +713620,13 @@ x 0 0
 # !longitude: 36.4333
 # !latitude: 26.2500
 # province: Tabuk
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Duba Bulk Plant Terminal, 138 km); K2/P1 added
 Al Wajh, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.5046 meters
 J1              0.0038  302.37
-K1              0.0125  143.52
-x 0 0
+K1              0.0118  153.76
+K2              0.0228  163.28
 x 0 0
 x 0 0
 M2              0.2242  126.39
@@ -713631,12 +713638,12 @@ N2              0.0668  74.11
 2N2             0.0181  43.47
 O1              0.0219  137.67
 OO1             0.0038  121.95
-x 0 0
+P1              0.0026  210.54
 Q1              0.0016  137.21
 2Q1             0.0009  166.17
 x 0 0
 x 0 0
-S2              0.0925  153.23
+S2              0.0702  164.98
 S4              0.0204  215.58
 x 0 0
 x 0 0
@@ -713807,12 +713814,13 @@ x 0 0
 # !longitude: 35.5333
 # !latitude: 27.5500
 # province: Tabuk
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Duba Bulk Plant Terminal, 32 km); K2/P1 added
 Duba, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.5343 meters
 J1              0.0085  268.65
-K1              0.0151  176.59
-x 0 0
+K1              0.0143  186.83
+K2              0.0213  158.11
 x 0 0
 x 0 0
 M2              0.2432  123.92
@@ -713824,12 +713832,12 @@ N2              0.0695  77.00
 2N2             0.0235  32.15
 O1              0.0155  111.15
 OO1             0.0044  106.83
-x 0 0
+P1              0.0032  243.61
 Q1              0.0015  101.86
 2Q1             0.0011  106.70
 x 0 0
 x 0 0
-S2              0.0864  148.06
+S2              0.0656  159.81
 S4              0.0174  211.80
 x 0 0
 x 0 0
@@ -714000,12 +714008,13 @@ x 0 0
 # !longitude: 34.7333
 # !latitude: 28.4000
 # province: Tabuk
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Aqaba, 115 km); K2/P1 added
 Maqna, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.5826 meters
 J1              0.0048  239.54
-K1              0.0185  170.41
-x 0 0
+K1              0.0219  176.28
+K2              0.0261  149.37
 x 0 0
 x 0 0
 M2              0.2605  131.54
@@ -714017,12 +714026,12 @@ N2              0.0760  83.48
 2N2             0.0202  44.15
 O1              0.0104  137.93
 OO1             0.0026  124.24
-x 0 0
+P1              0.0046  159.42
 Q1              0.0005  127.93
 2Q1             0.0009  146.74
 x 0 0
 x 0 0
-S2              0.1033  157.04
+S2              0.0858  173.13
 S4              0.0190  223.75
 x 0 0
 x 0 0
@@ -714193,12 +714202,13 @@ x 0 0
 # !longitude: 42.7000
 # !latitude: 16.6667
 # province: Jazan
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Jizan Bulk Plant Terminal, 27 km); K2/P1 added
 Jazan South, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.7535 meters
 J1              0.0058  206.95
-K1              0.0299  127.69
-x 0 0
+K1              0.0285  137.49
+K2              0.0243  349.60
 x 0 0
 x 0 0
 M2              0.3673  308.62
@@ -714210,12 +714220,12 @@ N2              0.0898  264.37
 2N2             0.0417  211.38
 O1              0.0115  129.47
 OO1             0.0058  92.11
-x 0 0
+P1              0.0060  192.79
 Q1              0.0029  206.58
 2Q1             0.0027  28.45
 x 0 0
 x 0 0
-S2              0.1107  339.53
+S2              0.0868  349.62
 S4              0.0127  243.14
 x 0 0
 x 0 0
@@ -714386,12 +714396,13 @@ x 0 0
 # !longitude: 42.0833
 # !latitude: 16.6833
 # province: Jazan
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Jizan Bulk Plant Terminal, 54 km); K2/P1 added
 Farasan, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.7644 meters
 J1              0.0038  192.83
-K1              0.0298  139.50
-x 0 0
+K1              0.0284  149.30
+K2              0.0214  348.81
 x 0 0
 x 0 0
 M2              0.3571  305.88
@@ -714403,12 +714414,12 @@ N2              0.0879  261.89
 2N2             0.0404  205.13
 O1              0.0082  134.34
 OO1             0.0042  59.12
-x 0 0
+P1              0.0060  204.60
 Q1              0.0036  151.54
 2Q1             0.0006  23.97
 x 0 0
 x 0 0
-S2              0.0977  338.74
+S2              0.0766  348.83
 S4              0.0185  235.39
 x 0 0
 x 0 0
@@ -714579,12 +714590,13 @@ x 0 0
 # !longitude: 42.3167
 # !latitude: 17.3000
 # province: Jazan
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Jizan Bulk Plant Terminal, 54 km); K2/P1 added
 Jazan North, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.4394 meters
 J1              0.0034  152.95
-K1              0.0143  133.46
-x 0 0
+K1              0.0136  143.26
+K2              0.0164  346.71
 x 0 0
 x 0 0
 M2              0.2715  310.68
@@ -714596,12 +714608,12 @@ N2              0.0686  288.49
 2N2             0.0043  77.84
 O1              0.0184  151.66
 OO1             0.0044  144.25
-x 0 0
+P1              0.0029  198.56
 Q1              0.0042  135.83
 2Q1             0.0013  162.15
 x 0 0
 x 0 0
-S2              0.0749  336.64
+S2              0.0587  346.73
 S4              0.0031  167.49
 x 0 0
 x 0 0
@@ -714772,12 +714784,13 @@ x 0 0
 # !longitude: 40.2333
 # !latitude: 20.1500
 # province: Makkah
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Jeddah Marine Terminal, 181 km); K2/P1 added
 Al Lith, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.2259 meters
 J1              0.0206  207.48
-K1              0.0481  184.57
-x 0 0
+K1              0.0563  196.60
+K2              0.0016  118.35
 x 0 0
 x 0 0
 M2              0.0856  319.53
@@ -714789,12 +714802,12 @@ N2              0.0054  67.57
 2N2             0.0310  208.97
 O1              0.0665  23.14
 OO1             0.0168  333.47
-x 0 0
+P1              0.0158  198.33
 Q1              0.0060  312.16
 2Q1             0.0083  286.35
 x 0 0
 x 0 0
-S2              0.0052  111.55
+S2              0.0038  128.06
 S4              0.0220  234.55
 x 0 0
 x 0 0
@@ -714965,12 +714978,13 @@ x 0 0
 # !longitude: 39.5667
 # !latitude: 20.5833
 # province: Makkah
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Jeddah Marine Terminal, 104 km); K2/P1 added
 Ash Shuaybah, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.2820 meters
 J1              0.0175  162.56
-K1              0.0509  103.34
-x 0 0
+K1              0.0596  115.37
+K2              0.0050  329.26
 x 0 0
 x 0 0
 M2              0.0660  19.47
@@ -714982,12 +714996,12 @@ N2              0.0135  317.02
 2N2             0.0104  254.44
 O1              0.0126  252.57
 OO1             0.0048  280.05
-x 0 0
+P1              0.0167  117.10
 Q1              0.0144  236.33
 2Q1             0.0139  228.05
 x 0 0
 x 0 0
-S2              0.0164  322.46
+S2              0.0119  338.97
 S4              0.0036  31.97
 x 0 0
 x 0 0
@@ -715158,12 +715172,13 @@ x 0 0
 # !longitude: 39.1667
 # !latitude: 21.1500
 # province: Makkah
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Jeddah Marine Terminal, 31 km); K2/P1 added
 Surum, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.3986 meters
 J1              0.0075  346.63
-K1              0.0258  192.71
-x 0 0
+K1              0.0302  204.74
+K2              0.0057  166.49
 x 0 0
 x 0 0
 M2              0.0635  136.03
@@ -715175,12 +715190,12 @@ N2              0.0240  84.96
 2N2             0.0082  349.82
 O1              0.0183  147.95
 OO1             0.0029  152.94
-x 0 0
+P1              0.0085  206.47
 Q1              0.0074  144.63
 2Q1             0.0041  355.73
 x 0 0
 x 0 0
-S2              0.0188  159.69
+S2              0.0137  176.20
 S4              0.0023  198.92
 x 0 0
 x 0 0
@@ -715351,12 +715366,13 @@ x 0 0
 # !longitude: 38.7833
 # !latitude: 22.0667
 # province: Makkah
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Sharm Rabigh, 77 km); K2/P1 added
 Jeddah Offshore II, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.2192 meters
 J1              0.0035  163.59
-K1              0.0341  146.50
-x 0 0
+K1              0.0413  160.80
+K2              0.0059  150.92
 x 0 0
 x 0 0
 M2              0.0992  110.40
@@ -715368,12 +715384,12 @@ N2              0.0266  68.93
 2N2             0.0018  76.55
 O1              0.0211  162.99
 OO1             0.0026  194.60
-x 0 0
+P1              0.0136  160.80
 Q1              0.0052  144.62
 2Q1             0.0008  23.46
 x 0 0
 x 0 0
-S2              0.0278  141.31
+S2              0.0220  151.17
 S4              0.0015  306.77
 x 0 0
 x 0 0
@@ -715544,12 +715560,13 @@ x 0 0
 # !longitude: 39.1000
 # !latitude: 22.3000
 # province: Makkah
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Rabigh Marine Terminal, 49 km); K2/P1 added
 Thuwal, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.3046 meters
 J1              0.0070  359.44
-K1              0.0067  214.30
-x 0 0
+K1              0.0081  231.47
+K2              0.0129  135.82
 x 0 0
 x 0 0
 M2              0.1248  114.93
@@ -715561,12 +715578,12 @@ N2              0.0419  71.11
 2N2             0.0056  202.26
 O1              0.0172  141.89
 OO1             0.0005  195.25
-x 0 0
+P1              0.0030  234.77
 Q1              0.0025  150.37
 2Q1             0.0010  236.46
 x 0 0
 x 0 0
-S2              0.0514  130.75
+S2              0.0398  144.10
 S4              0.0018  118.88
 x 0 0
 x 0 0
@@ -715737,12 +715754,13 @@ x 0 0
 # !longitude: 38.8000
 # !latitude: 23.1000
 # province: Makkah
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Sharm Rabigh, 45 km); K2/P1 added
 Masturah, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.2112 meters
 J1              0.0013  344.73
-K1              0.0130  135.78
-x 0 0
+K1              0.0158  150.08
+K2              0.0109  163.54
 x 0 0
 x 0 0
 M2              0.1357  131.04
@@ -715754,12 +715772,12 @@ N2              0.0366  74.73
 2N2             0.0099  32.21
 O1              0.0262  151.54
 OO1             0.0039  174.77
-x 0 0
+P1              0.0052  150.08
 Q1              0.0061  136.20
 2Q1             0.0012  2.43
 x 0 0
 x 0 0
-S2              0.0511  153.93
+S2              0.0404  163.79
 S4              0.0112  219.66
 x 0 0
 x 0 0
@@ -715930,12 +715948,13 @@ x 0 0
 # !longitude: 38.5833
 # !latitude: 23.5500
 # province: Madinah
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Yanbu Marine Terminal, 56 km); K2/P1 added
 Ar Rayis, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.2730 meters
 J1              0.0034  134.53
-K1              0.0137  138.36
-x 0 0
+K1              0.0172  149.83
+K2              0.0128  160.03
 x 0 0
 x 0 0
 M2              0.1507  123.75
@@ -715947,12 +715966,12 @@ N2              0.0423  70.61
 2N2             0.0122  32.13
 O1              0.0243  163.57
 OO1             0.0013  173.90
-x 0 0
+P1              0.0053  140.36
 Q1              0.0048  141.91
 2Q1             0.0015  212.17
 x 0 0
 x 0 0
-S2              0.0531  151.00
+S2              0.0408  162.62
 S4              0.0156  221.77
 x 0 0
 x 0 0
@@ -716123,12 +716142,13 @@ x 0 0
 # !longitude: 34.6333
 # !latitude: 28.0167
 # province: Tabuk
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Duba Bulk Plant Terminal, 133 km); K2/P1 added
 Ras Qasabah, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.5584 meters
 J1              0.0074  142.71
-K1              0.0296  152.31
-x 0 0
+K1              0.0280  162.55
+K2              0.0192  161.80
 x 0 0
 x 0 0
 M2              0.2721  117.52
@@ -716140,12 +716160,12 @@ N2              0.0762  88.23
 2N2             0.0144  293.12
 O1              0.0085  216.05
 OO1             0.0052  256.48
-x 0 0
+P1              0.0062  219.33
 Q1              0.0018  196.41
 2Q1             0.0007  316.32
 x 0 0
 x 0 0
-S2              0.0776  151.75
+S2              0.0589  163.50
 S4              0.0087  77.01
 x 0 0
 x 0 0
@@ -716316,12 +716336,13 @@ x 0 0
 # !longitude: 34.9333
 # !latitude: 29.3000
 # province: Tabuk
+# note: 20261021 S2/K1 corrected for K2/P1 inside the 31-day window (ratio/lag of Aqaba, 13 km); K2/P1 added
 Haql, Saudi Arabia
 +00:00 :Asia/Riyadh
 0.7000 meters
 J1              0.0102  155.96
-K1              0.0314  191.21
-x 0 0
+K1              0.0371  197.08
+K2              0.0261  159.64
 x 0 0
 x 0 0
 M2              0.2886  124.54
@@ -716333,12 +716354,12 @@ N2              0.0986  86.78
 2N2             0.0185  311.44
 O1              0.0150  188.64
 OO1             0.0025  205.26
-x 0 0
+P1              0.0077  180.22
 Q1              0.0079  203.32
 2Q1             0.0009  195.85
 x 0 0
 x 0 0
-S2              0.1033  167.31
+S2              0.0858  183.40
 S4              0.0054  135.06
 x 0 0
 x 0 0
