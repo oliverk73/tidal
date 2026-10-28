@@ -11,6 +11,8 @@ Greifswald-Wieck (BfG, derselbe Pegel 0.8 km daneben) liegt ebenfalls -63..-113 
 S2 2.7 cm, K1 0.2 cm), gemessen sind M2 0.3-0.9 cm und K1 bis 2 cm. Wo CMEMS eine Reihe am Ort hat, ersetzt ein Messfit
 den Satz (letzte 10 Jahre der Reihe; Bjoern und Draghaellan nur historisch bis 1978/1969). Ohne Reihe archiviert:
 Yttergrund, Baltiysk, Swinoujscie, Arkona (harmonics/help/np202_ostsee_20261028_loeschen.csv).
+28.10. (3): SMHI-Stundenreihen (opendata-download-ocobs, Parameter 12, UTC) bestaetigen CMEMS; Ringhals (+24 min) und Skanoer
+(-18 min, beide TICON aus GESLA-4 SMHI) krumm -> Messfit aus der SMHI-Reihe (Eintrag 'SMHI:<id>', water_levels/Sweden_SMHI/).
 Download: water_levels/cmems_tg_files.txt -> https://s3.waw3-1.cloudferro.com/mdl-native-03/... nach
 water_levels/CMEMS_tg_pruefung/. Fit wie py/rws_plattform_fit.py (Stundenwerte, 67 Konstituenten + Obertiden, Probe am
 letzten Jahr, Eigenversatz 0).
@@ -48,10 +50,18 @@ PEGEL = [
     ('BO_TS_TG_Helsinki_60minute.nc', 'Helsinki, Finland', 60.1667, 24.9555, 'Finland', 'Europe/Helsinki'),
     ('BO_TS_TG_Tallinn_60minute.nc', 'Tallinn, Estonia', 59.4493, 24.7755, 'Estonia', 'Europe/Tallinn'),
     ('BO_TS_TG_Liepaja_60minute.nc', 'Liepaja, Latvia', 56.5333, 20.9833, 'Latvia', 'Europe/Riga'),
-    ('BO_TS_TG_Klaipeda_60minute.nc', 'Klaipeda (Memel), Lithuania', 55.7269, 21.0925, 'Lithuania', 'Europe/Vilnius')]]
+    ('BO_TS_TG_Klaipeda_60minute.nc', 'Klaipeda (Memel), Lithuania', 55.7269, 21.0925, 'Lithuania', 'Europe/Vilnius')]] + [
+    ('SMHI:2105', 'Ringhals, Sweden', 57.2497, 12.1125, 'Sweden', 'Europe/Stockholm', None, 'TICON-SMHI-Satz (+24 min gegen die SMHI-Messung)'),
+    ('SMHI:30488', 'Skanör med Falsterbo, Sweden', 55.4167, 12.8294, 'Sweden', 'Europe/Stockholm', None, 'TICON-SMHI-Satz (-18 min gegen die SMHI-Messung)')]
 
 
 def reihe(datei, ab):
+    if datei.startswith('SMHI:'):
+        L = open(os.path.join(ROOT, 'water_levels/Sweden_SMHI/%s.csv' % datei[5:]), encoding='utf-8-sig').read().split('\n')
+        i0 = [i for i, z in enumerate(L) if z.startswith('Datum Tid')][0]
+        z = [x.split(';') for x in L[i0 + 1:] if x[:2] in ('19', '20') and x.split(';')[1]]
+        r = pd.Series([float(x[1]) / 100 for x in z], index=pd.to_datetime([x[0] for x in z]))
+        return r[r.index >= r.index[-1] - pd.Timedelta(days=3653)]
     d = netCDF4.Dataset(os.path.join(REIHEN, datei))
     t = netCDF4.num2date(d['TIME'][:], d['TIME'].units, only_use_cftime_datetimes=False)
     s, q = d['SLEV'][:, 0], d['SLEV_QC'][:, 0]
@@ -93,11 +103,18 @@ def main(argv):
         nah = sorted(((H.km({'lat': la, 'lon': lo}, r), r) for r in bestand), key=lambda x: x[0])[:3]
         for k, r in nah:
             print('      ~ %s [%s] %.1f km %.0f%%' % (r['name'].split(',')[0], r['file'].split('/')[-1][9:31], k, 100 * H.curve_diff(Q.rec(w), r)[1]))
-        blk = ['#', '# %s (CMEMS %s)' % (name.split(',')[0], datei.split('_TG_')[1].split('_')[0]), '# BEGIN HOT COMMENTS',
-               '# country: %s' % land, '# source: CMEMS in-situ %s, least squares' % datei.replace('_60minute.nc', ''),
-               '# note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.',
-               '# station_id_context: CMEMS-%s' % datei.replace('_60minute.nc', ''), '# date_imported: %s' % heute,
-               '# datum: CMEMS SLEV', '# confidence: 9',
+        if datei.startswith('SMHI:'):
+            quelle = ['# %s (SMHI %s)' % (name.split(',')[0], datei[5:]), '# BEGIN HOT COMMENTS', '# country: %s' % land,
+                      '# source: SMHI Havsvattenstand RW timvarde %s, least squares' % datei[5:],
+                      '# note: SMHI opendata-download-ocobs Parameter 12, Stundenwerte, UTC.',
+                      '# station_id_context: SMHI-%s' % datei[5:], '# date_imported: %s' % heute, '# datum: RH 2000', '# confidence: 9']
+        else:
+            quelle = ['# %s (CMEMS %s)' % (name.split(',')[0], datei.split('_TG_')[1].split('_')[0]), '# BEGIN HOT COMMENTS',
+                      '# country: %s' % land, '# source: CMEMS in-situ %s, least squares' % datei.replace('_60minute.nc', ''),
+                      '# note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.',
+                      '# station_id_context: CMEMS-%s' % datei.replace('_60minute.nc', ''), '# date_imported: %s' % heute,
+                      '# datum: CMEMS SLEV', '# confidence: 9']
+        blk = ['#'] + quelle + [
                '# utide: pts=%d period=%s..%s r2=%.4f rms=%.4fm const=%d' % (len(s), s.index[0].date(), s.index[-1].date(), r2, rms, len(nutz)),
                '# note: %s Messfit (py/cmems_tg_fit.py) ersetzt %s.' % (heute, alt),
                '# note: Probe am letzten Messjahr %s cm RMS.' % probe,
