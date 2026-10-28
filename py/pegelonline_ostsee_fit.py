@@ -180,6 +180,9 @@ ERSETZEN = {
     'stahlbrode': [('Stahlbrode, Germany', 'TICON-WSV-Satz (+42 min gegen die Messung)')],
     'thiessow': [('Thiessow, Germany', 'TICON-WSV-Satz (+41 min gegen die Messung)')],
     'stralsund': [('Stralsund, Germany', 'TICON-WSV-Satz (+42 min gegen die Messung)')],
+    # 28.10.: Ems-Pegel (Nordsee): Fits an RWS-Vorhersagen (Tafel) lagen +7..+14 min gegen PEGELONLINE 2023-2026
+    'knock': [('Knock (Ems), Germany', 'UTide-Fit an RWS-Vorhersagen (+7..+14 min gegen die Messung)')],
+    'pogum': [('Pogum (Ems), Germany', 'UTide-Fit an RWS-Vorhersagen (+7..+14 min gegen die Messung)')],
     'greifswaldoie': [('Greifswald Oie, Germany', 'TICON-WSV-Satz (+38 min gegen die Messung)')],
 }
 ALT_POS = {
@@ -201,6 +204,8 @@ ALT_POS = {
     'Stahlbrode, Germany': (54.234456, 13.289704, 'Mecklenburg-Vorpommern'),
     'Thiessow, Germany': (54.280663, 13.709752, 'Mecklenburg-Vorpommern'),
     'Stralsund, Germany': (54.305676, 13.119010, 'Mecklenburg-Vorpommern'),
+    'Knock (Ems), Germany': (53.327222, 7.030556, 'Niedersachsen'),
+    'Pogum (Ems), Germany': (53.321485, 7.253999, 'Niedersachsen'),
     'Greifswald Oie, Germany': (54.241305, 13.907204, 'Mecklenburg-Vorpommern'),
 }
 
