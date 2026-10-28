@@ -28675,8 +28675,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -61.4757
-# !latitude: 46.1029
+# !longitude: -61.4749
+# !latitude: 46.0880
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -28685,6 +28685,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 46.1000/-61.4667, Kueste 0.66 km) (Oliver).
+# note: 2026-10-28 an die Einfahrt von Mabou Harbour gesetzt (vorher 46.1029/-61.4757 Golfkueste) (Oliver).
 Mabou River entrance, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 0.7620 meters
