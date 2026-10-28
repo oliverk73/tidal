@@ -9,7 +9,8 @@ Hier: NOAA-hilo 2025+2026 neu laden (CO-OPS datagetter, MLLW, GMT), Probe Fit 20
 Geschrieben wird nur, wenn der Endfit die Scheitel deutlich besser trifft (mindestens 1 cm und um ein Drittel, oder
 die Scheitelzeit um mindestens 5 min) und die Probe 2026 nicht schlechter ist als der alte Satz.
 Erster Lauf 27.10.: 114 von 116 besser, Median 4.2 cm / 12 min -> 0.1 cm / 1 min, Probe 2026 Median 0.2 cm.
-Bleiben: Howland (Probe schlechter), Arno Atoll (NOAA liefert fuer 2026 keine Vorhersage).
+Bleiben: Howland (Probe schlechter, auch der Endfit nur 5.7 cm / 22 min: NOAAs Scheitel folgen keiner harmonischen Kurve).
+28.10.: Arno Atoll (NOAA liefert fuer 2026 keine Vorhersage) mit Probe zweite Haelfte 2025 gegen Fit der ersten.
 
 Usage: venv/bin/python py/noaa_hwnw_scheitelfit.py [--laden] [--schreiben] [noaa_id ...]
 """
@@ -109,6 +110,8 @@ def main(argv):
             continue
         r_alt, t_alt, _ = SF.guete(t, h, z_alt, w_alt, kopf, versatz=False)
         lern, test = t < grenze, t >= grenze
+        if test.sum() < 100:                                       # kein 2026 (Arno): Probe an der zweiten Jahreshaelfte
+            lern, test = t < np.median(t), t >= np.median(t)
         z1, w1 = SF.fit(t[lern], h[lern], nutz, speeds, arg, fak)
         r_pr, t_pr, _ = SF.guete(t[test], h[test], z1, w1, kopf, versatz=False)
         r_at, t_at, _ = SF.guete(t[test], h[test], z_alt, w_alt, kopf, versatz=False)
@@ -123,9 +126,10 @@ def main(argv):
         zeilen.append((datei, name, urteil))
         if '--schreiben' in argv and urteil == 'schreiben':
             SF.satz_schreiben(pfad, name, z0, w, namen, [
-                '%s Scheitelfit an NOAA-HW/NW 2025-2026 (py/noaa_hwnw_scheitelfit.py) statt UTide auf die Scheitelwerte:' % heute,
-                'Scheiteltreue %.1f cm / %.0f min (vorher %.1f cm / %.0f min), Probe 2026 %.1f cm.' % (
-                    r_neu * 100, t_neu, r_alt * 100, t_alt, r_pr * 100)])
+                '%s Scheitelfit an NOAA-HW/NW %s (py/noaa_hwnw_scheitelfit.py) statt UTide auf die Scheitelwerte:' % (
+                    heute, '2025-2026' if t.max() >= grenze else '2025'),
+                'Scheiteltreue %.1f cm / %.0f min (vorher %.1f cm / %.0f min), Probe %s %.1f cm.' % (
+                    r_neu * 100, t_neu, r_alt * 100, t_alt, '2026' if t.max() >= grenze else '2. Halbjahr', r_pr * 100)])
     print('\n%d schreiben, %d bleiben' % (sum(u == 'schreiben' for *_, u in zeilen), sum(u == 'bleibt' for *_, u in zeilen)))
 
 
