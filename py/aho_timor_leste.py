@@ -102,7 +102,7 @@ def main(argv):
             print('   existiert schon')
             continue
         blk = ['#', '# %s (AHO)' % name.split(',')[0], '# BEGIN HOT COMMENTS', '# country: Timor-Leste',
-               '# source: Timor-Leste National Tide Tables 2026 (Australian Hydrographic Office), HW/LW, Scheitelfit',
+               '# source: AHO Timor-Leste National Tide Tables 2026, HW/LW, Scheitelfit',
                '# note: %s Tafelfit (py/aho_timor_leste.py): %d Scheitel 2026, Treue %.1f cm / %.0f min.' % (heute, len(t), r * 100, tm),
                '# note: Position AHO auf Bogenminuten (bitte auf der Karte pruefen).',
                '# date_imported: %s' % heute, '# datum: LAT (AHO)', '# confidence: 7',
