@@ -7,10 +7,14 @@ der Meridian-Berichtigung immer noch -66 min -- keine glatte Stufe (py/ticon_cme
 2014-2025 in sich stabil (M2-Phase je Jahr 625..673 min) und passt zu Ruden/Thiessow (+6/+13 min); der TICON-Satz
 Greifswald-Wieck (BfG, derselbe Pegel 0.8 km daneben) liegt ebenfalls -63..-113 min. Beide archiviert
 (harmonics/help/greifswald_20261028_loeschen.csv), ein Messfit unter dem Wieck-Namen an der Pegelposition.
+28.10. (2): 12 Ostsee-Nebenorte aus NP202 (harmonics_att_np202_secondary.txt) tragen alle denselben Satz (M2 3.3 cm,
+S2 2.7 cm, K1 0.2 cm), gemessen sind M2 0.3-0.9 cm und K1 bis 2 cm. Wo CMEMS eine Reihe am Ort hat, ersetzt ein Messfit
+den Satz (letzte 10 Jahre der Reihe; Bjoern und Draghaellan nur historisch bis 1978/1969). Ohne Reihe archiviert:
+Yttergrund, Baltiysk, Swinoujscie, Arkona (harmonics/help/np202_ostsee_20261028_loeschen.csv).
 Download: water_levels/cmems_tg_files.txt -> https://s3.waw3-1.cloudferro.com/mdl-native-03/... nach
 water_levels/CMEMS_tg_pruefung/. Fit wie py/rws_plattform_fit.py (Stundenwerte, 67 Konstituenten + Obertiden, Probe am
 letzten Jahr, Eigenversatz 0).
-Usage: venv/bin/python py/cmems_tg_fit.py [--schreiben]  -> harmonics_utide_observations.txt
+Usage: venv/bin/python py/cmems_tg_fit.py [Name ...] [--schreiben]  -> harmonics_utide_observations.txt
 """
 import datetime as dt
 import os
@@ -36,7 +40,15 @@ REIHEN = os.path.join(ROOT, 'water_levels/CMEMS_tg_pruefung')
 PEGEL = [
     ('NO_TS_TG_GreifswaldTG_60minute.nc', 'Greifswald-Wieck, Germany', 54.097711, 13.457153, 'Germany', 'Europe/Berlin', 2016,
      'TICON Greifswald und Greifswald-Wieck (60-130 min zu frueh)'),
-]
+] + [(d, n, la, lo, land, tz, None, 'NP202-Einheitssatz (M2 3.3 cm wie alle Ostsee-Nebenorte)') for d, n, la, lo, land, tz in [
+    ('BO_TS_TG_LandsortNorra_60minute.nc', 'Landsort, Sweden', 58.7449, 17.8643, 'Sweden', 'Europe/Stockholm'),
+    ('BO_TS_TG_Bjorn_60minute.nc', 'Björn, Sweden', 60.6388, 17.9860, 'Sweden', 'Europe/Stockholm'),
+    ('BO_TS_TG_Draghallan_60minute.nc', 'Draghällan (Sundsvall), Sweden', 62.3397, 17.4394, 'Sweden', 'Europe/Stockholm'),
+    ('BO_TS_TG_Ratan_60minute.nc', 'Ratan, Sweden', 63.9902, 20.8913, 'Sweden', 'Europe/Stockholm'),
+    ('BO_TS_TG_Helsinki_60minute.nc', 'Helsinki, Finland', 60.1667, 24.9555, 'Finland', 'Europe/Helsinki'),
+    ('BO_TS_TG_Tallinn_60minute.nc', 'Tallinn, Estonia', 59.4493, 24.7755, 'Estonia', 'Europe/Tallinn'),
+    ('BO_TS_TG_Liepaja_60minute.nc', 'Liepaja, Latvia', 56.5333, 20.9833, 'Latvia', 'Europe/Riga'),
+    ('BO_TS_TG_Klaipeda_60minute.nc', 'Klaipeda (Memel), Lithuania', 55.7269, 21.0925, 'Lithuania', 'Europe/Vilnius')]]
 
 
 def reihe(datei, ab):
@@ -46,6 +58,8 @@ def reihe(datei, ab):
     ok = (~np.ma.getmaskarray(s)) & np.isin(np.asarray(q), [1, 2])
     r = pd.Series(np.asarray(s)[ok].astype(float), index=pd.DatetimeIndex(np.array(t)[ok]))
     r = r[~r.index.duplicated()].sort_index()
+    if ab is None:                                                 # letzte 10 Jahre der Reihe
+        return r[r.index >= r.index[-1] - pd.Timedelta(days=3653)]
     return r[r.index.year >= ab]
 
 
@@ -56,7 +70,10 @@ def main(argv):
     L = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
     heute = dt.date.today().strftime('%Y%m%d')
     bestand = [r for r in H.load_records() if r['lat'] and not r['current']]
+    nur = [a for a in argv if not a.startswith('--')]
     for datei, name, la, lo, land, tz, ab, alt in PEGEL:
+        if nur and name not in nur:
+            continue
         s, start = Q.abschnitt(reihe(datei, ab))
         tage = (s.index[-1] - s.index[0]).days
         nutz = Q.rayleigh(voll, speeds, namen, tage)
