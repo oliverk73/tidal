@@ -1,0 +1,4 @@
+datei,name,fehler_prozent,begruendung
+harmonics/ticon/harmonics_ticon4_worldwide.txt,"Rotterdam, Netherlands",0,"TICON RWS-hist -12 min gegen CMEMS Rotterdam 2018-2025; Messfit Rotterdam (Nieuwe Maas, Boerengat) 0,2 km stimmt (-4); Dublette"
+harmonics/utide/harmonics_utide_observations.txt,"Scheur Wielingen (Meetpaal), Belgium",0,"IOC-Fit mpsw -12 min gegen CMEMS 2020-2023 am selben Ort (A2 aus derselben IOC-Lieferung -2); ersetzt durch CMEMS-Messfit (py/cmems_tg_fit.py)"
+harmonics/att/harmonics_att_np202_secondary.txt,"Hanstholm, Denmark",0,"NP202: M2 -21 min, S2-Phase unbrauchbar (-268 min) gegen CMEMS/DMI 2016-2025; ersetzt durch CMEMS-Messfit (py/cmems_tg_fit.py)"

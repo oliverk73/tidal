@@ -52,7 +52,15 @@ PEGEL = [
     ('BO_TS_TG_Liepaja_60minute.nc', 'Liepaja, Latvia', 56.5333, 20.9833, 'Latvia', 'Europe/Riga'),
     ('BO_TS_TG_Klaipeda_60minute.nc', 'Klaipeda (Memel), Lithuania', 55.7269, 21.0925, 'Lithuania', 'Europe/Vilnius')]] + [
     ('SMHI:2105', 'Ringhals, Sweden', 57.2497, 12.1125, 'Sweden', 'Europe/Stockholm', None, 'TICON-SMHI-Satz (+24 min gegen die SMHI-Messung)'),
-    ('SMHI:30488', 'Skanör med Falsterbo, Sweden', 55.4167, 12.8294, 'Sweden', 'Europe/Stockholm', None, 'TICON-SMHI-Satz (-18 min gegen die SMHI-Messung)')]
+    ('SMHI:30488', 'Skanör med Falsterbo, Sweden', 55.4167, 12.8294, 'Sweden', 'Europe/Stockholm', None, 'TICON-SMHI-Satz (-18 min gegen die SMHI-Messung)'),
+    # 28.10. (4), py/cmems_europa_pruefung.py: IOC-Fit mpsw -12 min gegen CMEMS (Nachbar A2 aus derselben Lieferung -2 min);
+    # NP202-Hanstholm M2 -21 min, S2-Phase unbrauchbar (-268 min)
+    ('NO_TS_TG_BolVanHeistTG_60minute.nc', 'Scheur Wielingen (Meetpaal), Belgium', 51.3897, 3.1987, 'Belgium', 'Europe/Brussels', None,
+     'IOC-Fit mpsw (-12 min gegen CMEMS 2020-2023)'),
+    ('NO_TS_TG_HanstholmTG_60minute.nc', 'Hanstholm, Denmark', 57.1203, 8.5961, 'Denmark', 'Europe/Copenhagen', None,
+     'NP202-Satz (M2 -21 min, S2 unbrauchbar)')]
+REGION = {'Ringhals, Sweden': 'Halland', 'Skanör med Falsterbo, Sweden': 'Skåne', 'Scheur Wielingen (Meetpaal), Belgium': 'West-Vlaanderen',
+          'Hanstholm, Denmark': 'Nordjylland'}
 
 
 def reihe(datei, ab):
@@ -118,8 +126,8 @@ def main(argv):
                '# utide: pts=%d period=%s..%s r2=%.4f rms=%.4fm const=%d' % (len(s), s.index[0].date(), s.index[-1].date(), r2, rms, len(nutz)),
                '# note: %s Messfit (py/cmems_tg_fit.py) ersetzt %s.' % (heute, alt),
                '# note: Probe am letzten Messjahr %s cm RMS.' % probe,
-               '# !units: meters', '# !longitude: %.4f' % lo, '# !latitude: %.4f' % la,
-               name, '+00:00 :%s' % tz, '%.4f meters' % z0]
+               '# !units: meters', '# !longitude: %.4f' % lo, '# !latitude: %.4f' % la] + (
+               ['# region: %s' % REGION[name]] if name in REGION else []) + [name, '+00:00 :%s' % tz, '%.4f meters' % z0]
         blk += ['%-15s %.4f  %.2f' % (c, *w[c]) if c in w and w[c][0] >= 0.00005 else 'x 0 0' for c in namen]
         if name in L:
             print('   existiert schon in %s' % os.path.basename(ZIEL))
