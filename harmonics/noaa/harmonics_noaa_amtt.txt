@@ -24746,8 +24746,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -67.3647
-# !latitude: 49.3342
+# !longitude: -67.3806
+# !latitude: 49.3165
 # note: 20260903 Phasen um +1.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-5.00 gegen -4.00 nach dem Buch)
@@ -34432,8 +34432,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -64.3019
-# !latitude: 44.5646
+# !longitude: -64.3059
+# !latitude: 44.5656
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -34442,7 +34442,7 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 44.5667/-64.3000, Kueste 0.18 km) (Oliver).
-Chester (Mahone Bay), Nova Scotia, Canada
+Chester Basin (Mahone Bay), Nova Scotia, Canada
 +00:00 :America/Halifax
 1.2497 meters
 J1              0.0061  133.96
@@ -92192,8 +92192,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -65.5132
-# !latitude: 44.7511
+# !longitude: -65.5207
+# !latitude: 44.7460
 # province: Nova Scotia
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 44.7500/-65.5000, Kueste 0.95 km) (Oliver).
 Annapolis Royal (Annapolis River), Nova Scotia, Canada
@@ -92579,8 +92579,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -64.2147
-# !latitude: 45.1010
+# !longitude: -64.2241
+# !latitude: 45.1087
 # province: Nova Scotia
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.772,
 # note: Zielwert F=0.059 aus Nachbarn statt F=0.076 des Bezugsorts; Beleg: Nachbarn 5.74 -> 5.71 %.
@@ -93160,8 +93160,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -66.9028
-# !latitude: 45.1211
+# !longitude: -66.9088
+# !latitude: 45.1156
 # province: New Brunswick
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.163,
 # note: Zielwert F=0.089 aus Nachbarn statt F=0.076 des Bezugsorts; Beleg: Nachbarn 3.19 -> 3.18 %.
