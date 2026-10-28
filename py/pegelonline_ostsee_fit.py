@@ -17,6 +17,7 @@ Bodden/Haff-Pegel ohne Satz (Althagen, Anklam, Barth, Karnin, Ueckermuende: M2 <
 
 Usage: venv/bin/python py/pegelonline_ostsee_fit.py [--stunden] [--schreiben NAME ...]
   --stunden   Minutenreihen -> water_levels/Germany/Neu/stunden/<datei>.csv (einmalig, dauert)
+  --nur a,b   nur diese Dateikurznamen (z.B. stralsund,greifswaldoie)
   --schreiben schreibt die genannten Bestandsnamen-Ersatzsaetze (Liste ERSETZEN) nach harmonics_utide_observations.txt
 """
 import datetime as dt
@@ -80,6 +81,9 @@ def positionen():
 def main(argv):
     pos = positionen()
     zips = sorted(glob.glob(os.path.join(NEU, 'pegelonline-*.zip')))
+    if '--nur' in argv:                                            # --nur kurz1,kurz2 (Dateikurznamen)
+        nur = argv[argv.index('--nur') + 1].split(',')
+        zips = [z for z in zips if os.path.basename(z).split('-W-')[0].replace('pegelonline-', '') in nur]
     if '--stunden' in argv:
         os.makedirs(STUNDEN, exist_ok=True)
         for z in zips:
@@ -93,7 +97,7 @@ def main(argv):
     voll = SF.konstituenten(namen, SF.CONSTIT_67) + [k for k in S.OBERTIDEN if k in namen]
     bestand = [r for r in H.load_records() if r['lat'] and 53 < r['lat'] < 56 and 9 < r['lon'] < 15 and not r['current']]
     heute = dt.date.today().strftime('%Y%m%d')
-    schreib = [a for a in argv[argv.index('--schreiben') + 1:] if not a.startswith('--')] if '--schreiben' in argv else []
+    schreib = [a for a in argv[argv.index('--schreiben') + 1:] if not a.startswith('--') and ',' not in a] if '--schreiben' in argv else []
     L = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
     for z in zips:
         kurz = os.path.basename(z).split('-W-')[0].replace('pegelonline-', '')
@@ -174,6 +178,8 @@ ERSETZEN = {
     'ruden': [('Ruden, Germany', 'TICON-WSV-Satz (+26 min gegen die Messung)')],
     'stahlbrode': [('Stahlbrode, Germany', 'TICON-WSV-Satz (+42 min gegen die Messung)')],
     'thiessow': [('Thiessow, Germany', 'TICON-WSV-Satz (+41 min gegen die Messung)')],
+    'stralsund': [('Stralsund, Germany', 'TICON-WSV-Satz (+42 min gegen die Messung)')],
+    'greifswaldoie': [('Greifswald Oie, Germany', 'TICON-WSV-Satz (+38 min gegen die Messung)')],
 }
 ALT_POS = {
     'Eckernförde, Germany': (54.474702, 9.835993, 'Schleswig-Holstein'),
@@ -193,6 +199,8 @@ ALT_POS = {
     'Ruden, Germany': (54.204346, 13.771895, 'Mecklenburg-Vorpommern'),
     'Stahlbrode, Germany': (54.234456, 13.289704, 'Mecklenburg-Vorpommern'),
     'Thiessow, Germany': (54.280663, 13.709752, 'Mecklenburg-Vorpommern'),
+    'Stralsund, Germany': (54.305676, 13.119010, 'Mecklenburg-Vorpommern'),
+    'Greifswald Oie, Germany': (54.241305, 13.907204, 'Mecklenburg-Vorpommern'),
 }
 
 if __name__ == '__main__':
