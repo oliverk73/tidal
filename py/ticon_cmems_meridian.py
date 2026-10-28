@@ -42,7 +42,9 @@ EINZELN = {'uddevalla-udd-swe-cmems': 'SMHI Uddevalla -60 min',
            'kristineberg-kri-swe-cmems': 'SMHI Brofjorden/Smoegen -53..-61 min',
            'f3platformtg-f3p-nld-cmems': 'RWS-Messung F3 -58 min',
            'l91tg-l91-nld-cmems': 'RWS-Messung L9 -60 min',
-           'bayonnepontblanctg_05minute-bay-fra-cmems': 'Messfit-Zwilling Bayonne (Pont Blanc) -60 min'}
+           'bayonnepontblanctg_05minute-bay-fra-cmems': 'Messfit-Zwilling Bayonne (Pont Blanc) -60 min',
+           # 28.10.: einziger SMHI-Satz mit +01:00; SMHI-Stundenreihe 2023-2026 (UTC) M2/S2/O1 -56..-57
+           'goteborg_tingstadstunneln-33093-swe-smhi': 'SMHI Tingstadstunneln -56 min'}
 
 
 # 28.10.: Fit der CMEMS-Stundenreihe 2023-2025 (bzw. letzte 3 Jahre), Median M2/S2/K1/O1 in min

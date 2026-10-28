@@ -46572,8 +46572,11 @@ x 0 0
 # !latitude: 57.723100
 # region: Västra Götaland
 # admin1_quelle: Polygon
+# note: 20261028 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
+# note: -- SMHI Tingstadstunneln -56 min
+# note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
 Göteborg Tingstadstunneln, Sweden
-+01:00 :Europe/Stockholm
++00:00 :Europe/Stockholm
 0.0000 meters
 J1              0.0018  263.12
 K1              0.0048  323.85
