@@ -60540,12 +60540,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -2.9333
-# !latitude: 43.2667
+# !longitude: -2.9315
+# !latitude: 43.2687
 # province: Basque Country
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.928,
 # note: Zielwert F=0.076 aus Nachbarn statt F=0.083 des Bezugsorts; Beleg: Nachbarn 5.27 -> 5.27 %.
-Bilbao, Spain
+# note: 2026-10-28 in die Ria bei Uribitarte gesetzt (vorher 43.2667/-2.9333 an Land), Name praezisiert (Oliver).
+Bilbao (Uribitarte), Spain
 +00:00 :Europe/Madrid
 2.2860 meters
 J1              0.0030  76.78
