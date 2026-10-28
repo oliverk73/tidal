@@ -97,7 +97,8 @@ def main(argv):
     voll = SF.konstituenten(namen, SF.CONSTIT_67) + [k for k in S.OBERTIDEN if k in namen]
     bestand = [r for r in H.load_records() if r['lat'] and 53 < r['lat'] < 56 and 9 < r['lon'] < 15 and not r['current']]
     heute = dt.date.today().strftime('%Y%m%d')
-    schreib = [a for a in argv[argv.index('--schreiben') + 1:] if not a.startswith('--') and ',' not in a] if '--schreiben' in argv else []
+    nurwert = argv[argv.index('--nur') + 1] if '--nur' in argv else None
+    schreib = [a for a in argv[argv.index('--schreiben') + 1:] if not a.startswith('--') and a != nurwert] if '--schreiben' in argv else []
     L = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
     for z in zips:
         kurz = os.path.basename(z).split('-W-')[0].replace('pegelonline-', '')
