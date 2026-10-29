@@ -30865,14 +30865,16 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-29 hinter die Barre vor die Guysborough Marina (OSM); Buch +11/+22 min gegen Canso = Hafenbecken, vorher 45.3833/-61.4833 (Oliver).
+# note: 2026-10-29 Tagestide auf Chedabucto Bay gerichtet (Sand Point gemessen + FES, +25 min Barre): K1 0.072/59, O1 350;
+# note: Zeitfehler K1 -4.4 h, O1 -7.7 h, dazwischen nach Speed (Oliver).
 Guysborough, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 1.0668 meters
-J1              0.0053  137.47
-K1              0.0993  125.07
+J1              0.0038  69.01
+K1              0.0720  59.00
 K2              0.0376  25.93
 L2              0.0167  18.95
-M1              0.0036  26.76
+M1              0.0031  299.07
 M2              0.6026  356.60
 M3              0.0008  8.89
 M4              0.0359  285.35
@@ -30880,13 +30882,13 @@ M6              0.0032  117.89
 M8              0.0008  306.71
 N2              0.1338  334.56
 x 0 0
-O1              0.0460  97.83
-OO1             0.0045  148.94
-P1              0.0314  123.62
-Q1              0.0044  101.46
+O1              0.0460  350.00
+OO1             0.0033  78.05
+P1              0.0234  54.17
+Q1              0.0044  357.84
 x 0 0
 R2              0.0015  221.15
-S1              0.0060  95.93
+S1              0.0044  28.17
 S2              0.1361  28.44
 S4              0.0060  230.83
 x 0 0
@@ -30894,7 +30896,7 @@ T2              0.0106  9.90
 LDA2            0.0060  15.45
 MU2             0.0178  338.17
 NU2             0.0262  335.86
-RHO1            0.0011  73.55
+RHO1            0.0011  329.37
 x 0 0
 x 0 0
 MN4             0.0188  229.55
@@ -30958,7 +30960,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0017  92.60
-SIG1            0.0015  307.42
+SIG1            0.0015  207.45
 x 0 0
 x 0 0
 x 0 0
