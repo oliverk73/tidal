@@ -10,6 +10,7 @@ Dieses Skript aktualisiert den Klon ~/tidal-sammler und vereinigt dann:
   water_levels/ea/rloi*.json             Zeitstempel -> Hoehe, Vereinigung
   tide_tables/iceland_sjolag/<id>.csv    je Stunde die juengste Vorhersage (dags_greiningar)
   tide_tables/iceland_sjolag/stationen.json
+  tide_tables/kuwait_met/<pegel>.csv     je Scheitelzeit der juengste Abruf (seit 29.10.2026)
 Lokal vorhandene Werte gehen nie verloren; es kommt nur hinzu.
 
 Aufruf: python3 py/sammler_holen.py   (systemd-User-Timer sammler-holen.timer)
@@ -27,6 +28,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KLON = os.path.expanduser('~/tidal-sammler')
 FELDER = ['dags', 'sjavarfoll', 'ahladandi', 'sjavarhaed', 'dags_greiningar']
+FELDER_KW = ['zeit_lokal', 'zeit_utc', 'hoehe', 'typ', 'abruf', 'wartung']
 
 
 def schreiben(pfad, text):
@@ -82,6 +84,30 @@ def island():
     return neu_gesamt
 
 
+def kuwait():
+    import io
+    ziel = os.path.join(ROOT, 'tide_tables/kuwait_met')
+    os.makedirs(ziel, exist_ok=True)
+    neu_gesamt = 0
+    for q in glob.glob(os.path.join(KLON, 'tide_tables/kuwait_met/*.csv')):
+        p = os.path.join(ziel, os.path.basename(q))
+        lokal = {z['zeit_lokal']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
+        vorher, geaendert = len(lokal), False
+        for z in csv.DictReader(open(q, encoding='utf-8')):
+            alt = lokal.get(z['zeit_lokal'])
+            if not alt or z['abruf'] > alt['abruf']:
+                lokal[z['zeit_lokal']] = z
+                geaendert = True
+        if geaendert:
+            buf = io.StringIO()
+            w = csv.DictWriter(buf, fieldnames=FELDER_KW)
+            w.writeheader()
+            w.writerows({k: lokal[d][k] for k in FELDER_KW} for d in sorted(lokal))
+            schreiben(p, buf.getvalue())
+            neu_gesamt += len(lokal) - vorher
+    return neu_gesamt
+
+
 def main():
     print(f'--- {dt.datetime.now():%Y-%m-%d %H:%M}', flush=True)
     if not os.path.isdir(os.path.join(KLON, '.git')):
@@ -95,6 +121,7 @@ def main():
     print(f'  Stand GitHub: {letzter}')
     print(f'  EA:     +{ea()} Messpunkte')
     print(f'  Island: +{island()} Stunden')
+    print(f'  Kuwait: +{kuwait()} Scheitel')
     return 0
 
 
