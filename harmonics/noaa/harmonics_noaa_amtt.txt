@@ -26136,8 +26136,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -64.8667
-# !latitude: 47.5167
+# !longitude: -64.8590
+# !latitude: 47.5497
 # note: 20260903 Provinz "New Brunswick" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: New Brunswick
@@ -26147,14 +26147,17 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Pictou, Nova Scotia, Canada [harmonics_ticon4_worldwide.txt],
 # note: Flach weg, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-29 Tagestide repariert: dt=+390 min der Pictou-Uebertragung drehte K1/O1 um ~110 Grad (-7.7 h);
+# note: J1/K1/O1/P1/Q1-Phasen von Tracadie (3 km, geprueft), uebrige Tagestiden um denselben Zeitfehler verschoben.
+# note: 2026-10-29 Position nach NRCan CGNDB DBBBG (Old Tracadie Gully), vorher 47.5167/-64.8667 (Oliver).
 Old Tracadie Gully entrance, New Brunswick, Canada
 +00:00 :America/Moncton
 0.7620 meters
-J1              0.0103  69.83
-K1              0.1762  64.22
+J1              0.0103  286.37
+K1              0.1762  309.16
 K2              0.0295  296.77
 L2              0.0078  261.91
-M1              0.0095  333.29
+M1              0.0095  221.35
 M2              0.3671  231.91
 x 0 0
 x 0 0
@@ -26162,11 +26165,11 @@ x 0 0
 x 0 0
 N2              0.0870  196.06
 2N2             0.0115  162.79
-O1              0.1645  25.45
-OO1             0.0066  80.63
-P1              0.0560  63.58
-Q1              0.0266  350.33
-2Q1             0.0008  17.60
+O1              0.1645  276.78
+OO1             0.0066  316.01
+P1              0.0560  308.84
+Q1              0.0266  244.57
+2Q1             0.0008  278.34
 R2              0.0013  98.98
 S1              0.0069  176.54
 S2              0.1047  292.75
@@ -26176,7 +26179,7 @@ T2              0.0068  282.01
 LDA2            0.0014  315.38
 MU2             0.0139  185.71
 NU2             0.0159  190.46
-RHO1            0.0042  347.41
+RHO1            0.0042  243.39
 x 0 0
 x 0 0
 x 0 0
@@ -26240,7 +26243,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0030  196.03
-SIG1            0.0018  214.72
+SIG1            0.0018  114.90
 x 0 0
 x 0 0
 x 0 0
