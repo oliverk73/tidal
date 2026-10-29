@@ -36435,16 +36435,17 @@ x 0 0
 # confidence: 4
 # note: 20260915 neu uebertragen von Saint John, New Brunswick, Canada: Buch druckt 'on Halifax', richtig Saint John (REF_BUCHFEHLER); 38.9 -> 6.0 %.
 # !units: meters
-# !longitude: -64.2833
-# !latitude: 45.8333
+# !longitude: -64.3266
+# !latitude: 45.7687
 # note: 20260903 Provinz "New Brunswick" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
-# province: New Brunswick
+# province: Nova Scotia
 # admin1_quelle: Name
 # note: 20260913 S2/K2 x 2.67 auf den Springhub des Buchs (ectt-555); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Amherst Point (Cumberland Basin), New Brunswick, Canada
+# note: 2026-10-29 Buch 45 50 N (Breite verschrieben, Register: Nova Scotia) -> Kap Amherst Point nach OSM, vorher 45.8333/-64.2833 (Oliver).
+Amherst Point (Cumberland Basin), Nova Scotia, Canada
 +00:00 :America/Moncton
 7.3152 meters
 J1              0.0163  209.91
@@ -91819,12 +91820,13 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -66.0167
-# !latitude: 44.4500
+# !longitude: -66.0048
+# !latitude: 44.4371
 # province: Nova Scotia
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.346,
 # note: Zielwert F=0.103 aus Nachbarn statt F=0.076 des Bezugsorts; Beleg: Nachbarn 4.42 -> 4.38 %.
-Weymouth (St. Mary Bay), Nova Scotia, Canada
+# note: 2026-10-29 Name und Position (Oliver), vorher Buchposition 44.4500/-66.0167 an der Sissiboo-Muendung.
+Weymouth North (Sissiboo River), Nova Scotia, Canada
 +00:00 :America/Halifax
 3.2918 meters
 J1              0.0093  193.55
