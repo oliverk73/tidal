@@ -25364,12 +25364,13 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.081,
 # note: Zielwert F=0.203 aus Nachbarn statt F=0.199 des Bezugsorts; Beleg: Nachbarn 5.55 -> 5.54 %.
+# note: 2026-10-29 S2/K2 x0.91 auf das Mittel der CHS-Nachbarn (Cap-aux-Oies, Saint-Joseph-de-la-Rive, Saint-Bernard-sur-Mer: S2 0.543) (Oliver).
 Île aux Coudres, Québec, Canada
 +00:00 :America/Toronto
 3.0785 meters
 J1              0.0071  331.01
 K1              0.2651  302.85
-K2              0.1828  294.14
+K2              0.1654  294.14
 L2              0.1284  275.25
 M1              0.0122  235.04
 M2              1.9284  249.10
@@ -25386,7 +25387,7 @@ Q1              0.0384  256.82
 x 0 0
 R2              0.0062  246.48
 S1              0.0146  286.20
-S2              0.5996  294.12
+S2              0.5426  294.12
 S4              0.0160  167.69
 x 0 0
 T2              0.0277  289.54
