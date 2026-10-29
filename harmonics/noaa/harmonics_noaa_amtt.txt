@@ -25156,8 +25156,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -68.6500
-# !latitude: 48.8833
+# !longitude: -68.6421
+# !latitude: 48.9384
 # note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Québec
@@ -25165,7 +25165,8 @@ x 0 0
 # note: 20260913 S2/K2 x 3.07 auf den Springhub des Buchs (ectt-325); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Betsiamites River, Québec, Canada
+# note: 2026-10-29 Buchposition 6 km SSW der Muendung -> vor die Pointe de Betsiamites bei Pessamit (NRCan/OSM), vorher 48.8833/-68.6500 (Oliver).
+Pessamit (Rivière Betsiamites), Québec, Canada
 +00:00 :America/Toronto
 2.2250 meters
 J1              0.0043  300.23
