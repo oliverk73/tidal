@@ -31252,8 +31252,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -63.0167
-# !latitude: 44.7500
+# !longitude: -63.0300
+# !latitude: 44.7451
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -31263,6 +31263,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.816,
 # note: Zielwert F=0.159 aus Nachbarn statt F=0.197 des Bezugsorts; Beleg: Nachbarn 5.74 -> 5.42 %.
+# note: 2026-10-29 Position Mitte der Bucht nach NRCan CGNDB (Jeddore Harbour), vorher Buchposition 44.7500/-63.0167 (Oliver).
 Jeddore Harbour, Nova Scotia, Canada
 +00:00 :America/Halifax
 1.1887 meters
