@@ -25353,8 +25353,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -70.3167
-# !latitude: 47.4333
+# !longitude: -70.3175
+# !latitude: 47.4269
 # note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Québec
@@ -25365,7 +25365,8 @@ x 0 0
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.081,
 # note: Zielwert F=0.203 aus Nachbarn statt F=0.199 des Bezugsorts; Beleg: Nachbarn 5.55 -> 5.54 %.
 # note: 2026-10-29 S2/K2 x0.91 auf das Mittel der CHS-Nachbarn (Cap-aux-Oies, Saint-Joseph-de-la-Rive, Saint-Bernard-sur-Mer: S2 0.543) (Oliver).
-Île aux Coudres, Québec, Canada
+# note: 2026-10-29 an die Nordostspitze (OSM: Pointe du Bout d'en Bas), vorher Buchposition 47.4333/-70.3167 (Oliver).
+Île aux Coudres (Pointe du Bout d'en Bas), Québec, Canada
 +00:00 :America/Toronto
 3.0785 meters
 J1              0.0071  331.01
