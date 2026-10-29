@@ -25552,8 +25552,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -70.4833
-# !latitude: 47.0833
+# !longitude: -70.4832
+# !latitude: 47.0970
 # note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Québec
@@ -25561,7 +25561,8 @@ x 0 0
 # note: 20260913 S2/K2 x 2.99 auf den Springhub des Buchs (ectt-345); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Beaujeu Channel, Québec, Canada
+# note: 2026-10-29 Name und Position nach NRCan CGNDB (Chenal de Beaujeu), vorher Beaujeu Channel 47.0833/-70.4833 (Oliver).
+Chenal de Beaujeu, Québec, Canada
 +00:00 :America/Toronto
 2.7432 meters
 J1              0.0070  351.53
