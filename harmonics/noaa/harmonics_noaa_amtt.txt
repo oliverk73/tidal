@@ -23149,8 +23149,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -92.1667
-# !latitude: 75.5167
+# !longitude: -92.1701
+# !latitude: 75.5609
 # note: 20260903 Phasen um +2.00 h gedreht: die
 # note: Table-2-Differenz gilt in Ortszeit, die Zonendifferenz
 # note: zum Bezugsort (-6.00 gegen -4.00 nach dem Buch)
@@ -23162,7 +23162,8 @@ x 0 0
 # note: 20260913 S2/K2 x 2.64 auf den Springhub des Buchs (ectt-29); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Refuge Cove (Wellington Channel), Nunavut, Canada
+# note: 2026-10-29 Refuge Cove nirgends belegt, Buchposition 4,8 km im Land -> Ufer bei Eden Point (Oliver).
+Eden Point (Refuge Cove), Nunavut, Canada
 +00:00 :America/Rankin_Inlet
 1.1887 meters
 J1              0.0099  316.10
