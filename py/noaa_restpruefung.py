@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """Prueflist fuer die noch ungeprueften NOAA-Buchsaetze (29.10.2026).
 
-Ausgangspunkt: py/noaa_nachbar_abgleich.ungeprueft() (Stand 18.10.2026). Davon ab:
+Ausgangspunkt: noaa_ungeprueft_20261018.csv mit Name/Position vom 18.10. morgens
+(noaa_stand_20261018_morgen.json, aus e65f0ef^); Zuordnung ueber Fingerabdruck oder Datei+M2. Davon ab:
   - USA ohne Alaska/Hawaii (Oliver 27.10.: geprueft)
   - Hongkong (Oliver 29.10.: geprueft)
   - Saetze der Gruppe "NOAA verschoben" (noaa_auto_verschoben.csv, aktion geprueft)
@@ -10,6 +11,8 @@ Ausgangspunkt: py/noaa_nachbar_abgleich.ungeprueft() (Stand 18.10.2026). Davon a
     verschobene Automatik)
   - Saetze, deren Name in einem Oliver-Commit seit dem 18.10. gesetzt wurde (Umbenennung
     ohne Verschiebung, z. B. Islote Los Negritos 9e427d1)
+  - Saetze mit Notiz '... Oliver' ab dem 18.10. (z. B. Ponta Pedreira 25.10.)
+  - Saetze in harmonics/help/noaa_von_hand_geprueft.csv (im Gespraech geprueft, ohne eigene Notiz)
 
 Fuer den Rest drei Proben, keine aendert etwas:
   lage   an Land (OSM-Landpolygone) bzw. Kuestenabstand, Buchminute (ganze Bogenminute)
@@ -26,6 +29,7 @@ from __future__ import annotations
 import bisect
 import cmath
 import csv
+import json
 import math
 import os
 import re
@@ -35,7 +39,7 @@ from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import load_records, km                          # noqa: E402
-from noaa_nachbar_abgleich import ungeprueft                       # noqa: E402
+from noaa_nachbar_abgleich import ist_noaa_buch, uebernommene_namen  # noqa: E402
 import osm_land                                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -101,25 +105,48 @@ def olivers_namen():
     return {z[1:].strip() for z in log.split('\n') if z.startswith('+') and not z.startswith(('++', '+#')) and ',' in z}
 
 
+def oliver_notiz(r, zeilen):
+    """Notiz mit 'Oliver' ab dem 18.10. im Kopf des Satzes (z. B. Ponta Pedreira 25.10.)."""
+    T = zeilen.setdefault(r['file'], open(r['file'], encoding='latin-1').read().split('\n'))
+    i = r['line'] - 1
+    while i > 0 and T[i - 1].startswith('#'):
+        i -= 1
+        m = re.match(r'# note: (\d{4})-?(\d\d)-?(\d\d)', T[i])
+        if m and m.group(1) + m.group(2) + m.group(3) >= '20261018' and 'Oliver' in T[i]:
+            return True
+    return False
+
+
 def main():
     recs = [r for r in load_records() if not r['current'] and r['lat'] is not None]
-    offen = ungeprueft(recs)
-    alt = {z['fingerprint']: z['name_morgen'] for z in csv.DictReader(open(os.path.join(HELP, 'noaa_ungeprueft_20261018.csv'), encoding='utf-8'))}
-    ab = {z['name']: z for z in csv.DictReader(open(os.path.join(HELP, 'noaa_nachbar_abgleich_20261018.csv'), encoding='utf-8'))}
+    # Stand 18.10. morgens (vor der ersten Automatik e65f0ef), je Fingerabdruck Name/Position/M2.
+    # Zuordnung ueber den Fingerabdruck, sonst ueber Datei + M2: spaetere Reparaturen an S2 oder
+    # Tagestide aendern den Fingerabdruck, M2 aber nicht.
+    stand = json.load(open(os.path.join(HELP, 'noaa_stand_20261018_morgen.json'), encoding='utf-8'))
+    unfp = {z['fingerprint'] for z in csv.DictReader(open(os.path.join(HELP, 'noaa_ungeprueft_20261018.csv'), encoding='utf-8'))}
+    basis = {fp: stand[fp] for fp in unfp if fp in stand}
+    nach_m2 = {(b['datei'], tuple(b['m2'])): fp for fp, b in basis.items()}
     gep = {z['name'] for z in csv.DictReader(open(os.path.join(HELP, 'noaa_auto_verschoben.csv'), encoding='utf-8'))
            if z['aktion'] == 'geprueft'}
-    oliver = olivers_namen()
+    oliver = olivers_namen() | uebernommene_namen() | {z['name'] for z in csv.DictReader(open(
+        os.path.join(HELP, 'noaa_von_hand_geprueft.csv'), encoding='utf-8'))}
+    zeilen = {}
     rest = []
-    for r in offen:
-        teil = r['name'].split(', ')[-1]
-        morgen = alt.get(r['fp'], '')
-        z = ab.get(morgen)
-        if teil in US_STAATEN or teil == 'Hong Kong' or r['name'] in gep or morgen in gep or r['name'] in oliver:
+    for r in recs:
+        if not ist_noaa_buch(r['file']) or 'M2' not in r['z']:
             continue
-        if z and (abs(float(z['lat']) - r['lat']) > 0.0005 or abs(float(z['lon']) - r['lon']) > 0.0005):
+        m2 = (round(abs(r['z']['M2']), 4), round(math.degrees(cmath.phase(r['z']['M2'])), 1))
+        fp = r['fp'] if r['fp'] in basis else nach_m2.get((r['file'].split('harmonics/')[-1], m2))
+        if not fp:
+            continue
+        b = basis[fp]
+        teil = r['name'].split(', ')[-1]
+        if teil in US_STAATEN or teil == 'Hong Kong' or r['name'] in gep or b['name'] in gep or r['name'] in oliver:
+            continue
+        if abs(b['lat'] - r['lat']) > 0.0005 or abs(b['lon'] - r['lon']) > 0.0005 or oliver_notiz(r, zeilen):
             continue
         rest.append(r)
-    ids = {id(r) for r in offen}
+    ids = {id(r) for r in rest}
     nachbarn = sorted((r for r in recs if id(r) not in ids), key=lambda r: r['lat'])
     lats = [r['lat'] for r in nachbarn]
     L = osm_land.Land([(r['lat'], r['lon']) for r in rest])
@@ -157,7 +184,7 @@ def main():
         w.writeheader()
         w.writerows(out)
     from collections import Counter
-    print(len(offen), 'ungeprueft laut 18.10.,', len(rest), 'offen ->', os.path.relpath(ziel, ROOT))
+    print(len(basis), 'ungeprueft laut 18.10.,', len(rest), 'offen ->', os.path.relpath(ziel, ROOT))
     print('Punkte:', sorted(Counter(o['punkte'] for o in out).items(), reverse=True))
 
 
