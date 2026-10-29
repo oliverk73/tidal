@@ -162,7 +162,8 @@ def main():
         dmin = hub = None
         zeit_auff = hub_auff = False
         if g is not None and abs(r['z']['M2']) > 0.05 and abs(g['z']['M2']) > 0.05:
-            dmin = ((math.degrees(cmath.phase(r['z']['M2'] / g['z']['M2'])) + 180) % 360 - 180) / 28.984104 * 60
+            # z = a*exp(-i*g): Phase von z_r/z_g ist g_g - g_r; Minus, damit + = spaeter als der Nachbar
+            dmin = -((math.degrees(cmath.phase(r['z']['M2'] / g['z']['M2'])) + 180) % 360 - 180) / 28.984104 * 60
             hub = abs(r['z']['M2']) / abs(g['z']['M2']) - 1
             zeit_auff = abs(dmin) > 20 + d
             hub_auff = d <= 25 and abs(hub) > next(p for k, p in RAUSCHEN if d <= k)

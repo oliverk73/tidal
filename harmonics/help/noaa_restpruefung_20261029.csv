@@ -1,111 +1,109 @@
 punkte,gruende,datei,name,lat,lon,buchminute,land,kueste_km,name_geonames,naechster_ort,ort_km,nachbar,nachbar_km,dzeit_min,dhub_proz
-7,an Land; Name nicht in GeoNames; Zeit +311 min,harmonics_noaa_cptt.txt,"Tianshuigoukou (Huang He), Shandong, China",37.7593,119.1539,0,1,4.39,0,Dawenliu Haibu,6.4,"Dongying Port, Shandong, China",41.3,311,303
-5,an Land; Zeit +33 min,harmonics_noaa_cptt.txt,"Coral Bank, Tien Giang, Vietnam",10.6167,106.85,1,1,10.0,1,Trần Hưng Đạo,0.9,"Nha Be, Vietnam",11.1,33,-28
-5,>= 10 km vor der Kueste; Name nicht in GeoNames; Zeit +55 min,harmonics_noaa_cptt.txt,"Off Chuanshui Gang, Jiangsu, China",32.9667,121.1167,1,0,10.0,0,Nantong Nongchang,16.7,"Jianggangzhen, Jiangsu, China",31.8,55,4
-5,an Land; Zeit +68 min,harmonics_noaa_amtt.txt,"Sao Joao da Barra, Rio de Janeiro, Brazil",-21.6333,-41.05,1,1,3.64,1,São João da Barra,0.8,"Atafona (Pontal), Rio de Janeiro, Brazil",3.9,68,-14
-4,Name nicht in GeoNames; Zeit -38 min,harmonics_noaa_cptt.txt,"Daqinghe Kou, Hebei, China",39.1211,118.8737,0,0,0.62,0,Laoyujiancun,4.5,"Jingtang Gang, Hebei, China",15.5,-38,34
-4,Name nicht in GeoNames; Zeit +45 min,harmonics_noaa_eutt.txt,"Südfall Fahrwasserkante (Hever), Germany",54.4497,8.7558,0,0,2.37,0,Norderheverkoog,6.0,"Strucklahnungshörn (Nordstrand), Germany",6.3,45,-8
-3,>= 10 km vor der Kueste; Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Chenjiawu, Jiangsu, China",33.1,121.2167,1,0,10.0,0,,,"Dafenggang, Jiangsu, China",42.8,-34,6
-3,>= 10 km vor der Kueste; Name nicht in GeoNames,harmonics_noaa_eutt.txt,"Ems Approach, Netherlands",53.7667,6.0667,1,0,10.0,0,,,"Wierumergronden, Netherlands",28.8,-34,-94
-3,>= 10 km vor der Kueste; Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Hau Giang River entrance, Vietnam",9.4,106.45,1,0,10.0,0,Ấp Khâu Cũ,16.0,"Cua Batak, Vietnam",26.6,39,-27
-3,Zeit +117 min; Hub +74 %,harmonics_noaa_cptt.txt,"Kosa Russkaya Koshka, Chukotka Autonomous Okrug, Russia",64.5833,178.5167,1,0,0.07,1,,,"Kosa Strelka (Anadyrskiy Zaliv), Chukotka Autonomous Okrug, Russia",22.3,117,74
-3,7.0 km vor der Kueste; Name nicht in GeoNames,harmonics_noaa_eutt.txt,"Lister Tief approach, Germany",55.0667,8.3,1,0,6.98,0,Westerheide,9.1,"List (Sylt, West), Germany",6.5,-20,-6
-3,Zeit +39 min; Hub +40 %,harmonics_noaa_cptt.txt,"Malan Wan, Shandong, China",37.4171,122.657,0,0,0.01,1,Licun,0.9,"Chengshanjiao, Shandong, China",4.8,39,40
-3,5.9 km vor der Kueste; Zeit +47 min,harmonics_noaa_cptt.txt,"Tongsha Shazui, Shanghai, China",31.1,122.0167,1,0,5.87,1,Banghai,15.9,"Zhongjun (Pudong), Shanghai, China",11.5,47,10
-2,Name nicht in GeoNames,harmonics_noaa_amtt.txt,"Betchewun Harbour, Québec, Canada",50.2333,-63.1833,1,0,0.76,0,,,"Baie-Johan-Beetz, Québec, Canada",27.1,-32,24
-2,Zeit +100 min,harmonics_noaa_amtt.txt,"Cape Hewett, Nunavut, Canada",70.2667,-67.7833,1,0,1.24,1,,,"Cape Christian, Nunavut, Canada",32.2,100,602
-2,Name nicht in GeoNames,harmonics_noaa_amtt.txt,"Cawee Islands, Québec, Canada",49.8333,-67.0,1,0,0.22,0,Baie-des-Homards,7.9,"Port-Cartier, Québec, Canada",26.9,-8,2
-2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Changshansi, Liaoning, China",40.3782,120.5952,0,0,0.01,0,Tailicun,1.5,"Tuanshanzicun, Liaoning, China",21.7,4,39
-2,Zeit +40 min,harmonics_noaa_cptt.txt,"Dapu He (Bar), Hebei, China",39.6775,119.3469,0,0,1.51,1,Dongjinzhuangcun,4.9,"Qili Hai (Xinkaikou), Hebei, China",12.0,40,-19
-2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Gyeonnaeryang (Geojedo), South Korea",34.884,128.4738,0,0,0.2,0,Sin-ch’on,0.5,"Tongyeong (Hangnam-dong), South Korea",6.9,8,-3
-2,Zeit +50 min,harmonics_noaa_cptt.txt,"Hailu Dao, Shandong, China",37.4453,122.6664,0,0,0.07,1,Licun,4.2,"Chengshanjiao, Shandong, China",6.4,50,17
-2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Jinghaijiao, Shandong, China",36.8505,122.1828,0,0,0.01,0,Jinghaiweicun,1.0,"Zhangjiabu (Qinglong He), Shandong, China",17.7,20,-11
-2,Zeit +45 min,harmonics_noaa_eutt.txt,"Juist (Seeseite), Germany",53.6833,6.9833,1,0,0.17,1,Juist,1.0,"Juist, Germany",1.7,45,-12
-2,Zeit -38 min,harmonics_noaa_eutt.txt,"Kondjo entrance (Baie du Cap Lopez), Gabon",-0.7167,8.9333,1,0,0.9,1,Simani,2.9,"Port-Gentil, Gabon",16.2,-38,9
-2,Zeit -141 min,harmonics_noaa_amtt.txt,"Lille Pendulum, Greenland",74.6167,-18.4833,1,0,0.74,1,,,"Little Pendulum Island, Greenland",5.6,-141,-8
-2,Zeit -81 min,harmonics_noaa_eutt.txt,"Munkmarsch (Lister Tief), Germany",54.9212,8.3634,0,0,0.0,1,Munkmarsch,0.5,"Westerland (Sylt), Germany",6.1,-81,-3
-2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Myeongsa (Geojedo), South Korea",34.7276,128.6005,0,0,0.11,0,Tyokuri,1.1,"Gujora (Geojedo), South Korea",12.2,6,19
-2,Zeit +31 min,harmonics_noaa_eutt.txt,"Nordstrand (Süderhafen, Hever), Germany",54.4675,8.9272,0,0,0.27,1,Hafenhalle,0.7,"Husum (Schleuse), Germany",6.3,31,-11
-2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Pingshan Dao, Shandong, China",35.1333,119.9,1,0,0.79,0,,,"Rizhaogang (Shijiusuo), Shandong, China",40.8,-3,-13
-2,Name nicht in GeoNames,harmonics_noaa_amtt.txt,"Princess Royal Islands, Northwest Territories, Canada",72.75,-117.75,1,0,0.43,0,,,"Natkusiak Peninsula, Northwest Territories, Canada",240.0,89,-2
-2,Zeit -57 min,harmonics_noaa_amtt.txt,"Puerto Lagunas, Chile",-45.2833,-73.7667,1,0,0.46,1,Puerto Aguirre,23.1,"Puerto Aguirre, Chile",23.3,-57,12
-2,Zeit -41 min,harmonics_noaa_amtt.txt,"Puerto Tamar, Chile",-52.9333,-73.7667,1,0,0.42,1,,,"Caleta Sylvia, Chile",14.5,-41,21
-2,Zeit +217 min,harmonics_noaa_eutt.txt,"Reka Khampyl-Yaga, Yamalo-Nenets Autonomous Okrug, Russia",69.3984,73.9069,0,0,0.01,1,,,"Reka Aderpayota (Shirokaya), Yamalo-Nenets Autonomous Okrug, Russia",90.2,217,-18
-2,Name nicht in GeoNames,harmonics_noaa_amtt.txt,"Wapitagun Harbour, Québec, Canada",50.2,-60.0167,1,0,0.03,0,Rochers-du-Cormoran,5.3,"La Romaine (Gethsémani), Québec, Canada",47.9,22,18
-2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Weihekou, Shandong, China",37.1424,119.4863,0,0,0.01,0,Xixiaying,11.0,"Weifang Gang, Shandong, China",28.4,21,-6
-1,6.5 km vor der Kueste,harmonics_noaa_amtt.txt,"Cape Adair, Nunavut, Canada",71.55,-71.5,1,0,6.54,1,,,"Milne Inlet (head), Nunavut, Canada",328.2,64,47
-1,5.4 km vor der Kueste,harmonics_noaa_cptt.txt,"Hajamro River mouth, Pakistan",24.1,67.3167,1,0,5.36,1,Pir Muhammad Shah,5.0,"Hajambro Creek Entrance (Keti Bandar), Pakistan",6.3,1,13
-1,Hub +37 %,harmonics_noaa_amtt.txt,"Wild Cove, Newfoundland, Canada",50.7,-56.1667,1,0,0.49,1,Wild Cove,1.9,"Englee, Newfoundland, Canada",5.5,-8,37
-0,,harmonics_noaa_cptt.txt,"Araceli (Dumaran Island), Palawan, Philippines",10.55,119.9865,0,0,0.18,1,Tandol,0.3,"Paly Island, Palawan, Philippines",35.5,37,-11
-0,,harmonics_noaa_amtt.txt,"Bahía Cupica, Colombia",6.6833,-77.5,1,0,0.61,1,Cupica,1.3,"Bahía Octavia, Colombia",24.6,-2,-9
-0,,harmonics_noaa_amtt.txt,"Bahía Snug, Chile",-53.85,-71.4167,1,0,0.02,1,,,"Bahía Wood, Chile",14.7,-5,0
-0,,harmonics_noaa_amtt.txt,"Betsiamites River, Québec, Canada",48.8833,-68.65,1,0,1.65,1,Betsiamites,6.5,"Forestville, Québec, Canada",33.6,16,-6
-0,,harmonics_noaa_cptt.txt,"Boayan Island, Palawan, Philippines",10.5667,119.1833,1,0,0.0,1,San Vicente,8.7,"Port Barton, Palawan, Philippines",17.2,-8,-8
-0,,harmonics_noaa_amtt.txt,"Caleta Playa Parda, Chile",-53.3167,-73.0167,1,0,0.45,1,,,"Puerto Angosto, Chile",25.6,-25,-13
-0,,harmonics_noaa_amtt.txt,"Cape Bear, Prince Edward Island, Canada",46.0,-62.45,1,0,0.67,1,Beach Point,3.1,"Murray Harbour, Prince Edward Island, Canada",5.7,20,-3
-0,,harmonics_noaa_amtt.txt,"Cape George, Nova Scotia, Canada",45.8833,-61.8833,1,0,1.42,1,Cape George Point,2.3,"Ballantynes Cove, Nova Scotia, Canada",3.8,9,7
-0,,harmonics_noaa_amtt.txt,"Cape Hooper (Baffin Island), Nunavut, Canada",68.3833,-66.75,1,0,0.32,1,,,"Cape Hooper, Nunavut, Canada",9.3,4,19
-0,,harmonics_noaa_cptt.txt,"Chu Dao, Shandong, China",37.5684,122.081,0,0,0.04,1,Yuanyaocun,3.0,"Weihai, Shandong, China",7.6,15,9
-0,,harmonics_noaa_amtt.txt,"Comfort Bight, Labrador, Canada",53.15,-55.7667,1,0,0.16,1,Frenchmans Island,7.8,"Punchbowl, Labrador, Canada",11.2,-3,27
-0,,harmonics_noaa_cptt.txt,"Donggang (Zhaoshigou), Liaoning, China",39.8914,124.2081,0,0,0.03,1,Ankang,0.4,"Dandong Xingang, Liaoning, China",9.0,-18,-13
-0,,harmonics_noaa_cptt.txt,"Dongjia Wan (Shazikou), Shandong, China",36.1112,120.5573,0,0,0.07,1,Pingwan,0.7,"Qingdao (Houhai), Shandong, China",22.1,22,-2
-0,,harmonics_noaa_amtt.txt,"Dungeness, Santa Cruz, Argentina",-52.4,-68.4333,1,0,0.28,1,Punta Dungeness,1.7,"Cabo Vírgenes, Santa Cruz, Argentina",7.2,-1,4
-0,,harmonics_noaa_amtt.txt,"Eclipse Harbour, Labrador, Canada",59.8,-64.15,1,0,0.91,1,,,"Eclipse Channel, Labrador, Canada",11.8,10,-26
-0,,harmonics_noaa_amtt.txt,"Forteau Bay, Labrador, Canada",51.45,-56.8833,1,0,1.41,1,Davis House,1.9,"Forteau Bay (Strait of Bell Isle), Labrador, Canada",5.3,-3,-1
-0,,harmonics_noaa_cptt.txt,"General Island, Surigao del Sur, Philippines",9.414,126.0029,0,0,0.01,1,Buenavista,0.4,"Dahican Bay, Surigao del Sur, Philippines",7.6,-3,-7
-0,,harmonics_noaa_cptt.txt,"Geoje-man (Geojedo), South Korea",34.8464,128.5823,0,0,0.2,1,Chungnim,0.6,"Gohyeon-hang (Geojedo), South Korea",6.7,1,22
-0,,harmonics_noaa_amtt.txt,"Glace Bay, Nova Scotia, Canada",46.2,-59.9167,1,0,1.8,1,Port Caledonia,2.3,"Sydney, Nova Scotia, Canada",22.8,12,3
-0,,harmonics_noaa_cptt.txt,"Guanglu Dao, Liaoning, China",39.2035,122.3348,0,0,0.36,1,Beixiaoquan,0.7,"Dachangshan Dao, Liaoning, China",22.8,-14,-4
-0,,harmonics_noaa_eutt.txt,"Guba Ara, Murmansk Oblast, Russia",69.4333,32.85,1,0,0.23,1,Guba Ara,7.7,"Bukhta Nasha (Guba Ura), Murmansk Oblast, Russia",6.3,2,6
-0,,harmonics_noaa_eutt.txt,"Guba Bol'shaya Volokovaya, Murmansk Oblast, Russia",69.2654,33.6038,0,0,0.08,1,Volokovaya,3.2,"Guba Zelenetskaya Zapadnaya, Murmansk Oblast, Russia",6.9,-2,6
-0,,harmonics_noaa_eutt.txt,"Guba Dolgaya Zapadnaya, Murmansk Oblast, Russia",69.2806,33.8464,0,0,0.1,1,Granitnyy,2.0,"Guba Zelenetskaya Zapadnaya, Murmansk Oblast, Russia",4.4,1,6
-0,,harmonics_noaa_cptt.txt,"Guimbirayan (Tablas Island), Romblon, Philippines",12.1718,122.0383,0,0,0.02,1,Guimbirayan,0.1,"Looc (Tablas Island), Romblon, Philippines",10.4,-1,27
-0,,harmonics_noaa_amtt.txt,"Guysborough, Nova Scotia, Canada",45.3833,-61.4833,1,0,0.07,1,Guysborough,1.2,"Larrys River, Nova Scotia, Canada",20.3,-23,2
-0,,harmonics_noaa_cptt.txt,"Haiyang (Fengcheng), Shandong, China",36.6833,121.2333,1,0,0.26,1,Fengcheng,2.2,"Rushan Kou, Shandong, China",23.4,-9,3
-0,,harmonics_noaa_amtt.txt,"Hare Bay, Newfoundland, Canada",47.6167,-56.5333,1,0,0.2,1,Francois,16.5,"Francois, Newfoundland, Canada",16.4,-11,-16
+7,an Land; Name nicht in GeoNames; Zeit -311 min,harmonics_noaa_cptt.txt,"Tianshuigoukou (Huang He), Shandong, China",37.7593,119.1539,0,1,4.39,0,Dawenliu Haibu,6.4,"Dongying Port, Shandong, China",41.3,-311,303
+5,an Land; Zeit -33 min,harmonics_noaa_cptt.txt,"Coral Bank, Tien Giang, Vietnam",10.6167,106.85,1,1,10.0,1,Trần Hưng Đạo,0.9,"Nha Be, Vietnam",11.1,-33,-28
+5,>= 10 km vor der Kueste; Name nicht in GeoNames; Zeit -55 min,harmonics_noaa_cptt.txt,"Off Chuanshui Gang, Jiangsu, China",32.9667,121.1167,1,0,10.0,0,Nantong Nongchang,16.7,"Jianggangzhen, Jiangsu, China",31.8,-55,4
+4,Name nicht in GeoNames; Zeit +38 min,harmonics_noaa_cptt.txt,"Daqinghe Kou, Hebei, China",39.1211,118.8737,0,0,0.62,0,Laoyujiancun,4.5,"Jingtang Gang, Hebei, China",15.5,38,34
+4,Name nicht in GeoNames; Zeit -45 min,harmonics_noaa_eutt.txt,"Südfall Fahrwasserkante (Hever), Germany",54.4497,8.7558,0,0,2.37,0,Norderheverkoog,6.0,"Strucklahnungshörn (Nordstrand), Germany",6.3,-45,-8
+3,>= 10 km vor der Kueste; Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Chenjiawu, Jiangsu, China",33.1,121.2167,1,0,10.0,0,,,"Dafenggang, Jiangsu, China",42.8,34,6
+3,>= 10 km vor der Kueste; Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Hau Giang River entrance, Vietnam",9.4,106.45,1,0,10.0,0,Ấp Khâu Cũ,16.0,"Cua Batak, Vietnam",26.6,-39,-27
+3,Zeit -117 min; Hub +74 %,harmonics_noaa_cptt.txt,"Kosa Russkaya Koshka, Chukotka Autonomous Okrug, Russia",64.5833,178.5167,1,0,0.07,1,,,"Kosa Strelka (Anadyrskiy Zaliv), Chukotka Autonomous Okrug, Russia",22.3,-117,74
+3,7.0 km vor der Kueste; Name nicht in GeoNames,harmonics_noaa_eutt.txt,"Lister Tief approach, Germany",55.0667,8.3,1,0,6.98,0,Westerheide,9.1,"List (Sylt, West), Germany",6.5,20,-6
+3,Zeit -39 min; Hub +40 %,harmonics_noaa_cptt.txt,"Malan Wan, Shandong, China",37.4171,122.657,0,0,0.01,1,Licun,0.9,"Chengshanjiao, Shandong, China",4.8,-39,40
+3,5.9 km vor der Kueste; Zeit -47 min,harmonics_noaa_cptt.txt,"Tongsha Shazui, Shanghai, China",31.1,122.0167,1,0,5.87,1,Banghai,15.9,"Zhongjun (Pudong), Shanghai, China",11.5,-47,10
+2,Name nicht in GeoNames,harmonics_noaa_amtt.txt,"Betchewun Harbour, Québec, Canada",50.2333,-63.1833,1,0,0.76,0,,,"Baie-Johan-Beetz, Québec, Canada",27.1,32,24
+2,Zeit -100 min,harmonics_noaa_amtt.txt,"Cape Hewett, Nunavut, Canada",70.2667,-67.7833,1,0,1.24,1,,,"Cape Christian, Nunavut, Canada",32.2,-100,602
+2,Name nicht in GeoNames,harmonics_noaa_amtt.txt,"Cawee Islands, Québec, Canada",49.8333,-67.0,1,0,0.22,0,Baie-des-Homards,7.9,"Port-Cartier, Québec, Canada",26.9,8,2
+2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Changshansi, Liaoning, China",40.3782,120.5952,0,0,0.01,0,Tailicun,1.5,"Tuanshanzicun, Liaoning, China",21.7,-4,39
+2,Zeit -40 min,harmonics_noaa_cptt.txt,"Dapu He (Bar), Hebei, China",39.6775,119.3469,0,0,1.51,1,Dongjinzhuangcun,4.9,"Qili Hai (Xinkaikou), Hebei, China",12.0,-40,-19
+2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Gyeonnaeryang (Geojedo), South Korea",34.884,128.4738,0,0,0.2,0,Sin-ch’on,0.5,"Tongyeong (Hangnam-dong), South Korea",6.9,-8,-3
+2,Zeit -50 min,harmonics_noaa_cptt.txt,"Hailu Dao, Shandong, China",37.4453,122.6664,0,0,0.07,1,Licun,4.2,"Chengshanjiao, Shandong, China",6.4,-50,17
+2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Jinghaijiao, Shandong, China",36.8505,122.1828,0,0,0.01,0,Jinghaiweicun,1.0,"Zhangjiabu (Qinglong He), Shandong, China",17.7,-20,-11
+2,Zeit -45 min,harmonics_noaa_eutt.txt,"Juist (Seeseite), Germany",53.6833,6.9833,1,0,0.17,1,Juist,1.0,"Juist, Germany",1.7,-45,-12
+2,Zeit +38 min,harmonics_noaa_eutt.txt,"Kondjo entrance (Baie du Cap Lopez), Gabon",-0.7167,8.9333,1,0,0.9,1,Simani,2.9,"Port-Gentil, Gabon",16.2,38,9
+2,Zeit +141 min,harmonics_noaa_amtt.txt,"Lille Pendulum, Greenland",74.6167,-18.4833,1,0,0.74,1,,,"Little Pendulum Island, Greenland",5.6,141,-8
+2,Zeit +81 min,harmonics_noaa_eutt.txt,"Munkmarsch (Lister Tief), Germany",54.9212,8.3634,0,0,0.0,1,Munkmarsch,0.5,"Westerland (Sylt), Germany",6.1,81,-3
+2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Myeongsa (Geojedo), South Korea",34.7276,128.6005,0,0,0.11,0,Tyokuri,1.1,"Gujora (Geojedo), South Korea",12.2,-6,19
+2,Zeit -31 min,harmonics_noaa_eutt.txt,"Nordstrand (Süderhafen, Hever), Germany",54.4675,8.9272,0,0,0.27,1,Hafenhalle,0.7,"Husum (Schleuse), Germany",6.3,-31,-11
+2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Pingshan Dao, Shandong, China",35.1333,119.9,1,0,0.79,0,,,"Rizhaogang (Shijiusuo), Shandong, China",40.8,3,-13
+2,Name nicht in GeoNames,harmonics_noaa_amtt.txt,"Princess Royal Islands, Northwest Territories, Canada",72.75,-117.75,1,0,0.43,0,,,"Natkusiak Peninsula, Northwest Territories, Canada",240.0,-89,-2
+2,Zeit +57 min,harmonics_noaa_amtt.txt,"Puerto Lagunas, Chile",-45.2833,-73.7667,1,0,0.46,1,Puerto Aguirre,23.1,"Puerto Aguirre, Chile",23.3,57,12
+2,Zeit +41 min,harmonics_noaa_amtt.txt,"Puerto Tamar, Chile",-52.9333,-73.7667,1,0,0.42,1,,,"Caleta Sylvia, Chile",14.5,41,21
+2,Zeit -217 min,harmonics_noaa_eutt.txt,"Reka Khampyl-Yaga, Yamalo-Nenets Autonomous Okrug, Russia",69.3984,73.9069,0,0,0.01,1,,,"Reka Aderpayota (Shirokaya), Yamalo-Nenets Autonomous Okrug, Russia",90.2,-217,-18
+2,Name nicht in GeoNames,harmonics_noaa_amtt.txt,"Wapitagun Harbour, Québec, Canada",50.2,-60.0167,1,0,0.03,0,Rochers-du-Cormoran,5.3,"La Romaine (Gethsémani), Québec, Canada",47.9,-22,18
+2,Name nicht in GeoNames,harmonics_noaa_cptt.txt,"Weihekou, Shandong, China",37.1424,119.4863,0,0,0.01,0,Xixiaying,11.0,"Weifang Gang, Shandong, China",28.4,-21,-6
+1,6.5 km vor der Kueste,harmonics_noaa_amtt.txt,"Cape Adair, Nunavut, Canada",71.55,-71.5,1,0,6.54,1,,,"Milne Inlet (head), Nunavut, Canada",328.2,-64,47
+1,5.4 km vor der Kueste,harmonics_noaa_cptt.txt,"Hajamro River mouth, Pakistan",24.1,67.3167,1,0,5.36,1,Pir Muhammad Shah,5.0,"Hajambro Creek Entrance (Keti Bandar), Pakistan",6.3,-1,13
+1,Hub +37 %,harmonics_noaa_amtt.txt,"Wild Cove, Newfoundland, Canada",50.7,-56.1667,1,0,0.49,1,Wild Cove,1.9,"Englee, Newfoundland, Canada",5.5,8,37
+0,,harmonics_noaa_cptt.txt,"Araceli (Dumaran Island), Palawan, Philippines",10.55,119.9865,0,0,0.18,1,Tandol,0.3,"Paly Island, Palawan, Philippines",35.5,-37,-11
+0,,harmonics_noaa_amtt.txt,"Bahía Cupica, Colombia",6.6833,-77.5,1,0,0.61,1,Cupica,1.3,"Bahía Octavia, Colombia",24.6,2,-9
+0,,harmonics_noaa_amtt.txt,"Bahía Snug, Chile",-53.85,-71.4167,1,0,0.02,1,,,"Bahía Wood, Chile",14.7,5,0
+0,,harmonics_noaa_amtt.txt,"Betsiamites River, Québec, Canada",48.8833,-68.65,1,0,1.65,1,Betsiamites,6.5,"Forestville, Québec, Canada",33.6,-16,-6
+0,,harmonics_noaa_cptt.txt,"Boayan Island, Palawan, Philippines",10.5667,119.1833,1,0,0.0,1,San Vicente,8.7,"Port Barton, Palawan, Philippines",17.2,8,-8
+0,,harmonics_noaa_amtt.txt,"Caleta Playa Parda, Chile",-53.3167,-73.0167,1,0,0.45,1,,,"Puerto Angosto, Chile",25.6,25,-13
+0,,harmonics_noaa_amtt.txt,"Cape Bear, Prince Edward Island, Canada",46.0,-62.45,1,0,0.67,1,Beach Point,3.1,"Murray Harbour, Prince Edward Island, Canada",5.7,-20,-3
+0,,harmonics_noaa_amtt.txt,"Cape George, Nova Scotia, Canada",45.8833,-61.8833,1,0,1.42,1,Cape George Point,2.3,"Ballantynes Cove, Nova Scotia, Canada",3.8,-9,7
+0,,harmonics_noaa_amtt.txt,"Cape Hooper (Baffin Island), Nunavut, Canada",68.3833,-66.75,1,0,0.32,1,,,"Cape Hooper, Nunavut, Canada",9.3,-4,19
+0,,harmonics_noaa_cptt.txt,"Chu Dao, Shandong, China",37.5684,122.081,0,0,0.04,1,Yuanyaocun,3.0,"Weihai, Shandong, China",7.6,-15,9
+0,,harmonics_noaa_amtt.txt,"Comfort Bight, Labrador, Canada",53.15,-55.7667,1,0,0.16,1,Frenchmans Island,7.8,"Punchbowl, Labrador, Canada",11.2,3,27
+0,,harmonics_noaa_cptt.txt,"Donggang (Zhaoshigou), Liaoning, China",39.8914,124.2081,0,0,0.03,1,Ankang,0.4,"Dandong Xingang, Liaoning, China",9.0,18,-13
+0,,harmonics_noaa_cptt.txt,"Dongjia Wan (Shazikou), Shandong, China",36.1112,120.5573,0,0,0.07,1,Pingwan,0.7,"Qingdao (Houhai), Shandong, China",22.1,-22,-2
+0,,harmonics_noaa_amtt.txt,"Dungeness, Santa Cruz, Argentina",-52.4,-68.4333,1,0,0.28,1,Punta Dungeness,1.7,"Cabo Vírgenes, Santa Cruz, Argentina",7.2,1,4
+0,,harmonics_noaa_amtt.txt,"Eclipse Harbour, Labrador, Canada",59.8,-64.15,1,0,0.91,1,,,"Eclipse Channel, Labrador, Canada",11.8,-10,-26
+0,,harmonics_noaa_amtt.txt,"Forteau Bay, Labrador, Canada",51.45,-56.8833,1,0,1.41,1,Davis House,1.9,"Forteau Bay (Strait of Bell Isle), Labrador, Canada",5.3,3,-1
+0,,harmonics_noaa_cptt.txt,"General Island, Surigao del Sur, Philippines",9.414,126.0029,0,0,0.01,1,Buenavista,0.4,"Dahican Bay, Surigao del Sur, Philippines",7.6,3,-7
+0,,harmonics_noaa_cptt.txt,"Geoje-man (Geojedo), South Korea",34.8464,128.5823,0,0,0.2,1,Chungnim,0.6,"Gohyeon-hang (Geojedo), South Korea",6.7,-1,22
+0,,harmonics_noaa_amtt.txt,"Glace Bay, Nova Scotia, Canada",46.2,-59.9167,1,0,1.8,1,Port Caledonia,2.3,"Sydney, Nova Scotia, Canada",22.8,-12,3
+0,,harmonics_noaa_cptt.txt,"Guanglu Dao, Liaoning, China",39.2035,122.3348,0,0,0.36,1,Beixiaoquan,0.7,"Dachangshan Dao, Liaoning, China",22.8,14,-4
+0,,harmonics_noaa_eutt.txt,"Guba Ara, Murmansk Oblast, Russia",69.4333,32.85,1,0,0.23,1,Guba Ara,7.7,"Bukhta Nasha (Guba Ura), Murmansk Oblast, Russia",6.3,-2,6
+0,,harmonics_noaa_eutt.txt,"Guba Bol'shaya Volokovaya, Murmansk Oblast, Russia",69.2654,33.6038,0,0,0.08,1,Volokovaya,3.2,"Guba Zelenetskaya Zapadnaya, Murmansk Oblast, Russia",6.9,2,6
+0,,harmonics_noaa_eutt.txt,"Guba Dolgaya Zapadnaya, Murmansk Oblast, Russia",69.2806,33.8464,0,0,0.1,1,Granitnyy,2.0,"Guba Zelenetskaya Zapadnaya, Murmansk Oblast, Russia",4.4,-1,6
+0,,harmonics_noaa_cptt.txt,"Guimbirayan (Tablas Island), Romblon, Philippines",12.1718,122.0383,0,0,0.02,1,Guimbirayan,0.1,"Looc (Tablas Island), Romblon, Philippines",10.4,1,27
+0,,harmonics_noaa_amtt.txt,"Guysborough, Nova Scotia, Canada",45.3833,-61.4833,1,0,0.07,1,Guysborough,1.2,"Larrys River, Nova Scotia, Canada",20.3,23,2
+0,,harmonics_noaa_cptt.txt,"Haiyang (Fengcheng), Shandong, China",36.6833,121.2333,1,0,0.26,1,Fengcheng,2.2,"Rushan Kou, Shandong, China",23.4,9,3
+0,,harmonics_noaa_amtt.txt,"Hare Bay, Newfoundland, Canada",47.6167,-56.5333,1,0,0.2,1,Francois,16.5,"Francois, Newfoundland, Canada",16.4,11,-16
 0,,harmonics_noaa_eutt.txt,"Hooge (Anleger), Germany",54.5786,8.5569,0,0,0.02,1,Backenswarft,0.5,"Langeness (Hilligenley), Germany",4.5,0,-14
-0,,harmonics_noaa_amtt.txt,"Ilha de Maracá, Amapá, Brazil",2.0966,-50.5017,0,0,0.11,1,,,"Tumaco (Isla del Morro), Colombia",3137.0,-28,74
-0,,harmonics_noaa_amtt.txt,"Ingonish Island, Nova Scotia, Canada",46.6667,-60.3833,1,0,1.08,1,Keltic Lodge,1.2,"Ingonish Beach, Nova Scotia, Canada",4.1,5,-7
-0,,harmonics_noaa_amtt.txt,"Isla Guamblin, Chile",-44.8167,-75.0333,1,0,2.35,1,,,"Puerto Americano (Isla Tangbac), Chile",107.7,120,23
-0,,harmonics_noaa_amtt.txt,"Isla Noir, Chile",-54.4833,-73.0,1,0,0.0,1,,,"Ushuaia, Tierra del Fuego, Argentina",304.8,55,19
-0,,harmonics_noaa_amtt.txt,"Islas Week, Chile",-53.2,-74.35,1,0,0.99,1,,,"Caleta Meteoro (Estrecho de Magallanes), Chile",32.4,-44,30
-0,,harmonics_noaa_cptt.txt,"Japitan (Barili Bay), Cebu, Philippines",10.1244,123.4907,0,0,0.11,1,Guibodangan,1.1,"Carcar Bay, Cebu, Philippines",18.4,-15,12
-0,,harmonics_noaa_amtt.txt,"Jeddore Harbour, Nova Scotia, Canada",44.75,-63.0167,1,0,0.06,1,Hartlin Settlement,1.5,"Salmon River Bridge, Nova Scotia, Canada",3.8,18,4
-0,,harmonics_noaa_amtt.txt,"Kangalaksiorvik Fiord, Labrador, Canada",59.3833,-63.7833,1,0,0.19,1,,,"Brownell Point, Labrador, Canada",5.4,-17,-13
-0,,harmonics_noaa_cptt.txt,"Kita-Iwojima, Tokyo, Japan",25.4332,141.2925,0,0,0.02,1,Ishinomura,0.6,"Kameike (Minamidaito), Okinawa, Japan",1009.2,11,-51
-0,,harmonics_noaa_cptt.txt,"Kosa Salomatova, Chukotka Autonomous Okrug, Russia",64.637,178.0115,0,0,0.0,1,Slava,19.0,"Anadyr, Chukotka Autonomous Okrug, Russia",25.3,19,43
-0,,harmonics_noaa_amtt.txt,"Lepreau Harbour, New Brunswick, Canada",45.1167,-66.4833,1,0,0.31,1,Maces Bay,2.2,"Dipper Harbour West, New Brunswick, Canada",5.7,-5,5
-0,,harmonics_noaa_cptt.txt,"Mai Dao, Shandong, China",36.0548,120.4242,0,0,0.0,1,Damaidaocun,1.1,"Qingdao (Houhai), Shandong, China",10.4,14,0
-0,,harmonics_noaa_cptt.txt,"Malalag, Davao del Sur, Philippines",6.5961,125.4141,0,0,0.07,1,Malalag,1.6,"Malita, Davao Region, Philippines",29.3,-4,-4
+0,,harmonics_noaa_amtt.txt,"Ilha de Maracá, Amapá, Brazil",2.0966,-50.5017,0,0,0.11,1,,,"Tumaco (Isla del Morro), Colombia",3137.0,28,74
+0,,harmonics_noaa_amtt.txt,"Ingonish Island, Nova Scotia, Canada",46.6667,-60.3833,1,0,1.08,1,Keltic Lodge,1.2,"Ingonish Beach, Nova Scotia, Canada",4.1,-5,-7
+0,,harmonics_noaa_amtt.txt,"Isla Guamblin, Chile",-44.8167,-75.0333,1,0,2.35,1,,,"Puerto Americano (Isla Tangbac), Chile",107.7,-120,23
+0,,harmonics_noaa_amtt.txt,"Isla Noir, Chile",-54.4833,-73.0,1,0,0.0,1,,,"Ushuaia, Tierra del Fuego, Argentina",304.8,-55,19
+0,,harmonics_noaa_amtt.txt,"Islas Week, Chile",-53.2,-74.35,1,0,0.99,1,,,"Caleta Meteoro (Estrecho de Magallanes), Chile",32.4,44,30
+0,,harmonics_noaa_cptt.txt,"Japitan (Barili Bay), Cebu, Philippines",10.1244,123.4907,0,0,0.11,1,Guibodangan,1.1,"Carcar Bay, Cebu, Philippines",18.4,15,12
+0,,harmonics_noaa_amtt.txt,"Jeddore Harbour, Nova Scotia, Canada",44.75,-63.0167,1,0,0.06,1,Hartlin Settlement,1.5,"Salmon River Bridge, Nova Scotia, Canada",3.8,-18,4
+0,,harmonics_noaa_amtt.txt,"Kangalaksiorvik Fiord, Labrador, Canada",59.3833,-63.7833,1,0,0.19,1,,,"Brownell Point, Labrador, Canada",5.4,17,-13
+0,,harmonics_noaa_cptt.txt,"Kita-Iwojima, Tokyo, Japan",25.4332,141.2925,0,0,0.02,1,Ishinomura,0.6,"Kameike (Minamidaito), Okinawa, Japan",1009.2,-11,-51
+0,,harmonics_noaa_cptt.txt,"Kosa Salomatova, Chukotka Autonomous Okrug, Russia",64.637,178.0115,0,0,0.0,1,Slava,19.0,"Anadyr, Chukotka Autonomous Okrug, Russia",25.3,-19,43
+0,,harmonics_noaa_amtt.txt,"Lepreau Harbour, New Brunswick, Canada",45.1167,-66.4833,1,0,0.31,1,Maces Bay,2.2,"Dipper Harbour West, New Brunswick, Canada",5.7,5,5
+0,,harmonics_noaa_cptt.txt,"Mai Dao, Shandong, China",36.0548,120.4242,0,0,0.0,1,Damaidaocun,1.1,"Qingdao (Houhai), Shandong, China",10.4,-14,0
+0,,harmonics_noaa_cptt.txt,"Malalag, Davao del Sur, Philippines",6.5961,125.4141,0,0,0.07,1,Malalag,1.6,"Malita, Davao Region, Philippines",29.3,4,-4
 0,,harmonics_noaa_cptt.txt,"Maribojoc, Bohol, Philippines",9.736,123.8389,0,0,0.01,1,Maribojoc,0.9,"Tagbilaran, Bohol, Philippines",9.7,0,10
-0,,harmonics_noaa_cptt.txt,"Medellin, Cebu, Philippines",11.1255,123.9612,0,0,0.02,1,Medellin,0.4,"Polambato (Bogo City), Cebu, Philippines",7.3,-10,14
-0,,harmonics_noaa_cptt.txt,"Mercedes, Camarines Norte, Philippines",14.1084,123.0128,0,0,0.02,1,Mercedes,0.2,"Guintinua Island (Calagua Islands), Camarines Norte, Philippines",34.5,-15,-2
-0,,harmonics_noaa_amtt.txt,"Mistanoque Harbour, Québec, Canada",51.2667,-58.2,1,0,0.12,1,L'Anse-du-Portage,7.4,"Saint-Augustin, Québec, Canada",25.4,11,-4
-0,,harmonics_noaa_amtt.txt,"Moisie Bay, Québec, Canada",50.2,-66.0833,1,0,0.56,1,Moisie,0.9,"Sept-Îles, Québec, Canada",21.5,7,-5
-0,,harmonics_noaa_eutt.txt,"Mys Drovyanoy (Poluostrov Yamal), Yamalo-Nenets Autonomous Okrug, Russia",72.6575,72.97,0,0,0.11,1,,,"Reka Sabule-Yaga (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia",85.7,83,86
-0,,harmonics_noaa_cptt.txt,"Mys Svobodnyy, Sakhalin Oblast, Russia",46.8232,143.4285,0,0,0.0,1,Svobodnoye,2.2,"Okhotskoye (Ozero Tunaycha), Sakhalin Oblast, Russia",20.7,-3,4
-0,,harmonics_noaa_eutt.txt,"Mys Yam-Sale, Yamalo-Nenets Autonomous Okrug, Russia",66.9038,71.735,0,0,0.01,1,Yada,12.5,"Mys Konushin, Nenets Autonomous Okrug, Russia",1202.4,166,-95
-0,,harmonics_noaa_amtt.txt,"Métis-sur-Mer, Québec, Canada",48.6833,-68.0333,1,0,0.18,1,Métis-sur-Mer,2.4,"Pointe aux Cenelles, Québec, Canada",10.8,-2,3
-0,,harmonics_noaa_amtt.txt,"Nachvak Bay, Labrador, Canada",59.05,-63.5833,1,0,1.23,1,,,"Brownell Point, Labrador, Canada",41.6,8,20
-0,,harmonics_noaa_eutt.txt,"Nordby (Fanø), Denmark",55.4439,8.4085,0,0,0.01,1,Nordby,0.7,"Esbjerg Havn I, Denmark",2.7,-21,-15
-0,,harmonics_noaa_eutt.txt,"Ostrov Uyedineniya, Krasnoyarsk Krai, Russia",77.5013,82.2313,0,0,0.05,1,,,"Ostrov Russkiy, Krasnoyarsk Krai, Russia",348.2,-4,-30
-0,,harmonics_noaa_cptt.txt,"Parasan Harbor (Daram Island), Samar, Philippines",11.7,124.75,1,0,0.12,1,Parasan,0.7,"Catbalogan, Samar, Philippines",16.3,13,4
-0,,harmonics_noaa_amtt.txt,"Pistolet Bay, Newfoundland, Canada",51.5,-55.7333,1,0,0.14,1,Raleigh,7.4,"Ship Cove, Newfoundland, Canada",13.6,-33,26
-0,,harmonics_noaa_amtt.txt,"Port George, Nova Scotia, Canada",45.0167,-65.1667,1,0,1.58,1,Port George,1.6,"Margaretsville, Nova Scotia, Canada",8.9,-6,4
+0,,harmonics_noaa_cptt.txt,"Medellin, Cebu, Philippines",11.1255,123.9612,0,0,0.02,1,Medellin,0.4,"Polambato (Bogo City), Cebu, Philippines",7.3,10,14
+0,,harmonics_noaa_cptt.txt,"Mercedes, Camarines Norte, Philippines",14.1084,123.0128,0,0,0.02,1,Mercedes,0.2,"Guintinua Island (Calagua Islands), Camarines Norte, Philippines",34.5,15,-2
+0,,harmonics_noaa_amtt.txt,"Mistanoque Harbour, Québec, Canada",51.2667,-58.2,1,0,0.12,1,L'Anse-du-Portage,7.4,"Saint-Augustin, Québec, Canada",25.4,-11,-4
+0,,harmonics_noaa_amtt.txt,"Moisie Bay, Québec, Canada",50.2,-66.0833,1,0,0.56,1,Moisie,0.9,"Sept-Îles, Québec, Canada",21.5,-7,-5
+0,,harmonics_noaa_eutt.txt,"Mys Drovyanoy (Poluostrov Yamal), Yamalo-Nenets Autonomous Okrug, Russia",72.6575,72.97,0,0,0.11,1,,,"Reka Sabule-Yaga (Obskaya Guba), Yamalo-Nenets Autonomous Okrug, Russia",85.7,-83,86
+0,,harmonics_noaa_cptt.txt,"Mys Svobodnyy, Sakhalin Oblast, Russia",46.8232,143.4285,0,0,0.0,1,Svobodnoye,2.2,"Okhotskoye (Ozero Tunaycha), Sakhalin Oblast, Russia",20.7,3,4
+0,,harmonics_noaa_eutt.txt,"Mys Yam-Sale, Yamalo-Nenets Autonomous Okrug, Russia",66.9038,71.735,0,0,0.01,1,Yada,12.5,"Mys Konushin, Nenets Autonomous Okrug, Russia",1202.4,-166,-95
+0,,harmonics_noaa_amtt.txt,"Métis-sur-Mer, Québec, Canada",48.6833,-68.0333,1,0,0.18,1,Métis-sur-Mer,2.4,"Pointe aux Cenelles, Québec, Canada",10.8,2,3
+0,,harmonics_noaa_amtt.txt,"Nachvak Bay, Labrador, Canada",59.05,-63.5833,1,0,1.23,1,,,"Brownell Point, Labrador, Canada",41.6,-8,20
+0,,harmonics_noaa_eutt.txt,"Nordby (Fanø), Denmark",55.4439,8.4085,0,0,0.01,1,Nordby,0.7,"Esbjerg Havn I, Denmark",2.7,21,-15
+0,,harmonics_noaa_eutt.txt,"Ostrov Uyedineniya, Krasnoyarsk Krai, Russia",77.5013,82.2313,0,0,0.05,1,,,"Ostrov Russkiy, Krasnoyarsk Krai, Russia",348.2,4,-30
+0,,harmonics_noaa_cptt.txt,"Parasan Harbor (Daram Island), Samar, Philippines",11.7,124.75,1,0,0.12,1,Parasan,0.7,"Catbalogan, Samar, Philippines",16.3,-13,4
+0,,harmonics_noaa_amtt.txt,"Pistolet Bay, Newfoundland, Canada",51.5,-55.7333,1,0,0.14,1,Raleigh,7.4,"Ship Cove, Newfoundland, Canada",13.6,33,26
+0,,harmonics_noaa_amtt.txt,"Port George, Nova Scotia, Canada",45.0167,-65.1667,1,0,1.58,1,Port George,1.6,"Margaretsville, Nova Scotia, Canada",8.9,6,4
 0,,harmonics_noaa_cptt.txt,"Port Sambulauan (Dimataling), Zamboanga del Sur, Philippines",7.5405,123.3723,0,0,0.31,1,Dimataling,0.7,"Saloagan (Maligay Bay), Zamboanga del Sur, Philippines",12.4,0,0
 0,,harmonics_noaa_amtt.txt,"Puerto Gallant, Chile",-53.7,-72.0,1,0,0.61,1,,,"Bahía Wood, Chile",27.4,0,0
-0,,harmonics_noaa_amtt.txt,"Puerto Refugio, Chile",-45.8667,-74.7833,1,0,0.03,1,,,"Puerto Yates, Chile",53.4,-10,-24
-0,,harmonics_noaa_amtt.txt,"Puerto del Hambre, Chile",-53.6333,-70.9167,1,0,0.03,1,San Juan,2.1,"Puerto San Antonio (Estrecho de Magallanes), Chile",30.0,3,18
-0,,harmonics_noaa_cptt.txt,"Pulandian Wan (Boji Dao), Liaoning, China",39.3802,121.7449,0,0,0.0,1,Xibeitun,1.0,"Pulandian Wan (Chang Dao), Liaoning, China",10.1,-28,7
-0,,harmonics_noaa_amtt.txt,"Punta Catalina, Santa Cruz, Argentina",-52.5333,-68.7667,1,0,1.06,1,Hito Uno,17.7,"Estrecho de Magallanes (Boca Oriental), Santa Cruz, Argentina",20.6,-11,4
-0,,harmonics_noaa_amtt.txt,"Rada Vallenar, Chile",-45.3167,-74.5333,1,0,0.78,1,,,"Puerto Yates, Chile",18.9,20,-24
-0,,harmonics_noaa_cptt.txt,"Sablayan, Occidental Mindoro, Philippines",12.8318,120.7699,0,0,0.01,1,Sablayan,0.3,"Apo Island (Mindoro Strait), Occidental Mindoro, Philippines",42.8,10,-3
-0,,harmonics_noaa_eutt.txt,"Schweiburger Tief, Germany",53.45,8.2667,1,0,2.17,1,Sehestedt,3.3,"Arngast (Leuchtturm), Germany",6.0,6,-14
-0,,harmonics_noaa_cptt.txt,"Sirawai (Panabutan Bay), Zamboanga del Norte, Philippines",7.5868,122.1358,0,0,0.0,1,Siraway,0.5,"Port Santa Maria, Zamboanga del Norte, Philippines",19.4,4,6
-0,,harmonics_noaa_eutt.txt,"Sønderho (Fanø), Denmark",55.348,8.475,0,0,0.03,1,Sønderho,0.7,"Mandø, Denmark",9.9,1,12
+0,,harmonics_noaa_amtt.txt,"Puerto Refugio, Chile",-45.8667,-74.7833,1,0,0.03,1,,,"Puerto Yates, Chile",53.4,10,-24
+0,,harmonics_noaa_amtt.txt,"Puerto del Hambre, Chile",-53.6333,-70.9167,1,0,0.03,1,San Juan,2.1,"Puerto San Antonio (Estrecho de Magallanes), Chile",30.0,-3,18
+0,,harmonics_noaa_cptt.txt,"Pulandian Wan (Boji Dao), Liaoning, China",39.3802,121.7449,0,0,0.0,1,Xibeitun,1.0,"Pulandian Wan (Chang Dao), Liaoning, China",10.1,28,7
+0,,harmonics_noaa_amtt.txt,"Punta Catalina, Santa Cruz, Argentina",-52.5333,-68.7667,1,0,1.06,1,Hito Uno,17.7,"Estrecho de Magallanes (Boca Oriental), Santa Cruz, Argentina",20.6,11,4
+0,,harmonics_noaa_amtt.txt,"Rada Vallenar, Chile",-45.3167,-74.5333,1,0,0.78,1,,,"Puerto Yates, Chile",18.9,-20,-24
+0,,harmonics_noaa_cptt.txt,"Sablayan, Occidental Mindoro, Philippines",12.8318,120.7699,0,0,0.01,1,Sablayan,0.3,"Apo Island (Mindoro Strait), Occidental Mindoro, Philippines",42.8,-10,-3
+0,,harmonics_noaa_eutt.txt,"Schweiburger Tief, Germany",53.45,8.2667,1,0,2.17,1,Sehestedt,3.3,"Arngast (Leuchtturm), Germany",6.0,-6,-14
+0,,harmonics_noaa_cptt.txt,"Sirawai (Panabutan Bay), Zamboanga del Norte, Philippines",7.5868,122.1358,0,0,0.0,1,Siraway,0.5,"Port Santa Maria, Zamboanga del Norte, Philippines",19.4,-4,6
+0,,harmonics_noaa_eutt.txt,"Sønderho (Fanø), Denmark",55.348,8.475,0,0,0.03,1,Sønderho,0.7,"Mandø, Denmark",9.9,-1,12
 0,,harmonics_noaa_cptt.txt,"Tabina (Limbug Cove), Zamboanga del Sur, Philippines",7.4646,123.4061,0,0,0.0,1,Tabina,0.3,"Saloagan (Maligay Bay), Zamboanga del Sur, Philippines",17.9,0,-2
-0,,harmonics_noaa_cptt.txt,"Tubigon, Bohol, Philippines",9.9571,123.9567,0,0,0.33,1,Tibigan,0.8,"Jetafe, Central Visayas, Philippines",30.3,11,-6
-0,,harmonics_noaa_cptt.txt,"Xiaowangjia Dao, Liaoning, China",39.5131,123.1015,0,0,0.02,1,Shoulongcun,4.2,"Dawangjia Dao, Liaoning, China",7.5,2,1
-0,,harmonics_noaa_cptt.txt,"Yangma Dao, Shandong, China",37.4812,121.6477,0,0,0.02,1,Sunjiatuancun,1.1,"Kongtong Dao, Shandong, China",15.3,-24,0
-0,,harmonics_noaa_cptt.txt,"Zhangzi Dao, Liaoning, China",39.0397,122.7231,0,0,0.04,1,Yazishi,0.4,"Xiaochangshan Dao, Liaoning, China",22.9,-5,-13
-0,,harmonics_noaa_amtt.txt,"Île aux Coudres, Québec, Canada",47.4333,-70.3167,1,0,0.7,1,Saint-Joseph-de-la-Rive,4.6,"Saint-Joseph-de-la-Rive, Québec, Canada",4.1,16,-4
+0,,harmonics_noaa_cptt.txt,"Tubigon, Bohol, Philippines",9.9571,123.9567,0,0,0.33,1,Tibigan,0.8,"Jetafe, Central Visayas, Philippines",30.3,-11,-6
+0,,harmonics_noaa_cptt.txt,"Xiaowangjia Dao, Liaoning, China",39.5131,123.1015,0,0,0.02,1,Shoulongcun,4.2,"Dawangjia Dao, Liaoning, China",7.5,-2,1
+0,,harmonics_noaa_cptt.txt,"Yangma Dao, Shandong, China",37.4812,121.6477,0,0,0.02,1,Sunjiatuancun,1.1,"Kongtong Dao, Shandong, China",15.3,24,0
+0,,harmonics_noaa_cptt.txt,"Zhangzi Dao, Liaoning, China",39.0397,122.7231,0,0,0.04,1,Yazishi,0.4,"Xiaochangshan Dao, Liaoning, China",22.9,5,-13
+0,,harmonics_noaa_amtt.txt,"Île aux Coudres, Québec, Canada",47.4333,-70.3167,1,0,0.7,1,Saint-Joseph-de-la-Rive,4.6,"Saint-Joseph-de-la-Rive, Québec, Canada",4.1,-16,-4
