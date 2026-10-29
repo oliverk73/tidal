@@ -30855,8 +30855,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -61.4833
-# !latitude: 45.3833
+# !longitude: -61.4962
+# !latitude: 45.3926
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
@@ -30864,6 +30864,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.72 auf den Springhub des Buchs (ectt-475); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 hinter die Barre vor die Guysborough Marina (OSM); Buch +11/+22 min gegen Canso = Hafenbecken, vorher 45.3833/-61.4833 (Oliver).
 Guysborough, Nova Scotia, Canada
 +00:00 :America/Glace_Bay
 1.0668 meters
