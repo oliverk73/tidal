@@ -15211,14 +15211,15 @@ x 0 0
 # note: 20260913 S2/K2 x 3.04 auf den Springhub des Buchs (ectt-105); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 Tagestide repariert: +3.5 h gegen Pim Island (3 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Payer Harbour (Cape Sabine), Nunavut, Canada
 +00:00 :America/Iqaluit
 1.4326 meters
-J1              0.0097  205.27
-K1              0.1829  190.50
+J1              0.0097  260.21
+K1              0.1829  243.52
 K2              0.1259  156.78
 L2              0.0307  147.40
-M1              0.0067  89.82
+M1              0.0067  140.92
 M2              1.1101  122.67
 M3              0.0014  198.01
 M4              0.0662  177.52
@@ -15226,13 +15227,13 @@ M6              0.0058  136.13
 M8              0.0014  91.03
 N2              0.2464  98.27
 x 0 0
-O1              0.0847  158.48
-OO1             0.0083  219.14
-P1              0.0579  188.69
-Q1              0.0081  159.75
+O1              0.0847  207.63
+OO1             0.0083  276.03
+P1              0.0579  241.42
+Q1              0.0081  206.98
 x 0 0
 R2              0.0028  351.83
-S1              0.0111  161.18
+S1              0.0111  214.05
 S2              0.4560  158.94
 S4              0.0111  131.83
 x 0 0
@@ -15240,7 +15241,7 @@ T2              0.0196  140.22
 LDA2            0.0111  143.59
 MU2             0.0328  99.84
 NU2             0.0482  99.89
-RHO1            0.0019  132.15
+RHO1            0.0019  179.64
 x 0 0
 x 0 0
 MN4             0.0346  119.34
@@ -15304,7 +15305,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0032  288.35
-SIG1            0.0028  3.65
+SIG1            0.0028  49.22
 x 0 0
 x 0 0
 x 0 0
@@ -17391,14 +17392,15 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 54.9000/-58.0333, Kueste 0.20 km) (Oliver).
+# note: 2026-10-29 Tagestide repariert: +4.7 h gegen Mostyn Cove (18 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Webeck Harbour, Labrador, Canada
 +00:00 :America/Goose_Bay
 1.0058 meters
-J1              0.0054  112.92
-K1              0.1019  101.38
+J1              0.0054  186.84
+K1              0.1019  172.72
 K2              0.0559  338.55
 L2              0.0171  332.44
-M1              0.0037  3.93
+M1              0.0037  72.69
 M2              0.6185  310.95
 M3              0.0008  300.41
 M4              0.0369  194.05
@@ -17406,13 +17408,13 @@ M6              0.0032  340.94
 M8              0.0008  124.11
 N2              0.1373  289.77
 x 0 0
-O1              0.0472  75.87
-OO1             0.0046  123.52
-P1              0.0323  100.06
-Q1              0.0045  80.36
+O1              0.0472  142.00
+OO1             0.0046  200.07
+P1              0.0323  171.01
+Q1              0.0045  143.91
 x 0 0
 R2              0.0016  173.83
-S1              0.0062  72.31
+S1              0.0062  143.46
 S2              0.2020  341.19
 S4              0.0062  136.33
 x 0 0
@@ -17420,7 +17422,7 @@ T2              0.0109  322.72
 LDA2            0.0062  329.06
 MU2             0.0183  294.12
 NU2             0.0268  290.96
-RHO1            0.0011  52.34
+RHO1            0.0011  116.24
 x 0 0
 x 0 0
 MN4             0.0193  139.11
@@ -17484,7 +17486,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0018  21.72
-SIG1            0.0016  287.06
+SIG1            0.0016  348.37
 x 0 0
 x 0 0
 x 0 0
@@ -18592,14 +18594,15 @@ x 0 0
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 51.1667/-56.0000, Kueste 0.04 km) (Oliver).
 # note: 20261026 auf die Buchzeile gerichtet (-30 min): 30 min neben der Buchzeile (ectt-215, Bezug Halifax; halbstuendige Zone Neufundland).
 # note: -- Rueckrechnung py/noaa_buchzeile_probe.py; FES und Nachbar bestaetigen die Richtung.
+# note: 2026-10-29 Tagestide repariert: +3.5 h gegen Lock's Cove (17 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Ariege Bay, Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7010 meters
-J1              0.0046  117.73
-K1              0.0862  106.02
+J1              0.0046  171.84
+K1              0.0862  158.24
 K2              0.0513  347.82
 L2              0.0145  341.55
-M1              0.0032  8.40
+M1              0.0032  58.73
 M2              0.5233  319.89
 M3              0.0007  313.81
 M4              0.0312  211.93
@@ -18607,13 +18610,13 @@ M6              0.0027  7.75
 M8              0.0007  159.85
 N2              0.1162  298.53
 x 0 0
-O1              0.0399  80.17
-OO1             0.0039  128.49
-P1              0.0273  104.67
-Q1              0.0038  84.49
+O1              0.0399  128.58
+OO1             0.0039  184.53
+P1              0.0273  156.61
+Q1              0.0038  131.01
 x 0 0
 R2              0.0013  183.10
-S1              0.0052  76.93
+S1              0.0052  129.01
 S2              0.1865  350.44
 S4              0.0052  154.83
 x 0 0
@@ -18621,7 +18624,7 @@ T2              0.0092  331.95
 LDA2            0.0052  338.14
 MU2             0.0155  302.75
 NU2             0.0227  299.74
-RHO1            0.0009  56.49
+RHO1            0.0009  103.27
 x 0 0
 x 0 0
 MN4             0.0163  156.82
@@ -18685,7 +18688,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0015  35.60
-SIG1            0.0013  291.04
+SIG1            0.0013  335.92
 x 0 0
 x 0 0
 x 0 0
@@ -23959,14 +23962,15 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.860,
 # note: Zielwert F=0.346 aus Nachbarn statt F=0.404 des Bezugsorts; Beleg: Nachbarn 5.28 -> 4.96 %.
+# note: 2026-10-29 Tagestide repariert: -2.9 h gegen Sept-Îles (21 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Moisie Bay, Québec, Canada
 +00:00 :America/Toronto
 1.4935 meters
-J1              0.0114  320.13
-K1              0.2030  319.57
+J1              0.0114  274.25
+K1              0.2030  275.29
 K2              0.0773  208.54
 L2              0.0187  216.23
-M1              0.0112  230.44
+M1              0.0112  187.77
 M2              0.8647  180.40
 M3              0.0045  291.30
 M4              0.0115  196.52
@@ -23974,13 +23978,13 @@ M6              0.0026  180.43
 M8              0.0002  343.21
 N2              0.1774  156.65
 x 0 0
-O1              0.1935  292.54
-OO1             0.0071  329.22
-P1              0.0680  315.90
-Q1              0.0338  258.93
+O1              0.1935  251.50
+OO1             0.0071  281.71
+P1              0.0680  271.87
+Q1              0.0338  219.49
 x 0 0
 R2              0.0032  124.02
-S1              0.0047  60.72
+S1              0.0047  16.57
 S2              0.2801  211.73
 S4              0.0016  243.82
 x 0 0
@@ -23988,7 +23992,7 @@ T2              0.0200  205.26
 LDA2            0.0062  231.88
 MU2             0.0200  126.20
 NU2             0.0341  162.85
-RHO1            0.0065  272.98
+RHO1            0.0065  233.32
 x 0 0
 x 0 0
 MN4             0.0054  130.94
@@ -24052,7 +24056,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0062  150.99
-SIG1            0.0029  53.20
+SIG1            0.0029  15.15
 x 0 0
 x 0 0
 x 0 0
@@ -24357,14 +24361,15 @@ x 0 0
 # note: 20260913 S2/K2 x 2.59 auf den Springhub des Buchs (ectt-313); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 Tagestide repariert: -3.0 h gegen Port-Cartier (27 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Cawee Islands, Québec, Canada
 +00:00 :America/Toronto
 1.6154 meters
-J1              0.0146  324.80
-K1              0.2614  324.09
+J1              0.0146  278.05
+K1              0.2614  278.97
 K2              0.0872  217.56
 L2              0.0207  225.09
-M1              0.0144  234.79
+M1              0.0144  191.30
 M2              0.9574  189.10
 M3              0.0050  304.34
 M4              0.0128  213.91
@@ -24372,13 +24377,13 @@ M6              0.0029  206.52
 M8              0.0002  17.99
 N2              0.1964  165.18
 x 0 0
-O1              0.2491  296.72
-OO1             0.0092  334.06
-P1              0.0876  320.38
-Q1              0.0435  262.95
+O1              0.2491  254.89
+OO1             0.0092  285.65
+P1              0.0876  275.51
+Q1              0.0435  222.76
 x 0 0
 R2              0.0036  133.04
-S1              0.0061  65.22
+S1              0.0061  20.22
 S2              0.3161  220.73
 S4              0.0018  261.82
 x 0 0
@@ -24386,7 +24391,7 @@ T2              0.0221  214.24
 LDA2            0.0068  240.72
 MU2             0.0221  134.59
 NU2             0.0378  171.40
-RHO1            0.0085  277.02
+RHO1            0.0085  236.61
 x 0 0
 x 0 0
 MN4             0.0059  148.16
@@ -24450,7 +24455,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0068  164.49
-SIG1            0.0038  57.08
+SIG1            0.0038  18.30
 x 0 0
 x 0 0
 x 0 0
@@ -24560,11 +24565,12 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Harrington Harbour, Québec, Canada [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-29 Tagestide repariert: -3.1 h gegen Cap-Chat (5 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Cap Chat, Québec, Canada
 +00:00 :America/Toronto
 1.8593 meters
-J1              0.0160  332.84
-K1              0.2691  328.41
+J1              0.0160  284.06
+K1              0.2691  281.34
 K2              0.0878  225.54
 L2              0.0215  238.38
 x 0 0
@@ -24575,11 +24581,11 @@ M6              0.0033  218.21
 M8              0.0004  46.87
 N2              0.2004  172.16
 2N2             0.0258  155.01
-O1              0.2550  300.17
-OO1             0.0111  340.94
-P1              0.0901  323.72
-Q1              0.0462  262.87
-2Q1             0.0042  252.64
+O1              0.2550  256.53
+OO1             0.0111  290.43
+P1              0.0901  276.90
+Q1              0.0462  220.94
+2Q1             0.0042  212.41
 R2              0.0037  134.57
 x 0 0
 S2              0.3165  228.71
@@ -24589,7 +24595,7 @@ T2              0.0230  220.09
 LDA2            0.0088  252.12
 MU2             0.0239  143.83
 NU2             0.0392  175.66
-RHO1            0.0098  305.94
+RHO1            0.0098  263.78
 MK3             0.0081  296.19
 x 0 0
 MN4             0.0065  156.92
@@ -24602,7 +24608,7 @@ x 0 0
 SSA             0.0175  208.18
 SA-IOS          0.0869  307.02
 x 0 0
-S1-IOS          0.0087  284.12
+S1-IOS          0.0087  237.17
 x 0 0
 x 0 0
 x 0 0
@@ -24636,24 +24642,24 @@ x 0 0
 EPS2            0.0044  139.46
 MO3             0.0103  202.65
 x 0 0
-TAU1            0.0061  267.10
+TAU1            0.0061  223.20
 x 0 0
 MSK6            0.0006  255.25
 x 0 0
 MSN2            0.0040  195.16
 x 0 0
 x 0 0
-NO1             0.0151  323.07
+NO1             0.0151  277.70
 x 0 0
 OQ2             0.0039  143.35
-PHI1            0.0076  332.54
+PHI1            0.0076  285.21
 x 0 0
 x 0 0
 x 0 0
-PSI1            0.0085  43.03
+PSI1            0.0085  355.83
 x 0 0
 x 0 0
-SIG1            0.0048  244.35
+SIG1            0.0048  203.89
 SK3             0.0079  57.83
 x 0 0
 x 0 0
@@ -24762,14 +24768,15 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 49.3333/-67.3667, Kueste 0.08 km) (Oliver).
+# note: 2026-10-29 Tagestide repariert: -3.3 h gegen Baie-Trinité (13 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Pointe des Monts, Québec, Canada
 +00:00 :America/Toronto
 1.8593 meters
-J1              0.0172  327.14
-K1              0.3078  326.34
+J1              0.0172  276.14
+K1              0.3078  277.12
 K2              0.1137  222.07
 L2              0.0244  229.52
-M1              0.0169  236.97
+M1              0.0169  189.54
 M2              1.1272  193.44
 M3              0.0059  310.87
 M4              0.0150  222.60
@@ -24777,13 +24784,13 @@ M6              0.0034  219.56
 M8              0.0002  35.39
 N2              0.2313  169.45
 x 0 0
-O1              0.2934  298.81
-OO1             0.0108  336.48
-P1              0.1032  322.63
-Q1              0.0513  264.96
+O1              0.2934  253.19
+OO1             0.0108  283.67
+P1              0.1032  273.68
+Q1              0.0513  221.12
 x 0 0
 R2              0.0042  137.54
-S1              0.0072  67.47
+S1              0.0072  18.39
 S2              0.4119  225.23
 S4              0.0021  270.82
 x 0 0
@@ -24791,7 +24798,7 @@ T2              0.0261  218.74
 LDA2            0.0080  245.14
 MU2             0.0261  138.78
 NU2             0.0445  175.68
-RHO1            0.0100  279.04
+RHO1            0.0100  234.96
 x 0 0
 x 0 0
 MN4             0.0070  156.77
@@ -24855,7 +24862,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0080  171.24
-SIG1            0.0044  59.02
+SIG1            0.0044  16.72
 x 0 0
 x 0 0
 x 0 0
@@ -25160,14 +25167,15 @@ x 0 0
 # note: 20260913 S2/K2 x 2.66 auf den Springhub des Buchs (ectt-323); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 Tagestide repariert: -3.4 h gegen Pointe aux Cenelles (11 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Métis-sur-Mer, Québec, Canada
 +00:00 :America/Toronto
 2.0726 meters
-J1              0.0190  330.52
-K1              0.3415  329.60
+J1              0.0190  277.81
+K1              0.3415  278.73
 K2              0.1245  228.59
 L2              0.0270  235.92
-M1              0.0188  240.11
+M1              0.0188  191.08
 M2              1.2508  199.72
 M3              0.0066  320.29
 M4              0.0167  235.16
@@ -25175,13 +25183,13 @@ M6              0.0038  238.40
 M8              0.0002  60.51
 N2              0.2566  175.61
 x 0 0
-O1              0.3255  301.83
-OO1             0.0120  339.98
-P1              0.1145  325.87
-Q1              0.0569  267.86
+O1              0.3255  254.67
+OO1             0.0120  285.39
+P1              0.1145  275.28
+Q1              0.0569  222.54
 x 0 0
 R2              0.0047  144.05
-S1              0.0080  70.72
+S1              0.0080  19.99
 S2              0.4518  231.73
 S4              0.0024  283.82
 x 0 0
@@ -25189,7 +25197,7 @@ T2              0.0289  225.23
 LDA2            0.0089  251.52
 MU2             0.0289  144.84
 NU2             0.0494  181.85
-RHO1            0.0110  281.96
+RHO1            0.0110  236.40
 x 0 0
 x 0 0
 MN4             0.0078  169.22
@@ -25253,7 +25261,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0089  180.99
-SIG1            0.0049  61.82
+SIG1            0.0049  18.10
 x 0 0
 x 0 0
 x 0 0
@@ -38998,14 +39006,15 @@ x 0 0
 # note: 20260913 S2/K2 x 1.70 auf den Springhub des Buchs (wctt-11); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 Tagestide repariert: +8.4 h gegen Punta Delgada (Estrecho de Magallanes) (33 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Bahía Posesión, Chile
 +00:00 :America/Punta_Arenas
 6.0655 meters
-J1              0.0246  40.63
-K1              0.5053  3.03
+J1              0.0246  171.88
+K1              0.5053  129.69
 K2              0.2900  40.66
 L2              0.1884  354.76
-M1              0.0189  259.50
+M1              0.0189  21.58
 M2              4.1164  27.36
 M3              0.0110  48.26
 M4              0.0257  297.60
@@ -39013,13 +39022,13 @@ M6              0.0090  49.65
 M8              0.0004  62.46
 N2              0.9875  5.00
 x 0 0
-O1              0.3410  323.90
-OO1             0.0182  89.04
-P1              0.1597  358.96
-Q1              0.0651  303.67
+O1              0.3410  81.32
+OO1             0.0182  224.95
+P1              0.1597  124.93
+Q1              0.0651  56.50
 x 0 0
 R2              0.0189  66.70
-S1              0.0138  25.77
+S1              0.0138  152.09
 S2              0.9470  45.43
 S4              0.0007  0.87
 x 0 0
@@ -39027,7 +39036,7 @@ T2              0.0708  37.98
 LDA2            0.1125  317.68
 MU2             0.1873  48.89
 NU2             0.1980  358.77
-RHO1            0.0129  304.32
+RHO1            0.0129  57.77
 x 0 0
 x 0 0
 MN4             0.0136  261.33
@@ -39091,7 +39100,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0068  114.90
-SIG1            0.0112  132.25
+SIG1            0.0112  241.11
 x 0 0
 x 0 0
 x 0 0
@@ -40955,14 +40964,15 @@ x 0 0
 # note: 20260913 S2/K2 x 1.72 auf den Springhub des Buchs (wctt-13); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 Tagestide repariert: +8.2 h gegen Punta Delgada (Estrecho de Magallanes) (10 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Banco Dirección, Chile
 +00:00 :America/Punta_Arenas
 6.4008 meters
-J1              0.0250  43.48
-K1              0.5145  5.79
+J1              0.0250  171.87
+K1              0.5145  129.69
 K2              0.2983  46.17
 L2              0.1918  0.17
-M1              0.0192  262.16
+M1              0.0192  21.58
 M2              4.1913  32.67
 M3              0.0112  56.23
 M4              0.0261  308.23
@@ -40970,13 +40980,13 @@ M6              0.0092  65.59
 M8              0.0004  83.72
 N2              1.0055  10.22
 x 0 0
-O1              0.3472  326.46
-OO1             0.0185  91.99
-P1              0.1626  1.70
-Q1              0.0663  306.13
+O1              0.3472  81.32
+OO1             0.0185  224.94
+P1              0.1626  124.93
+Q1              0.0663  56.50
 x 0 0
 R2              0.0192  72.21
-S1              0.0141  28.52
+S1              0.0141  152.08
 S2              0.9740  50.93
 S4              0.0007  11.87
 x 0 0
@@ -40984,7 +40994,7 @@ T2              0.0721  43.47
 LDA2            0.1146  323.08
 MU2             0.1907  54.02
 NU2             0.2016  4.00
-RHO1            0.0132  306.79
+RHO1            0.0132  57.76
 x 0 0
 x 0 0
 MN4             0.0138  271.86
@@ -41048,7 +41058,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0069  123.15
-SIG1            0.0114  134.62
+SIG1            0.0114  241.11
 x 0 0
 x 0 0
 x 0 0
@@ -44929,14 +44939,15 @@ x 0 0
 # note: 20260913 S2/K2 x 1.83 auf den Springhub des Buchs (wctt-15); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 Tagestide repariert: +7.7 h gegen Punta Delgada (Estrecho de Magallanes) (23 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Bahía Santiago, Chile
 +00:00 :America/Punta_Arenas
 3.2309 meters
-J1              0.0125  52.32
-K1              0.2572  14.31
+J1              0.0125  171.88
+K1              0.2572  129.69
 K2              0.2005  63.22
 L2              0.0959  16.90
-M1              0.0096  270.37
+M1              0.0096  21.58
 M2              2.0956  49.09
 M3              0.0056  80.87
 M4              0.0131  341.08
@@ -44944,13 +44955,13 @@ M6              0.0046  114.86
 M8              0.0002  149.41
 N2              0.5028  26.33
 x 0 0
-O1              0.1736  334.36
-OO1             0.0093  101.14
-P1              0.0813  10.18
-Q1              0.0332  313.72
+O1              0.1736  81.32
+OO1             0.0093  224.95
+P1              0.0813  124.93
+Q1              0.0332  56.50
 x 0 0
 R2              0.0096  89.23
-S1              0.0070  37.02
+S1              0.0070  152.09
 S2              0.6548  67.93
 S4              0.0003  45.87
 x 0 0
@@ -44958,7 +44969,7 @@ T2              0.0361  60.45
 LDA2            0.0573  339.77
 MU2             0.0953  69.87
 NU2             0.1008  20.16
-RHO1            0.0066  314.42
+RHO1            0.0066  57.76
 x 0 0
 x 0 0
 MN4             0.0069  304.40
@@ -45022,7 +45033,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0035  148.65
-SIG1            0.0057  141.94
+SIG1            0.0057  241.11
 x 0 0
 x 0 0
 x 0 0
@@ -58354,11 +58365,12 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Puerto Montt, Chile [harmonics_utide_observations.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (2).
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher -52.7500/-70.3000, Kueste 0.90 km) (Oliver).
+# note: 2026-10-29 Tagestide repariert: +7.1 h gegen Bahía Gregorio (10 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Segunda Angostura, Chile
 +00:00 :America/Punta_Arenas
 3.9014 meters
-J1              0.0139  63.81
-K1              0.2754  24.87
+J1              0.0139  174.69
+K1              0.2754  131.88
 K2              0.2169  84.42
 L2              0.1030  37.37
 x 0 0
@@ -58369,11 +58381,11 @@ M6              0.0042  156.29
 M8              0.0006  76.81
 N2              0.5370  46.46
 2N2             0.0709  18.81
-O1              0.1862  343.93
-OO1             0.0104  112.63
-P1              0.0859  21.24
-Q1              0.0350  322.60
-2Q1             0.0035  304.87
+O1              0.1862  83.12
+OO1             0.0104  227.45
+P1              0.0859  127.66
+Q1              0.0350  57.92
+2Q1             0.0035  36.32
 R2              0.0114  89.50
 x 0 0
 S2              0.6976  89.46
@@ -58383,7 +58395,7 @@ T2              0.0404  80.48
 LDA2            0.0604  0.19
 MU2             0.1024  90.11
 NU2             0.1078  41.23
-RHO1            0.0070  326.41
+RHO1            0.0070  62.25
 MK3             0.0044  354.93
 x 0 0
 MN4             0.0085  343.69
@@ -58396,7 +58408,7 @@ x 0 0
 SSA             0.0195  219.62
 SA-IOS          0.0486  138.36
 x 0 0
-S1-IOS          0.0149  246.91
+S1-IOS          0.0149  353.62
 x 0 0
 x 0 0
 x 0 0
@@ -58413,15 +58425,15 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-ALP1            0.0011  344.90
-BET1            0.0012  240.78
-CHI1            0.0038  348.27
+ALP1            0.0011  72.99
+BET1            0.0012  343.33
+CHI1            0.0038  91.92
 H1              0.0372  4.76
 H2              0.0284  205.97
 x 0 0
 ETA2            0.0226  146.59
 x 0 0
-UPS1            0.0007  159.48
+UPS1            0.0007  278.17
 x 0 0
 x 0 0
 MK4             0.0044  10.28
@@ -58430,31 +58442,31 @@ x 0 0
 EPS2            0.0293  79.54
 MO3             0.0090  318.45
 x 0 0
-TAU1            0.0053  92.40
+TAU1            0.0053  192.18
 x 0 0
 MSK6            0.0007  186.87
 MSM             0.0058  270.89
 MSN2            0.0485  239.51
 x 0 0
 x 0 0
-NO1             0.0153  4.00
+NO1             0.0153  107.13
 x 0 0
 OQ2             0.0068  8.73
-PHI1            0.0040  14.21
+PHI1            0.0040  121.80
 x 0 0
-PI1             0.0047  8.98
+PI1             0.0047  115.11
 x 0 0
-PSI1            0.0041  115.26
+PSI1            0.0041  222.56
 x 0 0
 x 0 0
-SIG1            0.0058  336.03
+SIG1            0.0058  68.00
 SK3             0.0050  305.83
 SK4             0.0021  86.27
 SN4             0.0029  51.89
 x 0 0
-SO1             0.0027  115.02
+SO1             0.0027  229.25
 SO3             0.0056  342.42
-THE1            0.0021  86.37
+THE1            0.0021  196.73
 x 0 0
 x 0 0
 x 0 0
@@ -87135,14 +87147,15 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.764,
 # note: Zielwert F=0.123 aus Nachbarn statt F=0.145 des Bezugsorts; Beleg: Nachbarn 7.27 -> 6.66 %.
+# note: 2026-10-29 Tagestide repariert: +8.5 h gegen Cabo Vírgenes (7 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Dungeness, Santa Cruz, Argentina
 +00:00 :America/Buenos_Aires
 5.1206 meters
-J1              0.0163  32.05
-K1              0.3341  354.76
+J1              0.0163  164.43
+K1              0.3341  122.52
 K2              0.3019  24.11
 L2              0.1630  338.52
-M1              0.0125  251.53
+M1              0.0125  14.66
 M2              3.5626  11.41
 M3              0.0095  24.35
 M4              0.0222  265.72
@@ -87150,13 +87163,13 @@ M6              0.0078  1.82
 M8              0.0004  358.70
 N2              0.8547  349.36
 x 0 0
-O1              0.2254  316.23
-OO1             0.0121  80.16
-P1              0.1056  350.73
-Q1              0.0431  296.30
+O1              0.2254  74.66
+OO1             0.0121  217.24
+P1              0.1056  117.79
+Q1              0.0431  50.11
 x 0 0
 R2              0.0163  50.18
-S1              0.0092  17.52
+S1              0.0092  144.93
 S2              0.9858  28.93
 S4              0.0006  327.87
 x 0 0
@@ -87164,7 +87177,7 @@ T2              0.0613  21.50
 LDA2            0.0974  301.48
 MU2             0.1621  33.51
 NU2             0.1714  343.09
-RHO1            0.0086  296.91
+RHO1            0.0086  51.34
 x 0 0
 x 0 0
 MN4             0.0118  229.75
@@ -87228,7 +87241,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0059  90.15
-SIG1            0.0074  125.14
+SIG1            0.0074  234.94
 x 0 0
 x 0 0
 x 0 0
@@ -90252,14 +90265,15 @@ x 0 0
 # note: 20260913 S2/K2 x 1.76 auf den Springhub des Buchs (wctt-9); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 Tagestide repariert: +8.5 h gegen Estrecho de Magallanes (Boca Oriental) (21 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Punta Catalina, Santa Cruz, Argentina
 +00:00 :America/Punta_Arenas
 5.1206 meters
-J1              0.0204  33.87
-K1              0.4189  356.52
+J1              0.0204  166.17
+K1              0.4189  124.20
 K2              0.2890  27.62
 L2              0.1562  341.96
-M1              0.0156  253.22
+M1              0.0156  16.28
 M2              3.4129  14.80
 M3              0.0091  29.42
 M4              0.0213  272.48
@@ -90267,13 +90281,13 @@ M6              0.0075  11.97
 M8              0.0004  12.22
 N2              0.8188  352.68
 x 0 0
-O1              0.2827  317.86
-OO1             0.0151  82.04
-P1              0.1324  352.47
-Q1              0.0540  297.86
+O1              0.2827  76.22
+OO1             0.0151  219.04
+P1              0.1324  119.45
+Q1              0.0540  51.59
 x 0 0
 R2              0.0156  53.69
-S1              0.0115  19.27
+S1              0.0115  146.60
 S2              0.9435  32.43
 S4              0.0005  334.87
 x 0 0
@@ -90281,7 +90295,7 @@ T2              0.0587  24.99
 LDA2            0.0933  304.91
 MU2             0.1553  36.77
 NU2             0.1642  346.42
-RHO1            0.0107  298.48
+RHO1            0.0107  52.83
 x 0 0
 x 0 0
 MN4             0.0113  236.44
@@ -90345,7 +90359,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0056  95.40
-SIG1            0.0093  126.65
+SIG1            0.0093  236.38
 x 0 0
 x 0 0
 x 0 0

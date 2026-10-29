@@ -81863,14 +81863,15 @@ x 0 0
 # note: 20260913 S2/K2 x 1.57 auf den Springhub des Buchs (cptt-3335); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
+# note: 2026-10-29 Tagestide repariert: +3.0 h gegen Coffin Bay Entrance Beacon (4 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Coffin Bay, South Australia, Australia
 +09:30 :Australia/Adelaide
 1.0058 meters
-J1              0.0099  353.03
-K1              0.1868  342.57
+J1              0.0099  39.50
+K1              0.1868  27.42
 K2              0.0778  46.93
 L2              0.0023  237.61
-M1              0.0091  332.01
+M1              0.0091  15.24
 M2              0.3781  335.05
 x 0 0
 M4              0.0038  260.11
@@ -81878,10 +81879,10 @@ x 0 0
 x 0 0
 N2              0.0175  72.50
 x 0 0
-O1              0.1238  321.49
-OO1             0.0053  3.64
-P1              0.0615  341.03
-Q1              0.0296  311.93
+O1              0.1238  3.06
+OO1             0.0053  51.76
+P1              0.0615  25.63
+Q1              0.0296  351.88
 x 0 0
 R2              0.0030  44.12
 x 0 0
@@ -81892,7 +81893,7 @@ T2              0.0220  38.88
 LDA2            0.0023  5.84
 MU2             0.0091  268.61
 NU2             0.0030  59.47
-RHO1            0.0046  312.40
+RHO1            0.0046  352.57
 x 0 0
 x 0 0
 MN4             0.0038  232.55

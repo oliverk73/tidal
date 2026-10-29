@@ -33095,14 +33095,15 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ullapool, Scotland, United Kingdom [harmonics_ticon4_worldwi,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-29 Tagestide repariert: +4.3 h gegen Ardnave Point (Islay) (14 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Rubh' A' Mhail (Islay), Scotland, United Kingdom
 +00:00 :Europe/London
 1.9202 meters
-J1              0.0034  158.67
-K1              0.0733  107.30
+J1              0.0034  225.08
+K1              0.0733  171.39
 K2              0.1182  190.48
 L2              0.0220  182.08
-M1              0.0017  1.89
+M1              0.0017  63.66
 M2              1.0112  159.93
 M3              0.0200  60.20
 M4              0.0433  148.59
@@ -33110,13 +33111,13 @@ M6              0.0044  76.31
 M8              0.0004  189.95
 N2              0.2040  138.61
 2N2             0.0282  118.22
-O1              0.0517  326.41
-OO1             0.0022  239.15
-P1              0.0220  93.88
-Q1              0.0184  278.01
-2Q1             0.0042  240.92
+O1              0.0517  25.82
+OO1             0.0022  307.92
+P1              0.0220  157.62
+Q1              0.0184  335.10
+2Q1             0.0042  295.69
 R2              0.0027  210.76
-S1              0.0077  16.45
+S1              0.0077  80.37
 S2              0.4149  192.71
 S4              0.0086  308.88
 x 0 0
@@ -33124,7 +33125,7 @@ T2              0.0207  185.97
 LDA2            0.0044  186.79
 MU2             0.0385  107.08
 NU2             0.0378  143.31
-RHO1            0.0031  286.17
+RHO1            0.0031  343.57
 x 0 0
 x 0 0
 MN4             0.0083  115.16
@@ -33188,7 +33189,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0019  244.09
-SIG1            0.0035  78.78
+SIG1            0.0035  133.86
 x 0 0
 x 0 0
 x 0 0
@@ -33293,14 +33294,15 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ullapool, Scotland, United Kingdom [harmonics_ticon4_worldwi,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-29 Tagestide repariert: +5.2 h gegen Barcaldine Pier (7 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Port Appin (Loch Linnhe), Scotland, United Kingdom
 +00:00 :Europe/London
 2.1336 meters
-J1              0.0037  158.02
-K1              0.0782  106.67
+J1              0.0037  238.70
+K1              0.0782  184.53
 K2              0.1357  189.23
 L2              0.0235  180.85
-M1              0.0018  1.29
+M1              0.0018  76.33
 M2              1.0796  158.72
 M3              0.0214  58.39
 M4              0.0462  146.18
@@ -33308,13 +33310,13 @@ M6              0.0047  72.69
 M8              0.0004  185.12
 N2              0.2177  137.42
 2N2             0.0301  117.06
-O1              0.0552  325.83
-OO1             0.0024  238.48
-P1              0.0235  93.26
-Q1              0.0197  277.45
-2Q1             0.0044  240.38
+O1              0.0552  38.00
+OO1             0.0024  322.02
+P1              0.0235  170.69
+Q1              0.0197  346.81
+2Q1             0.0044  306.92
 R2              0.0029  209.51
-S1              0.0082  15.83
+S1              0.0082  93.47
 S2              0.4763  191.46
 S4              0.0092  306.38
 x 0 0
@@ -33322,7 +33324,7 @@ T2              0.0221  184.72
 LDA2            0.0047  185.56
 MU2             0.0411  105.92
 NU2             0.0404  142.13
-RHO1            0.0033  285.61
+RHO1            0.0033  355.34
 x 0 0
 x 0 0
 MN4             0.0088  112.77
@@ -33386,7 +33388,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0021  242.21
-SIG1            0.0037  78.25
+SIG1            0.0037  145.17
 x 0 0
 x 0 0
 x 0 0
@@ -33491,14 +33493,15 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Ullapool, Scotland, United Kingdom [harmonics_ticon4_worldwi,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
+# note: 2026-10-29 Tagestide repariert: +4.9 h gegen Gott Bay (Tiree) (1 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Scarinish (Tiree), Scotland, United Kingdom
 +00:00 :Europe/London
 1.9202 meters
-J1              0.0039  160.75
-K1              0.0832  109.30
+J1              0.0039  237.61
+K1              0.0832  183.48
 K2              0.1269  194.50
 L2              0.0250  186.02
-M1              0.0019  3.83
+M1              0.0019  75.33
 M2              1.1479  163.79
 M3              0.0228  66.00
 M4              0.0491  156.32
@@ -33506,13 +33509,13 @@ M6              0.0050  87.91
 M8              0.0005  205.41
 N2              0.2315  142.40
 2N2             0.0320  121.94
-O1              0.0587  328.27
-OO1             0.0025  241.30
-P1              0.0250  95.88
-Q1              0.0209  279.80
-2Q1             0.0047  242.63
+O1              0.0587  37.03
+OO1             0.0025  320.90
+P1              0.0250  169.65
+Q1              0.0209  345.88
+2Q1             0.0047  306.02
 R2              0.0031  214.77
-S1              0.0087  18.45
+S1              0.0087  92.43
 S2              0.4456  196.71
 S4              0.0098  316.88
 x 0 0
@@ -33520,7 +33523,7 @@ T2              0.0235  189.96
 LDA2            0.0050  190.71
 MU2             0.0437  110.81
 NU2             0.0429  147.12
-RHO1            0.0035  287.96
+RHO1            0.0035  354.40
 x 0 0
 x 0 0
 MN4             0.0094  122.81
@@ -33584,7 +33587,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0022  250.09
-SIG1            0.0040  80.51
+SIG1            0.0040  144.26
 x 0 0
 x 0 0
 x 0 0
@@ -35673,14 +35676,15 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn ok.
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 1.523,
 # note: Zielwert F=0.131 aus Nachbarn statt F=0.089 des Bezugsorts; Beleg: Nachbarn 3.38 -> 3.32 %.
+# note: 2026-10-29 Tagestide repariert: +3.3 h gegen Eriskay (9 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
 Loch Boisdale (South Uist), Scotland, United Kingdom
 +00:00 :Europe/London
 2.1946 meters
-J1              0.0065  167.89
-K1              0.1403  116.20
+J1              0.0065  219.80
+K1              0.1403  166.29
 K2              0.1575  208.28
 L2              0.0277  199.56
-M1              0.0032  10.47
+M1              0.0032  58.75
 M2              1.2709  177.08
 M3              0.0252  85.92
 M4              0.0544  182.89
@@ -35688,13 +35692,13 @@ M6              0.0056  127.76
 M8              0.0005  258.55
 N2              0.2563  155.43
 2N2             0.0354  134.73
-O1              0.0990  334.66
-OO1             0.0043  248.70
-P1              0.0422  102.73
-Q1              0.0353  285.94
-2Q1             0.0079  248.52
+O1              0.0990  21.10
+OO1             0.0043  302.45
+P1              0.0422  152.55
+Q1              0.0353  330.56
+2Q1             0.0079  291.33
 R2              0.0034  228.54
-S1              0.0146  25.33
+S1              0.0146  75.29
 S2              0.5532  210.46
 S4              0.0108  344.38
 x 0 0
@@ -35702,7 +35706,7 @@ T2              0.0260  203.69
 LDA2            0.0055  204.22
 MU2             0.0484  123.63
 NU2             0.0475  160.19
-RHO1            0.0059  294.14
+RHO1            0.0059  339.00
 x 0 0
 x 0 0
 MN4             0.0104  149.13
@@ -35766,7 +35770,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0024  270.71
-SIG1            0.0067  86.43
+SIG1            0.0067  129.48
 x 0 0
 x 0 0
 x 0 0
