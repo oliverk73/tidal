@@ -8,6 +8,8 @@ Ausgangspunkt: py/noaa_nachbar_abgleich.ungeprueft() (Stand 18.10.2026). Davon a
   - Saetze der Gruppe "NOAA verschoben" (noaa_auto_verschoben.csv, aktion geprueft)
   - Saetze, deren Position sich seit dem 18.10. geaendert hat (Oliver oder geprueft
     verschobene Automatik)
+  - Saetze, deren Name in einem Oliver-Commit seit dem 18.10. gesetzt wurde (Umbenennung
+    ohne Verschiebung, z. B. Islote Los Negritos 9e427d1)
 
 Fuer den Rest drei Proben, keine aendert etwas:
   lage   an Land (OSM-Landpolygone) bzw. Kuestenabstand, Buchminute (ganze Bogenminute)
@@ -91,6 +93,14 @@ def geonames(saetze):
     return aus
 
 
+def olivers_namen():
+    """Namen, die Oliver seit dem 18.10. in den NOAA-Dateien gesetzt hat (Commits 'Oliver: ...')."""
+    import subprocess
+    log = subprocess.run(['git', '-C', ROOT, 'log', '--since=2026-10-18', '--grep=^Oliver', '-p', '--format=',
+                          '--', 'harmonics/noaa/'], capture_output=True).stdout.decode('latin-1')
+    return {z[1:].strip() for z in log.split('\n') if z.startswith('+') and not z.startswith(('++', '+#')) and ',' in z}
+
+
 def main():
     recs = [r for r in load_records() if not r['current'] and r['lat'] is not None]
     offen = ungeprueft(recs)
@@ -98,12 +108,13 @@ def main():
     ab = {z['name']: z for z in csv.DictReader(open(os.path.join(HELP, 'noaa_nachbar_abgleich_20261018.csv'), encoding='utf-8'))}
     gep = {z['name'] for z in csv.DictReader(open(os.path.join(HELP, 'noaa_auto_verschoben.csv'), encoding='utf-8'))
            if z['aktion'] == 'geprueft'}
+    oliver = olivers_namen()
     rest = []
     for r in offen:
         teil = r['name'].split(', ')[-1]
         morgen = alt.get(r['fp'], '')
         z = ab.get(morgen)
-        if teil in US_STAATEN or teil == 'Hong Kong' or r['name'] in gep or morgen in gep:
+        if teil in US_STAATEN or teil == 'Hong Kong' or r['name'] in gep or morgen in gep or r['name'] in oliver:
             continue
         if z and (abs(float(z['lat']) - r['lat']) > 0.0005 or abs(float(z['lon']) - r['lon']) > 0.0005):
             continue
