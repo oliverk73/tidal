@@ -53508,13 +53508,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: 106.8500
-# !latitude: 10.6167
-# region: Tien Giang
+# !longitude: 106.8493
+# !latitude: 10.6218
+# region: Ho Chi Minh city
 # admin1_quelle: Name
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Halbtagstiden x 1.137,
 # note: Zielwert F=0.852 aus Nachbarn statt F=0.969 des Bezugsorts; Beleg: Nachbarn 10.39 -> 10.07 %.
-Coral Bank, Tien Giang, Vietnam
+# note: 2026-10-29 Untiefe im Song Long Tau (NOAA 1653 unter Saigon River), nicht Tien Giang; Position Flussmitte (Oliver).
+Long Tau (Coral Bank), Vietnam
 +00:00 :Asia/Ho_Chi_Minh
 2.8346 meters
 J1              0.0158  257.87
