@@ -24362,14 +24362,15 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-29 Tagestide repariert: -3.0 h gegen Port-Cartier (27 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
+# note: 2026-10-29 Tagestide-Hoehen auf Port-Cartier (CHS) gerichtet: K1 x0.79, O1 x0.82 (Harrington-Faktor galt nur halbtaegig) (Oliver).
 Cawee Islands, Québec, Canada
 +00:00 :America/Toronto
 1.6154 meters
-J1              0.0146  278.05
-K1              0.2614  278.97
+J1              0.0116  278.05
+K1              0.2074  278.97
 K2              0.0872  217.56
 L2              0.0207  225.09
-M1              0.0144  191.30
+M1              0.0116  191.30
 M2              0.9574  189.10
 M3              0.0050  304.34
 M4              0.0128  213.91
@@ -24377,13 +24378,13 @@ M6              0.0029  206.52
 M8              0.0002  17.99
 N2              0.1964  165.18
 x 0 0
-O1              0.2491  254.89
-OO1             0.0092  285.65
-P1              0.0876  275.51
-Q1              0.0435  222.76
+O1              0.2042  254.89
+OO1             0.0073  285.65
+P1              0.0697  275.51
+Q1              0.0357  222.76
 x 0 0
 R2              0.0036  133.04
-S1              0.0061  20.22
+S1              0.0048  20.22
 S2              0.3161  220.73
 S4              0.0018  261.82
 x 0 0
@@ -24391,7 +24392,7 @@ T2              0.0221  214.24
 LDA2            0.0068  240.72
 MU2             0.0221  134.59
 NU2             0.0378  171.40
-RHO1            0.0085  236.61
+RHO1            0.0070  236.61
 x 0 0
 x 0 0
 MN4             0.0059  148.16
@@ -24455,7 +24456,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0068  164.49
-SIG1            0.0038  18.30
+SIG1            0.0031  18.30
 x 0 0
 x 0 0
 x 0 0
@@ -24565,14 +24566,15 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-18 an Land, automatisch ans Ufer (vorher 49.3333/-67.3667, Kueste 0.08 km) (Oliver).
 # note: 2026-10-29 Tagestide repariert: -3.3 h gegen Baie-Trinité (13 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
+# note: 2026-10-29 Tagestide-Hoehen auf Baie-Trinité (CHS) gerichtet: K1 x0.69, O1 x0.66 (Harrington-Faktor galt nur halbtaegig) (Oliver).
 Pointe des Monts, Québec, Canada
 +00:00 :America/Toronto
 1.8593 meters
-J1              0.0172  276.14
-K1              0.3078  277.12
+J1              0.0119  276.14
+K1              0.2126  277.12
 K2              0.1137  222.07
 L2              0.0244  229.52
-M1              0.0169  189.54
+M1              0.0115  189.54
 M2              1.1272  193.44
 M3              0.0059  310.87
 M4              0.0150  222.60
@@ -24580,13 +24582,13 @@ M6              0.0034  219.56
 M8              0.0002  35.39
 N2              0.2313  169.45
 x 0 0
-O1              0.2934  253.19
-OO1             0.0108  283.67
-P1              0.1032  273.68
-Q1              0.0513  221.12
+O1              0.1951  253.19
+OO1             0.0075  283.67
+P1              0.0711  273.68
+Q1              0.0341  221.12
 x 0 0
 R2              0.0042  137.54
-S1              0.0072  18.39
+S1              0.0050  18.39
 S2              0.4119  225.23
 S4              0.0021  270.82
 x 0 0
@@ -24594,7 +24596,7 @@ T2              0.0261  218.74
 LDA2            0.0080  245.14
 MU2             0.0261  138.78
 NU2             0.0445  175.68
-RHO1            0.0100  234.96
+RHO1            0.0066  234.96
 x 0 0
 x 0 0
 MN4             0.0070  156.77
@@ -24658,7 +24660,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0080  171.24
-SIG1            0.0044  16.72
+SIG1            0.0029  16.72
 x 0 0
 x 0 0
 x 0 0
@@ -24964,14 +24966,16 @@ x 0 0
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-29 Tagestide repariert: -3.4 h gegen Pointe aux Cenelles (11 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
-Métis-sur-Mer, Québec, Canada
+# note: 2026-10-29 Tagestide-Hoehen auf Pointe aux Cenelles (CHS) gerichtet: K1 x0.61, O1 x0.64 (Harrington-Faktor galt nur halbtaegig) (Oliver).
+# note: 2026-10-29 Buchposition = Leuchtturm Pointe-Mitis (OSM, 0,3 km), Ort 3-5 km oestlich (Oliver).
+Métis-sur-Mer (Pointe Mitis), Québec, Canada
 +00:00 :America/Toronto
 2.0726 meters
-J1              0.0190  277.81
-K1              0.3415  278.73
+J1              0.0116  277.81
+K1              0.2093  278.73
 K2              0.1245  228.59
 L2              0.0270  235.92
-M1              0.0188  191.08
+M1              0.0118  191.08
 M2              1.2508  199.72
 M3              0.0066  320.29
 M4              0.0167  235.16
@@ -24979,13 +24983,13 @@ M6              0.0038  238.40
 M8              0.0002  60.51
 N2              0.2566  175.61
 x 0 0
-O1              0.3255  254.67
-OO1             0.0120  285.39
-P1              0.1145  275.28
-Q1              0.0569  222.54
+O1              0.2097  254.67
+OO1             0.0074  285.39
+P1              0.0704  275.28
+Q1              0.0367  222.54
 x 0 0
 R2              0.0047  144.05
-S1              0.0080  19.99
+S1              0.0049  19.99
 S2              0.4518  231.73
 S4              0.0024  283.82
 x 0 0
@@ -24993,7 +24997,7 @@ T2              0.0289  225.23
 LDA2            0.0089  251.52
 MU2             0.0289  144.84
 NU2             0.0494  181.85
-RHO1            0.0110  236.40
+RHO1            0.0071  236.40
 x 0 0
 x 0 0
 MN4             0.0078  169.22
@@ -25057,7 +25061,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0089  180.99
-SIG1            0.0049  18.10
+SIG1            0.0032  18.10
 x 0 0
 x 0 0
 x 0 0
