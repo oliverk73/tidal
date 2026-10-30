@@ -17783,8 +17783,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -56.5516
-# !latitude: 53.7524
+# !longitude: -56.5368
+# !latitude: 53.7520
 # note: 20260903 Provinz "Labrador" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Labrador
@@ -18182,8 +18182,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -56.8833
-# !latitude: 51.4500
+# !longitude: -56.9178
+# !latitude: 51.4594
 # note: 20260903 Provinz "Labrador" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Labrador
@@ -18195,7 +18195,7 @@ x 0 0
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Nachbarn bis 25 km (6).
 # note: 20260920 Formzahl auf den Ort gerichtet (py/noaa_formzahl_richten.py): Tagestiden x 0.874,
 # note: Zielwert F=0.357 aus Nachbarn statt F=0.404 des Bezugsorts; Beleg: Nachbarn 6.06 -> 5.68 %.
-Forteau Bay, Labrador, Canada
+Baie de Forteau, Labrador, Canada
 +00:00 :America/St_Johns
 0.8534 meters
 J1              0.0058  252.18
@@ -18383,8 +18383,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -55.7333
-# !latitude: 51.5000
+# !longitude: -55.7913
+# !latitude: 51.5344
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -18595,7 +18595,7 @@ x 0 0
 # note: 20261026 auf die Buchzeile gerichtet (-30 min): 30 min neben der Buchzeile (ectt-215, Bezug Halifax; halbstuendige Zone Neufundland).
 # note: -- Rueckrechnung py/noaa_buchzeile_probe.py; FES und Nachbar bestaetigen die Richtung.
 # note: 2026-10-29 Tagestide repariert: +3.5 h gegen Lock's Cove (17 km, FES bestaetigt), Uebertragung mit einem dt fuer beide Baender.
-Ariege Bay, Newfoundland, Canada
+Ariege Bay (Main Brook), Newfoundland, Canada
 +00:00 :America/St_Johns
 0.7010 meters
 J1              0.0046  171.84
@@ -18783,8 +18783,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -56.1667
-# !latitude: 50.7000
+# !longitude: -56.1699
+# !latitude: 50.6942
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -18982,8 +18982,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -53.5648
-# !latitude: 48.0996
+# !longitude: -53.5603
+# !latitude: 48.1035
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -20171,8 +20171,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -56.5333
-# !latitude: 47.6167
+# !longitude: -56.5207
+# !latitude: 47.6176
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -20569,8 +20569,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -57.9027
-# !latitude: 47.6676
+# !longitude: -57.9160
+# !latitude: 47.6727
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -22160,8 +22160,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -58.1667
-# !latitude: 49.0667
+# !longitude: -58.1745
+# !latitude: 49.0608
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -22756,8 +22756,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -56.9833
-# !latitude: 50.9167
+# !longitude: -56.9793
+# !latitude: 50.9227
 # note: 20260903 Provinz "Newfoundland" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Newfoundland
@@ -22955,8 +22955,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -58.2000
-# !latitude: 51.2667
+# !longitude: -58.2138
+# !latitude: 51.2651
 # note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Québec
@@ -22964,7 +22964,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.94 auf den Springhub des Buchs (ectt-287); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Mistanoque Harbour, Québec, Canada
+Havre Mistanoque, Québec, Canada
 +00:00 :America/Blanc-Sablon
 1.0058 meters
 J1              0.0082  257.52
@@ -23354,8 +23354,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -60.0167
-# !latitude: 50.2000
+# !longitude: -60.0299
+# !latitude: 50.1965
 # note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Québec
@@ -23365,7 +23365,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Harrington Harbour, Québec, Canada [harmonics_utide_tidetabl,
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=2 -0.63 Punkte.
-Wapitagun Harbour, Québec, Canada
+Havre de Ouapitagone, Québec, Canada
 +00:00 :America/Blanc-Sablon
 1.0363 meters
 J1              0.0078  269.46
@@ -23553,8 +23553,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
 # !units: meters
-# !longitude: -63.1833
-# !latitude: 50.2333
+# !longitude: -63.1787
+# !latitude: 50.2352
 # note: 20260903 Provinz "Québec" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Québec
@@ -23562,7 +23562,7 @@ x 0 0
 # note: 20260913 S2/K2 x 2.84 auf den Springhub des Buchs (ectt-297); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Betchewun Harbour, Québec, Canada
+Havre de Betchouane, Québec, Canada
 +00:00 :America/Toronto
 0.9144 meters
 J1              0.0082  295.45
@@ -32676,8 +32676,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -59.9004
-# !latitude: 43.9373
+# !longitude: -59.9227
+# !latitude: 43.9256
 # note: 20260903 Provinz "Nova Scotia" ergaenzt (Polygon),
 # note: siehe py/provinz_ergaenzen.py.
 # province: Nova Scotia
