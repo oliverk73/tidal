@@ -74630,8 +74630,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 3
 # !units: meters
-# !longitude: -163.1500
-# !latitude: -13.2167
+# !longitude: -163.1256
+# !latitude: -13.2104
 # note: 20260913 S2/K2 x 3.96 auf den Springhub des Buchs (cptt-2849); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
@@ -74822,8 +74822,8 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -172.6333
-# !latitude: -13.5000
+# !longitude: -172.6358
+# !latitude: -13.5106
 # region: Gaga'ifomauga
 # admin1_quelle: Ufer 2.2 km
 # note: 20260913 S2/K2 x 2.53 auf den Springhub des Buchs (cptt-2853); der Bau
@@ -83036,14 +83036,14 @@ x 0 0
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
 # !units: meters
-# !longitude: -176.6167
-# !latitude: -43.9167
+# !longitude: -176.5612
+# !latitude: -43.9463
 # region: Chatham Islands Territory
 # admin1_quelle: Ufer 5.9 km
 # note: 20260913 S2/K2 x 2.40 auf den Springhub des Buchs (cptt-3391); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Chatham Islands, New Zealand
+Waitangi (Chatham Island), New Zealand
 -11:00 :Pacific/Chatham
 0.7925 meters
 J1              0.0027  246.60
@@ -85584,7 +85584,7 @@ x 0 0
 # admin1_quelle: Ufer 1.4 km
 # note: 20261026 auf die Buchzeile gerichtet (+60 min): 60 min neben der Buchzeile (cptt-3963).
 # note: -- Rueckrechnung py/noaa_buchzeile_probe.py; FES und Nachbar bestaetigen die Richtung.
-Mc Donald Bay, Antarctica
+McDonald Bay, Antarctica
 +00:00 :Antarctica/Vostok
 1.3106 meters
 J1              0.0094  259.96
