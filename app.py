@@ -401,6 +401,16 @@ def display_name_for(name, source_file):
     return name
 
 
+def file_name_for(name, source_file):
+    """Gegenstueck zu display_name_for: Anzeigename -> Name in der Harmonics-Datei.
+    Die Karte schickt beim Verschieben/Umbenennen/Loeschen den Anzeigenamen
+    ("Pago Pago, American Samoa, USA"), in der Datei fehlt das Laenderanhaengsel."""
+    country = COUNTRY_BY_SOURCE.get(source_file or '')
+    if name and country and name.endswith(f", {country}"):
+        return name[:-len(f", {country}")]
+    return name
+
+
 def load_station_data():
     """Read station name → source/coords pairs from leaflet_markers_data.json.
     Returns (sources_dict, coords_dict)."""
@@ -2107,6 +2117,7 @@ def update_coordinates():
 
         if not station or not tcd_file:
             return jsonify(error="station und source sind Pflichtfelder"), 400
+        station = file_name_for(station, tcd_file)
 
         # Quelldatei finden
         txt_path = find_txt_for_tcd(tcd_file)
@@ -2149,6 +2160,8 @@ def update_station_name():
 
         if not old_name or not new_name or not tcd_file:
             return jsonify(error="old_name, new_name und source sind Pflichtfelder"), 400
+        old_name = file_name_for(old_name, tcd_file)
+        new_name = file_name_for(new_name, tcd_file)
 
         if old_name == new_name:
             return jsonify(error="Name ist unverändert"), 400
@@ -2193,6 +2206,7 @@ def delete_station():
 
         if not station or not tcd_file:
             return jsonify(error="station und source sind Pflichtfelder"), 400
+        station = file_name_for(station, tcd_file)
 
         # Quelldatei finden
         txt_path = find_txt_for_tcd(tcd_file)
