@@ -181,6 +181,8 @@ SOURCE_GROUPS = OrderedDict([
     # Oliver 29.10.2026: auffaellige ungepruefte NOAA-Buchsaetze (an Land, Name unbekannt, Zeit/Hub
     # gegen gepruefte Nachbarn; py/noaa_restpruefung.py, Punkte >= 3) -- nichts verschoben
     ('NOAA auffällig (prüfen)', {'color': '#8E24AA', 'files': []}),
+    # Oliver 30.10.2026: auffaellige, nie angefasste ATT-Saetze (py/att_pruefung.py, Punkte >= 4) -- nichts verschoben
+    ('ATT auffällig (prüfen)', {'color': '#00897B', 'files': []}),
 ])
 
 # Group order: predefined + 'Other' fallback (für nicht zugeordnete Quellen)
@@ -239,6 +241,13 @@ if _nr:
     NOAA_AUFFAELLIG = {(os.path.splitext(z['datei'])[0] + '.tcd', z['name'])
                        for z in _csv.DictReader(open(_nr[-1], encoding='utf-8')) if int(z['punkte']) >= 3}
 
+ATT_AUFFAELLIG = set()
+_ap = sorted(__import__('glob').glob(os.path.join(os.path.dirname(_av), 'att_pruefung_*.csv')))
+if _ap:
+    import csv as _csv
+    ATT_AUFFAELLIG = {(os.path.splitext(z['datei'])[0] + '.tcd', z['name'])
+                      for z in _csv.DictReader(open(_ap[-1], encoding='utf-8')) if int(z['punkte']) >= 4}
+
 # Build columnar JSON payload
 station_rows = []
 for name, lat, lon, source_file, is_current in all_stations:
@@ -252,6 +261,8 @@ for name, lat, lon, source_file, is_current in all_stations:
         group_name = 'Strömung Position (prüfen)'
     elif (source_file, name) in NOAA_AUFFAELLIG:
         group_name = 'NOAA auffällig (prüfen)'
+    elif (source_file, name) in ATT_AUFFAELLIG:
+        group_name = 'ATT auffällig (prüfen)'
     group_idx = GROUP_INDEX[group_name]
     # Round coords to ~5m precision (5 decimals) — saves bytes vs full precision
     station_rows.append([
