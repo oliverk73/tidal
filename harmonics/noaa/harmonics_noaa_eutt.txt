@@ -60356,11 +60356,13 @@ x 0 0
 # note: 20260913 S2/K2 x 1.88 auf den Springhub des Buchs (eutt-1957); der Bau
 # note: mass den Springhub der Referenz als 92/8-Perzentil, S2 kam zu klein heraus.
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
-Bear Island (Barents Sea), Svalbard
+# note: 2026-10-30 K1/P1 x2.32 auf FES (Bergen-Uebertragung hatte K1 x0.43); O1 passt (x0.86).
+# note: 2026-10-30 Name vom archivierten ATT-Satz Austervag (Bjornoya) uebernommen, Buchname Bear Island (Barents Sea) (Oliver).
+Austervag (Bjornoya), Svalbard
 +00:00 :Arctic/Longyearbyen
 0.4877 meters
 J1              0.0012  258.46
-K1              0.0280  207.65
+K1              0.0650  207.65
 K2              0.0395  50.08
 L2              0.0115  26.91
 M1              0.0005  60.74
@@ -60373,7 +60375,7 @@ N2              0.0726  345.71
 x 0 0
 O1              0.0254  52.79
 OO1             0.0007  353.97
-P1              0.0083  194.36
+P1              0.0193  194.36
 Q1              0.0086  354.65
 x 0 0
 R2              0.0016  98.12
