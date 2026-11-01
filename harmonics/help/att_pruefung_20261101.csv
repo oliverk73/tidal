@@ -1,11 +1,16 @@
 punkte,gruende,datei,name,lat,lon,buchminute,land,kueste_km,name_geonames,naechster_ort,ort_km,nachbar,nachbar_km,dzeit_min,dhub_proz
 7,an Land; Name nicht in GeoNames; Zeit -65 min,harmonics_att_np203_scs.txt,"Peradjin, Sumatera Selatan, Indonesia",-2.9333,104.8833,1,1,10.0,0,Prajen,1.7,"Palembang (Palembang River), Sumatera Selatan, Indonesia",19.3,-65,19
 5,an Land; Name nicht in GeoNames,harmonics_att_np204_secondary.txt,"Dagushan (Shuikou), Liaoning, China",39.7667,123.55,1,1,0.48,0,Qianyang,0.5,"Dalu Dao, Liaoning, China",17.2,27,3
-5,an Land; Name nicht in GeoNames,harmonics_att_np202_secondary.txt,"Danskegat, Svalbard",79.7167,10.8667,1,1,0.78,0,,,"Holmiabukta, Svalbard",18.7,30,-10
+5,an Land; Name nicht in GeoNames,harmonics_att_np202_secondary.txt,"Danskegat, Svalbard",79.7167,10.8667,1,1,0.78,0,,,"Sorgfjorden (Spitsbergen), Svalbard",119.3,-100,55
 5,>= 10 km vor der Kueste; Name nicht in GeoNames; Zeit -42 min,harmonics_att_np207.txt,"Demerara Light Buoy, Guyana",6.95,-58.05,1,0,10.0,0,Felicity,14.9,"Georgetown, Guyana",19.2,-42,-13
 5,an Land; Zeit +22 min,harmonics_att_np203_scs.txt,"Dhulasar, Bangladesh",21.85,90.25,1,1,0.55,1,Deor Bāliātali,0.9,"Kauar Char (Rabnabad Channel), Bangladesh",2.0,22,-8
+5,an Land; Zeit -130 min,harmonics_att_np202_secondary.txt,"Holmiabukta, Svalbard",79.8333,11.55,1,1,0.39,1,,,"Sorgfjorden (Spitsbergen), Svalbard",103.7,-130,73
 5,an Land; Name nicht in GeoNames,harmonics_att_np202_secondary.txt,"Kap Morris Jesup, Greenland",83.65,-33.8333,1,1,0.95,0,,,,,,
 5,an Land; Zeit +42 min,harmonics_att_np203_scs.txt,"Sungsang, Sumatera Selatan, Indonesia",-2.3667,104.9,1,1,3.86,1,Sungsang,0.6,"Kuala Air Musi, Sumatera Selatan, Indonesia",15.3,42,15
+4,Name nicht in GeoNames; Zeit +65 min,harmonics_att_np202_secondary.txt,"Budhareyri, Iceland",65.0333,-14.2167,1,0,0.27,0,Reyðarfjörður,0.2,"Seyðisfjörður, Iceland",27.5,65,8
+4,Name nicht in GeoNames; Zeit +80 min,harmonics_att_np202_secondary.txt,"Faskrudsfjordhur, Iceland",64.9333,-14.0333,1,0,0.03,0,Fáskrúðsfjörður,0.7,"Neskaupstaður (Norðfjörður), Iceland",28.7,80,10
+4,Name nicht in GeoNames; Zeit +65 min,harmonics_att_np202_secondary.txt,"Reydharfjordhur: Eskifjordhur, Iceland",65.0667,-14.0167,1,0,0.49,0,Eskifjörður,0.7,"Neskaupstaður (Norðfjörður), Iceland",17.8,65,10
+4,Name nicht in GeoNames; Zeit -172 min,harmonics_att_np202_secondary.txt,"Reykanes, Iceland",65.4167,-22.2,1,0,0.92,0,Reykhólar,3.3,"Hólmavík, Iceland",40.4,-172,203
 3,an Land,harmonics_att_np203_scs.txt,"Aika, Papua Tengah, Indonesia",-4.9,136.8,1,1,0.42,1,Apiripi,1.1,"Tipuka, Papua Tengah, Indonesia",28.5,-21,-7
 3,an Land,harmonics_att_np207.txt,"Barra do Timonha (Cajueiro da Praia), Ceará, Brazil",-2.9333,-41.3167,1,1,1.5,1,Cajueiro da Praia,2.2,"Luís Correia (Piauí), Brazil",37.4,15,9
 3,>= 10 km vor der Kueste; Name nicht in GeoNames,harmonics_att_np203_scs.txt,"Beting Akbar, Kepulauan Bangka Belitung, Indonesia",-2.65,107.25,1,0,10.0,0,,,"Pulau Celagen (Liat), Kepulauan Bangka Belitung, Indonesia",35.7,,
@@ -73,7 +78,7 @@ punkte,gruende,datei,name,lat,lon,buchminute,land,kueste_km,name_geonames,naechs
 0,,harmonics_att_np204_secondary.txt,"Bikini Atoll, Marshall Islands",11.6,165.55,1,0,0.09,1,,,"Eniirikku Island (Bikini Atoll), Marshall Islands",26.1,0,11
 0,,harmonics_att_np202_secondary.txt,"Bogøyvær, Norway",63.8667,8.5667,1,0,0.14,1,Kåvik,4.1,"Mausund (Måløya), Norway",4.8,7,-8
 0,,harmonics_att_np202_secondary.txt,"Borgarnes, Iceland",64.5333,-21.9167,1,0,0.38,1,Borgarnes,0.6,"Reykjavik, Iceland",42.6,29,0
-0,,harmonics_att_np202_secondary.txt,"Breidhdalsvik, Iceland",64.7833,-14.0,1,0,0.46,1,Breiðdalsvík,1.0,"Faskrudsfjordhur, Iceland",16.8,35,9
+0,,harmonics_att_np202_secondary.txt,"Breidhdalsvik, Iceland",64.7833,-14.0,1,0,0.46,1,Breiðdalsvík,1.0,"Djúpivogur, Iceland",19.3,-20,-8
 0,,harmonics_att_np202_secondary.txt,"Brennevinsfjorden, Svalbard",80.25,19.4833,1,0,0.58,1,,,"Murchisonfjorden (Nordaustlandet), Svalbard",41.9,-25,20
 0,,harmonics_att_np207.txt,"Brenton Loch, Falkland Islands",-51.7167,-59.0167,1,0,0.23,1,Burnside House,9.2,"Port Sussex, Falkland Islands",8.0,6,-2
 0,,harmonics_att_np202_secondary.txt,"Brjánslækur, Iceland",65.5333,-23.1833,1,0,0.42,1,Brjánslækur,0.6,"Patreksfjörður, Iceland",38.6,-42,45
@@ -88,7 +93,7 @@ punkte,gruende,datei,name,lat,lon,buchminute,land,kueste_km,name_geonames,naechs
 0,,harmonics_att_np207.txt,"Elephant Island, Antarctica",-61.2333,-55.1333,1,0,0.86,1,,,"Gibbs Island, Antarctica",34.0,-17,-2
 0,,harmonics_att_np202_secondary.txt,"Exuma Harbour, Bahamas",23.5,-75.7667,1,0,0.11,1,Exuma Harbour Estates,0.0,"Steventon (Great Exuma Island), Bahamas",24.2,-19,1
 0,,harmonics_att_np202_secondary.txt,"Flatey (Skjálfanda), Iceland",66.15,-17.8333,1,0,0.97,1,,,"Húsavík, Iceland",25.2,25,7
-0,,harmonics_att_np202_secondary.txt,"Flatey, Iceland",65.3833,-22.9,1,0,0.18,1,Flatey,1.2,"Reykanes, Iceland",32.6,-5,-5
+0,,harmonics_att_np202_secondary.txt,"Flatey, Iceland",65.3833,-22.9,1,0,0.18,1,Flatey,1.2,"Grundarfjörður, Iceland",53.3,13,8
 0,,harmonics_att_np202_secondary.txt,"Flateyri, Iceland",66.0333,-23.5167,1,0,0.41,1,Flateyri,2.0,"Þingeyri, Iceland",17.2,5,-15
 0,,harmonics_att_np203_scs.txt,"Galathea Bay (Great Nicobar), Andaman and Nicobar, India",6.7833,93.85,1,0,0.41,1,Chingenh,2.8,"Ko Batong, Satun, Thailand",588.5,-61,-29
 0,,harmonics_att_np207.txt,"Gerlache Strait (Nansen Island), Antarctica",-64.55,-62.0167,1,0,0.42,1,,,"Puerto Neko (Bahía Andvord), Antártida Argentina, Argentina",41.4,-60,34
@@ -116,7 +121,7 @@ punkte,gruende,datei,name,lat,lon,buchminute,land,kueste_km,name_geonames,naechs
 0,,harmonics_att_np204_secondary.txt,"Likiep Atoll, Marshall Islands",9.8167,169.2833,1,0,0.69,1,Likiep,3.1,"Ailuk Atoll, Marshall Islands",88.5,11,5
 0,,harmonics_att_np202_secondary.txt,"Long Island, Bahamas",23.0,-74.95,1,0,1.79,1,Hard Bargain,6.2,"Clarence Town, Long Island, Bahamas",11.2,-5,-17
 0,,harmonics_att_np202_secondary.txt,"Lærdalsøyri, Norway",61.1,7.4667,1,0,0.03,1,Lærdalsøyri,0.4,"Flåm (Aurlandsfjorden), Norway",32.4,-1,0
-0,,harmonics_att_np202_secondary.txt,"Magdalenefjorden, Svalbard",79.55,11.2167,1,0,0.23,1,,,"Holmiabukta, Svalbard",32.2,47,-16
+0,,harmonics_att_np202_secondary.txt,"Magdalenefjorden, Svalbard",79.55,11.2167,1,0,0.23,1,,,"Sorgfjorden (Spitsbergen), Svalbard",118.5,-83,46
 0,,harmonics_att_np204_secondary.txt,"Maloelap Atoll, Marshall Islands",8.7167,171.2333,1,0,0.52,1,Taroa,1.4,"Erikub Atoll, Marshall Islands",154.3,6,9
 0,,harmonics_att_np204_secondary.txt,"Matalanim Harbour, Micronesia",6.8667,158.35,1,0,0.67,1,Paison,2.3,"Pohnpei Harbor (Caroline Islands), Micronesia",19.1,-12,14
 0,,harmonics_att_np207.txt,"Moltke Harbour, South Georgia and the South Sandwich Islands",-54.5167,-36.0167,1,0,0.51,1,,,"King Edward Point, South Georgia and the South Sandwich Islands",40.5,10,-8

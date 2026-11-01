@@ -37,11 +37,6 @@ from noaa_restpruefung import geonames, buchminute, oliver_notiz, RAUSCHEN, HELP
 import osm_land                                                    # noqa: E402
 
 
-# Geprueft 1.11.2026: Zeiten stehen so in LHG Tafla II, Holmiabukta von Hand repariert
-ERLEDIGT = {'Budhareyri, Iceland', 'Faskrudsfjordhur, Iceland', 'Reydharfjordhur: Eskifjordhur, Iceland',
-            'Reykanes, Iceland', 'Holmiabukta, Svalbard'}
-
-
 def oliver_namen():
     """Alle Namen, die in einem Commit mit 'Oliver' in harmonics/att/ neu geschrieben wurden."""
     aus = subprocess.run(['git', 'log', '-i', '--grep=oliver', '-p', '-U0', '--format=', '--', 'harmonics/att'],
@@ -62,7 +57,7 @@ def main():
             continue
         if lock.get((rel, r['name'])) != 'source' or oliver_notiz(r, zeilen):
             continue
-        if r['name'] in angefasst or r['name'] in ERLEDIGT or not (buchminute(r['lat']) and buchminute(r['lon'])):
+        if r['name'] in angefasst or not (buchminute(r['lat']) and buchminute(r['lon'])):
             continue
         rest.append(r)
     ids = {id(r) for r in rest}
