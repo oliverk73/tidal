@@ -95,7 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function parseName(full) {
     // e.g. "Crisfield, Little Annemessex River, Chesapeake Bay, Maryland"
     // → name: "Crisfield", detail: "Little Annemessex River, Chesapeake Bay, Maryland"
-    var idx = full.indexOf(", ");
+    // Kommas in der Klammer ("Swan Island (4 km N, Banks Strait), Australia") trennen nicht.
+    var idx = -1, tiefe = 0;
+    for (var i = 0; i + 1 < full.length; i++) {
+      var ch = full.charAt(i);
+      if (ch === "(") tiefe++;
+      else if (ch === ")") tiefe = Math.max(0, tiefe - 1);
+      else if (ch === "," && tiefe === 0 && full.charAt(i + 1) === " ") { idx = i; break; }
+    }
     if (idx > 0) {
       return { name: full.slice(0, idx), detail: full.slice(idx + 2) };
     }
