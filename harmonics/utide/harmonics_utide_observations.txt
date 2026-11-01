@@ -262402,7 +262402,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-GL_TS_TG_GiensLaMadragueTG
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=20969 period=2015-11-14..2019-04-22 r2=0.3335 rms=0.0995m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -262412,7 +262412,7 @@ x 0 0
 # !latitude: 43.0400
 La Madrague (Giens), France
 +00:00 :Europe/Paris
-0.7612 meters
+0.1700 meters
 J1              0.0030  190.21
 K1              0.0333  179.54
 K2              0.0072  240.80
@@ -262596,7 +262596,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-GL_TS_TG_LaCiotatTG
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=29751 period=2019-04-13..2025-12-31 r2=0.4395 rms=0.0893m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -262606,7 +262606,7 @@ x 0 0
 # !latitude: 43.1723
 La Ciotat, France
 +00:00 :Europe/Paris
-0.3707 meters
+0.1600 meters
 J1              0.0028  133.61
 K1              0.0323  178.78
 K2              0.0066  227.04
@@ -262790,7 +262790,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-GL_TS_TG_PortCrosTG
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=17479 period=2016-04-20..2019-03-26 r2=0.4209 rms=0.0867m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -262800,7 +262800,7 @@ x 0 0
 # !latitude: 43.0098
 Port-Cros, France
 +00:00 :Europe/Paris
-0.6848 meters
+0.1700 meters
 J1              0.0029  241.18
 K1              0.0353  178.68
 K2              0.0064  254.70
@@ -262984,7 +262984,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-IR_TS_TG_AlboranTG
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=11226 period=2019-11-01..2022-04-07 r2=0.6339 rms=0.0882m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -262994,7 +262994,7 @@ x 0 0
 # !latitude: 35.9388
 Isla de Alborán, Spain
 +00:00 :Europe/Madrid
-2.6226 meters
+0.2800 meters
 J1              0.0018  170.52
 K1              0.0327  147.14
 K2              0.0146  80.33
@@ -263178,7 +263178,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Aigio
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=57106 period=2016-12-03..2024-06-23 r2=0.5853 rms=0.1108m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -263188,7 +263188,7 @@ x 0 0
 # !latitude: 38.2571
 Aigio, Greece
 +00:00 :Europe/Athens
-1.6367 meters
+0.3000 meters
 J1              0.0012  342.76
 K1              0.0154  14.25
 K2              0.0239  112.28
@@ -263372,7 +263372,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_BOZYAZI
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=10484 period=2020-12-07..2022-11-29 r2=0.7083 rms=0.0761m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -263382,7 +263382,7 @@ x 0 0
 # !latitude: 36.0974
 Bozyazi, Turkey
 +00:00 :Europe/Istanbul
-1.7083 meters
+0.2300 meters
 J1              0.0019  226.20
 K1              0.0248  285.45
 K2              0.0167  250.48
@@ -263566,7 +263566,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Hrakleio
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=56717 period=2016-12-13..2024-06-23 r2=0.4107 rms=0.0851m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -263576,7 +263576,7 @@ x 0 0
 # !latitude: 35.3484
 Irakleio (Heraklion, Crete), Greece
 +00:00 :Europe/Athens
--0.1057 meters
+0.0600 meters
 J1              0.0011  318.46
 K1              0.0152  319.12
 K2              0.0034  277.77
@@ -263760,7 +263760,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Ierapetra
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=62628 period=2016-12-13..2024-06-23 r2=0.4816 rms=0.0797m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -263770,7 +263770,7 @@ x 0 0
 # !latitude: 35.0037
 Ierapetra (Crete), Greece
 +00:00 :Europe/Athens
-0.1869 meters
+0.1000 meters
 J1              0.0009  314.65
 K1              0.0156  312.02
 K2              0.0069  268.65
@@ -263954,7 +263954,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Kapsali
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=21256 period=2013-06-19..2022-05-11 r2=0.5582 rms=0.0723m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -263964,7 +263964,7 @@ x 0 0
 # !latitude: 36.1429
 Kapsali (Kythira), Greece
 +00:00 :Europe/Athens
-0.6486 meters
+0.0600 meters
 J1              0.0007  2.73
 K1              0.0149  355.80
 K2              0.0036  21.77
@@ -264148,7 +264148,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Kerkyra
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=56463 period=2018-09-14..2025-12-31 r2=0.4279 rms=0.0828m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -264158,7 +264158,7 @@ x 0 0
 # !latitude: 39.7900
 Kerkyra (Corfu), Greece
 +00:00 :Europe/Athens
-3.3715 meters
+0.1500 meters
 J1              0.0014  205.28
 K1              0.0228  199.65
 K2              0.0105  246.22
@@ -264342,7 +264342,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Koroni
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=41405 period=2013-06-17..2022-05-11 r2=0.3226 rms=0.0838m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -264352,7 +264352,7 @@ x 0 0
 # !latitude: 36.7975
 Koroni, Greece
 +00:00 :Europe/Athens
-0.6878 meters
+0.0800 meters
 J1              0.0008  16.59
 K1              0.0137  349.64
 K2              0.0043  35.14
@@ -264536,7 +264536,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_MARMARIS
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=11320 period=2020-12-06..2022-11-28 r2=0.5712 rms=0.0816m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -264546,7 +264546,7 @@ x 0 0
 # !latitude: 36.8487
 Marmaris, Turkey
 +00:00 :Europe/Istanbul
-1.6209 meters
+0.1600 meters
 J1              0.0015  345.15
 K1              0.0236  296.72
 K2              0.0119  264.65
@@ -264730,7 +264730,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_PaleaFokea
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=13670 period=2021-05-19..2022-12-31 r2=0.5794 rms=0.0716m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -264740,7 +264740,7 @@ x 0 0
 # !latitude: 37.7175
 Palaia Fokaia, Greece
 +00:00 :Europe/Athens
-0.9124 meters
+0.0600 meters
 J1              0.0010  120.05
 K1              0.0176  160.27
 K2              0.0023  208.42
@@ -264924,7 +264924,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Paleochora
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=33361 period=2013-06-21..2022-05-11 r2=0.4748 rms=0.0820m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -264934,7 +264934,7 @@ x 0 0
 # !latitude: 35.2302
 Palaiochora (Crete), Greece
 +00:00 :Europe/Athens
-0.6308 meters
+0.0400 meters
 J1              0.0007  24.47
 K1              0.0126  337.36
 K2              0.0019  337.35
@@ -265118,7 +265118,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Samothraki
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=19734 period=2021-08-01..2023-12-20 r2=0.5872 rms=0.0949m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -265128,7 +265128,7 @@ x 0 0
 # !latitude: 40.4746
 Samothraki, Greece
 +00:00 :Europe/Athens
-0.0342 meters
+0.2100 meters
 J1              0.0018  318.00
 K1              0.0267  336.85
 K2              0.0163  72.82
@@ -265312,7 +265312,7 @@ x 0 0
 # note: CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, Stundenwerte SLEV (QC 1/2), UTC.
 # station_id_context: CMEMS-MO_TS_TG_Skopelos
 # date_imported: 20261101
-# datum: CMEMS SLEV
+# datum: approx. LAT (Z0 = 1.2 x M2+S2+K1+O1, Pegelnull der Quelle unbrauchbar)
 # confidence: 9
 # utide: pts=13304 period=2021-05-25..2022-12-31 r2=0.5952 rms=0.0858m const=92
 # note: 20261101 Messfit (py/cmems_tg_fit.py) ersetzt kein Bestandssatz im Umkreis von 5 km.
@@ -265322,7 +265322,7 @@ x 0 0
 # !latitude: 39.1238
 Skopelos, Greece
 +00:00 :Europe/Athens
-0.9121 meters
+0.2000 meters
 J1              0.0014  116.11
 K1              0.0263  158.40
 K2              0.0157  253.08
