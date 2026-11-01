@@ -44,6 +44,9 @@ PEGEL = [
      'IOC seve2 50.678/156.1388 (7 m an Land), Hafen; bitte pruefen'),
     ('vodo', 'ioc_vodo_monate.csv', 'Vodopadnaya, Kamchatka Krai, Russia', 51.7243, 157.9865,
      'IOC-Name Vodopadnaya (kein GeoNames-Eintrag am Ort), IOC 51.7268/157.9889 an Land; bitte Name und Position pruefen'),
+    # 1.11.2026 Westafrika-Suche: Tema aktiv seit 2019, im Bestand bisher nur NP208-Buchsatz
+    ('tema', 'ioc_tema_monate.csv', 'Tema, Ghana', 5.6353, 0.0118,
+     'IOC 5.635343/0.011775 (Hafen Tema); bitte pruefen'),
     ('kril', 'ioc_kril_monate.csv', "Mys Kril'on, Sakhalin Oblast, Russia", 45.8922, 142.0809,
      'IOC Cape Kril\'on 45.9/142.08, GeoNames-Kap 45.8927/142.0809; bitte pruefen'),
 ]
@@ -51,9 +54,9 @@ PEGEL = [
 # Zaliv Kozyrevskogo (5 km) und Mys Savushkina +-16 min, gegen FES +22..+46 min (Kurilenstrasse)
 SOLL = {'seve2': 35}
 REGION = {'khol': 'Sakhalin Oblast', 'rudn': 'Primorsky Krai', 'sosu': 'Primorsky Krai', 'star': 'Sakhalin Oblast',
-          'seve2': 'Sakhalin Oblast', 'vodo': 'Kamchatka Krai', 'kril': 'Sakhalin Oblast'}
+          'seve2': 'Sakhalin Oblast', 'vodo': 'Kamchatka Krai', 'kril': 'Sakhalin Oblast', 'tema': 'Greater Accra'}
 TZ = {'khol': 'Asia/Sakhalin', 'rudn': 'Asia/Vladivostok', 'sosu': 'Asia/Vladivostok', 'star': 'Asia/Sakhalin',
-      'seve2': 'Asia/Srednekolymsk', 'vodo': 'Asia/Kamchatka', 'kril': 'Asia/Sakhalin'}
+      'seve2': 'Asia/Srednekolymsk', 'vodo': 'Asia/Kamchatka', 'kril': 'Asia/Sakhalin', 'tema': 'Africa/Accra'}
 FESC = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1')
 
 
