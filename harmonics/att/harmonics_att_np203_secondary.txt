@@ -27726,6 +27726,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.08 -> 0.66 (Port Louis, Mauritius/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 57.7140
 # !latitude: -20.3789
@@ -27736,35 +27737,35 @@ Vieux Grand Port, Mauritius
 0.5000 meters
 J1              0.0067  315.80
 K1              0.1086  311.51
-K2              0.0044  314.06
-L2              0.0059  300.13
+K2               0.0230  314.06
+L2               0.0039  300.13
 M1              0.0044  185.49
-M2              0.1988  280.65
+M2               0.1300  280.65
 M3              0.0009  199.01
 M4              0.0005  110.16
 M6              0.0003  21.66
 M8              0.0004  255.25
-N2              0.0409  258.65
+N2               0.0267  258.65
 x 0 0
 O1              0.0624  320.20
 OO1             0.0042  357.50
 P1              0.0329  311.23
 Q1              0.0137  315.29
 x 0 0
-R2              0.0020  305.51
+R2               0.0104  305.51
 S1              0.0063  95.77
-S2              0.0163  316.83
+S2               0.0851  316.83
 S4              0.0002  237.33
 x 0 0
-T2              0.0061  322.39
+T2               0.0319  322.39
 LDA2            0.0015  301.75
-MU2             0.0023  234.47
-NU2             0.0085  264.15
+MU2              0.0015  234.47
+NU2              0.0056  264.15
 RHO1            0.0022  311.61
 x 0 0
 x 0 0
 MN4             0.0002  57.30
-MS4             0.0001  157.57
+MS4              0.0005  157.57
 x 0 0
 MF              0.0158  5.48
 MSF             0.0025  11.16
@@ -41406,6 +41407,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.62 -> 0.27 (Ras Qasabah, Saudi Arabia/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 34.3071
 # !latitude: 27.8480
@@ -41417,15 +41419,15 @@ Sharm Ash Shaykh (Sharm el Sheikh), Egypt
 0.8000 meters
 x 0 0
 K1              0.0276  101.27
-K2              0.0591  208.55
+K2               0.0322  208.55
 x 0 0
 x 0 0
-M2              0.3511  176.59
+M2               0.4506  176.59
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0667  352.17
+N2               0.0856  352.17
 x 0 0
 O1              0.0069  121.31
 x 0 0
@@ -41434,7 +41436,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2189  209.00
+S2               0.1194  209.00
 x 0 0
 x 0 0
 x 0 0
@@ -41602,6 +41604,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.67 -> 0.32 (Makna (Magna), Saudi Arabia/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 34.5014
 # !latitude: 28.4772
@@ -41613,15 +41616,15 @@ Dahab (Khalij al Qaran), Egypt
 0.8000 meters
 x 0 0
 K1              0.0169  108.79
-K2              0.0411  223.59
+K2               0.0249  223.59
 x 0 0
 x 0 0
-M2              0.2278  191.08
+M2               0.2879  191.08
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0433  6.39
+N2               0.0547    6.39
 x 0 0
 O1              0.0042  128.28
 x 0 0
@@ -41630,7 +41633,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.1522  224.00
+S2               0.0921  224.00
 x 0 0
 x 0 0
 x 0 0
@@ -41798,6 +41801,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.69 -> 0.32 (Aqaba, Jordan/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 34.9522
 # !latitude: 29.5445
@@ -41809,15 +41813,15 @@ Eilat, Israel
 0.4000 meters
 x 0 0
 K1              0.0218  108.79
-K2              0.0557  223.59
+K2               0.0328  223.59
 x 0 0
 x 0 0
-M2              0.3006  191.08
+M2               0.3853  191.08
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0571  6.39
+N2               0.0732    6.39
 x 0 0
 O1              0.0054  128.28
 x 0 0
@@ -41826,7 +41830,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2061  224.00
+S2               0.1214  224.00
 x 0 0
 x 0 0
 x 0 0
@@ -42188,6 +42192,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.67 -> 0.31 (Haql, Saudi Arabia/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 34.9346
 # !latitude: 29.2457
@@ -42199,15 +42204,15 @@ Al Humidah, Saudi Arabia
 0.8000 meters
 x 0 0
 K1              0.0169  113.81
-K2              0.0411  233.62
+K2               0.0243  233.62
 x 0 0
 x 0 0
-M2              0.2278  200.74
+M2               0.2901  200.74
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0433  15.87
+N2               0.0551   15.87
 x 0 0
 O1              0.0042  132.93
 x 0 0
@@ -42216,7 +42221,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.1522  234.00
+S2               0.0899  234.00
 x 0 0
 x 0 0
 x 0 0
@@ -42384,6 +42389,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.67 -> 0.27 (Ras Qasabah, Saudi Arabia/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 34.4943
 # !latitude: 28.0008
@@ -42395,15 +42401,15 @@ Jazirat Tiran (Johnson Point), Saudi Arabia
 0.9000 meters
 x 0 0
 K1              0.0169  98.77
-K2              0.0411  203.53
+K2               0.0215  203.53
 x 0 0
 x 0 0
-M2              0.2278  171.76
+M2               0.3004  171.76
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0433  347.43
+N2               0.0571  347.43
 x 0 0
 O1              0.0042  118.99
 x 0 0
@@ -42412,7 +42418,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.1522  204.00
+S2               0.0796  204.00
 x 0 0
 x 0 0
 x 0 0
@@ -42579,6 +42585,7 @@ x 0 0
 # date_imported: 20260729
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261101 S2/M2 0.14 -> 0.30 (Duba (Port), Saudi Arabia/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 35.1968
 # !latitude: 27.9465
@@ -42590,15 +42597,15 @@ Jazirat Umm Qusur (Neom Bay), Saudi Arabia
 0.5000 meters
 x 0 0
 K1              0.0300  85.00
-K2              0.0081  219.00
+K2               0.0148  219.00
 x 0 0
 x 0 0
-M2              0.2100  212.00
+M2               0.1853  212.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0399  208.25
+N2               0.0352  208.25
 x 0 0
 x 0 0
 x 0 0
@@ -42607,7 +42614,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.0300  219.00
+S2               0.0547  219.00
 x 0 0
 x 0 0
 x 0 0
@@ -42775,6 +42782,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.74 -> 0.30 (Duba Bulk Plant Terminal, Saud/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 35.7563
 # !latitude: 27.1074
@@ -42786,15 +42794,15 @@ Jazirat an Nu'man, Saudi Arabia
 0.5000 meters
 x 0 0
 K1              0.0098  101.27
-K2              0.0291  208.55
+K2               0.0158  208.55
 x 0 0
 x 0 0
-M2              0.1456  176.59
+M2               0.1949  176.59
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0277  352.17
+N2               0.0371  352.17
 x 0 0
 O1              0.0024  121.31
 x 0 0
@@ -42803,7 +42811,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.1078  209.00
+S2               0.0585  209.00
 x 0 0
 x 0 0
 x 0 0
@@ -42971,6 +42979,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.74 -> 0.31 (Al Wajh, Saudi Arabia/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 36.4817
 # !latitude: 26.0652
@@ -42982,15 +42991,15 @@ Mardunah (Al-Wajh), Saudi Arabia
 0.5000 meters
 x 0 0
 K1              0.0098  91.25
-K2              0.0291  188.49
+K2               0.0162  188.49
 x 0 0
 x 0 0
-M2              0.1456  157.26
+M2               0.1934  157.26
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0277  333.21
+N2               0.0368  333.21
 x 0 0
 O1              0.0024  112.02
 x 0 0
@@ -42999,7 +43008,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.1078  189.00
+S2               0.0600  189.00
 x 0 0
 x 0 0
 x 0 0
@@ -43558,6 +43567,7 @@ x 0 0
 # note: ATT S.238 (*): NW-Sturm senkt den Pegel ~1 Tag spaeter um ca. 0.6 m,
 # note: danach deutlicher Anstieg. Meteo-Anteil > astronomischer Hub (0.3 m).
 # confidence: 7
+# note: 20261101 S2/M2 0.13 -> 0.29 (Yanbu Marine Terminal, Saudi A/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 38.2146
 # !latitude: 23.9548
@@ -43569,15 +43579,15 @@ Madinat Yanbu as Sinaiyah (Yanbu), Saudi Arabia
 0.5600 meters
 x 0 0
 K1              0.0200  187.00
-K2              0.0054  249.00
+K2               0.0103  249.00
 x 0 0
 x 0 0
-M2              0.1500  201.00
+M2               0.1318  201.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0285  175.27
+N2               0.0250  175.27
 x 0 0
 O1              0.0200  242.00
 x 0 0
@@ -43586,7 +43596,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.0200  249.00
+S2               0.0382  249.00
 x 0 0
 x 0 0
 x 0 0
@@ -44729,6 +44739,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.74 -> 0.28 (Kamaran (Passage), Yemen/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 42.4829
 # !latitude: 15.7154
@@ -44740,15 +44751,15 @@ Jazirat Antufash / Tiqfash, Yemen
 0.8000 meters
 x 0 0
 K1              0.0196  204.05
-K2              0.0582  54.11
+K2               0.0295   54.11
 x 0 0
 x 0 0
-M2              0.2911  14.65
+M2               0.3974   14.65
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0553  186.51
+N2               0.0755  186.51
 x 0 0
 O1              0.0049  216.59
 x 0 0
@@ -44757,7 +44768,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2156  54.00
+S2               0.1093   54.00
 x 0 0
 x 0 0
 x 0 0
@@ -44925,6 +44936,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.63 -> 0.26 (Al Hudaydah, Yemen/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 42.9000
 # !latitude: 14.6000
@@ -44936,15 +44948,15 @@ Ra's Mujamila (Ad Tarfah Island), Yemen
 0.6000 meters
 x 0 0
 K1              0.0240  199.04
-K2              0.0531  44.08
+K2               0.0282   44.08
 x 0 0
 x 0 0
-M2              0.3100  4.98
+M2               0.4021    4.98
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0589  177.03
+N2               0.0764  177.03
 x 0 0
 O1              0.0060  211.94
 x 0 0
@@ -44953,7 +44965,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.1967  44.00
+S2               0.1046   44.00
 x 0 0
 x 0 0
 x 0 0
@@ -53135,6 +53147,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261101 S2/M2 0.09 -> 0.36 (Ras al Khaymah, United Arab Em/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 55.7996
 # !latitude: 25.7192
@@ -53145,35 +53158,35 @@ Al Jazeera Port, United Arab Emirates
 1.1000 meters
 J1              0.0174  58.94
 K1              0.3955  83.48
-K2              0.0145  247.93
-L2              0.0273  243.71
+K2               0.0470  247.93
+L2               0.0219  243.71
 x 0 0
-M2              0.5843  219.57
+M2               0.4678  219.57
 M3              0.0115  260.24
 M4              0.0296  90.51
 M6              0.0006  181.48
 x 0 0
-N2              0.1301  201.80
+N2               0.1042  201.80
 x 0 0
 O1              0.2749  35.84
 OO1             0.0046  81.83
 P1              0.1157  66.72
 Q1              0.0445  6.17
 x 0 0
-R2              0.0008  300.31
+R2               0.0026  300.31
 x 0 0
-S2              0.0519  263.94
+S2               0.1684  263.94
 S4              0.0054  167.07
 x 0 0
-T2              0.0132  283.28
+T2               0.0428  283.28
 LDA2            0.0022  306.56
-MU2             0.0124  189.97
-NU2             0.0290  198.38
+MU2              0.0099  189.97
+NU2              0.0232  198.38
 RHO1            0.0106  14.06
 MK3             0.0229  174.95
 x 0 0
 MN4             0.0104  44.01
-MS4             0.0203  154.00
+MS4              0.0659  154.00
 x 0 0
 MF              0.0150  336.24
 MSF             0.0016  99.09
@@ -53911,6 +53924,7 @@ x 0 0
 # date_imported: 20260729
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261101 S2/M2 0.27 -> 0.43 (Mina Zayid (Abu Dhabi), United/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 54.5450
 # !latitude: 24.5482
@@ -53922,15 +53936,15 @@ Khawr Sa'diyat, United Arab Emirates
 1.2300 meters
 x 0 0
 K1              0.2400  235.00
-K2              0.0324  80.00
+K2               0.0467   80.00
 x 0 0
 x 0 0
-M2              0.4500  80.00
+M2               0.3972   80.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0855  80.00
+N2               0.0755   80.00
 x 0 0
 O1              0.2400  166.00
 x 0 0
@@ -53939,7 +53953,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.1200  80.00
+S2               0.1728   80.00
 x 0 0
 x 0 0
 x 0 0
@@ -59164,6 +59178,7 @@ x 0 0
 # date_imported: 20260729
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261101 S2/M2 0.22 -> 0.37 (Musay'id (Outer Channel Entran/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 51.6167
 # !latitude: 25.1667
@@ -59175,15 +59190,15 @@ Al Wakrah, Qatar
 0.9000 meters
 x 0 0
 K1              0.3700  126.00
-K2              0.0162  192.00
+K2               0.0241  192.00
 x 0 0
 x 0 0
-M2              0.2700  153.00
+M2               0.2409  153.00
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0513  132.10
+N2               0.0458  132.10
 x 0 0
 O1              0.1500  68.00
 x 0 0
@@ -59192,7 +59207,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.0600  192.00
+S2               0.0891  192.00
 x 0 0
 x 0 0
 x 0 0
@@ -67913,6 +67928,7 @@ x 0 0
 # date_imported: 20260803
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261101 S2/M2 0.10 -> 0.42 (al-Warba, Kuwait/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 48.2814
 # !latitude: 30.3299
@@ -67924,15 +67940,15 @@ Abadan, Iran
 1.2200 meters
 x 0 0
 K1              0.3619  344.51
-K2              0.0146  108.02
+K2               0.0481  108.02
 x 0 0
 x 0 0
-M2              0.5542  43.41
+M2               0.4300   43.41
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1053  8.91
+N2               0.0817    8.91
 x 0 0
 O1              0.2171  292.90
 x 0 0
@@ -67941,7 +67957,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.0542  107.75
+S2               0.1784  107.75
 x 0 0
 x 0 0
 x 0 0
@@ -70247,6 +70263,7 @@ x 0 0
 # date_imported: 20260801
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261101 S2/M2 0.21 -> 0.35 (Bandar-e Shahid Rajai, Iran/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
 # !units: meters
 # !longitude: 55.7577
 # !latitude: 26.8945
@@ -70258,15 +70275,15 @@ Bandar e Laft (Qeshm), Iran
 2.5000 meters
 x 0 0
 K1              0.7168  109.49
-K2              0.0663  357.99
+K2               0.0984  357.99
 x 0 0
 x 0 0
-M2              1.1454  310.53
+M2               1.0264  310.53
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.2176  117.50
+N2               0.1950  117.50
 x 0 0
 O1              0.4301  75.04
 x 0 0
@@ -70275,7 +70292,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2              0.2454  359.00
+S2               0.3644  359.00
 x 0 0
 x 0 0
 x 0 0
