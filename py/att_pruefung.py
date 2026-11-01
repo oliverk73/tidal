@@ -46,6 +46,8 @@ def oliver_namen():
 
 def main():
     angefasst = oliver_namen()
+    # Handliste: von Oliver durchgesehen, auch wenn nichts geaendert wurde (Kartengruppe 1.11.2026)
+    angefasst |= {z['name'] for z in csv.DictReader(open(os.path.join(HELP, 'att_von_hand_geprueft.csv'), encoding='utf-8'))}
     recs = [r for r in load_records() if not r['current'] and r['lat'] is not None]
     lock = {(z['file'], z['name']): z['provenance']
             for z in csv.DictReader(open(os.path.join(HELP, 'positions_locked.csv'), encoding='utf-8'))}
