@@ -41408,6 +41408,7 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # note: 20261101 S2/M2 0.62 -> 0.27 (Ras Qasabah, Saudi Arabia/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
+# note: 20261101 Springhub auf die Buchpegel 1.2/1.1/0.4/0.3 gesetzt (Scan NP203 S.228), S2/M2 wie Aqaba/Ras Qasabah.
 # !units: meters
 # !longitude: 34.3071
 # !latitude: 27.8480
@@ -41419,15 +41420,15 @@ Sharm Ash Shaykh (Sharm el Sheikh), Egypt
 0.8000 meters
 x 0 0
 K1              0.0276  101.27
-K2               0.0322  208.55
+K2               0.0259  208.55
 x 0 0
 x 0 0
-M2               0.4506  176.59
+M2               0.3540  176.59
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2               0.0856  352.17
+N2               0.0672  352.17
 x 0 0
 O1              0.0069  121.31
 x 0 0
@@ -41436,7 +41437,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2               0.1194  209.00
+S2               0.0960  209.00
 x 0 0
 x 0 0
 x 0 0
@@ -41802,6 +41803,7 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # note: 20261101 S2/M2 0.69 -> 0.32 (Aqaba, Jordan/FES), Springhub des Buchs behalten (py/att_s2_verhaeltnis.py).
+# note: 20261101 Springhub auf die Buchpegel 0.8/0.7/0.2/0.0 gesetzt (Scan NP203 S.228), S2/M2 wie Aqaba/Ras Qasabah.
 # !units: meters
 # !longitude: 34.9522
 # !latitude: 29.5445
@@ -41813,15 +41815,15 @@ Eilat, Israel
 0.4000 meters
 x 0 0
 K1              0.0218  108.79
-K2               0.0328  223.59
+K2               0.0262  223.59
 x 0 0
 x 0 0
-M2               0.3853  191.08
+M2               0.3030  191.08
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2               0.0732    6.39
+N2               0.0576    6.39
 x 0 0
 O1              0.0054  128.28
 x 0 0
@@ -41830,7 +41832,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-S2               0.1214  224.00
+S2               0.0970  224.00
 x 0 0
 x 0 0
 x 0 0
