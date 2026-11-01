@@ -25,7 +25,7 @@ ROOT = L.ROOT
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_observations.txt')
 LISTE = os.path.join(ROOT, 'harmonics/help/linz_20261101_loeschen.csv')
 GUT = ('harmonics_utide_observations.txt', 'harmonics_ticon4_worldwide.txt')
-NAMEN_NEU = {'210': 'Dargaville, Northland, New Zealand'}
+NAMEN_NEU = {}      # Kopf 210 Dargaville nennt 3656 S statt 3556 S: von Hand dem Bestandssatz zugeordnet
 d = lambda a, b: (a - b + 180) % 360 - 180
 
 
