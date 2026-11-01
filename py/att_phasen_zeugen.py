@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Einzelne Phasen der ATT-Haupthaefen (Part III) richten (1.11.2026).
+"""NICHT VERWENDEN. Einzelne Phasen der ATT-Haupthaefen (Part III) richten (1.11.2026).
+
+Zurueckgenommen am selben Tag: der Scan zeigte, dass die Werte so im Buch stehen und zu den Buchnachbarn
+passen (Modan S2 287 / Babo 278, Sailus S2 067 / Bima 055). Altersprobe plus FES widerlegt keine Part-III-Konstante.
 
 harmonics/help/phasenprobe_att_20261101.csv nennt Tiden, die neben der Altersprobe liegen. Geaendert wird nur,
 wenn FES die Altersprobe auf 15 Grad bestaetigt, die alte Phase ueber 25 Grad neben FES liegt, die Amplitude
