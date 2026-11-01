@@ -4628,6 +4628,8 @@ x 0 0
 # datum: ACD
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Prince of Wales Bridge, England, United  (py/n2_abgeleitet.py).
+# note: 20261101 O1-Phase 345.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -2.6347
 # !latitude: 51.6002
 # region: England
@@ -4645,9 +4647,9 @@ x 0 0
 M4              0.4820  355.00
 M6              0.0710  285.00
 x 0 0
-N2              0.8050  176.80
+N2              0.7429  205.40
 2N2             0.1080  143.50
-O1              0.0900  345.00
+O1              0.0900  14.00
 OO1             0.0040  337.00
 P1              0.0100  147.80
 Q1              0.0170  257.70
@@ -6580,6 +6582,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Lerma, Campeche, Mexico (py/n2_abgeleitet.py).
 # !longitude: -90.5281
 # !latitude: 19.8645
 # state: Campeche
@@ -6598,7 +6601,7 @@ x 0 0
 M4              0.0111   54.30
 M6              0.0023   93.50
 x 0 0
-N2              0.0422   88.40
+N2              0.0568  86.57
 x 0 0
 O1              0.1830  306.90
 x 0 0
@@ -6703,6 +6706,7 @@ x 0 0
 # datum: CD (Marinha)
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 194.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -48.3658
 # !latitude: -25.5517
 # state: Paraná
@@ -6720,7 +6724,7 @@ x 0 0
 M4              0.0990  175.00
 x 0 0
 x 0 0
-N2              0.0480  194.00
+N2              0.0480  144.00
 2N2             0.0060  310.00
 O1              0.1150   73.00
 OO1             0.0050  167.00
@@ -12214,6 +12218,7 @@ x 0 0
 # datum: ACD
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Narlwood Rocks, England, United Kingdom (py/n2_abgeleitet.py).
 # !longitude: -2.6167
 # !latitude: 51.6500
 # region: England
@@ -12231,7 +12236,7 @@ x 0 0
 M4              0.5900   19.00
 M6              0.0610  310.00
 x 0 0
-N2              0.7640  187.10
+N2              0.6186  221.50
 2N2             0.1020  151.20
 O1              0.0800    3.00
 OO1             0.0030  267.00
@@ -17254,6 +17259,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 173.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -62.9575
 # !latitude: -64.3363
 # region: Antarctica
@@ -17271,7 +17277,7 @@ x 0 0
 M4              0.0080  332.00
 x 0 0
 x 0 0
-N2              0.0250  173.00
+N2              0.0250  133.00
 2N2             0.0030  144.00
 O1              0.3080   20.00
 OO1             0.0130   40.00
@@ -19954,6 +19960,7 @@ x 0 0
 # confidence: 10
 # shom_code: NOUADHIBOU
 # !units: meters
+# note: 20261101 O1-Phase 323.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -17.0425
 # !latitude: 20.9047
 # region: Dakhlet Nouadhibou
@@ -19973,7 +19980,7 @@ x 0 0
 x 0 0
 N2              0.1060  341.00
 2N2             0.0140  341.00
-O1              0.0200  323.00
+O1              0.0200  272.00
 OO1             0.0010   65.00
 P1              0.0200   10.20
 x 0 0
@@ -20205,6 +20212,7 @@ x 0 0
 # confidence: 10
 # linz_station_id: 1164
 # !units: meters
+# note: 20261101 O1-Phase 295.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: 170.9750
 # !latitude: -45.1056
 # region: Otago
@@ -20224,7 +20232,7 @@ x 0 0
 x 0 0
 N2              0.1490   39.00
 2N2             0.0200  349.00
-O1              0.0240  295.00
+O1              0.0240  29.50
 OO1             0.0010  223.00
 P1              0.0100   68.20
 x 0 0
@@ -23765,6 +23773,7 @@ x 0 0
 # datum: ZH
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 14.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -147.6873
 # !latitude: -23.8678
 Raivavae, Austral Islands, French Polynesia
@@ -23780,7 +23789,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0400   14.00
+N2              0.0400  341.00
 2N2             0.0050   26.00
 O1              0.0190  301.00
 OO1             0.0010  159.00
@@ -25110,6 +25119,7 @@ x 0 0
 # datum: CD (SHN)
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge San Clemente del Tuyú (Muelle), Buenos A (py/n2_abgeleitet.py).
 # !longitude: -56.7789
 # !latitude: -36.2914
 # province: Buenos Aires
@@ -25127,7 +25137,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0850  261.00
+N2              0.1927  265.53
 2N2             0.0110  216.00
 O1              0.1700   93.00
 OO1             0.0070  249.00
@@ -29045,6 +29055,7 @@ x 0 0
 # shom_code: DAKHLA
 # note: 2026-07-23 Position vom harmonisierten SHOM-Punkt an den Hafen Dakhla verschoben (Zeiten passen zur Stadt/Reede, nicht zur Barre).
 # !units: meters
+# note: 20261101 O1-Phase 307.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -15.9370
 # !latitude: 23.6865
 # region: Oued el Dahab
@@ -29064,7 +29075,7 @@ x 0 0
 x 0 0
 N2              0.1670   19.00
 2N2             0.0220   41.00
-O1              0.0210  307.00
+O1              0.0210  266.00
 OO1             0.0010   75.00
 P1              0.0090    6.20
 Q1              0.0040  274.00

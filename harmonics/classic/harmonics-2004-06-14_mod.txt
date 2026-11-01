@@ -23048,6 +23048,7 @@ x 0 0
 # datum: LLWLT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 206.60 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -82.7500
 # !latitude: 69.8000
 # province: Nunavut
@@ -23065,7 +23066,7 @@ M3              0.0090  229.60
 M4              0.0120  320.30
 M6              0.0330   49.40
 M8              0.0030  163.70
-N2              0.0890  206.60
+N2              0.0890  167.00
 2N2             0.0120  212.40
 O1              0.2700  240.60
 x 0 0
@@ -28801,6 +28802,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Sharp Point, Queensland, Australia (py/n2_abgeleitet.py).
 # !longitude: 142.9208
 # !latitude: -11.2442
 # state: Queensland
@@ -28818,7 +28820,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1552  326.40
+N2              0.2824  296.56
 2N2             0.0208  339.80
 O1              0.2000  152.00
 OO1             0.0086  258.00
@@ -30913,6 +30915,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Cape Ferguson, Queensland, Australia (py/n2_abgeleitet.py).
 # !longitude: 147.4167
 # !latitude: -19.3167
 # state: Queensland
@@ -30930,7 +30933,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1552  294.54
+N2              0.2536  255.86
 2N2             0.0208  310.09
 O1              0.2000  146.00
 OO1             0.0086  222.00
@@ -34757,6 +34760,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Cape Sorell (Off), Tasmania, Australia (py/n2_abgeleitet.py).
 # !longitude: 145.2072
 # !latitude: -42.2005
 # state: Tasmania
@@ -34774,7 +34778,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0213  266.47
+N2              0.0197  217.96
 2N2             0.0029  213.94
 O1              0.1400   28.00
 OO1             0.0060   88.00
@@ -35141,6 +35145,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Abbot Point, Queensland, Australia (py/n2_abgeleitet.py).
 # !longitude: 147.7527
 # !latitude: -19.7067
 # state: Queensland
@@ -35158,7 +35163,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1552  300.08
+N2              0.2424  258.06
 2N2             0.0208  316.16
 O1              0.2000  146.00
 OO1             0.0086  222.00
@@ -37450,6 +37455,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von nur FES, Zeuge Cape Beatrice (Groote Eylandt), Northern (py/n2_abgeleitet.py).
 # !longitude: 136.7970
 # !latitude: -15.7293
 # state: Northern Territory
@@ -37469,7 +37475,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0772    0.54
+N2              0.1059  11.02
 2N2             0.0117  256.49
 O1              0.3569  272.10
 x 0 0
@@ -48761,6 +48767,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von nur FES, Zeuge Margarida, Papua New Guinea (py/n2_abgeleitet.py).
 # !longitude: 152.3667
 # !latitude: -11.2833
 # province: Milne Bay
@@ -48778,7 +48785,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0427  290.51
+N2              0.0706  242.16
 2N2             0.0057  313.02
 O1              0.1400  149.00
 OO1             0.0060  201.00
@@ -53984,6 +53991,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Kingscote (Kangaroo Island), South Austr (py/n2_abgeleitet.py).
 # !longitude: 137.5062
 # !latitude: -35.5906
 # state: South Australia
@@ -54001,7 +54009,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0466   54.02
+N2              0.0125  197.63
 2N2             0.0062   17.03
 O1              0.1500   21.00
 OO1             0.0065   77.00
@@ -56676,6 +56684,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 O1-Phase 272.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: 147.8599
 # !latitude: -6.6013
 # province: Morobe
@@ -56696,7 +56705,7 @@ x 0 0
 x 0 0
 N2              0.0120  120.00
 x 0 0
-O1              0.0700  272.00
+O1              0.0700  175.00
 x 0 0
 P1              0.0842  204.18
 x 0 0
@@ -64153,6 +64162,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Carronade Island, Western Australia, Aus (py/n2_abgeleitet.py).
 # !longitude: 126.5525
 # !latitude: -13.9152
 # state: Western Australia
@@ -64170,7 +64180,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1222  220.76
+N2              0.0932  228.05
 2N2             0.0164  172.52
 O1              0.3000  294.00
 OO1             0.0129  348.00
@@ -66085,6 +66095,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Cardwell, Queensland, Australia (py/n2_abgeleitet.py).
 # !longitude: 146.1878
 # !latitude: -18.1652
 # state: Queensland
@@ -66102,7 +66113,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1164  292.15
+N2              0.1980  254.56
 2N2             0.0156  309.30
 O1              0.2000  147.00
 OO1             0.0086  231.00
@@ -74185,6 +74196,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von nur FES, Zeuge Margarida, Papua New Guinea (py/n2_abgeleitet.py).
 # !longitude: 153.1667
 # !latitude: -11.2667
 # province: Milne Bay
@@ -74202,7 +74214,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0466  302.51
+N2              0.0926  250.66
 2N2             0.0062  325.02
 O1              0.1400  159.00
 OO1             0.0060  221.00
@@ -75924,6 +75936,7 @@ x 0 0
 # confidence: 10
 # note: 20260917 umbenannt (Oliver): "L'Île-d'Anticosti, Québec, Canada" -> "Pointe Heath (Île d'Anticosti), Québec, Canada" -- gleichnamige Saetze an verschiedenen Orten.
 # !units: meters
+# note: 20261101 O1-Phase 145.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -61.697000
 # !latitude: 49.084167
 # province: Québec
@@ -75943,7 +75956,7 @@ x 0 0
 x 0 0
 N2              0.0700  327.00
 2N2             0.0090  316.00
-O1              0.1180  145.00
+O1              0.1180  198.00
 x 0 0
 P1              0.0450  228.00
 Q1              0.0210  115.00
@@ -82485,6 +82498,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Leggatt Island, Queensland, Australia (py/n2_abgeleitet.py).
 # !longitude: 144.9836
 # !latitude: -14.5121
 # state: Queensland
@@ -82502,7 +82516,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0970  296.54
+N2              0.1725  258.06
 2N2             0.0130  312.09
 O1              0.2000  154.00
 OO1             0.0086  226.00
@@ -89418,6 +89432,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Hobart, Tasmania, Australia (py/n2_abgeleitet.py).
 # !longitude: 147.7833
 # !latitude: -43.0500
 # state: Tasmania
@@ -89436,7 +89451,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0524  276.23
+N2              0.0813  221.86
 2N2             0.0070  309.46
 O1              0.1600   52.00
 OO1             0.0069  134.00
@@ -90378,6 +90393,7 @@ x 0 0
 # datum: LLWLT
 # confidence: 10
 # !units: meters
+# note: 20261101 O1-Phase 115.40 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -79.0333
 # !latitude: 51.7333
 # province: Québec
@@ -90397,7 +90413,7 @@ M6              0.0220  146.90
 M8              0.0070  143.60
 N2              0.0920   19.80
 2N2             0.0120  336.70
-O1              0.0590  115.40
+O1              0.0590  80.00
 x 0 0
 P1              0.0530  134.30
 Q1              0.0270   90.20
@@ -106945,6 +106961,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 292.00 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: 155.6376
 # !latitude: -6.2181
 # region: North Solomons
@@ -106964,7 +106981,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1200  292.00
+N2              0.0600  78.00
 x 0 0
 O1              0.1300  177.00
 x 0 0
@@ -116982,6 +116999,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Broome, Western Australia, Australia (py/n2_abgeleitet.py).
 # !longitude: 121.7326
 # !latitude: -18.6980
 # state: Western Australia
@@ -117000,7 +117018,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.4695  262.77
+N2              0.3678  267.75
 2N2             0.0629  229.54
 O1              0.1300  277.00
 OO1             0.0056  271.00
@@ -121206,6 +121224,7 @@ x 0 0
 # psmsl_id: 1836
 # ssc_id: SSC-lorn
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Apollo Bay, Victoria, Australia (py/n2_abgeleitet.py).
 # !longitude: 143.9881
 # !latitude: -38.5470
 # state: Victoria
@@ -121223,7 +121242,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1203  251.93
+N2              0.1122  274.26
 2N2             0.0161  183.86
 O1              0.1400   24.00
 OO1             0.0060   86.00
@@ -124474,6 +124493,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Elcho Island, Northern Territory, Austra (py/n2_abgeleitet.py).
 # !longitude: 136.1000
 # !latitude: -12.1833
 # state: Northern Territory
@@ -124492,7 +124512,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.3356  204.96
+N2              0.2941  252.03
 2N2             0.0450  129.92
 O1              0.3100   55.00
 OO1             0.0133  155.00
@@ -126776,6 +126796,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von nur FES, Zeuge Lihou Reef, Queensland, Australia (py/n2_abgeleitet.py).
 # !longitude: 152.4000
 # !latitude: -19.1000
 # region: Coral Sea
@@ -126795,7 +126816,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1319  272.94
+N2              0.1965  242.56
 2N2             0.0177  286.87
 O1              0.1900  147.00
 OO1             0.0082  251.00
@@ -127361,6 +127382,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 P1-Phase 354.93 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: 120.1270
 # !latitude: -33.9543
 # state: Western Australia
@@ -127383,7 +127405,7 @@ N2              0.0301   14.73
 2N2             0.0078  353.73
 O1              0.1205  315.72
 x 0 0
-P1              0.0361  354.93
+P1              0.0361  322.00
 Q1              0.0322  300.69
 x 0 0
 x 0 0
@@ -165285,6 +165307,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Hobart, Tasmania, Australia (py/n2_abgeleitet.py).
 # !longitude: 147.7409
 # !latitude: -43.1040
 # state: Tasmania
@@ -165303,7 +165326,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0446  274.70
+N2              0.0695  220.66
 2N2             0.0060  307.39
 O1              0.1600   52.00
 OO1             0.0069  126.00
@@ -168569,6 +168592,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Darlington Jetty (Maria Island), Tasmani (py/n2_abgeleitet.py).
 # !longitude: 147.9455
 # !latitude: -43.0340
 # state: Tasmania
@@ -168587,7 +168611,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0524  233.93
+N2              0.0729  218.76
 2N2             0.0070  232.86
 O1              0.1100   50.00
 OO1             0.0047  138.00
@@ -176276,6 +176300,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Wool Bay, South Australia, Australia (py/n2_abgeleitet.py).
 # !longitude: 137.3530
 # !latitude: -34.9333
 # state: South Australia
@@ -176294,7 +176319,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0349   40.20
+N2              0.0167  149.23
 2N2             0.0047   13.40
 O1              0.1700   22.00
 OO1             0.0073   84.00
@@ -179964,6 +179989,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Albino Rock, Queensland, Australia (py/n2_abgeleitet.py).
 # !longitude: 146.6175
 # !latitude: -19.0355
 # state: Queensland
@@ -179981,7 +180007,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1358  290.54
+N2              0.2135  253.26
 2N2             0.0182  306.09
 O1              0.2000  149.00
 OO1             0.0086  229.00
@@ -188625,6 +188651,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von nur FES, Zeuge Margarida, Papua New Guinea (py/n2_abgeleitet.py).
 # !longitude: 150.6667
 # !latitude: -10.6167
 # province: Milne Bay
@@ -188642,7 +188669,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0543  309.90
+N2              0.0972  265.06
 2N2             0.0073  330.81
 O1              0.1400  157.00
 OO1             0.0060  223.00
@@ -191495,6 +191522,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von nur FES, Zeuge Puerto Plata, Dominican Republic (py/n2_abgeleitet.py).
 # !longitude: -72.0463
 # !latitude: 21.9354
 # note: 20260906 country "Unknown" -> "Turks and Caicos Islands" nach dem Namen berichtigt,
@@ -191512,7 +191540,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0430  240.40
+N2              0.0524  217.92
 2N2             0.0060  238.80
 O1              0.0600  150.00
 OO1             0.0030  146.00
@@ -192857,6 +192885,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Half Tide Tug Harbour (Hay Point), Queen (py/n2_abgeleitet.py).
 # !longitude: 149.3333
 # !latitude: -21.4000
 # state: Queensland
@@ -192874,7 +192903,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.3686  326.00
+N2              0.4826  310.96
 2N2             0.0494  326.00
 O1              0.2000  145.00
 OO1             0.0086  229.00
@@ -196304,6 +196333,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Bogia, Papua New Guinea (py/n2_abgeleitet.py).
 # !longitude: 144.5667
 # !latitude: -3.8500
 # province: East Sepik
@@ -196321,7 +196351,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0291  178.16
+N2              0.0469  180.96
 2N2             0.0039  143.32
 O1              0.1800  187.00
 OO1             0.0077  247.00
@@ -210529,6 +210559,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Three Hummock Island, Tasmania, Australi (py/n2_abgeleitet.py).
 # !longitude: 144.7796
 # !latitude: -40.6023
 # state: Tasmania
@@ -210547,7 +210578,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1649  290.64
+N2              0.1802  331.76
 2N2             0.0221  218.28
 O1              0.0900   15.00
 OO1             0.0039   55.00
@@ -211488,6 +211519,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Althorpe Island, South Australia, Austra (py/n2_abgeleitet.py).
 # !longitude: 136.9333
 # !latitude: -35.2833
 # state: South Australia
@@ -211506,7 +211538,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.0330    1.91
+N2              0.0153  119.03
 2N2             0.0044  330.82
 O1              0.1300    9.00
 OO1             0.0056   61.00
@@ -215543,6 +215575,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Lady Barron (Flinders Island), Tasmania, (py/n2_abgeleitet.py).
 # !longitude: 148.1180
 # !latitude: -40.7347
 # state: Tasmania
@@ -215561,7 +215594,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1067  275.97
+N2              0.1375  237.86
 2N2             0.0143  282.94
 O1              0.1100   50.00
 OO1             0.0047  150.00
@@ -237530,6 +237563,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2 war abgeleitet (0.194*M2), neu von Zeuge+FES, Zeuge Omati, Papua New Guinea (py/n2_abgeleitet.py).
 # !longitude: 144.6500
 # !latitude: -7.6667
 # province: Gulf
@@ -237547,7 +237581,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1959  330.15
+N2              0.2929  292.66
 2N2             0.0263  347.30
 O1              0.1600  176.00
 OO1             0.0069  254.00
@@ -245050,6 +245084,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: feet
+# note: 20261101 O1-Phase 166.40 passte weder zum Satz noch zu FES (py/phasenprobe.py).
 # !longitude: -70.4500
 # !latitude: 41.3633
 # state: Massachusetts
@@ -245069,7 +245104,7 @@ x 0 0
 x 0 0
 N2              0.1330  278.90
 2N2             0.0180  263.70
-O1              0.0530  166.40
+O1              0.0530  126.40
 x 0 0
 P1              0.0220  143.70
 Q1              0.0140  147.80
