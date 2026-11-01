@@ -41160,6 +41160,7 @@ x 0 0
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
 # !units: meters
+# note: 20261101 S2-Band von FES (S2 0.241): Gibraltar-Verhaeltnis 0.37 passt nicht in den Golf von Gabes (Sfax 0.64, Cercina 0.66).
 # !longitude: 10.9670
 # !latitude: 34.5330
 # region: Sfax
@@ -41171,7 +41172,7 @@ Kerkennah Banks (South Point), Tunisia
 0.5300 meters
 J1              0.0013  140.63
 K1              0.0280  133.52
-K2              0.0408  80.12
+K2               0.0700   80.12
 L2              0.0109  58.77
 M1              0.0014  48.48
 M2              0.3845  54.70
@@ -41188,10 +41189,10 @@ Q1              0.0043  198.67
 x 0 0
 R2              0.0048  136.46
 S1              0.0033  52.38
-S2              0.1405  81.34
+S2               0.2410   81.34
 S4              0.0009  87.85
 x 0 0
-T2              0.0099  81.93
+T2               0.0170   81.93
 LDA2            0.0040  30.37
 MU2             0.0124  30.14
 NU2             0.0147  41.99
