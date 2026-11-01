@@ -183,6 +183,8 @@ SOURCE_GROUPS = OrderedDict([
     ('NOAA auffällig (prüfen)', {'color': '#8E24AA', 'files': []}),
     # Oliver 30.10.2026: auffaellige, nie angefasste ATT-Saetze (py/att_pruefung.py, Punkte >= 4) -- nichts verschoben
     ('ATT auffällig (prüfen)', {'color': '#00897B', 'files': []}),
+    # Oliver 1.11.2026: neue Saetze mit noch ungeprueften Namen/Positionen (harmonics/help/neu_pruefen_*.csv)
+    ('Neu (prüfen)', {'color': '#D81B60', 'files': []}),
 ])
 
 # Group order: predefined + 'Other' fallback (für nicht zugeordnete Quellen)
@@ -234,6 +236,12 @@ if os.path.exists(_sp):
     STROM_PRUEFEN = {(os.path.splitext(os.path.basename(z['datei']))[0] + '.tcd', z['name'])
                      for z in _csv.DictReader(open(_sp, encoding='utf-8'))}
 
+NEU_PRUEFEN = set()
+for _np in sorted(__import__('glob').glob(os.path.join(os.path.dirname(_av), 'neu_pruefen_*.csv'))):
+    import csv as _csv
+    NEU_PRUEFEN |= {(os.path.splitext(os.path.basename(z['datei']))[0] + '.tcd', z['name'])
+                    for z in _csv.DictReader(open(_np, encoding='utf-8'))}
+
 NOAA_AUFFAELLIG = set()
 _nr = sorted(__import__('glob').glob(os.path.join(os.path.dirname(_av), 'noaa_restpruefung_*.csv')))
 if _nr:
@@ -255,7 +263,9 @@ for name, lat, lon, source_file, is_current in all_stations:
     slug = to_slug(display_name_raw)
     needs_source = name in duplicate_names
     group_name = get_group_for_source(source_file)
-    if (source_file, name) in AUTO_VERSCHOBEN:
+    if (source_file, name) in NEU_PRUEFEN:
+        group_name = 'Neu (prüfen)'
+    elif (source_file, name) in AUTO_VERSCHOBEN:
         group_name = 'NOAA verschoben (prüfen)'
     elif (source_file, name) in STROM_PRUEFEN:
         group_name = 'Strömung Position (prüfen)'
