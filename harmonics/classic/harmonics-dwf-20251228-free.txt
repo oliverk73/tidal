@@ -107570,6 +107570,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # noaa_station_id: 8721843
+# note: 20261101 Konstanten neu aus CO-OPS harcon: 1 year LSQHA (2022).  Sa and SSa from 8721604
 # !units: feet
 # !longitude: -80.5917
 # !latitude: 28.0833
@@ -107579,42 +107580,42 @@ Melbourne Causeway (Indian River), Florida
 +00:00 :America/New_York
 0.1600 feet
 x 0 0
-K1              0.0200  283.40
+K1              0.0200  296.60
+K2              0.0030  112.90
+L2              0.0030  122.70
+M1              0.0070  324.40
+M2              0.0750  122.60
+x 0 0
+M4              0.0030  160.40
+M6              0.0030   76.70
+x 0 0
+N2              0.0130  110.10
+2N2             0.0030   27.20
+O1              0.0130  292.60
+OO1             0.0030  244.40
+P1              0.0100   22.10
+x 0 0
+2Q1             0.0030  355.80
+R2              0.0030  255.90
+S1              0.0230   87.70
+S2              0.0100  157.30
+x 0 0
+x 0 0
+T2              0.0030  126.70
+LDA2            0.0030  141.00
+x 0 0
+NU2             0.0030  127.90
+RHO1            0.0070   34.60
+x 0 0
+2MK3            0.0030  152.00
+x 0 0
+MS4             0.0030  201.70
 x 0 0
 x 0 0
 x 0 0
-M2              0.0800  121.20
 x 0 0
-M4              0.0100  155.60
-x 0 0
-x 0 0
-N2              0.0200  104.80
-x 0 0
-O1              0.0100  276.90
-x 0 0
-P1              0.0100   14.90
-Q1              0.0100  292.80
-x 0 0
-x 0 0
-S1              0.0200   84.10
-S2              0.0100  144.30
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.3500  205.20
-SSA             0.2800   53.90
+SA              0.3540  205.20
+SSA             0.2760   53.90
 x 0 0
 x 0 0
 x 0 0
@@ -424134,7 +424135,7 @@ x 0 0
 # !latitude: 41.3573
 # state: Connecticut
 # admin1_quelle: Polygon
-New London State Pier (depth 57 ft, Thames River, Long Island Sound), Connecticut
+New London State Pier (depth 57 ft, Thames River), Connecticut Current
 +00:00 :America/New_York
 0.1280 knots
 J1              0.0060  133.00
@@ -424338,7 +424339,7 @@ x 0 0
 # !latitude: 41.3573
 # state: Connecticut
 # admin1_quelle: Polygon
-New London State Pier (depth 31 ft, Thames River, Long Island Sound), Connecticut
+New London State Pier (depth 31 ft, Thames River), Connecticut Current
 +00:00 :America/New_York
 0.0940 knots
 J1              0.0040   85.30
@@ -424542,7 +424543,7 @@ x 0 0
 # !latitude: 41.3573
 # state: Connecticut
 # admin1_quelle: Polygon
-New London State Pier (depth 14 ft, Thames River, Long Island Sound), Connecticut
+New London State Pier (depth 14 ft, Thames River), Connecticut Current
 +00:00 :America/New_York
 0.0070 knots
 J1              0.0030  267.70
@@ -429493,7 +429494,7 @@ x 0 0
 # !latitude: 41.2833
 # state: Connecticut
 # admin1_quelle: Ufer 0.8 km
-Saybrook Channel (depth 13 ft, Connecticut River, Long Island Sound), Connecticut
+Saybrook Channel (depth 13 ft, Connecticut River), Connecticut Current
 +00:00 :America/New_York
 0.1500 knots
 J1              0.0130  155.00
@@ -429691,7 +429692,7 @@ x 0 0
 # !latitude: 41.2833
 # state: Connecticut
 # admin1_quelle: Ufer 0.8 km
-Saybrook Channel (depth 2 ft, Connecticut River, Long Island Sound), Connecticut Current
+Saybrook Channel (depth 2 ft, Connecticut River), Connecticut Current
 +00:00 :America/New_York
 -0.3430 knots
 J1              0.0050  258.90
@@ -447724,7 +447725,7 @@ x 0 0
 # !latitude: 25.7651
 # state: Florida
 # admin1_quelle: Ufer 2.8 km
-Lummus Island (SW corner, depth 14 ft, Fishermans Channel, Miami Harbor), Florida
+Lummus Island (SW corner, depth 14 ft, Fishermans Channel, Miami), Florida Current
 +00:00 :America/New_York
 -0.0600 knots
 J1              0.0030  215.70
@@ -447922,7 +447923,7 @@ x 0 0
 # !latitude: 25.7651
 # state: Florida
 # admin1_quelle: Ufer 2.8 km
-Lummus Island (SW corner, depth 4 ft, Fishermans Channel, Miami Harbor), Florida Current
+Lummus Island (SW corner, depth 4 ft, Fishermans Channel, Miami), Florida Current
 +00:00 :America/New_York
 -0.0410 knots
 J1              0.0020  204.20
@@ -449507,7 +449508,7 @@ x 0 0
 # !latitude: 25.7818
 # state: Florida
 # admin1_quelle: Ufer 2.2 km
-Dodge Island (SE Turning Basin, depth 30 ft, Main Channel, Miami Harbor), Florida
+Dodge Island (SE Turning Basin, depth 30 ft, Main Channel, Miami), Florida Current
 +00:00 :America/New_York
 -0.0010 knots
 J1              0.0020  199.50
@@ -449705,7 +449706,7 @@ x 0 0
 # !latitude: 25.7818
 # state: Florida
 # admin1_quelle: Ufer 2.2 km
-Dodge Island (SE Turning Basin, depth 14 ft, Main Channel, Miami Harbor), Florida
+Dodge Island (SE Turning Basin, depth 14 ft, Main Channel, Miami), Florida Current
 +00:00 :America/New_York
 0.0130 knots
 J1              0.0030  186.30
@@ -449903,7 +449904,7 @@ x 0 0
 # !latitude: 25.7818
 # state: Florida
 # admin1_quelle: Ufer 2.2 km
-Dodge Island (SE Turning Basin, depth 4 ft, Main Channel, Miami Harbor), Florida Current
+Dodge Island (SE Turning Basin, depth 4 ft, Main Channel, Miami), Florida Current
 +00:00 :America/New_York
 -0.0370 knots
 J1              0.0020  165.20
@@ -450101,7 +450102,7 @@ x 0 0
 # !latitude: 25.7855
 # state: Florida
 # admin1_quelle: Ufer 1.6 km
-Dodge Island (NW Turning Basin, depth 30 ft, Main Channel, Miami Harbor), Florida
+Dodge Island (NW Turning Basin, depth 30 ft, Main Channel, Miami), Florida Current
 +00:00 :America/New_York
 0.0440 knots
 J1              0.0030    4.80
@@ -450299,7 +450300,7 @@ x 0 0
 # !latitude: 25.7855
 # state: Florida
 # admin1_quelle: Ufer 1.6 km
-Dodge Island (NW Turning Basin, depth 17 ft, Main Channel, Miami Harbor), Florida
+Dodge Island (NW Turning Basin, depth 17 ft, Main Channel, Miami), Florida Current
 +00:00 :America/New_York
 0.0080 knots
 J1              0.0010  104.80
@@ -450497,7 +450498,7 @@ x 0 0
 # !latitude: 25.7855
 # state: Florida
 # admin1_quelle: Ufer 1.6 km
-Dodge Island (NW Turning Basin, depth 7 ft, Main Channel, Miami Harbor), Florida Current
+Dodge Island (NW Turning Basin, depth 7 ft, Main Channel, Miami), Florida Current
 +00:00 :America/New_York
 -0.0980 knots
 J1              0.0060  220.70
@@ -582631,7 +582632,7 @@ x 0 0
 # !latitude: 48.1823
 # state: Washington
 # admin1_quelle: Ufer 7.1 km
-Ediz Hook Light (5.3 mi ENE of, depth 179 ft, Strait of Juan de Fuca), Washington
+Ediz Hook Light (5.3 mi ENE of, depth 179 ft, Juan de Fuca Strait), Washington Current
 +00:00 :America/Los_Angeles
 0.3850 knots
 J1              0.0600  274.50
@@ -582829,7 +582830,7 @@ x 0 0
 # !latitude: 48.1823
 # state: Washington
 # admin1_quelle: Ufer 7.1 km
-Ediz Hook Light (5.3 mi ENE of, depth 28 ft, Strait of Juan de Fuca), Washington Current
+Ediz Hook Light (5.3 mi ENE of, depth 28 ft, Juan de Fuca Strait), Washington Current
 +00:00 :America/Los_Angeles
 -0.5900 knots
 J1              0.1030  226.40
@@ -583027,7 +583028,7 @@ x 0 0
 # !latitude: 48.1823
 # state: Washington
 # admin1_quelle: Ufer 7.1 km
-Ediz Hook Light (5.3 mi ENE of, depth 22 ft, Strait of Juan de Fuca), Washington Current
+Ediz Hook Light (5.3 mi ENE of, depth 22 ft, Juan de Fuca Strait), Washington Current
 +00:00 :America/Los_Angeles
 -0.5170 knots
 J1              0.0280  219.60
@@ -618272,7 +618273,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 99 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 99 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 0.0010 knots
 J1              0.0370  235.20
@@ -618470,7 +618471,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 95 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 95 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 0.0010 knots
 J1              0.0400  236.00
@@ -618668,7 +618669,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 92 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 92 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 0.0010 knots
 J1              0.0400  236.10
@@ -618866,7 +618867,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 89 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 89 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 0.0010 knots
 J1              0.0400  236.60
@@ -619064,7 +619065,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 85 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 85 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 0.0000 knots
 J1              0.0400  236.30
@@ -619262,7 +619263,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 82 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 82 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0020 knots
 J1              0.0390  236.10
@@ -619460,7 +619461,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 79 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 79 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0050 knots
 J1              0.0390  235.40
@@ -619658,7 +619659,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 76 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 76 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0080 knots
 J1              0.0380  234.80
@@ -619856,7 +619857,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 72 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 72 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0120 knots
 J1              0.0370  234.70
@@ -620054,7 +620055,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 69 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 69 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0160 knots
 J1              0.0360  233.90
@@ -620252,7 +620253,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 66 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 66 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0200 knots
 J1              0.0350  232.20
@@ -620450,7 +620451,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 62 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 62 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0230 knots
 J1              0.0340  230.80
@@ -620846,7 +620847,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 59 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 59 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0270 knots
 J1              0.0330  229.80
@@ -621044,7 +621045,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 56 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 56 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0300 knots
 J1              0.0330  228.20
@@ -621242,7 +621243,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 53 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 53 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0330 knots
 J1              0.0320  227.10
@@ -621440,7 +621441,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 49 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 49 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0350 knots
 J1              0.0320  225.50
@@ -621638,7 +621639,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 46 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 46 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0370 knots
 J1              0.0320  224.60
@@ -621836,7 +621837,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 43 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 43 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0390 knots
 J1              0.0320  222.80
@@ -622034,7 +622035,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 39 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 39 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0400 knots
 J1              0.0310  222.30
@@ -622232,7 +622233,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 36 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 36 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0420 knots
 J1              0.0310  221.00
@@ -622430,7 +622431,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 33 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 33 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0440 knots
 J1              0.0300  219.60
@@ -622628,7 +622629,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 30 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 30 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0450 knots
 J1              0.0290  217.40
@@ -622826,7 +622827,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 26 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 26 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0460 knots
 J1              0.0270  216.50
@@ -623024,7 +623025,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 23 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 23 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0470 knots
 J1              0.0270  213.40
@@ -623222,7 +623223,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 20 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 20 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0480 knots
 J1              0.0250  212.30
@@ -623420,7 +623421,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 16 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 16 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0480 knots
 J1              0.0240  208.80
@@ -623618,7 +623619,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 13 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 13 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0480 knots
 J1              0.0230  204.50
@@ -623816,7 +623817,7 @@ x 0 0
 # !latitude: 48.5897
 # state: Washington
 # admin1_quelle: Ufer 0.4 km
-Harney Channel (north of Point Hudson, depth 10 ft, San Juan Channel), Washington
+Harney Channel (N of Point Hudson, depth 10 ft, San Juan Channel), Washington Current
 +00:00 :America/Los_Angeles
 -0.0380 knots
 J1              0.0170  165.60
@@ -653516,7 +653517,7 @@ x 0 0
 # !latitude: 59.8683
 # state: Alaska
 # admin1_quelle: Ufer 10.1 km
-Wooded Island (depth 156 ft, Hinchinbrook entrance, Prince William Sound), Alaska
+Wooded Island (depth 156 ft, Hinchinbrook entrance), Alaska Current
 +00:00 :America/Anchorage
 -0.0260 knots
 J1              0.0090   79.90
@@ -653714,7 +653715,7 @@ x 0 0
 # !latitude: 59.8683
 # state: Alaska
 # admin1_quelle: Ufer 10.1 km
-Wooded Island (depth 97 ft, Hinchinbrook entrance, Prince William Sound), Alaska Current
+Wooded Island (depth 97 ft, Hinchinbrook entrance), Alaska Current
 +00:00 :America/Anchorage
 -0.3090 knots
 J1              0.0110   89.40
@@ -653912,7 +653913,7 @@ x 0 0
 # !latitude: 59.8683
 # state: Alaska
 # admin1_quelle: Ufer 10.1 km
-Wooded Island (depth 25 ft, Hinchinbrook entrance, Prince William Sound), Alaska Current
+Wooded Island (depth 25 ft, Hinchinbrook entrance), Alaska Current
 +00:00 :America/Anchorage
 -0.6920 knots
 J1              0.0380  218.00
@@ -690552,7 +690553,7 @@ x 0 0
 # !latitude: 55.9255
 # state: Alaska
 # admin1_quelle: Ufer 0.4 km
-Coronation Island - Spanish Island (between, depth 129 ft, Sumner Strait), Alaska
+Coronation Island - Spanish Island (depth 129 ft, Sumner Strait), Alaska Current
 +00:00 :America/Juneau
 -0.0830 knots
 J1              0.0130   43.10
@@ -690750,7 +690751,7 @@ x 0 0
 # !latitude: 55.9255
 # state: Alaska
 # admin1_quelle: Ufer 0.4 km
-Coronation Island - Spanish Island (between, depth 83 ft, Sumner Strait), Alaska Current
+Coronation Island - Spanish Island (depth 83 ft, Sumner Strait), Alaska Current
 +00:00 :America/Juneau
 -0.0530 knots
 J1              0.0270   11.80
@@ -690948,7 +690949,7 @@ x 0 0
 # !latitude: 55.9255
 # state: Alaska
 # admin1_quelle: Ufer 0.4 km
-Coronation Island - Spanish Island (between, depth 37 ft, Sumner Strait), Alaska Current
+Coronation Island - Spanish Island (depth 37 ft, Sumner Strait), Alaska Current
 +00:00 :America/Juneau
 -0.0380 knots
 J1              0.0450  356.50
@@ -713150,7 +713151,7 @@ x 0 0
 # !latitude: 58.4050
 # state: Alaska
 # admin1_quelle: Ufer 2.6 km
-Saginaw Channel (2 mi E of Point Retreat, depth 106 ft, Stephens Passage), Alaska
+Saginaw Channel (2 mi E of Point Retreat, depth 106 ft), Alaska Current
 +00:00 :America/Juneau
 -0.0310 knots
 J1              0.0050  353.70
@@ -713348,7 +713349,7 @@ x 0 0
 # !latitude: 58.4050
 # state: Alaska
 # admin1_quelle: Ufer 2.6 km
-Saginaw Channel (2 mi E of Point Retreat, depth 67 ft, Stephens Passage), Alaska Current
+Saginaw Channel (2 mi E of Point Retreat, depth 67 ft), Alaska Current
 +00:00 :America/Juneau
 0.0340 knots
 J1              0.0050   27.00
@@ -713546,7 +713547,7 @@ x 0 0
 # !latitude: 58.4050
 # state: Alaska
 # admin1_quelle: Ufer 2.6 km
-Saginaw Channel (2 mi E of Point Retreat, depth 15 ft, Stephens Passage), Alaska Current
+Saginaw Channel (2 mi E of Point Retreat, depth 15 ft), Alaska Current
 +00:00 :America/Juneau
 0.0080 knots
 J1              0.0100  317.80
@@ -794188,7 +794189,7 @@ x 0 0
 # !latitude: 30.2392
 # state: Mississippi
 # admin1_quelle: Ufer 4.2 km
-Ship Island (1.8 nmi NNW of, DM 32, depth 10 ft, Mississippi Sound), Mississippi Current
+Ship Island (1.8 nmi NNW of, depth 10 ft, Mississippi Sound), Mississippi Current
 +00:00 :America/Chicago
 -0.0670 knots
 J1              0.0240    8.90
@@ -794386,7 +794387,7 @@ x 0 0
 # !latitude: 30.2392
 # state: Mississippi
 # admin1_quelle: Ufer 4.2 km
-Ship Island (1.8 nmi NNW of, DM 32, depth 202 ft, Mississippi Sound), Mississippi
+Ship Island (1.8 nmi NNW of, depth 202 ft, Mississippi Sound), Mississippi Current
 +00:00 :America/Chicago
 -0.0040 knots
 J1              0.0050  303.10
@@ -794584,7 +794585,7 @@ x 0 0
 # !latitude: 30.2392
 # state: Mississippi
 # admin1_quelle: Ufer 4.2 km
-Ship Island (1.8 nmi NNW of, DM 32, depth 399 ft, Mississippi Sound), Mississippi
+Ship Island (1.8 nmi NNW of, depth 399 ft, Mississippi Sound), Mississippi Current
 +00:00 :America/Chicago
 -0.0100 knots
 J1              0.0070  268.70
