@@ -6,8 +6,10 @@ Oliver 30.10.2026: Die ATT-Saetze sind vermutlich nicht zu 100 % geprueft. Wie b
 NOAA-Buchsaetzen (py/noaa_restpruefung.py) bekommt er eine Kartengruppe mit den
 auffaelligsten -- es wird nichts verschoben.
 
-Auswahl: Gezeitensaetze aus harmonics/att/, in positions_locked.csv mit provenance
-'source' (Name und Position wie beim ersten Einchecken), ohne Notiz mit 'Oliver'.
+Auswahl: Gezeitensaetze aus harmonics/att/, die nachweislich niemand angefasst hat. 'source' in
+positions_locked.csv reicht dafuer NICHT (1.11.2026: 96 der 123 gemeldeten Saetze standen laengst
+nicht mehr auf der Buchminute, 90 standen in Oliver-Commits). Es zaehlen darum: Position auf der
+Buchminute, keine Notiz mit 'Oliver', Name in keinem Commit mit 'Oliver' im Text (git log).
 Proben und Punkte wie in noaa_restpruefung.py:
   lage   an Land (OSM, mehr als 0,3 km vom Ufer) 3, Kueste > 3 km 1
   name   Suchwort nicht in GeoNames bis 25 km 2
@@ -20,6 +22,7 @@ Usage: venv/bin/python py/att_pruefung.py
 from __future__ import annotations
 
 import bisect
+import subprocess
 import cmath
 import csv
 import math
@@ -34,7 +37,20 @@ from noaa_restpruefung import geonames, buchminute, oliver_notiz, RAUSCHEN, HELP
 import osm_land                                                    # noqa: E402
 
 
+# Geprueft 1.11.2026: Zeiten stehen so in LHG Tafla II, Holmiabukta von Hand repariert
+ERLEDIGT = {'Budhareyri, Iceland', 'Faskrudsfjordhur, Iceland', 'Reydharfjordhur: Eskifjordhur, Iceland',
+            'Reykanes, Iceland', 'Holmiabukta, Svalbard'}
+
+
+def oliver_namen():
+    """Alle Namen, die in einem Commit mit 'Oliver' in harmonics/att/ neu geschrieben wurden."""
+    aus = subprocess.run(['git', 'log', '-i', '--grep=oliver', '-p', '-U0', '--format=', '--', 'harmonics/att'],
+                         cwd=ROOT, capture_output=True).stdout.decode('iso-8859-1')
+    return {z[1:].strip() for z in aus.split('\n') if z.startswith('+') and not z.startswith(('+#', '+++')) and ', ' in z}
+
+
 def main():
+    angefasst = oliver_namen()
     recs = [r for r in load_records() if not r['current'] and r['lat'] is not None]
     lock = {(z['file'], z['name']): z['provenance']
             for z in csv.DictReader(open(os.path.join(HELP, 'positions_locked.csv'), encoding='utf-8'))}
@@ -45,6 +61,8 @@ def main():
         if '/att/' not in rel or 'M2' not in r['z']:
             continue
         if lock.get((rel, r['name'])) != 'source' or oliver_notiz(r, zeilen):
+            continue
+        if r['name'] in angefasst or r['name'] in ERLEDIGT or not (buchminute(r['lat']) and buchminute(r['lon'])):
             continue
         rest.append(r)
     ids = {id(r) for r in rest}
