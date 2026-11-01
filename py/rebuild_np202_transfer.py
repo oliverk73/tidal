@@ -224,7 +224,13 @@ def lies_donor():
     return out
 
 
-def transfer(ref_con, pegel, h, t, dz=0.0, ml=None):
+# Nur Hochwasser-Differenzen im Buch, kein ML: "-" als 0 gelesen haette Reykjaviks Niedrigwasser
+# uebernommen (Nes Farm S2/M2 0,89 statt ~0,37). M2, S2 und ML kommen hier aus den Buch-HW und den
+# Verhaeltnissen S2/M2 und Z0/M2 der sechs naechsten Nachbarn (1.11.2026).
+NW_FEHLT = {'856': (0.587, 0.220, 1.07), '840': (0.404, 0.135, 0.65)}
+
+
+def transfer(ref_con, pegel, h, t, dz=0.0, ml=None, soll=None):
     """Wie py/rebuild_np203_transfer.py, siehe dort die Begruendung."""
     MHWS, MHWN, MLWN, MLWS = pegel
     SR, NR = MHWS - MLWS, MHWN - MLWN
@@ -250,6 +256,9 @@ def transfer(ref_con, pegel, h, t, dz=0.0, ml=None):
             SRs = max(0.10, 0.10 * SR)
         fS = SRs / SR
         fN = NRs / NR if NR > .01 else fS
+    if soll:
+        M2r, S2r = ref_con['M2'][0], ref_con['S2'][0]
+        fS, fN = (soll[0] + soll[1]) / (M2r + S2r), (soll[0] - soll[1]) / (M2r - S2r)
     fS = max(.02, min(3., fS))
     fN = max(.02, min(3., fN))
     fD = .5 * (fS + fN)
@@ -359,8 +368,12 @@ def main():
             uebersprungen.append((att, b['name'], 'keine Zone'))
             continue
         dz = ZONE_REF[g['ref']] - zs
+        soll = None
+        if att in NW_FEHLT:
+            soll = NW_FEHLT[att][:2]
+            row['ml'] = NW_FEHLT[att][2]
         tr = transfer(donor[g['ref']]['con'], g['pegel'], row['h'], row['t'],
-                      dz=dz, ml=row['ml'])
+                      dz=dz, ml=row['ml'], soll=soll)
         if tr is None:
             uebersprungen.append((att, b['name'], 'Bezug ohne M2'))
             continue
@@ -378,6 +391,9 @@ def main():
     for a, n, warum in uebersprungen:
         print(f'  {a:8s} {n[:40]:40s} {warum}')
 
+    if '--nur' in sys.argv:
+        nur = sys.argv[sys.argv.index('--nur') + 1].split(',')
+        neu = {a: t for a, t in neu.items() if a in nur}
     if not schreiben:
         print('\n(Probelauf -- nichts geschrieben. Mit --write ausfuehren.)')
         return
