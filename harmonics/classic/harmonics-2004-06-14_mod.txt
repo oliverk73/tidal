@@ -10963,6 +10963,7 @@ x 0 0
 # datum: LLWLT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 118.10 war verschrieben: Altersprobe 148.3, FES 148.9 (py/phasenprobe.py).
 # !longitude: -65.636452
 # !latitude: 66.181086
 # province: Nunavut
@@ -10980,7 +10981,7 @@ M3              0.0480  243.10
 M4              0.0150  265.50
 M6              0.0210  163.60
 M8              0.0060  227.80
-N2              0.5370  118.10
+N2              0.5370  148.10
 2N2             0.1790  188.00
 O1              0.1940   78.60
 x 0 0
@@ -33792,6 +33793,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 P1-Phase 238.40 war verschrieben: Altersprobe 284.7, FES 288.5 (py/phasenprobe.py).
 # !longitude: 116.8326
 # !latitude: -20.3529
 # state: Western Australia
@@ -33814,7 +33816,7 @@ N2              0.2350  272.00
 x 0 0
 O1              0.1520  274.40
 x 0 0
-P1              0.0750  238.40
+P1              0.0750  288.40
 Q1              0.0400  258.50
 x 0 0
 x 0 0
@@ -48562,6 +48564,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 260.00 war verschrieben: Altersprobe 293.8, FES 285.3 (py/phasenprobe.py).
 # !longitude: 148.6333
 # !latitude: -20.1833
 # state: Queensland
@@ -48580,7 +48583,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.2710  260.00
+N2              0.2710  290.00
 x 0 0
 O1              0.1830  150.00
 x 0 0
@@ -61262,6 +61265,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 O1-Phase 93.00 war verschrieben: Altersprobe 55.6, FES 63.9 (py/phasenprobe.py).
 # !longitude: 149.9167
 # !latitude: -37.5667
 # state: Victoria
@@ -61282,7 +61286,7 @@ x 0 0
 x 0 0
 N2              0.0776  226.96
 2N2             0.0104  218.92
-O1              0.0800   93.00
+O1              0.0800  63.00
 OO1             0.0034  101.00
 P1              0.0497   96.70
 Q1              0.0155   91.02
@@ -67436,6 +67440,7 @@ x 0 0
 # datum: LAT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 241.10 war verschrieben: Altersprobe 292.2, FES 287.9 (py/phasenprobe.py).
 # !longitude: 146.2333
 # !latitude: -39.0833
 # state: Victoria
@@ -67453,7 +67458,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-N2              0.1746  241.10
+N2              0.1746  291.10
 2N2             0.0234  153.19
 O1              0.1000   23.00
 OO1             0.0043  151.00
@@ -83820,6 +83825,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 140.69 war verschrieben: Altersprobe 188.2, FES 184.4 (py/phasenprobe.py).
 # !longitude: 135.1420
 # !latitude: 34.3194
 # region: Osaka
@@ -83837,7 +83843,7 @@ x 0 0
 M4              0.0240  348.48
 x 0 0
 x 0 0
-N2              0.0640  140.69
+N2              0.0640  190.69
 x 0 0
 O1              0.1830  174.35
 x 0 0
@@ -195336,6 +195342,7 @@ x 0 0
 # datum: LLWLT
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 59.30 war verschrieben: Altersprobe 14.3, FES 12.9 (py/phasenprobe.py).
 # !longitude: -131.3833
 # !latitude: 52.4333
 # province: British Columbia
@@ -195353,7 +195360,7 @@ x 0 0
 M4              0.0130   23.60
 x 0 0
 M8              0.0030   97.30
-N2              0.3260   59.30
+N2              0.3260  9.30
 2N2             0.0430   79.50
 O1              0.2680  132.80
 x 0 0

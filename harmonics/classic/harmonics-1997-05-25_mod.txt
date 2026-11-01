@@ -11844,6 +11844,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # !units: meters
+# note: 20261101 N2-Phase 17.00 war verschrieben: Altersprobe 55.2, FES 61.9 (py/phasenprobe.py).
 # !longitude: 40.5808
 # !latitude: -12.3457
 # province: Cabo Delgado
@@ -11861,7 +11862,7 @@ x 0 0
 M4              0.0300  341.00
 x 0 0
 x 0 0
-N2              0.2200   17.00
+N2              0.2200  57.00
 2N2             0.0290  317.00
 O1              0.0800  351.00
 OO1             0.0030  161.00
@@ -24622,6 +24623,7 @@ x 0 0
 # confidence: 10
 # ihm_code: 40
 # !units: meters
+# note: 20261101 O1-Phase 332.00 war verschrieben: Altersprobe 300.7, FES 300.2 (py/phasenprobe.py).
 # !longitude: -6.3281
 # !latitude: 36.6133
 # region: Cádiz
@@ -24641,7 +24643,7 @@ x 0 0
 x 0 0
 N2              0.2130   37.00
 2N2             0.0280   22.00
-O1              0.0690  332.00
+O1              0.0690  302.00
 OO1             0.0030  110.00
 P1              0.0200   35.80
 Q1              0.0140  297.00
