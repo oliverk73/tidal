@@ -52243,9 +52243,10 @@ x 0 0
 # source: Derived from IOC SLSMF data (code=buve2) with UTide harmonic analysis
 # station_id_context: IOC-buve2
 # date_imported: 20260520
-# datum: Mean Sea Level
+# datum: Chart Datum (DIMAR/CCCP)
 # confidence: 7
 # note: 20261101 Neu nur aus 2021-2024, Jahre ohne volle Tide weggelassen (py/ioc_tote_jahre.py).
+# note: 20261101 Z0 auf Kartennull der DIMAR-Tafel 2026 gesetzt (Tafelvergleich).
 # !units: meters
 # !longitude: -77.0814
 # !latitude: 3.8910
@@ -52253,7 +52254,7 @@ x 0 0
 # admin1_quelle: Ufer 2.4 km
 Buenaventura, Colombia
 +00:00 :UTC
-2.7549 meters
+2.6000 meters
 J1              0.0067  99.91
 K1              0.1156  66.04
 K2              0.1024  319.00

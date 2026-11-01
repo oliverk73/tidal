@@ -112796,7 +112796,7 @@ x 0 0
 # source: TICON-4 (GESLA-4 harmonic analysis)
 # station_id_context: tumaco-303a-col-uhslc_rq
 # date_imported: 20260322
-# datum: MSL
+# datum: Chart Datum (DIMAR/CCCP)
 # confidence: 7
 # ssc_id: SSC-tumc
 # ioc_code: tumc, tumc2
@@ -112806,6 +112806,7 @@ x 0 0
 # ptwc_code: tumc
 # sonel_gps_id: 2047
 # sonel_tg_id: 2394
+# note: 20261101 Z0 auf Kartennull der DIMAR-Tafel 2026 gesetzt (Tafelvergleich).
 # !units: meters
 # !longitude: -78.7287
 # !latitude: 1.8199
@@ -112813,7 +112814,7 @@ x 0 0
 # admin1_quelle: Polygon
 Tumaco (Isla del Morro), Colombia
 +00:00 :America/Bogota
-0.0000 meters
+2.1130 meters
 J1              0.0078  84.95
 K1              0.1072  56.94
 K2              0.0841  301.51
