@@ -41,6 +41,9 @@ PEGEL = [
     # 27.10.: ersetzt den ATT-Satz (NP203 2002) am selben Ort, der 2016-2026 gleichmaessig ~13 min zu frueh liegt;
     # Position = Olivers gepruefte ATT-Position (IOC 14.8167/120.2833, 0.4 km)
     ('subi', 'Olongapo (Subic Bay), Zambales, Philippines', 'Zambales', 14.8169, 120.2797),
+    # 02.11.2026: Madagaskar, IOC seit 01/2026 (Radar); Tolagnaro bisher nur ATT-Uebertragung, Toliara SHOM-Vorhersagefit
+    # verworfen 02.11.: ('mfdf', 'Tolagnaro (Fort-Dauphin), Madagascar', 'Anosy', -25.0279, 46.9967),  Radar, Wellenrauschen rms 0,27 m, Jan/Feb Uhr +3 h; bestaetigt nur FES-Hub
+    # nicht geschrieben 02.11.: ('mtul', 'Toliara, Madagascar', 'Atsimo-Andrefana', -23.3764, 43.6647),  bestaetigt den SHOM-Satz (M2 0,80 gegen 0,82 m), Eigenversatz +7 min
 ]
 
 
