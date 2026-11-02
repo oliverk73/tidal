@@ -159,6 +159,13 @@ def main(argv):
         blk += [e['name'], '+00:00 :' + tz, '%.4f meters' % fit['z0']]
         for c in namen:
             blk.append('%-15s %.4f  %.2f' % (c, *k[c]) if c in k and k[c][0] >= 0.00005 else 'x 0 0')
+        try:
+            e['name'].encode('iso-8859-1')
+        except UnicodeEncodeError:
+            # sicher_schreiben wuerde sonst die ganze Datei transliterieren (Korcula 02.11.2026)
+            print('   Name nicht Latin-1 -- nicht geschrieben')
+            r['ok'] = False
+            continue
         if e['name'] in L:
             print('   Name existiert schon -- nicht geschrieben')
             r['ok'] = False
