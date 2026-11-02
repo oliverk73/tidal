@@ -27291,9 +27291,10 @@ x 0 0
 # !latitude: -33.900000
 # province: Western Cape
 # admin1_quelle: Ufer 1.0 km
+# note: 20261102 Z0 1.0165 -> 0.98 m = ML ueber Kartennull (LAT) laut SAN HO-2 South African Tide Tables 2025, S. (vi).
 Cape Town, South Africa
 +00:00 :Africa/Johannesburg
-1.0165 meters
+0.9800 meters
 J1              0.0046  134.06
 K1              0.0577  109.58
 K2              0.0613  51.71
@@ -60656,9 +60657,10 @@ x 0 0
 # admin1_quelle: Ufer 0.7 km
 # note: 20260906 Position vom gleichnamigen Satz uebernommen (vorher -34.0500/23.0450,
 # note: -- auf Bogenminuten gerundet oder groeber geschrieben als der andere).
+# note: 20261102 Z0 1.1392 -> 1.06 m = ML ueber Kartennull (LAT) laut SAN HO-2 South African Tide Tables 2025, S. (vi).
 Knysna, South Africa
 +00:00 :Africa/Johannesburg
-1.1392 meters
+1.0600 meters
 J1              0.0054  169.90
 K1              0.0640  144.35
 K2              0.0759  73.90
@@ -67504,9 +67506,10 @@ x 0 0
 # note: -- selber Pegel, siehe harmonics/help/namen_vereinheitlicht.csv
 # note: 20260906 country "South Africa" -> "Namibia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Karas".
+# note: 20261102 Z0 0.7400 -> 0.94 m = ML ueber Kartennull (LAT) laut SAN HO-2 South African Tide Tables 2025, S. (vi).
 Lüderitz, Namibia
 +00:00 :Africa/Johannesburg
-0.7400 meters
+0.9400 meters
 J1              0.0044  100.36
 K1              0.0481  76.83
 K2              0.0544  46.80
@@ -85973,9 +85976,10 @@ x 0 0
 # !latitude: -29.2497
 # province: Northern Cape
 # admin1_quelle: Ufer 1.3 km
+# note: 20261102 Z0 1.1783 -> 1.09 m = ML ueber Kartennull (LAT) laut SAN HO-2 South African Tide Tables 2025, S. (vi).
 Port Nolloth, South Africa
 +00:00 :Africa/Johannesburg
-1.1783 meters
+1.0900 meters
 J1              0.0049  113.86
 K1              0.0540  91.72
 K2              0.0654  46.61
@@ -116245,9 +116249,10 @@ x 0 0
 # !latitude: -22.9500
 # province: Erongo
 # admin1_quelle: Polygon
+# note: 20261102 Z0 0.9100 -> 0.98 m = ML ueber Kartennull (LAT) laut SAN HO-2 South African Tide Tables 2025, S. (vi).
 Walvis Bay, Namibia
 +00:00 :Africa/Windhoek
-0.9100 meters
+0.9800 meters
 J1              0.0043  85.65
 K1              0.0477  58.94
 K2              0.0533  54.82
