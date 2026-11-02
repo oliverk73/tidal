@@ -15393,11 +15393,12 @@ x 0 0
 # note: 20261018 Name vereinheitlicht (Land French Southern Territories, Inselgruppe als Region, franz. Schreibung) (Oliver).
 # note: 20261018 Position: Ort Port-Jeanne d'Arc (GeoNames) (Oliver).
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261102 Tagestiden (K1, O1, P1, Q1) aus FES2022b statt vom Bezugshafen; Nachbarn bestaetigen FES, Halbtagestide bleibt Buch.
 Port-Jeanne-d'Arc, Kerguelen, French Southern Territories
 +05:30 :Indian/Kerguelen
 1.1000 meters
 x 0 0
-K1              0.0714  27.62
+K1              0.0701  230.50
 K2              0.0631  40.23
 x 0 0
 x 0 0
@@ -15408,9 +15409,9 @@ x 0 0
 x 0 0
 N2              0.1194  334.14
 x 0 0
-O1              0.0238  6.51
+O1              0.0176  194.42
 x 0 0
-P1              0.0236  27.17
+P1              0.0212  231.54
 x 0 0
 x 0 0
 x 0 0
@@ -27742,14 +27743,15 @@ x 0 0
 # !latitude: -20.3789
 # region: Grand Port
 # admin1_quelle: Polygon
+# note: 20261102 Tagestiden (K1, O1, P1, Q1) aus FES2022b statt vom Bezugshafen; Nachbarn bestaetigen FES, Halbtagestide bleibt Buch.
 Vieux Grand Port, Mauritius
 +00:00 :Indian/Mauritius
 0.5000 meters
-J1              0.0067  315.80
-K1              0.1086  311.51
+J1              0.0036  96.62
+K1              0.0581  92.33
 K2               0.0230  314.06
 L2               0.0039  300.13
-M1              0.0044  185.49
+M1              0.0023  283.59
 M2               0.1300  280.65
 M3              0.0009  199.01
 M4              0.0005  110.16
@@ -27757,13 +27759,13 @@ M6              0.0003  21.66
 M8              0.0004  255.25
 N2               0.0267  258.65
 x 0 0
-O1              0.0624  320.20
-OO1             0.0042  357.50
-P1              0.0329  311.23
-Q1              0.0137  315.29
+O1              0.0322  58.30
+OO1             0.0022  138.32
+P1              0.0181  90.13
+Q1              0.0059  21.26
 x 0 0
 R2               0.0104  305.51
-S1              0.0063  95.77
+S1              0.0034  236.59
 S2               0.0851  316.83
 S4              0.0002  237.33
 x 0 0
@@ -27771,7 +27773,7 @@ T2               0.0319  322.39
 LDA2            0.0015  301.75
 MU2              0.0015  234.47
 NU2              0.0056  264.15
-RHO1            0.0022  311.61
+RHO1            0.0011  49.71
 x 0 0
 x 0 0
 MN4             0.0002  57.30
@@ -27835,7 +27837,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0006  37.00
-SIG1            0.0022  165.70
+SIG1            0.0011  263.80
 x 0 0
 x 0 0
 x 0 0
@@ -45539,14 +45541,15 @@ x 0 0
 # !latitude: 13.3547
 # region: Abyan
 # admin1_quelle: Polygon
+# note: 20261102 Tagestiden (K1, O1, P1, Q1) aus FES2022b statt vom Bezugshafen; Nachbarn bestaetigen FES, Halbtagestide bleibt Buch.
 Shuqrah (Shoqra), Yemen
 +00:00 :Asia/Aden
 1.1000 meters
-J1              0.0174  357.35
-K1              0.2788  348.26
+J1              0.0247  357.96
+K1              0.3964  348.87
 K2              0.0375  148.35
 L2              0.0079  131.53
-M1              0.0078  288.59
+M1              0.0111  288.53
 M2              0.3312  133.59
 M3              0.0025  73.78
 M4              0.0015  132.60
@@ -45554,13 +45557,13 @@ M6              0.0006  57.24
 M8              0.0000  10.07
 N2              0.0918  128.51
 x 0 0
-O1              0.1409  351.15
-OO1             0.0133  352.77
-P1              0.0848  345.82
-Q1              0.0295  350.41
+O1              0.2006  351.09
+OO1             0.0189  353.38
+P1              0.1190  347.72
+Q1              0.0427  351.55
 x 0 0
 R2              0.0023  186.38
-S1              0.0185  116.02
+S1              0.0263  116.63
 S2              0.1347  154.00
 S4              0.0007  113.67
 x 0 0
@@ -45568,7 +45571,7 @@ T2              0.0094  160.51
 LDA2            0.0028  99.59
 MU2             0.0155  97.68
 NU2             0.0174  134.72
-RHO1            0.0056  358.45
+RHO1            0.0080  358.39
 x 0 0
 x 0 0
 MN4             0.0012  59.30
@@ -45632,7 +45635,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0003  161.42
-SIG1            0.0054  174.01
+SIG1            0.0077  173.95
 x 0 0
 x 0 0
 x 0 0
@@ -52968,11 +52971,12 @@ x 0 0
 # !latitude: 25.7192
 # region: Ras Al Khaymah
 # admin1_quelle: Ufer 1.9 km
+# note: 20261102 Tagestiden (K1, O1, P1, Q1) aus FES2022b statt vom Bezugshafen; Nachbarn bestaetigen FES, Halbtagestide bleibt Buch.
 Al Jazeera Port, United Arab Emirates
 +00:00 :Asia/Dubai
 1.1000 meters
-J1              0.0174  58.94
-K1              0.3955  83.48
+J1              0.0072  35.38
+K1              0.1635  59.92
 K2               0.0470  247.93
 L2               0.0219  243.71
 x 0 0
@@ -52983,10 +52987,10 @@ M6              0.0006  181.48
 x 0 0
 N2               0.1042  201.80
 x 0 0
-O1              0.2749  35.84
-OO1             0.0046  81.83
-P1              0.1157  66.72
-Q1              0.0445  6.17
+O1              0.1542  29.83
+OO1             0.0019  58.27
+P1              0.0553  50.60
+Q1              0.0316  22.15
 x 0 0
 R2               0.0026  300.31
 x 0 0
@@ -52997,7 +53001,7 @@ T2               0.0428  283.28
 LDA2            0.0022  306.56
 MU2              0.0099  189.97
 NU2              0.0232  198.38
-RHO1            0.0106  14.06
+RHO1            0.0059  8.05
 MK3             0.0229  174.95
 x 0 0
 MN4             0.0104  44.01
@@ -53027,9 +53031,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-ALP1            0.0002  135.26
-BET1            0.0002  330.86
-CHI1            0.0162  85.37
+ALP1            0.0001  129.25
+BET1            0.0001  324.85
+CHI1            0.0067  61.81
 H1              0.0112  261.69
 H2              0.0057  258.61
 x 0 0
@@ -53044,31 +53048,31 @@ x 0 0
 EPS2            0.0014  146.76
 MO3             0.0137  174.54
 x 0 0
-TAU1            0.0291  354.06
+TAU1            0.0163  348.05
 x 0 0
 MSK6            0.0012  123.23
 MSM             0.0002  5.05
 x 0 0
 x 0 0
 x 0 0
-NO1             0.0009  358.39
+NO1             0.0005  352.38
 OP2             0.0025  352.29
 x 0 0
-PHI1            0.0038  148.57
+PHI1            0.0016  125.01
 x 0 0
-PI1             0.0048  213.85
+PI1             0.0020  190.29
 x 0 0
-PSI1            0.0158  336.27
+PSI1            0.0065  312.71
 x 0 0
 x 0 0
-SIG1            0.0046  356.76
+SIG1            0.0026  350.75
 SK3             0.0028  103.19
 x 0 0
 SN4             0.0028  137.40
 x 0 0
-SO1             0.0022  85.87
+SO1             0.0009  62.31
 SO3             0.0169  216.27
-THE1            0.0142  167.82
+THE1            0.0059  144.26
 x 0 0
 x 0 0
 x 0 0
@@ -70085,11 +70089,12 @@ x 0 0
 # province: Hormozgan
 # admin1_quelle: Ufer 2.0 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261102 Tagestiden (K1, O1, P1, Q1) aus FES2022b statt vom Bezugshafen; Nachbarn bestaetigen FES, Halbtagestide bleibt Buch.
 Bandar e Laft (Qeshm), Iran
 +03:00 :Asia/Tehran
 2.5000 meters
 x 0 0
-K1              0.7168  109.49
+K1              0.2828  85.34
 K2               0.0984  357.99
 x 0 0
 x 0 0
@@ -70100,9 +70105,9 @@ x 0 0
 x 0 0
 N2               0.1950  117.50
 x 0 0
-O1              0.4301  75.04
+O1              0.1489  45.14
 x 0 0
-P1              0.2365  109.24
+P1              0.0383  60.66
 x 0 0
 x 0 0
 x 0 0
@@ -72619,11 +72624,12 @@ x 0 0
 # !latitude: 3.2228
 # region: Vaavu
 # admin1_quelle: Ufer 17.7 km
+# note: 20261102 Tagestiden (K1, O1, P1, Q1) aus FES2022b statt vom Bezugshafen; Nachbarn bestaetigen FES, Halbtagestide bleibt Buch.
 Vattaru Atoll, Maldives
 +00:00 :Indian/Maldives
 0.7000 meters
-J1              0.0140  12.89
-K1              0.1711  3.26
+J1              0.0094  354.81
+K1              0.1152  345.18
 K2              0.0193  269.19
 L2              0.0064  240.64
 x 0 0
@@ -72634,10 +72640,10 @@ M6              0.0034  128.67
 M8              0.0002  325.37
 N2              0.0452  199.08
 x 0 0
-O1              0.0894  8.20
-OO1             0.0079  41.84
-P1              0.0571  9.78
-Q1              0.0204  13.57
+O1              0.0632  0.83
+OO1             0.0053  23.76
+P1              0.0351  343.85
+Q1              0.0159  6.77
 x 0 0
 R2              0.0046  283.15
 x 0 0
@@ -72648,7 +72654,7 @@ T2              0.0088  192.24
 LDA2            0.0038  294.51
 MU2             0.0040  166.52
 NU2             0.0052  246.72
-RHO1            0.0029  57.45
+RHO1            0.0021  50.08
 MK3             0.0049  285.60
 x 0 0
 MN4             0.0039  152.59
@@ -72678,15 +72684,15 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-ALP1            0.0019  220.72
-BET1            0.0002  322.91
-CHI1            0.0006  67.88
+ALP1            0.0013  213.35
+BET1            0.0001  315.54
+CHI1            0.0004  49.80
 H1              0.0112  226.80
 H2              0.0185  309.22
 x 0 0
 ETA2            0.0028  92.86
 x 0 0
-UPS1            0.0035  21.57
+UPS1            0.0024  3.49
 M10             0.0005  116.83
 M12             0.0006  290.31
 MK4             0.0018  159.06
@@ -72695,31 +72701,31 @@ x 0 0
 EPS2            0.0006  175.52
 MO3             0.0031  221.46
 x 0 0
-TAU1            0.0022  304.62
+TAU1            0.0016  297.25
 x 0 0
 MSK6            0.0003  80.09
 MSM             0.0120  268.00
 MSN2            0.0012  157.87
 MSN6            0.0011  25.75
 x 0 0
-NO1             0.0061  324.61
+NO1             0.0043  317.24
 OP2             0.0068  197.62
 OQ2             0.0011  203.15
-PHI1            0.0127  65.65
+PHI1            0.0086  47.57
 x 0 0
-PI1             0.0057  131.70
+PI1             0.0038  113.62
 x 0 0
-PSI1            0.0174  102.90
+PSI1            0.0117  84.82
 x 0 0
 x 0 0
-SIG1            0.0035  331.51
+SIG1            0.0025  324.14
 SK3             0.0017  238.14
 x 0 0
 SN4             0.0015  56.50
 x 0 0
-SO1             0.0031  336.52
+SO1             0.0021  318.44
 SO3             0.0034  198.94
-THE1            0.0044  119.40
+THE1            0.0030  101.32
 x 0 0
 x 0 0
 x 0 0
@@ -74960,14 +74966,15 @@ x 0 0
 # !latitude: 7.7553
 # region: Madakalapuva
 # admin1_quelle: Polygon
+# note: 20261102 Tagestiden (K1, O1, P1, Q1) aus FES2022b statt vom Bezugshafen; Nachbarn bestaetigen FES, Halbtagestide bleibt Buch.
 Batticaloa, Sri Lanka
 +00:00 :Asia/Colombo
 0.5000 meters
-J1              0.0032  359.51
-K1              0.0596  347.68
+J1              0.0033  260.13
+K1              0.0611  248.30
 K2              0.0207  0.32
 L2              0.0053  323.49
-M1              0.0022  231.24
+M1              0.0013  78.59
 M2              0.1280  319.05
 M3              0.0023  33.50
 M4              0.0020  340.83
@@ -74975,13 +74982,13 @@ M6              0.0006  114.33
 M8              0.0001  217.11
 N2              0.0155  306.97
 x 0 0
-O1              0.0257  15.00
-OO1             0.0020  31.35
-P1              0.0178  350.03
-Q1              0.0079  41.15
+O1              0.0149  222.35
+OO1             0.0021  291.97
+P1              0.0200  246.16
+Q1              0.0029  68.89
 x 0 0
 R2              0.0007  14.07
-S1              0.0018  54.85
+S1              0.0018  315.47
 S2              0.0730  3.89
 S4              0.0006  54.34
 x 0 0
@@ -74989,7 +74996,7 @@ T2              0.0047  7.02
 LDA2            0.0021  315.19
 MU2             0.0045  5.35
 NU2             0.0036  301.53
-RHO1            0.0017  43.03
+RHO1            0.0010  250.38
 x 0 0
 x 0 0
 MN4             0.0008  256.22
@@ -75053,7 +75060,7 @@ x 0 0
 x 0 0
 x 0 0
 S3              0.0005  280.33
-SIG1            0.0017  169.18
+SIG1            0.0010  16.53
 x 0 0
 x 0 0
 x 0 0
@@ -79453,11 +79460,12 @@ x 0 0
 # state: Gujarat
 # admin1_quelle: Name
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261102 Tagestiden (K1, O1, P1, Q1) aus FES2022b statt vom Bezugshafen; Nachbarn bestaetigen FES, Halbtagestide bleibt Buch.
 Diu Head, Gujarat, India
 +05:30 :Asia/Kolkata
 1.5000 meters
 x 0 0
-K1              0.1638  67.00
+K1              0.3920  64.70
 K2              0.0671  41.00
 x 0 0
 x 0 0
@@ -79468,9 +79476,9 @@ x 0 0
 x 0 0
 N2              0.0879  350.31
 x 0 0
-O1              0.0800  65.00
+O1              0.1919  59.87
 x 0 0
-P1              0.0541  66.55
+P1              0.1158  62.74
 x 0 0
 x 0 0
 x 0 0
