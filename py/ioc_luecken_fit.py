@@ -46,6 +46,32 @@ PEGEL = [
     # nicht geschrieben 02.11.: ('mtul', 'Toliara, Madagascar', 'Atsimo-Andrefana', -23.3764, 43.6647),  bestaetigt den SHOM-Satz (M2 0,80 gegen 0,82 m), Eigenversatz +7 min
     # 02.11.2026: Komoren; IOC-Kennung war per Falschzuordnung an Comox (BC) vergeben -> Pegel galt als genutzt
     ('como', 'Moroni (Ngazidja / Grande Comore), Comoros', 'Grande Comore', -11.7035, 43.2481),
+    # 02.11.2026: IOC-Lueckensuche nach Kennungsbereinigung (Springhub >= 1 m, kein guter Satz < 5 km)
+    ('orma', 'Ormara, Balochistan, Pakistan', 'Balochistan', 25.2037, 64.6764),
+    ('diba', 'Dibba Al-Baya, Musandam, Oman', 'Musandam', 25.649, 56.269),
+    ('ashk', 'Al Ashkharah, Ash Sharqiyah South, Oman', 'Ash Sharqiyah South', 21.85, 59.57),
+    ('losu', 'Marina Los Sueños (Herradura), Puntarenas, Costa Rica', 'Puntarenas', 9.6502, -84.6665),
+    ('papa', 'Marina Papagayo, Guanacaste, Costa Rica', 'Guanacaste', 10.6420, -85.656),
+    ('psjs', 'San Juan del Sur, Rivas, Nicaragua', 'Rivas', 11.251, -85.875),
+    ('psdn', 'Puerto Sandino, León, Nicaragua', 'León', 12.2011, -86.7644),
+    ('asro', 'Aserradores, Chinandega, Nicaragua', 'Chinandega', 12.626, -87.342),
+    ('pots', 'Potosí (Golfo de Fonseca), Chinandega, Nicaragua', 'Chinandega', 13.0104, -87.504),
+    ('hain', 'Haing Gyi Kyun (Haigyi Island), Ayeyarwady, Myanmar', 'Ayeyarwady', 16.0004, 94.3176),
+    ('iclr', 'Isla Clarión (Revillagigedo), Colima, Mexico', 'Colima', 18.5338, -114.7227),
+    ('ms006', 'Lahad Datu, Sabah, Malaysia', 'Sabah', 5.0756, 119.0775),
+    ('stan', 'Stanley (Port Stanley), Falkland Islands', '', -51.75, -57.9333),
+    ('sanp', 'Isla San Pedro (Golfo de Penas), Aysén, Chile', 'Aysén', -47.7038, -74.8661),
+    ('inha', 'Ponta da Barra (Inhambane), Mozambique', 'Inhambane', -23.9167, 35.5),
+    ('TBSSI', 'Talengen (Sangihe), Sulawesi Utara, Indonesia', 'Sulawesi Utara', 3.5904, 125.5666),
+    ('TASJI', 'Pantai Baron (Gunungkidul), Yogyakarta, Indonesia', 'Yogyakarta', -8.1310, 110.5485),
+    ('GESJI', 'Pantai Gesing (Gunungkidul), Yogyakarta, Indonesia', 'Yogyakarta', -8.1077, 110.4684),
+    ('MRTMI', 'Bere-Bere (Pulau Morotai), Maluku Utara, Indonesia', 'Maluku Utara', 2.3889, 128.6669),
+    ('LAMSI', 'Lamteng (Pulau Nasi), Aceh, Indonesia', 'Aceh', 5.6404, 95.1592),
+    ('CIDJI', 'Pantai Jayanti (Cianjur), Jawa Barat, Indonesia', 'Jawa Barat', -7.4992, 107.3869),
+    ('KMMSI', 'Kema, Sulawesi Utara, Indonesia', 'Sulawesi Utara', 1.3580, 125.0768),
+    ('kame', 'Kamesang (Ngatpang), Palau', 'Ngatpang', 7.4960, 134.4853),
+    ('pele', 'Peleliu, Palau', 'Peleliu', 7.0490, 134.2665),
+    ('imek', 'Imekang (Ngiwal), Palau', 'Ngiwal', 7.5372, 134.6250),
 ]
 
 
