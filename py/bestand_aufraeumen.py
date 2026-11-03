@@ -39,6 +39,12 @@ verschieden -- "Bullenbaai" gegen "Bullen Bay", "Walem" gegen "Rumst" --, steht
 der Fall als <Regel>:name im Probelauf und bleibt, bis die Namensfrage
 geklaert ist; sonst ginge der bessere Name mit dem schlechteren Satz verloren.
 
+Lage (Oliver 3.11.2026): Unterscheiden sich die Namen in Lagewoertern --
+Ober-/Unterpegel, binnen/buiten, inside/outside, Schleuse, Sperrwerk, Dock,
+Lagune ... (LAGE, mehrsprachig) --, stehen die Saetze vermutlich vor und
+hinter einem Bauwerk oder einer Enge. Solche Paare werden nie automatisch
+geloescht (<Regel>:lage), auch wenn die Kurven fast gleich sind.
+
 Nie automatisch geloescht wird:
   - ein Satz in harmonics/help/behalten.csv (dort landet jeder zurueckgeholte)
   - ein Satz mit Vermerk von Oliver (Oliver, HANDENTSCHEIDUNG, Handkorrektur)
@@ -90,6 +96,85 @@ DATEIFOLGE = ['harmonics_utide_observations', 'harmonics-dwf-20251228-free', 'ha
               'harmonics_ticon4', 'harmonics_utide_tidetables', 'harmonics_att_np2',
               'harmonics-pierre-lavergne', 'harmonics-dwf-2010', 'harmonics-dwf-2007',
               'harmonics-2004', 'harmonics-1997']
+
+
+# Lagewoerter -> Gruppe. Gleiche Gruppe in beiden Namen zaehlt als gleich.
+LAGE = [
+    ('oben', r'\b(?:ober(?:wasser|pegel)?|OP|OW|upper|upstream|amont|opwaarts|bovenstrooms|aguas arriba|montante)\b'),
+    ('unten', r'\b(?:unter(?:wasser|pegel)?|UP|UW|lower|downstream|aval|afwaarts|benedenstrooms|aguas abajo|jusante)\b'),
+    ('innen', r'binnen|\binnen\w*|\b(?:inner|inside|interior|int[eé]rieur|interno|indre|inre|lagoon|lagune|laguna|lagoa|lagon|backwater)\b'),
+    ('aussen', r'au(?:ss|ß)en|buiten|\b(?:outer|outside|exterior|ext[eé]rieur|esterno|ytre|yttre|seaward|ocean|offshore|avant[- ]port|vorhafen)\b'),
+    ('bauwerk', r'schleuse|sluis|sperrwerk|kering|\b(?:sluice|locks?|[eé]cluse|esclusa|eclusa|chiusa|conca|sluse|sluss|shlyuz|'
+                r'barrage|barragem|weir|wehr|stuw|siel|dam|presa)\b'),
+    ('becken', r'dock\b|\b(?:basin|bassin|hafenbecken|d[aá]rsena|darse|kom)\b'),
+]
+LAGE_RE = [(g, re.compile(m, re.I)) for g, m in LAGE]
+
+
+def lage(name):
+    """Menge der Lagegruppen im Stationsnamen (ohne Land/Region nach dem ersten Komma)."""
+    s = name.split(',')[0]
+    return {g for g, m in LAGE_RE if m.search(s)}
+
+
+FUELL = set('river bay harbour harbor port puerto pier jetty island islands isla ile point bay roads entrance '
+             'lighthouse st saint the of de la le les du des el los las da do dos at and channel creek sound '
+             'north south east west upper lower inside outside ny no rocks rock cove wan bight'.split())
+
+
+def woerter(name):
+    import unicodedata
+    s = unicodedata.normalize('NFKD', name.split(',')[0]).encode('ascii', 'ignore').decode().lower()
+    return {w for w in re.findall(r'[a-z]{3,}', s) if w not in FUELL}
+
+
+# Meine Einzelurteile zu Namensfragen (3.11.2026), Schluessel = archivierter Name
+HAND_VORSCHLAG = {
+    'Bullenbaai, Curaçao': 'archivieren; bleibender Satz heisst dann "Bullenbaai, Curaçao" (Landessprache)',
+    "Cox's Bazar, Bangladesh": 'archivieren; bleibender Satz heisst dann "Cox\'s Bazar" (amtliche Schreibung)',
+    'Colón, Panama': 'archivieren; bleibender Satz heisst dann "Cristóbal (Colón), Panama" (Hafen Cristóbal liegt in Colón)',
+    'Puntarenas, Costa Rica': 'archivieren; bleibender Satz heisst dann "Puntarenas, Costa Rica" (amtliche Schreibung)',
+    'Paradip, Odisha, India': 'archivieren; bleibender Satz heisst dann "Paradip" (amtliche Schreibung)',
+    'Sainte-Anne-des-Monts, Québec, Canada': 'archivieren; bleibender Satz heisst dann "Sainte-Anne-des-Monts" (amtliche Schreibung)',
+    'Second Severn Crossing, England, United Kingdom': 'archivieren; bleibender Satz heisst dann "Prince of Wales Bridge (Second Severn Crossing)" (2018 umbenannt)',
+    'Breakwater Harbor, Delaware': 'archivieren; bleibender Satz heisst dann "Lewes (Fort Miles, Breakwater Harbor), Delaware"',
+    'Longbranch (USCOE dredge depot), Florida': 'archivieren (Long Branch = Longbranch); Name des bleibenden Satzes bleibt',
+    'Marina Point, Antarctica': 'archivieren; bleibender Satz heisst dann "Faraday (Marina Point)" -- oder lieber "Vernadsky (Faraday)"?',
+    'Shiashkotan (Severo-zapadnyy Bereg, Kuril\'skiye Ostrova), Sakhalin Oblast, Russia': 'beide bleiben (Nordwest- gegen Suedostkueste)',
+    'Hoi Ha Wan (Jone\'s Cove), Hong Kong': 'beide bleiben (verschiedene Buchten, 3 km)',
+    'La Cayenne (Seudre), France': 'beide bleiben (verschiedene Orte an der Seudre, 1,5 km)',
+    'Narlwood Rocks, England, United Kingdom': 'beide bleiben (verschiedene Felsen im Severn)',
+    'Baleeira (Sagres), Portugal': 'archivieren; bleibender Satz heisst dann "Sagres (Baleeira)" (Pegel liegt im Hafen Baleeira)',
+    'Base Melchior (Archipiélago Melchior), Antártida Argentina, Argentina': 'FRAGE: Base Melchior (Isla Gamma) und Melchior Harbour 2,5 km -- dieselbe Stelle?',
+    'Menemsha Bight (Martha\'s Vineyard), Massachusetts': 'FRAGE: Bucht draussen gegen Hafen drinnen (0,5 km) -- eine Stelle?',
+    'Blaine (Semiahmoo Bay), Washington': 'FRAGE: Semiahmoo Bay draussen gegen Drayton Harbor drinnen (0,9 km) -- eine Stelle?',
+    'Scarinish (Tiree), Scotland, United Kingdom': 'FRAGE: Scarinish-Hafen und Gott Bay 1 km -- eine Stelle?',
+    'Keizersveer (Bergsche Maas), Netherlands': 'FRAGE: Keizersveer und Hank sind verschiedene Orte, stehen aber 0,1 km auseinander -- welche Position stimmt?',
+}
+
+
+def vorschlag_text(z):
+    """Mein Vorschlag je Zeile (nur Hilfe fuer Oliver, wird nie automatisch ausgefuehrt)."""
+    regel, d = z['regel'], float(z['km'])
+    if z['name'] in HAND_VORSCHLAG and regel.endswith(':name'):
+        return HAND_VORSCHLAG[z['name']]
+    haupt = lambda n: woerter(n.split('(')[0])
+    gemeinsam = haupt(z['name']) & haupt(z['bleibt'])
+    if regel.endswith(':lage'):
+        return 'beide bleiben (Lage verschieden: vor/hinter Bauwerk, innen/aussen) -- oder doch dieselbe Stelle?'
+    if regel.endswith(':geschuetzt'):
+        return 'bleibt (geschuetzt); nur archivieren, wenn du es ausdruecklich willst'
+    if regel.endswith(':name'):
+        if z['quelle'] == z['bleibt_quelle']:
+            if float(z['fehler_prozent']) >= 1.0:
+                return 'beide bleiben (eigene Pegel derselben Quelle)'
+            return 'FRAGE: dieselbe Quelle, fast identische Tafel (<1 %) -- ein Pegel unter zwei Namen?'
+        if d >= 1.5 and not gemeinsam:
+            return 'beide bleiben (verschiedene Orte mit eigenem Namen)'
+        if gemeinsam or (d < 1.5 and woerter(z['name']) & woerter(z['bleibt'])):
+            return 'archivieren; Name des bleibenden Satzes behalten, Klammer pruefen'
+        return 'FRAGE: derselbe Ort unter anderem Namen? Welcher Name bleibt?'
+    return 'archivieren (gleicher Name, fast gleiche Kurve)'
 
 
 def rang(r):
@@ -197,6 +282,8 @@ def vorschlag(recs, schutz):
             bleibt.add(id(b))
             continue
         grund = schutz.get((b['file'], b['name']))
+        if not grund and lage(treffer[0]['name']) != lage(b['name']):
+            grund = 'lage'
         if not grund and namekey(a_name := treffer[0]['name']) != namekey(b['name']):
             grund = 'name'
         if grund:
@@ -256,12 +343,17 @@ def main(argv):
                          f'A {float(z["rms_a"]):.3f} m.')))
     for b, (a, d, rel, regel), grund in geschont:
         zeilen.append(dict(
-            regel=regel + (':name' if grund == 'name' else ':geschuetzt'), datei=b['file'], name=b['name'], fehler_prozent=f'{100 * rel:.1f}',
+            regel=regel + (':' + grund if grund in ('name', 'lage') else ':geschuetzt'), datei=b['file'], name=b['name'], fehler_prozent=f'{100 * rel:.1f}',
             rang=RANGNAME[rg[id(b)]], quelle=G.quelle_kurz(b), bleibt=a['name'], bleibt_datei=a['file'],
             bleibt_rang=RANGNAME[rg[id(a)]], bleibt_quelle=G.quelle_kurz(a), km=f'{d:.2f}',
-            begruendung=('Namen verschieden' if grund == 'name' else f'geschuetzt ({grund})')))
+            begruendung=('Namen verschieden' if grund == 'name' else
+                         f'Lage verschieden ({"/".join(sorted(lage(b["name"]))) or "-"} gegen '
+                         f'{"/".join(sorted(lage(a["name"]))) or "-"})' if grund == 'lage' else f'geschuetzt ({grund})')))
 
-    felder = ['regel', 'datei', 'name', 'fehler_prozent', 'rang', 'quelle', 'bleibt', 'bleibt_datei',
+    for i, z in enumerate(zeilen, 1):
+        z['nr'] = i
+        z['vorschlag'] = vorschlag_text(z) if z['regel'] != 'R3' else 'archivieren (Messreihe gibt dem Messsatz recht)'
+    felder = ['nr', 'regel', 'vorschlag', 'datei', 'name', 'fehler_prozent', 'rang', 'quelle', 'bleibt', 'bleibt_datei',
               'bleibt_rang', 'bleibt_quelle', 'km', 'begruendung']
     with open(PROBE, 'w', newline='', encoding='utf-8') as fh:
         w = csv.DictWriter(fh, fieldnames=felder)

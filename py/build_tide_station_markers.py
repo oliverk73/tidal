@@ -186,6 +186,10 @@ SOURCE_GROUPS = OrderedDict([
     ('ATT auffällig (prüfen)', {'color': '#00897B', 'files': []}),
     # Oliver 1.11.2026: neue Saetze mit noch ungeprueften Namen/Positionen (harmonics/help/neu_pruefen_*.csv)
     ('Neu (prüfen)', {'color': '#D81B60', 'files': []}),
+    # Oliver 3.11.2026: Dubletten-Probelauf (py/bestand_aufraeumen.py, harmonics/help/aufraeumen_probelauf.csv),
+    # beide Saetze jedes Paars -- Namens-/Lagefragen und geschuetzte Faelle
+    ('Dublette Namensfrage (prüfen)', {'color': '#1E88E5', 'files': []}),
+    ('Dublette geschützt (prüfen)', {'color': '#6D4C41', 'files': []}),
 ])
 
 # Group order: predefined + 'Other' fallback (für nicht zugeordnete Quellen)
@@ -257,6 +261,17 @@ if _ap:
     ATT_AUFFAELLIG = {(os.path.splitext(z['datei'])[0] + '.tcd', z['name'])
                       for z in _csv.DictReader(open(_ap[-1], encoding='utf-8')) if int(z['punkte']) >= 4}
 
+DUBL_NAME, DUBL_SCHUTZ = set(), set()
+_dp = os.path.join(os.path.dirname(_av), 'aufraeumen_probelauf.csv')
+if os.path.exists(_dp):
+    import csv as _csv
+    for z in _csv.DictReader(open(_dp, encoding='utf-8')):
+        ziel = (DUBL_NAME if z['regel'].endswith((':name', ':lage')) else
+                DUBL_SCHUTZ if z['regel'].endswith(':geschuetzt') else None)
+        if ziel is not None:
+            for d, n in ((z['datei'], z['name']), (z['bleibt_datei'], z['bleibt'])):
+                ziel.add((os.path.splitext(os.path.basename(d))[0] + '.tcd', n))
+
 # Build columnar JSON payload
 station_rows = []
 for name, lat, lon, source_file, is_current in all_stations:
@@ -274,6 +289,10 @@ for name, lat, lon, source_file, is_current in all_stations:
         group_name = 'NOAA auffällig (prüfen)'
     elif (source_file, name) in ATT_AUFFAELLIG:
         group_name = 'ATT auffällig (prüfen)'
+    elif (source_file, name) in DUBL_NAME:
+        group_name = 'Dublette Namensfrage (prüfen)'
+    elif (source_file, name) in DUBL_SCHUTZ:
+        group_name = 'Dublette geschützt (prüfen)'
     group_idx = GROUP_INDEX[group_name]
     # Round coords to ~5m precision (5 decimals) — saves bytes vs full precision
     station_rows.append([
