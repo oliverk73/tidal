@@ -10,6 +10,7 @@ Abruf hoeflich: ein Tag je Abfrage, Pause zwischen Abfragen, Cache je Hafen und 
 
 Usage: python3 py/nho_indien.py holen <hafen|alle> [--schritt N]
        python3 py/nho_indien.py schreiben                  neue Saetze (NEU) in harmonics_utide_tidetables
+       python3 py/nho_indien.py korrigieren                Mondlaengenfehler in S_FEHLER-Saetzen beheben
        python3 py/nho_indien.py auswerten [hafen ...]     Fit + Probe + Bestand im Umkreis -> india_nho/auswertung.csv
 
 Fit (3.11.): Rayleigh-Auswahl aus dem Kopf von harmonics_utide_tidetables (CONSTIT_67 zuerst, ohne -IOS,
@@ -170,6 +171,11 @@ NEU = {
     'Rangat Bay': ('Rangat Bay (Middle Andaman), Andaman and Nicobar, India', 12.483, 92.965, 'OSM (NHO-Punkt bei Port Blair, 93 km)'),
 }
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
+NEU_ALLE = dict(NEU, **{
+    'Ghogha': ('Ghogha, Gujarat, India', 21.683, 72.270, 'NHO/OSM'),
+    'Daman': ('Daman, Dadra and Nagar Haveli and Daman and Diu, India', 20.410, 72.830, 'OSM'),
+    'JNPT': ('Jawaharlal Nehru Port (Nhava Sheva), Maharashtra, India', 18.945, 72.945, 'OSM'),
+    'Agatti': ('Agatti, Lakshadweep, India', 10.869, 72.195, 'NHO/OSM')})
 
 
 def schreiben():
@@ -214,7 +220,62 @@ def schreiben():
                 fh.write(f'harmonics/utide/harmonics_utide_tidetables.txt,"{n}"\n')
 
 
+# Mondlaengen-Fehler (3.11.2026): an etwa 15 NHO-Stationen rechnet das NHO mit einer um DELTA_S zu grossen mittleren
+# Mondlaenge s. Jede Konstituente mit s-Koeffizient b (Doodson, T-System) ist im Fit um -b*DELTA_S verschoben
+# (M2/O1 +2 DELTA_S, N2/Q1 +3 DELTA_S, S2/K1/P1 0). DELTA_S aus Minicoy gegen die Messung (UHSLC): 6,9 Grad;
+# FES-Schaetzungen der Gruppe im Median 8,4 (FES ueberschaetzt an Minicoy um 1,5) -> 7 Grad einheitlich.
+DELTA_S = 7.0
+S_FEHLER = ('Ghogha', 'Daman', 'JNPT', 'Agatti')
+
+
+def doodson(speeds):
+    """{Konstituente: (T, s, h, p, N')} aus der Geschwindigkeit (Grad/h), kleinste Koeffizienten."""
+    T, S, Hh, P, N = 15.0, 0.5490165, 0.0410686, 0.0046418, 0.0022064
+    out = {}
+    for k, w in speeds.items():
+        best = None
+        for a in range(0, 13):
+            for b in range(-12, 13):
+                for c in range(-12, 13):
+                    r = w - a * T - b * S - c * Hh
+                    for d in range(-4, 5):
+                        for e in range(-2, 3):
+                            if abs(r - d * P - e * N) < 2e-6:
+                                sc = abs(b) + abs(c) + abs(d) + abs(e)
+                                if best is None or sc < best[0]:
+                                    best = (sc, (a, b, c, d, e))
+        if best:
+            out[k] = best[1]
+    return out
+
+
+def s_korrektur(werte, speeds, delta=DELTA_S):
+    """Phasen um b*delta zurueckdrehen (b = s-Koeffizient)."""
+    dd = doodson({k: speeds[k] for k in werte})
+    return {k: (a, (g + dd[k][1] * delta) % 360.0) if k in dd else (a, g) for k, (a, g) in werte.items()}
+
+
+def korrigieren():
+    """Saetze aus S_FEHLER mit s-korrigierten Konstanten neu schreiben (Name/Position bleiben)."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import xtide_modell as X
+    import scheitelfit as SF
+    kopf = X.kopf_lesen(ZIEL)
+    heute = dt.date.today().strftime('%Y%m%d')
+    for hf in S_FEHLER:
+        name = NEU_ALLE[hf][0]
+        f = fit(hf, kopf)
+        w = s_korrektur(f['werte'], kopf[1])
+        SF.satz_schreiben(ZIEL, name, f['z0'], w, kopf[0],
+                          [f'{heute} NHO-Mondlaengenfehler korrigiert: Phasen um b*{DELTA_S:g} Grad (b = s-Koeffizient; '
+                           f'M2/O1 -{2 * DELTA_S:g}, N2 -{3 * DELTA_S:g}, S2/K1 0), DELTA_S aus Minicoy gegen Messung.'])
+        print('korrigiert', name, f'M2 {f["werte"]["M2"][1]:.1f} -> {w["M2"][1]:.1f}', flush=True)
+
+
 def main(argv):
+    if argv[:1] == ['korrigieren']:
+        korrigieren()
+        return 0
     if argv[:1] == ['schreiben']:
         schreiben()
         return 0
