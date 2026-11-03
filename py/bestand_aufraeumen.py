@@ -45,6 +45,11 @@ Lagune ... (LAGE, mehrsprachig) --, stehen die Saetze vermutlich vor und
 hinter einem Bauwerk oder einer Enge. Solche Paare werden nie automatisch
 geloescht (<Regel>:lage), auch wenn die Kurven fast gleich sind.
 
+Gleiche Quelle (Oliver 3.11.2026): Zwei Saetze derselben aktuellen Quelle mit
+verschiedenem Namen sind eigene Pegel und keine Dubletten (Eugene Island
+Atchafalaya Bay / north of, Walem / Rumst ...). Nur im Altbestand 1997/2004
+kann eine Datei denselben Pegel zweimal fuehren; dort bleibt es eine Frage.
+
 Nie automatisch geloescht wird:
   - ein Satz in harmonics/help/behalten.csv (dort landet jeder zurueckgeholte)
   - ein Satz mit Vermerk von Oliver (Oliver, HANDENTSCHEIDUNG, Handkorrektur)
@@ -166,6 +171,8 @@ def vorschlag_text(z):
         return 'bleibt (geschuetzt); nur archivieren, wenn du es ausdruecklich willst'
     if regel.endswith(':name'):
         if z['quelle'] == z['bleibt_quelle']:
+            if z['rang'] == 'Altbestand':
+                return 'FRAGE: Altbestand fuehrt denselben Pegel evtl. zweimal unter zwei Namen -- ein Ort oder zwei?'
             if float(z['fehler_prozent']) >= 1.0:
                 return 'beide bleiben (eigene Pegel derselben Quelle)'
             return 'FRAGE: dieselbe Quelle, fast identische Tafel (<1 %) -- ein Pegel unter zwei Namen?'
@@ -284,6 +291,10 @@ def vorschlag(recs, schutz):
                 continue                             # nur gegen einen Satz, der selbst bleibt
             ra, rb = rg[id(a)], rg[id(b)]
             if ra > rb or (ra == rb and (folge(a), a['file'], a['line']) > (folge(b), b['file'], b['line'])):
+                continue
+            # Oliver 3.11.2026: gleiche (aktuelle) Quelle, anderer Name = eigener Pegel, nie Dublette.
+            # Nur im Altbestand (XTide 1997/2004) kann eine Datei denselben Pegel zweimal fuehren.
+            if (a['name'] != b['name'] and rb != 2 and G.quelle_kurz(a) == G.quelle_kurz(b)):
                 continue
             g = grenze(ra, rb, d)
             if g is None:
