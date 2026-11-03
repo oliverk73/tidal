@@ -1433,6 +1433,102 @@ def _purge_stale_predictions(force=False):
     return n_purged
 
 
+# Tidenrechnung: 'eigen' = py/tiden_dienst.py (Harmonics-Dateien direkt, UTF-8), 'xtide' = alter Weg.
+# Die eigene Rechnung faellt bei jedem Fehler von selbst auf XTide zurueck (Oliver 3.11.2026).
+TIDEN_RECHNUNG = os.environ.get("TIDEN_RECHNUNG", "eigen")
+_TD = None
+
+
+def _tiden_dienst():
+    global _TD
+    if _TD is None:
+        import tiden_dienst
+        _TD = tiden_dienst
+    return _TD
+
+
+def _meta_aus_info(info):
+    """[(Feld, [Zeilen])] -> (meta_rows, meta_extras) wie bisher aus `tide -m a`."""
+    meta_rows, meta_extras = [], {}
+    for key, zeilen in info:
+        val = zeilen[0] if zeilen else ""
+        if key == "Datum":
+            val = _expand_datum(val)
+        meta_rows.append((key, val))
+        if key == "Comments":
+            for c in zeilen:
+                m = re.match(r"^([a-z][a-z_]*)\s*:\s*(.+)$", c.strip())
+                if m:
+                    meta_extras[m.group(1)] = m.group(2).strip()
+    return meta_rows, meta_extras
+
+
+def _eigene_vorhersage(station, source, current_date, end_date, units, utc):
+    """-> (svg_text, meta_info, meta_extras, text_stdout) oder None (dann XTide)."""
+    if TIDEN_RECHNUNG != "eigen":
+        return None
+    try:
+        td = _tiden_dienst()
+        svg_text = td.svg(station, source, current_date[:10], units, utc)
+        meta_info, meta_extras = _meta_aus_info(td.info(station, source))
+        text_stdout = td.text(station, source, current_date, end_date, units, utc)
+        print(f"✅ eigene Tidenrechnung: {station}")
+        return svg_text, meta_info, meta_extras, text_stdout
+    except Exception as e:  # noqa: BLE001 -- jeder Fehler -> XTide
+        print(f"⚠️ eigene Tidenrechnung fehlgeschlagen ({station}): {e!r} -> XTide")
+        return None
+
+
+def _xtide_meta(station, tz_flag, env):
+    """`tide -m a` -> (meta_rows, meta_extras). Mehrzeilige Comments werden ausgewertet (water_body etc.)."""
+    meta_extras = {}
+    try:
+        meta_cmd = ["tide", "-l", station, "-m", "a", *tz_flag]
+        meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True, env=env)
+        meta_rows = []
+        comment_lines = []
+        last_key = None
+        for line in meta_result.stdout.strip().splitlines():
+            key = line[:14].strip()
+            val = line[14:].strip()
+            if key:
+                if key == "Datum":
+                    val = _expand_datum(val)
+                meta_rows.append((key, val))
+                last_key = key
+                if key == "Comments" and val:
+                    comment_lines.append(val)
+            elif last_key == "Comments" and val:
+                comment_lines.append(val)
+        for c in comment_lines:
+            m = re.match(r"^([a-z][a-z_]*)\s*:\s*(.+)$", c)
+            if m:
+                meta_extras[m.group(1)] = m.group(2).strip()
+        return meta_rows, meta_extras
+    except subprocess.CalledProcessError:
+        return [], meta_extras
+
+
+def _xtide_text(station, current_date, end_date, units, tz_flag, env):
+    """`tide -f t -m p` -> stdout oder None."""
+    text_cmd = [
+        "tide", "-l", station,
+        "-b", current_date,
+        "-e", end_date,
+        "-f", "t",
+        "-m", "p",
+        "-df", "%Y-%m-%d",
+        "-tf", "%H:%M",
+        "-em", "x",
+        "-u", units,
+        *tz_flag,
+    ]
+    try:
+        return subprocess.run(text_cmd, capture_output=True, text=True, check=True, env=env).stdout
+    except subprocess.CalledProcessError:
+        return None
+
+
 def _generate_prediction(decoded_station, station_raw, source, svg_filename, html_filename, utc=False, units='m', spd='kn'):
     """Generate SVG + HTML prediction files. Returns html_path."""
     svg_path = os.path.join(SVG_DIR, svg_filename)
@@ -1457,27 +1553,36 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     end_date = (datetime.now() + timedelta(days=7)).strftime("%Y-%m-%d %H:%M")
     # xtide -m g ignoriert -e; Zeitspanne wird über -gw (pixels-per-hour fest) gesteuert.
     # gw=3200 deckt ~7 Tage ab (heute + 6.5 Tage) bei xtide-nativer Schrift­größe.
-    cmd = [
-        "tide",
-        "-l", decoded_station,
-        "-b", current_date,
-        "-gw", "3200",
-        "-f", "v",
-        "-m", "g",
-        "-o", svg_path,
-        "-u", units,
-        *tz_flag,
-    ]
+    # Eigene Rechnung (py/tiden_dienst.py) zuerst; bei Fehler oder TIDEN_RECHNUNG=xtide wie bisher XTide.
+    eigen = _eigene_vorhersage(decoded_station, source, current_date, end_date, units, utc)
+    if eigen:
+        svg_text, meta_info, meta_extras, text_stdout = eigen
+    else:
+        cmd = [
+            "tide",
+            "-l", decoded_station,
+            "-b", current_date,
+            "-gw", "3200",
+            "-f", "v",
+            "-m", "g",
+            "-o", svg_path,
+            "-u", units,
+            *tz_flag,
+        ]
 
-    print("➤ Aufruf von tide:")
-    print(" ", " ".join(cmd))
+        print("➤ Aufruf von tide:")
+        print(" ", " ".join(cmd))
 
-    subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
-    print("✅ tide wurde erfolgreich ausgeführt.")
+        subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
+        print("✅ tide wurde erfolgreich ausgeführt.")
 
-    # Konvertierung der SVG-Kodierung + Inject <title> für Accessibility/SEO
-    with open(svg_path, "rb") as f:
-        svg_text = f.read().decode("iso-8859-1")
+        # Konvertierung der SVG-Kodierung
+        with open(svg_path, "rb") as f:
+            svg_text = f.read().decode("iso-8859-1")
+        meta_info, meta_extras = _xtide_meta(decoded_station, tz_flag, env)
+        text_stdout = _xtide_text(decoded_station, current_date, end_date, units, tz_flag, env)
+
+    # Inject <title> für Accessibility/SEO
     is_curr_for_title = decoded_station.rstrip().endswith("Current")
     title_text = (
         f"Current prediction curve for {decoded_station}"
@@ -1499,54 +1604,14 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         f.write(svg_text)
     print(f"✅ SVG-Datei konvertiert + Title injiziert: {svg_path}")
 
-    # Zusätzlich: tide -l "Station" -m a → als Key-Value-Liste
-    # Mehrzeilige Comments werden zusätzlich strukturiert ausgewertet (water_body etc.)
-    meta_extras = {}
-    try:
-        meta_cmd = ["tide", "-l", decoded_station, "-m", "a", *tz_flag]
-        meta_result = subprocess.run(meta_cmd, capture_output=True, text=True, check=True, env=env)
-        meta_rows = []
-        comment_lines = []
-        last_key = None
-        for line in meta_result.stdout.strip().splitlines():
-            key = line[:14].strip()
-            val = line[14:].strip()
-            if key:
-                if key == "Datum":
-                    val = _expand_datum(val)
-                meta_rows.append((key, val))
-                last_key = key
-                if key == "Comments" and val:
-                    comment_lines.append(val)
-            elif last_key == "Comments" and val:
-                comment_lines.append(val)
-        for c in comment_lines:
-            m = re.match(r"^([a-z][a-z_]*)\s*:\s*(.+)$", c)
-            if m:
-                meta_extras[m.group(1)] = m.group(2).strip()
-        meta_info = meta_rows
-    except subprocess.CalledProcessError:
-        meta_info = []
-
-    # Textvorhersage: tide -l "Station" -b ... -e ... -f t -m p
+    # Textvorhersage (eigene Rechnung oder tide -f t -m p)
     station_note = ''
     try:
-        text_cmd = [
-            "tide", "-l", decoded_station,
-            "-b", current_date,
-            "-e", end_date,
-            "-f", "t",
-            "-m", "p",
-            "-df", "%Y-%m-%d",
-            "-tf", "%H:%M",
-            "-em", "x",
-            "-u", units,
-            *tz_flag,
-        ]
-        text_result = subprocess.run(text_cmd, capture_output=True, text=True, check=True, env=env)
+        if text_stdout is None:
+            raise subprocess.CalledProcessError(1, "tide")
         tide_rows = []
         last_date = None
-        for line in text_result.stdout.strip().splitlines()[2:]:  # skip header
+        for line in text_stdout.strip().splitlines()[2:]:  # skip header
             line = line.strip()
             if not line:
                 continue
@@ -1850,6 +1915,17 @@ def _widget_station_meta(station_name, source, env):
     if cached is not None:
         return cached
     meta = {"tz": "", "datum": ""}
+    if TIDEN_RECHNUNG == "eigen":
+        try:
+            for k, zeilen in _tiden_dienst().info(station_name, source):
+                if k == "Time zone":
+                    meta["tz"] = zeilen[0]
+                elif k == "Datum":
+                    meta["datum"] = _expand_datum(zeilen[0])
+            _widget_meta_cache[key] = meta
+            return meta
+        except Exception as e:  # noqa: BLE001
+            print(f"⚠️ eigene Tidenrechnung (Widget-Info) fehlgeschlagen: {e!r} -> XTide")
     try:
         result = subprocess.run(["tide", "-l", station_name, "-m", "a"],
                                 capture_output=True, text=True, check=True, env=env)
@@ -1908,10 +1984,18 @@ def _widget_tide_data(slug, station_name, days, units='m', spd='kn'):
         "-em", "pSsMm",  # suppress sun/moon events
         "-u", "ft" if units == 'ft' else "m",
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True, check=True, env=env)
+    stdout = None
+    if TIDEN_RECHNUNG == "eigen":
+        try:
+            stdout = _tiden_dienst().text(station_name, source, begin, end,
+                                          "ft" if units == 'ft' else "m", False, astro_auch=False)
+        except Exception as e:  # noqa: BLE001
+            print(f"⚠️ eigene Tidenrechnung (Widget) fehlgeschlagen: {e!r} -> XTide")
+    if stdout is None:
+        stdout = subprocess.run(cmd, capture_output=True, text=True, check=True, env=env).stdout
 
     events = []
-    for line in result.stdout.splitlines():
+    for line in stdout.splitlines():
         line = line.strip()
         if not re.match(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}\s", line):
             continue

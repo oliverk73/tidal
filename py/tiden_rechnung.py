@@ -46,7 +46,9 @@ class Satz:
     z0: float
     einheit: str                  # meters | feet | knots
     werte: dict                   # {konst: (A, kappa)} im Satzmeridian
-    hot: dict = field(default_factory=dict)
+    hot: dict = field(default_factory=dict)      # letzter Wert je Schluessel
+    hot_liste: list = field(default_factory=list)  # [(schluessel, wert)] in Dateireihenfolge
+    kommentar: list = field(default_factory=list)  # freie Kommentarzeilen vor dem Satz
 
     @property
     def strom(self):
@@ -64,17 +66,33 @@ class Datei:
         self._koef = {}
 
     def _lesen(self, L):
-        hot, im_hot = {}, False
+        """Saetze samt Kommentaren. Wie build_tide_db: freie Kommentarzeilen seit der letzten
+        Nicht-Kommentarzeile gehoeren zum naechsten Satz ('#' allein = Leerzeile), Hot Comments
+        ab BEGIN HOT COMMENTS als 'schluessel: wert'. Doppelte Namen: der erste gilt (wie XTide)."""
+        hot, frei = [], []
+        kopf = False        # nach *END*: Kopfkommentare bis 'FITNESS FOR A PARTICULAR PURPOSE' bzw. Leerzeile verwerfen
         i, n = 0, len(L)
         while i < n:
-            z = L[i]
+            z = L[i].rstrip('\r')
+            if z.strip() == '*END*':
+                kopf = True
+            elif not z.strip():
+                kopf = False
             if z.startswith('#'):
-                if 'BEGIN HOT COMMENTS' in z:
-                    hot, im_hot = {}, True
-                elif im_hot:
-                    m = re.match(r'#\s*(!?[^:\s]+):\s?(.*)$', z)
-                    if m:
-                        hot[m.group(1)] = m.group(2).strip()
+                # build_tide_db: '# schluessel: wert' gilt ueberall als Hot Comment (auch ohne BEGIN),
+                # '#' und '# ' sind Leerzeilen.
+                m = re.match(r'# (!?[A-Za-z_][A-Za-z0-9_]*):(?=\s|$)\s*(.*)$', z)
+                if 'BEGIN HOT COMMENTS' in z or 'END HOT COMMENTS' in z:
+                    pass
+                elif m:
+                    hot.append((m.group(1).lower(), m.group(2).strip()))
+                    if m.group(1).lower() not in HOT_FELD and not m.group(1).startswith('!'):
+                        frei.append(z[2:])   # unbekannt -> Comments, an Ort und Stelle, wie geschrieben
+                elif kopf:
+                    # Standardkopf nach *END* endet mit dem Gewaehrleistungsausschluss
+                    kopf = 'FITNESS FOR A PARTICULAR PURPOSE' not in z
+                else:
+                    frei.append(z[2:] if z.startswith('# ') else z[1:])
                 i += 1
                 continue
             if z.strip() and i + 2 < n and MERIDIAN.match(L[i + 1]):
@@ -93,12 +111,17 @@ class Datei:
                     except ValueError:
                         break
                     j += 1
-                name = z.rstrip('\r')
-                self.saetze[name] = Satz(name, mer, m.group(4) or ':UTC', float(f0[0]),
-                                         f0[1] if len(f0) > 1 else 'meters', werte, hot)
-                hot, im_hot = {}, False
+                if z not in self.saetze:
+                    while frei and not frei[0].strip():
+                        frei.pop(0)
+                    while frei and not frei[-1].strip():
+                        frei.pop()
+                    self.saetze[z] = Satz(z, mer, m.group(4) or ':UTC', float(f0[0]),
+                                          f0[1] if len(f0) > 1 else 'meters', werte, dict(hot), hot, frei)
+                hot, frei, kopf = [], [], False
                 i = j
                 continue
+            frei, hot = [], []
             i += 1
 
     # ---- Rechnung -------------------------------------------------------
@@ -186,6 +209,59 @@ class Datei:
                 x = brentq(g, t[i], t[i + 1], xtol=0.5)
                 ev.append((x, 0.0, 'Slack, Flood Begins' if v[i] < 0 else 'Slack, Ebb Begins'))
         return sorted(e for e in ev if t0 <= e[0] < t1)
+
+
+HOT_FELD = {'station_id_context': 'Station ID context', 'station_id': 'Station ID', 'country': 'Country',
+            'source': 'Source', 'restriction': 'Restriction', 'datum': 'Datum', 'confidence': 'Confidence',
+            'date_imported': 'Date imported', 'months_on_station': 'Months on station',
+            'last_date_on_station': 'Last date on station', 'max_direction': 'Flood direction',
+            'min_direction': 'Ebb direction', 'note': 'Notes', 'expiration_date': 'Expiration',
+            'expiration': 'Expiration', 'used_until': 'Expiration'}
+# Ohne 'restriction:' setzt build_tide_db je nach TCD einen anderen Wert (empirisch, 3.11.2026).
+RESTRICTION_VORGABE = {'harmonics_bsh_germany.txt': 'Public Domain', 'harmonics_ih_tabelas.txt': 'Public Domain'}
+INFO_FOLGE = ['Name', 'In file', 'Station ID context', 'Station ID', 'Date imported', 'Coordinates', 'Country',
+              'Time zone', 'Native units', 'Flood direction', 'Ebb direction', 'Source', 'Restriction',
+              'Comments', 'Notes', 'Type', 'Meridian', 'Datum', 'Expiration', 'Months on station', 'Last date on station',
+              'Confidence']
+
+
+def _datum8(v):
+    return f'{v[:4]}-{v[4:6]}-{v[6:8]}' if re.fullmatch(r'\d{8}', v) else v
+
+
+def info(D, name):
+    """Infoblock wie `tide -m a`: [(feld, [zeilen])] in XTide-Reihenfolge."""
+    s = D.saetze[name]
+    f = {'Name': [name], 'In file': [D.pfad]}
+    kom = list(s.kommentar)
+    for k, v in s.hot_liste:
+        if k in HOT_FELD:
+            feld = HOT_FELD[k]
+            if feld == 'Notes':
+                f.setdefault('Notes', []).append(v)
+            elif feld in ('Date imported', 'Last date on station', 'Expiration'):
+                f[feld] = [_datum8(v)]
+            elif feld in ('Flood direction', 'Ebb direction'):
+                f[feld] = [f'{v}\u00b0 true']
+            else:
+                f[feld] = [v]
+    lat, lon = s.hot.get('!latitude'), s.hot.get('!longitude')
+    if lat is not None and lon is not None:
+        la, lo = round(float(lat) * 1e5) / 1e5, round(float(lon) * 1e5) / 1e5   # TCD speichert 1e-5 Grad
+        f['Coordinates'] = [f"{abs(la):.4f}\u00b0 {'N' if la >= 0 else 'S'}, {abs(lo):.4f}\u00b0 {'E' if lo >= 0 else 'W'}"]
+    f['Time zone'] = [s.zone]
+    f['Native units'] = [s.einheit]
+    f.setdefault('Country', ['Unknown'])
+    f.setdefault('Restriction', [RESTRICTION_VORGABE.get(os.path.basename(D.pfad), 'Non-commercial use only')])
+    if kom:
+        f['Comments'] = kom
+    f['Type'] = ['Reference station, ' + ('current' if s.strom else 'tide')]
+    h, m = divmod(round(abs(s.meridian) * 60), 60)
+    f['Meridian'] = [('-' if s.meridian < 0 else '+' if s.meridian > 0 else '') + f'{h}:{m:02d}']
+    if s.strom:
+        f.pop('Datum', None)
+    f.setdefault('Confidence', ['10'])
+    return [(k, f[k]) for k in INFO_FOLGE if k in f]
 
 
 _DATEIEN = {}
