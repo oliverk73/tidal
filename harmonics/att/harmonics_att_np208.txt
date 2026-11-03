@@ -14996,6 +14996,8 @@ MNUS2
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -15.9900
 # !latitude: 23.6050
@@ -15003,30 +15005,37 @@ MNUS2
 Dakhla Bar, Western Sahara
 +00:00 :Africa/El_Aaiun
 1.2800 meters
-x 0 0
+J1              0.0026  62.95
 K1              0.0600  34.00
-K2              0.0729  43.00
-x 0 0
+K2              0.0745  38.66
+L2              0.0165  15.95
 x 0 0
 M2              0.6700  11.00
-x 0 0
-M4              0.0287  35.00
-x 0 0
-x 0 0
-N2              0.1273  353.85
-x 0 0
+M3              0.0001  193.19
+M4              0.0233  59.85
+M6              0.0085  261.82
+M8              0.0017  301.47
+N2              0.1272  357.46
+2N2             0.0179  339.88
 O1              0.0400  266.00
 x 0 0
-P1              0.0198  34.00
+P1              0.0170  26.62
+Q1              0.0137  212.38
 x 0 0
-x 0 0
-x 0 0
+R2              0.0023  37.64
 x 0 0
 S2              0.2700  43.00
+S4              0.0018  212.22
 x 0 0
+T2              0.0159  36.63
+LDA2            0.0039  358.08
+MU2             0.0241  329.05
+NU2             0.0232  358.85
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0009  323.10
+MS4             0.0118  127.74
 x 0 0
 x 0 0
 x 0 0
@@ -15064,7 +15073,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  119.47
 x 0 0
+EPS2            0.0042  325.38
 x 0 0
 x 0 0
 x 0 0
@@ -15105,16 +15116,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0006  216.05
 x 0 0
 x 0 0
 x 0 0
@@ -15186,6 +15188,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -16.5720
 # !latitude: 13.4440
@@ -15195,30 +15199,37 @@ x 0 0
 Banjul, Gambia
 +00:00 :Africa/Banjul
 0.9800 meters
-x 0 0
+J1              0.0028  46.10
 K1              0.0600  13.00
-K2              0.0486  327.00
-x 0 0
+K2              0.0503  320.82
+L2              0.0164  273.27
 x 0 0
 M2              0.5400  288.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1026  267.10
-x 0 0
+M3              0.0013  231.70
+M4              0.0217  17.11
+M6              0.0102  206.07
+M8              0.0009  310.45
+N2              0.0891  258.32
+2N2             0.0139  245.30
 O1              0.0400  269.00
 x 0 0
-P1              0.0198  13.00
+P1              0.0154  8.99
+Q1              0.0141  211.69
 x 0 0
-x 0 0
-x 0 0
+R2              0.0020  349.22
 x 0 0
 S2              0.1800  327.00
+S4              0.0011  228.93
 x 0 0
+T2              0.0132  341.96
+LDA2            0.0029  288.84
+MU2             0.0235  305.09
+NU2             0.0158  254.87
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0050  240.66
+MS4             0.0035  152.85
 x 0 0
 x 0 0
 x 0 0
@@ -15256,7 +15267,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0043  109.08
 x 0 0
+EPS2            0.0038  254.83
 x 0 0
 x 0 0
 x 0 0
@@ -15297,16 +15310,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0016  196.68
 x 0 0
 x 0 0
 x 0 0
@@ -15762,6 +15766,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -10.8000
 # !latitude: 6.3330
@@ -15771,30 +15777,37 @@ x 0 0
 Monrovia, Liberia
 +00:00 :Africa/Monrovia
 0.9000 meters
-x 0 0
+J1              0.0050  12.79
 K1              0.0800  352.00
-K2              0.0351  222.00
-x 0 0
+K2              0.0365  219.89
+L2              0.0095  199.99
 x 0 0
 M2              0.4000  191.00
-x 0 0
-M4              0.0054  160.00
-x 0 0
-x 0 0
-N2              0.0760  174.38
-x 0 0
+M3              0.0002  178.43
+M4              0.0102  146.43
+M6              0.0017  282.25
+M8              0.0002  184.72
+N2              0.0952  172.49
+2N2             0.0140  148.76
 O1              0.0200  265.00
 x 0 0
-P1              0.0264  352.00
+P1              0.0228  345.79
+Q1              0.0074  145.52
 x 0 0
-x 0 0
-x 0 0
+R2              0.0011  216.24
 x 0 0
 S2              0.1300  222.00
+S4              0.0003  227.84
 x 0 0
+T2              0.0078  213.39
+LDA2            0.0024  195.80
+MU2             0.0135  152.70
+NU2             0.0179  173.81
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0027  58.99
+MS4             0.0029  163.33
 x 0 0
 x 0 0
 x 0 0
@@ -15832,7 +15845,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  97.31
 x 0 0
+EPS2            0.0039  139.22
 x 0 0
 x 0 0
 x 0 0
@@ -15873,16 +15888,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0006  4.40
 x 0 0
 x 0 0
 x 0 0
@@ -16146,6 +16152,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 1.2865
 # !latitude: 6.1346
@@ -16155,30 +16163,37 @@ x 0 0
 Lomé, Togo
 +00:00 :Africa/Lome
 1.1500 meters
-x 0 0
+J1              0.0113  10.54
 K1              0.1800  352.00
-K2              0.0432  143.00
-x 0 0
+K2              0.0445  141.52
+L2              0.0128  114.91
 x 0 0
 M2              0.5000  108.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0950  89.24
-x 0 0
+M3              0.0003  201.86
+M4              0.0133  321.60
+M6              0.0009  123.99
+M8              0.0002  119.23
+N2              0.1097  103.03
+2N2             0.0193  85.85
 O1              0.0200  340.00
 x 0 0
-P1              0.0594  352.00
+P1              0.0513  347.79
+Q1              0.0028  109.63
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  133.43
 x 0 0
 S2              0.1600  143.00
+S4              0.0006  121.41
 x 0 0
+T2              0.0098  134.68
+LDA2            0.0030  110.41
+MU2             0.0218  79.36
+NU2             0.0198  104.77
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0064  246.53
+MS4             0.0050  29.14
 x 0 0
 x 0 0
 x 0 0
@@ -16216,7 +16231,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  133.58
 x 0 0
+EPS2            0.0046  78.69
 x 0 0
 x 0 0
 x 0 0
@@ -16257,16 +16274,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0017  174.64
 x 0 0
 x 0 0
 x 0 0
@@ -16914,6 +16922,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 9.2190
 # !latitude: 3.9610
@@ -16923,30 +16933,37 @@ x 0 0
 Man O' War Bay, Cameroon
 +01:00 :Africa/Douala
 1.2000 meters
-x 0 0
+J1              0.0070  30.44
 K1              0.1100  10.00
-K2              0.0513  161.00
-x 0 0
+K2              0.0546  156.40
+L2              0.0149  141.31
 x 0 0
 M2              0.5600  130.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1064  113.38
-x 0 0
+M3              0.0005  241.72
+M4              0.0360  39.50
+M6              0.0016  323.24
+M8              0.0010  123.52
+N2              0.1213  124.99
+2N2             0.0220  110.05
 O1              0.0300  318.00
 x 0 0
-P1              0.0363  9.92
+P1              0.0317  5.12
+Q1              0.0042  101.20
 x 0 0
-x 0 0
-x 0 0
+R2              0.0016  148.22
 x 0 0
 S2              0.1900  161.00
+S4              0.0009  163.56
 x 0 0
+T2              0.0117  149.76
+LDA2            0.0034  130.47
+MU2             0.0230  98.19
+NU2             0.0215  125.34
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0155  305.43
+MS4             0.0108  67.68
 x 0 0
 x 0 0
 x 0 0
@@ -16984,7 +17001,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0008  170.01
 x 0 0
+EPS2            0.0053  95.67
 x 0 0
 x 0 0
 x 0 0
@@ -17025,16 +17044,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0038  239.96
 x 0 0
 x 0 0
 x 0 0
@@ -17298,6 +17308,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 8.5553
 # !latitude: 3.4611
@@ -17307,30 +17319,37 @@ x 0 0
 Luba (Bioko), Equatorial Guinea
 +01:00 :Africa/Malabo
 1.0200 meters
-x 0 0
+J1              0.0070  34.47
 K1              0.1100  14.00
-K2              0.0513  165.00
-x 0 0
+K2              0.0540  161.49
+L2              0.0131  141.60
 x 0 0
 M2              0.5200  131.00
-x 0 0
-M4              0.0265  64.00
-x 0 0
-x 0 0
-N2              0.0988  112.78
-x 0 0
+M3              0.0003  246.43
+M4              0.0228  32.56
+M6              0.0010  340.58
+M8              0.0001  149.87
+N2              0.1111  125.70
+2N2             0.0200  110.33
 O1              0.0300  328.00
 x 0 0
-P1              0.0363  13.92
+P1              0.0318  9.02
+Q1              0.0044  115.96
 x 0 0
-x 0 0
-x 0 0
+R2              0.0016  153.12
 x 0 0
 S2              0.1900  165.00
+S4              0.0006  168.50
 x 0 0
+T2              0.0115  154.79
+LDA2            0.0029  131.52
+MU2             0.0220  100.21
+NU2             0.0194  125.93
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0101  303.86
+MS4             0.0069  72.11
 x 0 0
 x 0 0
 x 0 0
@@ -17368,7 +17387,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  164.75
 x 0 0
+EPS2            0.0047  95.88
 x 0 0
 x 0 0
 x 0 0
@@ -17409,16 +17430,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0026  237.58
 x 0 0
 x 0 0
 x 0 0
@@ -18066,6 +18078,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 8.7093
 # !latitude: -0.6195
@@ -18075,30 +18089,37 @@ x 0 0
 Cap Lopez (Pointe Renard), Gabon
 +01:00 :Africa/Libreville
 1.2100 meters
-x 0 0
+J1              0.0078  29.53
 K1              0.1200  7.00
-K2              0.0567  153.00
-x 0 0
+K2              0.0600  149.52
+L2              0.0131  138.94
 x 0 0
 M2              0.5500  129.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1045  116.14
-x 0 0
+M3              0.0002  252.63
+M4              0.0149  31.32
+M6              0.0006  10.54
+M8              0.0001  301.44
+N2              0.1160  123.46
+2N2             0.0210  109.35
 O1              0.0200  302.00
 x 0 0
-P1              0.0396  6.92
+P1              0.0348  1.11
+Q1              0.0052  123.05
 x 0 0
-x 0 0
-x 0 0
+R2              0.0017  141.29
 x 0 0
 S2              0.2100  153.00
+S4              0.0004  163.21
 x 0 0
+T2              0.0128  143.20
+LDA2            0.0028  127.43
+MU2             0.0241  96.90
+NU2             0.0200  125.10
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0075  301.58
+MS4             0.0049  69.11
 x 0 0
 x 0 0
 x 0 0
@@ -18136,7 +18157,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0008  166.22
 x 0 0
+EPS2            0.0048  97.10
 x 0 0
 x 0 0
 x 0 0
@@ -18177,16 +18200,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0020  236.21
 x 0 0
 x 0 0
 x 0 0
@@ -18450,6 +18464,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 13.7293
 # !latitude: 45.5503
@@ -18459,30 +18475,37 @@ x 0 0
 Koper, Slovenia
 +01:00 :Europe/Ljubljana
 0.7000 meters
-x 0 0
+J1              0.0139  92.64
 K1              0.1800  70.00
-K2              0.0432  284.08
-x 0 0
+K2              0.0479  277.90
+L2              0.0079  276.10
 x 0 0
 M2              0.2500  277.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0002  336.35
+M4              0.0002  322.34
+M6              0.0003  25.52
+M8              0.0000  74.74
+N2              0.0423  274.18
+2N2             0.0050  271.57
 O1              0.0500  62.00
 x 0 0
-P1              0.0594  69.92
+P1              0.0570  68.02
+Q1              0.0076  68.81
 x 0 0
-x 0 0
-x 0 0
+R2              0.0016  278.31
 x 0 0
 S2              0.1600  284.00
+S4              0.0003  105.38
 x 0 0
+T2              0.0103  277.03
+LDA2            0.0018  276.33
+MU2             0.0050  267.43
+NU2             0.0082  271.67
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0005  16.32
+MS4             0.0020  79.56
 x 0 0
 x 0 0
 x 0 0
@@ -18520,7 +18543,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  351.70
 x 0 0
+EPS2            0.0013  268.57
 x 0 0
 x 0 0
 x 0 0
@@ -18561,16 +18586,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  328.66
 x 0 0
 x 0 0
 x 0 0
@@ -18642,6 +18658,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 14.4216
 # !latitude: 45.3294
@@ -18651,30 +18669,37 @@ x 0 0
 Rijeka, Croatia
 +01:00 :Europe/Zagreb
 0.3000 meters
-x 0 0
+J1              0.0111  88.50
 K1              0.1400  66.00
-K2              0.0162  250.08
-x 0 0
+K2              0.0175  238.17
+L2              0.0027  240.70
 x 0 0
 M2              0.1000  249.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  153.54
+M4              0.0018  257.99
+M6              0.0001  125.86
+M8              0.0000  47.26
+N2              0.0173  249.60
+2N2             0.0021  246.45
 O1              0.0400  55.00
 x 0 0
-P1              0.0462  65.92
+P1              0.0453  64.49
+Q1              0.0062  59.13
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  236.12
 x 0 0
 S2              0.0600  250.00
+S4              0.0014  347.45
 x 0 0
+T2              0.0039  235.71
+LDA2            0.0005  245.26
+MU2             0.0023  231.51
+NU2             0.0029  238.25
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0004  226.83
+MS4             0.0040  298.97
 x 0 0
 x 0 0
 x 0 0
@@ -18712,7 +18737,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  219.55
 x 0 0
+EPS2            0.0006  237.44
 x 0 0
 x 0 0
 x 0 0
@@ -18753,16 +18780,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  129.06
 x 0 0
 x 0 0
 x 0 0
@@ -18834,6 +18852,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 14.4660
 # !latitude: 44.5353
@@ -18843,30 +18863,37 @@ x 0 0
 Mali Losinj, Croatia
 +01:00 :Europe/Zagreb
 0.3400 meters
-x 0 0
+J1              0.0102  84.48
 K1              0.1300  64.00
-K2              0.0135  245.08
-x 0 0
+K2              0.0146  234.40
+L2              0.0022  231.61
 x 0 0
 M2              0.0800  240.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  145.98
+M4              0.0011  249.05
+M6              0.0000  142.88
+M8              0.0000  213.25
+N2              0.0147  242.36
+2N2             0.0018  240.42
 O1              0.0400  49.00
 x 0 0
-P1              0.0429  63.92
+P1              0.0421  62.01
+Q1              0.0062  52.49
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  232.67
 x 0 0
 S2              0.0500  245.00
+S4              0.0009  343.22
 x 0 0
+T2              0.0032  232.79
+LDA2            0.0004  238.52
+MU2             0.0019  225.22
+NU2             0.0024  232.62
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0003  214.62
+MS4             0.0026  293.26
 x 0 0
 x 0 0
 x 0 0
@@ -18904,7 +18931,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  204.35
 x 0 0
+EPS2            0.0005  232.50
 x 0 0
 x 0 0
 x 0 0
@@ -18945,16 +18974,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  114.44
 x 0 0
 x 0 0
 x 0 0
@@ -19218,6 +19238,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 16.4361
 # !latitude: 43.5012
@@ -19227,30 +19249,37 @@ x 0 0
 Split, Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
-x 0 0
+J1              0.0066  77.72
 K1              0.0900  56.00
-K2              0.0162  131.08
-x 0 0
+K2              0.0178  122.59
+L2              0.0027  121.81
 x 0 0
 M2              0.0800  129.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  197.12
+M4              0.0023  44.59
+M6              0.0005  162.17
+M8              0.0000  67.51
+N2              0.0138  129.36
+2N2             0.0014  131.33
 O1              0.0300  48.00
 x 0 0
-P1              0.0297  55.92
+P1              0.0283  53.27
+Q1              0.0047  56.60
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  122.39
 x 0 0
 S2              0.0600  131.00
+S4              0.0007  137.94
 x 0 0
+T2              0.0037  121.56
+LDA2            0.0006  131.07
+MU2             0.0013  114.53
+NU2             0.0021  126.57
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0006  37.82
+MS4             0.0028  92.42
 x 0 0
 x 0 0
 x 0 0
@@ -19288,7 +19317,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  181.94
 x 0 0
+EPS2            0.0003  126.95
 x 0 0
 x 0 0
 x 0 0
@@ -19329,16 +19360,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  359.61
 x 0 0
 x 0 0
 x 0 0
@@ -19410,6 +19432,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 32.3167
 # !latitude: 31.2667
@@ -19419,30 +19443,37 @@ x 0 0
 Port Said, Egypt
 +02:00 :Africa/Cairo
 0.4500 meters
-x 0 0
+J1              0.0010  284.56
 K1              0.0200  303.00
-K2              0.0189  314.16
-x 0 0
+K2              0.0207  313.17
+L2              0.0040  309.29
 x 0 0
 M2              0.1200  298.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  226.16
+M4              0.0009  79.40
+M6              0.0009  177.27
+M8              0.0000  164.10
+N2              0.0193  300.46
+2N2             0.0025  306.82
 O1              0.0200  273.00
 x 0 0
-P1              0.0066  302.84
+P1              0.0060  301.78
+Q1              0.0033  248.63
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  320.68
 x 0 0
 S2              0.0700  314.00
+S4              0.0004  184.42
 x 0 0
+T2              0.0042  319.42
+LDA2            0.0009  308.23
+MU2             0.0021  306.77
+NU2             0.0040  301.75
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0004  88.00
+MS4             0.0017  141.89
 x 0 0
 x 0 0
 x 0 0
@@ -19480,7 +19511,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  131.45
 x 0 0
+EPS2            0.0007  306.20
 x 0 0
 x 0 0
 x 0 0
@@ -19521,16 +19554,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  50.71
 x 0 0
 x 0 0
 x 0 0
@@ -19602,6 +19626,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 10.7742
 # !latitude: 34.7276
@@ -19611,30 +19637,37 @@ x 0 0
 Sfax, Tunisia
 +01:00 :Africa/Tunis
 0.9900 meters
-x 0 0
+J1              0.0017  19.15
 K1              0.0200  19.00
-K2              0.0729  134.00
-x 0 0
+K2              0.0809  125.00
+L2              0.0157  105.46
 x 0 0
 M2              0.4200  106.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0798  90.99
-x 0 0
+M3              0.0001  84.91
+M4              0.0021  10.50
+M6              0.0024  17.16
+M8              0.0002  341.16
+N2              0.0614  99.47
+2N2             0.0078  109.83
 O1              0.0100  95.00
 x 0 0
-P1              0.0066  18.92
+P1              0.0057  37.91
+Q1              0.0032  98.58
 x 0 0
-x 0 0
-x 0 0
+R2              0.0027  159.37
 x 0 0
 S2              0.2700  134.00
+S4              0.0039  105.31
 x 0 0
+T2              0.0189  154.53
+LDA2            0.0040  145.96
+MU2             0.0094  138.14
+NU2             0.0168  90.65
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0026  46.97
+MS4             0.0099  75.74
 x 0 0
 x 0 0
 x 0 0
@@ -19672,7 +19705,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0105  271.17
 x 0 0
+EPS2            0.0021  117.02
 x 0 0
 x 0 0
 x 0 0
@@ -19713,16 +19748,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0003  18.08
 x 0 0
 x 0 0
 x 0 0
@@ -19986,6 +20012,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -9.2897
 # !latitude: 38.6948
@@ -19995,30 +20023,37 @@ x 0 0
 Paço de Arcos, Portugal
 +00:00 :Europe/Lisbon
 2.0000 meters
-x 0 0
+J1              0.0025  85.90
 K1              0.0700  57.00
-K2              0.0945  99.00
-x 0 0
+K2              0.0985  96.75
+L2              0.0223  82.90
 x 0 0
 M2              1.0100  71.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1919  55.99
-x 0 0
+M3              0.0001  308.74
+M4              0.0112  185.98
+M6              0.0015  64.45
+M8              0.0000  186.23
+N2              0.2173  53.81
+2N2             0.0309  35.92
 O1              0.0600  318.00
 x 0 0
-P1              0.0231  57.00
+P1              0.0211  49.95
+Q1              0.0182  265.38
 x 0 0
-x 0 0
-x 0 0
+R2              0.0031  91.57
 x 0 0
 S2              0.3500  99.00
+S4              0.0004  310.83
 x 0 0
+T2              0.0215  90.64
+LDA2            0.0052  71.80
+MU2             0.0391  30.04
+NU2             0.0409  57.37
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0045  86.68
+MS4             0.0039  214.31
 x 0 0
 x 0 0
 x 0 0
@@ -20056,7 +20091,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0008  63.71
 x 0 0
+EPS2            0.0094  22.00
 x 0 0
 x 0 0
 x 0 0
@@ -20097,16 +20134,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0012  27.36
 x 0 0
 x 0 0
 x 0 0
@@ -20754,6 +20782,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -5.7963
 # !latitude: 36.0776
@@ -20763,30 +20793,37 @@ x 0 0
 Punta Camarinal, Spain
 +01:00 :Europe/Madrid
 1.2000 meters
-x 0 0
+J1              0.0017  124.32
 K1              0.0400  90.00
-K2              0.0594  104.00
-x 0 0
+K2              0.0631  101.18
+L2              0.0146  89.83
 x 0 0
 M2              0.6500  78.00
-x 0 0
-M4              0.0173  204.00
-x 0 0
-x 0 0
-N2              0.1235  64.06
-x 0 0
+M3              0.0005  91.68
+M4              0.0246  199.80
+M6              0.0020  115.25
+M8              0.0003  326.26
+N2              0.1413  61.44
+2N2             0.0202  44.14
 O1              0.0200  327.00
 x 0 0
-P1              0.0132  89.92
+P1              0.0117  75.47
+Q1              0.0075  283.54
 x 0 0
-x 0 0
-x 0 0
+R2              0.0020  98.79
 x 0 0
 S2              0.2200  104.00
+S4              0.0008  221.17
 x 0 0
+T2              0.0134  97.48
+LDA2            0.0037  78.78
+MU2             0.0251  39.36
+NU2             0.0267  66.46
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0094  119.70
+MS4             0.0100  203.46
 x 0 0
 x 0 0
 x 0 0
@@ -20824,7 +20861,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  85.90
 x 0 0
+EPS2            0.0060  29.47
 x 0 0
 x 0 0
 x 0 0
@@ -20865,16 +20904,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0020  76.83
 x 0 0
 x 0 0
 x 0 0
@@ -20946,6 +20976,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -5.4330
 # !latitude: 36.0670
@@ -20955,30 +20987,37 @@ x 0 0
 Punta Carnero, Spain
 +01:00 :Europe/Madrid
 0.6000 meters
-x 0 0
+J1              0.0008  155.63
 K1              0.0200  160.00
-K2              0.0297  101.00
-x 0 0
+K2              0.0315  98.08
+L2              0.0069  91.28
 x 0 0
 M2              0.3100  76.00
-x 0 0
-M4              0.0092  234.00
-x 0 0
-x 0 0
-N2              0.0589  62.60
-x 0 0
+M3              0.0004  119.07
+M4              0.0190  215.70
+M6              0.0000  314.08
+M8              0.0001  318.93
+N2              0.0650  63.03
+2N2             0.0090  46.89
 O1              0.0100  195.00
 x 0 0
-P1              0.0066  159.92
+P1              0.0058  162.94
+Q1              0.0022  236.44
 x 0 0
-x 0 0
-x 0 0
+R2              0.0010  96.12
 x 0 0
 S2              0.1100  101.00
+S4              0.0008  218.67
 x 0 0
+T2              0.0068  94.36
+LDA2            0.0018  80.18
+MU2             0.0113  40.88
+NU2             0.0122  69.10
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0074  121.74
+MS4             0.0080  201.35
 x 0 0
 x 0 0
 x 0 0
@@ -21016,7 +21055,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  67.78
 x 0 0
+EPS2            0.0026  32.34
 x 0 0
 x 0 0
 x 0 0
@@ -21057,16 +21098,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0016  77.69
 x 0 0
 x 0 0
 x 0 0
@@ -21522,6 +21554,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -5.6838
 # !latitude: 35.8385
@@ -21531,30 +21565,37 @@ x 0 0
 Hejar Lesfar, Morocco
 +01:00 :Africa/Casablanca
 1.0000 meters
-x 0 0
+J1              0.0019  124.95
 K1              0.0500  103.00
-K2              0.0540  120.00
-x 0 0
+K2              0.0573  117.32
+L2              0.0117  109.97
 x 0 0
 M2              0.5200  98.00
-x 0 0
-M4              0.0235  180.00
-x 0 0
-x 0 0
-N2              0.0988  86.21
-x 0 0
+M3              0.0010  166.40
+M4              0.0274  222.76
+M6              0.0008  126.49
+M8              0.0001  6.79
+N2              0.1131  82.44
+2N2             0.0161  65.83
 O1              0.0300  357.00
 x 0 0
-P1              0.0165  102.92
+P1              0.0146  94.61
+Q1              0.0111  290.03
 x 0 0
-x 0 0
-x 0 0
+R2              0.0018  115.45
 x 0 0
 S2              0.2000  120.00
+S4              0.0016  212.61
 x 0 0
+T2              0.0124  112.56
+LDA2            0.0030  99.06
+MU2             0.0200  60.82
+NU2             0.0213  87.57
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0115  143.05
+MS4             0.0132  207.50
 x 0 0
 x 0 0
 x 0 0
@@ -21592,7 +21633,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0008  85.34
 x 0 0
+EPS2            0.0048  51.56
 x 0 0
 x 0 0
 x 0 0
@@ -21633,16 +21676,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0026  107.01
 x 0 0
 x 0 0
 x 0 0
@@ -21714,6 +21748,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 10.3094
 # !latitude: 36.8071
@@ -21723,30 +21759,37 @@ x 0 0
 La Goulette (Halq-al-Wadi), Tunisia
 +01:00 :Africa/Tunis
 0.3000 meters
-x 0 0
+J1              0.0014  250.79
 K1              0.0300  211.00
-K2              0.0081  304.08
-x 0 0
+K2              0.0083  305.88
+L2              0.0017  302.23
 x 0 0
 M2              0.0800  278.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0003  159.63
+M4              0.0030  183.26
+M6              0.0000  203.85
+M8              0.0003  257.67
+N2              0.0148  254.35
+2N2             0.0019  232.41
 O1              0.0100  130.00
 x 0 0
-P1              0.0099  210.92
+P1              0.0099  202.64
+Q1              0.0019  52.26
 x 0 0
-x 0 0
-x 0 0
+R2              0.0002  287.43
 x 0 0
 S2              0.0300  304.00
+S4              0.0003  147.18
 x 0 0
+T2              0.0016  286.99
+LDA2            0.0005  275.77
+MU2             0.0025  232.10
+NU2             0.0027  261.76
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0008  74.09
+MS4             0.0012  125.71
 x 0 0
 x 0 0
 x 0 0
@@ -21784,7 +21827,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  224.17
 x 0 0
+EPS2            0.0005  213.08
 x 0 0
 x 0 0
 x 0 0
@@ -21825,16 +21870,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  20.22
 x 0 0
 x 0 0
 x 0 0
@@ -21906,6 +21942,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 11.2539
 # !latitude: 34.7137
@@ -21915,30 +21953,37 @@ x 0 0
 El Abassia (Kerkennah), Tunisia
 +01:00 :Africa/Tunis
 0.6300 meters
-x 0 0
+J1              0.0016  55.22
 K1              0.0200  41.00
-K2              0.0378  138.00
-x 0 0
+K2              0.0435  130.87
+L2              0.0106  120.86
 x 0 0
 M2              0.2600  112.00
-x 0 0
-M4              0.0316  177.00
-x 0 0
-x 0 0
-N2              0.0494  98.06
-x 0 0
+M3              0.0000  48.53
+M4              0.0044  108.71
+M6              0.0008  252.95
+M8              0.0002  310.13
+N2              0.0400  110.75
+2N2             0.0048  116.36
 O1              0.0100  92.00
 x 0 0
-P1              0.0066  40.92
+P1              0.0056  50.43
+Q1              0.0035  91.54
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  158.11
 x 0 0
 S2              0.1400  138.00
+S4              0.0019  99.74
 x 0 0
+T2              0.0091  154.64
+LDA2            0.0023  143.30
+MU2             0.0047  131.33
+NU2             0.0099  106.37
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0019  26.63
+MS4             0.0056  74.44
 x 0 0
 x 0 0
 x 0 0
@@ -21976,7 +22021,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0047  284.71
 x 0 0
+EPS2            0.0013  121.17
 x 0 0
 x 0 0
 x 0 0
@@ -22017,16 +22064,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  327.03
 x 0 0
 x 0 0
 x 0 0
@@ -22098,6 +22136,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 10.7407
 # !latitude: 33.7161
@@ -22107,30 +22147,37 @@ x 0 0
 Houmt Ajim (Djerba), Tunisia
 +01:00 :Africa/Tunis
 0.6400 meters
-x 0 0
+J1              0.0010  68.91
 K1              0.0100  50.00
-K2              0.0540  159.00
-x 0 0
+K2              0.0629  149.85
+L2              0.0180  146.18
 x 0 0
 M2              0.3100  132.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0589  117.53
-x 0 0
+M3              0.0001  218.97
+M4              0.0112  233.74
+M6              0.0016  278.36
+M8              0.0004  333.21
+N2              0.0547  134.22
+2N2             0.0064  145.70
 O1              0.0100  114.00
 x 0 0
-P1              0.0033  49.92
+P1              0.0024  71.84
+Q1              0.0028  113.54
 x 0 0
-x 0 0
-x 0 0
+R2              0.0017  199.71
 x 0 0
 S2              0.2000  159.00
+S4              0.0058  341.02
 x 0 0
+T2              0.0117  195.86
+LDA2            0.0029  181.41
+MU2             0.0054  179.46
+NU2             0.0160  136.91
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0042  260.59
+MS4             0.0199  307.06
 x 0 0
 x 0 0
 x 0 0
@@ -22168,7 +22215,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0088  313.54
 x 0 0
+EPS2            0.0016  152.44
 x 0 0
 x 0 0
 x 0 0
@@ -22209,16 +22258,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0003  227.93
 x 0 0
 x 0 0
 x 0 0
@@ -22290,6 +22330,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 8.5002
 # !latitude: 44.3166
@@ -22299,30 +22341,37 @@ x 0 0
 Savona, Italy
 +01:00 :Europe/Rome
 0.1500 meters
-x 0 0
+J1              0.0018  219.82
 K1              0.0400  180.00
-K2              0.0108  269.08
-x 0 0
+K2              0.0113  267.10
+L2              0.0021  235.57
 x 0 0
 M2              0.0800  228.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  296.13
+M4              0.0056  348.18
+M6              0.0002  292.48
+M8              0.0001  32.27
+N2              0.0169  217.98
+2N2             0.0024  205.09
 O1              0.0200  119.00
 x 0 0
-P1              0.0132  179.92
+P1              0.0141  175.47
+Q1              0.0030  56.67
 x 0 0
-x 0 0
-x 0 0
+R2              0.0004  266.59
 x 0 0
 S2              0.0400  269.00
+S4              0.0003  17.73
 x 0 0
+T2              0.0026  265.20
+LDA2            0.0006  228.82
+MU2             0.0027  205.17
+NU2             0.0032  219.92
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0016  250.72
+MS4             0.0023  346.44
 x 0 0
 x 0 0
 x 0 0
@@ -22360,7 +22409,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  77.49
 x 0 0
+EPS2            0.0007  194.38
 x 0 0
 x 0 0
 x 0 0
@@ -22401,16 +22452,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0003  194.45
 x 0 0
 x 0 0
 x 0 0
@@ -22866,6 +22908,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 13.9396
 # !latitude: 40.7443
@@ -22875,30 +22919,37 @@ x 0 0
 Ischia, Italy
 +01:00 :Europe/Rome
 0.1600 meters
-x 0 0
+J1              0.0016  243.64
 K1              0.0300  207.00
-K2              0.0135  282.08
-x 0 0
+K2              0.0126  277.83
+L2              0.0027  267.56
 x 0 0
 M2              0.1200  261.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0003  179.66
+M4              0.0048  194.14
+M6              0.0001  24.07
+M8              0.0000  20.75
+N2              0.0245  244.08
+2N2             0.0033  228.67
 O1              0.0100  120.00
 x 0 0
-P1              0.0099  206.92
+P1              0.0100  199.13
+Q1              0.0018  45.40
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  272.03
 x 0 0
 S2              0.0500  282.00
+S4              0.0003  326.19
 x 0 0
+T2              0.0033  270.47
+LDA2            0.0008  256.27
+MU2             0.0038  230.81
+NU2             0.0045  246.63
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0008  110.89
+MS4             0.0015  247.10
 x 0 0
 x 0 0
 x 0 0
@@ -22936,7 +22987,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  253.17
 x 0 0
+EPS2            0.0009  215.55
 x 0 0
 x 0 0
 x 0 0
@@ -22977,16 +23030,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  42.44
 x 0 0
 x 0 0
 x 0 0
@@ -23058,6 +23102,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 15.9037
 # !latitude: 38.6815
@@ -23067,30 +23113,37 @@ x 0 0
 Tropea, Italy
 +01:00 :Europe/Rome
 0.2000 meters
-x 0 0
+J1              0.0021  251.83
 K1              0.0400  218.00
-K2              0.0135  294.08
-x 0 0
+K2              0.0125  289.78
+L2              0.0032  276.91
 x 0 0
 M2              0.1500  271.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0005  189.35
+M4              0.0065  205.37
+M6              0.0001  214.34
+M8              0.0000  44.03
+N2              0.0287  253.02
+2N2             0.0038  237.69
 O1              0.0100  158.00
 x 0 0
-P1              0.0132  217.92
+P1              0.0128  211.27
+Q1              0.0016  67.02
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  283.56
 x 0 0
 S2              0.0500  294.00
+S4              0.0004  335.44
 x 0 0
+T2              0.0032  282.07
+LDA2            0.0010  265.71
+MU2             0.0044  240.15
+NU2             0.0053  255.44
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0012  123.55
+MS4             0.0022  257.60
 x 0 0
 x 0 0
 x 0 0
@@ -23128,7 +23181,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  262.82
 x 0 0
+EPS2            0.0010  224.61
 x 0 0
 x 0 0
 x 0 0
@@ -23169,16 +23224,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  56.89
 x 0 0
 x 0 0
 x 0 0
@@ -23250,6 +23296,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 15.8864
 # !latitude: 38.4360
@@ -23259,30 +23307,37 @@ x 0 0
 Gioia Tauro, Italy
 +01:00 :Europe/Rome
 0.1700 meters
-x 0 0
+J1              0.0016  69.47
 K1              0.0300  35.00
-K2              0.0135  110.08
-x 0 0
+K2              0.0124  105.71
+L2              0.0026  94.09
 x 0 0
 M2              0.1200  88.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0004  182.33
+M4              0.0040  196.14
+M6              0.0002  35.19
+M8              0.0000  50.28
+N2              0.0230  69.82
+2N2             0.0031  54.30
 O1              0.0100  315.00
 x 0 0
-P1              0.0099  34.92
+P1              0.0096  28.25
+Q1              0.0016  229.64
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  100.75
 x 0 0
 S2              0.0500  110.00
+S4              0.0003  329.80
 x 0 0
+T2              0.0033  99.14
+LDA2            0.0008  82.67
+MU2             0.0035  56.95
+NU2             0.0043  72.28
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0008  121.24
+MS4             0.0016  254.05
 x 0 0
 x 0 0
 x 0 0
@@ -23320,7 +23375,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  87.09
 x 0 0
+EPS2            0.0008  41.08
 x 0 0
 x 0 0
 x 0 0
@@ -23361,16 +23418,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  56.84
 x 0 0
 x 0 0
 x 0 0
@@ -24018,6 +24066,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 14.9557
 # !latitude: 38.4714
@@ -24027,30 +24077,37 @@ x 0 0
 Lipari, Italy
 +01:00 :Europe/Rome
 0.2000 meters
-x 0 0
+J1              0.0015  248.69
 K1              0.0300  214.00
-K2              0.0108  284.08
-x 0 0
+K2              0.0100  280.66
+L2              0.0026  267.93
 x 0 0
 M2              0.1200  261.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0003  167.58
+M4              0.0043  184.72
+M6              0.0001  155.78
+M8              0.0000  358.30
+N2              0.0232  243.06
+2N2             0.0031  227.42
 O1              0.0100  125.00
 x 0 0
-P1              0.0099  213.92
+P1              0.0096  206.79
+Q1              0.0016  42.31
 x 0 0
-x 0 0
-x 0 0
+R2              0.0004  273.12
 x 0 0
 S2              0.0400  284.00
+S4              0.0003  313.82
 x 0 0
+T2              0.0026  271.63
+LDA2            0.0008  256.15
+MU2             0.0036  229.70
+NU2             0.0043  245.76
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0008  102.09
+MS4             0.0015  235.56
 x 0 0
 x 0 0
 x 0 0
@@ -24088,7 +24145,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  250.34
 x 0 0
+EPS2            0.0008  213.97
 x 0 0
 x 0 0
 x 0 0
@@ -24129,16 +24188,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  35.88
 x 0 0
 x 0 0
 x 0 0
@@ -24210,6 +24260,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 15.2500
 # !latitude: 38.2170
@@ -24219,30 +24271,37 @@ x 0 0
 Milazzo, Sicily, Italy
 +01:00 :Europe/Rome
 0.2000 meters
-x 0 0
+J1              0.0016  248.71
 K1              0.0300  215.00
-K2              0.0135  282.08
-x 0 0
+K2              0.0126  278.27
+L2              0.0026  269.90
 x 0 0
 M2              0.1200  263.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0003  168.87
+M4              0.0042  187.57
+M6              0.0001  161.06
+M8              0.0000  4.86
+N2              0.0230  244.99
+2N2             0.0030  229.35
 O1              0.0100  130.00
 x 0 0
-P1              0.0099  214.92
+P1              0.0096  207.75
+Q1              0.0016  43.68
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  270.16
 x 0 0
 S2              0.0500  282.00
+S4              0.0003  315.63
 x 0 0
+T2              0.0032  268.68
+LDA2            0.0008  258.12
+MU2             0.0035  231.66
+NU2             0.0043  247.65
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0008  104.77
+MS4             0.0015  237.50
 x 0 0
 x 0 0
 x 0 0
@@ -24280,7 +24339,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  251.57
 x 0 0
+EPS2            0.0008  215.94
 x 0 0
 x 0 0
 x 0 0
@@ -24321,16 +24382,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  39.32
 x 0 0
 x 0 0
 x 0 0
@@ -24402,6 +24454,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 12.4368
 # !latitude: 37.7874
@@ -24411,30 +24465,37 @@ x 0 0
 Marsala, Sicily, Italy
 +01:00 :Europe/Rome
 0.1500 meters
-x 0 0
+J1              0.0016  202.74
 K1              0.0400  163.00
-K2              0.0054  277.08
-x 0 0
+K2              0.0044  264.24
+L2              0.0012  256.35
 x 0 0
 M2              0.0700  265.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0003  223.68
+M4              0.0026  239.68
+M6              0.0000  306.02
+M8              0.0000  22.86
+N2              0.0162  243.12
+2N2             0.0024  229.04
 O1              0.0200  123.00
 x 0 0
-P1              0.0132  162.92
+P1              0.0129  159.06
+Q1              0.0022  101.34
 x 0 0
-x 0 0
-x 0 0
+R2              0.0002  259.80
 x 0 0
 S2              0.0200  277.00
+S4              0.0005  261.54
 x 0 0
+T2              0.0017  259.83
+LDA2            0.0005  253.53
+MU2             0.0028  236.28
+NU2             0.0029  246.04
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0009  162.04
+MS4             0.0020  227.92
 x 0 0
 x 0 0
 x 0 0
@@ -24472,7 +24533,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  293.27
 x 0 0
+EPS2            0.0007  216.99
 x 0 0
 x 0 0
 x 0 0
@@ -24513,16 +24576,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  106.08
 x 0 0
 x 0 0
 x 0 0
@@ -24594,6 +24648,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 12.5822
 # !latitude: 37.6510
@@ -24603,30 +24659,37 @@ x 0 0
 Mazara del Vallo, Sicily, Italy
 +01:00 :Europe/Rome
 0.1500 meters
-x 0 0
+J1              0.0010  135.45
 K1              0.0300  100.00
-K2              0.0054  133.08
-x 0 0
+K2              0.0071  111.13
+L2              0.0010  119.44
 x 0 0
 M2              0.0400  157.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0002  97.30
+M4              0.0011  133.15
+M6              0.0001  94.71
+M8              0.0000  90.36
+N2              0.0110  146.23
+2N2             0.0018  137.96
 O1              0.0200  75.00
 x 0 0
-P1              0.0099  99.92
+P1              0.0097  99.13
+Q1              0.0024  77.30
 x 0 0
-x 0 0
-x 0 0
+R2              0.0003  150.21
 x 0 0
 S2              0.0200  133.00
+S4              0.0007  118.77
 x 0 0
+T2              0.0019  151.00
+LDA2            0.0004  146.57
+MU2             0.0021  148.68
+NU2             0.0019  144.31
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0008  33.17
+MS4             0.0025  78.61
 x 0 0
 x 0 0
 x 0 0
@@ -24664,7 +24727,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  233.01
 x 0 0
+EPS2            0.0006  129.05
 x 0 0
 x 0 0
 x 0 0
@@ -24705,16 +24770,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  342.57
 x 0 0
 x 0 0
 x 0 0
@@ -25170,6 +25226,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 12.9057
 # !latitude: 43.9230
@@ -25179,30 +25237,37 @@ x 0 0
 Pesaro, Italy
 +01:00 :Europe/Rome
 0.3700 meters
-x 0 0
+J1              0.0116  108.88
 K1              0.1500  88.00
-K2              0.0189  321.08
-x 0 0
+K2              0.0210  316.59
+L2              0.0041  318.69
 x 0 0
 M2              0.1300  317.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0002  105.47
+M4              0.0004  235.23
+M6              0.0001  93.84
+M8              0.0000  141.60
+N2              0.0227  314.20
+2N2             0.0028  310.98
 O1              0.0400  58.00
 x 0 0
-P1              0.0495  87.92
+P1              0.0471  85.46
+Q1              0.0063  63.07
 x 0 0
-x 0 0
-x 0 0
+R2              0.0007  318.29
 x 0 0
 S2              0.0700  321.00
+S4              0.0003  287.01
 x 0 0
+T2              0.0045  316.68
+LDA2            0.0010  317.70
+MU2             0.0027  309.75
+NU2             0.0046  312.80
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0004  238.20
+MS4             0.0015  277.27
 x 0 0
 x 0 0
 x 0 0
@@ -25240,7 +25305,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0000  87.98
 x 0 0
+EPS2            0.0008  308.72
 x 0 0
 x 0 0
 x 0 0
@@ -25281,16 +25348,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  211.68
 x 0 0
 x 0 0
 x 0 0
@@ -25362,6 +25420,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 12.2670
 # !latitude: 45.2170
@@ -25371,30 +25431,37 @@ x 0 0
 Chioggia, Italy
 +01:00 :Europe/Rome
 0.5200 meters
-x 0 0
+J1              0.0125  109.33
 K1              0.1600  88.00
-K2              0.0324  314.08
-x 0 0
+K2              0.0360  308.91
+L2              0.0071  302.34
 x 0 0
 M2              0.2200  302.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0002  24.40
+M4              0.0005  160.09
+M6              0.0005  271.96
+M8              0.0000  199.92
+N2              0.0379  300.27
+2N2             0.0045  297.36
 O1              0.0500  73.00
 x 0 0
-P1              0.0528  87.92
+P1              0.0505  86.00
+Q1              0.0077  79.10
 x 0 0
-x 0 0
-x 0 0
+R2              0.0012  310.38
 x 0 0
 S2              0.1200  314.00
+S4              0.0004  191.29
 x 0 0
+T2              0.0078  308.99
+LDA2            0.0016  302.29
+MU2             0.0045  294.29
+NU2             0.0074  297.54
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0003  110.07
+MS4             0.0019  159.60
 x 0 0
 x 0 0
 x 0 0
@@ -25432,7 +25499,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  17.09
 x 0 0
+EPS2            0.0012  294.62
 x 0 0
 x 0 0
 x 0 0
@@ -25473,16 +25542,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  56.95
 x 0 0
 x 0 0
 x 0 0
@@ -25554,6 +25614,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 12.3273
 # !latitude: 45.3376
@@ -25563,30 +25625,37 @@ x 0 0
 Porto di Malamocco, Italy
 +01:00 :Europe/Rome
 0.5200 meters
-x 0 0
+J1              0.0140  103.34
 K1              0.1800  82.00
-K2              0.0378  305.08
-x 0 0
+K2              0.0421  299.79
+L2              0.0074  296.27
 x 0 0
 M2              0.2300  296.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0002  16.43
+M4              0.0004  159.39
+M6              0.0006  248.17
+M8              0.0000  166.79
+N2              0.0394  293.84
+2N2             0.0047  291.12
 O1              0.0500  65.00
 x 0 0
-P1              0.0594  81.92
+P1              0.0568  79.88
+Q1              0.0077  71.05
 x 0 0
-x 0 0
-x 0 0
+R2              0.0014  300.95
 x 0 0
 S2              0.1400  305.00
+S4              0.0005  185.08
 x 0 0
+T2              0.0091  299.58
+LDA2            0.0017  296.38
+MU2             0.0047  287.73
+NU2             0.0077  291.54
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0003  100.99
+MS4             0.0020  151.05
 x 0 0
 x 0 0
 x 0 0
@@ -25624,7 +25693,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  12.22
 x 0 0
+EPS2            0.0013  288.36
 x 0 0
 x 0 0
 x 0 0
@@ -25665,16 +25736,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  27.88
 x 0 0
 x 0 0
 x 0 0
@@ -25746,6 +25808,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 13.8465
 # !latitude: 44.8761
@@ -25755,30 +25819,37 @@ x 0 0
 Pula, Croatia
 +01:00 :Europe/Zagreb
 0.3400 meters
-x 0 0
+J1              0.0124  91.39
 K1              0.1600  69.00
-K2              0.0243  273.08
-x 0 0
+K2              0.0269  267.33
+L2              0.0046  263.89
 x 0 0
 M2              0.1500  265.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  60.41
+M4              0.0006  211.40
+M6              0.0001  167.05
+M8              0.0000  286.54
+N2              0.0260  263.44
+2N2             0.0032  261.46
 O1              0.0500  62.00
 x 0 0
-P1              0.0528  68.92
+P1              0.0507  67.21
+Q1              0.0078  68.37
 x 0 0
-x 0 0
-x 0 0
+R2              0.0009  267.87
 x 0 0
 S2              0.0900  273.00
+S4              0.0001  286.68
 x 0 0
+T2              0.0058  266.94
+LDA2            0.0011  263.87
+MU2             0.0031  257.87
+NU2             0.0051  260.95
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0003  229.21
+MS4             0.0008  275.47
 x 0 0
 x 0 0
 x 0 0
@@ -25816,7 +25887,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  296.87
 x 0 0
+EPS2            0.0009  259.27
 x 0 0
 x 0 0
 x 0 0
@@ -25857,16 +25930,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  214.08
 x 0 0
 x 0 0
 x 0 0
@@ -25938,6 +26002,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 13.6347
 # !latitude: 45.0810
@@ -25947,30 +26013,37 @@ x 0 0
 Rovinj, Croatia
 +01:00 :Europe/Zagreb
 0.4800 meters
-x 0 0
+J1              0.0124  93.73
 K1              0.1600  72.00
-K2              0.0297  280.08
-x 0 0
+K2              0.0329  274.60
+L2              0.0060  271.87
 x 0 0
 M2              0.1900  272.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  22.15
+M4              0.0007  198.51
+M6              0.0000  222.54
+M8              0.0000  296.99
+N2              0.0330  270.20
+2N2             0.0040  268.04
 O1              0.0500  58.00
 x 0 0
-P1              0.0528  71.92
+P1              0.0507  69.97
+Q1              0.0076  64.38
 x 0 0
-x 0 0
-x 0 0
+R2              0.0011  275.29
 x 0 0
 S2              0.1100  280.00
+S4              0.0002  218.46
 x 0 0
+T2              0.0070  274.18
+LDA2            0.0014  272.26
+MU2             0.0039  264.23
+NU2             0.0064  268.33
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  238.23
+MS4             0.0004  229.96
 x 0 0
 x 0 0
 x 0 0
@@ -26008,7 +26081,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  335.46
 x 0 0
+EPS2            0.0011  265.72
 x 0 0
 x 0 0
 x 0 0
@@ -26049,16 +26124,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  231.53
 x 0 0
 x 0 0
 x 0 0
@@ -26322,6 +26388,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 14.8506
 # !latitude: 44.1429
@@ -26331,30 +26399,37 @@ x 0 0
 Zaliv Pantera (Dugi Otok), Croatia
 +01:00 :Europe/Zagreb
 0.3000 meters
-x 0 0
+J1              0.0088  81.26
 K1              0.1200  60.00
-K2              0.0081  204.08
-x 0 0
+K2              0.0080  195.44
+L2              0.0011  188.46
 x 0 0
 M2              0.0400  194.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0000  114.75
+M4              0.0005  45.23
+M6              0.0000  77.69
+M8              0.0000  132.08
+N2              0.0074  192.99
+2N2             0.0009  201.92
 O1              0.0400  67.00
 x 0 0
-P1              0.0396  59.92
+P1              0.0371  56.89
+Q1              0.0060  76.76
 x 0 0
-x 0 0
-x 0 0
+R2              0.0002  191.30
 x 0 0
 S2              0.0300  204.00
+S4              0.0001  266.12
 x 0 0
+T2              0.0016  193.10
+LDA2            0.0003  205.33
+MU2             0.0005  194.19
+NU2             0.0012  208.15
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  100.59
+MS4             0.0002  194.60
 x 0 0
 x 0 0
 x 0 0
@@ -26392,7 +26467,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  179.87
 x 0 0
+EPS2            0.0002  209.81
 x 0 0
 x 0 0
 x 0 0
@@ -26433,16 +26510,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  39.22
 x 0 0
 x 0 0
 x 0 0
@@ -26514,6 +26582,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 15.2655
 # !latitude: 44.0866
@@ -26523,30 +26593,37 @@ x 0 0
 Gazenica (Zadar), Croatia
 +01:00 :Europe/Zagreb
 0.2400 meters
-x 0 0
+J1              0.0111  80.34
 K1              0.1300  63.00
-K2              0.0081  226.08
-x 0 0
+K2              0.0098  199.00
+L2              0.0019  194.85
 x 0 0
 M2              0.0600  230.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  142.60
+M4              0.0035  226.33
+M6              0.0001  277.47
+M8              0.0000  201.82
+N2              0.0136  240.13
+2N2             0.0015  229.73
 O1              0.0400  56.00
 x 0 0
-P1              0.0429  62.92
+P1              0.0446  60.59
+Q1              0.0065  52.72
 x 0 0
-x 0 0
-x 0 0
+R2              0.0003  195.92
 x 0 0
 S2              0.0300  226.00
+S4              0.0012  320.90
 x 0 0
+T2              0.0023  196.64
+LDA2            0.0001  147.11
+MU2             0.0025  197.81
+NU2             0.0019  184.79
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0003  191.22
+MS4             0.0033  272.08
 x 0 0
 x 0 0
 x 0 0
@@ -26584,7 +26661,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  192.13
 x 0 0
+EPS2            0.0005  204.11
 x 0 0
 x 0 0
 x 0 0
@@ -26625,16 +26704,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  88.91
 x 0 0
 x 0 0
 x 0 0
@@ -27090,6 +27160,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 16.1851
 # !latitude: 43.0615
@@ -27099,30 +27171,37 @@ x 0 0
 Vis, Croatia
 +01:00 :Europe/Zagreb
 0.1700 meters
-x 0 0
+J1              0.0058  77.27
 K1              0.0800  56.00
-K2              0.0135  111.08
-x 0 0
+K2              0.0149  103.18
+L2              0.0024  101.61
 x 0 0
 M2              0.0700  107.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  176.96
+M4              0.0011  14.22
+M6              0.0000  46.17
+M8              0.0000  23.07
+N2              0.0121  107.86
+2N2             0.0012  107.58
 O1              0.0200  42.00
 x 0 0
-P1              0.0264  55.92
+P1              0.0251  52.75
+Q1              0.0031  50.81
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  103.28
 x 0 0
 S2              0.0500  111.00
+S4              0.0003  111.83
 x 0 0
+T2              0.0031  101.96
+LDA2            0.0005  108.99
+MU2             0.0012  92.10
+NU2             0.0019  102.92
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0003  10.58
+MS4             0.0015  66.34
 x 0 0
 x 0 0
 x 0 0
@@ -27160,7 +27239,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  164.11
 x 0 0
+EPS2            0.0003  101.09
 x 0 0
 x 0 0
 x 0 0
@@ -27201,16 +27282,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  332.26
 x 0 0
 x 0 0
 x 0 0
@@ -27282,6 +27354,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 16.0861
 # !latitude: 43.0444
@@ -27291,30 +27365,37 @@ x 0 0
 Komiza (Vis), Croatia
 +01:00 :Europe/Zagreb
 0.2000 meters
-x 0 0
+J1              0.0058  76.62
 K1              0.0800  57.00
-K2              0.0135  119.08
-x 0 0
+K2              0.0148  111.47
+L2              0.0024  103.45
 x 0 0
 M2              0.0700  108.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0000  195.15
+M4              0.0008  15.37
+M6              0.0000  355.17
+M8              0.0000  237.27
+N2              0.0120  109.14
+2N2             0.0012  108.52
 O1              0.0200  40.00
 x 0 0
-P1              0.0264  56.92
+P1              0.0250  53.61
+Q1              0.0031  48.90
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  111.49
 x 0 0
 S2              0.0500  119.00
+S4              0.0003  115.63
 x 0 0
+T2              0.0031  110.26
+LDA2            0.0005  110.33
+MU2             0.0012  94.30
+NU2             0.0019  104.30
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  17.28
+MS4             0.0011  72.01
 x 0 0
 x 0 0
 x 0 0
@@ -27352,7 +27433,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  163.88
 x 0 0
+EPS2            0.0003  102.11
 x 0 0
 x 0 0
 x 0 0
@@ -27393,16 +27476,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  332.38
 x 0 0
 x 0 0
 x 0 0
@@ -27474,6 +27548,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 15.7585
 # !latitude: 43.0211
@@ -27483,30 +27559,37 @@ x 0 0
 Otok Svetac, Croatia
 +01:00 :Europe/Zagreb
 0.5200 meters
-x 0 0
+J1              0.0051  89.70
 K1              0.0700  69.00
-K2              0.0108  125.08
-x 0 0
+K2              0.0119  117.53
+L2              0.0024  117.54
 x 0 0
 M2              0.0700  122.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  217.52
+M4              0.0013  58.52
+M6              0.0001  30.53
+M8              0.0000  65.49
+N2              0.0119  123.65
+2N2             0.0012  122.10
 O1              0.0200  56.00
 x 0 0
-P1              0.0231  68.92
+P1              0.0219  65.86
+Q1              0.0032  64.39
 x 0 0
-x 0 0
-x 0 0
+R2              0.0004  117.53
 x 0 0
 S2              0.0400  125.00
+S4              0.0004  152.68
 x 0 0
+T2              0.0025  116.17
+LDA2            0.0005  124.98
+MU2             0.0012  105.44
+NU2             0.0019  116.90
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0003  53.98
+MS4             0.0017  108.11
 x 0 0
 x 0 0
 x 0 0
@@ -27544,7 +27627,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  180.45
 x 0 0
+EPS2            0.0003  113.20
 x 0 0
 x 0 0
 x 0 0
@@ -27585,16 +27670,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  17.77
 x 0 0
 x 0 0
 x 0 0
@@ -27666,6 +27742,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 17.4332
 # !latitude: 43.0506
@@ -27675,30 +27753,37 @@ x 0 0
 Ploce, Croatia
 +01:00 :Europe/Zagreb
 0.2200 meters
-x 0 0
+J1              0.0058  73.35
 K1              0.0800  52.00
-K2              0.0162  122.08
-x 0 0
+K2              0.0180  112.93
+L2              0.0030  112.38
 x 0 0
 M2              0.0900  120.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  195.61
+M4              0.0021  25.57
+M6              0.0007  141.13
+M8              0.0000  294.40
+N2              0.0156  119.40
+2N2             0.0016  120.65
 O1              0.0300  40.00
 x 0 0
-P1              0.0264  51.92
+P1              0.0251  48.96
+Q1              0.0046  49.02
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  112.69
 x 0 0
 S2              0.0600  122.00
+S4              0.0007  122.99
 x 0 0
+T2              0.0037  111.70
+LDA2            0.0007  120.28
+MU2             0.0015  105.92
+NU2             0.0025  116.40
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0006  22.92
+MS4             0.0028  78.34
 x 0 0
 x 0 0
 x 0 0
@@ -27736,7 +27821,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  170.97
 x 0 0
+EPS2            0.0004  116.13
 x 0 0
 x 0 0
 x 0 0
@@ -27777,16 +27864,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  339.22
 x 0 0
 x 0 0
 x 0 0
@@ -27858,6 +27936,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 18.0845
 # !latitude: 42.6605
@@ -27867,30 +27947,37 @@ x 0 0
 Dubrovnik (Luka Gruz), Croatia
 +01:00 :Europe/Zagreb
 0.1800 meters
-x 0 0
+J1              0.0033  83.05
 K1              0.0500  62.00
-K2              0.0162  120.08
-x 0 0
+K2              0.0184  111.98
+L2              0.0030  111.49
 x 0 0
 M2              0.0900  115.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  296.35
+M4              0.0011  274.43
+M6              0.0000  257.76
+M8              0.0000  186.46
+N2              0.0158  113.33
+2N2             0.0018  111.48
 O1              0.0200  47.00
 x 0 0
-P1              0.0165  61.92
+P1              0.0157  58.71
+Q1              0.0031  58.53
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  112.23
 x 0 0
 S2              0.0600  120.00
+S4              0.0001  338.81
 x 0 0
+T2              0.0039  111.14
+LDA2            0.0007  114.85
+MU2             0.0017  103.23
+NU2             0.0028  110.02
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  262.57
+MS4             0.0004  291.10
 x 0 0
 x 0 0
 x 0 0
@@ -27928,7 +28015,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  168.65
 x 0 0
+EPS2            0.0004  106.89
 x 0 0
 x 0 0
 x 0 0
@@ -27969,16 +28058,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  227.39
 x 0 0
 x 0 0
 x 0 0
@@ -28242,6 +28322,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 19.0886
 # !latitude: 42.0957
@@ -28251,30 +28333,37 @@ x 0 0
 Bar, Montenegro
 +01:00 :Europe/Podgorica
 0.1800 meters
-x 0 0
+J1              0.0032  77.28
 K1              0.0500  57.00
-K2              0.0162  115.08
-x 0 0
+K2              0.0184  108.12
+L2              0.0030  105.87
 x 0 0
 M2              0.0900  109.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  292.31
+M4              0.0013  263.31
+M6              0.0000  237.81
+M8              0.0000  163.56
+N2              0.0158  108.18
+2N2             0.0017  106.58
 O1              0.0200  48.00
 x 0 0
-P1              0.0165  56.92
+P1              0.0156  53.35
+Q1              0.0031  60.09
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  108.32
 x 0 0
 S2              0.0600  115.00
+S4              0.0001  329.14
 x 0 0
+T2              0.0039  107.23
+LDA2            0.0007  109.20
+MU2             0.0017  98.41
+NU2             0.0028  104.90
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  247.21
+MS4             0.0005  282.16
 x 0 0
 x 0 0
 x 0 0
@@ -28312,7 +28401,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  160.19
 x 0 0
+EPS2            0.0004  102.14
 x 0 0
 x 0 0
 x 0 0
@@ -28353,16 +28444,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  215.53
 x 0 0
 x 0 0
 x 0 0
@@ -28434,6 +28516,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 19.5860
 # !latitude: 41.8110
@@ -28443,30 +28527,37 @@ x 0 0
 Shëngjin, Albania
 +01:00 :Europe/Tirane
 0.1900 meters
-x 0 0
+J1              0.0032  79.20
 K1              0.0500  59.00
-K2              0.0162  108.08
-x 0 0
+K2              0.0185  101.85
+L2              0.0030  100.91
 x 0 0
 M2              0.0900  104.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  287.81
+M4              0.0014  253.81
+M6              0.0000  221.08
+M8              0.0000  143.79
+N2              0.0158  103.50
+2N2             0.0017  102.07
 O1              0.0200  38.00
 x 0 0
-P1              0.0165  58.92
+P1              0.0155  55.46
+Q1              0.0030  50.70
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  102.25
 x 0 0
 S2              0.0600  108.00
+S4              0.0001  321.65
 x 0 0
+T2              0.0039  101.18
+LDA2            0.0007  104.23
+MU2             0.0017  93.99
+NU2             0.0028  100.26
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  236.91
+MS4             0.0007  274.76
 x 0 0
 x 0 0
 x 0 0
@@ -28504,7 +28595,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  152.44
 x 0 0
+EPS2            0.0004  97.78
 x 0 0
 x 0 0
 x 0 0
@@ -28545,16 +28638,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  205.70
 x 0 0
 x 0 0
 x 0 0
@@ -29010,6 +29094,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 26.3554
 # !latitude: 36.5472
@@ -29019,30 +29105,37 @@ x 0 0
 Astypalaia, Greece
 +02:00 :Europe/Athens
 0.1000 meters
-x 0 0
+J1              0.0007  350.02
 K1              0.0200  5.00
-K2              0.0054  349.16
-x 0 0
+K2              0.0064  346.64
+L2              0.0011  357.05
 x 0 0
 M2              0.0300  353.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0000  308.41
+M4              0.0003  316.56
+M6              0.0000  108.42
+M8              0.0000  4.70
+N2              0.0047  357.67
+2N2             0.0006  9.40
 O1              0.0100  344.00
 x 0 0
-P1              0.0066  4.84
+P1              0.0059  3.50
+Q1              0.0011  320.51
 x 0 0
-x 0 0
-x 0 0
+R2              0.0002  359.24
 x 0 0
 S2              0.0200  349.00
+S4              0.0002  64.14
 x 0 0
+T2              0.0013  357.57
+LDA2            0.0002  1.18
+MU2             0.0004  9.42
+NU2             0.0009  356.67
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  315.76
+MS4             0.0007  16.31
 x 0 0
 x 0 0
 x 0 0
@@ -29080,7 +29173,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  180.33
 x 0 0
+EPS2            0.0002  12.94
 x 0 0
 x 0 0
 x 0 0
@@ -29121,16 +29216,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  272.21
 x 0 0
 x 0 0
 x 0 0
@@ -29202,6 +29288,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 27.2906
 # !latitude: 36.8982
@@ -29211,30 +29299,37 @@ x 0 0
 Kos, Greece
 +02:00 :Europe/Athens
 0.1000 meters
-x 0 0
+J1              0.0008  339.08
 K1              0.0200  355.00
-K2              0.0054  347.16
-x 0 0
+K2              0.0064  345.71
+L2              0.0013  337.38
 x 0 0
 M2              0.0400  329.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0000  234.11
+M4              0.0005  224.61
+M6              0.0001  18.85
+M8              0.0000  97.89
+N2              0.0061  331.15
+2N2             0.0008  343.28
 O1              0.0100  310.00
 x 0 0
-P1              0.0066  354.84
+P1              0.0060  352.93
+Q1              0.0012  288.58
 x 0 0
-x 0 0
-x 0 0
+R2              0.0002  355.58
 x 0 0
 S2              0.0200  347.00
+S4              0.0001  338.66
 x 0 0
+T2              0.0012  354.00
+LDA2            0.0003  338.69
+MU2             0.0006  341.65
+NU2             0.0013  332.41
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  236.94
+MS4             0.0008  294.72
 x 0 0
 x 0 0
 x 0 0
@@ -29272,7 +29367,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  169.74
 x 0 0
+EPS2            0.0002  347.43
 x 0 0
 x 0 0
 x 0 0
@@ -29313,16 +29410,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  205.07
 x 0 0
 x 0 0
 x 0 0
@@ -29586,6 +29674,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 28.2329
 # !latitude: 36.4471
@@ -29595,30 +29685,37 @@ x 0 0
 Ródos, Greece
 +02:00 :Europe/Athens
 0.2000 meters
-x 0 0
+J1              0.0008  313.97
 K1              0.0200  330.00
-K2              0.0081  321.16
-x 0 0
+K2              0.0096  319.39
+L2              0.0017  318.97
 x 0 0
 M2              0.0500  308.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0000  242.20
+M4              0.0000  133.78
+M6              0.0000  29.50
+M8              0.0000  277.68
+N2              0.0077  311.08
+2N2             0.0010  318.30
 O1              0.0100  332.00
 x 0 0
-P1              0.0066  329.84
+P1              0.0059  328.67
+Q1              0.0013  310.00
 x 0 0
-x 0 0
-x 0 0
+R2              0.0002  328.93
 x 0 0
 S2              0.0300  321.00
+S4              0.0000  262.66
 x 0 0
+T2              0.0018  327.25
+LDA2            0.0004  318.94
+MU2             0.0008  319.55
+NU2             0.0016  310.27
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0000  138.26
+MS4             0.0001  206.11
 x 0 0
 x 0 0
 x 0 0
@@ -29656,7 +29753,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  141.08
 x 0 0
+EPS2            0.0003  318.25
 x 0 0
 x 0 0
 x 0 0
@@ -29697,16 +29796,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  76.39
 x 0 0
 x 0 0
 x 0 0
@@ -29970,6 +30060,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 29.5924
 # !latitude: 36.1505
@@ -29977,30 +30069,37 @@ x 0 0
 Megisti (Kastellorizo), Greece
 +02:00 :Europe/Athens
 0.2000 meters
-x 0 0
+J1              0.0008  318.24
 K1              0.0200  332.00
-K2              0.0108  313.16
-x 0 0
+K2              0.0125  311.99
+L2              0.0024  315.55
 x 0 0
 M2              0.0700  303.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  238.32
+M4              0.0001  107.00
+M6              0.0000  18.57
+M8              0.0000  267.92
+N2              0.0108  306.17
+2N2             0.0014  312.64
 O1              0.0200  289.00
 x 0 0
-P1              0.0066  331.84
+P1              0.0060  332.87
+Q1              0.0028  268.07
 x 0 0
-x 0 0
-x 0 0
+R2              0.0003  319.52
 x 0 0
 S2              0.0400  313.00
+S4              0.0000  223.89
 x 0 0
+T2              0.0023  317.95
+LDA2            0.0005  314.48
+MU2             0.0011  312.98
+NU2             0.0023  306.01
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  114.86
+MS4             0.0002  175.53
 x 0 0
 x 0 0
 x 0 0
@@ -30038,7 +30137,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  139.17
 x 0 0
+EPS2            0.0004  312.37
 x 0 0
 x 0 0
 x 0 0
@@ -30079,16 +30180,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  63.38
 x 0 0
 x 0 0
 x 0 0
@@ -30160,6 +30252,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 33.9095
 # !latitude: 35.4286
@@ -30169,30 +30263,37 @@ x 0 0
 Kaplica (Davlos), Cyprus
 +02:00 :Asia/Nicosia
 0.4900 meters
-x 0 0
+J1              0.0010  290.46
 K1              0.0200  303.00
-K2              0.0162  315.16
-x 0 0
+K2              0.0183  315.94
+L2              0.0032  312.11
 x 0 0
 M2              0.1000  299.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  243.30
+M4              0.0004  100.72
+M6              0.0000  359.17
+M8              0.0000  188.46
+N2              0.0161  300.61
+2N2             0.0020  305.46
 O1              0.0200  288.00
 x 0 0
-P1              0.0066  302.84
+P1              0.0064  304.13
+Q1              0.0032  269.65
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  321.00
 x 0 0
 S2              0.0600  315.00
+S4              0.0002  212.95
 x 0 0
+T2              0.0034  319.71
+LDA2            0.0008  309.53
+MU2             0.0017  303.85
+NU2             0.0033  301.42
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  109.25
+MS4             0.0007  167.14
 x 0 0
 x 0 0
 x 0 0
@@ -30230,7 +30331,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  141.54
 x 0 0
+EPS2            0.0006  305.09
 x 0 0
 x 0 0
 x 0 0
@@ -30271,16 +30374,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  63.20
 x 0 0
 x 0 0
 x 0 0
@@ -30352,6 +30446,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 33.3346
 # !latitude: 35.3411
@@ -30361,30 +30457,37 @@ x 0 0
 Girne (Kyrenia), Cyprus
 +02:00 :Asia/Nicosia
 0.4800 meters
-x 0 0
+J1              0.0015  292.24
 K1              0.0300  306.00
-K2              0.0162  316.16
-x 0 0
+K2              0.0183  316.13
+L2              0.0032  306.20
 x 0 0
 M2              0.1000  293.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  229.91
+M4              0.0004  87.45
+M6              0.0000  344.63
+M8              0.0000  240.28
+N2              0.0160  294.94
+2N2             0.0020  300.01
 O1              0.0200  287.00
 x 0 0
-P1              0.0099  305.84
+P1              0.0094  306.18
+Q1              0.0031  268.25
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  321.33
 x 0 0
 S2              0.0600  316.00
+S4              0.0002  199.86
 x 0 0
+T2              0.0034  320.01
+LDA2            0.0008  303.75
+MU2             0.0017  298.58
+NU2             0.0033  295.69
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  96.08
+MS4             0.0007  154.02
 x 0 0
 x 0 0
 x 0 0
@@ -30422,7 +30525,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  134.82
 x 0 0
+EPS2            0.0006  299.63
 x 0 0
 x 0 0
 x 0 0
@@ -30463,16 +30568,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  49.70
 x 0 0
 x 0 0
 x 0 0
@@ -30544,6 +30640,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 33.0331
 # !latitude: 34.5721
@@ -30553,30 +30651,37 @@ x 0 0
 Akrotiri, Cyprus
 +02:00 :Asia/Nicosia
 0.4000 meters
-x 0 0
+J1              0.0015  288.05
 K1              0.0300  301.00
-K2              0.0162  310.16
-x 0 0
+K2              0.0182  310.27
+L2              0.0033  309.12
 x 0 0
 M2              0.1000  296.00
-x 0 0
-M4              0.0002  135.00
-M6              0.0005  173.00
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  233.13
+M4              0.0003  89.25
+M6              0.0000  324.75
+M8              0.0000  131.01
+N2              0.0161  298.37
+2N2             0.0020  303.78
 O1              0.0200  280.00
 x 0 0
-P1              0.0099  300.84
+P1              0.0093  302.55
+Q1              0.0032  260.23
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  316.01
 x 0 0
 S2              0.0600  310.00
+S4              0.0002  203.47
 x 0 0
+T2              0.0034  314.68
+LDA2            0.0008  306.97
+MU2             0.0017  302.73
+NU2             0.0033  299.23
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  99.36
+MS4             0.0007  157.52
 x 0 0
 x 0 0
 x 0 0
@@ -30614,7 +30719,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  136.50
 x 0 0
+EPS2            0.0006  303.32
 x 0 0
 x 0 0
 x 0 0
@@ -30655,16 +30762,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  52.14
 x 0 0
 x 0 0
 x 0 0
@@ -30736,6 +30834,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 33.0424
 # !latitude: 34.6686
@@ -30745,30 +30845,37 @@ x 0 0
 Limassol, Cyprus
 +02:00 :Asia/Nicosia
 0.3800 meters
-x 0 0
+J1              0.0015  287.91
 K1              0.0300  301.00
-K2              0.0162  308.16
-x 0 0
+K2              0.0182  308.17
+L2              0.0033  307.11
 x 0 0
 M2              0.1000  294.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  228.82
+M4              0.0004  86.34
+M6              0.0000  312.77
+M8              0.0000  112.20
+N2              0.0161  296.33
+2N2             0.0020  301.68
 O1              0.0200  273.00
 x 0 0
-P1              0.0099  300.84
+P1              0.0094  302.35
+Q1              0.0032  253.35
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  313.71
 x 0 0
 S2              0.0600  308.00
+S4              0.0002  198.32
 x 0 0
+T2              0.0034  312.38
+LDA2            0.0008  304.94
+MU2             0.0017  300.62
+NU2             0.0033  297.18
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  94.77
+MS4             0.0007  152.59
 x 0 0
 x 0 0
 x 0 0
@@ -30806,7 +30913,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  134.39
 x 0 0
+EPS2            0.0006  301.23
 x 0 0
 x 0 0
 x 0 0
@@ -30847,16 +30956,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  48.80
 x 0 0
 x 0 0
 x 0 0
@@ -30928,6 +31028,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 33.9484
 # !latitude: 35.1234
@@ -30937,30 +31039,37 @@ x 0 0
 Famagusta, Cyprus
 +02:00 :Asia/Nicosia
 0.4000 meters
-x 0 0
+J1              0.0010  295.34
 K1              0.0200  308.00
-K2              0.0189  320.16
-x 0 0
+K2              0.0213  320.97
+L2              0.0036  305.01
 x 0 0
 M2              0.1100  292.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  228.25
+M4              0.0005  85.20
+M6              0.0000  307.89
+M8              0.0000  96.75
+N2              0.0177  293.67
+2N2             0.0022  298.59
 O1              0.0200  291.00
 x 0 0
-P1              0.0066  307.84
+P1              0.0064  309.12
+Q1              0.0032  272.46
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  325.98
 x 0 0
 S2              0.0700  320.00
+S4              0.0002  197.13
 x 0 0
+T2              0.0040  324.69
+LDA2            0.0008  302.52
+MU2             0.0018  297.08
+NU2             0.0037  294.54
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  93.61
+MS4             0.0009  151.40
 x 0 0
 x 0 0
 x 0 0
@@ -30998,7 +31107,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  134.05
 x 0 0
+EPS2            0.0006  298.19
 x 0 0
 x 0 0
 x 0 0
@@ -31039,16 +31150,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  47.99
 x 0 0
 x 0 0
 x 0 0
@@ -31120,6 +31222,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 35.6265
 # !latitude: 33.9863
@@ -31129,30 +31233,37 @@ x 0 0
 Jounieh, Lebanon
 +02:00 :Asia/Beirut
 0.2900 meters
-x 0 0
+J1              0.0016  284.71
 K1              0.0300  297.00
-K2              0.0189  306.16
-x 0 0
+K2              0.0210  306.97
+L2              0.0039  306.07
 x 0 0
 M2              0.1200  293.00
-x 0 0
-M4              0.0010  137.00
-M6              0.0005  167.00
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  233.37
+M4              0.0005  90.15
+M6              0.0000  299.10
+M8              0.0000  108.60
+N2              0.0197  294.52
+2N2             0.0025  299.33
 O1              0.0200  269.00
 x 0 0
-P1              0.0099  296.84
+P1              0.0093  298.28
+Q1              0.0033  250.53
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  311.62
 x 0 0
 S2              0.0700  306.00
+S4              0.0002  201.17
 x 0 0
+T2              0.0039  310.42
+LDA2            0.0009  303.58
+MU2             0.0020  297.74
+NU2             0.0040  295.80
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  97.98
+MS4             0.0010  155.58
 x 0 0
 x 0 0
 x 0 0
@@ -31190,7 +31301,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  136.32
 x 0 0
+EPS2            0.0007  298.95
 x 0 0
 x 0 0
 x 0 0
@@ -31231,16 +31344,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  52.49
 x 0 0
 x 0 0
 x 0 0
@@ -31312,6 +31416,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 35.1981
 # !latitude: 33.2745
@@ -31321,30 +31427,37 @@ x 0 0
 Sour (Tyre), Lebanon
 +02:00 :Asia/Beirut
 0.3000 meters
-x 0 0
+J1              0.0016  280.33
 K1              0.0300  293.00
-K2              0.0189  306.16
-x 0 0
+K2              0.0210  306.90
+L2              0.0039  307.61
 x 0 0
 M2              0.1200  294.00
-x 0 0
-M4              0.0008  3.00
-M6              0.0004  137.00
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  234.29
+M4              0.0005  90.53
+M6              0.0000  276.15
+M8              0.0000  110.25
+N2              0.0197  296.42
+2N2             0.0025  301.60
 O1              0.0200  292.00
 x 0 0
-P1              0.0099  292.84
+P1              0.0093  294.43
+Q1              0.0034  272.66
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  312.17
 x 0 0
 S2              0.0700  306.00
+S4              0.0002  201.57
 x 0 0
+T2              0.0040  310.96
+LDA2            0.0009  305.34
+MU2             0.0021  300.28
+NU2             0.0040  297.82
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  98.36
+MS4             0.0009  155.98
 x 0 0
 x 0 0
 x 0 0
@@ -31382,7 +31495,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  136.68
 x 0 0
+EPS2            0.0007  301.17
 x 0 0
 x 0 0
 x 0 0
@@ -31423,16 +31538,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  52.81
 x 0 0
 x 0 0
 x 0 0
@@ -31504,6 +31610,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 31.7670
 # !latitude: 31.4670
@@ -31513,30 +31621,37 @@ x 0 0
 Mina Dumyat (Damietta), Egypt
 +02:00 :Africa/Cairo
 0.4000 meters
-x 0 0
+J1              0.0010  305.33
 K1              0.0200  324.00
-K2              0.0189  313.16
-x 0 0
+K2              0.0207  312.02
+L2              0.0037  305.11
 x 0 0
 M2              0.1100  294.00
-x 0 0
-M4              0.0044  304.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  218.01
+M4              0.0005  67.29
+M6              0.0001  129.56
+M8              0.0000  21.17
+N2              0.0177  296.58
+2N2             0.0023  303.17
 O1              0.0200  252.00
 x 0 0
-P1              0.0066  323.84
+P1              0.0060  323.05
+Q1              0.0033  226.96
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  319.90
 x 0 0
 S2              0.0700  313.00
+S4              0.0002  175.37
 x 0 0
+T2              0.0042  318.59
+LDA2            0.0009  304.20
+MU2             0.0019  303.36
+NU2             0.0037  297.71
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0002  75.96
+MS4             0.0010  131.50
 x 0 0
 x 0 0
 x 0 0
@@ -31574,7 +31689,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  127.97
 x 0 0
+EPS2            0.0007  302.61
 x 0 0
 x 0 0
 x 0 0
@@ -31615,16 +31732,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  33.57
 x 0 0
 x 0 0
 x 0 0
@@ -32272,6 +32380,8 @@ x 0 0
 # date_imported: 20260701
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 13.1830
 # !latitude: 32.9000
@@ -32281,30 +32391,37 @@ x 0 0
 Tripoli (Tarabulus), Libya
 +02:00 :Africa/Tripoli
 0.3000 meters
-x 0 0
+J1              0.0013  66.47
 K1              0.0200  36.00
-K2              0.0216  147.16
-x 0 0
+K2              0.0257  142.82
+L2              0.0049  141.16
 x 0 0
 M2              0.1300  123.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0000  40.92
+M4              0.0046  103.57
+M6              0.0006  38.97
+M8              0.0000  349.95
+N2              0.0221  122.48
+2N2             0.0025  124.83
 O1              0.0100  201.00
 x 0 0
-P1              0.0066  35.84
+P1              0.0055  43.28
+Q1              0.0039  200.87
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  162.07
 x 0 0
 S2              0.0800  147.00
+S4              0.0013  151.00
 x 0 0
+T2              0.0041  160.76
+LDA2            0.0009  145.63
+MU2             0.0019  123.83
+NU2             0.0048  126.87
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0014  56.77
+MS4             0.0053  125.77
 x 0 0
 x 0 0
 x 0 0
@@ -32342,7 +32459,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0014  347.95
 x 0 0
+EPS2            0.0006  125.90
 x 0 0
 x 0 0
 x 0 0
@@ -32383,16 +32502,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  357.34
 x 0 0
 x 0 0
 x 0 0

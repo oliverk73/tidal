@@ -15385,6 +15385,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 57.9333
 # !latitude: 81.7833
@@ -15395,30 +15397,37 @@ x 0 0
 Bukhta Teplits (Franz Josef Land), Arkhangelsk Oblast, Russia
 +05:00 :Europe/Moscow
 0.4000 meters
-x 0 0
+J1              0.0014  102.22
 K1              0.0300  62.00
-K2              0.0162  268.00
-x 0 0
+K2              0.0198  262.49
+L2              0.0055  232.62
 x 0 0
 M2              0.1700  211.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0323  180.45
-x 0 0
+M3              0.0002  120.07
+M4              0.0022  113.55
+M6              0.0020  153.76
+M8              0.0026  201.28
+N2              0.0324  181.03
+2N2             0.0048  147.42
 O1              0.0100  33.00
 x 0 0
-P1              0.0099  61.59
+P1              0.0089  74.29
+Q1              0.0030  93.47
 x 0 0
-x 0 0
-x 0 0
+R2              0.0007  256.12
 x 0 0
 S2              0.0600  268.00
+S4              0.0002  298.01
 x 0 0
+T2              0.0046  254.02
+LDA2            0.0014  220.82
+MU2             0.0058  158.89
+NU2             0.0068  178.48
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0025  63.87
+MS4             0.0040  189.09
 x 0 0
 x 0 0
 x 0 0
@@ -15456,7 +15465,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  68.77
 x 0 0
+EPS2            0.0012  119.26
 x 0 0
 x 0 0
 x 0 0
@@ -15497,16 +15508,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0004  357.39
 x 0 0
 x 0 0
 x 0 0
@@ -15579,6 +15581,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 91.1110
 # !latitude: 79.5004
@@ -15588,30 +15592,37 @@ x 0 0
 Ostrov Domashniy (Severnaya Zemlya), Krasnoyarsk Krai, Russia
 +06:00 :Asia/Krasnoyarsk
 0.3000 meters
-x 0 0
+J1              0.0022  41.49
 K1              0.0600  46.00
-K2              0.0108  86.00
-x 0 0
+K2              0.0069  109.04
+L2              0.0026  88.72
 x 0 0
 M2              0.1000  28.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0190  356.91
-x 0 0
+M3              0.0001  14.53
+M4              0.0021  68.06
+M6              0.0013  167.12
+M8              0.0001  198.39
+N2              0.0133  8.99
+2N2             0.0016  345.27
 O1              0.0200  36.00
 x 0 0
-P1              0.0198  45.51
+P1              0.0204  39.35
+Q1              0.0001  312.65
 x 0 0
-x 0 0
-x 0 0
+R2              0.0002  103.56
 x 0 0
 S2              0.0400  86.00
+S4              0.0005  191.52
 x 0 0
+T2              0.0018  98.74
+LDA2            0.0006  76.14
+MU2             0.0012  11.15
+NU2             0.0026  20.66
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0038  304.66
+MS4             0.0073  78.13
 x 0 0
 x 0 0
 x 0 0
@@ -15649,7 +15660,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  222.26
 x 0 0
+EPS2            0.0005  317.35
 x 0 0
 x 0 0
 x 0 0
@@ -15690,16 +15703,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0009  239.63
 x 0 0
 x 0 0
 x 0 0
@@ -17320,6 +17324,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 95.1333
 # !latitude: 76.1333
@@ -17329,30 +17335,37 @@ x 0 0
 Reyd Zarya, Krasnoyarsk Krai, Russia
 +07:00 :Asia/Krasnoyarsk
 0.4000 meters
-x 0 0
+J1              0.0043  358.61
 K1              0.0400  13.00
-K2              0.0216  119.00
-x 0 0
+K2              0.0225  124.12
+L2              0.0070  50.49
 x 0 0
 M2              0.1800  39.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0342  356.12
-x 0 0
+M3              0.0004  250.77
+M4              0.0200  262.41
+M6              0.0021  43.99
+M8              0.0007  2.70
+N2              0.0305  1.34
+2N2             0.0032  328.60
 O1              0.0200  11.00
 x 0 0
-P1              0.0132  12.43
+P1              0.0162  6.62
+Q1              0.0059  293.18
 x 0 0
-x 0 0
-x 0 0
+R2              0.0008  101.54
 x 0 0
 S2              0.0800  119.00
+S4              0.0013  108.16
 x 0 0
+T2              0.0053  94.77
+LDA2            0.0017  44.15
+MU2             0.0050  29.04
+NU2             0.0056  7.38
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0084  245.00
+MS4             0.0132  15.66
 x 0 0
 x 0 0
 x 0 0
@@ -17390,7 +17403,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0018  122.96
 x 0 0
+EPS2            0.0010  288.02
 x 0 0
 x 0 0
 x 0 0
@@ -17431,16 +17446,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0021  181.37
 x 0 0
 x 0 0
 x 0 0
@@ -18675,6 +18681,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 66.8097
 # !latitude: 69.7198
@@ -18685,30 +18693,37 @@ x 0 0
 Marre-Sale, Yamalo-Nenets Autonomous Okrug, Russia
 +05:00 :Asia/Yekaterinburg
 0.4000 meters
-x 0 0
+J1              0.0025  52.10
 K1              0.0400  274.00
-K2              0.0135  226.00
-x 0 0
+K2              0.0223  153.19
+L2              0.0071  213.86
 x 0 0
 M2              0.1100  165.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0209  132.30
-x 0 0
+M3              0.0002  38.63
+M4              0.0248  313.97
+M6              0.0016  104.46
+M8              0.0005  327.94
+N2              0.0086  157.67
+2N2             0.0043  235.25
 O1              0.0500  86.00
 x 0 0
-P1              0.0132  273.59
+P1              0.0124  302.03
+Q1              0.0214  5.63
 x 0 0
-x 0 0
-x 0 0
+R2              0.0002  73.15
 x 0 0
 S2              0.0500  226.00
+S4              0.0018  175.91
 x 0 0
+T2              0.0022  68.90
+LDA2            0.0012  79.72
+MU2             0.0103  257.21
+NU2             0.0007  42.87
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0083  28.78
+MS4             0.0089  116.75
 x 0 0
 x 0 0
 x 0 0
@@ -18746,7 +18761,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0032  261.85
 x 0 0
+EPS2            0.0009  259.52
 x 0 0
 x 0 0
 x 0 0
@@ -18787,16 +18804,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0025  314.22
 x 0 0
 x 0 0
 x 0 0
@@ -19449,6 +19457,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 54.0690
 # !latitude: 73.3594
@@ -19459,28 +19469,37 @@ x 0 0
 Mys Seryebryany (Novaya Zemlya), Arkhangelsk Oblast, Russia
 +03:00 :Europe/Moscow
 0.3900 meters
-x 0 0
+J1              0.0036  283.09
 K1              0.0500  214.00
-K2              0.0135  337.00
-x 0 0
+K2              0.0153  332.37
+L2              0.0049  292.71
 x 0 0
 M2              0.2400  257.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0456  214.12
-x 0 0
+M3              0.0009  42.66
+M4              0.0237  276.06
+M6              0.0074  201.44
+M8              0.0029  324.43
+N2              0.0435  219.36
+2N2             0.0070  181.30
 O1              0.0100  81.00
 x 0 0
-P1              0.0165  213.75
+P1              0.0165  218.77
+Q1              0.0082  21.93
 x 0 0
+R2              0.0004  326.09
 x 0 0
+S2              0.0500  337.00
+S4              0.0006  290.02
 x 0 0
+T2              0.0030  326.36
+LDA2            0.0018  276.09
+MU2             0.0088  161.25
+NU2             0.0073  227.97
 x 0 0
-S2               0.0500  337.00
 x 0 0
 x 0 0
+MN4             0.0101  117.55
+MS4             0.0140  222.82
 x 0 0
 x 0 0
 x 0 0
@@ -19518,7 +19537,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  142.95
 x 0 0
+EPS2            0.0018  178.60
 x 0 0
 x 0 0
 x 0 0
@@ -19559,18 +19580,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0027  55.79
 x 0 0
 x 0 0
 x 0 0
@@ -20029,6 +20039,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -62.2909
 # !latitude: 10.5678
@@ -20041,30 +20053,37 @@ x 0 0
 Güiria, Venezuela
 -04:30 :America/Caracas
 0.5800 meters
-x 0 0
+J1              0.0065  171.60
 K1              0.1100  177.00
-K2              0.0405  137.00
-x 0 0
+K2              0.0434  138.59
+L2              0.0095  130.25
 x 0 0
 M2              0.4500  110.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0855  95.53
-x 0 0
+M3              0.0009  62.92
+M4              0.0156  175.00
+M6              0.0018  276.06
+M8              0.0005  320.70
+N2              0.0956  99.31
+2N2             0.0132  87.03
 O1              0.0800  172.00
 x 0 0
-P1              0.0363  177.37
+P1              0.0350  180.46
+Q1              0.0152  159.46
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  134.16
 x 0 0
 S2              0.1500  137.00
+S4              0.0008  264.58
 x 0 0
+T2              0.0091  126.62
+LDA2            0.0013  131.42
+MU2             0.0157  69.91
+NU2             0.0165  97.65
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0063  306.36
+MS4             0.0018  15.25
 x 0 0
 x 0 0
 x 0 0
@@ -20102,7 +20121,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0026  268.27
 x 0 0
+EPS2            0.0047  61.37
 x 0 0
 x 0 0
 x 0 0
@@ -20143,16 +20164,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0013  248.80
 x 0 0
 x 0 0
 x 0 0
@@ -20225,6 +20237,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -61.6658
 # !latitude: 10.6664
@@ -20234,30 +20248,37 @@ x 0 0
 Gaspar Grande, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8800 meters
-x 0 0
+J1              0.0041  176.81
 K1              0.0700  183.00
-K2              0.0216  151.00
-x 0 0
+K2              0.0211  152.50
+L2              0.0059  128.67
 x 0 0
 M2              0.3000  110.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0570  88.02
-x 0 0
+M3              0.0007  74.40
+M4              0.0053  215.52
+M6              0.0039  275.87
+M8              0.0009  150.33
+N2              0.0662  95.56
+2N2             0.0095  81.54
 O1              0.0600  191.00
 x 0 0
-P1              0.0231  183.33
+P1              0.0224  185.80
+Q1              0.0114  177.79
 x 0 0
-x 0 0
-x 0 0
+R2              0.0007  145.95
 x 0 0
 S2              0.0800  151.00
+S4              0.0007  254.96
 x 0 0
+T2              0.0047  141.20
+LDA2            0.0011  113.81
+MU2             0.0115  70.32
+NU2             0.0120  94.57
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0038  282.47
+MS4             0.0017  62.14
 x 0 0
 x 0 0
 x 0 0
@@ -20295,7 +20316,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  290.46
 x 0 0
+EPS2            0.0033  59.91
 x 0 0
 x 0 0
 x 0 0
@@ -20336,16 +20359,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0007  196.68
 x 0 0
 x 0 0
 x 0 0
@@ -20418,6 +20432,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -61.5973
 # !latitude: 10.6816
@@ -20427,30 +20443,37 @@ x 0 0
 Carenage Bay, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.7300 meters
-x 0 0
+J1              0.0064  181.75
 K1              0.1100  188.00
-K2              0.0243  139.00
-x 0 0
+K2              0.0237  141.01
+L2              0.0053  136.50
 x 0 0
 M2              0.2700  117.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0513  105.21
-x 0 0
+M3              0.0005  91.48
+M4              0.0046  217.91
+M6              0.0037  296.02
+M8              0.0005  197.83
+N2              0.0587  103.08
+2N2             0.0084  89.05
 O1              0.0700  183.00
 x 0 0
-P1              0.0363  188.33
+P1              0.0353  190.69
+Q1              0.0133  169.75
 x 0 0
-x 0 0
-x 0 0
+R2              0.0008  134.38
 x 0 0
 S2              0.0900  139.00
+S4              0.0006  252.95
 x 0 0
+T2              0.0053  129.36
+LDA2            0.0010  120.41
+MU2             0.0103  76.49
+NU2             0.0106  101.84
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0026  300.75
+MS4             0.0019  93.36
 x 0 0
 x 0 0
 x 0 0
@@ -20488,7 +20511,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  294.18
 x 0 0
+EPS2            0.0029  66.93
 x 0 0
 x 0 0
 x 0 0
@@ -20529,16 +20554,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  206.64
 x 0 0
 x 0 0
 x 0 0
@@ -20611,6 +20627,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -61.4936
 # !latitude: 10.3812
@@ -20620,30 +20638,37 @@ x 0 0
 Lisas Point, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8000 meters
-x 0 0
+J1              0.0070  178.07
 K1              0.1200  184.00
-K2              0.0324  145.00
-x 0 0
+K2              0.0332  146.54
+L2              0.0076  140.67
 x 0 0
 M2              0.3800  122.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0722  109.67
-x 0 0
+M3              0.0010  107.55
+M4              0.0082  212.95
+M6              0.0132  296.18
+M8              0.0018  246.60
+N2              0.0807  108.70
+2N2             0.0114  95.15
 O1              0.0800  173.00
 x 0 0
-P1              0.0396  184.33
+P1              0.0384  186.71
+Q1              0.0152  160.13
 x 0 0
-x 0 0
-x 0 0
+R2              0.0011  140.39
 x 0 0
 S2              0.1200  145.00
+S4              0.0011  233.27
 x 0 0
+T2              0.0075  134.37
+LDA2            0.0013  126.38
+MU2             0.0144  81.75
+NU2             0.0144  106.48
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0045  329.26
+MS4             0.0062  94.27
 x 0 0
 x 0 0
 x 0 0
@@ -20681,7 +20706,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0015  287.43
 x 0 0
+EPS2            0.0041  72.83
 x 0 0
 x 0 0
 x 0 0
@@ -20722,16 +20749,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  225.21
 x 0 0
 x 0 0
 x 0 0
@@ -20804,6 +20822,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -61.4731
 # !latitude: 10.3264
@@ -20813,30 +20833,37 @@ x 0 0
 Pointe-à-Pierre, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8100 meters
-x 0 0
+J1              0.0064  183.06
 K1              0.1100  189.00
-K2              0.0351  146.00
-x 0 0
+K2              0.0360  147.57
+L2              0.0078  137.80
 x 0 0
 M2              0.3900  119.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0741  104.53
-x 0 0
+M3              0.0010  101.46
+M4              0.0085  206.93
+M6              0.0142  287.32
+M8              0.0020  235.23
+N2              0.0827  105.81
+2N2             0.0116  92.25
 O1              0.1000  162.00
 x 0 0
-P1              0.0363  189.33
+P1              0.0352  191.69
+Q1              0.0190  149.13
 x 0 0
-x 0 0
-x 0 0
+R2              0.0012  141.25
 x 0 0
 S2              0.1300  146.00
+S4              0.0012  227.06
 x 0 0
+T2              0.0081  135.23
+LDA2            0.0013  123.46
+MU2             0.0147  78.69
+NU2             0.0148  103.53
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0047  323.59
+MS4             0.0065  88.28
 x 0 0
 x 0 0
 x 0 0
@@ -20874,7 +20901,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0015  284.48
 x 0 0
+EPS2            0.0042  69.84
 x 0 0
 x 0 0
 x 0 0
@@ -20915,16 +20944,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  219.55
 x 0 0
 x 0 0
 x 0 0
@@ -20997,6 +21017,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -61.8654
 # !latitude: 10.0947
@@ -21006,30 +21028,37 @@ x 0 0
 Cedros (Bonasse) Pier, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 1.1300 meters
-x 0 0
+J1              0.0064  179.59
 K1              0.1100  185.00
-K2              0.0513  162.00
-x 0 0
+K2              0.0532  163.45
+L2              0.0096  145.81
 x 0 0
 M2              0.4700  126.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0893  106.70
-x 0 0
+M3              0.0012  111.21
+M4              0.0041  218.51
+M6              0.0069  298.49
+M8              0.0011  308.82
+N2              0.0979  114.91
+2N2             0.0138  101.97
 O1              0.0900  173.00
 x 0 0
-P1              0.0363  185.33
+P1              0.0350  188.08
+Q1              0.0172  159.98
 x 0 0
-x 0 0
-x 0 0
+R2              0.0017  156.58
 x 0 0
 S2              0.1900  162.00
+S4              0.0016  209.95
 x 0 0
+T2              0.0116  150.07
+LDA2            0.0014  136.80
+MU2             0.0170  86.16
+NU2             0.0171  112.24
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0028  359.02
+MS4             0.0082  109.80
 x 0 0
 x 0 0
 x 0 0
@@ -21067,7 +21096,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0021  287.52
 x 0 0
+EPS2            0.0049  77.68
 x 0 0
 x 0 0
 x 0 0
@@ -21108,16 +21139,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0003  195.65
 x 0 0
 x 0 0
 x 0 0
@@ -21190,6 +21212,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -61.6604
 # !latitude: 10.0712
@@ -21199,30 +21223,37 @@ x 0 0
 Herine (Erin) Bay, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 1.1200 meters
-x 0 0
+J1              0.0052  185.34
 K1              0.0900  191.00
-K2              0.0567  139.00
-x 0 0
+K2              0.0594  136.89
+L2              0.0134  129.22
 x 0 0
 M2              0.6100  116.00
-x 0 0
-x 0 0
-M6              0.0302  149.00
-x 0 0
-N2              0.1159  103.67
-x 0 0
+M3              0.0017  138.40
+M4              0.0537  8.01
+M6              0.0125  81.67
+M8              0.0004  130.04
+N2              0.1308  102.17
+2N2             0.0181  89.58
 O1              0.0900  173.00
 x 0 0
-P1              0.0297  191.33
+P1              0.0289  193.66
+Q1              0.0175  159.71
 x 0 0
-x 0 0
-x 0 0
+R2              0.0020  133.05
 x 0 0
 S2              0.2100  139.00
+S4              0.0058  158.72
 x 0 0
+T2              0.0138  128.76
+LDA2            0.0030  120.08
+MU2             0.0228  84.09
+NU2             0.0240  101.13
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0179  137.41
+MS4             0.0198  115.32
 x 0 0
 x 0 0
 x 0 0
@@ -21260,7 +21291,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0017  255.35
 x 0 0
+EPS2            0.0060  71.77
 x 0 0
 x 0 0
 x 0 0
@@ -21301,16 +21334,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0043  99.34
 x 0 0
 x 0 0
 x 0 0
@@ -21576,6 +21600,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -61.0209
 # !latitude: 10.3925
@@ -21585,30 +21611,37 @@ x 0 0
 Nariva River (Cocal), Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8000 meters
-x 0 0
+J1              0.0045  180.77
 K1              0.0800  187.00
-K2              0.0270  119.00
-x 0 0
+K2              0.0263  116.10
+L2              0.0076  117.47
 x 0 0
 M2              0.3500  104.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0665  95.96
-x 0 0
+M3              0.0002  121.85
+M4              0.0093  339.16
+M6              0.0035  241.33
+M8              0.0019  137.05
+N2              0.0777  90.89
+2N2             0.0112  78.25
 O1              0.0700  182.00
 x 0 0
-P1              0.0264  187.33
+P1              0.0258  189.31
+Q1              0.0139  167.88
 x 0 0
-x 0 0
-x 0 0
+R2              0.0009  109.63
 x 0 0
 S2              0.1000  119.00
+S4              0.0007  39.61
 x 0 0
+T2              0.0061  107.88
+LDA2            0.0020  108.99
+MU2             0.0133  73.03
+NU2             0.0145  91.51
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0036  145.35
+MS4             0.0022  266.71
 x 0 0
 x 0 0
 x 0 0
@@ -21646,7 +21679,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  126.88
 x 0 0
+EPS2            0.0035  61.98
 x 0 0
 x 0 0
 x 0 0
@@ -21687,16 +21722,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0008  89.40
 x 0 0
 x 0 0
 x 0 0
@@ -21769,6 +21795,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -60.9479
 # !latitude: 10.7655
@@ -21778,30 +21806,37 @@ x 0 0
 Guayamara Point, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.8500 meters
-x 0 0
+J1              0.0045  177.71
 K1              0.0800  184.00
-K2              0.0243  111.00
-x 0 0
+K2              0.0235  107.87
+L2              0.0066  109.84
 x 0 0
 M2              0.3100  96.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0589  87.96
-x 0 0
+M3              0.0001  108.15
+M4              0.0048  314.03
+M6              0.0032  191.80
+M8              0.0016  107.40
+N2              0.0692  82.86
+2N2             0.0101  69.99
 O1              0.0500  179.00
 x 0 0
-P1              0.0264  184.33
+P1              0.0258  186.35
+Q1              0.0099  164.91
 x 0 0
-x 0 0
-x 0 0
+R2              0.0008  101.98
 x 0 0
 S2              0.0900  111.00
+S4              0.0005  6.13
 x 0 0
+T2              0.0055  100.24
+LDA2            0.0018  101.11
+MU2             0.0120  65.52
+NU2             0.0130  83.80
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0022  136.25
+MS4             0.0019  246.07
 x 0 0
 x 0 0
 x 0 0
@@ -21839,7 +21874,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  118.12
 x 0 0
+EPS2            0.0031  54.12
 x 0 0
 x 0 0
 x 0 0
@@ -21880,16 +21917,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  83.38
 x 0 0
 x 0 0
 x 0 0
@@ -21962,6 +21990,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -60.9468
 # !latitude: 10.8349
@@ -21971,30 +22001,37 @@ x 0 0
 Toco, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.7000 meters
-x 0 0
+J1              0.0056  176.71
 K1              0.1000  183.00
-K2              0.0243  119.00
-x 0 0
+K2              0.0234  115.95
+L2              0.0059  108.19
 x 0 0
 M2              0.2800  94.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0532  80.60
-x 0 0
+M3              0.0001  101.82
+M4              0.0027  289.06
+M6              0.0028  179.48
+M8              0.0012  101.35
+N2              0.0628  80.78
+2N2             0.0092  67.77
 O1              0.0800  172.00
 x 0 0
-P1              0.0330  183.33
+P1              0.0322  185.39
+Q1              0.0157  157.97
 x 0 0
-x 0 0
-x 0 0
+R2              0.0008  109.67
 x 0 0
 S2              0.0900  119.00
+S4              0.0003  355.54
 x 0 0
+T2              0.0055  107.87
+LDA2            0.0016  98.68
+MU2             0.0110  62.96
+NU2             0.0118  81.72
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0018  144.24
+MS4             0.0017  222.77
 x 0 0
 x 0 0
 x 0 0
@@ -22032,7 +22069,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  108.95
 x 0 0
+EPS2            0.0029  51.67
 x 0 0
 x 0 0
 x 0 0
@@ -22073,16 +22112,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0004  99.09
 x 0 0
 x 0 0
 x 0 0
@@ -22541,6 +22571,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -60.7791
 # !latitude: 11.2198
@@ -22550,30 +22582,37 @@ x 0 0
 Plymouth, Tobago, Trinidad and Tobago
 -04:00 :America/Port_of_Spain
 0.6200 meters
-x 0 0
+J1              0.0051  167.43
 K1              0.0900  174.00
-K2              0.0189  125.00
-x 0 0
+K2              0.0180  121.86
+L2              0.0051  111.03
 x 0 0
 M2              0.2500  96.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0475  80.46
-x 0 0
+M3              0.0001  103.53
+M4              0.0017  321.62
+M6              0.0024  163.59
+M8              0.0005  105.73
+N2              0.0565  82.76
+2N2             0.0083  69.45
 O1              0.0800  168.00
 x 0 0
-P1              0.0297  174.33
+P1              0.0290  176.42
+Q1              0.0157  154.27
 x 0 0
-x 0 0
-x 0 0
+R2              0.0006  115.68
 x 0 0
 S2              0.0700  125.00
+S4              0.0003  351.47
 x 0 0
+T2              0.0042  113.91
+LDA2            0.0014  100.58
+MU2             0.0101  64.22
+NU2             0.0106  83.96
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0007  162.69
+MS4             0.0007  263.28
 x 0 0
 x 0 0
 x 0 0
@@ -22611,7 +22650,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0003  108.01
 x 0 0
+EPS2            0.0026  53.18
 x 0 0
 x 0 0
 x 0 0
@@ -22652,16 +22693,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0003  97.24
 x 0 0
 x 0 0
 x 0 0
@@ -22734,6 +22766,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 2
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -63.2452
 # !latitude: 10.6759
@@ -22743,30 +22777,37 @@ x 0 0
 Puerto Carúpano, Venezuela
 -04:30 :America/Caracas
 0.2000 meters
-x 0 0
+J1              0.0060  163.13
 K1              0.1000  170.00
-K2              0.0081  82.00
-x 0 0
+K2              0.0073  81.99
+L2              0.0019  86.33
 x 0 0
 M2              0.1100  60.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0209  48.21
-x 0 0
+M3              0.0002  65.29
+M4              0.0087  357.95
+M6              0.0024  327.87
+M8              0.0003  66.12
+N2              0.0282  45.01
+2N2             0.0045  30.92
 O1              0.0700  167.00
 x 0 0
-P1              0.0330  170.37
+P1              0.0322  173.29
+Q1              0.0128  155.66
 x 0 0
-x 0 0
-x 0 0
+R2              0.0003  71.69
 x 0 0
 S2              0.0300  82.00
+S4              0.0012  121.53
 x 0 0
+T2              0.0018  66.31
+LDA2            0.0005  66.86
+MU2             0.0045  32.96
+NU2             0.0054  45.80
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0070  189.39
+MS4             0.0057  26.15
 x 0 0
 x 0 0
 x 0 0
@@ -22804,7 +22845,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0000  11.98
 x 0 0
+EPS2            0.0016  12.02
 x 0 0
 x 0 0
 x 0 0
@@ -22845,16 +22888,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0021  99.84
 x 0 0
 x 0 0
 x 0 0
@@ -23506,6 +23540,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 3
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: -74.5013
 # !latitude: 20.3517
@@ -23515,30 +23551,37 @@ x 0 0
 Baracoa, Cuba
 -05:00 :America/Havana
 0.2400 meters
-x 0 0
+J1              0.0050  129.64
 K1              0.0800  139.00
-K2              0.0135  253.00
-x 0 0
+K2              0.0112  254.26
+L2              0.0073  246.14
 x 0 0
 M2              0.2500  229.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0475  216.14
-x 0 0
+M3              0.0001  351.51
+M4              0.0017  168.40
+M6              0.0011  338.26
+M8              0.0001  239.28
+N2              0.0584  214.81
+2N2             0.0080  200.42
 O1              0.0600  147.00
 x 0 0
-P1              0.0264  139.41
+P1              0.0252  142.17
+Q1              0.0116  140.67
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  233.79
 x 0 0
 S2              0.0500  253.00
+S4              0.0001  143.03
 x 0 0
+T2              0.0035  230.76
+LDA2            0.0019  254.79
+MU2             0.0066  229.08
+NU2             0.0114  215.59
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0012  132.49
+MS4             0.0002  251.82
 x 0 0
 x 0 0
 x 0 0
@@ -23576,7 +23619,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  89.41
 x 0 0
+EPS2            0.0026  189.89
 x 0 0
 x 0 0
 x 0 0
@@ -23617,16 +23662,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  74.61
 x 0 0
 x 0 0
 x 0 0

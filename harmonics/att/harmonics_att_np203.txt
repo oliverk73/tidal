@@ -14997,6 +14997,8 @@ MNUS2
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 42.6134
 # !latitude: 15.3343
@@ -15006,30 +15008,37 @@ MNUS2
 Kamaran (Passage), Yemen
 +03:00 :Asia/Aden
 1.0000 meters
-x 0 0
+J1              0.0019  78.99
 K1              0.0200  79.00
-K2              0.0243  61.00
-x 0 0
+K2              0.0277  57.48
+L2              0.0049  51.25
 x 0 0
 M2              0.3300  30.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0627  13.38
-x 0 0
+M3              0.0016  74.48
+M4              0.0033  218.80
+M6              0.0009  20.93
+M8              0.0007  215.61
+N2              0.1077  3.02
+2N2             0.0185  296.91
 O1              0.0100  181.00
 x 0 0
-P1              0.0066  78.75
+P1              0.0064  80.66
+Q1              0.0023  171.16
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  77.76
 x 0 0
 S2              0.0900  61.00
+S4              0.0014  232.80
 x 0 0
+T2              0.0041  76.27
+LDA2            0.0014  24.54
+MU2             0.0133  284.22
+NU2             0.0195  19.61
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0037  53.84
+MS4             0.0042  127.03
 x 0 0
 x 0 0
 x 0 0
@@ -15067,7 +15076,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  29.77
 x 0 0
+EPS2            0.0046  298.41
 x 0 0
 x 0 0
 x 0 0
@@ -15108,16 +15119,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0012  335.03
 x 0 0
 x 0 0
 x 0 0
@@ -15389,6 +15391,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 42.8959
 # !latitude: 14.9144
@@ -15398,30 +15402,37 @@ x 0 0
 Ras al Katib, Yemen
 +03:00 :Asia/Aden
 0.4600 meters
-x 0 0
+J1              0.0035  119.34
 K1              0.0400  114.00
-K2              0.0189  66.00
-x 0 0
+K2              0.0210  63.35
+L2              0.0030  48.56
 x 0 0
 M2              0.2600  24.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0494  1.49
-x 0 0
+M3              0.0014  57.24
+M4              0.0018  187.59
+M6              0.0008  334.05
+M8              0.0012  10.86
+N2              0.0883  354.97
+2N2             0.0160  287.82
 O1              0.0100  124.00
 x 0 0
-P1              0.0132  113.75
+P1              0.0108  116.76
+Q1              0.0021  124.57
 x 0 0
-x 0 0
-x 0 0
+R2              0.0003  81.69
 x 0 0
 S2              0.0700  66.00
+S4              0.0005  183.27
 x 0 0
+T2              0.0024  82.27
+LDA2            0.0008  15.29
+MU2             0.0119  275.57
+NU2             0.0158  12.34
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0016  8.33
+MS4             0.0014  69.85
 x 0 0
 x 0 0
 x 0 0
@@ -15459,7 +15470,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  0.18
 x 0 0
+EPS2            0.0033  292.03
 x 0 0
 x 0 0
 x 0 0
@@ -15500,16 +15513,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0006  293.84
 x 0 0
 x 0 0
 x 0 0
@@ -15582,6 +15586,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 43.2313
 # !latitude: 13.3130
@@ -15591,30 +15597,37 @@ x 0 0
 Mokha (Al Mukha), Yemen
 +03:00 :Asia/Aden
 0.5800 meters
-x 0 0
+J1              0.0139  48.90
 K1              0.1900  38.00
-K2              0.0108  274.25
-x 0 0
+K2              0.0117  268.09
+L2              0.0046  247.69
 x 0 0
 M2              0.1000  328.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0018  68.42
+M4              0.0042  116.97
+M6              0.0018  218.93
+M8              0.0005  207.73
+N2              0.0668  321.50
+2N2             0.0204  265.50
 O1              0.0800  34.00
 x 0 0
-P1              0.0627  37.75
+P1              0.0563  36.34
+Q1              0.0169  32.03
 x 0 0
-x 0 0
-x 0 0
+R2              0.0005  268.81
 x 0 0
 S2              0.0400  274.00
+S4              0.0023  106.47
 x 0 0
+T2              0.0034  267.16
+LDA2            0.0018  240.12
+MU2             0.0166  255.87
+NU2             0.0096  332.72
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0055  291.82
+MS4             0.0069  5.52
 x 0 0
 x 0 0
 x 0 0
@@ -15652,7 +15665,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  15.11
 x 0 0
+EPS2            0.0024  241.72
 x 0 0
 x 0 0
 x 0 0
@@ -15693,16 +15708,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0015  202.66
 x 0 0
 x 0 0
 x 0 0
@@ -15774,6 +15780,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 49.1475
 # !latitude: 14.5215
@@ -15783,30 +15791,37 @@ x 0 0
 Mukalla, Yemen
 +03:00 :Asia/Aden
 1.2200 meters
-x 0 0
+J1              0.0236  44.73
 K1              0.3400  33.00
-K2              0.0324  254.25
-x 0 0
+K2              0.0346  251.25
+L2              0.0106  229.06
 x 0 0
 M2              0.4000  223.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+M3              0.0001  222.93
+M4              0.0004  261.28
+M6              0.0018  195.66
+M8              0.0003  188.07
+N2              0.1109  214.57
+2N2             0.0204  183.90
 O1              0.2400  36.00
 x 0 0
-P1              0.1122  32.75
+P1              0.1021  31.55
+Q1              0.0513  35.10
 x 0 0
-x 0 0
-x 0 0
+R2              0.0009  258.64
 x 0 0
 S2              0.1200  254.00
+S4              0.0001  222.38
 x 0 0
+T2              0.0068  260.22
+LDA2            0.0030  206.12
+MU2             0.0161  181.26
+NU2             0.0214  222.81
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0003  111.49
+MS4             0.0004  140.46
 x 0 0
 x 0 0
 x 0 0
@@ -15844,7 +15859,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  302.15
 x 0 0
+EPS2            0.0047  154.93
 x 0 0
 x 0 0
 x 0 0
@@ -15885,16 +15902,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  59.84
 x 0 0
 x 0 0
 x 0 0
@@ -16350,6 +16358,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 40.6801
 # !latitude: -14.4665
@@ -16359,30 +16369,37 @@ x 0 0
 Nacala (Fernao Veloso), Mozambique
 +02:00 :Africa/Maputo
 2.2500 meters
-x 0 0
+J1              0.0076  26.15
 K1              0.1000  21.00
-K2              0.1458  128.00
-x 0 0
+K2              0.1518  125.42
+L2              0.0354  104.34
 x 0 0
 M2              1.0500  86.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1995  63.49
-x 0 0
+M3              0.0003  251.03
+M4              0.0027  206.98
+M6              0.0009  329.13
+M8              0.0001  227.07
+N2              0.1844  64.07
+2N2             0.0168  30.85
 O1              0.0900  36.00
 x 0 0
-P1              0.0330  20.84
+P1              0.0319  20.22
+Q1              0.0223  20.33
 x 0 0
-x 0 0
-x 0 0
+R2              0.0046  121.67
 x 0 0
 S2              0.5400  128.00
+S4              0.0004  250.62
 x 0 0
+T2              0.0327  117.51
+LDA2            0.0088  104.11
+MU2             0.0146  77.79
+NU2             0.0377  67.12
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0023  94.91
+MS4             0.0025  190.81
 x 0 0
 x 0 0
 x 0 0
@@ -16420,7 +16437,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0011  263.99
 x 0 0
+EPS2            0.0022  35.41
 x 0 0
 x 0 0
 x 0 0
@@ -16461,16 +16480,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0006  29.41
 x 0 0
 x 0 0
 x 0 0
@@ -16542,6 +16552,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 40.1971
 # !latitude: -10.2673
@@ -16551,30 +16563,37 @@ x 0 0
 Mtwara, Tanzania
 +03:00 :Africa/Dar_es_Salaam
 2.0000 meters
-x 0 0
+J1              0.0129  39.60
 K1              0.1700  31.00
-K2              0.1404  156.00
-x 0 0
+K2              0.1440  153.33
+L2              0.0357  131.61
 x 0 0
 M2              1.0900  113.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2071  89.95
-x 0 0
+M3              0.0002  338.96
+M4              0.0062  311.29
+M6              0.0007  224.08
+M8              0.0001  240.58
+N2              0.1956  89.39
+2N2             0.0188  53.43
 O1              0.1100  49.00
 x 0 0
-P1              0.0561  30.75
+P1              0.0527  30.49
+Q1              0.0264  37.89
 x 0 0
-x 0 0
-x 0 0
+R2              0.0046  148.81
 x 0 0
 S2              0.5200  156.00
+S4              0.0001  170.74
 x 0 0
+T2              0.0325  144.39
+LDA2            0.0090  131.80
+MU2             0.0141  92.85
+NU2             0.0401  92.59
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0022  231.13
+MS4             0.0008  24.72
 x 0 0
 x 0 0
 x 0 0
@@ -16612,7 +16631,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0011  307.87
 x 0 0
+EPS2            0.0025  51.35
 x 0 0
 x 0 0
 x 0 0
@@ -16653,16 +16674,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0007  152.50
 x 0 0
 x 0 0
 x 0 0
@@ -16734,6 +16746,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 46.3148
 # !latitude: -15.7270
@@ -16743,30 +16757,37 @@ x 0 0
 Mahajanga, Madagascar
 +03:00 :Indian/Antananarivo
 2.9300 meters
-x 0 0
+J1              0.0100  60.54
 K1              0.1400  55.00
-K2              0.1755  164.00
-x 0 0
+K2              0.1772  160.44
+L2              0.0377  135.05
 x 0 0
 M2              1.2600  113.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2394  85.66
-x 0 0
+M3              0.0006  332.55
+M4              0.0141  117.78
+M6              0.0062  202.18
+M8              0.0060  21.31
+N2              0.2356  96.97
+2N2             0.0198  61.34
 O1              0.0700  52.00
 x 0 0
-P1              0.0462  54.75
+P1              0.0438  54.26
+Q1              0.0160  38.08
 x 0 0
-x 0 0
-x 0 0
+R2              0.0055  161.76
 x 0 0
 S2              0.6500  164.00
+S4              0.0039  149.67
 x 0 0
+T2              0.0385  157.33
+LDA2            0.0084  129.84
+MU2             0.0190  95.21
+NU2             0.0432  97.32
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0055  342.80
+MS4             0.0233  56.70
 x 0 0
 x 0 0
 x 0 0
@@ -16804,7 +16825,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0045  266.03
 x 0 0
+EPS2            0.0030  54.78
 x 0 0
 x 0 0
 x 0 0
@@ -16845,16 +16868,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0006  219.19
 x 0 0
 x 0 0
 x 0 0
@@ -16927,6 +16941,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 55.2832
 # !latitude: 25.2650
@@ -16936,30 +16952,37 @@ x 0 0
 Dubai (Mina Rashid), United Arab Emirates
 +04:00 :Asia/Dubai
 1.0300 meters
-x 0 0
+J1              0.0078  148.95
 K1              0.2300  151.00
-K2              0.0432  41.00
-x 0 0
+K2              0.0452  32.70
+L2              0.0118  34.91
 x 0 0
 M2              0.4400  353.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0836  327.27
-x 0 0
+M3              0.0017  114.60
+M4              0.0179  339.97
+M6              0.0031  187.85
+M8              0.0000  353.10
+N2              0.0964  330.31
+2N2             0.0110  295.52
 O1              0.1600  97.00
 x 0 0
-P1              0.0759  150.67
+P1              0.0708  141.77
+Q1              0.0302  85.92
 x 0 0
-x 0 0
-x 0 0
+R2              0.0015  37.72
 x 0 0
 S2              0.1600  41.00
+S4              0.0002  276.76
 x 0 0
+T2              0.0095  32.16
+LDA2            0.0019  355.70
+MU2             0.0083  265.92
+NU2             0.0203  344.12
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0014  253.98
+MS4             0.0023  89.62
 x 0 0
 x 0 0
 x 0 0
@@ -16997,7 +17020,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0008  129.99
 x 0 0
+EPS2            0.0021  267.20
 x 0 0
 x 0 0
 x 0 0
@@ -17038,16 +17063,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0007  76.39
 x 0 0
 x 0 0
 x 0 0
@@ -17119,6 +17135,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 54.3754
 # !latitude: 24.5132
@@ -17128,30 +17146,37 @@ x 0 0
 Mina Zayid (Abu Dhabi), United Arab Emirates
 +04:00 :Asia/Dubai
 1.4200 meters
-x 0 0
+J1              0.0111  193.68
 K1              0.3200  162.00
-K2              0.0486  72.00
-x 0 0
+K2              0.0440  60.18
+L2              0.0197  57.56
 x 0 0
 M2              0.4200  19.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0798  350.59
-x 0 0
+M3              0.0008  248.26
+M4              0.0098  123.27
+M6              0.0021  93.20
+M8              0.0003  60.99
+N2              0.0776  353.01
+2N2             0.0112  349.40
 O1              0.1800  108.00
 x 0 0
-P1              0.1056  161.67
+P1              0.0955  153.83
+Q1              0.0309  101.16
 x 0 0
-x 0 0
-x 0 0
+R2              0.0014  95.14
 x 0 0
 S2              0.1800  72.00
+S4              0.0011  161.48
 x 0 0
+T2              0.0091  91.14
+LDA2            0.0017  55.67
+MU2             0.0025  83.56
+NU2             0.0200  8.20
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0024  53.37
+MS4             0.0028  210.89
 x 0 0
 x 0 0
 x 0 0
@@ -17189,7 +17214,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0015  162.89
 x 0 0
+EPS2            0.0021  322.80
 x 0 0
 x 0 0
 x 0 0
@@ -17230,16 +17257,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0004  121.25
 x 0 0
 x 0 0
 x 0 0
@@ -17695,6 +17713,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 38.9890
 # !latitude: 22.7350
@@ -17704,30 +17724,37 @@ x 0 0
 Sharm Rabigh, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.8000 meters
-x 0 0
+J1              0.0028  210.80
 K1              0.0400  202.00
-K2              0.0108  222.00
-x 0 0
+K2              0.0140  216.00
+L2              0.0027  231.61
 x 0 0
 M2              0.1300  197.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0247  183.60
-x 0 0
+M3              0.0002  254.97
+M4              0.0006  215.89
+M6              0.0000  216.04
+M8              0.0000  50.95
+N2              0.0412  166.14
+2N2             0.0068  103.49
 O1              0.0200  204.00
 x 0 0
-P1              0.0132  201.75
+P1              0.0120  197.42
+Q1              0.0044  202.55
 x 0 0
-x 0 0
-x 0 0
+R2              0.0003  240.50
 x 0 0
 S2              0.0400  222.00
+S4              0.0002  346.41
 x 0 0
+T2              0.0022  238.33
+LDA2            0.0007  201.92
+MU2             0.0055  69.66
+NU2             0.0072  189.08
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0005  257.69
+MS4             0.0009  301.34
 x 0 0
 x 0 0
 x 0 0
@@ -17765,7 +17792,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  184.24
 x 0 0
+EPS2            0.0015  88.31
 x 0 0
 x 0 0
 x 0 0
@@ -17806,16 +17835,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  218.12
 x 0 0
 x 0 0
 x 0 0
@@ -17887,6 +17907,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 56.3588
 # !latitude: 25.1642
@@ -17896,30 +17918,37 @@ x 0 0
 Fujairah, United Arab Emirates
 +04:00 :Asia/Dubai
 1.7400 meters
-x 0 0
+J1              0.0269  53.18
 K1              0.3900  40.00
-K2              0.0702  315.00
-x 0 0
+K2              0.0731  309.15
+L2              0.0190  292.15
 x 0 0
 M2              0.6700  278.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1273  258.17
-x 0 0
+M3              0.0002  270.18
+M4              0.0103  101.08
+M6              0.0028  215.10
+M8              0.0001  336.77
+N2              0.1703  260.10
+2N2             0.0255  221.95
 O1              0.2000  40.00
 x 0 0
-P1              0.1287  39.67
+P1              0.1190  38.98
+Q1              0.0428  40.99
 x 0 0
-x 0 0
-x 0 0
+R2              0.0023  315.30
 x 0 0
 S2              0.2600  315.00
+S4              0.0006  73.94
 x 0 0
+T2              0.0173  312.88
+LDA2            0.0037  281.92
+MU2             0.0180  223.38
+NU2             0.0356  265.56
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0034  355.34
+MS4             0.0004  70.73
 x 0 0
 x 0 0
 x 0 0
@@ -17957,7 +17986,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  212.38
 x 0 0
+EPS2            0.0053  197.43
 x 0 0
 x 0 0
 x 0 0
@@ -17998,16 +18029,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0011  263.07
 x 0 0
 x 0 0
 x 0 0
@@ -18079,6 +18101,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 56.3597
 # !latitude: 25.3513
@@ -18088,30 +18112,37 @@ x 0 0
 Khor Fakkan, United Arab Emirates
 +04:00 :Asia/Dubai
 1.7300 meters
-x 0 0
+J1              0.0243  53.23
 K1              0.3500  40.00
-K2              0.0729  312.00
-x 0 0
+K2              0.0761  306.22
+L2              0.0186  291.90
 x 0 0
 M2              0.6600  278.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1254  259.78
-x 0 0
+M3              0.0003  254.67
+M4              0.0094  104.68
+M6              0.0029  213.28
+M8              0.0002  324.54
+N2              0.1678  259.75
+2N2             0.0251  221.49
 O1              0.1900  42.00
 x 0 0
-P1              0.1155  39.67
+P1              0.1069  39.32
+Q1              0.0408  42.98
 x 0 0
-x 0 0
-x 0 0
+R2              0.0024  312.61
 x 0 0
 S2              0.2700  312.00
+S4              0.0005  68.08
 x 0 0
+T2              0.0180  310.15
+LDA2            0.0037  281.58
+MU2             0.0177  222.77
+NU2             0.0350  265.32
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0030  356.55
+MS4             0.0001  9.60
 x 0 0
 x 0 0
 x 0 0
@@ -18149,7 +18180,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  207.29
 x 0 0
+EPS2            0.0052  196.72
 x 0 0
 x 0 0
 x 0 0
@@ -18190,16 +18223,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0011  261.82
 x 0 0
 x 0 0
 x 0 0
@@ -18463,6 +18487,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 54.6529
 # !latitude: 24.7956
@@ -18472,30 +18498,37 @@ x 0 0
 Khalifa Port, United Arab Emirates
 +04:00 :Asia/Dubai
 1.3200 meters
-x 0 0
+J1              0.0102  177.43
 K1              0.3000  156.00
-K2              0.0459  54.00
-x 0 0
+K2              0.0448  44.01
+L2              0.0162  43.95
 x 0 0
 M2              0.4200  2.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0798  334.13
-x 0 0
+M3              0.0009  102.68
+M4              0.0116  18.58
+M6              0.0007  284.16
+M8              0.0001  162.07
+N2              0.0869  339.88
+2N2             0.0102  321.89
 O1              0.1900  100.00
 x 0 0
-P1              0.0990  155.67
+P1              0.0889  149.27
+Q1              0.0332  91.74
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  60.60
 x 0 0
 S2              0.1700  54.00
+S4              0.0011  118.27
 x 0 0
+T2              0.0083  57.45
+LDA2            0.0016  23.59
+MU2             0.0024  272.28
+NU2             0.0201  354.19
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0024  331.48
+MS4             0.0029  102.38
 x 0 0
 x 0 0
 x 0 0
@@ -18533,7 +18566,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0010  119.93
 x 0 0
+EPS2            0.0019  295.37
 x 0 0
 x 0 0
 x 0 0
@@ -18574,16 +18609,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0007  62.86
 x 0 0
 x 0 0
 x 0 0
@@ -18655,6 +18681,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 53.3709
 # !latitude: 24.4562
@@ -18664,30 +18692,37 @@ x 0 0
 Halat al Mubarraz, United Arab Emirates
 +04:00 :Asia/Dubai
 1.2100 meters
-x 0 0
+J1              0.0162  190.75
 K1              0.4300  158.00
-K2              0.0324  77.00
-x 0 0
+K2              0.0306  73.02
+L2              0.0135  37.16
 x 0 0
 M2              0.2900  17.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0551  344.84
-x 0 0
+M3              0.0023  285.07
+M4              0.0199  176.81
+M6              0.0024  94.38
+M8              0.0003  231.09
+N2              0.0440  352.95
+2N2             0.0082  341.96
 O1              0.2200  113.00
 x 0 0
-P1              0.1419  157.67
+P1              0.1210  147.94
+Q1              0.0377  101.73
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  108.99
 x 0 0
 S2              0.1200  77.00
+S4              0.0009  238.68
 x 0 0
+T2              0.0079  101.87
+LDA2            0.0015  63.86
+MU2             0.0066  65.78
+NU2             0.0116  357.08
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0048  127.48
+MS4             0.0063  228.46
 x 0 0
 x 0 0
 x 0 0
@@ -18725,7 +18760,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0016  158.90
 x 0 0
+EPS2            0.0015  310.62
 x 0 0
 x 0 0
 x 0 0
@@ -18766,16 +18803,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  236.78
 x 0 0
 x 0 0
 x 0 0
@@ -18847,6 +18875,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 51.6016
 # !latitude: 24.9677
@@ -18856,30 +18886,37 @@ x 0 0
 Mesaieed, Qatar
 +03:00 :Asia/Qatar
 1.1700 meters
-x 0 0
+J1              0.0177  164.46
 K1              0.4300  124.00
-K2              0.0297  183.00
-x 0 0
+K2              0.0297  178.89
+L2              0.0167  170.52
 x 0 0
 M2              0.2900  152.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0551  135.38
-x 0 0
+M3              0.0013  7.45
+M4              0.0176  181.20
+M6              0.0017  206.92
+M8              0.0004  184.09
+N2              0.0766  142.16
+2N2             0.0101  103.58
 O1              0.1900  71.00
 x 0 0
-P1              0.1419  123.75
+P1              0.1014  97.03
+Q1              0.0295  28.67
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  167.58
 x 0 0
 S2              0.1100  183.00
+S4              0.0005  224.98
 x 0 0
+T2              0.0077  169.54
+LDA2            0.0017  155.22
+MU2             0.0081  356.68
+NU2             0.0163  133.64
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0031  174.15
+MS4             0.0052  265.87
 x 0 0
 x 0 0
 x 0 0
@@ -18917,7 +18954,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0036  187.23
 x 0 0
+EPS2            0.0024  82.55
 x 0 0
 x 0 0
 x 0 0
@@ -18958,16 +18997,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0006  136.57
 x 0 0
 x 0 0
 x 0 0
@@ -19039,6 +19069,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 51.5313
 # !latitude: 25.2945
@@ -19048,30 +19080,37 @@ x 0 0
 Doha (Ad Dawhah), Qatar
 +03:00 :Asia/Qatar
 0.8800 meters
-x 0 0
+J1              0.0171  149.38
 K1              0.3700  120.00
-K2              0.0297  172.00
-x 0 0
+K2              0.0340  163.40
+L2              0.0116  167.06
 x 0 0
 M2              0.3200  139.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0608  121.31
-x 0 0
+M3              0.0003  316.58
+M4              0.0285  174.98
+M6              0.0054  232.43
+M8              0.0004  189.24
+N2              0.0855  116.94
+2N2             0.0110  76.48
 O1              0.1700  66.00
 x 0 0
-P1              0.1221  119.75
+P1              0.0852  108.25
+Q1              0.0231  37.90
 x 0 0
-x 0 0
-x 0 0
+R2              0.0010  164.77
 x 0 0
 S2              0.1100  172.00
+S4              0.0023  240.33
 x 0 0
+T2              0.0068  160.63
+LDA2            0.0017  132.64
+MU2             0.0080  19.50
+NU2             0.0189  123.46
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0071  172.86
+MS4             0.0120  268.84
 x 0 0
 x 0 0
 x 0 0
@@ -19109,7 +19148,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0011  174.51
 x 0 0
+EPS2            0.0023  50.04
 x 0 0
 x 0 0
 x 0 0
@@ -19150,16 +19191,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0016  174.34
 x 0 0
 x 0 0
 x 0 0
@@ -19231,6 +19263,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 51.5846
 # !latitude: 25.9190
@@ -19240,30 +19274,37 @@ x 0 0
 Ras Laffan, Qatar
 +03:00 :Asia/Qatar
 0.8900 meters
-x 0 0
+J1              0.0118  126.90
 K1              0.2500  102.00
-K2              0.0297  165.00
-x 0 0
+K2              0.0352  153.54
+L2              0.0106  147.54
 x 0 0
 M2              0.3600  122.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0684  98.95
-x 0 0
+M3              0.0004  267.57
+M4              0.0176  121.70
+M6              0.0015  58.65
+M8              0.0003  276.71
+N2              0.0883  89.27
+2N2             0.0109  48.54
 O1              0.1200  47.00
 x 0 0
-P1              0.0825  101.75
+P1              0.0683  100.87
+Q1              0.0186  29.82
 x 0 0
-x 0 0
-x 0 0
+R2              0.0008  156.30
 x 0 0
 S2              0.1100  165.00
+S4              0.0013  197.79
 x 0 0
+T2              0.0058  153.42
+LDA2            0.0016  114.69
+MU2             0.0055  359.08
+NU2             0.0193  99.63
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0037  100.63
+MS4             0.0071  194.37
 x 0 0
 x 0 0
 x 0 0
@@ -19301,7 +19342,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0012  59.03
 x 0 0
+EPS2            0.0023  16.74
 x 0 0
 x 0 0
 x 0 0
@@ -19342,16 +19385,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0007  113.76
 x 0 0
 x 0 0
 x 0 0
@@ -20194,6 +20228,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 49.6768
 # !latitude: 27.0117
@@ -20203,30 +20239,37 @@ x 0 0
 Al Jubayl, Saudi Arabia
 +03:00 :Asia/Riyadh
 0.8200 meters
-x 0 0
+J1              0.0053  323.41
 K1              0.1900  319.00
-K2              0.0486  181.00
-x 0 0
+K2              0.0591  171.94
+L2              0.0140  166.85
 x 0 0
 M2              0.4500  124.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0855  93.45
-x 0 0
+M3              0.0011  304.82
+M4              0.0138  241.57
+M6              0.0026  349.95
+M8              0.0003  284.52
+N2              0.0936  94.08
+2N2             0.0097  57.44
 O1              0.1400  275.00
 x 0 0
-P1              0.0627  318.75
+P1              0.0608  301.88
+Q1              0.0308  251.18
 x 0 0
-x 0 0
-x 0 0
+R2              0.0015  192.44
 x 0 0
 S2              0.1800  181.00
+S4              0.0008  3.10
 x 0 0
+T2              0.0095  183.52
+LDA2            0.0020  142.80
+MU2             0.0027  3.53
+NU2             0.0199  104.79
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0028  248.84
+MS4             0.0062  348.18
 x 0 0
 x 0 0
 x 0 0
@@ -20264,7 +20307,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0022  353.23
 x 0 0
+EPS2            0.0019  22.46
 x 0 0
 x 0 0
 x 0 0
@@ -20305,16 +20350,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0010  291.93
 x 0 0
 x 0 0
 x 0 0
@@ -20770,6 +20806,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 38.1351
 # !latitude: -17.2678
@@ -20779,30 +20817,37 @@ x 0 0
 Pebane (Rio Moniga), Mozambique
 +02:00 :Africa/Maputo
 2.4300 meters
-x 0 0
+J1              0.0033  62.12
 K1              0.0500  71.00
-K2              0.1728  154.00
-x 0 0
+K2              0.1764  149.90
+L2              0.0385  129.03
 x 0 0
 M2              1.1600  110.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2204  86.42
-x 0 0
+M3              0.0006  269.85
+M4              0.0136  117.87
+M6              0.0040  11.60
+M8              0.0011  309.57
+N2              0.1865  88.62
+2N2             0.0171  68.93
 O1              0.0600  29.00
 x 0 0
-P1              0.0165  70.84
+P1              0.0184  67.79
+Q1              0.0170  3.39
 x 0 0
-x 0 0
-x 0 0
+R2              0.0055  148.38
 x 0 0
 S2              0.6400  154.00
+S4              0.0062  202.35
 x 0 0
+T2              0.0383  145.52
+LDA2            0.0099  130.33
+MU2             0.0200  105.43
+NU2             0.0381  95.92
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0118  86.10
+MS4             0.0205  167.19
 x 0 0
 x 0 0
 x 0 0
@@ -20840,7 +20885,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0034  236.62
 x 0 0
+EPS2            0.0026  83.45
 x 0 0
 x 0 0
 x 0 0
@@ -20881,16 +20928,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0011  26.94
 x 0 0
 x 0 0
 x 0 0
@@ -21347,6 +21385,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 49.2886
 # !latitude: -12.2672
@@ -21356,30 +21396,37 @@ x 0 0
 Antsiranana (Diego-Suarez), Madagascar
 +03:00 :Indian/Antananarivo
 1.4300 meters
-x 0 0
+J1              0.0083  59.63
 K1              0.1100  53.00
-K2              0.0756  142.00
-x 0 0
+K2              0.0789  136.99
+L2              0.0190  120.60
 x 0 0
 M2              0.5900  99.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1121  75.95
-x 0 0
+M3              0.0001  124.26
+M4              0.0015  301.23
+M6              0.0007  188.80
+M8              0.0002  66.14
+N2              0.1198  74.08
+2N2             0.0142  28.64
 O1              0.0700  58.00
 x 0 0
-P1              0.0363  52.75
+P1              0.0340  52.05
+Q1              0.0171  45.36
 x 0 0
-x 0 0
-x 0 0
+R2              0.0026  135.49
 x 0 0
 S2              0.2800  142.00
+S4              0.0004  319.49
 x 0 0
+T2              0.0186  131.10
+LDA2            0.0046  118.68
+MU2             0.0081  60.38
+NU2             0.0241  79.41
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0010  207.59
+MS4             0.0011  240.96
 x 0 0
 x 0 0
 x 0 0
@@ -21417,7 +21464,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  316.32
 x 0 0
+EPS2            0.0021  12.97
 x 0 0
 x 0 0
 x 0 0
@@ -21458,16 +21507,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0003  129.85
 x 0 0
 x 0 0
 x 0 0
@@ -21539,6 +21579,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 45.3513
 # !latitude: 2.0349
@@ -21548,30 +21590,37 @@ x 0 0
 Mogadishu, Somalia
 +03:00 :Africa/Mogadishu
 1.6300 meters
-x 0 0
+J1              0.0150  46.51
 K1              0.2100  36.00
-K2              0.0972  152.00
-x 0 0
+K2              0.0995  149.01
+L2              0.0209  133.87
 x 0 0
 M2              0.6800  113.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1292  92.10
-x 0 0
+M3              0.0001  39.25
+M4              0.0025  34.81
+M6              0.0007  285.48
+M8              0.0001  54.01
+N2              0.1242  90.88
+2N2             0.0126  54.22
 O1              0.1200  41.00
 x 0 0
-P1              0.0693  35.75
+P1              0.0630  35.49
+Q1              0.0269  35.49
 x 0 0
-x 0 0
-x 0 0
+R2              0.0032  144.85
 x 0 0
 S2              0.3600  152.00
+S4              0.0005  124.36
 x 0 0
+T2              0.0226  140.32
+LDA2            0.0052  134.12
+MU2             0.0095  78.92
+NU2             0.0256  94.30
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0021  312.00
+MS4             0.0027  52.09
 x 0 0
 x 0 0
 x 0 0
@@ -21609,7 +21658,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0007  331.19
 x 0 0
+EPS2            0.0017  50.41
 x 0 0
 x 0 0
 x 0 0
@@ -21650,16 +21701,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  240.12
 x 0 0
 x 0 0
 x 0 0
@@ -21923,6 +21965,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 45.0030
 # !latitude: 10.4410
@@ -21930,30 +21974,37 @@ x 0 0
 Berbera (Gulf of Aden), Somalia
 +03:00 :Africa/Mogadishu
 1.5600 meters
-x 0 0
+J1              0.0328  45.54
 K1              0.4600  34.00
-K2              0.0540  247.00
-x 0 0
+K2              0.0553  241.59
+L2              0.0118  225.59
 x 0 0
 M2              0.4700  225.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0893  213.21
-x 0 0
+M3              0.0002  215.51
+M4              0.0053  304.14
+M6              0.0020  18.15
+M8              0.0002  15.32
+N2              0.1313  217.99
+2N2             0.0247  187.29
 O1              0.1900  38.00
 x 0 0
-P1              0.1518  33.75
+P1              0.1373  32.66
+Q1              0.0407  36.11
 x 0 0
-x 0 0
-x 0 0
+R2              0.0015  251.74
 x 0 0
 S2              0.2000  247.00
+S4              0.0011  325.61
 x 0 0
+T2              0.0111  253.73
+LDA2            0.0038  210.30
+MU2             0.0200  185.05
+NU2             0.0242  225.53
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0032  200.70
+MS4             0.0035  254.30
 x 0 0
 x 0 0
 x 0 0
@@ -21991,7 +22042,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  311.80
 x 0 0
+EPS2            0.0059  155.61
 x 0 0
 x 0 0
 x 0 0
@@ -22032,16 +22085,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0009  132.87
 x 0 0
 x 0 0
 x 0 0
@@ -22306,6 +22350,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 54.6861
 # !latitude: 16.9873
@@ -22315,30 +22361,37 @@ x 0 0
 Mirbat (Marbat), Oman
 +04:00 :Asia/Muscat
 1.3200 meters
-x 0 0
+J1              0.0224  57.39
 K1              0.3300  45.00
-K2              0.0378  290.00
-x 0 0
+K2              0.0395  287.25
+L2              0.0088  270.72
 x 0 0
 M2              0.3200  260.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0608  243.92
-x 0 0
+M3              0.0001  291.47
+M4              0.0025  209.26
+M6              0.0013  270.95
+M8              0.0003  150.55
+N2              0.0868  245.67
+2N2             0.0149  211.28
 O1              0.1900  41.00
 x 0 0
-P1              0.1089  44.67
+P1              0.0996  43.27
+Q1              0.0409  39.62
 x 0 0
-x 0 0
-x 0 0
+R2              0.0012  292.47
 x 0 0
 S2              0.1400  290.00
+S4              0.0006  202.15
 x 0 0
+T2              0.0089  292.24
+LDA2            0.0017  247.17
+MU2             0.0112  212.63
+NU2             0.0176  253.27
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0017  74.54
+MS4             0.0020  129.30
 x 0 0
 x 0 0
 x 0 0
@@ -22376,7 +22429,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  284.18
 x 0 0
+EPS2            0.0033  187.13
 x 0 0
 x 0 0
 x 0 0
@@ -22417,16 +22472,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  6.54
 x 0 0
 x 0 0
 x 0 0
@@ -22499,6 +22545,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 55.9834
 # !latitude: 17.5244
@@ -22508,30 +22556,37 @@ x 0 0
 Al Hallaniyah, Oman
 +04:00 :Asia/Muscat
 1.2800 meters
-x 0 0
+J1              0.0257  51.34
 K1              0.3800  39.00
-K2              0.0378  295.00
-x 0 0
+K2              0.0393  292.25
+L2              0.0089  273.33
 x 0 0
 M2              0.3300  263.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0627  245.85
-x 0 0
+M3              0.0001  274.38
+M4              0.0021  221.94
+M6              0.0011  273.36
+M8              0.0003  150.74
+N2              0.0877  246.86
+2N2             0.0147  210.88
 O1              0.1800  41.00
 x 0 0
-P1              0.1254  38.67
+P1              0.1141  37.14
+Q1              0.0387  39.44
 x 0 0
-x 0 0
-x 0 0
+R2              0.0012  296.60
 x 0 0
 S2              0.1400  295.00
+S4              0.0005  195.74
 x 0 0
+T2              0.0091  295.79
+LDA2            0.0016  254.24
+MU2             0.0110  213.64
+NU2             0.0178  253.81
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0016  64.69
+MS4             0.0018  120.66
 x 0 0
 x 0 0
 x 0 0
@@ -22569,7 +22624,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0001  263.03
 x 0 0
+EPS2            0.0032  187.78
 x 0 0
 x 0 0
 x 0 0
@@ -22610,16 +22667,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0004  358.40
 x 0 0
 x 0 0
 x 0 0
@@ -22691,6 +22739,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 57.8119
 # !latitude: 18.9815
@@ -22700,30 +22750,37 @@ x 0 0
 Ras al Madrakah, Oman
 +04:00 :Asia/Muscat
 1.5600 meters
-x 0 0
+J1              0.0264  53.36
 K1              0.3900  41.00
-K2              0.0459  302.00
-x 0 0
+K2              0.0471  299.14
+L2              0.0116  283.90
 x 0 0
 M2              0.4300  271.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0817  254.38
-x 0 0
+M3              0.0001  311.91
+M4              0.0013  119.47
+M6              0.0004  297.35
+M8              0.0001  172.56
+N2              0.1100  252.83
+2N2             0.0175  215.09
 O1              0.1900  38.00
 x 0 0
-P1              0.1287  40.67
+P1              0.1177  39.00
+Q1              0.0408  36.69
 x 0 0
-x 0 0
-x 0 0
+R2              0.0015  302.01
 x 0 0
 S2              0.1700  302.00
+S4              0.0003  178.89
 x 0 0
+T2              0.0114  300.10
+LDA2            0.0018  273.60
+MU2             0.0131  220.31
+NU2             0.0228  259.04
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0011  36.19
+MS4             0.0013  117.13
 x 0 0
 x 0 0
 x 0 0
@@ -22761,7 +22818,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0002  233.85
 x 0 0
+EPS2            0.0037  194.48
 x 0 0
 x 0 0
 x 0 0
@@ -22802,16 +22861,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  329.05
 x 0 0
 x 0 0
 x 0 0
@@ -22884,6 +22934,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 58.1774
 # !latitude: 20.5643
@@ -22893,30 +22945,37 @@ x 0 0
 Mahawt (Jazirat Muhut), Oman
 +04:00 :Asia/Muscat
 1.7900 meters
-x 0 0
+J1              0.0253  44.42
 K1              0.4000  43.00
-K2              0.0729  313.00
-x 0 0
+K2              0.0740  303.14
+L2              0.0186  267.56
 x 0 0
 M2              0.6300  278.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1197  259.24
-x 0 0
+M3              0.0059  230.78
+M4              0.0386  137.07
+M6              0.0039  177.99
+M8              0.0005  1.03
+N2              0.1594  267.58
+2N2             0.0263  206.22
 O1              0.2000  42.00
 x 0 0
-P1              0.1320  42.67
+P1              0.0995  31.85
+Q1              0.0417  23.35
 x 0 0
-x 0 0
-x 0 0
+R2              0.0026  281.53
 x 0 0
 S2              0.2700  313.00
+S4              0.0083  146.59
 x 0 0
+T2              0.0180  285.66
+LDA2            0.0026  278.97
+MU2             0.0216  212.95
+NU2             0.0281  254.85
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0227  31.21
+MS4             0.0365  92.67
 x 0 0
 x 0 0
 x 0 0
@@ -22954,7 +23013,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  178.28
 x 0 0
+EPS2            0.0057  181.88
 x 0 0
 x 0 0
 x 0 0
@@ -22995,16 +23056,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0037  8.34
 x 0 0
 x 0 0
 x 0 0
@@ -23077,6 +23129,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 57.7913
 # !latitude: 23.7814
@@ -23086,30 +23140,37 @@ x 0 0
 Al Sawadi, Oman
 +04:00 :Asia/Muscat
 1.8600 meters
-x 0 0
+J1              0.0259  48.67
 K1              0.3800  36.00
-K2              0.0702  307.00
-x 0 0
+K2              0.0716  301.08
+L2              0.0178  286.84
 x 0 0
 M2              0.6500  274.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1235  256.31
-x 0 0
+M3              0.0001  286.04
+M4              0.0098  86.39
+M6              0.0014  193.77
+M8              0.0001  122.81
+N2              0.1635  255.00
+2N2             0.0246  216.26
 O1              0.2000  37.00
 x 0 0
-P1              0.1254  35.67
+P1              0.1158  34.35
+Q1              0.0427  37.12
 x 0 0
-x 0 0
-x 0 0
+R2              0.0023  305.26
 x 0 0
 S2              0.2600  307.00
+S4              0.0007  69.40
 x 0 0
+T2              0.0175  302.89
+LDA2            0.0033  278.38
+MU2             0.0179  219.71
+NU2             0.0340  259.87
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0035  341.98
+MS4             0.0010  65.81
 x 0 0
 x 0 0
 x 0 0
@@ -23147,7 +23208,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  215.61
 x 0 0
+EPS2            0.0051  194.30
 x 0 0
 x 0 0
 x 0 0
@@ -23188,16 +23251,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0009  252.78
 x 0 0
 x 0 0
 x 0 0
@@ -23270,6 +23324,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 57.1257
 # !latitude: 23.9720
@@ -23279,30 +23335,37 @@ x 0 0
 Al Khaburah, Oman
 +04:00 :Asia/Muscat
 1.9000 meters
-x 0 0
+J1              0.0273  60.74
 K1              0.4000  48.00
-K2              0.0702  307.00
-x 0 0
+K2              0.0722  300.91
+L2              0.0193  288.49
 x 0 0
 M2              0.6900  275.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1311  257.85
-x 0 0
+M3              0.0002  288.38
+M4              0.0116  91.06
+M6              0.0022  201.44
+M8              0.0001  120.83
+N2              0.1743  256.61
+2N2             0.0262  218.01
 O1              0.2000  40.00
 x 0 0
-P1              0.1320  47.67
+P1              0.1218  46.49
+Q1              0.0426  40.33
 x 0 0
-x 0 0
-x 0 0
+R2              0.0023  305.55
 x 0 0
 S2              0.2600  307.00
+S4              0.0008  72.74
 x 0 0
+T2              0.0174  303.15
+LDA2            0.0036  279.26
+MU2             0.0188  220.81
+NU2             0.0364  261.61
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0040  346.24
+MS4             0.0010  72.78
 x 0 0
 x 0 0
 x 0 0
@@ -23340,7 +23403,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  215.26
 x 0 0
+EPS2            0.0054  195.23
 x 0 0
 x 0 0
 x 0 0
@@ -23381,16 +23446,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0011  255.98
 x 0 0
 x 0 0
 x 0 0
@@ -23463,6 +23519,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 56.9060
 # !latitude: 24.1535
@@ -23472,30 +23530,37 @@ x 0 0
 Saham, Oman
 +04:00 :Asia/Muscat
 1.9000 meters
-x 0 0
+J1              0.0273  51.80
 K1              0.4000  39.00
-K2              0.0702  309.00
-x 0 0
+K2              0.0725  302.88
+L2              0.0191  288.75
 x 0 0
 M2              0.6800  275.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1292  256.78
-x 0 0
+M3              0.0002  288.48
+M4              0.0113  91.78
+M6              0.0022  203.05
+M8              0.0000  118.25
+N2              0.1721  256.81
+2N2             0.0259  218.33
 O1              0.2200  39.00
 x 0 0
-P1              0.1320  38.67
+P1              0.1218  37.59
+Q1              0.0469  39.48
 x 0 0
-x 0 0
-x 0 0
+R2              0.0023  307.85
 x 0 0
 S2              0.2600  309.00
+S4              0.0007  73.20
 x 0 0
+T2              0.0174  305.43
+LDA2            0.0036  279.23
+MU2             0.0184  220.80
+NU2             0.0360  261.92
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0038  347.09
+MS4             0.0009  73.67
 x 0 0
 x 0 0
 x 0 0
@@ -23533,7 +23598,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  215.11
 x 0 0
+EPS2            0.0053  195.19
 x 0 0
 x 0 0
 x 0 0
@@ -23574,16 +23641,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0011  256.62
 x 0 0
 x 0 0
 x 0 0
@@ -23656,6 +23714,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 56.4719
 # !latitude: 24.7475
@@ -23665,30 +23725,37 @@ x 0 0
 Shinas, Oman
 +04:00 :Asia/Muscat
 2.1000 meters
-x 0 0
+J1              0.0280  51.90
 K1              0.4100  39.00
-K2              0.0729  307.00
-x 0 0
+K2              0.0758  300.95
+L2              0.0193  287.80
 x 0 0
 M2              0.6800  274.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1292  256.31
-x 0 0
+M3              0.0002  269.00
+M4              0.0113  90.89
+M6              0.0026  203.06
+M8              0.0000  353.91
+N2              0.1732  256.30
+2N2             0.0259  217.72
 O1              0.2100  35.00
 x 0 0
-P1              0.1353  38.67
+P1              0.1246  37.78
+Q1              0.0446  35.70
 x 0 0
-x 0 0
-x 0 0
+R2              0.0024  306.36
 x 0 0
 S2              0.2700  307.00
+S4              0.0008  70.68
 x 0 0
+T2              0.0179  303.96
+LDA2            0.0037  278.06
+MU2             0.0183  219.41
+NU2             0.0361  261.38
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0038  347.38
+MS4             0.0009  69.18
 x 0 0
 x 0 0
 x 0 0
@@ -23726,7 +23793,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  212.38
 x 0 0
+EPS2            0.0053  193.69
 x 0 0
 x 0 0
 x 0 0
@@ -23767,16 +23836,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0011  256.58
 x 0 0
 x 0 0
 x 0 0
@@ -23848,6 +23908,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 69.0798
 # !latitude: 22.4688
@@ -23857,30 +23919,37 @@ x 0 0
 Okha, Gujarat, India
 +05:30 :Asia/Kolkata
 2.0400 meters
-x 0 0
+J1              0.0326  85.44
 K1              0.4300  67.00
-K2              0.0945  41.00
-x 0 0
+K2              0.0804  37.88
+L2              0.0156  32.09
 x 0 0
 M2              1.1200  8.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2128  350.31
-x 0 0
+M3              0.0019  207.66
+M4              0.0345  189.49
+M6              0.0062  87.50
+M8              0.0031  254.05
+N2              0.2406  340.51
+2N2             0.0235  308.09
 O1              0.2100  65.00
 x 0 0
-P1              0.1419  66.55
+P1              0.1295  65.95
+Q1              0.0476  65.74
 x 0 0
-x 0 0
-x 0 0
+R2              0.0024  37.67
 x 0 0
 S2              0.3500  41.00
+S4              0.0026  243.87
 x 0 0
+T2              0.0181  36.61
+LDA2            0.0040  4.32
+MU2             0.0253  277.27
+NU2             0.0389  346.15
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0120  178.21
+MS4             0.0085  236.02
 x 0 0
 x 0 0
 x 0 0
@@ -23918,7 +23987,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0032  299.85
 x 0 0
+EPS2            0.0046  287.47
 x 0 0
 x 0 0
 x 0 0
@@ -23959,16 +24030,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0035  116.81
 x 0 0
 x 0 0
 x 0 0
@@ -24041,6 +24103,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 70.3704
 # !latitude: 20.8996
@@ -24050,30 +24114,37 @@ x 0 0
 Veraval, Gujarat, India
 +05:30 :Asia/Kolkata
 1.3300 meters
-x 0 0
+J1              0.0245  77.74
 K1              0.3600  63.00
-K2              0.0540  5.00
-x 0 0
+K2              0.0544  0.41
+L2              0.0125  342.18
 x 0 0
 M2              0.5400  327.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1026  306.63
-x 0 0
+M3              0.0003  213.82
+M4              0.0090  191.22
+M6              0.0085  52.97
+M8              0.0014  263.84
+N2              0.1367  310.84
+2N2             0.0221  273.32
 O1              0.1800  58.00
 x 0 0
-P1              0.1188  62.55
+P1              0.1074  60.81
+Q1              0.0378  57.65
 x 0 0
-x 0 0
-x 0 0
+R2              0.0020  4.24
 x 0 0
 S2              0.2000  5.00
+S4              0.0011  165.77
 x 0 0
+T2              0.0152  2.20
+LDA2            0.0024  353.48
+MU2             0.0215  286.19
+NU2             0.0288  313.61
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0017  155.79
+MS4             0.0047  244.45
 x 0 0
 x 0 0
 x 0 0
@@ -24111,7 +24182,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0014  317.03
 x 0 0
+EPS2            0.0046  254.29
 x 0 0
 x 0 0
 x 0 0
@@ -24152,16 +24225,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  123.92
 x 0 0
 x 0 0
 x 0 0
@@ -24238,6 +24302,8 @@ x 0 0
 # date_imported: 20260803
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 7
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 66.9667
 # !latitude: 24.8000
@@ -24247,30 +24313,37 @@ x 0 0
 Karachi (Entrance), Pakistan
 +05:00 :Asia/Karachi
 1.6700 meters
-x 0 0
+J1              0.0275  72.30
 K1              0.4000  58.00
-K2              0.0756  344.00
-x 0 0
+K2              0.0748  337.87
+L2              0.0181  316.36
 x 0 0
 M2              0.8000  305.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1520  284.10
-x 0 0
+M3              0.0002  319.47
+M4              0.0176  94.45
+M6              0.0120  294.10
+M8              0.0009  354.98
+N2              0.1933  285.34
+2N2             0.0289  248.46
 O1              0.2100  45.00
 x 0 0
-P1              0.1320  57.59
+P1              0.1210  56.12
+Q1              0.0448  44.14
 x 0 0
-x 0 0
-x 0 0
+R2              0.0026  342.69
 x 0 0
 S2              0.2800  344.00
+S4              0.0020  129.69
 x 0 0
+T2              0.0191  340.57
+LDA2            0.0033  317.87
+MU2             0.0254  255.39
+NU2             0.0376  291.28
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0075  34.57
+MS4             0.0046  93.47
 x 0 0
 x 0 0
 x 0 0
@@ -24308,7 +24381,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  262.33
 x 0 0
+EPS2            0.0059  229.59
 x 0 0
 x 0 0
 x 0 0
@@ -24349,16 +24424,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0015  312.03
 x 0 0
 x 0 0
 x 0 0
@@ -24623,6 +24689,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 69.3508
 # !latitude: 22.8217
@@ -24632,30 +24700,37 @@ x 0 0
 Mandvi, Gujarat, India
 +05:30 :Asia/Kolkata
 2.5900 meters
-x 0 0
+J1              0.0323  93.62
 K1              0.4400  75.00
-K2              0.0972  80.00
-x 0 0
+K2              0.0901  72.27
+L2              0.0235  69.83
 x 0 0
 M2              1.2400  42.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2356  21.63
-x 0 0
+M3              0.0003  170.55
+M4              0.0692  196.68
+M6              0.0210  80.48
+M8              0.0026  103.32
+N2              0.2437  26.35
+2N2             0.0343  0.17
 O1              0.2200  79.00
 x 0 0
-P1              0.1452  74.55
+P1              0.1151  69.98
+Q1              0.0506  74.39
 x 0 0
-x 0 0
-x 0 0
+R2              0.0027  79.56
 x 0 0
 S2              0.3600  80.00
+S4              0.0042  288.27
 x 0 0
+T2              0.0215  79.49
+LDA2            0.0023  18.66
+MU2             0.0142  336.35
+NU2             0.0374  28.69
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0252  209.91
+MS4             0.0373  269.13
 x 0 0
 x 0 0
 x 0 0
@@ -24693,7 +24768,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0071  302.69
 x 0 0
+EPS2            0.0064  339.00
 x 0 0
 x 0 0
 x 0 0
@@ -24734,16 +24811,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0055  149.81
 x 0 0
 x 0 0
 x 0 0
@@ -25201,6 +25269,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 72.7167
 # !latitude: 19.9725
@@ -25210,30 +25280,37 @@ x 0 0
 Dahanu, Maharashtra, India
 +05:30 :Asia/Kolkata
 2.8400 meters
-x 0 0
+J1              0.0392  75.57
 K1              0.5300  62.00
-K2              0.1593  80.00
-x 0 0
+K2              0.1410  72.17
+L2              0.0258  38.42
 x 0 0
 M2              1.4500  41.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2755  20.10
-x 0 0
+M3              0.0084  128.49
+M4              0.0782  295.08
+M6              0.0278  240.82
+M8              0.0079  189.96
+N2              0.3487  13.86
+2N2             0.0478  328.98
 O1              0.2500  60.00
 x 0 0
-P1              0.1749  61.55
+P1              0.1418  54.77
+Q1              0.0557  51.37
 x 0 0
-x 0 0
-x 0 0
+R2              0.0060  78.81
 x 0 0
 S2              0.5900  80.00
+S4              0.0149  75.86
 x 0 0
+T2              0.0404  74.40
+LDA2            0.0026  72.59
+MU2             0.0383  344.56
+NU2             0.0525  18.27
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0388  332.28
+MS4             0.0768  23.10
 x 0 0
 x 0 0
 x 0 0
@@ -25271,7 +25348,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0048  262.42
 x 0 0
+EPS2            0.0090  308.93
 x 0 0
 x 0 0
 x 0 0
@@ -25312,16 +25391,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0069  315.82
 x 0 0
 x 0 0
 x 0 0
@@ -25394,6 +25464,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 72.7052
 # !latitude: 19.7272
@@ -25403,30 +25475,37 @@ x 0 0
 Satpati, Maharashtra, India
 +05:30 :Asia/Kolkata
 3.0900 meters
-x 0 0
+J1              0.0346  71.52
 K1              0.4900  53.00
-K2              0.1377  53.00
-x 0 0
+K2              0.1281  44.28
+L2              0.0290  19.44
 x 0 0
 M2              1.3000  16.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2470  356.17
-x 0 0
+M3              0.0027  334.52
+M4              0.0690  242.11
+M6              0.0302  94.16
+M8              0.0070  322.44
+N2              0.3379  350.57
+2N2             0.0498  307.89
 O1              0.2100  56.00
 x 0 0
-P1              0.1617  52.55
+P1              0.1425  51.80
+Q1              0.0446  57.30
 x 0 0
-x 0 0
-x 0 0
+R2              0.0051  47.95
 x 0 0
 S2              0.5100  53.00
+S4              0.0110  319.90
 x 0 0
+T2              0.0386  46.15
+LDA2            0.0048  26.57
+MU2             0.0490  317.27
+NU2             0.0596  350.17
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0261  226.97
+MS4             0.0460  286.57
 x 0 0
 x 0 0
 x 0 0
@@ -25464,7 +25543,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0048  242.81
 x 0 0
+EPS2            0.0098  285.01
 x 0 0
 x 0 0
 x 0 0
@@ -25505,16 +25586,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0046  196.82
 x 0 0
 x 0 0
 x 0 0
@@ -25587,6 +25659,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 72.8076
 # !latitude: 19.3248
@@ -25596,30 +25670,37 @@ x 0 0
 Vasai (Bassein), Maharashtra, India
 +05:30 :Asia/Kolkata
 2.5300 meters
-x 0 0
+J1              0.0341  76.02
 K1              0.4800  60.00
-K2              0.1188  45.00
-x 0 0
+K2              0.1120  37.44
+L2              0.0261  8.44
 x 0 0
 M2              1.2000  6.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.2280  345.10
-x 0 0
+M3              0.0024  336.61
+M4              0.0375  236.65
+M6              0.0135  47.57
+M8              0.0025  187.39
+N2              0.3104  341.08
+2N2             0.0466  298.38
 O1              0.2100  50.00
 x 0 0
-P1              0.1584  59.55
+P1              0.1381  57.27
+Q1              0.0446  49.01
 x 0 0
-x 0 0
-x 0 0
+R2              0.0046  38.88
 x 0 0
 S2              0.4400  45.00
+S4              0.0101  302.83
 x 0 0
+T2              0.0348  37.81
+LDA2            0.0043  23.98
+MU2             0.0460  310.35
+NU2             0.0560  341.60
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0193  204.48
+MS4             0.0323  263.64
 x 0 0
 x 0 0
 x 0 0
@@ -25657,7 +25738,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0025  239.62
 x 0 0
+EPS2            0.0092  276.27
 x 0 0
 x 0 0
 x 0 0
@@ -25698,16 +25781,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0031  184.78
 x 0 0
 x 0 0
 x 0 0
@@ -25973,6 +26047,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 72.9291
 # !latitude: 18.5417
@@ -25982,30 +26058,37 @@ x 0 0
 Revadanda (Chaul), Maharashtra, India
 +05:30 :Asia/Kolkata
 2.4100 meters
-x 0 0
+J1              0.0319  72.55
 K1              0.4500  58.00
-K2              0.1053  12.00
-x 0 0
+K2              0.1014  6.18
+L2              0.0234  342.20
 x 0 0
 M2              1.0300  335.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1957  315.17
-x 0 0
+M3              0.0024  337.30
+M4              0.0227  15.05
+M6              0.0074  306.27
+M8              0.0013  102.98
+N2              0.2676  314.03
+2N2             0.0408  272.43
 O1              0.1900  48.00
 x 0 0
-P1              0.1485  57.55
+P1              0.1318  54.55
+Q1              0.0407  47.06
 x 0 0
-x 0 0
-x 0 0
+R2              0.0042  6.33
 x 0 0
 S2              0.3900  12.00
+S4              0.0054  247.36
 x 0 0
+T2              0.0311  5.94
+LDA2            0.0040  354.78
+MU2             0.0403  283.31
+NU2             0.0507  313.56
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0070  72.78
+MS4             0.0119  132.33
 x 0 0
 x 0 0
 x 0 0
@@ -26043,7 +26126,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0015  234.73
 x 0 0
+EPS2            0.0080  250.58
 x 0 0
 x 0 0
 x 0 0
@@ -26084,16 +26169,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0014  278.98
 x 0 0
 x 0 0
 x 0 0
@@ -26166,6 +26242,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 73.0487
 # !latitude: 17.9814
@@ -26175,30 +26253,37 @@ x 0 0
 Bankot (Savitri River), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.9600 meters
-x 0 0
+J1              0.0251  70.94
 K1              0.3600  56.00
-K2              0.0837  6.00
-x 0 0
+K2              0.0806  0.13
+L2              0.0186  337.16
 x 0 0
 M2              0.8400  328.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1596  307.63
-x 0 0
+M3              0.0003  167.64
+M4              0.0288  22.53
+M6              0.0016  135.39
+M8              0.0021  69.35
+N2              0.2113  307.67
+2N2             0.0321  266.62
 O1              0.1700  57.00
 x 0 0
-P1              0.1188  55.55
+P1              0.1060  53.79
+Q1              0.0359  57.56
 x 0 0
-x 0 0
-x 0 0
+R2              0.0032  359.79
 x 0 0
 S2              0.3100  6.00
+S4              0.0020  147.67
 x 0 0
+T2              0.0240  357.83
+LDA2            0.0034  348.55
+MU2             0.0320  276.52
+NU2             0.0405  307.36
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0132  19.20
+MS4             0.0206  80.05
 x 0 0
 x 0 0
 x 0 0
@@ -26236,7 +26321,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0010  243.87
 x 0 0
+EPS2            0.0063  244.87
 x 0 0
 x 0 0
 x 0 0
@@ -26277,16 +26364,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0031  308.04
 x 0 0
 x 0 0
 x 0 0
@@ -26358,6 +26436,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 73.3381
 # !latitude: 16.5561
@@ -26367,30 +26447,37 @@ x 0 0
 Vijayadurg (Vagothan River), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.3700 meters
-x 0 0
+J1              0.0269  66.66
 K1              0.3900  52.00
-K2              0.0621  346.00
-x 0 0
+K2              0.0594  340.96
+L2              0.0134  321.96
 x 0 0
 M2              0.6400  310.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1216  290.70
-x 0 0
+M3              0.0001  35.13
+M4              0.0143  5.19
+M6              0.0014  350.28
+M8              0.0013  181.59
+N2              0.1560  289.07
+2N2             0.0227  249.83
 O1              0.1600  55.00
 x 0 0
-P1              0.1287  51.55
+P1              0.1151  50.00
+Q1              0.0338  55.96
 x 0 0
-x 0 0
-x 0 0
+R2              0.0022  339.91
 x 0 0
 S2              0.2300  346.00
+S4              0.0016  84.99
 x 0 0
+T2              0.0166  337.45
+LDA2            0.0024  335.41
+MU2             0.0209  258.57
+NU2             0.0296  291.83
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0080  323.53
+MS4             0.0097  41.34
 x 0 0
 x 0 0
 x 0 0
@@ -26428,7 +26515,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  231.15
 x 0 0
+EPS2            0.0044  229.18
 x 0 0
 x 0 0
 x 0 0
@@ -26469,16 +26558,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0019  249.78
 x 0 0
 x 0 0
 x 0 0
@@ -26551,6 +26631,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 73.3766
 # !latitude: 16.3806
@@ -26560,30 +26642,37 @@ x 0 0
 Devgad (Devgarh), Maharashtra, India
 +05:30 :Asia/Kolkata
 1.3800 meters
-x 0 0
+J1              0.0221  66.65
 K1              0.3200  52.00
-K2              0.0621  351.00
-x 0 0
+K2              0.0595  346.01
+L2              0.0123  322.27
 x 0 0
 M2              0.5900  310.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1121  288.02
-x 0 0
+M3              0.0001  22.07
+M4              0.0115  8.93
+M6              0.0007  304.24
+M8              0.0015  180.03
+N2              0.1436  288.87
+2N2             0.0209  249.78
 O1              0.1600  49.00
 x 0 0
-P1              0.1056  51.55
+P1              0.0945  49.99
+Q1              0.0339  50.00
 x 0 0
-x 0 0
-x 0 0
+R2              0.0022  344.94
 x 0 0
 S2              0.2300  351.00
+S4              0.0014  83.79
 x 0 0
+T2              0.0165  342.39
+LDA2            0.0022  336.07
+MU2             0.0189  258.47
+NU2             0.0273  291.93
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0066  319.74
+MS4             0.0075  41.41
 x 0 0
 x 0 0
 x 0 0
@@ -26621,7 +26710,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  230.86
 x 0 0
+EPS2            0.0041  229.20
 x 0 0
 x 0 0
 x 0 0
@@ -26662,16 +26753,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0015  244.42
 x 0 0
 x 0 0
 x 0 0
@@ -26744,6 +26826,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 73.4644
 # !latitude: 16.0544
@@ -26753,30 +26837,37 @@ x 0 0
 Malvan, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.1700 meters
-x 0 0
+J1              0.0221  65.64
 K1              0.3200  51.00
-K2              0.0513  350.00
-x 0 0
+K2              0.0491  345.13
+L2              0.0117  323.71
 x 0 0
 M2              0.5600  311.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1064  290.10
-x 0 0
+M3              0.0001  1.55
+M4              0.0098  16.00
+M6              0.0009  225.16
+M8              0.0014  172.03
+N2              0.1360  289.56
+2N2             0.0197  250.50
 O1              0.1600  51.00
 x 0 0
-P1              0.1056  50.55
+P1              0.0944  49.00
+Q1              0.0339  52.08
 x 0 0
-x 0 0
-x 0 0
+R2              0.0018  343.96
 x 0 0
 S2              0.1900  350.00
+S4              0.0013  84.78
 x 0 0
+T2              0.0136  341.32
+LDA2            0.0021  338.19
+MU2             0.0176  259.09
+NU2             0.0259  292.97
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0057  317.20
+MS4             0.0060  44.61
 x 0 0
 x 0 0
 x 0 0
@@ -26814,7 +26905,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  232.59
 x 0 0
+EPS2            0.0038  229.92
 x 0 0
 x 0 0
 x 0 0
@@ -26855,16 +26948,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0013  239.76
 x 0 0
 x 0 0
 x 0 0
@@ -26936,6 +27020,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 73.6218
 # !latitude: 15.8569
@@ -26945,30 +27031,37 @@ x 0 0
 Vengurla, Maharashtra, India
 +05:30 :Asia/Kolkata
 1.1900 meters
-x 0 0
+J1              0.0214  68.65
 K1              0.3100  54.00
-K2              0.0513  347.00
-x 0 0
+K2              0.0491  342.13
+L2              0.0115  324.27
 x 0 0
 M2              0.5500  311.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1045  291.70
-x 0 0
+M3              0.0001  333.41
+M4              0.0099  20.54
+M6              0.0018  190.40
+M8              0.0014  153.46
+N2              0.1335  289.53
+2N2             0.0193  250.46
 O1              0.1600  51.00
 x 0 0
-P1              0.1023  53.55
+P1              0.0914  52.01
+Q1              0.0339  52.13
 x 0 0
-x 0 0
-x 0 0
+R2              0.0018  340.94
 x 0 0
 S2              0.1900  347.00
+S4              0.0014  85.25
 x 0 0
+T2              0.0135  338.24
+LDA2            0.0020  339.20
+MU2             0.0171  259.06
+NU2             0.0254  293.10
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0057  315.21
+MS4             0.0058  47.71
 x 0 0
 x 0 0
 x 0 0
@@ -27006,7 +27099,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  232.43
 x 0 0
+EPS2            0.0037  229.76
 x 0 0
 x 0 0
 x 0 0
@@ -27047,16 +27142,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0013  235.96
 x 0 0
 x 0 0
 x 0 0
@@ -27129,6 +27215,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 73.9508
 # !latitude: 15.1471
@@ -27138,30 +27226,37 @@ x 0 0
 Betul, Goa, India
 +05:30 :Asia/Kolkata
 1.0000 meters
-x 0 0
+J1              0.0234  73.68
 K1              0.3400  59.00
-K2              0.0459  1.00
-x 0 0
+K2              0.0437  356.24
+L2              0.0102  333.19
 x 0 0
 M2              0.4900  318.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0931  294.95
-x 0 0
+M3              0.0001  315.16
+M4              0.0093  38.54
+M6              0.0034  164.56
+M8              0.0007  85.61
+N2              0.1185  296.54
+2N2             0.0169  256.92
 O1              0.1500  55.00
 x 0 0
-P1              0.1122  58.55
+P1              0.1002  57.08
+Q1              0.0318  56.35
 x 0 0
-x 0 0
-x 0 0
+R2              0.0016  354.66
 x 0 0
 S2              0.1700  1.00
+S4              0.0014  99.55
 x 0 0
+T2              0.0120  351.78
+LDA2            0.0018  349.05
+MU2             0.0148  264.75
+NU2             0.0226  300.37
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0053  325.85
+MS4             0.0052  66.18
 x 0 0
 x 0 0
 x 0 0
@@ -27199,7 +27294,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  238.28
 x 0 0
+EPS2            0.0032  235.67
 x 0 0
 x 0 0
 x 0 0
@@ -27240,16 +27337,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0012  244.80
 x 0 0
 x 0 0
 x 0 0
@@ -27515,6 +27603,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 74.9937
 # !latitude: 12.4753
@@ -27524,30 +27614,37 @@ x 0 0
 Kasaragod, Kerala, India
 +05:30 :Asia/Kolkata
 0.8900 meters
-x 0 0
+J1              0.0172  68.72
 K1              0.2500  54.00
-K2              0.0297  13.00
-x 0 0
+K2              0.0279  8.76
+L2              0.0074  347.60
 x 0 0
 M2              0.3500  322.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0665  294.66
-x 0 0
+M3              0.0000  324.08
+M4              0.0062  28.34
+M6              0.0059  311.13
+M8              0.0004  354.86
+N2              0.0833  296.72
+2N2             0.0110  253.20
 O1              0.1300  56.00
 x 0 0
-P1              0.0825  53.55
+P1              0.0737  52.31
+Q1              0.0279  58.60
 x 0 0
-x 0 0
-x 0 0
+R2              0.0010  3.74
 x 0 0
 S2              0.1100  13.00
+S4              0.0009  83.83
 x 0 0
+T2              0.0076  359.15
+LDA2            0.0015  8.52
+MU2             0.0087  256.38
+NU2             0.0157  301.68
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0038  306.76
+MS4             0.0029  56.22
 x 0 0
 x 0 0
 x 0 0
@@ -27585,7 +27682,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0004  224.18
 x 0 0
+EPS2            0.0020  228.66
 x 0 0
 x 0 0
 x 0 0
@@ -27626,16 +27725,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0009  228.81
 x 0 0
 x 0 0
 x 0 0
@@ -27708,6 +27798,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 75.7714
 # !latitude: 11.2492
@@ -27717,30 +27809,37 @@ x 0 0
 Calicut (Kozhikode), Kerala, India
 +05:30 :Asia/Kolkata
 0.9600 meters
-x 0 0
+J1              0.0109  63.63
 K1              0.1600  49.00
-K2              0.0270  22.00
-x 0 0
+K2              0.0251  17.92
+L2              0.0073  355.11
 x 0 0
 M2              0.3200  323.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0608  291.38
-x 0 0
+M3              0.0000  277.77
+M4              0.0067  18.43
+M6              0.0130  283.59
+M8              0.0038  150.71
+N2              0.0741  294.42
+2N2             0.0092  248.39
 O1              0.1000  59.00
 x 0 0
-P1              0.0528  48.55
+P1              0.0472  47.36
+Q1              0.0217  62.43
 x 0 0
-x 0 0
-x 0 0
+R2              0.0009  10.76
 x 0 0
 S2              0.1000  22.00
+S4              0.0009  72.26
 x 0 0
+T2              0.0067  4.77
+LDA2            0.0017  16.55
+MU2             0.0067  248.74
+NU2             0.0141  300.34
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0039  296.78
+MS4             0.0027  49.67
 x 0 0
 x 0 0
 x 0 0
@@ -27778,7 +27877,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  215.35
 x 0 0
+EPS2            0.0016  220.56
 x 0 0
 x 0 0
 x 0 0
@@ -27819,16 +27920,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0009  220.86
 x 0 0
 x 0 0
 x 0 0
@@ -27901,6 +27993,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 76.3153
 # !latitude: 9.4999
@@ -27910,30 +28004,37 @@ x 0 0
 Alappuzha (Alleppey), Kerala, India
 +05:30 :Asia/Kolkata
 0.5500 meters
-x 0 0
+J1              0.0142  65.45
 K1              0.2100  51.00
-K2              0.0270  45.00
-x 0 0
+K2              0.0248  42.89
+L2              0.0068  17.01
 x 0 0
 M2              0.2500  339.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0475  303.62
-x 0 0
+M3              0.0000  324.17
+M4              0.0041  31.09
+M6              0.0054  292.57
+M8              0.0031  358.26
+N2              0.0566  305.12
+2N2             0.0062  254.32
 O1              0.0800  50.00
 x 0 0
-P1              0.0693  50.55
+P1              0.0621  49.33
+Q1              0.0176  54.84
 x 0 0
-x 0 0
-x 0 0
+R2              0.0008  33.29
 x 0 0
 S2              0.1000  45.00
+S4              0.0006  84.14
 x 0 0
+T2              0.0060  25.91
+LDA2            0.0017  36.53
+MU2             0.0039  245.85
+NU2             0.0107  312.86
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0026  312.07
+MS4             0.0015  68.65
 x 0 0
 x 0 0
 x 0 0
@@ -27971,7 +28072,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  219.29
 x 0 0
+EPS2            0.0009  217.80
 x 0 0
 x 0 0
 x 0 0
@@ -28012,16 +28115,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0007  240.11
 x 0 0
 x 0 0
 x 0 0
@@ -28094,6 +28188,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 76.9894
 # !latitude: 8.3742
@@ -28103,30 +28199,37 @@ x 0 0
 Trivandrum (Vizhinjam), Kerala, India
 +05:30 :Asia/Kolkata
 0.5500 meters
-x 0 0
+J1              0.0098  69.01
 K1              0.1500  55.00
-K2              0.0297  82.00
-x 0 0
+K2              0.0286  82.87
+L2              0.0077  27.04
 x 0 0
 M2              0.2100  352.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0399  303.76
-x 0 0
+M3              0.0000  334.89
+M4              0.0014  47.36
+M6              0.0023  232.23
+M8              0.0009  204.62
+N2              0.0360  310.74
+2N2             0.0022  248.89
 O1              0.0700  45.00
 x 0 0
-P1              0.0495  54.55
+P1              0.0447  52.78
+Q1              0.0159  53.77
 x 0 0
-x 0 0
-x 0 0
+R2              0.0008  75.21
 x 0 0
 S2              0.1100  82.00
+S4              0.0003  66.82
 x 0 0
+T2              0.0058  68.56
+LDA2            0.0023  38.53
+MU2             0.0006  145.68
+NU2             0.0072  321.28
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0018  314.12
+MS4             0.0010  110.64
 x 0 0
 x 0 0
 x 0 0
@@ -28164,7 +28267,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0006  204.73
 x 0 0
+EPS2            0.0003  131.86
 x 0 0
 x 0 0
 x 0 0
@@ -28205,16 +28310,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0006  241.36
 x 0 0
 x 0 0
 x 0 0
@@ -28286,6 +28382,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 79.8512
 # !latitude: 10.7649
@@ -28295,30 +28393,37 @@ x 0 0
 Nagapattinam, Tamil Nadu, India
 +05:30 :Asia/Kolkata
 0.3400 meters
-x 0 0
+J1              0.0040  340.33
 K1              0.0600  351.00
-K2              0.0216  291.00
-x 0 0
+K2              0.0229  280.39
+L2              0.0064  271.11
 x 0 0
 M2              0.2000  254.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0380  234.17
-x 0 0
+M3              0.0001  104.91
+M4              0.0006  204.62
+M6              0.0007  130.22
+M8              0.0002  220.42
+N2              0.0442  241.93
+2N2             0.0075  222.56
 O1              0.0300  319.00
 x 0 0
-P1              0.0198  350.55
+P1              0.0199  348.29
+Q1              0.0018  123.80
 x 0 0
-x 0 0
-x 0 0
+R2              0.0007  271.35
 x 0 0
 S2              0.0800  291.00
+S4              0.0001  109.16
 x 0 0
+T2              0.0045  271.20
+LDA2            0.0015  278.12
+MU2             0.0055  219.12
+NU2             0.0098  244.88
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0007  107.61
+MS4             0.0004  124.11
 x 0 0
 x 0 0
 x 0 0
@@ -28356,7 +28461,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0009  310.00
 x 0 0
+EPS2            0.0019  196.65
 x 0 0
 x 0 0
 x 0 0
@@ -28397,16 +28504,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  45.12
 x 0 0
 x 0 0
 x 0 0
@@ -28865,6 +28963,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 79.7616
 # !latitude: 11.4868
@@ -28874,30 +28974,37 @@ x 0 0
 Parangipettai (Porto Novo), Tamil Nadu, India
 +05:30 :Asia/Kolkata
 0.7100 meters
-x 0 0
+J1              0.0052  332.76
 K1              0.0800  343.00
-K2              0.0297  287.00
-x 0 0
+K2              0.0313  276.75
+L2              0.0081  266.05
 x 0 0
 M2              0.2600  250.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0494  230.17
-x 0 0
+M3              0.0001  105.88
+M4              0.0006  188.71
+M6              0.0011  112.83
+M8              0.0002  183.31
+N2              0.0560  238.73
+2N2             0.0095  219.01
 O1              0.0300  331.00
 x 0 0
-P1              0.0264  342.55
+P1              0.0264  340.58
+Q1              0.0014  123.86
 x 0 0
-x 0 0
-x 0 0
+R2              0.0009  267.33
 x 0 0
 S2              0.1100  287.00
+S4              0.0002  105.91
 x 0 0
+T2              0.0062  267.12
+LDA2            0.0020  271.88
+MU2             0.0073  215.34
+NU2             0.0121  241.83
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0009  99.17
+MS4             0.0006  112.79
 x 0 0
 x 0 0
 x 0 0
@@ -28935,7 +29042,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0011  305.89
 x 0 0
+EPS2            0.0024  193.82
 x 0 0
 x 0 0
 x 0 0
@@ -28976,16 +29085,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0003  41.82
 x 0 0
 x 0 0
 x 0 0
@@ -29058,6 +29158,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 6
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 82.2539
 # !latitude: 16.9382
@@ -29067,30 +29169,37 @@ x 0 0
 Kakinada (Cocanada), Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 0.8700 meters
-x 0 0
+J1              0.0059  329.93
 K1              0.1000  339.00
-K2              0.0540  285.00
-x 0 0
+K2              0.0471  280.24
+L2              0.0128  271.67
 x 0 0
 M2              0.4600  248.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0874  228.17
-x 0 0
+M3              0.0003  134.42
+M4              0.0061  320.75
+M6              0.0006  32.68
+M8              0.0006  93.09
+N2              0.1148  244.45
+2N2             0.0147  218.75
 O1              0.0400  328.00
 x 0 0
-P1              0.0330  338.55
+P1              0.0302  334.40
+Q1              0.0018  358.12
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  268.15
 x 0 0
 S2              0.2000  285.00
+S4              0.0017  80.59
 x 0 0
+T2              0.0086  267.18
+LDA2            0.0024  300.03
+MU2             0.0096  222.60
+NU2             0.0199  249.91
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0026  21.41
+MS4             0.0062  49.17
 x 0 0
 x 0 0
 x 0 0
@@ -29128,7 +29237,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0020  326.77
 x 0 0
+EPS2            0.0032  203.02
 x 0 0
 x 0 0
 x 0 0
@@ -29169,16 +29280,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0007  21.81
 x 0 0
 x 0 0
 x 0 0
@@ -29250,6 +29352,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 83.4564
 # !latitude: 17.8908
@@ -29259,30 +29363,37 @@ x 0 0
 Bheemunipatnam (Bheemili), Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 1.1400 meters
-x 0 0
+J1              0.0069  322.46
 K1              0.1100  330.00
-K2              0.0540  278.00
-x 0 0
+K2              0.0553  273.19
+L2              0.0136  250.70
 x 0 0
 M2              0.4400  239.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0836  218.10
-x 0 0
+M3              0.0002  64.76
+M4              0.0010  326.83
+M6              0.0012  80.24
+M8              0.0006  296.34
+N2              0.0938  228.06
+2N2             0.0151  208.69
 O1              0.0400  325.00
 x 0 0
-P1              0.0363  329.55
+P1              0.0352  327.62
+Q1              0.0019  351.96
 x 0 0
-x 0 0
-x 0 0
+R2              0.0016  261.82
 x 0 0
 S2              0.2000  278.00
+S4              0.0003  61.89
 x 0 0
+T2              0.0109  261.25
+LDA2            0.0037  250.63
+MU2             0.0126  210.23
+NU2             0.0183  230.19
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0004  319.41
+MS4             0.0013  33.39
 x 0 0
 x 0 0
 x 0 0
@@ -29320,7 +29431,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0014  294.32
 x 0 0
+EPS2            0.0035  187.91
 x 0 0
 x 0 0
 x 0 0
@@ -29361,16 +29474,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0001  8.35
 x 0 0
 x 0 0
 x 0 0
@@ -29442,6 +29546,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 84.1227
 # !latitude: 18.3434
@@ -29451,30 +29557,37 @@ x 0 0
 Kalingapatnam, Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 1.0100 meters
-x 0 0
+J1              0.0063  339.82
 K1              0.1000  347.00
-K2              0.0567  281.00
-x 0 0
+K2              0.0580  276.64
+L2              0.0148  256.34
 x 0 0
 M2              0.4800  245.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0912  225.70
-x 0 0
+M3              0.0002  74.45
+M4              0.0012  335.92
+M6              0.0009  103.94
+M8              0.0006  314.54
+N2              0.1024  234.22
+2N2             0.0163  214.70
 O1              0.0500  314.00
 x 0 0
-P1              0.0330  346.55
+P1              0.0319  344.62
+Q1              0.0025  337.41
 x 0 0
-x 0 0
-x 0 0
+R2              0.0017  265.07
 x 0 0
 S2              0.2100  281.00
+S4              0.0003  70.72
 x 0 0
+T2              0.0114  264.46
+LDA2            0.0040  255.59
+MU2             0.0137  216.59
+NU2             0.0198  236.33
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0006  311.64
+MS4             0.0013  41.48
 x 0 0
 x 0 0
 x 0 0
@@ -29512,7 +29625,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0015  300.17
 x 0 0
+EPS2            0.0037  194.53
 x 0 0
 x 0 0
 x 0 0
@@ -29553,16 +29668,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  22.17
 x 0 0
 x 0 0
 x 0 0
@@ -29634,6 +29740,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 84.5886
 # !latitude: 18.8727
@@ -29643,30 +29751,37 @@ x 0 0
 Baruva, Andhra Pradesh, India
 +05:30 :Asia/Kolkata
 1.0400 meters
-x 0 0
+J1              0.0069  330.09
 K1              0.1100  337.00
-K2              0.0513  278.00
-x 0 0
+K2              0.0526  273.80
+L2              0.0138  254.93
 x 0 0
 M2              0.4500  244.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0855  225.78
-x 0 0
+M3              0.0001  70.85
+M4              0.0012  331.53
+M6              0.0005  113.42
+M8              0.0005  305.80
+N2              0.0951  233.43
+2N2             0.0152  213.86
 O1              0.0500  308.00
 x 0 0
-P1              0.0363  336.55
+P1              0.0350  334.73
+Q1              0.0026  329.08
 x 0 0
-x 0 0
-x 0 0
+R2              0.0015  262.12
 x 0 0
 S2              0.1900  278.00
+S4              0.0002  61.92
 x 0 0
+T2              0.0103  261.48
+LDA2            0.0038  253.71
+MU2             0.0129  216.39
+NU2             0.0184  235.46
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0006  297.85
+MS4             0.0011  33.08
 x 0 0
 x 0 0
 x 0 0
@@ -29704,7 +29819,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0013  299.40
 x 0 0
+EPS2            0.0034  193.99
 x 0 0
 x 0 0
 x 0 0
@@ -29745,16 +29862,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0000  211.37
 x 0 0
 x 0 0
 x 0 0
@@ -30210,6 +30318,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 86.7978
 # !latitude: 20.3556
@@ -30219,30 +30329,37 @@ x 0 0
 False Point, Odisha, India
 +05:30 :Asia/Kolkata
 1.5400 meters
-x 0 0
+J1              0.0075  333.67
 K1              0.1200  340.00
-K2              0.0837  293.00
-x 0 0
+K2              0.0883  288.69
+L2              0.0214  264.25
 x 0 0
 M2              0.6900  255.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1311  234.63
-x 0 0
+M3              0.0002  61.04
+M4              0.0026  283.39
+M6              0.0050  252.93
+M8              0.0014  149.06
+N2              0.1408  244.57
+2N2             0.0225  223.78
 O1              0.0500  325.00
 x 0 0
-P1              0.0396  339.55
+P1              0.0381  337.43
+Q1              0.0029  339.21
 x 0 0
-x 0 0
-x 0 0
+R2              0.0025  276.32
 x 0 0
 S2              0.3100  293.00
+S4              0.0014  334.25
 x 0 0
+T2              0.0168  275.45
+LDA2            0.0062  261.22
+MU2             0.0188  225.52
+NU2             0.0276  245.90
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0035  259.03
+MS4             0.0054  282.98
 x 0 0
 x 0 0
 x 0 0
@@ -30280,7 +30397,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0017  314.92
 x 0 0
+EPS2            0.0048  205.88
 x 0 0
 x 0 0
 x 0 0
@@ -30321,16 +30440,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0007  218.54
 x 0 0
 x 0 0
 x 0 0
@@ -30402,6 +30512,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 87.0667
 # !latitude: 20.7833
@@ -30411,30 +30523,37 @@ x 0 0
 Shortt Island, Odisha, India
 +05:30 :Asia/Kolkata
 1.9200 meters
-x 0 0
+J1              0.0069  341.26
 K1              0.1100  347.00
-K2              0.1134  301.00
-x 0 0
+K2              0.1165  300.40
+L2              0.0279  276.42
 x 0 0
 M2              0.9200  262.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1748  241.10
-x 0 0
+M3              0.0003  164.74
+M4              0.0217  138.48
+M6              0.0079  298.96
+M8              0.0038  86.04
+N2              0.1813  254.62
+2N2             0.0284  233.58
 O1              0.0400  328.00
 x 0 0
-P1              0.0363  346.55
+P1              0.0347  344.41
+Q1              0.0024  341.75
 x 0 0
-x 0 0
-x 0 0
+R2              0.0032  289.33
 x 0 0
 S2              0.4200  301.00
+S4              0.0047  327.60
 x 0 0
+T2              0.0216  286.38
+LDA2            0.0084  278.10
+MU2             0.0243  238.19
+NU2             0.0348  257.79
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0061  223.49
+MS4             0.0178  257.48
 x 0 0
 x 0 0
 x 0 0
@@ -30472,7 +30591,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0049  15.31
 x 0 0
+EPS2            0.0058  215.03
 x 0 0
 x 0 0
 x 0 0
@@ -30513,16 +30634,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0009  220.40
 x 0 0
 x 0 0
 x 0 0
@@ -30594,6 +30706,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 56.4325
 # !latitude: 25.9374
@@ -30603,30 +30717,37 @@ x 0 0
 Al Lima, Oman
 +04:00 :Asia/Muscat
 1.8400 meters
-x 0 0
+J1              0.0217  58.08
 K1              0.3000  46.00
-K2              0.0783  322.00
-x 0 0
+K2              0.0823  316.25
+L2              0.0190  300.10
 x 0 0
 M2              0.7000  287.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1330  268.24
-x 0 0
+M3              0.0007  239.06
+M4              0.0089  147.57
+M6              0.0037  225.07
+M8              0.0004  317.37
+N2              0.1771  267.27
+2N2             0.0261  228.30
 O1              0.1900  42.00
 x 0 0
-P1              0.0990  45.67
+P1              0.0934  45.97
+Q1              0.0414  42.01
 x 0 0
-x 0 0
-x 0 0
+R2              0.0026  322.27
 x 0 0
 S2              0.2900  322.00
+S4              0.0001  97.47
 x 0 0
+T2              0.0197  319.87
+LDA2            0.0040  289.09
+MU2             0.0191  228.81
+NU2             0.0365  273.12
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0025  47.33
+MS4             0.0014  246.63
 x 0 0
 x 0 0
 x 0 0
@@ -30664,7 +30785,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0010  194.05
 x 0 0
+EPS2            0.0054  202.68
 x 0 0
 x 0 0
 x 0 0
@@ -30705,16 +30828,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0011  274.74
 x 0 0
 x 0 0
 x 0 0
@@ -30787,6 +30901,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 56.2516
 # !latitude: 26.2079
@@ -30796,30 +30912,37 @@ x 0 0
 Khasab, Oman
 +04:00 :Asia/Muscat
 1.5500 meters
-x 0 0
+J1              0.0166  76.21
 K1              0.2100  79.00
-K2              0.0702  347.00
-x 0 0
+K2              0.0749  341.40
+L2              0.0159  326.27
 x 0 0
 M2              0.6800  309.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1292  288.63
-x 0 0
+M3              0.0005  249.38
+M4              0.0190  203.22
+M6              0.0002  328.25
+M8              0.0002  237.18
+N2              0.1652  285.92
+2N2             0.0229  245.34
 O1              0.1800  63.00
 x 0 0
-P1              0.0693  78.67
+P1              0.0736  78.52
+Q1              0.0392  57.10
 x 0 0
-x 0 0
-x 0 0
+R2              0.0025  346.42
 x 0 0
 S2              0.2600  347.00
+S4              0.0017  241.57
 x 0 0
+T2              0.0181  343.55
+LDA2            0.0038  307.60
+MU2             0.0184  240.90
+NU2             0.0332  294.09
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0065  128.27
+MS4             0.0063  226.11
 x 0 0
 x 0 0
 x 0 0
@@ -30857,7 +30980,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0017  186.06
 x 0 0
+EPS2            0.0046  217.84
 x 0 0
 x 0 0
 x 0 0
@@ -30898,16 +31023,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0002  79.90
 x 0 0
 x 0 0
 x 0 0
@@ -30979,6 +31095,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 56.1464
 # !latitude: 26.1493
@@ -30988,30 +31106,37 @@ x 0 0
 Bukha, Oman
 +04:00 :Asia/Muscat
 1.4600 meters
-x 0 0
+J1              0.0136  81.17
 K1              0.1800  91.00
-K2              0.0648  358.00
-x 0 0
+K2              0.0692  352.24
+L2              0.0147  337.38
 x 0 0
 M2              0.6400  317.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1216  295.02
-x 0 0
+M3              0.0003  217.55
+M4              0.0173  220.76
+M6              0.0010  80.53
+M8              0.0002  228.30
+N2              0.1530  293.71
+2N2             0.0208  253.05
 O1              0.1500  81.00
 x 0 0
-P1              0.0594  90.67
+P1              0.0637  87.71
+Q1              0.0322  73.11
 x 0 0
-x 0 0
-x 0 0
+R2              0.0023  356.69
 x 0 0
 S2              0.2400  358.00
+S4              0.0017  250.88
 x 0 0
+T2              0.0167  353.47
+LDA2            0.0035  315.30
+MU2             0.0170  246.57
+NU2             0.0308  302.57
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0063  140.15
+MS4             0.0060  231.33
 x 0 0
 x 0 0
 x 0 0
@@ -31049,7 +31174,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0014  187.84
 x 0 0
+EPS2            0.0042  225.17
 x 0 0
 x 0 0
 x 0 0
@@ -31090,16 +31217,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0004  94.56
 x 0 0
 x 0 0
 x 0 0
@@ -31172,6 +31290,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 56.0499
 # !latitude: 25.9801
@@ -31181,30 +31301,37 @@ x 0 0
 Saqr Port (Mina Saqr), United Arab Emirates
 +04:00 :Asia/Dubai
 1.4000 meters
-x 0 0
+J1              0.0121  93.77
 K1              0.1700  110.00
-K2              0.0648  4.00
-x 0 0
+K2              0.0691  358.05
+L2              0.0135  348.37
 x 0 0
 M2              0.6000  325.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1140  304.10
-x 0 0
+M3              0.0005  147.28
+M4              0.0156  244.42
+M6              0.0016  102.30
+M8              0.0002  235.35
+N2              0.1414  301.45
+2N2             0.0189  260.87
 O1              0.1500  75.00
 x 0 0
-P1              0.0561  109.67
+P1              0.0611  103.56
+Q1              0.0321  65.82
 x 0 0
-x 0 0
-x 0 0
+R2              0.0023  3.26
 x 0 0
 S2              0.2400  4.00
+S4              0.0015  265.08
 x 0 0
+T2              0.0167  358.82
+LDA2            0.0032  323.12
+MU2             0.0157  252.74
+NU2             0.0286  311.09
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0054  153.13
+MS4             0.0048  243.48
 x 0 0
 x 0 0
 x 0 0
@@ -31242,7 +31369,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0014  187.99
 x 0 0
+EPS2            0.0038  232.80
 x 0 0
 x 0 0
 x 0 0
@@ -31283,16 +31412,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0004  100.18
 x 0 0
 x 0 0
 x 0 0
@@ -31365,6 +31485,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 55.9508
 # !latitude: 25.8070
@@ -31374,30 +31496,37 @@ x 0 0
 Ras al Khaymah, United Arab Emirates
 +04:00 :Asia/Dubai
 1.3700 meters
-x 0 0
+J1              0.0086  91.50
 K1              0.1300  111.00
-K2              0.0540  11.00
-x 0 0
+K2              0.0576  5.05
+L2              0.0120  350.63
 x 0 0
 M2              0.5400  326.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1026  301.88
-x 0 0
+M3              0.0006  116.23
+M4              0.0138  251.50
+M6              0.0018  96.79
+M8              0.0002  221.32
+N2              0.1270  302.44
+2N2             0.0167  261.62
 O1              0.1600  88.00
 x 0 0
-P1              0.0429  110.67
+P1              0.0467  105.01
+Q1              0.0335  78.75
 x 0 0
-x 0 0
-x 0 0
+R2              0.0020  10.17
 x 0 0
 S2              0.2000  11.00
+S4              0.0014  262.72
 x 0 0
+T2              0.0138  5.51
+LDA2            0.0028  324.33
+MU2             0.0139  252.69
+NU2             0.0255  312.53
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0046  153.85
+MS4             0.0040  238.86
 x 0 0
 x 0 0
 x 0 0
@@ -31435,7 +31564,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0012  185.08
 x 0 0
+EPS2            0.0033  233.50
 x 0 0
 x 0 0
 x 0 0
@@ -31476,16 +31607,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0004  98.18
 x 0 0
 x 0 0
 x 0 0
@@ -31558,6 +31680,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 55.5820
 # !latitude: 25.5982
@@ -31567,30 +31691,37 @@ x 0 0
 Umm al-Qaiwain, United Arab Emirates
 +04:00 :Asia/Dubai
 1.1000 meters
-x 0 0
+J1              0.0081  119.30
 K1              0.1900  136.00
-K2              0.0351  32.00
-x 0 0
+K2              0.0371  25.03
+L2              0.0111  25.53
 x 0 0
 M2              0.4500  350.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0855  327.49
-x 0 0
+M3              0.0009  130.57
+M4              0.0116  310.10
+M6              0.0021  158.91
+M8              0.0000  108.61
+N2              0.1007  327.45
+2N2             0.0126  289.15
 O1              0.1700  95.00
 x 0 0
-P1              0.0627  135.67
+P1              0.0600  124.40
+Q1              0.0341  83.57
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  28.67
 x 0 0
 S2              0.1300  32.00
+S4              0.0010  296.88
 x 0 0
+T2              0.0087  23.56
+LDA2            0.0022  349.74
+MU2             0.0103  270.06
+NU2             0.0210  338.95
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0030  203.96
+MS4             0.0021  262.74
 x 0 0
 x 0 0
 x 0 0
@@ -31628,7 +31759,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0008  175.49
 x 0 0
+EPS2            0.0025  260.33
 x 0 0
 x 0 0
 x 0 0
@@ -31669,16 +31802,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  122.28
 x 0 0
 x 0 0
 x 0 0
@@ -31751,6 +31875,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 51.3591
 # !latitude: 26.0510
@@ -31760,30 +31886,37 @@ x 0 0
 Fuwayrit (Jabal al Fuwayrit), Qatar
 +03:00 :Asia/Qatar
 0.9000 meters
-x 0 0
+J1              0.0100  129.83
 K1              0.2000  99.00
-K2              0.0351  178.00
-x 0 0
+K2              0.0404  167.15
+L2              0.0111  153.82
 x 0 0
 M2              0.4200  131.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.0798  105.81
-x 0 0
+M3              0.0005  289.25
+M4              0.0171  132.38
+M6              0.0012  71.66
+M8              0.0004  297.87
+N2              0.0989  97.31
+2N2             0.0120  58.30
 O1              0.0900  42.00
 x 0 0
-P1              0.0660  98.75
+P1              0.0462  98.73
+Q1              0.0112  7.63
 x 0 0
-x 0 0
-x 0 0
+R2              0.0009  177.91
 x 0 0
 S2              0.1300  178.00
+S4              0.0015  214.86
 x 0 0
+T2              0.0066  171.60
+LDA2            0.0017  128.23
+MU2             0.0041  20.83
+NU2             0.0211  108.29
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0044  107.94
+MS4             0.0079  200.58
 x 0 0
 x 0 0
 x 0 0
@@ -31821,7 +31954,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0019  51.17
 x 0 0
+EPS2            0.0025  25.17
 x 0 0
 x 0 0
 x 0 0
@@ -31862,16 +31997,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0009  121.32
 x 0 0
 x 0 0
 x 0 0
@@ -31943,6 +32069,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 51.2100
 # !latitude: 26.1453
@@ -31952,30 +32080,37 @@ x 0 0
 Ar Ru'ays, Qatar
 +03:00 :Asia/Qatar
 1.2000 meters
-x 0 0
+J1              0.0053  109.16
 K1              0.1500  64.00
-K2              0.0513  196.00
-x 0 0
+K2              0.0492  185.99
+L2              0.0139  145.37
 x 0 0
 M2              0.5400  144.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1026  116.13
-x 0 0
+M3              0.0010  332.69
+M4              0.0107  119.73
+M6              0.0003  192.25
+M8              0.0006  44.58
+N2              0.1151  110.75
+2N2             0.0133  73.65
 O1              0.0700  343.00
 x 0 0
-P1              0.0495  63.75
+P1              0.0382  53.42
+Q1              0.0161  320.64
 x 0 0
-x 0 0
-x 0 0
+R2              0.0013  208.20
 x 0 0
 S2              0.1900  196.00
+S4              0.0012  251.33
 x 0 0
+T2              0.0086  199.22
+LDA2            0.0021  151.88
+MU2             0.0061  138.87
+NU2             0.0214  112.58
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0042  132.23
+MS4             0.0068  221.27
 x 0 0
 x 0 0
 x 0 0
@@ -32013,7 +32148,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0024  45.31
 x 0 0
+EPS2            0.0029  35.44
 x 0 0
 x 0 0
 x 0 0
@@ -32054,16 +32191,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0012  150.45
 x 0 0
 x 0 0
 x 0 0
@@ -32136,6 +32264,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 47.9318
 # !latitude: 29.3504
@@ -32145,30 +32275,37 @@ x 0 0
 Ash Shuwaykh (Kuwait), Kuwait
 +03:00 :Asia/Kuwait
 2.3000 meters
-x 0 0
+J1              0.0181  350.66
 K1              0.5200  310.00
-K2              0.0918  45.00
-x 0 0
+K2              0.1328  26.74
+L2              0.0743  30.80
 x 0 0
 M2              0.9500  343.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1805  309.77
-x 0 0
+M3              0.0154  357.91
+M4              0.0093  134.26
+M6              0.0245  69.48
+M8              0.0075  0.87
+N2              0.3189  313.89
+2N2             0.0227  288.33
 O1              0.3300  261.00
 x 0 0
-P1              0.1716  309.75
+P1              0.1333  279.31
+Q1              0.0546  227.87
 x 0 0
-x 0 0
-x 0 0
+R2              0.0033  78.66
 x 0 0
 S2              0.3400  45.00
+S4              0.0044  77.85
 x 0 0
+T2              0.0197  64.06
+LDA2            0.0079  27.37
+MU2             0.0279  111.43
+NU2             0.0669  327.26
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0235  286.94
+MS4             0.0454  6.57
 x 0 0
 x 0 0
 x 0 0
@@ -32206,7 +32343,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0091  172.95
 x 0 0
+EPS2            0.0065  257.42
 x 0 0
 x 0 0
 x 0 0
@@ -32247,16 +32386,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0022  268.84
 x 0 0
 x 0 0
 x 0 0
@@ -32329,6 +32459,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 47.8000
 # !latitude: 29.3830
@@ -32338,30 +32470,37 @@ x 0 0
 Mina al Dawhah (Doha), Kuwait
 +03:00 :Asia/Kuwait
 2.1700 meters
-x 0 0
+J1              0.0178  349.79
 K1              0.5100  309.00
-K2              0.0891  54.00
-x 0 0
+K2              0.1296  36.19
+L2              0.0779  30.26
 x 0 0
 M2              0.9900  341.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1881  301.87
-x 0 0
+M3              0.0163  355.24
+M4              0.0125  131.13
+M6              0.0313  60.45
+M8              0.0093  344.75
+N2              0.3316  312.64
+2N2             0.0233  287.24
 O1              0.3300  267.00
 x 0 0
-P1              0.1683  308.75
+P1              0.1316  277.80
+Q1              0.0552  233.44
 x 0 0
-x 0 0
-x 0 0
+R2              0.0032  87.27
 x 0 0
 S2              0.3300  54.00
+S4              0.0046  71.86
 x 0 0
+T2              0.0192  72.83
+LDA2            0.0083  26.65
+MU2             0.0294  111.09
+NU2             0.0696  326.51
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0244  281.84
+MS4             0.0476  1.41
 x 0 0
 x 0 0
 x 0 0
@@ -32399,7 +32538,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0094  171.01
 x 0 0
+EPS2            0.0068  256.69
 x 0 0
 x 0 0
 x 0 0
@@ -32440,16 +32581,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0023  261.19
 x 0 0
 x 0 0
 x 0 0
@@ -32717,6 +32849,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 4
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 48.7168
 # !latitude: 29.8335
@@ -32726,30 +32860,37 @@ x 0 0
 Shatt al Arab Outer Bar, Iraq
 +03:00 :Asia/Baghdad
 1.7400 meters
-x 0 0
+J1              0.0169  321.55
 K1              0.5000  295.00
-K2              0.0783  9.00
-x 0 0
+K2              0.0983  358.22
+L2              0.0276  352.16
 x 0 0
 M2              0.8400  308.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1596  275.30
-x 0 0
+M3              0.0052  283.41
+M4              0.0148  190.70
+M6              0.0021  318.90
+M8              0.0003  136.47
+N2              0.1873  279.59
+2N2             0.0162  243.86
 O1              0.3000  247.00
 x 0 0
-P1              0.1650  294.75
+P1              0.1414  281.83
+Q1              0.0477  230.66
 x 0 0
-x 0 0
-x 0 0
+R2              0.0021  33.84
 x 0 0
 S2              0.2900  9.00
+S4              0.0011  335.56
 x 0 0
+T2              0.0135  21.28
+LDA2            0.0035  334.84
+MU2             0.0071  122.06
+NU2             0.0359  293.09
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0052  195.94
+MS4             0.0086  276.92
 x 0 0
 x 0 0
 x 0 0
@@ -32787,7 +32928,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0036  141.35
 x 0 0
+EPS2            0.0033  209.41
 x 0 0
 x 0 0
 x 0 0
@@ -32828,16 +32971,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0005  300.31
 x 0 0
 x 0 0
 x 0 0
@@ -32910,6 +33044,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 48.8000
 # !latitude: 29.6800
@@ -32919,30 +33055,37 @@ x 0 0
 Al Basrah (Al Bakr) Terminal, Iraq
 +03:00 :Asia/Baghdad
 1.7700 meters
-x 0 0
+J1              0.0220  312.67
 K1              0.6100  294.00
-K2              0.0837  7.00
-x 0 0
+K2              0.1047  0.12
+L2              0.0281  351.73
 x 0 0
 M2              0.9600  306.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1824  273.30
-x 0 0
+M3              0.0059  295.81
+M4              0.0259  192.98
+M6              0.0054  356.13
+M8              0.0004  321.46
+N2              0.2118  278.88
+2N2             0.0215  239.49
 O1              0.3300  246.00
 x 0 0
-P1              0.2013  293.75
+P1              0.1751  285.81
+Q1              0.0566  232.30
 x 0 0
-x 0 0
-x 0 0
+R2              0.0025  23.24
 x 0 0
 S2              0.3100  7.00
+S4              0.0005  219.24
 x 0 0
+T2              0.0161  12.99
+LDA2            0.0042  326.22
+MU2             0.0084  183.83
+NU2             0.0431  291.26
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0020  137.76
+MS4             0.0038  224.26
 x 0 0
 x 0 0
 x 0 0
@@ -32980,7 +33123,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0032  155.60
 x 0 0
+EPS2            0.0043  201.82
 x 0 0
 x 0 0
 x 0 0
@@ -33021,16 +33166,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0010  27.39
 x 0 0
 x 0 0
 x 0 0
@@ -33103,6 +33239,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 49.0500
 # !latitude: 29.9998
@@ -33112,30 +33250,37 @@ x 0 0
 Khowr-e Musa Bar, Iran
 +03:30 :Asia/Tehran
 2.2000 meters
-x 0 0
+J1              0.0176  327.49
 K1              0.4900  301.00
-K2              0.0837  15.00
-x 0 0
+K2              0.1032  4.07
+L2              0.0316  351.58
 x 0 0
 M2              0.8700  314.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1653  281.30
-x 0 0
+M3              0.0099  270.86
+M4              0.0231  230.66
+M6              0.0033  330.41
+M8              0.0005  202.92
+N2              0.2018  286.56
+2N2             0.0199  253.21
 O1              0.3100  253.00
 x 0 0
-P1              0.1617  300.71
+P1              0.1288  287.78
+Q1              0.0495  234.78
 x 0 0
-x 0 0
-x 0 0
+R2              0.0027  36.16
 x 0 0
 S2              0.3100  15.00
+S4              0.0030  345.82
 x 0 0
+T2              0.0169  23.54
+LDA2            0.0045  338.20
+MU2             0.0018  136.77
+NU2             0.0412  300.01
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0125  210.82
+MS4             0.0188  296.66
 x 0 0
 x 0 0
 x 0 0
@@ -33173,7 +33318,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0036  125.06
 x 0 0
+EPS2            0.0042  216.63
 x 0 0
 x 0 0
 x 0 0
@@ -33214,16 +33361,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0019  270.76
 x 0 0
 x 0 0
 x 0 0
@@ -33296,6 +33434,8 @@ x 0 0
 # date_imported: 20260615
 # datum: Chart Datum (Z0 = mean level above CD)
 # confidence: 5
+# note: 20261103 angereichert (py/att_anreichern_quelle.py --fes-alle): M2/S2/K1/O1 aus ATT
+# note: unveraendert, uebrige 22 aus FES2022 am Ort ueber M2/S2/K1/O1 umgerechnet (Oliver).
 # !units: meters
 # !longitude: 50.1456
 # !latitude: 30.0478
@@ -33305,30 +33445,37 @@ x 0 0
 Bandar Deylam, Iran
 +03:30 :Asia/Tehran
 1.4500 meters
-x 0 0
+J1              0.0151  306.48
 K1              0.4200  290.00
-K2              0.0702  334.00
-x 0 0
+K2              0.0822  323.71
+L2              0.0208  300.07
 x 0 0
 M2              0.6500  276.00
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-N2              0.1235  244.91
-x 0 0
+M3              0.0058  200.83
+M4              0.0155  161.90
+M6              0.0022  220.75
+M8              0.0002  57.28
+N2              0.1449  246.80
+2N2             0.0172  211.37
 O1              0.3000  252.00
 x 0 0
-P1              0.1386  289.71
+P1              0.1125  280.63
+Q1              0.0492  235.95
 x 0 0
-x 0 0
-x 0 0
+R2              0.0025  346.08
 x 0 0
 S2              0.2600  334.00
+S4              0.0024  202.17
 x 0 0
+T2              0.0156  336.75
+LDA2            0.0036  287.83
+MU2             0.0062  221.18
+NU2             0.0307  256.57
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0047  57.61
+MS4             0.0065  128.50
 x 0 0
 x 0 0
 x 0 0
@@ -33366,7 +33513,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
+MKS2            0.0005  64.64
 x 0 0
+EPS2            0.0035  173.51
 x 0 0
 x 0 0
 x 0 0
@@ -33407,16 +33556,7 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
+N4              0.0016  169.13
 x 0 0
 x 0 0
 x 0 0
