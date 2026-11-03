@@ -168,6 +168,10 @@ NEU = {
     'Dhanushkodi': ('Dhanushkodi, Tamil Nadu, India', 9.178, 79.418, 'NHO/OSM'),
     'Munambam': ('Munambam, Kerala, India', 10.181, 76.174, 'OSM Hafen'),
     'Nizampatnam': ('Nizampatnam, Andhra Pradesh, India', 15.8776, 80.6392, 'Position des ersetzten ATT-Satzes Nizampatam'),
+    # 3.11. Ersatz schwacher Bestandssaetze (Name/Position des alten Satzes), Mondlaenge korrigiert (S_FEHLER)
+    'Karwar Naval Harbour': ('Karwar, Karnataka, India', 14.7984, 74.1116, 'Position des ersetzten ATT-Satzes Karwar'),
+    'Androth': ('Andrott (Androth Island), Lakshadweep, India', 10.8209, 73.678, 'Position des ersetzten ATT-Satzes'),
+    'Krishnapatnam': ('Krishnapatnam Port, Andhra Pradesh, India', 14.2512, 80.127, 'Position der ersetzten Saetze (ATT, KPCL)'),
     'Rangat Bay': ('Rangat Bay (Middle Andaman), Andaman and Nicobar, India', 12.483, 92.965, 'OSM (NHO-Punkt bei Port Blair, 93 km)'),
 }
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
@@ -225,7 +229,7 @@ def schreiben():
 # (M2/O1 +2 DELTA_S, N2/Q1 +3 DELTA_S, S2/K1/P1 0). DELTA_S aus Minicoy gegen die Messung (UHSLC): 6,9 Grad;
 # FES-Schaetzungen der Gruppe im Median 8,4 (FES ueberschaetzt an Minicoy um 1,5) -> 7 Grad einheitlich.
 DELTA_S = 7.0
-S_FEHLER = ('Ghogha', 'Daman', 'JNPT', 'Agatti')
+S_FEHLER = ('Ghogha', 'Daman', 'JNPT', 'Agatti', 'Karwar Naval Harbour', 'Androth', 'Krishnapatnam')
 
 
 def doodson(speeds):
