@@ -380,7 +380,7 @@ def antworten_zuordnen(zeilen, antw):
         elif ja and z['vorschlag'].startswith('archivieren'):
             raus.append(z)
         elif ja:
-            pass                                     # Zustimmung zu "beide bleiben"/"bleibt"
+            beh.append((z, 'beide bleiben (Ja zu: ' + z['vorschlag'][:60] + ')'))   # merken, sonst kommt das Paar jede Runde wieder
         elif a.lower() in ('nein', 'n', 'no', 'beide bleiben'):
             beh.append((z, a))
         else:
