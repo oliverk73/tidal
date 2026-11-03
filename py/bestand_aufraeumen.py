@@ -375,6 +375,8 @@ def antworten_zuordnen(zeilen, antw):
         ja = a.lower() in ('ja', 'j', 'yes', 'ok', 'einverstanden')
         if z is None:
             alt.append((k, a))                       # Paar steht nicht mehr in der Liste (Regel geaendert)
+        elif a.lower() == 'archivieren':
+            raus.append(z)                           # ausdruecklich, auch gegen "beide bleiben"/geschuetzt
         elif ja and z['vorschlag'].startswith('archivieren'):
             raus.append(z)
         elif ja:
@@ -478,6 +480,10 @@ def main(argv):
         print('\nNichts freigegeben -- nichts geloescht.')
         return 0
     liste = os.path.join(HELP, f'loeschen_auto_{heute:%Y%m%d}.csv')
+    n = 2
+    while os.path.exists(liste):                     # zweite Runde am selben Tag nicht ueberschreiben (3.11.2026)
+        liste = os.path.join(HELP, f'loeschen_auto_{heute:%Y%m%d}_runde{n}.csv')
+        n += 1
     with open(liste, 'w', newline='', encoding='utf-8') as fh:
         w = csv.DictWriter(fh, fieldnames=['datei', 'name', 'fehler_prozent', 'begruendung'])
         w.writeheader()
