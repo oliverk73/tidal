@@ -147,21 +147,26 @@ def auswerten(haefen):
 # daneben liegt (JNPT, Daman, Rangat Bay ...); Kurve gegen Nachbarn geprueft. Verworfen: Sikka, Rozi, Salaya,
 # Kanyakumari (nicht harmonisch), Nar Creek (M2-Phase 150 Grad neben Pakhar), Ezhimala (M2 0,12 m neben Azhikkal
 # 0,33 m), Ramyapatnam (kein Nachbar < 17 %).
+# Mondlaengen-Fehler (3.11.): an etwa 15 NHO-Stationen sind M2/N2/O1 um 2/3/2 x 6-10 Grad gegen S2/K1 verschoben
+# (Minicoy gegen Messung: M2 +14, N2 +23, O1 +14, S2/K1 ~0) -- fester Fehler der mittleren Mondlaenge s in den
+# NHO-Konstanten. Ghogha, Daman, JNPT, Agatti deshalb wieder heraus (auskommentiert). Sauber u. a. Marmagao,
+# Ratnagiri, Vizag, Karaikal, Muldwarka, Nizampatnam.
 NEU = {
     'Pakhar Creek (Sir Creek)': ('Pakhar Creek (Sir Creek), Gujarat, India', 23.718, 68.151, 'NHO'),
-    'Ghogha': ('Ghogha, Gujarat, India', 21.683, 72.270, 'NHO/OSM'),
+    # 'Ghogha': ('Ghogha, Gujarat, India', 21.683, 72.270, 'NHO/OSM'),
     'Muldwarka': ('Muldwarka, Gujarat, India', 20.751, 70.667, 'NHO'),
-    'Daman': ('Daman, Dadra and Nagar Haveli and Daman and Diu, India', 20.410, 72.830, 'OSM (NHO-Punkt 36 km nördlich)'),
+    # 'Daman': ('Daman, Dadra and Nagar Haveli and Daman and Diu, India', 20.410, 72.830, 'OSM (NHO-Punkt 36 km nördlich)'),
     'Diu': ('Diu, Dadra and Nagar Haveli and Daman and Diu, India', 20.714, 70.985, 'NHO/OSM'),
-    'JNPT': ('Jawaharlal Nehru Port (Nhava Sheva), Maharashtra, India', 18.945, 72.945, 'OSM (NHO-Punkt 21 km westlich)'),
+    # 'JNPT': ('Jawaharlal Nehru Port (Nhava Sheva), Maharashtra, India', 18.945, 72.945, 'OSM (NHO-Punkt 21 km westlich)'),
     'Kattupalli': ('Kattupalli, Tamil Nadu, India', 13.299, 80.340, 'NHO/OSM'),
     'Diglipur': ('Diglipur (Aerial Bay), Andaman and Nicobar, India', 13.267, 93.016, 'NHO'),
     'Mayabunder': ('Mayabunder, Andaman and Nicobar, India', 12.920, 92.901, 'NHO/OSM'),
     'Azhikkal': ('Azhikkal, Kerala, India', 11.940, 75.300, 'Flussmuendung (NHO-Punkt 5 km im Land)'),
-    'Agatti': ('Agatti, Lakshadweep, India', 10.869, 72.195, 'NHO/OSM'),
+    # 'Agatti': ('Agatti, Lakshadweep, India', 10.869, 72.195, 'NHO/OSM'),
     'Kodiakarai (Pt. Calimere)': ('Kodiakkarai (Point Calimere), Tamil Nadu, India', 10.266, 79.850, 'Kap (NHO-Punkt 5 km westlich)'),
     'Dhanushkodi': ('Dhanushkodi, Tamil Nadu, India', 9.178, 79.418, 'NHO/OSM'),
     'Munambam': ('Munambam, Kerala, India', 10.181, 76.174, 'OSM Hafen'),
+    'Nizampatnam': ('Nizampatnam, Andhra Pradesh, India', 15.8776, 80.6392, 'Position des ersetzten ATT-Satzes Nizampatam'),
     'Rangat Bay': ('Rangat Bay (Middle Andaman), Andaman and Nicobar, India', 12.483, 92.965, 'OSM (NHO-Punkt bei Port Blair, 93 km)'),
 }
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
