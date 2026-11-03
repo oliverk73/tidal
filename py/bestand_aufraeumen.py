@@ -315,7 +315,7 @@ def vorschlag(recs, schutz):
             bleibt.add(id(b))
             continue
         grund = schutz.get((b['file'], b['name']))
-        if grund == 'Bezugsort fuer Uebertragungen' and treffer[0]['name'] == b['name']:
+        if grund == 'Bezugsort fuer Uebertragungen' and treffer[0]['name'].casefold() == b['name'].casefold():
             grund = None                             # gleichnamiger Satz bleibt -- der Bezug laeuft weiter
         if not grund and lage(treffer[0]['name']) != lage(b['name']):
             grund = 'lage'
@@ -414,6 +414,8 @@ def main(argv):
                          f'Pegelreihe {z["reihe"]} ({z["reihe_km"]} km): RMS NOAA {float(z["rms_noaa"]):.3f} m, '
                          f'A {float(z["rms_a"]):.3f} m.')))
     for b, (a, d, rel, regel), grund in geschont:
+        if grund == 'behalten.csv':
+            continue                                 # schon entschieden (Oliver/zurueckgeholt) -- nicht erneut vorlegen
         zeilen.append(dict(
             regel=regel + (':' + grund if grund in ('name', 'lage') else ':geschuetzt'), datei=b['file'], name=b['name'], fehler_prozent=f'{100 * rel:.1f}',
             rang=RANGNAME[rg[id(b)]], quelle=G.quelle_kurz(b), bleibt=a['name'], bleibt_datei=a['file'],
