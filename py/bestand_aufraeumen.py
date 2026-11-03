@@ -177,6 +177,20 @@ def vorschlag_text(z):
     return 'archivieren (gleicher Name, fast gleiche Kurve)'
 
 
+def kurz(datei):
+    """harmonics/classic/harmonics-dwf-20251228-free.txt -> dwf-20251228-free (Dateinamen sind eindeutig)."""
+    return re.sub(r'^harmonics[_-]', '', os.path.splitext(os.path.basename(datei))[0])
+
+
+def lang(k):
+    """Kurzname -> Pfad relativ zu ROOT (Gegenstueck zu kurz)."""
+    import glob
+    for f in glob.glob(os.path.join(ROOT, 'harmonics', '*', '*.txt')):
+        if '/backup/' not in f and kurz(f) == k:
+            return os.path.relpath(f, ROOT)
+    raise KeyError(k)
+
+
 def rang(r):
     f = os.path.basename(r['file'])
     kl = P.klasse(r)
@@ -353,12 +367,12 @@ def main(argv):
     for i, z in enumerate(zeilen, 1):
         z['nr'] = i
         z['vorschlag'] = vorschlag_text(z) if z['regel'] != 'R3' else 'archivieren (Messreihe gibt dem Messsatz recht)'
-    felder = ['nr', 'regel', 'vorschlag', 'datei', 'name', 'fehler_prozent', 'rang', 'quelle', 'bleibt', 'bleibt_datei',
-              'bleibt_rang', 'bleibt_quelle', 'km', 'begruendung']
+    felder = ['nr', 'regel', 'vorschlag', 'name', 'bleibt', 'km', 'fehler_prozent', 'rang', 'quelle',
+              'bleibt_rang', 'bleibt_quelle', 'datei', 'bleibt_datei', 'begruendung']
     with open(PROBE, 'w', newline='', encoding='utf-8') as fh:
         w = csv.DictWriter(fh, fieldnames=felder)
         w.writeheader()
-        w.writerows(zeilen)
+        w.writerows({**z, 'datei': kurz(z['datei']), 'bleibt_datei': kurz(z['bleibt_datei'])} for z in zeilen)
 
     zaehl = collections.Counter(z['regel'] for z in zeilen)
     print('\nRegel            Saetze  Freigabe')

@@ -270,7 +270,10 @@ if os.path.exists(_dp):
                 DUBL_SCHUTZ if z['regel'].endswith(':geschuetzt') else None)
         if ziel is not None:
             for d, n in ((z['datei'], z['name']), (z['bleibt_datei'], z['bleibt'])):
-                ziel.add((os.path.splitext(os.path.basename(d))[0] + '.tcd', n))
+                # Probelauf fuehrt Kurznamen ("dwf-20251228-free"), TCD heisst "harmonics-dwf-20251228-free.tcd"
+                d = os.path.splitext(os.path.basename(d))[0]
+                for k in (d, 'harmonics_' + d, 'harmonics-' + d):
+                    ziel.add((k + '.tcd', n))
 
 # Build columnar JSON payload
 station_rows = []
