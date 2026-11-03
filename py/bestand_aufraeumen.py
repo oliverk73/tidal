@@ -52,8 +52,9 @@ kann eine Datei denselben Pegel zweimal fuehren; dort bleibt es eine Frage.
 
 Nie automatisch geloescht wird:
   - ein Satz in harmonics/help/behalten.csv (dort landet jeder zurueckgeholte)
-  - ein Satz mit Vermerk von Oliver (Oliver, HANDENTSCHEIDUNG, Handkorrektur)
-  - ein Satz, von dem andere Saetze uebertragen sind (Bezugsort)
+  - ein Satz mit Vermerk HANDENTSCHEIDUNG oder Handkorrektur
+  - ein Satz, von dem andere Saetze uebertragen sind (Bezugsort), ausser der
+    bleibende Satz traegt denselben Namen (dann laeuft der Bezug weiter)
   - Stromsaetze
 Wo zwei Saetze sich widersprechen und keine Messreihe entscheidet, bleiben
 beide stehen -- es wird nicht geraten.
@@ -66,6 +67,10 @@ Ablauf mit --ausfuehren:
 
 Usage: python3 py/bestand_aufraeumen.py                 Probelauf, schreibt aufraeumen_probelauf.csv
        python3 py/bestand_aufraeumen.py --ausfuehren    freigegebene Regeln anwenden
+       python3 py/bestand_aufraeumen.py --antworten <datei.ods|csv> [--ausfuehren]
+           Olivers Antworten (Spalte "antwort"; Zuordnung ueber name/datei/bleibt/bleibt_datei, nicht nr):
+           Ja -> archivieren (nur bei Vorschlag "archivieren ..."), Nein / Beide bleiben -> behalten.csv,
+           anderer Text -> wird angezeigt und von Hand erledigt. Ohne --ausfuehren nur Anzeige.
 """
 from __future__ import annotations
 
@@ -93,7 +98,10 @@ MESSREIHEN = os.path.join(HELP, 'noaa_widerspruch_messreihen.csv')
 # Regel -> Datum der Freigabe durch Oliver (leer = nur Probelauf)
 FREIGABE = {'R1': '', 'R2': '', 'R3': ''}
 
-HAND = re.compile(r'Oliver|HANDENTSCHEIDUNG|Handkorrektur')
+# Nur echte Entscheidungen schuetzen. Das blosse Wort "Oliver" steht auch in meinen eigenen Notizen
+# ("bitte pruefen (Oliver)", "..., Oliver." als Auftraggeber) -- das schuetzte am 3.11. Henslung Cove,
+# Gold Coast, Bundaberg zu Unrecht. Olivers Entscheidungen landen in behalten.csv (--antworten).
+HAND = re.compile(r'HANDENTSCHEIDUNG|Handkorrektur')
 RANGNAME = ['Messung', 'amtlich', 'Altbestand', 'Tafel-Fit', 'Uebertragung', 'Modell']
 # Innerhalb eines Rangs: frueher in der Liste = bevorzugt
 DATEIFOLGE = ['harmonics_utide_observations', 'harmonics-dwf-20251228-free', 'harmonics_noaa_carib',
@@ -307,6 +315,8 @@ def vorschlag(recs, schutz):
             bleibt.add(id(b))
             continue
         grund = schutz.get((b['file'], b['name']))
+        if grund == 'Bezugsort fuer Uebertragungen' and treffer[0]['name'] == b['name']:
+            grund = None                             # gleichnamiger Satz bleibt -- der Bezug laeuft weiter
         if not grund and lage(treffer[0]['name']) != lage(b['name']):
             grund = 'lage'
         if not grund and namekey(a_name := treffer[0]['name']) != namekey(b['name']):
@@ -337,6 +347,43 @@ def regel_r3(recs, schutz, schon):
             z = zeilen[0]
             out.append((n, a, km(n, a), z))
     return out
+
+
+def antworten(pfad):
+    """{(name, datei, bleibt, bleibt_datei): antwort} aus Olivers Tabelle (.ods ueber LibreOffice, sonst CSV)."""
+    if pfad.lower().endswith(('.ods', '.xlsx')):
+        import tempfile
+        tmp = tempfile.mkdtemp()
+        subprocess.run(['soffice', '--headless', '--convert-to',
+                        'csv:Text - txt - csv (StarCalc):44,34,76,1,,0,false,true,false,false,false,-1',
+                        '--outdir', tmp, pfad], check=True, capture_output=True)
+        pfad = os.path.join(tmp, sorted(os.listdir(tmp))[0])
+    out = {}
+    for z in csv.DictReader(open(pfad, encoding='utf-8')):
+        a = ' '.join((z.get('antwort') or '').split())
+        if a:
+            out[(z['name'], kurz(lang(z['datei'])), z['bleibt'], kurz(lang(z['bleibt_datei'])))] = a
+    return out
+
+
+def antworten_zuordnen(zeilen, antw):
+    """-> (archivieren, behalten, von_hand, veraltet)"""
+    nach = {(z['name'], kurz(z['datei']), z['bleibt'], kurz(z['bleibt_datei'])): z for z in zeilen}
+    raus, beh, hand, alt = [], [], [], []
+    for k, a in antw.items():
+        z = nach.get(k)
+        ja = a.lower() in ('ja', 'j', 'yes', 'ok', 'einverstanden')
+        if z is None:
+            alt.append((k, a))                       # Paar steht nicht mehr in der Liste (Regel geaendert)
+        elif ja and z['vorschlag'].startswith('archivieren'):
+            raus.append(z)
+        elif ja:
+            pass                                     # Zustimmung zu "beide bleiben"/"bleibt"
+        elif a.lower() in ('nein', 'n', 'no', 'beide bleiben'):
+            beh.append((z, a))
+        else:
+            hand.append((z, a))
+    return raus, beh, hand, alt
 
 
 def main(argv):
@@ -396,15 +443,38 @@ def main(argv):
         print(f'  {regel}  {r1:13} weicht {r2:13} {n:5}')
     print(f'\n-> {os.path.relpath(PROBE, ROOT)}')
 
-    if not ausfuehren:
-        return 0
-    frei = [z for z in zeilen if FREIGABE.get(z['regel'])]
-    if not frei:
-        print('\nKeine freigegebene Regel -- nichts geloescht.')
-        return 0
     heute = dt.date.today()
-    for z in frei:
-        z['begruendung'] += f' Regelfreigabe Oliver {FREIGABE[z["regel"]]}.'
+    if '--antworten' in argv:
+        quelle = argv[argv.index('--antworten') + 1]
+        frei, beh, hand, alt = antworten_zuordnen(zeilen, antworten(quelle))
+        print(f'\nAntworten {os.path.basename(quelle)}: {len(frei)} archivieren, {len(beh)} behalten, '
+              f'{len(hand)} von Hand, {len(alt)} nicht mehr in der Liste')
+        for z, a in hand:
+            print(f'  VON HAND  {z["name"]} | {z["bleibt"]}: {a}')
+        for k, a in alt:
+            print(f'  ENTFALLEN {k[0]} | {k[2]}: {a}')
+        if not ausfuehren:
+            return 0
+        if beh:
+            neu = not os.path.exists(BEHALTEN)
+            with open(BEHALTEN, 'a', newline='', encoding='utf-8') as fh:
+                w = csv.DictWriter(fh, fieldnames=['datei', 'name', 'datum', 'grund'])
+                if neu:
+                    w.writeheader()
+                for z, a in beh:
+                    w.writerow(dict(datei=z['datei'], name=z['name'], datum=f'{heute:%Y%m%d}',
+                                    grund=f'Oliver: {a} (neben {z["bleibt"]})'))
+        for z in frei:
+            z['begruendung'] += f' Freigabe Oliver {heute:%d.%m.%Y} ({os.path.basename(quelle)}).'
+    else:
+        if not ausfuehren:
+            return 0
+        frei = [z for z in zeilen if FREIGABE.get(z['regel'])]
+        for z in frei:
+            z['begruendung'] += f' Regelfreigabe Oliver {FREIGABE[z["regel"]]}.'
+    if not frei:
+        print('\nNichts freigegeben -- nichts geloescht.')
+        return 0
     liste = os.path.join(HELP, f'loeschen_auto_{heute:%Y%m%d}.csv')
     with open(liste, 'w', newline='', encoding='utf-8') as fh:
         w = csv.DictWriter(fh, fieldnames=['datei', 'name', 'fehler_prozent', 'begruendung'])
