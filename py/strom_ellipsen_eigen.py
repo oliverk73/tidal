@@ -15,7 +15,7 @@ Die Hauptachse liest py/strom_ellipsen.py weiter aus dem Satz selbst.
 Rohreihen: BODC (QXF), Rijkswaterstaat (CSV), Marine Data Exchange (Pickles), CMEMS (NetCDF),
 CSV time,speed,direction unter currents/ (IMOS, SAEON, MVB, CHS ...), KHOA-Zips.
 
-Usage: venv/bin/python py/strom_ellipsen_eigen.py [--schreiben] [Namensteil ...]
+Usage: venv/bin/python py/strom_ellipsen_eigen.py [--schreiben] [--datei=tables] [Namensteil ...]
 """
 from __future__ import annotations
 
@@ -36,7 +36,8 @@ import stroemung_kopplung_lauf as KL                                # noqa: E402
 import xtide_modell as X                                            # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATEIEN = [os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')]
+DATEIEN = [os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt'),
+           os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_tables.txt')]
 ZIEL = os.path.join(ROOT, 'harmonics/ellipsen/eigen.json')
 MS_KN = 1.94384449
 KOPF = X.kopf_lesen(DATEIEN[0])
@@ -77,16 +78,91 @@ def _khoa(kid):
     return None
 
 
+_ATLAS = {}
+
+
+def _shom(code, la, lo):
+    """SHOM-Atlas: synthetische Jahresreihe 2026 an der Gitterzelle des Satzes (shom_atlas_stroemung)."""
+    import shom_atlas_stroemung as SA
+    if code not in _ATLAS:
+        p = glob.glob(os.path.join(ROOT, 'currents/SHOM_atlas', '**', code + '.nc'), recursive=True)
+        _ATLAS[code] = SA.Atlas(p[0]) if p else None
+    a = _ATLAS[code]
+    z = a and a.zelle(la, lo, 0.5)
+    return SA.reihe(a, z[0], z[1]) if z else None
+
+
+def _hk(kid):
+    import hk_tsps_fit as HK
+    p = os.path.join(HK.ORD, f'p{kid}.csv')
+    if not os.path.exists(p):
+        return None
+    _la, _lo, t, kn, gr = HK.lesen(p)
+    w = kn / MS_KN
+    return pd.DataFrame({'u': w * np.sin(np.radians(gr)), 'v': w * np.cos(np.radians(gr))},
+                        index=pd.to_datetime(t, unit='s'))
+
+
+_CHM_KORR = {}
+
+
+def _chm(pdf, punkt, la, lo):
+    """CHM-Stromkarten: Stundenzyklus aus harmonics/help/chm_ccm_<heft>_*.csv, Jahresreihe wie beim Import."""
+    import csv as _csv
+    import chm_ccm_stroemung as CH
+    best = None
+    for kurz, cfg in CH.HEFTE.items():
+        if cfg.get('pdf') != pdf or cfg.get('tabelle'):
+            continue
+        for f in glob.glob(os.path.join(ROOT, 'harmonics/help', f'chm_ccm_{kurz}_*.csv')):
+            for z in _csv.DictReader(open(f, encoding='utf-8')):
+                if z['punkt'] != punkt:
+                    continue
+                km = np.hypot(float(z['lat']) - la, (float(z['lon']) - lo) * np.cos(np.radians(la))) * 111.2
+                if best is None or km < best[0]:
+                    best = (km, kurz, cfg, z)
+    if not best or best[0] > 1.0:
+        return None
+    _km, kurz, cfg, z = best
+    s = {}
+    for h, w in zip(range(-6, 7), z['werte'].split()):
+        if w != '-':
+            v, d = w.split('@')
+            s[h] = dict(v=float(v), dir=float(d))
+    korr = None
+    if cfg.get('korrektur'):
+        if kurz not in _CHM_KORR:
+            _CHM_KORR[kurz] = CH.Korrektur(os.path.join(CH.PDF, cfg['pdf']), cfg['korrektur'],
+                                           cfg.get('tabfarbe', cfg.get('farbe', 'rot')))
+        korr = _CHM_KORR[kurz]
+    df, _h, _h90 = CH.reihe(cfg['hafen'], cfg.get('faktor'), CH.zyklus_aus(s), korrektur=korr,
+                            gebiet=z.get('gebiet') or None)
+    return df
+
+
 _BODC = None
 
 
 def rohreihe(text, name, la, lo):
     global _BODC
+    m = re.search(r'# shom_atlas: (\S+)', text)
+    if m:
+        return _shom(m.group(1), la, lo)
+    m = re.search(r'# station_id_context: HK-TSPS-(\d+)', text)
+    if m:
+        return _hk(m.group(1))
+    m = re.search(r'# chm_ccm: (\S+) point (\S+)', text)
+    if m:
+        return _chm(m.group(1), m.group(2), la, lo)
+    m = re.search(r'# chs_id: (\S+)', text)
+    if m and 'IWLS API predictions' in text:
+        p = os.path.join(ROOT, 'currents/Canada_CHS_predicted', m.group(1) + '.csv')
+        return _csv_uv(p) if os.path.exists(p) else None
     if 'BODC current meter' in text:
         if _BODC is None:
             _BODC = KL.B.metadaten()
         return KL.bodc_reihe(_BODC, text, la, lo)
-    if 'Rijkswaterstaat' in text:
+    if '# rws_loccode:' in text:
         return KL.rws_reihe(text)
     if '# mde_id:' in text:
         return KL.mde_reihe(name)
@@ -167,18 +243,26 @@ def saetze(pfad):
     st = [k for k in range(len(L) - 1) if L[k] and not L[k].startswith('#') and hc.MERIDIAN.match(L[k + 1])]
     vorher = 0
     for k in st:
-        text = '\n'.join(L[vorher:k])
+        j = k
+        while j > vorher and (L[j - 1].startswith('#') or not L[j - 1].strip()):
+            j -= 1
+        text = '\n'.join(L[j:k])          # nur der Kommentarkopf dieses Satzes
         vorher = k
         yield L[k], text
 
 
 def main(argv):
+    global KOPF
     schreiben = '--schreiben' in argv
     filter_ = [a for a in argv if not a.startswith('--')]
     alt = json.load(open(ZIEL)) if os.path.exists(ZIEL) else {}
     zahl, gruende = {'ok': 0}, {}
+    nur = [a.split('=', 1)[1] for a in argv if a.startswith('--datei=')]
     for pfad in DATEIEN:
         datei = os.path.basename(pfad)
+        if nur and not any(n in datei for n in nur):
+            continue
+        KOPF = X.kopf_lesen(pfad)
         aus = alt.setdefault(datei, {})
         for name, text in saetze(pfad):
             if filter_ and not any(f in name for f in filter_):
