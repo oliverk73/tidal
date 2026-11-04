@@ -28,7 +28,13 @@ Heruntergeladene Dateien bitte nach `water_levels/<Land>/` legen und mir Beschei
 - ★ **SHN Argentinien**: Konstanten für Bahía Laura, Punta Loyola und Santa Cruz anfragen
   https://www.shn.gob.ar
 
-## Kann ich selbst prüfen (nichts zu tun für dich)
+## Selbst geprüft (4.11., nichts zu tun für dich)
+
+Ergebnis: kein neuer Satz. Kimberley hat nur kurze Kampagnen (King Sound 1997: 11 Tage, Tallon Island 2014: 3 Wochen
+auf dem trockenfallenden Riffwatt), die AIMS-ADCPs im Camden Sound gibt es nur auf Anfrage. Der INA-Bericht Río Gallegos/Santa Cruz enthält
+nur wenige Messtage an den Anlegern Punta Loyola und Punta Quilla und bestätigt die SHN-Vorhersage. Den Ungava-Artikel (Modell)
+lässt die Uni-Bibliothek nicht per Skript laden.
+- ★ Falls du willst: AIMS Camden Sound ADCPs (Druck → Wasserstand), Anfrage über https://apps.aims.gov.au/metadata/view/c8a58d54-7616-40b1-8759-f2dd8236c161
 
 - Kimberley (Prince Frederick Harbour, Pender Bay, Lagrange Bay …), WAMSI 2.2.1 CSIRO DAP:
   https://data.gov.au/data/dataset/wamsi-2-kimberley-node-project-2-2-1-physical-oceanographic-dynamics-in-the-kimberley_fa72/resource/e3518253-7d7e-4266-b783-a6859d3b604c
