@@ -518,6 +518,9 @@ def main(argv):
             w.writeheader()
         w.writerows(dict(z, datum=f'{heute:%Y%m%d}') for z in frei)
     print(f'{len(frei)} Saetze geloescht, Protokoll {os.path.relpath(PROTOKOLL, ROOT)}')
+    # Probelauf neu rechnen: sonst stehen die eben archivierten/behaltenen Paare weiter darin, und die
+    # Kartengruppen "Dublette ... (prüfen)" zeigen die bleibenden Saetze (Sewells Point/San Diego, 4.11.2026)
+    subprocess.run([sys.executable, os.path.abspath(__file__)], stdout=subprocess.DEVNULL)
     subprocess.run([sys.executable, os.path.join(py, 'tcd_bauen.py')])
     subprocess.run([sys.executable, os.path.join(py, 'build_tide_station_markers.py')])
     return 0
