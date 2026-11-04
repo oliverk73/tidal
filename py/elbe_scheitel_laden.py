@@ -21,7 +21,14 @@ import bsh_hddu_test as B                                           # noqa: E402
 
 def lesen(pfad):
     t, v = [], []
-    with open(pfad, encoding='utf-8') as fh:
+    if pfad.endswith('.zip'):          # Pegelonline-Zip direkt lesen (die JSON darin ist ~800 MB)
+        import io
+        import zipfile
+        z = zipfile.ZipFile(pfad)
+        fh = io.TextIOWrapper(z.open([n for n in z.namelist() if n.endswith('.json')][0]), encoding='utf-8')
+    else:
+        fh = open(pfad, encoding='utf-8')
+    with fh:
         for z in fh:
             i = z.find('"timestamp":"')
             if i < 0:

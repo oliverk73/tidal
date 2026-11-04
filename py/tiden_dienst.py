@@ -161,7 +161,7 @@ def koordinaten(D, name):
 def _hwnw_modell(D, name):
     try:
         import hwnw_ungleichheiten as HU
-        return HU.modell_fuer(D.pfad, name)
+        return HU.modell_fuer(D.pfad, name, D.saetze[name])
     except Exception:  # noqa: BLE001 -- Modell fehlt oder kaputt: harmonische Scheitel
         return None
 

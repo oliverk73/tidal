@@ -119,12 +119,19 @@ def _fit(M, y):
     return x, sd, ok.mean()
 
 
+def fingerabdruck(satz):
+    """Kurzer Hash ueber Z0, Meridian und Konstanten: die Korrektur gilt nur fuer genau diesen Satz."""
+    import hashlib
+    t = f'{satz.z0:.4f}|{satz.meridian}|' + '|'.join(f'{k}:{a:.4f}:{g:.2f}' for k, (a, g) in sorted(satz.werte.items()))
+    return hashlib.sha1(t.encode()).hexdigest()[:12]
+
+
 def eichen(kurz, csv, datei, name, j0, j1):
     t0 = dt.datetime(j0, 1, 1, tzinfo=dt.timezone.utc).timestamp() - 86400
     t1 = dt.datetime(j1 + 1, 1, 1, tzinfo=dt.timezone.utc).timestamp() + 86400
     P = zuordnen(scheitel_csv(csv, j0, j1), satz_ereignisse(datei, name, t0, t1))
     aus = dict(satz=name, datei=os.path.relpath(datei, ROOT) if os.path.isabs(datei) else datei,
-               jahre=[j0, j1], glieder=GLIEDER)
+               jahre=[j0, j1], glieder=GLIEDER, fingerabdruck=fingerabdruck(TR.datei(datei).saetze[name]))
     for art in 'HN':
         q = P[P.art == art]
         M = matrix(q.t_pred.values)
@@ -215,10 +222,18 @@ WAHL = {'cuxhaven': {'H': 'mond', 'N': 'satz'},      # Pruefung 2025 + Jan/Okt 2
         'stpauli': {'H': 'satz', 'N': 'satz'}}
 
 
+def wahl(kurz):
+    """{'H'/'N': 'mond'|'satz'|'harm'}: aus der Modelldatei (hwnw_alle.py), sonst WAHL, sonst HW Mond/NW Satz."""
+    return laden(kurz).get('wahl') or WAHL.get(kurz, {'H': 'mond', 'N': 'satz'})
+
+
 def vorhersage_kombi(kurz, t0, t1):
-    """App-Weg: je Station und Art die bessere Variante (WAHL; sonst HW Mondgang, NW Satz + Ungleichheiten)."""
-    w = WAHL.get(kurz, {'H': 'mond', 'N': 'satz'})
+    """App-Weg: je Station und Art die bessere Variante; 'harm' = Scheitel des harmonischen Satzes."""
+    w = wahl(kurz)
     out = []
+    if 'harm' in w.values():
+        E = laden(kurz)
+        out += [e for e in satz_ereignisse(os.path.join(ROOT, E['datei']), E['satz'], t0, t1) if w[e[2]] == 'harm']
     if 'mond' in w.values():
         out += [e for e in vorhersage_mond(kurz, t0, t1) if w[e[2]] == 'mond']
     if 'satz' in w.values():
@@ -229,16 +244,22 @@ def vorhersage_kombi(kurz, t0, t1):
 _INDEX = {}
 
 
-def modell_fuer(datei, satz):
-    """-> Kurzname des HW/NW-Modells fuer (Dateiname, Satzname) oder None."""
+def modell_fuer(datei, satz, s=None):
+    """-> Kurzname des HW/NW-Modells fuer (Dateiname, Satzname) oder None. Mit dem Satz s: nur, wenn sein
+    Fingerabdruck noch dem geeichten entspricht (Satz neu gefittet -> wieder harmonische Scheitel)."""
     if not _INDEX:
         for p in sorted(os.listdir(ZIEL)) if os.path.isdir(ZIEL) else []:
             if p.endswith('.json'):
                 E = json.load(open(os.path.join(ZIEL, p)))
-                if 'mond' in E:
-                    _INDEX[(os.path.basename(E['datei']), E['satz'])] = p[:-5]
+                if 'mond' in E and set((E.get('wahl') or {'H': 'x'}).values()) != {'harm'}:
+                    _INDEX[(os.path.basename(E['datei']), E['satz'])] = (p[:-5], E.get('fingerabdruck'))
         _INDEX.setdefault(None, None)
-    return _INDEX.get((os.path.basename(datei), satz))
+    m = _INDEX.get((os.path.basename(datei), satz))
+    if not m:
+        return None
+    if s is not None and m[1] and m[1] != fingerabdruck(s):
+        return None
+    return m[0]
 
 
 def statistik(mess, pred, titel):
