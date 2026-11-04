@@ -51,7 +51,7 @@ HPA = {'stpauli': ('STP', 'Hamburg (St. Pauli), Germany'),
        'hpa_bhs': ('BHS', 'Hamburg-Bunthaus (Elbe), Germany')}
 # Harmonischer Satz mit vielen Zusatzscheiteln bei Niedrigwasser (Durme, trockenfallend): die Kurve laesst
 # sich nicht auf die Tabelle strecken -> kein Modell (4.11.2026)
-OHNE = {'be_04dur04a_1066', 'be_04dur05a_1066'}
+OHNE = {'be_04dur04a_1066', 'be_04dur05a_1066', 'uk_wey'}   # Weymouth: doppeltes NW
 SKN_PNP = 3.10          # alle sechs HPA-Pegel: OffsetZuNN + Pegelnull-Hoehe = 3,10 m
 ALT = {'cuxhaven': 'cuxhaven_hwnw_2000_2026.csv', 'stpauli': 'stpauli_hwnw_1999_2026.csv',
        'helgolandbinnenhafen': 'helgolandbinnenhafen_hwnw.csv',
@@ -231,7 +231,7 @@ def eichen_pruefen(arg):
         HU.ZIEL = os.path.join(ablage, f'{j0}_{j1}')
         try:
             with contextlib.redirect_stdout(io.StringIO()):
-                HU.eichen(k, csv, OBS, p['satz'], j0, j1)
+                HU.eichen(k, csv, OBS, p['satz'], j0, j1, glieder=HU.GLIEDER_MOND)   # Versuch 4.11.: HW 12,74 -> 12,36 min
                 HU.eichen_mond(k, csv, j0, j1)
             erg['fenster'][f'{j0}_{j1}'] = dict(
                 satz=_kennzahlen(mess, HU.vorhersage(k, t0 - 86400, t1 + 86400)),

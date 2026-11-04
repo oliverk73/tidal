@@ -140,15 +140,16 @@ def fingerabdruck(satz):
     return hashlib.sha1(t.encode()).hexdigest()[:12]
 
 
-def eichen(kurz, csv, datei, name, j0, j1):
+def eichen(kurz, csv, datei, name, j0, j1, glieder=None):
+    g = glieder or GLIEDER
     t0 = dt.datetime(j0, 1, 1, tzinfo=dt.timezone.utc).timestamp() - 86400
     t1 = dt.datetime(j1 + 1, 1, 1, tzinfo=dt.timezone.utc).timestamp() + 86400
     P = zuordnen(scheitel_csv(csv, j0, j1), satz_ereignisse(datei, name, t0, t1))
     aus = dict(satz=name, datei=os.path.relpath(datei, ROOT) if os.path.isabs(datei) else datei,
-               jahre=[j0, j1], glieder=GLIEDER, fingerabdruck=fingerabdruck(TR.datei(datei).saetze[name]))
+               jahre=[j0, j1], glieder=g, fingerabdruck=fingerabdruck(TR.datei(datei).saetze[name]))
     for art in 'HN':
         q = P[P.art == art]
-        M = matrix(q.t_pred.values)
+        M = matrix(q.t_pred.values, g)
         e = {}
         for groesse, y in (('dt', (q.t_mess - q.t_pred).values / 60.0), ('dh', (q.h_mess - q.h_pred).values)):
             x, sd, anteil = _fit(M, y)
@@ -157,7 +158,7 @@ def eichen(kurz, csv, datei, name, j0, j1):
             print(f'{art}W {groesse}: n={len(y)}  Mittel {x[0]:+.3f}  Streuung vorher {np.std(y):.3f}  '
                   f'nachher {sd:.3f}  ({100 * anteil:.1f} % im Fit)')
             # groesste Glieder
-            amp = [(np.hypot(x[1 + 2 * i], x[2 + 2 * i]), g) for i, g in enumerate(GLIEDER)]
+            amp = [(np.hypot(x[1 + 2 * i], x[2 + 2 * i]), n) for i, n in enumerate(g)]
             print('    ', ', '.join(f'{g} {a:.3f}' for a, g in sorted(amp, reverse=True)[:6]))
         aus[art] = e
     os.makedirs(ZIEL, exist_ok=True)
