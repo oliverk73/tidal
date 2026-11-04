@@ -45,7 +45,8 @@ KOPF = X.kopf_lesen(DATEIEN[0])
 
 # ---- Rohreihen ------------------------------------------------------------
 def _csv_uv(pfad):
-    df = pd.read_csv(pfad, parse_dates=['time'], index_col='time')
+    df = pd.read_csv(pfad, index_col='time')
+    df.index = pd.to_datetime(df.index, utc=True, format='mixed').tz_localize(None)
     if 'u' in df and 'v' in df:
         return df[['u', 'v']].dropna()
     s, d = df['speed'].values, df['direction'].values
@@ -68,13 +69,13 @@ def _code_csv(code):
 
 
 def _khoa(kid):
+    """KHOA-Badanuri-Bojen: Jahres-ZIPs wie py/khoa_bojen.py (cm/s, KST)."""
+    import khoa_bojen as KB
     for z in glob.glob(os.path.join(ROOT, 'currents/korea', f'*_KHOA-{kid}_*.zip')):
-        with zipfile.ZipFile(z) as f:
-            teile = []
-            for n in f.namelist():
-                if n.lower().endswith('.csv'):
-                    teile.append(n)
-            return None if not teile else ('zip', z, teile)
+        ordner = os.path.join(KB.ARBEIT, os.path.splitext(os.path.basename(z))[0])
+        if not glob.glob(os.path.join(ordner, '*.txt')):
+            ordner = KB.entpacken(z)
+        return KB.lesen(ordner)[1]
     return None
 
 
@@ -172,6 +173,8 @@ def _jcg(g, j):
     return pd.DataFrame({'u': w * np.sin(th), 'v': w * np.cos(th)}, index=pd.to_datetime(t))
 
 
+MDE_NACHTRAG = {'Burnham-on-Crouch (': ('anglia.pkl', 'BM8 - Crouch and Roach'),
+                'Stroma (': ('inner.pkl', 'AWAC D2')}
 _BODC = None
 
 
@@ -183,6 +186,11 @@ def rohreihe(text, name, la, lo):
     m = re.search(r'# station_id_context: HK-TSPS-(\d+)', text)
     if m:
         return _hk(m.group(1))
+    if name.startswith('Cape Terawhiti (Cook Strait)'):
+        import terawhiti_fit as TW
+        h = TW.lesen().resample('1h').mean().dropna()
+        h.index = h.index + pd.Timedelta(minutes=30)
+        return h
     m = re.search(r'# station_id_context: JCG-CURR-(\w+)-(\d+)', text)
     if m:
         return _jcg(m.group(1), int(m.group(2)))
@@ -200,11 +208,25 @@ def rohreihe(text, name, la, lo):
     if '# rws_loccode:' in text:
         return KL.rws_reihe(text)
     if '# mde_id:' in text:
-        return KL.mde_reihe(name)
+        r = KL.mde_reihe(name)
+        if r is None:           # Saetze aus spaeteren Einzelimporten (Hauptachsen-Pruefung faengt Fehlgriffe)
+            for anfang, (pk, k) in MDE_NACHTRAG.items():
+                if name.startswith(anfang):
+                    if pk not in KL._PK:
+                        KL._PK[pk] = __import__('pickle').load(open(KL.ARB + pk, 'rb'))
+                    r = KL._PK[pk][k]['df']
+        return r
     m = re.search(r'# cmems_code: (\S+)', text)
     if m:
-        return _cmems(m.group(1))
-    for feld in ('imos_code', 'saeon_id', 'mvb_id', 'chs_id', 'station_code'):
+        kand = [r for r in (_cmems(m.group(1)), _code_csv(m.group(1))) if r is not None]
+        p = re.search(r'period=(\d{4}-\d\d-\d\d)\.\.(\d{4}-\d\d-\d\d)', text)
+        if p and kand:      # NetCDF und CSV koennen verschiedene Zeitraeume haben (Cortegada)
+            kand.sort(key=lambda r: -len(r.loc[p.group(1):p.group(2) + ' 23:59']))
+        return kand[0] if kand else None
+    m = re.search(r'# khoa_id: (\S+)', text)
+    if m:
+        return _khoa(m.group(1))
+    for feld in ('mvb_code', 'imos_code', 'saeon_id', 'mvb_id', 'chs_id', 'station_code'):
         m = re.search(rf'# {feld}: (\S+)', text)
         if m:
             df = _code_csv(m.group(1))
