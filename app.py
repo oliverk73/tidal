@@ -1715,7 +1715,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     coords_for_tz = _station_coords.get(station_raw) or _station_coords.get(decoded_station)
     if (not utc) and is_utc_station and coords_for_tz and tide_rows:
         try:
-            iana = _tzfinder.timezone_at(lat=coords_for_tz[0], lng=coords_for_tz[1])
+            iana = _tiden_dienst().zonenname(coords_for_tz[0], coords_for_tz[1])
             if iana:
                 target_tz = ZoneInfo(iana)
                 shifted = []
@@ -2069,7 +2069,7 @@ def _widget_tide_data(slug, station_name, days, units='m', spd='kn'):
     today_str = today.isoformat()
     if is_utc_station and coords and events:
         try:
-            iana = _tzfinder.timezone_at(lat=coords[0], lng=coords[1])
+            iana = _tiden_dienst().zonenname(coords[0], coords[1])
             if iana:
                 target_tz = ZoneInfo(iana)
                 for ev in events:

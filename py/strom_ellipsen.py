@@ -51,11 +51,39 @@ def noaa_konstanten(station_bin):
     return {'azi': float(hc[0]['azi']), 'k': k}
 
 
+EIGEN = os.path.join(ROOT, 'harmonics/ellipsen/eigen.json')
+_eigen = {'mtime': None, 'd': {}}
+
+
+def eigen_konstanten(D, name):
+    """Eigene Fits: Hauptachse aus dem Satz, Nebenachse aus harmonics/ellipsen/eigen.json
+    (py/strom_ellipsen_eigen.py). -> wie noaa_konstanten oder None."""
+    if not os.path.exists(EIGEN):
+        return None
+    m = os.path.getmtime(EIGEN)
+    if _eigen['mtime'] != m:
+        _eigen['d'], _eigen['mtime'] = json.load(open(EIGEN, encoding='utf-8')), m
+    r = _eigen['d'].get(os.path.basename(D.pfad), {}).get(name)
+    if not r:
+        return None
+    s = D.saetze[name]
+    k = {}
+    for c, (a, kap) in s.werte.items():
+        if a and c in D.speeds:
+            n = r['neben'].get(c, (0.0, 0.0))
+            k[c] = (a, X.greenwich(kap, D.speeds[c], s.meridian), n[0], n[1])
+    return {'azi': float(r['azi']), 'k': k}
+
+
 def fuer_satz(D, name):
-    """Ellipsenkonstanten zum Satz (bisher nur NOAA) oder None."""
+    """Ellipsenkonstanten zum Satz (NOAA harcon oder eigene Nebenachsen-Fits) oder None."""
     s = D.saetze[name]
     sid = s.hot.get('noaa_station_id')
-    return noaa_konstanten(sid) if sid else None
+    if sid:
+        e = noaa_konstanten(sid)
+        if e:
+            return e
+    return eigen_konstanten(D, name)
 
 
 def _summe(D, werte, t):

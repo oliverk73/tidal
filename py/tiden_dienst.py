@@ -77,13 +77,31 @@ _tzf = None
 def ortszone(D, name):
     """IANA-Zone aus der Position -- fuer Saetze mit ':UTC' (UTide-Fits), deren Tabelle die App
     ebenfalls so in Ortszeit umrechnet (app.py, timezonefinder). None, wenn nichts gefunden."""
-    global _tzf
     s = D.saetze[name]
+    iana = zonenname(float(s.hot['!latitude']), float(s.hot['!longitude']))
+    return ZoneInfo(iana) if iana else None
+
+
+def zonenname(lat, lon):
+    """IANA-Zone der Position. Auf See die Zone der naechsten Kueste (bis ~300 km), nicht die nautische
+    Etc/GMT-Zone -- sonst stand z. B. die Boje Estaca de Bares auf UTC-1 statt Madrid (4.11.2026)."""
+    import math
+    global _tzf
     if _tzf is None:
         from timezonefinder import TimezoneFinder
         _tzf = TimezoneFinder()
-    iana = _tzf.timezone_at(lat=float(s.hot['!latitude']), lng=float(s.hot['!longitude']))
-    return ZoneInfo(iana) if iana else None
+    z = _tzf.timezone_at_land(lat=lat, lng=lon)
+    if z:
+        return z
+    for r in (0.05, 0.1, 0.2, 0.35, 0.5, 0.75, 1.0, 1.5, 2.0, 2.7):
+        for w in range(0, 360, 15):
+            la = lat + r * math.cos(math.radians(w))
+            lo = lon + r * math.sin(math.radians(w)) / max(0.2, math.cos(math.radians(lat)))
+            if -90 < la < 90:
+                z = _tzf.timezone_at_land(lat=la, lng=(lo + 180) % 360 - 180)
+                if z:
+                    return z
+    return _tzf.timezone_at(lat=lat, lng=lon)
 
 
 def svg(name, source, tag, einheit='m', utc=False):
