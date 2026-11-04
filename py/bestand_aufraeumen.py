@@ -29,6 +29,9 @@ Regeln:
   R2  Doppelt       gleicher Rang, bis 0,5 km, Kurve bis 5 % (dieselbe
                     Quelle zweimal eingelesen); es bleibt der Satz aus der
                     bevorzugten Datei
+  R4  ATT weicht  Admiralty-Konstanten (ATT Part III, Rang 1) neben einem Satz aus
+                    Rang 1-2 (amtlich, XTide 1997/2004), bis 1 km und bis 10 %:
+                    der ATT-Satz geht (rechtliche Lage; Oliver 04.11.2026)
   R3  Messreihe     NOAA-Uebertragung widerspricht einem Messsatz, und eine
                     unabhaengige Pegelreihe gibt dem Messsatz recht
                     (py/noaa_widerspruch_messreihen.py, Urteil "A besser")
@@ -96,7 +99,7 @@ BEHALTEN = os.path.join(HELP, 'behalten.csv')
 MESSREIHEN = os.path.join(HELP, 'noaa_widerspruch_messreihen.csv')
 
 # Regel -> Datum der Freigabe durch Oliver (leer = nur Probelauf)
-FREIGABE = {'R1': '', 'R2': '', 'R3': ''}
+FREIGABE = {'R1': '', 'R2': '', 'R3': '', 'R4': '04.11.2026'}
 
 # Nur echte Entscheidungen schuetzen. Das blosse Wort "Oliver" steht auch in meinen eigenen Notizen
 # ("bitte pruefen (Oliver)", "..., Oliver." als Auftraggeber) -- das schuetzte am 3.11. Henslung Cove,
@@ -228,6 +231,12 @@ def rang(r):
     return 1
 
 
+def att3(r):
+    """Admiralty-Konstanten (ATT Part III) -- weichen gleichwertigen Saetzen (R4)."""
+    f = os.path.basename(r['file'])
+    return f.startswith('harmonics_att_np') and 'secondary' not in f
+
+
 def folge(r):
     f = os.path.basename(r['file'])
     return next((i for i, k in enumerate(DATEIFOLGE) if f.startswith(k)), len(DATEIFOLGE))
@@ -290,7 +299,9 @@ def vorschlag(recs, schutz):
     paare = collections.defaultdict(list)
     for a, b, d in nachbarn(recs):
         paare[id(b)].append((a, d))
-    reihenfolge = sorted(recs, key=lambda r: (rg[id(r)], folge(r), r['file'], r['line']))
+    # ATT Part III zuletzt unter den Raengen 1-2, damit Amtliches und Altbestand schon feststehen (R4)
+    reihenfolge = sorted(recs, key=lambda r: (rg[id(r)] + (1.5 if att3(r) and rg[id(r)] == 1 else 0),
+                                              folge(r), r['file'], r['line']))
     bleibt, raus, geschont = set(), [], []
     for b in reihenfolge:
         treffer = None
@@ -298,6 +309,13 @@ def vorschlag(recs, schutz):
             if id(a) not in bleibt:
                 continue                             # nur gegen einen Satz, der selbst bleibt
             ra, rb = rg[id(a)], rg[id(b)]
+            if att3(b) and rb == 1 and not att3(a) and ra in (1, 2):
+                if d <= 1.0:
+                    _abs, rel = curve_diff(a, b)
+                    if rel <= 0.10:
+                        treffer = (a, d, rel, 'R4')
+                        break
+                continue
             if ra > rb or (ra == rb and (folge(a), a['file'], a['line']) > (folge(b), b['file'], b['line'])):
                 continue
             # Oliver 3.11.2026: gleiche (aktuelle) Quelle, anderer Name = eigener Pegel, nie Dublette.
