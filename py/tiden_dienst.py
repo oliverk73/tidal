@@ -71,9 +71,29 @@ def zone(D, name, utc):
     return dt.timezone.utc if utc else ZoneInfo(D.saetze[name].zone.lstrip(':'))
 
 
+_tzf = None
+
+
+def ortszone(D, name):
+    """IANA-Zone aus der Position -- fuer Saetze mit ':UTC' (UTide-Fits), deren Tabelle die App
+    ebenfalls so in Ortszeit umrechnet (app.py, timezonefinder). None, wenn nichts gefunden."""
+    global _tzf
+    s = D.saetze[name]
+    if _tzf is None:
+        from timezonefinder import TimezoneFinder
+        _tzf = TimezoneFinder()
+    iana = _tzf.timezone_at(lat=float(s.hot['!latitude']), lng=float(s.hot['!longitude']))
+    return ZoneInfo(iana) if iana else None
+
+
 def svg(name, source, tag, einheit='m', utc=False):
+    """Kurve; Saetze mit ':UTC' zeigt sie (ausser bei utc=True) in der Ortszeit der Position,
+    passend zur Ereignistabelle der App (4.11.2026, vorher stand die Grafik in UTC)."""
     D, name = finden(name, source)
-    return G.svg(D, name, tag, einheit, utc)
+    z = None
+    if not utc and D.saetze[name].zone.lstrip(':').upper() == 'UTC':
+        z = ortszone(D, name)
+    return G.svg(D, name, tag, einheit, utc, zone=z)
 
 
 def info(name, source):

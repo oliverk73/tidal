@@ -54,10 +54,10 @@ def amplituden_heuristik(D, name):
 
 
 class Grafik:
-    def __init__(self, D, name, beginn, einheit='m', utc=False, jetzt=None):
+    def __init__(self, D, name, beginn, einheit='m', utc=False, jetzt=None, zone=None):
         self.D, self.name, self.s = D, name, D.saetze[name]
         self.strom = self.s.strom
-        self.zone = dt.timezone.utc if utc else ZoneInfo(self.s.zone.lstrip(':'))
+        self.zone = zone or (dt.timezone.utc if utc else ZoneInfo(self.s.zone.lstrip(':')))
         self.faktor = 1.0 if self.strom or einheit != 'ft' else 1 / T.FUSS
         self.einheit = 'kt' if self.strom else einheit
         self.beginn = beginn                    # Unix-Sekunden, nominaler Start
@@ -322,12 +322,12 @@ class Grafik:
         return '\n'.join(self.out)
 
 
-def svg(D, name, tag, einheit='m', utc=False, jetzt=None):
+def svg(D, name, tag, einheit='m', utc=False, jetzt=None, zone=None):
     """tag = 'YYYY-MM-DD' -> SVG-Text (Beginn 00:00 in Stationszeit bzw. UTC)."""
     s = D.saetze[name]
-    zone = dt.timezone.utc if utc else ZoneInfo(s.zone.lstrip(':'))
+    zone = zone or (dt.timezone.utc if utc else ZoneInfo(s.zone.lstrip(':')))
     b = dt.datetime.strptime(tag, '%Y-%m-%d').replace(tzinfo=zone).timestamp()
-    return Grafik(D, name, b, einheit, utc, jetzt).svg()
+    return Grafik(D, name, b, einheit, utc, jetzt, zone).svg()
 
 
 if __name__ == '__main__':
