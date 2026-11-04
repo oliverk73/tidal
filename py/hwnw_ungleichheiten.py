@@ -96,8 +96,22 @@ def zuordnen(mess, pred, max_h=3.0):
     return pd.DataFrame(zeilen, columns=['t_mess', 't_pred', 'h_mess', 'h_pred', 'art'])
 
 
+def unplausibel(h, a):
+    """Scheitel, die keine Tide sind (Pegelausfall, Sperrwerk zu, Fehlwert -2,50 m): Hub zu den
+    Nachbarn anderer Art < 30 % des mittleren Hubs, oder zwei gleiche Arten hintereinander."""
+    h, a = np.asarray(h, float), np.asarray(a)
+    hub = np.full(len(h), np.nan)
+    for i in range(len(h)):
+        nb = [abs(h[i] - h[j]) for j in (i - 1, i + 1) if 0 <= j < len(h) and a[j] != a[i]]
+        if nb:
+            hub[i] = np.mean(nb)
+    gleich = np.r_[False, a[1:] == a[:-1]] | np.r_[a[:-1] == a[1:], False]
+    return (np.nan_to_num(hub) < 0.3 * np.nanmedian(hub)) | (h <= -2.4) | gleich
+
+
 def scheitel_csv(pfad, j0, j1):
     d = pd.read_csv(pfad)
+    d = d[~unplausibel(d.hoehe_m.values, d.art.values)]
     t = pd.to_datetime(d.utc, utc=True)
     m = (t.dt.year >= j0) & (t.dt.year <= j1)
     return [(ts.timestamp(), h, a) for ts, h, a in zip(t[m], d.hoehe_m[m], d.art[m])]

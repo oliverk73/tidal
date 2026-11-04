@@ -59,9 +59,14 @@ def lesen_hpa(kz, skn_pnp):
 def main(quelle, ziel, s=None):
     s = lesen(quelle) if s is None else s
     print(len(s), s.index[0], s.index[-1], flush=True)
+    takt = max(1, int(round(np.median(np.diff(s.index.values[:5000]).astype('timedelta64[s]').astype(float)) / 60)))
     voll = s.resample('1min').mean()
-    fehlt = voll.isna()
-    voll = voll.interpolate(limit=10)
+    if takt == 1:
+        fehlt = voll.isna()
+        voll = voll.interpolate(limit=10)
+    else:                   # 10-/15-min-Reihen (waterinfo.be, SHOM, BODC): zeitlich auf 1 min, Luecke = > 2 Takte
+        voll = voll.interpolate(method='time', limit=2 * takt, limit_area='inside')
+        fehlt = voll.isna()
     zeilen = []
     for jahr in range(s.index[0].year, s.index[-1].year + 1):
         a, b = pd.Timestamp(f'{jahr}-01-01', tz='UTC'), pd.Timestamp(f'{jahr + 1}-01-01', tz='UTC')

@@ -13,7 +13,7 @@ Reihen am selben Satz die naehere), Reihen ohne Position ueber NAMEN.
 Ergebnis: harmonics/hwnw/<kurz>.json (mit 'wahl', 'fingerabdruck'), harmonics/help/hwnw_auswahl_<datum>.csv
 Scheitel-CSVs: water_levels/Germany/hwnw/<kurz>.csv (vorhandene werden wiederverwendet).
 
-Usage: venv/bin/python py/hwnw_alle.py [scheitel|eichen|alles] [--nur=kurz,kurz] [--prozesse=4]
+Ausland (--land=be|fr|uk|alle): waterinfo.be, SHOM, BODC; Satz ueber hic_code/shom_code/bodc_code im Kopf.\nUsage: venv/bin/python py/hwnw_alle.py [scheitel|eichen|alles|veraltet] [--land=de] [--nur=kurz,kurz] [--prozesse=4]
 """
 from __future__ import annotations
 
@@ -108,6 +108,54 @@ def pegel():
     return out
 
 
+UK = os.path.join(ROOT, 'water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
+AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'water_levels/Belgium_waterinfo', c + '.csv')),
+           ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'water_levels/France_SHOM', c + '.csv')),
+           ('bodc_code', 'uk', lambda c: glob.glob(os.path.join(UK, f'20??{c}.txt')) and c))
+
+
+def pegel_ausland():
+    """Belgien (waterinfo.be 10 min), Frankreich (SHOM 10 min), UK (BODC 15 min): Satz ueber den Code
+    im Satzkopf (hic_code/shom_code/bodc_code), nur Messsaetze aus OBS. -> {kurz: dict(quelle, satz)}"""
+    out, kopf = {}, []
+    L = open(os.path.join(ROOT, OBS), encoding='latin-1').read().split('\n')
+    for i, z in enumerate(L):
+        if z.startswith('#'):
+            kopf.append(z)
+            continue
+        if kopf and i + 1 < len(L) and re.match(r'^[+-]\d\d:\d\d', L[i + 1]):
+            k = '\n'.join(kopf)
+            for feld, land, pfad in AUSLAND:
+                m = re.search(rf'^# {feld}: (\S+)', k, re.M)
+                if m and 'observed' in k.lower() or m and land == 'uk':
+                    q = pfad(m.group(1))
+                    if q and (land == 'uk' or os.path.exists(q)):
+                        out[f'{land}_{m.group(1).lower().replace("-", "_")}'] = dict(quelle=(land, q), satz=z)
+        if z:
+            kopf = []
+    return out
+
+
+def lesen_ausland(land, q):
+    """-> pd.Series m, UTC-Index"""
+    import pandas as pd
+    if land in ('be', 'fr'):
+        d = pd.read_csv(q)
+        t = pd.to_datetime(d.iloc[:, 0], utc=True, format='mixed')
+        s = pd.Series(pd.to_numeric(d.iloc[:, 1], errors='coerce').values, index=t)
+    else:                   # BODC: Jahresdateien JJJJCODE.txt, ab 2023/25 Monatsdateien CODEJJMM.txt; Flag N = Fehlwert
+        zeilen = []
+        for f in sorted(glob.glob(os.path.join(UK, f'20??{q}.txt')) + glob.glob(os.path.join(UK, f'{q}[0-9][0-9][0-9][0-9].txt'))):
+            for z in open(f, encoding='latin-1'):
+                m = re.match(r'^\s*\d+\)\s+(\d{4}/\d\d/\d\d \d\d:\d\d:\d\d)\s+(-?\d+\.\d+)([A-Z]?)', z)
+                if m and m.group(3) != 'N' and float(m.group(2)) > -90:
+                    zeilen.append((m.group(1), float(m.group(2))))
+        d = pd.DataFrame(zeilen, columns=['t', 'h'])
+        s = pd.Series(d.h.values, index=pd.to_datetime(d.t, format='%Y/%m/%d %H:%M:%S').dt.tz_localize('UTC'))
+    s = s.dropna()
+    return s[~s.index.duplicated()].sort_index()
+
+
 def scheitel_pfad(k):
     a = os.path.join(GER, ALT.get(k, ''))
     return a if k in ALT and os.path.exists(a) else os.path.join(SCHEITEL, k + '.csv')
@@ -125,8 +173,10 @@ def scheitel(arg):
     tmp = ziel + '.teil'
     try:
         with contextlib.redirect_stdout(io.StringIO()):
-            if isinstance(q, (list, tuple)):
+            if isinstance(q, (list, tuple)) and q[0] == 'hpa':
                 EL.main(None, tmp, EL.lesen_hpa(q[1], SKN_PNP))
+            elif isinstance(q, (list, tuple)):
+                EL.main(None, tmp, lesen_ausland(*q))
             else:
                 EL.main(q, tmp)
         os.replace(tmp, ziel)
@@ -212,7 +262,26 @@ def waehlen(erg):
 def main(argv):
     schritt = argv[0] if argv and not argv[0].startswith('--') else 'alles'
     opt = dict(a[2:].split('=', 1) for a in argv if a.startswith('--'))
-    P = pegel()
+    P = {}
+    if schritt != 'veraltet' and opt.get('land', 'de') in ('de', 'alle'):
+        P.update(pegel())
+    if schritt != 'veraltet' and opt.get('land', 'de') != 'de':
+        P.update({k: v for k, v in pegel_ausland().items() if opt['land'] == 'alle' or k.startswith(opt['land'] + '_')})
+    if schritt == 'veraltet':          # nach Neufit/Umbenennung (tcd_bauen.py ruft das auf)
+        opt['land'], schritt = 'alle', 'alles'
+        P = dict(pegel(), **pegel_ausland())
+        D = HU.TR.datei(os.path.join(ROOT, OBS))
+        alt = []
+        for f in sorted(os.listdir(HU.ZIEL)):
+            k = f[:-5]
+            E = HU.laden(k)
+            s = D.saetze.get(E['satz'])
+            if k in P and (s is None or E.get('fingerabdruck') != HU.fingerabdruck(s) or P[k]['satz'] != E['satz']):
+                alt.append(k)
+        print('HW/NW-Modelle veraltet:', ', '.join(alt) or 'keine', flush=True)
+        if not alt:
+            return 0
+        opt['nur'] = ','.join(alt)
     if opt.get('nur'):
         P = {k: v for k, v in P.items() if k in opt['nur'].split(',')}
     n = int(opt.get('prozesse', 4))
@@ -255,6 +324,10 @@ def main(argv):
         z.append(e.get('fehler', ''))
         zeilen.append(';'.join(str(x) for x in z))
     aus = os.path.join(ROOT, 'harmonics/help', f'hwnw_auswahl_{dt.date.today():%Y%m%d}.csv')
+    if os.path.exists(aus):             # Zeilen anderer Pegel (frueherer Lauf desselben Tages) behalten
+        alt = open(aus, encoding='utf-8').read().split('\n')[1:]
+        zeilen += [z for z in alt if z and z.split(';')[0] not in ergebnisse]
+        zeilen = zeilen[:1] + sorted(zeilen[1:])
     open(aus, 'w', encoding='utf-8').write('\n'.join(zeilen) + '\n')
     shutil.rmtree(ablage, ignore_errors=True)
     print('->', aus)

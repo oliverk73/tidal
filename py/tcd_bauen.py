@@ -15,7 +15,8 @@ Ausliefern wieder jede TCD als "fehlt", und es werden alle 38 neu
 gebaut statt der zwei oder drei, die sich geaendert haben.
 
 Nach jedem Ausliefern laeuft build_tide_station_markers.py, damit die
-Karte (static/js/leaflet_markers_data.json) den neuen Stand zeigt.
+Karte (static/js/leaflet_markers_data.json) den neuen Stand zeigt, danach
+hwnw_alle.py veraltet (HW/NW-Modelle von neu gefitteten Saetzen neu eichen).
 
 Usage: python3 py/tcd_bauen.py [--alle] [--pruefen]
        --alle     auch aktuelle TCDs neu bauen
@@ -110,6 +111,12 @@ def main(argv):
                                cwd=ROOT)
             print('Kartenmarker ' + ('neu gebaut' if r.returncode == 0 else 'FEHLER'))
             fehler += 0 if r.returncode == 0 else 1
+            # Eigene HW/NW-Rechnung (Stufe 4): Modelle, deren Satz sich geaendert hat, neu eichen --
+            # sonst faellt die App dort still auf die harmonischen Scheitel zurueck.
+            venv = os.path.join(ROOT, 'venv/bin/python')
+            r = subprocess.run([venv if os.path.exists(venv) else sys.executable,
+                                os.path.join(ROOT, 'py/hwnw_alle.py'), 'veraltet'], cwd=ROOT)
+            print('HW/NW-Modelle ' + ('geprueft' if r.returncode == 0 else 'FEHLER'))
     return 1 if fehler else 0
 
 
