@@ -64,8 +64,11 @@ def main(quelle, ziel, s=None):
     if takt == 1:
         fehlt = voll.isna()
         voll = voll.interpolate(limit=10)
-    else:                   # 10-/15-min-Reihen (waterinfo.be, SHOM, BODC): zeitlich auf 1 min, Luecke = > 2 Takte
+    elif takt < 30:         # 10-/15-min-Reihen (waterinfo.be, SHOM, BODC): zeitlich auf 1 min, Luecke = > 2 Takte
         voll = voll.interpolate(method='time', limit=2 * takt, limit_area='inside')
+        fehlt = voll.isna()
+    else:                   # Stundenwerte (HydroPortail): kubisch, sonst laegen alle Scheitel auf vollen Stunden
+        voll = voll.interpolate(method='cubic', limit=2 * takt, limit_area='inside')
         fehlt = voll.isna()
     zeilen = []
     for jahr in range(s.index[0].year, s.index[-1].year + 1):

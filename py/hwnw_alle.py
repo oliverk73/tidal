@@ -13,7 +13,7 @@ Reihen am selben Satz die naehere), Reihen ohne Position ueber NAMEN.
 Ergebnis: harmonics/hwnw/<kurz>.json (mit 'wahl', 'fingerabdruck'), harmonics/help/hwnw_auswahl_<datum>.csv
 Scheitel-CSVs: water_levels/Germany/hwnw/<kurz>.csv (vorhandene werden wiederverwendet).
 
-Ausland (--land=be|fr|uk|alle): waterinfo.be, SHOM, BODC; Satz ueber hic_code/shom_code/bodc_code im Kopf.\nUsage: venv/bin/python py/hwnw_alle.py [scheitel|eichen|alles|veraltet] [--land=de] [--nur=kurz,kurz] [--prozesse=4]
+Ausland (--land=be|fr|uk|hp|alle): waterinfo.be, SHOM, BODC, HydroPortail (Stundenwerte, franz. Fluesse); Satz ueber hic_code/shom_code/bodc_code/station_id_context im Kopf.\nUsage: venv/bin/python py/hwnw_alle.py [scheitel|eichen|alles|veraltet] [--land=de] [--nur=kurz,kurz] [--prozesse=4]
 """
 from __future__ import annotations
 
@@ -51,7 +51,7 @@ HPA = {'stpauli': ('STP', 'Hamburg (St. Pauli), Germany'),
        'hpa_bhs': ('BHS', 'Hamburg-Bunthaus (Elbe), Germany')}
 # Harmonischer Satz mit vielen Zusatzscheiteln bei Niedrigwasser (Durme, trockenfallend): die Kurve laesst
 # sich nicht auf die Tabelle strecken -> kein Modell (4.11.2026)
-OHNE = {'be_04dur04a_1066', 'be_04dur05a_1066', 'uk_wey'}   # Weymouth: doppeltes NW
+OHNE = {'be_04dur04a_1066', 'be_04dur05a_1066', 'uk_wey', 'hp_h514011001'}   # Weymouth doppeltes NW, Tancarville HW-Stand
 SKN_PNP = 3.10          # alle sechs HPA-Pegel: OffsetZuNN + Pegelnull-Hoehe = 3,10 m
 ALT = {'cuxhaven': 'cuxhaven_hwnw_2000_2026.csv', 'stpauli': 'stpauli_hwnw_1999_2026.csv',
        'helgolandbinnenhafen': 'helgolandbinnenhafen_hwnw.csv',
@@ -114,7 +114,9 @@ def pegel():
 UK = os.path.join(ROOT, 'water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
 AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'water_levels/Belgium_waterinfo', c + '.csv')),
            ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'water_levels/France_SHOM', c + '.csv')),
-           ('bodc_code', 'uk', lambda c: glob.glob(os.path.join(UK, f'20??{c}.txt')) and c))
+           ('bodc_code', 'uk', lambda c: glob.glob(os.path.join(UK, f'20??{c}.txt')) and c),
+           ('station_id_context', 'hp', lambda c: c.startswith('HydroPortail-') and os.path.join(
+               ROOT, 'water_levels/France_HydroPortail', 'hp_' + c.split('-', 1)[1] + '.csv')))
 
 
 def pegel_ausland():
@@ -130,10 +132,11 @@ def pegel_ausland():
             k = '\n'.join(kopf)
             for feld, land, pfad in AUSLAND:
                 m = re.search(rf'^# {feld}: (\S+)', k, re.M)
-                if m and 'observed' in k.lower() or m and land == 'uk':
+                if m and (land in ('uk', 'hp') or 'observed' in k.lower()):
                     q = pfad(m.group(1))
                     if q and (land == 'uk' or os.path.exists(q)):
-                        out[f'{land}_{m.group(1).lower().replace("-", "_")}'] = dict(quelle=(land, q), satz=z)
+                        code = m.group(1).split('-', 1)[1] if land == 'hp' else m.group(1)
+                        out[f'{land}_{code.lower().replace("-", "_")}'] = dict(quelle=(land, q), satz=z)
         if z:
             kopf = []
     return out
@@ -142,7 +145,7 @@ def pegel_ausland():
 def lesen_ausland(land, q):
     """-> pd.Series m, UTC-Index"""
     import pandas as pd
-    if land in ('be', 'fr'):
+    if land in ('be', 'fr', 'hp'):
         d = pd.read_csv(q)
         t = pd.to_datetime(d.iloc[:, 0], utc=True, format='mixed')
         s = pd.Series(pd.to_numeric(d.iloc[:, 1], errors='coerce').values, index=t)
@@ -164,8 +167,16 @@ def scheitel_pfad(k):
     return a if k in ALT and os.path.exists(a) else os.path.join(SCHEITEL, k + '.csv')
 
 
+def auf_satzbezug(s, satz):
+    """HydroPortail-Saetze liegen auf ~LAT (Z0 aus dem 19-Jahres-Minimum), die Reihe auf dem Pegelnull:
+    Reihe so verschieben, dass ihr Mittel 2016-2025 = Z0 des Satzes ist (sonst stellte die eigene Rechnung
+    die Hoehen still auf den Pegelnull um)."""
+    z0 = HU.TR.datei(os.path.join(ROOT, OBS)).saetze[satz].z0
+    return s + (z0 - s['2016':'2025'].mean())
+
+
 def scheitel(arg):
-    k, q = arg
+    k, q, satz = arg
     ziel = scheitel_pfad(k)
     if os.path.exists(ziel):
         return k, 'vorhanden'
@@ -178,6 +189,8 @@ def scheitel(arg):
         with contextlib.redirect_stdout(io.StringIO()):
             if isinstance(q, (list, tuple)) and q[0] == 'hpa':
                 EL.main(None, tmp, EL.lesen_hpa(q[1], SKN_PNP))
+            elif isinstance(q, (list, tuple)) and q[0] == 'hp':
+                EL.main(None, tmp, auf_satzbezug(lesen_ausland(*q), satz))
             elif isinstance(q, (list, tuple)):
                 EL.main(None, tmp, lesen_ausland(*q))
             else:
@@ -291,7 +304,7 @@ def main(argv):
     print(len(P), 'Pegel', flush=True)
     if schritt in ('scheitel', 'alles'):
         with Pool(n) as pool:
-            for k, r in pool.imap_unordered(scheitel, [(k, v['quelle']) for k, v in P.items()]):
+            for k, r in pool.imap_unordered(scheitel, [(k, v['quelle'], v['satz']) for k, v in P.items()]):
                 print(f'scheitel {k:28} {r}', flush=True)
     if schritt not in ('eichen', 'alles'):
         return 0
