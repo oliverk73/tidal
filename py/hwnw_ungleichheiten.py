@@ -211,11 +211,19 @@ def vorhersage_mond(kurz, t0, t1, arten='HN'):
     return sorted(out)
 
 
+WAHL = {'cuxhaven': {'H': 'mond', 'N': 'satz'},      # Pruefung 2025 + Jan/Okt 2026 (4.11.2026)
+        'stpauli': {'H': 'satz', 'N': 'satz'}}
+
+
 def vorhersage_kombi(kurz, t0, t1):
-    """App-Weg: HW ueber den Mondgang, NW ueber Satz + Ungleichheiten (Pruefung 4.11.2026)."""
-    hw = vorhersage_mond(kurz, t0, t1, 'H')
-    nw = [e for e in vorhersage(kurz, t0, t1) if e[2] == 'N']
-    return sorted(hw + nw)
+    """App-Weg: je Station und Art die bessere Variante (WAHL; sonst HW Mondgang, NW Satz + Ungleichheiten)."""
+    w = WAHL.get(kurz, {'H': 'mond', 'N': 'satz'})
+    out = []
+    if 'mond' in w.values():
+        out += [e for e in vorhersage_mond(kurz, t0, t1) if w[e[2]] == 'mond']
+    if 'satz' in w.values():
+        out += [e for e in vorhersage(kurz, t0, t1) if w[e[2]] == 'satz']
+    return sorted(out)
 
 
 _INDEX = {}

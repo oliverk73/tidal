@@ -4,7 +4,10 @@
 
 Scheitel wie py/bsh_hddu_test.scheitel, jahresweise mit 1 Tag Ueberlappung. Luecken bis 10 min
 interpoliert; Scheitel, in deren +-2 h mehr als 10 min fehlen, entfallen.
+HPA-Export (hydroonline.hpanet.de, water_levels/Germany/HH/Pegel_<KZ>_*.csv): cm Seekartennull, MEZ
+ganzjaehrig; --hpa KZ SKN_UEBER_PNP_M rechnet auf Pegelnull um (St. Pauli: SKN = PNP + 3,10 m, BSH D03).
 Usage: venv/bin/python py/elbe_scheitel_laden.py EXPORT.json ZIEL.csv
+       venv/bin/python py/elbe_scheitel_laden.py --hpa STP 3.10 ZIEL.csv
 """
 import sys
 import os
@@ -31,8 +34,23 @@ def lesen(pfad):
     return s[~s.index.duplicated()].sort_index()
 
 
-def main(quelle, ziel):
-    s = lesen(quelle)
+def lesen_hpa(kz, skn_pnp):
+    import glob
+    teile = []
+    for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                                           'water_levels/Germany/HH', f'Pegel_{kz}_*.csv'))):
+        x = pd.read_csv(f, sep=';', skiprows=18, usecols=[0, 1], names=['t', 'w'], encoding='utf-8-sig',
+                        dtype=str, on_bad_lines='skip')
+        x['w'] = pd.to_numeric(x.w, errors='coerce')
+        x['t'] = pd.to_datetime(x.t, errors='coerce', format='%Y-%m-%d %H:%M:%S')
+        teile.append(x.dropna())
+    d = pd.concat(teile).drop_duplicates('t')
+    s = pd.Series(d.w.values / 100.0 + skn_pnp, index=(d.t - pd.Timedelta(hours=1)).dt.tz_localize('UTC'))
+    return s.sort_index()
+
+
+def main(quelle, ziel, s=None):
+    s = lesen(quelle) if s is None else s
     print(len(s), s.index[0], s.index[-1], flush=True)
     voll = s.resample('1min').mean()
     fehlt = voll.isna()
@@ -54,4 +72,7 @@ def main(quelle, ziel):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1], sys.argv[2])
+    if sys.argv[1] == '--hpa':
+        main(None, sys.argv[4], lesen_hpa(sys.argv[2], float(sys.argv[3])))
+    else:
+        main(sys.argv[1], sys.argv[2])
