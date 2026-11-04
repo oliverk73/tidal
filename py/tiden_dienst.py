@@ -111,7 +111,21 @@ def svg(name, source, tag, einheit='m', utc=False):
     z = None
     if not utc and D.saetze[name].zone.lstrip(':').upper() == 'UTC':
         z = ortszone(D, name)
-    return G.svg(D, name, tag, einheit, utc, zone=z)
+    return G.svg(D, name, tag, einheit, utc, zone=z, modell=_grafik_modell(D, name))
+
+
+def _grafik_modell(D, name):
+    """Eigene HW/NW-Rechnung auch in der Kurve: Scheitel und Zettel wie in der Tabelle."""
+    hw = _hwnw_modell(D, name)
+    if not hw:
+        return None
+    import hwnw_ungleichheiten as HU
+
+    def ereig(t0, t1):
+        ev = [e for e in D.ereignisse(name, t0, t1) if e[2] not in ('High Tide', 'Low Tide')]
+        ev += [(t, h, 'High Tide' if a == 'H' else 'Low Tide') for t, h, a in HU.vorhersage_kombi(hw, t0, t1)]
+        return sorted(ev, key=lambda e: e[0])
+    return (lambda t: HU.kurve(hw, D, name, t)), ereig
 
 
 def _strom_zone(D, name, utc):

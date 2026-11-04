@@ -292,3 +292,38 @@ if __name__ == '__main__':
         eichen_mond(a[1], a[2], int(a[5]), int(a[6]))
     else:
         pruefen(a[1], a[2], int(a[3]), int(a[4]))
+
+
+def kurve(kurz, D, name, t):
+    """Wasserstand fuer die Grafik, passend zu vorhersage_kombi (Oliver 4.11.2026): die harmonische Kurve
+    wird zwischen den Scheiteln zeitlich gestreckt (Scheitel i des Satzes -> korrigierter Scheitel i) und
+    um die (kosinus-)interpolierte Hoehenkorrektur verschoben. So laeuft sie genau durch die Tabellenwerte.
+    D = tiden_rechnung.Datei, t = Unix-Sekunden (Array) -> Hoehen in m (Satzeinheit)."""
+    t = np.atleast_1d(np.asarray(t, float))
+    a, b = t.min() - 86400, t.max() + 86400
+    roh = [(x, h, 'H' if 'High' in k else 'N') for x, h, k in D.ereignisse(name, a, b) if 'High' in k or 'Low' in k]
+    neu = vorhersage_kombi(kurz, a, b)
+    paare = []
+    for art in 'HN':
+        q = [(x, h) for x, h, k in neu if k == art]
+        if not q:
+            continue
+        qt = np.array([x for x, _ in q])
+        for x, h, k in roh:
+            if k != art:
+                continue
+            j = int(np.argmin(np.abs(qt - x)))
+            if abs(qt[j] - x) <= 3 * 3600:
+                paare.append((x, q[j][0], q[j][1] - h))
+    paare.sort(key=lambda p: p[1])
+    gut = []                    # beide Zeitfolgen streng steigend, jeder korrigierte Scheitel nur einmal
+    for p in paare:
+        if not gut or (p[0] > gut[-1][0] + 600 and p[1] > gut[-1][1] + 600):
+            gut.append(p)
+    if len(gut) < 2:
+        return D.wert(name, t)
+    th, tn, dh = (np.array(x) for x in zip(*gut))
+    j = np.clip(np.searchsorted(tn, t) - 1, 0, len(tn) - 2)
+    x = np.clip((t - tn[j]) / (tn[j + 1] - tn[j]), 0, 1)
+    w = (1 - np.cos(np.pi * x)) / 2        # weich: Korrektur ohne Knick, an jedem Scheitel Steigung 0
+    return D.wert(name, np.interp(t, tn, th)) + dh[j] + w * (dh[j + 1] - dh[j])

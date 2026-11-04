@@ -54,8 +54,9 @@ def amplituden_heuristik(D, name):
 
 
 class Grafik:
-    def __init__(self, D, name, beginn, einheit='m', utc=False, jetzt=None, zone=None):
+    def __init__(self, D, name, beginn, einheit='m', utc=False, jetzt=None, zone=None, modell=None):
         self.D, self.name, self.s = D, name, D.saetze[name]
+        self.modell = modell        # (wert(t), ereignisse(t0, t1)) der eigenen HW/NW-Rechnung oder None
         self.strom = self.s.strom
         self.zone = zone or (dt.timezone.utc if utc else ZoneInfo(self.s.zone.lstrip(':')))
         self.faktor = 1.0 if self.strom or einheit != 'ft' else 1 / T.FUSS
@@ -203,7 +204,9 @@ class Grafik:
         ende = start + inc * BREITE
 
         # Ereignisse: Beginn - 1 Tag bis Ende + 1 Tag, wie predictTideEvents(noFilter)
-        ev = [(t, h * self.faktor, a) for t, h, a in D.ereignisse(name, start - 86400, ende + 86400)]
+        ev = [(t, h * self.faktor, a) for t, h, a in
+              (self.modell[1] if self.modell else lambda a, b: D.ereignisse(name, a, b))(start - 86400, ende + 86400)]
+        wert = self.modell[0] if self.modell else (lambda t: D.wert(name, t))
         lat, lon = float(self.s.hot['!latitude']), float(self.s.hot['!longitude'])
         ev += [(t, None, a) for t, a in astro.ereignisse(lat, lon, start - 86400, ende + 86400)]
         ev.sort(key=lambda e: e[0])
@@ -244,7 +247,7 @@ class Grafik:
 
         # Kurve (SVGGraph::drawLevels, Stil d)
         tt = start - inc + inc * np.arange(BREITE + 3)
-        val = D.wert(name, tt) * self.faktor
+        val = wert(tt) * self.faktor
         y = [self.xlate(v) for v in val]
         yz = self.xlate(0)
         teile, c = [], 'fc'
@@ -315,19 +318,19 @@ class Grafik:
         # X = jetzt
         if start <= self.jetzt < ende:
             x = (self.jetzt - start) / inc
-            yv = self.xlate(float(D.wert(name, self.jetzt)[0]) * self.faktor)
+            yv = self.xlate(float(wert(self.jetzt)[0]) * self.faktor)
             self.vlinie(x, yv - 4, yv + 4, 'fg')
             self.hlinie(x - 4, x + 4, yv, 'fg')
         self.out.append('</g>\n</svg>\n')
         return '\n'.join(self.out)
 
 
-def svg(D, name, tag, einheit='m', utc=False, jetzt=None, zone=None):
+def svg(D, name, tag, einheit='m', utc=False, jetzt=None, zone=None, modell=None):
     """tag = 'YYYY-MM-DD' -> SVG-Text (Beginn 00:00 in Stationszeit bzw. UTC)."""
     s = D.saetze[name]
     zone = zone or (dt.timezone.utc if utc else ZoneInfo(s.zone.lstrip(':')))
     b = dt.datetime.strptime(tag, '%Y-%m-%d').replace(tzinfo=zone).timestamp()
-    return Grafik(D, name, b, einheit, utc, jetzt, zone).svg()
+    return Grafik(D, name, b, einheit, utc, jetzt, zone, modell).svg()
 
 
 if __name__ == '__main__':
