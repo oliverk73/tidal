@@ -31,17 +31,16 @@ ORTE = [('cuxhaven', '506', 'Cuxhaven-Steubenh\xf6ft (Elbe), Germany'),
 OBS = 'harmonics/utide/harmonics_utide_observations.txt'
 
 
-def messung(kurz):
-    d = json.load(open(os.path.join(ROOT, 'water_levels/pegelonline_bsh_test', kurz + '.json')))
-    s = pd.Series([x['value'] / 100 for x in d], index=pd.to_datetime([x['timestamp'] for x in d], utc=True))
-    s = s[~s.index.duplicated()].resample('1min').mean().interpolate(limit=10)
+def scheitel(s):
+    """1-min-Reihe (m, UTC-Index) -> [(t_unix, h, 'H'/'N')]: 31-min-Mittel, Extrema >= 4 h auseinander,
+    flache Kuppen: Mitte der gleichen Werte."""
     g = s.rolling(31, center=True).mean()
     ev = []
     for hoch in (True, False):
         x = g if hoch else -g
         kand = x[(x == x.rolling(4 * 60 + 1, center=True).max())].dropna()
         gruppe = []
-        for t, v in list(kand.items()) + [(None, None)]:       # flache Kuppen: Mitte der gleichen Werte
+        for t, v in list(kand.items()) + [(None, None)]:
             if gruppe and (t is None or (t - gruppe[-1][0]).total_seconds() > 4 * 3600):
                 tm = gruppe[0][0] + (gruppe[-1][0] - gruppe[0][0]) / 2
                 ev.append((tm.timestamp(), (gruppe[0][1] if hoch else -gruppe[0][1]), 'H' if hoch else 'N'))
@@ -49,7 +48,14 @@ def messung(kurz):
             if t is not None:
                 gruppe.append((t, v))
     ev.sort()
-    return s, ev
+    return ev
+
+
+def messung(kurz):
+    d = json.load(open(os.path.join(ROOT, 'water_levels/pegelonline_bsh_test', kurz + '.json')))
+    s = pd.Series([x['value'] / 100 for x in d], index=pd.to_datetime([x['timestamp'] for x in d], utc=True))
+    s = s[~s.index.duplicated()].resample('1min').mean().interpolate(limit=10)
+    return s, scheitel(s)
 
 
 def bsh(nr, t0, t1):
