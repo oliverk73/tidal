@@ -886,6 +886,7 @@ _DATUM_EXPANSIONS = {
     "ZH":      "Zéro Hydrographique",
     "LLWLT":   "Lowest Low Water Lunar Tide",
     "ISLW":    "Indian Spring Low Water",
+    "PNP":     "Gauge zero",
     "NHN":     "Normalhöhennull",
     "NN":      "Normal Null",
     "NGVD":    "National Geodetic Vertical Datum",
@@ -1447,6 +1448,15 @@ def _tiden_dienst():
     return _TD
 
 
+def _datum_mit_pegelnull(meta_rows, meta_extras):
+    """Pegelonline-Saetze: Datum PNP, Hoehe des Pegelnulls steht als gauge_zero in den Comments
+    (eigene Datum-Namen je Pegel sprengen die Datum-Tabelle der TCD, 4.11.2026)."""
+    gz = meta_extras.get("gauge_zero")
+    if not gz:
+        return meta_rows
+    return [(k, f"{v[:-1]}, {gz})" if k == "Datum" and v.endswith("(PNP)") else v) for k, v in meta_rows]
+
+
 def _meta_aus_info(info):
     """[(Feld, [Zeilen])] -> (meta_rows, meta_extras) wie bisher aus `tide -m a`."""
     meta_rows, meta_extras = [], {}
@@ -1460,7 +1470,7 @@ def _meta_aus_info(info):
                 m = re.match(r"^([a-z][a-z_]*)\s*:\s*(.+)$", c.strip())
                 if m:
                     meta_extras[m.group(1)] = m.group(2).strip()
-    return meta_rows, meta_extras
+    return _datum_mit_pegelnull(meta_rows, meta_extras), meta_extras
 
 
 def _eigene_vorhersage(station, source, current_date, end_date, units, utc):
@@ -1504,7 +1514,7 @@ def _xtide_meta(station, tz_flag, env):
             m = re.match(r"^([a-z][a-z_]*)\s*:\s*(.+)$", c)
             if m:
                 meta_extras[m.group(1)] = m.group(2).strip()
-        return meta_rows, meta_extras
+        return _datum_mit_pegelnull(meta_rows, meta_extras), meta_extras
     except subprocess.CalledProcessError:
         return [], meta_extras
 
