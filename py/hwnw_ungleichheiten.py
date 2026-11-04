@@ -252,7 +252,20 @@ def vorhersage_kombi(kurz, t0, t1):
         out += [e for e in vorhersage_mond(kurz, t0, t1) if w[e[2]] == 'mond']
     if 'satz' in w.values():
         out += [e for e in vorhersage(kurz, t0, t1) if w[e[2]] == 'satz']
-    return sorted(out)
+    return abwechselnd(sorted(out))
+
+
+def abwechselnd(ev):
+    """HW und NW im Wechsel: mischt man Mondbasis (ein Scheitel je Tide) und Satz (der bei flachem Wasser
+    Zusatzscheitel haben kann), stehen sonst mehrere NW hintereinander. Je Lauf bleibt der extremste."""
+    out = []
+    for e in ev:
+        if out and out[-1][2] == e[2]:
+            if (e[1] > out[-1][1]) == (e[2] == 'H'):
+                out[-1] = e
+            continue
+        out.append(e)
+    return out
 
 
 _INDEX = {}

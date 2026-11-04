@@ -49,6 +49,9 @@ HPA = {'stpauli': ('STP', 'Hamburg (St. Pauli), Germany'),
        'hpa_smh': ('SMH', 'Hamburg Seemannsh\xf6ft (Elbe), Germany'),
        'hpa_sps': ('SPS', 'Hamburg Dove-Elbe (Einfahrt), Germany'),
        'hpa_bhs': ('BHS', 'Hamburg-Bunthaus (Elbe), Germany')}
+# Harmonischer Satz mit vielen Zusatzscheiteln bei Niedrigwasser (Durme, trockenfallend): die Kurve laesst
+# sich nicht auf die Tabelle strecken -> kein Modell (4.11.2026)
+OHNE = {'be_04dur04a_1066', 'be_04dur05a_1066'}
 SKN_PNP = 3.10          # alle sechs HPA-Pegel: OffsetZuNN + Pegelnull-Hoehe = 3,10 m
 ALT = {'cuxhaven': 'cuxhaven_hwnw_2000_2026.csv', 'stpauli': 'stpauli_hwnw_1999_2026.csv',
        'helgolandbinnenhafen': 'helgolandbinnenhafen_hwnw.csv',
@@ -304,6 +307,9 @@ def main(argv):
         e = ergebnisse[k]
         f, w = waehlen(e) if 'fehler' not in e else (None, {'H': 'harm', 'N': 'harm'})
         ziel = os.path.join(HU.ROOT, 'harmonics/hwnw', k + '.json')
+        if k in OHNE:
+            w = {'H': 'harm', 'N': 'harm'}
+            e['fehler'] = 'Satz mit Zusatzscheiteln (OHNE)'
         if f and set(w.values()) != {'harm'}:
             E = json.load(open(os.path.join(ablage, f, k + '.json')))
             E['wahl'] = w
