@@ -12,6 +12,8 @@ Kein Nodalglied: das tragen f/u des Satzes, frei gefittet faengt es bei 10 Jahre
 Fit: kleinste Quadrate, zweimal mit Ausschluss > 3 Sigma (Sturmfluten, Oberwasser).
 
 Ergebnis: harmonics/hwnw/<kurz>.json {art: {'dt': {glied: [c, s]}, 'dh': ...}, 'satz', 'jahre'}.
+Dazu (E['mond']) die reine Mondbasis; die App nimmt HW aus der Mondbasis, NW aus Satz + Ungleichheiten
+(vorhersage_kombi, eingebunden in py/tiden_dienst.ereignisse).
 Usage: venv/bin/python py/hwnw_ungleichheiten.py eichen   KURZ SCHEITEL.csv SATZDATEI "SATZ" J0 J1
        venv/bin/python py/hwnw_ungleichheiten.py pruefen  KURZ SCHEITEL.csv J0 J1
 """
@@ -57,10 +59,23 @@ def argumente(t):
     return np.column_stack([tau, s, h, p, N])
 
 
-def matrix(t):
+# Mondbasis (HW): mehr Glieder, Mischglieder Halbmonat x Jahr/Parallaxe/taeglich (py/hwnw_mondbasis.py)
+GLIEDER_MOND = {k: v for k, v in GLIEDER.items() if k != 'tau+3s-2h'}
+GLIEDER_MOND.update({
+    '8(s-h)': (0, 8, -8, 0, 0), '4s-2h': (0, 4, -2, 0, 0), '3(s-p)': (0, 3, 0, -3, 0),
+    '2(s-h)+h': (0, 2, -1, 0, 0), '2(s-h)-h': (0, 2, -3, 0, 0), '2(s-h)+2h': (0, 2, 0, 0, 0),
+    '2(s-h)-2h': (0, 2, -4, 0, 0), 'tau+s+(s-p)': (1, 2, 0, -1, 0), 'tau+s-(s-p)': (1, 0, 0, 1, 0),
+    'tau-s+(s-p)': (1, 0, 0, -1, 0), 'tau-s-(s-p)': (1, -2, 0, 1, 0), 'tau+s-2(s-h)': (1, -1, 2, 0, 0),
+    'tau-s-2(s-h)': (1, -3, 2, 0, 0), '4(s-h)+(s-p)': (0, 5, -4, -1, 0), '4(s-h)-(s-p)': (0, 3, -4, 1, 0),
+    '3h': (0, 0, 3, 0, 0), '4h': (0, 0, 4, 0, 0), 'tau+s+2(s-h)': (1, 3, -2, 0, 0)})
+GLIEDER_MOND = {k: v for k, v in GLIEDER_MOND.items() if v not in [GLIEDER_MOND[j] for j in list(GLIEDER_MOND)[:list(GLIEDER_MOND).index(k)]]}
+PHASE = {'H': 0.0, 'N': 90.0}          # Mondstundenwinkel des Grundtermins (mod 180)
+
+
+def matrix(t, glieder=None):
     A = argumente(t)
     sp = [np.ones(len(A))]
-    for k in GLIEDER.values():
+    for k in (glieder or GLIEDER).values():
         w = np.radians(A @ np.array(k, float))
         sp += [np.cos(w), np.sin(w)]
     return np.column_stack(sp)
@@ -138,7 +153,7 @@ def vorhersage(kurz, t0, t1):
     E = laden(kurz)
     roh = satz_ereignisse(os.path.join(ROOT, E['datei']), E['satz'], t0 - 6 * 3600, t1 + 6 * 3600)
     t = np.array([x[0] for x in roh])
-    M = matrix(t)
+    M = matrix(t, E.get('glieder'))
     out = []
     for (tt, h, a), m in zip(roh, M):
         e = E[a]
@@ -148,6 +163,74 @@ def vorhersage(kurz, t0, t1):
         if t0 <= tn <= t1:
             out.append((tn, h + kh, a))
     return out
+
+
+def grundtermine(t0, t1, phase):
+    """Zeiten, zu denen der Mondstundenwinkel tau = phase (mod 180) ist (M2-Durchgang)."""
+    t = np.arange(t0, t1, 600.0)
+    x = (U_tau(t) - phase) % 180.0
+    i = np.nonzero(np.diff(x) < 0)[0]
+    return t[i] + (180.0 - x[i]) / (x[i + 1] + 180.0 - x[i]) * 600.0
+
+
+def U_tau(t):
+    return argumente(t)[:, 0]
+
+
+def eichen_mond(kurz, csv, j0, j1):
+    """HW/NW-Zeit und -Hoehe direkt ueber dem Mondgang; schreibt E['mond'] in die vorhandene JSON."""
+    E = laden(kurz)
+    mess = scheitel_csv(csv, j0, j1)
+    t0 = dt.datetime(j0, 1, 1, tzinfo=dt.timezone.utc).timestamp() - 2 * 86400
+    t1 = dt.datetime(j1 + 1, 1, 1, tzinfo=dt.timezone.utc).timestamp() + 2 * 86400
+    E['mond'] = dict(jahre=[j0, j1], glieder=GLIEDER_MOND)
+    for art in 'HN':
+        tb = grundtermine(t0, t1, PHASE[art])
+        tm = np.array([e[0] for e in mess if e[2] == art])
+        hm = np.array([e[1] for e in mess if e[2] == art])
+        j = np.clip(np.searchsorted(tb, tm), 1, len(tb) - 1)
+        j -= (tm - tb[j - 1]) < (tb[j] - tm)
+        M = matrix(tb[j], GLIEDER_MOND)
+        xt, sdt, _ = _fit(M, (tm - tb[j]) / 60.0)
+        xh, sdh, _ = _fit(M, hm)
+        E['mond'][art] = dict(phase=PHASE[art], dt=xt.tolist(), dh=xh.tolist(), rest_sd=[float(sdt), float(sdh)])
+        print(f'Mond {art}W: n={len(tm)}  Rest Zeit {sdt:.1f} min, Hoehe {100 * sdh:.0f} cm')
+    json.dump(E, open(os.path.join(ZIEL, kurz + '.json'), 'w'), indent=1)
+
+
+def vorhersage_mond(kurz, t0, t1, arten='HN'):
+    E = laden(kurz)['mond']
+    out = []
+    for art in arten:
+        e = E[art]
+        tb = grundtermine(t0 - 86400, t1 + 86400, e['phase'])
+        M = matrix(tb, E['glieder'])
+        for t, d, h in zip(tb, M @ np.array(e['dt']), M @ np.array(e['dh'])):
+            if t0 <= t + 60 * d <= t1:
+                out.append((t + 60 * d, float(h), art))
+    return sorted(out)
+
+
+def vorhersage_kombi(kurz, t0, t1):
+    """App-Weg: HW ueber den Mondgang, NW ueber Satz + Ungleichheiten (Pruefung 4.11.2026)."""
+    hw = vorhersage_mond(kurz, t0, t1, 'H')
+    nw = [e for e in vorhersage(kurz, t0, t1) if e[2] == 'N']
+    return sorted(hw + nw)
+
+
+_INDEX = {}
+
+
+def modell_fuer(datei, satz):
+    """-> Kurzname des HW/NW-Modells fuer (Dateiname, Satzname) oder None."""
+    if not _INDEX:
+        for p in sorted(os.listdir(ZIEL)) if os.path.isdir(ZIEL) else []:
+            if p.endswith('.json'):
+                E = json.load(open(os.path.join(ZIEL, p)))
+                if 'mond' in E:
+                    _INDEX[(os.path.basename(E['datei']), E['satz'])] = p[:-5]
+        _INDEX.setdefault(None, None)
+    return _INDEX.get((os.path.basename(datei), satz))
 
 
 def statistik(mess, pred, titel):
@@ -168,11 +251,15 @@ def pruefen(kurz, csv, j0, j1):
     mess = scheitel_csv(csv, j0, j1)
     statistik(mess, satz_ereignisse(os.path.join(ROOT, E['datei']), E['satz'], t0 - 86400, t1 + 86400), 'harmonischer Satz')
     statistik(mess, vorhersage(kurz, t0 - 86400, t1 + 86400), 'Satz + Ungleichheiten')
+    if 'mond' in E:
+        statistik(mess, vorhersage_mond(kurz, t0 - 86400, t1 + 86400), 'Mond + Ungleichheiten')
+        statistik(mess, vorhersage_kombi(kurz, t0 - 86400, t1 + 86400), 'Kombination (App)')
 
 
 if __name__ == '__main__':
     a = sys.argv[1:]
     if a[0] == 'eichen':
         eichen(a[1], a[2], a[3], a[4], int(a[5]), int(a[6]))
+        eichen_mond(a[1], a[2], int(a[5]), int(a[6]))
     else:
         pruefen(a[1], a[2], int(a[3]), int(a[4]))

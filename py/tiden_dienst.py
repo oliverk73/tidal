@@ -158,6 +158,14 @@ def koordinaten(D, name):
     return f"{abs(la):.4f}° {'N' if la >= 0 else 'S'}, {abs(lo):.4f}° {'E' if lo >= 0 else 'W'}"
 
 
+def _hwnw_modell(D, name):
+    try:
+        import hwnw_ungleichheiten as HU
+        return HU.modell_fuer(D.pfad, name)
+    except Exception:  # noqa: BLE001 -- Modell fehlt oder kaputt: harmonische Scheitel
+        return None
+
+
 def ereignisse(name, source, beginn, ende, einheit='m', utc=False, astro_auch=True):
     """beginn/ende: 'YYYY-MM-DD HH:MM' in Stationszeit (bzw. UTC). -> [(datetime_lokal, wert|None, art)]"""
     D, name = finden(name, source)
@@ -167,6 +175,11 @@ def ereignisse(name, source, beginn, ende, einheit='m', utc=False, astro_auch=Tr
     t1 = dt.datetime.strptime(ende, '%Y-%m-%d %H:%M').replace(tzinfo=z).timestamp()
     fk = 1.0 if s.strom or einheit != 'ft' else 1 / T.FUSS
     ev = [(t, h * fk, a) for t, h, a in D.ereignisse(name, t0, t1)]
+    hw = _hwnw_modell(D, name)
+    if hw:      # eigene HW/NW-Rechnung (Stufe 4, py/hwnw_ungleichheiten.py), die Kurve bleibt harmonisch
+        import hwnw_ungleichheiten as HU
+        ev = [e for e in ev if e[2] not in ('High Tide', 'Low Tide')]
+        ev += [(t, h * fk, 'High Tide' if a == 'H' else 'Low Tide') for t, h, a in HU.vorhersage_kombi(hw, t0, t1)]
     if astro_auch:
         ev += [(t, None, a) for t, a in astro.ereignisse(float(s.hot['!latitude']), float(s.hot['!longitude']), t0, t1)]
     ev.sort(key=lambda e: e[0])
