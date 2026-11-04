@@ -1685,6 +1685,26 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
     except subprocess.CalledProcessError:
         tide_rows = []
 
+    # Stufe 3 (4.11.2026): Stromrichtung bei Max Flood/Ebb aus den Strom-Ellipsen (NOAA harcon).
+    # Die Zeilen stehen hier noch in der Zeit der Textausgabe (Satzzone bzw. UTC), daher vor der TZ-Umrechnung.
+    rose_url = None
+    if decoded_station.rstrip().endswith('Current') and TIDEN_RECHNUNG == "eigen":
+        try:
+            td = _tiden_dienst()
+            idx = [i for i, r in enumerate(tide_rows) if r['type'].startswith(('Max Flood', 'Max Ebb', 'Min Flood', 'Min Ebb'))]
+            ri = td.strom_richtungen(decoded_station, source,
+                                     [f"{tide_rows[i]['_full_date']} {tide_rows[i]['time']}" for i in idx], utc)
+            if ri:
+                for i, g in zip(idx, ri):
+                    tide_rows[i]['direction'] = f"{g:03.0f}°"
+            if td.strom_rose(decoded_station, source, utc, spd):
+                # eigene Route statt Datei: die Seite liegt einen Tag im Cache, der Jetzt-Pfeil nicht
+                from urllib.parse import urlencode
+                rose_url = "/strom_rose.svg?" + urlencode({"station": decoded_station, "source": source or "",
+                                                           "utc": int(bool(utc)), "spd": spd})
+        except Exception as e:  # noqa: BLE001 -- Zusatz, nie die Seite verlieren
+            print(f"⚠️ Strom-Ellipse fehlgeschlagen ({decoded_station}): {e!r}")
+
     # If the user asked for "Local" but the station's harmonics are in UTC
     # (all UTide-derived stations have `Time zone: :UTC`), xtide can't do
     # the conversion for us — its -z flag toggles between station-meridian
@@ -1776,6 +1796,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                                   station=display_station,
                                   original_name=display_station,
                                   svg_url=svg_url,
+                                  rose_url=rose_url,
                                   meta_info=meta_info,
                                   tide_rows=tide_rows,
                                   station_note=station_note,
@@ -1798,6 +1819,22 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         f.write(html)
     print(f"✅ HTML-Seite erzeugt: {html_path}")
     return html_path
+
+
+@app.route("/strom_rose.svg")
+def strom_rose_svg():
+    """Strom-Rose (Stufe 3, 4.11.2026): bei jedem Abruf neu gerechnet, damit der Jetzt-Pfeil stimmt."""
+    try:
+        svg = _tiden_dienst().strom_rose(request.args.get("station", ""), request.args.get("source") or None,
+                                         request.args.get("utc") == "1", request.args.get("spd", "kn"))
+    except Exception as e:  # noqa: BLE001
+        print(f"⚠️ Strom-Rose fehlgeschlagen: {e!r}")
+        svg = None
+    if not svg:
+        abort(404)
+    resp = app.response_class(svg, mimetype="image/svg+xml")
+    resp.headers["Cache-Control"] = "no-cache, max-age=0"
+    return resp
 
 
 @app.route("/prediction/<slug>")

@@ -96,6 +96,37 @@ def svg(name, source, tag, einheit='m', utc=False):
     return G.svg(D, name, tag, einheit, utc, zone=z)
 
 
+def _strom_zone(D, name, utc):
+    if not utc and D.saetze[name].zone.lstrip(':').upper() == 'UTC':
+        return ortszone(D, name) or dt.timezone.utc
+    return zone(D, name, utc)
+
+
+SPD_FAKTOR = {'kn': (1.0, 'kn'), 'ms': (0.514444, 'm/s'), 'kmh': (1.852, 'km/h')}
+
+
+def strom_rose(name, source, utc=False, spd='kn', jetzt=None):
+    """SVG der Strom-Rose (Stufe 3, 4.11.2026) oder None, wenn keine Ellipsenkonstanten vorliegen."""
+    import time
+    import strom_ellipsen as E
+    D, name = finden(name, source)
+    if not D.saetze[name].strom:
+        return None
+    f, wort = SPD_FAKTOR.get(spd, SPD_FAKTOR['kn'])
+    return E.rose_svg(D, name, time.time() if jetzt is None else jetzt, _strom_zone(D, name, utc), f, wort)
+
+
+def strom_richtungen(name, source, zeiten, utc=False):
+    """zeiten: ['YYYY-MM-DD HH:MM'] in der Zeit, in der text() ausgibt -> [Grad rechtweisend] oder None."""
+    import strom_ellipsen as E
+    D, name = finden(name, source)
+    if not D.saetze[name].strom or E.fuer_satz(D, name) is None:
+        return None
+    z = zone(D, name, utc)
+    t = [dt.datetime.strptime(x, '%Y-%m-%d %H:%M').replace(tzinfo=z).timestamp() for x in zeiten]
+    return [float(r) for r in E.vektor(D, name, t)[1]]
+
+
 def info(name, source):
     D, name = finden(name, source)
     zeilen = T.info(D, name)

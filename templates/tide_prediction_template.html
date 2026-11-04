@@ -181,6 +181,13 @@ header #search-trigger {
         title="Current prediction curve for {{ original_name }}"
         id="Current prediction curve"
         width="3200" height="312" loading="eager" decoding="async"></div>
+{% if rose_url %}
+<h3>Current direction</h3>
+<p style="font-size:0.9em;color:#666;margin:0.3em 0;">Where the current flows over the next 25 hours: the red arrow is the current now,
+the blue line traces the tip of the current vector hour by hour (direction = towards).</p>
+<img src="{{ rose_url }}" alt="Tidal current rose for {{ original_name }} — current direction and speed over the next 25 hours"
+     width="380" height="380" loading="lazy" decoding="async" style="max-width:100%;height:auto;">
+{% endif %}
 <h3>Current times</h3>
 {% else %}
 <div class="tide-svg-wrap"><img src="{{ svg_url }}"
@@ -198,6 +205,7 @@ header #search-trigger {
     <th class="icon-cell"></th>
     <th class="type-cell"></th>
     <th class="value-cell">{% if is_current %}Speed{% else %}Sea Level{% endif %}</th>
+    {% if rose_url %}<th class="value-cell">Direction</th>{% endif %}
   </tr>
 </thead>
 {% for row in tide_rows %}
@@ -207,6 +215,7 @@ header #search-trigger {
     <td class="icon-cell">{{ row.icon }}</td>
     <td class="type-cell">{{ row.type }}</td>
     <td class="value-cell">{{ row.value }}</td>
+    {% if rose_url %}<td class="value-cell">{{ row.direction or '' }}</td>{% endif %}
   </tr>
 {% endfor %}
 </table>
