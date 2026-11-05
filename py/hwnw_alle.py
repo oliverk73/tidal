@@ -321,6 +321,42 @@ def lesen_ca(code):
     return s[~s.index.duplicated()].sort_index()
 
 
+# Irland (5.11.2026): Marine-Institute-Reihen, die schon fuer die Fits geladen waren
+# (water_levels/Ireland_MI/npz/*.npz, 5 min, 2007-2025, LAT); Satz = naechster irischer Satz in OBS (< 1 km)
+IE_DIR = os.path.join(ROOT, 'water_levels/Ireland_MI/npz')
+
+
+def pegel_ie():
+    S, kopf = [], []
+    L = open(os.path.join(ROOT, OBS), encoding='latin-1').read().split('\n')
+    for i, z in enumerate(L):
+        if z.startswith('#'):
+            kopf.append(z)
+            continue
+        if kopf and i + 1 < len(L) and re.match(r'^[+-]\d\d:\d\d', L[i + 1]) and z.endswith(', Ireland'):
+            k = '\n'.join(kopf)
+            la, lo = re.search(r'!latitude: (\S+)', k), re.search(r'!longitude: (\S+)', k)
+            if la and lo and re.search(r'^# datum: LAT', k, re.M):
+                S.append((z, float(la.group(1)), float(lo.group(1))))
+        if z:
+            kopf = []
+    out = {}
+    for f in sorted(glob.glob(os.path.join(IE_DIR, '*.npz'))):
+        d = np.load(f, allow_pickle=True)
+        la, lo = float(d['latitude']), float(d['longitude'])
+        b = min(S, key=lambda s: math.hypot(s[1] - la, (s[2] - lo) * 0.6))
+        if 111 * math.hypot(b[1] - la, (b[2] - lo) * 0.6) < 1.0:
+            out['ie_' + os.path.basename(f)[:-4].lower().replace('-', '_')] = dict(quelle=('ie', f), satz=b[0])
+    return out
+
+
+def lesen_ie(f):
+    import pandas as pd
+    d = np.load(f, allow_pickle=True)
+    s = pd.Series(d['levels_m'], index=pd.to_datetime(d['datetimes_utc']).tz_localize('UTC')).dropna()
+    return s[~s.index.duplicated()].sort_index()
+
+
 UK = os.path.join(ROOT, 'water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
 AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'water_levels/Belgium_waterinfo', c + '.csv')),
            ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'water_levels/France_SHOM', c + '.csv')),
@@ -403,6 +439,8 @@ def scheitel(arg):
                 laden_nl(q[1], tmp)
             elif isinstance(q, (list, tuple)) and q[0] == 'ca':
                 EL.main(None, tmp, lesen_ca(q[1]))
+            elif isinstance(q, (list, tuple)) and q[0] == 'ie':
+                EL.main(None, tmp, lesen_ie(q[1]))
             elif isinstance(q, (list, tuple)) and q[0] == 'hpa':
                 EL.main(None, tmp, EL.lesen_hpa(q[1], SKN_PNP))
             elif isinstance(q, (list, tuple)) and q[0] == 'hp':
@@ -543,11 +581,11 @@ def main(argv):
     if schritt != 'veraltet' and opt.get('land', 'de') in ('de', 'alle'):
         P.update(pegel())
     if schritt != 'veraltet' and opt.get('land', 'de') != 'de':
-        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca()).items()
+        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie()).items()
                   if opt['land'] == 'alle' or k.startswith(opt['land'] + '_')})
     if schritt == 'veraltet':          # nach Neufit/Umbenennung (tcd_bauen.py ruft das auf)
         opt['land'], schritt = 'alle', 'alles'
-        P = dict(pegel(), **pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca())
+        P = dict(pegel(), **pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie())
         alt = []
         for f in sorted(os.listdir(HU.ZIEL)):
             k = f[:-5]
