@@ -1802,7 +1802,14 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         _datum_value,
         is_current_station,
     )
+    hwnw = None
+    if not is_current_station and TIDEN_RECHNUNG == "eigen":
+        try:
+            hwnw = _tiden_dienst().hwnw_hinweis(decoded_station, source)
+        except Exception as e:  # noqa: BLE001
+            print(f"⚠️ HW/NW-Hinweis fehlgeschlagen: {e!r}")
     html = render_template_string(template,
+                                  hwnw=hwnw,
                                   station=display_station,
                                   original_name=display_station,
                                   svg_url=svg_url,

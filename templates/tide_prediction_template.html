@@ -262,6 +262,15 @@ the blue line traces the tip of the current vector hour by hour (direction = tow
 {% endfor %}
 </table>
 
+{% if hwnw %}
+<p class="station-note" style="font-style:normal;">High and low water times at this gauge are corrected with
+{{ hwnw.jahre[1] - hwnw.jahre[0] + 1 }} years of measured high and low waters ({{ hwnw.jahre[0] }}–{{ hwnw.jahre[1] }}).
+Checked against {{ hwnw.pruefjahr }}, which was not used for the correction:
+{%- if hwnw.H %} high water within ±{{ '%.0f'|format(hwnw.H[1]) }} min (harmonic prediction alone ±{{ '%.0f'|format(hwnw.H[0]) }} min){% endif %}
+{%- if hwnw.H and hwnw.N %},{% endif %}
+{%- if hwnw.N %} low water within ±{{ '%.0f'|format(hwnw.N[1]) }} min (harmonic prediction alone ±{{ '%.0f'|format(hwnw.N[0]) }} min){% endif %}
+(RMS).</p>
+{% endif %}
 <p id="tide_prediction">{{ seo_outro }}</p>
 
 {% if faq_items %}

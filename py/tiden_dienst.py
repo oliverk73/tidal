@@ -172,6 +172,25 @@ def koordinaten(D, name):
     return f"{abs(la):.4f}° {'N' if la >= 0 else 'S'}, {abs(lo):.4f}° {'E' if lo >= 0 else 'W'}"
 
 
+def hwnw_hinweis(name, source):
+    """Fuer die Seite (5.11.2026): ist an diesem Satz die eigene HW/NW-Rechnung aktiv, dann
+    dict(jahre=(j0, j1), H=(harm_rms, rms) oder None, N=...) aus harmonics/hwnw/<kurz>.json, sonst None."""
+    try:
+        import hwnw_ungleichheiten as HU
+        D, name = finden(name, source)
+        k = _hwnw_modell(D, name)
+        if not k:
+            return None
+        E = HU.laden(k)
+        w, p = E.get('wahl', {}), E.get('pruefung', {})
+        aus = {a: (p[a]['harm_rms'], p[a]['rms']) if w.get(a, 'harm') != 'harm' and a in p else None for a in 'HN'}
+        if not aus['H'] and not aus['N']:
+            return None
+        return dict(jahre=tuple(E['jahre']), pruefjahr=next(iter(p.values()))['jahr'], **aus)
+    except Exception:  # noqa: BLE001 -- Hinweis ist Zusatz, nie die Seite verlieren
+        return None
+
+
 def _hwnw_modell(D, name):
     try:
         import hwnw_ungleichheiten as HU
