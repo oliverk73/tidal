@@ -299,22 +299,26 @@ def lesen_ca(code):
     cache = os.path.join(CA_DIR, code + '.csv')
     if not os.path.exists(cache):
         sid = json.load(open(os.path.join(CA_DIR, 'stationen.json')))[code]['id']
-        zeilen = []
+        zeilen, fehl = [], 0
         a = dt.datetime(2019, 10, 1, tzinfo=dt.timezone.utc)
         while a < dt.datetime(PRUEF + 1, 1, 1, tzinfo=dt.timezone.utc):
             b = a + dt.timedelta(days=7)
             url = (f'https://api-iwls.dfo-mpo.gc.ca/api/v1/stations/{sid}/data?time-series-code=wlo'
                    f'&from={a:%Y-%m-%dT%H:%M:%SZ}&to={b:%Y-%m-%dT%H:%M:%SZ}')
-            for versuch in range(3):
+            for versuch in range(5):     # 5.11.2026: 3 parallele Laeufe -> Ablehnungen; nacheinander, mehr Geduld
                 try:
                     with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'tiden-pruefung/1.0'}),
                                                 timeout=120) as r:
                         zeilen += [f"{x['eventDate'][:19]},{x['value']}" for x in json.load(r) if x.get('value') is not None]
                     break
                 except Exception:  # noqa: BLE001
-                    time.sleep(5 * (versuch + 1))
-            time.sleep(0.7)
+                    time.sleep(15 * (versuch + 1))
+            else:
+                fehl += 1
+            time.sleep(1.0)
             a = b
+        if fehl:
+            print(code, f'{fehl} Wochen ohne Antwort', flush=True)
         open(cache, 'w').write('utc,h\n' + '\n'.join(sorted(set(zeilen))) + '\n')
     d = pd.read_csv(cache)
     s = pd.Series(d.h.values, index=pd.to_datetime(d.utc, utc=True))
