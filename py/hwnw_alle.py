@@ -396,6 +396,48 @@ def lesen_cmems(f, datei, satz):
     return s + (z0 - s['2016':'2025'].mean())
 
 
+# Australien (5.11.2026): MSQ-Archiv Queensland (water_levels/Australia_QLD/msq_lang bzw. msq, UTC, LAT, 10 min) und
+# DoT Westaustralien (water_levels/Australia_WA/dot/<einsatz>.csv, UTC, m); Zuordnung aus den Fit-Listen
+# (harmonics/help/qld_msq_fit.csv, wa_dot_pegel.tsv). Reihe auf das Satzmittel verschoben (DoT-Bezug je Einsatz).
+AU_QLD = os.path.join(ROOT, 'water_levels/Australia_QLD')
+AU_WA = os.path.join(ROOT, 'water_levels/Australia_WA/dot')
+
+
+def pegel_au():
+    import csv
+    namen = set(HU.TR.datei(os.path.join(ROOT, OBS)).saetze)
+    out = {}
+    for z in csv.DictReader(open(os.path.join(ROOT, 'harmonics/help/qld_msq_fit.csv'), encoding='utf-8')):
+        f = [os.path.join(AU_QLD, d, z['datei'] + '.csv') for d in ('msq_lang', 'msq')]
+        f = [x for x in f if os.path.exists(x)][:1]
+        if f and z['name'] in namen and z['bis'] >= '2025-06':
+            out['au_q_' + z['datei'].split('-tide-gauge')[0].replace('-', '_')] = dict(quelle=('au', tuple(f)), satz=z['name'])
+    ein = {z['einsatz']: z for z in csv.DictReader(open(os.path.join(AU_WA, 'einsaetze.csv'), encoding='utf-8'))}
+    gruppen = {}
+    for z in csv.DictReader((x for x in open(os.path.join(ROOT, 'harmonics/help/wa_dot_pegel.tsv'), encoding='utf-8')
+                             if not x.startswith('#')), delimiter='\t'):
+        if z['name'] in namen and z['einsatz'] in ein:
+            gruppen.setdefault(z['name'], []).append(z['einsatz'])
+    for n, es in gruppen.items():
+        if max(ein[e]['bis'] for e in es) >= '2025-06':
+            out['au_w_' + es[0][:5].lower()] = dict(quelle=('au', tuple(os.path.join(AU_WA, e + '.csv') for e in es)), satz=n)
+    return out
+
+
+def lesen_au(fs, satz):
+    import pandas as pd
+    teile = []
+    for f in fs:
+        d = pd.read_csv(f)
+        teile.append(pd.Series(pd.to_numeric(d.iloc[:, 1], errors='coerce').values,
+                               index=pd.to_datetime(d.iloc[:, 0], utc=True)))
+    s = pd.concat(teile).dropna()
+    s = s[(s > -20) & (s < 20)]
+    s = s[~s.index.duplicated()].sort_index()
+    z0 = HU.TR.datei(os.path.join(ROOT, OBS)).saetze[satz].z0
+    return s + (z0 - s['2016':'2025'].mean())
+
+
 UK = os.path.join(ROOT, 'water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
 AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'water_levels/Belgium_waterinfo', c + '.csv')),
            ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'water_levels/France_SHOM', c + '.csv')),
@@ -480,6 +522,8 @@ def scheitel(arg):
                 EL.main(None, tmp, lesen_ca(q[1]))
             elif isinstance(q, (list, tuple)) and q[0] == 'ie':
                 EL.main(None, tmp, lesen_ie(q[1]))
+            elif isinstance(q, (list, tuple)) and q[0] == 'au':
+                EL.main(None, tmp, lesen_au(q[1], satz))
             elif isinstance(q, (list, tuple)) and q[0] == 'es':
                 d_, s_ = next((d_, s_) for n_, (d_, s_) in ES.items() if n_ in os.path.basename(q[1]))
                 EL.main(None, tmp, lesen_cmems(q[1], d_, s_))
@@ -623,11 +667,11 @@ def main(argv):
     if schritt != 'veraltet' and opt.get('land', 'de') in ('de', 'alle'):
         P.update(pegel())
     if schritt != 'veraltet' and opt.get('land', 'de') != 'de':
-        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie(), **pegel_es()).items()
+        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie(), **pegel_es(), **pegel_au()).items()
                   if opt['land'] == 'alle' or k.startswith(opt['land'] + '_')})
     if schritt == 'veraltet':          # nach Neufit/Umbenennung (tcd_bauen.py ruft das auf)
         opt['land'], schritt = 'alle', 'alles'
-        P = dict(pegel(), **pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie(), **pegel_es())
+        P = dict(pegel(), **pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie(), **pegel_es(), **pegel_au())
         alt = []
         for f in sorted(os.listdir(HU.ZIEL)):
             k = f[:-5]
