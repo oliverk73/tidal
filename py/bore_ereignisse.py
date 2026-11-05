@@ -480,10 +480,19 @@ def seite(name, tage=7, jetzt=None):
     t0 = dt.datetime.fromtimestamp(jetzt, z).replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
     w = {int(k): v for k, v in E.get('woerter', GROESSE).items()}
     zeilen = []
-    for t, k, h in vorhersage(E['code'], t0, t0 + tage * 86400):
-        d = dt.datetime.fromtimestamp(t, z)
-        zeilen.append((d.strftime('%a %Y-%m-%d'), d.strftime('%H:%M %Z'), k, w.get(k, '')
-                       + (f' · about {h:.1f} m' if h is not None and h >= 0.05 else '')))
+    ev = vorhersage(E['code'], t0, t0 + tage * 86400 + 7200)   # +2 h: Tag 7 nicht durch die Sommerzeit kuerzen
+    tage_liste = []
+    d0 = dt.datetime.fromtimestamp(t0, z).date()
+    for i in range(tage):                    # jeder Tag eine Zeile, auch ohne Bore (sonst wirkt die Woche kuerzer)
+        tag = d0 + dt.timedelta(days=i)
+        tage_liste.append(tag)
+        hier = [x for x in ev if dt.datetime.fromtimestamp(x[0], z).date() == tag]
+        if not hier:
+            zeilen.append((tag.strftime('%a %Y-%m-%d'), '—', 0, 'no bore expected'))
+        for t, k, h in hier:
+            d = dt.datetime.fromtimestamp(t, z)
+            zeilen.append((d.strftime('%a %Y-%m-%d'), d.strftime('%H:%M %Z'), k, w.get(k, '')
+                           + (f' · about {h:.1f} m' if h is not None and h >= 0.05 else '')))
     return dict(name=name, code=E['code'], lat=E['lat'], lon=E['lon'], zone=E['zone'], typ=E.get('typ', 'modell'),
                 bezug=E['bezug'], text=E.get('text', ''), zeilen=zeilen, pruefung=E.get('pruefung', {}),
                 kmax=max(w))

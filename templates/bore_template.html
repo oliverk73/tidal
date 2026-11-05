@@ -51,7 +51,7 @@ Times are local ({{ d.zone }}).</p>
   <tr{% if datum != ns.tag %} class="day-start"{% endif %}>
     <td class="date-cell">{% if datum != ns.tag %}{{ datum }}{% endif %}</td>
     <td>{{ zeit }}</td>
-    <td><span class="bore-size">{{ wort }}</span> <span class="bore-dots" aria-hidden="true">{{ '●' * k }}</span></td>
+    <td>{% if k == 0 %}<span style="color:#888;">{{ wort }}</span>{% else %}<span class="bore-size">{{ wort }}</span> <span class="bore-dots" aria-hidden="true">{{ '●' * k }}</span>{% endif %}</td>
   </tr>
   {% set ns.tag = datum %}
 {% endfor %}
