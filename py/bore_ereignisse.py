@@ -124,6 +124,7 @@ QT_KAND = [(TAB, 'Ganpu (Hangzhou Wan), Zhejiang, China'), (TAB, 'Zhapu (Hangzho
            ('harmonics/noaa/harmonics_noaa_cptt.txt', 'Haining (Qiantang Jiang), Zhejiang, China')]
 QT_TEXT = ('Derived from the official Qiantang bore forecast of the Zhejiang provincial government ("Smart Qiantang Tide"), '
            'rated from no bore to 5 stars, with the expected bore height. ')
+QT_ALIAS = {'观潮城(仓前)': ('观潮城(萧山仓前)',)}       # Ort heisst 2026 anders
 QT_STERNE = {'无': 0, '一星': 1, '二星': 2, '三星': 3, '四星': 4, '五星': 5}
 for _code, _stnm, _name, _lat, _lon in (
         ('qiantang_yanguan', '大江东八工段（盐官）', 'Yanguan Tidal Bore (Qiantang River), Zhejiang, China', 30.4024, 120.5520),
@@ -324,7 +325,7 @@ def _kalender_qiantang(stnm):
     out = {}
     for f in sorted(glob.glob(os.path.join(KAL, 'qiantang', '*.json'))):
         for x in json.load(open(f, encoding='utf-8')).get('items', []):
-            if x.get('STNM') != stnm:
+            if x.get('STNM') not in (stnm, *QT_ALIAS.get(stnm, ())):
                 continue
             for i in '12':
                 t = x.get('YC' + i)
