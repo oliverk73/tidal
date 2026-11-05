@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="manifest" href="/static/manifest.webmanifest"/>
+<meta name="theme-color" content="#169ca5"/>
+<link rel="apple-touch-icon" href="/static/icon-192.png"/>
+{% include "_pwa_head.html" %}
+<link href="/static/css/styles.css" rel="stylesheet"/>
+<title>Tidal bore times — {{ original_name }}</title>
+<meta name="description" content="Predicted arrival times and size of the tidal bore at {{ ort }} for the next 7 days, derived from Canadian Hydrographic Service bore predictions."/>
+<link rel="canonical" href="{{ request.url_root.rstrip('/') }}{{ request.path }}"/>
+<style>
+html, body { overflow: auto; height: auto; }
+main { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+.tide-table { border-collapse: collapse; font-size: 0.95em; }
+.tide-table td, .tide-table th { padding: 5px 10px; white-space: nowrap; }
+.tide-table .date-cell { font-weight: bold; }
+.tide-table tr.day-start td { border-top: 2px solid #ccc; }
+.tide-table thead th { text-align: left; font-weight: bold; border-bottom: 2px solid #999; }
+.bore-size { display: inline-block; min-width: 4.5em; }
+.bore-dots { color: #E65100; letter-spacing: 1px; }
+.station-note { color: #555; font-size: 0.9em; }
+header #search-trigger { position: static; transform: none; min-width: 0; width: auto; flex: 0 1 280px; }
+.crumb-home { text-decoration: none; }
+@media (max-width: 500px) { .tide-table td, .tide-table th { padding: 3px 4px; font-size: 0.85em; } }
+</style>
+<script src="/static/js/suche.js?v=20261101" defer></script>
+<script src="/static/js/pwa.js" defer></script>
+</head>
+<body>
+<header style="max-width: 1200px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 12px;">
+<button id="search-trigger" type="button">Search for locations</button>
+</header>
+<nav aria-label="Breadcrumb" style="max-width:1200px;margin:0 auto;padding:0 16px 6px;font-size:0.85em;color:#666;">
+  <a href="/" class="crumb-home" style="color:#0066cc;" title="Back to map">&#x2302; Home</a>
+  {% if bc_country %}&rsaquo; <a href="/stations/#{{ bc_country|lower|replace(' ','-') }}" style="color:#0066cc;text-decoration:none;">{{ bc_country }}</a>{% endif %}
+  {% if bc_state %}&rsaquo; <span>{{ bc_state }}</span>{% endif %}
+  &rsaquo; <span aria-current="page">{{ bc_station }}</span>
+</nav>
+<main>
+<h1>Tidal bore times — {{ ort }}</h1>
+<p>A tidal bore is the wave that runs up the river at the turn of the tide. The table gives its predicted
+arrival at {{ ort }} for the next 7 days, with its relative size from 1 (smallest) to 4 (largest).
+Times are local ({{ d.zone }}).</p>
+<table class="tide-table">
+<thead><tr><th>Date</th><th>Arrival</th><th>Size</th></tr></thead>
+{% set ns = namespace(tag='') %}
+{% for datum, zeit, k, wort in d.zeilen %}
+  <tr{% if datum != ns.tag %} class="day-start"{% endif %}>
+    <td class="date-cell">{% if datum != ns.tag %}{{ datum }}{% endif %}</td>
+    <td>{{ zeit }}</td>
+    <td><span class="bore-size">{{ k }} · {{ wort }}</span> <span class="bore-dots" aria-hidden="true">{{ '●' * k }}</span></td>
+  </tr>
+  {% set ns.tag = datum %}
+{% endfor %}
+</table>
+<p class="station-note">Derived from the bore predictions of the Canadian Hydrographic Service (CHS), which time the bore
+from high water at {{ d.bezug.split(',')[0] }}. Our model reproduces them to within about {{ '%.0f'|format(d.pruefung.zeit_rms + 0.49) }} minutes
+and gets the size class right {{ '%.0f'|format(100 * d.pruefung.klasse_richtig) }} % of the time (otherwise one class off).
+Wind, river flow and air pressure can shift the actual arrival by several minutes; arrive early.</p>
+<p class="station-note">Position: {{ '%.4f'|format(d.lat) }}° N, {{ '%.4f'|format(-d.lon) }}° W · CHS station {{ d.code }}</p>
+</main>
+<footer style="max-width:1200px;margin:2em auto 0;padding:14px 16px;border-top:1px solid #eee;text-align:center;font-size:0.88em;color:#555;">
+  <a href="/" style="color:#0066cc;text-decoration:none;">&#x2302; Home</a> &middot;
+  <a href="/stations/" style="color:#0066cc;text-decoration:none;">All stations</a> &middot;
+  <a href="/learn/" style="color:#0066cc;text-decoration:none;">Learn about tides</a>
+</footer>
+<script>var stationNames = {{ station_names | tojson }};</script>
+<div id="search-modal" class="search-modal">
+  <div class="search-modal-content">
+    <div class="search-modal-header">
+      <input id="search-modal-input" type="text" placeholder="Search for tide stations..." autocomplete="off" />
+      <button id="search-modal-close" type="button">&times;</button>
+    </div>
+    <div id="search-modal-results" class="search-modal-results"></div>
+  </div>
+</div>
+</body>
+</html>

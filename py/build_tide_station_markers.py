@@ -190,6 +190,8 @@ SOURCE_GROUPS = OrderedDict([
     # beide Saetze jedes Paars -- Namens-/Lagefragen und geschuetzte Faelle
     ('Dublette Namensfrage (prüfen)', {'color': '#1E88E5', 'files': []}),
     ('Dublette geschützt (prüfen)', {'color': '#6D4C41', 'files': []}),
+    # Oliver 5.11.2026: Bore-Stationen ohne Wasserstand, nur Ankunftszeit der Flutwelle (py/bore_ereignisse.py)
+    ('Tidal bore', {'color': '#E65100', 'files': []}),
 ])
 
 # Group order: predefined + 'Other' fallback (für nicht zugeordnete Quellen)
@@ -309,6 +311,12 @@ for name, lat, lon, source_file, is_current in all_stations:
         1 if needs_source else 0,
         name,  # original name (key for stationCoords/stationSources globals)
     ])
+
+# Bore-Stationen (harmonics/bore/*.json): eigene Quelle 'bore', die App zeigt dafuer die Bore-Seite
+for _f in sorted(glob.glob(os.path.join(PROJECT_ROOT, 'harmonics', 'bore', '*.json'))):
+    _b = json.load(open(_f, encoding='utf-8'))
+    station_rows.append([_b['name'], round(_b['lat'], 5), round(_b['lon'], 5), 'bore', GROUP_INDEX['Tidal bore'],
+                         0, to_slug(_b['name']), 0, _b['name']])
 
 payload = {
     "version": 1,

@@ -1847,6 +1847,19 @@ def strom_rose_svg():
     return resp
 
 
+def _bore_seite(name):
+    """Bore-Station (py/bore_ereignisse.py): Ankunft der Flutwelle und Groessenklasse, 7 Tage."""
+    import bore_ereignisse as B
+    d = B.seite(name, 7)
+    if not d:
+        return "Station nicht gefunden.", 404
+    teile = name.split(', ')
+    return render_template("bore_template.html", d=d, original_name=name,
+                           bc_country=teile[-1] if len(teile) > 1 else None,
+                           bc_state=teile[-2] if len(teile) > 2 else None,
+                           bc_station=teile[0], ort=teile[0].replace(' Tidal Bore', ''), station_names=_station_names)
+
+
 @app.route("/prediction/<slug>")
 def show_prediction(slug):
     """Serve a prediction page, regenerating if stale (not from today)."""
@@ -1867,6 +1880,8 @@ def show_prediction(slug):
         # (for DWF-2025 stations) on the prediction page.
         if not source:
             source = _station_data.get(station_name)
+        if source == 'bore':                 # Bore-Station (5.11.2026): nur Ankunftszeiten, keine Kurve
+            return _bore_seite(station_name)
 
         decoded_station, safe_station, svg_filename, html_filename = _resolve_station(station_name, source, utc, units, spd)
         html_path = os.path.join(PREDICTIONS_DIR, html_filename)
