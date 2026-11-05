@@ -1725,7 +1725,7 @@
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
     var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
     // Quelldatei extrahieren (📄 filename.tcd)
-    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
+    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd|bore(?=<))/);
     var sourceFile = srcMatch ? srcMatch[1] : '';
 
     targetMarker.closePopup();
@@ -1810,7 +1810,7 @@
     if (typeof popupContent === 'function') popupContent = popupContent(targetMarker);
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
     var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
-    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
+    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd|bore(?=<))/);
     var sourceFile = srcMatch ? srcMatch[1] : '';
 
     var currentCoords = oldLatLng.lat.toFixed(4) + ', ' + oldLatLng.lng.toFixed(4);
@@ -1891,7 +1891,7 @@
     if (typeof popupContent === 'function') popupContent = popupContent(targetMarker);
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
     var oldName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
-    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
+    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd|bore(?=<))/);
     var sourceFile = srcMatch ? srcMatch[1] : '';
 
     var newName = prompt('Rename station:\n\nFile: ' + sourceFile, oldName);
@@ -1951,7 +1951,7 @@
     if (typeof popupContent === 'function') popupContent = popupContent(targetMarker);
     var nameMatch = popupContent.match(/<b>([^<]+)<\/b>/);
     var stationName = nameMatch ? nameMatch[1].replace(/&quot;/g, '"') : '';
-    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd)/);
+    var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd|bore(?=<))/);
     var sourceFile = srcMatch ? srcMatch[1] : '';
 
     var latlng = echteLatLng(targetMarker);

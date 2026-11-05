@@ -315,6 +315,8 @@ for name, lat, lon, source_file, is_current in all_stations:
 # Bore-Stationen (harmonics/bore/*.json): eigene Quelle 'bore', die App zeigt dafuer die Bore-Seite
 for _f in sorted(glob.glob(os.path.join(PROJECT_ROOT, 'harmonics', 'bore', '*.json'))):
     _b = json.load(open(_f, encoding='utf-8'))
+    if 'code' not in _b:                 # korrekturen.json
+        continue
     station_rows.append([_b['name'], round(_b['lat'], 5), round(_b['lon'], 5), 'bore', GROUP_INDEX['Tidal bore'],
                          0, to_slug(_b['name']), 0, _b['name']])
 

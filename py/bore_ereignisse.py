@@ -143,6 +143,44 @@ REGELN = {
 }
 
 
+KORREKTUR = os.path.join(ZIEL, 'korrekturen.json')   # Olivers Karten-Korrekturen (Position, Name), ueberleben Neueichung
+
+
+def _korrekturen():
+    return json.load(open(KORREKTUR, encoding='utf-8')) if os.path.exists(KORREKTUR) else {}
+
+
+def _mit_korrektur(code, d):
+    k = _korrekturen().get(code, {})
+    return dict(d, **{f: k[f] for f in ('name', 'lat', 'lon') if f in k})
+
+
+def _korrigieren(name, **felder):
+    """Fuer die Karte (app.py): Bore-Station `name` verschieben/umbenennen. -> True, wenn gefunden."""
+    for f in sorted(os.listdir(ZIEL)):
+        if not f.endswith('.json') or f == os.path.basename(KORREKTUR):
+            continue
+        p = os.path.join(ZIEL, f)
+        E = json.load(open(p, encoding='utf-8'))
+        if E.get('name') != name:
+            continue
+        E.update(felder)
+        json.dump(E, open(p, 'w'), indent=1, ensure_ascii=False)
+        K = _korrekturen()
+        K.setdefault(E['code'], {}).update(felder)
+        json.dump(K, open(KORREKTUR, 'w'), indent=1, ensure_ascii=False)
+        return True
+    return False
+
+
+def position_setzen(name, lat, lon):
+    return _korrigieren(name, lat=round(float(lat), 5), lon=round(float(lon), 5))
+
+
+def umbenennen(alt, neu):
+    return _korrigieren(alt, name=neu)
+
+
 def _ts(s):
     return np.array([x.replace(tzinfo=dt.timezone.utc).timestamp() for x in s])
 
@@ -249,10 +287,10 @@ def _eichen_allgemein(code, meta, tb, kl, eich, pruef, kand, mit_null, klein, qu
           + (f" | Bore erkannt {100 * erg['bore_erkannt']:.0f} %, Fehlalarm {100 * erg['falsch_alarm']:.0f} %" if mit_null else ''),
           flush=True)
     os.makedirs(ZIEL, exist_ok=True)
-    json.dump(dict(code=code, name=meta['name'], lat=meta['lat'], lon=meta['lon'], zone=meta['zone'], typ='modell',
+    json.dump(_mit_korrektur(code, dict(code=code, name=meta['name'], lat=meta['lat'], lon=meta['lon'], zone=meta['zone'], typ='modell',
                    bezug=ref, datei=datei, versatz=versatz, klein=klein, mit_null=mit_null, zeit=bz.tolist(),
                    klasse=bk.tolist(), schwellen=schw, hoehe=bh, woerter=meta['woerter'], text=meta['text'],
-                   pruefung=erg, quelle=quelle), open(os.path.join(ZIEL, code + '.json'), 'w'), indent=1, ensure_ascii=False)
+                   pruefung=erg, quelle=quelle)), open(os.path.join(ZIEL, code + '.json'), 'w'), indent=1, ensure_ascii=False)
 
 
 def _kalender_severn():
@@ -374,7 +412,7 @@ def eichen_kalender(nur=None):
 
 def regeln_schreiben():
     for code, r in REGELN.items():
-        json.dump(dict(code=code, typ='regel', **{k: v for k, v in r.items()}, pruefung={}),
+        json.dump(_mit_korrektur(code, dict(code=code, typ='regel', **{k: v for k, v in r.items()}, pruefung={})),
                   open(os.path.join(ZIEL, code + '.json'), 'w'), indent=1, ensure_ascii=False)
         print(code, 'Regel geschrieben')
 
@@ -421,7 +459,7 @@ def eichen(nur=None):
 def modelle():
     """-> [Modell-dict] aller Bore-Stationen (fuer Karte und App)."""
     import glob
-    return [json.load(open(f)) for f in sorted(glob.glob(os.path.join(ZIEL, '*.json')))]
+    return [json.load(open(f)) for f in sorted(glob.glob(os.path.join(ZIEL, '*.json'))) if f != KORREKTUR]
 
 
 def seite(name, tage=7, jetzt=None):

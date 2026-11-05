@@ -2265,6 +2265,13 @@ def update_coordinates():
 
         if not station or not tcd_file:
             return jsonify(error="station und source sind Pflichtfelder"), 400
+        if tcd_file == 'bore':               # Bore-Station (harmonics/bore/*.json), kein Harmonics-Satz
+            import bore_ereignisse as B
+            if not B.position_setzen(station, new_lat, new_lon):
+                return jsonify(error=f"Bore-Station '{station}' nicht gefunden"), 404
+            karte = update_markers_json(station, tcd_file, new_lat, new_lon, old_lat, old_lon)
+            print(f"✅ Bore-Station verschoben: {station} → {new_lat:.4f}, {new_lon:.4f}")
+            return jsonify(ok=True, lat=new_lat, lon=new_lon, karte=karte)
         station = file_name_for(station, tcd_file)
 
         # Quelldatei finden
@@ -2308,6 +2315,13 @@ def update_station_name():
 
         if not old_name or not new_name or not tcd_file:
             return jsonify(error="old_name, new_name und source sind Pflichtfelder"), 400
+        if tcd_file == 'bore':
+            import bore_ereignisse as B
+            if old_name == new_name or not B.umbenennen(old_name, new_name):
+                return jsonify(error=f"Bore-Station '{old_name}' nicht gefunden oder Name unverändert"), 400
+            karte = rename_station_in_markers_json(old_name, new_name, tcd_file, old_lat, old_lon)
+            print(f"✅ Bore-Station umbenannt: '{old_name}' → '{new_name}'")
+            return jsonify(ok=True, new_name=new_name, karte=karte)
         old_name = file_name_for(old_name, tcd_file)
         new_name = file_name_for(new_name, tcd_file)
 
@@ -2354,6 +2368,13 @@ def delete_station():
 
         if not station or not tcd_file:
             return jsonify(error="station und source sind Pflichtfelder"), 400
+        if tcd_file == 'bore':               # Bore-Station (harmonics/bore/*.json), kein Harmonics-Satz
+            import bore_ereignisse as B
+            if not B.position_setzen(station, new_lat, new_lon):
+                return jsonify(error=f"Bore-Station '{station}' nicht gefunden"), 404
+            karte = update_markers_json(station, tcd_file, new_lat, new_lon, old_lat, old_lon)
+            print(f"✅ Bore-Station verschoben: {station} → {new_lat:.4f}, {new_lon:.4f}")
+            return jsonify(ok=True, lat=new_lat, lon=new_lon, karte=karte)
         station = file_name_for(station, tcd_file)
 
         # Quelldatei finden
