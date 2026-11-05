@@ -361,6 +361,41 @@ def lesen_ie(f):
     return s[~s.index.duplicated()].sort_index()
 
 
+# Spanien/Portugal (5.11.2026): CMEMS-Stundenreihen aus water_levels/CMEMS_tg_pruefung (SLEV, QC 1/2),
+# Bezug unsicher -> wie HydroPortail auf das Mittel des Satzes (Z0) verschoben
+CMEMS_DIR = os.path.join(ROOT, 'water_levels/CMEMS_tg_pruefung')
+PUERTOS = 'harmonics/classic/harmonics_puertos_spain.txt'
+ES = {'Sevilla2': (PUERTOS, 'Sevilla (D\xe1rsena del Gualdaquivir), Spain'),
+      'Bonanza': (PUERTOS, 'Sanl\xfacar de Barrameda (Bonanza / Guadalquivir), Spain'),
+      'Huelva': (PUERTOS, 'Mazag\xf3n (Huelva), Spain'), 'Bilbao': (PUERTOS, 'Santurtzi (Bilbao), Spain'),
+      'Santander': (PUERTOS, 'Santander, Spain'), 'Coruna': (PUERTOS, 'A Coru\xf1a, Spain'),
+      'Vigo': (PUERTOS, 'Vigo, Spain'), 'Gijon': (PUERTOS, 'Gij\xf3n (El Musel), Spain'),
+      'Leixoes': (OBS, 'Porto de Leixoes (Matosinhos), Portugal')}
+
+
+def pegel_es():
+    out = {}
+    for n, (datei, satz) in ES.items():
+        f = glob.glob(os.path.join(CMEMS_DIR, f'*_{n}TG_60minute.nc'))
+        if f:
+            out['es_' + n.lower()] = dict(quelle=('es', f[0]), satz=satz, datei=datei)
+    return out
+
+
+def lesen_cmems(f, datei, satz):
+    import netCDF4
+    import pandas as pd
+    d = netCDF4.Dataset(f)
+    v = d.variables
+    t = netCDF4.num2date(v['TIME'][:], v['TIME'].units, only_use_cftime_datetimes=False)
+    h = np.ma.filled(v['SLEV'][:, 0].astype(float), np.nan)
+    qc = np.ma.filled(v['SLEV_QC'][:, 0], 9)
+    s = pd.Series(np.where(np.isin(qc, (1, 2)), h, np.nan), index=pd.to_datetime(t).tz_localize('UTC')).dropna()
+    s = s[~s.index.duplicated()].sort_index()
+    z0 = HU.TR.datei(os.path.join(ROOT, datei)).saetze[satz].z0
+    return s + (z0 - s['2016':'2025'].mean())
+
+
 UK = os.path.join(ROOT, 'water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
 AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'water_levels/Belgium_waterinfo', c + '.csv')),
            ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'water_levels/France_SHOM', c + '.csv')),
@@ -445,6 +480,9 @@ def scheitel(arg):
                 EL.main(None, tmp, lesen_ca(q[1]))
             elif isinstance(q, (list, tuple)) and q[0] == 'ie':
                 EL.main(None, tmp, lesen_ie(q[1]))
+            elif isinstance(q, (list, tuple)) and q[0] == 'es':
+                d_, s_ = next((d_, s_) for n_, (d_, s_) in ES.items() if n_ in os.path.basename(q[1]))
+                EL.main(None, tmp, lesen_cmems(q[1], d_, s_))
             elif isinstance(q, (list, tuple)) and q[0] == 'hpa':
                 EL.main(None, tmp, EL.lesen_hpa(q[1], SKN_PNP))
             elif isinstance(q, (list, tuple)) and q[0] == 'hp':
@@ -585,11 +623,11 @@ def main(argv):
     if schritt != 'veraltet' and opt.get('land', 'de') in ('de', 'alle'):
         P.update(pegel())
     if schritt != 'veraltet' and opt.get('land', 'de') != 'de':
-        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie()).items()
+        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie(), **pegel_es()).items()
                   if opt['land'] == 'alle' or k.startswith(opt['land'] + '_')})
     if schritt == 'veraltet':          # nach Neufit/Umbenennung (tcd_bauen.py ruft das auf)
         opt['land'], schritt = 'alle', 'alles'
-        P = dict(pegel(), **pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie())
+        P = dict(pegel(), **pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca(), **pegel_ie(), **pegel_es())
         alt = []
         for f in sorted(os.listdir(HU.ZIEL)):
             k = f[:-5]
