@@ -1,9 +1,9 @@
 """Suchlauf 5.11.2026: ATT-Uebertragungen, deren Tagestiden mit dem Halbtagsfaktor skaliert wurden.
 Signatur: M2 passt zu FES (Faktor m), K1 und O1 weichen gemeinsam um einen anderen Faktor ab (k).
-Zeuge: naechster eigenstaendiger Satz (keine ATT-Uebertragung, kein FES-Satz) bis 120 km."""
+Zeuge: naechster eigenstaendiger Satz (keine ATT-Uebertragung, kein FES-Satz) bis 120 km.
 Usage: venv/bin/python py/halbtagsfaktor_suchlauf.py harmonics/help/halbtagsfaktor_tagestiden_<datum>.csv
 Urteil: reparieren (Zeuge bis 80 km bestaetigt FES, keiner den Satz), Satz bestaetigt, ohne Zeugen.
-Reparatur danach per py/tagestiden_aus_fes.py --liste (Ausnahmen von Hand, siehe Commit 5.11.2026).
+Reparatur danach per py/tagestiden_aus_fes.py --liste (Ausnahmen von Hand, siehe Commit 5.11.2026)."""
 import sys, math, csv
 sys.path.insert(0, '/home/oliver/weather/py')
 import fes_kuestentyp as F
