@@ -256,7 +256,8 @@ class Grafik:
             if self.strom:
                 c = 'fc' if val[x + 1] > 0 else 'ec'
             else:
-                c = 'fc' if val[x] < val[x + 1] else 'ec'
+                # gleiche Werte (waagerechte Stuecke der monotonen HW/NW-Kurve) behalten die Farbe, sonst Streifen
+                c = prevc if (x and abs(val[x + 1] - val[x]) < 1e-9) else ('fc' if val[x] < val[x + 1] else 'ec')
             if prevc != c or not x:
                 xadj = x - 1
                 if self.strom and ((c == 'fc' and y[x] > yz) or (c == 'ec' and y[x] < yz)):

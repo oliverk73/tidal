@@ -385,7 +385,25 @@ def kurve(kurz, D, name, t):
     if len(gut) < 2:
         return D.wert(name, t)
     th, tn, dh = (np.array(x) for x in zip(*gut))
-    j = np.clip(np.searchsorted(tn, t) - 1, 0, len(tn) - 2)
-    x = np.clip((t - tn[j]) / (tn[j + 1] - tn[j]), 0, 1)
-    w = (1 - np.cos(np.pi * x)) / 2        # weich: Korrektur ohne Knick, an jedem Scheitel Steigung 0
-    return D.wert(name, np.interp(t, tn, th)) + dh[j] + w * (dh[j + 1] - dh[j])
+
+    def gestreckt(tt):
+        j = np.clip(np.searchsorted(tn, tt) - 1, 0, len(tn) - 2)
+        x = np.clip((tt - tn[j]) / (tn[j + 1] - tn[j]), 0, 1)
+        w = (1 - np.cos(np.pi * x)) / 2        # weich: Korrektur ohne Knick, an jedem Scheitel Steigung 0
+        return D.wert(name, np.interp(tt, tn, th)) + dh[j] + w * (dh[j + 1] - dh[j])
+
+    # Monoton zwischen den Tabellenscheiteln (5.11.2026): wo die Tabelle bei Doppel-NW/Stauwasser nur einen
+    # Scheitel je Tide fuehrt (Rhein-Maas-Delta, untere Seine), zeigte die Kurve sonst kleine Buckel, die in
+    # der Tabelle fehlen. Raster bis zu den Nachbarscheiteln, damit Einzelzeiten (Jetzt-Marke) gleich rechnen.
+    g = np.arange(t.min() - 14 * 3600, t.max() + 14 * 3600 + 60, 60.0)
+    yg = gestreckt(g)
+    ev = sorted(e for e in neu if g[0] <= e[0] <= g[-1])
+    for (t1, h1, k1), (t2, h2, k2) in zip(ev, ev[1:]):
+        m = (g >= t1) & (g <= t2)
+        if not m.any() or k1 == k2:
+            continue
+        if k1 == 'H':
+            yg[m] = np.clip(np.minimum.accumulate(yg[m]), min(h1, h2), max(h1, h2))
+        else:
+            yg[m] = np.clip(np.maximum.accumulate(yg[m]), min(h1, h2), max(h1, h2))
+    return np.interp(t, g, yg)
