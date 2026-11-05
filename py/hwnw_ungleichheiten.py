@@ -242,18 +242,52 @@ def wahl(kurz):
     return laden(kurz).get('wahl') or WAHL.get(kurz, {'H': 'mond', 'N': 'satz'})
 
 
-def vorhersage_kombi(kurz, t0, t1):
-    """App-Weg: je Station und Art die bessere Variante; 'harm' = Scheitel des harmonischen Satzes."""
+def verletzungen(ev):
+    """Indizes von Scheiteln, die nicht zusammenpassen: HW nicht ueber dem NW daneben (bzw. umgekehrt) oder
+    zwei Scheitel weniger als 30 min auseinander (5.11.2026: Golf von Mexiko, Quimperle, Zemst)."""
+    bad = set()
+    for i, (a, b) in enumerate(zip(ev, ev[1:])):
+        if b[0] - a[0] < 1800 or (a[2] == 'H' and b[2] == 'N' and a[1] <= b[1]) or (a[2] == 'N' and b[2] == 'H' and a[1] >= b[1]):
+            bad |= {i, i + 1}
+    return bad
+
+
+def plausibel(ev, harm):
+    """Verletzende Scheitel durch den naechsten Satz-Scheitel gleicher Art (<= 3 h) ersetzen, sonst weglassen."""
+    for _ in range(4):
+        bad = verletzungen(ev)
+        if not bad:
+            break
+        neu = []
+        for i, e in enumerate(ev):
+            if i not in bad:
+                neu.append(e)
+                continue
+            k = [h for h in harm if h[2] == e[2] and abs(h[0] - e[0]) <= 3 * 3600]
+            if k:
+                neu.append(min(k, key=lambda h: abs(h[0] - e[0])))
+        ev = abwechselnd(sorted(set(neu)))
+    return ev
+
+
+def vorhersage_kombi(kurz, t0, t1, reparieren=True):
+    """App-Weg: je Station und Art die bessere Variante; 'harm' = Scheitel des harmonischen Satzes.
+    reparieren: unpassende korrigierte Scheitel (verletzungen) durch die des Satzes ersetzen."""
     w = wahl(kurz)
     out = []
-    if 'harm' in w.values():
-        E = laden(kurz)
-        out += [e for e in satz_ereignisse(os.path.join(ROOT, E['datei']), E['satz'], t0, t1) if w[e[2]] == 'harm']
+    E = laden(kurz)
+    harm = None
+    if 'harm' in w.values() or reparieren:
+        harm = satz_ereignisse(os.path.join(ROOT, E['datei']), E['satz'], t0 - 6 * 3600, t1 + 6 * 3600)
+        out += [e for e in harm if w[e[2]] == 'harm' and t0 <= e[0] <= t1]
     if 'mond' in w.values():
         out += [e for e in vorhersage_mond(kurz, t0, t1) if w[e[2]] == 'mond']
     if 'satz' in w.values():
         out += [e for e in vorhersage(kurz, t0, t1) if w[e[2]] == 'satz']
-    return abwechselnd(sorted(out))
+    ev = abwechselnd(sorted(out))
+    if reparieren and verletzungen(ev):
+        ev = [e for e in plausibel(ev, harm) if t0 <= e[0] <= t1]
+    return ev
 
 
 def abwechselnd(ev):

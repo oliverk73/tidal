@@ -13,7 +13,11 @@ Reihen am selben Satz die naehere), Reihen ohne Position ueber NAMEN.
 Ergebnis: harmonics/hwnw/<kurz>.json (mit 'wahl', 'fingerabdruck'), harmonics/help/hwnw_auswahl_<datum>.csv
 Scheitel-CSVs: water_levels/Germany/hwnw/<kurz>.csv (vorhandene werden wiederverwendet).
 
-Ausland (--land=be|fr|uk|hp|alle): waterinfo.be, SHOM, BODC, HydroPortail (Stundenwerte, franz. Fluesse); Satz ueber hic_code/shom_code/bodc_code/station_id_context im Kopf.\nUsage: venv/bin/python py/hwnw_alle.py [scheitel|eichen|alles|veraltet] [--land=de] [--nur=kurz,kurz] [--prozesse=4]
+Ausland (--land=be|fr|uk|hp|us|alle): waterinfo.be, SHOM, BODC, HydroPortail (Stundenwerte, franz. Fluesse); Satz ueber hic_code/shom_code/bodc_code/station_id_context im Kopf.
+USA (--land=us, 5.11.2026): gemessene HW/NW direkt aus NOAA CO-OPS (Produkt high_low, MLLW, metrisch, UTC), Saetze aus
+harmonics-dwf (noaa_station_id im Kopf); Stationsliste USA.
+Nach jeder Eichung: plausibel (Modelle mit > MAX_VERLETZT unpassenden Scheiteln 2026 werden geloescht).
+Usage: venv/bin/python py/hwnw_alle.py [scheitel|eichen|alles|veraltet|plausibel] [--land=de] [--nur=kurz,kurz] [--prozesse=4]
 """
 from __future__ import annotations
 
@@ -111,6 +115,52 @@ def pegel():
     return out
 
 
+DWF = 'harmonics/classic/harmonics-dwf-20251228-free.txt'
+# USA-Test 5.11.2026: flache Aestuare, an denen der harmonische Satz die verzerrte Tide am schlechtesten trifft
+# 5.11.2026: Test an 10 Aestuaren klar positiv (Delaware HW 16->11, NW 23->14 min) -> alle Saetze mit
+# noaa_station_id; ohne MLLW-HW/NW bei CO-OPS (Flusspegel mit eigenem Bezug) bricht laden_usa ab.
+USA = set(json.load(open(os.path.join(ROOT, 'water_levels/USA_COOPS/wasserstand_stationen.json'))))   # CO-OPS mdapi type=waterlevels, tidal
+USA_TEST = ('8545240', '8540433', '8551910', '8573927', '8574680', '8518995', '8658120', '9440083', '9440422', '9455920')
+COOPS = ('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=high_low&station={}&begin_date={}0101'
+         '&end_date={}1231&datum=MLLW&units=metric&time_zone=gmt&format=csv&application=tiden_pruefung')
+JAHRE_US = range(2014, PRUEF + 1)
+
+
+def pegel_usa():
+    """-> {us_<id>: dict(quelle=('us', id), satz, datei)} fuer die Stationen in USA mit Satz in DWF."""
+    out, kopf = {}, []
+    L = open(os.path.join(ROOT, DWF), encoding='latin-1').read().split('\n')
+    for i, z in enumerate(L):
+        if z.startswith('#'):
+            kopf.append(z)
+            continue
+        if kopf and i + 1 < len(L) and re.match(r'^[+-]\d\d:\d\d', L[i + 1]) and 'Current' not in z:
+            m = re.search(r'^# noaa_station_id: (\d+)', '\n'.join(kopf), re.M)
+            if m and (USA is None or m.group(1) in USA):
+                out['us_' + m.group(1)] = dict(quelle=('us', m.group(1)), satz=z, datei=DWF)
+        if z:
+            kopf = []
+    return out
+
+
+def laden_usa(nr, ziel):
+    """CO-OPS high_low je Jahr -> Scheitel-CSV (utc,hoehe_m,art); H/HH -> H, L/LL -> N."""
+    import time
+    import urllib.request
+    zeilen = []
+    for j in JAHRE_US:
+        req = urllib.request.Request(COOPS.format(nr, j, j), headers={'User-Agent': 'tiden-pruefung/1.0'})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            for z in r.read().decode().split('\n')[1:]:
+                t = [x.strip() for x in z.split(',')]
+                if len(t) >= 3 and t[1] and t[2] in ('H', 'HH', 'L', 'LL'):
+                    zeilen.append(f"{t[0]},{float(t[1]):.3f},{'H' if t[2].startswith('H') else 'N'}")
+        time.sleep(1.5)                 # 5.11.2026: 4 parallele Abrufe ohne Pause -> CO-OPS 403; nur mit --prozesse=1 laden
+    if len(zeilen) < 1000:
+        raise RuntimeError(f'nur {len(zeilen)} Scheitel')
+    open(ziel, 'w').write('utc,hoehe_m,art\n' + '\n'.join(sorted(set(zeilen))) + '\n')
+
+
 UK = os.path.join(ROOT, 'water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
 AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'water_levels/Belgium_waterinfo', c + '.csv')),
            ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'water_levels/France_SHOM', c + '.csv')),
@@ -187,7 +237,9 @@ def scheitel(arg):
     tmp = ziel + '.teil'
     try:
         with contextlib.redirect_stdout(io.StringIO()):
-            if isinstance(q, (list, tuple)) and q[0] == 'hpa':
+            if isinstance(q, (list, tuple)) and q[0] == 'us':
+                laden_usa(q[1], tmp)
+            elif isinstance(q, (list, tuple)) and q[0] == 'hpa':
                 EL.main(None, tmp, EL.lesen_hpa(q[1], SKN_PNP))
             elif isinstance(q, (list, tuple)) and q[0] == 'hp':
                 EL.main(None, tmp, auf_satzbezug(lesen_ausland(*q), satz))
@@ -224,7 +276,7 @@ def eichen_pruefen(arg):
     csv = scheitel_pfad(k)
     if not os.path.exists(csv):
         return k, dict(fehler='keine Scheitel')
-    datei = os.path.join(ROOT, OBS)
+    datei = os.path.join(ROOT, p.get('datei', OBS))
     jahre = {int(z[:4]) for z in open(csv).read().split('\n')[1:] if z[:4].isdigit()}
     t0 = dt.datetime(PRUEF, 1, 1, tzinfo=dt.timezone.utc).timestamp()
     t1 = dt.datetime(PRUEF + 1, 1, 1, tzinfo=dt.timezone.utc).timestamp()
@@ -244,7 +296,7 @@ def eichen_pruefen(arg):
         HU.ZIEL = os.path.join(ablage, f'{j0}_{j1}')
         try:
             with contextlib.redirect_stdout(io.StringIO()):
-                HU.eichen(k, csv, OBS, p['satz'], j0, j1, glieder=HU.GLIEDER_MOND)   # Versuch 4.11.: HW 12,74 -> 12,36 min
+                HU.eichen(k, csv, p.get('datei', OBS), p['satz'], j0, j1, glieder=HU.GLIEDER_MOND)   # Versuch 4.11.: HW 12,74 -> 12,36 min
                 HU.eichen_mond(k, csv, j0, j1)
             erg['fenster'][f'{j0}_{j1}'] = dict(
                 satz=_kennzahlen(mess, HU.vorhersage(k, t0 - 86400, t1 + 86400)),
@@ -275,23 +327,65 @@ def waehlen(erg):
     return (best[1], best[2]) if best else (None, {'H': 'harm', 'N': 'harm'})
 
 
+MAX_VERLETZT = 6      # 5.11.2026: mehr unpassende Scheitel je Jahr (HW <= NW daneben, < 30 min) -> kein Modell
+
+
+def unplausibel_zahl(k, jahr=PRUEF + 1):
+    """Unpassende Scheitel des Modells k im Jahr `jahr` vor der Reparatur in HU.vorhersage_kombi."""
+    t0 = dt.datetime(jahr, 1, 1, tzinfo=dt.timezone.utc).timestamp()
+    return len(HU.verletzungen(HU.vorhersage_kombi(k, t0, t0 + 365 * 86400, reparieren=False)))
+
+
+def _plausibel_eins(k):
+    try:
+        return k, unplausibel_zahl(k)
+    except Exception as e:  # noqa: BLE001
+        return k, f'Fehler {e}'
+
+
+def plausibel(nur=None, n=4):
+    """Alle (oder nur `nur`) Modelle pruefen; mit mehr als MAX_VERLETZT unpassenden Scheiteln loeschen.
+    -> {kurz: zahl}; Liste harmonics/help/hwnw_unplausibel_<datum>.csv"""
+    ks = [f[:-5] for f in sorted(os.listdir(HU.ZIEL)) if f.endswith('.json') and (not nur or f[:-5] in nur)]
+    erg = {}
+    with Pool(n) as pool:
+        for k, z in pool.imap_unordered(_plausibel_eins, ks):
+            erg[k] = z
+    weg = sorted(k for k, z in erg.items() if isinstance(z, int) and z > MAX_VERLETZT)
+    zeilen = ['kurz;satz;verletzungen;aktion']
+    for k in sorted(erg):
+        if erg[k] == 0:
+            continue
+        satz = HU.laden(k)['satz']
+        zeilen.append(f"{k};{satz};{erg[k]};{'geloescht' if k in weg else 'repariert zur Laufzeit'}")
+    for k in weg:
+        os.remove(os.path.join(HU.ZIEL, k + '.json'))
+    aus = os.path.join(ROOT, 'harmonics/help', f'hwnw_unplausibel_{dt.date.today():%Y%m%d}.csv')
+    open(aus, 'w', encoding='utf-8').write('\n'.join(zeilen) + '\n')
+    print(f'{len(erg)} Modelle, {len(zeilen) - 1} mit unpassenden Scheiteln, {len(weg)} geloescht (> {MAX_VERLETZT}) -> {aus}')
+    return erg
+
+
 def main(argv):
     schritt = argv[0] if argv and not argv[0].startswith('--') else 'alles'
     opt = dict(a[2:].split('=', 1) for a in argv if a.startswith('--'))
+    if schritt == 'plausibel':
+        plausibel(opt['nur'].split(',') if opt.get('nur') else None, int(opt.get('prozesse', 4)))
+        return 0
     P = {}
     if schritt != 'veraltet' and opt.get('land', 'de') in ('de', 'alle'):
         P.update(pegel())
     if schritt != 'veraltet' and opt.get('land', 'de') != 'de':
-        P.update({k: v for k, v in pegel_ausland().items() if opt['land'] == 'alle' or k.startswith(opt['land'] + '_')})
+        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa()).items()
+                  if opt['land'] == 'alle' or k.startswith(opt['land'] + '_')})
     if schritt == 'veraltet':          # nach Neufit/Umbenennung (tcd_bauen.py ruft das auf)
         opt['land'], schritt = 'alle', 'alles'
-        P = dict(pegel(), **pegel_ausland())
-        D = HU.TR.datei(os.path.join(ROOT, OBS))
+        P = dict(pegel(), **pegel_ausland(), **pegel_usa())
         alt = []
         for f in sorted(os.listdir(HU.ZIEL)):
             k = f[:-5]
             E = HU.laden(k)
-            s = D.saetze.get(E['satz'])
+            s = HU.TR.datei(os.path.join(ROOT, E['datei'])).saetze.get(E['satz'])
             if k in P and (s is None or E.get('fingerabdruck') != HU.fingerabdruck(s) or P[k]['satz'] != E['satz']):
                 alt.append(k)
         print('HW/NW-Modelle veraltet:', ', '.join(alt) or 'keine', flush=True)
@@ -350,6 +444,7 @@ def main(argv):
     open(aus, 'w', encoding='utf-8').write('\n'.join(zeilen) + '\n')
     shutil.rmtree(ablage, ignore_errors=True)
     print('->', aus)
+    plausibel([k for k in ergebnisse if os.path.exists(os.path.join(HU.ZIEL, k + '.json'))], n)
     return 0
 
 
