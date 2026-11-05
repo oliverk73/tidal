@@ -1,0 +1,59 @@
+{
+ "code": "dordogne_saint_pardon",
+ "name": "Saint-Pardon Tidal Bore (Mascaret, Dordogne), France",
+ "lat": 44.9363,
+ "lon": -0.3436,
+ "zone": "Europe/Paris",
+ "typ": "modell",
+ "bezug": "Bordeaux, France",
+ "datei": "harmonics/utide/harmonics_utide_observations.txt",
+ "versatz": -209.53867828448614,
+ "klein": true,
+ "mit_null": true,
+ "zeit": [
+  137.97341246074808,
+  -43.31762059915155,
+  -6.505559942947741,
+  22.812300976211954,
+  9.283530113936129,
+  4.772668314848851,
+  8.25428192611789,
+  -1.3966282242869335,
+  0.6783009659773319,
+  -0.8188169763365538
+ ],
+ "klasse": [
+  -2.3545005421083154,
+  0.41895022436105345,
+  0.27123115809327425,
+  0.0387023160065727,
+  0.2512545421566701,
+  0.6188313823100176,
+  -0.004142521011960332,
+  -0.018632164200130693,
+  0.20569935388710284,
+  -0.07380870971284363
+ ],
+ "schwellen": [
+  0.6479522558920959,
+  1.5477714395683666,
+  2.0721490772353692
+ ],
+ "hoehe": null,
+ "woerter": {
+  "1": "small",
+  "2": "moderate",
+  "3": "large"
+ },
+ "text": "Derived from the 2026 mascaret calendar of La Péniche du Mascaret at Saint-Pardon; the size follows the French tidal coefficient (small below 80, moderate below 95, large from 95). The mascaret only forms on larger tides.",
+ "pruefung": {
+  "zeit_rms": 6.8633983874523015,
+  "zeit_max": 16.16970923883688,
+  "klasse_richtig": 0.5761589403973509,
+  "n": 151,
+  "bore_erkannt": 0.9403973509933775,
+  "falsch_alarm": 0.15294117647058825,
+  "hinweis": "Pruefwerte aus getrennter Eichung; Modell danach ueber den ganzen Kalender geeicht"
+ },
+ "quelle": "Calendrier du mascaret 2026, La Péniche du Mascaret (Saint-Pardon); Klasse aus dem Koeffizienten (<80, <95, >=95)"
+}

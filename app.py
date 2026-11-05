@@ -1854,6 +1854,8 @@ def _bore_seite(name):
     if not d:
         return "Station nicht gefunden.", 404
     teile = name.split(', ')
+    if len(teile) == 2 and teile[-1] in ('Alaska', 'Washington', 'Oregon', 'California', 'Maine'):
+        teile.append('USA')              # US-Namen enden ohne Land (Klammer-Regel)
     return render_template("bore_template.html", d=d, original_name=name,
                            bc_country=teile[-1] if len(teile) > 1 else None,
                            bc_state=teile[-2] if len(teile) > 2 else None,

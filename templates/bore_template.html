@@ -42,7 +42,7 @@ header #search-trigger { position: static; transform: none; min-width: 0; width:
 <main>
 <h1>Tidal bore times — {{ ort }}</h1>
 <p>A tidal bore is the wave that runs up the river at the turn of the tide. The table gives its predicted
-arrival at {{ ort }} for the next 7 days, with its relative size from 1 (smallest) to 4 (largest).
+arrival at {{ ort }} for the next 7 days, with its relative size{% if d.kmax %} from 1 (smallest) to {{ d.kmax }} (largest){% endif %}.
 Times are local ({{ d.zone }}).</p>
 <table class="tide-table">
 <thead><tr><th>Date</th><th>Arrival</th><th>Size</th></tr></thead>
@@ -51,16 +51,17 @@ Times are local ({{ d.zone }}).</p>
   <tr{% if datum != ns.tag %} class="day-start"{% endif %}>
     <td class="date-cell">{% if datum != ns.tag %}{{ datum }}{% endif %}</td>
     <td>{{ zeit }}</td>
-    <td><span class="bore-size">{{ k }} · {{ wort }}</span> <span class="bore-dots" aria-hidden="true">{{ '●' * k }}</span></td>
+    <td><span class="bore-size">{{ wort }}</span> <span class="bore-dots" aria-hidden="true">{{ '●' * k }}</span></td>
   </tr>
   {% set ns.tag = datum %}
 {% endfor %}
 </table>
-<p class="station-note">Derived from the bore predictions of the Canadian Hydrographic Service (CHS), which time the bore
-from high water at {{ d.bezug.split(',')[0] }}. Our model reproduces them to within about {{ '%.0f'|format(d.pruefung.zeit_rms + 0.49) }} minutes
-and gets the size class right {{ '%.0f'|format(100 * d.pruefung.klasse_richtig) }} % of the time (otherwise one class off).
+<p class="station-note">{{ d.text }}
+{% if d.pruefung and d.pruefung.zeit_rms is defined %}Checked against later predictions of the same source, our times agree to within about
+{{ '%.0f'|format(d.pruefung.zeit_rms + 0.49) }} minutes (RMS){% if d.pruefung.bore_erkannt is defined %}, {{ '%.0f'|format(100 * d.pruefung.bore_erkannt) }} % of the listed bores are found{% endif %}
+and the size class matches {{ '%.0f'|format(100 * d.pruefung.klasse_richtig) }} % of the time.{% endif %}
 Wind, river flow and air pressure can shift the actual arrival by several minutes; arrive early.</p>
-<p class="station-note">Position: {{ '%.4f'|format(d.lat) }}° N, {{ '%.4f'|format(-d.lon) }}° W · CHS station {{ d.code }}</p>
+<p class="station-note">Position: {{ '%.4f'|format(d.lat|abs) }}° {{ 'N' if d.lat >= 0 else 'S' }}, {{ '%.4f'|format(d.lon|abs) }}° {{ 'E' if d.lon >= 0 else 'W' }}{% if d.code[:2] == '00' %} · CHS station {{ d.code }}{% endif %}</p>
 </main>
 <footer style="max-width:1200px;margin:2em auto 0;padding:14px 16px;border-top:1px solid #eee;text-align:center;font-size:0.88em;color:#555;">
   <a href="/" style="color:#0066cc;text-decoration:none;">&#x2302; Home</a> &middot;

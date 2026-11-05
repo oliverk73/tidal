@@ -1,0 +1,26 @@
+{
+ "code": "turnagain_beluga_point",
+ "typ": "regel",
+ "name": "Beluga Point Tidal Bore (Turnagain Arm), Alaska",
+ "zone": "America/Anchorage",
+ "lat": 60.9989,
+ "lon": -149.6889,
+ "datei": "harmonics/classic/harmonics-dwf-20251228-free.txt",
+ "bezug": "Anchorage (Knik Arm, Cook Inlet), Alaska",
+ "hwnw": "us_9455920",
+ "art": "N",
+ "versatz": 75.0,
+ "hub": [
+  8.2,
+  8.8,
+  9.4
+ ],
+ "woerter": {
+  "1": "small",
+  "2": "moderate",
+  "3": "large"
+ },
+ "quelle": "Faustregel NWS/Alaska-Fuehrer: Beluga Point ~1:15 h nach NW Anchorage, Bore ab ~27 ft (8,2 m) Hub",
+ "text": "Rule of thumb used by the US National Weather Service and local guides: the bore passes Beluga Point about 1 hour 15 minutes after low water at Anchorage, on tides with a range of about 8.2 m (27 ft) or more. Expect it within roughly 15 to 30 minutes of the time shown.",
+ "pruefung": {}
+}

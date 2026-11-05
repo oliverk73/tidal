@@ -1,0 +1,62 @@
+{
+ "code": "severn_minsterworth",
+ "name": "Minsterworth Tidal Bore (River Severn), England, United Kingdom",
+ "lat": 51.8547,
+ "lon": -2.3262,
+ "zone": "Europe/London",
+ "typ": "modell",
+ "bezug": "Avonmouth (Port of Bristol), England, United Kingdom",
+ "datei": "harmonics/ticon/harmonics_ticon4_worldwide.txt",
+ "versatz": 44.75958090821902,
+ "klein": true,
+ "mit_null": true,
+ "zeit": [
+  14.21230899672506,
+  -1.8167293945152498,
+  8.874406346252217,
+  -9.006032501466276,
+  4.780465209378066,
+  -4.750641457006058,
+  -0.17962533673678532,
+  -0.1335825419465353,
+  0.8150870650902334,
+  -4.404722401927807
+ ],
+ "klasse": [
+  -0.8741678528538503,
+  0.3701208214309838,
+  0.05034281975070573,
+  -0.13013667754625885,
+  -0.05844076646635527,
+  -0.08460619557972052,
+  0.03549269354301709,
+  -0.0011649401965587978,
+  0.1165577736109869,
+  0.0020906777326940287
+ ],
+ "schwellen": [
+  0.49817270715641604,
+  0.6078604854356883,
+  0.6438779037891413,
+  0.6438779037891413
+ ],
+ "hoehe": null,
+ "woerter": {
+  "1": "1 star",
+  "2": "2 stars",
+  "3": "3 stars",
+  "4": "4 stars",
+  "5": "5 stars"
+ },
+ "text": "Derived from the published Severn Bore timetables (Minsterworth, rated 1 to 5 stars); tides without a listed bore are left out. Stonebench is about 15 minutes and Over Bridge about 35 minutes later.",
+ "pruefung": {
+  "zeit_rms": 2.3851702835573074,
+  "zeit_max": 4.455218657994584,
+  "klasse_richtig": 0.2878787878787879,
+  "n": 66,
+  "bore_erkannt": 0.5454545454545454,
+  "falsch_alarm": 0.056338028169014086,
+  "hinweis": "Pruefwerte aus getrennter Eichung; Modell danach ueber den ganzen Kalender geeicht"
+ },
+ "quelle": "tides.today Severn-Bore-Kalender 2025/2026 (Minsterworth, Sterne 1-5; nur Bores ab 1 Stern)"
+}
