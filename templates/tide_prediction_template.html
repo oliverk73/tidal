@@ -66,6 +66,10 @@ header #search-trigger {
   padding: 0 16px;
 }
 .strom-rose { width: 380px !important; max-width: 100%; height: auto; display: block; }
+.strom-zeitleiste { width: 380px; max-width: 100%; margin: 0.4em 0 1em; }
+.strom-zeitleiste input[type=range] { width: 100%; accent-color: #c62828; }
+.strom-zeitleiste-skala { display: flex; justify-content: space-between; font-size: 0.85em; color: #666; }
+.strom-zeitleiste-skala #strom-regler-zeit { color: #c62828; font-weight: bold; }
 .tide-svg-wrap img {
   display: block;
   width: auto;
@@ -185,9 +189,46 @@ header #search-trigger {
 {% if rose_url %}
 <h3>Current direction</h3>
 <p style="font-size:0.9em;color:#666;margin:0.3em 0;">Where the current flows over the next 25 hours: the red arrow is the current now,
-the blue line traces the tip of the current vector hour by hour (direction = towards).</p>
-<img src="{{ rose_url }}" alt="Tidal current rose for {{ original_name }} — current direction and speed over the next 25 hours"
-     width="380" height="380" loading="lazy" decoding="async" class="strom-rose">
+the blue line traces the tip of the current vector hour by hour (direction = towards). Move the slider to turn the arrow to another time.</p>
+<div id="strom-rose-box" class="strom-rose"><img src="{{ rose_url }}" alt="Tidal current rose for {{ original_name }} — current direction and speed over the next 25 hours"
+     width="380" height="380" loading="lazy" decoding="async" class="strom-rose"></div>
+<div id="strom-zeitleiste" class="strom-zeitleiste" hidden>
+  <input type="range" id="strom-regler" min="0" max="150" step="1" value="0" aria-label="Time for the current arrow">
+  <div class="strom-zeitleiste-skala"><span>now</span><span id="strom-regler-zeit"></span><span>+25 h</span></div>
+</div>
+<script>
+// Zeitleiste unter der Strom-Rose (5.11.2026): SVG inline laden, Pfeil je 10-min-Schritt drehen
+(function () {
+  var box = document.getElementById('strom-rose-box'), leiste = document.getElementById('strom-zeitleiste');
+  if (!box || !window.fetch || !window.DOMParser) return;
+  fetch({{ rose_url|tojson }}, {cache: 'no-store'}).then(function (r) { return r.ok ? r.text() : null; }).then(function (txt) {
+    if (!txt) return;
+    var svg = new DOMParser().parseFromString(txt, 'image/svg+xml').documentElement;
+    if (!svg || svg.nodeName.toLowerCase() !== 'svg' || !svg.getAttribute('data-schritte')) return;
+    svg = document.importNode(svg, true);
+    svg.setAttribute('class', 'strom-rose');
+    box.replaceChild(svg, box.firstElementChild);
+    var S = JSON.parse(svg.getAttribute('data-schritte')), c = parseFloat(svg.getAttribute('data-mitte')),
+        einheit = svg.getAttribute('data-einheit'), linie = svg.querySelector("#pfeil-linie"),
+        spitze = svg.querySelector('#pfeil-spitze'), text = svg.querySelector('#pfeil-text'),
+        regler = document.getElementById('strom-regler'), zeit = document.getElementById('strom-regler-zeit');
+    if (!linie || !spitze || !text || !S.length) return;
+    regler.max = S.length - 1;
+    function zeigen(i) {
+      var s = S[i], x = s[0], y = s[1], a = Math.atan2(y - c, x - c), p = [[x, y]];
+      [-0.4, 0.4].forEach(function (d) { p.push([x - 9 * Math.cos(a + d), y - 9 * Math.sin(a + d)]); });
+      linie.setAttribute('x2', x); linie.setAttribute('y2', y);
+      spitze.setAttribute('points', p.map(function (q) { return q[0].toFixed(1) + ',' + q[1].toFixed(1); }).join(' '));
+      var r = ('00' + s[3]).slice(-3);
+      text.textContent = (i === 0 ? 'now ' : '') + s[4] + ': ' + s[2].toFixed(1) + ' ' + einheit + ' towards ' + r + '°';
+      zeit.textContent = s[4];
+    }
+    regler.addEventListener('input', function () { zeigen(+regler.value); });
+    zeigen(0);
+    leiste.hidden = false;
+  }).catch(function () {});
+})();
+</script>
 {% endif %}
 <h3>Current times</h3>
 {% else %}

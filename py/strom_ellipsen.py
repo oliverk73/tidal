@@ -178,8 +178,13 @@ def rose_svg(D, name, jetzt, zone, faktor=1.0, einheit='kn', stunden=25, groesse
     c = groesse / 2
     X_ = lambda x: c + x * k                                         # noqa: E731
     Y_ = lambda y: c - y * k                                         # noqa: E731
+    # Zeitleiste (Oliver 5.11.2026): je 10-min-Schritt Pfeilspitze, Staerke, Richtung, Uhrzeit fuer den Schieberegler
+    schritte = [[round(float(X_(a)), 1), round(float(Y_(b)), 1), round(float(v) * faktor, 2), round(float(r)) % 360,
+                 dt.datetime.fromtimestamp(x, zone).strftime('%a %H:%M')]
+                for x, a, b, v, r in zip(t, ost, nord, st, ri)]
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{groesse}" height="{groesse}" '
-         f'viewBox="0 0 {groesse} {groesse}" font-family="sans-serif" font-size="11">',
+         f'viewBox="0 0 {groesse} {groesse}" font-family="sans-serif" font-size="11" '
+         f'data-mitte="{c}" data-einheit="{einheit}" data-schritte="{html.escape(json.dumps(schritte, separators=(",", ":")))}">',
          f'<title>{html.escape(name)} – tidal current rose</title>',
          f'<rect width="{groesse}" height="{groesse}" fill="white"/>']
     for i in range(1, ringe + 1):
@@ -211,10 +216,10 @@ def rose_svg(D, name, jetzt, zone, faktor=1.0, einheit='kn', stunden=25, groesse
     ang = math.atan2(y1 - c, x1 - c)
     spitze = [(x1, y1), (x1 - 9 * math.cos(ang - 0.4), y1 - 9 * math.sin(ang - 0.4)),
               (x1 - 9 * math.cos(ang + 0.4), y1 - 9 * math.sin(ang + 0.4))]
-    o.append(f'<line x1="{c}" y1="{c}" x2="{x1:.1f}" y2="{y1:.1f}" stroke="#c62828" stroke-width="2.5"/>')
-    o.append('<polygon fill="#c62828" points="' + ' '.join(f'{x:.1f},{y:.1f}' for x, y in spitze) + '"/>')
+    o.append(f'<line id="pfeil-linie" x1="{c}" y1="{c}" x2="{x1:.1f}" y2="{y1:.1f}" stroke="#c62828" stroke-width="2.5"/>')
+    o.append('<polygon id="pfeil-spitze" fill="#c62828" points="' + ' '.join(f'{x:.1f},{y:.1f}' for x, y in spitze) + '"/>')
     d0 = dt.datetime.fromtimestamp(t[0], zone)
-    o.append(f'<text x="8" y="16" fill="#c62828" font-weight="bold">now {d0:%H:%M}: '
+    o.append(f'<text id="pfeil-text" x="8" y="16" fill="#c62828" font-weight="bold">now {d0:%H:%M}: '
              f'{st[0] * faktor:.1f} {einheit} towards {ri[0]:03.0f}°</text>')
     o.append(f'<text x="8" y="{groesse - 22}" fill="#1565c0">— next {stunden} h (dot = 1 h)</text>')
     o.append(f'<text x="8" y="{groesse - 8}" fill="#999">- - M2 tidal ellipse</text>')
