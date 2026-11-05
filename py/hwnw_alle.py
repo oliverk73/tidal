@@ -39,6 +39,7 @@ import hwnw_ungleichheiten as HU                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OBS = 'harmonics/utide/harmonics_utide_observations.txt'
+TAB = 'harmonics/utide/harmonics_utide_tidetables.txt'
 GER = os.path.join(ROOT, 'water_levels/Germany')
 SCHEITEL = os.path.join(GER, 'hwnw')
 FENSTER = [(2015, 2024), (2021, 2024)]
@@ -161,6 +162,165 @@ def laden_usa(nr, ziel):
     open(ziel, 'w').write('utc,hoehe_m,art\n' + '\n'.join(sorted(set(zeilen))) + '\n')
 
 
+# Niederlande (5.11.2026): gemessene Getijextreme von Rijkswaterstaat (DDL v2, Groepering GETETM2, NAP, cm),
+# Typ hoogwater/laagwater aus der Begleitreihe Grootheid NVT. Orte: water_levels/Netherlands_RWS_extremen/stationen.json
+RWS = 'https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen'
+NL_DIR = os.path.join(ROOT, 'water_levels/Netherlands_RWS_extremen')
+NL_TEST = None          # z. B. {'hoekvanholland', ...} fuer einen Probelauf
+
+
+def pegel_nl():
+    """RWS-Orte mit GETETM2 -> naechster NAP-Satz in OBS (< 1 km). -> {nl_<code>: dict(quelle=('nl', code), satz)}"""
+    orte = {c: (n, la, lo) for c, n, la, lo in json.load(open(os.path.join(NL_DIR, 'stationen.json')))}
+    S, kopf = [], []
+    L = open(os.path.join(ROOT, OBS), encoding='latin-1').read().split('\n')
+    for i, z in enumerate(L):
+        if z.startswith('#'):
+            kopf.append(z)
+            continue
+        if kopf and i + 1 < len(L) and re.match(r'^[+-]\d\d:\d\d', L[i + 1]) and z.endswith('Netherlands'):
+            k = '\n'.join(kopf)
+            la, lo = re.search(r'!latitude: (\S+)', k), re.search(r'!longitude: (\S+)', k)
+            if la and lo and re.search(r'^# datum: NAP', k, re.M):
+                S.append((z, float(la.group(1)), float(lo.group(1))))
+        if z:
+            kopf = []
+    beste = {}
+    for c, (n, la, lo) in orte.items():
+        if NL_TEST and c not in NL_TEST:
+            continue
+        b = min(S, key=lambda s: math.hypot(s[1] - la, (s[2] - lo) * 0.62))
+        d = 111 * math.hypot(b[1] - la, (b[2] - lo) * 0.62)
+        if d < 1.0 and (b[0] not in beste or d < beste[b[0]][1]):
+            beste[b[0]] = (c, d)
+    return {'nl_' + c.replace('.', '_'): dict(quelle=('nl', c), satz=n) for n, (c, d) in beste.items()}
+
+
+def _rws(code, grootheid, j, groep='GETETM2', von='01-01T00:00:00', bis='12-31T23:59:59'):
+    import urllib.request
+    meta = {'Grootheid': {'Code': grootheid}, 'Groepering': {'Code': groep}}
+    if not groep:                        # 10-min-Messung: nur NAP, geprueft vor ungeprueft
+        meta['Hoedanigheid'] = {'Code': 'NAP'}
+    q = {'Locatie': {'Code': code}, 'AquoPlusWaarnemingMetadata': {'AquoMetadata': meta},
+         'Periode': {'Begindatumtijd': f'{j}-{von}.000+00:00', 'Einddatumtijd': f'{j}-{bis}.000+00:00'}}
+    req = urllib.request.Request(RWS, data=json.dumps(q).encode(), headers={'Content-Type': 'application/json',
+                                                                            'User-Agent': 'tiden-pruefung/1.0'})
+    with urllib.request.urlopen(req, timeout=180) as r:
+        d = json.load(r)
+    if not groep:
+        out = {}
+        for w in sorted(d.get('WaarnemingenLijst', []), key=lambda w: w['MetingenLijst'][0]['WaarnemingMetadata']
+                        .get('Statuswaarde') == 'Gecontroleerd' if w['MetingenLijst'] else False):
+            out.update({m['Tijdstip']: m['Meetwaarde'] for m in w['MetingenLijst']})   # Gecontroleerd zuletzt = gewinnt
+        return out
+    return {m['Tijdstip']: m['Meetwaarde'] for w in d.get('WaarnemingenLijst', []) for m in w['MetingenLijst']}
+
+
+def _scheitel_aus_10min(code, j):
+    import contextlib
+    import io
+    import pandas as pd
+    import elbe_scheitel_laden as EL
+    r = {}
+    for von, bis in (('01-01T00:00:00', '03-31T23:59:59'), ('04-01T00:00:00', '06-30T23:59:59'),
+                     ('07-01T00:00:00', '09-30T23:59:59'), ('10-01T00:00:00', '12-31T23:59:59')):
+        try:                             # ganzes Jahr auf einmal ist RWS zu gross (5.11.2026): quartalsweise
+            r.update(_rws(code, 'WATHTE', j, groep='', von=von, bis=bis))
+        except Exception as e:  # noqa: BLE001
+            print(code, j, von[:5], 'Fehler', e, flush=True)
+    w = {ts: m.get('Waarde_Numeriek') for ts, m in r.items()}
+    w = {ts: v for ts, v in w.items() if v is not None and abs(v) < 2000}
+    if len(w) < 20000:
+        return []
+    s = pd.Series([v / 100 for v in w.values()], index=pd.to_datetime(list(w.keys()), utc=True)).sort_index()
+    tmp = os.path.join(tempfile.mkdtemp(prefix='nl_'), 'x.csv')
+    with contextlib.redirect_stdout(io.StringIO()):
+        EL.main(None, tmp, s)
+    out = [z for z in open(tmp).read().split('\n')[1:] if z.startswith(str(j))]
+    shutil.rmtree(os.path.dirname(tmp), ignore_errors=True)
+    return out
+
+
+def laden_nl(code, ziel):
+    import time
+    zeilen = []
+    for j in JAHRE_US:
+        try:
+            h, t = _rws(code, 'WATHTE', j), _rws(code, 'NVT', j)
+        except Exception as e:  # noqa: BLE001  -- Jahr ohne Extreme (2025: leere Antwort) -> unten aus 10 min
+            if 'HTTP Error 204' not in str(e) and 'Expecting value' not in str(e):
+                print(code, j, e, flush=True)
+            h, t = {}, {}
+        for ts, w in h.items():
+            typ = (t.get(ts) or {}).get('Waarde_Alfanumeriek', '')
+            v = w.get('Waarde_Numeriek')
+            if v is None or abs(v) > 2000 or typ not in ('hoogwater', 'laagwater', 'laagwater 1', 'laagwater 2'):
+                continue
+            u = dt.datetime.fromisoformat(ts).astimezone(dt.timezone.utc)
+            zeilen.append(f"{u:%Y-%m-%d %H:%M},{v / 100:.3f},{'H' if typ == 'hoogwater' else 'N'}")
+        time.sleep(0.5)
+        if sum(z.startswith(str(j)) for z in zeilen) < 1300:   # Extreme fehlen/unvollstaendig (2025 noch nicht abgeleitet):
+            eigen = _scheitel_aus_10min(code, j)                  # ganzes Jahr selbst aus 10 min, nur EINE Quelle je Jahr
+            if len(eigen) > sum(z.startswith(str(j)) for z in zeilen):
+                zeilen = [z for z in zeilen if not z.startswith(str(j))] + eigen
+    if len(zeilen) < 1000:
+        raise RuntimeError(f'nur {len(zeilen)} Scheitel')
+    open(ziel, 'w').write('utc,hoehe_m,art\n' + '\n'.join(sorted(set(zeilen))) + '\n')
+
+
+# Kanada (5.11.2026): CHS IWLS wlo (3-min-Messung, Kartennull, ab ~10/2019, hoechstens 7 Tage je Abruf);
+# Saetze aus TAB ueber '# chs_id:' im Kopf.
+CA_DIR = os.path.join(ROOT, 'water_levels/Canada_CHS_wlo')
+CA_TEST = None          # 5.11.2026 Test an 9 Orten positiv -> Auswahl per --nur (Aestuare, Fluesse)
+
+
+def pegel_ca():
+    st = json.load(open(os.path.join(CA_DIR, 'stationen.json')))
+    out, kopf = {}, []
+    L = open(os.path.join(ROOT, TAB), encoding='latin-1').read().split('\n')
+    for i, z in enumerate(L):
+        if z.startswith('#'):
+            kopf.append(z)
+            continue
+        if kopf and i + 1 < len(L) and re.match(r'^[+-]\d\d:\d\d', L[i + 1]) and 'Current' not in z:
+            m = re.search(r'^# chs_id: (\d+)', '\n'.join(kopf), re.M)
+            if m and m.group(1) in st and (CA_TEST is None or m.group(1) in CA_TEST):
+                out['ca_' + m.group(1)] = dict(quelle=('ca', m.group(1)), satz=z, datei=TAB)
+        if z:
+            kopf = []
+    return out
+
+
+def lesen_ca(code):
+    """3-min-Reihe wochenweise laden (Cache water_levels/Canada_CHS_wlo/<code>.csv) -> pd.Series (m, UTC)."""
+    import time
+    import urllib.request
+    import pandas as pd
+    cache = os.path.join(CA_DIR, code + '.csv')
+    if not os.path.exists(cache):
+        sid = json.load(open(os.path.join(CA_DIR, 'stationen.json')))[code]['id']
+        zeilen = []
+        a = dt.datetime(2019, 10, 1, tzinfo=dt.timezone.utc)
+        while a < dt.datetime(PRUEF + 1, 1, 1, tzinfo=dt.timezone.utc):
+            b = a + dt.timedelta(days=7)
+            url = (f'https://api-iwls.dfo-mpo.gc.ca/api/v1/stations/{sid}/data?time-series-code=wlo'
+                   f'&from={a:%Y-%m-%dT%H:%M:%SZ}&to={b:%Y-%m-%dT%H:%M:%SZ}')
+            for versuch in range(3):
+                try:
+                    with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'tiden-pruefung/1.0'}),
+                                                timeout=120) as r:
+                        zeilen += [f"{x['eventDate'][:19]},{x['value']}" for x in json.load(r) if x.get('value') is not None]
+                    break
+                except Exception:  # noqa: BLE001
+                    time.sleep(5 * (versuch + 1))
+            time.sleep(0.7)
+            a = b
+        open(cache, 'w').write('utc,h\n' + '\n'.join(sorted(set(zeilen))) + '\n')
+    d = pd.read_csv(cache)
+    s = pd.Series(d.h.values, index=pd.to_datetime(d.utc, utc=True))
+    return s[~s.index.duplicated()].sort_index()
+
+
 UK = os.path.join(ROOT, 'water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
 AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'water_levels/Belgium_waterinfo', c + '.csv')),
            ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'water_levels/France_SHOM', c + '.csv')),
@@ -239,6 +399,10 @@ def scheitel(arg):
         with contextlib.redirect_stdout(io.StringIO()):
             if isinstance(q, (list, tuple)) and q[0] == 'us':
                 laden_usa(q[1], tmp)
+            elif isinstance(q, (list, tuple)) and q[0] == 'nl':
+                laden_nl(q[1], tmp)
+            elif isinstance(q, (list, tuple)) and q[0] == 'ca':
+                EL.main(None, tmp, lesen_ca(q[1]))
             elif isinstance(q, (list, tuple)) and q[0] == 'hpa':
                 EL.main(None, tmp, EL.lesen_hpa(q[1], SKN_PNP))
             elif isinstance(q, (list, tuple)) and q[0] == 'hp':
@@ -331,9 +495,12 @@ MAX_VERLETZT = 6      # 5.11.2026: mehr unpassende Scheitel je Jahr (HW <= NW da
 
 
 def unplausibel_zahl(k, jahr=PRUEF + 1):
-    """Unpassende Scheitel des Modells k im Jahr `jahr` vor der Reparatur in HU.vorhersage_kombi."""
+    """Unpassende Scheitel des Modells k im Jahr `jahr` (vor der Reparatur in HU.vorhersage_kombi), ABZUEGLICH
+    derer, die schon der harmonische Satz hat (echte Doppel-NW wie Hoek van Holland, 5.11.2026)."""
     t0 = dt.datetime(jahr, 1, 1, tzinfo=dt.timezone.utc).timestamp()
-    return len(HU.verletzungen(HU.vorhersage_kombi(k, t0, t0 + 365 * 86400, reparieren=False)))
+    E = HU.laden(k)
+    satz = len(HU.verletzungen(HU.satz_ereignisse(os.path.join(ROOT, E['datei']), E['satz'], t0, t0 + 365 * 86400)))
+    return max(len(HU.verletzungen(HU.vorhersage_kombi(k, t0, t0 + 365 * 86400, reparieren=False))) - satz, 0)
 
 
 def _plausibel_eins(k):
@@ -376,11 +543,11 @@ def main(argv):
     if schritt != 'veraltet' and opt.get('land', 'de') in ('de', 'alle'):
         P.update(pegel())
     if schritt != 'veraltet' and opt.get('land', 'de') != 'de':
-        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa()).items()
+        P.update({k: v for k, v in dict(pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca()).items()
                   if opt['land'] == 'alle' or k.startswith(opt['land'] + '_')})
     if schritt == 'veraltet':          # nach Neufit/Umbenennung (tcd_bauen.py ruft das auf)
         opt['land'], schritt = 'alle', 'alles'
-        P = dict(pegel(), **pegel_ausland(), **pegel_usa())
+        P = dict(pegel(), **pegel_ausland(), **pegel_usa(), **pegel_nl(), **pegel_ca())
         alt = []
         for f in sorted(os.listdir(HU.ZIEL)):
             k = f[:-5]
