@@ -109,13 +109,16 @@ KALENDER = {
              'left out. Stonebench is about 15 minutes and Over Bridge about 35 minutes later.'),
     'dordogne_saint_pardon': dict(
         name='Saint-Pardon Tidal Bore (Mascaret, Dordogne), France', zone='Europe/Paris',
-        lat=44.9363, lon=-0.3436, kand=[(OBS, 'Libourne (Isle / Dordogne), France'), (OBS, 'Bordeaux, France'),
+        lat=44.93127, lon=-0.32077, laufzeit_min=14.4,
+        kand=[(OBS, 'Libourne (Isle / Dordogne), France'), (OBS, 'Bordeaux, France'),
                                         (OBS, 'Bassens (Garonne), France'), (OBS, 'Ambès, France'),
                                         (OBS, 'Trompeloup (Pauillac), France')],
         woerter={1: 'small', 2: 'moderate', 3: 'large'},
         quelle='Calendrier du mascaret 2026, La Péniche du Mascaret (Saint-Pardon); Klasse aus dem Koeffizienten (<80, <95, >=95)',
-        text='Derived from the 2026 mascaret calendar of La Péniche du Mascaret at Saint-Pardon; the size follows the French tidal '
-             'coefficient (small below 80, moderate below 95, large from 95). The mascaret only forms on larger tides.'),
+        text='Derived from the 2026 mascaret calendar of La Péniche du Mascaret. Its times apply about 2 km downstream of the '
+             'Péniche (0.3744° W); for the Impasse du Mascaret at Saint-Pardon, 4.3 km further upstream along the river, we add '
+             '14 minutes at the calendar\'s mean wave speed of 18 km/h. The size follows the French tidal coefficient (small below 80, '
+             'moderate below 95, large from 95). The mascaret only forms on larger tides.'),
 }
 QT_KAND = [(TAB, 'Ganpu (Hangzhou Wan), Zhejiang, China'), (TAB, 'Zhapu (Hangzhou Wan), Zhejiang, China'),
            ('harmonics/noaa/harmonics_noaa_cptt.txt', 'Haining (Qiantang Jiang), Zhejiang, China')]
@@ -388,6 +391,9 @@ def eichen_kalender(nur=None):
         if not ev:
             print(code, 'keine Daten'); continue
         tb, kl = np.array([e[0] for e in ev]), np.array([e[1] for e in ev])
+        # Kalenderpunkt != Stationsort: Wellenlaufzeit entlang des Flusses (Dordogne 5.11.2026: Vorhersagepunkt
+        # 0.3744 W, Flusskm 27,8 nach OSM; Impasse du Mascaret Flusskm 23,5 -> 4,3 km / 18 km/h = 14,4 min)
+        tb = tb + meta.get('laufzeit_min', 0.0) * 60
         hb = np.array([e[2] for e in ev]) if code.startswith('qiantang') else None
         if code.startswith('qiantang'):          # Eichung 2024-2025, Pruefung 2026
             eich, pruef = _jahr(2024, 2025), _jahr(2026, 2026)
