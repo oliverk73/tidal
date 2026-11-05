@@ -8,7 +8,11 @@ vom 2.11.2026 (84bfbe6): Halbtagestide und Flachwassertiden bleiben Buch, nur da
 Eichung je Tide wie py/fes_ersatz_geeicht.py: Median von Hubfaktor und Phasendifferenz Referenz/FES;
 P1/Q1 bekommen die Eichung von K1/O1.
 
-Usage: venv/bin/python py/tagestiden_aus_fes.py --land Liberia --reparieren "A, Liberia" [--reparieren ...]
+Listenmodus (Suchlauf 5.11.2026): --liste CSV mit Spalten datei, name, referenzen ("datei|name;datei|name"),
+eigene Eichung je Satz an seinen Referenzen.
+
+Usage: venv/bin/python py/tagestiden_aus_fes.py --liste CSV [--schreiben]
+       venv/bin/python py/tagestiden_aus_fes.py --land Liberia --reparieren "A, Liberia" [--reparieren ...]
            --referenz "B, Liberia" [--referenz ...] --anlass "Text" [--schreiben]
 """
 import cmath
@@ -36,7 +40,31 @@ def _liste(argv, k):
     return [argv[i + 1] for i, a in enumerate(argv) if a == k]
 
 
+def satz(datei, name):
+    land = name.rsplit(', ', 1)[1]
+    for s in D.saetze(land, [datei]):
+        if s['name'] == name:
+            return s
+    sys.exit(f'Satz nicht gefunden: {datei} {name}')
+
+
+def eichung(refs, fes):
+    eich = {}
+    for c in ('K1', 'O1'):
+        f, d = [], []
+        for r in refs:
+            v, m = D.vek(r).get(c), fes(c, r['lat'], r['lon'])
+            if v is None or not m or abs(v) == 0:
+                continue
+            f.append(abs(v) / m[0])
+            d.append((math.degrees(cmath.phase(v)) - m[1] + 180) % 360 - 180)
+        eich[c] = (float(np.median(f)), float(np.median(d))) if f else (1.0, 0.0)
+    return eich
+
+
 def main(argv):
+    if '--liste' in argv:
+        return liste(argv)
     land = argv[argv.index('--land') + 1]
     rep, ref = _liste(argv, '--reparieren'), _liste(argv, '--referenz')
     anlass = argv[argv.index('--anlass') + 1] if '--anlass' in argv else 'Tagestiden vom fernen Bezugshafen'
@@ -96,6 +124,51 @@ def main(argv):
                                              for c in ('K1', 'O1') if c in neu))
     if '--schreiben' in argv:
         for p, V in dateien.items():
+            schreiben(p, '\n'.join(V))
+            print('->', os.path.relpath(p, ROOT))
+
+
+def liste(argv):
+    import csv
+    ds = {}
+
+    def fes(c, lat, lon):
+        if c not in ds:
+            ds[c] = nc.Dataset(os.path.join(FES_DIR, f'{stem(c)}_fes2022.nc'))
+        a, g = sample(ds[c], lat, lon)
+        return (a, g) if a else None
+
+    heute = dt.date.today().strftime('%Y%m%d')
+    dateien = {}
+    for z in csv.DictReader(open(argv[argv.index('--liste') + 1], encoding='utf-8')):
+        s = satz(z['datei'], z['name'])
+        refs = [satz(*x.split('|', 1)) for x in z['referenzen'].split(';')]
+        eich = eichung(refs, fes)
+        p = os.path.join(ROOT, s['file'])
+        if p not in dateien:
+            dateien[p] = (open(p, encoding='iso-8859-1').read().split('\n'), X.kopf_lesen(p)[1])
+        V, speeds = dateien[p]
+        i = V.index(s['name'])
+        alt, neu = {}, {}
+        for j in range(i + 3, len(V)):
+            t = V[j].split()
+            if not t or V[j].startswith('#') or len(t) != 3:
+                break
+            if t[0] in TAG:
+                m = fes(t[0], s['lat'], s['lon'])
+                if not m:
+                    continue
+                e = eich[GRUPPE[t[0]]]
+                a, g = m[0] * e[0], (m[1] + e[1] + speeds[t[0]] * s['meridian']) % 360
+                alt[t[0]], neu[t[0]] = V[j], (a, g)
+                V[j] = '%-15s %.4f  %.2f' % (t[0], a, g)
+        namen = '/'.join(r['name'].split(',')[0].split(' (')[0] for r in refs)[:60]
+        V.insert(i, '# note: %s Tagestiden (%s) aus FES2022b, geeicht an %s: Buch skalierte sie mit dem Halbtagsfaktor.' % (
+            heute, ', '.join(sorted(neu)), namen))
+        print('%-42s K1 x%.2f%+4.0f  ' % (s['name'][:42], *eich['K1']) + '  '.join(
+            '%s %s -> %.3f@%.0f' % (c, ' '.join(alt[c].split()[1:]), *neu[c]) for c in ('K1', 'O1') if c in neu))
+    if '--schreiben' in argv:
+        for p, (V, _) in dateien.items():
             schreiben(p, '\n'.join(V))
             print('->', os.path.relpath(p, ROOT))
 

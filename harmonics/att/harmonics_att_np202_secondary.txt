@@ -15004,11 +15004,12 @@ MNUS2
 # region: Eysturoyar
 # admin1_quelle: Ufer 1.1 km
 # note: 20261018 Insel in die Klammer (Oliver: jeder Ort auf den Faeroeern traegt den Inselnamen) (Oliver).
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Eiði/Oyragjógv: Buch skalierte sie mit dem Halbtagsfaktor.
 Norðskáli (Eysturoy), Faroe Islands
 +00:00 :Atlantic/Faeroe
 1.2300 meters
 J1               0.0026  121.06
-K1               0.0571  117.36
+K1              0.0825  142.45
 K2               0.0761  219.00
 L2               0.0184  203.05
 M1               0.0014   12.68
@@ -15019,10 +15020,10 @@ M6               0.0013   83.10
 M8               0.0003  216.61
 N2               0.1357  161.81
 x 0 0
-O1               0.0359   66.43
+O1              0.0603  31.28
 OO1              0.0014  118.91
-P1               0.0186  111.75
-Q1               0.0070   11.49
+P1              0.0236  130.61
+Q1              0.0205  322.21
 x 0 0
 R2               0.0025  231.26
 S1               0.0025   76.32
@@ -15786,11 +15787,12 @@ x 0 0
 # region: Eysturoyar
 # admin1_quelle: Ufer 0.4 km
 # note: 20261018 Insel in die Klammer (Oliver: jeder Ort auf den Faeroeern traegt den Inselnamen) (Oliver).
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Oyragjógv/Sørvágur/Eiði: Buch skalierte sie mit dem Halbtagsfaktor.
 Vestmanna (Streymoy), Faroe Islands
 +00:00 :Atlantic/Faeroe
 1.2300 meters
 J1               0.0026  139.57
-K1               0.0571  135.22
+K1              0.0973  147.24
 K2               0.0761  254.72
 L2               0.0184  238.12
 M1               0.0014   29.89
@@ -15801,10 +15803,10 @@ M6               0.0013  186.36
 M8               0.0003  354.28
 N2               0.1357  195.58
 x 0 0
-O1               0.0359   82.99
+O1              0.0634  17.20
 OO1              0.0014  138.08
-P1               0.0186  129.51
-Q1               0.0070   27.40
+P1              0.0272  137.65
+Q1              0.0258  309.36
 x 0 0
 R2               0.0025  266.93
 S1               0.0025   94.13
@@ -15981,11 +15983,12 @@ x 0 0
 # region: Eysturoyar
 # admin1_quelle: Polygon
 # note: 20261018 Insel in die Klammer (Oliver: jeder Ort auf den Faeroeern traegt den Inselnamen) (Oliver).
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Oyragjógv/Sørvágur: Buch skalierte sie mit dem Halbtagsfaktor.
 Miðvágur (Vágar), Faroe Islands
 +00:00 :Atlantic/Faeroe
 1.1200 meters
 J1               0.0020  121.06
-K1               0.0433  117.36
+K1              0.0884  140.45
 K2               0.0757  219.00
 L2               0.0146  203.05
 M1               0.0011   12.68
@@ -15996,10 +15999,10 @@ M6               0.0008   83.10
 M8               0.0002  216.61
 N2               0.1077  161.81
 x 0 0
-O1               0.0273   66.43
+O1              0.0599  25.70
 OO1              0.0011  118.91
-P1               0.0141  111.75
-Q1               0.0053   11.49
+P1              0.0260  129.42
+Q1              0.0192  309.50
 x 0 0
 R2               0.0020  231.26
 S1               0.0019   76.32
@@ -19866,11 +19869,12 @@ x 0 0
 # !latitude: 65.6333
 # region: Vestfirðir
 # admin1_quelle: Polygon
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Patreksfjörður/Þingeyri/Ísafjörður: Buch skalierte sie mit dem Halbtagsfaktor.
 Sveinseyri, Iceland
 +00:00 :Atlantic/Reykjavik
 1.6800 meters
 J1               0.0039  143.79
-K1               0.0840  139.29
+K1              0.1502  141.16
 K2               0.1175  262.87
 L2               0.0273  246.11
 M1               0.0021   33.82
@@ -19881,10 +19885,10 @@ M6               0.0028  209.91
 M8               0.0007   25.68
 N2               0.2012  203.28
 x 0 0
-O1               0.0529   86.76
+O1              0.0657  76.45
 OO1              0.0021  142.45
-P1               0.0274  133.57
-Q1               0.0103   31.03
+P1              0.0456  137.55
+Q1              0.0068  2.37
 x 0 0
 R2               0.0037  275.07
 S1               0.0037   98.19
@@ -20060,11 +20064,12 @@ x 0 0
 # !latitude: 65.6833
 # region: Vestfirðir
 # admin1_quelle: Polygon
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Patreksfjörður/Þingeyri/Ísafjörður: Buch skalierte sie mit dem Halbtagsfaktor.
 Bíldudalur, Iceland
 +00:00 :Atlantic/Reykjavik
 1.5500 meters
 J1               0.0038  146.91
-K1               0.0826  142.30
+K1              0.1402  147.79
 K2               0.1107  268.89
 L2               0.0267  252.02
 M1               0.0021   36.72
@@ -20075,10 +20080,10 @@ M6               0.0026  227.30
 M8               0.0006   48.87
 N2               0.1965  208.97
 x 0 0
-O1               0.0520   89.55
+O1              0.0574  76.01
 OO1              0.0021  145.67
-P1               0.0270  136.56
-Q1               0.0101   33.71
+P1              0.0423  143.93
+Q1              0.0069  345.41
 x 0 0
 R2               0.0036  281.08
 S1               0.0036  101.19
@@ -20254,11 +20259,12 @@ x 0 0
 # !latitude: 66.0333
 # region: Vestfirðir
 # admin1_quelle: Ufer 0.7 km
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Þingeyri/Ísafjörður/Patreksfjörður: Buch skalierte sie mit dem Halbtagsfaktor.
 Flateyri, Iceland
 +00:00 :Atlantic/Reykjavik
 1.2700 meters
 J1               0.0030  150.54
-K1               0.0645  145.81
+K1              0.1186  156.13
 K2               0.0899  275.91
 L2               0.0209  258.91
 M1               0.0016   40.10
@@ -20269,10 +20275,10 @@ M6               0.0016  247.58
 M8               0.0004   75.92
 N2               0.1544  215.61
 x 0 0
-O1               0.0406   92.81
+O1              0.0479  68.59
 OO1              0.0016  149.44
-P1               0.0211  140.05
-Q1               0.0079   36.84
+P1              0.0354  151.50
+Q1              0.0090  331.82
 x 0 0
 R2               0.0028  288.09
 S1               0.0028  104.69
@@ -20448,11 +20454,12 @@ x 0 0
 # !latitude: 66.1333
 # region: Vestfirðir
 # admin1_quelle: Ufer 0.8 km
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Ísafjörður/Þingeyri/Patreksfjörður: Buch skalierte sie mit dem Halbtagsfaktor.
 Sudhureyri, Iceland
 +00:00 :Atlantic/Reykjavik
 1.2500 meters
 J1               0.0028  150.80
-K1               0.0613  146.06
+K1              0.1104  155.44
 K2               0.0965  276.41
 L2               0.0203  259.40
 M1               0.0015   40.34
@@ -20463,10 +20470,10 @@ M6               0.0015  249.03
 M8               0.0004   77.86
 N2               0.1498  216.08
 x 0 0
-O1               0.0386   93.04
+O1              0.0491  64.76
 OO1              0.0015  149.71
-P1               0.0200  140.30
-Q1               0.0075   37.06
+P1              0.0331  150.55
+Q1              0.0099  334.10
 x 0 0
 R2               0.0027  288.59
 S1               0.0027  104.94
@@ -20642,11 +20649,12 @@ x 0 0
 # !latitude: 66.1500
 # region: Vestfirðir
 # admin1_quelle: Polygon
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Ísafjörður/Þingeyri/Patreksfjörður: Buch skalierte sie mit dem Halbtagsfaktor.
 Bolungarvik, Iceland
 +00:00 :Atlantic/Reykjavik
 1.1500 meters
 J1               0.0027  151.58
-K1               0.0585  146.82
+K1              0.1020  152.26
 K2               0.0829  277.91
 L2               0.0190  260.88
 M1               0.0015   41.07
@@ -20657,10 +20665,10 @@ M6               0.0013  253.38
 M8               0.0003   83.65
 N2               0.1404  217.50
 x 0 0
-O1               0.0368   93.74
+O1              0.0527  60.87
 OO1              0.0015  150.52
-P1               0.0191  141.04
-Q1               0.0071   37.73
+P1              0.0307  146.80
+Q1              0.0107  339.59
 x 0 0
 R2               0.0026  290.09
 S1               0.0025  105.69
@@ -20836,11 +20844,12 @@ x 0 0
 # !latitude: 66.0167
 # region: Vestfirðir
 # admin1_quelle: Polygon
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Ísafjörður/Þingeyri/Patreksfjörður: Buch skalierte sie mit dem Halbtagsfaktor.
 Alftafjordhur, Iceland
 +00:00 :Atlantic/Reykjavik
 1.1500 meters
 J1               0.0027  150.28
-K1               0.0585  145.56
+K1              0.1020  152.06
 K2               0.0829  275.40
 L2               0.0190  258.42
 M1               0.0015   39.86
@@ -20851,10 +20860,10 @@ M6               0.0013  246.14
 M8               0.0003   73.99
 N2               0.1404  215.13
 x 0 0
-O1               0.0368   92.57
+O1              0.0528  60.53
 OO1              0.0015  149.17
-P1               0.0191  139.80
-Q1               0.0071   36.61
+P1              0.0306  146.72
+Q1              0.0108  339.45
 x 0 0
 R2               0.0026  287.59
 S1               0.0025  104.44
@@ -74084,11 +74093,12 @@ x 0 0
 # admin1_quelle: Ufer 46.1 km
 # note: 20260907 Land im Namen berichtigt (vorher "Puerto de Hierro, Trinidad and Tobago"),
 # note: -- die Position liegt in einem anderen Staat; von Hand entschieden.
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Macuro/Güiria: Buch skalierte sie mit dem Halbtagsfaktor.
 Puerto de Hierro, Venezuela
 +00:00 :America/Guyana
 0.5800 meters
 J1               0.0061  267.80
-K1               0.0536  251.49
+K1              0.1004  238.99
 K2               0.0382  258.12
 L2               0.0098  245.11
 x 0 0
@@ -74099,10 +74109,10 @@ M6               0.0005  175.37
 x 0 0
 N2               0.0830  222.41
 x 0 0
-O1               0.0417  239.12
+O1              0.0715  229.02
 OO1              0.0061  123.65
-P1               0.0125  272.58
-Q1               0.0066  191.61
+P1              0.0321  241.79
+Q1              0.0136  213.92
 x 0 0
 R2               0.0035  169.54
 x 0 0

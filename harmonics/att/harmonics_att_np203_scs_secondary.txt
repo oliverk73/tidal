@@ -16187,11 +16187,12 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260911 Zeit berichtigt (+60 min): Builder zog den Zonenwechsel (-0800 -> -0700) ab, obwohl er sich im Rahmen der Nebenstation aufhebt.
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Ko Phetra/Ko Don: Buch skalierte sie mit dem Halbtagsfaktor.
 Goh Sukorn (Pulau Babi), Trang, Thailand
 +07:00 :Asia/Bangkok
 1.5000 meters
 x 0 0
-K1              0.2663  321.65
+K1              0.1502  334.01
 K2              0.1262  357.30
 x 0 0
 x 0 0
@@ -16202,9 +16203,9 @@ M6              0.1229  321.66
 x 0 0
 N2              0.1488  295.12
 x 0 0
-O1              0.0666  260.23
+O1              0.0434  279.42
 x 0 0
-P1              0.0879  321.08
+P1              0.0481  336.72
 x 0 0
 x 0 0
 x 0 0
@@ -16776,11 +16777,12 @@ x 0 0
 # state: Perak
 # admin1_quelle: Ufer 1.9 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Lumut/Bagan Datuk/Teluk Intan: Buch skalierte sie mit dem Halbtagsfaktor.
 Pulau Katak, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.6000 meters
 x 0 0
-K1              0.1040  5.57
+K1              0.2245  8.15
 K2              0.0976  164.14
 x 0 0
 x 0 0
@@ -16791,9 +16793,9 @@ M6              0.0030  333.89
 x 0 0
 N2              0.1363  91.11
 x 0 0
-O1              0.0219  142.06
+O1              0.0358  270.09
 x 0 0
-P1              0.0343  4.91
+P1              0.0777  9.74
 x 0 0
 x 0 0
 x 0 0
@@ -16972,11 +16974,12 @@ x 0 0
 # state: Perak
 # admin1_quelle: Ufer 61.7 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Lumut/Bagan Datuk: Buch skalierte sie mit dem Halbtagsfaktor.
 Pulau Jarak, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.1000 meters
 x 0 0
-K1              0.0814  350.03
+K1              0.2219  5.63
 K2              0.0798  133.05
 x 0 0
 x 0 0
@@ -16987,9 +16990,9 @@ M6              0.0017  244.04
 x 0 0
 N2              0.1116  61.72
 x 0 0
-O1              0.0171  127.65
+O1              0.0337  309.47
 x 0 0
-P1              0.0269  349.37
+P1              0.0768  7.29
 x 0 0
 x 0 0
 x 0 0
@@ -17758,11 +17761,12 @@ x 0 0
 # state: Johor
 # admin1_quelle: Polygon
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Kukup/Sultan Shoal/Jurong Wharf: Buch skalierte sie mit dem Halbtagsfaktor.
 Tanjung Pelepas, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.0500 meters
 x 0 0
-K1              0.3815  118.51
+K1              0.2649  162.11
 K2               0.1446   25.01
 x 0 0
 x 0 0
@@ -17773,9 +17777,9 @@ M6              0.0273  241.49
 x 0 0
 N2               0.1364  300.26
 x 0 0
-O1              0.3688  63.32
+O1              0.2455  111.10
 x 0 0
-P1              0.1259  117.85
+P1              0.0854  154.59
 x 0 0
 x 0 0
 x 0 0
@@ -18738,11 +18742,12 @@ x 0 0
 # state: Johor
 # admin1_quelle: Polygon
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Sungai Belungkor/Johor Port/Angler Bank: Buch skalierte sie mit dem Halbtagsfaktor.
 Teluk Sengat, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.9000 meters
 x 0 0
-K1              0.5063  89.78
+K1              0.2818  111.99
 K2              0.0876  32.57
 x 0 0
 x 0 0
@@ -18753,9 +18758,9 @@ x 0 0
 x 0 0
 N2              0.1850  299.01
 x 0 0
-O1              0.5250  40.85
+O1              0.2539  48.31
 x 0 0
-P1              0.1671  89.12
+P1              0.0778  108.48
 x 0 0
 x 0 0
 x 0 0
@@ -18934,11 +18939,12 @@ x 0 0
 # state: Johor
 # admin1_quelle: Ufer 2.3 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Sungai Belungkor/Angler Bank/Johor Port: Buch skalierte sie mit dem Halbtagsfaktor.
 Tanjung Surat, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.8000 meters
 x 0 0
-K1              0.4725  88.91
+K1              0.2989  103.53
 K2              0.0769  30.82
 x 0 0
 x 0 0
@@ -18949,9 +18955,9 @@ x 0 0
 x 0 0
 N2              0.1624  297.35
 x 0 0
-O1              0.4900  40.04
+O1              0.3013  44.75
 x 0 0
-P1              0.1559  88.25
+P1              0.0870  98.03
 x 0 0
 x 0 0
 x 0 0
@@ -19130,11 +19136,12 @@ x 0 0
 # state: Johor
 # admin1_quelle: Ufer 2.1 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Sungai Belungkor/Angler Bank/Tanjung Penawar: Buch skalierte sie mit dem Halbtagsfaktor.
 Tanjung Serindet (Sungai Lebam), Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.9000 meters
 x 0 0
-K1              0.5062  88.03
+K1              0.2640  113.07
 K2              0.0876  29.06
 x 0 0
 x 0 0
@@ -19145,9 +19152,9 @@ x 0 0
 x 0 0
 N2              0.1850  295.70
 x 0 0
-O1              0.5250  39.22
+O1              0.2443  54.35
 x 0 0
-P1              0.1670  87.37
+P1              0.0740  108.79
 x 0 0
 x 0 0
 x 0 0

@@ -17537,11 +17537,12 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.30 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Nouadhibou/Nouadhibou: Buch skalierte sie mit dem Halbtagsfaktor.
 La Güera, Mauritania
 +00:00 :Africa/Casablanca
 0.8500 meters
 J1              0.0021  49.53
-K1              0.0293  1.12
+K1              0.0650  7.40
 K2              0.0428  350.24
 L2              0.0118  338.37
 M1              0.0016  312.31
@@ -17552,10 +17553,10 @@ x 0 0
 x 0 0
 N2              0.0821  314.96
 x 0 0
-O1              0.0251  263.54
+O1              0.0427  269.35
 OO1             0.0013  98.70
-P1              0.0096  353.78
-Q1              0.0050  215.14
+P1              0.0185  358.61
+Q1              0.0144  216.06
 x 0 0
 R2              0.0012  349.37
 x 0 0
@@ -39826,11 +39827,12 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.24 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Bonifacio/Olbia/Solenzara: Buch skalierte sie mit dem Halbtagsfaktor.
 La Maddalena, Sardinia, Italy
 +00:00 :Europe/Rome
 0.1800 meters
 J1              0.0005  230.25
-K1              0.0092  220.01
+K1              0.0314  197.88
 K2              0.0139  253.09
 L2              0.0036  228.56
 M1              0.0005  131.83
@@ -39841,10 +39843,10 @@ M6              0.0003  270.97
 M8              0.0000  273.80
 N2              0.0260  203.37
 x 0 0
-O1              0.0033  246.41
+O1              0.0125  104.15
 OO1             0.0003  233.36
-P1              0.0030  222.19
-Q1              0.0014  275.71
+P1              0.0112  188.97
+Q1              0.0025  38.46
 x 0 0
 R2              0.0016  309.20
 S1              0.0011  138.63
@@ -41568,11 +41570,12 @@ x 0 0
 # note: -- Siehe py/np208_zeit_richten.py --zonen.
 # note: 20260914 S2/K2 mit dem Springhub-Faktor fS statt fN=0.24 (Nipphub-Differenzen
 # note: sind auf 0.1 m gerundet und verrauschen S2); Gruppenbeleg NP208 (50 Orte: 3.10 -> 2.74 %).
+# note: 20261105 Tagestiden (K1, O1, P1, Q1) aus FES2022b, geeicht an Samothraki: Buch skalierte sie mit dem Halbtagsfaktor.
 Aydincik Koyu (Gökçeada), Turkey
 +00:00 :Europe/Istanbul
 0.1200 meters
 J1              0.0003  128.94
-K1              0.0066  122.24
+K1              0.0263  334.12
 K2              0.0100  57.56
 L2              0.0025  36.62
 M1              0.0003  37.61
@@ -41583,10 +41586,10 @@ M6              0.0001  65.79
 M8              0.0000  240.21
 N2              0.0185  18.51
 x 0 0
-O1              0.0023  155.78
+O1              0.0132  306.70
 OO1             0.0002  128.46
-P1              0.0022  124.96
-Q1              0.0010  188.61
+P1              0.0084  329.35
+Q1              0.0014  291.81
 x 0 0
 R2              0.0012  113.93
 S1              0.0008  41.13
