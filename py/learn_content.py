@@ -511,7 +511,81 @@ sources (XTide's bundled databases, UHSLC sea-level records, national
 hydrographic offices) plus our own UTide analyses where high-quality
 records exist.</p>
 """,
-        "related": ["prediction-limits", "datums-explained", "how-tides-work"],
+        "related": ["prediction-limits", "estuary-corrections", "datums-explained", "how-tides-work"],
+    },
+    {
+        "slug": "estuary-corrections",
+        "category": "predictions",
+        "title": "Why our high and low water times are more accurate in estuaries",
+        "summary": "Harmonic predictions miss the distorted tide of rivers and estuaries by 15–25 minutes. We correct them with years of measured high and low waters — and beat the official predictions at most gauges.",
+        "body": """
+<p>A harmonic tide prediction is a sum of smooth sine waves (see
+<a href="/learn/how-predictions-are-made">how predictions are made</a>).
+On the open coast that works remarkably well. In rivers and estuaries it
+does not: the tide steepens as it runs into shallow water, the flood gets
+shorter than the ebb, low water flattens into a long stand, and sometimes
+there are two low waters. Dozens of shallow-water constituents try to
+imitate that shape, but the exact <em>moment</em> of high and low water
+still drifts — typically by 15 to 25 minutes, and up to an hour in
+places like the upper Elbe, the Scheldt or the Columbia River.</p>
+
+<h3>What we do differently</h3>
+<p>Where long records of <strong>measured high and low waters</strong>
+exist, we compare every predicted high and low water with the measured
+one over several years (usually 2015–2024). The differences are not
+random: they depend on the phase of the Moon, the spring–neap cycle,
+the Moon's distance and the season. We fit these dependencies — the same
+idea the German hydrographic office (BSH) has used for its Elbe and Weser
+tables for a century — and apply them to every future high and low water.
+The tide curve in the graph is then stretched so that it passes exactly
+through the corrected times and heights.</p>
+
+<p>Each correction is tested on a year that was <em>not</em> used to build
+it (2025). We only keep it if it improves the times by at least a minute
+without making the heights worse, and only if it does not produce
+impossible results such as a high water lower than the neighbouring low
+water (the occasional slip is replaced by the harmonic value). On
+such stations the prediction page says so below the tide table, with
+the tested accuracy.</p>
+
+<h3>How it compares with the official predictions</h3>
+<p>For 2025 we compared three predictions with the measured high and
+low waters: the official one of the national hydrographic service, the
+plain harmonic prediction, and ours (median of the timing error, RMS):</p>
+<ul>
+  <li><strong>USA, 114 gauges</strong> (NOAA predictions): high water
+  16 → 13 minutes, low water 18 → 14 minutes. Ours is better at 103 and
+  93 gauges respectively. Example:
+  <a href="/prediction/longview-columbia-river-washington-usa">Longview on the Columbia River</a>,
+  low water 24 → 12 minutes.</li>
+  <li><strong>Netherlands, 56 gauges</strong> (Rijkswaterstaat): high
+  water 14 → 11 minutes, low water 13 → 12.5 minutes; better at 45 and
+  50 gauges. Example: <a href="/prediction/vlissingen-netherlands">Vlissingen</a>,
+  high water ±6 minutes against ±10 for the official prediction.</li>
+  <li><strong>Germany, 59 gauges</strong> (BSH, one stormy month in
+  autumn 2026): the BSH method is slightly better for high water
+  (17 against 18 minutes), ours for low water (19 against 21 minutes).
+  The BSH also runs on decades of local experience — we are glad to be
+  in the same league.</li>
+</ul>
+<p>We use the same method for gauges in Belgium, France, the UK, Ireland,
+Spain, Canada and Australia — around 370 in total. The largest gains are
+in estuaries: the St. Lawrence between Québec and Trois-Rivières, the
+Delaware, the Scheldt, the Seine and the Elbe.</p>
+
+<h3>Limits</h3>
+<ul>
+  <li>The correction is astronomical. Wind, air pressure and river
+  discharge still shift the actual tide — in a storm by far more than
+  any prediction error (see <a href="/learn/prediction-limits">what predictions can't do</a>).</li>
+  <li>Where the tide is only a few centimetres (Gulf of Mexico, the
+  Caribbean), the time of "high water" is mostly decided by the weather.
+  There, no prediction — official or ours — is better than about an hour.</li>
+  <li>Gauges whose river is regulated by locks or barriers keep the plain
+  harmonic prediction.</li>
+</ul>
+""",
+        "related": ["how-predictions-are-made", "prediction-limits", "reading-a-tide-curve"],
     },
     {
         "slug": "prediction-limits",
