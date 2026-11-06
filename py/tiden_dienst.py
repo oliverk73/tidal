@@ -186,9 +186,30 @@ def hwnw_hinweis(name, source):
         aus = {a: (p[a]['harm_rms'], p[a]['rms']) if w.get(a, 'harm') != 'harm' and a in p else None for a in 'HN'}
         if not aus['H'] and not aus['N']:
             return None
-        return dict(jahre=tuple(E['jahre']), pruefjahr=next(iter(p.values()))['jahr'], **aus)
+        erg = dict(jahre=tuple(E['jahre']), pruefjahr=next(iter(p.values()))['jahr'], **aus)
+        amt = _amtlich().get(k)              # Vergleich mit NOAA/RWS im selben Pruefjahr (py/amtlich_vergleich.py)
+        if amt:
+            erg['amtlich'] = dict(quelle={'us': "NOAA's", 'nl': "Rijkswaterstaat's"}.get(k[:2], 'the official'), **amt)
+        return erg
     except Exception:  # noqa: BLE001 -- Hinweis ist Zusatz, nie die Seite verlieren
         return None
+
+
+_AMTLICH = None
+
+
+def _amtlich():
+    """{kurz: dict(H=rms, N=rms)} aus der neuesten harmonics/help/amtlich_vergleich_*.csv (einmal je Prozess)."""
+    global _AMTLICH
+    if _AMTLICH is None:
+        import csv
+        import glob
+        _AMTLICH = {}
+        f = sorted(glob.glob(os.path.join(T.ROOT, 'harmonics/help/amtlich_vergleich_*.csv')))
+        if f:
+            for z in csv.DictReader(open(f[-1], encoding='utf-8'), delimiter=';'):
+                _AMTLICH[z['kurz']] = dict(H=float(z['hw_amtlich_rms']), N=float(z['nw_amtlich_rms']))
+    return _AMTLICH
 
 
 def _hwnw_modell(D, name):
