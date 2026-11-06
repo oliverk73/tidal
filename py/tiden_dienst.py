@@ -111,7 +111,73 @@ def svg(name, source, tag, einheit='m', utc=False):
     z = None
     if not utc and D.saetze[name].zone.lstrip(':').upper() == 'UTC':
         z = ortszone(D, name)
-    return G.svg(D, name, tag, einheit, utc, zone=z, modell=_grafik_modell(D, name))
+    return G.svg(D, name, tag, einheit, utc, zone=z, modell=_grafik_modell(D, name), wetter=_windstau(D, name))
+
+
+_WINDSTAU_LAEUFT = []
+
+
+def _windstau_auffrischen():
+    """Ohne Timer (6.11.2026): ist water_levels/stofs/aktuell.npz aelter als 6,5 h, holt ein Hintergrund-Thread den
+    neuesten STOFS-Lauf (py/windstau.py laden). Die Seite wartet nicht darauf; hoechstens ein Thread zugleich."""
+    import threading
+    import time
+    import windstau as W
+    alter = time.time() - os.path.getmtime(W.DATEI) if os.path.exists(W.DATEI) else 1e9
+    if alter < 6.5 * 3600 or any(t.is_alive() for t in _WINDSTAU_LAEUFT):
+        return
+    def lauf():
+        try:
+            W.laden()
+            os.utime(W.DATEI) if os.path.exists(W.DATEI) else None    # auch ohne neuen Lauf: 6,5 h Ruhe
+        except Exception as e:  # noqa: BLE001
+            print(f'⚠️ Windstau laden: {e!r}')
+    th = threading.Thread(target=lauf, daemon=True)
+    _WINDSTAU_LAEUFT[:] = [th]
+    th.start()
+
+
+def _windstau(D, name):
+    """(t, windstau_m) fuer Wasserstandssaetze mit brauchbarem STOFS-Punkt, sonst None."""
+    s = D.saetze[name]
+    if s.strom:
+        return None
+    try:
+        _windstau_auffrischen()
+        import windstau as W
+        r = W.fuer(float(s.hot['!latitude']), float(s.hot['!longitude']), s.hot.get('noaa_station_id'))
+        if r is None:
+            return None
+        import numpy as np
+        ok = np.isfinite(r['z'])
+        return r['t'][ok], r['z'][ok]
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def windstau_hinweis(name, source, utc=False):
+    """Fuer die Seite: dict(jetzt, hoch, hoch_zeit, tief, tief_zeit, lauf) in m, oder None."""
+    import time
+    import numpy as np
+    try:
+        D, name = finden(name, source)
+        w = _windstau(D, name)
+        if w is None:
+            return None
+        t, z = w
+        jetzt = time.time()
+        m = t >= jetzt
+        if m.sum() < 10:
+            return None
+        zone_ = zone(D, name, utc) if D.saetze[name].zone.lstrip(':').upper() != 'UTC' or utc else (ortszone(D, name) or dt.timezone.utc)
+        ih, il = int(np.argmax(z[m])), int(np.argmin(z[m]))
+        f = lambda x: dt.datetime.fromtimestamp(x, zone_).strftime('%a %H:%M')   # noqa: E731
+        import windstau as W
+        return dict(jetzt=float(np.interp(jetzt, t, z)), hoch=float(z[m][ih]), hoch_zeit=f(t[m][ih]),
+                    tief=float(z[m][il]), tief_zeit=f(t[m][il]), bis=f(t[-1]),
+                    lauf=W._daten()['lauf'].item()[:16].replace('T', ' ') + ' UTC')
+    except Exception:  # noqa: BLE001
+        return None
 
 
 _STROM_INDEX = None

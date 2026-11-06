@@ -1846,7 +1846,18 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
             hwnw = _tiden_dienst().hwnw_hinweis(decoded_station, source)
         except Exception as e:  # noqa: BLE001
             print(f"⚠️ HW/NW-Hinweis fehlgeschlagen: {e!r}")
+    windstau = None
+    if not is_current_station and TIDEN_RECHNUNG == "eigen":
+        try:
+            windstau = _tiden_dienst().windstau_hinweis(decoded_station, source, utc)
+            if windstau:
+                fk = 3.28084 if units == 'ft' else 1.0
+                windstau = dict(windstau, einheit='ft' if units == 'ft' else 'm',
+                                **{k: windstau[k] * fk for k in ('jetzt', 'hoch', 'tief')})
+        except Exception as e:  # noqa: BLE001
+            print(f"⚠️ Windstau-Hinweis fehlgeschlagen: {e!r}")
     html = render_template_string(template,
+                                  windstau=windstau,
                                   hwnw=hwnw,
                                   station=display_station,
                                   original_name=display_station,

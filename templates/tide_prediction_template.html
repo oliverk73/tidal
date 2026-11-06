@@ -237,6 +237,15 @@ the blue line traces the tip of the current vector hour by hour (direction = tow
         title="Tide prediction curve for {{ original_name }}"
         id="Tide prediction curve"
         width="3200" height="312" loading="eager" decoding="async"></div>
+{% if windstau %}
+<p class="station-note" style="font-style:normal;"><span style="color:#c62828;font-weight:bold;">- - -</span>
+Dashed red line: expected water level <strong>including the weather</strong> — the astronomical tide plus the storm-surge
+forecast of NOAA's global STOFS model (run {{ windstau.lauf }}, until {{ windstau.bis }}).
+Weather effect now {{ '%+.2f'|format(windstau.jetzt) }} {{ windstau.einheit }};
+highest {{ '%+.2f'|format(windstau.hoch) }} {{ windstau.einheit }} ({{ windstau.hoch_zeit }}),
+lowest {{ '%+.2f'|format(windstau.tief) }} {{ windstau.einheit }} ({{ windstau.tief_zeit }}).
+The tide table below is astronomical only.</p>
+{% endif %}
 <h3>Tide times</h3>
 {% endif %}
 <table class="tide-table">
