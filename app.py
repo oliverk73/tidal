@@ -1048,9 +1048,11 @@ def _build_faq_items(tide_rows, station_short, country, water_body, lat, lon, da
                           f"{rng:.1f} {u}, calculated from the mean difference between "
                           f"high and low water in the seven-day forecast."),
                 })
-            # Kleiner Hub (6.11.2026, Oliver): Amphidromie erklaeren
-            rng_m = rng * (0.3048 if u == "ft" else 1.0)
-            if 0.05 < rng_m < 0.5:
+            # Kleiner Hub (6.11.2026, Oliver): Amphidromie erklaeren -- auch bei fast null Hub (Balchik), daher
+            # die Einheit hier selbst bestimmen (u ist nur gesetzt, wenn rng > 0.05)
+            fuss = bool(unit and unit.lower() in {"foot", "feet"})
+            rng_m = rng * (0.3048 if fuss else 1.0)
+            if rng_m < 0.5:
                 items.append({
                     "q": f"Why is the tidal range so small at {station_short}?",
                     "a": ("Ocean tides rotate around so-called amphidromic points, where the "
