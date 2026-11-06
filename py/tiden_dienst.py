@@ -123,6 +123,8 @@ def _windstau_auffrischen():
     import threading
     import time
     import windstau as W
+    if os.environ.get('WINDSTAU_AUTO') != '1':     # Oliver 6.11.2026: kein automatischer Download, solange die Seite
+        return                                     # nicht operativ ist; von Hand: venv/bin/python py/windstau.py
     alter = time.time() - os.path.getmtime(W.DATEI) if os.path.exists(W.DATEI) else 1e9
     if alter < 6.5 * 3600 or any(t.is_alive() for t in _WINDSTAU_LAEUFT):
         return
