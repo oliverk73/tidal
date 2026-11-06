@@ -250,64 +250,77 @@ essentially zero.</p>
         "title": "What is a tidal bore?",
         "summary": "A wall of water rushing up a river against the current — the world's strangest, surf-able tide.",
         "body": """
-<p>A <strong>tidal bore</strong> is a wave that travels <em>upstream</em>
-along a river as the rising tide meets the river's downstream flow.
-Instead of the water level rising gradually, it arrives as a single
-breaking front — a wall of water that can be anywhere from a few
-centimetres to <strong>over four metres</strong> tall.</p>
+<p>A tidal bore is a wave that runs <strong>up a river</strong> at the start
+of the flood tide. Instead of the water level rising gradually, the rising
+tide arrives as a single breaking front — or as a train of smooth waves
+(an "undular" bore) — moving against the river's current. Small bores form
+in the lower reaches of many rivers on tidal coasts; the spectacular ones
+are found at only a few dozen places worldwide (one count lists 67).</p>
 
-<h3>Where bores happen</h3>
-<p>Bores need three things at once:</p>
+<p>Names differ by language: <em>bore</em> in English (from Old English
+"bára", wave), <em>mascaret</em> in French, <em>pororoca</em> ("great roar")
+on the Amazon, <em>macaréu</em> in Portuguese, <em>bono</em> in Indonesia,
+<em>benak</em> in Malaysia, 涌潮 in Chinese — and in German <em>Stürmer</em>
+or <em>Flutbrandung</em>. A bore has nothing to do with a tsunami.</p>
+
+<h3>When a bore forms</h3>
 <ul>
-  <li>A <strong>large tidal range</strong> — the bigger the range, the more
-  energy in the rising tide.</li>
-  <li>A <strong>shallow, gently sloping estuary</strong> — so the tidal
-  wave is forced to steepen instead of spreading out.</li>
-  <li>A <strong>converging, funnel-shaped channel</strong> — which
-  amplifies the front.</li>
+  <li>A <strong>large tidal range</strong> — the flood must rise fast.</li>
+  <li>A <strong>shallow, gently sloping estuary</strong> — the tidal wave
+  slows down in shallow water, so its back catches up with its front and
+  the front steepens.</li>
+  <li>A <strong>funnel-shaped channel</strong> that concentrates the wave.</li>
+  <li>Low river flow helps; a big flood discharge can suppress the bore.</li>
+</ul>
+<p>When the front becomes too steep (its Froude number exceeds 1) it turns
+into a moving hydraulic jump — the bore.</p>
+
+<h3>Famous bores</h3>
+<ul>
+  <li><strong>Qiantang, China</strong> ("Silver Dragon") — the largest
+  known, reported up to 8–9 m in extreme cases and running at 25–40 km/h.
+  Biggest around the 18th day of the 8th lunar month (September).
+  Bore times: <a href="/prediction/yanguan-tidal-bore-qiantang-river-zhejiang-china">Yanguan</a>,
+  <a href="/prediction/guanchaocheng-tidal-bore-qiantang-river-xiaoshan-zhejiang-china">Guanchaocheng</a>,
+  <a href="/prediction/hangzhou-city-balcony-tidal-bore-qiantang-river-zhejiang-china">Hangzhou City Balcony</a>.</li>
+  <li><strong>Pororoca, Amazon</strong> — up to 5 m, travels hundreds of
+  kilometres upstream; best in February–March at spring tides with low
+  river flow.</li>
+  <li><strong>Petitcodiac, Canada</strong> — once up to 7.5 m and North
+  America's largest; shrank after a causeway was built in 1968 and has
+  been recovering since the gates were opened in 2010. Bore times for
+  <a href="/prediction/moncton-tidal-bore-petitcodiac-river-new-brunswick-canada">Moncton</a>
+  and five other Bay of Fundy rivers (Truro, Maitland, Maccan, River Hebert,
+  Tidal View Farm).</li>
+  <li><strong>Severn, UK</strong> — up to about 2 m on the biggest spring
+  tides, rated 1 to 5 stars. Times for
+  <a href="/prediction/minsterworth-tidal-bore-river-severn-england-united-kingdom">Minsterworth</a>.</li>
+  <li><strong>Dordogne and Garonne, France</strong> — the mascaret is a
+  popular surf wave. Times for
+  <a href="/prediction/saint-pardon-tidal-bore-mascaret-dordogne-france">Saint-Pardon</a>.
+  The famous Seine mascaret, by contrast, was practically destroyed by
+  dredging in the 1960s.</li>
+  <li><strong>Turnagain Arm, Alaska</strong> — up to about 2 m, often
+  accompanied by beluga whales. Times for
+  <a href="/prediction/beluga-point-tidal-bore-turnagain-arm-alaska">Beluga Point</a>.</li>
+  <li>Also: the <strong>Ems</strong> in Germany (up to 1.5 m in the 19th
+  century), the <strong>Hooghly</strong> towards Kolkata, the
+  <strong>Benak</strong> on the Batang Lupar (Malaysia) and the
+  <strong>Bono</strong> on the Kampar (Indonesia).</li>
 </ul>
 
-<h3>The famous bores</h3>
-<ul>
-  <li><strong>Qiantang Bore, China</strong> — the world's largest, up to
-  <strong>4 m high</strong> and travelling at 40 km/h. The bore on the
-  Qiantang River near Hangzhou has been observed for 2 000 years; in
-  August/September it draws crowds of hundreds of thousands. Some bores
-  here are tall enough that surfers ride them for tens of kilometres
-  upstream.</li>
-  <li><strong>Severn Bore, UK</strong> — up to <strong>2 m</strong>, runs
-  up the Severn Estuary on the largest spring tides about 60 times a
-  year. The official Environment Agency star-rating system tells you
-  how big each one will be. A regular crowd of surfers chases it from
-  Awre to Gloucester.</li>
-  <li><strong>Petitcodiac Bore (Moncton, Canada)</strong> — historically
-  one of North America's largest bores; reduced for years by a
-  causeway, mostly restored after the causeway gates were opened in
-  2010.</li>
-  <li><strong>Pororoca, Amazon</strong> — up to <strong>4 m</strong>,
-  travelling 800 km up the river. The Tupi name means "great roar".</li>
-  <li><strong>Turnagain Arm Bore, Alaska</strong> — a famous American
-  bore, runs the southern arm of Cook Inlet near Anchorage on big
-  tides.</li>
-  <li><strong>Hooghly Bore, India</strong> — heads up the Hooghly toward
-  Kolkata; can be over 2 m on monsoon springs.</li>
-</ul>
+<h3>When to see one</h3>
+<p>A bore arrives at the <em>start</em> of the flood, usually one to three
+hours before local high water, and it is biggest on spring tides —
+especially around the equinoxes and when the Moon is close to Earth. Our
+bore pages give the predicted arrival and size for the next 7 days.</p>
 
-<h3>The physics</h3>
-<p>As the tide enters a shallow, narrowing estuary it is forced to
-steepen — the same way an ocean swell breaks at the beach. When the
-slope of the leading edge becomes too steep to be supported by the
-restoring force of gravity (i.e. its Froude number exceeds 1), it
-breaks and propagates as a moving hydraulic jump. The river current
-flowing downstream sharpens the contrast: the bore is moving
-<em>upstream</em> through water that is moving the other way.</p>
-
-<h3>When to see them</h3>
-<p>Always on a <a href="/learn/spring-neap-tides/">spring tide</a> —
-ideally a perigean equinoctial spring. Look up the local tide tables,
-add the listed time of high water at the river mouth, and the bore
-typically arrives at upstream stations a few hours earlier. Local
-tourist boards publish bore-watching schedules months in advance.</p>
+<h3>Stay safe</h3>
+<p>Bores are dangerous: the water level can rise by a metre within
+seconds and the following current is strong. Watch from high banks or
+sea walls, never from mudflats or the river bed, and arrive early —
+actual arrival times can vary by several minutes with wind and river
+flow.</p>
 """,
         "related": ["largest-tidal-ranges", "tidal-currents", "spring-neap-tides"],
     },
@@ -317,57 +330,64 @@ tourist boards publish bore-watching schedules months in advance.</p>
         "title": "Where is there (almost) no tide?",
         "summary": "Around an amphidromic point the tide rotates rather than rises and falls — and at the centre it barely moves at all.",
         "body": """
-<p>If gravity from the Moon raises tides everywhere on Earth, you might
-expect every coast to see some semidiurnal rise and fall. But there are
-spots in every ocean where the tide is essentially <strong>zero</strong> —
-or where the cycle is reduced to a few centimetres while
-neighbouring coasts swing 4 m. These are <strong>amphidromic points</strong>.</p>
+<p>The Moon pulls on every ocean, yet there are places where the tide is
+almost zero while coasts a few hundred kilometres away rise and fall by
+several metres. These are <strong>amphidromic points</strong> (from Greek
+<em>amphi</em>, around, and <em>dromos</em>, running).</p>
 
-<h3>What's actually happening</h3>
-<p>The tidal wave does not slosh back and forth as a single standing wave;
-in any ocean basin it travels as a <strong>rotating Kelvin wave</strong>,
-trapped against the coast by the Coriolis force. The wave circulates
-around a point — clockwise in the southern hemisphere, anti-clockwise
-in the northern. The point at the centre, where the phase lines
-converge, is the <strong>amphidromic point</strong>. At that point the
-tidal range from the dominant constituent is essentially zero.</p>
+<h3>What happens</h3>
+<p>In an ocean basin the tide is not a single sloshing wave. The
+gravitational pull of Moon and Sun keeps standing waves going, and the
+Earth's rotation (the Coriolis force) turns them into waves that
+<strong>rotate around a point</strong> — physically, Kelvin waves that lean
+against the coasts. In the open ocean they turn anticlockwise in the
+northern hemisphere and clockwise in the southern hemisphere.</p>
+<p>Lines of equal tide time (<strong>cotidal lines</strong>) radiate from
+the amphidromic point like the spokes of a wheel. At the centre all of
+them meet, so the water level stays the same: no tidal range. The range
+grows with distance from the centre and is largest on the coasts around
+the basin.</p>
 
-<h3>Famous amphidromes</h3>
+<h3>The North Sea example</h3>
+<p>The North Sea has three amphidromic systems for the main lunar tide M₂,
+close together:</p>
 <ul>
-  <li><strong>Southern North Sea</strong> — three amphidromes for M₂,
-  one off the Norwegian coast, one in the southern bight (off the
-  Dutch / English coast near the Brown Ridge), one off the south coast
-  of Norway. They are why Norfolk has small M₂ but big surge risk;
-  why the Dutch coast has very different ranges from English coast at
-  the same latitude.</li>
-  <li><strong>Mediterranean</strong> — at least one M₂ amphidrome south
-  of Sicily; Mediterranean tides are tiny because the basin is closed
-  off and the residual amphidromic system is weak.</li>
-  <li><strong>Gulf of Mexico</strong> — an M₂ amphidrome roughly in the
-  middle of the gulf. This is partly why the
-  <a href="/learn/tide-types/">Gulf tides are diurnal</a> — the
-  semidiurnal component is killed off, leaving the diurnal K₁ to
-  dominate.</li>
-  <li><strong>South China Sea</strong> — multiple amphidromes, complex
-  patchwork of semidiurnal, mixed, and diurnal coasts.</li>
+  <li>in the <strong>southern North Sea</strong>, between East Anglia and
+  the Netherlands;</li>
+  <li>in the <strong>central North Sea</strong>, over the Jutland Bank
+  between northern England and Denmark;</li>
+  <li>off <strong>southern Norway</strong>, near Stavanger.</li>
+</ul>
+<p>That is why the tide is small on parts of the Norfolk and Danish west
+coasts and in southern Norway, while the German Bight and The Wash have
+ranges of three to seven metres — and why high water travels
+anticlockwise around the North Sea, from Scotland down the English coast,
+across to the Netherlands and up to Germany and Denmark, taking about
+12 hours for the round.</p>
+
+<h3>Other examples</h3>
+<ul>
+  <li><strong>Mediterranean</strong> — several small amphidromic systems
+  (for example in the Adriatic and around Sicily); tides are a few
+  decimetres at most.</li>
+  <li><strong>Gulf of Mexico and Caribbean</strong> — the semidiurnal tide
+  is weak, so the once-a-day tide dominates and the total range is only
+  a few decimetres.</li>
+  <li><strong>Baltic Sea</strong> — almost tideless; water level changes
+  are mostly due to wind and air pressure.</li>
 </ul>
 
-<h3>Why "almost" zero</h3>
-<p>Each tidal constituent (M₂, S₂, K₁, O₁, …) has its <em>own</em>
-amphidromic system, and they don't coincide. Even at a point where M₂
-is essentially zero, the smaller constituents typically produce a few
-centimetres of residual tide. And the <em>weather tide</em> — storm
-surge, atmospheric pressure changes — adds another few decimetres of
-variability. The astronomical tide may be near-zero, but the sea
-level still changes.</p>
+<h3>Why "almost" no tide</h3>
+<p>Each tidal constituent (M₂, S₂, K₁, O₁, …) has its own amphidromic
+system, and their centres do not coincide. Near an M₂ amphidrome the
+smaller constituents still leave a few centimetres, and the weather adds
+decimetres. On our prediction pages such places show a very small range;
+there, the exact time of "high water" is easily shifted by the wind.</p>
 
-<h3>What this means for sailors</h3>
-<p>If you cross a region near an amphidromic point, you may pass within
-a few miles from a station with 30 cm tides to one with 3 m tides. The
-charts and tidal stream atlases in these regions are particularly
-worth consulting — tidal currents can be strong even where the
-vertical range is small, because water still has to flow <em>around</em>
-the amphidrome.</p>
+<h3>For sailors</h3>
+<p>A small tidal range does not mean weak currents. Water still has to
+flow around the amphidrome, and tidal streams can be strong even where
+the water level hardly changes — check the current predictions too.</p>
 """,
         "related": ["tide-types", "tidal-currents", "how-tides-work"],
     },

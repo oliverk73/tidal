@@ -281,7 +281,7 @@ Checked against {{ hwnw.pruefjahr }}, which was not used for the correction:
   {% for item in faq_items %}
   <div class="faq-item">
     <h4 class="faq-q">{{ item.q }}</h4>
-    <p class="faq-a">{{ item.a }}</p>
+    <p class="faq-a">{{ item.a }}{% if item.link %} <a href="{{ item.link }}">{{ item.link_text }}</a>{% endif %}</p>
   </div>
   {% endfor %}
 </section>

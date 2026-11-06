@@ -1048,6 +1048,42 @@ def _build_faq_items(tide_rows, station_short, country, water_body, lat, lon, da
                           f"{rng:.1f} {u}, calculated from the mean difference between "
                           f"high and low water in the seven-day forecast."),
                 })
+            # Kleiner Hub (6.11.2026, Oliver): Amphidromie erklaeren
+            rng_m = rng * (0.3048 if u == "ft" else 1.0)
+            if 0.05 < rng_m < 0.5:
+                items.append({
+                    "q": f"Why is the tidal range so small at {station_short}?",
+                    "a": ("Ocean tides rotate around so-called amphidromic points, where the "
+                          "range of the main lunar tide is almost zero; enclosed seas such as the "
+                          "Mediterranean or the Baltic receive little tidal energy at all. "
+                          f"{station_short} lies in such a region, so wind and air pressure can "
+                          "change the water level as much as the tide, and the exact time of high "
+                          "and low water is easily shifted by the weather."),
+                    "link": "/learn/amphidromic-points",
+                    "link_text": "Where is there (almost) no tide?",
+                })
+        # Bore in der Naehe (6.11.2026, Oliver)
+        if lat is not None and lon is not None:
+            try:
+                import math
+                import bore_ereignisse as B
+                nah = sorted((math.hypot((m["lat"] - lat) * 111, (m["lon"] - lon) * 111 * math.cos(math.radians(lat))), m)
+                             for m in B.modelle())
+                nah = [(d, m) for d, m in nah if d < 60]
+                if nah:
+                    d, m = nah[0]
+                    ort = m["name"].split(",")[0].replace(" Tidal Bore", "")
+                    items.append({
+                        "q": f"Is there a tidal bore near {station_short}?",
+                        "a": (f"Yes. About {d:.0f} km away, at {ort}, the rising tide runs up the river "
+                              "as a tidal bore — a breaking wave or a train of waves. It arrives at the "
+                              "start of the flood and is largest on spring tides. Predicted arrival "
+                              "times and sizes are on the bore page."),
+                        "link": "/prediction/" + to_slug(m["name"]),
+                        "link_text": f"Tidal bore times for {ort}",
+                    })
+            except Exception as e:  # noqa: BLE001
+                print(f"⚠️ Bore-FAQ: {e!r}")
     else:
         # Currents Q1: Today's slack water times
         if today_slack:

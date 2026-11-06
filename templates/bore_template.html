@@ -61,6 +61,19 @@ Times are local ({{ d.zone }}).</p>
 {{ '%.0f'|format(d.pruefung.zeit_rms + 0.49) }} minutes (RMS){% if d.pruefung.bore_erkannt is defined %}, {{ '%.0f'|format(100 * d.pruefung.bore_erkannt) }} % of the listed bores are found{% endif %}
 and the size class matches {{ '%.0f'|format(100 * d.pruefung.klasse_richtig) }} % of the time.{% endif %}
 Wind, river flow and air pressure can shift the actual arrival by several minutes; arrive early.</p>
+<section class="faq-section" style="margin-top:2em;padding-top:1em;border-top:1px solid #eee;">
+<h3>Frequently asked questions</h3>
+<h4 style="margin:0.8em 0 0;">What is a tidal bore?</h4>
+<p style="margin:0.2em 0 0;color:#555;">At the start of the flood the rising tide does not lift the river gently but runs
+upstream as a breaking wave or a train of waves, against the river's current. It needs a large tidal range and a
+shallow, funnel-shaped estuary. <a href="/learn/tidal-bore">More about tidal bores</a></p>
+<h4 style="margin:0.8em 0 0;">When is the bore biggest?</h4>
+<p style="margin:0.2em 0 0;color:#555;">On spring tides, a day or two after new and full moon, especially around the
+equinoxes and when the Moon is close to Earth. Low river flow helps; after heavy rain the bore can be much smaller.</p>
+<h4 style="margin:0.8em 0 0;">How do I watch it safely?</h4>
+<p style="margin:0.2em 0 0;color:#555;">Arrive early and stay on a high bank or sea wall, never on mudflats or the river
+bed: the water can rise by a metre within seconds and the current behind the bore is strong.</p>
+</section>
 <p class="station-note">Position: {{ '%.4f'|format(d.lat|abs) }}° {{ 'N' if d.lat >= 0 else 'S' }}, {{ '%.4f'|format(d.lon|abs) }}° {{ 'E' if d.lon >= 0 else 'W' }}{% if d.code[:2] == '00' %} · CHS station {{ d.code }}{% endif %}</p>
 </main>
 <footer style="max-width:1200px;margin:2em auto 0;padding:14px 16px;border-top:1px solid #eee;text-align:center;font-size:0.88em;color:#555;">
