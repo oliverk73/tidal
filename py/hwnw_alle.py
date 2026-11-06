@@ -311,7 +311,9 @@ def lesen_ca(code):
                                                 timeout=120) as r:
                         zeilen += [f"{x['eventDate'][:19]},{x['value']}" for x in json.load(r) if x.get('value') is not None]
                     break
-                except Exception:  # noqa: BLE001
+                except Exception as e:  # noqa: BLE001
+                    if getattr(e, 'code', None) == 404:      # Station hat keine wlo-Reihe (White Rock, Tsawwassen):
+                        raise RuntimeError('keine wlo-Reihe bei CHS')   # sofort aufgeben, nicht 320 Wochen warten
                     time.sleep(15 * (versuch + 1))
             else:
                 fehl += 1
