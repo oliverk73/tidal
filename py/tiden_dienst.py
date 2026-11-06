@@ -114,8 +114,57 @@ def svg(name, source, tag, einheit='m', utc=False):
     return G.svg(D, name, tag, einheit, utc, zone=z, modell=_grafik_modell(D, name))
 
 
+_STROM_INDEX = None
+
+
+def _strom_modell(D, name):
+    """Stromkorrektur (harmonics/strom_hwnw/<station>.json) fuer diesen Satz, nur bei passendem Fingerabdruck."""
+    global _STROM_INDEX
+    try:
+        import glob
+        import json
+        import hwnw_ungleichheiten as HU
+        if _STROM_INDEX is None:
+            _STROM_INDEX = {}
+            for f in glob.glob(os.path.join(T.ROOT, 'harmonics/strom_hwnw/*.json')):
+                E = json.load(open(f))
+                _STROM_INDEX[(os.path.basename(E['datei']), E['satz'])] = E
+        E = _STROM_INDEX.get((os.path.basename(D.pfad), name))
+        if E and E.get('fingerabdruck') == HU.fingerabdruck(D.saetze[name]):
+            return E
+    except Exception:  # noqa: BLE001
+        pass
+    return None
+
+
+def _strom_grafik(D, name, sm):
+    """Stromkurve zeitlich gestreckt: harmonische Kenter/Maxima -> korrigierte Zeiten (Werte unveraendert)."""
+    import numpy as np
+    import strom_hwnw as SH
+
+    def paare(a, b):
+        roh = sorted(D.ereignisse(name, a, b))
+        neu = SH.korrigieren(roh, sm)
+        return [(r[0], n[0]) for r, n in zip(roh, neu) if r[2] in SH.ARTEN]
+
+    def wert(t):
+        t = np.atleast_1d(np.asarray(t, float))
+        p = paare(t.min() - 86400, t.max() + 86400)
+        if len(p) < 2:
+            return D.wert(name, t)
+        th, tn = (np.array(x) for x in zip(*p))
+        return D.wert(name, np.interp(t, tn, th))
+
+    def ereig(t0, t1):
+        return SH.korrigieren(sorted(D.ereignisse(name, t0, t1)), sm)
+    return wert, ereig
+
+
 def _grafik_modell(D, name):
     """Eigene HW/NW-Rechnung auch in der Kurve: Scheitel und Zettel wie in der Tabelle."""
+    if D.saetze[name].strom:
+        sm = _strom_modell(D, name)
+        return _strom_grafik(D, name, sm) if sm else None
     hw = _hwnw_modell(D, name)
     if not hw:
         return None
@@ -229,6 +278,10 @@ def ereignisse(name, source, beginn, ende, einheit='m', utc=False, astro_auch=Tr
     t1 = dt.datetime.strptime(ende, '%Y-%m-%d %H:%M').replace(tzinfo=z).timestamp()
     fk = 1.0 if s.strom or einheit != 'ft' else 1 / T.FUSS
     ev = [(t, h * fk, a) for t, h, a in D.ereignisse(name, t0, t1)]
+    sm = _strom_modell(D, name) if s.strom else None
+    if sm:      # Kenter/Maxima aus Strommessungen korrigiert (py/strom_hwnw.py, 6.11.2026)
+        import strom_hwnw as SH
+        ev = SH.korrigieren(sorted(ev), sm)
     hw = _hwnw_modell(D, name)
     if hw:      # eigene HW/NW-Rechnung (Stufe 4, py/hwnw_ungleichheiten.py), die Kurve bleibt harmonisch
         import hwnw_ungleichheiten as HU
