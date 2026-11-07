@@ -276,6 +276,22 @@ def strom_richtungen(name, source, zeiten, utc=False):
     return [float(r) for r in E.vektor(D, name, t)[1]]
 
 
+def windstau_werte(name, source, zeiten, utc=False):
+    """zeiten: ['YYYY-MM-DD HH:MM'] in der Zeit, in der text() ausgibt -> [Windstau m oder None] (7.11.2026)."""
+    import numpy as np
+    D, name = finden(name, source)
+    if D.saetze[name].strom:
+        return None
+    w = _windstau(D, name)
+    if w is None:
+        return None
+    wt, wz = w[0], w[1]
+    z = zone(D, name, utc)
+    t = np.array([dt.datetime.strptime(x, '%Y-%m-%d %H:%M').replace(tzinfo=z).timestamp() for x in zeiten])
+    v = np.interp(t, wt, wz)
+    return [float(x) if wt[0] <= ti <= wt[-1] else None for ti, x in zip(t, v)]
+
+
 def info(name, source):
     D, name = finden(name, source)
     zeilen = T.info(D, name)

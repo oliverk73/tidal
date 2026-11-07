@@ -101,6 +101,34 @@ class Grafik:
         else:
             self.vlinie(x, HOEHE, HOEHE - 8, c)
 
+    # ---- Daten fuer die Mauszeiger-/Fingeranzeige im Browser ----
+    def daten_attribute(self, start, inc, lbreite, val, tt, schritt=2):
+        import json
+        xs = range(0, BREITE + 1, schritt)
+        nk = 2 if self.einheit == 'ft' else 3
+        werte = [round(float(val[x + 1]), nk) for x in xs]
+        wetter = None
+        if self.wetter is not None and not self.strom:
+            wt, wz = self.wetter
+            zz = np.interp(tt, wt, wz) * self.faktor
+            ok = (tt >= wt[0]) & (tt <= wt[-1])
+            wetter = [round(float(val[x + 1] + zz[x + 1]), nk) if ok[x + 1] else None for x in xs]
+        z = getattr(self.zone, 'key', None)
+        if not z:
+            off = self.zone.utcoffset(dt.datetime.fromtimestamp(start, dt.timezone.utc))
+            m = int(off.total_seconds() // 60) if off else 0
+            z = 'UTC' if m == 0 else f'{"+" if m > 0 else "-"}{abs(m) // 60:02d}:{abs(m) % 60:02d}'
+        abk, letzt = [], None                       # Zonenkuerzel wie in der Grafik (EST, CET ...)
+        for t in range(int(start), int(start + inc * BREITE) + 3600, 900):
+            k = self.lokal(t).tzname()
+            if k != letzt:
+                abk.append([t, k])
+                letzt = k
+        d = dict(t0=int(start), dt=int(inc * schritt), dx=schritt, x0=int(lbreite), zone=z, abk=abk,
+                 einheit=self.einheit, strom=bool(self.strom), werte=werte, wetter=wetter,
+                 ymin=self.ymin, ymax=self.ymax, vmin=self.valmin, vmax=self.valmax)
+        return "data-kurve='" + json.dumps(d, separators=(',', ':')).replace("'", '&#39;') + "' "
+
     # ---- Zeitformate (XTide: df %Y-%m-%d, tf %l:%M %p %Z, hf %l) ----
     def lokal(self, t):
         return dt.datetime.fromtimestamp(t, self.zone)
@@ -195,10 +223,25 @@ class Grafik:
     def svg(self):
         D, name = self.D, self.name
         z0, amp = amplituden_heuristik(D, name)
+        wert = self.modell[0] if self.modell else (lambda t: D.wert(name, t))
         self.valmin = (z0 - amp) * self.faktor
         self.valmax = (z0 + amp) * self.faktor
         self.ymin = 0.1 * HOEHE
         self.ymax = HOEHE - self.ymin
+        # Wasserstand mit Wetter darf nicht aus der Grafik laufen (Ostsee: Windstau > Tide, 7.11.2026)
+        if self.wetter is not None and not self.strom:
+            wt, wz = self.wetter
+            inc0 = max(1, math.floor(56160.0 / HOEHE / 1.0 + 0.5))
+            m = (wt >= self.beginn - inc0 * 120) & (wt <= self.beginn + inc0 * BREITE)
+            if m.sum() > 2:
+                ww = (np.asarray(wert(wt[m]), float) + wz[m]) * self.faktor
+                ww = ww[np.isfinite(ww)]
+                if ww.size:
+                    rand = 0.03 * (max(self.valmax, ww.max()) - min(self.valmin, ww.min()))
+                    if ww.min() < self.valmin:
+                        self.valmin = float(ww.min()) - rand
+                    if ww.max() > self.valmax:
+                        self.valmax = float(ww.max()) + rand
         step, lbreite, lrechts, lo, hi = self.beschriftung()
         inc = max(1, math.floor(56160.0 / HOEHE / 1.0 + 0.5))
         start = self.beginn - inc * (lbreite + 8)
@@ -207,7 +250,6 @@ class Grafik:
         # Ereignisse: Beginn - 1 Tag bis Ende + 1 Tag, wie predictTideEvents(noFilter)
         ev = [(t, h * self.faktor, a) for t, h, a in
               (self.modell[1] if self.modell else lambda a, b: D.ereignisse(name, a, b))(start - 86400, ende + 86400)]
-        wert = self.modell[0] if self.modell else (lambda t: D.wert(name, t))
         lat, lon = float(self.s.hot['!latitude']), float(self.s.hot['!longitude'])
         ev += [(t, None, a) for t, a in astro.ereignisse(lat, lon, start - 86400, ende + 86400)]
         ev.sort(key=lambda e: e[0])
@@ -282,6 +324,9 @@ class Grafik:
                 zz = np.interp(tt, wt, wz) * self.faktor
                 pkt = ' '.join(f'{x} {f(self.xlate(val[x + 1] + zz[x + 1]))}' for x in range(BREITE + 1) if ok[x + 1])
                 self.out.append(f'<polyline fill="none" stroke="#c62828" stroke-width="2.5" stroke-dasharray="8 5" points="{pkt}"/>')
+
+        # Werte fuer die Anzeige beim Ueberfahren (7.11.2026): alle 2 px (6 min) Zeit = start + inc*x
+        self.out[2] = self.out[2].replace('<svg ', '<svg ' + self.daten_attribute(start, inc, lbreite, val, tt), 1)
 
         # Hoehenachse
         for d in range(lo, hi + 1, step) if lo <= hi else []:

@@ -1753,6 +1753,21 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         except Exception as e:  # noqa: BLE001 -- Zusatz, nie die Seite verlieren
             print(f"⚠️ Strom-Ellipse fehlgeschlagen ({decoded_station}): {e!r}")
 
+    # Wasserstand mit Wetter (Gezeit + Windstau) je HW/NW als eigene Tabellenspalte (7.11.2026)
+    if not decoded_station.rstrip().endswith('Current') and TIDEN_RECHNUNG == "eigen":
+        try:
+            idx = [i for i, r in enumerate(tide_rows) if r['type'] in ('High Tide', 'Low Tide')]
+            ws = _tiden_dienst().windstau_werte(decoded_station, source,
+                                                 [f"{tide_rows[i]['_full_date']} {tide_rows[i]['time']}" for i in idx], utc)
+            for i, w in zip(idx, ws or []):
+                teile = tide_rows[i]['value'].split()
+                if w is None or len(teile) != 2:
+                    continue
+                fk = 3.28084 if teile[1].startswith('f') else 1.0
+                tide_rows[i]['wetter'] = f"{float(teile[0]) + w * fk:.2f} {teile[1]}"
+        except Exception as e:  # noqa: BLE001 -- Zusatz, nie die Seite verlieren
+            print(f"⚠️ Windstau-Spalte fehlgeschlagen ({decoded_station}): {e!r}")
+
     # If the user asked for "Local" but the station's harmonics are in UTC
     # (all UTide-derived stations have `Time zone: :UTC`), xtide can't do
     # the conversion for us — its -z flag toggles between station-meridian

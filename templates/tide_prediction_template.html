@@ -79,6 +79,7 @@ header #search-trigger {
 </style>
 <script src="/static/js/suche.js?v=20261101" defer></script>
 <script src="/static/js/pwa.js" defer></script>
+<script src="/static/js/kurven_anzeige.js?v=20261107" defer></script>
 
 {# Build a richer description using available metadata #}
 {% set meta_dict = {} %}
@@ -245,10 +246,11 @@ Dashed red line: expected water level <strong>including the weather</strong> —
 Weather effect now {{ '%+.2f'|format(windstau.jetzt) }} {{ windstau.einheit }};
 highest {{ '%+.2f'|format(windstau.hoch) }} {{ windstau.einheit }} ({{ windstau.hoch_zeit }}),
 lowest {{ '%+.2f'|format(windstau.tief) }} {{ windstau.einheit }} ({{ windstau.tief_zeit }}).
-The tide table below is astronomical only.</p>
+The column <em>With weather</em> in the table below adds it to each high and low tide.</p>
 {% endif %}
 <h3>Tide times</h3>
 {% endif %}
+{% set _mit_wetter = tide_rows|selectattr('wetter', 'defined')|list|length > 0 %}
 <table class="tide-table">
 <thead>
   <tr>
@@ -258,6 +260,7 @@ The tide table below is astronomical only.</p>
     <th class="type-cell"></th>
     <th class="value-cell">{% if is_current %}Speed{% else %}Sea Level{% endif %}</th>
     {% if rose_url %}<th class="value-cell">Direction</th>{% endif %}
+    {% if _mit_wetter %}<th class="value-cell" style="color:#c62828;">With weather</th>{% endif %}
   </tr>
 </thead>
 {% for row in tide_rows %}
@@ -268,6 +271,7 @@ The tide table below is astronomical only.</p>
     <td class="type-cell">{{ row.type }}</td>
     <td class="value-cell">{{ row.value }}</td>
     {% if rose_url %}<td class="value-cell">{{ row.direction or '' }}</td>{% endif %}
+    {% if _mit_wetter %}<td class="value-cell" style="color:#c62828;">{{ row.wetter or '' }}</td>{% endif %}
   </tr>
 {% endfor %}
 </table>
