@@ -108,7 +108,11 @@ def fes_rec(lat, lon, fes):
     return Q.rec(w)
 
 
-# Aufgenommen 7.11.2026: kein Bestandssatz <= 5 km und Uebertragung <= 10 % gegen FES2022.
+# Aufgenommen 7.11.2026: kein Bestandssatz <= 5 km und Uebertragung <= 5 % gegen FES2022 (Oliver: strenger;
+# zuerst <= 10 %), keine Uebertragung von Standardhaefen mit ueberwiegender Tagestide (Lae, Anewa Bay:
+# Eichung Wasu 29 %, Oro Bay 24 %, Amuioan 40 %, Bogia 44 %, Vanimo 70 %). Bei FES <= 10 % lag die
+# Uebertragung gegen Messung/BOM-Fit bei hoechstens 9 %. Damals entfernt: Mapamoiwa (FES 6 %), Ava Point (8 %),
+# Boli Point (10 %), Daia Point, Thilenius Harbour, Kanapu Island (Gruppe Lae).
 # Eichung an 82 Nebenhaefen mit Bestandssatz: Gruppe Port Moresby 2-9 %, Torres-Strasse (Twin Island)
 # 11-14 %, Tagestide-Gruppen (Lae/Seeadler/Anewa) bis 70 % -> FES ist der bessere Schiedsrichter.
 # Ausgelassen trotz FES <= 10 %: 56134 Rara Island SW (Buch 2°10' vs Standardseite 2°01'; dort Dublette
@@ -121,21 +125,18 @@ NAMEN = {
     '55596': ('Toveli Entrance, Central, Papua New Guinea', 'Central'),
     '55620': ('Turtle Back Island, Central, Papua New Guinea', 'Central'),
     '55630': ('Delami Island, Milne Bay, Papua New Guinea', 'Milne Bay'),
-    '55633': ('Ava Point, Milne Bay, Papua New Guinea', 'Milne Bay'),
     '55673': ('Kegawam Island, Milne Bay, Papua New Guinea', 'Milne Bay'),
-    '55832': ('Mapamoiwa, Milne Bay, Papua New Guinea', 'Milne Bay'),
     '55833': ('Yaya Point, Milne Bay, Papua New Guinea', 'Milne Bay'),
     '55834': ('Bwaioa Gomwa Bay, Milne Bay, Papua New Guinea', 'Milne Bay'),
     '55835': ('Waiope Island, Milne Bay, Papua New Guinea', 'Milne Bay'),
     '55840': ('Nuakata Island, Milne Bay, Papua New Guinea', 'Milne Bay'),
-    '55876': ('Boli Point, Milne Bay, Papua New Guinea', 'Milne Bay'),
-    '55949': ('Daia Point, Oro, Papua New Guinea', 'Oro'),
-    '55960': ('Kanapu Island, Milne Bay, Papua New Guinea', 'Milne Bay'),
-    '56150': ('Thilenius Harbour, West New Britain, Papua New Guinea', 'West New Britain'),
     '56122': ('Moenai Point, Manus, Papua New Guinea', 'Manus'),
     '56123': ('Mbuke Island, Manus, Papua New Guinea', 'Manus'),
 }
 KOPF_SRC = os.path.join(ROOT, 'harmonics/classic/harmonics_literature.txt')
+# Olivers Kartenkorrekturen (7.11.2026, aus der Markerdatei wiederhergestellt): Nr. -> (lat, lon)
+POS = {'55571': (-9.3915, 147.0205), '55575': (-9.5136, 147.0739), '55630': (-10.5164, 149.8177),
+       '55572': (-9.4238, 146.8868), '55620': (-10.4024, 149.3627), '55633': (-10.5725, 149.881)}
 
 
 def schreiben_datei(saetze, neu):
@@ -143,6 +144,9 @@ def schreiben_datei(saetze, neu):
     sonst gingen spaetere Handkorrekturen (Namen/Positionen) verloren."""
     if os.path.exists(ZIEL) and not neu:
         sys.exit('%s existiert schon -- Handkorrekturen pruefen, dann mit --neu' % ZIEL)
+    import subprocess
+    if os.path.exists(ZIEL) and subprocess.run(['git', '-C', ROOT, 'diff', '--quiet', '--', ZIEL]).returncode:
+        sys.exit('%s hat ungesicherte Aenderungen (Kartenkorrekturen?) -- erst in POS uebernehmen und committen' % ZIEL)
     L = open(KOPF_SRC, encoding='iso-8859-1').read().split('\n')
     kopf = L[:max(i for i, l in enumerate(L) if 'End congen output' in l) + 1]
     namen = X.kopf_lesen(KOPF_SRC)[0]
@@ -156,7 +160,8 @@ def schreiben_datei(saetze, neu):
               '# note: %s Uebertragung (py/aho_png_neben.py) vom Standardhafen %s (AHO-Tafelfit): dt %+d min, '
               'f_semi %.2f, f_diur %.2f; gegen FES2022 %.0f %%.' % (heute, o['std'].title(), o['dt_min'], o['fs'], o['fd'], o['d_fes']),
               '# note: Buchquelle %s; AHO: Nebenhafenwerte "extremely variable in quality".' % o['quelle'],
-              '# note: Position AHO auf Bogenminuten (bitte auf der Karte pruefen).',
+              ('# note: 20261107 Position von Oliver auf der Karte gesetzt.' if o.get('pos_oliver') else
+               '# note: Position AHO auf Bogenminuten (bitte auf der Karte pruefen).'),
               '# att_number: %s' % o['no'], '# date_imported: %s' % heute, '# datum: LAT (AHO), Z0 = MSL',
               '# confidence: 5', '# !units: meters', '# !longitude: %.4f' % o['lon'], '# !latitude: %.4f' % o['lat'],
               '# region: %s' % region, name, '+00:00 :Pacific/Port_Moresby', '%.4f meters' % o['z0']]
@@ -168,6 +173,9 @@ def schreiben_datei(saetze, neu):
 
 def main(argv):
     rows, std_pegel = tabelle()
+    for r in rows:
+        if r['no'] in POS:
+            r['lat'], r['lon'] = POS[r['no']]; r['pos_oliver'] = True
     fits = A.fit_alle({k: v for k, v in A.lesen().items() if k in STD.values()})
     fes = {k.lower(): nc.Dataset(os.path.join(FES_DIR, '%s_fes2022.nc' % k.lower())) for k in H.MAIN
            if os.path.exists(os.path.join(FES_DIR, '%s_fes2022.nc' % k.lower()))}
