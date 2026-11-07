@@ -8,7 +8,7 @@ Heruntergeladene Dateien bitte nach `water_levels/<Land>/` legen und mir Beschei
 - ★★★ **Nayak et al. 2014**, J. Indian Soc. Remote Sensing. Tabelle 1 enthält beobachtete
   Konstanten an 37 Pegeln im Golf von Khambhat.
   https://doi.org/10.1007/s12524-014-0387-3
-- ★★ **Dolgopolova 2017**, Water Resources, Gezeiten der Mesen-Mündung (Weißes Meer)
+- ★★ **Dolgopolova 2017**, Water Resources, Gezeiten der Mesen-Mündung (Weißes Meer) / Tidal waves at Mezen mouth and surge-wave formation conditions
   https://doi.org/10.1134/S0097807817060033
   Russische Seite: https://journals.rcsi.science/0097-8078/article/view/174278
 - ★ **Mandal 2024**, Ocean Dynamics, Adani-Pegel Hazira (wäre nur ein Zeuge)
