@@ -24,14 +24,18 @@ import netCDF4 as nc
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from health_check import load_records, ROOT                         # noqa: E402
+from health_check import load_records, ROOT, active_files                         # noqa: E402
 import xtide_modell as X                                           # noqa: E402
 from fes_ersatz_inseln import sample, FES_DIR                      # noqa: E402
 
 SPEED = {'M2': 28.9841042, 'K1': 15.0410686, 'S2': 30.0, 'O1': 13.9430356}
 ZWEITE = {'M2': 'S2', 'K1': 'O1'}
 GEPRUEFT = ('harmonics_utide_current_observations.txt', 'harmonics_utide_current_tables.txt',
-            'harmonics_utide_australia_oceancurrent.txt')
+            'harmonics_utide_australia_oceancurrent.txt',
+            # ATT Part IIIa: Dir(+) ist nur die positive Richtung, N/E-Saetze haben eine
+            # willkuerliche Achse -> gleiche Probe (seit 7.11.2026)
+            'harmonics_att_np203_currents.txt', 'harmonics_att_np204_currents.txt',
+            'harmonics_att_np208_currents.txt')
 EICHUNG = ('harmonics-dwf-20251228-free.txt', 'harmonics_noaa_currents.txt')
 HILFE = os.path.join(ROOT, 'harmonics/help')
 BIS_KM = 15.0
@@ -153,7 +157,7 @@ def drehen(zeilen):
         if z['urteil'] == 'drehen':
             pro[z['datei']].add(z['name'])
     for f, namen in sorted(pro.items()):
-        pfad = os.path.join(ROOT, 'harmonics/utide', f)
+        pfad = next(os.path.join(ROOT, p) for p in active_files() if os.path.basename(p) == f)
         L = open(pfad, encoding='iso-8859-1').read().split('\n')
         n = 0
         for i in reversed([k for k, l in enumerate(L) if l in namen]):
@@ -164,6 +168,10 @@ def drehen(zeilen):
             while a > 0 and (L[a - 1].startswith('#') or not L[a - 1].strip()) and 'End congen' not in L[a - 1]:
                 a -= 1
             for k in range(a, i):
+                fe = re.match(r'# (flood_dir|ebb_dir): (\d+)\s*$', L[k])
+                if fe:   # Flut- und Ebbrichtung tauschen
+                    L[k] = '# %s: %03d' % (fe.group(1), (int(fe.group(2)) + 180) % 360)
+                    continue
                 m = re.match(r'(# Major axis: |# major_axis_deg_true: )([-\d.]+)(.*)', L[k])
                 if m:
                     L[k] = '%s%.1f%s' % (m.group(1), (float(m.group(2)) + 180) % 360, m.group(3))
@@ -172,10 +180,10 @@ def drehen(zeilen):
             k = i + 3
             while k < len(L) and L[k].strip() and not L[k].startswith('#'):
                 f3 = L[k].split()
-                if f3[0] != 'x':
+                if f3[1] != 'x':
                     L[k] = '%-15s %s  %.2f' % (f3[0], f3[1], (float(f3[2]) + 180) % 360)
                 k += 1
-            L.insert(i, '# note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist '
+            L.insert(i, '# note: ' + dt.date.today().strftime('%Y%m%d') + ' Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist '
                         '(Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)')
             n += 1
         open(pfad, 'w', encoding='iso-8859-1').write('\n'.join(L))

@@ -14990,8 +14990,8 @@ MNUS2
 # np203_no: 415
 # np203_zone: -0400
 # stream_type: reversing
-# flood_dir: 308
-# ebb_dir: 128
+# flood_dir: 128
+# ebb_dir: 308
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -15003,29 +15003,30 @@ MNUS2
 # note: 20260906 country "Red Sea" -> "Yemen" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Ta`izz".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Mayyun / Perim (Bab el Mandeb Strait), Yemen Current
 +04:00 :Africa/Djibouti
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.4100  145.00
-K2           0.0486  311.00
+K1              0.4100  325.00
+K2              0.0486  131.00
 L2           x 0 0
 M1           x 0 0
-M2           0.2500  304.00
+M2              0.2500  124.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0475  300.25
+N2              0.0475  120.25
 2N2          x 0 0
-O1           0.1400  141.00
+O1              0.1400  321.00
 OO1          x 0 0
-P1              0.1353  144.67
+P1              0.1353  324.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1800  311.00
+S2              0.1800  131.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -15187,37 +15188,38 @@ MNUS2        x 0 0
 # np203_no: 416
 # np203_zone: -0400
 # stream_type: reversing
-# flood_dir: 328
-# ebb_dir: 148
+# flood_dir: 148
+# ebb_dir: 328
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
 # !longitude: 42.9333
 # !latitude: 13.3967
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Mokha (west off, Red Sea), Yemen Current
 +04:00 :Africa/Djibouti
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.2400  155.00
-K2           0.0189  0.00
+K1              0.2400  335.00
+K2              0.0189  180.00
 L2           x 0 0
 M1           x 0 0
-M2           0.2300  309.00
+M2              0.2300  129.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0437  114.62
+N2              0.0437  294.62
 2N2          x 0 0
-O1           0.1600  147.00
+O1              0.1600  327.00
 OO1          x 0 0
-P1              0.0792  154.67
+P1              0.0792  334.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.0700  0.00
+S2              0.0700  180.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -15379,8 +15381,8 @@ MNUS2        x 0 0
 # np203_no: 417
 # np203_zone: -0400
 # stream_type: reversing
-# flood_dir: 338
-# ebb_dir: 158
+# flood_dir: 158
+# ebb_dir: 338
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -15389,29 +15391,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Red Sea" -> "Yemen" nach dem Namen berichtigt,
 # note: -- damit auch die Region "None" -> "Al Hudaydah".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Zuqar / Abu Ali Islands, Yemen Current
 +04:00 :Africa/Djibouti
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.2100  127.00
-K2           0.0270  334.00
+K1              0.2100  307.00
+K2              0.0270  154.00
 L2           x 0 0
 M1           x 0 0
-M2           0.2000  298.00
+M2              0.2000  118.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0380  278.70
+N2              0.0380  98.70
 2N2          x 0 0
-O1           0.1200  133.00
+O1              0.1200  313.00
 OO1          x 0 0
-P1              0.0693  126.67
+P1              0.0693  306.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1000  334.00
+S2              0.1000  154.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -16162,8 +16165,8 @@ MNUS2        x 0 0
 # np203_no: 420a
 # np203_zone: -0400
 # stream_type: rotary
-# flood_dir: 026
-# ebb_dir: 206
+# flood_dir: 206
+# ebb_dir: 026
 # ellipticity_m2: -0.120
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -16175,29 +16178,30 @@ MNUS2        x 0 0
 # note: 20260906 country "United Arab Emirates" -> "Oman" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Ras Al Khaymah" -> "Musandam".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Khawr Quway, Oman Current
 +04:00 :Asia/Dubai
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.7839  217.58
-K2           0.0695  151.46
+K1              0.7839  37.58
+K2              0.0695  331.46
 L2           x 0 0
 M1           x 0 0
-M2           0.7016  113.39
+M2              0.7016  293.39
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.1333  92.98
+N2              0.1333  272.98
 2N2          x 0 0
-O1           0.4826  214.50
+O1              0.4826  34.50
 OO1          x 0 0
-P1              0.2587  217.25
+P1              0.2587  37.25
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2575  151.46
+S2              0.2575  331.46
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -17341,8 +17345,8 @@ MNUS2        x 0 0
 # np203_no: 422b
 # np203_zone: -0400
 # stream_type: rotary
-# flood_dir: 061
-# ebb_dir: 241
+# flood_dir: 241
+# ebb_dir: 061
 # ellipticity_m2: +0.338
 # rotary_caveat: strongly rotary (|e|>0.25) - 1D major-axis underrepresents speed and shows false slacks
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
@@ -17353,29 +17357,30 @@ MNUS2        x 0 0
 # region: Abu Dhabi
 # admin1_quelle: Ufer 14.0 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Zirku SW, United Arab Emirates Current
 +04:00 :Asia/Dubai
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.4839  261.57
-K2           0.0334  345.56
+K1              0.4839  81.57
+K2              0.0334  165.56
 L2           x 0 0
 M1           x 0 0
-M2           0.3706  285.56
+M2              0.3706  105.56
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0704  253.40
+N2              0.0704  73.40
 2N2          x 0 0
-O1           0.3390  258.69
+O1              0.3390  78.69
 OO1          x 0 0
-P1              0.1597  261.24
+P1              0.1597  81.24
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1235  345.56
+S2              0.1235  165.56
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -17732,8 +17737,8 @@ MNUS2        x 0 0
 # np203_no: 422d
 # np203_zone: -0400
 # stream_type: rotary
-# flood_dir: 065
-# ebb_dir: 245
+# flood_dir: 245
+# ebb_dir: 065
 # ellipticity_m2: +0.241
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -17743,29 +17748,30 @@ MNUS2        x 0 0
 # region: Abu Dhabi
 # admin1_quelle: Ufer 50.2 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 El Bunduq Oilfield, United Arab Emirates Current
 +04:00 :Asia/Dubai
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.3349  271.73
-K2           0.0520  316.06
+K1              0.3349  91.73
+K2              0.0520  136.06
 L2           x 0 0
 M1           x 0 0
-M2           0.3174  291.35
+M2              0.3174  111.35
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0603  278.11
+N2              0.0603  98.11
 2N2          x 0 0
-O1           0.1552  224.24
+O1              0.1552  44.24
 OO1          x 0 0
-P1              0.1105  271.40
+P1              0.1105  91.40
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1926  316.06
+S2              0.1926  136.06
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -17927,8 +17933,8 @@ MNUS2        x 0 0
 # np203_no: 424
 # np203_zone: -0400
 # stream_type: rotary
-# flood_dir: 020
-# ebb_dir: 200
+# flood_dir: 200
+# ebb_dir: 020
 # ellipticity_m2: +0.063
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -17938,29 +17944,30 @@ MNUS2        x 0 0
 # region: Al Wakrah
 # admin1_quelle: Ufer 12.8 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Doha SE (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.5517  270.53
-K2           0.0487  335.53
+K1              0.5517  90.53
+K2              0.0487  155.53
 L2           x 0 0
 M1           x 0 0
-M2           0.3948  355.64
+M2              0.3948  175.64
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0750  6.42
+N2              0.0750  186.42
 2N2          x 0 0
-O1           0.1637  222.51
+O1              0.1637  42.51
 OO1          x 0 0
-P1              0.1821  270.20
+P1              0.1821  90.20
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1802  335.53
+S2              0.1802  155.53
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -18712,8 +18719,8 @@ MNUS2        x 0 0
 # np203_no: 424d
 # np203_zone: -0400
 # stream_type: rotary
-# flood_dir: 006
-# ebb_dir: 186
+# flood_dir: 186
+# ebb_dir: 006
 # ellipticity_m2: +0.317
 # rotary_caveat: strongly rotary (|e|>0.25) - 1D major-axis underrepresents speed and shows false slacks
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
@@ -18724,29 +18731,30 @@ MNUS2        x 0 0
 # region: Ad Dawhah
 # admin1_quelle: Ufer 18.1 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Doha E (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.5139  274.39
-K2           0.0163  27.14
+K1              0.5139  94.39
+K2              0.0163  207.14
 L2           x 0 0
 M1           x 0 0
-M2           0.1808  354.14
+M2              0.1808  174.14
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0344  169.41
+N2              0.0344  349.41
 2N2          x 0 0
-O1           0.1418  227.68
+O1              0.1418  47.68
 OO1          x 0 0
-P1              0.1696  274.06
+P1              0.1696  94.06
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.0603  27.14
+S2              0.0603  207.14
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -18908,8 +18916,8 @@ MNUS2        x 0 0
 # np203_no: 424e
 # np203_zone: -0400
 # stream_type: rotary
-# flood_dir: 088
-# ebb_dir: 268
+# flood_dir: 268
+# ebb_dir: 088
 # ellipticity_m2: -0.240
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -18919,29 +18927,30 @@ MNUS2        x 0 0
 # region: Al Khawr
 # admin1_quelle: Ufer 44.5 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Al Chaur E (Persian Gulf), Qatar Current
 +04:00 :Asia/Qatar
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.0885  317.22
-K2           0.0270  308.64
+K1              0.0885  137.22
+K2              0.0270  128.64
 L2           x 0 0
 M1           x 0 0
-M2           0.3302  266.57
+M2              0.3302  86.57
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0627  244.02
+N2              0.0627  64.02
 2N2          x 0 0
-O1           0.0393  260.81
+O1              0.0393  80.81
 OO1          x 0 0
-P1              0.0292  316.89
+P1              0.0292  136.89
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1000  308.64
+S2              0.1000  128.64
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -19103,37 +19112,38 @@ MNUS2        x 0 0
 # np203_no: 424f
 # np203_zone: -0400
 # stream_type: reversing
-# flood_dir: 110
-# ebb_dir: 300
+# flood_dir: 290
+# ebb_dir: 120
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
 # !longitude: 52.400000
 # !latitude: 26.286667
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Ras Laffan <-> Lavan Island (Persian Gulf) Current
 +04:00 :Asia/Bahrain
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.2600  69.00
-K2           0.0270  316.00
+K1              0.2600  249.00
+K2              0.0270  136.00
 L2           x 0 0
 M1           x 0 0
-M2           0.3300  274.00
+M2              0.3300  94.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0627  251.49
+N2              0.0627  71.49
 2N2          x 0 0
-O1           0.1200  20.00
+O1              0.1200  200.00
 OO1          x 0 0
-P1              0.0858  68.67
+P1              0.0858  248.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1000  316.00
+S2              0.1000  136.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -19686,8 +19696,8 @@ MNUS2        x 0 0
 # np203_no: 426b
 # np203_zone: -0300
 # stream_type: rotary
-# flood_dir: 125
-# ebb_dir: 305
+# flood_dir: 305
+# ebb_dir: 125
 # ellipticity_m2: +0.202
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -19699,29 +19709,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Khafji Oilfield, Saudi Arabia Current
 +03:00 :Asia/Kuwait
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.2982  22.28
-K2           0.0348  125.43
+K1              0.2982  202.28
+K2              0.0348  305.43
 L2           x 0 0
 M1           x 0 0
-M2           0.4490  46.87
+M2              0.4490  226.87
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0853  4.76
+N2              0.0853  184.76
 2N2          x 0 0
-O1           0.1482  308.60
+O1              0.1482  128.60
 OO1          x 0 0
-P1              0.0984  22.03
+P1              0.0984  202.03
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1288  125.43
+S2              0.1288  305.43
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -19883,8 +19894,8 @@ MNUS2        x 0 0
 # np203_no: 426c
 # np203_zone: -0300
 # stream_type: reversing
-# flood_dir: 99
-# ebb_dir: 279
+# flood_dir: 279
+# ebb_dir: 099
 # ellipticity_m2: +0.235
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # note: 20260801 aus dem 2015er Scan S.253 ergaenzt -- fehlte in der Ausgabe 2002.
@@ -19898,29 +19909,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Khafji N, Saudi Arabia Current
 +03:00 :Asia/Riyadh
-0.0415 knots
+-0.0415 knots
 J1           x 0 0
-K1           0.2852  9.12
-K2           0.0689  95.83
+K1              0.2852  189.12
+K2              0.0689  275.83
 L2           x 0 0
 M1           x 0 0
-M2           0.6780  39.86
+M2              0.6780  219.86
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.1288  9.86
+N2              0.1288  189.86
 2N2          x 0 0
-O1           0.1250  337.25
+O1              0.1250  157.25
 OO1          x 0 0
-P1              0.0941  8.87
+P1              0.0941  188.87
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2552  95.83
+S2              0.2552  275.83
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -20082,8 +20094,8 @@ MNUS2        x 0 0
 # np203_no: 426d
 # np203_zone: -0300
 # stream_type: reversing
-# flood_dir: 132
-# ebb_dir: 312
+# flood_dir: 312
+# ebb_dir: 132
 # ellipticity_m2: +0.193
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # note: 20260801 aus dem 2015er Scan S.253 ergaenzt -- fehlte in der Ausgabe 2002.
@@ -20097,29 +20109,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Kuwait" -> "Saudi Arabia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al Ahmadi" -> "Ash Sharqiyah".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Khafji NE, Saudi Arabia Current
 +03:00 :Asia/Kuwait
-0.0067 knots
+-0.0067 knots
 J1           x 0 0
-K1           0.2665  16.87
-K2           0.0541  99.64
+K1              0.2665  196.87
+K2              0.0541  279.64
 L2           x 0 0
 M1           x 0 0
-M2           0.5422  41.18
+M2              0.5422  221.18
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.1030  9.85
+N2              0.1030  189.85
 2N2          x 0 0
-O1           0.1224  348.89
+O1              0.1224  168.89
 OO1          x 0 0
-P1              0.0879  16.62
+P1              0.0879  196.62
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2003  99.64
+S2              0.2003  279.64
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -20281,8 +20294,8 @@ MNUS2        x 0 0
 # np203_no: 426e
 # np203_zone: -0300
 # stream_type: rotary
-# flood_dir: 138
-# ebb_dir: 318
+# flood_dir: 318
+# ebb_dir: 138
 # ellipticity_m2: +0.334
 # rotary_caveat: strongly rotary (|e|>0.25) - 1D major-axis underrepresents speed and shows false slacks
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
@@ -20298,29 +20311,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Iraq" -> "Iran" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Al-Basrah" -> "Khuzestan".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Khowr-e Musa, Iran Current
 +03:00 :Asia/Baghdad
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.1809  16.67
-K2           0.0631  73.89
+K1              0.1809  196.67
+K2              0.0631  253.89
 L2           x 0 0
 M1           x 0 0
-M2           0.5705  30.98
+M2              0.5705  210.98
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.1084  7.98
+N2              0.1084  187.98
 2N2          x 0 0
-O1           0.1296  335.40
+O1              0.1296  155.40
 OO1          x 0 0
-P1              0.0597  16.42
+P1              0.0597  196.42
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2336  73.89
+S2              0.2336  253.89
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -20677,8 +20691,8 @@ MNUS2        x 0 0
 # np203_no: 429a
 # np203_zone: -0400
 # stream_type: rotary
-# flood_dir: 119
-# ebb_dir: 299
+# flood_dir: 299
+# ebb_dir: 119
 # ellipticity_m2: -0.151
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -20688,29 +20702,30 @@ MNUS2        x 0 0
 # province: Hormozgan
 # admin1_quelle: Ufer 21.2 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Lavan / Hendorabi S, Iran Current
 +04:00 :Asia/Tehran
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.5191  18.05
-K2           0.0394  279.55
+K1              0.5191  198.05
+K2              0.0394  99.55
 L2           x 0 0
 M1           x 0 0
-M2           0.3986  241.77
+M2              0.3986  61.77
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0757  221.51
+N2              0.0757  41.51
 2N2          x 0 0
-O1           0.0195  344.75
+O1              0.0195  164.75
 OO1          x 0 0
-P1              0.1713  17.72
+P1              0.1713  197.72
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1461  279.55
+S2              0.1461  99.55
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -20872,8 +20887,8 @@ MNUS2        x 0 0
 # np203_no: 470
 # np203_zone: -0800
 # stream_type: reversing
-# flood_dir: 300
-# ebb_dir: 120
+# flood_dir: 120
+# ebb_dir: 300
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -20889,29 +20904,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South West" -> "Kepulauan Riau".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Posal Piya (Singapore Strait), Kepulauan Riau, Indonesia Current
 +08:00 :Asia/Singapore
-0.0800 knots
+-0.0800 knots
 J1           x 0 0
-K1           0.2100  244.00
-K2           0.0459  180.00
+K1              0.2100  64.00
+K2              0.0459  0.00
 L2           x 0 0
 M1           x 0 0
-M2           0.5700  130.00
+M2              0.5700  310.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.1083  103.20
+N2              0.1083  283.20
 2N2          x 0 0
-O1           0.2700  98.00
+O1              0.2700  278.00
 OO1          x 0 0
-P1              0.0693  243.34
+P1              0.0693  63.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1700  180.00
+S2              0.1700  0.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -21868,8 +21884,8 @@ MNUS2        x 0 0
 # np203_no: 472a
 # np203_zone: -0800
 # stream_type: reversing
-# flood_dir: 125
-# ebb_dir: 305
+# flood_dir: 305
+# ebb_dir: 125
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -21883,29 +21899,30 @@ MNUS2        x 0 0
 # region: South West
 # admin1_quelle: Ufer 3.6 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Terumbu Selegi / Sentosa (Singapore Strait), Singapore Current
 +08:00 :Asia/Singapore
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.8500  262.00
-K2           0.0675  95.00
+K1              0.8500  82.00
+K2              0.0675  275.00
 L2           x 0 0
 M1           x 0 0
-M2           0.4600  77.00
+M2              0.4600  257.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0874  67.35
+N2              0.0874  247.35
 2N2          x 0 0
-O1           0.8100  211.00
+O1              0.8100  31.00
 OO1          x 0 0
-P1              0.2805  261.34
+P1              0.2805  81.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2500  95.00
+S2              0.2500  275.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -22067,8 +22084,8 @@ MNUS2        x 0 0
 # np203_no: 472b
 # np203_zone: -0800
 # stream_type: reversing
-# flood_dir: 065
-# ebb_dir: 245
+# flood_dir: 245
+# ebb_dir: 065
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -22084,29 +22101,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South West" -> "Kepulauan Riau".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Semakau & Sebarok / Pulau Subar (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
--0.2500 knots
+0.2500 knots
 J1           x 0 0
-K1           0.5700  258.00
-K2           0.0486  100.00
+K1              0.5700  78.00
+K2              0.0486  280.00
 L2           x 0 0
 M1           x 0 0
-M2           0.3500  100.00
+M2              0.3500  280.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0665  100.00
+N2              0.0665  280.00
 2N2          x 0 0
-O1           0.6200  212.00
+O1              0.6200  32.00
 OO1          x 0 0
-P1              0.1881  257.34
+P1              0.1881  77.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1800  100.00
+S2              0.1800  280.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -22268,8 +22286,8 @@ MNUS2        x 0 0
 # np203_no: 472d
 # np203_zone: -0800
 # stream_type: rotary
-# flood_dir: 120
-# ebb_dir: 300
+# flood_dir: 300
+# ebb_dir: 120
 # ellipticity_m2: -0.015
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -22284,29 +22302,30 @@ MNUS2        x 0 0
 # region: South West
 # admin1_quelle: Ufer 1.9 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Palawan / Sentosa (Singapore Strait), Singapore Current
 +08:00 :Asia/Singapore
--0.1253 knots
+0.1253 knots
 J1           x 0 0
-K1           0.4519  240.62
-K2           0.0636  83.81
+K1              0.4519  60.62
+K2              0.0636  263.81
 L2           x 0 0
 M1           x 0 0
-M2           0.3584  40.50
+M2              0.3584  220.50
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0681  17.29
+N2              0.0681  197.29
 2N2          x 0 0
-O1           0.5051  196.02
+O1              0.5051  16.02
 OO1          x 0 0
-P1              0.1491  239.96
+P1              0.1491  59.96
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2354  83.81
+S2              0.2354  263.81
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -22468,8 +22487,8 @@ MNUS2        x 0 0
 # np203_no: 472e
 # np203_zone: -0800
 # stream_type: rotary
-# flood_dir: 055
-# ebb_dir: 235
+# flood_dir: 235
+# ebb_dir: 055
 # ellipticity_m2: +0.082
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -22484,29 +22503,30 @@ MNUS2        x 0 0
 # region: South West
 # admin1_quelle: Ufer 2.8 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Pulau Buran / Sentosa (Cooper Channel), Singapore Current
 +08:00 :Asia/Singapore
-0.0877 knots
+-0.0877 knots
 J1           x 0 0
-K1           0.5663  238.46
-K2           0.0778  86.95
+K1              0.5663  58.46
+K2              0.0778  266.95
 L2           x 0 0
 M1           x 0 0
-M2           0.4507  36.29
+M2              0.4507  216.29
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0856  9.13
+N2              0.0856  189.13
 2N2          x 0 0
-O1           0.4901  185.11
+O1              0.4901  5.11
 OO1          x 0 0
-P1              0.1869  237.80
+P1              0.1869  57.80
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2883  86.95
+S2              0.2883  266.95
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -22668,8 +22688,8 @@ MNUS2        x 0 0
 # np203_no: 472f
 # np203_zone: -0800
 # stream_type: rotary
-# flood_dir: 056
-# ebb_dir: 236
+# flood_dir: 236
+# ebb_dir: 056
 # ellipticity_m2: +0.032
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
@@ -22684,29 +22704,30 @@ MNUS2        x 0 0
 # region: Central Singapore
 # admin1_quelle: Ufer 7.5 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Southeast of Marina South (Cooper Channel), Singapore Current
 +08:00 :Asia/Singapore
--0.1137 knots
+0.1137 knots
 J1           x 0 0
-K1           0.7366  258.10
-K2           0.0606  115.48
+K1              0.7366  78.10
+K2              0.0606  295.48
 L2           x 0 0
 M1           x 0 0
-M2           0.4685  88.23
+M2              0.4685  268.23
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0890  73.62
+N2              0.0890  253.62
 2N2          x 0 0
-O1           0.7698  208.16
+O1              0.7698  28.16
 OO1          x 0 0
-P1              0.2431  257.44
+P1              0.2431  77.44
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2245  115.48
+S2              0.2245  295.48
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -23069,8 +23090,8 @@ MNUS2        x 0 0
 # np203_no: 473a
 # np203_zone: -0800
 # stream_type: reversing
-# flood_dir: 085
-# ebb_dir: 265
+# flood_dir: 265
+# ebb_dir: 085
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -23086,29 +23107,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Singapore" -> "Indonesia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South East" -> "Kepulauan Riau".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Northwest of Pulau Batam (Singapore Strait), Indonesia Current
 +08:00 :Asia/Singapore
--0.5500 knots
+0.5500 knots
 J1           x 0 0
-K1           0.8000  241.00
-K2           0.0945  99.00
+K1              0.8000  61.00
+K2              0.0945  279.00
 L2           x 0 0
 M1           x 0 0
-M2           0.6800  65.00
+M2              0.6800  245.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.1292  46.78
+N2              0.1292  226.78
 2N2          x 0 0
-O1           0.7500  202.00
+O1              0.7500  22.00
 OO1          x 0 0
-P1              0.2640  240.34
+P1              0.2640  60.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.3500  99.00
+S2              0.3500  279.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -23471,8 +23493,8 @@ MNUS2        x 0 0
 # np203_no: 473c
 # np203_zone: -0800
 # stream_type: reversing
-# flood_dir: 056
-# ebb_dir: 236
+# flood_dir: 236
+# ebb_dir: 056
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -23488,29 +23510,30 @@ MNUS2        x 0 0
 # note: 20260906 country "Singapore" -> "Malaysia" nach dem Namen berichtigt,
 # note: -- damit auch die Region "South East" -> "Johor".
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Falloden Hall Shoal (Singapore Strait), Malaysia Current
 +08:00 :Asia/Singapore
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.8900  254.00
-K2           0.1161  121.00
+K1              0.8900  74.00
+K2              0.1161  301.00
 L2           x 0 0
 M1           x 0 0
-M2           1.0900  79.00
+M2              1.0900  259.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.2071  56.49
+N2              0.2071  236.49
 2N2          x 0 0
-O1           0.7200  196.00
+O1              0.7200  16.00
 OO1          x 0 0
-P1              0.2937  253.34
+P1              0.2937  73.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.4300  121.00
+S2              0.4300  301.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -23672,8 +23695,8 @@ MNUS2        x 0 0
 # np203_no: 473d
 # np203_zone: -0700
 # stream_type: reversing
-# flood_dir: 000
-# ebb_dir: 180
+# flood_dir: 180
+# ebb_dir: 000
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -23687,29 +23710,30 @@ MNUS2        x 0 0
 # state: Kepulauan Riau
 # admin1_quelle: Ufer 5.4 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Tanjung Talu / Ngenang, Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           1.6000  216.00
-K2           0.0999  183.00
+K1              1.6000  36.00
+K2              0.0999  3.00
 L2           x 0 0
 M1           x 0 0
-M2           1.1500  120.00
+M2              1.1500  300.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.2185  86.23
+N2              0.2185  266.23
 2N2          x 0 0
-O1           1.0100  145.00
+O1              1.0100  325.00
 OO1          x 0 0
-P1              0.5280  215.43
+P1              0.5280  35.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.3700  183.00
+S2              0.3700  3.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -23871,8 +23895,8 @@ MNUS2        x 0 0
 # np203_no: 474
 # np203_zone: -0700
 # stream_type: reversing
-# flood_dir: 060
-# ebb_dir: 240
+# flood_dir: 240
+# ebb_dir: 060
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -23886,29 +23910,30 @@ MNUS2        x 0 0
 # state: Pulau Garang-baru (Riau)
 # admin1_quelle: Name
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 East of Pantai Cakang / Pulau Garang-baru, Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.8200  264.00
-K2           0.0486  182.00
+K1              0.8200  84.00
+K2              0.0486  2.00
 L2           x 0 0
 M1           x 0 0
-M2           0.5100  126.00
+M2              0.5100  306.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0969  95.98
+N2              0.0969  275.98
 2N2          x 0 0
-O1           0.5600  195.00
+O1              0.5600  15.00
 OO1          x 0 0
-P1              0.2706  263.43
+P1              0.2706  83.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1800  182.00
+S2              0.1800  2.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -24070,8 +24095,8 @@ MNUS2        x 0 0
 # np203_no: 474a
 # np203_zone: -0700
 # stream_type: reversing
-# flood_dir: 100
-# ebb_dir: 280
+# flood_dir: 280
+# ebb_dir: 100
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -24085,29 +24110,30 @@ MNUS2        x 0 0
 # state: Kepulauan Riau
 # admin1_quelle: Ufer 1.2 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Pulau Ngalih / Pulau Kelong, Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.4600  202.00
-K2           0.0675  78.00
+K1              0.4600  22.00
+K2              0.0675  258.00
 L2           x 0 0
 M1           x 0 0
-M2           0.6400  32.00
+M2              0.6400  212.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.1216  7.34
+N2              0.1216  187.34
 2N2          x 0 0
-O1           0.3500  145.00
+O1              0.3500  325.00
 OO1          x 0 0
-P1              0.1518  201.43
+P1              0.1518  21.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2500  78.00
+S2              0.2500  258.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -24269,8 +24295,8 @@ MNUS2        x 0 0
 # np203_no: 475
 # np203_zone: -0700
 # stream_type: reversing
-# flood_dir: 022
-# ebb_dir: 202
+# flood_dir: 202
+# ebb_dir: 022
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -24282,29 +24308,30 @@ MNUS2        x 0 0
 # state: Kepulauan Riau
 # admin1_quelle: Ufer 17.2 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Bulungkor (Pulau Lingga), Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           1.9600  250.00
-K2           0.0270  275.00
+K1              1.9600  70.00
+K2              0.0270  95.00
 L2           x 0 0
 M1           x 0 0
-M2           0.3000  182.00
+M2              0.3000  2.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0570  132.15
+N2              0.0570  312.15
 2N2          x 0 0
-O1           1.5700  183.00
+O1              1.5700  3.00
 OO1          x 0 0
-P1              0.6468  249.43
+P1              0.6468  69.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1000  275.00
+S2              0.1000  95.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -24665,8 +24692,8 @@ MNUS2        x 0 0
 # np203_no: 476
 # np203_zone: -0700
 # stream_type: reversing
-# flood_dir: 000
-# ebb_dir: 180
+# flood_dir: 180
+# ebb_dir: 000
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -24680,29 +24707,30 @@ MNUS2        x 0 0
 # state: Jambi
 # admin1_quelle: Ufer 25.4 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Northeast of Kuala Tungkal (Berhala Strait), Indonesia Current
 +07:00 :Asia/Jakarta
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.5100  232.00
-K2           0.1512  237.00
+K1              0.5100  52.00
+K2              0.1512  57.00
 L2           x 0 0
 M1           x 0 0
-M2           1.4600  174.00
+M2              1.4600  354.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.2774  140.23
+N2              0.2774  320.23
 2N2          x 0 0
-O1           0.4500  115.00
+O1              0.4500  295.00
 OO1          x 0 0
-P1              0.1683  231.43
+P1              0.1683  51.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.5600  237.00
+S2              0.5600  57.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -24864,8 +24892,8 @@ MNUS2        x 0 0
 # np203_no: 485
 # np203_zone: -0700
 # stream_type: reversing
-# flood_dir: 045
-# ebb_dir: 225
+# flood_dir: 225
+# ebb_dir: 045
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # note: 20260917 umbenannt (Oliver): "Pulau Cebia (Bangka Strait), Kepulauan Riau, Indonesia Current" -> "Pulau Cebia (Selat Bangka), Kepulauan Riau, Indonesia Current".
@@ -24880,29 +24908,30 @@ MNUS2        x 0 0
 # state: Bangka-Belitung
 # admin1_quelle: Ufer 34.2 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Pulau Cebia (Selat Bangka), Kepulauan Riau, Indonesia Current
 +07:00 :Asia/Jakarta
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.5500  257.00
-K2           0.0189  342.00
+K1              0.5500  77.00
+K2              0.0189  162.00
 L2           x 0 0
 M1           x 0 0
-M2           0.1500  232.00
+M2              0.1500  52.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0285  173.04
+N2              0.0285  353.04
 2N2          x 0 0
-O1           0.3700  189.00
+O1              0.3700  9.00
 OO1          x 0 0
-P1              0.1815  256.43
+P1              0.1815  76.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.0700  342.00
+S2              0.0700  162.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -26652,8 +26681,8 @@ MNUS2        x 0 0
 # np203_no: 511
 # np203_zone: -0800
 # stream_type: reversing
-# flood_dir: 060
-# ebb_dir: 240
+# flood_dir: 240
+# ebb_dir: 060
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -26667,29 +26696,30 @@ MNUS2        x 0 0
 # state: Sabah
 # admin1_quelle: Ufer 2.8 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Teluk Sandakan, Malaysia Current
 +08:00 :Asia/Kuching
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.3400  51.00
-K2           0.1107  101.00
+K1              0.3400  231.00
+K2              0.1107  281.00
 L2           x 0 0
 M1           x 0 0
-M2           0.6600  41.00
+M2              0.6600  221.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.1254  8.84
+N2              0.1254  188.84
 2N2          x 0 0
-O1           0.3200  343.00
+O1              0.3200  163.00
 OO1          x 0 0
-P1              0.1122  50.34
+P1              0.1122  230.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.4100  101.00
+S2              0.4100  281.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
@@ -27648,8 +27678,8 @@ MNUS2        x 0 0
 # np203_no: 535
 # np203_zone: -0700
 # stream_type: reversing
-# flood_dir: 035
-# ebb_dir: 215
+# flood_dir: 215
+# ebb_dir: 035
 # datum: Z0 residual current (knots)
 # !units: knots
 # !longitude: 105.916667
@@ -27660,24 +27690,25 @@ MNUS2        x 0 0
 # state: Banten
 # admin1_quelle: Ufer 5.7 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Sangiang (Selat Sunda), Indonesia Current
 +07:00 :Asia/Jakarta
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           1.1000  11.00
+K1              1.1000  191.00
 K2           x 0 0
 L2           x 0 0
 M1           x 0 0
-M2           0.5000  275.00
+M2              0.5000  95.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
 N2           x 0 0
 2N2          x 0 0
-O1           0.6000  351.00
+O1              0.6000  171.00
 OO1          x 0 0
-P1              0.3630  10.43
+P1              0.3630  190.43
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
