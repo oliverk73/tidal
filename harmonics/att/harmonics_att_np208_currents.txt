@@ -15004,6 +15004,7 @@ MNUS2
 # admin1_quelle: Ufer 1.5 km
 # note: 20261016 Namensformat berichtigt (vorher "Stretto di Messina (N) Current"): Land bzw. Klammer-Regel (Oliver).
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Stretto di Messina (N), Italy Current
 +01:00 :Europe/Rome
 -0.1700 knots
@@ -15014,7 +15015,7 @@ L2           x 0 0
 M1           x 0 0
 M2           2.6000  129.00
 M3           x 0 0
-M4           0.0210  184.00
+M4           0.1420  82.00
 M6           x 0 0
 M8           x 0 0
 N2           0.4940  119.35
@@ -15199,6 +15200,7 @@ MNUS2        x 0 0
 # admin1_quelle: Ufer 1.4 km
 # note: 20261016 Namensformat berichtigt (vorher "Stretto di Messina (S) Current"): Land bzw. Klammer-Regel (Oliver).
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Stretto di Messina (S), Italy Current
 +01:00 :Europe/Rome
 -0.7000 knots
@@ -15209,7 +15211,7 @@ L2           x 0 0
 M1           x 0 0
 M2           3.2000  129.00
 M3           x 0 0
-M4           0.0210  184.00
+M4           0.2150  82.00
 M6           x 0 0
 M8           x 0 0
 N2           0.6080  119.35

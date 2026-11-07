@@ -131,8 +131,11 @@ def ref_konstanten():
             if r[gi] != '-' and float(r[hi]) > 0:
                 con[k] = (float(r[hi]), float(r[gi]))
         for k, gi, hi in (('M4', 12, 13), ('M6', 14, 15)):
-            if r[gi] != '-':
-                con[k] = (float(r[hi]), float(r[gi]))
+            if r[gi] != '-' and 'M2' in con:
+                # S.W.-Correction = FAKTOR: H = F*H_M2^n, g = n*g_M2 + f (7.11.2026 berichtigt)
+                n = 2 if k == 'M4' else 3
+                con[k] = (round(float(r[hi]) * con['M2'][0] ** n, 4),
+                          round((n * con['M2'][1] + float(r[gi])) % 360, 2))
         if 'M2' in con and 'S2' in con:
             con['N2'], con['K2'] = inferenz(con['M2'], con['S2'])
         out[att] = (con, r[2])          # r[2] = Buchzone des Bezugshafens

@@ -61,6 +61,8 @@ STATIONS = [
 
 def block(s):
     con=infer_n2k2(s['con'])
+    if 'M4' in con:   # S.W.-Correction = Faktor: H4=F4*H_M2^2, g4=2*g_M2+f4 (7.11.2026)
+        F4,f4=con['M4']; H,g=con['M2']; con['M4']=(round(F4*H*H,4),(2*g+f4)%360)
     out=['# BEGIN HOT COMMENTS',
          f'# country: {s["country"]}',
          '# source: ADMIRALTY Tide Tables Vol.8 (NP208, 2026), Part IIIa Tidal Stream Harmonic Constants',

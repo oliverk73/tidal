@@ -15005,6 +15005,7 @@ MNUS2
 # region: Khulna
 # admin1_quelle: Polygon
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Joymoni (Pasur River), Bangladesh
 +06:00 :Asia/Dhaka
 2.1000 meters
@@ -15015,8 +15016,8 @@ x 0 0
 x 0 0
 M2              0.8400  18.95
 x 0 0
-M4              0.0460  55.90
-M6              0.0430  326.84
+M4              0.0287  293.90
+M6              0.0212  143.84
 x 0 0
 N2              0.1501  357.61
 x 0 0
@@ -15201,6 +15202,7 @@ x 0 0
 # region: Khulna
 # admin1_quelle: Polygon
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Chalna (Pasur River), Bangladesh
 +06:00 :Asia/Dhaka
 2.1000 meters
@@ -15211,8 +15213,8 @@ x 0 0
 x 0 0
 M2              0.8150  48.41
 x 0 0
-M4              0.0460  114.83
-M6              0.0430  55.24
+M4              0.0287  352.83
+M6              0.0212  232.24
 x 0 0
 N2              0.1501  26.53
 x 0 0
@@ -15397,6 +15399,7 @@ x 0 0
 # state: Mon
 # admin1_quelle: Ufer 1.7 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Feronia Crossing (Thanlwin River), Myanmar
 +06:30 :Asia/Yangon
 2.7000 meters
@@ -15407,8 +15410,8 @@ x 0 0
 x 0 0
 M2              1.6900  82.82
 x 0 0
-M4              0.0288  214.63
-M6              0.0102  340.45
+M4              0.0933  52.63
+M6              0.0595  277.45
 x 0 0
 N2              0.3243  60.07
 x 0 0
@@ -15593,6 +15596,7 @@ x 0 0
 # state: Mon
 # admin1_quelle: Polygon
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Ye (Town), Myanmar
 +06:30 :Asia/Yangon
 2.6000 meters
@@ -15603,8 +15607,8 @@ x 0 0
 x 0 0
 M2              1.1409  19.29
 x 0 0
-M4              0.0137  87.59
-M6              0.0034  149.88
+M4              0.0444  285.59
+M6              0.0198  86.88
 x 0 0
 N2              0.2241  357.74
 x 0 0
@@ -15791,6 +15795,7 @@ x 0 0
 # note: 20261015 Nebenkonstituenten aus NOAA-Satz gleicher Position (cptt, archiviert) ueber M2/S2/K1/O1
 # note: auf diesen Satz umgerechnet; M2/S2/K1/O1 aus Admiralty unveraendert (Oliver).
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Myin Kwa Aw (Horseshoe Bay), Myanmar
 +06:30 :Asia/Yangon
 3.1000 meters
@@ -15801,8 +15806,8 @@ x 0 0
 x 0 0
 M2              1.2585  294.48
 x 0 0
-M4              0.0109  213.96
-M6              0.0028  10.44
+M4              0.0304  95.96
+M6              0.0130  193.44
 x 0 0
 N2              0.2391  269.94
 x 0 0
@@ -15990,6 +15995,7 @@ x 0 0
 # admin1_quelle: Name
 # note: 20260911 Zeit berichtigt (+60 min): Builder zog den Zonenwechsel (-0630 -> -0530) ab, obwohl er sich im Rahmen der Nebenstation aufhebt.
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Hutbay Jetty (Little Andaman), Andaman and Nicobar, India
 +05:30 :Asia/Kolkata
 1.1000 meters
@@ -16000,7 +16006,7 @@ x 0 0
 x 0 0
 M2              0.5708  250.08
 x 0 0
-M4              0.0116  88.17
+M4              0.0052  290.17
 x 0 0
 x 0 0
 N2              0.1082  229.22
@@ -16188,6 +16194,7 @@ x 0 0
 # note: 20260911 Zeit berichtigt (+60 min): Builder zog den Zonenwechsel (-0800 -> -0700) ab, obwohl er sich im Rahmen der Nebenstation aufhebt.
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 # note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Ko Phetra/Ko Don: Buch skalierte sie mit dem Halbtagsfaktor.
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Goh Sukorn (Pulau Babi), Trang, Thailand
 +07:00 :Asia/Bangkok
 1.5000 meters
@@ -16198,8 +16205,8 @@ x 0 0
 x 0 0
 M2              0.8003  316.88
 x 0 0
-M4              0.1101  108.78
-M6              0.1229  321.66
+M4              0.0423  158.78
+M6              0.0293  36.66
 x 0 0
 N2              0.1488  295.12
 x 0 0
@@ -16384,6 +16391,7 @@ x 0 0
 # state: Kedah
 # admin1_quelle: Ufer 0.8 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Teluk Datai (Langkawi), Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.6500 meters
@@ -16394,8 +16402,8 @@ x 0 0
 x 0 0
 M2              0.7742  349.74
 x 0 0
-M4              0.1011  174.47
-M6              0.1082  60.21
+M4              0.0389  224.47
+M6              0.0258  135.21
 x 0 0
 N2              0.1426  327.35
 x 0 0
@@ -16581,6 +16589,7 @@ x 0 0
 # state: Perlis
 # admin1_quelle: Ufer 2.3 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Kuala Perlis, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.8700 meters
@@ -16591,8 +16600,8 @@ x 0 0
 x 0 0
 M2              0.8263  5.68
 x 0 0
-M4              0.1195  206.35
-M6              0.1390  108.03
+M4              0.0459  256.35
+M6              0.0331  183.03
 x 0 0
 N2              0.1550  342.99
 x 0 0
@@ -16778,6 +16787,7 @@ x 0 0
 # admin1_quelle: Ufer 1.9 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 # note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Lumut/Bagan Datuk/Teluk Intan: Buch skalierte sie mit dem Halbtagsfaktor.
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Pulau Katak, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.6000 meters
@@ -16788,8 +16798,8 @@ x 0 0
 x 0 0
 M2              0.7338  116.63
 x 0 0
-M4              0.0080  148.26
-M6              0.0030  333.89
+M4              0.0150  100.26
+M6              0.0077  81.89
 x 0 0
 N2              0.1363  91.11
 x 0 0
@@ -16975,6 +16985,7 @@ x 0 0
 # admin1_quelle: Ufer 61.7 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 # note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Lumut/Bagan Datuk: Buch skalierte sie mit dem Halbtagsfaktor.
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Pulau Jarak, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.1000 meters
@@ -16985,8 +16996,8 @@ x 0 0
 x 0 0
 M2              0.5871  86.68
 x 0 0
-M4              0.0053  88.36
-M6              0.0017  244.04
+M4              0.0099  40.36
+M6              0.0044  352.04
 x 0 0
 N2              0.1116  61.72
 x 0 0
@@ -17171,6 +17182,7 @@ x 0 0
 # state: Selangor
 # admin1_quelle: Ufer 1.5 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Kuala Bernam, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.1700 meters
@@ -17181,8 +17193,8 @@ x 0 0
 x 0 0
 M2              0.9783  133.30
 x 0 0
-M4              0.0138  181.59
-M6              0.0069  23.89
+M4              0.0259  133.59
+M6              0.0177  131.89
 x 0 0
 N2              0.1797  107.46
 x 0 0
@@ -17367,6 +17379,7 @@ x 0 0
 # state: Johor
 # admin1_quelle: Ufer 1.7 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Tanjung Johor Lighthouse, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.5500 meters
@@ -17377,8 +17390,8 @@ x 0 0
 x 0 0
 M2              0.7000  278.68
 x 0 0
-M4              0.0513  251.36
-M6              0.0174  66.05
+M4              0.0328  113.36
+M6              0.0089  219.05
 x 0 0
 N2              0.1330  251.58
 x 0 0
@@ -17563,6 +17576,7 @@ x 0 0
 # state: Johor
 # admin1_quelle: Ufer 0.6 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Tanjung Piai, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.0000 meters
@@ -17573,8 +17587,8 @@ x 0 0
 x 0 0
 M2              0.9218  329.35
 x 0 0
-M4              0.0248  14.70
-M6              0.0388  240.04
+M4              0.0159  304.70
+M6              0.0199  135.04
 x 0 0
 N2              0.1784  299.79
 x 0 0
@@ -17762,6 +17776,7 @@ x 0 0
 # admin1_quelle: Polygon
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
 # note: 20261105 Tagestiden (K1, O1, P1) aus FES2022b, geeicht an Kukup/Sultan Shoal/Jurong Wharf: Buch skalierte sie mit dem Halbtagsfaktor.
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Tanjung Pelepas, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.0500 meters
@@ -17772,8 +17787,8 @@ x 0 0
 x 0 0
 M2               0.8104  329.83
 x 0 0
-M4              0.0196  15.66
-M6              0.0273  241.49
+M4              0.0125  305.66
+M6              0.0140  136.49
 x 0 0
 N2               0.1364  300.26
 x 0 0
@@ -17958,6 +17973,7 @@ x 0 0
 # state: Johor
 # admin1_quelle: Ufer 2.3 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Tanjung Bunga, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.9000 meters
@@ -17968,8 +17984,8 @@ x 0 0
 x 0 0
 M2              0.8716  331.04
 x 0 0
-M4              0.0196  18.08
-M6              0.0273  245.12
+M4              0.0125  308.08
+M6              0.0140  140.12
 x 0 0
 N2              0.1586  301.44
 x 0 0
@@ -18154,6 +18170,7 @@ x 0 0
 # state: Johor
 # admin1_quelle: Ufer 2.1 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Putri Narrows, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.1000 meters
@@ -18164,8 +18181,8 @@ x 0 0
 x 0 0
 M2              0.9207  336.84
 x 0 0
-M4              0.0230  29.67
-M6              0.0347  262.51
+M4              0.0147  319.67
+M6              0.0178  157.51
 x 0 0
 N2              0.1718  307.13
 x 0 0
@@ -18350,6 +18367,7 @@ x 0 0
 # state: Johor
 # admin1_quelle: Ufer 0.9 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Johor Bahru (West Side of Causeway), Malaysia
 +08:00 :Asia/Kuala_Lumpur
 2.2000 meters
@@ -18360,8 +18378,8 @@ x 0 0
 x 0 0
 M2              0.9933  344.81
 x 0 0
-M4              0.0267  45.61
-M6              0.0433  286.42
+M4              0.0171  335.61
+M6              0.0222  181.42
 x 0 0
 N2              0.1850  314.95
 x 0 0
@@ -18546,6 +18564,7 @@ x 0 0
 # state: Johor
 # admin1_quelle: Ufer 2.4 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261107 M4/M6 berichtigt: S.W.-Correction ist Faktor (H=F*H_M2^n, g=n*g_M2+f), war als Amplitude eingetragen
 Sungai Changi, Malaysia
 +08:00 :Asia/Kuala_Lumpur
 1.8000 meters
@@ -18556,8 +18575,8 @@ x 0 0
 x 0 0
 M2              0.8000  324.52
 x 0 0
-M4              0.0180  5.03
-M6              0.0240  225.55
+M4              0.0115  295.03
+M6              0.0123  120.55
 x 0 0
 N2              0.1520  295.05
 x 0 0
