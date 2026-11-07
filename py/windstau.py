@@ -130,6 +130,28 @@ def fuer(lat, lon, noaa_id=None):
     return dict(t=d['t'], z=z, lauf=str(d['lauf']), punkt=str(d['namen'][i]), km=float(km[i]))
 
 
+CMEMS = os.path.join(ROOT, 'water_levels/cmems_ssh/aktuell.npz')
+_CM = {}
+
+
+def fuer_satz(datei, satz, lat, lon, noaa_id=None):
+    """Copernicus (Ostsee/Mittelmeer/Schwarzes Meer, py/windstau_cmems.py) fuer genau diesen Satz, sonst STOFS."""
+    if os.path.exists(CMEMS):
+        m = os.path.getmtime(CMEMS)
+        if _CM.get('m') != m:
+            d = np.load(CMEMS, allow_pickle=True)
+            _CM.update(m=m, idx={k: i for i, k in enumerate(d['schluessel'])}, t=d['t'], z=d['z'], lauf=str(d['lauf']))
+        i = _CM['idx'].get(f'{os.path.basename(datei)}|{satz}')
+        if i is not None:
+            z = _CM['z'][:, i].astype(float)
+            if np.isfinite(z).sum() > 24:
+                return dict(t=_CM['t'], z=z, lauf=_CM['lauf'], punkt='Copernicus Marine', km=0.0, quelle='cmems')
+    r = fuer(lat, lon, noaa_id)
+    if r:
+        r['quelle'] = 'stofs'
+    return r
+
+
 def main(argv):
     lauf = laden()
     print('STOFS:', lauf.isoformat() if lauf else 'unveraendert/kein neuer Lauf', '->', DATEI)

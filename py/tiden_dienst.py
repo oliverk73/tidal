@@ -111,7 +111,8 @@ def svg(name, source, tag, einheit='m', utc=False):
     z = None
     if not utc and D.saetze[name].zone.lstrip(':').upper() == 'UTC':
         z = ortszone(D, name)
-    return G.svg(D, name, tag, einheit, utc, zone=z, modell=_grafik_modell(D, name), wetter=_windstau(D, name))
+    w = _windstau(D, name)
+    return G.svg(D, name, tag, einheit, utc, zone=z, modell=_grafik_modell(D, name), wetter=w[:2] if w else None)
 
 
 _WINDSTAU_LAEUFT = []
@@ -147,12 +148,12 @@ def _windstau(D, name):
     try:
         _windstau_auffrischen()
         import windstau as W
-        r = W.fuer(float(s.hot['!latitude']), float(s.hot['!longitude']), s.hot.get('noaa_station_id'))
+        r = W.fuer_satz(D.pfad, name, float(s.hot['!latitude']), float(s.hot['!longitude']), s.hot.get('noaa_station_id'))
         if r is None:
             return None
         import numpy as np
         ok = np.isfinite(r['z'])
-        return r['t'][ok], r['z'][ok]
+        return r['t'][ok], r['z'][ok], r.get('quelle', 'stofs'), r['lauf']
     except Exception:  # noqa: BLE001
         return None
 
@@ -166,18 +167,17 @@ def windstau_hinweis(name, source, utc=False):
         w = _windstau(D, name)
         if w is None:
             return None
-        t, z = w
+        t, z, quelle, lauf = w
         jetzt = time.time()
         m = t >= jetzt
         if m.sum() < 10:
             return None
         zone_ = zone(D, name, utc) if D.saetze[name].zone.lstrip(':').upper() != 'UTC' or utc else (ortszone(D, name) or dt.timezone.utc)
         ih, il = int(np.argmax(z[m])), int(np.argmin(z[m]))
-        f = lambda x: dt.datetime.fromtimestamp(x, zone_).strftime('%a %H:%M')   # noqa: E731
-        import windstau as W
+        f = lambda x: dt.datetime.fromtimestamp(x, zone_).strftime('%a %d %b %H:%M')   # noqa: E731
         return dict(jetzt=float(np.interp(jetzt, t, z)), hoch=float(z[m][ih]), hoch_zeit=f(t[m][ih]),
-                    tief=float(z[m][il]), tief_zeit=f(t[m][il]), bis=f(t[-1]),
-                    lauf=W._daten()['lauf'].item()[:16].replace('T', ' ') + ' UTC')
+                    tief=float(z[m][il]), tief_zeit=f(t[m][il]), bis=f(t[-1]), quelle=quelle,
+                    lauf=str(lauf)[:16].replace('T', ' ') + ' UTC')
     except Exception:  # noqa: BLE001
         return None
 
