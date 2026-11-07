@@ -155,6 +155,78 @@ STATIONS = [
 ]
 
 
+# ---- Ausgabe 2009 (NP204-09), S.338-339: tide_tables/att/733374238-Admirality-Tide-Table_np204.pdf,
+# PDF-Seiten 47/48 (200 dpi). S.338 ist der Anfang von Part IIIa. China/Japan dort zahlengleich mit
+# dem Foto-Band; USA im Foto-Band neuer (918-930a geaendert) -> fuer diese gilt der Foto-Band.
+# Kanada steht nur in 2009. Hier nur Stationen, die der Foto-Band nicht hat.
+Q09 = 'ADMIRALTY Tide Tables Vol.4 (NP204-09), Part IIIa Tidal Streams, p.338-339'
+PG, SB, AUQ, AUS, CA, CL = ('Pacific/Port_Moresby', 'Pacific/Guadalcanal', 'Australia/Brisbane',
+                            'Australia/Adelaide', 'America/Vancouver', 'America/Punta_Arenas')
+# 582: Z0 "v" - SEASONAL CHANGES IN CURRENT (Z0), Kn, jeweils am 1. des Monats Jan..Dez
+Z0_582 = [1.1, 1.5, 1.2, 0.4, -0.5, -1.0, -1.0, -0.8, -0.6, -0.5, -0.2, 0.4]
+STATIONS_09 = [
+    ROT('556', dm(-10, 12.5), dm(148, 15.8),
+        0.00, K((163, 0.03), (131, 0.02), (347, 0.13), (308, 0.06)),
+        0.00, K((188, 0.18), (156, 0.10), (230, 0.16), (191, 0.07)), '-1000', PG, 'Papua New Guinea',
+        'Buch: Data approximate'),
+    R('556a', dm(-10, 16.4), dm(148, 26.1), 260, 80, 0.00,
+      K((106, 0.21), (74, 0.12), (20, 0.34), (341, 0.15)), '-1000', PG, 'Papua New Guinea',
+      'Buch: Data approximate'),
+    ROT('564', dm(-7, 14.1), dm(157, 50.2),
+        0.00, K((320, 1.24), (10, 1.24), (268, 0.21), (233, 0.09), (27, 0.026)),
+        0.00, K((303, 0.04), (353, 0.04), (101, 0.22), (66, 0.09)), '-1100', SB, 'Solomon Islands',
+        'Buch: Data approximate'),
+    ROT('564a', dm(-7, 23.9), dm(157, 55.4),
+        0.00, K((309, 0.63), (359, 0.63), (183, 0.04), (148, 0.02), (27, 0.160)),
+        0.00, K((152, 0.53), (202, 0.53), (88, 0.05), (53, 0.02), (290, 0.292)), '-1100', SB, 'Solomon Islands',
+        'Buch: Data approximate'),
+    ROT('564b', dm(-7, 30.7), dm(157, 44.9),
+        0.00, K((20, 0.28), (70, 0.28), (176, 0.09), (141, 0.04), (11, 0.494)),
+        0.00, K((312, 0.18), (2, 0.18), (247, 0.14), (212, 0.06)), '-1100', SB, 'Solomon Islands',
+        'Buch: Data approximate'),
+    R('582', dm(-10, 30.0), dm(142, 13.0), 80, 260, 0.00,
+      K((191, 3.28), (204, 1.10), (187, 0.63), (119, 0.70)), '-1000', AUQ, 'Australia',
+      'Z0 im Buch jahreszeitlich (v): Jan +1.1 .. Feb +1.5 .. Jun/Jul -1.0 kn; als SA/SSA eingetragen'),
+    R('616', dm(-35, 30.0), dm(138, 8.0), 30, 210, 0.00,
+      K((2, 0.90), (89, 0.77), (330, 0.34), (272, 0.12)), '-0930', AUS, 'Australia',
+      'Buch: Data approximate'),
+    R('906', dm(48, 14.0), dm(-123, 32.0), 91, 271, -0.44,
+      K((79, 1.37), (96, 0.38), (83, 0.84), (65, 0.45)), '+0800', CA, 'Canada'),
+    R('906a', dm(48, 27.0), dm(-124, 35.0), 115, 290, -0.50,
+      K((49, 0.90), (72, 0.19), (64, 0.45), (58, 0.22), (2, 0.028), (2, 0.041)), '+0800', CA, 'Canada'),
+    R('907', dm(48, 52.1), dm(-123, 18.3), 45, 225, -0.28,
+      K((45, 3.33), (69, 0.81), (43, 1.19), (28, 0.64)), '+0800', CA, 'Canada'),
+    R('909', dm(50, 8.0), dm(-125, 21.0), 180, 0, -0.22,
+      K((61, 9.06), (77, 2.26), (37, 1.96), (35, 1.05), (256, 0.003)), '+0800', CA, 'Canada'),
+    R('913', dm(49, 18.9), dm(-123, 8.2), 135, 315, -0.15,
+      K((90, 2.70), (114, 0.66), (91, 1.40), (76, 0.76)), '+0800', CA, 'Canada'),
+    R('913a', dm(49, 17.7), dm(-123, 1.3), 90, 270, -0.07,
+      K((87, 2.76), (111, 0.67), (88, 1.26), (73, 0.68)), '+0800', CA, 'Canada'),
+    R('989', dm(-52, 45.0), dm(-70, 28.0), 218, 38, -0.24,
+      K((325, 4.53), (350, 1.06), (203, 0.22), (82, 0.06), (299, 0.006)), '+0400', CL, 'Chile'),
+    R('989a', dm(-52, 34.5), dm(-69, 40.0), 200, 29, -0.22,
+      K((301, 3.68), (348, 0.79), (126, 0.23), (79, 0.09), (89, 0.023)), '+0400', CL, 'Chile'),
+    R('989b', dm(-52, 26.8), dm(-68, 37.5), 301, 112, 0.00,
+      K((223, 1.01), (274, 0.21), (10, 0.06), (341, 0.05), (283, 0.030)), '+0400', CL, 'Chile'),
+]
+for _s in STATIONS_09:
+    _s['quelle'] = Q09
+STATIONS += STATIONS_09
+
+
+def saisonal_582():
+    """Jahresgang des Reststroms als SA/SSA (Kn, Phase g in der Gleichgewichtsform):
+    v = A_sa cos(h - g_sa) + A_ssa cos(2h - g_ssa), h = mittlere Sonnenlaenge."""
+    import numpy as np
+    h = np.radians(280.46 + 0.9856474 * (np.arange(12) * 365.2422 / 12 + 0.5))
+    A = np.column_stack([np.ones(12), np.cos(h), np.sin(h), np.cos(2 * h), np.sin(2 * h)])
+    c = np.linalg.lstsq(A, np.array(Z0_582), rcond=None)[0]
+    sa = (math.degrees(math.atan2(c[2], c[1])) % 360, math.hypot(c[1], c[2]))
+    ssa = (math.degrees(math.atan2(c[4], c[3])) % 360, math.hypot(c[3], c[4]))
+    rest = np.array(Z0_582) - A @ c
+    return float(c[0]), sa, ssa, float(np.abs(rest).max())
+
+
 def infer(const):
     """N2/K2/P1 nach Gleichgewicht; Werte (g, H)."""
     out = dict(const)
@@ -225,6 +297,14 @@ NAMEN = {
     '771c': 'Itoman (SW off), Okinawa, Japan Current',
     '774a': 'Osumi Kaikyo (17 km SE of Odomari), Kagoshima, Japan Current',
     '779': 'Iyo Nada (N of Kushi), Ehime, Japan Current',
+    # Ausgabe 2009
+    '556': 'Kaligola Point (6 km S), Central, Papua New Guinea Current',
+    '556a': 'Kaligola Point (23 km SE), Central, Papua New Guinea Current',
+    '564': 'Manning Strait (north entrance), Choiseul, Solomon Islands Current',
+    '564a': 'Manning Strait, Isabel, Solomon Islands Current',
+    '564b': 'Wagina Island (5 km SSE, Manning Strait), Choiseul, Solomon Islands Current',
+    '616': 'Second Valley (8 km W, Gulf St Vincent), South Australia, Australia Current',
+    '989a': 'Primera Angostura (SW entrance, Estrecho de Magallanes), Chile Current',
 }
 
 # Aufgenommen werden nur Orte ohne gleichwertigen Satz im Bestand (Abgleich 7.11.2026,
@@ -236,7 +316,10 @@ NAMEN = {
 #   Weitere Dubletten: 774 = Yakushima Kaikyo SW of Kumano (JCG, r 0.94, 5 min, x1.06),
 #   782 = Tsurushima Suido (NOAA, r 0.97, 15 min, x1.06), 779a = 779 (r 0.99),
 #   766a = 766b (r 0.99; 766b liegt in der Engstelle an der Saikai-Bruecke).
-AUFNEHMEN = ['703', '703a', '766', '766b', '771b', '771c', '774a', '779']
+AUFNEHMEN = ['703', '703a', '766', '766b', '771b', '771c', '774a', '779',
+             # Ausgabe 2009 (7.11.2026): Dubletten 582 = Hammond Rock (r 0.96), Kanada 906-913a =
+             # CHS/NOAA (r 0.98-0.997), 989 = Segunda Angostura (r -0.985), 989b = Punta Wreck (0.99)
+             '556', '556a', '564', '564a', '564b', '616', '989a']
 
 # Die M2-Hauptachse hat kein Vorzeichen; Probe wie py/flutrichtung_pruefen.py (Strom-
 # gegen Wasserstandsphase) und Vorzeichen der JCG-Nachbarn (7.11.2026):
@@ -245,6 +328,7 @@ DREHEN = {
     '771b': 'Probe drehen d=+119/+117; JCG Kerama Kaikyo r -0.77/-0.89',
     '774a': 'Probe d=+160/-172; JCG Osumi Kaikyo r -0.74..-0.85',
     '779': 'Probe drehen d=+138/+127; JCG Iyo Nada r -0.95/-0.97',
+    '556': 'Probe drehen d=+93/+82',
 }
 
 
@@ -252,13 +336,17 @@ def block(st, order):
     a = []
     a.append('# BEGIN HOT COMMENTS\n')
     a.append(f"# country: {st['land'] if st['land'] not in ('Alaska', 'Washington', 'California') else 'USA'}\n")
-    a.append(f'# source: {SOURCE}\n')
+    a.append(f"# source: {st.get('quelle', SOURCE)}\n")
     a.append('# station_type: current\n')
     a.append(f"# att_number: {st['no']}\n")
     a.append(f"# att_zone: {st['zone']}\n")
     a.append(f"# stream_type: {st['type']}\n")
     if st['type'] == 'reversing':
         const = infer(st['const']); datum = st['z0']
+        if st['no'] == '582':
+            z0, sa, ssa, rest = saisonal_582()
+            const['SA'], const['SSA'], datum = (round(sa[0], 2), round(sa[1], 4)), (round(ssa[0], 2), round(ssa[1], 4)), z0
+            a.append(f'# note: Jahresgang Z0 als SA {sa[1]:.2f} kn/{sa[0]:.0f}, SSA {ssa[1]:.2f} kn/{ssa[0]:.0f}; Restfehler max {rest:.2f} kn\n')
         a.append(f"# flood_dir: {st['flood']:03d}\n# ebb_dir: {st['ebb']:03d}\n")
     else:
         flut, c, ell = project_rotary(st['n'], st['e'])
