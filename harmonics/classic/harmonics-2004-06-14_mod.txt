@@ -50953,6 +50953,7 @@ x 0 0
 # province: Morobe
 # admin1_quelle: Ufer 0.9 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261108 O1-Amplitude 0.0700 -> 0.1450 (= K1 x 0.57 wie Dreger Harbour/AHO; FES 0.131): O1/K1 war 0.27 statt ~0.55 in der Region, dieselbe Zeile hatte schon die falsche Phase 272. Phase unveraendert.
 Finsch Harbour, Papua New Guinea
 +10:00 :Pacific/Port_Moresby
 0.4700 meters
@@ -50968,7 +50969,7 @@ x 0 0
 x 0 0
 N2              0.0120  120.00
 x 0 0
-O1              0.0700  175.00
+O1              0.1450  175.00
 x 0 0
 P1              0.0842  204.18
 x 0 0
