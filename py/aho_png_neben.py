@@ -108,7 +108,7 @@ def fes_rec(lat, lon, fes):
     return Q.rec(w)
 
 
-# Aufgenommen 7.11.2026: kein Bestandssatz <= 5 km und Uebertragung <= 5 % gegen FES2022 (Oliver: strenger;
+# Aufgenommen 7.11.2026 (8.11.: dazu zwei Ersatzsaetze, s. NAMEN): kein Bestandssatz <= 5 km und Uebertragung <= 5 % gegen FES2022 (Oliver: strenger;
 # zuerst <= 10 %), keine Uebertragung von Standardhaefen mit ueberwiegender Tagestide (Lae, Anewa Bay:
 # Eichung Wasu 29 %, Oro Bay 24 %, Amuioan 40 %, Bogia 44 %, Vanimo 70 %). Bei FES <= 10 % lag die
 # Uebertragung gegen Messung/BOM-Fit bei hoechstens 9 %. Damals entfernt: Mapamoiwa (FES 6 %), Ava Point (8 %),
@@ -132,6 +132,10 @@ NAMEN = {
     '55840': ('Nuakata Island, Milne Bay, Papua New Guinea', 'Milne Bay'),
     '56122': ('Moenai Point, Manus, Papua New Guinea', 'Manus'),
     '56123': ('Mbuke Island, Manus, Papua New Guinea', 'Manus'),
+    # 8.11.2026: ersetzen Altsaetze 2004 "Kanawea (Shortland Island)" (12 % gegen FES) und "Woodlark Island"
+    # an Bulavai Point (13 %); Uebertragung gegen FES 5 % bzw. 3 %. Tufi/Aigura -> geeichter FES-Satz.
+    '55671': ('Kanawea Island, Milne Bay, Papua New Guinea', 'Milne Bay'),
+    '55870': ('Bulavai Point (Woodlark Island), Milne Bay, Papua New Guinea', 'Milne Bay'),
 }
 KOPF_SRC = os.path.join(ROOT, 'harmonics/classic/harmonics_literature.txt')
 # Olivers Kartenkorrekturen (7.11.2026, aus der Markerdatei wiederhergestellt): Nr. -> (lat, lon)
