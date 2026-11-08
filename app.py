@@ -1376,11 +1376,19 @@ def _resolve_station(station, source=None, utc=False, units='m', spd='kn'):
 
 
 def _is_fresh_today(filepath):
-    """Check if file exists and was last modified today."""
+    """Check if file exists, was last modified today and is newer than the weather-effect data
+    (8.11.2026: Seiten von vor einem Copernicus-/STOFS-Abruf zeigten sonst bis Mitternacht keinen Windstau)."""
     if not os.path.exists(filepath):
         return False
-    mtime = datetime.fromtimestamp(os.path.getmtime(filepath))
-    return mtime.date() == datetime.now().date()
+    m = os.path.getmtime(filepath)
+    for wetter in _WINDSTAU_DATEIEN:
+        if os.path.exists(wetter) and os.path.getmtime(wetter) > m:
+            return False
+    return datetime.fromtimestamp(m).date() == datetime.now().date()
+
+
+_WINDSTAU_DATEIEN = [os.path.join(os.path.dirname(os.path.abspath(__file__)), p)
+                     for p in ('water_levels/cmems_ssh/aktuell.npz', 'water_levels/stofs/aktuell.npz')]
 
 
 _last_purge_date = None  # tracks date of last successful purge
