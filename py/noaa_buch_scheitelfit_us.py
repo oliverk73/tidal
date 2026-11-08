@@ -62,7 +62,10 @@ def main(argv):
     n_schreiben = 0
     for r in buch:
         km, sid, cname = min((H.km(r, dict(lat=la, lon=lo)), sid, n) for sid, n, la, lo in S)
-        if km > 2:
+        # 8.11.2026: gleichnamige CO-OPS-Station bis 5 km zaehlt auch (Port Beauclerc 3,0, Windham Bay 2,7,
+        # Stanwood 2,5, Tah Bay 2,1 km -- dieselben Nebenorte, nur anders verortet)
+        gleich = r['name'].split(',')[0].split(' (')[0].lower() in cname.lower()
+        if km > 2 and not (gleich and km <= 5):
             continue
         t, h = scheitel(sid)
         if len(t) < 600 or (t < grenze).sum() < 300:
