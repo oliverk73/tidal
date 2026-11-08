@@ -73,7 +73,7 @@ def main():
     aus = sys.argv[2] if len(sys.argv) > 2 else os.path.join(puffer, 'abgleich.csv')
     s = [x for x in saetze() if x['sid'] and x['k'] and ('Current' not in x['name'])]
     print(len(s), 'Saetze mit NOAA-Nummer')
-    with cf.ThreadPoolExecutor(4) as ex:
+    with cf.ThreadPoolExecutor(int(os.environ.get("PARALLEL", 4))) as ex:
         h = list(ex.map(lambda x: harcon(x['sid'], puffer), s))
     with open(aus, 'w', newline='', encoding='utf8') as f:
         w = csv.writer(f)

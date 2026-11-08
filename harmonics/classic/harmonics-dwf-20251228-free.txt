@@ -54190,6 +54190,8 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # noaa_station_id: 8518979
+# note: 20261101 Konstanten neu aus CO-OPS harcon: 1 Year LSQHA (7/2025-6/2026).  Sa, SSa, Msf from 8518962 Turkey Point
+# note: 20261101 Konstanten neu aus CO-OPS harcon: 1 Year LSQHA (7/2025-6/2026).  Sa, SSa, Msf from 8518962 Turkey Point
 # !units: feet
 # !longitude: -73.7949
 # !latitude: 42.3526
@@ -54197,44 +54199,44 @@ x 0 0
 # admin1_quelle: Polygon
 Coxsackie (Hudson River), New York
 +00:00 :America/New_York
-2.5700 feet
-J1              0.0200  293.30
-K1              0.4300  296.90
-K2              0.0600  285.90
-L2              0.0600  273.30
-M1              0.0200  300.70
-M2              2.0700  246.70
+2.3900 feet
+J1              0.0230  130.70
+K1              0.3840  301.90
+K2              0.0820  285.20
+L2              0.1380  263.70
+M1              0.0360   78.80
+M2              1.8800  248.00
 x 0 0
-M4              0.0900   19.70
-M6              0.1200   21.60
-M8              0.0300  180.10
-N2              0.4000  220.40
-2N2             0.0500  194.20
-O1              0.2300  304.10
-OO1             0.0100  289.30
-P1              0.1400  297.50
-Q1              0.0400  307.90
-2Q1             0.0100  312.10
+M4              0.0790   18.30
+M6              0.1050   22.60
+M8              0.0260  179.30
+N2              0.3310  226.10
+2N2             0.0490  166.00
+O1              0.2100  296.90
+OO1             0.0030   70.10
+P1              0.1210  309.90
+Q1              0.0330  297.00
+2Q1             0.0030  310.20
+R2              0.0130   12.30
+S1              0.0950  266.10
+S2              0.2660  281.20
+S4              0.0070   79.80
+S6              0.0030  214.50
+T2              0.0100  287.20
+LDA2            0.0690  244.80
+MU2             0.0690   51.00
+NU2             0.1050  202.70
+RHO1            0.0130  195.50
+MK3             0.0560   58.30
+2MK3            0.0620   34.10
+MN4             0.0300  346.30
+MS4             0.0260   34.30
+2SM2            0.0100  162.50
 x 0 0
+MSF             0.0070   61.50
 x 0 0
-S2              0.2300  283.10
-S4              0.0100    8.60
-S6              0.0100  212.10
-T2              0.0100  281.70
-LDA2            0.0100  263.40
-MU2             0.0500  210.60
-NU2             0.0800  224.00
-RHO1            0.0100  307.80
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-MSF             0.0100   61.50
-x 0 0
-SA              0.2200  139.80
-SSA             0.1200   70.90
+SA              0.2170  139.80
+SSA             0.1210   70.90
 x 0 0
 x 0 0
 x 0 0
@@ -85129,6 +85131,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # noaa_station_id: 8656841
+# note: 20261101 Konstanten neu aus CO-OPS harcon: Average of two 29-day analyses (Mar-Apr 1976) on GMT.  SSA and SA from 8656483 Beaufort, NC.
 # !units: feet
 # !longitude: -76.5383
 # !latitude: 34.6133
@@ -85137,43 +85140,43 @@ x 0 0
 Cape Lookout Bight, North Carolina
 +00:00 :America/New_York
 2.2000 feet
-J1              0.0200  160.10
-K1              0.3000  171.70
-K2              0.0900   13.20
-L2              0.0500    8.40
-M1              0.0200  183.20
-M2              1.7700  348.40
+J1              0.0200  156.40
+K1              0.3050  167.90
+K2              0.0660   14.00
+L2              0.0460    1.80
+M1              0.0160  179.90
+M2              1.6730  347.30
 x 0 0
-M4              0.0200  267.30
-M6              0.0200  252.00
+M4              0.0130  287.80
+M6              0.0260  257.80
+M8              0.0070  347.40
+N2              0.4860  332.60
+2N2             0.0620  318.30
+O1              0.2590  191.90
+OO1             0.0100  144.20
+P1              0.1020  169.70
+Q1              0.0490  203.70
+2Q1             0.0070  215.60
+R2              0.0030   11.20
 x 0 0
-N2              0.4100  328.70
-2N2             0.0600  308.80
-O1              0.2500  194.90
-OO1             0.0100  148.50
-P1              0.1000  173.40
-Q1              0.0500  206.50
-2Q1             0.0100  217.90
-x 0 0
-x 0 0
-S2              0.3400   11.30
-S4              0.0300  326.80
-S6              0.0100   54.90
-T2              0.0200   10.40
-LDA2            0.0100  359.00
-MU2             0.0400  325.40
-NU2             0.0800  331.30
-RHO1            0.0100  204.90
-x 0 0
-x 0 0
+S2              0.2390   12.00
+S4              0.0330  341.90
+S6              0.0130   62.10
+T2              0.0130   10.90
+LDA2            0.0100  359.50
+MU2             0.0390  321.00
+NU2             0.0920  334.50
+RHO1            0.0100  202.20
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
 x 0 0
-SA              0.2200  166.00
-SSA             0.1200   57.10
+x 0 0
+x 0 0
+SA              0.2990  166.40
+SSA             0.1670   43.70
 x 0 0
 x 0 0
 x 0 0
@@ -102800,7 +102803,8 @@ x 0 0
 # !latitude: 30.1924
 # state: Florida
 # admin1_quelle: Polygon
-# note: 20261103 Name "I-295 Bridge (west end, St. Johns River), Florida" -> "I-295 Bridge (Buckman Bridge west end, St. Johns River), Florida" (Oliver, aufraeumen_antworten2.ods, Dublette archiviert).
+# note: 20261103 Name "I-295 Bridge (west end, St. Johns River), Florida" -> "I-295 Bridge (Buckman Bridge west end, St. Johns River), Florida" (Oliver, aufraeumen_antworten2.ods,
+# note: Dublette archiviert).
 I-295 Bridge (Buckman Bridge west end, St. Johns River), Florida
 +00:00 :America/New_York
 0.5100 feet
@@ -103582,7 +103586,8 @@ x 0 0
 # !latitude: 29.9817
 # state: Florida
 # admin1_quelle: Polygon
-# note: 20261103 Name "Red Bay Point (St. Johns River), Florida" -> "Red Bay Point (Shands Bridge, St. Johns River), Florida" (Oliver, aufraeumen_antworten2.ods, Dublette archiviert).
+# note: 20261103 Name "Red Bay Point (St. Johns River), Florida" -> "Red Bay Point (Shands Bridge, St. Johns River), Florida" (Oliver, aufraeumen_antworten2.ods, Dublette
+# note: archiviert).
 Red Bay Point (Shands Bridge, St. Johns River), Florida
 +00:00 :America/New_York
 0.5400 feet
@@ -161343,6 +161348,7 @@ x 0 0
 # psmsl_id: 1835, 920
 # uhslc_id: 766
 # ptwc_code: sptx
+# note: 20261101 Konstanten neu aus CO-OPS harcon: Vector Average of 4 years (2015-2018).  Sa and SSa from 10 years (2006-2018).
 # !units: feet
 # !longitude: -93.8701
 # !latitude: 29.7284
@@ -161351,43 +161357,43 @@ x 0 0
 Sabine Pass (north), Texas
 +00:00 :America/Chicago
 0.9700 feet
-J1              0.0200   47.10
-K1              0.4300   40.70
-K2              0.0300  338.50
-L2              0.0100    5.10
-M1              0.0200   36.90
-M2              0.4000  275.50
+J1              0.0260   47.80
+K1              0.4070   42.30
+K2              0.0230    2.30
+L2              0.0100  347.60
+M1              0.0130   30.00
+M2              0.3610  276.50
+M3              0.0100  208.70
+M4              0.0130  325.80
+M6              0.0030  150.80
 x 0 0
-M4              0.0200  318.90
-x 0 0
-x 0 0
-N2              0.1100  254.40
-2N2             0.0200  220.40
-O1              0.4000   34.60
-OO1             0.0200   61.40
-P1              0.1300   33.10
-Q1              0.0900   21.80
-2Q1             0.0100   28.50
-x 0 0
-S1              0.0400  306.30
-S2              0.1300  271.50
-x 0 0
-x 0 0
-T2              0.0100  271.70
-x 0 0
-MU2             0.0200  210.30
-NU2             0.0200  269.50
-RHO1            0.0200   23.80
-MK3             0.0200  141.20
-2MK3            0.0200  132.80
-x 0 0
-x 0 0
-x 0 0
+N2              0.0950  254.60
+2N2             0.0160  225.20
+O1              0.3840   35.80
+OO1             0.0260   70.90
+P1              0.1180   32.90
+Q1              0.0820   17.90
+2Q1             0.0070  348.90
+R2              0.0030  133.80
+S1              0.0260  321.30
+S2              0.1150  271.90
+S4              0.0070   74.40
+S6              0.0030  175.60
+T2              0.0070  268.60
+LDA2            0.0030  356.20
+MU2             0.0160  213.70
+NU2             0.0160  264.30
+RHO1            0.0160   12.90
+MK3             0.0230  130.60
+2MK3            0.0160  135.10
+MN4             0.0070  302.10
+MS4             0.0100  336.00
+2SM2            0.0070  311.30
 x 0 0
 x 0 0
 x 0 0
-SA              0.2100  135.70
-SSA             0.2500   52.00
+SA              0.2820  148.00
+SSA             0.3020   67.40
 x 0 0
 x 0 0
 x 0 0
@@ -172921,6 +172927,7 @@ x 0 0
 # datum: MLLW
 # confidence: 10
 # noaa_station_id: 8775283
+# note: 20261101 Konstanten neu aus CO-OPS harcon: Vector Average of 3 years (2023-2025).  Mm, and Mf are unstable.
 # !units: feet
 # !longitude: -97.2089
 # !latitude: 27.8186
@@ -172929,43 +172936,43 @@ x 0 0
 Enbridge Energy dock (Ingleside, Corpus Christi Channel), Texas
 +00:00 :America/Chicago
 0.3300 feet
-J1              0.0100  111.20
-K1              0.1900   98.40
-K2              0.0100   43.00
-x 0 0
-M1              0.0100  343.80
-M2              0.0500  352.70
-x 0 0
-M4              0.0100  215.30
-x 0 0
-x 0 0
-N2              0.0100  339.90
-x 0 0
-O1              0.2100   87.80
-OO1             0.0200  107.50
-P1              0.0500  101.10
-Q1              0.0500   76.00
-2Q1             0.0100  251.80
-x 0 0
-S1              0.0100  279.70
-S2              0.0100  347.90
+J1              0.0030   89.20
+K1              0.2100   94.10
+K2              0.0100   22.80
+L2              0.0030   30.60
+M1              0.0030  134.40
+M2              0.0520  358.20
+M3              0.0030  138.50
+M4              0.0070  225.50
 x 0 0
 x 0 0
+N2              0.0130  334.70
+2N2             0.0030  350.00
+O1              0.2230   84.90
+OO1             0.0160  105.40
+P1              0.0620   94.80
+Q1              0.0490   68.20
+2Q1             0.0130   47.00
+x 0 0
+S1              0.0130  314.00
+S2              0.0130   12.30
 x 0 0
 x 0 0
+T2              0.0030  342.50
+LDA2            0.0030   43.00
+MU2             0.0030  224.30
+NU2             0.0030  329.40
+RHO1            0.0100   74.00
+MK3             0.0030  321.00
+2MK3            0.0030  307.20
+MN4             0.0030  200.00
+MS4             0.0030  243.40
 x 0 0
 x 0 0
-RHO1            0.0100   60.60
+MSF             0.0520   55.80
 x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-x 0 0
-SA              0.0900  146.00
-SSA             0.3300   58.20
+SA              0.2100  175.30
+SSA             0.3610   73.20
 x 0 0
 x 0 0
 x 0 0
@@ -239841,7 +239848,8 @@ x 0 0
 # !latitude: 58.5217
 # state: Alaska
 # admin1_quelle: Polygon
-# note: 20261102 Zeit korrigiert: alle Phasen 9.0 h frueher; NOAA-Datenbank vertauscht phase_GMT/phase_local (9 h = AKST); phase_local trifft Kulukak Point/Protection Point und FES.
+# note: 20261102 Zeit korrigiert: alle Phasen 9.0 h frueher; NOAA-Datenbank vertauscht phase_GMT/phase_local (9 h = AKST);
+# note: phase_local trifft Kulukak Point/Protection Point und FES.
 Cape Constantine (Nushagak Peninsula, Bristol Bay), Alaska
 +00:00 :America/Anchorage
 6.0500 feet
@@ -272306,7 +272314,8 @@ x 0 0
 # !latitude: 56.5400
 # state: Alaska
 # admin1_quelle: Name
-# note: 20261102 Zeit korrigiert: alle Phasen 1.5 h frueher; alle Tiden gleichmaessig 1,5 h spaeter als Nakchamik, Ugaiushak, Kujulik, Chankliut und FES (auch in der NOAA-Datenbank).
+# note: 20261102 Zeit korrigiert: alle Phasen 1.5 h frueher;
+# note: alle Tiden gleichmaessig 1,5 h spaeter als Nakchamik, Ugaiushak, Kujulik, Chankliut und FES (auch in der NOAA-Datenbank).
 Sutwik Island (west end), Alaska
 +00:00 :America/Anchorage
 4.9100 feet
