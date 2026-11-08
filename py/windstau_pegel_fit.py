@@ -203,6 +203,9 @@ def main(argv):
             datum = 'approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)'
             dnote = 'Sensornull der Reihe willkuerlich, daher Z0 wie bei FES-Saetzen.'
         la, lo, verschoben = I.wasser(la0, lo0, LM)
+        if verschoben == -1:                                        # kein Wasser <= 1 km (Fluss? Landmaske kennt nur Kueste)
+            print('   %s: CMEMS-Position an Land, kein Wasser <= 1 km -- von Hand setzen' % name)
+            verschoben = 0
         nb = min(bestand, key=lambda r: H.km({'lat': la, 'lon': lo}, r))
         print('== %-44s %s..%s R2 %.2f RMS %.3f Probe %s cm Eigenv %+d  M2 %.3f@%.0f K1 %.3f@%.0f O1 %.3f@%.0f  Z0 %.2f  %s  Nachbar %s %.0f km %.0f%%' % (
             name, s.index[0].date(), s.index[-1].date(), r2, rms, probe, eig, *w['M2'], *w['K1'], *w['O1'], z0,

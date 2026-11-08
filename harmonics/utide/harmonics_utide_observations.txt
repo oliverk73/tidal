@@ -283329,10 +283329,10 @@ x 0 0
 # utide: pts=43413 period=2020-11-25..2025-12-31 r2=0.1330 rms=0.2096m const=92
 # note: 20261108 Messfit (py/windstau_pegel_fit.py): Mikrotide-Pegel, Wasserstand vom Wetter bestimmt (Windstau-Kurve).
 # note: Probe am letzten Messjahr 20 cm RMS (ueberwiegend Wetter, kein Tidenfehler).
-# note: CMEMS-Position 56.9667/23.9333 liegt laut OSM an Land, -1 m ins Wasser gelegt.
+# note: 20261108 CMEMS-Position 56.9667/23.9333 (Bogenminuten) liegt an Land zwischen Fluss und Meer; auf die Lielupe gelegt (naechster Flusspunkt, 1,7 km NW, Bruecke Lielupe) (Oliver).
 # !units: meters
-# !longitude: 23.9333
-# !latitude: 56.9667
+# !longitude: 23.9228
+# !latitude: 56.9810
 # region: Jurmala
 Lielupe (Jurmala), Latvia
 +00:00 :Europe/Riga
@@ -284316,7 +284316,7 @@ x 0 0
 # note: Probe am letzten Messjahr 20 cm RMS (ueberwiegend Wetter, kein Tidenfehler).
 # note: CMEMS-Position 58.2280/24.1185 liegt laut OSM an Land, 55 m ins Wasser gelegt.
 # !units: meters
-# !longitude: 24.1176
+# !longitude: 24.1184
 # !latitude: 58.2280
 # region: Pärnumaa
 Munalaiu, Estonia
