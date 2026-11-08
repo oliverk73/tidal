@@ -42,6 +42,12 @@ def archiv_eintraege():
         teile = open(pfad, encoding='iso-8859-1').read().split('# ARCHIV: ')[1:]
         for t in teile:
             kopf, _, rest = t.partition('\n')
+            if kopf.count(' | ') < 3 and out and out[-1][0] == os.path.basename(pfad):
+                # Folgezeile einer langen Begruendung ("# ARCHIV: ..." ueber zwei Zeilen, 8.11.2026 Molene):
+                # gehoert zum vorigen Eintrag, dessen Block bis hierher nur aus der Kopfzeile bestand
+                d, n, k0, _b = out.pop()
+                out.append((d, n, k0 + ' ' + kopf, rest.strip('\n').split('\n')))
+                continue
             name = kopf.split(' | ')[2] if kopf.count(' | ') >= 3 else ''
             out.append((os.path.basename(pfad), name, kopf, rest.strip('\n').split('\n')))
     return out
