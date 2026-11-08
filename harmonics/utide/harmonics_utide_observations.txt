@@ -145386,12 +145386,13 @@ x 0 0
 # psmsl_id: 796
 # ptwc_code: ccar
 # utide: pts=87660 period=1968-01-28..1991-12-31 r2=0.3288 rms=0.2074m const=67
-# note: 20261108 Gleiche Messreihe wie "Ciudad del Carmen (Faro Atalaya)" (UHSLC 779 = TICON 403/779a), Kurve 2,4 % gleich;
-# note: -- Oliver: dem Namen nach zwei Pegel, beide bleiben. r2 0,33 = Wetteranteil (Mikrotide), kein Fitfehler.
+# note: 20261108 TICON "Faro Atalaya" (dieselbe Reihe UHSLC 779 = GESLA 779a/UNAM 403) archiviert, dieser Satz bleibt.
+# note: -- Zusaetze Sector Naval/Faro Atalaya hatten keine Quelle. Position = IOC ccar (Malecon, Terminal Turistica);
+# note: -- UHSLC nennt nur 18.5333/-91.8333 (gerundet). r2 0,33 = Wetteranteil (Mikrotide), kein Fitfehler.
 # !units: meters
-# !longitude: -91.8318
-# !latitude: 18.6318
-Ciudad del Carmen (Sector Naval), Campeche, Mexico
+# !longitude: -91.8362
+# !latitude: 18.6360
+Ciudad del Carmen, Campeche, Mexico
 +00:00 :UTC
 1.5209 meters
 J1              0.0045  31.41
