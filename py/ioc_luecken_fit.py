@@ -72,7 +72,45 @@ PEGEL = [
     ('kame', 'Kamesang (Ngatpang), Palau', 'Ngatpang', 7.4960, 134.4853),
     ('pele', 'Peleliu, Palau', 'Peleliu', 7.0490, 134.2665),
     ('imek', 'Imekang (Ngiwal), Palau', 'Ngiwal', 7.5372, 134.6250),
+    # Mittelmeer (8.11.2026, Oliver: Windstau macht Mikrotide-Orte relevant; Inventar
+    # harmonics/help/pegel_mittelmeer_20261108.csv, kein Satz <= 3 km). Weggelassen: asty (= Astypalaia 3,2 km),
+    # prev1/sole2 (Zweitsensor). Reihen 11/2024-10/2026. Eingetragen 8.11. nur RCCL SMLE kala prev peir matr
+    # (>= 6 Monate, Eigenversatz <= 5 min, FES < 10 %); verworfen: sole (= Solenzara 3,4 km, 0,8 %), marn1 (K1 146 Grad
+    # gegen Matruh, FES 16 %), PSCA (Rest 27 cm), kata (K1 unplausibel), delo/myko (Eigenversatz -18/+8), usti/syro/amor
+    # (3-4 Monate), lekm/vasi/kopi/karp (erst ab 10/2026), sira/trem/BRLT/MNPL/kiss/gokc/batr1 (keine gueltigen Monate),
+    # sobr/mrms (Name schon im Bestand).
+    ('sole', 'Solenzara (Corse), France', 'Corse', 41.836, 9.374),
+    ('PSCA', 'Scauri (Pantelleria), Italy', 'Sicilia', 36.769, 11.964),
+    ('usti', 'Ustica, Italy', 'Sicilia', 38.705, 13.176),
+    ('sira', 'Siracusa, Italy', 'Sicilia', 37.112, 15.253),
+    ('trem', 'Messina (Tremestieri), Italy', 'Sicilia', 38.132, 15.523),
+    ('BRLT', 'Barletta, Italy', 'Puglia', 41.333, 16.290),
+    ('RCCL', 'Roccella Ionica, Italy', 'Calabria', 38.327, 16.432),
+    ('MNPL', 'Monopoli, Italy', 'Puglia', 40.956, 17.308),
+    ('sobr', 'Sobra (Mljet), Croatia', 'Dubrovacko-neretvanska', 42.793, 17.620),
+    ('SMLE', 'Santa Maria di Leuca, Italy', 'Puglia', 39.795, 18.359),
+    ('lekm', 'Lefkimmi (Kerkyra), Greece', 'Ionian Islands', 39.415, 20.099),
+    ('vasi', 'Vasiliki (Lefkada), Greece', 'Ionian Islands', 38.628, 20.606),
+    ('prev', 'Preveza, Greece', 'Epirus', 38.949, 20.729),
+    ('kata', 'Katakolo, Greece', 'Western Greece', 37.640, 21.319),
+    ('kala', 'Kalamata, Greece', 'Peloponnese', 37.022, 22.110),
+    ('peir', 'Peiraias (Piraeus), Greece', 'Attica', 37.935, 23.621),
+    ('kiss', 'Kissamos (Kriti), Greece', 'Crete', 35.514, 23.637),
+    ('kopi', 'Kokkinos Pyrgos (Kriti), Greece', 'Crete', 35.082, 24.737),
+    ('syro', 'Ermoupoli (Syros), Greece', 'South Aegean', 37.438, 24.941),
+    ('delo', 'Delos, Greece', 'South Aegean', 37.399, 25.265),
+    ('myko', 'Tourlos (Mykonos), Greece', 'South Aegean', 37.465, 25.322),
+    ('amor', 'Katapola (Amorgos), Greece', 'South Aegean', 36.831, 25.865),
+    ('karp', 'Pigadia (Karpathos), Greece', 'South Aegean', 35.510, 27.210),
+    ('gokc', 'Kuzu Limani (Gökçeada), Turkey', 'Canakkale', 40.231, 25.894),
+    ('mrms', 'Marmaris, Turkey', 'Mugla', 36.838, 28.385),
+    ('matr', 'Marsa Matruh, Egypt', 'Matrouh', 31.370, 27.204),
+    ('marn1', 'Marina El Alamein, Egypt', 'Matrouh', 30.844, 28.977),
+    ('batr1', 'Batroun, Lebanon', 'North Lebanon', 34.252, 35.656),
 ]
+MITTELMEER = ('sole', 'PSCA', 'usti', 'sira', 'trem', 'BRLT', 'RCCL', 'MNPL', 'sobr', 'SMLE', 'lekm', 'vasi', 'prev',
+              'kata', 'kala', 'peir', 'kiss', 'kopi', 'syro', 'delo', 'myko', 'amor', 'karp', 'gokc', 'mrms', 'matr',
+              'marn1', 'batr1')
 
 
 def wasser(la, lo, L):

@@ -43,6 +43,7 @@ DE, DK, SE, FI, EE, LV, BG, RO, TR, UA = (('Germany', 'Europe/Berlin'), ('Denmar
                                           ('Estonia', 'Europe/Tallinn'), ('Latvia', 'Europe/Riga'),
                                           ('Bulgaria', 'Europe/Sofia'), ('Romania', 'Europe/Bucharest'),
                                           ('Turkey', 'Europe/Istanbul'), ('Ukraine', 'Europe/Simferopol'))
+FR, IT = ('France', 'Europe/Paris'), ('Italy', 'Europe/Rome')
 # CMEMS-Kennung -> (Name ohne Land, Region, (Land, Zeitzone))
 PEGEL = {
     'NO_TS_TG_UeckermuendeTG': ('Ueckermünde (Stettiner Haff)', 'Mecklenburg-Vorpommern', DE),
@@ -121,10 +122,24 @@ PEGEL = {
     'BS_TS_TG_Pomorie': ('Pomorie', 'Burgas', BG),
     'BS_TS_TG_IOC-mang': ('Mangalia', 'Constanta', RO),
     'BS_TS_TG_IOC-csta2': ('Constanta', 'Constanta', RO),
+    # Mittelmeer (8.11.2026; Inventar harmonics/help/pegel_mittelmeer_20261108.csv). IOC-Pegel: py/ioc_luecken_fit.py.
+    # Weggelassen: NiceVigicrues (1,5 J bis 2018, Nice 7,7 km); verworfen 8.11.: Carro (FES 16 %, Port-de-Bouc 19 %, Probe 24 cm),
+    # Cassis (FES/La Ciotat 13 %), Menton (Eigenversatz -13 min, Monaco 17 %), Pantelleria (nur 3911 h).
+    'GL_TS_TG_PortDeLaRedonneTG': ('La Redonne (Ensuès-la-Redonne)', "Provence-Alpes-Côte d'Azur", FR),
+    'GL_TS_TG_LeBruscTG': ('Le Brusc (Six-Fours-les-Plages)', "Provence-Alpes-Côte d'Azur", FR),
+    'GL_TS_TG_PortDeStElmeTG': ('Saint-Elme (La Seyne-sur-Mer)', "Provence-Alpes-Côte d'Azur", FR),
+    'GL_TS_TG_TamarisTG': ('Tamaris (La Seyne-sur-Mer)', "Provence-Alpes-Côte d'Azur", FR),
+    'GL_TS_TG_BaieDuLazaretTG': ('Baie du Lazaret (La Seyne-sur-Mer)', "Provence-Alpes-Côte d'Azur", FR),
+    'GL_TS_TG_LesOursinieresTG': ('Les Oursinières (Le Pradet)', "Provence-Alpes-Côte d'Azur", FR),
+    'GL_TS_TG_LaCapteTG': ('La Capte (Hyères)', "Provence-Alpes-Côte d'Azur", FR),
+    'MO_TS_TG_RMN-PortopaloDiCapoPassero': ('Portopalo di Capo Passero', 'Sicilia', IT),
+    'MO_TS_TG_RMN-LeCastella': ('Le Castella (Isola di Capo Rizzuto)', 'Calabria', IT),
+    'MO_TS_TG_BODRUM': ('Bodrum', 'Mugla', TR),
 }
+MITTELMEER = {k for k in PEGEL if k.startswith(('GL_', 'MO_'))}
 # Sensornull willkuerlich (TUDES ~2 m, Constanta/Mangalia ~-7.7 m): Z0 wie bei FES = -Minimum der 19-Jahres-Kurve (~LAT).
 # Ostsee: nationaler Hoehenbezug (~Mittelwasser), Z0 = Mittel darueber wie die amtlichen Pegelstaende.
-SENSORNULL = {k for k in PEGEL if k.startswith('BS_TS_TG_IOC-')}
+SENSORNULL = {k for k in PEGEL if k.startswith('BS_TS_TG_IOC-')} | {'MO_TS_TG_BODRUM'}
 
 
 def index():
@@ -197,6 +212,8 @@ def main(argv):
         eig = min(range(-30, 31), key=lambda m: np.std(s.values[sub] - SF.hoehe_und_ableitungen(t[sub] - 60 * m, z0, w, kopf)[0]))
         datum = 'CMEMS SLEV'                                         # nur bestehende Datum-Namen: TCD-Tabelle voll, <= 70 Zeichen
         dnote = 'Hoehenbezug der Reihe = nationales Hoehensystem (~Mittelwasser), Z0 = Mittel darueber.'
+        if k in MITTELMEER:
+            dnote = 'Hoehenbezug der Reihe = Pegelnull des Betreibers (SHOM/ISPRA), Z0 = Mittel darueber.'
         if k in SENSORNULL:
             tg = np.arange(dt.datetime(2008, 1, 1).timestamp(), dt.datetime(2027, 1, 1).timestamp(), 3600.0)
             z0 = -float(SF.hoehe_und_ableitungen(tg, 0.0, w, kopf)[0].min())
@@ -232,7 +249,7 @@ def main(argv):
             continue
         neu.append((name, blk))
     if zeilen:
-        with open(os.path.join(ROOT, 'harmonics/help/windstau_pegel_fit_20261108.csv'), 'w', encoding='utf-8', newline='') as fh:
+        with open(os.path.join(ROOT, 'harmonics/help/windstau_pegel_fit_%s%s.csv' % (heute, '_mittelmeer' if all(z['kennung'] in MITTELMEER for z in zeilen) else '')), 'w', encoding='utf-8', newline='') as fh:
             wr = csv.DictWriter(fh, fieldnames=list(zeilen[0]))
             wr.writeheader()
             wr.writerows(zeilen)
