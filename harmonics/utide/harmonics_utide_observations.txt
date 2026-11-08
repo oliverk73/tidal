@@ -144196,9 +144196,10 @@ x 0 0
 # sonel_tg_id: 2280
 # utide: pts=34387 period=2007-05-24..2011-04-25 r2=0.8268 rms=0.0919m const=67
 # !units: meters
-# !longitude: -99.9090
-# !latitude: 16.8406
-Acapulco, Guerrero, Mexico
+# !longitude: -99.8520
+# !latitude: 16.8420
+# note: 20261108 Daten 2007-2011 = UHSLC 316C (16 50.5N 99 51.1W, Icacos); Position/Name vom TICON-Satz (archiviert), vorher 16.8406/-99.9090 (Pegel 316A/B).
+Acapulco (Icacos), Guerrero, Mexico
 +00:00 :UTC
 1.0012 meters
 J1              0.0074  144.53
@@ -165969,7 +165970,7 @@ x 0 0
 # confidence: 8
 # uhslc_id: 667
 # ssc_id: SSC-sumt
-# ioc_code: sumt
+# note: 20261108 ioc_code sumt entfernt: UHSLC 667 ist Lyttelton (43 36S 172 43E), sumt ist der eigene Pegel Sumner Head.
 # psmsl_id: 247, 259
 # ptwc_code: sumt
 # sonel_gps_id: 922
