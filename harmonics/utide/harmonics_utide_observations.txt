@@ -145386,10 +145386,12 @@ x 0 0
 # psmsl_id: 796
 # ptwc_code: ccar
 # utide: pts=87660 period=1968-01-28..1991-12-31 r2=0.3288 rms=0.2074m const=67
+# note: 20261108 Gleiche Messreihe wie "Ciudad del Carmen (Faro Atalaya)" (UHSLC 779 = TICON 403/779a), Kurve 2,4 % gleich;
+# note: -- Oliver: dem Namen nach zwei Pegel, beide bleiben. r2 0,33 = Wetteranteil (Mikrotide), kein Fitfehler.
 # !units: meters
 # !longitude: -91.8318
 # !latitude: 18.6318
-Ciudad Del Carmen (Sector Naval), Campeche, Mexico
+Ciudad del Carmen (Sector Naval), Campeche, Mexico
 +00:00 :UTC
 1.5209 meters
 J1              0.0045  31.41
@@ -283331,7 +283333,8 @@ x 0 0
 # utide: pts=43413 period=2020-11-25..2025-12-31 r2=0.1330 rms=0.2096m const=92
 # note: 20261108 Messfit (py/windstau_pegel_fit.py): Mikrotide-Pegel, Wasserstand vom Wetter bestimmt (Windstau-Kurve).
 # note: Probe am letzten Messjahr 20 cm RMS (ueberwiegend Wetter, kein Tidenfehler).
-# note: 20261108 CMEMS-Position 56.9667/23.9333 (Bogenminuten) liegt an Land zwischen Fluss und Meer; auf die Lielupe gelegt (naechster Flusspunkt, 1,7 km NW, Bruecke Lielupe) (Oliver).
+# note: 20261108 CMEMS-Position 56.9667/23.9333 (Bogenminuten) liegt an Land zwischen Fluss und Meer;
+# note: auf die Lielupe gelegt (naechster Flusspunkt, 1,7 km NW, Bruecke Lielupe) (Oliver).
 # !units: meters
 # !longitude: 23.9228
 # !latitude: 56.9810
