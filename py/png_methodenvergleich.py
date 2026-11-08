@@ -29,7 +29,7 @@ import qld_msq_fit as Q                                            # noqa: E402
 from fes_ersatz_inseln import sample, stem, FES_DIR                # noqa: E402
 from luecken_fes_welt import REF_DATEI                             # noqa: E402
 
-RADIUS = float(sys.argv[1]) if len(sys.argv) > 1 else 5.0
+RADIUS = float(sys.argv[1]) if __name__ == '__main__' and len(sys.argv) > 1 else 5.0
 REF_ANZAHL, REF_KM, REF_GUETE = 3, 200.0, 6.0
 EICH = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1')
 GRUPPE = {'S2': 'S2', 'K2': 'S2', 'M2': 'M2', 'N2': 'M2', 'K1': 'K1', 'P1': 'K1', 'O1': 'O1', 'Q1': 'O1'}
