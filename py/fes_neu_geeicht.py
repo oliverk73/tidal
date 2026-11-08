@@ -169,6 +169,7 @@ def main(argv):
     L = osm_land.Land([(o[2], o[3]) for o in orte])
     heute = dt.date.today().strftime('%Y%m%d')
     T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
+    n0 = len(T)                                                    # alles danach sind neue Bloecke
     tg = np.arange(dt.datetime(2008, 1, 1).timestamp(), dt.datetime(2027, 1, 1).timestamp(), 3600.0)
     for ort, staat, la0, lo0, richtung, land, tz in orte:
         if richtung == 'alt':
@@ -232,6 +233,10 @@ def main(argv):
               name, '+00:00 :%s' % tz, '%.4f meters' % z0]
         T += ['%-15s %.4f  %.2f' % (c, *werte[c]) if c in werte else 'x 0 0' for c in namen]
     if '--schreiben' in argv:
+        # frisch lesen und nur anhaengen (8.11.2026): Oliver korrigiert die Datei waehrend der Laufzeit auf der Karte
+        neu = T[n0:]
+        T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
+        T += neu
         schreiben(ZIEL, '\n'.join(T) + '\n')
         print('->', os.path.relpath(ZIEL, ROOT))
 
