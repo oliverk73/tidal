@@ -10,7 +10,12 @@ Buchvorhersage. Zerlegung wie build_np203_scs_transfer.faktoren_D:
   -> f_semi, f_diur je Verhaeltnis Neben/Standard; Flachwasser f_semi^n; Phase + w*dt; Z0 = MSL.
 Bewertung: Kurvenabstand (health_check.curve_diff) gegen FES2022 und gegen Bestandssaetze in der Naehe.
 
-Usage: venv/bin/python py/aho_png_neben.py [--eichung] [--schreiben]
+8.11.2026: Die Uebertragung verliert den Methodenvergleich (py/png_methodenvergleich.py: gegen BOM-/MSQ-Saetze
+Median 13,1 %, geeichtes FES 3,3 %, FES an 37/39 Orten besser). Alle Saetze dieser Datei sind durch geeichte
+FES-Saetze ersetzt (harmonics_fes2022.txt), die Datei ist geloescht. --schreiben ist gesperrt; das Skript bleibt
+als Nachweis und fuer --eichung.
+
+Usage: venv/bin/python py/aho_png_neben.py [--eichung]
   --eichung   Nebenhaefen MIT Bestandssatz <= 5 km: Uebertragung gegen diesen Satz (Verfahrensguete)
   --schreiben aufgenommene Saetze nach harmonics/att/... (siehe ZIEL) schreiben
 """
@@ -208,6 +213,7 @@ def main(argv):
                 os.path.basename(o['nb']['file'])[:26]))
         return out
     if '--schreiben' in argv:
+        sys.exit('gesperrt seit 8.11.2026: geeichtes FES ist besser (py/png_methodenvergleich.py)')
         schreiben_datei([o for o in out if o['no'] in NAMEN], '--neu' in argv)
         return out
     neu = [o for o in out if o['nb_km'] > 5]

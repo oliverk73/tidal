@@ -146,8 +146,7 @@ SOURCE_GROUPS = OrderedDict([
     ('Harmonics TICON4', {'color': '#FF9800', 'files': ['harmonics_ticon4_worldwide.tcd']}),
     ('Harmonics Lavergne', {'color': '#E91E63', 'files': ['harmonics-pierre-lavergne-v10_mod.tcd']}),  # v9 am 20260916 aufgeloest, letzter Satz nach v10
     ('UTide TC', {'color': '#F44336', 'files': ['harmonics_utide_tidetables.tcd',
-                                                'harmonics_utide_current_tables.tcd',
-                                                'harmonics_aho_png_secondary.tcd']}),
+                                                'harmonics_utide_current_tables.tcd']}),
     ('UTide SL', {'color': '#E57373', 'files': ['harmonics_utide_observations.tcd',
                                                 'harmonics_utide_current_observations.tcd']}),
     ('Harmonics Misc', {'color': '#009688', 'files': ['harmonics_puertos_spain.tcd',
