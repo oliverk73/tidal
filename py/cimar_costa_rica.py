@@ -19,7 +19,15 @@ SINAMOT (UNA, "Mareas <Ort> 2026.pdf", Fuss, Ortszeit): eigene Vorhersagen, Punt
 Bestand (Kurve 2 %/4 %). Rincon de Osa (kein Satz): Tafelfit M2 1,03@237 gegen Golfito-Messung 1,10@247 und FES im
 ganzen Golfo Dulce 1,11@245 -- 8 % kleiner, 20 min frueher, nicht uebernommen.
 
-Usage: venv/bin/python py/cimar_costa_rica.py
+SINAMOT-Webdienst (Oliver 9.11.2026, sinamot.una.ac.cr -> Predicciones de Marea): unacostasegura.una.ac.cr/webServices/
+mareas_detalle.php?id=..&cod=..&fecha_inicio=..&fecha_final=.. liefert HW/NW (m, Ortszeit) fuer frei waehlbare Zeitraeume;
+Cache water_levels/Costa_Rica_SINAMOT/<cod>_2026.html. Tafelfit gegen unsere Messsaetze: Puntarenas 2 %, Quepos 1 %,
+Nacascolo/Papagayo 4 %; Isla del Coco 14 % (K1 0,03 statt 0,09) und Rincon de Osa 9 % daneben. Hoehenbezug der Webtafel
+weicht von den PDF-Tafeln ab (Puntarenas Z0 2,31 gegen 1,41 m) -> Z0 wie bei FES = -Minimum der 19-Jahres-Kurve.
+Eingetragen nur TAMBOR (Bahia Ballena, kein Satz in 35 km): M2 0,965@241 gegen FES 0,972@244. Moin liegt 6 km neben
+Limon (Messung, Mikrotide) -> nicht noetig.
+
+Usage: venv/bin/python py/cimar_costa_rica.py [--sinamot [--schreiben]]
 """
 import datetime as dt
 import glob
@@ -91,7 +99,83 @@ def pruefen(ev):
                 tage=len({e[0].date() for e in ev}))
 
 
+SINAMOT_URL = ('https://unacostasegura.una.ac.cr/webServices/mareas_detalle.php?id=%s&cod=%s&estacion=%s'
+               '&fecha_inicio=2026-01-01&fecha_final=2026-12-31')
+SINAMOT_CACHE = os.path.join(ROOT, 'water_levels/Costa_Rica_SINAMOT')
+# cod -> (id, Webname, Satzname, Breite, Laenge, Provinz); Position Tambor: Wasser vor dem Muelle (osm_land, 0,15 km)
+SINAMOT_NEU = {'926': ('12', 'Tambor', 'Tambor (Bahía Ballena), Puntarenas, Costa Rica', 9.7150, -85.0150, 'Puntarenas')}
+ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
+
+
+def sinamot_lesen(cod, ident, web):
+    import urllib.request
+    pfad = os.path.join(SINAMOT_CACHE, '%s_2026.html' % cod)
+    if not os.path.exists(pfad):
+        os.makedirs(SINAMOT_CACHE, exist_ok=True)
+        req = urllib.request.Request(SINAMOT_URL % (ident, cod, web), headers={'User-Agent': 'Mozilla/5.0'})
+        open(pfad, 'wb').write(urllib.request.urlopen(req, timeout=180).read())
+    t = open(pfad, encoding='utf-8').read()
+    ev, tag = [], None
+    for m in re.finditer(r'(\d\d-\d\d-\d{4})|<td>(\d\d:\d\d)</td>\s*<td><strong>(-?[\d.]+) m</strong>', t):
+        if m[1]:
+            tag = m[1]
+            continue
+        ev.append((dt.datetime.strptime(tag + ' ' + m[2], '%d-%m-%Y %H:%M').replace(tzinfo=dt.timezone.utc)
+                   - dt.timedelta(hours=UTC_VERSATZ_H), float(m[3])))
+    return np.array([e[0].timestamp() for e in ev]), np.array([e[1] for e in ev])
+
+
+def sinamot(argv):
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import health_check as H
+    import qld_msq_fit as Q
+    import scheitelfit as SF
+    import xtide_modell as X
+    from sicher_schreiben import schreiben
+    kopf = X.kopf_lesen(ZIEL)
+    namen, speeds, arg, fak = kopf
+    nutz = Q.rayleigh(SF.konstituenten(namen, SF.CONSTIT_67), speeds, namen, 365)
+    heute = dt.date.today().strftime('%Y%m%d')
+    tg = np.arange(dt.datetime(2008, 1, 1).timestamp(), dt.datetime(2027, 1, 1).timestamp(), 3600.0)
+    bestand = [r for r in H.load_records() if r['lat'] and not r['current']]
+    neu = []
+    for cod, (ident, web, name, la, lo, prov) in SINAMOT_NEU.items():
+        t, h = sinamot_lesen(cod, ident, web)
+        z_tafel, w = SF.fit(t, h, nutz, speeds, arg, fak)
+        rms, tf, _ = SF.guete(t, h, z_tafel, w, kopf, versatz=False)
+        z0 = -float(SF.hoehe_und_ableitungen(tg, 0.0, w, kopf)[0].min())
+        nb = min(bestand, key=lambda r: H.km({'lat': la, 'lon': lo}, r))
+        print('%-36s %d Scheitel, Fit %.1f cm %.0f min, M2 %.3f@%.1f K1 %.3f@%.1f Z0 %.2f | %s %.0f km Kurve %.0f%%' % (
+            name, len(t), rms * 100, tf, *w['M2'], *w['K1'], z0, nb['name'][:30], H.km({'lat': la, 'lon': lo}, nb),
+            100 * H.curve_diff(Q.rec(w), nb)[1]))
+        blk = ['#', '# %s' % name, '# BEGIN HOT COMMENTS', '# country: Costa Rica',
+               '# source: SINAMOT/UNA tide predictions (unacostasegura.una.ac.cr), fit to table',
+               '# station_id_context: SINAMOT-%s' % cod, '# date_imported: %s' % heute,
+               '# datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)', '# confidence: 6',
+               '# note: %s Scheitelfit an SINAMOT-HW/NW 2026 (py/cimar_costa_rica.py --sinamot), %d Scheitel, %.1f cm / %.0f min.' % (
+                   heute, len(t), rms * 100, tf),
+               '# note: Keine Messreihe; SINAMOT trifft Messsaetze Puntarenas/Quepos/Papagayo 1-4 %, FES hier M2 1 %, 5 min.',
+               '# !units: meters', '# !longitude: %.4f' % lo, '# !latitude: %.4f' % la, '# province: %s' % prov,
+               name, '+00:00 :America/Costa_Rica', '%.4f meters' % z0]
+        blk += ['%-15s %.4f  %.2f' % (c, *w[c]) if c in w and w[c][0] >= 0.00005 else 'x 0 0' for c in namen]
+        neu.append((name, blk))
+    if '--schreiben' in argv:
+        L = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')     # frisch lesen, nur anhaengen
+        for name, blk in neu:
+            if name in L:
+                print('   existiert schon:', name)
+                continue
+            L += blk
+        for z in L:
+            z.encode('iso-8859-1')
+        schreiben(ZIEL, '\n'.join(L) + '\n')
+        print('->', os.path.relpath(ZIEL, ROOT), len(neu), 'Saetze')
+    return 0
+
+
 def main(argv):
+    if '--sinamot' in argv:
+        return sinamot(argv)
     for pdf in sorted(glob.glob(os.path.join(QUELLE, 'Tabla_Mareas_*_2026.pdf'))):
         ev, kopf = lesen(pdf)
         print('%-22s %-45s %7.3f %8.3f %s' % (os.path.basename(pdf)[13:-9], kopf.get('name', '')[:45], kopf['lat'],
