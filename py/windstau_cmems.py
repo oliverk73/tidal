@@ -14,7 +14,7 @@ zos -> Anomalie: minus Mittel der Tagesmittel des letzten Jahres. Danach wie bei
 Ergebnis: water_levels/cmems_ssh/aktuell.npz (schluessel 'datei|satz', t, z[m]). py/windstau.py liest es zuerst.
 Kein automatischer Abruf (Oliver 6.11.2026: erst, wenn die Seite operativ ist).
 
-Usage: venv/bin/python py/windstau_cmems.py [--meer=ostsee|mittelmeer|schwarz|limfjord]
+Usage: venv/bin/python py/windstau_cmems.py [--meer=ostsee|mittelmeer|schwarz|limfjord] [--nur=<Text im Satznamen>]
 """
 from __future__ import annotations
 
@@ -112,6 +112,9 @@ def main(argv):
         if opt.get('meer') and opt['meer'] != name:
             continue
         zellen = stationen().get(name, {})
+        if opt.get('nur'):                                 # 9.11.2026: nur Saetze, deren Schluessel den Text enthaelt
+            zellen = {z: [x for x in st if opt['nur'] in x[0]] for z, st in zellen.items()}
+            zellen = {z: st for z, st in zellen.items() if st}
         print(f'{name}: {len(zellen)} Ausschnitte, {sum(len(v) for v in zellen.values())} Stationen', flush=True)
         for n, (zelle, st) in enumerate(sorted(zellen.items())):
             f = os.path.join(tmp, f'{name}_{zelle[0]}_{zelle[1]}.nc')

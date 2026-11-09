@@ -175,7 +175,12 @@ def main(argv):
         if richtung == 'alt':
             name, sp = ort, ((la0, lo0), 0.0, 0)
         else:
-            name = '%s, %s' % (ort, staat) if land == 'United States' else '%s, %s, %s' % (ort, staat, land)
+            if land == 'United States':
+                name = '%s, %s' % (ort, staat)
+            elif not staat or staat == ort:                    # Algerien 9.11.2026: "Alger, Alger, Algeria" vermeiden
+                name = '%s, %s' % (ort, land)
+            else:
+                name = '%s, %s, %s' % (ort, staat, land)
             sp = seepunkt(L, la0, lo0, richtung)
         if not sp:
             print('%-40s kein Wasserpunkt' % name)
