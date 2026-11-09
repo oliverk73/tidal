@@ -7,13 +7,14 @@ Quellen (copernicusmarine-Toolbox, Zugang ~/.copernicusmarine):
   Ostsee        cmems_mod_bal_phy_anfc_PT1H-i, sla (Anomalie, stuendlich, ~9 Tage Vorhersage)
   Mittelmeer    cmems_mod_med_phy-ssh_anfc_4.2km-2D_PT1H-m, zos (absolut) + Tagesmittel P1D des letzten Jahres
   Schwarzes M.  cmems_mod_blk_phy-ssh_anfc_2.5km_PT1H-m, zos + P1D
+  Limfjord W    cmems_mod_nws_phy-ssh_anfc_1.5km-2D_PT1H-i, zos + Jahresmittel der Stundenwerte (9.11.2026)
 Je 1x1-Grad-Ausschnitt mit unseren Stationen ein Abruf; je Station der naechste Wasserpunkt des Modells.
 zos -> Anomalie: minus Mittel der Tagesmittel des letzten Jahres. Danach wie bei STOFS die Modellgezeit
 (M2, S2, K1, O1, M4) ueber das Fenster angepasst und abgezogen.
 Ergebnis: water_levels/cmems_ssh/aktuell.npz (schluessel 'datei|satz', t, z[m]). py/windstau.py liest es zuerst.
 Kein automatischer Abruf (Oliver 6.11.2026: erst, wenn die Seite operativ ist).
 
-Usage: venv/bin/python py/windstau_cmems.py [--meer=ostsee|mittelmeer|schwarz]
+Usage: venv/bin/python py/windstau_cmems.py [--meer=ostsee|mittelmeer|schwarz|limfjord]
 """
 from __future__ import annotations
 
@@ -36,11 +37,18 @@ MEERE = {
     'mittelmeer': dict(ds='cmems_mod_med_phy-ssh_anfc_4.2km-2D_PT1H-m', var='zos',
                        mittel='cmems_mod_med_phy-ssh_anfc_4.2km_P1D-m'),
     'schwarz': dict(ds='cmems_mod_blk_phy-ssh_anfc_2.5km_PT1H-m', var='zos', mittel='cmems_mod_blk_phy-ssh_anfc_2.5km_P1D-m'),
+    # 9.11.2026: westlicher Limfjord liegt ausserhalb des Ostsee-Modells (ab 9,04 O, Wasser erst ab Aggersund), STOFS hat in
+    # Daenemark keinen Punkt. Nordsee-Modell (AMM15, 1,5 km, mit Tide) loest Nissum Bredning auf; ohne Tagesmittel ->
+    # Jahresmittel aus den Stundenwerten. Nur bis 10 km zum Modellpunkt (Lemvig 2, Struer 8 km); Thisted 16, Skive,
+    # Nykoebing Mors, Roenbjerg ~30 km bleiben ohne Kurve (Windstau kippt im Fjord von Ende zu Ende).
+    'limfjord': dict(ds='cmems_mod_nws_phy-ssh_anfc_1.5km-2D_PT1H-i', var='zos', mittel='selbst', max_km=10),
 }
 PERIODEN = (12.4206, 12.0, 23.9345, 25.8193, 6.2103)
 
 
 def meer(la, lo):
+    if 56.3 < la < 57.2 and 8.1 < lo < 9.3:
+        return 'limfjord'
     if 40.5 < la < 47.2 and 27.3 < lo < 42:
         return 'schwarz'
     if 53.3 < la < 66 and 9.3 < lo < 30.5:
@@ -119,7 +127,7 @@ def main(argv):
                 mittel = None
                 if cfg['mittel']:
                     fm = f[:-3] + '_mittel.nc'
-                    _subset(cfg['mittel'], cfg['var'], zelle, m0, t0, fm)
+                    _subset(cfg['ds'] if cfg['mittel'] == 'selbst' else cfg['mittel'], cfg['var'], zelle, m0, t0, fm)
                     mittel = np.nanmean(xr.open_dataset(fm)[cfg['var']].values, axis=0)
             except Exception as e:  # noqa: BLE001
                 print(f'  {zelle} Fehler: {e}', flush=True)
@@ -131,7 +139,7 @@ def main(argv):
             for key, la, lo in st:
                 km = 111.2 * np.hypot(lats[jj] - la, (lons[ii] - lo) * math.cos(math.radians(la)))
                 k = int(np.argmin(km))
-                if km[k] > 15:
+                if km[k] > cfg.get('max_km', 15):
                     continue
                 z = arr[:, jj[k], ii[k]].astype(float)
                 if mittel is not None:
