@@ -27,6 +27,7 @@ import numpy as np
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'water_levels/nws_ssh')
 MT = os.path.join(ZIEL, 'modelltide.npz')
+LEER = os.path.join(ZIEL, 'ohne_modellwasser.json')   # Pegel ohne Modellzelle bis 5 km: beim Fortsetzen ueberspringen
 DATEI = os.path.join(ZIEL, 'aktuell.npz')
 CLI = os.path.join(ROOT, 'venv/bin/copernicusmarine')
 DS = 'cmems_mod_nws_phy-ssh_anfc_1.5km-2D_PT1H-i'
@@ -55,7 +56,7 @@ def gebiet(la, lo):
     return True
 
 
-def stationen(nur=None):
+def stationen(nur=None, virtuell=True):
     d = json.load(open(os.path.join(ROOT, 'static/js/leaflet_markers_data.json'), encoding='utf-8'))['stations']
     out = []
     for r in d:
@@ -64,6 +65,33 @@ def stationen(nur=None):
         if nur and r[8] not in nur:
             continue
         out.append((f"{r[3][:-4]}.txt|{r[8]}", r[1], r[2]))
+    if virtuell and not nur:
+        out += virtuelle_punkte(out)
+    return out
+
+
+VIRT = os.path.join(ZIEL, 'virtuelle_punkte.json')
+
+
+def virtuelle_punkte(pegel):
+    """Stuetzpunkte auf See fuer die Kartenebene (Oliver 9.11.2026): 0,5-Grad-Raster im Gebiet, auf Wasser, 20-120 km
+    vom naechsten Pegel. Einmal berechnet und in VIRT gemerkt (Landmaske ist langsam)."""
+    if os.path.exists(VIRT):
+        return [tuple(x) for x in json.load(open(VIRT))]
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import osm_land
+    kand = [(la, lo) for la in np.arange(46.25, 62.7, 0.5) for lo in np.arange(-19.75, 12.9, 0.5) if gebiet(la, lo)]
+    pla = np.array([p[1] for p in pegel])
+    plo = np.array([p[2] for p in pegel])
+    def abstand(la, lo):
+        return np.min(111.2 * np.hypot(pla - la, (plo - lo) * math.cos(math.radians(la))))
+    # 20-120 km vom naechsten Pegel: Schelf und Randmeere; der offene Atlantik hat kaum Windstau
+    kand = [(la, lo) for la, lo in kand if 20 <= abstand(la, lo) <= 120]
+    L = osm_land.Land(kand)
+    out = [('virtuell|NWS %.2f %.2f' % (la, lo), float(la), float(lo)) for la, lo in kand if not L.ist_land(la, lo)]
+    os.makedirs(ZIEL, exist_ok=True)
+    json.dump(out, open(VIRT, 'w'))
+    print(len(out), 'virtuelle Punkte auf See', flush=True)
     return out
 
 
@@ -112,9 +140,10 @@ def modelltide(argv):
     t0 = f'{jetzt - dt.timedelta(days=366):%Y-%m-%d}T00:00:00'
     t1 = f'{jetzt - dt.timedelta(days=1):%Y-%m-%d}T00:00:00'
     tmp = tempfile.mkdtemp(prefix='nws_')
+    leer = set(json.load(open(LEER))) if os.path.exists(LEER) else set()
     print(len(st), 'Pegel,', sum(1 for k, _, _ in st if k in erg), 'schon fertig', flush=True)
     for n, (key, la, lo) in enumerate(st):
-        if key in erg and not nur:
+        if (key in erg or key in leer) and not nur:
             continue
         f = os.path.join(tmp, 'p.nc')
         a = time.time()
@@ -126,6 +155,8 @@ def modelltide(argv):
             continue
         if not r or r[4] > 5:
             print('  %s: kein Modellwasser bis 5 km' % key, flush=True)
+            leer.add(key)
+            json.dump(sorted(leer), open(LEER, 'w'), ensure_ascii=False, indent=0)
             continue
         ts, z, pla, plo, km = r
         ok = np.isfinite(z)
@@ -209,7 +240,7 @@ def pruefen(argv):
     t0 = f'{jetzt - dt.timedelta(days=31):%Y-%m-%d}T00:00:00'
     t1 = f'{jetzt - dt.timedelta(days=1):%Y-%m-%d}T00:00:00'
     tmp = tempfile.mkdtemp(prefix='nws_')
-    for key, la, lo in stationen(nur):
+    for key, la, lo in stationen(nur, virtuell=False):
         if key not in idx:
             continue
         datei, name = key.split('|', 1)

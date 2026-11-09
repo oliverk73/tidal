@@ -15,7 +15,8 @@ Ausgabe: static/windstau/ws_fNNN.bin (int16 mm, -32768 = Land; je Bild die Raste
 Download je Lauf ~1 GB, Dauer ~10-20 min. Kein automatischer Abruf (Oliver 6.11.2026: erst, wenn die Seite
 operativ ist).
 
-Usage: venv/bin/python py/windstau_karte.py [--meer=ostsee|mittelmeer|schwarz] [--behalten]
+Usage: venv/bin/python py/windstau_karte.py [--meer=ostsee|mittelmeer|schwarz|nordsee] [--behalten]
+       nordsee: aus water_levels/nws_ssh/aktuell.npz (py/windstau_nws.py --vorhersage), kein eigener Download
        --behalten: heruntergeladene NetCDF-Dateien in water_levels/cmems_ssh/karte/ liegen lassen und wiederverwenden
 """
 from __future__ import annotations
@@ -133,6 +134,79 @@ def meer_laden(name, cfg, t0, t1, m0, m1, ordner):
     return gitter, ts, z
 
 
+NWS_AKTUELL = os.path.join(ROOT, 'water_levels/nws_ssh/aktuell.npz')
+NWS_MT = os.path.join(ROOT, 'water_levels/nws_ssh/modelltide.npz')
+NWS_MASKE = os.path.join(ROOT, 'water_levels/nws_ssh/karte_maske.npz')
+NWS_RADIUS_KM = 60.0
+
+
+def nordsee_laden():
+    """Nordsee/Aermelkanal/Britische Inseln/Biskaya (9.11.2026): kein Raster-Download -- das Modell rechnet die Tide mit,
+    die Modelltide kennen wir nur an Punkten (py/windstau_nws.py: Pegel + virtuelle Punkte auf See). Das Bild ist eine
+    Abstandsgewichtung (1/(d^2 + 5 km^2), Radius 60 km) dieser Punktreihen; Land und Ostsee/Limfjord (eigene Raster)
+    bleiben leer."""
+    from scipy.spatial import cKDTree
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import windstau_nws as W
+    A = np.load(NWS_AKTUELL, allow_pickle=True)
+    M = np.load(NWS_MT, allow_pickle=True)
+    pos = {k: p for k, p in zip(M['schluessel'], M['punkt'])}
+    keys = [k for k in A['schluessel'] if k in pos]
+    sp = [list(A['schluessel']).index(k) for k in keys]
+    pla = np.array([pos[k][0] for k in keys], float)
+    plo = np.array([pos[k][1] for k in keys], float)
+    ts = A['t'].astype(float)
+    werte = A['z'][:, sp].astype(float)                                   # (t, n)
+    dx, dy = 0.1, 0.06
+    lo1, lo2 = math.floor((plo.min() - 0.5) * 10) / 10, math.ceil((plo.max() + 0.5) * 10) / 10
+    la1, la2 = math.ceil((pla.max() + 0.5) / dy) * dy, math.floor((pla.min() - 0.5) / dy) * dy
+    lons = np.arange(lo1, lo2 + dx / 2, dx)
+    lats = np.arange(la1, la2 - dy / 2, -dy)
+    LA, LO = np.meshgrid(lats, lons, indexing='ij')
+    lat0 = math.radians(54.0)
+    if os.path.exists(NWS_MASKE) and np.load(NWS_MASKE)['form'].tolist() == [len(lats), len(lons), lo1, la1]:
+        wasser = np.load(NWS_MASKE)['wasser']
+    else:
+        import osm_land
+        zellen = [(la, lo) for la, lo in zip(LA.ravel(), LO.ravel())]
+        baum = cKDTree(np.column_stack([plo * 111.2 * math.cos(lat0), pla * 111.2]))
+        d, _ = baum.query(np.column_stack([LO.ravel() * 111.2 * math.cos(lat0), LA.ravel() * 111.2]))
+        nah = d <= NWS_RADIUS_KM
+        kand = [z for z, n in zip(zellen, nah) if n and W.gebiet(*z)]
+        L = osm_land.Land(kand)
+        land = {z for z in kand if L.ist_land(*z)}
+        wasser = np.array([n and W.gebiet(*z) and z not in land for z, n in zip(zellen, nah)]).reshape(LA.shape)
+        np.savez_compressed(NWS_MASKE, wasser=wasser, form=np.array([len(lats), len(lons), lo1, la1]))
+    # Gewichte Zelle -> Punkte
+    cx = LO[wasser] * 111.2 * np.cos(np.radians(LA[wasser]))
+    cy = LA[wasser] * 111.2
+    px = plo * 111.2 * np.cos(np.radians(pla))
+    py = pla * 111.2
+    baum = cKDTree(np.column_stack([px, py]))
+    nachbarn = baum.query_ball_point(np.column_stack([cx, cy]), NWS_RADIUS_KM)
+    from scipy.sparse import csr_matrix
+    zeilen, spalten, gew = [], [], []
+    for i, nb in enumerate(nachbarn):
+        for j in nb:
+            d2 = (cx[i] - px[j]) ** 2 + (cy[i] - py[j]) ** 2
+            zeilen.append(i)
+            spalten.append(j)
+            gew.append(1.0 / (d2 + 25.0))
+    Wm = csr_matrix((gew, (zeilen, spalten)), shape=(len(cx), len(keys)))
+    ok = np.isfinite(werte)
+    zaehler = Wm @ np.where(ok, werte, 0.0).T                            # (zellen, t)
+    nenner = Wm @ ok.T.astype(float)
+    with np.errstate(all='ignore'):
+        feld = zaehler / nenner
+    z = np.full((len(ts), len(lats), len(lons)), np.nan, dtype='float32')
+    z[:, wasser] = feld.T
+    gitter = dict(name='North Sea / Atlantic shelf', nx=int(len(lons)), ny=int(len(lats)), la1=float(lats[0]),
+                  lo1=float(lons[0]), dy=dy, dx=dx)
+    print(f'nordsee: {len(lons)}x{len(lats)} Zellen ({int(wasser.sum())} Wasser), {len(keys)} Punkte, {len(ts)} Stunden, '
+          f'Spanne {np.nanmin(z):+.2f} .. {np.nanmax(z):+.2f} m', flush=True)
+    return gitter, ts, z
+
+
 def main(argv):
     opt = dict((a[2:].split('=', 1) + [''])[:2] for a in argv if a.startswith('--'))
     jetzt = dt.datetime.now(dt.timezone.utc)
@@ -154,6 +228,11 @@ def main(argv):
             teile.append(meer_laden(name, cfg, t0, t1, m0, m1, ordner))
         except Exception as e:  # noqa: BLE001
             print(f'{name}: Fehler {e}', flush=True)
+    if (not opt.get('meer') or opt['meer'] == 'nordsee') and os.path.exists(NWS_AKTUELL):
+        try:
+            teile.append(nordsee_laden())
+        except Exception as e:  # noqa: BLE001
+            print(f'nordsee: Fehler {e!r}', flush=True)
     if not teile:
         print('nichts geladen')
         return 1
@@ -184,7 +263,7 @@ def main(argv):
         np.concatenate(stueck).tofile(os.path.join(neu, datei))
         bilder.append(dict(file=datei, t=int(t),
                            label=dt.datetime.fromtimestamp(t, dt.timezone.utc).strftime('%d.%m. %H:%M UTC')))
-    meta = dict(source='Copernicus Marine Service (BAL/MED/BLK analysis & forecast), detided',
+    meta = dict(source='Copernicus Marine Service (BAL/MED/BLK/NWS analysis & forecast), detided',
                 generated=jetzt.isoformat(timespec='seconds'), schritt_h=SCHRITT_H, grids=gitter, frames=bilder,
                 ende={g['name']: int(ts[-1]) for g, ts, _ in teile})
     json.dump(meta, open(os.path.join(neu, 'windstau_meta.json'), 'w'), indent=1)
