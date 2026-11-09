@@ -37335,10 +37335,11 @@ x 0 0
 # sonel_gps_id: 2039
 # sonel_tg_id: 2347
 # utide: pts=34190 period=2013-06-03..2017-07-11 r2=0.7416 rms=0.1659m const=67
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Ubatuba, Sao Paulo, Brazil".
 # !units: meters
 # !longitude: -45.0467
 # !latitude: -23.4513
-Ubatuba, Sao Paulo, Brazil
+Ubatuba, São Paulo, Brazil
 +00:00 :UTC
 2.3407 meters
 J1              0.0018  309.67
@@ -37533,10 +37534,11 @@ x 0 0
 # sonel_gps_id: 752
 # sonel_tg_id: 2230
 # utide: pts=87660 period=1996-09-14..2007-04-09 r2=0.7473 rms=0.2023m const=67
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Cananeia, Sao Paulo, Brazil".
 # !units: meters
 # !longitude: -47.9263
 # !latitude: -25.0159
-Cananeia, Sao Paulo, Brazil
+Cananéia, São Paulo, Brazil
 +00:00 :UTC
 1.7854 meters
 J1              0.0017  282.26
@@ -52655,12 +52657,13 @@ x 0 0
 # psmsl_id: 2191, 552
 # ptwc_code: limn
 # utide: pts=87660 period=2014-08-23..2026-02-28 r2=0.8441 rms=0.0475m const=67
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Limon, Costa Rica".
 # !units: meters
 # !longitude: -83.0233
 # !latitude: 9.9877
 # province: Limón
 # admin1_quelle: Polygon
-Limon, Costa Rica
+Limón, Costa Rica
 +00:00 :UTC
 0.5596 meters
 J1              0.0063  236.42
@@ -66370,6 +66373,7 @@ x 0 0
 # sonel_gps_id: 3562
 # sonel_tg_id: 3170
 # utide: pts=1328864 period=2011-03-12..2025-12-31 r2=0.9667 rms=0.0553m const=92
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Hienghene, New Caledonia".
 # !units: meters
 # !longitude: 164.943122
 # !latitude: -20.691993
@@ -66377,7 +66381,7 @@ x 0 0
 # note: kam in franzoesischer Normalzeit, der Einleseweg hat sie als UTC
 # note: gelesen. Gegen 1 Nachbarn aus 1 Dateien gemessen:
 # note: +1.00 h. Siehe py/shom_stunde_richten.py.
-Hienghene, New Caledonia
+Hienghène, New Caledonia
 +00:00 :Pacific/Noumea
 0.9949 meters
 J1              0.0105  45.09
@@ -141234,12 +141238,13 @@ x 0 0
 # ssc_id: SSC-sanq
 # psmsl_id: 1457
 # utide: pts=87660 period=1980-08-26..1990-12-31 r2=0.9804 rms=0.0707m const=67
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "San Quintin (Campo La Chorera), Baja California, Mexico".
 # !units: meters
 # !longitude: -115.9870
 # !latitude: 30.4364
 # note: 20260903 Provinz "Baja California" ergaenzt (Polygon unter 25 km),
 # note: siehe py/provinz_ergaenzen.py.
-San Quintin (Campo La Chorera), Baja California, Mexico
+San Quintín (Campo La Chorera), Baja California, Mexico
 +00:00 :UTC
 1.8696 meters
 J1              0.0166  254.40
@@ -145586,10 +145591,11 @@ x 0 0
 # psmsl_id: 2180
 # ptwc_code: clst
 # utide: pts=13281 period=2010-02-12..2011-08-19 r2=0.8429 rms=0.0974m const=67
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Celestun, Yucatan, Mexico".
 # !units: meters
 # !longitude: -90.403000
 # !latitude: 20.858000
-Celestun, Yucatan, Mexico
+Celestún, Yucatán, Mexico
 +00:00 :UTC
 1.9286 meters
 J1              0.0119  24.02
@@ -145783,10 +145789,11 @@ x 0 0
 # psmsl_id: 2178
 # ptwc_code: telc
 # utide: pts=11359 period=2011-12-01..2013-04-30 r2=0.7986 rms=0.0923m const=67
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Telchac, Yucatan, Mexico".
 # !units: meters
 # !longitude: -89.308000
 # !latitude: 21.340000
-Telchac, Yucatan, Mexico
+Telchac, Yucatán, Mexico
 +00:00 :UTC
 1.6097 meters
 J1              0.0094  41.04
@@ -182093,12 +182100,13 @@ x 0 0
 # sonel_gps_id: 3145
 # sonel_tg_id: 3144
 # utide: pts=83065 period=2012-09-22..2024-12-31 r2=0.9732 rms=0.1348m const=67
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Porto de Leixoes (Matosinhos), Portugal".
 # !units: meters
 # !longitude: -8.7045
 # !latitude: 41.1867
 # region: Porto
 # admin1_quelle: Polygon
-Porto de Leixoes (Matosinhos), Portugal
+Porto de Leixões (Matosinhos), Portugal
 +00:00 :UTC
 0.0000 meters
 J1              0.0024  93.49
@@ -200265,13 +200273,14 @@ x 0 0
 # cmems_code: SA-RAPITA
 # network: SOCIB
 # utide: pts=1431 period=2020-01-01..2020-02-29 r2=0.3405 rms=0.0568m const=35
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Sa Rapita (Mallorca), Baleares, Spain".
 # !units: meters
 # !longitude: 2.9533
 # !latitude: 39.3603
 # region: Baleares
 # admin1_quelle: Name
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 60-day window (ratio/lag of Colònia de Sant Pere, 50 km); K2/P1 added
-Sa Rapita (Mallorca), Baleares, Spain
+Sa Ràpita (Mallorca), Baleares, Spain
 +00:00 :UTC
 0.1109 meters
 J1              0.0015  151.08
@@ -243402,10 +243411,11 @@ x 0 0
 # datum: Chart Datum (INOCAR, ~MLWS)
 # confidence: 6
 # inocar_armonicos: ISLA_ISABELA.pdf
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Puerto Villamil (Isla Isabela), Galapagos, Ecuador".
 # !units: meters
 # !longitude: -90.9600
 # !latitude: -0.9630
-Puerto Villamil (Isla Isabela), Galapagos, Ecuador
+Puerto Villamil (Isla Isabela), Galápagos, Ecuador
 +00:00 :UTC
 0.9427 meters
 J1              0.0067  67.63
@@ -243596,10 +243606,11 @@ x 0 0
 # datum: Chart Datum (INOCAR, ~MLWS)
 # confidence: 6
 # inocar_armonicos: ISLA_SAN_CRISTOBAL.pdf
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Puerto Baquerizo Moreno (San Cristóbal), Galapagos, Ecuador".
 # !units: meters
 # !longitude: -89.6100
 # !latitude: -0.8990
-Puerto Baquerizo Moreno (San Cristóbal), Galapagos, Ecuador
+Puerto Baquerizo Moreno (San Cristóbal), Galápagos, Ecuador
 +00:00 :UTC
 1.1097 meters
 J1              0.0062  68.17

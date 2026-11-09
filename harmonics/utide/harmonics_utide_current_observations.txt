@@ -29078,6 +29078,7 @@ x 0 0
 # confidence: 5
 # cmems_code: Svinbadan
 # utide: period=1884-01-01..1960-10-05 const=68
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Svinbadan, Sweden Current".
 # !units: knots
 # !longitude: 12.516700
 # !latitude: 56.166700
@@ -29086,7 +29087,7 @@ x 0 0
 # note: 20260906 country "Denmark" -> "Sweden" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Hovedstaden" -> "Skåne".
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
-Svinbadan, Sweden Current
+Svinbådan, Sweden Current
 +00:00 :UTC
 -18.8758 knots
 J1              0.0100  46.60
@@ -43172,6 +43173,7 @@ x 0 0
 # confidence: 5
 # cmems_code: 6200084
 # utide: period=1998-07-06..2026-03-31 const=68
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Rio Miño offshore buoy, Spain Current".
 # !units: knots
 # !longitude: -9.4300
 # !latitude: 42.1200
@@ -43180,7 +43182,7 @@ x 0 0
 # note: 20260906 country "Portugal" -> "Spain" nach dem Namen berichtigt,
 # note: -- damit auch die Region "Viana do Castelo" -> "Pontevedra".
 # note: 2026-10-18 Position = letzte Bojenposition laut CMEMS; vorher Suedwestecke des Messgebiets (41.9023 -9.5000) (Oliver).
-Rio Miño offshore buoy, Spain Current
+Río Miño offshore buoy, Spain Current
 +00:00 :UTC
 0.0045 knots
 J1              0.0008  149.05

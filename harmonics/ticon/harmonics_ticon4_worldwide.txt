@@ -19861,13 +19861,14 @@ x 0 0
 # psmsl_id: 1226, 1645
 # uhslc_id: 3
 # ptwc_code: balt
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Caleta Aeolian (Isla Baltra), Galapagos, Ecuador".
 # !units: meters
 # !longitude: -90.2853
 # !latitude: -0.4367
 # state: Galapagos
 # admin1_quelle: Name
 # note: 20261018 Name nach Pruefung der Dublette (archivierter Name in der Klammer bzw. Ort) (Oliver).
-Caleta Aeolian (Isla Baltra), Galapagos, Ecuador
+Caleta Aeolian (Isla Baltra), Galápagos, Ecuador
 +00:00 :Pacific/Galapagos
 1.1500 meters
 J1              0.0065  76.26
@@ -20061,10 +20062,11 @@ x 0 0
 # date_imported: 20260322
 # datum: LLWLT
 # confidence: 7
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Banc Du Cap (Banc du Cap Brûlé), Quebec, Canada".
 # !units: meters
 # !longitude: -70.710000
 # !latitude: 47.090000
-Banc Du Cap (Banc du Cap Brûlé), Quebec, Canada
+Banc du Cap (Banc du Cap Brûlé), Québec, Canada
 +00:00 :America/Toronto
 0.0000 meters
 J1              0.0094  356.90
@@ -66097,12 +66099,13 @@ x 0 0
 # confidence: 7
 # ssc_id: SSC-mavh
 # ioc_code: mavh
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Mavholmsbadan, Sweden".
 # !units: meters
 # !longitude: 11.707500
 # !latitude: 57.672300
 # region: Västra Götaland
 # admin1_quelle: Ufer 2.5 km
-Mavholmsbadan, Sweden
+Måvholmsbådan, Sweden
 +00:00 :Europe/Stockholm
 0.0000 meters
 J1              0.0017  271.77
@@ -84168,12 +84171,13 @@ x 0 0
 # ptwc_code: reyk
 # sonel_gps_id: 828
 # sonel_tg_id: 1984
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Reykjavik, Iceland".
 # !units: meters
 # !longitude: -21.939890
 # !latitude: 64.150581
 # region: Reykjavík
 # admin1_quelle: Polygon
-Reykjavik, Iceland
+Reykjavík, Iceland
 +00:00 :Atlantic/Reykjavik
 0.0000 meters
 J1              0.0050  121.06
@@ -89448,6 +89452,7 @@ x 0 0
 # date_imported: 20260322
 # datum: DVR90
 # confidence: 7
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Rodvig, Denmark".
 # !units: meters
 # !longitude: 12.372800
 # !latitude: 55.254200
@@ -89456,7 +89461,7 @@ x 0 0
 # note: 20261027 Zeit berichtigt: Meridian +01:00 -> +00:00, +1.00 h (Phasen waren UTC).
 # note: -- DMI-Messreihen: 27 von 43 daenischen CMEMS-Saetzen -60 min
 # note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
-Rodvig, Denmark
+Rødvig, Denmark
 +00:00 :Europe/Copenhagen
 0.0000 meters
 J1              0.0013  117.87
@@ -89649,6 +89654,7 @@ x 0 0
 # date_imported: 20260322
 # datum: BHS77
 # confidence: 7
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Rohukula, Estonia".
 # !units: meters
 # !longitude: 23.424801
 # !latitude: 58.904900
@@ -89657,7 +89663,7 @@ x 0 0
 # note: 20261028 Zeit berichtigt: Meridian +02:00 -> +00:00, +2.00 h (Phasen waren UTC).
 # note: -- CMEMS-Stundenreihe (UTC) -119 min
 # note: -- Belegt gegen Messreihen, siehe py/ticon_cmems_meridian.py.
-Rohukula, Estonia
+Rohuküla, Estonia
 +00:00 :Europe/Tallinn
 0.0000 meters
 J1              0.0005  22.55
@@ -92893,12 +92899,13 @@ x 0 0
 # ptwc_code: sant
 # sonel_gps_id: 677, 679
 # sonel_tg_id: 1996, 2776
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Puerto Ayora (Isla Santa Cruz), Galapagos, Ecuador".
 # !units: meters
 # !longitude: -90.3130
 # !latitude: -0.7485
 # state: Galapagos
 # admin1_quelle: Name
-Puerto Ayora (Isla Santa Cruz), Galapagos, Ecuador
+Puerto Ayora (Isla Santa Cruz), Galápagos, Ecuador
 +00:00 :Pacific/Galapagos
 0.0000 meters
 J1              0.0068  72.13
@@ -100129,12 +100136,13 @@ x 0 0
 # ssc_id: SSC-tgud
 # ioc_code: tang
 # psmsl_id: 2390
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Tangudden, Sweden".
 # !units: meters
 # !longitude: 11.872200
 # !latitude: 57.682100
 # region: Västra Götaland
 # admin1_quelle: Polygon
-Tangudden, Sweden
+Tångudden, Sweden
 +00:00 :Europe/Stockholm
 0.0000 meters
 J1              0.0014  277.70
@@ -103556,10 +103564,11 @@ x 0 0
 # sonel_gps_id: 2268
 # sonel_tg_id: 2258
 # note: 20260917 Nummer entfernt ("Tubuai, Austral Islands, French Polynesia (2)"), die gleichnamigen Dubletten sind geloescht (py/dateiinterne_dubletten.py).
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Tubuai, Austral Islands, French Polynesia".
 # !units: meters
 # !longitude: -149.475540
 # !latitude: -23.341770
-Tubuai, Austral Islands, French Polynesia
+Tubuaï, Austral Islands, French Polynesia
 +00:00 :Pacific/Tahiti
 0.0000 meters
 J1              0.0015  28.87

@@ -15994,6 +15994,7 @@ x 0 0
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 5
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Mbini (Rio Benito), Equatorial Guinea".
 # !units: meters
 # !longitude: 9.6233
 # !latitude: 1.5853
@@ -16009,7 +16010,7 @@ x 0 0
 # note: 20260914 neu uebertragen (py/noaa_neu_uebertragen.py): Bezug Takoradi, Ghana [harmonics_ticon4_worldwide.txt],
 # note: Flach behalten, Buchzonen, Hube im Buchverhaeltnis; Beleg: Gruppe lokal n=3 -0.40 Punkte.
 # note: 2026-10-18 Name/Position vom archivierten harmonics_att_np208_secondary-Satz uebernommen; FES 9.8 gegen 20.7 cm (Oliver).
-Mbini (Rio Benito), Equatorial Guinea
+Mbini (Río Benito), Equatorial Guinea
 +00:00 :Africa/Malabo
 0.9754 meters
 J1              0.0088  15.22
@@ -59168,6 +59169,7 @@ x 0 0
 # date_imported: 20260630
 # datum: Chart Datum (Z0 = mean tide level above CD)
 # confidence: 4
+# note: 20261109 umbenannt (Sonderzeichen, Oliver): bis dahin "Austervag (Bjornoya), Svalbard".
 # !units: meters
 # !longitude: 19.1814
 # !latitude: 74.4851
@@ -59178,7 +59180,7 @@ x 0 0
 # note: Probe: anwenden (nur Buch). Siehe py/noaa_s2_nachziehen.py.
 # note: 2026-10-30 K1/P1 x2.32 auf FES (Bergen-Uebertragung hatte K1 x0.43); O1 passt (x0.86).
 # note: 2026-10-30 Name vom archivierten ATT-Satz Austervag (Bjornoya) uebernommen, Buchname Bear Island (Barents Sea) (Oliver).
-Austervag (Bjornoya), Svalbard
+Austervåg (Bjørnøya), Svalbard
 +00:00 :Arctic/Longyearbyen
 0.4877 meters
 J1              0.0012  258.46
