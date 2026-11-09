@@ -1,5 +1,5 @@
 /**
- * SurgeCanvasLayer — Kartenebene "Weather effect on sea level" (7.11.2026).
+ * SurgeCanvasLayer — Kartenebene "Storm Surge" (7.11.2026, Name seit 9.11.).
  * Daten: py/windstau_karte.py -> static/windstau/ (Copernicus Marine, Ostsee/Mittelmeer/Schwarzes Meer,
  * Modellgezeit abgezogen). Je Bild int16 mm, mehrere Raster hintereinander (meta.grids[].offset).
  * Baut auf TideCanvasLayer (tide_layer.js) auf: gleiche Leinwand, Landmaske, Animation.
@@ -120,7 +120,7 @@ class SurgeCanvasLayer extends TideCanvasLayer {
     const el = document.getElementById('ws-wert');
     if (!el) return;
     const v = this.wertBei(ll.lat, ll.lng);
-    el.textContent = v === null ? '' : 'Here: ' + (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(2) + ' m';
+    el.textContent = v === null ? '' : 'Surge here: ' + (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(2) + ' m';
   }
 
   _renderGrid(grid, size, bounds, zoom, topLeft) {
