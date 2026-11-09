@@ -79,7 +79,7 @@ header #search-trigger {
 </style>
 <script src="/static/js/suche.js?v=20261101" defer></script>
 <script src="/static/js/pwa.js" defer></script>
-<script src="/static/js/kurven_anzeige.js?v=20261107" defer></script>
+<script src="/static/js/kurven_anzeige.js?v=20261109" defer></script>
 
 {# Build a richer description using available metadata #}
 {% set meta_dict = {} %}
@@ -240,13 +240,13 @@ the blue line traces the tip of the current vector hour by hour (direction = tow
         width="3200" height="312" loading="eager" decoding="async"></div>
 {% if windstau %}
 <p class="station-note" style="font-style:normal;"><span style="color:#c62828;font-weight:bold;">- - -</span>
-Dashed red line: expected water level <strong>including the weather</strong> — the astronomical tide plus the
+Dashed red line: expected <strong>sea level (with surge)</strong> — the tide level plus the wind- and pressure-driven surge from the
 {% if windstau.quelle == 'cmems' %}sea-level forecast of the Copernicus Marine Service{% else %}storm-surge forecast of NOAA's global STOFS model{% endif %}
 ({% if windstau.quelle == 'cmems' %}retrieved{% else %}run{% endif %} {{ windstau.lauf }}, until {{ windstau.bis }}).
-Weather effect now {{ '%+.2f'|format(windstau.jetzt) }} {{ windstau.einheit }};
-highest {{ '%+.2f'|format(windstau.hoch) }} {{ windstau.einheit }} ({{ windstau.hoch_zeit }}),
-lowest {{ '%+.2f'|format(windstau.tief) }} {{ windstau.einheit }} ({{ windstau.tief_zeit }}).
-The column <em>With weather</em> in the table below adds it to each high and low tide.</p>
+Surge now {{ '%+.2f'|format(windstau.jetzt|round(2) + 0.0) }} {{ windstau.einheit }};
+highest {{ '%+.2f'|format(windstau.hoch|round(2) + 0.0) }} {{ windstau.einheit }} ({{ windstau.hoch_zeit }}),
+lowest {{ '%+.2f'|format(windstau.tief|round(2) + 0.0) }} {{ windstau.einheit }} ({{ windstau.tief_zeit }}).
+The column <em>Sea Level (with Surge)</em> in the table below adds it to each high and low tide.</p>
 {% endif %}
 <h3>Tide times</h3>
 {% endif %}
@@ -258,9 +258,9 @@ The column <em>With weather</em> in the table below adds it to each high and low
     <th class="time-cell">Time</th>
     <th class="icon-cell"></th>
     <th class="type-cell"></th>
-    <th class="value-cell">{% if is_current %}Speed{% else %}Sea Level{% endif %}</th>
+    <th class="value-cell">{% if is_current %}Speed{% else %}Tide Level{% endif %}</th>
     {% if rose_url %}<th class="value-cell">Direction</th>{% endif %}
-    {% if _mit_wetter %}<th class="value-cell" style="color:#c62828;">With weather</th>{% endif %}
+    {% if _mit_wetter %}<th class="value-cell" style="color:#c62828;">Sea Level (with Surge)</th>{% endif %}
   </tr>
 </thead>
 {% for row in tide_rows %}

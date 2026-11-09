@@ -70,11 +70,11 @@
         z2.textContent = s < 0.05 ? 'Slack ' + zahl(s) + ' ' + K.einheit
                                   : (v > 0 ? 'Flood ' : 'Ebb ') + zahl(s) + ' ' + K.einheit;
       } else {
-        z2.textContent = 'Tide ' + zahl(v) + ' ' + K.einheit;
+        z2.textContent = 'Tide level ' + zahl(v) + ' ' + K.einheit;
       }
       var w = K.wetter ? K.wetter[i] : null;
       if (w !== null && w !== undefined) {
-        z3.textContent = 'With weather ' + zahl(w) + ' ' + K.einheit;
+        z3.textContent = 'Sea level (with surge) ' + zahl(w) + ' ' + K.einheit;
         punktW.setAttribute('cx', xi); punktW.setAttribute('cy', y(w));
         punktW.setAttribute('visibility', 'inherit');
       } else {
