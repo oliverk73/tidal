@@ -54,10 +54,11 @@ def amplituden_heuristik(D, name):
 
 
 class Grafik:
-    def __init__(self, D, name, beginn, einheit='m', utc=False, jetzt=None, zone=None, modell=None, wetter=None):
+    def __init__(self, D, name, beginn, einheit='m', utc=False, jetzt=None, zone=None, modell=None, wetter=None, messung=None):
         self.D, self.name, self.s = D, name, D.saetze[name]
         self.modell = modell        # (wert(t), ereignisse(t0, t1)) der eigenen HW/NW-Rechnung oder None
         self.wetter = wetter        # (t, windstau_m) aus py/windstau.py oder None (6.11.2026)
+        self.messung = messung      # (t, gemessen_m im Bezug der Vorhersage) aus py/pegel_echtzeit.py oder None (9.11.2026)
         self.strom = self.s.strom
         self.zone = zone or (dt.timezone.utc if utc else ZoneInfo(self.s.zone.lstrip(':')))
         self.faktor = 1.0 if self.strom or einheit != 'ft' else 1 / T.FUSS
@@ -113,6 +114,16 @@ class Grafik:
             zz = np.interp(tt, wt, wz) * self.faktor
             ok = (tt >= wt[0]) & (tt <= wt[-1])
             wetter = [round(float(val[x + 1] + zz[x + 1]), nk) if ok[x + 1] else None for x in xs]
+        messung = None
+        if self.messung is not None and not self.strom:
+            mt, mz = self.messung
+            mm = np.interp(tt, mt, mz) * self.faktor
+            # nur wo Messwerte dicht liegen (Luecken > 30 min nicht ueberbruecken)
+            naechst = np.abs(mt[np.clip(np.searchsorted(mt, tt), 0, len(mt) - 1)] - tt)
+            okm = (tt >= mt[0]) & (tt <= mt[-1]) & (naechst <= 1800)
+            messung = [round(float(mm[x + 1]), nk) if okm[x + 1] else None for x in xs]
+            if not any(v is not None for v in messung):
+                messung = None
         z = getattr(self.zone, 'key', None)
         if not z:
             off = self.zone.utcoffset(dt.datetime.fromtimestamp(start, dt.timezone.utc))
@@ -125,7 +136,7 @@ class Grafik:
                 abk.append([t, k])
                 letzt = k
         d = dict(t0=int(start), dt=int(inc * schritt), dx=schritt, x0=int(lbreite), zone=z, abk=abk,
-                 einheit=self.einheit, strom=bool(self.strom), werte=werte, wetter=wetter,
+                 einheit=self.einheit, strom=bool(self.strom), werte=werte, wetter=wetter, messung=messung,
                  ymin=self.ymin, ymax=self.ymax, vmin=self.valmin, vmax=self.valmax)
         return "data-kurve='" + json.dumps(d, separators=(',', ':')).replace("'", '&#39;') + "' "
 
@@ -242,6 +253,18 @@ class Grafik:
                         self.valmin = float(ww.min()) - rand
                     if ww.max() > self.valmax:
                         self.valmax = float(ww.max()) + rand
+        # Messwerte ebenso (9.11.2026)
+        if self.messung is not None and not self.strom:
+            mt, mz = self.messung
+            inc0 = max(1, math.floor(56160.0 / HOEHE / 1.0 + 0.5))
+            m = (mt >= self.beginn - inc0 * 120) & (mt <= self.beginn + inc0 * BREITE)
+            if m.sum() > 2:
+                mm = mz[m] * self.faktor
+                rand = 0.03 * (max(self.valmax, mm.max()) - min(self.valmin, mm.min()))
+                if mm.min() < self.valmin:
+                    self.valmin = float(mm.min()) - rand
+                if mm.max() > self.valmax:
+                    self.valmax = float(mm.max()) + rand
         step, lbreite, lrechts, lo, hi = self.beschriftung()
         inc = max(1, math.floor(56160.0 / HOEHE / 1.0 + 0.5))
         start = self.beginn - inc * (lbreite + 8)
@@ -325,6 +348,22 @@ class Grafik:
                 pkt = ' '.join(f'{x} {f(self.xlate(val[x + 1] + zz[x + 1]))}' for x in range(BREITE + 1) if ok[x + 1])
                 self.out.append(f'<polyline fill="none" stroke="#c62828" stroke-width="2.5" stroke-dasharray="8 5" points="{pkt}"/>')
 
+        # Gemessener Wasserstand (9.11.2026): durchgezogen, nur bis jetzt, Luecken > 30 min unterbrechen die Linie
+        if self.messung is not None and not self.strom:
+            mt, mz = self.messung
+            mm = np.interp(tt, mt, mz) * self.faktor
+            naechst = np.abs(mt[np.clip(np.searchsorted(mt, tt), 0, len(mt) - 1)] - tt)
+            okm = (tt >= mt[0]) & (tt <= mt[-1]) & (naechst <= 1800)
+            stueck = []
+            for x in range(BREITE + 1):
+                if okm[x + 1]:
+                    stueck.append(f'{x} {f(self.xlate(mm[x + 1]))}')
+                elif stueck:
+                    self.out.append(f'<polyline fill="none" stroke="#1b5e20" stroke-width="3" points="{" ".join(stueck)}"/>')
+                    stueck = []
+            if stueck:
+                self.out.append(f'<polyline fill="none" stroke="#1b5e20" stroke-width="3" points="{" ".join(stueck)}"/>')
+
         # Werte fuer die Anzeige beim Ueberfahren (7.11.2026): alle 2 px (6 min) Zeit = start + inc*x
         self.out[2] = self.out[2].replace('<svg ', '<svg ' + self.daten_attribute(start, inc, lbreite, val, tt), 1)
 
@@ -381,12 +420,12 @@ class Grafik:
         return '\n'.join(self.out)
 
 
-def svg(D, name, tag, einheit='m', utc=False, jetzt=None, zone=None, modell=None, wetter=None):
+def svg(D, name, tag, einheit='m', utc=False, jetzt=None, zone=None, modell=None, wetter=None, messung=None):
     """tag = 'YYYY-MM-DD' -> SVG-Text (Beginn 00:00 in Stationszeit bzw. UTC)."""
     s = D.saetze[name]
     zone = zone or (dt.timezone.utc if utc else ZoneInfo(s.zone.lstrip(':')))
     b = dt.datetime.strptime(tag, '%Y-%m-%d').replace(tzinfo=zone).timestamp()
-    return Grafik(D, name, b, einheit, utc, jetzt, zone, modell, wetter).svg()
+    return Grafik(D, name, b, einheit, utc, jetzt, zone, modell, wetter, messung).svg()
 
 
 if __name__ == '__main__':

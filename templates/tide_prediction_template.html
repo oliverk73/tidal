@@ -79,7 +79,7 @@ header #search-trigger {
 </style>
 <script src="/static/js/suche.js?v=20261101" defer></script>
 <script src="/static/js/pwa.js" defer></script>
-<script src="/static/js/kurven_anzeige.js?v=20261109" defer></script>
+<script src="/static/js/kurven_anzeige.js?v=20261109b" defer></script>
 
 {# Build a richer description using available metadata #}
 {% set meta_dict = {} %}
@@ -231,6 +231,9 @@ the blue line traces the tip of the current vector hour by hour (direction = tow
 })();
 </script>
 {% endif %}
+{% if guete %}
+<p class="station-note" style="font-style:normal;"><strong>Data basis:</strong> {{ guete.text }}.{% if guete.quelle %} <span style="color:#666;">({{ guete.quelle }})</span>{% endif %}</p>
+{% endif %}
 <h3>Current times</h3>
 {% else %}
 <div class="tide-svg-wrap"><img src="{{ svg_url }}"
@@ -247,6 +250,17 @@ Surge now {{ '%+.2f'|format(windstau.jetzt|round(2) + 0.0) }} {{ windstau.einhei
 highest {{ '%+.2f'|format(windstau.hoch|round(2) + 0.0) }} {{ windstau.einheit }} ({{ windstau.hoch_zeit }}),
 lowest {{ '%+.2f'|format(windstau.tief|round(2) + 0.0) }} {{ windstau.einheit }} ({{ windstau.tief_zeit }}).
 The column <em>Sea Level (with Surge)</em> in the table below adds it to each high and low tide.</p>
+{% endif %}
+{% if pegel %}
+<p class="station-note" style="font-style:normal;"><span style="color:#1b5e20;font-weight:bold;">&#8212;&#8212;</span>
+Solid green line: <strong>measured sea level</strong> at the gauge {{ pegel.pegel }} ({{ pegel.quelle }}{% if pegel.km >= 0.5 %}, {{ '%.1f'|format(pegel.km) }} km away{% endif %}), matched to the datum of this prediction.
+Check against this gauge over the last {{ '%.0f'|format(pegel.tage) }} days (weather effects removed):
+{% if pegel.versatz_min|abs <= 2 %}tide times match within 2 min{% else %}the measured tide runs {{ pegel.versatz_min|abs }} min {{ 'later' if pegel.versatz_min > 0 else 'earlier' }} than predicted{% endif %},
+heights within &plusmn;{{ '%.0f'|format(pegel.rms_cm if pegel.rms_cm >= 1 else 1) }} cm (rms),
+tidal range {{ '%+.0f'|format(pegel.hub_pct) }}&nbsp;%.</p>
+{% endif %}
+{% if guete %}
+<p class="station-note" style="font-style:normal;"><strong>Data basis:</strong> {{ guete.text }}.{% if guete.quelle %} <span style="color:#666;">({{ guete.quelle }})</span>{% endif %}</p>
 {% endif %}
 <h3>Tide times</h3>
 {% endif %}

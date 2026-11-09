@@ -112,7 +112,58 @@ def svg(name, source, tag, einheit='m', utc=False):
     if not utc and D.saetze[name].zone.lstrip(':').upper() == 'UTC':
         z = ortszone(D, name)
     w = _windstau(D, name)
-    return G.svg(D, name, tag, einheit, utc, zone=z, modell=_grafik_modell(D, name), wetter=w[:2] if w else None)
+    pg = _pegel(D, name)
+    return G.svg(D, name, tag, einheit, utc, zone=z, modell=_grafik_modell(D, name), wetter=w[:2] if w else None,
+                 messung=(pg['t'], pg['gemessen']) if pg else None)
+
+
+_PEGEL_CACHE = {}
+
+
+def _pegel(D, name):
+    """Messwerte + Trefferquote am naechsten Echtzeitpegel (py/pegel_echtzeit.py), 10 min im Speicher."""
+    import time
+    k = (D.pfad, name)
+    c = _PEGEL_CACHE.get(k)
+    if c and time.time() - c[0] < 600:
+        return c[1]
+    try:
+        import pegel_echtzeit as P
+        v = P.fuer_satz(D, name)
+    except Exception as e:  # noqa: BLE001 -- Zusatz, nie die Seite verlieren
+        print(f'⚠️ Pegel {name}: {e!r}')
+        v = None
+    _PEGEL_CACHE[k] = (time.time(), v)
+    return v
+
+
+def pegel_hinweis(name, source):
+    """Fuer die Seite: dict(pegel, quelle, km, tage, versatz_min, rms_cm, hub_pct) oder None."""
+    try:
+        D, name = finden(name, source)
+        v = _pegel(D, name)
+        if not v:
+            return None
+        q = {'ioc': 'IOC Sea Level Monitoring', 'po': 'WSV Pegelonline', 'noaa': 'NOAA CO-OPS'}[v['pegel']['q']]
+        return dict(pegel=v['pegel']['name'], quelle=q, km=v['km'], tage=v['tage'], versatz_min=v['versatz_min'],
+                    rms_cm=v['rms_cm'], hub_pct=100 * (v['hubfaktor'] - 1))
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def guete_hinweis(name, source):
+    """Fuer die Seite: dict(klasse, text, quelle) aus py/guete.py."""
+    try:
+        import guete
+        D, name = finden(name, source)
+        s = D.saetze[name]
+        src = (s.hot.get('source') or '').strip()
+        k = guete.klasse(D.pfad, src)
+        if s.strom and not k.startswith('S'):
+            k = 'ST'
+        return dict(klasse=k, text=guete.TEXT[k], quelle=src)
+    except Exception:  # noqa: BLE001
+        return None
 
 
 _WINDSTAU_LAEUFT = []

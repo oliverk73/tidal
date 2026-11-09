@@ -1879,7 +1879,17 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
                                 **{k: windstau[k] * fk for k in ('jetzt', 'hoch', 'tief')})
         except Exception as e:  # noqa: BLE001
             print(f"⚠️ Windstau-Hinweis fehlgeschlagen: {e!r}")
+    pegel = guete = None
+    if TIDEN_RECHNUNG == "eigen":
+        try:
+            guete = _tiden_dienst().guete_hinweis(decoded_station, source)
+            if not is_current_station:
+                pegel = _tiden_dienst().pegel_hinweis(decoded_station, source)
+        except Exception as e:  # noqa: BLE001
+            print(f"⚠️ Pegel/Guete-Hinweis fehlgeschlagen: {e!r}")
     html = render_template_string(template,
+                                  pegel=pegel,
+                                  guete=guete,
                                   windstau=windstau,
                                   hwnw=hwnw,
                                   station=display_station,

@@ -55,6 +55,8 @@
     var z1 = el('text', {'font-size': 14, 'font-weight': 'bold', fill: '#000'}, g);
     var z2 = el('text', {'font-size': 14, fill: '#000'}, g);
     var z3 = el('text', {'font-size': 13, fill: '#c62828'}, g);
+    var z4 = el('text', {'font-size': 13, fill: '#1b5e20'}, g);
+    var punktM = el('circle', {r: 4, fill: '#1b5e20', stroke: '#fff', 'stroke-width': 1.5}, g);
 
     function zahl(v) { return (Math.abs(v) < 0.005 ? 0 : v).toFixed(2); }
 
@@ -81,9 +83,18 @@
         z3.textContent = '';
         punktW.setAttribute('visibility', 'hidden');
       }
-      var b = 12 + Math.max(z1.getComputedTextLength(), z2.getComputedTextLength(),
-                            z3.textContent ? z3.getComputedTextLength() : 0);
-      var h = z3.textContent ? 62 : 44;
+      var m = K.messung ? K.messung[i] : null;
+      if (m !== null && m !== undefined) {
+        z4.textContent = 'Measured ' + zahl(m) + ' ' + K.einheit;
+        punktM.setAttribute('cx', xi); punktM.setAttribute('cy', y(m));
+        punktM.setAttribute('visibility', 'inherit');
+      } else {
+        z4.textContent = '';
+        punktM.setAttribute('visibility', 'hidden');
+      }
+      var zeilen = [z1, z2].concat(z3.textContent ? [z3] : []).concat(z4.textContent ? [z4] : []);
+      var b = 12 + Math.max.apply(null, zeilen.map(function (z) { return z.getComputedTextLength(); }));
+      var h = 8 + 18 * zeilen.length;
       // Kasten neben die Linie, an den Raendern des sichtbaren Ausschnitts nach innen
       var sicht = wrap.getBoundingClientRect(), r = svg.getBoundingClientRect(), s = r.width / 3200;
       var links = (sicht.left - r.left) / s, rechts = (sicht.right - r.left) / s;
@@ -93,7 +104,7 @@
       var ky = 42;
       kasten.setAttribute('x', kx); kasten.setAttribute('y', ky);
       kasten.setAttribute('width', b); kasten.setAttribute('height', h);
-      [z1, z2, z3].forEach(function (z, n) { z.setAttribute('x', kx + 6); z.setAttribute('y', ky + 18 + 18 * n); });
+      zeilen.forEach(function (z, n) { z.setAttribute('x', kx + 6); z.setAttribute('y', ky + 18 + 18 * n); });
       g.setAttribute('visibility', 'visible');
     }
 
