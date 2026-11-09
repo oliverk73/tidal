@@ -55,7 +55,10 @@ PEGEL = [
     ('psjs', 'San Juan del Sur, Rivas, Nicaragua', 'Rivas', 11.251, -85.875),
     ('psdn', 'Puerto Sandino, León, Nicaragua', 'León', 12.2011, -86.7644),
     ('asro', 'Aserradores, Chinandega, Nicaragua', 'Chinandega', 12.626, -87.342),
-    ('pots', 'Potosí (Golfo de Fonseca), Chinandega, Nicaragua', 'Chinandega', 13.0104, -87.504),
+    # 9.11.2026 nachgeprueft (Reihen bis 10/2026): psjs nur 1 guter Monat (sonst +60 min, r 0.86), asro 2 Monate -> weiter
+    # verworfen; pots 5 gute Monate 2020-2025 (3265 h, Eigenversatz -1 min), M2 1,25@250 wie La Union 1,16 / Amapala 1,19,
+    # FES-Satz am Ort 1,00 -> eingetragen, FES archiviert.
+    ('pots', 'Puerto Potosí (Golfo de Fonseca), Chinandega, Nicaragua', 'Chinandega', 13.0104, -87.504),
     ('hain', 'Haing Gyi Kyun (Haigyi Island), Ayeyarwady, Myanmar', 'Ayeyarwady', 16.0004, 94.3176),
     ('iclr', 'Isla Clarión (Revillagigedo), Colima, Mexico', 'Colima', 18.5338, -114.7227),
     ('ms006', 'Lahad Datu, Sabah, Malaysia', 'Sabah', 5.0756, 119.0775),
