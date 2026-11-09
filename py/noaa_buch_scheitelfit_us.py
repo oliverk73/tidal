@@ -62,6 +62,8 @@ def main(argv):
     n_schreiben = 0
     for r in buch:
         km, sid, cname = min((H.km(r, dict(lat=la, lon=lo)), sid, n) for sid, n, la, lo in S)
+        # 9.11.2026: Stanwood (Fluss) bleibt Buchsatz trotz 62 min: der Fit erfindet beim langen Ebbstrom ein zweites NW
+        # (10.11.: -0,82 m 06:16 statt NOAA -0,15 m 09:00); Bandbreitenpruefung hat recht.
         # 8.11.2026: gleichnamige CO-OPS-Station bis 5 km zaehlt auch (Port Beauclerc 3,0, Windham Bay 2,7,
         # Stanwood 2,5, Tah Bay 2,1 km -- dieselben Nebenorte, nur anders verortet)
         gleich = r['name'].split(',')[0].split(' (')[0].lower() in cname.lower()
