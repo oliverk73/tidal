@@ -147,6 +147,135 @@ WAHL = {'NORO': ('Noro (New Georgia)', 'Western'), 'LEVER HARBOUR': ('Lever Harb
         "ULAWA ISLAND (SU'UMOLI)": ("Ulawa Island (Su'umoli)", 'Makira-Ulawa')}
 
 
+# 10.11.2026 (Oliver: "die nicht uebernommenen korrigieren"): die Abweichung sitzt fast immer in EINEM Band
+# (S2 ~ M2 bei Laena/Lengambangara/Malaghara, O1 halb und 2 h verschoben bei Laena/Malaghara/Sikopo -- typisch fuer kurze
+# RAN-Reihen). Korrektur: das Band mit dem groesseren Fehler gegen FES geeicht durch FES geeicht ersetzen, das andere
+# aus SINTT behalten; liegt der Satz danach noch ueber SCHWELLE, auch das zweite Band (= reines FES geeicht).
+KORR = {'SIOTA': ('Siota (Nggela)', 'Central'), 'YANDINA': ('Yandina (Mbanika)', 'Central'),
+        'LAMBI BAY (GUADALCANAL)': ('Lambi Bay', 'Guadalcanal'),
+        "LAU LAGOON (LAU'ALO PASSAGE)": ("Lau Lagoon (Lau'alo Passage)", 'Malaita'),
+        "MALU'U HARBOUR": ("Malu'u Harbour", 'Malaita'), 'SULUFOU HARBOUR': ('Sulufou Harbour', 'Malaita'),
+        'KIRAKIRA BAY': ('Kirakira Bay', 'Makira-Ulawa'), 'MAKIRA HARBOUR': ('Makira Harbour', 'Makira-Ulawa'),
+        'STAR HARBOUR (NAMUGHA)': ('Star Harbour (Namugha)', 'Makira-Ulawa'),
+        'BUALA (MARINGE LAGOON)': ('Buala (Maringe Lagoon)', 'Isabel'), 'KOLOKOFA': ('Kolokofa', 'Isabel'),
+        'MALAGHARA ISLAND': ('Malaghara Island', 'Isabel'), 'MATAVAGHI ISLAND': ('Matavaghi Island', 'Isabel'),
+        'PALUNUHUKURA': ('Palunuhukura', 'Isabel'), 'SIKOPO ISLAND': ('Sikopo Island', 'Isabel'),
+        'INDISPENSABLE REEF': ('Indispensable Reef', 'Rennell and Bellona'),
+        'KANGGAVA BAY (RENNELL ISLAND)': ('Kanggava Bay (Rennell Island)', 'Rennell and Bellona'),
+        'REEF ISLANDS': ('Reef Islands', 'Temotu'), 'LAENA ISLAND': ('Laena Island', 'Choiseul'),
+        'LENGAMBANGARA POINT': ('Lengambangara Point', 'Choiseul')}
+EICH = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1')
+
+
+def korrigieren(orte, kopf, nutz, schreib):
+    import cmath
+    import csv
+    import math
+    import statistics as st
+    import png_methodenvergleich as M
+    from fes_ersatz_geeicht import gruppe
+    from luecken_fes_welt import REF_DATEI
+    from sicher_schreiben import schreiben
+    namen, speeds, arg, fak = kopf
+    alle = [r for r in H.load_records() if r['lat'] and not r['current']]
+    refs = []
+    for r in alle:
+        if not (REF_DATEI.search(os.path.basename(r['file'])) and 'fes2022' not in r['file'] and 'secondary' not in r['file']
+                and -14 < r['lat'] < 0 and 150 < r['lon'] < 172) or 'ROYAL AUSTRALIAN' in M.kopf(r) or 'FES' in M.kopf(r):
+            continue
+        v = M.vek(r)
+        f = {c: M.fes(c, r['lat'], r['lon']) for c in ('M2', 'S2', 'N2', 'K1', 'O1')}
+        cs = [c for c in f if f[c] and c in v]
+        fe = 100 * math.sqrt(sum(abs(v[c] - f[c]) ** 2 for c in cs) / 2) / max(0.15, sum(abs(v[c]) for c in cs))
+        if fe < M.REF_GUETE:
+            refs.append((r, v, fe))
+
+    def vek_alle(r):                                   # alle EICH-Tiden (M.vek kennt nur H.MAIN)
+        _z, w, e, mer = X.satz_lesen(r['file'], r['name'])
+        f = 0.3048 if e.startswith('f') else 1.0
+        return {c: cmath.rect(w[c][0] * f, math.radians(X.greenwich(w[c][1], speeds[c], mer)))
+                for c in EICH if c in w and c in speeds and w[c][0] > 0}
+
+    def band(c):
+        s = speeds[c]
+        return 'ein' if 12 < s < 17 else 'halb' if 25 < s < 35 else None
+
+    def fehler(w1, w2, cs=('M2', 'S2', 'N2', 'K1', 'O1')):
+        a, b = Q.rec(w1), Q.rec(w2)
+        z = lambda r, c: r['z'][c] if c in r['z'] else 0          # noqa: E731
+        return 100 * math.sqrt(sum(abs(z(a, c) - z(b, c)) ** 2 for c in cs) / 2) / max(0.15, (a['tot'] + b['tot']) / 2)
+
+    heute = dt.date.today().strftime('%Y%m%d')
+    neu, liste = [], []
+    for roh, (ort, prov) in KORR.items():
+        d = orte[roh]
+        p = {'lat': d['lat'], 'lon': d['lon']}
+        t, h = np.array(d['t']), np.array(d['h'])
+        o = np.argsort(t)
+        t, h = t[o], h[o]
+        z0, w = SF.fit(t, h, nutz, speeds, arg, fak)
+        nah = sorted(refs, key=lambda x: H.km(p, x[0]))[:3]
+        nah = [x for x in nah if H.km(p, x[0]) <= M.REF_KM]
+        eich = {}
+        for c in EICH:
+            fa, dg = [], []
+            for r, _v, _f in nah:
+                v = vek_alle(r)
+                m = M.fes(c, r['lat'], r['lon'])
+                if c in v and m:
+                    fa.append(abs(v[c]) / abs(m))
+                    dg.append((math.degrees(cmath.phase(v[c] / m)) + 180) % 360 - 180)
+            if fa:
+                eich[c] = (st.median(fa), st.median(dg))
+        fg = {}
+        for c in namen:
+            m = M.fes(c, d['lat'], d['lon'])
+            if m and abs(m) >= 0.00005:
+                e = eich.get(c) or eich.get(gruppe(c, speeds) or '', (1.0, 0.0))
+                fg[c] = (abs(m) * e[0], (math.degrees(cmath.phase(m)) + e[1]) % 360)
+        vorher = fehler(w, fg)
+        bf = {b: fehler(w, fg, cs) for b, cs in (('halb', ('M2', 'S2', 'N2')), ('ein', ('K1', 'O1')))}
+        ersetzt, neuw = [], dict(w)
+        for b in sorted(bf, key=lambda b: -bf[b]):
+            if fehler(neuw, fg) <= SCHWELLE:
+                break
+            neuw = {c: v for c, v in neuw.items() if band(c) != b}
+            neuw.update({c: v for c, v in fg.items() if band(c) == b})
+            ersetzt.append(b)
+        nachher = fehler(neuw, fg)
+        art = 'FES geeicht (beide Baender)' if len(ersetzt) == 2 else \
+            'SINTT, %s Band aus FES geeicht' % ('halbtaegiges' if ersetzt[0] == 'halb' else 'eintaegiges') if ersetzt else 'SINTT'
+        refn = ', '.join('%s %.0f km' % (x[0]['name'].split(',')[0], H.km(p, x[0])) for x in nah) or 'ungeeicht (kein Messsatz in 200 km)'
+        print('  %-32s vorher %4.1f %% (halb %4.1f, ein %4.1f) -> %4.1f %%  %s | %s' % (
+            roh[:32], vorher, bf['halb'], bf['ein'], nachher, art, refn))
+        name = '%s, %s, Solomon Islands' % (ort, prov)
+        neu += ['#', '# %s (AHO)' % ort, '# BEGIN HOT COMMENTS', '# country: Solomon Islands',
+                '# source: AHO Solomon Islands Tide Tables 2026, Scheitelfit + FES2022 geeicht',
+                ('# note: %s py/aho_salomonen.py --korrigieren: SINTT %.1f %% gegen FES geeicht (halbtaegig %.1f, eintaegig %.1f %%).'
+                 % (heute, vorher, bf['halb'], bf['ein'])),
+                '# note: Ergebnis: %s, danach %.1f %%. FES-Eichung: %s.' % (art, nachher, refn[:110]),
+                '# note: Position AHO auf Bogenminuten (bitte auf der Karte pruefen).',
+                '# date_imported: %s' % heute, '# datum: LAT (AHO)', '# confidence: 5',
+                '# !units: meters', '# !longitude: %.4f' % d['lon'], '# !latitude: %.4f' % d['lat'],
+                '# province: %s' % prov, name, '+00:00 :Pacific/Guadalcanal', '%.4f meters' % z0]
+        neu += ['%-15s %.4f  %.2f' % (c, *neuw[c]) if c in neuw and neuw[c][0] >= 0.00005 else 'x 0 0' for c in namen]
+        liste.append(('harmonics/utide/harmonics_utide_tidetables.txt', name))
+    if not schreib:
+        return
+    L = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')     # frisch lesen, nur anhaengen
+    vorhanden = [n for _d, n in liste if n in L]
+    assert not vorhanden, vorhanden
+    schreiben(ZIEL, '\n'.join(L + neu) + '\n')
+    pf = os.path.join(ROOT, 'harmonics/help/neu_pruefen_%s.csv' % heute)
+    alt = os.path.exists(pf)
+    with open(pf, 'a', encoding='utf-8', newline='') as fh:
+        wr = csv.writer(fh)
+        if not alt:
+            wr.writerow(['datei', 'name'])
+        wr.writerows(liste)
+    print('->', len(liste), 'Saetze')
+
+
 def schreiben_saetze(orte, Z, kopf, nutz):
     import csv
     from sicher_schreiben import schreiben
@@ -194,6 +323,8 @@ def main(argv):
     namen, speeds, arg, fak = kopf
     nutz = SF.konstituenten(namen, SF.CONSTIT_67)
     recs = [r for r in H.load_records() if not r['current'] and r['lat'] and -13 < r['lat'] < -4 and 154 < r['lon'] < 169]
+    if '--korrigieren' in argv:
+        return korrigieren(orte, kopf, nutz, '--schreiben' in argv)
     if '--pruefen' in argv:
         fits = {}
         for name, d in orte.items():
