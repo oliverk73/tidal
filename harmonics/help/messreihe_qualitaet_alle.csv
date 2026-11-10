@@ -312,7 +312,7 @@ bona_ioc.csv,12.1500,-68.2780,2026,"Kralendijk, Bonaire, Caribbean Netherlands",
 tbvi2_ioc.csv,18.4275,-64.6578,2024,"Cane Garden Bay, Tortola, British Virgin Islands",harmonics_utide_observations.txt,0,122738,0.0452,1.447,0,0.001,0.556,BVI_IOC,1,nein
 uhslc_235.csv,16.7500,-22.9830,2015,"Palmeira (Sal), Cape Verde",harmonics_ticon4_worldwide.txt,0,8761,0.0304,0.155,0,-0.042,1.205,CapeVerde_UHSLC,0,ja
 uhslc_235.csv,16.7500,-22.9830,2015,"Palmeira (Sal), Cape Verde",harmonics_utide_observations.txt,0,8761,0.0314,0.17,0,-0.042,1.237,CapeVerde_UHSLC,1,ja
-desh_deshaies.csv,16.3053,-61.7959,2026,"Deshaies, Guadeloupe, France",harmonics_utide_observations.txt,0,506636,0.0414,0.551,0,0.67,0.553,Guadeloupe_IOC,1,nein
+desh_deshaies.csv,16.3053,-61.7959,2026,"Deshaies, Guadeloupe",harmonics_utide_observations.txt,0,506636,0.0414,0.551,0,0.67,0.553,Guadeloupe_IOC,1,nein
 prec_le_precheur.csv,14.8076,-61.2266,2025,"Le Précheur, Martinique",harmonics_utide_observations.txt,0,460529,0.0901,1.1,-10,0.71,0.706,Martinique_IOC,1,nein
 244_Gibara.csv,21.1170,-76.1170,1992,"Gibara, Cuba",harmonics_ticon4_worldwide.txt,0,8761,0.068,0.295,-10,0.032,1.137,Caribbean_UHSLC_CubaJamaicaBahamas,0,nein
 244_Gibara.csv,21.1170,-76.1170,1992,"Gibara, Cuba",harmonics_utide_observations.txt,0,8761,0.0672,0.294,-10,0.032,1.135,Caribbean_UHSLC_CubaJamaicaBahamas,1,nein
@@ -4328,7 +4328,7 @@ VAIRAO_OUTUTAATA.csv,-17.8083,-149.2940,2026,"Vairao, Tahiti, French Polynesia",
 6438.npz,48.6684,-1.8518,2025,"Cancale, France",harmonics_utide_observations.txt,0,65645,0.214,1.161,0,-0.034,13.67,France_SHOM,1,nein
 659.npz,-22.2420,166.4162,2025,"Numbo Nouméa, New Caledonia",harmonics_utide_observations.txt,0,52527,0.0624,0.216,0,0.056,1.659,France_SHOM,1,nein
 669.npz,45.0031,-0.5597,2015,"Le Marquis (Garonne), France",harmonics_utide_observations.txt,0,52226,0.1906,0.906,0,0.006,6.44,France_SHOM,1,nein
-673.npz,16.3053,-61.7959,2017,"Deshaies, Guadeloupe, France",harmonics_utide_observations.txt,2,9714,0.0399,0.744,-10,0.341,0.504,France_SHOM,0,nein
+673.npz,16.3053,-61.7959,2017,"Deshaies, Guadeloupe",harmonics_utide_observations.txt,2,9714,0.0399,0.744,-10,0.341,0.504,France_SHOM,0,nein
 68.npz,43.1172,5.9131,2026,"Toulon, France",harmonics_ticon4_worldwide.txt,0,8761,0.0875,0.435,0,0.536,0.406,France_SHOM,0,nein
 71.npz,47.6443,-3.4459,2026,"Port Tudy (Île de Groix), France",harmonics_ticon4_worldwide.txt,49,52559,0.1439,0.824,0,3.287,5.211,France_SHOM,0,nein
 71.npz,47.6443,-3.4459,2026,"Port Tudy (Île de Groix), France",harmonics_utide_observations.txt,49,52559,0.1412,0.819,0,0.087,5.299,France_SHOM,1,nein
