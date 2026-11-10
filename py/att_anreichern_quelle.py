@@ -9,6 +9,9 @@ kommen aus att_anreichern.py; hier nur andere Quellen:
 
   nho:<Hafen>[:korr]   NHO-Fit (py/nho_indien.py), Greenwich-Phasen; korr = Mondlaengenfehler beheben
                        Test 3.11. gegen FES voll: KEIN Gewinn (NHO-Nebentiden schwach) -> nicht verwendet
+  satz:<datei>|<name>  Nachbarsatz (Messung/amtliche Tafel), 10.11.2026 fuer die 301 Haefen, bei denen FES ausschied.
+                       Test 10.11. an 13 ATT-Haefen mit Messung <= 5 km und Quelle 5-30 km: ATT 9,3 -> 6,6 cm
+                       (Median, 11/13 besser; FES-Quelle 6,7 cm).
   --fes-alle           alle ATT-Standardhaefen mit <= 8 Konstituenten, Kuestentyp offen/insel/gemischt,
                        FES-Wasser <= 5 km: Nebentiden aus FES2022 (34 Tiden) am eigenen Ort.
                        Test 3.11. an 36 ATT-Haefen mit Messung <= 5 km: ATT 8,4 -> ATT+FES 5,1 cm (Median),
@@ -43,6 +46,11 @@ def quelle_lesen(q):
         f = N.fit(hafen, kopf)
         w = N.s_korrektur(f['werte'], kopf[1]) if korr == 'korr' else f['werte']
         return w, 0.0, f'NHO-Fit {hafen}' + (' (Mondlaenge korrigiert)' if korr == 'korr' else '')
+    if art == 'satz':                                   # satz:<datei>|<name> -- Nachbarsatz (Messung/Tafel), 10.11.2026
+        datei, _, name = rest.partition('|')
+        z0, w, e, m = X.satz_lesen(os.path.join(ROOT, datei), name)
+        f = 0.3048 if e.startswith('f') else 1.0
+        return {c: (a * f, g) for c, (a, g) in w.items() if a > 0}, m, f'{name.split(",")[0]} ({os.path.basename(datei)})'
     raise ValueError(q)
 
 
