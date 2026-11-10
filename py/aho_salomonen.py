@@ -36,10 +36,23 @@ VERGLEICH_KM, LUECKE_KM, SCHWELLE = 30.0, 20.0, 10.0
 SPEED = {'M2': 28.984104, 'S2': 30.0, 'K1': 15.041069, 'O1': 13.943036}
 
 
-def lesen():
-    """-> {Name: dict(lat, lon, zone, t=[UTC-Sekunden], h=[m])}"""
+# 10.11.2026: drei Ausgaben (2024 im Webarchiv abgeschnitten). AHO rechnet in allen mit denselben Konstanten (2026-Fit trifft
+# 2025/2027 auf ~3 cm), nur Noro hat ab 2026 eine neue Grundlage (2025: 23 cm / 30 min) -> Noro 2025 auslassen.
+# Einjahres-Fits streuen zwischen den Jahren 1-15 % (0,1-m-Rundung, Tagestide) -> Mehrjahres-Fit.
+JAHRGAENGE = [os.path.join(ROOT, 'tide_tables/solomon_aho', f) for f in ('SINTT_2025_wb.pdf', 'SINTT_2026_wb.pdf', 'SINTT_2027.pdf')]
+OHNE = {('NORO', 2025)}
+
+
+def lesen(pdfs=None):
+    """-> {Name: dict(lat, lon, zone, t=[UTC-Sekunden], h=[m])}; mehrere Jahrgaenge werden zusammengelegt."""
     orte = {}
-    for p in pdfplumber.open(PDF).pages:
+    for pfad in pdfs or [PDF]:
+        _lesen(pfad, orte)
+    return orte
+
+
+def _lesen(pfad, orte):
+    for p in pdfplumber.open(pfad).pages:
         text = p.extract_text() or ''
         m = re.search(r'SOLOMON ISLANDS - (.+)', text)
         if not m or 'HIGH AND LOW WATERS' not in text:
@@ -49,6 +62,9 @@ def lesen():
         lat = (int(g.group(1)) + int(g.group(2)) / 60) * (-1 if g.group(3) == 'S' else 1)
         lon = (int(g.group(4)) + int(g.group(5)) / 60) * (-1 if g.group(6) == 'W' else 1)
         zone = int(re.search(r'TIME ZONE ([+-]\d{4})', text).group(1)) // 100
+        jahr = int(re.search(r'YEAR (\d{4})', text).group(1))
+        if (name, jahr) in OHNE:
+            continue
         o = orte.setdefault(name, dict(lat=lat, lon=lon, zone=zone, t=[], h=[]))
         w = p.extract_words()
         kopf = sorted((x['x0'], MONATE.index(x['text'])) for x in w if x['text'] in MONATE)
@@ -67,10 +83,9 @@ def lesen():
             hh = [y for y in hoehen if abs(y['top'] - x['top']) < 1.5 and 15 < y['x0'] - x['x0'] < 35]
             assert len(hh) == 1, (name, monat, x)
             hm = int(x['text'])
-            t = dt.datetime(2026, monat, int(tag['text']), hm // 100, hm % 100, tzinfo=dt.timezone.utc) + dt.timedelta(hours=zone)
+            t = dt.datetime(jahr, monat, int(tag['text']), hm // 100, hm % 100, tzinfo=dt.timezone.utc) + dt.timedelta(hours=zone)
             o['t'].append(t.timestamp())
             o['h'].append(float(hh[0]['text']))
-    return orte
 
 
 def fes_werte(orte):
@@ -167,7 +182,7 @@ KORR = {'SIOTA': ('Siota (Nggela)', 'Central'), 'YANDINA': ('Yandina (Mbanika)',
 EICH = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1')
 
 
-def korrigieren(orte, kopf, nutz, schreib):
+def korrigieren(orte, kopf, nutz, schreib, aktualisieren=False):
     import cmath
     import csv
     import math
@@ -206,8 +221,8 @@ def korrigieren(orte, kopf, nutz, schreib):
         return 100 * math.sqrt(sum(abs(z(a, c) - z(b, c)) ** 2 for c in cs) / 2) / max(0.15, (a['tot'] + b['tot']) / 2)
 
     heute = dt.date.today().strftime('%Y%m%d')
-    neu, liste = [], []
-    for roh, (ort, prov) in KORR.items():
+    neu, liste, ersatz = [], [], {}
+    for roh, (ort, prov) in ({**WAHL, **KORR} if aktualisieren else KORR).items():
         d = orte[roh]
         p = {'lat': d['lat'], 'lon': d['lon']}
         t, h = np.array(d['t']), np.array(d['h'])
@@ -249,6 +264,21 @@ def korrigieren(orte, kopf, nutz, schreib):
         print('  %-32s vorher %4.1f %% (halb %4.1f, ein %4.1f) -> %4.1f %%  %s | %s' % (
             roh[:32], vorher, bf['halb'], bf['ein'], nachher, art, refn))
         name = '%s, %s, Solomon Islands' % (ort, prov)
+        if aktualisieren:
+            j = sorted({dt.datetime.utcfromtimestamp(x + 11 * 3600).year for x in t})
+            r_, tm_, _ = SF.guete(t, h, z0, w, kopf, versatz=False)
+            noten = ['# source: AHO Solomon Islands Tide Tables %d-%d, Scheitelfit%s' % (j[0], j[-1], ' + FES2022 geeicht' if ersetzt else ''),
+                     '# note: %s py/aho_salomonen.py --jahre --aktualisieren: Tafelfit %d-%d, %d Scheitel, Treue %.1f cm / %.0f min.'
+                     % (heute, j[0], j[-1], len(t), r_ * 100, tm_),
+                     '# note: AHO-Nebenhafen, laut Buch 2 Tage bis 1 Monat beobachtet. Gegen FES geeicht %.1f %% (halbtaegig %.1f, eintaegig %.1f).'
+                     % (vorher, bf['halb'], bf['ein']),
+                     ('# note: Ergebnis: %s, danach %.1f %%. FES-Eichung: %s.' % (art, nachher, refn))[:190],
+                     '# note: Position AHO auf Bogenminuten (bitte auf der Karte pruefen).',
+                     '# utide: pts=%d period=%d-01-01..%d-12-31 const=%d' % (len(t), j[0], j[-1], len(nutz)),
+                     '# datum: LAT (AHO)', '# confidence: %d' % (5 if ersetzt else 6)]
+            ersatz[ort] = (noten, '%.4f meters' % z0,
+                           ['%-15s %.4f  %.2f' % (c, *neuw[c]) if c in neuw and neuw[c][0] >= 0.00005 else 'x 0 0' for c in namen])
+            continue
         neu += ['#', '# %s (AHO)' % ort, '# BEGIN HOT COMMENTS', '# country: Solomon Islands',
                 '# source: AHO Solomon Islands Tide Tables 2026, Scheitelfit + FES2022 geeicht',
                 ('# note: %s py/aho_salomonen.py --korrigieren: SINTT %.1f %% gegen FES geeicht (halbtaegig %.1f, eintaegig %.1f %%).'
@@ -261,6 +291,25 @@ def korrigieren(orte, kopf, nutz, schreib):
         neu += ['%-15s %.4f  %.2f' % (c, *neuw[c]) if c in neuw and neuw[c][0] >= 0.00005 else 'x 0 0' for c in namen]
         liste.append(('harmonics/utide/harmonics_utide_tidetables.txt', name))
     if not schreib:
+        return
+    if aktualisieren:
+        # Bloecke an Ort und Stelle: Name, Position, Provinz und Olivers Aenderungen bleiben; ersetzt werden nur
+        # source/note/utide/datum/confidence, Z0 und die Tidenzeilen. Gefunden ueber die Kommentarzeile "# <ort> (AHO)".
+        L = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
+        for ort, (noten, z0z, tz) in ersatz.items():
+            k = [i for i, x in enumerate(L) if x == '# %s (AHO)' % ort]
+            assert len(k) == 1, (ort, k)
+            i = k[0]
+            e = i + 1
+            while L[e].startswith('#'):
+                e += 1                                           # e = Namenszeile
+            kopfz = [x for x in L[i + 1:e] if not x.startswith(('# source:', '# note:', '# utide:', '# datum:', '# confidence:'))]
+            pos = next(n for n, x in enumerate(kopfz) if x.startswith('# country:')) + 1
+            kopfz = kopfz[:pos] + noten + kopfz[pos:]
+            assert L[e + 1].startswith('+00:00') and L[e + 2].endswith('meters'), (ort, L[e:e + 3])
+            L[i + 1:e + 3 + len(tz)] = kopfz + [L[e], L[e + 1], z0z] + tz
+        schreiben(ZIEL, '\n'.join(L) + '\n')
+        print('->', len(ersatz), 'Saetze aktualisiert')
         return
     L = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')     # frisch lesen, nur anhaengen
     vorhanden = [n for _d, n in liste if n in L]
@@ -318,13 +367,13 @@ def schreiben_saetze(orte, Z, kopf, nutz):
 
 
 def main(argv):
-    orte = lesen()
+    orte = lesen(JAHRGAENGE if '--jahre' in argv else None)
     kopf = X.kopf_lesen(ZIEL)
     namen, speeds, arg, fak = kopf
     nutz = SF.konstituenten(namen, SF.CONSTIT_67)
     recs = [r for r in H.load_records() if not r['current'] and r['lat'] and -13 < r['lat'] < -4 and 154 < r['lon'] < 169]
     if '--korrigieren' in argv:
-        return korrigieren(orte, kopf, nutz, '--schreiben' in argv)
+        return korrigieren(orte, kopf, nutz, '--schreiben' in argv, '--aktualisieren' in argv)
     if '--pruefen' in argv:
         fits = {}
         for name, d in orte.items():
