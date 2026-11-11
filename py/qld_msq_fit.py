@@ -45,14 +45,15 @@ def liste():
 
 def rayleigh(nutz, speeds, namen, tage):
     """Konstituenten in Prioritaetsfolge, die sich ueber die Reihenlaenge von allen schon gewaehlten trennen."""
-    if tage >= 400:
-        return nutz
+    # Rayleigh gilt auch ab 400 Tagen. Bis 11.11.2026 kam dort die volle Liste zurueck, mit Paaren gleicher oder fast
+    # gleicher Frequenz (L2/2MN2, MNS2/EPS2, SA/SA-IOS, H2/MSP2 ...): der Fit blies sie gegenphasig auf (Kaupanger bis
+    # 72 km, Hamburg MNS2/EPS2 je 1 m); sie heben sich nur im Fitzeitraum auf und driften mit den Knotenfaktoren.
     grenze = 360.0 / (tage * 24.0)                                    # Grad/Stunde
     sp = speeds
     out = []
     vorrang = ['M2', 'S2', 'K1', 'O1', 'N2', 'K2', 'P1', 'Q1', 'M4', 'MS4', 'M6', 'MK3', 'MN4', 'L2', 'NU2', 'J1', 'M3', '2N2', 'MU2', 'OO1', 'SN4']
     for k in [k for k in vorrang if k in nutz] + [k for k in nutz if k not in vorrang]:
-        if sp[k] < grenze:                                           # SA/SSA bei kurzen Reihen in Z0
+        if tage < 400 and sp[k] < grenze:                            # SA/SSA bei kurzen Reihen in Z0
             continue
         if all(abs(sp[k] - sp[j]) >= grenze for j in out):
             out.append(k)
