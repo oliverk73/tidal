@@ -7,7 +7,7 @@ Ortszeit UTC+7). Je Pegel:
   * jeder Bestandssatz bis MAX_KM (aus den Stundenwert-Heften, Messfits, ATT ...),
   * Scheitelfit aus dem HW/NW-Kalender der Marine (tide_tables/thailand/hwnw_web, py/rtn_hwnw.py), wenn dessen Ort
     bis MAX_KM entfernt ist,
-Mass: RMS nach Abzug des Mittels (Pegelnull unbekannt) und bester Zeitversatz (-60..60 min).
+Mass: RMS nach Abzug des Mittels je Stichprobenwoche (Pegelnull unbekannt, Jahresgang) und bester Zeitversatz (-60..60 min).
 Schreibt nichts.
 
 Usage: venv/bin/python py/rtn_thailand_pruefen.py [--csv]
@@ -53,12 +53,21 @@ def messung(pfad):
     return t, h, k
 
 
+def wochenmittel_ab(t, d):
+    """Mittel je Stichprobenwoche abziehen: der Jahresgang (Monsun) faellt sonst in den Vergleich."""
+    wo = (t // (7 * 86400)).astype(int)
+    out = d.copy()
+    for k in np.unique(wo):
+        out[wo == k] -= np.median(d[wo == k])
+    return out
+
+
 def gegen(t, h, z0, w, kopf):
     best = None
     for v in range(-60, 61, 5):
         p = SF.hoehe_und_ableitungen(t + v * 60, z0, w, kopf)[0]
-        d = h - p
-        r = float(np.sqrt(np.mean((d - d.mean()) ** 2)))
+        d = wochenmittel_ab(t, h - p)
+        r = float(np.sqrt(np.mean(d ** 2)))
         if best is None or r < best[0]:
             best = (r, v)
     return best
