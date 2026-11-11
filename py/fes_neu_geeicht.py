@@ -89,7 +89,8 @@ def welt_orte(pfad):
         if z['name'] in AUSSCHLUSS or any(H.km({'lat': la, 'lon': lo}, {'lat': o[2], 'lon': o[3]}) < 5 for o in out):
             continue
         land = LANDNAME.get(z['land'], z['land'])
-        out.append((latin1(ORTSNAME.get(z['name'], z['name'])), latin1(z['region']), la, lo, None, land, z['tz']))
+        out.append((latin1(ORTSNAME.get(z['name'], z['name'])), latin1(z['region']), la, lo, None, land,
+                    z['tz'].replace('America/Argentina/', 'America/')))   # libtcd: tzfile < 30 Zeichen (11.11.2026)
     return out
 
 
@@ -177,7 +178,7 @@ def main(argv):
         else:
             if land == 'United States':
                 name = '%s, %s' % (ort, staat)
-            elif not staat or staat == ort:                    # Algerien 9.11.2026: "Alger, Alger, Algeria" vermeiden
+            elif not staat or staat in (ort, land):            # Algerien 9.11.2026: "Alger, Alger, Algeria" vermeiden; Djibouti 11.11.
                 name = '%s, %s' % (ort, land)
             else:
                 name = '%s, %s, %s' % (ort, staat, land)

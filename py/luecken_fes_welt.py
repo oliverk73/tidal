@@ -13,6 +13,8 @@ Nach dem Brasilien-Muster (py/fes_neu_geeicht.py): Orte aus GeoNames cities15000
 Ergebnis: harmonics/help/luecken_fes_welt.csv und Uebersicht je Land. Schreibt keine Saetze.
 
 Usage: venv/bin/python py/luecken_fes_welt.py <pfad/zu/geonames>   (cities15000.txt, admin1CodesASCII.txt, countryInfo.txt)
+       ... --orte cities1000.txt --min 1000 --aus harmonics/help/luecken_fes_klein.csv
+         (11.11.2026 kleinere Orte: Auszug aus allCountries, Klasse P, 1000..14999 Einwohner)
 """
 import cmath
 import collections
@@ -56,7 +58,16 @@ def meerpunkt(la, lo):
 
 
 def main(argv):
+    global AUS
+    opt = {}
+    while len(argv) > 2 and argv[-2].startswith('--'):
+        opt[argv[-2]] = argv[-1]
+        argv = argv[:-2]
     gn = argv[0]
+    ortsdatei = opt.get('--orte', 'cities15000.txt')
+    min_einw = int(opt.get('--min', 15000))
+    if '--aus' in opt:
+        AUS = os.path.join(ROOT, opt['--aus'])
     adm = {}
     for l in open(os.path.join(gn, 'admin1CodesASCII.txt'), encoding='utf-8'):
         f = l.rstrip('\n').split('\t')
@@ -117,10 +128,10 @@ def main(argv):
     print('%d Referenzsaetze, FES-Fehler Median %.1f %%' % (len(refs), float(np.median(rerr))), flush=True)
 
     zeilen = []
-    for l in open(os.path.join(gn, 'cities15000.txt'), encoding='utf-8'):
+    for l in open(os.path.join(gn, ortsdatei), encoding='utf-8'):
         f = l.rstrip('\n').split('\t')
         name, la, lo, cc, a1, pop, tz = f[1], float(f[4]), float(f[5]), f[8], f[10], int(f[14] or 0), f[17]
-        if pop < 15000 or abs(la) > 70:
+        if pop < min_einw or abs(la) > 70:
             continue
         mp = meerpunkt(la, lo)
         if not mp:
