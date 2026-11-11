@@ -161,7 +161,7 @@ NAMEN = {
     (34.7552, 126.0690): ('Hanun-ri (Anjwado)', 'South Jeolla'),
     (34.8703, 127.5131): ('Nongju-ri (Suncheon-man)', 'South Jeolla'),
     (34.9206, 126.3772): ('Guro-ri (Muan)', 'South Jeolla'),
-    (34.9294, 126.2717): ('Maehwado (3 km ENE, Aphaedo)', 'South Jeolla'),
+    (34.9294, 126.2717): ('Maehwado (Goido, Aphaedo)', 'South Jeolla'),
     (34.9605, 126.2960): ('Sinwol-hang (Muan)', 'South Jeolla'),
     (34.9861, 126.3050): ('Nae-ri (Unnam, Muan)', 'South Jeolla'),
     (35.2704, 126.1612): ('Songi-do (Yeonggwang)', 'South Jeolla'),
