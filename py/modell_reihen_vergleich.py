@@ -12,7 +12,8 @@ abgezogen (Jahresgang, Wetterlagen). Was bleibt: Tidenfehler + kurzfristiges Wet
              enthaelt fast nur noch Wetter -> der Ueberschuss des Modells ist Tide. (Satz = "eigen", kein Wettbewerber.)
   m2_jahr_*  Streuung von M2 bei Einzeljahr-Fits (Amplitude mm, Phase min): wie viel Wetter/Messfehler in Konstanten steckt.
 Schreibt harmonics/help/modell_reihen_vergleich.csv.
-Usage: venv/bin/python py/modell_reihen_vergleich.py [--max N] [--fes15]
+Usage: venv/bin/python py/modell_reihen_vergleich.py [--max N] [--fes15] [--alle]
+--alle: alle Reihen statt 8 je Ordner (Suche nach kaputten Eigenfits: Satz verliert an eigener Reihe gegen FES).
 --fes15: FES nur mit den 15 TPXO10-Konstituenten (trennt Modellguete von Konstituentenzahl).
 """
 import cmath
@@ -36,13 +37,13 @@ import tpxo as T                                                   # noqa: E402
 import xtide_modell as X                                           # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-AUS = os.path.join(ROOT, 'harmonics/help/modell_reihen_vergleich%s.csv' % ('_fes15' if '--fes15' in sys.argv else ''))
+AUS = os.path.join(ROOT, 'harmonics/help/modell_reihen_vergleich%s%s.csv' % ('_fes15' if '--fes15' in sys.argv else '', '_alle' if '--alle' in sys.argv else ''))
 MESS = ('UHSLC', 'IOC', 'France_SHOM', 'Germany', 'Netherlands', 'Belgium', 'ea', 'UK', 'Ireland_MI', 'Denmark_DMI',
         'Australia_QLD', 'Australia_BOM', 'Canada_CHS_wlo', 'Sweden_SMHI', 'Portugal_CMEMS', 'Chile_IOC', 'Russia_IOC')
 NICHT = ('UK_tidetimes', 'Denmark_DMI_vorhersage', 'JMA', 'LINZ', 'HydroPortail', 'RWS_platforms')
 LANG = {'SA', 'SSA', 'MF', 'MM', 'MSF', 'MSM', 'MSQM', 'MTM', 'SA-IOS', 'MF-IOS', 'NODAL'}
 FESNAME = {'LAMBDA2': 'LDA2'}
-PRO_ORDNER = 8
+PRO_ORDNER = 10 ** 6 if '--alle' in sys.argv else 8
 
 
 def fes_voll(recs, namen):
