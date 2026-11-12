@@ -847,6 +847,8 @@ def beiblatt_reihen(nur=None):
             eintraege = json.load(open(pfad, encoding='utf-8'))
         except Exception:
             continue
+        if not isinstance(eintraege, dict):                       # Thailand_RTN, RWS_extremen: Listen, anderes Format
+            continue
         for datei, e in sorted(eintraege.items()):
             voll = os.path.join(REIHEN, ordner, datei)
             if not os.path.exists(voll):
