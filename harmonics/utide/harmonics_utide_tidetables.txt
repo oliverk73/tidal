@@ -721435,8 +721435,8 @@ x 0 0
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
 # !units: meters
-# !longitude: 126.4005
-# !latitude: 33.4931
+# !longitude: 126.4007
+# !latitude: 33.4854
 # province: Jeju
 # note: 20261111 Gutachten A000000140, Messung 2021-08-06..2021-08-22 (1), Punkt PC-1; Nebentiden von Jeju-hang (Jeju-do) (14 km)
 # note: Nachbarprobe (4 Tiden): Jeju-hang (Jeju-do) 14 km 7 %, Seogwipo (Jeju-do) 32 km 28 %, Moseulpo (Jeju-do) 34 km 14 %; py/khoa_vadahub.py
@@ -721627,8 +721627,8 @@ x 0 0
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
 # !units: meters
-# !longitude: 126.8260
-# !latitude: 33.5649
+# !longitude: 126.8136
+# !latitude: 33.5615
 # province: Jeju
 # note: 20261111 Gutachten A000000470, Messung 2021-04-16..2021-05-15 (1), Punkt T-1; Nebentiden von Seongsanpo-hang (Jeju-do) (14 km)
 # note: Nachbarprobe (4 Tiden): Seongsanpo-hang (Jeju-do) 14 km 9 %, Jeju-hang (Jeju-do) 26 km 13 %, Seogwipo (Jeju-do) 44 km 11 %; py/khoa_vadahub.py
@@ -721811,20 +721811,21 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Solji-hang (Nohwado), South Korea
+# Nae-ri (Nohwado), South Korea
 # BEGIN HOT COMMENTS
 # country: South Korea
 # source: Korean sea-area-use assessments (vadahub.go.kr)
 # date_imported: 20261111
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 umbenannt (Oliver): "Solji-hang (Nohwado)" weder in OSM noch Google Maps auffindbar; Name nach dem Ort am Messpunkt.
 # !units: meters
 # !longitude: 126.5184
 # !latitude: 34.1972
 # province: South Jeolla
 # note: 20261111 Gutachten A000000555, Messung 2019-09-01..2019-09-30 (1), Punkt T-1; Nebentiden von Wando-hang (26 km)
 # note: Nachbarprobe (4 Tiden): Wando-hang 26 km 13 %, Geumgap-ri (Jindo) 28 km 14 %, Uisin-myeon (Jindo) 30 km 13 %; py/khoa_vadahub.py
-Solji-hang (Nohwado), South Korea
+Nae-ri (Nohwado), South Korea
 +00:00 :Asia/Seoul
 2.2697 meters
 J1              0.0133  98.61
@@ -722003,20 +722004,21 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Moseo-hang (Cheongsando), South Korea
+# Modo (Cheongsando), South Korea
 # BEGIN HOT COMMENTS
 # country: South Korea
 # source: Korean sea-area-use assessments (vadahub.go.kr)
 # date_imported: 20261111
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 umbenannt (Oliver): "Moseo-hang (Cheongsando)" weder in OSM noch Google Maps auffindbar; Name nach dem Ort am Messpunkt.
 # !units: meters
 # !longitude: 126.7596
 # !latitude: 34.2148
 # province: South Jeolla
 # note: 20261111 Gutachten A000001121, Messung 2017-09-29..2017-10-13 (1), Punkt T1; Nebentiden von Wando-hang (11 km)
 # note: Nachbarprobe (4 Tiden): Wando-hang 11 km 4 %, Yeoseodo 29 km 7 %, Pyeongildo (Sadong-ri) 32 km 13 %; py/khoa_vadahub.py
-Moseo-hang (Cheongsando), South Korea
+Modo (Cheongsando), South Korea
 +00:00 :Asia/Seoul
 2.3656 meters
 J1              0.0100  98.01
@@ -722195,20 +722197,21 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Deogu-hang (Saengildo), South Korea
+# Deogudo (Saengildo), South Korea
 # BEGIN HOT COMMENTS
 # country: South Korea
 # source: Korean sea-area-use assessments (vadahub.go.kr)
 # date_imported: 20261111
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 umbenannt (Oliver): "Deogu-hang (Saengildo)" weder in OSM noch Google Maps auffindbar; Name nach dem Ort am Messpunkt.
 # !units: meters
 # !longitude: 127.0072
 # !latitude: 34.2589
 # province: South Jeolla
 # note: 20261111 Gutachten A000001120, Messung 2017-09-13..2017-09-28 (1), Punkt T1; Nebentiden von Pyeongildo (Sadong-ri) (11 km)
 # note: Nachbarprobe (4 Tiden): Pyeongildo (Sadong-ri) 11 km 10 %, Wando-hang 24 km 8 %, Goheung Geumjin 27 km 8 %; py/khoa_vadahub.py
-Deogu-hang (Saengildo), South Korea
+Deogudo (Saengildo), South Korea
 +00:00 :Asia/Seoul
 2.3657 meters
 J1              0.0096  77.35
@@ -722582,20 +722585,21 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Noryeok-hang (Jangheung), South Korea
+# Noryeokdo (Jangheung), South Korea
 # BEGIN HOT COMMENTS
 # country: South Korea
 # source: Korean sea-area-use assessments (vadahub.go.kr)
 # date_imported: 20261111
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 umbenannt (Oliver): "Noryeok-hang (Jangheung)" weder in OSM noch Google Maps auffindbar; Name nach dem Ort am Messpunkt.
 # !units: meters
 # !longitude: 126.9756
 # !latitude: 34.4683
 # province: South Jeolla
 # note: 20261111 Gutachten A000000838, Messung 2019-11-30..2019-12-29 (1), Punkt T-1; Nebentiden von Goheung Geumjin (13 km)
 # note: Nachbarprobe (4 Tiden): Goheung Geumjin 13 km 3 %, Pyeongildo (Sadong-ri) 18 km 4 %, Wando-hang 26 km 11 %; py/khoa_vadahub.py
-Noryeok-hang (Jangheung), South Korea
+Noryeokdo (Jangheung), South Korea
 +00:00 :Asia/Seoul
 2.4002 meters
 J1              0.0147  80.43
@@ -722774,20 +722778,21 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Gangjin-man (Sin-gi-ri), South Korea
+# Gaudo (Gangjin-man), South Korea
 # BEGIN HOT COMMENTS
 # country: South Korea
 # source: Korean sea-area-use assessments (vadahub.go.kr)
 # date_imported: 20261111
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 umbenannt (Oliver): "Gangjin-man (Sin-gi-ri)" weder in OSM noch Google Maps auffindbar; Name nach dem Ort am Messpunkt.
 # !units: meters
 # !longitude: 126.7763
 # !latitude: 34.5309
 # province: South Jeolla
 # note: 20261111 Gutachten A000000157, Messung 2021-03-19..2021-04-17 (1), Punkt St.P1; Nebentiden von Wando-hang (24 km)
 # note: Nachbarprobe (4 Tiden): Wando-hang 24 km 6 %, Goheung Geumjin 32 km 12 %, Pyeongildo (Sadong-ri) 35 km 16 %; py/khoa_vadahub.py
-Gangjin-man (Sin-gi-ri), South Korea
+Gaudo (Gangjin-man), South Korea
 +00:00 :Asia/Seoul
 2.6595 meters
 J1              0.0124  93.71
@@ -722974,8 +722979,8 @@ x 0 0
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
 # !units: meters
-# !longitude: 127.7212
-# !latitude: 34.5839
+# !longitude: 127.7197
+# !latitude: 34.5792
 # province: South Jeolla
 # note: 20261111 Gutachten A000000644, Messung 2019-06-18..2019-07-17 (1), Punkt T-1; Nebentiden von Yeosu Guhang (17 km)
 # note: Nachbarprobe (4 Tiden): Yeosu Guhang 17 km 6 %, Yeondo-hang (Sorido) 18 km 7 %, Yeosu Sinhang 19 km 7 %; py/khoa_vadahub.py
@@ -723166,8 +723171,8 @@ x 0 0
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
 # !units: meters
-# !longitude: 127.6550
-# !latitude: 34.5864
+# !longitude: 127.6564
+# !latitude: 34.5958
 # province: South Jeolla
 # note: 20261111 Gutachten A000000374, Messung 2020-07-09..2020-08-07 (1), Punkt T-2; Nebentiden von Yeosu Guhang (18 km)
 # note: Nachbarprobe (4 Tiden): Yeosu Guhang 18 km 4 %, Yeoho-hang 19 km 7 %, Yeosu Sinhang 21 km 5 %; py/khoa_vadahub.py
@@ -723553,8 +723558,8 @@ x 0 0
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
 # !units: meters
-# !longitude: 127.7214
-# !latitude: 34.6118
+# !longitude: 127.7221
+# !latitude: 34.6125
 # province: South Jeolla
 # note: 20261111 Gutachten A000000013, Messung 2017-09-01..2017-09-15 (1), Punkt T-1; Nebentiden von Yeosu Guhang (13 km)
 # note: Nachbarprobe (4 Tiden): Yeosu Guhang 13 km 8 %, Yeosu Sinhang 16 km 9 %, Yeondo-hang (Sorido) 21 km 7 %; py/khoa_vadahub.py
@@ -725291,8 +725296,8 @@ x 0 0
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
 # !units: meters
-# !longitude: 129.3677
-# !latitude: 35.3847
+# !longitude: 129.3473
+# !latitude: 35.3884
 # province: Ulsan
 # note: 20261111 Gutachten A000000914, Messung 2018-07-27..2018-08-21 (1), Punkt T-1; Nebentiden von Ulsan (Maeam-dong) (15 km)
 # note: Nachbarprobe (4 Tiden): Ulsan (Maeam-dong) 15 km 9 %, Haeundae (Busan) 30 km 31 %, Eupcheon-hang (Gyeongju) 35 km 45 %; py/khoa_vadahub.py
