@@ -51321,12 +51321,13 @@ x 0 0
 # date_imported: 20261030
 # datum: Chart Datum (Z0 = mean tide level above CD, aus NOAA)
 # confidence: 5
+# note: 20261112 Zeitzeile +01:00 -> +00:00 (Phasen sind Greenwich; Fehler seit 30.10., py/tpxo_ersatz.py).
 # !units: meters
 # !longitude: 8.2560
 # !latitude: 56.7776
 # region: Nordjylland
 Agger, Denmark
-+01:00 :Europe/Copenhagen
++00:00 :Europe/Copenhagen
 0.1829 meters
 J1              0.0018  252.49
 K1              0.0211  133.69
@@ -51701,12 +51702,13 @@ x 0 0
 # date_imported: 20261030
 # datum: Chart Datum (Z0 = mean tide level above CD, aus NOAA)
 # confidence: 5
+# note: 20261112 Zeitzeile -05:00 -> +00:00 (Phasen sind Greenwich; Fehler seit 30.10., py/tpxo_ersatz.py).
 # !units: meters
 # !longitude: -103.5832
 # !latitude: 75.1688
 # province: Nunavut
 Byam Martin Island, Nunavut, Canada
--05:00 :America/Cambridge_Bay
++00:00 :America/Cambridge_Bay
 0.9144 meters
 J1              0.0038  26.89
 K1              0.0819  1.74
@@ -51891,12 +51893,13 @@ x 0 0
 # date_imported: 20261030
 # datum: Chart Datum (Z0 = mean tide level above CD, aus NOAA)
 # confidence: 5
+# note: 20261112 Zeitzeile +03:00 -> +00:00 (Phasen sind Greenwich; Fehler seit 30.10., py/tpxo_ersatz.py).
 # !units: meters
 # !longitude: 58.9032
 # !latitude: 75.9092
 # region: Arkhangelsk Oblast
 Ostrova Gorbovy (Novaya Zemlya), Arkhangelsk Oblast, Russia
-+03:00 :Europe/Moscow
++00:00 :Europe/Moscow
 0.4572 meters
 J1              0.0040  136.52
 K1              0.0345  58.45
@@ -52081,12 +52084,13 @@ x 0 0
 # date_imported: 20261030
 # datum: Chart Datum (Z0 = mean tide level above CD, aus NOAA)
 # confidence: 5
+# note: 20261112 Zeitzeile -05:00 -> +00:00 (Phasen sind Greenwich; Fehler seit 30.10., py/tpxo_ersatz.py).
 # !units: meters
 # !longitude: -108.8168
 # !latitude: 74.9907
 # province: Nunavut
 Bridport Inlet (Melville Island), Nunavut, Canada
--05:00 :America/Cambridge_Bay
++00:00 :America/Cambridge_Bay
 0.7620 meters
 J1              0.0033  43.13
 K1              0.0657  15.80
@@ -65556,40 +65560,42 @@ x 0 0
 # Vyborg, Leningrad Oblast, Russia
 # BEGIN HOT COMMENTS
 # country: Russia
-# source: FES2022b global ocean tide model (extrapolated), sampled at station location
+# source: TPXO10-atlas-v2 (OSU) + FES2022b, sampled at station location
 # note: MODEL-DERIVED (not observations). Luecke an offener Kueste, kein Satz in 20 km (Oliver 20261108).
 # note: FES ungeeicht: kein Mess-/Tafelsatz in 200 km.
 # note: Position 1.3 km vor dem Ort (naechstes Wasser), py/fes_neu_geeicht.py.
 # date_imported: 20261108
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 Hauptkonstituenten aus TPXO10-atlas-v2 (Zelle 0.4 km) statt FES (py/tpxo_ersatz.py).
+# note: Grund: an Messsaetzen TPXO10 besser: Hamina FES 11 %/T10 4 %, Kronstadt 23/7.
 # !units: meters
 # !longitude: 28.7304
 # !latitude: 60.7036
 # state: Leningrad Oblast
 Vyborg, Leningrad Oblast, Russia
 +00:00 :Europe/Moscow
-0.1090 meters
+0.0550 meters
 J1              0.0023  35.17
-K1              0.0521  24.66
-K2              0.0041  296.25
+K1              0.0222  17.81
+K2              0.0017  76.28
 L2              0.0013  328.13
 x 0 0
-M2              0.0189  39.95
+M2              0.0131  57.34
 M3              0.0002  180.53
-M4              0.0032  341.92
+M4              0.0001  6.26
 M6              0.0002  193.14
 x 0 0
-N2              0.0048  295.20
-2N2             0.0003  340.81
-O1              0.0300  344.62
+N2              0.0020  42.84
+2N2             0.0005  57.84
+O1              0.0201  357.62
 x 0 0
-P1              0.0164  22.11
-Q1              0.0074  286.83
+P1              0.0055  13.74
+Q1              0.0025  350.86
 x 0 0
 R2              0.0002  63.61
-S1              0.0060  138.47
-S2              0.0015  146.67
+S1              0.0008  167.07
+S2              0.0053  73.83
 S4              0.0003  78.38
 x 0 0
 T2              0.0008  31.26
@@ -65599,12 +65605,12 @@ NU2             0.0005  265.73
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0008  310.73
-MS4             0.0023  12.59
+MN4             0.0001  308.41
 x 0 0
-MF              0.0037  263.67
+x 0 0
+MF              0.0011  219.12
 MSF             0.0015  136.02
-MM              0.0036  242.73
+MM              0.0008  217.86
 SA              0.0001  157.35
 SSA             0.0086  196.29
 x 0 0
@@ -66135,13 +66141,15 @@ x 0 0
 # Sestroretsk, Leningrad Oblast, Russia
 # BEGIN HOT COMMENTS
 # country: Russia
-# source: FES2022b global ocean tide model (extrapolated), sampled at station location
+# source: TPXO10-atlas-v2 (OSU) + FES2022b, sampled at station location
 # note: MODEL-DERIVED (not observations). Luecke an offener Kueste, kein Satz in 20 km (Oliver 20261108).
 # note: FES ungeeicht: kein Mess-/Tafelsatz in 200 km.
 # note: Position 2.0 km vor dem Ort (naechstes Wasser), py/fes_neu_geeicht.py.
 # date_imported: 20261108
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 Hauptkonstituenten aus TPXO10-atlas-v2 (Zelle 1.9 km) statt FES (py/tpxo_ersatz.py).
+# note: Grund: an Messsaetzen TPXO10 besser: Kronstadt FES 23 %/T10 7 %, St. Petersburg 30/4.
 # !units: meters
 # !longitude: 29.9340
 # !latitude: 60.0980
@@ -66149,27 +66157,27 @@ x 0 0
 # note: 20261108 vor den Ortskern gelegt (OSM 60.0982/29.9595, 0,5 km vor der Kueste); GeoNames-Punkt "Kurortnyy" lag 6 km NW (Oliver).
 Sestroretsk, St. Petersburg, Russia
 +00:00 :Europe/Moscow
-0.1648 meters
+0.0623 meters
 J1              0.0026  27.85
-K1              0.0614  29.25
-K2              0.0029  240.52
+K1              0.0245  15.64
+K2              0.0022  85.20
 L2              0.0015  340.60
 x 0 0
-M2              0.0571  56.78
+M2              0.0144  52.55
 M3              0.0001  335.87
-M4              0.0017  213.12
+x 0 0
 M6              0.0003  5.29
 M8              0.0001  108.83
-N2              0.0061  331.33
-2N2             0.0012  359.51
-O1              0.0413  0.24
+N2              0.0028  41.40
+2N2             0.0006  63.57
+O1              0.0224  356.94
 x 0 0
-P1              0.0192  28.26
-Q1              0.0089  293.10
+P1              0.0063  10.97
+Q1              0.0029  349.27
 x 0 0
 R2              0.0004  112.45
-S1              0.0088  141.09
-S2              0.0197  133.15
+S1              0.0008  167.76
+S2              0.0064  74.52
 x 0 0
 x 0 0
 T2              0.0016  59.83
@@ -66179,12 +66187,12 @@ NU2             0.0005  21.54
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0001  29.21
-MS4             0.0001  90.01
+MN4             0.0001  348.90
 x 0 0
-MF              0.0038  259.94
+x 0 0
+MF              0.0008  238.11
 MSF             0.0012  134.23
-MM              0.0033  245.69
+MM              0.0006  230.05
 SA              0.0001  128.42
 SSA             0.0085  196.16
 x 0 0
@@ -66522,40 +66530,42 @@ x 0 0
 # Sosnovyy Bor, Leningrad Oblast, Russia
 # BEGIN HOT COMMENTS
 # country: Russia
-# source: FES2022b global ocean tide model (extrapolated), sampled at station location
+# source: TPXO10-atlas-v2 (OSU) + FES2022b, sampled at station location
 # note: MODEL-DERIVED (not observations). Luecke an offener Kueste, kein Satz in 20 km (Oliver 20261108).
 # note: FES ungeeicht: kein Mess-/Tafelsatz in 200 km.
 # note: Position 2.1 km vor dem Ort (naechstes Wasser), py/fes_neu_geeicht.py.
 # date_imported: 20261108
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 Hauptkonstituenten aus TPXO10-atlas-v2 (Zelle 3.5 km) statt FES (py/tpxo_ersatz.py).
+# note: Grund: an Messsaetzen TPXO10 besser: Kronstadt FES 23 %/T10 7 %, Narva-Joesuu 12/5.
 # !units: meters
 # !longitude: 29.0569
 # !latitude: 59.8875
 # state: Leningrad Oblast
 Sosnovyy Bor, Leningrad Oblast, Russia
 +00:00 :Europe/Moscow
-0.1097 meters
+0.0584 meters
 J1              0.0023  24.97
-K1              0.0535  12.96
-K2              0.0050  291.16
+K1              0.0239  355.60
+K2              0.0017  34.27
 L2              0.0016  311.13
 x 0 0
-M2              0.0254  4.31
+M2              0.0122  7.59
 x 0 0
-M4              0.0006  130.49
+M4              0.0001  270.95
 M6              0.0002  273.43
 x 0 0
-N2              0.0068  281.71
-2N2             0.0005  306.12
-O1              0.0331  327.13
+N2              0.0023  358.79
+2N2             0.0005  20.43
+O1              0.0216  338.46
 x 0 0
-P1              0.0171  9.12
-Q1              0.0078  278.14
+P1              0.0061  351.81
+Q1              0.0028  332.75
 x 0 0
 R2              0.0002  45.71
-S1              0.0089  126.71
-S2              0.0034  14.20
+S1              0.0010  153.96
+S2              0.0052  24.78
 S4              0.0001  300.52
 x 0 0
 T2              0.0011  4.65
@@ -66565,12 +66575,12 @@ NU2             0.0008  260.75
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0002  210.21
-MS4             0.0008  215.82
+MN4             0.0001  219.23
 x 0 0
-MF              0.0037  272.16
+x 0 0
+MF              0.0007  243.95
 MSF             0.0016  133.51
-MM              0.0036  246.11
+MM              0.0006  233.78
 SA              0.0001  171.56
 SSA             0.0083  196.68
 x 0 0
@@ -76173,40 +76183,42 @@ x 0 0
 # Zelenogorsk, St. Petersburg, Russia
 # BEGIN HOT COMMENTS
 # country: Russia
-# source: FES2022b global ocean tide model (extrapolated), sampled at station location
+# source: TPXO10-atlas-v2 (OSU) + FES2022b, sampled at station location
 # note: MODEL-DERIVED (not observations). Luecke an offener Kueste, kein Satz in 20 km (Oliver 20261108).
 # note: FES ungeeicht: kein Mess-/Tafelsatz in 200 km.
 # note: Position 1.9 km vor dem Ort (naechstes Wasser), py/fes_neu_geeicht.py.
 # date_imported: 20261108
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 Hauptkonstituenten aus TPXO10-atlas-v2 (Zelle 1.8 km) statt FES (py/tpxo_ersatz.py).
+# note: Grund: an Messsaetzen TPXO10 besser: Kronstadt FES 23 %/T10 7 %, St. Petersburg 30/4.
 # !units: meters
 # !longitude: 29.6959
 # !latitude: 60.1829
 # state: St. Petersburg
 Zelenogorsk, St. Petersburg, Russia
 +00:00 :Europe/Moscow
-0.1546 meters
+0.0597 meters
 J1              0.0025  28.28
-K1              0.0598  27.55
-K2              0.0031  257.04
+K1              0.0242  13.04
+K2              0.0020  79.41
 L2              0.0015  335.78
 x 0 0
-M2              0.0503  53.81
+M2              0.0138  47.77
 M3              0.0001  344.73
-M4              0.0015  206.92
+x 0 0
 M6              0.0002  358.99
 x 0 0
-N2              0.0059  322.49
-2N2             0.0010  355.74
-O1              0.0393  355.90
+N2              0.0027  37.02
+2N2             0.0006  58.81
+O1              0.0221  354.45
 x 0 0
-P1              0.0187  26.11
-Q1              0.0087  291.53
+P1              0.0062  8.59
+Q1              0.0028  347.14
 x 0 0
 R2              0.0003  107.05
-S1              0.0091  146.06
-S2              0.0156  131.96
+S1              0.0009  167.34
+S2              0.0060  68.98
 S4              0.0001  265.78
 x 0 0
 T2              0.0014  54.30
@@ -76216,12 +76228,12 @@ NU2             0.0003  357.19
 x 0 0
 x 0 0
 x 0 0
+MN4             0.0001  311.83
 x 0 0
-MS4             0.0003  217.17
 x 0 0
-MF              0.0037  262.35
+MF              0.0008  234.95
 MSF             0.0013  133.15
-MM              0.0034  245.34
+MM              0.0007  228.23
 SA              0.0001  133.37
 SSA             0.0084  196.26
 x 0 0
@@ -80805,40 +80817,42 @@ x 0 0
 # Barth, Mecklenburg-Vorpommern, Germany
 # BEGIN HOT COMMENTS
 # country: Germany
-# source: FES2022b global ocean tide model (extrapolated), sampled at station location
+# source: TPXO10-atlas-v2 (OSU) + FES2022b, sampled at station location
 # note: MODEL-DERIVED (not observations). Luecke an offener Kueste, kein Satz in 20 km (Oliver 20261108).
 # note: FES geeicht an Ruden (71 km, FES 5 %), Greifswald Oie (78 km, FES 5 %), Koserow (90 km, FES 5 %).
 # note: Position 1.5 km vor dem Ort (naechstes Wasser), py/fes_neu_geeicht.py.
 # date_imported: 20261108
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 Hauptkonstituenten aus TPXO10-atlas-v2 (Zelle 1.3 km) statt FES (py/tpxo_ersatz.py).
+# note: Grund: an Messsaetzen TPXO10 besser: Bodden-Pegel Althagen FES 31 %/T10 17 %, Barhoeft 33/16, Stralsund 38/22.
 # !units: meters
 # !longitude: 12.7249
 # !latitude: 54.3769
 # state: Mecklenburg-Vorpommern
 Barth, Mecklenburg-Vorpommern, Germany
 +00:00 :Europe/Berlin
-0.1464 meters
+0.0906 meters
 J1              0.0003  154.31
-K1              0.0043  5.00
-K2              0.0058  30.28
+K1              0.0091  193.04
+K2              0.0083  180.23
 L2              0.0087  37.00
 x 0 0
-M2              0.0599  169.84
+M2              0.0331  194.87
 M3              0.0003  211.07
-M4              0.0078  107.01
+M4              0.0007  163.38
 M6              0.0005  67.43
 x 0 0
-N2              0.0119  3.88
-2N2             0.0011  30.53
-O1              0.0045  321.55
+N2              0.0099  140.18
+2N2             0.0002  17.29
+O1              0.0074  150.03
 x 0 0
-P1              0.0012  183.86
-Q1              0.0008  84.35
+P1              0.0027  183.60
+Q1              0.0011  149.32
 x 0 0
 R2              0.0001  298.88
-S1              0.0003  71.07
-S2              0.0222  107.51
+S1              0.0011  86.71
+S2              0.0055  209.94
 S4              0.0001  133.87
 x 0 0
 T2              0.0004  266.11
@@ -80848,12 +80862,12 @@ NU2             0.0107  17.66
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0004  83.26
-MS4             0.0008  27.87
+MN4             0.0003  139.01
+MS4             0.0004  333.06
 x 0 0
-MF              0.0042  282.47
+MF              0.0033  308.93
 MSF             0.0028  79.87
-MM              0.0031  248.95
+MM              0.0011  295.27
 x 0 0
 SSA             0.0069  196.59
 x 0 0
@@ -84472,40 +84486,42 @@ x 0 0
 # Sovetsky, Leningrad Oblast, Russia
 # BEGIN HOT COMMENTS
 # country: Russia
-# source: FES2022b global ocean tide model (extrapolated), sampled at station location
+# source: TPXO10-atlas-v2 (OSU) + FES2022b, sampled at station location
 # note: MODEL-DERIVED (not observations). Luecke an offener Kueste, kein Satz in 20 km (Oliver 20261108).
 # note: FES ungeeicht: kein Mess-/Tafelsatz in 200 km.
 # note: Position 1.5 km vor dem Ort (naechstes Wasser), py/fes_neu_geeicht.py.
 # date_imported: 20261108
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 Hauptkonstituenten aus TPXO10-atlas-v2 (Zelle 0.8 km) statt FES (py/tpxo_ersatz.py).
+# note: Grund: an Messsaetzen TPXO10 besser: Hamina FES 11 %/T10 4 %, Kronstadt 23/7.
 # !units: meters
 # !longitude: 28.6518
 # !latitude: 60.5348
 # state: Leningrad Oblast
 Sovetsky, Leningrad Oblast, Russia
 +00:00 :Europe/Moscow
-0.1107 meters
+0.0547 meters
 J1              0.0023  34.76
-K1              0.0522  24.62
-K2              0.0041  296.26
+K1              0.0223  14.60
+K2              0.0016  69.97
 L2              0.0013  328.04
 x 0 0
-M2              0.0192  40.69
+M2              0.0126  51.07
 M3              0.0002  180.71
-M4              0.0035  340.10
+M4              0.0001  356.76
 M6              0.0002  196.47
 x 0 0
-N2              0.0048  295.37
-2N2             0.0003  340.07
-O1              0.0304  344.78
+N2              0.0020  36.19
+2N2             0.0004  52.10
+O1              0.0202  354.91
 x 0 0
-P1              0.0165  21.97
-Q1              0.0074  287.07
+P1              0.0056  10.49
+Q1              0.0026  348.32
 x 0 0
 R2              0.0002  63.35
-S1              0.0066  140.48
-S2              0.0017  136.54
+S1              0.0010  164.87
+S2              0.0050  67.18
 S4              0.0004  77.58
 x 0 0
 T2              0.0008  30.77
@@ -84515,12 +84531,12 @@ NU2             0.0005  266.80
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0009  309.90
-MS4             0.0025  11.61
+MN4             0.0001  298.00
 x 0 0
-MF              0.0037  263.92
+x 0 0
+MF              0.0010  222.66
 MSF             0.0015  135.97
-MM              0.0036  242.95
+MM              0.0008  220.42
 SA              0.0001  156.14
 SSA             0.0085  196.31
 x 0 0
@@ -84665,40 +84681,42 @@ x 0 0
 # Primorsk, Leningrad Oblast, Russia
 # BEGIN HOT COMMENTS
 # country: Russia
-# source: FES2022b global ocean tide model (extrapolated), sampled at station location
+# source: TPXO10-atlas-v2 (OSU) + FES2022b, sampled at station location
 # note: MODEL-DERIVED (not observations). Luecke an offener Kueste, kein Satz in 20 km (Oliver 20261108).
 # note: FES ungeeicht: kein Mess-/Tafelsatz in 200 km.
 # note: Position 0.7 km vor dem Ort (naechstes Wasser), py/fes_neu_geeicht.py.
 # date_imported: 20261108
 # datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)
 # confidence: 5
+# note: 20261112 Hauptkonstituenten aus TPXO10-atlas-v2 (Zelle 0.7 km) statt FES (py/tpxo_ersatz.py).
+# note: Grund: an Messsaetzen TPXO10 besser: Kronstadt FES 23 %/T10 7 %, Hamina 11/4.
 # !units: meters
 # !longitude: 28.5998
 # !latitude: 60.3608
 # state: Leningrad Oblast
 Primorsk, Leningrad Oblast, Russia
 +00:00 :Europe/Moscow
-0.1081 meters
+0.0555 meters
 J1              0.0023  33.18
-K1              0.0516  21.23
-K2              0.0043  295.07
+K1              0.0224  4.02
+K2              0.0015  50.68
 L2              0.0013  324.80
 x 0 0
-M2              0.0179  31.35
+M2              0.0109  29.74
 M3              0.0001  143.11
-M4              0.0010  319.63
+x 0 0
 M6              0.0001  50.44
 x 0 0
-N2              0.0051  291.77
-2N2             0.0003  332.94
-O1              0.0301  338.18
+N2              0.0019  17.68
+2N2             0.0004  35.59
+O1              0.0202  345.49
 x 0 0
-P1              0.0165  17.81
-Q1              0.0074  283.95
+P1              0.0056  0.38
+Q1              0.0026  339.76
 x 0 0
 R2              0.0001  57.26
-S1              0.0076  145.14
-S2              0.0008  125.04
+S1              0.0011  158.01
+S2              0.0045  45.02
 S4              0.0001  10.73
 x 0 0
 T2              0.0008  21.76
@@ -84708,12 +84726,12 @@ NU2             0.0005  264.45
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0004  255.65
-MS4             0.0009  304.48
+MN4             0.0001  229.47
 x 0 0
-MF              0.0036  267.12
+x 0 0
+MF              0.0009  226.20
 MSF             0.0016  135.59
-MM              0.0036  243.62
+MM              0.0007  222.97
 SA              0.0001  164.46
 SSA             0.0085  196.35
 x 0 0
