@@ -173,7 +173,7 @@ NAMEN = {
     (36.8341, 126.3214): ('Gudo-hang (Seosan)', 'South Chungcheong'),
     (36.8833, 126.3513): ('Hori-hang (3 km NNE, Seosan)', 'South Chungcheong'),
     (36.9971, 125.9953): ('Uldo (3 km S, Ongjin)', 'Incheon'),
-    (37.0195, 126.7220): ('Goon-hang (3 km SW, Hwaseong)', 'Gyeonggi'),
+    (37.0195, 126.7220): ('Go-on Port (3 km SW, Hwaseong)', 'Gyeonggi'),
     (37.0266, 126.6249): ('Dangjin-hang (Songak)', 'South Chungcheong'),
 }
 
