@@ -31,6 +31,7 @@ import zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import health_check as H                                           # noqa: E402
+import osm_land                                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCX = os.path.join(ROOT, 'tide_tables/att/CS-361179-W8R3 - ADMIRALTY Tide Tables Indexes- Standard and Secondary Ports.docx')
@@ -133,6 +134,14 @@ def main(argv):
                 json.dump(cache, open(CACHE, 'w'))
         return cache[key]
 
+    laender = {}
+
+    def land(la, lo):
+        k = (math.floor(la), math.floor(lo))
+        if k not in laender:
+            laender[k] = osm_land.Land([(la, lo)])
+        return laender[k]
+
     def lage(e, anker_n):
         """Mitte + Radius aus Nachbarnummern (bekannte ATT-Saetze und schon gefundene Index-Haefen)."""
         vor = [x for x in anker_n if e['nr_int'] - 40 <= x[0] <= e['nr_int'] and x[1] != e['nr'].lower()][-3:]
@@ -185,10 +194,14 @@ def main(argv):
                 box = (mitte[1] - dlo, mitte[0] + dla, mitte[1] + dlo, mitte[0] - dla)
                 for v in varianten(e['name']):
                     res = nominatim(v, box)
-                    if res:
-                        res = sorted(res, key=lambda x: km(mitte, (float(x['lat']), float(x['lon']))))
-                        e['pos'] = (float(res[0]['lat']), float(res[0]['lon']))
-                        e['methode'], e['treffer'] = 'geo', res[0]['display_name'][:120]
+                    # Treffer muss an der Kueste liegen (<= 3 km) und nahe der erwarteten Lage (<= 150 km):
+                    # sonst fand Nominatim Karlskrona in Norwegens Binnenland, Kronstadt in Schweden
+                    ok = [x for x in sorted(res, key=lambda x: km(mitte, (float(x['lat']), float(x['lon']))))
+                          if km(mitte, (float(x['lat']), float(x['lon']))) <= min(rad, 150.0)
+                          and land(float(x['lat']), float(x['lon'])).kueste_km(float(x['lat']), float(x['lon']), rmax=5) <= 3.0]
+                    if ok:
+                        e['pos'] = (float(ok[0]['lat']), float(ok[0]['lon']))
+                        e['methode'], e['treffer'] = 'geo', ok[0]['display_name'][:120]
                         break
             if e['pos']:
                 neu_n += 1
