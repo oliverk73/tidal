@@ -2258,6 +2258,26 @@ def _cors_json(payload, status=200):
     return resp
 
 
+@app.route("/api/tidal_current")
+def api_tidal_current():
+    """Gezeitenstrom TPXO10 fuer den Kartenausschnitt (s, n, w, e in Grad) zur Zeit t (Unix-Sekunden, UTC),
+    leaflet-velocity-Format. Rechnung in py/tpxo_strom_karte.py (13.11.2026)."""
+    import datetime as _dt
+    import tpxo_strom_karte
+    try:
+        s, n, w, e = (float(request.args[k]) for k in ('s', 'n', 'w', 'e'))
+        t = _dt.datetime.fromtimestamp(float(request.args.get('t') or _dt.datetime.now().timestamp()), _dt.timezone.utc)
+        t = t.replace(minute=(t.minute // 10) * 10, second=0, microsecond=0)       # 10-min-Raster: Cache-faehig
+    except (KeyError, ValueError):
+        return jsonify({'error': 'parameters s, n, w, e (deg) and t (unix seconds) required'}), 400
+    # Ausschnitt auf 0,1 Grad runden, damit wiederholte Anfragen gleich sind
+    r = lambda x: round(x * 10) / 10.0  # noqa: E731
+    daten = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t)
+    resp = jsonify(daten)
+    resp.headers['Cache-Control'] = 'public, max-age=3600'
+    return resp
+
+
 @app.route("/api/widget/tides")
 def api_widget_tides():
     slug, station_name = _widget_resolve_slug(request.args.get('station'))
