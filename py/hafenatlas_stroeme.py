@@ -328,6 +328,85 @@ def milford(argv):
         print('->', os.path.relpath(ZIEL, ROOT))
 
 
+# ---------------------------------------------------------------- Monty Mariner (nachgezeichnete Admiralty-Atlanten)
+# montymariner.co.uk/tide-stream-charts (13.11.2026, Oliver: verwerten; Seite: nur privat/Lehre, nicht kommerziell).
+# Bilder in tide_tables/att/montymariner/<gebiet>/01..13.png = HW-6..+6. Zahlen "Nipp Spring" in Zehntelknoten
+# (Admiralty: Nipp zuerst). Gradnetz aus den Rahmenstrichen (1' je Strich):
+MM_GEO = {   # gebiet: (x0, lon0, px je ' Laenge, y0, lat0, px je ' Breite)
+    'solent_west': (53.5, -(2 + 10 / 60), 17.0, 142.5, 50 + 50 / 60, 27.0),
+    'solent_east': (461.5, -1.0, 17.0, 143.5, 50 + 50 / 60, 27.0),
+    'portland': (310.5, -2.5, 32.0, 472.0, 50.5, 51.0),
+}
+MM_BEZUG = {'solent_west': ('Portsmouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt'),
+            'solent_east': ('Portsmouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt'),
+            'portland': ('Weymouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt')}
+
+
+def mm_ll(gebiet, x, y):
+    x0, lo0, px, y0, la0, py = MM_GEO[gebiet]
+    return la0 - (y - y0) / py / 60, lo0 + (x - x0) / px / 60
+
+
+def mm_satz(gebiet, x, y, werte):
+    """werte: {stunde: (nipp_kn, spring_kn, richtung_grad)} -> UTide-Ergebnis + (lat, lon)."""
+    import xtide_modell as X
+    hafen, rel = MM_BEZUG[gebiet]
+    hd = os.path.join(ROOT, rel)
+    _z0, w, _e, _m = X.satz_lesen(hd, hafen)
+    hub_s, hub_n = 2 * (w['M2'][0] + w['S2'][0]), 2 * (w['M2'][0] - w['S2'][0])
+    sp = {h: (sk * math.sin(math.radians(r)), sk * math.cos(math.radians(r))) for h, (_n, sk, r) in werte.items()}
+    ni = {h: (n * math.sin(math.radians(r)), n * math.cos(math.radians(r))) for h, (n, _s, r) in werte.items()}
+    la, lo = mm_ll(gebiet, x, y)
+    return C.analyse(reihe_sn(sp, ni, hafen, hd, hub_s, hub_n), la, C.KONST), la, lo, hub_s, hub_n
+
+
+def _w(fl, eb, reihe):
+    """reihe: 13 (nipp, spring) fuer HW-6..+6, Vorzeichen +1 Flutrichtung fl, -1 Ebbrichtung eb."""
+    return {h: (n / 10, sp / 10, fl if vz > 0 else eb) for h, (vz, n, sp) in zip(range(-6, 7), reihe)}
+
+
+# Von Hand abgelesen 13.11.2026 (Montagen aller 13 Stundenbilder). Pruefung gegen Messsaetze: Needles 4 %, Freshwater
+# Bay 6 %, Nab Tower 12 % Kurvenfehler. Inneres Ost-Solent/Spithead und Portland (Race, Wirbel, wandernde Beschriftung)
+# nicht abgelesen: zu unsicher.
+MM_PUNKTE = [
+    ('Hurst Narrows (Solent)', 'solent_west', 687, 357, _w(70, 250, [(1, 16, 32), (1, 19, 39), (1, 13, 35), (1, 17, 35), (1, 12, 25), (-1, 1, 2),
+        (-1, 14, 28), (-1, 20, 40), (-1, 22, 44), (-1, 22, 33), (-1, 11, 22), (-1, 4, 8), (1, 16, 33)])),
+    ('Needles Channel (Solent)', 'solent_west', 612, 437, _w(55, 240, [(1, 9, 18), (1, 12, 25), (1, 13, 25), (1, 11, 25), (1, 8, 17), (1, 2, 4),
+        (-1, 7, 15), (-1, 12, 24), (-1, 15, 25), (-1, 15, 29), (-1, 10, 20), (-1, 2, 5), (1, 7, 14)])),
+    ('Yarmouth (Western Solent)', 'solent_west', 720, 345, _w(60, 240, [(1, 12, 24), (1, 12, 24), (1, 11, 22), (1, 9, 19), (1, 5, 10), (-1, 1, 3),
+        (-1, 8, 17), (-1, 14, 27), (-1, 14, 28), (-1, 12, 25), (-1, 10, 20), (1, 2, 3), (1, 10, 20)])),
+    ('Lymington (Western Solent)', 'solent_west', 750, 307, _w(60, 235, [(1, 11, 22), (1, 11, 22), (1, 11, 22), (1, 9, 18), (1, 4, 8), (-1, 4, 9),
+        (-1, 12, 24), (-1, 12, 25), (-1, 12, 25), (-1, 11, 22), (-1, 4, 9), (1, 5, 10), (1, 11, 22)])),
+    ('Gurnard (Central Solent)', 'solent_west', 872, 267, _w(65, 245, [(1, 14, 29), (1, 17, 34), (1, 17, 33), (1, 15, 29), (1, 8, 17), (-1, 2, 4),
+        (-1, 15, 29), (-1, 18, 35), (-1, 16, 33), (-1, 15, 30), (-1, 11, 23), (1, 1, 2), (1, 13, 26)])),
+    ('Nab Tower (Eastern Solent approach)', 'solent_east', 525, 420, {
+        -6: (.3, .7, 90), -5: (.8, 1.6, 85), -4: (.9, 1.8, 85), -3: (.8, 1.5, 70), -2: (.4, .9, 60), -1: (.1, .2, 330), 0: (.7, 1.3, 275),
+        1: (.7, 1.5, 265), 2: (.8, 1.6, 250), 3: (.6, 1.2, 220), 4: (.4, .8, 200), 5: (.2, .4, 190), 6: (.2, .4, 90)}),
+    ('Selsey Bill (4 km S)', 'solent_east', 660, 385, {
+        -6: (.8, 1.7, 90), -5: (1.2, 2.4, 85), -4: (1.2, 2.4, 85), -3: (.9, 1.8, 95), -2: (.4, .7, 90), -1: (.4, .8, 285), 0: (1.1, 2.2, 280),
+        1: (1.3, 2.5, 275), 2: (1.0, 2.0, 275), 3: (.7, 1.3, 240), 4: (.2, .5, 240), 5: (.2, .5, 80), 6: (.7, 1.4, 85)}),
+    ("St Catherine's Point (3 km S)", 'solent_east', 180, 603, {
+        -6: (1.2, 2.3, 80), -5: (1.8, 3.7, 75), -4: (1.5, 3.3, 75), -3: (1.5, 2.9, 80), -2: (1.2, 2.4, 75), -1: (.1, .3, 70), 0: (1.2, 2.4, 265),
+        1: (1.7, 3.4, 265), 2: (1.9, 3.8, 260), 3: (1.7, 3.4, 250), 4: (1.2, 2.3, 270), 5: (.4, .6, 250), 6: (.8, 1.6, 80)}),
+]
+
+
+def monty(argv):
+    bl = []
+    for name, gebiet, x, y, werte in MM_PUNKTE:
+        r, la, lo, hs, hn = mm_satz(gebiet, x, y, werte)
+        voll = '%s, England, United Kingdom Current' % name
+        print('%-62s %.4f %.4f  Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn' % (voll, la, lo, r['achse'], r['m2'], r['s2'], r['smax']))
+        bl.append(block(voll, r, la, lo, 'Admiralty NP337 Solent tidal stream atlas as redrawn by montymariner.co.uk (hourly HW Portsmouth -6..+6 h, read by hand)',
+                        'hours from HW Portsmouth, neap/spring rates interpolated by range (spring %.2f m, neap %.2f m); checked against measured sets Needles 4 %%, Freshwater 6 %%, Nab 12 %%' % (hs, hn),
+                        'UKHO NP337 via Monty Mariner', 'NP337-MONTYMARINER'))
+    if '--schreiben' in argv:
+        from sicher_schreiben import schreiben
+        T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n')
+        schreiben(ZIEL, T + '\n' + '\n'.join(bl) + '\n')
+        print('->', os.path.relpath(ZIEL, ROOT))
+
+
 if __name__ == '__main__':
     if sys.argv[1:2] == ['harwich']:
         harwich(sys.argv[2:])
@@ -335,5 +414,7 @@ if __name__ == '__main__':
         tees(sys.argv[2:])
     elif sys.argv[1:2] == ['milford']:
         milford(sys.argv[2:])
+    elif sys.argv[1:2] == ['monty']:
+        monty(sys.argv[2:])
     else:
         print(__doc__)
