@@ -1427,6 +1427,28 @@ def _stationslisten_nachladen():
     _station_index[:] = _stationsindex(data, coords)
 
 
+# Markerdatei von aussen neu gebaut (tcd_bauen.py / build_tide_station_markers.py)? Dann die Listen nachladen,
+# sonst sind neue Saetze bis zum naechsten App-Neustart "Station nicht gefunden" (Nab Tower, 13.11.2026).
+_markers_stand = {'mtime': os.path.getmtime(MARKERS_JSON) if os.path.exists(MARKERS_JSON) else 0.0, 'geprueft': 0.0}
+
+
+@app.before_request
+def _markers_frisch_halten():
+    import time as _time
+    jetzt = _time.time()
+    if jetzt - _markers_stand['geprueft'] < 5.0:
+        return
+    _markers_stand['geprueft'] = jetzt
+    try:
+        m = os.path.getmtime(MARKERS_JSON)
+    except OSError:
+        return
+    if m != _markers_stand['mtime']:
+        with _markers_json_lock:
+            _markers_stand['mtime'] = m
+            _stationslisten_nachladen()
+
+
 def _nearest_stations(slug, lat, lon, k=8, max_km=300):
     """Return up to k nearest stations to (lat, lon), sorted by distance.
     Excludes the query station itself by slug. Filters to <= max_km
