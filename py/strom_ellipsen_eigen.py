@@ -197,6 +197,9 @@ def _rohreihe(text, name, la, lo):
     if 'BSH-GEZEITENSTROM' in text:
         import bsh_gezeitenstrom as BG                  # BSH-Gezeitenstromatlas 13.11.2026
         return BG.rohreihe(la, lo)
+    if 'BANGOR-MENAI-PROFILE' in text:
+        import menai_stroeme as ME                      # Bangor-Profile 13.11.2026, synthetisches Jahr
+        return ME.rohreihe(text, name, la, lo)
     if 'IMI-CONNEMARA-ROMS' in text:
         import connemara_strom as CO                    # Connemara-Modell 13.11.2026, synthetisches Jahr aus dem Satz
         return CO.rohreihe(text, la, lo)
