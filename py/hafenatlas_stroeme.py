@@ -336,10 +336,17 @@ MM_GEO = {   # gebiet: (x0, lon0, px je ' Laenge, y0, lat0, px je ' Breite)
     'solent_west': (53.5, -(2 + 10 / 60), 17.0, 142.5, 50 + 50 / 60, 27.0),
     'solent_east': (461.5, -1.0, 17.0, 143.5, 50 + 50 / 60, 27.0),
     'portland': (310.5, -2.5, 32.0, 472.0, 50.5, 51.0),
+    # 13.11.2026, Bilder in currents/ATT/<ordner> (Originaldateien, 5'- bzw. 10'-Striche):
+    'lyme_bay': (295.5, -3.5, 14.16, 699.5, 50.5, 22.32),          # np263-lyme-bay, HW Devonport
+    'falmouth_exmouth': (216.5, -5.0, 12.40, 416.0, 50.5, 19.5),    # falmouth-exmouth (NP254), HW Devonport
+    'lands_end': (302.5, -6.5, 11.71, 183.5, 50.5, 18.3),           # np255-lands-end, HW Devonport
 }
 MM_BEZUG = {'solent_west': ('Portsmouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt'),
             'solent_east': ('Portsmouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt'),
-            'portland': ('Weymouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt')}
+            'portland': ('Weymouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt'),
+            'lyme_bay': ('Devonport, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt'),
+            'falmouth_exmouth': ('Devonport, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt'),
+            'lands_end': ('Devonport, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt')}
 
 
 def mm_ll(gebiet, x, y):
@@ -389,21 +396,52 @@ MM_PUNKTE = [
     ("St Catherine's Point (3 km S)", 'solent_east', 180, 603, {
         -6: (1.2, 2.3, 80), -5: (1.8, 3.7, 75), -4: (1.5, 3.3, 75), -3: (1.5, 2.9, 80), -2: (1.2, 2.4, 75), -1: (.1, .3, 70), 0: (1.2, 2.4, 265),
         1: (1.7, 3.4, 265), 2: (1.9, 3.8, 260), 3: (1.7, 3.4, 250), 4: (1.2, 2.3, 270), 5: (.4, .6, 250), 6: (.8, 1.6, 80)}),
+
+    # 13.11.2026 abends: NP255 Land's End, NP263 Lyme Bay (HW Devonport), Montagen aller 13 Stunden; Beschriftungen wandern
+    # je Stunde, genommen wurde jeweils die dem Punkt naechste. Pruefung NP254 an Plymouth (26 km SSE): 12 %.
+    # Weggelassen: Eddystone (Messung 8 km daneben), Torquay/Plymouth Sound (< 1 kn, Kartenrand bzw. Rame Head 4,6 km).
+    ('Coverack (5 km NE)', 'lands_end', 1327, 676, {h: (n / 10, sp / 10, r) for h, (n, sp, r) in zip(range(-6, 7), [
+        (5, 10, 200), (2, 5, 225), (5, 10, 30), (7, 14, 20), (5, 9, 15), (6, 12, 25), (6, 12, 30), (4, 7, 40), (2, 4, 40),
+        (3, 5, 200), (5, 9, 200), (6, 13, 200), (6, 12, 200)])}),
+    ("Land's End (10 km SW)", 'lands_end', 799, 737, {h: (n / 10, sp / 10, r) for h, (n, sp, r) in zip(range(-6, 7), [
+        (10, 22, 315), (11, 22, 330), (10, 20, 345), (8, 16, 355), (5, 11, 30), (5, 10, 80), (7, 15, 120), (11, 23, 140),
+        (12, 25, 150), (10, 21, 170), (10, 20, 190), (4, 9, 270), (8, 16, 250)])}),
+    ("St. Mary's (15 km ENE)", 'lands_end', 577, 786, {h: (n / 10, sp / 10, r) for h, (n, sp, r) in zip(range(-6, 7), [
+        (5, 9, 300), (6, 12, 350), (8, 18, 0), (9, 20, 5), (9, 18, 20), (7, 14, 60), (10, 20, 110), (7, 14, 140), (9, 18, 175),
+        (10, 20, 185), (9, 17, 210), (7, 15, 225), (5, 11, 265)])}),
+    ('Penzance (14 km S)', 'lands_end', 970, 743, {h: (n / 10, sp / 10, r) for h, (n, sp, r) in zip(range(-6, 7), [
+        (3, 9, 270), (4, 11, 290), (4, 10, 285), (3, 7, 280), (1, 3, 80), (2, 4, 85), (3, 8, 100), (4, 10, 100), (4, 10, 110),
+        (3, 7, 120), (3, 6, 220), (1, 3, 270), (3, 7, 275)])}),
+    ('Lulworth Cove (5 km SSE)', 'lyme_bay', 1380, 604, {h: (n / 10, sp / 10, r) for h, (n, sp, r) in zip(range(-6, 7), [
+        (10, 19, 285), (11, 23, 275), (11, 23, 280), (8, 17, 275), (3, 6, 275), (1, 2, 40), (9, 19, 90), (11, 22, 70), (11, 22, 80),
+        (9, 19, 65), (5, 10, 50), (1, 3, 50), (7, 14, 270)])}),
+    ('Lyme Regis (25 km S)', 'lyme_bay', 754, 700, {h: (n / 10, sp / 10, r) for h, (n, sp, r) in zip(range(-6, 7), [
+        (4, 7, 285), (6, 13, 270), (6, 13, 275), (5, 9, 290), (2, 4, 305), (2, 4, 330), (3, 7, 75), (5, 9, 60), (5, 11, 80),
+        (5, 11, 90), (4, 7, 80), (2, 3, 130), (2, 4, 230)])}),
+    ('Portland Bill (12 km ESE)', 'lyme_bay', 1319, 740, {h: (n / 10, sp / 10, r) for h, (n, sp, r) in zip(range(-6, 7), [
+        (8, 17, 270), (16, 32, 270), (17, 35, 260), (14, 28, 255), (8, 15, 260), (3, 7, 10), (9, 19, 95), (17, 35, 90), (20, 40, 90),
+        (17, 34, 90), (12, 25, 100), (3, 6, 45), (5, 10, 265)])}),
 ]
 
 
+MM_ATLAS = {'solent_west': 'NP337 Solent', 'solent_east': 'NP337 Solent', 'portland': 'NP257 Portland',
+            'lyme_bay': 'NP263 Lyme Bay', 'falmouth_exmouth': 'NP254 Falmouth to Teignmouth', 'lands_end': "NP255 Land's End"}
+
+
 def monty(argv):
+    vorhanden = set(open(ZIEL, encoding='iso-8859-1').read().split('\n'))
     bl = []
     for name, gebiet, x, y, werte in MM_PUNKTE:
-        if name.startswith('_'):
+        voll = '%s, England, United Kingdom Current' % name
+        if name.startswith('_') or voll in vorhanden:
             continue
         r, la, lo, hs, hn = mm_satz(gebiet, x, y, werte)
-        voll = '%s, England, United Kingdom Current' % name
+        hafen = MM_BEZUG[gebiet][0].split(',')[0]
         print('%-62s %.4f %.4f  Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn' % (voll, la, lo, r['achse'], r['m2'], r['s2'], r['smax']))
-        bl.append(block(voll, r, la, lo, 'Admiralty NP337 Solent tidal stream atlas as redrawn by montymariner.co.uk (hourly HW Portsmouth -6..+6 h, read by hand)',
-                        'hours from HW Portsmouth, neap/spring rates interpolated by range (spring %.2f m, neap %.2f m); checked against measured sets Needles 4 %%, Freshwater 6 %%, Nab 12 %%' % (hs, hn),
-                        'UKHO NP337 via Monty Mariner', 'NP337-MONTYMARINER'))
-    if '--schreiben' in argv:
+        bl.append(block(voll, r, la, lo, 'Admiralty %s tidal stream atlas as redrawn by montymariner.co.uk (hourly HW %s -6..+6 h, read by hand)' % (MM_ATLAS[gebiet], hafen),
+                        'hours from HW %s, neap/spring rates interpolated by range (spring %.2f m, neap %.2f m); same reading checked against measured sets: Solent 4-12 %%, Plymouth 12 %%' % (hafen, hs, hn),
+                        'UKHO %s via Monty Mariner' % MM_ATLAS[gebiet].split()[0], 'NP337-MONTYMARINER' if 'NP337' in MM_ATLAS[gebiet] else 'NPATLAS-MONTYMARINER'))
+    if '--schreiben' in argv and bl:
         from sicher_schreiben import schreiben
         T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n')
         schreiben(ZIEL, T + '\n' + '\n'.join(bl) + '\n')
@@ -455,7 +493,7 @@ def rohreihe(text, name, la, lo):
                 sp = {h: (a * math.sin(math.radians(r - 2.3)), a * math.cos(math.radians(r - 2.3))) for h, (a, r, _n, _r) in werte.items()}
                 ni = {h: (n * math.sin(math.radians(r - 2.3)), n * math.cos(math.radians(r - 2.3))) for h, (_a, _r, n, r) in werte.items()}
                 return reihe_sn(sp, ni, hafen, hd, 2 * (w['M2'][0] + w['S2'][0]), 2 * (w['M2'][0] - w['S2'][0]))
-    if ctx == 'NP337-MONTYMARINER':
+    if ctx in ('NP337-MONTYMARINER', 'NPATLAS-MONTYMARINER'):
         for pname, gebiet, _x, _y, werte in MM_PUNKTE:
             if pname == kurz or name.startswith(pname + ','):
                 return mm_reihe(gebiet, werte)
