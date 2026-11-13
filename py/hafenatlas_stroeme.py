@@ -271,10 +271,69 @@ def tees(argv):
         print('->', os.path.relpath(ZIEL, ROOT))
 
 
+# ---------------------------------------------------------------- Milford Haven (MHPA Vol. 2 Lower Reaches, Messungen 1998-99)
+# Vektor-PDF in ~15.000 Splitterflaechen -> Seiten gerendert (130 dpi, clip 95,30,500,810, -90 Grad gedreht) und abgelesen.
+# Georeferenz per Kuestenabgleich mit den OSM-Landpolygonen (IoU 0,96; Stack Rock 30 m neben OSM):
+# 194,29 px/km, Drehung 2,34 Grad, Bildursprung -5,115762 E / 51,716447 N. Pfeilrichtungen im Bild minus 2,3 Grad = rechtweisend.
+MH_GEO = (194.28558772695777, 2.338731022035103, -5.115761895221098, 51.716447191138464)
+MH_PUNKTE = [  # Name, Bild-x, Bild-y (130 dpi) ; Werte je Stunde rel. HW Milford Haven: (Spring kn, Richtung, Nipp kn, Richtung)
+    ('Stack Rock (Milford Haven)', 303, 378, {
+        -6: (0.2, 130, 0.1, 260), -5: (0.5, 115, 0.2, 90), -4: (1.0, 115, 0.5, 120), -3: (1.4, 117, 0.6, 120),
+        -2: (1.3, 117, 0.5, 115), -1: (0.8, 118, 0.4, 125), 0: (0.2, 130, 0.1, 155), 1: (0.5, 290, 0.2, 295),
+        2: (0.9, 280, 0.4, 290), 3: (1.0, 280, 0.4, 280), 4: (0.9, 285, 0.4, 275), 5: (0.5, 270, 0.3, 270), 6: (0.1, 195, 0.2, 265)}),
+    ('Esso buoy (Milford Haven)', 400, 462, {
+        -6: (0.1, 140, 0.1, 235), -5: (0.6, 100, 0.3, 110), -4: (1.0, 95, 0.4, 95), -3: (1.3, 100, 0.5, 95),
+        -2: (1.2, 100, 0.5, 95), -1: (0.9, 105, 0.4, 90), 0: (0.3, 110, 0.1, 65), 1: (0.6, 275, 0.2, 280),
+        2: (1.2, 275, 0.5, 270), 3: (1.4, 270, 0.5, 270), 4: (1.3, 270, 0.6, 270), 5: (0.9, 260, 0.5, 260), 6: (0.3, 260, 0.3, 270)}),
+    ('East Angle (Milford Haven)', 693, 455, {
+        -6: (0.1, 70, 0.1, 70), -5: (0.6, 85, 0.3, 75), -4: (1.0, 80, 0.5, 80), -3: (1.2, 80, 0.6, 75),
+        -2: (1.2, 80, 0.5, 70), -1: (0.9, 85, 0.4, 75), 0: (0.3, 75, 0.0, 90), 1: (0.5, 260, 0.2, 270),
+        2: (0.9, 255, 0.4, 260), 3: (1.1, 260, 0.4, 260), 4: (1.0, 260, 0.5, 260), 5: (0.6, 260, 0.3, 260), 6: (0.2, 235, 0.1, 280)}),
+    ('Milford Docks (Milford Haven)', 1080, 393, {
+        -6: (0.1, 80, 0.1, 70), -5: (0.6, 90, 0.3, 85), -4: (1.1, 90, 0.5, 85), -3: (1.3, 90, 0.6, 88),
+        -2: (1.4, 90, 0.6, 88), -1: (1.1, 90, 0.5, 88), 0: (0.5, 85, 0.1, 120), 1: (0.5, 270, 0.3, 210),
+        2: (1.1, 270, 0.5, 265), 3: (1.1, 270, 0.5, 270), 4: (1.2, 275, 0.4, 270), 5: (0.8, 270, 0.3, 265), 6: (0.2, 275, 0.1, 300)}),
+]
+
+
+def mh_ll(x, y):
+    s, rot, lo0, la0 = MH_GEO
+    c, sn = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+    e, n = (c * x + sn * y) / s, -(-sn * x + c * y) / s
+    return la0 + n / 111.2, lo0 + e / (111.2 * math.cos(math.radians(51.7)))
+
+
+def milford(argv):
+    import xtide_modell as X
+    hafen = 'Milford Haven, Wales, United Kingdom'
+    hd = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_observations.txt')
+    _z0, w, e, _m = X.satz_lesen(hd, hafen)
+    hub_s, hub_n = 2 * (w['M2'][0] + w['S2'][0]), 2 * (w['M2'][0] - w['S2'][0])
+    print('Hub Spring %.2f m, Nipp %.2f m' % (hub_s, hub_n))
+    bl = []
+    for name, x, y, werte in MH_PUNKTE:
+        la, lo = mh_ll(x, y)
+        sp = {h: (a * math.sin(math.radians(r - 2.3)), a * math.cos(math.radians(r - 2.3))) for h, (a, r, _n, _r) in werte.items()}
+        ni = {h: (n * math.sin(math.radians(r - 2.3)), n * math.cos(math.radians(r - 2.3))) for h, (_a, _r, n, r) in werte.items()}
+        r = C.analyse(reihe_sn(sp, ni, hafen, hd, hub_s, hub_n), la, C.KONST)
+        voll = '%s, Wales, United Kingdom Current' % name
+        print('%-55s %.4f %.4f  Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn' % (voll, la, lo, r['achse'], r['m2'], r['s2'], r['smax']))
+        bl.append(block(voll, r, la, lo, 'Milford Haven Port Authority tidal stream atlas Vol. 2 (observed 1998-99, Hyder; HW Milford Haven -6..+6 h, read by hand)',
+                        'hours from HW Milford Haven, spring/neap rates interpolated by range (spring %.2f m, neap %.2f m); position by coastline fit to OSM' % (hub_s, hub_n),
+                        'Milford Haven Port Authority', 'MHPA-ATLAS-VOL2'))
+    if '--schreiben' in argv:
+        from sicher_schreiben import schreiben
+        T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n')
+        schreiben(ZIEL, T + '\n' + '\n'.join(bl) + '\n')
+        print('->', os.path.relpath(ZIEL, ROOT))
+
+
 if __name__ == '__main__':
     if sys.argv[1:2] == ['harwich']:
         harwich(sys.argv[2:])
     elif sys.argv[1:2] == ['tees']:
         tees(sys.argv[2:])
+    elif sys.argv[1:2] == ['milford']:
+        milford(sys.argv[2:])
     else:
         print(__doc__)
