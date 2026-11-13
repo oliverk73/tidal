@@ -210,8 +210,71 @@ def harwich(argv):
         print('->', os.path.relpath(ZIEL, ROOT))
 
 
+# ---------------------------------------------------------------- River Tees (PD Ports, Rasterbilder, von Hand abgelesen)
+# Hauptrinne Tees Mouth zwischen den Molen (Bild 767x1038 px, Seite 3-15 rechts; Gradnetz 1'N = 175,5 px, 1'E = 104 px,
+# 54 deg 38'N bei y=200, 1 deg 10'W bei x=127). Zahlen "Spring,Nipp" in Zehntelknoten; Flut SSW (205 Grad) in den Fluss,
+# Ebbe NNE (25 Grad). Abgelesen 13.11.2026 aus der Montage aller 13 Stundenbilder (die Beschriftungen wandern je Seite;
+# genommen wurde jeweils die Hauptrinne zwischen Eingang und Bran Sands, bei zwei Werten deren Mittel).
+TEES = ('Tees Mouth (River Tees entrance)', 54.6385, -1.1470)
+TEES_KN = {  # Stunde rel. HW River Tees Entrance: (Spring, Nipp, Richtung Grad)
+    -6: (0.2, 0.2, 205), -5: (0.6, 0.25, 205), -4: (0.8, 0.4, 205), -3: (0.85, 0.45, 205), -2: (0.9, 0.5, 205),
+    -1: (0.4, 0.35, 205), 0: (0.25, 0.25, 205), 1: (0.3, 0.1, 25), 2: (0.6, 0.25, 25), 3: (0.75, 0.35, 25),
+    4: (0.55, 0.35, 25), 5: (0.6, 0.35, 25), 6: (0.1, 0.1, 25)}
+
+
+def reihe_sn(spring, nipp, hafen, hafen_datei, hub_s, hub_n, jahr=2026, schritt_min=10):
+    """Wie reihe(), aber zwischen Nipp- und Springbild nach dem Hub interpoliert (ausserhalb linear extrapoliert,
+    nicht unter 0,5 x Nipp)."""
+    t0 = dt.datetime(jahr, 1, 1, tzinfo=dt.timezone.utc).timestamp()
+    t = np.arange(t0 - 86400, t0 + 367 * 86400, 120.0)
+    h = S.gezeit(hafen_datei, hafen, t)
+    thw, hhw = S.scheitel(t, h, True)
+    tnw, hnw = S.scheitel(t, h, False)
+    hub = hhw - np.interp(thw, tnw, hnw)
+    ts = np.arange(t0, t0 + 365 * 86400, schritt_min * 60.0)
+    k = np.clip(np.searchsorted(thw, ts), 1, len(thw) - 1)
+    k -= (ts - thw[k - 1]) < (thw[k] - ts)
+    tau = (ts - thw[k]) / 3600.0
+    w = np.clip((hub[k] - hub_n) / (hub_s - hub_n), -0.5, 1.5)
+    st = sorted(spring)
+    xs = np.array(st)
+    tt = np.clip(tau, st[0], st[-1])
+    out = {}
+    for j, c in enumerate(('u', 'v')):
+        a = np.interp(tt, xs, [spring[x][j] for x in st])
+        b = np.interp(tt, xs, [nipp[x][j] for x in st])
+        out[c] = (b + (a - b) * w) / C.MS_KN
+    return pd.DataFrame(out, index=pd.to_datetime(ts, unit='s'))
+
+
+def tees(argv):
+    import xtide_modell as X
+    hafen = 'River Tees (Teesmouth), England, United Kingdom'
+    hd = os.path.join(ROOT, 'harmonics/classic/harmonics-1997-05-25_mod.txt')
+    _z0, w, e, _m = X.satz_lesen(hd, hafen)
+    f = 0.3048 if e.startswith('f') else 1.0
+    hub_s, hub_n = 2 * (w['M2'][0] + w['S2'][0]) * f, 2 * (w['M2'][0] - w['S2'][0]) * f
+    sp = {s: (a * math.sin(math.radians(r)), a * math.cos(math.radians(r))) for s, (a, _n, r) in TEES_KN.items()}
+    ni = {s: (n * math.sin(math.radians(r)), n * math.cos(math.radians(r))) for s, (_a, n, r) in TEES_KN.items()}
+    name, la, lo = TEES
+    r = C.analyse(reihe_sn(sp, ni, hafen, hd, hub_s, hub_n), la, C.KONST)
+    voll = '%s, England, United Kingdom Current' % name
+    print('Hub Spring %.2f m, Nipp %.2f m' % (hub_s, hub_n))
+    print('%-60s %.4f %.4f  Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn' % (voll, la, lo, r['achse'], r['m2'], r['s2'], r['smax']))
+    b = block(voll, r, la, lo, 'PD Ports River Tees & Tees Bay tidal stream atlas (hourly HW River Tees Entrance -6..+6 h, read by hand)',
+              'hours from HW River Tees Entrance, spring/neap rates interpolated by range (spring %.2f m, neap %.2f m)' % (hub_s, hub_n),
+              'PD Teesport', 'PDPORTS-TEES-ATLAS')
+    if '--schreiben' in argv:
+        from sicher_schreiben import schreiben
+        T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n')
+        schreiben(ZIEL, T + '\n' + b + '\n')
+        print('->', os.path.relpath(ZIEL, ROOT))
+
+
 if __name__ == '__main__':
     if sys.argv[1:2] == ['harwich']:
         harwich(sys.argv[2:])
+    elif sys.argv[1:2] == ['tees']:
+        tees(sys.argv[2:])
     else:
         print(__doc__)
