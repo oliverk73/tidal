@@ -9,7 +9,7 @@ Kaupanger (KAZ, Sognefjord) ist fester Kartverket-Pegel, fehlte im Bestand; Mess
 Fit von zwei Jahren Kartverket-Vorhersage (ein Jahr laesst SA weg: 12 cm Rest) (Probe gegen 132 Tage Messung: 12,5 cm, Messfit 12,7 cm = Wetter).
 Falle: 10-min-Messwerte nicht per resample('1h').mean() mitteln (Stempel 25 min zu frueh, M2 12 Grad).
 
-Usage: venv/bin/python py/kartverket_saetze.py [--schreiben | --ersetzen]
+Usage: venv/bin/python py/kartverket_saetze.py [--liste CSV] [--schreiben | --ersetzen]
 """
 import datetime as dt
 import os
@@ -48,6 +48,11 @@ def vorhersage(code, la, lo):
 
 
 def main(argv):
+    global SAETZE
+    if '--liste' in argv:       # 13.11.2026: CSV name,prov,lat,lon (Kuestenpunkte, ersetzen FES-Hafensaetze vom 13.11.)
+        import csv
+        SAETZE = [(z['name'], z['prov'], float(z['lat']), float(z['lon']), None, 'ersetzt FES-Hafensatz vom 13.11.2026 (Kartverket in Norwegen genauer, Pruefung 11.11.)')
+                  for z in csv.DictReader(open(argv[argv.index('--liste') + 1], encoding='utf-8'))]
     kopf = X.kopf_lesen(ZIEL)
     namen, speeds, arg, fak = kopf
     heute = dt.date.today().strftime('%Y%m%d')
