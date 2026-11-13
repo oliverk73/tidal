@@ -22,6 +22,7 @@ import numpy as np
 from scipy import ndimage
 
 GLATT, MIN_GRAD, MIN_KM, MIN_MS, MAX_BREITE = 2.5, 3.0, 500.0, 2.0, 75.0
+MAX_GELAENDE = 1000.0      # m: darueber liegt 850 hPa (~1450 m) im/unter dem Gelaende -> Scheinfronten (Groenland, Asien)
 R_ERDE = 6371.0
 
 
@@ -36,8 +37,9 @@ def theta_e(t_k, rh):
     return th * np.exp(2.5e6 * r / (1004.0 * t_k))
 
 
-def analyse(t_k, rh, u, v, lats, lons):
-    """Felder (ny, nx), lats 90..-90, lons 0..360 -> Liste von Fronten (Laenge -180..180)."""
+def analyse(t_k, rh, u, v, lats, lons, gelaende=None):
+    """Felder (ny, nx), lats 90..-90, lons 0..360 -> Liste von Fronten (Laenge -180..180).
+    gelaende: Oberflaechenhoehe (m) im selben Gitter; Fronten ueber/neben Hochland (> MAX_GELAENDE) entfallen."""
     import contourpy
     k = int(np.argmin(np.abs(lons - 180.0)))
     roll = lambda a: np.concatenate([a[:, k:], a[:, :k], a[:, k:k + 1]], axis=1)    # noqa: E731
@@ -58,6 +60,9 @@ def analyse(t_k, rh, u, v, lats, lons):
     tfp = -(bx * ex + by * ey)
     # Nulllinie des TFP nur in Frontalzonen: TFP ausserhalb maskieren
     maske = (betrag < MIN_GRAD) | (np.abs(lats)[:, None] > MAX_BREITE) | (np.abs(lats)[:, None] < 8)
+    if gelaende is not None:                                                       # Umgebung ~1,5 Grad mitnehmen
+        hoch = ndimage.maximum_filter(roll(gelaende), size=int(round(1.5 / dlat)) * 2 + 1, mode=("nearest", "wrap"))
+        maske |= hoch > MAX_GELAENDE
     tfp_m = np.where(maske, np.nan, tfp)
     gen = contourpy.contour_generator(lo, lats, tfp_m, line_type="Separate")
     fronten = []

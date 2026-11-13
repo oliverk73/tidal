@@ -165,9 +165,17 @@
     const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
-    const cartoBase = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd', maxZoom: 20
+    // 13.11.2026: CARTO-Rasterkacheln liefern ohne API-Key nur noch "API KEY REQUIRED" -> OpenFreeMap
+    // Positron (Vektor, ohne Key), Beschriftungen entfernt (die kommen aus makeVectorLabels()).
+    const cartoBase = L.maplibreGL({ style: 'https://tiles.openfreemap.org/styles/positron', interactive: false,
+      attribution: '&copy; <a href="https://openfreemap.org/">OpenFreeMap</a> &copy; OpenMapTiles &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' });
+    cartoBase.on('add', function () {
+      var gl = cartoBase.getMaplibreMap && cartoBase.getMaplibreMap();
+      if (!gl) return;
+      var ohneSchrift = function () {
+        (gl.getStyle().layers || []).forEach(function (ly) { if (ly.type === 'symbol') gl.removeLayer(ly.id); });
+      };
+      if (gl.isStyleLoaded()) ohneSchrift(); else gl.once('style.load', ohneSchrift);
     });
     // Labels gehen in eigenen Pane oberhalb der Overlays + Land-Masken.
     if (!map.getPane('cartoLabels')) {
@@ -1193,9 +1201,9 @@
           velocityScale: 0.02,
           opacity: 0.95,
           particleAge: 50,
-          lineWidth: 1.6,
-          particleMultiplier: 1/250,
-          colorScale: ['#8fd3c8', '#4cb89a', '#8cc63f', '#f2c12e', '#f08a24', '#e0402a', '#b0105c'],
+          lineWidth: 2.2,
+          particleMultiplier: 1/200,
+          colorScale: ['#2a8f84', '#1f7a62', '#4f9a1a', '#d9a400', '#e07020', '#d03020', '#9a0c50'],   // 13.11.: dunkler, auf heller Karte sichtbar
         });
         tcLayer.addTo(map);
       }

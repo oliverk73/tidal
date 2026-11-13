@@ -40,9 +40,12 @@ def grib_url(date_str, cycle, fhour):
             f"&var_PRMSL=on&lev_mean_sea_level=on"), fname
 
 
-def lade(date_str, cycle, fhour, felder850=False):
+def lade(date_str, cycle, fhour, felder850=False, gelaende=False):
     url, fname = grib_url(date_str, cycle, fhour)
-    if felder850:                                       # fuer die Fronten: T, RH, Wind in 850 hPa
+    if gelaende:                                        # Oberflaechenhoehe fuer die Frontenmaske (einmal je Lauf)
+        url = url.replace("&var_PRMSL=on&lev_mean_sea_level=on", "&var_HGT=on&lev_surface=on")
+        fname += "_hgt"
+    elif felder850:                                       # fuer die Fronten: T, RH, Wind in 850 hPa
         url = url.replace("&var_PRMSL=on&lev_mean_sea_level=on", "&var_TMP=on&var_RH=on&var_UGRD=on&var_VGRD=on&lev_850_mb=on")
         fname += "_850"
     pfad = os.path.join(OUTPUT_DIR, fname + ".grib2")
@@ -111,6 +114,19 @@ def main():
     date_str, cycle = W.get_latest_cycle()
     print(f"GFS {date_str} {cycle}z")
     frames, grid = [], None
+    oro = None
+    ph = lade(date_str, cycle, 0, gelaende=True)
+    if ph:
+        try:
+            dh = xr.open_dataset(ph, engine="cfgrib", backend_kwargs={"indexpath": ""})
+            oro = dh[next(n for n in dh.data_vars)].values
+            if dh.latitude.values[0] < dh.latitude.values[-1]:
+                oro = np.flipud(oro)
+            dh.close()
+        finally:
+            for x in (ph, ph + ".idx"):
+                if os.path.exists(x):
+                    os.remove(x)
     for fh in W.get_forecast_hours(a.hours):
         pfad = lade(date_str, cycle, fh)
         if not pfad:
@@ -146,7 +162,8 @@ def main():
                 f = (lambda a_: np.flipud(a_) if la8[0] < la8[-1] else a_)
                 t8, r8, u8, v8 = (f(d8[k].values)[::step, ::step] for k in ("t", "r", "u", "v"))
                 d8.close()
-                front = fronten.analyse(t8, r8, u8, v8, lats, lons)
+                front = fronten.analyse(t8, r8, u8, v8, lats, lons,
+                                         None if oro is None else oro[::step, ::step])
             finally:
                 for x in (p850, p850 + ".idx"):
                     if os.path.exists(x):
