@@ -191,7 +191,7 @@ def rohreihe(text, name, la, lo):
 
 def _rohreihe(text, name, la, lo):
     global _BODC
-    if any(k in text for k in ('HHA-TIDAL-MAPS', 'PDPORTS-TEES-ATLAS', 'MHPA-ATLAS-VOL2', 'NP337-MONTYMARINER', 'NPATLAS-MONTYMARINER')):
+    if any(k in text for k in ('HHA-TIDAL-MAPS', 'PDPORTS-TEES-ATLAS', 'MHPA-ATLAS-VOL2', 'MHPA-ATLAS-VOL1', 'NP337-MONTYMARINER', 'NPATLAS-MONTYMARINER')):
         import hafenatlas_stroeme as HA                # Hafenatlanten 13.11.2026: synthetische Jahresreihe
         return HA.rohreihe(text, name, la, lo)
     if 'BSH-GEZEITENSTROM' in text:

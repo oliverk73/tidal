@@ -296,6 +296,32 @@ MH_PUNKTE = [  # Name, Bild-x, Bild-y (130 dpi) ; Werte je Stunde rel. HW Milfor
 ]
 
 
+# Band 1 (Einfahrt, 13.11.2026 abends): Seite ist nordorientiert; gerendert mit 110 dpi ohne Drehung, Kuestenabgleich IoU 0,95
+# (Thorn Island 20 m neben OSM). Punkte im Fahrwasser; der Drehstrom direkt vor St Ann's Head (bis 2 kn quer) ist weggelassen.
+MH1_GEO = [116.882086259424, 2.383217961489261, -5.214765506477436, 51.73075770229582]
+MH1_PUNKTE = [  # Name, Bild-x, Bild-y (110 dpi) ; Stunde: (Spring kn, Richtung, Nipp kn, Richtung)
+    ('East Chapel (Milford Haven entrance)', 620, 673, {
+        -6: (0.2, 10, 0.1, 10), -5: (0.3, 10, 0.2, 10), -4: (1.0, 10, 0.3, 10), -3: (1.2, 10, 0.4, 10), -2: (1.0, 10, 0.5, 10),
+        -1: (0.7, 15, 0.4, 15), 0: (0.5, 10, 0.3, 10), 1: (0.6, 190, 0.2, 190), 2: (0.8, 190, 0.3, 190), 3: (0.9, 190, 0.4, 190),
+        4: (0.9, 190, 0.3, 190), 5: (0.7, 190, 0.4, 190), 6: (0.3, 190, 0.2, 190)}),
+    ('Dale Roads (Milford Haven entrance)', 533, 560, {
+        -6: (0.1, 210, 0.1, 210), -5: (0.3, 25, 0.2, 25), -4: (0.8, 25, 0.3, 25), -3: (0.9, 25, 0.3, 25), -2: (0.9, 25, 0.3, 25),
+        -1: (0.7, 25, 0.2, 25), 0: (0.2, 25, 0.1, 25), 1: (0.4, 210, 0.2, 210), 2: (0.8, 210, 0.3, 210), 3: (1.0, 210, 0.3, 210),
+        4: (0.9, 210, 0.3, 210), 5: (0.5, 210, 0.2, 210), 6: (0.2, 210, 0.0, 210)}),
+    ('Sheep Island (Milford Haven entrance)', 587, 807, {
+        -6: (0.4, 120, 0.3, 110), -5: (0.4, 40, 0.2, 40), -4: (0.7, 40, 0.3, 35), -3: (0.9, 35, 0.4, 30), -2: (0.9, 10, 0.4, 10),
+        -1: (0.8, 340, 0.5, 340), 0: (1.0, 320, 0.5, 320), 1: (1.0, 285, 0.6, 290), 2: (0.55, 280, 0.6, 280), 3: (0.6, 190, 0.3, 250),
+        4: (0.7, 160, 0.2, 190), 5: (1.1, 155, 0.3, 150), 6: (0.7, 130, 0.3, 130)}),
+]
+
+
+def mh1_ll(x, y):
+    s, rot, lo0, la0 = MH1_GEO
+    c, sn = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+    e, n = (c * x + sn * y) / s, -(-sn * x + c * y) / s
+    return la0 + n / 111.2, lo0 + e / (111.2 * math.cos(math.radians(51.69)))
+
+
 def mh_ll(x, y):
     s, rot, lo0, la0 = MH_GEO
     c, sn = math.cos(math.radians(rot)), math.sin(math.radians(rot))
@@ -311,16 +337,19 @@ def milford(argv):
     hub_s, hub_n = 2 * (w['M2'][0] + w['S2'][0]), 2 * (w['M2'][0] - w['S2'][0])
     print('Hub Spring %.2f m, Nipp %.2f m' % (hub_s, hub_n))
     bl = []
-    for name, x, y, werte in MH_PUNKTE:
-        la, lo = mh_ll(x, y)
+    vorhanden = set(open(ZIEL, encoding='iso-8859-1').read().split('\n'))
+    for name, x, y, werte, band in [p + (2,) for p in MH_PUNKTE] + [p + (1,) for p in MH1_PUNKTE]:
+        if '%s, Wales, United Kingdom Current' % name in vorhanden:
+            continue
+        la, lo = mh_ll(x, y) if band == 2 else mh1_ll(x, y)
         sp = {h: (a * math.sin(math.radians(r - 2.3)), a * math.cos(math.radians(r - 2.3))) for h, (a, r, _n, _r) in werte.items()}
         ni = {h: (n * math.sin(math.radians(r - 2.3)), n * math.cos(math.radians(r - 2.3))) for h, (_a, _r, n, r) in werte.items()}
         r = C.analyse(reihe_sn(sp, ni, hafen, hd, hub_s, hub_n), la, C.KONST)
         voll = '%s, Wales, United Kingdom Current' % name
         print('%-55s %.4f %.4f  Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn' % (voll, la, lo, r['achse'], r['m2'], r['s2'], r['smax']))
-        bl.append(block(voll, r, la, lo, 'Milford Haven Port Authority tidal stream atlas Vol. 2 (observed 1998-99, Hyder; HW Milford Haven -6..+6 h, read by hand)',
+        bl.append(block(voll, r, la, lo, 'Milford Haven Port Authority tidal stream atlas Vol. %d (observed 1998-99, Hyder; HW Milford Haven -6..+6 h, read by hand)' % band,
                         'hours from HW Milford Haven, spring/neap rates interpolated by range (spring %.2f m, neap %.2f m); position by coastline fit to OSM' % (hub_s, hub_n),
-                        'Milford Haven Port Authority', 'MHPA-ATLAS-VOL2'))
+                        'Milford Haven Port Authority', 'MHPA-ATLAS-VOL%d' % band))
     if '--schreiben' in argv:
         from sicher_schreiben import schreiben
         T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n')
@@ -484,8 +513,8 @@ def rohreihe(text, name, la, lo):
         sp = {h: (a * math.sin(math.radians(r)), a * math.cos(math.radians(r))) for h, (a, _n, r) in TEES_KN.items()}
         ni = {h: (n * math.sin(math.radians(r)), n * math.cos(math.radians(r))) for h, (_a, n, r) in TEES_KN.items()}
         return reihe_sn(sp, ni, hafen, hd, 2 * (w['M2'][0] + w['S2'][0]) * f, 2 * (w['M2'][0] - w['S2'][0]) * f)
-    if ctx == 'MHPA-ATLAS-VOL2':
-        for pname, _x, _y, werte in MH_PUNKTE:
+    if ctx in ('MHPA-ATLAS-VOL2', 'MHPA-ATLAS-VOL1'):
+        for pname, _x, _y, werte in MH_PUNKTE + MH1_PUNKTE:
             if pname.split(' (')[0] == kurz.split(' (')[0]:
                 hafen = 'Milford Haven, Wales, United Kingdom'
                 hd = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_observations.txt')
