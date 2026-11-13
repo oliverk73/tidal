@@ -154,7 +154,67 @@ def pruefen(argv):
     print('->', os.path.relpath(AUS, ROOT))
 
 
+TPXO_KS = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1', 'M4', 'MS4', 'MN4', '2N2', 'S1', 'MF', 'MM')
+
+
+def satz(name, lat, lon, land, notiz=''):
+    """XTide-Stromsatz (Knoten, Greenwich, Hauptachse aus der M2-Ellipse) an der naechsten Wasserzelle -> Textblock.
+    Flutrichtung danach mit py/flutrichtung_pruefen.py pruefen."""
+    import datetime as dt
+    from generate_germany_harmonics_175 import CONSTITUENTS_175
+    z = wasserzelle(lat, lon)
+    if not z:
+        return None
+    i, j, dk = z
+    U, V = strom(i, j, 'M2')
+    ax = max(np.arange(0, 180, 0.5), key=lambda t: abs(U * math.sin(math.radians(t)) + V * math.cos(math.radians(t))))
+    p = projektion(i, j, ax, TPXO_KS)
+    gr = gradient(i, j)
+    heute = dt.date.today().strftime('%Y%m%d')
+    L = ['# Harmonic constants from the TPXO10-atlas-v2 tidal current model (Egbert & Erofeeva, 1/30 deg), depth-mean',
+         '# volume transports / depth, cell %.1f km from position, model depth %.0f m, neighbour-cell difference %.0f %%' % (dk, float(hz()[i, j]), gr),
+         '# Check against 664 measured current sets (py/tpxo_strom.py, 20261113): curve error median 8 %% where neighbour cells differ < 12 %%',
+         '# Major axis: %.1f deg true' % ax, '#',
+         '# BEGIN HOT COMMENTS', '# country: %s' % land,
+         '# source: TPXO10-atlas-v2 tidal current model, principal-axis projection',
+         '# station_id_context: TPXO10-ATLAS-V2', '# institution: Oregon State University / ESR',
+         '# datum: n/a', '# station_type: current', '# major_axis_deg_true: %.1f' % ax, '# confidence: 5',
+         '# note: MODEL-DERIVED (TPXO10, %s). %s' % (heute, notiz),
+         '# !units: knots', '# !longitude: %.4f' % lon, '# !latitude: %.4f' % lat,
+         name, '+00:00 :UTC', '0.0000 knots']
+    for k, _sp in CONSTITUENTS_175:
+        if k in p and abs(p[k]) >= 0.00005:
+            L.append('%-15s %.4f  %.2f' % (k, abs(p[k]), (-math.degrees(cmath.phase(p[k]))) % 360))
+        else:
+            L.append('x 0 0')
+    return '\n'.join(L), gr, abs(p['M2']), ax
+
+
+def ersetzen(argv):
+    """--ersetzen CSV (datei,name): Satz gleicher Name/Position aus TPXO10; alte Saetze vorher mit saetze_loeschen archivieren."""
+    import health_check as H
+    from sicher_schreiben import schreiben
+    liste = list(csv.DictReader(open(argv[argv.index('--ersetzen') + 1], encoding='utf-8')))
+    R = {r['name']: r for r in H.load_records()}
+    bl = []
+    for z in liste:
+        r = R.get(z['name']) or {'lat': float(z['lat']), 'lon': float(z['lon'])}
+        land = z['name'].split(', ')[-1].replace(' Current', '')
+        b = satz(z['name'], r['lat'], r['lon'], land, z.get('anlass', ''))
+        if b:
+            print('%-62s Nachbarzellen %3.0f %%  M2 %.2f kn  Achse %3.0f' % (z['name'][:62], b[1], b[2], b[3]))
+            bl.append(b[0])
+    if '--schreiben' in argv and bl:
+        ziel = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_tables.txt')
+        T = open(ziel, encoding='iso-8859-1').read().rstrip('\n')
+        schreiben(ziel, T + '\n' + '\n'.join(bl) + '\n')
+        print('->', os.path.relpath(ziel, ROOT))
+
+
 if __name__ == '__main__':
+    if '--ersetzen' in sys.argv:
+        ersetzen(sys.argv[1:])
+        sys.exit()
     if sys.argv[1:2] == ['pruefen']:
         pruefen(sys.argv[2:])
     else:
