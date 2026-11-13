@@ -11,6 +11,7 @@ Dieses Skript aktualisiert den Klon ~/tidal-sammler und vereinigt dann:
   tide_tables/iceland_sjolag/<id>.csv    je Stunde die juengste Vorhersage (dags_greiningar)
   tide_tables/iceland_sjolag/stationen.json
   tide_tables/kuwait_met/<pegel>.csv     je Scheitelzeit der juengste Abruf (seit 29.10.2026)
+  water_levels/imi_connemara/<zelle>.csv je Stunde der juengste Abruf (Connemara-Modell, seit 13.11.2026)
 Lokal vorhandene Werte gehen nie verloren; es kommt nur hinzu.
 
 Aufruf: python3 py/sammler_holen.py   (systemd-User-Timer sammler-holen.timer)
@@ -108,6 +109,31 @@ def kuwait():
     return neu_gesamt
 
 
+def connemara():
+    import io
+    ziel = os.path.join(ROOT, 'water_levels/imi_connemara')
+    os.makedirs(ziel, exist_ok=True)
+    neu_gesamt = 0
+    for q in glob.glob(os.path.join(KLON, 'water_levels/imi_connemara/*.csv')):
+        p = os.path.join(ziel, os.path.basename(q))
+        lokal = {z['zeit_utc']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
+        vorher, geaendert, felder = len(lokal), False, None
+        for z in csv.DictReader(open(q, encoding='utf-8')):
+            felder = felder or list(z)
+            alt = lokal.get(z['zeit_utc'])
+            if not alt or z['abruf'] > alt['abruf']:
+                lokal[z['zeit_utc']] = z
+                geaendert = True
+        if geaendert and felder:
+            buf = io.StringIO()
+            w = csv.DictWriter(buf, fieldnames=felder)
+            w.writeheader()
+            w.writerows({k: lokal[d][k] for k in felder} for d in sorted(lokal))
+            schreiben(p, buf.getvalue())
+            neu_gesamt += len(lokal) - vorher
+    return neu_gesamt
+
+
 def main():
     print(f'--- {dt.datetime.now():%Y-%m-%d %H:%M}', flush=True)
     if not os.path.isdir(os.path.join(KLON, '.git')):
@@ -122,6 +148,7 @@ def main():
     print(f'  EA:     +{ea()} Messpunkte')
     print(f'  Island: +{island()} Stunden')
     print(f'  Kuwait: +{kuwait()} Scheitel')
+    print(f'  Connemara: +{connemara()} Stunden')
     return 0
 
 
