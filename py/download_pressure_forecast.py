@@ -11,6 +11,8 @@ Ausgabe je Zeitschritt in static/pressure/:
                          "labels": [[lon, lat, hpa], ...], "zentren": [[lon, lat, "H"|"L", hpa], ...]}
                         Isobaren alle ISO_HPA hPa aus dem leicht geglaetteten Feld (contourpy), Laenge -180..180;
                         Zentren = lokale Extrema in einem Fenster von ZENTRUM_GRAD (H >= 1015, L <= 1005 hPa).
+                        "fronten": [{"typ": "kalt"|"warm"|"stationaer", "linie": [[lon, lat]...], "warm": [Grad]}]
+                        objektive Frontenanalyse aus 850 hPa (py/fronten.py, Thermal Front Parameter)
   pressure_meta.json    Gitter + Zeitschritte (Format wie wind_meta.json)
 
 Usage: venv/bin/python py/download_pressure_forecast.py [--hours 72] [--res 0.5]
@@ -38,8 +40,11 @@ def grib_url(date_str, cycle, fhour):
             f"&var_PRMSL=on&lev_mean_sea_level=on"), fname
 
 
-def lade(date_str, cycle, fhour):
+def lade(date_str, cycle, fhour, felder850=False):
     url, fname = grib_url(date_str, cycle, fhour)
+    if felder850:                                       # fuer die Fronten: T, RH, Wind in 850 hPa
+        url = url.replace("&var_PRMSL=on&lev_mean_sea_level=on", "&var_TMP=on&var_RH=on&var_UGRD=on&var_VGRD=on&lev_850_mb=on")
+        fname += "_850"
     pfad = os.path.join(OUTPUT_DIR, fname + ".grib2")
     for _ in range(3):
         try:
@@ -131,12 +136,27 @@ def main():
         b = f"pressure_f{fh:03d}.bin"
         np.clip(np.round(p * 10), 0, 65535).astype("<u2").tofile(os.path.join(OUTPUT_DIR, b))
         iso, labels, zentren = isobaren(p, lats, lons)
+        front = []
+        p850 = lade(date_str, cycle, fh, felder850=True)
+        if p850:
+            try:
+                import fronten
+                d8 = xr.open_dataset(p850, engine="cfgrib", backend_kwargs={"indexpath": ""})
+                la8 = d8.latitude.values
+                f = (lambda a_: np.flipud(a_) if la8[0] < la8[-1] else a_)
+                t8, r8, u8, v8 = (f(d8[k].values)[::step, ::step] for k in ("t", "r", "u", "v"))
+                d8.close()
+                front = fronten.analyse(t8, r8, u8, v8, lats, lons)
+            finally:
+                for x in (p850, p850 + ".idx"):
+                    if os.path.exists(x):
+                        os.remove(x)
         j = f"pressure_f{fh:03d}.json"
-        json.dump({"isobaren": iso, "labels": labels, "zentren": zentren},
+        json.dump({"isobaren": iso, "labels": labels, "zentren": zentren, "fronten": front},
                   open(os.path.join(OUTPUT_DIR, j), "w"), separators=(",", ":"))
         frames.append({"file": b, "iso": j, "hour": fh, "label": f"+{fh}h"})
         print(f"  f{fh:03d}: {np.nanmin(p):.0f}-{np.nanmax(p):.0f} hPa, {sum(len(x['linien']) for x in iso)} Isobaren, "
-              f"{len(zentren)} Zentren, {os.path.getsize(os.path.join(OUTPUT_DIR, j)) // 1024} KB")
+              f"{len(zentren)} Zentren, {len(front)} Fronten, {os.path.getsize(os.path.join(OUTPUT_DIR, j)) // 1024} KB")
     meta = {"date": date_str, "cycle": cycle, "generated": datetime.now(timezone.utc).isoformat(), "grid": grid,
             "unit": "0.1 hPa", "layout": "uint16 LE", "isobar_step_hpa": ISO_HPA, "frames": frames}
     json.dump(meta, open(os.path.join(OUTPUT_DIR, "pressure_meta.json"), "w"), indent=1)

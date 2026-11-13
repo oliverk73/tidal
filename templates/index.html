@@ -1288,7 +1288,7 @@
         container.innerHTML =
           '<div style="margin-bottom:6px;font-weight:bold;">' +
             '<label style="cursor:pointer;">' +
-              '<input type="checkbox" id="ps-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M3 15c3-6 6-8 9-8s6 2 9 8" stroke="#555" stroke-width="2" fill="none"/><path d="M6 17c2-4 4-5 6-5s4 1 6 5" stroke="#555" stroke-width="1.6" fill="none" opacity=".6"/><text x="9" y="9" font-size="8" font-weight="bold" fill="#c0392b">H</text></svg>Pressure &amp; Isobars (GFS)' +
+              '<input type="checkbox" id="ps-toggle" style="margin-right:5px;"><svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px;"><path d="M3 15c3-6 6-8 9-8s6 2 9 8" stroke="#555" stroke-width="2" fill="none"/><path d="M6 17c2-4 4-5 6-5s4 1 6 5" stroke="#555" stroke-width="1.6" fill="none" opacity=".6"/><text x="9" y="9" font-size="8" font-weight="bold" fill="#c0392b">H</text></svg>Pressure (GFS)' +
             '</label>' +
           '</div>' +
           '<div id="ps-controls" style="display:none;flex-direction:column;align-items:center;gap:6px;">' +
@@ -1301,7 +1301,7 @@
                 '<span id="ps-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
               '</div>' +
               '<input type="range" id="ps-progress" min="0" max="0" value="0" style="width:180px;cursor:pointer;">' +
-              '<div style="font-size:11px;color:#555;text-align:center;">Isobars every 4 hPa · H = high, L = low</div>' +
+              '<div style="font-size:11px;color:#555;text-align:center;">Isobars &amp; fronts: switch on below (work with every layer)</div>' +
             '</div>' +
           '</div>';
         L.DomEvent.disableClickPropagation(container);
@@ -1331,6 +1331,47 @@
           document.getElementById('ps-prev-btn').addEventListener('click', function () { pressureLayer.stopAnim(); pressureLayer.showFrame(pressureLayer.currentFrame - 1); });
           document.getElementById('ps-next-btn').addEventListener('click', function () { pressureLayer.stopAnim(); pressureLayer.showFrame(pressureLayer.currentFrame + 1); });
           document.getElementById('ps-progress').addEventListener('input', function () { pressureLayer.stopAnim(); pressureLayer.showFrame(parseInt(this.value)); });
+        }, 0);
+        return container;
+      }
+    });
+
+    // --- Isobars & fronts: independent overlay over any layer (Oliver 13.11.2026, like windy.app) ---
+    const pressureOverlay = new PressureOverlay(map);
+    pressureLayer.onFrame = function (i) { pressureOverlay.showFrame(i, true); };
+    pressureOverlay.onFrame = function (i) { pressureLayer.showFrame(i, true); };
+    const PressureOverlayControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar');
+        container.innerHTML =
+          '<div style="font-weight:bold;margin-bottom:4px;">Isobars &amp; Fronts (GFS)</div>' +
+          '<label style="cursor:pointer;margin-right:12px;"><input type="checkbox" id="po-iso" style="margin-right:4px;">Isobars</label>' +
+          '<label style="cursor:pointer;"><input type="checkbox" id="po-front" style="margin-right:4px;">Fronts</label>' +
+          '<div id="po-zeit" style="display:none;margin-top:6px;">' +
+            '<div style="display:flex;align-items:center;gap:6px;">' +
+              '<button id="po-prev" style="font-size:15px;cursor:pointer;border:none;background:none;padding:1px 5px;">\u23EE</button>' +
+              '<span id="po-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
+              '<button id="po-next" style="font-size:15px;cursor:pointer;border:none;background:none;padding:1px 5px;">\u23ED</button>' +
+            '</div>' +
+            '<input type="range" id="po-progress" min="0" max="0" value="0" style="width:180px;cursor:pointer;">' +
+            '<div style="font-size:11px;color:#555;max-width:230px;">Fronts: automatic analysis of GFS 850 hPa (blue = cold, red = warm, dashed = stationary).</div>' +
+          '</div>';
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+        setTimeout(function () {
+          async function umschalten() {
+            const iso = document.getElementById('po-iso').checked, fr = document.getElementById('po-front').checked;
+            document.getElementById('po-zeit').style.display = (iso || fr) ? 'block' : 'none';
+            const neu = (iso || fr) && !pressureOverlay.active;
+            await pressureOverlay.set(iso, fr);
+            if (neu && pressureLayer.active) pressureOverlay.showFrame(pressureLayer.currentFrame, true);
+          }
+          document.getElementById('po-iso').addEventListener('change', umschalten);
+          document.getElementById('po-front').addEventListener('change', umschalten);
+          document.getElementById('po-prev').addEventListener('click', function () { pressureOverlay.showFrame(pressureOverlay.currentFrame - 1); });
+          document.getElementById('po-next').addEventListener('click', function () { pressureOverlay.showFrame(pressureOverlay.currentFrame + 1); });
+          document.getElementById('po-progress').addEventListener('input', function () { pressureOverlay.showFrame(parseInt(this.value)); });
         }, 0);
         return container;
       }
@@ -1866,7 +1907,8 @@
        SurgeControl,       // Storm Surge (Copernicus)
        WaveControl,        // Wave Forecast (GFS-Wave)
        WindControl,        // Wind Forecast (GFS 10 m)
-       PressureControl,    // Sea-level pressure + isobars (GFS)
+       PressureControl,    // Sea-level pressure colour field (GFS)
+       PressureOverlayControl, // Isobars & fronts (independent, over any layer)
        SeamarkControl      // OpenSeaMap Seezeichen
       ].forEach(function (C, i) {
         var el = new C().onAdd(map);
