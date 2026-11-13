@@ -179,6 +179,17 @@ _BODC = None
 
 
 def rohreihe(text, name, la, lo):
+    """Rohreihe zum Satz; ist sie laut Satzkopf in Ortszeit gestempelt (py/zeitzone_neufit.py), nach UTC gewandelt."""
+    df = _rohreihe(text, name, la, lo)
+    m = re.search(r'Zeitstempel der Rohreihe waren (\S+) \(MEZ', text)
+    if df is not None and m:
+        idx = df.index.tz_localize(m.group(1), ambiguous='NaT', nonexistent='NaT')
+        df = df[~idx.isna()]
+        df.index = idx[~idx.isna()].tz_convert('UTC').tz_localize(None)
+    return df
+
+
+def _rohreihe(text, name, la, lo):
     global _BODC
     if any(k in text for k in ('HHA-TIDAL-MAPS', 'PDPORTS-TEES-ATLAS', 'MHPA-ATLAS-VOL2', 'NP337-MONTYMARINER', 'NPATLAS-MONTYMARINER')):
         import hafenatlas_stroeme as HA                # Hafenatlanten 13.11.2026: synthetische Jahresreihe
