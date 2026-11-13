@@ -93,7 +93,7 @@ def block(name, r, la, lo, quelle, regel, inst, kontext):
          '# R^2 = %.4f, RMS error = %.4f knots' % (r['r2'], r['rms']),
          '# Major axis: %.1f deg true' % r['achse'], '#',
          '# BEGIN HOT COMMENTS', '# country: United Kingdom',
-         '# source: %s, UTide analysis' % quelle,
+         '# source: %s tidal stream atlas, UTide analysis' % inst,   # libtcd: source <= 90 Zeichen
          '# station_id_context: %s' % kontext, '# institution: %s' % inst,
          '# datum: n/a', '# station_type: current', '# major_axis_deg_true: %.1f' % r['achse'], '# confidence: 5',
          '# utide: period=2026-01-01..2026-12-31 const=%d' % len(r['konst']),
