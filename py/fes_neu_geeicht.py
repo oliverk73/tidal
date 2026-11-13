@@ -19,7 +19,8 @@ Referenzen weltweit wie dort (Mess-/Amtssaetze, ohne Saetze, deren Kopf FES nenn
 Ersetzen (Oliver 26.10.2026, ATT-Nebenorte wie Jamaika): --ersetzen CSV (datei,name[,anlass]) -- Name, Position,
 Zeitzone und Z0 vom alten Satz, Eichung wie oben; den alten Satz archiviert py/saetze_loeschen.py danach.
 
-Usage: venv/bin/python py/fes_neu_geeicht.py [--welt CSV | --ersetzen CSV] [--schreiben]   -> harmonics/utide/harmonics_fes2022.txt
+Usage: venv/bin/python py/fes_neu_geeicht.py [--welt CSV [--exakt] | --ersetzen CSV] [--schreiben]   -> harmonics/utide/harmonics_fes2022.txt
+--exakt: Position aus der CSV unveraendert, wenn sie im Wasser liegt (Oliver-Koordinaten).
 """
 import cmath
 import datetime as dt
@@ -94,8 +95,10 @@ def welt_orte(pfad):
     return out
 
 
-def seepunkt(L, la, lo, richtung):
+def seepunkt(L, la, lo, richtung, exakt=False):
     best = None
+    if exakt and not L.ist_land(la, lo):          # Olivers Position aus Google Maps (13.11.2026): unveraendert nehmen
+        return (la, lo), 0.0, 0
     for d in np.arange(0.3, 8.01, 0.1):
         for az in range(0, 360, 10):
             if richtung is not None and abs((az - richtung + 180) % 360 - 180) > 60:
@@ -182,11 +185,12 @@ def main(argv):
                 name = '%s, %s' % (ort, land)
             else:
                 name = '%s, %s, %s' % (ort, staat, land)
-            sp = seepunkt(L, la0, lo0, richtung)
+            sp = seepunkt(L, la0, lo0, richtung, '--exakt' in argv)
         if not sp:
             print('%-40s kein Wasserpunkt' % name)
             continue
         (la, lo), d, az = sp
+        la_k, lo_k = (la0, lo0) if '--exakt' in argv else (la, lo)   # Olivers Punkt im Hafen bleibt, FES vom naechsten Seepunkt
         nah = sorted(refs, key=lambda x: H.km({'lat': la, 'lon': lo}, x[0]))[:REF_ANZAHL]
         nah = [x for x in nah if H.km({'lat': la, 'lon': lo}, x[0]) <= REF_KM]
         eich = {}
@@ -233,9 +237,10 @@ def main(argv):
               '# note: MODEL-DERIVED (not observations). Luecke an offener Kueste, kein Satz in 20 km (Oliver %s).' % heute,
               ('# note: FES geeicht an %s.' % refnamen)[:190] if nah else
               '# note: FES ungeeicht: kein Mess-/Tafelsatz in %.0f km.' % REF_KM,
-              '# note: Position %.1f km vor dem Ort (%s), py/fes_neu_geeicht.py.' % (d, 'Seeseite' if richtung is not None else 'naechstes Wasser'),
+              ('# note: Position von Oliver (Google Maps), FES %.1f km seewaerts abgetastet, py/fes_neu_geeicht.py.' % d if '--exakt' in argv else
+               '# note: Position %.1f km vor dem Ort (%s), py/fes_neu_geeicht.py.' % (d, 'Seeseite' if richtung is not None else 'naechstes Wasser')),
               '# date_imported: %s' % heute, '# datum: approx. LAT (Z0 = -Minimum der 19-Jahres-Kurve)', '# confidence: 5',
-              '# !units: meters', '# !longitude: %.4f' % lo, '# !latitude: %.4f' % la, '# state: %s' % staat,
+              '# !units: meters', '# !longitude: %.4f' % lo_k, '# !latitude: %.4f' % la_k, '# state: %s' % staat,
               name, '+00:00 :%s' % tz, '%.4f meters' % z0]
         T += ['%-15s %.4f  %.2f' % (c, *werte[c]) if c in werte else 'x 0 0' for c in namen]
     if '--schreiben' in argv:
