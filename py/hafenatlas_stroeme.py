@@ -382,7 +382,8 @@ MM_PUNKTE = [
     ('Nab Tower (Eastern Solent approach)', 'solent_east', 525, 420, {
         -6: (.3, .7, 90), -5: (.8, 1.6, 85), -4: (.9, 1.8, 85), -3: (.8, 1.5, 70), -2: (.4, .9, 60), -1: (.1, .2, 330), 0: (.7, 1.3, 275),
         1: (.7, 1.5, 265), 2: (.8, 1.6, 250), 3: (.6, 1.2, 220), 4: (.4, .8, 200), 5: (.2, .4, 190), 6: (.2, .4, 90)}),
-    ('Selsey Bill (4 km S)', 'solent_east', 660, 385, {
+    # Selsey Bill weggelassen (13.11.): SHOM-Atlas-Satz gleichen Namens 1,7 km daneben (M2 1,50 statt 1,81 kn)
+    ('_Selsey Bill (4 km S)', 'solent_east', 660, 385, {
         -6: (.8, 1.7, 90), -5: (1.2, 2.4, 85), -4: (1.2, 2.4, 85), -3: (.9, 1.8, 95), -2: (.4, .7, 90), -1: (.4, .8, 285), 0: (1.1, 2.2, 280),
         1: (1.3, 2.5, 275), 2: (1.0, 2.0, 275), 3: (.7, 1.3, 240), 4: (.2, .5, 240), 5: (.2, .5, 80), 6: (.7, 1.4, 85)}),
     ("St Catherine's Point (3 km S)", 'solent_east', 180, 603, {
@@ -394,6 +395,8 @@ MM_PUNKTE = [
 def monty(argv):
     bl = []
     for name, gebiet, x, y, werte in MM_PUNKTE:
+        if name.startswith('_'):
+            continue
         r, la, lo, hs, hn = mm_satz(gebiet, x, y, werte)
         voll = '%s, England, United Kingdom Current' % name
         print('%-62s %.4f %.4f  Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn' % (voll, la, lo, r['achse'], r['m2'], r['s2'], r['smax']))
@@ -405,6 +408,58 @@ def monty(argv):
         T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n')
         schreiben(ZIEL, T + '\n' + '\n'.join(bl) + '\n')
         print('->', os.path.relpath(ZIEL, ROOT))
+
+
+def mm_reihe(gebiet, werte):
+    import xtide_modell as X
+    hafen, rel = MM_BEZUG[gebiet]
+    hd = os.path.join(ROOT, rel)
+    _z0, w, _e, _m = X.satz_lesen(hd, hafen)
+    hub_s, hub_n = 2 * (w['M2'][0] + w['S2'][0]), 2 * (w['M2'][0] - w['S2'][0])
+    sp = {h: (sk * math.sin(math.radians(r)), sk * math.cos(math.radians(r))) for h, (_n, sk, r) in werte.items()}
+    ni = {h: (n * math.sin(math.radians(r)), n * math.cos(math.radians(r))) for h, (n, _s, r) in werte.items()}
+    return reihe_sn(sp, ni, hafen, hd, hub_s, hub_n)
+
+
+def rohreihe(text, name, la, lo):
+    """Synthetische Jahresreihe (u, v in m/s) eines Atlas-Satzes dieses Skripts -- fuer die Nebenachse der
+    Strom-Ellipse (py/strom_ellipsen_eigen.py, Kompass auf der Stationsseite). None, wenn kein Atlas-Satz."""
+    import xtide_modell as X
+    m = re.search(r'# station_id_context: (\S+)', text)
+    ctx = m.group(1) if m else ''
+    kurz = name.split(',')[0]
+    if ctx == 'HHA-TIDAL-MAPS':
+        stunden, _f, _n = hha_pfeile()
+        zyk = {st: z for st, z in ((st, mittel(p, la, lo)) for st, p in stunden.items()) if z}
+        hafen = 'Harwich, England, United Kingdom'
+        hd = os.path.join(ROOT, 'harmonics/classic/harmonics-dwf-20100529-nonfree_mod.txt')
+        t = np.arange(dt.datetime(2026, 1, 1, tzinfo=dt.timezone.utc).timestamp(), dt.datetime(2027, 1, 1, tzinfo=dt.timezone.utc).timestamp(), 120.0)
+        h = S.gezeit(hd, hafen, t)
+        thw, hhw = S.scheitel(t, h, True)
+        tnw, hnw = S.scheitel(t, h, False)
+        return reihe(zyk, hafen, hd, float(np.mean(hhw - np.interp(thw, tnw, hnw))))
+    if ctx == 'PDPORTS-TEES-ATLAS':
+        hafen = 'River Tees (Teesmouth), England, United Kingdom'
+        hd = os.path.join(ROOT, 'harmonics/classic/harmonics-1997-05-25_mod.txt')
+        _z0, w, e, _m = X.satz_lesen(hd, hafen)
+        f = 0.3048 if e.startswith('f') else 1.0
+        sp = {h: (a * math.sin(math.radians(r)), a * math.cos(math.radians(r))) for h, (a, _n, r) in TEES_KN.items()}
+        ni = {h: (n * math.sin(math.radians(r)), n * math.cos(math.radians(r))) for h, (_a, n, r) in TEES_KN.items()}
+        return reihe_sn(sp, ni, hafen, hd, 2 * (w['M2'][0] + w['S2'][0]) * f, 2 * (w['M2'][0] - w['S2'][0]) * f)
+    if ctx == 'MHPA-ATLAS-VOL2':
+        for pname, _x, _y, werte in MH_PUNKTE:
+            if pname.split(' (')[0] == kurz.split(' (')[0]:
+                hafen = 'Milford Haven, Wales, United Kingdom'
+                hd = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_observations.txt')
+                _z0, w, _e, _m = X.satz_lesen(hd, hafen)
+                sp = {h: (a * math.sin(math.radians(r - 2.3)), a * math.cos(math.radians(r - 2.3))) for h, (a, r, _n, _r) in werte.items()}
+                ni = {h: (n * math.sin(math.radians(r - 2.3)), n * math.cos(math.radians(r - 2.3))) for h, (_a, _r, n, r) in werte.items()}
+                return reihe_sn(sp, ni, hafen, hd, 2 * (w['M2'][0] + w['S2'][0]), 2 * (w['M2'][0] - w['S2'][0]))
+    if ctx == 'NP337-MONTYMARINER':
+        for pname, gebiet, _x, _y, werte in MM_PUNKTE:
+            if pname == kurz or name.startswith(pname + ','):
+                return mm_reihe(gebiet, werte)
+    return None
 
 
 if __name__ == '__main__':

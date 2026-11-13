@@ -147,6 +147,21 @@ def pruefen(argv):
             np.median(e[:, 0]), np.median(e[:, 1]), np.median(e[:, 2]), np.median(abs(e[:, 3])), len(e)))
 
 
+def rohreihe(text, la, lo):
+    """Geeichte Modellreihe (u, v in m/s) eines AMM15-Satzes aus luecken() -- fuer die Nebenachse der Strom-Ellipse."""
+    import pandas as pd
+    if 'CMEMS-NWS-AMM15' not in text:
+        return None
+    z = zelle(la, lo)
+    if not z:
+        return None
+    ts, u, v = z[0], z[1], z[2]
+    korr = float(re.search(r'# time_correction_min: ([+-]?[\d.]+)', text).group(1))
+    fk = float(re.search(r'strength /([\d.]+)', text).group(1))
+    ok = np.isfinite(u) & np.isfinite(v)
+    return pd.DataFrame({'u': u[ok] / fk, 'v': v[ok] / fk}, index=pd.to_datetime(ts[ok] + korr * 60, unit='s'))
+
+
 def m2_vektor(ts, u, v):
     w = math.radians(28.9841042) * ts / 3600.0
     A = np.column_stack([np.ones_like(ts), np.cos(w), np.sin(w)])
