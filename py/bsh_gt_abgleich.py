@@ -47,7 +47,37 @@ GATTUNG = GATTUNG | {'fjord', 'fjordur', 'fjorden', 'loch', 'lough', 'ria', 'rio
                      'insel', 'alter', 'neuer', 'anleger', 'bake', 'reede', 'seeseite', 'hafeneinfahrt', 'barre', 'muendung', 'ost', 'nord', 'sud', 'west', 'l', 'd', 'en', 'van', 'aan', 'zeegat', 'sur', 'mer', 'pointe'}
 NUM = r'\d+[a-zA-Z]?(?:\s*[–-]\s*\d+[a-zA-Z]?)?'
 EINTRAG = re.compile(r'(\S.*?)\s*(?:\.\s?)+\s*(' + NUM + r'(?:,\s*' + NUM + r')*)(?=\s{2,}|\s*$)')
-EUROPA = (25.0, 84.0, -75.0, 60.0)
+EUROPA = (25.0, 84.0, -75.0, 66.0)
+# Nummernbereiche mit Spruengen: Nachbarnummern helfen dort nicht (Kanaren landeten auf den Azoren)
+REGION = [((1, 15), (59.0, 78.0, -46.0, -15.0)),           # Ostgroenland
+          ((16, 103), (63.0, 67.0, -25.0, -13.0)),         # Island
+          ((104, 104), (70.5, 71.5, -9.5, -7.0)),          # Jan Mayen
+          ((105, 124), (74.0, 81.0, 9.0, 34.0)),           # Spitzbergen, Baereninsel
+          ((125, 125), (79.0, 82.5, 44.0, 66.0)),          # Franz-Josef-Land
+          ((1318, 1336), (61.3, 62.5, -7.8, -6.2)),        # Faeroeer
+          ((2190, 2199), (35.0, 36.2, -6.5, -4.8)),        # Ceuta, Tanger
+          ((2202, 2209), (36.8, 40.0, -31.5, -24.5)),      # Azoren
+          ((2210, 2216), (32.3, 33.3, -17.5, -16.0)),      # Madeira, Porto Santo
+          ((2217, 2230), (27.4, 29.5, -18.5, -13.2))]      # Kanaren
+
+
+# Von keiner Suche gefunden (Tonnen, Tuerme, Schleusen, Schreibweisen): ungefaehre Lage von Hand, nur fuer die Abdeckung
+HAND = {'113': (79.56, 11.0), '435': (66.50, 12.10), '435a': (66.43, 12.62), '445b': (64.73, 11.18), '445c': (64.86, 11.60),
+        '464': (64.01, 11.49), '608': (54.00, 8.11), '611': (53.73, 6.35), '621a': (54.58, 8.15), '630': (54.53, 8.24),
+        '672': (53.95, 8.55), '789': (53.67, 7.07), '797': (53.65, 6.80), '804': (53.32, 7.33), '857': (51.75, 3.82),
+        '876': (51.82, 5.02), '880': (51.70, 4.42), '1010': (48.53, -2.73), '1131': (51.50, 1.08), '1195a': (53.33, 0.57),
+        '1200': (53.71, -0.45), '1631': (51.52, -9.54), '1932': (43.71, -7.45)}
+
+
+def region(n):
+    for (a, b), box in REGION:
+        if a <= n <= b:
+            return box
+    return None
+
+
+def in_box(p, box):
+    return box[0] <= p[0] <= box[1] and box[2] <= p[1] <= box[3]
 
 
 def kern2(s):
@@ -257,6 +287,36 @@ def main(argv):
                                                           sum(1 for e in I if not e['pos'])), flush=True)
         if not neu_n and runde >= 2:
             break
+    # Regionsstufe: fehlende Orte und Orte ausserhalb ihres Kastens im Kasten suchen (Namen 0.8, dann Nominatim)
+    for e in I:
+        box = region(e['nr_int']) if e['anker'] else None
+        if not box or (e['pos'] and in_box(e['pos'], box)):
+            continue
+        e.update(pos=None, methode='unbekannt', treffer='')
+        best = None
+        for r, ks in kerne:
+            if not in_box((r['lat'], r['lon']), box):
+                continue
+            for v in varianten(e['namen']):
+                a = kern2(v)
+                for b in ks:
+                    sc = difflib.SequenceMatcher(None, a, b).ratio() if a and b else 0
+                    if (a in b.split() or b in a.split()) and min(len(a), len(b)) >= 4:
+                        sc = max(sc, 0.9)
+                    if sc >= 0.8 and (best is None or sc > best[0]):
+                        best = (sc, r)
+        if best:
+            e['pos'], e['methode'], e['treffer'] = (best[1]['lat'], best[1]['lon']), 'region', best[1]['name']
+            continue
+        for v in varianten(e['namen']):
+            res = nominatim(v, (box[2], box[1], box[3], box[0]))
+            if res:
+                x = res[0]
+                e['pos'], e['methode'], e['treffer'] = (float(x['lat']), float(x['lon'])), 'geo', x['display_name'][:120]
+                break
+    for e in I:
+        if not e['pos'] and e['anker'] and e['nr'].lower() in HAND:
+            e['pos'], e['methode'], e['treffer'] = HAND[e['nr'].lower()], 'hand', 'ungefaehr (Handposition)'
     json.dump(cache, open(CACHE, 'w'))
     felder = ['nr', 'namen', 'bezugsort', 'methode', 'treffer', 'lat', 'lon', 'satz', 'satz_km', 'status']
     with open(AUS, 'w', newline='', encoding='utf-8') as fh:

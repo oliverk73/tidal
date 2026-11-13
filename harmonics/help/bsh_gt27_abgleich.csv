@@ -1,0 +1,765 @@
+nr,namen,bezugsort,methode,treffer,lat,lon,satz,satz_km,status
+1,Nanortalik,0,region,"Nanortalik, Greenland",60.1333,-45.2500,"Nanortalik, Greenland",0.0,gedeckt
+2,Frederiksdal,0,geo,"Narsarmijit, Kujalleq, Kalaallit Nunaat",60.0049,-44.6646,"Narsarmijit, Greenland",0.2,gedeckt
+4,Finnsbu,0,region,"Finnsbu, Greenland",63.4000,-41.2833,"Finnsbu, Greenland",0.0,gedeckt
+5,Angmagssalik – Insel | Scoresby – Sund | Tasiilaq,0,region,"Tasiilaq (Ammassalik), Greenland",65.6140,-37.6257,"Tasiilaq (Ammassalik), Greenland",0.0,gedeckt
+7,Dänemark – Insel,0,geo,"Sendiráð Danmerkur, 29, Hverfisgata, Austurbær, Miðborg, Reykjavíkurborg, Höfuðborgarsvæðið, 101, Ísland",64.1467,-21.9295,"Reykjavík, Iceland",0.7,gedeckt
+8,Kong Oscar Fjord | Nyhavn,0,geo,"Kangerluk Kong Oscar, Kalaallit Nunaat",72.4717,-24.3911,"Mestersvig, Greenland",30.9,luecke
+10,Kleine Finsch-Insel,0,unbekannt,,,,,,unbekannt
+11,Young Sund | Zackenberg,0,region,"Zackenberg, Greenland",74.4500,-20.7500,"Zackenberg, Greenland",0.0,gedeckt
+15,Danmark Havn,0,region,"Danmarks Havn, Greenland",76.7667,-18.7667,"Danmarks Havn, Greenland",0.0,gedeckt
+24,Keflavik,0,saat,"Keflavík, Iceland",63.9986,-22.5454,"Keflavík, Iceland",0.0,gedeckt
+25,Hafnarfjördur,0,name,"Hafnarfjörður, Iceland",64.0667,-21.9500,"Hafnarfjörður, Iceland",0.0,gedeckt
+26,Reykjavik,0,saat,"Reykjavík, Iceland",64.1506,-21.9399,"Reykjavík, Iceland",0.0,gedeckt
+30,Akranes,0,saat,"Akranes, Iceland",64.3167,-22.1000,"Akranes, Iceland",0.0,gedeckt
+35,Stykkishólmur,0,saat,"Stykkishólmur, Iceland",65.0833,-22.7000,"Stykkishólmur, Iceland",0.0,gedeckt
+40,Flatey,0,name,"Flatey, Iceland",65.3833,-22.9000,"Flatey, Iceland",0.0,gedeckt
+41,Patreks Fjördur | Vatneyri,0,geo,"Vatneyri, Sauðárkrókur, Skagafjörður, Norðurland vestra, 550, Ísland",65.7550,-19.6480,"Sauðárkrókur, Iceland",1.3,gedeckt
+45,Amarfjördur | Bíldudalur,0,saat,"Bíldudalur, Iceland",65.6833,-23.6000,"Bíldudalur, Iceland",0.0,gedeckt
+47,Flateyri | Önundar Fjördur,0,saat,"Flateyri, Iceland",66.0333,-23.5167,"Flateyri, Iceland",0.0,gedeckt
+50,Isa Fjardardjúp | Isafjördur | Skutuls Fjördur,0,name,"Ísafjörður, Iceland",66.0739,-23.1143,"Ísafjörður, Iceland",0.0,gedeckt
+51,Alfta Fjördur | Isa Fjardardjúp | Sudavík,0,geo,"Súðavíkurhreppur, Vestfirðir, 420, Ísland",65.9036,-22.9956,"Alftafjordhur, Iceland",12.6,nah
+58,Hólmavik | Húnaflói,0,saat,"Hólmavík, Iceland",65.7065,-21.6692,"Hólmavík, Iceland",0.0,gedeckt
+62,Saudárkrókur,0,name,"Sauðárkrókur, Iceland",65.7443,-19.6386,"Sauðárkrókur, Iceland",0.0,gedeckt
+65,Siglufjördur,0,name,"Siglufjörður, Iceland",66.1532,-18.8986,"Siglufjörður, Iceland",0.0,gedeckt
+68,Akureyri | Eyjafjördur,0,saat,"Akureyri, Iceland",65.6935,-18.0877,"Akureyri, Iceland",0.0,gedeckt
+69,Húsavik | Skjálfandi,0,saat,"Húsavík, Iceland",66.0433,-17.3410,"Húsavík, Iceland",0.0,gedeckt
+71,Raufarhöfn,0,saat,"Raufarhöfn, Iceland",66.4500,-15.9333,"Raufarhöfn, Iceland",0.0,gedeckt
+75,Vopnafjördur,0,name,"Vopnafjörður, Iceland",65.7541,-14.8295,"Vopnafjörður, Iceland",0.0,gedeckt
+79,Búdareyri | Seydisfjördur,0,name,"Seyðisfjörður, Iceland",65.2641,-14.0066,"Seyðisfjörður, Iceland",0.0,gedeckt
+85,Eskifjördur | Reydarfjördur,0,name,"Eskifjörður (Reyðarfjörður), Iceland",65.0744,-14.0215,"Eskifjörður (Reyðarfjörður), Iceland",0.0,gedeckt
+90,Berufjördur | Djúpivogur,0,saat,"Djúpivogur, Iceland",64.6552,-14.2754,"Djúpivogur, Iceland",0.0,gedeckt
+93,Höfn | Hornafjördur,0,geo,"Höfn, Múlaþing, Austurland, 720, Ísland",65.5404,-13.7509,"Bakkagerði, Iceland",3.1,gedeckt
+98,Heimaey | Vestmannaeyjar,0,region,"Heimaey, Iceland",63.4500,-20.2167,"Heimaey, Iceland",0.0,gedeckt
+101,"Borkum, Fischerbalje",1,bsh,"Borkum, Fischerbalje",53.5575,6.7478,"Borkum (Fischerbalje), Germany",0.0,gedeckt
+102,Grindavik,0,region,"Grindavík, Iceland",63.8333,-22.4333,"Grindavík, Iceland",0.0,gedeckt
+103,"Bremerhaven, Alter Leuchtturm",1,bsh,"Bremerhaven, Weser, Alter Leuchtturm",53.5450,8.5681,"Bremerhaven (Alter Leuchtturm), Germany",0.0,gedeckt
+104,Jan Mayen | Maria Muschbukt,0,region,"Maria Muschbukhta, Jan Mayen",71.0000,-8.5000,"Maria Muschbukhta, Jan Mayen",0.0,gedeckt
+106,Austervåg | Bäreninsel | Björnöya | Svalbard,0,region,"Austervåg (Bjørnøya), Svalbard",74.4851,19.1814,"Austervåg (Bjørnøya), Svalbard",0.0,gedeckt
+108,Sorgfjord | Treurenberg-Bucht,0,region,"Sorgfjorden (Spitsbergen), Svalbard",79.9167,16.8333,"Sorgfjorden (Spitsbergen), Svalbard",0.0,gedeckt
+111,Danskegattet | Virgo-Hafen,0,region,"Danskegattet (Albert I Land), Svalbard",79.7317,10.8533,"Danskegattet (Albert I Land), Svalbard",0.0,gedeckt
+111,"Norderney, Riffgat",1,bsh,"Norderney, Riffgat",53.6964,7.1578,"Norderney (Riffgat), Germany",0.0,gedeckt
+113,Magdalene-Fjord | Trinity-Hafen,0,hand,ungefaehr (Handposition),79.5600,11.0000,"Magdalenefjorden, Svalbard",4.5,gedeckt
+115,Ny Ålesund | Kongs Fjord,0,region,"Ny-Ålesund, Norway",78.9285,11.9380,"Ny-Ålesund, Norway",0.0,gedeckt
+116,Is-Fjord | Longyearbyen,0,region,"Longyearbyen (Adventfjorden, Spitsbergen), Norway",78.2167,15.6333,"Longyearbyen (Adventfjorden, Spitsbergen), Norway",0.0,gedeckt
+118,Barentsburg | Grön Fjord | Is-Fjord,0,geo,"Баренцбург, Nordenskiöld Land, Svalbard, Norge",78.0654,14.2172,"Grønfjorden, Svalbard",0.8,gedeckt
+125,Franz – Joseph – Land | Kronprinz-Rudolf-Land | Russische Föderation | Teplitz-Bucht,0,geo,"Земля Франца Иосифа, Северо-Западный федеральный округ, 163100, Россия",80.6174,60.7077,"Bukhta Teplits (Franz Josef Land), Arkhangelsk Oblast, Russia",139.1,luecke
+346,Kirkenes,0,saat,"Kirkenes, Norway",69.7302,30.0583,"Kirkenes, Norway",0.0,gedeckt
+350,Vadsø,0,saat,"Vadsø, Norway",70.0716,29.7445,"Vadsø, Norway",0.0,gedeckt
+351,Vardø,0,saat,"Vardø, Norway",70.3750,31.1040,"Vardø, Norway",0.0,gedeckt
+354,Berlevåg,0,saat,"Berlevåg, Norway",70.8589,29.0995,"Berlevåg, Norway",0.0,gedeckt
+356,Smalfjord | Tanafjord,0,name,"Smalfjorden, Norway",70.4384,28.0587,"Smalfjorden, Norway",0.0,gedeckt
+357,Skjånes | Tanafjord,0,saat,"Skjånes, Norway",70.8011,28.0985,"Skjånes, Norway",0.0,gedeckt
+358,Mehamn,0,saat,"Mehamn, Norway",71.0414,27.8428,"Mehamn, Norway",0.0,gedeckt
+359,Kjøllefjord,0,saat,"Kjøllefjord, Norway",70.9492,27.3361,"Kjøllefjord, Norway",0.0,gedeckt
+362,Hamnbukt | Porsangen,0,saat,"Hamnbukt, Norway",70.0933,25.0763,"Hamnbukt, Norway",0.0,gedeckt
+364,Honningsvåg | Magerøy,0,name,"Honningsvåg, Norway",70.9803,25.9727,"Honningsvåg, Norway",0.0,gedeckt
+365,Gjesvär | Magerøy,0,name,"Gjesvær, Norway",71.1008,25.3801,"Gjesvær, Norway",0.0,gedeckt
+366,Havøysund,0,saat,"Havøysund, Norway",70.9942,24.6679,"Havøysund, Norway",0.0,gedeckt
+367,Finnes | Ingøy,0,saat,"Finnes (Ingøya), Norway",71.0817,24.0135,"Finnes (Ingøya), Norway",0.0,gedeckt
+369,Hammerfest | Sørøysund,0,saat,"Hammerfest, Norway",70.6648,23.6787,"Hammerfest, Norway",0.0,gedeckt
+370,Kvalsund,0,geo,"Kvalsund - Ráhkkerávju, Hammerfest, Finnmark, Norge",70.5028,23.9794,"Hammerfest, Norway",21.2,luecke
+371,Kårhamn | Sørøys,0,saat,"Kårhamn, Norway",70.5464,23.1583,"Kårhamn, Norway",0.0,gedeckt
+372,Neverfjord,0,geo,"Neverfjord - Náivuotna, Hammerfest, Finnmark, Norge",70.4402,23.7850,"Komagfjord, Norway",24.2,luecke
+373,Alta | Altafjord | Dønnesfjord,0,saat,"Bossekop (Alta), Norway",69.9630,23.2315,"Bossekop (Alta), Norway",0.0,gedeckt
+375,Søvar,0,unbekannt,,,,,,unbekannt
+377,Bergsfjord,0,saat,"Bergsfjord, Norway",70.2519,21.7845,"Bergsfjord, Norway",0.0,gedeckt
+378,Badderen | Kvänangen Fjord,0,saat,"Badderen, Norway",69.8456,22.0196,"Badderen, Norway",0.0,gedeckt
+379,Kvänangen Fjord | Skjervøy,0,saat,"Skjervøy, Norway",70.0351,20.9835,"Skjervøy, Norway",0.0,gedeckt
+380,Torsvåg | Vannøy,0,saat,"Torsvåg, Norway",70.2430,19.5003,"Torsvåg, Norway",0.0,gedeckt
+382,Lyngenfjord | Lyngseidet,0,saat,"Lyngseidet, Norway",69.5770,20.2253,"Lyngseidet, Norway",0.0,gedeckt
+383a,Dåfjord,0,geo,"Dåfjord, Karlsøy, Troms, 9130, Norge",69.9925,19.4048,"Finnkroken, Norway",17.7,luecke
+384,Finnkroken | Grøtsund,0,saat,"Finnkroken, Norway",69.8341,19.4361,"Finnkroken, Norway",0.0,gedeckt
+386,Tromsø,0,saat,"Tromsø, Norway",69.6461,18.9548,"Tromsø, Norway",0.0,gedeckt
+388,Rystraumen,0,name,"Rystraumenv(Skavberget), Norway",69.5604,18.7416,"Rystraumenv(Skavberget), Norway",0.0,gedeckt
+392,Finnsnes,0,geo,"Finnsnes, Senja, Troms, 9300, Norge",69.2296,17.9813,"Gibostad, Norway",14.4,nah
+393,Gryllefjord,0,saat,"Gryllefjord, Norway",69.3635,17.0530,"Gryllefjord, Norway",0.0,gedeckt
+393a,Andenes,0,saat,"Andenes, Norway",69.3261,16.1348,"Andenes, Norway",0.0,gedeckt
+394,Skrolsvik,0,name,"Skrollsvika, Norway",69.0650,16.8158,"Skrollsvika, Norway",0.0,gedeckt
+395,Sjøvegan,0,geo,"Sjøvegan, Sandberganveien, Elvelund, Sjøvegan, Salangen, Troms, 9350, Norge",68.8750,17.8514,"Soløy, Norway",10.7,nah
+398,Harstad,0,saat,"Harstad, Norway",68.8013,16.5482,"Harstad, Norway",0.0,gedeckt
+402,Myre | Prestfjord,0,geo,"Myre, Øksnes, Nordland, 8430, Norge",68.9149,15.0891,"Øksnes (Skogsøya), Norway",6.2,nah
+403,Børøysund | Hadseløy | Stokmarknes,0,saat,"Stokmarknes, Norway",68.5675,14.9146,"Stokmarknes, Norway",0.0,gedeckt
+404,Sortland | Sortlandsund,0,saat,"Sortland, Norway",68.6986,15.4207,"Sortland, Norway",0.0,gedeckt
+405,Flakstad | Ramberg,0,geo,"Flakstad, Nordland, Norge",68.1205,13.0496,"Sørvågen, Norway",25.7,luecke
+406,Moskenesø | Sørvågen,0,saat,"Sørvågen, Norway",67.8891,13.0267,"Sørvågen, Norway",0.0,gedeckt
+409,Ballstad | Vestvågø,0,geo,"Ballstad, Vestvågøy, Nordland, 8373, Norge",68.0743,13.5450,"Stamsund, Norway",13.7,nah
+410,Vestvågø,0,unbekannt,,,,,,unbekannt
+411,Kabelvåg,0,saat,"Kabelvåg, Norway",68.2126,14.4821,"Kabelvåg, Norway",0.0,gedeckt
+412,Lødingen | Tjeldsund,0,saat,"Lødingen, Norway",68.4172,15.9985,"Lødingen, Norway",0.0,gedeckt
+412a,Ulvik | Tjeldsund,0,geo,"Ulbegiedde - Ulvika, Narvik, Nordland, Norge",68.2422,16.3540,"Kjøpsvik, Norway",16.5,luecke
+413,Ramsund,0,geo,"Ramsund, Tjeldsund, Troms, 9442, Norge",68.4919,16.5182,"Evenskjer, Norway",10.5,nah
+415,Bogen,0,geo,"Bogen, Hamarøy, Nordland, 8275, Norge",68.2222,16.0476,"Tranøy, Norway",16.1,luecke
+416,Narvik,1,name,"Narvik, Norway",68.4283,17.4258,"Narvik, Norway",0.0,gedeckt
+425,Røst | Røstøy,0,saat,"Røst, Norway",67.5050,12.0713,"Røst, Norway",0.0,gedeckt
+426,Bodø,0,saat,"Bodø, Norway",67.2923,14.3998,"Bodø, Norway",0.0,gedeckt
+429,Saltstraumen | Tuv,0,saat,"Saltstraumen, Norway",67.2316,14.6150,"Saltstraumen, Norway",0.0,gedeckt
+430,Rognan | Saltdalsfjord,0,saat,"Rognan, Norway",67.1038,15.4000,"Rognan, Norway",0.0,gedeckt
+432,Støtt,0,saat,"Støtt, Norway",66.9262,13.4342,"Støtt, Norway",0.0,gedeckt
+433,Glomfjord,0,saat,"Glomfjord, Norway",66.8107,13.9407,"Glomfjord, Norway",0.0,gedeckt
+434,Myken,0,geo,"Myken, Rødøy, Nordland, 8181, Norge",66.7609,12.4786,"Træna, Norway",34.0,luecke
+435,Tränen,0,hand,ungefaehr (Handposition),66.5000,12.1000,"Træna, Norway",0.6,gedeckt
+435a,Slenest,0,hand,ungefaehr (Handposition),66.4300,12.6200,"Indre Kvarøy, Norway",16.7,luecke
+436,Nesna,0,saat,"Nesna, Norway",66.2007,13.0110,"Nesna, Norway",0.0,gedeckt
+437,"Mo i Rana | Nordranen, Moi i Rana | Rana",0,saat,"Mo i Rana, Norway",66.3176,14.1295,"Mo i Rana, Norway",0.0,gedeckt
+438,Alstfjord | Sandnessjøen,0,saat,"Sandnessjøen, Norway",66.0229,12.6341,"Sandnessjøen, Norway",0.0,gedeckt
+439,Igerøy,0,saat,"Igerøy, Nordland, Norway",65.6774,12.1315,"Igerøy, Nordland, Norway",0.0,gedeckt
+440,Tjøtta,0,geo,"Tjøtta, Alstahaug, Nordland, 8860, Norge",65.8377,12.4591,"Tro, Nordland, Norway",5.5,nah
+441,"Austvågoy, Kabelvåg | Mosjøen | Vefsenfjord",0,name,"Mosjøen, Norway",65.8506,13.1914,"Mosjøen, Norway",0.0,gedeckt
+442,Brønnøysund,0,saat,"Brønnøysund, Norway",65.4740,12.2081,"Brønnøysund, Norway",0.0,gedeckt
+443,Hommelstø | Velfjord,0,saat,"Hommelstø, Norway",65.4067,12.5534,"Hommelstø, Norway",0.0,gedeckt
+444,Borkamoa | Tosbotn | Tosenfjord,0,saat,"Tosbotn, Norway",65.3286,12.9329,"Tosbotn, Norway",0.0,gedeckt
+444a,Leka,0,geo,"Leka, Trøndelag, 7994, Norge",65.0879,11.7136,"Gutvik, Trøndelag, Norway",5.4,nah
+445,Närøsund | Rørvik,0,saat,"Rørvik, Norway",64.8595,11.2301,"Rørvik, Norway",0.0,gedeckt
+445b,Abelvär,0,hand,ungefaehr (Handposition),64.7300,11.1800,"Seierstad (Jøa), Trøndelag, Norway",12.9,nah
+445c,Kolvereit,0,hand,ungefaehr (Handposition),64.8600,11.6000,"Lund, Trøndelag, Norway",10.3,nah
+446,Kongsmoen,0,saat,"Kongsmoen, Norway",64.8868,12.4375,"Kongsmoen, Norway",0.0,gedeckt
+447,Namsenfjord | Namsos,0,saat,"Namsos, Norway",64.4644,11.4908,"Namsos, Norway",0.0,gedeckt
+448a,Halten,0,saat,"Halten, Trøndelag, Norway",64.1719,9.4082,"Halten, Trøndelag, Norway",0.0,gedeckt
+451,Fröyo | Gjesingbogen | Sistranda,0,geo,"Sistranda, Frøya, Trøndelag, 7260, Norge",63.7302,8.8297,"Mausund (Måløya), Norway",17.5,luecke
+452,Fröyo | Titran,0,geo,"Titran, Frøya, Trøndelag, 7268, Norge",63.6685,8.3061,"Hummelvika (Ytre Kvenvær), Norway",19.9,luecke
+453,Hemnefjord | Kyrkseterøra,0,geo,"Kyrksæterøra, Heim, Trøndelag, 7200, Norge",63.2908,9.0889,"Vinjeøra, Norway",10.9,nah
+454,Brekstad | Trondheimsleia,0,geo,"Brekstad, Vestre Brekstad, Hovde, Brekstad, Ørland, Trøndelag, 7130, Norge",63.6848,9.6604,"Selva, Norway",8.2,nah
+457,Orkanger,0,saat,"Orkanger, Trøndelag, Norway",63.3209,9.8559,"Orkanger, Trøndelag, Norway",0.0,gedeckt
+460,Trondheim,0,saat,"Trondheim, Norway",63.4365,10.3917,"Trondheim, Norway",0.0,gedeckt
+463,Levanger,0,saat,"Levanger, Norway",63.7496,11.2989,"Levanger, Norway",0.0,gedeckt
+464,Stenkjär,0,hand,ungefaehr (Handposition),64.0100,11.4900,"Steinkjer, Norway",0.4,gedeckt
+466,Torvikbukt,0,geo,"Torvikbukt, Gjemnes, Møre og Romsdal, 6639, Norge",62.9438,7.8575,"Tingvoll, Møre og Romsdal, Norway",16.7,luecke
+468,Kristiansund Nord,0,saat,"Kristiansund, Norway",63.1139,7.7361,"Kristiansund, Norway",0.0,gedeckt
+469,Bøvra,0,geo,"Bøvra, Glærem, Surnadal, Møre og Romsdal, 6652, Norge",62.9929,8.6749,"Surnadalsøra, Norway",2.6,gedeckt
+470,Sundalsfjord | Sunndalsøra,0,saat,"Sunndalsøra, Norway",62.6833,8.5500,"Sunndalsøra, Norway",0.0,gedeckt
+471,Bud,0,geo,"Bud, Hustadvika, Møre og Romsdal, 6430, Norge",62.9073,6.9141,"Bjørnsund, Norway",5.7,nah
+472,Molde | Moldefjord,0,saat,"Molde, Norway",62.7333,7.1667,"Molde, Norway",0.0,gedeckt
+473,Andalsnes | Romsdalfjord,0,saat,"Åndalsnes, Norway",62.5686,7.6891,"Åndalsnes, Norway",0.0,gedeckt
+474,Ålesund,0,name,"Ålesund, Norway",62.4694,6.1519,"Ålesund, Norway",0.0,gedeckt
+475,Storfjord | Stranda,0,saat,"Stranda, Norway",62.3092,6.9496,"Stranda, Norway",0.0,gedeckt
+476,Volda | Voldafjord,0,geo,"Volda, Møre og Romsdal, 6102, Norge",62.1451,6.0668,"Lauvstad, Møre og Romsdal, Norway",6.8,nah
+480,Maløy | Maløysund,0,saat,"Måløy, Norway",61.9338,5.1133,"Måløy, Norway",0.0,gedeckt
+482,Eidsfjord | Nordfjord | Nordfjordeid,0,name,"Kjølsdalen (Nordfjorden), Norway",61.9160,5.6293,"Kjølsdalen (Nordfjorden), Norway",0.0,gedeckt
+484,Florø,0,saat,"Florø, Norway",61.6012,5.0328,"Florø, Norway",0.0,gedeckt
+485,Førde | Førdefjord,0,saat,"Førde, Norway",61.4612,5.8403,"Førde, Norway",0.0,gedeckt
+486,Askvoll | Granesund,0,saat,"Askvoll, Norway",61.3455,5.0657,"Askvoll, Norway",0.0,gedeckt
+487,Høyanger,0,geo,"Høyanger, Vestland, Norge",61.1255,5.8141,"Vadheim, Norway",9.2,nah
+489,Ardalsfjord | Ardalstangen,0,geo,"Årdalstangen, Årdal, Vestland, 6885, Norge",61.2361,7.7025,"Lærdalsøyri, Norway",19.7,luecke
+492,Aurlandsfjord | Flåm,0,saat,"Flåm (Aurlandsfjorden), Norway",60.8630,7.1170,"Flåm (Aurlandsfjorden), Norway",0.0,gedeckt
+495,Fensfjord | Mongstad,0,geo,"Fensfjordvegen, Duesund, Masfjordnes, Masfjorden, Vestland, 5981, Norge",60.8141,5.3066,"Masfjordnes, Vestland, Norway",1.5,gedeckt
+497,Masfjord | Matre,0,saat,"Matre, Norway",60.8733,5.5808,"Matre, Norway",0.0,gedeckt
+499,Knarvik | Salhusfjord,0,geo,"Knarvik, Alver, Vestland, 5914, Norge",60.5461,5.2854,"Alverstraumen, Norway",5.1,nah
+500,Sørfjord | Stamneshella,0,saat,"Stamneshella, Norway",60.6641,5.7469,"Stamneshella, Norway",0.0,gedeckt
+502,Blomøy | Blomvåg,0,saat,"Blomvåg, Norway",60.5296,4.8767,"Blomvåg, Norway",0.0,gedeckt
+502,"Bremen, Oslebshausen",1,bsh,"Bremen, Oslebshausen, Weser",53.1197,8.7122,"Bremen-Oslebshausen (Weser), Germany",0.0,gedeckt
+504,Bergen,1,name,"Bergen, Norway",60.3980,5.3205,"Bergen, Norway",0.0,gedeckt
+504B,"Brunsbüttel, Ost",1,bsh,"Brunsbüttel, Elbe, Ost",53.8878,9.1486,"Brunsbüttel (Elbe), Germany",0.4,gedeckt
+505,"Büsum, Schleuse",1,bsh,"Büsum, Schleuse",54.1222,8.8592,"Büsum (Schleuse), Germany",0.0,gedeckt
+505,Osøyro,0,geo,"Osøyro, Bjørnafjorden, Vestland, 5200, Norge",60.1859,5.4700,"Lukksund, Norway",20.1,luecke
+506,"Cuxhaven, Steubenhöft",1,bsh,"Cuxhaven, Steubenhöft, Elbe",53.8678,8.7175,"Cuxhaven-Steubenhöft (Elbe), Germany",0.0,gedeckt
+507,"Emden, Große Seeschleuse",1,bsh,"Emden, Ems, Große Seeschleuse",53.3367,7.1864,"Emden (Neue Seeschleuse), Germany",0.0,gedeckt
+508,"Hamburg, St. Pauli",1,bsh,"Hamburg, St. Pauli, Elbe",53.5456,9.9700,"Hamburg (St. Pauli), Germany",0.0,gedeckt
+509,Norheim | Norheimsund,0,saat,"Norheimsund, Norway",60.3719,6.1472,"Norheimsund, Norway",0.0,gedeckt
+509A,"Helgoland, Binnenhafen",1,bsh,"Helgoland, Binnenhafen",54.1789,7.8900,"Helgoland (Binnenhafen), Germany",0.0,gedeckt
+510,Eidfjord,0,saat,"Eidfjord, Norway",60.4667,7.0667,"Eidfjord, Norway",0.0,gedeckt
+510,"Husum, Schleuse",1,bsh,"Husum, Schleuse",54.4722,9.0247,"Husum (Schleuse), Germany",0.0,gedeckt
+511,Odda,0,saat,"Odda (Sørfjorden), Norway",60.0709,6.5467,"Odda (Sørfjorden), Norway",0.0,gedeckt
+512,"Wilhelmshaven, Alter Vorhafen",1,bsh,"Wilhelmshaven, Alter Vorhafen",53.5144,8.1450,"Wilhelmshaven (Alter Vorhafen, Jade), Germany",0.0,gedeckt
+513,Leirvik,0,name,"Leirvik, Norway",59.7664,5.5037,"Leirvik, Norway",0.0,gedeckt
+515,Ølen,0,saat,"Ølen, Norway",59.6059,5.8046,"Ølen, Norway",0.0,gedeckt
+517,Haugesund,0,saat,"Haugesund, Norway",59.4145,5.2646,"Haugesund, Norway",0.0,gedeckt
+519,Kopervik,0,saat,"Kopervik, Norway",59.2839,5.3164,"Kopervik, Norway",0.0,gedeckt
+520,Karmöy | Skudeneshaven,0,geo,"Karmøy, Rogaland, Norge",59.2761,5.2562,"Kopervik, Norway",3.5,gedeckt
+521,Sauda | Saudafjord,0,saat,"Sauda, Norway",59.6469,6.3507,"Sauda, Norway",0.0,gedeckt
+522,Hjelmeland | Jøsenfjord,0,name,"Jøsenfjorden, Norway",59.3167,6.4667,"Jøsenfjorden, Norway",0.0,gedeckt
+522a,Forsand | Högsfjord,0,geo,"Forsand, Sandnes, Rogaland, 4110, Norge",58.9003,6.0980,"Sandnes, Norway",20.5,luecke
+523,Lysebotn,0,geo,"Lysebotn, Sandnes, Rogaland, 4127, Norge",59.0551,6.6467,"Jøsenfjorden, Norway",30.9,luecke
+524,Stavanger,0,saat,"Stavanger, Norway",58.9743,5.7301,"Stavanger, Norway",0.0,gedeckt
+524a,Sandnes,0,saat,"Sandnes, Norway",58.8682,5.7466,"Sandnes, Norway",0.0,gedeckt
+526,Farsund,0,saat,"Farsund, Norway",58.0905,6.8065,"Farsund, Norway",0.0,gedeckt
+527,Mandal | Tregde,0,saat,"Tregde (Mandal), Norway",58.0064,7.5548,"Tregde (Mandal), Norway",0.0,gedeckt
+528,Kristiansand Süd,0,saat,"Kristiansand, Norway",58.1425,7.9869,"Kristiansand, Norway",0.0,gedeckt
+530,Lillesand,0,geo,"Lillesand, Agder, 4790, Norge",58.2490,8.3779,"Grimstad, Norway",16.2,luecke
+531,Arendal,0,saat,"Arendal, Norway",58.4574,8.7674,"Arendal, Norway",0.0,gedeckt
+533,Risør,0,saat,"Risør, Norway",58.7184,9.2404,"Risør, Norway",0.0,gedeckt
+534,Helgeroa,0,saat,"Helgeroa, Norway",58.9952,9.8564,"Helgeroa, Norway",0.0,gedeckt
+536,Brevik,0,geo,"Brevik, Porsgrunn, Telemark, 3960, Norge",59.0529,9.7000,"Porsgrunn, Norway",9.8,nah
+539,Sandefjord,0,name,"Sandjefjord, Norway",59.1254,10.2276,"Sandjefjord, Norway",0.0,gedeckt
+541,Horten,0,saat,"Horten, Norway",59.4354,10.4943,"Horten, Norway",0.0,gedeckt
+542,Oscarsborg,0,saat,"Oscarsborg, Norway",59.6781,10.6049,"Oscarsborg, Norway",0.0,gedeckt
+543,Oslo,0,saat,"Oslo, Norway",59.9086,10.7345,"Oslo, Norway",0.0,gedeckt
+548,Halden,0,saat,"Halden, Norway",59.1173,11.3841,"Halden, Norway",0.0,gedeckt
+551,Strömstad,0,geo,"Strömstads kommun, Västra Götalands län, Sverige",58.9167,11.2500,"Kungsvik, Sweden",11.4,nah
+552,Smögen,0,saat,"Smögen, Sweden",58.3536,11.2178,"Smögen, Sweden",0.0,gedeckt
+553,Gøteborg,0,name,"Göteborg Torshamnen, Sweden",57.6847,11.7906,"Göteborg Torshamnen, Sweden",0.0,gedeckt
+580,Frederikshavn,0,saat,"Frederikshavn, Denmark",57.4333,10.5667,"Frederikshavn, Denmark",0.0,gedeckt
+581,Skagen,0,saat,"Skagen, Denmark",57.7194,10.5858,"Skagen, Denmark",0.0,gedeckt
+583,Hirtshals,0,saat,"Hirtshals, Denmark",57.5941,9.9664,"Hirtshals, Denmark",0.0,gedeckt
+583a,Hanstholm,0,saat,"Hanstholm, Denmark",57.1203,8.5961,"Hanstholm, Denmark",0.0,gedeckt
+585,Thyborøn-Hafen,0,name,"Thyborøn Kyst, Denmark",56.7075,8.2090,"Thyborøn Kyst, Denmark",0.0,gedeckt
+587,Thorsminde,0,name,"Thorsminde Kyst, Denmark",56.3700,8.1200,"Thorsminde Kyst, Denmark",0.0,gedeckt
+589,Hvide Sande,0,geo,"Hvide Sande, Ringkøbing-Skjern Kommune, Region Midtjylland, Danmark",56.0058,8.1288,"Hvide Sande Kyst, Denmark",1.2,gedeckt
+594,Esbjerg,0,saat,"Esbjerg Havn I, Denmark",55.4602,8.4397,"Esbjerg Havn I, Denmark",0.0,gedeckt
+598,Havneby | Römö Havn,0,saat,"Havneby, Denmark",55.0870,8.5654,"Havneby, Denmark",0.0,gedeckt
+606,Fino 3,0,bsh,Fino 3,55.1950,7.1581,"Fino 3, Germany",0.0,gedeckt
+608,Elbe Tonne,0,hand,ungefaehr (Handposition),54.0000,8.1100,"Bake Z, Germany",13.5,nah
+609,Tonne Weser3 /Jade2 | Weser 3/Jade 2 Tonne,0,name,"Mellumplate (Jade), Germany",53.7717,8.0925,"Mellumplate (Jade), Germany",0.0,gedeckt
+610,Fino 1,0,bsh,Fino 1,54.0147,6.5878,"Fino 1, Germany",0.0,gedeckt
+611,Borkumriff Tonne,0,hand,ungefaehr (Handposition),53.7300,6.3500,"Huibertgat, Netherlands",17.7,luecke
+613c,"Höjer, Schleuse",0,saat,"Vidåslusen (Højer), Denmark",54.9632,8.6607,"Vidåslusen (Højer), Denmark",0.0,gedeckt
+615,"Lister Tief | Lister Tief, Tonne",0,saat,"Munkmarsch (Lister Tief), Germany",54.9212,8.3634,"Munkmarsch (Lister Tief), Germany",0.0,gedeckt
+616,"List, West | Lister Tief",0,bsh,"List, Sylt, West",55.0542,8.4000,"List (Sylt, West), Germany",0.0,gedeckt
+617,"List, Hafen",0,bsh,"List, Sylt, Hafen",55.0167,8.4406,"List auf Sylt (Hafen), Germany",0.0,gedeckt
+618,Munkmarsch,0,bsh,"Munkmarsch, Sylt",54.9211,8.3633,"Munkmarsch (Lister Tief), Germany",0.0,gedeckt
+620,Westerland,0,bsh,"Westerland, Sylt",54.9086,8.2711,"Westerland (Sylt), Germany",0.0,gedeckt
+621A,Vortrapptief Tonne,0,hand,ungefaehr (Handposition),54.5800,8.1500,"Wittdün (Amrum Hafen), Germany",16.1,luecke
+622,Amrum Odde,0,bsh,"Amrum Odde, Amrum",54.7067,8.3397,"Amrum Odde (Amrum), Germany",0.0,gedeckt
+623A,Hörnumtief | Rantumdamm,0,bsh,"Rantumdamm, Sylt",54.8600,8.3133,"Rantumdamm (Sylt), Germany",0.0,gedeckt
+624,"Hörnum, Hafen",0,bsh,"Hörnum, Sylt, Hafen",54.7581,8.2961,"Hörnum (Sylt, Hafen), Germany",0.0,gedeckt
+624A,"Hörnum, West",0,bsh,"Hörnum, Sylt, West",54.7581,8.2744,"Hörnum (Sylt, Hafen), Germany",1.4,gedeckt
+628A,Hörnumtief | Osterley,0,bsh,Osterley,54.8494,8.5558,"Osterley, Germany",0.0,gedeckt
+629B,"Föhrer Ley, Nord | Hörnumtief",0,bsh,"Föhrer Ley, Nord",54.7964,8.5600,"Föhrer Ley (Nord), Germany",0.0,gedeckt
+630,Rütergat Tonne,0,hand,ungefaehr (Handposition),54.5300,8.2400,"Wittdün (Amrum Hafen), Germany",14.6,nah
+631,"Amrum | Wittdün, Hafen",0,bsh,"Wittdün, Amrum, Hafen",54.6317,8.3839,"Wittdün (Amrum Hafen), Germany",0.0,gedeckt
+632,Föhr | Wyk,0,bsh,"Wyk, Föhr",54.6933,8.5764,"Wyk auf Föhr, Germany",0.1,gedeckt
+632D,"Langeness, Hilligenley",0,bsh,"Langeness, Hilligenley",54.6186,8.5472,"Langeneß (Hilligenley), Germany",0.0,gedeckt
+635,Dagebüll,0,bsh,Dagebüll,54.7306,8.6869,"Dagebüll, Germany",0.0,gedeckt
+636,"Hooge, Anleger",0,saat,"Hooge (Anleger), Germany",54.5786,8.5569,"Hooge (Anleger), Germany",0.0,gedeckt
+637,"Gröde, Anleger",0,bsh,"Gröde, Anleger",54.6294,8.7292,"Gröde (Anleger), Germany",0.0,gedeckt
+637A,Der Strand,0,bsh,"Der Strand, Hamburger Hallig",54.6053,8.7872,"Der Strand (Hamburger Hallig), Germany",0.0,gedeckt
+638,Schlüttsiel,0,bsh,Schlüttsiel,54.6825,8.7550,"Schlüttsiel, Germany",0.0,gedeckt
+642C,"Rummelloch, West",0,bsh,"Rummelloch, West",54.4867,8.5528,"Rummelloch (West), Germany",0.0,gedeckt
+642E,Pellworm,0,bsh,"Pellworm, Hoogerfähre",54.5356,8.5978,"Pellworm (Hoogerfähre), Germany",0.0,gedeckt
+643,Hever Tonne,0,saat,"Südfall Fahrwasserkante (Hever), Germany",54.4497,8.7558,"Südfall Fahrwasserkante (Hever), Germany",0.0,gedeckt
+645,Süderoogsand,0,bsh,Süderoogsand,54.4200,8.5192,"Süderoogsand, Germany",1.3,gedeckt
+647A,Pellworm,0,bsh,"Pellworm, Anleger",54.5008,8.7019,"Pellworm (Anleger), Germany",0.0,gedeckt
+649,"Nordstrand, Strucklahnungshörn | Strucklahnungshörn",0,bsh,"Strucklahnungshörn, Nordstrand, AP",54.4989,8.8064,"Strucklahnungshörn (Nordstrand), Germany",0.1,gedeckt
+649B,Holmer Siel,0,bsh,Holmer Siel,54.5283,8.8692,"Holmer Siel, Germany",0.0,gedeckt
+653,Heverstrom | Südfall,0,bsh,"Südfall, Fahrwasserkante",54.4472,8.7525,"Südfall Fahrwasserkante (Hever), Germany",0.3,gedeckt
+656,Eider Tonne,0,saat,"Tönning (Eider), Germany",54.3147,8.9501,"Tönning (Eider), Germany",0.0,gedeckt
+664,"Eider | Eider-Sperrwerk, Außenpegel",0,bsh,"Eider-Sperrwerk, Außenpegel",54.2658,8.8419,"Eider-Sperrwerk (Außenpegel), Germany",0.0,gedeckt
+666,Blauort | Norderpiep,0,bsh,"Blauort, Norderpiep",54.1686,8.6750,"Blauort (Norderpiep), Germany",0.0,gedeckt
+667B,"Meldorfer Bucht | Meldorf Sperrwerk, Außenpegel",0,bsh,"Meldorf, Sperrwerk, Außenpegel",54.0922,8.9492,"Meldorf (Sperrwerk, Außenpegel), Germany",0.0,gedeckt
+670,Süderpiep | Süderpiep Tonne,0,geo,"Süderpiep, Büsum, Büsum-Wesselburen, Kreis Dithmarschen, Schleswig-Holstein, 25761, Deutschland",54.1344,8.8477,"Büsum (Schleuse), Germany",1.6,gedeckt
+672,Norderelbe Tonne,0,hand,ungefaehr (Handposition),53.9500,8.5500,"Neuwerk (Anleger), Germany",5.5,nah
+673,"Trischen, West",0,bsh,"Trischen, West",54.0642,8.6592,"Trischen (West), Germany",0.0,gedeckt
+675,"Friedrichskoog, Hafen, Außenpegel",0,bsh,"Friedrichskoog, Hafen, Außenpegel",53.9994,8.8761,"Friedrichskoog (Hafen, Außenpegel), Germany",0.0,gedeckt
+676,Zehnerloch,0,bsh,Zehnerloch,53.9556,8.6583,"Zehnerloch, Germany",0.0,gedeckt
+677,"Scharhörn, Bake C",0,bsh,"Scharhörn, Bake C",53.9700,8.4681,"Scharhörn (Bake C), Germany",0.5,gedeckt
+677C,"Scharhörnriff, Bake A",0,bsh,"Scharhörnriff, Bake A",53.9844,8.3153,"Scharhörnriff (Bake A), Germany",0.0,gedeckt
+678W,"Neuwerk, Anleger",0,bsh,"Neuwerk, Anleger",53.9178,8.4864,"Neuwerk (Anleger), Germany",0.0,gedeckt
+681,Otterndorf,0,bsh,"Otterndorf, Elbe",53.8353,8.8708,"Otterndorf (Elbe), Germany",0.0,gedeckt
+682,Osteriff,0,bsh,"Osteriff, Elbe",53.8564,9.0317,"Osterriff (Elbe), Germany",0.0,gedeckt
+683,Belum,0,bsh,"Belum, Oste",53.8228,9.0372,"Belum (Oste), Germany",0.0,gedeckt
+685,Hechthausen,0,bsh,"Hechthausen, Oste",53.6406,9.2528,"Hechthausen (Oste), Germany",0.0,gedeckt
+687,Bremervörde,0,bsh,"Bremervörde, Oste",53.4842,9.1547,"Bremervörde UW (Oste), Germany",0.2,gedeckt
+688,Brokdorf,0,bsh,"Brokdorf, Elbe",53.8628,9.3161,"Brokdorf (Elbe), Germany",0.0,gedeckt
+690,"Stör-Sperrwerk, Außenpegel",0,bsh,"Stör-Sperrwerk, Außenpegel",53.8258,9.4011,"Stör-Sperrwerk (Außenpegel), Germany",0.0,gedeckt
+691R,Kasenort,0,bsh,"Kasenort, Stör",53.9117,9.4094,"Kasenort (Stör), Germany",0.0,gedeckt
+692,"Itzehoe, Hafen",0,saat,"Itzehoe (Stör Hafen), Germany",53.9245,9.5006,"Itzehoe (Stör Hafen), Germany",0.0,gedeckt
+693,Breitenberg,0,bsh,"Breitenberg, Stör",53.9278,9.6322,"Breitenberg (Stör), Germany",0.0,gedeckt
+695,Glückstadt,0,bsh,"Glückstadt, Elbe",53.7844,9.4094,"Glückstadt (Elbe), Germany",0.1,gedeckt
+697,Krautsand,0,bsh,"Krautsand, Elbe, Reede",53.7547,9.3917,"Krautsand (Elbe, Reede), Germany",0.0,gedeckt
+698,"Kollmar, Kamperreihe | Kamperreihe",0,bsh,"Kollmar, Kamperreihe, Elbe",53.7319,9.4608,"Kollmar (Elbe), Germany",0.1,gedeckt
+700R,"Krückau-Sperrwerk, Binnenpegel",0,bsh,"Krückau-Sperrwerk, Binnenpegel",53.7164,9.5261,"Krückau-Sperrwerk (Binnenpegel), Germany",0.1,gedeckt
+702A,"Elmshorn, Hafen",0,bsh,"Elmshorn, Hafen, Krückau",53.7522,9.6539,"Elmshorn (Krückau Hafen), Germany",0.0,gedeckt
+703,Grauerort,0,bsh,"Grauerort, Elbe, Reede",53.6792,9.4947,"Grauerort (Reede), Germany",0.0,gedeckt
+704R,"Pinnau-Sperrwerk, Binnenpegel",0,bsh,"Pinnau-Sperrwerk, Binnenpegel",53.6711,9.5581,"Pinnau-Sperrwerk (Binnenpegel), Germany",0.0,gedeckt
+706,Uetersen,0,bsh,"Uetersen, Pinnau",53.6783,9.6772,"Uetersen (Pinnau), Germany",0.0,gedeckt
+709,Schwinge | Stadersand,0,bsh,"Stadersand, Schwinge",53.6297,9.5267,"Stadersand (Elbe), Germany",0.0,gedeckt
+710,Schwinge | Stade,0,bsh,"Stade, Schwinge",53.5978,9.4800,"Stade (Schwinge), Germany",0.0,gedeckt
+711,Hetlingen,0,bsh,"Hetlingen, Elbe",53.6094,9.5844,"Hetlingen (Elbe), Germany",0.0,gedeckt
+712,Lühe | Lühort,0,bsh,"Lühort, Lühe",53.5714,9.6336,"Lühort (Lühe), Germany",0.1,gedeckt
+714,Schulau,0,bsh,"Schulau, Elbe",53.5686,9.7033,"Schulau (Elbe), Germany",0.1,gedeckt
+715,"Hamburg, Blankenese, Unterfeuer",0,bsh,"Hamburg, Blankenese, Elbe, Unterfeuer",53.5578,9.7958,"Hamburg-Blankenese (Elbe, Unterfeuer), Germany",0.0,gedeckt
+717,"Este | Este-Sperrwerk, Außenpegel | Hamburg, Cranz, Este-Sperrwerk",0,bsh,"Hamburg, Cranz, Este-Sperrwerk, AP",53.5358,9.7917,"Cranz (Este-Sperrwerk), Germany",0.0,gedeckt
+718,Buxtehude | Este,0,bsh,"Buxtehude, Este",53.4806,9.7033,"Buxtehude (Este), Germany",0.0,gedeckt
+719,"Hamburg, Teufelsbrück",0,saat,"Hamburg (St. Pauli), Germany",53.5456,9.9700,"Hamburg (St. Pauli), Germany",0.0,gedeckt
+720,"Hamburg, Seemannshöft",0,bsh,"Hamburg, Seemannshöft, Elbe",53.5400,9.8808,"Hamburg Seemannshöft (Elbe), Germany",0.0,gedeckt
+724,"Hamburg, Harburg, Schleuse",0,bsh,"Hamburg, Harburg, Elbe, Schleuse",53.4728,9.9919,"Hamburg-Harburg (Elbe, Schleuse), Germany",0.0,gedeckt
+726A,"Hamburg, Peute",0,bsh,"Hamburg, Peute, Elbe",53.5278,10.0333,"Hamburg (Peute, Elbe), Germany",0.0,gedeckt
+727,"Dove-Elbe | Dove-Elbe, Einfahrt | Hamburg, Dover-Elbe",0,bsh,"Hamburg, Dove-Elbe, Elbe, Einfahrt",53.5083,10.0617,"Hamburg Dove-Elbe (Einfahrt), Germany",0.0,gedeckt
+728,"Dove-Elbe | Hamburg, Tatenberger Schleuse",0,saat,"Hamburg (St. Pauli), Germany",53.5456,9.9700,"Hamburg (St. Pauli), Germany",0.0,gedeckt
+729,"Hamburg, Bunthaus",0,bsh,"Hamburg, Bunthaus, Elbe",53.4614,10.0639,"Hamburg-Bunthaus (Elbe), Germany",0.0,gedeckt
+730,Over,0,bsh,"Over, Elbe",53.4286,10.1011,"Over (Elbe), Germany",0.0,gedeckt
+731,"Hamburg, Zollenspieker",0,bsh,"Hamburg, Zollenspieker, Elbe",53.3986,10.1853,"Zollenspieker (Elbe), Germany",0.0,gedeckt
+732A,"Hamburg, Altengamme",0,bsh,"Hamburg, Altengamme, Elbe",53.4311,10.2975,"Altengamme (Elbe), Germany",0.1,gedeckt
+732D,"Geesthacht, Wehr Unterpegel",0,bsh,"Geesthacht, Elbe, Wehr, Unterpegel",53.4233,10.3347,"Wehr Geesthacht UP (Elbe), Germany",0.2,gedeckt
+734,"Alte Weser, Leuchtturm | Weser, Leuchtturm, Alte –",0,bsh,"Alte Weser, Leuchtturm",53.8633,8.1275,"Leuchtturm Alte Weser, Germany",0.0,gedeckt
+735A,Spieka Neufeld,0,bsh,Spieka Neufeld,53.7881,8.5531,"Spieka Neufeld, Germany",0.0,gedeckt
+737,Dwarsgat Unterfeuer,0,bsh,"Dwarsgat, Unterfeuer",53.7186,8.3075,"Dwarsgat (Unterfeuer), Germany",0.0,gedeckt
+737S,Robbensüdsteert,0,bsh,Robbensüdsteert,53.6392,8.4453,"Robbensüdsteert / Solthörn, Germany",0.0,gedeckt
+738,Fedderwarder Priel | Fedderwardersiel,0,bsh,"Fedderwardersiel, Fedderwarder Priel",53.5964,8.3544,"Fedderwardersiel (Fedderwarder Priel), Germany",0.0,gedeckt
+741,"Nordenham, Unterfeuer",0,saat,"Dwarsgat (Unterfeuer), Germany",53.7186,8.3076,"Dwarsgat (Unterfeuer), Germany",0.0,gedeckt
+741B,Rechtenfleth,0,bsh,"Rechtenfleth, Weser",53.3811,8.5006,"Rechtenfleth (Weser), Germany",0.0,gedeckt
+743,Brake,0,bsh,"Brake, Weser",53.3161,8.4867,"Brake (Weser), Germany",0.0,gedeckt
+744,Elsfleth,0,bsh,"Elsfleth, Weser",53.2639,8.4814,"Elsfleth (Weser), Germany",0.0,gedeckt
+744A,Elsfleth Ohrt,0,bsh,"Elsfleth Ohrt, Hunte",53.2211,8.4600,"Elsfleth Ohrt (Hunte), Germany",0.0,gedeckt
+745,Huntebrück,0,bsh,"Huntebrück, Hunte",53.2000,8.4464,"Huntebrück (Hunte), Germany",0.0,gedeckt
+747,Reithörne,0,bsh,"Reithörne, Hunte",53.1611,8.3225,"Reithörne (Hunte), Germany",0.0,gedeckt
+748,"Drielake | Oldenburg, Drielake",0,bsh,"Oldenburg, Drielake, Hunte",53.1403,8.2342,"Oldenburg-Drielake (Hunte), Germany",0.0,gedeckt
+749,"Bremen, Farge",0,bsh,"Bremen, Farge, Weser",53.2047,8.5103,"Farge (Weser), Germany",0.0,gedeckt
+750,"Bremen, Vegesack",0,bsh,"Bremen, Vegesack, Weser",53.1694,8.6194,"Vegesack (Weser), Germany",0.0,gedeckt
+750G,Ochtum Sperrwerk,0,bsh,"Ochtum, Sperrwerk, Außenpegel",53.1231,8.6489,"Ochtum (Sperrwerk, Außenpegel), Germany",0.0,gedeckt
+751,"Bremen, Wilhelm-Kaiser-Brücke",0,bsh,"Bremen, Wilhelm-Kaisen-Brücke, Weser",53.0731,8.8036,"Bremen (Wilhelm-Kaisen-Brücke, Weser), Germany",0.0,gedeckt
+752,"Bremen, Weserwehr",0,bsh,"Bremen, Weserwehr, Weser",53.0603,8.8547,"Bremen-Weserwehr (Unterpegel), Germany",0.0,gedeckt
+754,"Wangerooge, Lange Riff",0,bsh,"Wangerooge, Langes Riff, Nord",53.8064,7.9292,"Wangerooge (Langes Riff, Nord), Germany",0.0,gedeckt
+756,"Wangerooge, Ost",0,bsh,"Wangerooge, Ost",53.7672,7.9850,"Wangerooge (Ost), Germany",0.0,gedeckt
+760,"Mellumplate, Leuchtturm",0,bsh,"Mellumplate, Leuchtturm",53.7717,8.0925,"Mellumplate (Jade), Germany",0.0,gedeckt
+761,Schillig,0,bsh,Schillig,53.6989,8.0469,"Schillig, Germany",0.0,gedeckt
+764B,Hooksielplate,0,bsh,Hooksielplate,53.6692,8.1486,"Hooksielplate, Germany",0.0,gedeckt
+765,Hooksiel,0,bsh,Hooksiel,53.6419,8.0819,"Hooksiel, Germany",0.0,gedeckt
+768P,Jade-Weser-Port,0,saat,"Jade-Weser-Port, Germany",53.6020,8.1491,"Jade-Weser-Port, Germany",0.0,gedeckt
+770,"Wilhelmshaven, Neuer Vorhafen",0,bsh,"Wilhelmshaven, Neuer Vorhafen, Seeschleuse",53.5303,8.1608,"Wilhelmshaven (Neuer Vorhafen, Jade), Germany",0.0,gedeckt
+771,Eckwarderhörne,0,bsh,Eckwarderhörne,53.5206,8.2250,"Eckwarderhörne, Germany",0.0,gedeckt
+773,"Arngast, Leuchtturm",0,bsh,"Arngast, Leuchtturm",53.4817,8.1925,"Arngast (Leuchtturm), Germany",0.0,gedeckt
+776,Vareler Schleuse,0,bsh,Vareler Schleuse,53.4103,8.1883,"Vareler Schleuse, Germany",0.0,gedeckt
+777,"Wangerooge, Hafen",0,bsh,"Wangerooge, Hafen",53.7764,7.8681,"Wangerooge (Hafen), Germany",0.0,gedeckt
+778,Harlesiel,0,bsh,"Harlesiel, Hafen",53.7069,7.8086,"Harlesiel (Hafen), Germany",0.0,gedeckt
+779,"Spiekeroog, ehem. Landungsbrücke",0,bsh,"Spiekeroog, ehem. Landungsbrücke",53.7492,7.6819,"Spiekeroog (Alter Anleger), Germany",0.0,gedeckt
+780,Neuharlingersiel,0,bsh,Neuharlingersiel,53.7017,7.7042,"Neuharlingersiel, Germany",0.2,gedeckt
+780A,"Otzumer Balje, Tonne",0,geo,"Otzumer Balje, Edeka Scheidemann, Mühlenstrich, Seriem, Groß Holum, Neuharlingersiel, Samtgemeinde Esens, Landkreis Witt",53.6947,7.6908,"Neuharlingersiel, Germany",1.3,gedeckt
+781,"Langeoog, Hafeneinfahrt",0,bsh,"Langeoog, Hafeneinfahrt",53.7233,7.5017,"Langeoog (Hafeneinfahrt), Germany",0.0,gedeckt
+781A,"Accumer Ee, Tonne",0,geo,"Accumer Ee, Niedersachsen, Deutschland",53.7234,7.4477,"Langeoog (Hafeneinfahrt), Germany",3.6,gedeckt
+782,Bensersiel,0,bsh,Bensersiel,53.6747,7.5750,"Bensersiel, Germany",0.3,gedeckt
+783,Dornumer – Accumersiel,0,bsh,Dornumer-Accumersiel,53.6811,7.4883,"Dornumer-Accumersiel, Germany",0.0,gedeckt
+784,"Baltrum, Westende",0,bsh,"Baltrum, Westende",53.7228,7.3644,"Baltrum (Westende), Germany",0.1,gedeckt
+785,Neßmersiel,0,bsh,Neßmersiel,53.6889,7.3608,"Neßmersiel, Germany",0.0,gedeckt
+788,"Norderney, Seeseite",0,saat,"Norderney (Riffgat), Germany",53.6965,7.1578,"Norderney (Riffgat), Germany",0.0,gedeckt
+789,Schluchter Tonne,0,hand,ungefaehr (Handposition),53.6700,7.0700,"Juist, Germany",4.9,gedeckt
+790A,"Norddeich, Westerriede | Westerriede",0,bsh,"Norddeich, Westerriede",53.6436,7.1481,"Norddeich (Westerriede), Germany",0.0,gedeckt
+793,"Juist | Juist, Seeseite",0,bsh,"Juist, Seeseite",53.6833,7.0000,"Juist (Seeseite), Germany",1.1,gedeckt
+794,"Juist | Juist, Hafen",0,bsh,"Juist, Hafen",53.6725,6.9958,"Juist, Germany",0.2,gedeckt
+796C,Leybucht | Leyhörn,0,bsh,"Leyhörn, Leybucht",53.5492,7.0361,"Leybucht (Leyhörn), Germany",1.3,gedeckt
+797,Osterems Tonne,0,hand,ungefaehr (Handposition),53.6500,6.8000,"Memmert, Germany",7.6,nah
+798,"Borkum, Südstrand",0,bsh,"Borkum, Südstrand",53.5769,6.6614,"Borkum (Südstrand), Germany",0.0,gedeckt
+799,Emshörn,0,bsh,Emshörn,53.4936,6.8411,"Emshörn, Germany",0.0,gedeckt
+799G,Dukegat,0,bsh,Dukegat,53.4336,6.9261,"Dukegat (Ems), Germany",0.0,gedeckt
+802,Knock,0,bsh,"Knock, Ems",53.3272,7.0306,"Knock (Ems), Germany",0.0,gedeckt
+804,"Oldersum, Schleuse",0,hand,ungefaehr (Handposition),53.3200,7.3300,"Pogum (Ems), Germany",5.1,nah
+805,Terborg,0,bsh,"Terborg, Ems",53.2928,7.3961,"Terborg (Ems), Germany",0.0,gedeckt
+806,Leerort,0,bsh,"Leerort, Ems",53.2153,7.4261,"Leerort (Ems), Germany",0.0,gedeckt
+808,"Leer, Schleuse",0,bsh,"Leer, Leda, Schleuse",53.2158,7.4486,"Leerort (Ems), Germany",1.5,gedeckt
+808A,"Leda-Sperrwerk, Unterpegel",0,bsh,"Leda-Sperrwerk, Unterpegel",53.2142,7.4744,"Ledasperrwerk (Unterpegel), Germany",0.1,gedeckt
+810,Westringaburg,0,bsh,"Westringaburg, Leda",53.2033,7.5714,"Westringaburg (Leda), Germany",0.0,gedeckt
+810B,Jümme,0,bsh,"Detern, Jümme",53.2050,7.6728,"Detern (Jümme), Germany",0.0,gedeckt
+812,Dreyschloot,0,bsh,"Dreyschloot, Leda",53.1781,7.6692,"Dreyschloot (Leda), Germany",0.0,gedeckt
+813,Weener,0,bsh,"Weener, Ems",53.1611,7.3719,"Weener (Ems), Germany",0.0,gedeckt
+814,Papenburg,0,bsh,"Papenburg, Ems",53.1083,7.3656,"Papenburg (Ems), Germany",0.0,gedeckt
+816,"Herbrum, Hafendamm",0,bsh,"Herbrum, Ems, Hafendamm",53.0428,7.3183,"Herbrum (Ems, Hafendamm), Germany",0.1,gedeckt
+818,Nieuwe Statenzijl,0,saat,"Nieuwe Statenzijl (Dollard), Netherlands",53.2316,7.2074,"Nieuwe Statenzijl (Dollard), Netherlands",0.0,gedeckt
+820,Delfzijl,0,saat,"Delfzijl (Eems), Netherlands",53.3280,6.9310,"Delfzijl (Eems), Netherlands",0.0,gedeckt
+821,Eemshaven,0,saat,"Eemshaven (haven), Netherlands",53.4744,6.8217,"Eemshaven (Waddenzee), Netherlands",0.0,gedeckt
+823,Huibertgat,0,saat,"Huibertgat, Netherlands",53.5737,6.3984,"Huibertgat, Netherlands",0.0,gedeckt
+824,Wierumer Gronden,0,name,"Wierumergronden, Netherlands",53.5158,5.9583,"Wierumergronden, Netherlands",0.0,gedeckt
+825,Schiermonnikoog,0,saat,"Schiermonnikoog (Waddenzee), Netherlands",53.4689,6.2029,"Schiermonnikoog (Waddenzee), Netherlands",0.0,gedeckt
+827,Lauwersoog,0,saat,"Lauwersoog (Waddenzee), Netherlands",53.4087,6.1970,"Lauwersoog (Waddenzee), Netherlands",0.0,gedeckt
+831,"Ameland | Nes, Ameland",0,saat,"Ameland (Nes), Netherlands",53.4298,5.7594,"Ameland (Nes), Netherlands",0.0,gedeckt
+835,West Terschelling | West–Terschelling,1,saat,"Terschelling (Noordzee), Netherlands",53.4425,5.3330,"Terschelling (Noordzee), Netherlands",0.0,gedeckt
+836,"Vlieland, Hafen",0,saat,"Vlieland (haven), Netherlands",53.2961,5.0915,"Vlieland (haven), Netherlands",0.0,gedeckt
+842,Harlingen,0,saat,"Harlingen (Waddenzee), Netherlands",53.1756,5.4093,"Harlingen (Waddenzee), Netherlands",0.0,gedeckt
+845,Den Helder,0,saat,"Den Helder (Marsdiep), Netherlands",52.9644,4.7450,"Den Helder (Marsdiep), Netherlands",0.0,gedeckt
+846,Oudeschild | Texel,0,saat,"Texel (Noordzee), Netherlands",53.0388,4.8502,"Oudeschild (Texel), Netherlands",0.0,gedeckt
+848,Den Oever,0,saat,"Den Oever (Waddenzee voorhaven), Netherlands",52.9315,5.0456,"Den Oever (Waddenzee voorhaven), Netherlands",0.0,gedeckt
+849,Kornwerderzand,0,saat,"Kornwerderzand, Netherlands",53.0699,5.3366,"Kornwerderzand, Netherlands",0.0,gedeckt
+853,Ijmuiden,0,saat,"IJmuiden (Zeesluis), Netherlands",52.4630,4.5550,"IJmuiden (Buitenhaven), Netherlands",0.0,gedeckt
+855,Scheveningen,0,saat,"Scheveningen, Netherlands",52.0990,4.2636,"Scheveningen, Netherlands",0.0,gedeckt
+856,Haringvlietsluizen,0,geo,"Haringvlietdam, Hellevoetsluis, Voorne aan Zee, Zuid-Holland, Nederland, 3251 LD, Nederland",51.8327,4.0497,"Stellendam (Haringvlietdam), Netherlands",0.5,gedeckt
+857,Brouwershavensche Gat,0,hand,ungefaehr (Handposition),51.7500,3.8200,"Brouwersdam Brouwershavense Gat 8, Netherlands",0.3,gedeckt
+858,Hoek van Holland,1,saat,"Hoek van Holland, Netherlands",51.9769,4.1198,"Hoek van Holland, Netherlands",0.0,gedeckt
+859,Maassluis | Rotterdamsche Waterweg,0,saat,"Maassluis, Netherlands",51.9175,4.2498,"Maassluis, Netherlands",0.0,gedeckt
+860,Nieuwe Maas | Vlaardingen,0,saat,"Vlaardingen, Netherlands",51.8996,4.3490,"Vlaardingen, Netherlands",0.0,gedeckt
+861,Nieuwe Maas | Rotterdam,0,saat,"Rotterdam (Dintelhaven), Netherlands",51.9543,4.1207,"Rotterdam (Dintelhaven), Netherlands",0.0,gedeckt
+862,Krimpen,0,name,"Krimpen aan de IJssel (Hollandsche IJssel), Netherlands",51.9165,4.5790,"Krimpen aan de IJssel (Hollandsche IJssel), Netherlands",0.0,gedeckt
+864,Schoonhoven,0,saat,"Schoonhoven, Netherlands",51.9420,4.8500,"Schoonhoven, Netherlands",0.0,gedeckt
+869,Spijkenisse,0,saat,"Spijkenisse (Oude Maas), Netherlands",51.8617,4.3340,"Spijkenisse (Oude Maas), Netherlands",0.0,gedeckt
+871,Goidschaloord,0,name,"Heinenoord (Goidschalxoord), Netherlands",51.8303,4.4516,"Heinenoord (Goidschalxoord), Netherlands",0.0,gedeckt
+874,Dordrecht,0,saat,"Dordrecht (Oude Maas / Beneden Merwede), Netherlands",51.8200,4.6710,"Dordrecht (Oude Maas / Beneden Merwede), Netherlands",0.0,gedeckt
+875,Werkendamm – Außen,0,name,"Werkendam (Nieuwe Merwede), Netherlands",51.8060,4.8768,"Werkendam (Nieuwe Merwede), Netherlands",0.0,gedeckt
+876,Vuren,0,hand,ungefaehr (Handposition),51.8200,5.0200,"Dalem, Netherlands",0.3,gedeckt
+878,Moerdijk,0,saat,"Moerdijk, Netherlands",51.7120,4.6150,"Moerdijk, Netherlands",0.0,gedeckt
+880,"Volkeraksluizen, Rak noord",0,hand,ungefaehr (Handposition),51.7000,4.4200,"Willemstad (Hollandsch Diep), Netherlands",1.0,gedeckt
+897a,Krammersluizen West,0,saat,"Krammersluizen west, Netherlands",51.6593,4.1443,"Krammersluizen west, Netherlands",0.0,gedeckt
+900,Roompot – Außen,0,name,"Roompot binnen, Netherlands",51.6333,3.7000,"Roompot binnen, Netherlands",0.0,gedeckt
+900a,Roompot – Binnen,0,saat,"Roompot binnen, Netherlands",51.6333,3.7000,"Roompot binnen, Netherlands",0.0,gedeckt
+904,Keeten | Stavenisse,0,saat,"Stavenisse (Oosterschelde), Netherlands",51.5980,4.0040,"Stavenisse (Oosterschelde), Netherlands",0.0,gedeckt
+914,Oostgat | Westkapelle,0,saat,"Westkapelle, Netherlands",51.5214,3.4400,"Westkapelle, Netherlands",0.0,gedeckt
+915,Kadzand,0,geo,"Cadzand, Sluis, Zeeland, Nederland",51.3685,3.4090,"Cadzand, Netherlands",2.6,gedeckt
+917,Vlissingen,1,saat,"Vlissingen, Netherlands",51.4420,3.6000,"Vlissingen, Netherlands",0.0,gedeckt
+921,Terneuzen,0,saat,"Terneuzen (Westerschelde), Netherlands",51.3362,3.8198,"Terneuzen (Westerschelde), Netherlands",0.0,gedeckt
+923,Hansweert,0,saat,"Hansweert, Netherlands",51.4457,3.9974,"Hansweert, Netherlands",0.0,gedeckt
+926,Bath,0,name,"Bath (Westerschelde), Netherlands",51.3991,4.2100,"Bath (Westerschelde), Netherlands",0.0,gedeckt
+928,Prosperpolder,0,saat,"Prosperpolder (Schelde), Belgium",51.3483,4.2379,"Prosperpolder (Schelde), Belgium",0.0,gedeckt
+931,Antwerpen,0,saat,"Antwerpen, Belgium",51.2275,4.3999,"Antwerpen, Belgium",0.0,gedeckt
+932,Zeebrugge,0,saat,"Zeebrugge (Havendam), Belgium",51.3464,3.2004,"Zeebrugge (Havendam), Belgium",0.0,gedeckt
+934,Oostende,0,saat,"Oostende (Scheepvaarpolitie Kust), Belgium",51.2338,2.9238,"Oostende (Scheepvaarpolitie Kust), Belgium",0.0,gedeckt
+935,Nieuwpoort,0,saat,"Nieuwpoort (Iepersluis Afwaarts), Belgium",51.1506,2.7281,"Nieuwpoort (Oude Zeedijk), Belgium",0.0,gedeckt
+937,West Hinder – Feuerschiff,0,geo,"West-Hinder, Rederskaai, Zeebrugge-Dorp, Zeebrugge, Lissewege, Brugge, West-Vlaanderen, Vlaanderen, 8380, België / Belgi",51.3344,3.2082,"Zeebrugge (Vandammesluis Afwaarts), Belgium",0.5,gedeckt
+941,Dunkerque,0,saat,"Dunkerque, France",51.0481,2.3667,"Dunkerque, France",0.0,gedeckt
+942,Dunkerque | Gravelines,0,saat,"Dunkerque, France",51.0481,2.3667,"Dunkerque, France",0.0,gedeckt
+943,Calais,0,saat,"Calais, France",50.9694,1.8677,"Calais, France",0.0,gedeckt
+947,Boulogne,0,saat,"Boulogne-sur-Mer, France",50.7274,1.5777,"Boulogne-sur-Mer, France",0.0,gedeckt
+950,Somme-Mündung | Tonne AT–SO,0,name,"Bouée entrée Baie de Somme (AT-SO), France",50.2352,1.4723,"Bouée entrée Baie de Somme (AT-SO), France",0.0,gedeckt
+951,Somme-Mündung | St. Valery-sur-Somme,0,name,"Saint-Valery-sur-Somme, France",50.1902,1.6270,"Saint-Valery-sur-Somme, France",0.0,gedeckt
+953,Le Tréport,0,saat,"Le Tréport, France",50.0667,1.3667,"Le Tréport, France",0.0,gedeckt
+954,Dieppe,0,saat,"Dieppe, France",49.9292,1.0845,"Dieppe, France",0.0,gedeckt
+956,Fécamp,0,saat,"Fécamp, France",49.7623,0.3670,"Fécamp, France",0.0,gedeckt
+956a,Le Havre,1,saat,"Le Havre (Marégraphe), France",49.4838,0.1146,"Le Havre (Quai de la Marine), France",0.0,gedeckt
+959,Port du Havre -Antifer,0,saat,"Le Havre-Antifer (Terminal pétrolier), France",49.6500,0.1500,"Le Havre-Antifer (Terminal pétrolier), France",0.0,gedeckt
+960,Honfleur,0,saat,"Honfleur, France",49.4283,0.2329,"Honfleur, France",0.0,gedeckt
+961,Tancarville,0,saat,"Tancarville, France",49.4769,0.4672,"Tancarville, France",0.0,gedeckt
+963,Caudebec-en-Caux,0,saat,"Caudebec-en-Caux, France",49.5236,0.7143,"Caudebec-en-Caux, France",0.0,gedeckt
+964,Duclair,0,saat,"Duclair, France",49.4804,0.8742,"Duclair, France",0.0,gedeckt
+964a,Petit-Couronne,0,saat,"Petit-Couronne, France",49.3858,1.0118,"Petit-Couronne, France",0.0,gedeckt
+965,Rouen,0,saat,"Rouen, France",49.4433,1.0720,"Rouen, France",0.0,gedeckt
+966,Deauville | Trouville,0,name,"Trouville-Deauville, France",49.3655,0.0794,"Trouville-Deauville, France",0.0,gedeckt
+967,Ouistreham,0,saat,"Ouistreham, France",49.2805,-0.2487,"Ouistreham, France",0.0,gedeckt
+968,Courseulles,0,saat,"Courseulles-sur-Mer (Large), France",49.4000,-0.4667,"Courseulles-sur-Mer (Large), France",0.0,gedeckt
+969,Port-en-Bessin,0,saat,"Port-en-Bessin, France",49.3514,-0.7556,"Port-en-Bessin, France",0.0,gedeckt
+978,Cherbourg,0,name,"Cherbourg-en-Cotentin, France",49.6514,-1.6355,"Cherbourg-en-Cotentin, France",0.0,gedeckt
+982,"Alderney, Braye | Braye",0,saat,"Braye Bay, Alderney, Channel Islands",49.7255,-2.2000,"Braye Bay, Alderney, Channel Islands",0.0,gedeckt
+984,Guernsey | St. Peter Port,0,saat,"Saint Peter Port (Guernsey), Channel Islands",49.4561,-2.5266,"Saint Peter Port (Guernsey), Channel Islands",0.0,gedeckt
+989,St. Hélier | Jersey,0,saat,"St Helier, Jersey, Channel Islands",49.1833,-2.1167,"St Helier, Jersey, Channel Islands",0.0,gedeckt
+996,Carteret,0,saat,"Carteret, France",49.3739,-1.7894,"Carteret, France",0.0,gedeckt
+1000,Îles Chausey | Iles Chansey,0,saat,"Grande-Île (Îles Chausey), France",48.8667,-1.8167,"Grande-Île (Îles Chausey), France",0.0,gedeckt
+1004,Saint Malo | Saint – Malo,1,saat,"Saint-Malo, France",48.6412,-2.0275,"Saint-Malo, France",0.0,gedeckt
+1010,Baie de St. Brieuc,0,hand,ungefaehr (Handposition),48.5300,-2.7300,"Le Légué (Bouée), France",5.3,nah
+1015,Paimpol,0,saat,"Paimpol, France",48.7848,-3.0408,"Paimpol, France",0.0,gedeckt
+1016,"Île de Bréhat, Port Clos | Port Clos",0,saat,"Île de Bréhat, France",48.8401,-3.0039,"Île de Bréhat, France",0.0,gedeckt
+1018,Lézardrieux | Rivière de Pontrieux,0,saat,"Lézardrieux, France",48.7907,-3.0986,"Lézardrieux, France",0.0,gedeckt
+1020,La Corne | Rivière de Tréguier,0,name,"Tréguier, France",48.7870,-3.2222,"Tréguier, France",0.0,gedeckt
+1022,Tréguier | Rivière de Tréguier,0,saat,"Tréguier, France",48.7870,-3.2222,"Tréguier, France",0.0,gedeckt
+1028,Château du Taureau | Rivière de Morlaix,0,saat,"Carantec (Château du Taureau), France",48.6757,-3.8843,"Carantec (Château du Taureau), France",0.0,gedeckt
+1030,Roscoff,0,saat,"Roscoff, France",48.7184,-3.9657,"Roscoff, France",0.0,gedeckt
+1033,L’Aber Wrac’h,0,saat,"L'Aber Wrac'h, France",48.5982,-4.5612,"L'Aber Wrac'h, France",0.0,gedeckt
+1034,L’Aber Benoit,0,saat,"L'Aber Benoît, France",48.5769,-4.6258,"L'Aber Benoît, France",0.0,gedeckt
+1035,L’Aber Ildut,0,saat,"L'Aber Ildut, France",48.4708,-4.7559,"L'Aber Ildut, France",0.0,gedeckt
+1043,Lizard Point,0,saat,"Lizard Point, England, United Kingdom",49.9576,-5.2064,"Lizard Point, England, United Kingdom",0.0,gedeckt
+1045,Helford River,0,saat,"Helford River (Entrance), England, United Kingdom",50.0835,-5.0829,"Helford River (Entrance), England, United Kingdom",0.0,gedeckt
+1046,Falmouth | Falmouth Bay,0,saat,"Falmouth, England, United Kingdom",50.1558,-5.0493,"Falmouth, England, United Kingdom",0.0,gedeckt
+1048a,Par,0,name,"Par, England, United Kingdom",50.3434,-4.7009,"Par, England, United Kingdom",0.0,gedeckt
+1049,Fowey,0,saat,"Fowey, England, United Kingdom",50.3359,-4.6331,"Fowey, England, United Kingdom",0.0,gedeckt
+1053,Bovisand Pier,0,saat,"Bovisand Pier, England, United Kingdom",50.3333,-4.1333,"Bovisand Pier, England, United Kingdom",0.0,gedeckt
+1054,Plymouth,1,geo,"Plymouth, England, United Kingdom",50.3714,-4.1425,"Turnchapel, England, United Kingdom",2.2,gedeckt
+1056,Saltash | River Tamar,0,saat,"Saltash, England, United Kingdom",50.4061,-4.2065,"Saltash, England, United Kingdom",0.0,gedeckt
+1063,Salcombe | Salcombe River,0,saat,"Salcombe, England, United Kingdom",50.2355,-3.7676,"Salcombe, England, United Kingdom",0.0,gedeckt
+1066,Dartmouth | River Dart,0,saat,"Dartmouth, England, United Kingdom",50.3511,-3.5772,"Dartmouth, England, United Kingdom",0.0,gedeckt
+1068,Tor Bay | Torquay,0,saat,"Torquay, England, United Kingdom",50.4599,-3.5265,"Torquay, England, United Kingdom",0.0,gedeckt
+1070,River Exe | Exmouth Dock,0,saat,"Exmouth Dock, England, United Kingdom",50.6167,-3.4242,"Exmouth Dock, England, United Kingdom",0.0,gedeckt
+1075,Portland,0,geo,"Weymouth and Portland, Weymouth, Dorset, England, United Kingdom",50.5957,-2.4720,"Weymouth, England, United Kingdom",2.2,gedeckt
+1079,Swanage,0,saat,"Swanage, England, United Kingdom",50.6093,-1.9492,"Swanage, England, United Kingdom",0.0,gedeckt
+1086,Hurst Point,0,saat,"Hurst Point, England, United Kingdom",50.7080,-1.5472,"Hurst Point, England, United Kingdom",0.0,gedeckt
+1091,Southampton,1,saat,"Southampton (Dock Head), England, United Kingdom",50.8839,-1.3931,"Southampton (Dock Head), England, United Kingdom",0.0,gedeckt
+1092,Calshot Castle | Southampton Water,0,saat,"Calshot Castle, England, United Kingdom",50.8167,-1.3000,"Calshot Castle, England, United Kingdom",0.0,gedeckt
+1095,Portsmouth,1,saat,"Portsmouth, England, United Kingdom",50.8022,-1.1113,"Portsmouth, England, United Kingdom",0.0,gedeckt
+1103,Cowes | River Medina,0,saat,"Cowes (Isle of Wight), England, United Kingdom",50.7667,-1.3000,"Cowes (Isle of Wight), England, United Kingdom",0.0,gedeckt
+1104,Nab Tower,0,saat,"Nab Tower, England, United Kingdom",50.6667,-0.9500,"Nab Tower, England, United Kingdom",0.0,gedeckt
+1105,Chichester Harbour,0,saat,"Chichester Harbour (Entrance), England, United Kingdom",50.7876,-0.9376,"Chichester Harbour (Entrance), England, United Kingdom",0.0,gedeckt
+1108,Littlehampton,0,saat,"Littlehampton, England, United Kingdom",50.8011,-0.5422,"Littlehampton, England, United Kingdom",0.0,gedeckt
+1110,Shoreham,0,saat,"Shoreham (River Adur), England, United Kingdom",50.8291,-0.2479,"Shoreham (River Adur), England, United Kingdom",0.0,gedeckt
+1112,Newhaven,0,saat,"Newhaven, England, United Kingdom",50.7818,0.0570,"Newhaven, England, United Kingdom",0.0,gedeckt
+1119,Dungeness,0,saat,"Dungeness, England, United Kingdom",50.9105,0.9684,"Dungeness, England, United Kingdom",0.0,gedeckt
+1121,Dover,1,name,"Dover, England, United Kingdom",51.1144,1.3225,"Dover, England, United Kingdom",0.0,gedeckt
+1124,Ramsgate,0,saat,"Ramsgate, England, United Kingdom",51.3300,1.4195,"Ramsgate, England, United Kingdom",0.0,gedeckt
+1128,Margate,0,saat,"Margate, England, United Kingdom",51.3908,1.3781,"Margate, England, United Kingdom",0.0,gedeckt
+1131,Shivering Sand Tower,0,hand,ungefaehr (Handposition),51.5000,1.0800,"Shivering Sand, England, United Kingdom",0.2,gedeckt
+1132,Sheerness,0,saat,"Sheerness, England, United Kingdom",51.4456,0.7434,"Sheerness, England, United Kingdom",0.0,gedeckt
+1132a,Darnett Ness,0,saat,"Darnett Ness, England, United Kingdom",51.4075,0.5960,"Darnett Ness, England, United Kingdom",0.0,gedeckt
+1133,Chatham,0,name,"Chatham (Lock Approaches), England, United Kingdom",51.3997,0.5531,"Chatham (Lock Approaches), England, United Kingdom",0.0,gedeckt
+1134,Southend-on-Sea,0,saat,"Southend-on-Sea (Pier), England, United Kingdom",51.5145,0.7238,"Southend-on-Sea (Pier), England, United Kingdom",0.0,gedeckt
+1136,Tilbury,0,saat,"Tilbury (Thames River), England, United Kingdom",51.4567,0.3348,"Tilbury (Thames River), England, United Kingdom",0.0,gedeckt
+1138,"Woolwich, North",0,saat,"North Woolwich, England, United Kingdom",51.4978,0.0611,"North Woolwich, England, United Kingdom",0.0,gedeckt
+1140,London Bridge,1,saat,"London Bridge (Tower Pier), England, United Kingdom",51.5076,-0.0801,"London Bridge (Tower Pier), England, United Kingdom",0.0,gedeckt
+1142,Chelsea Bridge,0,saat,"Chelsea Bridge, England, United Kingdom",51.4833,-0.1500,"Chelsea Bridge, England, United Kingdom",0.0,gedeckt
+1144,Richmond Lock,0,name,"Richmond Lock, England, United Kingdom",51.4625,-0.3169,"Richmond Lock, England, United Kingdom",0.0,gedeckt
+1146,Holliwell Point,0,saat,"Holliwell Point, England, United Kingdom",51.6361,0.9425,"Holliwell Point, England, United Kingdom",0.0,gedeckt
+1147,Burnham-on-Crouch,0,saat,"Burnham-On-Crouch, England, United Kingdom",51.6231,0.8214,"Burnham-On-Crouch, England, United Kingdom",0.0,gedeckt
+1149,River Blackwater | Bradwell | Osea Island,0,saat,"Osea Island (Blackwater River), England, United Kingdom",51.7167,0.7667,"Osea Island (Blackwater River), England, United Kingdom",0.0,gedeckt
+1152,Sunk Head,0,saat,"Sunk Head, England, United Kingdom",51.7833,1.5000,"Sunk Head, England, United Kingdom",0.0,gedeckt
+1153,Brightlingsea | River Colne,0,saat,"Brightlingsea (Colne River), England, United Kingdom",51.8044,1.0235,"Brightlingsea (Colne River), England, United Kingdom",0.0,gedeckt
+1158,Harwich | River Stour,0,saat,"Harwich, England, United Kingdom",51.9479,1.2921,"Harwich, England, United Kingdom",0.0,gedeckt
+1162,Ipswich | River Orwell,0,saat,"Ipswich, England, United Kingdom",52.0461,1.1618,"Ipswich, England, United Kingdom",0.0,gedeckt
+1163,River Deben | Woodbridge Haven,0,saat,"Woodbridge, England, United Kingdom",52.0871,1.3166,"Woodbridge, England, United Kingdom",0.0,gedeckt
+1169,Orford Ness,0,saat,"Orford Ness, England, United Kingdom",52.0833,1.5833,"Orford Ness, England, United Kingdom",0.0,gedeckt
+1172,Lowestoft,0,saat,"Lowestoft, England, United Kingdom",52.4731,1.7502,"Lowestoft, England, United Kingdom",0.0,gedeckt
+1174,Gorleston-on-Sea | Great Yarmouth,0,saat,"Great Yarmouth (Gorleston-On-Sea), England, United Kingdom",52.5719,1.7384,"Great Yarmouth (Gorleston-On-Sea), England, United Kingdom",0.0,gedeckt
+1195a,Inner Dowsing Light Tower,0,hand,ungefaehr (Handposition),53.3300,0.5700,"Inner Dowsing Light, England, United Kingdom",1.7,gedeckt
+1195b,Spurn Head,0,saat,"Spurn Head, England, United Kingdom",53.5779,0.1070,"Spurn Head, England, United Kingdom",0.0,gedeckt
+1197,Humber Sea Terminal,0,saat,"Humber Sea Terminal, England, United Kingdom",53.6681,-0.2319,"Humber Sea Terminal, England, United Kingdom",0.0,gedeckt
+1198,Immingham,1,saat,"Immingham (Humberside), England, United Kingdom",53.6304,-0.1875,"Immingham (Humberside), England, United Kingdom",0.0,gedeckt
+1199,Hull | Kingston upon Hull,0,saat,"Hull (King George Dock), England, United Kingdom",53.7425,-0.2968,"Hull (Alexandra Dock), England, United Kingdom",0.0,gedeckt
+1200,Humber Brücke,0,hand,ungefaehr (Handposition),53.7100,-0.4500,"Humber Bridge, England, United Kingdom",0.3,gedeckt
+1201,Blacktoft | River Ouse,0,saat,"Blacktoft (River Ouse), England, United Kingdom",53.7070,-0.7253,"Blacktoft (River Ouse), England, United Kingdom",0.0,gedeckt
+1202,Goole | River Ouse,0,saat,"Blacktoft (River Ouse), England, United Kingdom",53.7070,-0.7253,"Blacktoft (River Ouse), England, United Kingdom",0.0,gedeckt
+1208,Tees-Mündung,0,name,"River Tees (Teesmouth), England, United Kingdom",54.6333,-1.1667,"River Tees (Teesmouth), England, United Kingdom",0.0,gedeckt
+1209,Middlesbrough,0,saat,"Middlesbrough (Dock Entrance), England, United Kingdom",54.5833,-1.2167,"Middlesbrough (Dock Entrance), England, United Kingdom",0.0,gedeckt
+1212,Hartlepool,0,saat,"Hartlepool, England, United Kingdom",54.6904,-1.1981,"Hartlepool, England, United Kingdom",0.0,gedeckt
+1214,Sunderland,0,name,"Sunderland, England, United Kingdom",54.9187,-1.3601,"Sunderland, England, United Kingdom",0.0,gedeckt
+1216,North Shields | River Tyne,0,saat,"North Shields (River Tyne), England, United Kingdom",55.0074,-1.4398,"North Shields (River Tyne), England, United Kingdom",0.0,gedeckt
+1217,Newcastle-upon-Tyne | River Tyne,0,saat,"North Shields (River Tyne), England, United Kingdom",55.0074,-1.4398,"North Shields (River Tyne), England, United Kingdom",0.0,gedeckt
+1219,Blyth,0,saat,"Blyth, England, United Kingdom",55.1165,-1.4868,"Blyth, England, United Kingdom",0.0,gedeckt
+1233,Leith,1,saat,"Leith, Scotland, United Kingdom",55.9898,-3.1817,"Leith, Scotland, United Kingdom",0.0,gedeckt
+1234,Methil,0,saat,"Methil, Scotland, United Kingdom",56.1821,-3.0072,"Methil, Scotland, United Kingdom",0.0,gedeckt
+1235,Burntisland,0,saat,"Burntisland, Scotland, United Kingdom",56.0538,-3.2361,"Burntisland, Scotland, United Kingdom",0.0,gedeckt
+1236,Rosyth,0,saat,"Rosyth, Scotland, United Kingdom",56.0188,-3.4447,"Rosyth, Scotland, United Kingdom",0.0,gedeckt
+1237,Grangemouth,0,saat,"Grangemouth (Forth River), Scotland, United Kingdom",56.0353,-3.6840,"Grangemouth (Forth River), Scotland, United Kingdom",0.0,gedeckt
+1245,Tay-Barre,0,name,"River Tay (Bar), Scotland, United Kingdom",56.4667,-2.6333,"River Tay (Bar), Scotland, United Kingdom",0.0,gedeckt
+1247,Dundee,0,name,"Dundee, Scotland, United Kingdom",56.4624,-2.9509,"Dundee, Scotland, United Kingdom",0.0,gedeckt
+1250,Montrose,0,saat,"Montrose, Scotland, United Kingdom",56.7064,-2.4720,"Montrose, Scotland, United Kingdom",0.0,gedeckt
+1252,Aberdeen,1,saat,"Aberdeen, Scotland, United Kingdom",57.1440,-2.0802,"Aberdeen, Scotland, United Kingdom",0.0,gedeckt
+1253,Peterhead,0,saat,"Peterhead, Scotland, United Kingdom",57.4973,-1.7724,"Peterhead, Scotland, United Kingdom",0.0,gedeckt
+1254,Fraserburgh,0,saat,"Fraserburgh, Scotland, United Kingdom",57.6919,-1.9951,"Fraserburgh, Scotland, United Kingdom",0.0,gedeckt
+1259a,Whiteness Head,0,saat,"Whiteness Head (Moray Firth), Scotland, United Kingdom",57.5992,-4.0088,"Whiteness Head (Moray Firth), Scotland, United Kingdom",0.0,gedeckt
+1261,Inverness | Inverness Firth,0,saat,"Inverness, Scotland, United Kingdom",57.4954,-4.2376,"Inverness, Scotland, United Kingdom",0.0,gedeckt
+1262,Cromarty,0,saat,"Cromarty, Scotland, United Kingdom",57.6828,-4.0385,"Cromarty, Scotland, United Kingdom",0.0,gedeckt
+1263,Invergordon,0,saat,"Invergordon, Scotland, United Kingdom",57.6858,-4.1621,"Invergordon, Scotland, United Kingdom",0.0,gedeckt
+1269,Wick,0,saat,"Wick, Scotland, United Kingdom",58.4410,-3.0863,"Wick, Scotland, United Kingdom",0.0,gedeckt
+1270,Duncansby Head,0,saat,"Duncansby Head, Scotland, United Kingdom",58.6455,-3.0228,"Duncansby Head, Scotland, United Kingdom",0.0,gedeckt
+1273,Scrabster,0,saat,"Scrabster (Thurso), Scotland, United Kingdom",58.6113,-3.5400,"Scrabster (Thurso), Scotland, United Kingdom",0.0,gedeckt
+1292,Kirkwall | Nordatlantischer Ozean,0,saat,"Kirkwall, Scotland, United Kingdom",58.9854,-2.9603,"Kirkwall, Scotland, United Kingdom",0.0,gedeckt
+1295,Pierowall,0,saat,"Pierowall, Scotland, United Kingdom",59.3195,-2.9883,"Pierowall, Scotland, United Kingdom",0.0,gedeckt
+1298,Stromness,0,saat,"Stromness, Scotland, United Kingdom",58.9620,-3.2970,"Stromness, Scotland, United Kingdom",0.0,gedeckt
+1303,Sumburgh,0,saat,"Sumburgh (Grutness Voe), Scotland, United Kingdom",59.8840,-1.2863,"Sumburgh (Grutness Voe), Scotland, United Kingdom",0.0,gedeckt
+1305,Lerwick,0,saat,"Lerwick (Shetlands), Scotland, United Kingdom",60.1540,-1.1403,"Lerwick (Shetlands), Scotland, United Kingdom",0.0,gedeckt
+1307a,Toft Pier,0,saat,"Toft Pier, Scotland, United Kingdom",60.4661,-1.2056,"Toft Pier, Scotland, United Kingdom",0.0,gedeckt
+1308a,Mid Yell,0,saat,"Mid Yell, Scotland, United Kingdom",60.5988,-1.0589,"Mid Yell, Scotland, United Kingdom",0.0,gedeckt
+1309,Balta Sound,0,geo,"Balta Sound, Baltasound, Shetland Islands, Alba / Scotland, United Kingdom",60.7484,-0.8033,"Baltasound Pier, Scotland, United Kingdom",2.2,gedeckt
+1311,Bluemull Sound | Cullivoe,0,saat,"Cullivoe (Bluemull Sound), Scotland, United Kingdom",60.6981,-0.9961,"Cullivoe (Bluemull Sound), Scotland, United Kingdom",0.0,gedeckt
+1312,Sullom Voe,0,saat,"Sullom Voe (Shetlands), Scotland, United Kingdom",60.4597,-1.2998,"Sullom Voe (Shetlands), Scotland, United Kingdom",0.0,gedeckt
+1314,Scalloway,0,saat,"Scalloway (Shetlands), Scotland, United Kingdom",60.1350,-1.2767,"Scalloway (Shetlands), Scotland, United Kingdom",0.0,gedeckt
+1320,Syderø | Våg | Våg-Fjord,0,geo,"Vágur, Vágs kommuna, Suðuroyar sýsla, 900, Føroyar",61.4739,-6.8115,"Vágur (Suðuroy), Faroe Islands",0.3,gedeckt
+1322,Trangisvåg | Syderø,0,region,"Trongisvágur (Suðuroy), Faroe Islands",61.5500,-6.8167,"Trongisvágur (Suðuroy), Faroe Islands",0.0,gedeckt
+1324,Sand | Sandø,0,region,"Sandur (Sandoy), Faroe Islands",61.8289,-6.8079,"Sandur (Sandoy), Faroe Islands",0.0,gedeckt
+1329,Kirkebø,0,geo,"Kirkjubøur, Tórshavnar kommuna, Streymoyar sýsla, Føroyar",61.9537,-6.7934,"Gamlarætt (Streymoy), Faroe Islands",1.5,gedeckt
+1330,Vestmanhavn,0,region,"Vestmanna (Streymoy), Faroe Islands",62.1503,-7.1706,"Vestmanna (Streymoy), Faroe Islands",0.0,gedeckt
+1331,Thorshavn,0,region,"Tórshavn (Streymoy), Faroe Islands",62.0079,-6.7669,"Tórshavn (Streymoy), Faroe Islands",0.0,gedeckt
+1332,Leirvik,0,region,"Leirvík (Eysturoy), Faroe Islands",62.2124,-6.7052,"Leirvík (Eysturoy), Faroe Islands",0.0,gedeckt
+1334,Bordø | Klaksvig,0,region,"Klaksvík (Borðoy), Faroe Islands",62.2314,-6.5936,"Klaksvík (Borðoy), Faroe Islands",0.0,gedeckt
+1335,Eide | Østerø,0,geo,"RAF Eide, Mainifløta, Eiði, Eiðis kommuna, Eysturoyar sýsla, 470, Føroyar",62.3152,-7.1047,"Eiði (Eysturoy), Faroe Islands",2.2,gedeckt
+1348,Sound of Harris | Leverburgh,0,saat,"Leverburgh (Harris), Scotland, United Kingdom",57.7666,-7.0252,"Leverburgh (Harris), Scotland, United Kingdom",0.0,gedeckt
+1350,Benbecula,0,saat,"Balivanich (Benbecula), Scotland, United Kingdom",57.4752,-7.3864,"Balivanich (Benbecula), Scotland, United Kingdom",0.0,gedeckt
+1353,Barra Island | Castle Bay | Vatersay Sound,0,name,"Barra (North Bay), Scotland, United Kingdom",57.0000,-7.4000,"Barra (North Bay), Scotland, United Kingdom",0.0,gedeckt
+1356,Loch Boisdale,0,saat,"Loch Boisdale (South Uist), Scotland, United Kingdom",57.1521,-7.3036,"Loch Boisdale (South Uist), Scotland, United Kingdom",0.0,gedeckt
+1362,"East Loch Tarbert, Hebrides",0,name,"Tarbert (Harris), Scotland, United Kingdom",57.8969,-6.7994,"Tarbert (Harris), Scotland, United Kingdom",0.0,gedeckt
+1365,Stornoway,0,saat,"Stornoway (Isle of Lewis), Scotland, United Kingdom",58.2072,-6.3889,"Stornoway (Isle of Lewis), Scotland, United Kingdom",0.0,gedeckt
+1370,Loch Bervie | Kinlochbervie,0,saat,"Kinlochbervie (Loch Inchard), Scotland, United Kingdom",58.4567,-5.0502,"Kinlochbervie (Loch Inchard), Scotland, United Kingdom",0.0,gedeckt
+1373,Loch Inver,0,geo,"Loch Inver, Lochinver, Highland, Alba / Scotland, IV27 4JY, United Kingdom",58.1458,-5.2738,"Lochinver, Scotland, United Kingdom",1.4,gedeckt
+1375,Ullapool,1,saat,"Ullapool, Scotland, United Kingdom",57.8952,-5.1579,"Ullapool, Scotland, United Kingdom",0.0,gedeckt
+1385,Portree,0,saat,"Portree (Raasay Sound), Scotland, United Kingdom",57.4108,-6.1903,"Portree (Raasay Sound), Scotland, United Kingdom",0.0,gedeckt
+1389,Loch Carron,0,geo,"Loch Carron, Stromeferry, Highland, Alba / Scotland, United Kingdom",57.3639,-5.6703,"Plockton, Scotland, United Kingdom",2.9,gedeckt
+1391,Kyle of Lochalsh,0,saat,"Kyle Of Lochalsh, Scotland, United Kingdom",57.2793,-5.7137,"Kyle Of Lochalsh, Scotland, United Kingdom",0.0,gedeckt
+1393,Glenelg Bay | Kyle Rhea,0,saat,"Glenelg Bay, Scotland, United Kingdom",57.2125,-5.6288,"Glenelg Bay, Scotland, United Kingdom",0.0,gedeckt
+1395,Loch Hourn,0,saat,"Loch Hourn, Scotland, United Kingdom",57.1000,-5.5667,"Loch Hourn, Scotland, United Kingdom",0.0,gedeckt
+1397,Mallaig,0,saat,"Mallaig, Scotland, United Kingdom",57.0077,-5.8252,"Mallaig, Scotland, United Kingdom",0.0,gedeckt
+1411,Tobermory,0,saat,"Tobermory (Sound of Mull), Scotland, United Kingdom",56.6231,-6.0642,"Tobermory (Sound of Mull), Scotland, United Kingdom",0.0,gedeckt
+1414,Craignure,0,saat,"Craignure (Mull), Scotland, United Kingdom",56.4714,-5.7046,"Craignure (Mull), Scotland, United Kingdom",0.0,gedeckt
+1416,Corran,0,saat,"Corran, Scotland, United Kingdom",56.7226,-5.2431,"Corran, Scotland, United Kingdom",0.0,gedeckt
+1417,Corpach,0,saat,"Corpach, Scotland, United Kingdom",56.8418,-5.1238,"Corpach, Scotland, United Kingdom",0.0,gedeckt
+1425,Oban,1,saat,"Oban, Scotland, United Kingdom",56.4116,-5.4807,"Oban, Scotland, United Kingdom",0.0,gedeckt
+1433,Port Askaig,0,saat,"Port Askaig (Sound of Jura), Scotland, United Kingdom",55.8479,-6.1043,"Port Askaig (Sound of Jura), Scotland, United Kingdom",0.0,gedeckt
+1437,Port Ellen,0,saat,"Port Ellen (Islay), Scotland, United Kingdom",55.6274,-6.1901,"Port Ellen (Islay), Scotland, United Kingdom",0.0,gedeckt
+1443,Campbeltown,0,saat,"Campbeltown (Kintyre), Scotland, United Kingdom",55.4243,-5.5984,"Campbeltown (Kintyre), Scotland, United Kingdom",0.0,gedeckt
+1447,"East Loch Tarbert, Loch Fyne | Loch Fyne",0,name,"East Loch Tarbert, Scotland, United Kingdom",55.8645,-5.4112,"East Loch Tarbert, Scotland, United Kingdom",0.0,gedeckt
+1452,Wemyss Bay,0,saat,"Wemyss Bay, Scotland, United Kingdom",55.8758,-4.8920,"Wemyss Bay, Scotland, United Kingdom",0.0,gedeckt
+1456,Faslane | Gare Loch,0,saat,"Faslane (Gare Loch), Scotland, United Kingdom",56.0614,-4.8224,"Faslane (Gare Loch), Scotland, United Kingdom",0.0,gedeckt
+1457,Helensburgh,0,saat,"Helensburgh, Scotland, United Kingdom",56.0010,-4.7376,"Helensburgh, Scotland, United Kingdom",0.0,gedeckt
+1458,Greenock,1,saat,"Greenock, Scotland, United Kingdom",55.9575,-4.7652,"Greenock, Scotland, United Kingdom",0.0,gedeckt
+1459,Port Glasgow,0,saat,"Glasgow (Broomielaw), Scotland, United Kingdom",55.9358,-4.6837,"Port Glasgow, Scotland, United Kingdom",0.0,gedeckt
+1461,Bowling,0,saat,"Bowling (River Clyde), Scotland, United Kingdom",55.9305,-4.4862,"Bowling (River Clyde), Scotland, United Kingdom",0.0,gedeckt
+1462,Rothesay Dock,0,saat,"Clydebank (Rothesay Dock), Scotland, United Kingdom",55.8934,-4.4031,"Clydebank (Rothesay Dock), Scotland, United Kingdom",0.0,gedeckt
+1463,Glasgow,0,saat,"Glasgow (Broomielaw), Scotland, United Kingdom",55.9358,-4.6837,"Port Glasgow, Scotland, United Kingdom",0.0,gedeckt
+1464,Millport,0,saat,"Millport, Scotland, United Kingdom",55.7498,-4.9063,"Millport, Scotland, United Kingdom",0.0,gedeckt
+1465,Ardrossan,0,saat,"Ardrossan (Firth of Clyde), Scotland, United Kingdom",55.6409,-4.8244,"Ardrossan (Firth of Clyde), Scotland, United Kingdom",0.0,gedeckt
+1467,Troon,0,saat,"Troon, Scotland, United Kingdom",55.5510,-4.6837,"Troon, Scotland, United Kingdom",0.0,gedeckt
+1468,Ayr,0,name,"Ayr (Firth of Clyde), Scotland, United Kingdom",55.4684,-4.6404,"Ayr (Firth of Clyde), Scotland, United Kingdom",0.0,gedeckt
+1469,Loch Ryan | Stranraer,0,saat,"Stranraer, Scotland, United Kingdom",54.9062,-5.0298,"Stranraer, Scotland, United Kingdom",0.0,gedeckt
+1475,Calf Sound,0,saat,"Calf Sound, Isle of Man",54.0621,-4.8006,"Calf Sound, Isle of Man",0.0,gedeckt
+1477,Douglas,0,name,"Douglas, Isle of Man",54.1475,-4.4679,"Douglas, Isle of Man",0.0,gedeckt
+1478,Ramsey,0,name,"Ramsey, Isle of Man",54.3206,-4.3656,"Ramsey, Isle of Man",0.0,gedeckt
+1495,Workington,0,saat,"Workington (Cumbria), England, United Kingdom",54.6507,-3.5673,"Workington (Cumbria), England, United Kingdom",0.0,gedeckt
+1496,Whitehaven,0,saat,"Whitehaven, England, United Kingdom",54.5528,-3.5986,"Whitehaven, England, United Kingdom",0.0,gedeckt
+1499,Barrow-in-Furness | Ramsden Dock,0,saat,"Barrow-in-Furness (Ramsden Dock), England, United Kingdom",54.0964,-3.2215,"Barrow-in-Furness (Ramsden Dock), England, United Kingdom",0.0,gedeckt
+1501,Heysham Harbour,0,saat,"Heysham, England, United Kingdom",54.0317,-2.9204,"Heysham, England, United Kingdom",0.0,gedeckt
+1503,Fleetwood,0,saat,"Fleetwood (River Wyre), England, United Kingdom",53.9273,-3.0059,"Fleetwood (River Wyre), England, United Kingdom",0.0,gedeckt
+1504,"Wyre, Alter Leuchtturm",0,saat,"Fleetwood (River Wyre), England, United Kingdom",53.9530,-3.0270,"Wyre Lighthouse, England, United Kingdom",0.0,gedeckt
+1506,River Ribble | Preston,0,saat,"St. Anne's (River Ribble), England, United Kingdom",53.7581,-2.7508,"Preston, England, United Kingdom",0.0,gedeckt
+1508,Formby,0,saat,"Formby, England, United Kingdom",53.5333,-3.1167,"Formby, England, United Kingdom",0.0,gedeckt
+1509,Liverpool,1,name,"Liverpool (Gladstone Dock), England, United Kingdom",53.4497,-3.0180,"Liverpool (Gladstone Dock), England, United Kingdom",0.0,gedeckt
+1511,Eastham | River Mersey,0,saat,"Eastham (River Mersey), England, United Kingdom",53.3228,-2.9493,"Eastham (River Mersey), England, United Kingdom",0.0,gedeckt
+1519,River Dee | Mostyn Docks,0,saat,"Mostyn Docks, Wales, United Kingdom",53.3199,-3.2602,"Mostyn Docks, Wales, United Kingdom",0.0,gedeckt
+1526,Llandudno,0,saat,"Llandudno, Wales, United Kingdom",53.3317,-3.8252,"Llandudno, Wales, United Kingdom",0.0,gedeckt
+1527,Trwyn Dinmor,0,saat,"Trwyn Dinmor, Wales, United Kingdom",53.3145,-4.0548,"Trwyn Dinmor, Wales, United Kingdom",0.0,gedeckt
+1529,Beaumaris,0,saat,"Beaumaris, Wales, United Kingdom",53.2611,-4.0900,"Beaumaris, Wales, United Kingdom",0.0,gedeckt
+1530,Menai Bridge,0,saat,"Menai Bridge (Porthaethwy), Wales, United Kingdom",53.2201,-4.1632,"Menai Bridge (Porthaethwy), Wales, United Kingdom",0.0,gedeckt
+1532,Port Dinorwic,0,saat,"Port Dinorwic, Wales, United Kingdom",53.1864,-4.2104,"Port Dinorwic, Wales, United Kingdom",0.0,gedeckt
+1533,Caernarvon,0,name,"Caernarfon, Wales, United Kingdom",53.1453,-4.2758,"Caernarfon, Wales, United Kingdom",0.0,gedeckt
+1534,"Belan, Fort | Fort Belan",0,name,"Belan Point (Menai Strait), Wales, United Kingdom",53.1225,-4.3297,"Belan Point (Menai Strait), Wales, United Kingdom",0.0,gedeckt
+1535,Llanddwyn Island,0,saat,"Llanddwyn Island, Wales, United Kingdom",53.1333,-4.4167,"Llanddwyn Island, Wales, United Kingdom",0.0,gedeckt
+1538,Holyhead,0,saat,"Holyhead, Wales, United Kingdom",53.3139,-4.6204,"Holyhead, Wales, United Kingdom",0.0,gedeckt
+1557,Cardigan Bay | Fishguard,0,saat,"Fishguard, Wales, United Kingdom",52.1167,-4.6885,"Port Cardigan, Wales, United Kingdom",0.0,gedeckt
+1562,River Cleddau | Milford Haven,0,saat,"Milford Haven, Wales, United Kingdom",51.7482,-4.8994,"Black Tar (River Cleddau), Wales, United Kingdom",0.0,gedeckt
+1563,Neyland,0,saat,"Neyland, Wales, United Kingdom",51.7045,-4.9499,"Neyland, Wales, United Kingdom",0.0,gedeckt
+1581,Port Talbot,0,saat,"Port Talbot, Wales, United Kingdom",51.5841,-3.7989,"Port Talbot, Wales, United Kingdom",0.0,gedeckt
+1584,Barry,0,saat,"Barry, Wales, United Kingdom",51.3928,-3.2606,"Barry, Wales, United Kingdom",0.0,gedeckt
+1586,Cardiff,0,saat,"Cardiff, Wales, United Kingdom",51.4476,-3.1654,"Cardiff, Wales, United Kingdom",0.0,gedeckt
+1588,"Newport, Bristol-Kanal",0,name,"Newport (River Usk), Wales, United Kingdom",51.5500,-2.9874,"Newport (River Usk), Wales, United Kingdom",0.0,gedeckt
+1591,Beachley,0,name,"Beachley (Aust, River Severn), England, United Kingdom",51.6002,-2.6347,"Beachley (Aust, River Severn), England, United Kingdom",0.0,gedeckt
+1593,Sharpness Dock,0,saat,"Sharpness Dock, England, United Kingdom",51.7174,-2.4828,"Sharpness Dock, England, United Kingdom",0.0,gedeckt
+1596,English and Welsh Grounds,0,saat,"English And Welsh Grounds, England, United Kingdom",51.4667,-2.9833,"English And Welsh Grounds, England, United Kingdom",0.0,gedeckt
+1597,"Avon, River | Bristol, Cumberland Basin",0,name,"Cumberland Basin Entrance, England, United Kingdom",51.4485,-2.6224,"Cumberland Basin Entrance, England, United Kingdom",0.0,gedeckt
+1597a,Avonmouth,1,saat,"Avonmouth (Port of Bristol), England, United Kingdom",51.5108,-2.7150,"Avonmouth (Port of Bristol), England, United Kingdom",0.0,gedeckt
+1610,River Taw | Yelland Marsh,0,saat,"Yelland Marsh (River Taw), England, United Kingdom",51.0733,-4.1706,"Yelland Marsh (River Taw), England, United Kingdom",0.0,gedeckt
+1618,River Camel | Padstow,0,saat,"Padstow (River Camel), England, United Kingdom",50.5417,-4.9369,"Padstow (River Camel), England, United Kingdom",0.0,gedeckt
+1631,Skull,0,hand,ungefaehr (Handposition),51.5200,-9.5400,"Schull, Ireland",0.6,gedeckt
+1634,Castle Townsend,0,name,"Castletownshend, Ireland",51.5289,-9.1723,"Castletownshend, Ireland",0.0,gedeckt
+1637,Kinsale,0,saat,"Kinsale, Ireland",51.7014,-8.5176,"Kinsale, Ireland",0.0,gedeckt
+1637a,Ringaskiddy,0,saat,"Ringaskiddy (NMCI), Ireland",51.8350,-8.3056,"Ringaskiddy (NMCI), Ireland",0.0,gedeckt
+1638,"Marino, Point",0,saat,"Marino Point, Ireland",51.8783,-8.3316,"Marino Point, Ireland",0.0,gedeckt
+1639,Cobh,1,saat,"Cobh, Ireland",51.8494,-8.2938,"Cobh, Ireland",0.0,gedeckt
+1640,Cork City,0,saat,"Cork City, Ireland",51.9005,-8.4508,"Cork City, Ireland",0.0,gedeckt
+1644,Dunmore East,0,saat,"Dunmore East, Ireland",52.1477,-6.9919,"Dunmore East, Ireland",0.0,gedeckt
+1645,Kilmokea Point,0,saat,"Kilmokea Point, Ireland",52.2964,-7.0158,"Kilmokea Point, Ireland",0.0,gedeckt
+1646,Waterford,0,saat,"Waterford, Ireland",52.2616,-7.1068,"Waterford, Ireland",0.0,gedeckt
+1651,Carnsore Point,0,saat,"Carnsore Point, Ireland",52.1726,-6.3631,"Carnsore Point, Ireland",0.0,gedeckt
+1652,Rosslare Europort,0,name,"Rosslare, Ireland",52.2546,-6.3349,"Rosslare, Ireland",0.0,gedeckt
+1654,Wexford Harbour,0,saat,"Wexford, Ireland",52.3385,-6.4589,"Wexford, Ireland",0.0,gedeckt
+1658,Courtown,0,saat,"Courtown, Ireland",52.6431,-6.2241,"Courtown, Ireland",0.0,gedeckt
+1660,Arklow,0,saat,"Arklow, Ireland",52.7920,-6.1452,"Arklow, Ireland",0.0,gedeckt
+1663,Wicklow,0,saat,"Wicklow, Ireland",52.9833,-6.0345,"Wicklow, Ireland",0.0,gedeckt
+1666,Dun Laoghaire,0,saat,"Dún Laoghaire, Ireland",53.2978,-6.1310,"Dún Laoghaire, Ireland",0.0,gedeckt
+1667,Dublin,0,saat,"Dublin Port, Ireland",53.3457,-6.2217,"Dublin Port, Ireland",0.0,gedeckt
+1668,Dublin,0,saat,"Dublin Port, Ireland",53.3457,-6.2217,"Dublin Port, Ireland",0.0,gedeckt
+1669,Howth,0,saat,"Howth, Ireland",53.3913,-6.0681,"Howth, Ireland",0.0,gedeckt
+1670,Malahide,0,saat,"Malahide, Ireland",53.4527,-6.1503,"Malahide, Ireland",0.0,gedeckt
+1675,"Boyne River, Einfahrt",0,saat,"River Boyne Entrance, Ireland",53.7226,-6.2390,"River Boyne Entrance, Ireland",0.0,gedeckt
+1682,Carlingford Lough | Cranfield Point,0,saat,"Cranfield Point, Northern Ireland, United Kingdom",54.0229,-6.0633,"Cranfield Point, Northern Ireland, United Kingdom",0.0,gedeckt
+1683,Carlingford Lough | Warren Point,0,saat,"Warren Lighthouse, Ireland",55.2096,-6.9518,"Warren Lighthouse, Ireland",0.0,gedeckt
+1687,Killard Point | Strangford Lough,0,saat,"Killard Point, Northern Ireland, United Kingdom",54.3715,-5.5544,"Strangford, Northern Ireland, United Kingdom",0.0,gedeckt
+1688,Strangford | Strangford Lough,0,saat,"Strangford, Northern Ireland, United Kingdom",54.3715,-5.5544,"Strangford, Northern Ireland, United Kingdom",0.0,gedeckt
+1692,Belfast,0,saat,"Belfast (Lagan Weir), Northern Ireland, United Kingdom",54.6014,-5.9215,"Belfast (Lagan Weir), Northern Ireland, United Kingdom",0.0,gedeckt
+1694,Larne | Lough Larne,0,saat,"Larne, Northern Ireland, United Kingdom",54.8480,-5.7968,"Larne, Northern Ireland, United Kingdom",0.0,gedeckt
+1704,"Warren, Lough Foyle",0,saat,"River Foyle (Lisahally), Northern Ireland, United Kingdom",55.2096,-6.9518,"Warren Lighthouse, Ireland",0.0,gedeckt
+1705a,River Foyle | Lisahally,0,saat,"River Foyle (Lisahally), Northern Ireland, United Kingdom",55.0430,-7.2609,"River Foyle (Lisahally), Northern Ireland, United Kingdom",0.0,gedeckt
+1706,Londonderry,0,saat,"Londonderry, Northern Ireland, United Kingdom",55.0021,-7.3208,"Londonderry, Northern Ireland, United Kingdom",0.0,gedeckt
+1715,Fana Head | Lough Swilly,0,name,"Fanad Head, Ireland",55.2770,-7.6311,"Fanad Head, Ireland",0.0,gedeckt
+1716,Mulroy – Barre,0,name,"Mulroy Bay Bar, Ireland",55.2500,-7.7667,"Mulroy Bay Bar, Ireland",0.0,gedeckt
+1719,Cranford Bay,0,saat,"Cranford Bay, Ireland",55.1488,-7.6959,"Cranford Bay, Ireland",0.0,gedeckt
+1720,Downies Bay | Sheephaven,0,geo,"Downings Bay Hotel, R248, Rosguill ED, Letterkenny Municipal District, County Donegal, Ulster, Éire / Ireland",55.1942,-7.8359,"Downings Harbour, Ireland",0.6,gedeckt
+1722,Inishbofin Bay,0,saat,"Inishbofin Bay, Ireland",55.1692,-8.1669,"Inishbofin Bay, Ireland",0.0,gedeckt
+1725,Burtonport | Nordatlantischer Ozean,0,saat,"Burtonport, Ireland",54.9824,-8.4431,"Burtonport, Ireland",0.0,gedeckt
+1728,Donegal Bay | Killybegs,0,saat,"Killybegs, Ireland",54.6362,-8.4397,"Killybegs, Ireland",0.0,gedeckt
+1729,Donegal Bay | Donegal Harbour,0,saat,"Donegal Harbour (Salt Hill Quay), Ireland",54.6298,-8.2046,"Donegal Harbour (Salt Hill Quay), Ireland",0.0,gedeckt
+1731,Sligo Bay | Sligo Harbour,0,saat,"Sligo, Ireland",54.3026,-8.5674,"Sligo Harbour (Oyster Island), Ireland",0.0,gedeckt
+1735,Blacksod Bay,0,name,"Blacksod Quay, Ireland",54.1001,-10.0599,"Blacksod Quay, Ireland",0.0,gedeckt
+1737,Inishbiggle,0,saat,"Inishbiggle, Ireland",54.0034,-9.8850,"Inishbiggle, Ireland",0.0,gedeckt
+1752,Galway,0,saat,"Galway, Ireland",53.2690,-9.0480,"Galway, Ireland",0.0,gedeckt
+1757,Carrigaholt,0,saat,"Carrigaholt, Ireland",52.6010,-9.6987,"Carrigaholt, Ireland",0.0,gedeckt
+1758,Kilrush,0,saat,"Kilrush Lough, Ireland",52.6319,-9.5021,"Kilrush Lough, Ireland",0.0,gedeckt
+1759,Tarbert Island,0,name,"Tarbert Island (River Shannon), Ireland",52.5871,-9.3595,"Tarbert Island (River Shannon), Ireland",0.0,gedeckt
+1760,Foynes Island,0,saat,"Foynes Island, Ireland",52.6153,-9.1086,"Foynes Island, Ireland",0.0,gedeckt
+1766,Limerick Dock,0,saat,"Limerick Dock, Ireland",52.6649,-8.6301,"Limerick Dock, Ireland",0.0,gedeckt
+1767,Fenit Pier | Tralee Bay,0,saat,"Fenit (Tralee), Ireland",52.2696,-9.8621,"Fenit (Tralee), Ireland",0.0,gedeckt
+1771,Castlemaine Harbour | Cromane Point | Dingle Bay,0,saat,"Dingle Harbour, Ireland",52.1392,-10.2773,"Dingle Harbour, Ireland",0.0,gedeckt
+1772,Knights Town | Valentia Harbour,0,saat,"Knights Town (Valentia), Ireland",51.9264,-10.2859,"Knights Town (Valentia), Ireland",0.0,gedeckt
+1781,Bantry | Bantry Bay,0,saat,"Bantry, Ireland",51.6807,-9.4624,"Bantry, Ireland",0.0,gedeckt
+1801,Le Conquet,0,saat,"Le Conquet, France",48.3591,-4.7808,"Le Conquet, France",0.0,gedeckt
+1802,Brest,1,saat,"Brest (Estuaire Penfeld), France",48.3950,-4.4300,"Brest (Moulin Blanc), France",0.0,gedeckt
+1803a,Morgat,0,saat,"Morgat, France",48.2245,-4.4973,"Morgat, France",0.0,gedeckt
+1804,Douarnenez,0,saat,"Douarnenez, France",48.0993,-4.3214,"Douarnenez, France",0.0,gedeckt
+1806,Audierne,0,saat,"Audierne, France",48.0215,-4.5376,"Audierne, France",0.0,gedeckt
+1808,Le Guilvinec,0,saat,"Le Guilvinec, France",47.7931,-4.2812,"Le Guilvinec, France",0.0,gedeckt
+1810,Anse de – Bénodet | Bénodet | Anse de Bénodet,0,saat,"Bénodet (L'Odet), France",47.8810,-4.1158,"Bénodet (L'Odet), France",0.0,gedeckt
+1813,Concarneau,0,saat,"Concarneau, France",47.8735,-3.9072,"Concarneau, France",0.0,gedeckt
+1815,Ile de Groix | Port Tudy,0,saat,"Port Tudy (Île de Groix), France",47.6446,-3.4463,"Port Tudy (Île de Groix), France",0.0,gedeckt
+1817,Le Blavet | Lorient,0,saat,"Hennebont (Le Blavet), France",47.7982,-3.2772,"Hennebont (Le Blavet), France",0.0,gedeckt
+1818,Hennebont,0,saat,"Hennebont (Le Blavet), France",47.7982,-3.2772,"Hennebont (Le Blavet), France",0.0,gedeckt
+1819a,Port-Maria,0,saat,"Port-Maria, France",47.4756,-3.1220,"Port-Maria, France",0.0,gedeckt
+1820,Port -Haliguen,0,saat,"Port-Haliguen, France",47.4893,-3.0988,"Port-Haliguen, France",0.0,gedeckt
+1821,Belle – ÎIe | Le Palais,0,saat,"Le Palais (Belle-Île), France",47.3472,-3.1506,"Le Palais (Belle-Île), France",0.0,gedeckt
+1823,Port – Navalo,0,saat,"Port-Navalo, France",47.5499,-2.9166,"Port-Navalo, France",0.0,gedeckt
+1823a,Port du Crouesty,0,saat,"Arzon (Port Crouesty), France",47.5427,-2.8952,"Arzon (Port Crouesty), France",0.0,gedeckt
+1825,Arradon | Golfe du Morbihan,0,saat,"Arradon (Golfe du Morbihan), France",47.6142,-2.8294,"Arradon (Golfe du Morbihan), France",0.0,gedeckt
+1836,Saint – Nazaire,0,saat,"Saint-Nazaire, France",47.2669,-2.2016,"Saint-Nazaire, France",0.0,gedeckt
+1837,Donges,0,saat,"Donges (Loire), France",47.3057,-2.0883,"Donges (Loire), France",0.0,gedeckt
+1838,Cordemais,0,saat,"Cordemais (Loire), France",47.2772,-1.8898,"Cordemais (Loire), France",0.0,gedeckt
+1840,Chantenay | Nantes,0,saat,"Nantes, France",47.2042,-1.5742,"Nantes (Salorges), France",0.0,gedeckt
+1847,Port Joinville | Île d’Yeu,0,saat,"Port-Joinville (Île d'Yeu), France",46.7289,-2.3476,"Port-Joinville (Île d'Yeu), France",0.0,gedeckt
+1849,Les Sables-d´Olonne | Les Sables-d’ Olonne,0,name,"Les Sables-d'Olonne, France",46.4974,-1.7935,"Les Sables-d'Olonne, France",0.0,gedeckt
+1851,La Rochelle Pallice | La Rochelle-Pallice,0,name,"La Rochelle (La Pallice), France",46.1585,-1.2207,"La Rochelle (La Pallice), France",0.0,gedeckt
+1853,Île d’Aix,0,saat,"Île-d'Aix, France",46.0074,-1.1743,"Île-d'Aix, France",0.0,gedeckt
+1857,La Charente | Rochefort,0,saat,"Rochefort (Charente), France",45.9463,-0.9535,"Rochefort (Charente), France",0.0,gedeckt
+1858,Coureau d’ Oléron | Pointe de Gatseau,0,saat,"Pointe de Gatseau, France",45.8039,-1.2324,"Pointe de Gatseau, France",0.0,gedeckt
+1860,La Cayenne | Seudre,0,saat,"La Cayenne (Seudre), France",45.7889,-1.1255,"La Cayenne (Seudre), France",0.0,gedeckt
+1861a,Pointe de Grave,1,saat,"Port-Bloc (La Pointe de Grave), France",45.5685,-1.0616,"Port-Bloc (La Pointe de Grave), France",0.0,gedeckt
+1865,Le Verdon-sur-Mer,0,saat,"Le Verdon-sur-Mer, France",45.5459,-1.0408,"Le Verdon-sur-Mer, France",0.0,gedeckt
+1866,Pauillac,0,saat,"Trompeloup (Pauillac), France",45.2181,-0.7460,"Trompeloup (Pauillac), France",0.0,gedeckt
+1867,La Reuille,0,geo,"La Reuille, Bayon-sur-Gironde, Blaye, Gironde, Nouvelle-Aquitaine, France métropolitaine, 33710, France",45.0507,-0.6060,"Ambès, France",1.2,gedeckt
+1869,Le Marquis,0,saat,"Le Marquis (Garonne), France",45.0031,-0.5597,"Le Marquis (Garonne), France",0.0,gedeckt
+1871,Bordeaux,0,saat,"Bordeaux, France",44.8600,-0.5528,"Bordeaux, France",0.0,gedeckt
+1874,Dordogne | Libourne,0,saat,"Libourne (Isle / Dordogne), France",44.9129,-0.2488,"Libourne (Isle / Dordogne), France",0.0,gedeckt
+1876,Arcachon,0,saat,"Arcachon (Jetée d'Eyrac), France",44.6650,-1.1636,"Arcachon (Jetée d'Eyrac), France",0.0,gedeckt
+1878,Boucau – Bayonne,0,saat,"Bayonne (Pont Grenet), France",43.4976,-1.4794,"Bayonne (Pont Grenet), France",0.0,gedeckt
+1880,Saint Jean de Luz,0,saat,"Saint-Jean-de-Luz (Socoa), France",43.3952,-1.6816,"Saint-Jean-de-Luz (Socoa), France",0.0,gedeckt
+1887,Pasajes,0,geo,"Pasaia, Gipuzkoa, Euskadi, 20110, España",43.3240,-1.9201,"Pasaia, Spain",0.3,gedeckt
+1905,"Bilbao, Santurtzi | Santurtzi",1,saat,"Santurtzi (Bilbao), Spain",43.3517,-3.0452,"Santurtzi (Bilbao), Spain",0.0,gedeckt
+1909,Santander,0,saat,"Santander, Spain",43.4613,-3.7908,"Santander, Spain",0.0,gedeckt
+1920,Gijón,0,saat,"Gijón (El Musel), Spain",43.5581,-5.6986,"Gijón (El Musel), Spain",0.0,gedeckt
+1922,Avilés,0,saat,"Avilés, Spain",43.5917,-5.9300,"Avilés, Spain",0.0,gedeckt
+1932,Puerto de Alúmina Española,0,hand,ungefaehr (Handposition),43.7100,-7.4500,"San Cibrao, Spain",0.9,gedeckt
+1934,Cillero | Ria de Vivero,0,saat,"Cillero (Ría de Viveiro), Spain",43.6783,-7.5983,"Cillero (Ría de Viveiro), Spain",0.0,gedeckt
+1942,Ferrol | Nordatlantischer Ozean,0,name,"El Ferrol del Caudillo, Spain",43.4763,-8.2486,"El Ferrol del Caudillo, Spain",0.0,gedeckt
+1945,La Coruña,0,name,"A Coruña, Spain",43.3574,-8.3894,"A Coruña, Spain",0.0,gedeckt
+1955,Villagarcía,0,geo,"Vilagarcía, Vilagarcía de Arousa, O Salnés, Pontevedra, Galicia, 36600, España",42.5948,-8.7669,"Vilagarcía de Arousa, Spain",0.7,gedeckt
+1959,Marin | Ria de Pontevedra,0,saat,"Marín (Ría de Pontevedra), Spain",42.4061,-8.6911,"Marín (Ría de Pontevedra), Spain",0.0,gedeckt
+1960,Vigo | Ria de Vigo,0,saat,"Vigo, Spain",42.2432,-8.7260,"Vigo, Spain",0.0,gedeckt
+1963,Viana do Castelo,0,saat,"Viana do Castelo, Portugal",41.6850,-8.8396,"Viana do Castelo, Portugal",0.0,gedeckt
+1964,Esposende,0,saat,"Esposende, Portugal",41.5417,-8.7917,"Esposende, Portugal",0.0,gedeckt
+1965,Povoa de Varzim,0,saat,"Póvoa de Varzim, Portugal",41.3750,-8.7667,"Póvoa de Varzim, Portugal",0.0,gedeckt
+1966,Vila do Conde,0,saat,"Vila do Conde, Portugal",41.3400,-8.7483,"Vila do Conde, Portugal",0.0,gedeckt
+1967,Porto de Leixoes,0,saat,"Porto de Leixões (Matosinhos), Portugal",41.1867,-8.7045,"Porto de Leixões (Matosinhos), Portugal",0.0,gedeckt
+1968,Rio Douro,0,saat,"Crestuma (Rio Douro), Portugal",41.0700,-8.5033,"Crestuma (Rio Douro), Portugal",0.0,gedeckt
+1969,Rio Douro | Ponte D. Luis,0,saat,"Crestuma (Rio Douro), Portugal",41.0700,-8.5033,"Crestuma (Rio Douro), Portugal",0.0,gedeckt
+1970,Porto de Aveiro,0,name,"Barra de Aveiro (Gafanha da Nazaré), Portugal",40.6442,-8.7487,"Barra de Aveiro (Gafanha da Nazaré), Portugal",0.0,gedeckt
+1971,Torreira,0,geo,"Torreira, Murtosa, Aveiro, Portugal",40.7604,-8.7065,"Moranzel, Portugal",4.7,gedeckt
+1973,Figueira da Foz,0,saat,"Figueira da Foz, Portugal",40.1471,-8.8563,"Figueira da Foz, Portugal",0.0,gedeckt
+1974,Nazaré,0,saat,"Nazaré, Portugal",39.5860,-9.0740,"Nazaré, Portugal",0.0,gedeckt
+1975,S. Marthinho do Porto,0,name,"São Martinho do Porto, Portugal",39.5117,-9.1400,"São Martinho do Porto, Portugal",0.0,gedeckt
+1976,Peniche,0,saat,"Peniche, Portugal",39.3540,-9.3670,"Peniche, Portugal",0.0,gedeckt
+1977,Cascais,0,saat,"Cascais, Portugal",38.6932,-9.4154,"Cascais, Portugal",0.0,gedeckt
+1978,Lissabon,1,geo,"Lisboa, Portugal",38.7078,-9.1366,"Cacilhas, Portugal",2.4,gedeckt
+1980,Porto de Setúbal,0,name,"Setúbal-Tróia, Portugal",38.4948,-8.9010,"Setúbal-Tróia, Portugal",0.0,gedeckt
+1981,Porto de Sines,0,saat,"Sines, Portugal",37.9490,-8.8880,"Sines, Portugal",0.0,gedeckt
+1986,Lagos,0,saat,"Lagos, Portugal",37.0988,-8.6668,"Lagos, Portugal",0.0,gedeckt
+1988,Portimão,0,saat,"Portimão (exterior), Portugal",37.1319,-8.5338,"Portimão (interior), Portugal",0.0,gedeckt
+1990,Enseada de Albufeira,0,saat,"Albufeira (Ponta da Baleeira), Portugal",37.0825,-8.2604,"Albufeira (Ponta da Baleeira), Portugal",0.0,gedeckt
+1991,Cabo de Santa Maria,0,geo,"Cabo de Santa Maria, Faro (Sé e São Pedro), Faro, Portugal",36.9604,-7.8896,"Faro-Olhão, Portugal",2.8,gedeckt
+1992,Faro,0,saat,"Faro (Cais Comercial), Portugal",37.0033,-7.9217,"Faro (Cais Comercial), Portugal",0.0,gedeckt
+1994,Rio Guadiana | Vila Real de Santo António,0,saat,"Vila Real de Santo António, Portugal",37.1928,-7.4128,"Vila Real de Santo António, Portugal",0.0,gedeckt
+1995,Ayamonte | Rio Guadiana,0,saat,"Ayamonte, Spain",37.2117,-7.4050,"Ayamonte, Spain",0.0,gedeckt
+1999,Huelva | Mazagón,0,saat,"Mazagón (Huelva), Spain",37.1320,-6.8338,"Mazagón (Huelva), Spain",0.0,gedeckt
+2001,Chipiona,0,saat,"Chipiona, Spain",36.7474,-6.4287,"Chipiona, Spain",0.0,gedeckt
+2003,Bonanza,0,name,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain",36.8024,-6.3381,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain",0.0,gedeckt
+2008,Sevilla,0,saat,"Sevilla (Esclusa), Spain",37.3310,-5.9958,"Sevilla (Esclusa), Spain",0.0,gedeckt
+2009,Rota,0,saat,"Rota, Spain",36.6133,-6.3281,"Rota, Spain",0.0,gedeckt
+2010,Santa Maria,0,name,"El Puerto de Santa María, Spain",36.5983,-6.2217,"El Puerto de Santa María, Spain",0.0,gedeckt
+2011,Cádiz,0,saat,"Cádiz, Spain",36.5400,-6.2867,"Cádiz, Spain",0.0,gedeckt
+2012,La Carraca,0,name,"Arsenal de la Carraca, Spain",36.4979,-6.1823,"Arsenal de la Carraca, Spain",0.0,gedeckt
+2015,Barbate,0,saat,"Barbate, Spain",36.1850,-5.9333,"Barbate, Spain",0.0,gedeckt
+2021,Mittelmeer | Tarifa,0,saat,"Tarifa, Spain",36.0065,-5.6034,"Tarifa, Spain",0.0,gedeckt
+2022,Algeciras | Mittelmeer,0,saat,"Algeciras (San Roque), Spain",36.1770,-5.3984,"Algeciras (San Roque), Spain",0.0,gedeckt
+2023,Gibraltar,1,saat,Gibraltar,36.1487,-5.3654,Gibraltar,0.0,gedeckt
+2141,Smyrna,0,saat,"Izmir (Smyrna), Turkey",38.4188,27.1252,"Izmir (Smyrna), Turkey",0.0,gedeckt
+2196,Ceuta,0,region,"Ceuta, Spain",35.8916,-5.3150,"Ceuta, Spain",0.0,gedeckt
+2197,Tanger,0,region,"Tanger, Morocco",35.7883,-5.8031,"Tanger, Morocco",0.0,gedeckt
+2202,"Santa Cruz, Flores | Flores | Nordatlantischer Ozean",0,geo,"Rua das Flores, Santo Amaro, Santa Cruz da Graciosa, Açores, 9880-357, Portugal",39.0867,-28.0060,"Santa Cruz da Graciosa, Açores, Portugal",0.8,gedeckt
+2203,Praia da Vitória | Terceira,0,saat,"Praia da Vitória (Terceira), Açores, Portugal",38.7298,-27.0573,"Praia da Vitória (Terceira), Açores, Portugal",0.0,gedeckt
+2204,Angra do Heroísmo | Terceira,0,saat,"Angra do Heroísmo (Terceira), Açores, Portugal",38.6515,-27.2155,"Angra do Heroísmo (Terceira), Açores, Portugal",0.0,gedeckt
+2206,São Jorge | Baia das Velas,0,name,"Velas (S. Jorge), Açores, Portugal",38.6783,-28.2050,"Velas (S. Jorge), Açores, Portugal",0.0,gedeckt
+2207,Faial | Horta,0,saat,"Horta (Faial), Açores, Portugal",38.5339,-28.6214,"Horta (Faial), Açores, Portugal",0.0,gedeckt
+2207a,Madalena | Pico,0,name,"Madalena do Pico, Açores, Portugal",38.5350,-28.5300,"Madalena do Pico, Açores, Portugal",0.0,gedeckt
+2208,Ponta Delgada | São Miguel,0,saat,"Ponta Delgada (São Miguel), Açores, Portugal",37.7356,-25.6713,"Ponta Delgada (São Miguel), Açores, Portugal",0.0,gedeckt
+2209,"Santa Maria, Azoren | Baia da Vila do Porto",0,saat,"Vila do Porto (Santa Maria), Açores, Portugal",36.9438,-25.1493,"Vila do Porto (Santa Maria), Açores, Portugal",0.0,gedeckt
+2213,Porto do Funchal,0,region,"Funchal, Madeira, Portugal",32.6447,-16.9109,"Funchal, Madeira, Portugal",0.0,gedeckt
+2215,Ilha de Porto Santo,0,region,"Porto Santo, Madeira, Portugal",33.0597,-16.3149,"Porto Santo, Madeira, Portugal",0.0,gedeckt
+2218,"Santa Cruz, La Palma | Las Palmas",0,region,"Santa Cruz de La Palma, Islas Canarias, Spain",28.6778,-17.7679,"Santa Cruz de La Palma, Islas Canarias, Spain",0.0,gedeckt
+2221,"Santa Cruz, Teneriffe",0,region,"Santa Cruz de Tenerife, Islas Canarias, Spain",28.4772,-16.2411,"Santa Cruz de Tenerife, Islas Canarias, Spain",0.0,gedeckt
+2221a,Los Cristianos,0,region,"Los Cristianos (Tenerife), Islas Canarias, Spain",28.0483,-16.7183,"Los Cristianos (Tenerife), Islas Canarias, Spain",0.0,gedeckt
+2222,Gran Canaria | Puerto de la Luz,0,region,"Puerto de la Luz (Gran Canaria), Islas Canarias, Spain",28.1407,-15.4119,"Puerto de la Luz (Gran Canaria), Islas Canarias, Spain",0.0,gedeckt
+2223,Fuerteventura | Puerto Rosario,0,region,"Puerto del Rosario (Fuerteventura), Islas Canarias, Spain",28.4925,-13.8581,"Puerto del Rosario (Fuerteventura), Islas Canarias, Spain",0.0,gedeckt
+2224,Puerto de Arrecife | Lanzarote,0,region,"Arrecife (Lanzarote), Islas Canarias, Spain",28.9719,-13.5300,"Arrecife (Lanzarote), Islas Canarias, Spain",0.0,gedeckt
