@@ -5,7 +5,7 @@
 Je Ort: Position = Hafen/Anleger/Faehrterminal (Overpass, <= 2 km um den OSM-Ort), sonst der OSM-Ort selbst;
 zwei Jahre (2026-27) stuendliche Kartverket-Punktvorhersage dort, Fit wie py/kartverket_ersetzen.py
 (Rayleigh nach Laenge + SA; Kontrolle der Methode 11.11.: 1,6 cm gegen Messsaetze).
-Ausgelassen: 412a "Ulvik (Tjeldsund)" -- Ort am Tjeldsund nicht eindeutig (Nominatim fand Ulvika bei Kjoepsvik).
+412a "Ulvik (Tjeldsund)": Nominatim fand Ulvika bei Kjoepsvik; 14.11. Olivers Position (Ort 68.5642/16.3072, Stegende).
 Neue Saetze -> harmonics/utide/harmonics_utide_tidetables.txt und harmonics/help/neu_pruefen_20261113.csv.
 
 Usage: venv/bin/python py/kartverket_bsh_luecken.py [--schreiben]
@@ -46,6 +46,7 @@ ORTE = [('370', 'Kvalsund', 'Kvalsund, Hammerfest', 'Finnmark'),
         ('505', 'Osøyro', 'Osøyro, Bjørnafjorden', 'Vestland'),
         ('522a', 'Forsand (Høgsfjorden)', 'Forsand, Sandnes', 'Rogaland'),
         ('523', 'Lysebotn', 'Lysebotn, Sandnes', 'Rogaland'),
+        ('412a', 'Ulvik (Tjeldsund)', (68.56310, 16.31758), 'Troms'),   # Stegende laut Oliver (GM/OSM)
         ('530', 'Lillesand', (58.2490, 8.3779), 'Agder')]  # Nominatim gab 58.116/8.440 (15 km suedlich)
 
 
