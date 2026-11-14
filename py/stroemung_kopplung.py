@@ -29,7 +29,8 @@ KOPF = X.kopf_lesen(os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_
 PAARE = [('S2', 'K2'), ('K1', 'P1'), ('M2', 'N2')]
 # Pegelquellen fuer die Verhaeltnisse: Messfits, Tafelfits, TICON, Admiralty-Haupthaefen
 PEGELDATEIEN = ('harmonics_utide_observations.txt', 'harmonics_utide_tidetables.txt', 'harmonics_ticon4_worldwide.txt',
-                'harmonics_att_np202.txt', 'harmonics_att_np203.txt', 'harmonics_att_np207.txt', 'harmonics_att_np208.txt')
+                'harmonics_att_np202.txt', 'harmonics_att_np203.txt', 'harmonics_att_np207.txt', 'harmonics_att_np208.txt',
+                'harmonics-dwf-20251228-free.txt')   # 14.11.2026: NOAA-Harmonische (US-Kueste hatte sonst keinen Pegel in 150 km)
 _PEGEL = None
 _KOPF = {}
 

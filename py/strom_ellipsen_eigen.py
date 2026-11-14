@@ -210,6 +210,12 @@ def _rohreihe(text, name, la, lo):
     if m:
         p = os.path.join(ROOT, 'currents/Canada_IOS/roh', m.group(1) + '.csv')
         return pd.read_csv(p, index_col=0, parse_dates=True)[['u', 'v']].dropna() if os.path.exists(p) else None
+    m = re.search(r'# gocd_file: (\S+)', text)      # NCEI GOCD 14.11.2026 (py/gocd_stroemung.reihe, Stundenmittel)
+    if m:
+        import gocd_stroemung as GO
+        p = os.path.join(ROOT, 'currents/NCEI_GOCD/nc', os.path.basename(m.group(1)))
+        x = GO.reihe(p) if os.path.exists(p) else None
+        return x[0] if x else None
     m = re.search(r'# arctic_atlas: (\S+)', text)   # Arctic Tidal Current Atlas 14.11.2026 (aus den Ellipsen synthetisiert)
     if m:
         import arktis_stromatlas as AR

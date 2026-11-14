@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""IOS-British-Columbia- und Arktis-Atlas-Fits (py/ios_stroemung.py, py/arktis_stromatlas.py) eintragen (Oliver 14.11.2026).
+"""IOS-British-Columbia-, Arktis-Atlas- und NCEI-GOCD-Fits (py/ios_stroemung.py, py/arktis_stromatlas.py, py/gocd_stroemung.py)
+eintragen (Oliver 14.11.2026). Bereits eingetragene Saetze (gleicher Kopf-Schluessel) werden uebersprungen.
 
 Auswahl: Springstrom M2+S2 oder K1+O1 >= MIN_KN, bei Messfits (IOS) r2 >= MIN_R2.
 Dubletten (Oliver 20./25.10.: Aehnlichkeit statt Abstand): gleiche Stroemung = M2 +-15 %, Phase < 15 Grad (mod 180,
@@ -45,6 +46,20 @@ ARKTIS_NAME = {   # Abstand/Richtung vom Bezugsort nachgerechnet (GeoNames bzw. 
 }
 
 
+def latin1(t):
+    """Nur Zeichen ausserhalb Latin-1 ersetzen (Hawaii-Okina u. a.), Akzente bleiben (vgl. sicher_schreiben-Falle)."""
+    import unicodedata
+    out = []
+    for c in t:
+        if ord(c) < 256:
+            out.append(c)
+        elif c in '\u02bb\u2018\u2019\u02bc':
+            out.append("'")
+        else:
+            out.append(''.join(x for x in unicodedata.normalize('NFKD', c) if ord(x) < 128))
+    return ''.join(out)
+
+
 def km(a, b, c, d):
     return 111.2 * math.hypot(a - c, (b - d) * math.cos(math.radians(a)))
 
@@ -76,31 +91,36 @@ def bezugsort(lat, lon, pegel, orte):
         d = km(lat, lon, la, lo)
         w = 2.0 if pop >= 10000 else 1.6 if pop >= 2000 else 1.3 if pop >= 500 else 1.0
         if d / w < best[0]:
-            best = (d / w, d, o, '', 'British Columbia, Canada' if adm == '02' else 'Washington', la, lo)
+            tail = adm if len(adm) > 2 else ('British Columbia, Canada' if adm == '02' else 'Washington')
+            best = (d / w, d, o, '', tail, la, lo)
     _s, d, o, c, r, la, lo = best
     az = math.degrees(math.atan2((lon - lo) * math.cos(math.radians(lat)), lat - la)) % 360
-    return o, c, r, r.split(', ')[-1] if 'Canada' in r else 'United States', d, az
+    return o, c, r, r.split(', ')[-1] if ', ' in r else 'United States', d, az
 
 
 def kandidaten():
+    schon = set(re.findall(r'# (?:ios_file|arctic_atlas|gocd_file): (\S+)', open(ZIEL, encoding='iso-8859-1').read()))
     out = []
-    for pk, art in (('currents/Canada_IOS/fits.pkl', 'ios'), ('currents/Arctic_tidal_atlas/fits.pkl', 'arktis')):
+    for pk, art in (('currents/Canada_IOS/fits.pkl', 'ios'), ('currents/Arctic_tidal_atlas/fits.pkl', 'arktis'),
+                    ('currents/NCEI_GOCD/fits.pkl', 'gocd')):
         p = os.path.join(ROOT, pk)
         if not os.path.exists(p):
             continue
         for x in pickle.load(open(p, 'rb')):
-            if art == 'ios':
+            if art in ('ios', 'gocd'):
                 e, r, kop, tage = x
                 lat, lon, tiefe, datei = e['lat'], e['lon'], e['tief'], e['datei']
             else:
                 e, r, kop, tage, tiefe, lat, lon = x
                 datei = e['datei']
+            if datei in schon or e.get('url') in schon:
+                continue
             k = r['konst']
             spring = max(k.get('M2', (0, 0))[0] + k.get('S2', (0, 0))[0], k.get('K1', (0, 0))[0] + k.get('O1', (0, 0))[0])
-            if spring < MIN_KN or (art == 'ios' and r['r2'] < MIN_R2):
+            if spring < MIN_KN or (art in ('ios', 'gocd') and r['r2'] < MIN_R2):
                 continue
             # 14.11.: vor Vancouver Island 16-30 km draussen fast nur K1 (Schelfwellen), M2 0,02-0,06 kn -> nicht navigationsrelevant
-            if art == 'ios' and k.get('M2', (0, 0))[0] + k.get('S2', (0, 0))[0] < 0.2 and e['pegel_km'] > 10:
+            if art in ('ios', 'gocd') and k.get('M2', (0, 0))[0] + k.get('S2', (0, 0))[0] < 0.2 and e['pegel_km'] > 10:
                 continue
             out.append(dict(art=art, datei=datei, e=e, r=r, kop=kop, tage=tage, tiefe=tiefe, lat=lat, lon=lon, spring=spring))
     return out
@@ -119,10 +139,14 @@ def main(argv):
     pegel = [r for r in recs if not r['current'] and r['lat']]
     namen = {r['name'] for r in recs}
     import json
-    gp = os.path.join(ROOT, 'currents/Canada_IOS/orte_geonames.json')     # BC/WA-Orte ab 300 Einw. (GeoNames)
-    if os.path.exists(gp):
-        ORTE[:] = [o for o in json.load(open(gp)) if any(km(o[1], o[2], q['lat'], q['lon']) <= 5 for q in pegel
-                                                         if abs(q['lat'] - o[1]) < 0.1)]
+    alle = []
+    for gp in ('currents/Canada_IOS/orte_geonames.json', 'currents/NCEI_GOCD/orte_geonames.json'):   # GeoNames-Orte ab 300 Einw.
+        gp = os.path.join(ROOT, gp)
+        if os.path.exists(gp):
+            alle += [tuple(o) for o in json.load(open(gp))]
+    import numpy as np
+    pla, plo = np.array([q['lat'] for q in pegel]), np.array([q['lon'] for q in pegel])
+    ORTE[:] = [o for o in set(alle) if (111.2 * np.hypot(pla - o[1], (plo - o[2]) * math.cos(math.radians(o[1])))).min() <= 5]
     N = kandidaten()
     N.sort(key=lambda n: (-n['tage'], n['tiefe'] if n['tiefe'] >= 0 else 999))
     wahl, dub = [], []
@@ -159,11 +183,17 @@ def main(argv):
             ort, ctx_, rest, land, d, az = bezugsort(n['lat'], n['lon'], pegel, ORTE)
             name = '%s (%d km %s%s), %s Current' % (ort, max(1, round(d)), RICHTUNG[int((az + 11.25) % 360 // 22.5)],
                                                      (', ' + ctx_) if ctx_ else '', rest)
-            quelle = 'DFO Institute of Ocean Sciences moored current meter/ADCP (CIOOS), harmonic fit'
-            ctx = '# ios_file: %s' % n['datei']
-            notiz = 'IOS %s, Geraetetiefe %d m%s' % (n['datei'], n['tiefe'], ', ADCP-Zellen 5-25 m' if n['datei'].endswith('.adcp') else '')
+            if n['art'] == 'gocd':
+                quelle = 'NOAA NCEI Global Ocean Currents Database (GOCD), moored current meter, fit'
+                ctx = '# gocd_file: %s' % n['e']['url']
+                notiz = 'GOCD %s (%s), Tiefe %.0f m' % (n['datei'], n['e'].get('gerät', '')[:30], n['tiefe'])
+            else:
+                quelle = 'DFO Institute of Ocean Sciences moored current meter/ADCP (CIOOS), harmonic fit'
+                ctx = '# ios_file: %s' % n['datei']
+                notiz = 'IOS %s, Geraetetiefe %d m%s' % (n['datei'], n['tiefe'], ', ADCP-Zellen 5-25 m' if n['datei'].endswith('.adcp') else '')
+        name = latin1(name)
         if name in namen:
-            name = name.replace(' Current', ' (IOS) Current' if n['art'] == 'ios' else ' (Atlas) Current')
+            name = name.replace(' Current', {'ios': ' (IOS)', 'gocd': ' (NCEI)'}.get(n['art'], ' (Atlas)') + ' Current')
         namen.add(name)
         assert len('# source: ' + quelle) <= 90, quelle
         z = ['#', '# ' + name, '# BEGIN HOT COMMENTS', '# country: %s' % land, '# source: ' + quelle, ctx,
