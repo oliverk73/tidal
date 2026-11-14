@@ -315,6 +315,35 @@ MH1_PUNKTE = [  # Name, Bild-x, Bild-y (110 dpi) ; Stunde: (Spring kn, Richtung,
 ]
 
 
+# Band 3 (Upper Reaches, 14.11.2026): Seiten 90 Grad gedreht, 150 dpi, Zuschnitt (6 %, 13 %, 95 %, 82 %) -> nordorientiert.
+# Massstab aus dem Balken 220,3 px/km; Drehung 3 Grad und Lage aus der Cleddau Bridge (OSM-Mitte 51.70672/-4.93372 =
+# Mitte der gezeichneten Bruecke Bild 1195/378). Zahlen an den Pfeilen = Zehntelknoten, halbstuendlich, hier stuendlich
+# abgelesen. Band 4 (Pembroke Reach) ist ein vergroesserter Ausschnitt davon -> nicht extra. Hobbs Point weggelassen:
+# Flut 2,1 kn, Ebbe nur 0,4 kn mit wechselnder Richtung (Wirbel, Hauptebbe weiter suedlich).
+MH3_GEO = (220.3, 3.0, 1195, 378, 51.70672, -4.93372)
+MH3_PUNKTE = [  # Name, Bild-x, Bild-y ; Stunde: (Spring kn, Richtung im Bild, Nipp kn, Richtung im Bild)
+    ('Cleddau Bridge (Milford Haven)', 1185, 410, {
+        -6: (0.1, 125, 0.0, 55), -5: (0.5, 55, 0.3, 55), -4: (1.1, 55, 0.5, 55), -3: (1.7, 55, 0.7, 55), -2: (2.4, 55, 0.8, 55),
+        -1: (2.2, 55, 0.8, 55), 0: (0.6, 50, 0.1, 55), 1: (1.3, 290, 0.6, 280), 2: (1.6, 290, 0.8, 280), 3: (1.6, 290, 0.7, 280),
+        4: (1.8, 280, 0.4, 280), 5: (1.1, 285, 0.2, 280), 6: (0.4, 280, 0.1, 280)}),
+    ('Cleddau Bridge (0.7 km E, Daugleddau)', 1350, 462, {
+        -6: (0.6, 250, 0.1, 115), -5: (0.4, 160, 0.3, 115), -4: (0.9, 115, 0.7, 115), -3: (1.8, 115, 0.9, 115), -2: (2.4, 115, 1.0, 115),
+        -1: (2.2, 115, 0.8, 115), 0: (0.8, 115, 0.2, 115), 1: (1.2, 275, 0.7, 275), 2: (2.3, 275, 1.0, 275), 3: (2.6, 272, 0.8, 275),
+        4: (2.2, 272, 0.6, 275), 5: (1.4, 272, 0.3, 275), 6: (0.8, 250, 0.2, 270)}),
+    ('Pennar Point (Milford Haven)', 335, 598, {
+        -6: (0.1, 330, 0.1, 290), -5: (0.6, 105, 0.3, 105), -4: (1.2, 108, 0.6, 105), -3: (1.7, 105, 0.7, 105), -2: (1.9, 105, 0.8, 105),
+        -1: (1.6, 105, 0.7, 105), 0: (0.8, 105, 0.2, 105), 1: (0.6, 285, 0.3, 290), 2: (1.5, 295, 0.7, 295), 3: (1.7, 295, 0.7, 295),
+        4: (1.6, 295, 0.6, 295), 5: (1.1, 295, 0.4, 295), 6: (0.5, 120, 0.1, 60)}),
+]
+
+
+def mh3_ll(x, y):
+    s, rot, ax, ay, la0, lo0 = MH3_GEO
+    e, n = (x - ax) / s, -(y - ay) / s
+    d, b = math.hypot(e, n), math.degrees(math.atan2(e, n)) - rot
+    return la0 + d * math.cos(math.radians(b)) / 111.2, lo0 + d * math.sin(math.radians(b)) / (111.2 * math.cos(math.radians(la0)))
+
+
 def mh1_ll(x, y):
     s, rot, lo0, la0 = MH1_GEO
     c, sn = math.cos(math.radians(rot)), math.sin(math.radians(rot))
@@ -338,12 +367,13 @@ def milford(argv):
     print('Hub Spring %.2f m, Nipp %.2f m' % (hub_s, hub_n))
     bl = []
     vorhanden = set(open(ZIEL, encoding='iso-8859-1').read().split('\n'))
-    for name, x, y, werte, band in [p + (2,) for p in MH_PUNKTE] + [p + (1,) for p in MH1_PUNKTE]:
+    for name, x, y, werte, band in [p + (2,) for p in MH_PUNKTE] + [p + (1,) for p in MH1_PUNKTE] + [p + (3,) for p in MH3_PUNKTE]:
         if '%s, Wales, United Kingdom Current' % name in vorhanden:
             continue
-        la, lo = mh_ll(x, y) if band == 2 else mh1_ll(x, y)
-        sp = {h: (a * math.sin(math.radians(r - 2.3)), a * math.cos(math.radians(r - 2.3))) for h, (a, r, _n, _r) in werte.items()}
-        ni = {h: (n * math.sin(math.radians(r - 2.3)), n * math.cos(math.radians(r - 2.3))) for h, (_a, _r, n, r) in werte.items()}
+        la, lo = mh_ll(x, y) if band == 2 else mh1_ll(x, y) if band == 1 else mh3_ll(x, y)
+        dr = 3.0 if band == 3 else 2.3
+        sp = {h: (a * math.sin(math.radians(r - dr)), a * math.cos(math.radians(r - dr))) for h, (a, r, _n, _r) in werte.items()}
+        ni = {h: (n * math.sin(math.radians(r - dr)), n * math.cos(math.radians(r - dr))) for h, (_a, _r, n, r) in werte.items()}
         r = C.analyse(reihe_sn(sp, ni, hafen, hd, hub_s, hub_n), la, C.KONST)
         voll = '%s, Wales, United Kingdom Current' % name
         print('%-55s %.4f %.4f  Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn' % (voll, la, lo, r['achse'], r['m2'], r['s2'], r['smax']))
@@ -513,14 +543,18 @@ def rohreihe(text, name, la, lo):
         sp = {h: (a * math.sin(math.radians(r)), a * math.cos(math.radians(r))) for h, (a, _n, r) in TEES_KN.items()}
         ni = {h: (n * math.sin(math.radians(r)), n * math.cos(math.radians(r))) for h, (_a, n, r) in TEES_KN.items()}
         return reihe_sn(sp, ni, hafen, hd, 2 * (w['M2'][0] + w['S2'][0]) * f, 2 * (w['M2'][0] - w['S2'][0]) * f)
-    if ctx in ('MHPA-ATLAS-VOL2', 'MHPA-ATLAS-VOL1'):
-        for pname, _x, _y, werte in MH_PUNKTE + MH1_PUNKTE:
-            if pname.split(' (')[0] == kurz.split(' (')[0]:
+    if ctx in ('MHPA-ATLAS-VOL2', 'MHPA-ATLAS-VOL1', 'MHPA-ATLAS-VOL3'):
+        alle = [p + (2.3,) for p in MH_PUNKTE + MH1_PUNKTE] + [p + (3.0,) for p in MH3_PUNKTE]
+        # 14.11.: erst voller Name (zwei 'Cleddau Bridge (...)'-Saetze), dann wie bisher der Teil vor der Klammer
+        voll = re.sub(r', Wales, United Kingdom Current$', '', name)
+        treffer = [p for p in alle if p[0] == voll] or [p for p in alle if p[0].split(' (')[0] == kurz.split(' (')[0]]
+        for pname, _x, _y, werte, dr in treffer[:1]:
+            if True:
                 hafen = 'Milford Haven, Wales, United Kingdom'
                 hd = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_observations.txt')
                 _z0, w, _e, _m = X.satz_lesen(hd, hafen)
-                sp = {h: (a * math.sin(math.radians(r - 2.3)), a * math.cos(math.radians(r - 2.3))) for h, (a, r, _n, _r) in werte.items()}
-                ni = {h: (n * math.sin(math.radians(r - 2.3)), n * math.cos(math.radians(r - 2.3))) for h, (_a, _r, n, r) in werte.items()}
+                sp = {h: (a * math.sin(math.radians(r - dr)), a * math.cos(math.radians(r - dr))) for h, (a, r, _n, _r) in werte.items()}
+                ni = {h: (n * math.sin(math.radians(r - dr)), n * math.cos(math.radians(r - dr))) for h, (_a, _r, n, r) in werte.items()}
                 return reihe_sn(sp, ni, hafen, hd, 2 * (w['M2'][0] + w['S2'][0]), 2 * (w['M2'][0] - w['S2'][0]))
     if ctx in ('NP337-MONTYMARINER', 'NPATLAS-MONTYMARINER'):
         for pname, gebiet, _x, _y, werte in MM_PUNKTE:
