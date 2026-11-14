@@ -41,6 +41,8 @@ def vorhersage(code, la, lo):
     u = '%s?%s&fromtime=2026-01-01T00:00&totime=2028-01-01T00:00&datatype=pre&refcode=cd&lang=en&interval=60&dst=0&tzone=0' % (API, q)
     x = urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'weather-tides/1.0'}), timeout=300).read().decode()
     m = re.search(r'<location ([^>]*?)/?>', x)
+    if not m:                                                      # 14.11.2026 Flekkefjord: Lista-Hellvik ohne Daten
+        return None, None, None
     a = dict(re.findall(r'(\w+)="([^"]*)"', m.group(1)))
     pts = re.findall(r'value="(-?[\d.]+)" time="([^"]+)" flag="pre"', x)
     s = pd.Series([float(a) / 100 for a, b in pts], index=pd.to_datetime([b for a, b in pts], utc=True))
@@ -61,6 +63,9 @@ def main(argv):
     for name, prov, la, lo, code, notiz in SAETZE:
         start = len(neu)
         s, bezug, faktor = vorhersage(code, la, lo)
+        if s is None:
+            print('%-40s keine Kartverket-Daten (Lista-Hellvik/Svalbard?) -> uebersprungen' % name)
+            continue
         # Bis 11.11. abends fest 730 Tage: bei KAZ (nur 1 Jahr) blies der Fit Paare gleicher Frequenz auf (bis 72 km).
         # Kartverket liefert fuer manche Pegel nur ein Jahr (KAZ): Rayleigh nach echter Laenge; SA trotzdem mit, wenn >= 360 Tage
         tage = (s.index[-1] - s.index[0]).days
