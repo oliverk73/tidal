@@ -206,6 +206,15 @@ def _rohreihe(text, name, la, lo):
     if 'CMEMS-NWS-AMM15' in text:
         import nws_strom as NW                          # Copernicus-Nordseemodell 13.11.2026, geeicht wie der Satz
         return NW.rohreihe(text, la, lo)
+    m = re.search(r'# ios_file: (\S+)', text)       # IOS British Columbia 14.11.2026 (py/ios_stroemung.py, Stundenmittel u,v m/s)
+    if m:
+        p = os.path.join(ROOT, 'currents/Canada_IOS/roh', m.group(1) + '.csv')
+        return pd.read_csv(p, index_col=0, parse_dates=True)[['u', 'v']].dropna() if os.path.exists(p) else None
+    m = re.search(r'# arctic_atlas: (\S+)', text)   # Arctic Tidal Current Atlas 14.11.2026 (aus den Ellipsen synthetisiert)
+    if m:
+        import arktis_stromatlas as AR
+        p = os.path.join(ROOT, 'currents/Arctic_tidal_atlas/nc', m.group(1).replace('-', '_') + '.nc')
+        return AR.reihe(p)[0] if os.path.exists(p) else None
     m = re.search(r'# shom_atlas: (\S+)', text)
     if m:
         return _shom(m.group(1), la, lo)
