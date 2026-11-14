@@ -49,9 +49,9 @@ def vorhersage(code, la, lo):
 
 def main(argv):
     global SAETZE
-    if '--liste' in argv:       # 13.11.2026: CSV name,prov,lat,lon (Kuestenpunkte, ersetzen FES-Hafensaetze vom 13.11.)
+    if '--liste' in argv:       # 13.11.2026: CSV name,prov,lat,lon (Kuestenpunkte, ersetzen FES-Saetze; 13.11. 44, 14.11. 10)
         import csv
-        SAETZE = [(z['name'], z['prov'], float(z['lat']), float(z['lon']), None, 'ersetzt FES-Hafensatz vom 13.11.2026 (Kartverket in Norwegen genauer, Pruefung 11.11.)')
+        SAETZE = [(z['name'], z['prov'], float(z['lat']), float(z['lon']), None, 'ersetzt FES-Luecken-Satz (Kartverket in Norwegen genauer, Pruefung 11.11.)')
                   for z in csv.DictReader(open(argv[argv.index('--liste') + 1], encoding='utf-8'))]
     kopf = X.kopf_lesen(ZIEL)
     namen, speeds, arg, fak = kopf

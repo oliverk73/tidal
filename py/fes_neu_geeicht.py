@@ -21,6 +21,8 @@ Zeitzone und Z0 vom alten Satz, Eichung wie oben; den alten Satz archiviert py/s
 
 Usage: venv/bin/python py/fes_neu_geeicht.py [--welt CSV [--exakt] | --ersetzen CSV] [--schreiben]   -> harmonics/utide/harmonics_fes2022.txt
 --exakt: Position aus der CSV unveraendert, wenn sie im Wasser liegt (Oliver-Koordinaten).
+Norwegen (14.11.2026): Orte mit Kartverket-Deckung bekommen keinen FES-Satz, sondern landen in
+harmonics/help/norwegen_kartverket_<datum>.csv fuer py/kartverket_saetze.py --liste (Svalbard/Lista-Hellvik bleiben FES).
 """
 import cmath
 import datetime as dt
@@ -109,6 +111,13 @@ def seepunkt(L, la, lo, richtung, exakt=False):
     return best
 
 
+def kartverket_deckt(la, lo):
+    """Kartverket-Punktvorhersage vorhanden (Pruefung 11.11.2026): nicht Svalbard/Jan Mayen, nicht Lista-Hellvik."""
+    if la > 70.5 and not (lo > 15 and la < 71.5):                  # Svalbard, Jan Mayen, Bjoernoeya (Festland reicht bis 71,2)
+        return False
+    return not (58.0 <= la <= 58.55 and 5.6 <= lo <= 6.95)          # Lista-Hellvik (Egersund, Hidra): keine Daten
+
+
 def main(argv):
     namen, speeds, arg, fak = kopf = X.kopf_lesen(ZIEL)
     ds = {}
@@ -174,6 +183,7 @@ def main(argv):
     heute = dt.date.today().strftime('%Y%m%d')
     T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
     n0 = len(T)                                                    # alles danach sind neue Bloecke
+    kartverket = []
     tg = np.arange(dt.datetime(2008, 1, 1).timestamp(), dt.datetime(2027, 1, 1).timestamp(), 3600.0)
     for ort, staat, la0, lo0, richtung, land, tz in orte:
         if richtung == 'alt':
@@ -191,6 +201,11 @@ def main(argv):
             continue
         (la, lo), d, az = sp
         la_k, lo_k = (la0, lo0) if '--exakt' in argv else (la, lo)   # Olivers Punkt im Hafen bleibt, FES vom naechsten Seepunkt
+        if land == 'Norway' and kartverket_deckt(la_k, lo_k):
+            # 14.11.2026 (Oliver): in Norwegen Kartverket statt FES (Pruefung 11.11.: 1,6 cm gegen Messsaetze, FES 3,5 cm)
+            print('%-40s Norwegen -> Kartverket-Liste' % name)
+            kartverket.append((name, staat or '', '%.4f' % la_k, '%.4f' % lo_k))
+            continue
         nah = sorted(refs, key=lambda x: H.km({'lat': la, 'lon': lo}, x[0]))[:REF_ANZAHL]
         nah = [x for x in nah if H.km({'lat': la, 'lon': lo}, x[0]) <= REF_KM]
         eich = {}
@@ -250,6 +265,17 @@ def main(argv):
         T += neu
         schreiben(ZIEL, '\n'.join(T) + '\n')
         print('->', os.path.relpath(ZIEL, ROOT))
+    if kartverket:
+        import csv
+        kv = os.path.join(ROOT, 'harmonics/help/norwegen_kartverket_%s.csv' % heute)
+        neu_datei = not os.path.exists(kv)
+        with open(kv, 'a', encoding='utf-8', newline='') as fh:
+            w = csv.writer(fh)
+            if neu_datei:
+                w.writerow(['name', 'prov', 'lat', 'lon'])
+            w.writerows(kartverket)
+        print('%d Orte in Norwegen nicht als FES -> %s' % (len(kartverket), os.path.relpath(kv, ROOT)))
+        print('   weiter: venv/bin/python py/kartverket_saetze.py --liste %s --schreiben' % os.path.relpath(kv, ROOT))
 
 
 if __name__ == '__main__':
