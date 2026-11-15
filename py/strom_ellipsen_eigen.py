@@ -206,6 +206,10 @@ def _rohreihe(text, name, la, lo):
     if 'CMEMS-NWS-AMM15' in text:
         import nws_strom as NW                          # Copernicus-Nordseemodell 13.11.2026, geeicht wie der Satz
         return NW.rohreihe(text, la, lo)
+    m = re.search(r'# roh_csv: (\S+)', text)        # allgemeine Stundenreihe u,v m/s (FORCE Minas 15.11.2026)
+    if m:
+        p = os.path.join(ROOT, m.group(1))
+        return pd.read_csv(p, index_col=0, parse_dates=True)[['u', 'v']].dropna() if os.path.exists(p) else None
     m = re.search(r'# ios_file: (\S+)', text)       # IOS British Columbia 14.11.2026 (py/ios_stroemung.py, Stundenmittel u,v m/s)
     if m:
         p = os.path.join(ROOT, 'currents/Canada_IOS/roh', m.group(1) + '.csv')
