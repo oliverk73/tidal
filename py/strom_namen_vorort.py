@@ -142,8 +142,15 @@ def fern(argv):
     L = json.load(open(LM, encoding='utf-8'))
     R = [r for r in H.load_records() if r['current'] and r['lat'] is not None]
     alle = {r['name'] for r in R}
+    ent = os.path.join(ROOT, 'harmonics/help/strom_namen_entscheid.csv')   # Olivers Ja/Nein auf der Karte
+    erledigt = set()
+    if os.path.exists(ent):
+        for z in csv.DictReader(open(ent, encoding='utf-8')):
+            erledigt |= {z['name'], z['neu']}
     zeilen = []
     for r in R:
+        if r['name'] in erledigt:
+            continue
         v = fern_vorschlag(r['lat'], r['lon'], L, r['name'])
         if not v or v[0] == r['name']:
             continue

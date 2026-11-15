@@ -2435,6 +2435,37 @@ def update_coordinates():
         return jsonify(error=str(e)), 500
 
 
+@app.route("/stromname_entscheid", methods=["POST"])
+def stromname_entscheid():
+    """Ja/Nein zur Stromnamen-Fernregel (py/strom_namen_vorort.py --fern): Entscheidung merken, Vorschlag austragen."""
+    import csv as _csv
+    d = request.get_json() or {}
+    src, name = d.get("source", ""), d.get("name", "")
+    if not src or not name or d.get("entscheid") not in ("ja", "nein", "eigen"):
+        return jsonify(error="source, name, entscheid fehlen"), 400
+    help_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "harmonics", "help")
+    ent = os.path.join(help_dir, "strom_namen_entscheid.csv")
+    neu_datei = not os.path.exists(ent)
+    with open(ent, "a", newline="", encoding="utf-8") as fh:
+        wr = _csv.writer(fh)
+        if neu_datei:
+            wr.writerow(["datei", "name", "vorschlag", "neu", "entscheid", "zeit"])
+        wr.writerow([os.path.splitext(src)[0] + ".txt", name, d.get("vorschlag", ""), d.get("neu", ""), d["entscheid"],
+                     datetime.now().strftime("%Y-%m-%d %H:%M")])
+    vor = os.path.join(help_dir, "strom_namen_vorschlag.csv")
+    if os.path.exists(vor):
+        with open(vor, encoding="utf-8", newline="") as fh:
+            zeilen = list(_csv.DictReader(fh))
+        rest = [z for z in zeilen if not (os.path.splitext(z["datei"])[0] == os.path.splitext(src)[0] and z["name"] == name)]
+        if len(rest) != len(zeilen) and zeilen:
+            with open(vor, "w", encoding="utf-8", newline="") as fh:
+                wr = _csv.DictWriter(fh, fieldnames=list(zeilen[0]))
+                wr.writeheader()
+                wr.writerows(rest)
+    print(f"✅ Stromname {d['entscheid']}: {name!r} -> {d.get('neu') or d.get('vorschlag')!r}")
+    return jsonify(ok=True)
+
+
 @app.route("/update_station_name", methods=["POST"])
 def update_station_name():
     try:

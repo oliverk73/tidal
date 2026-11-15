@@ -2211,7 +2211,33 @@
   }
 
   // --- Station umbenennen ---
-  function renameStation(linkEl) {
+  function stromnameEntscheid(source, name, vorschlag, neu, entscheid) {
+    return fetch('/stromname_entscheid', {method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({source: source, name: name, vorschlag: vorschlag, neu: neu, entscheid: entscheid})})
+      .then(function (r) { return r.json(); });
+  }
+
+  function vorschlagNein(linkEl) {
+    var result = findOpenPopupMarker();
+    if (!result) return;
+    var m = result.marker;
+    var pc = m.getPopup().getContent();
+    if (typeof pc === 'function') pc = pc(m);
+    var nm = pc.match(/<b>([^<]+)<\/b>/);
+    var full = nm ? nm[1].replace(/&quot;/g, '"') : '';
+    var src = (pc.match(/📄\s*([^\s<]+\.tcd)/) || [])[1] || '';
+    var i = full.indexOf(' \u2192 ');
+    if (i < 0) return;
+    var alt = full.slice(0, i).trim(), vs = full.slice(i + 3).trim();
+    stromnameEntscheid(src, alt, vs, '', 'nein').then(function (data) {
+      if (!data.ok) { alert('Error: ' + (data.error || 'Unknown')); return; }
+      m.getPopup().setContent(pc.replace(/<b>[^<]+<\/b>/, '<b>' + alt.replace(/"/g, '&quot;') + '</b>')
+        .replace(/<span class="vorschlag-knoepfe">.*?<\/span>/, '<span>❌ Vorschlag abgelehnt</span>'));
+      if (m.setOpacity) m.setOpacity(0.4);
+    });
+  }
+
+  function renameStation(linkEl, modus) {
     var popup = linkEl.closest('.leaflet-popup');
     if (!popup) return;
     var result = findOpenPopupMarker();
@@ -2230,7 +2256,7 @@
     var vorschlag = '';                      // Gruppe "Stromname Vorschlag": Anzeige "alt  →  neu"
     var pfeil = oldName.indexOf(' \u2192 ');
     if (pfeil >= 0) { vorschlag = oldName.slice(pfeil + 3).trim(); oldName = oldName.slice(0, pfeil).trim(); }
-    var newName = prompt('Rename station:\n\nFile: ' + sourceFile, vorschlag || oldName);
+    var newName = (modus === 'ja' && vorschlag) ? vorschlag : prompt('Rename station:\n\nFile: ' + sourceFile, vorschlag || oldName);
     if (!newName || newName.trim() === '' || newName.trim() === oldName) return;
     newName = newName.trim();
 
@@ -2249,10 +2275,15 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       if (data.ok) {
-        alert('Name saved: ' + data.new_name);
+        if (vorschlag) {                      // Entscheidung merken: Vorschlag uebernommen oder eigener Name
+          stromnameEntscheid(sourceFile, oldName, vorschlag, data.new_name, data.new_name === vorschlag ? 'ja' : 'eigen');
+          if (targetMarker.setOpacity) targetMarker.setOpacity(0.4);
+        }
+        if (modus !== 'ja') alert('Name saved: ' + data.new_name);
         // Popup-Inhalt aktualisieren
         var updatedContent = popupContent
-          .replace(/<b>[^<]+<\/b>/, '<b>' + data.new_name.replace(/"/g, '&quot;') + '</b>');
+          .replace(/<b>[^<]+<\/b>/, '<b>' + data.new_name.replace(/"/g, '&quot;') + '</b>')
+          .replace(/<span class="vorschlag-knoepfe">.*?<\/span>/, '<span>✅ umbenannt</span>');
         targetMarker.getPopup().setContent(updatedContent);
         // stationCoords aktualisieren
         if (typeof stationCoords !== 'undefined' && stationCoords[oldName]) {
