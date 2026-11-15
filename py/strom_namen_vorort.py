@@ -30,6 +30,8 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
 LM = os.path.join(ROOT, 'quellen/tidal_streams/strom_landmarken_geonames.json')
+ORTE = os.path.join(ROOT, 'quellen/tidal_streams/strom_orte_geonames.json')   # [name, lat, lon, einwohner] (PPL*, --orte)
+ORT_MIN, ORT_FAKTOR = 5000, 10   # naeherer Ort schlaegt Bezugsort, wenn >= 5000 Ew. und >= 10x so gross (Oliver 15.11.: Fort William statt Corpach)
 RICHTUNG = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
 PUNKT = {'LTHSE': 0, 'CAPE': 1, 'PT': 1, 'PTS': 1, 'PEN': 2, 'RKS': 3, 'RK': 3, 'RF': 3, 'SHOL': 4, 'RFSU': 3, 'SHSU': 4, 'BNKU': 4, 'BNK': 4, 'ISLET': 5, 'ISLS': 6, 'ISL': 7}
 WASSER = {'STRT', 'CHN', 'CHNM', 'INLT', 'SD', 'HBR', 'BAY', 'NRWS', 'PASS', 'FJD'}
@@ -137,9 +139,59 @@ def fern_vorschlag(la, lo, L, name):
     return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(teile)) if teile else '', tail), n, d
 
 
+def ort_vorschlag(la, lo, O, name):
+    """Naeherer, viel groesserer Ort statt kleinem Bezugsort -> (Vorschlag, Ort, km) oder None."""
+    m = FERN_MUSTER.match(name)
+    if not m:
+        return None
+    ref, dref, ri, rest, tail = m.group(1), int(m.group(2)), m.group(3), m.group(4), m.group(5)
+    umgeb = [(km(la, lo, a, b), n, e) for n, a, b, e in O if abs(a - la) < 0.4 and abs(b - lo) < 0.8]
+    e_ref = [e for d, n, e in umgeb if n == ref and abs(d - dref) < 5]
+    if not e_ref:                                               # Bezug ist kein Ort (Kap, Insel, Feuer, Rinne) -> bleibt
+        return None
+    e_ref = max(e_ref)
+    kand = sorted((d, n, e) for d, n, e in umgeb
+                  if d <= 0.75 * dref and e >= max(ORT_MIN, ORT_FAKTOR * max(e_ref, 500)) and not (worte(n) & worte(ref)))
+    if not kand:
+        return None
+    d, n, e = max(kand, key=lambda x: x[2])                     # der groesste unter den naeheren
+    n = latin1(n)
+    return '%s (%d km %s%s), %s Current' % (n, max(1, round(d)), richtung(la, lo, *next((a, b) for nn, a, b, ee in O if latin1(nn) == n and ee == e)), rest, tail), n, d
+
+
+def orte(argv):
+    """Orte mit Einwohnerzahl (PPL*, >= ORT_MIN) im Umkreis aller Stromsaetze aus allCountries -> ORTE."""
+    import health_check as H
+    zellen = set()
+    for r in H.load_records():
+        if r['current'] and r['lat'] is not None:
+            for di in range(-4, 5):
+                for dj in range(-8, 9):
+                    zellen.add((int(math.floor(r['lat'] * 10)) + di, int(math.floor(r['lon'] * 10)) + dj))
+    out = []
+    with open(os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/allCountries.txt'), encoding='utf-8') as fh:
+        for z in fh:
+            t = z.split('\t', 15)
+            if t[6] != 'P' or not t[7].startswith('PPL') or t[7] == 'PPLH' or int(t[14] or 0) < ORT_MIN:
+                continue
+            a, b = float(t[4]), float(t[5])
+            if (int(math.floor(a * 10)), int(math.floor(b * 10))) in zellen:
+                out.append([t[1], a, b, int(t[14])])
+    # Bezugsorte selbst (auch klein/ohne Einwohner) fuer e_ref: alle PPL mit Namen aus FERN_MUSTER
+    refs = {FERN_MUSTER.match(r['name']).group(1) for r in H.load_records() if r['current'] and FERN_MUSTER.match(r['name'] or '')}
+    with open(os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/allCountries.txt'), encoding='utf-8') as fh:
+        for z in fh:
+            t = z.split('\t', 15)
+            if t[6] == 'P' and t[1] in refs and int(t[14] or 0) < ORT_MIN:
+                out.append([t[1], float(t[4]), float(t[5]), int(t[14] or 0)])
+    json.dump(out, open(ORTE, 'w', encoding='utf-8'), ensure_ascii=False)
+    print(len(out), 'Orte ->', os.path.relpath(ORTE, ROOT))
+
+
 def fern(argv):
     import health_check as H
     L = json.load(open(LM, encoding='utf-8'))
+    O = json.load(open(ORTE, encoding='utf-8')) if os.path.exists(ORTE) else []
     R = [r for r in H.load_records() if r['current'] and r['lat'] is not None]
     alle = {r['name'] for r in R}
     ent = os.path.join(ROOT, 'harmonics/help/strom_namen_entscheid.csv')   # Olivers Ja/Nein auf der Karte
@@ -151,7 +203,7 @@ def fern(argv):
     for r in R:
         if r['name'] in erledigt:
             continue
-        v = fern_vorschlag(r['lat'], r['lon'], L, r['name'])
+        v = fern_vorschlag(r['lat'], r['lon'], L, r['name']) or ort_vorschlag(r['lat'], r['lon'], O, r['name'])
         if not v or v[0] == r['name']:
             continue
         neu = v[0] if v[0] not in alle else v[0].replace(' Current', ' (2) Current')
@@ -248,6 +300,8 @@ def main(argv):
 if __name__ == '__main__':
     if '--landmarken' in sys.argv:
         landmarken(sys.argv[1:])
+    elif '--orte' in sys.argv:
+        orte(sys.argv[1:])
     elif '--fern' in sys.argv:
         fern(sys.argv[1:])
     else:
