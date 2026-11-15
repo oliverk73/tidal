@@ -31,7 +31,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
 LM = os.path.join(ROOT, 'quellen/tidal_streams/strom_landmarken_geonames.json')
 RICHTUNG = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
-PUNKT = {'LTHSE': 0, 'CAPE': 1, 'PT': 1, 'PTS': 1, 'PEN': 2, 'RKS': 3, 'RK': 3, 'RF': 3, 'SHOL': 4, 'ISLET': 5, 'ISLS': 6, 'ISL': 7}
+PUNKT = {'LTHSE': 0, 'CAPE': 1, 'PT': 1, 'PTS': 1, 'PEN': 2, 'RKS': 3, 'RK': 3, 'RF': 3, 'SHOL': 4, 'RFSU': 3, 'SHSU': 4, 'BNKU': 4, 'BNK': 4, 'ISLET': 5, 'ISLS': 6, 'ISL': 7}
 WASSER = {'STRT', 'CHN', 'CHNM', 'INLT', 'SD', 'HBR', 'BAY', 'NRWS', 'PASS', 'FJD'}
 GEN = {'island', 'islands', 'islet', 'rock', 'rocks', 'point', 'head', 'cape', 'great', 'little', 'north', 'south', 'east',
        'west', 'the', 'of', 'light', 'lighthouse'}
