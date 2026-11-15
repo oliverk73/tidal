@@ -314,7 +314,7 @@ for name, lat, lon, source_file, is_current in all_stations:
     group_idx = GROUP_INDEX[group_name]
     # Round coords to ~5m precision (5 decimals) — saves bytes vs full precision
     if group_name == 'Stromname Vorschlag (prüfen)':     # Slug bleibt am echten Namen
-        display_name_raw = '%s  →  %s' % (display_name_raw, STROMNAME_VORSCHLAG[(source_file, name)].replace(' Current', ''))
+        display_name_raw = '%s  →  %s' % (display_name_raw, STROMNAME_VORSCHLAG[(source_file, name)])
     station_rows.append([
         display_name_raw,
         round(lat, 5),

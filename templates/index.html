@@ -2227,7 +2227,10 @@
     var srcMatch = popupContent.match(/📄\s*([^\s<]+\.tcd|bore(?=<))/);
     var sourceFile = srcMatch ? srcMatch[1] : '';
 
-    var newName = prompt('Rename station:\n\nFile: ' + sourceFile, oldName);
+    var vorschlag = '';                      // Gruppe "Stromname Vorschlag": Anzeige "alt  →  neu"
+    var pfeil = oldName.indexOf(' \u2192 ');
+    if (pfeil >= 0) { vorschlag = oldName.slice(pfeil + 3).trim(); oldName = oldName.slice(0, pfeil).trim(); }
+    var newName = prompt('Rename station:\n\nFile: ' + sourceFile, vorschlag || oldName);
     if (!newName || newName.trim() === '' || newName.trim() === oldName) return;
     newName = newName.trim();
 
@@ -2249,7 +2252,7 @@
         alert('Name saved: ' + data.new_name);
         // Popup-Inhalt aktualisieren
         var updatedContent = popupContent
-          .replace('<b>' + oldName.replace(/"/g, '&quot;') + '</b>', '<b>' + data.new_name.replace(/"/g, '&quot;') + '</b>');
+          .replace(/<b>[^<]+<\/b>/, '<b>' + data.new_name.replace(/"/g, '&quot;') + '</b>');
         targetMarker.getPopup().setContent(updatedContent);
         // stationCoords aktualisieren
         if (typeof stationCoords !== 'undefined' && stationCoords[oldName]) {
