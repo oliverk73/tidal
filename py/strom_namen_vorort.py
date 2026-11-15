@@ -31,7 +31,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
 LM = os.path.join(ROOT, 'quellen/tidal_streams/strom_landmarken_geonames.json')
 ORTE = os.path.join(ROOT, 'quellen/tidal_streams/strom_orte_geonames.json')   # [name, lat, lon, einwohner] (PPL*, --orte)
-ORT_MIN, ORT_FAKTOR = 5000, 10   # naeherer Ort schlaegt Bezugsort, wenn >= 5000 Ew. und >= 10x so gross (Oliver 15.11.: Fort William statt Corpach)
+ORT_MIN = 0   # naeherer Ort schlaegt Bezugsort, wenn mindestens gleich gross; Einwohnerzahl sonst egal (Oliver 15.11.: Fort William statt Corpach)
 RICHTUNG = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
 PUNKT = {'LTHSE': 0, 'CAPE': 1, 'PT': 1, 'PTS': 1, 'PEN': 2, 'RKS': 3, 'RK': 3, 'RF': 3, 'SHOL': 4, 'RFSU': 3, 'SHSU': 4, 'BNKU': 4, 'BNK': 4, 'ISLET': 5, 'ISLS': 6, 'ISL': 7}
 WASSER = {'STRT', 'CHN', 'CHNM', 'INLT', 'SD', 'HBR', 'BAY', 'NRWS', 'PASS', 'FJD'}
@@ -110,6 +110,7 @@ FERN_MUSTER = re.compile(r'^(.+?) \((\d+) km ([NSEW]{1,3})((?:, [^)]*)?)\), (.*)
 def latin1(t):
     """Harmonics-Dateien sind Latin-1: nur nicht darstellbare Zeichen entakzentuieren (Pōhakuloa -> Pohakuloa)."""
     import unicodedata
+    t = t.replace('\u2019', "'").replace('\u2018', "'")
     return ''.join(ch if ch.encode('latin-1', 'ignore') else unicodedata.normalize('NFKD', ch).encode('latin-1', 'ignore').decode('latin-1') for ch in t)
 
 
@@ -151,10 +152,10 @@ def ort_vorschlag(la, lo, O, name):
         return None
     e_ref = max(e_ref)
     kand = sorted((d, n, e) for d, n, e in umgeb
-                  if d <= 0.75 * dref and e >= max(ORT_MIN, ORT_FAKTOR * max(e_ref, 500)) and not (worte(n) & worte(ref)))
+                  if round(d) < dref and e > 0 and e >= e_ref and not (worte(n) & worte(ref)))   # Einwohner 0 = unbekannt
     if not kand:
         return None
-    d, n, e = max(kand, key=lambda x: x[2])                     # der groesste unter den naeheren
+    d, n, e = min(kand, key=lambda x: (-x[2], x[0]))            # der groesste unter den naeheren, bei Gleichstand der naechste
     n = latin1(n)
     return '%s (%d km %s%s), %s Current' % (n, max(1, round(d)), richtung(la, lo, *next((a, b) for nn, a, b, ee in O if latin1(nn) == n and ee == e)), rest, tail), n, d
 
@@ -172,7 +173,7 @@ def orte(argv):
     with open(os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/allCountries.txt'), encoding='utf-8') as fh:
         for z in fh:
             t = z.split('\t', 15)
-            if t[6] != 'P' or not t[7].startswith('PPL') or t[7] == 'PPLH' or int(t[14] or 0) < ORT_MIN:
+            if t[6] != 'P' or not t[7].startswith('PPL') or t[7] in ('PPLH', 'PPLQ', 'PPLW', 'PPLCH', 'PPLX') or int(t[14] or 0) < ORT_MIN:
                 continue
             a, b = float(t[4]), float(t[5])
             if (int(math.floor(a * 10)), int(math.floor(b * 10))) in zellen:
@@ -182,7 +183,7 @@ def orte(argv):
     with open(os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/allCountries.txt'), encoding='utf-8') as fh:
         for z in fh:
             t = z.split('\t', 15)
-            if t[6] == 'P' and t[1] in refs and int(t[14] or 0) < ORT_MIN:
+            if t[6] == 'P' and t[1] in refs and not t[7].startswith('PPL'):
                 out.append([t[1], float(t[4]), float(t[5]), int(t[14] or 0)])
     json.dump(out, open(ORTE, 'w', encoding='utf-8'), ensure_ascii=False)
     print(len(out), 'Orte ->', os.path.relpath(ORTE, ROOT))
