@@ -41,7 +41,9 @@ MDE = {'Hunstanton (': ('anglia.pkl', 'BM1 - The Wash'), 'Blakeney (': ('anglia.
        'Swanage (20 km SE': ('aeltere.pkl', 'Swanage (20 km SE'), 'Swanage (22 km SSE': ('aeltere.pkl', 'Swanage (22 km SSE'),
        'Worthing (': ('aeltere.pkl', 'Worthing ('), 'Brighton (': ('aeltere.pkl', 'Brighton ('),
        'Lundy (24 km N': ('aeltere.pkl', 'Lundy (24 km N'), 'Ilfracombe (24 km WNW': ('aeltere.pkl', 'Ilfracombe (24 km WNW'),
-       'Skomer (96 km SW': ('aeltere.pkl', 'Skomer (96 km SW'), 'Padstow (71 km NW': ('aeltere.pkl', 'Padstow (71 km NW')}
+       'Skomer (96 km SW': ('aeltere.pkl', 'Skomer (96 km SW'), 'Padstow (71 km NW': ('aeltere.pkl', 'Padstow (71 km NW'),
+       'Needles (15 km SW': ('aeltere.pkl', 'Needles (15 km SW'), 'Shoreham (22 km S': ('aeltere.pkl', 'Shoreham (22 km S'),
+       'Dale (3 km E': ('aeltere.pkl', 'Dale (3 km E')}   # 15.11.2026 nachgetragen
 NAMEN175 = [n for n, _ in CONSTITUENTS_175]
 _PK = {}
 

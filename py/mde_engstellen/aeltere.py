@@ -40,6 +40,20 @@ def rampion(loc):
         return dict(lat=la, lon=lo, df=C.stundenmittel(df[(df.u.abs() < 4) & (df.v.abs() < 4)]))
 
 
+def dale(spalte):
+    """East Pickard Bay (TCE-4027) Aquadopp-QC, monatliche CSV, Vel_<h>m72/Dir_<h>m72 (m/s, Grad) oder VelBar/DirBar."""
+    L = []
+    for f in sorted(glob.glob(U + 'TCE-4027/11926_x/*/*Aquadopp QC Curr Data.csv')):
+        x = pd.read_csv(f)
+        z = x['DataTimeStamp'].astype(str).str.strip()       # je Monatsdatei ein Format: ISO, TT/MM/JJJJ oder TT-Mon-JJJJ
+        fm = '%d/%m/%Y %H:%M' if '/' in z.iloc[0] else '%d-%b-%Y %H:%M:%S' if re.match(r'\d\d-[A-Za-z]', z.iloc[0]) else '%Y-%m-%d %H:%M:%S'
+        t = pd.to_datetime(z, format=fm)
+        sp = pd.to_numeric(x['Vel' + spalte], errors='coerce'); di = np.radians(pd.to_numeric(x['Dir' + spalte], errors='coerce'))
+        L.append(pd.DataFrame({'u': (sp * np.sin(di)).values, 'v': (sp * np.cos(di)).values}, index=t))
+    df = pd.concat(L).dropna(); df = df[~df.index.duplicated()].sort_index()
+    return dict(lat=51.7099, lon=-5.1278, df=C.stundenmittel(df[(df.u.abs() < 4) & (df.v.abs() < 4)]))
+
+
 def awac(blatt, la, lo, h):
     wb = openpyxl.load_workbook(U + 'TCE-2634/9940_x/AWAC D/AWAC D/AWAC current data_2.xlsx', read_only=True)
     Rw = list(wb[blatt].iter_rows(values_only=True)); hdr = Rw[2]; i2 = hdr.index('Date/Time', 1)
@@ -64,6 +78,9 @@ OUT['Swanage (20 km SE'] = navitus('C')
 OUT['Swanage (22 km SSE'] = navitus('D')
 OUT['Worthing ('] = rampion('1')
 OUT['Brighton ('] = rampion('2')
+OUT['Shoreham (22 km S'] = rampion('3')                  # 15.11.2026 nachgetragen
+OUT['Needles (15 km SW'] = navitus('A')                  # 15.11.2026 nachgetragen
+OUT['Dale (3 km E'] = dale('_3m72')   # 15.11.2026: Zelle 3,72 m gibt den Satz wieder (Tiefenmittel M2 13 % zu schwach)
 OUT['Lundy (24 km N'] = awac('AWAC B', 51.3793, -4.6803, 36)
 OUT['Ilfracombe (24 km WNW'] = awac('AWAC D', 51.3292, -4.4001, 30)
 for k, x in OUT.items():
