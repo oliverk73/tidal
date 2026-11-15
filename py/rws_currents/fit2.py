@@ -110,8 +110,8 @@ def fit(path, lat, name, code):
 if __name__ == '__main__':
     # Phase A: 3 kaputte aus vorhandenen CSVs
     import json
-    meta = json.load(open('/home/oliver/currents/Netherlands/_stations.json'))
-    CD = '/home/oliver/currents/Netherlands'
+    meta = json.load(open('/home/oliver/weather/quellen/tidal_streams/Netherlands/_stations.json'))
+    CD = '/home/oliver/weather/quellen/tidal_streams/Netherlands'
     for code in ['eemshaven.waddenzee', 'ijgeul.1', 'ijmuiden.stroommeetpaal.backup']:
         m = meta[code]
         r = fit(f'{CD}/{code}.csv', m['lat'], m['name'], code)

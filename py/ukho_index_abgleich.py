@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """UKHO-Hafenverzeichnis (NP202/NP205/NP206, Lieferung 12.11.2026) gegen den Bestand abgleichen (Oliver: "intelligent matchen").
 
-Quelle: tide_tables/att/CS-361179-W8R3 - ADMIRALTY Tide Tables Indexes- Standard and Secondary Ports.docx (nur Name +
+Quelle: quellen/harmonics_sources/att/CS-361179-W8R3 - ADMIRALTY Tide Tables Indexes- Standard and Secondary Ports.docx (nur Name +
 ATT-Nummer, keine Koordinaten). Die ATT-Nummern laufen die Kueste entlang -> Lage aus den Nachbarnummern, die wir mit
 Position kennen (aktive + archivierte ATT-Saetze). Dann:
   1. eigene Nummer bekannt                      -> 'att'      (Position = unser Satz)
@@ -10,7 +10,7 @@ Position kennen (aktive + archivierte ATT-Saetze). Dann:
   3. Nominatim im Umkreis (viewbox, 1/s, Cache)  -> 'geo'      (Position aus OSM)
   sonst                                          -> 'unbekannt'
 Abdeckung: naechster Wasserstands-Satz zur Position; <= 5 km gedeckt, 5-15 km nah, > 15 km Luecke.
-Schreibt harmonics/help/ukho_index_abgleich.csv; Cache water_levels/UKHO_index_nominatim.json.
+Schreibt harmonics/help/ukho_index_abgleich.csv; Cache cache/UKHO_index_nominatim.json.
 Usage: venv/bin/python py/ukho_index_abgleich.py [--ohne-netz]
 """
 import collections
@@ -34,9 +34,9 @@ import health_check as H                                           # noqa: E402
 import osm_land                                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOCX = os.path.join(ROOT, 'tide_tables/att/CS-361179-W8R3 - ADMIRALTY Tide Tables Indexes- Standard and Secondary Ports.docx')
+DOCX = os.path.join(ROOT, 'quellen/harmonics_sources/att/CS-361179-W8R3 - ADMIRALTY Tide Tables Indexes- Standard and Secondary Ports.docx')
 AUS = os.path.join(ROOT, 'harmonics/help/ukho_index_abgleich.csv')
-CACHE = os.path.join(ROOT, 'water_levels/UKHO_index_nominatim.json')
+CACHE = os.path.join(ROOT, 'cache/UKHO_index_nominatim.json')
 GATTUNG = {'harbour', 'harbor', 'hang', 'gang', 'port', 'bay', 'wan', 'ko', 'ura', 'bukhta', 'zaliv', 'teluk', 'pulau', 'tanjung',
            'kuala', 'bahia', 'puerto', 'baie', 'havn', 'hamn', 'haven', 'hafen', 'cove', 'inlet', 'island', 'islands', 'is', 'i',
            'point', 'pt', 'the', 'de', 'la', 'le', 'du', 'des', 'of', 'entrance', 'approaches', 'off', 'dao', 'jima', 'shima',

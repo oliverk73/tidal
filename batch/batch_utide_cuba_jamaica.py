@@ -20,7 +20,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-CSV_DIR = Path("/home/oliver/water_levels/Caribbean_UHSLC_CubaJamaicaBahamas")
+CSV_DIR = Path("/home/oliver/weather/quellen/water_levels/Caribbean_UHSLC_CubaJamaicaBahamas")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_caribbean_uhslc.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_cuba_jamaica")

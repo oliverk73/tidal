@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Misst Thailand-Saetze gegen die gedruckten RTN-Gezeitentafeln.
 
-Die Tafeln des Royal Thai Navy Hydrographic Department (tide_tables/thailand)
+Die Tafeln des Royal Thai Navy Hydrographic Department (quellen/tide_tables/thailand)
 drucken fuer jede Station stuendliche Wasserstaende in Metern. Das ist eine
 unabhaengige Referenz: jeder Datensatz im Bestand laesst sich dagegen
 nachrechnen, statt seine Quelle zu bewerten.
@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import load_records, km                            # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDFS = os.path.join(ROOT, 'tide_tables/thailand')
+PDFS = os.path.join(ROOT, 'quellen/tide_tables/thailand')
 TCD = '/usr/share/xtide'
 # UTC-Fenster fuer einen Monat in Ortszeit (ICT = UTC+7)
 FENSTER = {'July 2026': ('2026-06-30 17:00', '2026-07-31 16:00', 744)}

@@ -4,15 +4,15 @@
 
 Oliver 22.10.2026: nach Queensland (py/qld_msq_fit.py) die anderen Bundeslaender -> WA hat als einziges ein freies
 Massenarchiv: oeffentlicher S3-Ordner s3-ap-southeast-2.amazonaws.com/transport.wa/Tide_Packet/<STATION>_Tides.zip
-(Liste water_levels/Australia_WA/dot_zip/liste.txt). Je Zip Unterordner <STATION>_<Einsatz>/ mit Jahresdateien:
+(Liste quellen/water_levels/Australia_WA/dot_zip/liste.txt). Je Zip Unterordner <STATION>_<Einsatz>/ mit Jahresdateien:
 Kopf (#Location, #Lat/Long, #Time Zone, #Vertical Datum, #Unit, #Sampling Rate) und Saetze "Hoehe,JJJJMMTT.hhmm/".
 
 Zeit: AWST (UTC+8) laut Kopf -> UTC. Einheit cm (laut Kopf) -> m. -9999 = Fehlwert. Ein Einsatz (_01, _02 ...) ist
 eine eigene Reihe, weil Position, Sensor und Bezugshoehe wechseln koennen; Metadaten aus der juengsten Jahresdatei.
 Zips werden nicht entpackt (zipfile liest direkt).
 
-Usage: python3 py/wa_dot_einlesen.py -> water_levels/Australia_WA/dot/<EINSATZ>.csv (time_utc, waterlevel_m)
-                                        + water_levels/Australia_WA/dot/einsaetze.csv
+Usage: python3 py/wa_dot_einlesen.py -> quellen/water_levels/Australia_WA/dot/<EINSATZ>.csv (time_utc, waterlevel_m)
+                                        + quellen/water_levels/Australia_WA/dot/einsaetze.csv
 """
 import csv
 import datetime as dt
@@ -22,8 +22,8 @@ import re
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QUELLE = os.path.join(ROOT, 'water_levels/Australia_WA/dot_zip')
-ZIEL = os.path.join(ROOT, 'water_levels/Australia_WA/dot')
+QUELLE = os.path.join(ROOT, 'quellen/water_levels/Australia_WA/dot_zip')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/Australia_WA/dot')
 SATZ = re.compile(r'(-?\d+(?:\.\d+)?),(\d{8})\.(\d{4})')
 
 

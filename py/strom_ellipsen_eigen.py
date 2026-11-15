@@ -55,7 +55,7 @@ def _csv_uv(pfad):
 
 def _cmems(code):
     import cmems_stroemung_nachholen as C
-    for d in ('currents/cmems_raw', 'water_levels/CMEMS_currents_neu', 'water_levels/CMEMS_currents_BR'):
+    for d in ('quellen/tidal_streams/cmems_raw', 'quellen/tidal_streams/CMEMS_currents_neu', 'quellen/tidal_streams/CMEMS_currents_BR'):
         for p in glob.glob(os.path.join(ROOT, d, f'*_MO_{code}.nc')):
             r = C.reihe(p)
             if r:
@@ -71,7 +71,7 @@ def _code_csv(code):
 def _khoa(kid):
     """KHOA-Badanuri-Bojen: Jahres-ZIPs wie py/khoa_bojen.py (cm/s, KST)."""
     import khoa_bojen as KB
-    for z in glob.glob(os.path.join(ROOT, 'currents/korea', f'*_KHOA-{kid}_*.zip')):
+    for z in glob.glob(os.path.join(ROOT, 'quellen/tidal_streams/korea', f'*_KHOA-{kid}_*.zip')):
         ordner = os.path.join(KB.ARBEIT, os.path.splitext(os.path.basename(z))[0])
         if not glob.glob(os.path.join(ordner, '*.txt')):
             ordner = KB.entpacken(z)
@@ -86,7 +86,7 @@ def _shom(code, la, lo):
     """SHOM-Atlas: synthetische Jahresreihe 2026 an der Gitterzelle des Satzes (shom_atlas_stroemung)."""
     import shom_atlas_stroemung as SA
     if code not in _ATLAS:
-        p = glob.glob(os.path.join(ROOT, 'currents/SHOM_atlas', '**', code + '.nc'), recursive=True)
+        p = glob.glob(os.path.join(ROOT, 'quellen/tidal_streams/SHOM_atlas', '**', code + '.nc'), recursive=True)
         _ATLAS[code] = SA.Atlas(p[0]) if p else None
     a = _ATLAS[code]
     z = a and a.zelle(la, lo, 0.5)
@@ -142,12 +142,12 @@ def _chm(pdf, punkt, la, lo):
 
 
 def _jcg(g, j):
-    """JCG-Pfeilkarten: Reihe aus currents/japan_jcg/reihen/<g>.npz, Pfeile umgedreht wie beim Import
+    """JCG-Pfeilkarten: Reihe aus quellen/tidal_streams/japan_jcg/reihen/<g>.npz, Pfeile umgedreht wie beim Import
     (jcg_auswerten.fit_punkt), Richtung sonst wie abgelesen -> u, v in m/s."""
     import math
     import utide
     from shn_corrientes import KONST
-    p = os.path.join(ROOT, 'currents/japan_jcg/reihen', g + '.npz')
+    p = os.path.join(ROOT, 'quellen/tidal_streams/japan_jcg/reihen', g + '.npz')
     if not os.path.exists(p):
         return None
     d = np.load(p)
@@ -212,18 +212,18 @@ def _rohreihe(text, name, la, lo):
         return pd.read_csv(p, index_col=0, parse_dates=True)[['u', 'v']].dropna() if os.path.exists(p) else None
     m = re.search(r'# ios_file: (\S+)', text)       # IOS British Columbia 14.11.2026 (py/ios_stroemung.py, Stundenmittel u,v m/s)
     if m:
-        p = os.path.join(ROOT, 'currents/Canada_IOS/roh', m.group(1) + '.csv')
+        p = os.path.join(ROOT, 'quellen/tidal_streams/Canada_IOS/roh', m.group(1) + '.csv')
         return pd.read_csv(p, index_col=0, parse_dates=True)[['u', 'v']].dropna() if os.path.exists(p) else None
     m = re.search(r'# gocd_file: (\S+)', text)      # NCEI GOCD 14.11.2026 (py/gocd_stroemung.reihe, Stundenmittel)
     if m:
         import gocd_stroemung as GO
-        p = os.path.join(ROOT, 'currents/NCEI_GOCD/nc', os.path.basename(m.group(1)))
+        p = os.path.join(ROOT, 'quellen/tidal_streams/NCEI_GOCD/nc', os.path.basename(m.group(1)))
         x = GO.reihe(p) if os.path.exists(p) else None
         return x[0] if x else None
     m = re.search(r'# arctic_atlas: (\S+)', text)   # Arctic Tidal Current Atlas 14.11.2026 (aus den Ellipsen synthetisiert)
     if m:
         import arktis_stromatlas as AR
-        p = os.path.join(ROOT, 'currents/Arctic_tidal_atlas/nc', m.group(1).replace('-', '_') + '.nc')
+        p = os.path.join(ROOT, 'quellen/tidal_streams/Arctic_tidal_atlas/nc', m.group(1).replace('-', '_') + '.nc')
         return AR.reihe(p)[0] if os.path.exists(p) else None
     m = re.search(r'# shom_atlas: (\S+)', text)
     if m:
@@ -244,7 +244,7 @@ def _rohreihe(text, name, la, lo):
         return _chm(m.group(1), m.group(2), la, lo)
     m = re.search(r'# chs_id: (\S+)', text)
     if m and 'IWLS API predictions' in text:
-        p = os.path.join(ROOT, 'currents/Canada_CHS_predicted', m.group(1) + '.csv')
+        p = os.path.join(ROOT, 'quellen/tidal_streams/Canada_CHS_predicted', m.group(1) + '.csv')
         return _csv_uv(p) if os.path.exists(p) else None
     if 'BODC current meter' in text:
         if _BODC is None:

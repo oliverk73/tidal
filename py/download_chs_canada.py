@@ -15,7 +15,7 @@ import requests
 import pandas as pd
 
 API_BASE = 'https://api-sine.dfo-mpo.gc.ca/api/v1'
-OUTPUT_DIR = '/home/oliver/water_levels/Canada'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Canada'
 
 # 5 stations covering different tidal regimes
 STATIONS = {

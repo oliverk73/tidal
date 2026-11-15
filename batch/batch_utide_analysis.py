@@ -29,7 +29,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-NPZ_DIR = Path("/home/oliver/water_levels/Germany/npz")
+NPZ_DIR = Path("/home/oliver/weather/quellen/water_levels/Germany/npz")
 HARMONICS_REF = Path("/home/oliver/harmonics/utide/bak/harmonics_germany_2026-01-23.txt")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_germany_2026-03-15.txt")

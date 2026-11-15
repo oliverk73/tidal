@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Kenya Ports Authority Tide Tables 2026 (tide_tables/kenya_kpa/, Oliver 28.10.2026) als Gegenprobe; Z0 auf Kartennull.
+"""Kenya Ports Authority Tide Tables 2026 (quellen/tide_tables/kenya_kpa/, Oliver 28.10.2026) als Gegenprobe; Z0 auf Kartennull.
 
 Die KPA-Tafeln (HW/NW Kilindini und Dar es Salaam, EAT = UTC+3, Hoehen ueber Kartennull der Admiralty-Karten) bestaetigen unsere
 UHSLC-Messfits in der Zeit (Scheitel 4-5 min), die Hoehen liegen aber glatt verschoben: die Saetze stehen auf dem UHSLC-Pegelnull
@@ -22,7 +22,7 @@ import xtide_modell as X                                           # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TXT = os.path.join(ROOT, 'tide_tables/kenya_kpa/kpa.txt')            # pdftotext -layout des PDFs
+TXT = os.path.join(ROOT, 'quellen/tide_tables/kenya_kpa/kpa.txt')            # pdftotext -layout des PDFs
 MON = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
 SAETZE = {'KILINDINI': [('harmonics/utide/harmonics_utide_observations.txt', 'Mombasa (Kilindini Harbour), Kenya')],
           'DAR': [('harmonics/utide/harmonics_utide_observations.txt', 'Dar es Salaam, Tanzania'),

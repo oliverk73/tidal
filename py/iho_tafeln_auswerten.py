@@ -32,7 +32,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import noaa_pruefstand as P                                         # noqa: E402
 from health_check import ROOT, km, load_records                     # noqa: E402
 
-BERICHTE = os.path.join(ROOT, 'tide_tables/catalogues/iho_berichte')
+BERICHTE = os.path.join(ROOT, 'quellen/kataloge/catalogues/iho_berichte')
 AUS = os.path.join(ROOT, 'harmonics/help/iho_tafeln_arbeitsliste.csv')
 LUECKE_KM = 50.0
 

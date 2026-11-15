@@ -4,7 +4,7 @@
 
 Quelle: phtides.namria.gov.ph/api/downloads/<id>/secondary-hi-low/<Zeitraum>
 (Liste: api/downloads/locations/hi-low/secondary), geladen nach
-water_levels/Philippines_NAMRIA/secondary_hilow/<station>_<Zeitraum>.pdf.
+quellen/tide_tables/Philippines_NAMRIA/secondary_hilow/<station>_<Zeitraum>.pdf.
 
 Jede Seite: vier Monate nebeneinander, je Monat zwei Spalten (Tag 1-15, 16-31),
 je Tag 1-4 Zeilen "hh mm  h.hh". Tafelzeit 120 E (UTC+8), Hoehen ueber MLLW.

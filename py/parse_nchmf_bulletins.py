@@ -11,7 +11,7 @@ Datumszeile: '10/01 11/01 ...' + Jahr aus Titel '(từ DD/MM/YYYY ...'.
 Ueberlappende Bulletins: erster Wert gewinnt (astronomische Vorhersagen,
 Konflikte minimal).
 
-Usage: python3 py/parse_nchmf_bulletins.py  ->  water_levels/VN_nchmf/<station>.json
+Usage: python3 py/parse_nchmf_bulletins.py  ->  quellen/tide_tables/VN_nchmf/<station>.json
 """
 import json
 import re
@@ -20,7 +20,7 @@ from pathlib import Path
 
 import pdfplumber
 
-DIR = Path('/home/oliver/water_levels/VN_nchmf')
+DIR = Path('/home/oliver/weather/quellen/tide_tables/VN_nchmf')
 WANted = None  # alle Stationen
 
 

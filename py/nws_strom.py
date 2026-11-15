@@ -39,7 +39,7 @@ import xtide_modell as X                                           # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CLI = os.path.join(ROOT, 'venv/bin/copernicusmarine')
 DS = 'cmems_mod_nws_phy-cur_anfc_1.5km-3D_PT1H-i'
-CACHE = os.path.join(ROOT, 'currents/nws_cur')
+CACHE = os.path.join(ROOT, 'quellen/ocean_currents/nws_cur')
 T0, T1 = '2025-11-01T00:00:00', '2026-11-01T00:00:00'
 MAX_KM, KN = 3.0, 1.0 / 0.514444
 GRADIENT_MAX, LUECKE_KM, ABSTAND_KM, EICH_N = 12.0, 12.0, (5.0, 8.0), 3

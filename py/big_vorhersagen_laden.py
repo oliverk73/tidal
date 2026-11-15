@@ -13,7 +13,7 @@ Stundenwerte, UTC, Nullpunkt MSL. Eine Anfrage alle PAUSE Sekunden, bei einer
 Sperre ("Too Many Attempts") wachsende Wartezeit. Vorhandenes wird nicht
 nochmals geladen -- ein abgebrochener Lauf setzt einfach fort.
 
-Ziel: water_levels/Indonesia_BIG/vorhersage/<kode>.json
+Ziel: quellen/tide_tables/Indonesia_BIG/vorhersage/<kode>.json
       {"station": {...}, "fenster": {"2026-01": [[t_ms, h], ...], ...}}
 
 Usage: python3 py/big_vorhersagen_laden.py
@@ -31,7 +31,7 @@ from big_pegel_umfrage import PAUSE, Sitzung                        # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PEGEL = os.path.join(ROOT, 'harmonics/help/big_pegel.json')
-ZIEL = os.path.join(ROOT, 'water_levels/Indonesia_BIG/vorhersage')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/Indonesia_BIG/vorhersage')
 FENSTER = [('2026-01', '2026-01-01', '2026-01-30'),
            ('2026-05', '2026-05-01', '2026-05-30'),
            ('2026-09', '2026-09-01', '2026-09-30')]

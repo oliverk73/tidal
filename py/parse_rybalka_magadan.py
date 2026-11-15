@@ -18,8 +18,8 @@ import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
-HTML = Path('/home/oliver/water_levels/RU_magadan/rybalka_tablica_prilivov_2025_2026.html')
-OUT = Path('/home/oliver/water_levels/RU_magadan/gertnera_events_utc.json')
+HTML = Path('/home/oliver/weather/quellen/water_levels/RU_magadan/rybalka_tablica_prilivov_2025_2026.html')
+OUT = Path('/home/oliver/weather/quellen/water_levels/RU_magadan/gertnera_events_utc.json')
 
 MONTHS = {'январ': 1, 'феврал': 2, 'март': 3, 'апрел': 4, 'ма': 5, 'июн': 6,
           'июл': 7, 'август': 8, 'сентябр': 9, 'октябр': 10, 'ноябр': 11, 'декабр': 12}

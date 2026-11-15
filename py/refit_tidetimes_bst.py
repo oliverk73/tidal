@@ -8,7 +8,7 @@ Vorhersagen im Winter ~1h zu spaet (siehe Memory project_tidetimes_bst_bug).
 
 Dieses Skript refittet alle tidetimes-abgeleiteten Bloecke in
 harmonics_utide_tidetables.txt IN-PLACE aus den Roh-JSONs
-(water_levels/UK_tidetimes/), wobei Rohzeiten als FESTES UTC+1 behandelt
+(quellen/tide_tables/UK_tidetimes/), wobei Rohzeiten als FESTES UTC+1 behandelt
 werden. Namen, Koordinaten und Metadaten der Bloecke bleiben unveraendert
 (manuelle Korrekturen seit dem Batch bleiben erhalten); ersetzt werden nur
 Mittelwert, Konstituenten und die Fit-Statistik-Kommentare.
@@ -40,7 +40,7 @@ from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
 ROOT = Path(__file__).resolve().parent.parent
 TIDETABLES = ROOT / 'harmonics/utide/harmonics_utide_tidetables.txt'
-DATA_DIR = ROOT / 'water_levels/UK_tidetimes'
+DATA_DIR = ROOT / 'quellen/tide_tables/UK_tidetimes'
 CHECKPOINT_DIR = ROOT / 'harmonics/help/checkpoints_bst_refit'
 LOG = ROOT / 'harmonics/help/bst_refit.log'
 

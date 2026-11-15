@@ -3,7 +3,7 @@
 """KHOA-Messbojen (Badanuri, 해양관측부이): Stroemungsfits aus den Jahres-ZIPs (Oliver 24.10.2026).
 
 Oliver laedt je Boje alle Jahre als ZIP (해양정보 다운로드 -> 관측자료 / 년별 / 해양관측부이) nach
-currents/korea/*.zip. Jede ZIP wird in einen eigenen Ordner currents/korea/_arbeit/<zip>/ entpackt.
+quellen/tidal_streams/korea/*.zip. Jede ZIP wird in einen eigenen Ordner quellen/tidal_streams/korea/_arbeit/<zip>/ entpackt.
 Dateien: Kopf 관측소명/위도/경도, dann Tabulator-Spalten; 유속 in cm/s, 유향 in Grad (wohin).
 Zeit: KST (UTC+9), bis 2021 30 min, ab 2022 10 min. In Wando liegt die M2-Phase 2015-2024
 auf +-3 Grad, also kein Zeitsprung beim Formatwechsel.
@@ -30,7 +30,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import cmems_stroemung_nachholen as C                               # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QUELLE = os.path.join(ROOT, 'currents/korea')
+QUELLE = os.path.join(ROOT, 'quellen/tidal_streams/korea')
 ARBEIT = os.path.join(QUELLE, '_arbeit')
 MIN_WERTE_JAHR = 30 * 48
 MIN_M2_KN = 0.2

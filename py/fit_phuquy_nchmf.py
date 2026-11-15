@@ -24,7 +24,7 @@ from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import cosine_interpolate, CONSTIT_67
 
 JSON = Path(sys.argv[1] if len(sys.argv) > 1 else
-            '/home/oliver/water_levels/VN_nchmf/ph_qu.json')
+            '/home/oliver/weather/quellen/tide_tables/VN_nchmf/ph_qu.json')
 NAME = 'Phu Quy, Vietnam'
 LAT, LON = 10.5333, 108.9333  # VHO-Stationsverzeichnis ID27 (10deg32'N 108deg56'E)
 

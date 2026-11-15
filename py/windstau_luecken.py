@@ -8,7 +8,7 @@ Wetterkurve (py/windstau_cmems.py) werden sie relevant: der Wasserstand schwankt
 Massstab: Copernicus-Tagesmittel des Wasserstands ueber ein Jahr (11/2025-10/2026, ohne Gezeit):
   Ostsee         cmems_mod_bal_phy-ssh_anfc_detided_P1D-m, zos_detided
   Schwarzes Meer cmems_mod_blk_phy-ssh_anfc_2.5km_P1D-m, zos
-liegen unter water_levels/cmems_ssh/jahr/. Je Modellzelle: Standardabweichung und 99-%-Quantil des Betrags
+liegen unter quellen/water_levels/cmems_ssh/jahr/. Je Modellzelle: Standardabweichung und 99-%-Quantil des Betrags
 der Abweichung vom Jahresmittel. Tagesmittel unterschaetzen kurze Sturmflutspitzen; als Rangfolge taugen sie.
 
 Orte: GeoNames cities5000 (ab 5000 Einwohnern), naechste Modell-Meerzelle <= KUESTE_KM, kein
@@ -29,7 +29,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import health_check as H                                           # noqa: E402
 
 ROOT = H.ROOT
-JAHR = os.path.join(ROOT, 'water_levels/cmems_ssh/jahr')
+JAHR = os.path.join(ROOT, 'quellen/water_levels/cmems_ssh/jahr')
 MEERE = {
     'ostsee': ('zos_bal_P1D_2025-2026.nc', 'zos_detided'),
     'schwarz': ('zos_blk_P1D_2025-2026.nc', 'zos'),

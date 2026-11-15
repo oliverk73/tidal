@@ -3,7 +3,7 @@
 """Indien: Stundenvorhersagen des NHO (SindhuNidhi, msp.hydrobharat.gov.in) holen und fitten (3.11.2026, Oliver).
 
 Quelle: Karte SindhuNidhi, Ebene "Tide Stations" (aml_name "Tide - time series"), 95 Haefen.
-  Punkte:  Vektorkacheln dataserver_5000/mspdata/{z}/{x}/{y}  -> tide_tables/india_nho/stationen.json
+  Punkte:  Vektorkacheln dataserver_5000/mspdata/{z}/{x}/{y}  -> quellen/tide_tables/india_nho/stationen.json
   Werte:   POST server_8000/api/tides_data {portname, date_val: CalendarDate} -> 24 Stundenwerte (m)
   Zeitraum 2025-01-01 .. 2026-12-31 (2024 leer, 2027 nur Januar).
 Abruf hoeflich: ein Tag je Abfrage, Pause zwischen Abfragen, Cache je Hafen und Tag.
@@ -26,7 +26,7 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CACHE = os.path.join(ROOT, 'tide_tables/india_nho')
+CACHE = os.path.join(ROOT, 'quellen/tide_tables/india_nho')
 STATIONEN = os.path.join(CACHE, 'stationen.json')
 API = 'https://msp.hydrobharat.gov.in/server_8000/api/tides_data'
 START, ENDE = dt.date(2025, 1, 1), dt.date(2026, 12, 31)

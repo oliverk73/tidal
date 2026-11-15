@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Batch-Download der internationalen NMDIS-Stationen (Luecken + Classic-Upgrades).
 
-Wie batch_download_nmdis.py, aber ueber water_levels/CN_nmdis/intl_plan.json
+Wie batch_download_nmdis.py, aber ueber quellen/tide_tables/CN_nmdis/intl_plan.json
 (erzeugt aus sites_international_full.json, klass GAP/OLD). Gleicher
 Tages-Cache (crash-sicher, resume-faehig), gleiche Dateinamen T###_D0_D1.json.
 
@@ -18,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, '/home/oliver/py')
 from download_nmdis_tides import fetch_day, OUTDIR
 
-PLAN = Path('/home/oliver/water_levels/CN_nmdis/intl_plan.json')
+PLAN = Path('/home/oliver/weather/quellen/tide_tables/CN_nmdis/intl_plan.json')
 D0, D1 = date(2025, 7, 1), date(2026, 6, 30)
 
 

@@ -35,7 +35,7 @@ import xtide_modell as X                                           # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = H.ROOT
-REIHEN = os.path.join(ROOT, 'water_levels/Australia_QLD/msq_vorhersage')
+REIHEN = os.path.join(ROOT, 'quellen/water_levels/Australia_QLD/msq_vorhersage')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 ERGEBNIS = os.path.join(ROOT, 'harmonics/help/qld_msq_vorhersage.csv')
 UMKREIS, FAKTOR, MIND_CM = 3.0, 2.0, 3.0

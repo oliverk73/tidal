@@ -19,7 +19,7 @@ import numpy as np
 import utide
 from netCDF4 import Dataset
 
-NC_DIR = Path("/home/oliver/water_levels/Spain_CMEMS_5")
+NC_DIR = Path("/home/oliver/weather/quellen/water_levels/Spain_CMEMS_5")
 TARGET = Path("/home/oliver/harmonics/utide/harmonics_utide_observations.txt")
 
 STATIONS = [

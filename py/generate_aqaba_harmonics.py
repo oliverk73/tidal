@@ -320,7 +320,7 @@ def read_header_from_template(template_path):
 
 
 def main():
-    data_dir = Path('/home/oliver/water_levels/Aqaba_IOC')
+    data_dir = Path('/home/oliver/weather/quellen/water_levels/Aqaba_IOC')
     csv_path = data_dir / 'aqaba_ioc.csv'
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_jordan.txt')

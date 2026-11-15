@@ -11,7 +11,7 @@ Pegeln lag und mit richtigem Stempel auf 0-5 min passt.
 Heilung ohne Neufit: die Zeitverschiebung d (Minuten) geht exakt in die Phasen ein,
 kappa_neu = kappa + Speed * d / 60. d je Satz aus den Rohdaten (C.stempelfehler_min):
   BODC   bodc_ref bzw. "N deployments combined, BODC refs a..b" (Reihen im Bereich, < 1,5 km)
-  CMEMS  nur Saetze aus cmems_stroemung_nachholen (Rohdatei in water_levels/CMEMS_currents_neu)
+  CMEMS  nur Saetze aus cmems_stroemung_nachholen (Rohdatei in quellen/tidal_streams/CMEMS_currents_neu)
   MDE    beim Einlesen gemessen (MDE unten)
 Saetze aus stuendlichen Quellen (d < 1 min) bleiben unberuehrt.
 Usage: venv/bin/python py/stroemung_stundenstempel.py [--schreiben]
@@ -32,7 +32,7 @@ import xtide_modell as X                                            # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATEI = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
-NEU = os.path.join(ROOT, 'water_levels/CMEMS_currents_neu')
+NEU = os.path.join(ROOT, 'quellen/tidal_streams/CMEMS_currents_neu')
 # MDE: Stempelfehler beim Einlesen der Rohdaten gemessen (Takt 1-10 min)
 MDE = {'Needles (15 km SW': 29.21, 'Swanage (20 km SE': 32.50, 'Swanage (22 km SSE': 29.50,
        'Lundy (24 km N': 20.03, 'Ilfracombe (24 km WNW': 20.38, 'Dale (3 km E': 30.98,

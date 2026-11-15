@@ -8,7 +8,7 @@ API: /observations/tides/<END-TS>.geojson?key=..&sensor=<id>&duration=<stunden>
     rückwärts. Werte = Wasserstand in m über Chart Datum, 10-min-Takt.
   - Dev-Key braucht passenden Referer-Header.
 
-Cacht pro (sensor, jahr) als JSON unter water_levels/cco/.
+Cacht pro (sensor, jahr) als JSON unter quellen/water_levels/cco/.
 """
 from __future__ import annotations
 import json, sys, time
@@ -19,7 +19,7 @@ KEY = '6cefd36d8e12a4dead4cf06d4dbd09c0'
 REF = 'https://coastalmonitoring.org/realtimedata/'
 BASE = 'https://coastalmonitoring.org/observations/tides'
 HEAD = {'User-Agent': 'Mozilla/5.0', 'Referer': REF}
-OUT = Path('/home/oliver/water_levels/cco')
+OUT = Path('/home/oliver/weather/quellen/water_levels/cco')
 
 # CCO-eigene Pegel (numerische ID): Name -> sensor-id
 SENSORS = {

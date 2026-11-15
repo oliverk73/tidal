@@ -29,7 +29,7 @@ import scheitelfit as SF                                            # noqa: E402
 import xtide_modell as X                                            # noqa: E402
 
 ZIEL = os.path.join(H.ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
-REIHEN = os.path.join(H.ROOT, 'water_levels/Philippines_NAMRIA/secondary_hilow')
+REIHEN = os.path.join(H.ROOT, 'quellen/tide_tables/Philippines_NAMRIA/secondary_hilow')
 GEWICHT = 3.0
 # Formzahl >= 2 und noch Kosinus-Fit (harmonics/help/tagestide_kosinus.csv, 26.10.2026)
 IDS = ['63', '67', '69', '70', '72', '74', '85', '88', '92']

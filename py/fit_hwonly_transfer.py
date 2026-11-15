@@ -44,7 +44,7 @@ from generate_germany_harmonics_175 import CONSTITUENTS_175
 SPEED = {name: float(sp) for name, sp in CONSTITUENTS_175}
 HARM_TT = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
 HARM_OBS = Path('/home/oliver/harmonics/utide/harmonics_utide_observations.txt')
-TT_DIR = Path('/home/oliver/water_levels/UK_tidetimes')
+TT_DIR = Path('/home/oliver/weather/quellen/tide_tables/UK_tidetimes')
 
 SIGMA_GATE = 33.0   # max. erlaubte HW-Zeit-Streuung (min); >22 = Naeherung (conf 5)
 SIGMA_GOOD = 22.0   # darunter: gute Reproduktion (conf 6)

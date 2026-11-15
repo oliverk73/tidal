@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Batch-Download aller geplanten NMDIS-China-Stationen (P1 -> P2 -> P3).
 
-Liest water_levels/CN_nmdis/batch_plan.json (py/plan_nmdis_batch.py),
+Liest quellen/tide_tables/CN_nmdis/batch_plan.json (py/plan_nmdis_batch.py),
 laedt je Station 1 Jahr Stundenwerte (2025-07-01..2026-06-30) ueber
 fetch_day() aus download_nmdis_tides. 3 parallele Worker (moderat fuer
 Behoerden-API), Tages-Cache pro Station (crash-sicher, resume-faehig).
@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, '/home/oliver/py')
 from download_nmdis_tides import fetch_day, OUTDIR
 
-PLAN = Path('/home/oliver/water_levels/CN_nmdis/batch_plan.json')
+PLAN = Path('/home/oliver/weather/quellen/tide_tables/CN_nmdis/batch_plan.json')
 D0, D1 = date(2025, 7, 1), date(2026, 6, 30)
 PRIOS = ('P1', 'P2', 'P3')
 

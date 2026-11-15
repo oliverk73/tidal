@@ -17,7 +17,7 @@ NAMRIA-Saetze; Z0 = Mittel der Vorhersage.
 Fit wie bei allen Ein-Jahres-Tafeln: SA/SSA erzwungen, Rayleigh_min 0.9
 (sonst fallen SA sowie T2/R2 heraus, siehe py/jahrestide_nachfitten.py).
 
-Ausgabe: water_levels/Philippines_NAMRIA/<id>_<Name>_hourly.json und ein Satz
+Ausgabe: quellen/tide_tables/Philippines_NAMRIA/<id>_<Name>_hourly.json und ein Satz
 je Station auf stdout (bzw. --anhaengen an harmonics_utide_tidetables.txt).
 
 Usage: python3 py/fit_namria_phtides.py <id> [<id> ...] [--anhaengen]
@@ -42,7 +42,7 @@ from health_check import ROOT                                      # noqa: E402
 warnings.filterwarnings('ignore')
 API = 'https://phtides.namria.gov.ph/api'
 UA = 'Mozilla/5.0'
-ZIEL = os.path.join(ROOT, 'water_levels/Philippines_NAMRIA')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/Philippines_NAMRIA')
 DATEI = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 PHT = dt.timedelta(hours=8)
 # NAMRIA-Namen, die Google Maps nicht findet ("KIG" = Kalayaan Island Group)

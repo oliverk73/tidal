@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Liest die Gezeitentafeln des argentinischen SHN.
 
-Der Bestand unter tide_tables/argentina/shn/parsed/ ist schon geparst: je
+Der Bestand unter quellen/tide_tables/argentina/shn/parsed/ ist schon geparst: je
 Station eine JSON-Datei mit Position, Zonenversatz und den Hoch- und
 Niedrigwassern von 2024 und 2025. Damit ist Argentinien die bequemste
 Quelle im ganzen Bestand -- nichts zu lesen, nichts zu erraten.
@@ -33,7 +33,7 @@ import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PARSED = os.path.join(ROOT, 'tide_tables/argentina/shn/parsed')
+PARSED = os.path.join(ROOT, 'quellen/tide_tables/argentina/shn/parsed')
 
 # Vergleichsmonat und Fit-Jahr.
 VON = dt.datetime(2025, 7, 1)

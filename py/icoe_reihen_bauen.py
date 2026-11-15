@@ -47,7 +47,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import xlsx_lesen                                                   # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(ROOT, 'water_levels/VN_icoe')
+ORDNER = os.path.join(ROOT, 'quellen/water_levels/VN_icoe')
 MAPPEN = ['h1_2025.xlsx', 'q1_2026.xlsx']
 UTC_OFF = dt.timedelta(hours=7)
 KOPF_GETEILT = {'TANHIEP': 'Kopf von RACHGIA'}

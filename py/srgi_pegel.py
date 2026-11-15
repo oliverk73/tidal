@@ -18,7 +18,7 @@ Zeit: Die Zeitstempel sind UTC. Am BNTN geprueft: mit UTC passen alle
 Nachbarsaetze auf 1-3 cm, mit WIB liegen alle bei ~30 cm. Der Nullpunkt der
 Messung ist unbekannt; verglichen wird nach Abzug des Mittels.
 
-Ausgabe: water_levels/Indonesia_BIG/<KODE>_<awal>_<akhir>.txt und eine Tabelle
+Ausgabe: quellen/tide_tables/Indonesia_BIG/<KODE>_<awal>_<akhir>.txt und eine Tabelle
 je Pegel: Rest (cm) jedes Satzes bis UMKREIS km gegen die Messung.
 
 Usage: python3 py/srgi_pegel.py BNTN SBGA ... [--awal 2026-09-01] [--nur-vergleich]
@@ -43,7 +43,7 @@ from health_check import ROOT, km, load_records                    # noqa: E402
 
 BASIS = 'https://srgi.big.go.id'
 UA = 'Mozilla/5.0 (X11; Linux x86_64) Chrome/120'
-ZIEL = os.path.join(ROOT, 'water_levels/Indonesia_BIG')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/Indonesia_BIG')
 UMKREIS = 30.0
 ZWECK = 'lainnya'
 

@@ -36,7 +36,7 @@ from generate_germany_harmonics_175 import (
 
 # ── Configuration ─────────────────────────────────────────────────────
 
-ZIP_PATH = Path("/home/oliver/water_levels/Germany/pegelonline-cuxhavensteubenhft-W-20000101-20260123.zip")
+ZIP_PATH = Path("/home/oliver/weather/quellen/water_levels/Germany/pegelonline-cuxhavensteubenhft-W-20000101-20260123.zip")
 BSH_FILE = Path("/home/oliver/harmonics/help/BSH/DE__506P2026.txt")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_cuxhaven_steubenhöft_2026-01-25.txt")

@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import xarray as xr
 
-NC_DIR   = '/home/oliver/currents/Germany'
+NC_DIR   = '/home/oliver/weather/quellen/tidal_streams/Germany'
 OUT_DIR  = NC_DIR
 LAT_MIN, LAT_MAX = 53.0, 56.0
 LON_MIN, LON_MAX = 5.5, 15.0

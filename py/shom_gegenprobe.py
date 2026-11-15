@@ -25,7 +25,7 @@ Satzes wird ueber XTide fuer dasselbe Fenster gerechnet und gegen die
 Reihe des Amtes verschoben, bis der RMS am kleinsten ist. Der
 Zeitversatz an diesem Minimum ist die Antwort.
 
-Die Reihen werden unter water_levels/France_SHOM_2026/ abgelegt und bei
+Die Reihen werden unter quellen/tide_tables/France_SHOM_2026/ abgelegt und bei
 einem zweiten Lauf von dort gelesen -- der Dienst wird nicht zweimal
 gefragt. Zwischen zwei Abrufen liegen drei Sekunden.
 
@@ -81,8 +81,8 @@ URL = 'https://services.data.shom.fr/b2q8lrcdl4s04cbabsj4nhcb/hdm/spm/wl'
 KOPF = {'User-Agent': 'tidal-corpus/1.0 (harmonic constant verification; '
                       'github.com/oliverk73/tidal)',
         'Referer': 'https://maree.shom.fr/'}
-HAEFEN = os.path.join(ROOT, 'water_levels/France_SHOM/shom_ports_wfs.json')
-REIHEN = os.path.join(ROOT, 'water_levels/France_SHOM_2026')
+HAEFEN = os.path.join(ROOT, 'quellen/water_levels/France_SHOM/shom_ports_wfs.json')
+REIHEN = os.path.join(ROOT, 'quellen/tide_tables/France_SHOM_2026')
 OFFEN = os.path.join(ROOT, 'harmonics/help/shom_stunde.csv')
 AUS = os.path.join(ROOT, 'harmonics/help/shom_gegenprobe.csv')
 # Auf die EINE Datei zeigen, nicht auf das Verzeichnis: "tide -l" loest den

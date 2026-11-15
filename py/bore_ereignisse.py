@@ -7,7 +7,7 @@ Quelle: CHS IWLS, Zeitreihe wlp-bores (amtliche Vorhersage der Bore-Ankunft, Wer
 Bei der Harmonics-Erzeugung waren diese Stationen ausgelassen worden (download_chs_ns_annual.py: "bore station").
 
 Schritte:
-  laden   wlp-bores und wlp-hilo 2020-2027 -> water_levels/Canada_CHS_bore/<code>_bores.csv, <code>_hilo.csv
+  laden   wlp-bores und wlp-hilo 2020-2027 -> quellen/water_levels/Canada_CHS_bore/<code>_bores.csv, <code>_hilo.csv
   eichen  Bore-Zeit = HW des Stationssatzes + Korrektur aus astronomischen Gliedern (wie hwnw_ungleichheiten),
           Groessenklasse = Regression auf dieselben Glieder; Eichung 2020-2024, Pruefung 2025-2027
           -> harmonics/bore/<code>.json
@@ -32,7 +32,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import hwnw_ungleichheiten as HU                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATEN = os.path.join(ROOT, 'water_levels/Canada_CHS_bore')
+DATEN = os.path.join(ROOT, 'quellen/water_levels/Canada_CHS_bore')
 API = 'https://api-iwls.dfo-mpo.gc.ca/api/v1'
 # code: (Zeitzone, Anzeigename) -- Name mit 'Tidal Bore', damit er nicht mit einem Pegel verwechselt wird
 STATIONEN = {
@@ -93,7 +93,7 @@ BEZUG_KAND = ('Saint John, New Brunswick, Canada', 'Burntcoat Head, Nova Scotia,
               'Hopewell Cape, New Brunswick, Canada')
 EICH, PRUEF = (2020, 2024), (2025, 2026)   # 2027 vorlaeufig (CHS: nach dem laufenden Jahr ungeprueft; Tidal View dort anders)
 ZIEL = os.path.join(ROOT, 'harmonics/bore')
-KAL = os.path.join(ROOT, 'water_levels/bore_kalender')
+KAL = os.path.join(ROOT, 'quellen/tide_tables/bore_kalender')
 OBS = 'harmonics/utide/harmonics_utide_observations.txt'
 TAB = 'harmonics/utide/harmonics_utide_tidetables.txt'
 
@@ -298,7 +298,7 @@ def _eichen_allgemein(code, meta, tb, kl, eich, pruef, kand, mit_null, klein, qu
 
 
 def _kalender_severn():
-    """tides.today-Seiten (water_levels/bore_kalender/severn_<jahr>.html): Minsterworth, Ortszeit, Sterne."""
+    """tides.today-Seiten (quellen/tide_tables/bore_kalender/severn_<jahr>.html): Minsterworth, Ortszeit, Sterne."""
     import glob
     import re
     from zoneinfo import ZoneInfo
@@ -318,7 +318,7 @@ def _kalender_severn():
 
 
 def _kalender_qiantang(stnm):
-    """-> [(t_utc, sterne, bore_hoehe_m)] aus water_levels/bore_kalender/qiantang/<datum>.json (Zeiten Beijing)."""
+    """-> [(t_utc, sterne, bore_hoehe_m)] aus quellen/tide_tables/bore_kalender/qiantang/<datum>.json (Zeiten Beijing)."""
     import glob
     from zoneinfo import ZoneInfo
     z = ZoneInfo('Asia/Shanghai')
@@ -339,7 +339,7 @@ def _kalender_dordogne():
     from zoneinfo import ZoneInfo
     z = ZoneInfo('Europe/Paris')
     out = []
-    for m in json.load(open(os.path.join(ROOT, 'tide_tables/mascaret_peniche/calendrier_mascaret_2026.json'))):
+    for m in json.load(open(os.path.join(ROOT, 'quellen/harmonics_sources/mascaret_peniche/calendrier_mascaret_2026.json'))):
         for r in m['rows']:
             for i, feld in enumerate(('mat', 'soir')):
                 v = r.get(feld)
@@ -359,7 +359,7 @@ QT_URL = 'https://www.chinaviki.com/qiantangjiang-dachaol/tide-proxy.php?date={}
 
 
 def laden_qiantang(von='2024-01-01', bis='2026-12-31'):
-    """Amtliche Qiantang-Vorhersage je Tag (alle Orte) -> water_levels/bore_kalender/qiantang/<datum>.json."""
+    """Amtliche Qiantang-Vorhersage je Tag (alle Orte) -> quellen/tide_tables/bore_kalender/qiantang/<datum>.json."""
     ziel = os.path.join(KAL, 'qiantang')
     os.makedirs(ziel, exist_ok=True)
     d, ende = dt.date.fromisoformat(von), dt.date.fromisoformat(bis)

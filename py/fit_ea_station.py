@@ -3,7 +3,7 @@
 UTide-Fit auf akkumulierte EA-Tidenpegel (England, 15-min) -> observations.txt (SL).
 
 Datenquelle: py/download_ea_tides.py akkumuliert die check-for-flooding-CSV
-(rollierendes 5-Tage-Fenster) per taeglichem cron in water_levels/ea/rloi<id>.json.
+(rollierendes 5-Tage-Fenster) per taeglichem cron in quellen/water_levels/ea/rloi<id>.json.
 Dieser Fit ist erst sinnvoll, wenn pro Station genug Tage zusammengekommen sind
 (MIN_DAYS) — sonst "akkumuliert noch". Vgl. [[project_ea_tides_harvester]].
 
@@ -30,7 +30,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_bom_australia import CONSTIT_67  # type: ignore
 
-EA_DIR = Path('/home/oliver/water_levels/ea')
+EA_DIR = Path('/home/oliver/weather/quellen/water_levels/ea')
 MAP = Path('/home/oliver/harmonics/help/ea_station_map.json')
 HARM_OBS = Path('/home/oliver/harmonics/utide/harmonics_utide_observations.txt')
 SOURCE = 'EA (check-for-flooding) tide gauge measurements with UTide'

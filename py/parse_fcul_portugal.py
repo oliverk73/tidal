@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 import utide
 
-FCUL_DIR = Path("/home/oliver/water_levels/Portugal_FCUL")
+FCUL_DIR = Path("/home/oliver/weather/quellen/water_levels/Portugal_FCUL")
 TARGET = Path("/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt")
 
 PT_MONTHS = {

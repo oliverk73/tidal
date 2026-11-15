@@ -17,7 +17,7 @@ import utide
 sys.path.insert(0, '/home/oliver/py')
 from parse_cmems_spain_5 import load_nc, harmonic_analysis, XTIDE_175
 
-NC_DIR = Path('/home/oliver/water_levels/CMEMS_gaps')
+NC_DIR = Path('/home/oliver/weather/quellen/water_levels/CMEMS_gaps')
 TARGET = Path('/home/oliver/harmonics/utide/harmonics_utide_observations.txt')
 IDX = ('/tmp/cmems_idx2/INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053/'
        'cmems_obs-ins_glo_phy-ssh_my_na_PT1H_202411/index_history.txt')

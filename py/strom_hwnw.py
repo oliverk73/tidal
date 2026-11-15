@@ -3,7 +3,7 @@
 """Strom-Kenter und -Maxima aus Messungen korrigieren (Oliver 6.11.2026) -- Gegenstueck zu hwnw_alle.py fuer Stroeme.
 
 Messung: NOAA CO-OPS PORTS (product=currents, 6 min, cm/s und Richtung), 2016-2025, Cache
-water_levels/USA_COOPS_currents/<station>_<bin>.csv. Projektion auf die Flutrichtung des Satzes (max_direction im
+quellen/tidal_streams/USA_COOPS_currents/<station>_<bin>.csv. Projektion auf die Flutrichtung des Satzes (max_direction im
 Kopf): u > 0 Flut, u < 0 Ebbe. Ereignisse: Kenter (Nulldurchgang, SF = Flut beginnt, SE = Ebbe beginnt) und Maxima
 (groesster |u| zwischen zwei Kentern, MF/ME). Vorhersage: dieselben vier Arten aus dem harmonischen Satz.
 Korrektur je Art: Zeitabstand Messung - Satz = astronomische Glieder (wie hwnw_ungleichheiten) + Satzstaerke;
@@ -31,7 +31,7 @@ import tiden_rechnung as TR                                         # noqa: E402
 
 ROOT = HU.ROOT
 DWF = os.path.join(ROOT, 'harmonics/classic/harmonics-dwf-20251228-free.txt')
-CACHE = os.path.join(ROOT, 'water_levels/USA_COOPS_currents')
+CACHE = os.path.join(ROOT, 'quellen/tidal_streams/USA_COOPS_currents')
 TEST = ('ca0101_8', 'cb0102_9', 'cb1301_4', 'db0301_22', 'g06010_1', 'jx0501_4', 'kb0102_4', 'n03020_7',
         'nl0101_9', 'pm0101_4', 's08010_4', 't01010_3')
 JAHRE = range(2016, 2026)

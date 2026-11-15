@@ -4,7 +4,7 @@
 
 Oliver 10.11.: Linkliste nauticalfree.free.fr -> Pakistan. Die Seite zeigt nur den laufenden Monat, aeltere Dateien
 bleiben aber auf dem Server (Namen geraten: "<MONAT> <ORT> HOURLY.pdf", lange Namen auf 30 Zeichen + "..." gekuerzt,
-Juni 2026 als "nA- TT <ORT> HOURLY.pdf"). Liegen in tide_tables/pakistan/pnhd/<jjjj-mm>_<ort>.pdf.
+Juni 2026 als "nA- TT <ORT> HOURLY.pdf"). Liegen in quellen/tide_tables/pakistan/pnhd/<jjjj-mm>_<ort>.pdf.
 7 Pegel: Karachi, Port Qasim (Entrance), Port Qasim (Pipri), Ormara, Pasni, Gwadar, Hajambro Creek (Entrance).
 Zeitzone PST = UTC+5, Hoehen m ueber Kartennull. Die Kopf-Koordinaten sind ab Juli teils kopiert (Gwadar und
 Hajambro tragen die Pasni-Lage) -> Lage aus dem Juni-Kopf bzw. Bestand, nicht aus jedem Blatt.
@@ -41,7 +41,7 @@ import stroemung_kopplung as K                                     # noqa: E402
 import xtide_modell as X                                           # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(ROOT, 'tide_tables/pakistan/pnhd')
+ORDNER = os.path.join(ROOT, 'quellen/tide_tables/pakistan/pnhd')
 CSV = os.path.join(ORDNER, 'pnhd_stunden.csv')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 ZONE = 5

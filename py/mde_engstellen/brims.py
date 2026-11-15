@@ -1,6 +1,6 @@
 import sys, glob, pickle, numpy as np, pandas as pd, scipy.io as s, warnings; warnings.filterwarnings('ignore')
 sys.path.insert(0, '/home/oliver/weather/py'); import cmems_stroemung_nachholen as C
-X = '/home/oliver/weather/currents/UK_MDE/_arbeit/brims/'
+X = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/_arbeit/brims/'
 POS = {'ST006': (58.7673, -3.1656, 'CES-46'), 'ST008': (58.7673, -3.1656, 'CES-46'), 'ST014': (58.7657, -3.2384, 'CES-49'), 'ST020': (58.7657, -3.2384, 'CES-49'),
        'ST019': (58.7549, -3.2421, 'CES-50'), 'ST022': (58.7539, -3.2850, 'CES-50'), 'ST023': (58.7639, -3.2880, 'CES-50')}
 OUT = {}

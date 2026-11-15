@@ -34,7 +34,7 @@ from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
-CACHE = os.path.join(ROOT, 'water_levels/Denmark_DMI_vorhersage')
+CACHE = os.path.join(ROOT, 'quellen/tide_tables/Denmark_DMI_vorhersage')
 API = 'https://opendataapi.dmi.dk/v2/oceanObs/collections/tidewater/items?stationId=%s&datetime=%s/%s&limit=300000'
 JAHR = ('2026-01-01T00:00:00Z', '2027-01-01T00:00:00Z')
 # DMI-Kennung -> (Name ohne Land, Region, Breite, Laenge). Weggelassen: Odense Kanal Stige Oe (= Odense Fjord Stige Oe,

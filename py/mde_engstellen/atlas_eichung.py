@@ -2,7 +2,7 @@ import sys, warnings, glob; warnings.filterwarnings('ignore'); sys.path.insert(0
 import shom_atlas_stroemung as S, xtide_modell as X, health_check as hc
 F = '/home/oliver/weather/harmonics/utide/harmonics_utide_current_observations.txt'
 R = [r for r in hc.load_records() if r['current'] and r['file'].endswith('current_observations.txt')]
-A = [(n, S.Atlas(glob.glob('/home/oliver/weather/currents/SHOM_atlas/*/*/*%s*.nc' % n)[0])) for n in sys.argv[1].split(',')]
+A = [(n, S.Atlas(glob.glob('/home/oliver/weather/quellen/tidal_streams/SHOM_atlas/*/*/*%s*.nc' % n)[0])) for n in sys.argv[1].split(',')]
 def d(x, y): return (x - y + 180) % 360 - 180
 for r in R:
     for n, a in A:

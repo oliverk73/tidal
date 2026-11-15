@@ -7,7 +7,7 @@ fuehren nur die Hauptachse (Flut/Ebbe); mdapi harcon.json liefert je Konstituent
 minorAmplitude/minorPhaseGMT und die Achsrichtung azi.
 
 Quelle: https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/<id>/harcon.json?bin=<n>
-Ziel:   water_levels/NOAA_current_harcon/<id>_<bin>.json (Rohantwort, vorhandene werden uebersprungen)
+Ziel:   quellen/tidal_streams/NOAA_current_harcon/<id>_<bin>.json (Rohantwort, vorhandene werden uebersprungen)
 
 Usage: venv/bin/python py/noaa_strom_ellipsen_laden.py
 """
@@ -20,7 +20,7 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels/NOAA_current_harcon')
+ZIEL = os.path.join(ROOT, 'quellen/tidal_streams/NOAA_current_harcon')
 QUELLE = os.path.join(ROOT, 'harmonics/classic/harmonics-dwf-20251228-free.txt')
 URL = 'https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/{s}/harcon.json?bin={b}'
 

@@ -11,7 +11,7 @@ R='/home/oliver/weather/'
 recs=[r for r in load_records() if 64.5<=r['lat']<=82 and 28<=r['lon']<=83.5 and 'Russia' in r['name']]
 # GeoNames RU
 GN=[]
-for l in open(R+'tide_tables/catalogues/geonames/allCountries.txt',encoding='utf-8'):
+for l in open(R+'quellen/kataloge/catalogues/geonames/allCountries.txt',encoding='utf-8'):
     t=l.split('\t')
     if t[8]!='RU': continue
     la,lo=float(t[4]),float(t[5])

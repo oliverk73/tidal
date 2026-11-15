@@ -31,7 +31,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import CONSTIT_67
 
-DIR = Path('/home/oliver/water_levels/VN_vho')
+DIR = Path('/home/oliver/weather/quellen/tide_tables/VN_vho')
 HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
 UTC_OFF = timedelta(hours=7)
 R2_GATE = 0.95

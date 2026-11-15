@@ -16,7 +16,7 @@ Aufbau der Seiten (iho.int, 16.09.2026):
 
 Geladen wird hoeflich: eine Anfrage je Sekunde, ehrlicher User-Agent, und
 nichts wird zweimal geholt. Die PDFs landen unter
-tide_tables/catalogues/iho_berichte/, ihr Text daneben als .txt.
+quellen/kataloge/catalogues/iho_berichte/, ihr Text daneben als .txt.
 
 Usage: python3 py/iho_berichte_sammeln.py [--nur EAtHC] [--sammeln] [--auswerten]
        --suchen     Seiten abklappern und die Linkliste neu bauen
@@ -40,7 +40,7 @@ from health_check import ROOT                                       # noqa: E402
 
 BASIS = 'https://iho.int'
 UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
-ZIEL = os.path.join(ROOT, 'tide_tables/catalogues/iho_berichte')
+ZIEL = os.path.join(ROOT, 'quellen/kataloge/catalogues/iho_berichte')
 LISTE = os.path.join(ZIEL, 'dokumente.json')
 PAUSE = 1.0
 

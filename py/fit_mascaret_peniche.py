@@ -3,7 +3,7 @@
 """UTide-Fit für den Mascaret-Kalender 2026 der Péniche du Mascaret (Dordogne).
 
 Quelle: https://www.lapenichedumascaret.com/_files/ugd/247a57_a8edc42d4fd54b208e6a4743699a3fd0.pdf
-(Bild-PDF, per Vision transkribiert -> tide_tables/mascaret_peniche/calendrier_mascaret_2026.json).
+(Bild-PDF, per Vision transkribiert -> quellen/harmonics_sources/mascaret_peniche/calendrier_mascaret_2026.json).
 Kalender: pro Tag Koeffizient + Morgen-/Abend-Durchgangszeit der Welle am
 Ankunftspunkt 0.3744°W (~2 km unterhalb der Péniche, 44.936296/-0.343603).
 Laut Fußnote aus mittlerer Wellengeschwindigkeit 18 km/h berechnet.
@@ -37,7 +37,7 @@ from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_bom_australia import CONSTIT_67, cosine_interpolate  # type: ignore
 
 REPO = Path('/home/oliver/weather')
-SRC = REPO / 'tide_tables/mascaret_peniche/calendrier_mascaret_2026.json'
+SRC = REPO / 'quellen/harmonics_sources/mascaret_peniche/calendrier_mascaret_2026.json'
 TEMPLATE = REPO / 'harmonics/utide/harmonics_utide_tidetables.txt'
 OUT = REPO / 'harmonics/utide/harmonics_mascaret_peniche.txt'
 NAME = 'La Peniche du Mascaret, Dordogne, France (bore arrival)'

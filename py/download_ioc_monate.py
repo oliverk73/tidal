@@ -9,7 +9,7 @@ Das alte py/download_ioc_russia.py bildet Stunden durch Abrunden (Mittel von hh:
 Hier: Mittel aller Werte mit |t - hh:00| < 30 min auf hh:00; ein Sensor je Pegel (rad vor prs/enc).
 
 Usage: python3 py/download_ioc_monate.py CODE:JJJJ-MM:JJJJ-MM [...]
-       -> water_levels/Russia_IOC/ioc_<code>_monate.csv  (time,waterlevel_m; UTC)
+       -> quellen/water_levels/Russia_IOC/ioc_<code>_monate.csv  (time,waterlevel_m; UTC)
 """
 import collections
 import datetime as dt
@@ -20,7 +20,7 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels/Russia_IOC')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/Russia_IOC')
 SENSOR = ['rad', 'ra2', 'prs', 'pr1', 'pwl', 'ras', 'enc', 'flt', 'bub']
 
 

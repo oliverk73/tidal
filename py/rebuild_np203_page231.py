@@ -7,7 +7,7 @@ Hintergrund: page_231.json stammt aus einer visuellen Transkription, die auf
 dieser Seite in 29 von 41 Zeilen falsch ist -- Koordinaten, Hoehendifferenzen
 und Mittelwasser. Drei Zeilen fehlten ganz. Die Tabelle BOOK unten ist am
 20260728 direkt aus dem Scan gelesen
-(tide_tables/att/np203_2015_secondary_ports_p222-238.pdf, Seite 231).
+(quellen/harmonics_sources/att/np203_2015_secondary_ports_p222-238.pdf, Seite 231).
 
 Namens- und Laenderzeilen aus dem Bestand bleiben erhalten -- die hat Oliver
 kuratiert. Neu gerechnet werden Position, Z0 und die Konstituenten.

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Liest die gedruckten Gezeitentafeln des australischen BOM aus.
 
-tide_tables/australia enthaelt rund 1150 Jahrestafeln im selben Layout:
+quellen/tide_tables/australia enthaelt rund 1150 Jahrestafeln im selben Layout:
 Stationsname, Position, dann Hoch- und Niedrigwasserzeiten mit Hoehen,
 vier Monate je Seite in acht Spalten.
 

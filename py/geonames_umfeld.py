@@ -7,7 +7,7 @@ braucht es nur die Umgebung der Saetze. Behalten wird jede Zeile in einer
 0,25-Grad-Zelle, die an eine Zelle mit einem Satz grenzt (also bis ~25-50 km).
 
 Quelle: https://download.geonames.org/export/dump/ (CC BY 4.0), geladen 15.09.2026.
-Ergebnis: tide_tables/catalogues/geonames/umfeld.tsv
+Ergebnis: quellen/kataloge/catalogues/geonames/umfeld.tsv
   geonameid, name, asciiname, alternatenames, lat, lon, fclass, fcode, cc
 
 Usage: python3 py/geonames_umfeld.py
@@ -20,7 +20,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import load_records, ROOT                         # noqa: E402
 
-DIR = os.path.join(ROOT, 'tide_tables/catalogues/geonames')
+DIR = os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames')
 ZELLE = 0.25
 
 

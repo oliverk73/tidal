@@ -15,19 +15,19 @@ import utide
 UHSLC_STATIONS = [
     {'uhslc_id': 271, 'name': 'Fort-de-France', 'country': 'Martinique, France',
      'lat': 14.6019, 'lon': -61.0636, 'water': 'Caribbean Sea',
-     'csv': '/home/oliver/water_levels/Martinique_UHSLC/h271_fort_de_france.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/Martinique_UHSLC/h271_fort_de_france.csv'},
     {'uhslc_id': 272, 'name': 'Pointe-à-Pitre', 'country': 'Guadeloupe, France',
      'lat': 16.2244, 'lon': -61.5314, 'water': 'Caribbean Sea',
-     'csv': '/home/oliver/water_levels/Guadeloupe_UHSLC/h272_pointe_a_pitre.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/Guadeloupe_UHSLC/h272_pointe_a_pitre.csv'},
 ]
 
 IOC_STATIONS = [
     {'ioc_code': 'desh', 'name': 'Deshaies', 'country': 'Guadeloupe, France',
      'lat': 16.3053, 'lon': -61.7959, 'water': 'Caribbean Sea',
-     'csv': '/home/oliver/water_levels/Guadeloupe_IOC/desh_deshaies.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/Guadeloupe_IOC/desh_deshaies.csv'},
     {'ioc_code': 'prec', 'name': 'Le Précheur', 'country': 'Martinique, France',
      'lat': 14.8076, 'lon': -61.2266, 'water': 'Caribbean Sea',
-     'csv': '/home/oliver/water_levels/Martinique_IOC/prec_le_precheur.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/Martinique_IOC/prec_le_precheur.csv'},
 ]
 
 CONSTITUENTS_175 = [

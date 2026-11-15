@@ -11,7 +11,7 @@ R2 >= 0.85, bei kleinem Hub (< 0,6 m) R2 >= 0.5 (das Wetter ueberdeckt dort eine
 Position: Katalogkoordinate, liegt sie an Land, das naechste Wasser bis 1 km (OSM).
 
 Eingabe: JSON-Liste mit Eintraegen {q, code, name, region, lat, lon, hub, csv}
-  csv: Zeitreihe (Zeit UTC, Wasserstand m), z. B. water_levels/Russia_IOC/ioc_<code>_monate.csv
+  csv: Zeitreihe (Zeit UTC, Wasserstand m), z. B. quellen/water_levels/Russia_IOC/ioc_<code>_monate.csv
 Usage: venv/bin/python py/messpegel_luecken.py liste.json [--schreiben] [--nur code,code]
 Ausgabe: Protokoll je Pegel und eine Ergebnis-JSON neben der Liste (<liste>.ergebnis.json).
 """

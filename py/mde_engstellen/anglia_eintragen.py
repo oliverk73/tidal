@@ -1,5 +1,5 @@
 import sys, math, pickle, warnings; warnings.filterwarnings('ignore')
-S = '/home/oliver/weather/currents/UK_MDE/_arbeit/'
+S = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/_arbeit/'
 sys.path.insert(0, '/home/oliver/weather/py'); sys.path.insert(0, '/home/oliver/weather/py')
 import stroemung_kurzfit as K, cmems_stroemung_nachholen as C, osm_land, sicher_schreiben, health_check as hc
 T = [t for t in hc.load_records() if not t['current'] and t['lat'] is not None]

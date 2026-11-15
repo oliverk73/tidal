@@ -3,7 +3,7 @@ import sys, re, glob, warnings, collections, numpy as np; warnings.filterwarning
 import shom_atlas_stroemung as S, xtide_modell as X, health_check as hc
 F = '/home/oliver/weather/harmonics/utide/harmonics_utide_current_tables.txt'
 L = open(F, encoding='iso-8859-1').read().split('\n')
-M564 = S.Atlas(glob.glob('/home/oliver/weather/currents/SHOM_atlas/*/*/*MANCHE-564*.nc')[0])
+M564 = S.Atlas(glob.glob('/home/oliver/weather/quellen/tidal_streams/SHOM_atlas/*/*/*MANCHE-564*.nc')[0])
 d = lambda x, y: (x - y + 180) % 360 - 180
 res = collections.defaultdict(list)
 for r in hc.load_records():

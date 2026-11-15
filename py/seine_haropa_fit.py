@@ -25,8 +25,8 @@ from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_observations.txt')
-REIHEN = os.path.join(ROOT, 'water_levels/France_HydroPortail')
-TAFELN = os.path.join(ROOT, 'tide_tables/france/haropa_rouen/haropa_hwlw.json')
+REIHEN = os.path.join(ROOT, 'quellen/water_levels/France_HydroPortail')
+TAFELN = os.path.join(ROOT, 'quellen/tide_tables/france/haropa_rouen/haropa_hwlw.json')
 # code -> (Satzname, Breite, Laenge, Ort in der HAROPA-Tafel); Position = Hub'Eau-Stationskoordinate
 PEGEL = {
     'H503011001': ('Rouen, France', 49.4433, 1.0720, 'Rouen'),

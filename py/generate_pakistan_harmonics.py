@@ -15,7 +15,7 @@ from generate_south_africa_harmonics import (
     read_header_from_template,
 )
 
-DATA_DIR = Path('/home/oliver/water_levels/Pakistan')
+DATA_DIR = Path('/home/oliver/weather/quellen/water_levels/Pakistan')
 
 STATIONS = [
     {'file': 'uhslc_147_Karachi.csv',  'name': 'Karachi', 'lat': 24.812, 'lon': 66.975, 'country': 'Pakistan', 'source': 'UHSLC-147', 'max_years': 10.0},

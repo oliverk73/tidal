@@ -112,7 +112,7 @@ def main(argv):
     print(f'{"EA-Pegel":22} {"Juni":>5} {"Sept":>5} | {"neu Sept":>9} | {"bester Bestand Sept":>34} | Nachbarn alt/neu')
     for s in stationen:
         rloi = str(s['rloi'][0] if isinstance(s['rloi'], list) else s['rloi'])
-        pfad = os.path.join(ROOT, 'water_levels/ea', f'rloi{rloi}.json')
+        pfad = os.path.join(ROOT, 'quellen/water_levels/ea', f'rloi{rloi}.json')
         if not os.path.exists(pfad):
             continue
         lat, lon = float(s.get('lat', 0)), float(s.get('lon', 0))

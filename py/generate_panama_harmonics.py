@@ -345,8 +345,8 @@ def read_header_from_template(template_path):
 
 
 def main():
-    uhslc_dir = Path('/home/oliver/water_levels/Panama_UHSLC')
-    ioc_dir = Path('/home/oliver/water_levels/Panama_IOC')
+    uhslc_dir = Path('/home/oliver/weather/quellen/water_levels/Panama_UHSLC')
+    ioc_dir = Path('/home/oliver/weather/quellen/water_levels/Panama_IOC')
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_panama.txt')
 

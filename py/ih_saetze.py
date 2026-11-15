@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Saetze aus den Gezeitentafeln des Instituto Hidrográfico (Portugal).
 
-Quellen (tide_tables/Portugal/):
+Quellen (quellen/tide_tables/Portugal/):
   TabelaMare_I_2026_signed.pdf        Vol. I  Portugal, Madeira, Azoren
   TabMares_I_2025_completa_signed-1.pdf  Vol. I 2025
   TabelaMare_II_2026_signed.pdf       Vol. II Kap Verde, Guinea-Bissau, Sao Tome,

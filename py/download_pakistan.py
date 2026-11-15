@@ -14,7 +14,7 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-OUTPUT_DIR = Path('/home/oliver/water_levels/Pakistan')
+OUTPUT_DIR = Path('/home/oliver/weather/quellen/water_levels/Pakistan')
 UHSLC_BASE = 'https://uhslc.soest.hawaii.edu/erddap/tabledap'
 IOC_URL = 'http://www.ioc-sealevelmonitoring.org/bgraph.php'
 

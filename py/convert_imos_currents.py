@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Convert IMOS ANMN hourly velocity NCs to per-station CSVs.
 
-Input:  currents/Australia_IMOS/raw/<SITE>.nc
-Output: currents/Australia_IMOS/<SITE>.csv (time,speed,direction)
-        currents/Australia_IMOS/_stations.json
+Input:  quellen/tidal_streams/Australia_IMOS/raw/<SITE>.nc
+Output: quellen/tidal_streams/Australia_IMOS/<SITE>.csv (time,speed,direction)
+        quellen/tidal_streams/Australia_IMOS/_stations.json
 
 Strategy: depth-average UCUR/VCUR over all CELL_INDEX bins at each timestamp
 (tidal currents on a shelf are largely barotropic, so this gives a clean signal).
@@ -20,8 +20,8 @@ import pandas as pd
 import xarray as xr
 
 HOME = Path.home()
-RAW_DIR = HOME / 'currents' / 'Australia_IMOS' / 'raw'
-OUT_DIR = HOME / 'currents' / 'Australia_IMOS'
+RAW_DIR = HOME / 'quellen/tidal_streams/Australia_IMOS' / 'raw'
+OUT_DIR = HOME / 'quellen/tidal_streams/Australia_IMOS'
 
 QC_GOOD = [1, 2]
 

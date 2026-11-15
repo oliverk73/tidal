@@ -28,7 +28,7 @@ from generate_germany_harmonics_175 import CONSTITUENTS_175         # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_tables.txt')
-NEU = os.path.join(ROOT, 'tide_tables/att/Neu')
+NEU = os.path.join(ROOT, 'quellen/harmonics_sources/att/Neu')
 RADIUS_M = 300.0
 PERIODE_H = 12.4206
 
@@ -389,13 +389,13 @@ def milford(argv):
 
 # ---------------------------------------------------------------- Monty Mariner (nachgezeichnete Admiralty-Atlanten)
 # montymariner.co.uk/tide-stream-charts (13.11.2026, Oliver: verwerten; Seite: nur privat/Lehre, nicht kommerziell).
-# Bilder in tide_tables/att/montymariner/<gebiet>/01..13.png = HW-6..+6. Zahlen "Nipp Spring" in Zehntelknoten
+# Bilder in quellen/harmonics_sources/att/montymariner/<gebiet>/01..13.png = HW-6..+6. Zahlen "Nipp Spring" in Zehntelknoten
 # (Admiralty: Nipp zuerst). Gradnetz aus den Rahmenstrichen (1' je Strich):
 MM_GEO = {   # gebiet: (x0, lon0, px je ' Laenge, y0, lat0, px je ' Breite)
     'solent_west': (53.5, -(2 + 10 / 60), 17.0, 142.5, 50 + 50 / 60, 27.0),
     'solent_east': (461.5, -1.0, 17.0, 143.5, 50 + 50 / 60, 27.0),
     'portland': (310.5, -2.5, 32.0, 472.0, 50.5, 51.0),
-    # 13.11.2026, Bilder in currents/ATT/<ordner> (Originaldateien, 5'- bzw. 10'-Striche):
+    # 13.11.2026, Bilder in quellen/tidal_streams/ATT/<ordner> (Originaldateien, 5'- bzw. 10'-Striche):
     'lyme_bay': (295.5, -3.5, 14.16, 699.5, 50.5, 22.32),          # np263-lyme-bay, HW Devonport
     'falmouth_exmouth': (216.5, -5.0, 12.40, 416.0, 50.5, 19.5),    # falmouth-exmouth (NP254), HW Devonport
     'lands_end': (302.5, -6.5, 11.71, 183.5, 50.5, 18.3),           # np255-lands-end, HW Devonport

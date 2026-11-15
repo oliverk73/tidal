@@ -12,7 +12,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-OUTPUT_DIR = Path("/home/oliver/water_levels/Australia_QLD/npz")
+OUTPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/Australia_QLD/npz")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 API_BASE = "https://www.data.qld.gov.au/api/3/action"

@@ -24,7 +24,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 API = 'https://mds.nmdis.org.cn/service/rdata/front/knowledge/chaoxidata/list'
-OUTDIR = Path('/home/oliver/water_levels/CN_nmdis')
+OUTDIR = Path('/home/oliver/weather/quellen/tide_tables/CN_nmdis')
 CTX = ssl.create_default_context()
 CTX.check_hostname = False
 CTX.verify_mode = ssl.CERT_NONE

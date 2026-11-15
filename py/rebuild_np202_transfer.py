@@ -38,7 +38,7 @@ Drei Fehler des alten Imports werden hier behoben:
 
 Quellen: harmonics/help/np202_part2_gruppenkoepfe.tsv und
          harmonics/help/np202_part2_stationen.tsv, beide am 05.08.2026 aus
-         tide_tables/att/np202_2015_secondary_ports_p358-403.pdf gelesen.
+         quellen/harmonics_sources/att/np202_2015_secondary_ports_p358-403.pdf gelesen.
 
 Aufruf: venv/bin/python py/rebuild_np202_transfer.py [--write]
 Ohne --write wird nur berichtet, nichts geaendert.

@@ -11,7 +11,7 @@ Quellen (copernicusmarine-Toolbox, Zugang ~/.copernicusmarine):
 Je 1x1-Grad-Ausschnitt mit unseren Stationen ein Abruf; je Station der naechste Wasserpunkt des Modells.
 zos -> Anomalie: minus Mittel der Tagesmittel des letzten Jahres. Danach wie bei STOFS die Modellgezeit
 (M2, S2, K1, O1, M4) ueber das Fenster angepasst und abgezogen.
-Ergebnis: water_levels/cmems_ssh/aktuell.npz (schluessel 'datei|satz', t, z[m]). py/windstau.py liest es zuerst.
+Ergebnis: quellen/water_levels/cmems_ssh/aktuell.npz (schluessel 'datei|satz', t, z[m]). py/windstau.py liest es zuerst.
 Kein automatischer Abruf (Oliver 6.11.2026: erst, wenn die Seite operativ ist).
 
 Usage: venv/bin/python py/windstau_cmems.py [--meer=ostsee|mittelmeer|schwarz|limfjord] [--nur=<Text im Satznamen>]
@@ -29,7 +29,7 @@ import tempfile
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels/cmems_ssh')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/cmems_ssh')
 DATEI = os.path.join(ZIEL, 'aktuell.npz')
 CLI = os.path.join(ROOT, 'venv/bin/copernicusmarine')
 MEERE = {

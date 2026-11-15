@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Batch UTide harmonic analysis for Canadian tide stations (CHS).
-Reads CSV files from water_levels/Canada/, runs UTide with 93 constituents,
+Reads CSV files from quellen/water_levels/Canada/, runs UTide with 93 constituents,
 maps to 175 XTide constituents, outputs XTide-compatible harmonics file.
 Also compares predictions with CHS API predictions for validation.
 """
@@ -25,7 +25,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-CSV_DIR = Path("/home/oliver/water_levels/Canada")
+CSV_DIR = Path("/home/oliver/weather/quellen/water_levels/Canada")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_ca")

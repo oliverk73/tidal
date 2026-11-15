@@ -3,7 +3,7 @@
 """Survey-of-India-Monats-Tidetafeln (PDF, 2-Spalten-Tageslayout) -> UTide-Block.
 
 Quelle: surveyofindia.gov.in /pages/tidal, monatliche ZIPs (Wayback + live) in
-water_levels/IN_soi/months/<zip>/<MONAT JAHR>/<STATION>.pdf. Je PDF 1 Seite,
+quellen/water_levels/IN_soi/months/<zip>/<MONAT JAHR>/<STATION>.pdf. Je PDF 1 Seite,
 Kopf 'TIME ZONE -0530', zwei Tagesspalten (1-15 | 16-31), je Tag 3-5 Zeilen
 'HHMM  H.HH' (Zeit lokal, Hoehe m ueber Kartennull). Zeichenweise gerendert ->
 Parsen ueber page.chars mit Zeilen-Clustering und x-Baendern um die beiden
@@ -30,7 +30,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import CONSTIT_67
 
-MONTHS_DIR = '/home/oliver/water_levels/IN_soi/months'
+MONTHS_DIR = '/home/oliver/weather/quellen/water_levels/IN_soi/months'
 MONTH_NUM = {n: i + 1 for i, n in enumerate(
     ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY',
      'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'])}

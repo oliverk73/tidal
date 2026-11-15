@@ -39,7 +39,7 @@ import sys
 import unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDFS = os.path.join(ROOT, 'tide_tables/brazil')
+PDFS = os.path.join(ROOT, 'quellen/tide_tables/brazil')
 
 MONATE = ['Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho',
           'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']

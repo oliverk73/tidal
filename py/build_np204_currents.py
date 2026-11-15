@@ -3,7 +3,7 @@
 """ADMIRALTY NP204 (ATT Vol.4, Pazifik) Part IIIa - Tidal Stream Harmonic Constants
 -> Stromsaetze (Knoten).
 
-Quelle: Foto-Doppelseite S.390-391 in tide_tables/att/np204_doppelseiten_p326-391.pdf
+Quelle: Foto-Doppelseite S.390-391 in quellen/harmonics_sources/att/np204_doppelseiten_p326-391.pdf
 (PDF-Seite 31). S.388-389 fehlen im Scan (Oliver hat das Buch nicht) - dort beginnt
 Part IIIa vermutlich (Russland/Korea?). 774-786 stehen auf beiden Seiten gleich
 (Gegenprobe der Abschrift: identisch).
@@ -155,7 +155,7 @@ STATIONS = [
 ]
 
 
-# ---- Ausgabe 2009 (NP204-09), S.338-339: tide_tables/att/733374238-Admirality-Tide-Table_np204.pdf,
+# ---- Ausgabe 2009 (NP204-09), S.338-339: quellen/harmonics_sources/att/733374238-Admirality-Tide-Table_np204.pdf,
 # PDF-Seiten 47/48 (200 dpi). S.338 ist der Anfang von Part IIIa. China/Japan dort zahlengleich mit
 # dem Foto-Band; USA im Foto-Band neuer (918-930a geaendert) -> fuer diese gilt der Foto-Band.
 # Kanada steht nur in 2009. Hier nur Stationen, die der Foto-Band nicht hat.

@@ -24,7 +24,7 @@ import numpy as np
 import xarray as xr
 from generate_germany_harmonics_175 import CONSTITUENTS_175, read_header_from_template
 
-NC = '/home/oliver/currents/Australia_OceanCurrent/Aust_current_meter_tidal_cnstits_v2.nc'
+NC = '/home/oliver/weather/quellen/tidal_streams/Australia_OceanCurrent/Aust_current_meter_tidal_cnstits_v2.nc'
 TEMPLATE = '/home/oliver/harmonics/utide/harmonics_utide_current_observations.txt'
 OUT = '/home/oliver/harmonics/utide/harmonics_utide_australia_oceancurrent.txt'
 MS_TO_KNOTS = 1.94384449

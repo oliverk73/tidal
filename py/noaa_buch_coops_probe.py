@@ -4,11 +4,11 @@
 
 Die Table-2-Saetze sind unsere Uebertragung der Buchdifferenzen auf den Bezugsort. NOAA rechnet fuer dieselben Nebenorte
 selbst HW/NW (CO-OPS, Typ S), dort mit eigenen Differenzen je Scheitel. Fuer jeden Buchsatz: CO-OPS-Station bis 2 km,
-HW/NW 2026 (MLLW, GMT; Cache water_levels/NOAA_hilo), dann Zeitfehler (Median mit Vorzeichen, + = Satz zu spaet),
+HW/NW 2026 (MLLW, GMT; Cache quellen/tide_tables/NOAA_hilo), dann Zeitfehler (Median mit Vorzeichen, + = Satz zu spaet),
 Hoehen-RMS nach Abzug des mittleren Versatzes und Hubverhaeltnis.
 Hawaii/Puerto Rico/Pazifik sind seit 27.10. ohnehin Scheitelfits an diese Vorhersagen (py/noaa_hwnw_scheitelfit.py).
 
-Kanada (--kanada): dieselbe Probe gegen die CHS-HW/NW Juli 2026 aus tide_tables/canada_chs (ohne neue Abfrage).
+Kanada (--kanada): dieselbe Probe gegen die CHS-HW/NW Juli 2026 aus quellen/tide_tables/canada_chs (ohne neue Abfrage).
 
 Usage: venv/bin/python py/noaa_buch_coops_probe.py [--kanada]   -> harmonics/help/noaa_buch_{coops,chs}_<datum>.csv
 """
@@ -31,12 +31,12 @@ import xtide_modell as X                                           # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATEI = os.path.join(ROOT, 'harmonics/noaa/harmonics_noaa_amtt.txt')
-CACHE = os.path.join(ROOT, 'water_levels/NOAA_hilo')
+CACHE = os.path.join(ROOT, 'quellen/tide_tables/NOAA_hilo')
 STATIONEN = 'https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations.json?type=tidepredictions'
 URL = ('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&station=%s&begin_date=20260101'
        '&end_date=20261231&datum=MLLW&time_zone=gmt&units=metric&interval=hilo&format=json')
 US = ('Alaska', 'California', 'Oregon', 'Washington')
-CHS = os.path.join(ROOT, 'tide_tables/canada_chs')                  # IWLS wlp-hilo, Juli 2026 (py/chs_referenz.py)
+CHS = os.path.join(ROOT, 'quellen/tide_tables/canada_chs')                  # IWLS wlp-hilo, Juli 2026 (py/chs_referenz.py)
 
 
 def stationen():

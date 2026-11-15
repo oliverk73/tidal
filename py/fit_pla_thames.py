@@ -4,7 +4,7 @@
 
 Quelle: tidepredictions.pla.co.uk (Port of London Authority), 2 Jahre
 Stundenwerte 2025-2026 in GMT, lokal gesichert unter
-water_levels/PLA_thames/hourly_<code>.csv (siehe Memory project_pla_thames_source).
+quellen/water_levels/PLA_thames/hourly_<code>.csv (siehe Memory project_pla_thames_source).
 
 Ersetzt die tidetimes-abgeleiteten Bloecke in harmonics_utide_tidetables.txt
 in-place (Namen/Koordinaten bleiben). Konstituenten: UTide auto + erweitertes
@@ -32,7 +32,7 @@ from refit_tidetimes_bst import parse_blocks, render_consts
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
 TIDETABLES = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
-DATA_DIR = Path('/home/oliver/water_levels/PLA_thames')
+DATA_DIR = Path('/home/oliver/weather/quellen/water_levels/PLA_thames')
 
 # Erweitertes Flachwasser-Set (zusaetzlich zu UTide-auto), aus der Eval
 EXTRA = ['M8', 'M10', '3MK7', '2MK5', 'MSK6', '2SM6', '3MS8', 'MK4', 'SK4',

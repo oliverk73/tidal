@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """SHN Argentinien: Stroemungskonstanten aus den Tablas de Prediccion de Corrientes de Marea.
 
-Rohdaten von py/shn_corrientes_laden.py (tide_tables/argentina/shn_corrientes/raw/), je Ort und
+Rohdaten von py/shn_corrientes_laden.py (quellen/tide_tables/argentina/shn_corrientes/raw/), je Ort und
 Monat Kenterzeiten (Estoa, v = 0) und Maxima (Zeit, Staerke kn, Richtung). Wie bei
 build_noaa_currents_foreign.py wird die Ereignisreihe gefittet: Kenter = 0, Maximum als Vektor;
 cmems_stroemung_nachholen.analyse legt die Hauptachse und fittet die Projektion (UTide, auto).
@@ -29,7 +29,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import cmems_stroemung_nachholen as C                               # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW = os.path.join(ROOT, 'tide_tables/argentina/shn_corrientes/raw')
+RAW = os.path.join(ROOT, 'quellen/tide_tables/argentina/shn_corrientes/raw')
 HILFE = os.path.join(ROOT, 'harmonics/help')
 # Feste Liste: Bei Orten ohne Kenterzeiten (Cabo Nombre) baut die automatische Wahl M2/M4/M6 auf, die
 # durch die Maxima passen, dazwischen aber ueberschiessen (M2 1,8 kn bei hoechstens 1,5 kn in der Tafel).

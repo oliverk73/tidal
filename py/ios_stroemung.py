@@ -5,11 +5,11 @@
 Quelle: CIOOS Pacific ERDDAP (frei, "may be used and redistributed for free"):
   IOS_CUR_Moorings  (Stroemungsmesser, LCEWEL01/LCNSEL01 m/s bzw. LCSAEL01/LCDAEL01)
   IOS_ADCP_Moorings (ADCP, LCEWAP01/LCNSAP01 m/s je Tiefe, Gueteflag *_QC: 1 gut)
-Auswahl (currents/Canada_IOS/einsaetze.csv, Vorlauf 14.11.): >= 25 Tage, <= 30 km vom naechsten Pegelsatz,
+Auswahl (quellen/tidal_streams/Canada_IOS/einsaetze.csv, Vorlauf 14.11.): >= 25 Tage, <= 30 km vom naechsten Pegelsatz,
 je 3-km-Ort ein Einsatz: der flachste Stroemungsmesser bis 60 m, sonst ADCP (Mittel der Zellen 5-25 m),
 bei Gleichstand der laengste. ADCP: Zellen 5-25 m tief, nicht im obersten 12 % (Reflex). Stundenmittel mit Stempel = mittlere Zeit (C.stundenmittel).
 Fit: ab 182,6 Tagen frei; darunter K2/P1 (und unter 27,6 Tagen N2) an den naechsten Pegel gekoppelt (K.fit).
-Rohreihen (Stundenmittel u,v m/s) -> currents/Canada_IOS/roh/<datei>.csv; Ergebnis harmonics/help/ios_stroemung.csv
+Rohreihen (Stundenmittel u,v m/s) -> quellen/tidal_streams/Canada_IOS/roh/<datei>.csv; Ergebnis harmonics/help/ios_stroemung.csv
 und Bloecke harmonics/help/ios_stroemung.txt (Namen = Dateiname, Benennung spaeter).
 
 Usage: venv/bin/python py/ios_stroemung.py [--nur N]
@@ -31,7 +31,7 @@ import cmems_stroemung_nachholen as C                               # noqa: E402
 import stroemung_kopplung as K                                      # noqa: E402
 
 ROOT = K.ROOT
-D = os.path.join(ROOT, 'currents/Canada_IOS')
+D = os.path.join(ROOT, 'quellen/tidal_streams/Canada_IOS')
 ERDDAP = 'https://data.cioospacific.ca/erddap/tabledap/'
 FREI = ['M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1', 'L2', 'NU2', 'MU2', '2N2', 'J1', 'OO1', 'M4', 'MS4', 'MN4',
         'M6', 'MK3', 'M3', '2MS6', 'MSF', 'MF', 'MM']

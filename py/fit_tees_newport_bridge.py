@@ -24,7 +24,7 @@ from batch_utide_uk_tidetimes import cosine_interpolate, CONSTIT_67
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
 JSON_PATH = Path(sys.argv[1] if len(sys.argv) > 1 else
-                 '/home/oliver/water_levels/UK_tidetimes/Tees_(Newport)_Bridge.json')
+                 '/home/oliver/weather/quellen/tide_tables/UK_tidetimes/Tees_(Newport)_Bridge.json')
 LOCATION = sys.argv[2] if len(sys.argv) > 2 else \
     'Tees (Newport) Bridge, England, United Kingdom'
 

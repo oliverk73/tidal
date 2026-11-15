@@ -1,7 +1,7 @@
 import sys, os, glob, csv, warnings; warnings.filterwarnings('ignore')
 sys.path.insert(0, '/home/oliver/weather/py')
 import bodc_stroemung as B, cmems_stroemung_nachholen as C, numpy as np
-O = '/home/oliver/weather/currents/UK_MDE/_arbeit/'
+O = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/_arbeit/'
 w = csv.writer(open(O + 'delta_bodc.csv', 'w')); w.writerow(['ref', 'lat', 'lon', 'stunden', 'dt_min', 'delta_min', 'rn'])
 for ref, m in sorted(B.metadaten().items(), key=lambda x: int(x[0])):
     p = os.path.join(m['_dir'], 'b%07d.qxf' % int(ref))
@@ -15,7 +15,7 @@ for ref, m in sorted(B.metadaten().items(), key=lambda x: int(x[0])):
     dt = float(np.median(np.diff(t.values).astype('timedelta64[s]').astype(float))) / 60 if len(t) > 1 else np.nan
     w.writerow([ref, m['Latitude A'], m['Longitude A'], n, round(dt, 2), round(C.stempelfehler_min(t), 2), os.path.basename(m['_dir'])])
 w2 = csv.writer(open(O + 'delta_cmems.csv', 'w')); w2.writerow(['datei', 'stunden', 'dt_min', 'delta_min'])
-for p in sorted(glob.glob('/home/oliver/weather/water_levels/CMEMS_currents_neu/*.nc')):
+for p in sorted(glob.glob('/home/oliver/weather/quellen/tidal_streams/CMEMS_currents_neu/*.nc')):
     try:
         x = C.reihe(p, roh=True)
     except Exception as e:

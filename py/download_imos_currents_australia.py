@@ -3,7 +3,7 @@
 
 Crawls the public S3 bucket imos-data for all
   IMOS/ANMN/{NRS,NSW,QLD,SA,WA,AM}/*/hourly_timeseries/*_VZ_*velocity-hourly-timeseries*.nc
-and downloads them to currents/Australia_IMOS/raw/.
+and downloads them to quellen/tidal_streams/Australia_IMOS/raw/.
 
 Resume-capable: records completed files in _download_state.json (atomic rename).
 """
@@ -19,8 +19,8 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 HOME = Path.home()
-RAW_DIR = HOME / 'currents' / 'Australia_IMOS' / 'raw'
-STATE_FILE = HOME / 'currents' / 'Australia_IMOS' / '_download_state.json'
+RAW_DIR = HOME / 'quellen/tidal_streams/Australia_IMOS' / 'raw'
+STATE_FILE = HOME / 'quellen/tidal_streams/Australia_IMOS' / '_download_state.json'
 
 S3_BASE = 'https://s3-ap-southeast-2.amazonaws.com/imos-data'
 S3_LIST = 'https://s3-ap-southeast-2.amazonaws.com/imos-data/'

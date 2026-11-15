@@ -4,7 +4,7 @@ UTide harmonic analysis for Cyprus tide gauges from IOC 1-minute data.
 Creates harmonics_utide_cyprus.txt (ISO-8859-1).
 
 Data:    IOC Sea Level Station Monitoring Facility, radar gauges, 1 min.
-         Downloaded with fetch_ioc.py into water_levels/IOC/ioc_<code>.csv.
+         Downloaded with fetch_ioc.py into quellen/water_levels/IOC/ioc_<code>.csv.
          These stations are live, so the service still serves their full
          history -- no SHELDA detour needed (unlike the Israeli stations,
          which are offline and whose IOC records have been purged).
@@ -45,7 +45,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_DIR = Path("/home/oliver/weather/water_levels/IOC")
+DATA_DIR = Path("/home/oliver/weather/quellen/water_levels/IOC")
 TEMPLATE_PATH = Path("/home/oliver/weather/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 # Zwischenprodukt, kein Sammelbestand: die fertigen Bloecke werden an
 # utide/harmonics_utide_observations.txt angehaengt (dort liegen alle

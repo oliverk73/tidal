@@ -16,10 +16,10 @@ import utide
 UHSLC_STATIONS = [
     {'uhslc_id': 248, 'name': 'Port of Spain', 'country': 'Trinidad and Tobago',
      'lat': 10.6500, 'lon': -61.5170, 'water': 'Gulf of Paria / Caribbean Sea',
-     'csv': '/home/oliver/water_levels/TrinidadTobago_UHSLC/h248_port_of_spain.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/TrinidadTobago_UHSLC/h248_port_of_spain.csv'},
     {'uhslc_id': 728, 'name': 'Point Fortin', 'country': 'Trinidad and Tobago',
      'lat': 10.1900, 'lon': -61.6890, 'water': 'Gulf of Paria / Caribbean Sea',
-     'csv': '/home/oliver/water_levels/TrinidadTobago_UHSLC/h728_point_fortin.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/TrinidadTobago_UHSLC/h728_point_fortin.csv'},
 ]
 
 from generate_caribbean_harmonics import (

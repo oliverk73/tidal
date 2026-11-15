@@ -9,7 +9,7 @@ ueber die Erde verschieben, mit einer erstklassigen Quelle als Begruendung.
 (Gefunden wurde genau das: "Mumbai (Colaba)" traegt die Kennungen von
 Mumbles in Wales.)
 
-Verzeichnisse in tide_tables/catalogues/, mit py/id_validate.py --laden zu holen:
+Verzeichnisse in quellen/kataloge/catalogues/, mit py/id_validate.py --laden zu holen:
   psmsl_rlr.txt, psmsl_met.txt   psmsl.org      Nummer; Breite; Laenge; Name
   uhslc_meta.geojson             uhslc.hawaii   uhslc_id, ssc_id, gloss_id
   chs_stations.json              api-iwls.dfo   code, latitude, longitude
@@ -33,7 +33,7 @@ from health_check import load_records, name_tokens                # noqa: E402
 from id_match import read_tags                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CAT = os.path.join(ROOT, 'tide_tables/catalogues')
+CAT = os.path.join(ROOT, 'quellen/kataloge/catalogues')
 SOURCES = {
     'psmsl_rlr.txt': 'https://psmsl.org/data/obtaining/rlr.annual.data/filelist.txt',
     'psmsl_met.txt': 'https://psmsl.org/data/obtaining/met.monthly.data/filelist.txt',

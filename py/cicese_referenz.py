@@ -4,7 +4,7 @@
 
 Das Centro de Investigacion Cientifica y de Educacion Superior de
 Ensenada rechnet fuer eine Reihe mexikanischer Haefen und stellt je
-Hafen und Monat ein PDF bereit. Unter tide_tables/mexico_cicese/ liegen
+Hafen und Monat ein PDF bereit. Unter quellen/tide_tables/mexico_cicese/ liegen
 15 Orte fuer das ganze Jahr 2026 (drei weitere Ordner sind leer).
 
 Diese Quelle ist bequemer als die SEMAR-Tafeln, weil sie alles selbst
@@ -42,7 +42,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CICESE = os.path.join(ROOT, 'tide_tables/mexico_cicese')
+CICESE = os.path.join(ROOT, 'quellen/tide_tables/mexico_cicese')
 
 SPALTEN = 7
 MONATE = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO',

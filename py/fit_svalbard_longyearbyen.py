@@ -6,7 +6,7 @@ Auf Svalbard steht nur ein dauerhafter Pegel (Ny-Alesund), und dafuer
 gibt es im Bestand schon zwei Saetze aus Messungen. Fuer Longyearbyen
 dagegen stammt der einzige Satz aus dem XTide-Bestand von 1997. Kartverket
 veroeffentlicht dort eine amtliche Tafel; zwei Jahrgaenge davon
-(water_levels/Norway_Kartverket/tafel_LYR.csv, geladen mit
+(quellen/water_levels/Norway_Kartverket/tafel_LYR.csv, geladen mit
 py/svalbard_kartverket.py) ergeben einen frischen Satz.
 
 Verfahren wie bei den uebrigen Tafelfits: Hoch- und Niedrigwasser werden
@@ -34,7 +34,7 @@ from add_uhslc_harmonics import CONSTITUENTS_175, find_xtide_match  # noqa: E402
 from batch_utide_uk_tidetimes import CONSTIT_67, cosine_interpolate  # noqa: E402
 from health_check import ROOT                                       # noqa: E402
 
-TAFEL = os.path.join(ROOT, 'water_levels/Norway_Kartverket/tafel_LYR.csv')
+TAFEL = os.path.join(ROOT, 'quellen/water_levels/Norway_Kartverket/tafel_LYR.csv')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 NAME = 'Longyearbyen (Adventfjorden), Svalbard, Norway'
 LAT, LON = 78.22314, 15.64686

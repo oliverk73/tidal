@@ -27,8 +27,8 @@ from generate_germany_harmonics_175 import (
 )
 
 DATA_DIRS = [
-    Path("/home/oliver/water_levels/CHS_NB"),
-    Path("/home/oliver/water_levels/CHS_NS"),
+    Path("/home/oliver/weather/quellen/water_levels/CHS_NB"),
+    Path("/home/oliver/weather/quellen/water_levels/CHS_NS"),
 ]
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_fundy.txt")

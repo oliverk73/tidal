@@ -40,7 +40,7 @@ from health_check import load_records, km                                       
 from sicher_schreiben import schreiben                                           # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-DIR = ROOT / 'water_levels' / 'VN_vho'
+DIR = ROOT / 'quellen/tide_tables/VN_vho'
 HARM = ROOT / 'harmonics' / 'utide' / 'harmonics_utide_tidetables.txt'
 LISTE = ROOT / 'harmonics' / 'help' / 'vho_neben_pruefung.csv'
 UTC_OFF = timedelta(hours=7)

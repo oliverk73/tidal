@@ -4,7 +4,7 @@
 
 Scheitel wie py/bsh_hddu_test.scheitel, jahresweise mit 1 Tag Ueberlappung. Luecken bis 10 min
 interpoliert; Scheitel, in deren +-2 h mehr als 10 min fehlen, entfallen.
-HPA-Export (hydroonline.hpanet.de, water_levels/Germany/HH/Pegel_<KZ>_*.csv): cm Seekartennull, MEZ
+HPA-Export (hydroonline.hpanet.de, quellen/water_levels/Germany/HH/Pegel_<KZ>_*.csv): cm Seekartennull, MEZ
 ganzjaehrig; --hpa KZ SKN_UEBER_PNP_M rechnet auf Pegelnull um (St. Pauli: SKN = PNP + 3,10 m, BSH D03).
 Usage: venv/bin/python py/elbe_scheitel_laden.py EXPORT.json ZIEL.csv
        venv/bin/python py/elbe_scheitel_laden.py --hpa STP 3.10 ZIEL.csv
@@ -45,7 +45,7 @@ def lesen_hpa(kz, skn_pnp):
     import glob
     teile = []
     for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                                           'water_levels/Germany/HH', f'Pegel_{kz}_*.csv'))):
+                                           'quellen/water_levels/Germany/HH', f'Pegel_{kz}_*.csv'))):
         x = pd.read_csv(f, sep=';', skiprows=18, usecols=[0, 1], names=['t', 'w'], encoding='utf-8-sig',
                         dtype=str, on_bad_lines='skip')
         x['w'] = pd.to_numeric(x.w, errors='coerce')

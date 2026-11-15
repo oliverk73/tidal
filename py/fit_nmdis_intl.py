@@ -3,7 +3,7 @@
 """Massen-UTide-Fit fuer internationale NMDIS-Stationen (Luecken + Classic-Upgrades).
 
 Wie fit_nmdis_stations.py, aber:
-- Plan = water_levels/CN_nmdis/intl_plan.json (klass GAP/OLD)
+- Plan = quellen/tide_tables/CN_nmdis/intl_plan.json (klass GAP/OLD)
 - UTC-Offset dynamisch aus timearea (INVERTIERT: '-0800'=UTC+8, '0500'=UTC-5;
   an Charleston/NOAA und Dover/UKHO verifiziert, immer Standardzeit ohne DST)
 - Land aus enname-Praefix ('CUBA-SANTIAGO'), Anzeige 'Santiago de Cuba, Cuba'
@@ -30,7 +30,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import CONSTIT_67
 
-DIR = Path('/home/oliver/water_levels/CN_nmdis')
+DIR = Path('/home/oliver/weather/quellen/tide_tables/CN_nmdis')
 PLAN = DIR / 'intl_plan.json'
 HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
 R2_GATE = 0.95

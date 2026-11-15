@@ -5,7 +5,7 @@
 Formular https://www.hidro.gob.ar/oceanografia/Tmareas/Form_Tcorrientes.asp (POST an
 RE_corrientes.asp mit CSRF-Token aus der Formularseite), je Ort und Monat eine HTML-Seite mit
 Kenterzeiten (HORA ESTOA), Zeit/Staerke/Richtung des Maximums. Zeit = Ortszeit, "HUSO +3".
-Ablage: tide_tables/argentina/shn_corrientes/raw/<CODE>_<JAHR>_<MM>.html (vorhandene bleiben).
+Ablage: quellen/tide_tables/argentina/shn_corrientes/raw/<CODE>_<JAHR>_<MM>.html (vorhandene bleiben).
 Hoeflich: eine Abfrage alle 2 s.
 
 Usage: venv/bin/python py/shn_corrientes_laden.py [JAHR]
@@ -19,7 +19,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'tide_tables/argentina/shn_corrientes/raw')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/argentina/shn_corrientes/raw')
 FORM = 'https://www.hidro.gob.ar/oceanografia/Tmareas/Form_Tcorrientes.asp'
 POST = 'https://www.hidro.gob.ar/oceanografia/Tmareas/RE_corrientes.asp'
 UA = 'Mozilla/5.0 (X11; Linux x86_64) tide-harvester/1.0'

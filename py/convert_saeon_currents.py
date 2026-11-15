@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Parse SAEON / DEA-MIMS ADCP hourly-current text files to per-station CSVs.
 
-Input:  currents/South_Africa_SAEON/raw/*.zip
-Output: currents/South_Africa_SAEON/<STATION>.csv  (time,speed,direction in m/s, deg true)
-        currents/South_Africa_SAEON/_stations.json
+Input:  quellen/tidal_streams/South_Africa_SAEON/raw/*.zip
+Output: quellen/tidal_streams/South_Africa_SAEON/<STATION>.csv  (time,speed,direction in m/s, deg true)
+        quellen/tidal_streams/South_Africa_SAEON/_stations.json
 
 Text format (confirmed for Walters Shoal, Algoa Bay, KZN Bight bundles):
   - First ~35 lines: # comments with Latitude, Longitude, Bin size, etc.
@@ -27,8 +27,8 @@ import numpy as np
 import pandas as pd
 
 HOME = Path.home()
-RAW_DIR = HOME / 'currents' / 'South_Africa_SAEON' / 'raw'
-OUT_DIR = HOME / 'currents' / 'South_Africa_SAEON'
+RAW_DIR = HOME / 'quellen/tidal_streams/South_Africa_SAEON' / 'raw'
+OUT_DIR = HOME / 'quellen/tidal_streams/South_Africa_SAEON'
 
 # Mooring prefix -> human-readable name
 STATION_NAMES = {

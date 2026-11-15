@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """BODC-Stroemungsmesserreihen fitten (Oliver 19.10.2026).
 
-Liest alle Lieferungen currents/BODC/RN-*/ (QXF = NetCDF; Datum AADYAA01 = Tage seit
+Liest alle Lieferungen quellen/tidal_streams/BODC/RN-*/ (QXF = NetCDF; Datum AADYAA01 = Tage seit
 1760-01-01, AAFDZZ01 = Tagesbruchteil; Flag ' ' = gut). Position, Tiefe und Projekt aus
 bodc_series_metadata_summary.csv. Stroemung als Geschwindigkeit/Richtung (LCSAEL01 cm/s,
 LCDAEL01 wohin) oder als Komponenten (LCEWAP01/LCNSAP01 o. ae.).
@@ -35,7 +35,7 @@ MIN_STUNDEN = 600
 
 def metadaten():
     out = {}
-    for f in glob.glob(os.path.join(ROOT, 'currents/BODC/RN-*/bodc_series_metadata_summary.csv')):
+    for f in glob.glob(os.path.join(ROOT, 'quellen/tidal_streams/BODC/RN-*/bodc_series_metadata_summary.csv')):
         L = open(f, encoding='latin-1').read().split('\n')
         i = next(k for k, l in enumerate(L) if l.startswith('BODC reference'))
         for r in csv.DictReader(L[i:]):

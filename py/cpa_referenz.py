@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Liest die Gezeitentafeln der Chittagong Port Authority (Bangladesch).
 
-Die Tafeln liegen unter tide_tables/bangladesh/chattogram/ bereits
+Die Tafeln liegen unter quellen/tide_tables/bangladesh/chattogram/ bereits
 geparst als cpa2026.json vor -- acht Stationen am Karnaphuli und vor der
 Kueste, voller Jahrgang 2026. Die Zeiten sind BST (UTC+6, keine
 Sommerzeit), die Hoehen ueber Chart Datum.
@@ -29,7 +29,7 @@ import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-JSON = os.path.join(ROOT, 'tide_tables/bangladesh/chattogram/cpa2026.json')
+JSON = os.path.join(ROOT, 'quellen/tide_tables/bangladesh/chattogram/cpa2026.json')
 TXT = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 BST = dt.timedelta(hours=6)
 

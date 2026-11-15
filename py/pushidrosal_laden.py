@@ -12,8 +12,8 @@ Monatswechsel koennten sonst die falsche Tafel tragen.
 Vorhandene Dateien werden nicht noch einmal geladen. Zwischen zwei
 Downloads 2 s Pause.
 
-Ziel:  tide_tables/indonesia/pushidrosal2023/<datei>.pdf   (liest py/pushidrosal_berichte.py)
-Liste: tide_tables/indonesia/pushidrosal_liste.json
+Ziel:  quellen/tide_tables/indonesia/pushidrosal2023/<datei>.pdf   (liest py/pushidrosal_berichte.py)
+Liste: quellen/tide_tables/indonesia/pushidrosal_liste.json
 
 Usage: python3 py/pushidrosal_laden.py            zeigen, was fehlt
        python3 py/pushidrosal_laden.py --laden    fehlende Monate laden
@@ -31,8 +31,8 @@ import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'tide_tables/indonesia/pushidrosal2023')
-LISTE = os.path.join(ROOT, 'tide_tables/indonesia/pushidrosal_liste.json')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/indonesia/pushidrosal2023')
+LISTE = os.path.join(ROOT, 'quellen/tide_tables/indonesia/pushidrosal_liste.json')
 BASIS = 'https://www.pushidrosal.id'
 UA = 'Mozilla/5.0 (X11; Linux x86_64) Chrome/120'
 

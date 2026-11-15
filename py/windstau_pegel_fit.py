@@ -36,7 +36,7 @@ from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = S.ROOT
 ZIEL = S.ZIEL
-INDEX = os.path.join(ROOT, 'water_levels/CMEMS_tg_index/index_history.txt')
+INDEX = os.path.join(ROOT, 'quellen/water_levels/CMEMS_tg_index/index_history.txt')
 BASIS = 'https://s3.waw3-1.cloudferro.com/mdl-native-03/native/'
 DE, DK, SE, FI, EE, LV, BG, RO, TR, UA = (('Germany', 'Europe/Berlin'), ('Denmark', 'Europe/Copenhagen'),
                                           ('Sweden', 'Europe/Stockholm'), ('Finland', 'Europe/Helsinki'),

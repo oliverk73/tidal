@@ -26,7 +26,7 @@ STATIONS = [
     {'code': 'mumb',  'name': 'Mumbai',          'lat': 18.9067, 'lon': 72.8147, 'start': 2007},
 ]
 
-OUTPUT_DIR = Path('/home/oliver/water_levels/India_IOC')
+OUTPUT_DIR = Path('/home/oliver/weather/quellen/water_levels/India_IOC')
 
 
 def download_month(code, year, month):

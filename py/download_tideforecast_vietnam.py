@@ -14,7 +14,7 @@ import time
 import requests
 from datetime import datetime
 
-OUTPUT_DIR = '/home/oliver/water_levels/Vietnam_tideforecast'
+OUTPUT_DIR = '/home/oliver/weather/quellen/tide_tables/Vietnam_tideforecast'
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36',

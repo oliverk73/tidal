@@ -241,7 +241,7 @@ def _bom_datei(name, jahr):
     if _BOMIDX is None:
         import bom_referenz as bo
         _BOMIDX = {}
-        d = os.path.join(ROOT, 'tide_tables/australia')
+        d = os.path.join(ROOT, 'quellen/tide_tables/australia')
         for fn in sorted(os.listdir(d)):
             if not (fn.startswith('IDO59001') and fn.endswith('.pdf')):
                 continue

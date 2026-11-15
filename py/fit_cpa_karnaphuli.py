@@ -53,7 +53,7 @@ sys.path.insert(0, '/home/oliver/weather/py')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 
 TZ_OFFSET_H = 6                      # Bangladesh Standard Time
-BASE = '/home/oliver/weather/tide_tables/bangladesh/chattogram'
+BASE = '/home/oliver/weather/quellen/tide_tables/bangladesh/chattogram'
 JSON = BASE + '/cpa2026.json'
 OUT = BASE + '/cpa_blocks.txt'
 

@@ -13,7 +13,7 @@ import time
 import requests
 import pandas as pd
 
-OUTPUT_DIR = '/home/oliver/water_levels/Belgium_waterinfo'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Belgium_waterinfo'
 KIWIS_BASE = 'https://www.waterinfo.be/tsmpub/KiWIS/KiWIS'
 
 

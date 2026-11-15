@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Harmonische Konstanten aus den Pushidrosal-Stundentafeln (41 Marinehaefen).
 
-Eingang: tide_tables/indonesia/pushidrosal_berichte_2026.json
+Eingang: quellen/tide_tables/indonesia/pushidrosal_berichte_2026.json
 (py/pushidrosal_laden.py + py/pushidrosal_berichte.py: Monatstafeln 05/2024-08/2026).
 
 Gerechnet wird wie bei den BMKG-Saetzen (py/build_bmkg_indonesia.py): UTide,
@@ -55,7 +55,7 @@ import xtide_modell as X                                           # noqa: E402
 from health_check import MAIN, ROOT, curve_diff, km, load_records  # noqa: E402
 
 warnings.filterwarnings('ignore')
-EIN = os.path.join(ROOT, 'tide_tables/indonesia/pushidrosal_berichte_2026.json')
+EIN = os.path.join(ROOT, 'quellen/tide_tables/indonesia/pushidrosal_berichte_2026.json')
 SAETZE = os.path.join(ROOT, 'harmonics/help/pushidrosal_saetze.txt')
 BERICHT = os.path.join(ROOT, 'harmonics/help/pushidrosal_vergleich.csv')
 KOPF = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')

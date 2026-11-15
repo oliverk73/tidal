@@ -20,22 +20,22 @@ import utide
 UHSLC_STATIONS = [
     {'uhslc_id': 806,  'version': 'fd',  'name': 'Nouakchott',   'country': 'Mauritania',
      'lat': 17.9902, 'lon': -16.0373, 'water': 'Atlantic Ocean',
-     'csv': '/home/oliver/water_levels/WestAfrica_UHSLC/nouakchott_mauritania.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/WestAfrica_UHSLC/nouakchott_mauritania.csv'},
     {'uhslc_id': 223,  'version': 'fd',  'name': 'Dakar',        'country': 'Senegal',
      'lat': 14.6770, 'lon': -17.4200, 'water': 'Atlantic Ocean',
-     'csv': '/home/oliver/water_levels/WestAfrica_UHSLC/dakar_senegal.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/WestAfrica_UHSLC/dakar_senegal.csv'},
     {'uhslc_id': 230,  'version': 'a',   'name': 'Abidjan',      'country': "Cote d'Ivoire",
      'lat':  5.2515, 'lon':  -4.0025, 'water': 'Atlantic Ocean',
-     'csv': '/home/oliver/water_levels/WestAfrica_UHSLC/abidjan_cote_divoire.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/WestAfrica_UHSLC/abidjan_cote_divoire.csv'},
     {'uhslc_id': 231,  'version': 'fd',  'name': 'Takoradi',     'country': 'Ghana',
      'lat':  4.8825, 'lon':  -1.7450, 'water': 'Atlantic Ocean (Gulf of Guinea)',
-     'csv': '/home/oliver/water_levels/WestAfrica_UHSLC/takoradi_ghana.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/WestAfrica_UHSLC/takoradi_ghana.csv'},
     {'uhslc_id': 233,  'version': 'a',   'name': 'Lagos Apapa',  'country': 'Nigeria',
      'lat':  6.4531, 'lon':   3.3840, 'water': 'Lagos Lagoon (Atlantic / Gulf of Guinea)',
-     'csv': '/home/oliver/water_levels/WestAfrica_UHSLC/lagos_apapa_nigeria.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/WestAfrica_UHSLC/lagos_apapa_nigeria.csv'},
     {'uhslc_id': 233,  'version': 'c',   'name': 'Lagos Bar',    'country': 'Nigeria',
      'lat':  6.3997, 'lon':   3.3974, 'water': 'Atlantic Ocean (Gulf of Guinea)',
-     'csv': '/home/oliver/water_levels/WestAfrica_UHSLC/lagos_bar_nigeria.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/WestAfrica_UHSLC/lagos_bar_nigeria.csv'},
 ]
 
 # Reuse helpers & constituent table

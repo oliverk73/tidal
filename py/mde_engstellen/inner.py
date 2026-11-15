@@ -1,6 +1,6 @@
 import sys, pickle, numpy as np, pandas as pd, openpyxl, warnings; warnings.filterwarnings('ignore')
 sys.path.insert(0, '/home/oliver/weather/py'); import cmems_stroemung_nachholen as C
-D = '/home/oliver/weather/currents/UK_MDE/CES-125/'
+D = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/CES-125/'
 wb = openpyxl.load_workbook(D + '543_x/M1826_AWAC_D2_AWAC.xlsx', read_only=True)
 R = list(wb[wb.sheetnames[0]].iter_rows(min_row=14, values_only=True))
 R = [r for r in R if isinstance(r[0], (int, float))]
@@ -18,4 +18,4 @@ ta = pd.to_datetime(dict(year=2000 + a.y, month=a.mo, day=a.d, hour=a.h, minute=
 p = pd.DataFrame({'p': a.dep.values}, index=pd.DatetimeIndex(ta))
 OUT = {'AWAC D2': dict(lat=58 + 39 / 60 + 36 / 3600, lon=-(3 + 8 / 60 + 27 / 3600), df=C.stundenmittel(df), p=C.stundenmittel(p)['p'], id='CES-125')}
 print(int(ok.sum()), len(df), df.index[0], df.index[-1], 'ADCP-Druck', len(p), p.index[0], p.index[-1])
-pickle.dump(OUT, open('/home/oliver/weather/currents/UK_MDE/_arbeit/inner.pkl', 'wb'))
+pickle.dump(OUT, open('/home/oliver/weather/quellen/tidal_streams/UK_MDE/_arbeit/inner.pkl', 'wb'))

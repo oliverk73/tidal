@@ -4,7 +4,7 @@
 
 Quelle: NOAA STOFS-2D-Global, Stationsausgabe stofs_2d_glo.tHHz.points.swl.nc (nicht-tidaler Wasserstand,
 6 min, 7,5 Tage, 1687 Punkte, fast alle in den USA; ~20 IOC-Pegel in Europa). Vier Laeufe am Tag; der neueste
-verfuegbare wird alle 6 h geholt (systemd --user: windstau.timer) -> water_levels/stofs/aktuell.npz.
+verfuegbare wird alle 6 h geholt (systemd --user: windstau.timer) -> quellen/water_levels/stofs/aktuell.npz.
 
 Bereinigung: das grobe Modell trifft die Gezeiten in Buchten/Fluessen nicht; die Differenz schwingt mit der
 Tide mit (Anchorage M2 0,24 m). Je Punkt werden M2, S2(~), K1, O1, M4 ueber das Vorhersagefenster angepasst und
@@ -26,7 +26,7 @@ import urllib.request
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels/stofs')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/stofs')
 DATEI = os.path.join(ZIEL, 'aktuell.npz')
 URL = 'https://nomads.ncep.noaa.gov/pub/data/nccf/com/stofs/prod/stofs_2d_glo.{d}/stofs_2d_glo.t{h:02d}z.points.swl.nc'
 PERIODEN = (12.4206, 12.0, 23.9345, 25.8193, 6.2103)     # M2, S2, K1, O1, M4 (h)
@@ -130,8 +130,8 @@ def fuer(lat, lon, noaa_id=None):
     return dict(t=d['t'], z=z, lauf=str(d['lauf']), punkt=str(d['namen'][i]), km=float(km[i]))
 
 
-CMEMS = os.path.join(ROOT, 'water_levels/cmems_ssh/aktuell.npz')
-NWS = os.path.join(ROOT, 'water_levels/nws_ssh/aktuell.npz')       # py/windstau_nws.py (9.11.2026, Modelltide abgezogen)
+CMEMS = os.path.join(ROOT, 'quellen/water_levels/cmems_ssh/aktuell.npz')
+NWS = os.path.join(ROOT, 'quellen/water_levels/nws_ssh/aktuell.npz')       # py/windstau_nws.py (9.11.2026, Modelltide abgezogen)
 _CM = {}
 
 

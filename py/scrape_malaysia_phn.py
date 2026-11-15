@@ -19,7 +19,7 @@ from pathlib import Path
 import requests
 
 URL = 'https://etide.hydro.gov.my/functions/q_functions.php'
-OUT_DIR = Path('/home/oliver/water_levels/Malaysia_PHN')
+OUT_DIR = Path('/home/oliver/weather/quellen/water_levels/Malaysia_PHN')
 LOG_FILE = OUT_DIR / '_scrape.log'
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 

@@ -15,7 +15,7 @@ gegen eigene Fits amtlicher Messreihen liegen M2/S2/O1 glatt -60 min daneben (K1
 Nicht angefasst: Blankenberge (stimmt).
 
 Nachtrag 28.10.2026: die uebrigen CMEMS-Saetze mit Meridian ungleich 0 gegen die CMEMS-Stundenreihen selbst
-(INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, oeffentlicher S3, TIME in UTC, water_levels/CMEMS_tg_pruefung/, Fit der
+(INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053, oeffentlicher S3, TIME in UTC, quellen/water_levels/CMEMS_tg_pruefung/, Fit der
 letzten 3 Jahre): Amplituden gleich, Phasen um Meridian x 60 min zu frueh -- Ostsee DE/PL -45..-66 (+01:00),
 FI/EE/BG/GR -95..-141 (+02:00), Trabzon -177 (+03:00), Morlaix -56, Porto Torres -48..-56. Kronstadt/Sankt Petersburg
 (+03:00) -142/-148, Mikrotide mit +-40 min Jahresstreuung; nach der Berichtigung +32/+38 statt -148.

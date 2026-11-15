@@ -28,7 +28,7 @@ from health_check import load_records, km                          # noqa: E402
 from bom_referenz import lies, MONATE                              # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDFS = os.path.join(ROOT, 'tide_tables/australia')
+PDFS = os.path.join(ROOT, 'quellen/tide_tables/australia')
 TCD = '/usr/share/xtide'
 EREIGNIS = re.compile(r'^(.*),(\d{4}-\d\d-\d\d),(\d+):(\d\d) ([AP])M[^,]*,'
                       r'(-?[\d.]+) m,(High|Low) Tide$')

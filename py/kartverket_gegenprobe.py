@@ -15,7 +15,7 @@ Mittelwert (die Bezugsniveaus sind verschieden), bester Zeitversatz,
 Amplitudenverhaeltnis und der Unterschied relativ zum Tidenhub.
 
 Eine Anfrage je Sekunde, ehrlicher User-Agent, Zwischenspeicher unter
-water_levels/Norway_Kartverket/pre_<lat>_<lon>.csv.
+quellen/water_levels/Norway_Kartverket/pre_<lat>_<lon>.csv.
 
 Ergebnis: harmonics/help/kartverket_gegenprobe.csv
 
@@ -44,7 +44,7 @@ from health_check import ROOT, km, load_records                     # noqa: E402
 
 API = 'https://vannstand.kartverket.no/tideapi.php'
 UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
-CACHE = os.path.join(ROOT, 'water_levels', 'Norway_Kartverket')
+CACHE = os.path.join(ROOT, 'quellen/water_levels/Norway_Kartverket')
 AUS = os.path.join(ROOT, 'harmonics/help/kartverket_gegenprobe.csv')
 START = dt.datetime(2026, 1, 1, tzinfo=dt.timezone.utc)
 

@@ -37,7 +37,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QUELLE = os.path.join(ROOT, 'tide_tables/noaa_nebenstroeme')
+QUELLE = os.path.join(ROOT, 'quellen/tidal_streams/noaa_nebenstroeme')
 OUT = os.path.join(ROOT, 'harmonics/noaa/harmonics_noaa_nebenstroeme.txt')
 GUETE = os.path.join(ROOT, 'harmonics/help/noaa_nebenstroeme_fit.csv')
 SCHRITT = 1 / 72.0          # 20 min in Tagen

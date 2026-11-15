@@ -18,7 +18,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-DATA_DIR = Path("/home/oliver/weather/water_levels/IOC")
+DATA_DIR = Path("/home/oliver/weather/quellen/water_levels/IOC")
 BASE = "https://www.ioc-sealevelmonitoring.org/service.php"
 CHUNK_DAYS = 20
 RETRIES = 4

@@ -22,7 +22,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_DIR = Path("/home/oliver/water_levels/UK_CMEMS")
+DATA_DIR = Path("/home/oliver/weather/quellen/water_levels/UK_CMEMS")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_uk_cmems.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_uk_cmems")

@@ -14,7 +14,7 @@ import datetime
 import ddlpy
 import pandas as pd
 
-OUTPUT_DIR = '/home/oliver/currents/Netherlands'
+OUTPUT_DIR = '/home/oliver/weather/quellen/tidal_streams/Netherlands'
 START_DATE = datetime.datetime(2015, 1, 1)
 END_DATE = datetime.datetime(2026, 3, 18)
 

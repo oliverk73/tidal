@@ -16,7 +16,7 @@ import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 
-OUTPUT_DIR = Path('/home/oliver/water_levels/Indonesia_IOC')
+OUTPUT_DIR = Path('/home/oliver/weather/quellen/water_levels/Indonesia_IOC')
 SENSOR_PREF = ['prs', 'rad', 'pr2', 'enc', 'flt']
 
 # IOC-Code, Name, lat, lon, fruehestes Datenjahr (per Stichprobe)

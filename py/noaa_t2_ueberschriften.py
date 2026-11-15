@@ -17,7 +17,7 @@ import re
 import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BUCH = {'acct': 'tide_tables/NOAA/acct_2020_full_book.pdf', 'pcct': 'tide_tables/NOAA/pcct_2020_full_book.pdf'}
+BUCH = {'acct': 'quellen/harmonics_sources/NOAA/acct_2020_full_book.pdf', 'pcct': 'quellen/harmonics_sources/NOAA/pcct_2020_full_book.pdf'}
 WORT = re.compile(r'<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)">([^<]*)</word>')
 
 

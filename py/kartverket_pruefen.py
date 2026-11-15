@@ -4,7 +4,7 @@
 
 Kartverket (vannstand.kartverket.no tideapi, locationdata) rechnet jeden Kuestenpunkt vom naechsten festen Pegel
 (Faktor + Zeitversatz). Je Satz in Norwegen/Svalbard: 2026 stuendlich an der Satzposition abrufen (Cache unter
-water_levels/Norway_Kartverket_punkte/), den Satz dagegen rechnen.
+quellen/water_levels/Norway_Kartverket_punkte/), den Satz dagegen rechnen.
 Mass: RMS nach Abzug beider Mittel, bester Zeitversatz (-90..90 min, 5-min-Schritt), Hubverhaeltnis (Std Satz/KV),
 Z0-Differenz (Mittel Satz - Mittel KV, beide auf Kartennull). Messsaetze (Kartverket-Fits, TICON) laufen als Kontrolle mit.
 Schreibt nichts ausser harmonics/help/kartverket_pruefung.csv.
@@ -29,7 +29,7 @@ import xtide_modell as X                                           # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KOPF = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
-CACHE = os.path.join(ROOT, 'water_levels/Norway_Kartverket_punkte')
+CACHE = os.path.join(ROOT, 'quellen/water_levels/Norway_Kartverket_punkte')
 AUS = os.path.join(ROOT, 'harmonics/help/kartverket_pruefung.csv')
 API = 'https://vannstand.kartverket.no/tideapi.php'
 

@@ -28,7 +28,7 @@ from generate_germany_harmonics_175 import (
 
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_oman.txt")
-DATA_DIR = Path("/home/oliver/water_levels/UHSLC_Oman")
+DATA_DIR = Path("/home/oliver/weather/quellen/water_levels/UHSLC_Oman")
 
 ERDDAP_BASE = 'https://uhslc.soest.hawaii.edu/erddap/tabledap/global_hourly_fast.csv'
 

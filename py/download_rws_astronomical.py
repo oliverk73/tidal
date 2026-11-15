@@ -4,7 +4,7 @@ Download astronomical water level data (Waterhoogte astronomisch t.o.v. NAP)
 from Rijkswaterstaat for all available tide stations.
 
 Uses ddlpy (pip install rws-ddlpy) to access the RWS Waterwebservices API.
-Data is saved as CSV files per station in water_levels/Netherlands/.
+Data is saved as CSV files per station in quellen/water_levels/Netherlands/.
 
 The astronomical tide predictions can then be analyzed with UTide to extract
 harmonic constants/constituents for XTide.
@@ -17,7 +17,7 @@ import time
 import ddlpy
 import pandas as pd
 
-OUTPUT_DIR = '/home/oliver/water_levels/Netherlands'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Netherlands'
 START_DATE = datetime.datetime(2007, 4, 1)
 END_DATE = datetime.datetime(2026, 3, 18)
 

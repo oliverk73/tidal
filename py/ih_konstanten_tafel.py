@@ -32,7 +32,7 @@ import unicodedata
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import ROOT                                       # noqa: E402
 
-PDF = os.path.join(ROOT, 'tide_tables/Portugal/TabelaMare_II_2026_signed.pdf')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/Portugal/TabelaMare_II_2026_signed.pdf')
 AUS = os.path.join(ROOT, 'harmonics/help/ih_konstanten.csv')
 # Das Buch mischt die Zonen: Porto Grande steht in Ortszeit (UT-1), Praia und
 # Palmeira auf denselben Seiten in UT. Welcher Hafen wie zaehlt, ist am

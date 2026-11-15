@@ -4,7 +4,7 @@
 
 Anlass: "Pedder Bay (4 km SSE)" lag genau auf Race Rocks, "Gordon Head (12 km ENE)" 200 m vor Lime Kiln Point
 (San Juan Island) -- Bezug auf ferne Orte statt aussagekraeftiger Namen direkt vor Ort.
-Quelle: GeoNames (offline, englische Namen, Provinz): currents/strom_landmarken_geonames.json (Leuchttuerme LTHSE,
+Quelle: GeoNames (offline, englische Namen, Provinz): quellen/tidal_streams/strom_landmarken_geonames.json (Leuchttuerme LTHSE,
 Kaps/Spitzen CAPE/PT, Felsen/Riffe RK/RKS/RF/SHOL, Inseln ISL/ISLET/ISLS, Halbinsel PEN; Gewaesser STRT/CHN/INLT/SD/
 HBR/BAY/NRWS/PASS/FJD). Overpass war fuer BC zu langsam (4 Saetze in 30 min) und lieferte Inuktitut-Namen.
 Name: Landmarke bis 1 km (Vorrang Leuchtturm > Kap/Spitze > Felsen > Inselchen > Insel) -> "Landmarke (Kontext)";
@@ -23,7 +23,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
-LM = os.path.join(ROOT, 'currents/strom_landmarken_geonames.json')
+LM = os.path.join(ROOT, 'quellen/tidal_streams/strom_landmarken_geonames.json')
 RICHTUNG = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
 PUNKT = {'LTHSE': 0, 'CAPE': 1, 'PT': 1, 'PTS': 1, 'PEN': 2, 'RKS': 3, 'RK': 3, 'RF': 3, 'SHOL': 4, 'ISLET': 5, 'ISLS': 6, 'ISL': 7}
 WASSER = {'STRT', 'CHN', 'CHNM', 'INLT', 'SD', 'HBR', 'BAY', 'NRWS', 'PASS', 'FJD'}

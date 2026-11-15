@@ -8,10 +8,10 @@ Variante mit dem kleinsten Zeit-RMS (harmonischer Satz | Satz + Ungleichheiten |
 eigene Variante nur, wenn sie mindestens 1 min besser ist und die Hoehe nicht um mehr als 3 cm
 verschlechtert. Bleiben HW und NW beim Satz, wird kein Modell abgelegt.
 
-Zuordnung Reihe -> Satz ueber die Position (water_levels/Germany/npz_stationen.json, < 1 km; bei zwei
+Zuordnung Reihe -> Satz ueber die Position (quellen/water_levels/Germany/npz_stationen.json, < 1 km; bei zwei
 Reihen am selben Satz die naehere), Reihen ohne Position ueber NAMEN.
 Ergebnis: harmonics/hwnw/<kurz>.json (mit 'wahl', 'fingerabdruck'), harmonics/help/hwnw_auswahl_<datum>.csv
-Scheitel-CSVs: water_levels/Germany/hwnw/<kurz>.csv (vorhandene werden wiederverwendet).
+Scheitel-CSVs: quellen/water_levels/Germany/hwnw/<kurz>.csv (vorhandene werden wiederverwendet).
 
 Ausland (--land=be|fr|uk|hp|us|alle): waterinfo.be, SHOM, BODC, HydroPortail (Stundenwerte, franz. Fluesse); Satz ueber hic_code/shom_code/bodc_code/station_id_context im Kopf.
 USA (--land=us, 5.11.2026): gemessene HW/NW direkt aus NOAA CO-OPS (Produkt high_low, MLLW, metrisch, UTC), Saetze aus
@@ -40,7 +40,7 @@ import hwnw_ungleichheiten as HU                                    # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OBS = 'harmonics/utide/harmonics_utide_observations.txt'
 TAB = 'harmonics/utide/harmonics_utide_tidetables.txt'
-GER = os.path.join(ROOT, 'water_levels/Germany')
+GER = os.path.join(ROOT, 'quellen/water_levels/Germany')
 SCHEITEL = os.path.join(GER, 'hwnw')
 FENSTER = [(2015, 2024), (2021, 2024)]
 PRUEF = 2025
@@ -120,7 +120,7 @@ DWF = 'harmonics/classic/harmonics-dwf-20251228-free.txt'
 # USA-Test 5.11.2026: flache Aestuare, an denen der harmonische Satz die verzerrte Tide am schlechtesten trifft
 # 5.11.2026: Test an 10 Aestuaren klar positiv (Delaware HW 16->11, NW 23->14 min) -> alle Saetze mit
 # noaa_station_id; ohne MLLW-HW/NW bei CO-OPS (Flusspegel mit eigenem Bezug) bricht laden_usa ab.
-USA = set(json.load(open(os.path.join(ROOT, 'water_levels/USA_COOPS/wasserstand_stationen.json'))))   # CO-OPS mdapi type=waterlevels, tidal
+USA = set(json.load(open(os.path.join(ROOT, 'quellen/water_levels/USA_COOPS/wasserstand_stationen.json'))))   # CO-OPS mdapi type=waterlevels, tidal
 USA_TEST = ('8545240', '8540433', '8551910', '8573927', '8574680', '8518995', '8658120', '9440083', '9440422', '9455920')
 COOPS = ('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=high_low&station={}&begin_date={}0101'
          '&end_date={}1231&datum=MLLW&units=metric&time_zone=gmt&format=csv&application=tiden_pruefung')
@@ -163,9 +163,9 @@ def laden_usa(nr, ziel):
 
 
 # Niederlande (5.11.2026): gemessene Getijextreme von Rijkswaterstaat (DDL v2, Groepering GETETM2, NAP, cm),
-# Typ hoogwater/laagwater aus der Begleitreihe Grootheid NVT. Orte: water_levels/Netherlands_RWS_extremen/stationen.json
+# Typ hoogwater/laagwater aus der Begleitreihe Grootheid NVT. Orte: quellen/water_levels/Netherlands_RWS_extremen/stationen.json
 RWS = 'https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen'
-NL_DIR = os.path.join(ROOT, 'water_levels/Netherlands_RWS_extremen')
+NL_DIR = os.path.join(ROOT, 'quellen/water_levels/Netherlands_RWS_extremen')
 NL_TEST = None          # z. B. {'hoekvanholland', ...} fuer einen Probelauf
 
 
@@ -270,7 +270,7 @@ def laden_nl(code, ziel):
 
 # Kanada (5.11.2026): CHS IWLS wlo (3-min-Messung, Kartennull, ab ~10/2019, hoechstens 7 Tage je Abruf);
 # Saetze aus TAB ueber '# chs_id:' im Kopf.
-CA_DIR = os.path.join(ROOT, 'water_levels/Canada_CHS_wlo')
+CA_DIR = os.path.join(ROOT, 'quellen/water_levels/Canada_CHS_wlo')
 CA_TEST = None          # 5.11.2026 Test an 9 Orten positiv -> Auswahl per --nur (Aestuare, Fluesse)
 
 
@@ -292,7 +292,7 @@ def pegel_ca():
 
 
 def lesen_ca(code):
-    """3-min-Reihe wochenweise laden (Cache water_levels/Canada_CHS_wlo/<code>.csv) -> pd.Series (m, UTC)."""
+    """3-min-Reihe wochenweise laden (Cache quellen/water_levels/Canada_CHS_wlo/<code>.csv) -> pd.Series (m, UTC)."""
     import time
     import urllib.request
     import pandas as pd
@@ -328,8 +328,8 @@ def lesen_ca(code):
 
 
 # Irland (5.11.2026): Marine-Institute-Reihen, die schon fuer die Fits geladen waren
-# (water_levels/Ireland_MI/npz/*.npz, 5 min, 2007-2025, LAT); Satz = naechster irischer Satz in OBS (< 1 km)
-IE_DIR = os.path.join(ROOT, 'water_levels/Ireland_MI/npz')
+# (quellen/water_levels/Ireland_MI/npz/*.npz, 5 min, 2007-2025, LAT); Satz = naechster irischer Satz in OBS (< 1 km)
+IE_DIR = os.path.join(ROOT, 'quellen/water_levels/Ireland_MI/npz')
 
 
 def pegel_ie():
@@ -363,9 +363,9 @@ def lesen_ie(f):
     return s[~s.index.duplicated()].sort_index()
 
 
-# Spanien/Portugal (5.11.2026): CMEMS-Stundenreihen aus water_levels/CMEMS_tg_pruefung (SLEV, QC 1/2),
+# Spanien/Portugal (5.11.2026): CMEMS-Stundenreihen aus quellen/water_levels/CMEMS_tg_pruefung (SLEV, QC 1/2),
 # Bezug unsicher -> wie HydroPortail auf das Mittel des Satzes (Z0) verschoben
-CMEMS_DIR = os.path.join(ROOT, 'water_levels/CMEMS_tg_pruefung')
+CMEMS_DIR = os.path.join(ROOT, 'quellen/water_levels/CMEMS_tg_pruefung')
 PUERTOS = 'harmonics/classic/harmonics_puertos_spain.txt'
 ES = {'Sevilla2': (PUERTOS, 'Sevilla (D\xe1rsena del Gualdaquivir), Spain'),
       'Bonanza': (PUERTOS, 'Sanl\xfacar de Barrameda (Bonanza / Guadalquivir), Spain'),
@@ -398,11 +398,11 @@ def lesen_cmems(f, datei, satz):
     return s + (z0 - s['2016':'2025'].mean())
 
 
-# Australien (5.11.2026): MSQ-Archiv Queensland (water_levels/Australia_QLD/msq_lang bzw. msq, UTC, LAT, 10 min) und
-# DoT Westaustralien (water_levels/Australia_WA/dot/<einsatz>.csv, UTC, m); Zuordnung aus den Fit-Listen
+# Australien (5.11.2026): MSQ-Archiv Queensland (quellen/water_levels/Australia_QLD/msq_lang bzw. msq, UTC, LAT, 10 min) und
+# DoT Westaustralien (quellen/water_levels/Australia_WA/dot/<einsatz>.csv, UTC, m); Zuordnung aus den Fit-Listen
 # (harmonics/help/qld_msq_fit.csv, wa_dot_pegel.tsv). Reihe auf das Satzmittel verschoben (DoT-Bezug je Einsatz).
-AU_QLD = os.path.join(ROOT, 'water_levels/Australia_QLD')
-AU_WA = os.path.join(ROOT, 'water_levels/Australia_WA/dot')
+AU_QLD = os.path.join(ROOT, 'quellen/water_levels/Australia_QLD')
+AU_WA = os.path.join(ROOT, 'quellen/water_levels/Australia_WA/dot')
 
 
 def pegel_au():
@@ -440,12 +440,12 @@ def lesen_au(fs, satz):
     return s + (z0 - s['2016':'2025'].mean())
 
 
-UK = os.path.join(ROOT, 'water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
-AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'water_levels/Belgium_waterinfo', c + '.csv')),
-           ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'water_levels/France_SHOM', c + '.csv')),
+UK = os.path.join(ROOT, 'quellen/water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd')
+AUSLAND = (('hic_code', 'be', lambda c: os.path.join(ROOT, 'quellen/water_levels/Belgium_waterinfo', c + '.csv')),
+           ('shom_code', 'fr', lambda c: os.path.join(ROOT, 'quellen/water_levels/France_SHOM', c + '.csv')),
            ('bodc_code', 'uk', lambda c: glob.glob(os.path.join(UK, f'20??{c}.txt')) and c),
            ('station_id_context', 'hp', lambda c: c.startswith('HydroPortail-') and os.path.join(
-               ROOT, 'water_levels/France_HydroPortail', 'hp_' + c.split('-', 1)[1] + '.csv')))
+               ROOT, 'quellen/water_levels/France_HydroPortail', 'hp_' + c.split('-', 1)[1] + '.csv')))
 
 
 def pegel_ausland():

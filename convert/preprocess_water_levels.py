@@ -19,8 +19,8 @@ import time
 from multiprocessing import Pool, cpu_count
 
 
-INPUT_DIR = Path("/home/oliver/water_levels/Germany")
-OUTPUT_DIR = Path("/home/oliver/water_levels/Germany/npz")
+INPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/Germany")
+OUTPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/Germany/npz")
 SAMPLE_INTERVAL = 60  # minutes (hourly)
 
 

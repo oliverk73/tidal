@@ -101,8 +101,8 @@ def bezugsort(lat, lon, pegel, orte):
 def kandidaten():
     schon = set(re.findall(r'# (?:ios_file|arctic_atlas|gocd_file): (\S+)', open(ZIEL, encoding='iso-8859-1').read()))
     out = []
-    for pk, art in (('currents/Canada_IOS/fits.pkl', 'ios'), ('currents/Arctic_tidal_atlas/fits.pkl', 'arktis'),
-                    ('currents/NCEI_GOCD/fits.pkl', 'gocd')):
+    for pk, art in (('quellen/tidal_streams/Canada_IOS/fits.pkl', 'ios'), ('quellen/tidal_streams/Arctic_tidal_atlas/fits.pkl', 'arktis'),
+                    ('quellen/tidal_streams/NCEI_GOCD/fits.pkl', 'gocd')):
         p = os.path.join(ROOT, pk)
         if not os.path.exists(p):
             continue
@@ -140,7 +140,7 @@ def main(argv):
     namen = {r['name'] for r in recs}
     import json
     alle = []
-    for gp in ('currents/Canada_IOS/orte_geonames.json', 'currents/NCEI_GOCD/orte_geonames.json'):   # GeoNames-Orte ab 300 Einw.
+    for gp in ('quellen/tidal_streams/Canada_IOS/orte_geonames.json', 'quellen/tidal_streams/NCEI_GOCD/orte_geonames.json'):   # GeoNames-Orte ab 300 Einw.
         gp = os.path.join(ROOT, gp)
         if os.path.exists(gp):
             alle += [tuple(o) for o in json.load(open(gp))]

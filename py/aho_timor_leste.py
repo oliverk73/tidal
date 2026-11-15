@@ -3,7 +3,7 @@
 """Timor-Leste National Tide Tables 2026 (AHO) einlesen und per Scheitelfit fitten (28.10.2026).
 
 Quelle: hydro.gov.au/prodserv/publications/TLNTT_2026.pdf (amtlich, im Auftrag der Regierung Timor-Leste; Server langsam,
-Kopie aus dem Wayback-Archiv) -> tide_tables/timor_leste/TLNTT_2026_wb.pdf. Dili ist Standardhafen, 11 Nebenhaefen ebenfalls
+Kopie aus dem Wayback-Archiv) -> quellen/tide_tables/timor_leste/TLNTT_2026_wb.pdf. Dili ist Standardhafen, 11 Nebenhaefen ebenfalls
 mit vollen HW/NW-Tafeln. Je Seite 4 Monate, je Monat zwei Spalten (Tage 1-15, 16-31); Text per pdfplumber (kein OCR).
 Kopf: "TIMOR-LESTE - NAME", "LAT 9° 21´ S LONG 125° 16´ E", "TIME ZONE -0900" (AHO: -0900 = UTC+9). Hoehen m ueber LAT.
 Fit: Scheitelfit (py/scheitelfit.py) ueber das ganze Jahr 2026 (Tafelfit, Klasse B).
@@ -26,7 +26,7 @@ import xtide_modell as X                                           # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'tide_tables/timor_leste/TLNTT_2026_wb.pdf')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/timor_leste/TLNTT_2026_wb.pdf')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 # Name im Bestand (Ort, Gemeinde) -- Gemeinde nach Lage; Positionen im Buch auf Bogenminuten
 NAMEN = {'SUAI': 'Suai, Cova Lima', 'COM (KUN)': 'Com, Lautém', 'KARABELA': 'Karabela, Baucau', 'DILI': 'Dili, Dili',

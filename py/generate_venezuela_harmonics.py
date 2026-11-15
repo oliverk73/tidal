@@ -15,7 +15,7 @@ import utide
 UHSLC_STATIONS = [
     {'uhslc_id': 247, 'name': 'La Guaira', 'country': 'Venezuela',
      'lat': 10.6170, 'lon': -66.9330, 'water': 'Caribbean Sea',
-     'csv': '/home/oliver/water_levels/Venezuela_UHSLC/h247_la_guaira.csv'},
+     'csv': '/home/oliver/weather/quellen/water_levels/Venezuela_UHSLC/h247_la_guaira.csv'},
 ]
 
 # Reuse 175-constituent list from Caribbean generator

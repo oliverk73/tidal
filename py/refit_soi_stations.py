@@ -3,7 +3,7 @@
 """Refit der 24 indischen Survey-of-India-Stationen in harmonics_utide_tidetables.txt.
 
 Ersetzt die schwachen 2-Monats-Fits (date_imported 20260413, r2 0.88-0.96)
-durch 22-Monats-Fits aus water_levels/IN_soi/months/ (Aug 2022, Feb-Dez 2024,
+durch 22-Monats-Fits aus quellen/water_levels/IN_soi/months/ (Aug 2022, Feb-Dez 2024,
 Feb-Aug 2025, Jan+Mai-Jul 2026). Name, Koordinaten und # state: bleiben
 unveraendert (Oliver pflegt Koordinaten z.T. manuell); Phasen neu als
 Greenwich mit '+00:00 :Asia/Kolkata' (Konvention der juengeren Importe;

@@ -36,7 +36,7 @@ import xtide_modell as X                                           # noqa: E402
 from fes_ersatz_inseln import sample, FES_DIR                      # noqa: E402
 
 ROOT = A.ROOT
-SEK = os.path.join(ROOT, 'tide_tables/png_aho/sek.txt')            # pdftotext -layout -f 90 -l 96
+SEK = os.path.join(ROOT, 'quellen/tide_tables/png_aho/sek.txt')            # pdftotext -layout -f 90 -l 96
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_aho_png_secondary.txt')
 STD = {'PORT MORESBY': 'PORT MORESBY', 'ALOTAU': 'ALOTAU (MILNE BAY)', 'LAE': 'LAE', 'ANEWA BAY': 'ANEWA BAY',
        'SEEADLER HARBOUR': 'SEEADLER HARBOUR (LOMBRUM BAY)', 'TWIN ISLAND': 'TWIN ISLAND'}

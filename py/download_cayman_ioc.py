@@ -12,7 +12,7 @@ import requests
 from datetime import datetime, timedelta
 from collections import defaultdict
 
-OUTPUT_DIR = "/home/oliver/water_levels/Cayman_IOC"
+OUTPUT_DIR = "/home/oliver/weather/quellen/water_levels/Cayman_IOC"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 STATIONS = [

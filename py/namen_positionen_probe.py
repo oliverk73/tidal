@@ -45,7 +45,7 @@ from health_check import ROOT, auf_raster, km, load_records         # noqa: E402
 HELP = os.path.join(ROOT, 'harmonics/help')
 AUS = os.path.join(HELP, 'namen_positionen_probe.csv')
 LOCK = os.path.join(HELP, 'positions_locked.csv')
-GEONAMES = os.path.join(ROOT, 'tide_tables/catalogues/geonames/umfeld.tsv')
+GEONAMES = os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/umfeld.tsv')
 KACHEL = 10.0
 HAND = re.compile(r'Oliver|HANDENTSCHEIDUNG|berichtigt|umbenannt|Handkorrektur|verschoben')
 

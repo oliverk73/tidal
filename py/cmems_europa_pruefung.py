@@ -3,7 +3,7 @@
 """Alle Gezeitensaetze in Europa gegen die CMEMS-Pegelreihen am selben Ort (Oliver 28.10.2026: "mach das").
 
 Anlass: Die krummen TICON-Saetze aus WSV/BfG, SMHI und RWS-hist (20-40 min bzw. 2 h daneben) fielen nur beim gezielten Vergleich mit
-Messreihen auf. CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053 (oeffentlicher S3, water_levels/cmems_tg_files.txt) hat ~925 Pegel.
+Messreihen auf. CMEMS INSITU_GLO_PHY_SSH_DISCRETE_MY_013_053 (oeffentlicher S3, cache/cmems_tg_files.txt) hat ~925 Pegel.
 Fallen der CMEMS-Reihen (28.10.): Goeteborg Klippan/Hisingsbron +1 h, Bagenkop driftet ab 2022, Imperia ab 2020 -> je Reihe nur ein
 stabiler Abschnitt: die juengsten >= 3 Jahre (je >= 4000 h), deren M2-Phase je Jahr hoechstens 6 min vom Median abweicht.
 Verglichen werden alle Saetze (ohne Stroeme) bis 2 km, Phasen als Zeit (min, Satz minus Messung: + = Satz zu spaet).
@@ -29,7 +29,7 @@ import health_check as H                                           # noqa: E402
 
 warnings.filterwarnings('ignore')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REIHEN = os.path.join(ROOT, 'water_levels/CMEMS_tg_pruefung')
+REIHEN = os.path.join(ROOT, 'quellen/water_levels/CMEMS_tg_pruefung')
 SP = dict(M2=28.984104, S2=30.0, K1=15.041069, O1=13.943035)
 KONST = ['M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1', 'M4', 'MS4', 'MN4', 'M6']
 

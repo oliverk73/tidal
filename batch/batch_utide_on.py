@@ -9,7 +9,7 @@ from pathlib import Path
 import batch_utide_qc as q
 
 # Redirect paths
-q.QC_DIR = Path("/home/oliver/water_levels/Canada_IWLS_ON")
+q.QC_DIR = Path("/home/oliver/weather/quellen/water_levels/Canada_IWLS_ON")
 q.TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt")
 q.OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_on.txt")
 q.CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_on")

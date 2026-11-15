@@ -19,7 +19,7 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
-REF = Path('/home/oliver/water_levels/CN_nmdis/oceanguide_qinhuangdao_30d_20260610.json')
+REF = Path('/home/oliver/weather/quellen/tide_tables/CN_nmdis/oceanguide_qinhuangdao_30d_20260610.json')
 STATION = 'Qinhuangdao, Hebei, China'
 MSL_OFFSET = 0.0    # NMEFC nutzt dasselbe Tidenull wie NMDIS (s. Docstring)
 

@@ -1,7 +1,7 @@
 import sys, os, math, pickle
 sys.path.insert(0, '/home/oliver/weather/py')
 import cmems_stroemung_nachholen as C, osm_land, sicher_schreiben, health_check as hc
-S = '/home/oliver/weather/currents/BODC/_arbeit/'
+S = '/home/oliver/weather/quellen/tidal_streams/BODC/_arbeit/'
 G = {g['refs'][0]: g for rn in ('rn-3866', 'rn-4007') for g in pickle.load(open(S + rn + '.pkl', 'rb'))}
 D = ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW']
 def geo(a, b, c, d):

@@ -7,7 +7,7 @@ Pruefjahr 2025 (in keiner Eichung enthalten): gemessene HW/NW (Scheitel-CSV aus 
            NL:  Rijkswaterstaat astronomische Getijextreme (GETETBRKD2, NAP)
   satz     harmonischer Satz (Scheitel)
   neu      eigene Rechnung (hwnw_ungleichheiten.vorhersage_kombi)
-Nur Orte mit Modell (harmonics/hwnw/us_*, nl_*). Amtliche Vorhersagen werden in water_levels/amtlich_2025/ gecacht.
+Nur Orte mit Modell (harmonics/hwnw/us_*, nl_*). Amtliche Vorhersagen werden in quellen/tide_tables/amtlich_2025/ gecacht.
 Ergebnis: harmonics/help/amtlich_vergleich_<datum>.csv
 Usage: venv/bin/python py/amtlich_vergleich.py [--land=us|nl]
 """
@@ -29,7 +29,7 @@ import hwnw_ungleichheiten as HU                                    # noqa: E402
 
 ROOT = HU.ROOT
 JAHR = 2025
-CACHE = os.path.join(ROOT, 'water_levels/amtlich_2025')
+CACHE = os.path.join(ROOT, 'quellen/tide_tables/amtlich_2025')
 T0 = dt.datetime(JAHR, 1, 1, tzinfo=dt.timezone.utc).timestamp()
 T1 = dt.datetime(JAHR + 1, 1, 1, tzinfo=dt.timezone.utc).timestamp()
 

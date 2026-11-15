@@ -10,7 +10,7 @@ Gleiches Format wie die Archive (Date dd/mm/yyyy, Time, Ind, Reading, 10 min), Z
 Jahrgaenge JAHRE (Fit auf zwei, Probe am dritten).
 
 Usage: venv/bin/python py/download_qld_msq_vorhersage.py [dataset-name-teil ...]
-       -> water_levels/Australia_QLD/msq_vorhersage/<dataset-name>.csv (time_utc, waterlevel_m)
+       -> quellen/water_levels/Australia_QLD/msq_vorhersage/<dataset-name>.csv (time_utc, waterlevel_m)
 """
 import csv
 import datetime as dt
@@ -21,7 +21,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import download_qld_msq_archiv as A                                # noqa: E402
 
-ZIEL = os.path.join(A.ROOT, 'water_levels/Australia_QLD/msq_vorhersage')
+ZIEL = os.path.join(A.ROOT, 'quellen/water_levels/Australia_QLD/msq_vorhersage')
 JAHRE = (2025, 2026, 2027)
 
 

@@ -6,8 +6,8 @@
 # bewusst manuell/mit Review.
 set -u
 cd /home/oliver || exit 1
-LOG=/home/oliver/water_levels/ea/fit_readiness.log
-FLAG=/home/oliver/water_levels/ea/EA_FIT_READY
+LOG=/home/oliver/weather/quellen/water_levels/ea/fit_readiness.log
+FLAG=/home/oliver/weather/quellen/water_levels/ea/EA_FIT_READY
 SUMMARY=$(/usr/bin/python3 py/fit_ea_station.py 2>/dev/null | grep -E '^WRITE=')
 TS=$(date -u +%Y-%m-%dT%H:%MZ)
 echo "$TS  ${SUMMARY:-(kein Ergebnis)}" >> "$LOG"

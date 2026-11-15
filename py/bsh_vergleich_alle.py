@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Guetenachweis der eigenen HW/NW-Rechnung (Stufe 4, Oliver 4.11.2026): an allen Pegeln mit BSH-Tafel 2026
-(tide_tables/germany_bsh/DE__<nr>P2026.txt) die letzten 30 Tage Pegelonline-Messung gegen
+(quellen/tide_tables/germany_bsh/DE__<nr>P2026.txt) die letzten 30 Tage Pegelonline-Messung gegen
   BSH (HDdU-Vorausberechnung) | harmonischer Satz | eigene Rechnung (hwnw_ungleichheiten.vorhersage_kombi).
 Kein Messwert dieses Zeitraums steckt in einer Eichung (Reihen enden Januar 2026).
 
 Zuordnung: BSH-Feld A13 Messstelle = Pegelonline-Stationsnummer = station_number der Zip-Exporte
-(water_levels/Germany/pegelonline-*.zip) -> hwnw_alle-Kurzname.
+(quellen/water_levels/Germany/pegelonline-*.zip) -> hwnw_alle-Kurzname.
 Messung: Pegelonline REST v2 .../stations/<nr>/W/measurements.json?start=P30D (1 min, cm PNP), Cache in
 water_levels/pegelonline_bsh_test/alle/<nr>.json (am selben Tag nicht neu geladen).
 Ergebnis: harmonics/help/bsh_vergleich_<datum>.csv
@@ -33,7 +33,7 @@ import hwnw_alle as A                                               # noqa: E402
 import hwnw_ungleichheiten as HU                                    # noqa: E402
 
 ROOT = HU.ROOT
-BSH = os.path.join(ROOT, 'tide_tables/germany_bsh')
+BSH = os.path.join(ROOT, 'quellen/tide_tables/germany_bsh')
 CACHE = os.path.join(ROOT, 'water_levels/pegelonline_bsh_test/alle')
 API = 'https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/{}/W/measurements.json?start=P30D'
 
@@ -57,7 +57,7 @@ def bsh_tafeln():
 def stationsnummern():
     """Pegelonline-Stationsnummer -> hwnw-Kurzname"""
     out = {}
-    for f in glob.glob(os.path.join(ROOT, 'water_levels/Germany/pegelonline-*-W-*.zip')):
+    for f in glob.glob(os.path.join(ROOT, 'quellen/water_levels/Germany/pegelonline-*-W-*.zip')):
         k = A.kurzname(os.path.basename(f).split('-W-')[0][len('pegelonline-'):])
         with zipfile.ZipFile(f) as z:
             n = [x for x in z.namelist() if x.endswith('zeitreiheninformation.txt')]

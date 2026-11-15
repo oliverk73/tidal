@@ -1,6 +1,6 @@
 import sys, glob, pickle, numpy as np, pandas as pd, scipy.io as s, warnings; warnings.filterwarnings('ignore')
 sys.path.insert(0, '/home/oliver/weather/py'); import cmems_stroemung_nachholen as C
-X = '/home/oliver/weather/currents/UK_MDE/_arbeit/'
+X = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/_arbeit/'
 POS = {'Site19': (58.7549, -3.2421), 'Site20': (58.7562, -3.2565), 'Site21': (58.7549, -3.2601), 'Site22': (58.7539, -3.2850), 'Site23': (58.7639, -3.2880)}
 OUT = pickle.load(open(X + 'brims.pkl', 'rb'))
 for f in sorted(glob.glob(X + 'brims/CES-50_*/BMADCP_Site*.mat')):

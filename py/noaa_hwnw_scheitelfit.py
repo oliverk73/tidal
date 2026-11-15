@@ -31,7 +31,7 @@ import xtide_modell as X                                           # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATEIEN = ['harmonics/noaa/harmonics_noaa_%s.txt' % t for t in ('pacif', 'carib', 'censam')]
-CACHE = os.path.join(ROOT, 'water_levels/NOAA_hilo')
+CACHE = os.path.join(ROOT, 'quellen/tide_tables/NOAA_hilo')
 URL = ('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&station=%s&begin_date=%d0101'
        '&end_date=%d1231&datum=MLLW&time_zone=gmt&units=metric&interval=hilo&format=json')
 JAHRE = (2025, 2026)

@@ -23,8 +23,8 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-NPZ_DIR = Path("/home/oliver/water_levels/France_SHOM/npz")
-CSV_DIR = Path("/home/oliver/water_levels/France_SHOM")  # fallback for old CSVs
+NPZ_DIR = Path("/home/oliver/weather/quellen/water_levels/France_SHOM/npz")
+CSV_DIR = Path("/home/oliver/weather/quellen/water_levels/France_SHOM")  # fallback for old CSVs
 CATALOG_PATH = CSV_DIR / "_station_catalog.json"
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_france.txt")

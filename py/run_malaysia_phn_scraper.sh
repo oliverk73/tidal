@@ -2,7 +2,7 @@
 # Wrapper: läuft scrape_malaysia_phn.py höchstens einmal pro Kalendertag (UTC).
 # Kann gefahrlos bei jedem WSL-Start ODER per Windows Task Scheduler aufgerufen werden.
 set -e
-STAMP=/home/oliver/water_levels/Malaysia_PHN/.last_run
+STAMP=/home/oliver/weather/quellen/water_levels/Malaysia_PHN/.last_run
 TODAY=$(date -u +%Y-%m-%d)
 mkdir -p "$(dirname "$STAMP")"
 if [ -f "$STAMP" ] && [ "$(cat "$STAMP")" = "$TODAY" ]; then

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Liest die amtliche indonesische Gezeitentafel (Pushidrosal 2023) von den Scans.
 
-tide_tables/indonesia/740852083-Tabel-Pasang-Surut-Kepulauan-Indonesia-2023-230-Mb.pdf
+quellen/tide_tables/indonesia/740852083-Tabel-Pasang-Surut-Kepulauan-Indonesia-2023-230-Mb.pdf
 enthaelt fuer 100 Haefen STUENDLICHE Vorhersagen (Pushidrosal, aus 1148 Saetzen
 eigener harmonischer Konstanten). Das PDF ist ein reiner Scan ohne Textebene;
 gelesen wird deshalb mit tesseract.
@@ -16,7 +16,7 @@ Gelesen wird zeilenweise; eine Tagzeile zaehlt nur, wenn genau 24 Werte
 herauskommen und die Tagesnummer links und rechts uebereinstimmt. So bleiben
 OCR-Fehler draussen, statt Werte zu erfinden.
 
-Ergebnis: tide_tables/indonesia/pushidrosal2023/<nr>_<name>.json
+Ergebnis: quellen/tide_tables/indonesia/pushidrosal2023/<nr>_<name>.json
           {"name":..., "lat":..., "lon":..., "tz":..., "tage": {"2023-01-01": [24 Werte], ...}}
 
 Usage: venv/bin/python3 py/pushidrosal_ocr.py --seiten 53,54 [--ordner ...]
@@ -32,8 +32,8 @@ import sys
 import tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'tide_tables/indonesia/740852083-Tabel-Pasang-Surut-Kepulauan-Indonesia-2023-230-Mb.pdf')
-ZIEL = os.path.join(ROOT, 'tide_tables/indonesia/pushidrosal2023')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/indonesia/740852083-Tabel-Pasang-Surut-Kepulauan-Indonesia-2023-230-Mb.pdf')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/indonesia/pushidrosal2023')
 MONATE = {'JANUARI': 1, 'PEBRUARI': 2, 'FEBRUARI': 2, 'MARET': 3, 'APRIL': 4, 'MEI': 5, 'JUNI': 6,
           'JULI': 7, 'AGUSTUS': 8, 'SEPTEMBER': 9, 'OKTOBER': 10, 'NOVEMBER': 11, 'DESEMBER': 12}
 TAGE_IM_MONAT = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]

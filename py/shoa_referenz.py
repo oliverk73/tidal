@@ -7,7 +7,7 @@ Der SHOA veroeffentlicht seine Tafeln nur ueber ein Formular
 einem Skript beantwortet die Seite mit 405 und einer
 Human-Verification-Seite -- auch mit Browser-Kopfzeilen, auch per GET.
 Das ist der ausdrueckliche Wille der Seite; sie wird nicht umgangen.
-Verarbeitet wird deshalb nur, was unter tide_tables/chile/ von Hand
+Verarbeitet wird deshalb nur, was unter quellen/tide_tables/chile/ von Hand
 gespeichert wurde: 20 Orte mit je drei Monaten (Mai bis Juli 2026).
 
 Zwei Dinge macht der SHOA angenehm einfach. Die Seite nennt ihre
@@ -35,7 +35,7 @@ import sys
 import unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CHILE = os.path.join(ROOT, 'tide_tables/chile')
+CHILE = os.path.join(ROOT, 'quellen/tide_tables/chile')
 
 # Ordner- bzw. Dateikuerzel -> (Name im Bestand, Zonenversatz)
 # Der Versatz ist ueberall -4; nur die Osterinsel haette -6, von ihr

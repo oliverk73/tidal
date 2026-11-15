@@ -342,7 +342,7 @@ def read_header_from_template(template_path):
 
 
 def main():
-    data_dir = Path('/home/oliver/water_levels/Mexico_UHSLC')
+    data_dir = Path('/home/oliver/weather/quellen/water_levels/Mexico_UHSLC')
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path(f'/home/oliver/harmonics/utide/harmonics_utide_mexico.txt')
 

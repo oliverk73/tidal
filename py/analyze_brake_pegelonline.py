@@ -16,7 +16,7 @@ from generate_germany_harmonics_175 import (   # noqa: E402
     format_station_block,
 )
 
-WATER_LEVELS = Path("/home/oliver/water_levels/Germany")
+WATER_LEVELS = Path("/home/oliver/weather/quellen/water_levels/Germany")
 UTIDE_OBS    = Path("/home/oliver/harmonics/utide/harmonics_utide_observations.txt")
 
 TARGETS = [

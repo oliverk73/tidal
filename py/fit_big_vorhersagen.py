@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Harmonische Konstanten der BIG-Messpegel aus BIGs eigener Vorhersage.
 
-Eingang: water_levels/Indonesia_BIG/vorhersage/<kode>.json (py/big_vorhersagen_laden.py)
+Eingang: quellen/tide_tables/Indonesia_BIG/vorhersage/<kode>.json (py/big_vorhersagen_laden.py)
          -- je Pegel drei Monatsfenster (Jan, Mai, Sep 2026) Stundenwerte, UTC, MSL.
 
 BIG rechnet diese Vorhersage live aus den harmonischen Konstanten, die es aus den
@@ -47,8 +47,8 @@ import xtide_modell as X                                           # noqa: E402
 from health_check import MAIN, ROOT, curve_diff, km, load_records  # noqa: E402
 
 warnings.filterwarnings('ignore')
-EIN = os.path.join(ROOT, 'water_levels/Indonesia_BIG/vorhersage')
-MESS = os.path.join(ROOT, 'water_levels/Indonesia_BIG')
+EIN = os.path.join(ROOT, 'quellen/tide_tables/Indonesia_BIG/vorhersage')
+MESS = os.path.join(ROOT, 'quellen/tide_tables/Indonesia_BIG')
 SAETZE = os.path.join(ROOT, 'harmonics/help/big_saetze.txt')
 BERICHT = os.path.join(ROOT, 'harmonics/help/big_vergleich.csv')
 KOPF = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')

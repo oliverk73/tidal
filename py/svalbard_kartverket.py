@@ -8,7 +8,7 @@ dort genau einen dauerhaften Pegel (Ny-Alesund, NYA) und veroeffentlicht
 darueber hinaus amtliche Tidetafeln fuer die Haefen der Inselgruppe.
 
   --lade      Stundenwerte (OBS) fuer Ny-Alesund, ein Jahr je Anfrage,
-              nach water_levels/Norway_Kartverket/
+              nach quellen/water_levels/Norway_Kartverket/
   --tafeln    Hoch- und Niedrigwasser (tidetable) fuer die Orte in ORTE
   --fit       UTide auf das Geladene, Saetze nach harmonics/utide/
 
@@ -32,7 +32,7 @@ from health_check import ROOT                                       # noqa: E402
 
 API = 'https://vannstand.kartverket.no/tideapi.php'
 UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
-REIHEN = os.path.join(ROOT, 'water_levels', 'Norway_Kartverket')
+REIHEN = os.path.join(ROOT, 'quellen/water_levels/Norway_Kartverket')
 
 # Der einzige dauerhafte Pegel (stationlist type=perm, 16.09.2026)
 PEGEL = dict(code='NYA', name='Ny-Alesund', lat=78.928545, lon=11.938015)

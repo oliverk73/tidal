@@ -19,9 +19,9 @@ from datetime import timedelta
 
 import shape_interp as S
 
-PAYRA_PDF = '/home/oliver/weather/tide_tables/bangladesh/payra/ppa_10.pdf'
-PAYRA_BASE = '/home/oliver/weather/tide_tables/bangladesh/payra'
-MONGLA_PDF = ('/home/oliver/weather/tide_tables/bangladesh/'
+PAYRA_PDF = '/home/oliver/weather/quellen/tide_tables/bangladesh/payra/ppa_10.pdf'
+PAYRA_BASE = '/home/oliver/weather/quellen/tide_tables/bangladesh/payra'
+MONGLA_PDF = ('/home/oliver/weather/quellen/tide_tables/bangladesh/'
               'tide_Table_pussur_river_mongla.pdf')
 TZ_OFFSET_H = 6  # Bangladesh Standard Time (UTC+6, no DST)
 

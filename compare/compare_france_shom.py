@@ -27,7 +27,7 @@ SOURCES = {
     'PLv10': '/home/oliver/harmonics/classic/harmonics_pierre_lavergne_v10.tcd',
 }
 
-NPZ_DIR = '/home/oliver/water_levels/France_SHOM/npz/'
+NPZ_DIR = '/home/oliver/weather/quellen/water_levels/France_SHOM/npz/'
 
 # Comparison period: use January 2025 (recent data, most stations have it)
 COMP_START = np.datetime64('2025-01-01')

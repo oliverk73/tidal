@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Regionale italienische Pegel (water_levels/Italy) -> UTide-Harmonische -> XTide.
+"""Regionale italienische Pegel (quellen/water_levels/Italy) -> UTide-Harmonische -> XTide.
 
 STATUS 2026-07-23: Die zwei Records (Cetraro, Pozzallo) wurden in
 harmonics/utide/harmonics_utide_observations.txt EINGEMERGT (Oliver-Entscheid).
@@ -36,7 +36,7 @@ from generate_south_africa_harmonics import (
     harmonic_analysis_utide, read_header_from_template
 )
 
-DATA = Path('/home/oliver/weather/water_levels/Italy')
+DATA = Path('/home/oliver/weather/quellen/water_levels/Italy')
 OUT  = Path('/home/oliver/weather/harmonics/help/italy_regional_derived.txt')  # nur Inspektion; Records leben in harmonics_utide_observations.txt
 TEMPLATE = Path('/home/oliver/weather/harmonics/utide/harmonics_utide_observations.txt')
 
@@ -70,7 +70,7 @@ def format_block(st, res, npts, start, end):
     L = []
     L.append('# BEGIN HOT COMMENTS')
     L.append('# country: Italy')
-    L.append('# source: Regionaler Pegel (water_levels/Italy, 10-min, UTC); UTide-Harmonische Analyse')
+    L.append('# source: Regionaler Pegel (quellen/water_levels/Italy, 10-min, UTC); UTide-Harmonische Analyse')
     L.append(f'# date_imported: {datetime.now().strftime("%Y%m%d")}')
     L.append('# datum: MSL (30d-rolling-median detrended)')
     L.append(f'# confidence: {st["conf"]}')

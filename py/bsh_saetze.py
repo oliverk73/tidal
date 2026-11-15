@@ -5,7 +5,7 @@
 Das BSH (gezeiten.bsh.de) fuehrt 172 deutsche Orte. 54 davon hatten am
 13.09.2026 keinen Satz im Umkreis von 1.5 km -- darunter Nortmoor (Altarm
 Juemme), Westringaburg (Leda), Detern, Augustfehn, Barssel, Arngast und die
-Vareler Schleuse. Die Daten liegen in tide_tables/germany_bsh/ (JSON je Ort
+Vareler Schleuse. Die Daten liegen in quellen/tide_tables/germany_bsh/ (JSON je Ort
 mit Vorhersagen 2026 und 2027, Kennwerten und Bezugspegel; 10-Minuten-Kurven
 fuer die Hauptpegel).
 
@@ -59,7 +59,7 @@ import xtide_modell as X                                           # noqa: E402
 from health_check import km, load_records                          # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BSH = os.path.join(ROOT, 'tide_tables/germany_bsh')
+BSH = os.path.join(ROOT, 'quellen/tide_tables/germany_bsh')
 AUS_TXT = os.path.join(ROOT, 'harmonics/bsh/harmonics_bsh_germany.txt')
 AUS_CSV = os.path.join(ROOT, 'harmonics/help/bsh_saetze.csv')
 KOPFQUELLE = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')

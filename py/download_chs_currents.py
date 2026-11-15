@@ -4,8 +4,8 @@ Download CHS IWLS current measurements (wcs1 speed + wcd1 direction) and/or
 current predictions (wcsp1 speed + wcdp1 direction) for Canadian stations.
 
 Invoke:
-  python3 download_chs_currents.py measured     -> /home/oliver/currents/Canada_CHS_measured
-  python3 download_chs_currents.py predicted    -> /home/oliver/currents/Canada_CHS_predicted
+  python3 download_chs_currents.py measured     -> /home/oliver/weather/quellen/tidal_streams/Canada_CHS_measured
+  python3 download_chs_currents.py predicted    -> /home/oliver/weather/quellen/tidal_streams/Canada_CHS_predicted
 
 Year-by-year streaming (CHS API limits single request to ~7 days; we chunk
 7 days per request).

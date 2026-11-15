@@ -26,9 +26,9 @@ from generate_germany_harmonics_175 import (
 )
 
 # --- Directories ---
-IWLS_DIR = Path("/home/oliver/water_levels/Canada_IWLS")
-UHSLC_DIR = Path("/home/oliver/water_levels/Canada_UHSLC")
-CATALOG_PATH = Path("/home/oliver/water_levels/Canada/_stations_with_wlo.json")
+IWLS_DIR = Path("/home/oliver/weather/quellen/water_levels/Canada_IWLS")
+UHSLC_DIR = Path("/home/oliver/weather/quellen/water_levels/Canada_UHSLC")
+CATALOG_PATH = Path("/home/oliver/weather/quellen/water_levels/Canada/_stations_with_wlo.json")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_ca_all")

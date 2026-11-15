@@ -76,7 +76,7 @@ from batch_utide_uk_tidetimes import CONSTIT_67                     # noqa: E402
 from health_check import km, load_records                          # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TAFELN = os.path.join(ROOT, 'water_levels/UK_tidetimes')
+TAFELN = os.path.join(ROOT, 'quellen/tide_tables/UK_tidetimes')
 KOPFQUELLE = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 GEWICHT = 0.3          # Stunden: Steigung gegen Hoehe (0.1 traf die
                        # Hoehen besser, 1.0 die Scheitelzeiten; 0.3 beides)

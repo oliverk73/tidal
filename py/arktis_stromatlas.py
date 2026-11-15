@@ -8,7 +8,7 @@ u_tide_pred/v_tide_pred (cm/s, aus der Gesamtreihen-Analyse). Auswahl (List_of_r
 (Wassertiefe <= 600 m, ohne Tiefseebecken eeb/mb/pole/web), je Verankerung die laengste Reihe (bei Gleichstand das
 flachere Geraet). Genommen wird die flachste Tiefe ab 4 m mit >= 80 % gueltigen Werten; Fit wie py/ios_stroemung.py
 (Hauptachse, XTide-Konstanten in Knoten; unter 182,6 Tagen K2/P1 an den naechsten Pegel gekoppelt).
-Dateien -> currents/Arctic_tidal_atlas/nc/, Ergebnis harmonics/help/arktis_stromatlas.csv + fits.pkl.
+Dateien -> quellen/tidal_streams/Arctic_tidal_atlas/nc/, Ergebnis harmonics/help/arktis_stromatlas.csv + fits.pkl.
 
 Usage: venv/bin/python py/arktis_stromatlas.py
 """
@@ -31,7 +31,7 @@ import xtide_modell as X                                            # noqa: E402
 from ios_stroemung import FREI                                      # noqa: E402
 
 ROOT = K.ROOT
-D = os.path.join(ROOT, 'currents/Arctic_tidal_atlas')
+D = os.path.join(ROOT, 'quellen/tidal_streams/Arctic_tidal_atlas')
 OBJ = 'https://arcticdata.io/metacat/d1/mn/v2/object/'
 TIEFSEE = ('eeb', 'mb', 'pole', 'web')
 HAUPT = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1')

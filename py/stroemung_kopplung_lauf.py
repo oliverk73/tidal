@@ -3,7 +3,7 @@
 """Kurze Stroemungsreihen ohne K2 mit gekoppelten Nachbartiden neu fitten (Oliver 20.10.2026).
 
 Fuer jeden Satz in harmonics_utide_current_observations.txt ohne K2: Rohreihe holen (BODC-QXF,
-RWS-CSV, MDE-Pickles in currents/UK_MDE/_arbeit/), mit allen Tiden des alten Satzes frei und
+RWS-CSV, MDE-Pickles in quellen/tidal_streams/UK_MDE/_arbeit/), mit allen Tiden des alten Satzes frei und
 K2->S2, P1->K1 (unter 27,6 Tagen auch N2->M2) gekoppelt fitten (py/stroemung_kopplung.py).
 Ersetzt werden nur die Konstanten, Z0 und die R^2-Zeile; dazu eine Notiz. Weicht M2 um mehr
 als 15 % oder 15 Grad vom alten Satz ab, bleibt der Satz und wird gemeldet.
@@ -29,7 +29,7 @@ from generate_germany_harmonics_175 import CONSTITUENTS_175         # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATEI = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
-ARB = os.path.join(ROOT, 'currents/UK_MDE/_arbeit/')
+ARB = os.path.join(ROOT, 'quellen/tidal_streams/UK_MDE/_arbeit/')
 # MDE: Namensanfang -> (Pickle, Schluessel)
 MDE = {'Hunstanton (': ('anglia.pkl', 'BM1 - The Wash'), 'Blakeney (': ('anglia.pkl', 'BM2 - Wells'),
        'Felixstowe (': ('anglia.pkl', 'BM4 - Deben'), 'Walton-on-the-Naze (': ('anglia.pkl', 'BM5 - Walton-on-the-Naze'),
@@ -90,7 +90,7 @@ def rws_reihe(text):
     import fit2
     c = re.search(r'# rws_loccode: (\S+)', text).group(1)
     p = re.search(r'period=(\d{4}-\d\d-\d\d)\.\.(\d{4}-\d\d-\d\d)', text)
-    for pfad in (os.path.join(ROOT, 'currents/Netherlands/%s.csv' % c), os.path.join(ROOT, 'currents/Netherlands/GAP_%s.csv' % c)):
+    for pfad in (os.path.join(ROOT, 'quellen/tidal_streams/Netherlands/%s.csv' % c), os.path.join(ROOT, 'quellen/tidal_streams/Netherlands/GAP_%s.csv' % c)):
         if os.path.exists(pfad):
             df = fit2.load(pfad)
             df = df.loc[p.group(1):p.group(2) + ' 23:59']

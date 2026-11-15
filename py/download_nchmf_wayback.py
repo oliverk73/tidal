@@ -17,7 +17,7 @@ import time
 import urllib.request
 from pathlib import Path
 
-DIR = Path('/home/oliver/water_levels/VN_nchmf')
+DIR = Path('/home/oliver/weather/quellen/tide_tables/VN_nchmf')
 UA = {'User-Agent': 'Mozilla/5.0 (tide-research; contact oliver.k73@gmail.com)'}
 
 

@@ -7,7 +7,7 @@ Hoch- und Niedrigwasser in UTC. Damit ist sie als Massstab bequemer als
 jede gedruckte Tafel: nichts zu parsen, keine Zeitzone zu erraten, und
 die Position kommt gleich mit.
 
-Alles wird unter tide_tables/canada_chs/ abgelegt und von dort
+Alles wird unter quellen/tide_tables/canada_chs/ abgelegt und von dort
 wiederverwendet -- ein zweiter Lauf fragt die Schnittstelle nicht noch
 einmal. Das schont sie und macht die Messung wiederholbar.
 
@@ -27,7 +27,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CACHE = os.path.join(ROOT, 'tide_tables/canada_chs')
+CACHE = os.path.join(ROOT, 'quellen/tide_tables/canada_chs')
 API = 'https://api-iwls.dfo-mpo.gc.ca/api/v1'
 STATIONEN = os.path.join(CACHE, 'stationen.json')
 

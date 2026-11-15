@@ -53,7 +53,7 @@ from health_check import load_records, km, ROOT                   # noqa: E402
 from pegel_dubletten import vermerke                              # noqa: E402
 import dubletten_aufraeumen as D                                  # noqa: E402
 
-ORDNER = os.path.join(ROOT, 'water_levels', 'UK_tidetimes')
+ORDNER = os.path.join(ROOT, 'quellen/tide_tables/UK_tidetimes')
 FORTSCHRITT = os.path.join(ORDNER, 'erweitern_fortschritt.json')
 KOPF = {'User-Agent': 'tidal-corpus/1.0 (harmonic constant verification; '
                       'github.com/oliverk73/tidal)'}

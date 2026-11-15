@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import stroemung_kopplung as K                                      # noqa: E402
 
 ROOT = K.ROOT
-PFAD = os.path.join(ROOT, 'currents/newzealand_terawhiti/CapeTerawhiti_RDCP_2010.dat')
+PFAD = os.path.join(ROOT, 'quellen/tidal_streams/newzealand_terawhiti/CapeTerawhiti_RDCP_2010.dat')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
 LAT, LON = -(41 + 16.689 / 60), 174 + 35.857 / 60
 NAME = 'Cape Terawhiti (Cook Strait), Wellington, New Zealand Current'

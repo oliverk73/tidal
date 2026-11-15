@@ -6,7 +6,7 @@ Meetnet Vlaamse Banken (MVB) for all stations that have both parameters.
 MVB getData limits range (works for up to ~7 days). We stream in 7-day chunks
 across each station's available history.
 
-Output: /home/oliver/currents/Belgium/<code>.csv with columns
+Output: /home/oliver/weather/quellen/tidal_streams/Belgium/<code>.csv with columns
   time, speed (m/s), direction (deg)
 
 Token is refreshed every few hundred requests.
@@ -17,7 +17,7 @@ import pandas as pd
 sys.path.insert(0, '/home/oliver/py')
 from probe_mvb_catalog import load_creds, get_token
 
-OUTPUT_DIR = '/home/oliver/currents/Belgium'
+OUTPUT_DIR = '/home/oliver/weather/quellen/tidal_streams/Belgium'
 API = 'https://api.meetnetvlaamsebanken.be'
 
 # Probe each year's first half to detect coverage
@@ -147,7 +147,7 @@ def download_station(tok, stn, name, start_year, end_year, out_dir):
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    with open('/home/oliver/currents/mvb_catalog.json') as f:
+    with open('/home/oliver/weather/quellen/kataloge/mvb_catalog.json') as f:
         cat = json.load(f)
     locs = {l['ID']: l for l in cat['Locations']}
     avail = cat['AvailableData']

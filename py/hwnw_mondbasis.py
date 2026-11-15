@@ -12,7 +12,7 @@ Usage: venv/bin/python py/hwnw_mondbasis.py [--mehr]
 import sys,datetime as dt, numpy as np
 import os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import hwnw_ungleichheiten as U, bsh_hddu_test as B
-CSV=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'water_levels/Germany/cuxhaven_hwnw_2000_2026.csv')
+CSV=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'quellen/water_levels/Germany/cuxhaven_hwnw_2000_2026.csv')
 G=dict(U.GLIEDER)
 G.update({'8(s-h)':(0,8,-8,0,0),'4s-2h':(0,4,-2,0,0),'3(s-p)':(0,3,0,-3,0),'2s-2h+2s-p':(0,3,-2,-1,0),
           'tau+s+2(s-h)':(1,3,-2,0,0)})

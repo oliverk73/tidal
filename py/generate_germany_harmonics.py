@@ -498,7 +498,7 @@ def process_station(zip_path, api_stations, processed_names):
 
 def main():
     # Configuration
-    zip_dir = "/home/oliver/water_levels/Germany"
+    zip_dir = "/home/oliver/weather/quellen/water_levels/Germany"
     output_file = "/home/oliver/harmonics_working/harmonics_germany_pegelonline_2026-01-23.txt"
     max_stations = 20
 

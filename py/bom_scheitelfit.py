@@ -47,7 +47,7 @@ import scheitelfit as SF                                            # noqa: E402
 import tagestide_kosinus_pruefen as T                               # noqa: E402
 import xtide_modell as X                                           # noqa: E402
 
-PDF_DIR = os.path.join(ROOT, 'tide_tables/australia')
+PDF_DIR = os.path.join(ROOT, 'quellen/tide_tables/australia')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 GEWICHT = 3.0
 # 2026/27: "(UTC+10:00)", 2025: "(Time Zone UTC +10:00)" und erst weiter hinten im PDF

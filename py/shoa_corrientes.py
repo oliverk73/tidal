@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """SHOA Pub. 3015 "Tablas de Corriente de Marea de la Costa de Chile" 2026 -> Stroemungskonstanten.
 
-Olivers gekaufte Ausgabe (currents/Chile/3015-2026-1.pdf, auf ihn ausgestellt). Tabla I: je Station
+Olivers gekaufte Ausgabe (quellen/tidal_streams/Chile/3015-2026-1.pdf, auf ihn ausgestellt). Tabla I: je Station
 und Monat Kenterzeiten (Estoa) und Maxima (Zeit, Staerke kn, F = Flujo / R = Reflujo); die
 Richtungen stehen in der Fusszeile ("F = FLUJO, DIREC. 108 V., R = REFLUJO, DIREC. 284 V."), die
 Lage im Kopf. Zeiten UTC-4 ohne Sommerzeit (Einleitung, Punkt 5). "*" = schwache, drehende Stroemung
@@ -31,7 +31,7 @@ import cmems_stroemung_nachholen as C                               # noqa: E402
 import shn_corrientes as SHN                                        # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'currents/Chile/3015-2026-1.pdf')
+PDF = os.path.join(ROOT, 'quellen/tidal_streams/Chile/3015-2026-1.pdf')
 HILFE = os.path.join(ROOT, 'harmonics/help')
 JAHR = 2026
 UTC_OFFSET_H = 4

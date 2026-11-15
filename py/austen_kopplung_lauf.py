@@ -28,7 +28,7 @@ import xtide_modell as X                                            # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATEI = 'harmonics/utide/harmonics_utide_australia_oceancurrent.txt'
-NC = os.path.join(ROOT, 'currents/Australia_OceanCurrent/Aust_current_meter_tidal_cnstits_v2.nc')
+NC = os.path.join(ROOT, 'quellen/tidal_streams/Australia_OceanCurrent/Aust_current_meter_tidal_cnstits_v2.nc')
 NOTIZ = '# note: 20261021 S2/K1 corrected for K2/P1 inside the %d-day window (ratio/lag of %s, %.0f km); K2/P1 added'
 
 

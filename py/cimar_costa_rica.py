@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Costa Rica: Tidenkalender 2026 des UCR-CIMAR (Modulo de Informacion Oceanografica) lesen und pruefen (9.11.2026).
 
-Quelle: tide_tables/costa_rica/Tabla_Mareas_<Ort>_2026.pdf (LaTeX, Text auslesbar), HW/NW, Ortszeit UTC-6,
+Quelle: quellen/tide_tables/costa_rica/Tabla_Mareas_<Ort>_2026.pdf (LaTeX, Text auslesbar), HW/NW, Ortszeit UTC-6,
 Bezug "promedio de las mareas bajas" (>= 20 Jahre). Je Seite drei Monate, je Monat zwei Spalten (1.-16., 17.-31.).
 Gelesen ueber pdftotext -bbox: jede Uhrzeit, rechts daneben die Hoehe; Tag = letzte Tageszahl links darueber.
 
@@ -21,7 +21,7 @@ ganzen Golfo Dulce 1,11@245 -- 8 % kleiner, 20 min frueher, nicht uebernommen.
 
 SINAMOT-Webdienst (Oliver 9.11.2026, sinamot.una.ac.cr -> Predicciones de Marea): unacostasegura.una.ac.cr/webServices/
 mareas_detalle.php?id=..&cod=..&fecha_inicio=..&fecha_final=.. liefert HW/NW (m, Ortszeit) fuer frei waehlbare Zeitraeume;
-Cache water_levels/Costa_Rica_SINAMOT/<cod>_2026.html. Tafelfit gegen unsere Messsaetze: Puntarenas 2 %, Quepos 1 %,
+Cache quellen/water_levels/Costa_Rica_SINAMOT/<cod>_2026.html. Tafelfit gegen unsere Messsaetze: Puntarenas 2 %, Quepos 1 %,
 Nacascolo/Papagayo 4 %; Isla del Coco 14 % (K1 0,03 statt 0,09) und Rincon de Osa 9 % daneben. Hoehenbezug der Webtafel
 weicht von den PDF-Tafeln ab (Puntarenas Z0 2,31 gegen 1,41 m) -> Z0 wie bei FES = -Minimum der 19-Jahres-Kurve.
 Eingetragen nur TAMBOR (Bahia Ballena, kein Satz in 35 km): M2 0,965@241 gegen FES 0,972@244. Moin liegt 6 km neben
@@ -40,7 +40,7 @@ import sys
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QUELLE = os.path.join(ROOT, 'tide_tables/costa_rica')
+QUELLE = os.path.join(ROOT, 'quellen/tide_tables/costa_rica')
 MONATE = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre',
           'Noviembre', 'Diciembre']
 WORT = re.compile(r'<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)">([^<]*)</word>')
@@ -101,7 +101,7 @@ def pruefen(ev):
 
 SINAMOT_URL = ('https://unacostasegura.una.ac.cr/webServices/mareas_detalle.php?id=%s&cod=%s&estacion=%s'
                '&fecha_inicio=2026-01-01&fecha_final=2026-12-31')
-SINAMOT_CACHE = os.path.join(ROOT, 'water_levels/Costa_Rica_SINAMOT')
+SINAMOT_CACHE = os.path.join(ROOT, 'quellen/water_levels/Costa_Rica_SINAMOT')
 # cod -> (id, Webname, Satzname, Breite, Laenge, Provinz); Position Tambor: Wasser vor dem Muelle (osm_land, 0,15 km)
 SINAMOT_NEU = {'926': ('12', 'Tambor', 'Tambor (Bahía Ballena), Puntarenas, Costa Rica', 9.7150, -85.0150, 'Puntarenas')}
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')

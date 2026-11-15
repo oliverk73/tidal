@@ -12,7 +12,7 @@ Lehren aus py/luecken_fes_welt.py (26.10./11.11.):
   * Orte im Landesinneren (Buug, Rio Hato, Nandayure) -> OSM-Ort hoechstens KUESTE_KM von der Kueste (osm_land).
   * Grosse Flussstaedte (>= FLUSS_EINW) 2-100 km landeinwaerts -> eigene Liste 'flussstadt' (Muendung von Oliver).
 Pier/Hafen: Overpass (harbour/pier/ferry_terminal/marina) bis HAFEN_KM um den OSM-Ort; sonst naechstes Wasser.
-Schreibt nur Listen: harmonics/help/luecken_schlau.csv (+ Cache water_levels/luecken_schlau_cache.json).
+Schreibt nur Listen: harmonics/help/luecken_schlau.csv (+ Cache cache/luecken_schlau_cache.json).
 Anlegen danach mit py/fes_neu_geeicht.py --welt (Spalten land,cc,region,name,einwohner,lat,lon,urteil,fes_median_pct,tz).
 
 Usage: venv/bin/python py/luecken_schlau.py <geonames-ordner> [--orte cities1000.txt] [--min 5000] [--ohne-netz]
@@ -40,7 +40,7 @@ import tpxo as T                                                   # noqa: E402
 
 ROOT = LW.ROOT
 AUS = os.path.join(ROOT, 'harmonics/help/luecken_schlau.csv')
-CACHE = os.path.join(ROOT, 'water_levels/luecken_schlau_cache.json')
+CACHE = os.path.join(ROOT, 'cache/luecken_schlau_cache.json')
 KUESTE_KM, ORT_KM, HAFEN_KM, EINIG, FLUSS_EINW, FLUSS_DEM, MIN_HUB = 2.0, 3.0, 2.0, 5.0, 100000, 15, 1.0
 PLACE = {'city', 'town', 'village', 'hamlet', 'suburb', 'quarter', 'neighbourhood', 'locality', 'isolated_dwelling',
          'administrative', 'municipality'}

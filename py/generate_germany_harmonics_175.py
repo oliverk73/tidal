@@ -563,7 +563,7 @@ def read_header_from_template(template_path):
 
 
 def main():
-    water_levels_dir = Path("/home/oliver/water_levels/Germany")
+    water_levels_dir = Path("/home/oliver/weather/quellen/water_levels/Germany")
     harmonics_ref = Path("/home/oliver/harmonics/utide/bak/harmonics_germany_2026-01-23.txt")
     template_path = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_no_us_no_dupes.txt")
     output_path = Path("/home/oliver/harmonics/utide/harmonics_utide_germany_2026-01-27.txt")

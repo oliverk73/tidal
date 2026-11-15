@@ -16,8 +16,8 @@ Download je Lauf ~1 GB, Dauer ~10-20 min. Kein automatischer Abruf (Oliver 6.11.
 operativ ist).
 
 Usage: venv/bin/python py/windstau_karte.py [--meer=ostsee|mittelmeer|schwarz|nordsee] [--behalten]
-       nordsee: aus water_levels/nws_ssh/aktuell.npz (py/windstau_nws.py --vorhersage), kein eigener Download
-       --behalten: heruntergeladene NetCDF-Dateien in water_levels/cmems_ssh/karte/ liegen lassen und wiederverwenden
+       nordsee: aus quellen/water_levels/nws_ssh/aktuell.npz (py/windstau_nws.py --vorhersage), kein eigener Download
+       --behalten: heruntergeladene NetCDF-Dateien in quellen/water_levels/cmems_ssh/karte/ liegen lassen und wiederverwenden
 """
 from __future__ import annotations
 
@@ -34,7 +34,7 @@ import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CLI = os.path.join(ROOT, 'venv/bin/copernicusmarine')
-ROH = os.path.join(ROOT, 'water_levels/cmems_ssh/karte')
+ROH = os.path.join(ROOT, 'quellen/water_levels/cmems_ssh/karte')
 ZIEL = os.path.join(ROOT, 'static/windstau')
 MEERE = {
     'ostsee': dict(ds='cmems_mod_bal_phy_anfc_PT1H-i', var='sla', mittel=None,
@@ -134,9 +134,9 @@ def meer_laden(name, cfg, t0, t1, m0, m1, ordner):
     return gitter, ts, z
 
 
-NWS_AKTUELL = os.path.join(ROOT, 'water_levels/nws_ssh/aktuell.npz')
-NWS_MT = os.path.join(ROOT, 'water_levels/nws_ssh/modelltide.npz')
-NWS_MASKE = os.path.join(ROOT, 'water_levels/nws_ssh/karte_maske.npz')
+NWS_AKTUELL = os.path.join(ROOT, 'quellen/water_levels/nws_ssh/aktuell.npz')
+NWS_MT = os.path.join(ROOT, 'quellen/water_levels/nws_ssh/modelltide.npz')
+NWS_MASKE = os.path.join(ROOT, 'quellen/water_levels/nws_ssh/karte_maske.npz')
 NWS_RADIUS_KM = 60.0
 
 

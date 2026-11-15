@@ -24,7 +24,7 @@ import cmems_stroemung_nachholen as C                               # noqa: E402
 import hafenatlas_stroeme as HA                                     # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'currents/Menai/current%d.pdf')
+PDF = os.path.join(ROOT, 'quellen/tidal_streams/Menai/current%d.pdf')
 HAFEN = 'Liverpool (Gladstone Dock), England, United Kingdom'
 HD = os.path.join(ROOT, 'harmonics/classic/harmonics-dwf-20100529-nonfree_mod.txt')
 KONTEXT = 'BANGOR-MENAI-PROFILE'

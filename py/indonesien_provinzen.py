@@ -9,7 +9,7 @@ um die 430 ganz ohne Angabe.
 
 Die Provinz kommt aus zwei Quellen, und beide muessen sich einig sein:
 
-  GeoNames        naechster Ort mit Provinzschluessel (tide_tables/catalogues/
+  GeoNames        naechster Ort mit Provinzschluessel (quellen/kataloge/catalogues/
                   geonames/indonesien_orte.tsv aus allCountries.txt). Kennt die
                   Teilung Papuas von 2022/23 (Papua Barat Daya, Papua Tengah,
                   Papua Pegunungan, Papua Selatan).
@@ -43,7 +43,7 @@ import region_felder_fuellen as RF                                  # noqa: E402
 import sicher_schreiben                                             # noqa: E402
 from health_check import ROOT, km, load_records                     # noqa: E402
 
-ORTE = os.path.join(ROOT, 'tide_tables/catalogues/geonames/indonesien_orte.tsv')
+ORTE = os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/indonesien_orte.tsv')
 AUS = os.path.join(ROOT, 'harmonics/help/indonesien_provinzen.csv')
 UMKREIS = 60.0
 

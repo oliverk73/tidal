@@ -24,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from download_vho_vietnam import parse_day  # noqa: E402
 
 BASE = 'https://thuydacvietnam.org.vn/thuy-trieu'
-OUTDIR = Path(__file__).resolve().parent.parent / 'water_levels' / 'VN_vho'
+OUTDIR = Path(__file__).resolve().parent.parent / 'quellen/tide_tables/VN_vho'
 UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
 CTX = ssl.create_default_context()
 CTX.check_hostname = False

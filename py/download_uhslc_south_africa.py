@@ -12,7 +12,7 @@ import time
 import requests
 import pandas as pd
 
-OUTPUT_DIR = '/home/oliver/water_levels/SouthAfrica_UHSLC'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/SouthAfrica_UHSLC'
 ERDDAP_BASE = 'https://uhslc.soest.hawaii.edu/erddap/tabledap'
 
 STATIONS = [

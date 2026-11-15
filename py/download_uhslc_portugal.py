@@ -6,7 +6,7 @@ import requests
 import csv
 from datetime import datetime
 
-OUTPUT_DIR = "/home/oliver/water_levels/Portugal_UHSLC"
+OUTPUT_DIR = "/home/oliver/weather/quellen/water_levels/Portugal_UHSLC"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 STATIONS = [

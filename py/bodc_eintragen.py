@@ -1,10 +1,10 @@
-"""BODC-Lieferung eintragen (Oliver 21.10.2026): Gruppen aus currents/BODC/_arbeit/<rn>_wahl.pkl (py/bodc_auswahl.py).
+"""BODC-Lieferung eintragen (Oliver 21.10.2026): Gruppen aus quellen/tidal_streams/BODC/_arbeit/<rn>_wahl.pkl (py/bodc_auswahl.py).
 Bezugsort = naechster Pegel (Name vor Klammer/Komma), Land wie beim Pegel. Kurzreihen danach mit
 py/stroemung_kopplung_lauf.py gekoppelt neu fitten."""
 import sys, math, pickle, re
 sys.path.insert(0, '/home/oliver/weather/py')
 import cmems_stroemung_nachholen as C, osm_land, sicher_schreiben, health_check as hc
-W = pickle.load(open('/home/oliver/weather/currents/BODC/_arbeit/%s_wahl.pkl' % sys.argv[1].lower() + '', 'rb'))
+W = pickle.load(open('/home/oliver/weather/quellen/tidal_streams/BODC/_arbeit/%s_wahl.pkl' % sys.argv[1].lower() + '', 'rb'))
 PEG = [t for t in hc.load_records() if not t['current'] and t['lat'] is not None and re.search(r'(Wales|England|Ireland|Scotland|Isle of Man)', t['name'])]
 D = ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW']
 def geo(a, b, c, d):

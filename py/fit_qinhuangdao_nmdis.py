@@ -27,7 +27,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import CONSTIT_67
 
-DATA = Path('/home/oliver/water_levels/CN_nmdis/T020_2024-07-01_2026-06-30.json')
+DATA = Path('/home/oliver/weather/quellen/tide_tables/CN_nmdis/T020_2024-07-01_2026-06-30.json')
 HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
 SOURCE = 'NMDIS hourly tide predictions (mds.nmdis.org.cn, sitecode T020) with UTide'
 NAME = 'Qinhuangdao, Hebei, China'

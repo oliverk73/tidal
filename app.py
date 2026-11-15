@@ -1388,8 +1388,8 @@ def _is_fresh_today(filepath):
 
 
 _WINDSTAU_DATEIEN = [os.path.join(os.path.dirname(os.path.abspath(__file__)), p)
-                     for p in ('water_levels/cmems_ssh/aktuell.npz', 'water_levels/nws_ssh/aktuell.npz',
-                               'water_levels/stofs/aktuell.npz',
+                     for p in ('quellen/water_levels/cmems_ssh/aktuell.npz', 'quellen/water_levels/nws_ssh/aktuell.npz',
+                               'quellen/water_levels/stofs/aktuell.npz',
                                # 13.11.2026: neue Strom-Ellipsen (Kompass) bzw. neu gebaute TCD/Markerdatei
                                'harmonics/ellipsen/eigen.json', 'static/js/leaflet_markers_data.json')]
 

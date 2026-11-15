@@ -16,14 +16,14 @@ STATIONS = [
         "name": "Fort-de-France",
         "id": 271,
         "url": "https://uhslc.soest.hawaii.edu/data/csv/fast/hourly/h271.csv",
-        "outdir": "/home/oliver/water_levels/Martinique_UHSLC",
+        "outdir": "/home/oliver/weather/quellen/water_levels/Martinique_UHSLC",
         "outfile": "h271_fort_de_france.csv",
     },
     {
         "name": "Pointe-à-Pitre",
         "id": 272,
         "url": "https://uhslc.soest.hawaii.edu/data/csv/rqds/atlantic/hourly/h272a.csv",
-        "outdir": "/home/oliver/water_levels/Guadeloupe_UHSLC",
+        "outdir": "/home/oliver/weather/quellen/water_levels/Guadeloupe_UHSLC",
         "outfile": "h272_pointe_a_pitre.csv",
     },
 ]

@@ -13,7 +13,7 @@ und das nimmt jedes Datum an (2025 geht, 2027 ist leer). Die Antwort nennt
 den Tag und den folgenden mit Uhrzeit (Ortszeit UTC-5) und Hoehe in cm --
 dieselben Werte wie die PDF-Tafel (Callao 1./15.07.2026 geprueft).
 
-Ablage: tide_tables/peru/tage/<hafen>.csv  datum,zeit,hoehe_cm  (zusammengefuehrt,
+Ablage: quellen/tide_tables/peru/tage/<hafen>.csv  datum,zeit,hoehe_cm  (zusammengefuehrt,
 ohne Dubletten). Hoeflich: eine Anfrage je Sekunde, ehrlicher User-Agent.
 
 Usage: python3 py/dhn_peru_tage.py --von 2026-08-01 --bis 2026-08-31 [--hafen Callao]
@@ -31,7 +31,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'tide_tables', 'peru', 'tage')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/peru', 'tage')
 URL = 'https://www.dhn.mil.pe/app/mareas/res.php'
 UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
 HAEFEN = ['Ancon', 'Atico', 'Bayovar', 'Cabo Blanco', 'Caleta Grau', 'Callao', 'Cerro Azul', 'Chala',

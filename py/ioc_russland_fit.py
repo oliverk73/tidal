@@ -3,7 +3,7 @@
 """UTide-Fits der russischen IOC-Pegel Kholmsk, Rudnaya Pristan und Mys Sosunova.
 
 Oliver 16.10.2026 (Vorschlagsseite Russland-Pazifik vom 15.10.): die drei Reihen in
-water_levels/Russia_IOC/ waren nicht im Bestand, laufen aber monatsweise stabil gegen
+quellen/water_levels/Russia_IOC/ waren nicht im Bestand, laufen aber monatsweise stabil gegen
 FES (+-10..20 min). Kholmsk ersetzt den FES-Ersatz vom 15.10. (Messung vor Modell).
 
 Vor dem Fit wird je Monat der Zeitversatz Reihe gegen FES geprueft (Kreuzkorrelation);
@@ -61,7 +61,7 @@ FESC = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1')
 
 
 def reihe(datei):
-    d = pd.read_csv(os.path.join(ROOT, 'water_levels/Russia_IOC', datei))
+    d = pd.read_csv(os.path.join(ROOT, 'quellen/water_levels/Russia_IOC', datei))
     s = pd.Series(pd.to_numeric(d.iloc[:, 1], errors='coerce').values,
                   index=pd.to_datetime(d.iloc[:, 0], utc=True)).dropna()
     s = s[~s.index.duplicated()]

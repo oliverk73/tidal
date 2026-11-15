@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert CMEMS in-situ NetCDFs in currents/cmems_raw/ to per-country CSVs.
+"""Convert CMEMS in-situ NetCDFs in quellen/tidal_streams/cmems_raw/ to per-country CSVs.
 
 Output layout mirrors the existing German pipeline:
     currents/<Country>/<platform_code>.csv
@@ -24,7 +24,7 @@ import pandas as pd
 import xarray as xr
 
 HOME = Path.home()
-RAW_DIR = HOME / 'currents' / 'cmems_raw'
+RAW_DIR = HOME / 'quellen/tidal_streams/cmems_raw'
 CURRENTS_DIR = HOME / 'currents'
 
 # (country_dirname, lat_min, lat_max, lon_min, lon_max)

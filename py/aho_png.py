@@ -3,7 +3,7 @@
 """Papua New Guinea National Tide Tables 2026 (AHO) einlesen, Standardhaefen per Scheitelfit (7.11.2026).
 
 Quelle: services.hydro.gov.au/publications/tide-tables/ANTT/2026/All_data_2026_png.pdf
-(Experience-App AHO.Geoportal "Papua New Guinea National Tide Tables 2026") -> tide_tables/png_aho/.
+(Experience-App AHO.Geoportal "Papua New Guinea National Tide Tables 2026") -> quellen/tide_tables/png_aho/.
 21 Standardhaefen (19 PNG + Twin/Booby Island, Torres-Strasse) mit vollen HW/NW-Tafeln, Seitenlayout wie
 TLNTT (py/aho_timor_leste.py). Zone -1000 = UTC+10. Hoehen m ueber LAT.
 
@@ -26,7 +26,7 @@ import xtide_modell as X                                           # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'tide_tables/png_aho/All_data_2026_png.pdf')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/png_aho/All_data_2026_png.pdf')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 MONATE = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
 KOPF = re.compile(r'(PAPUA NEW GUINEA|AUSTRALIA, QUEENSLAND) - (.+)')

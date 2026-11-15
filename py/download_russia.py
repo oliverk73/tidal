@@ -12,7 +12,7 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-OUTPUT_DIR = Path('/home/oliver/water_levels/Russia_IOC')
+OUTPUT_DIR = Path('/home/oliver/weather/quellen/water_levels/Russia_IOC')
 IOC_URL = 'http://www.ioc-sealevelmonitoring.org/bgraph.php'
 
 # Scrape 2023-01-01 .. 2025-10-14 (most active stations have data to this range)

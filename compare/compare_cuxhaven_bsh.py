@@ -191,7 +191,7 @@ def match_predictions(bsh_preds, utide_preds, max_dt_hours=3):
 
 def main():
     bsh_file = Path("/home/oliver/harmonics/help/BSH/DE__506P2026.txt")
-    zip_path = Path("/home/oliver/water_levels/Germany/pegelonline-cuxhavensteubenhft-W-20000101-20260123.zip")
+    zip_path = Path("/home/oliver/weather/quellen/water_levels/Germany/pegelonline-cuxhavensteubenhft-W-20000101-20260123.zip")
 
     print("=" * 75)
     print("Comparison: UTide Harmonics vs BSH Predictions for Cuxhaven-Steubenhöft")

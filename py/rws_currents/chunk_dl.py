@@ -5,7 +5,7 @@
 import ddlpy, datetime, os
 import pandas as pd
 
-CD = '/home/oliver/currents/Netherlands'
+CD = '/home/oliver/weather/quellen/tidal_streams/Netherlands'
 TASKS = [('ameland.nes', 2011), ('borndiep', 2008)]
 
 

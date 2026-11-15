@@ -28,7 +28,7 @@ from generate_germany_harmonics_175 import (
 )
 
 # --- Directories ---
-PEI_DIR = Path("/home/oliver/water_levels/Canada_IWLS_PEI")
+PEI_DIR = Path("/home/oliver/weather/quellen/water_levels/Canada_IWLS_PEI")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_pei.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_pei")

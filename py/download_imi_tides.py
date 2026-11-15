@@ -16,7 +16,7 @@ import sys, json, csv, io, urllib.request, urllib.parse
 from pathlib import Path
 from datetime import datetime
 
-IMI_DIR = Path('/home/oliver/water_levels/imi')
+IMI_DIR = Path('/home/oliver/weather/quellen/water_levels/imi')
 STATIONS = Path('/home/oliver/harmonics/help/imi_new_stations.json')
 BASE = ('https://erddap.marine.ie/erddap/tabledap/IrishNationalTideGaugeNetwork.csv'
         '?time,Water_Level_LAT,QC_Flag&station_id=%22{sid}%22'

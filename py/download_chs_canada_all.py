@@ -15,8 +15,8 @@ import requests
 import pandas as pd
 
 API_BASE = 'https://api-sine.dfo-mpo.gc.ca/api/v1'
-OUTPUT_DIR = '/home/oliver/water_levels/Canada_IWLS'
-CATALOG_PATH = '/home/oliver/water_levels/Canada/_stations_with_wlo.json'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Canada_IWLS'
+CATALOG_PATH = '/home/oliver/weather/quellen/water_levels/Canada/_stations_with_wlo.json'
 RESOLUTION = 'FIFTEEN_MINUTES'
 
 # UHSLC stations we already have (skip these)

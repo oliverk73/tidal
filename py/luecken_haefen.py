@@ -3,7 +3,7 @@
 """Insel- und Hafen-Durchgang der Lueckensuche (Oliver 12./13.11.2026: "vor allem bei Inseln ... Handels-,
 Industrie- und Faehrhafen von Bedeutung"; Notiz haefen-vor-orten).
 
-Quelle: OSM weltweit (tide_tables/catalogues/osm_haefen/*.json, Overpass "out center tags"):
+Quelle: OSM weltweit (quellen/kataloge/catalogues/osm_haefen/*.json, Overpass "out center tags"):
   ferry_terminal.json    amenity=ferry_terminal
   industrial_port.json   industrial=port (Handels-/Industriehafen-Flaechen)
   seamark_harbour.json   seamark:type=harbour (Kategorie aus seamark:harbour:category; Marinas/Fischerei raus)
@@ -40,7 +40,7 @@ import osm_land                                                    # noqa: E402
 import tpxo as T                                                   # noqa: E402
 
 ROOT = LW.ROOT
-QUELLE = os.path.join(ROOT, 'tide_tables/catalogues/osm_haefen')
+QUELLE = os.path.join(ROOT, 'quellen/kataloge/catalogues/osm_haefen')
 AUS = os.path.join(ROOT, 'harmonics/help/luecken_haefen.csv')
 LUECKE_KM, CLUSTER_KM, KUESTE_KM, MIN_HUB, EINIG, ENG_PCT = 10.0, 8.0, 1.0, 1.0, 5.0, 25.0
 HANDEL = {'commercial', 'container', 'bulk', 'tanker', 'roro', 'industrial', 'naval', 'ferry', 'ferry_terminal',

@@ -30,7 +30,7 @@ from ukho_index_abgleich import km                                 # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = KE.ZIEL
 NEU = os.path.join(ROOT, 'harmonics/help/neu_pruefen_20261113.csv')
-CACHE = os.path.join(ROOT, 'water_levels/kartverket_bsh_luecken.json')
+CACHE = os.path.join(ROOT, 'cache/kartverket_bsh_luecken.json')
 # BSH-Nr., Name im Satz, Nominatim-Suche (Ort, Kommune), Fylke
 ORTE = [('370', 'Kvalsund', 'Kvalsund, Hammerfest', 'Finnmark'),
         ('372', 'Neverfjord', 'Neverfjord, Hammerfest', 'Finnmark'),

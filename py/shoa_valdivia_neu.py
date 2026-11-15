@@ -13,7 +13,7 @@ from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 F = '/home/oliver/weather/harmonics/utide/harmonics_utide_chile_shoa.txt'
 NAME = 'Valdivia (Río Calle-Calle), Chile'
 ent = []
-for f in sorted(glob.glob('/home/oliver/weather/tide_tables/chile/valdivia_rio_calle_calle/*.htm')):
+for f in sorted(glob.glob('/home/oliver/weather/quellen/tide_tables/chile/valdivia_rio_calle_calle/*.htm')):
     ent += B.parse_shoa_html(f)
 ent = sorted({e[0]: e for e in ent}.values(), key=lambda e: e[0])
 pts = sorted((B.local_to_utc(t), h) for t, h, _ in ent)

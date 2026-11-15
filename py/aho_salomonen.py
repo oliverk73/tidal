@@ -3,7 +3,7 @@
 """Solomon Islands National Tide Tables 2026 (AHO) einlesen und per Scheitelfit fitten (10.11.2026).
 
 Quelle: hydro.gov.au/prodserv/publications/SINTT_2026.pdf (Server haengt -> Wayback-Kopie 20260421)
--> tide_tables/solomon_aho/SINTT_2026_wb.pdf. 3 Standardhaefen (Honiara, Tarekukure Wharf, Ndende Island Wharf),
+-> quellen/tide_tables/solomon_aho/SINTT_2026_wb.pdf. 3 Standardhaefen (Honiara, Tarekukure Wharf, Ndende Island Wharf),
 44 Nebenhaefen ebenfalls mit vollen HW/NW-Tafeln. Seitenlayout wie Timor-Leste (py/aho_timor_leste.py):
 Kopf "SOLOMON ISLANDS - NAME", "LAT 7° 28´ S LONG 157° 44´ E", "TIME ZONE -1100" (= UTC+11), Hoehen m ueber LAT.
 
@@ -29,7 +29,7 @@ import xtide_modell as X                                           # noqa: E402
 from fes_ersatz_inseln import sample, stem, FES_DIR                # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'tide_tables/solomon_aho/SINTT_2026_wb.pdf')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/solomon_aho/SINTT_2026_wb.pdf')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 MONATE = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
 VERGLEICH_KM, LUECKE_KM, SCHWELLE = 30.0, 20.0, 10.0
@@ -39,7 +39,7 @@ SPEED = {'M2': 28.984104, 'S2': 30.0, 'K1': 15.041069, 'O1': 13.943036}
 # 10.11.2026: drei Ausgaben (2024 im Webarchiv abgeschnitten). AHO rechnet in allen mit denselben Konstanten (2026-Fit trifft
 # 2025/2027 auf ~3 cm), nur Noro hat ab 2026 eine neue Grundlage (2025: 23 cm / 30 min) -> Noro 2025 auslassen.
 # Einjahres-Fits streuen zwischen den Jahren 1-15 % (0,1-m-Rundung, Tagestide) -> Mehrjahres-Fit.
-JAHRGAENGE = [os.path.join(ROOT, 'tide_tables/solomon_aho', f) for f in ('SINTT_2025_wb.pdf', 'SINTT_2026_wb.pdf', 'SINTT_2027.pdf')]
+JAHRGAENGE = [os.path.join(ROOT, 'quellen/tide_tables/solomon_aho', f) for f in ('SINTT_2025_wb.pdf', 'SINTT_2026_wb.pdf', 'SINTT_2027.pdf')]
 OHNE = {('NORO', 2025)}
 
 

@@ -12,7 +12,7 @@ from datetime import datetime
 from pathlib import Path
 from io import StringIO
 
-OUTPUT_DIR = Path("/home/oliver/water_levels/Ireland_MI/npz")
+OUTPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/Ireland_MI/npz")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 ERDDAP_BASE = "https://erddap.marine.ie/erddap/tabledap/IrishNationalTideGaugeNetwork"

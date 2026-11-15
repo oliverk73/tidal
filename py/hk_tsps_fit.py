@@ -24,7 +24,7 @@ import scheitelfit as SF                                            # noqa: E402
 import xtide_modell as X                                            # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORD = os.path.join(ROOT, 'tide_tables/hongkong_tsps')
+ORD = os.path.join(ROOT, 'quellen/tide_tables/hongkong_tsps')
 KOPF = X.kopf_lesen(os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_tables.txt'))
 HKT = 8 * 3600
 

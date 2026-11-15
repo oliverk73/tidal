@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """GEOSA-Monatstafeln Oktober 2023 (Saudi-Arabien, Golf 9 + Rotes Meer 21 Pegel) per OCR einlesen und per Scheitelfit fitten.
 
-Oliver 28.10.2026: tide_tables/saudi_arabia/geosa_{ArabianGulf,RedSea}_10_2023.pdf (geosa.gov.sa, nur dieser Monat abrufbar;
+Oliver 28.10.2026: quellen/tide_tables/saudi_arabia/geosa_{ArabianGulf,RedSea}_10_2023.pdf (geosa.gov.sa, nur dieser Monat abrufbar;
 andere Monate 404). Je Seite ein Pegel: Kopf "NAME Time Zone: -0300 Lat dd°mm'N Long ddd°mm'E", Tabelle HW/NW (hhmm, m ueber
 Kartennull = LAT) in 4 Spalten (Tage 1-8, 9-16, 17-24, 25-31). OCR spaltenweise mit tesseract; Tageswechsel = Zeit kleiner als
 die vorige. Pruefung: Tage je Spalte, Hoch/Niedrig im Wechsel, 3-5 Scheitel je Tag.
@@ -41,7 +41,7 @@ import xtide_modell as X                                           # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(ROOT, 'tide_tables/saudi_arabia')
+ORDNER = os.path.join(ROOT, 'quellen/tide_tables/saudi_arabia')
 PDFS = ['geosa_ArabianGulf_10_2023.pdf', 'geosa_RedSea_10_2023.pdf']
 CSV = os.path.join(ORDNER, 'geosa_10_2023_scheitel.csv')
 # weitere Monate (10.11.2026): geoportal.sa bietet den laufenden Monat frei an

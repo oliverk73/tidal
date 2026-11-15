@@ -32,7 +32,7 @@ sys.path.insert(0, os.path.join(ROOT, 'batch'))
 import health_check                                                 # noqa: E402
 import batch_utide_bom_australia as bom                             # noqa: E402
 
-PDF_DIR = pathlib.Path(ROOT, 'tide_tables/australia')
+PDF_DIR = pathlib.Path(ROOT, 'quellen/tide_tables/australia')
 SITES = 'https://www.bom.gov.au/australia/tides/tide_prediction_sites.json'
 PDF = 'https://www.bom.gov.au/ntc/IDO59001/IDO59001_%d_%s.pdf'
 UA = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) Firefox/130.0'}

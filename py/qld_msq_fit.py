@@ -35,7 +35,7 @@ from sicher_schreiben import schreiben                             # noqa: E402
 ROOT = S.ROOT
 ZIEL = S.ZIEL
 LISTE = os.path.join(ROOT, 'harmonics/help/qld_msq_pegel.tsv')
-REIHEN = os.path.join(ROOT, 'water_levels/Australia_QLD/msq')
+REIHEN = os.path.join(ROOT, 'quellen/water_levels/Australia_QLD/msq')
 ERGEBNIS = os.path.join(ROOT, 'harmonics/help/qld_msq_fit.csv')
 
 

@@ -4,7 +4,7 @@
 
 Die Saetze vom 09.04.2026 (harmonics_utide_tidetables) stammen aus HKO-HW/NW, dazwischen interpoliert: gegen HKOs eigene
 Stundenvorhersage 2025-2026 RMS 6-8 cm, Ko Lau Wan 11, Tai Po Kau 14 cm (bis 72 cm). HKO-Open-Data liefert die
-astronomische Stundentide (dataType=HHOT, HKT, m ueber CD, Stunde "01" = 01:00) -> Cache tide_tables/hongkong_hko.
+astronomische Stundentide (dataType=HHOT, HKT, m ueber CD, Stunde "01" = 01:00) -> Cache quellen/tide_tables/hongkong_hko.
 Fit wie scheitelfit (67 Konstituenten, ohne Steigungszeilen), Probe Fit 2025 gegen 2026, geschrieben wird der Endfit
 2025-2026, wenn er besser ist als der alte Satz.
 
@@ -24,7 +24,7 @@ import xtide_modell as X                                           # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATEI = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
-CACHE = os.path.join(ROOT, 'tide_tables/hongkong_hko')
+CACHE = os.path.join(ROOT, 'quellen/tide_tables/hongkong_hko')
 URL = 'https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=HHOT&lang=en&rformat=json&station=%s&year=%d'
 JAHRE = (2025, 2026)
 NAMEN = dict(CCH='Cheung Chau', CLK='Chek Lap Kok', CMW='Chi Ma Wan', KCT='Kwai Chung', KLW='Ko Lau Wan', LOP='Lok On Pai',

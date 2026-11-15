@@ -34,7 +34,7 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import MERIDIAN, ROOT                             # noqa: E402
 
-DIR = os.path.join(ROOT, 'water_levels/VN_vho')
+DIR = os.path.join(ROOT, 'quellen/tide_tables/VN_vho')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 
 

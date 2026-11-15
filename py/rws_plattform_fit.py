@@ -8,7 +8,7 @@ J6, L9, A12, D15, Q1, F16 gegen RWS-Messung) -> nicht glatt korrigierbar, daher 
 archiviert (harmonics/help/rws_plattformen_20261027_loeschen.csv). K13A platform (classic 2004) und K14 stimmen (1 %).
 F3 und L9-1 (TICON aus CMEMS) hatten +01:00 mit UTC-Phasen -> py/ticon_cmems_meridian.py.
 
-Download ueber die RWS-DDAPI (ddapi20-waterwebservices, ohne Schluessel) monatsweise nach water_levels/Netherlands_RWS_platforms/.
+Download ueber die RWS-DDAPI (ddapi20-waterwebservices, ohne Schluessel) monatsweise nach quellen/water_levels/Netherlands_RWS_platforms/.
 Fit wie py/qld_msq_fit.py (Momentanwert zur vollen Stunde, 67 Konstituenten + Obertiden, Probe am letzten Jahr, Eigenversatz 0).
 Usage: venv/bin/python py/rws_plattform_fit.py [--laden] [--schreiben]  -> harmonics_utide_observations.txt
 """
@@ -31,7 +31,7 @@ from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = S.ROOT
 ZIEL = S.ZIEL
-REIHEN = os.path.join(ROOT, 'water_levels/Netherlands_RWS_platforms')
+REIHEN = os.path.join(ROOT, 'quellen/water_levels/Netherlands_RWS_platforms')
 URL = 'https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen'
 JAHRE = range(2015, 2026)
 

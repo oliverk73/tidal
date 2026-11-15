@@ -3,7 +3,7 @@
 Generate Harmonic Constants from PEGELONLINE water level data.
 Outputs in XTide-compatible text format with 175 constituents.
 
-This script processes all ZIP files in water_levels/Germany and generates
+This script processes all ZIP files in quellen/water_levels/Germany and generates
 harmonic constants using least-squares harmonic analysis.
 """
 
@@ -560,7 +560,7 @@ def process_all_stations(input_dir, header_file, output_file):
 
 
 def main():
-    input_dir = "/home/oliver/water_levels/Germany"
+    input_dir = "/home/oliver/weather/quellen/water_levels/Germany"
     header_file = "/home/oliver/harmonics_working/harmonics-dwf-20070318_no_us_no_dupes.txt"
     output_file = "/home/oliver/harmonics_working/harmonics_germany_2026-01-23.txt"
 

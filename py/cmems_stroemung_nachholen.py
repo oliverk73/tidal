@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 """CMEMS-Stroemungsverankerungen nachholen, die wir noch nicht nutzen (Oliver 19.10.2026).
 
-Quelle: lokaler Katalog water_levels/CMEMS_currents_idx/.../index_history.txt (globales
+Quelle: lokaler Katalog quellen/tidal_streams/CMEMS_currents_idx/.../index_history.txt (globales
 In-situ-Produkt). Kandidaten: feste Plattform (Messgebiet < 3 km), mindestens 6 Monate,
 Stroemung gemessen (EWCT/NSCT oder HCSP/HCDT), cmems_code noch nicht im Bestand und keine
 vorhandene Stroemungsstation naeher als 1 km.
 
 Download direkt per HTTPS vom Marine Data Store (ohne Anmeldung) nach
-water_levels/CMEMS_currents_neu/. Analyse wie batch/batch_utide_eu_currents.py:
+quellen/tidal_streams/CMEMS_currents_neu/. Analyse wie batch/batch_utide_eu_currents.py:
 Stundenmittel, Hauptachse, UTide auf der Projektion in Knoten. Als Position gilt der Median
 der gemessenen Positionen -- nicht die Ecke des Messgebiets (Fehler der ersten Uebernahme).
 
@@ -35,10 +35,10 @@ import health_check as hc                                           # noqa: E402
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match   # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-IDX = os.path.join(ROOT, 'water_levels/CMEMS_currents_idx/glo/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/'
+IDX = os.path.join(ROOT, 'quellen/tidal_streams/CMEMS_currents_idx/glo/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/'
                          'cmems_obs-ins_glo_phybgcwav_mynrt_na_irr_202311/index_history.txt')
 BASIS = 'https://s3.waw3-1.cloudferro.com/mdl-native-01/native/'
-ROH = os.path.join(ROOT, 'water_levels/CMEMS_currents_neu')
+ROH = os.path.join(ROOT, 'quellen/tidal_streams/CMEMS_currents_neu')
 BESTAND = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
 MS_KN = 1.94384449
 MIN_STUNDEN = 4380

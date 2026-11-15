@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Stroemungskonstanten aus den brasilianischen "Cartas de Correntes de Maré" (CHM/DHN, Oliver 25.10.2026).
 
-Die Hefte (currents/brazil/ccm-*.pdf, von Oliver im Browser geladen) zeigen je Kartensatz 13
+Die Hefte (quellen/tidal_streams/brazil/ccm-*.pdf, von Oliver im Browser geladen) zeigen je Kartensatz 13
 Stundenkarten von 6 h vor bis 6 h nach der Preamar eines Bezugshafens, mittlere Springtide,
 Geschwindigkeit in Knoten. Die PDFs sind Vektorgrafik:
   - Pfeil = roter Strich (Schaft) + rote Flaeche (Spitze),
@@ -40,7 +40,7 @@ import cmems_stroemung_nachholen as C                               # noqa: E402
 import shom_atlas_stroemung as S                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'currents/brazil')
+PDF = os.path.join(ROOT, 'quellen/tidal_streams/brazil')
 HILFE = os.path.join(ROOT, 'harmonics/help')
 MS_KN = C.MS_KN
 

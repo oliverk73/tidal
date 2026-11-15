@@ -4,7 +4,7 @@
 
 Quellen (Echtzeit, frei): IOC Sea Level Monitoring (weltweit), WSV Pegelonline (Deutschland), NOAA CO-OPS (USA).
 Kein Automatismus (Oliver: privater Anschluss, keine Website): Messwerte werden nur geholt, wenn eine Detailseite
-erzeugt wird, und 1 h zwischengespeichert (water_levels/echtzeit/).
+erzeugt wird, und 1 h zwischengespeichert (quellen/water_levels/echtzeit/).
 
 Zuordnung Satz -> Pegel: Kennung im Satzkopf (ioc_code, noaa_station_id) bis 5 km, sonst naechster Pegel bis 2 km.
 Vergleich ueber die letzten TAGE Tage:
@@ -30,8 +30,8 @@ import urllib.request
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERZ = os.path.join(ROOT, 'water_levels/echtzeit/pegel.json')
-CACHE = os.path.join(ROOT, 'water_levels/echtzeit')
+VERZ = os.path.join(ROOT, 'quellen/water_levels/echtzeit/pegel.json')
+CACHE = os.path.join(ROOT, 'quellen/water_levels/echtzeit')
 TAGE = 30
 MAX_KM = 2.0
 MAX_KM_KENNUNG = 5.0

@@ -11,9 +11,9 @@ Zeit: Portal liefert AEST (UTC+10, ohne Sommerzeit) -> hier gleich nach UTC umge
 Je Datensatz die Jahrgaenge ab JAHR_AB, bei reinen Altreihen alle.
 
 Usage: venv/bin/python py/download_qld_msq_archiv.py [dataset-name-teil ...] [--alt] [--ab JAHR] [--ziel DIR]
-       -> water_levels/Australia_QLD/msq/<dataset-name>.csv (time_utc, waterlevel_m, ind)
+       -> quellen/water_levels/Australia_QLD/msq/<dataset-name>.csv (time_utc, waterlevel_m, ind)
        --alt: nur die 16 Datensaetze aus py/download_qld_australia.py (dort nur 2023-2025), fuer lange Fits
-       (26.10.2026, Ziel water_levels/Australia_QLD/msq_lang)
+       (26.10.2026, Ziel quellen/water_levels/Australia_QLD/msq_lang)
 """
 import csv
 import datetime as dt
@@ -25,7 +25,7 @@ import time
 import requests
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels/Australia_QLD/msq')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/Australia_QLD/msq')
 API = 'https://www.data.qld.gov.au/api/3/action'
 JAHR_AB = 2015
 # Datensaetze, die py/download_qld_australia.py schon holt (npz/)

@@ -6,7 +6,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from pathlib import Path
 import batch_utide_qc as q
 
-q.QC_DIR = Path("/home/oliver/water_levels/Canada_IWLS_NT")
+q.QC_DIR = Path("/home/oliver/weather/quellen/water_levels/Canada_IWLS_NT")
 q.TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt")
 q.OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_nt.txt")
 q.CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_nt")

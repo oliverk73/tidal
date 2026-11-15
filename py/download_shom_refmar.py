@@ -25,7 +25,7 @@ import urllib.request
 import urllib.parse
 import urllib.error
 
-ROOT = Path.home() / "water_levels" / "France"
+ROOT = Path.home() / "quellen/water_levels/France"
 BACKUP_ROOT = ROOT / "_backup_hf"
 BASE = "https://services.data.shom.fr/maregraphie/observation"
 SRC_PRIORITY = [4, 3, 2]

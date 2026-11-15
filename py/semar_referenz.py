@@ -3,7 +3,7 @@
 """Liest die Gezeitentafeln der mexikanischen SEMAR.
 
 Die Secretaria de Marina veroeffentlicht je Hafen ein PDF mit einem
-vollen Jahr, eine Seite je Monat. Unter tide_tables/mexico_semar/ liegen
+vollen Jahr, eine Seite je Monat. Unter quellen/tide_tables/mexico_semar/ liegen
 32 Haefen fuer 2024, 2025 und 2026 -- drei volle Jahrgaenge, genug zum
 Messen und zum Neurechnen.
 
@@ -58,7 +58,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SEMAR = os.path.join(ROOT, 'tide_tables/mexico_semar')
+SEMAR = os.path.join(ROOT, 'quellen/tide_tables/mexico_semar')
 
 MONATE = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO',
           'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']

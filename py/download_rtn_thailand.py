@@ -9,7 +9,7 @@ Karte http://203.147.59.19:3001/map zeigt nur Grafiken; dahinter liegt eine offe
        -> data[].name / dataPoints[{label, y}] (Ortszeit ICT = UTC+7; letzter Wert 14:49 bei 08:01 UTC)
 Daten ab etwa Dezember 2025. Der Server ist sehr langsam (11.11.2026: 1 Tag 15m ~30 s, 7 Tage 15m ~115 s, 1h langsamer
 als 15m, 14 Tage > 10 min) -> nur Stichprobenwochen (WOCHEN) in 15m; reicht fuer Satzpruefung und Fit (Spanne 10 Monate).
-Ablage: water_levels/Thailand_RTN/<station_id>_<sensor_id>.json ({serienname: [[label, y], ...]}), vorhandene
+Ablage: quellen/water_levels/Thailand_RTN/<station_id>_<sensor_id>.json ({serienname: [[label, y], ...]}), vorhandene
 Wochen werden nicht neu geladen.
 
 Usage: python3 py/download_rtn_thailand.py [ID ...]
@@ -23,7 +23,7 @@ import urllib.request
 
 API = 'http://203.147.59.19:3002/api'
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels', 'Thailand_RTN')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/Thailand_RTN')
 WOCHEN = [dt.date(2026, 1, 5), dt.date(2026, 3, 2), dt.date(2026, 5, 4), dt.date(2026, 7, 6), dt.date(2026, 9, 7),
           dt.date(2026, 10, 26)]
 

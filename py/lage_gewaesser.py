@@ -64,7 +64,7 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUELLE = os.path.join(ROOT, 'harmonics/help/lage_ausreisser.csv')
 ZIEL = os.path.join(ROOT, 'harmonics/help/lage_gewaesser.csv')
-PUFFER = os.path.join(ROOT, 'tide_tables/osm_gewaesser')
+PUFFER = os.path.join(ROOT, 'quellen/kataloge/osm_gewaesser')
 # Der Spiegel statt der Hauptinstanz, und mit reichlich Pause. Ein
 # erster Lauf mit zwei Sekunden Abstand gegen overpass-api.de wurde nach
 # rund vierzig Anfragen gesperrt -- nicht mit 429, sondern mit

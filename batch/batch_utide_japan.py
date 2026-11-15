@@ -29,7 +29,7 @@ from generate_germany_harmonics_175 import (
 
 TEMPLATE_PATH = Path("/home/oliver/weather/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/weather/harmonics/utide/harmonics_utide_japan.txt")
-DATA_DIR = Path("/home/oliver/weather/water_levels/JMA_Japan")
+DATA_DIR = Path("/home/oliver/weather/quellen/tide_tables/JMA_Japan")
 STATION_CSV = Path("/tmp/jma_stations_romanized_final.csv")
 
 JMA_BASE = 'https://www.data.jma.go.jp/gmd/kaiyou/data/db/tide/suisan/txt'

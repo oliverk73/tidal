@@ -21,7 +21,7 @@ import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BUCH = {'pcct': 'tide_tables/NOAA/pcct_2020_full_book.pdf', 'acct': 'tide_tables/NOAA/acct_2020_full_book.pdf'}
+BUCH = {'pcct': 'quellen/harmonics_sources/NOAA/pcct_2020_full_book.pdf', 'acct': 'quellen/harmonics_sources/NOAA/acct_2020_full_book.pdf'}
 ZEILE = re.compile(r"^\s{0,8}(\d{1,4})\s+(.+?)\s+(?:(\d+)d\s+)?(\d{1,2})°\s*([\d.]+)’\s+(\d{1,3})°\s*([\d.]+)’")
 
 

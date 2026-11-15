@@ -65,9 +65,9 @@ def main():
         print(f"    loc={m.get('Location'):15s} param={m.get('Parameter')}")
 
     # Save raw catalog for later use
-    with open('/home/oliver/currents/mvb_catalog.json','w') as f:
+    with open('/home/oliver/weather/quellen/kataloge/mvb_catalog.json','w') as f:
         json.dump(cat, f, indent=2, ensure_ascii=False)
-    print("\nKatalog gespeichert: /home/oliver/currents/mvb_catalog.json")
+    print("\nKatalog gespeichert: /home/oliver/weather/quellen/kataloge/mvb_catalog.json")
 
 if __name__ == '__main__':
     main()

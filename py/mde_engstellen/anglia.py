@@ -1,6 +1,6 @@
 import pandas as pd, glob, re, pickle, numpy as np, sys
 sys.path.insert(0, '/home/oliver/weather/py'); import cmems_stroemung_nachholen as C
-D = '/home/oliver/weather/currents/UK_MDE/TCE-3952/11580_x/'
+D = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/TCE-3952/11580_x/'
 OUT = {}
 def grad(s):
     z = [float(x) for x in re.findall(r'[\d.]+', s)]; return z[0] + z[1] / 60
@@ -21,4 +21,4 @@ for f in sorted(glob.glob(D + '*/*Frame*Site*[0-9].xls*')):
     p = C.stundenmittel(a[['Pressure']].dropna())['Pressure'] if 'Pressure' in a else None
     OUT[site] = dict(lat=la, lon=lo, df=df, p=p, tiefe=tiefe, instr=blatt, id='TCE-3952')
     print(site, '%.5f %.5f' % (la, lo), tiefe, blatt, len(df), df.index[0], df.index[-1], flush=True)
-pickle.dump(OUT, open('/home/oliver/weather/currents/UK_MDE/_arbeit/anglia.pkl', 'wb'))
+pickle.dump(OUT, open('/home/oliver/weather/quellen/tidal_streams/UK_MDE/_arbeit/anglia.pkl', 'wb'))

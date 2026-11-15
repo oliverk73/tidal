@@ -8,8 +8,8 @@ Deshalb einmalig je Pegel ein Jahr Stundenwerte am naechsten Modellpunkt holen u
 (Mittel + Sa/Ssa + ~60 Tiden, feste Frequenzen, absolute Zeit). Windstau = Modell-Vorhersage - Modelltide - Mittel.
 Kein Automatismus: alles von Hand.
 
-  --modelltide [name ...]   Jahr laden + fitten (einmalig; ~3 MB und ~7 s je Pegel)  -> water_levels/nws_ssh/modelltide.npz
-  --vorhersage              Vorhersagefenster je 1-Grad-Ausschnitt laden, Windstau rechnen -> water_levels/nws_ssh/aktuell.npz
+  --modelltide [name ...]   Jahr laden + fitten (einmalig; ~3 MB und ~7 s je Pegel)  -> quellen/water_levels/nws_ssh/modelltide.npz
+  --vorhersage              Vorhersagefenster je 1-Grad-Ausschnitt laden, Windstau rechnen -> quellen/water_levels/nws_ssh/aktuell.npz
 Usage: venv/bin/python py/windstau_nws.py --modelltide|--vorhersage [name ...]
 """
 from __future__ import annotations
@@ -25,7 +25,7 @@ import tempfile
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels/nws_ssh')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/nws_ssh')
 MT = os.path.join(ZIEL, 'modelltide.npz')
 LEER = os.path.join(ZIEL, 'ohne_modellwasser.json')   # Pegel ohne Modellzelle bis 5 km: beim Fortsetzen ueberspringen
 DATEI = os.path.join(ZIEL, 'aktuell.npz')

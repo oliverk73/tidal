@@ -11,7 +11,7 @@ je Gruppe sequentiell (Block-Clustering ueber y-Luecken).
 
 Usage: python3 py/fit_phoenix_mono_images.py DIR JAHR 'Name' LAT LON CONF [monatsmuster]
   monatsmuster: 'name' fuer <dir>/<stem>-january.jpg oder 'num' fuer <stem>1.jpg
-Beispiel: ... water_levels/phoenix_sikka 2026 'Sikka, Gujarat, India' 22.4333 69.8167 4 num
+Beispiel: ... quellen/water_levels/phoenix_sikka 2026 'Sikka, Gujarat, India' 22.4333 69.8167 4 num
 """
 from __future__ import annotations
 import csv

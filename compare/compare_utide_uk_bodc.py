@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import utide
 
-DATA_DIR = Path("/home/oliver/water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd")
+DATA_DIR = Path("/home/oliver/weather/quellen/water_levels/UK/bodc_sea_level_2007-2026_values_and_residuals_acd")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_uk_bodc")
 
 # Compare period: use 2024 data (most recent full year)

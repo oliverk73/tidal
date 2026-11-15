@@ -33,7 +33,7 @@ from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = S.ROOT
 ZIEL = S.ZIEL
-REIHEN = os.path.join(ROOT, 'water_levels/Australia_WA/dot')
+REIHEN = os.path.join(ROOT, 'quellen/water_levels/Australia_WA/dot')
 LISTE = os.path.join(ROOT, 'harmonics/help/wa_dot_pegel.tsv')
 ERGEBNIS = os.path.join(ROOT, 'harmonics/help/wa_dot_fit.csv')
 MESSUNG = ('harmonics_utide_observations', 'harmonics_ticon4_worldwide')

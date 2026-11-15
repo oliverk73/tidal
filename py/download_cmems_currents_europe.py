@@ -21,7 +21,7 @@ from pathlib import Path
 
 HOME = Path.home()
 IDX_DIR = Path('/tmp/cm_idx')
-RAW_DIR = HOME / 'currents' / 'cmems_raw'
+RAW_DIR = HOME / 'quellen/tidal_streams/cmems_raw'
 STATE_FILE = RAW_DIR / '_download_state.json'
 CURRENTS_DIR = HOME / 'currents'
 

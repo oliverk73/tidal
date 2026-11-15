@@ -15,7 +15,7 @@ import os
 from collections import Counter, defaultdict
 from datetime import datetime
 
-IDX = ('/home/oliver/water_levels/CMEMS_currents_idx/glo/'
+IDX = ('/home/oliver/weather/quellen/tidal_streams/CMEMS_currents_idx/glo/'
        'INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/'
        'cmems_obs-ins_glo_phybgcwav_mynrt_na_irr_202311/index_history.txt')
 

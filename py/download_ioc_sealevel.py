@@ -20,7 +20,7 @@ STATIONS = [
     {
         'code': 'desh',
         'name': 'Deshaies',
-        'outdir': '/home/oliver/water_levels/Guadeloupe_IOC',
+        'outdir': '/home/oliver/weather/quellen/water_levels/Guadeloupe_IOC',
         'outfile': 'desh_deshaies.csv',
         'start_year': 2020,
         'end_date': '2026-04-06',
@@ -29,7 +29,7 @@ STATIONS = [
     {
         'code': 'prec',
         'name': 'Le Précheur',
-        'outdir': '/home/oliver/water_levels/Martinique_IOC',
+        'outdir': '/home/oliver/weather/quellen/water_levels/Martinique_IOC',
         'outfile': 'prec_le_precheur.csv',
         'start_year': 2020,
         'end_date': '2025-03-15',  # data stops around Feb/Mar 2025

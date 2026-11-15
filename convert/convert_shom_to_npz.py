@@ -15,8 +15,8 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime
 
-RAW_DIR = Path("/home/oliver/water_levels/France_SHOM/raw_json")
-OUTPUT_DIR = Path("/home/oliver/water_levels/France_SHOM/npz")
+RAW_DIR = Path("/home/oliver/weather/quellen/water_levels/France_SHOM/raw_json")
+OUTPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/France_SHOM/npz")
 
 
 def parse_sml(sml_path):

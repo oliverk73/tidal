@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Tanjong Pagar (Singapur): TICON-Satz hat falsche Tagestiden -> Messfit aus UHSLC 699 (11.11.2026).
 
-Anlass: Oliver legte die MSS-Monatsseiten 12/2025-12/2026 ab (tide_tables/singapore/*.html, HW/NW von der MPA,
+Anlass: Oliver legte die MSS-Monatsseiten 12/2025-12/2026 ab (quellen/tide_tables/singapore/*.html, HW/NW von der MPA,
 SGT = UTC+8, 0,1 m). Scheitelfit daraus: M2 wie TICON, aber K1/O1/P1 11-13 Grad frueher (~45 min).
 UHSLC-Stundenwerte 699 (1984-2023) bestaetigen die Tafel, auch fuer 1985 und 1988/89 -- also im TICON-Zeitraum
 (1981-1990) -- der TICON-4-Satz ist falsch, nicht die Tide veraendert:
@@ -60,7 +60,7 @@ def utide_fit(s):
 
 def mss_scheitel():
     ent = []
-    for f in sorted(glob.glob(os.path.join(ROOT, 'tide_tables/singapore/20*.html'))):
+    for f in sorted(glob.glob(os.path.join(ROOT, 'quellen/tide_tables/singapore/20*.html'))):
         j, m = map(int, os.path.basename(f)[:7].split('-'))
         t = open(f, encoding='utf-8').read()
         t = re.sub(r'<script.*?</script>|<style.*?</style>', '', t, flags=re.S)

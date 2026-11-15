@@ -11,9 +11,9 @@ nach ~6-12 Monaten Vollsatz. Messdaten = Goldstandard (UTide SL), klar
 besser als die cosinus-interpolierten tidetimes-Vorhersagen (vgl.
 [[project_cco_measured_tides]]).
 
-Stationsliste: water_levels/ea/ea_station_map.json (RLOIid -> unsere Station;
+Stationsliste: quellen/water_levels/ea/ea_station_map.json (RLOIid -> unsere Station;
 erzeugt durch Koordinaten-Match EA-Tidenpegel <3km, sortiert nach Fit-Guete).
-Speicher: water_levels/ea/rloi<id>.json  (dedup nach ISO-Zeitstempel, sortiert).
+Speicher: quellen/water_levels/ea/rloi<id>.json  (dedup nach ISO-Zeitstempel, sortiert).
 Datum der EA-Werte = lokales Station Datum (mASD) -> Z0 spaeter relabeln.
 
 Aufruf:  python3 py/download_ea_tides.py            # alle gemappten Stationen
@@ -29,7 +29,7 @@ from datetime import datetime
 # Sammler ins Leere, seit dem 2. Juli fehlen die Messungen (die Quelle liefert
 # nur ein rollierendes Fenster, Verpasstes ist verloren).
 ROOT = Path(__file__).resolve().parent.parent
-EA_DIR = ROOT / 'water_levels/ea'                        # akkumulierte Messreihen (gitignored)
+EA_DIR = ROOT / 'quellen/water_levels/ea'                        # akkumulierte Messreihen (gitignored)
 STATIONS = ROOT / 'harmonics/help/ea_tidal_stations.json'  # ALLE 110 EA-Tidenpegel
 MAP = ROOT / 'harmonics/help/ea_station_map.json'          # Match zu unseren Stationen (getrackt)
 CSV_URL = 'https://check-for-flooding.service.gov.uk/station-csv/{rloi}'

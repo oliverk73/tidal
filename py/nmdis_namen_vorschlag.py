@@ -42,8 +42,8 @@ from health_check import ROOT, auf_raster, km, load_records         # noqa: E402
 
 HELP = os.path.join(ROOT, 'harmonics/help')
 AUS = os.path.join(HELP, 'nmdis_namen_vorschlag.json')
-PLAN = os.path.join(ROOT, 'water_levels/CN_nmdis/batch_plan.json')
-GEONAMES = os.path.join(ROOT, 'tide_tables/catalogues/geonames/umfeld.tsv')
+PLAN = os.path.join(ROOT, 'quellen/tide_tables/CN_nmdis/batch_plan.json')
+GEONAMES = os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/umfeld.tsv')
 OSM_CACHE = os.path.join(HELP, 'nmdis_osm_cache.json')
 UA = 'oliver-weather-tides/1.0 (private tide station positions; oliver.k73@gmail.com)'
 OVERPASS = 'https://overpass-api.de/api/interpreter'

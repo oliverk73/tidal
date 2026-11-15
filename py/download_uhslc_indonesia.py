@@ -8,7 +8,7 @@ import os
 import requests
 import time
 
-OUTPUT_DIR = '/home/oliver/water_levels/Indonesia_UHSLC'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Indonesia_UHSLC'
 
 # Indonesian UHSLC stations with sufficient data for UTide
 # Format: (uhslc_id, name, lat, lon, dataset)

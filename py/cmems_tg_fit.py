@@ -12,9 +12,9 @@ S2 2.7 cm, K1 0.2 cm), gemessen sind M2 0.3-0.9 cm und K1 bis 2 cm. Wo CMEMS ein
 den Satz (letzte 10 Jahre der Reihe; Bjoern und Draghaellan nur historisch bis 1978/1969). Ohne Reihe archiviert:
 Yttergrund, Baltiysk, Swinoujscie, Arkona (harmonics/help/np202_ostsee_20261028_loeschen.csv).
 28.10. (3): SMHI-Stundenreihen (opendata-download-ocobs, Parameter 12, UTC) bestaetigen CMEMS; Ringhals (+24 min) und Skanoer
-(-18 min, beide TICON aus GESLA-4 SMHI) krumm -> Messfit aus der SMHI-Reihe (Eintrag 'SMHI:<id>', water_levels/Sweden_SMHI/).
-Download: water_levels/cmems_tg_files.txt -> https://s3.waw3-1.cloudferro.com/mdl-native-03/... nach
-water_levels/CMEMS_tg_pruefung/. Fit wie py/rws_plattform_fit.py (Stundenwerte, 67 Konstituenten + Obertiden, Probe am
+(-18 min, beide TICON aus GESLA-4 SMHI) krumm -> Messfit aus der SMHI-Reihe (Eintrag 'SMHI:<id>', quellen/water_levels/Sweden_SMHI/).
+Download: cache/cmems_tg_files.txt -> https://s3.waw3-1.cloudferro.com/mdl-native-03/... nach
+quellen/water_levels/CMEMS_tg_pruefung/. Fit wie py/rws_plattform_fit.py (Stundenwerte, 67 Konstituenten + Obertiden, Probe am
 letzten Jahr, Eigenversatz 0).
 Usage: venv/bin/python py/cmems_tg_fit.py [Name ...] [--schreiben]  -> harmonics_utide_observations.txt
 """
@@ -36,7 +36,7 @@ from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = S.ROOT
 ZIEL = S.ZIEL
-REIHEN = os.path.join(ROOT, 'water_levels/CMEMS_tg_pruefung')
+REIHEN = os.path.join(ROOT, 'quellen/water_levels/CMEMS_tg_pruefung')
 
 # CMEMS-Datei, Name/Position (wie der ersetzte, von Oliver gepruefte Bestandssatz), Land, Zeitzone, ab Jahr, ersetzter Satz
 PEGEL = [
@@ -65,7 +65,7 @@ REGION = {'Ringhals, Sweden': 'Halland', 'Skanör med Falsterbo, Sweden': 'Skån
 
 def reihe(datei, ab):
     if datei.startswith('SMHI:'):
-        L = open(os.path.join(ROOT, 'water_levels/Sweden_SMHI/%s.csv' % datei[5:]), encoding='utf-8-sig').read().split('\n')
+        L = open(os.path.join(ROOT, 'quellen/water_levels/Sweden_SMHI/%s.csv' % datei[5:]), encoding='utf-8-sig').read().split('\n')
         i0 = [i for i, z in enumerate(L) if z.startswith('Datum Tid')][0]
         z = [x.split(';') for x in L[i0 + 1:] if x[:2] in ('19', '20') and x.split(';')[1]]
         r = pd.Series([float(x[1]) / 100 for x in z], index=pd.to_datetime([x[0] for x in z]))

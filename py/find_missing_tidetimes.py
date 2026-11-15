@@ -166,7 +166,7 @@ def main():
         print(f"  {st['name']:45s}  {st['lat']:8.4f} {st['lon']:9.4f}  {st['slug']}")
 
     # Save missing stations to JSON for the download script
-    out_path = '/home/oliver/water_levels/UK_tidetimes/missing_stations.json'
+    out_path = '/home/oliver/weather/quellen/tide_tables/UK_tidetimes/missing_stations.json'
     with open(out_path, 'w') as f:
         json.dump(missing, f, indent=2)
     print(f"\n{len(missing)} fehlende Stationen gespeichert: {out_path}")

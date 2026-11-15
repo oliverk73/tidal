@@ -21,7 +21,7 @@ import subprocess
 from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'tide_tables/france/AnnuaireMaree2026_WEB_PAGE.pdf')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/france/AnnuaireMaree2026_WEB_PAGE.pdf')
 PARIS, UTC = ZoneInfo('Europe/Paris'), dt.timezone.utc
 MONATE = ['JANVIER', 'FÉVRIER', 'MARS', 'AVRIL', 'MAI', 'JUIN', 'JUILLET', 'AOÛT', 'SEPTEMBRE', 'OCTOBRE',
           'NOVEMBRE', 'DÉCEMBRE']

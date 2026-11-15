@@ -3,7 +3,7 @@ Usage: venv/bin/python py/bodc_auswahl.py RN-xxxx [AUSSCHLUSS-REF ...]"""
 import sys, pickle, warnings; warnings.filterwarnings('ignore'); sys.path.insert(0, '/home/oliver/weather/py')
 import health_check as hc, osm_land, xtide_modell as X, bodc_stroemung as B
 M = B.metadaten()
-G = pickle.load(open('/home/oliver/weather/currents/BODC/_arbeit/%s.pkl' % sys.argv[1].lower() + '', 'rb'))
+G = pickle.load(open('/home/oliver/weather/quellen/tidal_streams/BODC/_arbeit/%s.pkl' % sys.argv[1].lower() + '', 'rb'))
 ALL = hc.load_records(); CUR = [c for c in ALL if c['current'] and c['lat'] is not None]; PEG = [t for t in ALL if not t['current'] and t['lat'] is not None]
 F = '/home/oliver/weather/harmonics/utide/harmonics_utide_current_observations.txt'
 AUS = {'19417', '19429', '19442', '19466'} | set(sys.argv[2:])   # MAFF Irische See Nov. 1969: Uhr
@@ -64,5 +64,5 @@ for g in wahl:
         dm = d(m2[1], w['M2'][1]); dm = d(dm, 180) if abs(dm) > 90 else dm
         s.append('%.0fkm %s %+.0f' % (osm_land.km(g['lat'], g['lon'], c['lat'], c['lon']), c['name'].split(' (')[0][:14], dm))
     print('%-8s %-18s %d %s %.3f %.3f n=%4d r2 %.2f M2 %.2f@%.0f | %s' % (g['refs'][0], org, g['r']['t0'].year, 'off' if g['offshore'] else 'kst', g['lat'], g['lon'], g['r']['n'], g['r']['r2'], *m2, ' ; '.join(s)))
-pickle.dump(wahl, open('/home/oliver/weather/currents/BODC/_arbeit/%s_wahl.pkl' % sys.argv[1].lower() + '', 'wb'))
+pickle.dump(wahl, open('/home/oliver/weather/quellen/tidal_streams/BODC/_arbeit/%s_wahl.pkl' % sys.argv[1].lower() + '', 'wb'))
 print(len(wahl), 'von', len(kand))

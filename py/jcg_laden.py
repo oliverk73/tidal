@@ -8,7 +8,7 @@ den Pfeilen (Richtung). Zeit = JST (UTC+9). Nutzung frei mit Quellenangabe und B
 (https://www1.kaiho.mlit.go.jp/copyright.html).
 
 Stichprobe: 1. und 15. jedes Monats, stuendlich -> 24 Tage x 24 h je Gebiet.
-Ablage: currents/japan_jcg/raw/<gebiet>/<JJJJMMTTHH>.html/.png (vorhandene bleiben). 1 s Pause.
+Ablage: quellen/tidal_streams/japan_jcg/raw/<gebiet>/<JJJJMMTTHH>.html/.png (vorhandene bleiben). 1 s Pause.
 
 Usage: venv/bin/python py/jcg_laden.py [JAHR]
 """
@@ -19,7 +19,7 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'currents/japan_jcg/raw')
+ZIEL = os.path.join(ROOT, 'quellen/tidal_streams/japan_jcg/raw')
 BASIS = 'https://www1.kaiho.mlit.go.jp/TIDE/pred2/'
 UA = 'Mozilla/5.0 (X11; Linux x86_64) tide-harvester/1.0'
 GEBIETE = ['%02d' % i for i in range(1, 21)] + ['A1', 'K1']

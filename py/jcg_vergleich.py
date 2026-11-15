@@ -18,8 +18,8 @@ def rinnen():
   for st, g, extra in (('Kurushima Kaikyo (middle channel), Ehime, Japan Current', 'K1', [394, 538]),
                        ('Kurushima Kaikyo (west channel), Ehime, Japan Current', 'K1', []),
                        ('Akashi Kaikyo, Hyogo, Japan Current', 'A1', [133, 211])):
-      d = np.load('currents/japan_jcg/reihen/%s.npz' % g)
-      fits = {o['punkt']: o for o in json.load(open('currents/japan_jcg/reihen/%s_fit.json' % g))}
+      d = np.load('quellen/tidal_streams/japan_jcg/reihen/%s.npz' % g)
+      fits = {o['punkt']: o for o in json.load(open('quellen/tidal_streams/japan_jcg/reihen/%s_fit.json' % g))}
       t = d['t'].astype('int64').astype(float)
       hd = subprocess.run(['tide', '-l', st, '-m', 'p', '-b', '2026-01-01 00:00', '-e', '2026-01-01 01:00'], capture_output=True, text=True).stdout.split('\n')[1]
       la = float(hd.split('°')[0]); lo = float(hd.split(',')[1].split('°')[0])
@@ -36,8 +36,8 @@ def rinnen():
 def alle():
     from health_check import load_records
     fits = []
-    for f in sorted(glob.glob('currents/japan_jcg/reihen/*_fit.json')):
-        g = f.split('/')[-1][:2]; d = np.load('currents/japan_jcg/reihen/%s.npz' % g)
+    for f in sorted(glob.glob('quellen/tidal_streams/japan_jcg/reihen/*_fit.json')):
+        g = f.split('/')[-1][:2]; d = np.load('quellen/tidal_streams/japan_jcg/reihen/%s.npz' % g)
         for o in json.load(open(f)): o['_kn'] = d['kn'][:, o['punkt']]; o['_t'] = d['t'].astype('int64').astype(float); fits.append(o)
     for r in load_records():
         if not (r['current'] and r['lat'] and 'noaa_currents' in r['file'] and 24 < r['lat'] < 36 and 122.5 < r['lon'] < 141): continue

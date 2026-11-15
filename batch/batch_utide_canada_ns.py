@@ -25,8 +25,8 @@ from generate_germany_harmonics_175 import (
 )
 
 # Main NS data dir + two NB stations that are actually NS
-DATA_DIR = Path("/home/oliver/water_levels/CHS_NS")
-NB_DIR = Path("/home/oliver/water_levels/CHS_NB")
+DATA_DIR = Path("/home/oliver/weather/quellen/water_levels/CHS_NS")
+NB_DIR = Path("/home/oliver/weather/quellen/water_levels/CHS_NB")
 NB_NS_STATIONS = {'00215', '00225'}  # Joggins, Cape Capstan — geographically NS
 
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")

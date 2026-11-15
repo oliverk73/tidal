@@ -14,7 +14,7 @@ import requests
 import pandas as pd
 
 API_BASE = 'https://api-sine.dfo-mpo.gc.ca/api/v1'
-OUTPUT_DIR = '/home/oliver/water_levels/Canada_IWLS_NL'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Canada_IWLS_NL'
 CATALOG_PATH = os.path.join(OUTPUT_DIR, '_nl_stations.json')
 RESOLUTION = 'FIFTEEN_MINUTES'
 

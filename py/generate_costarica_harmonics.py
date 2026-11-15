@@ -340,8 +340,8 @@ def read_header_from_template(template_path):
 
 
 def main():
-    uhslc_dir = Path('/home/oliver/water_levels/CostaRica_UHSLC')
-    ioc_dir = Path('/home/oliver/water_levels/CostaRica_IOC')
+    uhslc_dir = Path('/home/oliver/weather/quellen/water_levels/CostaRica_UHSLC')
+    ioc_dir = Path('/home/oliver/weather/quellen/water_levels/CostaRica_IOC')
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_costarica.txt')
 

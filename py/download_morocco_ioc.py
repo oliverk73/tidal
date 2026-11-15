@@ -10,7 +10,7 @@ import time
 import requests
 from datetime import datetime, timedelta
 
-OUTPUT_DIR = "/home/oliver/water_levels/Morocco_IOC"
+OUTPUT_DIR = "/home/oliver/weather/quellen/water_levels/Morocco_IOC"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 BASE_URL = "http://www.ioc-sealevelmonitoring.org/bgraph.php"

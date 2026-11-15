@@ -14,7 +14,7 @@ from generate_germany_harmonics_175 import (
     CONSTITUENTS_175, find_xtide_match, read_header_from_template,
 )
 
-CSV_DIR       = Path('/home/oliver/currents/Belgium')
+CSV_DIR       = Path('/home/oliver/weather/quellen/tidal_streams/Belgium')
 META_PATH     = CSV_DIR / '_stations.json'
 TEMPLATE_PATH = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
 OUTPUT_PATH   = Path('/home/oliver/harmonics/utide/harmonics_utide_belgium_currents.txt')

@@ -62,7 +62,7 @@ from nachbarprobe import massstab, sippe, versatz_min                # noqa: E40
 
 HELP = os.path.join(ROOT, 'harmonics/help')
 AUS = os.path.join(HELP, 'noaa_guete_probelauf.csv')
-GEONAMES = os.path.join(ROOT, 'tide_tables/catalogues/geonames/umfeld.tsv')
+GEONAMES = os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/umfeld.tsv')
 LANDLISTE = os.path.join(HELP, 'land_gegen_position2.csv.neu')
 LANDENTSCHEIDUNG = os.path.join(HELP, 'land_gegen_position_Edit.csv')
 

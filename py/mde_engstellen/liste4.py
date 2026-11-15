@@ -1,6 +1,6 @@
 import sys; sys.path.insert(0, '/home/oliver/weather/py/mde_engstellen')
 import eintrag as E
-E.S = '/home/oliver/weather/currents/UK_MDE/_arbeit/'
+E.S = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/_arbeit/'
 L = [dict(ort='Stroma', ref=(58.6818, -3.1134), teile=[('inner.pkl', 'AWAC D2'), ('meygen2013.pkl', 'MeyGen 2013')], plus=['K2', 'P1'],
           id='CES-119/125', site='MeyGen Inner Sound 2011+2013',
           instr='depth average', inst='EMU Ltd / ERI / MeyGen', land='Scotland, United Kingdom',

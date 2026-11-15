@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Saudi Aramco "Red Sea Tide Tables 2018" -> fuenf UTide-Saetze.
 
-Das PDF (tide_tables/saudi_arabia/369180171-Red-Sea-Tide-Tables-2018.pdf,
+Das PDF (quellen/tide_tables/saudi_arabia/369180171-Red-Sea-Tide-Tables-2018.pdf,
 von Oliver am 17.09.2026 bei Scribd geladen) hat je Station zwoelf
 Monatsseiten mit STUENDLICHEN Hoehen (Textebene): je Tag zwei Zeilen mit
 zwoelf ganzen Zentimetern (0-11 Uhr und 12-23 Uhr), dahinter die
@@ -28,7 +28,7 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import ROOT, curve_diff, km, load_records          # noqa: E402
 
-PDF = os.path.join(ROOT, 'tide_tables/saudi_arabia/369180171-Red-Sea-Tide-Tables-2018.pdf')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/saudi_arabia/369180171-Red-Sea-Tide-Tables-2018.pdf')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 JAHR = 2018
 TZ = 3

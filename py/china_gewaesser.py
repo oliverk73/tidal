@@ -7,7 +7,7 @@ Die Portal- und Buchpositionen sind meist auf die Bogenminute gerundet
 Hengmen 2.6 km an Land). py/lage_gewaesser.py fragte Overpass Punkt fuer
 Punkt (50 s je Anfrage) -- hier kachelweise: je Gradfeld EINE Abfrage nach
 Kuestenlinie, Fluessen/Kanaelen, Wasserflaechen und Anlegern, im Zwischen-
-speicher tide_tables/osm_gewaesser/kacheln/ abgelegt. Danach laeuft alles
+speicher quellen/kataloge/osm_gewaesser/kacheln/ abgelegt. Danach laeuft alles
 offline.
 
 Je Satz:
@@ -36,7 +36,7 @@ import urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import ROOT, load_records                       # noqa: E402
 
-KACHELN = os.path.join(ROOT, 'tide_tables/osm_gewaesser/kacheln')
+KACHELN = os.path.join(ROOT, 'quellen/kataloge/osm_gewaesser/kacheln')
 AUS = os.path.join(ROOT, 'harmonics/help/china_gewaesser.csv')
 SERVER = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
           'https://overpass.private.coffee/api/interpreter']

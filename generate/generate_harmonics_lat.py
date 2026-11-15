@@ -16,7 +16,7 @@ import pandas as pd
 import utide
 
 # Directories
-WATER_LEVELS_DIR = Path("/home/oliver/water_levels/Germany")
+WATER_LEVELS_DIR = Path("/home/oliver/weather/quellen/water_levels/Germany")
 BSH_DIR = Path("/home/oliver/harmonics/help/BSH")
 ODS_FILE = Path("/home/oliver/harmonics/help/tide_stations_pegelonline.ods")
 OUTPUT_DIR = Path("/home/oliver/harmonics/utide/harmonics_utide_lat")

@@ -9,7 +9,7 @@ import requests
 import pandas as pd
 from pathlib import Path
 
-OUTPUT_DIR = Path('/home/oliver/water_levels/Guatemala_IOC')
+OUTPUT_DIR = Path('/home/oliver/weather/quellen/water_levels/Guatemala_IOC')
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_CSV = OUTPUT_DIR / 'prba_Puerto_Barrios.csv'
 API = 'http://www.ioc-sealevelmonitoring.org/service.php'
@@ -84,7 +84,7 @@ def main():
     trend = stable.rolling('30D', center=True, min_periods=24*7).median()
     detrended = (stable - trend + stable.mean()).dropna()
 
-    pipeline_csv = Path('/home/oliver/water_levels/Caribbean_UHSLC_CubaJamaicaBahamas/prba_Puerto_Barrios.csv')
+    pipeline_csv = Path('/home/oliver/weather/quellen/water_levels/Caribbean_UHSLC_CubaJamaicaBahamas/prba_Puerto_Barrios.csv')
     pipeline_csv.parent.mkdir(parents=True, exist_ok=True)
     detrended.to_csv(pipeline_csv, header=['waterlevel_m'])
     print(f"\nDetrended 2014-2018 for UTide: {len(detrended)} values -> {pipeline_csv}")

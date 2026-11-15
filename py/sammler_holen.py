@@ -7,11 +7,11 @@ privaten Repository oliverk73/tidal-sammler (taeglich, auch wenn der Laptop aus
 ist -- vom 2. bis 9.10.2026 hatte das Lucken gerissen, die nicht nachholbar sind).
 
 Dieses Skript aktualisiert den Klon ~/tidal-sammler und vereinigt dann:
-  water_levels/ea/rloi*.json             Zeitstempel -> Hoehe, Vereinigung
-  tide_tables/iceland_sjolag/<id>.csv    je Stunde die juengste Vorhersage (dags_greiningar)
-  tide_tables/iceland_sjolag/stationen.json
-  tide_tables/kuwait_met/<pegel>.csv     je Scheitelzeit der juengste Abruf (seit 29.10.2026)
-  water_levels/imi_connemara/<zelle>.csv je Stunde der juengste Abruf (Connemara-Modell, seit 13.11.2026)
+  quellen/water_levels/ea/rloi*.json             Zeitstempel -> Hoehe, Vereinigung
+  quellen/tide_tables/iceland_sjolag/<id>.csv    je Stunde die juengste Vorhersage (dags_greiningar)
+  quellen/tide_tables/iceland_sjolag/stationen.json
+  quellen/tide_tables/kuwait_met/<pegel>.csv     je Scheitelzeit der juengste Abruf (seit 29.10.2026)
+  quellen/water_levels/imi_connemara/<zelle>.csv je Stunde der juengste Abruf (Connemara-Modell, seit 13.11.2026)
 Lokal vorhandene Werte gehen nie verloren; es kommt nur hinzu.
 
 Aufruf: python3 py/sammler_holen.py   (systemd-User-Timer sammler-holen.timer)
@@ -40,10 +40,10 @@ def schreiben(pfad, text):
 
 
 def ea():
-    ziel = os.path.join(ROOT, 'water_levels/ea')
+    ziel = os.path.join(ROOT, 'quellen/water_levels/ea')
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'water_levels/ea/rloi*.json')):
+    for q in glob.glob(os.path.join(KLON, 'quellen/water_levels/ea/rloi*.json')):
         p = os.path.join(ziel, os.path.basename(q))
         fern = json.load(open(q))
         lokal = json.load(open(p)) if os.path.exists(p) else {}
@@ -56,10 +56,10 @@ def ea():
 
 
 def island():
-    ziel = os.path.join(ROOT, 'tide_tables/iceland_sjolag')
+    ziel = os.path.join(ROOT, 'quellen/tide_tables/iceland_sjolag')
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'tide_tables/iceland_sjolag/*.csv')):
+    for q in glob.glob(os.path.join(KLON, 'quellen/tide_tables/iceland_sjolag/*.csv')):
         p = os.path.join(ziel, os.path.basename(q))
         lokal = {z['dags']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
         vorher, geaendert = len(lokal), False
@@ -76,7 +76,7 @@ def island():
             w.writerows({k: lokal[d][k] for k in FELDER} for d in sorted(lokal))
             schreiben(p, buf.getvalue())
             neu_gesamt += len(lokal) - vorher
-    q = os.path.join(KLON, 'tide_tables/iceland_sjolag/stationen.json')
+    q = os.path.join(KLON, 'quellen/tide_tables/iceland_sjolag/stationen.json')
     if os.path.exists(q):
         p = os.path.join(ziel, 'stationen.json')
         stat = json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
@@ -87,10 +87,10 @@ def island():
 
 def kuwait():
     import io
-    ziel = os.path.join(ROOT, 'tide_tables/kuwait_met')
+    ziel = os.path.join(ROOT, 'quellen/tide_tables/kuwait_met')
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'tide_tables/kuwait_met/*.csv')):
+    for q in glob.glob(os.path.join(KLON, 'quellen/tide_tables/kuwait_met/*.csv')):
         p = os.path.join(ziel, os.path.basename(q))
         lokal = {z['zeit_lokal']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
         vorher, geaendert = len(lokal), False
@@ -111,10 +111,10 @@ def kuwait():
 
 def connemara():
     import io
-    ziel = os.path.join(ROOT, 'water_levels/imi_connemara')
+    ziel = os.path.join(ROOT, 'quellen/water_levels/imi_connemara')
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'water_levels/imi_connemara/*.csv')):
+    for q in glob.glob(os.path.join(KLON, 'quellen/water_levels/imi_connemara/*.csv')):
         p = os.path.join(ziel, os.path.basename(q))
         lokal = {z['zeit_utc']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
         vorher, geaendert, felder = len(lokal), False, None

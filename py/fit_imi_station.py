@@ -22,7 +22,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_bom_australia import CONSTIT_67  # type: ignore
 
-IMI_DIR = Path('/home/oliver/water_levels/imi')
+IMI_DIR = Path('/home/oliver/weather/quellen/water_levels/imi')
 STATIONS = Path('/home/oliver/harmonics/help/imi_new_stations.json')
 HARM_OBS = Path('/home/oliver/harmonics/utide/harmonics_utide_observations.txt')
 SOURCE = 'Marine Institute (Ireland) tide gauge measurements with UTide'

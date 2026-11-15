@@ -4,7 +4,7 @@
 harmonischen Satz, beide gegen die Pegelonline-Messung.
 
   Messung : water_levels/pegelonline_bsh_test/<kurz>.json (1-min-Rohdaten W, cm PNP)
-  BSH     : tide_tables/germany_bsh/DE__<nr>P2026.txt (E-Format, HW/NW in MEZ, m PNP)
+  BSH     : quellen/tide_tables/germany_bsh/DE__<nr>P2026.txt (E-Format, HW/NW in MEZ, m PNP)
   unser   : py/tiden_rechnung.py, Satz aus harmonics_utide_observations.txt
 
 Scheitel der Messung: 31-min-Mittel, Extrema mindestens 4 h auseinander. Zuordnung: naechstes
@@ -60,7 +60,7 @@ def messung(kurz):
 
 def bsh(nr, t0, t1):
     ev = []
-    for z in open(os.path.join(ROOT, f'tide_tables/germany_bsh/DE__{nr}P2026.txt'), encoding='latin-1'):
+    for z in open(os.path.join(ROOT, f'quellen/tide_tables/germany_bsh/DE__{nr}P2026.txt'), encoding='latin-1'):
         if not z.startswith('VB2#'):
             continue
         f = z.split('#')

@@ -15,7 +15,7 @@ import time
 import urllib.request
 from datetime import datetime
 
-OUTPUT_DIR = "/home/oliver/water_levels/CHS_NS"
+OUTPUT_DIR = "/home/oliver/weather/quellen/water_levels/CHS_NS"
 
 # Stations to download: (id, name, lat, lon) - from CHS website
 # Only stations WITH annual predictions available

@@ -424,8 +424,8 @@ def read_header_from_template(template_path):
 
 
 def main():
-    uhslc_dir = Path('/home/oliver/water_levels/ElSalvador_UHSLC')
-    ioc_dir = Path('/home/oliver/water_levels/ElSalvador_IOC')
+    uhslc_dir = Path('/home/oliver/weather/quellen/water_levels/ElSalvador_UHSLC')
+    ioc_dir = Path('/home/oliver/weather/quellen/water_levels/ElSalvador_IOC')
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_elsalvador.txt')
 

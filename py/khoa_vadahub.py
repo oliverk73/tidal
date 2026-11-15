@@ -3,7 +3,7 @@
 """Korea: Gezeitenkonstanten aus Umweltgutachten (vadahub.go.kr, 해역이용협의DB_해양물리 / 조화상수_조석), 11.11.2026.
 
 Quelle: vadahub.go.kr -> 해역이용협의DB_해양물리 -> 조화상수_조석 (tb_hidcnst_ebbf, 425 Zeilen, 2013-2021). Die Seite
-sperrt Skripte; im Browser (Claude in Chrome) geladen und als tide_tables/korea/vadahub/khoa_haeyeok_조석.json
+sperrt Skripte; im Browser (Claude in Chrome) geladen und als quellen/tide_tables/korea/vadahub/khoa_haeyeok_조석.json
 gespeichert. Je Messpunkt eine Zeile 지각 (Phase kappa) und eine Amplitudenzeile (진폭/반조차 in cm, 반조차(m) in m)
 fuer M2 S2 K1 O1; meist ein Monat Messung.
 Phase: kappa in KST -> Greenwich g = kappa - 9 h * Geschwindigkeit (an 36 Punkten mit Messsatz <= 3 km geprueft:
@@ -41,7 +41,7 @@ import scheitelfit as SF                                           # noqa: E402
 import xtide_modell as X                                           # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QUELLE = os.path.join(ROOT, 'tide_tables/korea/vadahub/khoa_haeyeok_조석.json')
+QUELLE = os.path.join(ROOT, 'quellen/tide_tables/korea/vadahub/khoa_haeyeok_조석.json')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 K4 = ['M2', 'S2', 'K1', 'O1']
 REF_DATEI = re.compile(r'utide_observations|ticon|utide_tidetables|khoa')

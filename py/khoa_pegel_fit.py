@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """KHOA-Wasserstaende (Badanuri): Messfits aus den Jahres-ZIPs (Oliver 24.10.2026).
 
-ZIPs liegen in water_levels/Korea_KHOA/*.zip (Pegel 조위관측소, Forschungsplattformen 해양과학기지).
+ZIPs liegen in quellen/water_levels/Korea_KHOA/*.zip (Pegel 조위관측소, Forschungsplattformen 해양과학기지).
 Wasserstand: Spalte 조위(cm) oder Range_조위(cm) (Radar auf den Plattformen), Zeit KST (UTC+9),
 Momentanwert zur vollen Stunde. Bezugssprung (Gageocho 2019 und 2022: Mittel 5.0 -> 3.1 -> 1.3 m)
 schneidet abschnitt() aus py/qld_msq_fit.py ab; Fit, Ausreisser und Probe am letzten Jahr ebenfalls
@@ -28,7 +28,7 @@ import xtide_modell as X                                            # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = Q.ROOT
-QUELLE = os.path.join(ROOT, 'water_levels/Korea_KHOA')
+QUELLE = os.path.join(ROOT, 'quellen/water_levels/Korea_KHOA')
 ZIEL = Q.ZIEL
 # Pegelliste (getObsStation.json obsType=DT) fuer die Position, die 조석 성과-Dateien nicht mitbringen
 STATIONEN = json.load(open(os.path.join(QUELLE, 'khoa_stationen_DT.json'), encoding='utf-8'))['data']

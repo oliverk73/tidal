@@ -6,7 +6,7 @@ import json, glob, os, sys
 sys.path.insert(0, '/home/oliver/py/rws_currents')
 from fit2 import fit
 
-CD = '/home/oliver/currents/Netherlands'
+CD = '/home/oliver/weather/quellen/tidal_streams/Netherlands'
 meta = json.load(open(f'{CD}/_stations.json'))
 
 # extra Meta fuer 2026-Neustationen ohne _stations.json-Eintrag

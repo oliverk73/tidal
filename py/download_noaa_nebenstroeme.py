@@ -8,7 +8,7 @@ einer Stromstation des Bestands; die Bezugsstationen (Typ H) sind ueber den
 DWF-Bestand fast alle da. Typ W ("weak and variable") hat keine Vorhersage.
 
 Holt fuer jede fehlende Nebenstation die Ereignisse 2026 (interval=MAX_SLACK, GMT)
-nach tide_tables/noaa_nebenstroeme/<id>.json. Vorhandene Dateien werden uebersprungen.
+nach quellen/tidal_streams/noaa_nebenstroeme/<id>.json. Vorhandene Dateien werden uebersprungen.
 
 Usage: venv/bin/python py/download_noaa_nebenstroeme.py [--max N]
 """
@@ -21,7 +21,7 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'tide_tables/noaa_nebenstroeme')
+ZIEL = os.path.join(ROOT, 'quellen/tidal_streams/noaa_nebenstroeme')
 LISTE = os.path.join(ZIEL, 'stations.json')
 MD = 'https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations.json?type=currentpredictions&units=english'
 DG = ('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=currents_predictions&station=%s'

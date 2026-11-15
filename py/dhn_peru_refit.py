@@ -5,7 +5,7 @@
 Bisher (py/build_dhn_peru.py, Juni 2026): je Hafen nur zwei Juni-Monate
 (2024 und 2026) Hoch-/Niedrigwasser, feste 8 Partialtiden, direkt auf die
 Scheitelpunkte gefittet. Seit 17.09.2026 holt py/dhn_peru_tage.py beliebige
-Zeitraeume (tide_tables/peru/tage/<hafen>.csv, Ortszeit UTC-5, cm ueber dem
+Zeitraeume (quellen/tide_tables/peru/tage/<hafen>.csv, Ortszeit UTC-5, cm ueber dem
 Kartennull der DHN).
 
 Hier: Scheitel nach UTC, Kosinus-Interpolation zwischen den Scheiteln
@@ -35,7 +35,7 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import MERIDIAN, ROOT, curve_diff, km, load_records  # noqa: E402
 
-TAGE = os.path.join(ROOT, 'tide_tables/peru/tage')
+TAGE = os.path.join(ROOT, 'quellen/tide_tables/peru/tage')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 KENNUNG = {'caleta_grau': 'PUERTO_GRAU'}
 

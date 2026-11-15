@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Harmonische Saetze fuer den Rabnabad-Kanal (Payra, Bangladesch) aus den PPA-Tidenkalendern.
 
-Oliver 17.10.2026. Eingabe: tide_tables/bangladesh/payra/payra_hwlw.json (py/payra_tafeln.py),
+Oliver 17.10.2026. Eingabe: quellen/tide_tables/bangladesh/payra/payra_hwlw.json (py/payra_tafeln.py),
 Hoch-/Niedrigwasser der Payra Port Authority 2021-2025 in UTC. Fit mit der Scheitelgleichung aus
 py/scheitelfit.py (Hoehe am Scheitel und waagerechte Tangente; Korea 13.10.2026: 12.7 -> 1.1 cm).
 Probe: Fit nur 2025, geprueft an den Tafeln der Vorjahre (unabhaengige Vorhersage); Endfit alle Jahre.
@@ -28,7 +28,7 @@ import xtide_modell as X                                           # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QUELLE = os.path.join(ROOT, 'tide_tables/bangladesh/payra/payra_hwlw.json')
+QUELLE = os.path.join(ROOT, 'quellen/tide_tables/bangladesh/payra/payra_hwlw.json')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 
 

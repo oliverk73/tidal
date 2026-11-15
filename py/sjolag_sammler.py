@@ -12,8 +12,8 @@ Gezeit, ahladandi = Windstau, sjavarhaed = Summe. Zeiten in UTC (Island
 kennt keine Sommerzeit). Einzelne fuenf Tage reichen fuer keinen Fit; der
 Sammler haengt deshalb jeden Lauf an eine Datei je Hafen an:
 
-  tide_tables/iceland_sjolag/<id>.csv   dags,sjavarfoll,ahladandi,sjavarhaed,dags_greiningar
-  tide_tables/iceland_sjolag/stationen.json   id -> Name, lat, lon
+  quellen/tide_tables/iceland_sjolag/<id>.csv   dags,sjavarfoll,ahladandi,sjavarhaed,dags_greiningar
+  quellen/tide_tables/iceland_sjolag/stationen.json   id -> Name, lat, lon
 
 Bei gleicher Stunde gewinnt der juengste Vorhersagelauf. Laeuft als
 User-Timer sjolag-sammler.timer taeglich; nach etwa einem Monat lassen sich
@@ -34,7 +34,7 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'tide_tables', 'iceland_sjolag')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/iceland_sjolag')
 BASIS = 'https://sjolag.is'
 UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
 FELDER = ['dags', 'sjavarfoll', 'ahladandi', 'sjavarhaed', 'dags_greiningar']

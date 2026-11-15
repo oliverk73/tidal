@@ -7,7 +7,7 @@ ERDDAP https://erddap.marine.ie/erddap/griddap/IMI_CONN_2D haelt nur ein rollend
 jeden Tag das Fenster an festen Modellzellen geholt (seit 13.11.2026):
   Stromzellen: barotrope Geschwindigkeit u, v (m/s) -- die 12 Saetze aus py/connemara_strom.py + Spiddal-Boje
   Pegelzellen: Wasserstand zeta (m) an Galway, Rossaveel, Kilronan (Zeiteichung des Modells)
-Ablage: water_levels/imi_connemara/<schluessel>.csv  (zeit_utc, werte..., abruf); je Stunde gilt der juengste
+Ablage: quellen/water_levels/imi_connemara/<schluessel>.csv  (zeit_utc, werte..., abruf); je Stunde gilt der juengste
 Abruf, Vorhersagestunden werden beim naechsten Lauf durch Analysewerte ersetzt.
 
 Usage: python3 py/connemara_sammler.py
@@ -23,7 +23,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels', 'imi_connemara')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/imi_connemara')
 ERDDAP = 'https://erddap.marine.ie/erddap/griddap/IMI_CONN_2D.csv'
 UA = 'weather-tides/1.0 (tidal-sammler)'
 U, V, Z = 'barotropic_sea_water_x_velocity', 'barotropic_sea_water_y_velocity', 'zeta'

@@ -170,7 +170,7 @@ _WINDSTAU_LAEUFT = []
 
 
 def _windstau_auffrischen():
-    """Ohne Timer (6.11.2026): ist water_levels/stofs/aktuell.npz aelter als 6,5 h, holt ein Hintergrund-Thread den
+    """Ohne Timer (6.11.2026): ist quellen/water_levels/stofs/aktuell.npz aelter als 6,5 h, holt ein Hintergrund-Thread den
     neuesten STOFS-Lauf (py/windstau.py laden). Die Seite wartet nicht darauf; hoechstens ein Thread zugleich."""
     import threading
     import time

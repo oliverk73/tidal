@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Liest die LINZ-Harmonischen (tide_tables/newzealand/linz_harm, CC BY 4.0, Release 2025).
+"""Liest die LINZ-Harmonischen (quellen/harmonics_sources/newzealand/linz_harm, CC BY 4.0, Release 2025).
 
 Kopf: "STATION 043 TIME ZONE = 180, LATITUDE = 4117, LONGITUDE = 17400" (Grad+Minuten, Sued, Ost/West
 nach Lage), Tabelle NO NAME FREQUENCY STN M-Y/M-Y A G; A in cm, Z0 ueber Kartennull. 
@@ -14,7 +14,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORD = os.path.join(ROOT, 'tide_tables/newzealand/linz_harm')
+ORD = os.path.join(ROOT, 'quellen/harmonics_sources/newzealand/linz_harm')
 
 
 def saetze():

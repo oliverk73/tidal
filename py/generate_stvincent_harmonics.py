@@ -22,7 +22,7 @@ UHSLC_STATIONS = [
 
 PSMSL_STATIONS = [
     {'name': 'Calliaqua', 'lat': 13.1299, 'lon': -61.1955, 'water': 'Caribbean Sea',
-     'csv_path': '/home/oliver/water_levels/StVincent_PSMSL/calq_rad.csv',
+     'csv_path': '/home/oliver/weather/quellen/water_levels/StVincent_PSMSL/calq_rad.csv',
      'station_id': 'PSMSL-calq'},
 ]
 
@@ -306,7 +306,7 @@ def read_header_from_template(template_path):
 
 
 def main():
-    uhslc_dir = Path('/home/oliver/water_levels/StVincent_UHSLC')
+    uhslc_dir = Path('/home/oliver/weather/quellen/water_levels/StVincent_UHSLC')
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_stvincent.txt')
 

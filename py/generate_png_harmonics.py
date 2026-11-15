@@ -64,7 +64,7 @@ def format_station_block(station, results, data):
 
 
 def main():
-    data_dir = Path('/home/oliver/water_levels/PapuaNewGuinea_UHSLC')
+    data_dir = Path('/home/oliver/weather/quellen/water_levels/PapuaNewGuinea_UHSLC')
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_png.txt')
 

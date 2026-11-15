@@ -4,7 +4,7 @@ import os, json, time, datetime, sys, requests
 import pandas as pd
 
 API_BASE = 'https://api-sine.dfo-mpo.gc.ca/api/v1'
-OUTPUT_DIR = '/home/oliver/water_levels/Canada_IWLS_NU'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Canada_IWLS_NU'
 CATALOG_PATH = os.path.join(OUTPUT_DIR, '_nu_stations.json')
 RESOLUTION = 'FIFTEEN_MINUTES'
 START_DATE = '2025-01-01'

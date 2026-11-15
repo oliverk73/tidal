@@ -5,7 +5,7 @@ for all Belgian tide stations with astronomical predictions.
 
 Uses the KIWIS API directly via requests (no pywaterinfo constructor needed,
 which avoids the initial API call that triggers rate limiting).
-Data is saved as CSV files per station in water_levels/Belgium/.
+Data is saved as CSV files per station in quellen/water_levels/Belgium/.
 
 Reference level: TAW (Tweede Algemene Waterpassing), ~2.33m above NAP.
 """
@@ -17,7 +17,7 @@ import time
 import requests
 import pandas as pd
 
-OUTPUT_DIR = '/home/oliver/water_levels/Belgium'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Belgium'
 CATALOG_CACHE = os.path.join(OUTPUT_DIR, '_station_catalog.json')
 START_YEAR = 2007
 END_YEAR = 2026

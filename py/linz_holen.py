@@ -46,7 +46,7 @@ from health_check import load_records, ROOT                       # noqa: E402
 BASIS = ('https://static.charts.linz.govt.nz/tide-tables/maj-ports/csv/')
 KOPF = {'User-Agent': 'tidal-corpus/1.0 (harmonic constant verification; '
                       'github.com/oliverk73/tidal)'}
-ZIEL = os.path.join(ROOT, 'water_levels', 'NewZealand_LINZ')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/NewZealand_LINZ')
 PAUSE = 1.0
 MAKRON = str.maketrans('aeiou', 'āēīōū')
 

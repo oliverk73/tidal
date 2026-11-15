@@ -14,7 +14,7 @@ Quelle: https://ocean.dmi.dk/Tides/<jahr>/  (Verzeichnis frei auflistbar)
                 darunter Hoch- und Niedrigwasser "yyyymmddHHMM<TAB>cm"
                 in der ORTSZEIT des Kopfes, Hoehen ueber LAT.
 
-Ablage: tide_tables/dmi/<jahr>/<Ort>.t.txt  (Tidenkalender gehoeren nach
+Ablage: quellen/tide_tables/dmi/<jahr>/<Ort>.t.txt  (Tidenkalender gehoeren nach
 tide_tables/, Olivers Regel). Eine Anfrage je Sekunde, ehrlicher User-Agent.
 
 Fit wie bei den uebrigen Tafeln (py/fit_svalbard_longyearbyen.py): Scheitel mit
@@ -40,7 +40,7 @@ from health_check import ROOT, curve_diff, km, load_records          # noqa: E40
 
 BASIS = 'https://ocean.dmi.dk/Tides'
 UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
-ABLAGE = os.path.join(ROOT, 'tide_tables', 'dmi')
+ABLAGE = os.path.join(ROOT, 'quellen/tide_tables/dmi')
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 PROBE = os.path.join(ROOT, 'harmonics/help/dmi_tidevand_probe.csv')
 

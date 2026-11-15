@@ -3,11 +3,11 @@
 """NOAA NCEI Global Ocean Currents Database (GOCD, eingestellt 04/2025, Dateien weiter unter
 https://www.ncei.noaa.gov/data/oceans/ncei/gocd/) -> Stromfits (Oliver 14.11.2026).
 
-Inventare gocd_cmetr_inv.csv (Stroemungsmesser) und gocd_madcp_inv.csv (verankerte ADCP) -> currents/NCEI_GOCD/kandidaten.csv
+Inventare gocd_cmetr_inv.csv (Stroemungsmesser) und gocd_madcp_inv.csv (verankerte ADCP) -> quellen/tidal_streams/NCEI_GOCD/kandidaten.csv
 (Vorlauf 14.11.: >= 25 Tage, <= 30 km vom naechsten Pegelsatz, Stroemungsmesser bis 60 m). Hier: nur Reihen > 5 km vom
 naechsten Stromsatz, je 3-km-Ort eine: flachster Stroemungsmesser, sonst ADCP (Zellen 5-25 m, nicht in den obersten 12 %
 der Wassertiefe), bei Gleichstand die laengste. GOCD-3.0-NetCDF: u/v m/s, time Tage seit 1900, Flags 1/2 = gut.
-Stundenmittel mittig gestempelt, Fit wie py/ios_stroemung.py. Dateien -> currents/NCEI_GOCD/nc/, fits.pkl, help/gocd_stroemung.csv.
+Stundenmittel mittig gestempelt, Fit wie py/ios_stroemung.py. Dateien -> quellen/tidal_streams/NCEI_GOCD/nc/, fits.pkl, help/gocd_stroemung.csv.
 
 Usage: venv/bin/python py/gocd_stroemung.py
 """
@@ -29,7 +29,7 @@ import stroemung_kopplung as K                                      # noqa: E402
 from ios_stroemung import FREI                                      # noqa: E402
 
 ROOT = K.ROOT
-D = os.path.join(ROOT, 'currents/NCEI_GOCD')
+D = os.path.join(ROOT, 'quellen/tidal_streams/NCEI_GOCD')
 URL = 'https://www.ncei.noaa.gov/data/oceans/ncei/gocd/'
 
 

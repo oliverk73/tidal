@@ -14,7 +14,7 @@ import numpy as np
 from datetime import datetime, timedelta
 from pathlib import Path
 
-DATA_DIR = Path("/home/oliver/water_levels/Japan_JHOD")
+DATA_DIR = Path("/home/oliver/weather/quellen/tide_tables/Japan_JHOD")
 COMPARE_YEAR = 2026
 COMPARE_MONTH = 1  # January
 

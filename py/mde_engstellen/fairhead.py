@@ -1,6 +1,6 @@
 import sys, pickle, numpy as np, pandas as pd, warnings; warnings.filterwarnings('ignore')
 sys.path.insert(0, '/home/oliver/weather/py'); import cmems_stroemung_nachholen as C
-D = '/home/oliver/weather/currents/UK_MDE/TCE-349/'
+D = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/TCE-349/'
 POS = {'L1': (55.23017, -6.11425), 'L2': (55.22839, -6.11318), 'L3': (55.22225, -6.08966), 'L4': (55.23398, -6.11250), 'L5': (55.22802, -6.10175)}
 F = {'L1': D + '1281_x/Location 1/DPL1Ball_v2_analysis_10minutes.xls', 'L2': D + '1281_x/Location 2/DPL2Ball_v2_analysis_10minutes.xls',
      'L3': D + '1281_x/Location 3/DPL3Ball_v1_analysis_10minutes.xls', 'L4': D + '1282_x/Location 4/WH300_current_v2x0.xlsx', 'L5': D + '1282_x/Location 5/SV500_current_v2x0.xlsx'}
@@ -22,4 +22,4 @@ for k, f in F.items():
     print('   ancillary', list(a.columns)[:12])
     p = a[pc[0]].dropna() if pc else None
     OUT[k] = dict(lat=POS[k][0], lon=POS[k][1], df=C.stundenmittel(df), p=C.stundenmittel(p.to_frame('p'))['p'] if p is not None else None, id='TCE-349')
-pickle.dump(OUT, open('/home/oliver/weather/currents/UK_MDE/_arbeit/fairhead.pkl', 'wb'))
+pickle.dump(OUT, open('/home/oliver/weather/quellen/tidal_streams/UK_MDE/_arbeit/fairhead.pkl', 'wb'))

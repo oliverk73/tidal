@@ -11,7 +11,7 @@ import time
 import requests
 import pandas as pd
 
-OUTPUT_DIR = '/home/oliver/water_levels/Australia_UHSLC'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Australia_UHSLC'
 ERDDAP_BASE = 'https://uhslc.soest.hawaii.edu/erddap/tabledap'
 
 # Australian stations from UHSLC not already in BOM/QLD datasets

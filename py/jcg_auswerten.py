@@ -15,8 +15,8 @@ Zeit: JST (UTC+9).
 Fit: Stärke mit Vorzeichen entlang der Hauptachse (Mittel der doppelten Winkel). Einzelne Pfeile, deren
 Spitze das Bild verwechselt (180 Grad), fallen gegen die Gezeitenkurve auf und werden umgedreht.
 
-Usage: venv/bin/python py/jcg_auswerten.py reihen [GEBIET ...]    -> currents/japan_jcg/reihen/<g>.npz
-       venv/bin/python py/jcg_auswerten.py fit [GEBIET ...]       -> currents/japan_jcg/reihen/<g>_fit.json
+Usage: venv/bin/python py/jcg_auswerten.py reihen [GEBIET ...]    -> quellen/tidal_streams/japan_jcg/reihen/<g>.npz
+       venv/bin/python py/jcg_auswerten.py fit [GEBIET ...]       -> quellen/tidal_streams/japan_jcg/reihen/<g>_fit.json
        venv/bin/python py/jcg_auswerten.py vergleich              -> NOAA-Japan-Stroeme gegen JCG
        venv/bin/python py/jcg_auswerten.py bloecke LISTE.csv      -> harmonics/help/jcg_stroeme_<datum>.txt
          (LISTE: Spalten id = Gebiet/Punkt, name; Flutrichtung per flutrichtung_pruefen: "drehen" wird gedreht)
@@ -35,7 +35,7 @@ import numpy as np
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASIS = os.path.join(ROOT, 'currents/japan_jcg')
+BASIS = os.path.join(ROOT, 'quellen/tidal_streams/japan_jcg')
 RAW = os.path.join(BASIS, 'raw')
 REIHEN = os.path.join(BASIS, 'reihen')
 JST = dt.timedelta(hours=9)

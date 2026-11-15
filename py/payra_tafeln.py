@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Liest die Tidenkalender der Payra Port Authority (Rabnabad-Kanal, Bangladesch).
 
-Oliver 17.10.2026: Die PDFs lagen seit Juni in tide_tables/bangladesh/payra (ppa_*.pdf), Payra fehlte
+Oliver 17.10.2026: Die PDFs lagen seit Juni in quellen/tide_tables/bangladesh/payra (ppa_*.pdf), Payra fehlte
 im Bestand. Jede Seite: Monat/Jahr, zwei oder drei Pegel nebeneinander (Charipara, Kauar Char,
 Monopile-1, Monopile-2, aelter auch Ander Manik), je Tag ein Block mit Hoch-/Niedrigwasser
 "HHMM h.hh". Zeiten in Ortszeit UTC+6, Hoehen ueber Pegelnull (~LAT).
@@ -10,7 +10,7 @@ Monopile-1, Monopile-2, aelter auch Ander Manik), je Tag ein Block mit Hoch-/Nie
 Zuordnung: jede Zahlengruppe gehoert zur naechstgelegenen Spaltenueberschrift; das Datum folgt den
 gedruckten Tagesnummer des Blocks (fehlende Seiten verschieben so nichts), sonst dem Uhrzeitlauf.
 
-Usage: python3 py/payra_tafeln.py  -> tide_tables/bangladesh/payra/payra_hwlw.json  {Pegel: [[iso_utc, m], ...]}
+Usage: python3 py/payra_tafeln.py  -> quellen/tide_tables/bangladesh/payra/payra_hwlw.json  {Pegel: [[iso_utc, m], ...]}
 """
 import collections
 import datetime as dt
@@ -21,7 +21,7 @@ import re
 import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(ROOT, 'tide_tables/bangladesh/payra')
+ORDNER = os.path.join(ROOT, 'quellen/tide_tables/bangladesh/payra')
 MONATE = {m: i + 1 for i, m in enumerate(['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY',
                                           'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'])}
 MONATE['SEPEMBER'] = 9

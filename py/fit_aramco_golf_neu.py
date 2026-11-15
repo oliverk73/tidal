@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fit_aramco_rotes_meer as A                                    # noqa: E402
 from health_check import MERIDIAN                                    # noqa: E402
 
-A.PDF = os.path.join(A.ROOT, 'tide_tables/saudi_arabia/968249708-Arabian-Gulf-Tide-Tables-2026.pdf')
+A.PDF = os.path.join(A.ROOT, 'quellen/tide_tables/saudi_arabia/968249708-Arabian-Gulf-Tide-Tables-2026.pdf')
 A.JAHR = 2026
 # (Buchtitel im PDF, station_id_context im Bestand, lat) -- Namen im Bestand sind inzwischen
 # teils umbenannt ("Zuluf Oilfield"), deshalb wird ueber die Kennung gesucht.

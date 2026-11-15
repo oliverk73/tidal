@@ -11,7 +11,7 @@ from generate_south_africa_harmonics import (
     load_csv_water_levels, harmonic_analysis_utide, read_header_from_template,
 )
 
-DATA_DIR = Path('/home/oliver/water_levels/Russia_IOC')
+DATA_DIR = Path('/home/oliver/weather/quellen/water_levels/Russia_IOC')
 R2_MIN = 0.5  # drop stations below this (weak tidal signal / gappy data)
 
 STATIONS = [

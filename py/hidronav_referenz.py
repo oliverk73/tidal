@@ -3,7 +3,7 @@
 """Liest die Gezeitentafeln der peruanischen HIDRONAV.
 
 Die Direccion de Hidrografia y Navegacion veroeffentlicht je Hafen und
-Monat ein einseitiges PDF. Unter tide_tables/peru/ liegen 26 Haefen fuer
+Monat ein einseitiges PDF. Unter quellen/tide_tables/peru/ liegen 26 Haefen fuer
 Juni und Juli 2026 sowie derselbe Satz fuer Juni 2024.
 
 Der Textaufbau ist ueber alle 26 Dateien gleich und sehr einfach: eine
@@ -37,7 +37,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PERU = os.path.join(ROOT, 'tide_tables/peru')
+PERU = os.path.join(ROOT, 'quellen/tide_tables/peru')
 TZ = -5                      # ganzjaehrig, keine Sommerzeit
 
 MONAT = {'ENE': 1, 'FEB': 2, 'MAR': 3, 'ABR': 4, 'MAY': 5, 'JUN': 6,

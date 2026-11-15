@@ -16,7 +16,7 @@ import utide
 from pathlib import Path
 
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_nl")
-CSV_DIR = Path("/home/oliver/water_levels/Netherlands")
+CSV_DIR = Path("/home/oliver/weather/quellen/water_levels/Netherlands")
 
 # Comparison period: January 2026 (recent, full month)
 COMPARE_START = datetime.datetime(2026, 1, 1)

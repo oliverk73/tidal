@@ -8,8 +8,8 @@ Covers:
   - op=2 Antarctic stations operated by Argentina
 
 Each station × year × month is fetched as a separate HTML response and cached
-in tide_tables/argentina/shn/raw/. A consolidated JSON per station
-with metadata + HW/LW points goes to tide_tables/argentina/shn/parsed/.
+in quellen/tide_tables/argentina/shn/raw/. A consolidated JSON per station
+with metadata + HW/LW points goes to quellen/tide_tables/argentina/shn/parsed/.
 
 Be polite: 0.5s delay between requests.
 """
@@ -20,7 +20,7 @@ import requests
 from pathlib import Path
 from datetime import datetime
 
-OUT_DIR = Path("/home/oliver/weather/tide_tables/argentina/shn")
+OUT_DIR = Path("/home/oliver/weather/quellen/tide_tables/argentina/shn")
 RAW_DIR = OUT_DIR / "raw"
 PARSED_DIR = OUT_DIR / "parsed"
 RAW_DIR.mkdir(parents=True, exist_ok=True)

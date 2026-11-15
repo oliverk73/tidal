@@ -12,7 +12,7 @@ from datetime import datetime
 from pathlib import Path
 import re
 
-OUTPUT_DIR = Path("/home/oliver/water_levels/Australia_BOM/npz")
+OUTPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/Australia_BOM/npz")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 BASE_URL = "https://www.bom.gov.au/ntc"

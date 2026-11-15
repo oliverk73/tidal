@@ -2,18 +2,18 @@
 # -*- coding: utf-8 -*-
 """BSH-Gezeitentafeln "Europaeische Gewaesser" 2027 (Ortsverzeichnis) gegen den Bestand abgleichen.
 
-Quelle: tide_tables/germany_bsh/GT27_Inhaltsverzeichnis.pdf (S. 219-230, nur Name + BSH-Nummer, keine Koordinaten).
+Quelle: quellen/tide_tables/germany_bsh/GT27_Inhaltsverzeichnis.pdf (S. 219-230, nur Name + BSH-Nummer, keine Koordinaten).
 Die Nummern laufen die Kueste entlang (Groenland/Island 1-100, Spitzbergen ~106-125, Norwegen 346-540,
 Deutschland 600-816, NL/BE 820-937, Frankreich Nord 941-1035, GB 1092-1610, Irland 1630-1781,
 Biskaya 1800-1934, Iberien 1940-2022, Ceuta, Atlantik-Inseln 2202-2224).
 Mehrere Verzeichnisnamen mit derselben Nummer = ein Ort (Aliasse).
 
 Verortung:
-  1. 'bsh'   deutsche Orte: Position aus tide_tables/germany_bsh/json (bshnr, 'P' = ohne Buchstaben)
+  1. 'bsh'   deutsche Orte: Position aus quellen/tide_tables/germany_bsh/json (bshnr, 'P' = ohne Buchstaben)
   2. 'saat'  Name im ganzen Europa-Ausschnitt eindeutig im Bestand (alle Treffer <= 30 km beisammen),
              und die Lage passt zu den Nummernnachbarn
   3. 'name'  Name unscharf im Bestand im Umkreis der Nummernnachbarn
-  4. 'geo'   Nominatim im Umkreis (Cache water_levels/BSH_GT_nominatim.json, 1/s)
+  4. 'geo'   Nominatim im Umkreis (Cache cache/BSH_GT_nominatim.json, 1/s)
 Abdeckung: naechster Wasserstands-Satz zur Position; <= 5 km gedeckt, 5-15 km nah, > 15 km Luecke.
 Schreibt harmonics/help/bsh_gt27_abgleich.csv.
 Usage: venv/bin/python py/bsh_gt_abgleich.py [--ohne-netz]
@@ -38,10 +38,10 @@ import osm_land                                                    # noqa: E402
 from ukho_index_abgleich import norm, kern, km, GATTUNG            # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'tide_tables/germany_bsh/GT27_Inhaltsverzeichnis.pdf')
-JSON_DIR = os.path.join(ROOT, 'tide_tables/germany_bsh/json')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/germany_bsh/GT27_Inhaltsverzeichnis.pdf')
+JSON_DIR = os.path.join(ROOT, 'quellen/tide_tables/germany_bsh/json')
 AUS = os.path.join(ROOT, 'harmonics/help/bsh_gt27_abgleich.csv')
-CACHE = os.path.join(ROOT, 'water_levels/BSH_GT_nominatim.json')
+CACHE = os.path.join(ROOT, 'cache/BSH_GT_nominatim.json')
 GATTUNG = GATTUNG | {'fjord', 'fjordur', 'fjorden', 'loch', 'lough', 'ria', 'rio', 'porto', 'praia', 'enseada', 'baia', 'ile', 'iles',
                      'ny', 'tonne', 'leuchtturm', 'feuerschiff', 'einfahrt', 'aussen', 'hafen', 'sund', 'firth', 'head', 'harbour',
                      'insel', 'alter', 'neuer', 'anleger', 'bake', 'reede', 'seeseite', 'hafeneinfahrt', 'barre', 'muendung', 'ost', 'nord', 'sud', 'west', 'l', 'd', 'en', 'van', 'aan', 'zeegat', 'sur', 'mer', 'pointe'}

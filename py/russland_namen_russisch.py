@@ -23,7 +23,7 @@ from health_check import active_files                             # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-GN = os.path.join(ROOT, 'tide_tables/catalogues/geonames/umfeld.tsv')
+GN = os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/umfeld.tsv')
 MERIDIAN = re.compile(r'^[+-]?\d{1,2}:\d{2}\b')
 # englisches Gattungswort -> passende GeoNames-Codes
 TYP = {

@@ -3,7 +3,7 @@
 """Laedt Stromvorhersagen des Hong Kong Tidal Stream Prediction System (Marine Department).
 
 current.hydro.gov.hk, Quelle data.gov.hk (frei mit Quellenangabe). Je Punkt 15-min-Werte, Mode A =
-Tiefenmittel. Auswahl in tide_tables/hongkong_tsps/auswahl.json, ein Abruf je Punkt fuer 2026
+Tiefenmittel. Auswahl in quellen/tide_tables/hongkong_tsps/auswahl.json, ein Abruf je Punkt fuer 2026
 (mehrere Punkte ueber laengere Zeit liefern stumm eine leere Datei).
 
 Usage: python3 py/hk_tsps_laden.py
@@ -16,7 +16,7 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORD = os.path.join(ROOT, 'tide_tables/hongkong_tsps')
+ORD = os.path.join(ROOT, 'quellen/tide_tables/hongkong_tsps')
 URL = ('https://current.hydro.gov.hk/data/download_selected_points.php?start_date=2026-01-01'
        '&end_date=2026-12-30&mode=A&point=')
 WEG = {'127054', '159051', '154054', '87054'}    # unter ~0,6 kn, keine Navigationshilfe

@@ -10,7 +10,7 @@ Halbtide mit dem Tidenhub am Bezugshafen der LINZ-Diagramme skaliert (Nelson bzw
 unserem Bestand per tide). Zwischen zwei Kenterzeiten: Sinusbogen, alle 20 min ein Wert.
 Flutrichtung aus den Spring-Diagrammen: French Pass SW, Tory Channel W (in den Sund).
 
-Ablage: tide_tables/newzealand/linz_stroeme/
+Ablage: quellen/harmonics_sources/newzealand/linz_stroeme/
 Usage: venv/bin/python py/linz_stroeme.py [--bloecke]
 """
 from __future__ import annotations
@@ -32,7 +32,7 @@ import cmems_stroemung_nachholen as C                               # noqa: E402
 from shn_corrientes import KONST                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QUELLE = os.path.join(ROOT, 'tide_tables/newzealand/linz_stroeme')
+QUELLE = os.path.join(ROOT, 'quellen/harmonics_sources/newzealand/linz_stroeme')
 HILFE = os.path.join(ROOT, 'harmonics/help')
 NZ = ZoneInfo('Pacific/Auckland')
 

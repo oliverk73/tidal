@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Liest die amtliche Gezeitentafel des Instituto Hidrográfico (Tabela de Marés 2026).
 
-tide_tables/Portugal/TabelaMare_I_2026_signed.pdf enthaelt je Standardhafen vier
+quellen/tide_tables/Portugal/TabelaMare_I_2026_signed.pdf enthaelt je Standardhafen vier
 Seiten mit Hoch- und Niedrigwassern (Uhrzeit in UT, Hoehe ueber Zero
 Hidrografico) und am Ende die harmonischen Konstanten M2, S2, K1, O1 aus den
 Pegelanalysen des IH (Phasen in UT, also Greenwich).
@@ -23,12 +23,12 @@ import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'tide_tables/Portugal/TabelaMare_I_2026_signed.pdf')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/Portugal/TabelaMare_I_2026_signed.pdf')
 MONATE = {'JANEIRO': 1, 'FEVEREIRO': 2, 'MARÇO': 3, 'ABRIL': 4, 'MAIO': 5, 'JUNHO': 6, 'JULHO': 7,
           'AGOSTO': 8, 'SETEMBRO': 9, 'OUTUBRO': 10, 'NOVEMBRO': 11, 'DEZEMBRO': 12}
 PAAR = re.compile(r'(\d{2}):(\d{2})\s+(-?\d\.\d)')
-PDF_II = os.path.join(ROOT, 'tide_tables/Portugal/TabelaMare_II_2026_signed.pdf')
-PDF_2025 = os.path.join(ROOT, 'tide_tables/Portugal/TabMares_I_2025_completa_signed-1.pdf')
+PDF_II = os.path.join(ROOT, 'quellen/tide_tables/Portugal/TabelaMare_II_2026_signed.pdf')
+PDF_2025 = os.path.join(ROOT, 'quellen/tide_tables/Portugal/TabMares_I_2025_completa_signed-1.pdf')
 _TEXT = {}
 
 

@@ -10,7 +10,7 @@ Zeiten in Kuwait-Ortszeit (UTC+3, keine Sommerzeit), Hoehen auf 0,1 m.
 Fuenf Tage reichen fuer keinen Fit; der Sammler haengt jeden Lauf an eine Datei
 je Pegel an (Scheitelfit nach etwa sechs Monaten, wie bei sjolag.is):
 
-  tide_tables/kuwait_met/<pegel>.csv   zeit_lokal,zeit_utc,hoehe,typ,abruf,wartung
+  quellen/tide_tables/kuwait_met/<pegel>.csv   zeit_lokal,zeit_utc,hoehe,typ,abruf,wartung
 
 Bei gleicher Zeit gewinnt der juengste Abruf. 'wartung' = 1, wenn die Seite den
 Pegel als in Wartung markiert (class tide-maint-mode; Shuaiba seit 28.10.2026).
@@ -29,7 +29,7 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'tide_tables', 'kuwait_met')
+ZIEL = os.path.join(ROOT, 'quellen/tide_tables/kuwait_met')
 URL = 'https://www.met.gov.kw/Forecasts/marine.php'
 UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
 FELDER = ['zeit_lokal', 'zeit_utc', 'hoehe', 'typ', 'abruf', 'wartung']

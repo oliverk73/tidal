@@ -3,7 +3,7 @@
 """HW/NW-Kalender der thailaendischen Marine lesen (hydro.navy.mi.th/sevicetide, 11.11.2026).
 
 Die Webseite bietet je Ort ein 4-Seiten-PDF mit HW/NW (Minute, 1 cm, Thailand-Zeit UTC+7, ueber Lowest Low Water);
-lokal unter tide_tables/thailand/hwnw_web/<KK>2026.pdf. Die Hefte tide_tables/thailand/<KK>2026.pdf (25 Seiten)
+lokal unter quellen/tide_tables/thailand/hwnw_web/<KK>2026.pdf. Die Hefte quellen/tide_tables/thailand/<KK>2026.pdf (25 Seiten)
 enthalten dieselbe Vorhersage als Stundenwerte zu 0,1 m (daraus stammen die Saetze in harmonics_utide_tidetables).
 Achtung: Laem Chabang heisst im Web LB2026, lokal LC2026.
 

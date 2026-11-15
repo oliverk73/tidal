@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Korea: Gezeitenstrom-Konstanten aus Umweltgutachten (vadahub.go.kr, 조화상수_조류, tb_hidcnst_tdcr), Oliver 14.11.2026.
 
-Quelle: tide_tables/korea/vadahub/khoa_haeyeok_조류.json (1826 Zeilen, 236 Messpunkte, 2013-2021, meist 15 Tage).
+Quelle: quellen/tide_tables/korea/vadahub/khoa_haeyeok_조류.json (1826 Zeilen, 236 Messpunkte, 2013-2021, meist 15 Tage).
 Brauchbar sind nur Punkte mit Ost- (동방) und Nordkomponente (북방), je Amplitude (진폭, cm/s) und Phase (지각) fuer
 M2 S2 K1 O1 an der Oberflaeche (표층): 64 Punkte; die uebrigen haben nur Phasen ohne Amplituden.
 Phase wie beim Gezeitenteil (py/khoa_vadahub.py, an 36 Pegeln geprueft): kappa in KST -> g = kappa - 9 h * speed.
@@ -11,7 +11,7 @@ naechsten Mess-/Tafelpegel (khoa_vadahub.gruppe/REF_DATEI): halbtaegig wie M2 bz
 bzw. O1-Gruppe wie O1 (Verhaeltnis und Phasenabstand des Wasserstands); Flachwasser und Langperiode nicht (ortsabhaengig).
 Pruefung: Phase M2 Oberflaeche gegen mittlere Tiefe (중층) <= 30 Grad (Gezeitenstrom ist ueber die Tiefe fast gleichphasig,
 grobe Tippfehler fallen so auf); mehrere Gutachten am selben Ort komplex gemittelt.
-Ergebnis: currents/korea_vadahub/stationen.json (fuer Rohreihe/Kompass) + harmonics/help/khoa_vadahub_strom.csv.
+Ergebnis: quellen/tidal_streams/korea_vadahub/stationen.json (fuer Rohreihe/Kompass) + harmonics/help/khoa_vadahub_strom.csv.
 
 Usage: venv/bin/python py/khoa_vadahub_strom.py
 """
@@ -31,8 +31,8 @@ import stroemung_kopplung as K                                      # noqa: E402
 import xtide_modell as X                                            # noqa: E402
 
 ROOT = K.ROOT
-QUELLE = os.path.join(ROOT, 'tide_tables/korea/vadahub/khoa_haeyeok_조류.json')
-D = os.path.join(ROOT, 'currents/korea_vadahub')
+QUELLE = os.path.join(ROOT, 'quellen/tide_tables/korea/vadahub/khoa_haeyeok_조류.json')
+D = os.path.join(ROOT, 'quellen/tidal_streams/korea_vadahub')
 K4 = ['M2', 'S2', 'K1', 'O1']
 CMS_KN = 0.0194384449
 

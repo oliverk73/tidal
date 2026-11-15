@@ -359,7 +359,7 @@ def read_header_from_template(template_path):
 
 
 def main():
-    data_dir = Path('/home/oliver/water_levels/Norway_Kartverket')
+    data_dir = Path('/home/oliver/weather/quellen/water_levels/Norway_Kartverket')
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_norway.txt')
 

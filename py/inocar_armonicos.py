@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""INOCAR-Harmonikanalysen (tide_tables/ecuador/*.pdf, Oliver 25.10.2026) einlesen und pruefen.
+"""INOCAR-Harmonikanalysen (quellen/tide_tables/ecuador/*.pdf, Oliver 25.10.2026) einlesen und pruefen.
 
 Die PDFs (IOS/Foreman-Ausgabe) geben je Konstituente zwei Paare Amplitude/Phase. Die Kopfzeile
 heisst mal "AL GL A GNWCH", mal "A G AL GL" -- die Reihenfolge der Zahlen ist aber immer gleich:
@@ -36,7 +36,7 @@ import xtide_modell as X                                             # noqa: E40
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match   # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(ROOT, 'tide_tables/ecuador')
+ORDNER = os.path.join(ROOT, 'quellen/tide_tables/ecuador')
 KALENDER = os.path.join(ORDNER, 'kalender_2026')
 HILFE = os.path.join(ROOT, 'harmonics/help')
 KOPF = X.kopf_lesen(S.TAFELN)          # Namen, Geschwindigkeiten, Argumente, Knotenfaktoren (XTide)

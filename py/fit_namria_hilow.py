@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Harmonische Konstanten der NAMRIA-Nebenpegel aus Hoch-/Niedrigwassertafeln.
 
-Eingang: water_levels/Philippines_NAMRIA/secondary_hilow/<id>_<Zeitraum>.csv
+Eingang: quellen/tide_tables/Philippines_NAMRIA/secondary_hilow/<id>_<Zeitraum>.csv
 (py/namria_hilow_ocr.py), je Station alle Zeitraeume 2023-2026 zusammen.
 
 Ausreisser (OCR-Ziffernfehler) ueber einen Scheitel-Fit entfernen, dann UTide
@@ -38,7 +38,7 @@ from fit_namria_phtides import grad                                # noqa: E402
 from health_check import ROOT                                      # noqa: E402
 
 warnings.filterwarnings('ignore')
-ORT = os.path.join(ROOT, 'water_levels/Philippines_NAMRIA/secondary_hilow')
+ORT = os.path.join(ROOT, 'quellen/tide_tables/Philippines_NAMRIA/secondary_hilow')
 DATEI = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
 API = 'https://phtides.namria.gov.ph/api'
 # schon als Hauptpegel aus Stundenwerten im Bestand

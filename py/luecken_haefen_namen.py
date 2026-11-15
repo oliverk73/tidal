@@ -11,7 +11,7 @@ Format von py/fes_neu_geeicht.py --welt (Position = OSM-Hafen, dort mit --exakt 
   * Region/Land: Nominatim reverse zoom 10 einmal in Landessprache, einmal englisch; lateinische Landesform bevorzugt
     (Maluku Utara, Islas Canarias), Land immer englisch, USA nur Bundesstaat.
   * Zeitzone: timezonefinder.
-Cache: water_levels/luecken_schlau_cache.json (wie py/luecken_schlau.py).
+Cache: cache/luecken_schlau_cache.json (wie py/luecken_schlau.py).
 
 Usage: venv/bin/python py/luecken_haefen_namen.py [--aus CSV]
 """
@@ -28,8 +28,8 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EIN = os.path.join(ROOT, 'harmonics/help/luecken_haefen_vorschlag_20261113.csv')
 AUS = os.path.join(ROOT, 'harmonics/help/luecken_haefen_auswahl_20261113.csv')
-CACHE = os.path.join(ROOT, 'water_levels/luecken_schlau_cache.json')
-OSM = os.path.join(ROOT, 'tide_tables/catalogues/osm_haefen')
+CACHE = os.path.join(ROOT, 'cache/luecken_schlau_cache.json')
+OSM = os.path.join(ROOT, 'quellen/kataloge/catalogues/osm_haefen')
 RAUS = {'Grand Tortue Ahmeyim'}
 HAND = {                                   # von Hand nach Durchsicht 13.11.2026 (OSM-Name -> Name)
     'ميناء الضبة النفطي': 'Ad Dabbah (oil terminal)', 'ميناء الزيت': 'Little Aden (oil harbour)', 'Pont': 'Kei Mouth',

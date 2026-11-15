@@ -25,7 +25,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_DIR = Path("/home/oliver/water_levels/Korea_badatime")
+DATA_DIR = Path("/home/oliver/weather/quellen/tide_tables/Korea_badatime")
 STATIONS_FILE = Path("/home/oliver/harmonics/help/badatime_selected.json")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_korea.txt")

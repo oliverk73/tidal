@@ -408,8 +408,8 @@ def process_station(zip_file, station_id, output_dir):
 
 def main():
     # Directories
-    data_dir = Path("/home/oliver/water_levels/Germany")
-    output_dir = Path("/home/oliver/water_levels/Germany/harmonics_utide")
+    data_dir = Path("/home/oliver/weather/quellen/water_levels/Germany")
+    output_dir = Path("/home/oliver/weather/quellen/water_levels/Germany/harmonics_utide")
     output_dir.mkdir(exist_ok=True)
 
     # Find all station files

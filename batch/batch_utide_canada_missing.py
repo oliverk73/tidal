@@ -26,7 +26,7 @@ from generate_germany_harmonics_175 import (
 )
 
 API = 'https://api-sine.dfo-mpo.gc.ca/api/v1'
-OUT_DIR = Path('/home/oliver/water_levels/Canada_IWLS_missing')
+OUT_DIR = Path('/home/oliver/weather/quellen/water_levels/Canada_IWLS_missing')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 CHECKPOINT_DIR = Path('/home/oliver/harmonics/utide/checkpoints_ca_missing')
 CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)

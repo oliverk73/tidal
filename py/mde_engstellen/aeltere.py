@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 sys.path.insert(0, '/home/oliver/weather/py')
 import cmems_stroemung_nachholen as C
 
-U = '/home/oliver/weather/currents/UK_MDE/'
+U = '/home/oliver/weather/quellen/tidal_streams/UK_MDE/'
 OUT = {}
 
 

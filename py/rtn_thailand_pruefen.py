@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 """Thai-Saetze gegen Marine-Pegelmessungen pruefen (Oliver 11.11.2026: "Ja, so machen").
 
-Messung: water_levels/Thailand_RTN/<station>_<sensor>.json (py/download_rtn_thailand.py; Stichprobenwochen 15 min,
+Messung: quellen/water_levels/Thailand_RTN/<station>_<sensor>.json (py/download_rtn_thailand.py; Stichprobenwochen 15 min,
 Ortszeit UTC+7). Je Pegel:
   * jeder Bestandssatz bis MAX_KM (aus den Stundenwert-Heften, Messfits, ATT ...),
-  * Scheitelfit aus dem HW/NW-Kalender der Marine (tide_tables/thailand/hwnw_web, py/rtn_hwnw.py), wenn dessen Ort
+  * Scheitelfit aus dem HW/NW-Kalender der Marine (quellen/tide_tables/thailand/hwnw_web, py/rtn_hwnw.py), wenn dessen Ort
     bis MAX_KM entfernt ist,
 Mass: RMS nach Abzug des Mittels je Stichprobenwoche (Pegelnull unbekannt, Jahresgang) und bester Zeitversatz (-60..60 min).
 Schreibt nichts.
@@ -84,14 +84,14 @@ def main(argv):
     namen, speeds, arg, fak = kopf
     nutz = SF.konstituenten(namen, SF.CONSTIT_67)
     st = {}
-    for x in json.load(open(os.path.join(ROOT, 'water_levels/Thailand_RTN/stationen.json'))):
+    for x in json.load(open(os.path.join(ROOT, 'quellen/water_levels/Thailand_RTN/stationen.json'))):
         st.setdefault(x['station_id'], x)
     tafeln = {}
-    for p in sorted(glob.glob(os.path.join(ROOT, 'tide_tables/thailand/hwnw_web/*.pdf'))):
+    for p in sorted(glob.glob(os.path.join(ROOT, 'quellen/tide_tables/thailand/hwnw_web/*.pdf'))):
         tafeln[os.path.basename(p)] = R.lesen(p)
     recs = [r for r in H.load_records() if r['lat'] is not None and not r['current']]
     zeilen = []
-    for pfad in sorted(glob.glob(os.path.join(ROOT, 'water_levels/Thailand_RTN/*_*.json'))):
+    for pfad in sorted(glob.glob(os.path.join(ROOT, 'quellen/water_levels/Thailand_RTN/*_*.json'))):
         sid = int(os.path.basename(pfad).split('_')[0])
         x = st[sid]
         t, h, sensor = messung(pfad)

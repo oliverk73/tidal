@@ -24,7 +24,7 @@ from datetime import datetime, timedelta
 # Pfade relativ zum Projekt; bis 13.09.2026 stand hier /home/oliver/water_levels
 # (vor dem Umzug nach /home/oliver/weather).
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUTPUT_DIR = os.path.join(ROOT, 'water_levels/UK_tidetimes')
+OUTPUT_DIR = os.path.join(ROOT, 'quellen/tide_tables/UK_tidetimes')
 # Stationsliste: Standard missing_stations.json, sonst --liste <datei>
 MISSING_JSON = (sys.argv[sys.argv.index('--liste') + 1] if '--liste' in sys.argv
                 else os.path.join(OUTPUT_DIR, 'missing_stations.json'))

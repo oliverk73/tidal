@@ -10,7 +10,7 @@ import time
 import requests
 import pandas as pd
 
-OUTPUT_DIR = '/home/oliver/water_levels/Philippines_UHSLC'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/Philippines_UHSLC'
 ERDDAP_BASE = 'https://uhslc.soest.hawaii.edu/erddap/tabledap'
 
 # Philippine stations from UHSLC

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Messfits Tema + Takoradi aus den GPHA-Pegelreihen 2019-2025 (Lieferung Ghana Ports and Harbours Authority, 11.11.2026).
 
-Rohdaten: water_levels/Ghana/TEMA AND TAKORADI TIDE DATA _2019 to 2025.zip (entpackt nach water_levels/Ghana/roh/),
+Rohdaten: quellen/water_levels/Ghana/TEMA AND TAKORADI TIDE DATA _2019 to 2025.zip (entpackt nach quellen/water_levels/Ghana/roh/),
 Monatsdateien, Tab-getrennt, 10-min-Werte UTC, Spalte "Tide Level"/"Observed" in m. Die mitgelieferte Vorhersagespalte
 wird nicht benutzt (Tema 04-07/2020 50 min verschoben).
 Pruefung (scratchpad gh_diag.py): Messzeiten in allen Monaten ohne Versatz gegen einen Referenzfit 2022/23.
@@ -31,7 +31,7 @@ import xtide_modell as X                                           # noqa: E402
 from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ROH = os.path.join(ROOT, 'water_levels/Ghana/roh/TEMA AND TAKORADI TIDE DATA _2019 to 2025')
+ROH = os.path.join(ROOT, 'quellen/water_levels/Ghana/roh/TEMA AND TAKORADI TIDE DATA _2019 to 2025')
 ZIEL = Q.ZIEL
 PEGEL = {  # Ort: (Ordner, GPHA-idSite, Name im Bestand, Ausschluss-Abschnitte)
     'Tema': ('TEMA TIDE DATA', 131, 'Tema, Ghana', []),

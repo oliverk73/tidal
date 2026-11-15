@@ -3,7 +3,7 @@
 """Strom-Ellipsen: Stromvektor (Staerke + Richtung) statt nur Flut/Ebbe entlang einer Achse.
 
 Stufe 3 der eigenen Tidenrechnung (Oliver 4.11.2026). Die Harmonics-Saetze kennen nur die Hauptachse;
-hier kommt die Nebenachse dazu. Erste Quelle: NOAA CO-OPS harcon (water_levels/NOAA_current_harcon/,
+hier kommt die Nebenachse dazu. Erste Quelle: NOAA CO-OPS harcon (quellen/tidal_streams/NOAA_current_harcon/,
 py/noaa_strom_ellipsen_laden.py) mit majorAmplitude/majorPhaseGMT, minorAmplitude/minorPhaseGMT und
 Achsrichtung azi (Grad rechtweisend) je Konstituente, Geschwindigkeit in cm/s.
 
@@ -30,7 +30,7 @@ import tiden_rechnung as T                                          # noqa: E402
 import xtide_modell as X                                            # noqa: E402
 
 ROOT = T.ROOT
-NOAA = os.path.join(ROOT, 'water_levels/NOAA_current_harcon')
+NOAA = os.path.join(ROOT, 'quellen/tidal_streams/NOAA_current_harcon')
 CMS_KN = 1 / 51.4444            # cm/s -> Knoten
 NEBEN_DREH = 90.0               # Nebenachse liegt 90 Grad rechts (im Uhrzeigersinn) von der Hauptachse;
                                 # gegen NOAA-PORTS-Messungen 20.-30.10.2026 geprueft: Querstrom korreliert

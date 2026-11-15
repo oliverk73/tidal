@@ -17,7 +17,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PFAD = os.path.join(ROOT, 'tide_tables/myanmar_mpa/mpa_tidal_archiv_20260313.html')
+PFAD = os.path.join(ROOT, 'quellen/tide_tables/myanmar_mpa/mpa_tidal_archiv_20260313.html')
 MMT = dt.timezone(dt.timedelta(hours=6, minutes=30))
 ZEILE = re.compile(r'(\d\d)/(\d\d)/(20\d\d)((?: \d\d:\d\d -?\d+\.\d+){1,4})')
 

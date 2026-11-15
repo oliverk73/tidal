@@ -27,7 +27,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_DIR = Path("/home/oliver/water_levels/Philippines_NAMRIA")
+DATA_DIR = Path("/home/oliver/weather/quellen/tide_tables/Philippines_NAMRIA")
 STATIONS_FILE = Path("/home/oliver/harmonics/help/namria_stations.json")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_philippines_namria.txt")

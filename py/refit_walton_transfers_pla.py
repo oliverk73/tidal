@@ -25,7 +25,7 @@ sys.path.insert(0, '/home/oliver/py')
 from generate_germany_harmonics_175 import CONSTITUENTS_175
 
 HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
-TT_DIR = Path('/home/oliver/water_levels/UK_tidetimes')
+TT_DIR = Path('/home/oliver/weather/quellen/tide_tables/UK_tidetimes')
 DONOR = 'Walton-on-the-Naze, England, United Kingdom'
 SPEED = dict(CONSTITUENTS_175)
 SIGMA_GOOD = 22.0

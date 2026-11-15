@@ -73,7 +73,7 @@ def geonames(saetze):
     worte = {id(r): [w for w in norm(suchwort(r['name'])) if len(w) > 2 and w not in
                      ('point', 'island', 'bay', 'harbor', 'harbour', 'port', 'cape', 'entrance', 'river',
                       'isla', 'puerto', 'punta', 'bahia', 'rio', 'ile', 'pointe', 'the')] for r in saetze}
-    for z in open(os.path.join(ROOT, 'tide_tables/catalogues/geonames/umfeld.tsv'), encoding='utf-8'):
+    for z in open(os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames/umfeld.tsv'), encoding='utf-8'):
         f = z.rstrip('\n').split('\t')
         try:
             la, lo = float(f[4]), float(f[5])

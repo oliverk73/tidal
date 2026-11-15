@@ -10,7 +10,7 @@ OCR: tesseract TSV auf 2x-Upscale; Tageszellen ueber Tagesnummer-Anker
 (Spaltenbaender), Events dem Anker darueber in derselben Spalte zugeordnet.
 
 Usage: python3 py/fit_phoenix_monthly_images.py DIR GLOB JAHR 'Name' LAT LON [conf]
-Beispiel: ... water_levels/dahej_2026 'dahej{m}.webp' 2026 'Dahej, Gujarat, India' 21.70 72.5167 4
+Beispiel: ... quellen/tide_tables/dahej_2026 'dahej{m}.webp' 2026 'Dahej, Gujarat, India' 21.70 72.5167 4
 """
 from __future__ import annotations
 import csv

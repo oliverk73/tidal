@@ -7,7 +7,7 @@ sys.path.insert(0, '/home/oliver/py/rws_currents'); sys.path.insert(0, '/home/ol
 from fit2 import fit
 from generate_germany_harmonics_175 import CONSTITUENTS_175
 
-CD = '/home/oliver/currents/Netherlands'
+CD = '/home/oliver/weather/quellen/tidal_streams/Netherlands'
 TARGET = '/home/oliver/harmonics/utide/harmonics_utide_current_observations.txt'
 meta = json.load(open(f'{CD}/_stations.json'))
 EXTRA = {}  # alle 5 haben _stations.json-Eintrag

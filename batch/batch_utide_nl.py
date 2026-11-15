@@ -24,7 +24,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-NL_DIR = Path("/home/oliver/water_levels/Canada_IWLS_NL")
+NL_DIR = Path("/home/oliver/weather/quellen/water_levels/Canada_IWLS_NL")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_canada_nl.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_nl")

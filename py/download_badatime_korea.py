@@ -11,7 +11,7 @@ import json
 import time
 import requests
 
-OUTPUT_DIR = '/home/oliver/water_levels/Korea_badatime'
+OUTPUT_DIR = '/home/oliver/weather/quellen/tide_tables/Korea_badatime'
 STATIONS_FILE = '/home/oliver/harmonics/help/badatime_selected.json'
 
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36'}

@@ -14,7 +14,7 @@ import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
-OUTPUT_DIR = Path("/home/oliver/water_levels/Denmark_DMI/npz")
+OUTPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/Denmark_DMI/npz")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 API_BASE = "https://opendataapi.dmi.dk/v2/oceanObs/collections/observation/items"

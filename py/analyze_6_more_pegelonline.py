@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Analyse the 6 additional Pegelonline ZIPs that just got copied to
-water_levels/Germany/, generate XTide-format station blocks, and append
+quellen/water_levels/Germany/, generate XTide-format station blocks, and append
 them to harmonics_utide_observations.txt.
 
 Targets: Altengamme (Elbe), Dagebüll, Elsfleth (Weser), Farge (Weser),
@@ -22,7 +22,7 @@ from generate_germany_harmonics_175 import (   # noqa: E402
     format_station_block,
 )
 
-WATER_LEVELS = Path("/home/oliver/water_levels/Germany")
+WATER_LEVELS = Path("/home/oliver/weather/quellen/water_levels/Germany")
 UTIDE_OBS    = Path("/home/oliver/harmonics/utide/harmonics_utide_observations.txt")
 
 # (zip-stem prefix, station-name-without-country, lat, lon, water body)

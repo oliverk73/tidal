@@ -18,7 +18,7 @@ import re
 import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.join(ROOT, 'tide_tables/iceland_sjolag/lhg_sjavarfallatoflur_2026.pdf')
+PDF = os.path.join(ROOT, 'quellen/tide_tables/iceland_sjolag/lhg_sjavarfallatoflur_2026.pdf')
 HAEFEN = {'Reykjavík': 7, 'Ísafjörður': 11, 'Siglufjörður': 15, 'Djúpivogur': 19, 'Þorlákshöfn': 23}
 MONAT = {'Janúar': 1, 'Febrúar': 2, 'Mars': 3, 'Apríl': 4, 'Maí': 5, 'Júní': 6,
          'Júlí': 7, 'Ágúst': 8, 'September': 9, 'Október': 10, 'Nóvember': 11, 'Desember': 12}

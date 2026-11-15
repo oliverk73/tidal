@@ -9,7 +9,7 @@ liefert die ganze Rohreihe. Werte in mm ueber Pegelnull -> Meter; Stundenwert = 
 |t - hh:00| < 30 min (naechste Stunde, nicht abgerundet).
 
 Usage: python3 py/download_hydroportail.py CODE:JJJJ-MM:JJJJ-MM [...]
-       -> water_levels/France_HydroPortail/hp_<code>.csv  (time,waterlevel_m; UTC)
+       -> quellen/water_levels/France_HydroPortail/hp_<code>.csv  (time,waterlevel_m; UTC)
 """
 import collections
 import datetime as dt
@@ -21,7 +21,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'water_levels/France_HydroPortail')
+ZIEL = os.path.join(ROOT, 'quellen/water_levels/France_HydroPortail')
 URL = 'https://www.hydro.eaufrance.fr/stationhydro/ajax/%s/series?'
 
 

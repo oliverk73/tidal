@@ -3,8 +3,8 @@
 """Rechnet SHOM- und FCUL-Jahresfits mit Jahrestide SA/SSA neu.
 
 Stichprobe 17.09.2026: Die SHOM-Vorhersagen (5-min-Reihen in
-water_levels/France_SHOM/shom_raw/) und die FCUL-Stundentafeln
-(water_levels/Portugal_FCUL/*_AH.TXT) enthalten den jahreszeitlichen
+quellen/water_levels/France_SHOM/shom_raw/) und die FCUL-Stundentafeln
+(quellen/water_levels/Portugal_FCUL/*_AH.TXT) enthalten den jahreszeitlichen
 Wasserstand (Monatsmittel 7-17 cm Spanne). Die urspruenglichen Fits
 (py/scrape_shom_*.py, py/parse_fcul_portugal.py) liessen UTide die
 Partialtiden waehlen; bei knapp einem Jahr faellt SA unter die
@@ -39,8 +39,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import MERIDIAN, ROOT                             # noqa: E402
 
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt')
-SHOM = os.path.join(ROOT, 'water_levels/France_SHOM/shom_raw')
-FCUL = os.path.join(ROOT, 'water_levels/Portugal_FCUL')
+SHOM = os.path.join(ROOT, 'quellen/water_levels/France_SHOM/shom_raw')
+FCUL = os.path.join(ROOT, 'quellen/water_levels/Portugal_FCUL')
 FCUL_DATEI = {'Aveiro': 'AveiroFCUL_AH.TXT', 'FigueiraDaFoz': 'FigueiraFCUL_AH.TXT',
               'Sesimbra': 'Sesimbra_AH.TXT', 'FaroOlhao': 'FaroFCUL_AH.TXT',
               'Setubal': 'SetubalFCUL_AH.TXT', 'VilaRealStAntonio': 'VilaRealFCUL_AH.TXT'}

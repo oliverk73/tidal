@@ -14,8 +14,8 @@ from datetime import datetime, timedelta
 import glob
 import re
 
-INPUT_DIR = Path("/home/oliver/water_levels/Germany/HH")
-OUTPUT_DIR = Path("/home/oliver/water_levels/Germany/HH/npz")
+INPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/Germany/HH")
+OUTPUT_DIR = Path("/home/oliver/weather/quellen/water_levels/Germany/HH/npz")
 USE_LAST_N_YEARS = 19
 RESAMPLE_MINUTES = 10
 

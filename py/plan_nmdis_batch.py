@@ -12,7 +12,7 @@ Prioritaeten:
   P3 = vorhanden, aber alte Quelle (Classic 1997/2004, TICON4) -> Upgrade
   P4 = vorhanden mit guter Quelle (UTide obs/tt) oder bereits NMDIS
 
-Output: water_levels/CN_nmdis/batch_plan.json + Konsole.
+Output: quellen/tide_tables/CN_nmdis/batch_plan.json + Konsole.
 """
 import glob
 import json
@@ -20,8 +20,8 @@ import math
 import re
 from pathlib import Path
 
-SITES = Path('/home/oliver/water_levels/CN_nmdis/sites_china.json')
-PLAN = Path('/home/oliver/water_levels/CN_nmdis/batch_plan.json')
+SITES = Path('/home/oliver/weather/quellen/tide_tables/CN_nmdis/sites_china.json')
+PLAN = Path('/home/oliver/weather/quellen/tide_tables/CN_nmdis/batch_plan.json')
 
 # Hafen/Station (enname-Substring, UPPER) -> (Stadt, Mio Einwohner urban)
 CITY = {

@@ -10,7 +10,7 @@ import time
 import requests
 from datetime import datetime, timedelta
 
-OUTPUT_DIR = "/home/oliver/water_levels/Portugal_IOC"
+OUTPUT_DIR = "/home/oliver/weather/quellen/water_levels/Portugal_IOC"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Station definitions: (code, name, lat, lon, start_date, end_date)

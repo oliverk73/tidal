@@ -27,7 +27,7 @@ sys.path.insert(0, '/home/oliver/batch')
 from generate_germany_harmonics_175 import CONSTITUENTS_175, find_xtide_match
 from batch_utide_uk_tidetimes import cosine_interpolate, CONSTIT_67
 
-EVENTS = Path('/home/oliver/water_levels/RU_magadan/gertnera_events_utc.json')
+EVENTS = Path('/home/oliver/weather/quellen/water_levels/RU_magadan/gertnera_events_utc.json')
 HARM = Path('/home/oliver/harmonics/utide/harmonics_utide_tidetables.txt')
 SOURCE = 'Kolymskoe UGMS tide tables (via rybalka-magadan.ru) with UTide'
 MERIDIAN = '+00:00 :Asia/Magadan'

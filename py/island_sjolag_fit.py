@@ -30,7 +30,7 @@ import scheitelfit as SF                                            # noqa: E402
 import xtide_modell as X                                            # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(ROOT, 'tide_tables/iceland_sjolag')
+ORDNER = os.path.join(ROOT, 'quellen/tide_tables/iceland_sjolag')
 KOPF = X.kopf_lesen(SF.KOPFQUELLE)
 SATZ = ['M2', 'S2', 'N2', 'K1', 'O1', 'K2', 'Q1', 'L2', 'NU2', 'M4', 'MS4', 'MN4', 'M6', '2MS6', 'MK3',
         '2MN6', 'MSN6', 'M8', '2MK3', 'M3']

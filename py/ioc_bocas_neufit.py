@@ -20,7 +20,7 @@ import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ioc_russland_fit as R                                       # noqa: E402
 
-ROH = os.path.join(R.ROOT, 'water_levels/Panama_IOC/bdto_ioc.csv')
+ROH = os.path.join(R.ROOT, 'quellen/water_levels/Panama_IOC/bdto_ioc.csv')
 NAME = 'Bocas del Toro (STRI), Panama'
 
 

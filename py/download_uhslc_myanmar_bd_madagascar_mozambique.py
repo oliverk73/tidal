@@ -9,7 +9,7 @@ import time
 import requests
 import pandas as pd
 
-OUTPUT_DIR = '/home/oliver/water_levels/IndianOcean_UHSLC_BD_MM_MG_MZ'
+OUTPUT_DIR = '/home/oliver/weather/quellen/water_levels/IndianOcean_UHSLC_BD_MM_MG_MZ'
 ERDDAP_BASE = 'https://uhslc.soest.hawaii.edu/erddap/tabledap'
 
 STATIONS = [

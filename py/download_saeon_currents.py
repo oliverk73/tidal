@@ -5,7 +5,7 @@ Records curated from the SAEON catalogue (catalogue.saeon.ac.za) that host
 hourly-sampled ADCP mooring currents on the public Nextcloud
 (repository.ocean.gov.za, no login).
 
-Output: currents/South_Africa_SAEON/raw/<doi_stub>.zip
+Output: quellen/tidal_streams/South_Africa_SAEON/raw/<doi_stub>.zip
 """
 import argparse
 import sys
@@ -13,7 +13,7 @@ import urllib.request
 from pathlib import Path
 
 HOME = Path.home()
-RAW_DIR = HOME / 'currents' / 'South_Africa_SAEON' / 'raw'
+RAW_DIR = HOME / 'quellen/tidal_streams/South_Africa_SAEON' / 'raw'
 
 # (doi_stub, nextcloud share id)
 RECORDS = [

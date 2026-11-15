@@ -4,7 +4,7 @@
 import ddlpy, datetime, json, os, sys, urllib.request
 import pandas as pd
 
-CD = '/home/oliver/currents/Netherlands'
+CD = '/home/oliver/weather/quellen/tidal_streams/Netherlands'
 BASE = 'https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenAantalWaarnemingen'
 
 GAPS = ['maasmond.stroommeetpaal', 'ameland.nes', 'borndiep', 'egmondlander',

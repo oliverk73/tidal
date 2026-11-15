@@ -7,7 +7,7 @@ Saint Leonard, Caudebec-en-Caux, Duclair und Rouen (Ajax /fr/stratis-tides/month
 Ortszeit, die Zelle nennt UT+1 bzw. UT+2; Hoehen in CMH (Cote marine du Havre, 4.38 m unter NGF), also das
 Pegelnull der HAROPA-Pegel bei HydroPortail.
 
-Usage: python3 py/haropa_seine_tafeln.py  -> tide_tables/france/haropa_rouen/haropa_hwlw.json  {Ort: [[iso_utc, m], ...]}
+Usage: python3 py/haropa_seine_tafeln.py  -> quellen/tide_tables/france/haropa_rouen/haropa_hwlw.json  {Ort: [[iso_utc, m], ...]}
 """
 import datetime as dt
 import glob
@@ -17,7 +17,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(ROOT, 'tide_tables/france/haropa_rouen')
+ORDNER = os.path.join(ROOT, 'quellen/tide_tables/france/haropa_rouen')
 ZELLE = re.compile(r'<t([dh])([^>]*)>(.*?)</t[dh]>', re.S)
 
 

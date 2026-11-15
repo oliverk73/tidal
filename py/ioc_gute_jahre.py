@@ -20,7 +20,7 @@ import xtide_modell as X                                            # noqa: E402
 
 P = 'harmonics/utide/harmonics_utide_observations.txt'
 # Bocas del Toro nicht: der Bestandssatz passt zu den robusten Jahreswerten, die Rohreihe hat Spruenge (Rest 0,85 m)
-FAELLE = [('water_levels/Colombia_IOC/buve2_ioc.csv', 'Buenaventura, Colombia', (2021, 2022, 2024))]
+FAELLE = [('quellen/water_levels/Colombia_IOC/buve2_ioc.csv', 'Buenaventura, Colombia', (2021, 2022, 2024))]
 
 
 def main():

@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """BSH-Gezeitenstromatlas (Open Data, DL-DE BY 2.0) -> Stromsaetze (Oliver 13.11.2026).
 
-Daten: currents/BSH_gezeitenstrom/{kueste,nordsee}/Gezeitenstrom_*_<stunde>_Std.txt, je Datei eine Stunde relativ zu
+Daten: quellen/tidal_streams/BSH_gezeitenstrom/{kueste,nordsee}/Gezeitenstrom_*_<stunde>_Std.txt, je Datei eine Stunde relativ zu
 HW Helgoland (-6..+6), Spalten Lon Lat | Mittel kn Ri | Spring kn Ri | Nipp kn Ri (Richtung wohin, rechtweisend).
-kueste/ ~900 m (Deutsche Bucht, westl. Ostsee), nordsee/ 3 sm. Eingelesen einmal nach currents/BSH_gezeitenstrom/atlas.npz.
+kueste/ ~900 m (Deutsche Bucht, westl. Ostsee), nordsee/ 3 sm. Eingelesen einmal nach quellen/tidal_streams/BSH_gezeitenstrom/atlas.npz.
 
 Reihe wie bei den Hafenatlanten (py/hafenatlas_stroeme.reihe_sn): Zeit seit HW Helgoland (unser Satz), Spring- und
 Nippbild nach dem Tidenhub interpoliert, Jahr 2026, UTide.
@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import hafenatlas_stroeme as A                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-D = os.path.join(ROOT, 'currents/BSH_gezeitenstrom')
+D = os.path.join(ROOT, 'quellen/tidal_streams/BSH_gezeitenstrom')
 NPZ = os.path.join(D, 'atlas.npz')
 HAFEN = ('Helgoland (Binnenhafen), Germany', os.path.join(ROOT, 'harmonics/utide/harmonics_utide_observations.txt'))
 STUNDEN = list(range(-6, 7))

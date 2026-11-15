@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Liest die Stundentafeln aus den taeglichen Pushidrosal-Lageberichten.
 
-tide_tables/indonesia/pushidrosal2023/*.pdf sind keine Jahrbuchseiten, sondern
+quellen/tide_tables/indonesia/pushidrosal2023/*.pdf sind keine Jahrbuchseiten, sondern
 die taeglichen Berichte "Analisa Cuaca di Perairan Indonesia dan Prediksi
 Pasut di Fasilitas Labuh TNI AL" (ab Mai 2024, geladen mit py/pushidrosal_laden.py). Jeder enthaelt fuer 41
 Marinehaefen die komplette Monatstafel: je Tag 24 Stundenwerte in Metern mit
@@ -18,7 +18,7 @@ Eine Tagzeile zaehlt nur mit genau 24 Werten und gleicher Tagesnummer links
 und rechts. Derselbe Tag steht in bis zu 31 Berichten; weichen zwei Fassungen
 voneinander ab, wird das gezaehlt und die haeufigste genommen.
 
-Ergebnis: tide_tables/indonesia/pushidrosal_berichte_2026.json
+Ergebnis: quellen/tide_tables/indonesia/pushidrosal_berichte_2026.json
   {station: {"tz": 7, "lat": .., "lon": .., "tage": {"2026-05-01": [24 Werte]}},
    ...}  -- Spalte k (1..24) ist die Stunde k Ortszeit.
 
@@ -36,8 +36,8 @@ import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(ROOT, 'tide_tables/indonesia/pushidrosal2023')
-AUS = os.path.join(ROOT, 'tide_tables/indonesia/pushidrosal_berichte_2026.json')
+ORDNER = os.path.join(ROOT, 'quellen/tide_tables/indonesia/pushidrosal2023')
+AUS = os.path.join(ROOT, 'quellen/tide_tables/indonesia/pushidrosal_berichte_2026.json')
 
 MONATE = {'JANUARI': 1, 'FEBRUARI': 2, 'PEBRUARI': 2, 'MARET': 3, 'APRIL': 4, 'MEI': 5,
           'JUNI': 6, 'JULI': 7, 'AGUSTUS': 8, 'SEPTEMBER': 9, 'OKTOBER': 10,

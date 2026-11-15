@@ -4,7 +4,7 @@ UTide-obs corpus, generate XTide-format station blocks, and append them
 to harmonics_utide_observations.txt.
 
 Targets: Bremervörde UW (Oste), Ritterhude (Hamme), Wasserhorst (Lesum),
-Wehr Geesthacht UP (Elbe). All four have ZIPs in water_levels/Germany/
+Wehr Geesthacht UP (Elbe). All four have ZIPs in quellen/water_levels/Germany/
 but were not part of the original 99-station Pegelonline-UTide pass.
 
 Reuses parse_json_water_levels / harmonic_analysis_utide /
@@ -27,7 +27,7 @@ from generate_germany_harmonics_175 import (   # noqa: E402
     format_station_block,
 )
 
-WATER_LEVELS = Path("/home/oliver/water_levels/Germany")
+WATER_LEVELS = Path("/home/oliver/weather/quellen/water_levels/Germany")
 UTIDE_OBS    = Path("/home/oliver/harmonics/utide/harmonics_utide_observations.txt")
 
 # (zip-stem prefix, station-name-without-country, lat, lon, water body)

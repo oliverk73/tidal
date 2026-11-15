@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Messsatz aus dem Thai-Marine-Pegelnetz anlegen (Oliver 11.11.2026: Phraek Mueang).
 
-Daten: water_levels/Thailand_RTN/<station>_<sensor>.json (py/download_rtn_thailand.py, 6 Stichprobenwochen 15 min,
+Daten: quellen/water_levels/Thailand_RTN/<station>_<sensor>.json (py/download_rtn_thailand.py, 6 Stichprobenwochen 15 min,
 UTC+7, Ausreisser per gleitendem Median wie in py/rtn_thailand_pruefen.py). Fit mit 11 Haupttiden (mehr laufen auf
 den luckenhaften Wochen aus dem Ruder: Kreuzprobe 20-160 cm). Kreuzprobe Phraek Mueang: 10,6 cm gegen 22,8 cm fuer
 den naechsten Satz (Pak Nam Pak Phanang, 39 km). Pegelnull willkuerlich -> Z0 = -Minimum der 19-Jahres-Kurve.
@@ -35,7 +35,7 @@ def main(argv):
     tg = np.arange(dt.datetime(2008, 1, 1).timestamp(), dt.datetime(2027, 1, 1).timestamp(), 3600.0)
     neu = []
     for datei, name, prov, la, lo, kennung in SAETZE:
-        t, h, _s = P.messung(os.path.join(ROOT, 'water_levels/Thailand_RTN', datei))
+        t, h, _s = P.messung(os.path.join(ROOT, 'quellen/water_levels/Thailand_RTN', datei))
         s = pd.Series(h, index=pd.to_datetime(t, unit='s', utc=True))
         _s, _t, z0, w, hh, n = Q.fit(s, NUTZ, kopf, speeds, arg, fak)
         rms = float(np.sqrt(np.mean(P.wochenmittel_ab(_t, _s.values - hh) ** 2)))

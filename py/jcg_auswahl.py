@@ -3,11 +3,11 @@ import json,glob,math,sys
 sys.path.insert(0,'py')
 from health_check import load_records
 import xtide_modell as X
-P='currents/japan_jcg/'
+P='quellen/tidal_streams/japan_jcg/'
 FEIN={'A1':0,'K1':0}; FEIN.update({g:1 for g in ['05','06','07','08','09','10','17','19']})
 R=float(sys.argv[1]) if len(sys.argv)>1 else 5
 fits=[]
-for f in sorted(glob.glob('currents/japan_jcg/reihen/*_fit.json')): fits+=json.load(open(f))
+for f in sorted(glob.glob('quellen/tidal_streams/japan_jcg/reihen/*_fit.json')): fits+=json.load(open(f))
 km=lambda a,b: 6371*math.hypot(math.radians(a['lat']-b['lat']), math.radians(a['lon']-b['lon'])*math.cos(math.radians(a['lat'])))
 def gleich(a,b):
     ma,mb=a['konst'].get('M2',[0,0]),b['konst'].get('M2',[0,0])

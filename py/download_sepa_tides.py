@@ -11,7 +11,7 @@ API:  getTimeseriesValues&ts_id=<id>&from=<date>&to=<date>&format=json
       lokales Pegeldatum (Z0 spaeter relabeln). Quality 100/120 = ok.
 
 Pro Station per Jahr gechunkt (gegen Timeouts/Groesse), akkumuliert in
-water_levels/sepa/ts<id>.json  {iso: value}.
+quellen/water_levels/sepa/ts<id>.json  {iso: value}.
 
 Aufruf:  python3 py/download_sepa_tides.py [--years N] [ts_id ...]
 """
@@ -20,7 +20,7 @@ import sys, json, urllib.request
 from pathlib import Path
 from datetime import datetime
 
-SEPA_DIR = Path('/home/oliver/water_levels/sepa')
+SEPA_DIR = Path('/home/oliver/weather/quellen/water_levels/sepa')
 STATIONS = Path('/home/oliver/harmonics/help/sepa_tidal_stations.json')
 API = ('https://timeseries.sepa.org.uk/KiWIS/KiWIS?service=kisters&type=queryServices'
        '&request=getTimeseriesValues&datasource=0&format=json'

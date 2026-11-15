@@ -309,7 +309,7 @@ def read_header_from_template(template_path):
 
 
 def main():
-    ioc_dir = Path('/home/oliver/water_levels/Nicaragua_IOC')
+    ioc_dir = Path('/home/oliver/weather/quellen/water_levels/Nicaragua_IOC')
     template_path = Path('/home/oliver/harmonics/utide/harmonics_utide_canada_all.txt')
     output_path = Path('/home/oliver/harmonics/utide/harmonics_utide_nicaragua.txt')
 

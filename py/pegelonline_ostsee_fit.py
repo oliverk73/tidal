@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Messfits der deutschen Ostseepegel aus PEGELONLINE-Minutenreihen (Oliver lud sie am 28.10.2026 nach water_levels/Germany/Neu).
+"""Messfits der deutschen Ostseepegel aus PEGELONLINE-Minutenreihen (Oliver lud sie am 28.10.2026 nach quellen/water_levels/Germany/Neu).
 
 Anlass 28.10.2026: Die TICON-Saetze aus GESLA-4 WSV/BfG (Meridian +01:00) liegen gegen die CMEMS-Stundenreihen am selben Pegel
 krumm daneben: -20..-33 min (Flensburg, Langballigau, Kappeln, Eckernfoerde, Kiel-Holtenau, Marienleuchte, Neustadt,
@@ -16,7 +16,7 @@ Wismar, Rostock, Schleswig, Luebeck (CMEMS, nach Meridian-Berichtigung), Greifsw
 Bodden/Haff-Pegel ohne Satz (Althagen, Anklam, Barth, Karnin, Ueckermuende: M2 < 0.5 cm) nicht eingetragen.
 
 Usage: venv/bin/python py/pegelonline_ostsee_fit.py [--stunden] [--schreiben NAME ...]
-  --stunden   Minutenreihen -> water_levels/Germany/Neu/stunden/<datei>.csv (einmalig, dauert)
+  --stunden   Minutenreihen -> quellen/water_levels/Germany/Neu/stunden/<datei>.csv (einmalig, dauert)
   --nur a,b   nur diese Dateikurznamen (z.B. stralsund,greifswaldoie)
   --schreiben schreibt die genannten Bestandsnamen-Ersatzsaetze (Liste ERSETZEN) nach harmonics_utide_observations.txt
 """
@@ -43,7 +43,7 @@ from sicher_schreiben import schreiben                             # noqa: E402
 
 ROOT = S.ROOT
 ZIEL = S.ZIEL
-NEU = os.path.join(ROOT, 'water_levels/Germany/Neu')
+NEU = os.path.join(ROOT, 'quellen/water_levels/Germany/Neu')
 STUNDEN = os.path.join(NEU, 'stunden')
 STATIONEN = os.path.join(NEU, 'stunden/stations.json')
 SP = dict(M2=28.984104, S2=30.0, K1=15.041069, O1=13.943035)

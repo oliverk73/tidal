@@ -26,7 +26,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 BASE = 'https://thuydacvietnam.org.vn/thuy-trieu'
-OUTDIR = Path('/home/oliver/water_levels/VN_vho')
+OUTDIR = Path('/home/oliver/weather/quellen/tide_tables/VN_vho')
 D0, D1 = date(2022, 1, 1), date(2026, 6, 30)
 CTX = ssl.create_default_context()
 CTX.check_hostname = False

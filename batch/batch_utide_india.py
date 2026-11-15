@@ -20,7 +20,7 @@ from generate_germany_harmonics_175 import (
     read_header_from_template,
 )
 
-DATA_DIR = Path("/home/oliver/water_levels/India_IOC")
+DATA_DIR = Path("/home/oliver/weather/quellen/water_levels/India_IOC")
 TEMPLATE_PATH = Path("/home/oliver/harmonics/classic/harmonics-dwf-20070318_mod.txt")
 OUTPUT_PATH = Path("/home/oliver/harmonics/utide/harmonics_utide_india.txt")
 CHECKPOINT_DIR = Path("/home/oliver/harmonics/utide/checkpoints_india")
