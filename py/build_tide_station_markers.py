@@ -187,6 +187,9 @@ SOURCE_GROUPS = OrderedDict([
     ('ATT auffällig (prüfen)', {'color': '#00897B', 'files': []}),
     # Oliver 1.11.2026: neue Saetze mit noch ungeprueften Namen/Positionen (harmonics/help/neu_pruefen_*.csv)
     ('Neu (prüfen)', {'color': '#D81B60', 'files': []}),
+    # Oliver 15.11.2026: Stromsaetze mit fernem Bezugsort, Vorschlag naechste Landmarke (py/strom_namen_vorort.py --fern,
+    # harmonics/help/strom_namen_vorschlag.csv) -- nichts umbenannt, Vorschlag steht hinter dem Namen
+    ('Stromname Vorschlag (prüfen)', {'color': '#F9A825', 'files': []}),
     # Oliver 3.11.2026: Dubletten-Probelauf (py/bestand_aufraeumen.py, harmonics/help/aufraeumen_probelauf.csv),
     # beide Saetze jedes Paars -- Namens-/Lagefragen und geschuetzte Faelle
     ('Dublette Namensfrage (prüfen)', {'color': '#1E88E5', 'files': []}),
@@ -244,6 +247,13 @@ if os.path.exists(_sp):
     STROM_PRUEFEN = {(os.path.splitext(os.path.basename(z['datei']))[0] + '.tcd', z['name'])
                      for z in _csv.DictReader(open(_sp, encoding='utf-8'))}
 
+STROMNAME_VORSCHLAG = {}
+_sv = os.path.join(os.path.dirname(_av), 'strom_namen_vorschlag.csv')
+if os.path.exists(_sv):
+    import csv as _csv
+    STROMNAME_VORSCHLAG = {(os.path.splitext(z['datei'])[0] + '.tcd', z['name']): z['vorschlag']
+                           for z in _csv.DictReader(open(_sv, encoding='utf-8'))}
+
 NEU_PRUEFEN = set()
 for _np in sorted(__import__('glob').glob(os.path.join(os.path.dirname(_av), 'neu_pruefen_*.csv'))):
     import csv as _csv
@@ -285,7 +295,9 @@ for name, lat, lon, source_file, is_current in all_stations:
     slug = to_slug(display_name_raw)
     needs_source = name in duplicate_names
     group_name = get_group_for_source(source_file)
-    if (source_file, name) in NEU_PRUEFEN:
+    if (source_file, name) in STROMNAME_VORSCHLAG:          # Vorrang: konkrete Namensfrage (auch bei neuen Saetzen)
+        group_name = 'Stromname Vorschlag (prüfen)'
+    elif (source_file, name) in NEU_PRUEFEN:
         group_name = 'Neu (prüfen)'
     elif (source_file, name) in AUTO_VERSCHOBEN:
         group_name = 'NOAA verschoben (prüfen)'
@@ -301,6 +313,8 @@ for name, lat, lon, source_file, is_current in all_stations:
         group_name = 'Dublette geschützt (prüfen)'
     group_idx = GROUP_INDEX[group_name]
     # Round coords to ~5m precision (5 decimals) — saves bytes vs full precision
+    if group_name == 'Stromname Vorschlag (prüfen)':     # Slug bleibt am echten Namen
+        display_name_raw = '%s  →  %s' % (display_name_raw, STROMNAME_VORSCHLAG[(source_file, name)].replace(' Current', ''))
     station_rows.append([
         display_name_raw,
         round(lat, 5),

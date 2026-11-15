@@ -13,6 +13,12 @@ Gewaesser bis 5 km; ohne Landmarke, aber Gewaesser bis 4 km -> "Gewaesser (Landm
 Nur Saetze aus der Liste --namen (automatisch erzeugte Namen; Olivers Namen bleiben).
 
 Usage: venv/bin/python py/strom_namen_vorort.py --namen LISTE [--schreiben]   -> harmonics/help/strom_namen_vorort.csv
+
+Fernregel (Oliver 15.11.2026, Storm Islands statt "Fox Islands (12 km W)", Dillon Point statt "Port Hardy (10 km ENE)"):
+alle Stromsaetze "Ort (N km R ...)" mit N >= 3: die naechste Landmarke (Kap/Spitze/Leuchtturm/Felsen/Insel/Engstelle) gewinnt,
+wenn sie hoechstens halb so weit weg ist wie der Bezugsort und hoechstens 10 km
+(Eichung: Dillon Point 3,9 statt 10, Storm Islands 5,6 statt 12, Stafford Point 8 statt 22 km). Nur Vorschlaege, nichts umbenannt.
+      venv/bin/python py/strom_namen_vorort.py --fern   -> harmonics/help/strom_namen_vorschlag.csv (Kartengruppe)
 """
 import csv
 import json
@@ -91,6 +97,55 @@ def vorschlag(la, lo, L):
     return None
 
 
+FERN_MAX_KM, FERN_ANTEIL = 10.0, 0.5   # geeicht an Olivers Handnamen: 3,9/10, 5,6/12, 8/22 km
+ENG = {'NRWS', 'PASS', 'CHN', 'CHNM'}
+FERN_MUSTER = re.compile(r'^(.+?) \((\d+) km ([NSEW]{1,3})((?:, [^)]*)?)\), (.*) Current$')
+
+
+def fern_vorschlag(la, lo, L, name):
+    """-> (Vorschlag, Landmarke, km) oder None."""
+    m = FERN_MUSTER.match(name)
+    if not m or int(m.group(2)) < 3:
+        return None
+    ref, dref, rest, tail = m.group(1), int(m.group(2)), m.group(4), m.group(5)
+    nah = sorted((km(la, lo, a, b), n, c, a, b) for n, a, b, c, _t in L if abs(a - la) < 0.1 and abs(b - lo) < 0.2)
+    grenze = min(FERN_MAX_KM, FERN_ANTEIL * dref)
+    lm = [x for x in nah if x[2] in PUNKT and x[0] <= grenze and not (worte(x[1]) & worte(ref))]   # Stafford Point statt North Passage (Oliver)
+    if not lm:
+        return None
+    lm.sort(key=lambda x: (round(x[0] * 2) / 2, PUNKT.get(x[2], 8)))   # Gleichstand bis 0,5 km: Kap/Spitze vor Inselchen (Stafford Point)
+    d, n, c, a, b = lm[0]
+    if c == 'LTHSE':
+        n = re.sub(r'\s+(Lighthouse|Light Station|Light)$', '', n)
+    teile = [] if d <= 1.0 or c in ENG else ['%d km %s' % (max(1, round(d)), richtung(la, lo, a, b))]
+    teile += [t.strip() for t in rest.split(',') if t.strip()]
+    return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(teile)) if teile else '', tail), n, d
+
+
+def fern(argv):
+    import health_check as H
+    L = json.load(open(LM, encoding='utf-8'))
+    R = [r for r in H.load_records() if r['current'] and r['lat'] is not None]
+    alle = {r['name'] for r in R}
+    zeilen = []
+    for r in R:
+        v = fern_vorschlag(r['lat'], r['lon'], L, r['name'])
+        if not v or v[0] == r['name']:
+            continue
+        neu = v[0] if v[0] not in alle else v[0].replace(' Current', ' (2) Current')
+        zeilen.append(dict(datei=os.path.basename(r['file']), name=r['name'], vorschlag=neu, landmarke=v[1], lm_km=round(v[2], 1),
+                           ref_km=FERN_MUSTER.match(r['name']).group(2), lat=r['lat'], lon=r['lon']))
+    zeilen.sort(key=lambda z: (z['name'].split(', ')[-1], z['name']))
+    aus = os.path.join(ROOT, 'harmonics/help/strom_namen_vorschlag.csv')
+    with open(aus, 'w', newline='', encoding='utf-8') as fh:
+        wr = csv.DictWriter(fh, fieldnames=['datei', 'name', 'vorschlag', 'landmarke', 'lm_km', 'ref_km', 'lat', 'lon'])
+        wr.writeheader()
+        wr.writerows(zeilen)
+    for z in zeilen:
+        print('%-60s -> %s' % (z['name'][:60], z['vorschlag']))
+    print(len(zeilen), 'Vorschlaege ->', os.path.relpath(aus, ROOT))
+
+
 HAND = {'Pedder Bay (4 km SSE), British Columbia, Canada Current': 'Race Rocks, British Columbia, Canada Current',
         'Gordon Head (12 km ENE), British Columbia, Canada Current': 'Lime Kiln Point (San Juan Island), Washington Current'}
 
@@ -129,4 +184,7 @@ def main(argv):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    if '--fern' in sys.argv:
+        fern(sys.argv[1:])
+    else:
+        main(sys.argv[1:])
