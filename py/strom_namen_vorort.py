@@ -86,7 +86,8 @@ def vorschlag(la, lo, L):
         # Inselkontext aus GeoNames unzuverlaessig (Inselmittelpunkte: 'Lime Kiln Point (Low Island)') -> nur Gewaesser
         if ww:
             ctx.append(ww[0][1])
-        return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(ctx)) if ctx else '', tail)
+        n = latin1(n)
+    return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(ctx)) if ctx else '', tail)
     # 3. benanntes Gewaesser bis 4 km: 'Juan de Fuca Strait (Sheringham Point 11 km SSW)'
     ww = [x for x in nah if x[2] in WASSER and x[0] <= 4]
     if ww:
@@ -99,8 +100,15 @@ def vorschlag(la, lo, L):
 
 FERN_MAX_KM, FERN_ANTEIL = 10.0, 0.5   # geeicht an Olivers Handnamen: 3,9/10, 5,6/12, 8/22 km
 ENG = {'NRWS', 'PASS', 'CHN', 'CHNM', 'STRT'}
+ZU_GROSS = {'British Isles'}   # Inselgruppen-Mittelpunkte ohne Ortsbezug
 ENG_IN_KM = 3.0   # GeoNames-Punkt einer Passage = Mitte; naeher als 3 km heisst: Satz liegt darin
 FERN_MUSTER = re.compile(r'^(.+?) \((\d+) km ([NSEW]{1,3})((?:, [^)]*)?)\), (.*) Current$')
+
+
+def latin1(t):
+    """Harmonics-Dateien sind Latin-1: nur nicht darstellbare Zeichen entakzentuieren (Pōhakuloa -> Pohakuloa)."""
+    import unicodedata
+    return ''.join(ch if ch.encode('latin-1', 'ignore') else unicodedata.normalize('NFKD', ch).encode('latin-1', 'ignore').decode('latin-1') for ch in t)
 
 
 def fern_vorschlag(la, lo, L, name):
@@ -111,7 +119,7 @@ def fern_vorschlag(la, lo, L, name):
     ref, dref, rest, tail = m.group(1), int(m.group(2)), m.group(4), m.group(5)
     nah = sorted((km(la, lo, a, b), n, c, a, b) for n, a, b, c, _t in L if abs(a - la) < 0.1 and abs(b - lo) < 0.2)
     grenze = min(FERN_MAX_KM, FERN_ANTEIL * dref)
-    frei = [x for x in nah if x[0] <= grenze and not (worte(x[1]) & worte(ref))]
+    frei = [x for x in nah if x[0] <= grenze and not (worte(x[1]) & worte(ref)) and '(historical)' not in x[1] and x[1] not in ZU_GROSS]
     eng = [x for x in frei if x[2] in ENG]
     lm = [x for x in frei if x[2] in PUNKT]
     lm.sort(key=lambda x: (round(x[0] * 2) / 2, PUNKT.get(x[2], 8)))   # Gleichstand bis 0,5 km: Kap/Spitze vor Inselchen (Stafford Point)
@@ -125,6 +133,7 @@ def fern_vorschlag(la, lo, L, name):
         n = re.sub(r'\s+(Lighthouse|Light Station|Light)$', '', n)
     teile = [] if d <= 1.0 or c in ENG else ['%d km %s' % (max(1, round(d)), richtung(la, lo, a, b))]
     teile += [t.strip() for t in rest.split(',') if t.strip()] + kontext
+    n = latin1(n)
     return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(teile)) if teile else '', tail), n, d
 
 
@@ -154,6 +163,46 @@ def fern(argv):
 
 HAND = {'Pedder Bay (4 km SSE), British Columbia, Canada Current': 'Race Rocks, British Columbia, Canada Current',
         'Gordon Head (12 km ENE), British Columbia, Canada Current': 'Lime Kiln Point (San Juan Island), Washington Current'}
+
+
+def landmarken(argv):
+    """Landmarken weltweit um alle Stromsaetze aus dem lokalen GeoNames-Dump (15.11.2026) -> LM (ergaenzt, bestehende bleiben)."""
+    import health_check as H
+    G = os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames')
+    codes = set(PUNKT) | ENG | {'INLT', 'SD', 'HBR', 'BAY', 'FJD'}
+    zellen = set()
+    for r in H.load_records():
+        if r['current'] and r['lat'] is not None:
+            for di in (-1, 0, 1):
+                for dj in (-1, 0, 1):
+                    zellen.add((int(math.floor(r['lat'] * 10)) + di, int(math.floor(r['lon'] * 10)) + dj))
+    adm = {}
+    for z in open(os.path.join(G, 'admin1CodesASCII.txt'), encoding='utf-8'):
+        t = z.rstrip('\n').split('\t')
+        adm[t[0]] = t[1]
+    land = {}
+    for z in open(os.path.join(G, 'countryInfo.txt'), encoding='utf-8'):
+        if not z.startswith('#'):
+            t = z.split('\t')
+            land[t[0]] = t[4]
+    L = json.load(open(LM, encoding='utf-8'))
+    schon = {(n, round(a, 3), round(b, 3)) for n, a, b, _c, _t in L}
+    neu = 0
+    with open(os.path.join(G, 'allCountries.txt'), encoding='utf-8') as fh:
+        for z in fh:
+            t = z.split('\t', 12)
+            if t[7] not in codes:
+                continue
+            a, b = float(t[4]), float(t[5])
+            if (int(math.floor(a * 10)), int(math.floor(b * 10))) not in zellen or (t[1], round(a, 3), round(b, 3)) in schon:
+                continue
+            tail = ', '.join(x for x in (adm.get('%s.%s' % (t[8], t[10]), ''), land.get(t[8], t[8])) if x)
+            L.append([t[1], a, b, t[7], tail])
+            schon.add((t[1], round(a, 3), round(b, 3)))
+            neu += 1
+    L.sort()
+    json.dump(L, open(LM, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    print('%d neue Landmarken, %d gesamt' % (neu, len(L)))
 
 
 def main(argv):
@@ -190,7 +239,9 @@ def main(argv):
 
 
 if __name__ == '__main__':
-    if '--fern' in sys.argv:
+    if '--landmarken' in sys.argv:
+        landmarken(sys.argv[1:])
+    elif '--fern' in sys.argv:
         fern(sys.argv[1:])
     else:
         main(sys.argv[1:])
