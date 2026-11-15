@@ -98,7 +98,8 @@ def vorschlag(la, lo, L):
 
 
 FERN_MAX_KM, FERN_ANTEIL = 10.0, 0.5   # geeicht an Olivers Handnamen: 3,9/10, 5,6/12, 8/22 km
-ENG = {'NRWS', 'PASS', 'CHN', 'CHNM'}
+ENG = {'NRWS', 'PASS', 'CHN', 'CHNM', 'STRT'}
+ENG_IN_KM = 3.0   # GeoNames-Punkt einer Passage = Mitte; naeher als 3 km heisst: Satz liegt darin
 FERN_MUSTER = re.compile(r'^(.+?) \((\d+) km ([NSEW]{1,3})((?:, [^)]*)?)\), (.*) Current$')
 
 
@@ -110,15 +111,20 @@ def fern_vorschlag(la, lo, L, name):
     ref, dref, rest, tail = m.group(1), int(m.group(2)), m.group(4), m.group(5)
     nah = sorted((km(la, lo, a, b), n, c, a, b) for n, a, b, c, _t in L if abs(a - la) < 0.1 and abs(b - lo) < 0.2)
     grenze = min(FERN_MAX_KM, FERN_ANTEIL * dref)
-    lm = [x for x in nah if x[2] in PUNKT and x[0] <= grenze and not (worte(x[1]) & worte(ref))]   # Stafford Point statt North Passage (Oliver)
+    frei = [x for x in nah if x[0] <= grenze and not (worte(x[1]) & worte(ref))]
+    eng = [x for x in frei if x[2] in ENG]
+    lm = [x for x in frei if x[2] in PUNKT]
+    lm.sort(key=lambda x: (round(x[0] * 2) / 2, PUNKT.get(x[2], 8)))   # Gleichstand bis 0,5 km: Kap/Spitze vor Inselchen (Stafford Point)
+    if eng and eng[0][0] <= ENG_IN_KM:          # Satz liegt in der Passage/Meerenge -> sie ist der Name (Oliver 15.11.)
+        lm = eng[:1]
     if not lm:
         return None
-    lm.sort(key=lambda x: (round(x[0] * 2) / 2, PUNKT.get(x[2], 8)))   # Gleichstand bis 0,5 km: Kap/Spitze vor Inselchen (Stafford Point)
     d, n, c, a, b = lm[0]
+    kontext = [] if c in ENG or not eng or worte(eng[0][1]) & worte(rest) else [eng[0][1]]   # sonst Passage als Kontext
     if c == 'LTHSE':
         n = re.sub(r'\s+(Lighthouse|Light Station|Light)$', '', n)
     teile = [] if d <= 1.0 or c in ENG else ['%d km %s' % (max(1, round(d)), richtung(la, lo, a, b))]
-    teile += [t.strip() for t in rest.split(',') if t.strip()]
+    teile += [t.strip() for t in rest.split(',') if t.strip()] + kontext
     return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(teile)) if teile else '', tail), n, d
 
 
