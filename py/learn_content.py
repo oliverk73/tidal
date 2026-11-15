@@ -820,7 +820,67 @@ offsets. See
 <a href="/learn/strongest-currents/">strongest tidal currents</a> for
 record-holders.</p>
 """,
-        "related": ["strongest-currents", "why-currents-matter", "tidal-bore"],
+        "related": ["strongest-currents", "current-depth", "why-currents-matter"],
+    },
+    {
+        "slug": "current-depth",
+        "category": "currents",
+        "title": "Why does the tidal current depend on depth?",
+        "summary": "Station names such as \"depth 15 ft\", \"11 m deep\" or \"depth mean\" tell you where in the water column the prediction applies.",
+        "body": """
+<p>A tidal current does not flow at the same speed from the surface to
+the sea bed. Friction with the bottom slows the water close to it, so
+the speed increases from almost zero at the bed to its maximum near the
+surface. In a well-mixed channel the profile is roughly the same at
+every stage of the tide: the water half-way down still runs at about
+90&nbsp;% of the surface speed, and the last few metres above the bed
+lose most of it.</p>
+
+<h3>What the depth in a station name means</h3>
+<ul>
+  <li><strong>"depth 15 ft"</strong> or <strong>"11 m deep"</strong>:
+  the constants come from a current meter (usually an acoustic Doppler
+  profiler, ADCP) and were analysed for one layer at that depth below
+  the surface. Where several depths exist for the same place, the
+  shallowest one is closest to what a boat feels.</li>
+  <li><strong>"depth mean"</strong> or <strong>"depth-averaged"</strong>:
+  all layers of the profiler were averaged into one value, the mean
+  current from bed to surface.</li>
+  <li><strong>No depth in the name</strong>: most tidal-stream atlases,
+  nautical publications and all numerical tide models (TPXO, FES and
+  regional models) give the depth-averaged current as well.</li>
+</ul>
+
+<h3>How big is the difference?</h3>
+<p>In open, well-mixed water the surface current is typically
+<strong>10–20&nbsp;% stronger</strong> than the depth mean, and the
+times of slack water and peak flow differ by only a few minutes. A
+depth-averaged prediction is therefore a slightly conservative estimate
+for a vessel at the surface.</p>
+<p>Estuaries and fjords are different. Where fresh river water lies on
+top of denser sea water, the two layers can move almost independently:
+the surface ebb starts earlier and runs longer, while near the bottom
+the flood can begin before the surface has turned. Slack water can then
+come <strong>up to an hour apart</strong> at different depths, and the
+surface ebb can be much stronger than the mean.</p>
+
+<h3>Which depth matters for whom?</h3>
+<ul>
+  <li><strong>Small craft, kayaks, swimmers:</strong> the surface layer.
+  Add 10–20&nbsp;% to a depth-averaged figure.</li>
+  <li><strong>Large ships:</strong> a deep keel spans much of the water
+  column, so the depth mean is the better measure.</li>
+  <li><strong>Divers:</strong> the current near the bottom is weaker,
+  but slack water at depth is what decides a safe dive window, and in
+  layered water it may not coincide with surface slack.</li>
+</ul>
+
+<h3>What predictions do not contain</h3>
+<p>Wind drags the top metre or two of the water along at a few percent
+of the wind speed. This wind drift is not part of a tidal prediction
+and affects the surface far more than the depth mean.</p>
+""",
+        "related": ["tidal-currents", "strongest-currents", "prediction-limits"],
     },
     {
         "slug": "strongest-currents",

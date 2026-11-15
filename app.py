@@ -966,7 +966,7 @@ def _tidal_range_sentence(tide_rows, station_short, is_current):
         rng=rng_str, unit=unit_short)
 
 
-def _build_faq_items(tide_rows, station_short, country, water_body, lat, lon, datum, is_current):
+def _build_faq_items(tide_rows, station_short, country, water_body, lat, lon, datum, is_current, full_name=""):
     """Build 3-4 datadriven FAQ items per page (rendered visibly + as JSON-LD).
 
     For tide stations: today's HW/LW times, typical range, location, methodology.
@@ -1105,6 +1105,31 @@ def _build_faq_items(tide_rows, station_short, country, water_body, lat, lon, da
                 "q": f"What are the maximum current speeds at {station_short}?",
                 "a": (f"Over the next seven days at {station_short}: "
                       + " and ".join(peaks) + "."),
+            })
+        # Messtiefe (15.11.2026, Oliver): "depth mean" / "depth N ft" / "N m deep" im Namen erklaeren
+        fn = full_name or ""
+        m_ft = re.search(r"depth (\d+(?:\.\d+)?) ft", fn)
+        m_m = re.search(r"(\d+(?:\.\d+)?) m deep", fn)
+        if "depth mean" in fn or "depth-averaged" in fn:
+            a_tiefe = (f"The predictions for {station_short} describe the current averaged over the whole "
+                       "water column, from the sea bed to the surface. Near the surface the flow is usually "
+                       "10-20 % stronger, near the bottom weaker because of friction; the times of slack "
+                       "water and peak flow differ by only a few minutes in well-mixed water.")
+        elif m_ft or m_m:
+            tiefe = (f"{m_ft.group(1)} ft (about {float(m_ft.group(1)) * 0.3048:.0f} m)" if m_ft
+                     else f"{m_m.group(1)} m")
+            a_tiefe = (f"The predictions for {station_short} apply to a depth of {tiefe} below the surface, "
+                       "where the current was measured. The surface current is usually somewhat stronger, "
+                       "the current near the sea bed weaker. In estuaries with fresh water over salt water, "
+                       "slack water can come at different times at different depths.")
+        else:
+            a_tiefe = None
+        if a_tiefe:
+            items.append({
+                "q": f"At what depth does the current at {station_short} apply?",
+                "a": a_tiefe,
+                "link": "/learn/current-depth",
+                "link_text": "Why does the tidal current depend on depth?",
             })
 
     # Q3 (common): Location
@@ -1887,6 +1912,7 @@ def _generate_prediction(decoded_station, station_raw, source, svg_filename, htm
         lat, lon,
         _datum_value,
         is_current_station,
+        full_name=decoded_station,
     )
     hwnw = None
     if not is_current_station and TIDEN_RECHNUNG == "eigen":
