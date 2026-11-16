@@ -27,6 +27,9 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import osm_strom_landmarken as OS  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_observations.txt')
 LM = os.path.join(ROOT, 'quellen/tidal_streams/strom_landmarken_geonames.json')
@@ -118,6 +121,10 @@ def vorschlag(la, lo, L):
 
 FERN_MAX_KM, FERN_ANTEIL = 10.0, 0.5   # geeicht an Olivers Handnamen: 3,9/10, 5,6/12, 8/22 km
 ENG = {'NRWS', 'PASS', 'CHN', 'CHNM', 'STRT'}
+FERN_WEIT_REF = 15     # Bezugsort ab 15 km: Landmarke bis FERN_MAX_KM auch ueber dem halben Abstand (Llandudno 16 km / Constable Bank 8,1)
+OSM_RINNE_KM = 1.5     # Abstand zur OSM-Fahrwasserlinie: Satz liegt in der Rinne
+OSM_ENGE_MAX_KM = 40   # OSM-Meerenge nur als Name, wenn ihre Ausdehnung (bb-Diagonale) hoechstens 40 km ist (Pentland Firth ja, North Channel nein)
+RINNE_ORT_KM = 15      # Rinnenname + naher Bezugsort als Kontext (Oliver: Spaniergat (Norderney), Eitzenbalje (Neuwerk))
 ZU_GROSS = {'British Isles'}   # Inselgruppen-Mittelpunkte ohne Ortsbezug
 ENG_IN_KM = 3.0   # GeoNames-Punkt einer Passage = Mitte; naeher als 3 km heisst: Satz liegt darin
 FERN_MUSTER = re.compile(r'^(.+?) \((\d+) km ([NSEW]{1,3})((?:, [^)]*)?)\), (.*) Current$')
@@ -137,21 +144,49 @@ def fern_vorschlag(la, lo, L, name):
         return None
     ref, dref, rest, tail = m.group(1), int(m.group(2)), m.group(4), m.group(5)
     nah = sorted((km(la, lo, a, b), n, c, a, b) for n, a, b, c, _t in L if abs(a - la) < 0.1 and abs(b - lo) < 0.2)
-    grenze = min(FERN_MAX_KM, FERN_ANTEIL * dref)
+    grenze = FERN_MAX_KM if dref >= FERN_WEIT_REF else min(FERN_MAX_KM, FERN_ANTEIL * dref)
     frei = [x for x in nah if x[0] <= grenze and not (worte(x[1]) & worte(ref)) and '(historical)' not in x[1] and x[1] not in ZU_GROSS]
     eng = [x for x in frei if x[2] in ENG]
     lm = [x for x in frei if x[2] in PUNKT]
+    # OSM (16.11.): Abstand zu Fahrwasser-Linie / Windpark-Rand / Plattform statt zu einem GeoNames-Mittelpunkt
+    osm = []
+    for z in OS.nah(la, lo, grenze):
+        n0 = z[1].split(' / ')[0].strip()                      # 'Estrecho de Gibraltar / Détroit de Gibraltar / ...' -> Landessprache zuerst
+        if len(n0) < 3 or worte(n0) & worte(ref):              # 'Ra' (Abkuerzung)
+            continue
+        if z[2] == 'strait' and z[6] > OSM_ENGE_MAX_KM:        # North Channel, St George's Channel, Juan de Fuca: zu gross fuer einen Ortsnamen
+            continue
+        osm.append((z[0], n0) + tuple(z[2:]))
+    rinne = [z for z in osm if z[2] in ('fairway', 'strait') and (z[3] or z[0] <= OSM_RINNE_KM)]
+    park = [z for z in osm if z[2] == 'wind' and z[3]]
+    for z in osm:
+        if z[2] == 'wind' and not z[3]:
+            lm.append((z[0], OS.windpark_name(z[1]), 'OSMW', z[4], z[5]))
+        elif z[2] == 'platform':
+            lm.append((z[0], OS.plattform_name(z[1]), 'OSMP', z[4], z[5]))
     lm.sort(key=lambda x: (round(x[0] * 2) / 2, PUNKT.get(x[2], 8)))   # Gleichstand bis 0,5 km: Kap/Spitze vor Inselchen (Stafford Point)
-    if eng and eng[0][0] <= ENG_IN_KM:          # Satz liegt in der Passage/Meerenge -> sie ist der Name (Oliver 15.11.)
+    if rinne:                                   # Satz liegt auf/an einer OSM-Fahrwasserlinie: Piep statt Dwarsloch (Oliver 16.11.)
+        lm = [(0.0, rinne[0][1], 'OSMR', la, lo)]
+    elif park:                                  # Satz liegt im Windpark
+        lm = [(0.0, OS.windpark_name(park[0][1]), 'OSMW', la, lo)]
+    elif eng and eng[0][0] <= ENG_IN_KM:        # Satz liegt in der Passage/Meerenge -> sie ist der Name (Oliver 15.11.)
         lm = eng[:1]
     if not lm:
         return None
     d, n, c, a, b = lm[0]
-    kontext = [] if c in ENG or not eng or worte(eng[0][1]) & worte(rest) else [eng[0][1]]   # sonst Passage als Kontext
+    rinnen = ENG | {'OSMR'}
+    kontext = [] if c in rinnen or c == 'OSMW' and d == 0 or not eng or worte(eng[0][1]) & worte(rest) else [eng[0][1]]   # sonst Passage als Kontext
+    if c in rinnen and dref <= RINNE_ORT_KM and not worte(ref) & worte(rest):   # 'Spaniergat (Norderney)', 'Piep (Buesum)' wie Olivers Namen
+        kontext = [ref]
+    kontext = [k for k in kontext if not worte(k) <= worte(n)]     # 'Riffgat Wind Farm (Riffgat)' -> ohne Wiederholung
+    rest = ', '.join(t.strip() for t in rest.split(',') if t.strip() and not worte(t) <= worte(n))
     if c == 'LTHSE':
         n = re.sub(r'\s+(Lighthouse|Light Station|Light)$', '', n)
-    teile = [] if d <= 1.0 or c in ENG else ['%d km %s' % (max(1, round(d)), richtung(la, lo, a, b))]
-    teile += [t.strip() for t in rest.split(',') if t.strip()] + kontext
+    teile = [] if d <= 1.0 or c in rinnen else ['%d km %s' % (max(1, round(d)), richtung(la, lo, a, b))]
+    if c in rinnen:
+        teile += kontext + [t.strip() for t in rest.split(',') if t.strip()]
+    else:
+        teile += [t.strip() for t in rest.split(',') if t.strip()] + kontext
     n = latin1(n)
     return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(teile)) if teile else '', tail), n, d
 
@@ -223,7 +258,24 @@ def fern(argv):
         v = fern_vorschlag(r['lat'], r['lon'], L, r['name']) or ort_vorschlag(r['lat'], r['lon'], O, r['name'])
         if not v or v[0] == r['name']:
             continue
-        neu = v[0] if v[0] not in alle else v[0].replace(' Current', ' (2) Current')
+        neu = v[0]
+        if neu in alle:                                         # gleicher Name schon da (Bestand oder dieser Lauf): alten Bezug mitnehmen
+            m = FERN_MUSTER.match(r['name'])
+            ref = m.group(1) if m else ''
+            zusatz = '%s %s km %s' % (ref, m.group(2), m.group(3)) if m else ''
+            kopf, sep, innen = neu.partition(' (')
+            if sep and (innen.startswith(ref + ')') or innen.startswith(ref + ', ')):
+                neu = kopf + ' (' + zusatz + innen[len(ref):]
+            elif sep:
+                neu = kopf + ' (' + zusatz + ', ' + innen
+            else:
+                k, _s, t = neu.partition(', ')
+                neu = '%s (%s), %s' % (k, zusatz, t)
+        k = 2
+        while neu in alle:
+            neu = v[0].replace(' Current', ' (%d) Current' % k)
+            k += 1
+        alle.add(neu)
         neu = auf_tcd_laenge(neu)
         if neu is None:
             print('zu lang fuer libtcd, uebersprungen:', v[0])
