@@ -40,7 +40,11 @@ ERGEBNIS = os.path.join(ROOT, 'harmonics/help/khoa_so_fit.csv')
 
 
 # Positionsfehler der KHOA-Liste, an der Tide erkannt (Fit passt 1-4 % zu fernen Saetzen, 60 % zu den Nachbarn)
-POS_KORREKTUR = {'SO_1238': (34.68389, 126.06444)}   # 신안옥도: Laenge 127.064 statt 126.064 (Anjwado, Sinan)
+POS_KORREKTUR = {'SO_1238': (34.68389, 126.06444),   # 신안옥도: Laenge 127.064 statt 126.064 (Anjwado, Sinan)
+                 # 16.11. Gradfehler der KHOA-Liste, per FES-Tideprobe belegt (scratchpad korea_tideprobe.py):
+                 'SO_1244': (34.21000, 125.47222),   # 만재도 2020: Laenge 126.47 statt 125.47 (FES 38 % -> 2 %)
+                 'SO_0767': (36.25056, 126.53456),   # 2015년_무창포: Breite 35.25 statt 36.25 (Boryeong, FES 15 % -> 7 %)
+                 'SO_0983': (36.66944, 126.27056)}   # 2017년_몽산포: Breite 34.67 statt 36.67 (Taean, FES 45 % -> 2 %)
 
 
 def liste():
