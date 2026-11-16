@@ -318,16 +318,19 @@ def main(argv):
         if not e['pos'] and e['anker'] and e['nr'].lower() in HAND:
             e['pos'], e['methode'], e['treffer'] = HAND[e['nr'].lower()], 'hand', 'ungefaehr (Handposition)'
     json.dump(cache, open(CACHE, 'w'))
-    felder = ['nr', 'namen', 'bezugsort', 'methode', 'treffer', 'lat', 'lon', 'satz', 'satz_km', 'status']
+    # Spalten (Oliver 16.11.): ort_quelle/ort_gefunden = wie der BSH-Ort verortet wurde (Bestandsname, OSM-Ortsname, Hand);
+    # naechster_satz/_km = naechster Bestandssatz an dieser Position (leer, wenn er ort_gefunden selbst ist) -> status
+    felder = ['nr', 'namen', 'bezugsort', 'ort_quelle', 'ort_gefunden', 'lat', 'lon', 'naechster_satz', 'naechster_km', 'status']
     with open(AUS, 'w', newline='', encoding='utf-8') as fh:
         w = csv.DictWriter(fh, fieldnames=felder)
         w.writeheader()
         for e in I:
-            z = dict(nr=e['nr'], namen=' | '.join(e['namen']), bezugsort=e['bezug'], methode=e['methode'], treffer=e['treffer'],
-                     lat='', lon='', satz='', satz_km='', status='unbekannt')
+            z = dict(nr=e['nr'], namen=' | '.join(e['namen']), bezugsort=e['bezug'], ort_quelle=e['methode'], ort_gefunden=e['treffer'],
+                     lat='', lon='', naechster_satz='', naechster_km='', status='unbekannt')
             if e['pos']:
                 d, r = min(((km(e['pos'], (r['lat'], r['lon'])), r) for r in R), key=lambda x: x[0])
-                z.update(lat='%.4f' % e['pos'][0], lon='%.4f' % e['pos'][1], satz=r['name'], satz_km='%.1f' % d,
+                z.update(lat='%.4f' % e['pos'][0], lon='%.4f' % e['pos'][1], naechster_satz='' if r['name'] == e['treffer'] else r['name'],
+                         naechster_km='%.1f' % d,
                          status='gedeckt' if d <= 5 else ('nah' if d <= 15 else 'luecke'))
             e['status'] = z['status']
             w.writerow(z)
