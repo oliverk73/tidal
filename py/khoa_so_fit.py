@@ -13,7 +13,7 @@ Kurzreihen: K2/P1 koppelt danach py/pegel_kopplung_lauf.py.
 
 Usage: venv/bin/python py/khoa_so_fit.py --probe SO_0326        Fit + Vergleich mit den amtlichen Konstanten
        venv/bin/python py/khoa_so_fit.py --liste                 alle fitten -> harmonics/help/khoa_so_fit.csv
-       venv/bin/python py/khoa_so_fit.py --schreiben             Saetze mit aktion=neu eintragen
+       venv/bin/python py/khoa_so_fit.py --eintragen [--schreiben]  Saetze mit aktion=neu eintragen (+ neu_pruefen)
 """
 import csv
 import datetime as dt
