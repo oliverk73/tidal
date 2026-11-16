@@ -18,7 +18,7 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 45,Amarfjördur | Bíldudalur,0,saat,"Bíldudalur, Iceland",65.6833,-23.6000,,0.0,gedeckt
 47,Flateyri | Önundar Fjördur,0,saat,"Flateyri, Iceland",66.0333,-23.5167,,0.0,gedeckt
 50,Isa Fjardardjúp | Isafjördur | Skutuls Fjördur,0,name,"Ísafjörður, Iceland",66.0739,-23.1143,,0.0,gedeckt
-51,Alfta Fjördur | Isa Fjardardjúp | Sudavík,0,geo,"Súðavíkurhreppur, Vestfirðir, 420, Ísland",65.9036,-22.9956,"Alftafjordhur, Iceland",12.6,nah
+51,Alfta Fjördur | Isa Fjardardjúp | Sudavík,0,geo,"Súðavíkurhreppur, Vestfirðir, 420, Ísland",65.9036,-22.9956,"Álftafjörður, Iceland",12.6,nah
 58,Hólmavik | Húnaflói,0,saat,"Hólmavík, Iceland",65.7065,-21.6692,,0.0,gedeckt
 62,Saudárkrókur,0,name,"Sauðárkrókur, Iceland",65.7443,-19.6386,,0.0,gedeckt
 65,Siglufjördur,0,name,"Siglufjörður, Iceland",66.1532,-18.8986,,0.0,gedeckt
@@ -43,7 +43,7 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 115,Ny Ålesund | Kongs Fjord,0,region,"Ny-Ålesund, Norway",78.9285,11.9380,,0.0,gedeckt
 116,Is-Fjord | Longyearbyen,0,region,"Longyearbyen (Adventfjorden, Spitsbergen), Norway",78.2167,15.6333,,0.0,gedeckt
 118,Barentsburg | Grön Fjord | Is-Fjord,0,geo,"Баренцбург, Nordenskiöld Land, Svalbard, Norge",78.0654,14.2172,"Grønfjorden, Svalbard",0.8,gedeckt
-125,Franz – Joseph – Land | Kronprinz-Rudolf-Land | Russische Föderation | Teplitz-Bucht,0,geo,"Земля Франца Иосифа, Северо-Западный федеральный округ, 163100, Россия",80.6174,60.7077,"Bukhta Teplits (Franz Josef Land), Arkhangelsk Oblast, Russia",139.1,luecke
+125,Franz – Joseph – Land | Kronprinz-Rudolf-Land | Russische Föderation | Teplitz-Bucht,0,geo,"Земля Франца Иосифа, Северо-Западный федеральный округ, 163100, Россия",80.6174,60.7077,"Bukhta Tikhaya (Franz Josef Land), Arkhangelsk Oblast, Russia",146.8,luecke
 346,Kirkenes,0,saat,"Kirkenes, Norway",69.7302,30.0583,,0.0,gedeckt
 350,Vadsø,0,saat,"Vadsø, Norway",70.0716,29.7445,,0.0,gedeckt
 351,Vardø,0,saat,"Vardø, Norway",70.3750,31.1040,,0.0,gedeckt
@@ -58,9 +58,9 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 366,Havøysund,0,saat,"Havøysund, Norway",70.9942,24.6679,,0.0,gedeckt
 367,Finnes | Ingøy,0,saat,"Finnes (Ingøya), Norway",71.0817,24.0135,,0.0,gedeckt
 369,Hammerfest | Sørøysund,0,saat,"Hammerfest, Norway",70.6648,23.6787,,0.0,gedeckt
-370,Kvalsund,0,geo,"Kvalsund - Ráhkkerávju, Hammerfest, Finnmark, Norge",70.5028,23.9794,"Hammerfest, Norway",21.2,luecke
+370,Kvalsund,0,geo,"Kvalsund - Ráhkkerávju, Hammerfest, Finnmark, Norge",70.5028,23.9794,"Kvalsund, Norway",0.1,gedeckt
 371,Kårhamn | Sørøys,0,saat,"Kårhamn, Norway",70.5464,23.1583,,0.0,gedeckt
-372,Neverfjord,0,geo,"Neverfjord - Náivuotna, Hammerfest, Finnmark, Norge",70.4402,23.7850,"Komagfjord, Norway",24.2,luecke
+372,Neverfjord,0,geo,"Neverfjord - Náivuotna, Hammerfest, Finnmark, Norge",70.4402,23.7850,"Neverfjord, Norway",0.0,gedeckt
 373,Alta | Altafjord | Dønnesfjord,0,saat,"Bossekop (Alta), Norway",69.9630,23.2315,,0.0,gedeckt
 375,Søvar,0,unbekannt,,,,,,unbekannt
 377,Bergsfjord,0,saat,"Bergsfjord, Norway",70.2519,21.7845,,0.0,gedeckt
@@ -68,11 +68,11 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 379,Kvänangen Fjord | Skjervøy,0,saat,"Skjervøy, Norway",70.0351,20.9835,,0.0,gedeckt
 380,Torsvåg | Vannøy,0,saat,"Torsvåg, Norway",70.2430,19.5003,,0.0,gedeckt
 382,Lyngenfjord | Lyngseidet,0,saat,"Lyngseidet, Norway",69.5770,20.2253,,0.0,gedeckt
-383a,Dåfjord,0,geo,"Dåfjord, Karlsøy, Troms, 9130, Norge",69.9925,19.4048,"Finnkroken, Norway",17.7,luecke
+383a,Dåfjord,0,geo,"Dåfjord, Karlsøy, Troms, 9130, Norge",69.9925,19.4048,"Dåfjord, Norway",0.4,gedeckt
 384,Finnkroken | Grøtsund,0,saat,"Finnkroken, Norway",69.8341,19.4361,,0.0,gedeckt
 386,Tromsø,0,saat,"Tromsø, Norway",69.6461,18.9548,,0.0,gedeckt
 388,Rystraumen,0,name,"Rystraumenv(Skavberget), Norway",69.5604,18.7416,,0.0,gedeckt
-392,Finnsnes,0,geo,"Finnsnes, Senja, Troms, 9300, Norge",69.2296,17.9813,"Gibostad, Norway",14.4,nah
+392,Finnsnes,0,geo,"Finnsnes, Senja, Troms, 9300, Norge",69.2296,17.9813,"Finnsnes (Gisundet), Troms, Norway",0.5,gedeckt
 393,Gryllefjord,0,saat,"Gryllefjord, Norway",69.3635,17.0530,,0.0,gedeckt
 393a,Andenes,0,saat,"Andenes, Norway",69.3261,16.1348,,0.0,gedeckt
 394,Skrolsvik,0,name,"Skrollsvika, Norway",69.0650,16.8158,,0.0,gedeckt
@@ -97,7 +97,7 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 430,Rognan | Saltdalsfjord,0,saat,"Rognan, Norway",67.1038,15.4000,,0.0,gedeckt
 432,Støtt,0,saat,"Støtt, Norway",66.9262,13.4342,,0.0,gedeckt
 433,Glomfjord,0,saat,"Glomfjord, Norway",66.8107,13.9407,,0.0,gedeckt
-434,Myken,0,geo,"Myken, Rødøy, Nordland, 8181, Norge",66.7609,12.4786,"Træna, Norway",34.0,luecke
+434,Myken,0,geo,"Myken, Rødøy, Nordland, 8181, Norge",66.7609,12.4786,"Myken, Norway",0.1,gedeckt
 435,Tränen,0,hand,ungefaehr (Handposition),66.5000,12.1000,"Træna, Norway",0.6,gedeckt
 435a,Slenest,0,name,"Sleneset, Norway",66.3617,12.6117,,0.0,gedeckt
 436,Nesna,0,saat,"Nesna, Norway",66.2007,13.0110,,0.0,gedeckt
@@ -116,15 +116,15 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 446,Kongsmoen,0,saat,"Kongsmoen, Norway",64.8868,12.4375,,0.0,gedeckt
 447,Namsenfjord | Namsos,0,saat,"Namsos, Norway",64.4644,11.4908,,0.0,gedeckt
 448a,Halten,0,saat,"Halten, Trøndelag, Norway",64.1719,9.4082,,0.0,gedeckt
-451,Fröyo | Gjesingbogen | Sistranda,0,geo,"Sistranda, Frøya, Trøndelag, 7260, Norge",63.7302,8.8297,"Mausund (Måløya), Norway",17.5,luecke
-452,Fröyo | Titran,0,geo,"Titran, Frøya, Trøndelag, 7268, Norge",63.6685,8.3061,"Hummelvika (Ytre Kvenvær), Norway",19.9,luecke
+451,Fröyo | Gjesingbogen | Sistranda,0,geo,"Sistranda, Frøya, Trøndelag, 7260, Norge",63.7302,8.8297,"Sistranda (Frøya), Norway",0.2,gedeckt
+452,Fröyo | Titran,0,geo,"Titran, Frøya, Trøndelag, 7268, Norge",63.6685,8.3061,"Titran (Frøya), Norway",0.2,gedeckt
 453,Hemnefjord | Kyrkseterøra,0,name,"Kyrksæterøra, Norway",63.2923,9.0903,,0.0,gedeckt
 454,Brekstad | Trondheimsleia,0,name,"Brekstad (Ørland), Norway",63.6861,9.6678,,0.0,gedeckt
 457,Orkanger,0,saat,"Orkanger, Trøndelag, Norway",63.3209,9.8559,,0.0,gedeckt
 460,Trondheim,0,saat,"Trondheim, Norway",63.4365,10.3917,,0.0,gedeckt
 463,Levanger,0,saat,"Levanger, Norway",63.7496,11.2989,,0.0,gedeckt
 464,Stenkjär,0,hand,ungefaehr (Handposition),64.0100,11.4900,"Steinkjer, Norway",0.4,gedeckt
-466,Torvikbukt,0,geo,"Torvikbukt, Gjemnes, Møre og Romsdal, 6639, Norge",62.9438,7.8575,"Tingvoll, Møre og Romsdal, Norway",16.7,luecke
+466,Torvikbukt,0,geo,"Torvikbukt, Gjemnes, Møre og Romsdal, 6639, Norge",62.9438,7.8575,"Torvikbukt, Norway",0.2,gedeckt
 468,Kristiansund Nord,0,saat,"Kristiansund, Norway",63.1139,7.7361,,0.0,gedeckt
 469,Bøvra,0,geo,"Bøvra, Glærem, Surnadal, Møre og Romsdal, 6652, Norge",62.9929,8.6749,"Surnadalsøra, Norway",2.6,gedeckt
 470,Sundalsfjord | Sunndalsøra,0,saat,"Sunndalsøra, Norway",62.6833,8.5500,,0.0,gedeckt
@@ -133,25 +133,25 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 473,Andalsnes | Romsdalfjord,0,saat,"Åndalsnes, Norway",62.5686,7.6891,,0.0,gedeckt
 474,Ålesund,0,name,"Ålesund, Norway",62.4694,6.1519,,0.0,gedeckt
 475,Storfjord | Stranda,0,saat,"Stranda, Norway",62.3092,6.9496,,0.0,gedeckt
-476,Volda | Voldafjord,0,geo,"Volda, Møre og Romsdal, 6102, Norge",62.1451,6.0668,"Lauvstad, Møre og Romsdal, Norway",6.8,nah
+476,Volda | Voldafjord,0,geo,"Volda, Møre og Romsdal, 6102, Norge",62.1451,6.0668,"Volda, Møre og Romsdal, Norway",0.2,gedeckt
 480,Maløy | Maløysund,0,saat,"Måløy, Norway",61.9338,5.1133,,0.0,gedeckt
 482,Eidsfjord | Nordfjord | Nordfjordeid,0,name,"Kjølsdalen (Nordfjorden), Norway",61.9160,5.6293,,0.0,gedeckt
 484,Florø,0,saat,"Florø, Norway",61.6012,5.0328,,0.0,gedeckt
 485,Førde | Førdefjord,0,saat,"Førde, Norway",61.4612,5.8403,,0.0,gedeckt
 486,Askvoll | Granesund,0,saat,"Askvoll, Norway",61.3455,5.0657,,0.0,gedeckt
 487,Høyanger,0,name,"Høyanger, Vestland, Norway",61.2169,6.0697,,0.0,gedeckt
-489,Ardalsfjord | Ardalstangen,0,geo,"Årdalstangen, Årdal, Vestland, 6885, Norge",61.2361,7.7025,"Lærdalsøyri, Norway",19.7,luecke
+489,Ardalsfjord | Ardalstangen,0,geo,"Årdalstangen, Årdal, Vestland, 6885, Norge",61.2361,7.7025,"Årdalstangen, Norway",0.2,gedeckt
 492,Aurlandsfjord | Flåm,0,saat,"Flåm (Aurlandsfjorden), Norway",60.8630,7.1170,,0.0,gedeckt
 495,Fensfjord | Mongstad,0,geo,"Fensfjordvegen, Duesund, Masfjordnes, Masfjorden, Vestland, 5981, Norge",60.8141,5.3066,"Masfjordnes, Vestland, Norway",1.5,gedeckt
 497,Masfjord | Matre,0,saat,"Matre, Norway",60.8733,5.5808,,0.0,gedeckt
-499,Knarvik | Salhusfjord,0,geo,"Knarvik, Alver, Vestland, 5914, Norge",60.5461,5.2854,"Alverstraumen, Norway",5.1,nah
+499,Knarvik | Salhusfjord,0,geo,"Knarvik, Alver, Vestland, 5914, Norge",60.5461,5.2854,"Knarvik, Vestland, Norway",0.5,gedeckt
 500,Sørfjord | Stamneshella,0,saat,"Stamneshella, Norway",60.6641,5.7469,,0.0,gedeckt
 502,Blomøy | Blomvåg,0,saat,"Blomvåg, Norway",60.5296,4.8767,,0.0,gedeckt
 502,"Bremen, Oslebshausen",1,bsh,"Bremen, Oslebshausen, Weser",53.1197,8.7122,"Bremen-Oslebshausen (Weser), Germany",0.0,gedeckt
 504,Bergen,1,name,"Bergen, Norway",60.3980,5.3205,,0.0,gedeckt
 504B,"Brunsbüttel, Ost",1,bsh,"Brunsbüttel, Elbe, Ost",53.8878,9.1486,"Brunsbüttel (Elbe), Germany",0.4,gedeckt
 505,"Büsum, Schleuse",1,bsh,"Büsum, Schleuse",54.1222,8.8592,"Büsum (Schleuse), Germany",0.0,gedeckt
-505,Osøyro,0,geo,"Osøyro, Bjørnafjorden, Vestland, 5200, Norge",60.1859,5.4700,"Lukksund, Norway",20.1,luecke
+505,Osøyro,0,geo,"Osøyro, Bjørnafjorden, Vestland, 5200, Norge",60.1859,5.4700,"Osøyro, Norway",0.2,gedeckt
 506,"Cuxhaven, Steubenhöft",1,bsh,"Cuxhaven, Steubenhöft, Elbe",53.8678,8.7175,"Cuxhaven-Steubenhöft (Elbe), Germany",0.0,gedeckt
 507,"Emden, Große Seeschleuse",1,bsh,"Emden, Ems, Große Seeschleuse",53.3367,7.1864,"Emden (Neue Seeschleuse), Germany",0.0,gedeckt
 508,"Hamburg, St. Pauli",1,bsh,"Hamburg, St. Pauli, Elbe",53.5456,9.9700,"Hamburg (St. Pauli), Germany",0.0,gedeckt
@@ -168,14 +168,14 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 520,Karmöy | Skudeneshaven,0,geo,"Karmøy, Rogaland, Norge",59.2761,5.2562,"Kopervik, Norway",3.5,gedeckt
 521,Sauda | Saudafjord,0,saat,"Sauda, Norway",59.6469,6.3507,,0.0,gedeckt
 522,Hjelmeland | Jøsenfjord,0,name,"Jøsenfjorden, Norway",59.3167,6.4667,,0.0,gedeckt
-522a,Forsand | Högsfjord,0,geo,"Forsand, Sandnes, Rogaland, 4110, Norge",58.9003,6.0980,"Sandnes, Norway",20.5,luecke
-523,Lysebotn,0,geo,"Lysebotn, Sandnes, Rogaland, 4127, Norge",59.0551,6.6467,"Jøsenfjorden, Norway",30.9,luecke
+522a,Forsand | Högsfjord,0,geo,"Forsand, Sandnes, Rogaland, 4110, Norge",58.9003,6.0980,"Forsand (Høgsfjorden), Norway",0.6,gedeckt
+523,Lysebotn,0,geo,"Lysebotn, Sandnes, Rogaland, 4127, Norge",59.0551,6.6467,"Lysebotn (Lysefjorden), Norway",0.1,gedeckt
 524,Stavanger,0,saat,"Stavanger, Norway",58.9743,5.7301,,0.0,gedeckt
 524a,Sandnes,0,saat,"Sandnes, Norway",58.8682,5.7466,,0.0,gedeckt
 526,Farsund,0,saat,"Farsund, Norway",58.0905,6.8065,,0.0,gedeckt
 527,Mandal | Tregde,0,saat,"Tregde (Mandal), Norway",58.0064,7.5548,,0.0,gedeckt
 528,Kristiansand Süd,0,saat,"Kristiansand, Norway",58.1425,7.9869,,0.0,gedeckt
-530,Lillesand,0,geo,"Lillesand, Agder, 4790, Norge",58.2490,8.3779,"Grimstad, Norway",16.2,luecke
+530,Lillesand,0,geo,"Lillesand, Agder, 4790, Norge",58.2490,8.3779,"Lillesand, Norway",0.1,gedeckt
 531,Arendal,0,saat,"Arendal, Norway",58.4574,8.7674,,0.0,gedeckt
 533,Risør,0,saat,"Risør, Norway",58.7184,9.2404,,0.0,gedeckt
 534,Helgeroa,0,saat,"Helgeroa, Norway",58.9952,9.8564,,0.0,gedeckt
@@ -231,7 +231,7 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 647A,Pellworm,0,bsh,"Pellworm, Anleger",54.5008,8.7019,"Pellworm (Anleger), Germany",0.0,gedeckt
 649,"Nordstrand, Strucklahnungshörn | Strucklahnungshörn",0,bsh,"Strucklahnungshörn, Nordstrand, AP",54.4989,8.8064,"Strucklahnungshörn (Nordstrand), Germany",0.1,gedeckt
 649B,Holmer Siel,0,bsh,Holmer Siel,54.5283,8.8692,"Holmer Siel, Germany",0.0,gedeckt
-653,Heverstrom | Südfall,0,bsh,"Südfall, Fahrwasserkante",54.4472,8.7525,"Südfall Fahrwasserkante (Hever), Germany",0.3,gedeckt
+653,Heverstrom | Südfall,0,bsh,"Südfall, Fahrwasserkante",54.4472,8.7525,"Südfall Fahrwasserkante (Hever), Germany",0.4,gedeckt
 656,Eider Tonne,0,saat,"Tönning (Eider), Germany",54.3147,8.9501,,0.0,gedeckt
 664,"Eider | Eider-Sperrwerk, Außenpegel",0,bsh,"Eider-Sperrwerk, Außenpegel",54.2658,8.8419,"Eider-Sperrwerk (Außenpegel), Germany",0.0,gedeckt
 666,Blauort | Norderpiep,0,bsh,"Blauort, Norderpiep",54.1686,8.6750,"Blauort (Norderpiep), Germany",0.0,gedeckt
@@ -716,7 +716,7 @@ nr,namen,bezugsort,ort_quelle,ort_gefunden,lat,lon,naechster_satz,naechster_km,s
 1968,Rio Douro,0,saat,"Crestuma (Rio Douro), Portugal",41.0700,-8.5033,,0.0,gedeckt
 1969,Rio Douro | Ponte D. Luis,0,saat,"Crestuma (Rio Douro), Portugal",41.0700,-8.5033,,0.0,gedeckt
 1970,Porto de Aveiro,0,name,"Barra de Aveiro (Gafanha da Nazaré), Portugal",40.6442,-8.7487,,0.0,gedeckt
-1971,Torreira,0,geo,"Torreira, Murtosa, Aveiro, Portugal",40.7604,-8.7065,"Moranzel, Portugal",4.7,gedeckt
+1971,Torreira,0,geo,"Torreira, Murtosa, Aveiro, Portugal",40.7604,-8.7065,"Moranzel (Torreira), Portugal",4.7,gedeckt
 1973,Figueira da Foz,0,saat,"Figueira da Foz, Portugal",40.1471,-8.8563,,0.0,gedeckt
 1974,Nazaré,0,saat,"Nazaré, Portugal",39.5860,-9.0740,,0.0,gedeckt
 1975,S. Marthinho do Porto,0,name,"São Martinho do Porto, Portugal",39.5117,-9.1400,,0.0,gedeckt
