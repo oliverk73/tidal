@@ -341,6 +341,32 @@ def rename_station_in_markers_json(old_name, new_name, source, old_lat=None, old
     return _markers_json_aendern(aenderung)
 
 
+def stromname_vorschlag_erledigt_markers_json(source, namen):
+    """Nach Ja/Nein zur Stromnamen-Fernregel: Station aus der Gruppe "Stromname Vorschlag (prüfen)"
+    in ihre normale Quellgruppe zurueck, Anzeige ohne "→ Vorschlag". Sonst steht sie nach dem
+    Neuladen der Karte wieder (kraeftig orange) in der Pruefgruppe, bis die Marker neu gebaut werden."""
+    with open(MARKERS_JSON, encoding="utf-8") as f:
+        gruppen = [g["name"] for g in json.load(f).get("groups", [])]
+    if "Stromname Vorschlag (prüfen)" not in gruppen:
+        return False
+    vg = gruppen.index("Stromname Vorschlag (prüfen)")
+
+    def aenderung(rows):
+        treffer = [r for r in rows if len(r) > 8 and r[3] == source and r[4] == vg and r[8] in namen]
+        if not treffer:
+            return False
+        # normale Gruppe dieser Quelldatei = haeufigste Gruppe ihrer Saetze ausserhalb der Pruefgruppen
+        normal = Counter(r[4] for r in rows if r[3] == source and not gruppen[r[4]].endswith("(prüfen)"))
+        if not normal:
+            return False
+        for r in treffer:
+            r[4] = normal.most_common(1)[0][0]
+            r[0] = display_name_for(r[8], r[3])
+            r[6] = to_slug(r[0])
+        return True
+    return _markers_json_aendern(aenderung)
+
+
 def update_markers_json(station_name, source, new_lat, new_lon, old_lat=None, old_lon=None):
     """Position einer Station auf der Karte setzen (5 Stellen wie im Markerbau)."""
     def aenderung(rows):
@@ -2488,6 +2514,9 @@ def stromname_entscheid():
                 wr = _csv.DictWriter(fh, fieldnames=list(zeilen[0]))
                 wr.writeheader()
                 wr.writerows(rest)
+    tcd = os.path.splitext(os.path.basename(src))[0] + ".tcd"
+    if not stromname_vorschlag_erledigt_markers_json(tcd, {name, d.get("neu", "")} - {""}):
+        print(f"⚠️ {name!r} nicht in der Gruppe Stromname Vorschlag der Markerdaten")
     print(f"✅ Stromname {d['entscheid']}: {name!r} -> {d.get('neu') or d.get('vorschlag')!r}")
     return jsonify(ok=True)
 
