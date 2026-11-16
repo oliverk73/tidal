@@ -1,0 +1,913 @@
+gruppe,band,no,name,lat,lon,typ,variante,N,FG,wahr,wahr_km,bestand
+eutt: Takoradi,eutt,97,Baia de Cabinda,-5.55,12.2,offen,CAL 1.0 Spring 45,4.4,2.9,"Cabinda, Angola [harmonics_att_np208.txt]",0.0,4.7
+eutt: Takoradi,eutt,103,Cape Lopez,-0.6167,8.7,offen,CAL 1.0 Spring 45,4.2,3.4,"Cap Lopez (Pointe Renard), Gabon [harmonics_att_np208.txt]",0.0,4.7
+eutt: Takoradi,eutt,107,"Pointe Owendo, Gabon River",0.2833,9.5,insel,CAL 1.0 Spring 45,4.8,8.6,"Pointe Owendo (Estuaire du Gabon), Gabon [harmonics_att_np208.txt]",0.0,5.4
+eutt: Takoradi,eutt,145,"Calabar, Calabar River",4.9667,8.3167,binnen,CAL 1.0 Spring 45,5.9,20.8,"Calabar (Calabar River), Nigeria [harmonics-1997-05-25_mod.txt]",0.0,7.0
+eutt: Takoradi,eutt,163,"Nun Entrance, Niger River",4.3167,6.0667,gemischt,CAL 1.0 Spring 45,4.4,11.3,"Akassa (Nun River), Nigeria [harmonics_att_np208.txt]",0.0,4.8
+eutt: Dakar,eutt,273,Banjul,13.45,-16.5667,gemischt,Buchquotient Flach weg,2.4,3.9,"Banjul, Gambia [harmonics-1997-05-25_mod.txt]",0.02,2.6
+eutt: Dakar,eutt,287,St. Louis,16.0167,-16.5,offen,Buchquotient Flach weg,4.4,4.2,"Saint-Louis, Senegal [harmonics-1997-05-25_mod.txt]",0.01,6.7
+eutt: Casablanca,eutt,17,Puerto Hierro,27.7667,-17.9167,gemischt,Buchquotient HW/NW,2.6,3.1,"Puerto de la Estaca (El Hierro), Islas Canarias, Spain [harmonics_puertos_spain.txt]",2.44,
+eutt: Casablanca,eutt,19,"Santa Cruz, Palma Island",28.6667,-17.75,offen,Buchquotient HW/NW,4.4,2.9,"Santa Cruz de La Palma, Islas Canarias, Spain [harmonics_puertos_spain.txt]",2.14,
+eutt: Casablanca,eutt,23,"Santa Cruz, Tenerife Island",28.4833,-16.2333,gemischt,Buchquotient HW/NW,4.1,3.0,"Santa Cruz de Tenerife, Islas Canarias, Spain [harmonics_puertos_spain.txt]",0.0,4.4
+eutt: Casablanca,eutt,27,"Puerto del Rosario, Fuerteventura Island",28.4833,-13.85,offen,Buchquotient HW/NW,3.9,2.5,"Puerto del Rosario (Fuerteventura), Islas Canarias, Spain [harmonics_puertos_spain.txt]",1.3,
+eutt: Casablanca,eutt,29,"Puerto Arrecife, Lanzarote Island",28.95,-13.5333,offen,Buchquotient HW/NW,3.4,2.8,"Arrecife (Lanzarote), Islas Canarias, Spain [harmonics_puertos_spain.txt]",0.0,3.9
+eutt: Casablanca,eutt,39,Porto Santo,33.05,-16.3333,offen,Buchquotient HW/NW,2.1,3.2,"Porto Santo, Madeira, Portugal [harmonics_utide_observations.txt]",2.03,
+eutt: Casablanca,eutt,257,Porto de Bissau,11.85,-15.5833,insel,Buchquotient HW/NW,3.3,10.7,"Bissau, Guinea-Bissau [harmonics-1997-05-25_mod.txt]",1.1,3.9
+eutt: Casablanca,eutt,265,Porto do Cacheu,12.2833,-16.1667,binnen,Buchquotient HW/NW,3.5,24.0,"Cacheu, Guinea-Bissau [harmonics-1997-05-25_mod.txt]",0.02,3.9
+eutt: Casablanca,eutt,299,Villa Cisneros,23.7,-15.9167,gemischt,Buchquotient HW/NW,4.3,6.4,"Dakhla, Western Sahara [harmonics-1997-05-25_mod.txt]",2.11,4.4
+eutt: Casablanca,eutt,301,Cabo Bojador,26.1167,-14.5,offen,Buchquotient HW/NW,3.1,2.8,"Boujdour, Western Sahara [harmonics_utide_tidetables.txt]",0.34,
+eutt: Casablanca,eutt,303,Cap Juby,27.95,-12.9333,offen,Buchquotient HW/NW,4.3,2.7,"Tarfaya (Cap Juby), Morocco [harmonics_utide_tidetables.txt]",0.93,
+eutt: Casablanca,eutt,307,Agadir,30.4167,-9.6167,gemischt,Buchquotient HW/NW,1.5,2.7,"Agadir, Morocco [harmonics-1997-05-25_mod.txt]",2.07,
+eutt: Casablanca,eutt,309,Essaouira,31.5167,-9.7833,offen,Buchquotient HW/NW,2.6,2.6,"Essaouira, Morocco [harmonics_utide_tidetables.txt]",1.45,
+eutt: Casablanca,eutt,319,Mehdiya,34.2667,-6.6667,offen,Buchquotient HW/NW,1.8,2.9,"Mehdya, Morocco [harmonics_utide_tidetables.txt]",0.0,
+eutt: Casablanca,eutt,327,"Tanger, Strait of Gibraltar",35.7833,-5.8,gemischt,Buchquotient HW/NW,1.8,3.7,"Tanger, Morocco [harmonics_utide_tidetables.txt]",0.62,
+eutt: Cape Town,eutt,67,Port Nolloth,-29.25,16.8667,offen,Buchquotient HW/NW,2.0,3.4,"Port Nolloth, South Africa [harmonics_utide_observations.txt]",0.03,
+eutt: Gibraltar,eutt,329,"Ceuta, Strait of Gibraltar",35.8833,-5.2667,offen,Buchquotient Flach weg,4.1,5.3,"Ceuta, Spain [harmonics_ticon4_worldwide.txt]",0.01,3.1
+eutt: Gibraltar,eutt,359,Tripoli (Tarabulus),32.9,13.1833,offen,Buchquotient Flach weg,11.0,5.2,"Tripoli (Tarabulus), Libya [harmonics_att_np208.txt]",0.0,11.1
+eutt: Gibraltar,eutt,373,"Kyrenia, Cyprus",35.3333,33.3167,offen,Buchquotient Flach weg,8.8,3.9,"Girne (Kyrenia), Cyprus [harmonics_att_np208.txt]",0.0,9.3
+eutt: Gibraltar,eutt,375,"Famagusta, Cyprus",35.1167,33.95,gemischt,Buchquotient Flach weg,9.5,3.6,"Famagusta, Cyprus [harmonics_att_np208.txt]",0.0,13.1
+eutt: Gibraltar,eutt,385,Bar,42.0667,19.0833,offen,Buchquotient Flach weg,11.3,3.5,"Bar, Montenegro [harmonics_att_np208.txt]",0.0,11.8
+eutt: Sfax,eutt,355,Hawmat As Suq,33.8833,10.85,offen,Buchquotient HW/NW,9.5,9.0,"Houmt Souk (Djerba), Tunisia [harmonics_att_np208.txt]",0.0,5.9
+eutt: Venezia,eutt,413,Chioggia <5>,45.2333,12.3,insel,Buchquotient Flach weg,5.7,4.8,"Chioggia, Italy [harmonics_att_np208.txt]",0.0,7.1
+eutt: Gibralter,eutt,429,"Lipari, Lipari Islands",38.4833,14.9667,insel,Buchquotient Flach weg,8.1,2.8,"Lipari, Italy [harmonics_att_np208.txt]",0.0,8.1
+eutt: Gibralter,eutt,431,"Milazzo, Sicily",38.2167,15.25,insel,Buchquotient Flach weg,7.6,3.6,"Milazzo, Sicily, Italy [harmonics_att_np208.txt]",0.0,8.5
+eutt: Gibralter,eutt,449,"Tarifa, Strait of Gibralter",36.0,-5.6,gemischt,Buchquotient Flach weg,3.1,5.0,"Tarifa, Spain [harmonics_puertos_spain.txt]",0.0,2.1
+eutt: Lisbon,eutt,453,La Carraca,36.5,-6.1833,binnen,CAL 1.0 Spring 45,5.3,5.8,"Arsenal de la Carraca, Spain [harmonics-1997-05-25_mod.txt]",0.0,6.0
+eutt: Lisbon,eutt,457,Rota,36.6167,-6.35,gemischt,CAL 1.0 Spring 45,1.5,3.2,"Rota, Spain [harmonics-1997-05-25_mod.txt]",0.0,3.3
+eutt: Lisbon,eutt,461,"Sanlucar, Rio Guadalquivir",36.7833,-6.35,binnen,CAL 1.0 Spring 45,2.1,4.9,"Sanlúcar de Barrameda (Bonanza / Guadalquivir), Spain [harmonics_puertos_spain.txt]",2.37,4.1
+eutt: Lisbon,eutt,473,Ponta da Balieira,37.0833,-8.2667,offen,CAL 1.0 Spring 45,4.2,3.4,"Albufeira (Ponta da Baleeira), Portugal [harmonics_utide_observations.txt]",0.0,3.8
+eutt: Lisbon,eutt,477,Lagos,37.1,-8.6667,offen,CAL 1.0 Spring 45,2.4,2.8,"Lagos, Portugal [harmonics_utide_observations.txt]",0.0,3.3
+eutt: Lisbon,eutt,479,Ponta de Sagres,37.0,-8.95,offen,CAL 1.0 Spring 45,2.4,2.7,"Sagres, Portugal [harmonics_utide_observations.txt]",2.25,2.3
+eutt: Lisbon,eutt,481,Arrifana,37.2833,-8.8667,offen,CAL 1.0 Spring 45,7.3,2.5,"Arrifana, Portugal [harmonics_utide_observations.txt]",0.0,7.7
+eutt: Lisbon,eutt,485,Enseada de Sines,37.95,-8.8833,offen,CAL 1.0 Spring 45,2.8,2.7,"Sines, Portugal [harmonics_utide_observations.txt]",0.0,2.6
+eutt: Lisbon,eutt,497,Baia de Pederneira,39.6,-9.0833,offen,CAL 1.0 Spring 45,2.1,2.5,"Nazaré, Portugal [harmonics_utide_observations.txt]",0.0,3.0
+eutt: Lisbon,eutt,513,Viana do Castelo,41.6833,-8.8333,offen,CAL 1.0 Spring 45,2.8,2.6,"Viana do Castelo, Portugal [harmonics_utide_observations.txt]",0.56,
+eutt: Lisbon,eutt,519,Vigo,42.25,-8.7167,insel,CAL 1.0 Spring 45,1.5,2.7,"Vigo, Spain [harmonics_puertos_spain.txt]",1.08,
+eutt: Lisbon,eutt,523,Villagarcia de Arosa,42.6,-8.7667,binnen,CAL 1.0 Spring 45,2.3,2.6,"Vilagarcía de Arousa, Spain [harmonics_puertos_spain.txt]",0.29,
+eutt: Lisbon,eutt,539,La Coruña,43.3833,-8.3833,insel,CAL 1.0 Spring 45,2.6,2.6,"A Coruña, Spain [harmonics_puertos_spain.txt]",2.93,
+eutt: Lisbon,eutt,541,El Ferrol,43.4667,-8.2667,insel,CAL 1.0 Spring 45,2.2,2.6,"El Ferrol del Caudillo, Spain [harmonics_puertos_spain.txt]",1.81,
+eutt: Lisbon,eutt,561,Gijon,43.55,-5.6667,offen,CAL 1.0 Spring 45,1.7,2.7,"Gijón (El Musel), Spain [harmonics_puertos_spain.txt]",0.0,2.5
+eutt: Lisbon,eutt,571,Santander,43.4667,-3.7833,offen,CAL 1.0 Spring 45,9.8,6.7,"Santander, Spain [harmonics_puertos_spain.txt]",0.0,10.4
+eutt: Lisbon,eutt,577,Bilbao Bay,43.35,-3.0333,gemischt,CAL 1.0 Spring 45,4.7,2.6,"Santurtzi (Bilbao), Spain [harmonics_puertos_spain.txt]",0.0,5.4
+eutt: Lisbon,eutt,579,"Portugalete, Abra Bilbao",43.3333,-3.0333,gemischt,CAL 1.0 Spring 45,1.2,2.6,"Santurtzi (Bilbao), Spain [harmonics_puertos_spain.txt]",2.65,2.3
+eutt: Lisbon,eutt,597,Pasajes,43.3333,-1.9333,offen,CAL 1.0 Spring 45,1.8,2.7,"Pasaia, Spain [harmonics_puertos_spain.txt]",0.0,2.5
+eutt: Lisbon,eutt,599,Fuenterrabia,43.3667,-1.8,offen,CAL 1.0 Spring 45,3.5,2.9,"Hendaye, France [harmonics_utide_tidetables.txt]",1.87,
+eutt: Pointe de Grave,eutt,603,"Le Boucau, Adour River",43.5167,-1.5,gemischt,Buchquotient HW/NW,2.0,2.7,"Boucau-Bayonne (L'Adour), France [harmonics_utide_observations.txt]",0.0,3.3
+eutt: Pointe de Grave,eutt,605,"Cap Ferret, Bassin D'Arcachon",44.6167,-1.25,gemischt,Buchquotient HW/NW,2.7,6.4,"Cap Ferret, France [harmonics_utide_tidetables.txt]",1.46,
+eutt: Pointe de Grave,eutt,607,Arcachon,44.6667,-1.1667,offen,Buchquotient HW/NW,17.7,8.7,"Arcachon (Jetée d'Eyrac), France [harmonics_utide_observations.txt]",0.31,
+eutt: Pointe de Grave,eutt,613,Royan,45.6167,-1.0333,insel,Buchquotient HW/NW,1.0,3.4,"Royan, France [harmonics_utide_observations.txt]",0.61,
+eutt: Pointe de Grave,eutt,617,Pauillac,45.2,-0.75,binnen,Buchquotient HW/NW,2.9,4.1,"Trompeloup (Pauillac), France [harmonics_utide_observations.txt]",2.03,
+eutt: Pointe de Grave,eutt,619,Blaye <6>,45.1333,-0.6667,gemischt,Buchquotient HW/NW,6.8,4.9,"Cussac-Fort-Médoc (Gironde), France [harmonics_utide_observations.txt]",2.73,9.0
+eutt: Pointe de Grave,eutt,621,"Bordeaux, Garonne River <6>",44.8333,-0.5667,binnen,Buchquotient HW/NW,11.5,13.1,"Bordeaux, France [harmonics_utide_observations.txt]",0.0,13.4
+eutt: Pointe de Grave,eutt,623,"La Cayenne, Seudre River",45.7833,-1.1167,binnen,Buchquotient HW/NW,3.1,3.7,"Viaduc de la Seudre, France [harmonics_ticon4_worldwide.txt]",1.54,3.3
+eutt: Pointe de Grave,eutt,625,"Rochefort, Charente River <6>",45.95,-0.9667,binnen,Buchquotient HW/NW,16.0,7.9,"Rochefort (Charente), France [harmonics_utide_observations.txt]",0.0,17.5
+eutt: Pointe de Grave,eutt,627,Ile d'Aix,46.0167,-1.1667,insel,Buchquotient HW/NW,3.2,4.2,"Île-d'Aix, France [harmonics_ticon4_worldwide.txt]",0.02,4.7
+eutt: Pointe de Grave,eutt,631,La Pallice,46.1667,-1.2167,insel,Buchquotient HW/NW,2.6,4.1,"La Rochelle (La Pallice), France [harmonics_utide_observations.txt]",0.96,
+eutt: Pointe de Grave,eutt,633,"St. Martin, Ile de Re",46.2,-1.3667,insel,Buchquotient HW/NW,3.4,4.0,"Saint-Martin-de-Ré (Île de Ré), France [harmonics_utide_tidetables.txt]",0.01,4.2
+eutt: Pointe de Grave,eutt,635,Les Sables d'Olonne,46.5,-1.7833,offen,Buchquotient HW/NW,3.2,3.5,"Les Sables-d'Olonne, France [harmonics_utide_observations.txt]",0.01,3.5
+eutt: Pointe de Grave,eutt,641,Fromentine,46.9,-2.1667,gemischt,Buchquotient HW/NW,2.5,3.8,"Fromentine (La Barre-de-Monts), France [harmonics_utide_observations.txt]",2.22,
+eutt: Pointe de Grave,eutt,647,"St. Nazaire, Loire River",47.2667,-2.2,insel,Buchquotient HW/NW,2.7,3.7,"Saint-Nazaire, France [harmonics_utide_observations.txt]",0.12,
+eutt: Pointe de Grave,eutt,649,"Paimboeuf, Loire River",47.2833,-2.0333,binnen,Buchquotient HW/NW,7.0,4.7,"Paimboeuf (Loire), France [harmonics_utide_observations.txt]",0.0,6.4
+eutt: Pointe de Grave,eutt,651,"Nantes, Loire River <6>",47.2167,-1.5833,binnen,Buchquotient HW/NW,17.7,15.2,"Nantes (Salorges), France [harmonics_utide_observations.txt]",1.55,
+eutt: Pointe de Grave,eutt,675,Concarneau,47.8667,-3.9,gemischt,Buchquotient HW/NW,1.2,2.8,"Concarneau, France [harmonics_utide_observations.txt]",0.93,
+eutt: Pointe de Grave,eutt,677,"Benodet, Odet River",47.8833,-4.1167,gemischt,Buchquotient HW/NW,1.0,2.8,"Bénodet (L'Odet), France [harmonics_utide_tidetables.txt]",0.26,
+eutt: Brest,eutt,693,Le Conquet,48.3667,-4.7833,insel,Buchquotient HW/NW,1.3,3.1,"Le Conquet, France [harmonics_utide_observations.txt]",0.87,
+eutt: Brest,eutt,701,L'Abervrach (Fort Cezon),48.6,-4.5833,offen,Buchquotient HW/NW,1.1,3.0,"L'Aber Wrac'h, France [harmonics_utide_tidetables.txt]",1.99,1.9
+eutt: Brest,eutt,703,Roscoff,48.7167,-3.9667,offen,Buchquotient HW/NW,2.9,3.3,"Roscoff, France [harmonics_utide_observations.txt]",0.21,
+eutt: Brest,eutt,707,Ploumanach,48.8333,-3.4833,insel,Buchquotient HW/NW,2.9,3.0,"Ploumanac'h, France [harmonics_utide_tidetables.txt]",0.27,
+eutt: Brest,eutt,709,"Plougrescan, Treguier River",48.85,-3.2167,insel,Buchquotient HW/NW,4.1,3.2,"Port-Béni, France [harmonics_utide_tidetables.txt]",2.9,4.7
+eutt: Brest,eutt,711,Heaux-de-Brehat,48.9,-3.0833,offen,Buchquotient HW/NW,1.4,3.2,"Les Héaux-de-Bréhat, France [harmonics_utide_tidetables.txt]",0.96,
+eutt: Brest,eutt,725,St. Malo,48.6333,-2.0333,insel,Buchquotient HW/NW,2.5,4.0,"Saint-Malo, France [harmonics_utide_observations.txt]",0.98,
+eutt: Brest,eutt,727,Cancale,48.6833,-1.85,offen,Buchquotient HW/NW,3.7,4.9,"Cancale, France [harmonics_utide_observations.txt]",1.66,
+eutt: Brest,eutt,733,Dielette,49.55,-1.8667,offen,Buchquotient HW/NW,2.3,3.3,"Diélette, France [harmonics_utide_observations.txt]",0.51,
+eutt: Brest,eutt,735,Iles Chausey,48.8667,-1.8167,insel,Buchquotient HW/NW,2.6,4.0,"Grande-Île (Îles Chausey), France [harmonics_utide_tidetables.txt]",0.0,
+eutt: Brest,eutt,737,"Les Minquiers, Bailiwick of Jersey",48.95,-2.1333,offen,Buchquotient HW/NW,2.3,3.3,"Les Minquiers (Îles Anglo-Normandes), Channel Islands [harmonics-pierre-lavergne-v10_mod.txt]",2.24,
+eutt: Le Havre,eutt,755,Ouistreham,49.2833,-0.25,gemischt,Buchquotient,1.9,4.9,"Ouistreham, France [harmonics_utide_observations.txt]",0.33,
+eutt: Dover,eutt,769,Fecamp,49.7667,0.3667,offen,CAL 1.0 Spring 45,3.6,3.4,"Fécamp, France [harmonics_utide_tidetables.txt]",0.49,
+eutt: Dover,eutt,773,Dieppe,49.9333,1.0833,offen,CAL 1.0 Spring 45,2.2,4.0,"Dieppe, France [harmonics_utide_observations.txt]",0.47,
+eutt: Dover,eutt,775,Le Treport,50.0667,1.3667,offen,CAL 1.0 Spring 45,2.4,3.8,"Le Tréport, France [harmonics_utide_tidetables.txt]",0.0,
+eutt: Dover,eutt,777,Cayeux,50.1833,1.4833,offen,CAL 1.0 Spring 45,2.0,4.0,"Cayeux-sur-Mer, France [harmonics_utide_tidetables.txt]",0.0,
+eutt: Dover,eutt,783,Boulogne,50.7333,1.5833,offen,CAL 1.0 Spring 45,1.5,4.7,"Boulogne-sur-Mer, France [harmonics_utide_observations.txt]",0.0,2.7
+eutt: Dover,eutt,785,Calais,50.9667,1.85,offen,CAL 1.0 Spring 45,2.9,4.8,"Calais, France [harmonics_utide_observations.txt]",1.28,
+eutt: Dover,eutt,787,Gravelines,51.0167,2.1,offen,CAL 1.0 Spring 45,2.5,3.8,"Gravelines, France [harmonics_utide_tidetables.txt]",0.43,
+eutt: Dover,eutt,789,Dunkerque,51.05,2.3667,offen,CAL 1.0 Spring 45,3.5,4.0,"Dunkerque, France [harmonics_utide_observations.txt]",0.0,3.0
+eutt: Dover,eutt,921,Shoreham Harbor entrance,50.8333,-0.25,offen,CAL 1.0 Spring 45,4.1,2.8,"Shoreham (River Adur), England, United Kingdom [harmonics-1997-05-25_mod.txt]",0.0,4.3
+eutt: Leith,eutt,793,Wick,58.4333,-3.0833,insel,Buchquotient HW/NW,3.1,3.0,"Wick, Scotland, United Kingdom [harmonics_utide_observations.txt]",0.87,
+eutt: Leith,eutt,801,Inverness,57.5,-4.25,binnen,Buchquotient HW/NW,4.7,5.1,"Inverness, Scotland, United Kingdom [harmonics-1997-05-25_mod.txt]",0.9,
+eutt: Leith,eutt,815,Arbroath,56.55,-2.5833,offen,Buchquotient HW/NW,2.9,3.1,"Arbroath, Scotland, United Kingdom [harmonics_utide_observations.txt]",0.61,
+eutt: Leith,eutt,819,"Dundee, Tay River",56.45,-2.9667,binnen,Buchquotient HW/NW,1.9,35.0,"Dundee, Scotland, United Kingdom [harmonics-1997-05-25_mod.txt]",0.02,3.4
+eutt: Leith,eutt,825,"Rosyth, Forth River",56.0167,-3.45,gemischt,Buchquotient HW/NW,1.0,17.4,"Rosyth, Scotland, United Kingdom [harmonics-1997-05-25_mod.txt]",0.4,
+eutt: Leith,eutt,841,Tyne River entrance,55.0167,-1.4,offen,Buchquotient HW/NW,1.0,2.6,"Tynemouth Lighthouse, England, United Kingdom [harmonics-1997-05-25_mod.txt]",0.32,
+eutt: Leith,eutt,851,River Tees Entrance,54.6333,-1.15,gemischt,Buchquotient HW/NW,1.0,2.8,"River Tees (Teesmouth), England, United Kingdom [harmonics-1997-05-25_mod.txt]",0.01,2.8
+eutt: Leith,eutt,853,Whitby,54.4833,-0.6167,gemischt,Buchquotient HW/NW,1.6,2.7,"Whitby, England, United Kingdom [harmonics_utide_observations.txt]",0.77,
+eutt: Immingham,eutt,865,Hull,53.7333,-0.25,binnen,CAL 1.0 Spring 45,1.9,5.0,"Hull (King George Dock), England, United Kingdom [harmonics-1997-05-25_mod.txt]",0.0,3.7
+eutt: Sheerness,eutt,889,"Southend Pier, Thames River",51.5167,0.75,insel,CAL 1.0 Spring 45,1.6,3.6,"Southend-on-Sea (Pier), England, United Kingdom [harmonics_utide_tidetables.txt]",1.83,
+eutt: Sheerness,eutt,895,"Tilbury Dock, Thames River",51.4667,0.3667,binnen,CAL 1.0 Spring 45,2.3,6.0,"Tilbury (Thames River), England, United Kingdom [harmonics_utide_tidetables.txt]",0.0,3.5
+eutt: Sheerness,eutt,897,"Royal Albert Dock, Thames River",51.5,0.0833,binnen,CAL 1.0 Spring 45,3.1,9.5,"North Woolwich, England, United Kingdom [harmonics_utide_tidetables.txt]",1.56,
+eutt: Sheerness,eutt,901,Margate,51.4,1.3833,insel,CAL 1.0 Spring 45,3.8,3.3,"Margate, England, United Kingdom [harmonics_utide_tidetables.txt]",1.08,
+eutt: Southampton,eutt,927,Portsmouth <9>,50.8,-1.1167,insel,Buchquotient,5.6,5.1,"Portsmouth, England, United Kingdom [harmonics_utide_observations.txt]",0.45,
+eutt: Ringaskiddy,eutt,947,Exmouth,50.6167,-3.4167,gemischt,Buchquotient Flach weg,6.9,6.0,"Exmouth, England, United Kingdom [harmonics_utide_observations.txt]",0.53,
+eutt: Ringaskiddy,eutt,959,Devonport,50.3667,-4.1833,gemischt,Buchquotient Flach weg,4.4,4.7,"Devonport, England, United Kingdom [harmonics_utide_observations.txt]",0.23,
+eutt: Ringaskiddy,eutt,965,Falmouth,50.15,-5.05,offen,Buchquotient Flach weg,4.5,3.4,"Falmouth, England, United Kingdom [harmonics-1997-05-25_mod.txt]",0.65,
+eutt: Ringaskiddy,eutt,967,Penzance (Newlyn),50.1,-5.55,offen,Buchquotient Flach weg,3.3,3.2,"Newlyn (Penzance), England, United Kingdom [harmonics_utide_observations.txt]",0.0,4.4
+eutt: Ringaskiddy,eutt,969,"St. Mary's Pool, Scilly Isles",49.9167,-6.3167,offen,Buchquotient Flach weg,2.9,2.9,"St. Mary's (Isles of Scilly), England, United Kingdom [harmonics_ticon4_worldwide.txt]",0.14,
+eutt: Liverpool,eutt,997,Port of Bristol (Avonmouth),51.5,-2.7167,gemischt,Buchquotient Flach weg,6.0,5.1,"Portbury, England, United Kingdom [harmonics_ticon4_worldwide.txt]",0.81,
+eutt: Liverpool,eutt,1005,"Newport, Bristol Channel",51.55,-2.9833,gemischt,Buchquotient Flach weg,6.2,4.2,"Newport (River Usk), Wales, United Kingdom [harmonics-dwf-20100529-nonfree_mod.txt]",0.28,
+eutt: Liverpool,eutt,1007,"Cardiff, Bristol Channel",51.45,-3.15,insel,Buchquotient Flach weg,9.6,4.1,"Cardiff, Wales, United Kingdom [harmonics-1997-05-25_mod.txt]",1.1,
+eutt: Liverpool,eutt,1009,"Barry, Bristol Channel",51.3833,-3.2667,gemischt,Buchquotient Flach weg,6.5,2.9,"Barry, Wales, United Kingdom [harmonics-1997-05-25_mod.txt]",1.14,
+eutt: Liverpool,eutt,1013,"Swansea, Bristol Channel",51.6167,-3.9167,gemischt,Buchquotient Flach weg,6.6,2.5,"Swansea (King's Dock), Wales, United Kingdom [harmonics-1997-05-25_mod.txt]",0.89,
+eutt: Liverpool,eutt,1073,Workington,54.65,-3.5667,offen,Buchquotient Flach weg,3.6,2.9,"Workington (Cumbria), England, United Kingdom [harmonics_ticon4_worldwide.txt]",0.0,4.6
+eutt: Dublin,eutt,1025,Fishguard,52.0,-4.9667,insel,CAL 1.0 Spring 45,4.9,3.5,"Fishguard, Wales, United Kingdom [harmonics-dwf-20100529-nonfree_mod.txt]",1.88,
+eutt: Dublin,eutt,1029,Aberystwyth,52.4,-4.0833,gemischt,CAL 1.0 Spring 45,5.7,4.2,"Aberystwyth, Wales, United Kingdom [harmonics-1997-05-25_mod.txt]",1.29,
+eutt: Dublin,eutt,1043,Holyhead,53.3167,-4.6167,offen,CAL 1.0 Spring 45,2.1,2.6,"Holyhead, Wales, United Kingdom [harmonics_ticon4_worldwide.txt]",0.39,
+eutt: Dublin,eutt,1147,Belfast,54.6,-5.9167,binnen,CAL 1.0 Spring 45,2.4,2.8,"Belfast (Lagan Weir), Northern Ireland, United Kingdom [harmonics-1997-05-25_mod.txt]",0.0,4.6
+eutt: Dublin,eutt,1173,"Dunmore, Waterford Harbor",52.15,-6.9833,gemischt,CAL 1.0 Spring 45,44.5,4.2,"Dunmore East, Ireland [harmonics_utide_observations.txt]",0.64,
+eutt: Dublin,eutt,1179,"Queenstown, Cork Harbor",51.8333,-8.3,gemischt,CAL 1.0 Spring 45,44.0,3.2,"Ringaskiddy (NMCI), Ireland [harmonics_ticon4_worldwide.txt]",0.43,
+eutt: Dublin,eutt,1183,"Cork, Cork Harbor",51.9,-8.45,binnen,CAL 1.0 Spring 45,46.2,3.4,"Cork City, Ireland [harmonics-pierre-lavergne-v10_mod.txt]",0.08,
+eutt: Dublin,eutt,1207,"Kilrush, Shannon River",52.6333,-9.5,insel,CAL 1.0 Spring 45,41.7,3.0,"Kilrush Lough, Ireland [harmonics_utide_observations.txt]",0.21,
+eutt: Dublin,eutt,1215,Galway,53.2667,-9.05,insel,CAL 1.0 Spring 45,40.3,2.7,"Galway, Ireland [harmonics_utide_observations.txt]",0.29,
+eutt: Dublin,eutt,1221,Broadhaven,54.2667,-9.8833,gemischt,CAL 1.0 Spring 45,39.8,3.6,"Ballyglass (Broadhaven), Ireland [harmonics_ticon4_worldwide.txt]",1.59,
+eutt: Dublin,eutt,1237,"Londonderry, Lough Foyle",55.0,-7.3167,binnen,CAL 1.0 Spring 45,43.0,13.9,"Londonderry, Northern Ireland, United Kingdom [harmonics-1997-05-25_mod.txt]",0.35,
+eutt: Dublin,eutt,1243,Portrush,55.2,-6.6667,insel,CAL 1.0 Spring 45,40.5,4.3,"Portrush, Northern Ireland, United Kingdom [harmonics-dwf-20100529-nonfree_mod.txt]",0.97,
+eutt: Greenock,eutt,1091,"Stranraer, Loch Ryan",54.9167,-5.05,binnen,Buchquotient HW/NW,4.5,4.0,"Stranraer, Scotland, United Kingdom [harmonics_utide_observations.txt]",1.74,
+eutt: Greenock,eutt,1103,"Rothesay Bay, Firth of Clyde",55.85,-5.05,insel,Buchquotient HW/NW,3.1,4.2,"Rothesay (Bute), Scotland, United Kingdom [harmonics_utide_observations.txt]",0.0,3.7
+eutt: Ullapool,eutt,1113,"Oban, Firth of Lorne",56.4167,-5.4833,insel,Buchquotient,3.1,3.7,"Oban, Scotland, United Kingdom [harmonics_utide_observations.txt]",0.59,
+eutt: Ullapool,eutt,1117,"Tobermory, Sound of Mull",56.6167,-6.0833,insel,Buchquotient,2.2,3.2,"Tobermory (Sound of Mull), Scotland, United Kingdom [harmonics_ticon4_worldwide.txt]",0.0,2.6
+eutt: Ullapool,eutt,1133,Loch Inchard,58.45,-5.0167,binnen,Buchquotient,1.5,2.8,"Kinlochbervie (Loch Inchard), Scotland, United Kingdom [harmonics_ticon4_worldwide.txt]",2.09,
+eutt: Ullapool,eutt,1141,Thurso,58.6,-3.55,offen,Buchquotient,3.4,3.5,"Scrabster (Thurso), Scotland, United Kingdom [harmonics-1997-05-25_mod.txt]",1.38,
+eutt: Narvik,eutt,1265,Stromness <17>,58.9667,-3.3,insel,CAL 1.0 Spring 45,4.4,9.2,"Stromness, Scotland, United Kingdom [harmonics_utide_observations.txt]",0.55,
+eutt: Narvik,eutt,1267,Kirkwall,58.9833,-2.9667,insel,CAL 1.0 Spring 45,2.8,6.1,"Kirkwall, Scotland, United Kingdom [harmonics_utide_observations.txt]",0.44,
+eutt: Narvik,eutt,1271,Fair Isle,59.55,-1.6333,offen,CAL 1.0 Spring 45,8.3,3.2,"Fair Isle, Scotland, United Kingdom [harmonics-1997-05-25_mod.txt]",2.1,
+eutt: Narvik,eutt,1539,Trondheim,63.45,10.4,insel,CAL 1.0 Spring 45,1.4,3.3,"Trondheim, Norway [harmonics_utide_observations.txt]",1.56,
+eutt: Narvik,eutt,1543,"Mo, Ranenfjord",66.3167,14.1333,binnen,CAL 1.0 Spring 45,2.3,3.2,"Mo i Rana, Norway [harmonics-1997-05-25_mod.txt]",0.0,2.2
+eutt: Narvik,eutt,1545,Bodo,67.2833,14.3833,insel,CAL 1.0 Spring 45,3.4,3.4,"Bodø, Norway [harmonics_utide_observations.txt]",1.23,
+eutt: Bergen,eutt,1273,Lerwick,60.15,-1.1333,insel,Buchquotient HW/NW,2.3,2.7,"Lerwick (Shetlands), Scotland, United Kingdom [harmonics_ticon4_worldwide.txt]",0.59,
+eutt: Bergen,eutt,1523,Oslo,59.9167,10.7333,binnen,Buchquotient HW/NW,10.4,9.3,"Oslo, Norway [harmonics_ticon4_worldwide.txt]",0.01,11.2
+eutt: Bergen,eutt,1525,Arendal,58.45,8.7667,gemischt,Buchquotient HW/NW,11.2,11.7,"Arendal, Norway [harmonics-1997-05-25_mod.txt]",0.0,12.6
+eutt: Bergen,eutt,1527,Mandal (Tregde),58.0,7.5667,offen,Buchquotient HW/NW,11.5,9.6,"Tregde (Mandal), Norway [harmonics_utide_observations.txt]",0.0,11.5
+eutt: Bergen,eutt,1531,Stavanger,58.9667,5.7333,insel,Buchquotient HW/NW,7.8,6.4,"Stavanger, Norway [harmonics_utide_observations.txt]",0.0,8.7
+eutt: Reykjavik,eutt,1311,Keflavik Harbor,64.0,-22.55,offen,CAL 1.0 Spring 45,1.1,2.5,"Njarðvík, Iceland [harmonics-2004-06-14_mod.txt]",2.66,2.2
+eutt: Reykjavik,eutt,1319,Hrutafjordur,65.25,-21.1167,binnen,CAL 1.0 Spring 45,4.6,18.3,"Hrútafjörður, Iceland [harmonics-1997-05-25_mod.txt]",0.0,4.9
+eutt: Reykjavik,eutt,1323,Akureyri,65.6833,-18.0833,binnen,CAL 1.0 Spring 45,3.3,2.3,"Akureyri, Iceland [harmonics-2004-06-14_mod.txt]",1.53,3.6
+eutt: Reykjavik,eutt,1325,Vestdalseyri,65.2833,-13.9833,binnen,CAL 1.0 Spring 45,26.2,3.0,"Seyðisfjörður, Iceland [harmonics-2004-06-14_mod.txt]",2.39,
+eutt: Vlissingen,eutt,1331,Zeebrugge,51.35,3.2,offen,Buchquotient,2.2,4.2,"Zeebrugge (Havendam), Belgium [harmonics_utide_observations.txt]",0.4,
+eutt: Vlissingen,eutt,1339,"Terneuzen, West Schelde River",51.3333,3.8333,gemischt,Buchquotient,0.7,6.5,"Terneuzen (Westerschelde), Netherlands [harmonics_utide_observations.txt]",0.0,3.7
+eutt: Vlissingen,eutt,1341,"Hansweert, West Schelde River",51.45,4.0,insel,Buchquotient,2.4,6.9,"Hansweert, Netherlands [harmonics_utide_observations.txt]",0.0,4.3
+eutt: Vlissingen,eutt,1345,"Stavenisse, East Schelde River",51.6,4.0167,insel,Buchquotient,4.2,11.4,"Stavenisse (Oosterschelde), Netherlands [harmonics_utide_observations.txt]",0.0,4.8
+eutt: Vlissingen,eutt,1347,Dordrecht,51.8167,4.6667,binnen,Buchquotient,10.9,13.4,"Dordrecht (Oude Maas / Beneden Merwede), Netherlands [harmonics_utide_observations.txt]",0.0,11.6
+eutt: Vlissingen,eutt,1353,Scheveningen <19>,52.1,4.2667,insel,Buchquotient,8.9,8.3,"Scheveningen, Netherlands [harmonics_utide_observations.txt]",0.0,9.9
+eutt: Vlissingen,eutt,1355,Ijmuiden (Ymuiden),52.4667,4.5833,offen,Buchquotient,8.0,8.1,"IJmuiden (Zeesluis), Netherlands [harmonics_ticon4_worldwide.txt]",1.48,
+eutt: Antwerp,eutt,1335,Antwerp (Roads) Schelde River,51.2333,4.4,binnen,Buchquotient,3.9,12.9,"Antwerpen, Belgium [harmonics_utide_observations.txt]",0.65,
+eutt: Cuxhaven,eutt,1429,Scharhorn,53.9667,8.4667,insel,Buchquotient,2.7,4.7,"Scharhörn (Bake C), Germany [harmonics_utide_observations.txt]",0.27,
+eutt: Cuxhaven,eutt,1435,Gluckstadt,53.7833,9.4167,binnen,Buchquotient,4.0,15.6,"Glückstadt (Elbe), Germany [harmonics_utide_observations.txt]",0.54,
+eutt: Cuxhaven,eutt,1437,Stadersand,53.6333,9.5333,binnen,Buchquotient,4.0,20.5,"Stadersand (Elbe), Germany [harmonics_utide_observations.txt]",0.6,
+eutt: Helgoland,eutt,1367,"Borkum, west coast",53.5833,6.65,insel,Buchquotient HW/NW,4.2,4.9,"Borkum (Südstrand), Germany [harmonics_utide_observations.txt]",0.0,4.4
+eutt: Helgoland,eutt,1369,Knock,53.3333,7.05,gemischt,Buchquotient HW/NW,8.2,5.9,"Knock (Ems), Germany [harmonics_utide_observations.txt]",1.45,
+eutt: Helgoland,eutt,1373,Pogum,53.3167,7.2667,gemischt,Buchquotient HW/NW,8.9,6.5,"Pogum (Ems), Germany [harmonics_utide_observations.txt]",0.7,
+eutt: Helgoland,eutt,1375,Leer,53.2167,7.45,binnen,Buchquotient HW/NW,15.4,10.0,"Leerort (Ems), Germany [harmonics_utide_observations.txt]",1.42,15.1
+eutt: Helgoland,eutt,1381,Norderney-Seegat,53.7,7.1667,insel,Buchquotient HW/NW,5.1,4.6,"Norderney (Riffgat), Germany [harmonics_utide_observations.txt]",0.7,
+eutt: Helgoland,eutt,1385,Langeoog,53.7333,7.4667,insel,Buchquotient HW/NW,4.1,4.9,"Langeoog (Hafeneinfahrt), Germany [harmonics_utide_observations.txt]",2.56,
+eutt: Helgoland,eutt,1389,"Spiekeroog, west approach",53.75,7.6667,offen,Buchquotient HW/NW,3.2,4.7,"Spiekeroog (Alter Anleger), Germany [harmonics_utide_observations.txt]",1.0,
+eutt: Helgoland,eutt,1391,"Wangerooge, west end",53.7833,7.85,insel,Buchquotient HW/NW,2.7,5.1,"Wangerooge (Hafen), Germany [harmonics_utide_observations.txt]",1.42,
+eutt: Helgoland,eutt,1479,"Dagebull, Norder Aue",54.7167,8.6833,insel,Buchquotient HW/NW,5.6,8.4,"Dagebüll, Germany [harmonics_utide_observations.txt]",0.0,5.2
+eutt: Helgoland,eutt,1487,"List, Lister Tief",55.0167,8.45,insel,Buchquotient HW/NW,4.1,5.3,"List auf Sylt (Hafen), Germany [harmonics_utide_observations.txt]",0.61,
+eutt: Bremerhaven,eutt,1395,"Wangerooge, east end",53.7833,7.9667,insel,Buchquotient HW/NW,7.9,4.7,"Wangerooge (Ost), Germany [harmonics_utide_observations.txt]",2.16,
+eutt: Bremerhaven,eutt,1397,Schillighorn,53.7,8.05,gemischt,Buchquotient HW/NW,6.0,4.6,"Schillig, Germany [harmonics_utide_observations.txt]",0.22,
+eutt: Bremerhaven,eutt,1401,Genius Bank,53.6167,8.15,insel,Buchquotient HW/NW,4.7,4.8,"Jade-Weser-Port, Germany [harmonics_utide_observations.txt]",1.64,
+eutt: Bremerhaven,eutt,1403,Wilhelmshaven,53.5167,8.1667,gemischt,Buchquotient HW/NW,3.5,4.6,"Wilhelmshaven (Alter Vorhafen, Jade), Germany [harmonics_utide_observations.txt]",1.45,
+eutt: Bremerhaven,eutt,1413,Nordenham,53.5,8.5,binnen,Buchquotient HW/NW,3.4,11.2,"Nordenham (Weser, Unterfeuer), Germany [harmonics_utide_observations.txt]",0.01,3.6
+eutt: Bremerhaven,eutt,1415,Sandstedt,53.3667,8.5167,binnen,Buchquotient HW/NW,2.8,13.4,"Rechtenfleth (Weser), Germany [harmonics_utide_observations.txt]",1.93,
+eutt: Bremerhaven,eutt,1419,Elsfleth,53.25,8.4667,binnen,Buchquotient HW/NW,3.3,17.0,"Elsfleth (Weser), Germany [harmonics_utide_observations.txt]",0.01,3.5
+eutt: Bremerhaven,eutt,1421,Farge,53.2,8.5167,binnen,Buchquotient HW/NW,3.6,20.3,"Farge (Weser), Germany [harmonics_utide_observations.txt]",0.0,3.8
+eutt: Bremerhaven,eutt,1423,Vegesack,53.1667,8.6333,binnen,Buchquotient HW/NW,4.5,22.8,"Vegesack (Weser), Germany [harmonics_utide_observations.txt]",0.0,4.7
+eutt: Bremerhaven,eutt,1425,Bremen (Oslebshausen),53.1167,8.7167,binnen,Buchquotient HW/NW,5.8,23.2,"Bremen-Oslebshausen (Weser), Germany [harmonics_utide_observations.txt]",0.46,
+eutt: Bremerhaven,eutt,1427,Bremen (bridge),53.0833,8.7833,binnen,Buchquotient HW/NW,7.9,23.7,"Bremen (Wilhelm-Kaisen-Brücke, Weser), Germany [harmonics_utide_observations.txt]",1.8,
+eutt: Bremerhaven,eutt,1447,"Busum, Norderpiep",54.1333,8.85,insel,Buchquotient HW/NW,10.4,7.8,"Büsum (Schleuse), Germany [harmonics_utide_observations.txt]",1.41,
+eutt: Bremerhaven,eutt,1461,Vollerwiek Plate,54.2833,8.7833,insel,Buchquotient HW/NW,10.6,6.4,"Eider-Sperrwerk (Außenpegel), Germany [harmonics_utide_observations.txt]",2.97,11.1
+eutt: Bremerhaven,eutt,1463,Tonning,54.3167,8.95,binnen,Buchquotient HW/NW,26.1,20.1,"Tönning (Eider), Germany [harmonics_utide_observations.txt]",0.22,26.5
+eutt: Bremerhaven,eutt,1471,Husum,54.4833,9.05,binnen,Buchquotient HW/NW,4.2,8.5,"Husum (Schleuse), Germany [harmonics_utide_observations.txt]",2.04,
+eutt: Bremerhaven,eutt,1473,"Ochsen Sand, Pellworm",54.5,8.7,insel,Buchquotient HW/NW,7.0,6.2,"Pellworm (Anleger), Germany [harmonics_utide_observations.txt]",0.16,
+eutt: Hamburg,eutt,1439,Luhedeich,53.5667,9.6333,binnen,Buchquotient HW/NW,4.2,22.2,"Lühort (Lühe), Germany [harmonics_utide_observations.txt]",0.48,
+eutt: Hamburg,eutt,1441,Schulau,53.5667,9.7,binnen,Buchquotient HW/NW,3.6,22.9,"Schulau (Elbe), Germany [harmonics_utide_observations.txt]",0.23,
+eutt: Hamburg,eutt,1443,Cranz,53.5333,9.8,binnen,Buchquotient HW/NW,2.5,24.5,"Cranz (Este-Sperrwerk), Germany [harmonics_utide_observations.txt]",0.63,
+eutt: Esbjerg,eutt,1491,Hojer Sluice,54.9667,8.6833,gemischt,CAL 1.0 Spring 45,19.9,8.2,"Vidåslusen (Højer), Denmark [harmonics_ticon4_worldwide.txt]",0.0,23.2
+eutt: Esbjerg,eutt,1497,"Nordby, Fano Island",55.45,8.4167,gemischt,CAL 1.0 Spring 45,6.0,5.7,"Esbjerg Havn I, Denmark [harmonics_utide_observations.txt]",2.68,4.9
+eutt: Yekaterininskaya,eutt,1559,Vardoya,70.3667,31.1,offen,CAL 1.0 Spring 45,1.7,2.9,"Vardø, Norway [harmonics_utide_observations.txt]",0.02,2.7
+eutt: Yekaterininskaya,eutt,1931,"Dickson Island, Yenisey Gulf",73.5,80.4167,offen,CAL 1.0 Spring 45,21.8,24.6,"Dikson (Bukhta Dikson), Krasnoyarsk Krai, Russia [harmonics_att_np202.txt]",0.0,
+ectt: Hampton Roads,ectt,11,"Cambridge Bay, Dease Strait",69.1167,-105.1167,gemischt,Buchquotient Flach weg,20.6,12.2,"Cambridge Bay, Nunavut, Canada [harmonics_utide_tidetables.txt]",1.98,
+ectt: Hampton Roads,ectt,35,"Alert, Lincoln Sea",82.5,-62.3333,gemischt,Buchquotient Flach weg,11.0,3.0,"Alert, Nunavut, Canada [harmonics_utide_tidetables.txt]",0.74,
+ectt: Hampton Roads,ectt,4747,Baracoa,20.35,-74.5,insel,Buchquotient Flach weg,5.3,3.2,"Baracoa, Cuba [harmonics_att_np202.txt]",0.0,
+ectt: Harrington Harbour,ectt,17,"Port Kennedy, Bellot Strait",72.0167,-94.2,gemischt,CAL 1.0 Spring 45,18.5,4.5,"Fort Ross, Nunavut, Canada [harmonics_utide_tidetables.txt]",1.12,
+ectt: Harrington Harbour,ectt,23,"Beechy Island, Barrow Strait",74.7167,-91.9,offen,CAL 1.0 Spring 45,19.7,3.7,"Beechy Island (Barrow Strait), Nunavut, Canada [harmonics_utide_tidetables.txt]",0.0,
+ectt: Harrington Harbour,ectt,55,"Danmarks Island, Scoresby Sound",70.45,-26.2,insel,CAL 1.0 Spring 45,12.4,9.5,"Danmarks O (Scoresby Sund), Greenland [harmonics_utide_tidetables.txt]",0.0,
+ectt: Harrington Harbour,ectt,89,"Godhavn, Disko Island",69.25,-53.55,insel,CAL 1.0 Spring 45,5.0,3.3,"Qeqertarsuaq, Greenland [harmonics-1997-05-25_mod.txt]",0.32,5.0
+ectt: Harrington Harbour,ectt,95,Port Foulke,78.3,-72.75,offen,CAL 1.0 Spring 45,12.1,3.6,"Foulke Havn, Greenland [harmonics_utide_tidetables.txt]",1.88,13.5
+ectt: Harrington Harbour,ectt,207,Chateau Bay,52.0,-55.8333,offen,CAL 1.0 Spring 45,5.9,3.4,"Henley Harbour, Labrador, Canada [harmonics-2004-06-14_mod.txt]",1.72,
+ectt: Harrington Harbour,ectt,209,Red Bay,51.7167,-56.4167,gemischt,CAL 1.0 Spring 45,5.5,3.4,"Red Bay (Strait of Bell Isle), Labrador, Canada [harmonics_utide_tidetables.txt]",1.96,
+ectt: Harrington Harbour,ectt,265,Port Aux Basques,47.5833,-59.15,offen,CAL 1.0 Spring 45,3.9,3.6,"Port Aux Basques, Newfoundland, Canada [harmonics_utide_observations.txt]",0.89,
+ectt: Harrington Harbour,ectt,269,St. Georges Harbour,48.45,-58.5,insel,CAL 1.0 Spring 45,4.1,4.7,"St. George's, Newfoundland, Canada [harmonics_utide_tidetables.txt]",2.47,
+ectt: Harrington Harbour,ectt,275,"Norris Cove, Bonne Bay",49.5167,-57.8667,binnen,CAL 1.0 Spring 45,2.6,2.9,"Norris Cove (Bonne Bay), Newfoundland, Canada [harmonics_utide_tidetables.txt]",0.66,
+ectt: Harrington Harbour,ectt,279,Port Saunders,50.65,-57.3,offen,CAL 1.0 Spring 45,1.9,4.4,"Port Saunders, Newfoundland, Canada [harmonics_utide_tidetables.txt]",0.7,
+ectt: Harrington Harbour,ectt,283,St. Barbe Bay,51.2,-56.7667,gemischt,CAL 1.0 Spring 45,6.0,3.2,"St. Barbe, Newfoundland, Canada [harmonics_utide_tidetables.txt]",0.64,
+ectt: Harrington Harbour,ectt,285,Bradore Bay,51.4667,-57.25,insel,CAL 1.0 Spring 45,2.1,3.4,"Brador, Québec, Canada [harmonics-2004-06-14_mod.txt]",1.88,2.8
+ectt: Harrington Harbour,ectt,293,Kegaska,50.2,-61.2333,gemischt,CAL 1.0 Spring 45,3.1,3.5,"Kegaska, Québec, Canada [harmonics_utide_tidetables.txt]",2.79,
+ectt: Harrington Harbour,ectt,295,Natashquan,50.2,-61.8333,gemischt,CAL 1.0 Spring 45,3.0,3.3,"Natashquan, Québec, Canada [harmonics_utide_tidetables.txt]",1.34,
+ectt: Harrington Harbour,ectt,299,Havre St. Pierre,50.2333,-63.6,insel,CAL 1.0 Spring 45,5.4,3.2,"Havre-Saint-Pierre, Québec, Canada [harmonics_utide_tidetables.txt]",0.78,
+ectt: Harrington Harbour,ectt,301,Mingan,50.3,-64.05,gemischt,CAL 1.0 Spring 45,6.6,3.1,"Mingan, Québec, Canada [harmonics_utide_tidetables.txt]",2.44,
+ectt: Harrington Harbour,ectt,305,Southwest Point,49.4,-63.6,offen,CAL 1.0 Spring 45,6.0,3.0,"Pointe-Sud-Ouest (Île d'Anticosti), Québec, Canada [harmonics_utide_tidetables.txt]",0.91,
+ectt: Harrington Harbour,ectt,307,Ellis Bay,49.8,-64.3667,offen,CAL 1.0 Spring 45,5.3,4.3,"Port-Menier, Québec, Canada [harmonics_utide_tidetables.txt]",1.3,
+ectt: Harrington Harbour,ectt,311,Sept Iles,50.2167,-66.4,offen,CAL 1.0 Spring 45,5.7,2.7,"Sept-Îles, Québec, Canada [harmonics_utide_tidetables.txt]",2.1,
+ectt: Harrington Harbour,ectt,321,Matane,48.85,-67.5333,offen,CAL 1.0 Spring 45,5.6,2.5,"Matane, Québec, Canada [harmonics_utide_tidetables.txt]",0.37,
+ectt: Argentia,ectt,59,Finnsbu,63.4,-41.2833,insel,CAL 1.0 Spring 45,4.3,19.6,"Finnsbu, Greenland [harmonics-1997-05-25_mod.txt]",0.0,4.0
+ectt: Argentia,ectt,65,Nanortalik,60.1167,-45.25,insel,CAL 1.0 Spring 45,6.6,7.0,"Nanortalik, Greenland [harmonics_utide_tidetables.txt]",1.85,7.0
+ectt: Argentia,ectt,81,Holsteinsborg,66.9333,-53.7,insel,CAL 1.0 Spring 45,9.9,2.8,"Sisimiut, Greenland [harmonics_ticon4_worldwide.txt]",1.4,9.9
+ectt: Argentia,ectt,237,"St. Mary Harbour, St. Mary Bay",46.9167,-53.5833,insel,CAL 1.0 Spring 45,7.7,7.4,"St. Mary's, Newfoundland, Canada [harmonics_utide_tidetables.txt]",0.39,
+ectt: Argentia,ectt,241,Woody Island,47.7833,-54.1667,insel,CAL 1.0 Spring 45,3.4,3.7,"Woody Island, Newfoundland, Canada [harmonics_utide_tidetables.txt]",0.9,
+ectt: Argentia,ectt,243,Mortier Bay,47.1667,-55.15,binnen,CAL 1.0 Spring 45,4.6,4.8,"Marystown, Newfoundland, Canada [harmonics_utide_tidetables.txt]",0.18,
+ectt: Argentia,ectt,245,Great St. Lawrence Harbour,46.9167,-55.3667,gemischt,CAL 1.0 Spring 45,6.3,3.9,"St. Lawrence, Newfoundland, Canada [harmonics_utide_observations.txt]",1.77,
+ectt: Argentia,ectt,247,"St. Pierre Harbor, St. Pierre Island",46.7833,-56.1667,offen,CAL 1.0 Spring 45,3.8,2.7,"Saint-Pierre, Saint-Pierre-et-Miquelon [harmonics-2004-06-14_mod.txt]",0.51,
+ectt: Argentia,ectt,253,"Ship Cove, Bay d'Espoir",47.8667,-55.8333,binnen,CAL 1.0 Spring 45,4.0,3.1,"St. Alban's, Newfoundland, Canada [harmonics_utide_tidetables.txt]",0.42,
+ectt: Argentia,ectt,255,"Great Jervis Harbour, Bay d'Espoir",47.65,-56.1833,insel,CAL 1.0 Spring 45,5.6,3.0,"Pushthrough, Newfoundland, Canada [harmonics_utide_tidetables.txt]",2.11,4.9
+ectt: Argentia,ectt,263,La Poile Bay,47.6667,-58.4,insel,CAL 1.0 Spring 45,6.6,3.8,"La Poile (Little Bay), Newfoundland, Canada [harmonics_utide_tidetables.txt]",1.98,
+ectt: Halifax,ectt,179,"Hebron, Hebron Fjord",58.2,-62.6333,insel,Buchquotient Flach weg,7.6,4.7,"Hebron, Labrador, Canada [harmonics_utide_tidetables.txt]",0.49,
+ectt: Halifax,ectt,181,Nain,56.55,-61.6833,insel,Buchquotient Flach weg,5.5,2.9,"Nain, Labrador, Canada [harmonics_utide_observations.txt]",0.75,
+ectt: Halifax,ectt,187,Indian Harbour,54.45,-57.2,insel,Buchquotient Flach weg,5.4,2.6,"Smokey, Labrador, Canada [harmonics-2004-06-14_mod.txt]",1.14,9.0
+ectt: Halifax,ectt,189,Ticoralak Island,54.2833,-58.2,insel,Buchquotient Flach weg,5.7,2.9,"Snooks Rocks, Labrador, Canada [harmonics_utide_tidetables.txt]",2.31,
+ectt: Halifax,ectt,193,Goose Bay,53.35,-60.4,binnen,Buchquotient Flach weg,9.6,17.5,"Terrington Basin, Labrador, Canada [harmonics_utide_tidetables.txt]",0.64,
+ectt: Halifax,ectt,195,Cartwright Harbour,53.7,-57.0333,insel,Buchquotient Flach weg,4.6,4.7,"Cartwright, Labrador, Canada [harmonics_utide_tidetables.txt]",0.97,
+ectt: Halifax,ectt,201,Square Island Harbour,52.7333,-55.8167,insel,Buchquotient Flach weg,7.7,3.2,"White Bear Arm, Labrador, Canada [harmonics_utide_tidetables.txt]",0.89,
+ectt: Halifax,ectt,203,Port Marnham,52.3833,-55.7333,insel,Buchquotient Flach weg,7.5,3.3,"Port Marnham, Labrador, Canada [harmonics_utide_tidetables.txt]",0.03,
+ectt: Halifax,ectt,205,Battle Harbour,52.2667,-55.6,insel,Buchquotient Flach weg,6.5,3.9,"Battle Harbour, Labrador, Canada [harmonics_utide_tidetables.txt]",1.34,
+ectt: Halifax,ectt,221,Exploits Lower Harbour,49.5333,-55.0667,insel,Buchquotient Flach weg,6.4,2.4,"Exploits Island, Newfoundland, Canada [harmonics_utide_tidetables.txt]",1.75,
+ectt: Halifax,ectt,223,Fogo Harbour,49.7167,-54.2667,insel,Buchquotient Flach weg,7.6,3.5,"Fogo, Newfoundland, Canada [harmonics_utide_tidetables.txt]",1.6,
+ectt: Halifax,ectt,225,Valleyfield,49.1667,-53.6167,binnen,Buchquotient Flach weg,7.5,3.5,"Valleyfield, Newfoundland, Canada [harmonics_utide_tidetables.txt]",0.0,9.0
+ectt: Halifax,ectt,231,"Harbour Grace, Conception Bay",47.6833,-53.2,gemischt,Buchquotient Flach weg,7.3,3.7,"Harbour Grace, Newfoundland, Canada [harmonics_utide_tidetables.txt]",1.53,
+ectt: Halifax,ectt,233,St. John's,47.5667,-52.7,gemischt,Buchquotient Flach weg,5.1,3.2,"St. John's, Newfoundland, Canada [harmonics_ticon4_worldwide.txt]",0.19,
+ectt: Halifax,ectt,477,Canso Harbour,45.35,-61.0,insel,Buchquotient Flach weg,5.4,3.2,"Canso Harbour, Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",1.35,
+ectt: Halifax,ectt,481,Isaacs Harbour,45.1833,-61.6667,binnen,Buchquotient Flach weg,5.1,3.8,"Isaacs Harbour, Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",0.72,
+ectt: Halifax,ectt,483,"Sonora, St. Mary River",45.05,-61.9167,gemischt,Buchquotient Flach weg,3.9,3.3,"Sonora (St. Marys River), Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",1.25,
+ectt: Halifax,ectt,485,Liscomb Harbour,45.0,-62.0333,insel,Buchquotient Flach weg,3.2,3.0,"Liscomb Harbour, Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",0.0,4.0
+ectt: Halifax,ectt,515,Shelburne,43.75,-65.3,binnen,Buchquotient Flach weg,2.8,2.3,"Shelburne, Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",1.69,
+ectt: Pictou,ectt,113,"Kivitoo, Baffin Island",67.9333,-64.9333,insel,Buchquotient Flach weg,7.5,27.4,"Kivitoo, Nunavut, Canada [harmonics_utide_tidetables.txt]",0.39,
+ectt: Pictou,ectt,117,"Clearwater Fiord, Cumberland Sound",66.6,-67.3333,binnen,Buchquotient Flach weg,25.7,37.3,"Clearwater Fiord (Cumberland Sound), Nunavut, Canada [harmonics_utide_tidetables.txt]",0.73,
+ectt: Pictou,ectt,119,Frobisher Bay,63.4833,-68.0333,insel,Buchquotient Flach weg,32.2,10.2,"Iqaluit S Farthest, Nunavut, Canada [harmonics-2004-06-14_mod.txt]",0.48,
+ectt: Pictou,ectt,121,"Pikyulik Island, Payne River",60.0,-69.9167,insel,Buchquotient Flach weg,25.7,12.4,"Île Pikiyulik, Québec, Canada [harmonics_utide_tidetables.txt]",0.4,
+ectt: Pictou,ectt,123,"Sorry Harbor, Resolution Island",61.6167,-64.7333,gemischt,Buchquotient Flach weg,24.6,2.7,"Sorry Harbour, Nunavut, Canada [harmonics_utide_tidetables.txt]",0.0,
+ectt: Pictou,ectt,127,"Ashe Inlet, Big Island",62.55,-70.5833,insel,Buchquotient Flach weg,23.8,3.0,"Ashe Inlet, Nunavut, Canada [harmonics_utide_tidetables.txt]",2.18,
+ectt: Pictou,ectt,129,"Schooner Harbour, Baffin Island",64.4,-77.8667,offen,Buchquotient Flach weg,27.6,5.9,"Schooner Harbour (Baffin Island), Nunavut, Canada [harmonics_utide_tidetables.txt]",0.56,
+ectt: Pictou,ectt,135,Chesterfield Inlet,63.3333,-90.7,insel,Buchquotient Flach weg,22.1,2.7,"Chesterfield Inlet, Nunavut, Canada [harmonics_utide_tidetables.txt]",0.86,
+ectt: Pictou,ectt,137,Churchill,58.7833,-94.2,gemischt,Buchquotient Flach weg,24.5,3.7,"Churchill, Manitoba, Canada [harmonics_utide_tidetables.txt]",1.19,
+ectt: Pictou,ectt,373,GaspÖ Bay,48.8333,-64.4833,binnen,Buchquotient Flach weg,16.7,3.8,"Gaspé, Québec, Canada [harmonics-2004-06-14_mod.txt]",0.89,17.9
+ectt: Pictou,ectt,375,Point St. Peter,48.6333,-64.1667,insel,Buchquotient Flach weg,18.4,5.4,"Pointe Saint-Pierre, Québec, Canada [harmonics_utide_tidetables.txt]",0.05,19.5
+ectt: Pictou,ectt,377,Port Daniel,48.1667,-64.95,insel,Buchquotient Flach weg,18.0,3.2,"Port-Daniel-Gascons, Québec, Canada [harmonics_utide_tidetables.txt]",1.96,
+ectt: Pictou,ectt,379,Paspebiac,48.0167,-65.2333,offen,Buchquotient Flach weg,17.5,3.3,"Paspébiac, Québec, Canada [harmonics_utide_tidetables.txt]",1.8,
+ectt: Pictou,ectt,381,Carleton Point,48.0833,-66.1167,gemischt,Buchquotient Flach weg,16.3,3.5,"Carleton-sur-Mer, Québec, Canada [harmonics_utide_tidetables.txt]",2.15,17.7
+ectt: Pictou,ectt,383,Campbellton,48.0167,-66.6667,binnen,Buchquotient Flach weg,17.2,10.5,"Campbellton, New Brunswick, Canada [harmonics_utide_tidetables.txt]",0.61,
+ectt: Pictou,ectt,385,Dalhousie,48.0667,-66.3667,insel,Buchquotient Flach weg,17.2,3.1,"Dalhousie, New Brunswick, Canada [harmonics_utide_tidetables.txt]",1.01,
+ectt: Pictou,ectt,391,Miscou Harbour,47.9,-64.5833,insel,Buchquotient Flach weg,20.4,6.4,"Miscou Harbour, New Brunswick, Canada [harmonics_utide_tidetables.txt]",0.55,
+ectt: Pictou,ectt,395,Tracadie,47.5167,-64.9167,binnen,Buchquotient Flach weg,25.4,9.7,"Tracadie, New Brunswick, Canada [harmonics_utide_tidetables.txt]",0.91,
+ectt: Pictou,ectt,405,Cape Tormentine,46.1333,-63.7833,insel,Buchquotient Flach weg,4.9,8.1,"Cape Tormentine, New Brunswick, Canada [harmonics_utide_tidetables.txt]",0.52,
+ectt: Pictou,ectt,423,Georgetown Harbour,46.1833,-62.5333,binnen,Buchquotient Flach weg,2.9,4.8,"Georgetown Harbour, Prince Edward Island, Canada [harmonics_utide_tidetables.txt]",0.44,
+ectt: Pictou,ectt,429,Summerside Harbour,46.4,-63.7833,insel,Buchquotient Flach weg,6.1,11.3,"Summerside, Prince Edward Island, Canada [harmonics_utide_tidetables.txt]",1.58,
+ectt: Pictou,ectt,433,"Amherst Harbour, Magdalen Islands",47.2333,-61.8333,offen,Buchquotient Flach weg,4.8,4.2,"Havre Aubert (Amherst), Québec, Canada [harmonics_utide_tidetables.txt]",0.45,
+ectt: Pictou,ectt,5219,Royal Bay (Moltke Harbor),-54.5167,-36.0167,offen,Buchquotient Flach weg,19.9,3.2,"Moltke Harbour, South Georgia and the South Sandwich Islands [harmonics_att_np207.txt]",0.0,21.6
+ectt: Pictou,ectt,5221,Leith Harbor,-54.1333,-36.6833,insel,Buchquotient Flach weg,11.3,7.7,"Leith Harbour, South Georgia and the South Sandwich Islands [harmonics_att_np207.txt]",0.0,13.8
+ectt: Quebec,ectt,141,"Moosonee, James Bay",51.2833,-80.6333,binnen,Bau heute,12.0,33.1,"Moosonee, Ontario, Canada [harmonics_utide_tidetables.txt]",0.7,
+ectt: Quebec,ectt,153,Stupart Bay,61.5833,-71.5333,insel,Bau heute,47.5,8.3,"Stupart Bay, Québec, Canada [harmonics_utide_tidetables.txt]",0.0,
+ectt: Quebec,ectt,163,Koksoak River entrance,58.5333,-68.1833,insel,Bau heute,46.9,3.0,"Rivière Koksoak, Québec, Canada [harmonics_utide_tidetables.txt]",0.89,
+ectt: Quebec,ectt,165,"Port Burwell, Ungava Bay",60.4167,-64.8667,gemischt,Bau heute,48.5,3.4,"Port Burwell, Nunavut, Canada [harmonics_utide_tidetables.txt]",1.36,
+ectt: Quebec,ectt,169,Williams Harbour,60.0,-64.3167,insel,Bau heute,39.8,3.1,"Cape Kakkiviak (Williams Harbour), Labrador, Canada [harmonics_utide_tidetables.txt]",1.11,
+ectt: Quebec,ectt,327,Father Point,48.5167,-68.4667,offen,Bau heute,5.9,2.7,"Pointe-au-Père, Québec, Canada [harmonics_utide_tidetables.txt]",0.55,
+ectt: Quebec,ectt,329,Old Bic Harbour,48.3667,-68.7333,offen,Bau heute,5.2,2.4,"Le Bic, Québec, Canada [harmonics_utide_tidetables.txt]",1.27,
+ectt: Quebec,ectt,333,"Chicoutimi, Saguenay River",48.4333,-71.05,binnen,Bau heute,5.0,12.8,"Chicoutimi, Québec, Canada [harmonics_utide_tidetables.txt]",0.45,
+ectt: Quebec,ectt,339,Pointe aux Orignaux,47.4833,-70.0167,insel,Bau heute,5.7,18.2,"Pointe-aux-Orignaux (Rivière-Ouelle), Québec, Canada [harmonics_utide_tidetables.txt]",0.7,
+ectt: Quebec,ectt,343,L' Islet,47.1333,-70.3667,insel,Bau heute,5.7,15.1,"L'Islet-sur-Mer, Québec, Canada [harmonics-2004-06-14_mod.txt]",0.57,6.5
+ectt: Quebec,ectt,347,Grosse Ile,47.0333,-70.6667,insel,Bau heute,3.4,14.7,"La Grosse Île, Québec, Canada [harmonics_utide_tidetables.txt]",1.57,
+ectt: Quebec,ectt,349,Berthier,46.9333,-70.7333,insel,Bau heute,3.3,14.5,"Berthier-sur-Mer, Québec, Canada [harmonics_utide_tidetables.txt]",0.44,
+ectt: Quebec,ectt,351,St. Laurent d' Orleans,46.8667,-71.0,binnen,Bau heute,2.1,14.4,"Saint-Laurent-de-l'Île-d'Orléans, Québec, Canada [harmonics_utide_observations.txt]",0.98,2.3
+ectt: Saint John,ectt,523,Yarmouth Harbour,43.8,-66.1333,insel,Buchquotient Flach weg,35.2,3.1,"Bunker Island Light, Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",1.6,
+ectt: Saint John,ectt,525,"Westport, St. Mary Bay",44.2667,-66.35,offen,Buchquotient Flach weg,35.4,2.8,"Westport, Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",0.34,
+ectt: Saint John,ectt,527,"Tiverton, St. Mary Bay",44.4,-66.2167,insel,Buchquotient Flach weg,36.4,3.9,"West Narrows, Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",0.0,
+ectt: Saint John,ectt,553,Joggins <2>,45.6833,-64.4667,insel,Buchquotient Flach weg,40.4,3.9,"Joggins Wharf, Nova Scotia, Canada [harmonics-2004-06-14_mod.txt]",1.72,
+ectt: Saint John,ectt,557,Grindstone Island,45.7167,-64.6167,insel,Buchquotient Flach weg,39.0,3.6,"Grindstone Island, New Brunswick, Canada [harmonics_utide_tidetables.txt]",0.67,
+ectt: Saint John,ectt,559,Hopewell Cape,45.8667,-64.5833,binnen,Buchquotient Flach weg,39.4,7.3,"Hopewell Cape, New Brunswick, Canada [harmonics_utide_tidetables.txt]",0.8,
+ectt: Saint John,ectt,565,Herring Cove,45.5833,-64.9667,insel,Buchquotient Flach weg,42.3,4.5,"Herring Cove, New Brunswick, Canada [harmonics_utide_tidetables.txt]",0.96,
+ectt: Saint John,ectt,567,Quaco Bay,45.3333,-65.5333,offen,Buchquotient Flach weg,38.1,1.5,"St. Martins, New Brunswick, Canada [harmonics_utide_tidetables.txt]",2.43,
+ectt: Saint John,ectt,575,L' Etang Harbour,45.0333,-66.8167,insel,Buchquotient Flach weg,37.9,1.9,"Blacks Harbour, New Brunswick, Canada [harmonics_utide_tidetables.txt]",1.76,
+ectt: Saint John,ectt,577,"North Head, Grand Manan Island",44.7667,-66.75,insel,Buchquotient Flach weg,37.4,3.4,"North Head, New Brunswick, Canada [harmonics_utide_tidetables.txt]",0.41,
+ectt: Saint John,ectt,579,"Seal Cove, Grand Manan Island",44.6167,-66.85,insel,Buchquotient Flach weg,40.6,5.0,"Outer Wood Island, New Brunswick, Canada [harmonics_utide_tidetables.txt]",2.75,
+ectt: Saint John,ectt,581,Outer Wood Island <5>,44.6,-66.8,offen,Buchquotient Flach weg,41.4,5.2,"Outer Wood Island, New Brunswick, Canada [harmonics_utide_tidetables.txt]",1.63,
+ectt: Saint John,ectt,589,"Back Bay, Letite Harbour <5>",45.05,-66.8667,insel,Buchquotient Flach weg,35.8,2.9,"Back Bay (Letite Harbour), New Brunswick, Canada [harmonics-2004-06-14_mod.txt]",0.66,
+ectt: Portland,ectt,819,Dover Point,43.1167,-70.8333,binnen,Buchquotient,2.2,17.3,"Atlantic Terminals T14A, New Hampshire [harmonics-dwf-20251228-free.txt]",1.75,
+ectt: Cape Hatteras,ectt,2423,Hatteras Inlet,35.2,-75.7333,insel,Buchquotient HW/NW,3.3,21.3,"Hatteras Inlet, North Carolina [harmonics-2004-06-14_mod.txt]",2.78,
+ectt: Cape Hatteras,ectt,2455,Core Creek Bridge,34.8333,-76.7,binnen,Buchquotient HW/NW,4.6,17.9,"Core Creek Bridge, North Carolina [harmonics-dwf-20251228-free.txt]",1.3,
+ectt: Cape Hatteras,ectt,2459,Morehead City,34.7167,-76.7,insel,Buchquotient HW/NW,41.5,5.9,"Morehead City Harbor, North Carolina [harmonics-dwf-20251228-free.txt]",1.05,
+ectt: Cape Hatteras,ectt,2467,Atlantic Beach Bridge,34.7167,-76.7333,insel,Buchquotient HW/NW,5.6,7.4,"Morehead City, North Carolina [harmonics-2004-06-14_mod.txt]",0.71,
+ectt: Cape Hatteras,ectt,2469,N.C. State Fisheries,34.7167,-76.75,insel,Buchquotient HW/NW,9.7,8.4,"Morehead City, North Carolina [harmonics-2004-06-14_mod.txt]",2.16,
+ectt: Fernandina Beach,ectt,3375,Cape Canaveral,28.4333,-80.5667,insel,Buchquotient Flach weg,4.2,5.3,"Cape Canaveral, Florida [harmonics-2004-06-14_mod.txt]",0.0,
+ectt: St. Petersburg,ectt,4047,Captiva Island (outside),26.4833,-82.1833,insel,Buchquotient,5.4,4.7,"Captiva Island (outside), Florida [harmonics-dwf-20251228-free.txt]",0.56,
+ectt: St. Petersburg,ectt,4057,Matlacha Pass (bascule bridge),26.6333,-82.0667,insel,Buchquotient,5.4,15.9,"Matlacha Pass (bascule bridge), Florida [harmonics-dwf-20251228-free.txt]",0.24,
+ectt: St. Petersburg,ectt,4087,Venice Inlet (inside),27.1167,-82.4667,gemischt,Buchquotient,1.8,8.3,"Venice Inlet (inside), Florida [harmonics-2004-06-14_mod.txt]",0.8,
+ectt: Galveston,ectt,4583,"Gilchrist, East Bay #",29.5167,-94.4833,insel,Buchquotient HW/NW,30.6,32.4,"Rollover Pass, Texas [harmonics-dwf-20251228-free.txt]",2.91,
+ectt: Galveston,ectt,4587,"Jamaica Beach, West Bay #",29.2,-94.9833,insel,Buchquotient HW/NW,29.8,21.2,"Jamaica Beach, Texas [harmonics-dwf-20251228-free.txt]",0.51,
+ectt: Tampico Harbor,ectt,4639,Alvarado #,18.7667,-95.7667,offen,Buchquotient Flach weg,2.4,7.2,"Alvarado, Veracruz, Mexico [harmonics_ticon4_worldwide.txt]",1.13,
+ectt: Tampico Harbor,ectt,4643,Frontera #,18.5333,-92.65,binnen,Buchquotient Flach weg,8.8,7.8,"Frontera, Tabasco, Mexico [harmonics_utide_tidetables.txt]",1.1,
+ectt: Tampico Harbor,ectt,4645,Progreso #,21.3,-89.6667,offen,Buchquotient Flach weg,4.2,6.6,"Progreso, Yucatán, Mexico [harmonics_ticon4_worldwide.txt]",0.34,
+ectt: Key West,ectt,4647,Belize City,17.5,-88.1833,insel,Buchquotient Flach weg,6.1,14.3,"Belize City, Belize [harmonics-2004-06-14_mod.txt]",0.03,
+ectt: Key West,ectt,4649,Punta Gorda,16.1,-88.8167,insel,Buchquotient Flach weg,3.1,13.2,"Punta Gorda, Belize [harmonics-2004-06-14_mod.txt]",1.7,
+ectt: Key West,ectt,4653,Puerto Cortes,15.8333,-87.95,offen,Buchquotient Flach weg,12.9,3.6,"Puerto Cortés, Honduras [harmonics_ticon4_worldwide.txt]",1.17,
+ectt: Key West,ectt,4775,Matanzas,23.0667,-81.5333,gemischt,Buchquotient Flach weg,6.1,4.7,"Matanzas, Cuba [harmonics_utide_tidetables.txt]",1.71,7.4
+ectt: Key West,ectt,4877,"Roseau, Dominica",15.3,-61.4,offen,Buchquotient Flach weg,5.8,5.3,"Roseau, Dominica [harmonics_ticon4_worldwide.txt]",1.01,
+ectt: Key West,ectt,4879,"Fort-de-France, Martinique",14.5833,-61.05,gemischt,Buchquotient Flach weg,15.3,13.3,"Fort-de-France, Martinique [harmonics_utide_observations.txt]",2.53,
+ectt: Key West,ectt,4885,"Kingstown, St. Vincent <15>",13.1667,-61.2167,gemischt,Buchquotient Flach weg,27.3,10.9,"Kingstown, Saint Vincent and the Grenadines [harmonics_utide_observations.txt]",2.08,30.4
+ectt: Key West,ectt,4887,"Bridgetown, Barbados",13.1,-59.6333,offen,Buchquotient Flach weg,4.8,2.8,"Bridgetown, Barbados [harmonics_utide_observations.txt]",1.25,
+ectt: Key West,ectt,4889,Grenada,12.0667,-61.75,offen,Buchquotient Flach weg,14.0,7.0,"Saint George's Harbour, Grenada [harmonics-1997-05-25_mod.txt]",1.86,17.5
+ectt: Key West,ectt,4891,"Scarborough, Tobago",11.1833,-60.7333,gemischt,Buchquotient Flach weg,7.0,4.2,"Scarborough, Tobago, Trinidad and Tobago [harmonics_att_np202.txt]",0.0,8.1
+ectt: Cristobal,ectt,4893,"Schottegat, Curacao #",12.1167,-68.9333,gemischt,Buchquotient Flach weg,5.8,5.6,"Willemstad, Curaçao [harmonics-1997-05-25_mod.txt]",1.57,
+ectt: San Juan,ectt,4833,"Ensenada Honda, Culebra Island",18.3,-65.2833,offen,Buchquotient Flach weg,27.2,4.5,"Culebra, Puerto Rico [harmonics-dwf-20251228-free.txt]",2.03,
+ectt: San Juan,ectt,4837,Playa de Fajardo,18.3333,-65.6333,insel,Buchquotient Flach weg,30.5,5.9,"Fajardo, Puerto Rico [harmonics-dwf-20251228-free.txt]",0.32,
+ectt: San Juan,ectt,4843,Puerto Real,18.0833,-67.1833,gemischt,Buchquotient Flach weg,35.7,8.0,"Puerto Real, Puerto Rico [harmonics-dwf-20251228-free.txt]",1.11,
+ectt: Isla Zapara,ectt,4915,Punta de Palmas,10.8,-71.6167,insel,CAL 1.0 Spring 45,11.0,15.5,"Punta de Palmas, Venezuela [harmonics_att_np202.txt]",0.0,13.6
+ectt: Punta Gorda,ectt,4941,Staubles Bay,10.6833,-61.65,offen,CAL 1.0 Spring 45,5.5,3.3,"Gaspar Grande, Trinidad and Tobago [harmonics_att_np202.txt]",2.6,4.0
+ectt: Punta Gorda,ectt,4943,Carenage Bay,10.6833,-61.6,offen,CAL 1.0 Spring 45,6.5,3.7,"Carenage Bay, Trinidad and Tobago [harmonics_att_np202.txt]",0.0,
+ectt: Punta Gorda,ectt,4947,Bonasse pier,10.0833,-61.8667,insel,CAL 1.0 Spring 45,4.5,4.2,"Cedros (Bonasse) Pier, Trinidad and Tobago [harmonics_att_np202.txt]",1.28,3.9
+ectt: Punta Gorda,ectt,4949,Erin Bay,10.0667,-61.65,gemischt,CAL 1.0 Spring 45,4.4,3.4,"Herine (Erin) Bay, Trinidad and Tobago [harmonics_att_np202.txt]",1.24,4.5
+ectt: Punta Gorda,ectt,4951,Guayaguayare Bay,10.15,-61.0167,offen,CAL 1.0 Spring 45,5.1,4.7,"Guayaguayare Bay, Trinidad and Tobago [harmonics_att_np202.txt]",0.0,5.3
+ectt: Punta Gorda,ectt,4953,Nariva River,10.4,-61.0333,offen,CAL 1.0 Spring 45,5.1,3.2,"Nariva River (Cocal), Trinidad and Tobago [harmonics_att_np202.txt]",1.59,4.9
+ectt: Suriname Rivier,ectt,4969,Cayenne,4.9333,-52.3333,offen,Buchquotient Flach weg,5.8,4.1,"Cayenne, French Guiana [harmonics-1997-05-25_mod.txt]",0.0,7.0
+ectt: Suriname Rivier,ectt,4977,"Ilha do Brigue, Amazon River",0.9167,-50.0833,insel,Buchquotient Flach weg,9.3,11.6,"Barra Norte (Rio de Brigue), Amapá, Brazil [harmonics_att_np207.txt]",0.0,10.6
+ectt: Suriname Rivier,ectt,4981,"Macapa, Amazon River",-0.05,-51.1833,insel,Buchquotient Flach weg,7.9,19.7,"Santana (Cia Docas), Amapá, Brazil [harmonics_utide_observations.txt]",2.14,10.5
+ectt: Suriname Rivier,ectt,4993,"Santana, Recifes de",-2.2667,-43.6,insel,Buchquotient Flach weg,11.1,5.2,"Ilha de Santana, Maranhão, Brazil [harmonics_att_np207.txt]",0.0,11.6
+ectt: Suriname Rivier,ectt,4999,Camocim,-2.8833,-40.8667,gemischt,Buchquotient Flach weg,6.2,3.6,"Camocim, Ceará, Brazil [harmonics_att_np207.txt]",0.0,7.5
+ectt: Recife,ectt,5013,Cabedelo,-6.9667,-34.8333,offen,Buchquotient Flach weg,4.2,4.6,"Cabedelo (Porto), Paraíba, Brazil [harmonics_att_np207.txt]",0.9,
+ectt: Recife,ectt,5015,Tambau,-7.1,-34.8333,offen,Buchquotient Flach weg,3.7,4.7,"Tambaú (João Pessoa), Paraíba, Brazil [harmonics_att_np207.txt]",1.84,4.3
+ectt: Recife,ectt,5021,Rio Sao Francisco (bar),-10.5167,-36.4,offen,Buchquotient Flach weg,3.8,3.5,"Rio São Francisco Bar, Alagoas, Brazil [harmonics_att_np207.txt]",0.0,4.8
+ectt: Recife,ectt,5023,Aracaju,-10.9333,-37.05,gemischt,Buchquotient Flach weg,5.8,5.9,"Aracaju (Capitania dos Portos), Sergipe, Brazil [harmonics_att_np207.txt]",1.51,
+ectt: Recife,ectt,5025,Salvador,-12.9667,-38.5167,insel,Buchquotient Flach weg,1.9,3.2,"Salvador (Porto), Bahia, Brazil [harmonics_ticon4_worldwide.txt]",0.54,
+ectt: Recife,ectt,5035,Canavieiras,-15.6667,-38.9333,offen,Buchquotient Flach weg,3.7,9.3,"Canavieiras, Bahia, Brazil [harmonics_utide_observations.txt]",0.0,4.3
+ectt: Recife,ectt,5039,Cumuruxatiba,-17.1,-39.1833,offen,Buchquotient Flach weg,4.8,3.7,"Cumuruxatiba, Bahia, Brazil [harmonics_att_np207.txt]",0.0,5.5
+ectt: Recife,ectt,5043,Abrolhos Anchorage,-17.9667,-38.7,offen,Buchquotient Flach weg,4.3,5.4,"Ilhas dos Abrolhos, Bahia, Brazil [harmonics_att_np207.txt]",0.0,5.0
+ectt: Recife,ectt,5045,Vitoria,-20.3167,-40.3167,binnen,Buchquotient Flach weg,5.5,2.7,"Vitória, Espírito Santo, Brazil [harmonics_att_np207.txt]",2.34,6.3
+ectt: Recife,ectt,5047,Guarapari,-20.6667,-40.5,offen,Buchquotient Flach weg,7.5,8.4,"Guarapari, Espírito Santo, Brazil [harmonics_att_np207.txt]",0.0,8.3
+ectt: Rio de Janeiro,ectt,5063,Parati,-23.2333,-44.7167,binnen,Buchquotient Flach weg,4.5,4.9,"Paraty, Rio de Janeiro, Brazil [harmonics_att_np207.txt]",1.47,8.0
+ectt: Rio de Janeiro,ectt,5077,Porto Belo,-27.15,-48.55,offen,Buchquotient Flach weg,5.9,6.8,"Porto Belo, Santa Catarina, Brazil [harmonics_att_np207.txt]",0.0,2.9
+ectt: Rio de Janeiro,ectt,5083,Laguna,-28.5,-48.7833,gemischt,Buchquotient Flach weg,12.1,20.1,"Laguna, Santa Catarina, Brazil [harmonics_att_np207.txt]",2.05,
+ectt: Buenos Aires,ectt,5101,Punta Norte del Cabo San Antonio <17>,-36.3,-56.7833,offen,Buchquotient Flach weg,12.7,12.4,"Cabo San Antonio, Buenos Aires, Argentina [harmonics_att_np207.txt]",1.03,14.4
+ectt: Puerto Ingeniero White,ectt,5133,Faro Segunda Barranca,-40.7833,-62.2833,offen,CAL 1.0 Spring 45,13.6,5.9,"Segunda Barranca, Buenos Aires, Argentina [harmonics_att_np207.txt]",0.0,14.4
+ectt: Comodoro Rivadavia,ectt,5137,Caleta de los Loros,-41.0333,-64.1,offen,CAL 1.0 Spring 45,10.0,3.7,"Caleta de los Loros, Río Negro, Argentina [harmonics_att_np207.txt]",0.0,10.8
+ectt: Comodoro Rivadavia,ectt,5143,Pueyrredon (Fondeadero),-42.4,-64.15,offen,CAL 1.0 Spring 45,10.3,13.1,"Pueyrredón, Chubut, Argentina [harmonics_att_np207.txt]",0.0,11.0
+ectt: Comodoro Rivadavia,ectt,5145,La Argentina (Fondeadero),-42.3833,-64.5667,insel,CAL 1.0 Spring 45,9.0,11.4,"La Argentina, Chubut, Argentina [harmonics_att_np207.txt]",0.0,10.0
+ectt: Comodoro Rivadavia,ectt,5147,Punta Norte,-42.0833,-63.7667,offen,CAL 1.0 Spring 45,10.0,4.5,"Punta Norte, Chubut, Argentina [harmonics_att_np207.txt]",0.0,10.7
+ectt: Comodoro Rivadavia,ectt,5157,Puerto Madryn,-42.7667,-65.0333,gemischt,CAL 1.0 Spring 45,4.5,4.2,"Puerto Madryn, Chubut, Argentina [harmonics_utide_observations.txt]",0.49,
+ectt: Comodoro Rivadavia,ectt,5163,Bahia Janssen,-44.0333,-65.2333,offen,CAL 1.0 Spring 45,3.2,3.7,"Bahía Janssen, Chubut, Argentina [harmonics_att_np207.txt]",0.0,3.7
+ectt: Comodoro Rivadavia,ectt,5171,Bahia Camarones,-44.9,-65.6,insel,CAL 1.0 Spring 45,4.0,4.8,"Caleta Carolina, Chubut, Argentina [harmonics_att_np207.txt]",0.0,2.7
+ectt: Comodoro Rivadavia,ectt,5181,Bahia Bustamante,-45.1167,-66.5333,gemischt,CAL 1.0 Spring 45,3.2,3.7,"Bahía Bustamante, Chubut, Argentina [harmonics_att_np207.txt]",0.0,3.7
+ectt: Comodoro Rivadavia,ectt,5185,Cabo Blanco,-47.2,-65.75,offen,CAL 1.0 Spring 45,5.6,5.1,"Cabo Blanco, Santa Cruz, Argentina [harmonics_att_np207.txt]",0.0,5.4
+ectt: Comodoro Rivadavia,ectt,5187,Puerto Deseado,-47.75,-65.9167,binnen,CAL 1.0 Spring 45,4.3,3.4,"Puerto Deseado, Santa Cruz, Argentina [harmonics_utide_observations.txt]",0.42,
+ectt: Comodoro Rivadavia,ectt,5189,Bahia Oso Marino,-47.9333,-65.8,offen,CAL 1.0 Spring 45,6.9,5.3,"Bahía Oso Marino, Santa Cruz, Argentina [harmonics_att_np207.txt]",0.0,6.6
+ectt: Comodoro Rivadavia,ectt,5191,Bahia de los Nodales,-48.0167,-65.95,gemischt,CAL 1.0 Spring 45,9.4,3.6,"Bahía de los Nodales, Santa Cruz, Argentina [harmonics_att_np207.txt]",0.0,9.3
+ectt: Punta Loyola,ectt,5199,Ria Coig,-50.95,-69.1667,offen,Buchquotient Flach weg,3.0,10.8,"Ría Coig, Santa Cruz, Argentina [harmonics_att_np207.txt]",0.0,3.8
+ectt: Punta Loyola,ectt,5203,Rio Gallegos (Reduccion Beacon),-51.6167,-69.2167,binnen,Buchquotient Flach weg,6.2,28.1,"Río Gallegos (Muelle El Turbio), Santa Cruz, Argentina [harmonics-1997-05-25_mod.txt]",0.54,
+ectt: Punta Loyola,ectt,5205,Cabo Virgenes,-52.35,-68.3667,offen,Buchquotient Flach weg,2.7,3.3,"Cabo Vírgenes, Santa Cruz, Argentina [harmonics_att_np207.txt]",0.0,3.8
+wctt: Cabo de Hornos,wctt,105,Puerto Melinka,-43.9,-73.75,insel,Buchquotient Flach weg,7.3,3.0,"Puerto Melinka, Chile [harmonics_utide_observations.txt]",0.0,9.5
+wctt: Puerto Montt,wctt,115,Castro,-42.4833,-73.7667,binnen,CAL 1.0 Spring 45,4.1,3.4,"Castro, Chile [harmonics_utide_observations.txt]",0.0,5.9
+wctt: Valparaiso,wctt,129,Ancud,-41.8667,-73.8333,insel,CAL 1.0 Spring 45,5.3,4.2,"Ancud, Chile [harmonics_utide_observations.txt]",0.0,4.6
+wctt: Valparaiso,wctt,139,Queule,-39.3833,-73.2333,offen,CAL 1.0 Spring 45,14.1,9.0,"Queule, Chile [harmonics_utide_observations.txt]",0.0,14.8
+wctt: Valparaiso,wctt,169,San Antonio,-33.5833,-71.6333,gemischt,CAL 1.0 Spring 45,4.9,3.7,"San Antonio, Chile [harmonics_utide_observations.txt]",0.0,7.3
+wctt: Valparaiso,wctt,177,Quintero,-32.7667,-71.5333,offen,CAL 1.0 Spring 45,4.4,3.4,"Quintero, Chile [harmonics_utide_observations.txt]",1.23,
+wctt: Valparaiso,wctt,183,Pichidangui,-32.15,-71.55,offen,CAL 1.0 Spring 45,6.5,3.5,"Pichidangui, Chile [harmonics_utide_observations.txt]",0.0,8.4
+wctt: Antofagasta,wctt,195,Huasco,-28.4667,-71.2333,gemischt,Buchquotient,2.0,3.4,"Huasco, Chile [harmonics_utide_observations.txt]",0.0,1.7
+wctt: Antofagasta,wctt,205,Chanaral de las Animas,-26.35,-70.6333,binnen,Buchquotient,2.7,3.7,"Chañaral, Chile [harmonics_utide_observations.txt]",0.64,2.5
+wctt: Antofagasta,wctt,207,Taltal,-25.4167,-70.4833,gemischt,Buchquotient,2.5,4.0,"Taltal, Chile [harmonics_utide_observations.txt]",0.0,2.6
+wctt: Antofagasta,wctt,209,Paposo,-25.0333,-70.4667,gemischt,Buchquotient,4.0,5.0,"Paposo, Chile [harmonics_utide_observations.txt]",0.0,4.0
+wctt: Antofagasta,wctt,219,Tocopilla,-22.1,-70.2333,offen,Buchquotient,5.7,3.4,"Tocopilla, Chile [harmonics_utide_observations.txt]",0.0,7.6
+wctt: Antofagasta,wctt,227,Pisagua,-19.5833,-70.2333,offen,Buchquotient,4.5,3.3,"Pisagua, Chile [harmonics_utide_observations.txt]",0.0,6.2
+wctt: Matarani,wctt,231,Ilo,-17.6333,-71.35,offen,CAL 1.0 Spring 45,4.0,5.2,"Ilo, Peru [harmonics_utide_observations.txt]",1.27,
+wctt: Matarani,wctt,235,Puerto San Juan,-15.35,-75.15,gemischt,CAL 1.0 Spring 45,2.3,3.5,"San Juan de Marcona, Peru [harmonics_ticon4_worldwide.txt]",1.25,2.5
+wctt: Callao,wctt,245,Chimbote,-9.0833,-78.6333,gemischt,Buchquotient HW/NW,4.6,5.1,"Chimbote, Peru [harmonics_utide_observations.txt]",2.4,
+wctt: Talara,wctt,253,Paita,-5.0833,-81.1167,offen,CAL 1.0 Spring 45,1.7,2.5,"Paita, Peru [harmonics_ticon4_worldwide.txt]",1.0,
+wctt: La Libertad,wctt,263,Puna,-2.7333,-79.9167,insel,Buchquotient HW/NW,3.1,7.7,"Puná, Ecuador [harmonics_utide_observations.txt]",0.55,3.9
+wctt: La Libertad,wctt,271,Bahia Manta,-0.95,-80.7333,offen,Buchquotient HW/NW,1.7,2.3,"Manta (Punta Murciélago), Ecuador [harmonics_ticon4_worldwide.txt]",2.47,2.9
+wctt: Buenaventura,wctt,295,Tumaco,1.8333,-78.7333,offen,Buchquotient Flach weg,0.8,2.2,"Tumaco (Isla del Morro), Colombia [harmonics_ticon4_worldwide.txt]",1.58,2.1
+wctt: Balboa,wctt,313,Bahia Pina,7.5667,-78.1833,offen,CAL 1.0 Spring 45,2.8,6.4,"Bahía Piña, Panama [harmonics-2004-06-14_mod.txt]",1.85,
+wctt: Balboa,wctt,323,Naos Island,8.9167,-79.5333,insel,CAL 1.0 Spring 45,1.0,3.0,"Isla Naos, Panama [harmonics_ticon4_worldwide.txt]",0.08,1.7
+wctt: Puntarenas,wctt,337,Puerto Armuelles,8.2667,-82.8667,gemischt,CAL 1.0 Spring 45,1.1,2.4,"Puerto Armuelles, Panama [harmonics_ticon4_worldwide.txt]",0.0,2.5
+wctt: La Union,wctt,365,La Libertad,13.4833,-89.3167,offen,Buchquotient Flach weg,1.5,3.1,"La Libertad, El Salvador [harmonics_utide_observations.txt]",0.0,3.7
+wctt: La Union,wctt,369,Puerto de San Jose,13.9167,-90.8333,offen,Buchquotient Flach weg,2.6,2.3,"Puerto San José, Guatemala [harmonics_ticon4_worldwide.txt]",0.05,2.9
+wctt: La Union,wctt,371,Champerico,14.3,-91.9333,offen,Buchquotient Flach weg,4.2,2.5,"Champerico, Guatemala [harmonics_ticon4_worldwide.txt]",0.0,5.7
+wctt: Salina Cruz,wctt,373,Puerto Angel,15.65,-96.5,offen,CAL 1.0 Spring 45,4.3,4.8,"Puerto Ángel, Oaxaca, Mexico [harmonics_utide_observations.txt]",1.96,
+wctt: San Diego,wctt,379,Manzanillo,19.05,-104.3333,offen,Buchquotient,8.2,4.4,"Manzanillo, Colima, Mexico [harmonics_ticon4_worldwide.txt]",1.74,
+wctt: San Diego,wctt,383,Isla Socorro,18.7333,-111.0167,offen,Buchquotient,3.8,3.2,"Isla Socorro, Colima, Mexico [harmonics_utide_observations.txt]",0.0,3.9
+wctt: San Diego,wctt,399,San Carlos,24.7833,-112.1167,gemischt,Buchquotient,3.9,4.2,"San Carlos, Baja California Sur, Mexico [harmonics_utide_observations.txt]",0.0,4.5
+wctt: San Diego,wctt,407,Point Loma,32.6667,-117.2333,offen,Buchquotient,2.2,3.3,"Ballast Point, California [harmonics-dwf-20251228-free.txt]",2.22,
+wctt: San Diego,wctt,411,"San Diego, Quarantine Station",32.7,-117.2333,gemischt,Buchquotient,2.6,3.3,"Ballast Point, California [harmonics-dwf-20251228-free.txt]",1.48,
+wctt: Los Angeles,wctt,467,"Catalina Harbor, Santa Catalina Island",33.4333,-118.5,offen,Buchquotient HW/NW,1.9,3.6,"Catalina Harbor, California [harmonics-2004-06-14_mod.txt]",0.35,3.9
+wctt: San Francisco,wctt,519,"Ocean Beach, outer coast",37.7667,-122.5167,insel,Buchquotient Flach weg,1.0,3.3,"Ocean Beach, California [harmonics-2004-06-14_mod.txt]",0.0,
+wctt: San Francisco,wctt,769,Tomales Bay entrance,38.2333,-122.9833,offen,Buchquotient Flach weg,1.2,6.3,"Tomales Bay Entrance, California [harmonics-2004-06-14_mod.txt]",0.8,1.8
+wctt: Astoria,wctt,909,Columbia River entrance (N. Jetty),46.2667,-124.0667,insel,Bau heute,2.0,5.3,"Cape Disappointment, Washington [harmonics-dwf-20251228-free.txt]",2.23,
+wctt: Astoria,wctt,915,"Ilwaco, Baker Bay, Wash",46.3,-124.0333,insel,Bau heute,6.1,5.0,"Cape Disappointment, Washington [harmonics-dwf-20251228-free.txt]",2.34,
+wctt: Astoria,wctt,921,"Point Adams, Oreg",46.2,-123.95,insel,Bau heute,1.8,5.3,"Hammond, Oregon [harmonics-dwf-20251228-free.txt]",0.43,
+wctt: Port Townsend,wctt,1297,Patos Island Wharf,48.7833,-122.9667,insel,Buchquotient Flach weg,2.4,5.2,"Patos Island, Washington [harmonics-2004-06-14_mod.txt]",0.0,
+wctt: Victoria,wctt,1299,"Sooke, Vancouver Island",48.3667,-123.7333,insel,Buchquotient,4.5,5.6,"Sooke, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.62,
+wctt: Victoria,wctt,1301,"Esquimalt, Vancouver Island",48.4333,-123.4333,insel,Buchquotient,2.2,5.5,"Esquimalt Government Hbr., British Columbia, Canada [harmonics_utide_tidetables.txt]",0.44,
+wctt: Vancouver,wctt,1305,"Sidney, Haro Strait",48.65,-123.4,insel,Bau heute,4.6,8.1,"Sidney, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.53,
+wctt: Vancouver,wctt,1307,"Fulford Harbor, Saltspring Island",48.7667,-123.45,insel,Bau heute,4.4,17.2,"Fulford Harbour, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.27,
+wctt: Vancouver,wctt,1309,"Active Pass, Mayne Island",48.8667,-123.3333,insel,Bau heute,2.8,5.7,"Whaler Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",2.34,
+wctt: Vancouver,wctt,1311,Cowichan Bay,48.75,-123.6167,binnen,Bau heute,5.6,33.4,"Cowichan Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",1.07,
+wctt: Vancouver,wctt,1313,"Chemainus, Stuart Channel",48.9167,-123.7,insel,Bau heute,5.4,20.2,"Chemainus, British Columbia, Canada [harmonics_utide_tidetables.txt]",1.44,
+wctt: Vancouver,wctt,1315,Ladysmith,48.9833,-123.7833,insel,Bau heute,3.7,10.4,"Ladysmith, British Columbia, Canada [harmonics_utide_tidetables.txt]",2.91,
+wctt: Vancouver,wctt,1317,"Sand Heads, Fraser River",49.1167,-123.3,insel,Bau heute,2.3,5.3,"Sand Heads Lighthouse, British Columbia, Canada [harmonics_utide_observations.txt]",1.31,
+wctt: Vancouver,wctt,1323,"Squamish, Howe Sound",49.6833,-123.1667,binnen,Bau heute,2.5,4.7,"Squamish Yacht Club, British Columbia, Canada [harmonics_utide_tidetables.txt]",1.55,
+wctt: Vancouver,wctt,1325,Nanaimo,49.1667,-123.95,insel,Bau heute,2.0,5.0,"Nanaimo Harbour, British Columbia, Canada [harmonics_utide_observations.txt]",1.97,
+wctt: Vancouver,wctt,1327,"Pender Harbor, Malaspina Strait",49.6333,-124.0333,insel,Bau heute,3.9,5.7,"Pender Harbour (Garden Bay), British Columbia, Canada [harmonics_utide_tidetables.txt]",0.1,
+wctt: Vancouver,wctt,1329,"Comox, Baynes Sound",49.6667,-124.9167,insel,Bau heute,3.1,5.8,"Comox, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.89,
+wctt: Vancouver,wctt,1331,"Whaletown, Cortes Island",50.1,-125.05,insel,Bau heute,2.2,6.0,"Whaletown, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.9,
+wctt: Vancouver,wctt,1333,"Duncan Bay, Discovery Passage",50.0833,-125.3,binnen,Bau heute,5.4,6.0,"Duncan Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.81,
+wctt: Vancouver,wctt,1341,"Gowlland Harbor, Discovery Passage",50.0667,-125.2333,insel,Bau heute,6.7,8.3,"Gowlland Hbr., British Columbia, Canada [harmonics_utide_tidetables.txt]",1.18,
+wctt: Vancouver,wctt,1343,Seymour Narrows (Canoe Pass),50.1333,-125.35,binnen,Bau heute,8.6,11.1,"Seymour Narrows, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.34,
+wctt: Vancouver,wctt,1345,"Owen Bay, Okisollo Channel",50.3167,-125.2167,binnen,Bau heute,8.6,4.5,"Owen Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.84,
+wctt: Sitka,wctt,1349,"Knox Bay, West Thurlow Island",50.4,-125.6,binnen,Buchquotient,5.0,4.2,"Knox Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",1.98,
+wctt: Sitka,wctt,1351,"Kelsey Bay, Johnstone Strait",50.4,-125.9667,insel,Buchquotient,2.4,3.4,"Kelsey Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.46,
+wctt: Sitka,wctt,1353,"Port Neville, Johnstone Strait",50.5,-126.0833,insel,Buchquotient,2.7,3.7,"Port Neville, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.52,
+wctt: Sitka,wctt,1355,"Port Harvey, Johnstone Strait",50.5667,-126.2833,insel,Buchquotient,2.7,3.9,"Port Harvey, British Columbia, Canada [harmonics_utide_tidetables.txt]",1.09,
+wctt: Sitka,wctt,1359,"Glendale Cove, Knight Inlet",50.6667,-125.7333,binnen,Buchquotient,3.1,3.4,"Glendale Cove, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.88,
+wctt: Sitka,wctt,1365,"Alert Bay, Cormorant Island",50.5833,-126.9333,insel,Buchquotient,1.5,3.3,"Alert Bay (Cormorant Island), British Columbia, Canada [harmonics_utide_tidetables.txt]",0.55,
+wctt: Sitka,wctt,1367,"Port Hardy, Vancouver Island",50.7167,-127.4833,insel,Buchquotient,2.1,3.2,"Port Hardy, British Columbia, Canada [harmonics_utide_observations.txt]",0.71,
+wctt: Sitka,wctt,1369,"Shushartie Bay, Goletas Channel",50.85,-127.8667,insel,Buchquotient,2.5,3.3,"Shushartie Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.86,
+wctt: Sitka,wctt,1371,Port San Juan,48.55,-124.4167,gemischt,Buchquotient,3.1,4.0,"Port Renfrew, British Columbia, Canada [harmonics_utide_observations.txt]",0.64,3.4
+wctt: Sitka,wctt,1375,"Bamfield, Barkley Sound",48.8333,-125.1333,insel,Buchquotient,2.3,8.6,"Bamfield, British Columbia, Canada [harmonics_utide_observations.txt]",0.36,
+wctt: Sitka,wctt,1377,Port Alberni,49.2333,-124.8167,binnen,Buchquotient,1.9,22.5,"Port Alberni, British Columbia, Canada [harmonics_utide_observations.txt]",0.88,
+wctt: Sitka,wctt,1379,Clayoquot,49.15,-125.9167,insel,Buchquotient,2.5,3.7,"Tofino, British Columbia, Canada [harmonics_utide_observations.txt]",0.52,3.1
+wctt: Sitka,wctt,1381,Riley Cove,49.3833,-126.2167,insel,Buchquotient,2.7,3.5,"Riley Cove, British Columbia, Canada [harmonics_utide_tidetables.txt]",1.05,
+wctt: Sitka,wctt,1383,Nootka Sound,49.6167,-126.6167,gemischt,Buchquotient,2.5,3.6,"Saavedra Islands (Nootka Sound), British Columbia, Canada [harmonics_utide_tidetables.txt]",0.59,
+wctt: Sitka,wctt,1385,Esperanza Inlet,49.8667,-126.7167,binnen,Buchquotient,4.0,13.6,"Ceepeecee, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.81,
+wctt: Sitka,wctt,1393,"Bergh Cove, Quatsino Sound",50.5333,-127.6167,insel,Buchquotient,3.4,26.6,"Bergh Cove (Quatsino Sound), British Columbia, Canada [harmonics_utide_tidetables.txt]",0.66,
+wctt: Sitka,wctt,1801,Scraggy Point,57.3333,-135.7167,insel,Buchquotient,1.4,10.5,"Scraggy Island, Alaska [harmonics-dwf-20251228-free.txt]",0.95,
+wctt: Sitka,wctt,1809,Bear Bay,57.4167,-135.5833,binnen,Buchquotient,1.4,17.2,"Sergius Narrows, Alaska [harmonics-dwf-20251228-free.txt]",2.72,
+wctt: Ketchikan,wctt,1395,"Treadwell Bay, Slingsby Channel",51.1,-127.5333,insel,Buchquotient Flach weg,4.1,8.9,"Treadwell Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.63,
+wctt: Ketchikan,wctt,1397,"Wadhams, Rivers Inlet",51.5167,-127.5167,binnen,Buchquotient Flach weg,3.0,3.3,"Wadhams, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.9,
+wctt: Ketchikan,wctt,1399,Namu Harbor,51.8667,-127.8667,insel,Buchquotient Flach weg,3.0,3.1,"Namu, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.58,
+wctt: Ketchikan,wctt,1401,Addenbroke Island,51.6,-127.8167,insel,Buchquotient Flach weg,3.2,3.1,"Addenbroke Island, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.85,
+wctt: Ketchikan,wctt,1407,"Port Blackney, Milbanke Sound",52.3167,-128.35,insel,Buchquotient Flach weg,2.4,3.1,"Port Blackney, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.53,
+wctt: Ketchikan,wctt,1409,"Bella Coola, North Bentinck Arm",52.3833,-126.8,binnen,Buchquotient Flach weg,2.2,3.0,"Bella Coola, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.94,
+wctt: Ketchikan,wctt,1411,Klemtu Passage,52.6,-128.5167,insel,Buchquotient Flach weg,2.8,3.2,"Klemtu, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.73,
+wctt: Ketchikan,wctt,1415,"Barnard Harbor, Whale Channel",53.0833,-129.1167,insel,Buchquotient Flach weg,1.9,3.0,"Barnard Harbour, British Columbia, Canada [harmonics_utide_tidetables.txt]",1.03,
+wctt: Ketchikan,wctt,1417,"Hartley Bay, Wright Sound",53.4333,-129.25,insel,Buchquotient Flach weg,2.0,3.0,"Hartley Bay, British Columbia, Canada [harmonics_utide_observations.txt]",1.02,
+wctt: Ketchikan,wctt,1419,"Kitimat, Douglas Channel",53.9833,-128.7,binnen,Buchquotient Flach weg,1.2,2.7,"Kitimat, British Columbia, Canada [harmonics_utide_observations.txt]",0.69,
+wctt: Ketchikan,wctt,1423,"Lowe Inlet, Grenville Channel",53.55,-129.5833,binnen,Buchquotient Flach weg,1.9,3.0,"Lowe Inlet, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.0,
+wctt: Ketchikan,wctt,1429,Beaver Passage,53.8,-130.35,insel,Buchquotient Flach weg,1.4,2.8,"Kitkatla, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.57,2.2
+wctt: Ketchikan,wctt,1431,Porcher Island,54.0833,-130.4,insel,Buchquotient Flach weg,2.6,3.3,"Humpback Bay (Porcher Island), British Columbia, Canada [harmonics_utide_tidetables.txt]",0.52,
+wctt: Ketchikan,wctt,1433,Qlawdzeet Anchorage,54.2,-130.7667,insel,Buchquotient Flach weg,1.5,2.7,"Qlawdzeet Anchorage, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.89,
+wctt: Ketchikan,wctt,1445,Wiah Point,54.1167,-132.3167,gemischt,Buchquotient Flach weg,2.3,3.1,"Wiah Point, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.68,
+wctt: Ketchikan,wctt,1459,"Kumeon Bay, B.C. <9>",54.7167,-130.2333,binnen,Buchquotient Flach weg,3.3,2.6,"Kumeon Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.6,
+wctt: Ketchikan,wctt,1461,"Mill Bay, Nass River, B.C. <9>",55.0,-129.9,insel,Buchquotient Flach weg,3.8,3.3,"Mill Bay, British Columbia, Canada [harmonics_utide_tidetables.txt]",0.88,
+wctt: Juneau,wctt,1811,"Povorotni Island, Pogibshi Point",57.5167,-135.55,insel,Buchquotient,1.0,20.9,"Provorotni Island, Alaska [harmonics-dwf-20251228-free.txt]",0.35,
+wctt: Seldovia,wctt,2167,Puale Bay,57.7,-155.3833,insel,Buchquotient Flach weg,2.1,2.7,"Puale Bay, Alaska [harmonics-dwf-20251228-free.txt]",0.94,
+wctt: Kodiak,wctt,2531,"Tuktoyaktuk, Mackenzie Bay",69.45,-133.0,gemischt,Buchquotient Flach weg,27.0,19.3,"Tuktoyaktuk, Northwest Territories, Canada [harmonics_utide_tidetables.txt]",1.33,
+cptt: Pusan,cptt,1025,"Ch'onsong-man, Kadok-to",35.0167,128.8167,insel,CAL 1.0 Spring 45,5.6,4.0,"Gadeokdo, South Korea [harmonics_utide_tidetables.txt]",0.0,8.0
+cptt: Jolo,cptt,3969,Cape Margerie (Port Martin) },-66.8333,141.4167,gemischt,CAL 1.0 Spring 45,15.0,4.0,"Port Martin, Antarctica [harmonics-2004-06-14_mod.txt]",2.35,5.2
+cptt: Jolo,cptt,3971,"Cade Denison, George V Coast }",-67.0,142.6667,gemischt,CAL 1.0 Spring 45,18.5,4.7,"Commonwealth Bay, Antarctica [harmonics-2004-06-14_mod.txt]",0.0,9.6
+cptt: Otomari,cptt,433,Omu Ko,44.5833,142.9667,offen,Buchquotient Flach weg,6.7,4.4,"Omu, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",0.45,7.0
+cptt: Yamato Wan,cptt,3663,Ras Al Mishab },28.1167,48.6167,offen,CAL 1.0 Spring 45,5.8,5.6,"Ras Al Mishab, Saudi Arabia [harmonics-1997-05-25_mod.txt]",0.0,7.1
+cptt: Yamato Wan,cptt,3979,"Lent Islands, Graham Land }",-66.8833,-66.8,insel,CAL 1.0 Spring 45,42.2,6.6,"Detaille Island, Antarctica [harmonics_att_np207.txt]",1.85,
+cptt: Yamato Wan,cptt,3981,"Ferin Head, Graham Land }",-66.0167,-65.35,insel,CAL 1.0 Spring 45,42.5,5.2,"Prospect Point, Antarctica [harmonics_att_np207.txt]",1.86,
+cptt: Kamaisi,cptt,369,Rausu Hakuchi,44.0167,145.2,insel,CAL 1.0 Spring 45,10.0,4.6,"Rausu, Hokkaido, Japan [harmonics_utide_observations.txt]",0.0,
+cptt: Kamaisi,cptt,373,Hanasaki,43.2833,145.5833,insel,CAL 1.0 Spring 45,4.8,4.9,"Hanasaki, Hokkaido, Japan [harmonics_utide_observations.txt]",1.38,
+cptt: Kamaisi,cptt,375,Ochiishi Wan,43.1667,145.5167,insel,CAL 1.0 Spring 45,6.0,4.1,"Ochiishi, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",1.9,4.5
+cptt: Kamaisi,cptt,379,Akkeshi Wan,43.0333,144.85,gemischt,CAL 1.0 Spring 45,8.2,6.4,"Akkeshi Ko, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",0.9,7.6
+cptt: Kamaisi,cptt,383,Rubeshibetsu Saki,42.2,143.3333,offen,CAL 1.0 Spring 45,6.1,5.1,"Rubeshibetsu, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",0.49,4.7
+cptt: Kamaisi,cptt,385,Utaro,41.9667,143.2,offen,CAL 1.0 Spring 45,5.7,3.8,"Toyo, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",0.86,4.7
+cptt: Kamaisi,cptt,389,"Usu Wan, Iburi Wan",42.5167,140.7667,offen,CAL 1.0 Spring 45,6.0,4.2,"Usu Wan, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",1.5,4.7
+cptt: Kamaisi,cptt,393,Usujiri Wan,41.9333,140.95,offen,CAL 1.0 Spring 45,5.8,4.2,"Usujiri, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",0.0,4.2
+cptt: Kamaisi,cptt,395,Shiokubi Saki,41.7167,140.9667,offen,CAL 1.0 Spring 45,5.3,6.9,"Shiokubi, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",1.03,3.8
+cptt: Kamaisi,cptt,399,Wakimoto,41.5667,140.4333,insel,CAL 1.0 Spring 45,9.2,8.1,"Wakimoto, Hokkaido, Japan [harmonics-2004-06-14_mod.txt]",0.0,8.9
+cptt: Kamaisi,cptt,401,Yoshioka,41.45,140.2333,offen,CAL 1.0 Spring 45,7.5,9.2,"Fukushima (Yoshioka), Hokkaido, Japan [harmonics_utide_observations.txt]",0.74,
+cptt: Kamaisi,cptt,455,Shiriya,41.4,141.45,offen,CAL 1.0 Spring 45,5.8,4.2,"Shiriya, Aomori, Japan [harmonics-2004-06-14_mod.txt]",0.0,5.0
+cptt: Kamaisi,cptt,457,Tomari,41.0833,141.4,gemischt,CAL 1.0 Spring 45,5.7,4.3,"Tomari, Aomori, Japan [harmonics-2004-06-14_mod.txt]",0.0,4.4
+cptt: Kamaisi,cptt,461,Kuji Wan,40.1833,141.8167,gemischt,CAL 1.0 Spring 45,1.1,6.0,"Kuji, Iwate, Japan [harmonics_utide_observations.txt]",1.97,5.1
+cptt: Kamaisi,cptt,465,Yamada Ko,39.4667,141.9667,binnen,CAL 1.0 Spring 45,5.5,4.1,"Yamada, Iwate, Japan [harmonics-2004-06-14_mod.txt]",1.07,3.8
+cptt: Kamaisi,cptt,471,Oginohama Ko,38.3833,141.4333,insel,CAL 1.0 Spring 45,4.3,4.1,"Oginohama, Miyagi, Japan [harmonics-2004-06-14_mod.txt]",1.41,2.7
+cptt: Kamaisi,cptt,475,Hirakata Wan,36.85,140.8,offen,CAL 1.0 Spring 45,6.8,4.0,"Ootu, Ibaraki, Japan [harmonics-2004-06-14_mod.txt]",2.49,5.7
+cptt: Kamaisi,cptt,479,"Nagasaki, Inubo Saki",35.7,140.8667,offen,CAL 1.0 Spring 45,5.7,4.0,"Inubosaki, Chiba, Japan [harmonics-2004-06-14_mod.txt]",0.41,3.9
+cptt: Naha,cptt,443,"Mimmaya, Mimmaya Wan",41.2,140.4333,insel,CAL 1.0 Spring 45,6.7,9.7,"Minmaya, Aomori, Japan [harmonics-2004-06-14_mod.txt]",0.23,
+cptt: Naha,cptt,447,"Shiranai Wan, Mutsu Kaiwan",40.95,140.9667,insel,CAL 1.0 Spring 45,7.3,7.8,"Kominato (Hiranai), Aomori, Japan [harmonics-2004-06-14_mod.txt]",1.31,8.2
+cptt: Naha,cptt,451,Oma,41.5333,140.9,insel,CAL 1.0 Spring 45,9.0,10.6,"Oma, Aomori, Japan [harmonics_utide_observations.txt]",0.76,
+cptt: Naha,cptt,453,Ohata,41.4,141.1667,insel,CAL 1.0 Spring 45,7.6,4.8,"Ohata, Aomori, Japan [harmonics-2004-06-14_mod.txt]",0.0,7.4
+cptt: Naha,cptt,567,Kannoura Ko,33.55,134.3,gemischt,CAL 1.0 Spring 45,6.0,6.4,"Kannoura, Kochi, Japan [harmonics_utide_observations.txt]",0.83,
+cptt: Naha,cptt,569,Muroto Saki,33.2833,134.15,offen,CAL 1.0 Spring 45,2.9,4.2,"Murotu, Kochi, Japan [harmonics-2004-06-14_mod.txt]",0.0,
+cptt: Naha,cptt,573,Susaki Ko <8>,33.4,133.2833,binnen,CAL 1.0 Spring 45,6.0,6.5,"Susaki, Kochi, Japan [harmonics_utide_observations.txt]",0.54,
+cptt: Naha,cptt,711,Yawatahama Ko,33.45,132.4,insel,CAL 1.0 Spring 45,5.4,4.9,"Yawatahama, Ehime, Japan [harmonics-2004-06-14_mod.txt]",1.52,5.8
+cptt: Naha,cptt,713,Okuchi Wan,33.3333,132.3833,insel,CAL 1.0 Spring 45,5.5,4.3,"Okuti Wan (Mikame-cho), Ehime, Japan [harmonics-2004-06-14_mod.txt]",0.66,5.9
+cptt: Naha,cptt,715,Hiburi Shima,33.1667,132.2667,insel,CAL 1.0 Spring 45,5.6,4.1,"Hiburishima, Ehime, Japan [harmonics-2004-06-14_mod.txt]",0.92,5.8
+cptt: Naha,cptt,721,Kashiwa,33.0167,132.5,gemischt,CAL 1.0 Spring 45,5.0,4.6,"Kashiwazaki, Ehime, Japan [harmonics-2004-06-14_mod.txt]",0.39,5.5
+cptt: Naha,cptt,723,Sukumo Ko,32.9,132.7,gemischt,CAL 1.0 Spring 45,5.8,6.2,"Henshima, Kochi, Japan [harmonics_utide_observations.txt]",1.85,
+cptt: Naha,cptt,727,"Saganoseki, Shita Ura",33.2333,131.8833,insel,CAL 1.0 Spring 45,4.2,3.7,"Saganoseki (Shimoura), Oita, Japan [harmonics-2004-06-14_mod.txt]",1.26,4.3
+cptt: Naha,cptt,819,Inokushi Ko <15>,32.8,131.9,binnen,CAL 1.0 Spring 45,4.5,4.3,"Inokushi, Oita, Japan [harmonics-2004-06-14_mod.txt]",0.0,4.8
+cptt: Naha,cptt,821,Todoro Ko,32.5,131.6833,gemischt,CAL 1.0 Spring 45,4.5,5.0,"Totoro, Miyazaki, Japan [harmonics-2004-06-14_mod.txt]",1.03,5.0
+cptt: Naha,cptt,825,Mimitsu,32.3333,131.6167,offen,CAL 1.0 Spring 45,4.7,5.0,"Mimitsu, Miyazaki, Japan [harmonics-2004-06-14_mod.txt]",0.0,4.9
+cptt: Naha,cptt,827,Uchiumi <17>,31.75,131.4667,offen,CAL 1.0 Spring 45,5.0,4.5,"Uchiumi, Miyazaki, Japan [harmonics-2004-06-14_mod.txt]",0.0,5.4
+cptt: Naha,cptt,829,Tonoura,31.5167,131.3667,gemischt,CAL 1.0 Spring 45,4.6,4.4,"Tonoura (Miyazaki), Miyazaki, Japan [harmonics-2004-06-14_mod.txt]",0.03,
+cptt: Naha,cptt,831,"Fukushima Inamachi, Ariake Wan",31.45,131.2,insel,CAL 1.0 Spring 45,4.5,4.3,"Kushima, Miyazaki, Japan [harmonics-2004-06-14_mod.txt]",0.55,5.2
+cptt: Naha,cptt,835,"Yamagawa Ko, Kagoshima Kaiwan",31.2,130.6333,gemischt,CAL 1.0 Spring 45,2.3,3.3,"Yamakawa, Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",0.63,3.0
+cptt: Naha,cptt,837,"Furue Ko, Kagoshima Kaiwan",31.3833,130.7667,gemischt,CAL 1.0 Spring 45,2.5,3.0,"Furuecho (Kanoya), Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",1.86,3.2
+cptt: Naha,cptt,841,"Bono Tsu, Tomari Ura",31.2667,130.2167,gemischt,CAL 1.0 Spring 45,5.0,4.4,"Bonotsu, Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",1.76,
+cptt: Naha,cptt,935,"Isso, Yaku Shima",30.45,130.5,offen,CAL 1.0 Spring 45,2.1,3.1,"Isso (Yakushima), Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",1.19,2.4
+cptt: Naha,cptt,937,Kuchinoerabu Shima,30.4667,130.1833,offen,CAL 1.0 Spring 45,4.7,4.4,"Kuchinoerabu-jima, Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",1.05,5.5
+cptt: Naha,cptt,941,Takara Shima,29.15,129.2,offen,CAL 1.0 Spring 45,4.3,5.5,"Takarajima, Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",0.88,4.9
+cptt: Naha,cptt,945,Sumiyo Wan,28.2333,129.4167,insel,CAL 1.0 Spring 45,4.5,4.5,"Sumiyo (Amami Oshima), Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",1.36,5.0
+cptt: Naha,cptt,947,Koniya,28.15,129.3,insel,CAL 1.0 Spring 45,1.5,3.3,"Koniya (Amami Oshima), Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",1.0,2.1
+cptt: Naha,cptt,949,Nishikomi,28.2333,129.1667,gemischt,CAL 1.0 Spring 45,4.4,4.3,"Nishikomi Wan (Amami Oshima), Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",0.83,5.2
+cptt: Naha,cptt,953,Kasari Wan,28.45,129.65,gemischt,CAL 1.0 Spring 45,4.6,6.5,"Kasari Wan (Amami Oshima), Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",1.14,5.4
+cptt: Naha,cptt,955,Uke Shima,28.0333,129.2333,gemischt,CAL 1.0 Spring 45,4.3,4.9,"Ukeshima, Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",0.03,4.7
+cptt: Naha,cptt,957,"Sammura Wan, Tokuno Shima",27.8667,128.9667,offen,CAL 1.0 Spring 45,4.3,5.1,"San (Tokunoshima), Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",0.85,5.0
+cptt: Naha,cptt,959,"Wadomari, Okinoyerabu Jima",27.4,128.6667,offen,CAL 1.0 Spring 45,4.4,5.0,"Wadomari (Okinoerabujima), Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",0.18,4.8
+cptt: Naha,cptt,961,"Gakiya, Iheya Jima",27.05,127.9667,insel,CAL 1.0 Spring 45,4.3,5.1,"Gakiya (Iheya), Okinawa, Japan [harmonics-2004-06-14_mod.txt]",1.55,5.2
+cptt: Naha,cptt,963,"Sukku, Ora Wan",26.55,128.0333,insel,CAL 1.0 Spring 45,4.3,4.8,"Futami, Okinawa, Japan [harmonics-2004-06-14_mod.txt]",0.17,5.1
+cptt: Naha,cptt,969,Sesoko Byochi,26.6333,127.8833,insel,CAL 1.0 Spring 45,2.3,3.0,"Motobu, Okinawa, Japan [harmonics-2004-06-14_mod.txt]",2.97,3.0
+cptt: Naha,cptt,971,Unten Ko,26.6667,128.0167,insel,CAL 1.0 Spring 45,4.3,4.3,"Yagajishima, Okinawa, Japan [harmonics-2004-06-14_mod.txt]",0.88,5.0
+cptt: Naha,cptt,973,"Zamami Jima, Kerama Kaikyo",26.2167,127.3,offen,CAL 1.0 Spring 45,4.2,4.6,"Zamami, Okinawa, Japan [harmonics-2004-06-14_mod.txt]",1.08,5.1
+cptt: Naha,cptt,975,"Gima Ko, Kume Shima",26.3333,126.7333,offen,CAL 1.0 Spring 45,4.3,4.6,"Kanegusukuko (Kumejima), Okinawa, Japan [harmonics-2004-06-14_mod.txt]",2.34,5.1
+cptt: Naha,cptt,977,Minami Daito Jima,25.8167,131.2333,offen,CAL 1.0 Spring 45,4.8,5.6,"Kameike (Minamidaito), Okinawa, Japan [harmonics-2004-06-14_mod.txt]",0.39,5.2
+cptt: Naha,cptt,979,"Miyako Hakuchi, Miyako Jima",24.8,125.2833,insel,CAL 1.0 Spring 45,6.1,6.5,"Hirara (Miyakojima), Okinawa, Japan [harmonics_utide_observations.txt]",1.56,
+cptt: Naha,cptt,983,"Funauke, Iriomote Jima",24.3333,123.7333,offen,CAL 1.0 Spring 45,4.9,5.2,"Funauki Wan (Iriomote), Okinawa, Japan [harmonics-2004-06-14_mod.txt]",0.55,5.1
+cptt: Naha,cptt,985,Yonakuni Jima,24.4333,123.0,offen,CAL 1.0 Spring 45,5.0,4.6,"Hikawa (Yonaguni), Okinawa, Japan [harmonics-2004-06-14_mod.txt]",2.1,5.4
+cptt: Naha,cptt,987,"Kobi Sho, Sento Shosho",25.9333,123.6833,offen,CAL 1.0 Spring 45,5.5,5.4,"Kuba jima, Okinawa, Japan [harmonics-2004-06-14_mod.txt]",0.5,5.8
+cptt: Naha,cptt,1433,Hua-lien Kang,23.9667,121.6167,offen,CAL 1.0 Spring 45,7.0,6.7,"Hualien, Taiwan [harmonics_utide_tidetables.txt]",1.7,7.4
+cptt: Naha,cptt,1439,"Nan-liao Wan, Lu Tao",22.6667,121.4667,offen,CAL 1.0 Spring 45,7.3,6.9,"Ludao, Taiwan [harmonics_utide_tidetables.txt]",0.94,7.4
+cptt: Yokohama,cptt,483,"Kamogawa, Kamogawa Wan",35.1,140.1,insel,Buchquotient Flach weg,4.2,4.5,"Kamogawa, Chiba, Japan [harmonics-2004-06-14_mod.txt]",1.03,3.9
+cptt: Yokohama,cptt,485,Otohama,34.9167,139.9333,gemischt,Buchquotient Flach weg,4.7,4.8,"Shirahama, Chiba, Japan [harmonics-2004-06-14_mod.txt]",0.69,5.2
+cptt: Yokohama,cptt,487,Tateyama Wan,35.0167,139.85,gemischt,Buchquotient Flach weg,3.5,4.3,"Funakata, Chiba, Japan [harmonics-2004-06-14_mod.txt]",0.77,4.0
+cptt: Yokohama,cptt,491,Yokosuka Ko,35.2833,139.6667,insel,Buchquotient Flach weg,3.5,5.0,"Yokosuka, Kanagawa, Japan [harmonics_utide_observations.txt]",1.48,3.9
+cptt: Yokohama,cptt,495,"Shinagawa, Tokyo Ko",35.6167,139.75,binnen,Buchquotient Flach weg,1.4,3.5,"Sibaura, Tokyo, Japan [harmonics_ticon4_worldwide.txt]",2.28,2.2
+cptt: Yokohama,cptt,497,Chiba,35.6,140.1167,binnen,Buchquotient Flach weg,2.2,4.0,"Samugawa, Chiba, Japan [harmonics-2004-06-14_mod.txt]",1.3,
+cptt: Yokohama,cptt,499,Aburatsubo <5>,35.15,139.6167,insel,Buchquotient Flach weg,4.0,5.0,"Moroiso, Kanagawa, Japan [harmonics-2004-06-14_mod.txt]",0.03,
+cptt: Yokohama,cptt,501,Koto Wan,35.2167,139.6167,offen,Buchquotient Flach weg,3.5,4.4,"Otawa Wan, Kanagawa, Japan [harmonics-2004-06-14_mod.txt]",0.57,4.5
+cptt: Yokohama,cptt,503,Ajiro Ko,35.05,139.0833,insel,Buchquotient Flach weg,4.0,4.0,"Ajiro, Shizuoka, Japan [harmonics-2004-06-14_mod.txt]",0.42,4.4
+cptt: Yokohama,cptt,507,Merakoura Ko,34.6667,138.7833,offen,Buchquotient Flach weg,3.4,4.1,"Mera Koura, Shizuoka, Japan [harmonics-2004-06-14_mod.txt]",0.33,4.1
+cptt: Yokohama,cptt,509,Tago Minato,34.8,138.7667,gemischt,Buchquotient Flach weg,3.3,4.8,"Tago, Shizuoka, Japan [harmonics_utide_observations.txt]",0.84,4.2
+cptt: Yokohama,cptt,515,Omai Saki,34.6,138.2167,offen,Buchquotient Flach weg,4.0,5.4,"Omaezaki, Shizuoka, Japan [harmonics_utide_observations.txt]",1.05,4.6
+cptt: Yokohama,cptt,517,"Shino Shima, Mikawa Wan",34.6833,137.0,insel,Buchquotient Flach weg,5.0,4.2,"Shinojima, Aichi, Japan [harmonics-2004-06-14_mod.txt]",0.57,6.9
+cptt: Yokohama,cptt,519,"Gamagori, Mikawa Wan",34.8167,137.2333,gemischt,Buchquotient Flach weg,4.9,4.6,"Gamagori, Aichi, Japan [harmonics-2004-06-14_mod.txt]",0.4,7.2
+cptt: Yokohama,cptt,525,"Tsu Ko, Iseno Umi",34.7167,136.5333,insel,Buchquotient Flach weg,5.0,4.1,"Tsu, Mie, Japan [harmonics-2004-06-14_mod.txt]",0.85,7.1
+cptt: Yokohama,cptt,529,Matoya Ko,34.3667,136.8667,insel,Buchquotient Flach weg,3.5,4.4,"Matoya, Mie, Japan [harmonics-2004-06-14_mod.txt]",0.14,4.7
+cptt: Yokohama,cptt,531,"Hamashima, Ago Wan",34.2833,136.75,gemischt,Buchquotient Flach weg,2.3,3.3,"Hamajimacho Hamajima, Mie, Japan [harmonics-2004-06-14_mod.txt]",1.76,3.1
+cptt: Yokohama,cptt,533,Gokasho Ko,34.3167,136.6667,gemischt,Buchquotient Flach weg,3.9,5.2,"Sazaura (Gokasho Bay), Mie, Japan [harmonics-2004-06-14_mod.txt]",0.7,5.6
+cptt: Yokohama,cptt,537,Katsuura Wan,33.6167,135.95,offen,Buchquotient Flach weg,2.7,3.9,"Kii-Katsuura, Wakayama, Japan [harmonics-2004-06-14_mod.txt]",1.89,2.4
+cptt: Yokohama,cptt,539,Urakami Ko,33.55,135.9,gemischt,Buchquotient Flach weg,4.3,5.3,"Uragami, Wakayama, Japan [harmonics_utide_observations.txt]",0.98,5.0
+cptt: Yokohama,cptt,543,Susami,33.55,135.5,gemischt,Buchquotient Flach weg,4.0,5.9,"Susami, Wakayama, Japan [harmonics-2004-06-14_mod.txt]",0.0,5.0
+cptt: Yokohama,cptt,545,Tanabe Ko,33.7167,135.3667,gemischt,Buchquotient Flach weg,4.4,4.4,"Tanabe, Wakayama, Japan [harmonics-2004-06-14_mod.txt]",1.31,6.0
+cptt: Yokohama,cptt,547,Mio,33.8833,135.0833,insel,Buchquotient Flach weg,3.8,4.7,"Mio, Wakayama, Japan [harmonics-2004-06-14_mod.txt]",0.0,5.3
+cptt: Yokohama,cptt,549,"Habu Ko, O Shima",34.6833,139.4333,offen,Buchquotient Flach weg,3.2,4.1,"Habu (Izu Oshima), Tokyo, Japan [harmonics-2004-06-14_mod.txt]",0.51,2.9
+cptt: Yokohama,cptt,551,Shikine Shima,34.3167,139.2167,offen,Buchquotient Flach weg,4.0,4.4,"Shikine-jima, Tokyo, Japan [harmonics-2004-06-14_mod.txt]",2.05,4.1
+cptt: Yokohama,cptt,555,Tori Shima,30.4833,140.3167,offen,Buchquotient Flach weg,3.9,5.2,"Torishima, Tokyo, Japan [harmonics-2004-06-14_mod.txt]",0.3,4.5
+cptt: Yokohama,cptt,561,"Okimura, Ogasawara Gunto",26.6333,142.15,offen,Buchquotient Flach weg,3.7,5.6,"Hahajima, Tokyo, Japan [harmonics-2004-06-14_mod.txt]",0.95,4.5
+cptt: Yokohama,cptt,565,"Nishi, Iwo Jima, Kazan Retto",24.8,141.3,offen,Buchquotient Flach weg,3.9,6.4,"Iwojima, Tokyo, Japan [harmonics-2004-06-14_mod.txt]",0.0,4.4
+cptt: Yokohama,cptt,575,Hii Wan,33.9167,135.0833,insel,Buchquotient Flach weg,3.9,4.5,"Hii Wan, Wakayama, Japan [harmonics-2004-06-14_mod.txt]",0.0,5.6
+cptt: Yokohama,cptt,577,"Shimotsu Ura, Osaki Wan",34.1167,135.1333,offen,Buchquotient Flach weg,5.3,6.1,"Shimotsu, Wakayama, Japan [harmonics_utide_observations.txt]",0.17,
+cptt: Yokohama,cptt,581,Tachibana Ura,33.8667,134.65,binnen,Buchquotient Flach weg,7.5,8.2,"Tachibana, Tokushima, Japan [harmonics_utide_observations.txt]",1.54,
+cptt: Yokohama,cptt,583,Komatsushima Ko,34.0167,134.6,gemischt,Buchquotient Flach weg,6.5,7.4,"Komatushima, Tokushima, Japan [harmonics_utide_observations.txt]",1.4,6.8
+cptt: Yokohama,cptt,609,"Fukura Ura, Awaji",34.25,134.7,insel,Buchquotient Flach weg,2.1,13.9,"Fukura, Hyogo, Japan [harmonics-2004-06-14_mod.txt]",0.8,4.9
+cptt: Yokohama,cptt,3065,"Port Goro, Toemo Island",-22.3333,167.0167,gemischt,Buchquotient Flach weg,7.3,4.7,"Goro, New Caledonia [harmonics_utide_tidetables.txt]",2.97,6.4
+cptt: Yokohama,cptt,3071,Paagoumene,-20.4833,164.1833,insel,Buchquotient Flach weg,6.8,4.0,"Paagoumène, New Caledonia [harmonics_utide_tidetables.txt]",0.83,8.3
+cptt: Yokohama,cptt,3073,Shepenehe Anchorage,-20.7833,167.1333,insel,Buchquotient Flach weg,20.2,3.9,"Chépénéhé, New Caledonia [harmonics_utide_tidetables.txt]",0.55,22.7
+cptt: Yokohama,cptt,3081,Tangoa Island,-15.5833,166.9833,insel,Buchquotient Flach weg,4.7,4.1,"Tangoa, Vanuatu [harmonics-1997-05-25_mod.txt]",0.87,4.9
+cptt: Yokohama,cptt,3083,"Espiritu Santo Island, Pekoa Chan",-15.5167,167.1667,binnen,Buchquotient Flach weg,7.3,3.4,"Luganville Wharf, Vanuatu [harmonics_utide_tidetables.txt]",2.35,
+cptt: Yokohama,cptt,3931,"Point des Galets, Reunion Island",-20.9167,55.2833,offen,Buchquotient Flach weg,7.7,3.2,"Le Port (Pointe des Galets), Réunion [harmonics_ticon4_worldwide.txt]",0.0,8.4
+cptt: Yokohama,cptt,3933,"Port Louis, Mauritius Island",-20.15,57.4833,offen,Buchquotient Flach weg,4.6,3.3,"Port Louis, Mauritius [harmonics_ticon4_worldwide.txt]",0.02,5.6
+cptt: Yokohama,cptt,3997,Puerto Soberania,-62.4833,-59.6333,insel,Buchquotient Flach weg,24.7,4.0,"Captain Arturo Prat Base (Isla Greenwich, South Shetlands), Antarctica [harmonics_ticon4_worldwide.txt]",1.73,
+cptt: Kobe,cptt,585,"Tomoga Shima, Tomogashima Suido",34.2833,135.0,insel,Buchquotient Flach weg,9.0,5.2,"Okinoshima, Wakayama, Japan [harmonics-2004-06-14_mod.txt]",0.81,8.5
+cptt: Kobe,cptt,587,"Yura Ko, Tomogashima Suido",34.2667,134.95,gemischt,Buchquotient Flach weg,9.0,4.2,"Yura (Awaji-shima), Hyogo, Japan [harmonics-2004-06-14_mod.txt]",0.0,
+cptt: Kobe,cptt,589,Sumoto,34.3333,134.9,insel,Buchquotient Flach weg,2.8,8.6,"Sumoto, Hyogo, Japan [harmonics_utide_observations.txt]",1.49,
+cptt: Kobe,cptt,595,Karumo Jima,34.65,135.1667,gemischt,Buchquotient Flach weg,9.6,5.4,"Karumojima, Hyogo, Japan [harmonics-2004-06-14_mod.txt]",0.05,7.6
+cptt: Kobe,cptt,611,"Tosadomari, Muyano Seto",34.1833,134.6167,insel,Buchquotient Flach weg,11.6,10.1,"Tosadomari, Tokushima, Japan [harmonics-2004-06-14_mod.txt]",0.66,11.7
+cptt: Kobe,cptt,615,Aziro,34.2333,134.6333,insel,Buchquotient Flach weg,13.7,15.1,"Fukuike (Naruto), Tokushima, Japan [harmonics-2004-06-14_mod.txt]",0.38,13.1
+cptt: Sakate,cptt,601,"Murotsu, Awaji",34.5167,134.8667,insel,CAL 1.0 Spring 45,9.8,8.9,"Murotsu (Awaji-shima), Hyogo, Japan [harmonics-2004-06-14_mod.txt]",1.41,9.9
+cptt: Sakate,cptt,603,"Ei, Awaji",34.4667,134.8333,insel,CAL 1.0 Spring 45,9.6,11.4,"Ei (Awaji-shima), Hyogo, Japan [harmonics_utide_observations.txt]",0.41,
+cptt: Sakate,cptt,605,"Anaga Ura, Awaji",34.2667,134.6667,insel,CAL 1.0 Spring 45,3.5,13.3,"Anaga (Awaji-shima), Hyogo, Japan [harmonics-2004-06-14_mod.txt]",0.46,2.6
+cptt: Sakate,cptt,607,"Ajiro, Naruto",34.2333,134.6333,insel,CAL 1.0 Spring 45,5.8,15.1,"Fukuike (Naruto), Tokushima, Japan [harmonics-2004-06-14_mod.txt]",0.38,6.9
+cptt: Sakate,cptt,617,"Hikeda, Harima Nada",34.2333,134.4,insel,CAL 1.0 Spring 45,2.3,7.1,"Hiketa, Kagawa, Japan [harmonics-2004-06-14_mod.txt]",0.52,1.5
+cptt: Sakate,cptt,621,"Ikeda Wan, Shodo Shima",34.4833,134.2,insel,CAL 1.0 Spring 45,6.5,5.4,"Tonosho (Shodoshima), Kagawa, Japan [harmonics-2004-06-14_mod.txt]",0.22,7.6
+cptt: Sakate,cptt,623,Takasago Ko,34.75,134.8167,gemischt,CAL 1.0 Spring 45,5.9,7.5,"Takasago, Hyogo, Japan [harmonics-2004-06-14_mod.txt]",2.4,5.8
+cptt: Sakate,cptt,625,Shikama Ko,34.7833,134.6833,insel,CAL 1.0 Spring 45,9.3,10.7,"Himeji (Shikama), Hyogo, Japan [harmonics_utide_observations.txt]",1.52,
+cptt: Sakate,cptt,627,Ie Shima,34.6833,134.5333,insel,CAL 1.0 Spring 45,3.0,5.9,"Ieshima (Harima Nada), Hyogo, Japan [harmonics-2004-06-14_mod.txt]",0.37,2.0
+cptt: Sakate,cptt,629,O-O Wan,34.7833,134.4667,insel,CAL 1.0 Spring 45,7.7,10.5,"Aioi, Hyogo, Japan [harmonics-2004-06-14_mod.txt]",2.22,8.0
+cptt: Sakate,cptt,631,Otabu Shima,34.6833,134.3,insel,CAL 1.0 Spring 45,6.3,7.4,"Otabujima, Okayama, Japan [harmonics-2004-06-14_mod.txt]",0.12,7.0
+cptt: Sakate,cptt,633,Ushimado Ko,34.6,134.15,insel,CAL 1.0 Spring 45,4.2,6.5,"Ushimado, Okayama, Japan [harmonics-2004-06-14_mod.txt]",2.11,4.9
+cptt: Sakate,cptt,635,"Kogushi, Okayama Suido",34.6,134.0333,binnen,CAL 1.0 Spring 45,7.2,6.2,"Kogushi, Okayama, Japan [harmonics-2004-06-14_mod.txt]",0.44,8.0
+cptt: Kure,cptt,637,Nao Shima,34.45,133.9667,insel,Buchquotient Flach weg,6.4,5.1,"Miyanoura (Naoshima), Kagawa, Japan [harmonics-2004-06-14_mod.txt]",0.91,5.4
+cptt: Kure,cptt,639,Ogi Shima,34.4333,134.05,insel,Buchquotient Flach weg,6.1,4.1,"Ogijima, Kagawa, Japan [harmonics-2004-06-14_mod.txt]",1.32,
+cptt: Kure,cptt,645,Shimotsui,34.4333,133.8,insel,Buchquotient Flach weg,5.7,5.0,"Shimotsui, Okayama, Japan [harmonics-2004-06-14_mod.txt]",0.0,4.5
+cptt: Kure,cptt,647,"Awashima, Awa Shima",34.2667,133.6333,insel,Buchquotient Flach weg,4.0,4.1,"Awashima (Bisan Seto), Kagawa, Japan [harmonics-2004-06-14_mod.txt]",0.21,2.5
+cptt: Kure,cptt,649,"Tomo Tsu, Bingo Nada",34.3833,133.3833,insel,Buchquotient Flach weg,4.2,2.9,"Tomonoura, Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",0.26,2.7
+cptt: Kure,cptt,651,"Tachibana, Mekari Seto",34.35,133.2,insel,Buchquotient Flach weg,5.6,6.9,"Mukaishimacho Tachibana (Mekari Seto), Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",1.02,4.8
+cptt: Kure,cptt,653,Onomichi Seto,34.4,133.2,binnen,Buchquotient Flach weg,4.0,5.4,"Onomichi, Hiroshima, Japan [harmonics-1997-05-25_mod.txt]",0.74,
+cptt: Kure,cptt,655,"Itosaki, Mihara Wan",34.3833,133.1,binnen,Buchquotient Flach weg,1.9,9.5,"Itozaki (Mihara), Hiroshima, Japan [harmonics_utide_observations.txt]",1.23,
+cptt: Kure,cptt,657,"Setoda, Ikuchi Jima",34.3,133.0833,insel,Buchquotient Flach weg,5.7,9.4,"Setoda (Ikuchi-jima), Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",0.56,4.8
+cptt: Kure,cptt,659,"Tadanomi, Mihara Seto",34.3333,132.9833,insel,Buchquotient Flach weg,5.6,7.5,"Tadano-Umi, Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",1.43,
+cptt: Kure,cptt,661,"Takihama, Hiuchi Nada",33.9833,133.35,insel,Buchquotient Flach weg,5.7,6.5,"Kuroshima (Takihama), Ehime, Japan [harmonics-2004-06-14_mod.txt]",0.29,
+cptt: Kure,cptt,663,"Imabari, Kurushima Kaikyo",34.0667,133.0,insel,Buchquotient Flach weg,1.8,6.0,"Imabari, Ehime, Japan [harmonics_utide_observations.txt]",0.56,
+cptt: Kure,cptt,667,"Mitarai, Osaki Shimo Shima",34.1833,132.8667,insel,Buchquotient Flach weg,5.6,4.3,"Mitarai (Osakishimo-jima), Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",0.31,4.9
+cptt: Kure,cptt,669,"Koyo, Aki Nada",34.2333,132.7167,insel,Buchquotient Flach weg,5.8,9.1,"Kawajiri Koyo, Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",0.81,5.2
+cptt: Kure,cptt,671,"Mutsuki Seto, Naka Shima",33.9833,132.6333,insel,Buchquotient Flach weg,5.5,4.1,"Oura (Sekito Seto), Ehime, Japan [harmonics-2004-06-14_mod.txt]",0.03,4.7
+cptt: Kure,cptt,673,Karoto Koseto,34.0667,132.55,insel,Buchquotient Flach weg,5.5,4.2,"Karoto-Ko Seto, Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",1.07,4.9
+cptt: Kure,cptt,675,Ondo Seto,34.2,132.5333,insel,Buchquotient Flach weg,5.5,5.3,"Ondo-no Seto (Kurahashi-jima), Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",0.17,4.8
+cptt: Kure,cptt,679,Yeta Uchi,34.25,132.4667,insel,Buchquotient Flach weg,5.4,4.4,"Etajimacho Miyanohara, Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",0.03,
+cptt: Kure,cptt,681,Nasami Seto,34.25,132.3833,insel,Buchquotient Flach weg,6.1,4.7,"Okimicho Mino (Etajima), Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",0.32,5.9
+cptt: Kure,cptt,685,Itsuku Shima,34.3,132.3167,insel,Buchquotient Flach weg,5.7,4.2,"Itukusima (Miyajima), Hiroshima, Japan [harmonics-2004-06-14_mod.txt]",0.48,5.1
+cptt: Kure,cptt,687,Shimminato,34.1833,132.2333,insel,Buchquotient Flach weg,3.5,3.2,"Iwakuni, Yamaguchi, Japan [harmonics-1997-05-25_mod.txt]",2.4,2.3
+cptt: Kure,cptt,689,Moro Shima Suido,33.95,132.4667,insel,Buchquotient Flach weg,5.7,5.0,"Nasakejima, Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",1.51,5.0
+cptt: Kure,cptt,691,Yashiro Jima,33.9167,132.3,insel,Buchquotient Flach weg,5.6,5.6,"Doi (Suo-Oshima), Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.55,5.0
+cptt: Kure,cptt,693,Obatake Seto,33.95,132.1667,insel,Buchquotient Flach weg,5.4,4.5,"Obatake, Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",1.6,4.8
+cptt: Kure,cptt,695,Okikamuro Shima,33.85,132.3667,insel,Buchquotient Flach weg,5.7,4.4,"Okikamuro-jima, Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.29,4.9
+cptt: Kure,cptt,697,Kaminoseki Kaikyo,33.8333,132.1167,insel,Buchquotient Flach weg,5.5,5.3,"Murotsu (Kaminoseki), Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.29,5.0
+cptt: Kure,cptt,699,Mitsugahama Hakuchi,33.8667,132.7,insel,Buchquotient Flach weg,0.7,4.5,"Matsuyama, Ehime, Japan [harmonics_utide_observations.txt]",1.42,
+cptt: Kure,cptt,701,Ao Shima,33.7333,132.4833,insel,Buchquotient Flach weg,5.5,4.5,"Aoshima, Ehime, Japan [harmonics-2004-06-14_mod.txt]",0.5,4.7
+cptt: Kure,cptt,703,Nagahama Ko,33.6167,132.4833,insel,Buchquotient Flach weg,5.9,2.9,"Nagahama (Iyo Nada), Ehime, Japan [harmonics-2004-06-14_mod.txt]",0.05,5.4
+cptt: Kure,cptt,705,Mitsukuye Ko,33.45,132.2333,insel,Buchquotient Flach weg,5.7,8.4,"Mitsukue, Ehime, Japan [harmonics-2004-06-14_mod.txt]",1.48,5.0
+cptt: Kure,cptt,707,Saganoseki,33.25,131.8833,insel,Buchquotient Flach weg,6.5,3.7,"Saganoseki (Shimoura), Oita, Japan [harmonics-2004-06-14_mod.txt]",0.86,5.8
+cptt: Kure,cptt,709,Beppu Ko,33.2833,131.5,gemischt,Buchquotient Flach weg,3.9,6.0,"Beppu, Oita, Japan [harmonics_utide_observations.txt]",1.73,
+cptt: Kure,cptt,729,Hime Shima,33.7333,131.6333,insel,Buchquotient Flach weg,3.8,2.6,"Himeshima, Oita, Japan [harmonics-2004-06-14_mod.txt]",1.92,2.9
+cptt: Kure,cptt,731,Kakaji,33.6833,131.5167,insel,Buchquotient Flach weg,5.6,4.6,"Kakaji, Oita, Japan [harmonics-2004-06-14_mod.txt]",0.0,5.1
+cptt: Kure,cptt,733,Unoshima Ko,33.6333,131.1333,gemischt,Buchquotient Flach weg,5.9,4.4,"Buzen (Unoshima), Fukuoka, Japan [harmonics-2004-06-14_mod.txt]",0.52,5.5
+cptt: Kure,cptt,735,Tokuyama Wan,34.0167,131.8167,gemischt,Buchquotient Flach weg,4.0,2.9,"Kudamatsu, Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",2.03,2.9
+cptt: Kure,cptt,739,Ube Ko,33.9333,131.25,insel,Buchquotient Flach weg,1.5,4.5,"Ube, Yamaguchi, Japan [harmonics_utide_observations.txt]",0.89,4.6
+cptt: Kure,cptt,743,"Iwakuro, Honshu",33.9667,130.9833,insel,Buchquotient Flach weg,3.9,6.3,"Tanoura, Fukuoka, Japan [harmonics-2004-06-14_mod.txt]",1.12,
+cptt: Moji,cptt,745,"Shimonoseki, Honshu",33.9667,130.95,gemischt,CAL 1.0 Spring 45,1.0,13.0,"Dannoura (Shimonoseki), Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.64,
+cptt: Moji,cptt,747,Isakimachi,33.95,130.9167,gemischt,CAL 1.0 Spring 45,19.8,4.7,"Hikoshima Amanogocho, Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.03,
+cptt: Moji,cptt,755,Wakamatsu Ko,33.9167,130.8167,gemischt,CAL 1.0 Spring 45,7.3,4.6,"Wakamatsu (Kanmon), Fukuoka, Japan [harmonics-2004-06-14_mod.txt]",1.33,
+cptt: Moji,cptt,757,Yoshimo,34.0833,130.8667,insel,CAL 1.0 Spring 45,7.9,5.1,"Yoshimi, Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.68,8.1
+cptt: Moji,cptt,759,Kottoi,34.3167,130.9,insel,CAL 1.0 Spring 45,8.4,5.8,"Kottoi, Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.0,8.5
+cptt: Moji,cptt,761,Yuya Wan (Aburatani Wan),34.4,130.95,offen,CAL 1.0 Spring 45,8.9,4.4,"Yuyamukatsukushimo (Yuya), Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.82,9.0
+cptt: Moji,cptt,901,"Kazamoto Ura, Iki Shima",33.85,129.6833,insel,CAL 1.0 Spring 45,6.3,5.9,"Katumoto, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",1.54,7.3
+cptt: Moji,cptt,905,"Mikuriya, Imari Wan",33.3667,129.6667,insel,CAL 1.0 Spring 45,3.5,3.2,"Mikuriya, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.28,5.7
+cptt: Moji,cptt,907,Kariya Ko,33.4833,129.8333,insel,CAL 1.0 Spring 45,6.2,6.4,"Kariya, Saga, Japan [harmonics_utide_observations.txt]",1.86,
+cptt: Moji,cptt,909,Yobuko Ko <21>,33.55,129.8833,insel,CAL 1.0 Spring 45,3.4,4.3,"Yobuko, Saga, Japan [harmonics-2004-06-14_mod.txt]",0.84,
+cptt: Moji,cptt,913,Konominato Ura,33.85,130.4833,gemischt,CAL 1.0 Spring 45,5.8,3.9,"Konominato, Fukuoka, Japan [harmonics-2004-06-14_mod.txt]",0.39,6.1
+cptt: Moji,cptt,915,Iwaya,33.9333,130.6833,offen,CAL 1.0 Spring 45,7.9,5.0,"Iwaya, Fukuoka, Japan [harmonics-2004-06-14_mod.txt]",0.0,8.1
+cptt: Moji,cptt,925,Oshika,34.5167,129.4333,gemischt,CAL 1.0 Spring 45,6.3,4.7,"Oshika (Tsushima), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.65,8.2
+cptt: Moji,cptt,927,Miura Wan,34.3,129.3833,insel,CAL 1.0 Spring 45,5.6,4.5,"Modo Ura (Okata), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.03,7.3
+cptt: Hong Kong,cptt,763,Senzaki Ko,34.4,131.2,offen,CAL 1.0 Spring 45,10.3,4.9,"Odomari (Senzaki), Yamaguchi, Japan [harmonics-2004-06-14_mod.txt]",0.35,11.3
+cptt: Hong Kong,cptt,765,Hagi Ko,34.4333,131.4167,insel,CAL 1.0 Spring 45,15.3,14.0,"Hagi, Yamaguchi, Japan [harmonics_utide_observations.txt]",0.48,
+cptt: Hong Kong,cptt,767,Esaki Ko,34.6333,131.65,gemischt,CAL 1.0 Spring 45,5.7,5.1,"Esaki, Yamaguchi, Japan [harmonics_ticon4_worldwide.txt]",1.03,5.0
+cptt: Hong Kong,cptt,1443,Ta-pan-lieh Mao-ti,21.9667,120.75,gemischt,CAL 1.0 Spring 45,6.7,8.1,"Houbihu, Taiwan [harmonics_utide_tidetables.txt]",2.37,6.5
+cptt: Hong Kong,cptt,1447,Tung-kang Po-ti,22.4667,120.4333,gemischt,CAL 1.0 Spring 45,9.3,9.2,"Donggang, Taiwan [harmonics_utide_tidetables.txt]",0.54,9.3
+cptt: Hong Kong,cptt,1449,Kao-hsiung <26>,22.6167,120.2667,offen,CAL 1.0 Spring 45,5.7,5.1,"Kaohsiung, Taiwan [harmonics_ticon4_worldwide.txt]",2.23,5.0
+cptt: Hong Kong,cptt,1451,An-p'ing Kang,23.0,120.15,gemischt,CAL 1.0 Spring 45,10.5,9.2,"Anping, Taiwan [harmonics_utide_tidetables.txt]",1.3,9.9
+cptt: Hong Kong,cptt,3281,Hobart,-42.8833,147.3333,insel,CAL 1.0 Spring 45,7.0,4.5,"Hobart, Tasmania, Australia [harmonics_utide_observations.txt]",0.95,
+cptt: Sasebo,cptt,843,Nakagawara Ura <18>,31.85,129.85,insel,Buchquotient Flach weg,7.0,4.9,"Kamikoshiki-shima, Kagoshima, Japan [harmonics-2004-06-14_mod.txt]",2.01,4.9
+cptt: Sasebo,cptt,845,Akune,32.0167,130.1833,insel,Buchquotient Flach weg,1.6,5.3,"Akune, Kagoshima, Japan [harmonics_utide_observations.txt]",0.74,
+cptt: Sasebo,cptt,847,"Fukuro Oki, Yatsushiro Kai",32.1833,130.3667,insel,Buchquotient Flach weg,7.4,4.3,"Hukuro Ura (Minamata), Kumamoto, Japan [harmonics-2004-06-14_mod.txt]",0.95,
+cptt: Sasebo,cptt,849,"Kaga Shima, Yatsushiro Kai",32.5167,130.55,insel,Buchquotient Flach weg,7.8,6.3,"Kaga Shima (Yatsushiro), Kumamoto, Japan [harmonics-2004-06-14_mod.txt]",0.71,
+cptt: Sasebo,cptt,851,"Yanagino Seto, Yatsushiro Kai",32.55,130.4167,insel,Buchquotient Flach weg,7.8,4.8,"Yanagi-No-Seto (Maejima), Kumamoto, Japan [harmonics-2004-06-14_mod.txt]",2.6,6.1
+cptt: Sasebo,cptt,853,"Misumi Ko, Misumi No Seto",32.6167,130.45,insel,Buchquotient Flach weg,3.0,5.8,"Misumi, Kumamoto, Japan [harmonics_utide_observations.txt]",0.72,
+cptt: Sasebo,cptt,855,"Ushibuka, Amakusa Shimo Shima",32.2,130.0167,insel,Buchquotient Flach weg,7.1,4.5,"Usibuka, Kumamoto, Japan [harmonics-2004-06-14_mod.txt]",0.03,5.1
+cptt: Sasebo,cptt,857,"Sakitsu Wan, Amakusa Shimo Shima",32.3167,130.0167,insel,Buchquotient Flach weg,6.9,4.6,"Sakitu Wan, Kumamoto, Japan [harmonics-2004-06-14_mod.txt]",0.03,5.1
+cptt: Sasebo,cptt,859,"Tomioka Wan, Amakusa Shimo Shima",32.5333,130.0333,insel,Buchquotient Flach weg,7.1,5.2,"Tomioka (Shimoshima), Kumamoto, Japan [harmonics-2004-06-14_mod.txt]",0.52,5.2
+cptt: Sasebo,cptt,863,"Shimabara, Shimabara Kaiwan",32.7833,130.3833,insel,Buchquotient Flach weg,9.4,4.1,"Shimokawashirimachi (Shimabara), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",2.14,8.4
+cptt: Sasebo,cptt,865,"Miike Ko, Shimabara Kaiwan",33.0167,130.4167,gemischt,Buchquotient Flach weg,4.2,7.3,"Miike (Omuta), Fukuoka, Japan [harmonics_utide_observations.txt]",0.35,
+cptt: Sasebo,cptt,867,Kabashima Suido,32.5667,129.7833,insel,Buchquotient Flach weg,7.1,4.3,"Kabashima, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.18,5.2
+cptt: Sasebo,cptt,869,Fukahori,32.6833,129.8167,insel,Buchquotient Flach weg,4.7,3.1,"Fukahorimachi Nagasaki, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.24,2.2
+cptt: Sasebo,cptt,871,Nagasaki Ko <19>,32.7167,129.85,insel,Buchquotient Flach weg,6.7,4.4,"Megami, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.43,
+cptt: Sasebo,cptt,873,Terashima Suido,33.0333,129.6333,insel,Buchquotient Flach weg,7.3,5.6,"Oshima, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",1.46,5.5
+cptt: Sasebo,cptt,875,Omodake,33.0833,129.6833,insel,Buchquotient Flach weg,6.9,4.4,"Omodaka, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",1.07,5.0
+cptt: Sasebo,cptt,879,"Kogushi Wan, Omura Wan",33.0667,129.8167,insel,Buchquotient Flach weg,7.1,70.9,"Ogusi Wan, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.03,5.3
+cptt: Sasebo,cptt,881,"Omura, Omura Wan",32.9,129.95,insel,Buchquotient Flach weg,8.4,78.4,"Omura, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.0,6.7
+cptt: Sasebo,cptt,883,Kusudomari,33.2167,129.5833,insel,Buchquotient Flach weg,6.9,4.6,"Kusudomari, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.0,4.5
+cptt: Sasebo,cptt,885,"Shijiki Wan, Hirado Shima",33.2,129.3833,insel,Buchquotient Flach weg,7.1,4.4,"Shijiki Wan, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",1.22,5.1
+cptt: Sasebo,cptt,887,"Usuka Wan, Hirado Shima",33.3833,129.5333,insel,Buchquotient Flach weg,7.4,5.4,"Usuka Wan, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.87,5.7
+cptt: Sasebo,cptt,889,"Me Shima, Danjo Gunto",32.0,128.35,offen,Buchquotient Flach weg,8.5,7.3,"Me Sima, Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.0,7.3
+cptt: Sasebo,cptt,891,"Tamano Ura, Fukaye Jima",32.6167,128.6167,gemischt,Buchquotient Flach weg,6.9,4.8,"Tamanoura (Fukue-jima), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.5,5.1
+cptt: Sasebo,cptt,895,"Wakamatsu Ura, Wakamatsu Shima",32.8833,129.0167,insel,Buchquotient Flach weg,7.1,9.2,"Goto (Wakamatsu), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.8,5.2
+cptt: Sasebo,cptt,897,"Arikawa Wan, Nakadori Shima",32.9833,129.1167,insel,Buchquotient Flach weg,7.1,5.5,"Arikawa (Nakadorijima), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",0.03,5.3
+cptt: Sasebo,cptt,899,"Kono Ura, Uku Shima",33.2667,129.0833,offen,Buchquotient Flach weg,7.2,4.9,"Konoura (Ukushima), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",1.67,5.4
+cptt: Sasebo,cptt,917,"Mikata, Aso Wan",34.3,129.2667,gemischt,Buchquotient Flach weg,8.1,4.8,"Mikata (Aso Wan), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",1.18,6.7
+cptt: Sasebo,cptt,919,Tsuna Shima,34.4167,129.2667,insel,Buchquotient Flach weg,8.5,5.3,"Tsunaura Wan (Kozuna), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",1.09,7.3
+cptt: Sasebo,cptt,921,Sasuna Ko,34.65,129.3833,insel,Buchquotient Flach weg,6.8,4.0,"Sasuna (Tsushima), Nagasaki, Japan [harmonics-2004-06-14_mod.txt]",1.56,5.6
+cptt: Ch’ang Chiang Approach,cptt,1063,"Tonae-hae, Komun-do",34.0167,127.3167,offen,Buchquotient HW/NW,4.0,3.0,"Geomundo, South Korea [harmonics_utide_tidetables.txt]",1.85,
+cptt: Ch’ang Chiang Approach,cptt,1077,"Sangch'uja-do, Ch'uja-kundo",33.95,126.2833,offen,Buchquotient HW/NW,4.0,3.5,"Chujado, South Korea [harmonics_utide_tidetables.txt]",2.41,
+cptt: Inch’on,cptt,1123,"Chuk-to, Kunsan-hang",36.0333,126.5333,gemischt,Buchquotient Flach weg,2.7,4.2,"Gunsan Jukdo, South Korea [harmonics_utide_tidetables.txt]",0.0,4.3
+cptt: Dalian,cptt,1163,"Taech'ong-do, Taech'ong-kundo",37.8333,124.7167,insel,CAL 1.0 Spring 45,5.0,2.8,"Daecheongdo, South Korea [harmonics_utide_tidetables.txt]",0.0,5.6
+cptt: Dalian,cptt,1211,Shishanzi,39.9667,123.6667,binnen,CAL 1.0 Spring 45,9.2,30.8,"Shishanzi, Liaoning, China [harmonics_utide_tidetables.txt]",0.0,9.6
+cptt: Dalian,cptt,1251,Bayuquan,40.3,122.0833,offen,CAL 1.0 Spring 45,8.0,6.7,"Bayuquan, Liaoning, China [harmonics_utide_tidetables.txt]",0.0,8.6
+cptt: Namp’O-Hang,cptt,1207,Dandong [Tan-tung],40.1167,124.4,binnen,Buchquotient HW/NW,8.4,27.9,"Dandong, Liaoning, China [harmonics_utide_tidetables.txt]",0.0,10.4
+cptt: Qinhuangdao,cptt,1261,Ninghai,39.9667,119.8,offen,Buchquotient,2.3,18.6,"Shanhaiguan, Hebei, China [harmonics_utide_tidetables.txt]",2.33,22.2
+cptt: Tanggu,cptt,1337,"Chengshan Jiao [Dove Cove, Jungcheng Bay]",37.3833,122.6667,gemischt,Buchquotient HW/NW,15.0,11.1,"Chengshanjiao, Shandong, China [harmonics_utide_tidetables.txt]",1.47,14.6
+cptt: Yantai,cptt,1319,Penglai,37.8333,120.7333,gemischt,Bau heute,8.1,12.6,"Penglai, Shandong, China [harmonics_utide_tidetables.txt]",1.85,13.3
+cptt: Lianyun Gang,cptt,1387,Lusi,32.1333,121.5833,insel,CAL 1.0 Spring 45,5.0,4.6,"Lusi, Jiangsu, China [harmonics_ticon4_worldwide.txt]",0.0,5.5
+cptt: Wusong,cptt,1391,She Shan,31.4167,122.2333,offen,CAL 1.0 Spring 45,4.5,4.7,"Sheshan, Shanghai, China [harmonics_utide_tidetables.txt]",0.0,5.2
+cptt: Wusong,cptt,1407,Gaoqiao,31.3667,121.5833,insel,CAL 1.0 Spring 45,1.8,17.1,"Gaoqiao, Shanghai, China [harmonics_utide_tidetables.txt]",2.44,6.3
+cptt: Wusong,cptt,1411,"Shanghai Gang [Shanghai, Huangpu River]",31.25,121.4833,binnen,CAL 1.0 Spring 45,3.1,20.1,"Huangpu Gongyuan, Shanghai, China [harmonics_utide_tidetables.txt]",1.86,6.1
+cptt: PengHu (Ma-Kung Kang),cptt,1467,Tan-shui Kang,25.1833,121.4333,gemischt,CAL 1.0 Spring 45,4.1,5.2,"Tamsui, Taiwan [harmonics_utide_tidetables.txt]",1.2,6.8
+cptt: PengHu (Ma-Kung Kang),cptt,1481,Chi-pei Tao,23.7333,119.6,gemischt,CAL 1.0 Spring 45,2.6,3.6,"Jibei, Taiwan [harmonics_utide_tidetables.txt]",1.47,4.5
+cptt: Shantou,cptt,1503,Haimen Wan,23.1833,116.6167,gemischt,Buchquotient Flach weg,7.7,6.5,"Haimen, Guangdong, China [harmonics_utide_tidetables.txt]",0.0,8.9
+cptt: Haikou,cptt,1557,Puqian,20.0333,110.5667,offen,Buchquotient Flach weg,9.0,9.3,"Puqian, Hainan, China [harmonics_utide_tidetables.txt]",0.0,11.3
+cptt: Beihai,cptt,1561,Yinggehai,18.5,108.7167,offen,Buchquotient Flach weg,8.1,6.8,"Yinggehai, Hainan, China [harmonics_utide_tidetables.txt]",0.0,11.3
+cptt: Do Son,cptt,1579,Tsieng Mun {,21.1333,107.6167,insel,CAL 1.0 Spring 45,30.8,4.8,"Tsieng Mun, Vietnam [harmonics_att_np203_scs.txt]",0.0,8.5
+cptt: Do Son,cptt,1601,Hon Ne {,19.9167,106.0,offen,CAL 1.0 Spring 45,33.0,7.0,"Hon Ne, Vietnam [harmonics_att_np203_scs.txt]",1.75,17.0
+cptt: Do Son,cptt,1611,Vung Chua Bay {,17.9333,106.5,offen,CAL 1.0 Spring 45,27.7,9.3,"Vung Chua, Vietnam [harmonics_att_np203_scs.txt]",1.77,14.1
+cptt: Manila,cptt,1629,Vung Xuan Dai <27> },13.3833,109.2667,offen,Buchquotient,7.3,4.3,"Vinh Xuan Dai, Vietnam [harmonics_att_np203_scs.txt]",0.0,7.7
+cptt: Manila,cptt,1633,Port Van <27> },12.6667,109.3833,offen,Buchquotient,8.1,4.0,"Cang Bac Van Phong, Vietnam [harmonics_att_np203_scs.txt]",0.0,8.8
+cptt: Manila,cptt,1639,Mui Dinh <27> },11.3667,109.0167,offen,Buchquotient,11.0,5.3,"Mui Dinh, Vietnam [harmonics_att_np203_scs.txt]",0.0,11.5
+cptt: Manila,cptt,1641,Pointe Lagan <27> },11.1667,108.7,gemischt,Buchquotient,12.1,4.4,"Mui La Gan, Vietnam [harmonics_att_np203_scs.txt]",0.0,13.1
+cptt: Manila,cptt,1645,Phan Thiet <27> },10.9167,108.1,gemischt,Buchquotient,15.2,5.1,"Phan Thiet, Vietnam [harmonics_att_np203_scs.txt]",0.0,15.9
+cptt: Manila,cptt,1679,Cone Island <27> },11.4333,103.0,insel,Buchquotient,11.2,6.7,"Kaoh Mul, Cambodia [harmonics_att_np203_scs.txt]",0.79,11.8
+cptt: Manila,cptt,2051,Kuala Similajau {,3.5167,113.3,gemischt,Buchquotient,13.4,5.6,"Kuala Similajau, Malaysia [harmonics_att_np203_scs.txt]",0.0,14.1
+cptt: Manila,cptt,2053,Kuala Niah {,3.9667,113.7,offen,Buchquotient,8.9,4.6,"Kuala Niah, Malaysia [harmonics_att_np203_scs.txt]",0.0,9.5
+cptt: Manila,cptt,2055,Miri },4.3833,113.9833,gemischt,Buchquotient,5.6,4.8,"Miri, Malaysia [harmonics_ticon4_worldwide.txt]",1.6,
+cptt: Manila,cptt,2057,Baram River entrance },4.5833,113.9833,offen,Buchquotient,5.4,5.3,"Kuala Baram, Malaysia [harmonics-1997-05-25_mod.txt]",0.75,
+cptt: Manila,cptt,2059,"Sapo Point, Brunei Bay }",5.0,115.1333,insel,Buchquotient,8.7,4.4,"Tanjung Sapo, Brunei [harmonics_att_np203_scs.txt]",0.0,9.8
+cptt: Manila,cptt,2061,"Sipitang, Brunei Bay }",5.0833,115.55,gemischt,Buchquotient,7.9,4.7,"Sipitang, Malaysia [harmonics_att_np203_scs.txt]",0.0,9.1
+cptt: Manila,cptt,2063,"Victoria Harbor, Labuan Island }",5.2667,115.25,insel,Buchquotient,5.1,4.1,"Bandar Victoria (Labuan), Malaysia [harmonics_utide_tidetables.txt]",0.87,
+cptt: Manila,cptt,2065,"Kuala Papar, Kimanis Bay }",5.75,115.9,offen,Buchquotient,6.8,4.7,"Kuala Papar (Kimanis Bay), Malaysia [harmonics_att_np203_scs.txt]",0.0,8.0
+cptt: Manila,cptt,2067,Kota Kinabalu },5.9833,116.0667,gemischt,Buchquotient,3.6,4.7,"Kota Kinabalu, Malaysia [harmonics_ticon4_worldwide.txt]",1.04,
+cptt: Manila,cptt,2069,"Kudat, Marudu Bay }",6.8833,116.85,insel,Buchquotient,8.4,5.9,"Kudat (Marudu Bay), Malaysia [harmonics_att_np203_scs.txt]",0.0,9.4
+cptt: Manila,cptt,2169,"San Roque, Dinagat Island }",10.1,125.4833,insel,Buchquotient,10.3,6.0,"Puerto Princesa (San Roque Channel), Dinagat Islands, Philippines [harmonics_att_np203_scs.txt]",0.0,11.8
+cptt: Manila,cptt,2261,Bacuit },11.1833,119.3833,insel,Buchquotient,3.2,5.3,"El Nido, Palawan, Philippines [harmonics_utide_tidetables.txt]",0.43,2.6
+cptt: Manila,cptt,2283,Sir J. Brooke Point },8.7667,117.8333,offen,Buchquotient,4.7,5.8,"Brooke's Point, Palawan, Philippines [harmonics_utide_tidetables.txt]",0.79,5.1
+cptt: Manila,cptt,3977,Marguerite Bay (East Base) },-68.2,-67.05,insel,Buchquotient,43.0,5.2,"Isla Neny, Antarctica [harmonics-1997-05-25_mod.txt]",2.06,
+cptt: Mui Vung Tau,cptt,1647,Mui Ke Ga,10.7,107.9833,offen,CAL 1.0 Spring 45,11.1,3.6,"Mui Ke Ga, Vietnam [harmonics_att_np203_scs.txt]",0.0,9.7
+cptt: Mui Vung Tau,cptt,1649,Mui Ba Kiem,10.5,107.5,offen,CAL 1.0 Spring 45,7.2,4.3,"Hai dang Ba Kiem, Vietnam [harmonics_att_np203_scs.txt]",0.0,5.2
+cptt: Mui Vung Tau,cptt,1655,Ho Chi Minh City <28>,10.7667,106.7,binnen,CAL 1.0 Spring 45,4.5,30.1,"Sai Gon (Ho Chi Minh City), Vietnam [harmonics_utide_tidetables.txt]",1.98,6.9
+cptt: Chuuk,cptt,1691,Ko Lak {,11.8,99.8167,offen,Buchquotient,15.9,9.8,"Ko Lak, Prachuap Khiri Khan, Thailand [harmonics_utide_observations.txt]",0.53,
+cptt: Chuuk,cptt,1693,Chumphon {,10.45,99.25,gemischt,Buchquotient,18.4,12.8,"Ko Mattaphon, Chumphon, Thailand [harmonics_utide_tidetables.txt]",0.37,
+cptt: Chuuk,cptt,1695,Ko Prap {,9.2667,99.4333,offen,Buchquotient,15.4,13.2,"Ko Prap, Surat Thani, Thailand [harmonics_utide_tidetables.txt]",0.24,
+cptt: Singapore,cptt,1699,Songkhla,7.2167,100.6,offen,Buchquotient Flach weg,31.7,26.2,"Songkhla, Thailand [harmonics_utide_tidetables.txt]",2.21,
+cptt: Singapore,cptt,1705,Pulau Bukum,1.2333,103.7667,insel,Buchquotient Flach weg,5.0,2.8,"Pulau Bukom, Singapore [harmonics_att_np203_scs.txt]",0.0,6.1
+cptt: Belawan Channel,cptt,1717,Pulau Lela,6.7333,99.7,insel,CAL 1.0 Spring 45,3.1,4.0,"Ko Lela, Satun, Thailand [harmonics_att_np203_scs.txt]",0.0,5.5
+cptt: Belawan Channel,cptt,1719,Puket Harbor,7.85,98.4,insel,CAL 1.0 Spring 45,4.8,3.3,"Ko Taphao Noi (Phuket), Phuket, Thailand [harmonics_ticon4_worldwide.txt]",2.98,
+cptt: Belawan Channel,cptt,1721,Ao Kaulak,8.6,98.25,gemischt,CAL 1.0 Spring 45,4.1,3.1,"Khlong Thung Maphrao, Phang Nga, Thailand [harmonics_att_np203_scs.txt]",1.06,
+cptt: Davao,cptt,2223,Pagadian,7.8167,123.45,insel,CAL 1.0 Spring 45,4.5,3.8,"Pagadian City, Zamboanga del Sur, Philippines [harmonics_utide_tidetables.txt]",1.21,5.2
+cptt: Davao,cptt,3351,"Learmonth, Exmouth Gulf",-22.1833,114.0833,insel,CAL 1.0 Spring 45,4.4,3.7,"Learmonth, Western Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,5.0
+cptt: Mergui,cptt,3403,Car Nicobar,9.1667,92.8333,offen,Buchquotient Flach weg,1.8,3.9,"Car Nicobar, Andaman and Nicobar, India [harmonics_att_np203_scs.txt]",1.85,2.5
+cptt: Mergui,cptt,3409,Port Cornwallis,13.3167,93.05,insel,Buchquotient Flach weg,5.3,5.6,"Port Cornwallis, Andaman and Nicobar, India [harmonics_att_np203_scs.txt]",0.0,5.6
+cptt: Mergui,cptt,3413,Hastings harbor,10.1167,98.2833,insel,Buchquotient Flach weg,2.5,4.9,"Za Det Nge Kyun (Hastings Harbour), Myanmar [harmonics_att_np203_scs.txt]",0.0,3.2
+cptt: Mergui,cptt,3415,Lanbi Island,10.7667,98.3,insel,Buchquotient Flach weg,1.5,3.3,"Lampi Kyun (Lanbi / Sullivan Island), Myanmar [harmonics_att_np203_scs.txt]",0.0,2.4
+cptt: Mergui,cptt,3417,Owen Island,11.2,98.25,insel,Buchquotient Flach weg,1.7,2.9,"Ka Mar Kyun (Owen Island), Myanmar [harmonics_att_np203_scs.txt]",0.0,2.4
+cptt: Mergui,cptt,3419,Pigeon Island,11.7833,98.2167,insel,Buchquotient Flach weg,1.7,3.2,"Myauk Gaung (Pigeon Island), Myanmar [harmonics_att_np203_scs.txt]",0.0,2.5
+cptt: Mergui,cptt,3423,Padaw Sound,12.6167,98.4167,insel,Buchquotient Flach weg,3.1,3.2,"Kyaukkayan (Padaw Aw), Myanmar [harmonics_att_np203_scs.txt]",0.0,2.9
+cptt: Mergui,cptt,3427,Heinze Bok (Long Island),14.4,97.7833,offen,Buchquotient Flach weg,2.6,3.3,"Heinze Bok (Long Island), Myanmar [harmonics_att_np203_scs.txt]",0.0,2.8
+cptt: Mergui,cptt,3429,Wa Kyun,15.2,97.7333,offen,Buchquotient Flach weg,3.6,3.6,"Wa Kyun, Myanmar [harmonics_att_np203_scs.txt]",0.0,3.8
+cptt: Mergui,cptt,3431,Double Island,15.8667,97.5833,insel,Buchquotient Flach weg,3.4,3.7,"Double Island, Myanmar [harmonics_att_np203_scs.txt]",0.0,4.0
+cptt: Mergui,cptt,3441,China Bakir (Old Lighthouse),16.2833,96.2,gemischt,Buchquotient Flach weg,3.5,5.2,"China Bakir (Old Lighthouse), Myanmar [harmonics_att_np203_scs.txt]",0.0,3.7
+cptt: Mergui,cptt,3443,Pymbong Beacon,15.7833,95.5167,offen,Buchquotient Flach weg,7.2,8.3,"Pymbong Beacon, Myanmar [harmonics_att_np203_scs.txt]",0.0,7.7
+cptt: Surabaja Strait,cptt,3717,Jazirat Das {,25.15,52.8833,offen,Bau heute,7.6,5.6,"Jazirat Das, United Arab Emirates [harmonics-1997-05-25_mod.txt]",1.21,
+cptt: Kutei River Ent.,cptt,1979,"Bakapit, Darvel Bay",4.95,118.5833,insel,Bau heute,3.9,6.1,"Bakapit (Darvel Bay), Malaysia [harmonics_att_np203_scs.txt]",0.0,3.8
+cptt: Kutei River Ent.,cptt,1981,"Lahad Datu, Darvel Bay",5.0333,118.3333,insel,Bau heute,3.3,4.0,"Lahad Datu (Darvel Bay), Malaysia [harmonics_att_np203_scs.txt]",1.58,
+cptt: Kutei River Ent.,cptt,1983,"Semporna, Darvel Bay",4.4833,118.6167,insel,Bau heute,3.7,4.0,"Semporna, Malaysia [harmonics_att_np203_scs.txt]",0.29,
+cptt: Djakarta,cptt,3339,"Albany, Princess Royal Harbor }",-35.0333,117.8833,gemischt,CAL 1.0 Spring 45,10.4,5.3,"Albany, Western Australia, Australia [harmonics_ticon4_worldwide.txt]",0.85,10.3
+cptt: Djakarta,cptt,3341,Bunbury Harbor {,-33.3167,115.65,offen,CAL 1.0 Spring 45,7.6,5.8,"Bunbury, Western Australia, Australia [harmonics_ticon4_worldwide.txt]",1.19,8.8
+cptt: Djakarta,cptt,3343,"Fremantle, Swan River entrance }",-32.05,115.75,gemischt,CAL 1.0 Spring 45,8.0,7.0,"Fremantle, Western Australia, Australia [harmonics_utide_observations.txt]",1.6,
+cptt: Shatt Al Arab,cptt,3633,Um Qasr,30.0167,47.95,binnen,CAL 1.0 Spring 45,7.1,14.8,"Umm Qasr, Iraq [harmonics_att_np203.txt]",0.35,
+cptt: Shatt Al Arab,cptt,3637,Warba Spit,29.9833,48.15,gemischt,CAL 1.0 Spring 45,5.7,10.9,"al-Warba, Kuwait [harmonics_att_np203.txt]",0.0,7.5
+cptt: Shatt Al Arab,cptt,3645,Kuwait,29.35,47.9333,insel,CAL 1.0 Spring 45,3.9,6.3,"Ash Shuwaykh (Kuwait), Kuwait [harmonics_att_np203.txt]",0.0,5.6
+cptt: Cebu,cptt,2071,Tigabu Island,6.8833,117.4833,offen,CAL 1.0 Spring 45,8.7,3.9,"Pulau Tigabu, Malaysia [harmonics_att_np203_scs.txt]",0.0,7.7
+cptt: Cebu,cptt,2073,Lankayan Island,6.5,117.9167,offen,CAL 1.0 Spring 45,8.2,4.1,"Pulau Lankayan, Malaysia [harmonics_att_np203_scs.txt]",0.0,7.2
+cptt: Cebu,cptt,2301,San Jose,10.7333,121.9333,offen,CAL 1.0 Spring 45,3.6,4.8,"San Jose de Buenavista, Antique, Philippines [harmonics_utide_tidetables.txt]",0.73,4.4
+cptt: Cebu,cptt,2305,Borocay Island,11.95,121.9333,insel,CAL 1.0 Spring 45,4.8,5.6,"Caticlan, Aklan, Philippines [harmonics_utide_tidetables.txt]",2.61,5.7
+cptt: Cebu,cptt,2389,Baybay,10.6833,124.8,insel,CAL 1.0 Spring 45,2.1,4.9,"Baybay, Leyte, Philippines [harmonics_utide_tidetables.txt]",0.0,2.7
+cptt: Cebu,cptt,2417,Catbalogan,11.7833,124.8833,insel,CAL 1.0 Spring 45,4.3,5.6,"Catbalogan, Samar, Philippines [harmonics_utide_tidetables.txt]",0.0,4.7
+cptt: Cebu,cptt,2449,Masbate,12.3667,123.6167,insel,CAL 1.0 Spring 45,5.0,6.3,"Masbate City, Masbate, Philippines [harmonics_utide_tidetables.txt]",0.11,5.5
+cptt: Darwin,cptt,2047,"Kuching, Sarawak River",1.5667,110.35,binnen,Buchquotient Flach weg,4.6,9.2,"Kuching (Sungai Sarawak), Malaysia [harmonics-1997-05-25_mod.txt]",0.0,4.6
+cptt: Darwin,cptt,3153,"Tapa Bay, Bynoe Harbor",-12.45,130.6,insel,Buchquotient Flach weg,3.0,3.5,"Tapa Bay, Northern Territory, Australia [harmonics-2004-06-14_mod.txt]",0.0,2.7
+cptt: Darwin,cptt,3155,"East Point, Bynoe Harbor",-12.5833,130.5667,insel,Buchquotient Flach weg,3.0,4.0,"Burge Point, Northern Territory, Australia [harmonics-2004-06-14_mod.txt]",0.0,2.7
+cptt: Legaspi Port,cptt,2441,Guiuan,11.0333,125.7167,gemischt,Buchquotient Flach weg,15.0,10.2,"Guiuan, Eastern Samar, Philippines [harmonics_utide_tidetables.txt]",0.0,15.5
+cptt: Legaspi Port,cptt,2589,"Virac, Catanduances Island",13.5833,124.2333,insel,Buchquotient Flach weg,5.0,4.5,"Virac, Catanduanes, Philippines [harmonics_utide_tidetables.txt]",0.19,5.2
+cptt: Malakal Harbor,cptt,2645,"Tomil Harbor, Yap Island",9.5,138.1333,offen,Buchquotient HW/NW,2.4,3.5,"Yap (Colonia), Micronesia [harmonics_utide_observations.txt]",1.84,2.6
+cptt: Kwajalein Atoll,cptt,2727,Majuro Atoll,7.1167,171.3667,offen,Buchquotient Flach weg,2.2,2.8,"Majuro, Marshall Islands [harmonics_utide_tidetables.txt]",1.36,
+cptt: Pago Pago,cptt,2819,"Taio Hae Bay, Nuku Hiva Island",-8.9333,-140.1,insel,Buchquotient Flach weg,6.6,2.4,"Taiohae, French Polynesia [harmonics_utide_tidetables.txt]",1.85,
+cptt: Pago Pago,cptt,2825,Hao (Bow or La Harpe) Island,-18.0667,-140.9833,insel,Buchquotient Flach weg,15.2,13.0,"Hao (Passe Kaki), French Polynesia [harmonics_utide_tidetables.txt]",1.88,18.3
+cptt: Pago Pago,cptt,2843,Aitutaki Island,-18.85,-159.7833,offen,Buchquotient Flach weg,6.9,7.3,"Aitutaki, Aitutaki Atoll, Cook Islands [harmonics-1997-05-25_mod.txt]",0.0,
+cptt: Pago Pago,cptt,2845,"Avarua, Rarotonga",-21.2,-159.7667,offen,Buchquotient Flach weg,8.1,2.8,"Avarua, Rarotonga, Cook Islands [harmonics_ticon4_worldwide.txt]",0.0,9.3
+cptt: Pago Pago,cptt,2851,Fakaofo Island,-9.3833,-171.25,offen,Buchquotient Flach weg,7.5,2.6,"Fakaofo, Tokelau [harmonics_utide_tidetables.txt]",0.32,
+cptt: Pago Pago,cptt,2861,Niue Island (N.Z.),-19.0333,-169.9167,gemischt,Buchquotient Flach weg,5.9,2.6,"Niue Island, Niue [harmonics_ticon4_worldwide.txt]",0.0,4.6
+cptt: Pago Pago,cptt,2907,Canton Island,-2.8,-171.7167,offen,Buchquotient Flach weg,5.4,11.7,"Kanton, Kiribati [harmonics_ticon4_worldwide.txt]",2.81,
+cptt: Apia,cptt,2865,Neiafu,-18.65,-173.9833,offen,CAL 1.0 Spring 45,6.4,7.9,"Neiafu, Vava'u Group, Tonga [harmonics-1997-05-25_mod.txt]",0.0,6.3
+cptt: Apia,cptt,2867,Lifuka Island,-19.8,-174.35,offen,CAL 1.0 Spring 45,6.5,5.6,"Lifuka, Ha'apai Group, Tonga [harmonics-1997-05-25_mod.txt]",1.75,7.3
+cptt: Apia,cptt,3397,Macquarie Island,-54.5167,158.9667,offen,CAL 1.0 Spring 45,7.6,3.0,"Macquarie Island, Australia [harmonics_ticon4_worldwide.txt]",0.0,7.4
+cptt: Apia,cptt,3937,Rodriguez Island,-19.6667,63.4333,offen,CAL 1.0 Spring 45,14.3,3.2,"Port Maturin, Rodrigues, Mauritius [harmonics_ticon4_worldwide.txt]",2.09,
+cptt: Auckland,cptt,2919,"Paterson Inlet, Stewart Island",-46.9,168.1167,insel,Bau heute,4.3,3.2,"Golden Bay, New Zealand [harmonics_utide_tidetables.txt]",0.52,4.3
+cptt: Auckland,cptt,2921,Akaroa,-43.8,172.9167,binnen,Bau heute,4.4,2.2,"Tikao Bay, New Zealand [harmonics_utide_tidetables.txt]",0.28,4.5
+cptt: Auckland,cptt,2927,Otago Harbor entrance,-45.7833,170.7333,gemischt,Bau heute,4.5,2.3,"Taiaroa Head, New Zealand [harmonics_utide_tidetables.txt]",0.79,
+cptt: Auckland,cptt,2933,Nugget Point,-46.4333,169.8,gemischt,Bau heute,4.2,2.6,"Nugget Point, New Zealand [harmonics_utide_tidetables.txt]",0.44,4.2
+cptt: Auckland,cptt,2935,Waipapa Point,-46.65,168.85,offen,Bau heute,3.8,2.2,"Waipapa Point, New Zealand [harmonics_utide_tidetables.txt]",0.95,3.8
+cptt: Auckland,cptt,2939,New River,-46.5333,168.25,gemischt,Bau heute,11.0,3.6,"New River Entrance, New Zealand [harmonics_utide_tidetables.txt]",2.41,11.2
+cptt: Auckland,cptt,2941,Colac Bay,-46.3667,167.9,offen,Bau heute,3.7,2.1,"Colac Bay / Oraka, New Zealand [harmonics_utide_tidetables.txt]",1.62,3.7
+cptt: Auckland,cptt,2947,Deep Cove,-45.45,167.1667,binnen,Bau heute,7.8,2.3,"Deep Cove, New Zealand [harmonics_utide_tidetables.txt]",1.5,
+cptt: Auckland,cptt,2955,Haast River entrance,-43.8333,169.05,offen,Bau heute,5.0,2.3,"Haast River Entrance, New Zealand [harmonics_utide_tidetables.txt]",2.37,5.0
+cptt: Auckland,cptt,2959,Okarito,-43.2167,170.1833,gemischt,Bau heute,4.9,2.3,"Okarito, New Zealand [harmonics_utide_tidetables.txt]",1.26,4.8
+cptt: Auckland,cptt,2961,Hokitika Bar,-42.7167,170.9667,offen,Bau heute,5.2,2.3,"Hokitika River Bar, New Zealand [harmonics_utide_tidetables.txt]",0.95,5.2
+cptt: Auckland,cptt,2963,Greymouth,-42.4333,171.2167,gemischt,Bau heute,5.0,2.8,"Greymouth, New Zealand [harmonics_utide_tidetables.txt]",1.92,5.0
+cptt: Auckland,cptt,2965,Westport,-41.7333,171.6,gemischt,Bau heute,5.3,2.8,"Westport, New Zealand [harmonics_utide_observations.txt]",1.44,
+cptt: Auckland,cptt,2969,Motupipi River entrance,-40.8333,172.85,gemischt,Bau heute,13.1,2.3,"Motupipi Inlet, New Zealand [harmonics_utide_tidetables.txt]",0.0,13.1
+cptt: Auckland,cptt,2971,Astrolabe Road,-40.9667,173.05,gemischt,Bau heute,13.9,2.7,"Astrolabe Roadstead, New Zealand [harmonics_utide_tidetables.txt]",0.0,14.1
+cptt: Auckland,cptt,2979,Stephens Island,-40.6667,174.0167,insel,Bau heute,6.6,3.0,"Stephens Island / Takapourewa, New Zealand [harmonics_utide_tidetables.txt]",1.41,6.4
+cptt: Auckland,cptt,2981,Elmslie Bay,-40.9333,173.85,insel,Bau heute,13.1,3.0,"Elmslie Bay, New Zealand [harmonics_utide_tidetables.txt]",0.91,13.0
+cptt: Auckland,cptt,2983,Pelorus Sound entrance,-40.9167,173.9833,insel,Bau heute,11.6,2.4,"Pelorus Sound / Te Hoiere Entrance, New Zealand [harmonics_utide_tidetables.txt]",0.0,11.3
+cptt: Auckland,cptt,2985,Oueen Charlotte Sound entrance,-41.1167,174.2833,insel,Bau heute,4.9,2.5,"Long Island, New Zealand [harmonics_utide_tidetables.txt]",0.46,
+cptt: Auckland,cptt,3011,Opunake Bay,-39.4667,173.85,offen,Bau heute,9.6,2.5,"Opunake Bay, New Zealand [harmonics_utide_tidetables.txt]",1.4,9.5
+cptt: Auckland,cptt,3015,Waitara River entrance,-38.9833,174.2333,offen,Bau heute,4.8,2.3,"Waitara River Entrance, New Zealand [harmonics_utide_tidetables.txt]",0.67,5.1
+cptt: Auckland,cptt,3021,Waikato River,-37.4,174.75,binnen,Bau heute,6.8,2.2,"Port Waikato, New Zealand [harmonics_utide_tidetables.txt]",2.21,7.4
+cptt: Auckland,cptt,3023,Manukau Harbor entrance,-37.05,174.5167,insel,Bau heute,4.3,24.6,"Paratutae Island, New Zealand [harmonics_utide_tidetables.txt]",0.63,
+cptt: Auckland,cptt,3033,Cape Maria van Diemen,-34.4833,172.6333,offen,Bau heute,6.0,3.6,"Cape Maria van Diemen, New Zealand [harmonics_utide_tidetables.txt]",2.27,6.1
+cptt: Auckland,cptt,3041,Port Russell,-35.2667,174.1167,gemischt,Bau heute,3.7,2.1,"Russell, New Zealand [harmonics_utide_tidetables.txt]",0.64,3.8
+cptt: Auckland,cptt,3063,East Cape,-37.6833,178.55,offen,Bau heute,3.2,2.4,"East Cape, New Zealand [harmonics_utide_tidetables.txt]",0.57,3.3
+cptt: Wellington,cptt,2989,Cape Campbell,-41.7333,174.25,offen,Buchquotient Flach weg,4.4,3.4,"Cape Campbell, New Zealand [harmonics_utide_tidetables.txt]",0.43,4.5
+cptt: Wellington,cptt,2997,"Clyde, Wairoa River",-39.05,177.4333,gemischt,Buchquotient Flach weg,5.5,2.2,"Wairoa River Mouth, New Zealand [harmonics_utide_tidetables.txt]",1.88,5.5
+cptt: Wellington,cptt,3001,Cape Palliser,-41.6167,175.2833,offen,Buchquotient Flach weg,5.1,2.4,"Cape Palliser / Matakitaki-a-Kupe, New Zealand [harmonics_utide_tidetables.txt]",0.52,3.9
+cptt: Dreger Harbor,cptt,3099,Karunohu Island {,-8.5,157.9667,insel,Buchquotient Flach weg,6.8,5.9,"Marovo Lagoon (Vangunu), Solomon Islands [harmonics-2004-06-14_mod.txt]",0.0,8.6
+cptt: Dreger Harbor,cptt,3103,"Gizo Harbor, New Georgia Group {",-8.1,156.85,insel,Buchquotient Flach weg,9.2,5.7,"Gizo Anchorage, Solomon Islands [harmonics-2004-06-14_mod.txt]",0.0,9.8
+cptt: Dreger Harbor,cptt,3121,East Ape (Goschen Strait) {,-10.2333,150.8833,insel,Buchquotient Flach weg,13.9,9.1,"East Cape, Papua New Guinea [harmonics-2004-06-14_mod.txt]",0.0,13.0
+cptt: Townsville,cptt,3127,Dedele Point,-10.2333,148.7167,offen,Buchquotient Flach weg,8.0,5.4,"Dedele Point, Papua New Guinea [harmonics-2004-06-14_mod.txt]",0.0,6.6
+cptt: Townsville,cptt,3171,Tern Island,-11.0,142.75,offen,Buchquotient Flach weg,3.7,4.6,"Tern Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,5.6
+cptt: Townsville,cptt,3175,Piper island,-12.25,143.25,offen,Buchquotient Flach weg,3.8,4.3,"Piper Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,5.5
+cptt: Townsville,cptt,3177,Restoration Island,-12.6167,143.4667,offen,Buchquotient Flach weg,4.2,4.1,"Restoration Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,5.9
+cptt: Townsville,cptt,3179,Flinders Islands,-14.1667,144.25,offen,Buchquotient Flach weg,5.5,5.0,"Flinders Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,
+cptt: Townsville,cptt,3181,Low Wooded Isle,-15.0833,145.4,offen,Buchquotient Flach weg,4.9,5.0,"Low Wooded Isle, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,6.0
+cptt: Townsville,cptt,3183,Cooktown,-15.4667,145.25,offen,Buchquotient Flach weg,3.0,3.5,"Cooktown, Queensland, Australia [harmonics_utide_observations.txt]",0.44,
+cptt: Townsville,cptt,3187,Cairns,-16.9167,145.7833,gemischt,Buchquotient Flach weg,2.2,4.2,"Cairns, Queensland, Australia [harmonics_utide_observations.txt]",1.73,
+cptt: Townsville,cptt,3189,Green Island,-16.7667,145.9667,offen,Buchquotient Flach weg,3.2,4.2,"Green Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.98,
+cptt: Townsville,cptt,3191,High Island,-17.1667,146.0167,offen,Buchquotient Flach weg,3.6,3.6,"High Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,4.4
+cptt: Townsville,cptt,3197,Dungeness (Lucinda),-18.5167,146.3167,gemischt,Buchquotient Flach weg,4.5,3.2,"Lucinda, Queensland, Australia [harmonics-2004-06-14_mod.txt]",1.65,7.3
+cptt: Townsville,cptt,3201,Bowen,-20.0167,148.25,offen,Buchquotient Flach weg,2.5,3.8,"Bowen, Queensland, Australia [harmonics_utide_observations.txt]",0.37,
+cptt: Bombay,cptt,3537,Bassein,19.3,72.8,insel,Buchquotient Flach weg,3.5,3.6,"Vasai (Bassein), Maharashtra, India [harmonics_att_np203.txt]",0.0,4.0
+cptt: Bombay,cptt,3539,Dahanu,19.9667,72.7167,offen,Buchquotient Flach weg,4.9,4.8,"Dahanu, Maharashtra, India [harmonics_att_np203.txt]",0.0,4.9
+cptt: Bombay,cptt,3549,Okha Point,22.4667,69.0833,gemischt,Buchquotient Flach weg,3.3,3.2,"Okha, Gujarat, India [harmonics_att_np203.txt]",0.0,3.8
+cptt: Bombay,cptt,3553,Kandla,23.0333,70.2333,binnen,Buchquotient Flach weg,4.8,8.8,"Kandla, Gujarat, India [harmonics-1997-05-25_mod.txt]",0.02,5.6
+cptt: Bombay,cptt,3559,Navlakhi,22.9667,70.45,binnen,Buchquotient Flach weg,4.5,7.8,"Navlakhi, Gujarat, India [harmonics-1997-05-25_mod.txt]",0.01,5.3
+cptt: Brisbane Bar,cptt,3203,Hook Island,-20.0667,148.9333,gemischt,CAL 1.0 Spring 45,6.3,3.1,"Hook Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,
+cptt: Brisbane Bar,cptt,3207,East Repulse Island,-20.5833,148.8833,insel,CAL 1.0 Spring 45,5.5,3.8,"East Repulse Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,6.0
+cptt: Brisbane Bar,cptt,3213,"Refuge Bay, Scawfell Island",-20.8667,149.6167,offen,CAL 1.0 Spring 45,4.9,2.8,"Scawfell Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,6.1
+cptt: Brisbane Bar,cptt,3217,Sarina Inlet,-21.4,149.3333,gemischt,CAL 1.0 Spring 45,4.1,2.8,"Sarina Inlet, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,4.8
+cptt: Brisbane Bar,cptt,3221,High Peak Island,-21.95,150.6833,offen,CAL 1.0 Spring 45,4.5,2.8,"High Peak Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,6.4
+cptt: Brisbane Bar,cptt,3223,"Port Clinton, Coral Sea",-22.5333,150.75,insel,CAL 1.0 Spring 45,3.8,3.1,"Port Clinton, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,5.1
+cptt: Brisbane Bar,cptt,3229,"Gladstone, Port Curtis",-23.8333,151.25,insel,CAL 1.0 Spring 45,3.4,3.3,"Gladstone, Queensland, Australia [harmonics_ticon4_worldwide.txt]",0.0,3.5
+cptt: Brisbane Bar,cptt,3231,Lady Musgrave Island,-23.9,152.3833,offen,CAL 1.0 Spring 45,4.2,2.6,"Lady Musgrave Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,4.3
+cptt: Brisbane Bar,cptt,3235,Lady Elliot Island,-24.1167,152.7167,offen,CAL 1.0 Spring 45,3.1,2.3,"Lady Elliot Island, Queensland, Australia [harmonics-2004-06-14_mod.txt]",0.0,3.6
+cptt: Brisbane Bar,cptt,3237,Burnett Heads,-24.7667,152.3833,offen,CAL 1.0 Spring 45,5.3,3.4,"Bundaberg (Burnett Heads), Queensland, Australia [harmonics_utide_observations.txt]",0.53,
+cptt: Brisbane Bar,cptt,3245,Ballina,-28.8667,153.5833,offen,CAL 1.0 Spring 45,7.7,3.9,"Ballina, New South Wales, Australia [harmonics-2004-06-14_mod.txt]",0.0,6.1
+cptt: Brisbane Bar,cptt,3247,Iluka,-29.4167,153.3667,offen,CAL 1.0 Spring 45,4.6,3.1,"Iluka, New South Wales, Australia [harmonics_ticon4_worldwide.txt]",0.0,3.4
+cptt: Brisbane Bar,cptt,3251,Norfolk Island,-29.0667,167.9333,offen,CAL 1.0 Spring 45,6.9,3.2,"Norfolk Island, Australia [harmonics_utide_observations.txt]",0.0,9.4
+cptt: Sydney,cptt,3253,Coffs Harbor,-30.3,153.15,offen,Buchquotient,2.6,3.4,"Coffs Harbour, New South Wales, Australia [harmonics_ticon4_worldwide.txt]",0.49,3.4
+cptt: Sydney,cptt,3255,Port Macquarie bar,-31.4333,152.9333,offen,Buchquotient,2.8,6.8,"Port Macquarie, New South Wales, Australia [harmonics_ticon4_worldwide.txt]",2.24,4.3
+cptt: Sydney,cptt,3257,Nelson's Bay,-32.7167,152.15,insel,Buchquotient,2.9,3.1,"Shoal Bay (Port Stephens), New South Wales, Australia [harmonics-2004-06-14_mod.txt]",2.43,2.7
+cptt: Sydney,cptt,3259,Newcastle,-32.9333,151.7833,insel,Buchquotient,1.7,2.7,"Newcastle, New South Wales, Australia [harmonics_ticon4_worldwide.txt]",0.0,2.5
+cptt: Sydney,cptt,3263,Port Kembla,-34.4833,150.9167,offen,Buchquotient,2.1,3.1,"Port Kembla, New South Wales, Australia [harmonics_utide_observations.txt]",1.36,
+cptt: Sydney,cptt,3267,Eden,-37.0667,149.9,gemischt,Buchquotient,3.5,3.5,"Eden, New South Wales, Australia [harmonics_ticon4_worldwide.txt]",0.0,2.7
+cptt: Sydney,cptt,3269,Gabo Island,-37.5667,149.9167,gemischt,Buchquotient,3.6,3.7,"Gabo Island, Victoria, Australia [harmonics-2004-06-14_mod.txt]",0.0,3.3
+cptt: Port Phillip,cptt,3271,Stack Island,-40.6,144.7833,insel,CAL 1.0 Spring 45,9.1,7.4,"Stack Island, Tasmania, Australia [harmonics-2004-06-14_mod.txt]",0.0,38.8
+cptt: Port Phillip,cptt,3273,Devonport,-41.15,146.3833,gemischt,CAL 1.0 Spring 45,6.6,3.1,"Devonport, Tasmania, Australia [harmonics_ticon4_worldwide.txt]",0.0,36.8
+cptt: Port Phillip,cptt,3275,Port Dalrymple entrance,-41.0667,146.8,offen,CAL 1.0 Spring 45,7.5,3.8,"Low Head, Tasmania, Australia [harmonics_ticon4_worldwide.txt]",0.48,31.9
+cptt: Port Phillip,cptt,3277,"Launceston, Tamar River",-41.4333,147.1333,binnen,CAL 1.0 Spring 45,14.4,16.9,"Launceston, Tasmania, Australia [harmonics-2004-06-14_mod.txt]",0.0,45.8
+cptt: Port Phillip,cptt,3289,Great Glennie Island,-39.0833,146.2333,offen,CAL 1.0 Spring 45,8.0,4.3,"Great Glennie Island, Victoria, Australia [harmonics-2004-06-14_mod.txt]",0.0,36.8
+cptt: Port Phillip,cptt,3293,"Mussel Rock, Westernport",-38.45,145.25,insel,CAL 1.0 Spring 45,7.3,3.3,"Cowes Jetty, Victoria, Australia [harmonics_utide_tidetables.txt]",0.99,
+cptt: Port Phillip,cptt,3299,Melbourne (Williamstown),-37.8667,144.9167,gemischt,CAL 1.0 Spring 45,4.1,18.4,"Melbourne (Williamstown), Victoria, Australia [harmonics_ticon4_worldwide.txt]",0.11,
+cptt: Port Adelaide,cptt,3283,"Bramble Cove, Port Davey",-43.3167,146.0,gemischt,Buchquotient,17.1,6.7,"Bramble Cove, Tasmania, Australia [harmonics-2004-06-14_mod.txt]",0.43,
+cptt: Port Adelaide,cptt,3307,Portland,-38.35,141.6167,offen,Buchquotient,14.0,6.5,"Portland, Victoria, Australia [harmonics_utide_observations.txt]",0.84,
+cptt: Port Adelaide,cptt,3313,Second Valley,-35.5167,138.2167,gemischt,Buchquotient,3.9,4.6,"Second Valley, South Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,4.1
+cptt: Port Adelaide,cptt,3323,"Ardrossan, Gulf of St. Vincent",-34.4333,137.9167,gemischt,Buchquotient,2.9,4.6,"Ardrossan, South Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,3.3
+cptt: Port Adelaide,cptt,3325,"Edithburg, Gulf of St. Vincent",-35.0833,137.75,offen,Buchquotient,3.4,4.1,"Edithburgh, South Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,3.6
+cptt: Port Adelaide,cptt,3329,"Wallaroo, Spencer Gulf",-33.9167,137.6167,gemischt,Buchquotient,12.3,5.5,"Wallaroo, South Australia, Australia [harmonics_ticon4_worldwide.txt]",1.04,11.8
+cptt: Port Adelaide,cptt,3385,"Geranium Hbr., Napier Broome Bay",-13.9333,126.5833,gemischt,Buchquotient,9.5,4.9,"Geranium Harbour, Western Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,
+cptt: Port Hedland,cptt,3357,Large Islet,-21.3,115.5,offen,Buchquotient Flach weg,2.7,4.2,"Large Islet, Western Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,3.0
+cptt: Port Hedland,cptt,3359,"Trimouille Island, Monte Bello Islands",-20.3833,115.55,offen,Buchquotient Flach weg,3.5,3.9,"Trimouille Island, Western Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,4.3
+cptt: Port Hedland,cptt,3365,Broome,-18.0,122.2167,offen,Buchquotient Flach weg,1.6,3.8,"Broome, Western Australia, Australia [harmonics_utide_observations.txt]",0.23,
+cptt: Port Hedland,cptt,3367,Red Bluff,-17.0667,122.3167,offen,Buchquotient Flach weg,2.9,4.7,"Red Bluff, Western Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,4.6
+cptt: Port Hedland,cptt,3371,Karrakatta Bay,-16.3667,123.0333,gemischt,Buchquotient Flach weg,2.7,3.0,"Karrakatta Bay, Western Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,3.1
+cptt: Port Hedland,cptt,3375,Cockatoo Island,-16.0833,123.5833,insel,Buchquotient Flach weg,2.3,3.6,"Cockatoo Island, Western Australia, Australia [harmonics_utide_tidetables.txt]",1.41,
+cptt: Port Hedland,cptt,3377,"Hall Point, Kid Islet",-15.6667,124.4,insel,Buchquotient Flach weg,2.1,3.8,"Hall Point, Western Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,2.1
+cptt: Port Hedland,cptt,3381,Baudin Island,-14.1333,125.6,gemischt,Buchquotient Flach weg,2.4,2.9,"Baudin Island, Western Australia, Australia [harmonics-2004-06-14_mod.txt]",0.0,
+cptt: Sagar,cptt,3449,Chaungtha River entrance,16.95,94.4333,offen,CAL 1.0 Spring 45,2.8,3.0,"Chaungtha Kyun, Myanmar [harmonics_att_np203_scs.txt]",0.0,2.8
+cptt: Sagar,cptt,3451,Andrew Bay,18.35,94.35,offen,CAL 1.0 Spring 45,2.7,4.0,"Ngapali (Andrew Bay), Myanmar [harmonics_att_np203_scs.txt]",0.0,3.0
+cptt: Sagar,cptt,3453,"Searle Point, Cheduba Island",18.9167,93.6167,insel,CAL 1.0 Spring 45,2.4,3.9,"Searle Point (Cheduba / Manaung Island), Myanmar [harmonics_att_np203_scs.txt]",0.0,2.2
+cptt: Sagar,cptt,3455,"Kyaukpyu, Ramree Island",19.4333,93.55,insel,CAL 1.0 Spring 45,4.3,3.7,"Kyaukphyu (Ramree Island), Myanmar [harmonics_att_np203_scs.txt]",0.0,4.7
+cptt: Sagar,cptt,3459,St. Martins Island,20.6167,92.3167,gemischt,CAL 1.0 Spring 45,3.1,3.3,"Saint Martin's Island, Bangladesh [harmonics_att_np203_scs.txt]",0.0,3.7
+cptt: Sagar,cptt,3465,Kutubdia Island,21.8667,91.8333,insel,CAL 1.0 Spring 45,4.9,3.6,"Kutubdia Island (Lighthouse), Bangladesh [harmonics_att_np203_scs.txt]",0.0,4.5
+cptt: Madras,cptt,3481,False Point,20.4167,86.7833,offen,Buchquotient Flach weg,4.0,3.4,"False Point, Odisha, India [harmonics_att_np203.txt]",0.0,5.2
+cptt: Colombo,cptt,3501,Point Pedro,9.8333,80.2333,insel,Buchquotient Flach weg,5.8,4.6,"Point Pedro, Sri Lanka [harmonics_att_np203.txt]",0.0,6.1
+cptt: Colombo,cptt,3505,Galle,6.0333,80.2167,offen,Buchquotient Flach weg,3.1,3.3,"Galle, Sri Lanka [harmonics-1997-05-25_mod.txt]",0.0,4.9
+cptt: Colombo,cptt,3509,Jaffna,9.65,80.0167,insel,Buchquotient Flach weg,7.6,12.7,"Jaffna, Sri Lanka [harmonics_att_np203.txt]",0.0,5.9
+cptt: Colombo,cptt,3515,Beypore,11.1667,75.8,offen,Buchquotient Flach weg,10.2,3.8,"Beypore, Kerala, India [harmonics-1997-05-25_mod.txt]",0.02,10.1
+cptt: Karachi,cptt,3517,Calicut,11.25,75.7667,offen,Buchquotient,3.6,3.5,"Calicut (Kozhikode), Kerala, India [harmonics_att_np203.txt]",0.0,6.8
+cptt: Karachi,cptt,3527,Bhatkal,13.9667,74.5333,offen,Buchquotient,3.6,6.9,"Bhatkal, Karnataka, India [harmonics_att_np203.txt]",0.0,5.7
+cptt: Karachi,cptt,3563,Kori Creek entrance,23.5167,68.35,insel,Buchquotient,10.9,26.1,"Kori Creek Entrance, Gujarat, India [harmonics_att_np203.txt]",0.0,
+cptt: Karachi,cptt,3617,"Bandar Abbas, Persian Gulf",27.1833,56.2833,insel,Buchquotient,25.6,3.2,"Bandar Abbas, Iran [harmonics-1997-05-25_mod.txt]",1.05,
+cptt: Mina Salman,cptt,3685,Al Manamah Harbor,26.2333,50.5833,insel,CAL 1.0 Spring 45,4.1,4.3,"Mina Salman, Manamah, Bahrain [harmonics_ticon4_worldwide.txt]",1.67,6.0
+cptt: Mina Salman,cptt,3695,Jabal Fuwaira,26.05,51.3667,offen,CAL 1.0 Spring 45,9.2,3.3,"Fuwayrit (Jabal al Fuwayrit), Qatar [harmonics_att_np203.txt]",0.0,9.8
+cptt: Aden,cptt,3775,Marbat,16.9833,54.7,offen,Buchquotient Flach weg,10.4,4.6,"Mirbat (Marbat), Oman [harmonics_att_np203.txt]",0.0,10.3
+cptt: Aden,cptt,3777,Mukalla,14.5167,49.1333,offen,Buchquotient Flach weg,9.4,4.0,"Mukalla, Yemen [harmonics_att_np203.txt]",0.0,7.6
+cptt: Aden,cptt,3783,Al Mukha,13.3167,43.2333,offen,Buchquotient Flach weg,31.9,5.2,"Mokha (Al Mukha), Yemen [harmonics_att_np203.txt]",0.0,30.5
+cptt: Aden,cptt,3819,"Djibouti, Gulf of Aden",11.5833,43.1333,insel,Buchquotient Flach weg,0.7,3.9,"Djibouti (Gulf of Aden), Djibouti [harmonics_ticon4_worldwide.txt]",0.0,3.0
+cptt: Suez,cptt,3785,Kamaran Passage,15.2833,42.6333,insel,CAL 1.0 Spring 45,2.8,6.8,"Kamaran (Passage), Yemen [harmonics_att_np203.txt]",0.0,6.8
+cptt: Suez,cptt,3789,Sherm Rabegh,22.75,38.9667,insel,CAL 1.0 Spring 45,14.9,4.9,"Sharm Rabigh, Saudi Arabia [harmonics_att_np203.txt]",0.0,15.8
+cptt: Suez,cptt,3797,Zafarana,29.1,32.6667,offen,CAL 1.0 Spring 45,4.4,3.4,"Zafarana, Egypt [harmonics-1997-05-25_mod.txt]",0.0,1.3
+cptt: Suez,cptt,3799,Ras Gharib,28.35,33.1,gemischt,CAL 1.0 Spring 45,4.4,4.4,"Ra's Gharib, Egypt [harmonics-1997-05-25_mod.txt]",0.0,3.0
+cptt: Suez,cptt,3803,Shadwan Island,27.45,34.0333,insel,CAL 1.0 Spring 45,5.6,3.7,"Jazirat Shadwan, Egypt [harmonics-1997-05-25_mod.txt]",0.0,3.8
+cptt: Suez,cptt,3813,Harmil Island,16.4833,40.1833,offen,CAL 1.0 Spring 45,5.1,15.5,"Harmil Island, Eritrea [harmonics-1997-05-25_mod.txt]",0.0,3.8
+cptt: Suez,cptt,3815,Massaua,15.6167,39.4667,offen,CAL 1.0 Spring 45,4.3,9.1,"Massawa (Mitsiwa), Eritrea [harmonics-1997-05-25_mod.txt]",0.0,4.3
+cptt: Dar Es Salaam,cptt,3841,Malindi,-3.2167,40.1333,offen,CAL 1.0 Spring 45,2.7,2.7,"Malindi, Kenya [harmonics-1997-05-25_mod.txt]",0.0,2.9
+cptt: Dar Es Salaam,cptt,3845,Wasin Island,-4.65,39.35,gemischt,CAL 1.0 Spring 45,2.0,3.2,"Wasini Island, Kenya [harmonics-1997-05-25_mod.txt]",0.02,2.4
+cptt: Dar Es Salaam,cptt,3925,Majunga,-15.7333,46.3167,insel,CAL 1.0 Spring 45,3.5,2.8,"Mahajanga, Madagascar [harmonics_att_np203.txt]",0.0,4.3
+cptt: Dar Es Salaam,cptt,3929,"Zaudzi, Ile Mayotte",-12.7833,45.2667,offen,CAL 1.0 Spring 45,1.6,2.7,"Dzaoudzi, Mayotte [harmonics_ticon4_worldwide.txt]",1.39,3.4
+cptt: Dar Es Salaam,cptt,3941,"Port Victoria, Seychelle Islands",-4.6167,55.45,offen,CAL 1.0 Spring 45,6.0,3.1,"Victoria, Seychelles [harmonics_ticon4_worldwide.txt]",0.0,8.8
+cptt: Durban,cptt,3885,Porto de Inhambane,-23.85,35.3833,insel,Buchquotient HW/NW,3.6,4.2,"Inhambane (Rio Matumba.), Mozambique [harmonics_ticon4_worldwide.txt]",2.12,
+cptt: Durban,cptt,3897,Port Elizabeth,-33.9667,25.6333,offen,Buchquotient HW/NW,1.5,3.5,"Gqeberha (Port Elizabeth), South Africa [harmonics_utide_observations.txt]",0.0,1.7
