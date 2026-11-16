@@ -8,7 +8,7 @@ zwei Jahre (2026-27) stuendliche Kartverket-Punktvorhersage dort, Fit wie py/kar
 412a "Ulvik (Tjeldsund)": Nominatim fand Ulvika bei Kjoepsvik; 14.11. Olivers Position (Ort 68.5642/16.3072, Stegende).
 Neue Saetze -> harmonics/utide/harmonics_utide_tidetables.txt und harmonics/help/neu_pruefen_20261113.csv.
 
-Usage: venv/bin/python py/kartverket_bsh_luecken.py [--schreiben]
+Usage: venv/bin/python py/kartverket_bsh_luecken.py [--nah] [--schreiben]
 """
 import datetime as dt
 import json
@@ -48,6 +48,20 @@ ORTE = [('370', 'Kvalsund', 'Kvalsund, Hammerfest', 'Finnmark'),
         ('523', 'Lysebotn', 'Lysebotn, Sandnes', 'Rogaland'),
         ('412a', 'Ulvik (Tjeldsund)', (68.56310, 16.31758), 'Troms'),   # Stegende laut Oliver (GM/OSM)
         ('530', 'Lillesand', (58.2490, 8.3779), 'Agder')]  # Nominatim gab 58.116/8.440 (15 km suedlich)
+# 16.11. (Oliver: "Luecken in Norwegen mit Kartverket schliessen"): BSH-Orte 5-15 km vom naechsten Satz  (--nah)
+ORTE_NAH = [('395', 'Sjøvegan', 'Sjøvegan, Salangen', 'Troms'),
+            ('402', 'Myre (Øksnes)', 'Myre, Øksnes', 'Nordland'),
+            ('409', 'Ballstad (Vestvågøya)', 'Ballstad, Vestvågøy', 'Nordland'),
+            ('413', 'Ramsund', 'Ramsund, Tjeldsund', 'Troms'),
+            ('440', 'Tjøtta', 'Tjøtta, Alstahaug', 'Nordland'),
+            ('444a', 'Leka', 'Leka, Leka', 'Trøndelag'),
+            ('445b', 'Abelvær', 'Abelvær, Nærøysund', 'Trøndelag'),
+            ('445c', 'Kolvereid', 'Kolvereid, Nærøysund', 'Trøndelag'),
+            ('453', 'Kyrksæterøra', 'Kyrksæterøra, Heim', 'Trøndelag'),
+            ('454', 'Brekstad (Ørland)', 'Brekstad, Ørland', 'Trøndelag'),
+            ('471', 'Bud', 'Bud, Hustadvika', 'Møre og Romsdal'),
+            ('-', 'Verdalsøra', 'Verdalsøra, Verdal', 'Trøndelag'),   # Oliver 16.11. (nicht im BSH-Verzeichnis); Høyanger gibt es seit 14.11.
+            ('536', 'Brevik (Porsgrunn)', 'Brevik, Porsgrunn', 'Telemark')]
 
 
 def hole(url, daten=None, pause=1.1):
@@ -70,6 +84,27 @@ def hole(url, daten=None, pause=1.1):
     return c[k]
 
 
+def ins_wasser(la, lo, abstand_km=0.05):
+    """Naechster Meerpunkt >= abstand_km vom OSM-Ufer (Landpolygone)."""
+    import math
+    import osm_land
+    from shapely import affinity
+    from shapely.geometry import Point, box
+    from shapely.ops import nearest_points, unary_union
+    L = osm_land.Land([(la, lo)])
+    k = math.cos(math.radians(la))
+    for r in (2.0, 6.0):
+        dg = r / 111.2
+        teile = L._treffer(box(lo - dg / k, la - dg, lo + dg / k, la + dg))
+        B = box(-r, -r, r, r)
+        W = B.difference(affinity.affine_transform(unary_union(teile), [k * 111.2, 0, 0, 111.2, -lo * k * 111.2, -la * 111.2])) if teile else B
+        Wi = W.buffer(-abstand_km)
+        if not Wi.is_empty:
+            q = nearest_points(Wi, Point(0, 0))[0]
+            return (la + q.y / 111.2, lo + q.x / (k * 111.2))
+    return (la, lo)
+
+
 def position(suche):
     if isinstance(suche, tuple):
         r = [dict(lat=suche[0], lon=suche[1])]
@@ -81,14 +116,17 @@ def position(suche):
     p = (float(r[0]['lat']), float(r[0]['lon']))
     q = ('[out:json][timeout:30];(node(around:2000,%.5f,%.5f)[harbour];nwr(around:2000,%.5f,%.5f)[man_made=pier];'
          'nwr(around:2000,%.5f,%.5f)[amenity=ferry_terminal];nwr(around:2000,%.5f,%.5f)[leisure=marina];);out center 20;' % (p * 4))
-    h = hole('https://overpass-api.de/api/interpreter', 'data=' + urllib.parse.quote(q), pause=2.0)
+    try:
+        h = hole('https://overpass-api.de/api/interpreter', 'data=' + urllib.parse.quote(q), pause=2.0)
+    except RuntimeError:                       # Overpass ueberlastet (16.11.): Ortspunkt ins naechste Wasser
+        return p, ins_wasser(*p), 'Ortspunkt ins Wasser (Overpass nicht erreichbar)'
     if h.get('elements'):
         el = min(h['elements'], key=lambda x: km(p, (x.get('lat') or x['center']['lat'], x.get('lon') or x['center']['lon'])))
         hp = (el.get('lat') or el['center']['lat'], el.get('lon') or el['center']['lon'])
         t = el['tags']
         art = t.get('amenity') or t.get('man_made') or t.get('leisure') or 'harbour'
         return p, hp, ('%s %s' % (art, t.get('name', ''))).strip()
-    return p, p, 'Ortspunkt'
+    return p, ins_wasser(*p), 'Ortspunkt ins Wasser'
 
 
 def main(argv):
@@ -97,7 +135,10 @@ def main(argv):
     heute = dt.date.today().strftime('%Y%m%d')
     T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
     neu, liste = [], []
-    for nr, name, suche, fylke in ORTE:
+    global NEU
+    if '--nah' in argv:
+        NEU = os.path.join(ROOT, 'harmonics/help/neu_pruefen_%s.csv' % heute)
+    for nr, name, suche, fylke in (ORTE_NAH if '--nah' in argv else ORTE):
         voll = '%s, Norway' % name
         if voll in T:
             print('%-5s %-28s schon im Bestand' % (nr, voll))
@@ -131,7 +172,8 @@ def main(argv):
                 '# !units: meters', '# !longitude: %.4f' % p[1], '# !latitude: %.4f' % p[0], '# province: %s' % fylke,
                 '# note: %s Fit %d Tage Kartverket-Punktvorhersage (%.1f cm), Bezug %s; Position %s'
                 % (heute, tage, 100 * rms, bezug, art[:40]),
-                '# note: BSH-Gezeitentafeln 2027 Nr. %s (Luecke im Bestand), py/kartverket_bsh_luecken.py' % nr,
+                ('# note: BSH-Gezeitentafeln 2027 Nr. %s (%s im Bestand), py/kartverket_bsh_luecken.py' % (nr, 'naechster Satz 5-15 km' if '--nah' in argv else 'Luecke'))
+                if nr != '-' else '# note: Luecke im Bestand (Oliver 16.11.), py/kartverket_bsh_luecken.py',
                 voll, '+00:00 :Europe/Oslo', '%.4f meters' % z0]
         neu += ['%-15s %.4f  %.2f' % (c, *w[c]) if c in w and w[c][0] >= 0.00005 else 'x 0 0' for c in namen]
         liste.append(voll)
