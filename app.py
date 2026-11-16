@@ -2547,6 +2547,10 @@ def update_station_name():
 
         if old_name == new_name:
             return jsonify(error="Name ist unverändert"), 400
+        # libtcd ONELINER_LENGTH 90: laengerer Name laesst build_tide_db abbrechen, nachdem die .txt
+        # schon geaendert ist (TCD und Karte bleiben alt, zweiter Versuch findet die Station nicht)
+        if len(new_name) > 89:
+            return jsonify(error=f"Name zu lang ({len(new_name)} Zeichen, höchstens 89 für die TCD) – bitte kürzen"), 400
 
         # Quelldatei finden
         txt_path = find_txt_for_tcd(tcd_file)
@@ -2559,8 +2563,12 @@ def update_station_name():
                                      expected_lat=old_lat, expected_lon=old_lon):
             return jsonify(error=f"Station '{old_name}' nicht in {txt_path} gefunden"), 404
 
-        # TCD neu kompilieren
-        rebuild_tcd(txt_path, tcd_file)
+        # TCD neu kompilieren; scheitert das, Umbenennung in der .txt zuruecknehmen (sonst passen .txt, TCD und Karte nicht mehr zusammen)
+        try:
+            rebuild_tcd(txt_path, tcd_file)
+        except subprocess.CalledProcessError:
+            rename_station_in_txt(txt_path, new_name, old_name)
+            return jsonify(error="build_tide_db hat den Namen abgelehnt, Umbenennung zurückgenommen"), 400
 
         # Karte aktualisieren
         karte = rename_station_in_markers_json(old_name, new_name, tcd_file, old_lat, old_lon)

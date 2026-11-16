@@ -52,6 +52,22 @@ def worte(t):
     return {x.lower() for x in re.findall(r'\w+', t)} - GEN
 
 
+NAME_MAX = 89   # libtcd ONELINER_LENGTH 90: laengere Namen lassen build_tide_db abbrechen (Formby/Three and Four Fathom Tongue 16.11.)
+
+
+def auf_tcd_laenge(name):
+    """Name passend fuer libtcd: zu lang -> Kontext in der Klammer weglassen (nur km-/Tiefenangabe bleibt)."""
+    if len(name) <= NAME_MAX:
+        return name
+    m = re.match(r'^(.*?) \(([^()]*)\)(.*)$', name)
+    if m:
+        teile = [t for t in m.group(2).split(', ') if re.search(r'\d+ km|m deep', t)]
+        kurz = '%s (%s)%s' % (m.group(1), ', '.join(teile), m.group(3)) if teile else m.group(1) + m.group(3)
+        if len(kurz) <= NAME_MAX:
+            return kurz
+    return None
+
+
 def vorschlag(la, lo, L):
     nah = sorted((km(la, lo, a, b), n, c, a, b, t) for n, a, b, c, t in L if abs(a - la) < 0.2 and abs(b - lo) < 0.4)
     lm = [x for x in nah if x[2] in PUNKT and x[0] <= 2.5 and not (x[2] == 'ISL' and x[0] > 1.0)]
@@ -208,6 +224,10 @@ def fern(argv):
         if not v or v[0] == r['name']:
             continue
         neu = v[0] if v[0] not in alle else v[0].replace(' Current', ' (2) Current')
+        neu = auf_tcd_laenge(neu)
+        if neu is None:
+            print('zu lang fuer libtcd, uebersprungen:', v[0])
+            continue
         zeilen.append(dict(datei=os.path.basename(r['file']), name=r['name'], vorschlag=neu, landmarke=v[1], lm_km=round(v[2], 1),
                            ref_km=FERN_MUSTER.match(r['name']).group(2), lat=r['lat'], lon=r['lon']))
     zeilen.sort(key=lambda z: (z['name'].split(', ')[-1], z['name']))
