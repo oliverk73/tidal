@@ -28,7 +28,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STROM = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_tables.txt')
 PEGEL = 'Portsmouth, England, United Kingdom'
 NAME = 'Portsmouth Harbour Entrance, England, United Kingdom Current'
-LAT, LON, FLUT = 50.7920, -1.1090, 345.0      # engste Stelle Round Tower / Fort Blockhouse; Flut nach NNW in den Hafen
+LAT, LON, FLUT = 50.7925, -1.1106, 345.0      # engste Stelle Round Tower / Fort Blockhouse; Flut nach NNW in den Hafen
 EBBE_AB, FLUT_AB = 25, 315                    # min nach HW
 EBBE_MAX, FLUT_MAX = (180, 4.1), (-90, 3.4)   # (min nach HW bzw. vor dem naechsten HW, kn Spring)
 

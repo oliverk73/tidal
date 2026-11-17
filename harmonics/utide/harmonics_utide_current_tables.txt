@@ -119835,9 +119835,10 @@ x 0 0
 # note: BOOK-DERIVED. Spring: Flut ab HW+5:15 (max 3,4 kn HW-1:30), Ebbe ab HW+0:25 (max 4,1 kn HW+3), Staerke mit Tidenhub Portsmouth skaliert;
 # note: py/portsmouth_einfahrt.py (Oliver 20261117).
 # note: Belege portsmouth-port.co.uk/at-the-port/port-marine-safety-code/passage-planning, visitmyharbour.com Portsmouth Narrows (Vorschau).
+# note: 20261117 Position 40 m hinter der Uferlinie -> Fahrwassermitte (OSM-Landmaske).
 # !units: knots
-# !longitude: -1.1090
-# !latitude: 50.7920
+# !longitude: -1.1106
+# !latitude: 50.7925
 Portsmouth Harbour Entrance, England, United Kingdom Current
 +00:00 :UTC
 0.2429 knots
@@ -122825,10 +122826,11 @@ x 0 0
 # major_axis_deg_true: 65.0
 # confidence: 5
 # utide: period=2026-01-01..2026-12-31 const=60
+# note: 20261117 Position aus dem Land (Oliver) 1,5 km NW ins Bristol Deep verschoben (OSM-Landmaske, Kueste 1,1 km); vorher "Clevedon (4 km NE, Bristol Deep), England, United Kingdom Current".
 # !units: knots
-# !longitude: -2.8200
-# !latitude: 51.4600
-Clevedon (4 km NE, Bristol Deep), England, United Kingdom Current
+# !longitude: -2.8290
+# !latitude: 51.4764
+Portishead (4 km WSW, Bristol Deep), England, United Kingdom Current
 +00:00 :UTC
 0.0184 knots
 J1              0.0041  234.78

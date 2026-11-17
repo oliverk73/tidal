@@ -101,7 +101,7 @@ TH = [
 # NP258 Bristol Channel (0000258-0, Zoom 6), HW Dover. Laenge = -4 + (x-530)/532, Breite = 51 + (752-y)/828
 # (geprueft an Cardiff und Avonmouth). Flut ENE den Kanal hinauf.
 BC = [
-    ('Clevedon (4 km NE, Bristol Deep), England, United Kingdom Current', 51.4600, -2.8200, _w(65, 245, [
+    ('Portishead (4 km WSW, Bristol Deep), England, United Kingdom Current', 51.4764, -2.8290, _w(65, 245, [
         (1, 23, 43), (1, 16, 29), (1, 9, 16), (-1, 6, 11), (-1, 16, 30), (-1, 20, 38), (-1, 20, 37), (-1, 20, 37),
         (-1, 17, 32), (-1, 7, 13), (1, 18, 34), (1, 31, 58), (1, 26, 48)])),
     ('Flat Holm (3 km S), Wales, United Kingdom Current', 51.3470, -3.1260, _w(65, 245, [
