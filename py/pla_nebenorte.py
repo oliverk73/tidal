@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Themse-Nebenorte aus dem PLA-Tidenheft 2026 (Tables of Average Time Differences, Chart Datums & Standard Levels).
 
-Oliver 17.11.2026: Heft pla.co.uk/.../PLA-Tide-Booklet-2026.pdf -- Standardorte sind schon PLA-Fits (fit_pla_thames.py);
+Oliver 17.11.2026: Heft pla.co.uk/.../PLA-Tide-Booklet-2026.pdf (Kopie: quellen/water_levels/PLA_thames/) -- Standardorte sind schon PLA-Fits (fit_pla_thames.py);
 neu sind ~25 Nebenorte mit HW-/NW-Zeitunterschied und 24 Orte mit MHWS/MHWN/MLWN/MLWS.
 
 Uebertragung (Admiralty-Verfahren auf der Stundenkurve):
