@@ -107,7 +107,7 @@ def vorschlag(la, lo, L):
         # Inselkontext aus GeoNames unzuverlaessig (Inselmittelpunkte: 'Lime Kiln Point (Low Island)') -> nur Gewaesser
         if ww:
             ctx.append(ww[0][1])
-        n = latin1(n)
+        n = latin1(re.sub(r'(?<=[a-z])(?=(Point|Island|Bank|Rock|Head|Reef)$)', ' ', n))   # GeoNames 'InnesPoint'
     return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(ctx)) if ctx else '', tail)
     # 3. benanntes Gewaesser bis 4 km: 'Juan de Fuca Strait (Sheringham Point 11 km SSW)'
     ww = [x for x in nah if x[2] in WASSER and x[0] <= 4]
@@ -119,6 +119,7 @@ def vorschlag(la, lo, L):
     return None
 
 
+OFFSHORE_REF_KM, OFFSHORE_MAX_KM = 30, 25.0   # Bezug ab 30 km = offene See: Landmarke bis 25 km
 FERN_MAX_KM, FERN_ANTEIL = 10.0, 0.5   # geeicht an Olivers Handnamen: 3,9/10, 5,6/12, 8/22 km
 ENG = {'NRWS', 'PASS', 'CHN', 'CHNM', 'STRT'}
 FERN_WEIT_REF = 15     # Bezugsort ab 15 km: Landmarke bis FERN_MAX_KM auch ueber dem halben Abstand (Llandudno 16 km / Constable Bank 8,1)
@@ -143,8 +144,12 @@ def fern_vorschlag(la, lo, L, name):
     if not m or int(m.group(2)) < 3:
         return None
     ref, dref, rest, tail = m.group(1), int(m.group(2)), m.group(4), m.group(5)
-    nah = sorted((km(la, lo, a, b), n, c, a, b) for n, a, b, c, _t in L if abs(a - la) < 0.1 and abs(b - lo) < 0.2)
     grenze = FERN_MAX_KM if dref >= FERN_WEIT_REF else min(FERN_MAX_KM, FERN_ANTEIL * dref)
+    if dref >= OFFSHORE_REF_KM:                 # offene See (Oliver 17.11.: "Bridlington (68 km E)"): Bank/Untiefe bis 25 km, hoechstens halber Abstand
+        grenze = min(OFFSHORE_MAX_KM, FERN_ANTEIL * dref)
+    fl = grenze / 111.0 + 0.01
+    nah = sorted((km(la, lo, a, b), n, c, a, b) for n, a, b, c, _t in L
+                 if abs(a - la) < fl and abs(b - lo) < fl / max(0.2, math.cos(math.radians(la))))
     frei = [x for x in nah if x[0] <= grenze and not (worte(x[1]) & worte(ref)) and '(historical)' not in x[1] and x[1] not in ZU_GROSS]
     eng = [x for x in frei if x[2] in ENG]
     lm = [x for x in frei if x[2] in PUNKT]
@@ -187,7 +192,7 @@ def fern_vorschlag(la, lo, L, name):
         teile += kontext + [t.strip() for t in rest.split(',') if t.strip()]
     else:
         teile += [t.strip() for t in rest.split(',') if t.strip()] + kontext
-    n = latin1(n)
+    n = latin1(re.sub(r'(?<=[a-z])(?=(Point|Island|Bank|Rock|Head|Reef)$)', ' ', n))   # GeoNames 'InnesPoint'
     return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(teile)) if teile else '', tail), n, d
 
 
