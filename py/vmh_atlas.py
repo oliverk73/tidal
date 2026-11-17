@@ -21,6 +21,11 @@ import xtide_modell as X                                            # noqa: E402
 ROOT = A.ROOT
 DOVER = ('Dover, England, United Kingdom', 'harmonics/ticon/harmonics_ticon4_worldwide.txt')
 
+def _w(fl, eb, reihe):
+    """13 (vz, nipp, spring) HW -6..+6 -> {h: (nipp, spring, Richtung)}; vz +1 Flut fl, -1 Ebbe eb, 0 Stillwasser."""
+    return {h: (n / 10, sp / 10, fl if vz >= 0 else eb) for h, (vz, n, sp) in zip(range(-6, 7), reihe)}
+
+
 # NP209 Orkney and Shetland, Pentland-Firth-Blatt (VMH 0000209-1). Bildachsen Zoom 6: 3 deg 20' W bei x=232,
 # 27 px je Laengenminute; 58 deg 45' N bei y=388, 51 px je Breitenminute.
 # (Name, lat, lon, {Stunde HW Dover: (nipp, spring, Richtung)})
@@ -33,15 +38,20 @@ PF = [
      dict(zip(range(-6, 7), [(0.4, 1.0, 45), (0.5, 1.1, 60), (0.6, 1.5, 105), (0.6, 1.4, 115), (0.3, 0.8, 135),
                              (0.4, 0.8, 200), (0.5, 1.2, 225), (0.6, 1.4, 230), (0.6, 1.4, 255), (0.5, 1.2, 305),
                              (0.4, 1.0, 330), (0.5, 1.1, 0), (0.4, 1.0, 30)]))),
+    # NP209 Orkney-Blatt (0000209-2), 59 N bei y=378, 11,87 px/'; 3 W bei x=886, 6,26 px/'. HW Dover -5 ohne Zahl
+    # (Kentern Ebbe->Flut, Pfeile schon SE) -> zwischen -6 und -4 interpoliert.
+    ('Westray Firth, Scotland, United Kingdom Current', 59.2330, -3.0480,
+     _w(130, 310, [(-1, 4, 8), (1, 9, 16), (1, 14, 25), (1, 16, 29), (1, 16, 28), (1, 9, 17), (1, 4, 8), (-1, 5, 9),
+                   (-1, 11, 20), (-1, 16, 28), (-1, 17, 31), (-1, 12, 22), (-1, 7, 13)])),
+    # NP209 Shetland-Blatt (0000209-0, Zoom 7), Nebenkarte Yell Sound (Kasten 60.446-60.571 N, 1.200-1.425 W), Hauptfahrwasser
+    # (Zufahrt Sullom Voe). Nord = Ebbe hinaus, Sued = Flut.
+    ('Yell Sound, Scotland, United Kingdom Current', 60.5400, -1.2750,
+     _w(160, 340, [(-1, 7, 15), (1, 5, 10), (1, 6, 13), (1, 7, 14), (1, 6, 11), (1, 2, 4), (1, 1, 2), (-1, 3, 6),
+                   (-1, 6, 13), (-1, 10, 21), (-1, 10, 21), (-1, 13, 26), (-1, 10, 21)])),
 ]
 
 
 PORTSMOUTH = ('Portsmouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt')
-
-
-def _w(fl, eb, reihe):
-    """13 (vz, nipp, spring) HW -6..+6 -> {h: (nipp, spring, Richtung)}; vz +1 Flut fl, -1 Ebbe eb, 0 Stillwasser."""
-    return {h: (n / 10, sp / 10, fl if vz >= 0 else eb) for h, (vz, n, sp) in zip(range(-6, 7), reihe)}
 
 
 # NP337 East Solent (VMH 0000337-0), HW Portsmouth -6..+6, abgelesen 17.11.2026. Bild: 1 deg W bei x=645, 19,4 px je
