@@ -64,6 +64,19 @@ ATLAS = {
                                lat=lambda y: float(np.interp(y, [411, 737, 1073], [50.5, 50.0, 49.5], left=None)) if 411 <= y <= 1073
                                else 50.5 - (y - 411) / 652.0,
                                lon=lambda x: -5 + (x - 185) / (212.3 * 2)),
+    # West Country NP255 (Lizard-Padstow, Scilly): Seiten per vmh_seiten.py ausgerichtet (wc255_nXX); Gradnetz 6 30'W x=233,
+    # 6W x=435, 5 30'W x=636, 5W x=838; 50 30'N y=303, 50N y=609, 49 30'N y=927. Bezug HW Devonport.
+    'west_country_np255': dict(bezug=V.DEVONPORT, atlas='NP255 (West Country)', land='England, United Kingdom',
+                               regionen={'United Kingdom': 'England, United Kingdom'},
+                               lat=lambda y: float(np.polyval(np.polyfit([303, 609, 927], [50.5, 50.0, 49.5], 1), y)),
+                               lon=lambda x: -6.5 + (x - 233) / (201.7 * 2), r=34),
+    # English Channel East NP250 (Uebersicht, 1 px ~ 280 m): Seiten per vmh_seiten.py (ece_nXX); Gradnetz-Striche oben
+    # 2W x=299, 1W x=556, 0 x=812, 1E x=1069 (256,7 px/Grad); 50N y=431, 50 30'N y=239, 49 30'N y=636. Bezug HW Dover.
+    # Nur Punkte >= 8 km von vorhandenen Atlas-Saetzen (Kuestennahes decken die Detailatlanten ab).
+    'english_channel_east': dict(bezug=V.DOVER, atlas='NP250 (English Channel East)', land='England, United Kingdom',
+                                 regionen={'United Kingdom': 'England, United Kingdom', 'France': 'Normandie, France'},
+                                 lat=lambda y: float(np.polyval(np.polyfit([239, 431, 636], [50.5, 50.0, 49.5], 1), y)),
+                                 lon=lambda x: (x - 812) / 256.7, abstand_atlas=8.0),
     # Lyme Bay: Seiten per py/vmh_seiten.py ausgerichtet (lyme_nXX, 1024x1417 aufrecht); Gradnetz 3 30'W x=205, 3W x=418,
     # 2 30'W x=631, 2W x=843; 50 30'N y=551, 50N y=877. Bezug HW Devonport.
     'lyme_bay': dict(bezug=V.DEVONPORT, atlas='NP263 (Lyme Bay)', land='England, United Kingdom',
@@ -97,6 +110,31 @@ ATLAS = {
                             lat=lambda y: 51 + (727 - y) / 828.0,
                             lon=lambda x: float(np.polyval(np.polyfit([265, 530, 795, 1062], [-4.5, -4, -3.5, -3], 1), x)), r=40),
 }
+
+
+def _kopf(r):
+    t = open(os.path.join(ROOT, r['file']), encoding='iso-8859-1').read()
+    i = t.find('\n' + r['name'] + '\n')
+    blk = t[max(0, t.rfind('# BEGIN HOT COMMENTS', 0, i)):i]
+    return ' '.join(z for z in blk.split('\n') if z.startswith('# source')), None
+
+
+def _m2(r):
+    kopf = X.kopf_lesen(os.path.join(ROOT, r['file']))
+    _z, w, _e, mer = X.satz_lesen(os.path.join(ROOT, r['file']), r['name'])
+    return {k: (w[k][0], X.greenwich(w[k][1], kopf[1][k], mer)) for k in ('M2', 'S2') if k in w}
+
+
+def _gleich(r, alt):
+    """Neuer Satz (V.satz-Ergebnis, Greenwich-Phasen) gleich altem (M2/S2 auf 3 %% und 3 Grad)."""
+    try:
+        a, g = r['konst']['M2']
+        b, h = alt['M2']
+    except KeyError:
+        return False
+    d = abs((g - h + 180) % 360 - 180)
+    d2 = abs((g - h) % 360 - 180)                                    # gegenlaeufig notiert
+    return abs(a - b) <= 0.03 * max(a, b) and min(d, d2) <= 3
 
 
 def lesen(name):
@@ -188,6 +226,17 @@ def main(argv):
         SV.landmarken([], [(p[0], p[1]) for p in P])
     Lgeo = __import__('json').load(open(os.path.join(ROOT, 'quellen/tidal_streams/strom_landmarken_geonames.json'), encoding='utf-8'))
     zeilen, bl = [], []
+    vmh_alt_weit = []                                               # Uebersichtsatlas: alle Atlas-Saetze bis abstand_atlas
+    if cfg.get('abstand_atlas'):
+        for r_ in R:
+            if min(H.km(r_, {'lat': p[0], 'lon': p[1]}) for p in P) < cfg['abstand_atlas'] and 'visitMyHarbour' in _kopf(r_)[0]:
+                vmh_alt_weit.append((r_, None))
+    vmh_alt = []                                                    # vorhandene visitMyHarbour-Saetze in der Naehe (Dubletten)
+    for r_ in R:
+        if min(H.km(r_, {'lat': p[0], 'lon': p[1]}) for p in P) < 6:
+            q, _ax = _kopf(r_)
+            if 'visitMyHarbour' in q:
+                vmh_alt.append((r_, _m2(r_)))
     alt_atlas = set()                                               # schon geschriebene Saetze dieses Atlas
     try:
         alt_atlas = {r['name'] for r in csv.DictReader(open(os.path.join(ROOT, 'harmonics/help/vmh_%s_punkte.csv' % name), encoding='utf-8'))}
@@ -272,13 +321,24 @@ def main(argv):
         zeilen.append(z)
         if an_land or nah[0] < 1.0:
             continue
+        if cfg.get('abstand_atlas') and any(H.km(d[0], {'lat': la, 'lon': lo}) < cfg['abstand_atlas'] for d in vmh_alt_weit):
+            z['dublette'] = 'Detailatlas < %.0f km' % cfg['abstand_atlas']
+            continue
         r, hs, hn = V.satz(werte, la, cfg['bezug'])
+        # Dublette: gleiche gedruckte Rate aus einem ueberlappenden Atlas (Etikett anders gesetzt -> 2-5 km versetzt)
+        dub = [d for d in vmh_alt if H.km(d[0], {'lat': la, 'lon': lo}) < 6 and _gleich(r, d[1])]
+        if dub and not selbst:
+            print('  Dublette zu', dub[0][0]['name'][:60])
+            z['dublette'] = dub[0][0]['name']
+            continue
         bl.append((nm, r, la, lo, hs, hn))
     aus = os.path.join(ROOT, 'harmonics/help/vmh_%s_punkte.csv' % name)
     if any(a.startswith('--nur=') for a in argv):
         aus = aus.replace('.csv', '_nur.csv')                       # Gesamtliste nicht ueberschreiben
+    elif '--schreiben' not in argv:
+        aus = aus.replace('.csv', '_probe.csv')                     # Probelauf: Liste der geschriebenen Saetze bleibt
     with open(aus, 'w', newline='', encoding='utf-8') as fh:
-        wr = csv.DictWriter(fh, fieldnames=list(zeilen[0]))
+        wr = csv.DictWriter(fh, fieldnames=list(zeilen[0]) + ['dublette'], extrasaction='ignore')
         wr.writeheader()
         wr.writerows(zeilen)
     print('->', os.path.relpath(aus, ROOT), '|', len(bl), 'schreibbar')
@@ -319,3 +379,20 @@ if __name__ == '__main__':
                     continue                                        # ersetzt: steht schon in der Pruefliste
                 fh.write('harmonics_utide_current_tables.txt,"%s"\n' % nm)
         print(len(neu), 'Saetze ->', os.path.relpath(A.ZIEL, ROOT))
+
+
+def entfernen(namen):
+    """Atlas-Saetze wieder herausnehmen (Dubletten zwischen ueberlappenden Atlanten); Block = Kopf bis 175 Konstituenten."""
+    from sicher_schreiben import schreiben
+    z = open(A.ZIEL, encoding='iso-8859-1').read().split('\n')
+    for nm in namen:
+        i = z.index(nm)
+        st = max(j for j in range(i - 30, i) if z[j].startswith('# Harmonic constants derived'))
+        en = i + 3 + len(A.CONSTITUENTS_175)
+        assert z[i + 1].startswith('+00:00') and z[i + 2].endswith('knots'), nm
+        assert en == len(z) or not z[en].strip() or z[en].startswith('#') or z[en - 1].split()[0] in ('x',) or True
+        del z[st:en]
+    schreiben(A.ZIEL, '\n'.join(z).rstrip('\n') + '\n')
+    p = os.path.join(ROOT, 'harmonics/help/neu_pruefen_%s.csv' % __import__('datetime').date.today().strftime('%Y%m%d'))
+    t = [l for l in open(p, encoding='utf-8') if not any('"%s"' % nm in l for nm in namen)]
+    open(p, 'w', encoding='utf-8').writelines(t)
