@@ -32,6 +32,7 @@ import xtide_modell as X                                             # noqa: E40
 
 ROOT = V.ROOT
 ABL = os.path.join(ROOT, 'quellen/tidal_streams/visitmyharbour/ablesung')
+PRUEFLISTE = 'harmonics/help/neu_pruefen_20261117.csv'          # eine Liste fuer die ganze Atlas-Runde (auch nach Mitternacht)
 RICHTUNG = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
 
 
@@ -129,6 +130,63 @@ ATLAS = {
                             regionen={'United Kingdom': 'Wales, United Kingdom'},
                             lat=lambda y: 51 + (727 - y) / 828.0,
                             lon=lambda x: float(np.polyval(np.polyfit([265, 530, 795, 1062], [-4.5, -4, -3.5, -3], 1), x)), r=40),
+    # Irish Sea East NP259 (Uebersicht, 1 px ~ 180 m): Seiten per vmh_seiten.py (ise_nXX); Gradnetz 4 30'W x=257, 4W x=440,
+    # 3 30'W x=623, 3W x=808; 54 30'N y=283, 54N y=590, 53 30'N y=905. Etiketten wandern bis 45 px. Bezug HW Dover.
+    'irish_sea_east': dict(bezug=V.DOVER, atlas='NP259 (Irish Sea East)', land='England, United Kingdom',
+                           regionen={'United Kingdom': 'England, United Kingdom'},
+                           lat=lambda y: float(np.polyval(np.polyfit([283, 590, 905], [54.5, 54.0, 53.5], 2), y)),
+                           lon=lambda x: float(np.polyval(np.polyfit([257, 440, 623, 808], [-4.5, -4, -3.5, -3], 1), x)),
+                           r=45, abstand_atlas=8.0,
+                           namen={(394, 525): 'Douglas Head (23 km E), Isle of Man Current',
+                                  (451, 763): 'Great Orme (43 km N), Wales, United Kingdom Current',
+                                  (793, 609): 'Lune Deep (Morecambe Bay), England, United Kingdom Current'}),
+    # Irish Sea NP256 (Uebersicht, 1 px ~ 400 m): Seiten per vmh_seiten.py (isb_nXX); Gradnetz 7W x=186, 6W x=343, 5W x=500,
+    # 4W x=656, 3W x=814; 54N y=316, 53N y=578, 52N y=836, 51N y=1086. Nur Luecken (abstand_atlas). Bezug HW Dover.
+    'irish_sea_bristol': dict(bezug=V.DOVER, atlas='NP256 (Irish Sea)', land='Wales, United Kingdom',
+                              regionen={'United Kingdom': 'Wales, United Kingdom', 'Ireland': 'Ireland'},
+                              lat=lambda y: float(np.polyval(np.polyfit([316, 578, 836, 1086], [54, 53, 52, 51], 2), y)),
+                              lon=lambda x: float(np.polyval(np.polyfit([186, 343, 500, 656, 814], [-7, -6, -5, -4, -3], 1), x)),
+                              r=40, abstand_atlas=8.0,
+                              namen={(280, 955): 'The Smalls (55 km WSW), Wales, United Kingdom Current',
+                                     (366, 1032): 'The Smalls (57 km SSW), Wales, United Kingdom Current',
+                                     (472, 410): 'Calf of Man (51 km SSW), Isle of Man Current',
+                                     (492, 740): 'Strumble Head (38 km N), Wales, United Kingdom Current',
+                                     (444, 653): 'Bardsey Island (39 km W), Wales, United Kingdom Current',
+                                     (240, 904): 'Hook Head (48 km SSE), Leinster, Ireland Current',
+                                     (418, 1134): 'Trevose Head (45 km NW), England, United Kingdom Current',
+                                     (498, 1050): 'Lundy (24 km W), England, United Kingdom Current',
+                                     (457, 110): 'Portpatrick (13 km SW), Scotland, United Kingdom Current',
+                                     (393, 706): 'Arklow (44 km SE), Leinster, Ireland Current',
+                                     (444, 565): 'Wicklow Head (44 km ENE), Leinster, Ireland Current',
+                                     (540, 564): 'Caernarfon Bay (west), Wales, United Kingdom Current'}),
+    # Firth of Clyde NP222: Seiten per vmh_seiten.py (clyde_nXX); Gradnetz 6W x=145 .. 4 20'W x=858 (71,3 px je 10');
+    # 56N y=186, 55 30'N y=568, 55N y=937, 54 40'N y=1190. Bezug HW Dover.
+    'firth_of_clyde': dict(bezug=V.DOVER, atlas='NP222 (Firth of Clyde)', land='Scotland, United Kingdom',
+                           regionen={'United Kingdom': 'Scotland, United Kingdom'},
+                           lat=lambda y: float(np.polyval(np.polyfit([186, 320, 443, 568, 694, 819, 937, 1066, 1190],
+                                                                     [56 - i / 6 for i in range(9)], 2), y)),
+                           lon=lambda x: -6 + (x - 145) / 427.8, r=30,
+                           namen={(659, 212): 'Tail of the Bank (Greenock), Scotland, United Kingdom Current'}),
+    # North Channel / North of Ireland NP222: Seiten per vmh_seiten.py (nch_nXX); Gradnetz 7 40'W x=136 .. 6W x=848 (71,2 px je 10');
+    # 56N y=186, 55 30'N y=569, 55N y=937. Bezug HW Dover.
+    'north_channel': dict(bezug=V.DOVER, atlas='NP222 (North Channel)', land='Northern Ireland, United Kingdom',
+                          regionen={'United Kingdom': 'Northern Ireland, United Kingdom'},
+                          lat=lambda y: float(np.polyval(np.polyfit([186, 320, 443, 569, 694, 819, 937],
+                                                                    [56 - i / 6 for i in range(7)], 2), y)),
+                          lon=lambda x: -7 - 40 / 60 + (x - 136) / 427.2, r=40,
+                          namen={(487, 575): 'Inishowen Head (29 km N), Ulster, Ireland Current',
+                                 (200, 553): 'Malin Head (18 km NNW), Ulster, Ireland Current',
+                                 (424, 347): 'Rhinns of Islay (33 km WNW), Scotland, United Kingdom Current',
+                                 (626, 195): 'Ardnave Point (18 km NW), Scotland, United Kingdom Current'}),
+    # North of Ireland / SW Scotland NP218 (Uebersicht): Seiten per vmh_seiten.py (nis_nXX); Gradnetz 8W x=227, 7W x=413,
+    # 6W x=598, 5W x=785; 57N y=257, 56N y=581, 55N y=898. Nur Luecken (abstand_atlas), Bezug HW Dover.
+    'n_ireland_sw_scotland': dict(bezug=V.DOVER, atlas='NP218 (North of Ireland and SW Scotland)', land='Scotland, United Kingdom',
+                                  regionen={'United Kingdom': 'Scotland, United Kingdom', 'Ireland': 'Ulster, Ireland'},
+                                  lat=lambda y: float(np.polyval(np.polyfit([257, 581, 898], [57, 56, 55], 2), y)),
+                                  lon=lambda x: float(np.polyval(np.polyfit([227, 413, 598, 785], [-8, -7, -6, -5], 1), x)),
+                                  r=35, abstand_atlas=8.0,
+                                  namen={(427, 303): 'Canna (20 km W), Scotland, United Kingdom Current',
+                                         (197, 765): 'Tory Island (40 km NE), Ulster, Ireland Current'}),
 }
 
 
@@ -327,6 +385,9 @@ def main(argv):
             v = f[0] if f else None
         if v:
             nm = mit_landesteil(v)
+        hand = [n_ for (ax, ay), n_ in cfg.get('namen', {}).items() if math.hypot(cx - ax, cy - ay) < 15]
+        if hand:                                                    # Name von Hand (Fallback "British Isles" u. ae.)
+            nm = hand[0]
         if selbst:
             nm = selbst[0]['name']
         k = 2
@@ -399,7 +460,7 @@ if __name__ == '__main__':
                 anhang.append(b)
         T = '\n'.join(zl)
         schreiben(A.ZIEL, T + ('\n' + '\n'.join(anhang) if anhang else '') + '\n')
-        with open(os.path.join(ROOT, 'harmonics/help/neu_pruefen_%s.csv' % dt.date.today().strftime('%Y%m%d')), 'a', encoding='utf-8') as fh:
+        with open(os.path.join(ROOT, PRUEFLISTE), 'a', encoding='utf-8') as fh:
             for nm, *_r in bl:
                 if not any(b.split('\n').count(nm) for b in anhang):
                     continue                                        # ersetzt: steht schon in der Pruefliste
@@ -419,6 +480,6 @@ def entfernen(namen):
         assert en == len(z) or not z[en].strip() or z[en].startswith('#') or z[en - 1].split()[0] in ('x',) or True
         del z[st:en]
     schreiben(A.ZIEL, '\n'.join(z).rstrip('\n') + '\n')
-    p = os.path.join(ROOT, 'harmonics/help/neu_pruefen_%s.csv' % __import__('datetime').date.today().strftime('%Y%m%d'))
+    p = os.path.join(ROOT, PRUEFLISTE)
     t = [l for l in open(p, encoding='utf-8') if not any('"%s"' % nm in l for nm in namen)]
     open(p, 'w', encoding='utf-8').writelines(t)
