@@ -131,6 +131,11 @@ def main(argv):
         if name in vorhanden:
             print('vorhanden:', name)
             continue
+        import osm_land as OL                                     # 17.11.: Clevedon lag an Land (Atlas-Beschriftung neben dem Fahrwasser)
+        LM = OL.Land([(la, lo)])
+        if LM.ist_land(la, lo):
+            print('AN LAND, uebersprungen (Position ins Fahrwasser setzen):', name, la, lo)
+            continue
         r, hs, hn = satz(werte, la, bezug)
         nah = sorted((A.km(la, lo, x['lat'], x['lon']), x['name']) for x in R)[:3]
         print('%-80s Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn | naechste: %s' % (
