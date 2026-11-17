@@ -108,7 +108,7 @@ def vorschlag(la, lo, L):
         if ww:
             ctx.append(ww[0][1])
         n = latin1(re.sub(r'(?<=[a-z])(?=(Point|Island|Bank|Rock|Head|Reef)$)', ' ', n))   # GeoNames 'InnesPoint'
-    return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(ctx)) if ctx else '', tail)
+        return '%s%s, %s Current' % (n, (' (%s)' % ', '.join(ctx)) if ctx else '', tail)   # 17.11.: war ausgerueckt (Absturz ohne Landmarke)
     # 3. benanntes Gewaesser bis 4 km: 'Juan de Fuca Strait (Sheringham Point 11 km SSW)'
     ww = [x for x in nah if x[2] in WASSER and x[0] <= 4]
     if ww:
@@ -302,17 +302,19 @@ HAND = {'Pedder Bay (4 km SSE), British Columbia, Canada Current': 'Race Rocks, 
         'Gordon Head (12 km ENE), British Columbia, Canada Current': 'Lime Kiln Point (San Juan Island), Washington Current'}
 
 
-def landmarken(argv):
-    """Landmarken weltweit um alle Stromsaetze aus dem lokalen GeoNames-Dump (15.11.2026) -> LM (ergaenzt, bestehende bleiben)."""
+def landmarken(argv, punkte=None):
+    """Landmarken weltweit um alle Stromsaetze aus dem lokalen GeoNames-Dump (15.11.2026) -> LM (ergaenzt, bestehende bleiben).
+    punkte: [(lat, lon)] statt aller Stromsaetze (neue Atlas-Punkte vor dem Benennen, vmh_ablesung 17.11.)."""
     import health_check as H
     G = os.path.join(ROOT, 'quellen/kataloge/catalogues/geonames')
     codes = set(PUNKT) | ENG | {'INLT', 'SD', 'HBR', 'BAY', 'FJD'}
     zellen = set()
-    for r in H.load_records():
-        if r['current'] and r['lat'] is not None:
-            for di in (-1, 0, 1):
-                for dj in (-1, 0, 1):
-                    zellen.add((int(math.floor(r['lat'] * 10)) + di, int(math.floor(r['lon'] * 10)) + dj))
+    if punkte is None:
+        punkte = [(r['lat'], r['lon']) for r in H.load_records() if r['current'] and r['lat'] is not None]
+    for la, lo in punkte:
+        for di in (-1, 0, 1):
+            for dj in (-1, 0, 1):
+                zellen.add((int(math.floor(la * 10)) + di, int(math.floor(lo * 10)) + dj))
     adm = {}
     for z in open(os.path.join(G, 'admin1CodesASCII.txt'), encoding='utf-8'):
         t = z.rstrip('\n').split('\t')

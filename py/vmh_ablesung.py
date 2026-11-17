@@ -54,11 +54,13 @@ ATLAS = {
     # Seite aufrecht (dover_strait_pXX.png 1024x1417), jede Seite auf den Rahmen der HW-Seite normiert (69..929 x 129..1160);
     # Gradnetz: Laenge 1 Grad bei x=147 .. 1 50' bei x=856, Breite 51 20' bei y=252 .. 50 50' bei y=927 (linear, auch darunter)
     'dover_strait': dict(bezug=V.DOVER, atlas='NP233 (Dover Strait)', land='England, United Kingdom',
+                         regionen={'France': 'Hauts-de-France, France', 'United Kingdom': 'England, United Kingdom'},
                          lat=lambda y: float(np.polyval(np.polyfit([252, 478, 704, 927], [51 + 20 / 60, 51 + 10 / 60, 51, 50 + 50 / 60], 1), y)),
                          lon=lambda x: float(np.polyval(np.polyfit([147, 287, 429, 571, 714, 856], [1 + i / 6 for i in range(6)], 1), x))),
     # Seite quer (bristol_channel_pXX.png 1536x1004), auf den Rahmen der HW-Seite normiert (95..1257 x 72..777);
     # Gradnetz: 4 30'W x=265, 4W x=530, 3 30'W x=795, 3W x=1062; 51 30'N y=313, 51N y=727. Bezug HW Dover (Atlas: 5 h nach HW Swansea)
     'bristol_channel': dict(bezug=V.DOVER, atlas='NP258 (Bristol Channel)', land='Wales, United Kingdom',
+                            regionen={'United Kingdom': 'Wales, United Kingdom'},
                             lat=lambda y: 51 + (727 - y) / 828.0,
                             lon=lambda x: float(np.polyval(np.polyfit([265, 530, 795, 1062], [-4.5, -4, -3.5, -3], 1), x)), r=40),
 }
@@ -148,6 +150,9 @@ def main(argv):
     om = kopf[1]['M2']
     R = [r for r in H.load_records() if r['current'] and r['lat'] is not None]
     LM = OL.Land([(p[0], p[1]) for p in P])
+    import strom_namen_vorort as SV
+    if '--landmarken' in argv:                                      # GeoNames-Landmarken um die neuen Punkte ergaenzen
+        SV.landmarken([], [(p[0], p[1]) for p in P])
     Lgeo = __import__('json').load(open(os.path.join(ROOT, 'quellen/tidal_streams/strom_landmarken_geonames.json'), encoding='utf-8'))
     zeilen, bl = [], []
     alt_atlas = set()                                               # schon geschriebene Saetze dieses Atlas
@@ -198,8 +203,25 @@ def main(argv):
             nm = ln if d < 1 else '%s (%d km %s)' % (ln, max(1, round(d)), RICHTUNG[int((az + 11.25) % 360 // 22.5)])
         else:
             nm = '%s %.3f %.3f' % (cfg['atlas'], la, lo)
-        nm = '%s, %s Current' % (V.A.re.sub(r'[^\x00-\xff]', '', nm) if hasattr(V.A, 're') else nm,
-                                 region if lm and region else cfg['land'])   # Land der Landmarke (Dover: Frankreich)
+        def mit_landesteil(v):
+            """'X (..), United Kingdom Current' -> Landesteil der naechsten Landmarke mit Landesteil (Offshore-Banken)."""
+            body = v[:-len(' Current')]
+            k = body.rfind(')')
+            j = body.find(', ', k + 1 if k >= 0 else 0)
+            kopf, tail = body[:j], body[j + 2:]
+            if ',' not in tail:
+                kand = [(V.A.km(la, lo, a, b), t_) for n_, a, b, c, t_ in Lgeo
+                        if abs(a - la) < 0.4 and abs(b - lo) < 0.6 and ',' in t_ and t_.endswith(', ' + tail)]
+                tail = min(kand)[1] if kand else cfg.get('regionen', {}).get(tail, tail)
+            return '%s, %s Current' % (kopf, tail)
+        nm = mit_landesteil('%s, %s Current' % (re.sub(r'[^\x00-\xff]', '', nm), region if lm and region else cfg['land']))
+        # bewaehrte Namensregeln (strom_namen_vorort): Landmarke vor Ort bis 2,5 km, sonst Fernregel mit OSM (Rinnen, Windparks)
+        v = SV.vorschlag(la, lo, Lgeo)
+        if v is None:
+            f = SV.fern_vorschlag(la, lo, Lgeo, nm)
+            v = f[0] if f else None
+        if v:
+            nm = mit_landesteil(v)
         if selbst:
             nm = selbst[0]['name']
         k = 2
