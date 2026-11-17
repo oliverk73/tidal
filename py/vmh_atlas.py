@@ -36,8 +36,37 @@ PF = [
 ]
 
 
-def satz(werte, la):
-    hafen, rel = DOVER
+PORTSMOUTH = ('Portsmouth, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt')
+
+
+def _w(fl, eb, reihe):
+    """13 (vz, nipp, spring) HW -6..+6 -> {h: (nipp, spring, Richtung)}; vz +1 Flut fl, -1 Ebbe eb, 0 Stillwasser."""
+    return {h: (n / 10, sp / 10, fl if vz >= 0 else eb) for h, (vz, n, sp) in zip(range(-6, 7), reihe)}
+
+
+# NP337 East Solent (VMH 0000337-0), HW Portsmouth -6..+6, abgelesen 17.11.2026. Bild: 1 deg W bei x=645, 19,4 px je
+# Laengenminute; 50 deg 50' N bei y=148, 30,5 px je Breitenminute. Monty-Saetze (Gurnard, Nab ...) nicht doppelt.
+ES = [
+    ('Netley (Southampton Water), England, United Kingdom Current', 50.8730, -1.3700, _w(315, 135, [
+        (1, 4, 6), (1, 3, 5), (1, 1, 1), (1, 2, 4), (1, 6, 10), (1, 3, 6), (0, 0, 0), (-1, 1, 2), (-1, 2, 3), (-1, 6, 9),
+        (-1, 11, 17), (-1, 2, 4), (1, 4, 6)])),
+    ('Calshot (4 km S, Solent), England, United Kingdom Current', 50.7830, -1.3090, _w(50, 230, [
+        (1, 10, 20), (1, 11, 21), (1, 10, 20), (1, 8, 16), (1, 5, 10), (-1, 1, 2), (-1, 10, 21), (-1, 13, 26), (-1, 11, 23),
+        (-1, 9, 18), (-1, 5, 10), (1, 2, 4), (1, 9, 17)])),
+    ("No Man's Land Fort (2 km SE, Spithead), England, United Kingdom Current", 50.7284, -1.0690, _w(110, 290, [
+        (1, 3, 6), (1, 6, 12), (1, 7, 13), (1, 3, 5), (-1, 2, 4), (-1, 5, 10), (-1, 8, 15), (-1, 9, 17), (-1, 5, 10),
+        (1, 1, 2), (1, 5, 9), (1, 3, 7), (1, 2, 4)])),
+    ('Langstone Harbour (inside entrance), England, United Kingdom Current', 50.8050, -1.0215, _w(20, 200, [
+        (1, 2, 4), (1, 3, 5), (1, 3, 6), (1, 5, 10), (1, 7, 13), (1, 4, 7), (-1, 2, 4), (-1, 2, 4), (-1, 3, 5),
+        (-1, 8, 16), (-1, 7, 14), (-1, 1, 2), (1, 2, 4)])),
+    ('Chichester Harbour Entrance (Itchenor Channel), England, United Kingdom Current', 50.8000, -0.9055, _w(45, 225, [
+        (1, 2, 4), (1, 2, 4), (0, 0, 0), (1, 3, 7), (1, 6, 12), (1, 8, 16), (1, 3, 7), (-1, 4, 7), (-1, 2, 5),
+        (-1, 8, 17), (-1, 8, 15), (-1, 5, 10), (1, 1, 2)])),
+]
+
+
+def satz(werte, la, bezug=None):
+    hafen, rel = bezug or DOVER
     hd = os.path.join(ROOT, rel)
     _z0, w, e, _m = X.satz_lesen(hd, hafen)
     f = 0.3048 if e.startswith('f') else 1.0
@@ -51,18 +80,19 @@ def main(argv):
     R = [r for r in H.load_records() if r['current'] and r['lat'] is not None]
     vorhanden = {r['name'] for r in R}
     bl = []
-    for name, la, lo, werte in PF:
+    for name, la, lo, werte, bezug, atlas in [p + (DOVER, 'NP209 (Orkney and Shetland)') for p in PF] + \
+            [p + (PORTSMOUTH, 'NP337 (Solent)') for p in ES]:
         if name in vorhanden:
             print('vorhanden:', name)
             continue
-        r, hs, hn = satz(werte, la)
+        r, hs, hn = satz(werte, la, bezug)
         nah = sorted((A.km(la, lo, x['lat'], x['lon']), x['name']) for x in R)[:3]
         print('%-80s Achse %3.0f  M2 %.2f kn  S2 %.2f  max %.1f kn | naechste: %s' % (
             name, r['achse'], r['m2'], r['s2'], r['smax'], '; '.join('%s %.0f km' % (n[:40], d) for d, n in nah)))
         bl.append(A.block(name, r, la, lo,
-                          'Admiralty NP209 (Orkney and Shetland) tidal stream atlas via visitmyharbour.com (members, hourly HW Dover -6..+6, read by hand)',
-                          'hours from HW Dover, neap/spring rates interpolated by range (spring %.2f m, neap %.2f m); only points with printed rates' % (hs, hn),
-                          'UKHO NP209 via visitMyHarbour', 'NP209-VISITMYHARBOUR'))
+                          'Admiralty %s tidal stream atlas via visitmyharbour.com (members, hourly HW %s -6..+6, read by hand)' % (atlas, bezug[0].split(',')[0]),
+                          'hours from HW %s, neap/spring rates interpolated by range (spring %.2f m, neap %.2f m); only points with printed rates' % (bezug[0].split(',')[0], hs, hn),
+                          'UKHO %s via visitMyHarbour' % atlas.split()[0], '%s-VISITMYHARBOUR' % atlas.split()[0]))
     if '--schreiben' in argv and bl:
         from sicher_schreiben import schreiben
         T = open(A.ZIEL, encoding='iso-8859-1').read().rstrip('\n')
