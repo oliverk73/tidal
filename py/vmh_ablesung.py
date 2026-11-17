@@ -91,6 +91,12 @@ ATLAS = {
                             regionen={'France': 'Normandy, France'},
                             lat=lambda y: 49 + 10 / 60 + (940 - y) / 933.0,
                             lon=lambda x: -3 + (x - 42) / 607.0, r=34),
+    # Alderney Race NP264 (Plan): Seiten per Landmaske ausgerichtet (ald_nXX); Gradnetz 2 25'W x=170, 2 20'W x=483,
+    # 2 15'W x=800, 2 10'W x=1110 (62,6 px/'); 49 45'N y=287, 49 40'N y=768 (96,2 px/'). Etiketten wandern -> r=110. HW Dover.
+    'alderney': dict(bezug=V.DOVER, atlas='NP264 (Alderney Race)', land='Alderney, Guernsey',
+                     regionen={'Guernsey': 'Alderney, Guernsey'},
+                     lat=lambda y: 49.75 - (y - 287) / (96.2 * 60),
+                     lon=lambda x: -2 - 25 / 60 + (x - 170) / (62.6 * 60), r=110),
     # Lyme Bay: Seiten per py/vmh_seiten.py ausgerichtet (lyme_nXX, 1024x1417 aufrecht); Gradnetz 3 30'W x=205, 3W x=418,
     # 2 30'W x=631, 2W x=843; 50 30'N y=551, 50N y=877. Bezug HW Devonport.
     'lyme_bay': dict(bezug=V.DEVONPORT, atlas='NP263 (Lyme Bay)', land='England, United Kingdom',
