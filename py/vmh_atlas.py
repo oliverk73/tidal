@@ -20,6 +20,7 @@ import xtide_modell as X                                            # noqa: E402
 
 ROOT = A.ROOT
 DOVER = ('Dover, England, United Kingdom', 'harmonics/ticon/harmonics_ticon4_worldwide.txt')
+DEVONPORT = ('Devonport, England, United Kingdom', 'harmonics/utide/harmonics_utide_observations.txt')
 
 def _w(fl, eb, reihe):
     """13 (vz, nipp, spring) HW -6..+6 -> {h: (nipp, spring, Richtung)}; vz +1 Flut fl, -1 Ebbe eb, 0 Stillwasser."""

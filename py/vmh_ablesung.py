@@ -57,6 +57,24 @@ ATLAS = {
                          regionen={'France': 'Hauts-de-France, France', 'United Kingdom': 'England, United Kingdom'},
                          lat=lambda y: float(np.polyval(np.polyfit([252, 478, 704, 927], [51 + 20 / 60, 51 + 10 / 60, 51, 50 + 50 / 60], 1), y)),
                          lon=lambda x: float(np.polyval(np.polyfit([147, 287, 429, 571, 714, 856], [1 + i / 6 for i in range(6)], 1), x))),
+    # Lyme Bay: Seiten per py/vmh_seiten.py ausgerichtet (lyme_nXX, 1024x1417 aufrecht); Gradnetz 3 30'W x=205, 3W x=418,
+    # 2 30'W x=631, 2W x=843; 50 30'N y=551, 50N y=877. Bezug HW Devonport.
+    'lyme_bay': dict(bezug=V.DEVONPORT, atlas='NP263 (Lyme Bay)', land='England, United Kingdom',
+                     regionen={'United Kingdom': 'England, United Kingdom'},
+                     lat=lambda y: 50.5 - (y - 551) / (326.0 * 2),
+                     lon=lambda x: -3.5 + (x - 205) / (212.7 * 2)),
+    # Portland: Seiten per py/vmh_seiten.py ausgerichtet (portland_nXX); Gradnetz 2 35'W x=335 .. 2 15'W x=1070 (36,7 px/'),
+    # 50 35'N y=268, 50 30'N y=550 (56,4 px/'). Bezug HW Devonport.
+    'portland': dict(bezug=V.DEVONPORT, atlas='NP257 (Portland)', land='England, United Kingdom',
+                     regionen={'United Kingdom': 'England, United Kingdom'},
+                     lat=lambda y: 50 + 35 / 60 - (y - 268) / (56.4 * 60),
+                     lon=lambda x: -2 - 35 / 60 + (x - 335) / (36.7 * 60),
+                     # Westseite Portland (West Bay, Wirbel): FES-Achse 92 Grad unbrauchbar; Pfeile SSE (Flut, speist den
+                     # Ostlaufstrom um den Bill) -2..+4, NNW sonst -> Achse und Vorzeichen von Hand
+                     achse={(544, 364): 150, (599, 378): 170, (587, 434): 175},
+                     vorzeichen={(544, 364): [-1, -1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1, -1],
+                                 (599, 378): [-1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1],
+                                 (587, 434): [-1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1]}),
     # Seite quer (west_solent_XX.png 1536x786), Seite +1 um 18 px verschoben (Landmaske, in der Ablesung korrigiert);
     # Gradnetz: 2 W x=373, 1 20'W x=1147 (19,35 px/'); 50 50'N y=148, 50 30'N y=757 (30,45 px/')
     'west_solent': dict(bezug=V.PORTSMOUTH, atlas='NP337 (West Solent)', land='England, United Kingdom',
