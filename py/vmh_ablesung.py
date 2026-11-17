@@ -57,6 +57,13 @@ ATLAS = {
                          regionen={'France': 'Hauts-de-France, France', 'United Kingdom': 'England, United Kingdom'},
                          lat=lambda y: float(np.polyval(np.polyfit([252, 478, 704, 927], [51 + 20 / 60, 51 + 10 / 60, 51, 50 + 50 / 60], 1), y)),
                          lon=lambda x: float(np.polyval(np.polyfit([147, 287, 429, 571, 714, 856], [1 + i / 6 for i in range(6)], 1), x))),
+    # West Country NP254 (Falmouth-Teignmouth): Seiten per vmh_seiten.py ausgerichtet (wc254_nXX); Gradnetz 5W x=185,
+    # 4 30'W x=398, 4W x=610, 3 30'W x=822; 50 30'N y=411, 50N y=737, 49 30'N y=1073. Bezug HW Devonport.
+    'west_country_np254': dict(bezug=V.DEVONPORT, atlas='NP254 (West Country)', land='England, United Kingdom',
+                               regionen={'United Kingdom': 'England, United Kingdom'},
+                               lat=lambda y: float(np.interp(y, [411, 737, 1073], [50.5, 50.0, 49.5], left=None)) if 411 <= y <= 1073
+                               else 50.5 - (y - 411) / 652.0,
+                               lon=lambda x: -5 + (x - 185) / (212.3 * 2)),
     # Lyme Bay: Seiten per py/vmh_seiten.py ausgerichtet (lyme_nXX, 1024x1417 aufrecht); Gradnetz 3 30'W x=205, 3W x=418,
     # 2 30'W x=631, 2W x=843; 50 30'N y=551, 50N y=877. Bezug HW Devonport.
     'lyme_bay': dict(bezug=V.DEVONPORT, atlas='NP263 (Lyme Bay)', land='England, United Kingdom',
