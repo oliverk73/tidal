@@ -74,6 +74,25 @@ ES = [
         (-1, 8, 17), (-1, 8, 15), (-1, 5, 10), (1, 1, 2)])),
 ]
 
+SHEERNESS = ('Sheerness, England, United Kingdom', 'harmonics/ticon/harmonics_ticon4_worldwide.txt')
+# NP249 Thames Estuary (VMH 0000249-0, Zoom 7, Hochformat; Bild 90 Grad gedreht: Nord links). HW Sheerness -6..+6.
+# Breite = 51.945 - (x-255)*0.000841 (Margate/Harwich), Laenge = 1 + (668-y)/744 (Gradnetz 12,4 px/').
+# Flut nach W/SW in die Themse, Ebbe nach E/NE.
+TH = [
+    ('Knock John Channel, England, United Kingdom Current', 51.5200, 1.1520, _w(235, 55, [
+        (1, 2, 3), (1, 8, 12), (1, 13, 19), (1, 12, 18), (1, 12, 18), (1, 7, 10), (0, 0, 0), (-1, 8, 13), (-1, 11, 17),
+        (-1, 11, 17), (-1, 8, 12), (-1, 5, 8), (0, 0, 0)])),
+    ('Oaze Deep, England, United Kingdom Current', 51.4780, 0.9370, _w(255, 75, [
+        (1, 2, 3), (1, 7, 10), (1, 11, 17), (1, 11, 17), (1, 10, 16), (1, 7, 10), (0, 0, 0), (-1, 7, 13), (-1, 9, 14),
+        (-1, 16, 24), (-1, 12, 19), (-1, 7, 10), (0, 0, 0)])),
+    ('West Barrow (3 km NW, East Swin), England, United Kingdom Current', 51.6090, 1.0910, _w(225, 45, [
+        (1, 4, 6), (1, 10, 16), (1, 12, 19), (1, 11, 18), (1, 9, 14), (1, 5, 8), (-1, 3, 4), (-1, 10, 15), (-1, 13, 20),
+        (-1, 11, 18), (-1, 9, 14), (-1, 5, 6), (0, 0, 0)])),
+    ('Reculver (7 km N), England, United Kingdom Current', 51.4400, 1.1790, _w(255, 75, [
+        (1, 3, 5), (1, 8, 12), (1, 9, 14), (1, 9, 14), (1, 9, 14), (1, 7, 10), (0, 0, 0), (-1, 7, 13), (-1, 12, 18),
+        (-1, 10, 15), (-1, 7, 11), (-1, 4, 6), (0, 0, 0)])),
+]
+
 
 def satz(werte, la, bezug=None):
     hafen, rel = bezug or DOVER
@@ -91,7 +110,7 @@ def main(argv):
     vorhanden = {r['name'] for r in R}
     bl = []
     for name, la, lo, werte, bezug, atlas in [p + (DOVER, 'NP209 (Orkney and Shetland)') for p in PF] + \
-            [p + (PORTSMOUTH, 'NP337 (Solent)') for p in ES]:
+            [p + (PORTSMOUTH, 'NP337 (Solent)') for p in ES] + [p + (SHEERNESS, 'NP249 (Thames Estuary)') for p in TH]:
         if name in vorhanden:
             print('vorhanden:', name)
             continue
