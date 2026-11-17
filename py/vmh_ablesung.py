@@ -57,6 +57,14 @@ ATLAS = {
                          regionen={'France': 'Hauts-de-France, France', 'United Kingdom': 'England, United Kingdom'},
                          lat=lambda y: float(np.polyval(np.polyfit([252, 478, 704, 927], [51 + 20 / 60, 51 + 10 / 60, 51, 50 + 50 / 60], 1), y)),
                          lon=lambda x: float(np.polyval(np.polyfit([147, 287, 429, 571, 714, 856], [1 + i / 6 for i in range(6)], 1), x))),
+    # Seite quer (west_solent_XX.png 1536x786), Seite +1 um 18 px verschoben (Landmaske, in der Ablesung korrigiert);
+    # Gradnetz: 2 W x=373, 1 20'W x=1147 (19,35 px/'); 50 50'N y=148, 50 30'N y=757 (30,45 px/')
+    'west_solent': dict(bezug=V.PORTSMOUTH, atlas='NP337 (West Solent)', land='England, United Kingdom',
+                        regionen={'United Kingdom': 'England, United Kingdom'},
+                        lat=lambda y: 50 + 50 / 60 - (y - 148) / (30.45 * 60),
+                        lon=lambda x: -2 + (x - 373) / (19.35 * 60),
+                        # Poole Harbour (Doppeltide): Pfeile -6..-3 W, -2..0 E, +1..+2 W, +3..+5 E, +6 W; Flut = W in den Hafen
+                        achse={(390, 380): 270}, vorzeichen={(390, 380): [1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, -1, 1]}),
     # Seite quer (bristol_channel_pXX.png 1536x1004), auf den Rahmen der HW-Seite normiert (95..1257 x 72..777);
     # Gradnetz: 4 30'W x=265, 4W x=530, 3 30'W x=795, 3W x=1062; 51 30'N y=313, 51N y=727. Bezug HW Dover (Atlas: 5 h nach HW Swansea)
     'bristol_channel': dict(bezug=V.DOVER, atlas='NP258 (Bristol Channel)', land='Wales, United Kingdom',
@@ -176,6 +184,9 @@ def main(argv):
             best = fest[0]
             pm = {h: math.cos(math.radians(om * (h + 3))) for h in range(-6, 7)}
         sg, sfill = vorzeichen({h: v[1] for h, v in w.items()}, pm)
+        hand = [z for (ax, ay), z in cfg.get('vorzeichen', {}).items() if math.hypot(cx - ax, cy - ay) < 15]
+        if hand:                                                    # Pfeilrichtungen je Stunde von Hand (Doppeltiden, Poole)
+            sg = {h: float(z) for h, z in zip(range(-6, 7), hand[0])}
         werte = {}
         for i, h in enumerate(range(-6, 7)):
             if h in w:
