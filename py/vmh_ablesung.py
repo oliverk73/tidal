@@ -76,7 +76,15 @@ ATLAS = {
     'english_channel_east': dict(bezug=V.DOVER, atlas='NP250 (English Channel East)', land='England, United Kingdom',
                                  regionen={'United Kingdom': 'England, United Kingdom', 'France': 'Normandie, France'},
                                  lat=lambda y: float(np.polyval(np.polyfit([239, 431, 636], [50.5, 50.0, 49.5], 1), y)),
-                                 lon=lambda x: (x - 812) / 256.7, abstand_atlas=8.0),
+                                 lon=lambda x: (x - 812) / 256.7, abstand_atlas=8.0,
+                                 sperre=[(48.6, 49.85, -3.2, -1.55)]),    # Kanalinseln: NP264 (Detail) folgt
+    # English Channel West NP250 (Uebersicht): Seiten per vmh_seiten.py (ecw_nXX); Gradnetz oben 7W x=137, 6W x=338,
+    # 5W x=538, 4W x=737, 3W x=937, 2W x=1138 (200,1 px/Grad); 50N y=281, 49N y=586, 50 30'N y=131, 49 30'N y=746.
+    'english_channel_west': dict(bezug=V.DOVER, atlas='NP250 (English Channel West)', land='England, United Kingdom',
+                                 regionen={'United Kingdom': 'England, United Kingdom', 'France': 'Bretagne, France'},
+                                 lat=lambda y: float(np.polyval(np.polyfit([131, 281, 586, 746], [50.5, 50.0, 49.0, 48.5], 1), y)),
+                                 lon=lambda x: -7 + (x - 137) / 200.1, abstand_atlas=8.0,
+                                 sperre=[(48.6, 49.85, -3.2, -1.5)]),     # Kanalinseln: NP264 (Detail) folgt
     # Lyme Bay: Seiten per py/vmh_seiten.py ausgerichtet (lyme_nXX, 1024x1417 aufrecht); Gradnetz 3 30'W x=205, 3W x=418,
     # 2 30'W x=631, 2W x=843; 50 30'N y=551, 50N y=877. Bezug HW Devonport.
     'lyme_bay': dict(bezug=V.DEVONPORT, atlas='NP263 (Lyme Bay)', land='England, United Kingdom',
@@ -323,6 +331,12 @@ def main(argv):
             continue
         if cfg.get('abstand_atlas') and any(H.km(d[0], {'lat': la, 'lon': lo}) < cfg['abstand_atlas'] for d in vmh_alt_weit):
             z['dublette'] = 'Detailatlas < %.0f km' % cfg['abstand_atlas']
+            continue
+        if cfg.get('abstand_atlas') and nah[0] < 5.0:                # Uebersichtsatlas nur fuer Luecken (Barfleur -43 Grad gegen SHOM)
+            z['dublette'] = 'Satz < 5 km'
+            continue
+        if any(a0 <= la <= a1 and b0 <= lo <= b1 for a0, a1, b0, b1 in cfg.get('sperre', [])):
+            z['dublette'] = 'Detailatlas folgt'
             continue
         r, hs, hn = V.satz(werte, la, cfg['bezug'])
         # Dublette: gleiche gedruckte Rate aus einem ueberlappenden Atlas (Etikett anders gesetzt -> 2-5 km versetzt)
