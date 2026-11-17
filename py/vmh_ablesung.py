@@ -187,6 +187,35 @@ ATLAS = {
                                   r=35, abstand_atlas=8.0,
                                   namen={(427, 303): 'Canna (20 km W), Scotland, United Kingdom Current',
                                          (197, 765): 'Tory Island (40 km NE), Ulster, Ireland Current'}),
+    # West Coast of Scotland NP218 (Uebersicht): Seiten per vmh_seiten.py (wcs_nXX); Gradnetz 8W x=227, 7W x=413, 6W x=598,
+    # 5W x=785; 59N y=313, 58N y=680, 57N y=1030. Etiketten wandern bis 40 px. Nur Luecken (abstand_atlas), Bezug HW Dover.
+    'west_coast_scotland': dict(bezug=V.DOVER, atlas='NP218 (West Coast of Scotland)', land='Scotland, United Kingdom',
+                                regionen={'United Kingdom': 'Scotland, United Kingdom'},
+                                lat=lambda y: float(np.polyval(np.polyfit([313, 680, 1030], [59, 58, 57], 2), y)),
+                                lon=lambda x: float(np.polyval(np.polyfit([227, 413, 598, 785], [-8, -7, -6, -5], 1), x)),
+                                r=45, abstand_atlas=8.0,
+                                weglassen=[(513, 1097)],            # Cairns of Coll: NP218-1-Satz 0,6 km daneben
+                                namen={(545, 405): 'Butt of Lewis (27 km N), Scotland, United Kingdom Current',
+                                       (573, 462): 'Butt of Lewis (12 km NE), Scotland, United Kingdom Current'}),
+    # North Sea Southern Portion NP251 (Uebersicht): Seiten per vmh_seiten.py (nss_nXX); Gradnetz 0 x=180, 1E x=327, 2E x=473,
+    # 3E x=618, 4E x=763; 55N y=133, 54N y=385, 53N y=630, 52N y=870, 51N y=1105. Nur Luecken, Bezug HW Dover.
+    'north_sea_south': dict(bezug=V.DOVER, atlas='NP251 (North Sea Southern)', land='England, United Kingdom',
+                            regionen={'United Kingdom': 'England, United Kingdom', 'Netherlands': 'Zuid-Holland, Netherlands'},
+                            lat=lambda y: float(np.polyval(np.polyfit([133, 385, 630, 870, 1105], [55, 54, 53, 52, 51], 2), y)),
+                            lon=lambda x: float(np.polyval(np.polyfit([180, 327, 473, 618, 763], [0, 1, 2, 3, 4], 1), x)),
+                            r=40, abstand_atlas=8.0,
+                            namen={(725, 493): 'Brown Ridge (60 km NE), North Sea Current',
+                                   (573, 780): 'Lowestoft (64 km E), England, United Kingdom Current',
+                                   (785, 100): 'Dogger Bank (143 km ENE), North Sea Current',
+                                   (707, 265): 'Dogger Bank (108 km ESE), North Sea Current',
+                                   (764, 397): 'Terschelling (106 km NW), Friesland, The Netherlands Current'}),
+    # North Sea North-Western NP252 (Uebersicht): Seiten per vmh_seiten.py (nsw_nXX); Gradnetz 4W x=127 .. 3E x=868
+    # (105,8 px/Grad); 59N y=266, 58N y=467, 57N y=663, 56N y=855, 55N y=1041. Nur Luecken, Bezug HW Dover.
+    'north_sea_nw': dict(bezug=V.DOVER, atlas='NP252 (North Sea North-Western)', land='Scotland, United Kingdom',
+                         regionen={'United Kingdom': 'Scotland, United Kingdom'},
+                         lat=lambda y: float(np.polyval(np.polyfit([266, 467, 663, 855, 1041], [59, 58, 57, 56, 55], 2), y)),
+                         lon=lambda x: -4 + (x - 127) / 105.8, r=45, abstand_atlas=8.0,
+                         namen={(489, 855): 'Farne Islands (77 km ENE), England, United Kingdom Current', (689, 509): 'Forties Field (21 km ENE), North Sea Current', (619, 748): "Devil's Hole (22 km WSW), North Sea Current", (760, 754): "Devil's Hole (61 km E), North Sea Current", (803, 857): "Devil's Hole (110 km SE), North Sea Current", (644, 205): 'Fladen Ground (70 km NNE), North Sea Current', (809, 624): 'Forties Field (106 km ESE), North Sea Current', (412, 755): 'Marr Bank (18 km E), Scotland, United Kingdom Current', (532, 370): 'Fladen Ground (46 km WSW), North Sea Current', (786, 204): 'Fladen Ground (119 km NE), North Sea Current', (425, 624): 'Buchan Deep (33 km S), Scotland, United Kingdom Current', (491, 752): 'Marr Bank (64 km E), Scotland, United Kingdom Current', (589, 849): "Devil's Hole (75 km SSW), North Sea Current", (682, 374): 'Fladen Ground (51 km ESE), North Sea Current', (543, 632): 'Buchan Deep (78 km ESE), Scotland, United Kingdom Current', (675, 849): "Devil's Hole (64 km S), North Sea Current", (666, 629): 'Forties Field (62 km S), North Sea Current', (420, 301): 'Fair Isle (81 km SSE), Scotland, United Kingdom Current', (348, 373): 'Copinsay (65 km SE), Scotland, United Kingdom Current'}),
 }
 
 
