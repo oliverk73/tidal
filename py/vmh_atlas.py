@@ -50,7 +50,7 @@ PF = [
                    (-1, 6, 13), (-1, 10, 21), (-1, 10, 21), (-1, 13, 26), (-1, 10, 21)])),
     # NP218 N of Ireland/SW Scotland (0000218-1, Zoom 7), Nebenkarte Firth of Lorn: Scarba (56.18 N, 5.70 W) bei (335,945),
     # Luing (56.23, -5.64) bei (390,860) -> 1700 px/Grad Breite, 917 px/Grad Laenge. Punkt Sound of Luing (Fladda).
-    ('Sound of Luing, Scotland, United Kingdom Current', 56.1980, -5.6640,
+    ('Sound of Luing (900 m NE of Poll na h-Ealaidh), Scotland, United Kingdom Current', 56.1980, -5.6640,
      _w(190, 10, [(0, 0, 0), (1, 6, 16), (1, 9, 23), (1, 6, 21), (1, 6, 16), (1, 3, 8), (-1, 4, 9), (-1, 6, 15),
                   (-1, 8, 19), (-1, 9, 21), (-1, 7, 18), (-1, 5, 12), (-1, 2, 6)])),
 ]
@@ -62,7 +62,7 @@ PORTSMOUTH = ('Portsmouth, England, United Kingdom', 'harmonics/utide/harmonics_
 # NP337 East Solent (VMH 0000337-0), HW Portsmouth -6..+6, abgelesen 17.11.2026. Bild: 1 deg W bei x=645, 19,4 px je
 # Laengenminute; 50 deg 50' N bei y=148, 30,5 px je Breitenminute. Monty-Saetze (Gurnard, Nab ...) nicht doppelt.
 ES = [
-    ('Netley (Southampton Water), England, United Kingdom Current', 50.8730, -1.3700, _w(315, 135, [
+    ('Netley / Hythe (Southampton Water), England, United Kingdom Current', 50.8730, -1.3700, _w(315, 135, [
         (1, 4, 6), (1, 3, 5), (1, 1, 1), (1, 2, 4), (1, 6, 10), (1, 3, 6), (0, 0, 0), (-1, 1, 2), (-1, 2, 3), (-1, 6, 9),
         (-1, 11, 17), (-1, 2, 4), (1, 4, 6)])),
     ('Calshot (4 km S, Solent), England, United Kingdom Current', 50.7830, -1.3090, _w(50, 230, [
@@ -101,10 +101,10 @@ TH = [
 # NP258 Bristol Channel (0000258-0, Zoom 6), HW Dover. Laenge = -4 + (x-530)/532, Breite = 51 + (752-y)/828
 # (geprueft an Cardiff und Avonmouth). Flut ENE den Kanal hinauf.
 BC = [
-    ('Portishead (4 km WSW, Bristol Deep), England, United Kingdom Current', 51.4764, -2.8290, _w(65, 245, [
+    ('Charlcombe Bay (1 km NW, Bristol Deep), England, United Kingdom Current', 51.4764, -2.8290, _w(65, 245, [
         (1, 23, 43), (1, 16, 29), (1, 9, 16), (-1, 6, 11), (-1, 16, 30), (-1, 20, 38), (-1, 20, 37), (-1, 20, 37),
         (-1, 17, 32), (-1, 7, 13), (1, 18, 34), (1, 31, 58), (1, 26, 48)])),
-    ('Flat Holm (3 km S), Wales, United Kingdom Current', 51.3470, -3.1260, _w(65, 245, [
+    ('Steep Holm (1 km NW), England, United Kingdom Current', 51.3470, -3.1260, _w(65, 245, [
         (1, 19, 36), (1, 6, 12), (1, 2, 5), (-1, 14, 28), (-1, 19, 36), (-1, 17, 33), (-1, 14, 28), (-1, 12, 23),
         (-1, 4, 7), (1, 9, 18), (1, 15, 29), (1, 20, 39), (1, 19, 36)])),
 ]
