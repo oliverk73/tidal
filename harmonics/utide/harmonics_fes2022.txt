@@ -159367,19 +159367,21 @@ x 0 0
 x 0 0
 x 0 0
 #
-# Molle Island, Queensland, Australia
+# South Molle Island, Queensland, Australia
 # BEGIN HOT COMMENTS
 # country: Australia
 # source: FES2022b global ocean tide model (extrapolated), sampled at station location
 # note: MODEL-DERIVED (not observations). Ersetzt harmonics_noaa_cptt.txt-Satz (archiviert): NOAA-Buch an 3 Pruefnachbarn 6,0 %, FES geeicht 2,8 % (Oliver 20261116).
+# note: 20261117 NOAA-Name "Molle Island" (RAN 1944, 20d15'S 148d50'E, ganze Minuten) auf Olivers Wunsch South Molle Island, Position an den Anleger (OSM-Pier, Nordseite);
+# note: FES-Konstanten der alten Stelle 1,3 km weiter, Tide dort gleich.
 # note: FES geeicht an Shute Harbour (7 km, FES 2 %), Cid Harbour (Whitsunday Island) (11 km, FES 3 %), Border Island (23 km, FES 2 %).
 # date_imported: 20261116
 # datum: Chart Datum (Z0 vom ersetzten Satz)
 # confidence: 5
 # !units: meters
-# !longitude: 148.8333
-# !latitude: -20.2500
-Molle Island, Queensland, Australia
+# !longitude: 148.8382
+# !latitude: -20.2613
+South Molle Island, Queensland, Australia
 +00:00 :Australia/Brisbane
 1.6459 meters
 J1              0.0234  50.87
