@@ -98,6 +98,17 @@ TH = [
         (-1, 10, 15), (-1, 7, 11), (-1, 4, 6), (0, 0, 0)])),
 ]
 
+# NP258 Bristol Channel (0000258-0, Zoom 6), HW Dover. Laenge = -4 + (x-530)/532, Breite = 51 + (752-y)/828
+# (geprueft an Cardiff und Avonmouth). Flut ENE den Kanal hinauf.
+BC = [
+    ('Clevedon (4 km NE, Bristol Deep), England, United Kingdom Current', 51.4600, -2.8200, _w(65, 245, [
+        (1, 23, 43), (1, 16, 29), (1, 9, 16), (-1, 6, 11), (-1, 16, 30), (-1, 20, 38), (-1, 20, 37), (-1, 20, 37),
+        (-1, 17, 32), (-1, 7, 13), (1, 18, 34), (1, 31, 58), (1, 26, 48)])),
+    ('Flat Holm (3 km S), Wales, United Kingdom Current', 51.3470, -3.1260, _w(65, 245, [
+        (1, 19, 36), (1, 6, 12), (1, 2, 5), (-1, 14, 28), (-1, 19, 36), (-1, 17, 33), (-1, 14, 28), (-1, 12, 23),
+        (-1, 4, 7), (1, 9, 18), (1, 15, 29), (1, 20, 39), (1, 19, 36)])),
+]
+
 
 def satz(werte, la, bezug=None):
     hafen, rel = bezug or DOVER
@@ -115,7 +126,8 @@ def main(argv):
     vorhanden = {r['name'] for r in R}
     bl = []
     for name, la, lo, werte, bezug, atlas in [p + (DOVER, 'NP209 (Orkney and Shetland)') for p in PF] + \
-            [p + (PORTSMOUTH, 'NP337 (Solent)') for p in ES] + [p + (SHEERNESS, 'NP249 (Thames Estuary)') for p in TH]:
+            [p + (PORTSMOUTH, 'NP337 (Solent)') for p in ES] + [p + (SHEERNESS, 'NP249 (Thames Estuary)') for p in TH] + \
+            [p + (DOVER, 'NP258 (Bristol Channel)') for p in BC]:
         if name in vorhanden:
             print('vorhanden:', name)
             continue
