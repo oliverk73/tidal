@@ -7,7 +7,7 @@
    Seiten dieselbe Lage meinen; Verschiebung wird ausgegeben (fuer den Kopf der Ablesedatei).
 3. Normierte Seiten mit 100-px-Gitter speichern: <aus>/<name>_n<kk>.png (kk = 00..12, Stunde = kk-6).
 
-  venv/bin/python py/vmh_seiten.py <bild.png> <name> <ausgabeordner> [--max 1600]
+  venv/bin/python py/vmh_seiten.py <bild.png> <name> <ausgabeordner> [zusatzbild.png ...]
 """
 import sys
 
@@ -33,10 +33,29 @@ def verschiebung(m, ref, r=90):
     return max(((best[0] + i, best[1] + j) for i in range(-4, 5) for j in range(-4, 5)), key=lambda p: guete(*p))
 
 
-def main(bild, name, aus):
+def main(bild, name, aus, *weitere):
+    """weitere: Zusatzbilder (Channel Islands: Rest rechts angehaengt); Seiten nebeneinander, wenn breiter als hoch."""
     W = Image.open(bild).convert('RGB')
-    h = W.size[1] // 13
-    seiten = [W.crop((0, k * h, W.size[0], (k + 1) * h)) for k in range(13)]
+    for z in weitere:
+        Z = Image.open(z).convert('RGB')
+        N = Image.new('RGB', (W.size[0] + Z.size[0], W.size[1]), 'white')
+        N.paste(W, (0, 0))
+        N.paste(Z, (W.size[0], 0))
+        W = N
+    if W.size[0] > W.size[1]:
+        # Seitenanfaenge an den weissen Spalten (Seiten nicht exakt W/13 breit)
+        a = np.asarray(W.convert('L'))
+        weiss = (a > 245).mean(0) > 0.97
+        b = W.size[0] // 13
+        start = [0]
+        for k in range(1, 13):
+            um = [i for i in range(k * b - 80, k * b + 80) if 0 <= i < len(weiss) and weiss[i]]
+            start.append(max(um) + 1 if um else k * b)
+        start.append(W.size[0])
+        seiten = [W.crop((start[k], 0, start[k] + b, W.size[1])) for k in range(13)]
+    else:
+        h = W.size[1] // 13
+        seiten = [W.crop((0, k * h, W.size[0], (k + 1) * h)) for k in range(13)]
     ref = land(seiten[6])
     for k, s in enumerate(seiten):
         dx, dy = (0, 0) if k == 6 else verschiebung(land(s), ref)
@@ -53,4 +72,4 @@ def main(bild, name, aus):
 
 
 if __name__ == '__main__':
-    main(*sys.argv[1:4])
+    main(*sys.argv[1:])

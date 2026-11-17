@@ -85,6 +85,12 @@ ATLAS = {
                                  lat=lambda y: float(np.polyval(np.polyfit([131, 281, 586, 746], [50.5, 50.0, 49.0, 48.5], 1), y)),
                                  lon=lambda x: -7 + (x - 137) / 200.1, abstand_atlas=8.0,
                                  sperre=[(48.6, 49.85, -3.2, -1.5)]),     # Kanalinseln: NP264 (Detail) folgt
+    # Channel Islands NP264: Seiten per vmh_seiten.py (ci_nXX, 1024x1792 aufrecht); Gradnetz 3W x=42, 2W x=649 (607 px/Grad),
+    # Breite 49 10'N y=940, 49N y=1095 (933 px/Grad). Bezug HW Dover.
+    'channel_islands': dict(bezug=V.DOVER, atlas='NP264 (Channel Islands)', land='Jersey',
+                            regionen={'France': 'Normandy, France'},
+                            lat=lambda y: 49 + 10 / 60 + (940 - y) / 933.0,
+                            lon=lambda x: -3 + (x - 42) / 607.0, r=34),
     # Lyme Bay: Seiten per py/vmh_seiten.py ausgerichtet (lyme_nXX, 1024x1417 aufrecht); Gradnetz 3 30'W x=205, 3W x=418,
     # 2 30'W x=631, 2W x=843; 50 30'N y=551, 50N y=877. Bezug HW Devonport.
     'lyme_bay': dict(bezug=V.DEVONPORT, atlas='NP263 (Lyme Bay)', land='England, United Kingdom',
