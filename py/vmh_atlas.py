@@ -48,6 +48,11 @@ PF = [
     ('Yell Sound, Scotland, United Kingdom Current', 60.5400, -1.2750,
      _w(160, 340, [(-1, 7, 15), (1, 5, 10), (1, 6, 13), (1, 7, 14), (1, 6, 11), (1, 2, 4), (1, 1, 2), (-1, 3, 6),
                    (-1, 6, 13), (-1, 10, 21), (-1, 10, 21), (-1, 13, 26), (-1, 10, 21)])),
+    # NP218 N of Ireland/SW Scotland (0000218-1, Zoom 7), Nebenkarte Firth of Lorn: Scarba (56.18 N, 5.70 W) bei (335,945),
+    # Luing (56.23, -5.64) bei (390,860) -> 1700 px/Grad Breite, 917 px/Grad Laenge. Punkt Sound of Luing (Fladda).
+    ('Sound of Luing, Scotland, United Kingdom Current', 56.1980, -5.6640,
+     _w(190, 10, [(0, 0, 0), (1, 6, 16), (1, 9, 23), (1, 6, 21), (1, 6, 16), (1, 3, 8), (-1, 4, 9), (-1, 6, 15),
+                  (-1, 8, 19), (-1, 9, 21), (-1, 7, 18), (-1, 5, 12), (-1, 2, 6)])),
 ]
 
 
