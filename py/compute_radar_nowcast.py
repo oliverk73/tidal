@@ -337,10 +337,10 @@ def run_region_nowcast(region_name, region, api_data, forecast_minutes, forecast
     n_forecast = forecast_minutes // forecast_step
     forecast_frames = []
 
+    # RainViewer step is ~10min, we need to scale forecast steps (vor dem if: wird beim Speichern immer gebraucht)
+    rv_step_sec = (frame_times[-1] - frame_times[-2]).total_seconds() if len(frame_times) > 1 else 600
+    rv_step_min = rv_step_sec / 60.0
     if motion is not None and n_forecast > 0:
-        # RainViewer step is ~10min, we need to scale forecast steps
-        rv_step_sec = (frame_times[-1] - frame_times[-2]).total_seconds() if len(frame_times) > 1 else 600
-        rv_step_min = rv_step_sec / 60.0
         # Number of RainViewer-equivalent steps for our forecast
         fc_steps = int(round(n_forecast * forecast_step / rv_step_min))
 
