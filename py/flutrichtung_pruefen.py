@@ -395,7 +395,7 @@ def drehen(zeilen):
             k = i + 3
             while k < len(L) and L[k].strip() and not L[k].startswith('#'):
                 f3 = L[k].split()
-                if f3[1] != 'x':
+                if f3[0] != 'x':                 # Platzhalter "x 0 0" unveraendert lassen
                     L[k] = '%-15s %s  %.2f' % (f3[0], f3[1], (float(f3[2]) + 180) % 360)
                 k += 1
             L.insert(i, '# note: ' + dt.date.today().strftime('%Y%m%d') + ' Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist '
