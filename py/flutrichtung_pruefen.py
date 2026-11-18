@@ -178,6 +178,47 @@ def laufrichtung(k, lat, lon, s=4):
     return math.degrees(math.atan2(gx, gy)) % 360, math.hypot(gx, gy)
 
 
+# Amtliche Flut-Konvention je Gebiet (Box lat0, lat1, lon0, lon1; Flut-Bezugsrichtung). Gilt nur fuer unklare Saetze.
+# Aermelkanal/Pas-de-Calais: SHOM/Admiralty "le flot porte a l'Est/NE" (fortschreitende Welle, Flutmaximum 0-45 Grad nach HW)
+KONVENTION = [((48.6, 51.25, -6.0, 2.1), 60.0, 'Kanal: Flut setzt nach E/NE (SHOM/UKHO)')]
+
+
+def kopf(r):
+    L = open(os.path.join(ROOT, r['file']), encoding='iso-8859-1').read().split('\n')
+    i = L.index(r['name'])
+    a = i
+    while a > 0 and L[a - 1].startswith('#'):
+        a -= 1
+    return '\n'.join(L[a:i])
+
+
+def quelle_urteil(r, ax):
+    """Flutrichtung aus der Quelle selbst -> ('richtig'|'drehen', Begruendung) oder (None, '')."""
+    if ax is None:
+        return None, ''
+    blk = kopf(r)
+    m = re.search(r'# flood (\d+) deg / ebb \d+ deg true \(page footer\)', blk)      # SHOA 3015 Fusszeile
+    if m:
+        c = math.cos(math.radians(ax - float(m.group(1))))
+        return ('richtig' if c > 0 else 'drehen'), 'SHOA-Fusszeile flood %s' % m.group(1)
+    if 'IWLS API predictions' in blk:        # 16.10.2026 alle gegen CHS wcp1-events (Flut/Ebbe-Extrema) geprueft
+        return 'richtig', 'CHS-Ereignisse 16.10.'
+    if 'LINZ tidal stream predictions (slack times)' in blk:     # Flut/Ebbe-Beginn aus LINZ
+        return 'richtig', 'LINZ Flut-/Ebbebeginn'
+    return None, ''
+
+
+def konvention_urteil(r, ax):
+    if ax is None or any(a <= r['lat'] <= b and c0 <= r['lon'] <= d0 for a, b, c0, d0 in OHNE_TPXO):
+        return None, ''
+    for (a, b, c0, d0), ref, warum in KONVENTION:
+        if a <= r['lat'] <= b and c0 <= r['lon'] <= d0:
+            c = math.cos(math.radians(ax - ref))
+            if abs(c) >= 0.3:
+                return ('richtig' if c > 0 else 'drehen'), warum
+    return None, ''
+
+
 def m2_info(r, ax=None):
     """(lat, lon, Achse, M2-Amplitude, M2-Greenwich-Phase) oder None."""
     try:
@@ -243,15 +284,30 @@ def main(argv):
             continue
         u = urteil(a[0], a[3])
         tu = lr = gr = cs = None
+        quelle = ''
         if r['name'] in BEHALTEN:
             u = 'behalten'
+        else:
+            ax = achse(r)
+            qu, quelle = quelle_urteil(r, ax)
+            if qu:
+                u = qu
+            elif u == 'unklar':
+                qu, quelle = konvention_urteil(r, ax)
+                ds = [x for x in (a[0], a[3]) if x is not None]
+                # nur wenn die eigene Phase dazu passt (Flutmaximum -120..+60 Grad um HW), sonst Wirbel/Bucht
+                if qu == 'richtig' and all(-120 <= x <= 60 for x in ds) or \
+                        qu == 'drehen' and all(x >= 60 or x <= -120 for x in ds):
+                    u = qu
+                else:
+                    quelle = ''
         if u == 'unklar':
             tu, lr, gr, cs = tpxo_urteil(r, a[1])
         zeilen.append(dict(datei=f, name=r['name'], lat=r['lat'], lon=r['lon'], konst=a[1],
                            amp=round(a[2], 3), d=round(a[0], 1),
                            d2='' if a[3] is None else round(a[3], 1), urteil=u, bezug=a[4],
                            tpxo='' if tu is None else tu, laufrichtung='' if lr is None else lr,
-                           grad='' if gr is None else gr, cos='' if cs is None else cs, nachbarn=''))
+                           grad='' if gr is None else gr, cos='' if cs is None else cs, nachbarn='', quelle=quelle))
         info[r['name']] = (r, m2_info(r))
     # Zweite Stufe: unklare Saetze gegen sicher entschiedene Nachbarn (Phasenfenster, NOAA/CHS-Eichsaetze)
     if '--eichen' not in argv:
