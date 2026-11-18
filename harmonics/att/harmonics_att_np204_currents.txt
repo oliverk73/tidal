@@ -15967,8 +15967,8 @@ MNUS2        x 0 0
 # att_number: 771c
 # att_zone: -0900
 # stream_type: rotary
-# flood_dir: 141
-# ebb_dir: 321
+# flood_dir: 321
+# ebb_dir: 141
 # ellipticity_m2: -0.069
 # n_e_components: n M2 0.44kn/173; n S2 0.17kn/238; n K1 0.19kn/255; n O1 0.55kn/262; e M2 0.36kn/345; e S2 0.17kn/27; e K1 0.16kn/76; e O1 0.32kn/32
 # inferred: N2 (0.19*M2), K2 (0.27*S2), P1 (0.33*K1) - Part IIIa fuehrt nur M2/S2/K1/O1
@@ -15977,29 +15977,30 @@ MNUS2        x 0 0
 # !units: knots
 # !longitude: 127.630000
 # !latitude: 26.070000
+# note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Itoman (SW off), Okinawa, Japan Current
 +09:00 :Asia/Tokyo
-0.2009 knots
+-0.2009 knots
 J1           x 0 0
-K1           0.2484  75.41
-K2           0.0623  44.10
+K1              0.2484  255.41
+K2              0.0623  224.10
 L2           x 0 0
 M1           x 0 0
-M2           0.5672  349.80
+M2              0.5672  169.80
 M3           x 0 0
-M4           0.0185  310.21
+M4              0.0185  130.21
 M6           x 0 0
 M8           x 0 0
-N2           0.1078  320.69
+N2              0.1078  140.69
 2N2          x 0 0
-O1           0.5773  66.42
+O1              0.5773  246.42
 OO1          x 0 0
-P1           0.0820  75.41
+P1              0.0820  255.41
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.2306  44.10
+S2              0.2306  224.10
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0

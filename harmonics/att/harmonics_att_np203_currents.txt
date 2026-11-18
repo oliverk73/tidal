@@ -27086,8 +27086,8 @@ MNUS2        x 0 0
 # np203_no: 514a
 # np203_zone: -0800
 # stream_type: reversing
-# flood_dir: 320
-# ebb_dir: 140
+# flood_dir: 140
+# ebb_dir: 320
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -27101,29 +27101,30 @@ MNUS2        x 0 0
 # region: Labuan
 # admin1_quelle: Ufer 2.8 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Pulau Kuraman (northeast), Malaysia Current
 +08:00 :Asia/Kuching
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.0800  49.00
-K2           0.0189  58.00
+K1              0.0800  229.00
+K2              0.0189  238.00
 L2           x 0 0
 M1           x 0 0
-M2           0.2400  37.00
+M2              0.2400  217.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0456  25.74
+N2              0.0456  205.74
 2N2          x 0 0
-O1           0.0600  14.00
+O1              0.0600  194.00
 OO1          x 0 0
-P1              0.0264  48.34
+P1              0.0264  228.34
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.0700  58.00
+S2              0.0700  238.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0

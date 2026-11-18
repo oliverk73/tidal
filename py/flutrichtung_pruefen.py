@@ -13,6 +13,8 @@ Hauptkonstituente: M2, bei Tagestiden (K1+O1 > M2+S2) K1.
 Unklar -> TPXO10 (18.11.2026): Laufrichtung der Tidewelle = Richtung zunehmender Phase (Ebenen-Fit ueber 9x9
 Zellen). Liegt die Flutrichtung (Achse) darin, ist der Satz richtig, sonst drehen. Nur bei Gradient >= 0.5 Grad/km und
 |cos(Achse - Laufrichtung)| >= 0.3. Geeicht an den NOAA-Saetzen im unklaren Fenster: 154/154 richtig.
+Seit 18.11. abends: Schwelle 0.3 Grad/km (20/21), nicht im Solent; zusaetzlich Nachbarregel (nachbar_urteil,
+15 km, Eichung 141/141). Widersprechen sich TPXO und Nachbarn, bleibt der Satz unklar.
 
 Usage: venv/bin/python py/flutrichtung_pruefen.py [--eichen] [--schreiben]
 """
@@ -122,13 +124,19 @@ def abstand(r, fes, pegel=None):
     return wrap(gs - gt), k, w[k][0], d2, bezug
 
 
-GRAD_MIN, COS_MIN = 0.5, 0.3
+GRAD_MIN, COS_MIN = 0.3, 0.3          # Eichung NOAA unklar: >=0.5 154/154, 0.3-0.5 20/21, darunter Muenzwurf
+# TPXO loest die Solent-Doppeltide nicht auf (7 Widersprueche zu Nachbarn, 18.11.2026)
+OHNE_TPXO = [(50.65, 50.90, -1.65, -0.85)]
+NACHBAR_KM, NACHBAR_C = 15.0, 0.6       # Eichung NOAA unklar gegen sichere NOAA-Nachbarn: 141/141
 # Nach Nachbarvergleich bewusst nicht drehen (18.11.2026), Urteil 'behalten'
 BEHALTEN = {
     'Bird Island (35 km SSE, Algoa Bay), South Africa Current',            # 0.01 kn, Nachbarn gleich
     'Horse Sand Fort Lighthouse (2 km NNE), England, United Kingdom Current',  # Solent-Doppeltide, wie Spitbank
     'Epson Shoal (7 km ENE), England, United Kingdom Current',              # wie Tater Du (1 km)
+    'Hario Seto (W Entrance), Nagasaki, Japan Current',                     # Flut nach S in die Omura-Bucht (TPXO: Enge)
+    'Gabriola Passage, British Columbia, Canada Current',                   # CHS-Ereignisse 16.10. gegengeprueft
 }
+GRAD_ALLEIN = 0.5    # darunter (0.3-0.5) zaehlt TPXO nur mit Nachbarbestaetigung: Hario Seto/Gabriola widersprachen
 
 
 def achse(r):
@@ -170,12 +178,48 @@ def laufrichtung(k, lat, lon, s=4):
     return math.degrees(math.atan2(gx, gy)) % 360, math.hypot(gx, gy)
 
 
+def m2_info(r, ax=None):
+    """(lat, lon, Achse, M2-Amplitude, M2-Greenwich-Phase) oder None."""
+    try:
+        _z, w, _e, mer = X.satz_lesen(r['file'], r['name'])
+    except KeyError:
+        return None
+    ax = achse(r) if ax is None else ax
+    if ax is None or 'M2' not in w or w['M2'][0] <= 0:
+        return None
+    return r['lat'], r['lon'], ax, w['M2'][0], X.greenwich(w['M2'][1], SPEED['M2'], mer) % 360
+
+
+def nachbar_urteil(a, sicher):
+    """Flutrichtung von sicher entschiedenen Nachbarsaetzen uebernehmen, wenn sie physikalisch denselben Strom
+    zeigen (Achse und Phase je |cos| >= 0.7, Produkt >= NACHBAR_C, Amplitude Faktor <= 2).
+    sicher: Liste (lat, lon, Flutrichtung, A, g). -> 'richtig' | 'drehen' | 'widerspruch' | None"""
+    st = n = 0
+    for b in sicher:
+        if b is a or abs(b[0] - a[0]) > NACHBAR_KM / 100 or km(a[0], a[1], b[0], b[1]) > NACHBAR_KM:
+            continue
+        if not 0.5 <= a[3] / b[3] <= 2:
+            continue
+        ca, cg = math.cos(math.radians(a[2] - b[2])), math.cos(math.radians(a[4] - b[4]))
+        if abs(ca) < 0.7 or abs(cg) < 0.7 or ca * cg < NACHBAR_C:
+            continue
+        st += 1 if ca > 0 else -1
+        n += 1
+    if n == 0:
+        return None
+    if abs(st) < n:
+        return 'widerspruch'
+    return 'richtig' if st > 0 else 'drehen'
+
+
 def tpxo_urteil(r, k):
     """-> ('richtig'|'drehen'|None, Laufrichtung, Gradient, cos)."""
     ax, lr = achse(r), laufrichtung(k, r['lat'], r['lon'])
     if ax is None or lr is None:
         return None, None, None, None
     c = math.cos(math.radians(ax - lr[0]))
+    if any(a <= r['lat'] <= b and c0 <= r['lon'] <= d0 for a, b, c0, d0 in OHNE_TPXO):
+        return None, round(lr[0]), round(lr[1], 2), round(c, 2)
     if lr[1] < GRAD_MIN or abs(c) < COS_MIN:
         return None, round(lr[0]), round(lr[1], 2), round(c, 2)
     return ('richtig' if c > 0 else 'drehen'), round(lr[0]), round(lr[1], 2), round(c, 2)
@@ -189,6 +233,7 @@ def main(argv):
     pegel = (np.array([r['lat'] for r in T]), np.array([r['lon'] for r in T]), T)
     dateien = EICHUNG if '--eichen' in argv else GEPRUEFT
     zeilen = []
+    info = {}
     for r in R:
         f = os.path.basename(r['file'])
         if f not in dateien:
@@ -202,13 +247,38 @@ def main(argv):
             u = 'behalten'
         if u == 'unklar':
             tu, lr, gr, cs = tpxo_urteil(r, a[1])
-            if tu:
-                u = tu
         zeilen.append(dict(datei=f, name=r['name'], lat=r['lat'], lon=r['lon'], konst=a[1],
                            amp=round(a[2], 3), d=round(a[0], 1),
                            d2='' if a[3] is None else round(a[3], 1), urteil=u, bezug=a[4],
                            tpxo='' if tu is None else tu, laufrichtung='' if lr is None else lr,
-                           grad='' if gr is None else gr, cos='' if cs is None else cs))
+                           grad='' if gr is None else gr, cos='' if cs is None else cs, nachbarn=''))
+        info[r['name']] = (r, m2_info(r))
+    # Zweite Stufe: unklare Saetze gegen sicher entschiedene Nachbarn (Phasenfenster, NOAA/CHS-Eichsaetze)
+    if '--eichen' not in argv:
+        sicher = []
+        for r in R:
+            if os.path.basename(r['file']) in EICHUNG:
+                m = m2_info(r)
+                if m:
+                    sicher.append(m)
+        for z in zeilen:
+            m = info[z['name']][1]
+            if m and z['urteil'] in ('richtig', 'drehen'):
+                sicher.append(m if z['urteil'] == 'richtig' else (m[0], m[1], (m[2] + 180) % 360, m[3], (m[4] + 180) % 360))
+        for z in zeilen:
+            if z['urteil'] != 'unklar':
+                continue
+            m = info[z['name']][1]
+            nu = nachbar_urteil(m, sicher) if m else None
+            z['nachbarn'] = nu or ''
+            tu = z['tpxo'] or None
+            nu = nu if nu in ('richtig', 'drehen') else None
+            if tu and not nu and float(z['grad']) < GRAD_ALLEIN:
+                tu = None                        # schwacher Gradient allein reicht nicht
+            if tu and nu and tu != nu:
+                z['urteil'] = 'unklar'           # Widerspruch TPXO/Nachbarn
+            elif tu or nu:
+                z['urteil'] = tu or nu
     d = np.array([z['d'] for z in zeilen])
     print(len(zeilen), 'Saetze', collections.Counter(z['urteil'] for z in zeilen))
     h, kanten = np.histogram(d, bins=12, range=(-180, 180))
