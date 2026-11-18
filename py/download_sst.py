@@ -18,6 +18,7 @@ Usage:
 """
 
 import os
+import sys
 import json
 import argparse
 import requests
@@ -192,11 +193,6 @@ def main():
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # Clean old files
-    for f in os.listdir(OUTPUT_DIR):
-        if f.endswith(".bin"):
-            os.remove(os.path.join(OUTPUT_DIR, f))
-
     source_labels = {"oisst": "NOAA OISST v2.1", "mur": "NASA MUR SST v4.1"}
     print(f"{source_labels[args.source]} Download, {args.res}° Auflösung")
     print(f"Output: {OUTPUT_DIR}\n")
@@ -207,8 +203,13 @@ def main():
         nc_path = download_oisst()
 
     if nc_path is None:
-        print("Download fehlgeschlagen!")
-        return
+        print("Download fehlgeschlagen! Alte Daten bleiben.")
+        sys.exit(1)
+
+    # Alte Dateien erst nach erfolgreichem Download entfernen (18.11.2026: Server-Timeout liess die Ebene leer)
+    for f in os.listdir(OUTPUT_DIR):
+        if f.endswith(".bin"):
+            os.remove(os.path.join(OUTPUT_DIR, f))
 
     bin_name, grid_info, data_date = nc_to_bin(nc_path, args.res, args.source)
     if bin_name is None:
