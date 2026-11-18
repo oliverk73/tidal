@@ -22,7 +22,7 @@ import numpy as np
 import xarray as xr
 from datetime import datetime, timezone
 
-OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "precip")
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "precip")   # 18.11.2026: lag in py/static (Skript war nach py/ verschoben)
 NOMADS_BASE = "https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p25.pl"
 
 

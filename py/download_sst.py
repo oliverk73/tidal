@@ -25,7 +25,7 @@ import numpy as np
 import xarray as xr
 from datetime import datetime, timezone
 
-OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "sst")
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "sst")   # 18.11.2026: lag in py/static
 
 ERDDAP_OISST = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg.nc"
 ERDDAP_MUR = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc"

@@ -33,7 +33,7 @@ from PIL import Image
 from pysteps.motion.lucaskanade import dense_lucaskanade
 from pysteps.extrapolation.semilagrangian import extrapolate
 
-OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "nowcast")
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "nowcast")   # 18.11.2026: lag in py/static
 RAINVIEWER_API = "https://api.rainviewer.com/public/weather-maps.json"
 TILE_SIZE = 256
 ZOOM = 4  # ~10km/pixel, good balance for PySTEPS
