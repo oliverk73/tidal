@@ -75,4 +75,4 @@ Ob der Sammler läuft: `systemctl --user list-timers sammler-holen.timer`
 
 Meeresströmung, Wassertemperatur und Nowcast ändern sich langsamer bzw. sind seltener gebraucht; bei Bedarf dazunehmen.
 
-Stand der Kartendaten am 18.11.2026 abends: Wind, Druck, Niederschlag, Wellen, Windstau aktuell; Wassertemperatur 23.3. (NOAA-Server nicht erreichbar), Nowcast 13.5. (pysteps fehlt im venv), Meeresströmung 13.5.
+Stand der Kartendaten am 18.11.2026 abends: Wind, Druck, Niederschlag, Wellen, Windstau aktuell; Wassertemperatur 23.3. (NOAA-Server nicht erreichbar), Nowcast 18.11. 22 Uhr (pysteps + opencv seit 18.11. im venv), Meeresströmung 13.5.
