@@ -72,7 +72,21 @@ def eigen_konstanten(D, name):
         if a and c in D.speeds:
             n = r['neben'].get(c, (0.0, 0.0))
             k[c] = (a, X.greenwich(kap, D.speeds[c], s.meridian), n[0], n[1])
-    return {'azi': float(r['azi']), 'k': k}
+    azi = float(r['azi'])
+    # Flutrichtung des Satzes nachziehen (18.11.2026): flutrichtung_pruefen.py dreht Saetze (Phase +180, Achse +180),
+    # eigen.json behielt die alte Achse -> Pfeile verkehrt herum. Zeigt die Ellipse gegen die Flutrichtung des
+    # Satzes, beide Achsen wenden: azi + 180 und Nebenachse negieren (Phase + 180), physikalisch dieselbe Ellipse.
+    flut = None
+    for key in ('flood_dir', 'max_direction', 'major_axis_deg_true'):
+        try:
+            flut = float(str(s.hot.get(key, '')).split()[0])
+            break
+        except (ValueError, IndexError):
+            pass
+    if flut is not None and math.cos(math.radians(azi - flut)) < 0:
+        azi = (azi + 180) % 360
+        k = {c: (a, g, na, (ng + 180) % 360) for c, (a, g, na, ng) in k.items()}
+    return {'azi': azi, 'k': k}
 
 
 def fuer_satz(D, name):
