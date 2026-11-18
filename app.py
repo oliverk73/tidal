@@ -2358,6 +2358,35 @@ def api_tidal_current():
     return resp
 
 
+@app.route("/api/current_arrows")
+def api_current_arrows():
+    """Strompfeile an den Harmonics-Stromsaetzen (py/strom_pfeile.py, 18.11.2026): je Kartenfleck der beste Satz,
+    Ost-/Nord-Komponente in kn fuer `schritte` Zeiten ab t0 im Abstand dt."""
+    import strom_pfeile
+    try:
+        s, n, w, e = (float(request.args[k]) for k in ('s', 'n', 'w', 'e'))
+        z = int(float(request.args['z']))
+        t0 = int(float(request.args['t0']))
+        schritte = max(1, min(200, int(request.args.get('schritte', 97))))
+        dt = max(300, min(7200, int(request.args.get('dt', 1800))))
+    except (KeyError, ValueError):
+        return jsonify({'error': 'parameters s, n, w, e, z, t0 required'}), 400
+    resp = jsonify(strom_pfeile.pfeile(s, n, w, e, z, t0, schritte, dt))
+    resp.headers['Cache-Control'] = 'public, max-age=3600'
+    return resp
+
+
+def _strom_pfeile_vorwaermen():
+    try:
+        import strom_pfeile
+        strom_pfeile.index()
+    except Exception as e:  # noqa: BLE001
+        print('Strompfeile-Index:', e)
+
+
+threading.Thread(target=_strom_pfeile_vorwaermen, daemon=True).start()
+
+
 @app.route("/api/widget/tides")
 def api_widget_tides():
     slug, station_name = _widget_resolve_slug(request.args.get('station'))

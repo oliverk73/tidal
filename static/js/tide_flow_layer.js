@@ -93,7 +93,8 @@
       var size = map.getSize();
       this._bg = L.DomUtil.create('canvas', 'tideflow-bg leaflet-zoom-hide');
       this._fg = L.DomUtil.create('canvas', 'tideflow-fg leaflet-zoom-hide');
-      [this._bg, this._fg].forEach(function (c) {
+      this._ar = L.DomUtil.create('canvas', 'tideflow-ar leaflet-zoom-hide');
+      [this._bg, this._fg, this._ar].forEach(function (c) {
         c.style.position = 'absolute'; c.style.pointerEvents = 'none';
         this.getPane().appendChild(c);
       }, this);
@@ -117,7 +118,7 @@
       map.off('resize', this._onMoveEnd, this);
       map.off('mousemove', this._onMouse, this);
       map.off('mouseout', this._hideReadout, this);
-      L.DomUtil.remove(this._bg); L.DomUtil.remove(this._fg); L.DomUtil.remove(this._readout);
+      L.DomUtil.remove(this._bg); L.DomUtil.remove(this._fg); L.DomUtil.remove(this._ar); L.DomUtil.remove(this._readout);
     },
 
     // --- Zeit ---
@@ -150,12 +151,12 @@
     // --- Karte ---
     _onMoveStart: function () {
       this._moving = true;
-      this._bg.style.display = 'none'; this._fg.style.display = 'none';
+      this._bg.style.display = 'none'; this._fg.style.display = 'none'; this._ar.style.display = 'none';
     },
     _onMoveEnd: function () {
       var map = this._map, size = map.getSize();
       var tl = map.containerPointToLayerPoint([0, 0]);
-      [this._bg, this._fg].forEach(function (c) {
+      [this._bg, this._fg, this._ar].forEach(function (c) {
         c.width = size.x; c.height = size.y;
         L.DomUtil.setPosition(c, tl);
         c.style.display = '';
@@ -168,6 +169,63 @@
       this._gridT = null;
       this._particles = [];
       this.ready(this._t);
+      this._loadArrows();
+    },
+
+    // --- Pfeile an den Strömungssätzen (Harmonics, /api/current_arrows) ---
+    _loadArrows: function () {
+      var self = this, gen = this._gen;
+      this._arT = null;
+      if (!this.options.fetchArrows) return;
+      this.options.fetchArrows().then(function (d) {
+        if (gen !== self._gen) return;
+        self._arrows = d; self._arT = null;
+      }).catch(function (e) { console.error('Current arrows:', e); });
+    },
+    _arrowAt: function (a, t) {
+      var x = (t - this._arrows.t0) / this._arrows.dt, i = Math.floor(x);
+      if (i < 0 || i >= a.u.length - 1) { i = Math.max(0, Math.min(a.u.length - 1, i)); return [a.u[i], a.v[i]]; }
+      var f = x - i;
+      return [a.u[i] + f * (a.u[i + 1] - a.u[i]), a.v[i] + f * (a.v[i + 1] - a.v[i])];
+    },
+    _drawArrows: function () {
+      var ctx = this._ar.getContext('2d'), map = this._map;
+      ctx.clearRect(0, 0, this._ar.width, this._ar.height);
+      this._arT = this._t;
+      if (!this._arrows) return;
+      var z = map.getZoom(), label = z >= 8;
+      this._arHit = [];
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      ctx.font = 'bold 11px sans-serif'; ctx.textBaseline = 'middle';
+      for (var i = 0; i < this._arrows.pfeile.length; i++) {
+        var a = this._arrows.pfeile[i];
+        var pt = map.latLngToContainerPoint([a.la, a.lo]);
+        if (pt.x < -30 || pt.y < -30 || pt.x > this._ar.width + 30 || pt.y > this._ar.height + 30) continue;
+        var uv = this._arrowAt(a, this._t), kn = Math.sqrt(uv[0] * uv[0] + uv[1] * uv[1]);
+        var li = Math.min(300, Math.round(kn / 0.02)) * 4;
+        var col = 'rgb(' + LUT[li] + ',' + LUT[li + 1] + ',' + LUT[li + 2] + ')';
+        this._arHit.push([pt.x, pt.y, a, kn, uv]);
+        // Standort-Punkt (auch bei Stauwasser sichtbar)
+        ctx.beginPath(); ctx.arc(pt.x, pt.y, 3, 0, 2 * Math.PI);
+        ctx.fillStyle = '#fff'; ctx.fill(); ctx.lineWidth = 1.5; ctx.strokeStyle = '#223'; ctx.stroke();
+        if (kn < 0.05) continue;
+        var len = 10 + 14 * Math.sqrt(Math.min(kn, 6));
+        var dx = uv[0] / kn, dy = -uv[1] / kn;
+        var ex = pt.x + dx * len, ey = pt.y + dy * len;
+        var hx = -dy, hy = dx, hl = 6;
+        var path = new Path2D();
+        path.moveTo(pt.x, pt.y); path.lineTo(ex, ey);
+        path.moveTo(ex - dx * hl + hx * hl * 0.6, ey - dy * hl + hy * hl * 0.6);
+        path.lineTo(ex, ey);
+        path.lineTo(ex - dx * hl - hx * hl * 0.6, ey - dy * hl - hy * hl * 0.6);
+        ctx.strokeStyle = '#223'; ctx.lineWidth = 5; ctx.stroke(path);
+        ctx.strokeStyle = col; ctx.lineWidth = 2.8; ctx.stroke(path);
+        if (label) {
+          var txt = kn.toFixed(1), tx = ex + dx * 9 - 8, ty = ey + dy * 9;
+          ctx.lineWidth = 3; ctx.strokeStyle = 'rgba(255,255,255,.9)'; ctx.strokeText(txt, tx, ty);
+          ctx.fillStyle = '#223'; ctx.fillText(txt, tx, ty);
+        }
+      }
     },
 
     // Felder um t (aktuelle oder, solange die neuen fehlen, die alten)
@@ -259,6 +317,7 @@
       var self = this;
       this._raf = requestAnimationFrame(function () { self._loop(); });
       if (this._moving) return;
+      if (this._arT !== this._t) this._drawArrows();
       if (this._gridT !== this._t || !this._grid) {
         if (!this._buildGrid()) return;
       }
@@ -295,6 +354,17 @@
 
     // --- Wertanzeige unter der Maus ---
     _onMouse: function (e) {
+      var cp = e.containerPoint, hit = null;
+      (this._arHit || []).forEach(function (h) {
+        var d = (h[0] - cp.x) * (h[0] - cp.x) + (h[1] - cp.y) * (h[1] - cp.y);
+        if (d < 100 && (!hit || d < hit[0])) hit = [d, h];
+      });
+      if (hit) {
+        var h = hit[1], dirA = (Math.atan2(h[4][0], h[4][1]) * 180 / Math.PI + 360) % 360;
+        this._readout.textContent = h[2].n.replace(/ Current$/, '') + ': ' + h[3].toFixed(1) + ' kn towards ' + Math.round(dirA) + '° (station)';
+        this._readout.style.display = 'block';
+        return;
+      }
       var p = this._pair(this._t), a = [0, 0], b = [0, 0];
       if (!p) return this._hideReadout();
       p[0].at(e.latlng.lat, e.latlng.lng, a);
@@ -302,7 +372,7 @@
       if (p[2] > 0) { p[1].at(e.latlng.lat, e.latlng.lng, b); if (b[0] === b[0]) { a[0] += p[2] * (b[0] - a[0]); a[1] += p[2] * (b[1] - a[1]); } }
       var kn = Math.sqrt(a[0] * a[0] + a[1] * a[1]) * KN;
       var dir = (Math.atan2(a[0], a[1]) * 180 / Math.PI + 360) % 360;
-      this._readout.textContent = 'Tidal current: ' + kn.toFixed(1) + ' kn towards ' + Math.round(dir) + '°';
+      this._readout.textContent = 'Tidal current: ' + kn.toFixed(1) + ' kn towards ' + Math.round(dir) + '° (TPXO10 model)';
       this._readout.style.display = 'block';
     },
     _hideReadout: function () { if (this._readout) this._readout.style.display = 'none'; }

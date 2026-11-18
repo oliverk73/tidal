@@ -57,7 +57,7 @@
 <script src="/static/js/tide_layer.js" defer></script>
 <script src="/static/js/windstau_layer.js?v=20261109" defer></script>
 <script src="/static/js/nowcast_layer.js" defer></script>
-<script src="/static/js/tide_flow_layer.js?v=20261118c" defer></script>
+<script src="/static/js/tide_flow_layer.js?v=20261118d" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
 <!-- MapLibre GL + Leaflet bridge: clean English vector labels (OpenFreeMap, no key) -->
@@ -1171,6 +1171,13 @@
       var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t + '&c=' + c;
       return (await fetch(url)).json();
     }
+    // Pfeile an den Harmonics-Strömungssätzen (py/strom_pfeile.py), 48 h ab tcStart in 30-min-Schritten
+    async function tcFetchArrows() {
+      var b = tcBounds();
+      var url = '/api/current_arrows?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&z=' + map.getZoom() +
+                '&t0=' + tcStart + '&schritte=' + (TC_STEPS + 2) + '&dt=1800';
+      return (await fetch(url)).json();
+    }
     function tcLabel() {
       var d = new Date(tcTime(tcStep) * 1000);
       var txt = d.toLocaleString(undefined, { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
@@ -1183,7 +1190,7 @@
       if (!tcActive) return;
       if (!tcLayer) {
         ocLoadLandMask().then(function (lm) { if (tcLayer) lm.addTo(map); });
-        tcLayer = new TideFlowLayer({ fetchFrame: tcFetchAt, stepSeconds: 1800, time: tcTime(tcStep) });
+        tcLayer = new TideFlowLayer({ fetchFrame: tcFetchAt, fetchArrows: tcFetchArrows, stepSeconds: 1800, time: tcTime(tcStep) });
         tcLayer.addTo(map);
       } else {
         tcLayer.setTime(tcTime(tcStep));
@@ -1238,7 +1245,7 @@
               '<button id="tc-now-btn" style="font-size:12px;cursor:pointer;border:1px solid #999;border-radius:4px;background:none;padding:1px 6px;">Now</button>' +
             '</div>' +
             '<input type="range" id="tc-progress" min="0" max="' + TC_STEPS + '" step="any" value="0" style="width:180px;cursor:pointer;">' +
-            '<div style="font-size:11px;color:#555;max-width:230px;text-align:center;">Depth-mean tidal stream from the TPXO10 model (no wind or ocean currents). Hidden at capes and narrows where the model is unreliable.</div>' +
+            '<div style="font-size:11px;color:#555;max-width:230px;text-align:center;">Coloured field and particles: depth-mean tidal stream from the TPXO10 model (no wind or ocean currents). Arrows: our current stations (best station per spot).</div>' +
           '</div>';
 
         L.DomEvent.disableClickPropagation(container);
@@ -1260,7 +1267,7 @@
           document.getElementById('tc-play-btn').addEventListener('click', function () { tcAnimTimer ? tcStop() : tcPlay(); });
           document.getElementById('tc-prev-btn').addEventListener('click', function () { tcStop(); tcShow(tcStep - 2); });
           document.getElementById('tc-next-btn').addEventListener('click', function () { tcStop(); tcShow(tcStep + 2); });
-          document.getElementById('tc-now-btn').addEventListener('click', function () { tcStop(); tcNow(); tcShow(tcStep); });
+          document.getElementById('tc-now-btn').addEventListener('click', function () { tcStop(); tcNow(); tcShow(tcStep); if (tcLayer) tcLayer._loadArrows(); });
           document.getElementById('tc-progress').addEventListener('input', function () { tcStop(); tcShow(parseFloat(this.value)); });
         }, 0);
 
