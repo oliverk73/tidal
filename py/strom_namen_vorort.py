@@ -126,7 +126,7 @@ FERN_WEIT_REF = 15     # Bezugsort ab 15 km: Landmarke bis FERN_MAX_KM auch uebe
 OSM_RINNE_KM = 1.5     # Abstand zur OSM-Fahrwasserlinie: Satz liegt in der Rinne
 OSM_ENGE_MAX_KM = 40   # OSM-Meerenge nur als Name, wenn ihre Ausdehnung (bb-Diagonale) hoechstens 40 km ist (Pentland Firth ja, North Channel nein)
 RINNE_ORT_KM = 15      # Rinnenname + naher Bezugsort als Kontext (Oliver: Spaniergat (Norderney), Eitzenbalje (Neuwerk))
-ZU_GROSS = {'British Isles'}   # Inselgruppen-Mittelpunkte ohne Ortsbezug
+ZU_GROSS = {'British Isles', 'Channel Islands', 'Spithead', 'The Solent', 'Solent'}   # Inselgruppen-Mittelpunkte und Reeden (Spithead: GeoNames CHN, Oliver 18.11. Gilkicker Point) ohne Ortsbezug
 ENG_IN_KM = 3.0   # GeoNames-Punkt einer Passage = Mitte; naeher als 3 km heisst: Satz liegt darin
 FERN_MUSTER = re.compile(r'^(.+?) \((\d+) km ([NSEW]{1,3})((?:, [^)]*)?)\), (.*) Current$')
 
