@@ -136,6 +136,9 @@ BEHALTEN = {
     'Hario Seto (W Entrance), Nagasaki, Japan Current',                     # Flut nach S in die Omura-Bucht (TPXO: Enge)
     'Gabriola Passage, British Columbia, Canada Current',                   # CHS-Ereignisse 16.10. gegengeprueft
 }
+# Fortschreitende Welle: Achse in Laufrichtung (|cos| >= 0.5, Gradient >= 0.2) UND Flutmaximum -60..+60 Grad um HW
+# (bzw. gespiegelt fuer drehen). Eichung: Kanal-Konvention 94/94, NOAA unklar 11/11 (18.11.2026).
+FORT_GRAD, FORT_COS = 0.2, 0.5
 GRAD_ALLEIN = 0.5    # darunter (0.3-0.5) zaehlt TPXO nur mit Nachbarbestaetigung: Hario Seto/Gabriola widersprachen
 
 
@@ -260,7 +263,7 @@ def tpxo_urteil(r, k):
         return None, None, None, None
     c = math.cos(math.radians(ax - lr[0]))
     if any(a <= r['lat'] <= b and c0 <= r['lon'] <= d0 for a, b, c0, d0 in OHNE_TPXO):
-        return None, round(lr[0]), round(lr[1], 2), round(c, 2)
+        return None, None, None, None
     if lr[1] < GRAD_MIN or abs(c) < COS_MIN:
         return None, round(lr[0]), round(lr[1], 2), round(c, 2)
     return ('richtig' if c > 0 else 'drehen'), round(lr[0]), round(lr[1], 2), round(c, 2)
@@ -329,8 +332,17 @@ def main(argv):
             z['nachbarn'] = nu or ''
             tu = z['tpxo'] or None
             nu = nu if nu in ('richtig', 'drehen') else None
-            if tu and not nu and float(z['grad']) < GRAD_ALLEIN:
+            fort = None
+            if z['grad'] != '' and float(z['grad']) >= FORT_GRAD and abs(float(z['cos'])) >= FORT_COS:
+                ds = [x for x in (z['d'], z['d2']) if x != '']
+                p = 'richtig' if float(z['cos']) > 0 else 'drehen'
+                if p == 'richtig' and all(-60 <= x <= 60 for x in ds) or p == 'drehen' and all(abs(x) >= 120 for x in ds):
+                    fort = p
+            if tu and not nu and not fort and float(z['grad']) < GRAD_ALLEIN:
                 tu = None                        # schwacher Gradient allein reicht nicht
+            if not tu and fort:
+                tu = fort
+                z['quelle'] = 'fortschreitende Welle'
             if tu and nu and tu != nu:
                 z['urteil'] = 'unklar'           # Widerspruch TPXO/Nachbarn
             elif tu or nu:

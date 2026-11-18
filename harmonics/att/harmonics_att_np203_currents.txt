@@ -19307,8 +19307,8 @@ MNUS2        x 0 0
 # np203_no: 424g
 # np203_zone: -0400
 # stream_type: reversing
-# flood_dir: 110
-# ebb_dir: 290
+# flood_dir: 290
+# ebb_dir: 110
 # inferred: N2 (0.19*M2), K2 (0.27*S2) - NP203 fuehrt nur M2/S2/K1/O1
 # datum: Z0 residual current (knots)
 # !units: knots
@@ -19317,29 +19317,30 @@ MNUS2        x 0 0
 # region: Abu Dhabi
 # admin1_quelle: Ufer 53.5 km
 # note: 20261021 P1 added (Admiralty/equilibrium: K2 = 0.27*S2, P1 = 0.33*K1, same Greenwich phase)
+# note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Sir Abu Nu'ayr NW, United Arab Emirates Current
 +04:00 :Asia/Dubai
-0.0000 knots
+-0.0000 knots
 J1           x 0 0
-K1           0.2400  340.00
-K2           0.0432  307.00
+K1              0.2400  160.00
+K2              0.0432  127.00
 L2           x 0 0
 M1           x 0 0
-M2           0.4100  264.00
+M2              0.4100  84.00
 M3           x 0 0
 M4           x 0 0
 M6           x 0 0
 M8           x 0 0
-N2           0.0779  240.95
+N2              0.0779  60.95
 2N2          x 0 0
-O1           0.1300  298.00
+O1              0.1300  118.00
 OO1          x 0 0
-P1              0.0792  339.67
+P1              0.0792  159.67
 Q1           x 0 0
 2Q1          x 0 0
 R2           x 0 0
 S1           x 0 0
-S2           0.1600  307.00
+S2              0.1600  127.00
 S4           x 0 0
 S6           x 0 0
 T2           x 0 0
