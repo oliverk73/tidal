@@ -57,7 +57,7 @@
 <script src="/static/js/tide_layer.js" defer></script>
 <script src="/static/js/windstau_layer.js?v=20261109" defer></script>
 <script src="/static/js/nowcast_layer.js" defer></script>
-<script src="/static/js/tide_flow_layer.js?v=20261118" defer></script>
+<script src="/static/js/tide_flow_layer.js?v=20261118c" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
 <!-- MapLibre GL + Leaflet bridge: clean English vector labels (OpenFreeMap, no key) -->
@@ -1167,7 +1167,8 @@
     }
     async function tcFetchAt(t) {
       var b = tcBounds();
-      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t;
+      var c = Math.round(Math.max(map.getSize().x, map.getSize().y) / 4);   // Rasterzellen je Achse ~ 4 px
+      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t + '&c=' + c;
       return (await fetch(url)).json();
     }
     function tcLabel() {

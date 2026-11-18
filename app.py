@@ -2348,7 +2348,11 @@ def api_tidal_current():
         return jsonify({'error': 'parameters s, n, w, e (deg) and t (unix seconds) required'}), 400
     # Ausschnitt auf 0,1 Grad runden, damit wiederholte Anfragen gleich sind
     r = lambda x: round(x * 10) / 10.0  # noqa: E731
-    daten = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t)
+    try:
+        zellen = max(100, min(600, int(request.args.get('c') or 240)))     # Zellen je Achse (Bildschirm / 4 px)
+    except ValueError:
+        zellen = 240
+    daten = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t, max_zellen=zellen)
     resp = jsonify(daten)
     resp.headers['Cache-Control'] = 'public, max-age=3600'
     return resp

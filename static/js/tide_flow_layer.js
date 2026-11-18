@@ -210,7 +210,7 @@
       if (!p) return false;
       var A = this._sample(p[0]), B = this._sample(p[1]), f = p[2];
       var gw = A._gw, gh = A._gh, n = gw * gh;
-      var u = new Float32Array(n), v = new Float32Array(n);
+      var u = new Float32Array(n), v = new Float32Array(n), knA = new Float32Array(n);
       var tmp = this._tmp || (this._tmp = document.createElement('canvas'));
       if (tmp.width !== gw || tmp.height !== gh) { tmp.width = gw; tmp.height = gh; }
       var tctx = tmp.getContext('2d'), img = tctx.createImageData(gw, gh), d = img.data;
@@ -220,13 +220,14 @@
         var ub = B._su[k];
         if (ub === ub && f > 0) { ua += f * (ub - ua); va += f * (B._sv[k] - va); }
         var kn = Math.sqrt(ua * ua + va * va) * KN;
-        // Bildschirmbewegung unabhängig vom Zoom, schwache Ströme angehoben (Wurzel): 1 kn ≈ 1,1 px je Bild
-        var px = kn > 0 ? 1.1 * Math.sqrt(kn) / kn : 0;
+        knA[k] = kn;
+        // Bildschirmbewegung unabhängig vom Zoom, schwache Ströme angehoben (kn^0,4): 1 kn ≈ 1,1 px je Bild
+        var px = kn > 0 ? 1.1 * Math.pow(kn, 0.4) / kn : 0;
         u[k] = ua * KN * px; v[k] = -va * KN * px;
         var li = Math.min(300, Math.round(kn / 0.02)) * 4;
         d[k * 4] = LUT[li]; d[k * 4 + 1] = LUT[li + 1]; d[k * 4 + 2] = LUT[li + 2]; d[k * 4 + 3] = LUT[li + 3];
       }
-      this._grid = { u: u, v: v, w: gw, h: gh };
+      this._grid = { u: u, v: v, w: gw, h: gh, kn: knA };
       this._gridT = this._t;
       tctx.putImageData(img, 0, 0);
       var ctx = this._bg.getContext('2d');
@@ -241,15 +242,15 @@
       var i = Math.floor(gx), j = Math.floor(gy);
       if (i < 0 || j < 0 || i >= g.w - 1 || j >= g.h - 1) { out[0] = NaN; return; }
       var k = j * g.w + i;
-      out[0] = g.u[k]; out[1] = g.v[k];
+      out[0] = g.u[k]; out[1] = g.v[k]; out[2] = g.kn[k];
     },
 
     _spawn: function (pt) {
-      var g = this._grid, tries = 0, o = [0, 0];
-      while (tries++ < 40) {                 // nur dort, wo merklich Strom läuft (> 0,15 kn)
+      var g = this._grid, tries = 0, o = [0, 0, 0];
+      while (tries++ < 40) {                 // nur dort, wo Strom läuft (> 0,02 kn)
         var x = Math.random() * (g.w - 1) * CELL, y = Math.random() * (g.h - 1) * CELL;
         this._vel(x, y, o);
-        if (o[0] === o[0] && o[0] * o[0] + o[1] * o[1] > 0.18) { pt.x = x; pt.y = y; pt.age = Math.floor(Math.random() * MAX_AGE); return; }
+        if (o[0] === o[0] && o[2] > 0.02) { pt.x = x; pt.y = y; pt.age = Math.floor(Math.random() * MAX_AGE); return; }
       }
       pt.x = -1; pt.age = MAX_AGE;
     },
@@ -262,7 +263,7 @@
         if (!this._buildGrid()) return;
       }
       var g = this._grid, ctx = this._fg.getContext('2d');
-      var want = Math.min(6000, Math.round(g.w * g.h * CELL * CELL / 350));
+      var want = Math.min(6000, Math.round(g.w * g.h * CELL * CELL / (this._map.getZoom() <= 4 ? 450 : 350)));
       while (this._particles.length < want) { var q = {}; this._spawn(q); this._particles.push(q); }
       if (this._particles.length > want) this._particles.length = want;
 
@@ -272,21 +273,24 @@
       ctx.fillRect(0, 0, this._fg.width, this._fg.height);
       ctx.globalCompositeOperation = 'source-over';
 
-      var o = [0, 0];
-      ctx.lineWidth = 1.6;
+      // Linienstärke nach Zoom: weit draußen dünn
+      var z = this._map.getZoom();
+      ctx.lineWidth = z <= 3 ? 0.6 : z <= 5 ? 0.8 : z <= 7 ? 1.1 : 1.4;
       ctx.lineCap = 'round';
-      ctx.strokeStyle = 'rgba(25,35,45,0.85)';
-      ctx.beginPath();
+      // drei Durchgänge nach Stärke: schwacher Strom blass, starker kräftig
+      var paths = [new Path2D(), new Path2D(), new Path2D()], o = [0, 0, 0];
       for (var i = 0; i < this._particles.length; i++) {
         var p = this._particles[i];
         if (p.age++ >= MAX_AGE || p.x < 0) { this._spawn(p); continue; }
         this._vel(p.x, p.y, o);
         if (o[0] !== o[0]) { p.age = MAX_AGE; continue; }
         var nx = p.x + o[0], ny = p.y + o[1];
-        if (o[0] * o[0] + o[1] * o[1] > 0.18) { ctx.moveTo(p.x, p.y); ctx.lineTo(nx, ny); }   // < 0,15 kn: nicht zeichnen
+        var q = o[2] < 0.25 ? 0 : o[2] < 1 ? 1 : 2;
+        paths[q].moveTo(p.x, p.y); paths[q].lineTo(nx, ny);
         p.x = nx; p.y = ny;
       }
-      ctx.stroke();
+      var alpha = [0.5, 0.7, 0.9];
+      for (var j = 0; j < 3; j++) { ctx.strokeStyle = 'rgba(25,35,45,' + alpha[j] + ')'; ctx.stroke(paths[j]); }
     },
 
     // --- Wertanzeige unter der Maus ---
