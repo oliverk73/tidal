@@ -216,6 +216,37 @@ ATLAS = {
                          lat=lambda y: float(np.polyval(np.polyfit([266, 467, 663, 855, 1041], [59, 58, 57, 56, 55], 2), y)),
                          lon=lambda x: -4 + (x - 127) / 105.8, r=45, abstand_atlas=8.0,
                          namen={(489, 855): 'Farne Islands (77 km ENE), England, United Kingdom Current', (689, 509): 'Forties Field (21 km ENE), North Sea Current', (619, 748): "Devil's Hole (22 km WSW), North Sea Current", (760, 754): "Devil's Hole (61 km E), North Sea Current", (803, 857): "Devil's Hole (110 km SE), North Sea Current", (644, 205): 'Fladen Ground (70 km NNE), North Sea Current', (809, 624): 'Forties Field (106 km ESE), North Sea Current', (412, 755): 'Marr Bank (18 km E), Scotland, United Kingdom Current', (532, 370): 'Fladen Ground (46 km WSW), North Sea Current', (786, 204): 'Fladen Ground (119 km NE), North Sea Current', (425, 624): 'Buchan Deep (33 km S), Scotland, United Kingdom Current', (491, 752): 'Marr Bank (64 km E), Scotland, United Kingdom Current', (589, 849): "Devil's Hole (75 km SSW), North Sea Current", (682, 374): 'Fladen Ground (51 km ESE), North Sea Current', (543, 632): 'Buchan Deep (78 km ESE), Scotland, United Kingdom Current', (675, 849): "Devil's Hole (64 km S), North Sea Current", (666, 629): 'Forties Field (62 km S), North Sea Current', (420, 301): 'Fair Isle (81 km SSE), Scotland, United Kingdom Current', (348, 373): 'Copinsay (65 km SE), Scotland, United Kingdom Current'}),
+    # Orkney NP209 (quer): Seiten per vmh_seiten.py (ork_nXX); Gradnetz 5W x=133, 4 30'W x=322, 4W x=510, 3 30'W x=698,
+    # 3W x=887, 2 30'W x=1075 (377 px/Grad); 59 30'N y=65, 59N y=420, 58 30'N y=780. Bezug HW Dover.
+    'orkney': dict(bezug=V.DOVER, atlas='NP209 (Orkney)', land='Scotland, United Kingdom',
+                   regionen={'United Kingdom': 'Scotland, United Kingdom'},
+                   lat=lambda y: float(np.polyval(np.polyfit([65, 420, 780], [59.5, 59, 58.5], 1), y)),
+                   lon=lambda x: -5 + (x - 133) / 377.0, r=60, abstand_atlas=5.0,
+                   weglassen=[(869, 258)]),                 # Westray Firth: vorhandener Satz (vmh_atlas) 0,5 km daneben
+    # Shetland NP209: Seiten per vmh_seiten.py (shet_nXX); Gradnetz 2W x=285, 1 30'W x=430, 1W x=575, 0 30'W x=718 (289 px/Grad);
+    # 61N y=113, 60 30'N y=418, 60N y=708, 59 30'N y=1005. Bezug HW Dover.
+    'shetland': dict(bezug=V.DOVER, atlas='NP209 (Shetland)', land='Scotland, United Kingdom',
+                     regionen={'United Kingdom': 'Scotland, United Kingdom'},
+                     lat=lambda y: float(np.polyval(np.polyfit([113, 418, 708, 1005], [61, 60.5, 60, 59.5], 1), y)),
+                     lon=lambda x: -2 + (x - 285) / 289.0, r=70, abstand_atlas=5.0,
+                     namen={(266, 1164): 'North Ronaldsay (14 km NE), Scotland, United Kingdom Current',
+                            (440, 912): 'Fair Isle (10 km S), Scotland, United Kingdom Current',
+                            (178, 809): 'Foula (34 km SSW), Scotland, United Kingdom Current',
+                            (540, 1079): 'Fair Isle (33 km SE), Scotland, United Kingdom Current'}),
+    # North Sea Eastern NP253 (Uebersicht): Seiten per vmh_seiten.py (nse_nXX); Gradnetz 3E x=153, 4E x=255, 5E x=357, 6E x=459,
+    # 7E x=562, 8E x=663, 9E x=765, 10E x=868; 59N y=78, 58N y=273, 57N y=463, 56N y=648, 55N y=828, 54N y=1003. Bezug HW Dover.
+    'north_sea_east': dict(bezug=V.DOVER, atlas='NP253 (North Sea Eastern)', land='North Sea',
+                           regionen={'Germany': 'Niedersachsen, Germany', 'Netherlands': 'Friesland, The Netherlands',
+                                     'Denmark': 'Region Syddanmark, Denmark'},
+                           lat=lambda y: float(np.polyval(np.polyfit([78, 273, 463, 648, 828, 1003], [59, 58, 57, 56, 55, 54], 2), y)),
+                           lon=lambda x: float(np.polyval(np.polyfit([153, 255, 357, 459, 562, 663, 765, 868], range(3, 11), 1), x)),
+                           r=50, abstand_atlas=8.0,
+                           namen={(543, 977): 'Helgoland (70 km W), North Sea Current',
+                                  (341, 988): 'Terschelling (83 km NNW), North Sea Current',
+                                  (242, 1009): 'Terschelling (114 km WNW), North Sea Current',
+                                  (450, 642): 'Horns Rev (134 km WNW), North Sea Current',
+                                  (226, 301): 'Lista (171 km W), North Sea Current',
+                                  (493, 819): 'Horns Rev (109 km WSW), North Sea Current'}),
 }
 
 
