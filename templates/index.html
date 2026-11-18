@@ -57,6 +57,7 @@
 <script src="/static/js/tide_layer.js" defer></script>
 <script src="/static/js/windstau_layer.js?v=20261109" defer></script>
 <script src="/static/js/nowcast_layer.js" defer></script>
+<script src="/static/js/tide_flow_layer.js?v=20261118" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
 <!-- MapLibre GL + Leaflet bridge: clean English vector labels (OpenFreeMap, no key) -->
@@ -1154,85 +1155,66 @@
     // --- Tidal Currents Layer (TPXO10, computed per view on the server: /api/tidal_current) ---
     // Oliver 13.11.2026. Checked against 664 measured current sets: median curve error 8 % on open
     // water/shelf; cells at capes, narrows and bays (neighbour cells > 50 % apart) are left out.
-    var tcLayer = null, tcActive = false, tcAnimTimer = null, tcStart = 0, tcStep = 0, tcReq = 0;
-    var tcCache = {}, tcCacheKeys = [], TC_CACHE_MAX = 12, TC_STEPS = 96;   // 30-min steps, 48 h
-    var tcMoveTimer = null;
+    // 18.11.2026: eigene Ebene (static/js/tide_flow_layer.js) statt leaflet-velocity – Farbfläche nach Stärke,
+    // Partikel bleiben beim Zeitwechsel erhalten, Zeit läuft stufenlos (Felder alle 30 min, dazwischen interpoliert).
+    var tcLayer = null, tcActive = false, tcAnimTimer = null, tcStart = 0, tcStep = 0;
+    var TC_STEPS = 96, TC_SPEED = 1800;    // 30-min-Schritte über 48 h; Wiedergabe 30 min je Sekunde
 
     function tcTime(step) { return tcStart + step * 1800; }
     function tcBounds() {
       var b = map.getBounds();
       return { s: b.getSouth().toFixed(1), n: b.getNorth().toFixed(1), w: b.getWest().toFixed(1), e: b.getEast().toFixed(1) };
     }
-    async function tcFetch(step) {
+    async function tcFetchAt(t) {
       var b = tcBounds();
-      var key = [b.s, b.n, b.w, b.e, tcTime(step)].join('|');
-      if (tcCache[key]) return tcCache[key];
-      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + tcTime(step);
-      var data = await (await fetch(url)).json();
-      if (tcCacheKeys.length >= TC_CACHE_MAX) { delete tcCache[tcCacheKeys.shift()]; }
-      tcCache[key] = data; tcCacheKeys.push(key);
-      return data;
+      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t;
+      return (await fetch(url)).json();
     }
-    function tcLabel(step) {
-      var d = new Date(tcTime(step) * 1000);
+    function tcLabel() {
+      var d = new Date(tcTime(tcStep) * 1000);
       var txt = d.toLocaleString(undefined, { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
       var el = document.getElementById('tc-label'); if (el) el.textContent = txt;
-      var pr = document.getElementById('tc-progress'); if (pr) pr.value = step;
+      var pr = document.getElementById('tc-progress'); if (pr) pr.value = tcStep;
     }
-    async function tcShow(step) {
-      tcStep = ((step % (TC_STEPS + 1)) + TC_STEPS + 1) % (TC_STEPS + 1);
-      tcLabel(tcStep);
-      var nr = ++tcReq;
-      var data;
-      try { data = await tcFetch(tcStep); } catch (e) { console.error('Tidal current layer error:', e); return; }
-      if (nr !== tcReq || !tcActive) return;              // newer request or layer switched off meanwhile
-      if (tcLayer) {
-        tcLayer.setData(data);
-      } else {
-        ocLoadLandMask().then(function (lm) { if (tcLayer) lm.addTo(map); });
-        tcLayer = L.velocityLayer({
-          displayValues: true,
-          displayOptions: {
-            velocityType: 'Tidal Current', position: 'bottomleft', emptyString: 'No tidal current data',
-            speedUnit: 'kt', directionString: 'Direction', speedString: 'Speed'
-          },
-          data: data,
-          maxVelocity: 2.5,
-          velocityScale: 0.02,
-          opacity: 0.95,
-          particleAge: 50,
-          lineWidth: 2.2,
-          particleMultiplier: 1/200,
-          colorScale: ['#2a8f84', '#1f7a62', '#4f9a1a', '#d9a400', '#e07020', '#d03020', '#9a0c50'],   // 13.11.: dunkler, auf heller Karte sichtbar
-        });
-        tcLayer.addTo(map);
-      }
-      if (!tcAnimTimer) tcFetch((tcStep + 1) % (TC_STEPS + 1)).catch(function () {});   // prefetch
-    }
-    function tcOnMove() {
+    function tcShow(step) {
+      tcStep = ((step % TC_STEPS) + TC_STEPS) % TC_STEPS;
+      tcLabel();
       if (!tcActive) return;
-      if (tcMoveTimer) clearTimeout(tcMoveTimer);
-      tcMoveTimer = setTimeout(function () { tcShow(tcStep); }, 250);
+      if (!tcLayer) {
+        ocLoadLandMask().then(function (lm) { if (tcLayer) lm.addTo(map); });
+        tcLayer = new TideFlowLayer({ fetchFrame: tcFetchAt, stepSeconds: 1800, time: tcTime(tcStep) });
+        tcLayer.addTo(map);
+      } else {
+        tcLayer.setTime(tcTime(tcStep));
+        tcLayer.ready(tcTime(tcStep));
+      }
     }
     function tcNow() {
       var now = Math.floor(Date.now() / 1000);
-      tcStart = now - (now % 600);                          // server works on a 10-min raster
+      tcStart = now - (now % 1800);                         // Felder liegen auf vollen halben Stunden
+      tcStep = (now - tcStart) / 1800;
     }
     function tcPlay() {
       if (tcAnimTimer) return;
       document.getElementById('tc-play-btn').textContent = '⏸';
-      tcAnimTimer = setInterval(function () { tcShow(tcStep + 1); }, 1200);
+      var dt = 0.05;
+      tcAnimTimer = setInterval(function () {
+        if (!tcLayer) return;
+        var next = tcStep + TC_SPEED * dt / 1800;
+        if (next >= TC_STEPS) next = 0;
+        if (!tcLayer.ready(tcTime(next))) return;          // warten, bis das nächste Feld da ist (kein Springen)
+        tcLayer.prefetch(tcTime(next));
+        tcShow(next);
+      }, dt * 1000);
     }
     function tcStop() {
       if (tcAnimTimer) { clearInterval(tcAnimTimer); tcAnimTimer = null; }
       var btn = document.getElementById('tc-play-btn'); if (btn) btn.textContent = '▶';
     }
     function tcDeactivate() {
-      tcStop(); tcActive = false; tcReq++;
-      map.off('moveend zoomend', tcOnMove);
+      tcStop(); tcActive = false;
       if (tcLayer) { map.removeLayer(tcLayer); tcLayer = null; }
       if (ocLandMask && map.hasLayer(ocLandMask) && !ocVelocityLayer) { map.removeLayer(ocLandMask); }
-      tcCache = {}; tcCacheKeys = [];
     }
 
     const TidalCurrentControl = L.Control.extend({
@@ -1254,7 +1236,7 @@
               '<span id="tc-label" style="min-width:140px;text-align:center;font-weight:bold;">--</span>' +
               '<button id="tc-now-btn" style="font-size:12px;cursor:pointer;border:1px solid #999;border-radius:4px;background:none;padding:1px 6px;">Now</button>' +
             '</div>' +
-            '<input type="range" id="tc-progress" min="0" max="' + TC_STEPS + '" value="0" style="width:180px;cursor:pointer;">' +
+            '<input type="range" id="tc-progress" min="0" max="' + TC_STEPS + '" step="any" value="0" style="width:180px;cursor:pointer;">' +
             '<div style="font-size:11px;color:#555;max-width:230px;text-align:center;">Depth-mean tidal stream from the TPXO10 model (no wind or ocean currents). Hidden at capes and narrows where the model is unreliable.</div>' +
           '</div>';
 
@@ -1267,8 +1249,7 @@
               deactivateOtherOverlays('tc-toggle');
               document.getElementById('tc-controls').style.display = 'flex';
               tcActive = true; tcNow();
-              map.on('moveend zoomend', tcOnMove);
-              tcShow(0);
+              tcShow(tcStep);
               showLegend('tc-toggle');
             } else {
               document.getElementById('tc-controls').style.display = 'none';
@@ -1278,8 +1259,8 @@
           document.getElementById('tc-play-btn').addEventListener('click', function () { tcAnimTimer ? tcStop() : tcPlay(); });
           document.getElementById('tc-prev-btn').addEventListener('click', function () { tcStop(); tcShow(tcStep - 2); });
           document.getElementById('tc-next-btn').addEventListener('click', function () { tcStop(); tcShow(tcStep + 2); });
-          document.getElementById('tc-now-btn').addEventListener('click', function () { tcStop(); tcNow(); tcCache = {}; tcCacheKeys = []; tcShow(0); });
-          document.getElementById('tc-progress').addEventListener('input', function () { tcStop(); tcShow(parseInt(this.value)); });
+          document.getElementById('tc-now-btn').addEventListener('click', function () { tcStop(); tcNow(); tcShow(tcStep); });
+          document.getElementById('tc-progress').addEventListener('input', function () { tcStop(); tcShow(parseFloat(this.value)); });
         }, 0);
 
         return container;
@@ -1717,7 +1698,7 @@
         min: '0.0', max: '1.5+', unit: 'm/s'
       },
       'tc-toggle': {
-        gradient: 'linear-gradient(to top,#8fd3c8,#4cb89a,#8cc63f,#f2c12e,#f08a24,#e0402a,#b0105c)',
+        gradient: 'linear-gradient(to top,#aadcf0 4%,#5aaadc 10%,#3cb478 20%,#96c832 30%,#f5c828 40%,#f0821e 60%,#dc3228 80%,#a01464 100%)',
         min: '0', max: '5+', unit: 'kn'
       },
       'ps-toggle': {
