@@ -1158,6 +1158,7 @@
     // 18.11.2026: eigene Ebene (static/js/tide_flow_layer.js) statt leaflet-velocity – Farbfläche nach Stärke,
     // Partikel bleiben beim Zeitwechsel erhalten, Zeit läuft stufenlos (Felder alle 30 min, dazwischen interpoliert).
     var tcLayer = null, tcActive = false, tcAnimTimer = null, tcStart = 0, tcStep = 0;
+    var tcHidCurrent = false;
     var TC_STEPS = 96, TC_SPEED = 1800;    // 30-min-Schritte über 48 h; Wiedergabe 30 min je Sekunde
 
     function tcTime(step) { return tcStart + step * 1800; }
@@ -1190,6 +1191,8 @@
       if (!tcActive) return;
       if (!tcLayer) {
         ocLoadLandMask().then(function (lm) { if (tcLayer) lm.addTo(map); });
+        // Strömungssatz-Symbole ausblenden, solange die Pfeile da sind (Oliver 18.11.2026)
+        if (window.grp_all_current && map.hasLayer(window.grp_all_current)) { map.removeLayer(window.grp_all_current); tcHidCurrent = true; }
         tcLayer = new TideFlowLayer({ fetchFrame: tcFetchAt, fetchArrows: tcFetchArrows, stepSeconds: 1800, time: tcTime(tcStep) });
         tcLayer.addTo(map);
       } else {
@@ -1222,6 +1225,7 @@
     function tcDeactivate() {
       tcStop(); tcActive = false;
       if (tcLayer) { map.removeLayer(tcLayer); tcLayer = null; }
+      if (tcHidCurrent && window.grp_all_current) { map.addLayer(window.grp_all_current); tcHidCurrent = false; }
       if (ocLandMask && map.hasLayer(ocLandMask) && !ocVelocityLayer) { map.removeLayer(ocLandMask); }
     }
 
@@ -1245,7 +1249,7 @@
               '<button id="tc-now-btn" style="font-size:12px;cursor:pointer;border:1px solid #999;border-radius:4px;background:none;padding:1px 6px;">Now</button>' +
             '</div>' +
             '<input type="range" id="tc-progress" min="0" max="' + TC_STEPS + '" step="any" value="0" style="width:180px;cursor:pointer;">' +
-            '<div style="font-size:11px;color:#555;max-width:230px;text-align:center;">Coloured field and particles: depth-mean tidal stream from the TPXO10 model (no wind or ocean currents). Arrows: our current stations (best station per spot).</div>' +
+            '<div style="font-size:11px;color:#555;max-width:230px;text-align:center;">Coloured field and particles: depth-mean tidal stream from the TPXO10 model (no wind or ocean currents). Arrows: our current stations (best station per spot; station symbols are hidden while this layer is on).</div>' +
           '</div>';
 
         L.DomEvent.disableClickPropagation(container);
