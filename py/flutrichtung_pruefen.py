@@ -10,6 +10,10 @@ Flutstrom hat sein Maximum zwischen Niedrigwasser-Mitte und kurz nach Hochwasser
 ~ -90 Grad, fortschreitende: ~0 Grad). Geeicht an den Saetzen mit sicherer Flutrichtung (NOAA/CHS).
 Hauptkonstituente: M2, bei Tagestiden (K1+O1 > M2+S2) K1.
 
+Unklar -> TPXO10 (18.11.2026): Laufrichtung der Tidewelle = Richtung zunehmender Phase (Ebenen-Fit ueber 9x9
+Zellen). Liegt die Flutrichtung (Achse) darin, ist der Satz richtig, sonst drehen. Nur bei Gradient >= 0.5 Grad/km und
+|cos(Achse - Laufrichtung)| >= 0.3. Geeicht an den NOAA-Saetzen im unklaren Fenster: 154/154 richtig.
+
 Usage: venv/bin/python py/flutrichtung_pruefen.py [--eichen] [--schreiben]
 """
 from __future__ import annotations
@@ -20,12 +24,16 @@ import datetime as dt
 import os
 import sys
 
+import math
+import re
+
 import netCDF4 as nc
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from health_check import load_records, ROOT, active_files                         # noqa: E402
 import xtide_modell as X                                           # noqa: E402
+import tpxo as TP                                                  # noqa: E402
 from fes_ersatz_inseln import sample, FES_DIR                      # noqa: E402
 
 SPEED = {'M2': 28.9841042, 'K1': 15.0410686, 'S2': 30.0, 'O1': 13.9430356}
@@ -114,6 +122,65 @@ def abstand(r, fes, pegel=None):
     return wrap(gs - gt), k, w[k][0], d2, bezug
 
 
+GRAD_MIN, COS_MIN = 0.5, 0.3
+# Nach Nachbarvergleich bewusst nicht drehen (18.11.2026), Urteil 'behalten'
+BEHALTEN = {
+    'Bird Island (35 km SSE, Algoa Bay), South Africa Current',            # 0.01 kn, Nachbarn gleich
+    'Horse Sand Fort Lighthouse (2 km NNE), England, United Kingdom Current',  # Solent-Doppeltide, wie Spitbank
+    'Epson Shoal (7 km ENE), England, United Kingdom Current',              # wie Tater Du (1 km)
+}
+
+
+def achse(r):
+    """Flutrichtung des Satzes (flood_dir / max_direction / Hauptachse) aus den Hot Comments."""
+    L = open(os.path.join(ROOT, r['file']), encoding='iso-8859-1').read().split('\n')
+    i = L.index(r['name'])
+    a = i
+    while a > 0 and L[a - 1].startswith('#'):    # nur der Kommentarkopf direkt ueber dem Satz
+        a -= 1
+    blk = '\n'.join(L[a:i])
+    m = re.search(r'# (?:flood_dir|max_direction): (\d+)', blk)
+    if m:
+        return float(m.group(1))
+    m = re.search(r'# (?:major_axis_deg_true|Major axis): ([-\d.]+)', blk)
+    return float(m.group(1)) if m else None
+
+
+def laufrichtung(k, lat, lon, s=4):
+    """TPXO10: (Richtung zunehmender Phase, Grad/km) per Ebenen-Fit, oder None."""
+    f = TP.feld('10', k.lower())
+    z = TP.naechste_wasserzelle('10', lat, lon, 30)
+    if f is None or z is None or z[2] > 10:
+        return None
+    i, j, _dk = z
+    if i - s < 0 or i + s >= TP.NY:
+        return None
+    ii = np.arange(i - s, i + s + 1)
+    jj = np.arange(j - s, j + s + 1) % TP.NX
+    blk = np.asarray(f[ii[0]:ii[-1] + 1][:, jj])
+    h = blk[..., 0] - 1j * blk[..., 1]
+    ok = np.abs(h) > 0
+    if ok.sum() < 8 or h[s, s] == 0:
+        return None
+    ph = np.degrees(np.angle(h / h[s, s]))
+    Y, Xg = np.meshgrid((ii - i) / 30 * 111.2, ((jj - j + TP.NX // 2) % TP.NX - TP.NX // 2) / 30 * 111.2
+                        * math.cos(math.radians(lat)), indexing='ij')
+    A = np.c_[Xg[ok], Y[ok], np.ones(ok.sum())]
+    (gx, gy, _), *_ = np.linalg.lstsq(A, ph[ok], rcond=None)
+    return math.degrees(math.atan2(gx, gy)) % 360, math.hypot(gx, gy)
+
+
+def tpxo_urteil(r, k):
+    """-> ('richtig'|'drehen'|None, Laufrichtung, Gradient, cos)."""
+    ax, lr = achse(r), laufrichtung(k, r['lat'], r['lon'])
+    if ax is None or lr is None:
+        return None, None, None, None
+    c = math.cos(math.radians(ax - lr[0]))
+    if lr[1] < GRAD_MIN or abs(c) < COS_MIN:
+        return None, round(lr[0]), round(lr[1], 2), round(c, 2)
+    return ('richtig' if c > 0 else 'drehen'), round(lr[0]), round(lr[1], 2), round(c, 2)
+
+
 def main(argv):
     fes = {k: nc.Dataset(os.path.join(FES_DIR, '%s_fes2022.nc' % k.lower())) for k in SPEED}
     alle = [r for r in load_records() if r['lat'] is not None]
@@ -129,9 +196,19 @@ def main(argv):
         a = abstand(r, fes, pegel)
         if a is None:
             continue
+        u = urteil(a[0], a[3])
+        tu = lr = gr = cs = None
+        if r['name'] in BEHALTEN:
+            u = 'behalten'
+        if u == 'unklar':
+            tu, lr, gr, cs = tpxo_urteil(r, a[1])
+            if tu:
+                u = tu
         zeilen.append(dict(datei=f, name=r['name'], lat=r['lat'], lon=r['lon'], konst=a[1],
                            amp=round(a[2], 3), d=round(a[0], 1),
-                           d2='' if a[3] is None else round(a[3], 1), urteil=urteil(a[0], a[3]), bezug=a[4]))
+                           d2='' if a[3] is None else round(a[3], 1), urteil=u, bezug=a[4],
+                           tpxo='' if tu is None else tu, laufrichtung='' if lr is None else lr,
+                           grad='' if gr is None else gr, cos='' if cs is None else cs))
     d = np.array([z['d'] for z in zeilen])
     print(len(zeilen), 'Saetze', collections.Counter(z['urteil'] for z in zeilen))
     h, kanten = np.histogram(d, bins=12, range=(-180, 180))
