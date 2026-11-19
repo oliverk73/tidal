@@ -121,9 +121,17 @@ def laden(a, b, parallel=3):
     t0 = dt.datetime.strptime(a, '%Y%m%d').date()
     t1 = dt.datetime.strptime(b, '%Y%m%d').date()
     tage = [t0 + dt.timedelta(days=i) for i in range((t1 - t0).days + 1)]
+    def sicher(tag):                       # 19.11.: ein Verbindungsabbruch beendete den ganzen Lauf
+        try:
+            return tag_laden(tag)
+        except Exception as e:                                        # noqa: BLE001
+            with _druck:
+                print('  %s  FEHLER %s' % (tag, str(e)[:120]), flush=True)
+            return None
     with ThreadPoolExecutor(parallel) as ex:
-        mb = sum(ex.map(tag_laden, tage))
-    print('fertig: %d Tage, %.0f MB abgerufen' % (len(tage), mb))
+        erg = list(ex.map(sicher, tage))
+    fehl = [str(t) for t, e in zip(tage, erg) if e is None]
+    print('fertig: %d Tage, %.0f MB abgerufen, %d fehlgeschlagen %s' % (len(tage), sum(e or 0 for e in erg), len(fehl), ' '.join(fehl[:10])))
 
 
 if __name__ == '__main__':
