@@ -221,7 +221,9 @@ def saetze(fitdatei, pruefdatei, argv, schwelle=1.5, abstand_km=8.0):
     alle = {r['name'] for r in H.load_records()}
     P = list(csv.DictReader(open(pruefdatei, encoding='utf-8')))
     L = json.load(open(SN.LM, encoding='utf-8'))
-    L = [z for z in L if 48 < z[1] < 62 and -14 < z[2] < 3]
+    L = [z for z in L if 48 < z[1] < 62 and -14 < z[2] < 3 and z[0] not in ('British Isles',)]   # GeoNames-Sammelpunkt in der Irischen See
+    ERSETZ = {'East Float (North Wall Light 5 km S)': 'River Mersey (Pier Head)',     # East Float = Birkenhead-Dock
+              'Pleaskin Head (Dunseverick Harbou)': 'Dunseverick (Pleaskin Head)'}    # GeoNames-Name abgeschnitten
     LAND = ('United Kingdom', 'Ireland', 'Isle of Man')
     kand = np.where((spring >= schwelle) & (dS >= abstand_km) & (la > 49.8) & (lo > -11) & (lo < 2.2))[0]
     kand = kand[np.argsort(-spring[kand])]
@@ -251,6 +253,8 @@ def saetze(fitdatei, pruefdatei, argv, schwelle=1.5, abstand_km=8.0):
             name = '%s (%d km %s), %s Current' % (SN.latin1(n), max(1, round(d)), SN.richtung(la[i], lo[i], a, b), t)
         if not any(w in name for w in LAND):
             continue
+        for a_, b_ in ERSETZ.items():
+            name = name.replace(a_, b_)
         name = SN.auf_tcd_laenge(SN.latin1(name))                   # 'Hellabrick’s' -> ASCII-Apostroph
         if name in alle or name in vergeben:
             print('  %-60s Name schon vergeben' % name)
