@@ -31618,7 +31618,7 @@ x 0 0
 # station_id_context: CMEMS-LightshipElbe4
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 313.6
+# major_axis_deg_true: 133.6
 # confidence: 8
 # cmems_code: LightshipElbe4
 # utide: period=1924-01-20..1944-10-28 const=68
@@ -31629,6 +31629,7 @@ x 0 0
 # admin1_quelle: Ufer 6.4 km
 # note: 20261113 Zeitstempel der Rohreihe waren Europe/Berlin (MEZ/MESZ) statt UTC, nach UTC gewandelt und neu gefittet (Phasen -71 min; py/zeitzone_neufit.py)
 # note: 20261113 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Richtung physikalisch umgekehrt (Achse +180, Phasen unveraendert): Rohreihe zeigte verkehrt; Flut laut Nachbarmessungen, Revierkenntnis, TPXO10 und FES2014 in Gegenrichtung
 Feuerschiff Elbe 4, Germany Current
 +00:00 :UTC
 -0.2851 knots
@@ -56044,7 +56045,7 @@ x 0 0
 # 1300 hourly samples, depth 3 m
 # from 2003-05-28 to 2003-07-22
 # R^2 = 0.9532, RMS error = 0.4637 knots (refit 20261020, coupled constituents)
-# Major axis: 217.2 deg true
+# Major axis: 37.2 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
@@ -56053,7 +56054,7 @@ x 0 0
 # institution: Proudman Oceanographic Laboratory
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 217.2
+# major_axis_deg_true: 37.2
 # confidence: 8
 # bodc_ref: BODC636882
 # utide: period=2003-05-28..2003-07-22 const=35
@@ -56063,6 +56064,7 @@ x 0 0
 # note: 20261020 phases +30.1 min: hourly means had been stamped at the start of the hour
 # note: 20261020 refit, K2/P1 coupled to S2/K1 by ratio/lag of Holyhead (10 km): series < 6 months
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Richtung physikalisch umgekehrt (Achse +180, Phasen unveraendert): Rohreihe zeigte verkehrt; Flut laut Nachbarmessungen, Revierkenntnis, TPXO10 und FES2014 in Gegenrichtung
 Langdon Ridge (5 km NW, 3 m deep), Wales, United Kingdom Current
 +00:00 :UTC
 0.4242 knots
@@ -112924,7 +112926,7 @@ x 0 0
 # 660 hourly samples, depth 16 m
 # from 1980-07-05 to 1980-08-01
 # R^2 = 0.9337, RMS error = 0.1322 knots (refit 20261020, coupled constituents)
-# Major axis: 341.4 deg true
+# Major axis: 161.4 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
@@ -112933,7 +112935,7 @@ x 0 0
 # institution: Ministry of Agriculture  Fisheries and Food Lowestoft Fisher
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 341.4
+# major_axis_deg_true: 161.4
 # confidence: 8
 # bodc_ref: BODC19847
 # utide: period=1980-07-05..1980-08-01 const=20
@@ -112942,6 +112944,7 @@ x 0 0
 # !latitude: 55.0566
 # note: 20261020 refit, K2/P1/N2 coupled to S2/K1/M2 by ratio/lag of Blyth (10 km): series < 6 months
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Richtung physikalisch umgekehrt (Achse +180, Phasen unveraendert): Rohreihe zeigte verkehrt; Flut laut Nachbarmessungen, Revierkenntnis, TPXO10 und FES2014 in Gegenrichtung
 Tynemouth Lighthouse (5 km NNE), England, United Kingdom Current
 +00:00 :UTC
 -0.0495 knots
