@@ -31225,7 +31225,7 @@ x 0 0
 # station_id_context: CMEMS-LightshipBremen
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 335.6
+# major_axis_deg_true: 155.6
 # confidence: 8
 # cmems_code: LightshipBremen
 # utide: period=1924-02-01..1944-10-28 const=68
@@ -31236,6 +31236,7 @@ x 0 0
 # admin1_quelle: Ufer 4.9 km
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 # note: 20261113 Zeitstempel der Rohreihe waren Europe/Berlin (MEZ/MESZ) statt UTC, nach UTC gewandelt und neu gefittet (Phasen -74 min; py/zeitzone_neufit.py)
+# note: 20261119 Richtung physikalisch umgekehrt (Achse +180, Phasen unveraendert): Rohreihe 1924-44 zeigte verkehrt wie Elbe 4; Flut in Weser/Jade (SE) laut 6 BSH-Nachbarn, TPXO10 und SSW-RS
 Feuerschiff Bremen, Germany Current
 +00:00 :UTC
 -0.3584 knots
