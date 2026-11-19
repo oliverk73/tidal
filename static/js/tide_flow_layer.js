@@ -373,21 +373,27 @@
       });
       return hit && hit[1];
     },
-    // 19.11.2026 (Oliver): Klick auf einen Pfeil oeffnet die Detailseite des Stromsatzes
+    // 19.11.2026 (Oliver): Klick auf einen Pfeil oeffnet ein Popup wie bei den Stationsmarkern, von dort zur Detailseite
     _onClick: function (e) {
       var h = this._arrowHit(e.containerPoint);
-      if (h && h[2].url) {
-        L.DomEvent.stop(e.originalEvent);
-        window.location.href = h[2].url;
-      }
+      if (!h) return;
+      L.DomEvent.stop(e.originalEvent);
+      var a = h[2], esc = function (x) { return String(x).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
+      var dirA = (Math.atan2(h[4][0], h[4][1]) * 180 / Math.PI + 360) % 360;
+      var html = '<b>' + esc(a.n) + '</b><br>' +
+        (a.url ? '<a href="' + esc(a.url) + '">🌊 Show prediction</a><br>' : '') +
+        '<small>Now: ' + h[3].toFixed(1) + ' kn towards ' + Math.round(dirA) + '°</small><br>' +
+        '<small>📄 ' + esc(a.f) + '</small><br>' +
+        '<small>📌 <span style="user-select:all">' + a.la.toFixed(4) + ', ' + a.lo.toFixed(4) + '</span></small>';
+      L.popup({ offset: [0, -4] }).setLatLng([a.la, a.lo]).setContent(html).openOn(this._map);
     },
     _onMouse: function (e) {
       var h = this._arrowHit(e.containerPoint);
-      this._map.getContainer().style.cursor = (h && h[2].url) ? 'pointer' : '';
+      this._map.getContainer().style.cursor = h ? 'pointer' : '';
       if (h) {
         var dirA = (Math.atan2(h[4][0], h[4][1]) * 180 / Math.PI + 360) % 360;
         this._readout.textContent = h[2].n.replace(/ Current$/, '') + ': ' + h[3].toFixed(1) + ' kn towards ' + Math.round(dirA) + '° (station)' +
-          (h[2].url ? ' – click for details' : '');
+          ' – click for details';
         this._readout.style.display = 'block';
         return;
       }
