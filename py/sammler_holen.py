@@ -12,6 +12,9 @@ Dieses Skript aktualisiert den Klon ~/tidal-sammler und vereinigt dann:
   quellen/tide_tables/iceland_sjolag/stationen.json
   quellen/tide_tables/kuwait_met/<pegel>.csv     je Scheitelzeit der juengste Abruf (seit 29.10.2026)
   quellen/water_levels/imi_connemara/<zelle>.csv je Stunde der juengste Abruf (Connemara-Modell, seit 13.11.2026)
+  quellen/water_levels/dmi_dkss/<zelle>.csv      je Stunde der kuerzeste Vorlauf (DMI DKSS, seit 19.11.2026)
+Im Klon liegen die Daten ohne quellen/ (water_levels/..., tide_tables/...); vom 15. bis 19.11.2026 suchte das
+Skript dort faelschlich unter quellen/ und holte nichts.
 Lokal vorhandene Werte gehen nie verloren; es kommt nur hinzu.
 
 Aufruf: python3 py/sammler_holen.py   (systemd-User-Timer sammler-holen.timer)
@@ -43,7 +46,7 @@ def ea():
     ziel = os.path.join(ROOT, 'quellen/water_levels/ea')
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'quellen/water_levels/ea/rloi*.json')):
+    for q in glob.glob(os.path.join(KLON, 'water_levels/ea/rloi*.json')):
         p = os.path.join(ziel, os.path.basename(q))
         fern = json.load(open(q))
         lokal = json.load(open(p)) if os.path.exists(p) else {}
@@ -59,7 +62,7 @@ def island():
     ziel = os.path.join(ROOT, 'quellen/tide_tables/iceland_sjolag')
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'quellen/tide_tables/iceland_sjolag/*.csv')):
+    for q in glob.glob(os.path.join(KLON, 'tide_tables/iceland_sjolag/*.csv')):
         p = os.path.join(ziel, os.path.basename(q))
         lokal = {z['dags']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
         vorher, geaendert = len(lokal), False
@@ -76,7 +79,7 @@ def island():
             w.writerows({k: lokal[d][k] for k in FELDER} for d in sorted(lokal))
             schreiben(p, buf.getvalue())
             neu_gesamt += len(lokal) - vorher
-    q = os.path.join(KLON, 'quellen/tide_tables/iceland_sjolag/stationen.json')
+    q = os.path.join(KLON, 'tide_tables/iceland_sjolag/stationen.json')
     if os.path.exists(q):
         p = os.path.join(ziel, 'stationen.json')
         stat = json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
@@ -90,7 +93,7 @@ def kuwait():
     ziel = os.path.join(ROOT, 'quellen/tide_tables/kuwait_met')
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'quellen/tide_tables/kuwait_met/*.csv')):
+    for q in glob.glob(os.path.join(KLON, 'tide_tables/kuwait_met/*.csv')):
         p = os.path.join(ziel, os.path.basename(q))
         lokal = {z['zeit_lokal']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
         vorher, geaendert = len(lokal), False
@@ -114,7 +117,7 @@ def connemara():
     ziel = os.path.join(ROOT, 'quellen/water_levels/imi_connemara')
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'quellen/water_levels/imi_connemara/*.csv')):
+    for q in glob.glob(os.path.join(KLON, 'water_levels/imi_connemara/*.csv')):
         p = os.path.join(ziel, os.path.basename(q))
         lokal = {z['zeit_utc']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
         vorher, geaendert, felder = len(lokal), False, None
@@ -124,6 +127,32 @@ def connemara():
             if not alt or z['abruf'] > alt['abruf']:
                 lokal[z['zeit_utc']] = z
                 geaendert = True
+        if geaendert and felder:
+            buf = io.StringIO()
+            w = csv.DictWriter(buf, fieldnames=felder)
+            w.writeheader()
+            w.writerows({k: lokal[d][k] for k in felder} for d in sorted(lokal))
+            schreiben(p, buf.getvalue())
+            neu_gesamt += len(lokal) - vorher
+    return neu_gesamt
+
+
+def dkss():
+    import io
+    ziel = os.path.join(ROOT, 'quellen/water_levels/dmi_dkss')
+    os.makedirs(ziel, exist_ok=True)
+    neu_gesamt = 0
+    for q in glob.glob(os.path.join(KLON, 'water_levels/dmi_dkss/*.csv')):
+        p = os.path.join(ziel, os.path.basename(q))
+        lokal = {z['zeit_utc']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
+        vorher, geaendert, felder = len(lokal), False, None
+        for z in csv.DictReader(open(q, encoding='utf-8')):
+            felder = felder or list(z)
+            alt = lokal.get(z['zeit_utc'])
+            if not alt or int(z['vorlauf_h']) < int(alt['vorlauf_h']) or (z['vorlauf_h'] == alt['vorlauf_h'] and z['lauf'] > alt['lauf']):
+                if alt != z:
+                    lokal[z['zeit_utc']] = z
+                    geaendert = True
         if geaendert and felder:
             buf = io.StringIO()
             w = csv.DictWriter(buf, fieldnames=felder)
@@ -149,6 +178,7 @@ def main():
     print(f'  Island: +{island()} Stunden')
     print(f'  Kuwait: +{kuwait()} Scheitel')
     print(f'  Connemara: +{connemara()} Stunden')
+    print(f'  DKSS: +{dkss()} Stunden')
     return 0
 
 

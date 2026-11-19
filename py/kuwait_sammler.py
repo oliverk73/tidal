@@ -31,7 +31,7 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(ROOT, 'quellen/tide_tables/kuwait_met')
 URL = 'https://www.met.gov.kw/Forecasts/marine.php'
-UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
+UA = 'weather-tides/1.0 (tidal-sammler)'
 FELDER = ['zeit_lokal', 'zeit_utc', 'hoehe', 'typ', 'abruf', 'wartung']
 PEGEL = {'stn1': 'shuwaikh', 'stn2': 'shuaiba'}
 

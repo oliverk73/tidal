@@ -6,14 +6,15 @@ Gefunden über den isländischen IHO-Landesbericht (ARHC, Landhelgisgæslan
 verweist auf die Vorhersagen der Vegagerðin; deren alte Adresse
 vegagerdin.is/vs/ leitet seit 2026 auf sjolag.is um).
 
-Jede Hafenseite (sjolag.is/hafnir/<id>) enthaelt im Seitenquelltext die
+Bis ~26.10.2026 stand die Vorhersage im Quelltext der Hafenseite; seit dem Umbau der Seite (v3)
+kommt sie aus /api/harbours/<id>/timeseries (Hafenliste /api/harbours/measurements). Je Hafen die
 stuendliche Vorhersage fuer rund fuenf Tage: sjavarfoll = astronomische
 Gezeit, ahladandi = Windstau, sjavarhaed = Summe. Zeiten in UTC (Island
 kennt keine Sommerzeit). Einzelne fuenf Tage reichen fuer keinen Fit; der
 Sammler haengt deshalb jeden Lauf an eine Datei je Hafen an:
 
-  quellen/tide_tables/iceland_sjolag/<id>.csv   dags,sjavarfoll,ahladandi,sjavarhaed,dags_greiningar
-  quellen/tide_tables/iceland_sjolag/stationen.json   id -> Name, lat, lon
+  tide_tables/iceland_sjolag/<id>.csv   dags,sjavarfoll,ahladandi,sjavarhaed,dags_greiningar
+  tide_tables/iceland_sjolag/stationen.json   id -> Name, lat, lon
 
 Bei gleicher Stunde gewinnt der juengste Vorhersagelauf. Laeuft als
 User-Timer sjolag-sammler.timer taeglich; nach etwa einem Monat lassen sich
@@ -34,9 +35,9 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIEL = os.path.join(ROOT, 'quellen/tide_tables/iceland_sjolag')
+ZIEL = os.path.join(ROOT, 'tide_tables', 'iceland_sjolag')
 BASIS = 'https://sjolag.is'
-UA = 'oliver-weather-tides/1.0 (private tide research; oliver.k73@gmail.com)'
+UA = 'weather-tides/1.0 (tidal-sammler)'
 FELDER = ['dags', 'sjavarfoll', 'ahladandi', 'sjavarhaed', 'dags_greiningar']
 
 
@@ -55,22 +56,26 @@ def hole(pfad, versuche=4):
 
 
 def hafen_ids():
-    t = hole('/hafnir')
-    return sorted({int(x) for x in re.findall(r'hafnir/(\d+)', t)})
+    """Seit dem Umbau der Seite (v3, ~27.10.2026) liefert eine JSON-API die Hafenliste samt Name/Position."""
+    d = json.loads(hole('/api/harbours/measurements'))['data']
+    return {int(x['id']): (x.get('name', ''), x.get('lat'), x.get('lon')) for x in d}
 
 
-def lesen(text):
-    """-> (name, lat, lon, [zeilen]) aus einer Hafenseite."""
-    t = text.replace('\\"', '"')
-    titel = re.search(r'<title>([^<]*)', t)
-    name = titel.group(1).split(' – ')[0].strip() if titel else ''
-    ll = re.search(r'"lat":([-\d.]+),"lon":([-\d.]+)', t)
+def _ohne_z(s):
+    return s[:19]                                          # alte Ablage: '2026-10-30T00:00:00' (UTC, ohne Z)
+
+
+def lesen_api(hid):
+    """-> [zeilen] aus /api/harbours/<id>/timeseries (tide = sjavarfoll, surge = ahladandi, seaLevel = sjavarhaed)."""
+    d = json.loads(hole(f'/api/harbours/{hid}/timeseries'))['data']
     zeilen = {}
-    for m in re.finditer(r'\{"idstod":\d+,"dags_greiningar":"([^"]+)","dags":"([^"]+)",'
-                         r'"sjavarfoll":([-\d.]+),"ahladandi":([-\d.]+),"sjavarhaed":([-\d.]+)', t):
-        zeilen[m.group(2)] = dict(dags=m.group(2), sjavarfoll=m.group(3), ahladandi=m.group(4),
-                                  sjavarhaed=m.group(5), dags_greiningar=m.group(1))
-    return name, (float(ll.group(1)) if ll else None), (float(ll.group(2)) if ll else None), list(zeilen.values())
+    for x in d:
+        if x.get('tide') is None:
+            continue
+        zeilen[_ohne_z(x['date'])] = dict(dags=_ohne_z(x['date']), sjavarfoll=str(x['tide']),
+                                          ahladandi=str(x.get('surge', '')), sjavarhaed=str(x.get('seaLevel', '')),
+                                          dags_greiningar=_ohne_z(x['analysisDate']))
+    return list(zeilen.values())
 
 
 def anhaengen(hid, neu):
@@ -110,9 +115,9 @@ def main(argv):
     stat = json.load(open(pfad_stat, encoding='utf-8')) if os.path.exists(pfad_stat) else {}
     print(f'--- {dt.datetime.now():%Y-%m-%d %H:%M}', flush=True)
     fehler = 0
-    for hid in hafen_ids():
+    for hid, (name, lat, lon) in sorted(hafen_ids().items()):
         try:
-            name, lat, lon, zeilen = lesen(hole(f'/hafnir/{hid}'))
+            zeilen = lesen_api(hid)
         except Exception as e:
             print(f'  {hid}: {e}', flush=True)
             fehler += 1
