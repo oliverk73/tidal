@@ -234,9 +234,11 @@ def saetze(fitdatei, pruefdatei, argv, schwelle=1.5, abstand_km=8.0):
         raster.setdefault((gx, gy), []).append(i)
         wahl.append(i)
     bloecke, liste, heute = [], [], dt.date.today().strftime('%Y%m%d')
-    vergeben = set()
+    vergeben, vorschau = set(), []
     for i in wahl:
         name = SN.vorschlag(la[i], lo[i], L)
+        if name:
+            name = re.sub(r'\s*\(historical\)', '', name)              # GeoNames 'North Wall Light (historical)'
         if not name:                                                  # naechste Landmarke bis 15 km
             nah = sorted((SN.km(la[i], lo[i], a, b), n, c, a, b, t) for n, a, b, c, t in L
                          if c in SN.PUNKT and abs(a - la[i]) < 0.2 and abs(b - lo[i]) < 0.4)
@@ -244,6 +246,7 @@ def saetze(fitdatei, pruefdatei, argv, schwelle=1.5, abstand_km=8.0):
                 print('  %.4f %.4f  %.1f kn  keine Landmarke bis 15 km' % (la[i], lo[i], spring[i]))
                 continue
             d, n, c, a, b, t = nah[0]
+            n = re.sub(r'\s*\(historical\)', '', n)
             n = re.sub(r'\s+(Lighthouse|Light Station|Light)$', '', n)
             name = '%s (%d km %s), %s Current' % (SN.latin1(n), max(1, round(d)), SN.richtung(la[i], lo[i], a, b), t)
         if not any(w in name for w in LAND):
@@ -268,6 +271,7 @@ def saetze(fitdatei, pruefdatei, argv, schwelle=1.5, abstand_km=8.0):
         print('%-62s %.4f %.4f  Spring %.2f kn  M2 %.2f  Achse %3.0f  Zeit %+.0f min (%d)  Rest %.2f' %
               (name, la[i], lo[i], spring[i], m2[i], th, -dtm, len(nb), rest))
         liste.append(('harmonics_utide_current_tables.txt', name))
+        vorschau.append((name, '%.5f' % la[i], '%.5f' % lo[i], '%.2f' % spring[i], 'https://www.google.com/maps?q=%.5f,%.5f' % (la[i], lo[i])))
         B = ['# Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)',
              '# depth-mean ua/va at element %d (unstructured grid), hourly %s (py/sswrs.py, py/sswrs_fit.py)' % (i, os.path.basename(fitdatei)[4:-4]),
              '# Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)',
@@ -286,6 +290,10 @@ def saetze(fitdatei, pruefdatei, argv, schwelle=1.5, abstand_km=8.0):
             B.append('%-15s %.4f  %.2f' % (k, c[0], c[1]) if c and c[0] >= 0.00005 else 'x 0 0')
         bloecke.append('\n'.join(B))
     print('%d Brennpunkte, %d Saetze' % (len(wahl), len(bloecke)))
+    with open(os.path.join(ROOT, 'harmonics/help/sswrs_vorschlag_%s.csv' % heute), 'w', newline='', encoding='utf-8') as fh:
+        wr = csv.writer(fh)
+        wr.writerow(['name', 'lat', 'lon', 'spring_kn', 'google_maps'])
+        wr.writerows(vorschau)
     if '--schreiben' in argv and bloecke:
         STROM = os.path.join(ROOT, 'harmonics/utide/harmonics_utide_current_tables.txt')
         T = open(STROM, encoding='iso-8859-1').read().rstrip('\n')
