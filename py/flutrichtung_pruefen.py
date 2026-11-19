@@ -135,6 +135,11 @@ BEHALTEN = {
     'Epson Shoal (7 km ENE), England, United Kingdom Current',              # wie Tater Du (1 km)
     'Hario Seto (W Entrance), Nagasaki, Japan Current',                     # Flut nach S in die Omura-Bucht (TPXO: Enge)
     'Gabriola Passage, British Columbia, Canada Current',                   # CHS-Ereignisse 16.10. gegengeprueft
+    # Messsaetze, 19.11.2026 (Oliver ok): eigener Phasentest grenzwertig (d ~54 Grad), Ausschlag gaeben nur
+    # die neuen SSW-RS-Modellnachbarn, die nach derselben Regel gerichtet sind -> keine unabhaengigen Zeugen
+    'Falls Gap (6 km E, 41 m deep), England, United Kingdom Current',
+    'Falls Gap (6 km E, 9 m deep), England, United Kingdom Current',
+    'Bray (2 km NE, 8 m deep), Ireland Current',
 }
 # Fortschreitende Welle: Achse in Laufrichtung (|cos| >= 0.5, Gradient >= 0.2) UND Flutmaximum -60..+60 Grad um HW
 # (bzw. gespiegelt fuer drehen). Eichung: Kanal-Konvention 94/94, NOAA unklar 11/11 (18.11.2026).
