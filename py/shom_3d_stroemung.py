@@ -139,6 +139,8 @@ def main(argv):
                 continue
             wahl.append(i)
         print('%s: %d Kandidaten >= %.1f kn, %d Brennpunkte' % (nm, len(kand), SCHWELLE, len(wahl)))
+        SN.landmarken([], punkte=[(float(at.lat[i]), float(at.lon[i])) for i in wahl])   # Landmarken um die Brennpunkte
+        L = [z for z in json.load(open(SN.LM, encoding='utf-8')) if 46 < z[1] < 49.5 and -6 < z[2] < 0]
         for i in wahl:
             la, lo = float(at.lat[i]), float(at.lon[i])
             name = SN.vorschlag(la, lo, L)

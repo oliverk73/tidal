@@ -235,6 +235,9 @@ def saetze(fitdatei, pruefdatei, argv, schwelle=1.5, abstand_km=8.0):
             continue
         raster.setdefault((gx, gy), []).append(i)
         wahl.append(i)
+    SN.landmarken([], punkte=[(float(la[i]), float(lo[i])) for i in wahl])   # Brennpunkte liegen abseits der Saetze:
+    L = [z for z in json.load(open(SN.LM, encoding='utf-8'))                # sonst fehlen nahe Landmarken (Noss Head 19.11.)
+         if 48 < z[1] < 62 and -14 < z[2] < 3 and z[0] not in ('British Isles',)]
     bloecke, liste, heute = [], [], dt.date.today().strftime('%Y%m%d')
     vergeben, vorschau = set(), []
     for i in wahl:
