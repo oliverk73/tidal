@@ -15017,7 +15017,7 @@ MNUS2
 # ------------- End congen output -------------
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (170.9 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (350.9 deg true)
 #
 # Brampton I, Australia Current
 # BEGIN HOT COMMENTS
@@ -15026,7 +15026,7 @@ MNUS2
 # station_id_context: AUSTEN-UNSW_Brampton_I
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 350.9
+# major_axis_deg_true: 170.9
 # confidence: 8
 # !units: knots
 # !longitude: 149.271667
@@ -15034,6 +15034,7 @@ MNUS2
 # state: Queensland
 # admin1_quelle: Ufer 20.2 km
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 Brampton I, Australia Current
 +00:00 :UTC
 -0.0469 knots
@@ -15214,7 +15215,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (172.2 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (352.2 deg true)
 #
 # Wigton I, Australia Current
 # BEGIN HOT COMMENTS
@@ -15223,7 +15224,7 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_Wigton_I
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 352.2
+# major_axis_deg_true: 172.2
 # confidence: 8
 # !units: knots
 # !longitude: 149.466660
@@ -15231,6 +15232,7 @@ x 0 0
 # state: Queensland
 # admin1_quelle: Ufer 42.0 km
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 Wigton I, Australia Current
 +00:00 :UTC
 -0.0353 knots
@@ -16192,7 +16194,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (104.9 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (284.9 deg true)
 #
 # North Rf, Australia Current
 # BEGIN HOT COMMENTS
@@ -16201,13 +16203,14 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_North_Rf
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 104.9
+# major_axis_deg_true: 284.9
 # confidence: 8
 # !units: knots
 # !longitude: 151.958328
 # !latitude: -23.160000
 # state: Queensland
 # admin1_quelle: Ufer 82.0 km
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 North Rf, Australia Current
 +00:00 :UTC
 0.0175 knots
@@ -16388,7 +16391,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (143.1 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (323.1 deg true)
 #
 # Cape Capricorn, Australia Current
 # BEGIN HOT COMMENTS
@@ -16397,13 +16400,14 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_Cape_Capricorn
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 143.1
+# major_axis_deg_true: 323.1
 # confidence: 8
 # !units: knots
 # !longitude: 151.286667
 # !latitude: -23.506666
 # state: Queensland
 # admin1_quelle: Ufer 5.0 km
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 Cape Capricorn, Australia Current
 +00:00 :UTC
 0.0391 knots
@@ -16781,7 +16785,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (105.4 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (285.4 deg true)
 #
 # Round Hill Hd, Australia Current
 # BEGIN HOT COMMENTS
@@ -16790,13 +16794,14 @@ x 0 0
 # station_id_context: AUSTEN-UNSW_Round_Hill_Hd
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 105.4
+# major_axis_deg_true: 285.4
 # confidence: 8
 # !units: knots
 # !longitude: 151.963333
 # !latitude: -24.108334
 # state: Queensland
 # admin1_quelle: Ufer 7.8 km
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 Round Hill Hd, Australia Current
 +00:00 :UTC
 0.0058 knots
@@ -16977,7 +16982,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (111.9 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (291.9 deg true)
 #
 # Banks Strait CWTb1, Australia Current
 # BEGIN HOT COMMENTS
@@ -16996,31 +17001,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 110-day window (ratio/lag of Lady Barron Harbour, 51 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait CWTb1, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Banks Strait (Swan Island), Australia Current
 +00:00 :UTC
-0.2989 knots
+-0.2989 knots
 x 0 0
-K1              0.1058  315.06
-K2              0.0674  287.81
-x 0 0
-x 0 0
-M2              1.6986  118.78
-x 0 0
-M4              0.0580  325.18
-M6              0.0090  274.52
-x 0 0
-N2              0.3340  84.38
-2N2             0.0249  61.90
-O1              0.0929  276.63
-x 0 0
-P1              0.0436  320.12
-Q1              0.0093  237.49
+K1              0.1058  135.06
+K2              0.0674  107.81
 x 0 0
 x 0 0
+M2              1.6986  298.78
 x 0 0
-S2              0.2400  239.75
+M4              0.0580  145.18
+M6              0.0090  94.52
+x 0 0
+N2              0.3340  264.38
+2N2             0.0249  241.90
+O1              0.0929  96.63
+x 0 0
+P1              0.0436  140.12
+Q1              0.0093  57.49
 x 0 0
 x 0 0
+x 0 0
+S2              0.2400  59.75
 x 0 0
 x 0 0
 x 0 0
@@ -17029,9 +17034,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0121  72.01
 x 0 0
 x 0 0
+MS4             0.0121  252.01
 x 0 0
 x 0 0
 x 0 0
@@ -17046,7 +17051,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0082  0.69
+x 0 0
+x 0 0
+2MS6            0.0082  180.69
 x 0 0
 x 0 0
 x 0 0
@@ -17176,7 +17183,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (105.0 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (285.0 deg true)
 #
 # Banks Strait C1A1, Australia Current
 # BEGIN HOT COMMENTS
@@ -17195,31 +17202,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 116-day window (ratio/lag of Lady Barron Harbour, 51 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait C1A1, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Banks Strait (Swan Island 11 km ENE), Australia Current
 +00:00 :UTC
-0.2404 knots
+-0.2404 knots
 x 0 0
-K1              0.0974  315.10
-K2              0.0631  284.36
-x 0 0
-x 0 0
-M2              1.6277  114.08
-x 0 0
-M4              0.0406  8.13
-M6              0.0357  233.20
-x 0 0
-N2              0.3088  80.62
-2N2             0.0291  39.00
-O1              0.0883  274.38
-x 0 0
-P1              0.0402  320.16
-Q1              0.0087  264.83
+K1              0.0974  135.10
+K2              0.0631  104.36
 x 0 0
 x 0 0
+M2              1.6277  294.08
 x 0 0
-S2              0.2245  236.30
+M4              0.0406  188.13
+M6              0.0357  53.20
+x 0 0
+N2              0.3088  260.62
+2N2             0.0291  219.00
+O1              0.0883  94.38
+x 0 0
+P1              0.0402  140.16
+Q1              0.0087  84.83
 x 0 0
 x 0 0
+x 0 0
+S2              0.2245  56.30
 x 0 0
 x 0 0
 x 0 0
@@ -17228,9 +17235,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0064  146.29
 x 0 0
 x 0 0
+MS4             0.0064  326.29
 x 0 0
 x 0 0
 x 0 0
@@ -17245,7 +17252,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0199  343.63
+x 0 0
+x 0 0
+2MS6            0.0199  163.63
 x 0 0
 x 0 0
 x 0 0
@@ -17375,7 +17384,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (104.7 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (284.7 deg true)
 #
 # Banks Strait C1A3, Australia Current
 # BEGIN HOT COMMENTS
@@ -17394,31 +17403,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 73-day window (ratio/lag of Lady Barron Harbour, 54 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait C1A3, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Swan Island (4 km N, Banks Strait), Australia Current
 +00:00 :UTC
--0.0121 knots
+0.0121 knots
 x 0 0
-K1              0.0909  299.98
-K2              0.1343  282.93
-x 0 0
-x 0 0
-M2              2.8004  103.30
-x 0 0
-M4              0.0512  49.94
-M6              0.1088  186.84
-x 0 0
-N2              0.6373  75.68
-2N2             0.1211  92.76
-O1              0.0739  267.44
-x 0 0
-P1              0.0375  305.04
-Q1              0.0289  245.81
+K1              0.0909  119.98
+K2              0.1343  102.93
 x 0 0
 x 0 0
+M2              2.8004  283.30
 x 0 0
-S2              0.4781  234.87
+M4              0.0512  229.94
+M6              0.1088  6.84
+x 0 0
+N2              0.6373  255.68
+2N2             0.1211  272.76
+O1              0.0739  87.44
+x 0 0
+P1              0.0375  125.04
+Q1              0.0289  65.81
 x 0 0
 x 0 0
+x 0 0
+S2              0.4781  54.87
 x 0 0
 x 0 0
 x 0 0
@@ -17427,9 +17436,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0130  187.01
 x 0 0
 x 0 0
+MS4             0.0130  7.01
 x 0 0
 x 0 0
 x 0 0
@@ -17444,7 +17453,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0548  313.28
+x 0 0
+x 0 0
+2MS6            0.0548  133.28
 x 0 0
 x 0 0
 x 0 0
@@ -17574,7 +17585,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (127.8 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (307.8 deg true)
 #
 # Banks Strait CW1, Australia Current
 # BEGIN HOT COMMENTS
@@ -17593,31 +17604,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 57-day window (ratio/lag of Lady Barron Harbour, 38 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait CW1, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Clarke Island (3 km W, Banks Strait), Australia Current
 +00:00 :UTC
--0.0000 knots
+0.0000 knots
 x 0 0
-K1              0.1184  309.31
-K2              0.0702  277.55
-x 0 0
-x 0 0
-M2              1.5864  110.90
-x 0 0
-M4              0.0329  93.92
-M6              0.0253  200.97
-x 0 0
-N2              0.3514  78.92
-2N2             0.0976  54.59
-O1              0.0893  273.91
-x 0 0
-P1              0.0488  314.37
-Q1              0.0198  228.80
+K1              0.1184  129.31
+K2              0.0702  97.55
 x 0 0
 x 0 0
+M2              1.5864  290.90
 x 0 0
-S2              0.2500  229.49
+M4              0.0329  273.92
+M6              0.0253  20.97
+x 0 0
+N2              0.3514  258.92
+2N2             0.0976  234.59
+O1              0.0893  93.91
+x 0 0
+P1              0.0488  134.37
+Q1              0.0198  48.80
 x 0 0
 x 0 0
+x 0 0
+S2              0.2500  49.49
 x 0 0
 x 0 0
 x 0 0
@@ -17626,9 +17637,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0173  242.77
 x 0 0
 x 0 0
+MS4             0.0173  62.77
 x 0 0
 x 0 0
 x 0 0
@@ -17643,7 +17654,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0019  276.99
+x 0 0
+x 0 0
+2MS6            0.0019  96.99
 x 0 0
 x 0 0
 x 0 0
@@ -17773,7 +17786,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (129.7 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (309.7 deg true)
 #
 # Banks Strait CW2A1, Australia Current
 # BEGIN HOT COMMENTS
@@ -17792,31 +17805,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 112-day window (ratio/lag of Lady Barron Harbour, 43 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait CW2A1, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Clarke Island (2 km SSW, Banks Strait), Australia Current
 +00:00 :UTC
-0.1767 knots
+-0.1767 knots
 x 0 0
-K1              0.1314  305.69
-K2              0.0939  278.77
-x 0 0
-x 0 0
-M2              2.3987  110.93
-x 0 0
-M4              0.0579  37.86
-M6              0.0518  241.53
-x 0 0
-N2              0.4604  76.32
-2N2             0.0340  47.26
-O1              0.1152  272.99
-x 0 0
-P1              0.0542  310.75
-Q1              0.0138  253.21
+K1              0.1314  125.69
+K2              0.0939  98.77
 x 0 0
 x 0 0
+M2              2.3987  290.93
 x 0 0
-S2              0.3343  230.71
+M4              0.0579  217.86
+M6              0.0518  61.53
+x 0 0
+N2              0.4604  256.32
+2N2             0.0340  227.26
+O1              0.1152  92.99
+x 0 0
+P1              0.0542  130.75
+Q1              0.0138  73.21
 x 0 0
 x 0 0
+x 0 0
+S2              0.3343  50.71
 x 0 0
 x 0 0
 x 0 0
@@ -17825,9 +17838,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0128  167.06
 x 0 0
 x 0 0
+MS4             0.0128  347.06
 x 0 0
 x 0 0
 x 0 0
@@ -17842,7 +17855,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0255  344.23
+x 0 0
+x 0 0
+2MS6            0.0255  164.23
 x 0 0
 x 0 0
 x 0 0
@@ -17972,7 +17987,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (142.3 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (322.3 deg true)
 #
 # Banks Strait CW2A2, Australia Current
 # BEGIN HOT COMMENTS
@@ -17991,31 +18006,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 73-day window (ratio/lag of Lady Barron Harbour, 54 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait CW2A2, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Swan Island (7 km ENE, Banks Strait), Australia Current
 +00:00 :UTC
-0.2329 knots
+-0.2329 knots
 x 0 0
-K1              0.1208  311.92
-K2              0.0640  279.28
-x 0 0
-x 0 0
-M2              1.6569  110.19
-x 0 0
-M4              0.0129  65.67
-M6              0.0283  234.16
-x 0 0
-N2              0.3674  76.18
-2N2             0.1020  49.59
-O1              0.0767  281.10
-x 0 0
-P1              0.0498  316.98
-Q1              0.0235  279.57
+K1              0.1208  131.92
+K2              0.0640  99.28
 x 0 0
 x 0 0
+M2              1.6569  290.19
 x 0 0
-S2              0.2280  231.22
+M4              0.0129  245.67
+M6              0.0283  54.16
+x 0 0
+N2              0.3674  256.18
+2N2             0.1020  229.59
+O1              0.0767  101.10
+x 0 0
+P1              0.0498  136.98
+Q1              0.0235  99.57
 x 0 0
 x 0 0
+x 0 0
+S2              0.2280  51.22
 x 0 0
 x 0 0
 x 0 0
@@ -18024,9 +18039,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0138  268.57
 x 0 0
 x 0 0
+MS4             0.0138  88.57
 x 0 0
 x 0 0
 x 0 0
@@ -18041,7 +18056,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0083  351.25
+x 0 0
+x 0 0
+2MS6            0.0083  171.25
 x 0 0
 x 0 0
 x 0 0
@@ -18171,7 +18188,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (152.0 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (332.0 deg true)
 #
 # Banks Strait CW3, Australia Current
 # BEGIN HOT COMMENTS
@@ -18190,31 +18207,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 90-day window (ratio/lag of Lady Barron Harbour, 39 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait CW3, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Clarke Island (2 km WSW, Banks Strait), Australia Current
 +00:00 :UTC
-0.0563 knots
+-0.0563 knots
 x 0 0
-K1              0.1197  304.35
-K2              0.0732  278.74
-x 0 0
-x 0 0
-M2              1.8967  110.99
-x 0 0
-M4              0.0791  48.74
-M6              0.0402  267.35
-x 0 0
-N2              0.3528  78.69
-2N2             0.0267  31.89
-O1              0.0962  279.78
-x 0 0
-P1              0.0494  309.41
-Q1              0.0174  227.30
+K1              0.1197  124.35
+K2              0.0732  98.74
 x 0 0
 x 0 0
+M2              1.8967  290.99
 x 0 0
-S2              0.2606  230.68
+M4              0.0791  228.74
+M6              0.0402  87.35
+x 0 0
+N2              0.3528  258.69
+2N2             0.0267  211.89
+O1              0.0962  99.78
+x 0 0
+P1              0.0494  129.41
+Q1              0.0174  47.30
 x 0 0
 x 0 0
+x 0 0
+S2              0.2606  50.68
 x 0 0
 x 0 0
 x 0 0
@@ -18223,9 +18240,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0239  161.86
 x 0 0
 x 0 0
+MS4             0.0239  341.86
 x 0 0
 x 0 0
 x 0 0
@@ -18240,7 +18257,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0203  12.10
+x 0 0
+x 0 0
+2MS6            0.0203  192.10
 x 0 0
 x 0 0
 x 0 0
@@ -18370,7 +18389,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (109.4 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (289.4 deg true)
 #
 # Banks Strait CW4A1, Australia Current
 # BEGIN HOT COMMENTS
@@ -18389,31 +18408,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 90-day window (ratio/lag of Lady Barron Harbour, 52 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait CW4A1, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Swan Island (7 km NNW, Banks Strait), Australia Current
 +00:00 :UTC
-0.0978 knots
+-0.0978 knots
 x 0 0
-K1              0.1618  306.71
-K2              0.0949  274.06
-x 0 0
-x 0 0
-M2              2.5919  109.73
-x 0 0
-M4              0.0534  63.86
-M6              0.0659  213.08
-x 0 0
-N2              0.4824  76.98
-2N2             0.0249  2.74
-O1              0.1289  277.07
-x 0 0
-P1              0.0667  311.77
-Q1              0.0284  239.04
+K1              0.1618  126.71
+K2              0.0949  94.06
 x 0 0
 x 0 0
+M2              2.5919  289.73
 x 0 0
-S2              0.3380  226.00
+M4              0.0534  243.86
+M6              0.0659  33.08
+x 0 0
+N2              0.4824  256.98
+2N2             0.0249  182.74
+O1              0.1289  97.07
+x 0 0
+P1              0.0667  131.77
+Q1              0.0284  59.04
 x 0 0
 x 0 0
+x 0 0
+S2              0.3380  46.00
 x 0 0
 x 0 0
 x 0 0
@@ -18422,9 +18441,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0158  199.51
 x 0 0
 x 0 0
+MS4             0.0158  19.51
 x 0 0
 x 0 0
 x 0 0
@@ -18439,7 +18458,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0305  325.67
+x 0 0
+x 0 0
+2MS6            0.0305  145.67
 x 0 0
 x 0 0
 x 0 0
@@ -18569,7 +18590,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (107.5 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (287.5 deg true)
 #
 # Banks Strait CW4A2, Australia Current
 # BEGIN HOT COMMENTS
@@ -18588,31 +18609,31 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 59-day window (ratio/lag of Lady Barron Harbour, 58 km); K2/P1 added
 # note: 20261101 frueherer Name: Banks Strait CW4A2, Australia Current
 # note: 20261118 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Swan Island (18 km E, Banks Strait), Australia Current
 +00:00 :UTC
-0.1296 knots
+-0.1296 knots
 x 0 0
-K1              0.0767  319.68
-K2              0.0539  281.89
-x 0 0
-x 0 0
-M2              1.2879  107.42
-x 0 0
-M4              0.0329  22.63
-M6              0.0348  172.91
-x 0 0
-N2              0.2779  78.35
-2N2             0.0933  47.35
-O1              0.0522  285.52
-x 0 0
-P1              0.0316  324.74
-Q1              0.0124  289.92
+K1              0.0767  139.68
+K2              0.0539  101.89
 x 0 0
 x 0 0
+M2              1.2879  287.42
 x 0 0
-S2              0.1920  233.83
+M4              0.0329  202.63
+M6              0.0348  352.91
+x 0 0
+N2              0.2779  258.35
+2N2             0.0933  227.35
+O1              0.0522  105.52
+x 0 0
+P1              0.0316  144.74
+Q1              0.0124  109.92
 x 0 0
 x 0 0
+x 0 0
+S2              0.1920  53.83
 x 0 0
 x 0 0
 x 0 0
@@ -18621,9 +18642,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MS4             0.0094  210.87
 x 0 0
 x 0 0
+MS4             0.0094  30.87
 x 0 0
 x 0 0
 x 0 0
@@ -18638,7 +18659,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-2MS6            0.0101  298.18
+x 0 0
+x 0 0
+2MS6            0.0101  118.18
 x 0 0
 x 0 0
 x 0 0
@@ -19364,7 +19387,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (90.3 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (270.3 deg true)
 #
 # Clarence Strait CW1, Australia Current
 # BEGIN HOT COMMENTS
@@ -19373,7 +19396,7 @@ x 0 0
 # station_id_context: AUSTEN-UTas_ARENA_Darwin_CW1
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 270.3
+# major_axis_deg_true: 90.3
 # confidence: 8
 # !units: knots
 # !longitude: 131.121857
@@ -19383,6 +19406,7 @@ x 0 0
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 108-day window (ratio/lag of Glyde Point, 6 km); K2/P1 added
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 # note: 20261101 frueherer Name: Clarence Strait CW1, Australia Current
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 East Vernon Island (5 km SSE, Clarence Strait), Australia Current
 +00:00 :UTC
 -0.0451 knots
@@ -20550,7 +20574,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (93.7 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (273.7 deg true)
 #
 # ARA-GOC87 (CSIRO 28064), Australia Current
 # BEGIN HOT COMMENTS
@@ -20567,29 +20591,31 @@ x 0 0
 # state: Northern Territory
 # admin1_quelle: Ufer 46.4 km
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 99-day window (ratio/lag of Cape Wessel, 45 km); K2/P1 added
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
+# note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Cape Wessel (45 km NNE, Arafura Sea), Australia Current
 +00:00 :UTC
-0.0927 knots
+-0.0927 knots
 x 0 0
-K1              0.2792  122.62
-K2              0.0550  215.64
-x 0 0
-x 0 0
-M2              0.4110  163.04
+K1              0.2792  302.62
+K2              0.0550  35.64
 x 0 0
 x 0 0
-x 0 0
-x 0 0
-N2              0.0876  147.49
-x 0 0
-O1              0.1656  101.09
-x 0 0
-P1              0.0731  117.71
-Q1              0.0484  101.04
+M2              0.4110  343.04
 x 0 0
 x 0 0
 x 0 0
-S2              0.1590  233.75
+x 0 0
+N2              0.0876  327.49
+x 0 0
+O1              0.1656  281.09
+x 0 0
+P1              0.0731  297.71
+Q1              0.0484  281.04
+x 0 0
+x 0 0
+x 0 0
+S2              0.1590  53.75
 x 0 0
 x 0 0
 x 0 0
@@ -20747,7 +20773,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (126.1 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (306.1 deg true)
 #
 # ARA-GOC87 (CSIRO 28068), Australia Current
 # BEGIN HOT COMMENTS
@@ -20756,13 +20782,14 @@ x 0 0
 # station_id_context: AUSTEN-CSIRO_28068
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 306.1
+# major_axis_deg_true: 126.1
 # confidence: 8
 # !units: knots
 # !longitude: 139.026703
 # !latitude: -13.988300
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 96-day window (ratio/lag of Nassau River Offshore, 201 km); K2/P1 added
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 Gulf of Carpentaria, Australia Current
 +00:00 :UTC
 -0.0184 knots
@@ -21334,7 +21361,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (177.7 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (357.7 deg true)
 #
 # TASE88 (CSIRO 28084), Australia Current
 # BEGIN HOT COMMENTS
@@ -21343,7 +21370,7 @@ x 0 0
 # station_id_context: AUSTEN-CSIRO_28084
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 357.7
+# major_axis_deg_true: 177.7
 # confidence: 8
 # !units: knots
 # !longitude: 148.283295
@@ -21352,6 +21379,7 @@ x 0 0
 # admin1_quelle: Ufer 8.8 km
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 179-day window (ratio/lag of Darlington Jetty, 20 km); K2/P1 added
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 Darlington (19 km ESE, Maria Island), Australia Current
 +00:00 :UTC
 -0.1646 knots
@@ -22716,7 +22744,7 @@ x 0 0
 x 0 0
 # Tidal-current constituents from CSIRO AusTEN observed current-meter dataset
 # (DOI 10.25919/q8dw-c732, Aust_current_meter_tidal_cnstits_v2.nc, CC-BY-SA 4.0)
-# Ellipse (maj,min,theta,g) projected onto M2 major axis (126.1 deg true)
+# Ellipse (maj,min,theta,g) projected onto M2 major axis (306.1 deg true)
 #
 # NW Shelf M6 (CSIRO 28363), Australia Current
 # BEGIN HOT COMMENTS
@@ -22725,7 +22753,7 @@ x 0 0
 # station_id_context: AUSTEN-CSIRO_28363
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 306.1
+# major_axis_deg_true: 126.1
 # confidence: 8
 # !units: knots
 # !longitude: 116.385002
@@ -22734,6 +22762,7 @@ x 0 0
 # admin1_quelle: Ufer 98.1 km
 # note: 20261021 S2/K1 corrected for K2/P1 inside the 49-day window (ratio/lag of Mawby Island, 93 km); K2/P1 added
 # note: 20261025 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+# note: 20261119 Achse +180 (Importfehler: theta CCW->rechtweisend mit %180 statt %360); Phasen galten schon fuer die richtige Richtung, TPXO10+FES2014 bestaetigen
 Cape Legendre (85 km NW, North West Shelf), Australia Current
 +00:00 :UTC
 0.0638 knots

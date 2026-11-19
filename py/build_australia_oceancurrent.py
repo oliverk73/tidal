@@ -86,7 +86,7 @@ def main():
             print(f"  SKIP {code}: kein M2-theta")
             continue
         phi = np.deg2rad(thM2)
-        axis_deg_true = (90.0 - thM2) % 180.0
+        axis_deg_true = (90.0 - thM2) % 360.0   # 19.11.2026: war % 180 -> Achse bei theta > 90 um 180 verkehrt
 
         # Mittlere Strömung entlang M2-Hauptachse (E=cos, N=sin)
         mean_along = (u_mean[j] * np.cos(phi) + v_mean[j] * np.sin(phi)) * MS_TO_KNOTS
