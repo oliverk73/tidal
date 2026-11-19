@@ -30,6 +30,7 @@ KS = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1', 'M4', 'MS4', 'MN4')
 MAX_ZELLEN = 240            # je Achse; feiner als 1/30 Grad geht nicht
 UNSICHER = 50.0             # Nachbarzellen-Unterschied M2 in %, ab dem die Zelle ausgeblendet wird
 MIN_TIEFE = 2.0
+FEIN_DX = 1 / 240.0         # feinstes Ausgaberaster, wo ein feines Modell deckt (~460 m)
 _F, _K = {}, {}
 
 
@@ -116,6 +117,29 @@ def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN):
     dx = s / 30.0
     la1 = -90 + ii[0] / 30.0
     la2 = -90 + ii[-1] / 30.0
+    # Feine Modelle (SSW-RS, AUSTEn; py/strom_feinfeld.py, 19.11.2026): wo sie decken, ersetzen sie TPXO. Beim
+    # Hineinzoomen wird das Ausgaberaster dann feiner als TPXO (bis FEIN_DX), TPXO wird dafuer naechstwertig verfeinert.
+    try:
+        import strom_feinfeld as FF
+        S = FF._laden()
+    except Exception:                                              # noqa: BLE001 - Ebene soll ohne Feinfeld weiterlaufen
+        S = None
+    if S:
+        im_box = ((S['lat'] >= la_s) & (S['lat'] <= la_n) & (((S['lon'] - lo_w) % 360) <= breite))
+        if im_box.any():
+            wunsch = max((la_n - la_s) / max_zellen, breite / max_zellen, FEIN_DX)
+            if wunsch < dx:
+                f = int(round(dx / wunsch))
+                ny, nx = (len(ii) - 1) * f + 1, (nj - 1) * f + 1
+                u = np.repeat(np.repeat(u, f, 0), f, 1)[:ny, :nx]
+                v = np.repeat(np.repeat(v, f, 0), f, 1)[:ny, :nx]
+                dx = dx / f
+                nj = nx
+                ii = ii[0] - np.arange(ny) * (s / f)                 # nur fuer la1/la2 und Zeilenzahl
+                la2 = la1 - dx * (ny - 1)
+            lat = la1 - dx * np.arange(len(ii))
+            lon = lo1 + dx * np.arange(nj)
+            u, v, _n = FF.einsetzen(lat, lon, u, v, th, kopf, jahr)
     kopfz = dict(lo1=round(lo1, 5), lo2=round(lo1 + dx * (nj - 1), 5), la1=round(la1, 5), la2=round(la2, 5),
                  dx=round(dx, 6), dy=round(dx, 6), nx=int(nj), ny=int(len(ii)), refTime=t.strftime('%Y-%m-%dT%H:%M:%SZ'),
                  forecastTime=0, scanMode=0, parameterCategory=2, parameterUnit='m.s-1')
