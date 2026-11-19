@@ -102,6 +102,7 @@
       map.on('moveend', this._onMoveEnd, this);
       map.on('resize', this._onMoveEnd, this);
       map.on('mousemove', this._onMouse, this);
+      map.on('click', this._onClick, this);
       map.on('mouseout', this._hideReadout, this);
       this._readout = L.DomUtil.create('div', 'tideflow-readout', map.getContainer());
       this._readout.style.cssText = 'position:absolute;left:10px;bottom:28px;z-index:800;background:rgba(255,255,255,.85);' +
@@ -117,7 +118,9 @@
       map.off('moveend', this._onMoveEnd, this);
       map.off('resize', this._onMoveEnd, this);
       map.off('mousemove', this._onMouse, this);
+      map.off('click', this._onClick, this);
       map.off('mouseout', this._hideReadout, this);
+      map.getContainer().style.cursor = '';
       L.DomUtil.remove(this._bg); L.DomUtil.remove(this._fg); L.DomUtil.remove(this._ar); L.DomUtil.remove(this._readout);
     },
 
@@ -204,7 +207,8 @@
         var uv = this._arrowAt(a, this._t), kn = Math.sqrt(uv[0] * uv[0] + uv[1] * uv[1]);
         var li = Math.min(300, Math.round(kn / 0.02)) * 4;
         var col = 'rgb(' + LUT[li] + ',' + LUT[li + 1] + ',' + LUT[li + 2] + ')';
-        this._arHit.push([pt.x, pt.y, a, kn, uv]);
+        var hit = [pt.x, pt.y, a, kn, uv, null];
+        this._arHit.push(hit);
         // Standort-Punkt (auch bei Stauwasser sichtbar)
         ctx.beginPath(); ctx.arc(pt.x, pt.y, 3, 0, 2 * Math.PI);
         ctx.fillStyle = '#fff'; ctx.fill(); ctx.lineWidth = 1.5; ctx.strokeStyle = '#223'; ctx.stroke();
@@ -212,6 +216,7 @@
         var len = 10 + 14 * Math.sqrt(Math.min(kn, 6));
         var dx = uv[0] / kn, dy = -uv[1] / kn;
         var ex = pt.x + dx * len, ey = pt.y + dy * len;
+        hit[5] = [ex, ey];
         var hx = -dy, hy = dx, hl = 6;
         var path = new Path2D();
         path.moveTo(pt.x, pt.y); path.lineTo(ex, ey);
@@ -353,15 +358,36 @@
     },
 
     // --- Wertanzeige unter der Maus ---
-    _onMouse: function (e) {
-      var cp = e.containerPoint, hit = null;
+    // Pfeil unter dem Mauszeiger (Standortpunkt oder Pfeilschaft, 10 px), sonst null
+    _arrowHit: function (cp) {
+      var hit = null;
       (this._arHit || []).forEach(function (h) {
         var d = (h[0] - cp.x) * (h[0] - cp.x) + (h[1] - cp.y) * (h[1] - cp.y);
+        if (h[5]) {                                  // Abstand zum Schaft
+          var ax = h[5][0] - h[0], ay = h[5][1] - h[1], l2 = ax * ax + ay * ay;
+          var q = l2 ? Math.max(0, Math.min(1, ((cp.x - h[0]) * ax + (cp.y - h[1]) * ay) / l2)) : 0;
+          var qx = h[0] + q * ax - cp.x, qy = h[1] + q * ay - cp.y;
+          d = Math.min(d, qx * qx + qy * qy);
+        }
         if (d < 100 && (!hit || d < hit[0])) hit = [d, h];
       });
-      if (hit) {
-        var h = hit[1], dirA = (Math.atan2(h[4][0], h[4][1]) * 180 / Math.PI + 360) % 360;
-        this._readout.textContent = h[2].n.replace(/ Current$/, '') + ': ' + h[3].toFixed(1) + ' kn towards ' + Math.round(dirA) + '° (station)';
+      return hit && hit[1];
+    },
+    // 19.11.2026 (Oliver): Klick auf einen Pfeil oeffnet die Detailseite des Stromsatzes
+    _onClick: function (e) {
+      var h = this._arrowHit(e.containerPoint);
+      if (h && h[2].url) {
+        L.DomEvent.stop(e.originalEvent);
+        window.location.href = h[2].url;
+      }
+    },
+    _onMouse: function (e) {
+      var h = this._arrowHit(e.containerPoint);
+      this._map.getContainer().style.cursor = (h && h[2].url) ? 'pointer' : '';
+      if (h) {
+        var dirA = (Math.atan2(h[4][0], h[4][1]) * 180 / Math.PI + 360) % 360;
+        this._readout.textContent = h[2].n.replace(/ Current$/, '') + ': ' + h[3].toFixed(1) + ' kn towards ' + Math.round(dirA) + '° (station)' +
+          (h[2].url ? ' – click for details' : '');
         this._readout.style.display = 'block';
         return;
       }
@@ -372,7 +398,7 @@
       if (p[2] > 0) { p[1].at(e.latlng.lat, e.latlng.lng, b); if (b[0] === b[0]) { a[0] += p[2] * (b[0] - a[0]); a[1] += p[2] * (b[1] - a[1]); } }
       var kn = Math.sqrt(a[0] * a[0] + a[1] * a[1]) * KN;
       var dir = (Math.atan2(a[0], a[1]) * 180 / Math.PI + 360) % 360;
-      this._readout.textContent = 'Tidal current: ' + kn.toFixed(1) + ' kn towards ' + Math.round(dir) + '° (TPXO10 model)';
+      this._readout.textContent = 'Tidal current: ' + kn.toFixed(1) + ' kn towards ' + Math.round(dir) + '° (model)';
       this._readout.style.display = 'block';
     },
     _hideReadout: function () { if (this._readout) this._readout.style.display = 'none'; }

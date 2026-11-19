@@ -99,6 +99,34 @@ def _merc(lat, lon, z):
     return x, y
 
 
+_URL = {}
+
+
+def detail_url(name, datei):
+    """Link zur Detailseite wie die Kartenmarker (static/js/leaflet_markers.js): /prediction/<slug>[?source=<tcd>].
+    Aus static/js/leaflet_markers_data.json, neu gelesen, wenn sich die Datei aendert (19.11.2026)."""
+    pfad = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static/js/leaflet_markers_data.json')
+    try:
+        mt = os.path.getmtime(pfad)
+    except OSError:
+        return None
+    if _URL.get('mt') != mt:
+        import json
+        d = json.load(open(pfad, encoding='utf-8'))
+        m = {}
+        for st in d['stations']:
+            if st[5] != 1:
+                continue
+            url = '/prediction/%s?source=%s' % (st[6], st[3]) if st[7] == 1 else '/prediction/%s' % st[6]
+            for nm in (st[8], st[0]):
+                m.setdefault((nm, st[3].rsplit('.', 1)[0]), url)
+                m.setdefault((nm, None), url)
+        _URL.clear()
+        _URL.update(mt=mt, m=m)
+    m = _URL['m']
+    return m.get((name, datei)) or m.get((name, None))
+
+
 def pfeile(s, n, w, e, z, t0, schritte=97, dt=1800):
     t = t0 + np.arange(schritte) * dt
     breit = (e - w) >= 360
@@ -134,6 +162,7 @@ def pfeile(s, n, w, e, z, t0, schritte=97, dt=1800):
         except Exception:  # noqa: BLE001
             continue
         aus.append({'n': name, 'f': os.path.basename(p)[:-4], 'la': lat, 'lo': lon, 'r': rang,
+                    'url': detail_url(name, os.path.basename(p)[:-4]),
                     'u': [round(float(x), 2) for x in ost], 'v': [round(float(x), 2) for x in nord]})
     return {'t0': int(t0), 'dt': int(dt), 'pfeile': aus}
 
