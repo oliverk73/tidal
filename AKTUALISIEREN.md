@@ -20,7 +20,7 @@ Quelle ist jeweils der neueste GFS-Lauf der NOAA (alle 6 h ein neuer Lauf). Jede
 | Wellen weltweit | `venv/bin/python py/download_wave_forecast.py` | wenige Minuten |
 | Wellen Ostsee, Mittelmeer, Rotes Meer, Golf | `venv/bin/python py/download_wave_regional.py` | einige Minuten |
 | Meeresströmung (HYCOM) | `venv/bin/python py/download_ocean_currents.py` | länger |
-| Wassertemperatur | `venv/bin/python py/download_sst.py` (mit `--source mur` feiner, aber größer) | wenige Minuten |
+| Wassertemperatur | `venv/bin/python py/download_sst.py` (Copernicus OSTIA 0,1°; fällt Copernicus aus, nimmt es NOAA OISST) | ca. 1 Minute |
 | Regenradar-Nowcast | `venv/bin/python py/compute_radar_nowcast.py` | einige Minuten |
 
 **Reihenfolge:** `download_wave_regional.py` erst **nach** `download_wave_forecast.py`, weil es dessen Zeitschritte übernimmt.
@@ -75,4 +75,4 @@ Ob der Sammler läuft: `systemctl --user list-timers sammler-holen.timer`
 
 Meeresströmung, Wassertemperatur und Nowcast ändern sich langsamer bzw. sind seltener gebraucht; bei Bedarf dazunehmen.
 
-Stand der Kartendaten am 18.11.2026 abends: Wind, Druck, Niederschlag, Wellen, Windstau aktuell; Wassertemperatur 23.3. (NOAA-Server nicht erreichbar), Nowcast 18.11. 22 Uhr (pysteps + opencv seit 18.11. im venv), Meeresströmung 13.5.
+Stand der Kartendaten am 18.11.2026 abends: Wind, Druck, Niederschlag, Wellen, Windstau aktuell; Wassertemperatur 18.11. (seit 19.11. Copernicus OSTIA statt NOAA), Nowcast 18.11. 22 Uhr (pysteps + opencv seit 18.11. im venv), Meeresströmung 13.5.

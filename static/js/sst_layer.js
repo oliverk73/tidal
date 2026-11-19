@@ -233,7 +233,7 @@ class SSTCanvasLayer {
 
   getDateLabel() {
     if (!this.meta) return '--';
-    return 'NOAA OISST ' + this.meta.date;
+    return ({ostia: 'Copernicus OSTIA ', oisst: 'NOAA OISST ', mur: 'NASA MUR '}[this.meta.source] || 'SST ') + this.meta.date;
   }
 }
 

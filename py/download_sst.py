@@ -3,7 +3,9 @@
 Download sea surface temperature data and convert to compact binary grid
 for client-side Canvas rendering.
 
-Two sources available (--source):
+Sources (--source):
+  ostia  — Copernicus OSTIA (METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2), 0.05° native, daily (default seit 19.11.2026,
+           weil coastwatch.pfeg.noaa.gov seit Monaten nicht erreichbar war; faellt Copernicus aus -> oisst)
   oisst  — NOAA OISST v2.1, 0.25° native, daily analysis (default, ~500 KB)
   mur    — NASA MUR SST v4.1, 0.01° native, daily analysis (~12 MB at 0.1°)
            Much better coastal detail, recommended for quality display.
@@ -12,7 +14,8 @@ Output: sst.bin — uint16 LE, temperature as (T_celsius + 50) * 100
         sst_meta.json — grid metadata
 
 Usage:
-    python3 download_sst.py                        # OISST at 0.5°
+    python3 download_sst.py                        # OSTIA at 0.1° (Ersatz: OISST)
+    python3 download_sst.py --source oisst         # OISST at 0.5°
     python3 download_sst.py --source mur           # MUR SST at 0.1°
     python3 download_sst.py --source mur --res 0.05  # MUR SST at 0.05°
 """
@@ -66,10 +69,38 @@ def download_mur(res):
     return _download(url, local_path)
 
 
+def download_ostia(res):
+    """Neuester OSTIA-Tag ueber den Copernicus-Marine-Toolbox (Login wie Wellen/Windstau), auf res ausgeduennt, in °C."""
+    print("Downloading Copernicus OSTIA... ", end="", flush=True)
+    try:
+        import copernicusmarine as cm
+        from datetime import timedelta
+        # ein subset-Abruf (~50 MB, ~20 s); open_dataset+isel holte die Kacheln einzeln (>10 min)
+        heute = datetime.now(timezone.utc).date()
+        roh = os.path.join(OUTPUT_DIR, "ostia_roh.nc")
+        cm.subset(dataset_id="METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2", variables=["analysed_sst"],
+                  start_datetime=str(heute - timedelta(days=4)), end_datetime=str(heute),
+                  output_directory=OUTPUT_DIR, output_filename="ostia_roh.nc", overwrite=True,
+                  disable_progress_bar=True)
+        st = max(1, round(res / 0.05))
+        with xr.open_dataset(roh) as ds:
+            da = ds["analysed_sst"].isel(time=-1, latitude=slice(None, None, st), longitude=slice(None, None, st)).load()
+        os.remove(roh)
+        da = (da - 273.15).astype("float32")              # Kelvin -> °C
+        da.attrs = {"units": "degC"}
+        local_path = os.path.join(OUTPUT_DIR, "sst_latest.nc")
+        da.to_dataset(name="analysed_sst").to_netcdf(local_path)
+        print(f"OK ({da.sizes['longitude']}x{da.sizes['latitude']}, Tag {str(da.time.values)[:10]})")
+        return local_path
+    except Exception as e:                                   # noqa: BLE001
+        print(f"FEHLER: {str(e)[:300]}")
+        return None
+
+
 def _download(url, local_path):
     """Generic ERDDAP download with progress."""
     try:
-        resp = requests.get(url, timeout=600, stream=True)
+        resp = requests.get(url, timeout=(30, 600), stream=True)   # Verbindungsaufbau 30 s, Lesen 10 min
         if resp.status_code != 200:
             print(f"FEHLER (HTTP {resp.status_code})")
             # Show error details (ERDDAP returns HTML error messages)
@@ -182,7 +213,7 @@ def nc_to_bin(nc_path, target_res, source):
 
 def main():
     parser = argparse.ArgumentParser(description="Download sea surface temperature data")
-    parser.add_argument("--source", choices=["oisst", "mur"], default="oisst",
+    parser.add_argument("--source", choices=["ostia", "oisst", "mur"], default="ostia",
                         help="Data source: oisst (0.25° NOAA) or mur (0.01° NASA, better coasts)")
     parser.add_argument("--res", type=float, default=None,
                         help="Target resolution in degrees (default: 0.5 for oisst, 0.1 for mur)")
@@ -190,15 +221,23 @@ def main():
 
     if args.res is None:
         args.res = 0.5 if args.source == "oisst" else 0.1
+    if args.source == "ostia" and args.res < 0.05:
+        args.res = 0.05
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    source_labels = {"oisst": "NOAA OISST v2.1", "mur": "NASA MUR SST v4.1"}
+    source_labels = {"ostia": "Copernicus OSTIA", "oisst": "NOAA OISST v2.1", "mur": "NASA MUR SST v4.1"}
     print(f"{source_labels[args.source]} Download, {args.res}° Auflösung")
     print(f"Output: {OUTPUT_DIR}\n")
 
     if args.source == "mur":
         nc_path = download_mur(args.res)
+    elif args.source == "ostia":
+        nc_path = download_ostia(args.res)
+        if nc_path is None:                                  # Ersatz: NOAA OISST in 0,5°
+            print("OSTIA fehlgeschlagen, versuche NOAA OISST")
+            args.source, args.res = "oisst", 0.5
+            nc_path = download_oisst()
     else:
         nc_path = download_oisst()
 
