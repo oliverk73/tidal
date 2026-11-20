@@ -34,6 +34,7 @@ import segel_tiefe  # noqa: E402
 import segel_polare  # noqa: E402
 
 KN = 1.852                    # km je sm
+OM_CACHE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "quellen", "routing", "om_cache")
 MAX_KNOTEN = 240              # Gitterknoten je Achse
 FEIN = 3                      # Landraster feiner als das Gitter (Kantenpruefung)
 # 32 Richtungen: (Zeile, Spalte); Zeile waechst nach Sueden
@@ -56,7 +57,7 @@ def _km(la1, lo1, la2, lo2):
 
 
 # ---------------------------------------------------------------- Umweltdaten
-def _om_gitter(s, n, w, e, max_pkt=14):
+def _om_gitter(s, n, w, e, max_pkt=10):
     nla = max(3, min(max_pkt, int(math.ceil((n - s) / 0.025)) + 1))
     nlo = max(3, min(max_pkt, int(math.ceil((e - w) / 0.035)) + 1))
     return np.linspace(s, n, nla), np.linspace(w, e, nlo)
@@ -68,10 +69,36 @@ def _om_abruf(url, la, lo, variablen, t_von, t_bis, extra):
                hourly=",".join(variablen), timeformat="unixtime",
                start_hour=dt.datetime.fromtimestamp(t_von, dt.timezone.utc).strftime("%Y-%m-%dT%H:%M"),
                end_hour=dt.datetime.fromtimestamp(t_bis, dt.timezone.utc).strftime("%Y-%m-%dT%H:%M"), **extra)
-    r = requests.get(url, params=par, timeout=60)
-    if r.status_code != 200:
-        raise Fehler("Open-Meteo: HTTP %d %s" % (r.status_code, r.text[:200]))
-    d = r.json()
+    # Zwischenspeicher 30 min (gleiches Gebiet + Zeitraum, z. B. anderes Boot/andere Optionen): Open-Meteo zaehlt jeden
+    # Gitterpunkt als eigene Abfrage (Grenze je Minute/Stunde/Tag), 20.11.2026 nach HTTP 429 bei Testserie.
+    import hashlib
+    import json as _json
+    os.makedirs(OM_CACHE, exist_ok=True)
+    schluessel = hashlib.md5((url + _json.dumps(par, sort_keys=True)).encode()).hexdigest()
+    pfad = os.path.join(OM_CACHE, schluessel + ".json")
+    d = None
+    if os.path.exists(pfad) and time.time() - os.path.getmtime(pfad) < 1800:
+        with open(pfad) as f:
+            d = _json.load(f)
+    if d is None:
+        for versuch in range(3):
+            r = requests.get(url, params=par, timeout=60)
+            if r.status_code != 429 or versuch == 2:
+                break
+            time.sleep(15 * (versuch + 1))
+        if r.status_code == 429:
+            raise Fehler("Open-Meteo request limit reached (each grid point counts as one request). "
+                         "Please try again in a minute.")
+        if r.status_code != 200:
+            raise Fehler("Open-Meteo: HTTP %d %s" % (r.status_code, r.text[:200]))
+        d = r.json()
+        with open(pfad + ".neu", "w") as f:
+            _json.dump(d, f)
+        os.replace(pfad + ".neu", pfad)
+        for alt in os.listdir(OM_CACHE):                            # Eintraege aelter als 1 Tag weg
+            q = os.path.join(OM_CACHE, alt)
+            if time.time() - os.path.getmtime(q) > 86400:
+                os.remove(q)
     if isinstance(d, dict):
         d = [d]
     zeiten = np.array(d[0]["hourly"]["time"], dtype="f8")
@@ -110,7 +137,7 @@ def _wind(s, n, w, e, zeiten, LAT, LON):
 
 
 def _wellen(s, n, w, e, zeiten, LAT, LON):
-    la, lo = _om_gitter(s, n, w, e, max_pkt=10)
+    la, lo = _om_gitter(s, n, w, e, max_pkt=7)
     try:
         z, d = _om_abruf("https://marine-api.open-meteo.com/v1/marine", la, lo, ["wave_height", "wave_direction"],
                          zeiten[0], zeiten[-1], {})
@@ -248,14 +275,21 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     _fern.clear()
     ia, ja, a_versch = knoten_naechst(la_a, lo_a)
     ib, jb, b_versch = knoten_naechst(la_b, lo_b)
+    # Zielmenge: erreichbare Knoten bis 3 km weiter als der naechste; gewaehlt wird der mit der kleinsten Summe aus
+    # Ankunft und Reststrecke bei 0,5 kn (20.11.2026: 9 mm weniger Tiefgang machten einen Punkt 0,5 km vor Marstal
+    # erreichbar, aber nur ueber 3,6 h Umweg; „zuerst erreicht“ endete vor Helgoland 1,9 km zu frueh, 3 kn 3,2 km, 1 kn 2,1 km)
+    ab_ziel = np.hypot((LAT2 - la_b) * 111.2, (LON2 - lo_b) * kx)
+    ziel_menge = fahrwasser & (ab_ziel <= ab_ziel[ib, jb] + 3.0)
+    rest_s = (ab_ziel / (0.5 * KN) * 3600.0).ravel()                  # Reststrecke zum Ziel bei 0,5 kn (Bewertung)
+    ziel_menge_flach = ziel_menge.ravel()
     laenge = np.array([math.hypot(di, dj) * h for di, dj in RICHT])          # km
     peil = np.array([math.degrees(math.atan2(dj, -di)) % 360 for di, dj in RICHT])
     hd = np.radians(peil)
     de, dn = np.sin(hd), np.cos(hd)
     ne_, nn_ = np.cos(hd), -np.sin(hd)                                       # rechts quer
 
-    # Zeitfenster: geschaetzte Dauer bei 3 kn ueber Grund x 1,5, 4–36 h
-    stunden = int(min(36, max(4, math.ceil(dist / KN / 3.0 * 1.5) + 2)))
+    # Zeitfenster: geschaetzte Dauer bei 3 kn ueber Grund x 1,5, 12–36 h
+    stunden = int(min(36, max(12, math.ceil(dist / KN / 3.0 * 1.5) + 2)))       # Kreuz gegen Strom braucht Reserve
     T0 = math.floor(t0 / 3600) * 3600
     zeiten = T0 + 3600.0 * np.arange(stunden + 2)
     t_um = time.time()
@@ -343,7 +377,6 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         z0 = (ia * nx + ja) * 2 + b
         ankunft[z0] = float(t0)
         heapq.heappush(heap, (float(t0), z0))
-    ziel_k = ib * nx + jb
     erledigt = np.zeros(2 * N, dtype=bool)
     gefunden = None
     pops = 0
@@ -351,16 +384,22 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     dauer0 = laenge / KN * 3600.0                                          # s bei 1 kn
     wende_s = wende_h * 3600.0
     t_dij = time.time()
+    beste = (np.inf, None)
     while heap:
         t, z = heapq.heappop(heap)
+        if t >= beste[0]:                                             # kein Kandidat kann noch besser werden
+            break
         if erledigt[z]:
             continue
         erledigt[z] = True
         pops += 1
         k, b = divmod(z, 2)
-        if k == ziel_k:
-            gefunden = z
-            break
+        if ziel_menge_flach[k]:
+            # Bewertung = Ankunft + Rest bei 0,5 kn (teurer als fast jeder echte Weg, auch die Kreuz): ein naeherer Punkt gewinnt, wenn der Weg dorthin weniger kostet
+            # als die gesparte Reststrecke; weitersuchen, bis keine Ankunft die beste Bewertung noch schlagen kann
+            if t + rest_s[k] < beste[0]:
+                beste = (t + rest_s[k], z)
+            # weiter ausbauen: naehere Zielpunkte liegen oft nur hinter diesem (Ring um das Ziel)
         if t >= t_ende:
             continue
         i, j = divmod(k, nx)
@@ -372,7 +411,19 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         s0, s1 = S0[:, i, j], S1[:, i, j]
         sog = np.where((s0 > 0.05) & (s1 > 0.05), s0 * (1 - f) + s1 * f, np.where(f < 0.5, s0, s1))
         bug = B0[:, i, j] if f < 0.5 else stunde_c(ks + 1)[1][:, i, j]
-        kurs = K0[:, i, j]
+        kurs = K0[:, i, j] if f < 0.5 else stunde_c(ks + 1)[2][:, i, j]
+        # Wind zum tatsaechlichen Zeitpunkt gegen den ORC-Wendewinkel pruefen (20.11.2026: bei schnell drehendem Wind
+        # galt ein Kurs der vollen Stunde bis zu 30 min weiter – Boot fuhr 16° am Wind). Bug neu aus dem echten TWA.
+        wu, wv, cu, cv, _hs, _wd = umwelt(i, j, t)
+        we, wn = wu - cu, wv - cv
+        tws = math.hypot(we, wn)
+        woher = math.degrees(math.atan2(-we, -wn)) % 360
+        twa = ((woher - kurs + 180) % 360) - 180
+        segel = bug != -1
+        if tws > max_wind:
+            sog = np.where(segel, -1.0, sog)
+        sog = np.where(segel & (np.abs(twa) < P.wendewinkel(tws)), -1.0, sog)
+        bug = np.where(segel, np.where(twa > 0, 0, 1), -1)
         mog = sog > 0.05
         if not mog.any():
             continue
@@ -393,10 +444,13 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                 vor_sog[zz] = sog[d]
                 heapq.heappush(heap, (float(t2[d]), int(zz)))
     t_dij = time.time() - t_dij
+    gefunden = beste[1]
     if gefunden is None:
         raise Fehler("No route found within %d h (limits wind %.0f kn / waves %.1f m, land in the way, or too "
                      "little wind without engine)" % (stunden, max_wind, max_welle))
 
+    kz = int(gefunden) // 2  # noqa
+    b_versch = round(float(ab_ziel.ravel()[kz]), 1) if ab_ziel.ravel()[kz] > h * 1.5 else 0.0
     # Weg zurueckverfolgen
     kette = []
     z = gefunden
@@ -463,7 +517,8 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     return {
         "boot": P.info(), "optionen": o,
         "start": {"t": int(t0), "la": la_a, "lo": lo_a, "verschoben": a_versch},
-        "ziel": {"t": punkte[-1]["t"], "la": la_b, "lo": lo_b, "verschoben": b_versch},
+        "ziel": {"t": punkte[-1]["t"], "la": la_b, "lo": lo_b, "verschoben": b_versch,
+                 "naechst_erreichbar_km": round(float(ab_ziel[ib, jb]), 1)},
         "dauer_h": round(dauer_h, 2), "strecke_sm": round(weg_km / KN, 1), "luftlinie_sm": round(dist / KN, 1),
         "sog_mittel": round(weg_km / KN / dauer_h, 2) if dauer_h > 0 else None,
         "wenden": wenden, "halsen": halsen, "motor_h": round(motor_h, 2),
