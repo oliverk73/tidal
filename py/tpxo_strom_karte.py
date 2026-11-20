@@ -67,8 +67,9 @@ def _lesen(arr, ii, jj):
     return np.concatenate(teile, axis=1) if len(teile) > 1 else teile[0]
 
 
-def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN):
-    """-> leaflet-velocity-Liste [u, v] in m/s fuer den Ausschnitt zur Zeit t (datetime UTC)."""
+def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False):
+    """-> leaflet-velocity-Liste [u, v] in m/s fuer den Ausschnitt zur Zeit t (datetime UTC).
+    ozean=True: Ozeanstrom ohne Gezeiten (Copernicus GLO12, py/ozeanstrom.py) dazu = „Total current“ (20.11.2026)."""
     la_s, la_n = max(-89.0, min(la_s, la_n)), min(89.0, max(la_s, la_n))
     if lo_e <= lo_w:
         lo_e += 360.0
@@ -140,6 +141,14 @@ def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN):
             lat = la1 - dx * np.arange(len(ii))
             lon = lo1 + dx * np.arange(nj)
             u, v, _n = FF.einsetzen(lat, lon, u, v, th, kopf, jahr)
+    if ozean:
+        import ozeanstrom
+        la_g = la1 - dx * np.arange(u.shape[0])
+        lo_g = lo1 + dx * np.arange(u.shape[1])
+        LA, LO = np.meshgrid(la_g, lo_g, indexing='ij')
+        r = ozeanstrom.uv(LA, LO, t.timestamp())
+        if r is not None:                                          # ausserhalb des Vorhersagezeitraums: nur Gezeit
+            u, v = u + r[0], v + r[1]
     kopfz = dict(lo1=round(lo1, 5), lo2=round(lo1 + dx * (nj - 1), 5), la1=round(la1, 5), la2=round(la2, 5),
                  dx=round(dx, 6), dy=round(dx, 6), nx=int(nj), ny=int(len(ii)), refTime=t.strftime('%Y-%m-%dT%H:%M:%SZ'),
                  forecastTime=0, scanMode=0, parameterCategory=2, parameterUnit='m.s-1')

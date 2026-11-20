@@ -1159,6 +1159,7 @@
     // Partikel bleiben beim Zeitwechsel erhalten, Zeit läuft stufenlos (Felder alle 30 min, dazwischen interpoliert).
     var tcLayer = null, tcActive = false, tcAnimTimer = null, tcStart = 0, tcStep = 0;
     var tcHidCurrent = false;
+    var tcOzean = false;                   // „Total current“: + Ozeanstrom Copernicus GLO12 (Oliver 20.11.2026)
     var TC_STEPS = 96, TC_SPEED = 1800;    // 30-min-Schritte über 48 h; Wiedergabe 30 min je Sekunde
 
     function tcTime(step) { return tcStart + step * 1800; }
@@ -1169,14 +1170,14 @@
     async function tcFetchAt(t) {
       var b = tcBounds();
       var c = Math.round(Math.max(map.getSize().x, map.getSize().y) / 4);   // Rasterzellen je Achse ~ 4 px
-      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t + '&c=' + c;
+      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t + '&c=' + c + (tcOzean ? '&g=1' : '');
       return (await fetch(url)).json();
     }
     // Pfeile an den Harmonics-Strömungssätzen (py/strom_pfeile.py), 48 h ab tcStart in 30-min-Schritten
     async function tcFetchArrows() {
       var b = tcBounds();
       var url = '/api/current_arrows?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&z=' + map.getZoom() +
-                '&t0=' + tcStart + '&schritte=' + (TC_STEPS + 2) + '&dt=1800';
+                '&t0=' + tcStart + '&schritte=' + (TC_STEPS + 2) + '&dt=1800' + (tcOzean ? '&g=1' : '');
       return (await fetch(url)).json();
     }
     function tcLabel() {
@@ -1249,7 +1250,9 @@
               '<button id="tc-now-btn" style="font-size:12px;cursor:pointer;border:1px solid #999;border-radius:4px;background:none;padding:1px 6px;">Now</button>' +
             '</div>' +
             '<input type="range" id="tc-progress" min="0" max="' + TC_STEPS + '" step="any" value="0" style="width:180px;cursor:pointer;">' +
-            '<div style="font-size:11px;color:#555;max-width:230px;text-align:center;">Coloured field and particles: depth-mean tidal stream from the TPXO10 model (no wind or ocean currents). Arrows: our current stations (best station per spot; station symbols are hidden while this layer is on).</div>' +
+            '<label style="cursor:pointer;font-size:12px;"><input type="checkbox" id="tc-ocean" style="margin-right:4px;vertical-align:-2px;">+ Ocean current (Copernicus) = total current</label>' +
+            '<div id="tc-ocean-info" style="display:none;font-size:11px;color:#555;max-width:230px;text-align:center;"></div>' +
+            '<div style="font-size:11px;color:#555;max-width:230px;text-align:center;">Coloured field and particles: depth-mean tidal stream from the TPXO10 model (no wind; ocean current only if ticked above). Arrows: our current stations (best station per spot; station symbols are hidden while this layer is on).</div>' +
           '</div>';
 
         L.DomEvent.disableClickPropagation(container);
@@ -1266,6 +1269,25 @@
             } else {
               document.getElementById('tc-controls').style.display = 'none';
               tcDeactivate();
+            }
+          });
+          document.getElementById('tc-ocean').addEventListener('change', async function () {
+            tcOzean = this.checked;
+            var info = document.getElementById('tc-ocean-info');
+            if (tcOzean) {
+              try {
+                var oi = await (await fetch('/api/ocean_current_info')).json();
+                var fm = function (u) { return new Date(u * 1000).toLocaleString(undefined, { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); };
+                info.textContent = oi.bis ? ('Ocean current (surface, no tide): Copernicus GLO12, ' + fm(oi.von) + ' – ' + fm(oi.bis) + '; outside: tide only') : 'Ocean current data missing';
+              } catch (e) { info.textContent = 'Ocean current data missing'; }
+              info.style.display = 'block';
+            } else { info.style.display = 'none'; }
+            if (tcLayer) {
+              tcLayer._gen = (tcLayer._gen || 0) + 1;
+              tcLayer._oldFrames = tcLayer._frames;       // bis die neuen Felder da sind, die alten zeigen
+              tcLayer.clearCache();
+              tcLayer._loadArrows();
+              tcLayer.ready(tcTime(tcStep));
             }
           });
           document.getElementById('tc-play-btn').addEventListener('click', function () { tcAnimTimer ? tcStop() : tcPlay(); });

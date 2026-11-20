@@ -20,6 +20,7 @@ Quelle ist jeweils der neueste GFS-Lauf der NOAA (alle 6 h ein neuer Lauf). Jede
 | Wellen weltweit | `venv/bin/python py/download_wave_forecast.py` | wenige Minuten |
 | Wellen Ostsee, Mittelmeer, Rotes Meer, Golf | `venv/bin/python py/download_wave_regional.py` | einige Minuten |
 | Meeresströmung (HYCOM) | `venv/bin/python py/download_ocean_currents.py` | länger |
+| Ozeanstrom für „Total current“ in der Gezeitenstrom-Ebene (Copernicus GLO12, ohne Gezeiten, 5 Tage) | `venv/bin/python py/download_ocean_cmems.py` | ca. 5 Minuten |
 | Wassertemperatur | `venv/bin/python py/download_sst.py` (Copernicus OSTIA 0,1°; fällt Copernicus aus, nimmt es NOAA OISST) | ca. 1 Minute |
 | Regenradar-Nowcast | `venv/bin/python py/compute_radar_nowcast.py` | einige Minuten |
 
@@ -72,6 +73,7 @@ Ob der Sammler läuft: `systemctl --user list-timers sammler-holen.timer`
     venv/bin/python py/windstau_cmems.py
     venv/bin/python py/windstau_nws.py --vorhersage
     venv/bin/python py/windstau_karte.py
+    venv/bin/python py/download_ocean_cmems.py
 
 Meeresströmung, Wassertemperatur und Nowcast ändern sich langsamer bzw. sind seltener gebraucht; bei Bedarf dazunehmen.
 

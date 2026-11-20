@@ -2352,7 +2352,8 @@ def api_tidal_current():
         zellen = max(100, min(600, int(request.args.get('c') or 240)))     # Zellen je Achse (Bildschirm / 4 px)
     except ValueError:
         zellen = 240
-    daten = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t, max_zellen=zellen)
+    ozean = request.args.get('g') == '1'          # „Total current“: + Ozeanstrom Copernicus (20.11.2026)
+    daten = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t, max_zellen=zellen, ozean=ozean)
     resp = jsonify(daten)
     resp.headers['Cache-Control'] = 'public, max-age=3600'
     return resp
@@ -2371,9 +2372,31 @@ def api_current_arrows():
         dt = max(300, min(7200, int(request.args.get('dt', 1800))))
     except (KeyError, ValueError):
         return jsonify({'error': 'parameters s, n, w, e, z, t0 required'}), 400
-    resp = jsonify(strom_pfeile.pfeile(s, n, w, e, z, t0, schritte, dt))
+    erg = strom_pfeile.pfeile(s, n, w, e, z, t0, schritte, dt)
+    if request.args.get('g') == '1' and erg['pfeile']:
+        # „Total current“ (20.11.2026): Ozeanstrom Copernicus am Satzort dazu, m/s -> kn
+        import numpy as _np
+        import ozeanstrom
+        la = _np.array([p['la'] for p in erg['pfeile']], dtype='f8')
+        lo = _np.array([p['lo'] for p in erg['pfeile']], dtype='f8')
+        for i in range(schritte):
+            o = ozeanstrom.uv(la, lo, t0 + i * dt)
+            if o is None:
+                continue
+            for k, p in enumerate(erg['pfeile']):
+                if i < len(p['u']):
+                    p['u'][i] = round(p['u'][i] + float(o[0][k]) * 1.94384, 2)
+                    p['v'][i] = round(p['v'][i] + float(o[1][k]) * 1.94384, 2)
+    resp = jsonify(erg)
     resp.headers['Cache-Control'] = 'public, max-age=3600'
     return resp
+
+
+@app.route("/api/ocean_current_info")
+def api_ocean_current_info():
+    """Zeitraum und Abrufzeit des Copernicus-Ozeanstroms (py/ozeanstrom.py) fuer die Beschriftung."""
+    import ozeanstrom
+    return jsonify(ozeanstrom.info() or {})
 
 
 def _strom_pfeile_vorwaermen():
