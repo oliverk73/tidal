@@ -188,20 +188,31 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     mitte = FEIN // 2
     wasser = ~land_f[mitte::FEIN, mitte::FEIN][:ny, :nx]
 
+    # Zusammenhaengendes Fahrwasser: groesste Wasserflaeche (8er-Nachbarschaft). Haefen hinter schmalen, gebaggerten
+    # Rinnen (schmaler als ~1 EMODnet-Zelle) liegen sonst in einer abgeschlossenen Tasche (20.11.2026: Marstal) –
+    # Start/Ziel werden dann auf den naechsten Punkt im Fahrwasser gesetzt, der Rest ist gestrichelt.
+    teile, anzahl = ndimage.label(wasser, structure=np.ones((3, 3)))
+    if anzahl == 0:
+        raise Fehler("No navigable water in the area")
+    groesse = np.bincount(teile.ravel())
+    groesse[0] = 0
+    fahrwasser = teile == int(np.argmax(groesse))
+    _fern = {}
+
     def knoten_naechst(la, lo):
         i = int(round((n - la) * 111.2 / h - 0.5))
         j = int(round((lo - w) * kx / h - 0.5))
         i, j = min(max(i, 0), ny - 1), min(max(j, 0), nx - 1)
-        if wasser[i, j]:
-            return i, j, False
-        d, idx = ndimage.distance_transform_edt(~wasser, return_indices=True)
-        if d[i, j] * h > 5.0:
-            raise Fehler("Point %.4f, %.4f is more than 5 km from navigable water (land or too shallow at chart "
-                         "datum for %.1f m draft)" % (la, lo, tiefgang))
-        return int(idx[0][i, j]), int(idx[1][i, j]), True
+        if fahrwasser[i, j]:
+            return i, j, 0.0
+        if "idx" not in _fern:
+            _fern["d"], _fern["idx"] = ndimage.distance_transform_edt(~fahrwasser, return_indices=True)
+        d = _fern["d"][i, j] * h
+        if d > 10.0:
+            raise Fehler("Point %.4f, %.4f is more than 10 km from navigable water connected to the open sea (land or "
+                         "too shallow at chart datum for %.1f m draft)" % (la, lo, tiefgang))
+        return int(_fern["idx"][0][i, j]), int(_fern["idx"][1][i, j]), round(d, 1)
 
-    ia, ja, a_versch = knoten_naechst(la_a, lo_a)
-    ib, jb, b_versch = knoten_naechst(la_b, lo_b)
 
     gueltig = np.zeros((32, ny, nx), dtype=bool)
     II, JJ = np.meshgrid(np.arange(ny), np.arange(nx), indexing="ij")
@@ -215,6 +226,28 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             fj = np.clip(np.round((JJ + f * dj) * FEIN + mitte).astype(int), 0, nx * FEIN - 1)
             ok &= ~land_f[fi, fj]
         gueltig[d] = ok
+    # Befahrbares Netz: vom offensten Wasserpunkt (groesster Abstand zum Land/Flachen) ueber erlaubte Kanten erreichbare
+    # Knoten (zeitfrei). Start und Ziel kommen auf den naechsten davon. Die 8er-Flaechensuche oben laesst diagonale
+    # Engstellen durch, die die feine Kantenpruefung sperrt (20.11.2026: Marstal, Lymington).
+    tief_innen = ndimage.distance_transform_edt(fahrwasser)
+    si, sj = np.unravel_index(int(np.argmax(tief_innen)), tief_innen.shape)
+    erreicht = np.zeros((ny, nx), dtype=bool)
+    erreicht[si, sj] = True
+    front = erreicht.copy()
+    while front.any():
+        neu = np.zeros_like(erreicht)
+        for d, (di, dj) in enumerate(RICHT):
+            q = front & gueltig[d]
+            if not q.any():
+                continue
+            qi, qj = np.nonzero(q)
+            neu[qi + di, qj + dj] = True
+        front = neu & ~erreicht
+        erreicht |= front
+    fahrwasser = erreicht
+    _fern.clear()
+    ia, ja, a_versch = knoten_naechst(la_a, lo_a)
+    ib, jb, b_versch = knoten_naechst(la_b, lo_b)
     laenge = np.array([math.hypot(di, dj) * h for di, dj in RICHT])          # km
     peil = np.array([math.degrees(math.atan2(dj, -di)) % 360 for di, dj in RICHT])
     hd = np.radians(peil)

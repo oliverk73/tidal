@@ -172,7 +172,10 @@
           '<b>Arrival ' + dayHHMM(r.ziel.t) + '</b><br>' + dur(r.dauer_h) + ' · ' + r.strecke_sm + ' nm (direct ' + r.luftlinie_sm + ' nm) · Ø ' + r.sog_mittel + ' kn SOG<br>' +
           r.wenden + ' tacks · ' + r.halsen + ' gybes · engine ' + dur(r.motor_h) + '<br>' +
           '<span style="color:#777;">' + r.boot.name + (r.boot.variante === 'nospi' ? ' without spinnaker' : ' with spinnaker') + ' (ORC: ' + r.boot.yacht + ', draft ' + (r.boot.tiefgang || '?') + ' m) · depth: ' + r.quellen.tiefe + ' · computed in ' + r.rechenzeit.gesamt_s + ' s</span>' +
-          ((r.start.verschoben || r.ziel.verschoben) ? '<br><span style="color:#a60;">Start/destination on land in OpenStreetMap – moved to the nearest water (dashed).</span>' : '') +
+          ((r.start.verschoben || r.ziel.verschoben) ? '<br><span style="color:#a60;">' +
+            (r.start.verschoben ? 'Start ' + r.start.verschoben + ' km' : '') + (r.start.verschoben && r.ziel.verschoben ? ', ' : '') +
+            (r.ziel.verschoben ? 'destination ' + r.ziel.verschoben + ' km' : '') +
+            ' from the computed route (dashed): on land, or behind a channel too narrow/shallow for the depth grid – follow the buoyed channel.</span>' : '') +
         '</div>' +
         '<div style="max-height:30vh;overflow-y:auto;margin-top:4px;">' +
           '<table style="width:100%;border-collapse:collapse;font-size:11px;" class="rp-tab">' +
