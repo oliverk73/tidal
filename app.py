@@ -2392,6 +2392,43 @@ def api_current_arrows():
     return resp
 
 
+@app.route("/api/route_boats")
+def api_route_boats():
+    """Boote (ORC-Polaren) fuer den Routenplaner (py/segel_polare.py, 20.11.2026)."""
+    import segel_polare
+    return jsonify({"boote": segel_polare.liste(), "standard": segel_polare.STANDARD,
+                    "optionen": __import__("segel_router").STANDARD})
+
+
+@app.route("/api/route")
+def api_route():
+    """Schnellste Segelroute (py/segel_router.py, 20.11.2026): start=lat,lon ziel=lat,lon t=Unix-s boot=id
+    + Optionen leistung (0–1), motor (0/1), motor_kn, motor_unter, max_wind, max_welle, wendezeit_s, ozean (0/1),
+    tiefe (0/1), reserve_m."""
+    import segel_router
+    try:
+        la_a, lo_a = (float(x) for x in request.args["start"].split(","))
+        la_b, lo_b = (float(x) for x in request.args["ziel"].split(","))
+        t0 = float(request.args.get("t") or __import__("time").time())
+        opt = {}
+        for k in ("leistung", "motor_kn", "motor_unter", "max_wind", "max_welle", "wendezeit_s", "reserve_m"):
+            if request.args.get(k):
+                opt[k] = float(request.args[k])
+        for k in ("motor", "ozean", "tiefe"):
+            if request.args.get(k) in ("0", "1"):
+                opt[k] = request.args[k] == "1"
+    except (KeyError, ValueError):
+        return jsonify({"error": "parameters start=lat,lon ziel=lat,lon t=unix seconds required"}), 400
+    try:
+        r = segel_router.route((la_a, lo_a), (la_b, lo_b), t0, boot=request.args.get("boot") or None, **opt)
+    except segel_router.Fehler as e:
+        return jsonify({"error": str(e)}), 422
+    except Exception as e:                                       # noqa: BLE001
+        app.logger.exception("route")
+        return jsonify({"error": "routing failed: %s" % str(e)[:300]}), 500
+    return jsonify(r)
+
+
 @app.route("/api/ocean_current_info")
 def api_ocean_current_info():
     """Zeitraum und Abrufzeit des Copernicus-Ozeanstroms (py/ozeanstrom.py) fuer die Beschriftung."""

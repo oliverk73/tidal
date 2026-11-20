@@ -58,6 +58,7 @@
 <script src="/static/js/windstau_layer.js?v=20261109" defer></script>
 <script src="/static/js/nowcast_layer.js" defer></script>
 <script src="/static/js/tide_flow_layer.js?v=20261119b" defer></script>
+<script src="/static/js/route_planner.js?v=20261120b" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
 <!-- MapLibre GL + Leaflet bridge: clean English vector labels (OpenFreeMap, no key) -->
@@ -1858,7 +1859,8 @@
         const SECTIONS = [
           { key: 'layer',   label: 'Layers',           body: 'layer-menu-body',       count: null },
           { key: 'tide',    label: 'Tide Stations',    body: 'tide-stations-body',    count: 'tide-stations-count' },
-          { key: 'current', label: 'Current Stations', body: 'current-stations-body', count: 'current-stations-count' }
+          { key: 'current', label: 'Current Stations', body: 'current-stations-body', count: 'current-stations-count' },
+          { key: 'route',   label: 'Route Planner',    body: 'route-planner-body',    count: null }   // Oliver 20.11.2026
         ];
         wrap.innerHTML = SECTIONS.map(function (s) {
           var isLayer = (s.key === 'layer');
@@ -1866,7 +1868,7 @@
             (isLayer ? '' : 'padding:8px 10px;');
           var countSpan = s.count
             ? '<span id="' + s.count + '" style="font-weight:normal;opacity:.7;margin-right:4px;"></span>' : '';
-          var placeholder = isLayer ? '' : '<span style="color:#777;">Loading…</span>';
+          var placeholder = (isLayer || s.key === 'route') ? '' : '<span style="color:#777;">Loading…</span>';
           return '<div data-menu="' + s.key + '" style="' + sectionCss + '">' +
               '<div class="map-menu-header" style="' + headerCss + '">' + hamburgerSvg +
                 '<span style="flex:1;">' + s.label + '</span>' + countSpan +
@@ -1912,6 +1914,7 @@
     });
 
     new MapMenuControl().addTo(map);
+    if (window.initRoutePlanner) window.initRoutePlanner(map, document.getElementById('route-planner-body'));
 
     // Layer-Controls in das "Layer"-Panel hängen (statt je eigener Box auf der Karte).
     // onAdd() liefert das fertige DOM-Element samt verdrahteter Listener; die eigene
