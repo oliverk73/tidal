@@ -1784,7 +1784,24 @@
           }
         }
       });
+      landmaskenAufraeumen();
     }
+
+    // Landmasken der Ebenen entfernen, deren Ebene nicht mehr an ist (Oliver 20.11.2026: nach „alle Layer aus“ lag
+    // noch eine Landmaske über dem Land – die Wellenmaske blieb beim automatischen Abschalten liegen, von der
+    // gemeinsamen HYCOM-/Gezeitenstrom-Maske blieb nach dem Wechsel ein Rest). Läuft nach jedem Aus-/Umschalten,
+    // auch verzögert, weil die Masken asynchron geladen werden.
+    function landmaskenAufraeumen() {
+      var an = function (id) { var c = document.getElementById(id); return !!(c && c.checked); };
+      var behalten = { waveLandMask: an('wv-toggle'), ocLandMask: an('oc-toggle') || an('tc-toggle'), tideLandMask: an('td-toggle') };
+      var weg = [];
+      map.eachLayer(function (l) {
+        var pane = l.options && l.options.pane;
+        if (pane in behalten && !behalten[pane]) weg.push(l);
+      });
+      weg.forEach(function (l) { map.removeLayer(l); });
+    }
+    window.landmaskenAufraeumen = landmaskenAufraeumen;
 
     // --- OpenSeaMap seamarks (nautical marks) ---
     // Eigenständiger Referenz-Overlay (transparente Kacheln), KEIN Teil der
@@ -1966,6 +1983,8 @@
               hideLegend();
               switchBasemap(false);
             }
+            landmaskenAufraeumen();
+            setTimeout(landmaskenAufraeumen, 1500);
           });
         }
       });
