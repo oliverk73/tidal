@@ -21,10 +21,20 @@ INDEX = os.path.join(BASIS, "quellen", "routing", "land_bbox.npy")
 _IDX = {}
 
 
+def _kennung():
+    st = os.stat(SHP)
+    return "%d %d %d" % (st.st_size, int(st.st_mtime), st.st_ino)
+
+
 def _index():
-    if "bb" in _IDX:
+    # Kennung (Groesse, Datum, Inode) statt Datumsvergleich: ein neu entpacktes Shapefile kann ein AELTERES Datum
+    # tragen als der Index (20.11.2026: OSM-Tausch, Index blieb alt -> Land 0 %)
+    if "bb" in _IDX and _IDX.get("kennung") == _kennung():
         return _IDX["bb"]
-    if not os.path.exists(INDEX) or os.path.getmtime(INDEX) < os.path.getmtime(SHP):
+    _IDX.clear()
+    kenn_pfad = INDEX + ".kennung"
+    alt = open(kenn_pfad).read() if os.path.exists(kenn_pfad) else None
+    if not os.path.exists(INDEX) or alt != _kennung():
         shx = SHP[:-4] + ".shx"
         with open(shx, "rb") as f:
             f.seek(100)
@@ -38,7 +48,10 @@ def _index():
                 bb[i] = struct.unpack("<4d", f.read(32))
         os.makedirs(os.path.dirname(INDEX), exist_ok=True)
         np.save(INDEX, bb)
+        with open(kenn_pfad, "w") as f:
+            f.write(_kennung())
     _IDX["bb"] = np.load(INDEX)
+    _IDX["kennung"] = _kennung()
     return _IDX["bb"]
 
 
