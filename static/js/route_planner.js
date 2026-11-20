@@ -24,7 +24,10 @@
     var num = 'style="width:52px;padding:2px 3px;font-size:12px;"';
     body.innerHTML =
       '<div style="display:flex;flex-direction:column;gap:6px;width:250px;font-size:12px;">' +
-        '<label>Boat<select id="rp-boot" ' + inp + '></select></label>' +
+        '<label>Boat (ORC, type to search)<input id="rp-boot-such" list="rp-boot-liste" autocomplete="off" placeholder="e.g. Bavaria 37, Hanse 370 …" ' + inp + '></label>' +
+        '<datalist id="rp-boot-liste"></datalist>' +
+        '<div id="rp-boot-info" style="color:#777;font-size:11px;margin-top:-3px;"></div>' +
+        '<label id="rp-nospi-zeile"><input type="checkbox" id="rp-nospi" checked> No spinnaker (ORC non-spinnaker polar)</label>' +
         '<label>Departure<input type="datetime-local" id="rp-zeit" ' + inp + '></label>' +
         '<div style="display:flex;gap:6px;">' +
           '<button id="rp-start-btn" style="flex:1;cursor:pointer;">Set start</button>' +
@@ -33,7 +36,7 @@
         '<div id="rp-punkte" style="color:#555;">Click a button, then click on the map.</div>' +
         '<details><summary style="cursor:pointer;">Options</summary>' +
           '<div style="display:grid;grid-template-columns:1fr auto;gap:3px 6px;margin-top:4px;align-items:center;">' +
-            '<span title="ORC polars assume a racing crew with spinnaker">Performance (% of ORC polar)</span><input id="rp-leistung" type="number" min="40" max="110" step="5" value="85" ' + num + '>' +
+            '<span title="ORC polars assume a racing crew">Performance (% of ORC polar)</span><input id="rp-leistung" type="number" min="40" max="110" step="5" value="85" ' + num + '>' +
             '<span>Max. wind (kn)</span><input id="rp-maxwind" type="number" min="5" max="60" value="25" ' + num + '>' +
             '<span>Max. wave height (m)</span><input id="rp-maxwelle" type="number" min="0.5" max="10" step="0.5" value="2.5" ' + num + '>' +
             '<span>Tack/gybe costs (s)</span><input id="rp-wende" type="number" min="0" max="600" step="10" value="60" ' + num + '>' +
@@ -58,10 +61,31 @@
     var t = new Date(Date.now() + 30 * 60000); t.setMinutes(t.getMinutes() < 30 ? 30 : 60, 0, 0);
     $('rp-zeit').value = localInput(t);
 
+    // ~2700 ORC-Klassen: [id, Name, LOA m, Non-Spinnaker vorhanden, Anzahl Zertifikate]
+    var boote = {}, bootNamen = {};
+    function bootLabel(b) { return b[1] + ' (' + b[2].toFixed(1) + ' m)'; }
+    function bootInfo() {
+      var b = bootNamen[$('rp-boot-such').value];
+      if (!b) { $('rp-boot-info').textContent = 'Unknown boat – choose one from the list'; return; }
+      $('rp-boot-info').textContent = b[4] + ' ORC certificate' + (b[4] > 1 ? 's' : '') + (b[3] ? ', non-spinnaker polar available' : ', no non-spinnaker polar (spinnaker polar is used)');
+      $('rp-nospi').disabled = !b[3];
+      $('rp-nospi-zeile').style.opacity = b[3] ? 1 : 0.5;
+    }
     fetch('/api/route_boats').then(function (r) { return r.json(); }).then(function (d) {
-      $('rp-boot').innerHTML = d.boote.map(function (b) {
-        return '<option value="' + b.id + '"' + (b.id === d.standard ? ' selected' : '') + '>' + b.name + '</option>';
-      }).join('');
+      var html = [];
+      d.boote.forEach(function (b) { boote[b[0]] = b; bootNamen[bootLabel(b)] = b; html.push('<option value="' + bootLabel(b).replace(/"/g, '&quot;') + '">'); });
+      $('rp-boot-liste').innerHTML = html.join('');
+      var gespeichert = null;
+      try { gespeichert = localStorage.getItem('rpBoot'); } catch (e) {}
+      var b = boote[gespeichert] || boote[d.standard];
+      if (b) $('rp-boot-such').value = bootLabel(b);
+      bootInfo();
+    });
+    $('rp-boot-such').addEventListener('input', bootInfo);
+    $('rp-boot-such').addEventListener('change', function () {
+      var b = bootNamen[this.value];
+      if (b) { try { localStorage.setItem('rpBoot', b[0]); } catch (e) {} }
+      bootInfo();
     });
 
     function icon(farbe, txt) {
@@ -147,7 +171,7 @@
         '<div style="background:rgba(255,255,255,.6);border-radius:4px;padding:5px 6px;">' +
           '<b>Arrival ' + dayHHMM(r.ziel.t) + '</b><br>' + dur(r.dauer_h) + ' · ' + r.strecke_sm + ' nm (direct ' + r.luftlinie_sm + ' nm) · Ø ' + r.sog_mittel + ' kn SOG<br>' +
           r.wenden + ' tacks · ' + r.halsen + ' gybes · engine ' + dur(r.motor_h) + '<br>' +
-          '<span style="color:#777;">' + r.boot.name + ' (ORC: ' + r.boot.yacht + ', draft ' + (r.boot.tiefgang || '?') + ' m) · depth: ' + r.quellen.tiefe + ' · computed in ' + r.rechenzeit.gesamt_s + ' s</span>' +
+          '<span style="color:#777;">' + r.boot.name + (r.boot.variante === 'nospi' ? ' without spinnaker' : ' with spinnaker') + ' (ORC: ' + r.boot.yacht + ', draft ' + (r.boot.tiefgang || '?') + ' m) · depth: ' + r.quellen.tiefe + ' · computed in ' + r.rechenzeit.gesamt_s + ' s</span>' +
           ((r.start.verschoben || r.ziel.verschoben) ? '<br><span style="color:#a60;">Start/destination on land in OpenStreetMap – moved to the nearest water (dashed).</span>' : '') +
         '</div>' +
         '<div style="max-height:30vh;overflow-y:auto;margin-top:4px;">' +
@@ -162,7 +186,7 @@
       var t0 = Math.round(new Date($('rp-zeit').value).getTime() / 1000);
       var q = {
         start: a.lat.toFixed(5) + ',' + a.lng.toFixed(5), ziel: b.lat.toFixed(5) + ',' + b.lng.toFixed(5), t: t0,
-        boot: $('rp-boot').value, leistung: (parseFloat($('rp-leistung').value) / 100).toFixed(2),
+        boot: (bootNamen[$('rp-boot-such').value] || [''])[0], ohne_spi: $('rp-nospi').checked ? 1 : 0, leistung: (parseFloat($('rp-leistung').value) / 100).toFixed(2),
         max_wind: $('rp-maxwind').value, max_welle: $('rp-maxwelle').value, wendezeit_s: $('rp-wende').value,
         motor: $('rp-motor').checked ? 1 : 0, motor_unter: $('rp-motorunter').value, motor_kn: $('rp-motorkn').value,
         ozean: $('rp-ozean').checked ? 1 : 0, tiefe: $('rp-tiefe').checked ? 1 : 0, reserve_m: $('rp-reserve').value

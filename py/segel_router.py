@@ -44,7 +44,7 @@ RICHT = [r for r in RICHT if r != (0, 0)]
 assert len(RICHT) == 32, len(RICHT)
 
 STANDARD = dict(leistung=0.85, motor=True, motor_kn=5.5, motor_unter=3.0, max_wind=25.0, max_welle=2.5,
-                wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5)
+                wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5, ohne_spi=True)
 
 
 class Fehler(Exception):
@@ -150,7 +150,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     o = dict(STANDARD)
     o.update({k: v for k, v in opt.items() if v is not None})
     uhr = time.time()
-    P = segel_polare.polare(boot)
+    P = segel_polare.polare(boot, ohne_spi=o["ohne_spi"])
     la_a, lo_a = start
     la_b, lo_b = ziel
     dist = _km(la_a, lo_a, la_b, lo_b)

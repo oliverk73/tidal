@@ -6,13 +6,14 @@ Ein ORC-Zertifikat enthaelt unter "Allowances" die Zeit je Seemeile (s/sm) fuer 
 Windwinkel 52–150°, dazu Kreuz-VMG + Wendewinkel (Beat/BeatAngle), Vorwind-VMG + Halsenwinkel (Run/GybeAngle)
 und DW165/DW180. Daraus wird eine Tabelle Fahrt durchs Wasser [kn] ueber TWS 0–40 kn x TWA 0–180° (1°-Raster).
 
-ORC rechnet mit Regattacrew und Spinnaker; fuer Fahrtensegeln gibt das Routing einen Leistungsfaktor (z. B. 85 %).
+ORC rechnet mit Regattacrew; fuer Fahrtensegeln gibt das Routing einen Leistungsfaktor (z. B. 85 %). Ohne Spinnaker:
+Non-Spinnaker-Zertifikat der Klasse, wo vorhanden (ohne_spi=True).
 
-    P = polare('bavaria37')
+    P = polare('bavaria-37', ohne_spi=True)
     P.fahrt(tws_kn, twa_grad)          # vektorisiert, kn; 0 im Wendebereich (TWA < Wendewinkel)
     P.wendewinkel(tws_kn)
 
-Aufruf:  venv/bin/python py/segel_polare.py [boot]   -> laedt fehlende Zertifikate, druckt die Polare
+Aufruf:  venv/bin/python py/segel_polare.py [boot-id] [nospi]   -> druckt die Polare
 """
 import json
 import os
@@ -22,38 +23,52 @@ import numpy as np
 import requests
 
 BASIS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDNER = os.path.join(BASIS, "quellen", "routing", "polare")
+ORDNER = os.path.join(BASIS, "quellen", "routing", "polare", "orc")
+KATALOG = os.path.join(BASIS, "quellen", "routing", "orc_katalog.json")
 ORC_URL = "https://data.orc.org/public/WPub.dll?action=DownBoatRMS&RefNo={ref}&ext=json"
 
-# Je Klasse das ORC-Standard-Zertifikat mit dem mittleren APHD der aktiven Zertifikate (20.11.2026)
-BOOTE = {
-    "bavaria37": {"name": "Bavaria Cruiser 37", "ref": "03510004WCD"},     # BAS TARD (ESP), Median von 11
-    "oceanis393": {"name": "Beneteau Oceanis 393", "ref": "03420004LJ1"},  # PENY LANE (GRE), Median von 12
-    "hanse370": {"name": "Hanse 370", "ref": "03440004N9R"},               # Rabagast (NOR), Median von 16
-    "dehler38": {"name": "Dehler 38", "ref": "04310004K36"},               # IJsvogel (NED), Median von 49
-}
-STANDARD = "bavaria37"
+# Alle Bootsklassen aus ORC (py/orc_katalog.py, 20.11.2026): je Klasse das Zertifikat mit dem mittleren APHD,
+# "spi" = ORC Standard (mit Spinnaker), "nospi" = Non-Spinnaker-Zertifikat, wo es eines gibt.
+STANDARD = "bavaria-37"
+ALT = {"bavaria37": "bavaria-37", "oceanis393": "oceanis-393", "hanse370": "hanse-370", "dehler38": "dehler-38"}
+_KAT = {}
 
 
-def _laden(boot):
+def katalog():
+    try:
+        st = os.stat(KATALOG).st_mtime
+    except OSError:
+        return {}
+    if _KAT.get("st") != st:
+        with open(KATALOG) as f:
+            k = json.load(f)
+        _KAT.clear()
+        _KAT.update(st=st, boote={b["id"]: b for b in k["boote"]}, stand=k.get("stand"))
+    return _KAT["boote"]
+
+
+def _laden(ref):
     os.makedirs(ORDNER, exist_ok=True)
-    pfad = os.path.join(ORDNER, boot + ".json")
+    pfad = os.path.join(ORDNER, ref + ".json")
     if not os.path.exists(pfad):
-        r = requests.get(ORC_URL.format(ref=BOOTE[boot]["ref"]), timeout=60)
+        r = requests.get(ORC_URL.format(ref=ref), timeout=60)
         r.raise_for_status()
         d = json.loads(r.content.decode("utf-8-sig"))["rms"][0]
-        keep = {k: d.get(k) for k in ("YachtName", "Class", "SailNo", "RefNo", "IssueDate", "LOA", "Draft",
-                                      "Dspl_Sailing", "Builder", "Designer", "Allowances")}
-        with open(pfad, "w") as f:
-            json.dump(keep, f, indent=1)
+        keep = {k: d.get(k) for k in ("YachtName", "Class", "SailNo", "RefNo", "NatAuth", "Family", "IssueDate", "LOA",
+                                      "Draft", "Dspl_Sailing", "Builder", "Designer", "Age_Year", "APHD", "Allowances")}
+        with open(pfad + ".neu", "w") as f:
+            json.dump(keep, f, ensure_ascii=False)
+        os.replace(pfad + ".neu", pfad)
     with open(pfad) as f:
         return json.load(f)
 
 
 class Polare:
-    def __init__(self, boot):
+    def __init__(self, boot, eintrag, variante):
         self.boot = boot
-        self.daten = d = _laden(boot)
+        self.eintrag = eintrag
+        self.variante = variante
+        self.daten = d = _laden(eintrag[variante])
         A = d["Allowances"]
         ws = np.array(A["WindSpeeds"], dtype="f8")
         winkel = A["WindAngles"]
@@ -63,8 +78,8 @@ class Polare:
         for i in range(len(ws)):
             ba = A["BeatAngle"][i]
             pts = [(ba, kn(A["Beat"])[i] / np.cos(np.radians(ba)))]
-            pts += [(w, kn(A["R%d" % w])[i]) for w in winkel if w > ba]
-            pts += [(165.0, kn(A["DW165"])[i]), (180.0, kn(A["DW180"])[i])]
+            pts += [(w, kn(A["R%d" % w])[i]) for w in winkel if w > ba and A.get("R%d" % w)]
+            pts += [(a_, kn(A[k_])[i]) for a_, k_ in ((165.0, "DW165"), (180.0, "DW180")) if A.get(k_)]
             pts.sort()
             spalten.append((ba, pts))
         self.tws = np.arange(0, 41, 1.0)
@@ -115,29 +130,39 @@ class Polare:
 
     def info(self):
         d = self.daten
-        return {"id": self.boot, "name": BOOTE[self.boot]["name"], "yacht": d.get("YachtName"),
+        return {"id": self.boot, "name": self.eintrag["name"], "yacht": d.get("YachtName"),
                 "klasse": d.get("Class"), "segelnr": d.get("SailNo"), "loa": d.get("LOA"), "tiefgang": d.get("Draft"),
-                "quelle": "ORC certificate %s (%s)" % (d.get("RefNo"), (d.get("IssueDate") or "")[:10])}
+                "variante": self.variante, "ohne_spi_verfuegbar": bool(self.eintrag.get("nospi")),
+                "quelle": "ORC %s certificate %s (%s, %s)" % ("non-spinnaker" if self.variante == "nospi" else "standard",
+                                                            d.get("RefNo"), d.get("NatAuth"), (d.get("IssueDate") or "")[:10])}
 
 
 _CACHE = {}
 
 
-def polare(boot=STANDARD):
-    if boot not in BOOTE:
+def polare(boot=STANDARD, ohne_spi=False):
+    """ohne_spi=True nimmt das Non-Spinnaker-Zertifikat, wenn die Klasse eins hat (sonst das Standard-Zertifikat)."""
+    K = katalog()
+    boot = ALT.get(boot, boot)
+    if boot not in K:
         boot = STANDARD
-    if boot not in _CACHE:
-        _CACHE[boot] = Polare(boot)
-    return _CACHE[boot]
+    e = K[boot]
+    variante = "nospi" if (ohne_spi and e.get("nospi")) or not e.get("spi") else "spi"
+    if (boot, variante) not in _CACHE:
+        if len(_CACHE) > 50:
+            _CACHE.clear()
+        _CACHE[(boot, variante)] = Polare(boot, e, variante)
+    return _CACHE[(boot, variante)]
 
 
 def liste():
-    return [{"id": k, "name": v["name"]} for k, v in BOOTE.items()]
+    """kompakt fuer das Auswahlfeld: [id, Name, LOA, Non-Spinnaker vorhanden, Anzahl Zertifikate]"""
+    return [[b["id"], b["name"], b["loa"], 1 if b.get("nospi") else 0, b["anzahl"]] for b in katalog().values()]
 
 
 if __name__ == "__main__":
-    for b in ([sys.argv[1]] if len(sys.argv) > 1 else BOOTE):
-        P = polare(b)
+    for b in ([sys.argv[1]] if len(sys.argv) > 1 else [STANDARD]):
+        P = polare(b, ohne_spi=len(sys.argv) > 2)
         print(P.info())
         print("TWS  " + " ".join("%5d" % a for a in (40, 45, 52, 60, 75, 90, 110, 120, 135, 150, 165, 180)) + "   Wende")
         for t in (4, 6, 8, 10, 12, 16, 20, 25):

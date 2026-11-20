@@ -2404,7 +2404,7 @@ def api_route_boats():
 def api_route():
     """Schnellste Segelroute (py/segel_router.py, 20.11.2026): start=lat,lon ziel=lat,lon t=Unix-s boot=id
     + Optionen leistung (0–1), motor (0/1), motor_kn, motor_unter, max_wind, max_welle, wendezeit_s, ozean (0/1),
-    tiefe (0/1), reserve_m."""
+    tiefe (0/1), reserve_m, ohne_spi (0/1: ORC-Non-Spinnaker-Polare, wo vorhanden)."""
     import segel_router
     try:
         la_a, lo_a = (float(x) for x in request.args["start"].split(","))
@@ -2414,7 +2414,7 @@ def api_route():
         for k in ("leistung", "motor_kn", "motor_unter", "max_wind", "max_welle", "wendezeit_s", "reserve_m"):
             if request.args.get(k):
                 opt[k] = float(request.args[k])
-        for k in ("motor", "ozean", "tiefe"):
+        for k in ("motor", "ozean", "tiefe", "ohne_spi"):
             if request.args.get(k) in ("0", "1"):
                 opt[k] = request.args[k] == "1"
     except (KeyError, ValueError):
