@@ -6,7 +6,7 @@ Wassertiefe fuer das Segel-Routing aus EMODnet Bathymetry (WCS, Europa, 1/16' ~1
         -> (ny, nx) float32: hoechster Grund je Rasterzelle in m ueber LAT (negativ = Tiefe, positiv = trockenfallend),
            NaN = keine Daten; None = Gebiet nicht abgedeckt / Dienst nicht erreichbar.
 Je Zelle zaehlt der flachste EMODnet-Punkt (vorsichtig: eine schmale Untiefe faellt nicht durch das Raster).
-Abrufe werden in quellen/routing/tiefe/ zwischengespeichert (Kachel = gerundetes Rechteck).
+Abrufe werden in quellen/routing/tiefe/ zwischengespeichert (Kachel = gerundetes Rechteck, hoechstens 300 MB).
 """
 import hashlib
 import io
@@ -37,7 +37,19 @@ def _abruf(s, n, w, e):
     a = np.array(Image.open(io.BytesIO(r.content)), dtype="f4")
     a[(a < -12000) | (a > 9000) | ~np.isfinite(a)] = np.nan
     np.save(pfad, a)
+    _aufraeumen()
     return a
+
+
+def _aufraeumen(grenze=300 * 2**20):
+    """Zwischenspeicher hoechstens `grenze` Byte: die am laengsten nicht benutzten Kacheln fallen zuerst."""
+    dateien = [os.path.join(ORDNER, f) for f in os.listdir(ORDNER) if f.endswith(".npy")]
+    dateien.sort(key=lambda f: max(os.path.getatime(f), os.path.getmtime(f)), reverse=True)
+    summe = 0
+    for f in dateien:
+        summe += os.path.getsize(f)
+        if summe > grenze:
+            os.remove(f)
 
 
 def flachstes(s, n, w, e, ny, nx):

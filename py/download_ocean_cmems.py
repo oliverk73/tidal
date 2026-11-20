@@ -11,8 +11,8 @@ Ausgabe (quellen/ozeanstrom/):
   cmems_uv.i16   int16 mm/s, Form (T, 2, NY, NX), Zeile 0 = Sued (-80°), Spalte 0 = -180°; Land = -32768
   cmems_meta.json  Zeiten (Unix-s), Raster, Quelle, Abrufzeit
 
-Aufruf:  venv/bin/python py/download_ocean_cmems.py [--tage 5]
-Dauer ~5 min, voruebergehend ~1,5 GB in quellen/ozeanstrom/roh.
+Aufruf:  venv/bin/python py/download_ocean_cmems.py [--tage 10]   (Copernicus rechnet 10 Tage voraus)
+Dauer ~6 min, voruebergehend ~3 GB in quellen/ozeanstrom/roh, danach ~1,4 GB.
 """
 import argparse
 import json
@@ -31,7 +31,7 @@ LAND = -32768
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tage", type=float, default=5.0, help="Vorhersage ab heute 00 UTC (Tage)")
+    ap.add_argument("--tage", type=float, default=10.0, help="Vorhersage ab heute 00 UTC (Tage)")
     a = ap.parse_args()
     import copernicusmarine as cm
 

@@ -200,7 +200,8 @@ def main():
 
     # Clean old files
     for f in os.listdir(OUTPUT_DIR):
-        if (f.startswith("wave_") or f.startswith("wdir_")) and f.endswith(".bin"):
+        if ((f.startswith("wave_") or f.startswith("wdir_")) and f.endswith(".bin")) or \
+                (f.startswith("gfswave.") and f.endswith(".idx")):          # cfgrib-Indexdateien (20.11.2026)
             os.remove(os.path.join(OUTPUT_DIR, f))
 
     if args.date and args.cycle:

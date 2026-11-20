@@ -20,7 +20,7 @@ Quelle ist jeweils der neueste GFS-Lauf der NOAA (alle 6 h ein neuer Lauf). Jede
 | Wellen weltweit | `venv/bin/python py/download_wave_forecast.py` | wenige Minuten |
 | Wellen Ostsee, Mittelmeer, Rotes Meer, Golf | `venv/bin/python py/download_wave_regional.py` | einige Minuten |
 | Meeresströmung (HYCOM) | `venv/bin/python py/download_ocean_currents.py` | länger |
-| Ozeanstrom für „Total current“ in der Gezeitenstrom-Ebene (Copernicus GLO12, ohne Gezeiten, 5 Tage) | `venv/bin/python py/download_ocean_cmems.py` | ca. 5 Minuten |
+| Ozeanstrom für „Total current“ in der Gezeitenstrom-Ebene (Copernicus GLO12, ohne Gezeiten, 10 Tage) | `venv/bin/python py/download_ocean_cmems.py` | ca. 5 Minuten |
 | Wassertemperatur | `venv/bin/python py/download_sst.py` (Copernicus OSTIA 0,1°; fällt Copernicus aus, nimmt es NOAA OISST) | ca. 1 Minute |
 | Regenradar-Nowcast | `venv/bin/python py/compute_radar_nowcast.py` | einige Minuten |
 
