@@ -24,10 +24,10 @@ import numpy as np
 import xarray as xr
 from datetime import datetime, timezone, timedelta
 
-OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                           "static", "tides")
 
-FES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+FES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                        "tide_models", "fes2022b", "ocean_tide_extrapolated")
 
 NO_DATA = -32768

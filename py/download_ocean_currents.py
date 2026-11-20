@@ -21,7 +21,7 @@ import numpy as np
 import xarray as xr
 from datetime import datetime, timezone, timedelta
 
-OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                           "static", "ocean_currents")
 
 HYCOM_URL = ("https://tds.hycom.org/thredds/dodsC/"
@@ -171,8 +171,8 @@ def main():
                         help="Forecast hours to download (default: 72)")
     parser.add_argument("--step", type=int, default=3,
                         help="Hour step between frames (default: 3)")
-    parser.add_argument("--res", type=float, default=0.16,
-                        help="Target resolution in degrees (default: 0.16)")
+    parser.add_argument("--res", type=float, default=0.32,
+                        help="Target resolution in degrees (default: 0.32; 0.16 gives ~25 MB per frame)")
     parser.add_argument("--region", default="global",
                         choices=REGIONS.keys(),
                         help="Region to download (default: europe)")
