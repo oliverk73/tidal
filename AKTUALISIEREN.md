@@ -77,4 +77,4 @@ Ob der Sammler läuft: `systemctl --user list-timers sammler-holen.timer`
 
 Meeresströmung, Wassertemperatur und Nowcast ändern sich langsamer bzw. sind seltener gebraucht; bei Bedarf dazunehmen.
 
-Stand der Kartendaten am 18.11.2026 abends: Wind, Druck, Niederschlag, Wellen, Windstau aktuell; Wassertemperatur 18.11. (seit 19.11. Copernicus OSTIA statt NOAA), Nowcast 18.11. 22 Uhr (pysteps + opencv seit 18.11. im venv), Meeresströmung 13.5.
+Stand der Kartendaten am 20.11.2026 vormittags: Wind, Druck, Wellen (global + regional) GFS-Lauf 20.11. 00 UTC; Meeresströmung HYCOM bis 23.11.; Ozeanstrom Copernicus bis 30.11.; Windstau, Wassertemperatur, Nowcast und Gezeitenhöhe (compute_tide_forecast.py, Stand 13.5.) nicht neu geladen. Bis 20.11. schrieben download_ocean_currents.py und compute_tide_forecast.py nach py/static/ (Pfadfehler seit dem Verschieben nach py/ am 14.11.) – behoben.
