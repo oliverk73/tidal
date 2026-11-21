@@ -79,6 +79,23 @@ KLASSEN = [
 ]
 FELDER = ("id", "name", "crew", "trapez", "loa", "breite", "masse", "sa", "spi_art", "spi", "pn", "ys", "crew_kg", "tiefgang")
 
+# Katamarane (Oliver 21.11.2026): Daten aus der SCHRS-Ratingliste (schrs.com/ratings: Gewicht WS, LOA, Breite, Gross CM +
+# Fock CJ, Spi CSPI, Trapez); PN = RYA 2026, sonst SCHRS x 678 (RYA-Umrechnungsregel). Tiefgang = Schwert (LB) bzw.
+# 0,45 m bei Asymmetrie-Rumpf ohne Schwert (Hobie 14/16). Gleiche Felder wie KLASSEN, "pn" = benutzte Zahl, "ys" = None.
+KATAMARANE = [
+    ("hobie-14", "Hobie 14", 1, 1, 4.25, 2.34, 109, 11.2, None, 0, round(1.448 * 678), None, 80, 0.45),
+    ("hobie-16", "Hobie 16", 2, 1, 5.08, 2.41, 145, 20.1, "asym", 17.65, round(1.160 * 678), None, 135, 0.45),
+    ("hobie-18", "Hobie 18", 2, 1, 5.52, 2.44, 181, 22.3, None, 0, round(1.117 * 678), None, 150, 0.57),
+    ("dart-18", "Dart 18", 2, 1, 5.46, 2.29, 140, 16.3, None, 0, 795, None, 135, 0.45),
+    ("topcat-k1", "Topcat K1", 2, 2, 5.50, 2.50, 177, 22.1, "asym", 18.8, round(1.060 * 678), None, 140, 0.6),
+    ("nacra-15", "Nacra 15", 2, 2, 4.70, 2.34, 150, 16.6, "asym", 15.9, round(1.113 * 678), None, 120, 0.95),
+    ("nacra-500", "Nacra 500", 2, 2, 5.08, 2.44, 150, 17.7, "asym", 17.0, round(1.131 * 678), None, 135, 0.8),
+    ("formula-18", "Formula 18 (Hobie Wildcat, Nacra F18 ...)", 2, 2, 5.52, 2.60, 180, 21.3, "asym", 21.0, 678, None, 150, 1.4),
+    ("spitfire", "Spitfire", 2, 2, 4.97, 2.52, 140, 20.0, "asym", 18.0, 745, None, 130, 0.76),
+    ("tornado", "Tornado", 2, 2, 6.09, 3.05, 165, 22.9, "asym", 25.9, round(0.960 * 678), None, 150, 0.9),
+    ("shadow-x", "Shadow X", 1, 1, 4.80, 2.40, 102, 12.95, "asym", 13.7, round(1.125 * 678), None, 80, 0.64),
+]
+
 # Segelbeiwerte Gross+Fock (ORC-aehnlich, ohne induzierten Anteil) ueber AWA
 AWA = np.array([0, 15, 20, 25, 28, 32, 40, 50, 60, 70, 80, 90, 100, 110, 120, 140, 160, 180.0])
 CL = np.array([0, 0.00, 0.40, 1.00, 1.25, 1.38, 1.42, 1.43, 1.43, 1.42, 1.40, 1.35, 1.25, 1.10, 0.95, 0.60, 0.30, 0.10])   # < 20° AWA killt das Vorliek (Day: AWA 27–33°)
@@ -104,6 +121,9 @@ def klasse(kid):
 class Boot:
     def __init__(self, k, glob, kfak=1.0):
         self.k, self.g, self.kfak = k, glob, kfak
+        if k.get("kat"):
+            self._kat(k, glob)
+            return
         self.lwl = 0.93 * k["loa"]
         self.delta = k["masse"] + k["crew_kg"] + 5
         self.sw = 0.62 * self.lwl * min(k["breite"], 1.9)
@@ -121,6 +141,25 @@ class Boot:
         # voll, ab c = 0,0045 gar nicht (Widerstand steigt hinter dem Buckel weiter: Wellenwand)
         self.gleit = float(np.clip((0.0045 - c) / (0.0045 - 0.0026), 0, 1))
 
+    def _kat(self, k, glob):
+        """Katamaran: zwei schlanke Rümpfe (kein Gleitbuckel, Restwiderstand je Rumpf klein), Kippen über den Lee-Rumpf:
+        Boot mit halber Breite, Crew auf dem Luv-Rumpf bzw. im Trapez (Hebel volle Breite + 0,3 / 0,95 m)."""
+        self.lwl = 0.96 * k["loa"]
+        self.delta = k["masse"] + k["crew_kg"] + 5
+        self.sw = 1.1 * self.lwl
+        self.hce = 0.85 * math.sqrt(k["sa"]) + 0.5
+        n = k["crew"]
+        per = k["crew_kg"] / n
+        heb = []
+        for i in range(n):
+            trapez = k["trapez"] == 2 or (k["trapez"] == 1 and i == n - 1)
+            heb.append(k["breite"] + (0.95 if trapez else 0.3))
+        self.rm = G * per * sum(heb) + G * k["masse"] * 0.5 * k["breite"]
+        c = (self.delta / 2) / (RHO_W * self.lwl ** 3)
+        self.rpeak = glob["rpeak"] * (c / 0.0026) ** 0.6 * 0.35
+        self.gleit = 1.0
+        self.span = max(k["tiefgang"], 0.7) * 0.9                 # Rumpf ohne Schwert (Hobie 14/16, Dart) wirkt mit
+
     def widerstand(self, v, quer):
         if v <= 0:
             return 0.0
@@ -132,7 +171,7 @@ class Boot:
         if fn > 0.55:                                          # hinter dem Buckel: gleiten oder Wellenwand
             g_ = self.gleit * g_ + (1 - self.gleit) * (1.0 + 2.5 * (fn - 0.55))
         rr = self.delta * G * self.rpeak * g_
-        span = self.k["tiefgang"] * 0.9
+        span = getattr(self, "span", self.k["tiefgang"] * 0.9)
         ri = quer ** 2 / (0.5 * RHO_W * v * v * math.pi * span ** 2)
         return self.kfak * (rf + rr) + ri
 
@@ -174,6 +213,15 @@ class Boot:
     def fahrt(self, tws, twa):
         """kn; erste Nullstelle von Vortrieb - Widerstand von unten (Gleitbuckel ist eine echte Schwelle)."""
         out = 0.0
+        if self.k.get("kat"):                                     # kein Gleitbuckel: hoechste Fahrt mit Vortrieb > Widerstand
+            for spi in ([False, True] if self.k["spi"] else [False]):
+                for v in np.arange(0.2, 16.0, 0.1):
+                    vor, quer = self.aero(v, tws, twa, spi)
+                    if vor - self.widerstand(v, quer) > 0:
+                        out = max(out, v / KN)
+                    elif out > 0 and v / KN > out + 1.0:
+                        break
+            return out
         for spi in ([False, True] if self.k["spi"] else [False]):
             # Start bei 1/4 Windgeschwindigkeit: darunter macht das Boot Abdrift statt Fahrt (der induzierte
             # Schwertwiderstand ~ 1/v² waere sonst eine kuenstliche Sperre); der Gleitbuckel darueber bleibt Schwelle
@@ -246,8 +294,10 @@ def tabelle(b):
     # Mittel aus 3), nicht unter 36° (Laser 40–46° lt. Day 2017; < 36° waere Kneifen)
     roh = []
     for w in WIND:
-        roh.append(max(((b.fahrt(w, a) * math.cos(math.radians(a)), a) for a in range(34, 56)))[1])
-    glatt = [max(36.0, float(np.mean(roh[max(0, i - 1):i + 2]))) for i in range(len(roh))]
+        roh.append(max(((b.fahrt(w, a) * math.cos(math.radians(a)), a) for a in range(34, 60)))[1])
+    unten = 40.0 if b.k.get("kat") else 36.0                     # Katamarane kneifen nicht (Amwind 40–50°)
+    roh = [max(r_, unten - 2) for r_ in roh]
+    glatt = [max(unten, float(np.mean(roh[max(0, i - 1):i + 2]))) for i in range(len(roh))]
     for i, w in enumerate(WIND):
         au = round(glatt[i])
         vu = b.fahrt(w, au) * math.cos(math.radians(au))
@@ -277,8 +327,9 @@ def main(argv):
     t0, pn0 = kurszeit(b0), klasse("ilca-7")["pn"]
     wahl = [a for a in argv if not a.startswith("--")]
     katalog = []
-    for kt in KLASSEN:
+    for kt in KLASSEN + [x + ("kat",) for x in KATAMARANE]:
         k = dict(zip(FELDER, kt))
+        k["kat"] = len(kt) > len(FELDER)
         if wahl and k["id"] not in wahl:
             continue
         pn = k["pn"] or round(umr(k["ys"]))
@@ -293,7 +344,7 @@ def main(argv):
         kf = math.sqrt(lo * hi)
         b = Boot(k, g, kf)
         A = tabelle(b)
-        quelle = "PN %d (%s)" % (pn, "RYA 2026" if k["pn"] else "aus Yardstick %s" % k["ys"])
+        quelle = ("PN %d (RYA 2026 / SCHRS x 678)" % pn) if k["kat"] else "PN %d (%s)" % (pn, "RYA 2026" if k["pn"] else "aus Yardstick %s" % k["ys"])
         d = {"YachtName": k["name"], "Class": k["name"], "RefNo": "jolle-" + k["id"], "NatAuth": "VPP",
              "IssueDate": "2026-11-21", "LOA": k["loa"], "Draft": k["tiefgang"], "Dspl_Sailing": k["masse"] + k["crew_kg"],
              "Allowances": A, "Jolle": {**k, "widerstandsfaktor": round(kf, 3), "pn_benutzt": pn, "quelle_pn": quelle}}
@@ -306,8 +357,8 @@ def main(argv):
             with open(os.path.join(ORDNER, "jolle-%s-nospi.json" % k["id"]), "w") as f:
                 json.dump(d2, f, ensure_ascii=False)
             nospi = "jolle-%s-nospi" % k["id"]
-        katalog.append({"id": "jolle-" + k["id"], "klasse": k["name"].upper(), "name": k["name"] + " (dinghy)",
-                        "anzahl": 0, "loa": k["loa"], "multi": False, "jolle": True,
+        katalog.append({"id": "jolle-" + k["id"], "klasse": k["name"].upper(), "name": k["name"] + (" (catamaran)" if k["kat"] else " (dinghy)"),
+                        "anzahl": 0, "loa": k["loa"], "multi": k["kat"], "jolle": True,
                         "spi": "jolle-" + k["id"], "nospi": nospi})
         print("%-26s PN %4d  Faktor %.2f  Wende %s  VMG amwind %s" % (
             k["name"], pn, kf, "/".join("%d" % a for a in A["BeatAngle"][1:7]),

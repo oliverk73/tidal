@@ -144,7 +144,7 @@ class Polare:
                 "klasse": d.get("Class"), "segelnr": d.get("SailNo"), "loa": d.get("LOA"), "tiefgang": d.get("Draft"),
                 "variante": self.variante, "ohne_spi_verfuegbar": bool(self.eintrag.get("nospi")),
                 "jolle": bool(d.get("Jolle")),
-                "quelle": ("dinghy VPP calibrated to %s, %s" % (d["Jolle"]["quelle_pn"], "no spinnaker" if self.variante == "nospi" else "with spinnaker")
+                "quelle": ("%s VPP calibrated to %s, %s" % ("catamaran" if d["Jolle"].get("kat") else "dinghy", d["Jolle"]["quelle_pn"], "no spinnaker" if self.variante == "nospi" else "with spinnaker")
                            if d.get("Jolle") else
                            "ORC %s certificate %s (%s, %s)" % ("non-spinnaker" if self.variante == "nospi" else "standard",
                                                                d.get("RefNo"), d.get("NatAuth"), (d.get("IssueDate") or "")[:10]))}
