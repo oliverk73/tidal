@@ -13,6 +13,7 @@ Dieses Skript aktualisiert den Klon ~/tidal-sammler und vereinigt dann:
   quellen/tide_tables/kuwait_met/<pegel>.csv     je Scheitelzeit der juengste Abruf (seit 29.10.2026)
   quellen/water_levels/imi_connemara/<zelle>.csv je Stunde der juengste Abruf (Connemara-Modell, seit 13.11.2026)
   quellen/water_levels/dmi_dkss/<zelle>.csv      je Stunde der kuerzeste Vorlauf (DMI DKSS, seit 19.11.2026)
+  quellen/water_levels/imi_neatl/<zelle>.csv     je Stunde der juengste Abruf (IMI NEATL Suedwest-Irland, seit 21.11.2026)
 Im Klon liegen die Daten ohne quellen/ (water_levels/..., tide_tables/...); vom 15. bis 19.11.2026 suchte das
 Skript dort faelschlich unter quellen/ und holte nichts.
 Lokal vorhandene Werte gehen nie verloren; es kommt nur hinzu.
@@ -112,12 +113,13 @@ def kuwait():
     return neu_gesamt
 
 
-def connemara():
+def connemara(ordner='imi_connemara'):
+    """Auch fuer IMI NEATL (Suedwest-Irland, seit 21.11.2026): ordner='imi_neatl'."""
     import io
-    ziel = os.path.join(ROOT, 'quellen/water_levels/imi_connemara')
+    ziel = os.path.join(ROOT, 'quellen/water_levels', ordner)
     os.makedirs(ziel, exist_ok=True)
     neu_gesamt = 0
-    for q in glob.glob(os.path.join(KLON, 'water_levels/imi_connemara/*.csv')):
+    for q in glob.glob(os.path.join(KLON, 'water_levels', ordner, '*.csv')):
         p = os.path.join(ziel, os.path.basename(q))
         lokal = {z['zeit_utc']: z for z in csv.DictReader(open(p, encoding='utf-8'))} if os.path.exists(p) else {}
         vorher, geaendert, felder = len(lokal), False, None
@@ -179,6 +181,7 @@ def main():
     print(f'  Kuwait: +{kuwait()} Scheitel')
     print(f'  Connemara: +{connemara()} Stunden')
     print(f'  DKSS: +{dkss()} Stunden')
+    print(f'  NEATL (SW-Irland): +{connemara("imi_neatl")} Stunden')
     return 0
 
 
