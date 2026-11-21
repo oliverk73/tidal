@@ -99,6 +99,14 @@ def chs_hilo(code):
     return s, t, np.array([b for _, b in ev])
 
 
+# Namen, denen der NOAA-Text den Ortsbezug nicht mitgibt oder die Fuellwoerter tragen (21.11.2026, Gewaesser per OSM)
+NAME_FIX = {'8537535': 'Mad Horse Creek (1 n.mi. above entrance)', '8666659': 'Combahee River (U.S. 17 bridge)',
+            '8669072': 'New River (SC 170 bridge)', '8722472': 'Boy Scout Dock (Loxahatchee River)',
+            '8534043': 'Wading River', '8660275': 'Conway (railroad bridge)', '8665257': 'Canaday Landing (Edisto River)',
+            '8666017': 'Penny Creek (Edisto River)', '9450244': 'Menefee Anchorage (Prince of Wales Island)',
+            '9450817': 'Tuxekan (0.5 mi S)', '8723667': 'Key Largo (South Sound)'}
+
+
 def noaa_name(n):
     """'Steinhatchee River ent., Deadman Bay' -> 'Steinhatchee River entrance (Deadman Bay)'; Staatskuerzel am Ende weg."""
     import re
@@ -130,7 +138,7 @@ def auto_kandidaten():
         if any(math.hypot(st['lat'] - a, (st['lng'] - b) * math.cos(math.radians(a))) * 111.2 < 3 for a, b in gew):
             continue
         gew.append((st['lat'], st['lng']))
-        noaa.append(('auto', st['id'], staat, noaa_name(st['name'])))
+        noaa.append(('auto', st['id'], staat, NAME_FIX.get(st['id'], noaa_name(st['name']))))
     for st in json.load(open(os.path.join(ROOT, 'quellen/tide_tables/CHS_hilo/stations.json'))):
         if not any(t['code'] == 'wlp-hilo' for t in st.get('timeSeries', [])) or abst(st['latitude'], st['longitude']) <= 10:
             continue
