@@ -25,6 +25,9 @@ import requests
 BASIS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ORDNER = os.path.join(BASIS, "quellen", "routing", "polare", "orc")
 KATALOG = os.path.join(BASIS, "quellen", "routing", "orc_katalog.json")
+# Jollen (py/jollen_polare.py, 21.11.2026): VPP + Yardstick, gleiches Format wie ein ORC-Zertifikat
+JOLLEN_KATALOG = os.path.join(BASIS, "quellen", "routing", "jollen_katalog.json")
+JOLLEN_ORDNER = os.path.join(BASIS, "quellen", "routing", "polare", "jollen")
 ORC_URL = "https://data.orc.org/public/WPub.dll?action=DownBoatRMS&RefNo={ref}&ext=json"
 
 # Alle Bootsklassen aus ORC (py/orc_katalog.py, 20.11.2026): je Klasse das Zertifikat mit dem mittleren APHD,
@@ -36,18 +39,25 @@ _KAT = {}
 
 def katalog():
     try:
-        st = os.stat(KATALOG).st_mtime
+        st = (os.stat(KATALOG).st_mtime, os.stat(JOLLEN_KATALOG).st_mtime if os.path.exists(JOLLEN_KATALOG) else 0)
     except OSError:
         return {}
     if _KAT.get("st") != st:
         with open(KATALOG) as f:
             k = json.load(f)
+        boote = {b["id"]: b for b in k["boote"]}
+        if os.path.exists(JOLLEN_KATALOG):
+            with open(JOLLEN_KATALOG) as f:
+                boote.update({b["id"]: b for b in json.load(f)["boote"]})
         _KAT.clear()
-        _KAT.update(st=st, boote={b["id"]: b for b in k["boote"]}, stand=k.get("stand"))
+        _KAT.update(st=st, boote=boote, stand=k.get("stand"))
     return _KAT["boote"]
 
 
 def _laden(ref):
+    if ref.startswith("jolle-"):                                   # lokal gerechnet, kein Download
+        with open(os.path.join(JOLLEN_ORDNER, ref + ".json")) as f:
+            return json.load(f)
     os.makedirs(ORDNER, exist_ok=True)
     pfad = os.path.join(ORDNER, ref + ".json")
     if not os.path.exists(pfad):
@@ -133,8 +143,11 @@ class Polare:
         return {"id": self.boot, "name": self.eintrag["name"], "yacht": d.get("YachtName"),
                 "klasse": d.get("Class"), "segelnr": d.get("SailNo"), "loa": d.get("LOA"), "tiefgang": d.get("Draft"),
                 "variante": self.variante, "ohne_spi_verfuegbar": bool(self.eintrag.get("nospi")),
-                "quelle": "ORC %s certificate %s (%s, %s)" % ("non-spinnaker" if self.variante == "nospi" else "standard",
-                                                            d.get("RefNo"), d.get("NatAuth"), (d.get("IssueDate") or "")[:10])}
+                "jolle": bool(d.get("Jolle")),
+                "quelle": ("dinghy VPP calibrated to %s, %s" % (d["Jolle"]["quelle_pn"], "no spinnaker" if self.variante == "nospi" else "with spinnaker")
+                           if d.get("Jolle") else
+                           "ORC %s certificate %s (%s, %s)" % ("non-spinnaker" if self.variante == "nospi" else "standard",
+                                                               d.get("RefNo"), d.get("NatAuth"), (d.get("IssueDate") or "")[:10]))}
 
 
 _CACHE = {}
@@ -157,7 +170,8 @@ def polare(boot=STANDARD, ohne_spi=False):
 
 def liste():
     """kompakt fuer das Auswahlfeld: [id, Name, LOA, Non-Spinnaker vorhanden, Anzahl Zertifikate]"""
-    return [[b["id"], b["name"], b["loa"], 1 if b.get("nospi") else 0, b["anzahl"]] for b in katalog().values()]
+    return [[b["id"], b["name"], b["loa"], 1 if b.get("nospi") else 0, b["anzahl"], 1 if b.get("jolle") else 0]
+            for b in katalog().values()]
 
 
 if __name__ == "__main__":

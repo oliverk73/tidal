@@ -61,13 +61,14 @@
     var t = new Date(Date.now() + 30 * 60000); t.setMinutes(t.getMinutes() < 30 ? 30 : 60, 0, 0);
     $('rp-zeit').value = localInput(t);
 
-    // ~2700 ORC-Klassen: [id, Name, LOA m, Non-Spinnaker vorhanden, Anzahl Zertifikate]
+    // ~2700 ORC-Klassen + Jollen (21.11.2026): [id, Name, LOA m, Non-Spinnaker vorhanden, Anzahl Zertifikate, Jolle]
     var boote = {}, bootNamen = {};
     function bootLabel(b) { return b[1] + ' (' + b[2].toFixed(1) + ' m)'; }
     function bootInfo() {
       var b = bootNamen[$('rp-boot-such').value];
       if (!b) { $('rp-boot-info').textContent = 'Unknown boat – choose one from the list'; return; }
-      $('rp-boot-info').textContent = b[4] + ' ORC certificate' + (b[4] > 1 ? 's' : '') + (b[3] ? ', non-spinnaker polar available' : ', no non-spinnaker polar (spinnaker polar is used)');
+      $('rp-boot-info').textContent = b[5] ? ('Dinghy: VPP polar calibrated to the class handicap (Portsmouth/Yardstick), about ±10 %' + (b[3] ? ', with and without spinnaker' : ', no spinnaker'))
+        : b[4] + ' ORC certificate' + (b[4] > 1 ? 's' : '') + (b[3] ? ', non-spinnaker polar available' : ', no non-spinnaker polar (spinnaker polar is used)');
       $('rp-nospi').disabled = !b[3];
       $('rp-nospi-zeile').style.opacity = b[3] ? 1 : 0.5;
     }
@@ -79,12 +80,27 @@
       try { gespeichert = localStorage.getItem('rpBoot'); } catch (e) {}
       var b = boote[gespeichert] || boote[d.standard];
       if (b) $('rp-boot-such').value = bootLabel(b);
+      letzteArt = 'yacht'; vorgaben(b);
       bootInfo();
     });
     $('rp-boot-such').addEventListener('input', bootInfo);
+    // Jollen: kein Motor, kurze Wende, niedrigere Wind-/Wellengrenze; beim Wechsel zurueck die Yacht-Vorgaben
+    var JOLLE = { motor: false, wende: 20, maxwind: 20, maxwelle: 1.0, leistung: 95 },
+        YACHT = { motor: true, wende: 60, maxwind: 25, maxwelle: 2.5, leistung: 85 }, letzteArt = null;
+    function vorgaben(b) {
+      var art = b && b[5] ? 'jolle' : 'yacht';
+      if (art === letzteArt) return;
+      var v = art === 'jolle' ? JOLLE : YACHT;
+      if (letzteArt !== null) {
+        $('rp-motor').checked = v.motor; $('rp-wende').value = v.wende; $('rp-maxwind').value = v.maxwind;
+        $('rp-maxwelle').value = v.maxwelle; $('rp-leistung').value = v.leistung;
+      }
+      letzteArt = art;
+    }
     $('rp-boot-such').addEventListener('change', function () {
       var b = bootNamen[this.value];
       if (b) { try { localStorage.setItem('rpBoot', b[0]); } catch (e) {} }
+      vorgaben(b);
       bootInfo();
     });
 

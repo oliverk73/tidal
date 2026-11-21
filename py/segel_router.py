@@ -97,8 +97,11 @@ def _om_abruf(url, la, lo, variablen, t_von, t_bis, extra):
         os.replace(pfad + ".neu", pfad)
         for alt in os.listdir(OM_CACHE):                            # Eintraege aelter als 1 Tag weg
             q = os.path.join(OM_CACHE, alt)
-            if time.time() - os.path.getmtime(q) > 86400:
-                os.remove(q)
+            try:                                                    # Wind- und Wellenabruf raeumen parallel auf (21.11.)
+                if time.time() - os.path.getmtime(q) > 86400:
+                    os.remove(q)
+            except OSError:
+                pass
     if isinstance(d, dict):
         d = [d]
     zeiten = np.array(d[0]["hourly"]["time"], dtype="f8")
