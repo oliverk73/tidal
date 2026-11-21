@@ -104389,10 +104389,11 @@ x 0 0
 # confidence: 4
 # utide: model window 2026-11-08..2026-11-16, const=10 with inference
 # note: 20261121 Modellpunkt lag 10 m an Land; 220 m seewaerts gesetzt (Oliver)
+# note: 20261121 Modellzelle mit staerkstem Strom liegt in der Einfahrt der Aughinish Bay, nicht in der Galway Bay; Name angepasst (Oliver)
 # !units: knots
 # !longitude: -9.0629
 # !latitude: 53.1585
-Aughinish Point (Galway Bay), Clare, Ireland Current
+Aughinish Bay entrance, Clare, Ireland Current
 +00:00 :UTC
 0.0929 knots
 x 0 0
@@ -268771,67 +268772,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 208999 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 206737 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 1 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.11 kn
-# Major axis: 101.5 deg true
+# Major axis: 100.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Ireland
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele208999
+# station_id_context: SSWRS-V3.02-ele206737
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 101.5
+# major_axis_deg_true: 100.6
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 2.0 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 208999 lag direkt am Hafendamm von Kilmore Quay (40 m); Element 206737 vor Crossfarnoge Point (Oliver)
 # !units: knots
-# !longitude: -6.57431
-# !latitude: 52.17204
-Crossfarnoge Point (Ballyteige Burrow), Leinster, Ireland Current
+# !longitude: -6.57666
+# !latitude: 52.16557
+Crossfarnoge Point, Leinster, Ireland Current
 +00:00 :UTC
-0.2192 knots
-J1              0.0075  155.57
-K1              0.0611  3.79
-K2              0.1191  203.75
-L2              0.0689  258.67
-M1              0.0105  177.11
-M2              1.5480  177.36
+0.1570 knots
+J1              0.0072  155.97
+K1              0.0609  6.10
+K2              0.1148  205.53
+L2              0.0642  262.26
+M1              0.0102  179.84
+M2              1.4765  179.29
 x 0 0
-M4              0.0523  238.24
-M6              0.0504  45.46
-M8              0.0086  39.40
-N2              0.2779  139.05
-2N2             0.0207  145.20
-O1              0.0477  228.82
-OO1             0.0054  160.44
-P1              0.0157  7.56
-Q1              0.0166  168.06
-x 0 0
-x 0 0
-x 0 0
-S2              0.4271  203.56
-S4              0.0012  173.83
-x 0 0
-T2              0.0031  31.81
-x 0 0
-MU2             0.1314  5.58
-NU2             0.0331  226.28
+M4              0.0548  215.02
+M6              0.0462  57.81
+M8              0.0089  27.96
+N2              0.2681  141.34
+2N2             0.0196  144.37
+O1              0.0473  231.74
+OO1             0.0051  161.09
+P1              0.0159  9.73
+Q1              0.0165  170.79
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0214  134.57
-MS4             0.0117  153.02
+S2              0.4111  205.39
+S4              0.0025  177.37
 x 0 0
-MF              0.0105  63.10
-MSF             0.0646  38.32
-MM              0.0471  27.72
-SA              0.0169  228.29
-SSA             0.0099  220.48
+T2              0.0031  20.74
+x 0 0
+MU2             0.1239  8.90
+NU2             0.0303  229.51
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0272  129.15
+MS4             0.0224  167.92
+x 0 0
+MF              0.0079  72.35
+MSF             0.0521  38.17
+MM              0.0393  28.88
+SA              0.0152  220.36
+SSA             0.0092  220.68
 x 0 0
 x 0 0
 x 0 0
@@ -268860,7 +268860,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0022  241.45
+x 0 0
+x 0 0
+MK4             0.0047  203.67
 x 0 0
 x 0 0
 x 0 0
@@ -297512,67 +297514,67 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 388130 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 385192 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 3 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.10 kn
-# Major axis: 1.3 deg true
+# Major axis: 3.7 deg true
 #
 # BEGIN HOT COMMENTS
 # country: Ireland
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele388130
+# station_id_context: SSWRS-V3.02-ele385192
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 1.3
+# major_axis_deg_true: 3.7
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 1.6 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 388130 lag 0,9 km im Inneren von Howth Head (fehlt im SSW-RS-Gitter);
+# note: naechstes Wasserelement 385192 vor Casana Rock -- Stromfeld um das fehlende Kap unsicher (Oliver)
 # !units: knots
-# !longitude: -6.06070
-# !latitude: 53.37765
-Casana Rock (1 km WSW, Freshwater Bay), Leinster, Ireland Current
+# !longitude: -6.04102
+# !latitude: 53.37419
+Casana Rock (Howth Head), Leinster, Ireland Current
 +00:00 :UTC
--0.1004 knots
-J1              0.0042  142.95
-K1              0.0221  17.42
-K2              0.0988  221.51
-L2              0.0464  217.46
-M1              0.0040  156.98
-M2              1.3075  176.97
+0.0125 knots
+J1              0.0033  144.63
+K1              0.0254  23.45
+K2              0.0913  235.26
+L2              0.0379  236.77
+M1              0.0039  162.39
+M2              1.1838  191.58
 x 0 0
-M4              0.0793  152.18
-M6              0.0422  41.42
-M8              0.0102  49.45
-N2              0.1923  147.99
-2N2             0.0313  150.92
-O1              0.0119  251.38
-OO1             0.0028  180.22
-P1              0.0069  13.73
-Q1              0.0056  170.06
-x 0 0
-x 0 0
-x 0 0
-S2              0.3367  219.12
-S4              0.0078  185.88
-x 0 0
-T2              0.0037  15.13
-x 0 0
-MU2             0.0996  322.42
-NU2             0.0226  181.49
+M4              0.0376  85.94
+M6              0.0470  124.58
+M8              0.0014  220.29
+N2              0.1811  162.19
+2N2             0.0277  162.78
+O1              0.0151  253.47
+OO1             0.0019  192.52
+P1              0.0072  23.96
+Q1              0.0068  179.77
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0266  100.52
-MS4             0.0304  201.51
+S2              0.3132  232.66
+S4              0.0040  174.77
 x 0 0
-MF              0.0139  203.07
-MSF             0.0286  205.93
-MM              0.0272  197.02
-SA              0.0187  279.76
-SSA             0.0079  166.78
+T2              0.0051  35.06
+x 0 0
+MU2             0.0834  341.85
+NU2             0.0183  202.62
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0163  46.50
+MS4             0.0141  79.42
+x 0 0
+MF              0.0055  193.21
+MSF             0.0081  165.01
+MM              0.0103  194.88
+SA              0.0058  265.00
+SSA             0.0071  180.74
 x 0 0
 x 0 0
 x 0 0
@@ -297601,7 +297603,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0083  180.10
+x 0 0
+x 0 0
+MK4             0.0069  101.06
 x 0 0
 x 0 0
 x 0 0
