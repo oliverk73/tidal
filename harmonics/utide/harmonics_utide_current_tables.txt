@@ -221403,67 +221403,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 480001 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 479137 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by +1 min (median M2 offset of 11 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.24 kn
-# Major axis: 50.3 deg true
+# Major axis: 51.9 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele480001
+# station_id_context: SSWRS-V3.02-ele479137
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 50.3
+# major_axis_deg_true: 51.9
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 4.6 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 480001 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -4.87799
-# !latitude: 54.64386
-Mull of Galloway (2 km NW, Back Bay), Scotland, United Kingdom Current
+# !longitude: -4.87408
+# !latitude: 54.64096
+Mull of Galloway (1 km WNW, Back Bay), Scotland, United Kingdom Current
 +00:00 :UTC
--0.7034 knots
-J1              0.0026  194.93
-K1              0.0686  69.99
-K2              0.2822  249.31
-L2              0.1368  278.72
-M1              0.0060  189.66
-M2              3.5503  215.60
+-0.5132 knots
+J1              0.0033  209.15
+K1              0.0662  72.37
+K2              0.2703  254.00
+L2              0.1212  286.49
+M1              0.0066  188.35
+M2              3.3321  220.15
 x 0 0
-M4              0.2414  151.68
-M6              0.1399  103.12
-M8              0.0266  33.56
-N2              0.5858  182.19
-2N2             0.0686  182.05
-O1              0.0585  303.41
-OO1             0.0019  78.81
-P1              0.0237  64.65
-Q1              0.0161  264.58
-x 0 0
-x 0 0
-x 0 0
-S2              1.0118  249.22
-S4              0.0192  273.68
-x 0 0
-T2              0.0091  97.69
-x 0 0
-MU2             0.2571  24.26
-NU2             0.0617  244.33
+M4              0.1803  143.82
+M6              0.1203  113.56
+M8              0.0181  50.10
+N2              0.5622  186.80
+2N2             0.0622  184.44
+O1              0.0560  305.79
+OO1             0.0010  75.16
+P1              0.0225  66.38
+Q1              0.0157  268.26
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0782  121.74
-MS4             0.1099  199.29
+S2              0.9675  253.61
+S4              0.0162  283.40
 x 0 0
-MF              0.0588  194.95
-MSF             0.1570  219.80
-MM              0.0862  203.97
-SA              0.0102  121.55
-SSA             0.0284  306.40
+T2              0.0079  102.90
+x 0 0
+MU2             0.2321  32.06
+NU2             0.0534  254.77
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0571  115.33
+MS4             0.0741  191.20
+x 0 0
+MF              0.0468  195.63
+MSF             0.1228  220.23
+MM              0.0666  204.56
+SA              0.0100  128.44
+SSA             0.0261  307.89
 x 0 0
 x 0 0
 x 0 0
@@ -221492,7 +221491,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0374  194.28
+x 0 0
+x 0 0
+MK4             0.0278  188.69
 x 0 0
 x 0 0
 x 0 0
@@ -224973,67 +224974,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 517358 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 517043 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -9 min (median M2 offset of 9 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.54 kn
-# Major axis: 145.6 deg true
+# Major axis: 151.1 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele517358
+# station_id_context: SSWRS-V3.02-ele517043
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 145.6
+# major_axis_deg_true: 151.1
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 3.5 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 517358 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -3.24030
-# !latitude: 54.11292
-Barrow Island (1 km NW), England, United Kingdom Current
+# !longitude: -3.24585
+# !latitude: 54.11502
+Barrow Island (2 km NW), England, United Kingdom Current
 +00:00 :UTC
-0.1467 knots
-J1              0.0040  198.27
-K1              0.0704  85.41
-K2              0.2594  293.25
-L2              0.0681  197.49
-M1              0.0095  215.67
-M2              2.6555  237.74
+-0.1523 knots
+J1              0.0032  164.13
+K1              0.0682  85.91
+K2              0.2353  291.60
+L2              0.0608  201.39
+M1              0.0087  214.09
+M2              2.4114  236.93
 x 0 0
-M4              0.9653  123.37
-M6              0.1783  110.77
-M8              0.0982  176.23
-N2              0.4886  225.56
-2N2             0.0886  173.69
-O1              0.0556  321.11
-OO1             0.0053  251.73
-P1              0.0259  86.75
-Q1              0.0153  273.82
-x 0 0
-x 0 0
-x 0 0
-S2              0.8754  289.04
-S4              0.0658  273.05
-x 0 0
-T2              0.0041  168.46
-x 0 0
-MU2             0.1604  310.67
-NU2             0.0579  117.65
+M4              0.7633  122.95
+M6              0.2461  129.56
+M8              0.0939  176.57
+N2              0.4502  223.81
+2N2             0.0812  171.51
+O1              0.0545  325.05
+OO1             0.0100  247.96
+P1              0.0219  91.41
+Q1              0.0141  278.30
 x 0 0
 x 0 0
 x 0 0
-MN4             0.2764  109.41
-MS4             0.5607  173.49
+S2              0.7963  287.59
+S4              0.0495  278.92
 x 0 0
-MF              0.0041  136.59
-MSF             0.0300  26.73
-MM              0.0231  22.98
-SA              0.0239  120.93
-SSA             0.0140  284.20
+T2              0.0025  101.59
+x 0 0
+MU2             0.1348  310.94
+NU2             0.0602  116.12
 x 0 0
 x 0 0
+x 0 0
+MN4             0.2016  105.54
+MS4             0.4286  172.69
+x 0 0
+MF              0.0322  196.69
+MSF             0.0630  227.22
+MM              0.0310  209.90
+SA              0.0180  128.59
+SSA             0.0147  271.73
 x 0 0
 x 0 0
 x 0 0
@@ -225062,7 +225062,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.1688  181.19
+x 0 0
+x 0 0
+MK4             0.1287  181.32
 x 0 0
 x 0 0
 x 0 0
@@ -226161,67 +226163,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 450693 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 449709 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by +1 min (median M2 offset of 8 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.18 kn
-# Major axis: 65.8 deg true
+# Major axis: 70.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele450693
+# station_id_context: SSWRS-V3.02-ele449709
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 65.8
+# major_axis_deg_true: 70.6
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 3.4 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 450693 lag direkt am Ufer (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -4.62277
-# !latitude: 54.06581
+# !longitude: -4.61060
+# !latitude: 54.05943
 Langness (Castletown Bay), Isle of Man Current
 +00:00 :UTC
--0.3809 knots
-J1              0.0059  177.95
-K1              0.0548  70.86
-K2              0.2202  256.48
-L2              0.0672  252.67
-M1              0.0065  213.44
-M2              2.6259  215.23
+0.1053 knots
+J1              0.0044  188.52
+K1              0.0490  74.17
+K2              0.1977  264.74
+L2              0.0513  261.06
+M1              0.0057  216.68
+M2              2.3134  222.83
 x 0 0
-M4              0.1671  128.36
-M6              0.1212  149.84
-M8              0.0119  106.98
-N2              0.4312  189.63
-2N2             0.0625  173.77
-O1              0.0448  306.29
-OO1             0.0032  204.37
-P1              0.0177  60.36
-Q1              0.0127  244.74
-x 0 0
-x 0 0
-x 0 0
-S2              0.7716  255.91
-S4              0.0103  194.55
-x 0 0
-T2              0.0044  113.56
-x 0 0
-MU2             0.1517  0.48
-NU2             0.0304  210.29
+M4              0.2918  94.74
+M6              0.0692  205.74
+M8              0.0179  24.91
+N2              0.3913  197.40
+2N2             0.0561  178.88
+O1              0.0381  307.80
+OO1             0.0026  211.60
+P1              0.0163  66.73
+Q1              0.0118  249.34
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0526  88.53
-MS4             0.0876  158.00
+S2              0.6957  263.59
+S4              0.0120  178.36
 x 0 0
-MF              0.0456  192.49
-MSF             0.1006  219.41
-MM              0.0636  202.99
-SA              0.0239  228.86
-SSA             0.0086  199.72
+T2              0.0034  122.67
+x 0 0
+MU2             0.1161  8.86
+NU2             0.0211  218.09
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0884  62.17
+MS4             0.1596  129.53
+x 0 0
+MF              0.0155  175.99
+MSF             0.0050  193.86
+MM              0.0079  210.09
+SA              0.0202  230.88
+SSA             0.0055  186.32
 x 0 0
 x 0 0
 x 0 0
@@ -226250,7 +226251,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0314  160.72
+x 0 0
+x 0 0
+MK4             0.0488  135.80
 x 0 0
 x 0 0
 x 0 0
@@ -226359,67 +226362,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 447595 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 447596 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by +1 min (median M2 offset of 7 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.24 kn
-# Major axis: 122.4 deg true
+# Major axis: 124.8 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele447595
+# station_id_context: SSWRS-V3.02-ele447596
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 122.4
+# major_axis_deg_true: 124.8
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 3.4 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 447595 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -4.81201
-# !latitude: 54.04772
+# !longitude: -4.81036
+# !latitude: 54.04160
 Calf of Man (Perwick Bay), Rushen, Isle of Man Current
 +00:00 :UTC
--0.0324 knots
-J1              0.0029  165.72
-K1              0.0337  65.47
-K2              0.2196  242.01
-L2              0.0806  265.72
-M1              0.0036  149.13
-M2              2.6053  208.32
+0.3100 knots
+J1              0.0049  177.49
+K1              0.0351  70.29
+K2              0.2083  249.84
+L2              0.0625  285.06
+M1              0.0040  159.61
+M2              2.3636  216.17
 x 0 0
-M4              0.3963  150.51
-M6              0.1190  153.41
-M8              0.0510  99.36
-N2              0.4460  178.85
-2N2             0.0529  167.96
-O1              0.0323  291.02
-OO1             0.0005  125.03
-P1              0.0150  63.50
-Q1              0.0128  273.56
-x 0 0
-x 0 0
-x 0 0
-S2              0.7817  242.72
-S4              0.0172  249.65
-x 0 0
-T2              0.0044  152.20
-x 0 0
-MU2             0.1662  9.69
-NU2             0.0352  232.56
+M4              0.2601  132.96
+M6              0.0982  176.85
+M8              0.0271  120.90
+N2              0.4239  185.97
+2N2             0.0439  167.96
+O1              0.0332  295.36
+OO1             0.0016  200.09
+P1              0.0151  61.68
+Q1              0.0131  271.43
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1331  120.02
-MS4             0.2310  179.73
+S2              0.7374  250.14
+S4              0.0103  238.66
 x 0 0
-MF              0.0080  63.40
-MSF             0.0492  56.07
-MM              0.0335  26.64
-SA              0.0122  172.18
-SSA             0.0098  297.79
+T2              0.0032  186.53
+x 0 0
+MU2             0.1319  25.97
+NU2             0.0262  259.35
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0942  107.83
+MS4             0.1681  162.02
+x 0 0
+MF              0.0221  33.44
+MSF             0.0962  46.74
+MM              0.0582  22.02
+SA              0.0100  169.28
+SSA             0.0086  301.35
 x 0 0
 x 0 0
 x 0 0
@@ -226448,7 +226450,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0733  183.13
+x 0 0
+x 0 0
+MK4             0.0533  171.56
 x 0 0
 x 0 0
 x 0 0
@@ -229528,68 +229532,67 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 63182 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 61077 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 0 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.17 kn
-# Major axis: 327.4 deg true
+# Major axis: 329.1 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele63182
+# station_id_context: SSWRS-V3.02-ele61077
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 327.4
+# major_axis_deg_true: 329.1
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 3.0 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 63182 lag direkt am Ufer (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -5.71619
-# !latitude: 50.06234
+# !longitude: -5.72095
+# !latitude: 50.05960
 # note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Land's End (Mill Bay), England, United Kingdom Current
 +00:00 :UTC
-0.2494 knots
-J1              0.0119  296.43
-K1              0.0597  197.84
-K2              0.2283  41.21
-L2              0.0157  134.14
-M1              0.0017  215.23
-M2              2.2371  13.27
+0.3408 knots
+J1              0.0129  303.25
+K1              0.0652  202.59
+K2              0.2325  42.22
+L2              0.0238  168.52
+M1              0.0024  206.67
+M2              2.1955  14.94
 x 0 0
-M4              0.4703  200.89
-M6              0.0494  349.70
-M8              0.0254  34.18
-N2              0.4301  347.18
-2N2             0.0459  338.11
-O1              0.0161  194.38
-OO1             0.0061  28.81
-P1              0.0110  186.57
-Q1              0.0136  58.01
-x 0 0
-x 0 0
-x 0 0
-S2              0.7927  40.15
-S4              0.0445  259.87
-x 0 0
-T2              0.0053  266.53
-x 0 0
-MU2             0.0852  234.52
-NU2             0.0270  143.09
+M4              0.3708  216.14
+M6              0.0166  254.07
+M8              0.0191  50.07
+N2              0.4364  348.54
+2N2             0.0405  333.45
+O1              0.0258  188.17
+OO1             0.0073  39.43
+P1              0.0154  186.97
+Q1              0.0163  66.41
 x 0 0
 x 0 0
 x 0 0
-MN4             0.1629  180.51
-MS4             0.3362  242.37
+S2              0.8119  41.04
+S4              0.0444  272.87
 x 0 0
-MF              0.0454  12.69
-MSF             0.1050  47.45
-MM              0.0572  14.21
-SA              0.0046  20.86
-SSA             0.0148  70.04
+T2              0.0062  264.37
+x 0 0
+MU2             0.1002  251.85
+NU2             0.0313  148.60
 x 0 0
 x 0 0
+x 0 0
+MN4             0.1377  197.00
+MS4             0.2892  258.80
+x 0 0
+MF              0.0670  13.06
+MSF             0.1714  42.50
+MM              0.0929  16.72
+SA              0.0054  57.48
+SSA             0.0177  56.25
 x 0 0
 x 0 0
 x 0 0
@@ -229618,7 +229621,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0886  235.04
+x 0 0
+x 0 0
+MK4             0.0726  250.21
 x 0 0
 x 0 0
 x 0 0
@@ -237060,67 +237065,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 180462 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 178419 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 3 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.45 kn
-# Major axis: 113.4 deg true
+# Major axis: 113.2 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele180462
+# station_id_context: SSWRS-V3.02-ele178419
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 113.4
+# major_axis_deg_true: 113.2
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 2.7 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 180462 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -7.32700
-# !latitude: 57.40768
+# !longitude: -7.33746
+# !latitude: 57.40519
 Creagorry Island (Bàgh nam Faoileann), Scotland, United Kingdom Current
 +00:00 :UTC
-0.1517 knots
-J1              0.0823  171.07
-K1              0.5898  352.26
-K2              0.2179  101.37
-L2              0.0381  213.34
-M1              0.0728  146.78
-M2              1.9252  93.61
+0.1080 knots
+J1              0.0763  168.90
+K1              0.5361  352.44
+K2              0.1968  100.62
+L2              0.0340  210.24
+M1              0.0674  146.23
+M2              1.7804  93.12
 x 0 0
-M4              0.3204  40.58
-M6              0.0715  88.46
-M8              0.0289  100.24
-N2              0.3774  69.46
-2N2             0.0152  55.92
-O1              0.3411  192.81
-OO1             0.0412  179.02
-P1              0.1985  347.37
-Q1              0.0716  101.38
-x 0 0
-x 0 0
-x 0 0
-S2              0.7603  109.12
-S4              0.0289  0.38
-x 0 0
-T2              0.0049  4.62
-x 0 0
-MU2             0.0764  313.98
-NU2             0.0153  190.69
+M4              0.2907  35.30
+M6              0.0533  82.78
+M8              0.0237  93.12
+N2              0.3455  68.80
+2N2             0.0129  50.58
+O1              0.3162  194.55
+OO1             0.0374  179.19
+P1              0.1765  345.30
+Q1              0.0640  103.13
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0252  7.78
-MS4             0.3219  148.60
+S2              0.6886  108.60
+S4              0.0353  349.84
 x 0 0
-MF              0.0468  200.64
-MSF             0.0432  104.74
-MM              0.0330  28.07
-SA              0.0338  165.60
-SSA             0.0218  279.24
+T2              0.0037  0.75
+x 0 0
+MU2             0.0669  309.09
+NU2             0.0133  182.48
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0215  342.61
+MS4             0.2773  148.26
+x 0 0
+MF              0.0478  197.01
+MSF             0.0406  121.07
+MM              0.0262  29.92
+SA              0.0302  167.72
+SSA             0.0198  274.61
 x 0 0
 x 0 0
 x 0 0
@@ -237149,7 +237153,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0719  155.65
+x 0 0
+x 0 0
+MK4             0.0615  157.07
 x 0 0
 x 0 0
 x 0 0
@@ -254305,68 +254311,67 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 239197 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 236815 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 2 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.28 kn
-# Major axis: 354.0 deg true
+# Major axis: 355.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele239197
+# station_id_context: SSWRS-V3.02-ele236815
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 354.0
+# major_axis_deg_true: 355.6
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 2.2 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 239197 lag direkt am Ufer (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -6.78635
-# !latitude: 57.42572
+# !longitude: -6.79126
+# !latitude: 57.42596
 # note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Neist Point (Camas nan Sithean), Scotland, United Kingdom Current
 +00:00 :UTC
-0.2549 knots
-J1              0.0378  189.57
-K1              0.3139  349.43
-K2              0.1480  172.08
-L2              0.0314  231.45
-M1              0.0197  160.28
-M2              1.6562  147.14
+0.2182 knots
+J1              0.0371  198.96
+K1              0.3242  354.70
+K2              0.1424  177.80
+L2              0.0247  241.77
+M1              0.0194  175.85
+M2              1.5897  151.32
 x 0 0
-M4              0.0528  158.22
-M6              0.0355  296.24
-M8              0.0052  308.04
-N2              0.3201  121.53
-2N2             0.0317  65.39
-O1              0.1885  189.69
-OO1             0.0258  240.74
-P1              0.1147  350.85
-Q1              0.0539  90.76
-x 0 0
-x 0 0
-x 0 0
-S2              0.5700  178.10
-S4              0.0031  245.48
-x 0 0
-T2              0.0077  300.12
-x 0 0
-MU2             0.0688  328.79
-NU2             0.0127  179.64
+M4              0.0636  158.83
+M6              0.0227  302.94
+M8              0.0041  340.40
+N2              0.3128  126.50
+2N2             0.0332  63.42
+O1              0.1934  194.92
+OO1             0.0261  249.08
+P1              0.1163  355.18
+Q1              0.0581  98.58
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0208  161.60
-MS4             0.0679  208.00
+S2              0.5546  183.16
+S4              0.0037  242.82
 x 0 0
-MF              0.0161  202.78
-MSF             0.0752  90.78
-MM              0.0252  183.99
-SA              0.0122  84.69
-SSA             0.0023  224.48
+T2              0.0067  288.32
+x 0 0
+MU2             0.0495  340.23
+NU2             0.0100  173.61
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0247  155.10
+MS4             0.0728  204.84
+x 0 0
+MF              0.0188  203.63
+MSF             0.0732  97.20
+MM              0.0326  185.82
+SA              0.0169  88.25
+SSA             0.0040  221.49
 x 0 0
 x 0 0
 x 0 0
@@ -254395,7 +254400,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0096  197.05
+x 0 0
+x 0 0
+MK4             0.0125  208.45
 x 0 0
 x 0 0
 x 0 0
@@ -271748,67 +271755,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 476875 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 476034 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 0 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.28 kn
-# Major axis: 27.8 deg true
+# Major axis: 32.3 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele476875
+# station_id_context: SSWRS-V3.02-ele476034
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 27.8
+# major_axis_deg_true: 32.3
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 1.9 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 476875 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -2.65564
-# !latitude: 51.57152
-Denny Island (10 km ENE), Wales, United Kingdom Current
+# !longitude: -2.66333
+# !latitude: 51.57599
+Denny Island (10 km NE), Wales, United Kingdom Current
 +00:00 :UTC
-0.0197 knots
-J1              0.0011  231.66
-K1              0.0166  55.08
-K2              0.1467  208.59
-L2              0.0788  114.47
-M1              0.0017  190.95
-M2              1.4699  143.28
+-0.0465 knots
+J1              0.0009  237.12
+K1              0.0154  55.19
+K2              0.1360  206.44
+L2              0.0716  110.34
+M1              0.0014  182.94
+M2              1.3455  141.03
 x 0 0
-M4              0.5799  300.50
-M6              0.1067  106.73
-M8              0.0191  86.05
-N2              0.2325  144.56
-2N2             0.0590  91.12
-O1              0.0153  298.98
-OO1             0.0014  155.85
-P1              0.0055  72.09
-Q1              0.0028  224.90
-x 0 0
-x 0 0
-x 0 0
-S2              0.4655  206.24
-S4              0.0742  94.49
-x 0 0
-T2              0.0028  7.94
-x 0 0
-MU2             0.1886  224.43
-NU2             0.0471  44.85
+M4              0.5486  299.02
+M6              0.1038  110.77
+M8              0.0198  76.51
+N2              0.2147  142.15
+2N2             0.0540  87.94
+O1              0.0139  297.30
+OO1             0.0013  142.17
+P1              0.0052  68.37
+Q1              0.0030  226.15
 x 0 0
 x 0 0
 x 0 0
-MN4             0.2106  294.36
-MS4             0.4212  355.61
+S2              0.4319  203.99
+S4              0.0695  91.60
 x 0 0
-MF              0.0012  104.49
-MSF             0.0033  106.09
-MM              0.0029  37.25
-SA              0.0131  133.71
-SSA             0.0013  201.94
+T2              0.0026  2.27
+x 0 0
+MU2             0.1696  220.69
+NU2             0.0435  40.58
 x 0 0
 x 0 0
+x 0 0
+MN4             0.1996  293.27
+MS4             0.3970  354.22
+x 0 0
+MF              0.0024  192.58
+MSF             0.0119  213.13
+MM              0.0025  193.07
+SA              0.0126  128.87
+SSA             0.0020  217.98
 x 0 0
 x 0 0
 x 0 0
@@ -271837,7 +271843,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.1274  359.28
+x 0 0
+x 0 0
+MK4             0.1207  358.17
 x 0 0
 x 0 0
 x 0 0
@@ -278884,68 +278892,67 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 34299 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 35935 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 2 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.27 kn
-# Major axis: 186.0 deg true
+# Major axis: 185.9 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele34299
+# station_id_context: SSWRS-V3.02-ele35935
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 186.0
+# major_axis_deg_true: 185.9
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 1.8 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 34299 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -0.97171
-# !latitude: 60.61563
+# !longitude: -0.95941
+# !latitude: 60.61700
 # note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Ness of Brough (1 km W, Colgrave Sound), Scotland, United Kingdom Current
 +00:00 :UTC
-0.0463 knots
-J1              0.0161  349.02
-K1              0.0335  77.97
-K2              0.1206  296.54
-L2              0.0583  27.39
-M1              0.0029  70.32
-M2              1.3864  270.66
+-0.0695 knots
+J1              0.0133  337.63
+K1              0.0269  78.75
+K2              0.1081  289.04
+L2              0.0494  12.36
+M1              0.0030  58.12
+M2              1.2559  262.65
 x 0 0
-M4              0.0998  217.02
-M6              0.0437  87.35
-M8              0.0098  305.70
-N2              0.2975  235.60
-2N2             0.0340  177.07
-O1              0.0027  18.90
-OO1             0.0111  131.15
-P1              0.0172  166.52
-Q1              0.0165  163.73
-x 0 0
-x 0 0
-x 0 0
-S2              0.4521  296.70
-S4              0.0122  236.14
-x 0 0
-T2              0.0066  73.20
-x 0 0
-MU2             0.1112  121.53
-NU2             0.0181  344.83
+M4              0.0955  165.40
+M6              0.0452  86.46
+M8              0.0042  256.17
+N2              0.2622  228.45
+2N2             0.0317  175.14
+O1              0.0062  38.88
+OO1             0.0091  119.84
+P1              0.0147  163.27
+Q1              0.0128  156.90
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0406  169.50
-MS4             0.0605  247.62
+S2              0.3990  289.43
+S4              0.0102  185.42
 x 0 0
-MF              0.0102  99.77
-MSF             0.0194  28.40
-MM              0.0213  357.40
-SA              0.0286  61.97
-SSA             0.0044  311.10
+T2              0.0059  87.46
+x 0 0
+MU2             0.0997  107.27
+NU2             0.0138  327.93
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0387  118.41
+MS4             0.0523  193.39
+x 0 0
+MF              0.0102  145.44
+MSF             0.0109  236.36
+MM              0.0059  272.55
+SA              0.0170  53.29
+SSA             0.0032  300.89
 x 0 0
 x 0 0
 x 0 0
@@ -278974,7 +278981,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0181  250.30
+x 0 0
+x 0 0
+MK4             0.0160  201.45
 x 0 0
 x 0 0
 x 0 0
@@ -302866,67 +302875,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 113865 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 111589 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 2 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.15 kn
-# Major axis: 140.4 deg true
+# Major axis: 120.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele113865
+# station_id_context: SSWRS-V3.02-ele111589
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 140.4
+# major_axis_deg_true: 120.6
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 1.6 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 113865 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -4.76801
-# !latitude: 58.59766
+# !longitude: -4.76123
+# !latitude: 58.60364
 Faraid Head (Kyle of Durness), Scotland, United Kingdom Current
 +00:00 :UTC
--0.3192 knots
-J1              0.0235  250.79
-K1              0.1220  56.69
-K2              0.1099  206.12
-L2              0.0371  281.34
-M1              0.0168  229.29
-M2              1.1879  184.01
+-0.0191 knots
+J1              0.0195  263.81
+K1              0.1124  58.88
+K2              0.0951  215.70
+L2              0.0305  296.69
+M1              0.0132  245.08
+M2              1.0133  192.17
 x 0 0
-M4              0.0805  215.25
-M6              0.0332  1.16
-M8              0.0026  356.43
-N2              0.2233  151.42
-2N2             0.0120  97.05
-O1              0.0827  262.30
-OO1             0.0153  276.09
-P1              0.0414  46.18
-Q1              0.0176  142.77
-x 0 0
-x 0 0
-x 0 0
-S2              0.3992  211.36
-S4              0.0011  262.33
-x 0 0
-T2              0.0020  336.57
-x 0 0
-MU2             0.0849  20.34
-NU2             0.0161  240.20
+M4              0.0088  333.58
+M6              0.0063  327.58
+M8              0.0029  53.30
+N2              0.1955  160.09
+2N2             0.0112  104.64
+O1              0.0704  252.22
+OO1             0.0148  289.87
+P1              0.0388  57.85
+Q1              0.0159  152.97
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0215  192.96
-MS4             0.0443  261.04
+S2              0.3485  220.09
+S4              0.0016  9.17
 x 0 0
-MF              0.0334  194.83
-MSF             0.0858  212.06
-MM              0.0485  202.16
-SA              0.0082  126.06
-SSA             0.0041  300.01
+T2              0.0017  330.11
+x 0 0
+MU2             0.0686  34.57
+NU2             0.0116  258.91
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0064  308.13
+MS4             0.0151  358.50
+x 0 0
+MF              0.0051  205.04
+MSF             0.0124  173.29
+MM              0.0052  216.66
+SA              0.0072  132.27
+SSA             0.0033  322.04
 x 0 0
 x 0 0
 x 0 0
@@ -302955,7 +302963,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0094  266.64
+x 0 0
+x 0 0
+MK4             0.0052  14.01
 x 0 0
 x 0 0
 x 0 0
@@ -308215,68 +308225,67 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 476392 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 475552 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -3 min (median M2 offset of 6 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.24 kn
-# Major axis: 235.7 deg true
+# Major axis: 248.6 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele476392
+# station_id_context: SSWRS-V3.02-ele475552
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 235.7
+# major_axis_deg_true: 248.6
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 1.5 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 476392 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: 0.74945
-# !latitude: 51.44498
+# !longitude: 0.75671
+# !latitude: 51.44779
 # note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
 Medway Channel (Garrison Point), England, United Kingdom Current
 +00:00 :UTC
--0.0782 knots
-J1              0.0056  63.79
-K1              0.0528  279.56
-K2              0.0995  333.69
-L2              0.0556  274.24
-M1              0.0047  35.23
-M2              1.2010  266.05
+-0.0682 knots
+J1              0.0052  65.34
+K1              0.0520  278.10
+K2              0.0984  333.31
+L2              0.0551  274.29
+M1              0.0045  37.19
+M2              1.1891  265.49
 x 0 0
-M4              0.1881  200.04
-M6              0.1602  284.10
-M8              0.0759  239.17
-N2              0.1719  250.00
-2N2             0.0376  209.80
-O1              0.0458  129.82
-OO1             0.0011  136.15
-P1              0.0187  269.39
-Q1              0.0092  56.79
-x 0 0
-x 0 0
-x 0 0
-S2              0.3257  327.08
-S4              0.0173  317.58
-x 0 0
-T2              0.0041  181.98
-x 0 0
-MU2             0.1235  7.66
-NU2             0.0316  207.20
+M4              0.1733  197.69
+M6              0.1625  285.68
+M8              0.0678  236.06
+N2              0.1697  249.22
+2N2             0.0377  209.24
+O1              0.0452  128.57
+OO1             0.0014  135.92
+P1              0.0184  269.72
+Q1              0.0093  55.24
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0615  170.03
-MS4             0.1089  250.15
+S2              0.3212  326.45
+S4              0.0171  317.74
 x 0 0
-MF              0.0044  196.45
-MSF             0.0143  223.43
-MM              0.0046  175.01
-SA              0.0054  182.64
-SSA             0.0036  195.67
+T2              0.0045  179.08
+x 0 0
+MU2             0.1225  7.72
+NU2             0.0317  208.11
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0590  168.97
+MS4             0.1025  248.59
+x 0 0
+MF              0.0040  200.14
+MSF             0.0126  222.15
+MM              0.0034  147.49
+SA              0.0056  170.18
+SSA             0.0048  197.20
 x 0 0
 x 0 0
 x 0 0
@@ -308305,7 +308314,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0291  253.20
+x 0 0
+x 0 0
+MK4             0.0280  251.24
 x 0 0
 x 0 0
 x 0 0
@@ -310197,67 +310208,66 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 135860 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 133698 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 2 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.15 kn
-# Major axis: 94.7 deg true
+# Major axis: 87.3 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele135860
+# station_id_context: SSWRS-V3.02-ele133698
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 94.7
+# major_axis_deg_true: 87.3
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 1.5 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 135860 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -4.03931
-# !latitude: 58.58085
+# !longitude: -4.04724
+# !latitude: 58.58726
 Glass Islands (Strathy Bay), Scotland, United Kingdom Current
 +00:00 :UTC
-0.0523 knots
-J1              0.0195  307.98
-K1              0.1195  95.78
-K2              0.1060  246.31
-L2              0.0335  322.22
-M1              0.0126  295.72
-M2              1.1249  222.59
+0.1300 knots
+J1              0.0188  313.36
+K1              0.1159  99.40
+K2              0.1018  249.58
+L2              0.0313  330.11
+M1              0.0119  303.54
+M2              1.0787  226.26
 x 0 0
-M4              0.0572  310.94
-M6              0.0145  205.69
-M8              0.0031  256.62
-N2              0.2170  190.60
-2N2             0.0118  135.17
-O1              0.0815  294.43
-OO1             0.0148  348.52
-P1              0.0365  100.02
-Q1              0.0205  188.61
-x 0 0
-x 0 0
-x 0 0
-S2              0.3821  250.63
-S4              0.0030  17.30
-x 0 0
-T2              0.0069  33.22
-x 0 0
-MU2             0.0700  62.74
-NU2             0.0128  297.08
+M4              0.0322  323.21
+M6              0.0143  217.11
+M8              0.0020  306.41
+N2              0.2086  194.50
+2N2             0.0122  151.01
+O1              0.0774  295.92
+OO1             0.0145  346.33
+P1              0.0383  102.94
+Q1              0.0194  194.14
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0200  286.71
-MS4             0.0423  356.14
+S2              0.3677  254.91
+S4              0.0035  34.17
 x 0 0
-MF              0.0133  191.11
-MSF             0.0398  177.54
-MM              0.0129  213.17
-SA              0.0395  270.06
-SSA             0.0144  16.62
+T2              0.0053  32.80
+x 0 0
+MU2             0.0651  68.64
+NU2             0.0106  305.24
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0130  307.42
+MS4             0.0298  10.66
+x 0 0
+MF              0.0031  184.44
+MSF             0.0270  147.98
+MM              0.0061  279.84
+SA              0.0362  277.53
+SSA             0.0087  37.26
 x 0 0
 x 0 0
 x 0 0
@@ -310286,7 +310296,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0092  5.29
+x 0 0
+x 0 0
+MK4             0.0080  26.48
 x 0 0
 x 0 0
 x 0 0
@@ -310792,68 +310804,67 @@ x 0 0
 x 0 0
 x 0 0
 # Harmonic constants derived from the Scottish Shelf Water Reanalysis Service (SSW-RS V3.02, FVCOM, NOC/Marine Directorate)
-# depth-mean ua/va at element 423567 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
+# depth-mean ua/va at element 423569 (unstructured grid), hourly 20180101_20181231 (py/sswrs.py, py/sswrs_fit.py)
 # Checked 19.11.2026 against measured current sets (median curve error ~10 %%, better than TPXO10 near coasts)
 # Time corrected by -0 min (median M2 offset of 1 measured sets within 40 km)
 # least squares, 28 constituents, residual RMS 0.26 kn
-# Major axis: 234.7 deg true
+# Major axis: 248.0 deg true
 #
 # BEGIN HOT COMMENTS
 # country: United Kingdom
 # source: SSW-RS reanalysis model, harmonic fit
-# station_id_context: SSWRS-V3.02-ele423567
+# station_id_context: SSWRS-V3.02-ele423569
 # institution: Scottish Government Marine Directorate / NOC
 # datum: n/a
 # station_type: current
-# major_axis_deg_true: 234.7
+# major_axis_deg_true: 248.0
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 1.5 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Element 423567 lag an Land (OSM-Kueste); naechstes Wasserelement >= 150 m vor dem Ufer mit >= 85 % des Springstroms (Oliver: Modellpunkte an Land)
 # !units: knots
-# !longitude: -4.00613
-# !latitude: 57.59789
+# !longitude: -4.00519
+# !latitude: 57.60669
 # note: 20261119 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
-Riff Bank (2 km S, South Channel), Scotland, United Kingdom Current
+Riff Bank (1 km SSW, South Channel), Scotland, United Kingdom Current
 +00:00 :UTC
--0.1036 knots
-J1              0.0036  229.71
-K1              0.0735  95.22
-K2              0.1167  274.23
-L2              0.0192  235.17
-M1              0.0032  122.99
-M2              1.1210  238.21
+0.0617 knots
+J1              0.0023  268.75
+K1              0.0614  93.04
+K2              0.0980  277.67
+L2              0.0113  247.36
+M1              0.0022  105.90
+M2              0.9726  243.58
 x 0 0
-M4              0.1187  18.72
-M6              0.2513  356.24
-M8              0.0789  6.83
-N2              0.2128  221.73
-2N2             0.0286  179.91
-O1              0.0579  315.97
-OO1             0.0028  257.75
-P1              0.0251  77.64
-Q1              0.0172  257.56
-x 0 0
-x 0 0
-x 0 0
-S2              0.3804  275.60
-S4              0.0249  184.50
-x 0 0
-T2              0.0041  177.87
-x 0 0
-MU2             0.0294  0.35
-NU2             0.0082  285.06
+M4              0.0863  52.09
+M6              0.2044  356.48
+M8              0.0518  1.62
+N2              0.1834  224.36
+2N2             0.0256  184.13
+O1              0.0449  314.19
+OO1             0.0008  287.52
+P1              0.0207  81.12
+Q1              0.0133  254.04
 x 0 0
 x 0 0
 x 0 0
-MN4             0.0611  33.04
-MS4             0.1176  89.91
+S2              0.3272  279.59
+S4              0.0196  180.36
 x 0 0
-MF              0.0065  172.97
-MSF             0.0269  228.98
-MM              0.0130  213.67
-SA              0.0163  89.73
-SSA             0.0079  212.68
+T2              0.0022  143.79
+x 0 0
+MU2             0.0267  31.46
+NU2             0.0085  285.07
 x 0 0
 x 0 0
+x 0 0
+MN4             0.0558  52.62
+MS4             0.1037  107.99
+x 0 0
+MF              0.0048  45.62
+MSF             0.0080  31.97
+MM              0.0099  13.29
+SA              0.0043  32.31
+SSA             0.0035  193.18
 x 0 0
 x 0 0
 x 0 0
@@ -310882,7 +310893,9 @@ x 0 0
 x 0 0
 x 0 0
 x 0 0
-MK4             0.0463  87.07
+x 0 0
+x 0 0
+MK4             0.0373  100.57
 x 0 0
 x 0 0
 x 0 0
@@ -571869,10 +571882,10 @@ x 0 0
 # confidence: 5
 # utide: period=2026-01-01..2026-12-31 const=60
 # !units: knots
-# !longitude: -70.8746
-# !latitude: 46.8930
+# !longitude: -70.8757
+# !latitude: 46.8946
 # note: 20261121 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
-Saint-Jean-de-l'Ile-d'Orléans (3 km SSE), Québec, Canada Current
+Pointe Samson (Pointe-Saint-Michel), Québec, Canada Current
 +00:00 :UTC
 -0.6889 knots
 J1              0.0062  283.27
