@@ -401,7 +401,10 @@ def main(argv):
     namen = {r['name'] for r in H.load_records()}
     bl, zeilen = [], []
     for nm, k, la, lo, zyk, art in punkte:
-        name = ('%s, Québec, Canada Current' % nm) if nm else name_fuer(la, lo, G)
+        if nm is None and 'NM' not in locals():
+            import stlorenz_namen                       # 21.11.: CGNDB franzoesisch, Inseln mit Abstand zur Kueste
+            NM = stlorenz_namen.Namen([(p_[2], p_[3]) for p_ in punkte])
+        name = ('%s, Québec, Canada Current' % nm) if nm else (NM.name(la, lo)[0] or name_fuer(la, lo, G))
         basis, n2 = name, 2
         while name in namen:
             name = basis.replace(' Current', ' (%d) Current' % n2)
