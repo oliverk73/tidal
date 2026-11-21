@@ -5,13 +5,14 @@
 Quelle: quellen/harmonics_sources/att/CS-361179-W8R3 - ADMIRALTY Tide Tables Indexes- Standard and Secondary Ports.docx (nur Name +
 ATT-Nummer, keine Koordinaten). Die ATT-Nummern laufen die Kueste entlang -> Lage aus den Nachbarnummern, die wir mit
 Position kennen (aktive + archivierte ATT-Saetze). Dann:
+  0. Name eindeutig im ganzen Bestand            -> 'saat'     (20.11.2026, fuer Bloecke ohne ATT-Nachbarn)
   1. eigene Nummer bekannt                      -> 'att'      (Position = unser Satz)
   2. Name unscharf im Bestand im Umkreis         -> 'name'     (Umlaute, o/ae, Gattungswoerter, Klammern)
   3. Nominatim im Umkreis (viewbox, 1/s, Cache)  -> 'geo'      (Position aus OSM)
   sonst                                          -> 'unbekannt'
 Abdeckung: naechster Wasserstands-Satz zur Position; <= 5 km gedeckt, 5-15 km nah, > 15 km Luecke.
 Schreibt harmonics/help/ukho_index_abgleich.csv; Cache cache/UKHO_index_nominatim.json.
-Usage: venv/bin/python py/ukho_index_abgleich.py [--ohne-netz]
+Usage: venv/bin/python py/ukho_index_abgleich.py [--ohne-netz | --nur-cache]   (UKHO_AUS=pfad: andere Ausgabedatei)
 """
 import collections
 import csv
@@ -35,12 +36,13 @@ import osm_land                                                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCX = os.path.join(ROOT, 'quellen/harmonics_sources/att/CS-361179-W8R3 - ADMIRALTY Tide Tables Indexes- Standard and Secondary Ports.docx')
-AUS = os.path.join(ROOT, 'harmonics/help/ukho_index_abgleich.csv')
+AUS = os.environ.get('UKHO_AUS') or os.path.join(ROOT, 'harmonics/help/ukho_index_abgleich.csv')
 CACHE = os.path.join(ROOT, 'cache/UKHO_index_nominatim.json')
 GATTUNG = {'harbour', 'harbor', 'hang', 'gang', 'port', 'bay', 'wan', 'ko', 'ura', 'bukhta', 'zaliv', 'teluk', 'pulau', 'tanjung',
            'kuala', 'bahia', 'puerto', 'baie', 'havn', 'hamn', 'haven', 'hafen', 'cove', 'inlet', 'island', 'islands', 'is', 'i',
            'point', 'pt', 'the', 'de', 'la', 'le', 'du', 'des', 'of', 'entrance', 'approaches', 'off', 'dao', 'jima', 'shima',
-           'mys', 'ostrov', 'river', 'schleuse', 'sluis', 'lock', 'sluice', 'lighthouse', 'fyr', 'light', 'north', 'south', 'east', 'west', 'side', 'rivier', 'kou', 'jiao', 'wharf', 'pier', 'jetty', 'landing', 'sound', 'channel'}
+           'mys', 'ostrov', 'river', 'schleuse', 'sluis', 'lock', 'sluice', 'lighthouse', 'fyr', 'light', 'north', 'south', 'east', 'west', 'side', 'rivier', 'kou', 'jiao', 'wharf', 'pier', 'jetty', 'landing', 'sound', 'channel', 'leuchtturm'}
+ABK = {'st': 'saint', 'ste': 'sainte', 'mt': 'mount', 'pto': 'puerto'}   # 21.11.: St. George's (Bermuda)
 
 
 def norm(s):
@@ -51,7 +53,7 @@ def norm(s):
 
 
 def kern(s):
-    w = [x for x in norm(s).split() if x not in GATTUNG]
+    w = [ABK.get(x, x) for x in norm(s).split() if x not in GATTUNG]
     return ' '.join(w) or norm(s).strip()
 
 
@@ -119,7 +121,7 @@ def main(argv):
     def nominatim(q, box):
         key = q + '|' + ','.join('%.2f' % b for b in box)
         if key not in cache:
-            if '--ohne-netz' in argv:
+            if '--ohne-netz' in argv or '--nur-cache' in argv:
                 return []
             time.sleep(max(0.0, 1.1 - (time.time() - letzte[0])))
             u = 'https://nominatim.openstreetmap.org/search?' + urllib.parse.urlencode(
@@ -152,65 +154,186 @@ def main(argv):
         med = min(pts, key=lambda q: sum(km(q, p) for p in pts))  # Medoid
         pts = [p for p in pts if km(med, p) <= 800]               # Nummernkollisionen anderer Baende (NP208)
         mitte = (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))
-        return mitte, min(400.0, max(80.0, 1.5 * max(km(mitte, p) for p in pts)))
+        # naechster bekannter Hafen davor/danach (Nummernfolge = Kuestenfolge) fuer den Umweg
+        e['_nb'] = [x[2] for x in (vor[-1:] + nach[:1]) if km(med, x[2]) <= 800]
+        return mitte, min(500.0, max(80.0, 1.5 * max(km(mitte, p) for p in pts)))
+
+    def umweg(e, pos):
+        """Umweg ueber pos zwischen dem vorigen und dem naechsten bekannten Hafen (21.11.2026: Mitte allein legte
+        Cayman-Brac-'West End' nach Jamaika, weil die Nachbarnummern Jamaika und Kuba ueberwiegen)."""
+        nb = e.get('_nb') or []
+        if len(nb) == 2:
+            return km(nb[0], pos) + km(pos, nb[1]) - km(nb[0], nb[1])
+        return km(nb[0], pos) if nb else 0.0
 
     def name_suche(e, mitte, rad):
+        """Rang (21.11.2026): Zahl passender Namensteile ("Lajes (Flores)" -> Lajes das Flores, nicht Lajes do Pico),
+        dann Hauptname vor Klammer (Klammer-Regel: "Jeju" -> Jeju-hang, nicht "Hallim (Jeju)"), dann Aehnlichkeit,
+        dann Umweg zwischen den Nummernnachbarn."""
         best = None
+        vs = varianten(e['name'])
+        nb = e.get('_nb') or []
+        spann = km(nb[0], nb[1]) if len(nb) == 2 else 0.0
         for r in R:
-            if km(mitte, (r['lat'], r['lon'])) > rad:
+            d = km(mitte, (r['lat'], r['lon']))
+            # 21.11.: auch ausserhalb des Radius, wenn der Umweg zwischen den Nummernnachbarn klein ist
+            # (Freeport/Settlement Point, Grand Bahama, liegen zwischen Walker Cay und Bermuda)
+            if d > rad and (d > 2000 or umweg(e, (r['lat'], r['lon'])) > max(150.0, 0.3 * spann)):
                 continue
             rn = [r['name'].split(',')[0]] + re.findall(r'\(([^)]*)\)', r['name'])
-            for v in varianten(e['name']):
-                for x in rn:
+            n_var, haupt, s_max = 0, 0, 0.0
+            for v in vs:
+                hit = False
+                for i, x in enumerate(rn):
                     a, b = kern(v), kern(re.sub(r'\(.*?\)', '', x))
                     s = difflib.SequenceMatcher(None, a, b).ratio() if a and b else 0
-                    if s >= 0.88 or (len(a) >= 5 and (a == b or a in b.split() or b in a.split())):
-                        if best is None or s > best[0]:
-                            best = (s, r)
+                    # Wortgruppe enthalten ("alte weser" in "leuchtturm alte weser"); aber nur im Hauptnamen: ein einzelnes
+                    # Klammerwort wie "(Weser)", "(Bar)" legte Alte Weser nach Rechtenfleth, Siaoching Ho Bar nach Dakou He
+                    ent = len(a) >= 5 and (a == b or (i == 0 and (set(a.split()) <= set(b.split()) or set(b.split()) <= set(a.split()))))
+                    if s >= 0.88 or ent:
+                        hit = True
+                        s_max = max(s_max, s)
+                        haupt = max(haupt, int(i == 0))
+                n_var += hit
+            if n_var:
+                rang = (n_var, haupt, round(s_max, 3), -umweg(e, (r['lat'], r['lon'])))
+                if best is None or rang > best[0]:
+                    best = (rang, r)
         return best
 
     for e in I:
         e.update(lat='', lon='', methode='unbekannt', treffer='', satz='', satz_km='', status='unbekannt', pos=None)
         if e['nr'].lower() in A:
             e['pos'], e['methode'] = A[e['nr'].lower()], 'att'
+    def fern(pos, nb):
+        """Treffer passt nicht zu den Nummernnachbarn: > 800 km UND > 3x deren mittlere Streuung vom Medoid entfernt.
+        Feste 300 km verwarfen richtige Haefen in duenn nummerierten Gebieten (Miami, Aleuten, Okinawa); verworfen werden
+        so die echten Namensvettern (Belfast Maine -> Nordirland, Cape Flattery WA -> Queensland, Annapolis MD -> NS)."""
+        med = min(nb, key=lambda q: sum(km(q, p) for p in nb))
+        streu = sorted(km(med, p) for p in nb)[len(nb) // 2]
+        return km(med, pos) > max(800.0, 3 * streu)
+
+    # Saat (Oliver 20.11.2026: 2004 Haefen 'unbekannt', u. a. "Acadia Cove" woertlich im Bestand): in ganzen Nummernbloecken
+    # ohne einen einzigen ATT-Satz (NP202 2600-3300 kanadische Arktis, NP206 7600-9400) gab es keine Nachbarlage, und die
+    # Namenssuche lief nie. Jetzt vorab: Name exakt (kern) im ganzen Bestand, eindeutig = alle Treffer <= 30 km beisammen.
+    # Gefundene Haefen werden in den Runden unten Anker ihrer Nummernnachbarn.
+    # 21.11.: Hauptname und Klammerinhalt getrennt. Klammer-Saat erst NACH den Namensrunden ("Ippado (Deokjeokdo)" schlug
+    # Deokjeokdo Jinri, "Hodo (Boryeong)" Boryeong Hang), aber weiter noetig: Tasiilaq (Ammassalik), Tanapag Harbor (Saipan)
+    K, KB = collections.defaultdict(list), collections.defaultdict(list)
+    for r in R:
+        k = kern(re.sub(r'\(.*?\)', '', r['name'].split(',')[0]))
+        if len(k) >= 4:
+            K[k].append(r)
+        for x in re.findall(r'\(([^)]*)\)', r['name']):
+            k = kern(x)
+            if len(k) >= 4:
+                KB[k].append(r)
+
+    def saen(D):
+        n = 0
+        for e in I:
+            if e['pos']:
+                continue
+            for v in varianten(e['name']):
+                treffer = D.get(kern(v), [])
+                if treffer and max(km((treffer[0]['lat'], treffer[0]['lon']), (t['lat'], t['lon'])) for t in treffer) <= 30:
+                    e['pos'], e['methode'], e['treffer'] = (treffer[0]['lat'], treffer[0]['lon']), 'saat', treffer[0]['name']
+                    n += 1
+                    break
+        return n
+    saat = saen(K)
+    # Gegenprobe: ein Saat-Treffer fern seiner Nummernnachbarn (ATT + andere Saat, Regel fern()) ist ein
+    # gleichnamiger Ort anderswo -> verwerfen
+    bekannt = sorted([(x[0], x[1], x[2]) for x in nummern] +
+                     [(e['nr_int'], e['nr'].lower(), e['pos']) for e in I if e['methode'] == 'saat'], key=lambda x: x[0])
+    verworfen = 0
+    for e in I:
+        if e['methode'] != 'saat':
+            continue
+        nb = [x[2] for x in bekannt if abs(x[0] - e['nr_int']) <= 40 and x[1] != e['nr'].lower()]
+        if len(nb) >= 2 and fern(e['pos'], nb):
+            e.update(pos=None, methode='unbekannt', treffer='')
+            verworfen += 1
+    print('Saat: %d Haefen ueber eindeutigen Namen im ganzen Bestand, %d davon verworfen (fern der Nummernnachbarn)'
+          % (saat, verworfen), flush=True)
     # Runden: gefundene Haefen werden Anker ihrer Nummernnachbarn; Nominatim erst, wenn Namen nichts mehr bringen
-    for runde in range(8):
-        geo = runde >= 2 and '--ohne-netz' not in argv
-        neu_n = 0
-        anker_n = sorted([(x[0], x[1], x[2]) for x in nummern] +
-                         [(e['nr_int'], e['nr'].lower(), e['pos']) for e in I if e['pos'] and e['methode'] != 'att'], key=lambda x: x[0])
-        for n, e in enumerate(I):
-            if e['pos']:
-                continue
-            mitte, rad = lage(e, anker_n)
-            if mitte is None:
-                continue
-            best = name_suche(e, mitte, rad)
-            if best:
-                e['pos'], e['methode'], e['treffer'] = (best[1]['lat'], best[1]['lon']), 'name', best[1]['name']
-            elif geo:
-                dla = rad / 111.0
-                dlo = rad / (111.0 * max(0.2, math.cos(math.radians(mitte[0]))))
-                box = (mitte[1] - dlo, mitte[0] + dla, mitte[1] + dlo, mitte[0] - dla)
-                for v in varianten(e['name']):
-                    res = nominatim(v, box)
-                    # Treffer muss an der Kueste liegen (<= 3 km) und nahe der erwarteten Lage (<= 150 km):
-                    # sonst fand Nominatim Karlskrona in Norwegens Binnenland, Kronstadt in Schweden
-                    ok = [x for x in sorted(res, key=lambda x: km(mitte, (float(x['lat']), float(x['lon']))))
-                          if km(mitte, (float(x['lat']), float(x['lon']))) <= min(rad, 150.0)
-                          and land(float(x['lat']), float(x['lon'])).kueste_km(float(x['lat']), float(x['lon']), rmax=5) <= 3.0]
-                    if ok:
-                        e['pos'] = (float(ok[0]['lat']), float(ok[0]['lon']))
-                        e['methode'], e['treffer'] = 'geo', ok[0]['display_name'][:120]
-                        break
-            if e['pos']:
-                neu_n += 1
-                anker_n.append((e['nr_int'], e['nr'].lower(), e['pos']))
-                anker_n.sort(key=lambda x: x[0])
-        print('Runde %d (%s): %d neu verortet, offen %d' % (runde, 'Nominatim' if geo else 'Namen', neu_n,
-                                                          sum(1 for e in I if not e['pos'])), flush=True)
-        if not neu_n and runde >= 2:
-            break
+    def runden(start, ende=8):
+        for runde in range(start, ende):
+            geo = runde >= 2 and '--ohne-netz' not in argv
+            neu_n = 0
+            anker_n = sorted([(x[0], x[1], x[2]) for x in nummern] +
+                             [(e['nr_int'], e['nr'].lower(), e['pos']) for e in I if e['pos'] and e['methode'] != 'att'], key=lambda x: x[0])
+            for n, e in enumerate(I):
+                if e['pos']:
+                    continue
+                mitte, rad = lage(e, anker_n)
+                if mitte is None:
+                    continue
+                best = name_suche(e, mitte, rad)
+                if best:
+                    e['pos'], e['methode'], e['treffer'] = (best[1]['lat'], best[1]['lon']), 'name', best[1]['name']
+                elif geo:
+                    dla = rad / 111.0
+                    dlo = rad / (111.0 * max(0.2, math.cos(math.radians(mitte[0]))))
+                    box = (mitte[1] - dlo, mitte[0] + dla, mitte[1] + dlo, mitte[0] - dla)
+                    # 21.11.: alle Schreibweisen abfragen, Treffer mit den meisten Namenswoertern im OSM-Namen vor kleinstem Umweg
+                    # ("West End, Cayman Brac" fand sonst ueber "West End" Jamaika)
+                    woerter = {w for v in varianten(e['name']) for w in kern(v).split() if len(w) >= 3}
+                    kand = []
+                    for v in varianten(e['name']):
+                        res = nominatim(v, box)
+                        # Treffer muss an der Kueste liegen (<= 3 km) und nahe der erwarteten Lage (<= 150 km):
+                        # sonst fand Nominatim Karlskrona in Norwegens Binnenland, Kronstadt in Schweden
+                        # 21.11.: Reihenfolge nach Umweg zwischen den Nummernnachbarn; zugelassen nahe der Mitte ODER kleiner Umweg
+                        ok = [x for x in sorted(res, key=lambda x: umweg(e, (float(x['lat']), float(x['lon']))))
+                              if (km(mitte, (float(x['lat']), float(x['lon']))) <= min(rad, 150.0)
+                                  or (km(mitte, (float(x['lat']), float(x['lon']))) <= rad
+                                      and (umweg(e, (float(x['lat']), float(x['lon']))) <= 150.0
+                                           # 21.11.: zwei Namenswoerter im OSM-Namen ("End"+"Cayman") gelten im ganzen Suchfeld
+                                           or len(woerter & set(kern(x['display_name']).split())) >= 2)))
+                              and land(float(x['lat']), float(x['lon'])).kueste_km(float(x['lat']), float(x['lon']), rmax=5) <= 3.0]
+                        kand += ok
+                    if kand:
+                        x = max(kand, key=lambda x: (len(woerter & set(kern(x['display_name']).split())),
+                                                     -umweg(e, (float(x['lat']), float(x['lon'])))))
+                        e['pos'] = (float(x['lat']), float(x['lon']))
+                        e['methode'], e['treffer'] = 'geo', x['display_name'][:120]
+                if e['pos']:
+                    neu_n += 1
+                    anker_n.append((e['nr_int'], e['nr'].lower(), e['pos']))
+                    anker_n.sort(key=lambda x: x[0])
+            print('Runde %d (%s): %d neu verortet, offen %d' % (runde, 'Nominatim' if geo else 'Namen', neu_n,
+                                                              sum(1 for e in I if not e['pos'])), flush=True)
+            if not neu_n and runde >= 2:
+                break
+    runden(0, 2)                                   # Namen
+    kl = saen(KB)                                  # dann Klammer-Saat, Gegenprobe wie oben
+    alle0 = sorted([(x[0], x[1], x[2]) for x in nummern] +
+                   [(e['nr_int'], e['nr'].lower(), e['pos']) for e in I if e['pos'] and e['methode'] != 'att'], key=lambda x: x[0])
+    for e in I:
+        if e['methode'] == 'saat' and e['treffer'] and '(' in e['treffer']:
+            nb = [x[2] for x in alle0 if abs(x[0] - e['nr_int']) <= 40 and x[1] != e['nr'].lower()]
+            if len(nb) >= 2 and fern(e['pos'], nb):
+                e.update(pos=None, methode='unbekannt', treffer='')
+                kl -= 1
+    print('Klammer-Saat: %d Haefen' % kl, flush=True)
+    runden(0)                                      # Namen + Nominatim
+
+    # Schlussprobe mit allen Ankern (ATT + Namen + Nominatim): Saat-Treffer fern der Nummernnachbarn verwerfen
+    alle = sorted([(x[0], x[1], x[2]) for x in nummern] +
+                  [(e['nr_int'], e['nr'].lower(), e['pos']) for e in I if e['pos'] and e['methode'] != 'att'], key=lambda x: x[0])
+    spaet = 0
+    for e in I:
+        if e['methode'] != 'saat':
+            continue
+        nb = [x[2] for x in alle if abs(x[0] - e['nr_int']) <= 40 and x[1] != e['nr'].lower()]
+        if len(nb) >= 2 and fern(e['pos'], nb):
+            print('   Saat verworfen: %s %s -> %s' % (e['nr'], e['name'], e['treffer']))
+            e.update(pos=None, methode='unbekannt', treffer='')
+            spaet += 1
+    print('Schlussprobe: %d Saat-Treffer verworfen' % spaet, flush=True)
+    if spaet:                                      # 21.11.: Verworfene neu suchen statt 'unbekannt' (Belize City, Hanko)
+        runden(0)
     zeilen = []
     for e in I:
         if e['pos']:
@@ -219,7 +342,8 @@ def main(argv):
             e.update(lat='%.4f' % pos[0], lon='%.4f' % pos[1], satz=r['name'], satz_km='%.1f' % d,
                      status='gedeckt' if d <= 5 else ('nah' if d <= 15 else 'luecke'))
         zeilen.append(e)
-    json.dump(cache, open(CACHE, 'w'))
+    if '--ohne-netz' not in argv and '--nur-cache' not in argv:
+        json.dump(cache, open(CACHE, 'w'))
     with open(AUS, 'w', newline='', encoding='utf-8') as fh:
         w = csv.DictWriter(fh, fieldnames=['np', 'nr', 'name', 'standard', 'methode', 'treffer', 'lat', 'lon', 'satz', 'satz_km', 'status'])
         w.writeheader()
