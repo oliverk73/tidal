@@ -16,7 +16,7 @@
     return new Date(t * 1000).toLocaleString(undefined, { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
   }
   function dur(h) { var m = Math.round(h * 60); return Math.floor(m / 60) + ' h ' + pad(m % 60) + ' min'; }
-  var MODE = { stb: 'starboard tack', bb: 'port tack', motor: 'engine' };
+  var MODE = { stb: 'starboard tack', bb: 'port tack', motor: 'engine', warten: 'waiting for the tide' };
 
   window.initRoutePlanner = function (map, body) {
     var state = { start: null, ziel: null, pick: null, layer: null, req: 0 };
@@ -159,7 +159,13 @@
         var farbe = p.modus === 'motor' ? '#e67e22' : '#1f6fd1';
         var tip = '<b>' + hhmm(p.t) + '</b> ' + MODE[p.modus] + '<br>COG ' + p.kurs_kg + '° · SOG ' + p.sog.toFixed(1) + ' kn' +
           '<br>Wind ' + p.tws.toFixed(0) + ' kn from ' + p.twd + '° (TWA ' + p.twa + '°)' +
-          '<br>Current ' + p.strom.toFixed(1) + ' kn to ' + p.strom_ri + '° · Waves ' + p.hs.toFixed(1) + ' m';
+          '<br>Current ' + p.strom.toFixed(1) + ' kn to ' + p.strom_ri + '° · Waves ' + p.hs.toFixed(1) + ' m' +
+          (p.tiefe != null ? '<br>Depth ' + p.tiefe.toFixed(1) + ' m (tide ' + p.tide.toFixed(1) + ' m above LAT)' : '');
+        if (p.modus === 'warten') {
+          L.circleMarker([p.la, p.lo], { radius: 7, color: '#8e44ad', weight: 2, fillColor: '#fff', fillOpacity: 1 })
+            .bindTooltip('<b>' + hhmm(p.t) + '–' + hhmm(P[i + 1].t) + '</b> waiting for the tide (not enough water ahead)', { sticky: true }).addTo(g);
+          continue;
+        }
         L.polyline([[p.la, p.lo], [P[i + 1].la, P[i + 1].lo]], { color: farbe, weight: 4, opacity: 0.9 }).bindTooltip(tip, { sticky: true }).addTo(g);
       }
       // volle Stunden markieren
@@ -180,13 +186,13 @@
 
       var zeilen = r.abschnitte.map(function (a) {
         var p = P[a.von];
-        return '<tr><td>' + hhmm(p.t) + '</td><td>' + (p.modus === 'motor' ? 'engine' : (p.modus === 'stb' ? 'stbd' : 'port')) + '</td><td>' + a.kurs_kg + '°</td><td>' +
+        return '<tr><td>' + hhmm(p.t) + '</td><td>' + (p.modus === 'warten' ? 'wait' : (p.modus === 'motor' ? 'engine' : (p.modus === 'stb' ? 'stbd' : 'port'))) + '</td><td>' + a.kurs_kg + '°</td><td>' +
           a.sm.toFixed(1) + '</td><td>' + a.sog.toFixed(1) + '</td><td>' + a.tws.toFixed(0) + '/' + a.twa + '°</td><td>' + a.strom.toFixed(1) + '</td></tr>';
       }).join('');
       $('rp-ergebnis').innerHTML =
         '<div style="background:rgba(255,255,255,.6);border-radius:4px;padding:5px 6px;">' +
           '<b>Arrival ' + dayHHMM(r.ziel.t) + '</b><br>' + dur(r.dauer_h) + ' · ' + r.strecke_sm + ' nm (direct ' + r.luftlinie_sm + ' nm) · Ø ' + r.sog_mittel + ' kn SOG<br>' +
-          r.wenden + ' tacks · ' + r.halsen + ' gybes · engine ' + dur(r.motor_h) + '<br>' +
+          r.wenden + ' tacks · ' + r.halsen + ' gybes · engine ' + dur(r.motor_h) + (r.warten_h ? ' · <span style="color:#8e44ad;">waiting for the tide ' + dur(r.warten_h) + '</span>' : '') + '<br>' +
           '<span style="color:#777;">' + r.boot.name + (r.boot.variante === 'nospi' ? ' without spinnaker' : ' with spinnaker') + ' (ORC: ' + r.boot.yacht + ', draft ' + (r.boot.tiefgang || '?') + ' m) · depth: ' + r.quellen.tiefe + ' · computed in ' + r.rechenzeit.gesamt_s + ' s</span>' +
           ((r.start.verschoben || r.ziel.verschoben) ? '<br><span style="color:#a60;">' +
             (r.start.verschoben ? 'Start ' + r.start.verschoben + ' km' : '') + (r.start.verschoben && r.ziel.verschoben ? ', ' : '') +

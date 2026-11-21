@@ -12,7 +12,8 @@ Steuerbord/Backbord); Bugwechsel kostet die Wendezeit. Je Kante:
 Daten: Wind Open-Meteo (best_match: ICON-D2/AROME/HARMONIE usw. je Gebiet, stuendlich), Wellen Open-Meteo Marine,
 Strom tpxo_strom_karte.feld (TPXO10 + feine Modelle) stuendlich, Land OSM (segel_land).
 Tiefe: EMODnet (Europa) auf Seekartennull, Tiefgang aus dem ORC-Zertifikat + Reserve.
-NICHT beruecksichtigt (Stand 20.11.): Tide bei der Tiefe (Watt bei Hochwasser), Verkehrstrennungsgebiete, Sperrgebiete, Nacht.
+Tide bei der Tiefe seit 21.11.2026 (py/segel_tide.py: Pegel im Bestand, auf LAT bezogen).
+NICHT beruecksichtigt: Verkehrstrennungsgebiete, Sperrgebiete, Nacht, Windstau.
 
     r = route(start=(lat, lon), ziel=(lat, lon), t0=unix_s, boot='bavaria37', **optionen)
 """
@@ -31,6 +32,7 @@ from scipy import ndimage
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import segel_land  # noqa: E402
 import segel_tiefe  # noqa: E402
+import segel_tide  # noqa: E402
 import segel_polare  # noqa: E402
 
 KN = 1.852                    # km je sm
@@ -45,7 +47,8 @@ RICHT = [r for r in RICHT if r != (0, 0)]
 assert len(RICHT) == 32, len(RICHT)
 
 STANDARD = dict(leistung=0.85, motor=True, motor_kn=5.5, motor_unter=3.0, max_wind=25.0, max_welle=2.5,
-                wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5, ohne_spi=True)
+                wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5, ohne_spi=True,
+                tide=True)
 
 
 class Fehler(Exception):
@@ -200,6 +203,10 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     LAT = n - (np.arange(ny) + 0.5) * h / 111.2
     LON = w + (np.arange(nx) + 0.5) * h / kx
     LAT2, LON2 = np.meshgrid(LAT, LON, indexing="ij")
+    # Zeitfenster: geschaetzte Dauer bei 3 kn ueber Grund x 1,5, 12–36 h
+    stunden = int(min(36, max(12, math.ceil(dist / KN / 3.0 * 1.5) + 2)))       # Kreuz gegen Strom braucht Reserve
+    T0 = math.floor(t0 / 3600) * 3600
+    zeiten = T0 + 3600.0 * np.arange(stunden + 2)
 
     # Land (fein) und erlaubte Kanten
     land_f = segel_land.raster(s, n, w, e, ny * FEIN, nx * FEIN)
@@ -207,14 +214,23 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     # Vorsichtig = wie bei Niedrigwasser Springzeit; Watt und Barren werden immer umfahren (Tide noch nicht beruecksichtigt).
     tiefgang = float(P.info().get("tiefgang") or 2.0)
     tiefe_info = "off"
+    grund_f = None                                   # Grund ueber LAT (m) auf dem feinen Raster, nur bei Tiefendaten
+    HT = None                                        # Tidenhoehe ueber LAT [zeit, ny, nx]
+    brauch = tiefgang + o["reserve_m"]
     if o["tiefe"]:
         hoehe_f = segel_tiefe.flachstes(s, n, w, e, ny * FEIN, nx * FEIN)
         if hoehe_f is None:
             tiefe_info = "no data (EMODnet covers Europe only)"
         else:
-            flach = np.nan_to_num(hoehe_f, nan=-999.0) > -(tiefgang + o["reserve_m"])
-            land_f = land_f | flach
-            tiefe_info = "EMODnet, chart datum (LAT), draft %.1f m + %.1f m" % (tiefgang, o["reserve_m"])
+            grund_f = np.nan_to_num(hoehe_f, nan=-999.0).astype(np.float32)
+            # Tide (21.11.2026): Flaechen, die bei Hochwasser tief genug sind, nur zeitweise sperren
+            HT, n_pegel = (segel_tide.hoehe_ueber_lat(LAT2, LON2, zeiten) if o["tide"] else (None, 0))
+            if HT is None:
+                HT = np.zeros((len(zeiten), ny, nx), np.float32)
+            hw_f = np.repeat(np.repeat(HT.max(0), FEIN, 0), FEIN, 1)[:ny * FEIN, :nx * FEIN]
+            land_f = land_f | (grund_f > hw_f - brauch)                      # auch bei Hochwasser zu flach
+            tiefe_info = ("EMODnet (LAT) + tide height from %d gauges, draft %.1f m + %.1f m" % (n_pegel, tiefgang, o["reserve_m"])
+                          if n_pegel else "EMODnet, chart datum (LAT), draft %.1f m + %.1f m (no tide gauge nearby)" % (tiefgang, o["reserve_m"]))
     mitte = FEIN // 2
     wasser = ~land_f[mitte::FEIN, mitte::FEIN][:ny, :nx]
 
@@ -245,17 +261,22 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
 
 
     gueltig = np.zeros((32, ny, nx), dtype=bool)
+    kante_grund = np.full((32, ny, nx), -999.0, np.float32) if grund_f is not None else None
     II, JJ = np.meshgrid(np.arange(ny), np.arange(nx), indexing="ij")
     for d, (di, dj) in enumerate(RICHT):
         i2, j2 = II + di, JJ + dj
         ok = wasser & (i2 >= 0) & (i2 < ny) & (j2 >= 0) & (j2 < nx)
         schritte = int(math.ceil(math.hypot(di, dj) * FEIN * 1.5))
-        for q in range(1, schritte + 1):
+        for q in range(0 if grund_f is not None else 1, schritte + 1):
             f = q / schritte
             fi = np.clip(np.round((II + f * di) * FEIN + mitte).astype(int), 0, ny * FEIN - 1)
             fj = np.clip(np.round((JJ + f * dj) * FEIN + mitte).astype(int), 0, nx * FEIN - 1)
             ok &= ~land_f[fi, fj]
+            if kante_grund is not None:
+                np.maximum(kante_grund[d], grund_f[fi, fj], out=kante_grund[d])
         gueltig[d] = ok
+    # nur Kanten, die irgendwann zu flach sind, brauchen die Zeitpruefung
+    tidal = (kante_grund > HT.min(0)[None] - brauch) & gueltig if kante_grund is not None else None
     # Befahrbares Netz: vom offensten Wasserpunkt (groesster Abstand zum Land/Flachen) ueber erlaubte Kanten erreichbare
     # Knoten (zeitfrei). Start und Ziel kommen auf den naechsten davon. Die 8er-Flaechensuche oben laesst diagonale
     # Engstellen durch, die die feine Kantenpruefung sperrt (20.11.2026: Marstal, Lymington).
@@ -291,10 +312,6 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     de, dn = np.sin(hd), np.cos(hd)
     ne_, nn_ = np.cos(hd), -np.sin(hd)                                       # rechts quer
 
-    # Zeitfenster: geschaetzte Dauer bei 3 kn ueber Grund x 1,5, 12–36 h
-    stunden = int(min(36, max(12, math.ceil(dist / KN / 3.0 * 1.5) + 2)))       # Kreuz gegen Strom braucht Reserve
-    T0 = math.floor(t0 / 3600) * 3600
-    zeiten = T0 + 3600.0 * np.arange(stunden + 2)
     t_um = time.time()
     with cf.ThreadPoolExecutor(3) as ex:
         f_wind = ex.submit(_wind, s, n, w, e, zeiten, LAT2, LON2)
@@ -388,11 +405,14 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     wende_s = wende_h * 3600.0
     t_dij = time.time()
     beste = (np.inf, None)
+    gewartet = set()                                                   # Knoten, an denen schon auf Wasser gewartet wurde
     while heap:
         t, z = heapq.heappop(heap)
         if t >= beste[0]:                                             # kein Kandidat kann noch besser werden
             break
-        if erledigt[z]:
+        if z < 0:                                                     # Warte-Eintrag: Boot liegt bis t am Knoten (Tide)
+            z = -z - 1
+        elif erledigt[z]:
             continue
         erledigt[z] = True
         pops += 1
@@ -422,6 +442,22 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         tws = math.hypot(we, wn)
         woher = math.degrees(math.atan2(-we, -wn)) % 360
         twa = ((woher - kurs + 180) % 360) - 180
+        if tidal is not None and tidal[:, i, j].any():
+            ht = HT[ks, i, j] * (1 - f) + HT[ks + 1, i, j] * f
+            zu = tidal[:, i, j] & (kante_grund[:, i, j] > ht - brauch)
+            sog = np.where(zu, -1.0, sog)
+            # Warten auf Wasser (21.11.2026): naechster Zeitpunkt (10-min-Schritte), zu dem eine gesperrte Kante frei wird
+            if zu.any() and z not in gewartet:
+                gewartet.add(z)
+                tt = t + 600.0 * np.arange(1, int((t_ende - t) / 600))
+                if len(tt):
+                    xx = (tt - T0) / 3600.0
+                    kk = np.minimum(xx.astype(int), len(zeiten) - 2)
+                    hh = HT[kk, i, j] * (1 - (xx - kk)) + HT[kk + 1, i, j] * (xx - kk)
+                    frei = hh[None, :] - brauch >= kante_grund[zu, i, j][:, None]
+                    if frei.any():
+                        tw = float(tt[int(np.argmax(frei.any(0)))])
+                        heapq.heappush(heap, (tw, -z - 1))
         segel = bug != -1
         if tws > max_wind:
             sog = np.where(segel, -1.0, sog)
@@ -472,6 +508,12 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
              "tws": round(tws_g, 1), "twd": round(math.degrees(math.atan2(-wu, -wv)) % 360),
              "strom": round(math.hypot(cu, cv), 2), "strom_ri": round(math.degrees(math.atan2(cu, cv)) % 360),
              "hs": round(float(hs), 1)}
+        if grund_f is not None:
+            x_ = (t - T0) / 3600.0
+            k_ = min(int(x_), len(zeiten) - 2)
+            ht_ = HT[k_, i, j] * (1 - (x_ - k_)) + HT[k_ + 1, i, j] * (x_ - k_)
+            p["tide"] = round(float(ht_), 1)
+            p["tiefe"] = round(float(ht_ - grund_f[i * FEIN + mitte, j * FEIN + mitte]), 1)
         nach = kette[idx + 1] if idx + 1 < len(kette) else None
         if nach is not None:
             d, nb, kurs, sog = int(vor_d[nach]), int(vor_bug[nach]), float(vor_kurs[nach]), float(vor_sog[nach])
@@ -480,6 +522,19 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             woher = math.degrees(math.atan2(-(wu - cu), -(wv - cv))) % 360
             p["twa"] = round(((woher - kurs + 180) % 360) - 180)
         punkte.append(p)
+    # Wartezeiten auf Wasser (Tide) sichtbar machen: Abfahrt = Ankunft am naechsten Punkt - Fahrzeit der Kante
+    a = 0
+    while a < len(punkte) - 1:
+        p, q = punkte[a], punkte[a + 1]
+        if p.get("sog"):
+            fahrt = _km(p["la"], p["lo"], q["la"], q["lo"]) / KN / max(p["sog"], 0.05) * 3600.0
+            luecke = (q["t"] - p["t"]) - fahrt
+            if luecke > 300:
+                w_ = dict(p, modus="warten", sog=0.0, kurs_kg=p["kurs_kg"])
+                p["t"] = round(q["t"] - fahrt)
+                punkte.insert(a, w_)
+                a += 1
+        a += 1
     # Start-/Zielpunkte exakt anhaengen (Verbindung zum Gitter)
     punkte[0]["la_eingabe"], punkte[0]["lo_eingabe"] = la_a, lo_a
     punkte[-1]["la_eingabe"], punkte[-1]["lo_eingabe"] = la_b, lo_b
@@ -515,6 +570,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                     halsen += 1
             letzter = p["modus"]
     weg_km = sum(_km(punkte[a]["la"], punkte[a]["lo"], punkte[a + 1]["la"], punkte[a + 1]["lo"]) for a in range(len(punkte) - 1))
+    warten_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["modus"] == "warten") / 3600
     motor_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["modus"] == "motor") / 3600
     dauer_h = (punkte[-1]["t"] - punkte[0]["t"]) / 3600
     return {
@@ -524,14 +580,16 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                  "naechst_erreichbar_km": round(float(ab_ziel[ib, jb]), 1)},
         "dauer_h": round(dauer_h, 2), "strecke_sm": round(weg_km / KN, 1), "luftlinie_sm": round(dist / KN, 1),
         "sog_mittel": round(weg_km / KN / dauer_h, 2) if dauer_h > 0 else None,
-        "wenden": wenden, "halsen": halsen, "motor_h": round(motor_h, 2),
+        "wenden": wenden, "halsen": halsen, "motor_h": round(motor_h, 2), "warten_h": round(warten_h, 2),
         "punkte": punkte, "abschnitte": abschnitte,
         "gitter": {"km": round(h, 3), "nx": nx, "ny": ny, "s": s, "n": n, "w": w, "e": e},
         "quellen": {"wind": "Open-Meteo best_match (regional models, hourly)", "wellen": "Open-Meteo Marine",
                     "strom": "Tidal current layer (TPXO10 + fine models)" + (" + Copernicus GLO12 ocean current" if o["ozean"] else ""),
                     "land": "OpenStreetMap land polygons", "tiefe": tiefe_info, "polare": P.info()["quelle"]},
-        "hinweise": (["Shallow water is avoided as at chart datum (lowest tide); passages over flats at high water are not "
-                      "considered yet."] if tiefe_info.startswith("EMODnet") else ["Water depth is NOT considered."])
+        "hinweise": ((["Depth = EMODnet (LAT) + predicted tide from nearby gauges at the time of passage; storm surge "
+                       "and air pressure are not included, keep the reserve."] if "tide height" in tiefe_info else
+                      ["Shallow water is avoided as at chart datum (lowest tide)."]) if tiefe_info.startswith("EMODnet")
+                     else ["Water depth is NOT considered."])
                     + ["Traffic separation schemes and restricted areas are NOT considered."],
         "rechenzeit": {"umwelt_s": round(t_um, 1), "dijkstra_s": round(t_dij, 1), "gesamt_s": round(time.time() - uhr, 1),
                        "schritte": pops},
