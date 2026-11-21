@@ -31,7 +31,21 @@ PRUEF = os.path.join(ROOT, 'harmonics/help/neu_pruefen_%s.csv' % dt.date.today()
 CHS_CACHE = os.path.join(ROOT, 'quellen/tide_tables/CHS_hilo')
 STAATEN = {'ME': ('Maine', 'America/New_York'), 'MD': ('Maryland', 'America/New_York'), 'FL': ('Florida', 'America/New_York'),
            'OR': ('Oregon', 'America/Los_Angeles'), 'CA': ('California', 'America/Los_Angeles'),
-           'WA': ('Washington', 'America/Los_Angeles'), 'AK': ('Alaska', 'America/Anchorage')}
+           'WA': ('Washington', 'America/Los_Angeles'), 'AK': ('Alaska', 'America/Anchorage'),
+           'AL': ('Alabama', 'America/Chicago'), 'CT': ('Connecticut', 'America/New_York'), 'DE': ('Delaware', 'America/New_York'),
+           'LA': ('Louisiana', 'America/Chicago'), 'MA': ('Massachusetts', 'America/New_York'),
+           'NC': ('North Carolina', 'America/New_York'), 'NJ': ('New Jersey', 'America/New_York'),
+           'SC': ('South Carolina', 'America/New_York'), 'VA': ('Virginia', 'America/New_York')}
+# NOAA-Metadaten ohne Staat (21.11.): US-Orte zugeordnet; Ausland (Fidschi, Niue, Tonga, Ecuador, Mexiko) weggelassen --
+# dort stimmen die NOAA-Koordinaten teils nicht (Neiafu Laenge 6,0 statt -174,0; Fidschi/Niue Vorzeichen vertauscht)
+OHNE_STAAT = {'8723667': 'FL', 'TWC0959': 'WA', 'TWC1579': 'AK', 'TWC2021': 'AK', 'TWC2023': 'AK', 'TWC2025': 'AK',
+              'TWC2321': 'AK', 'TWC2423': 'AK'}
+PROVINZ = {'NL': 'Newfoundland and Labrador', 'NS': 'Nova Scotia', 'NB': 'New Brunswick', 'PE': 'Prince Edward Island',
+           'QC': 'Québec', 'ON': 'Ontario', 'MB': 'Manitoba', 'BC': 'British Columbia', 'NU': 'Nunavut',
+           'NT': 'Northwest Territories', 'YT': 'Yukon'}
+TZ_PROV = {'NL': 'America/St_Johns', 'NS': 'America/Halifax', 'NB': 'America/Moncton', 'PE': 'America/Halifax',
+           'QC': 'America/Toronto', 'MB': 'America/Winnipeg', 'BC': 'America/Vancouver', 'NU': 'America/Iqaluit',
+           'NT': 'America/Yellowknife', 'YT': 'America/Whitehorse', 'ON': 'America/Toronto'}
 # (UKHO-Indexname, NOAA-Id, Staat, unser Name) -- Zuordnung 21.11.2026 (Name gleich, <= 6 km; drei mit anderem
 # Stationsnamen in derselben Bucht: Deadman Bay, Olga Bay, Gnat Cove)
 NOAA = [
@@ -85,6 +99,46 @@ def chs_hilo(code):
     return s, t, np.array([b for _, b in ev])
 
 
+def noaa_name(n):
+    """'Steinhatchee River ent., Deadman Bay' -> 'Steinhatchee River entrance (Deadman Bay)'; Staatskuerzel am Ende weg."""
+    import re
+    n = re.sub(r',\s*(Md|Va|Del|N\.\s?J|N\.\s?C|S\.\s?C|Conn|Mass|Fla|La|Ala|Wash|Calif|Ore|Me)\.?$', '', n.strip())
+    n = re.sub(r'\bent\.', 'entrance', n)
+    teile = [t.strip() for t in n.split(',') if t.strip()]
+    return teile[0] + (' (%s)' % ', '.join(teile[1:]) if len(teile) > 1 else '')
+
+
+def auto_kandidaten():
+    """--alle (Oliver 21.11.): NOAA-Nebenorte > 15 km und CHS-HW/NW-Stationen > 10 km vom naechsten Gezeitensatz."""
+    import math
+    import health_check as H
+    from scipy.spatial import cKDTree
+    R = [r for r in H.load_records() if r['lat'] is not None and not r['current']]
+
+    def xyz(la, lo):
+        return (math.cos(math.radians(la)) * math.cos(math.radians(lo)),
+                math.cos(math.radians(la)) * math.sin(math.radians(lo)), math.sin(math.radians(la)))
+    T = cKDTree([xyz(r['lat'], r['lon']) for r in R])
+
+    def abst(la, lo):
+        return T.query(xyz(la, lo))[0] * 6371
+    gew, noaa, chs = [], [], []
+    for st in json.load(open(os.path.join(ROOT, 'quellen/tide_tables/NOAA_hilo/mdapi_tidepredictions.json')))['stations']:
+        staat = st.get('state') or OHNE_STAAT.get(st['id'])
+        if st['type'] != 'S' or staat not in STAATEN or abst(st['lat'], st['lng']) <= 15:
+            continue
+        if any(math.hypot(st['lat'] - a, (st['lng'] - b) * math.cos(math.radians(a))) * 111.2 < 3 for a, b in gew):
+            continue
+        gew.append((st['lat'], st['lng']))
+        noaa.append(('auto', st['id'], staat, noaa_name(st['name'])))
+    for st in json.load(open(os.path.join(ROOT, 'quellen/tide_tables/CHS_hilo/stations.json'))):
+        if not any(t['code'] == 'wlp-hilo' for t in st.get('timeSeries', [])) or abst(st['latitude'], st['longitude']) <= 10:
+            continue
+        pc = st.get('provinceCode') or ('BC' if st['longitude'] < -120 else 'NU')
+        chs.append(('auto', st['code'], st['officialName'], PROVINZ.get(pc, pc), TZ_PROV.get(pc, 'America/Toronto')))
+    return noaa, chs
+
+
 def main(argv):
     kopf = X.kopf_lesen(ZIEL)
     namen, speeds, arg, fak = kopf
@@ -94,14 +148,16 @@ def main(argv):
     bestand = set(open(ZIEL, encoding='iso-8859-1').read().split('\n'))
     neu, liste = [], []
     faelle = []
-    for idx, sid, st, unser in NOAA:
+    liste_noaa, liste_chs = (auto_kandidaten() if '--alle' in argv else (NOAA, CHS))
+    print('%d NOAA-, %d CHS-Kandidaten' % (len(liste_noaa), len(liste_chs)), flush=True)
+    for idx, sid, st, unser in liste_noaa:
         s = noaa_station(sid)
         NH.laden(s['id'])
         t, h = NH.scheitel(s['id'])
         faelle.append((idx, 'NOAA %s (%s)' % (s['id'], 'Nebenort' if s['type'] == 'S' else 'Bezugsort'), '%s, %s' % (unser, STAATEN[st][0]),
                        'United States', STAATEN[st][0], STAATEN[st][1], s['lat'], s['lng'], t, h, 'MLLW',
                        'NOAA CO-OPS tide predictions (station %s), high/low waters 2025-2026' % s['id']))
-    for idx, code, unser, prov, tz in CHS:
+    for idx, code, unser, prov, tz in liste_chs:
         s, t, h = chs_hilo(code)
         faelle.append((idx, 'CHS %s' % code, '%s, %s, Canada' % (unser, prov), 'Canada', prov, tz, s['latitude'], s['longitude'],
                        t, h, 'Chart Datum', 'CHS tide predictions (IWLS station %s), high/low waters 2025-2026' % code))
@@ -128,8 +184,9 @@ def main(argv):
         blk = ['#', '# ' + name, '# BEGIN HOT COMMENTS', '# country: %s' % land, '# source: %s' % src[:88],
                '# date_imported: %s' % heute, '# datum: %s' % datum, '# confidence: 7', '# !units: meters',
                '# !longitude: %.4f' % lo, '# !latitude: %.4f' % la, '# province: %s' % prov,
-               '# note: %s Scheitelfit an %s HW/NW %s (%.1f cm / %.0f min, Probe %.1f cm); fuellt UKHO-Index-Luecke "%s"' % (
-                   heute, quelle, '2025-2026' if t.min() < grenze - 86400 else '2026', 100 * r, tf, 100 * r_pr, idx),
+               '# note: %s Scheitelfit an %s HW/NW %s (%.1f cm / %.0f min, Probe %.1f cm); %s' % (
+                   heute, quelle, '2025-2026' if t.min() < grenze - 86400 else '2026', 100 * r, tf, 100 * r_pr,
+                   ('fuellt UKHO-Index-Luecke "%s"' % idx) if idx != 'auto' else 'fuellt Luecke (naechster Satz > 15 km, CHS > 10 km)'),
                '# note: py/luecken_amtlich.py', name, '+00:00 :%s' % tz, '%.4f meters' % z0]
         blk += ['%-15s %.4f  %.2f' % (c, *w[c]) if c in w and w[c][0] >= 0.00005 else 'x 0 0' for c in namen]
         assert '\n'.join(blk).encode('latin-1')
