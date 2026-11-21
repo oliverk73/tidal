@@ -6,6 +6,9 @@ revieren sind fuer die Wegwahl wichtig -> Feld der feinen Modelle statt TPXO, wo
 Quellen (Konstanten je Modellpunkt, tiefengemittelt):
   - SSW-RS (FVCOM NW-Schelf, Zellen an Kuesten ~0,7 km): Jahresfit 2018, quellen/tidal_streams/UK_SSWRS/fit_*.npz (kn)
   - AUSTEn (CSIRO COMPAS Australien): Ellipsen CSIRO_tidal_const_v12.nc (m/s)
+  - WebTide Upper Fundy (DFO/BIO, Finite Elemente, 74934 Knoten; 21.11.2026): .v2c je Tide (u/v Amplitude m/s, Phase
+    Greenwich); nur Knoten bis 2 m ueber Mittelwasser (das Modell rechnet Ueberflutung weit ins Land).
+    Probe: Wasserstand M2 an 10 Pegeln 1-6 %, 0-5 Grad; Strom Minas Passage (FORCE-Messung) x1,05, -5 Grad.
 `bauen` schreibt quellen/tidal_streams/feinfeld.npz: lat, lon, abstand_km (Nachbarpunkt), U_k/V_k komplex m/s
 (c = a*e^{-ig}, Greenwich, wie TPXO in tpxo_strom_karte).
 
@@ -62,6 +65,20 @@ def bauen():
         V = e * (mj[:, j] * np.sin(p) + 1j * mn[:, j] * np.cos(p))
         uv2[k] = (np.nan_to_num(U[ok]).astype(np.complex64), np.nan_to_num(V[ok]).astype(np.complex64))
     teile.append(('AUSTEn', la2[ok], lo2[ok], uv2))
+    # WebTide Upper Fundy
+    W = os.path.join(ROOT, 'quellen/tidal_streams/Canada_WebTide/flood')
+    nod = np.loadtxt(os.path.join(W, 'flood_ll.nod'))
+    bat = np.loadtxt(os.path.join(W, 'flood.bat'))
+    ok3 = bat[:, 1] > -2.0
+    uv3 = {}
+    for k in KS:
+        f_ = os.path.join(W, '%s.barotropic.v2c' % k)
+        if os.path.exists(f_):
+            v = np.loadtxt(f_, skiprows=3)
+            U = v[:, 1] * np.exp(-1j * np.radians(v[:, 2]))
+            V = v[:, 3] * np.exp(-1j * np.radians(v[:, 4]))
+            uv3[k] = (U[ok3].astype(np.complex64), V[ok3].astype(np.complex64))
+    teile.append(('WebTide', nod[ok3, 2], nod[ok3, 1], uv3))
     out = dict(lat=[], lon=[], quelle=[])
     for k in KS:
         out['U_' + k], out['V_' + k] = [], []

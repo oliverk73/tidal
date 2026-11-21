@@ -194,6 +194,9 @@ def _rohreihe(text, name, la, lo):
     if any(k in text for k in ('HHA-TIDAL-MAPS', 'PDPORTS-TEES-ATLAS', 'MHPA-ATLAS-VOL2', 'MHPA-ATLAS-VOL1', 'MHPA-ATLAS-VOL3', 'NP337-MONTYMARINER', 'NPATLAS-MONTYMARINER')):
         import hafenatlas_stroeme as HA                # Hafenatlanten 13.11.2026: synthetische Jahresreihe
         return HA.rohreihe(text, name, la, lo)
+    if 'WEBTIDE-UPPER-FUNDY-' in text:
+        import webtide_strom as WT                      # WebTide Upper Fundy 21.11.2026: Reihe aus den 10 Tiden
+        return WT.rohreihe(text, name, la, lo)
     if 'CHS-ATLAS-STL-' in text:
         import stlorenz_atlas as SL                     # CHS-Atlas Saint-Laurent 21.11.2026: synthetisches Jahr
         return SL.rohreihe(text, name, la, lo)
