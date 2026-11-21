@@ -104388,9 +104388,10 @@ x 0 0
 # major_axis_deg_true: 76.1
 # confidence: 4
 # utide: model window 2026-11-08..2026-11-16, const=10 with inference
+# note: 20261121 Modellpunkt lag 10 m an Land; 220 m seewaerts gesetzt (Oliver)
 # !units: knots
-# !longitude: -9.0632
-# !latitude: 53.1565
+# !longitude: -9.0629
+# !latitude: 53.1585
 Aughinish Point (Galway Bay), Clare, Ireland Current
 +00:00 :UTC
 0.0929 knots
@@ -199711,10 +199712,11 @@ x 0 0
 # major_axis_deg_true: 88.0
 # confidence: 5
 # utide: period=2026-01-01..2026-12-31 const=60
+# note: 20261121 Entfernung im Namen war falsch (40 statt 17 km; Oliver)
 # !units: knots
 # !longitude: -8.1588
 # !latitude: 55.4236
-Tory Island (40 km NE), Ulster, Ireland Current
+Tory Island (17 km NNE), Ulster, Ireland Current
 +00:00 :UTC
 -0.0670 knots
 J1              0.0003  215.65
@@ -220821,10 +220823,11 @@ x 0 0
 # major_axis_deg_true: 141.4
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 4.7 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 SSW-RS-Knoten lag 1 km westlich an Land (Strangford); in die Rinnenmitte der Narrows gesetzt, Name nach der Enge (Oliver)
 # !units: knots
-# !longitude: -5.56143
-# !latitude: 54.37144
-Salt Island (5 km E), Northern Ireland, United Kingdom Current
+# !longitude: -5.5476
+# !latitude: 54.3714
+Strangford Narrows (Strangford), Northern Ireland, United Kingdom Current
 +00:00 :UTC
 0.1816 knots
 J1              0.0102  12.28
@@ -244010,9 +244013,10 @@ x 0 0
 # major_axis_deg_true: 156.2
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 2.5 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 Modellpunkt lag 20 m an Land; 140 m seewaerts gesetzt (Oliver)
 # !units: knots
-# !longitude: -5.98273
-# !latitude: 55.05771
+# !longitude: -5.9827
+# !latitude: 55.0590
 Cloghastucan (1 km NW, Red Bay), Northern Ireland, United Kingdom Current
 +00:00 :UTC
 0.0519 knots
@@ -294948,10 +294952,11 @@ x 0 0
 # major_axis_deg_true: 90.2
 # confidence: 5
 # note: MODEL-DERIVED. Brennpunkt Spring 1.7 kn, kein Satz in 8 km, Oliver 20261119.
+# note: 20261121 GeoNames-Kap "Seven Heads" auf Great Saltee ist bei Google Maps unbekannt (Seven Heads = Cork); Name nach Great Saltee (Oliver)
 # !units: knots
 # !longitude: -6.62015
 # !latitude: 52.10180
-Seven Heads, Leinster, Ireland Current
+Great Saltee (2 km S), Leinster, Ireland Current
 +00:00 :UTC
 0.0171 knots
 J1              0.0050  198.21
