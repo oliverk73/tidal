@@ -2415,7 +2415,7 @@ def api_route():
         for k in ("leistung", "motor_kn", "motor_unter", "max_wind", "max_welle", "wendezeit_s", "reserve_m"):
             if request.args.get(k):
                 opt[k] = float(request.args[k])
-        for k in ("motor", "ozean", "tiefe", "ohne_spi", "tide", "vtg"):
+        for k in ("motor", "ozean", "tiefe", "ohne_spi", "tide", "vtg", "sperr"):
             if request.args.get(k) in ("0", "1"):
                 opt[k] = request.args[k] == "1"
     except (KeyError, ValueError):

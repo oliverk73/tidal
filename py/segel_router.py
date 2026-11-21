@@ -13,7 +13,8 @@ Daten: Wind Open-Meteo (best_match: ICON-D2/AROME/HARMONIE usw. je Gebiet, stuen
 Strom tpxo_strom_karte.feld (TPXO10 + feine Modelle) stuendlich, Land OSM (segel_land).
 Tiefe: EMODnet (Europa) auf Seekartennull, Tiefgang aus dem ORC-Zertifikat + Reserve.
 Tide bei der Tiefe seit 21.11.2026 (py/segel_tide.py: Pegel im Bestand, auf LAT bezogen).
-NICHT beruecksichtigt: Verkehrstrennungsgebiete, Sperrgebiete, Nacht, Windstau.
+Seit 21.11.2026 auch: Verkehrstrennungsgebiete (segel_tss), Sperrgebiete (segel_sperr), Wellen per Fetch in
+geschuetzten Gewaessern, Nachtabschnitte markiert (Sonne < -6 Grad). NICHT: Windstau, Nachtfahrt-Verbot.
 
     r = route(start=(lat, lon), ziel=(lat, lon), t0=unix_s, boot='bavaria37', **optionen)
 """
@@ -34,6 +35,7 @@ import segel_land  # noqa: E402
 import segel_tiefe  # noqa: E402
 import segel_tide  # noqa: E402
 import segel_tss  # noqa: E402
+import segel_sperr  # noqa: E402
 import segel_polare  # noqa: E402
 
 KN = 1.852                    # km je sm
@@ -49,7 +51,7 @@ assert len(RICHT) == 32, len(RICHT)
 
 STANDARD = dict(leistung=0.85, motor=True, motor_kn=5.5, motor_unter=3.0, max_wind=25.0, max_welle=2.5,
                 wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5, ohne_spi=True,
-                tide=True, vtg=True)
+                tide=True, vtg=True, sperr=True)
 
 
 class Fehler(Exception):
@@ -158,6 +160,62 @@ def _wellen(s, n, w, e, zeiten, LAT, LON):
     return np.clip(hs_k, 0, None), np.degrees(np.arctan2(se, cn)) % 360
 
 
+def sonnenhoehe(la, lo, t):
+    """Sonnenhoehe in Grad (NOAA-Naeherung, ~0,5 Grad genau) fuer Unix-Zeit t."""
+    d = t / 86400.0 + 2440587.5 - 2451545.0
+    g = math.radians((357.529 + 0.98560028 * d) % 360)
+    q = (280.459 + 0.98564736 * d) % 360
+    L_ = math.radians((q + 1.915 * math.sin(g) + 0.020 * math.sin(2 * g)) % 360)
+    e = math.radians(23.439 - 0.00000036 * d)
+    ra = math.atan2(math.cos(e) * math.sin(L_), math.cos(L_))
+    dek = math.asin(math.sin(e) * math.sin(L_))
+    gmst = (18.697374558 + 24.06570982441908 * d) % 24
+    ha = math.radians(gmst * 15 + lo) - ra
+    phi = math.radians(la)
+    return math.degrees(math.asin(math.sin(phi) * math.sin(dek) + math.cos(phi) * math.cos(dek) * math.cos(ha)))
+
+
+def _fetch(land_k, h, offen_km=200.0):
+    """Freie Wasserstrecke (km) gegen 16 Richtungen (woher, 0 = N) je Knoten; trifft der Strahl kein Land im
+    Gebiet, gilt das Wasser dahinter als offen (offen_km)."""
+    ny, nx = land_k.shape
+    F = np.full((16, ny, nx), offen_km, np.float32)
+    for r in range(16):
+        a = math.radians(22.5 * r)
+        di, dj = -math.cos(a), math.sin(a)                           # Zeile waechst nach Sueden
+        gefunden = land_k.copy()
+        F[r][land_k] = 0.0
+        for k in range(1, max(ny, nx) + 1):
+            oi, oj = int(round(k * di)), int(round(k * dj))
+            if abs(oi) >= ny or abs(oj) >= nx:
+                break
+            treff = np.zeros_like(land_k)
+            src = land_k[max(0, oi):ny + min(0, oi), max(0, oj):nx + min(0, oj)]
+            treff[max(0, -oi):ny - max(0, oi), max(0, -oj):nx - max(0, oj)] = src
+            neu = treff & ~gefunden
+            F[r][neu] = k * h
+            gefunden |= treff
+    return F
+
+
+def _wellen_fetch(HS, WD, WU, WV, F):
+    """Wellenhoehe in geschuetzten Gewaessern (21.11.2026, Olivers Solent-Fund 1,4 m aus dem Kanalmodell): ist der
+    Punkt zur Wellenrichtung hin abgeschirmt (< 30 km freies Wasser), gilt nur die Windsee nach JONSWAP
+    Hs = 0,0016 U sqrt(F/g) (U m/s, F m) mit der Fetch gegen den Wind."""
+    tws = np.hypot(WU, WV) * 0.514444
+    woher = np.degrees(np.arctan2(-WU, -WV)) % 360
+    rw = (np.round(woher / 22.5).astype(int)) % 16
+    rs = (np.round(WD / 22.5).astype(int)) % 16
+    ii, jj = np.indices(HS.shape[1:])
+    out = HS.copy()
+    for k in range(HS.shape[0]):
+        f_wind = F[rw[k], ii, jj] * 1000.0
+        f_welle = F[rs[k], ii, jj]
+        windsee = 0.0016 * tws[k] * np.sqrt(f_wind / 9.81)
+        out[k] = np.where(f_welle < 30.0, np.minimum(HS[k], windsee), HS[k])
+    return out
+
+
 def _strom(s, n, w, e, zeiten, LAT, LON, ozean):
     import tpxo_strom_karte as T
     zellen = int(min(300, max(100, LAT.shape[0], LAT.shape[1])))
@@ -211,6 +269,13 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
 
     # Land (fein) und erlaubte Kanten
     land_f = segel_land.raster(s, n, w, e, ny * FEIN, nx * FEIN)
+    land_rein = land_f[FEIN // 2::FEIN, FEIN // 2::FEIN][:ny, :nx].copy()       # nur Kueste (Fetch)
+    # Sperrgebiete (OpenSeaMap no_entry / to_be_avoided, 21.11.2026) wie Land; Zutritt mit Auflagen nur als Hinweis
+    sperr_info, auflagen = "off", []
+    if o["sperr"]:
+        sp_f, auflagen = segel_sperr.raster(s, n, w, e, ny * FEIN, nx * FEIN)
+        land_f = land_f | sp_f
+        sperr_info = "OpenSeaMap: %.1f %% of the area no entry" % (100 * sp_f.mean())
     # Wassertiefe (EMODnet, Seekartennull): gesperrt, wo der flachste Grund hoeher liegt als -(Tiefgang + Reserve).
     # Vorsichtig = wie bei Niedrigwasser Springzeit; Watt und Barren werden immer umfahren (Tide noch nicht beruecksichtigt).
     tiefgang = float(P.info().get("tiefgang") or 2.0)
@@ -335,6 +400,8 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     if HS is None:
         HS = np.zeros_like(WU)
         WD = np.zeros_like(WU)
+    else:
+        HS = _wellen_fetch(HS, WD, WU, WV, _fetch(land_rein, h))
 
     def umwelt(i, j, t):
         x = (t - T0) / 3600.0
@@ -519,6 +586,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
              "tws": round(tws_g, 1), "twd": round(math.degrees(math.atan2(-wu, -wv)) % 360),
              "strom": round(math.hypot(cu, cv), 2), "strom_ri": round(math.degrees(math.atan2(cu, cv)) % 360),
              "hs": round(float(hs), 1)}
+        p["nacht"] = sonnenhoehe(float(LAT[i]), float(LON[j]), t) < -6.0          # nach buergerlicher Daemmerung
         if grund_f is not None:
             x_ = (t - T0) / 3600.0
             k_ = min(int(x_), len(zeiten) - 2)
@@ -569,6 +637,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         ab["tws"] = round(sum(q["tws"] for q in teil) / len(teil), 1)
         ab["twa"] = round(sum(abs(q["twa"]) for q in teil) / len(teil))
         ab["strom"] = round(max(q["strom"] for q in teil), 1)
+        ab["nacht"] = any(q["nacht"] for q in teil)
         ab["k0"] = None
         del ab["k0"]
     letzter = None
@@ -582,6 +651,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             letzter = p["modus"]
     weg_km = sum(_km(punkte[a]["la"], punkte[a]["lo"], punkte[a + 1]["la"], punkte[a + 1]["lo"]) for a in range(len(punkte) - 1))
     warten_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["modus"] == "warten") / 3600
+    nacht_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["nacht"]) / 3600
     motor_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["modus"] == "motor") / 3600
     dauer_h = (punkte[-1]["t"] - punkte[0]["t"]) / 3600
     return {
@@ -591,19 +661,21 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                  "naechst_erreichbar_km": round(float(ab_ziel[ib, jb]), 1)},
         "dauer_h": round(dauer_h, 2), "strecke_sm": round(weg_km / KN, 1), "luftlinie_sm": round(dist / KN, 1),
         "sog_mittel": round(weg_km / KN / dauer_h, 2) if dauer_h > 0 else None,
-        "wenden": wenden, "halsen": halsen, "motor_h": round(motor_h, 2), "warten_h": round(warten_h, 2),
+        "wenden": wenden, "halsen": halsen, "motor_h": round(motor_h, 2), "warten_h": round(warten_h, 2), "nacht_h": round(nacht_h, 2),
         "punkte": punkte, "abschnitte": abschnitte,
         "gitter": {"km": round(h, 3), "nx": nx, "ny": ny, "s": s, "n": n, "w": w, "e": e},
         "quellen": {"wind": "Open-Meteo best_match (regional models, hourly)", "wellen": "Open-Meteo Marine",
                     "strom": "Tidal current layer (TPXO10 + fine models)" + (" + Copernicus GLO12 ocean current" if o["ozean"] else ""),
-                    "land": "OpenStreetMap land polygons", "tiefe": tiefe_info, "vtg": vtg_info, "polare": P.info()["quelle"]},
+                    "land": "OpenStreetMap land polygons", "tiefe": tiefe_info, "vtg": vtg_info, "sperr": sperr_info, "polare": P.info()["quelle"]},
         "hinweise": ((["Depth = EMODnet (LAT) + predicted tide from nearby gauges at the time of passage; storm surge "
                        "and air pressure are not included, keep the reserve."] if "tide height" in tiefe_info else
                       ["Shallow water is avoided as at chart datum (lowest tide)."]) if tiefe_info.startswith("EMODnet")
                      else ["Water depth is NOT considered."])
                     + (["Traffic separation schemes (OpenSeaMap): lanes only with the traffic or crossing at right angles, "
-                        "separation zones only crossed; restricted areas are NOT considered."] if vtg_info.startswith("OpenSeaMap")
-                       else ["Restricted areas are NOT considered."]),
+                        "separation zones only crossed."] if vtg_info.startswith("OpenSeaMap") else [])
+                    + (["No-entry areas (OpenSeaMap) are avoided; check notices to mariners for temporary closures."]
+                       if sperr_info.startswith("OpenSeaMap") else ["Restricted areas are NOT considered."])
+                    + (["Areas with entry restrictions nearby (season/permit): " + ", ".join(auflagen[:6])] if auflagen else []),
         "rechenzeit": {"umwelt_s": round(t_um, 1), "dijkstra_s": round(t_dij, 1), "gesamt_s": round(time.time() - uhr, 1),
                        "schritte": pops},
     }
