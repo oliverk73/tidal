@@ -46,6 +46,8 @@
             '<label style="grid-column:1/3;"><input type="checkbox" id="rp-ozean" checked> Include ocean current (Copernicus)</label>' +
             '<label style="grid-column:1/3;"><input type="checkbox" id="rp-tiefe" checked> Avoid shallow water (EMODnet, Europe)</label>' +
             '<span style="padding-left:18px;">under-keel reserve (m)</span><input id="rp-reserve" type="number" min="0" max="5" step="0.1" value="0.5" ' + num + '>' +
+            '<label style="grid-column:1/3;padding-left:18px;"><input type="checkbox" id="rp-tide" checked> Use tide height (pass flats at high water, wait if needed)</label>' +
+            '<label style="grid-column:1/3;"><input type="checkbox" id="rp-vtg" checked> Obey traffic separation schemes (OpenSeaMap)</label>' +
           '</div>' +
         '</details>' +
         '<div style="display:flex;gap:6px;">' +
@@ -193,7 +195,7 @@
         '<div style="background:rgba(255,255,255,.6);border-radius:4px;padding:5px 6px;">' +
           '<b>Arrival ' + dayHHMM(r.ziel.t) + '</b><br>' + dur(r.dauer_h) + ' · ' + r.strecke_sm + ' nm (direct ' + r.luftlinie_sm + ' nm) · Ø ' + r.sog_mittel + ' kn SOG<br>' +
           r.wenden + ' tacks · ' + r.halsen + ' gybes · engine ' + dur(r.motor_h) + (r.warten_h ? ' · <span style="color:#8e44ad;">waiting for the tide ' + dur(r.warten_h) + '</span>' : '') + '<br>' +
-          '<span style="color:#777;">' + r.boot.name + (r.boot.variante === 'nospi' ? ' without spinnaker' : ' with spinnaker') + ' (ORC: ' + r.boot.yacht + ', draft ' + (r.boot.tiefgang || '?') + ' m) · depth: ' + r.quellen.tiefe + ' · computed in ' + r.rechenzeit.gesamt_s + ' s</span>' +
+          '<span style="color:#777;">' + r.boot.name + (r.boot.variante === 'nospi' ? ' without spinnaker' : ' with spinnaker') + ' (ORC: ' + r.boot.yacht + ', draft ' + (r.boot.tiefgang || '?') + ' m) · depth: ' + r.quellen.tiefe + ' · TSS: ' + r.quellen.vtg + ' · computed in ' + r.rechenzeit.gesamt_s + ' s</span>' +
           ((r.start.verschoben || r.ziel.verschoben) ? '<br><span style="color:#a60;">' +
             (r.start.verschoben ? 'Start ' + r.start.verschoben + ' km' : '') + (r.start.verschoben && r.ziel.verschoben ? ', ' : '') +
             (r.ziel.verschoben ? 'destination ' + r.ziel.verschoben + ' km' : '') +
@@ -214,7 +216,7 @@
         boot: (bootNamen[$('rp-boot-such').value] || [''])[0], ohne_spi: $('rp-nospi').checked ? 1 : 0, leistung: (parseFloat($('rp-leistung').value) / 100).toFixed(2),
         max_wind: $('rp-maxwind').value, max_welle: $('rp-maxwelle').value, wendezeit_s: $('rp-wende').value,
         motor: $('rp-motor').checked ? 1 : 0, motor_unter: $('rp-motorunter').value, motor_kn: $('rp-motorkn').value,
-        ozean: $('rp-ozean').checked ? 1 : 0, tiefe: $('rp-tiefe').checked ? 1 : 0, reserve_m: $('rp-reserve').value
+        ozean: $('rp-ozean').checked ? 1 : 0, tiefe: $('rp-tiefe').checked ? 1 : 0, tide: $('rp-tide').checked ? 1 : 0, vtg: $('rp-vtg').checked ? 1 : 0, reserve_m: $('rp-reserve').value
       };
       var url = '/api/route?' + Object.keys(q).map(function (k) { return k + '=' + encodeURIComponent(q[k]); }).join('&');
       var nr = ++state.req;

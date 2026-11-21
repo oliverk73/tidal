@@ -33,6 +33,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import segel_land  # noqa: E402
 import segel_tiefe  # noqa: E402
 import segel_tide  # noqa: E402
+import segel_tss  # noqa: E402
 import segel_polare  # noqa: E402
 
 KN = 1.852                    # km je sm
@@ -48,7 +49,7 @@ assert len(RICHT) == 32, len(RICHT)
 
 STANDARD = dict(leistung=0.85, motor=True, motor_kn=5.5, motor_unter=3.0, max_wind=25.0, max_welle=2.5,
                 wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5, ohne_spi=True,
-                tide=True)
+                tide=True, vtg=True)
 
 
 class Fehler(Exception):
@@ -275,6 +276,16 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             if kante_grund is not None:
                 np.maximum(kante_grund[d], grund_f[fi, fj], out=kante_grund[d])
         gueltig[d] = ok
+    # Verkehrstrennungsgebiete (21.11.2026): in Fahrstreifen nur mit dem Verkehr oder rechtwinklig queren,
+    # Trennzonen nur queren (KVR Regel 10, vereinfacht)
+    vtg_info = "off"
+    if o["vtg"]:
+        T_ = segel_tss.regeln(LAT2, LON2, np.array([math.degrees(math.atan2(dj, -di)) % 360 for di, dj in RICHT]))
+        if T_ is None:
+            vtg_info = "none in the area"
+        else:
+            gueltig &= T_[0]
+            vtg_info = "OpenSeaMap: %d grid points in lanes/zones" % T_[1]
     # nur Kanten, die irgendwann zu flach sind, brauchen die Zeitpruefung
     tidal = (kante_grund > HT.min(0)[None] - brauch) & gueltig if kante_grund is not None else None
     # Befahrbares Netz: vom offensten Wasserpunkt (groesster Abstand zum Land/Flachen) ueber erlaubte Kanten erreichbare
@@ -585,12 +596,14 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         "gitter": {"km": round(h, 3), "nx": nx, "ny": ny, "s": s, "n": n, "w": w, "e": e},
         "quellen": {"wind": "Open-Meteo best_match (regional models, hourly)", "wellen": "Open-Meteo Marine",
                     "strom": "Tidal current layer (TPXO10 + fine models)" + (" + Copernicus GLO12 ocean current" if o["ozean"] else ""),
-                    "land": "OpenStreetMap land polygons", "tiefe": tiefe_info, "polare": P.info()["quelle"]},
+                    "land": "OpenStreetMap land polygons", "tiefe": tiefe_info, "vtg": vtg_info, "polare": P.info()["quelle"]},
         "hinweise": ((["Depth = EMODnet (LAT) + predicted tide from nearby gauges at the time of passage; storm surge "
                        "and air pressure are not included, keep the reserve."] if "tide height" in tiefe_info else
                       ["Shallow water is avoided as at chart datum (lowest tide)."]) if tiefe_info.startswith("EMODnet")
                      else ["Water depth is NOT considered."])
-                    + ["Traffic separation schemes and restricted areas are NOT considered."],
+                    + (["Traffic separation schemes (OpenSeaMap): lanes only with the traffic or crossing at right angles, "
+                        "separation zones only crossed; restricted areas are NOT considered."] if vtg_info.startswith("OpenSeaMap")
+                       else ["Restricted areas are NOT considered."]),
         "rechenzeit": {"umwelt_s": round(t_um, 1), "dijkstra_s": round(t_dij, 1), "gesamt_s": round(time.time() - uhr, 1),
                        "schritte": pops},
     }
