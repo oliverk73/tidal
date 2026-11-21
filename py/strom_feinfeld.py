@@ -79,6 +79,15 @@ def bauen():
             V = v[:, 3] * np.exp(-1j * np.radians(v[:, 4]))
             uv3[k] = (U[ok3].astype(np.complex64), V[ok3].astype(np.complex64))
     teile.append(('WebTide', nod[ok3, 2], nod[ok3, 1], uv3))
+    # WebTide Halifax Harbour + Quatsino Sound (21.11.2026: Wasserstand x1,00 / x0,98, Quatsino Narrows x0,82;
+    # Bras d'Or, NE-Pazifik, NW-Atlantik, Arktis, Hudson geprueft und verworfen -- py/webtide_pruefen.py)
+    import webtide_pruefen as WP
+    for g in ('halifax', 'quatsino'):
+        G = WP.gebiet(g)
+        ok4 = np.isfinite(G['tief']) & (G['tief'] > 0) & np.isfinite(G['v']['M2'][0])
+        uv4 = {k: (np.nan_to_num(G['v'][k][0][ok4]).astype(np.complex64), np.nan_to_num(G['v'][k][1][ok4]).astype(np.complex64))
+               for k in KS if k in G['v']}
+        teile.append(('WebTide-' + g, G['lat'][ok4], G['lon'][ok4], uv4))
     out = dict(lat=[], lon=[], quelle=[])
     for k in KS:
         out['U_' + k], out['V_' + k] = [], []
@@ -90,7 +99,7 @@ def bauen():
             z = np.zeros(len(a), np.complex64)
             out['U_' + k].append(uv[k][0] if k in uv else z)
             out['V_' + k].append(uv[k][1] if k in uv else z)
-        print('%-7s %7d Punkte, Tiden %s' % (name, len(a), ','.join(k for k in KS if k in uv)))
+        print('%-16s %7d Punkte, Tiden %s' % (name, len(a), ','.join(k for k in KS if k in uv)))
     out = {k: np.concatenate(v) for k, v in out.items()}
     d, _ = cKDTree(_xy(out['lat'], out['lon'])).query(_xy(out['lat'], out['lon']), k=2)
     out['abstand_km'] = (d[:, 1] * 6371).astype(np.float32)
