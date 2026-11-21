@@ -2353,7 +2353,7 @@ def api_tidal_current():
     except ValueError:
         zellen = 240
     ozean = request.args.get('g') == '1'          # „Total current“: + Ozeanstrom Copernicus (20.11.2026)
-    daten = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t, max_zellen=zellen, ozean=ozean)
+    daten = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t, max_zellen=zellen, ozean=ozean, kueste=True)
     resp = jsonify(daten)
     resp.headers['Cache-Control'] = 'public, max-age=3600'
     return resp

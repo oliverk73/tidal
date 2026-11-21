@@ -67,9 +67,11 @@ def _lesen(arr, ii, jj):
     return np.concatenate(teile, axis=1) if len(teile) > 1 else teile[0]
 
 
-def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False):
+def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False, kueste=False):
     """-> leaflet-velocity-Liste [u, v] in m/s fuer den Ausschnitt zur Zeit t (datetime UTC).
-    ozean=True: Ozeanstrom ohne Gezeiten (Copernicus GLO12, py/ozeanstrom.py) dazu = „Total current“ (20.11.2026)."""
+    ozean=True: Ozeanstrom ohne Gezeiten (Copernicus GLO12, py/ozeanstrom.py) dazu = „Total current“ (20.11.2026).
+    kueste=True (nur Karte): Feld auf Bildschirmaufloesung verfeinern, bis an die OSM-Kueste auffuellen; drittes Feld
+    'filled' (1 = aus dem naechsten gueltigen Wert geschaetzt, Karte zeichnet blasser), Oliver 21.11.2026."""
     la_s, la_n = max(-89.0, min(la_s, la_n)), min(89.0, max(la_s, la_n))
     if lo_e <= lo_w:
         lo_e += 360.0
@@ -149,14 +151,73 @@ def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False):
         r = ozeanstrom.uv(LA, LO, t.timestamp())
         if r is not None:                                          # ausserhalb des Vorhersagezeitraums: nur Gezeit
             u, v = u + r[0], v + r[1]
+    gefuellt = None
+    if kueste:
+        r_ = _kueste(u, v, la1, lo1, dx, max((la_n - la_s) / max_zellen, breite / max_zellen))
+        if r_ is not None:
+            u, v, gefuellt, dx = r_
+            nj, la2 = u.shape[1], la1 - dx * (u.shape[0] - 1)
+            ii = np.arange(u.shape[0])
     kopfz = dict(lo1=round(lo1, 5), lo2=round(lo1 + dx * (nj - 1), 5), la1=round(la1, 5), la2=round(la2, 5),
                  dx=round(dx, 6), dy=round(dx, 6), nx=int(nj), ny=int(len(ii)), refTime=t.strftime('%Y-%m-%dT%H:%M:%SZ'),
                  forecastTime=0, scanMode=0, parameterCategory=2, parameterUnit='m.s-1')
 
     def liste(a):
         return [None if not np.isfinite(x) else round(float(x), 3) for x in a.ravel()]
-    return [dict(header=dict(kopfz, parameterNumber=2, parameterNumberName='eastward_tidal_current'), data=liste(u)),
-            dict(header=dict(kopfz, parameterNumber=3, parameterNumberName='northward_tidal_current'), data=liste(v))]
+    out = [dict(header=dict(kopfz, parameterNumber=2, parameterNumberName='eastward_tidal_current'), data=liste(u)),
+           dict(header=dict(kopfz, parameterNumber=3, parameterNumberName='northward_tidal_current'), data=liste(v))]
+    if gefuellt is not None:
+        out.append(dict(header=dict(kopfz, parameterNumber=0, parameterNumberName='filled'), data=gefuellt.astype(int).ravel().tolist()))
+    return out
+
+
+FUELL_KM = 15.0          # Kuestenstreifen, der aus dem naechsten gueltigen Wert gefuellt wird
+KUESTE_MAX_GRAD = 6.0    # nur bis zu diesem Ausschnitt (Landmaske je Anfrage)
+
+
+def _kueste(u, v, la1, lo1, dx, wunsch):
+    """Fransen an der Kueste (Oliver 21.11.2026): Die Karte interpolierte bilinear und zeichnete, solange die
+    gueltigen Ecken >= 30 % Gewicht hatten -> Boegen im TPXO-Zellabstand. Jetzt: Feld NaN-bewusst bilinear auf
+    Bildschirmaufloesung, OSM-Landmaske (py/segel_land.py) dieser Aufloesung, Wasser ohne Modellwert aus dem
+    naechsten gueltigen Punkt (bis FUELL_KM), Land leer. -> (u, v, gefuellt, dx) oder None."""
+    from scipy import ndimage
+    ny, nx = u.shape
+    if (ny - 1) * dx > KUESTE_MAX_GRAD or (nx - 1) * dx > KUESTE_MAX_GRAD:
+        return None
+    f = max(1, int(round(dx / max(wunsch, 1e-6))))
+    if f > 1:                                                     # NaN-bewusst bilinear verfeinern
+        yi = np.arange((ny - 1) * f + 1) / f
+        xi = np.arange((nx - 1) * f + 1) / f
+        j0 = np.minimum(np.floor(yi).astype(int), ny - 2); fy = (yi - j0)[:, None]
+        i0 = np.minimum(np.floor(xi).astype(int), nx - 2); fx = (xi - i0)[None, :]
+        su, sv, sw = 0.0, 0.0, 0.0
+        for dj, di, w in ((0, 0, (1 - fy) * (1 - fx)), (0, 1, (1 - fy) * fx), (1, 0, fy * (1 - fx)), (1, 1, fy * fx)):
+            uu = u[np.ix_(j0 + dj, i0 + di)]
+            vv = v[np.ix_(j0 + dj, i0 + di)]
+            ok = np.isfinite(uu)
+            su = su + np.where(ok, w * uu, 0.0)
+            sv = sv + np.where(ok, w * vv, 0.0)
+            sw = sw + np.where(ok, w, 0.0)
+        with np.errstate(divide='ignore', invalid='ignore'):
+            u, v = np.where(sw > 1e-6, su / sw, np.nan), np.where(sw > 1e-6, sv / sw, np.nan)
+        dx = dx / f
+        ny, nx = u.shape
+    try:
+        import segel_land
+        land = segel_land.raster(la1 - dx * (ny - 0.5), la1 + dx / 2, lo1 - dx / 2, lo1 + dx * (nx - 0.5), ny, nx)
+    except Exception:                                              # noqa: BLE001 - ohne Landmaske wie bisher
+        return None
+    gueltig = np.isfinite(u)
+    if not gueltig.any():
+        return None
+    dist, (ji, ii) = ndimage.distance_transform_edt(~gueltig, return_indices=True)
+    km_je = dx * 111.2 * max(0.2, math.cos(math.radians(la1 - dx * ny / 2)))
+    fuell = ~gueltig & ~land & (dist * km_je <= FUELL_KM)
+    u = np.where(fuell, u[ji, ii], u)
+    v = np.where(fuell, v[ji, ii], v)
+    u[land] = np.nan
+    v[land] = np.nan
+    return u, v, fuell & ~land, dx
 
 
 if __name__ == '__main__':

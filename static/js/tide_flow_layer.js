@@ -53,6 +53,8 @@
       this.u[i] = U[i] === null ? NaN : U[i];
       this.v[i] = V[i] === null ? NaN : V[i];
     }
+    // 21.11.2026: drittes Feld 'filled' (1 = bis an die OSM-Küste aus dem nächsten Modellwert geschätzt)
+    this.f = data[2] ? Float32Array.from(data[2].data) : null;
   }
   // bilinear; NaN wenn eine Ecke Land ist (Küste bleibt scharf)
   Frame.prototype.at = function (lat, lon, out) {
@@ -67,9 +69,12 @@
     var su = 0, sv = 0, sw = 0;
     var w = [(1 - fx) * (1 - fy), fx * (1 - fy), (1 - fx) * fy, fx * fy];
     var us = [u00, u10, u01, u11], vs = [v00, v10, v01, v11];
-    for (var q = 0; q < 4; q++) if (us[q] === us[q]) { su += w[q] * us[q]; sv += w[q] * vs[q]; sw += w[q]; }
+    var fs = this.f ? [this.f[k], this.f[k + 1], this.f[k + nx], this.f[k + nx + 1]] : null, sf = 0;
+    for (var q = 0; q < 4; q++) if (us[q] === us[q]) {
+      su += w[q] * us[q]; sv += w[q] * vs[q]; sw += w[q]; if (fs) sf += w[q] * fs[q];
+    }
     if (sw < 0.3) { out[0] = NaN; return; }
-    out[0] = su / sw; out[1] = sv / sw;
+    out[0] = su / sw; out[1] = sv / sw; out[2] = sf / sw;
   };
 
   var TideFlowLayer = L.Layer.extend({
@@ -259,12 +264,13 @@
           this._ll[(y * gw + x) * 2] = ll.lat; this._ll[(y * gw + x) * 2 + 1] = ll.lng;
         }
       }
-      var su = new Float32Array(gw * gh), sv = new Float32Array(gw * gh), o = [0, 0];
+      var su = new Float32Array(gw * gh), sv = new Float32Array(gw * gh), sf = new Float32Array(gw * gh), o = [0, 0, 0];
       for (var k = 0; k < gw * gh; k++) {
+        o[2] = 0;
         F.at(this._ll[k * 2], this._ll[k * 2 + 1], o);
-        su[k] = o[0]; sv[k] = o[0] === o[0] ? o[1] : NaN;
+        su[k] = o[0]; sv[k] = o[0] === o[0] ? o[1] : NaN; sf[k] = o[2] || 0;
       }
-      F._su = su; F._sv = sv; F._view = this._gen; F._gw = gw; F._gh = gh;
+      F._su = su; F._sv = sv; F._sf = sf; F._view = this._gen; F._gw = gw; F._gh = gh;
       return F;
     },
 
@@ -288,7 +294,8 @@
         var px = kn > 0 ? 1.1 * Math.pow(kn, 0.4) / kn : 0;
         u[k] = ua * KN * px; v[k] = -va * KN * px;
         var li = Math.min(300, Math.round(kn / 0.02)) * 4;
-        d[k * 4] = LUT[li]; d[k * 4 + 1] = LUT[li + 1]; d[k * 4 + 2] = LUT[li + 2]; d[k * 4 + 3] = LUT[li + 3];
+        // aufgefüllter Küstenstreifen (geschätzt) halb so deckend
+        d[k * 4] = LUT[li]; d[k * 4 + 1] = LUT[li + 1]; d[k * 4 + 2] = LUT[li + 2]; d[k * 4 + 3] = LUT[li + 3] * (1 - 0.5 * A._sf[k]);
       }
       this._grid = { u: u, v: v, w: gw, h: gh, kn: knA };
       this._gridT = this._t;

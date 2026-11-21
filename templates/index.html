@@ -1734,7 +1734,8 @@
       },
       'tc-toggle': {
         gradient: 'linear-gradient(to top,#aadcf0 4%,#5aaadc 10%,#3cb478 20%,#96c832 30%,#f5c828 40%,#f0821e 60%,#dc3228 80%,#a01464 100%)',
-        min: '0', max: '5+', unit: 'kn'
+        min: '0', max: '5+', unit: 'kn',
+        hint: 'Paler band along the coast: model value carried to the coastline (estimate, less reliable)'
       },
       'ps-toggle': {
         gradient: 'linear-gradient(to top,#5c288c,#3c46b4,#3282c8,#46afaa,#78be6e,#cdc85f,#e6a046,#d25f3c,#962832)',
@@ -1766,6 +1767,7 @@
       document.getElementById('legend-max').textContent = data.max;
       document.getElementById('legend-min').textContent = data.min;
       document.getElementById('legend-unit').textContent = data.unit;
+      el.title = data.hint || '';
       el.style.display = 'block';
     }
 
