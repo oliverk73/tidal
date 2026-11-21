@@ -8,7 +8,7 @@ mit gleichem Namen (bzw. derselben Bucht). CHS: IWLS wlp-hilo. Je Ort HW/NW 2025
 (py/scheitelfit.py, 67 Tiden), Probe Fit 2025 gegen 2026, Bandbreitenpruefung (keine erfundenen Scheitel).
 Saetze -> harmonics_utide_tidetables.txt, alle in help/neu_pruefen_<datum>.csv.
 
-Usage: venv/bin/python py/luecken_amtlich.py [--schreiben]
+Usage: venv/bin/python py/luecken_amtlich.py [--alle | --band MIN MAX --ziel DATEI --ohne-pruefliste] [--schreiben]
 """
 import csv
 import datetime as dt
@@ -113,11 +113,26 @@ def noaa_name(n):
     n = re.sub(r',\s*(Md|Va|Del|N\.\s?J|N\.\s?C|S\.\s?C|Conn|Mass|Fla|La|Ala|Wash|Calif|Ore|Me)\.?$', '', n.strip())
     n = re.sub(r'\bent\.', 'entrance', n)
     teile = [t.strip() for t in n.split(',') if t.strip()]
-    return teile[0] + (' (%s)' % ', '.join(teile[1:]) if len(teile) > 1 else '')
+    return glaetten(teile[0] + (' (%s)' % ', '.join(teile[1:]) if len(teile) > 1 else ''))
 
 
-def auto_kandidaten():
-    """--alle (Oliver 21.11.): NOAA-Nebenorte > 15 km und CHS-HW/NW-Stationen > 10 km vom naechsten Gezeitensatz."""
+def glaetten(n):
+    """NOAA-Abkuerzungen und Fuellwoerter (21.11.2026, Nebenorte 5-15 km)."""
+    import re
+    n = re.sub(r'\s*\((Oreg|Wash|Calif|Fla|Md|Va|Del|Mass|Conn|Ala|La|Me|N\.\s?J|N\.\s?C|S\.\s?C)\.\)', '', n)
+    n = re.sub(r'\s*\((south|north|east|west) of\)', '', n)
+    n = re.sub(r'\s*\(town\)', '', n)
+    n = re.sub(r'(\d+(?:\.\d+)?)\s*miles? (north|south|east|west) of', lambda m: '%s mi %s of' % (m.group(1), m.group(2)[0].upper()), n)
+    n = re.sub(r'\((\d+(?:\.\d+)?) mi ([NSEW]) of\)', r'(\1 mi \2)', n)
+    n = re.sub(r'(\d)mi ([NSEW])\. of', r'\1 mi \2 of', n)
+    for a_, b_ in (('Riv.', 'River'), ('Hwy.', 'Highway'), ('Fla. Bay', 'Florida Bay'), (' I. Bay', ' Island Bay'), ('Rt. ', 'Route ')):
+        n = n.replace(a_, b_)
+    return re.sub(r'\s+', ' ', n).strip()
+
+
+def auto_kandidaten(band=None):
+    """--alle (Oliver 21.11.): NOAA-Nebenorte > 15 km und CHS-HW/NW-Stationen > 10 km vom naechsten Gezeitensatz.
+    band=(min_km, max_km): nur NOAA-Nebenorte in diesem Abstand (Oliver 21.11.: die 5-15-km-Orte, eigene Kartengruppe)."""
     import math
     import health_check as H
     from scipy.spatial import cKDTree
@@ -133,13 +148,14 @@ def auto_kandidaten():
     gew, noaa, chs = [], [], []
     for st in json.load(open(os.path.join(ROOT, 'quellen/tide_tables/NOAA_hilo/mdapi_tidepredictions.json')))['stations']:
         staat = st.get('state') or OHNE_STAAT.get(st['id'])
-        if st['type'] != 'S' or staat not in STAATEN or abst(st['lat'], st['lng']) <= 15:
+        d_ = abst(st['lat'], st['lng'])
+        if st['type'] != 'S' or staat not in STAATEN or (d_ <= 15 if band is None else not band[0] < d_ <= band[1]):
             continue
-        if any(math.hypot(st['lat'] - a, (st['lng'] - b) * math.cos(math.radians(a))) * 111.2 < 3 for a, b in gew):
+        if any(math.hypot(st['lat'] - a, (st['lng'] - b) * math.cos(math.radians(a))) * 111.2 < (0.5 if band else 3) for a, b in gew):
             continue
         gew.append((st['lat'], st['lng']))
         noaa.append(('auto', st['id'], staat, NAME_FIX.get(st['id'], noaa_name(st['name']))))
-    for st in json.load(open(os.path.join(ROOT, 'quellen/tide_tables/CHS_hilo/stations.json'))):
+    for st in ([] if band else json.load(open(os.path.join(ROOT, 'quellen/tide_tables/CHS_hilo/stations.json')))):
         if not any(t['code'] == 'wlp-hilo' for t in st.get('timeSeries', [])) or abst(st['latitude'], st['longitude']) <= 10:
             continue
         pc = st.get('provinceCode') or ('BC' if st['longitude'] < -120 else 'NU')
@@ -148,15 +164,25 @@ def auto_kandidaten():
 
 
 def main(argv):
+    global ZIEL
+    if '--ziel' in argv:                                           # eigene Datei (21.11.: NOAA-Nebenorte 5-15 km)
+        ZIEL = os.path.join(ROOT, argv[argv.index('--ziel') + 1])
+        if not os.path.exists(ZIEL):
+            q = open(os.path.join(ROOT, 'harmonics/utide/harmonics_utide_tidetables.txt'), encoding='iso-8859-1').read().split('\n')
+            # ganzer Kopf bis zum ersten Satz: build_tide_db braucht auch den Kommentarblock nach "End congen output"
+            kopf_ = q[:q.index('# BEGIN HOT COMMENTS')]
+            open(ZIEL, 'w', encoding='iso-8859-1').write('\n'.join(kopf_) + '\n')
+    band = (float(argv[argv.index('--band') + 1]), float(argv[argv.index('--band') + 2])) if '--band' in argv else None
     kopf = X.kopf_lesen(ZIEL)
     namen, speeds, arg, fak = kopf
     nutz = SF.konstituenten(namen, SF.CONSTIT_67)
     heute = dt.date.today().strftime('%Y%m%d')
     grenze = dt.datetime(2026, 1, 1, tzinfo=dt.timezone.utc).timestamp()
-    bestand = set(open(ZIEL, encoding='iso-8859-1').read().split('\n'))
+    import health_check as H
+    bestand = set(open(ZIEL, encoding='iso-8859-1').read().split('\n')) | {r['name'] for r in H.load_records()}
     neu, liste = [], []
     faelle = []
-    liste_noaa, liste_chs = (auto_kandidaten() if '--alle' in argv else (NOAA, CHS))
+    liste_noaa, liste_chs = (auto_kandidaten(band) if ('--alle' in argv or band) else (NOAA, CHS))
     print('%d NOAA-, %d CHS-Kandidaten' % (len(liste_noaa), len(liste_chs)), flush=True)
     for idx, sid, st, unser in liste_noaa:
         s = noaa_station(sid)
@@ -170,6 +196,11 @@ def main(argv):
         faelle.append((idx, 'CHS %s' % code, '%s, %s, Canada' % (unser, prov), 'Canada', prov, tz, s['latitude'], s['longitude'],
                        t, h, 'Chart Datum', 'CHS tide predictions (IWLS station %s), high/low waters 2025-2026' % code))
     for idx, quelle, name, land, prov, tz, la, lo, t, h, datum, src in faelle:
+        if name in bestand and idx == 'auto' and band:             # gleichnamiger NOAA-Nebenort im selben Staat
+            k = 2
+            while name.replace(', ', ' (%d), ' % k, 1) in bestand:
+                k += 1
+            name = name.replace(', ', ' (%d), ' % k, 1)
         if name in bestand:
             print('%-45s schon im Bestand' % name)
             continue
@@ -194,17 +225,22 @@ def main(argv):
                '# !longitude: %.4f' % lo, '# !latitude: %.4f' % la, '# province: %s' % prov,
                '# note: %s Scheitelfit an %s HW/NW %s (%.1f cm / %.0f min, Probe %.1f cm); %s' % (
                    heute, quelle, '2025-2026' if t.min() < grenze - 86400 else '2026', 100 * r, tf, 100 * r_pr,
-                   ('fuellt UKHO-Index-Luecke "%s"' % idx) if idx != 'auto' else 'fuellt Luecke (naechster Satz > 15 km, CHS > 10 km)'),
+                   ('fuellt UKHO-Index-Luecke "%s"' % idx) if idx != 'auto' else
+                   ('NOAA-Nebenort, naechster Satz %g-%g km' % band if band else 'fuellt Luecke (naechster Satz > 15 km, CHS > 10 km)')),
                '# note: py/luecken_amtlich.py', name, '+00:00 :%s' % tz, '%.4f meters' % z0]
         blk += ['%-15s %.4f  %.2f' % (c, *w[c]) if c in w and w[c][0] >= 0.00005 else 'x 0 0' for c in namen]
         assert '\n'.join(blk).encode('latin-1')
         neu += blk
         liste.append(name)
+        bestand.add(name)
     print('%d neue Saetze' % len(liste))
     if '--schreiben' in argv and neu:
         from sicher_schreiben import schreiben
         T = open(ZIEL, encoding='iso-8859-1').read().rstrip('\n').split('\n')
         schreiben(ZIEL, '\n'.join(T + neu) + '\n')
+        if '--ohne-pruefliste' in argv:
+            print('->', os.path.relpath(ZIEL, ROOT), '(ohne Pruefliste)')
+            return
         frisch = not os.path.exists(PRUEF)
         with open(PRUEF, 'a', newline='', encoding='utf-8') as fh:
             w_ = csv.writer(fh)

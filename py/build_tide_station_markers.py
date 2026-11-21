@@ -174,6 +174,8 @@ SOURCE_GROUPS = OrderedDict([
                                                       'harmonics_noaa_censam.tcd',
                                                       'harmonics_noaa_carib.tcd',
                                                       'harmonics_noaa_pacif.tcd']}),
+    # Oliver 21.11.2026: NOAA-Nebenorte 5-15 km vom naechsten Satz (py/luecken_amtlich.py --band 5 15), eigene Gruppe
+    ('NOAA Nebenorte', {'color': '#5C6BC0', 'files': ['harmonics_noaa_nebenorte.tcd']}),
     # Oliver 18.10.2026: automatisch ans Ufer geholte NOAA-Saetze, bis er sie geprueft hat
     # (py/noaa_land_ans_ufer.py, Liste harmonics/help/noaa_auto_verschoben.csv)
     ('NOAA verschoben (prüfen)', {'color': '#FF00FF', 'files': []}),
