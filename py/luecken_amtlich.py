@@ -52,6 +52,7 @@ NOAA = [
     ('Olga Bay', '9457798', 'AK', 'Olga Bay (A. P. A. Cannery)'), ('Gnat Cove', '9450483', 'AK', 'Mop Point (Thorne Arm)'),
 ]
 CHS = [('Mink Trap Bay', '09180', 'Patterson Inlet (Mink Trap Bay)', 'British Columbia', 'America/Vancouver')]
+# Truro (Minas Basin, CHS 00265) geprueft 21.11.: CHS liefert dort nur Bore-Ankunftszeiten (wlp-bores), keine HW/NW-Hoehen
 
 
 def noaa_station(sid=None, name=None):
