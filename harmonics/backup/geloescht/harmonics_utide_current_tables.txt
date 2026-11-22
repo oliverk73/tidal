@@ -989,3 +989,205 @@ x 0 0
 x 0 0
 x 0 0
 
+# ARCHIV: 20261122 | loeschen_20261122_stlorenz_pommes.csv | Île aux Pommes (2 km SSW), Québec, Canada Current |  % Hub -- CHS-Atlas S1: Pfeile im Umkreis 1 km widersprechen sich je Stunde bis 180 Grad (Drehstrom/Randzone), Fit M2 0,13 kn < M4 0,22 kn, Spitze 1,2 kn unter der Auswahlschwelle 1,5 kn; Flut/Ebbe nicht bestimmbar. Abgedeckt durch Les Îlets (5 km NW) und Île Verte (3 km N), je 6 km (22.11.2026)
+# Harmonic constants derived from the CHS Atlas of Tidal Currents, St. Lawrence Estuary, Cap de Bon-Desir to
+# Trois-Rivieres (2008), sector 1 Cap de Bon-Desir to Saint-Simeon; surface currents, summer runoff, no wind; digitised 20261121
+# Atlas rule: hourly arrow chart, rate x correction factor(tidal range at Pointe-au-Pere); hours from HW/LW Pointe-au-Pere
+# (UTide v0.3.1, principal-axis projection)
+# 52560 10-minute samples, synthetic year 2026
+# R^2 = 0.2527, RMS error = 0.3645 knots
+# Major axis: 221.5 deg true
+#
+# BEGIN HOT COMMENTS
+# country: Canada
+# source: CHS Atlas of Tidal Currents St. Lawrence Estuary 2008, UTide analysis
+# station_id_context: CHS-ATLAS-STL-S1
+# institution: Canadian Hydrographic Service
+# datum: n/a
+# station_type: current
+# major_axis_deg_true: 221.5
+# confidence: 5
+# utide: period=2026-01-01..2026-12-31 const=60
+# !units: knots
+# !longitude: -69.3450
+# !latitude: 48.0800
+# note: 20261121 Vorzeichen gedreht, damit XTide-Flood der Flutstrom ist (Phase gegen den Wasserstand, py/flutrichtung_pruefen.py)
+Île aux Pommes (2 km SSW), Québec, Canada Current
++00:00 :UTC
+-0.4252 knots
+J1              0.0003  199.33
+K1              0.0069  99.26
+K2              0.0073  325.36
+L2              0.0060  311.23
+x 0 0
+M2              0.1259  280.70
+M3              0.0013  277.23
+M4              0.2193  163.68
+M6              0.0183  195.79
+M8              0.0926  247.55
+N2              0.0189  249.34
+2N2             0.0059  231.68
+O1              0.0101  81.55
+OO1             0.0006  170.08
+P1              0.0014  124.70
+Q1              0.0022  71.35
+2Q1             0.0006  342.64
+R2              0.0001  23.47
+x 0 0
+S2              0.0288  324.09
+S4              0.0030  218.74
+x 0 0
+T2              0.0020  313.36
+LDA2            0.0029  304.75
+MU2             0.0080  58.87
+NU2             0.0066  260.47
+RHO1            0.0012  78.54
+MK3             0.0219  228.98
+x 0 0
+MN4             0.0602  136.50
+MS4             0.0977  203.99
+2SM2            0.0015  218.60
+MF              0.0172  212.62
+MSF             0.0635  222.92
+MM              0.0346  205.20
+x 0 0
+SSA             0.0035  150.54
+SA-IOS          0.0008  206.79
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+2MK5            0.0143  334.19
+2MK6            0.0147  245.90
+x 0 0
+2MN6            0.0124  200.02
+2MS6            0.0293  243.08
+x 0 0
+2SK5            0.0002  282.10
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+3MS4            0.0397  305.43
+x 0 0
+x 0 0
+x 0 0
+CHI1            0.0004  17.09
+x 0 0
+x 0 0
+x 0 0
+ETA2            0.0001  10.88
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+MK4             0.0292  203.00
+MKS2            0.0006  209.75
+x 0 0
+EPS2            0.0002  83.18
+MO3             0.0181  202.74
+x 0 0
+x 0 0
+x 0 0
+MSK6            0.0044  291.57
+MSM             0.0004  280.86
+x 0 0
+x 0 0
+x 0 0
+NO1             0.0024  62.09
+x 0 0
+x 0 0
+PHI1            0.0002  359.94
+x 0 0
+PI1             0.0004  118.37
+x 0 0
+PSI1            0.0003  47.62
+x 0 0
+x 0 0
+SIG1            0.0020  232.63
+SK3             0.0013  285.58
+x 0 0
+SN4             0.0041  91.55
+x 0 0
+SO1             0.0029  162.68
+SO3             0.0076  230.79
+THE1            0.0003  354.19
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+SKM2            0.0007  228.14
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+NO3             0.0048  172.95
+x 0 0
+x 0 0
+N4              0.0256  112.77
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+x 0 0
+
