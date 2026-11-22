@@ -19,6 +19,7 @@ Usage: venv/bin/python py/strom_feinfeld.py bauen
 """
 import math
 import os
+import re
 import sys
 
 import numpy as np
@@ -27,7 +28,25 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AUS = os.path.join(ROOT, 'quellen/tidal_streams/feinfeld.npz')
 KS = ('M2', 'S2', 'N2', 'K2', 'K1', 'O1', 'P1', 'Q1', 'M4', 'MS4', 'MN4')
 DECKT = 3.0
+# SHOM-Atlanten aus TELEMAC3D geben den OBERFLAECHENstrom, alle anderen Quellen (SSW-RS, AUSTEn, WebTide, SHOM-2D,
+# TPXO) tiefengemittelt: im Kanal 20-30 % staerker und ~25 min spaeter (22.11.2026, Baie de Seine/Manche gegen
+# Golfe normand-breton/SSW-RS). Zwischen verschiedenen Modellen breiter Uebergang statt Kante (_familie).
+OBERFLAECHE = ('SHOM-MANCHE', 'SHOM-PAS-DE-CALAIS', 'SHOM-DUNKERQUE', 'SHOM-CALAIS', 'SHOM-BOULOGNE', 'SHOM-FINISTERE',
+               'SHOM-IROISE', 'SHOM-BAIE-DE-SEINE', 'SHOM-LE-HAVRE')
+RAND_FAMILIE_KM = 10.0
+RAND_KM = 8.0               # Uebergangszone an der Grenze einer feineren Quelle hoechstens (bauen)
 _S = {}
+
+
+def _familie(name):
+    """Modelllauf: geschachtelte Gitter desselben Laufs (Iroise in Finistere, Calais in Pas-de-Calais, BSH-Kueste in
+    BSH-Nordsee) gehen auf 1,5-2 km ineinander ueber, verschiedene Modelle auf RAND_FAMILIE_KM (SHOM-2D gegen SSW-RS
+    bei Sept-Iles: 0,6 gegen 0,2 kn)."""
+    n = str(name)
+    m = re.search(r'-(5\d\d)-', n)                  # SHOM-Atlasnummer = Modelllauf (560 Finistere+Iroise ...)
+    if n.startswith('SHOM') and m:
+        return 'SHOM-' + m.group(1)
+    return n.split('-')[0]
 
 
 def _xy(la, lo):
@@ -88,6 +107,82 @@ def bauen():
         uv4 = {k: (np.nan_to_num(G['v'][k][0][ok4]).astype(np.complex64), np.nan_to_num(G['v'][k][1][ok4]).astype(np.complex64))
                for k in KS if k in G['v']}
         teile.append(('WebTide-' + g, G['lat'][ok4], G['lon'][ok4], uv4))
+    # SHOM-2D-Atlanten + BSH-Atlas (22.11.2026, py/feinfeld_atlanten.py: Atlasregel wie die Einzelsaetze, linear gefittet)
+    import feinfeld_atlanten as FA
+    teile += FA.laden()
+    # Ueberlappung: je Quelle der Punktabstand im eigenen Gitter; ein Punkt faellt weg, wenn eine FEINERE Quelle
+    # naeher als 0,7 x eigener Abstand einen Punkt hat (Manche 2 km unter Pas-de-Calais 500 m, BSH-Nordsee unter
+    # BSH-Kueste, SSW-RS-Schelf unter SHOM/BSH ...).
+    ab = []
+    for _n, a, b, _uv in teile:
+        d, _ = cKDTree(_xy(a, b)).query(_xy(a, b), k=2)
+        ab.append(d[:, 1] * 6371)
+    behalten = [np.ones(len(t[1]), bool) for t in teile]
+    ueber = {}                                     # (fein, grob) -> Grobpunkte unter der feinen Quelle
+    for q, (_n, a, b, _uv) in enumerate(teile):
+        for p_, (_n2, a2, b2, _uv2) in enumerate(teile):
+            if p_ == q or np.median(ab[p_]) >= np.median(ab[q]):
+                continue
+            d, _ = cKDTree(_xy(a2, b2)).query(_xy(a, b), distance_upper_bound=0.1)
+            weg = d * 6371 < 0.7 * ab[q]
+            if weg.any():
+                ueber[(p_, q)] = weg
+            behalten[q] &= ~weg
+    # Weicher Rand (22.11.2026): Die Quellen rechnen verschieden (SHOM Finistere/Iroise/Manche = Oberflaeche aus 3D,
+    # Gascogne/Golfe normand-breton = tiefengemittelt 2D; Unterschied an der Grenze bis 25 %). Damit an der Kante einer
+    # feineren Quelle kein Sprung entsteht, gehen ihre Konstanten auf RAND km zur Grenze linear in die der groeberen
+    # ueber (deren Wert am Ort per inverser Distanz aus ALLEN ihren Punkten). Grob zuerst, damit Schachtelungen
+    # (Iroise in Finistere in Gascogne) auf den schon angeglichenen Werten aufsetzen.
+    # aneinanderstossende Gitter gleicher Feinheit (Abers 563 | Golfe normand-breton 562 bei 3,5 W): keins faellt weg,
+    # also auch kein Rand -> das kleinere geht auf seiner Seite in das groessere ueber
+    for f in range(len(teile)):
+        for g in range(f + 1, len(teile)):
+            if (f, g) in ueber or (g, f) in ueber or _familie(teile[f][0]) == _familie(teile[g][0]):
+                continue
+            klein, gross = (f, g) if len(teile[f][1]) <= len(teile[g][1]) else (g, f)
+            d, _ = cKDTree(_xy(teile[gross][1], teile[gross][2])).query(_xy(teile[klein][1], teile[klein][2]),
+                                                                       distance_upper_bound=3.0 / 6371)
+            if np.isfinite(d).sum() >= 20:
+                ueber[(klein, gross)] = None
+    for (f, g) in sorted(ueber, key=lambda x: -np.median(ab[x[1]])):
+        _n, a, b, uv = teile[f]
+        _n2, a2, b2, uv2 = teile[g]
+        rand = min(max(3 * float(np.median(ab[g])), 1.5), RAND_KM)      # 500-m-Nachbar 1,5 km, 2-km-Atlas 6 km
+        if _familie(teile[f][0]) != _familie(teile[g][0]):
+            rand = RAND_FAMILIE_KM
+        aussen = behalten[g].copy()
+        if not aussen.any():
+            continue
+        # nur flaechige Abdeckung zaehlt als Rand: einzelne Grobpunkte in Haefen/Buchten, die das feine Gitter nicht
+        # hat (SSW-RS-Elemente im Hafen Calais ...), wuerden sonst den ganzen kleinen Atlas angleichen
+        ia = np.where(aussen)[0]
+        ta = cKDTree(_xy(a2[ia], b2[ia]))
+        nn = np.array([len(x) for x in ta.query_ball_point(_xy(a2[ia], b2[ia]), 4 * ab[g][ia] / 6371)])   # je Punkt eigener Abstand
+        aussen[ia[nn < 12]] = False
+        if not aussen.any():
+            continue
+        d_rand, _ = cKDTree(_xy(a2[aussen], b2[aussen])).query(_xy(a, b), distance_upper_bound=rand / 6371)
+        r = np.clip(d_rand * 6371 / rand, 0, 1)
+        nah = r < 1
+        if not nah.any():
+            continue
+        dd, ii = cKDTree(_xy(a2, b2)).query(_xy(a[nah], b[nah]), k=3)
+        dd = dd * 6371
+        ok = dd[:, 0] < 3 * max(float(np.median(ab[g])), 0.3)
+        w = 1 / np.maximum(dd, 0.05) ** 2
+        w /= w.sum(1, keepdims=True)
+        idx = np.where(nah)[0][ok]
+        rr = r[idx].astype(np.float32)
+        for k in KS:
+            if k not in uv:
+                continue
+            for c in (0, 1):
+                grob = (uv2[k][c][ii[ok]] * w[ok]).sum(1) if k in uv2 else 0
+                neu = uv[k][c].copy()
+                neu[idx] = rr * uv[k][c][idx] + (1 - rr) * grob
+                uv[k] = (neu, uv[k][1]) if c == 0 else (uv[k][0], neu)
+        print('  Rand %-26s -> %-26s %6d Punkte (%.0f km)' % (teile[f][0], teile[g][0], len(idx), rand))
+    teile = [(n, a[m], b[m], {k: (uv[k][0][m], uv[k][1][m]) for k in uv}) for (n, a, b, uv), m in zip(teile, behalten)]
     out = dict(lat=[], lon=[], quelle=[])
     for k in KS:
         out['U_' + k], out['V_' + k] = [], []
@@ -99,10 +194,21 @@ def bauen():
             z = np.zeros(len(a), np.complex64)
             out['U_' + k].append(uv[k][0] if k in uv else z)
             out['V_' + k].append(uv[k][1] if k in uv else z)
-        print('%-16s %7d Punkte, Tiden %s' % (name, len(a), ','.join(k for k in KS if k in uv)))
+        print('%-28s %7d Punkte, Tiden %s' % (name, len(a), ','.join(k for k in KS if k in uv)))
     out = {k: np.concatenate(v) for k, v in out.items()}
     d, _ = cKDTree(_xy(out['lat'], out['lon'])).query(_xy(out['lat'], out['lon']), k=2)
     out['abstand_km'] = (d[:, 1] * 6371).astype(np.float32)
+    # Naht zwischen zwei Quellen: Randpunkte bekommen den Abstand zur Nachbarquelle (bis 3 km), sonst bleibt zwischen
+    # feinem Gitter und den uebrig gebliebenen Grobpunkten ein Streifen ohne Wasser (Finistere 500 m / Gascogne 2 km)
+    xyz = _xy(out['lat'], out['lon'])
+    for q in range(len(teile)):
+        m = out['quelle'] == q
+        if m.all() or not m.any():
+            continue
+        do, _ = cKDTree(xyz[~m]).query(xyz[m], distance_upper_bound=3.0 / 6371)
+        do = do * 6371
+        a_ = out['abstand_km'][m]
+        out['abstand_km'][m] = np.where(np.isfinite(do), np.maximum(a_, do), a_)
     out['quellen'] = np.array([t[0] for t in teile])
     np.savez(AUS, **out)
     print('->', AUS, '%.0f MB' % (os.path.getsize(AUS) / 1e6), ' Abstand Median %.2f km' % np.median(out['abstand_km']))
@@ -135,7 +241,10 @@ def einsetzen(lat, lon, u, v, t_rel_h, kopf, jahr):
         return u, v, 0
     # Zellweite der Ausgabe: Wasser, wenn ein Punkt naeher als halbe Zelldiagonale oder 1,5 x Punktabstand liegt
     zelle = abs(lat[1] - lat[0]) * 111 if len(lat) > 1 else 1.0
-    wasser = deckt & (d[:, 0] < np.maximum(1.5 * S['abstand_km'][i0], 0.75 * zelle))
+    # Abstand des groebsten der 3 Nachbarn: an der Naht zweier Gitter (Iroise 250 m / Finistere 500 m) bleibt sonst eine
+    # schmale Luecke, die die Karte blass auffuellt (22.11.2026)
+    ab3 = S['abstand_km'][np.where(np.isfinite(d), i, i0[:, None]) % len(S['abstand_km'])].max(1)
+    wasser = deckt & (d[:, 0] < np.maximum(1.5 * ab3, 0.75 * zelle))
     idx = np.where(wasser)[0]
     ii = i[idx]
     dd = d[idx]
