@@ -27,9 +27,11 @@
         '<label>Boat (ORC, type to search)<input id="rp-boot-such" list="rp-boot-liste" autocomplete="off" placeholder="e.g. Bavaria 37, Hanse 370 …" ' + inp + '></label>' +
         '<datalist id="rp-boot-liste"></datalist>' +
         '<div id="rp-boot-info" style="color:#777;font-size:11px;margin-top:-3px;"></div>' +
+        '<label title="Fills the options below for a cruising crew (reduced performance, no spinnaker, engine, conservative limits) or a racing crew (full ORC polar, spinnaker, no engine, quick tacks). All values can still be changed under Options.">Sailing style<select id="rp-stil" ' + inp + '><option value="toern">Cruising</option><option value="regatta">Racing</option></select></label>' +
         '<label id="rp-nospi-zeile"><input type="checkbox" id="rp-nospi" checked> No spinnaker (ORC non-spinnaker polar)</label>' +
         '<label>Departure<input type="datetime-local" id="rp-zeit" ' + inp + '></label>' +
         '<label title="Sail only between dawn and dusk (civil twilight). At night the boat stays in a marina, harbour or anchorage (OpenStreetMap) or at the start, and continues at dawn. Longer passages become multi-day trips."><input type="checkbox" id="rp-nacht"> Avoid sailing at night (overnight in harbour)</label>' +
+        '<label id="rp-tagh-zeile" style="padding-left:18px;display:none;" title="Each day ends in a harbour after at most this many hours under way (counted from dawn; empty = until dusk)">max. hours under way per day <input id="rp-tagh" type="number" min="2" max="24" step="1" placeholder="–" ' + num + '></label>' +
         '<div style="display:flex;gap:6px;">' +
           '<button id="rp-start-btn" style="flex:1;cursor:pointer;">Set start</button>' +
           '<button id="rp-ziel-btn" style="flex:1;cursor:pointer;">Set destination</button>' +
@@ -37,7 +39,7 @@
         '<div id="rp-punkte" style="color:#555;">Click a button, then click on the map.</div>' +
         '<details><summary style="cursor:pointer;">Options</summary>' +
           '<div style="display:grid;grid-template-columns:1fr auto;gap:3px 6px;margin-top:4px;align-items:center;">' +
-            '<span title="ORC polars assume a racing crew">Performance (% of ORC polar)</span><input id="rp-leistung" type="number" min="40" max="110" step="5" value="85" ' + num + '>' +
+            '<span title="ORC polars assume a racing crew with a clean bottom and new sails; cruising boats typically reach 80–90 %">Performance (% of ORC polar)</span><input id="rp-leistung" type="number" min="40" max="110" step="5" value="85" ' + num + '>' +
             '<span>Max. wind (kn)</span><input id="rp-maxwind" type="number" min="5" max="60" value="25" ' + num + '>' +
             '<span>Max. wave height (m)</span><input id="rp-maxwelle" type="number" min="0.5" max="10" step="0.5" value="2.5" ' + num + '>' +
             '<span>Tack/gybe costs (s)</span><input id="rp-wende" type="number" min="0" max="600" step="10" value="60" ' + num + '>' +
@@ -85,28 +87,42 @@
       try { gespeichert = localStorage.getItem('rpBoot'); } catch (e) {}
       var b = boote[gespeichert] || boote[d.standard];
       if (b) $('rp-boot-such').value = bootLabel(b);
-      letzteArt = 'yacht'; vorgaben(b);
       bootInfo();
+      letzteArt = null; vorgaben(b);
     });
     $('rp-boot-such').addEventListener('input', bootInfo);
-    // Jollen: kein Motor, kurze Wende, niedrigere Wind-/Wellengrenze; beim Wechsel zurueck die Yacht-Vorgaben
-    var JOLLE = { motor: false, wende: 20, maxwind: 20, maxwelle: 1.0, leistung: 95 },
-        YACHT = { motor: true, wende: 60, maxwind: 25, maxwelle: 2.5, leistung: 85 }, letzteArt = null;
+    // Vorgaben je Bootsart und Stil (22.11.2026: Segeltoern / Regatta). Jollen: kein Motor, kurze Wende, niedrigere
+    // Wind-/Wellengrenze. Gesetzt bei Stilwechsel und beim Wechsel Yacht <-> Jolle; danach frei aenderbar.
+    var VORGABE = {
+      yacht: { toern: { motor: true, wende: 60, maxwind: 25, maxwelle: 2.5, leistung: 85, nospi: true },
+               regatta: { motor: false, wende: 30, maxwind: 35, maxwelle: 4.0, leistung: 100, nospi: false } },
+      jolle: { toern: { motor: false, wende: 20, maxwind: 18, maxwelle: 1.0, leistung: 85, nospi: true },
+               regatta: { motor: false, wende: 15, maxwind: 25, maxwelle: 1.5, leistung: 100, nospi: false } }
+    }, letzteArt = null;
+    try { var st = localStorage.getItem('rpStil'); if (st === 'regatta' || st === 'toern') $('rp-stil').value = st; } catch (e) {}
+    function anwenden(art) {
+      var stil = $('rp-stil').value, v = VORGABE[art][stil];
+      $('rp-motor').checked = v.motor; $('rp-wende').value = v.wende; $('rp-maxwind').value = v.maxwind;
+      $('rp-maxwelle').value = v.maxwelle; $('rp-leistung').value = v.leistung;
+      if (!$('rp-nospi').disabled) $('rp-nospi').checked = v.nospi;
+      if (stil === 'regatta') { $('rp-nacht').checked = false; $('rp-tagh-zeile').style.display = 'none'; }
+    }
     function vorgaben(b) {
       var art = b && b[5] ? 'jolle' : 'yacht';
       if (art === letzteArt) return;
-      var v = art === 'jolle' ? JOLLE : YACHT;
-      if (letzteArt !== null) {
-        $('rp-motor').checked = v.motor; $('rp-wende').value = v.wende; $('rp-maxwind').value = v.maxwind;
-        $('rp-maxwelle').value = v.maxwelle; $('rp-leistung').value = v.leistung;
-      }
       letzteArt = art;
+      anwenden(art);
     }
+    $('rp-stil').addEventListener('change', function () {
+      try { localStorage.setItem('rpStil', this.value); } catch (e) {}
+      anwenden(letzteArt || 'yacht');
+    });
+    $('rp-nacht').addEventListener('change', function () { $('rp-tagh-zeile').style.display = this.checked ? '' : 'none'; });
     $('rp-boot-such').addEventListener('change', function () {
       var b = bootNamen[this.value];
       if (b) { try { localStorage.setItem('rpBoot', b[0]); } catch (e) {} }
-      vorgaben(b);
       bootInfo();
+      vorgaben(b);
     });
 
     function icon(farbe, txt) {
@@ -233,7 +249,7 @@
         boot: (bootNamen[$('rp-boot-such').value] || [''])[0], ohne_spi: $('rp-nospi').checked ? 1 : 0, leistung: (parseFloat($('rp-leistung').value) / 100).toFixed(2),
         max_wind: $('rp-maxwind').value, max_welle: $('rp-maxwelle').value, wendezeit_s: $('rp-wende').value,
         motor: $('rp-motor').checked ? 1 : 0, motor_unter: $('rp-motorunter').value, motor_kn: $('rp-motorkn').value,
-        ozean: $('rp-ozean').checked ? 1 : 0, tiefe: $('rp-tiefe').checked ? 1 : 0, tide: $('rp-tide').checked ? 1 : 0, windstau: $('rp-windstau').checked ? 1 : 0, nacht_meiden: $('rp-nacht').checked ? 1 : 0, vtg: $('rp-vtg').checked ? 1 : 0, sperr: $('rp-sperr').checked ? 1 : 0, reserve_m: $('rp-reserve').value
+        ozean: $('rp-ozean').checked ? 1 : 0, tiefe: $('rp-tiefe').checked ? 1 : 0, tide: $('rp-tide').checked ? 1 : 0, windstau: $('rp-windstau').checked ? 1 : 0, nacht_meiden: $('rp-nacht').checked ? 1 : 0, max_tag_h: $('rp-nacht').checked ? ($('rp-tagh').value || '') : '', vtg: $('rp-vtg').checked ? 1 : 0, sperr: $('rp-sperr').checked ? 1 : 0, reserve_m: $('rp-reserve').value
       };
       var url = '/api/route?' + Object.keys(q).map(function (k) { return k + '=' + encodeURIComponent(q[k]); }).join('&');
       var nr = ++state.req;

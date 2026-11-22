@@ -2413,7 +2413,7 @@ def api_route():
         la_b, lo_b = (float(x) for x in request.args["ziel"].split(","))
         t0 = float(request.args.get("t") or __import__("time").time())
         opt = {}
-        for k in ("leistung", "motor_kn", "motor_unter", "max_wind", "max_welle", "wendezeit_s", "reserve_m"):
+        for k in ("leistung", "motor_kn", "motor_unter", "max_wind", "max_welle", "wendezeit_s", "reserve_m", "max_tag_h"):
             if request.args.get(k):
                 opt[k] = float(request.args[k])
         for k in ("motor", "ozean", "tiefe", "ohne_spi", "tide", "windstau", "vtg", "sperr", "nacht_meiden"):

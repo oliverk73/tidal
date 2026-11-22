@@ -59,7 +59,7 @@ assert len(RICHT) == 32, len(RICHT)
 
 STANDARD = dict(leistung=0.85, motor=True, motor_kn=5.5, motor_unter=3.0, max_wind=25.0, max_welle=2.5,
                 wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5, ohne_spi=True,
-                tide=True, windstau=True, vtg=True, sperr=True, nacht_meiden=False)
+                tide=True, windstau=True, vtg=True, sperr=True, nacht_meiden=False, max_tag_h=0.0)
 
 
 class Fehler(Exception):
@@ -281,6 +281,8 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         tag_h = sum(hell) / 6.0
         if tag_h < 3.0:
             raise Fehler("Only %.1f h of daylight per day here - 'avoid sailing at night' is not possible" % tag_h)
+        if o["max_tag_h"] and o["max_tag_h"] > 0:
+            tag_h = min(tag_h, max(2.0, float(o["max_tag_h"])))
         fahr_h = math.ceil(fahr_h / tag_h) * 24 + (0 if hell[0] else 12) + 6
     stunden = int(min(MAX_STUNDEN, max(12, math.ceil(fahr_h))))
     T0 = math.floor(t0 / 3600) * 3600
@@ -541,6 +543,22 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                 return x_
         return None
 
+    # Hoechstens max_tag_h Stunden unterwegs je Tag (22.11.2026, nur mit nacht_meiden): Tag beginnt bei der
+    # Morgendaemmerung (Gebietsmitte), am ersten Tag mit der Abfahrt
+    la_m = (s + n) / 2
+    tag_ende = [np.inf] * n_tage
+    if nm and o["max_tag_h"] and o["max_tag_h"] > 0:
+        for d_ in range(n_tage):
+            beginn = morgen(la_m, lo_m, T_ref + d_ * 86400.0 - 1800.0)
+            if d_ == tagnr(t0):
+                beginn = t0 if sonnenhoehe(la_m, lo_m, t0) >= DAEMMERUNG else (beginn or t0)
+            if beginn is not None:
+                tag_ende[d_] = beginn + o["max_tag_h"] * 3600.0
+    # Gleichstand beim Uebernachten (22.11.2026: Kiel->Kopenhagen blieb nach 27 min in Probstei): Morgen-Etikett
+    # minimal nach Reststrecke (0,1 s/km) und Art (Marina vor Hafen vor Ankerplatz) verschieben -> weiter gefahrene
+    # Etappe und bessere Liegeplaetze gewinnen, wenn die Ankunft sonst gleich waere
+    STRAFE_ART = {"marina": 0.0, "start": 0.0, "hafen": 60.0, "anker": 300.0}
+
     for b in (0, 1):
         z0 = (tagnr(t0) * N + ia * nx + ja) * 2 + b
         ankunft[z0] = float(t0)
@@ -580,6 +598,8 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             if k in liege and z not in nacht_gew:
                 nacht_gew.add(z)
                 tm = morgen(float(LAT[i]), float(LON[j]), t)
+                if tm is not None:
+                    tm += STRAFE_ART.get(liege[k]["art"], 0.0) + 0.1 * float(ab_ziel.ravel()[k])
                 if tm is not None and tm < t_ende:
                     zm = (tagnr(tm) * N + k) * 2 + b
                     if zm == z:                                       # Start vor der Daemmerung: gleicher Tag
@@ -590,7 +610,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                         vor_d[zm] = -2
                         heapq.heappush(heap, (tm, int(zm)))
             sh0 = sonnenhoehe(float(LAT[i]), float(LON[j]), t)
-            if sh0 < DAEMMERUNG:
+            if sh0 < DAEMMERUNG or t >= tag_ende[tg]:
                 continue
             sh1 = sonnenhoehe(float(LAT[i]), float(LON[j]), t + 3600.0)
         x = (t - T0) / 3600.0
@@ -641,6 +661,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         dauer = dauer + np.where((bug != -1) & (bug != b), wende_s, 0.0)
         if nm:                                                        # Ankunft noch vor Ende der Daemmerung
             mog &= sh0 + (sh1 - sh0) * np.where(mog, dauer, 0.0) / 3600.0 >= DAEMMERUNG
+            mog &= t + np.where(mog, dauer, 0.0) <= tag_ende[tg]
             if not mog.any():
                 continue
         z2 = (tagnr(t) * N + k + versatz) * 2 + nb2
@@ -658,6 +679,10 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                 heapq.heappush(heap, (float(t2[d]), int(zz)))
     t_dij = time.time() - t_dij
     gefunden = beste[1]
+    if gefunden is None and nm:
+        raise Fehler("No route found within %d h (%d days): with 'avoid sailing at night'%s each leg must end in a harbour "
+                     "or anchorage before dusk; try more hours per day, the engine, or a closer destination"
+                     % (stunden, round(stunden / 24), " and max. %g h per day" % o["max_tag_h"] if o["max_tag_h"] else ""))
     if gefunden is None:
         raise Fehler("No route found within %d h (limits wind %.0f kn / waves %.1f m, land in the way, or too "
                      "little wind without engine)" % (stunden, max_wind, max_welle))
