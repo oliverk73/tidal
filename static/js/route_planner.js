@@ -16,7 +16,7 @@
     return new Date(t * 1000).toLocaleString(undefined, { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
   }
   function dur(h) { var m = Math.round(h * 60); return Math.floor(m / 60) + ' h ' + pad(m % 60) + ' min'; }
-  var MODE = { stb: 'starboard tack', bb: 'port tack', motor: 'engine', warten: 'waiting for the tide' };
+  var MODE = { stb: 'starboard tack', bb: 'port tack', motor: 'engine', warten: 'waiting for the tide', nacht: 'night in harbour' };
 
   window.initRoutePlanner = function (map, body) {
     var state = { start: null, ziel: null, pick: null, layer: null, req: 0 };
@@ -29,6 +29,7 @@
         '<div id="rp-boot-info" style="color:#777;font-size:11px;margin-top:-3px;"></div>' +
         '<label id="rp-nospi-zeile"><input type="checkbox" id="rp-nospi" checked> No spinnaker (ORC non-spinnaker polar)</label>' +
         '<label>Departure<input type="datetime-local" id="rp-zeit" ' + inp + '></label>' +
+        '<label title="Sail only between dawn and dusk (civil twilight). At night the boat stays in a marina, harbour or anchorage (OpenStreetMap) or at the start, and continues at dawn. Longer passages become multi-day trips."><input type="checkbox" id="rp-nacht"> Avoid sailing at night (overnight in harbour)</label>' +
         '<div style="display:flex;gap:6px;">' +
           '<button id="rp-start-btn" style="flex:1;cursor:pointer;">Set start</button>' +
           '<button id="rp-ziel-btn" style="flex:1;cursor:pointer;">Set destination</button>' +
@@ -47,6 +48,7 @@
             '<label style="grid-column:1/3;"><input type="checkbox" id="rp-tiefe" checked> Avoid shallow water (EMODnet, Europe)</label>' +
             '<span style="padding-left:18px;">under-keel reserve (m)</span><input id="rp-reserve" type="number" min="0" max="5" step="0.1" value="0.5" ' + num + '>' +
             '<label style="grid-column:1/3;padding-left:18px;"><input type="checkbox" id="rp-tide" checked> Use tide height (pass flats at high water, wait if needed)</label>' +
+            '<label style="grid-column:1/3;padding-left:18px;"><input type="checkbox" id="rp-windstau" checked> Include storm surge forecast in the tide height</label>' +
             '<label style="grid-column:1/3;"><input type="checkbox" id="rp-vtg" checked> Obey traffic separation schemes (OpenSeaMap)</label>' +
             '<label style="grid-column:1/3;"><input type="checkbox" id="rp-sperr" checked> Avoid no-entry areas (OpenSeaMap)</label>' +
           '</div>' +
@@ -57,7 +59,7 @@
         '</div>' +
         '<div id="rp-status" style="color:#555;"></div>' +
         '<div id="rp-ergebnis"></div>' +
-        '<div style="font-size:11px;color:#777;">Planning aid only. Shallow water is avoided as at chart datum (EMODnet, Europe only; flats are never crossed). Traffic separation schemes and restricted areas are not considered.</div>' +
+        '<div style="font-size:11px;color:#777;">Planning aid only. Depth from EMODnet (Europe only) with predicted tide and storm surge; traffic separation schemes and no-entry areas from OpenSeaMap. Check charts, notices to mariners and the harbours chosen for the night.</div>' +
       '</div>';
     var $ = function (id) { return document.getElementById(id); };
 
@@ -164,6 +166,11 @@
           '<br>Wind ' + p.tws.toFixed(0) + ' kn from ' + p.twd + '° (TWA ' + p.twa + '°)' +
           '<br>Current ' + p.strom.toFixed(1) + ' kn to ' + p.strom_ri + '° · Waves ' + p.hs.toFixed(1) + ' m' +
           (p.tiefe != null ? '<br>Depth ' + p.tiefe.toFixed(1) + ' m (tide ' + p.tide.toFixed(1) + ' m above LAT)' : '');
+        if (p.modus === 'nacht') {
+          L.marker([p.la, p.lo], { icon: L.divIcon({ className: '', html: '<div style="width:20px;height:20px;border-radius:50%;background:#1b2f6b;color:#fff;font-size:13px;line-height:20px;text-align:center;border:2px solid #fff;box-shadow:0 0 3px #000;">☾</div>', iconSize: [24, 24], iconAnchor: [12, 12] }) })
+            .bindTooltip('<b>Night ' + dayHHMM(p.t) + ' – ' + dayHHMM(P[i + 1].t) + '</b><br>' + (p.liege === 'start' ? 'at the start' : p.liege), { sticky: true }).addTo(g);
+          continue;
+        }
         if (p.modus === 'warten') {
           L.circleMarker([p.la, p.lo], { radius: 7, color: '#8e44ad', weight: 2, fillColor: '#fff', fillOpacity: 1 })
             .bindTooltip('<b>' + hhmm(p.t) + '–' + hhmm(P[i + 1].t) + '</b> waiting for the tide (not enough water ahead)', { sticky: true }).addTo(g);
@@ -175,7 +182,7 @@
       var naechste = Math.ceil(P[0].t / 3600) * 3600;
       for (var k = 0; k < P.length - 1; k++) {
         while (naechste <= P[k + 1].t) {
-          if (naechste >= P[k].t) {
+          if (naechste >= P[k].t && P[k].modus !== 'nacht' && P[k].modus !== 'warten') {
             var f = (naechste - P[k].t) / Math.max(1, P[k + 1].t - P[k].t);
             var la = P[k].la + f * (P[k + 1].la - P[k].la), lo = P[k].lo + f * (P[k + 1].lo - P[k].lo);
             L.circleMarker([la, lo], { radius: 4, color: '#fff', weight: 1.5, fillColor: '#123', fillOpacity: 1 })
@@ -187,17 +194,24 @@
       g.addTo(map);
       state.layer = g;
 
+      var mehrtag = r.dauer_h > 18;
+      function zeit(t) { return mehrtag ? new Date(t * 1000).toLocaleDateString(undefined, { weekday: 'short' }) + ' ' + hhmm(t) : hhmm(t); }
       var zeilen = r.abschnitte.map(function (a) {
         var p = P[a.von];
-        return '<tr' + (a.nacht ? ' style="background:rgba(40,40,90,.12);" title="in darkness (after civil twilight)"' : '') + '><td>' + hhmm(p.t) + (a.nacht ? ' ☾' : '') + '</td><td>' + (p.modus === 'warten' ? 'wait' : (p.modus === 'motor' ? 'engine' : (p.modus === 'stb' ? 'stbd' : 'port'))) + '</td><td>' + a.kurs_kg + '°</td><td>' +
+        if (a.modus === 'nacht') {
+          return '<tr style="background:rgba(27,47,107,.15);"><td>' + zeit(p.t) + ' ☾</td><td colspan="6"><b>Night ' + (a.liege === 'start' ? 'at the start' : 'in ' + a.liege) + '</b>, continue ' + dayHHMM(a.bis_t) + '</td></tr>';
+        }
+        return '<tr' + (a.nacht ? ' style="background:rgba(40,40,90,.12);" title="in darkness (after civil twilight)"' : '') + '><td>' + zeit(p.t) + (a.nacht ? ' ☾' : '') + '</td><td>' + (p.modus === 'warten' ? 'wait' : (p.modus === 'motor' ? 'engine' : (p.modus === 'stb' ? 'stbd' : 'port'))) + '</td><td>' + a.kurs_kg + '°</td><td>' +
           a.sm.toFixed(1) + '</td><td>' + a.sog.toFixed(1) + '</td><td>' + a.tws.toFixed(0) + '/' + a.twa + '°</td><td>' + a.strom.toFixed(1) + '</td></tr>';
       }).join('');
       $('rp-ergebnis').innerHTML =
         '<div style="background:rgba(255,255,255,.6);border-radius:4px;padding:5px 6px;">' +
-          '<b>Arrival ' + dayHHMM(r.ziel.t) + '</b><br>' + dur(r.dauer_h) + ' · ' + r.strecke_sm + ' nm (direct ' + r.luftlinie_sm + ' nm) · Ø ' + r.sog_mittel + ' kn SOG<br>' +
+          (r.abfahrt && r.abfahrt - r.start.t > 600 ? 'Departure ' + dayHHMM(r.abfahrt) + ' (at dawn)<br>' : '') +
+          '<b>Arrival ' + dayHHMM(r.ziel.t) + '</b><br>' + (r.liege_h ? 'under way ' + dur(r.fahrt_h) + ' + ' + r.naechte.length + (r.naechte.length === 1 ? ' night' : ' nights') + ' in harbour (' +
+            r.naechte.map(function (x) { return x.name === 'start' ? 'start' : x.name; }).join(', ') + ') · ' : dur(r.dauer_h) + ' · ') + + r.strecke_sm + ' nm (direct ' + r.luftlinie_sm + ' nm) · Ø ' + r.sog_mittel + ' kn SOG<br>' +
           r.wenden + ' tacks · ' + r.halsen + ' gybes · engine ' + dur(r.motor_h) + (r.warten_h ? ' · <span style="color:#8e44ad;">waiting for the tide ' + dur(r.warten_h) + '</span>' : '') +
           (r.nacht_h ? ' · ☾ ' + dur(r.nacht_h) + ' in darkness' : '') + '<br>' +
-          '<span style="color:#777;">' + r.boot.name + (r.boot.variante === 'nospi' ? ' without spinnaker' : ' with spinnaker') + ' (ORC: ' + r.boot.yacht + ', draft ' + (r.boot.tiefgang || '?') + ' m) · depth: ' + r.quellen.tiefe + ' · TSS: ' + r.quellen.vtg + ' · computed in ' + r.rechenzeit.gesamt_s + ' s</span>' +
+          '<span style="color:#777;">' + r.boot.name + (r.boot.variante === 'nospi' ? ' without spinnaker' : ' with spinnaker') + ' (ORC: ' + r.boot.yacht + ', draft ' + (r.boot.tiefgang || '?') + ' m) · depth: ' + r.quellen.tiefe + (r.quellen.windstau && r.quellen.windstau !== 'off' ? ' · storm surge: ' + r.quellen.windstau : '') + ' · TSS: ' + r.quellen.vtg + ' · computed in ' + r.rechenzeit.gesamt_s + ' s</span>' +
           ((r.hinweise && r.hinweise.length) ? '<br><span style="color:#777;font-size:10px;">' + r.hinweise.join('<br>') + '</span>' : '') +
           ((r.start.verschoben || r.ziel.verschoben) ? '<br><span style="color:#a60;">' +
             (r.start.verschoben ? 'Start ' + r.start.verschoben + ' km' : '') + (r.start.verschoben && r.ziel.verschoben ? ', ' : '') +
@@ -219,12 +233,12 @@
         boot: (bootNamen[$('rp-boot-such').value] || [''])[0], ohne_spi: $('rp-nospi').checked ? 1 : 0, leistung: (parseFloat($('rp-leistung').value) / 100).toFixed(2),
         max_wind: $('rp-maxwind').value, max_welle: $('rp-maxwelle').value, wendezeit_s: $('rp-wende').value,
         motor: $('rp-motor').checked ? 1 : 0, motor_unter: $('rp-motorunter').value, motor_kn: $('rp-motorkn').value,
-        ozean: $('rp-ozean').checked ? 1 : 0, tiefe: $('rp-tiefe').checked ? 1 : 0, tide: $('rp-tide').checked ? 1 : 0, vtg: $('rp-vtg').checked ? 1 : 0, sperr: $('rp-sperr').checked ? 1 : 0, reserve_m: $('rp-reserve').value
+        ozean: $('rp-ozean').checked ? 1 : 0, tiefe: $('rp-tiefe').checked ? 1 : 0, tide: $('rp-tide').checked ? 1 : 0, windstau: $('rp-windstau').checked ? 1 : 0, nacht_meiden: $('rp-nacht').checked ? 1 : 0, vtg: $('rp-vtg').checked ? 1 : 0, sperr: $('rp-sperr').checked ? 1 : 0, reserve_m: $('rp-reserve').value
       };
       var url = '/api/route?' + Object.keys(q).map(function (k) { return k + '=' + encodeURIComponent(q[k]); }).join('&');
       var nr = ++state.req;
       $('rp-go').disabled = true;
-      $('rp-status').textContent = 'Computing (wind, waves, currents; usually 5–30 s)…';
+      $('rp-status').textContent = 'Computing (wind, waves, currents; usually 5–30 s, multi-day trips up to ~2 min)…';
       fetch(url).then(function (r) { return r.json(); }).then(function (r) {
         if (nr !== state.req) return;
         $('rp-go').disabled = false;

@@ -14,7 +14,11 @@ Strom tpxo_strom_karte.feld (TPXO10 + feine Modelle) stuendlich, Land OSM (segel
 Tiefe: EMODnet (Europa) auf Seekartennull, Tiefgang aus dem ORC-Zertifikat + Reserve.
 Tide bei der Tiefe seit 21.11.2026 (py/segel_tide.py: Pegel im Bestand, auf LAT bezogen).
 Seit 21.11.2026 auch: Verkehrstrennungsgebiete (segel_tss), Sperrgebiete (segel_sperr), Wellen per Fetch in
-geschuetzten Gewaessern, Nachtabschnitte markiert (Sonne < -6 Grad). NICHT: Windstau, Nachtfahrt-Verbot.
+geschuetzten Gewaessern, Nachtabschnitte markiert (Sonne < -6 Grad).
+Seit 22.11.2026: Windstau bei der Tiefe (segel_tide + windstau), „Nachtfahrt vermeiden“ (nacht_meiden=True: nur bei
+Tageslicht fahren, nachts in Marina/Hafen/Ankerplatz aus OSM (segel_haefen) oder am Start liegen, bei Morgendaemmerung
+weiter) und Mehrtagestoerns (bis 1000 km, Zeitfenster bis 7 Tage; Dijkstra-Zustand Knoten+Bug+Tag, damit ein Knoten
+am naechsten Morgen erneut erreicht werden kann - die frueheste Ankunft am Abend kann eine Sackgasse sein).
 
     r = route(start=(lat, lon), ziel=(lat, lon), t0=unix_s, boot='bavaria37', **optionen)
 """
@@ -40,7 +44,11 @@ import segel_polare  # noqa: E402
 
 KN = 1.852                    # km je sm
 OM_CACHE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "quellen", "routing", "om_cache")
-MAX_KNOTEN = 240              # Gitterknoten je Achse
+MAX_KNOTEN = 240              # Gitterknoten je Achse (Tagestoerns bis 300 km)
+MAX_KNOTEN_LANG = 360         # Mehrtagestoerns
+MAX_KM = 1000.0
+MAX_STUNDEN = 168             # Zeitfenster (Open-Meteo-Vorhersage reicht ~7 Tage mit Regionalmodell-Anschluss)
+DAEMMERUNG = -6.0             # Sonnenhoehe Ende/Anfang buergerliche Daemmerung
 FEIN = 3                      # Landraster feiner als das Gitter (Kantenpruefung)
 # 32 Richtungen: (Zeile, Spalte); Zeile waechst nach Sueden
 _BASIS = [(1, 0), (1, 1), (2, 1), (3, 1), (3, 2)]
@@ -51,7 +59,7 @@ assert len(RICHT) == 32, len(RICHT)
 
 STANDARD = dict(leistung=0.85, motor=True, motor_kn=5.5, motor_unter=3.0, max_wind=25.0, max_welle=2.5,
                 wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5, ohne_spi=True,
-                tide=True, vtg=True, sperr=True)
+                tide=True, windstau=True, vtg=True, sperr=True, nacht_meiden=False)
 
 
 class Fehler(Exception):
@@ -248,22 +256,33 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     dist = _km(la_a, lo_a, la_b, lo_b)
     if dist < 0.5:
         raise Fehler("Start and destination are less than 0.5 km apart")
-    if dist > 300:
-        raise Fehler("Day-trip router: start and destination must be within 300 km (160 nm)")
+    if dist > MAX_KM:
+        raise Fehler("Start and destination must be within %d km (%d nm)" % (MAX_KM, MAX_KM / KN))
+    nm = bool(o["nacht_meiden"])
+    max_knoten = MAX_KNOTEN if dist <= 300 else int(min(MAX_KNOTEN_LANG, MAX_KNOTEN * dist / 300))
     # Gebiet: Rechteck um A und B mit Rand
     rand = max(0.35 * dist, 10.0)
     la0 = (la_a + la_b) / 2
     kx = 111.2 * math.cos(math.radians(la0))
     s, n = min(la_a, la_b) - rand / 111.2, max(la_a, la_b) + rand / 111.2
     w, e = min(lo_a, lo_b) - rand / kx, max(lo_a, lo_b) + rand / kx
-    h = max(0.12, max((n - s) * 111.2, (e - w) * kx) / MAX_KNOTEN)      # Gitterweite km
+    h = max(0.12, max((n - s) * 111.2, (e - w) * kx) / max_knoten)      # Gitterweite km
     ny, nx = int(math.ceil((n - s) * 111.2 / h)), int(math.ceil((e - w) * kx / h))
     n, e = s + ny * h / 111.2, w + nx * h / kx                         # Rechteck genau auf das Gitter
     LAT = n - (np.arange(ny) + 0.5) * h / 111.2
     LON = w + (np.arange(nx) + 0.5) * h / kx
     LAT2, LON2 = np.meshgrid(LAT, LON, indexing="ij")
-    # Zeitfenster: geschaetzte Dauer bei 3 kn ueber Grund x 1,5, 12–36 h
-    stunden = int(min(36, max(12, math.ceil(dist / KN / 3.0 * 1.5) + 2)))       # Kreuz gegen Strom braucht Reserve
+    # Zeitfenster: geschaetzte Dauer bei 3 kn ueber Grund x 1,5 (Kreuz gegen Strom braucht Reserve), mind. 12 h;
+    # mit „Nachtfahrt vermeiden“ ganze Tage nach Tageslichtdauer + Wartezeit bis zum ersten Morgen
+    fahr_h = dist / KN / 3.0 * 1.5 + 2
+    if nm:
+        lo0 = (lo_a + lo_b) / 2
+        hell = [sonnenhoehe(la0, lo0, t0 + 600.0 * q) >= DAEMMERUNG for q in range(144)]
+        tag_h = sum(hell) / 6.0
+        if tag_h < 3.0:
+            raise Fehler("Only %.1f h of daylight per day here - 'avoid sailing at night' is not possible" % tag_h)
+        fahr_h = math.ceil(fahr_h / tag_h) * 24 + (0 if hell[0] else 12) + 6
+    stunden = int(min(MAX_STUNDEN, max(12, math.ceil(fahr_h))))
     T0 = math.floor(t0 / 3600) * 3600
     zeiten = T0 + 3600.0 * np.arange(stunden + 2)
 
@@ -280,6 +299,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     # Vorsichtig = wie bei Niedrigwasser Springzeit; Watt und Barren werden immer umfahren (Tide noch nicht beruecksichtigt).
     tiefgang = float(P.info().get("tiefgang") or 2.0)
     tiefe_info = "off"
+    stau_info = "off" if not o["windstau"] else "no forecast for the gauges in the area"
     grund_f = None                                   # Grund ueber LAT (m) auf dem feinen Raster, nur bei Tiefendaten
     HT = None                                        # Tidenhoehe ueber LAT [zeit, ny, nx]
     brauch = tiefgang + o["reserve_m"]
@@ -290,12 +310,18 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         else:
             grund_f = np.nan_to_num(hoehe_f, nan=-999.0).astype(np.float32)
             # Tide (21.11.2026): Flaechen, die bei Hochwasser tief genug sind, nur zeitweise sperren
-            HT, n_pegel = (segel_tide.hoehe_ueber_lat(LAT2, LON2, zeiten) if o["tide"] else (None, 0))
+            HT, n_pegel, stau = (segel_tide.hoehe_ueber_lat(LAT2, LON2, zeiten, windstau=o["windstau"]) if o["tide"]
+                                 else (None, 0, None))
             if HT is None:
                 HT = np.zeros((len(zeiten), ny, nx), np.float32)
             hw_f = np.repeat(np.repeat(HT.max(0), FEIN, 0), FEIN, 1)[:ny * FEIN, :nx * FEIN]
             land_f = land_f | (grund_f > hw_f - brauch)                      # auch bei Hochwasser zu flach
-            tiefe_info = ("EMODnet (LAT) + tide height from %d gauges, draft %.1f m + %.1f m" % (n_pegel, tiefgang, o["reserve_m"])
+            if stau:
+                stau_info = ("%s run %s, %d of %d gauges, %+.2f to %+.2f m" % (
+                    "/".join({"cmems": "Copernicus Marine", "stofs": "NOAA STOFS"}.get(q, q) for q in stau["quellen"]),
+                    ", ".join(stau["lauf"]), stau["n"], n_pegel, stau["min"], stau["max"]) + "; raised water only up to 48 h after the model run")
+            tiefe_info = ("EMODnet (LAT) + tide height from %d gauges%s, draft %.1f m + %.1f m" % (
+                n_pegel, " + storm surge" if stau else "", tiefgang, o["reserve_m"])
                           if n_pegel else "EMODnet, chart datum (LAT), draft %.1f m + %.1f m (no tide gauge nearby)" % (tiefgang, o["reserve_m"]))
     mitte = FEIN // 2
     wasser = ~land_f[mitte::FEIN, mitte::FEIN][:ny, :nx]
@@ -375,6 +401,28 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     _fern.clear()
     ia, ja, a_versch = knoten_naechst(la_a, lo_a)
     ib, jb, b_versch = knoten_naechst(la_b, lo_b)
+    # Liegeplaetze (22.11.2026): Marinas/Haefen/Ankerplaetze (OSM) auf den naechsten befahrbaren Knoten (<= max(3 km,
+    # 1,5 Gitterweiten)); dort darf das Boot bei „Nachtfahrt vermeiden“ bis zum Morgen liegen. Der Start zaehlt auch.
+    liege = {}
+    if nm:
+        import segel_haefen
+        if "idx" not in _fern:
+            _fern["d"], _fern["idx"] = ndimage.distance_transform_edt(~fahrwasser, return_indices=True)
+        rang = {"marina": 0, "hafen": 1, "anker": 2}
+        for la_, lo_, name_, art_ in segel_haefen.liste(s, n, w, e):
+            i_ = int(round((n - la_) * 111.2 / h - 0.5))
+            j_ = int(round((lo_ - w) * kx / h - 0.5))
+            if not (0 <= i_ < ny and 0 <= j_ < nx):
+                continue
+            d_ = float(_fern["d"][i_, j_]) * h
+            if d_ > max(3.0, 1.5 * h):
+                continue
+            k_ = int(_fern["idx"][0][i_, j_]) * nx + int(_fern["idx"][1][i_, j_])
+            alt = liege.get(k_)
+            if alt is None or (rang[art_], name_ == "", d_) < (rang[alt["art"]], alt["name"] == "", alt["km"]):
+                liege[k_] = {"name": name_ or {"marina": "marina", "hafen": "harbour", "anker": "anchorage"}[art_],
+                             "art": art_, "km": round(d_, 1), "la": la_, "lo": lo_}
+        liege[ia * nx + ja] = {"name": "start", "art": "start", "km": a_versch, "la": la_a, "lo": lo_a}
     # Zielmenge: erreichbare Knoten bis 3 km weiter als der naechste; gewaehlt wird der mit der kleinsten Summe aus
     # Ankunft und Reststrecke bei 0,5 kn (20.11.2026: 9 mm weniger Tiefgang machten einen Punkt 0,5 km vor Marstal
     # erreichbar, aber nur ueber 3,6 h Umweg; „zuerst erreicht“ endete vor Helgoland 1,9 km zu frueh, 3 kn 3,2 km, 1 kn 2,1 km)
@@ -402,6 +450,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         WD = np.zeros_like(WU)
     else:
         HS = _wellen_fetch(HS, WD, WU, WV, _fetch(land_rein, h))
+    WU, WV, CU, CV, HS, WD = (np.asarray(A_, np.float32) for A_ in (WU, WV, CU, CV, HS, WD))   # Mehrtagesfenster: Speicher
 
     def umwelt(i, j, t):
         x = (t - T0) / 3600.0
@@ -461,21 +510,42 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                 del STUNDE[alt]
         return STUNDE[k]
 
-    # Dijkstra ueber (Knoten, Bug)
+    # Dijkstra ueber (Tag, Knoten, Bug); Tag nur bei „Nachtfahrt vermeiden“ (sonst immer 0). Tagesgrenze = mittlere
+    # Ortsmitternacht des Gebiets; innerhalb eines Tages bleibt „frueheste Ankunft gewinnt“ richtig.
     N = ny * nx
-    ankunft = np.full(2 * N, np.inf)
-    vor = np.full(2 * N, -1, dtype=np.int64)
-    vor_d = np.full(2 * N, -1, dtype=np.int8)
-    vor_bug = np.zeros(2 * N, dtype=np.int8)
-    vor_kurs = np.zeros(2 * N, dtype=np.float32)
-    vor_sog = np.zeros(2 * N, dtype=np.float32)
+    lo_m = (w + e) / 2
+    T_ref = math.floor((t0 + lo_m * 240.0) / 86400.0) * 86400.0 - lo_m * 240.0         # Ortsmitternacht vor dem Start
+    n_tage = int(math.ceil((zeiten[-1] - T_ref) / 86400.0)) + 1 if nm else 1
+
+    def tagnr(t):
+        return min(n_tage - 1, int((t - T_ref) // 86400)) if nm else 0
+
+    ankunft = np.full(2 * N * n_tage, np.inf)
+    vor = np.full(2 * N * n_tage, -1, dtype=np.int64)
+    vor_d = np.full(2 * N * n_tage, -1, dtype=np.int8)               # -2 = Nacht am Liegeplatz
+    vor_bug = np.zeros(2 * N * n_tage, dtype=np.int8)
+    vor_kurs = np.zeros(2 * N * n_tage, dtype=np.float32)
+    vor_sog = np.zeros(2 * N * n_tage, dtype=np.float32)
     t_ende = zeiten[-2]
     heap = []
+    nacht_gew = set()
+
+    def morgen(la_, lo_, t_):
+        """Ende der naechsten (oder laufenden) Nacht in 10-min-Schritten; None ohne Nacht in 30 h."""
+        dunkel = sonnenhoehe(la_, lo_, t_) < DAEMMERUNG
+        for q in range(1, 181):
+            x_ = t_ + 600.0 * q
+            if sonnenhoehe(la_, lo_, x_) < DAEMMERUNG:
+                dunkel = True
+            elif dunkel:
+                return x_
+        return None
+
     for b in (0, 1):
-        z0 = (ia * nx + ja) * 2 + b
+        z0 = (tagnr(t0) * N + ia * nx + ja) * 2 + b
         ankunft[z0] = float(t0)
         heapq.heappush(heap, (float(t0), z0))
-    erledigt = np.zeros(2 * N, dtype=bool)
+    erledigt = np.zeros(2 * N * n_tage, dtype=bool)
     gefunden = None
     pops = 0
     versatz = np.array([di * nx + dj for di, dj in RICHT], dtype=np.int64)
@@ -495,6 +565,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         erledigt[z] = True
         pops += 1
         k, b = divmod(z, 2)
+        tg, k = divmod(k, N)
         if ziel_menge_flach[k]:
             # Bewertung = Ankunft + Rest bei 0,5 kn (teurer als fast jeder echte Weg, auch die Kreuz): ein naeherer Punkt gewinnt, wenn der Weg dorthin weniger kostet
             # als die gesparte Reststrecke; weitersuchen, bis keine Ankunft die beste Bewertung noch schlagen kann
@@ -504,6 +575,24 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         if t >= t_ende:
             continue
         i, j = divmod(k, nx)
+        if nm:
+            # Liegeplatz: Uebernachten anbieten (naechster Morgen, neuer Tag); im Dunkeln nirgends weiterfahren
+            if k in liege and z not in nacht_gew:
+                nacht_gew.add(z)
+                tm = morgen(float(LAT[i]), float(LON[j]), t)
+                if tm is not None and tm < t_ende:
+                    zm = (tagnr(tm) * N + k) * 2 + b
+                    if zm == z:                                       # Start vor der Daemmerung: gleicher Tag
+                        heapq.heappush(heap, (tm, -z - 1))
+                    elif tm < ankunft[zm]:
+                        ankunft[zm] = tm
+                        vor[zm] = z
+                        vor_d[zm] = -2
+                        heapq.heappush(heap, (tm, int(zm)))
+            sh0 = sonnenhoehe(float(LAT[i]), float(LON[j]), t)
+            if sh0 < DAEMMERUNG:
+                continue
+            sh1 = sonnenhoehe(float(LAT[i]), float(LON[j]), t + 3600.0)
         x = (t - T0) / 3600.0
         ks = min(int(x), len(zeiten) - 2)
         f = x - ks
@@ -535,7 +624,10 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                     frei = hh[None, :] - brauch >= kante_grund[zu, i, j][:, None]
                     if frei.any():
                         tw = float(tt[int(np.argmax(frei.any(0)))])
-                        heapq.heappush(heap, (tw, -z - 1))
+                        # „Nachtfahrt vermeiden“: ausserhalb eines Liegeplatzes nicht ueber Nacht auf Wasser warten
+                        if not (nm and k not in liege and any(sonnenhoehe(float(LAT[i]), float(LON[j]), x_) < DAEMMERUNG
+                                                              for x_ in np.arange(t, tw + 1, 1800.0))):
+                            heapq.heappush(heap, (tw, -z - 1))
         segel = bug != -1
         if tws > max_wind:
             sog = np.where(segel, -1.0, sog)
@@ -547,7 +639,11 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         dauer = np.where(mog, dauer0 / np.maximum(sog, 0.05), np.inf)
         nb2 = np.where(bug == -1, b, bug)
         dauer = dauer + np.where((bug != -1) & (bug != b), wende_s, 0.0)
-        z2 = (k + versatz) * 2 + nb2
+        if nm:                                                        # Ankunft noch vor Ende der Daemmerung
+            mog &= sh0 + (sh1 - sh0) * np.where(mog, dauer, 0.0) / 3600.0 >= DAEMMERUNG
+            if not mog.any():
+                continue
+        z2 = (tagnr(t) * N + k + versatz) * 2 + nb2
         t2 = t + dauer
         besser = mog & (t2 < ankunft[np.where(mog, z2, 0)])
         for d in np.nonzero(besser)[0]:
@@ -566,7 +662,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         raise Fehler("No route found within %d h (limits wind %.0f kn / waves %.1f m, land in the way, or too "
                      "little wind without engine)" % (stunden, max_wind, max_welle))
 
-    kz = int(gefunden) // 2  # noqa
+    kz = (int(gefunden) // 2) % N  # noqa
     b_versch = round(float(ab_ziel.ravel()[kz]), 1) if ab_ziel.ravel()[kz] > h * 1.5 else 0.0
     # Weg zurueckverfolgen
     kette = []
@@ -576,8 +672,10 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         z = vor[z]
     kette.reverse()
     punkte = []
+    naechte = []
     for idx, z in enumerate(kette):
         k, b = divmod(int(z), 2)
+        k = k % N
         i, j = divmod(k, nx)
         t = float(ankunft[z])
         wu, wv, cu, cv, hs, wd = umwelt(i, j, t)
@@ -585,7 +683,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         p = {"t": round(t), "la": round(float(LAT[i]), 5), "lo": round(float(LON[j]), 5),
              "tws": round(tws_g, 1), "twd": round(math.degrees(math.atan2(-wu, -wv)) % 360),
              "strom": round(math.hypot(cu, cv), 2), "strom_ri": round(math.degrees(math.atan2(cu, cv)) % 360),
-             "hs": round(float(hs), 1)}
+             "hs": round(float(hs), 1), "_k": k}
         p["nacht"] = sonnenhoehe(float(LAT[i]), float(LON[j]), t) < -6.0          # nach buergerlicher Daemmerung
         if grund_f is not None:
             x_ = (t - T0) / 3600.0
@@ -594,7 +692,12 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             p["tide"] = round(float(ht_), 1)
             p["tiefe"] = round(float(ht_ - grund_f[i * FEIN + mitte, j * FEIN + mitte]), 1)
         nach = kette[idx + 1] if idx + 1 < len(kette) else None
-        if nach is not None:
+        if nach is not None and vor_d[nach] == -2:                   # Nacht am Liegeplatz
+            lp = liege.get(k, {})
+            p.update(kurs_kg=None, steuerkurs=None, sog=0.0, modus="nacht", twa=0, liege=lp.get("name"))
+            naechte.append({"name": lp.get("name"), "art": lp.get("art"), "la": lp.get("la"), "lo": lp.get("lo"),
+                            "km": lp.get("km"), "an": round(t), "ab": round(float(ankunft[nach]))})
+        elif nach is not None:
             d, nb, kurs, sog = int(vor_d[nach]), int(vor_bug[nach]), float(vor_kurs[nach]), float(vor_sog[nach])
             p.update(kurs_kg=round(float(peil[d])), steuerkurs=round(kurs), sog=round(sog, 2),
                      modus="motor" if nb == -1 else ("stb" if nb == 0 else "bb"))
@@ -610,10 +713,19 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             luecke = (q["t"] - p["t"]) - fahrt
             if luecke > 300:
                 w_ = dict(p, modus="warten", sog=0.0, kurs_kg=p["kurs_kg"])
-                p["t"] = round(q["t"] - fahrt)
+                t_ab = round(q["t"] - fahrt)
+                if nm and sonnenhoehe(p["la"], p["lo"], (p["t"] + t_ab) / 2) < DAEMMERUNG:      # Start vor Tagesanbruch
+                    lp = liege.get(p["_k"], {})
+                    w_.update(modus="nacht", kurs_kg=None, steuerkurs=None, twa=0, liege=lp.get("name", "start"))
+                    naechte.insert(0, {"name": lp.get("name", "start"), "art": lp.get("art", "start"), "la": lp.get("la", p["la"]),
+                                       "lo": lp.get("lo", p["lo"]), "km": lp.get("km", 0), "an": p["t"], "ab": t_ab})
+                p["t"] = t_ab
                 punkte.insert(a, w_)
                 a += 1
         a += 1
+    naechte.sort(key=lambda x: x["an"])
+    for p in punkte:
+        p.pop("_k", None)
     # Start-/Zielpunkte exakt anhaengen (Verbindung zum Gitter)
     punkte[0]["la_eingabe"], punkte[0]["lo_eingabe"] = la_a, lo_a
     punkte[-1]["la_eingabe"], punkte[-1]["lo_eingabe"] = la_b, lo_b
@@ -623,7 +735,8 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     wenden = halsen = 0
     abschnitte = []
     for a, p in enumerate(punkte[:-1]):
-        if abschnitte and abschnitte[-1]["modus"] == p["modus"] and abs(((abschnitte[-1]["k0"] - p["kurs_kg"] + 180) % 360) - 180) <= 20:
+        if (abschnitte and abschnitte[-1]["modus"] == p["modus"] and p["kurs_kg"] is not None and abschnitte[-1]["k0"] is not None
+                and abs(((abschnitte[-1]["k0"] - p["kurs_kg"] + 180) % 360) - 180) <= 20):
             abschnitte[-1]["bis"] = a + 1
             continue
         abschnitte.append({"von": a, "bis": a + 1, "modus": p["modus"], "k0": p["kurs_kg"]})
@@ -638,6 +751,9 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         ab["twa"] = round(sum(abs(q["twa"]) for q in teil) / len(teil))
         ab["strom"] = round(max(q["strom"] for q in teil), 1)
         ab["nacht"] = any(q["nacht"] for q in teil)
+        if ab["modus"] == "nacht":
+            ab["liege"] = p0.get("liege")
+            ab["bis_t"] = p1["t"]
         ab["k0"] = None
         del ab["k0"]
     letzter = None
@@ -651,7 +767,9 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             letzter = p["modus"]
     weg_km = sum(_km(punkte[a]["la"], punkte[a]["lo"], punkte[a + 1]["la"], punkte[a + 1]["lo"]) for a in range(len(punkte) - 1))
     warten_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["modus"] == "warten") / 3600
-    nacht_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["nacht"]) / 3600
+    nacht_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1)
+                  if punkte[a]["nacht"] and punkte[a]["modus"] not in ("nacht", "warten")) / 3600
+    liege_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["modus"] == "nacht") / 3600
     motor_h = sum((punkte[a + 1]["t"] - punkte[a]["t"]) for a in range(len(punkte) - 1) if punkte[a]["modus"] == "motor") / 3600
     dauer_h = (punkte[-1]["t"] - punkte[0]["t"]) / 3600
     return {
@@ -662,13 +780,16 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         "dauer_h": round(dauer_h, 2), "strecke_sm": round(weg_km / KN, 1), "luftlinie_sm": round(dist / KN, 1),
         "sog_mittel": round(weg_km / KN / dauer_h, 2) if dauer_h > 0 else None,
         "wenden": wenden, "halsen": halsen, "motor_h": round(motor_h, 2), "warten_h": round(warten_h, 2), "nacht_h": round(nacht_h, 2),
+        "liege_h": round(liege_h, 2), "fahrt_h": round(dauer_h - liege_h - warten_h, 2), "naechte": naechte,
+        "abfahrt": next((q["t"] for q in punkte if q["modus"] not in ("nacht", "warten")), punkte[0]["t"]),
         "punkte": punkte, "abschnitte": abschnitte,
         "gitter": {"km": round(h, 3), "nx": nx, "ny": ny, "s": s, "n": n, "w": w, "e": e},
         "quellen": {"wind": "Open-Meteo best_match (regional models, hourly)", "wellen": "Open-Meteo Marine",
                     "strom": "Tidal current layer (TPXO10 + fine models)" + (" + Copernicus GLO12 ocean current" if o["ozean"] else ""),
-                    "land": "OpenStreetMap land polygons", "tiefe": tiefe_info, "vtg": vtg_info, "sperr": sperr_info, "polare": P.info()["quelle"]},
-        "hinweise": ((["Depth = EMODnet (LAT) + predicted tide from nearby gauges at the time of passage; storm surge "
-                       "and air pressure are not included, keep the reserve."] if "tide height" in tiefe_info else
+                    "land": "OpenStreetMap land polygons", "tiefe": tiefe_info, "windstau": stau_info, "vtg": vtg_info, "sperr": sperr_info, "polare": P.info()["quelle"]},
+        "hinweise": ((["Depth = EMODnet (LAT) + predicted tide from nearby gauges at the time of passage"
+                       + ("; storm surge forecast included (%s), keep the reserve." % stau_info if stau_info.startswith(("Copernicus", "NOAA"))
+                          else "; storm surge NOT included (%s), keep the reserve." % stau_info)] if "tide height" in tiefe_info else
                       ["Shallow water is avoided as at chart datum (lowest tide)."]) if tiefe_info.startswith("EMODnet")
                      else ["Water depth is NOT considered."])
                     + (["Traffic separation schemes (OpenSeaMap): lanes only with the traffic or crossing at right angles, "
@@ -685,11 +806,15 @@ if __name__ == "__main__":
     import json
     a = [float(x) for x in sys.argv[1:5]]
     t0 = time.time() if len(sys.argv) < 6 else dt.datetime.fromisoformat(sys.argv[5]).replace(tzinfo=dt.timezone.utc).timestamp()
-    r = route((a[0], a[1]), (a[2], a[3]), t0)
+    opt = {}
+    for kv in sys.argv[6:]:
+        k_, v_ = kv.split("=", 1)
+        opt[k_] = v_ == "1" if v_ in ("0", "1") else float(v_)
+    r = route((a[0], a[1]), (a[2], a[3]), t0, **opt)
     kurz = {k: v for k, v in r.items() if k not in ("punkte", "abschnitte")}
     print(json.dumps(kurz, indent=1, ensure_ascii=False))
     for ab in r["abschnitte"]:
         p = r["punkte"][ab["von"]]
-        print("%s  %-5s KüG %3d°  %4.1f sm  SOG %4.1f  TWS %4.1f TWA %4d  Strom max %.1f" % (
-            dt.datetime.fromtimestamp(p["t"], dt.timezone.utc).strftime("%H:%M"), ab["modus"], ab["kurs_kg"], ab["sm"],
-            ab["sog"], ab["tws"], ab["twa"], ab["strom"]))
+        print("%s  %-6s KüG %3s°  %4.1f sm  SOG %4.1f  TWS %4.1f TWA %4d  Strom max %.1f %s" % (
+            dt.datetime.fromtimestamp(p["t"], dt.timezone.utc).strftime("%d. %H:%M"), ab["modus"], ab["kurs_kg"], ab["sm"],
+            ab["sog"], ab["tws"], ab["twa"], ab["strom"], ab.get("liege") or ""))
