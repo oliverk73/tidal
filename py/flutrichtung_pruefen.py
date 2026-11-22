@@ -140,6 +140,9 @@ BEHALTEN = {
     'Falls Gap (6 km E, 41 m deep), England, United Kingdom Current',
     'Falls Gap (6 km E, 9 m deep), England, United Kingdom Current',
     'Bray (2 km NE, 8 m deep), Ireland Current',
+    # CHS-Atlas Saint-Laurent S9 (22.11.2026): Fluss ohne Kentern, Strom laeuft immer flussab (Mittel -1,35 kn,
+    # XTide nur "Ebb"); M2-Phase durch Neerstrompfeile 0,5 km daneben verwischt (M4 ~ M2, R2 0,68) -> Flut = flussauf
+    'Pointe à Damase, Québec, Canada Current',
 }
 # Fortschreitende Welle: Achse in Laufrichtung (|cos| >= 0.5, Gradient >= 0.2) UND Flutmaximum -60..+60 Grad um HW
 # (bzw. gespiegelt fuer drehen). Eichung: Kanal-Konvention 94/94, NOAA unklar 11/11 (18.11.2026).
