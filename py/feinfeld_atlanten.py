@@ -222,8 +222,40 @@ def probe(teile):
             print('  Probe %-24s %3d Saetze: M2-Vektorfehler Median %.1f %%, max %.0f %%' % (name, len(e), np.median(e), max(e)))
 
 
+def shom3d():
+    """SHOM "Courants de maree 3D" Loire (Saint-Nazaire, bis Quiberon/Morbihan) und Fromveur (Brest), Oberflaeche
+    (23.11.2026). Gleiche Atlasregel wie shom(); Leser py/shom_3d_stroemung.Atlas3D. Der 2D-Atlas 565 hat dort nur
+    2 km und im Golfe du Morbihan keine Zelle."""
+    import shom_3d_stroemung as S3
+    tb, kb = S.koeffizient(JAHR)
+    t0, ts = _zeiten()
+    teile = []
+    for nm in ('loire', 'fromveur'):
+        a = S3.Atlas3D(nm)
+        pfad = S._hafen_finden(S.HAFEN[a.port][1])
+        t = np.arange(t0 - 86400, t0 + 366 * 86400, 120.0)
+        h = S.gezeit(pfad, S.HAFEN[a.port][1], t)
+        tp, _ = S.scheitel(t, h, not a.bm)
+        kp = np.interp(tp, tb, kb)
+        k = np.clip(np.searchsorted(tp, ts), 1, len(tp) - 1)
+        k -= (ts - tp[k - 1]) < (tp[k] - ts)
+        tau = (ts - tp[k]) / 60.0
+        w = (kp[k] - a.coeff[0]) / (a.coeff[1] - a.coeff[0])
+        ks, M, W = operator(tau, w, a.tau)
+        R = len(a.tau)
+        U = a.U.transpose(1, 2, 0).reshape(2 * R, -1)               # (n, 2, R) -> (2R, n), erst ME dann VE
+        V = a.V.transpose(1, 2, 0).reshape(2 * R, -1)
+        ok = np.isfinite(U).all(0) & np.isfinite(V).all(0)
+        res = _stuecke(ks, M, W, U[:, ok], V[:, ok])
+        name = 'SHOM3D-' + nm.upper()
+        teile.append((name, a.lat[ok], a.lon[ok], res))
+        print('%-28s %-11s %6d Zellen  r2 Median %.3f  M2 max %.2f m/s' % (
+            name, a.port, ok.sum(), np.median(res['r2']), np.abs(res['U']['M2']).max()), flush=True)
+    return teile
+
+
 def main():
-    teile = shom() + bsh()
+    teile = shom() + bsh() + shom3d()
     out = {}
     for q, (name, la, lo, res) in enumerate(teile):
         out['n%d' % q] = np.array(name)

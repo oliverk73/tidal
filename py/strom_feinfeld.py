@@ -47,6 +47,8 @@ def _familie(name):
     m = re.search(r'-(5\d\d)-', n)                  # SHOM-Atlasnummer = Modelllauf (560 Finistere+Iroise ...)
     if n.startswith('SHOM') and m:
         return 'SHOM-' + m.group(1)
+    if n == 'SHOM3D-FROMVEUR':                    # liegt im Iroise-Lauf 560, M2 auf 1 % gleich (19.11.2026)
+        return 'SHOM-560'
     return n.split('-')[0]
 
 
