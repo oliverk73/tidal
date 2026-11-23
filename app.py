@@ -2362,10 +2362,30 @@ def api_tidal_current():
     # Ausschnitt auf 0,1 Grad runden, damit wiederholte Anfragen gleich sind
     r = lambda x: round(x * 10) / 10.0  # noqa: E731
     try:
-        zellen = max(100, min(600, int(request.args.get('c') or 240)))     # Zellen je Achse (Bildschirm / 4 px)
+        zellen = max(100, min(900, int(request.args.get('c') or 240)))   # 900: Feld mit Rand (Karte 23.11.2026)     # Zellen je Achse (Bildschirm / 4 px)
     except ValueError:
         zellen = 240
     ozean = request.args.get('g') == '1'          # „Total current“: + Ozeanstrom Copernicus (20.11.2026)
+    if request.args.get('fmt') == 'bin':
+        # 23.11.2026: Binaerformat fuer die Karte (statt 3-7 MB JSON und 0,6 s Listenbau): 4 Byte Kopflaenge (LE),
+        # Kopf als JSON, dann u, v als Int16 in mm/s (-32768 = Land), dann 'gefuellt' als Uint8 (falls vorhanden)
+        import json as _json
+        import struct as _struct
+        import numpy as _np
+        d = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t, max_zellen=zellen, ozean=ozean,
+                                  kueste=True, roh=True)
+
+        def _i16(a):
+            a = _np.asarray(a, dtype=_np.float64) * 1000.0
+            return _np.where(_np.isfinite(a), _np.clip(_np.rint(a), -32767, 32767), -32768).astype('<i2').tobytes()
+        kopf = dict(d['header'], gefuellt=d['f'] is not None)
+        kb = _json.dumps(kopf).encode()
+        teile = [_struct.pack('<I', len(kb)), kb, b'\0' * ((-len(kb)) % 2), _i16(d['u']), _i16(d['v'])]
+        if d['f'] is not None:
+            teile.append(_np.asarray(d['f'], dtype=_np.uint8).tobytes())
+        resp = app.response_class(b''.join(teile), mimetype='application/octet-stream')
+        resp.headers['Cache-Control'] = 'public, max-age=3600'
+        return resp
     daten = tpxo_strom_karte.feld(r(s) - 0.1, r(n) + 0.1, r(w) - 0.1, r(e) + 0.1, t, max_zellen=zellen, ozean=ozean, kueste=True)
     resp = jsonify(daten)
     resp.headers['Cache-Control'] = 'public, max-age=3600'

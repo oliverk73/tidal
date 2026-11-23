@@ -37,6 +37,9 @@ RAND_FAMILIE_KM = 10.0
 RAND_TPXO_KM = 6.0         # Uebergang feines Feld -> TPXO (einsetzen)
 RAND_KM = 8.0               # Uebergangszone an der Grenze einer feineren Quelle hoechstens (bauen)
 _S = {}
+_GEO = {}
+import threading as _threading
+_SPERRE = _threading.Lock()
 
 
 def _familie(name):
@@ -234,18 +237,57 @@ def einsetzen(lat, lon, u, v, t_rel_h, kopf, jahr, maske=False):
     t_rel_h: Stunden seit Jahresbeginn (UTC). maske=True: viertes Ergebnis = (ny, nx) bool, Zelle vom feinen Feld als
     Wasser entschieden (die OSM-Landmaske der Karte darf sie nicht leeren: Muendungen hinter der Kuestenlinie)."""
     S = _laden()
+    leer = (u, v, 0, np.zeros(u.shape, bool)) if maske else (u, v, 0)
     if not S:
-        return (u, v, 0, np.zeros(u.shape, bool)) if maske else (u, v, 0)
+        return leer
+    # Alles ausser der Zeitrechnung haengt nur vom Raster ab (Nachbarn, Wasser, Gewichte, Rand zu TPXO, die gewichteten
+    # Konstanten je Zelle) -> je Raster einmal (23.11.2026: 48 Zeitschritte je Ausschnitt rechneten das jedes Mal;
+    # Sperre, damit zwei gleichzeitige Anfragen es nicht doppelt rechnen)
+    sch = (len(lat), len(lon), round(float(lat[0]), 7), round(float(lon[0]), 7), round(float(lat[-1]), 7), round(float(lon[-1]), 7))
+    with _SPERRE:
+        geo = _GEO.get(sch)
+        if geo is None:
+            geo = _geometrie(S, lat, lon, u)
+            if len(_GEO) >= 6:
+                _GEO.pop(next(iter(_GEO)))
+            _GEO[sch] = geo
+    if geo is None:
+        return leer
+    deckt, idx, g, UK, VK = geo
+    uu = np.zeros(len(idx))
+    vv = np.zeros(len(idx))
+    for k in UK:
+        E = math.radians(kopf['arg'][jahr][k] + kopf['speeds'][k] * t_rel_h)
+        rot = kopf['fak'][jahr][k] * complex(math.cos(E), math.sin(E))
+        uu += (UK[k] * rot).real
+        vv += (VK[k] * rot).real
+    uf, vf = u.ravel().copy(), v.ravel().copy()
+    if g is not None:                       # weicher Rand zu TPXO
+        ut, vt = uf[idx], vf[idx]
+        ok = np.isfinite(ut) & np.isfinite(vt) & (g < 1)
+        uu[ok] = g[ok] * uu[ok] + (1 - g[ok]) * ut[ok]
+        vv[ok] = g[ok] * vv[ok] + (1 - g[ok]) * vt[ok]
+    uf[deckt], vf[deckt] = np.nan, np.nan
+    uf[idx], vf[idx] = uu, vv
+    if maske:
+        fw = np.zeros(uf.shape, bool)
+        fw[idx] = True
+        return uf.reshape(u.shape), vf.reshape(v.shape), int(deckt.sum()), fw.reshape(u.shape)
+    return uf.reshape(u.shape), vf.reshape(v.shape), int(deckt.sum())
+
+
+def _geometrie(S, lat, lon, u):
+    """Zeitunabhaengiger Teil von einsetzen -> (deckt, idx, g, UK, VK) oder None."""
     LA, LO = np.meshgrid(lat, lon, indexing='ij')
-    d, i = S['baum'].query(_xy(LA.ravel(), LO.ravel()), k=3, distance_upper_bound=0.02)   # ~127 km
+    d, i = S['baum'].query(_xy(LA.ravel(), LO.ravel()), k=3, distance_upper_bound=0.02, workers=-1)   # ~127 km
     d = d * 6371
     gut = np.isfinite(d[:, 0])
     if not gut.any():
-        return (u, v, 0, np.zeros(u.shape, bool)) if maske else (u, v, 0)
+        return None
     i0 = np.where(gut, i[:, 0], 0)
     deckt = gut & (d[:, 0] < DECKT * np.maximum(S['abstand_km'][i0], 0.3))
     if not deckt.any():
-        return (u, v, 0, np.zeros(u.shape, bool)) if maske else (u, v, 0)
+        return None
     # Zellweite der Ausgabe: Wasser, wenn ein Punkt naeher als halbe Zelldiagonale oder 1,5 x Punktabstand liegt
     zelle = abs(lat[1] - lat[0]) * 111 if len(lat) > 1 else 1.0
     # Abstand des groebsten der 3 Nachbarn: an der Naht zweier Gitter (Iroise 250 m / Finistere 500 m) bleibt sonst eine
@@ -258,36 +300,21 @@ def einsetzen(lat, lon, u, v, t_rel_h, kopf, jahr, maske=False):
     w = np.where(np.isfinite(dd), 1.0 / np.maximum(dd, 0.05) ** 2, 0.0)
     w /= w.sum(1, keepdims=True)
     ii = np.where(np.isfinite(dd), ii, ii[:, :1])
-    uu = np.zeros(len(idx))
-    vv = np.zeros(len(idx))
-    for k in KS:
-        E = math.radians(kopf['arg'][jahr][k] + kopf['speeds'][k] * t_rel_h)
-        f = kopf['fak'][jahr][k]
-        rot = f * complex(math.cos(E), math.sin(E))
-        uu += ((S['U_' + k][ii] * rot).real * w).sum(1)
-        vv += ((S['V_' + k][ii] * rot).real * w).sum(1)
-    uf, vf = u.ravel().copy(), v.ravel().copy()
+    w = w.astype(np.float32)
+    UK = {k: (S['U_' + k][ii] * w).sum(1) for k in KS}
+    VK = {k: (S['V_' + k][ii] * w).sum(1) for k in KS}
     # Weicher Rand zu TPXO (23.11.2026, NorKyst-Auswahl endet quer im Fjord): Abstand jeder feinen Zelle zur naechsten
     # Zelle, die nur TPXO hat (TPXO Wasser, feines Feld deckt nicht); auf RAND_TPXO_KM linear von TPXO ins feine Feld.
-    # Kueste zaehlt nicht: dort ist TPXO Land (NaN) oder das feine Feld deckt.
-    nur_tpxo = (np.isfinite(uf) & ~deckt).reshape(u.shape)
+    # Kueste zaehlt nicht: dort ist TPXO Land (NaN) oder das feine Feld deckt. TPXO-Landmaske ist zeitunabhaengig.
+    g = None
+    nur_tpxo = (np.isfinite(u.ravel()) & ~deckt).reshape(u.shape)
     if nur_tpxo.any() and len(lat) > 1 and len(lon) > 1:
         from scipy import ndimage
         dy = abs(lat[1] - lat[0]) * 111.2
         dx = abs(lon[1] - lon[0]) * 111.2 * math.cos(math.radians(float(np.mean(lat))))
         dist = ndimage.distance_transform_edt(~nur_tpxo, sampling=(dy, dx)).ravel()[idx]
         g = np.clip(dist / RAND_TPXO_KM, 0, 1)
-        ut, vt = uf[idx], vf[idx]
-        ok = np.isfinite(ut) & np.isfinite(vt) & (g < 1)
-        uu[ok] = g[ok] * uu[ok] + (1 - g[ok]) * ut[ok]
-        vv[ok] = g[ok] * vv[ok] + (1 - g[ok]) * vt[ok]
-    uf[deckt], vf[deckt] = np.nan, np.nan
-    uf[idx], vf[idx] = uu, vv
-    if maske:
-        fw = np.zeros(uf.shape, bool)
-        fw[idx] = True
-        return uf.reshape(u.shape), vf.reshape(v.shape), int(deckt.sum()), fw.reshape(u.shape)
-    return uf.reshape(u.shape), vf.reshape(v.shape), int(deckt.sum())
+    return deckt, idx, g, UK, VK
 
 
 if __name__ == '__main__':

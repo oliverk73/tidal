@@ -57,7 +57,7 @@
 <script src="/static/js/tide_layer.js" defer></script>
 <script src="/static/js/windstau_layer.js?v=20261109" defer></script>
 <script src="/static/js/nowcast_layer.js" defer></script>
-<script src="/static/js/tide_flow_layer.js?v=20261123a" defer></script>
+<script src="/static/js/tide_flow_layer.js?v=20261123b" defer></script>
 <script src="/static/js/route_planner.js?v=20261120d" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
@@ -1168,11 +1168,27 @@
       var b = map.getBounds();
       return { s: b.getSouth().toFixed(1), n: b.getNorth().toFixed(1), w: b.getWest().toFixed(1), e: b.getEast().toFixed(1) };
     }
+    // 23.11.2026: Feld mit 20 % Rand je Seite (kleines Verschieben braucht kein neues Feld) und als Binaerformat
+    // (Int16 mm/s statt 3-7 MB JSON), siehe app.py fmt=bin
+    var TC_RAND = 0.2;
     async function tcFetchAt(t) {
-      var b = tcBounds();
-      var c = Math.round(Math.max(map.getSize().x, map.getSize().y) / 4);   // Rasterzellen je Achse ~ 4 px
-      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t + '&c=' + c + (tcOzean ? '&g=1' : '') + '&v={{ feinfeld_version }}';
-      return (await fetch(url)).json();
+      var bb = map.getBounds(), dla = (bb.getNorth() - bb.getSouth()) * TC_RAND, dlo = (bb.getEast() - bb.getWest()) * TC_RAND;
+      var b = { s: (bb.getSouth() - dla).toFixed(1), n: (bb.getNorth() + dla).toFixed(1),
+                w: (bb.getWest() - dlo).toFixed(1), e: (bb.getEast() + dlo).toFixed(1) };
+      var c = Math.round(Math.max(map.getSize().x, map.getSize().y) / 4 * (1 + 2 * TC_RAND));   // ~ 4 px je Zelle
+      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t + '&c=' + c +
+                (tcOzean ? '&g=1' : '') + '&fmt=bin&v={{ feinfeld_version }}';
+      var buf = await (await fetch(url)).arrayBuffer();
+      var dv = new DataView(buf), hl = dv.getUint32(0, true);
+      var h = JSON.parse(new TextDecoder().decode(new Uint8Array(buf, 4, hl)));
+      var o = 4 + hl + (hl % 2), n = h.nx * h.ny;
+      var iu = new Int16Array(buf.slice(o, o + 2 * n)), iv = new Int16Array(buf.slice(o + 2 * n, o + 4 * n));
+      var u = new Float32Array(n), v = new Float32Array(n);
+      for (var i = 0; i < n; i++) {
+        if (iu[i] === -32768) { u[i] = NaN; v[i] = NaN; } else { u[i] = iu[i] / 1000; v[i] = iv[i] / 1000; }
+      }
+      var f = h.gefuellt ? Float32Array.from(new Uint8Array(buf, o + 4 * n, n)) : null;
+      return { bin: true, header: h, u: u, v: v, f: f };
     }
     // Pfeile an den Harmonics-Strömungssätzen (py/strom_pfeile.py), 48 h ab tcStart in 30-min-Schritten
     async function tcFetchArrows() {

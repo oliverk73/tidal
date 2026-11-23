@@ -44,6 +44,12 @@
   var FADE = 0.93;         // Spurenlänge (Deckkraft, die je Bild erhalten bleibt)
 
   function Frame(data) {
+    if (data && data.bin) {                 // 23.11.2026: Binaerformat (app.py fmt=bin), schon als Float32Array
+      var hb = data.header;
+      this.nx = hb.nx; this.ny = hb.ny; this.lo1 = hb.lo1; this.la1 = hb.la1; this.dx = hb.dx; this.dy = hb.dy;
+      this.u = data.u; this.v = data.v; this.f = data.f;
+      return;
+    }
     var h = data[0].header;
     this.nx = h.nx; this.ny = h.ny; this.lo1 = h.lo1; this.la1 = h.la1; this.dx = h.dx; this.dy = h.dy;
     var n = h.nx * h.ny;
@@ -56,6 +62,14 @@
     // 21.11.2026: drittes Feld 'filled' (1 = bis an die OSM-Küste aus dem nächsten Modellwert geschätzt)
     this.f = data[2] ? Float32Array.from(data[2].data) : null;
   }
+  // Deckt das Feld den Kartenausschnitt in brauchbarer Aufloesung? (dann beim Verschieben behalten, 23.11.2026)
+  Frame.prototype.deckt = function (map) {
+    var b = map.getBounds(), size = map.getSize();
+    var w = ((b.getWest() - this.lo1) % 360 + 360) % 360, e = w + (b.getEast() - b.getWest());
+    var innen = w >= 0 && e <= this.dx * (this.nx - 1) && b.getNorth() <= this.la1 && b.getSouth() >= this.la1 - this.dy * (this.ny - 1);
+    var wunsch = (b.getEast() - b.getWest()) / (size.x / CELL);          // Grad je 4-px-Zelle
+    return innen && this.dx <= 2.0 * wunsch + 1e-9 && this.dx >= wunsch / 3.0;
+  };
   // bilinear; NaN wenn eine Ecke Land ist (Küste bleibt scharf)
   Frame.prototype.at = function (lat, lon, out) {
     var x = ((lon - this.lo1) % 360 + 360) % 360 / this.dx;
@@ -148,9 +162,9 @@
     _need: function (t) {
       var self = this;
       if (this._frames[t] || this._pending[t]) return;
-      var gen = this._gen;
+      var gen = this._fgen;
       this._pending[t] = this._fetch(t).then(function (d) {
-        if (gen !== self._gen) return;
+        if (gen !== self._fgen) return;
         self._frames[t] = new Frame(d);
         delete self._pending[t];
         self._gridT = null;
@@ -162,8 +176,7 @@
 
     // --- Karte ---
     _onMoveStart: function () {
-      this._moving = true;
-      this._bg.style.display = 'none'; this._fg.style.display = 'none'; this._ar.style.display = 'none';
+      this._moving = true;                 // Bild bleibt stehen und wandert mit (beim Zoomen blendet Leaflet es aus)
     },
     _onMoveEnd: function () {
       var map = this._map, size = map.getSize();
@@ -175,9 +188,15 @@
       });
       this._moving = false;
       this._gen = (this._gen || 0) + 1;
-      // alte Felder bleiben nutzbar (sie tragen ihre eigenen Koordinaten), neue werden geholt
-      this._oldFrames = this._frames;
-      this._frames = {}; this._pending = {};
+      // Felder, die den neuen Ausschnitt schon decken (mit Rand geladen), bleiben; sonst neue holen und die alten
+      // bis dahin weiter zeigen (sie tragen ihre eigenen Koordinaten)
+      var ks = Object.keys(this._frames), alle = ks.length > 0;
+      for (var q = 0; q < ks.length; q++) if (!this._frames[ks[q]].deckt(map)) { alle = false; break; }
+      if (!alle) {
+        this._fgen = (this._fgen || 0) + 1;
+        this._oldFrames = this._frames;
+        this._frames = {}; this._pending = {};
+      }
       this._gridT = null;
       this._particles = [];
       this.ready(this._t);

@@ -67,7 +67,7 @@ def _lesen(arr, ii, jj):
     return np.concatenate(teile, axis=1) if len(teile) > 1 else teile[0]
 
 
-def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False, kueste=False):
+def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False, kueste=False, roh=False):
     """-> leaflet-velocity-Liste [u, v] in m/s fuer den Ausschnitt zur Zeit t (datetime UTC).
     ozean=True: Ozeanstrom ohne Gezeiten (Copernicus GLO12, py/ozeanstrom.py) dazu = „Total current“ (20.11.2026).
     kueste=True (nur Karte): Feld auf Bildschirmaufloesung verfeinern, bis an die OSM-Kueste auffuellen; drittes Feld
@@ -163,6 +163,9 @@ def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False, kueste=F
                  dx=round(dx, 6), dy=round(dx, 6), nx=int(nj), ny=int(len(ii)), refTime=t.strftime('%Y-%m-%dT%H:%M:%SZ'),
                  forecastTime=0, scanMode=0, parameterCategory=2, parameterUnit='m.s-1')
 
+    if roh:                                  # 23.11.2026: Binaerformat der Karte (app.py fmt=bin), ohne Python-Listen
+        return dict(header=kopfz, u=u, v=v, f=gefuellt)
+
     def liste(a):
         return [None if not np.isfinite(x) else round(float(x), 3) for x in a.ravel()]
     out = [dict(header=dict(kopfz, parameterNumber=2, parameterNumberName='eastward_tidal_current'), data=liste(u)),
@@ -172,6 +175,9 @@ def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False, kueste=F
     return out
 
 
+_LAND = {}
+import threading as _threading
+_LAND_SPERRE = _threading.Lock()
 FUELL_KM = 15.0          # Kuestenstreifen, der aus dem naechsten gueltigen Wert gefuellt wird
 KUESTE_MAX_GRAD = 6.0    # nur bis zu diesem Ausschnitt (Landmaske je Anfrage)
 
@@ -207,7 +213,14 @@ def _kueste(u, v, la1, lo1, dx, wunsch, fein_wasser=None):
         ny, nx = u.shape
     try:
         import segel_land
-        land = segel_land.raster(la1 - dx * (ny - 0.5), la1 + dx / 2, lo1 - dx / 2, lo1 + dx * (nx - 0.5), ny, nx)
+        sch = (round(la1, 6), round(lo1, 6), round(dx, 8), ny, nx)
+        with _LAND_SPERRE:                   # gleichzeitige Anfragen desselben Ausschnitts rechnen sie nur einmal
+            land = _LAND.get(sch)
+            if land is None:                 # je Ausschnitt einmal (alle Zeitschritte gleich), 23.11.2026
+                land = segel_land.raster(la1 - dx * (ny - 0.5), la1 + dx / 2, lo1 - dx / 2, lo1 + dx * (nx - 0.5), ny, nx)
+                if len(_LAND) >= 16:
+                    _LAND.pop(next(iter(_LAND)))
+                _LAND[sch] = land
     except Exception:                                              # noqa: BLE001 - ohne Landmaske wie bisher
         return None
     # Feinfeld-Wasser bleibt Wasser (23.11.2026): die OSM-Kuestenlinie schliesst Muendungen ab (Loire an der Bruecke

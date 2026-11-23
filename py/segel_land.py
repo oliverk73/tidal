@@ -55,6 +55,39 @@ def _index():
     return _IDX["bb"]
 
 
+_RINGE = {}
+_LESER = {}
+import threading as _threading
+_SPERRE = _threading.Lock()
+
+
+def _ringe(i):
+    """Ringe eines Landpolygons [(Punkte (n, 2), aussen)], gemerkt (23.11.2026: die Gezeitenstrom-Karte las je Anfrage
+    hunderte Polygone neu aus der Shapefile, 0,15-0,4 s). Aeussere Ringe im Uhrzeigersinn (Schnuersenkelformel < 0)."""
+    r_ = _RINGE.get(i)
+    if r_ is not None:
+        return r_
+    with _SPERRE:
+        if "r" not in _LESER or _LESER.get("kennung") != _kennung():
+            _LESER["r"] = shapefile.Reader(SHP)
+            _LESER["kennung"] = _kennung()
+            _RINGE.clear()
+        sh = _LESER["r"].shape(i)
+    pts = np.asarray(sh.points)
+    teile = list(sh.parts) + [len(pts)]
+    out = []
+    for a, b in zip(teile[:-1], teile[1:]):
+        ring = pts[a:b]
+        if len(ring) < 3:
+            continue
+        x, y = ring[:, 0], ring[:, 1]
+        out.append((ring, 0.5 * np.sum(x[:-1] * y[1:] - x[1:] * y[:-1]) <= 0))
+    if len(_RINGE) > 60000:
+        _RINGE.clear()
+    _RINGE[i] = out
+    return out
+
+
 def raster(sued, nord, west, ost, ny, nx):
     """True = Land. Pixelmitte (i, j) liegt bei lat = nord - (i+0.5)*dlat, lon = west + (j+0.5)*dlon."""
     bb = _index()
@@ -63,21 +96,10 @@ def raster(sued, nord, west, ost, ny, nx):
     dr = ImageDraw.Draw(img)
     sx = nx / (ost - west)
     sy = ny / (nord - sued)
-    r = shapefile.Reader(SHP)
     for i in treffer:
-        sh = r.shape(int(i))
-        pts = np.asarray(sh.points)
-        teile = list(sh.parts) + [len(pts)]
-        for a, b in zip(teile[:-1], teile[1:]):
-            ring = pts[a:b]
-            if len(ring) < 3:
-                continue
-            # Shapefile: aeussere Ringe im Uhrzeigersinn (Flaeche < 0 nach Schnuersenkelformel), Loecher gegen
-            x, y = ring[:, 0], ring[:, 1]
-            flaeche = 0.5 * np.sum(x[:-1] * y[1:] - x[1:] * y[:-1])
-            px = list(zip(((x - west) * sx).tolist(), ((nord - y) * sy).tolist()))
-            dr.polygon(px, fill=1 if flaeche <= 0 else 0)
-    r.close()
+        for ring, aussen in _ringe(int(i)):
+            px = list(zip(((ring[:, 0] - west) * sx).tolist(), ((nord - ring[:, 1]) * sy).tolist()))
+            dr.polygon(px, fill=1 if aussen else 0)
     return np.array(img, dtype=bool)
 
 
