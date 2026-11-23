@@ -84,6 +84,70 @@ def flachstes(s, n, w, e, ny, nx):
     return aus
 
 
+# SHOM-Gelaendemodelle (23.11.2026, Etalab, Bezug PBMA = LAT, ZNEG: Tiefe negativ, an Land keine Werte).
+# EMODnet hat hinter den Muendungen nur Fuellwerte (Loire ab Pont de Saint-Nazaire: 0 m bzw. Gelaendehoehe), SHOM die
+# gepeilte Rinne: Loire bis Trentemoult, Seine bis Rouen, Gironde/Garonne bis Bordeaux, Westerschelde, Rance, Fal ...
+# Feinstes Modell zuerst. Quelle: services.data.shom.fr/INSPIRE/telechargement (MNT_*_PBMA), quellen/routing/shom_mnt.
+SHOM_ORDNER = os.path.join(BASIS, "quellen", "routing", "shom_mnt")
+SHOM_MODELLE = [  # (Datei relativ zu SHOM_ORDNER, Name)
+    ("MNT_COTIER_ESTUAIRE_GIRONDE_AMONT_HOMONIM_PBMA/MNT_COTIER_ESTUAIRE_GIRONDE_AMONT_HOMONIM_PBMA/DONNEES/"
+     "MNT_GIR-AMONT20m_HOMONIM_WGS84_PBMA_ZNEG_V2.0.grd", "SHOM Gironde amont 20 m"),
+    ("MNT_COTIER_ESTUAIRE_GIRONDE_AVAL_HOMONIM_PBMA/MNT_COTIER_ESTUAIRE_GIRONDE_AVAL_HOMONIM_PBMA/DONNEES/"
+     "MNT_GIR-AVAL20m_HOMONIM_WGS84_PBMA_ZNEG_V2.0.grd", "SHOM Gironde aval 20 m"),
+    ("MNT_COTIER_MORBIHAN_TANDEM_PBMA/MNT_COTIER_MORBIHAN_TANDEM_PBMA/DONNEES/"
+     "MNT_COTIER_MORBIHAN_TANDEM_20m_WGS84_PBMA_ZNEG.grd", "SHOM Morbihan 20 m"),
+    ("MNT_FACADE_ATLANTIQUE_HOMONIM_PBMA/DONNEES/MNT_ATL100m_HOMONIM_WGS84_PBMA_ZNEG.grd", "SHOM Atlantic/Channel 100 m"),
+]
+_SHOM = {}
+
+
+def _shom_modell(pfad):
+    if pfad not in _SHOM:
+        import netCDF4
+        d = netCDF4.Dataset(pfad)
+        _SHOM[pfad] = (d, np.asarray(d["x"][:]), np.asarray(d["y"][:]))
+    return _SHOM[pfad]
+
+
+def shom(s, n, w, e, ny, nx):
+    """(hoehe (ny, nx) float32 m ueber LAT, NaN = kein SHOM-Wert; Liste benutzter Modelle). Flachster Wert je Zelle;
+    Zellen feiner als das Modell ohne eigenen Punkt vom Nachbarn (hoechstens eine Modellzelle weit)."""
+    from scipy import ndimage
+    aus = np.full((ny, nx), np.nan, np.float32)
+    benutzt = []
+    for datei, name in SHOM_MODELLE:
+        pfad = os.path.join(SHOM_ORDNER, datei)
+        if not os.path.exists(pfad):
+            continue
+        d, x, y = _shom_modell(pfad)
+        j = np.where((x >= w) & (x <= e))[0]
+        i = np.where((y >= s) & (y <= n))[0]
+        if not len(i) or not len(j):
+            continue
+        a = np.ma.filled(d["z"][i[0]:i[-1] + 1, j[0]:j[-1] + 1].astype(np.float32), np.nan)
+        a[(a < -12000) | (a > 9000)] = np.nan
+        if not np.isfinite(a).any():
+            continue
+        ii = np.floor((n - y[i]) / (n - s) * ny).astype(int).clip(0, ny - 1)
+        jj = np.floor((x[j] - w) / (e - w) * nx).astype(int).clip(0, nx - 1)
+        I, J = np.meshgrid(ii, jj, indexing="ij")
+        neu = np.full(ny * nx, -np.inf, np.float32)
+        m = np.isfinite(a)
+        np.maximum.at(neu, (I * nx + J)[m], a[m])
+        neu[~np.isfinite(neu)] = np.nan
+        neu = neu.reshape(ny, nx)
+        # Zielraster feiner als das Modell: Luecken bis zu einer Modellzelle vom naechsten Wert
+        zelle = max(abs(x[1] - x[0]) / ((e - w) / nx), abs(y[1] - y[0]) / ((n - s) / ny))
+        if zelle > 1 and np.isfinite(neu).any():
+            dist, idx = ndimage.distance_transform_edt(np.isnan(neu), return_indices=True)
+            neu = np.where(dist <= zelle, neu[tuple(idx)], np.nan)
+        frei = np.isnan(aus) & np.isfinite(neu)
+        if frei.any():
+            aus[frei] = neu[frei]
+            benutzt.append(name)
+    return aus, benutzt
+
+
 if __name__ == "__main__":
     import sys
     import time

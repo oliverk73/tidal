@@ -318,8 +318,17 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             tiefe_info = "no data (EMODnet covers Europe only)"
         else:
             grund_f = np.nan_to_num(hoehe_f, nan=-999.0).astype(np.float32)
-            # EMODnet liefert hinter der Kuestenlinie Gelaendehoehen statt Tiefen (Nantes 5-13 m) -> dort keine Tiefe
+            # EMODnet liefert hinter der Kuestenlinie Fuellwerte/Gelaendehoehen statt Tiefen (Loire 0 m, Nantes 5-13 m)
+            # -> dort SHOM-Peilmodelle (23.11.2026: Loire, Seine, Gironde, Schelde ...), sonst keine Tiefe
             grund_f[fluss_f] = -999.0
+            if fluss_f.any():
+                sh, sh_namen = segel_tiefe.shom(s, n, w, e, ny * FEIN, nx * FEIN)
+                mit = fluss_f & np.isfinite(sh)
+                grund_f[mit] = sh[mit]
+                if mit.any():
+                    fluss_info = ("OSM river areas: %.1f %% of the area, depth there from %s for %.0f %% of it "
+                                  "(rest unknown, keep to the fairway)" % (100 * fluss_f.mean(), ", ".join(sh_namen),
+                                                                         100 * mit.sum() / fluss_f.sum()))
             # Tide (21.11.2026): Flaechen, die bei Hochwasser tief genug sind, nur zeitweise sperren
             HT, n_pegel, stau = (segel_tide.hoehe_ueber_lat(LAT2, LON2, zeiten, windstau=o["windstau"]) if o["tide"]
                                  else (None, 0, None))
@@ -826,6 +835,9 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                           else "; storm surge NOT included (%s), keep the reserve." % stau_info)] if "tide height" in tiefe_info else
                       ["Shallow water is avoided as at chart datum (lowest tide)."]) if tiefe_info.startswith("EMODnet")
                      else ["Water depth is NOT considered."])
+                    + ([("Rivers behind the coastline: depth from SHOM survey models where available, elsewhere "
+                         "unknown; keep to the buoyed fairway.") if "SHOM" in fluss_info else
+                        "Rivers behind the coastline: depth unknown; keep to the buoyed fairway."] if fluss_info != "off" else [])
                     + (["Traffic separation schemes (OpenSeaMap): lanes only with the traffic or crossing at right angles, "
                         "separation zones only crossed."] if vtg_info.startswith("OpenSeaMap") else [])
                     + (["No-entry areas (OpenSeaMap) are avoided; check notices to mariners for temporary closures."]
