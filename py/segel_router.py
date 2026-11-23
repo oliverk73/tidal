@@ -603,162 +603,225 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     def tagnr(t):
         return min(n_tage - 1, int((t - T_ref) // 86400)) if nm else 0
 
-    ankunft = np.full(2 * N * n_tage, np.inf)
-    vor = np.full(2 * N * n_tage, -1, dtype=np.int64)
-    vor_d = np.full(2 * N * n_tage, -1, dtype=np.int8)               # -2 = Nacht am Liegeplatz
-    vor_bug = np.zeros(2 * N * n_tage, dtype=np.int8)
-    vor_kurs = np.zeros(2 * N * n_tage, dtype=np.float32)
-    vor_sog = np.zeros(2 * N * n_tage, dtype=np.float32)
     t_ende = zeiten[-2]
-    heap = []
-    nacht_gew = set()
 
-    def morgen(la_, lo_, t_):
-        """Ende der naechsten (oder laufenden) Nacht in 10-min-Schritten; None ohne Nacht in 30 h."""
-        dunkel = sonnenhoehe(la_, lo_, t_) < DAEMMERUNG
-        for q in range(1, 181):
-            x_ = t_ + 600.0 * q
-            if sonnenhoehe(la_, lo_, x_) < DAEMMERUNG:
-                dunkel = True
-            elif dunkel:
-                return x_
-        return None
+    def suche(t_ab, see_warten):
+        """Zeitabhaengiger Dijkstra ab Abfahrt t_ab (>= t0; davor Warten am Start). see_warten: auch unterwegs auf Wetter
+        warten (sonst nur am Start/an Liegeplaetzen)."""
+        ankunft = np.full(2 * N * n_tage, np.inf)
+        vor = np.full(2 * N * n_tage, -1, dtype=np.int64)
+        vor_d = np.full(2 * N * n_tage, -1, dtype=np.int8)               # -2 = Nacht am Liegeplatz
+        vor_bug = np.zeros(2 * N * n_tage, dtype=np.int8)
+        vor_kurs = np.zeros(2 * N * n_tage, dtype=np.float32)
+        vor_sog = np.zeros(2 * N * n_tage, dtype=np.float32)
+        t_ende = zeiten[-2]
+        heap = []
+        nacht_gew = set()
 
-    # Hoechstens max_tag_h Stunden unterwegs je Tag (22.11.2026, nur mit nacht_meiden): Tag beginnt bei der
-    # Morgendaemmerung (Gebietsmitte), am ersten Tag mit der Abfahrt
-    la_m = (s + n) / 2
-    tag_ende = [np.inf] * n_tage
-    if nm and o["max_tag_h"] and o["max_tag_h"] > 0:
-        for d_ in range(n_tage):
-            beginn = morgen(la_m, lo_m, T_ref + d_ * 86400.0 - 1800.0)
-            if d_ == tagnr(t0):
-                beginn = t0 if sonnenhoehe(la_m, lo_m, t0) >= DAEMMERUNG else (beginn or t0)
-            if beginn is not None:
-                tag_ende[d_] = beginn + o["max_tag_h"] * 3600.0
-    # Gleichstand beim Uebernachten (22.11.2026: Kiel->Kopenhagen blieb nach 27 min in Probstei): Morgen-Etikett
-    # minimal nach Reststrecke (0,1 s/km) und Art (Marina vor Hafen vor Ankerplatz) verschieben -> weiter gefahrene
-    # Etappe und bessere Liegeplaetze gewinnen, wenn die Ankunft sonst gleich waere
-    STRAFE_ART = {"marina": 0.0, "start": 0.0, "hafen": 60.0, "anker": 300.0}
+        def morgen(la_, lo_, t_):
+            """Ende der naechsten (oder laufenden) Nacht in 10-min-Schritten; None ohne Nacht in 30 h."""
+            dunkel = sonnenhoehe(la_, lo_, t_) < DAEMMERUNG
+            for q in range(1, 181):
+                x_ = t_ + 600.0 * q
+                if sonnenhoehe(la_, lo_, x_) < DAEMMERUNG:
+                    dunkel = True
+                elif dunkel:
+                    return x_
+            return None
 
-    for b in (0, 1):
-        z0 = (tagnr(t0) * N + ia * nx + ja) * 2 + b
-        ankunft[z0] = float(t0)
-        heapq.heappush(heap, (float(t0), z0))
-    erledigt = np.zeros(2 * N * n_tage, dtype=bool)
-    gefunden = None
-    pops = 0
-    versatz = np.array([di * nx + dj for di, dj in RICHT], dtype=np.int64)
-    dauer0 = laenge / KN * 3600.0                                          # s bei 1 kn
-    wende_s = wende_h * 3600.0
-    t_dij = time.time()
-    beste = (np.inf, None)
-    gewartet = set()                                                   # Knoten, an denen schon auf Wasser gewartet wurde
-    while heap:
-        t, z = heapq.heappop(heap)
-        if t >= beste[0]:                                             # kein Kandidat kann noch besser werden
-            break
-        if z < 0:                                                     # Warte-Eintrag: Boot liegt bis t am Knoten (Tide)
-            z = -z - 1
-        elif erledigt[z]:
-            continue
-        erledigt[z] = True
-        pops += 1
-        k, b = divmod(z, 2)
-        tg, k = divmod(k, N)
-        if ziel_menge_flach[k]:
-            # Bewertung = Ankunft + Rest bei 0,5 kn (teurer als fast jeder echte Weg, auch die Kreuz): ein naeherer Punkt gewinnt, wenn der Weg dorthin weniger kostet
-            # als die gesparte Reststrecke; weitersuchen, bis keine Ankunft die beste Bewertung noch schlagen kann
-            if t + rest_s[k] < beste[0]:
-                beste = (t + rest_s[k], z)
-            # weiter ausbauen: naehere Zielpunkte liegen oft nur hinter diesem (Ring um das Ziel)
-        if t >= t_ende:
-            continue
-        i, j = divmod(k, nx)
-        if nm:
-            # Liegeplatz: Uebernachten anbieten (naechster Morgen, neuer Tag); im Dunkeln nirgends weiterfahren
-            if k in liege and z not in nacht_gew:
-                nacht_gew.add(z)
-                tm = morgen(float(LAT[i]), float(LON[j]), t)
-                if tm is not None:
-                    tm += STRAFE_ART.get(liege[k]["art"], 0.0) + 0.1 * float(ab_ziel.ravel()[k])
-                if tm is not None and tm < t_ende:
-                    zm = (tagnr(tm) * N + k) * 2 + b
-                    if zm == z:                                       # Start vor der Daemmerung: gleicher Tag
-                        heapq.heappush(heap, (tm, -z - 1))
-                    elif tm < ankunft[zm]:
-                        ankunft[zm] = tm
-                        vor[zm] = z
-                        vor_d[zm] = -2
-                        heapq.heappush(heap, (tm, int(zm)))
-            sh0 = sonnenhoehe(float(LAT[i]), float(LON[j]), t)
-            if sh0 < DAEMMERUNG or t >= tag_ende[tg]:
+        # Hoechstens max_tag_h Stunden unterwegs je Tag (22.11.2026, nur mit nacht_meiden): Tag beginnt bei der
+        # Morgendaemmerung (Gebietsmitte), am ersten Tag mit der Abfahrt
+        la_m = (s + n) / 2
+        tag_ende = [np.inf] * n_tage
+        if nm and o["max_tag_h"] and o["max_tag_h"] > 0:
+            for d_ in range(n_tage):
+                beginn = morgen(la_m, lo_m, T_ref + d_ * 86400.0 - 1800.0)
+                if d_ == tagnr(t0):
+                    beginn = t0 if sonnenhoehe(la_m, lo_m, t0) >= DAEMMERUNG else (beginn or t0)
+                if beginn is not None:
+                    tag_ende[d_] = beginn + o["max_tag_h"] * 3600.0
+        # Gleichstand beim Uebernachten (22.11.2026: Kiel->Kopenhagen blieb nach 27 min in Probstei): Morgen-Etikett
+        # minimal nach Reststrecke (0,1 s/km) und Art (Marina vor Hafen vor Ankerplatz) verschieben -> weiter gefahrene
+        # Etappe und bessere Liegeplaetze gewinnen, wenn die Ankunft sonst gleich waere
+        STRAFE_ART = {"marina": 0.0, "start": 0.0, "hafen": 60.0, "anker": 300.0}
+
+        for b in (0, 1):
+            z0 = (tagnr(t0) * N + ia * nx + ja) * 2 + b
+            ankunft[z0] = float(t0)
+            heapq.heappush(heap, (float(t_ab), -z0 - 1) if t_ab > t0 else (float(t0), z0))   # spaetere Abfahrt = Warten
+        erledigt = np.zeros(2 * N * n_tage, dtype=bool)
+        gefunden = None
+        pops = 0
+        versatz = np.array([di * nx + dj for di, dj in RICHT], dtype=np.int64)
+        dauer0 = laenge / KN * 3600.0                                          # s bei 1 kn
+        wende_s = wende_h * 3600.0
+        t_dij = time.time()
+        beste = (np.inf, None)
+        gewartet = set()                                                   # Knoten, an denen schon auf Wasser gewartet wurde
+        gewartet_w = set()                                                 # ... auf Wetter (Wind/Welle unter der Grenze)
+
+        def wetter_zu(kk, i, j):
+            return (math.hypot(WU[kk, i, j] - CU[kk, i, j], WV[kk, i, j] - CV[kk, i, j]) > max_wind
+                    or HS[kk, i, j] > max_welle)
+        while heap:
+            t, z = heapq.heappop(heap)
+            if t >= beste[0]:                                             # kein Kandidat kann noch besser werden
+                break
+            if z < 0:                                                     # Warte-Eintrag: Boot liegt bis t am Knoten (Tide)
+                z = -z - 1
+            elif erledigt[z]:
                 continue
-            sh1 = sonnenhoehe(float(LAT[i]), float(LON[j]), t + 3600.0)
-        x = (t - T0) / 3600.0
-        ks = min(int(x), len(zeiten) - 2)
-        f = x - ks
-        S0, B0, K0 = stunde_c(ks)
-        S1 = stunde_c(ks + 1)[0]
-        s0, s1 = S0[:, i, j], S1[:, i, j]
-        sog = np.where((s0 > 0.05) & (s1 > 0.05), s0 * (1 - f) + s1 * f, np.where(f < 0.5, s0, s1))
-        bug = B0[:, i, j] if f < 0.5 else stunde_c(ks + 1)[1][:, i, j]
-        kurs = K0[:, i, j] if f < 0.5 else stunde_c(ks + 1)[2][:, i, j]
-        # Wind zum tatsaechlichen Zeitpunkt gegen den ORC-Wendewinkel pruefen (20.11.2026: bei schnell drehendem Wind
-        # galt ein Kurs der vollen Stunde bis zu 30 min weiter – Boot fuhr 16° am Wind). Bug neu aus dem echten TWA.
-        wu, wv, cu, cv, _hs, _wd = umwelt(i, j, t)
-        we, wn = wu - cu, wv - cv
-        tws = math.hypot(we, wn)
-        woher = math.degrees(math.atan2(-we, -wn)) % 360
-        twa = ((woher - kurs + 180) % 360) - 180
-        if tidal is not None and tidal[:, i, j].any():
-            ht = HT[ks, i, j] * (1 - f) + HT[ks + 1, i, j] * f
-            zu = tidal[:, i, j] & (kante_grund[:, i, j] > ht - brauch)
-            sog = np.where(zu, -1.0, sog)
-            # Warten auf Wasser (21.11.2026): naechster Zeitpunkt (10-min-Schritte), zu dem eine gesperrte Kante frei wird
-            if zu.any() and z not in gewartet:
-                gewartet.add(z)
-                tt = t + 600.0 * np.arange(1, int((t_ende - t) / 600))
-                if len(tt):
-                    xx = (tt - T0) / 3600.0
-                    kk = np.minimum(xx.astype(int), len(zeiten) - 2)
-                    hh = HT[kk, i, j] * (1 - (xx - kk)) + HT[kk + 1, i, j] * (xx - kk)
-                    frei = hh[None, :] - brauch >= kante_grund[zu, i, j][:, None]
-                    if frei.any():
-                        tw = float(tt[int(np.argmax(frei.any(0)))])
-                        # „Nachtfahrt vermeiden“: ausserhalb eines Liegeplatzes nicht ueber Nacht auf Wasser warten
-                        if not (nm and k not in liege and any(sonnenhoehe(float(LAT[i]), float(LON[j]), x_) < DAEMMERUNG
-                                                              for x_ in np.arange(t, tw + 1, 1800.0))):
+            erledigt[z] = True
+            pops += 1
+            k, b = divmod(z, 2)
+            tg, k = divmod(k, N)
+            if ziel_menge_flach[k]:
+                # Bewertung = Ankunft + Rest bei 0,5 kn (teurer als fast jeder echte Weg, auch die Kreuz): ein naeherer Punkt gewinnt, wenn der Weg dorthin weniger kostet
+                # als die gesparte Reststrecke; weitersuchen, bis keine Ankunft die beste Bewertung noch schlagen kann
+                if t + rest_s[k] < beste[0]:
+                    beste = (t + rest_s[k], z)
+                # weiter ausbauen: naehere Zielpunkte liegen oft nur hinter diesem (Ring um das Ziel)
+            if t >= t_ende:
+                continue
+            i, j = divmod(k, nx)
+            if nm:
+                # Liegeplatz: Uebernachten anbieten (naechster Morgen, neuer Tag); im Dunkeln nirgends weiterfahren
+                if k in liege and z not in nacht_gew:
+                    nacht_gew.add(z)
+                    tm = morgen(float(LAT[i]), float(LON[j]), t)
+                    if tm is not None:
+                        tm += STRAFE_ART.get(liege[k]["art"], 0.0) + 0.1 * float(ab_ziel.ravel()[k])
+                    if tm is not None and tm < t_ende:
+                        zm = (tagnr(tm) * N + k) * 2 + b
+                        if zm == z:                                       # Start vor der Daemmerung: gleicher Tag
+                            heapq.heappush(heap, (tm, -z - 1))
+                        elif tm < ankunft[zm]:
+                            ankunft[zm] = tm
+                            vor[zm] = z
+                            vor_d[zm] = -2
+                            heapq.heappush(heap, (tm, int(zm)))
+                sh0 = sonnenhoehe(float(LAT[i]), float(LON[j]), t)
+                if sh0 < DAEMMERUNG or t >= tag_ende[tg]:
+                    continue
+                sh1 = sonnenhoehe(float(LAT[i]), float(LON[j]), t + 3600.0)
+            x = (t - T0) / 3600.0
+            ks = min(int(x), len(zeiten) - 2)
+            f = x - ks
+            S0, B0, K0 = stunde_c(ks)
+            S1 = stunde_c(ks + 1)[0]
+            s0, s1 = S0[:, i, j], S1[:, i, j]
+            sog = np.where((s0 > 0.05) & (s1 > 0.05), s0 * (1 - f) + s1 * f, np.where(f < 0.5, s0, s1))
+            bug = B0[:, i, j] if f < 0.5 else stunde_c(ks + 1)[1][:, i, j]
+            kurs = K0[:, i, j] if f < 0.5 else stunde_c(ks + 1)[2][:, i, j]
+            # Wind zum tatsaechlichen Zeitpunkt gegen den ORC-Wendewinkel pruefen (20.11.2026: bei schnell drehendem Wind
+            # galt ein Kurs der vollen Stunde bis zu 30 min weiter – Boot fuhr 16° am Wind). Bug neu aus dem echten TWA.
+            wu, wv, cu, cv, _hs, _wd = umwelt(i, j, t)
+            we, wn = wu - cu, wv - cv
+            tws = math.hypot(we, wn)
+            woher = math.degrees(math.atan2(-we, -wn)) % 360
+            twa = ((woher - kurs + 180) % 360) - 180
+            if tidal is not None and tidal[:, i, j].any():
+                ht = HT[ks, i, j] * (1 - f) + HT[ks + 1, i, j] * f
+                zu = tidal[:, i, j] & (kante_grund[:, i, j] > ht - brauch)
+                sog = np.where(zu, -1.0, sog)
+                # Warten auf Wasser (21.11.2026): naechster Zeitpunkt (10-min-Schritte), zu dem eine gesperrte Kante frei wird
+                if zu.any() and z not in gewartet:
+                    gewartet.add(z)
+                    tt = t + 600.0 * np.arange(1, int((t_ende - t) / 600))
+                    if len(tt):
+                        xx = (tt - T0) / 3600.0
+                        kk = np.minimum(xx.astype(int), len(zeiten) - 2)
+                        hh = HT[kk, i, j] * (1 - (xx - kk)) + HT[kk + 1, i, j] * (xx - kk)
+                        frei = hh[None, :] - brauch >= kante_grund[zu, i, j][:, None]
+                        if frei.any():
+                            tw = float(tt[int(np.argmax(frei.any(0)))])
+                            # „Nachtfahrt vermeiden“: ausserhalb eines Liegeplatzes nicht ueber Nacht auf Wasser warten
+                            if not (nm and k not in liege and any(sonnenhoehe(float(LAT[i]), float(LON[j]), x_) < DAEMMERUNG
+                                                                  for x_ in np.arange(t, tw + 1, 1800.0))):
+                                heapq.heappush(heap, (tw, -z - 1))
+            # Warten auf Wetter (23.11.2026, Roscoff -> Lorient: 2,8-3,1 m Welle bis 25.11. mittags, danach < 2,5 m -> vorher
+            # "No route found"): Wind/Welle hier ueber der Grenze -> erste volle Stunde, ab der es zwei Stunden lang passt
+            if (see_warten or k == ia * nx + ja or k in liege) and z not in gewartet_w and (
+                    wetter_zu(ks, i, j) or wetter_zu(ks + 1, i, j)):
+                gewartet_w.add(z)
+                for kk in range(ks + 1, len(zeiten) - 2):
+                    if not (wetter_zu(kk, i, j) or wetter_zu(kk + 1, i, j)):
+                        tw = float(zeiten[kk])
+                        if tw < t_ende and not (nm and k not in liege and any(
+                                sonnenhoehe(float(LAT[i]), float(LON[j]), x_) < DAEMMERUNG for x_ in np.arange(t, tw + 1, 1800.0))):
                             heapq.heappush(heap, (tw, -z - 1))
-        segel = bug != -1
-        if tws > max_wind:
-            sog = np.where(segel, -1.0, sog)
-        sog = np.where(segel & (np.abs(twa) < P.wendewinkel(tws)), -1.0, sog)
-        bug = np.where(segel, np.where(twa > 0, 0, 1), -1)
-        mog = sog > 0.05
-        if not mog.any():
-            continue
-        dauer = np.where(mog, dauer0 / np.maximum(sog, 0.05), np.inf)
-        nb2 = np.where(bug == -1, b, bug)
-        dauer = dauer + np.where((bug != -1) & (bug != b), wende_s, 0.0)
-        if nm:                                                        # Ankunft noch vor Ende der Daemmerung
-            mog &= sh0 + (sh1 - sh0) * np.where(mog, dauer, 0.0) / 3600.0 >= DAEMMERUNG
-            mog &= t + np.where(mog, dauer, 0.0) <= tag_ende[tg]
+                        break
+            segel = bug != -1
+            if tws > max_wind:
+                sog = np.where(segel, -1.0, sog)
+            sog = np.where(segel & (np.abs(twa) < P.wendewinkel(tws)), -1.0, sog)
+            bug = np.where(segel, np.where(twa > 0, 0, 1), -1)
+            mog = sog > 0.05
             if not mog.any():
                 continue
-        z2 = (tagnr(t) * N + k + versatz) * 2 + nb2
-        t2 = t + dauer
-        besser = mog & (t2 < ankunft[np.where(mog, z2, 0)])
-        for d in np.nonzero(besser)[0]:
-            zz = z2[d]
-            if t2[d] < ankunft[zz]:
-                ankunft[zz] = t2[d]
-                vor[zz] = z
-                vor_d[zz] = d
-                vor_bug[zz] = bug[d]
-                vor_kurs[zz] = kurs[d]
-                vor_sog[zz] = sog[d]
-                heapq.heappush(heap, (float(t2[d]), int(zz)))
-    t_dij = time.time() - t_dij
+            dauer = np.where(mog, dauer0 / np.maximum(sog, 0.05), np.inf)
+            nb2 = np.where(bug == -1, b, bug)
+            dauer = dauer + np.where((bug != -1) & (bug != b), wende_s, 0.0)
+            if nm:                                                        # Ankunft noch vor Ende der Daemmerung
+                mog &= sh0 + (sh1 - sh0) * np.where(mog, dauer, 0.0) / 3600.0 >= DAEMMERUNG
+                mog &= t + np.where(mog, dauer, 0.0) <= tag_ende[tg]
+                if not mog.any():
+                    continue
+            z2 = (tagnr(t) * N + k + versatz) * 2 + nb2
+            t2 = t + dauer
+            besser = mog & (t2 < ankunft[np.where(mog, z2, 0)])
+            for d in np.nonzero(besser)[0]:
+                zz = z2[d]
+                if t2[d] < ankunft[zz]:
+                    ankunft[zz] = t2[d]
+                    vor[zz] = z
+                    vor_d[zz] = d
+                    vor_bug[zz] = bug[d]
+                    vor_kurs[zz] = kurs[d]
+                    vor_sog[zz] = sog[d]
+                    heapq.heappush(heap, (float(t2[d]), int(zz)))
+        t_dij = time.time() - t_dij
+        return ankunft, vor, vor_d, vor_bug, vor_kurs, vor_sog, beste, pops, t_dij
+
+    # Warten auf Wetter (23.11.2026): erst ohne Warten auf See; findet sich nichts, mit Warten auf See suchen, die dort
+    # gewartete Zeit als spaetere Abfahrt nehmen und erneut ohne Warten auf See suchen (Wartezeit gehoert in den Hafen).
+    # Bleibt Warten auf See noetig, wird diese Route genommen und im Hinweis genannt.
+    def see_wartezeit(erg):
+        ank, vr, vd, vs = erg[0], erg[1], erg[2], erg[5]
+        z, summe = erg[6][1], 0.0
+        while z is not None and z != -1 and vr[z] != -1:
+            zv = int(vr[z])
+            kv = (zv // 2) % N
+            if vd[z] >= 0 and not (kv == ia * nx + ja or kv in liege):
+                fahrt = laenge[int(vd[z])] / KN / max(float(vs[z]), 0.05) * 3600.0
+                summe += max(0.0, (ank[z] - ank[zv]) - fahrt)
+            z = zv
+        return summe
+
+    t_ab = float(t0)
+    erg = suche(t_ab, False)
+    see_gewartet_h = 0.0
+    if erg[6][1] is None:
+        for _ in range(4):
+            mit = suche(t_ab, True)
+            if mit[6][1] is None:
+                break
+            w_s = see_wartezeit(mit)
+            if w_s < 600:
+                erg = mit
+                break
+            t_ab += w_s
+            if t_ab >= t_ende:
+                erg = mit
+                see_gewartet_h = w_s / 3600.0
+                break
+            neu = suche(t_ab, False)
+            if neu[6][1] is not None:
+                erg = neu
+                break
+            erg = mit
+            see_gewartet_h = w_s / 3600.0
+    ankunft, vor, vor_d, vor_bug, vor_kurs, vor_sog, beste, pops, t_dij = erg
     gefunden = beste[1]
     if gefunden is None and nm:
         raise Fehler("No route found within %d h (%d days): with 'avoid sailing at night'%s each leg must end in a harbour "
@@ -901,6 +964,10 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                     + ([("Rivers behind the coastline: depth from SHOM survey models where available, elsewhere "
                          "unknown; keep to the buoyed fairway.") if "SHOM" in fluss_info else
                         "Rivers behind the coastline: depth unknown; keep to the buoyed fairway."] if fluss_info != "off" else [])
+                    + (["Departure delayed by %.1f h to wait for wind/waves below your limits (%.0f kn / %.1f m)."
+                        % ((t_ab - t0) / 3600.0, max_wind, max_welle)] if t_ab > t0 else [])
+                    + (["The route still waits %.1f h at sea for the weather - better choose another day or harbour."
+                        % see_gewartet_h] if see_gewartet_h > 0 else [])
                     + (["Traffic separation schemes (OpenSeaMap): lanes only with the traffic or crossing at right angles, "
                         "separation zones only crossed."] if vtg_info.startswith("OpenSeaMap") else [])
                     + (["No-entry areas (OpenSeaMap) are avoided; check notices to mariners for temporary closures."]
