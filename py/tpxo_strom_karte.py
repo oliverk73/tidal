@@ -127,6 +127,7 @@ def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False, kueste=F
         S = FF._laden()
     except Exception:                                              # noqa: BLE001 - Ebene soll ohne Feinfeld weiterlaufen
         S = None
+    fein_wasser = None
     if S:
         im_box = ((S['lat'] >= la_s) & (S['lat'] <= la_n) & (((S['lon'] - lo_w) % 360) <= breite))
         if im_box.any():
@@ -142,7 +143,7 @@ def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False, kueste=F
                 la2 = la1 - dx * (ny - 1)
             lat = la1 - dx * np.arange(len(ii))
             lon = lo1 + dx * np.arange(nj)
-            u, v, _n = FF.einsetzen(lat, lon, u, v, th, kopf, jahr)
+            u, v, _n, fein_wasser = FF.einsetzen(lat, lon, u, v, th, kopf, jahr, maske=True)
     if ozean:
         import ozeanstrom
         la_g = la1 - dx * np.arange(u.shape[0])
@@ -153,7 +154,7 @@ def feld(la_s, la_n, lo_w, lo_e, t, max_zellen=MAX_ZELLEN, ozean=False, kueste=F
             u, v = u + r[0], v + r[1]
     gefuellt = None
     if kueste:
-        r_ = _kueste(u, v, la1, lo1, dx, max((la_n - la_s) / max_zellen, breite / max_zellen))
+        r_ = _kueste(u, v, la1, lo1, dx, max((la_n - la_s) / max_zellen, breite / max_zellen), fein_wasser)
         if r_ is not None:
             u, v, gefuellt, dx = r_
             nj, la2 = u.shape[1], la1 - dx * (u.shape[0] - 1)
@@ -175,7 +176,7 @@ FUELL_KM = 15.0          # Kuestenstreifen, der aus dem naechsten gueltigen Wert
 KUESTE_MAX_GRAD = 6.0    # nur bis zu diesem Ausschnitt (Landmaske je Anfrage)
 
 
-def _kueste(u, v, la1, lo1, dx, wunsch):
+def _kueste(u, v, la1, lo1, dx, wunsch, fein_wasser=None):
     """Fransen an der Kueste (Oliver 21.11.2026): Die Karte interpolierte bilinear und zeichnete, solange die
     gueltigen Ecken >= 30 % Gewicht hatten -> Boegen im TPXO-Zellabstand. Jetzt: Feld NaN-bewusst bilinear auf
     Bildschirmaufloesung, OSM-Landmaske (py/segel_land.py) dieser Aufloesung, Wasser ohne Modellwert aus dem
@@ -200,6 +201,8 @@ def _kueste(u, v, la1, lo1, dx, wunsch):
             sw = sw + np.where(ok, w, 0.0)
         with np.errstate(divide='ignore', invalid='ignore'):
             u, v = np.where(sw > 1e-6, su / sw, np.nan), np.where(sw > 1e-6, sv / sw, np.nan)
+        if fein_wasser is not None:
+            fein_wasser = fein_wasser[np.ix_(np.rint(yi).astype(int), np.rint(xi).astype(int))]
         dx = dx / f
         ny, nx = u.shape
     try:
@@ -207,6 +210,10 @@ def _kueste(u, v, la1, lo1, dx, wunsch):
         land = segel_land.raster(la1 - dx * (ny - 0.5), la1 + dx / 2, lo1 - dx / 2, lo1 + dx * (nx - 0.5), ny, nx)
     except Exception:                                              # noqa: BLE001 - ohne Landmaske wie bisher
         return None
+    # Feinfeld-Wasser bleibt Wasser (23.11.2026): die OSM-Kuestenlinie schliesst Muendungen ab (Loire an der Bruecke
+    # Saint-Nazaire, Saint-Laurent ab Ile d'Orleans ...), dahinter waere alles "Land" -> Loire-3D-Feld bei Paimboeuf weg
+    if fein_wasser is not None and fein_wasser.shape == land.shape:
+        land = land & ~fein_wasser
     gueltig = np.isfinite(u)
     if not gueltig.any():
         return None

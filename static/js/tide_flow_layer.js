@@ -99,9 +99,13 @@
       this._bg = L.DomUtil.create('canvas', 'tideflow-bg leaflet-zoom-hide');
       this._fg = L.DomUtil.create('canvas', 'tideflow-fg leaflet-zoom-hide');
       this._ar = L.DomUtil.create('canvas', 'tideflow-ar leaflet-zoom-hide');
+      // Satzpfeile in eigenem Pane ÜBER der Landmaske (ocLandMask, z 401, Natural Earth 10 m): die deckt Mündungen
+      // und Flüsse zu (Loire bei Paimboeuf), Pfeile dort waren nur sichtbar, wenn sie ins offene Wasser zeigten (23.11.2026)
+      var arPane = map.getPane('tideArrows') || map.createPane('tideArrows');
+      arPane.style.zIndex = '450'; arPane.style.pointerEvents = 'none';     // unter den Markern (600)
       [this._bg, this._fg, this._ar].forEach(function (c) {
         c.style.position = 'absolute'; c.style.pointerEvents = 'none';
-        this.getPane().appendChild(c);
+        (c === this._ar ? arPane : this.getPane()).appendChild(c);
       }, this);
       map.on('movestart', this._onMoveStart, this);
       map.on('moveend', this._onMoveEnd, this);

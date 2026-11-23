@@ -229,22 +229,23 @@ def _laden():
     return _S
 
 
-def einsetzen(lat, lon, u, v, t_rel_h, kopf, jahr):
+def einsetzen(lat, lon, u, v, t_rel_h, kopf, jahr, maske=False):
     """lat (ny), lon (nx) der Ausgabezellen, u/v (ny, nx) m/s aus TPXO -> u/v mit feinem Feld, wo es deckt.
-    t_rel_h: Stunden seit Jahresbeginn (UTC)."""
+    t_rel_h: Stunden seit Jahresbeginn (UTC). maske=True: viertes Ergebnis = (ny, nx) bool, Zelle vom feinen Feld als
+    Wasser entschieden (die OSM-Landmaske der Karte darf sie nicht leeren: Muendungen hinter der Kuestenlinie)."""
     S = _laden()
     if not S:
-        return u, v, 0
+        return (u, v, 0, np.zeros(u.shape, bool)) if maske else (u, v, 0)
     LA, LO = np.meshgrid(lat, lon, indexing='ij')
     d, i = S['baum'].query(_xy(LA.ravel(), LO.ravel()), k=3, distance_upper_bound=0.02)   # ~127 km
     d = d * 6371
     gut = np.isfinite(d[:, 0])
     if not gut.any():
-        return u, v, 0
+        return (u, v, 0, np.zeros(u.shape, bool)) if maske else (u, v, 0)
     i0 = np.where(gut, i[:, 0], 0)
     deckt = gut & (d[:, 0] < DECKT * np.maximum(S['abstand_km'][i0], 0.3))
     if not deckt.any():
-        return u, v, 0
+        return (u, v, 0, np.zeros(u.shape, bool)) if maske else (u, v, 0)
     # Zellweite der Ausgabe: Wasser, wenn ein Punkt naeher als halbe Zelldiagonale oder 1,5 x Punktabstand liegt
     zelle = abs(lat[1] - lat[0]) * 111 if len(lat) > 1 else 1.0
     # Abstand des groebsten der 3 Nachbarn: an der Naht zweier Gitter (Iroise 250 m / Finistere 500 m) bleibt sonst eine
@@ -282,6 +283,10 @@ def einsetzen(lat, lon, u, v, t_rel_h, kopf, jahr):
         vv[ok] = g[ok] * vv[ok] + (1 - g[ok]) * vt[ok]
     uf[deckt], vf[deckt] = np.nan, np.nan
     uf[idx], vf[idx] = uu, vv
+    if maske:
+        fw = np.zeros(uf.shape, bool)
+        fw[idx] = True
+        return uf.reshape(u.shape), vf.reshape(v.shape), int(deckt.sum()), fw.reshape(u.shape)
     return uf.reshape(u.shape), vf.reshape(v.shape), int(deckt.sum())
 
 

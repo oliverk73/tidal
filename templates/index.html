@@ -57,7 +57,7 @@
 <script src="/static/js/tide_layer.js" defer></script>
 <script src="/static/js/windstau_layer.js?v=20261109" defer></script>
 <script src="/static/js/nowcast_layer.js" defer></script>
-<script src="/static/js/tide_flow_layer.js?v=20261119b" defer></script>
+<script src="/static/js/tide_flow_layer.js?v=20261123a" defer></script>
 <script src="/static/js/route_planner.js?v=20261120d" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
@@ -1171,7 +1171,7 @@
     async function tcFetchAt(t) {
       var b = tcBounds();
       var c = Math.round(Math.max(map.getSize().x, map.getSize().y) / 4);   // Rasterzellen je Achse ~ 4 px
-      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t + '&c=' + c + (tcOzean ? '&g=1' : '');
+      var url = '/api/tidal_current?s=' + b.s + '&n=' + b.n + '&w=' + b.w + '&e=' + b.e + '&t=' + t + '&c=' + c + (tcOzean ? '&g=1' : '') + '&v={{ feinfeld_version }}';
       return (await fetch(url)).json();
     }
     // Pfeile an den Harmonics-Strömungssätzen (py/strom_pfeile.py), 48 h ab tcStart in 30-min-Schritten
@@ -1192,7 +1192,8 @@
       tcLabel();
       if (!tcActive) return;
       if (!tcLayer) {
-        ocLoadLandMask().then(function (lm) { if (tcLayer) lm.addTo(map); });
+        tcMaskeAnpassen();
+        map.on('moveend', tcMaskeAnpassen);
         // Strömungssatz-Symbole ausblenden, solange die Pfeile da sind (Oliver 18.11.2026)
         if (window.grp_all_current && map.hasLayer(window.grp_all_current)) { map.removeLayer(window.grp_all_current); tcHidCurrent = true; }
         tcLayer = new TideFlowLayer({ fetchFrame: tcFetchAt, fetchArrows: tcFetchArrows, stepSeconds: 1800, time: tcTime(tcStep) });
@@ -1201,6 +1202,19 @@
         tcLayer.setTime(tcTime(tcStep));
         tcLayer.ready(tcTime(tcStep));
       }
+    }
+    // Natural-Earth-Landmaske nur bei grossen Ausschnitten (> 6 Grad): darunter schneidet der Server das Feld selbst an
+    // OSM-Kueste + Feinfeld zu (tpxo_strom_karte._kueste). NE 10 m deckt sonst Muendungen zu (Loire bei Paimboeuf,
+    // Oliver 23.11.2026). Laeuft der HYCOM-Ozeanstrom mit, bleibt die Maske (seine Ebene braucht sie).
+    function tcMaskeAnpassen() {
+      if (!tcLayer) return;
+      var b = map.getBounds();
+      var gross = (b.getNorth() - b.getSouth() > 6) || (b.getEast() - b.getWest() > 6);
+      ocLoadLandMask().then(function (lm) {
+        if (!tcLayer) return;
+        if (gross || ocVelocityLayer) { if (!map.hasLayer(lm)) lm.addTo(map); }
+        else if (map.hasLayer(lm)) { map.removeLayer(lm); }
+      });
     }
     function tcNow() {
       var now = Math.floor(Date.now() / 1000);
@@ -1227,6 +1241,7 @@
     function tcDeactivate() {
       tcStop(); tcActive = false;
       if (tcLayer) { map.removeLayer(tcLayer); tcLayer = null; }
+      map.off('moveend', tcMaskeAnpassen);
       if (tcHidCurrent && window.grp_all_current) { map.addLayer(window.grp_all_current); tcHidCurrent = false; }
       if (ocLandMask && map.hasLayer(ocLandMask) && !ocVelocityLayer) { map.removeLayer(ocLandMask); }
     }

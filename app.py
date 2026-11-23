@@ -515,7 +515,20 @@ def _markers_version():
 @app.route("/")
 def index():
     return render_template("index.html", station_names=_station_names,
-                           markers_version=_markers_version())
+                           markers_version=_markers_version(), feinfeld_version=_feinfeld_version())
+
+
+def _feinfeld_version():
+    """Stand des Gezeitenstrom-Feinfelds (Datei-Zeit) fuer /api/tidal_current: der Browser haelt die Antworten 1 h,
+    nach einem Neubau zeigte er sonst die alten Felder (Loire-3D 23.11.2026)."""
+    b = os.path.dirname(os.path.abspath(__file__))
+    t = 0
+    for f in ('quellen/tidal_streams/feinfeld.npz', 'py/strom_feinfeld.py', 'py/tpxo_strom_karte.py'):   # Daten + Rechnung
+        try:
+            t = max(t, int(os.path.getmtime(os.path.join(b, f))))
+        except OSError:
+            pass
+    return str(t)
 
 
 @app.route("/att_review")
