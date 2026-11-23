@@ -148,8 +148,10 @@ def _kachel(i, j):
     return _K[(i, j)]
 
 
-def raster(sued, nord, west, ost, ny, nx):
-    """True = Flusswasser laut OSM (nur gespeicherte Kacheln). Pixelmitte wie segel_land.raster."""
+def raster(sued, nord, west, ost, ny, nx, min_px=0):
+    """True = Flusswasser laut OSM (nur gespeicherte Kacheln). Pixelmitte wie segel_land.raster.
+    min_px > 0 (23.11.2026, Nord-Ostsee-Kanal ~100 m breit, Routerknoten ~1 km): schmale Stellen (schmaler als min_px
+    Pixel) auf etwa min_px + 2 Pixel verbreitern, damit der Router dort durchgehend Knoten und Kanten hat."""
     img = Image.new('1', (nx, ny), 0)
     dr = ImageDraw.Draw(img)
     sx, sy = nx / (ost - west), ny / (nord - sued)
@@ -165,8 +167,18 @@ def raster(sued, nord, west, ost, ny, nx):
                     if a != aussen:
                         continue
                     px = list(zip(((g[:, 0] - west) * sx).tolist(), ((nord - g[:, 1]) * sy).tolist()))
-                    dr.polygon(px, fill=1 if a else 0)
-    return np.array(img, dtype=bool) if gefunden else np.zeros((ny, nx), bool)
+                    dr.polygon(px, fill=1 if a else 0, outline=1 if a else None)
+    if not gefunden:
+        return np.zeros((ny, nx), bool)
+    m = np.array(img, dtype=bool)
+    if min_px > 0 and m.any():
+        from scipy import ndimage
+        st = np.ones((min_px, min_px), bool)
+        schmal = m & ~ndimage.binary_opening(m, structure=st)
+        if schmal.any():
+            r = min_px // 2 + 1
+            m |= ndimage.binary_dilation(schmal, structure=np.ones((2 * r + 1, 2 * r + 1), bool))
+    return m
 
 
 if __name__ == '__main__':

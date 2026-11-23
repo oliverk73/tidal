@@ -267,7 +267,7 @@ def _rand_finden(la_a, lo_a, la_b, lo_b, dist, max_knoten):
         ny, nx = int(math.ceil((n - s) * 111.2 / h)), int(math.ceil((e - w) * kx / h))
         n, e = s + ny * h / 111.2, w + nx * h / kx
         land = segel_land.raster(s, n, w, e, ny * FEIN, nx * FEIN)
-        land &= ~segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN)
+        land &= ~segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN, min_px=FEIN)
         wasser = ~land[FEIN // 2::FEIN, FEIN // 2::FEIN][:ny, :nx]
         teile, anzahl = ndimage.label(wasser, structure=np.ones((3, 3)))
         if anzahl == 0:
@@ -356,7 +356,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     land_f = segel_land.raster(s, n, w, e, ny * FEIN, nx * FEIN)
     # Tidefluesse hinter der OSM-Kuestenlinie (23.11.2026: Loire ab Saint-Nazaire, Themse ab Gravesend, Elbe vor
     # Hamburg ... waren "Land"): OSM-Flussflaechen (py/segel_fluesse.py, gespeicherte Kacheln) sind Wasser
-    fluss_f = segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN) & land_f
+    fluss_f = segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN, min_px=FEIN) & land_f
     land_f = land_f & ~fluss_f
     fluss_info = ("OSM river areas: %.1f %% of the area (depth unknown there, keep to the fairway)" % (100 * fluss_f.mean())
                   if fluss_f.any() else "off")
