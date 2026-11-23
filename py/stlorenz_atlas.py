@@ -285,6 +285,8 @@ def rohreihe(text, name, la, lo):
     if not m:
         return None
     nm = re.sub(r', Qu.bec, Canada Current$', '', name)
+    if nm not in TABELLE:                                   # Olivers Kartennamen mit Klammerzusatz (Traverse du Nord (Cap Tourmente))
+        nm = re.sub(r' \(.*\)$', '', nm)
     k = TABELLE[nm][0] if m.group(1) == 'TABLE' else int(m.group(2))
     if k not in _FELD:
         _FELD[k] = Feld(abschnitt(k)[0])
@@ -335,6 +337,7 @@ RICHTUNG = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 
 def main(argv):
     import netCDF4
     import health_check as H
+    import stlorenz_ufer as SU
     nc = netCDF4.Dataset(MASKE)
     LAT, LON = nc['latitude'][:].data, nc['longitude'][:].data
     WAS = np.isfinite(np.ma.filled(nc['u'][0], np.nan))
@@ -367,7 +370,9 @@ def main(argv):
         feiner = [k2 for k2 in GEO if massstab[k2] < massstab[k]]
         for x, y in orte:
             la, lo = x / 111.2, y / (111.2 * math.cos(math.radians(47)))
-            if not wasser(la, lo) or any(F[k2].naechster(la, lo) < 0.7 for k2 in feiner):
+            # 23.11.2026: mindestens 0,4 km vom Modellufer (vorher letzte Wasserzelle vor Landspitzen, Werte aber aus
+            # Pfeilen 0,4-0,5 km draussen; py/stlorenz_ufer.py hat 11 Saetze nachtraeglich verschoben)
+            if not wasser(la, lo) or SU.ufer(la, lo) < SU.UFER_MIN or any(F[k2].naechster(la, lo) < 0.7 for k2 in feiner):
                 continue
             V = F[k].lesen(la, lo)
             if np.isnan(V[:, 0]).sum() > 1:
