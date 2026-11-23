@@ -37,6 +37,7 @@ from scipy import ndimage
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import segel_land  # noqa: E402
 import segel_fluesse  # noqa: E402
+import segel_kanaele  # noqa: E402
 import segel_tiefe  # noqa: E402
 import segel_tide  # noqa: E402
 import segel_tss  # noqa: E402
@@ -247,6 +248,16 @@ def _strom(s, n, w, e, zeiten, LAT, LON, ozean):
 
 
 # ---------------------------------------------------------------- Route
+def _fluss_naht(fluss, land):
+    """Naht zwischen Flussflaeche und OSM-See schliessen (23.11.2026 IJmuiden: Hafenpolygon und Kuestenlinie beruehren
+    sich nur diagonal): Landpixel, die hoechstens 2 Pixel von beiden entfernt sind, werden Fluss. Nicht pauschal
+    verbreitern (mehr Wasser = laengerer Fetch = hoehere Wellen; Kiel -> Kopenhagen wurde 5 h langsamer)."""
+    if not fluss.any():
+        return fluss
+    st = np.ones((5, 5), bool)
+    return fluss | (land & ndimage.binary_dilation(fluss, structure=st) & ndimage.binary_dilation(~land, structure=st))
+
+
 def _gebiet(la_a, lo_a, la_b, lo_b, rand, max_knoten):
     la0 = (la_a + la_b) / 2
     kx = 111.2 * math.cos(math.radians(la0))
@@ -267,7 +278,8 @@ def _rand_finden(la_a, lo_a, la_b, lo_b, dist, max_knoten):
         ny, nx = int(math.ceil((n - s) * 111.2 / h)), int(math.ceil((e - w) * kx / h))
         n, e = s + ny * h / 111.2, w + nx * h / kx
         land = segel_land.raster(s, n, w, e, ny * FEIN, nx * FEIN)
-        land &= ~segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN, min_px=FEIN)
+        land &= ~_fluss_naht(segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN, min_px=FEIN), land)
+        land &= ~segel_kanaele.raster(s, n, w, e, ny * FEIN, nx * FEIN, breite_px=2 * FEIN + 2)[0]
         wasser = ~land[FEIN // 2::FEIN, FEIN // 2::FEIN][:ny, :nx]
         teile, anzahl = ndimage.label(wasser, structure=np.ones((3, 3)))
         if anzahl == 0:
@@ -281,10 +293,12 @@ def _rand_finden(la_a, lo_a, la_b, lo_b, dist, max_knoten):
             i = min(max(int(round((n - la) * 111.2 / h - 0.5)), 0), ny - 1)
             j = min(max(int(round((lo - w) * kx / h - 0.5)), 0), nx - 1)
             pkt.append(int(idx[0][i, j]) * nx + int(idx[1][i, j]))
-            if d[i, j] * h > 3.0 or teile[idx[0][i, j], idx[1][i, j]] != gross:
+            if d[i, j] * h > 3.0:
                 ok = False
                 break
-        if ok:
+        komp = {int(teile[q // nx, q % nx]) for q in pkt} if ok else set()
+        if ok and len(komp) == 1:                                     # gleiche Wasserflaeche (nicht noetig die groesste)
+            gross = komp.pop()
             return rand, _wasserweg_km(teile == gross, pkt[0], pkt[1], h)
     return versuche[0], dist
 
@@ -339,6 +353,11 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     # Zeitfenster: geschaetzte Dauer bei 3 kn ueber Grund x 1,5 (Kreuz gegen Strom braucht Reserve), mind. 12 h;
     # mit „Nachtfahrt vermeiden“ ganze Tage nach Tageslichtdauer + Wartezeit bis zum ersten Morgen
     fahr_h = max(dist, weg_km) / KN / 3.0 * 1.5 + 2       # Wasserweg (23.11.2026: Roscoff -> Brest 50 km Luftlinie, ~130 km See)
+    # Kanaele im Gebiet (23.11.2026): Schleusen-/Konvoizeit und Kanalfahrt (nur bei Tag: x3) zusaetzlich einplanen
+    for _k, _nm, (_ks, _kw, _kn, _ke), _m, _rg in segel_kanaele.KANAELE:
+        if _ks <= n and _kn >= s and _kw <= e and _ke >= w:
+            fahr_h += _rg.get("warte_h", 0.0) + (_rg.get("laenge_km") or 0.0) / KN / min(_rg.get("max_kn") or 5.0, 5.0) * (
+                3.0 if _rg.get("nur_tag") else 1.0)
     if nm:
         lo0 = (lo_a + lo_b) / 2
         hell = [sonnenhoehe(la0, lo0, t0 + 600.0 * q) >= DAEMMERUNG for q in range(144)]
@@ -356,8 +375,20 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     land_f = segel_land.raster(s, n, w, e, ny * FEIN, nx * FEIN)
     # Tidefluesse hinter der OSM-Kuestenlinie (23.11.2026: Loire ab Saint-Nazaire, Themse ab Gravesend, Elbe vor
     # Hamburg ... waren "Land"): OSM-Flussflaechen (py/segel_fluesse.py, gespeicherte Kacheln) sind Wasser
-    fluss_f = segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN, min_px=FEIN) & land_f
+    fluss_f = _fluss_naht(segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN, min_px=FEIN), land_f) & land_f
     land_f = land_f & ~fluss_f
+    # Schifffahrtskanaele (23.11.2026, py/segel_kanaele.py): Mittellinie als Wasser, Regeln (nur Motor, Hoechstfahrt,
+    # Schleusen-/Konvoizeit) in der Zone um die Linie
+    kanal_w, kanal_z = segel_kanaele.raster(s, n, w, e, ny * FEIN, nx * FEIN, breite_px=2 * FEIN + 2)
+    kanal_f = kanal_w & land_f
+    land_f = land_f & ~kanal_w
+    if kanal_z.any() and fluss_f.any():
+        # Seen/Flussflaechen am Kanal (NOK: Audorfer/Borgstedter See bei Rendsburg) gehoeren zur Zone, sonst faehrt die
+        # Route kurz hinaus und zahlt die Schleusenzeit bei der Wiedereinfahrt doppelt
+        weit = segel_kanaele.raster(s, n, w, e, ny * FEIN, nx * FEIN, breite_px=FEIN + 2, zone_km=4.0)[1]
+        dazu = fluss_f & (weit > 0) & (kanal_z == 0)
+        kanal_z[dazu] = weit[dazu]
+    kanal_k = kanal_z[FEIN // 2::FEIN, FEIN // 2::FEIN][:ny, :nx].copy()       # Kanal-Nr. je Knoten (0 = keiner)
     fluss_info = ("OSM river areas: %.1f %% of the area (depth unknown there, keep to the fairway)" % (100 * fluss_f.mean())
                   if fluss_f.any() else "off")
     land_rein = land_f[FEIN // 2::FEIN, FEIN // 2::FEIN][:ny, :nx].copy()       # nur Kueste (Fetch)
@@ -365,7 +396,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     sperr_info, auflagen = "off", []
     if o["sperr"]:
         sp_f, auflagen = segel_sperr.raster(s, n, w, e, ny * FEIN, nx * FEIN)
-        land_f = land_f | sp_f
+        land_f = land_f | (sp_f & ~kanal_w)                  # Kanalrinne bleibt frei (Schleusenvorhaefen sind oft no_entry)
         sperr_info = "OpenSeaMap: %.1f %% of the area no entry" % (100 * sp_f.mean())
     # Wassertiefe (EMODnet, Seekartennull): gesperrt, wo der flachste Grund hoeher liegt als -(Tiefgang + Reserve).
     # Vorsichtig = wie bei Niedrigwasser Springzeit; Watt und Barren werden immer umfahren (Tide noch nicht beruecksichtigt).
@@ -384,9 +415,19 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             # EMODnet liefert hinter der Kuestenlinie Fuellwerte/Gelaendehoehen statt Tiefen (Loire 0 m, Nantes 5-13 m)
             # -> dort SHOM-Peilmodelle (23.11.2026: Loire, Seine, Gironde, Schelde ...), sonst keine Tiefe
             grund_f[fluss_f] = -999.0
+            rand_ = np.zeros_like(fluss_f)
+            if fluss_f.any():
+                # Rand der Flussflaechen: EMODnet-Fuellwerte (0 m / Gelaendehoehe, 23.11.2026 Hafenmund IJmuiden) wie im
+                # Fluss als unbekannt; echte Tiefen (< -0,5 m) bleiben
+                rand_ = ndimage.binary_dilation(fluss_f, structure=np.ones((2 * FEIN + 1, 2 * FEIN + 1), bool)) & ~fluss_f
+                rand_ &= grund_f > -0.5
+                grund_f[rand_] = -999.0
+            for nr_ in np.unique(kanal_z[kanal_w]):                  # Kanalrinne: Solltiefe statt EMODnet
+                if nr_:
+                    grund_f[kanal_w & (kanal_z == nr_)] = -float(segel_kanaele.regeln(int(nr_))[1].get("tiefe_m") or 999.0)
             if fluss_f.any():
                 sh, sh_namen = segel_tiefe.shom(s, n, w, e, ny * FEIN, nx * FEIN)
-                mit = fluss_f & np.isfinite(sh)
+                mit = (fluss_f | rand_) & np.isfinite(sh)
                 grund_f[mit] = sh[mit]
                 if mit.any():
                     fluss_info = ("OSM river areas: %.1f %% of the area, depth there from %s for %.0f %% of it "
@@ -418,6 +459,16 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     groesse = np.bincount(teile.ravel())
     groesse[0] = 0
     fahrwasser = teile == int(np.argmax(groesse))
+    # Wasserflaeche, in der Start UND Ziel liegen (naechstes Wasser <= 3 km), auch wenn sie nicht die groesste ist
+    # (23.11.2026 Caledonian Canal: Loch Linnhe + Kanal + Beauly Firth; groesser war der Moray Firth hinter Kessock)
+    _d0, _i0 = ndimage.distance_transform_edt(~wasser, return_indices=True)
+    _komp = []
+    for _la, _lo in ((la_a, lo_a), (la_b, lo_b)):
+        _i = min(max(int(round((n - _la) * 111.2 / h - 0.5)), 0), ny - 1)
+        _j = min(max(int(round((_lo - w) * kx / h - 0.5)), 0), nx - 1)
+        _komp.append(int(teile[_i0[0][_i, _j], _i0[1][_i, _j]]) if _d0[_i, _j] * h <= 3.0 else -1)
+    if _komp[0] == _komp[1] and _komp[0] > 0:
+        fahrwasser = teile == _komp[0]
     _fern = {}
 
     def knoten_naechst(la, lo):
@@ -548,6 +599,26 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     max_wind, max_welle = o["max_wind"], o["max_welle"]
     wende_h = o["wendezeit_s"] / 3600.0
 
+    kanal_vmax = np.full((ny, nx), np.inf, np.float32)
+    kanal_namen = {}
+    for nr_ in np.unique(kanal_k[kanal_k > 0]):
+        name_, rg_ = segel_kanaele.regeln(int(nr_))
+        kanal_namen[int(nr_)] = (name_, rg_)
+        if rg_.get("max_kn"):
+            kanal_vmax[kanal_k == nr_] = rg_["max_kn"]
+    kanal_flach = kanal_k.ravel()
+    kanal_s_km = np.zeros(len(segel_kanaele.KANAELE) + 1)            # Wartezeit s je km Kanal
+    for c_, (_, rg_) in kanal_namen.items():
+        kanal_s_km[c_] = rg_.get("warte_h", 0.0) * 3600.0 / max(1.0, rg_.get("laenge_km") or 1.0)
+    # Kanaele „nur bei Tag“ (NOK fuer Sportboote, Schleusen Caledonian/Crinan): Knoten in diesen Zonen
+    tag_zone = np.isin(kanal_flach, [c for c, v in kanal_namen.items() if v[1].get("nur_tag")])
+    if nm and tag_zone.any():                                       # Uebernachten im Kanal (Liegestellen)
+        for k_ in np.nonzero(tag_zone)[0]:
+            if int(k_) not in liege:
+                i_, j_ = divmod(int(k_), nx)
+                liege[int(k_)] = {"name": kanal_namen[int(kanal_flach[k_])][0] + " (canal berth)", "art": "hafen",
+                                  "km": 0.0, "la": float(LAT[i_]), "lo": float(LON[j_])}
+
     def stunde(k):
         """Fahrt ueber Grund [32, ny, nx] (kn, -1 = unmoeglich), Bug (0 Stb, 1 Bb, -1 Motor), Steuerkurs – fuer alle
         Knoten zur vollen Stunde zeiten[k]. Zwischen zwei Stunden wird linear gemischt."""
@@ -581,6 +652,20 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             sog = np.where(nimm, sog_m, sog)
             bug = np.where(nimm, -1, bug).astype(np.int8)
             kurs = np.where(nimm, np.degrees(hm) % 360, kurs)
+        if kanal_k.any():                                                # Kanaele: nur Motor, Hoechstfahrt
+            Z = kanal_k > 0
+            if not motor:
+                sog = np.where(Z[None], -1.0, sog)
+            else:
+                vk = np.where(Z, np.minimum(motor_kn, kanal_vmax), motor_kn)[None]
+                welle_k = np.clip(1 - hs[None] * (0.02 + 0.06 * (1 + np.cos(wd[None] - H)) / 2), 0.3, 1)
+                Vk = vk * welle_k
+                okk = np.abs(c_quer) < Vk
+                hk = H + np.arcsin(np.clip(-c_quer / Vk, -0.99, 0.99))
+                sog_k = np.where(okk, Vk * np.cos(hk - H) + c_lang, -1.0)
+                sog = np.where(Z[None], sog_k, sog)
+                bug = np.where(Z[None], -1, bug).astype(np.int8)
+                kurs = np.where(Z[None], np.degrees(hk) % 360, kurs)
         sog = np.where(grenze[None] | ~gueltig, -1.0, sog)
         return sog.astype(np.float32), bug, kurs.astype(np.float32)
 
@@ -658,6 +743,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         t_dij = time.time()
         beste = (np.inf, None)
         gewartet = set()                                                   # Knoten, an denen schon auf Wasser gewartet wurde
+        kanal_nacht = set()
         gewartet_w = set()                                                 # ... auf Wetter (Wind/Welle unter der Grenze)
 
         def wetter_zu(kk, i, j):
@@ -757,11 +843,23 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             sog = np.where(segel & (np.abs(twa) < P.wendewinkel(tws)), -1.0, sog)
             bug = np.where(segel, np.where(twa > 0, 0, 1), -1)
             mog = sog > 0.05
+            if tag_zone.any() and not nm:
+                nach_t = tag_zone[np.clip(k + versatz, 0, N - 1)]
+                if (tag_zone[k] or nach_t.any()) and sonnenhoehe(float(LAT[i]), float(LON[j]), t) < DAEMMERUNG:
+                    mog &= ~nach_t                                    # nachts nicht in den/im Kanal fahren
+                    if tag_zone[k] and z not in kanal_nacht:          # im Kanal bis zum Morgen liegen
+                        kanal_nacht.add(z)
+                        tm = morgen(float(LAT[i]), float(LON[j]), t)
+                        if tm is not None and tm < t_ende:
+                            heapq.heappush(heap, (tm, -z - 1))
             if not mog.any():
                 continue
             dauer = np.where(mog, dauer0 / np.maximum(sog, 0.05), np.inf)
             nb2 = np.where(bug == -1, b, bug)
             dauer = dauer + np.where((bug != -1) & (bug != b), wende_s, 0.0)
+            if kanal_namen and kanal_flach[k]:                        # Schleusen/Konvoi anteilig je km im Kanal
+                dauer = dauer + kanal_s_km[kanal_flach[k]] * laenge * np.where(
+                    kanal_flach[np.clip(k + versatz, 0, N - 1)] == kanal_flach[k], 1.0, 0.5)
             if nm:                                                        # Ankunft noch vor Ende der Daemmerung
                 mog &= sh0 + (sh1 - sh0) * np.where(mog, dauer, 0.0) / 3600.0 >= DAEMMERUNG
                 mog &= t + np.where(mog, dauer, 0.0) <= tag_ende[tg]
@@ -781,47 +879,52 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                     vor_sog[zz] = sog[d]
                     heapq.heappush(heap, (float(t2[d]), int(zz)))
         t_dij = time.time() - t_dij
-        return ankunft, vor, vor_d, vor_bug, vor_kurs, vor_sog, beste, pops, t_dij
+        return ankunft, vor, vor_d, vor_bug, vor_kurs, vor_sog, beste, pops, t_dij, gewartet_w
 
     # Warten auf Wetter (23.11.2026): erst ohne Warten auf See; findet sich nichts, mit Warten auf See suchen, die dort
     # gewartete Zeit als spaetere Abfahrt nehmen und erneut ohne Warten auf See suchen (Wartezeit gehoert in den Hafen).
     # Bleibt Warten auf See noetig, wird diese Route genommen und im Hinweis genannt.
     def see_wartezeit(erg):
-        ank, vr, vd, vs = erg[0], erg[1], erg[2], erg[5]
+        ank, vr, vd, vs, ww = erg[0], erg[1], erg[2], erg[5], erg[9]
         z, summe = erg[6][1], 0.0
         while z is not None and z != -1 and vr[z] != -1:
             zv = int(vr[z])
             kv = (zv // 2) % N
-            if vd[z] >= 0 and not (kv == ia * nx + ja or kv in liege):
+            if vd[z] >= 0 and zv in ww and not (kv == ia * nx + ja or kv in liege):   # nur Wetter-Wartestellen
                 fahrt = laenge[int(vd[z])] / KN / max(float(vs[z]), 0.05) * 3600.0
                 summe += max(0.0, (ank[z] - ank[zv]) - fahrt)
             z = zv
         return summe
 
+    def gefunden_(e_):
+        return e_[6][1] is not None
+
     t_ab = float(t0)
-    erg = suche(t_ab, False)
     see_gewartet_h = 0.0
-    if erg[6][1] is None:
+    erg = suche(t_ab, True)
+    w_s = see_wartezeit(erg) if gefunden_(erg) else 0.0
+    if w_s >= 600:                                                   # Warten auf See -> Abfahrt spaeter (im Hafen)
+        erg0, t_ver, besser = erg, t_ab, None
         for _ in range(4):
-            mit = suche(t_ab, True)
-            if mit[6][1] is None:
+            t_ver += w_s
+            if t_ver >= t_ende:
                 break
-            w_s = see_wartezeit(mit)
+            neu = suche(t_ver, False)
+            if gefunden_(neu):
+                besser = neu
+                break
+            neu = suche(t_ver, True)
+            if not gefunden_(neu):
+                break
+            w_s = see_wartezeit(neu)
             if w_s < 600:
-                erg = mit
+                besser = neu
                 break
-            t_ab += w_s
-            if t_ab >= t_ende:
-                erg = mit
-                see_gewartet_h = w_s / 3600.0
-                break
-            neu = suche(t_ab, False)
-            if neu[6][1] is not None:
-                erg = neu
-                break
-            erg = mit
-            see_gewartet_h = w_s / 3600.0
-    ankunft, vor, vor_d, vor_bug, vor_kurs, vor_sog, beste, pops, t_dij = erg
+        if besser is not None:
+            erg, t_ab = besser, t_ver
+        else:
+            erg, see_gewartet_h = erg0, see_wartezeit(erg0) / 3600.0
+    ankunft, vor, vor_d, vor_bug, vor_kurs, vor_sog, beste, pops, t_dij = erg[:9]
     gefunden = beste[1]
     if gefunden is None and nm:
         raise Fehler("No route found within %d h (%d days): with 'avoid sailing at night'%s each leg must end in a harbour "
@@ -893,6 +996,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                 a += 1
         a += 1
     naechte.sort(key=lambda x: x["an"])
+    kanaele_benutzt = sorted({int(kanal_flach[p["_k"]]) for p in punkte if "_k" in p} - {0})
     for p in punkte:
         p.pop("_k", None)
     # Start-/Zielpunkte exakt anhaengen (Verbindung zum Gitter)
@@ -968,6 +1072,9 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                         % ((t_ab - t0) / 3600.0, max_wind, max_welle)] if t_ab > t0 else [])
                     + (["The route still waits %.1f h at sea for the weather - better choose another day or harbour."
                         % see_gewartet_h] if see_gewartet_h > 0 else [])
+                    + [kanal_namen[c][1]["hinweis"] for c in kanaele_benutzt]
+                    + (["No route through %s: canals need an engine." % ", ".join(v[0] for v in kanal_namen.values())]
+                       if kanal_namen and not o["motor"] else [])
                     + (["Traffic separation schemes (OpenSeaMap): lanes only with the traffic or crossing at right angles, "
                         "separation zones only crossed."] if vtg_info.startswith("OpenSeaMap") else [])
                     + (["No-entry areas (OpenSeaMap) are avoided; check notices to mariners for temporary closures."]

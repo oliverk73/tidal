@@ -115,6 +115,12 @@ def shom(s, n, w, e, ny, nx):
     from scipy import ndimage
     aus = np.full((ny, nx), np.nan, np.float32)
     benutzt = []
+    # SHOM nur in Frankreich: ausserhalb (IJmuiden "trocken", Themse Gravesend +3,7 m) sind es Fuellwerte.
+    # Grenze: Spanien 43,35 N, Belgien 2,55 E, Englische Kanalkueste (Linie -6/49,9 -> 1,6/51,0)
+    la_ = n - (np.arange(ny) + 0.5) * (n - s) / ny
+    lo_ = w + (np.arange(nx) + 0.5) * (e - w) / nx
+    LA, LO = np.meshgrid(la_, lo_, indexing="ij")
+    frankreich = (LA > 43.35) & (LO < 2.55) & (LA < 49.9 + (LO + 6.0) * 1.1 / 7.6) & (LO > -6.0)
     for datei, name in SHOM_MODELLE:
         pfad = os.path.join(SHOM_ORDNER, datei)
         if not os.path.exists(pfad):
@@ -141,7 +147,7 @@ def shom(s, n, w, e, ny, nx):
         if zelle > 1 and np.isfinite(neu).any():
             dist, idx = ndimage.distance_transform_edt(np.isnan(neu), return_indices=True)
             neu = np.where(dist <= zelle, neu[tuple(idx)], np.nan)
-        frei = np.isnan(aus) & np.isfinite(neu)
+        frei = np.isnan(aus) & np.isfinite(neu) & frankreich      # nur franzoesische Gewaesser (23.11.2026)
         if frei.any():
             aus[frei] = neu[frei]
             benutzt.append(name)
