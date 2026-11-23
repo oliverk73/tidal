@@ -34,6 +34,7 @@ DECKT = 3.0
 OBERFLAECHE = ('SHOM-MANCHE', 'SHOM-PAS-DE-CALAIS', 'SHOM-DUNKERQUE', 'SHOM-CALAIS', 'SHOM-BOULOGNE', 'SHOM-FINISTERE',
                'SHOM-IROISE', 'SHOM-BAIE-DE-SEINE', 'SHOM-LE-HAVRE')
 RAND_FAMILIE_KM = 10.0
+RAND_TPXO_KM = 6.0         # Uebergang feines Feld -> TPXO (einsetzen)
 RAND_KM = 8.0               # Uebergangszone an der Grenze einer feineren Quelle hoechstens (bauen)
 _S = {}
 
@@ -263,6 +264,20 @@ def einsetzen(lat, lon, u, v, t_rel_h, kopf, jahr):
         uu += ((S['U_' + k][ii] * rot).real * w).sum(1)
         vv += ((S['V_' + k][ii] * rot).real * w).sum(1)
     uf, vf = u.ravel().copy(), v.ravel().copy()
+    # Weicher Rand zu TPXO (23.11.2026, NorKyst-Auswahl endet quer im Fjord): Abstand jeder feinen Zelle zur naechsten
+    # Zelle, die nur TPXO hat (TPXO Wasser, feines Feld deckt nicht); auf RAND_TPXO_KM linear von TPXO ins feine Feld.
+    # Kueste zaehlt nicht: dort ist TPXO Land (NaN) oder das feine Feld deckt.
+    nur_tpxo = (np.isfinite(uf) & ~deckt).reshape(u.shape)
+    if nur_tpxo.any() and len(lat) > 1 and len(lon) > 1:
+        from scipy import ndimage
+        dy = abs(lat[1] - lat[0]) * 111.2
+        dx = abs(lon[1] - lon[0]) * 111.2 * math.cos(math.radians(float(np.mean(lat))))
+        dist = ndimage.distance_transform_edt(~nur_tpxo, sampling=(dy, dx)).ravel()[idx]
+        g = np.clip(dist / RAND_TPXO_KM, 0, 1)
+        ut, vt = uf[idx], vf[idx]
+        ok = np.isfinite(ut) & np.isfinite(vt) & (g < 1)
+        uu[ok] = g[ok] * uu[ok] + (1 - g[ok]) * ut[ok]
+        vv[ok] = g[ok] * vv[ok] + (1 - g[ok]) * vt[ok]
     uf[deckt], vf[deckt] = np.nan, np.nan
     uf[idx], vf[idx] = uu, vv
     return uf.reshape(u.shape), vf.reshape(v.shape), int(deckt.sum())
