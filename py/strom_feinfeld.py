@@ -110,6 +110,9 @@ def bauen():
     # SHOM-2D-Atlanten + BSH-Atlas (22.11.2026, py/feinfeld_atlanten.py: Atlasregel wie die Einzelsaetze, linear gefittet)
     import feinfeld_atlanten as FA
     teile += FA.laden()
+    # NorKyst800 (22.11.2026, py/norkyst_feinfeld.py): Norwegen, Zellen mit Springstrom >= 0,5 kn + 5 km Saum, Halbjahresfit
+    import norkyst_feinfeld as NK
+    teile += NK.laden_feinfeld()
     # Ueberlappung: je Quelle der Punktabstand im eigenen Gitter; ein Punkt faellt weg, wenn eine FEINERE Quelle
     # naeher als 0,7 x eigener Abstand einen Punkt hat (Manche 2 km unter Pas-de-Calais 500 m, BSH-Nordsee unter
     # BSH-Kueste, SSW-RS-Schelf unter SHOM/BSH ...).
