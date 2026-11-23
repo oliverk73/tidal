@@ -36,6 +36,7 @@ from scipy import ndimage
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import segel_land  # noqa: E402
+import segel_fluesse  # noqa: E402
 import segel_tiefe  # noqa: E402
 import segel_tide  # noqa: E402
 import segel_tss  # noqa: E402
@@ -290,6 +291,12 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
 
     # Land (fein) und erlaubte Kanten
     land_f = segel_land.raster(s, n, w, e, ny * FEIN, nx * FEIN)
+    # Tidefluesse hinter der OSM-Kuestenlinie (23.11.2026: Loire ab Saint-Nazaire, Themse ab Gravesend, Elbe vor
+    # Hamburg ... waren "Land"): OSM-Flussflaechen (py/segel_fluesse.py, gespeicherte Kacheln) sind Wasser
+    fluss_f = segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN) & land_f
+    land_f = land_f & ~fluss_f
+    fluss_info = ("OSM river areas: %.1f %% of the area (depth unknown there, keep to the fairway)" % (100 * fluss_f.mean())
+                  if fluss_f.any() else "off")
     land_rein = land_f[FEIN // 2::FEIN, FEIN // 2::FEIN][:ny, :nx].copy()       # nur Kueste (Fetch)
     # Sperrgebiete (OpenSeaMap no_entry / to_be_avoided, 21.11.2026) wie Land; Zutritt mit Auflagen nur als Hinweis
     sperr_info, auflagen = "off", []
@@ -311,6 +318,8 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             tiefe_info = "no data (EMODnet covers Europe only)"
         else:
             grund_f = np.nan_to_num(hoehe_f, nan=-999.0).astype(np.float32)
+            # EMODnet liefert hinter der Kuestenlinie Gelaendehoehen statt Tiefen (Nantes 5-13 m) -> dort keine Tiefe
+            grund_f[fluss_f] = -999.0
             # Tide (21.11.2026): Flaechen, die bei Hochwasser tief genug sind, nur zeitweise sperren
             HT, n_pegel, stau = (segel_tide.hoehe_ueber_lat(LAT2, LON2, zeiten, windstau=o["windstau"]) if o["tide"]
                                  else (None, 0, None))
@@ -811,7 +820,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         "gitter": {"km": round(h, 3), "nx": nx, "ny": ny, "s": s, "n": n, "w": w, "e": e},
         "quellen": {"wind": "Open-Meteo best_match (regional models, hourly)", "wellen": "Open-Meteo Marine",
                     "strom": "Tidal current layer (TPXO10 + fine models)" + (" + Copernicus GLO12 ocean current" if o["ozean"] else ""),
-                    "land": "OpenStreetMap land polygons", "tiefe": tiefe_info, "windstau": stau_info, "vtg": vtg_info, "sperr": sperr_info, "polare": P.info()["quelle"]},
+                    "land": "OpenStreetMap land polygons", "fluesse": fluss_info, "tiefe": tiefe_info, "windstau": stau_info, "vtg": vtg_info, "sperr": sperr_info, "polare": P.info()["quelle"]},
         "hinweise": ((["Depth = EMODnet (LAT) + predicted tide from nearby gauges at the time of passage"
                        + ("; storm surge forecast included (%s), keep the reserve." % stau_info if stau_info.startswith(("Copernicus", "NOAA"))
                           else "; storm surge NOT included (%s), keep the reserve." % stau_info)] if "tide height" in tiefe_info else
