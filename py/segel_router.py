@@ -247,6 +247,69 @@ def _strom(s, n, w, e, zeiten, LAT, LON, ozean):
 
 
 # ---------------------------------------------------------------- Route
+def _gebiet(la_a, lo_a, la_b, lo_b, rand, max_knoten):
+    la0 = (la_a + la_b) / 2
+    kx = 111.2 * math.cos(math.radians(la0))
+    s, n = min(la_a, la_b) - rand / 111.2, max(la_a, la_b) + rand / 111.2
+    w, e = min(lo_a, lo_b) - rand / kx, max(lo_a, lo_b) + rand / kx
+    h = max(0.12, max((n - s) * 111.2, (e - w) * kx) / max_knoten)
+    return s, n, w, e, h, kx
+
+
+def _rand_finden(la_a, lo_a, la_b, lo_b, dist, max_knoten):
+    """Rand (km) um A und B. 23.11.2026 (Roscoff -> Brest): das Rechteck mit 35 % Rand schnitt die Iroise ab, die
+    Rade de Brest lag ohne Verbindung zum Meer -> "more than 10 km from navigable water". Jetzt: Land (OSM + Fluesse)
+    auf dem Gitter pruefen und den Rand vergroessern, bis A und B (naechstes Wasser <= 3 km) in derselben Wasserflaeche
+    liegen wie die groesste. Tiefe/Sperrgebiete bleiben hier aussen vor (selten trennend, teuer)."""
+    versuche = [max(f * dist, km) for f, km in ((0.35, 10.0), (0.6, 25.0), (1.0, 50.0), (1.6, 80.0))]
+    for rand in versuche:
+        s, n, w, e, h, kx = _gebiet(la_a, lo_a, la_b, lo_b, rand, max_knoten)
+        ny, nx = int(math.ceil((n - s) * 111.2 / h)), int(math.ceil((e - w) * kx / h))
+        n, e = s + ny * h / 111.2, w + nx * h / kx
+        land = segel_land.raster(s, n, w, e, ny * FEIN, nx * FEIN)
+        land &= ~segel_fluesse.raster(s, n, w, e, ny * FEIN, nx * FEIN)
+        wasser = ~land[FEIN // 2::FEIN, FEIN // 2::FEIN][:ny, :nx]
+        teile, anzahl = ndimage.label(wasser, structure=np.ones((3, 3)))
+        if anzahl == 0:
+            continue
+        gr = np.bincount(teile.ravel())
+        gr[0] = 0
+        gross = int(np.argmax(gr))
+        d, idx = ndimage.distance_transform_edt(~wasser, return_indices=True)
+        ok, pkt = True, []
+        for la, lo in ((la_a, lo_a), (la_b, lo_b)):
+            i = min(max(int(round((n - la) * 111.2 / h - 0.5)), 0), ny - 1)
+            j = min(max(int(round((lo - w) * kx / h - 0.5)), 0), nx - 1)
+            pkt.append(int(idx[0][i, j]) * nx + int(idx[1][i, j]))
+            if d[i, j] * h > 3.0 or teile[idx[0][i, j], idx[1][i, j]] != gross:
+                ok = False
+                break
+        if ok:
+            return rand, _wasserweg_km(teile == gross, pkt[0], pkt[1], h)
+    return versuche[0], dist
+
+
+def _wasserweg_km(wasser, a, b, h):
+    """Kuerzester Weg ueber Wasser (8er-Nachbarschaft) zwischen den Zellen a und b (flacher Index), km."""
+    from scipy.sparse import coo_matrix
+    from scipy.sparse.csgraph import dijkstra
+    ny, nx = wasser.shape
+    nr = np.arange(ny * nx).reshape(ny, nx)
+    zeilen, spalten, gew = [], [], []
+    for di, dj in ((0, 1), (1, 0), (1, 1), (1, -1)):
+        a1 = wasser[max(0, -di):ny - max(0, di), max(0, -dj):nx - max(0, dj)]
+        b1 = wasser[max(0, di):, max(0, dj):][:a1.shape[0], :a1.shape[1]] if dj >= 0 else wasser[di:, :nx + dj][:a1.shape[0]]
+        na = nr[max(0, -di):ny - max(0, di), max(0, -dj):nx - max(0, dj)]
+        nb = nr[max(0, di):, max(0, dj):][:a1.shape[0], :a1.shape[1]] if dj >= 0 else nr[di:, :nx + dj][:a1.shape[0]]
+        m = a1 & b1
+        zeilen.append(na[m])
+        spalten.append(nb[m])
+        gew.append(np.full(m.sum(), h * math.hypot(di, dj)))
+    G = coo_matrix((np.concatenate(gew), (np.concatenate(zeilen), np.concatenate(spalten))), shape=(ny * nx, ny * nx))
+    km = dijkstra(G.tocsr(), directed=False, indices=a)[b]
+    return float(km) if np.isfinite(km) else 0.0
+
+
 def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     o = dict(STANDARD)
     o.update({k: v for k, v in opt.items() if v is not None})
@@ -261,8 +324,8 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         raise Fehler("Start and destination must be within %d km (%d nm)" % (MAX_KM, MAX_KM / KN))
     nm = bool(o["nacht_meiden"])
     max_knoten = MAX_KNOTEN if dist <= 300 else int(min(MAX_KNOTEN_LANG, MAX_KNOTEN * dist / 300))
-    # Gebiet: Rechteck um A und B mit Rand
-    rand = max(0.35 * dist, 10.0)
+    # Gebiet: Rechteck um A und B mit Rand; gross genug, dass A und B ueber See verbunden sind
+    rand, weg_km = _rand_finden(la_a, lo_a, la_b, lo_b, dist, max_knoten)
     la0 = (la_a + la_b) / 2
     kx = 111.2 * math.cos(math.radians(la0))
     s, n = min(la_a, la_b) - rand / 111.2, max(la_a, la_b) + rand / 111.2
@@ -275,7 +338,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     LAT2, LON2 = np.meshgrid(LAT, LON, indexing="ij")
     # Zeitfenster: geschaetzte Dauer bei 3 kn ueber Grund x 1,5 (Kreuz gegen Strom braucht Reserve), mind. 12 h;
     # mit „Nachtfahrt vermeiden“ ganze Tage nach Tageslichtdauer + Wartezeit bis zum ersten Morgen
-    fahr_h = dist / KN / 3.0 * 1.5 + 2
+    fahr_h = max(dist, weg_km) / KN / 3.0 * 1.5 + 2       # Wasserweg (23.11.2026: Roscoff -> Brest 50 km Luftlinie, ~130 km See)
     if nm:
         lo0 = (lo_a + lo_b) / 2
         hell = [sonnenhoehe(la0, lo0, t0 + 600.0 * q) >= DAEMMERUNG for q in range(144)]
