@@ -81,7 +81,8 @@ def kurve(p, s):
     return (f[0], 1) if f[0] <= f[1] else (f[1], -1)
 
 
-def pruefen(argv):
+def messsaetze():
+    """Gemessene Stromsaetze mit Hauptachse im Kopf -> [(record, achse_grad, {k: komplex kn, Greenwich})]."""
     import health_check as H
     import xtide_modell as X
     _n, speeds, _a, _f = X.kopf_lesen(os.path.join(ROOT, 'harmonics/utide/harmonics_fes2022.txt'))
@@ -99,6 +100,11 @@ def pruefen(argv):
         s = {k: cmath.rect(w[k][0], -math.radians(X.greenwich(w[k][1], speeds[k], mer))) for k in KS if k in w and w[k][0] > 0}
         if 'M2' in s:
             saetze.append((r, float(m[-1]), s))
+    return saetze
+
+
+def pruefen(argv):
+    saetze = messsaetze()
     zl = zellen([(r['lat'], r['lon']) for r, _a, _s in saetze])
     F = stroeme(zl)
     zeilen = []
