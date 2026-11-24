@@ -139,7 +139,7 @@
     function setze(art, latlng) {
       if (state[art]) { state[art].setLatLng(latlng); }
       else {
-        state[art] = L.marker(latlng, { draggable: true, icon: icon(art === 'start' ? '#2a8c4a' : '#c0392b', art === 'start' ? 'A' : 'B'), zIndexOffset: 1000 }).addTo(map);
+        state[art] = L.marker(latlng, { draggable: true, icon: icon(art === 'start' ? '#2a8c4a' : '#c0392b', art === 'start' ? 'S' : 'F'), zIndexOffset: 1000 }).addTo(map);
         state[art].on('dragend', punktText);
       }
       punktText();
