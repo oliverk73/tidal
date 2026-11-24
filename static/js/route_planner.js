@@ -34,7 +34,7 @@
         '<label id="rp-tagh-zeile" style="padding-left:18px;display:none;" title="Each day ends in a harbour after at most this many hours under way (counted from dawn; empty = until dusk)">max. hours under way per day <input id="rp-tagh" type="number" min="2" max="24" step="1" placeholder="–" ' + num + '></label>' +
         '<div style="display:flex;gap:6px;">' +
           '<button id="rp-start-btn" style="flex:1;cursor:pointer;">Set start</button>' +
-          '<button id="rp-ziel-btn" style="flex:1;cursor:pointer;">Set destination</button>' +
+          '<button id="rp-ziel-btn" style="flex:1;cursor:pointer;">Set finish</button>' +
         '</div>' +
         '<div id="rp-punkte" style="color:#555;">Click a button, then click on the map.</div>' +
         '<details><summary style="cursor:pointer;">Options</summary>' +
@@ -133,7 +133,7 @@
     function punktText() {
       var f = function (m) { var p = m.getLatLng(); return p.lat.toFixed(4) + ', ' + p.lng.toFixed(4); };
       $('rp-punkte').innerHTML = (state.start ? 'Start: ' + f(state.start) : 'Start: –') + '<br>' +
-        (state.ziel ? 'Destination: ' + f(state.ziel) : 'Destination: –');
+        (state.ziel ? 'Finish: ' + f(state.ziel) : 'Finish: –');
       $('rp-go').disabled = !(state.start && state.ziel);
     }
     function setze(art, latlng) {
@@ -147,7 +147,7 @@
     function waehle(art) {
       state.pick = art;
       map.getContainer().style.cursor = 'crosshair';
-      $('rp-punkte').textContent = 'Click on the map to set the ' + (art === 'start' ? 'start' : 'destination') + '.';
+      $('rp-punkte').textContent = 'Click on the map to set the ' + (art === 'start' ? 'start' : 'finish') + '.';
     }
     $('rp-start-btn').addEventListener('click', function () { waehle('start'); });
     $('rp-ziel-btn').addEventListener('click', function () { waehle('ziel'); });
@@ -232,7 +232,7 @@
           ((r.hinweise && r.hinweise.length) ? '<br><span style="color:#777;font-size:10px;">' + r.hinweise.join('<br>') + '</span>' : '') +
           ((r.start.verschoben || r.ziel.verschoben) ? '<br><span style="color:#a60;">' +
             (r.start.verschoben ? 'Start ' + r.start.verschoben + ' km' : '') + (r.start.verschoben && r.ziel.verschoben ? ', ' : '') +
-            (r.ziel.verschoben ? 'destination ' + r.ziel.verschoben + ' km' : '') +
+            (r.ziel.verschoben ? 'finish ' + r.ziel.verschoben + ' km' : '') +
             ' from the computed route (dashed): on land, or behind a channel too narrow/shallow for the depth grid – follow the buoyed channel.</span>' : '') +
         '</div>' +
         '<div style="max-height:30vh;overflow-y:auto;margin-top:4px;">' +

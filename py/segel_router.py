@@ -340,7 +340,7 @@ def _laengste_etappe(r):
             t_a, name_a = a.get("bis_t", P[a["bis"]]["t"]), a.get("liege") or "anchorage"
     d = (P[-1]["t"] - t_a) / 3600.0
     if d > beste[0]:
-        beste = (d, "%s to the destination" % name_a)
+        beste = (d, "%s to the finish" % name_a)
     return beste
 
 
@@ -353,9 +353,9 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     la_b, lo_b = ziel
     dist = _km(la_a, lo_a, la_b, lo_b)
     if dist < 0.5:
-        raise Fehler("Start and destination are less than 0.5 km apart")
+        raise Fehler("Start and finish are less than 0.5 km apart")
     if dist > MAX_KM:
-        raise Fehler("Start and destination must be within %d km (%d nm)" % (MAX_KM, MAX_KM / KN))
+        raise Fehler("Start and finish must be within %d km (%d nm)" % (MAX_KM, MAX_KM / KN))
     nm = bool(o["nacht_meiden"])
     max_knoten = MAX_KNOTEN if dist <= 300 else int(min(MAX_KNOTEN_LANG, MAX_KNOTEN * dist / 300))
     # Gebiet: Rechteck um A und B mit Rand; gross genug, dass A und B ueber See verbunden sind
@@ -964,10 +964,10 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
                             "" if len(r2["naechte"]) == 1 else "s"))
         raise Fehler("No route found within %d h (%d days) with 'avoid sailing at night', not even when sailing from "
                      "dawn to dusk: some leg without a harbour or anchorage is longer than a day's daylight. Allow "
-                     "sailing at night, use the engine, or choose a closer destination" % (stunden, round(stunden / 24)))
+                     "sailing at night, use the engine, or choose a closer finish" % (stunden, round(stunden / 24)))
     if gefunden is None and nm:
         raise Fehler("No route found within %d h (%d days): with 'avoid sailing at night'%s each leg must end in a harbour "
-                     "or anchorage before dusk; try more hours per day, the engine, or a closer destination"
+                     "or anchorage before dusk; try more hours per day, the engine, or a closer finish"
                      % (stunden, round(stunden / 24), " and max. %g h per day" % o["max_tag_h"] if o["max_tag_h"] else ""))
     if gefunden is None:
         raise Fehler("No route found within %d h (limits wind %.0f kn / waves %.1f m, land in the way, or too "
