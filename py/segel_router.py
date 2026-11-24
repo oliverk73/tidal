@@ -328,6 +328,22 @@ def _wasserweg_km(wasser, a, b, h):
     return float(km) if np.isfinite(km) else 0.0
 
 
+def _laengste_etappe(r):
+    """(Stunden, "A to B") der laengsten Tagesetappe einer Route mit Naechten im Hafen."""
+    P = r["punkte"]
+    beste, t_a, name_a = (0.0, ""), r["abfahrt"], "start"
+    for a in r["abschnitte"]:
+        if a["modus"] == "nacht":
+            d = (P[a["von"]]["t"] - t_a) / 3600.0
+            if d > beste[0]:
+                beste = (d, "%s to %s" % (name_a, a.get("liege") or "anchorage"))
+            t_a, name_a = a.get("bis_t", P[a["bis"]]["t"]), a.get("liege") or "anchorage"
+    d = (P[-1]["t"] - t_a) / 3600.0
+    if d > beste[0]:
+        beste = (d, "%s to the destination" % name_a)
+    return beste
+
+
 def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
     o = dict(STANDARD)
     o.update({k: v for k, v in opt.items() if v is not None})
@@ -933,6 +949,22 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             erg, see_gewartet_h = erg0, see_wartezeit(erg0) / 3600.0
     ankunft, vor, vor_d, vor_bug, vor_kurs, vor_sog, beste, pops, t_dij = erg[:9]
     gefunden = beste[1]
+    if gefunden is None and nm and o["max_tag_h"] and not o.get("_ohne_grenze"):
+        # 24.11.2026: woran scheitert die Tagesgrenze? Einmal ohne sie rechnen und die laengste Etappe nennen
+        try:
+            r2 = route(start, ziel, t0, boot=boot, **dict(opt, max_tag_h=0.0, _ohne_grenze=True))
+        except Fehler:
+            r2 = None
+        if r2 is not None:
+            lang = _laengste_etappe(r2)
+            raise Fehler("No route found with max. %g h per day: the longest leg without a harbour or anchorage on the "
+                         "way, %s, takes about %.0f h. Allow at least %.0f h per day, or leave the field empty (sail "
+                         "from dawn to dusk: %.0f h, %d night%s in harbour)"
+                         % (o["max_tag_h"], lang[1], lang[0], math.ceil(lang[0]), r2["dauer_h"], len(r2["naechte"]),
+                            "" if len(r2["naechte"]) == 1 else "s"))
+        raise Fehler("No route found within %d h (%d days) with 'avoid sailing at night', not even when sailing from "
+                     "dawn to dusk: some leg without a harbour or anchorage is longer than a day's daylight. Allow "
+                     "sailing at night, use the engine, or choose a closer destination" % (stunden, round(stunden / 24)))
     if gefunden is None and nm:
         raise Fehler("No route found within %d h (%d days): with 'avoid sailing at night'%s each leg must end in a harbour "
                      "or anchorage before dusk; try more hours per day, the engine, or a closer destination"
