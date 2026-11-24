@@ -50,6 +50,28 @@ ERSATZ = {
     '43': ('Stansore Point, England, United Kingdom', 0.14, 0.27),
 }
 ZONE_TZ = {'Ireland': 'Europe/Dublin', 'United Kingdom': 'Europe/London', 'Morocco': 'Africa/Casablanca'}
+# Weisses Meer (Oliver 24.11.2026 "ja"): Bestand dort nur NP202-Part-II-Uebertragungen; NP160 hat eigene
+# Analysen, die an den zwei unabhaengigen Classic-Saetzen (Archangelsk, Kem) auf 1,7 % passen. FES taugt dort
+# nicht als Schiedsrichter. Ausgenommen: Ostrov Veshnyak (K1/O1-180-Grad-Spruenge wie Kola), Umba, Sosnovets.
+ALT_WM = 'harmonics/att/harmonics_att_np202_secondary.txt'
+WEISS = {
+    '1036': 'Ostrov Morzhovets, Arkhangelsk Oblast, Russia',
+    '1038': 'Reka Megra, Arkhangelsk Oblast, Russia',
+    '1039': 'Mys Intsy, Arkhangelsk Oblast, Russia',
+    '1043': "Mys Yuzhnyy (Ostrov Mud'yugskiy), Arkhangelsk Oblast, Russia",
+    '1044': 'Lapominka, Arkhangelsk Oblast, Russia',
+    '1048': 'Pertominsk (Unskaya Guba), Arkhangelsk Oblast, Russia',
+    '1050': 'Ostrov Zhizhginskiy, Arkhangelsk Oblast, Russia',
+    '1053': 'Mys Chesmenskiy, Arkhangelsk Oblast, Russia',
+    '1055': 'Ostrov Kiy (Onezhskaya Guba), Arkhangelsk Oblast, Russia',
+    '1056': 'Onega, Arkhangelsk Oblast, Russia',
+    '1057': 'Ostrov Paskanets, Arkhangelsk Oblast, Russia',
+    '1059': 'Ostrov Berezhnoy, Republic of Karelia, Russia',
+    '1072': 'Gridino, Republic of Karelia, Russia',
+    '1075': 'Kandalaksha, Murmansk Oblast, Russia',
+    '1076': "Guba Por'ya, Murmansk Oblast, Russia",
+    '1084': 'Mys Orlov-Terskiy Tonkiy, Murmansk Oblast, Russia',
+}
 
 
 def zahl(s):
@@ -81,12 +103,24 @@ def main(argv):
     heute = dt.date.today().strftime('%Y%m%d')
     HEADER, ORDER = B.kopf()
     buch = {r['nr']: r for r in csv.DictReader(open(TSV), delimiter='\t')}
-    alt = {r['name']: r for r in H.load_records() if r['file'] == ALT}
-    bloecke, loeschliste = [], []
-    for nr, spec in list(LUECKE.items()) + list(ERSATZ.items()):
+    recs = H.load_records()
+    alt = {r['name']: r for r in recs if r['file'] == os.path.relpath(OUT, ROOT)}   # schon ersetzte: Position aus NP160
+    alt.update({r['name']: r for r in recs if r['file'] == ALT})
+    alt_wm = {r['name']: r for r in recs if r['file'] == ALT_WM}
+    bloecke, loeschliste, loesch_wm = [], [], []
+    for nr, spec in list(LUECKE.items()) + list(ERSATZ.items()) + list(WEISS.items()):
         r = buch[nr]
         if nr in LUECKE:
             name, land, tz, lat, lon, grund = spec
+        elif nr in WEISS:
+            name, land, tz = spec, 'Russia', 'Europe/Moscow'
+            a = alt_wm[name]
+            lat, lon = a['lat'], a['lon']
+            grund = ('Ersatz fuer die NP202-Part-II-Uebertragung gleicher ATT-Nummer (archiviert ' + heute + '): NP160 hat '
+                     'eigene harmonische Konstanten; Archangelsk/Kem (Classic 1997) bestaetigen NP160 auf 1,7 %.')
+            loesch_wm.append(dict(datei=ALT_WM, name=name, fehler_prozent='',
+                                  begruendung=f'Part-II-Uebertragung ersetzt durch NP160-Analyse Nr. {nr} (Buch S.{r["buchseite"]}), '
+                                              f'harmonics_att_np160.txt (Weisses Meer, Oliver {heute})'))
         else:
             name, fb, fa = spec
             a = alt[name]
@@ -133,7 +167,13 @@ def main(argv):
         w = csv.DictWriter(f, fieldnames=['datei', 'name', 'fehler_prozent', 'begruendung'])
         w.writeheader()
         w.writerows(loeschliste)
-    print(f'{len(bloecke)} Saetze -> {os.path.relpath(OUT, ROOT)}; Loeschliste {os.path.relpath(liste, ROOT)}')
+    liste_wm = os.path.join(ROOT, 'harmonics', 'help', 'loeschen_20261124_np160_weisses_meer.csv')
+    with open(liste_wm, 'w', newline='', encoding='utf-8') as f:
+        w = csv.DictWriter(f, fieldnames=['datei', 'name', 'fehler_prozent', 'begruendung'])
+        w.writeheader()
+        w.writerows(loesch_wm)
+    print(f'{len(bloecke)} Saetze -> {os.path.relpath(OUT, ROOT)}; Loeschlisten {os.path.relpath(liste, ROOT)}, '
+          f'{os.path.relpath(liste_wm, ROOT)}')
     return 0
 
 
