@@ -1,0 +1,4495 @@
+{
+"period": "2026-05-01 – 2026-09-30",
+"hours": "9–19 local time",
+"stations": [
+{
+"name": "Silvaplana/Sils (Segl-Maria)",
+"lat": 46.43233,
+"lon": 9.76233,
+"source": "MeteoSwiss",
+"id": "SIA",
+"note": "Malojawind",
+"tz": "Europe/Zurich",
+"link": "https://www.meteoswiss.admin.ch/services-and-publications/applications/measurement-values-and-measuring-networks.html",
+"mean_kn": 7.8,
+"hours12": 256,
+"n": 1683,
+"lag_h": 0,
+"best_match_mae": 2.94,
+"best_match_bias": -2.24,
+"best_model": "AROME 2,5",
+"best_model_mae": 2.55,
+"best_model_bias": -1.37,
+"corr_mae": 1.83,
+"corr_pod12": 0.39,
+"corr_far12": 0.26,
+"models": [
+{
+"m": "Mittel aller (13)",
+"bias": -2.51,
+"mae": 2.96,
+"r": 0.709,
+"corr_mae": 1.83
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -2.19,
+"mae": 2.9,
+"r": 0.664,
+"corr_mae": 2.01
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.24,
+"mae": 2.94,
+"r": 0.659,
+"corr_mae": 2.02
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -3.24,
+"mae": 3.59,
+"r": 0.64,
+"corr_mae": 2.06
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -1.37,
+"mae": 2.55,
+"r": 0.666,
+"corr_mae": 2.07
+},
+{
+"m": "AROME 2,5",
+"bias": -1.37,
+"mae": 2.55,
+"r": 0.666,
+"corr_mae": 2.07
+},
+{
+"m": "ICON-CH1 1",
+"bias": -1.98,
+"mae": 2.87,
+"r": 0.622,
+"corr_mae": 2.09
+},
+{
+"m": "ICON-CH2 2",
+"bias": -2.92,
+"mae": 3.44,
+"r": 0.61,
+"corr_mae": 2.14
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -2.65,
+"mae": 3.48,
+"r": 0.492,
+"corr_mae": 2.3
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -2.48,
+"mae": 3.37,
+"r": 0.468,
+"corr_mae": 2.4
+},
+{
+"m": "ICON-EU 7",
+"bias": -2.92,
+"mae": 3.59,
+"r": 0.465,
+"corr_mae": 2.49
+},
+{
+"m": "UKMO 10",
+"bias": -2.94,
+"mae": 3.7,
+"r": 0.422,
+"corr_mae": 2.53
+},
+{
+"m": "GFS 13",
+"bias": -2.31,
+"mae": 3.54,
+"r": 0.226,
+"corr_mae": 2.6
+},
+{
+"m": "ECMWF 9",
+"bias": -3.99,
+"mae": 4.37,
+"r": 0.264,
+"corr_mae": 2.62
+}
+]
+},
+{
+"name": "Reschensee (St. Valentin)",
+"lat": 46.7759,
+"lon": 10.5289,
+"source": "Wetterdienst Südtirol",
+"id": "02200MS",
+"note": "Talwind Vinschgau",
+"tz": "Europe/Rome",
+"link": "",
+"mean_kn": 8.8,
+"hours12": 381,
+"n": 1683,
+"lag_h": -1,
+"best_match_mae": 3.3,
+"best_match_bias": -1.9,
+"best_model": "ICON-CH1 1",
+"best_model_mae": 2.49,
+"best_model_bias": 0.23,
+"corr_mae": 2.29,
+"corr_pod12": 0.44,
+"corr_far12": 0.3,
+"models": [
+{
+"m": "Mittel aller (13)",
+"bias": -2.7,
+"mae": 3.26,
+"r": 0.567,
+"corr_mae": 2.29
+},
+{
+"m": "ICON-CH1 1",
+"bias": 0.23,
+"mae": 2.49,
+"r": 0.676,
+"corr_mae": 2.3
+},
+{
+"m": "ICON-CH2 2",
+"bias": -1.38,
+"mae": 2.79,
+"r": 0.588,
+"corr_mae": 2.52
+},
+{
+"m": "AROME 2,5",
+"bias": -2.65,
+"mae": 3.2,
+"r": 0.6,
+"corr_mae": 2.63
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.42,
+"mae": 2.97,
+"r": 0.541,
+"corr_mae": 2.67
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.9,
+"mae": 3.3,
+"r": 0.48,
+"corr_mae": 2.68
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -1.91,
+"mae": 3.32,
+"r": 0.472,
+"corr_mae": 2.71
+},
+{
+"m": "ICON-EU 7",
+"bias": -3.91,
+"mae": 4.28,
+"r": 0.414,
+"corr_mae": 2.83
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -3.23,
+"mae": 4.0,
+"r": 0.427,
+"corr_mae": 2.86
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -2.44,
+"mae": 3.54,
+"r": 0.418,
+"corr_mae": 2.88
+},
+{
+"m": "ECMWF 9",
+"bias": -5.29,
+"mae": 5.4,
+"r": 0.314,
+"corr_mae": 2.95
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -3.44,
+"mae": 4.05,
+"r": 0.365,
+"corr_mae": 3.03
+},
+{
+"m": "GFS 13",
+"bias": -4.23,
+"mae": 4.62,
+"r": 0.335,
+"corr_mae": 3.03
+},
+{
+"m": "UKMO 10",
+"bias": -4.47,
+"mae": 4.87,
+"r": 0.215,
+"corr_mae": 3.19
+}
+]
+},
+{
+"name": "Comer See Nord (Colico)",
+"lat": 46.13814,
+"lon": 9.38469,
+"source": "ARPA Lombardia",
+"id": "19109:6008",
+"note": "Breva",
+"tz": "Europe/Rome",
+"link": "",
+"mean_kn": 3.3,
+"hours12": 32,
+"n": 1675,
+"lag_h": 1,
+"best_match_mae": 2.82,
+"best_match_bias": 1.76,
+"best_model": "GFS 13",
+"best_model_mae": 1.8,
+"best_model_bias": -0.16,
+"corr_mae": 1.58,
+"corr_pod12": 0.0,
+"corr_far12": 1.0,
+"models": [
+{
+"m": "ICON-CH1 1",
+"bias": 2.57,
+"mae": 3.34,
+"r": 0.414,
+"corr_mae": 1.57
+},
+{
+"m": "Mittel aller (14)",
+"bias": 1.7,
+"mae": 2.58,
+"r": 0.393,
+"corr_mae": 1.58
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 1.76,
+"mae": 2.82,
+"r": 0.386,
+"corr_mae": 1.61
+},
+{
+"m": "ICON-D2 2,2",
+"bias": 1.76,
+"mae": 2.82,
+"r": 0.386,
+"corr_mae": 1.61
+},
+{
+"m": "ICON-CH2 2",
+"bias": 1.77,
+"mae": 3.0,
+"r": 0.343,
+"corr_mae": 1.63
+},
+{
+"m": "AROME-HD 1,3",
+"bias": 2.87,
+"mae": 3.61,
+"r": 0.383,
+"corr_mae": 1.63
+},
+{
+"m": "ICON-2I 2,2",
+"bias": 1.66,
+"mae": 2.89,
+"r": 0.311,
+"corr_mae": 1.66
+},
+{
+"m": "AROME 2,5",
+"bias": 4.25,
+"mae": 4.89,
+"r": 0.348,
+"corr_mae": 1.66
+},
+{
+"m": "UKV 2",
+"bias": 0.84,
+"mae": 2.3,
+"r": 0.306,
+"corr_mae": 1.66
+},
+{
+"m": "ICON-EU 7",
+"bias": -0.09,
+"mae": 1.85,
+"r": 0.255,
+"corr_mae": 1.67
+},
+{
+"m": "GFS 13",
+"bias": -0.16,
+"mae": 1.8,
+"r": 0.258,
+"corr_mae": 1.68
+},
+{
+"m": "ECMWF 9",
+"bias": -1.05,
+"mae": 1.85,
+"r": 0.224,
+"corr_mae": 1.68
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": 3.36,
+"mae": 4.18,
+"r": 0.186,
+"corr_mae": 1.69
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": 4.26,
+"mae": 4.97,
+"r": 0.188,
+"corr_mae": 1.7
+},
+{
+"m": "UKMO 10",
+"bias": -0.0,
+"mae": 2.0,
+"r": 0.206,
+"corr_mae": 1.7
+}
+]
+},
+{
+"name": "Gardasee Nord (Limone)",
+"lat": 45.80683,
+"lon": 10.79006,
+"source": "ARPA Lombardia",
+"id": "14065:14066",
+"note": "Ora/Peler",
+"tz": "Europe/Rome",
+"link": "",
+"mean_kn": 5.9,
+"hours12": 150,
+"n": 1676,
+"lag_h": 0,
+"best_match_mae": 3.45,
+"best_match_bias": 1.81,
+"best_model": "ICON-CH1 1",
+"best_model_mae": 2.65,
+"best_model_bias": -1.1,
+"corr_mae": 2.29,
+"corr_pod12": 0.19,
+"corr_far12": 0.26,
+"models": [
+{
+"m": "Mittel aller (13)",
+"bias": -0.32,
+"mae": 2.4,
+"r": 0.582,
+"corr_mae": 2.29
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -3.17,
+"mae": 3.39,
+"r": 0.55,
+"corr_mae": 2.49
+},
+{
+"m": "ICON-CH2 2",
+"bias": 0.17,
+"mae": 2.76,
+"r": 0.514,
+"corr_mae": 2.51
+},
+{
+"m": "AROME 2,5",
+"bias": 0.88,
+"mae": 3.19,
+"r": 0.502,
+"corr_mae": 2.53
+},
+{
+"m": "ICON-D2 2,2",
+"bias": 1.94,
+"mae": 3.48,
+"r": 0.469,
+"corr_mae": 2.59
+},
+{
+"m": "ICON-CH1 1",
+"bias": -1.1,
+"mae": 2.65,
+"r": 0.446,
+"corr_mae": 2.61
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 1.81,
+"mae": 3.45,
+"r": 0.462,
+"corr_mae": 2.61
+},
+{
+"m": "ICON-2I 2,2",
+"bias": 0.26,
+"mae": 2.98,
+"r": 0.416,
+"corr_mae": 2.66
+},
+{
+"m": "ECMWF 9",
+"bias": -3.24,
+"mae": 3.62,
+"r": 0.355,
+"corr_mae": 2.76
+},
+{
+"m": "ICON-EU 7",
+"bias": -1.96,
+"mae": 3.15,
+"r": 0.304,
+"corr_mae": 2.76
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": 1.77,
+"mae": 3.76,
+"r": 0.357,
+"corr_mae": 2.77
+},
+{
+"m": "GFS 13",
+"bias": -1.57,
+"mae": 2.92,
+"r": 0.34,
+"corr_mae": 2.78
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": 2.38,
+"mae": 4.21,
+"r": 0.31,
+"corr_mae": 2.81
+},
+{
+"m": "UKMO 10",
+"bias": -2.34,
+"mae": 3.61,
+"r": 0.138,
+"corr_mae": 2.9
+}
+]
+},
+{
+"name": "Tarifa",
+"lat": 36.014,
+"lon": -5.5988,
+"source": "SYNOP (WMO)",
+"id": "0-724-0-458",
+"note": "Levante/Poniente",
+"tz": "Europe/Madrid",
+"link": "",
+"mean_kn": 14.1,
+"hours12": 714,
+"n": 1331,
+"lag_h": 0,
+"best_match_mae": 2.63,
+"best_match_bias": -1.65,
+"best_model": "ICON-EU 7",
+"best_model_mae": 2.63,
+"best_model_bias": -1.65,
+"corr_mae": 2.15,
+"corr_pod12": 0.89,
+"corr_far12": 0.16,
+"models": [
+{
+"m": "Mittel aller (5)",
+"bias": -1.77,
+"mae": 3.05,
+"r": 0.868,
+"corr_mae": 2.15
+},
+{
+"m": "ICON-EU 7",
+"bias": -1.65,
+"mae": 2.63,
+"r": 0.899,
+"corr_mae": 2.38
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.65,
+"mae": 2.63,
+"r": 0.899,
+"corr_mae": 2.38
+},
+{
+"m": "GFS 13",
+"bias": -2.38,
+"mae": 3.29,
+"r": 0.862,
+"corr_mae": 2.71
+},
+{
+"m": "ECMWF 9",
+"bias": -2.48,
+"mae": 3.53,
+"r": 0.857,
+"corr_mae": 2.98
+},
+{
+"m": "UKMO 10",
+"bias": -0.67,
+"mae": 5.36,
+"r": 0.5,
+"corr_mae": 5.42
+}
+]
+},
+{
+"name": "Talamone (Grosseto)",
+"lat": 42.7481,
+"lon": 11.0589,
+"source": "SYNOP (WMO)",
+"id": "0-380-0-206",
+"note": "Station 20 km",
+"tz": "Europe/Rome",
+"link": "",
+"mean_kn": 8.3,
+"hours12": 411,
+"n": 1667,
+"lag_h": 0,
+"best_match_mae": 2.58,
+"best_match_bias": -2.01,
+"best_model": "AROME-HD 1,3",
+"best_model_mae": 1.86,
+"best_model_bias": 0.46,
+"corr_mae": 1.55,
+"corr_pod12": 0.53,
+"corr_far12": 0.21,
+"models": [
+{
+"m": "Mittel aller (10)",
+"bias": -0.83,
+"mae": 1.84,
+"r": 0.851,
+"corr_mae": 1.55
+},
+{
+"m": "AROME-HD 1,3",
+"bias": 0.46,
+"mae": 1.86,
+"r": 0.834,
+"corr_mae": 1.69
+},
+{
+"m": "AROME 2,5",
+"bias": 0.53,
+"mae": 1.87,
+"r": 0.836,
+"corr_mae": 1.69
+},
+{
+"m": "ICON-EU 7",
+"bias": -2.01,
+"mae": 2.58,
+"r": 0.789,
+"corr_mae": 1.88
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.01,
+"mae": 2.58,
+"r": 0.789,
+"corr_mae": 1.88
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -0.85,
+"mae": 2.11,
+"r": 0.763,
+"corr_mae": 1.95
+},
+{
+"m": "UKMO 10",
+"bias": -1.95,
+"mae": 2.55,
+"r": 0.764,
+"corr_mae": 1.97
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -0.18,
+"mae": 2.09,
+"r": 0.764,
+"corr_mae": 2.03
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -1.09,
+"mae": 2.35,
+"r": 0.743,
+"corr_mae": 2.06
+},
+{
+"m": "ECMWF 9",
+"bias": -2.04,
+"mae": 2.93,
+"r": 0.658,
+"corr_mae": 2.17
+},
+{
+"m": "GFS 13",
+"bias": 1.12,
+"mae": 3.16,
+"r": 0.563,
+"corr_mae": 2.45
+}
+]
+},
+{
+"name": "Porto Pollo (Figari)",
+"lat": 41.5006,
+"lon": 9.0978,
+"source": "METAR",
+"id": "LFKF",
+"note": "Station 39 km, Suedkorsika",
+"tz": "Europe/Rome",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=LFKF&network=",
+"mean_kn": 10.8,
+"hours12": 699,
+"n": 1572,
+"lag_h": 0,
+"best_match_mae": 3.73,
+"best_match_bias": -3.47,
+"best_model": "AROME-HD 1,3",
+"best_model_mae": 1.94,
+"best_model_bias": -0.71,
+"corr_mae": 1.66,
+"corr_pod12": 0.85,
+"corr_far12": 0.13,
+"models": [
+{
+"m": "Mittel aller (10)",
+"bias": -3.13,
+"mae": 3.26,
+"r": 0.872,
+"corr_mae": 1.66
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.71,
+"mae": 1.94,
+"r": 0.865,
+"corr_mae": 1.85
+},
+{
+"m": "AROME 2,5",
+"bias": -0.7,
+"mae": 1.94,
+"r": 0.865,
+"corr_mae": 1.85
+},
+{
+"m": "GFS 13",
+"bias": -3.71,
+"mae": 3.92,
+"r": 0.831,
+"corr_mae": 2.04
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -3.35,
+"mae": 3.66,
+"r": 0.812,
+"corr_mae": 2.1
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -2.25,
+"mae": 2.79,
+"r": 0.824,
+"corr_mae": 2.11
+},
+{
+"m": "ICON-EU 7",
+"bias": -3.47,
+"mae": 3.73,
+"r": 0.826,
+"corr_mae": 2.15
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -3.47,
+"mae": 3.73,
+"r": 0.826,
+"corr_mae": 2.15
+},
+{
+"m": "ECMWF 9",
+"bias": -3.34,
+"mae": 3.64,
+"r": 0.807,
+"corr_mae": 2.2
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -3.71,
+"mae": 3.98,
+"r": 0.768,
+"corr_mae": 2.39
+},
+{
+"m": "UKMO 10",
+"bias": -4.33,
+"mae": 4.59,
+"r": 0.67,
+"corr_mae": 2.86
+}
+]
+},
+{
+"name": "Porto Pollo (Olbia)",
+"lat": 40.8986,
+"lon": 9.5178,
+"source": "METAR",
+"id": "LIEO",
+"note": "Station 36 km",
+"tz": "Europe/Rome",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=LIEO&network=",
+"mean_kn": 9.4,
+"hours12": 448,
+"n": 1491,
+"lag_h": 0,
+"best_match_mae": 2.65,
+"best_match_bias": -2.27,
+"best_model": "AROME-HD 1,3",
+"best_model_mae": 2.14,
+"best_model_bias": -1.58,
+"corr_mae": 1.6,
+"corr_pod12": 0.56,
+"corr_far12": 0.25,
+"models": [
+{
+"m": "Mittel aller (10)",
+"bias": -2.36,
+"mae": 2.59,
+"r": 0.805,
+"corr_mae": 1.6
+},
+{
+"m": "AROME 2,5",
+"bias": -1.59,
+"mae": 2.15,
+"r": 0.828,
+"corr_mae": 1.79
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -1.58,
+"mae": 2.14,
+"r": 0.827,
+"corr_mae": 1.8
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -1.72,
+"mae": 2.42,
+"r": 0.769,
+"corr_mae": 2.02
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.27,
+"mae": 2.65,
+"r": 0.776,
+"corr_mae": 2.04
+},
+{
+"m": "ICON-EU 7",
+"bias": -2.27,
+"mae": 2.65,
+"r": 0.776,
+"corr_mae": 2.04
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -2.44,
+"mae": 2.83,
+"r": 0.763,
+"corr_mae": 2.07
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -1.65,
+"mae": 2.45,
+"r": 0.75,
+"corr_mae": 2.1
+},
+{
+"m": "ECMWF 9",
+"bias": -2.68,
+"mae": 3.09,
+"r": 0.756,
+"corr_mae": 2.1
+},
+{
+"m": "GFS 13",
+"bias": -2.55,
+"mae": 3.09,
+"r": 0.704,
+"corr_mae": 2.28
+},
+{
+"m": "UKMO 10",
+"bias": -1.84,
+"mae": 3.74,
+"r": 0.556,
+"corr_mae": 2.52
+}
+]
+},
+{
+"name": "Hyères (Flughafen, METAR)",
+"lat": 43.0944,
+"lon": 6.1464,
+"source": "METAR",
+"id": "LFTH",
+"note": "",
+"tz": "Europe/Paris",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=LFTH&network=",
+"mean_kn": 9.2,
+"hours12": 469,
+"n": 1562,
+"lag_h": 0,
+"best_match_mae": 1.66,
+"best_match_bias": 0.76,
+"best_model": "ICON-CH1 1",
+"best_model_mae": 1.8,
+"best_model_bias": 0.09,
+"corr_mae": 1.26,
+"corr_pod12": 0.73,
+"corr_far12": 0.13,
+"models": [
+{
+"m": "Mittel aller (12)",
+"bias": -0.39,
+"mae": 1.61,
+"r": 0.855,
+"corr_mae": 1.26
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 0.76,
+"mae": 1.66,
+"r": 0.892,
+"corr_mae": 1.32
+},
+{
+"m": "ICON-CH1 1",
+"bias": 0.09,
+"mae": 1.8,
+"r": 0.838,
+"corr_mae": 1.61
+},
+{
+"m": "AROME-HD 1,3",
+"bias": 0.86,
+"mae": 2.1,
+"r": 0.826,
+"corr_mae": 1.61
+},
+{
+"m": "AROME 2,5",
+"bias": 0.52,
+"mae": 1.88,
+"r": 0.835,
+"corr_mae": 1.61
+},
+{
+"m": "ICON-CH2 2",
+"bias": 0.16,
+"mae": 1.81,
+"r": 0.83,
+"corr_mae": 1.67
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -0.79,
+"mae": 2.04,
+"r": 0.813,
+"corr_mae": 1.73
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -0.52,
+"mae": 2.03,
+"r": 0.784,
+"corr_mae": 1.79
+},
+{
+"m": "ICON-EU 7",
+"bias": -1.79,
+"mae": 2.42,
+"r": 0.803,
+"corr_mae": 1.8
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -1.51,
+"mae": 2.46,
+"r": 0.754,
+"corr_mae": 1.87
+},
+{
+"m": "UKMO 10",
+"bias": -2.85,
+"mae": 3.12,
+"r": 0.756,
+"corr_mae": 1.9
+},
+{
+"m": "ECMWF 9",
+"bias": 0.38,
+"mae": 2.4,
+"r": 0.747,
+"corr_mae": 1.91
+},
+{
+"m": "GFS 13",
+"bias": 1.43,
+"mae": 3.38,
+"r": 0.687,
+"corr_mae": 1.99
+}
+]
+},
+{
+"name": "Lo Stagnone (Trapani-Birgi)",
+"lat": 37.9142,
+"lon": 12.4914,
+"source": "SYNOP (WMO)",
+"id": "0-380-0-429",
+"note": "",
+"tz": "Europe/Rome",
+"link": "",
+"mean_kn": 9.7,
+"hours12": 559,
+"n": 1678,
+"lag_h": 0,
+"best_match_mae": 2.2,
+"best_match_bias": -1.7,
+"best_model": "GFS 13",
+"best_model_mae": 1.88,
+"best_model_bias": 0.11,
+"corr_mae": 1.43,
+"corr_pod12": 0.62,
+"corr_far12": 0.15,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": -1.24,
+"mae": 1.8,
+"r": 0.848,
+"corr_mae": 1.43
+},
+{
+"m": "ICON-EU 7",
+"bias": -1.7,
+"mae": 2.2,
+"r": 0.809,
+"corr_mae": 1.54
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.7,
+"mae": 2.2,
+"r": 0.809,
+"corr_mae": 1.54
+},
+{
+"m": "ECMWF 9",
+"bias": -0.44,
+"mae": 2.04,
+"r": 0.745,
+"corr_mae": 1.65
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -1.7,
+"mae": 2.22,
+"r": 0.784,
+"corr_mae": 1.66
+},
+{
+"m": "UKMO 10",
+"bias": -1.97,
+"mae": 2.34,
+"r": 0.796,
+"corr_mae": 1.68
+},
+{
+"m": "GFS 13",
+"bias": 0.11,
+"mae": 1.88,
+"r": 0.758,
+"corr_mae": 1.74
+}
+]
+},
+{
+"name": "Rhodos (Flughafen)",
+"lat": 36.4019,
+"lon": 28.0881,
+"source": "SYNOP (WMO)",
+"id": "0-300-0-749",
+"note": "Meltemi, Ialysos",
+"tz": "Europe/Athens",
+"link": "",
+"mean_kn": 11.9,
+"hours12": 341,
+"n": 611,
+"lag_h": 0,
+"best_match_mae": 4.11,
+"best_match_bias": -3.92,
+"best_model": "ECMWF 9",
+"best_model_mae": 2.79,
+"best_model_bias": -1.25,
+"corr_mae": 2.01,
+"corr_pod12": 0.75,
+"corr_far12": 0.12,
+"models": [
+{
+"m": "Mittel aller (5)",
+"bias": -2.94,
+"mae": 3.45,
+"r": 0.767,
+"corr_mae": 2.01
+},
+{
+"m": "ICON-EU 7",
+"bias": -3.92,
+"mae": 4.11,
+"r": 0.778,
+"corr_mae": 2.13
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -3.92,
+"mae": 4.11,
+"r": 0.778,
+"corr_mae": 2.13
+},
+{
+"m": "UKMO 10",
+"bias": -2.49,
+"mae": 3.33,
+"r": 0.733,
+"corr_mae": 2.16
+},
+{
+"m": "ECMWF 9",
+"bias": -1.25,
+"mae": 2.79,
+"r": 0.691,
+"corr_mae": 2.36
+},
+{
+"m": "GFS 13",
+"bias": -3.11,
+"mae": 4.19,
+"r": 0.649,
+"corr_mae": 2.46
+}
+]
+},
+{
+"name": "Kos (Flughafen)",
+"lat": 36.8004,
+"lon": 27.0913,
+"source": "SYNOP (WMO)",
+"id": "0-300-0-742",
+"note": "Meltemi, Marmari",
+"tz": "Europe/Athens",
+"link": "",
+"mean_kn": 11.1,
+"hours12": 265,
+"n": 611,
+"lag_h": 0,
+"best_match_mae": 2.65,
+"best_match_bias": -2.11,
+"best_model": "ECMWF 9",
+"best_model_mae": 1.84,
+"best_model_bias": 0.29,
+"corr_mae": 1.71,
+"corr_pod12": 0.68,
+"corr_far12": 0.17,
+"models": [
+{
+"m": "Mittel aller (5)",
+"bias": -0.15,
+"mae": 1.84,
+"r": 0.833,
+"corr_mae": 1.71
+},
+{
+"m": "ECMWF 9",
+"bias": 0.29,
+"mae": 1.84,
+"r": 0.835,
+"corr_mae": 1.75
+},
+{
+"m": "UKMO 10",
+"bias": 2.33,
+"mae": 3.33,
+"r": 0.795,
+"corr_mae": 1.95
+},
+{
+"m": "GFS 13",
+"bias": 0.87,
+"mae": 2.35,
+"r": 0.775,
+"corr_mae": 2.03
+},
+{
+"m": "ICON-EU 7",
+"bias": -2.11,
+"mae": 2.65,
+"r": 0.769,
+"corr_mae": 2.07
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.11,
+"mae": 2.65,
+"r": 0.769,
+"corr_mae": 2.07
+}
+]
+},
+{
+"name": "Karpathos (Flughafen)",
+"lat": 35.4171,
+"lon": 27.1547,
+"source": "SYNOP (WMO)",
+"id": "0-300-0-765",
+"note": "Meltemi, Gun Bay",
+"tz": "Europe/Athens",
+"link": "",
+"mean_kn": 19.4,
+"hours12": 520,
+"n": 606,
+"lag_h": 0,
+"best_match_mae": 5.42,
+"best_match_bias": -5.14,
+"best_model": "ICON-EU 7",
+"best_model_mae": 5.42,
+"best_model_bias": -5.14,
+"corr_mae": 2.46,
+"corr_pod12": 0.98,
+"corr_far12": 0.04,
+"models": [
+{
+"m": "Mittel aller (5)",
+"bias": -6.39,
+"mae": 6.65,
+"r": 0.851,
+"corr_mae": 2.46
+},
+{
+"m": "ICON-EU 7",
+"bias": -5.14,
+"mae": 5.42,
+"r": 0.861,
+"corr_mae": 2.58
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -5.14,
+"mae": 5.42,
+"r": 0.861,
+"corr_mae": 2.58
+},
+{
+"m": "ECMWF 9",
+"bias": -5.11,
+"mae": 5.6,
+"r": 0.83,
+"corr_mae": 2.86
+},
+{
+"m": "GFS 13",
+"bias": -6.81,
+"mae": 7.29,
+"r": 0.728,
+"corr_mae": 3.8
+},
+{
+"m": "UKMO 10",
+"bias": -9.67,
+"mae": 9.96,
+"r": 0.521,
+"corr_mae": 4.99
+}
+]
+},
+{
+"name": "Naxos (Flughafen)",
+"lat": 37.0833,
+"lon": 25.3667,
+"source": "METAR",
+"id": "LGNX",
+"note": "Meltemi; SYNOP 0-300-0-732 im IEM-Archiv leer",
+"tz": "Europe/Athens",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=LGNX&network=",
+"mean_kn": 11.8,
+"hours12": 827,
+"n": 1628,
+"lag_h": 1,
+"best_match_mae": 2.92,
+"best_match_bias": 1.15,
+"best_model": "UKMO 10",
+"best_model_mae": 2.3,
+"best_model_bias": -0.34,
+"corr_mae": 2.01,
+"corr_pod12": 0.77,
+"corr_far12": 0.2,
+"models": [
+{
+"m": "Mittel aller (5)",
+"bias": 1.29,
+"mae": 2.7,
+"r": 0.769,
+"corr_mae": 2.01
+},
+{
+"m": "GFS 13",
+"bias": 3.99,
+"mae": 4.84,
+"r": 0.77,
+"corr_mae": 2.06
+},
+{
+"m": "ECMWF 9",
+"bias": 0.5,
+"mae": 2.41,
+"r": 0.776,
+"corr_mae": 2.11
+},
+{
+"m": "UKMO 10",
+"bias": -0.34,
+"mae": 2.3,
+"r": 0.764,
+"corr_mae": 2.13
+},
+{
+"m": "ICON-EU 7",
+"bias": 1.15,
+"mae": 2.92,
+"r": 0.743,
+"corr_mae": 2.18
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 1.15,
+"mae": 2.92,
+"r": 0.743,
+"corr_mae": 2.18
+}
+]
+},
+{
+"name": "Paros (Flughafen)",
+"lat": 37.0245,
+"lon": 25.113,
+"source": "SYNOP (WMO)",
+"id": "0-300-0-766",
+"note": "Meltemi",
+"tz": "Europe/Athens",
+"link": "",
+"mean_kn": 13.8,
+"hours12": 385,
+"n": 603,
+"lag_h": 0,
+"best_match_mae": 3.07,
+"best_match_bias": -2.6,
+"best_model": "ECMWF 9",
+"best_model_mae": 2.52,
+"best_model_bias": -1.92,
+"corr_mae": 1.81,
+"corr_pod12": 0.92,
+"corr_far12": 0.08,
+"models": [
+{
+"m": "Mittel aller (5)",
+"bias": -2.28,
+"mae": 2.74,
+"r": 0.887,
+"corr_mae": 1.81
+},
+{
+"m": "ECMWF 9",
+"bias": -1.92,
+"mae": 2.52,
+"r": 0.897,
+"corr_mae": 1.86
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.6,
+"mae": 3.07,
+"r": 0.879,
+"corr_mae": 2.08
+},
+{
+"m": "ICON-EU 7",
+"bias": -2.6,
+"mae": 3.07,
+"r": 0.879,
+"corr_mae": 2.08
+},
+{
+"m": "UKMO 10",
+"bias": -3.1,
+"mae": 3.35,
+"r": 0.882,
+"corr_mae": 2.1
+},
+{
+"m": "GFS 13",
+"bias": -0.99,
+"mae": 3.71,
+"r": 0.756,
+"corr_mae": 2.98
+}
+]
+},
+{
+"name": "Leucate (Perpignan)",
+"lat": 42.7372,
+"lon": 2.8728,
+"source": "METAR",
+"id": "LFMP",
+"note": "Tramontane, Station 24 km",
+"tz": "Europe/Paris",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=LFMP&network=",
+"mean_kn": 9.4,
+"hours12": 473,
+"n": 1527,
+"lag_h": 0,
+"best_match_mae": 1.39,
+"best_match_bias": -0.72,
+"best_model": "AROME-HD 1,3",
+"best_model_mae": 1.62,
+"best_model_bias": -0.23,
+"corr_mae": 1.21,
+"corr_pod12": 0.85,
+"corr_far12": 0.08,
+"models": [
+{
+"m": "Mittel aller (11)",
+"bias": -0.76,
+"mae": 1.51,
+"r": 0.908,
+"corr_mae": 1.21
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.72,
+"mae": 1.39,
+"r": 0.936,
+"corr_mae": 1.25
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.23,
+"mae": 1.62,
+"r": 0.901,
+"corr_mae": 1.54
+},
+{
+"m": "AROME 2,5",
+"bias": -0.52,
+"mae": 1.65,
+"r": 0.898,
+"corr_mae": 1.57
+},
+{
+"m": "ICON-EU 7",
+"bias": -0.68,
+"mae": 1.86,
+"r": 0.875,
+"corr_mae": 1.76
+},
+{
+"m": "ICON-CH1 1",
+"bias": 0.82,
+"mae": 2.13,
+"r": 0.867,
+"corr_mae": 1.79
+},
+{
+"m": "UKMO 10",
+"bias": -1.92,
+"mae": 2.5,
+"r": 0.861,
+"corr_mae": 1.82
+},
+{
+"m": "GFS 13",
+"bias": -0.99,
+"mae": 2.02,
+"r": 0.847,
+"corr_mae": 1.92
+},
+{
+"m": "ICON-CH2 2",
+"bias": 0.62,
+"mae": 2.2,
+"r": 0.844,
+"corr_mae": 1.94
+},
+{
+"m": "ECMWF 9",
+"bias": -1.35,
+"mae": 2.18,
+"r": 0.848,
+"corr_mae": 1.95
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -0.92,
+"mae": 2.11,
+"r": 0.829,
+"corr_mae": 2.0
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -1.37,
+"mae": 2.37,
+"r": 0.805,
+"corr_mae": 2.14
+}
+]
+},
+{
+"name": "Sylt (List)",
+"lat": 55.011,
+"lon": 8.4125,
+"source": "SYNOP (WMO)",
+"id": "0-276-0-20",
+"note": "",
+"tz": "Europe/Berlin",
+"link": "",
+"mean_kn": 14.5,
+"hours12": 925,
+"n": 1473,
+"lag_h": 0,
+"best_match_mae": 3.31,
+"best_match_bias": -2.9,
+"best_model": "UKMO 10",
+"best_model_mae": 2.17,
+"best_model_bias": -1.27,
+"corr_mae": 1.64,
+"corr_pod12": 0.95,
+"corr_far12": 0.08,
+"models": [
+{
+"m": "Mittel aller (12)",
+"bias": -2.09,
+"mae": 2.55,
+"r": 0.93,
+"corr_mae": 1.64
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -3.02,
+"mae": 3.28,
+"r": 0.923,
+"corr_mae": 1.81
+},
+{
+"m": "ICON-EU 7",
+"bias": -3.38,
+"mae": 3.59,
+"r": 0.919,
+"corr_mae": 1.83
+},
+{
+"m": "UKMO 10",
+"bias": -1.27,
+"mae": 2.17,
+"r": 0.915,
+"corr_mae": 1.91
+},
+{
+"m": "UKV 2",
+"bias": -1.06,
+"mae": 2.24,
+"r": 0.902,
+"corr_mae": 2.02
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.9,
+"mae": 3.31,
+"r": 0.9,
+"corr_mae": 2.1
+},
+{
+"m": "MET-Nordic 1",
+"bias": -2.9,
+"mae": 3.31,
+"r": 0.9,
+"corr_mae": 2.1
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -3.55,
+"mae": 3.84,
+"r": 0.901,
+"corr_mae": 2.1
+},
+{
+"m": "ECMWF 9",
+"bias": -0.53,
+"mae": 2.28,
+"r": 0.888,
+"corr_mae": 2.15
+},
+{
+"m": "GFS 13",
+"bias": -0.51,
+"mae": 2.34,
+"r": 0.89,
+"corr_mae": 2.19
+},
+{
+"m": "AROME 2,5",
+"bias": -1.59,
+"mae": 2.65,
+"r": 0.877,
+"corr_mae": 2.29
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -1.9,
+"mae": 2.82,
+"r": 0.869,
+"corr_mae": 2.35
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -2.42,
+"mae": 3.13,
+"r": 0.879,
+"corr_mae": 2.38
+}
+]
+},
+{
+"name": "Fehmarn",
+"lat": 54.5283,
+"lon": 11.0606,
+"source": "SYNOP (WMO)",
+"id": "0-276-0-55",
+"note": "",
+"tz": "Europe/Berlin",
+"link": "",
+"mean_kn": 11.8,
+"hours12": 665,
+"n": 1675,
+"lag_h": 0,
+"best_match_mae": 2.39,
+"best_match_bias": -1.37,
+"best_model": "AROME 2,5",
+"best_model_mae": 2.27,
+"best_model_bias": -0.2,
+"corr_mae": 1.89,
+"corr_pod12": 0.86,
+"corr_far12": 0.19,
+"models": [
+{
+"m": "Mittel aller (12)",
+"bias": -0.59,
+"mae": 2.11,
+"r": 0.914,
+"corr_mae": 1.89
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -1.37,
+"mae": 2.39,
+"r": 0.91,
+"corr_mae": 2.03
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.37,
+"mae": 2.39,
+"r": 0.91,
+"corr_mae": 2.03
+},
+{
+"m": "ICON-EU 7",
+"bias": -1.05,
+"mae": 2.35,
+"r": 0.898,
+"corr_mae": 2.15
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -0.76,
+"mae": 2.35,
+"r": 0.88,
+"corr_mae": 2.3
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.11,
+"mae": 2.27,
+"r": 0.879,
+"corr_mae": 2.31
+},
+{
+"m": "AROME 2,5",
+"bias": -0.2,
+"mae": 2.27,
+"r": 0.88,
+"corr_mae": 2.31
+},
+{
+"m": "MET-Nordic 1",
+"bias": -0.54,
+"mae": 2.36,
+"r": 0.874,
+"corr_mae": 2.32
+},
+{
+"m": "UKV 2",
+"bias": 0.15,
+"mae": 2.46,
+"r": 0.866,
+"corr_mae": 2.47
+},
+{
+"m": "ECMWF 9",
+"bias": -1.22,
+"mae": 2.67,
+"r": 0.868,
+"corr_mae": 2.5
+},
+{
+"m": "UKMO 10",
+"bias": 0.99,
+"mae": 2.66,
+"r": 0.857,
+"corr_mae": 2.6
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -2.52,
+"mae": 3.29,
+"r": 0.845,
+"corr_mae": 2.61
+},
+{
+"m": "GFS 13",
+"bias": 0.9,
+"mae": 2.88,
+"r": 0.829,
+"corr_mae": 2.76
+}
+]
+},
+{
+"name": "Neusiedler See",
+"lat": 47.9492,
+"lon": 16.8289,
+"source": "SYNOP (WMO)",
+"id": "0-40-0-72",
+"note": "",
+"tz": "Europe/Vienna",
+"link": "",
+"mean_kn": 5.7,
+"hours12": 22,
+"n": 1649,
+"lag_h": 0,
+"best_match_mae": 2.34,
+"best_match_bias": 1.81,
+"best_model": "HARMONIE-DMI 2",
+"best_model_mae": 1.94,
+"best_model_bias": 0.48,
+"corr_mae": 1.33,
+"corr_pod12": 0.09,
+"corr_far12": 0.67,
+"models": [
+{
+"m": "Mittel aller (9)",
+"bias": 1.76,
+"mae": 2.13,
+"r": 0.781,
+"corr_mae": 1.33
+},
+{
+"m": "ICON-D2 2,2",
+"bias": 1.8,
+"mae": 2.33,
+"r": 0.769,
+"corr_mae": 1.46
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 1.81,
+"mae": 2.34,
+"r": 0.767,
+"corr_mae": 1.46
+},
+{
+"m": "UKMO 10",
+"bias": 1.63,
+"mae": 2.29,
+"r": 0.725,
+"corr_mae": 1.52
+},
+{
+"m": "ICON-EU 7",
+"bias": 1.6,
+"mae": 2.25,
+"r": 0.74,
+"corr_mae": 1.53
+},
+{
+"m": "ECMWF 9",
+"bias": 1.65,
+"mae": 2.41,
+"r": 0.719,
+"corr_mae": 1.55
+},
+{
+"m": "GFS 13",
+"bias": 4.14,
+"mae": 4.41,
+"r": 0.695,
+"corr_mae": 1.56
+},
+{
+"m": "ICON-2I 2,2",
+"bias": 2.19,
+"mae": 2.76,
+"r": 0.704,
+"corr_mae": 1.58
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": 0.94,
+"mae": 2.07,
+"r": 0.622,
+"corr_mae": 1.75
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": 0.48,
+"mae": 1.94,
+"r": 0.62,
+"corr_mae": 1.76
+}
+]
+},
+{
+"name": "Dakhla (Flughafen)",
+"lat": 23.7167,
+"lon": -15.9333,
+"source": "METAR",
+"id": "GMMH",
+"note": "Passat, Lagune ~5 km; WMO 60096 auch in OGIMET",
+"tz": "Africa/El_Aaiun",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=GMMH&network=",
+"mean_kn": 19.5,
+"hours12": 1523,
+"n": 1655,
+"lag_h": -1,
+"best_match_mae": 3.05,
+"best_match_bias": -2.33,
+"best_model": "UKMO 10",
+"best_model_mae": 2.44,
+"best_model_bias": -0.38,
+"corr_mae": 1.92,
+"corr_pod12": 0.98,
+"corr_far12": 0.04,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -2.26,
+"mae": 2.88,
+"r": 0.857,
+"corr_mae": 1.92
+},
+{
+"m": "ECMWF 9",
+"bias": -2.33,
+"mae": 3.05,
+"r": 0.822,
+"corr_mae": 2.14
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.33,
+"mae": 3.05,
+"r": 0.822,
+"corr_mae": 2.14
+},
+{
+"m": "UKMO 10",
+"bias": -0.38,
+"mae": 2.44,
+"r": 0.794,
+"corr_mae": 2.24
+},
+{
+"m": "GFS 13",
+"bias": -3.98,
+"mae": 4.33,
+"r": 0.8,
+"corr_mae": 2.26
+}
+]
+},
+{
+"name": "Essaouira",
+"lat": 31.51,
+"lon": -9.78,
+"source": "SYNOP (WMO, OGIMET)",
+"id": "60220",
+"note": "Alizé; WMO 60220 aus OGIMET (IEM nur bis 11.06.2026), 3-stündlich",
+"tz": "Africa/Casablanca",
+"link": "",
+"mean_kn": 11.1,
+"hours12": 431,
+"n": 781,
+"lag_h": 0,
+"best_match_mae": 2.44,
+"best_match_bias": -0.04,
+"best_model": "UKMO 10",
+"best_model_mae": 2.16,
+"best_model_bias": -0.41,
+"corr_mae": 2.18,
+"corr_pod12": 0.7,
+"corr_far12": 0.06,
+"models": [
+{
+"m": "ICON-EU 7",
+"bias": -0.04,
+"mae": 2.44,
+"r": 0.812,
+"corr_mae": 2.14
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.04,
+"mae": 2.44,
+"r": 0.812,
+"corr_mae": 2.14
+},
+{
+"m": "GFS 13",
+"bias": 3.6,
+"mae": 4.34,
+"r": 0.815,
+"corr_mae": 2.17
+},
+{
+"m": "Mittel aller (5)",
+"bias": 1.18,
+"mae": 2.56,
+"r": 0.828,
+"corr_mae": 2.18
+},
+{
+"m": "ECMWF 9",
+"bias": 2.78,
+"mae": 3.69,
+"r": 0.815,
+"corr_mae": 2.22
+},
+{
+"m": "UKMO 10",
+"bias": -0.41,
+"mae": 2.16,
+"r": 0.807,
+"corr_mae": 2.24
+}
+]
+},
+{
+"name": "Hurghada/El Gouna",
+"lat": 27.178,
+"lon": 33.8,
+"source": "SYNOP (WMO)",
+"id": "0-818-0-463",
+"note": "",
+"tz": "Africa/Cairo",
+"link": "",
+"mean_kn": 13.7,
+"hours12": 383,
+"n": 602,
+"lag_h": 0,
+"best_match_mae": 3.02,
+"best_match_bias": -0.92,
+"best_model": "UKMO 10",
+"best_model_mae": 3.21,
+"best_model_bias": 1.02,
+"corr_mae": 2.9,
+"corr_pod12": 0.91,
+"corr_far12": 0.17,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -0.12,
+"mae": 2.81,
+"r": 0.744,
+"corr_mae": 2.9
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.92,
+"mae": 3.02,
+"r": 0.726,
+"corr_mae": 3.05
+},
+{
+"m": "UKMO 10",
+"bias": 1.02,
+"mae": 3.21,
+"r": 0.715,
+"corr_mae": 3.09
+},
+{
+"m": "ECMWF 9",
+"bias": -1.78,
+"mae": 3.27,
+"r": 0.717,
+"corr_mae": 3.09
+},
+{
+"m": "GFS 13",
+"bias": 1.3,
+"mae": 3.63,
+"r": 0.627,
+"corr_mae": 3.5
+}
+]
+},
+{
+"name": "Sal (Flughafen)",
+"lat": 16.7419,
+"lon": -22.9489,
+"source": "METAR",
+"id": "GVAC",
+"note": "Passat, Winter; SYNOP 0-132-0-594 im IEM-Archiv lueckenhaft",
+"tz": "Atlantic/Cape_Verde",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=GVAC&network=",
+"mean_kn": 13.6,
+"hours12": 1094,
+"n": 1581,
+"lag_h": 0,
+"best_match_mae": 1.48,
+"best_match_bias": -0.72,
+"best_model": "ECMWF 9",
+"best_model_mae": 1.48,
+"best_model_bias": -0.72,
+"corr_mae": 1.36,
+"corr_pod12": 0.91,
+"corr_far12": 0.06,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -1.0,
+"mae": 1.59,
+"r": 0.904,
+"corr_mae": 1.36
+},
+{
+"m": "ECMWF 9",
+"bias": -0.72,
+"mae": 1.48,
+"r": 0.907,
+"corr_mae": 1.4
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.72,
+"mae": 1.48,
+"r": 0.907,
+"corr_mae": 1.4
+},
+{
+"m": "UKMO 10",
+"bias": -0.8,
+"mae": 1.85,
+"r": 0.865,
+"corr_mae": 1.59
+},
+{
+"m": "GFS 13",
+"bias": -1.75,
+"mae": 2.36,
+"r": 0.84,
+"corr_mae": 1.83
+}
+]
+},
+{
+"name": "Kroatien Bol/Brac (Hvar)",
+"lat": 43.171,
+"lon": 16.437,
+"source": "SYNOP (WMO)",
+"id": "0-705-0-447",
+"note": "Maestral",
+"tz": "Europe/Zagreb",
+"link": "",
+"mean_kn": 6.5,
+"hours12": 45,
+"n": 902,
+"lag_h": -1,
+"best_match_mae": 1.85,
+"best_match_bias": -0.48,
+"best_model": "ICON-EU 7",
+"best_model_mae": 1.85,
+"best_model_bias": -0.48,
+"corr_mae": 1.7,
+"corr_pod12": 0.64,
+"corr_far12": 0.34,
+"models": [
+{
+"m": "Mittel aller (8)",
+"bias": 1.33,
+"mae": 2.04,
+"r": 0.754,
+"corr_mae": 1.7
+},
+{
+"m": "ICON-2I 2,2",
+"bias": 0.78,
+"mae": 2.0,
+"r": 0.727,
+"corr_mae": 1.75
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.48,
+"mae": 1.85,
+"r": 0.725,
+"corr_mae": 1.8
+},
+{
+"m": "ICON-EU 7",
+"bias": -0.48,
+"mae": 1.85,
+"r": 0.725,
+"corr_mae": 1.8
+},
+{
+"m": "GFS 13",
+"bias": 3.24,
+"mae": 3.96,
+"r": 0.642,
+"corr_mae": 1.9
+},
+{
+"m": "UKMO 10",
+"bias": 2.68,
+"mae": 3.57,
+"r": 0.65,
+"corr_mae": 1.91
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": 1.08,
+"mae": 2.24,
+"r": 0.634,
+"corr_mae": 2.0
+},
+{
+"m": "ECMWF 9",
+"bias": 3.09,
+"mae": 3.59,
+"r": 0.612,
+"corr_mae": 2.01
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": 0.77,
+"mae": 2.23,
+"r": 0.614,
+"corr_mae": 2.06
+}
+]
+},
+{
+"name": "Kroatien Split (Marjan)",
+"lat": 43.508,
+"lon": 16.426,
+"source": "SYNOP (WMO)",
+"id": "0-705-0-445",
+"note": "Maestral, Station 122 m",
+"tz": "Europe/Zagreb",
+"link": "",
+"mean_kn": 7.1,
+"hours12": 145,
+"n": 1607,
+"lag_h": 0,
+"best_match_mae": 2.51,
+"best_match_bias": -1.77,
+"best_model": "HARMONIE-DMI 2",
+"best_model_mae": 2.36,
+"best_model_bias": -0.35,
+"corr_mae": 1.81,
+"corr_pod12": 0.63,
+"corr_far12": 0.29,
+"models": [
+{
+"m": "Mittel aller (9)",
+"bias": -1.11,
+"mae": 1.96,
+"r": 0.759,
+"corr_mae": 1.81
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -0.09,
+"mae": 2.42,
+"r": 0.681,
+"corr_mae": 2.04
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.77,
+"mae": 2.51,
+"r": 0.681,
+"corr_mae": 2.09
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -1.77,
+"mae": 2.51,
+"r": 0.681,
+"corr_mae": 2.09
+},
+{
+"m": "ICON-EU 7",
+"bias": -1.65,
+"mae": 2.51,
+"r": 0.658,
+"corr_mae": 2.17
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": 0.06,
+"mae": 2.46,
+"r": 0.606,
+"corr_mae": 2.22
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -0.35,
+"mae": 2.36,
+"r": 0.593,
+"corr_mae": 2.22
+},
+{
+"m": "GFS 13",
+"bias": -0.71,
+"mae": 2.56,
+"r": 0.627,
+"corr_mae": 2.23
+},
+{
+"m": "ECMWF 9",
+"bias": -1.33,
+"mae": 2.47,
+"r": 0.596,
+"corr_mae": 2.31
+},
+{
+"m": "UKMO 10",
+"bias": -1.96,
+"mae": 2.87,
+"r": 0.558,
+"corr_mae": 2.44
+}
+]
+},
+{
+"name": "Bodensee (Konstanz)",
+"lat": 47.6952,
+"lon": 9.1307,
+"source": "SYNOP (WMO)",
+"id": "0-276-0-929",
+"note": "",
+"tz": "Europe/Berlin",
+"link": "",
+"mean_kn": 5.2,
+"hours12": 36,
+"n": 1670,
+"lag_h": 0,
+"best_match_mae": 1.49,
+"best_match_bias": -0.88,
+"best_model": "AROME-HD 1,3",
+"best_model_mae": 1.37,
+"best_model_bias": -0.51,
+"corr_mae": 1.08,
+"corr_pod12": 0.17,
+"corr_far12": 0.0,
+"models": [
+{
+"m": "Mittel aller (14)",
+"bias": -0.62,
+"mae": 1.26,
+"r": 0.847,
+"corr_mae": 1.08
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -0.89,
+"mae": 1.49,
+"r": 0.821,
+"corr_mae": 1.19
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.88,
+"mae": 1.49,
+"r": 0.819,
+"corr_mae": 1.2
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.51,
+"mae": 1.37,
+"r": 0.797,
+"corr_mae": 1.25
+},
+{
+"m": "AROME 2,5",
+"bias": -0.54,
+"mae": 1.41,
+"r": 0.793,
+"corr_mae": 1.25
+},
+{
+"m": "ICON-CH1 1",
+"bias": 0.41,
+"mae": 1.71,
+"r": 0.779,
+"corr_mae": 1.29
+},
+{
+"m": "ICON-CH2 2",
+"bias": -0.42,
+"mae": 1.48,
+"r": 0.779,
+"corr_mae": 1.29
+},
+{
+"m": "UKV 2",
+"bias": -0.71,
+"mae": 1.66,
+"r": 0.764,
+"corr_mae": 1.31
+},
+{
+"m": "ICON-EU 7",
+"bias": -0.93,
+"mae": 1.7,
+"r": 0.768,
+"corr_mae": 1.32
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -0.65,
+"mae": 1.64,
+"r": 0.766,
+"corr_mae": 1.32
+},
+{
+"m": "ECMWF 9",
+"bias": -0.55,
+"mae": 1.58,
+"r": 0.762,
+"corr_mae": 1.32
+},
+{
+"m": "UKMO 10",
+"bias": -0.49,
+"mae": 1.59,
+"r": 0.739,
+"corr_mae": 1.39
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -0.88,
+"mae": 1.78,
+"r": 0.652,
+"corr_mae": 1.52
+},
+{
+"m": "GFS 13",
+"bias": -0.49,
+"mae": 1.77,
+"r": 0.679,
+"corr_mae": 1.55
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -1.01,
+"mae": 1.91,
+"r": 0.607,
+"corr_mae": 1.63
+}
+]
+},
+{
+"name": "Bodensee (Guettingen)",
+"lat": 47.60173,
+"lon": 9.27943,
+"source": "MeteoSwiss",
+"id": "GUT",
+"note": "",
+"tz": "Europe/Zurich",
+"link": "https://www.meteoswiss.admin.ch/services-and-publications/applications/measurement-values-and-measuring-networks.html",
+"mean_kn": 4.8,
+"hours12": 19,
+"n": 1683,
+"lag_h": 0,
+"best_match_mae": 1.44,
+"best_match_bias": -0.16,
+"best_model": "AROME 2,5",
+"best_model_mae": 1.29,
+"best_model_bias": -0.0,
+"corr_mae": 0.88,
+"corr_pod12": 0.05,
+"corr_far12": 0.5,
+"models": [
+{
+"m": "Mittel aller (14)",
+"bias": 0.03,
+"mae": 1.07,
+"r": 0.846,
+"corr_mae": 0.88
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -0.16,
+"mae": 1.44,
+"r": 0.793,
+"corr_mae": 1.0
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.16,
+"mae": 1.44,
+"r": 0.793,
+"corr_mae": 1.0
+},
+{
+"m": "AROME-HD 1,3",
+"bias": 0.0,
+"mae": 1.29,
+"r": 0.775,
+"corr_mae": 1.06
+},
+{
+"m": "AROME 2,5",
+"bias": -0.0,
+"mae": 1.29,
+"r": 0.771,
+"corr_mae": 1.07
+},
+{
+"m": "UKV 2",
+"bias": -0.4,
+"mae": 1.43,
+"r": 0.775,
+"corr_mae": 1.09
+},
+{
+"m": "ICON-CH2 2",
+"bias": 0.38,
+"mae": 1.6,
+"r": 0.753,
+"corr_mae": 1.09
+},
+{
+"m": "ICON-CH1 1",
+"bias": 0.76,
+"mae": 1.56,
+"r": 0.763,
+"corr_mae": 1.12
+},
+{
+"m": "ICON-EU 7",
+"bias": -0.14,
+"mae": 1.9,
+"r": 0.767,
+"corr_mae": 1.12
+},
+{
+"m": "UKMO 10",
+"bias": -0.45,
+"mae": 1.68,
+"r": 0.732,
+"corr_mae": 1.16
+},
+{
+"m": "ECMWF 9",
+"bias": -0.27,
+"mae": 1.73,
+"r": 0.732,
+"corr_mae": 1.17
+},
+{
+"m": "ICON-2I 2,2",
+"bias": 0.05,
+"mae": 1.53,
+"r": 0.715,
+"corr_mae": 1.2
+},
+{
+"m": "GFS 13",
+"bias": 0.55,
+"mae": 1.92,
+"r": 0.647,
+"corr_mae": 1.36
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": 0.37,
+"mae": 1.89,
+"r": 0.594,
+"corr_mae": 1.39
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -0.16,
+"mae": 1.74,
+"r": 0.528,
+"corr_mae": 1.5
+}
+]
+},
+{
+"name": "Genfer See (Pully)",
+"lat": 46.51228,
+"lon": 6.66752,
+"source": "MeteoSwiss",
+"id": "PUY",
+"note": "Station am Hang",
+"tz": "Europe/Zurich",
+"link": "https://www.meteoswiss.admin.ch/services-and-publications/applications/measurement-values-and-measuring-networks.html",
+"mean_kn": 3.2,
+"hours12": 0,
+"n": 1683,
+"lag_h": 0,
+"best_match_mae": 1.37,
+"best_match_bias": 0.79,
+"best_model": "AROME-HD 1,3",
+"best_model_mae": 1.02,
+"best_model_bias": 0.44,
+"corr_mae": 0.59,
+"corr_pod12": 0.0,
+"corr_far12": 1.0,
+"models": [
+{
+"m": "Mittel aller (14)",
+"bias": 0.97,
+"mae": 1.19,
+"r": 0.785,
+"corr_mae": 0.59
+},
+{
+"m": "ICON-CH1 1",
+"bias": 0.98,
+"mae": 1.42,
+"r": 0.743,
+"corr_mae": 0.69
+},
+{
+"m": "UKV 2",
+"bias": 0.46,
+"mae": 1.21,
+"r": 0.734,
+"corr_mae": 0.7
+},
+{
+"m": "ICON-D2 2,2",
+"bias": 0.79,
+"mae": 1.37,
+"r": 0.714,
+"corr_mae": 0.7
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 0.79,
+"mae": 1.37,
+"r": 0.714,
+"corr_mae": 0.7
+},
+{
+"m": "ICON-CH2 2",
+"bias": 0.7,
+"mae": 1.38,
+"r": 0.684,
+"corr_mae": 0.72
+},
+{
+"m": "AROME-HD 1,3",
+"bias": 0.44,
+"mae": 1.02,
+"r": 0.696,
+"corr_mae": 0.72
+},
+{
+"m": "ICON-EU 7",
+"bias": 0.93,
+"mae": 1.75,
+"r": 0.65,
+"corr_mae": 0.78
+},
+{
+"m": "AROME 2,5",
+"bias": 0.66,
+"mae": 1.77,
+"r": 0.621,
+"corr_mae": 0.79
+},
+{
+"m": "UKMO 10",
+"bias": 0.51,
+"mae": 1.56,
+"r": 0.647,
+"corr_mae": 0.79
+},
+{
+"m": "ICON-2I 2,2",
+"bias": 1.58,
+"mae": 2.12,
+"r": 0.606,
+"corr_mae": 0.8
+},
+{
+"m": "ECMWF 9",
+"bias": 1.45,
+"mae": 2.26,
+"r": 0.603,
+"corr_mae": 0.82
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": 1.2,
+"mae": 1.82,
+"r": 0.597,
+"corr_mae": 0.82
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": 1.41,
+"mae": 1.95,
+"r": 0.55,
+"corr_mae": 0.86
+},
+{
+"m": "GFS 13",
+"bias": 1.72,
+"mae": 2.45,
+"r": 0.537,
+"corr_mae": 0.88
+}
+]
+},
+{
+"name": "Lago Maggiore (Magadino)",
+"lat": 46.16002,
+"lon": 8.93367,
+"source": "MeteoSwiss",
+"id": "MAG",
+"note": "Ebene am Nordende",
+"tz": "Europe/Zurich",
+"link": "https://www.meteoswiss.admin.ch/services-and-publications/applications/measurement-values-and-measuring-networks.html",
+"mean_kn": 4.5,
+"hours12": 20,
+"n": 1651,
+"lag_h": 1,
+"best_match_mae": 2.01,
+"best_match_bias": -0.62,
+"best_model": "ICON-CH1 1",
+"best_model_mae": 1.94,
+"best_model_bias": -0.22,
+"corr_mae": 1.35,
+"corr_pod12": 0.0,
+"corr_far12": 1.0,
+"models": [
+{
+"m": "Mittel aller (14)",
+"bias": -0.61,
+"mae": 1.74,
+"r": 0.668,
+"corr_mae": 1.35
+},
+{
+"m": "AROME 2,5",
+"bias": -1.0,
+"mae": 2.01,
+"r": 0.574,
+"corr_mae": 1.38
+},
+{
+"m": "AROME-HD 1,3",
+"bias": 0.14,
+"mae": 1.95,
+"r": 0.602,
+"corr_mae": 1.39
+},
+{
+"m": "ICON-CH1 1",
+"bias": -0.22,
+"mae": 1.94,
+"r": 0.543,
+"corr_mae": 1.4
+},
+{
+"m": "UKMO 10",
+"bias": -1.24,
+"mae": 2.02,
+"r": 0.527,
+"corr_mae": 1.41
+},
+{
+"m": "ICON-EU 7",
+"bias": -1.54,
+"mae": 2.19,
+"r": 0.535,
+"corr_mae": 1.42
+},
+{
+"m": "GFS 13",
+"bias": -0.67,
+"mae": 2.13,
+"r": 0.456,
+"corr_mae": 1.44
+},
+{
+"m": "ICON-CH2 2",
+"bias": -0.62,
+"mae": 2.14,
+"r": 0.49,
+"corr_mae": 1.45
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -0.6,
+"mae": 1.99,
+"r": 0.575,
+"corr_mae": 1.45
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.62,
+"mae": 2.01,
+"r": 0.573,
+"corr_mae": 1.45
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": 0.73,
+"mae": 2.35,
+"r": 0.405,
+"corr_mae": 1.46
+},
+{
+"m": "UKV 2",
+"bias": -1.11,
+"mae": 2.02,
+"r": 0.515,
+"corr_mae": 1.46
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": 1.1,
+"mae": 2.52,
+"r": 0.392,
+"corr_mae": 1.47
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -0.83,
+"mae": 2.31,
+"r": 0.424,
+"corr_mae": 1.47
+},
+{
+"m": "ECMWF 9",
+"bias": -2.1,
+"mae": 2.64,
+"r": 0.327,
+"corr_mae": 1.5
+}
+]
+},
+{
+"name": "Teneriffa El Medano (Flughafen Sur)",
+"lat": 28.0475,
+"lon": -16.5608,
+"source": "METAR",
+"id": "GCTS",
+"note": "Passat",
+"tz": "Atlantic/Canary",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=GCTS&network=",
+"mean_kn": 13.5,
+"hours12": 977,
+"n": 1574,
+"lag_h": 0,
+"best_match_mae": 4.7,
+"best_match_bias": -0.55,
+"best_model": "GFS 13",
+"best_model_mae": 4.24,
+"best_model_bias": 0.12,
+"corr_mae": 2.8,
+"corr_pod12": 0.83,
+"corr_far12": 0.11,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -3.41,
+"mae": 4.28,
+"r": 0.81,
+"corr_mae": 2.8
+},
+{
+"m": "GFS 13",
+"bias": 0.12,
+"mae": 4.24,
+"r": 0.742,
+"corr_mae": 3.31
+},
+{
+"m": "ECMWF 9",
+"bias": -2.92,
+"mae": 4.39,
+"r": 0.739,
+"corr_mae": 3.35
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.55,
+"mae": 4.7,
+"r": 0.64,
+"corr_mae": 3.68
+},
+{
+"m": "UKMO 10",
+"bias": -8.19,
+"mae": 8.47,
+"r": 0.445,
+"corr_mae": 4.97
+}
+]
+},
+{
+"name": "Gran Canaria Pozo (Gando)",
+"lat": 27.9225,
+"lon": -15.3894,
+"source": "METAR",
+"id": "GCLP",
+"note": "Passat",
+"tz": "Atlantic/Canary",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=GCLP&network=",
+"mean_kn": 21.0,
+"hours12": 1531,
+"n": 1673,
+"lag_h": 0,
+"best_match_mae": 10.77,
+"best_match_bias": -10.7,
+"best_model": "UKMO 10",
+"best_model_mae": 4.66,
+"best_model_bias": -4.23,
+"corr_mae": 2.05,
+"corr_pod12": 0.99,
+"corr_far12": 0.03,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -7.26,
+"mae": 7.31,
+"r": 0.883,
+"corr_mae": 2.05
+},
+{
+"m": "UKMO 10",
+"bias": -4.23,
+"mae": 4.66,
+"r": 0.848,
+"corr_mae": 2.3
+},
+{
+"m": "ECMWF 9",
+"bias": -9.2,
+"mae": 9.25,
+"r": 0.833,
+"corr_mae": 2.55
+},
+{
+"m": "GFS 13",
+"bias": -4.62,
+"mae": 5.04,
+"r": 0.83,
+"corr_mae": 2.61
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -10.7,
+"mae": 10.77,
+"r": 0.74,
+"corr_mae": 3.29
+}
+]
+},
+{
+"name": "Cumbuco (Fortaleza)",
+"lat": -3.7763,
+"lon": -38.5326,
+"source": "METAR",
+"id": "SBFZ",
+"note": "Passat, Station 25 km",
+"tz": "America/Fortaleza",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=SBFZ&network=",
+"mean_kn": 12.8,
+"hours12": 1030,
+"n": 1682,
+"lag_h": 0,
+"best_match_mae": 4.21,
+"best_match_bias": -4.1,
+"best_model": "UKMO 10",
+"best_model_mae": 3.05,
+"best_model_bias": -2.44,
+"corr_mae": 1.71,
+"corr_pod12": 0.89,
+"corr_far12": 0.16,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -3.85,
+"mae": 3.96,
+"r": 0.82,
+"corr_mae": 1.71
+},
+{
+"m": "ECMWF 9",
+"bias": -4.1,
+"mae": 4.21,
+"r": 0.794,
+"corr_mae": 1.78
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -4.1,
+"mae": 4.21,
+"r": 0.794,
+"corr_mae": 1.78
+},
+{
+"m": "UKMO 10",
+"bias": -2.44,
+"mae": 3.05,
+"r": 0.713,
+"corr_mae": 1.82
+},
+{
+"m": "GFS 13",
+"bias": -4.75,
+"mae": 4.81,
+"r": 0.786,
+"corr_mae": 1.9
+}
+]
+},
+{
+"name": "Kapstadt (Flughafen)",
+"lat": -33.9667,
+"lon": 18.6,
+"source": "METAR",
+"id": "FACT",
+"note": "Winter, Station 22 km landein",
+"tz": "Africa/Johannesburg",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=FACT&network=",
+"mean_kn": 10.1,
+"hours12": 573,
+"n": 1507,
+"lag_h": 0,
+"best_match_mae": 4.95,
+"best_match_bias": -4.86,
+"best_model": "GFS 13",
+"best_model_mae": 3.6,
+"best_model_bias": -3.14,
+"corr_mae": 2.03,
+"corr_pod12": 0.77,
+"corr_far12": 0.16,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -4.74,
+"mae": 4.79,
+"r": 0.869,
+"corr_mae": 2.03
+},
+{
+"m": "UKMO 10",
+"bias": -4.31,
+"mae": 4.44,
+"r": 0.867,
+"corr_mae": 2.21
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -4.86,
+"mae": 4.95,
+"r": 0.866,
+"corr_mae": 2.22
+},
+{
+"m": "ECMWF 9",
+"bias": -4.86,
+"mae": 4.95,
+"r": 0.866,
+"corr_mae": 2.22
+},
+{
+"m": "GFS 13",
+"bias": -3.14,
+"mae": 3.6,
+"r": 0.826,
+"corr_mae": 2.52
+}
+]
+},
+{
+"name": "Mauritius (Plaisance)",
+"lat": -20.4344,
+"lon": 57.6836,
+"source": "METAR",
+"id": "FIMP",
+"note": "Winter = Passatsaison",
+"tz": "Indian/Mauritius",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=FIMP&network=",
+"mean_kn": 9.2,
+"hours12": 429,
+"n": 1625,
+"lag_h": 0,
+"best_match_mae": 2.07,
+"best_match_bias": -1.18,
+"best_model": "GFS 13",
+"best_model_mae": 1.86,
+"best_model_bias": -0.15,
+"corr_mae": 1.66,
+"corr_pod12": 0.58,
+"corr_far12": 0.18,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -0.88,
+"mae": 1.82,
+"r": 0.811,
+"corr_mae": 1.66
+},
+{
+"m": "GFS 13",
+"bias": -0.15,
+"mae": 1.86,
+"r": 0.786,
+"corr_mae": 1.79
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.18,
+"mae": 2.07,
+"r": 0.8,
+"corr_mae": 1.8
+},
+{
+"m": "ECMWF 9",
+"bias": -1.18,
+"mae": 2.07,
+"r": 0.8,
+"corr_mae": 1.8
+},
+{
+"m": "UKMO 10",
+"bias": -0.52,
+"mae": 1.92,
+"r": 0.785,
+"corr_mae": 1.89
+}
+]
+},
+{
+"name": "Perth (Flughafen)",
+"lat": -31.9275,
+"lon": 115.9761,
+"source": "METAR",
+"id": "YPPH",
+"note": "Winter, Station 15 km landein",
+"tz": "Australia/Perth",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=YPPH&network=",
+"mean_kn": 8.9,
+"hours12": 396,
+"n": 1669,
+"lag_h": 0,
+"best_match_mae": 3.83,
+"best_match_bias": -3.68,
+"best_model": "GFS 13",
+"best_model_mae": 2.54,
+"best_model_bias": -1.76,
+"corr_mae": 1.78,
+"corr_pod12": 0.59,
+"corr_far12": 0.19,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -3.07,
+"mae": 3.27,
+"r": 0.819,
+"corr_mae": 1.78
+},
+{
+"m": "ECMWF 9",
+"bias": -3.68,
+"mae": 3.83,
+"r": 0.786,
+"corr_mae": 1.92
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -3.68,
+"mae": 3.83,
+"r": 0.786,
+"corr_mae": 1.92
+},
+{
+"m": "UKMO 10",
+"bias": -2.99,
+"mae": 3.28,
+"r": 0.778,
+"corr_mae": 1.95
+},
+{
+"m": "GFS 13",
+"bias": -1.76,
+"mae": 2.54,
+"r": 0.772,
+"corr_mae": 1.99
+}
+]
+},
+{
+"name": "Sydney (Botany Bay)",
+"lat": -33.9465,
+"lon": 151.1731,
+"source": "METAR",
+"id": "YSSY",
+"note": "Winter",
+"tz": "Australia/Sydney",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=YSSY&network=",
+"mean_kn": 10.8,
+"hours12": 649,
+"n": 1675,
+"lag_h": 0,
+"best_match_mae": 4.93,
+"best_match_bias": -4.83,
+"best_model": "GFS 13",
+"best_model_mae": 3.0,
+"best_model_bias": -2.47,
+"corr_mae": 1.78,
+"corr_pod12": 0.79,
+"corr_far12": 0.14,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -4.07,
+"mae": 4.17,
+"r": 0.872,
+"corr_mae": 1.78
+},
+{
+"m": "UKMO 10",
+"bias": -4.06,
+"mae": 4.18,
+"r": 0.831,
+"corr_mae": 2.06
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -4.83,
+"mae": 4.93,
+"r": 0.829,
+"corr_mae": 2.07
+},
+{
+"m": "ECMWF 9",
+"bias": -4.83,
+"mae": 4.93,
+"r": 0.829,
+"corr_mae": 2.07
+},
+{
+"m": "GFS 13",
+"bias": -2.47,
+"mae": 3.0,
+"r": 0.818,
+"corr_mae": 2.13
+}
+]
+},
+{
+"name": "Columbia Gorge (Hood River)",
+"lat": 45.6726,
+"lon": -121.5365,
+"source": "METAR",
+"id": "4S2",
+"note": "Duesenwind",
+"tz": "America/Los_Angeles",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=4S2&network=",
+"mean_kn": 4.7,
+"hours12": 101,
+"n": 1163,
+"lag_h": -1,
+"best_match_mae": 5.11,
+"best_match_bias": 4.83,
+"best_model": "ECMWF 9",
+"best_model_mae": 3.27,
+"best_model_bias": 1.87,
+"corr_mae": 2.36,
+"corr_pod12": 0.0,
+"corr_far12": 1.0,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": 2.21,
+"mae": 3.24,
+"r": 0.348,
+"corr_mae": 2.36
+},
+{
+"m": "HRRR 3",
+"bias": 4.83,
+"mae": 5.11,
+"r": 0.576,
+"corr_mae": 2.66
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 4.83,
+"mae": 5.11,
+"r": 0.576,
+"corr_mae": 2.66
+},
+{
+"m": "ECMWF 9",
+"bias": 1.87,
+"mae": 3.27,
+"r": 0.518,
+"corr_mae": 2.8
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": 3.05,
+"mae": 3.91,
+"r": 0.487,
+"corr_mae": 2.91
+},
+{
+"m": "UKMO 10",
+"bias": 1.69,
+"mae": 3.58,
+"r": 0.45,
+"corr_mae": 2.95
+},
+{
+"m": "GFS 13",
+"bias": 1.87,
+"mae": 3.44,
+"r": 0.438,
+"corr_mae": 2.98
+}
+]
+},
+{
+"name": "San Francisco Bay (SFO)",
+"lat": 37.619,
+"lon": -122.3749,
+"source": "METAR",
+"id": "KSFO",
+"note": "Seewind",
+"tz": "America/Los_Angeles",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=KSFO&network=",
+"mean_kn": 13.5,
+"hours12": 1095,
+"n": 1642,
+"lag_h": 0,
+"best_match_mae": 4.69,
+"best_match_bias": -4.42,
+"best_model": "NBM 2,5 (NOAA-Korrektur)",
+"best_model_mae": 3.2,
+"best_model_bias": -1.25,
+"corr_mae": 2.18,
+"corr_pod12": 0.91,
+"corr_far12": 0.09,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": -4.93,
+"mae": 5.05,
+"r": 0.853,
+"corr_mae": 2.18
+},
+{
+"m": "HRRR 3",
+"bias": -4.42,
+"mae": 4.69,
+"r": 0.844,
+"corr_mae": 2.37
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -4.42,
+"mae": 4.69,
+"r": 0.844,
+"corr_mae": 2.37
+},
+{
+"m": "UKMO 10",
+"bias": -7.01,
+"mae": 7.18,
+"r": 0.763,
+"corr_mae": 2.83
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": -1.25,
+"mae": 3.2,
+"r": 0.773,
+"corr_mae": 2.85
+},
+{
+"m": "ECMWF 9",
+"bias": -6.31,
+"mae": 6.68,
+"r": 0.645,
+"corr_mae": 3.02
+},
+{
+"m": "GFS 13",
+"bias": -5.16,
+"mae": 5.49,
+"r": 0.739,
+"corr_mae": 3.02
+}
+]
+},
+{
+"name": "Chesapeake Bay (Annapolis)",
+"lat": 38.9913,
+"lon": -76.4891,
+"source": "METAR",
+"id": "NAK",
+"note": "",
+"tz": "America/New_York",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=NAK&network=",
+"mean_kn": 7.3,
+"hours12": 183,
+"n": 1460,
+"lag_h": 0,
+"best_match_mae": 2.0,
+"best_match_bias": -1.07,
+"best_model": "HRRR 3",
+"best_model_mae": 2.0,
+"best_model_bias": -1.07,
+"corr_mae": 1.58,
+"corr_pod12": 0.27,
+"corr_far12": 0.23,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": -1.07,
+"mae": 1.97,
+"r": 0.687,
+"corr_mae": 1.58
+},
+{
+"m": "HRRR 3",
+"bias": -1.07,
+"mae": 2.0,
+"r": 0.732,
+"corr_mae": 1.78
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.07,
+"mae": 2.0,
+"r": 0.732,
+"corr_mae": 1.78
+},
+{
+"m": "ECMWF 9",
+"bias": 0.02,
+"mae": 2.74,
+"r": 0.576,
+"corr_mae": 2.11
+},
+{
+"m": "GFS 13",
+"bias": -0.18,
+"mae": 2.47,
+"r": 0.551,
+"corr_mae": 2.13
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": -0.04,
+"mae": 2.37,
+"r": 0.588,
+"corr_mae": 2.17
+},
+{
+"m": "UKMO 10",
+"bias": -1.71,
+"mae": 2.66,
+"r": 0.545,
+"corr_mae": 2.19
+}
+]
+},
+{
+"name": "Chesapeake Bay (Thomas Point Leuchtturm)",
+"lat": 38.899,
+"lon": -76.436,
+"source": "NOAA NDBC",
+"id": "tplm2",
+"note": "NDBC",
+"tz": "America/New_York",
+"link": "https://www.ndbc.noaa.gov/station_page.php?station=tplm2",
+"mean_kn": 10.3,
+"hours12": 579,
+"n": 1673,
+"lag_h": 0,
+"best_match_mae": 2.27,
+"best_match_bias": -1.11,
+"best_model": "HRRR 3",
+"best_model_mae": 2.27,
+"best_model_bias": -1.11,
+"corr_mae": 2.0,
+"corr_pod12": 0.79,
+"corr_far12": 0.15,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": -2.03,
+"mae": 2.65,
+"r": 0.883,
+"corr_mae": 2.0
+},
+{
+"m": "HRRR 3",
+"bias": -1.11,
+"mae": 2.27,
+"r": 0.866,
+"corr_mae": 2.12
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.11,
+"mae": 2.27,
+"r": 0.866,
+"corr_mae": 2.12
+},
+{
+"m": "GFS 13",
+"bias": -1.68,
+"mae": 2.87,
+"r": 0.792,
+"corr_mae": 2.53
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": -1.62,
+"mae": 2.81,
+"r": 0.81,
+"corr_mae": 2.61
+},
+{
+"m": "ECMWF 9",
+"bias": -2.27,
+"mae": 3.17,
+"r": 0.771,
+"corr_mae": 2.65
+},
+{
+"m": "UKMO 10",
+"bias": -4.39,
+"mae": 4.77,
+"r": 0.76,
+"corr_mae": 2.8
+}
+]
+},
+{
+"name": "San Francisco Bay (Fort Point)",
+"lat": 37.806,
+"lon": -122.466,
+"source": "NOAA NDBC",
+"id": "ftpc1",
+"note": "NDBC, Golden Gate",
+"tz": "America/Los_Angeles",
+"link": "https://www.ndbc.noaa.gov/station_page.php?station=ftpc1",
+"mean_kn": 9.7,
+"hours12": 432,
+"n": 1657,
+"lag_h": 0,
+"best_match_mae": 3.86,
+"best_match_bias": 3.47,
+"best_model": "NBM 2,5 (NOAA-Korrektur)",
+"best_model_mae": 2.6,
+"best_model_bias": 0.81,
+"corr_mae": 1.8,
+"corr_pod12": 0.59,
+"corr_far12": 0.31,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": 0.77,
+"mae": 2.34,
+"r": 0.65,
+"corr_mae": 1.8
+},
+{
+"m": "HRRR 3",
+"bias": 3.47,
+"mae": 3.86,
+"r": 0.718,
+"corr_mae": 1.87
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 3.47,
+"mae": 3.86,
+"r": 0.718,
+"corr_mae": 1.87
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": 0.81,
+"mae": 2.6,
+"r": 0.556,
+"corr_mae": 2.07
+},
+{
+"m": "UKMO 10",
+"bias": -2.44,
+"mae": 2.89,
+"r": 0.565,
+"corr_mae": 2.12
+},
+{
+"m": "ECMWF 9",
+"bias": -1.57,
+"mae": 2.8,
+"r": 0.405,
+"corr_mae": 2.16
+},
+{
+"m": "GFS 13",
+"bias": 0.87,
+"mae": 3.11,
+"r": 0.464,
+"corr_mae": 2.16
+}
+]
+},
+{
+"name": "San Francisco Bay (Alameda)",
+"lat": 37.772,
+"lon": -122.3,
+"source": "NOAA NDBC",
+"id": "aamc1",
+"note": "NDBC",
+"tz": "America/Los_Angeles",
+"link": "https://www.ndbc.noaa.gov/station_page.php?station=aamc1",
+"mean_kn": 7.7,
+"hours12": 109,
+"n": 1500,
+"lag_h": 0,
+"best_match_mae": 2.36,
+"best_match_bias": -1.98,
+"best_model": "ECMWF 9",
+"best_model_mae": 1.61,
+"best_model_bias": -0.15,
+"corr_mae": 1.32,
+"corr_pod12": 0.36,
+"corr_far12": 0.28,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": -0.78,
+"mae": 1.5,
+"r": 0.822,
+"corr_mae": 1.32
+},
+{
+"m": "HRRR 3",
+"bias": -1.98,
+"mae": 2.36,
+"r": 0.734,
+"corr_mae": 1.47
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.98,
+"mae": 2.36,
+"r": 0.734,
+"corr_mae": 1.47
+},
+{
+"m": "UKMO 10",
+"bias": -1.42,
+"mae": 2.02,
+"r": 0.745,
+"corr_mae": 1.48
+},
+{
+"m": "ECMWF 9",
+"bias": -0.15,
+"mae": 1.61,
+"r": 0.753,
+"corr_mae": 1.49
+},
+{
+"m": "GFS 13",
+"bias": 1.7,
+"mae": 2.49,
+"r": 0.759,
+"corr_mae": 1.56
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": -0.83,
+"mae": 1.82,
+"r": 0.724,
+"corr_mae": 1.56
+}
+]
+},
+{
+"name": "Suisun Bay/Delta (Port Chicago)",
+"lat": 38.056,
+"lon": -122.039,
+"source": "NOAA NDBC",
+"id": "pcoc1",
+"note": "NDBC, 25 km vor Sherman Isl.",
+"tz": "America/Los_Angeles",
+"link": "https://www.ndbc.noaa.gov/station_page.php?station=pcoc1",
+"mean_kn": 12.9,
+"hours12": 1040,
+"n": 1637,
+"lag_h": -1,
+"best_match_mae": 2.26,
+"best_match_bias": -1.24,
+"best_model": "HRRR 3",
+"best_model_mae": 2.26,
+"best_model_bias": -1.24,
+"corr_mae": 1.77,
+"corr_pod12": 0.91,
+"corr_far12": 0.14,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": -2.89,
+"mae": 3.24,
+"r": 0.762,
+"corr_mae": 1.77
+},
+{
+"m": "HRRR 3",
+"bias": -1.24,
+"mae": 2.26,
+"r": 0.774,
+"corr_mae": 1.98
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.24,
+"mae": 2.26,
+"r": 0.774,
+"corr_mae": 1.98
+},
+{
+"m": "ECMWF 9",
+"bias": -4.01,
+"mae": 4.25,
+"r": 0.718,
+"corr_mae": 2.03
+},
+{
+"m": "UKMO 10",
+"bias": -2.79,
+"mae": 3.23,
+"r": 0.712,
+"corr_mae": 2.19
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": -2.37,
+"mae": 3.22,
+"r": 0.629,
+"corr_mae": 2.51
+},
+{
+"m": "GFS 13",
+"bias": -5.67,
+"mae": 5.85,
+"r": 0.489,
+"corr_mae": 2.83
+}
+]
+},
+{
+"name": "Miami (Virginia Key)",
+"lat": 25.731,
+"lon": -80.162,
+"source": "NOAA NDBC",
+"id": "vakf1",
+"note": "NDBC",
+"tz": "America/New_York",
+"link": "https://www.ndbc.noaa.gov/station_page.php?station=vakf1",
+"mean_kn": 7.1,
+"hours12": 114,
+"n": 1659,
+"lag_h": 0,
+"best_match_mae": 2.11,
+"best_match_bias": 1.54,
+"best_model": "NBM 2,5 (NOAA-Korrektur)",
+"best_model_mae": 1.71,
+"best_model_bias": 0.8,
+"corr_mae": 1.2,
+"corr_pod12": 0.46,
+"corr_far12": 0.25,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": 0.82,
+"mae": 1.41,
+"r": 0.849,
+"corr_mae": 1.2
+},
+{
+"m": "HRRR 3",
+"bias": 1.54,
+"mae": 2.11,
+"r": 0.811,
+"corr_mae": 1.36
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 1.54,
+"mae": 2.11,
+"r": 0.811,
+"corr_mae": 1.36
+},
+{
+"m": "UKMO 10",
+"bias": 0.35,
+"mae": 1.73,
+"r": 0.751,
+"corr_mae": 1.47
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": 0.8,
+"mae": 1.71,
+"r": 0.741,
+"corr_mae": 1.56
+},
+{
+"m": "GFS 13",
+"bias": 2.1,
+"mae": 2.46,
+"r": 0.744,
+"corr_mae": 1.57
+},
+{
+"m": "ECMWF 9",
+"bias": -1.4,
+"mae": 1.97,
+"r": 0.703,
+"corr_mae": 1.62
+}
+]
+},
+{
+"name": "Hood River (HOXO, Wasser)",
+"lat": 45.68444,
+"lon": -121.51806,
+"source": "MesoWest",
+"id": "HOXO",
+"note": "MesoWest",
+"tz": "America/Los_Angeles",
+"link": "https://mesowest.utah.edu/cgi-bin/droman/meso_base_dyn.cgi?stn=HOXO",
+"mean_kn": 7.4,
+"hours12": 62,
+"n": 638,
+"lag_h": 0,
+"best_match_mae": 2.43,
+"best_match_bias": 2.01,
+"best_model": "ECMWF 9",
+"best_model_mae": 1.69,
+"best_model_bias": -0.51,
+"corr_mae": 1.63,
+"corr_pod12": 0.27,
+"corr_far12": 0.59,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": 0.75,
+"mae": 1.65,
+"r": 0.858,
+"corr_mae": 1.63
+},
+{
+"m": "ECMWF 9",
+"bias": -0.51,
+"mae": 1.69,
+"r": 0.839,
+"corr_mae": 1.76
+},
+{
+"m": "Open-Meteo best_match",
+"bias": 2.01,
+"mae": 2.43,
+"r": 0.833,
+"corr_mae": 1.78
+},
+{
+"m": "HRRR 3",
+"bias": 2.01,
+"mae": 2.43,
+"r": 0.833,
+"corr_mae": 1.78
+},
+{
+"m": "UKMO 10",
+"bias": -0.27,
+"mae": 2.14,
+"r": 0.794,
+"corr_mae": 1.92
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": 1.59,
+"mae": 2.34,
+"r": 0.785,
+"corr_mae": 2.01
+},
+{
+"m": "GFS 13",
+"bias": -0.31,
+"mae": 2.17,
+"r": 0.693,
+"corr_mae": 2.37
+}
+]
+},
+{
+"name": "Miami",
+"lat": 25.788,
+"lon": -80.3169,
+"source": "METAR",
+"id": "KMIA",
+"note": "Station 10 km landein",
+"tz": "America/New_York",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=KMIA&network=",
+"mean_kn": 7.7,
+"hours12": 295,
+"n": 1431,
+"lag_h": 0,
+"best_match_mae": 1.93,
+"best_match_bias": -1.18,
+"best_model": "HRRR 3",
+"best_model_mae": 1.93,
+"best_model_bias": -1.18,
+"corr_mae": 1.41,
+"corr_pod12": 0.43,
+"corr_far12": 0.22,
+"models": [
+{
+"m": "Mittel aller (6)",
+"bias": -1.75,
+"mae": 2.09,
+"r": 0.798,
+"corr_mae": 1.41
+},
+{
+"m": "HRRR 3",
+"bias": -1.18,
+"mae": 1.93,
+"r": 0.829,
+"corr_mae": 1.64
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.18,
+"mae": 1.93,
+"r": 0.829,
+"corr_mae": 1.64
+},
+{
+"m": "UKMO 10",
+"bias": -2.31,
+"mae": 2.94,
+"r": 0.702,
+"corr_mae": 2.06
+},
+{
+"m": "ECMWF 9",
+"bias": -3.37,
+"mae": 3.79,
+"r": 0.657,
+"corr_mae": 2.15
+},
+{
+"m": "NBM 2,5 (NOAA-Korrektur)",
+"bias": -0.44,
+"mae": 2.29,
+"r": 0.659,
+"corr_mae": 2.31
+},
+{
+"m": "GFS 13",
+"bias": 1.11,
+"mae": 2.43,
+"r": 0.621,
+"corr_mae": 2.35
+}
+]
+},
+{
+"name": "Barbados",
+"lat": 13.0746,
+"lon": -59.4925,
+"source": "METAR",
+"id": "TBPB",
+"note": "Passat",
+"tz": "America/Barbados",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=TBPB&network=",
+"mean_kn": 15.3,
+"hours12": 1330,
+"n": 1675,
+"lag_h": 0,
+"best_match_mae": 3.9,
+"best_match_bias": -3.77,
+"best_model": "GFS 13",
+"best_model_mae": 2.23,
+"best_model_bias": -0.67,
+"corr_mae": 1.88,
+"corr_pod12": 0.95,
+"corr_far12": 0.09,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -3.11,
+"mae": 3.35,
+"r": 0.83,
+"corr_mae": 1.88
+},
+{
+"m": "UKMO 10",
+"bias": -4.24,
+"mae": 4.33,
+"r": 0.802,
+"corr_mae": 2.02
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -3.77,
+"mae": 3.9,
+"r": 0.81,
+"corr_mae": 2.03
+},
+{
+"m": "ECMWF 9",
+"bias": -3.77,
+"mae": 3.9,
+"r": 0.81,
+"corr_mae": 2.03
+},
+{
+"m": "GFS 13",
+"bias": -0.67,
+"mae": 2.23,
+"r": 0.785,
+"corr_mae": 2.1
+}
+]
+},
+{
+"name": "Barcelona (El Prat)",
+"lat": 41.2928,
+"lon": 2.07,
+"source": "METAR",
+"id": "LEBL",
+"note": "Seewind",
+"tz": "Europe/Madrid",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=LEBL&network=",
+"mean_kn": 8.8,
+"hours12": 333,
+"n": 1658,
+"lag_h": 0,
+"best_match_mae": 3.09,
+"best_match_bias": -2.82,
+"best_model": "AROME 2,5",
+"best_model_mae": 1.65,
+"best_model_bias": -0.61,
+"corr_mae": 1.45,
+"corr_pod12": 0.59,
+"corr_far12": 0.17,
+"models": [
+{
+"m": "Mittel aller (9)",
+"bias": -1.79,
+"mae": 2.17,
+"r": 0.812,
+"corr_mae": 1.45
+},
+{
+"m": "AROME 2,5",
+"bias": -0.61,
+"mae": 1.65,
+"r": 0.81,
+"corr_mae": 1.56
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.64,
+"mae": 1.71,
+"r": 0.797,
+"corr_mae": 1.6
+},
+{
+"m": "UKMO 10",
+"bias": -1.94,
+"mae": 2.66,
+"r": 0.734,
+"corr_mae": 1.89
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -1.32,
+"mae": 2.19,
+"r": 0.714,
+"corr_mae": 1.94
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -1.79,
+"mae": 2.42,
+"r": 0.703,
+"corr_mae": 1.94
+},
+{
+"m": "ECMWF 9",
+"bias": -3.12,
+"mae": 3.32,
+"r": 0.703,
+"corr_mae": 1.98
+},
+{
+"m": "ICON-EU 7",
+"bias": -2.82,
+"mae": 3.09,
+"r": 0.651,
+"corr_mae": 2.01
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.82,
+"mae": 3.09,
+"r": 0.651,
+"corr_mae": 2.01
+},
+{
+"m": "GFS 13",
+"bias": -0.91,
+"mae": 2.26,
+"r": 0.683,
+"corr_mae": 2.06
+}
+]
+},
+{
+"name": "Mallorca Bucht von Palma",
+"lat": 39.5608,
+"lon": 2.7367,
+"source": "METAR",
+"id": "LEPA",
+"note": "Embat (Seewind)",
+"tz": "Europe/Madrid",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=LEPA&network=",
+"mean_kn": 8.8,
+"hours12": 439,
+"n": 1613,
+"lag_h": 0,
+"best_match_mae": 3.26,
+"best_match_bias": -2.77,
+"best_model": "AROME-HD 1,3",
+"best_model_mae": 1.73,
+"best_model_bias": -0.61,
+"corr_mae": 1.55,
+"corr_pod12": 0.48,
+"corr_far12": 0.17,
+"models": [
+{
+"m": "Mittel aller (7)",
+"bias": -1.92,
+"mae": 2.39,
+"r": 0.81,
+"corr_mae": 1.55
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.61,
+"mae": 1.73,
+"r": 0.839,
+"corr_mae": 1.61
+},
+{
+"m": "AROME 2,5",
+"bias": -0.78,
+"mae": 1.86,
+"r": 0.822,
+"corr_mae": 1.67
+},
+{
+"m": "ECMWF 9",
+"bias": -2.5,
+"mae": 2.93,
+"r": 0.733,
+"corr_mae": 1.95
+},
+{
+"m": "UKMO 10",
+"bias": -3.46,
+"mae": 3.72,
+"r": 0.698,
+"corr_mae": 2.11
+},
+{
+"m": "GFS 13",
+"bias": 0.3,
+"mae": 2.25,
+"r": 0.697,
+"corr_mae": 2.13
+},
+{
+"m": "ICON-EU 7",
+"bias": -2.77,
+"mae": 3.26,
+"r": 0.655,
+"corr_mae": 2.14
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -2.77,
+"mae": 3.26,
+"r": 0.655,
+"corr_mae": 2.14
+}
+]
+},
+{
+"name": "Solent (Southampton)",
+"lat": 50.955,
+"lon": -1.3561,
+"source": "METAR",
+"id": "EGHI",
+"note": "Station 10 km landein",
+"tz": "Europe/London",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=EGHI&network=",
+"mean_kn": 8.5,
+"hours12": 338,
+"n": 1578,
+"lag_h": 0,
+"best_match_mae": 2.05,
+"best_match_bias": -1.72,
+"best_model": "UKMO 10",
+"best_model_mae": 1.62,
+"best_model_bias": -0.55,
+"corr_mae": 1.34,
+"corr_pod12": 0.59,
+"corr_far12": 0.16,
+"models": [
+{
+"m": "Mittel aller (11)",
+"bias": -1.36,
+"mae": 1.72,
+"r": 0.862,
+"corr_mae": 1.34
+},
+{
+"m": "UKV 2",
+"bias": -1.72,
+"mae": 2.05,
+"r": 0.846,
+"corr_mae": 1.48
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.72,
+"mae": 2.05,
+"r": 0.846,
+"corr_mae": 1.48
+},
+{
+"m": "ECMWF 9",
+"bias": -1.06,
+"mae": 1.72,
+"r": 0.837,
+"corr_mae": 1.51
+},
+{
+"m": "ICON-EU 7",
+"bias": -1.39,
+"mae": 1.89,
+"r": 0.842,
+"corr_mae": 1.52
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -0.88,
+"mae": 1.65,
+"r": 0.841,
+"corr_mae": 1.55
+},
+{
+"m": "UKMO 10",
+"bias": -0.55,
+"mae": 1.62,
+"r": 0.821,
+"corr_mae": 1.57
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -1.74,
+"mae": 2.15,
+"r": 0.814,
+"corr_mae": 1.58
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.98,
+"mae": 1.71,
+"r": 0.826,
+"corr_mae": 1.58
+},
+{
+"m": "AROME 2,5",
+"bias": -1.64,
+"mae": 2.05,
+"r": 0.824,
+"corr_mae": 1.59
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -1.72,
+"mae": 2.17,
+"r": 0.809,
+"corr_mae": 1.62
+},
+{
+"m": "GFS 13",
+"bias": -0.45,
+"mae": 1.69,
+"r": 0.801,
+"corr_mae": 1.68
+}
+]
+},
+{
+"name": "Ammersee/Starnberger See (Oberpfaffenhofen)",
+"lat": 48.0814,
+"lon": 11.2831,
+"source": "METAR",
+"id": "EDMO",
+"note": "Station zwischen den Seen",
+"tz": "Europe/Berlin",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=EDMO&network=",
+"mean_kn": 7.0,
+"hours12": 161,
+"n": 1420,
+"lag_h": 0,
+"best_match_mae": 1.93,
+"best_match_bias": -1.48,
+"best_model": "ICON-CH1 1",
+"best_model_mae": 1.64,
+"best_model_bias": -0.33,
+"corr_mae": 1.27,
+"corr_pod12": 0.57,
+"corr_far12": 0.14,
+"models": [
+{
+"m": "Mittel aller (13)",
+"bias": -1.72,
+"mae": 1.93,
+"r": 0.852,
+"corr_mae": 1.27
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -1.48,
+"mae": 1.93,
+"r": 0.826,
+"corr_mae": 1.48
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.48,
+"mae": 1.93,
+"r": 0.826,
+"corr_mae": 1.48
+},
+{
+"m": "ICON-CH1 1",
+"bias": -0.33,
+"mae": 1.64,
+"r": 0.811,
+"corr_mae": 1.53
+},
+{
+"m": "ICON-EU 7",
+"bias": -2.45,
+"mae": 2.62,
+"r": 0.805,
+"corr_mae": 1.54
+},
+{
+"m": "ICON-CH2 2",
+"bias": -0.65,
+"mae": 1.67,
+"r": 0.8,
+"corr_mae": 1.54
+},
+{
+"m": "UKMO 10",
+"bias": -1.67,
+"mae": 2.09,
+"r": 0.791,
+"corr_mae": 1.61
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -1.15,
+"mae": 1.86,
+"r": 0.789,
+"corr_mae": 1.62
+},
+{
+"m": "AROME 2,5",
+"bias": -1.1,
+"mae": 1.84,
+"r": 0.787,
+"corr_mae": 1.63
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -1.61,
+"mae": 2.15,
+"r": 0.754,
+"corr_mae": 1.68
+},
+{
+"m": "ECMWF 9",
+"bias": -1.85,
+"mae": 2.27,
+"r": 0.761,
+"corr_mae": 1.68
+},
+{
+"m": "GFS 13",
+"bias": -0.78,
+"mae": 1.96,
+"r": 0.715,
+"corr_mae": 1.8
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -2.15,
+"mae": 2.62,
+"r": 0.68,
+"corr_mae": 1.87
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -2.17,
+"mae": 2.66,
+"r": 0.652,
+"corr_mae": 1.91
+}
+]
+},
+{
+"name": "Bodensee (Friedrichshafen)",
+"lat": 47.6713,
+"lon": 9.5115,
+"source": "METAR",
+"id": "EDNY",
+"note": "",
+"tz": "Europe/Berlin",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=EDNY&network=",
+"mean_kn": 5.3,
+"hours12": 67,
+"n": 1270,
+"lag_h": 0,
+"best_match_mae": 1.65,
+"best_match_bias": -0.52,
+"best_model": "AROME-HD 1,3",
+"best_model_mae": 1.63,
+"best_model_bias": -0.29,
+"corr_mae": 1.31,
+"corr_pod12": 0.18,
+"corr_far12": 0.2,
+"models": [
+{
+"m": "Mittel aller (14)",
+"bias": -1.05,
+"mae": 1.62,
+"r": 0.756,
+"corr_mae": 1.31
+},
+{
+"m": "AROME 2,5",
+"bias": 0.03,
+"mae": 1.65,
+"r": 0.714,
+"corr_mae": 1.55
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -0.52,
+"mae": 1.65,
+"r": 0.715,
+"corr_mae": 1.55
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -0.29,
+"mae": 1.63,
+"r": 0.714,
+"corr_mae": 1.55
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -0.52,
+"mae": 1.66,
+"r": 0.715,
+"corr_mae": 1.56
+},
+{
+"m": "UKV 2",
+"bias": -0.93,
+"mae": 1.86,
+"r": 0.686,
+"corr_mae": 1.58
+},
+{
+"m": "ICON-CH1 1",
+"bias": -0.46,
+"mae": 1.7,
+"r": 0.686,
+"corr_mae": 1.58
+},
+{
+"m": "ECMWF 9",
+"bias": -0.41,
+"mae": 1.89,
+"r": 0.68,
+"corr_mae": 1.61
+},
+{
+"m": "UKMO 10",
+"bias": -0.85,
+"mae": 1.85,
+"r": 0.676,
+"corr_mae": 1.64
+},
+{
+"m": "ICON-CH2 2",
+"bias": -0.49,
+"mae": 1.78,
+"r": 0.685,
+"corr_mae": 1.64
+},
+{
+"m": "ICON-EU 7",
+"bias": -0.97,
+"mae": 1.87,
+"r": 0.677,
+"corr_mae": 1.64
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -0.49,
+"mae": 1.88,
+"r": 0.622,
+"corr_mae": 1.7
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -0.9,
+"mae": 2.04,
+"r": 0.543,
+"corr_mae": 1.81
+},
+{
+"m": "GFS 13",
+"bias": -0.8,
+"mae": 2.25,
+"r": 0.577,
+"corr_mae": 1.82
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -0.98,
+"mae": 2.13,
+"r": 0.506,
+"corr_mae": 1.9
+}
+]
+}
+]
+}

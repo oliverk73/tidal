@@ -1,0 +1,158 @@
+// Wind stations used to verify the wind models at surf and sailing spots (py/thermik_pruefung.py,
+// Oliver 24.11.2026). Fills the "Wind Stations" menu (dropdown + show/hide) and puts a marker per station.
+// Data: /static/wind_stations/wind_stations.json (written by py/thermik_pruefung.py).
+(function () {
+  'use strict';
+
+  var REGIONS = [
+    ['Alps & lakes', function (s) { return /Zurich|Vienna/.test(s.tz) || /See|Lago|Garda|Comer|Silvaplana|Reschen|Bodensee|Ammersee/.test(s.name); }],
+    ['Europe', function (s) { return s.tz.indexOf('Europe/') === 0; }],
+    ['Atlantic & Africa', function (s) { return /^(Atlantic|Africa|Indian)\//.test(s.tz); }],
+    ['Americas', function (s) { return s.tz.indexOf('America/') === 0; }],
+    ['Australia', function (s) { return s.tz.indexOf('Australia/') === 0; }],
+    ['Other', function () { return true; }]
+  ];
+
+  // Colour = mean error of our per-spot correction (kn): how well the wind can be forecast there.
+  var CLASSES = [
+    [1.5, '#1a9850', '< 1.5 kn'],
+    [2.0, '#91cf60', '1.5–2 kn'],
+    [2.5, '#fdae61', '2–2.5 kn'],
+    [99,  '#d73027', '> 2.5 kn']
+  ];
+  function colour(mae) {
+    for (var i = 0; i < CLASSES.length; i++) if (mae < CLASSES[i][0]) return CLASSES[i][1];
+    return CLASSES[CLASSES.length - 1][1];
+  }
+
+  function esc(t) {
+    return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function kn(v, sign) {
+    if (v == null || isNaN(v)) return '–';
+    return (sign && v > 0 ? '+' : '') + v.toFixed(1) + ' kn';
+  }
+
+  function icon(s) {
+    var c = colour(s.corr_mae);
+    var svg = '<svg width="20" height="20" viewBox="0 0 20 20">' +
+      '<rect x="4" y="4" width="12" height="12" transform="rotate(45 10 10)" fill="' + c + '" stroke="#fff" stroke-width="1.8"/>' +
+      '<path d="M6.5 8.5h5.5a1.6 1.6 0 1 0-1.6-1.6M6.5 11.5h7a1.6 1.6 0 1 1-1.6 1.6" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>' +
+      '</svg>';
+    return L.divIcon({ className: 'wind-station-icon', html: svg, iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, -9] });
+  }
+
+  function popup(s, meta) {
+    var src = s.link
+      ? '<a href="' + esc(s.link) + '" target="_blank" rel="noopener">' + esc(s.source) + ' ' + esc(s.id) + '</a>'
+      : esc(s.source) + ' ' + esc(s.id);
+    var num = function (v, sign) { return (v == null || isNaN(v)) ? '–' : (sign && v > 0 ? '+' : '') + v.toFixed(1); };
+    var row = function (label, mae, bias) {
+      return '<tr><td style="padding:1px 8px 1px 0;white-space:nowrap;">' + label + '</td><td style="text-align:right;padding:1px 6px;">' +
+        num(mae) + '</td><td style="text-align:right;padding:1px 0 1px 6px;color:#555;">' + (bias == null ? '' : num(bias, true)) + '</td></tr>';
+    };
+    var models = (s.models || []).map(function (m) {
+      return '<tr><td style="padding:0 8px 0 0;white-space:nowrap;">' + esc(m.m) + '</td><td style="text-align:right;padding:0 6px;">' + m.mae.toFixed(2) +
+        '</td><td style="text-align:right;padding:0 6px;">' + (m.bias > 0 ? '+' : '') + m.bias.toFixed(1) +
+        '</td><td style="text-align:right;padding:0 6px;">' + (isNaN(m.r) ? '' : m.r.toFixed(2)) +
+        '</td><td style="text-align:right;padding:0 0 0 6px;">' + m.corr_mae.toFixed(2) + '</td></tr>';
+    }).join('');
+    return '<div style="font-family:sans-serif;font-size:12.5px;min-width:260px;max-width:340px;">' +
+      '<div style="font-weight:bold;font-size:14px;margin-bottom:2px;">' + esc(s.name) + '</div>' +
+      '<div style="color:#555;">' + src + (s.note ? ' · ' + esc(s.note) : '') + '</div>' +
+      '<div style="color:#777;font-size:11.5px;margin-bottom:6px;">' + s.lat.toFixed(4) + ', ' + s.lon.toFixed(4) + '</div>' +
+      '<div style="margin-bottom:4px;">Measured ' + esc(meta.period) + ', ' + esc(meta.hours) + ': mean <b>' + kn(s.mean_kn) +
+        '</b>, ' + s.hours12 + ' h ≥ 12 kn</div>' +
+      '<table style="border-collapse:collapse;font-size:12.5px;">' +
+        '<tr style="color:#777;font-size:11px;"><td>Forecast</td><td style="text-align:right;padding:0 6px;white-space:nowrap;">error kn</td><td style="text-align:right;padding:0 0 0 6px;white-space:nowrap;">bias kn</td></tr>' +
+        row('Open-Meteo best match', s.best_match_mae, s.best_match_bias) +
+        (s.best_model ? row('Best model: ' + esc(s.best_model), s.best_model_mae, s.best_model_bias) : '') +
+        row('<b>Spot correction</b>', s.corr_mae, null) +
+      '</table>' +
+      '<div style="color:#555;margin-top:2px;">Spot correction detects ' + Math.round(s.corr_pod12 * 100) + ' % of the hours ≥ 12 kn (' +
+        Math.round(s.corr_far12 * 100) + ' % false alarms).</div>' +
+      (s.lag_h ? '<div style="color:#a60;margin-top:3px;">Time offset model ↔ station: ' + (s.lag_h > 0 ? '+' : '') + s.lag_h + ' h</div>' : '') +
+      '<details style="margin-top:5px;"><summary style="cursor:pointer;color:#246;">All models (' + (s.models || []).length + ')</summary>' +
+        '<table style="border-collapse:collapse;font-size:11.5px;margin-top:3px;">' +
+        '<tr style="color:#777;"><td>Model</td><td style="text-align:right;padding:0 6px;">error</td><td style="text-align:right;padding:0 6px;">bias</td><td style="text-align:right;padding:0 6px;">r</td><td style="text-align:right;padding-left:6px;">corrected</td></tr>' +
+        models + '</table>' +
+        '<div style="color:#777;font-size:11px;margin-top:3px;">Error = mean absolute error of the wind speed, bias = forecast − measured (kn). ' +
+        'Corrected = with the learned per-spot correction (cross-validated by month).</div>' +
+      '</details></div>';
+  }
+
+  function build(map, data) {
+    var body = document.getElementById('wind-stations-body');
+    var count = document.getElementById('wind-stations-count');
+    var stations = data.stations || [];
+    if (count) count.textContent = '(' + stations.length + ')';
+
+    var layer = L.layerGroup();
+    var byName = {};
+    stations.forEach(function (s) {
+      var m = L.marker([s.lat, s.lon], { icon: icon(s), title: s.name, riseOnHover: true, zIndexOffset: 500 });
+      m.bindPopup(popup(s, data), { maxWidth: 360 });
+      m.addTo(layer);
+      byName[s.name] = m;
+    });
+
+    var groups = REGIONS.map(function (r) { return { label: r[0], test: r[1], items: [] }; });
+    stations.forEach(function (s) {
+      for (var i = 0; i < groups.length; i++) if (groups[i].test(s)) { groups[i].items.push(s); break; }
+    });
+    var options = '<option value="">Choose a station…</option>' + groups.filter(function (g) { return g.items.length; }).map(function (g) {
+      return '<optgroup label="' + esc(g.label) + '">' + g.items.map(function (s) {
+        return '<option value="' + esc(s.name) + '">' + esc(s.name) + ' – ' + s.corr_mae.toFixed(1) + ' kn</option>';
+      }).join('') + '</optgroup>';
+    }).join('');
+
+    var legend = CLASSES.map(function (c) {
+      return '<span style="white-space:nowrap;margin-right:8px;"><span style="display:inline-block;width:9px;height:9px;background:' + c[1] +
+        ';transform:rotate(45deg);margin-right:4px;border:1px solid #fff;"></span>' + c[2] + '</span>';
+    }).join(' ');
+
+    body.innerHTML =
+      '<label style="display:flex;align-items:center;cursor:pointer;font-weight:bold;min-height:30px;">' +
+        '<input type="checkbox" id="wst-toggle" style="margin-right:6px;width:18px;height:18px;">Show on map</label>' +
+      '<select id="wst-select" style="width:100%;max-width:290px;margin:4px 0 6px;padding:4px;font-size:13px;border-radius:4px;border:1px solid #bbb;background:rgba(255,255,255,0.85);">' +
+        options + '</select>' +
+      '<div style="font-size:11.5px;color:#444;max-width:290px;line-height:1.5;">Colour = forecast error after spot correction:<br>' + legend + '</div>' +
+      '<div style="font-size:11px;color:#666;max-width:290px;margin-top:4px;">Stations used to check the wind models at surf and sailing spots (' +
+        esc(data.period) + ', ' + esc(data.hours) + ').</div>';
+
+    var cb = document.getElementById('wst-toggle');
+    var on = localStorage.getItem('windStationsOn');
+    cb.checked = (on === null) ? true : on === '1';
+    if (cb.checked) layer.addTo(map);
+    cb.addEventListener('change', function () {
+      if (this.checked) layer.addTo(map); else map.removeLayer(layer);
+      localStorage.setItem('windStationsOn', this.checked ? '1' : '0');
+    });
+
+    document.getElementById('wst-select').addEventListener('change', function () {
+      var m = byName[this.value];
+      if (!m) return;
+      if (!map.hasLayer(layer)) { cb.checked = true; layer.addTo(map); localStorage.setItem('windStationsOn', '1'); }
+      map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 10), { duration: 1.2 });
+      map.once('moveend', function () { m.openPopup(); });
+    });
+  }
+
+  function start() {
+    var map = window.map;
+    var body = document.getElementById('wind-stations-body');
+    if (!map || !body) { setTimeout(start, 300); return; }
+    fetch('/static/wind_stations/wind_stations.json', { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) { build(map, d); })
+      .catch(function (e) {
+        body.innerHTML = '<span style="color:#a00;">Wind stations could not be loaded.</span>';
+        console.error('wind stations:', e);
+      });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+})();
