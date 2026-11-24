@@ -61,7 +61,11 @@ assert len(RICHT) == 32, len(RICHT)
 
 STANDARD = dict(leistung=0.85, motor=True, motor_kn=5.5, motor_unter=3.0, max_wind=25.0, max_welle=2.5,
                 wendezeit_s=60.0, ozean=True, tiefe=True, reserve_m=0.5, ohne_spi=True,
-                tide=True, windstau=True, vtg=True, sperr=True, nacht_meiden=False, max_tag_h=0.0)
+                tide=True, windstau=True, vtg=True, sperr=True, nacht_meiden=False, max_tag_h=0.0,
+                reffen_ab=18.0)
+# reffen_ab (24.11.2026, Schaetzung): Fahrtencrew refft frueher als die ORC-Polare (Regattacrew, optimaler Trimm).
+# Am Wind bis halber Wind (TWA < 110°) ab reffen_ab kn TWS 1,5 % weniger Fahrt je kn, hoechstens 15 %; 0 = aus.
+REFF_JE_KN, REFF_MAX = 0.015, 0.15
 
 
 class Fehler(Exception):
@@ -596,6 +600,7 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
         return g(WU), g(WV), g(CU), g(CV), g(HS), wd
 
     leistung, motor, motor_kn, motor_unter = o["leistung"], o["motor"], o["motor_kn"], o["motor_unter"]
+    reffen_ab = float(o.get("reffen_ab") or 0.0)
     max_wind, max_welle = o["max_wind"], o["max_welle"]
     wende_h = o["wendezeit_s"] / 3600.0
 
@@ -635,6 +640,8 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             twa = ((woher[None] - np.degrees(h_) + 180) % 360) - 180
             welle = 1 - hs[None] * (0.02 + 0.06 * (1 + np.cos(wd[None] - h_)) / 2)   # Seegang von vorn bremst am meisten
             V = P.fahrt(np.broadcast_to(tws[None], twa.shape), twa) * leistung * np.clip(welle, 0.3, 1)
+            if reffen_ab > 0:                                             # Fahrtencrew refft frueher
+                V = V * np.where(np.abs(twa) < 110, 1 - np.clip((tws[None] - reffen_ab) * REFF_JE_KN, 0, REFF_MAX), 1.0)
             q = np.where(V > 0.1, np.clip(-c_quer / np.maximum(V, 0.1), -0.99, 0.99), 0)
             h_ = H + np.arcsin(q)
         ok = (V > 0.1) & (np.abs(c_quer) < V)

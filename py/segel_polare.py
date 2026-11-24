@@ -7,7 +7,9 @@ Windwinkel 52–150°, dazu Kreuz-VMG + Wendewinkel (Beat/BeatAngle), Vorwind-VM
 und DW165/DW180. Daraus wird eine Tabelle Fahrt durchs Wasser [kn] ueber TWS 0–40 kn x TWA 0–180° (1°-Raster).
 
 ORC rechnet mit Regattacrew; fuer Fahrtensegeln gibt das Routing einen Leistungsfaktor (z. B. 85 %). Ohne Spinnaker:
-Non-Spinnaker-Zertifikat der Klasse, wo vorhanden (ohne_spi=True).
+Non-Spinnaker-Zertifikat der Klasse, wo vorhanden (ohne_spi=True). Sonst (24.11.2026, 1830 Klassen) das Standard-
+Zertifikat mal dem Median-Verhaeltnis Non-Spinnaker/Spinnaker der 800 Klassen mit beiden Zertifikaten (nospi_faktor.json:
+raumschots/vor dem Wind 0,79–0,96, am Wind 1,0).
 
     P = polare('bavaria-37', ohne_spi=True)
     P.fahrt(tws_kn, twa_grad)          # vektorisiert, kn; 0 im Wendebereich (TWA < Wendewinkel)
@@ -74,11 +76,12 @@ def _laden(ref):
 
 
 class Polare:
-    def __init__(self, boot, eintrag, variante):
+    def __init__(self, boot, eintrag, variante, abgeleitet=False):
         self.boot = boot
         self.eintrag = eintrag
         self.variante = variante
-        self.daten = d = _laden(eintrag[variante])
+        self.abgeleitet = abgeleitet                         # nospi aus dem Spinnaker-Zertifikat (nospi_faktor)
+        self.daten = d = _laden(eintrag["spi" if abgeleitet else variante])
         A = d["Allowances"]
         ws = np.array(A["WindSpeeds"], dtype="f8")
         winkel = A["WindAngles"]
@@ -117,6 +120,8 @@ class Polare:
                 tab[k] = (1 - f) * tab_orc[j] + f * tab_orc[j + 1]
                 wende[k] = (1 - f) * wende_orc[j] + f * wende_orc[j + 1]
                 tab[k][self.twa < wende[k]] = 0.0
+        if abgeleitet:
+            tab = tab * nospi_faktor()
         self.tab = tab
         self.wende = wende
 
@@ -142,35 +147,74 @@ class Polare:
         d = self.daten
         return {"id": self.boot, "name": self.eintrag["name"], "yacht": d.get("YachtName"),
                 "klasse": d.get("Class"), "segelnr": d.get("SailNo"), "loa": d.get("LOA"), "tiefgang": d.get("Draft"),
-                "variante": self.variante, "ohne_spi_verfuegbar": bool(self.eintrag.get("nospi")),
+                "variante": self.variante, "ohne_spi_verfuegbar": bool(self.eintrag.get("nospi")), "abgeleitet": self.abgeleitet,
                 "jolle": bool(d.get("Jolle")),
                 "quelle": ("%s VPP calibrated to %s, %s" % ("catamaran" if d["Jolle"].get("kat") else "dinghy", d["Jolle"]["quelle_pn"], "no spinnaker" if self.variante == "nospi" else "with spinnaker")
                            if d.get("Jolle") else
-                           "ORC %s certificate %s (%s, %s)" % ("non-spinnaker" if self.variante == "nospi" else "standard",
-                                                               d.get("RefNo"), d.get("NatAuth"), (d.get("IssueDate") or "")[:10]))}
+                           "ORC %s certificate %s (%s, %s)%s" % ("non-spinnaker" if self.variante == "nospi" and not self.abgeleitet else "standard",
+                                                                 d.get("RefNo"), d.get("NatAuth"), (d.get("IssueDate") or "")[:10],
+                                                                 ", spinnaker removed (median non-spinnaker/spinnaker ratio of 800 ORC classes)" if self.abgeleitet else ""))}
 
 
 _CACHE = {}
+FAKTOR = os.path.join(BASIS, "quellen", "routing", "polare", "nospi_faktor.json")
+_FAKTOR = []
+
+
+def nospi_faktor(neu=False):
+    """[41 TWS x 181 TWA] Median Fahrt(Non-Spinnaker)/Fahrt(Spinnaker) ueber alle ORC-Klassen mit beiden Zertifikaten
+    (Einrumpf und Mehrrumpf zusammen); 1 im Wendebereich, auf 0,5–1 begrenzt."""
+    if _FAKTOR and not neu:
+        return _FAKTOR[0]
+    if os.path.exists(FAKTOR) and not neu:
+        with open(FAKTOR) as f:
+            F = np.array(json.load(f)["faktor"], dtype="f8")
+    else:
+        R = []
+        for e in katalog().values():
+            if e.get("jolle") or not (e.get("spi") and e.get("nospi")):
+                continue
+            if not all(os.path.exists(os.path.join(ORDNER, e[v] + ".json")) for v in ("spi", "nospi")):
+                continue
+            a, b = Polare(e["id"], e, "spi").tab, Polare(e["id"], e, "nospi").tab
+            with np.errstate(all="ignore"):
+                R.append(np.where(a > 0.05, b / a, np.nan))
+        with np.errstate(all="ignore"):
+            F = np.nanmedian(np.array(R), axis=0)
+        F = np.clip(np.where(np.isfinite(F), F, 1.0), 0.5, 1.0)
+        F[0] = F[1]                                       # TWS 0 (Fahrt 0) wie 1 kn
+        os.makedirs(os.path.dirname(FAKTOR), exist_ok=True)
+        with open(FAKTOR, "w") as f:
+            json.dump({"klassen": len(R), "tws": list(range(41)), "twa": list(range(181)),
+                       "faktor": np.round(F, 3).tolist()}, f)
+    _FAKTOR[:] = [F]
+    return F
 
 
 def polare(boot=STANDARD, ohne_spi=False):
-    """ohne_spi=True nimmt das Non-Spinnaker-Zertifikat, wenn die Klasse eins hat (sonst das Standard-Zertifikat)."""
+    """ohne_spi=True nimmt das Non-Spinnaker-Zertifikat, wenn die Klasse eins hat, sonst das Standard-Zertifikat mal
+    nospi_faktor (Jollen: eigene Varianten)."""
     K = katalog()
     boot = ALT.get(boot, boot)
     if boot not in K:
         boot = STANDARD
     e = K[boot]
     variante = "nospi" if (ohne_spi and e.get("nospi")) or not e.get("spi") else "spi"
+    abg = bool(ohne_spi and variante == "spi" and not e.get("jolle"))
+    if abg:
+        variante = "nospi"
     if (boot, variante) not in _CACHE:
         if len(_CACHE) > 50:
             _CACHE.clear()
-        _CACHE[(boot, variante)] = Polare(boot, e, variante)
+        _CACHE[(boot, variante)] = Polare(boot, e, variante, abgeleitet=abg)
     return _CACHE[(boot, variante)]
 
 
 def liste():
-    """kompakt fuer das Auswahlfeld: [id, Name, LOA, Non-Spinnaker vorhanden, Anzahl Zertifikate]"""
-    return [[b["id"], b["name"], b["loa"], 1 if b.get("nospi") else 0, b["anzahl"], 1 if b.get("jolle") else 0]
+    """kompakt fuer das Auswahlfeld: [id, Name, LOA, Non-Spinnaker (1 Zertifikat, 2 abgeleitet, 0 keine),
+    Anzahl Zertifikate, Jolle]"""
+    return [[b["id"], b["name"], b["loa"], 1 if b.get("nospi") else (2 if b.get("spi") and not b.get("jolle") else 0),
+             b["anzahl"], 1 if b.get("jolle") else 0]
             for b in katalog().values()]
 
 

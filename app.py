@@ -2437,7 +2437,7 @@ def api_route_boats():
 def api_route():
     """Schnellste Segelroute (py/segel_router.py, 20.11.2026): start=lat,lon ziel=lat,lon t=Unix-s boot=id
     + Optionen leistung (0–1), motor (0/1), motor_kn, motor_unter, max_wind, max_welle, wendezeit_s, ozean (0/1),
-    tiefe (0/1), reserve_m, ohne_spi (0/1: ORC-Non-Spinnaker-Polare, wo vorhanden), tide (0/1: Tidenhoehe bei der
+    tiefe (0/1), reserve_m, ohne_spi (0/1: ORC-Non-Spinnaker-Polare bzw. daraus abgeleitet), reffen_ab (kn, 0 = aus), tide (0/1: Tidenhoehe bei der
     Tiefe), windstau (0/1: Windstau-Vorhersage zur Tide), vtg (0/1: Verkehrstrennungsgebiete), sperr (0/1),
     nacht_meiden (0/1: nur bei Tageslicht fahren, nachts im Hafen; laengere Strecken werden Mehrtagestoerns, bis 1000 km)."""
     import segel_router
@@ -2446,7 +2446,7 @@ def api_route():
         la_b, lo_b = (float(x) for x in request.args["ziel"].split(","))
         t0 = float(request.args.get("t") or __import__("time").time())
         opt = {}
-        for k in ("leistung", "motor_kn", "motor_unter", "max_wind", "max_welle", "wendezeit_s", "reserve_m", "max_tag_h"):
+        for k in ("leistung", "motor_kn", "motor_unter", "max_wind", "max_welle", "wendezeit_s", "reserve_m", "max_tag_h", "reffen_ab"):
             if request.args.get(k):
                 opt[k] = float(request.args[k])
         for k in ("motor", "ozean", "tiefe", "ohne_spi", "tide", "windstau", "vtg", "sperr", "nacht_meiden"):

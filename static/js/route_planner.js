@@ -28,7 +28,7 @@
         '<datalist id="rp-boot-liste"></datalist>' +
         '<div id="rp-boot-info" style="color:#777;font-size:11px;margin-top:-3px;"></div>' +
         '<label title="Fills the options below for a cruising crew (reduced performance, no spinnaker, engine, conservative limits) or a racing crew (full ORC polar, spinnaker, no engine, quick tacks). All values can still be changed under Options.">Sailing style<select id="rp-stil" ' + inp + '><option value="toern">Cruising</option><option value="regatta">Racing</option></select></label>' +
-        '<label id="rp-nospi-zeile"><input type="checkbox" id="rp-nospi" checked> No spinnaker (ORC non-spinnaker polar)</label>' +
+        '<label id="rp-nospi-zeile" title="Uses the ORC non-spinnaker certificate of the class; where there is none, the spinnaker polar reduced by the median ratio of 800 classes with both certificates (about ±3 %)"><input type="checkbox" id="rp-nospi" checked> No spinnaker</label>' +
         '<label>Departure<input type="datetime-local" id="rp-zeit" ' + inp + '></label>' +
         '<label title="Sail only between dawn and dusk (civil twilight). At night the boat stays in a marina, harbour or anchorage (OpenStreetMap) or at the start, and continues at dawn. Longer passages become multi-day trips."><input type="checkbox" id="rp-nacht"> Avoid sailing at night (overnight in harbour)</label>' +
         '<label id="rp-tagh-zeile" style="padding-left:18px;display:none;" title="Each day ends in a harbour after at most this many hours under way (counted from dawn; empty = until dusk)">max. hours under way per day <input id="rp-tagh" type="number" min="2" max="24" step="1" placeholder="–" ' + num + '></label>' +
@@ -40,6 +40,7 @@
         '<details><summary style="cursor:pointer;">Options</summary>' +
           '<div style="display:grid;grid-template-columns:1fr auto;gap:3px 6px;margin-top:4px;align-items:center;">' +
             '<span title="ORC polars assume a racing crew with a clean bottom and new sails; cruising boats typically reach 80–90 %">Performance (% of ORC polar)</span><input id="rp-leistung" type="number" min="40" max="110" step="5" value="85" ' + num + '>' +
+            '<span title="A cruising crew reefs earlier than the racing crew of the ORC polar: from this true wind speed, 1.5 % less speed per knot upwind to beam reach (at most 15 %). Estimate. 0 = off">Reef from (kn true wind)</span><input id="rp-reffen" type="number" min="0" max="40" step="1" value="18" ' + num + '>' +
             '<span>Max. wind (kn)</span><input id="rp-maxwind" type="number" min="5" max="60" value="25" ' + num + '>' +
             '<span>Max. wave height (m)</span><input id="rp-maxwelle" type="number" min="0.5" max="10" step="0.5" value="2.5" ' + num + '>' +
             '<span>Tack/gybe costs (s)</span><input id="rp-wende" type="number" min="0" max="600" step="10" value="60" ' + num + '>' +
@@ -75,7 +76,7 @@
       var b = bootNamen[$('rp-boot-such').value];
       if (!b) { $('rp-boot-info').textContent = 'Unknown boat – choose one from the list'; return; }
       $('rp-boot-info').textContent = b[5] ? ('Dinghy: VPP polar calibrated to the class handicap (Portsmouth/Yardstick), about ±10 %' + (b[3] ? ', with and without spinnaker' : ', no spinnaker'))
-        : b[4] + ' ORC certificate' + (b[4] > 1 ? 's' : '') + (b[3] ? ', non-spinnaker polar available' : ', no non-spinnaker polar (spinnaker polar is used)');
+        : b[4] + ' ORC certificate' + (b[4] > 1 ? 's' : '') + (b[3] === 1 ? ', non-spinnaker polar available' : ', no spinnaker: derived from the spinnaker polar');
       $('rp-nospi').disabled = !b[3];
       $('rp-nospi-zeile').style.opacity = b[3] ? 1 : 0.5;
     }
@@ -94,16 +95,16 @@
     // Vorgaben je Bootsart und Stil (22.11.2026: Segeltoern / Regatta). Jollen: kein Motor, kurze Wende, niedrigere
     // Wind-/Wellengrenze. Gesetzt bei Stilwechsel und beim Wechsel Yacht <-> Jolle; danach frei aenderbar.
     var VORGABE = {
-      yacht: { toern: { motor: true, wende: 60, maxwind: 25, maxwelle: 2.5, leistung: 85, nospi: true },
-               regatta: { motor: false, wende: 30, maxwind: 35, maxwelle: 4.0, leistung: 100, nospi: false } },
-      jolle: { toern: { motor: false, wende: 20, maxwind: 18, maxwelle: 1.0, leistung: 85, nospi: true },
-               regatta: { motor: false, wende: 15, maxwind: 25, maxwelle: 1.5, leistung: 100, nospi: false } }
+      yacht: { toern: { motor: true, wende: 60, maxwind: 25, maxwelle: 2.5, leistung: 85, nospi: true, reffen: 18 },
+               regatta: { motor: false, wende: 30, maxwind: 35, maxwelle: 4.0, leistung: 100, nospi: false, reffen: 0 } },
+      jolle: { toern: { motor: false, wende: 20, maxwind: 18, maxwelle: 1.0, leistung: 85, nospi: true, reffen: 12 },
+               regatta: { motor: false, wende: 15, maxwind: 25, maxwelle: 1.5, leistung: 100, nospi: false, reffen: 0 } }
     }, letzteArt = null;
     try { var st = localStorage.getItem('rpStil'); if (st === 'regatta' || st === 'toern') $('rp-stil').value = st; } catch (e) {}
     function anwenden(art) {
       var stil = $('rp-stil').value, v = VORGABE[art][stil];
       $('rp-motor').checked = v.motor; $('rp-wende').value = v.wende; $('rp-maxwind').value = v.maxwind;
-      $('rp-maxwelle').value = v.maxwelle; $('rp-leistung').value = v.leistung;
+      $('rp-maxwelle').value = v.maxwelle; $('rp-leistung').value = v.leistung; $('rp-reffen').value = v.reffen;
       if (!$('rp-nospi').disabled) $('rp-nospi').checked = v.nospi;
       if (stil === 'regatta') { $('rp-nacht').checked = false; $('rp-tagh-zeile').style.display = 'none'; }
     }
@@ -247,7 +248,7 @@
       var q = {
         start: a.lat.toFixed(5) + ',' + a.lng.toFixed(5), ziel: b.lat.toFixed(5) + ',' + b.lng.toFixed(5), t: t0,
         boot: (bootNamen[$('rp-boot-such').value] || [''])[0], ohne_spi: $('rp-nospi').checked ? 1 : 0, leistung: (parseFloat($('rp-leistung').value) / 100).toFixed(2),
-        max_wind: $('rp-maxwind').value, max_welle: $('rp-maxwelle').value, wendezeit_s: $('rp-wende').value,
+        max_wind: $('rp-maxwind').value, reffen_ab: $('rp-reffen').value || 0, max_welle: $('rp-maxwelle').value, wendezeit_s: $('rp-wende').value,
         motor: $('rp-motor').checked ? 1 : 0, motor_unter: $('rp-motorunter').value, motor_kn: $('rp-motorkn').value,
         ozean: $('rp-ozean').checked ? 1 : 0, tiefe: $('rp-tiefe').checked ? 1 : 0, tide: $('rp-tide').checked ? 1 : 0, windstau: $('rp-windstau').checked ? 1 : 0, nacht_meiden: $('rp-nacht').checked ? 1 : 0, max_tag_h: $('rp-nacht').checked ? ($('rp-tagh').value || '') : '', vtg: $('rp-vtg').checked ? 1 : 0, sperr: $('rp-sperr').checked ? 1 : 0, reserve_m: $('rp-reserve').value
       };
