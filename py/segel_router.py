@@ -1015,6 +1015,69 @@ def route(start, ziel, t0, boot=segel_polare.STANDARD, **opt):
             woher = math.degrees(math.atan2(-(wu - cu), -(wv - cv))) % 360
             p["twa"] = round(((woher - kurs + 180) % 360) - 180)
         punkte.append(p)
+    # Kanaele (24.11.2026): das Raster (0,5–1 km) liegt in schmalen Rinnen (Gaillard Cut 200 m) bis 0,8 km daneben, und die
+    # auf die Kanallaenge verteilte Schleusen-/Konvoizeit erschien an jedem Knoten als Wartepunkt. Folgen von Punkten
+    # im selben Kanal (<= 1 km von der Mittellinie) werden durch den Weg laengs der Mittellinie ersetzt (alle ~300 m),
+    # Schleusen-/Konvoizeit gleichmaessig ueber die Strecke (effektive Fahrt), lange Pausen (Nacht, Tide) bleiben Wartepunkte.
+    if kanal_k.any() and len(punkte) > 2:
+        def im_kanal(p_):
+            return next((nr_ for nr_ in kanal_namen if segel_kanaele.abstand_km(nr_, p_["la"], p_["lo"]) <= 1.0), 0)
+        neu_p, a = [], 0
+        while a < len(punkte):
+            nr_ = im_kanal(punkte[a]) if punkte[a].get("modus") != "nacht" else 0
+            b = a
+            while nr_ and b + 1 < len(punkte) and im_kanal(punkte[b + 1]) == nr_:
+                b += 1
+                if punkte[b].get("modus") == "nacht":
+                    break
+            weg = segel_kanaele.pfad(nr_, (punkte[a]["la"], punkte[a]["lo"]), (punkte[b]["la"], punkte[b]["lo"])) if b > a else None
+            if not weg or len(weg) < 2:
+                neu_p.append(punkte[a])
+                a += 1
+                continue
+            weg = weg[::3] + ([weg[-1]] if (len(weg) - 1) % 3 else [])
+            km_ = np.cumsum([0.0] + [_km(x[0], x[1], y[0], y[1]) for x, y in zip(weg, weg[1:])])
+            run = punkte[a:b + 1]
+            wl = np.array(weg)
+            # Originalpunkte als Zeitanker auf dem Weg (Index monoton); dazwischen Zeit gleichmaessig nach Strecke,
+            # ausser bei langen Pausen (Nacht, Tide): dann erst warten (Punkt mit Motorfahrt, die Luecke wird unten
+            # zum Wartepunkt), danach mit der Fahrt des Originalpunkts weiter
+            m_ = np.maximum.accumulate([int(np.argmin(np.hypot(wl[:, 0] - q["la"], (wl[:, 1] - q["lo"]) * math.cos(math.radians(q["la"])))))
+                                        for q in run])
+            m_[0], m_[-1] = 0, len(weg) - 1
+            tt = np.zeros(len(weg))
+            vv = np.zeros(len(weg))                        # Fahrt je Wegstueck (kn)
+            pause = {}
+            for k_ in range(len(run) - 1):
+                i0, i1, T0_, T1_ = int(m_[k_]), int(m_[k_ + 1]), run[k_]["t"], run[k_ + 1]["t"]
+                if i1 == i0:
+                    pause[i0] = pause.get(i0, 0.0) + (T1_ - T0_)
+                    continue
+                s_ = km_[i1] - km_[i0]
+                v_ = float(run[k_].get("sog") or 0.0)
+                fahrt_ = s_ / KN / v_ * 3600.0 if v_ > 0.3 else T1_ - T0_
+                warte_ = (T1_ - T0_) - fahrt_ if (T1_ - T0_) - fahrt_ > 1800 else 0.0
+                if warte_:
+                    pause[i0] = pause.get(i0, 0.0) + warte_
+                for i_ in range(i0, i1 + 1):
+                    tt[i_] = T0_ + warte_ + (km_[i_] - km_[i0]) / s_ * (T1_ - T0_ - warte_)
+                for i_ in range(i0, i1):
+                    vv[i_] = (km_[i_ + 1] - km_[i_]) / KN / max((tt[i_ + 1] - tt[i_]) / 3600.0, 1e-6)
+            for i_, w_ in pause.items():                    # Ankunft = Abfahrt - Pause
+                tt[i_] -= w_
+            for i_ in range(len(weg) - 1):
+                la_, lo_ = weg[i_]
+                k_ = int(np.searchsorted(m_, i_, side="right")) - 1
+                q = dict(run[max(0, k_)])
+                kurs_ = math.degrees(math.atan2((weg[i_ + 1][1] - lo_) * math.cos(math.radians(la_)), weg[i_ + 1][0] - la_)) % 360
+                q.update(la=round(la_, 5), lo=round(lo_, 5), t=round(tt[i_]), modus="motor",
+                         kurs_kg=round(kurs_), steuerkurs=round(kurs_), sog=round(float(vv[i_]), 2))
+                neu_p.append(q)
+            ende = dict(punkte[b])
+            ende.update(la=round(weg[-1][0], 5), lo=round(weg[-1][1], 5))
+            punkte[b] = ende
+            a = b
+        punkte = neu_p
     # Wartezeiten auf Wasser (Tide) sichtbar machen: Abfahrt = Ankunft am naechsten Punkt - Fahrzeit der Kante
     a = 0
     while a < len(punkte) - 1:

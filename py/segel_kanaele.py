@@ -222,6 +222,87 @@ def raster(s, n, w, e, ny, nx, breite_px=1, zone_km=None):
     return wasser, zone
 
 
+_GRAPH = {}
+
+
+def _graph(idx):
+    """Mittellinien des Kanals idx als Graph: Punkte alle <= 100 m, Kanten laengs der Linien, Kettenenden mit dem
+    naechsten Punkt einer anderen Kette verbunden (<= 400 m). -> (pts [n,2] lon/lat, csr-Matrix km)."""
+    if idx in _GRAPH:
+        return _GRAPH[idx]
+    from scipy.sparse import coo_matrix
+    L = _linien()[idx]
+    if L and KANAELE[idx][4].get("luecke_km"):
+        L = _luecken(L, KANAELE[idx][4]["luecke_km"])
+    L = _enden(L)
+    pts, kanten, kette, enden = [], [], [], []
+    for c, g in enumerate(L):
+        dicht = [np.asarray(g[0], dtype="f8")]
+        for q in np.asarray(g[1:], dtype="f8"):
+            vorher = dicht[-1]
+            n_ = max(1, int(math.ceil(_km_ll(vorher, q) / 0.1)))
+            for f in np.arange(1, n_ + 1) / n_:
+                dicht.append(vorher * (1 - f) + q * f)
+        o = len(pts)
+        pts += [np.asarray(x, dtype="f8") for x in dicht]
+        kette += [c] * len(dicht)
+        kanten += [(o + i, o + i + 1) for i in range(len(dicht) - 1)]
+        enden += [o, o + len(dicht) - 1]
+    P = np.array(pts)
+    K = np.array(kette)
+    for e_ in enden:
+        d = _km_arr(P[e_], P)
+        d[K == K[e_]] = np.inf
+        j = int(np.argmin(d))
+        if d[j] <= 0.4:
+            kanten.append((e_, j))
+    a_, b_ = np.array(kanten).T
+    w_ = np.maximum(_km_arr2(P[a_], P[b_]), 1e-4)
+    M = coo_matrix((np.r_[w_, w_], (np.r_[a_, b_], np.r_[b_, a_])), shape=(len(P), len(P))).tocsr()
+    _GRAPH[idx] = (P, M)
+    return _GRAPH[idx]
+
+
+def _km_ll(a, b):
+    return math.hypot((b[1] - a[1]) * 111.2, (b[0] - a[0]) * 111.2 * math.cos(math.radians((a[1] + b[1]) / 2)))
+
+
+def _km_arr(p, P):
+    return np.hypot((P[:, 1] - p[1]) * 111.2, (P[:, 0] - p[0]) * 111.2 * math.cos(math.radians(p[1])))
+
+
+def _km_arr2(A, B):
+    return np.hypot((B[:, 1] - A[:, 1]) * 111.2, (B[:, 0] - A[:, 0]) * 111.2 * np.cos(np.radians(A[:, 1])))
+
+
+def abstand_km(nr, la, lo):
+    """Abstand (km) des Punkts zur Mittellinie des Kanals nr (1 + Index)."""
+    P, _ = _graph(nr - 1)
+    return float(_km_arr((lo, la), P).min())
+
+
+def pfad(nr, a, b):
+    """Weg laengs der Mittellinie von Punkt a nach b ((la, lo)) im Kanal nr -> [(la, lo), ...] inkl. der beiden
+    Fusspunkte, None ohne Verbindung (24.11.2026: Route im Kanal auf die Rinne statt aufs 0,6-km-Raster)."""
+    from scipy.sparse.csgraph import dijkstra
+    P, M = _graph(nr - 1)
+    da, db = _km_arr((a[1], a[0]), P), _km_arr((b[1], b[0]), P)
+    # Fusspunkte: nah am Punkt UND auf kurzem Weg zum anderen Ende (sonst rastet ein Punkt zwischen zwei Linien auf
+    # einer Nebenlinie ein, z. B. dem alten franzoesischen Kanal bei Gatun, und der Weg macht eine Schleife)
+    d_b = dijkstra(M, indices=int(np.argmin(db)))
+    i = int(np.argmin(np.where(da <= da.min() + 1.0, d_b + 3 * da, np.inf)))
+    d, vor = dijkstra(M, indices=i, return_predecessors=True)
+    j = int(np.argmin(np.where(db <= db.min() + 1.0, d + 3 * db, np.inf)))
+    if i == j:
+        return [(float(P[i, 1]), float(P[i, 0]))]
+    if not np.isfinite(d[j]):
+        return None
+    weg = [j]
+    while weg[-1] != i:
+        weg.append(int(vor[weg[-1]]))
+    return [(float(P[k, 1]), float(P[k, 0])) for k in reversed(weg)]
+
+
 def regeln(nr):
     """nr = Wert aus zone (1 + Index) -> (Name, Regeln)."""
     k = KANAELE[nr - 1]
