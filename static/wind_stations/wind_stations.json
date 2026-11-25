@@ -8014,6 +8014,66 @@
 ]
 },
 {
+"name": "Boa Vista Rabil (Flughafen)",
+"spot": "Boa Vista: Sal Rei",
+"lat": 16.1365,
+"lon": -22.8889,
+"source": "METAR",
+"id": "GVBA",
+"note": "METAR, nur 7-19 UTC; Hauptsaison Winter",
+"tz": "Atlantic/Cape_Verde",
+"link": "https://mesonet.agron.iastate.edu/sites/site.php?station=GVBA&network=",
+"mean_kn": 13.4,
+"hours12": 997,
+"n": 1451,
+"lag_h": 1,
+"best_match_mae": 2.26,
+"best_match_bias": -1.86,
+"best_model": "UKMO 10",
+"best_model_mae": 1.75,
+"best_model_bias": -0.81,
+"corr_mae": 1.49,
+"corr_pod12": 0.88,
+"corr_far12": 0.1,
+"models": [
+{
+"m": "Mittel aller (4)",
+"bias": -1.33,
+"mae": 1.9,
+"r": 0.871,
+"corr_mae": 1.49
+},
+{
+"m": "UKMO 10",
+"bias": -0.81,
+"mae": 1.75,
+"r": 0.861,
+"corr_mae": 1.59
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -1.86,
+"mae": 2.26,
+"r": 0.856,
+"corr_mae": 1.62
+},
+{
+"m": "ECMWF 9",
+"bias": -1.86,
+"mae": 2.26,
+"r": 0.856,
+"corr_mae": 1.62
+},
+{
+"m": "GFS 13",
+"bias": -0.79,
+"mae": 2.08,
+"r": 0.811,
+"corr_mae": 1.91
+}
+]
+},
+{
 "name": "Teneriffa Süd (Flughafen)",
 "spot": "El Médano",
 "lat": 28.0475,

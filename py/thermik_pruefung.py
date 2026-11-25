@@ -140,6 +140,7 @@ REVIERE = [
     # --- Atlantik, Afrika, Indik
     ('Dakhla (Flughafen)', 'Africa/El_Aaiun', 'metar', 'GMMH', None, None, 'METAR', 'Dakhla Lagune'),
     ('Essaouira (Mogador)', 'Africa/Casablanca', 'ogimet', '60220', 31.51, -9.78, 'SYNOP aus OGIMET, 3-stündlich', 'Essaouira'),
+    ('Boa Vista Rabil (Flughafen)', 'Atlantic/Cape_Verde', 'metar', 'GVBA', None, None, 'METAR, nur 7-19 UTC; Hauptsaison Winter', 'Boa Vista: Sal Rei'),
     ('Teneriffa Süd (Flughafen)', 'Atlantic/Canary', 'metar', 'GCTS', None, None, 'METAR', 'El Médano'),
     ('Gran Canaria (Flughafen Gando)', 'Atlantic/Canary', 'metar', 'GCLP', None, None, 'METAR', 'Pozo Izquierdo'),
     ('Plaisance (Flughafen)', 'Indian/Mauritius', 'metar', 'FIMP', None, None, 'METAR', 'Mauritius: Pointe d\'Esny'),
