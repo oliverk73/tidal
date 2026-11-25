@@ -5,7 +5,7 @@
   'use strict';
 
   var REGIONS = [
-    ['Alps & lakes', function (s) { return /Zurich|Vienna/.test(s.tz) || /See|Lago|Garda|Comer|Silvaplana|Reschen|Bodensee|Ammersee/.test(s.name); }],
+    ['Alps & lakes', function (s) { return /Zurich|Vienna/.test(s.tz) || /See|Lago|Garda|Comer|Silvaplana|Reschen|Bodensee|Chiemsee|Müritz|Iseosee|Achensee/.test(s.spot || s.name); }],
     ['Europe', function (s) { return s.tz.indexOf('Europe/') === 0; }],
     ['Atlantic & Africa', function (s) { return /^(Atlantic|Africa|Indian)\//.test(s.tz); }],
     ['Americas', function (s) { return s.tz.indexOf('America/') === 0; }],
@@ -61,6 +61,7 @@
     }).join('');
     return '<div style="font-family:sans-serif;font-size:12.5px;min-width:260px;max-width:340px;">' +
       '<div style="font-weight:bold;font-size:14px;margin-bottom:2px;">' + esc(s.name) + '</div>' +
+      (s.spot ? '<div style="margin-bottom:2px;">Spot: <b>' + esc(s.spot) + '</b></div>' : '') +
       '<div style="color:#555;">' + src + (s.note ? ' · ' + esc(s.note) : '') + '</div>' +
       '<div style="color:#777;font-size:11.5px;margin-bottom:6px;">' + s.lat.toFixed(4) + ', ' + s.lon.toFixed(4) + '</div>' +
       '<div style="margin-bottom:4px;">Measured ' + esc(meta.period) + ', ' + esc(meta.hours) + ': mean <b>' + kn(s.mean_kn) +
@@ -151,9 +152,10 @@
     stations.forEach(function (s) {
       for (var i = 0; i < groups.length; i++) if (groups[i].test(s)) { groups[i].items.push(s); break; }
     });
+    groups.forEach(function (g) { g.items.sort(function (a, b) { return (a.spot || a.name).localeCompare(b.spot || b.name); }); });
     var options = '<option value="">Choose a station…</option>' + groups.filter(function (g) { return g.items.length; }).map(function (g) {
       return '<optgroup label="' + esc(g.label) + '">' + g.items.map(function (s) {
-        return '<option value="' + esc(s.name) + '">' + esc(s.name) + ' – ' + s.corr_mae.toFixed(1) + ' kn</option>';
+        return '<option value="' + esc(s.name) + '">' + esc(s.spot ? s.spot + ' (' + s.name + ')' : s.name) + ' – ' + s.corr_mae.toFixed(1) + ' kn</option>';
       }).join('') + '</optgroup>';
     }).join('');
 

@@ -40,9 +40,9 @@ def _live_reichweite():
     """Je Spot und Modell: wie viele Stunden ab 00 UTC rechnet es live (aus dem juengsten Sammlerabruf)."""
     import glob
     import gzip
-    fs = sorted(glob.glob(os.path.join(SAMMEL, '*', '*.json.gz')))
-    if not fs:
-        fs = sorted(glob.glob(os.path.expanduser('~/tidal-sammler/wind_vorhersagen/*/*.json.gz')))
+    fs = glob.glob(os.path.join(SAMMEL, '*', '*.json.gz')) + \
+        glob.glob(os.path.expanduser('~/tidal-sammler/wind_vorhersagen/*/*.json.gz'))
+    fs = sorted(fs, key=os.path.getmtime)                      # juengster Abruf (Spotliste kann sich geaendert haben)
     js = json.load(gzip.open(fs[-1], 'rt'))
     return {s['name']: {m: v[0] + len(v[1]) for m, v in s['m'].items()} for s in js['spots']}
 

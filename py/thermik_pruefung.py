@@ -47,78 +47,122 @@ KURZ = {'icon_d2': 'ICON-D2 2,2', 'icon_eu': 'ICON-EU 7', 'meteoswiss_icon_ch1':
         'ukmo_uk_deterministic_2km': 'UKV 2', 'metno_nordic': 'MET-Nordic 1', 'ecmwf_ifs': 'ECMWF 9',
         'ukmo_global_deterministic_10km': 'UKMO 10', 'gfs_global': 'GFS 13', 'gfs_hrrr': 'HRRR 3', 'ncep_nbm_conus': 'NBM 2,5 (NOAA-Korrektur)', 'bom_access_global': 'BOM ACCESS 12', 'best_match': 'Open-Meteo best_match'}
 
-# name, zeitzone, quelle, kennung, lat, lon, bemerkung
+# station (echter Name), zeitzone, quelle, kennung, lat, lon, bemerkung, spot (Revier, auf das sie sich bezieht)
+# 25.11.2026 (Oliver): nur Stationen AM Spot; ferne Ersatzstationen entfernt, weil sie den Spotwind nicht zeigen:
+#   Grosseto (Talamone, 20 km), Figari + Olbia (Porto Pollo, 36-39 km), Perpignan (Leucate, 24 km -> LEUCATE),
+#   Hvar (Bol, 10+ km), Split Marjan (122 m), Sal Flughafen (Santa Maria 15 km), Fortaleza (Cumbuco 25 km),
+#   Kapstadt Flughafen (22 km landein), Perth Flughafen (15 km landein), Miami KMIA (10 km landein),
+#   Southampton EGHI (10 km landein), Oberpfaffenhofen (zwischen den Seen), 4S2 Hood River (nicht repraesentativ).
+#   Kaum Gleitwind gemessen (< 5 h >= 12 kn Mai-Sep 2026, Station sieht den Spotwind nicht): Colico, Costa Volpino,
+#   Laveno-Mombello, Pully, St. Wolfgang, Altmuenster.
+#   Leer gebliebene MesoWest-Stationen (519PG, TCICA, GGBC1, NDBC44063, APAM2, 0234W) ebenfalls entfernt.
+# Kennungen der CSV-Netze: Praefix + Stations-ID (mf/dwd/knmi/dmi/coops), Daten quellen/thermik/<netz>/<id>.csv
 REVIERE = [
-    ('Silvaplana/Sils (Segl-Maria)', 'Europe/Zurich', 'meteoschweiz', 'SIA', 46.432331, 9.762325, 'Malojawind'),
-    ('Reschensee (St. Valentin)', 'Europe/Rome', 'suedtirol', '02200MS', 46.7759, 10.5289, 'Talwind Vinschgau'),
-    ('Comer See Nord (Colico)', 'Europe/Rome', 'lombardia', '19109:6008', 46.13814, 9.38469, 'Breva'),
-    ('Gardasee Nord (Torbole Belvedere)', 'Europe/Rome', 'meteotrentino', 'T0193', 45.870095, 10.877355, 'Meteotrentino, am Spot, 90 m'),
-    ('Gardasee Nord (Limone)', 'Europe/Rome', 'lombardia', '14065:14066', 45.80683, 10.79006, 'Ora/Peler'),
-    ('Tarifa', 'Europe/Madrid', 'synop', '0-724-0-458', None, None, 'Levante/Poniente'),
-    ('Talamone (Grosseto)', 'Europe/Rome', 'synop', '0-380-0-206', None, None, 'Station 20 km'),
-    # Cap Pertusato (0-250-0-770) im IEM-Archiv kaputt: Wind ~2 kn, Richtung nie ueber 94 Grad
-    ('Porto Pollo (Figari)', 'Europe/Rome', 'metar', 'LFKF', None, None, 'Station 39 km, Suedkorsika'),
-    ('Porto Pollo (Olbia)', 'Europe/Rome', 'metar', 'LIEO', None, None, 'Station 36 km'),
-    ('Hyères (Flughafen, METAR)', 'Europe/Paris', 'metar', 'LFTH', None, None, ''),
-    ('Lo Stagnone (Trapani-Birgi)', 'Europe/Rome', 'synop', '0-380-0-429', None, None, ''),
-    ('Rhodos (Flughafen)', 'Europe/Athens', 'synop', '0-300-0-749', None, None, 'Meltemi, Ialysos'),
-    ('Kos (Flughafen)', 'Europe/Athens', 'synop', '0-300-0-742', None, None, 'Meltemi, Marmari'),
-    ('Karpathos (Flughafen)', 'Europe/Athens', 'synop', '0-300-0-765', None, None, 'Meltemi, Gun Bay'),
-    ('Naxos (Flughafen)', 'Europe/Athens', 'metar', 'LGNX', None, None, 'Meltemi; SYNOP 0-300-0-732 im IEM-Archiv leer'),
-    ('Paros (Flughafen)', 'Europe/Athens', 'synop', '0-300-0-766', None, None, 'Meltemi'),
-    # franzoesische SYNOP-Stationen im IEM-Archiv kaputt (Hyeres 1,7 kn, Leucate 2,1 kn Mittel) -> METAR
-    ('Leucate (Perpignan)', 'Europe/Paris', 'metar', 'LFMP', None, None, 'Tramontane, Station 24 km'),
-    ('Sylt (List)', 'Europe/Berlin', 'synop', '0-276-0-20', None, None, ''),
-    ('Fehmarn', 'Europe/Berlin', 'synop', '0-276-0-55', None, None, ''),
-    ('Neusiedler See', 'Europe/Vienna', 'synop', '0-40-0-72', None, None, ''),
-    ('Neusiedler See (Podersdorf Strandbad)', 'Europe/Vienna', 'geosphere', 'gs7912', 47.86611, 16.83444, 'GeoSphere, am Spot'),
-    ('Wolfgangsee (St. Wolfgang)', 'Europe/Vienna', 'geosphere', 'gs9512', 47.74028, 13.44194, 'GeoSphere, Ufer'),
-    ('Traunsee (Altmünster)', 'Europe/Vienna', 'geosphere', 'gs6621', 47.87917, 13.77333, 'GeoSphere, Nordende'),
-    ('Achensee (Achenkirch)', 'Europe/Vienna', 'geosphere', 'gs8806', 47.49944, 11.70667, 'GeoSphere, Nordende'),
-    ('Hyères Almanarre (La Capte)', 'Europe/Paris', 'pioupiou', 'pp2133', None, None, 'Pioupiou, Segelschule'),
-    ('Gruissan (Étang de Mateille)', 'Europe/Paris', 'pioupiou', 'pp602', None, None, 'Pioupiou, am Spot'),
-    ('Leucate (Aéromodélisme)', 'Europe/Paris', 'pioupiou', 'pp1538', None, None, 'Pioupiou, Plateau'),
-    # Genfer See Windbird 1652 (Lausanne, 4 km landein): Mittel 2 kn, windgeschuetzt -> nicht repraesentativ
-    ('Dakhla (Flughafen)', 'Africa/El_Aaiun', 'metar', 'GMMH', None, None, 'Passat, Lagune ~5 km; WMO 60096 auch in OGIMET'),
-    ('Essaouira', 'Africa/Casablanca', 'ogimet', '60220', 31.51, -9.78, 'Alizé; WMO 60220 aus OGIMET (IEM nur bis 11.06.2026), 3-stündlich'),
-    ('Hurghada/El Gouna', 'Africa/Cairo', 'synop', '0-818-0-463', None, None, ''),
-    # Dahab (0-818-0-467) und Morro Jable (0-724-0-34): im IEM-Archiv keine Meldungen Mai-Sep 2026
-    ('Sal (Flughafen)', 'Atlantic/Cape_Verde', 'metar', 'GVAC', None, None, 'Passat, Winter; SYNOP 0-132-0-594 im IEM-Archiv lueckenhaft'),
-    ('Kroatien Bol/Brac (Hvar)', 'Europe/Zagreb', 'synop', '0-705-0-447', None, None, 'Maestral'),
-    ('Kroatien Split (Marjan)', 'Europe/Zagreb', 'synop', '0-705-0-445', None, None, 'Maestral, Station 122 m'),
-    ('Bodensee (Konstanz)', 'Europe/Berlin', 'synop', '0-276-0-929', None, None, ''),
-    ('Bodensee (Guettingen)', 'Europe/Zurich', 'meteoschweiz', 'GUT', 47.601733, 9.279428, ''),
-    ('Genfer See (Pully)', 'Europe/Zurich', 'meteoschweiz', 'PUY', 46.512283, 6.667517, 'Station am Hang'),
-    ('Lago Maggiore (Magadino)', 'Europe/Zurich', 'meteoschweiz', 'MAG', 46.160025, 8.933672, 'Ebene am Nordende'),
-    ('Teneriffa El Medano (Flughafen Sur)', 'Atlantic/Canary', 'metar', 'GCTS', None, None, 'Passat'),
-    ('Gran Canaria Pozo (Gando)', 'Atlantic/Canary', 'metar', 'GCLP', None, None, 'Passat'),
-    ('Cumbuco (Fortaleza)', 'America/Fortaleza', 'metar', 'SBFZ', None, None, 'Passat, Station 25 km'),
-    ('Kapstadt (Flughafen)', 'Africa/Johannesburg', 'metar', 'FACT', None, None, 'Winter, Station 22 km landein'),
-    ('Mauritius (Plaisance)', 'Indian/Mauritius', 'metar', 'FIMP', None, None, 'Winter = Passatsaison'),
-    ('Perth (Flughafen)', 'Australia/Perth', 'metar', 'YPPH', None, None, 'Winter, Station 15 km landein'),
-    ('Sydney (Botany Bay)', 'Australia/Sydney', 'metar', 'YSSY', None, None, 'Winter'),
-    ('Columbia Gorge (Hood River)', 'America/Los_Angeles', 'metar', '4S2', None, None, 'Duesenwind'),
-    ('San Francisco Bay (SFO)', 'America/Los_Angeles', 'metar', 'KSFO', None, None, 'Seewind'),
-    ('Chesapeake Bay (Annapolis)', 'America/New_York', 'metar', 'NAK', None, None, ''),
-    ('Chesapeake Bay (Thomas Point Leuchtturm)', 'America/New_York', 'ndbc', 'tplm2', 38.899, -76.436, 'NDBC'),
-    ('San Francisco Bay (Fort Point)', 'America/Los_Angeles', 'ndbc', 'ftpc1', 37.806, -122.466, 'NDBC, Golden Gate'),
-    ('San Francisco Bay (Alameda)', 'America/Los_Angeles', 'ndbc', 'aamc1', 37.772, -122.300, 'NDBC'),
-    ('Suisun Bay/Delta (Port Chicago)', 'America/Los_Angeles', 'ndbc', 'pcoc1', 38.056, -122.039, 'NDBC, 25 km vor Sherman Isl.'),
-    ('Miami (Virginia Key)', 'America/New_York', 'ndbc', 'vakf1', 25.731, -80.162, 'NDBC'),
-    ('Hood River (HOXO, Wasser)', 'America/Los_Angeles', 'mesowest', 'HOXO', None, None, 'MesoWest'),
-    ('Sherman Island (Bridgehead)', 'America/Los_Angeles', 'mesowest', '519PG', 38.00533, -121.76035, 'MesoWest PG&E, 4 km'),
-    ('Delta (Twitchell Island)', 'America/Los_Angeles', 'mesowest', 'TCICA', 38.1, -121.65, 'MesoWest'),
-    ('Crissy Field (Golden Gate Bridge)', 'America/Los_Angeles', 'mesowest', 'GGBC1', None, None, 'MesoWest, 82 m hoch'),
-    ('Annapolis (Boje 44063)', 'America/New_York', 'mesowest', 'NDBC44063', None, None, 'MesoWest'),
-    ('Annapolis (Pegel APAM2)', 'America/New_York', 'mesowest', 'APAM2', None, None, 'MesoWest'),
-    ('Miami (Rosenstiel, Virginia Key)', 'America/New_York', 'mesowest', '0234W', None, None, 'MesoWest'),
-    ('Miami', 'America/New_York', 'metar', 'KMIA', None, None, 'Station 10 km landein'),
-    ('Barbados', 'America/Barbados', 'metar', 'TBPB', None, None, 'Passat'),
-    ('Barcelona (El Prat)', 'Europe/Madrid', 'metar', 'LEBL', None, None, 'Seewind'),
-    ('Mallorca Bucht von Palma', 'Europe/Madrid', 'metar', 'LEPA', None, None, 'Embat (Seewind)'),
-    ('Solent (Southampton)', 'Europe/London', 'metar', 'EGHI', None, None, 'Station 10 km landein'),
-    ('Ammersee/Starnberger See (Oberpfaffenhofen)', 'Europe/Berlin', 'metar', 'EDMO', None, None, 'Station zwischen den Seen'),
-    ('Bodensee (Friedrichshafen)', 'Europe/Berlin', 'metar', 'EDNY', None, None, ''),
+    # --- Alpen & Seen
+    ('Segl-Maria', 'Europe/Zurich', 'meteoschweiz', 'SIA', 46.432331, 9.762325, 'MeteoSchweiz', 'Silvaplana/Sils (Malojawind)'),
+    ('St. Valentin auf der Haide', 'Europe/Rome', 'suedtirol', '02200MS', 46.7759, 10.5289, 'Wetterdienst Südtirol', 'Reschensee'),
+    ('Torbole (Belvedere)', 'Europe/Rome', 'meteotrentino', 'T0193', 45.870095, 10.877355, 'Meteotrentino, 90 m', 'Gardasee Nord (Torbole)'),
+    ('Limone sul Garda', 'Europe/Rome', 'lombardia', '14065:14066', 45.80683, 10.79006, 'ARPA Lombardia', 'Gardasee Nord (Limone)'),
+    ('Toscolano-Maderno', 'Europe/Rome', 'lombardia', '14099:14100', 45.6364, 10.6169, 'ARPA Lombardia', 'Gardasee West (Toscolano/Campione)'),
+    ('Manerba del Garda Dusano', 'Europe/Rome', 'lombardia', '14783:14782', 45.5437, 10.5666, 'ARPA Lombardia', 'Gardasee Süd-West (Manerba)'),
+    ('Tavernola Bergamasca Gallinarga', 'Europe/Rome', 'lombardia', '17454:17456', 45.6963, 10.0542, 'ARPA Lombardia', 'Iseosee'),
+    ('Magadino/Cadenazzo', 'Europe/Zurich', 'meteoschweiz', 'MAG', 46.160025, 8.933672, 'MeteoSchweiz, Ebene am Nordende', 'Lago Maggiore Nord'),
+    ('Güttingen', 'Europe/Zurich', 'meteoschweiz', 'GUT', 47.601733, 9.279428, 'MeteoSchweiz', 'Bodensee'),
+    ('Konstanz', 'Europe/Berlin', 'dwd', 'dwd02712', 47.6952, 9.1307, 'DWD 10 min', 'Bodensee (Konstanz)'),
+    ('Friedrichshafen', 'Europe/Berlin', 'dwd', 'dwd01490', 47.6454, 9.4795, 'DWD 10 min', 'Bodensee (Friedrichshafen)'),
+    ('Lindau', 'Europe/Berlin', 'dwd', 'dwd06102', 47.5396, 9.6843, 'DWD 10 min', 'Bodensee (Lindau)'),
+    ('Chieming', 'Europe/Berlin', 'dwd', 'dwd00856', 47.8843, 12.5404, 'DWD 10 min', 'Chiemsee'),
+    ('Altmühlsee', 'Europe/Berlin', 'dwd', 'dwd06096', 49.1423, 10.7301, 'DWD 10 min', 'Altmühlsee'),
+    ('Waren (Müritz)', 'Europe/Berlin', 'dwd', 'dwd05349', 53.5196, 12.6654, 'DWD 10 min', 'Müritz'),
+    ('Neusiedl am See', 'Europe/Vienna', 'synop', '0-40-0-72', None, None, 'SYNOP', 'Neusiedler See Nord'),
+    ('Podersdorf Strandbad', 'Europe/Vienna', 'geosphere', 'gs7912', 47.86611, 16.83444, 'GeoSphere', 'Neusiedler See (Podersdorf)'),
+    ('Achenkirch', 'Europe/Vienna', 'geosphere', 'gs8806', 47.49944, 11.70667, 'GeoSphere, Nordende', 'Achensee'),
+    # --- Nordsee & Ostsee
+    ('List auf Sylt', 'Europe/Berlin', 'dwd', 'dwd03032', None, None, 'DWD 10 min', 'Sylt'),
+    ('Sankt Peter-Ording', 'Europe/Berlin', 'dwd', 'dwd04393', None, None, 'DWD 10 min', 'St. Peter-Ording'),
+    ('Büsum', 'Europe/Berlin', 'dwd', 'dwd00788', None, None, 'DWD 10 min', 'Büsum'),
+    ('Föhr', 'Europe/Berlin', 'dwd', 'dwd19243', None, None, 'DWD 10 min', 'Föhr'),
+    ('Norderney', 'Europe/Berlin', 'dwd', 'dwd03631', None, None, 'DWD 10 min', 'Norderney'),
+    ('Borkum-Süderstraße', 'Europe/Berlin', 'dwd', 'dwd00619', None, None, 'DWD 10 min', 'Borkum'),
+    ('Fehmarn', 'Europe/Berlin', 'dwd', 'dwd05516', None, None, 'DWD 10 min (Westermarkelsdorf)', 'Fehmarn Nord'),
+    ('Putlos', 'Europe/Berlin', 'dwd', 'dwd05877', None, None, 'DWD 10 min', 'Heiligenhafen/Graswarder'),
+    ('Schönhagen (Ostseebad)', 'Europe/Berlin', 'dwd', 'dwd05930', None, None, 'DWD 10 min', 'Schönhagen/Damp'),
+    ('Pelzerhaken', 'Europe/Berlin', 'dwd', 'dwd03897', None, None, 'DWD 10 min', 'Neustädter Bucht'),
+    ('Boltenhagen', 'Europe/Berlin', 'dwd', 'dwd00596', None, None, 'DWD 10 min', 'Boltenhagen'),
+    ('Rostock-Warnemünde', 'Europe/Berlin', 'dwd', 'dwd04271', None, None, 'DWD 10 min', 'Warnemünde'),
+    ('IJmuiden', 'Europe/Amsterdam', 'knmi', 'knmi225', None, None, 'KNMI', 'IJmuiden'),
+    ('Hoek van Holland', 'Europe/Amsterdam', 'knmi', 'knmi330', None, None, 'KNMI', 'Hoek van Holland'),
+    ('Cadzand', 'Europe/Amsterdam', 'knmi', 'knmi308', None, None, 'KNMI', 'Cadzand'),
+    ('Vlissingen', 'Europe/Amsterdam', 'knmi', 'knmi310', None, None, 'KNMI', 'Vlissingen'),
+    ('Stavenisse', 'Europe/Amsterdam', 'knmi', 'knmi324', None, None, 'KNMI', 'Oosterschelde'),
+    ('Stavoren', 'Europe/Amsterdam', 'knmi', 'knmi267', None, None, 'KNMI', 'IJsselmeer (Stavoren)'),
+    ('Houtribdijk', 'Europe/Amsterdam', 'knmi', 'knmi258', None, None, 'KNMI, Damm', 'Markermeer/IJsselmeer (Lelystad)'),
+    ('Lauwersoog', 'Europe/Amsterdam', 'knmi', 'knmi277', None, None, 'KNMI', 'Lauwersoog'),
+    ('Hoorn (Terschelling)', 'Europe/Amsterdam', 'knmi', 'knmi251', None, None, 'KNMI', 'Terschelling'),
+    ('Torsminde', 'Europe/Copenhagen', 'dmi', 'dmi06055', None, None, 'DMI 10 min', 'Torsminde'),
+    ('Hvide Sande', 'Europe/Copenhagen', 'dmi', 'dmi06058', None, None, 'DMI 10 min', 'Hvide Sande/Ringkøbing Fjord'),
+    ('Kegnæs Fyr', 'Europe/Copenhagen', 'dmi', 'dmi06119', None, None, 'DMI 10 min', 'Kegnæs/Sydals'),
+    ('Skagen Fyr', 'Europe/Copenhagen', 'dmi', 'dmi06041', None, None, 'DMI 10 min', 'Skagen'),
+    ('Københavns Lufthavn', 'Europe/Copenhagen', 'dmi', 'dmi06180', None, None, 'DMI 10 min', 'Amager Strand'),
+    # --- Frankreich (Météo-France, stündlich)
+    ('Dunkerque', 'Europe/Paris', 'meteofrance', 'mf59183001', None, None, 'Météo-France', 'Dunkerque'),
+    ('Cap Gris-Nez', 'Europe/Paris', 'meteofrance', 'mf62054001', None, None, 'Météo-France, 48 m', 'Wissant'),
+    ('Granville', 'Europe/Paris', 'meteofrance', 'mf50218001', None, None, 'Météo-France', 'Granville'),
+    ('Gouville', 'Europe/Paris', 'meteofrance', 'mf50215002', None, None, 'Météo-France', 'Gouville-sur-Mer'),
+    ('Brignogan', 'Europe/Paris', 'meteofrance', 'mf29021001', None, None, 'Météo-France', 'Brignogan-Plages'),
+    ('Plougonvelin', 'Europe/Paris', 'meteofrance', 'mf29190001', None, None, 'Météo-France', 'Trez Hir'),
+    ('Pointe de Penmarc\'h', 'Europe/Paris', 'meteofrance', 'mf29158001', None, None, 'Météo-France', 'La Torche'),
+    ('Quiberon (Flugplatz)', 'Europe/Paris', 'meteofrance', 'mf56186003', None, None, 'Météo-France', 'Quiberon/Penthièvre'),
+    ('Saint-Clément-des-Baleines', 'Europe/Paris', 'meteofrance', 'mf17318001', None, None, 'Météo-France', 'Île de Ré Nord'),
+    ('Royan-Médis', 'Europe/Paris', 'meteofrance', 'mf17306004', None, None, 'Météo-France', 'Royan'),
+    ('Leucate', 'Europe/Paris', 'meteofrance', 'mf11202001', None, None, 'Météo-France, 42 m', 'Leucate (La Franqui)'),
+    ('Leucate Aéromodélisme', 'Europe/Paris', 'pioupiou', 'pp1538', None, None, 'Pioupiou, Plateau', 'Leucate'),
+    ('Gruissan Étang de Mateille', 'Europe/Paris', 'pioupiou', 'pp602', None, None, 'Pioupiou', 'Gruissan'),
+    ('L\'Espiguette', 'Europe/Paris', 'meteofrance', 'mf30133005', None, None, 'Météo-France', 'Port-Camargue/Espiguette'),
+    ('Cap Couronne', 'Europe/Paris', 'meteofrance', 'mf13056002', None, None, 'Météo-France', 'Carro/La Couronne'),
+    ('Hyères Le Palyvestre (Flughafen)', 'Europe/Paris', 'metar', 'LFTH', None, None, 'METAR', 'Hyères'),
+    ('La Capte (CAPT\'ain NAUTIC)', 'Europe/Paris', 'pioupiou', 'pp2133', None, None, 'Pioupiou', 'Hyères Almanarre'),
+    ('Fréjus', 'Europe/Paris', 'meteofrance', 'mf83061001', None, None, 'Météo-France', 'Fréjus'),
+    ('Vauclin', 'America/Martinique', 'meteofrance', 'mf97232003', None, None, 'Météo-France', 'Martinique: Le Vauclin/Pointe Faula'),
+    # Saint-François Flugplatz (Guadeloupe, mf97125011): im Passat Mittel 5,6 kn, max 13,6 -> abgeschirmt/defekt, raus
+    ('Pierrefonds (Flughafen)', 'Indian/Reunion', 'meteofrance', 'mf97416463', None, None, 'Météo-France', 'Réunion: Saint-Pierre'),
+    # --- Mittelmeer (sonst)
+    ('Tarifa', 'Europe/Madrid', 'synop', '0-724-0-458', None, None, 'SYNOP', 'Tarifa'),
+    ('Trapani-Birgi (Flughafen)', 'Europe/Rome', 'synop', '0-380-0-429', None, None, 'SYNOP', 'Lo Stagnone'),
+    ('Rhodos Diagoras (Flughafen)', 'Europe/Athens', 'synop', '0-300-0-749', None, None, 'SYNOP', 'Rhodos Ialysos'),
+    ('Kos Hippokrates (Flughafen)', 'Europe/Athens', 'synop', '0-300-0-742', None, None, 'SYNOP', 'Kos Marmari'),
+    ('Karpathos (Flughafen)', 'Europe/Athens', 'synop', '0-300-0-765', None, None, 'SYNOP', 'Karpathos Gun Bay'),
+    ('Naxos (Flughafen)', 'Europe/Athens', 'metar', 'LGNX', None, None, 'METAR; SYNOP 0-300-0-732 im IEM-Archiv leer', 'Naxos Mikri Vigla'),
+    ('Paros (Flughafen)', 'Europe/Athens', 'synop', '0-300-0-766', None, None, 'SYNOP', 'Paros'),
+    ('Palma Son Sant Joan (Flughafen)', 'Europe/Madrid', 'metar', 'LEPA', None, None, 'METAR', 'Bucht von Palma (Embat)'),
+    ('Barcelona El Prat (Flughafen)', 'Europe/Madrid', 'metar', 'LEBL', None, None, 'METAR', 'Barcelona (Seewind)'),
+    ('Hurghada (Flughafen)', 'Africa/Cairo', 'synop', '0-818-0-463', None, None, 'SYNOP', 'Hurghada'),
+    # --- Atlantik, Afrika, Indik
+    ('Dakhla (Flughafen)', 'Africa/El_Aaiun', 'metar', 'GMMH', None, None, 'METAR', 'Dakhla Lagune'),
+    ('Essaouira (Mogador)', 'Africa/Casablanca', 'ogimet', '60220', 31.51, -9.78, 'SYNOP aus OGIMET, 3-stündlich', 'Essaouira'),
+    ('Teneriffa Süd (Flughafen)', 'Atlantic/Canary', 'metar', 'GCTS', None, None, 'METAR', 'El Médano'),
+    ('Gran Canaria (Flughafen Gando)', 'Atlantic/Canary', 'metar', 'GCLP', None, None, 'METAR', 'Pozo Izquierdo'),
+    ('Plaisance (Flughafen)', 'Indian/Mauritius', 'metar', 'FIMP', None, None, 'METAR', 'Mauritius: Pointe d\'Esny'),
+    ('Sydney Kingsford Smith (Flughafen)', 'Australia/Sydney', 'metar', 'YSSY', None, None, 'METAR', 'Botany Bay'),
+    # --- Nordamerika & Karibik
+    ('Barbados Grantley Adams (Flughafen)', 'America/Barbados', 'metar', 'TBPB', None, None, 'METAR', 'Barbados Silver Rock'),
+    ('San Francisco (Flughafen SFO)', 'America/Los_Angeles', 'metar', 'KSFO', None, None, 'METAR', 'SF-Bucht Coyote Point/3rd Ave'),
+    ('Fort Point (FTPC1)', 'America/Los_Angeles', 'ndbc', 'ftpc1', 37.806, -122.466, 'NDBC', 'Golden Gate/Crissy Field'),
+    ('Alameda (AAMC1)', 'America/Los_Angeles', 'ndbc', 'aamc1', 37.772, -122.300, 'NDBC', 'Alameda Crown Beach'),
+    ('Port Chicago (PCOC1)', 'America/Los_Angeles', 'ndbc', 'pcoc1', 38.056, -122.039, 'NDBC', 'Suisun Bay'),
+    ('Hood River (HOXO)', 'America/Los_Angeles', 'mesowest', 'HOXO', None, None, 'MesoWest, Wasser', 'Columbia Gorge Hood River'),
+    ('Annapolis (Naval Academy)', 'America/New_York', 'metar', 'NAK', None, None, 'METAR', 'Chesapeake Bay Annapolis'),
+    ('Thomas Point Leuchtturm (TPLM2)', 'America/New_York', 'ndbc', 'tplm2', 38.899, -76.436, 'NDBC', 'Chesapeake Bay'),
+    ('San Francisco Presidio (CO-OPS 9414290)', 'America/Los_Angeles', 'coops', 'coops9414290', None, None, 'NOAA CO-OPS', 'Crissy Field'),
+    ('Angels Gate (CO-OPS 9410647)', 'America/Los_Angeles', 'coops', 'coops9410647', None, None, 'NOAA CO-OPS, Wellenbrecher', 'Cabrillo Beach (San Pedro)'),
+    ('Kahului Harbor (CO-OPS 1615680)', 'Pacific/Honolulu', 'coops', 'coops1615680', None, None, 'NOAA CO-OPS', 'Maui: Kanaha'),
+    ('S. Bird Island (CO-OPS 8776139)', 'America/Chicago', 'coops', 'coops8776139', None, None, 'NOAA CO-OPS', 'Bird Island Basin (Padre Island)'),
+    ('Packery Channel (CO-OPS 8775792)', 'America/Chicago', 'coops', 'coops8775792', None, None, 'NOAA CO-OPS', 'Corpus Christi Packery'),
+    ('South Padre Island CG Station (CO-OPS 8779748)', 'America/Chicago', 'coops', 'coops8779748', None, None, 'NOAA CO-OPS', 'South Padre Island'),
+    ('Oregon Inlet Marina (CO-OPS 8652587)', 'America/New_York', 'coops', 'coops8652587', None, None, 'NOAA CO-OPS', 'Outer Banks Nord (Pea Island)'),
+    ('Duck (CO-OPS 8651370)', 'America/New_York', 'coops', 'coops8651370', None, None, 'NOAA CO-OPS, Pier', 'Outer Banks Duck'),
+    ('USCG Station Hatteras (CO-OPS 8654467)', 'America/New_York', 'coops', 'coops8654467', None, None, 'NOAA CO-OPS', 'Hatteras'),
+    ('Virginia Key (VAKF1)', 'America/New_York', 'ndbc', 'vakf1', 25.731, -80.162, 'NDBC', 'Miami Virginia Key'),
 ]
 
 
@@ -128,7 +172,27 @@ def _metar(icao):
     return d
 
 
+CSV_NETZE = {'meteofrance': 'mf', 'dwd': 'dwd', 'knmi': 'knmi', 'dmi': 'dmi', 'coops': 'coops'}
+
+
+def _csv_id(quelle, kenn):
+    return kenn[len(CSV_NETZE[quelle]):]
+
+
+def _katalog_ort(quelle, kenn):
+    k = pd.read_csv(os.path.join(Q, 'spotsuche', 'stationen_alle.csv'), dtype={'id': str})
+    i = _csv_id(quelle, kenn)
+    z = k[(k['netz'] == quelle) & ((k['id'] == i) | (k['id'].str.lstrip('0') == i.lstrip('0')))]
+    if not len(z) and quelle == 'meteofrance':
+        k = pd.read_csv(os.path.join(Q, 'spotsuche', 'stationen_meteofrance.csv'), dtype={'id': str})
+        z = k[k['id'] == i]
+    return float(z['lat'].iloc[0]), float(z['lon'].iloc[0])
+
+
 def _synop_ort(sid):
+    for q, pre in CSV_NETZE.items():
+        if sid.startswith(pre) and os.path.exists(os.path.join(Q, q, sid[len(pre):] + '.csv')):
+            return _katalog_ort(q, sid)
     st = json.load(open(os.path.join(Q, 'synoptic_stationen.json')))
     for v in st.values():
         for x in v['stationen']:
@@ -223,8 +287,10 @@ def messung(r):
         isp, iri = kenn.split(':')
         a = pd.DataFrame(json.load(open(os.path.join(Q, 'lombardia', isp + '.json'))))
         b = pd.DataFrame(json.load(open(os.path.join(Q, 'lombardia', iri + '.json'))))
-        a = a[a['stato'] == 'VA'].set_index('data')['valore'].astype(float)
-        b = b[b['stato'] == 'VA'].set_index('data')['valore'].astype(float)
+        # je Zeitpunkt zwei Zeilen: idoperatore 1 = 10-min-Mittel, 3 = Maximum (Boe); bis 25.11.2026 nahm der Code
+        # die jeweils erste Zeile -> ~16 % Boeen in Limone/Colico
+        a = a[(a['stato'] == 'VA') & (a['idoperatore'] == '1')].set_index('data')['valore'].astype(float)
+        b = b[(b['stato'] == 'VA') & (b['idoperatore'] == '1')].set_index('data')['valore'].astype(float)
         a, b = a[a >= 0], b[(b >= 0) & (b <= 360)]
         a, b = a[~a.index.duplicated()], b[~b.index.duplicated()]
         j = pd.concat([a.rename('sp'), b.rename('ri')], axis=1).dropna()
@@ -246,6 +312,28 @@ def messung(r):
         t = pd.to_datetime(d['time'], utc=True)
         # Zeitstempel = Ende des 10-min-Intervalls (GeoSphere-Konvention) -> Mitte 5 min frueher
         return _vektor_stunde(t - pd.Timedelta(minutes=5), d['ffam'].values * MS_KN, d['dd'].values)
+    if quelle in CSV_NETZE:                     # einheitliche CSV (py/spotsuche_laden.py): t (UTC, Intervallmitte), kn, grad
+        d = pd.read_csv(os.path.join(Q, quelle, _csv_id(quelle, kenn) + '.csv')).dropna()
+        d = d[(d['kn'] >= 0) & (d['kn'] < 100) & (d['grad'] >= 0) & (d['grad'] <= 360)]
+        t = pd.to_datetime(d['t'].str.rstrip('Z')).dt.tz_localize('UTC')
+        d = d.set_index(t)
+        d = d[~d.index.duplicated()].sort_index()
+        if pd.Series(d.index).diff().median() >= pd.Timedelta(minutes=30):          # stuendlich (MF, KNMI, CO-OPS)
+            if (d.index.minute == 30).mean() > 0.5:
+                # Stundenmittel mit Mitte HH:30 (KNMI): zwei Nachbarn vektoriell auf die volle Stunde mitteln.
+                # (25.11.2026: round('1h') rundet :30 abwechselnd auf/ab -> die Haelfte der Stunden fiel weg)
+                u = -d['kn'] * np.sin(np.radians(d['grad'])); v = -d['kn'] * np.cos(np.radians(d['grad']))
+                x = pd.DataFrame({'u': u, 'v': v, 'sp': d['kn']}).asfreq('1h')
+                x = ((x + x.shift(-1)) / 2).dropna()
+                x.index = x.index + pd.Timedelta(minutes=30)
+                d = pd.DataFrame({'kn': x['sp'], 'grad': np.degrees(np.arctan2(-x['u'], -x['v'])) % 360})
+            else:
+                d.index = d.index.round('1h')
+                d = d[~d.index.duplicated()]
+            out = pd.DataFrame({'sp': d['kn'].astype(float), 'ri': d['grad'].astype(float)})
+            out.loc[out['sp'] == 0, 'ri'] = np.nan
+            return out
+        return _vektor_stunde(d.index, d['kn'].values, d['grad'].values)
     if quelle == 'meteotrentino':
         def lies(var):
             z = []
@@ -347,7 +435,7 @@ def korrektur_cv(X, y, monat, stunde):
 
 
 def auswerten(r):
-    name, tz, quelle, kenn, la, lo, bem = r
+    name, tz, quelle, kenn, la, lo, bem = r[:7]
     if la is None:
         la, lo = _synop_ort(kenn)
     obs = messung(r)
@@ -394,7 +482,8 @@ def auswerten(r):
 
 QUELLE_TEXT = {'meteoschweiz': 'MeteoSwiss', 'suedtirol': 'Wetterdienst Südtirol', 'lombardia': 'ARPA Lombardia',
                'synop': 'SYNOP (WMO)', 'ogimet': 'SYNOP (WMO, OGIMET)', 'metar': 'METAR', 'ndbc': 'NOAA NDBC', 'mesowest': 'MesoWest',
-               'geosphere': 'GeoSphere Austria', 'meteotrentino': 'Meteotrentino', 'pioupiou': 'Pioupiou / OpenWindMap'}
+               'geosphere': 'GeoSphere Austria', 'meteotrentino': 'Meteotrentino',
+               'meteofrance': 'Météo-France', 'dwd': 'DWD', 'knmi': 'KNMI', 'dmi': 'DMI', 'coops': 'NOAA CO-OPS', 'pioupiou': 'Pioupiou / OpenWindMap'}
 
 
 def _quell_link(quelle, kenn):
@@ -408,6 +497,16 @@ def _quell_link(quelle, kenn):
         return 'https://www.openwindmap.org/PP%s' % kenn[2:]
     if quelle == 'meteotrentino':
         return 'https://www.meteotrentino.it/'
+    if quelle == 'meteofrance':
+        return 'https://meteo.data.gouv.fr/'
+    if quelle == 'dwd':
+        return 'https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/10_minutes/wind/'
+    if quelle == 'knmi':
+        return 'https://www.knmi.nl/nederland-nu/klimatologie/uurgegevens'
+    if quelle == 'dmi':
+        return 'https://opendatadocs.dmi.govcloud.dk/'
+    if quelle == 'coops':
+        return 'https://tidesandcurrents.noaa.gov/stationhome.html?id=%s' % kenn[5:]
     if quelle == 'geosphere':
         return 'https://data.hub.geosphere.at/dataset/klima-v2-10min'
     if quelle == 'meteoschweiz':
@@ -419,10 +518,12 @@ def stations_karte(alle, orte, wahl):
     """Stationsliste fuer die Karte (static/wind_stations/wind_stations.json); Teil-Laeufe ergaenzen die alte Liste."""
     st = {}
     if os.path.exists(KARTE) and len(wahl) < len(REVIERE):
-        st = {x['name']: x for x in json.load(open(KARTE))['stations']}
+        gueltig = {r[0] for r in REVIERE}                         # entfernte Reviere nicht weiterschleppen
+        st = {x['name']: x for x in json.load(open(KARTE))['stations'] if x['name'] in gueltig}
     df = pd.DataFrame(alle)
     for r in wahl:
-        name, tz, quelle, kenn, _, _, bem = r
+        name, tz, quelle, kenn, _, _, bem = r[:7]
+        spot = r[7] if len(r) > 7 else ''
         z = df[df['revier'] == name] if len(df) else df
         if not len(z) or name not in orte:
             st.pop(name, None)
@@ -434,7 +535,7 @@ def stations_karte(alle, orte, wahl):
         korr = (mix if len(mix) else z).sort_values('korr_mae_kn').iloc[0]
         la, lo, mittel, h12 = orte[name]
         st[name] = dict(
-            name=name, lat=round(float(la), 5), lon=round(float(lo), 5), source=QUELLE_TEXT.get(quelle, quelle),
+            name=name, spot=spot, lat=round(float(la), 5), lon=round(float(lo), 5), source=QUELLE_TEXT.get(quelle, quelle),
             id=kenn, note=bem, tz=tz, link=_quell_link(quelle, kenn), mean_kn=round(mittel, 1), hours12=int(h12),
             n=int(korr['n']), lag_h=int(z['zeitversatz_h'].iloc[0]),
             best_match_mae=None if not len(bm) else float(bm['mae_kn'].iloc[0]),
@@ -484,6 +585,7 @@ def main(argv):
         neu = pd.DataFrame(alle)
         if len(wahl) < len(REVIERE) and os.path.exists(AUS):           # Teil-Lauf: uebrige Reviere behalten
             alt = pd.read_csv(AUS)
+            alt = alt[alt['revier'].isin([r[0] for r in REVIERE])]
             neu = pd.concat([alt[~alt['revier'].isin([r[0] for r in wahl])], neu], ignore_index=True)
         neu.to_csv(AUS, index=False)
         print('\n->', os.path.relpath(AUS, ROOT))
