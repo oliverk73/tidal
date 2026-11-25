@@ -238,18 +238,54 @@
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
         // own pane above the tide/current markers (markerPane 600), otherwise coastal stations hide under tide gauges
-        if (!map.getPane('netPane')) { map.createPane('netPane'); map.getPane('netPane').style.zIndex = 620; }
+        // The canvas must not swallow clicks (it would block every tide/current marker below it): the pane ignores
+        // pointer events, clicks and hover near a dot are resolved by hand in pick() below.
+        if (!map.getPane('netPane')) {
+          map.createPane('netPane');
+          map.getPane('netPane').style.zIndex = 620;
+          map.getPane('netPane').style.pointerEvents = 'none';
+        }
         var renderer = L.canvas({ padding: 0.3, pane: 'netPane' });
         var layers = { metar: L.layerGroup(), synop: L.layerGroup(), both: L.layerGroup() };
         var n = { 1: 0, 2: 0, 3: 0 };
         d.stationen.forEach(function (s) {
           n[s[6]]++;
-          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', radius: s[6] === 2 ? 5 : 6, weight: 1.5, color: '#fff',
-            fillColor: s[6] === 2 && s[7] === 'n' ? '#9a9a9a' : NET_COL[s[6]], fillOpacity: 0.95 });
-          m.bindTooltip(s[2] + (s[3] ? ' (' + s[3] + ')' : s[4] ? ' (' + s[4] + ')' : ''), { direction: 'top', offset: [0, -3] });
-          m.bindPopup(function () { return netPopup(s); }, { maxWidth: 380 });
-          if (s[3]) m.on('popupopen', function (e) { loadMetar(e.popup.getElement(), s[3]); });
+          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', interactive: false, radius: s[6] === 2 ? 5 : 6,
+            weight: 1.5, color: '#fff', fillColor: s[6] === 2 && s[7] === 'n' ? '#9a9a9a' : NET_COL[s[6]], fillOpacity: 0.95 });
           m.addTo(s[6] === 1 ? layers.metar : s[6] === 2 ? layers.synop : layers.both);
+        });
+        // nearest visible station within 8 px of a map point (clicks on tide/current markers never reach the map)
+        var shown = function (s) { return s[6] === 1 ? map.hasLayer(layers.metar) : s[6] === 2 ? map.hasLayer(layers.synop) : map.hasLayer(layers.both); };
+        var pick = function (pt) {
+          var best = null, bd = 64, b = map.getBounds().pad(0.05);
+          for (var i = 0; i < d.stationen.length; i++) {
+            var s = d.stationen[i];
+            if (!b.contains([s[0], s[1]]) || !shown(s)) continue;
+            var q = map.latLngToContainerPoint([s[0], s[1]]), dd = (q.x - pt.x) * (q.x - pt.x) + (q.y - pt.y) * (q.y - pt.y);
+            if (dd < bd) { bd = dd; best = s; }
+          }
+          return best;
+        };
+        var anyShown = function () { return map.hasLayer(layers.metar) || map.hasLayer(layers.synop) || map.hasLayer(layers.both); };
+        map.on('click', function (e) {
+          if (!anyShown()) return;
+          var s = pick(e.containerPoint);
+          if (!s) return;
+          var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(netPopup(s)).openOn(map);
+          if (s[3]) loadMetar(p.getElement(), s[3]);
+        });
+        var tip = L.tooltip({ direction: 'top', offset: [0, -6] }), tipFor = null, last = 0;
+        map.on('mousemove', function (e) {
+          var now = Date.now();
+          if (now - last < 80) return;
+          last = now;
+          var s = anyShown() ? pick(e.containerPoint) : null;
+          if (s === tipFor) return;
+          tipFor = s;
+          map.getContainer().style.cursor = s ? 'pointer' : '';
+          if (!s) { map.closeTooltip(tip); return; }
+          tip.setLatLng([s[0], s[1]]).setContent(esc(s[2]) + (s[3] ? ' (' + esc(s[3]) + ')' : s[4] ? ' (' + esc(s[4]) + ')' : ''));
+          map.openTooltip(tip);
         });
         var dot = function (c) { return '<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:' + c + ';margin:0 5px 0 2px;"></span>'; };
         box.innerHTML =
