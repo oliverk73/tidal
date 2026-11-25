@@ -237,12 +237,14 @@
     fetch('/static/wind_stations/stationsnetz.json', { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
-        var renderer = L.canvas({ padding: 0.3 });
+        // own pane above the tide/current markers (markerPane 600), otherwise coastal stations hide under tide gauges
+        if (!map.getPane('netPane')) { map.createPane('netPane'); map.getPane('netPane').style.zIndex = 620; }
+        var renderer = L.canvas({ padding: 0.3, pane: 'netPane' });
         var layers = { metar: L.layerGroup(), synop: L.layerGroup(), both: L.layerGroup() };
         var n = { 1: 0, 2: 0, 3: 0 };
         d.stationen.forEach(function (s) {
           n[s[6]]++;
-          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, radius: s[6] === 2 ? 3 : 4, weight: 1, color: '#fff',
+          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', radius: s[6] === 2 ? 3 : 4, weight: 1, color: '#fff',
             fillColor: NET_COL[s[6]], fillOpacity: s[6] === 2 && s[7] === 'n' ? 0.35 : 0.9 });
           m.bindTooltip(s[2] + (s[3] ? ' (' + s[3] + ')' : s[4] ? ' (' + s[4] + ')' : ''), { direction: 'top', offset: [0, -3] });
           m.bindPopup(function () { return netPopup(s); }, { maxWidth: 380 });
