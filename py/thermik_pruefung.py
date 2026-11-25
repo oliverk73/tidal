@@ -11,6 +11,9 @@ Messquellen (quellen/thermik/):
   meteoschweiz/          MeteoSchweiz Open Data SwissMetNet, Stundenmittel (UTC, m/s)
   lombardia/<id>.json    ARPA Lombardia (dati.lombardia.it 647i-nhxk), 10-min-Werte (m/s, Zeit = MEZ ohne Sommerzeit)
   suedtirol/             Landeswetterdienst Suedtirol (geoservices.buergernetz.bz.it/services/meteo/v1), 10 min (m/s)
+  geosphere/<id>.csv     GeoSphere Austria Data Hub klima-v2-10min (CC BY 4.0), ffam/dd, UTC - geosphere_laden.py
+  pioupiou/<id>.csv      Pioupiou/OpenWindMap-Archiv (km/h, ~5 min, UTC) - pioupiou_laden.py; Anemometer oft niedrig
+  (Stationen am Spot ueber iwind.at/map gefunden; iWind selbst sperrt Abrufe, Daten daher bei der Originalquelle)
 
   venv/bin/python py/thermik_pruefung.py [revier,...]
       -> harmonics/help/thermik_pruefung.csv (je Revier und Modell)
@@ -65,6 +68,14 @@ REVIERE = [
     ('Sylt (List)', 'Europe/Berlin', 'synop', '0-276-0-20', None, None, ''),
     ('Fehmarn', 'Europe/Berlin', 'synop', '0-276-0-55', None, None, ''),
     ('Neusiedler See', 'Europe/Vienna', 'synop', '0-40-0-72', None, None, ''),
+    ('Neusiedler See (Podersdorf Strandbad)', 'Europe/Vienna', 'geosphere', 'gs7912', 47.86611, 16.83444, 'GeoSphere, am Spot'),
+    ('Wolfgangsee (St. Wolfgang)', 'Europe/Vienna', 'geosphere', 'gs9512', 47.74028, 13.44194, 'GeoSphere, Ufer'),
+    ('Traunsee (Altmünster)', 'Europe/Vienna', 'geosphere', 'gs6621', 47.87917, 13.77333, 'GeoSphere, Nordende'),
+    ('Achensee (Achenkirch)', 'Europe/Vienna', 'geosphere', 'gs8806', 47.49944, 11.70667, 'GeoSphere, Nordende'),
+    ('Hyères Almanarre (La Capte)', 'Europe/Paris', 'pioupiou', 'pp2133', None, None, 'Pioupiou, Segelschule'),
+    ('Gruissan (Étang de Mateille)', 'Europe/Paris', 'pioupiou', 'pp602', None, None, 'Pioupiou, am Spot'),
+    ('Leucate (Aéromodélisme)', 'Europe/Paris', 'pioupiou', 'pp1538', None, None, 'Pioupiou, Plateau'),
+    # Genfer See Windbird 1652 (Lausanne, 4 km landein): Mittel 2 kn, windgeschuetzt -> nicht repraesentativ
     ('Dakhla (Flughafen)', 'Africa/El_Aaiun', 'metar', 'GMMH', None, None, 'Passat, Lagune ~5 km; WMO 60096 auch in OGIMET'),
     ('Essaouira', 'Africa/Casablanca', 'ogimet', '60220', 31.51, -9.78, 'Alizé; WMO 60220 aus OGIMET (IEM nur bis 11.06.2026), 3-stündlich'),
     ('Hurghada/El Gouna', 'Africa/Cairo', 'synop', '0-818-0-463', None, None, ''),
@@ -120,6 +131,9 @@ def _synop_ort(sid):
         for x in v['stationen']:
             if x['stid'] == sid:
                 return x['lat'], x['lon']
+    if sid.startswith('pp'):
+        d = _pioupiou(sid)
+        return float(d['lat'].median()), float(d['lon'].median())
     if not sid.startswith('0-'):
         d = _metar(sid)
         return float(d['lat'].iloc[0]), float(d['lon'].iloc[0])
@@ -128,6 +142,13 @@ def _synop_ort(sid):
             lo, la = f['geometry']['coordinates']
             return la, lo
     raise KeyError(sid)
+
+
+def _pioupiou(kenn):
+    """Pioupiou-Reihe, nur am letzten Standort (Stationen ziehen um: 602 stand bis 2.5.2026 in Leucate)."""
+    d = pd.read_csv(os.path.join(Q, 'pioupiou', kenn[2:] + '.csv'))
+    la, lo = d['lat'].iloc[-1], d['lon'].iloc[-1]
+    return d[((d['lat'] - la).abs() < 0.01) & ((d['lon'] - lo).abs() < 0.01)]
 
 
 def _vektor_stunde(t, sp, ri, zentriert=True, mindest=4):
@@ -217,6 +238,16 @@ def messung(r):
                        ri.assign(t=zeit(ri['DATE'])).set_index('t')['VALUE'].rename('ri')], axis=1).dropna()
         j = j[~j.index.duplicated()].sort_index()
         return _vektor_stunde(j.index.tz_localize('UTC'), j['sp'].values * MS_KN, j['ri'].values)
+    if quelle == 'geosphere':
+        d = pd.read_csv(os.path.join(Q, 'geosphere', kenn[2:] + '.csv')).dropna(subset=['ffam', 'dd'])
+        t = pd.to_datetime(d['time'], utc=True)
+        # Zeitstempel = Ende des 10-min-Intervalls (GeoSphere-Konvention) -> Mitte 5 min frueher
+        return _vektor_stunde(t - pd.Timedelta(minutes=5), d['ffam'].values * MS_KN, d['dd'].values)
+    if quelle == 'pioupiou':
+        d = _pioupiou(kenn).dropna(subset=['avg', 'heading'])
+        d = d[(d['avg'] >= 0) & (d['avg'] < 200)]
+        t = pd.to_datetime(d['time'], utc=True)
+        return _vektor_stunde(t, d['avg'].values / 1.852, d['heading'].values, mindest=6)
     raise ValueError(quelle)
 
 
@@ -343,7 +374,8 @@ def auswerten(r):
 
 
 QUELLE_TEXT = {'meteoschweiz': 'MeteoSwiss', 'suedtirol': 'Wetterdienst Südtirol', 'lombardia': 'ARPA Lombardia',
-               'synop': 'SYNOP (WMO)', 'ogimet': 'SYNOP (WMO, OGIMET)', 'metar': 'METAR', 'ndbc': 'NOAA NDBC', 'mesowest': 'MesoWest'}
+               'synop': 'SYNOP (WMO)', 'ogimet': 'SYNOP (WMO, OGIMET)', 'metar': 'METAR', 'ndbc': 'NOAA NDBC', 'mesowest': 'MesoWest',
+               'geosphere': 'GeoSphere Austria', 'pioupiou': 'Pioupiou / OpenWindMap'}
 
 
 def _quell_link(quelle, kenn):
@@ -353,6 +385,10 @@ def _quell_link(quelle, kenn):
         return 'https://www.ndbc.noaa.gov/station_page.php?station=%s' % kenn
     if quelle == 'mesowest':
         return 'https://mesowest.utah.edu/cgi-bin/droman/meso_base_dyn.cgi?stn=%s' % kenn
+    if quelle == 'pioupiou':
+        return 'https://www.openwindmap.org/PP%s' % kenn[2:]
+    if quelle == 'geosphere':
+        return 'https://data.hub.geosphere.at/dataset/klima-v2-10min'
     if quelle == 'meteoschweiz':
         return 'https://www.meteoswiss.admin.ch/services-and-publications/applications/measurement-values-and-measuring-networks.html'
     return ''
