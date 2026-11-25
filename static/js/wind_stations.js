@@ -4,6 +4,10 @@
 (function () {
   'use strict';
 
+  // Weather stations for the map search (static/js/suche.js, Oliver 25.11.2026):
+  // entries {name, detail, keys, kind, badge, lat, lon, show()}.
+  var WS = window.weatherSearch = window.weatherSearch || { list: [] };
+
   var REGIONS = [
     ['Alps & lakes', function (s) { return /Zurich|Vienna/.test(s.tz) || /See|Lago|Garda|Comer|Silvaplana|Reschen|Bodensee|Chiemsee|Müritz|Iseosee|Achensee/.test(s.spot || s.name); }],
     ['Europe', function (s) { return s.tz.indexOf('Europe/') === 0; }],
@@ -182,12 +186,18 @@
       localStorage.setItem('windStationsOn', this.checked ? '1' : '0');
     });
 
-    document.getElementById('wst-select').addEventListener('change', function () {
-      var m = byName[this.value];
+    var showSpot = function (name) {
+      var m = byName[name];
       if (!m) return;
       if (!map.hasLayer(layer)) { cb.checked = true; layer.addTo(map); localStorage.setItem('windStationsOn', '1'); }
       map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 10), { duration: 1.2 });
       map.once('moveend', function () { m.openPopup(); });
+    };
+    document.getElementById('wst-select').addEventListener('change', function () { showSpot(this.value); });
+    stations.forEach(function (s) {
+      WS.list.push({ name: s.name, detail: (s.spot ? 'Spot: ' + s.spot + ' · ' : '') + s.source + ' ' + s.id,
+        keys: [s.name, s.spot || '', s.id || ''].join(' '), kind: 'spot', badge: 'Wind spot', lat: s.lat, lon: s.lon,
+        show: function () { showSpot(s.name); } });
     });
     buildNet(map, body);
   }
@@ -338,6 +348,23 @@
         };
         cbM.addEventListener('change', update); cbS.addEventListener('change', update); cbN.addEventListener('change', update);
         update();
+        var openNet = function (s) {
+          var cbx = s[6] === 1 || s[6] === 3 ? cbM : s[6] === 2 ? cbS : cbN;
+          if (!cbx.checked) { cbx.checked = true; update(); }
+          map.closePopup();
+          map.flyTo([s[0], s[1]], Math.max(map.getZoom(), 11), { duration: 1.2 });
+          map.once('moveend', function () {
+            var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(netPopup(s)).openOn(map);
+            if (s[3]) loadMetar(p.getElement(), s[3]);
+          });
+        };
+        d.stationen.forEach(function (s) {
+          var badge = s[6] === 1 ? 'METAR' : s[6] === 2 ? 'SYNOP' : s[6] === 3 ? 'METAR+SYNOP' :
+            (NAT[s[8]] || [s[8]])[0].split(',')[0];
+          var ids = s[6] === 4 ? s[9] : [s[3], s[4]].filter(Boolean).join(' · ');
+          WS.list.push({ name: s[2], detail: ids ? (s[6] === 4 ? 'ID ' : '') + ids : '', keys: [s[2], s[3], s[4], s[9] || ''].join(' '),
+            kind: s[6] === 4 ? 'nat' : 'net', badge: badge, lat: s[0], lon: s[1], show: function () { openNet(s); } });
+        });
       })
       .catch(function (e) {
         box.innerHTML = '<span style="color:#a00;font-size:12px;">Official stations could not be loaded.</span>';

@@ -78,6 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- Filtering ---
+  // Weather stations (spot stations, METAR, SYNOP, national networks) from static/js/wind_stations.js,
+  // searched by name, ICAO, WMO number and station id (Oliver 25.11.2026).
+  function weatherEntries() {
+    return (window.weatherSearch && window.weatherSearch.list) || [];
+  }
   function filterStations(query) {
     var q = normalize(query);
     var list = getEntries();
@@ -88,8 +93,23 @@ document.addEventListener("DOMContentLoaded", function () {
       if (lower.startsWith(q)) startsWith.push(list[i]);
       else if (lower.includes(q)) contains.push(list[i]);
     }
-    return startsWith.concat(contains);
+    var wStarts = [], wContains = [], w = weatherEntries();
+    for (var j = 0; j < w.length; j++) {
+      var x = w[j];
+      if (!x._n) { x._n = normalize(x.name); x._k = normalize(x.keys); }
+      if (x._n.startsWith(q) || (' ' + x._k).indexOf(' ' + q) >= 0) wStarts.push(x);
+      else if (x._k.includes(q)) wContains.push(x);
+    }
+    wStarts = wStarts.map(asWeather); wContains = wContains.map(asWeather);
+    return startsWith.concat(wStarts, contains, wContains);
   }
+  function asWeather(x) {
+    return { weather: x, full: x.name, tag: '', label: x.name, source: '', coords: [x.lat, x.lon] };
+  }
+  var WEATHER_ICON_SVG =
+    '<svg width="12" height="12" viewBox="0 0 18 18" aria-hidden="true">' +
+    '<path d="M2 6h9a2.5 2.5 0 1 0-2.5-2.5M2 10h12a2.5 2.5 0 1 1-2.5 2.5M2 14h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' +
+    '</svg>';
 
   // --- Parse station name into name + location parts ---
   function parseName(full) {
@@ -135,7 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var q = query.trim();
     if (q.length < 1) {
       resultsEl.innerHTML = '<div class="search-modal-hint">Type to search across ' +
-        getEntries().length + ' tide stations</div>';
+        getEntries().length + ' tide and current stations' +
+        (weatherEntries().length ? ' and ' + weatherEntries().length + ' weather stations (name, ICAO, WMO or station ID)' : '') + '</div>';
       return;
     }
 
@@ -161,6 +182,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     limited.forEach(function (e, i) {
+      if (e.weather) {
+        var w = e.weather;
+        html += '<div class="search-modal-item" data-idx="' + i + '">' +
+          '<div class="search-modal-item-text">' +
+          '<span class="search-modal-item-name">' + highlightMatch(w.name, q) + '</span>' +
+          (w.detail ? '<span class="search-modal-item-detail">' + highlightMatch(w.detail, q) + '</span>' : '') +
+          '</div>' +
+          '<span class="search-modal-type-badge type-weather">' + WEATHER_ICON_SVG + ' ' + escapeHtml(w.badge) + '</span>' +
+          '</div>';
+        return;
+      }
       var full = e.full;
       var isCurrent = CURRENT_RE.test(full);
       // Strip trailing " Current[..]" for cleaner display; data-station keeps full name.
@@ -222,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
     resultsEl.querySelectorAll(".search-modal-item").forEach(function (el) {
       el.addEventListener("click", function () {
         var e = limited[+this.getAttribute("data-idx")];
+        if (e.weather) { closeModal(); e.weather.show(); return; }
         generatePrediction(e.full, e.source);
       });
     });
@@ -254,6 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Otherwise pick first result
       var first = filterStations(q)[0];
+      if (first && first.weather) { closeModal(); first.weather.show(); return; }
       if (first) {
         generatePrediction(first.full, first.source);
       }

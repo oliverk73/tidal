@@ -211,6 +211,7 @@ html, body {
 .search-modal-type-badge svg { display: block; }
 .search-modal-type-badge.type-tide    { background: #e0f2fe; color: #075985; }
 .search-modal-type-badge.type-current { background: #fef3c7; color: #92400e; }
+.search-modal-type-badge.type-weather { background: #ede9fe; color: #5b21b6; white-space: nowrap; }
 .search-modal-map-btn {
   flex-shrink: 0;
   display: flex;
