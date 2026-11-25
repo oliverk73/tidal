@@ -2425,6 +2425,22 @@ def api_current_arrows():
     return resp
 
 
+@app.route("/api/wind_spot_forecast")
+def api_wind_spot_forecast():
+    """Korrigierte Windvorhersage an einem Revier (py/thermik_korrektur.py, 25.11.2026): name=<Stationsname>.
+    Nur Mai–Sep (gelernte Monate) und 9–19 Uhr Ortszeit; sonst korr=null, best_match bleibt."""
+    import thermik_korrektur
+    name = request.args.get("name", "")
+    try:
+        v = thermik_korrektur.vorhersage(name)
+    except Exception as e:                                       # noqa: BLE001
+        app.logger.exception("wind_spot_forecast")
+        return jsonify({"error": "forecast failed: %s" % str(e)[:300]}), 502
+    if v is None:
+        return jsonify({"error": "no spot correction for this station"}), 404
+    return jsonify(v)
+
+
 @app.route("/api/route_boats")
 def api_route_boats():
     """Boote (ORC-Polaren) fuer den Routenplaner (py/segel_polare.py, 20.11.2026)."""

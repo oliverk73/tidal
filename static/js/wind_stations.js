@@ -74,6 +74,7 @@
       '<div style="color:#555;margin-top:2px;">Spot correction detects ' + Math.round(s.corr_pod12 * 100) + ' % of the hours ≥ 12 kn (' +
         Math.round(s.corr_far12 * 100) + ' % false alarms).</div>' +
       (s.lag_h ? '<div style="color:#a60;margin-top:3px;">Time offset model ↔ station: ' + (s.lag_h > 0 ? '+' : '') + s.lag_h + ' h</div>' : '') +
+      '<div class="wst-fc" style="margin-top:6px;color:#777;font-size:11.5px;">Loading forecast…</div>' +
       '<details style="margin-top:5px;"><summary style="cursor:pointer;color:#246;">All models (' + (s.models || []).length + ')</summary>' +
         '<table style="border-collapse:collapse;font-size:11.5px;margin-top:3px;">' +
         '<tr style="color:#777;"><td>Model</td><td style="text-align:right;padding:0 6px;">error</td><td style="text-align:right;padding:0 6px;">bias</td><td style="text-align:right;padding:0 6px;">r</td><td style="text-align:right;padding-left:6px;">corrected</td></tr>' +
@@ -81,6 +82,53 @@
         '<div style="color:#777;font-size:11px;margin-top:3px;">Error = mean absolute error of the wind speed, bias = forecast − measured (kn). ' +
         'Corrected = with the learned per-spot correction (cross-validated by month).</div>' +
       '</details></div>';
+  }
+
+  // Live forecast with the per-spot correction (/api/wind_spot_forecast, py/thermik_korrektur.py)
+  function windCell(v, strong) {
+    if (v == null) return '<td style="text-align:center;color:#bbb;padding:1px 2px;">·</td>';
+    var bg = v >= 20 ? '#7b3294' : v >= 15 ? '#d7301f' : v >= 12 ? '#fc8d59' : v >= 8 ? '#fdd49e' : 'transparent';
+    var fg = v >= 15 ? '#fff' : '#222';
+    return '<td style="text-align:center;padding:1px 2px;background:' + bg + ';color:' + fg + ';' + (strong ? 'font-weight:bold;' : '') + '">' + Math.round(v) + '</td>';
+  }
+  function renderForecast(el, f) {
+    var days = {}, order = [];
+    (f.stunden || []).forEach(function (h) {
+      var d = h.t.slice(0, 10);
+      if (!days[d]) { days[d] = {}; order.push(d); }
+      days[d][parseInt(h.t.slice(11, 13), 10)] = h;
+    });
+    var hours = []; for (var i = 9; i <= 19; i++) hours.push(i);
+    var anyCorr = (f.stunden || []).some(function (h) { return h.korr != null; });
+    var wd = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+    var head = '<tr style="color:#777;"><td></td>' + hours.map(function (h) { return '<td style="text-align:center;padding:0 2px;">' + h + '</td>'; }).join('') + '</tr>';
+    var rows = order.map(function (d) {
+      var dt = new Date(d + 'T12:00:00');
+      var label = wd[dt.getDay()] + ' ' + d.slice(8, 10) + '.';
+      var r1 = '<tr><td style="padding-right:4px;white-space:nowrap;">' + label + '</td>' + hours.map(function (h) {
+        var x = days[d][h]; return windCell(x ? (anyCorr ? x.korr : x.best_match) : null, anyCorr);
+      }).join('') + '</tr>';
+      var r2 = anyCorr ? '<tr style="color:#888;font-size:10px;"><td style="text-align:right;padding-right:4px;">bm</td>' + hours.map(function (h) {
+        var x = days[d][h]; return '<td style="text-align:center;">' + (x && x.best_match != null ? Math.round(x.best_match) : '') + '</td>';
+      }).join('') + '</tr>' : '';
+      return r1 + r2;
+    }).join('');
+    el.style.color = '#222';
+    el.innerHTML = '<div style="font-weight:bold;margin-bottom:2px;">' + (anyCorr ? 'Forecast with spot correction (kn)' : 'Forecast, Open-Meteo best match (kn)') + '</div>' +
+      '<table style="border-collapse:collapse;font-size:11px;">' + head + rows + '</table>' +
+      '<div style="color:#777;font-size:10.5px;margin-top:2px;">' + (anyCorr
+        ? 'Top row: corrected (local time), bm = Open-Meteo best match. Learned from ' + esc((f.lernjahre || []).join(', ')) +
+          ' at short lead time; days 3–7 use fewer models and are less certain.'
+        : 'The spot correction is only learned for May–September (thermal season) and is not applied now.') + '</div>';
+  }
+  function loadForecast(popupEl, name) {
+    var el = popupEl && popupEl.querySelector('.wst-fc');
+    if (!el || el.getAttribute('data-done')) return;
+    el.setAttribute('data-done', '1');
+    fetch('/api/wind_spot_forecast?name=' + encodeURIComponent(name))
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || r.status); return j; }); })
+      .then(function (f) { renderForecast(el, f); })
+      .catch(function (e) { el.removeAttribute('data-done'); el.textContent = 'No live forecast: ' + e.message; });
   }
 
   function build(map, data) {
@@ -93,7 +141,8 @@
     var byName = {};
     stations.forEach(function (s) {
       var m = L.marker([s.lat, s.lon], { icon: icon(s), title: s.name, riseOnHover: true, zIndexOffset: 500 });
-      m.bindPopup(popup(s, data), { maxWidth: 360 });
+      m.bindPopup(popup(s, data), { maxWidth: 380 });
+      m.on('popupopen', function (e) { loadForecast(e.popup.getElement(), s.name); });
       m.addTo(layer);
       byName[s.name] = m;
     });

@@ -1,0 +1,9643 @@
+{
+"Silvaplana/Sils (Segl-Maria)": {
+"tz": "Europe/Zurich",
+"lat": 46.432331,
+"lon": 9.762325,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.939,
+2.183,
+2.63,
+3.353,
+4.034,
+4.027,
+4.734,
+4.617,
+4.225,
+4.472,
+4.425
+],
+"b": [
+0.1641,
+0.0244,
+0.1876,
+0.1616,
+0.05,
+0.2488,
+0.2171,
+-0.0725,
+-0.0199,
+0.0044,
+-0.0527,
+-0.182
+],
+"n": 1683,
+"mae_lern": 1.78
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.561,
+2.934,
+3.602,
+4.685,
+5.622,
+4.429,
+6.279,
+6.093,
+5.551,
+5.609,
+5.249
+],
+"b": [
+0.1668,
+0.6323,
+-0.1656,
+0.0476,
+-0.0885
+],
+"n": 1683,
+"mae_lern": 2.07
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+3.064,
+3.435,
+4.184,
+5.395,
+6.474,
+7.335,
+7.681,
+7.315,
+6.936,
+6.763,
+6.076
+],
+"b": [
+-0.0819,
+0.3196,
+0.1233
+],
+"n": 1683,
+"mae_lern": 2.49
+}
+]
+},
+"Reschensee (St. Valentin)": {
+"tz": "Europe/Rome",
+"lat": 46.7759,
+"lon": 10.5289,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.385,
+2.805,
+2.421,
+2.095,
+1.819,
+1.355,
+1.147,
+1.104,
+0.841,
+0.177,
+-0.328
+],
+"b": [
+0.0412,
+0.0977,
+0.4857,
+0.1617,
+0.2763,
+0.0628,
+-0.1017,
+-0.0413,
+-0.0033,
+0.0275,
+-0.0937,
+-0.1242
+],
+"n": 1683,
+"mae_lern": 2.19
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+4.097,
+4.481,
+4.213,
+3.773,
+3.088,
+1.646,
+2.189,
+1.978,
+1.912,
+1.431,
+0.775
+],
+"b": [
+0.2401,
+0.7134,
+0.0771,
+-0.097,
+-0.0457
+],
+"n": 1683,
+"mae_lern": 2.45
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+6.115,
+6.305,
+5.961,
+5.608,
+4.93,
+4.612,
+3.905,
+3.378,
+3.101,
+2.332,
+1.652
+],
+"b": [
+0.6446,
+0.0266,
+0.4524
+],
+"n": 1683,
+"mae_lern": 2.82
+}
+]
+},
+"Comer See Nord (Colico)": {
+"tz": "Europe/Rome",
+"lat": 46.13814,
+"lon": 9.38469,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.37,
+1.268,
+1.258,
+1.397,
+1.479,
+1.734,
+1.556,
+1.675,
+1.817,
+1.71,
+1.516
+],
+"b": [
+0.1802,
+-0.0296,
+0.2085,
+-0.12,
+0.19,
+-0.0526,
+-0.0361,
+0.0085,
+-0.0378,
+0.1595,
+0.057,
+-0.1621,
+-0.0935
+],
+"n": 1675,
+"mae_lern": 1.52
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.937,
+1.666,
+1.533,
+1.824,
+2.025,
+2.006,
+2.232,
+2.462,
+2.602,
+2.498,
+2.342
+],
+"b": [
+0.0627,
+0.1813,
+0.1557,
+-0.0813,
+0.0064
+],
+"n": 1675,
+"mae_lern": 1.61
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.927,
+1.704,
+1.425,
+1.675,
+1.946,
+2.195,
+2.338,
+2.672,
+2.843,
+2.76,
+2.517
+],
+"b": [
+0.2622,
+0.004,
+0.1707
+],
+"n": 1675,
+"mae_lern": 1.65
+}
+]
+},
+"Gardasee Nord (Torbole Belvedere)": {
+"tz": "Europe/Rome",
+"lat": 45.870095,
+"lon": 10.877355,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026,
+2023,
+2024,
+2025
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+3.575,
+2.487,
+1.526,
+1.699,
+2.367,
+2.431,
+1.83,
+1.075,
+0.781,
+0.728,
+0.326
+],
+"b": [
+0.5857,
+-0.0505,
+0.2372,
+0.3938,
+-0.1002,
+0.3399,
+0.1909
+],
+"n": 5046,
+"mae_lern": 2.65
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+4.086,
+3.093,
+2.347,
+2.932,
+3.985,
+3.91,
+3.145,
+2.364,
+1.604,
+1.313,
+0.626
+],
+"b": [
+0.4532,
+0.0421,
+0.9413,
+0.477
+],
+"n": 6729,
+"mae_lern": 3.2
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+4.032,
+3.016,
+2.385,
+3.127,
+4.333,
+4.356,
+3.615,
+2.843,
+2.205,
+1.872,
+1.25
+],
+"b": [
+0.1628,
+1.0781,
+0.5934
+],
+"n": 6729,
+"mae_lern": 3.22
+}
+]
+},
+"Gardasee Nord (Limone)": {
+"tz": "Europe/Rome",
+"lat": 45.80683,
+"lon": 10.79006,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.093,
+0.002,
+-0.513,
+-0.599,
+-0.535,
+-0.755,
+-0.355,
+-0.128,
+-0.395,
+-0.632,
+-0.604
+],
+"b": [
+0.0895,
+0.0755,
+0.24,
+0.1477,
+0.5901,
+0.0871,
+0.0745,
+0.0291,
+0.027,
+0.25,
+-0.2542,
+0.0866
+],
+"n": 1676,
+"mae_lern": 2.2
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.573,
+2.042,
+1.683,
+1.347,
+1.489,
+-0.046,
+1.173,
+1.225,
+0.516,
+0.008,
+0.117
+],
+"b": [
+0.2181,
+0.5238,
+0.423,
+-0.3364,
+0.2133
+],
+"n": 1676,
+"mae_lern": 2.41
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.925,
+3.12,
+2.464,
+2.05,
+2.529,
+2.772,
+2.609,
+2.524,
+1.742,
+0.816,
+0.796
+],
+"b": [
+0.8006,
+-0.1964,
+0.5212
+],
+"n": 1676,
+"mae_lern": 2.68
+}
+]
+},
+"Tarifa": {
+"tz": "Europe/Madrid",
+"lat": 36.014,
+"lon": -5.5988,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+12,
+13,
+14,
+15,
+16,
+18,
+19
+],
+"a": [
+2.873,
+2.955,
+3.722,
+3.92,
+4.112,
+4.267,
+4.138,
+4.428,
+4.507
+],
+"b": [
+0.8397,
+0.4212,
+-0.416,
+0.0391
+],
+"n": 1331,
+"mae_lern": 1.99
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+12,
+13,
+14,
+15,
+16,
+18,
+19
+],
+"a": [
+2.873,
+2.955,
+3.722,
+3.92,
+4.112,
+4.267,
+4.138,
+4.428,
+4.507
+],
+"b": [
+0.8397,
+0.4212,
+-0.416,
+0.0391
+],
+"n": 1331,
+"mae_lern": 1.99
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+12,
+13,
+14,
+15,
+16,
+18,
+19
+],
+"a": [
+2.029,
+1.843,
+2.051,
+1.997,
+2.147,
+2.21,
+2.207,
+2.803,
+3.045
+],
+"b": [
+1.0722,
+-0.402,
+0.4077
+],
+"n": 1331,
+"mae_lern": 2.28
+}
+]
+},
+"Talamone (Grosseto)": {
+"tz": "Europe/Rome",
+"lat": 42.7481,
+"lon": 11.0589,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.561,
+0.257,
+0.789,
+0.564,
+0.551,
+0.927,
+1.286,
+0.948,
+1.079,
+0.95,
+0.783
+],
+"b": [
+0.2482,
+0.1459,
+0.26,
+0.1699,
+0.0572,
+0.1293,
+-0.0838,
+0.1203,
+-0.0657
+],
+"n": 1678,
+"mae_lern": 1.53
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.365,
+0.892,
+1.208,
+1.465,
+1.933,
+2.426,
+2.981,
+2.69,
+2.639,
+2.519,
+2.298
+],
+"b": [
+0.5806,
+-0.0144,
+0.3919,
+0.0228
+],
+"n": 1678,
+"mae_lern": 1.78
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.177,
+0.893,
+1.291,
+1.646,
+2.414,
+2.994,
+3.603,
+3.26,
+3.236,
+3.062,
+2.654
+],
+"b": [
+0.2111,
+0.5923,
+0.089
+],
+"n": 1678,
+"mae_lern": 1.9
+}
+]
+},
+"Porto Pollo (Figari)": {
+"tz": "Europe/Rome",
+"lat": 41.5006,
+"lon": 9.0978,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.076,
+0.456,
+0.59,
+0.356,
+0.036,
+0.428,
+0.415,
+0.579,
+0.691,
+0.739,
+0.494
+],
+"b": [
+0.083,
+0.2228,
+0.1789,
+0.1805,
+-0.0337,
+0.2301,
+0.0531,
+-0.0402,
+0.3574
+],
+"n": 1680,
+"mae_lern": 1.63
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.319,
+0.86,
+1.14,
+1.151,
+0.889,
+1.254,
+1.344,
+1.467,
+1.655,
+1.965,
+1.809
+],
+"b": [
+0.4576,
+0.2433,
+0.0365,
+0.5822
+],
+"n": 1680,
+"mae_lern": 1.87
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.544,
+1.081,
+1.357,
+1.444,
+1.343,
+1.797,
+1.877,
+1.969,
+2.196,
+2.4,
+2.09
+],
+"b": [
+0.4134,
+0.1072,
+0.7574
+],
+"n": 1680,
+"mae_lern": 1.92
+}
+]
+},
+"Porto Pollo (Olbia)": {
+"tz": "Europe/Rome",
+"lat": 40.8986,
+"lon": 9.5178,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.538,
+0.878,
+0.283,
+0.423,
+0.069,
+-0.224,
+-0.347,
+-0.264,
+-0.209,
+-0.063,
+0.27
+],
+"b": [
+0.2179,
+-0.1255,
+0.6151,
+0.1112,
+0.2749,
+0.0662,
+0.0936,
+-0.0653,
+0.0556
+],
+"n": 1663,
+"mae_lern": 1.59
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.727,
+1.776,
+1.309,
+2.391,
+2.525,
+2.43,
+2.217,
+2.09,
+1.695,
+1.664,
+1.819
+],
+"b": [
+0.5228,
+0.3965,
+0.0191,
+0.1169
+],
+"n": 1663,
+"mae_lern": 1.89
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.477,
+1.683,
+1.567,
+2.79,
+3.234,
+3.406,
+3.358,
+3.211,
+2.718,
+2.415,
+2.256
+],
+"b": [
+0.6585,
+0.0719,
+0.2606
+],
+"n": 1663,
+"mae_lern": 1.97
+}
+]
+},
+"Hyères (Flughafen, METAR)": {
+"tz": "Europe/Paris",
+"lat": 43.0944,
+"lon": 6.1464,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.746,
+1.47,
+2.376,
+2.648,
+2.126,
+2.264,
+2.255,
+2.093,
+2.078,
+1.805,
+1.281
+],
+"b": [
+0.0272,
+0.325,
+-0.0269,
+0.1547,
+0.0797,
+0.1348,
+-0.029,
+0.1089,
+-0.0607,
+0.1643,
+-0.0322
+],
+"n": 1671,
+"mae_lern": 1.41
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.001,
+1.699,
+2.623,
+2.921,
+2.424,
+2.204,
+2.503,
+2.358,
+2.34,
+2.163,
+1.65
+],
+"b": [
+0.1381,
+0.4005,
+0.0824,
+0.2392,
+-0.0053
+],
+"n": 1671,
+"mae_lern": 1.55
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.922,
+1.833,
+3.248,
+3.978,
+3.757,
+3.714,
+3.77,
+3.616,
+3.49,
+3.205,
+2.459
+],
+"b": [
+0.2495,
+0.4404,
+0.0862
+],
+"n": 1671,
+"mae_lern": 1.7
+}
+]
+},
+"Lo Stagnone (Trapani-Birgi)": {
+"tz": "Europe/Rome",
+"lat": 37.9142,
+"lon": 12.4914,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"italia_meteo_arpae_icon_2i",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.527,
+1.037,
+1.849,
+1.934,
+1.952,
+1.916,
+1.741,
+1.851,
+1.877,
+1.685,
+1.386
+],
+"b": [
+0.2002,
+0.2144,
+0.2074,
+0.2512,
+0.0925
+],
+"n": 1681,
+"mae_lern": 1.39
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.66,
+1.255,
+2.168,
+2.318,
+2.413,
+2.349,
+2.18,
+2.245,
+2.255,
+1.963,
+1.607
+],
+"b": [
+0.2977,
+0.223,
+0.2733,
+0.1218
+],
+"n": 1681,
+"mae_lern": 1.43
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.408,
+1.117,
+2.02,
+2.186,
+2.363,
+2.424,
+2.282,
+2.391,
+2.372,
+2.062,
+1.618
+],
+"b": [
+0.3467,
+0.3473,
+0.1912
+],
+"n": 1681,
+"mae_lern": 1.48
+}
+]
+},
+"Rhodos (Flughafen)": {
+"tz": "Europe/Athens",
+"lat": 36.4019,
+"lon": 28.0881,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+2.707,
+3.042,
+3.882,
+4.082
+],
+"b": [
+0.7031,
+0.0362,
+0.4286,
+-0.1769
+],
+"n": 611,
+"mae_lern": 1.91
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+2.707,
+3.042,
+3.882,
+4.082
+],
+"b": [
+0.7031,
+0.0362,
+0.4286,
+-0.1769
+],
+"n": 611,
+"mae_lern": 1.91
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+3.558,
+4.487,
+6.045,
+5.414
+],
+"b": [
+0.193,
+0.5819,
+-0.0566
+],
+"n": 611,
+"mae_lern": 2.05
+}
+]
+},
+"Kos (Flughafen)": {
+"tz": "Europe/Athens",
+"lat": 36.8004,
+"lon": 27.0913,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+2.123,
+2.008,
+2.092,
+2.083
+],
+"b": [
+0.2235,
+0.5333,
+0.1342,
+-0.0718
+],
+"n": 611,
+"mae_lern": 1.67
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+2.123,
+2.008,
+2.092,
+2.083
+],
+"b": [
+0.2235,
+0.5333,
+0.1342,
+-0.0718
+],
+"n": 611,
+"mae_lern": 1.67
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+1.984,
+2.201,
+2.473,
+2.212
+],
+"b": [
+0.608,
+0.1618,
+-0.0178
+],
+"n": 611,
+"mae_lern": 1.7
+}
+]
+},
+"Karpathos (Flughafen)": {
+"tz": "Europe/Athens",
+"lat": 35.4171,
+"lon": 27.1547,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+-0.595,
+0.582,
+0.762,
+0.41
+],
+"b": [
+0.8285,
+0.4616,
+-0.0424,
+0.0874
+],
+"n": 607,
+"mae_lern": 2.38
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+-0.595,
+0.582,
+0.762,
+0.41
+],
+"b": [
+0.8285,
+0.4616,
+-0.0424,
+0.0874
+],
+"n": 607,
+"mae_lern": 2.38
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+0.28,
+2.183,
+2.098,
+0.945
+],
+"b": [
+1.1814,
+-0.2304,
+0.2684
+],
+"n": 607,
+"mae_lern": 2.74
+}
+]
+},
+"Naxos (Flughafen)": {
+"tz": "Europe/Athens",
+"lat": 37.0833,
+"lon": 25.3667,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.941,
+2.195,
+2.531,
+2.78,
+3.1,
+3.363,
+3.294,
+3.417,
+3.945,
+3.716,
+3.393
+],
+"b": [
+-0.0252,
+0.2935,
+0.1197,
+0.259
+],
+"n": 1654,
+"mae_lern": 1.98
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.941,
+2.195,
+2.531,
+2.78,
+3.1,
+3.363,
+3.294,
+3.417,
+3.945,
+3.716,
+3.393
+],
+"b": [
+-0.0252,
+0.2935,
+0.1197,
+0.259
+],
+"n": 1654,
+"mae_lern": 1.98
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.943,
+2.189,
+2.516,
+2.761,
+3.077,
+3.34,
+3.274,
+3.402,
+3.933,
+3.704,
+3.391
+],
+"b": [
+0.2907,
+0.1096,
+0.2487
+],
+"n": 1654,
+"mae_lern": 1.98
+}
+]
+},
+"Paros (Flughafen)": {
+"tz": "Europe/Athens",
+"lat": 37.0245,
+"lon": 25.113,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+1.432,
+1.834,
+1.686,
+1.916
+],
+"b": [
+0.1501,
+0.6001,
+0.3386,
+-0.0274
+],
+"n": 608,
+"mae_lern": 1.8
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+1.432,
+1.834,
+1.686,
+1.916
+],
+"b": [
+0.1501,
+0.6001,
+0.3386,
+-0.0274
+],
+"n": 608,
+"mae_lern": 1.8
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+1.278,
+1.689,
+1.509,
+1.676
+],
+"b": [
+0.6766,
+0.3982,
+-0.003
+],
+"n": 608,
+"mae_lern": 1.81
+}
+]
+},
+"Leucate (Perpignan)": {
+"tz": "Europe/Paris",
+"lat": 42.7372,
+"lon": 2.8728,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.585,
+0.612,
+0.77,
+0.701,
+0.528,
+0.564,
+0.436,
+0.522,
+0.809,
+0.659,
+0.314
+],
+"b": [
+0.1104,
+0.2047,
+-0.1412,
+0.3306,
+0.0798,
+0.047,
+0.0845,
+0.1094,
+0.1361,
+0.0518
+],
+"n": 1683,
+"mae_lern": 1.38
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.897,
+0.818,
+0.777,
+0.686,
+0.472,
+0.49,
+0.663,
+1.007,
+1.176,
+0.923,
+0.517
+],
+"b": [
+0.2553,
+0.1035,
+0.2099,
+0.3003,
+0.1708
+],
+"n": 1683,
+"mae_lern": 1.57
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.694,
+0.831,
+0.907,
+0.926,
+0.768,
+0.89,
+0.93,
+1.209,
+1.375,
+1.032,
+0.464
+],
+"b": [
+0.3371,
+0.4599,
+0.2778
+],
+"n": 1683,
+"mae_lern": 1.61
+}
+]
+},
+"Sylt (List)": {
+"tz": "Europe/Berlin",
+"lat": 55.011,
+"lon": 8.4125,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"metno_nordic",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.143,
+0.239,
+0.734,
+0.818,
+0.952,
+0.796,
+1.096,
+0.789,
+0.922,
+0.918,
+0.61
+],
+"b": [
+0.3908,
+0.2782,
+-0.3384,
+0.467,
+-0.1125,
+0.2561,
+0.1024,
+0.027,
+-0.0557,
+0.2378,
+-0.0771
+],
+"n": 1473,
+"mae_lern": 1.56
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.824,
+0.96,
+1.424,
+1.519,
+1.831,
+1.535,
+2.033,
+1.696,
+1.691,
+1.631,
+1.271
+],
+"b": [
+0.6338,
+-0.0271,
+0.4469,
+0.0303
+],
+"n": 1473,
+"mae_lern": 1.68
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.844,
+1.123,
+1.592,
+1.705,
+1.957,
+1.921,
+2.254,
+1.942,
+1.991,
+1.733,
+1.324
+],
+"b": [
+0.1126,
+0.6298,
+0.2091
+],
+"n": 1473,
+"mae_lern": 1.81
+}
+]
+},
+"Fehmarn": {
+"tz": "Europe/Berlin",
+"lat": 54.5283,
+"lon": 11.0606,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"metno_nordic",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-1.034,
+-1.11,
+-0.981,
+-0.906,
+-0.944,
+-0.479,
+-0.617,
+-0.504,
+-0.163,
+0.055,
+0.143
+],
+"b": [
+0.5966,
+0.2931,
+0.2118,
+-0.0432,
+-0.042,
+0.2158,
+0.0851,
+0.0451,
+-0.0334,
+-0.0512,
+-0.1146
+],
+"n": 1675,
+"mae_lern": 1.83
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.827,
+-1.06,
+-0.981,
+-0.713,
+-0.691,
+-0.42,
+-0.525,
+-0.438,
+-0.051,
+-0.059,
+0.135
+],
+"b": [
+0.7577,
+0.2062,
+0.1637,
+-0.0081
+],
+"n": 1675,
+"mae_lern": 2.09
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.921,
+-0.979,
+-0.854,
+-0.445,
+-0.167,
+-0.067,
+-0.219,
+-0.33,
+-0.166,
+-0.244,
+-0.284
+],
+"b": [
+0.5958,
+0.3393,
+0.1246
+],
+"n": 1675,
+"mae_lern": 2.32
+}
+]
+},
+"Neusiedler See": {
+"tz": "Europe/Vienna",
+"lat": 47.9492,
+"lon": 16.8289,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.196,
+0.464,
+0.67,
+0.658,
+0.725,
+0.935,
+0.82,
+0.57,
+0.6,
+0.466,
+0.48
+],
+"b": [
+0.3536,
+0.0664,
+0.0438,
+0.0247,
+-0.1023,
+0.0149,
+0.1423,
+0.0946
+],
+"n": 1680,
+"mae_lern": 1.34
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.348,
+0.614,
+0.843,
+0.892,
+0.977,
+1.111,
+1.126,
+0.831,
+0.802,
+0.657,
+0.621
+],
+"b": [
+0.2571,
+0.0746,
+0.1708,
+0.1236
+],
+"n": 1680,
+"mae_lern": 1.41
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.434,
+0.726,
+0.934,
+1.015,
+1.127,
+1.237,
+1.267,
+1.023,
+0.962,
+0.86,
+0.765
+],
+"b": [
+0.1829,
+0.2574,
+0.1548
+],
+"n": 1680,
+"mae_lern": 1.42
+}
+]
+},
+"Neusiedler See (Podersdorf Strandbad)": {
+"tz": "Europe/Vienna",
+"lat": 47.86611,
+"lon": 16.83444,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.428,
+-0.398,
+-0.376,
+-0.251,
+-0.371,
+-0.325,
+-0.558,
+-0.747,
+-0.706,
+-1.018,
+-0.94
+],
+"b": [
+0.3411,
+0.0213,
+0.1245,
+0.0684,
+0.163,
+0.0771,
+-0.0194,
+0.2299
+],
+"n": 1681,
+"mae_lern": 1.9
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.101,
+-0.131,
+-0.058,
+-0.001,
+-0.031,
+0.081,
+-0.023,
+-0.16,
+-0.209,
+-0.471,
+-0.349
+],
+"b": [
+0.3157,
+0.2395,
+0.0728,
+0.3088
+],
+"n": 1681,
+"mae_lern": 2.01
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.007,
+0.003,
+0.021,
+0.116,
+0.109,
+0.192,
+0.115,
+0.038,
+-0.032,
+-0.164,
+-0.028
+],
+"b": [
+0.3961,
+0.1775,
+0.3412
+],
+"n": 1681,
+"mae_lern": 2.03
+}
+]
+},
+"Wolfgangsee (St. Wolfgang)": {
+"tz": "Europe/Vienna",
+"lat": 47.74028,
+"lon": 13.44194,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.721,
+0.96,
+1.337,
+1.599,
+1.728,
+2.135,
+1.864,
+1.74,
+1.606,
+1.363,
+0.948
+],
+"b": [
+0.3437,
+0.1146,
+0.1404,
+-0.1785,
+0.224,
+-0.16,
+-0.1199,
+-0.003,
+0.0146,
+-0.0205,
+0.0669,
+0.186
+],
+"n": 1683,
+"mae_lern": 0.92
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.653,
+0.918,
+1.271,
+1.631,
+1.857,
+1.876,
+1.909,
+1.802,
+1.551,
+1.386,
+1.029
+],
+"b": [
+0.1827,
+0.0293,
+0.0037,
+0.1829,
+0.2511
+],
+"n": 1683,
+"mae_lern": 1.1
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.592,
+0.902,
+1.22,
+1.618,
+1.854,
+1.896,
+1.864,
+1.801,
+1.535,
+1.366,
+1.012
+],
+"b": [
+0.0867,
+0.2371,
+0.3266
+],
+"n": 1683,
+"mae_lern": 1.13
+}
+]
+},
+"Traunsee (Altmünster)": {
+"tz": "Europe/Vienna",
+"lat": 47.87917,
+"lon": 13.77333,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.959,
+1.035,
+1.404,
+1.745,
+1.888,
+1.939,
+2.001,
+1.834,
+1.701,
+1.493,
+1.418
+],
+"b": [
+0.277,
+0.1839,
+0.1169,
+-0.0773,
+0.1179,
+-0.0721,
+0.018,
+0.0254,
+-0.0118,
+-0.1575,
+0.0064,
+0.11
+],
+"n": 1683,
+"mae_lern": 0.96
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.392,
+1.556,
+1.945,
+2.371,
+2.657,
+2.694,
+2.88,
+2.792,
+2.507,
+2.345,
+2.338
+],
+"b": [
+0.2865,
+0.0546,
+-0.0584,
+0.0015,
+0.1436
+],
+"n": 1683,
+"mae_lern": 1.08
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.393,
+1.516,
+1.838,
+2.284,
+2.601,
+2.762,
+2.934,
+2.841,
+2.537,
+2.358,
+2.269
+],
+"b": [
+0.0387,
+0.1125,
+0.2186
+],
+"n": 1683,
+"mae_lern": 1.12
+}
+]
+},
+"Achensee (Achenkirch)": {
+"tz": "Europe/Vienna",
+"lat": 47.49944,
+"lon": 11.70667,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.031,
+1.601,
+1.947,
+2.056,
+1.85,
+1.612,
+1.732,
+1.769,
+1.549,
+1.423,
+1.287
+],
+"b": [
+0.269,
+-0.0249,
+0.1898,
+-0.0015,
+0.1331,
+0.3052,
+-0.0441,
+-0.0326,
+-0.0548,
+0.0958,
+0.0288,
+0.1798
+],
+"n": 1681,
+"mae_lern": 1.41
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.655,
+2.252,
+2.718,
+2.597,
+2.516,
+2.316,
+2.398,
+2.455,
+2.548,
+2.194,
+1.865
+],
+"b": [
+0.0,
+0.2749,
+0.2187,
+0.1203,
+0.237
+],
+"n": 1681,
+"mae_lern": 1.59
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.603,
+2.176,
+2.672,
+2.698,
+2.66,
+2.586,
+2.588,
+2.694,
+2.794,
+2.413,
+2.031
+],
+"b": [
+0.342,
+0.1881,
+0.3643
+],
+"n": 1681,
+"mae_lern": 1.64
+}
+]
+},
+"Hyères Almanarre (La Capte)": {
+"tz": "Europe/Paris",
+"lat": 43.065162,
+"lon": 6.149757,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.494,
+0.967,
+1.298,
+1.283,
+1.082,
+1.257,
+0.794,
+0.627,
+0.566,
+0.709,
+0.586
+],
+"b": [
+0.1465,
+0.1941,
+-0.1417,
+-0.2858,
+0.4212,
+0.1119,
+0.021,
+0.1093,
+0.0435,
+0.1375,
+-0.174
+],
+"n": 1266,
+"mae_lern": 1.15
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.663,
+0.913,
+1.084,
+1.139,
+0.948,
+0.785,
+0.668,
+0.521,
+0.457,
+0.61,
+0.52
+],
+"b": [
+0.2916,
+0.1318,
+0.1848,
+0.2118,
+-0.1516
+],
+"n": 1266,
+"mae_lern": 1.25
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.402,
+0.644,
+0.914,
+1.029,
+0.947,
+0.941,
+0.761,
+0.611,
+0.524,
+0.654,
+0.518
+],
+"b": [
+0.3467,
+0.3405,
+-0.0824
+],
+"n": 1266,
+"mae_lern": 1.31
+}
+]
+},
+"Gruissan (Étang de Mateille)": {
+"tz": "Europe/Paris",
+"lat": 43.118254,
+"lon": 3.120087,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.389,
+-0.18,
+0.731,
+1.237,
+1.389,
+1.347,
+0.957,
+0.851,
+0.721,
+0.506,
+0.159
+],
+"b": [
+-0.1321,
+0.2396,
+-0.1191,
+0.3357,
+-0.1472,
+0.088,
+0.0873,
+0.0222,
+0.2057,
+0.1653,
+-0.0197
+],
+"n": 709,
+"mae_lern": 1.07
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.02,
+0.325,
+1.268,
+1.904,
+2.266,
+2.008,
+1.782,
+1.517,
+1.414,
+1.217,
+0.685
+],
+"b": [
+-0.0335,
+0.1488,
+0.2922,
+0.2603,
+0.0176
+],
+"n": 709,
+"mae_lern": 1.21
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.108,
+0.512,
+1.51,
+2.171,
+2.616,
+2.424,
+2.1,
+1.772,
+1.683,
+1.477,
+0.892
+],
+"b": [
+0.334,
+0.3004,
+0.0453
+],
+"n": 709,
+"mae_lern": 1.22
+}
+]
+},
+"Leucate (Aéromodélisme)": {
+"tz": "Europe/Paris",
+"lat": 42.936413,
+"lon": 3.009355,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.006,
+0.777,
+1.423,
+1.343,
+1.302,
+1.142,
+0.9,
+0.737,
+0.954,
+0.711,
+0.475
+],
+"b": [
+0.1146,
+0.2195,
+-0.038,
+0.3492,
+-0.102,
+-0.025,
+0.0514,
+0.0837,
+0.011,
+0.0037,
+-0.0429
+],
+"n": 1683,
+"mae_lern": 0.97
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.119,
+0.953,
+1.573,
+1.647,
+1.667,
+1.353,
+1.286,
+1.124,
+1.194,
+1.004,
+0.809
+],
+"b": [
+0.2363,
+0.1956,
+0.0883,
+0.1078,
+0.0037
+],
+"n": 1683,
+"mae_lern": 1.16
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.026,
+1.14,
+1.903,
+2.148,
+2.336,
+2.029,
+1.817,
+1.551,
+1.497,
+1.178,
+0.809
+],
+"b": [
+0.1773,
+0.3059,
+0.1206
+],
+"n": 1683,
+"mae_lern": 1.26
+}
+]
+},
+"Dakhla (Flughafen)": {
+"tz": "Africa/El_Aaiun",
+"lat": 23.7167,
+"lon": -15.9333,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-1.046,
+-0.084,
+0.383,
+0.549,
+0.086,
+-0.5,
+-0.708,
+-0.743,
+-1.015,
+-1.511,
+-1.61
+],
+"b": [
+0.4244,
+0.3684,
+0.369
+],
+"n": 1657,
+"mae_lern": 1.87
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-1.046,
+-0.084,
+0.383,
+0.549,
+0.086,
+-0.5,
+-0.708,
+-0.743,
+-1.015,
+-1.511,
+-1.61
+],
+"b": [
+0.4244,
+0.3684,
+0.369
+],
+"n": 1657,
+"mae_lern": 1.87
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-1.046,
+-0.084,
+0.383,
+0.549,
+0.086,
+-0.5,
+-0.708,
+-0.743,
+-1.015,
+-1.511,
+-1.61
+],
+"b": [
+0.4244,
+0.3684,
+0.369
+],
+"n": 1657,
+"mae_lern": 1.87
+}
+]
+},
+"Essaouira": {
+"tz": "Africa/Casablanca",
+"lat": 31.51,
+"lon": -9.78,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.524,
+2.911,
+3.738,
+2.833,
+2.257,
+1.986,
+1.739,
+2.226,
+2.725,
+2.997,
+2.978
+],
+"b": [
+0.2122,
+0.1529,
+0.1048,
+0.1978
+],
+"n": 781,
+"mae_lern": 1.93
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.524,
+2.911,
+3.738,
+2.833,
+2.257,
+1.986,
+1.739,
+2.226,
+2.725,
+2.997,
+2.978
+],
+"b": [
+0.2122,
+0.1529,
+0.1048,
+0.1978
+],
+"n": 781,
+"mae_lern": 1.93
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.086,
+2.511,
+3.391,
+2.499,
+1.98,
+1.888,
+1.601,
+2.071,
+2.574,
+2.816,
+2.707
+],
+"b": [
+0.2082,
+0.1883,
+0.2629
+],
+"n": 781,
+"mae_lern": 1.94
+}
+]
+},
+"Hurghada/El Gouna": {
+"tz": "Africa/Cairo",
+"lat": 27.178,
+"lon": 33.8,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+-2.02,
+0.733,
+-0.849,
+-0.509
+],
+"b": [
+0.7153,
+0.4514,
+-0.0542
+],
+"n": 606,
+"mae_lern": 2.78
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+-2.02,
+0.733,
+-0.849,
+-0.509
+],
+"b": [
+0.7153,
+0.4514,
+-0.0542
+],
+"n": 606,
+"mae_lern": 2.78
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+12,
+15,
+18
+],
+"a": [
+-2.02,
+0.733,
+-0.849,
+-0.509
+],
+"b": [
+0.7153,
+0.4514,
+-0.0542
+],
+"n": 606,
+"mae_lern": 2.78
+}
+]
+},
+"Sal (Flughafen)": {
+"tz": "Atlantic/Cape_Verde",
+"lat": 16.7419,
+"lon": -22.9489,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.335,
+0.549,
+1.216,
+1.217,
+1.224,
+0.982,
+1.215,
+1.056,
+1.228,
+1.143,
+0.683
+],
+"b": [
+0.7349,
+0.2126,
+0.0362
+],
+"n": 1585,
+"mae_lern": 1.33
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.335,
+0.549,
+1.216,
+1.217,
+1.224,
+0.982,
+1.215,
+1.056,
+1.228,
+1.143,
+0.683
+],
+"b": [
+0.7349,
+0.2126,
+0.0362
+],
+"n": 1585,
+"mae_lern": 1.33
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.335,
+0.549,
+1.216,
+1.217,
+1.224,
+0.982,
+1.215,
+1.056,
+1.228,
+1.143,
+0.683
+],
+"b": [
+0.7349,
+0.2126,
+0.0362
+],
+"n": 1585,
+"mae_lern": 1.33
+}
+]
+},
+"Kroatien Bol/Brac (Hvar)": {
+"tz": "Europe/Zagreb",
+"lat": 43.171,
+"lon": 16.437,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.34,
+1.499,
+1.472,
+1.489,
+1.286,
+0.921,
+1.357,
+1.256,
+0.927,
+0.963,
+0.437
+],
+"b": [
+0.2418,
+0.2589,
+0.0301,
+0.0772,
+-0.015,
+0.0935,
+0.049
+],
+"n": 902,
+"mae_lern": 1.6
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.677,
+1.951,
+2.029,
+2.079,
+1.948,
+1.535,
+2.018,
+1.863,
+1.38,
+1.392,
+0.709
+],
+"b": [
+0.4205,
+0.0254,
+0.1359,
+0.0826
+],
+"n": 902,
+"mae_lern": 1.65
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.3,
+1.694,
+1.796,
+2.034,
+1.952,
+1.562,
+1.933,
+1.776,
+1.195,
+0.948,
+0.146
+],
+"b": [
+0.1451,
+0.2128,
+0.1735
+],
+"n": 902,
+"mae_lern": 1.75
+}
+]
+},
+"Kroatien Split (Marjan)": {
+"tz": "Europe/Zagreb",
+"lat": 43.508,
+"lon": 16.426,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.197,
+1.482,
+1.186,
+0.708,
+0.601,
+0.635,
+0.35,
+0.349,
+0.404,
+0.452,
+0.406
+],
+"b": [
+0.25,
+-0.0412,
+0.1967,
+0.1126,
+0.0687,
+0.1558,
+0.141,
+0.1569
+],
+"n": 1625,
+"mae_lern": 1.78
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.443,
+1.7,
+1.348,
+0.858,
+0.919,
+0.993,
+0.912,
+1.048,
+0.982,
+0.917,
+0.842
+],
+"b": [
+0.3643,
+0.2721,
+0.189,
+0.2317
+],
+"n": 1625,
+"mae_lern": 1.9
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.411,
+1.817,
+1.477,
+1.037,
+1.185,
+1.532,
+1.573,
+1.633,
+1.537,
+1.337,
+1.023
+],
+"b": [
+0.3676,
+0.2502,
+0.3562
+],
+"n": 1625,
+"mae_lern": 2.01
+}
+]
+},
+"Bodensee (Konstanz)": {
+"tz": "Europe/Berlin",
+"lat": 47.6952,
+"lon": 9.1307,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.884,
+0.859,
+1.241,
+1.172,
+1.281,
+1.415,
+1.35,
+1.515,
+1.257,
+1.084,
+1.007
+],
+"b": [
+0.3358,
+0.0048,
+0.0328,
+0.087,
+0.5618,
+-0.3132,
+0.0602,
+-0.004,
+0.0029,
+0.0194,
+0.0213,
+0.0419,
+0.024
+],
+"n": 1679,
+"mae_lern": 1.06
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.013,
+1.081,
+1.395,
+1.449,
+1.686,
+1.644,
+1.784,
+1.944,
+1.487,
+1.289,
+1.321
+],
+"b": [
+0.1666,
+0.2899,
+0.1463,
+0.1494,
+0.0529
+],
+"n": 1679,
+"mae_lern": 1.18
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.033,
+1.099,
+1.385,
+1.427,
+1.726,
+1.856,
+1.858,
+2.085,
+1.646,
+1.46,
+1.374
+],
+"b": [
+0.365,
+0.2793,
+0.1354
+],
+"n": 1679,
+"mae_lern": 1.23
+}
+]
+},
+"Bodensee (Guettingen)": {
+"tz": "Europe/Zurich",
+"lat": 47.601733,
+"lon": 9.279428,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.0,
+1.019,
+1.337,
+1.555,
+1.673,
+1.919,
+1.838,
+1.796,
+1.803,
+1.44,
+1.114
+],
+"b": [
+0.1867,
+0.0438,
+0.095,
+-0.0034,
+0.3975,
+-0.239,
+0.0063,
+-0.0326,
+0.0543,
+0.1288,
+0.0335,
+0.0561,
+-0.0316
+],
+"n": 1683,
+"mae_lern": 0.84
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.473,
+1.489,
+1.74,
+1.894,
+2.149,
+2.288,
+2.17,
+2.136,
+2.008,
+1.705,
+1.465
+],
+"b": [
+0.1319,
+0.1898,
+0.133,
+0.1451,
+0.0186
+],
+"n": 1683,
+"mae_lern": 0.95
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.466,
+1.571,
+1.872,
+2.066,
+2.36,
+2.487,
+2.309,
+2.263,
+2.044,
+1.774,
+1.404
+],
+"b": [
+0.2685,
+0.2844,
+0.0709
+],
+"n": 1683,
+"mae_lern": 1.04
+}
+]
+},
+"Genfer See (Pully)": {
+"tz": "Europe/Zurich",
+"lat": 46.512283,
+"lon": 6.667517,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.754,
+1.092,
+1.306,
+1.351,
+1.281,
+1.541,
+1.521,
+1.361,
+1.33,
+1.263,
+1.022
+],
+"b": [
+0.0372,
+0.0489,
+0.1373,
+0.0048,
+0.1212,
+-0.0056,
+-0.0262,
+0.0015,
+0.0072,
+0.1504,
+0.005,
+0.0556,
+-0.0186
+],
+"n": 1683,
+"mae_lern": 0.57
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.135,
+1.488,
+1.714,
+1.797,
+1.734,
+1.889,
+1.865,
+1.669,
+1.608,
+1.497,
+1.275
+],
+"b": [
+0.0982,
+0.1974,
+0.0349,
+0.0979,
+-0.0166
+],
+"n": 1683,
+"mae_lern": 0.65
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.23,
+1.693,
+1.989,
+2.03,
+1.973,
+2.091,
+1.951,
+1.798,
+1.729,
+1.712,
+1.564
+],
+"b": [
+0.112,
+0.2089,
+0.0278
+],
+"n": 1683,
+"mae_lern": 0.75
+}
+]
+},
+"Lago Maggiore (Magadino)": {
+"tz": "Europe/Zurich",
+"lat": 46.160025,
+"lon": 8.933672,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.166,
+0.123,
+-0.313,
+-0.366,
+0.439,
+0.774,
+0.85,
+0.925,
+0.688,
+0.811,
+0.882
+],
+"b": [
+0.0964,
+0.1675,
+0.1992,
+-0.0991,
+0.1384,
+0.2599,
+0.0573,
+-0.0421,
+0.0409,
+0.1771,
+-0.0371,
+0.1188,
+0.0871
+],
+"n": 1651,
+"mae_lern": 1.15
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.279,
+0.429,
+0.012,
+0.265,
+1.523,
+1.831,
+2.341,
+2.369,
+2.018,
+1.905,
+1.684
+],
+"b": [
+0.267,
+0.2406,
+0.0584,
+0.2102,
+0.2316
+],
+"n": 1651,
+"mae_lern": 1.31
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.232,
+0.5,
+0.167,
+0.602,
+2.043,
+2.734,
+3.029,
+3.087,
+2.832,
+2.499,
+2.117
+],
+"b": [
+0.2824,
+0.3174,
+0.3274
+],
+"n": 1651,
+"mae_lern": 1.37
+}
+]
+},
+"Teneriffa El Medano (Flughafen Sur)": {
+"tz": "Atlantic/Canary",
+"lat": 28.0475,
+"lon": -16.5608,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.558,
+1.073,
+2.866,
+3.95,
+3.351,
+4.106,
+4.074,
+4.678,
+4.767,
+4.516,
+3.692
+],
+"b": [
+0.4831,
+0.1008,
+0.3331
+],
+"n": 1683,
+"mae_lern": 2.94
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.558,
+1.073,
+2.866,
+3.95,
+3.351,
+4.106,
+4.074,
+4.678,
+4.767,
+4.516,
+3.692
+],
+"b": [
+0.4831,
+0.1008,
+0.3331
+],
+"n": 1683,
+"mae_lern": 2.94
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.558,
+1.073,
+2.866,
+3.95,
+3.351,
+4.106,
+4.074,
+4.678,
+4.767,
+4.516,
+3.692
+],
+"b": [
+0.4831,
+0.1008,
+0.3331
+],
+"n": 1683,
+"mae_lern": 2.94
+}
+]
+},
+"Gran Canaria Pozo (Gando)": {
+"tz": "Atlantic/Canary",
+"lat": 27.9225,
+"lon": -15.3894,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-1.76,
+-0.004,
+1.269,
+1.843,
+2.918,
+2.325,
+2.218,
+2.167,
+1.932,
+1.422,
+0.935
+],
+"b": [
+0.4845,
+0.5787,
+0.2564
+],
+"n": 1683,
+"mae_lern": 2.0
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-1.76,
+-0.004,
+1.269,
+1.843,
+2.918,
+2.325,
+2.218,
+2.167,
+1.932,
+1.422,
+0.935
+],
+"b": [
+0.4845,
+0.5787,
+0.2564
+],
+"n": 1683,
+"mae_lern": 2.0
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-1.76,
+-0.004,
+1.269,
+1.843,
+2.918,
+2.325,
+2.218,
+2.167,
+1.932,
+1.422,
+0.935
+],
+"b": [
+0.4845,
+0.5787,
+0.2564
+],
+"n": 1683,
+"mae_lern": 2.0
+}
+]
+},
+"Cumbuco (Fortaleza)": {
+"tz": "America/Fortaleza",
+"lat": -3.7763,
+"lon": -38.5326,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.25,
+0.204,
+0.337,
+0.494,
+0.753,
+0.585,
+0.226,
+0.191,
+-0.099,
+-1.312,
+-1.838
+],
+"b": [
+0.467,
+0.5881,
+0.3375
+],
+"n": 1683,
+"mae_lern": 1.64
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.25,
+0.204,
+0.337,
+0.494,
+0.753,
+0.585,
+0.226,
+0.191,
+-0.099,
+-1.312,
+-1.838
+],
+"b": [
+0.467,
+0.5881,
+0.3375
+],
+"n": 1683,
+"mae_lern": 1.64
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.25,
+0.204,
+0.337,
+0.494,
+0.753,
+0.585,
+0.226,
+0.191,
+-0.099,
+-1.312,
+-1.838
+],
+"b": [
+0.467,
+0.5881,
+0.3375
+],
+"n": 1683,
+"mae_lern": 1.64
+}
+]
+},
+"Kapstadt (Flughafen)": {
+"tz": "Africa/Johannesburg",
+"lat": -33.9667,
+"lon": 18.6,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.296,
+1.529,
+1.959,
+2.099,
+2.142,
+2.211,
+1.961,
+2.152,
+1.882,
+1.401,
+1.211
+],
+"b": [
+0.6897,
+0.7122,
+0.0825
+],
+"n": 1681,
+"mae_lern": 2.04
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.296,
+1.529,
+1.959,
+2.099,
+2.142,
+2.211,
+1.961,
+2.152,
+1.882,
+1.401,
+1.211
+],
+"b": [
+0.6897,
+0.7122,
+0.0825
+],
+"n": 1681,
+"mae_lern": 2.04
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.296,
+1.529,
+1.959,
+2.099,
+2.142,
+2.211,
+1.961,
+2.152,
+1.882,
+1.401,
+1.211
+],
+"b": [
+0.6897,
+0.7122,
+0.0825
+],
+"n": 1681,
+"mae_lern": 2.04
+}
+]
+},
+"Mauritius (Plaisance)": {
+"tz": "Indian/Mauritius",
+"lat": -20.4344,
+"lon": 57.6836,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.684,
+0.667,
+0.822,
+0.739,
+0.722,
+0.823,
+0.54,
+0.147,
+0.021,
+-0.043,
+-0.144
+],
+"b": [
+0.4446,
+0.1914,
+0.4028
+],
+"n": 1679,
+"mae_lern": 1.69
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.684,
+0.667,
+0.822,
+0.739,
+0.722,
+0.823,
+0.54,
+0.147,
+0.021,
+-0.043,
+-0.144
+],
+"b": [
+0.4446,
+0.1914,
+0.4028
+],
+"n": 1679,
+"mae_lern": 1.69
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.684,
+0.667,
+0.822,
+0.739,
+0.722,
+0.823,
+0.54,
+0.147,
+0.021,
+-0.043,
+-0.144
+],
+"b": [
+0.4446,
+0.1914,
+0.4028
+],
+"n": 1679,
+"mae_lern": 1.69
+}
+]
+},
+"Perth (Flughafen)": {
+"tz": "Australia/Perth",
+"lat": -31.9275,
+"lon": 115.9761,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.117,
+1.448,
+1.615,
+1.79,
+1.61,
+2.172,
+2.327,
+2.252,
+2.601,
+1.489,
+0.71
+],
+"b": [
+0.571,
+0.4064,
+0.2477
+],
+"n": 1680,
+"mae_lern": 1.76
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.117,
+1.448,
+1.615,
+1.79,
+1.61,
+2.172,
+2.327,
+2.252,
+2.601,
+1.489,
+0.71
+],
+"b": [
+0.571,
+0.4064,
+0.2477
+],
+"n": 1680,
+"mae_lern": 1.76
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.117,
+1.448,
+1.615,
+1.79,
+1.61,
+2.172,
+2.327,
+2.252,
+2.601,
+1.489,
+0.71
+],
+"b": [
+0.571,
+0.4064,
+0.2477
+],
+"n": 1680,
+"mae_lern": 1.76
+}
+]
+},
+"Sydney (Botany Bay)": {
+"tz": "Australia/Sydney",
+"lat": -33.9465,
+"lon": 151.1731,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.137,
+1.719,
+1.955,
+2.405,
+2.217,
+2.036,
+1.792,
+2.235,
+1.246,
+0.775,
+0.686
+],
+"b": [
+0.4584,
+0.5077,
+0.3574
+],
+"n": 1681,
+"mae_lern": 1.77
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.137,
+1.719,
+1.955,
+2.405,
+2.217,
+2.036,
+1.792,
+2.235,
+1.246,
+0.775,
+0.686
+],
+"b": [
+0.4584,
+0.5077,
+0.3574
+],
+"n": 1681,
+"mae_lern": 1.77
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.137,
+1.719,
+1.955,
+2.405,
+2.217,
+2.036,
+1.792,
+2.235,
+1.246,
+0.775,
+0.686
+],
+"b": [
+0.4584,
+0.5077,
+0.3574
+],
+"n": 1681,
+"mae_lern": 1.77
+}
+]
+},
+"Columbia Gorge (Hood River)": {
+"tz": "America/Los_Angeles",
+"lat": 45.6726,
+"lon": -121.5365,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.171,
+-0.443,
+-0.479,
+0.102,
+0.103,
+0.06,
+-0.038,
+-0.658,
+-0.766,
+-1.5,
+-1.6
+],
+"b": [
+0.4315,
+-0.0772,
+-0.0118,
+0.446,
+-0.1713
+],
+"n": 1661,
+"mae_lern": 2.61
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.941,
+1.045,
+1.001,
+1.484,
+1.503,
+1.352,
+1.158,
+0.523,
+0.545,
+-0.463,
+-0.879
+],
+"b": [
+0.7635,
+-0.0342,
+-0.0032,
+-0.1065
+],
+"n": 1661,
+"mae_lern": 2.76
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.941,
+1.045,
+1.001,
+1.484,
+1.503,
+1.352,
+1.158,
+0.523,
+0.545,
+-0.463,
+-0.879
+],
+"b": [
+0.7635,
+-0.0342,
+-0.0032,
+-0.1065
+],
+"n": 1661,
+"mae_lern": 2.76
+}
+]
+},
+"San Francisco Bay (SFO)": {
+"tz": "America/Los_Angeles",
+"lat": 37.619,
+"lon": -122.3749,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.137,
+0.624,
+0.805,
+1.074,
+0.891,
+1.227,
+0.837,
+0.996,
+1.588,
+1.75,
+1.416
+],
+"b": [
+-0.1265,
+0.3737,
+0.0383,
+0.8486,
+0.2401
+],
+"n": 1682,
+"mae_lern": 2.16
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.588,
+2.654,
+3.09,
+3.2,
+3.888,
+4.363,
+4.238,
+4.522,
+4.801,
+5.009,
+4.507
+],
+"b": [
+-0.1739,
+0.6781,
+0.2994,
+0.3309
+],
+"n": 1682,
+"mae_lern": 2.7
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.588,
+2.654,
+3.09,
+3.2,
+3.888,
+4.363,
+4.238,
+4.522,
+4.801,
+5.009,
+4.507
+],
+"b": [
+-0.1739,
+0.6781,
+0.2994,
+0.3309
+],
+"n": 1682,
+"mae_lern": 2.7
+}
+]
+},
+"Chesapeake Bay (Annapolis)": {
+"tz": "America/New_York",
+"lat": 38.9913,
+"lon": -76.4891,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.063,
+1.014,
+1.987,
+2.383,
+2.498,
+2.332,
+2.266,
+2.437,
+2.078,
+1.697,
+1.089
+],
+"b": [
+0.1781,
+-0.0371,
+-0.014,
+0.7522,
+-0.0379
+],
+"n": 1650,
+"mae_lern": 1.72
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.647,
+1.672,
+2.791,
+3.283,
+3.49,
+3.568,
+3.534,
+3.81,
+3.379,
+2.807,
+1.816
+],
+"b": [
+0.2974,
+0.1999,
+0.2017,
+-0.044
+],
+"n": 1650,
+"mae_lern": 2.02
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.647,
+1.672,
+2.791,
+3.283,
+3.49,
+3.568,
+3.534,
+3.81,
+3.379,
+2.807,
+1.816
+],
+"b": [
+0.2974,
+0.1999,
+0.2017,
+-0.044
+],
+"n": 1650,
+"mae_lern": 2.02
+}
+]
+},
+"Chesapeake Bay (Thomas Point Leuchtturm)": {
+"tz": "America/New_York",
+"lat": 38.899,
+"lon": -76.436,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.058,
+0.078,
+0.473,
+0.535,
+0.585,
+0.582,
+0.491,
+0.823,
+0.879,
+1.127,
+0.629
+],
+"b": [
+0.0959,
+0.2662,
+0.1776,
+0.5842,
+0.0575
+],
+"n": 1673,
+"mae_lern": 1.91
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.444,
+0.303,
+0.506,
+0.406,
+0.57,
+0.915,
+0.895,
+1.072,
+1.085,
+1.331,
+0.77
+],
+"b": [
+0.2634,
+0.4545,
+0.3272,
+0.2231
+],
+"n": 1673,
+"mae_lern": 2.24
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.444,
+0.303,
+0.506,
+0.406,
+0.57,
+0.915,
+0.895,
+1.072,
+1.085,
+1.331,
+0.77
+],
+"b": [
+0.2634,
+0.4545,
+0.3272,
+0.2231
+],
+"n": 1673,
+"mae_lern": 2.24
+}
+]
+},
+"San Francisco Bay (Fort Point)": {
+"tz": "America/Los_Angeles",
+"lat": 37.806,
+"lon": -122.466,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+2.494,
+2.696,
+2.897,
+3.13,
+3.884,
+4.452,
+5.283,
+5.565,
+5.048,
+4.679,
+3.773
+],
+"b": [
+-0.2051,
+0.0307,
+-0.2837,
+0.5573,
+0.2688
+],
+"n": 1657,
+"mae_lern": 1.74
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+3.452,
+3.966,
+4.567,
+5.096,
+6.071,
+6.78,
+7.728,
+8.046,
+8.013,
+7.751,
+6.972
+],
+"b": [
+-0.0958,
+0.3476,
+-0.2427,
+0.41
+],
+"n": 1657,
+"mae_lern": 2.01
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+3.452,
+3.966,
+4.567,
+5.096,
+6.071,
+6.78,
+7.728,
+8.046,
+8.013,
+7.751,
+6.972
+],
+"b": [
+-0.0958,
+0.3476,
+-0.2427,
+0.41
+],
+"n": 1657,
+"mae_lern": 2.01
+}
+]
+},
+"San Francisco Bay (Alameda)": {
+"tz": "America/Los_Angeles",
+"lat": 37.772,
+"lon": -122.3,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.777,
+0.925,
+0.871,
+1.076,
+1.429,
+1.612,
+1.67,
+1.734,
+2.196,
+2.429,
+2.694
+],
+"b": [
+0.1198,
+0.3216,
+0.1533,
+0.3478,
+-0.0357
+],
+"n": 1500,
+"mae_lern": 1.28
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.758,
+0.819,
+0.602,
+0.67,
+0.891,
+1.092,
+1.309,
+1.385,
+1.94,
+2.232,
+2.695
+],
+"b": [
+0.259,
+0.3456,
+0.207,
+0.0453
+],
+"n": 1500,
+"mae_lern": 1.38
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.758,
+0.819,
+0.602,
+0.67,
+0.891,
+1.092,
+1.309,
+1.385,
+1.94,
+2.232,
+2.695
+],
+"b": [
+0.259,
+0.3456,
+0.207,
+0.0453
+],
+"n": 1500,
+"mae_lern": 1.38
+}
+]
+},
+"Suisun Bay/Delta (Port Chicago)": {
+"tz": "America/Los_Angeles",
+"lat": 38.056,
+"lon": -122.039,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.725,
+0.407,
+1.735,
+2.02,
+1.972,
+1.92,
+1.085,
+0.26,
+0.454,
+-0.313,
+-1.174
+],
+"b": [
+0.6577,
+0.1921,
+-0.271,
+0.7056,
+-0.1754
+],
+"n": 1637,
+"mae_lern": 1.69
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.661,
+2.421,
+3.498,
+3.358,
+3.137,
+2.682,
+1.639,
+0.775,
+1.422,
+0.602,
+0.162
+],
+"b": [
+0.9391,
+0.4519,
+-0.0495,
+-0.1518
+],
+"n": 1637,
+"mae_lern": 1.94
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.661,
+2.421,
+3.498,
+3.358,
+3.137,
+2.682,
+1.639,
+0.775,
+1.422,
+0.602,
+0.162
+],
+"b": [
+0.9391,
+0.4519,
+-0.0495,
+-0.1518
+],
+"n": 1637,
+"mae_lern": 1.94
+}
+]
+},
+"Miami (Virginia Key)": {
+"tz": "America/New_York",
+"lat": 25.731,
+"lon": -80.162,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.014,
+0.239,
+0.249,
+0.545,
+0.875,
+1.142,
+1.019,
+1.012,
+0.843,
+0.682,
+0.344
+],
+"b": [
+0.1412,
+0.1718,
+0.1711,
+0.3639,
+-0.0424
+],
+"n": 1659,
+"mae_lern": 1.16
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.092,
+0.299,
+0.427,
+0.675,
+0.947,
+1.27,
+1.215,
+1.201,
+0.963,
+0.823,
+0.428
+],
+"b": [
+0.2471,
+0.309,
+0.2472,
+0.0449
+],
+"n": 1659,
+"mae_lern": 1.3
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.092,
+0.299,
+0.427,
+0.675,
+0.947,
+1.27,
+1.215,
+1.201,
+0.963,
+0.823,
+0.428
+],
+"b": [
+0.2471,
+0.309,
+0.2472,
+0.0449
+],
+"n": 1659,
+"mae_lern": 1.3
+}
+]
+},
+"Hood River (HOXO, Wasser)": {
+"tz": "America/Los_Angeles",
+"lat": 45.68444,
+"lon": -121.51806,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.232,
+0.189,
+0.176,
+0.453,
+0.314,
+0.298,
+0.32,
+0.087,
+0.426,
+0.096,
+0.223
+],
+"b": [
+0.5836,
+0.1542,
+-0.1279,
+0.412,
+-0.1049
+],
+"n": 638,
+"mae_lern": 1.42
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.398,
+1.613,
+1.599,
+1.668,
+1.613,
+1.381,
+1.382,
+1.193,
+1.587,
+1.134,
+1.099
+],
+"b": [
+0.9013,
+0.2255,
+-0.1393,
+-0.0946
+],
+"n": 638,
+"mae_lern": 1.6
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.398,
+1.613,
+1.599,
+1.668,
+1.613,
+1.381,
+1.382,
+1.193,
+1.587,
+1.134,
+1.099
+],
+"b": [
+0.9013,
+0.2255,
+-0.1393,
+-0.0946
+],
+"n": 638,
+"mae_lern": 1.6
+}
+]
+},
+"Miami": {
+"tz": "America/New_York",
+"lat": 25.788,
+"lon": -80.3169,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"gfs_hrrr",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.333,
+0.219,
+0.574,
+0.902,
+0.856,
+1.199,
+0.452,
+0.374,
+0.777,
+0.616,
+0.387
+],
+"b": [
+0.1036,
+0.1813,
+0.0593,
+0.8569,
+-0.0622
+],
+"n": 1678,
+"mae_lern": 1.58
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.624,
+0.826,
+1.27,
+1.66,
+1.573,
+2.377,
+1.675,
+1.318,
+1.799,
+1.53,
+0.731
+],
+"b": [
+0.454,
+0.5663,
+0.0947,
+0.061
+],
+"n": 1678,
+"mae_lern": 1.91
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global",
+"ncep_nbm_conus"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.624,
+0.826,
+1.27,
+1.66,
+1.573,
+2.377,
+1.675,
+1.318,
+1.799,
+1.53,
+0.731
+],
+"b": [
+0.454,
+0.5663,
+0.0947,
+0.061
+],
+"n": 1678,
+"mae_lern": 1.91
+}
+]
+},
+"Barbados": {
+"tz": "America/Barbados",
+"lat": 13.0746,
+"lon": -59.4925,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-4.119,
+-3.952,
+-4.194,
+-4.297,
+-4.091,
+-3.91,
+-3.934,
+-3.993,
+-3.721,
+-3.53,
+-3.045
+],
+"b": [
+0.6352,
+0.5253,
+0.4122
+],
+"n": 1675,
+"mae_lern": 1.79
+},
+{
+"satz": "mittel",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-4.119,
+-3.952,
+-4.194,
+-4.297,
+-4.091,
+-3.91,
+-3.934,
+-3.993,
+-3.721,
+-3.53,
+-3.045
+],
+"b": [
+0.6352,
+0.5253,
+0.4122
+],
+"n": 1675,
+"mae_lern": 1.79
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-4.119,
+-3.952,
+-4.194,
+-4.297,
+-4.091,
+-3.91,
+-3.934,
+-3.993,
+-3.721,
+-3.53,
+-3.045
+],
+"b": [
+0.6352,
+0.5253,
+0.4122
+],
+"n": 1675,
+"mae_lern": 1.79
+}
+]
+},
+"Barcelona (El Prat)": {
+"tz": "Europe/Madrid",
+"lat": 41.2928,
+"lon": 2.07,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.397,
+0.748,
+0.534,
+-0.025,
+-0.181,
+0.078,
+-0.362,
+-0.444,
+0.058,
+-0.355,
+-0.407
+],
+"b": [
+0.0536,
+-0.3619,
+0.9101,
+0.2061,
+0.0502,
+0.0413,
+0.2376,
+0.0243
+],
+"n": 1677,
+"mae_lern": 1.41
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+3.037,
+2.192,
+1.727,
+1.476,
+1.488,
+1.648,
+1.558,
+1.347,
+1.251,
+1.227,
+1.094
+],
+"b": [
+0.281,
+0.3205,
+0.3544,
+0.1546
+],
+"n": 1677,
+"mae_lern": 1.72
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+3.033,
+2.263,
+2.026,
+2.039,
+2.241,
+2.499,
+2.473,
+2.224,
+2.105,
+1.971,
+1.673
+],
+"b": [
+0.4247,
+0.3971,
+0.181
+],
+"n": 1677,
+"mae_lern": 1.73
+}
+]
+},
+"Mallorca Bucht von Palma": {
+"tz": "Europe/Madrid",
+"lat": 39.5608,
+"lon": 2.7367,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.501,
+0.781,
+1.121,
+1.512,
+1.8,
+1.585,
+1.711,
+1.727,
+1.632,
+1.5,
+1.095
+],
+"b": [
+0.0255,
+0.4885,
+0.1224,
+0.2379,
+0.0603,
+0.0529
+],
+"n": 1683,
+"mae_lern": 1.52
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.74,
+1.192,
+1.891,
+2.29,
+3.018,
+3.277,
+3.284,
+3.214,
+2.834,
+2.527,
+1.857
+],
+"b": [
+0.1319,
+0.4879,
+0.2212,
+0.1511
+],
+"n": 1683,
+"mae_lern": 1.84
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.76,
+1.226,
+1.944,
+2.335,
+3.018,
+3.25,
+3.268,
+3.214,
+2.844,
+2.54,
+1.859
+],
+"b": [
+0.5278,
+0.3073,
+0.1591
+],
+"n": 1683,
+"mae_lern": 1.84
+}
+]
+},
+"Solent (Southampton)": {
+"tz": "Europe/London",
+"lat": 50.955,
+"lon": -1.3561,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.34,
+0.004,
+0.089,
+0.256,
+0.443,
+0.154,
+0.13,
+0.243,
+0.149,
+-0.03,
+0.143
+],
+"b": [
+0.119,
+0.1433,
+0.1406,
+0.0468,
+0.1392,
+0.1073,
+0.3335,
+0.1896,
+-0.038,
+0.0064
+],
+"n": 1682,
+"mae_lern": 1.31
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+-0.197,
+0.049,
+0.202,
+0.38,
+0.619,
+0.386,
+0.482,
+0.653,
+0.578,
+0.521,
+0.624
+],
+"b": [
+0.4411,
+0.3392,
+0.1518,
+0.155
+],
+"n": 1682,
+"mae_lern": 1.41
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.023,
+0.356,
+0.536,
+0.77,
+1.032,
+0.881,
+0.988,
+1.068,
+0.995,
+0.928,
+0.992
+],
+"b": [
+0.4906,
+0.2564,
+0.253
+],
+"n": 1682,
+"mae_lern": 1.42
+}
+]
+},
+"Ammersee/Starnberger See (Oberpfaffenhofen)": {
+"tz": "Europe/Berlin",
+"lat": 48.0814,
+"lon": 11.2831,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.131,
+0.355,
+0.226,
+0.429,
+0.371,
+0.345,
+0.638,
+0.404,
+0.748,
+0.901,
+0.995
+],
+"b": [
+0.3029,
+0.2241,
+0.1696,
+0.0873,
+0.2019,
+0.0315,
+0.003,
+0.0034,
+0.0526,
+-0.0045,
+0.134,
+-0.0376
+],
+"n": 1682,
+"mae_lern": 1.28
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.473,
+0.646,
+0.456,
+0.706,
+0.651,
+0.542,
+0.896,
+0.709,
+1.037,
+1.233,
+1.429
+],
+"b": [
+0.453,
+0.3336,
+0.1001,
+0.2648,
+0.0146
+],
+"n": 1682,
+"mae_lern": 1.38
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.577,
+0.95,
+0.85,
+1.161,
+1.21,
+1.154,
+1.333,
+1.196,
+1.517,
+1.599,
+1.629
+],
+"b": [
+0.3315,
+0.5506,
+0.1864
+],
+"n": 1682,
+"mae_lern": 1.5
+}
+]
+},
+"Bodensee (Friedrichshafen)": {
+"tz": "Europe/Berlin",
+"lat": 47.6713,
+"lon": 9.5115,
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"monate": [
+5,
+6,
+7,
+8,
+9
+],
+"jahre": [
+2026
+],
+"saetze": [
+{
+"satz": "kurz",
+"modelle": [
+"icon_d2",
+"icon_eu",
+"meteoswiss_icon_ch1",
+"meteoswiss_icon_ch2",
+"meteofrance_arome_france_hd",
+"meteofrance_arome_france",
+"italia_meteo_arpae_icon_2i",
+"knmi_harmonie_arome_europe",
+"dmi_harmonie_arome_europe",
+"ukmo_uk_deterministic_2km",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+0.635,
+0.524,
+0.809,
+0.835,
+1.051,
+1.416,
+1.365,
+1.214,
+1.004,
+0.94,
+0.629
+],
+"b": [
+0.2006,
+-0.0097,
+0.0885,
+0.1143,
+0.2645,
+-0.0132,
+-0.0566,
+-0.0325,
+0.01,
+0.1909,
+0.1595,
+0.0679,
+-0.0754
+],
+"n": 1676,
+"mae_lern": 1.36
+},
+{
+"satz": "mittel",
+"modelle": [
+"icon_eu",
+"meteoswiss_icon_ch2",
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.103,
+0.912,
+1.231,
+1.331,
+1.55,
+1.786,
+1.794,
+1.553,
+1.144,
+1.142,
+0.867
+],
+"b": [
+0.1163,
+0.2861,
+0.2586,
+0.2047,
+-0.0137
+],
+"n": 1676,
+"mae_lern": 1.45
+},
+{
+"satz": "lang",
+"modelle": [
+"ecmwf_ifs",
+"ukmo_global_deterministic_10km",
+"gfs_global"
+],
+"stunden": [
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"a": [
+1.272,
+1.096,
+1.443,
+1.556,
+1.928,
+2.367,
+2.257,
+2.095,
+1.679,
+1.613,
+1.103
+],
+"b": [
+0.3583,
+0.3564,
+0.0655
+],
+"n": 1676,
+"mae_lern": 1.5
+}
+]
+}
+}
