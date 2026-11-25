@@ -15,6 +15,7 @@ Dieses Skript aktualisiert den Klon ~/tidal-sammler und vereinigt dann:
   quellen/water_levels/dmi_dkss/<zelle>.csv      je Stunde der kuerzeste Vorlauf (DMI DKSS, seit 19.11.2026)
   quellen/water_levels/imi_neatl/<zelle>.csv     je Stunde der juengste Abruf (IMI NEATL Suedwest-Irland, seit 21.11.2026)
   quellen/thermik/vorhersagen/<JJJJ>/<MM-TT>.json.gz  taegliche Windvorhersagen an den Revieren (Datei je Tag, seit 25.11.2026)
+  quellen/thermik/aemet/<JJJJ>/<MM-TT>.csv.gz      AEMET-Stundenwerte aller Stationen (Tagesdatei waechst 4x taeglich, seit 25.11.2026)
 Im Klon liegen die Daten ohne quellen/ (water_levels/..., tide_tables/...); vom 15. bis 19.11.2026 suchte das
 Skript dort faelschlich unter quellen/ und holte nichts.
 Lokal vorhandene Werte gehen nie verloren; es kommt nur hinzu.
@@ -178,6 +179,18 @@ def windvorhersagen():
     return neu
 
 
+def aemet():
+    import shutil
+    neu = 0
+    for q in glob.glob(os.path.join(KLON, 'aemet/*/*.csv.gz')):
+        p = os.path.join(ROOT, 'quellen/thermik/aemet', os.path.relpath(q, os.path.join(KLON, 'aemet')))
+        if not os.path.exists(p) or os.path.getsize(q) > os.path.getsize(p):     # Tagesdatei waechst nur
+            os.makedirs(os.path.dirname(p), exist_ok=True)
+            shutil.copy2(q, p)
+            neu += 1
+    return neu
+
+
 def main():
     print(f'--- {dt.datetime.now():%Y-%m-%d %H:%M}', flush=True)
     if not os.path.isdir(os.path.join(KLON, '.git')):
@@ -196,6 +209,7 @@ def main():
     print(f'  DKSS: +{dkss()} Stunden')
     print(f'  NEATL (SW-Irland): +{connemara("imi_neatl")} Stunden')
     print(f'  Windvorhersagen Reviere: +{windvorhersagen()} Tage')
+    print(f'  AEMET-Stundenwerte: {aemet()} Tagesdateien aktualisiert')
     return 0
 
 
