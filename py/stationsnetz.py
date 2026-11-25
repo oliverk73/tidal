@@ -27,7 +27,7 @@ AUS = os.path.join(ROOT, 'static', 'wind_stations', 'stationsnetz.json')
 UA = {'User-Agent': 'weather-tides/1.0'}
 URL_METAR = 'https://aviationweather.gov/data/cache/stations.cache.json.gz'
 URL_SYNOP = 'https://oscar.wmo.int/surface/rest/api/search/station?stationClass=synopLand'
-WDQMS = {'operational': 'o', 'partlyOperational': 'p', 'notOperational': 'n'}
+WDQMS = {'operational': 'o', 'partlyOperational': 'p', 'silent': 'n'}
 
 
 def laden():

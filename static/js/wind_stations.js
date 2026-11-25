@@ -196,7 +196,7 @@
   // Data: /static/wind_stations/stationsnetz.json (py/stationsnetz.py), rows [lat, lon, name, icao, wmo, elev_m, type, wdqms],
   // type 1 = METAR, 2 = SYNOP, 3 = both.
   var NET_COL = { 1: '#1f78b4', 2: '#2e8b3a', 3: '#7a3db8' };
-  var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed' };
+  var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {
     var lines = [];
     if (s[3]) lines.push('ICAO <b>' + esc(s[3]) + '</b> · <a href="https://aviationweather.gov/data/metar/?ids=' + encodeURIComponent(s[3]) +
@@ -244,8 +244,8 @@
         var n = { 1: 0, 2: 0, 3: 0 };
         d.stationen.forEach(function (s) {
           n[s[6]]++;
-          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', radius: s[6] === 2 ? 3 : 4, weight: 1, color: '#fff',
-            fillColor: NET_COL[s[6]], fillOpacity: s[6] === 2 && s[7] === 'n' ? 0.35 : 0.9 });
+          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', radius: s[6] === 2 ? 5 : 6, weight: 1.5, color: '#fff',
+            fillColor: s[6] === 2 && s[7] === 'n' ? '#9a9a9a' : NET_COL[s[6]], fillOpacity: 0.95 });
           m.bindTooltip(s[2] + (s[3] ? ' (' + s[3] + ')' : s[4] ? ' (' + s[4] + ')' : ''), { direction: 'top', offset: [0, -3] });
           m.bindPopup(function () { return netPopup(s); }, { maxWidth: 380 });
           if (s[3]) m.on('popupopen', function (e) { loadMetar(e.popup.getElement(), s[3]); });
@@ -258,7 +258,7 @@
             '<input type="checkbox" id="net-metar" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[1]) + 'Airports with METAR (' + (n[1] + n[3]) + ')</label>' +
           '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
             '<input type="checkbox" id="net-synop" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[2]) + 'WMO synoptic stations (' + (n[2] + n[3]) + ')</label>' +
-          '<div style="font-size:11px;color:#666;line-height:1.5;">' + dot(NET_COL[3]) + 'both (' + n[3] + '). Pale green = WMO receives no reports. ' +
+          '<div style="font-size:11px;color:#666;line-height:1.5;">' + dot(NET_COL[3]) + 'both (' + n[3] + ').' + dot('#9a9a9a') + 'WMO receives no reports. ' +
             'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + ').</div>';
         var cbM = document.getElementById('net-metar'), cbS = document.getElementById('net-synop');
         var get = function (k) { try { return localStorage.getItem(k) === '1'; } catch (e) { return false; } };
