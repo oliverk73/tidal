@@ -376,6 +376,128 @@
 ]
 },
 {
+"name": "Gardasee Nord (Torbole Belvedere)",
+"lat": 45.87009,
+"lon": 10.87735,
+"source": "Meteotrentino",
+"id": "T0193",
+"note": "Meteotrentino, am Spot, 90 m",
+"tz": "Europe/Rome",
+"link": "https://www.meteotrentino.it/",
+"mean_kn": 9.6,
+"hours12": 595,
+"n": 1680,
+"lag_h": 0,
+"best_match_mae": 4.59,
+"best_match_bias": -3.93,
+"best_model": "ICON-CH1 1",
+"best_model_mae": 3.18,
+"best_model_bias": -2.22,
+"corr_mae": 2.34,
+"corr_pod12": 0.72,
+"corr_far12": 0.16,
+"models": [
+{
+"m": "Mittel aller (13)",
+"bias": -5.12,
+"mae": 5.37,
+"r": 0.739,
+"corr_mae": 2.34
+},
+{
+"m": "ICON-CH1 1",
+"bias": -2.22,
+"mae": 3.18,
+"r": 0.764,
+"corr_mae": 2.42
+},
+{
+"m": "AROME-HD 1,3",
+"bias": -5.09,
+"mae": 5.34,
+"r": 0.689,
+"corr_mae": 2.82
+},
+{
+"m": "ICON-D2 2,2",
+"bias": -3.93,
+"mae": 4.59,
+"r": 0.662,
+"corr_mae": 2.84
+},
+{
+"m": "Open-Meteo best_match",
+"bias": -3.93,
+"mae": 4.59,
+"r": 0.662,
+"corr_mae": 2.84
+},
+{
+"m": "AROME 2,5",
+"bias": -5.34,
+"mae": 5.56,
+"r": 0.677,
+"corr_mae": 2.87
+},
+{
+"m": "ICON-CH2 2",
+"bias": -4.91,
+"mae": 5.23,
+"r": 0.673,
+"corr_mae": 2.89
+},
+{
+"m": "ICON-2I 2,2",
+"bias": -4.64,
+"mae": 5.28,
+"r": 0.577,
+"corr_mae": 3.17
+},
+{
+"m": "UKMO 10",
+"bias": -6.03,
+"mae": 6.36,
+"r": 0.517,
+"corr_mae": 3.28
+},
+{
+"m": "ICON-EU 7",
+"bias": -6.27,
+"mae": 6.54,
+"r": 0.509,
+"corr_mae": 3.34
+},
+{
+"m": "HARMONIE-DMI 2",
+"bias": -5.35,
+"mae": 5.84,
+"r": 0.492,
+"corr_mae": 3.38
+},
+{
+"m": "GFS 13",
+"bias": -5.25,
+"mae": 5.7,
+"r": 0.466,
+"corr_mae": 3.42
+},
+{
+"m": "ECMWF 9",
+"bias": -7.39,
+"mae": 7.48,
+"r": 0.424,
+"corr_mae": 3.48
+},
+{
+"m": "HARMONIE-KNMI 5,5",
+"bias": -6.24,
+"mae": 6.65,
+"r": 0.146,
+"corr_mae": 3.69
+}
+]
+},
+{
 "name": "Gardasee Nord (Limone)",
 "lat": 45.80683,
 "lon": 10.79006,

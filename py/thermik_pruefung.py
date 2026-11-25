@@ -12,6 +12,8 @@ Messquellen (quellen/thermik/):
   lombardia/<id>.json    ARPA Lombardia (dati.lombardia.it 647i-nhxk), 10-min-Werte (m/s, Zeit = MEZ ohne Sommerzeit)
   suedtirol/             Landeswetterdienst Suedtirol (geoservices.buergernetz.bz.it/services/meteo/v1), 10 min (m/s)
   geosphere/<id>.csv     GeoSphere Austria Data Hub klima-v2-10min (CC BY 4.0), ffam/dd, UTC - geosphere_laden.py
+  meteotrentino/         Meteotrentino-Archiv (storico.meteotrentino.it, Hydstra), 10 min, m/s, MEZ ohne Sommerzeit
+                         (geprueft: Strahlungsschwerpunkt + Kreuzkorrelation mit Limone) - meteotrentino_laden.py
   pioupiou/<id>.csv      Pioupiou/OpenWindMap-Archiv (km/h, ~5 min, UTC) - pioupiou_laden.py; Anemometer oft niedrig
   (Stationen am Spot ueber iwind.at/map gefunden; iWind selbst sperrt Abrufe, Daten daher bei der Originalquelle)
 
@@ -50,6 +52,7 @@ REVIERE = [
     ('Silvaplana/Sils (Segl-Maria)', 'Europe/Zurich', 'meteoschweiz', 'SIA', 46.432331, 9.762325, 'Malojawind'),
     ('Reschensee (St. Valentin)', 'Europe/Rome', 'suedtirol', '02200MS', 46.7759, 10.5289, 'Talwind Vinschgau'),
     ('Comer See Nord (Colico)', 'Europe/Rome', 'lombardia', '19109:6008', 46.13814, 9.38469, 'Breva'),
+    ('Gardasee Nord (Torbole Belvedere)', 'Europe/Rome', 'meteotrentino', 'T0193', 45.870095, 10.877355, 'Meteotrentino, am Spot, 90 m'),
     ('Gardasee Nord (Limone)', 'Europe/Rome', 'lombardia', '14065:14066', 45.80683, 10.79006, 'Ora/Peler'),
     ('Tarifa', 'Europe/Madrid', 'synop', '0-724-0-458', None, None, 'Levante/Poniente'),
     ('Talamone (Grosseto)', 'Europe/Rome', 'synop', '0-380-0-206', None, None, 'Station 20 km'),
@@ -243,6 +246,22 @@ def messung(r):
         t = pd.to_datetime(d['time'], utc=True)
         # Zeitstempel = Ende des 10-min-Intervalls (GeoSphere-Konvention) -> Mitte 5 min frueher
         return _vektor_stunde(t - pd.Timedelta(minutes=5), d['ffam'].values * MS_KN, d['dd'].values)
+    if quelle == 'meteotrentino':
+        def lies(var):
+            z = []
+            for l in open(os.path.join(Q, 'meteotrentino', '%s_%s.csv' % (kenn, var)), encoding='latin1'):
+                f = l.split(',')
+                if len(f) >= 2 and f[0].count(':') == 2 and '/' in f[0]:
+                    try:
+                        z.append((pd.to_datetime(f[0].strip(), format='%H:%M:%S %d/%m/%Y'), float(f[1])))
+                    except ValueError:
+                        pass
+            return pd.DataFrame(z, columns=['t', var]).drop_duplicates('t').set_index('t')[var]
+        j = pd.concat([lies('515').rename('sp'), lies('500').rename('ri')], axis=1).dropna()
+        j = j[(j['sp'] >= 0) & (j['sp'] < 60) & (j['ri'] >= 0) & (j['ri'] <= 360)]
+        # MEZ (UTC+1, ganzjaehrig) -> UTC; Stempel = Ende des 10-min-Intervalls -> Mitte 5 min frueher
+        t = (j.index - pd.Timedelta(hours=1, minutes=5)).tz_localize('UTC')
+        return _vektor_stunde(t, j['sp'].values * MS_KN, j['ri'].values)
     if quelle == 'pioupiou':
         d = _pioupiou(kenn).dropna(subset=['avg', 'heading'])
         d = d[(d['avg'] >= 0) & (d['avg'] < 200)]
@@ -375,7 +394,7 @@ def auswerten(r):
 
 QUELLE_TEXT = {'meteoschweiz': 'MeteoSwiss', 'suedtirol': 'Wetterdienst Südtirol', 'lombardia': 'ARPA Lombardia',
                'synop': 'SYNOP (WMO)', 'ogimet': 'SYNOP (WMO, OGIMET)', 'metar': 'METAR', 'ndbc': 'NOAA NDBC', 'mesowest': 'MesoWest',
-               'geosphere': 'GeoSphere Austria', 'pioupiou': 'Pioupiou / OpenWindMap'}
+               'geosphere': 'GeoSphere Austria', 'meteotrentino': 'Meteotrentino', 'pioupiou': 'Pioupiou / OpenWindMap'}
 
 
 def _quell_link(quelle, kenn):
@@ -387,6 +406,8 @@ def _quell_link(quelle, kenn):
         return 'https://mesowest.utah.edu/cgi-bin/droman/meso_base_dyn.cgi?stn=%s' % kenn
     if quelle == 'pioupiou':
         return 'https://www.openwindmap.org/PP%s' % kenn[2:]
+    if quelle == 'meteotrentino':
+        return 'https://www.meteotrentino.it/'
     if quelle == 'geosphere':
         return 'https://data.hub.geosphere.at/dataset/klima-v2-10min'
     if quelle == 'meteoschweiz':
