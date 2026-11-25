@@ -189,6 +189,93 @@
       map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 10), { duration: 1.2 });
       map.once('moveend', function () { m.openPopup(); });
     });
+    buildNet(map, body);
+  }
+
+  // ---- Official station network: METAR airports (NOAA AWC) + WMO synoptic stations (OSCAR/Surface), Oliver 25.11.2026.
+  // Data: /static/wind_stations/stationsnetz.json (py/stationsnetz.py), rows [lat, lon, name, icao, wmo, elev_m, type, wdqms],
+  // type 1 = METAR, 2 = SYNOP, 3 = both.
+  var NET_COL = { 1: '#1f78b4', 2: '#2e8b3a', 3: '#7a3db8' };
+  var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed' };
+  function netPopup(s) {
+    var lines = [];
+    if (s[3]) lines.push('ICAO <b>' + esc(s[3]) + '</b> · <a href="https://aviationweather.gov/data/metar/?ids=' + encodeURIComponent(s[3]) +
+      '&hours=24" target="_blank" rel="noopener">METAR history (NOAA AWC)</a>');
+    if (s[4]) lines.push('WMO <b>' + esc(s[4]) + '</b> · <a href="https://oscar.wmo.int/surface/#/search/station/stationReportDetails/0-20000-0-' +
+      encodeURIComponent(s[4]) + '" target="_blank" rel="noopener">WMO OSCAR</a>' + (s[7] ? ' · SYNOP ' + esc(WDQMS_TXT[s[7]] || '') : ''));
+    var typ = s[6] === 3 ? 'Airport with METAR + synoptic station' : s[6] === 1 ? 'Airport with METAR' : 'Synoptic station (WMO)';
+    return '<div style="font-family:sans-serif;font-size:12.5px;min-width:240px;max-width:360px;">' +
+      '<div style="font-weight:bold;font-size:14px;">' + esc(s[2]) + '</div>' +
+      '<div style="color:#555;margin-bottom:3px;">' + typ + (s[5] != null && s[5] !== 9999 ? ' · ' + esc(s[5]) + ' m' : '') + '</div>' +
+      lines.map(function (l) { return '<div>' + l + '</div>'; }).join('') +
+      '<div style="color:#777;font-size:11.5px;margin-top:2px;">' + s[0].toFixed(4) + ', ' + s[1].toFixed(4) + '</div>' +
+      (s[3] ? '<div class="net-metar" style="margin-top:6px;color:#777;font-size:11.5px;">Loading METAR…</div>' : '') + '</div>';
+  }
+  function loadMetar(popupEl, icao) {
+    var el = popupEl && popupEl.querySelector('.net-metar');
+    if (!el) return;
+    fetch('/api/metar?id=' + encodeURIComponent(icao))
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || r.status); return j; }); })
+      .then(function (j) {
+        var m = j.metars || [];
+        if (!m.length) { el.textContent = 'No METAR in the last 6 hours.'; return; }
+        var w = m[0], wind = '';
+        if (w.wspd != null) wind = (w.wdir === 'VRB' ? 'variable' : (w.wdir != null ? w.wdir + '°' : '')) + ' ' + w.wspd + ' kn' + (w.wgst ? ', gusts ' + w.wgst + ' kn' : '');
+        el.style.color = '#222';
+        el.innerHTML = (wind ? '<div>Latest wind: <b>' + esc(wind) + '</b></div>' : '') +
+          '<div style="font-family:monospace;font-size:11px;white-space:pre-wrap;margin-top:3px;">' +
+          m.slice(0, 6).map(function (x) { return esc(x.rawOb); }).join('\n') + '</div>' +
+          '<div style="color:#777;font-size:10.5px;margin-top:2px;">Source: NOAA Aviation Weather Center</div>';
+      })
+      .catch(function (e) { el.textContent = 'METAR could not be loaded: ' + e.message; });
+  }
+  function buildNet(map, body) {
+    var box = document.createElement('div');
+    box.style.cssText = 'margin-top:8px;padding-top:6px;border-top:1px solid #ccc;max-width:290px;';
+    box.innerHTML = '<div style="font-size:11.5px;color:#666;">Loading official stations…</div>';
+    body.appendChild(box);
+    fetch('/static/wind_stations/stationsnetz.json', { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        var renderer = L.canvas({ padding: 0.3 });
+        var layers = { metar: L.layerGroup(), synop: L.layerGroup(), both: L.layerGroup() };
+        var n = { 1: 0, 2: 0, 3: 0 };
+        d.stationen.forEach(function (s) {
+          n[s[6]]++;
+          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, radius: s[6] === 2 ? 3 : 4, weight: 1, color: '#fff',
+            fillColor: NET_COL[s[6]], fillOpacity: s[6] === 2 && s[7] === 'n' ? 0.35 : 0.9 });
+          m.bindTooltip(s[2] + (s[3] ? ' (' + s[3] + ')' : s[4] ? ' (' + s[4] + ')' : ''), { direction: 'top', offset: [0, -3] });
+          m.bindPopup(function () { return netPopup(s); }, { maxWidth: 380 });
+          if (s[3]) m.on('popupopen', function (e) { loadMetar(e.popup.getElement(), s[3]); });
+          m.addTo(s[6] === 1 ? layers.metar : s[6] === 2 ? layers.synop : layers.both);
+        });
+        var dot = function (c) { return '<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:' + c + ';margin:0 5px 0 2px;"></span>'; };
+        box.innerHTML =
+          '<div style="font-weight:bold;font-size:12.5px;margin-bottom:2px;">Official stations</div>' +
+          '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
+            '<input type="checkbox" id="net-metar" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[1]) + 'Airports with METAR (' + (n[1] + n[3]) + ')</label>' +
+          '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
+            '<input type="checkbox" id="net-synop" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[2]) + 'WMO synoptic stations (' + (n[2] + n[3]) + ')</label>' +
+          '<div style="font-size:11px;color:#666;line-height:1.5;">' + dot(NET_COL[3]) + 'both (' + n[3] + '). Pale green = WMO receives no reports. ' +
+            'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + ').</div>';
+        var cbM = document.getElementById('net-metar'), cbS = document.getElementById('net-synop');
+        var get = function (k) { try { return localStorage.getItem(k) === '1'; } catch (e) { return false; } };
+        cbM.checked = get('netMetarOn'); cbS.checked = get('netSynopOn');
+        var update = function () {
+          var show = { metar: cbM.checked, synop: cbS.checked, both: cbM.checked || cbS.checked };
+          Object.keys(layers).forEach(function (k) {
+            if (show[k] && !map.hasLayer(layers[k])) layers[k].addTo(map);
+            if (!show[k] && map.hasLayer(layers[k])) map.removeLayer(layers[k]);
+          });
+          try { localStorage.setItem('netMetarOn', cbM.checked ? '1' : '0'); localStorage.setItem('netSynopOn', cbS.checked ? '1' : '0'); } catch (e) { /* ignore */ }
+        };
+        cbM.addEventListener('change', update); cbS.addEventListener('change', update);
+        update();
+      })
+      .catch(function (e) {
+        box.innerHTML = '<span style="color:#a00;font-size:12px;">Official stations could not be loaded.</span>';
+        console.error('station network:', e);
+      });
   }
 
   function start() {

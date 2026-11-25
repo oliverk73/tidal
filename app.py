@@ -2441,6 +2441,33 @@ def api_wind_spot_forecast():
     return jsonify(v)
 
 
+_METAR_CACHE = {}
+
+
+@app.route("/api/metar")
+def api_metar():
+    """Aktuelle METARs eines Flughafens (NOAA Aviation Weather Center, frei; 25.11.2026): id=<ICAO>, letzte 6 h.
+    Fuer die Popups der METAR-Ebene (static/js/wind_stations.js); 5 min Zwischenspeicher."""
+    import requests as _rq
+    icao = request.args.get("id", "").strip().upper()
+    if not re.fullmatch(r"[A-Z0-9]{3,5}", icao):
+        return jsonify({"error": "bad id"}), 400
+    jetzt = datetime.utcnow()
+    c = _METAR_CACHE.get(icao)
+    if c and (jetzt - c[0]).total_seconds() < 300:
+        return jsonify(c[1])
+    try:
+        r = _rq.get("https://aviationweather.gov/api/data/metar", params={"ids": icao, "format": "json", "hours": 6},
+                    headers={"User-Agent": "weather-tides/1.0"}, timeout=20)
+        js = r.json() if r.status_code == 200 and r.content else []
+    except Exception as e:                                       # noqa: BLE001
+        return jsonify({"error": "aviationweather.gov: %s" % str(e)[:200]}), 502
+    erg = {"id": icao, "metars": [{k: m.get(k) for k in ("reportTime", "rawOb", "wdir", "wspd", "wgst", "temp", "altim")}
+                                  for m in js]}
+    _METAR_CACHE[icao] = (jetzt, erg)
+    return jsonify(erg)
+
+
 @app.route("/api/route_boats")
 def api_route_boats():
     """Boote (ORC-Polaren) fuer den Routenplaner (py/segel_polare.py, 20.11.2026)."""
