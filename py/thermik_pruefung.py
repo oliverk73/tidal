@@ -173,7 +173,8 @@ def _metar(icao):
     return d
 
 
-CSV_NETZE = {'meteofrance': 'mf', 'dwd': 'dwd', 'knmi': 'knmi', 'dmi': 'dmi', 'coops': 'coops'}
+CSV_NETZE = {'meteofrance': 'mf', 'dwd': 'dwd', 'knmi': 'knmi', 'dmi': 'dmi', 'coops': 'coops',
+             'smhi': 'smhi', 'rws': 'rws:', 'meteireann': 'mi', 'dwd_synop': 'dwds'}          # 25.11.2026: py/netze_laden.py
 
 
 def _csv_id(quelle, kenn):
@@ -484,7 +485,8 @@ def auswerten(r):
 QUELLE_TEXT = {'meteoschweiz': 'MeteoSwiss', 'suedtirol': 'Wetterdienst Südtirol', 'lombardia': 'ARPA Lombardia',
                'synop': 'SYNOP (WMO)', 'ogimet': 'SYNOP (WMO, OGIMET)', 'metar': 'METAR', 'ndbc': 'NOAA NDBC', 'mesowest': 'MesoWest',
                'geosphere': 'GeoSphere Austria', 'meteotrentino': 'Meteotrentino',
-               'meteofrance': 'Météo-France', 'dwd': 'DWD', 'knmi': 'KNMI', 'dmi': 'DMI', 'coops': 'NOAA CO-OPS', 'pioupiou': 'Pioupiou / OpenWindMap'}
+               'meteofrance': 'Météo-France', 'dwd': 'DWD', 'knmi': 'KNMI', 'dmi': 'DMI', 'coops': 'NOAA CO-OPS', 'pioupiou': 'Pioupiou / OpenWindMap',
+               'smhi': 'SMHI', 'rws': 'Rijkswaterstaat', 'meteireann': 'Met Éireann', 'dwd_synop': 'DWD (SYNOP)'}
 
 
 def _quell_link(quelle, kenn):
@@ -512,6 +514,14 @@ def _quell_link(quelle, kenn):
         return 'https://data.hub.geosphere.at/dataset/klima-v2-10min'
     if quelle == 'meteoschweiz':
         return 'https://www.meteoswiss.admin.ch/services-and-publications/applications/measurement-values-and-measuring-networks.html'
+    if quelle == 'dwd_synop':
+        return 'https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/wind_synop/'
+    if quelle == 'smhi':
+        return 'https://www.smhi.se/data/meteorologi/ladda-ner-meteorologiska-observationer#param=wind,stations=core,stationid=%s' % kenn[4:]
+    if quelle == 'rws':
+        return 'https://waterinfo.rws.nl/'
+    if quelle == 'meteireann':
+        return 'https://www.met.ie/climate/available-data/historical-data'
     return ''
 
 
