@@ -195,9 +195,34 @@
   // ---- Official station network: METAR airports (NOAA AWC) + WMO synoptic stations (OSCAR/Surface), Oliver 25.11.2026.
   // Data: /static/wind_stations/stationsnetz.json (py/stationsnetz.py), rows [lat, lon, name, icao, wmo, elev_m, type, wdqms],
   // type 1 = METAR, 2 = SYNOP, 3 = both.
-  var NET_COL = { 1: '#1f78b4', 2: '#2e8b3a', 3: '#7a3db8' };
+  var NET_COL = { 1: '#1f78b4', 2: '#2e8b3a', 3: '#7a3db8', 4: '#e07b00' };
+  // national networks with an open archive (type 4): name + where the data come from
+  var NAT = {
+    dwd: ['DWD, 10-min wind', 'https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/10_minutes/wind/'],
+    dwd_synop: ['DWD, hourly wind (SYNOP)', 'https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/wind_synop/'],
+    meteofrance: ['Météo-France, hourly', 'https://meteo.data.gouv.fr/'],
+    knmi: ['KNMI, hourly', 'https://www.knmi.nl/nederland-nu/klimatologie/uurgegevens'],
+    dmi: ['DMI, 10-min', 'https://opendatadocs.dmi.govcloud.dk/'],
+    coops: ['NOAA CO-OPS (tide gauge met sensor)', 'https://tidesandcurrents.noaa.gov/stationhome.html?id={id}'],
+    geosphere: ['GeoSphere Austria, 10-min', 'https://data.hub.geosphere.at/dataset/klima-v2-10min'],
+    meteoschweiz: ['MeteoSwiss SwissMetNet, 10-min', 'https://www.meteoswiss.admin.ch/services-and-publications/applications/measurement-values-and-measuring-networks.html'],
+    smhi: ['SMHI, hourly', 'https://www.smhi.se/data/meteorologi/ladda-ner-meteorologiska-observationer'],
+    rws: ['Rijkswaterstaat, 10-min', 'https://waterinfo.rws.nl/'],
+    pioupiou: ['Pioupiou / OpenWindMap', 'https://www.openwindmap.org/PP{id}'],
+    meteireann: ['Met Éireann, hourly', 'https://www.met.ie/climate/available-data/historical-data']
+  };
   var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {
+    if (s[6] === 4) {
+      var nn = NAT[s[8]] || [s[8], ''];
+      var url = nn[1].replace('{id}', encodeURIComponent(s[9]));
+      return '<div style="font-family:sans-serif;font-size:12.5px;min-width:220px;max-width:340px;">' +
+        '<div style="font-weight:bold;font-size:14px;">' + esc(s[2]) + '</div>' +
+        '<div style="color:#555;margin-bottom:3px;">' + esc(nn[0]) + (s[5] != null ? ' · ' + esc(s[5]) + ' m' : '') + '</div>' +
+        '<div>ID <b>' + esc(s[9]) + '</b>' + (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">data source</a>' : '') + '</div>' +
+        '<div style="color:#777;font-size:11.5px;margin-top:2px;">' + s[0].toFixed(4) + ', ' + s[1].toFixed(4) + '</div>' +
+        '<div style="color:#777;font-size:11px;margin-top:3px;">Open archive of wind measurements, usable to check the forecast models.</div></div>';
+    }
     var lines = [];
     if (s[3]) lines.push('ICAO <b>' + esc(s[3]) + '</b> · <a href="https://aviationweather.gov/data/metar/?ids=' + encodeURIComponent(s[3]) +
       '&hours=24" target="_blank" rel="noopener">METAR history (NOAA AWC)</a>');
@@ -246,16 +271,16 @@
           map.getPane('netPane').style.pointerEvents = 'none';
         }
         var renderer = L.canvas({ padding: 0.3, pane: 'netPane' });
-        var layers = { metar: L.layerGroup(), synop: L.layerGroup(), both: L.layerGroup() };
-        var n = { 1: 0, 2: 0, 3: 0 };
+        var layers = { metar: L.layerGroup(), synop: L.layerGroup(), both: L.layerGroup(), nat: L.layerGroup() };
+        var n = { 1: 0, 2: 0, 3: 0, 4: 0 };
         d.stationen.forEach(function (s) {
           n[s[6]]++;
-          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', interactive: false, radius: s[6] === 2 ? 5 : 6,
+          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', interactive: false, radius: s[6] === 1 || s[6] === 3 ? 6 : 5,
             weight: 1.5, color: '#fff', fillColor: s[6] === 2 && s[7] === 'n' ? '#9a9a9a' : NET_COL[s[6]], fillOpacity: 0.95 });
-          m.addTo(s[6] === 1 ? layers.metar : s[6] === 2 ? layers.synop : layers.both);
+          m.addTo(s[6] === 1 ? layers.metar : s[6] === 2 ? layers.synop : s[6] === 4 ? layers.nat : layers.both);
         });
         // nearest visible station within 8 px of a map point (clicks on tide/current markers never reach the map)
-        var shown = function (s) { return s[6] === 1 ? map.hasLayer(layers.metar) : s[6] === 2 ? map.hasLayer(layers.synop) : map.hasLayer(layers.both); };
+        var shown = function (s) { return map.hasLayer(s[6] === 1 ? layers.metar : s[6] === 2 ? layers.synop : s[6] === 4 ? layers.nat : layers.both); };
         var pick = function (pt) {
           var best = null, bd = 64, b = map.getBounds().pad(0.05);
           for (var i = 0; i < d.stationen.length; i++) {
@@ -266,7 +291,7 @@
           }
           return best;
         };
-        var anyShown = function () { return map.hasLayer(layers.metar) || map.hasLayer(layers.synop) || map.hasLayer(layers.both); };
+        var anyShown = function () { return Object.keys(layers).some(function (k) { return map.hasLayer(layers[k]); }); };
         map.on('click', function (e) {
           if (!anyShown()) return;
           var s = pick(e.containerPoint);
@@ -284,7 +309,8 @@
           tipFor = s;
           map.getContainer().style.cursor = s ? 'pointer' : '';
           if (!s) { map.closeTooltip(tip); return; }
-          tip.setLatLng([s[0], s[1]]).setContent(esc(s[2]) + (s[3] ? ' (' + esc(s[3]) + ')' : s[4] ? ' (' + esc(s[4]) + ')' : ''));
+          tip.setLatLng([s[0], s[1]]).setContent(esc(s[2]) + (s[3] ? ' (' + esc(s[3]) + ')' : s[4] ? ' (' + esc(s[4]) + ')' :
+            s[6] === 4 ? ' (' + esc((NAT[s[8]] || [s[8]])[0].split(',')[0]) + ')' : ''));
           map.openTooltip(tip);
         });
         var dot = function (c) { return '<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:' + c + ';margin:0 5px 0 2px;"></span>'; };
@@ -294,20 +320,23 @@
             '<input type="checkbox" id="net-metar" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[1]) + 'Airports with METAR (' + (n[1] + n[3]) + ')</label>' +
           '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
             '<input type="checkbox" id="net-synop" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[2]) + 'WMO synoptic stations (' + (n[2] + n[3]) + ')</label>' +
+          '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
+            '<input type="checkbox" id="net-nat" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[4]) + 'National networks, open archive (' + n[4] + ')</label>' +
           '<div style="font-size:11px;color:#666;line-height:1.5;">' + dot(NET_COL[3]) + 'both (' + n[3] + ').' + dot('#9a9a9a') + 'WMO receives no reports. ' +
-            'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + ').</div>';
-        var cbM = document.getElementById('net-metar'), cbS = document.getElementById('net-synop');
+            'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + '); national: DWD, Météo-France, KNMI, DMI, ' +
+            'GeoSphere, MeteoSwiss, SMHI, Rijkswaterstaat, NOAA CO-OPS, Pioupiou.</div>';
+        var cbM = document.getElementById('net-metar'), cbS = document.getElementById('net-synop'), cbN = document.getElementById('net-nat');
         var get = function (k) { try { return localStorage.getItem(k) === '1'; } catch (e) { return false; } };
-        cbM.checked = get('netMetarOn'); cbS.checked = get('netSynopOn');
+        cbM.checked = get('netMetarOn'); cbS.checked = get('netSynopOn'); cbN.checked = get('netNatOn');
         var update = function () {
-          var show = { metar: cbM.checked, synop: cbS.checked, both: cbM.checked || cbS.checked };
+          var show = { metar: cbM.checked, synop: cbS.checked, both: cbM.checked || cbS.checked, nat: cbN.checked };
           Object.keys(layers).forEach(function (k) {
             if (show[k] && !map.hasLayer(layers[k])) layers[k].addTo(map);
             if (!show[k] && map.hasLayer(layers[k])) map.removeLayer(layers[k]);
           });
-          try { localStorage.setItem('netMetarOn', cbM.checked ? '1' : '0'); localStorage.setItem('netSynopOn', cbS.checked ? '1' : '0'); } catch (e) { /* ignore */ }
+          try { localStorage.setItem('netMetarOn', cbM.checked ? '1' : '0'); localStorage.setItem('netSynopOn', cbS.checked ? '1' : '0'); localStorage.setItem('netNatOn', cbN.checked ? '1' : '0'); } catch (e) { /* ignore */ }
         };
-        cbM.addEventListener('change', update); cbS.addEventListener('change', update);
+        cbM.addEventListener('change', update); cbS.addEventListener('change', update); cbN.addEventListener('change', update);
         update();
       })
       .catch(function (e) {

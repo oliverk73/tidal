@@ -19,6 +19,7 @@ Stationskataloge in quellen/thermik/spotsuche/stationen_<netz>.csv (netz,id,name
     venv/bin/python py/spotsuche.py [max_km=3]
       -> harmonics/help/spotsuche_treffer.csv  (je OSM-Spot die naechste Station je Netz <= max_km)
 """
+import glob
 import json
 import math
 import os
@@ -76,10 +77,11 @@ def kataloge():
                            if (s.get('location') or {}).get('latitude') is not None
                            and ((s.get('measurements') or {}).get('date') or '') >= '2026-10'],
                           columns=['netz', 'id', 'name', 'lat', 'lon', 'alt']))
-    for extra in ('stationen_weitere.csv',):                      # von Hand/anderen Skripten ergaenzt
-        p = os.path.join(S, extra)
-        if os.path.exists(p):
-            k.append(pd.read_csv(p, dtype={'id': str}))
+    # weitere Netze als fertige Kataloge stationen_<netz>.csv (smhi, rws, meteireann, ...; 25.11.2026)
+    for p in sorted(glob.glob(os.path.join(S, 'stationen_*.csv'))):
+        if os.path.basename(p) in ('stationen_alle.csv', 'stationen_meteofrance.csv'):
+            continue
+        k.append(pd.read_csv(p, dtype={'id': str}))
     return pd.concat(k, ignore_index=True)
 
 

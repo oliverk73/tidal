@@ -139,12 +139,29 @@ def main(argv):
     n_ort = ortsabgleich(stationen)
     print('per Position verbunden:', n_ort)
     liste = sorted(stationen.values(), key=lambda s: (s[0], s[1]))
+    # Nationale Netze mit freiem Archiv (Kataloge der Spotsuche, py/spotsuche.py -> stationen_alle.csv), Typ 4:
+    # [lat, lon, name, '', '', hoehe, 4, '', netz, id]  (z.B. DWD-Sturmwarnnetz Darsser Ort)
+    kat = os.path.join(ROOT, 'quellen', 'thermik', 'spotsuche', 'stationen_alle.csv')
+    n_nat = 0
+    if os.path.exists(kat):
+        import csv
+        for z in csv.DictReader(open(kat, encoding='utf-8')):
+            try:
+                la, lo = float(z['lat']), float(z['lon'])
+            except (TypeError, ValueError):
+                continue
+            alt = round(float(z['alt'])) if z.get('alt') not in (None, '', 'nan') else None
+            liste.append([round(la, 4), round(lo, 4), ' '.join((z['name'] or z['id']).split()), '', '', alt, 4, '',
+                          z['netz'], z['id']])
+            n_nat += 1
+    print('nationale Netze:', n_nat)
     for s in liste:
         if isinstance(s[5], float):
             s[5] = round(s[5])
     aus = dict(stand=__import__('datetime').date.today().isoformat(),
-               quellen=['NOAA Aviation Weather Center (METAR sites)', 'WMO OSCAR/Surface (synoptic land stations)'],
-               spalten=['lat', 'lon', 'name', 'icao', 'wmo', 'elev_m', 'type', 'wdqms'],
+               quellen=['NOAA Aviation Weather Center (METAR sites)', 'WMO OSCAR/Surface (synoptic land stations)',
+                       'national networks with open archive (py/spotsuche.py)'],
+               spalten=['lat', 'lon', 'name', 'icao', 'wmo', 'elev_m', 'type', 'wdqms', 'netz', 'id'],
                stationen=liste)
     with open(AUS, 'w', encoding='utf-8') as f:
         json.dump(aus, f, ensure_ascii=False, separators=(',', ':'))
