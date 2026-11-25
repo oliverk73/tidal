@@ -15,10 +15,14 @@ Spalten je Station: [lat, lon, name, icao, wmo, hoehe_m, art, wdqms]
   art: 1 = METAR, 2 = SYNOP, 3 = beides;  wdqms: WMO-Bewertung, ob Meldungen tatsaechlich ankommen (o/p/n/u)
 """
 import gzip
+import math
+import re
+import unicodedata
 import json
 import os
 import sys
 
+import numpy as np
 import requests
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,6 +47,57 @@ def titel(s):
     """OSCAR-Namen stehen meist in Grossbuchstaben."""
     s = ' '.join((s or '').split())
     return s.title() if s.isupper() else s
+
+
+ALLGEMEIN = {'airport', 'arpt', 'intl', 'international', 'aeropuerto', 'aeroporto', 'aeroport', 'aerodrome', 'airfield',
+             'flughafen', 'flugplatz', 'field', 'base', 'municipal', 'regional', 'county', 'station', 'city', 'mil',
+             'heliport', 'lufthavn', 'flygplats', 'lotnisko', 'letiste', 'havaalani', 'north', 'south', 'east', 'west'}
+
+
+def woerter(name):
+    t = unicodedata.normalize('NFKD', name.lower())
+    t = ''.join(c for c in t if not unicodedata.combining(c))
+    return {w for w in re.split(r'[^a-z]+', t) if len(w) >= 4 and w not in ALLGEMEIN}
+
+
+def ortsabgleich(stationen):
+    """Flughaefen ohne WMO-Nummer beim AWC (z.B. EDHK) mit der SYNOP-Station am selben Platz verbinden:
+    <= 2 km, oder <= 5 km mit gemeinsamem Namenswort; je METAR hoechstens eine SYNOP-Station (die naechste)."""
+    alle = [s for k, s in stationen.items() if k[0] == 'm']            # alle METAR-Plaetze, auch schon verbundene
+    metar = [(k, s) for k, s in stationen.items() if k[0] == 'm' and not s[4]]
+    synop = [(k, s) for k, s in stationen.items() if k[0] == 's']
+    if not metar or not synop:
+        return 0
+    mla = np.radians([s[0] for _, s in metar])
+    mlo = np.radians([s[1] for _, s in metar])
+    ala = np.radians([s[0] for s in alle])
+    alo = np.radians([s[1] for s in alle])
+
+    def km(la, lo, la2, lo2):
+        return 12742 * np.arcsin(np.sqrt(np.sin((la2 - la) / 2) ** 2 + math.cos(la) * np.cos(la2) * np.sin((lo2 - lo) / 2) ** 2))
+    paare = []
+    for k, s in synop:
+        la, lo = math.radians(s[0]), math.radians(s[1])
+        d = km(la, lo, mla, mlo)
+        naechster = float(km(la, lo, ala, alo).min())          # naechster METAR-Platz ueberhaupt
+        for i in np.where(d <= 5)[0]:
+            if d[i] > 1 and d[i] > naechster + 1e-6:          # ab 1 km nur der naechste Flughafen
+                continue
+            mname = metar[i][1][2]
+            platz = mname.split('/', 1)[1] if '/' in mname else mname      # "San Diego/Montgomery": Platzname zaehlt
+            if d[i] <= 2 or woerter(s[2]) & woerter(platz):
+                paare.append((float(d[i]), k, i))
+    vergeben_m, vergeben_s, n = set(), set(), 0
+    for d, k, i in sorted(paare):
+        if i in vergeben_m or k in vergeben_s:
+            continue
+        vergeben_m.add(i)
+        vergeben_s.add(k)
+        m = metar[i][1]
+        syn = stationen.pop(k)
+        m[4], m[6], m[7] = syn[4], 3, syn[7]
+        n += 1
+    return n
 
 
 def main(argv):
@@ -81,6 +136,8 @@ def main(argv):
             continue
         stationen[('s', wmo)] = [round(x['latitude'], 4), round(x['longitude'], 4), titel(x['name']), '', wmo,
                                  x.get('elevation'), 2, bew]
+    n_ort = ortsabgleich(stationen)
+    print('per Position verbunden:', n_ort)
     liste = sorted(stationen.values(), key=lambda s: (s[0], s[1]))
     for s in liste:
         if isinstance(s[5], float):
