@@ -295,6 +295,40 @@ def positionsdubletten(stationen, bel):
     return weg
 
 
+# Pruefgruppe (Stationen der Spot-Korrektur, static/wind_stations/wind_stations.json): Quelle -> Netz-Familie
+PRUEF_NETZ = {'DWD': ['dwd', 'dwd_synop', 'dwd_poi'], 'Météo-France': ['meteofrance'], 'METAR': ['M'], 'KNMI': ['knmi'],
+              'NOAA CO-OPS': ['coops'], 'SYNOP (WMO)': ['S'], 'SYNOP (WMO, OGIMET)': ['S'], 'DMI': ['dmi'],
+              'NOAA NDBC': ['ndbc', 'coops'], 'ARPA Lombardia': ['lombardia'], 'MeteoSwiss': ['meteoschweiz'],
+              'Pioupiou / OpenWindMap': ['pioupiou'], 'GeoSphere Austria': ['geosphere'], 'Wetterdienst Südtirol': ['suedtirol'],
+              'Meteotrentino': ['meteotrentino']}
+
+
+def pruefgruppe(liste):
+    """Jede Pruefstation ihrem Kartenpunkt zuordnen (Oliver 26.11.2026: keine eigenen Marker, Pruefgruppe am Netzpunkt
+    kenntlich): gleiche Netz-Familie <= 3 km, sonst irgendein Netz <= 1,5 km (Tarifa -> AEMET); MesoWest nur exakt
+    (Hood River HOXO waere sonst der 1,7 km entfernte Platz 4S2). Rest als eigene Zeilen (Netz 'pruef')."""
+    p = os.path.join(ROOT, 'static', 'wind_stations', 'wind_stations.json')
+    if not os.path.exists(p):
+        return []
+    sp = json.load(open(p, encoding='utf-8'))['stations']
+    zu = []
+    for x in sp:
+        fam = PRUEF_NETZ.get(x['source'], [])
+        best = None
+        for i, r in enumerate(liste):
+            passt = (r[6] == 4 and r[8] in fam) or ('M' in fam and r[6] in (1, 3)) or ('S' in fam and r[6] in (2, 3))
+            k = km_grob((x['lat'], x['lon']), (r[0], r[1]))
+            grenze = 3.0 if passt else (1.5 if fam else 0)
+            if k <= grenze and (best is None or (not best[2] and passt) or (best[2] == passt and k < best[0])):
+                best = (k, i, passt)
+        if best is None:
+            liste.append([round(x['lat'], 4), round(x['lon'], 4), x['name'], '', '', None, 4, '', 'pruef', x['name']])
+            best = (0, len(liste) - 1, True)
+        zu.append([best[1], x['name']])
+    print('Pruefgruppe: %d Stationen, %d ohne Netzpunkt' % (len(zu), sum(1 for r in liste if r[6] == 4 and r[8] == 'pruef')))
+    return zu
+
+
 def main(argv):
     if '--laden' in argv or not os.path.exists(os.path.join(Q, 'oscar_synop.json')):
         laden()
@@ -401,11 +435,12 @@ def main(argv):
         s[2] = namen_putzen(s[2]) or s[2]
         if isinstance(s[5], float):
             s[5] = round(s[5])
+    pruef = pruefgruppe(liste)
     aus = dict(stand=__import__('datetime').date.today().isoformat(),
                quellen=['NOAA Aviation Weather Center (METAR sites)', 'WMO OSCAR/Surface (synoptic land stations)',
                        'national networks with open archive (py/spotsuche.py)'],
                spalten=['lat', 'lon', 'name', 'icao', 'wmo', 'elev_m', 'type', 'wdqms', 'netz', 'id'],
-               poi=poi_wmo, stationen=liste)
+               poi=poi_wmo, pruef=pruef, stationen=liste)
     with open(AUS, 'w', encoding='utf-8') as f:
         json.dump(aus, f, ensure_ascii=False, separators=(',', ':'))
     art = [s[6] for s in liste]

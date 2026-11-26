@@ -2464,6 +2464,14 @@ def api_metar():
         return jsonify({"error": "aviationweather.gov: %s" % str(e)[:200]}), 502
     erg = {"id": icao, "metars": [{k: m.get(k) for k in ("reportTime", "rawOb", "wdir", "wspd", "wgst", "temp", "altim")}
                                   for m in js]}
+    # TAF des Flughafens (gleicher Dienst; nicht jeder METAR-Platz hat einen TAF), Oliver 26.11.2026
+    try:
+        t = _rq.get("https://aviationweather.gov/api/data/taf", params={"ids": icao, "format": "json"},
+                    headers={"User-Agent": "weather-tides/1.0"}, timeout=20)
+        tj = t.json() if t.status_code == 200 and t.content else []
+        erg["tafs"] = [{k: x.get(k) for k in ("issueTime", "validTimeFrom", "validTimeTo", "rawTAF")} for x in tj[:1]]
+    except Exception:                                            # noqa: BLE001
+        erg["tafs"] = []
     _METAR_CACHE[icao] = (jetzt, erg)
     return jsonify(erg)
 

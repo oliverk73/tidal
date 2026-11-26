@@ -8,27 +8,6 @@
   // entries {name, detail, keys, kind, badge, lat, lon, show()}.
   var WS = window.weatherSearch = window.weatherSearch || { list: [] };
 
-  var REGIONS = [
-    ['Alps & lakes', function (s) { return /Zurich|Vienna/.test(s.tz) || /See|Lago|Garda|Comer|Silvaplana|Reschen|Bodensee|Chiemsee|Müritz|Iseosee|Achensee/.test(s.spot || s.name); }],
-    ['Europe', function (s) { return s.tz.indexOf('Europe/') === 0; }],
-    ['Atlantic & Africa', function (s) { return /^(Atlantic|Africa|Indian)\//.test(s.tz); }],
-    ['Americas', function (s) { return s.tz.indexOf('America/') === 0; }],
-    ['Australia', function (s) { return s.tz.indexOf('Australia/') === 0; }],
-    ['Other', function () { return true; }]
-  ];
-
-  // Colour = mean error of our per-spot correction (kn): how well the wind can be forecast there.
-  var CLASSES = [
-    [1.5, '#1a9850', '< 1.5 kn'],
-    [2.0, '#91cf60', '1.5–2 kn'],
-    [2.5, '#fdae61', '2–2.5 kn'],
-    [99,  '#d73027', '> 2.5 kn']
-  ];
-  function colour(mae) {
-    for (var i = 0; i < CLASSES.length; i++) if (mae < CLASSES[i][0]) return CLASSES[i][1];
-    return CLASSES[CLASSES.length - 1][1];
-  }
-
   function esc(t) {
     return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
@@ -39,16 +18,8 @@
     return (sign && v > 0 ? '+' : '') + v.toFixed(1) + ' kn';
   }
 
-  function icon(s) {
-    var c = colour(s.corr_mae);
-    var svg = '<svg width="20" height="20" viewBox="0 0 20 20">' +
-      '<rect x="4" y="4" width="12" height="12" transform="rotate(45 10 10)" fill="' + c + '" stroke="#fff" stroke-width="1.8"/>' +
-      '<path d="M6.5 8.5h5.5a1.6 1.6 0 1 0-1.6-1.6M6.5 11.5h7a1.6 1.6 0 1 1-1.6 1.6" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>' +
-      '</svg>';
-    return L.divIcon({ className: 'wind-station-icon', html: svg, iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, -9] });
-  }
-
-  function popup(s, meta) {
+  // forecast-check section of a station that belongs to the check group of the AI-enhanced (spot-corrected) forecast
+  function popup(s, meta, teil) {
     var src = s.link
       ? '<a href="' + esc(s.link) + '" target="_blank" rel="noopener">' + esc(s.source) + ' ' + esc(s.id) + '</a>'
       : esc(s.source) + ' ' + esc(s.id);
@@ -63,11 +34,13 @@
         '</td><td style="text-align:right;padding:0 6px;">' + (isNaN(m.r) ? '' : m.r.toFixed(2)) +
         '</td><td style="text-align:right;padding:0 0 0 6px;">' + m.corr_mae.toFixed(2) + '</td></tr>';
     }).join('');
-    return '<div style="font-family:sans-serif;font-size:12.5px;min-width:260px;max-width:340px;">' +
-      '<div style="font-weight:bold;font-size:14px;margin-bottom:2px;">' + esc(s.name) + '</div>' +
+    return '<div style="font-family:sans-serif;font-size:12.5px;min-width:260px;max-width:340px;' +
+        (teil ? 'border-top:1px solid #ccc;margin-top:7px;padding-top:6px;' : '') + '">' +
+      (teil ? '<div style="font-weight:bold;margin-bottom:2px;">◎ Check station of the AI-enhanced forecast</div>'
+            : '<div style="font-weight:bold;font-size:14px;margin-bottom:2px;">' + esc(s.name) + '</div>') +
       (s.spot ? '<div style="margin-bottom:2px;">Spot: <b>' + esc(s.spot) + '</b></div>' : '') +
-      '<div style="color:#555;">' + src + (s.note ? ' · ' + esc(s.note) : '') + '</div>' +
-      '<div style="color:#777;font-size:11.5px;margin-bottom:6px;">' + s.lat.toFixed(4) + ', ' + s.lon.toFixed(4) + '</div>' +
+      (teil ? '' : '<div style="color:#555;">' + src + (s.note ? ' · ' + esc(s.note) : '') + '</div>' +
+      '<div style="color:#777;font-size:11.5px;margin-bottom:6px;">' + s.lat.toFixed(4) + ', ' + s.lon.toFixed(4) + '</div>') +
       '<div style="margin-bottom:4px;">Measured ' + esc(meta.period) + ', ' + esc(meta.hours) + ': mean <b>' + kn(s.mean_kn) +
         '</b>, ' + s.hours12 + ' h ≥ 12 kn</div>' +
       '<table style="border-collapse:collapse;font-size:12.5px;">' +
@@ -142,71 +115,26 @@
     var el = document.getElementById('wind-stations-count');
     if (el) el.textContent = '(' + (WS_COUNT.spots + WS_COUNT.net).toLocaleString('en-US') + ')';
   }
+  // Check group (stations of the per-spot correction, py/thermik_pruefung.py): no own markers or dropdown any more
+  // (Oliver 26.11.2026); they are marked at their network point (dark ring) and add the forecast check to its popup.
+  var SPOT = { byName: {}, meta: {} };
   function build(map, data) {
     var body = document.getElementById('wind-stations-body');
-    var count = document.getElementById('wind-stations-count');
-    var stations = data.stations || [];
-    WS_COUNT.spots = stations.length;
-    showCount();
-
-    var layer = L.layerGroup();
-    var byName = {};
-    stations.forEach(function (s) {
-      var m = L.marker([s.lat, s.lon], { icon: icon(s), title: s.name, riseOnHover: true, zIndexOffset: 500 });
-      m.bindPopup(popup(s, data), { maxWidth: 380 });
-      m.on('popupopen', function (e) { loadForecast(e.popup.getElement(), s.name); });
-      m.addTo(layer);
-      byName[s.name] = m;
-    });
-
-    var groups = REGIONS.map(function (r) { return { label: r[0], test: r[1], items: [] }; });
-    stations.forEach(function (s) {
-      for (var i = 0; i < groups.length; i++) if (groups[i].test(s)) { groups[i].items.push(s); break; }
-    });
-    groups.forEach(function (g) { g.items.sort(function (a, b) { return (a.spot || a.name).localeCompare(b.spot || b.name); }); });
-    var options = '<option value="">Choose a station…</option>' + groups.filter(function (g) { return g.items.length; }).map(function (g) {
-      return '<optgroup label="' + esc(g.label) + '">' + g.items.map(function (s) {
-        return '<option value="' + esc(s.name) + '">' + esc(s.spot ? s.spot + ' (' + s.name + ')' : s.name) + ' – ' + s.corr_mae.toFixed(1) + ' kn</option>';
-      }).join('') + '</optgroup>';
-    }).join('');
-
-    var legend = CLASSES.map(function (c) {
-      return '<span style="white-space:nowrap;margin-right:8px;"><span style="display:inline-block;width:9px;height:9px;background:' + c[1] +
-        ';transform:rotate(45deg);margin-right:4px;border:1px solid #fff;"></span>' + c[2] + '</span>';
-    }).join(' ');
-
-    body.innerHTML =
-      '<label style="display:flex;align-items:center;cursor:pointer;font-weight:bold;min-height:30px;">' +
-        '<input type="checkbox" id="wst-toggle" style="margin-right:6px;width:18px;height:18px;">Show on map</label>' +
-      '<select id="wst-select" style="width:100%;max-width:290px;margin:4px 0 6px;padding:4px;font-size:13px;border-radius:4px;border:1px solid #bbb;background:rgba(255,255,255,0.85);">' +
-        options + '</select>' +
-      '<div style="font-size:11.5px;color:#444;max-width:290px;line-height:1.5;">Colour = forecast error after spot correction:<br>' + legend + '</div>' +
-      '<div style="font-size:11px;color:#666;max-width:290px;margin-top:4px;">Stations used to check the wind models at surf and sailing spots (' +
-        esc(data.period) + ', ' + esc(data.hours) + ').</div>';
-
-    var cb = document.getElementById('wst-toggle');
-    var on = localStorage.getItem('windStationsOn');
-    cb.checked = (on === null) ? true : on === '1';
-    if (cb.checked) layer.addTo(map);
-    cb.addEventListener('change', function () {
-      if (this.checked) layer.addTo(map); else map.removeLayer(layer);
-      localStorage.setItem('windStationsOn', this.checked ? '1' : '0');
-    });
-
-    var showSpot = function (name) {
-      var m = byName[name];
-      if (!m) return;
-      if (!map.hasLayer(layer)) { cb.checked = true; layer.addTo(map); localStorage.setItem('windStationsOn', '1'); }
-      map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 10), { duration: 1.2 });
-      map.once('moveend', function () { m.openPopup(); });
-    };
-    document.getElementById('wst-select').addEventListener('change', function () { showSpot(this.value); });
-    stations.forEach(function (s) {
-      WS.list.push({ name: s.name, detail: (s.spot ? 'Spot: ' + s.spot + ' · ' : '') + s.source + ' ' + s.id,
-        keys: [s.name, s.spot || '', s.id || ''].join(' '), kind: 'spot', badge: 'Wind spot', lat: s.lat, lon: s.lon,
-        show: function () { showSpot(s.name); } });
-    });
+    (data.stations || []).forEach(function (s) { SPOT.byName[s.name] = s; });
+    SPOT.meta = data;
+    body.innerHTML = '';
     buildNet(map, body);
+  }
+  function fullPopup(s) {
+    var sp = s._pruef && SPOT.byName[s._pruef];
+    return netPopup(s) + (sp ? popup(sp, SPOT.meta, true) : '');
+  }
+  function afterOpen(p, s) {
+    var el = p.getElement();
+    if (s[3]) loadMetar(el, s[3]);
+    if (s[6] === 4 && s[8] !== 'pruef') loadNatLive(el, s);
+    else if (!s[3] && POI[s[4]]) loadNatLive(el, [0, 0, '', '', '', 0, 4, '', 'dwd_poi', s[4]]);
+    if (s._pruef) loadForecast(el, s._pruef);
   }
 
   // ---- Official station network: METAR airports (NOAA AWC) + WMO synoptic stations (OSCAR/Surface), Oliver 25.11.2026.
@@ -248,6 +176,7 @@
     midas: ['UK Met Office (MIDAS Open archive, no live data)', 'https://data.ceda.ac.uk/badc/ukmo-midas-open/data/uk-mean-wind-obs/dataset-version-202607/{path}',
       'Archive updated yearly (Open Government Licence); current wind: nearby METAR/SYNOP stations'],
     dwd_strasse: ['DWD road weather station (roadside, wind usually reduced)', 'https://opendata.dwd.de/weather/weather_reports/road_weather_stations/'],
+    pruef: ['Check station (network without open access)', ''],
     dwd_poi: ['DWD, current hourly report', 'https://opendata.dwd.de/weather/weather_reports/poi/'],
     arpav: ['ARPA Veneto', 'https://www.arpa.veneto.it/dati-ambientali/dati-in-diretta/meteo-idro-nivo/variabili_meteo'],
     arpal: ['ARPAL Liguria (OMIRL)', 'https://omirl.regione.liguria.it/'],
@@ -288,7 +217,7 @@
     ispra_rmn: 'ISPRA tide gauges, Italy', snpa_mare: 'SNPA tide gauges, Italy', venezia: 'Venice lagoon, Comune di Venezia',
     arpav: 'ARPA Veneto', arpal: 'ARPAL Liguria', arpae: 'ARPAE Emilia-Romagna', lombardia: 'ARPA Lombardia',
     suedtirol: 'South Tyrol, Landeswetterdienst', meteotrentino: 'Meteotrentino', coops: 'NOAA CO-OPS, USA', ndbc: 'NOAA NDBC buoys',
-    pioupiou: 'Pioupiou / OpenWindMap', meteireann: 'Met Éireann, Ireland' };
+    pioupiou: 'Pioupiou / OpenWindMap', pruef: 'Other check stations', meteireann: 'Met Éireann, Ireland' };
   function natLabel(k) { return NAT_LABEL[k] || (NAT[k] || [k])[0].split(',')[0].split(' (')[0]; }
   var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {
@@ -318,7 +247,7 @@
       '<div style="color:#555;margin-bottom:3px;">' + typ + (s[5] != null && s[5] !== 9999 ? ' · ' + esc(s[5]) + ' m' : '') + '</div>' +
       lines.map(function (l) { return '<div>' + l + '</div>'; }).join('') +
       '<div style="color:#777;font-size:11.5px;margin-top:2px;">' + s[0].toFixed(4) + ', ' + s[1].toFixed(4) + '</div>' +
-      (s[3] ? '<div class="net-metar" style="margin-top:6px;color:#777;font-size:11.5px;">Loading METAR…</div>' :
+      (s[3] ? '<div class="net-metar" style="margin-top:6px;color:#777;font-size:11.5px;">Loading METAR and TAF…</div>' :
         POI[s[4]] ? '<div class="nat-live" style="margin-top:6px;color:#777;font-size:11.5px;">Loading current wind (DWD)…</div>' : '') + '</div>';
   }
   function loadMetar(popupEl, icao) {
@@ -335,6 +264,11 @@
         el.innerHTML = (wind ? '<div>Latest wind: <b>' + esc(wind) + '</b></div>' : '') +
           '<div style="font-family:monospace;font-size:11px;white-space:pre-wrap;margin-top:3px;">' +
           m.slice(0, 6).map(function (x) { return esc(x.rawOb); }).join('\n') + '</div>' +
+          (j.tafs && j.tafs.length ? '<div style="margin-top:5px;">Forecast (TAF), issued ' +
+            esc(new Date(j.tafs[0].issueTime).toLocaleString([], { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })) + ':</div>' +
+            '<div style="font-family:monospace;font-size:11px;white-space:pre-wrap;margin-top:2px;">' +
+            esc(j.tafs[0].rawTAF).replace(/ (TEMPO|BECMG|PROB\d\d|FM\d{6})/g, '\n  $1') + '</div>'
+            : '<div style="color:#777;font-size:11px;margin-top:4px;">No TAF for this airport.</div>') +
           '<div style="color:#777;font-size:10.5px;margin-top:2px;">Source: NOAA Aviation Weather Center</div>';
       })
       .catch(function (e) { el.textContent = 'METAR could not be loaded: ' + e.message; });
@@ -356,6 +290,7 @@
           map.getPane('netPane').style.pointerEvents = 'none';
         }
         (d.poi || []).forEach(function (w) { POI[w] = 1; });
+        (d.pruef || []).forEach(function (z) { if (d.stationen[z[0]]) d.stationen[z[0]]._pruef = z[1]; });
         var renderer = L.canvas({ padding: 0.3, pane: 'netPane' });
         // one layer per source, like the tide-station sources: METAR, SYNOP (stations with both are shown when either is
         // ticked) and one per national/regional network, each with its own colour (Oliver 26.11.2026)
@@ -370,8 +305,9 @@
         var lay = function (s) { return s[6] === 1 ? 'metar' : s[6] === 2 ? 'synop' : s[6] === 3 ? 'both' : 'nat:' + s[8]; };
         d.stationen.forEach(function (s) {
           if (s[6] === 4) nn[s[8]] = (nn[s[8]] || 0) + 1; else n[s[6]]++;
-          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', interactive: false, radius: s[6] === 1 || s[6] === 3 ? 6 : 5,
-            weight: 1.5, color: '#fff', fillColor: s[6] === 2 && s[7] === 'n' ? '#9a9a9a' : s[6] === 4 ? natCol[s[8]] : NET_COL[s[6]], fillOpacity: 0.95 });
+          var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', interactive: false,
+            radius: (s[6] === 1 || s[6] === 3 ? 6 : 5) + (s._pruef ? 2 : 0),
+            weight: s._pruef ? 3 : 1.5, color: s._pruef ? '#111' : '#fff', fillColor: s[6] === 2 && s[7] === 'n' ? '#9a9a9a' : s[6] === 4 ? natCol[s[8]] : NET_COL[s[6]], fillOpacity: 0.95 });
           m.addTo(layers[lay(s)]);
         });
         // nearest visible station within 8 px of a map point (clicks on tide/current markers never reach the map)
@@ -391,10 +327,8 @@
           if (!anyShown()) return;
           var s = pick(e.containerPoint);
           if (!s) return;
-          var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(netPopup(s)).openOn(map);
-          if (s[3]) loadMetar(p.getElement(), s[3]);
-          if (s[6] === 4) loadNatLive(p.getElement(), s);
-          else if (!s[3] && POI[s[4]]) loadNatLive(p.getElement(), [0, 0, '', '', '', 0, 4, '', 'dwd_poi', s[4]]);
+          var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(fullPopup(s)).openOn(map);
+          afterOpen(p, s);
         });
         var tip = L.tooltip({ direction: 'top', offset: [0, -6] }), tipFor = null, last = 0;
         map.on('mousemove', function (e) {
@@ -430,6 +364,8 @@
           rows.slice(2).map(row).join('') +
           '<div style="font-size:11px;color:#666;line-height:1.5;margin-top:4px;">' + dot(NET_COL[3]) + 'METAR + SYNOP (' + n[3] + ').' + dot('#9a9a9a') +
             'WMO receives no reports. <span style="color:#2a7;">●live</span> = current wind on click. ' +
+            '<span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:2.5px solid #111;vertical-align:middle;margin:0 4px 0 2px;"></span>' +
+            'dark ring = check station of the AI-enhanced forecast (' + (d.pruef || []).length + '). ' +
             'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + ') and the networks listed.</div>';
         WS_COUNT.net = total;
         showCount();
@@ -467,17 +403,17 @@
           map.closePopup();
           map.flyTo([s[0], s[1]], Math.max(map.getZoom(), 11), { duration: 1.2 });
           map.once('moveend', function () {
-            var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(netPopup(s)).openOn(map);
-            if (s[3]) loadMetar(p.getElement(), s[3]);
-          if (s[6] === 4) loadNatLive(p.getElement(), s);
-          else if (!s[3] && POI[s[4]]) loadNatLive(p.getElement(), [0, 0, '', '', '', 0, 4, '', 'dwd_poi', s[4]]);
+            var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(fullPopup(s)).openOn(map);
+            afterOpen(p, s);
           });
         };
         d.stationen.forEach(function (s) {
           var badge = s[6] === 1 ? 'METAR' : s[6] === 2 ? 'SYNOP' : s[6] === 3 ? 'METAR+SYNOP' :
             (NAT[s[8]] || [s[8]])[0].split(',')[0];
           var ids = s[6] === 4 ? s[9] : [s[3], s[4]].filter(Boolean).join(' · ');
-          WS.list.push({ name: s[2], detail: ids ? (s[6] === 4 ? 'ID ' : '') + ids : '', keys: [s[2], s[3], s[4], s[9] || ''].join(' '),
+          var sp = s._pruef && SPOT.byName[s._pruef];
+          WS.list.push({ name: s[2], detail: (sp && sp.spot ? 'Check station · ' + sp.spot + ' · ' : '') + (ids ? (s[6] === 4 ? 'ID ' : '') + ids : ''),
+            keys: [s[2], s[3], s[4], s[9] || '', sp ? sp.spot + ' ' + sp.name : ''].join(' '),
             kind: s[6] === 4 ? 'nat' : 'net', badge: badge, lat: s[0], lon: s[1], show: function () { openNet(s); } });
         });
       })
