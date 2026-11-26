@@ -323,7 +323,45 @@ def pioupiou(i):
                 richtung=_f(m.get('wind_heading')))
 
 
-NETZE = dict(pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+_RMN = {'sitzung': None, 'zeit': 0}
+import threading
+_RMN_LOCK = threading.Lock()
+
+
+def ispra_rmn(i):
+    """mareografico.it hat keine Datenschnittstelle: die Stationsseite (Station steht im Cookie MG<PHPSESSID>)
+    nennt den letzten Messwert. Sitzung 20 min wiederverwendet -> ein Seitenabruf je Klick."""
+    import html as _h
+    with _RMN_LOCK:
+        if not _RMN['sitzung'] or time.time() - _RMN['zeit'] > 1200:
+            se = requests.Session()
+            se.headers.update(UA)
+            se.cookies.set('A4IxScreenSize', '1920@1080@1@it', domain='www.mareografico.it')
+            se.get('https://www.mareografico.it/', timeout=30).raise_for_status()
+            _RMN.update(sitzung=se, zeit=time.time())
+        se = _RMN['sitzung']
+        sid = se.cookies.get('PHPSESSID', domain='www.mareografico.it') or se.cookies.get('PHPSESSID')
+        se.cookies.set('MG' + sid, 'STAZ][1][%s][0][][][][][][1][1' % int(i), domain='www.mareografico.it', path='/')
+        r = se.get('https://www.mareografico.it/it/stazioni.html', timeout=30)
+        r.raise_for_status()
+    t = re.sub(r'\s+', ' ', _h.unescape(re.sub(r'<[^>]+>', ' ', r.text)))
+    titel = re.search(r'STAZIONE DI\s+([A-Z][A-Z \'.-]+?) (?:DATI|RETE|STAZIONE|SELEZIONA)', t)
+    stazione = titel.group(1).strip() if titel else ''
+    z = re.search(r'ULTIMO RILEVAMENTO (\d\d/\d\d/\d{4} \d\d:\d\d)', t)
+    v = re.search(r'VELOCIT. VENTO ([\d.]+) m/s', t)
+    d = re.search(r'DIREZIONE VENTO ([\d.]+)', t)
+    namen = _ganz('rmn_namen', lambda: {z_['id']: z_['name'].upper() for z_ in csv.DictReader(open(os.path.join(
+        ROOT, 'quellen', 'thermik', 'spotsuche', 'stationen_ispra_rmn.csv'), encoding='utf-8'))}, 1e9)
+    if namen.get(str(i)) and not stazione.startswith(namen[str(i)]):
+        _RMN['sitzung'] = None                                   # Seite zeigt eine andere Station: nichts ausgeben
+        return dict(fehler='site returned another station (%s)' % stazione[:40])
+    if not z or not v:
+        return dict(fehler='no current wind reading')
+    return dict(zeit=_lokal(z.group(1), '%d/%m/%Y %H:%M', 0), kn=_f(v.group(1), MS), boe_kn=None,
+                richtung=_f(d.group(1)) if d else None)
+
+
+NETZE = dict(ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 

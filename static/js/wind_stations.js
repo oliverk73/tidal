@@ -240,11 +240,12 @@
     lombardia: ['ARPA Lombardia, 10-min', 'https://www.arpalombardia.it/temi-ambientali/meteo-e-clima/form-richiesta-dati/'],
     suedtirol: ['Landeswetterdienst Südtirol, 10-min', 'https://wetter.provinz.bz.it/'],
     frost: ['MET Norway (Frost)', 'https://seklima.met.no/'],
+    ispra_rmn: ['ISPRA Rete Mareografica Nazionale (tide gauge with weather sensors)', 'https://www.mareografico.it/'],
     meteotrentino: ['Meteotrentino (all weather stations, wind not at every one)', 'https://www.meteotrentino.it/#!/content?menuItemDesktop=111']
   };
   // networks whose current reading the popup fetches on click, one station at a time (/api/station_live, py/station_live.py)
   var NAT_LIVE = { pioupiou: 1, ndbc: 1, coops: 1, fmi: 1, imgw: 1, lhmt: 1, ee: 1, meteocat: 1, lombardia: 1, suedtirol: 1,
-    meteotrentino: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
+    meteotrentino: 1, ispra_rmn: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
   function loadNatLive(popupEl, s) {
     var el = popupEl && popupEl.querySelector('.nat-live');
     if (!el) return;

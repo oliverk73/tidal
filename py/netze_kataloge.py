@@ -20,6 +20,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   lombardia   ARPA Lombardia Sensoren "Velocita Vento", aktiv (lokal: quellen/thermik/lomb_sensori.json)
   suedtirol   Landeswetterdienst Suedtirol, Stationen mit Sensor WG
   frost       MET Norway Frost API (Client-ID ~/.config/frost_client_id), Quellen mit laufender wind_speed-Reihe
+  ispra_rmn   ISPRA Rete Mareografica Nazionale, aus dem Kartenskript von mareografico.it
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -214,9 +215,26 @@ def frost():
     schreiben('frost', z)
 
 
+def ispra_rmn():
+    """ISPRA Rete Mareografica Nazionale (41 Pegel mit Wetterstation). Keine Liste als Datei: die Startseite von
+    mareografico.it traegt die Karte als Skript (La/Lo/Nw-Felder + Popups mit SetS(<id>)); Nw = 1 ist die RMN.
+    Die Seite verlangt erst ein Cookie mit der Bildschirmgroesse. Zitierwunsch: DOI 10.83182/ispra-rmn."""
+    r = requests.get('https://www.mareografico.it/', headers=UA, timeout=120, cookies={'A4IxScreenSize': '1920@1080@1@it'})
+    r.raise_for_status()
+    s = r.text
+    open(os.path.join(ROH, 'mareografico_home.html'), 'w', encoding='utf-8').write(s)
+    feld = lambda n: json.loads(re.search(r'var %s=(\[[^\]]*\]);' % n, s).group(1).replace("'", '"'))
+    la, lo, nw = feld('La'), feld('Lo'), feld('Nw')
+    pop = {int(i): (stz, sid) for i, stz, sid in re.findall(
+        r"St\[(\d+)\]\.bindPopup\(\"<div class='infohome'><p class='popup-network'>RETE MAREOGRAFICA NAZIONALE</p>"
+        r"<p class='popup-station'>([^<]*)</p>.*?SetS\((\d+)\)", s)}
+    z = [(pop[i][1], pop[i][0].title(), la[i], lo[i], None) for i in range(1, len(la)) if nw[i] == 1 and i in pop]
+    schreiben('ispra_rmn', z)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
-             frost=frost)
+             frost=frost, ispra_rmn=ispra_rmn)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):
