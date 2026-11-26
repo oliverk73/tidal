@@ -199,6 +199,7 @@
         keys: [s.name, s.spot || '', s.id || ''].join(' '), kind: 'spot', badge: 'Wind spot', lat: s.lat, lon: s.lon,
         show: function () { showSpot(s.name); } });
     });
+    buildPioupiou(map, body);
     buildNet(map, body);
   }
 
@@ -370,6 +371,149 @@
         box.innerHTML = '<span style="color:#a00;font-size:12px;">Official stations could not be loaded.</span>';
         console.error('station network:', e);
       });
+  }
+
+  // ---- Pioupiou / OpenWindMap live sensors (Oliver 26.11.2026). /api/pioupiou_live (app.py, km/h -> kn, 2 min cache),
+  // rows [id, name, lat, lon, time_utc, heading_from_deg, avg_kn, min_kn, max_kn, on]; popup loads 24 h via /api/pioupiou_history.
+  var PP_SCALE = [[5, '#8fbcd9'], [10, '#3fa34d'], [15, '#d9c21a'], [20, '#ee7d14'], [25, '#d7301f'], [1e9, '#8e2a9c']];
+  var PP_STALE_MIN = 60;      // older measurements: grey dot; older than a day: not shown
+  function ppColour(v) {
+    for (var i = 0; i < PP_SCALE.length; i++) if (v < PP_SCALE[i][0]) return PP_SCALE[i][1];
+    return PP_SCALE[PP_SCALE.length - 1][1];
+  }
+  function ppAgeMin(s) { return s[4] ? (Date.now() - Date.parse(s[4])) / 60000 : Infinity; }
+  function ppCompass(d) {
+    return ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'][Math.round(d / 22.5) % 16];
+  }
+  function ppAgeText(min) {
+    if (!isFinite(min)) return 'no measurement';
+    if (min < 1) return 'just now';
+    if (min < 90) return Math.round(min) + ' min ago';
+    if (min < 48 * 60) return Math.round(min / 60) + ' h ago';
+    return Math.round(min / 1440) + ' days ago';
+  }
+  function ppIcon(s) {
+    var age = ppAgeMin(s);
+    if (age > PP_STALE_MIN || s[6] == null || s[5] == null) {
+      return L.divIcon({ className: '', iconSize: [10, 10], iconAnchor: [5, 5],
+        html: '<div style="width:8px;height:8px;border-radius:50%;background:#a5a5a5;border:1px solid #fff;"></div>' });
+    }
+    // heading = direction the wind comes FROM; the arrow points where it blows to
+    var c = ppColour(s[6]), rot = (s[5] + 180) % 360;
+    return L.divIcon({ className: '', iconSize: [26, 26], iconAnchor: [13, 13],
+      html: '<svg width="26" height="26" viewBox="-13 -13 26 26" style="overflow:visible;display:block;">' +
+        '<g transform="rotate(' + rot + ')"><path d="M0,-11 L6,3 L1.6,1.2 L1.6,10 L-1.6,10 L-1.6,1.2 L-6,3 Z" fill="' + c +
+        '" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/></g></svg>' });
+  }
+  function ppPopup(s) {
+    var age = ppAgeMin(s), stale = age > PP_STALE_MIN;
+    var wind = s[6] == null ? 'no wind reading' :
+      '<span style="font-size:18px;font-weight:bold;color:' + (stale ? '#888' : ppColour(s[6])) + ';">' + s[6].toFixed(0) + ' kn</span>' +
+      ' &nbsp;gusts ' + (s[8] != null ? s[8].toFixed(0) : '–') + ', min ' + (s[7] != null ? s[7].toFixed(0) : '–') + ' kn' +
+      (s[5] != null ? '<br>from ' + ppCompass(s[5]) + ' (' + Math.round(s[5]) + '°)' : '');
+    return '<div style="font-family:sans-serif;font-size:12.5px;min-width:250px;max-width:340px;">' +
+      '<div style="font-weight:bold;font-size:14px;">' + esc(s[1]) + '</div>' +
+      '<div style="color:#555;margin-bottom:4px;">Pioupiou ' + esc(s[0]) + ' · ' + ppAgeText(age) + (s[9] ? '' : ' · sensor off') + '</div>' +
+      '<div>' + wind + '</div>' +
+      '<div class="pp-hist" style="margin-top:6px;color:#777;font-size:11.5px;">Loading last 24 h…</div>' +
+      '<div style="margin-top:4px;font-size:11px;color:#777;"><a href="https://www.openwindmap.org/PP' + encodeURIComponent(s[0]) +
+        '" target="_blank" rel="noopener">OpenWindMap</a> · © contributors of the OpenWindMap wind network. ' +
+        'Low-cost sensors, often read 2–5 kn low.</div></div>';
+  }
+  function ppHistory(popupEl, id) {
+    var el = popupEl && popupEl.querySelector('.pp-hist');
+    if (!el) return;
+    fetch('/api/pioupiou_history?id=' + encodeURIComponent(id))
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || r.status); return j; }); })
+      .then(function (j) {
+        var d = (j.daten || []).filter(function (z) { return z[2] != null; });
+        if (d.length < 2) { el.textContent = 'No measurements in the last 24 h.'; return; }
+        var W = 300, H = 90, L0 = 22, B = 14, t1 = Date.now(), t0 = t1 - 864e5;
+        var top = Math.max(10, Math.ceil(Math.max.apply(null, d.map(function (z) { return z[3] || z[2]; })) / 5) * 5);
+        var x = function (t) { return L0 + (Date.parse(t) - t0) / 864e5 * (W - L0 - 2); };
+        var y = function (v) { return H - B - v / top * (H - B - 4); };
+        var band = d.map(function (z) { return x(z[0]).toFixed(1) + ',' + y(z[3] != null ? z[3] : z[2]).toFixed(1); }).concat(
+          d.slice().reverse().map(function (z) { return x(z[0]).toFixed(1) + ',' + y(z[1] != null ? z[1] : z[2]).toFixed(1); }));
+        var line = d.map(function (z) { return x(z[0]).toFixed(1) + ',' + y(z[2]).toFixed(1); }).join(' ');
+        var grid = '';
+        for (var v = 0; v <= top; v += top > 30 ? 10 : 5) {
+          grid += '<line x1="' + L0 + '" x2="' + W + '" y1="' + y(v) + '" y2="' + y(v) + '" stroke="#e4e4e4"/>' +
+            '<text x="' + (L0 - 3) + '" y="' + (y(v) + 3) + '" text-anchor="end" font-size="9" fill="#888">' + v + '</text>';
+        }
+        // local-time hour marks every 6 h
+        var hrs = '', d0 = new Date(t0); d0.setMinutes(0, 0, 0);
+        for (var t = d0.getTime() + 3600e3; t < t1; t += 3600e3) {
+          var h = new Date(t).getHours();
+          if (h % 6) continue;
+          var xx = L0 + (t - t0) / 864e5 * (W - L0 - 2);
+          hrs += '<line x1="' + xx + '" x2="' + xx + '" y1="4" y2="' + (H - B) + '" stroke="#eee"/>' +
+            '<text x="' + xx + '" y="' + (H - 3) + '" text-anchor="middle" font-size="9" fill="#888">' + (h < 10 ? '0' : '') + h + ':00</text>';
+        }
+        el.innerHTML = '<div style="color:#555;margin-bottom:2px;">Last 24 h, kn (line = mean, band = min–gust, local time)</div>' +
+          '<svg width="' + W + '" height="' + H + '" style="display:block;">' + grid + hrs +
+          '<polygon points="' + band.join(' ') + '" fill="#3f8fd2" fill-opacity="0.18"/>' +
+          '<polyline points="' + line + '" fill="none" stroke="#1f5fa0" stroke-width="1.5"/></svg>';
+      })
+      .catch(function (e) { el.textContent = 'History could not be loaded: ' + e.message; });
+  }
+  function buildPioupiou(map, body) {
+    var box = document.createElement('div');
+    box.style.cssText = 'margin-top:8px;padding-top:6px;border-top:1px solid #ccc;max-width:290px;';
+    var legend = PP_SCALE.map(function (c, i) {
+      var lo = i ? PP_SCALE[i - 1][0] : 0;
+      return '<span style="display:inline-block;width:10px;height:10px;background:' + c[1] + ';margin:0 2px 0 4px;vertical-align:-1px;"></span>' +
+        (c[0] > 1e8 ? lo + '+' : lo + '–' + c[0]);
+    }).join('');
+    box.innerHTML =
+      '<div style="font-weight:bold;font-size:12.5px;margin-bottom:2px;">Live wind sensors</div>' +
+      '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
+        '<input type="checkbox" id="pp-toggle" style="margin-right:6px;width:16px;height:16px;">Pioupiou / OpenWindMap <span id="pp-count" style="color:#777;margin-left:4px;"></span></label>' +
+      '<div style="font-size:11px;color:#666;line-height:1.5;">Arrow = where the wind blows, colour = mean wind (kn):<br>' + legend +
+        '<br><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#a5a5a5;margin:0 3px 0 4px;"></span>no reading in the last hour. ' +
+        'Updates every 2 min. © contributors of the OpenWindMap wind network.</div>';
+    body.appendChild(box);
+    if (!map.getPane('ppPane')) { map.createPane('ppPane'); map.getPane('ppPane').style.zIndex = 625; }
+    var layer = L.layerGroup(), markers = {}, timer = null;
+    var cb = box.querySelector('#pp-toggle'), count = box.querySelector('#pp-count');
+    var load = function () {
+      fetch('/api/pioupiou_live')
+        .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || r.status); return j; }); })
+        .then(function (d) {
+          var live = 0, seen = {};
+          d.stationen.forEach(function (s) {
+            if (ppAgeMin(s) > 1440) return;
+            if (ppAgeMin(s) <= PP_STALE_MIN) live++;
+            seen[s[0]] = 1;
+            var m = markers[s[0]];
+            if (!m) {
+              m = markers[s[0]] = L.marker([s[2], s[3]], { pane: 'ppPane', icon: ppIcon(s), riseOnHover: true });
+              m.bindPopup('', { maxWidth: 360 });
+              m.on('popupopen', function (e) { e.popup.setContent(ppPopup(m.pp)); ppHistory(e.popup.getElement(), m.pp[0]); });
+              m.addTo(layer);
+            } else {
+              m.setLatLng([s[2], s[3]]).setIcon(ppIcon(s));
+            }
+            m.pp = s;
+            m.unbindTooltip().bindTooltip(esc(s[1]) + (s[6] != null && ppAgeMin(s) <= PP_STALE_MIN ? ' · ' + s[6].toFixed(0) + ' kn' : ''), { direction: 'top', offset: [0, -10] });
+          });
+          Object.keys(markers).forEach(function (k) { if (!seen[k]) { layer.removeLayer(markers[k]); delete markers[k]; } });
+          count.textContent = '(' + live + ' live)';
+        })
+        .catch(function (e) { count.textContent = '(not available)'; console.error('pioupiou:', e); });
+    };
+    var set = function (on) {
+      if (on) {
+        layer.addTo(map); load();
+        if (!timer) timer = setInterval(function () { if (!document.hidden) load(); }, 120000);
+      } else {
+        map.removeLayer(layer);
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+      try { localStorage.setItem('ppLiveOn', on ? '1' : '0'); } catch (e) { /* ignore */ }
+    };
+    try { cb.checked = localStorage.getItem('ppLiveOn') === '1'; } catch (e) { cb.checked = false; }
+    cb.addEventListener('change', function () { set(this.checked); });
+    if (cb.checked) set(true);
   }
 
   function start() {

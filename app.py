@@ -2468,6 +2468,72 @@ def api_metar():
     return jsonify(erg)
 
 
+# Pioupiou / OpenWindMap live (26.11.2026): offene API, Lizenz developers.pioupiou.fr/data-licensing,
+# Namensnennung "(c) contributors of the OpenWindMap wind network". API liefert km/h -> hier Knoten.
+_PP_LIVE = [None, None]          # [Zeit, Antwort]
+_PP_HIST = {}
+_KMH_KN = 1 / 1.852
+
+
+def _pp_kn(v):
+    return None if v is None else round(v * _KMH_KN, 1)
+
+
+@app.route("/api/pioupiou_live")
+def api_pioupiou_live():
+    """Alle Pioupiou-Sensoren mit letzter Messung, 2 min Zwischenspeicher.
+    Zeilen [id, name, lat, lon, zeit_utc, richtung_grad, mittel_kn, min_kn, max_kn, an]."""
+    import requests as _rq
+    jetzt = datetime.utcnow()
+    if _PP_LIVE[0] and (jetzt - _PP_LIVE[0]).total_seconds() < 120:
+        return jsonify(_PP_LIVE[1])
+    try:
+        r = _rq.get("https://api.pioupiou.fr/v1/live-with-meta/all", headers={"User-Agent": "weather-tides/1.0"}, timeout=30)
+        r.raise_for_status()
+        js = r.json().get("data") or []
+    except Exception as e:                                       # noqa: BLE001
+        if _PP_LIVE[1]:
+            return jsonify(_PP_LIVE[1])
+        return jsonify({"error": "api.pioupiou.fr: %s" % str(e)[:200]}), 502
+    zeilen = []
+    for s in js:
+        loc, m, st = s.get("location") or {}, s.get("measurements") or {}, s.get("status") or {}
+        if loc.get("latitude") is None or loc.get("longitude") is None:
+            continue
+        name = ((s.get("meta") or {}).get("name") or "").strip() or "Pioupiou %s" % s.get("id")
+        zeilen.append([s.get("id"), name, round(loc["latitude"], 5), round(loc["longitude"], 5), m.get("date"),
+                       m.get("wind_heading"), _pp_kn(m.get("wind_speed_avg")), _pp_kn(m.get("wind_speed_min")),
+                       _pp_kn(m.get("wind_speed_max")), 1 if st.get("state") == "on" else 0])
+    erg = {"stand": jetzt.strftime("%Y-%m-%dT%H:%M:%SZ"), "stationen": zeilen}
+    _PP_LIVE[0], _PP_LIVE[1] = jetzt, erg
+    return jsonify(erg)
+
+
+@app.route("/api/pioupiou_history")
+def api_pioupiou_history():
+    """Letzte 24 h eines Sensors (Archiv-API), 5 min Zwischenspeicher. Zeilen [zeit_utc, min_kn, mittel_kn, max_kn, richtung]."""
+    import requests as _rq
+    pid = request.args.get("id", "").strip()
+    if not re.fullmatch(r"\d{1,6}", pid):
+        return jsonify({"error": "bad id"}), 400
+    jetzt = datetime.utcnow()
+    c = _PP_HIST.get(pid)
+    if c and (jetzt - c[0]).total_seconds() < 300:
+        return jsonify(c[1])
+    try:
+        r = _rq.get("https://api.pioupiou.fr/v1/archive/%s" % pid, params={"start": "last-day", "stop": "now", "format": "json"},
+                    headers={"User-Agent": "weather-tides/1.0"}, timeout=30)
+        r.raise_for_status()
+        js = r.json().get("data") or []
+    except Exception as e:                                       # noqa: BLE001
+        return jsonify({"error": "api.pioupiou.fr: %s" % str(e)[:200]}), 502
+    erg = {"id": pid, "daten": [[z[0], _pp_kn(z[3]), _pp_kn(z[4]), _pp_kn(z[5]), z[6]] for z in js if len(z) >= 7]}
+    if len(_PP_HIST) > 500:
+        _PP_HIST.clear()
+    _PP_HIST[pid] = (jetzt, erg)
+    return jsonify(erg)
+
+
 @app.route("/api/route_boats")
 def api_route_boats():
     """Boote (ORC-Polaren) fuer den Routenplaner (py/segel_polare.py, 20.11.2026)."""
