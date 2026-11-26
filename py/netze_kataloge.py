@@ -24,6 +24,9 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   venezia     Comune di Venezia CPSM, Windstationen der Lagune (dati.venezia.it vento.json)
   snpa_mare   Rete Mareografica SNPA (ARPA FVG, ARPAE), aus dem Kartenskript von mareografico.it
   puertos     Puertos del Estado PORTUS, Echtzeit-Windstationen (ohne fremde EXTERNOS-Bojen)
+  arpav       ARPA Veneto, REST meteo_meteogrammi coordcd=12 (Wind)
+  arpal       ARPAL Liguria, OMIRL REST stations/Vento
+  arpae       ARPAE Emilia-Romagna, Echtzeitdatei realtime.jsonl (Stationen mit Wind)
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -299,10 +302,42 @@ def puertos():
     schreiben('puertos', z)
 
 
+ARPAV = 'https://api.arpa.veneto.it/REST/v1/meteo_meteogrammi?orario=0&rete=MGRAMMI&coordcd=12'
+OMIRL = 'https://omirl.regione.liguria.it/Omirl/rest/stations/Vento'
+ARPAE = 'https://dati-simc.arpae.it/opendata/osservati/meteo/realtime/realtime.jsonl'
+
+
+def arpav():
+    """ARPA Veneto: REST der Seite 'dati in diretta', coordcd 12 = Wind (alle Windstationen mit Koordinaten)."""
+    d = json.load(open(holen(ARPAV, 'arpav_vento.json')))['data']
+    schreiben('arpav', [(str(x['codseqst']), x['nome_stazione'], x['latitudine'], x['longitudine'],
+                         None if x.get('quota') in (None, -1.0) else x['quota']) for x in d])
+
+
+def arpal():
+    """ARPAL Liguria, OMIRL: REST der eigenen Karte, stations/Vento."""
+    d = json.load(open(holen(OMIRL, 'omirl_vento.json', headers={'User-Agent': 'Mozilla/5.0'})))
+    schreiben('arpal', [(x['shortCode'], x['name'], x['lat'], x['lon'], x.get('alt')) for x in d])
+
+
+def arpae():
+    """ARPAE Emilia-Romagna, offene Echtzeitdatei (JSON-Zeilen, BUFR-Codes, 48 h): Stationen mit Wind B11002."""
+    p = holen(ARPAE, 'arpae_realtime.jsonl', timeout=300)
+    st, wind = {}, set()
+    for l in open(p, encoding='utf-8'):
+        d = json.loads(l)
+        v = d['data'][0]['vars']
+        k = '%s:%s:%s' % (d['network'], d['lon'], d['lat'])
+        st[k] = (v.get('B01019', {}).get('v') or k, d['lat'] / 1e5, d['lon'] / 1e5, v.get('B07030', {}).get('v'))
+        if any('B11002' in x.get('vars', {}) for x in d['data'][1:]):
+            wind.add(k)
+    schreiben('arpae', [(k, st[k][0], st[k][1], st[k][2], st[k][3]) for k in sorted(wind)])
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
              frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
-             puertos=puertos)
+             puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):

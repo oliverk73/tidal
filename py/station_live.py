@@ -388,7 +388,55 @@ def puertos(i):
                 richtung=w.get('WindDir'))
 
 
-NETZE = dict(puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+def arpav(i):
+    d = _ganz('arpav', lambda: _get('https://api.arpa.veneto.it/REST/v1/meteo_meteogrammi',
+                                    params={'orario': 0, 'rete': 'MGRAMMI', 'coordcd': 12}).json()['data'])
+    x = [x for x in d if str(x['codseqst']) == i]
+    if not x:
+        return dict(fehler='no current reading')
+    w = json.loads(x[0]['valore']) if isinstance(x[0]['valore'], str) else x[0]['valore']
+    if not w or w.get('VELOCITA') is None:
+        return dict(fehler='no current reading')
+    return dict(zeit=_lokal(x[0]['dataora'][:19], '%Y-%m-%dT%H:%M:%S', _mez()), kn=_f(w.get('VELOCITA'), MS), boe_kn=None,
+                richtung=_f(w.get('DIREZIONE')), hinweis='sensor at %s' % x[0]['tipo'].replace('VVENTO', '').lower())
+
+
+def arpal(i):
+    d = _ganz('arpal', lambda: _get('https://omirl.regione.liguria.it/Omirl/rest/stations/Vento',
+                                    headers={'User-Agent': 'Mozilla/5.0'}).json())
+    x = [x for x in d if x.get('shortCode') == i]
+    if not x or x[0].get('value') is None:
+        return dict(fehler='no current reading')
+    return dict(zeit=_lokal(x[0]['refDate'][:19], '%Y-%m-%dT%H:%M:%S', 0), kn=_f(x[0]['value'], KMH), boe_kn=None, richtung=None)
+
+
+def arpae(i):
+    """Echtzeitdatei aller Stationen (8 MB, 48 h) -> 10 min vorgehalten, je Station nur der letzte Windwert."""
+    def laden():
+        w = {}
+        for l in _get('https://dati-simc.arpae.it/opendata/osservati/meteo/realtime/realtime.jsonl', timeout=120).text.splitlines():
+            if 'B11002' not in l:
+                continue
+            d = json.loads(l)
+            k = '%s:%s:%s' % (d['network'], d['lon'], d['lat'])
+            r = {}
+            for x in d['data'][1:]:
+                v = x.get('vars', {})
+                if 'B11002' in v and (x.get('timerange') or [None])[0] in (254, 0):
+                    r['ff'], r['dd'] = v['B11002']['v'], (v.get('B11001') or {}).get('v')
+                if 'B11041' in v:
+                    r['fx'] = v['B11041']['v']
+            if 'ff' in r and (k not in w or d['date'] > w[k][0]):
+                w[k] = (d['date'], r)
+        return w
+    w = _ganz('arpae', laden)
+    if i not in w:
+        return dict(fehler='no wind in the last 48 h')
+    t, r = w[i]
+    return dict(zeit=t, kn=_f(r['ff'], MS), boe_kn=_f(r.get('fx'), MS), richtung=_f(r.get('dd')))
+
+
+NETZE = dict(arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 
