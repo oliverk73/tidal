@@ -8,6 +8,9 @@ Quellen (amtlich, frei):
   SYNOP  WMO OSCAR/Surface, https://oscar.wmo.int/surface/rest/api/search/station?stationClass=synopLand
          (nur Stationen mit klassischer WMO-Nummer 0-20000-0-NNNNN, Status operational/partlyOperational/unknown)
 Beide Listen werden ueber die WMO-Nummer verbunden (aviationweather.gov fuehrt sie bei ~3900 Flughaefen).
+Belege fuer "SYNOP-Station = Flughafen" (26.11.2026): WMO-Nummer im AWC-Katalog, sonst NOAA ISD isd-history.csv
+und NOAA GHCNh ghcnh-station-list.csv (je Station WMO + ICAO; nur als Beweis FUER eine Verbindung, alte Codes dort
+beweisen keine Verschiedenheit). Erst danach per Position: <= 2 km, bis 5 km nur mit Flughafenwort im SYNOP-Namen.
 
     venv/bin/python py/stationsnetz.py [--laden]
       -> static/wind_stations/stationsnetz.json
@@ -31,6 +34,8 @@ AUS = os.path.join(ROOT, 'static', 'wind_stations', 'stationsnetz.json')
 UA = {'User-Agent': 'weather-tides/1.0'}
 URL_METAR = 'https://aviationweather.gov/data/cache/stations.cache.json.gz'
 URL_SYNOP = 'https://oscar.wmo.int/surface/rest/api/search/station?stationClass=synopLand'
+URL_ISD = 'https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv'
+URL_GHCNH = 'https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/doc/ghcnh-station-list.csv'
 URL_AKTIV = 'https://aviationweather.gov/data/cache/metars.cache.csv.gz'   # alle METARs der letzten Stunden
 DUBL = os.path.join(ROOT, 'harmonics', 'help', 'stationsnetz_dubletten.csv')
 WDQMS = {'operational': 'o', 'partlyOperational': 'p', 'silent': 'n'}
@@ -39,7 +44,8 @@ WDQMS = {'operational': 'o', 'partlyOperational': 'p', 'silent': 'n'}
 def laden():
     os.makedirs(Q, exist_ok=True)
     for url, datei in ((URL_METAR, 'stations.cache.json.gz'), (URL_SYNOP, 'oscar_synop.json'),
-                       (URL_AKTIV, 'metars.cache.csv.gz')):
+                       (URL_AKTIV, 'metars.cache.csv.gz'), (URL_ISD, 'isd-history.csv'),
+                       (URL_GHCNH, 'ghcnh-station-list.csv')):
         r = requests.get(url, headers=UA, timeout=600)
         r.raise_for_status()
         open(os.path.join(Q, datei), 'wb').write(r.content)
@@ -63,7 +69,12 @@ def woerter(name):
     return {w for w in re.split(r'[^a-z]+', t) if len(w) >= 4 and w not in ALLGEMEIN}
 
 
-def ortsabgleich(stationen):
+FLUGHAFENWORT = re.compile(r'airport|arpt|a[eé]rop|aeroporto|aero\b|aero |intl|int\.|internacional|international|airfield|'
+                           r'flughafen|flugplatz|havalimani|lufthavn|flygplats|lotnisko|letiste|\b(a|ap|aws|aero)\b', re.I)
+WIDER = []          # Positionspaare, denen eine Stationsliste widerspricht
+
+
+def ortsabgleich(stationen, bel):
     """Flughaefen ohne WMO-Nummer beim AWC (z.B. EDHK) mit der SYNOP-Station am selben Platz verbinden:
     <= 2 km, oder <= 5 km mit gemeinsamem Namenswort; je METAR hoechstens eine SYNOP-Station (die naechste)."""
     alle = [s for k, s in stationen.items() if k[0] == 'm']            # alle METAR-Plaetze, auch schon verbundene
@@ -88,7 +99,12 @@ def ortsabgleich(stationen):
                 continue
             mname = metar[i][1][2]
             platz = mname.split('/', 1)[1] if '/' in mname else mname      # "San Diego/Montgomery": Platzname zaehlt
-            if d[i] <= 2 or woerter(s[2]) & woerter(platz):
+            if widerspruch(metar[i][1][3], s[4], bel):
+                WIDER.append((metar[i][1][3], s[4], s[2], round(float(d[i]), 2)))
+                continue
+            # ohne Listenbeleg: <= 2 km, oder <= 5 km mit gemeinsamem Namenswort UND Flughafenwort im SYNOP-Namen
+            # (26.11.: Anholt Havn, Edinburgh Gogarbank, Bottoms Wood St. Helena sind eigene Messorte)
+            if d[i] <= 2 or (woerter(s[2]) & woerter(platz) and FLUGHAFENWORT.search(s[2])):
                 paare.append((float(d[i]), k, i))
     vergeben_m, vergeben_s, n = set(), set(), 0
     for d, k, i in sorted(paare):
@@ -106,7 +122,75 @@ def ortsabgleich(stationen):
 RANG = {'o': 0, 'p': 1, 'u': 2, 'n': 3, '': 2}
 
 
-def positionsdubletten(stationen):
+def belege():
+    """Stationslisten mit WMO-Nummer UND ICAO-Code je Station = Beleg, dass SYNOP-Station und Flughafen eins sind
+    (Oliver 26.11.2026): NOAA ISD isd-history.csv (USAF = WMO*10, eingefroren 08/2025; Eintraege ab 2010) und
+    NOAA GHCNh ghcnh-station-list.csv. Gibt (wmo -> {icao}, icao -> {wmo}) zurueck."""
+    import csv
+    w2i, i2w = {}, {}
+
+    def dazu(w, i):
+        w, i = w.strip(), i.strip().upper()
+        if re.fullmatch(r'\d{5}', w) and re.fullmatch(r'[A-Z0-9]{4}', i):
+            w2i.setdefault(w, set()).add(i)
+            i2w.setdefault(i, set()).add(w)
+    pi = os.path.join(Q, 'isd-history.csv')
+    if os.path.exists(pi):
+        for z in csv.DictReader(open(pi, encoding='latin1')):
+            u = z['USAF']
+            if z['ICAO'].strip() and len(u) == 6 and u.isdigit() and u.endswith('0') and u[:2] != '99' and z['END'] >= '2010':
+                dazu(u[:5], z['ICAO'])
+    pg = os.path.join(Q, 'ghcnh-station-list.csv')
+    if os.path.exists(pg):
+        for z in csv.DictReader(open(pg, encoding='utf-8', errors='replace')):
+            if z['WMO_ID'].strip() and z['ICAO'].strip():
+                dazu(z['WMO_ID'].strip().zfill(5), z['ICAO'])
+    return w2i, i2w
+
+
+def widerspruch(icao, wmo, bel):
+    """True, wenn eine Stationsliste die WMO-Nummer einem ANDEREN, heute noch gefuehrten Flughafen in der Naehe
+    (<= 25 km) gibt. Eine abweichende Kennung allein beweist nichts: die Listen fuehren alte Codes (Kiel ETMK,
+    Johannesburg FAJS, Funchal LPFU) und alte Nummern (EDDM 10866)."""
+    for i in bel[0].get(wmo, ()):
+        if i != icao and i in AKTUELL and km_grob(AKTUELL[i], AKTUELL.get(icao)) <= 25:
+            return True
+    return False
+
+
+AKTUELL = {}        # icao -> (lat, lon) aller METAR-Plaetze im AWC-Katalog
+
+
+def km_grob(a, b):
+    if not a or not b:
+        return 1e9
+    dy = (a[0] - b[0]) * 111.2
+    dx = (a[1] - b[1]) * 111.2 * math.cos(math.radians(a[0]))
+    return math.hypot(dx, dy)
+
+
+def nach_beleg(stationen, bel):
+    """SYNOP-Station mit dem Flughafen verbinden, den eine Stationsliste fuer ihre WMO-Nummer nennt (<= 25 km)."""
+    w2i = bel[0]
+    n = 0
+    for k in [k for k in stationen if k[0] == 's']:
+        syn = stationen[k]
+        for icao in sorted(w2i.get(k[1], ())):
+            m = stationen.get(('m', icao))
+            if not m or m[6] != 1:
+                continue
+            dy = (m[0] - syn[0]) * 111.2
+            dx = (m[1] - syn[1]) * 111.2 * math.cos(math.radians(syn[0]))
+            if dx * dx + dy * dy > 25 ** 2:
+                continue
+            m[4], m[6], m[7] = syn[4], 3, syn[7]
+            del stationen[k]
+            n += 1
+            break
+    return n
+
+
+def positionsdubletten(stationen, bel):
     """Eintraege am selben Punkt (<= 150 m) zusammenfassen (26.11.2026):
     - mehrere ICAO-Kennungen = umbenannter Flughafen (KPBI->KDJT, FVHA->FVRG): die Kennung, die gerade METARs sendet
       (metars.cache), sonst die mit SYNOP-Partner, sonst die erste; eine WMO-Nummer wandert zur behaltenen;
@@ -168,8 +252,14 @@ def positionsdubletten(stationen):
                 behalten = [k0]
             if sy:
                 sy.sort(key=lambda k: (RANG.get(stationen[k][7], 2), k[1]))
-                ziel = [k for k in behalten if stationen[k][6] == 1]
-                if ziel:
+                # SYNOP-Eintraege, die laut Stationsliste zu einem anderen Flughafen gehoeren, bleiben eigene Stationen
+                for k in list(sy):
+                    if any(widerspruch(b[1], k[1], bel) for b in behalten):
+                        WIDER.append((behalten[0][1], k[1], stationen[k][2], 0))
+                        sy.remove(k)
+                        behalten.append(k)
+                ziel = [k for k in behalten if k[0] == 'm' and stationen[k][6] == 1]
+                if ziel and sy:
                     stationen[ziel[0]][4], stationen[ziel[0]][6], stationen[ziel[0]][7] = sy[0][1], 3, stationen[sy[0]][7]
         else:
             behalten = [sorted(sy, key=lambda k: (RANG.get(stationen[k][7], 2), k[1]))[0]]
@@ -216,9 +306,14 @@ def main(argv):
             continue
         stationen[('s', wmo)] = [round(x['latitude'], 4), round(x['longitude'], 4), titel(x['name']), '', wmo,
                                  x.get('elevation'), 2, bew]
-    n_ort = ortsabgleich(stationen)
+    AKTUELL.update({k[1]: (v[0], v[1]) for k, v in stationen.items() if k[0] == 'm'})
+    bel = belege()
+    print('Belege WMO<->ICAO (NOAA ISD + GHCNh): %d WMO-Nummern' % len(bel[0]))
+    print('per Stationsliste verbunden:', nach_beleg(stationen, bel))
+    n_ort = ortsabgleich(stationen, bel)
     print('per Position verbunden:', n_ort)
-    weg = positionsdubletten(stationen)
+    weg = positionsdubletten(stationen, bel)
+    print('Positionspaare verworfen (Liste nennt andere Station):', len(WIDER))
     with open(DUBL, 'w', encoding='utf-8') as f:
         f.write('entfernt_name,entfernt_icao,entfernt_wmo,lat,lon,behalten\n')
         for s, b in weg:
