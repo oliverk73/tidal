@@ -350,10 +350,35 @@ def main(argv):
     # [lat, lon, name, '', '', hoehe, 4, '', netz, id]  (z.B. DWD-Sturmwarnnetz Darsser Ort)
     kat = os.path.join(ROOT, 'quellen', 'thermik', 'spotsuche', 'stationen_alle.csv')
     n_nat = 0
+    poi_wmo = []
     if os.path.exists(kat):
         import csv
         gesehen, orte = set(), set()
-        for z in csv.DictReader(open(kat, encoding='utf-8')):
+        # DWD-POI (aktuelle Stundenwerte): WMO-Nummern der SYNOP-Ebene bekommen dort ihren Live-Wert (Liste 'poi');
+        # als eigenes Netz nur Stationen, die weder dort noch <= 2 km neben DWD-/METAR-/SYNOP-Stationen stehen
+        wmo_ebene = {s[4] for s in liste if s[6] in (2, 3) and s[4]}
+        alle_kat = list(csv.DictReader(open(kat, encoding='utf-8')))
+        nah = [(s[0], s[1]) for s in liste] + [(float(r['lat']), float(r['lon'])) for r in alle_kat
+                                                if r['netz'] in ('dwd', 'dwd_synop') and r['lat']]
+        raster = {}
+        for la_, lo_ in nah:
+            raster.setdefault((round(la_ * 20), round(lo_ * 20)), []).append((la_, lo_))
+
+        def daneben(la, lo, km=2.0):
+            for da in (-1, 0, 1):
+                for db in (-1, 0, 1):
+                    for p_ in raster.get((round(la * 20) + da, round(lo * 20) + db), ()):
+                        if km_grob((la, lo), p_) <= km:
+                            return True
+            return False
+        poi_wmo = sorted(r['id'] for r in alle_kat if r['netz'] == 'dwd_poi' and r['id'] in wmo_ebene)
+        for z in alle_kat:
+            if z['netz'] == 'dwd_poi':
+                try:
+                    if z['id'] in wmo_ebene or daneben(float(z['lat']), float(z['lon'])):
+                        continue
+                except ValueError:
+                    continue
             try:
                 la, lo = float(z['lat']), float(z['lon'])
             except (TypeError, ValueError):
@@ -380,7 +405,7 @@ def main(argv):
                quellen=['NOAA Aviation Weather Center (METAR sites)', 'WMO OSCAR/Surface (synoptic land stations)',
                        'national networks with open archive (py/spotsuche.py)'],
                spalten=['lat', 'lon', 'name', 'icao', 'wmo', 'elev_m', 'type', 'wdqms', 'netz', 'id'],
-               stationen=liste)
+               poi=poi_wmo, stationen=liste)
     with open(AUS, 'w', encoding='utf-8') as f:
         json.dump(aus, f, ensure_ascii=False, separators=(',', ':'))
     art = [s[6] for s in liste]

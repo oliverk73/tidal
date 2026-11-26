@@ -436,7 +436,22 @@ def arpae(i):
     return dict(zeit=t, kn=_f(r['ff'], MS), boe_kn=_f(r.get('fx'), MS), richtung=_f(r.get('dd')))
 
 
-NETZE = dict(arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+def dwd_poi(i):
+    """DWD weather_reports/poi/<id>-BEOB.csv: neueste Zeile oben, km/h, '---' = fehlt, Datum dd.mm.yy + Uhrzeit UTC."""
+    r = _get('https://opendata.dwd.de/weather/weather_reports/poi/%s-BEOB.csv' % i)
+    z = [l.split(';') for l in r.content.decode('latin1').splitlines()]
+    kopf = z[2]
+    col = lambda n: kopf.index(n) if n in kopf else None
+    iff, idd, ifx = col('Windgeschwindigkeit'), col('Windrichtung'), col('Windboen (letzte Stunde)')
+    for d in z[3:]:
+        if iff is not None and len(d) > iff and d[iff] not in ('---', ''):
+            num = lambda k: None if k is None or d[k] in ('---', '') else float(d[k].replace(',', '.'))
+            return dict(zeit=_lokal(d[0] + ' ' + d[1], '%d.%m.%y %H:%M', 0), kn=_f(num(iff), KMH),
+                        boe_kn=_f(num(ifx), KMH), richtung=num(idd))
+    return dict(fehler='station reports no wind')
+
+
+NETZE = dict(dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 

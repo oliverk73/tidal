@@ -27,6 +27,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   arpav       ARPA Veneto, REST meteo_meteogrammi coordcd=12 (Wind)
   arpal       ARPAL Liguria, OMIRL REST stations/Vento
   arpae       ARPAE Emilia-Romagna, Echtzeitdatei realtime.jsonl (Stationen mit Wind)
+  dwd_poi     DWD weather_reports/poi (aktuelle Stundenwerte), Koordinaten aus dem MOSMIX-Stationskatalog
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -334,10 +335,45 @@ def arpae():
     schreiben('arpae', [(k, st[k][0], st[k][1], st[k][2], st[k][3]) for k in sorted(wind)])
 
 
+def dwd_poi():
+    """DWD opendata/weather/weather_reports/poi: aktuelle Stundenwerte je Station (<id>-BEOB.csv, ~970 Stationen weltweit,
+    WMO-Nummern + DWD-eigene Kennungen wie A191_). Koordinaten aus dem MOSMIX-Stationskatalog (Grad.Minuten!)."""
+    liste = requests.get('https://opendata.dwd.de/weather/weather_reports/poi/', headers=UA, timeout=120).text
+    ids = re.findall(r'href="([A-Za-z0-9_]+)-BEOB\.csv"', liste)
+    kat = {}
+    gm = lambda x: (abs(x) // 1 + round(abs(x) % 1 * 100) / 60) * (1 if x >= 0 else -1)      # Grad.Minuten -> Grad
+    for l in open(holen('https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg?view=nasPublication',
+                        'mosmix_stationskatalog.cfg'), encoding='latin1'):
+        m = re.match(r'^\s*(\S+)\s+(\S+)\s+(.*?)\s+(-?\d+\.\d+)\s+(-?\d+\.\d+)\s+(-?\d+)\s*$', l)
+        if m:
+            kat[m.group(1)] = (m.group(3), gm(float(m.group(4))), gm(float(m.group(5))), m.group(6))
+    # nur Stationen, die Wind melden (viele DWD-eigene Kennungen sind Nebenstationen ohne Windmesser)
+    from concurrent.futures import ThreadPoolExecutor
+
+    def hat_wind(i):
+        try:
+            z_ = [l.split(';') for l in requests.get('https://opendata.dwd.de/weather/weather_reports/poi/%s-BEOB.csv' % i,
+                                                      headers=UA, timeout=60).content.decode('latin1').splitlines()]
+            c = z_[2].index('Windgeschwindigkeit')
+            return any(len(d) > c and d[c] not in ('---', '') for d in z_[3:])
+        except Exception:                                         # noqa: BLE001
+            return False
+    with ThreadPoolExecutor(6) as ex:
+        wind = dict(zip(ids, ex.map(hat_wind, ids)))
+    print('  dwd_poi: %d von %d melden Wind' % (sum(wind.values()), len(ids)))
+    z = []
+    for i in ids:
+        k = kat.get(i.rstrip('_'))
+        if k and wind.get(i):
+            z.append((i, k[0].title(), k[1], k[2], k[3] or None))
+    schreiben('dwd_poi', z)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
              frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
-             puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae)
+             puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae,
+             dwd_poi=dwd_poi)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):

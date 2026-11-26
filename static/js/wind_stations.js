@@ -243,6 +243,7 @@
     ispra_rmn: ['ISPRA Rete Mareografica Nazionale (tide gauge with weather sensors)', 'https://www.mareografico.it/',
       'Data: ISPRA, please cite <a href="https://doi.org/10.83182/ispra-rmn" target="_blank" rel="noopener">doi:10.83182/ispra-rmn</a>'],
     puertos: ['Puertos del Estado (PORTUS: port weather station, tide gauge or buoy)', 'https://portus.puertos.es/'],
+    dwd_poi: ['DWD, current hourly report', 'https://opendata.dwd.de/weather/weather_reports/poi/'],
     arpav: ['ARPA Veneto', 'https://www.arpa.veneto.it/dati-ambientali/dati-in-diretta/meteo-idro-nivo/variabili_meteo'],
     arpal: ['ARPAL Liguria (OMIRL)', 'https://omirl.regione.liguria.it/'],
     arpae: ['ARPAE Emilia-Romagna', 'https://dati.arpae.it/dataset/dati-dalle-stazioni-meteo-locali-della-rete-idrometeorologica-regionale'],
@@ -252,7 +253,7 @@
   };
   // networks whose current reading the popup fetches on click, one station at a time (/api/station_live, py/station_live.py)
   var NAT_LIVE = { pioupiou: 1, ndbc: 1, coops: 1, fmi: 1, imgw: 1, lhmt: 1, ee: 1, meteocat: 1, lombardia: 1, suedtirol: 1,
-    meteotrentino: 1, ispra_rmn: 1, venezia: 1, puertos: 1, arpav: 1, arpal: 1, arpae: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
+    meteotrentino: 1, ispra_rmn: 1, venezia: 1, puertos: 1, dwd_poi: 1, arpav: 1, arpal: 1, arpae: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
   function loadNatLive(popupEl, s) {
     var el = popupEl && popupEl.querySelector('.nat-live');
     if (!el) return;
@@ -271,6 +272,7 @@
       })
       .catch(function (e) { el.textContent = 'Current wind could not be loaded: ' + e.message; });
   }
+  var POI = {};          // WMO numbers with a DWD current-report file (stationsnetz.json "poi")
   var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {
     if (s[6] === 4) {
@@ -298,7 +300,8 @@
       '<div style="color:#555;margin-bottom:3px;">' + typ + (s[5] != null && s[5] !== 9999 ? ' · ' + esc(s[5]) + ' m' : '') + '</div>' +
       lines.map(function (l) { return '<div>' + l + '</div>'; }).join('') +
       '<div style="color:#777;font-size:11.5px;margin-top:2px;">' + s[0].toFixed(4) + ', ' + s[1].toFixed(4) + '</div>' +
-      (s[3] ? '<div class="net-metar" style="margin-top:6px;color:#777;font-size:11.5px;">Loading METAR…</div>' : '') + '</div>';
+      (s[3] ? '<div class="net-metar" style="margin-top:6px;color:#777;font-size:11.5px;">Loading METAR…</div>' :
+        POI[s[4]] ? '<div class="nat-live" style="margin-top:6px;color:#777;font-size:11.5px;">Loading current wind (DWD)…</div>' : '') + '</div>';
   }
   function loadMetar(popupEl, icao) {
     var el = popupEl && popupEl.querySelector('.net-metar');
@@ -334,6 +337,7 @@
           map.getPane('netPane').style.zIndex = 620;
           map.getPane('netPane').style.pointerEvents = 'none';
         }
+        (d.poi || []).forEach(function (w) { POI[w] = 1; });
         var renderer = L.canvas({ padding: 0.3, pane: 'netPane' });
         var layers = { metar: L.layerGroup(), synop: L.layerGroup(), both: L.layerGroup(), nat: L.layerGroup() };
         var n = { 1: 0, 2: 0, 3: 0, 4: 0 };
@@ -363,6 +367,7 @@
           var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(netPopup(s)).openOn(map);
           if (s[3]) loadMetar(p.getElement(), s[3]);
           if (s[6] === 4) loadNatLive(p.getElement(), s);
+          else if (!s[3] && POI[s[4]]) loadNatLive(p.getElement(), [0, 0, '', '', '', 0, 4, '', 'dwd_poi', s[4]]);
         });
         var tip = L.tooltip({ direction: 'top', offset: [0, -6] }), tipFor = null, last = 0;
         map.on('mousemove', function (e) {
@@ -416,6 +421,7 @@
             var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(netPopup(s)).openOn(map);
             if (s[3]) loadMetar(p.getElement(), s[3]);
           if (s[6] === 4) loadNatLive(p.getElement(), s);
+          else if (!s[3] && POI[s[4]]) loadNatLive(p.getElement(), [0, 0, '', '', '', 0, 4, '', 'dwd_poi', s[4]]);
           });
         };
         d.stationen.forEach(function (s) {
