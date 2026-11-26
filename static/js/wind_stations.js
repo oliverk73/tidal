@@ -243,6 +243,8 @@
     ispra_rmn: ['ISPRA Rete Mareografica Nazionale (tide gauge with weather sensors)', 'https://www.mareografico.it/',
       'Data: ISPRA, please cite <a href="https://doi.org/10.83182/ispra-rmn" target="_blank" rel="noopener">doi:10.83182/ispra-rmn</a>'],
     puertos: ['Puertos del Estado (PORTUS: port weather station, tide gauge or buoy)', 'https://portus.puertos.es/'],
+    midas: ['UK Met Office (MIDAS Open archive, no live data)', 'https://data.ceda.ac.uk/badc/ukmo-midas-open/data/uk-mean-wind-obs/dataset-version-202607/{path}',
+      'Archive updated yearly (Open Government Licence); current wind: nearby METAR/SYNOP stations'],
     dwd_strasse: ['DWD road weather station (roadside, wind usually reduced)', 'https://opendata.dwd.de/weather/weather_reports/road_weather_stations/'],
     dwd_poi: ['DWD, current hourly report', 'https://opendata.dwd.de/weather/weather_reports/poi/'],
     arpav: ['ARPA Veneto', 'https://www.arpa.veneto.it/dati-ambientali/dati-in-diretta/meteo-idro-nivo/variabili_meteo'],
@@ -280,7 +282,8 @@
       var nn = NAT[s[8]] || [s[8], ''];
       var url = nn[1] === '{agency}' ? (s[9].indexOf('fvg-') === 0 ? 'https://www.meteo.fvg.it/monitor-mare.php?ln' :
         s[9].indexOf('arpae-') === 0 ? 'https://www.arpae.it/it/temi-ambientali/mare/dati-e-indicatori/rete-di-monitoraggio-meteo-marina' :
-        'https://www.snpambiente.it/dati/clima-e-meteo/') : nn[1].replace('{id}', encodeURIComponent(s[9]));
+        'https://www.snpambiente.it/dati/clima-e-meteo/') : nn[1].replace('{path}', s[9].split('/').map(encodeURIComponent).join('/'))
+        .replace('{id}', encodeURIComponent(s[9]));
       return '<div style="font-family:sans-serif;font-size:12.5px;min-width:220px;max-width:340px;">' +
         '<div style="font-weight:bold;font-size:14px;">' + esc(s[2]) + '</div>' +
         '<div style="color:#555;margin-bottom:3px;">' + esc(nn[0]) + (s[5] != null ? ' · ' + esc(s[5]) + ' m' : '') + '</div>' +

@@ -29,6 +29,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   arpae       ARPAE Emilia-Romagna, Echtzeitdatei realtime.jsonl (Stationen mit Wind)
   dwd_poi     DWD weather_reports/poi (aktuelle Stundenwerte), Koordinaten aus dem MOSMIX-Stationskatalog
   dwd_strasse DWD-Strassenwetterstationen (BUFR je Region), nur mit Windmessung
+  midas       UK Met Office MIDAS Open (CEDA, Token ~/.config/ceda_token), Winddatensatz, nur letzter Jahrgang
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -385,11 +386,32 @@ def dwd_strasse():
     schreiben('dwd_strasse', z)
 
 
+def midas():
+    """UK Met Office MIDAS Open bei CEDA (Token ~/.config/ceda_token, OGL): Stationsliste des Winddatensatzes
+    uk-mean-wind-obs, nur Stationen mit Daten im letzten Jahrgang (Archiv, jaehrlich, kein Live).
+    Kennung = Stationsordner <grafschaft>/<src_id>_<dateiname> (fuer den Link aufs Archiv)."""
+    t = open(os.path.expanduser('~/.config/ceda_token')).readline().strip()
+    base = 'https://dap.ceda.ac.uk/badc/ukmo-midas-open/data/uk-mean-wind-obs/'
+    dv = sorted(set(re.findall(r'dataset-version-\d+', requests.get(base, headers=UA, timeout=60).text)))[-1]
+    r = requests.get('%s%s/midas-open_uk-mean-wind-obs_dv-%s_station-metadata.csv' % (base, dv, dv[16:]),
+                     headers=dict(UA, Authorization='Bearer ' + t), timeout=120)
+    r.raise_for_status()
+    open(os.path.join(ROH, 'midas_wind_station-metadata.csv'), 'wb').write(r.content)
+    zeilen = r.content.decode('latin1').splitlines()
+    tab = list(csv.DictReader(zeilen[zeilen.index('data') + 1:zeilen.index('end data')]))
+    letzt = max(x['last_year'] for x in tab)
+    z = [('%s/%s_%s' % (x['historic_county'], x['src_id'], x['station_file_name']), x['station_name'].title(),
+          float(x['station_latitude']), float(x['station_longitude']), x['station_elevation'] or None)
+         for x in tab if x['last_year'] == letzt]
+    print('  midas: %s, letzter Jahrgang %s' % (dv, letzt))
+    schreiben('midas', z)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
              frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
              puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae,
-             dwd_poi=dwd_poi, dwd_strasse=dwd_strasse)
+             dwd_poi=dwd_poi, dwd_strasse=dwd_strasse, midas=midas)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):
