@@ -219,7 +219,7 @@
     dwd: ['DWD, 10-min wind', 'https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/10_minutes/wind/'],
     dwd_synop: ['DWD, hourly wind (SYNOP)', 'https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/wind_synop/'],
     meteofrance: ['Météo-France', 'https://meteo.data.gouv.fr/'],
-    knmi: ['KNMI, hourly', 'https://www.knmi.nl/nederland-nu/klimatologie/uurgegevens'],
+    knmi: ['KNMI (Netherlands)', 'https://dataplatform.knmi.nl/dataset/10-minute-in-situ-meteorological-observations-1-0'],
     dmi: ['DMI, 10-min', 'https://opendatadocs.dmi.govcloud.dk/'],
     coops: ['NOAA CO-OPS (tide gauge met sensor)', 'https://tidesandcurrents.noaa.gov/stationhome.html?id={id}'],
     geosphere: ['GeoSphere Austria, 10-min', 'https://data.hub.geosphere.at/dataset/klima-v2-10min'],
@@ -259,7 +259,7 @@
   };
   // networks whose current reading the popup fetches on click, one station at a time (/api/station_live, py/station_live.py)
   var NAT_LIVE = { pioupiou: 1, ndbc: 1, coops: 1, fmi: 1, imgw: 1, lhmt: 1, ee: 1, meteocat: 1, lombardia: 1, suedtirol: 1,
-    meteotrentino: 1, ispra_rmn: 1, venezia: 1, puertos: 1, dwd_poi: 1, dwd_strasse: 1, ipma: 1, vedur: 1, lvgmc: 1, meteofrance: 1, arpav: 1, arpal: 1, arpae: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
+    meteotrentino: 1, ispra_rmn: 1, venezia: 1, puertos: 1, dwd_poi: 1, dwd_strasse: 1, ipma: 1, vedur: 1, lvgmc: 1, meteofrance: 1, knmi: 1, arpav: 1, arpal: 1, arpae: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
   function loadNatLive(popupEl, s) {
     var el = popupEl && popupEl.querySelector('.nat-live');
     if (!el) return;

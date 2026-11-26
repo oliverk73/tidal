@@ -582,7 +582,49 @@ def meteofrance(i):
     return dict(zeit=x['validity_time'], kn=_f(x['ff'], MS), boe_kn=_f(x.get('fxi10'), MS), richtung=_f(x.get('dd')))
 
 
-NETZE = dict(meteofrance=meteofrance, lvgmc=lvgmc, ipma=ipma, vedur=vedur, dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+KNMI = 'https://api.dataplatform.knmi.nl/open-data/v1/datasets/10-minute-in-situ-meteorological-observations/versions/1.0/files'
+
+
+def knmi_datei():
+    """Neueste 10-min-Datei aller KNMI-Stationen (NetCDF ~150 KB). Anonymer Schluessel der KNMI-Plattform
+    (~/.config/knmi_anon_key, oeffentlich, laeuft 1.8.2027 ab; geteilte Grenzen 50/min, 3000/h), nur serverseitig."""
+    import tempfile
+    import xarray as xr
+    # persoenlicher Schluessel (kostenlos, eigene Grenzen 1000/h) vor dem anonymen (weltweit geteilt, 26.11. schon 429)
+    pk = os.path.expanduser('~/.config/knmi_api_key')
+    k = open(pk if os.path.exists(pk) else os.path.expanduser('~/.config/knmi_anon_key')).read().strip()
+    h = dict(UA, Authorization=k)
+    r = requests.get(KNMI, params={'maxKeys': 1, 'orderBy': 'created', 'sorting': 'desc'}, headers=h, timeout=30)
+    if r.status_code == 429:
+        raise RuntimeError('KNMI rate limit reached (shared anonymous key), try again later')
+    r.raise_for_status()
+    f = r.json()['files'][0]['filename']
+    u = requests.get('%s/%s/url' % (KNMI, f), headers=h, timeout=30).json()['temporaryDownloadUrl']
+    with tempfile.NamedTemporaryFile(suffix='.nc') as t:
+        t.write(requests.get(u, timeout=60).content)
+        t.flush()
+        d = xr.open_dataset(t.name).load()
+    zeit = str(d.time.values.ravel()[0])[:19] + 'Z'
+    w = {}
+    for k_, st in enumerate(d.station.values):
+        val = lambda v: (float(d[v].values.ravel()[k_]) if v in d else float('nan'))
+        w[str(st)] = dict(name=str(d.stationname.values[k_]), lat=float(d.lat.values[k_]), lon=float(d.lon.values[k_]),
+                          ff=val('ff'), dd=val('dd'), gff=val('gff'), zeit=zeit)
+    return w
+
+
+def knmi(i):
+    try:
+        w = _ganz('knmi', knmi_datei)
+    except RuntimeError as e:
+        return dict(fehler=str(e))
+    x = w.get(i if len(i) == 5 else '06' + i.zfill(3))
+    if not x or x['ff'] != x['ff']:
+        return dict(fehler='no wind in the latest 10-min file')
+    return dict(zeit=x['zeit'], kn=_f(x['ff'], MS), boe_kn=_f(x['gff'], MS), richtung=_f(x['dd']))
+
+
+NETZE = dict(knmi=knmi, meteofrance=meteofrance, lvgmc=lvgmc, ipma=ipma, vedur=vedur, dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 

@@ -34,6 +34,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   vedur       Vedurstofa Islands, Stationsseiten + xmlweather, nur Stationen mit Wind
   lvgmc       Lettland LVGMC, weather_monitoring_points (Stationen mit Wind)
   meteofrance_obs  Meteo-France Paket-Beobachtungen (alle Stationen mit Wind; Application ID ~/.config/meteofrance_app_id)
+  knmi10      KNMI 10-min-Datei (anonymer Schluessel): fehlende Stationen, v.a. Nordsee-Plattformen
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -494,13 +495,29 @@ def meteofrance_obs():
     open(p, 'w', encoding='utf-8').write(t)
 
 
+def knmi10():
+    """KNMI 10-min-Datei (anonymer Schluessel): Stationen mit Wind, die die alte KNMI-Liste (Stunden-Archiv,
+    dreistellige Nummern) nicht hat, z.B. Nordsee-Plattformen. Netz 'knmi', Kennung fuenfstellig."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import station_live
+    alt = set()
+    p = os.path.join(S, 'stationen_alle.csv')
+    if os.path.exists(p):
+        alt = {r['id'].zfill(3) for r in csv.DictReader(open(p, encoding='utf-8')) if r['netz'] == 'knmi'}
+    z = [(i, x['name'], x['lat'], x['lon'], None) for i, x in station_live.knmi_datei().items()
+         if x['ff'] == x['ff'] and i[2:] not in alt]
+    schreiben('knmi10', z)
+    p = os.path.join(S, 'stationen_knmi10.csv')
+    open(p, 'w', encoding='utf-8').write(open(p, encoding='utf-8').read().replace('\nknmi10,', '\nknmi,'))
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
              frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
              puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae,
              dwd_poi=dwd_poi, dwd_strasse=dwd_strasse, midas=midas,
              ipma=ipma, vedur=vedur, lvgmc=lvgmc,
-             meteofrance_obs=meteofrance_obs)
+             meteofrance_obs=meteofrance_obs, knmi10=knmi10)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):
