@@ -176,6 +176,10 @@
     midas: ['UK Met Office (MIDAS Open archive, no live data)', 'https://data.ceda.ac.uk/badc/ukmo-midas-open/data/uk-mean-wind-obs/dataset-version-202607/{path}',
       'Archive updated yearly (Open Government Licence); current wind: nearby METAR/SYNOP stations'],
     dwd_strasse: ['DWD road weather station (roadside, wind usually reduced)', 'https://opendata.dwd.de/weather/weather_reports/road_weather_stations/'],
+    cco: ['National Network of Regional Coastal Monitoring Programmes (England)', 'https://coastalmonitoring.org/realtimedata/?chart={id}&tab=met',
+      'Real time data displayed on this page are from the <a href="https://coastalmonitoring.org/" target="_blank" rel="noopener">National Network of Regional Coastal Monitoring Programmes</a>, ' +
+      'made freely available under the terms of the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence</a>. ' +
+      'Please note that data are not quality-controlled in real-time.'],
     pruef: ['Check station (network without open access)', ''],
     dwd_poi: ['DWD, current hourly report', 'https://opendata.dwd.de/weather/weather_reports/poi/'],
     arpav: ['ARPA Veneto', 'https://www.arpa.veneto.it/dati-ambientali/dati-in-diretta/meteo-idro-nivo/variabili_meteo'],
@@ -187,7 +191,7 @@
   };
   // networks whose current reading the popup fetches on click, one station at a time (/api/station_live, py/station_live.py)
   var NAT_LIVE = { pioupiou: 1, ndbc: 1, coops: 1, fmi: 1, imgw: 1, lhmt: 1, ee: 1, meteocat: 1, lombardia: 1, suedtirol: 1,
-    meteotrentino: 1, ispra_rmn: 1, venezia: 1, puertos: 1, dwd_poi: 1, dwd_strasse: 1, ipma: 1, vedur: 1, lvgmc: 1, meteofrance: 1, knmi: 1, arpav: 1, arpal: 1, arpae: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
+    meteotrentino: 1, ispra_rmn: 1, venezia: 1, puertos: 1, dwd_poi: 1, dwd_strasse: 1, ipma: 1, vedur: 1, lvgmc: 1, meteofrance: 1, knmi: 1, cco: 1, arpav: 1, arpal: 1, arpae: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
   function loadNatLive(popupEl, s) {
     var el = popupEl && popupEl.querySelector('.nat-live');
     if (!el) return;
@@ -217,7 +221,7 @@
     ispra_rmn: 'ISPRA tide gauges, Italy', snpa_mare: 'SNPA tide gauges, Italy', venezia: 'Venice lagoon, Comune di Venezia',
     arpav: 'ARPA Veneto', arpal: 'ARPAL Liguria', arpae: 'ARPAE Emilia-Romagna', lombardia: 'ARPA Lombardia',
     suedtirol: 'South Tyrol, Landeswetterdienst', meteotrentino: 'Meteotrentino', coops: 'NOAA CO-OPS, USA', ndbc: 'NOAA NDBC buoys',
-    pioupiou: 'Pioupiou / OpenWindMap', pruef: 'Other check stations', meteireann: 'Met Éireann, Ireland' };
+    pioupiou: 'Pioupiou / OpenWindMap', pruef: 'Other check stations', cco: 'Coastal Monitoring, England', meteireann: 'Met Éireann, Ireland' };
   function natLabel(k) { return NAT_LABEL[k] || (NAT[k] || [k])[0].split(',')[0].split(' (')[0]; }
   var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {

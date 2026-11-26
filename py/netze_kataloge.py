@@ -35,6 +35,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   lvgmc       Lettland LVGMC, weather_monitoring_points (Stationen mit Wind)
   meteofrance_obs  Meteo-France Paket-Beobachtungen (alle Stationen mit Wind; Application ID ~/.config/meteofrance_app_id)
   knmi10      KNMI 10-min-Datei (anonymer Schluessel): fehlende Stationen, v.a. Nordsee-Plattformen
+  cco         Channel Coastal Observatory / NNRCMP (England), Wetterstationen, eigener Schluessel + Domain
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -512,13 +513,23 @@ def knmi10():
     open(p, 'w', encoding='utf-8').write(t)
 
 
+def cco():
+    """CCO/NNRCMP-Wetterstationen (englische Kueste, eigener API-Schluessel): Stationen mit Meldung in den letzten 30 Tagen."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import station_live
+    from datetime import datetime, timedelta, timezone
+    grenze = (datetime.now(timezone.utc) - timedelta(days=30)).strftime('%Y%m%d')
+    schreiben('cco', [(i, x['sensor'], x['lat'], x['lon'], None) for i, x in station_live.cco_met().items()
+                      if (x.get('date') or '')[:8] >= grenze])
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
              frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
              puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae,
              dwd_poi=dwd_poi, dwd_strasse=dwd_strasse, midas=midas,
              ipma=ipma, vedur=vedur, lvgmc=lvgmc,
-             meteofrance_obs=meteofrance_obs, knmi10=knmi10)
+             meteofrance_obs=meteofrance_obs, knmi10=knmi10, cco=cco)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):

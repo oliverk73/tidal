@@ -624,7 +624,28 @@ def knmi(i):
     return dict(zeit=x['zeit'], kn=_f(x['ff'], MS), boe_kn=_f(x['gff'], MS), richtung=_f(x['dd']))
 
 
-NETZE = dict(knmi=knmi, meteofrance=meteofrance, lvgmc=lvgmc, ipma=ipma, vedur=vedur, dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+def cco_met():
+    """Channel Coastal Observatory / NNRCMP (OGL): alle Wetterstationen, letzter Wert. Eigener Schluessel
+    ~/.config/cco_api_key, gebunden an die Domain in ~/.config/cco_domain (als Referer zu senden). Regeln der API:
+    zwischenspeichern, nicht oefter als gemessen (10 min)."""
+    k = open(os.path.expanduser('~/.config/cco_api_key')).read().strip()
+    dom = open(os.path.expanduser('~/.config/cco_domain')).read().strip()
+    r = requests.get('https://coastalmonitoring.org/observations/met/latest', timeout=30,
+                     headers=dict(UA, **{'X-API-Key': k, 'Referer': 'https://%s/' % dom, 'Accept': 'application/json'}))
+    r.raise_for_status()
+    return {f['properties']['id']: dict(f['properties'], lon=f['geometry']['coordinates'][0], lat=f['geometry']['coordinates'][1])
+            for f in r.json()['features']}
+
+
+def cco(i):
+    x = _ganz('cco', cco_met, 600).get(str(i))
+    if not x or x.get('speed') in (None, ''):
+        return dict(fehler='no current wind reading')
+    return dict(zeit=_lokal(x['date'], '%Y%m%d#%H%M%S', 0), kn=_f(x['speed'], MS), boe_kn=_f(x.get('gust'), MS),
+                richtung=_f(x.get('dir')))
+
+
+NETZE = dict(cco=cco, knmi=knmi, meteofrance=meteofrance, lvgmc=lvgmc, ipma=ipma, vedur=vedur, dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 
