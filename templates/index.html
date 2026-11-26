@@ -59,7 +59,7 @@
 <script src="/static/js/nowcast_layer.js" defer></script>
 <script src="/static/js/tide_flow_layer.js?v=20261123b" defer></script>
 <script src="/static/js/route_planner.js?v=20261120d" defer></script>
-<script src="/static/js/wind_stations.js?v=20261126p" defer></script>
+<script src="/static/js/wind_stations.js?v=20261126t" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css"/>
 <!-- MapLibre GL + Leaflet bridge: clean English vector labels (OpenFreeMap, no key) -->
@@ -1911,7 +1911,7 @@
           { key: 'layer',   label: 'Layers',           body: 'layer-menu-body',       count: null },
           { key: 'tide',    label: 'Tide Stations',    body: 'tide-stations-body',    count: 'tide-stations-count' },
           { key: 'current', label: 'Current Stations', body: 'current-stations-body', count: 'current-stations-count' },
-          { key: 'wind',    label: 'Wind Stations',    body: 'wind-stations-body',    count: 'wind-stations-count' },  // Oliver 24.11.2026, static/js/wind_stations.js
+          { key: 'wind',    label: 'Weather Stations',   body: 'wind-stations-body',    count: 'wind-stations-count' },  // Oliver 24.11.2026, static/js/wind_stations.js
           { key: 'route',   label: 'Route Planner',    body: 'route-planner-body',    count: null }   // Oliver 20.11.2026
         ];
         wrap.innerHTML = SECTIONS.map(function (s) {

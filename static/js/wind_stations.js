@@ -1,5 +1,5 @@
 // Wind stations used to verify the wind models at surf and sailing spots (py/thermik_pruefung.py,
-// Oliver 24.11.2026). Fills the "Wind Stations" menu (dropdown + show/hide) and puts a marker per station.
+// Oliver 24.11.2026). Fills the "Weather Stations" menu (until 26.11.2026 "Wind Stations") (dropdown + show/hide) and puts a marker per station.
 // Data: /static/wind_stations/wind_stations.json (written by py/thermik_pruefung.py).
 (function () {
   'use strict';
@@ -136,7 +136,7 @@
       .catch(function (e) { el.removeAttribute('data-done'); el.textContent = 'No live forecast: ' + e.message; });
   }
 
-  // header count of the "Wind Stations" box: spot stations + every station of the official/national layers
+  // header count of the "Weather Stations" box: spot stations + every station of the official/national layers
   var WS_COUNT = { spots: 0, net: 0 };
   function showCount() {
     var el = document.getElementById('wind-stations-count');
@@ -206,7 +206,6 @@
         keys: [s.name, s.spot || '', s.id || ''].join(' '), kind: 'spot', badge: 'Wind spot', lat: s.lat, lon: s.lon,
         show: function () { showSpot(s.name); } });
     });
-    buildPioupiou(map, body);
     buildNet(map, body);
   }
 
@@ -279,6 +278,18 @@
       .catch(function (e) { el.textContent = 'Current wind could not be loaded: ' + e.message; });
   }
   var POI = {};          // WMO numbers with a DWD current-report file (stationsnetz.json "poi")
+  // short, unambiguous names for the source list (country where the agency name does not say it)
+  var NAT_LABEL = { dwd: 'DWD 10-min, Germany', dwd_synop: 'DWD hourly SYNOP, Germany', dwd_poi: 'DWD current reports',
+    dwd_strasse: 'DWD road weather stations', dmi: 'DMI, Denmark', smhi: 'SMHI, Sweden', fmi: 'FMI, Finland',
+    frost: 'MET Norway', imgw: 'IMGW-PIB, Poland', lhmt: 'LHMT, Lithuania', lvgmc: 'LVĢMC, Latvia', ee: 'Keskkonnaagentuur, Estonia',
+    knmi: 'KNMI, Netherlands', rws: 'Rijkswaterstaat, Netherlands', geosphere: 'GeoSphere Austria', meteoschweiz: 'MeteoSwiss',
+    meteofrance: 'Météo-France', aemet: 'AEMET, Spain', meteocat: 'Meteocat, Catalonia', socib: 'SOCIB, Balearic Islands',
+    puertos: 'Puertos del Estado, Spain', ipma: 'IPMA, Portugal', vedur: 'Veðurstofa, Iceland', midas: 'UK Met Office MIDAS, archive',
+    ispra_rmn: 'ISPRA tide gauges, Italy', snpa_mare: 'SNPA tide gauges, Italy', venezia: 'Venice lagoon, Comune di Venezia',
+    arpav: 'ARPA Veneto', arpal: 'ARPAL Liguria', arpae: 'ARPAE Emilia-Romagna', lombardia: 'ARPA Lombardia',
+    suedtirol: 'South Tyrol, Landeswetterdienst', meteotrentino: 'Meteotrentino', coops: 'NOAA CO-OPS, USA', ndbc: 'NOAA NDBC buoys',
+    pioupiou: 'Pioupiou / OpenWindMap', meteireann: 'Met Éireann, Ireland' };
+  function natLabel(k) { return NAT_LABEL[k] || (NAT[k] || [k])[0].split(',')[0].split(' (')[0]; }
   var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {
     if (s[6] === 4) {
@@ -346,16 +357,25 @@
         }
         (d.poi || []).forEach(function (w) { POI[w] = 1; });
         var renderer = L.canvas({ padding: 0.3, pane: 'netPane' });
-        var layers = { metar: L.layerGroup(), synop: L.layerGroup(), both: L.layerGroup(), nat: L.layerGroup() };
-        var n = { 1: 0, 2: 0, 3: 0, 4: 0 };
+        // one layer per source, like the tide-station sources: METAR, SYNOP (stations with both are shown when either is
+        // ticked) and one per national/regional network, each with its own colour (Oliver 26.11.2026)
+        var natKeys = [];
+        d.stationen.forEach(function (s) { if (s[6] === 4 && natKeys.indexOf(s[8]) < 0) natKeys.push(s[8]); });
+        natKeys.sort(function (a, b) { return natLabel(a).localeCompare(natLabel(b)); });
+        var natCol = {};
+        natKeys.forEach(function (k, i) { natCol[k] = 'hsl(' + Math.round((i * 137.508 + 20) % 360) + ',68%,' + (i % 2 ? 40 : 50) + '%)'; });
+        var layers = { metar: L.layerGroup(), synop: L.layerGroup(), both: L.layerGroup() };
+        natKeys.forEach(function (k) { layers['nat:' + k] = L.layerGroup(); });
+        var n = { 1: 0, 2: 0, 3: 0 }, nn = {};
+        var lay = function (s) { return s[6] === 1 ? 'metar' : s[6] === 2 ? 'synop' : s[6] === 3 ? 'both' : 'nat:' + s[8]; };
         d.stationen.forEach(function (s) {
-          n[s[6]]++;
+          if (s[6] === 4) nn[s[8]] = (nn[s[8]] || 0) + 1; else n[s[6]]++;
           var m = L.circleMarker([s[0], s[1]], { renderer: renderer, pane: 'netPane', interactive: false, radius: s[6] === 1 || s[6] === 3 ? 6 : 5,
-            weight: 1.5, color: '#fff', fillColor: s[6] === 2 && s[7] === 'n' ? '#9a9a9a' : NET_COL[s[6]], fillOpacity: 0.95 });
-          m.addTo(s[6] === 1 ? layers.metar : s[6] === 2 ? layers.synop : s[6] === 4 ? layers.nat : layers.both);
+            weight: 1.5, color: '#fff', fillColor: s[6] === 2 && s[7] === 'n' ? '#9a9a9a' : s[6] === 4 ? natCol[s[8]] : NET_COL[s[6]], fillOpacity: 0.95 });
+          m.addTo(layers[lay(s)]);
         });
         // nearest visible station within 8 px of a map point (clicks on tide/current markers never reach the map)
-        var shown = function (s) { return map.hasLayer(s[6] === 1 ? layers.metar : s[6] === 2 ? layers.synop : s[6] === 4 ? layers.nat : layers.both); };
+        var shown = function (s) { return map.hasLayer(layers[lay(s)]); };
         var pick = function (pt) {
           var best = null, bd = 64, b = map.getBounds().pad(0.05);
           for (var i = 0; i < d.stationen.length; i++) {
@@ -387,41 +407,63 @@
           map.getContainer().style.cursor = s ? 'pointer' : '';
           if (!s) { map.closeTooltip(tip); return; }
           tip.setLatLng([s[0], s[1]]).setContent(esc(s[2]) + (s[3] ? ' (' + esc(s[3]) + ')' : s[4] ? ' (' + esc(s[4]) + ')' :
-            s[6] === 4 ? ' (' + esc((NAT[s[8]] || [s[8]])[0].split(',')[0]) + ')' : ''));
+            s[6] === 4 ? ' (' + esc(natLabel(s[8])) + ')' : ''));
           map.openTooltip(tip);
         });
-        var dot = function (c) { return '<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:' + c + ';margin:0 5px 0 2px;"></span>'; };
+        var dot = function (c) { return '<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:' + c + ';margin-right:5px;vertical-align:middle;border:1px solid #fff;flex:none;"></span>'; };
+        var rows = [{ key: 'metar', label: 'Airports with METAR', count: n[1] + n[3], col: NET_COL[1] },
+                    { key: 'synop', label: 'WMO synoptic stations', count: n[2] + n[3], col: NET_COL[2] }]
+          .concat(natKeys.map(function (k) { return { key: 'nat:' + k, label: natLabel(k), count: nn[k], col: natCol[k], live: !!NAT_LIVE[k] }; }));
+        var total = d.stationen.length;
+        var row = function (r) {
+          return '<label style="display:flex;align-items:center;cursor:pointer;margin-left:22px;margin-bottom:1px;min-height:28px;padding:1px 0;font-size:12.5px;">' +
+            '<input type="checkbox" data-net="' + esc(r.key) + '" aria-label="Toggle ' + esc(r.label) + '" style="margin-right:5px;width:16px;height:16px;flex:none;">' +
+            dot(r.col) + esc(r.label) + ' (' + r.count.toLocaleString('en-US') + ')' +
+            (r.live ? '<span title="current reading on click" style="margin-left:4px;color:#2a7;font-size:10px;">●live</span>' : '') + '</label>';
+        };
         box.innerHTML =
-          '<div style="font-weight:bold;font-size:12.5px;margin-bottom:2px;">Official stations</div>' +
-          '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
-            '<input type="checkbox" id="net-metar" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[1]) + 'Airports with METAR (' + (n[1] + n[3]) + ')</label>' +
-          '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
-            '<input type="checkbox" id="net-synop" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[2]) + 'WMO synoptic stations (' + (n[2] + n[3]) + ')</label>' +
-          '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
-            '<input type="checkbox" id="net-nat" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[4]) + 'National & regional networks, open data (' + n[4] + ')</label>' +
-          '<div style="font-size:11px;color:#666;line-height:1.5;">' + dot(NET_COL[3]) + 'both (' + n[3] + ').' + dot('#9a9a9a') + 'WMO receives no reports. ' +
-            'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + '); national/regional: ' +
-            esc(Object.keys(NAT).filter(function (k) { return d.stationen.some(function (s) { return s[8] === k; }); })
-              .map(function (k) { return NAT[k][0].split(',')[0].split(' (')[0]; })
-              .filter(function (v, i, a) { return a.indexOf(v) === i; }).join(', ')) + '.</div>';
-        WS_COUNT.net = d.stationen.length;
+          '<label style="display:flex;align-items:center;cursor:pointer;font-weight:bold;margin-bottom:2px;min-height:30px;padding:2px 0;font-size:12.5px;">' +
+            '<input type="checkbox" data-net-master="1" aria-label="Toggle all weather station networks" style="margin-right:6px;width:18px;height:18px;">' +
+            'Weather station networks: all (' + total.toLocaleString('en-US') + ')</label>' +
+          rows.slice(0, 2).map(row).join('') +
+          '<div style="margin:4px 0 2px 22px;font-size:11px;color:#666;">National & regional networks, open data</div>' +
+          rows.slice(2).map(row).join('') +
+          '<div style="font-size:11px;color:#666;line-height:1.5;margin-top:4px;">' + dot(NET_COL[3]) + 'METAR + SYNOP (' + n[3] + ').' + dot('#9a9a9a') +
+            'WMO receives no reports. <span style="color:#2a7;">●live</span> = current wind on click. ' +
+            'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + ') and the networks listed.</div>';
+        WS_COUNT.net = total;
         showCount();
-        var cbM = document.getElementById('net-metar'), cbS = document.getElementById('net-synop'), cbN = document.getElementById('net-nat');
-        var get = function (k) { try { return localStorage.getItem(k) === '1'; } catch (e) { return false; } };
-        cbM.checked = get('netMetarOn'); cbS.checked = get('netSynopOn'); cbN.checked = get('netNatOn');
+        var cbs = {};
+        Array.prototype.forEach.call(box.querySelectorAll('[data-net]'), function (c) { cbs[c.getAttribute('data-net')] = c; });
+        var master = box.querySelector('[data-net-master]');
+        var get = function (k, alt) { try { var v = localStorage.getItem('netOn:' + k); return v === null ? alt : v === '1'; } catch (e) { return alt; } };
+        var oldNat = (function () { try { return localStorage.getItem('netNatOn') === '1'; } catch (e) { return false; } })();
+        var oldM = (function () { try { return localStorage.getItem('netMetarOn') === '1'; } catch (e) { return false; } })();
+        var oldS = (function () { try { return localStorage.getItem('netSynopOn') === '1'; } catch (e) { return false; } })();
+        Object.keys(cbs).forEach(function (k) { cbs[k].checked = get(k, k === 'metar' ? oldM : k === 'synop' ? oldS : oldNat); });
         var update = function () {
-          var show = { metar: cbM.checked, synop: cbS.checked, both: cbM.checked || cbS.checked, nat: cbN.checked };
+          var show = {};
+          Object.keys(cbs).forEach(function (k) { show[k] = cbs[k].checked; });
+          show.both = show.metar || show.synop;
           Object.keys(layers).forEach(function (k) {
             if (show[k] && !map.hasLayer(layers[k])) layers[k].addTo(map);
             if (!show[k] && map.hasLayer(layers[k])) map.removeLayer(layers[k]);
           });
-          try { localStorage.setItem('netMetarOn', cbM.checked ? '1' : '0'); localStorage.setItem('netSynopOn', cbS.checked ? '1' : '0'); localStorage.setItem('netNatOn', cbN.checked ? '1' : '0'); } catch (e) { /* ignore */ }
+          var on = Object.keys(cbs).filter(function (k) { return cbs[k].checked; }).length;
+          master.checked = on === Object.keys(cbs).length;
+          master.indeterminate = on > 0 && !master.checked;
+          try { Object.keys(cbs).forEach(function (k) { localStorage.setItem('netOn:' + k, cbs[k].checked ? '1' : '0'); }); } catch (e) { /* ignore */ }
         };
-        cbM.addEventListener('change', update); cbS.addEventListener('change', update); cbN.addEventListener('change', update);
+        Object.keys(cbs).forEach(function (k) { cbs[k].addEventListener('change', update); });
+        master.addEventListener('change', function () {
+          var on = this.checked;
+          Object.keys(cbs).forEach(function (k) { cbs[k].checked = on; });
+          update();
+        });
         update();
         var openNet = function (s) {
-          var cbx = s[6] === 1 || s[6] === 3 ? cbM : s[6] === 2 ? cbS : cbN;
-          if (!cbx.checked) { cbx.checked = true; update(); }
+          var cbx = cbs[s[6] === 1 || s[6] === 3 ? 'metar' : s[6] === 2 ? 'synop' : 'nat:' + s[8]];
+          if (cbx && !cbx.checked) { cbx.checked = true; update(); }
           map.closePopup();
           map.flyTo([s[0], s[1]], Math.max(map.getZoom(), 11), { duration: 1.2 });
           map.once('moveend', function () {
@@ -464,131 +506,6 @@
     if (min < 48 * 60) return Math.round(min / 60) + ' h ago';
     return Math.round(min / 1440) + ' days ago';
   }
-  function ppIcon(s) {
-    var age = ppAgeMin(s);
-    if (age > PP_STALE_MIN || s[6] == null || s[5] == null) {
-      return L.divIcon({ className: '', iconSize: [10, 10], iconAnchor: [5, 5],
-        html: '<div style="width:8px;height:8px;border-radius:50%;background:#a5a5a5;border:1px solid #fff;"></div>' });
-    }
-    // heading = direction the wind comes FROM; the arrow points where it blows to
-    var c = ppColour(s[6]), rot = (s[5] + 180) % 360;
-    return L.divIcon({ className: '', iconSize: [26, 26], iconAnchor: [13, 13],
-      html: '<svg width="26" height="26" viewBox="-13 -13 26 26" style="overflow:visible;display:block;">' +
-        '<g transform="rotate(' + rot + ')"><path d="M0,-11 L6,3 L1.6,1.2 L1.6,10 L-1.6,10 L-1.6,1.2 L-6,3 Z" fill="' + c +
-        '" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/></g></svg>' });
-  }
-  function ppPopup(s) {
-    var age = ppAgeMin(s), stale = age > PP_STALE_MIN;
-    var wind = s[6] == null ? 'no wind reading' :
-      '<span style="font-size:18px;font-weight:bold;color:' + (stale ? '#888' : ppColour(s[6])) + ';">' + s[6].toFixed(0) + ' kn</span>' +
-      ' &nbsp;gusts ' + (s[8] != null ? s[8].toFixed(0) : '–') + ', min ' + (s[7] != null ? s[7].toFixed(0) : '–') + ' kn' +
-      (s[5] != null ? '<br>from ' + ppCompass(s[5]) + ' (' + Math.round(s[5]) + '°)' : '');
-    return '<div style="font-family:sans-serif;font-size:12.5px;min-width:250px;max-width:340px;">' +
-      '<div style="font-weight:bold;font-size:14px;">' + esc(s[1]) + '</div>' +
-      '<div style="color:#555;margin-bottom:4px;">Pioupiou ' + esc(s[0]) + ' · ' + ppAgeText(age) + (s[9] ? '' : ' · sensor off') + '</div>' +
-      '<div>' + wind + '</div>' +
-      '<div class="pp-hist" style="margin-top:6px;color:#777;font-size:11.5px;">Loading last 24 h…</div>' +
-      '<div style="margin-top:4px;font-size:11px;color:#777;"><a href="https://www.openwindmap.org/PP' + encodeURIComponent(s[0]) +
-        '" target="_blank" rel="noopener">OpenWindMap</a> · © contributors of the OpenWindMap wind network. ' +
-        'Low-cost sensors, often read 2–5 kn low.</div></div>';
-  }
-  function ppHistory(popupEl, id) {
-    var el = popupEl && popupEl.querySelector('.pp-hist');
-    if (!el) return;
-    fetch('/api/pioupiou_history?id=' + encodeURIComponent(id))
-      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || r.status); return j; }); })
-      .then(function (j) {
-        var d = (j.daten || []).filter(function (z) { return z[2] != null; });
-        if (d.length < 2) { el.textContent = 'No measurements in the last 24 h.'; return; }
-        var W = 300, H = 90, L0 = 22, B = 14, t1 = Date.now(), t0 = t1 - 864e5;
-        var top = Math.max(10, Math.ceil(Math.max.apply(null, d.map(function (z) { return z[3] || z[2]; })) / 5) * 5);
-        var x = function (t) { return L0 + (Date.parse(t) - t0) / 864e5 * (W - L0 - 2); };
-        var y = function (v) { return H - B - v / top * (H - B - 4); };
-        var band = d.map(function (z) { return x(z[0]).toFixed(1) + ',' + y(z[3] != null ? z[3] : z[2]).toFixed(1); }).concat(
-          d.slice().reverse().map(function (z) { return x(z[0]).toFixed(1) + ',' + y(z[1] != null ? z[1] : z[2]).toFixed(1); }));
-        var line = d.map(function (z) { return x(z[0]).toFixed(1) + ',' + y(z[2]).toFixed(1); }).join(' ');
-        var grid = '';
-        for (var v = 0; v <= top; v += top > 30 ? 10 : 5) {
-          grid += '<line x1="' + L0 + '" x2="' + W + '" y1="' + y(v) + '" y2="' + y(v) + '" stroke="#e4e4e4"/>' +
-            '<text x="' + (L0 - 3) + '" y="' + (y(v) + 3) + '" text-anchor="end" font-size="9" fill="#888">' + v + '</text>';
-        }
-        // local-time hour marks every 6 h
-        var hrs = '', d0 = new Date(t0); d0.setMinutes(0, 0, 0);
-        for (var t = d0.getTime() + 3600e3; t < t1; t += 3600e3) {
-          var h = new Date(t).getHours();
-          if (h % 6) continue;
-          var xx = L0 + (t - t0) / 864e5 * (W - L0 - 2);
-          hrs += '<line x1="' + xx + '" x2="' + xx + '" y1="4" y2="' + (H - B) + '" stroke="#eee"/>' +
-            '<text x="' + xx + '" y="' + (H - 3) + '" text-anchor="middle" font-size="9" fill="#888">' + (h < 10 ? '0' : '') + h + ':00</text>';
-        }
-        el.innerHTML = '<div style="color:#555;margin-bottom:2px;">Last 24 h, kn (line = mean, band = min–gust, local time)</div>' +
-          '<svg width="' + W + '" height="' + H + '" style="display:block;">' + grid + hrs +
-          '<polygon points="' + band.join(' ') + '" fill="#3f8fd2" fill-opacity="0.18"/>' +
-          '<polyline points="' + line + '" fill="none" stroke="#1f5fa0" stroke-width="1.5"/></svg>';
-      })
-      .catch(function (e) { el.textContent = 'History could not be loaded: ' + e.message; });
-  }
-  function buildPioupiou(map, body) {
-    var box = document.createElement('div');
-    box.style.cssText = 'margin-top:8px;padding-top:6px;border-top:1px solid #ccc;max-width:290px;';
-    var legend = PP_SCALE.map(function (c, i) {
-      var lo = i ? PP_SCALE[i - 1][0] : 0;
-      return '<span style="display:inline-block;width:10px;height:10px;background:' + c[1] + ';margin:0 2px 0 4px;vertical-align:-1px;"></span>' +
-        (c[0] > 1e8 ? lo + '+' : lo + '–' + c[0]);
-    }).join('');
-    box.innerHTML =
-      '<div style="font-weight:bold;font-size:12.5px;margin-bottom:2px;">Live wind sensors</div>' +
-      '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
-        '<input type="checkbox" id="pp-toggle" style="margin-right:6px;width:16px;height:16px;">Pioupiou / OpenWindMap <span id="pp-count" style="color:#777;margin-left:4px;"></span></label>' +
-      '<div style="font-size:11px;color:#666;line-height:1.5;">Arrow = where the wind blows, colour = mean wind (kn):<br>' + legend +
-        '<br><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#a5a5a5;margin:0 3px 0 4px;"></span>no reading in the last hour. ' +
-        'Updates every 2 min. Wind data © contributors of the ' +
-        '<a href="https://openwindmap.org" target="_blank" rel="noopener">OpenWindMap</a> wind network.</div>';
-    body.appendChild(box);
-    if (!map.getPane('ppPane')) { map.createPane('ppPane'); map.getPane('ppPane').style.zIndex = 625; }
-    var layer = L.layerGroup(), markers = {}, timer = null;
-    var cb = box.querySelector('#pp-toggle'), count = box.querySelector('#pp-count');
-    var load = function () {
-      fetch('/api/pioupiou_live')
-        .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || r.status); return j; }); })
-        .then(function (d) {
-          var live = 0, seen = {};
-          d.stationen.forEach(function (s) {
-            if (ppAgeMin(s) > 1440) return;
-            if (ppAgeMin(s) <= PP_STALE_MIN) live++;
-            seen[s[0]] = 1;
-            var m = markers[s[0]];
-            if (!m) {
-              m = markers[s[0]] = L.marker([s[2], s[3]], { pane: 'ppPane', icon: ppIcon(s), riseOnHover: true });
-              m.bindPopup('', { maxWidth: 360 });
-              m.on('popupopen', function (e) { e.popup.setContent(ppPopup(m.pp)); ppHistory(e.popup.getElement(), m.pp[0]); });
-              m.addTo(layer);
-            } else {
-              m.setLatLng([s[2], s[3]]).setIcon(ppIcon(s));
-            }
-            m.pp = s;
-            m.unbindTooltip().bindTooltip(esc(s[1]) + (s[6] != null && ppAgeMin(s) <= PP_STALE_MIN ? ' · ' + s[6].toFixed(0) + ' kn' : ''), { direction: 'top', offset: [0, -10] });
-          });
-          Object.keys(markers).forEach(function (k) { if (!seen[k]) { layer.removeLayer(markers[k]); delete markers[k]; } });
-          count.textContent = '(' + live + ' live)';
-        })
-        .catch(function (e) { count.textContent = '(not available)'; console.error('pioupiou:', e); });
-    };
-    var set = function (on) {
-      if (on) {
-        layer.addTo(map); load();
-        if (!timer) timer = setInterval(function () { if (!document.hidden) load(); }, 120000);
-      } else {
-        map.removeLayer(layer);
-        if (timer) { clearInterval(timer); timer = null; }
-      }
-      try { localStorage.setItem('ppLiveOn', on ? '1' : '0'); } catch (e) { /* ignore */ }
-    };
-    try { cb.checked = localStorage.getItem('ppLiveOn') === '1'; } catch (e) { cb.checked = false; }
-    cb.addEventListener('change', function () { set(this.checked); });
-    if (cb.checked) set(true);
-  }
-
   function start() {
     var map = window.map;
     var body = document.getElementById('wind-stations-body');
@@ -597,7 +514,7 @@
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) { build(map, d); })
       .catch(function (e) {
-        body.innerHTML = '<span style="color:#a00;">Wind stations could not be loaded.</span>';
+        body.innerHTML = '<span style="color:#a00;">Weather stations could not be loaded.</span>';
         console.error('wind stations:', e);
       });
   }
