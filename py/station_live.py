@@ -361,7 +361,20 @@ def ispra_rmn(i):
                 richtung=_f(d.group(1)) if d else None)
 
 
-NETZE = dict(ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+def venezia(i):
+    v = _ganz('venezia', lambda: _get('https://dati.venezia.it/sites/default/files/dataset/opendata/vento.json',
+                                      headers={'User-Agent': 'Mozilla/5.0'}).json())
+    x = [x for x in v if x['ID_stazione'] == i]
+    if not x:
+        return dict(fehler='station not in the current file')
+    w = re.match(r'\s*([\d.]+) gradi, ([\d.]+) m/s, ([\d.]+) m/s', x[0].get('valore') or '')
+    if not w:
+        return dict(fehler='no wind reading')
+    return dict(zeit=_lokal(x[0]['data'], '%Y-%m-%d %H:%M:%S', _mez()), richtung=_f(w.group(1)), kn=_f(w.group(2), MS),
+                boe_kn=_f(w.group(3), MS))
+
+
+NETZE = dict(venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 

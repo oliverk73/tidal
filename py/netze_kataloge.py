@@ -21,6 +21,8 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   suedtirol   Landeswetterdienst Suedtirol, Stationen mit Sensor WG
   frost       MET Norway Frost API (Client-ID ~/.config/frost_client_id), Quellen mit laufender wind_speed-Reihe
   ispra_rmn   ISPRA Rete Mareografica Nazionale, aus dem Kartenskript von mareografico.it
+  venezia     Comune di Venezia CPSM, Windstationen der Lagune (dati.venezia.it vento.json)
+  snpa_mare   Rete Mareografica SNPA (ARPA FVG, ARPAE), aus dem Kartenskript von mareografico.it
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -232,9 +234,51 @@ def ispra_rmn():
     schreiben('ispra_rmn', z)
 
 
+VENEZIA = 'https://dati.venezia.it/sites/default/files/dataset/opendata/%s.json'
+
+
+def venezia():
+    """Comune di Venezia, Centro Previsioni e Segnalazioni Maree (CPSM; betreibt seit 2019 auch die frueheren
+    ISPRA-Lagunenpegel): vento.json hat keine Koordinaten -> aus den anderen Dateien derselben Stationsnummer.
+    1038 Diga Sud Lido Faro steht in keiner Datei mit Position und bleibt weg (Position nicht raten)."""
+    v = json.load(open(holen(VENEZIA % 'vento', 'venezia_vento.json', headers={'User-Agent': 'Mozilla/5.0'})))
+    pos = {}
+    for f in ('livello', 'umidita', 'pressione', 'onde', 'radiazione'):
+        try:
+            for x in json.load(open(holen(VENEZIA % f, 'venezia_%s.json' % f, headers={'User-Agent': 'Mozilla/5.0'}))):
+                if x.get('latDDN'):
+                    pos.setdefault(x['ID_stazione'], (float(x['latDDN']), float(x['lonDDE'])))
+        except (requests.RequestException, ValueError):
+            pass
+    z = [(x['ID_stazione'], x['stazione'], pos[x['ID_stazione']][0], pos[x['ID_stazione']][1], None)
+         for x in v if x['ID_stazione'] in pos]
+    weg = [x['stazione'] for x in v if x['ID_stazione'] not in pos]
+    if weg:
+        print('  venezia ohne Position:', ', '.join(weg))
+    schreiben('venezia', z)
+
+
+def snpa_mare():
+    """Rete Mareografica SNPA (ARPA FVG, ARPAE) aus dem Kartenskript von mareografico.it (Nw = 11)."""
+    r = requests.get('https://www.mareografico.it/', headers=UA, timeout=120, cookies={'A4IxScreenSize': '1920@1080@1@it'})
+    r.raise_for_status()
+    s = r.text
+    feld = lambda n: json.loads(re.search(r'var %s=(\[[^\]]*\]);' % n, s).group(1).replace("'", '"'))
+    la, lo, nw = feld('La'), feld('Lo'), feld('Nw')
+    z = []
+    for i, stz, rest in re.findall(r"St\[(\d+)\]\.bindPopup\(\"<div class='infohome'><p class='popup-network'>RETE MAREOGRAFICA SNPA</p>"
+                                   r"<p class='popup-station'>([^<]*)</p>(.*?)\"\);", s):
+        i = int(i)
+        if nw[i] != 11:
+            continue
+        ag = 'fvg' if 'meteo.fvg.it' in rest else 'arpae' if 'arpae.it' in rest else 'snpa'
+        z.append(('%s-%s' % (ag, re.sub(r'[^a-z0-9]+', '-', stz.lower()).strip('-')), stz.title(), la[i], lo[i], None))
+    schreiben('snpa_mare', z)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
-             frost=frost, ispra_rmn=ispra_rmn)
+             frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):

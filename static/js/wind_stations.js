@@ -240,12 +240,15 @@
     lombardia: ['ARPA Lombardia, 10-min', 'https://www.arpalombardia.it/temi-ambientali/meteo-e-clima/form-richiesta-dati/'],
     suedtirol: ['Landeswetterdienst Südtirol, 10-min', 'https://wetter.provinz.bz.it/'],
     frost: ['MET Norway (Frost)', 'https://seklima.met.no/'],
-    ispra_rmn: ['ISPRA Rete Mareografica Nazionale (tide gauge with weather sensors)', 'https://www.mareografico.it/'],
+    ispra_rmn: ['ISPRA Rete Mareografica Nazionale (tide gauge with weather sensors)', 'https://www.mareografico.it/',
+      'Data: ISPRA, please cite <a href="https://doi.org/10.83182/ispra-rmn" target="_blank" rel="noopener">doi:10.83182/ispra-rmn</a>'],
+    venezia: ['Comune di Venezia, tide centre (CPSM)', 'https://www.comune.venezia.it/content/dati-dalle-stazioni-rilevamento'],
+    snpa_mare: ['Rete Mareografica SNPA (regional agency)', '{agency}'],
     meteotrentino: ['Meteotrentino (all weather stations, wind not at every one)', 'https://www.meteotrentino.it/#!/content?menuItemDesktop=111']
   };
   // networks whose current reading the popup fetches on click, one station at a time (/api/station_live, py/station_live.py)
   var NAT_LIVE = { pioupiou: 1, ndbc: 1, coops: 1, fmi: 1, imgw: 1, lhmt: 1, ee: 1, meteocat: 1, lombardia: 1, suedtirol: 1,
-    meteotrentino: 1, ispra_rmn: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
+    meteotrentino: 1, ispra_rmn: 1, venezia: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
   function loadNatLive(popupEl, s) {
     var el = popupEl && popupEl.querySelector('.nat-live');
     if (!el) return;
@@ -268,13 +271,16 @@
   function netPopup(s) {
     if (s[6] === 4) {
       var nn = NAT[s[8]] || [s[8], ''];
-      var url = nn[1].replace('{id}', encodeURIComponent(s[9]));
+      var url = nn[1] === '{agency}' ? (s[9].indexOf('fvg-') === 0 ? 'https://www.meteo.fvg.it/monitor-mare.php?ln' :
+        s[9].indexOf('arpae-') === 0 ? 'https://www.arpae.it/it/temi-ambientali/mare/dati-e-indicatori/rete-di-monitoraggio-meteo-marina' :
+        'https://www.snpambiente.it/dati/clima-e-meteo/') : nn[1].replace('{id}', encodeURIComponent(s[9]));
       return '<div style="font-family:sans-serif;font-size:12.5px;min-width:220px;max-width:340px;">' +
         '<div style="font-weight:bold;font-size:14px;">' + esc(s[2]) + '</div>' +
         '<div style="color:#555;margin-bottom:3px;">' + esc(nn[0]) + (s[5] != null ? ' · ' + esc(s[5]) + ' m' : '') + '</div>' +
         '<div>ID <b>' + esc(s[9]) + '</b>' + (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">data source</a>' : '') + '</div>' +
         '<div style="color:#777;font-size:11.5px;margin-top:2px;">' + s[0].toFixed(4) + ', ' + s[1].toFixed(4) + '</div>' +
         (NAT_LIVE[s[8]] ? '<div class="nat-live" style="margin-top:6px;color:#777;font-size:11.5px;">Loading current wind…</div>' : '') +
+        (nn[2] ? '<div style="color:#777;font-size:11px;margin-top:3px;">' + nn[2] + '</div>' : '') +
         '<div style="color:#777;font-size:11px;margin-top:3px;">Open wind measurements of a national or regional network.</div></div>';
     }
     var lines = [];
