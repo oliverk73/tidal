@@ -548,7 +548,41 @@ def lvgmc(i):
                 richtung=_f(r.get('wind_direction_actual')))
 
 
-NETZE = dict(lvgmc=lvgmc, ipma=ipma, vedur=vedur, dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+_MF = {'token': None, 'bis': 0}
+
+
+def mf_token():
+    """Meteo-France-Portal: OAuth2 Client-Credentials. ~/.config/meteofrance_app_id enthaelt die Application ID
+    (oder den ganzen Curl-Befehl des Portals; dann der Wert nach 'Basic'). Token gilt 1 h -> 55 min wiederverwendet."""
+    if _MF['token'] and time.time() < _MF['bis']:
+        return _MF['token']
+    t = open(os.path.expanduser('~/.config/meteofrance_app_id')).read()
+    m = re.search(r'Basic\s+([A-Za-z0-9+/=_-]+)', t)
+    app = m.group(1) if m else t.split()[0].strip()
+    r = requests.post('https://portail-api.meteofrance.fr/token', data={'grant_type': 'client_credentials'},
+                      headers=dict(UA, Authorization='Basic ' + app), timeout=30)
+    r.raise_for_status()
+    _MF.update(token=r.json()['access_token'], bis=time.time() + 3300)
+    return _MF['token']
+
+
+def meteofrance(i):
+    """DPObs v1 station/infrahoraire-6m (letzter 6-min-Wert; ff/fxi10 m/s, dd Grad, validity_time UTC)."""
+    r = requests.get('https://public-api.meteofrance.fr/public/DPObs/v1/station/infrahoraire-6m',
+                     params={'id_station': i, 'format': 'json'}, headers=dict(UA, Authorization='Bearer ' + mf_token()),
+                     timeout=25)
+    if r.status_code == 401:
+        _MF['token'] = None
+        r = requests.get(r.url, headers=dict(UA, Authorization='Bearer ' + mf_token()), timeout=25)
+    r.raise_for_status()
+    d = [x for x in r.json() if x.get('ff') is not None]
+    if not d:
+        return dict(fehler='no wind in the latest report')
+    x = max(d, key=lambda x: x['validity_time'])
+    return dict(zeit=x['validity_time'], kn=_f(x['ff'], MS), boe_kn=_f(x.get('fxi10'), MS), richtung=_f(x.get('dd')))
+
+
+NETZE = dict(meteofrance=meteofrance, lvgmc=lvgmc, ipma=ipma, vedur=vedur, dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 

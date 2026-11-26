@@ -33,6 +33,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   ipma        IPMA Portugal, offene Beobachtungen (24 h), nur Stationen mit Wind
   vedur       Vedurstofa Islands, Stationsseiten + xmlweather, nur Stationen mit Wind
   lvgmc       Lettland LVGMC, weather_monitoring_points (Stationen mit Wind)
+  meteofrance_obs  Meteo-France Paket-Beobachtungen (alle Stationen mit Wind; Application ID ~/.config/meteofrance_app_id)
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -466,12 +467,40 @@ def lvgmc():
                         if x.get('videja_veja_atrums') or x.get('veja_brazmas')])
 
 
+def meteofrance_obs():
+    """Meteo-France DPPaquetObs v1 paquet/stations/horaire (alle Stationen, eine Stunde) + DPObs liste-stations (Namen):
+    alle Stationen mit Wind. Die bisherige stationen_meteofrance.csv (Klima-Archiv, mit Auswertungsspalten) bleibt;
+    spotsuche.py nimmt sie zuerst, gleiche Kennungen hier werden dort ignoriert."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import station_live
+    from datetime import datetime, timedelta, timezone
+    h = {'Authorization': 'Bearer ' + station_live.mf_token()}
+    stunde = (datetime.now(timezone.utc) - timedelta(hours=1)).strftime('%Y-%m-%dT%H:00:00Z')
+    pk = json.load(open(holen('https://public-api.meteofrance.fr/public/DPPaquetObs/v1/paquet/stations/horaire?date=%s&format=json'
+                              % stunde, 'meteofrance_paquet_horaire.json', headers=h, timeout=300)))
+    ls = open(holen('https://public-api.meteofrance.fr/public/DPObs/v1/liste-stations', 'meteofrance_liste.csv', headers=h),
+              encoding='utf-8', errors='replace').read().splitlines()
+    namen = {z.split(';')[0]: z.split(';') for z in ls[1:] if ';' in z}
+    z = []
+    for x in pk:
+        i = x.get('geo_id_insee')
+        if i and x.get('ff') is not None and x.get('lat') is not None:
+            n = namen.get(i, [i, '', i])
+            z.append((i, n[2].replace('_', ' '), x['lat'], x['lon'], n[5] if len(n) > 5 else None))
+    schreiben('meteofrance_obs', [(a, b, c, d, e) for a, b, c, d, e in z])
+    # gleiches Netz wie die alte Liste: Spalte netz auf 'meteofrance' setzen
+    p = os.path.join(S, 'stationen_meteofrance_obs.csv')
+    t = open(p, encoding='utf-8').read().replace('\nmeteofrance_obs,', '\nmeteofrance,')
+    open(p, 'w', encoding='utf-8').write(t)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
              frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
              puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae,
              dwd_poi=dwd_poi, dwd_strasse=dwd_strasse, midas=midas,
-             ipma=ipma, vedur=vedur, lvgmc=lvgmc)
+             ipma=ipma, vedur=vedur, lvgmc=lvgmc,
+             meteofrance_obs=meteofrance_obs)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):
