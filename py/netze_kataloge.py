@@ -28,6 +28,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   arpal       ARPAL Liguria, OMIRL REST stations/Vento
   arpae       ARPAE Emilia-Romagna, Echtzeitdatei realtime.jsonl (Stationen mit Wind)
   dwd_poi     DWD weather_reports/poi (aktuelle Stundenwerte), Koordinaten aus dem MOSMIX-Stationskatalog
+  dwd_strasse DWD-Strassenwetterstationen (BUFR je Region), nur mit Windmessung
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -369,11 +370,26 @@ def dwd_poi():
     schreiben('dwd_poi', z)
 
 
+def dwd_strasse():
+    """DWD-Strassenwetterstationen (weather_reports/road_weather_stations, BUFR je Region, eccodes): nur Stationen,
+    die in der neuesten Meldung Wind haben, ohne kaputte Koordinaten (Laenge 0)."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import station_live
+    reg = re.findall(r'href="([A-Z]{2})/"', requests.get(station_live.STRASSE, headers=UA, timeout=60).text)
+    z = []
+    for r in reg:
+        for k, x in station_live.strasse_region(r).items():
+            if x['ff'] is not None and x['lat'] and x['lon'] and abs(x['lon']) > 0.5 and 47 < x['lat'] < 56:
+                nm = re.sub(r'^GMA\s+', '', x['name'], flags=re.I)        # Glaettemeldeanlage, kein Ortsname
+                z.append(('%s-%s' % (r, k), nm if not nm.isupper() else nm.title(), x['lat'], x['lon'], None))
+    schreiben('dwd_strasse', z)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
              frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
              puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae,
-             dwd_poi=dwd_poi)
+             dwd_poi=dwd_poi, dwd_strasse=dwd_strasse)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):

@@ -451,7 +451,68 @@ def dwd_poi(i):
     return dict(fehler='station reports no wind')
 
 
-NETZE = dict(dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+STRASSE = 'https://opendata.dwd.de/weather/weather_reports/road_weather_stations/'
+
+
+def strasse_region(region):
+    """Neueste BUFR-Datei einer Region der DWD-Strassenwetterstationen lesen (Dateiname enthaelt ein Laenderkuerzel,
+    daher aus dem Verzeichnis). Ergebnis {kennung: dict(name, lat, lon, zeit, ff m/s, dd, fx m/s)}."""
+    import eccodes
+    liste = _get(STRASSE + region + '/').text
+    f = re.findall(r'href="([^"]*LATEST[^"]*)"', liste)
+    if not f:
+        return {}
+    roh = _get(STRASSE + region + '/' + f[0]).content
+    erg = {}
+    pos = 0
+    while True:
+        h = eccodes.codes_new_from_message(roh[pos:]) if pos < len(roh) else None
+        if h is None:
+            break
+        try:
+            pos += eccodes.codes_get(h, 'totalLength')
+            eccodes.codes_set(h, 'unpack', 1)
+            n = eccodes.codes_get(h, 'numberOfSubsets')
+
+            def arr(k):
+                try:
+                    v = list(eccodes.codes_get_array(h, k))
+                except Exception:                                 # noqa: BLE001
+                    return [None] * n
+                return v * n if len(v) == 1 and n > 1 else v
+            fehlt = lambda v: v is None or v == eccodes.CODES_MISSING_DOUBLE or v == eccodes.CODES_MISSING_LONG
+            ids, nam, la, lo = arr('shortStationName'), arr('stationOrSiteName'), arr('latitude'), arr('longitude')
+            jj, mm, tt, hh, mi = arr('year'), arr('month'), arr('day'), arr('hour'), arr('minute')
+            ff, dd, fx = arr('windSpeed'), arr('windDirection'), arr('maximumWindGustSpeed')
+            for k in range(n):
+                if not ids[k]:
+                    continue
+                try:
+                    zeit = '%04d-%02d-%02dT%02d:%02d:00Z' % (jj[k], mm[k], tt[k], hh[k], mi[k])
+                except (TypeError, ValueError):
+                    zeit = None
+                erg[str(ids[k]).strip()] = dict(name=str(nam[k] or '').strip(), lat=None if fehlt(la[k]) else float(la[k]),
+                                                lon=None if fehlt(lo[k]) else float(lo[k]), zeit=zeit,
+                                                ff=None if fehlt(ff[k]) else float(ff[k]),
+                                                dd=None if fehlt(dd[k]) else float(dd[k]),
+                                                fx=None if fehlt(fx[k]) else float(fx[k]))
+        except Exception:                                         # noqa: BLE001
+            break
+        finally:
+            eccodes.codes_release(h)
+    return erg
+
+
+def dwd_strasse(i):
+    region, kenn = i.split('-', 1)
+    st = _ganz('strasse_' + region, lambda: strasse_region(region))
+    x = st.get(kenn)
+    if not x or x['ff'] is None:
+        return dict(fehler='no wind in the latest report')
+    return dict(zeit=x['zeit'], kn=_f(x['ff'], MS), boe_kn=_f(x['fx'], MS), richtung=x['dd'])
+
+
+NETZE = dict(dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 
