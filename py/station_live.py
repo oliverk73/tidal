@@ -374,7 +374,21 @@ def venezia(i):
                 boe_kn=_f(w.group(3), MS))
 
 
-NETZE = dict(venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+def puertos(i):
+    """PORTUS lastData: Werte als ganze Zahlen mit 'factor' (Wert/factor = m/s), Zeit UTC."""
+    r = requests.post('https://portus.puertos.es/portussvr/api/lastData/station/%s' % int(i), params={'locale': 'es'},
+                      json=['WIND'], headers=UA, timeout=25)
+    r.raise_for_status()
+    j = r.json() or {}
+    w = {x['paramEseoo']: _f(x['valor'], 1 / x['factor'] if x.get('factor') else 1) for x in j.get('datos') or []}
+    if w.get('WindSpeed') is None:
+        return dict(fehler='no wind reading')
+    return dict(zeit=_lokal(j['fecha'][:19], '%Y-%m-%d %H:%M:%S', 0), kn=round(w['WindSpeed'] * MS, 1),
+                boe_kn=round(w['WindSpeedMax'] * MS, 1) if w.get('WindSpeedMax') is not None else None,
+                richtung=w.get('WindDir'))
+
+
+NETZE = dict(puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 

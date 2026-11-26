@@ -23,6 +23,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   ispra_rmn   ISPRA Rete Mareografica Nazionale, aus dem Kartenskript von mareografico.it
   venezia     Comune di Venezia CPSM, Windstationen der Lagune (dati.venezia.it vento.json)
   snpa_mare   Rete Mareografica SNPA (ARPA FVG, ARPAE), aus dem Kartenskript von mareografico.it
+  puertos     Puertos del Estado PORTUS, Echtzeit-Windstationen (ohne fremde EXTERNOS-Bojen)
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -161,6 +162,13 @@ def socib():
             z.append(('%s' % st.split('_', 1)[1].rsplit('-', 1)[0] + '-' + art, name.strip(), float(w[0]), float(w[1]), None))
         except requests.RequestException as e:
             print('  socib', st, e)
+    # SOCIB-Stationen, die PORTUS auch fuehrt (mit Live-Wert), dort lassen: <= 1 km zu einem PORTUS-Eintrag "SOCIB"
+    pp = os.path.join(S, 'stationen_puertos.csv')
+    if os.path.exists(pp):
+        po = [(float(r['lat']), float(r['lon'])) for r in csv.DictReader(open(pp, encoding='utf-8')) if 'SOCIB' in r['name']]
+        n = len(z)
+        z = [x for x in z if not any(abs(x[2] - a) < 0.009 and abs(x[3] - b) < 0.012 for a, b in po)]
+        print('  socib: %d schon bei PORTUS' % (n - len(z)))
     schreiben('socib', z)
 
 
@@ -276,9 +284,25 @@ def snpa_mare():
     schreiben('snpa_mare', z)
 
 
+def puertos():
+    """Puertos del Estado, PORTUS (portus.puertos.es/portussvr/api, die Schnittstelle der eigenen Karte):
+    estaciones/rt/WIND = alle Echtzeit-Windstationen (Hafenwetterstationen, Pegel, REDEXT/REDCOS-Bojen).
+    Ohne EXTERNOS (UKMO-, Marine-Institute-, IHP-, MeteoGalicia-Bojen = fremde Netze, K1 steht schon bei NDBC).
+    Das Feld incidencia ("Sin trasmision") stimmt oft nicht (Tarifa sendet) -> alle aufnehmen."""
+    d = json.load(open(holen('https://portus.puertos.es/portussvr/api/estaciones/rt/WIND?locale=es', 'puertos_rt_wind.json')))
+    z = []
+    for x in d:
+        if (x.get('red') or {}).get('tipoRed') == 'EXTERNOS' or (x.get('red') or {}).get('nombre') == 'EXTERNOS':
+            continue
+        nm = re.sub(r'^(Estaci[oó]n|Estac\.|Est\.) Meteor[oó]l[oó]gica( de| del)? ', '', x['nombre'], flags=re.I)
+        z.append((str(x['id']), nm, x['latitud'], x['longitud'], None))
+    schreiben('puertos', z)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
-             frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare)
+             frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
+             puertos=puertos)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):
