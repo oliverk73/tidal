@@ -52,6 +52,31 @@ def laden():
         print(datei, len(r.content) // 1024, 'KB')
 
 
+def namen_putzen(n):
+    """Sichtbare Stoerzeichen aus Stationsnamen (Oliver 26.11.2026, "Masirah )"): abgeschnittene Klammern des
+    AWC-Katalogs, Sternchen/Kommas am Rand (OSCAR), Unterstriche (OSCAR, Meteo-France, AEMET "Evc_"),
+    "?" fuer einen Apostroph (AEMET "L?Estartit"), Grossschreibung."""
+    n = ' '.join(str(n or '').split())
+    n = re.sub(r'^Evc_', '', n)                                   # AEMET: Klimabeobachtungsstation, kein Ortsname
+    n = re.sub(r'_SAPC$', '', n)                                  # Meteo-France: Betreiberkennung
+    n = n.replace('_', ' ')
+    n = re.sub(r'(?<=[A-Za-z])\?(?=[A-Za-zÀ-ÿ])', "'", n)          # D?Aro -> D'Aro
+    n = n.replace('Para\'ba', 'Paraíba')
+    n = re.sub(r'[\s?*,;:/+-]+$', '', n)                           # Rand: "Tumaco *", "Pinar Del Rio,", "Edson CR10?"
+    n = re.sub(r'^[\s,;:/)*+-]+', '', n)
+    n = re.sub(r'\s+([,.)])', r'\1', n)                            # "Breezy Point , NY", "Masirah )"
+    n = re.sub(r'\(\s*\)', '', n)
+    while n.count(')') > n.count('('):                             # abgeschnittene Klammer: "Masirah)" -> "Masirah"
+        i = n.rfind(')') if n.endswith(')') else n.find(')')
+        n = (n[:i] + n[i + 1:]).strip()
+    if n.count('(') > n.count(')'):
+        n = n + ')'
+    n = ' '.join(n.split())
+    if n.isupper() and len(n) > 3:
+        n = titel(n)
+    return n
+
+
 def titel(s):
     """OSCAR-Namen stehen meist in Grossbuchstaben."""
     s = ' '.join((s or '').split())
@@ -348,6 +373,7 @@ def main(argv):
             n_nat += 1
     print('nationale Netze:', n_nat)
     for s in liste:
+        s[2] = namen_putzen(s[2]) or s[2]
         if isinstance(s[5], float):
             s[5] = round(s[5])
     aus = dict(stand=__import__('datetime').date.today().isoformat(),

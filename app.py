@@ -2500,7 +2500,7 @@ def api_pioupiou_live():
         loc, m, st = s.get("location") or {}, s.get("measurements") or {}, s.get("status") or {}
         if loc.get("latitude") is None or loc.get("longitude") is None:
             continue
-        name = ((s.get("meta") or {}).get("name") or "").strip() or "Pioupiou %s" % s.get("id")
+        name = " ".join(((s.get("meta") or {}).get("name") or "").split()) or "Pioupiou %s" % s.get("id")
         zeilen.append([s.get("id"), name, round(loc["latitude"], 5), round(loc["longitude"], 5), m.get("date"),
                        m.get("wind_heading"), _pp_kn(m.get("wind_speed_avg")), _pp_kn(m.get("wind_speed_min")),
                        _pp_kn(m.get("wind_speed_max")), 1 if st.get("state") == "on" else 0])
