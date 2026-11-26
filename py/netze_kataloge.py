@@ -508,7 +508,8 @@ def knmi10():
          if x['ff'] == x['ff'] and i[2:] not in alt]
     schreiben('knmi10', z)
     p = os.path.join(S, 'stationen_knmi10.csv')
-    open(p, 'w', encoding='utf-8').write(open(p, encoding='utf-8').read().replace('\nknmi10,', '\nknmi,'))
+    t = open(p, encoding='utf-8').read().replace('\nknmi10,', '\nknmi,')      # erst lesen, dann schreiben
+    open(p, 'w', encoding='utf-8').write(t)
 
 
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
