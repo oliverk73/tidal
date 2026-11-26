@@ -239,8 +239,30 @@
     socib: ['SOCIB (Balearic Islands)', 'https://apps.socib.es/data-catalog/'],
     lombardia: ['ARPA Lombardia, 10-min', 'https://www.arpalombardia.it/temi-ambientali/meteo-e-clima/form-richiesta-dati/'],
     suedtirol: ['Landeswetterdienst Südtirol, 10-min', 'https://wetter.provinz.bz.it/'],
+    frost: ['MET Norway (Frost)', 'https://seklima.met.no/'],
     meteotrentino: ['Meteotrentino (all weather stations, wind not at every one)', 'https://www.meteotrentino.it/#!/content?menuItemDesktop=111']
   };
+  // networks whose current reading the popup fetches on click, one station at a time (/api/station_live, py/station_live.py)
+  var NAT_LIVE = { pioupiou: 1, ndbc: 1, coops: 1, fmi: 1, imgw: 1, lhmt: 1, ee: 1, meteocat: 1, lombardia: 1, suedtirol: 1,
+    meteotrentino: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
+  function loadNatLive(popupEl, s) {
+    var el = popupEl && popupEl.querySelector('.nat-live');
+    if (!el) return;
+    fetch('/api/station_live?netz=' + encodeURIComponent(s[8]) + '&id=' + encodeURIComponent(s[9]))
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j.fehler) { el.textContent = 'No current wind: ' + j.fehler; return; }
+        var age = (Date.now() - Date.parse(j.zeit)) / 60000;
+        var c = j.kn == null ? '#777' : ppColour(j.kn);
+        el.innerHTML = '<span style="font-size:16px;font-weight:bold;color:' + (age > 180 ? '#888' : c) + ';">' +
+          (j.kn == null ? '–' : j.kn.toFixed(0)) + ' kn</span>' +
+          (j.boe_kn != null ? ' &nbsp;gusts ' + j.boe_kn.toFixed(0) + ' kn' : '') +
+          (j.richtung != null ? ' · from ' + ppCompass(j.richtung) + ' (' + Math.round(j.richtung) + '°)' : '') +
+          '<div style="color:#777;">' + ppAgeText(age) + ' (' + new Date(j.zeit).toLocaleString([], { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }) + ')' +
+          (j.hinweis ? ' · ' + esc(j.hinweis) : '') + '</div>';
+      })
+      .catch(function (e) { el.textContent = 'Current wind could not be loaded: ' + e.message; });
+  }
   var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {
     if (s[6] === 4) {
@@ -251,7 +273,8 @@
         '<div style="color:#555;margin-bottom:3px;">' + esc(nn[0]) + (s[5] != null ? ' · ' + esc(s[5]) + ' m' : '') + '</div>' +
         '<div>ID <b>' + esc(s[9]) + '</b>' + (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">data source</a>' : '') + '</div>' +
         '<div style="color:#777;font-size:11.5px;margin-top:2px;">' + s[0].toFixed(4) + ', ' + s[1].toFixed(4) + '</div>' +
-        '<div style="color:#777;font-size:11px;margin-top:3px;">Open wind measurements of a national or regional network, usable to check the forecast models.</div></div>';
+        (NAT_LIVE[s[8]] ? '<div class="nat-live" style="margin-top:6px;color:#777;font-size:11.5px;">Loading current wind…</div>' : '') +
+        '<div style="color:#777;font-size:11px;margin-top:3px;">Open wind measurements of a national or regional network.</div></div>';
     }
     var lines = [];
     if (s[3]) lines.push('ICAO <b>' + esc(s[3]) + '</b> · <a href="https://aviationweather.gov/data/metar/?ids=' + encodeURIComponent(s[3]) +
@@ -328,6 +351,7 @@
           if (!s) return;
           var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(netPopup(s)).openOn(map);
           if (s[3]) loadMetar(p.getElement(), s[3]);
+          if (s[6] === 4) loadNatLive(p.getElement(), s);
         });
         var tip = L.tooltip({ direction: 'top', offset: [0, -6] }), tipFor = null, last = 0;
         map.on('mousemove', function (e) {
@@ -380,6 +404,7 @@
           map.once('moveend', function () {
             var p = L.popup({ maxWidth: 380, offset: [0, -4] }).setLatLng([s[0], s[1]]).setContent(netPopup(s)).openOn(map);
             if (s[3]) loadMetar(p.getElement(), s[3]);
+          if (s[6] === 4) loadNatLive(p.getElement(), s);
           });
         };
         d.stationen.forEach(function (s) {

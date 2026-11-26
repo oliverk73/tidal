@@ -19,6 +19,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   socib       Balearen SOCIB THREDDS mooring/weather_station (Bojen + Kuestenstationen), Position aus OPeNDAP
   lombardia   ARPA Lombardia Sensoren "Velocita Vento", aktiv (lokal: quellen/thermik/lomb_sensori.json)
   suedtirol   Landeswetterdienst Suedtirol, Stationen mit Sensor WG
+  frost       MET Norway Frost API (Client-ID ~/.config/frost_client_id), Quellen mit laufender wind_speed-Reihe
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -191,8 +192,31 @@ def meteotrentino():
     schreiben('meteotrentino', z)
 
 
+def frost_id():
+    return open(os.path.expanduser('~/.config/frost_client_id')).readline().strip()
+
+
+def frost():
+    """MET Norway Frost (CC BY 4.0, Client-ID in ~/.config/frost_client_id): Quellen mit laufender wind_speed-Reihe."""
+    au = (frost_id(), '')
+    ts = requests.get('https://frost.met.no/observations/availableTimeSeries/v0.jsonld', params={'elements': 'wind_speed'},
+                      auth=au, headers=UA, timeout=300).json()['data']
+    aktiv = {x['sourceId'].split(':')[0] for x in ts if not x.get('validTo')}
+    src = requests.get('https://frost.met.no/sources/v0.jsonld', auth=au, headers=UA, timeout=300,
+                       params={'types': 'SensorSystem', 'fields': 'id,name,shortName,geometry,masl'}).json()['data']
+    z = []
+    for q in src:
+        g = q.get('geometry') or {}
+        # SN >= 100000 = fremde Stationen (WMO-basiert, z.B. Sodankyla = FMI), stehen schon in ihrem eigenen Netz
+        if q['id'] in aktiv and g.get('coordinates') and int(q['id'][2:]) < 100000:
+            nm = (q.get('name') or q['id']).title()
+            z.append((q['id'], nm, g['coordinates'][1], g['coordinates'][0], q.get('masl')))
+    schreiben('frost', z)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
-             lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino)
+             lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
+             frost=frost)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):

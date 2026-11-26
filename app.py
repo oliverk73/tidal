@@ -2509,6 +2509,30 @@ def api_pioupiou_live():
     return jsonify(erg)
 
 
+_STATION_LIVE = {}
+
+
+@app.route("/api/station_live")
+def api_station_live():
+    """Aktueller Wind EINER Station eines nationalen/regionalen Netzes, nur auf Klick im Popup (26.11.2026);
+    py/station_live.py, 5 min Zwischenspeicher je Station."""
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "py"))
+    import station_live
+    netz, sid = request.args.get("netz", ""), request.args.get("id", "")
+    if not re.fullmatch(r"[a-z_]{2,20}", netz) or not re.fullmatch(r"[A-Za-z0-9._-]{1,40}", sid):
+        return jsonify({"fehler": "bad request"}), 400
+    k, jetzt = (netz, sid), datetime.utcnow()
+    c = _STATION_LIVE.get(k)
+    if c and (jetzt - c[0]).total_seconds() < 300:
+        return jsonify(c[1])
+    erg = station_live.hole(netz, sid)
+    if len(_STATION_LIVE) > 3000:
+        _STATION_LIVE.clear()
+    _STATION_LIVE[k] = (jetzt, erg)
+    return jsonify(erg)
+
+
 @app.route("/api/pioupiou_history")
 def api_pioupiou_history():
     """Letzte 24 h eines Sensors (Archiv-API), 5 min Zwischenspeicher. Zeilen [zeit_utc, min_kn, mittel_kn, max_kn, richtung]."""
