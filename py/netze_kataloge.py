@@ -1,0 +1,188 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Stationsverzeichnisse weiterer offener Windnetze fuer die Karte (Oliver 26.11.2026, Punkte 1-3 der Netzliste).
+
+Schreibt je Netz quellen/thermik/spotsuche/stationen_<netz>.csv (netz,id,name,lat,lon,alt); py/spotsuche.py nimmt
+alle stationen_*.csv in stationen_alle.csv auf, py/stationsnetz.py daraus die Kartenebene "National networks".
+Rohdateien unter quellen/thermik/spotsuche/roh/.
+
+    venv/bin/python py/netze_kataloge.py [netz,netz,...]     (ohne Angabe: alle)
+
+Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
+  ndbc        NOAA NDBC activestations.xml, met=y, ohne NOS/CO-OPS (stehen schon als coops drin)
+  aemet       AEMET OpenData: Positionen aus den Stundendateien des Sammlers (quellen/thermik/aemet), nur mit vv
+  fmi         FMI open data WFS fmi::ef::stations, Netze "Automaattinen saeaasema" + Mastohavaintoasema
+  imgw        IMGW-PIB danepubliczne /api/data/meteo (automatische Stationen; nur mit Windwert)
+  lhmt        Litauen api.meteo.lt/v1/stations (AMS = automatische Wetterstationen)
+  ee          Estland Keskkonnaagentuur observations.php (nur Stationen mit Windwert)
+  meteocat    Katalonien XEMA, Socrata-Datensatz yqwd-vj5e, nur operativ
+  socib       Balearen SOCIB THREDDS mooring/weather_station (Bojen + Kuestenstationen), Position aus OPeNDAP
+  lombardia   ARPA Lombardia Sensoren "Velocita Vento", aktiv (lokal: quellen/thermik/lomb_sensori.json)
+  suedtirol   Landeswetterdienst Suedtirol, Stationen mit Sensor WG
+"""
+import csv
+import glob
+import gzip
+import json
+import os
+import re
+import sys
+import xml.etree.ElementTree as ET
+
+import requests
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+S = os.path.join(ROOT, 'quellen', 'thermik', 'spotsuche')
+ROH = os.path.join(S, 'roh')
+UA = {'User-Agent': 'weather-tides/1.0'}
+
+
+def holen(url, datei, timeout=120, **kw):
+    os.makedirs(ROH, exist_ok=True)
+    p = os.path.join(ROH, datei)
+    r = requests.get(url, headers=dict(UA, **kw.pop('headers', {})), timeout=timeout, **kw)
+    r.raise_for_status()
+    open(p, 'wb').write(r.content)
+    return p
+
+
+def schreiben(netz, zeilen):
+    p = os.path.join(S, 'stationen_%s.csv' % netz)
+    gesehen = set()
+    with open(p, 'w', encoding='utf-8', newline='') as f:
+        w = csv.writer(f)
+        w.writerow(['netz', 'id', 'name', 'lat', 'lon', 'alt'])
+        for i, name, la, lo, alt in zeilen:
+            if i in gesehen or la is None or lo is None or (abs(la) < 0.01 and abs(lo) < 0.01):
+                continue
+            gesehen.add(i)
+            w.writerow([netz, i, ' '.join(str(name).split()), round(la, 5), round(lo, 5), '' if alt in (None, '') else alt])
+    print('%-10s %4d Stationen -> %s' % (netz, len(gesehen), os.path.relpath(p, ROOT)))
+
+
+def ndbc():
+    r = ET.parse(holen('https://www.ndbc.noaa.gov/activestations.xml', 'ndbc_activestations.xml')).getroot()
+    # NOS-Stationen stehen schon als coops drin, auch wenn NDBC sie unter IOOS/NERRS/TCOON fuehrt (Nummer im Namen
+    # oder dieselbe Position, La Jolla LJPC1 = 9410230)
+    co = json.load(open(os.path.join(S, 'coops_met.json')))['stations']
+    co_id = {str(c['id']) for c in co}
+    co_pos = [(c['lat'], c['lng']) for c in co]
+    z = []
+    for x in r:
+        a = x.attrib
+        if a.get('met') != 'y' or a.get('pgm') == 'NOS/CO-OPS':
+            continue
+        if set(re.findall(r'\b\d{7}\b', a.get('name', ''))) & co_id:
+            continue
+        la, lo = float(a['lat']), float(a['lon'])
+        if any(abs(la - c[0]) < 0.0015 and abs(lo - c[1]) < 0.002 for c in co_pos):
+            continue
+        if True:
+            z.append((a['id'].upper(), a.get('name') or a['id'], float(a['lat']), float(a['lon']), a.get('elev')))
+    schreiben('ndbc', z)
+
+
+def aemet():
+    pos = {}
+    for p in sorted(glob.glob(os.path.join(ROOT, 'quellen', 'thermik', 'aemet', '*', '*.csv.gz'))):
+        for z in csv.DictReader(gzip.open(p, 'rt', encoding='utf-8')):
+            if z.get('vv') not in (None, '') and z.get('lat'):
+                pos[z['idema']] = (z['idema'], z['ubi'].title(), float(z['lat']), float(z['lon']), z.get('alt'))
+    schreiben('aemet', pos.values())
+
+
+def fmi():
+    p = holen('https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::ef::stations',
+              'fmi_stations.xml', timeout=300)
+    x = open(p, encoding='utf-8').read()
+    z = []
+    for f in x.split('<ef:EnvironmentalMonitoringFacility')[1:]:
+        netze = re.findall(r'<ef:belongsTo xlink:title="([^"]*)"', f)
+        if not any(n in ('Automaattinen sääasema', 'Mastohavaintoasema') for n in netze):
+            continue
+        i = re.search(r'<gml:identifier[^>]*>(\d+)</gml:identifier>', f)
+        nm = re.search(r'<gml:name[^>]*>([^<]*)</gml:name>', f)
+        pos = re.search(r'<gml:pos>([-\d.]+) ([-\d.]+)</gml:pos>', f)
+        if i and pos:
+            z.append((i.group(1), nm.group(1) if nm else i.group(1), float(pos.group(1)), float(pos.group(2)), None))
+    schreiben('fmi', z)
+
+
+def imgw():
+    d = json.load(open(holen('https://danepubliczne.imgw.pl/api/data/meteo/', 'imgw_meteo.json')))
+    z = [(s['kod_stacji'], s['nazwa_stacji'].title(), float(s['lat']), float(s['lon']), s.get('wysokosc_npm'))
+         for s in d if s.get('lat') and (s.get('wiatr_srednia_predkosc') is not None or s.get('wiatr_poryw_10min') is not None)]
+    schreiben('imgw', z)
+
+
+def lhmt():
+    d = json.load(open(holen('https://api.meteo.lt/v1/stations', 'lhmt_stations.json')))
+    schreiben('lhmt', [(s['code'], s['name'], s['coordinates']['latitude'], s['coordinates']['longitude'], None) for s in d])
+
+
+def ee():
+    r = ET.parse(holen('https://www.ilmateenistus.ee/ilma_andmed/xml/observations.php', 'ee_observations.xml')).getroot()
+    z = []
+    for s in r.findall('station'):
+        g = lambda t: (s.findtext(t) or '').strip()
+        if g('windspeed') and g('latitude'):
+            z.append((g('wmocode') or g('name'), g('name'), float(g('latitude')), float(g('longitude')), None))
+    schreiben('ee', z)
+
+
+def meteocat():
+    d = json.load(open(holen('https://analisi.transparenciacatalunya.cat/resource/yqwd-vj5e.json?$limit=5000', 'meteocat_xema.json')))
+    schreiben('meteocat', [(s['codi_estacio'], s['nom_estacio'], float(s['latitud']), float(s['longitud']), s.get('altitud'))
+                           for s in d if s.get('nom_estat_ema') == 'Operativa' and s.get('latitud')])
+
+
+def socib():
+    base = 'https://thredds.socib.es/thredds/'
+    kat = requests.get(base + 'catalog/mooring/weather_station/catalog.xml', headers=UA, timeout=120).text
+    z = []
+    for st in re.findall(r'catalogRef xlink:href="([^"/]+)/catalog.xml"', kat):
+        try:
+            k1 = requests.get(base + 'catalog/mooring/weather_station/%s/L1/catalog.xml' % st, headers=UA, timeout=120).text
+            pfade = sorted(re.findall(r'urlPath="([^"]*_latest\.nc)"', k1), reverse=True)
+            if not pfade:
+                continue
+            a = requests.get(base + 'dodsC/%s.ascii?LAT,LON' % pfade[0], headers=UA, timeout=120).text
+            w = re.findall(r'^(?:LAT|LON)[^\n]*\n([-\d.]+)', a, re.M) or re.findall(r'(?:LAT|LON), ([-\d.]+)', a)
+            if len(w) < 2:
+                continue
+            ort = st.split('_', 1)[1].rsplit('-', 1)[0]
+            art = 'buoy' if st.startswith('buoy') else 'station'
+            name = '%s %s' % (ort.replace('de', ' de ').replace('  ', ' ').title().replace(' De ', ' de '), 'Buoy' if art == 'buoy' else '')
+            z.append(('%s' % st.split('_', 1)[1].rsplit('-', 1)[0] + '-' + art, name.strip(), float(w[0]), float(w[1]), None))
+        except requests.RequestException as e:
+            print('  socib', st, e)
+    schreiben('socib', z)
+
+
+def lombardia():
+    d = json.load(open(os.path.join(ROOT, 'quellen', 'thermik', 'lomb_sensori.json')))
+    schreiben('lombardia', [(s['idstazione'], s['nomestazione'], float(s['lat']), float(s['lng']), s.get('quota'))
+                            for s in d if s.get('tipologia') == 'Velocità Vento' and s.get('storico') == 'N' and s.get('lat')])
+
+
+def suedtirol():
+    sen = json.load(open(holen('https://geoservices.buergernetz.bz.it/services/meteo/v1/sensors', 'bz_sensors.json')))
+    wind = {s['SCODE'] for s in sen if s['TYPE'] == 'WG'}
+    st = json.load(open(holen('https://geoservices.buergernetz.bz.it/services/meteo/v1/stations', 'bz_stations_wgs.json')))
+    z = []
+    for f in st['features']:
+        p = f['properties']
+        if p['SCODE'] in wind and p.get('LAT') is not None:
+            z.append((p['SCODE'], p.get('NAME_D') or p['SCODE'], float(p['LAT']), float(p['LONG']), p.get('ALT')))
+    schreiben('suedtirol', z)
+
+
+NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
+             lombardia=lombardia, suedtirol=suedtirol)
+
+if __name__ == '__main__':
+    for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):
+        try:
+            NETZE[n]()
+        except Exception as e:                                    # noqa: BLE001
+            print('%-10s FEHLER %s' % (n, e))

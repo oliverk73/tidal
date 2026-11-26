@@ -136,11 +136,18 @@
       .catch(function (e) { el.removeAttribute('data-done'); el.textContent = 'No live forecast: ' + e.message; });
   }
 
+  // header count of the "Wind Stations" box: spot stations + every station of the official/national layers
+  var WS_COUNT = { spots: 0, net: 0 };
+  function showCount() {
+    var el = document.getElementById('wind-stations-count');
+    if (el) el.textContent = '(' + (WS_COUNT.spots + WS_COUNT.net).toLocaleString('en-US') + ')';
+  }
   function build(map, data) {
     var body = document.getElementById('wind-stations-body');
     var count = document.getElementById('wind-stations-count');
     var stations = data.stations || [];
-    if (count) count.textContent = '(' + stations.length + ')';
+    WS_COUNT.spots = stations.length;
+    showCount();
 
     var layer = L.layerGroup();
     var byName = {};
@@ -220,7 +227,18 @@
     smhi: ['SMHI, hourly', 'https://www.smhi.se/data/meteorologi/ladda-ner-meteorologiska-observationer'],
     rws: ['Rijkswaterstaat, 10-min', 'https://waterinfo.rws.nl/'],
     pioupiou: ['Pioupiou / OpenWindMap', 'https://www.openwindmap.org/PP{id}'],
-    meteireann: ['Met Éireann, hourly', 'https://www.met.ie/climate/available-data/historical-data']
+    meteireann: ['Met Éireann, hourly', 'https://www.met.ie/climate/available-data/historical-data'],
+    // 26.11.2026 (py/netze_kataloge.py)
+    ndbc: ['NOAA NDBC (buoy / coastal station)', 'https://www.ndbc.noaa.gov/station_page.php?station={id}'],
+    aemet: ['AEMET, hourly (Spain)', 'https://opendata.aemet.es/'],
+    fmi: ['FMI, 10-min (Finland)', 'https://en.ilmatieteenlaitos.fi/open-data'],
+    imgw: ['IMGW-PIB, 10-min (Poland)', 'https://danepubliczne.imgw.pl/'],
+    lhmt: ['LHMT, hourly (Lithuania)', 'https://api.meteo.lt/'],
+    ee: ['Keskkonnaagentuur, hourly (Estonia)', 'https://www.ilmateenistus.ee/ilm/ilmavaatlused/vaatlusandmed/'],
+    meteocat: ['Meteocat XEMA, 30-min (Catalonia)', 'https://www.meteo.cat/observacions/xema/dades?codi={id}'],
+    socib: ['SOCIB (Balearic Islands)', 'https://apps.socib.es/data-catalog/'],
+    lombardia: ['ARPA Lombardia, 10-min', 'https://www.arpalombardia.it/temi-ambientali/meteo-e-clima/form-richiesta-dati/'],
+    suedtirol: ['Landeswetterdienst Südtirol, 10-min', 'https://wetter.provinz.bz.it/']
   };
   var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {
@@ -232,7 +250,7 @@
         '<div style="color:#555;margin-bottom:3px;">' + esc(nn[0]) + (s[5] != null ? ' · ' + esc(s[5]) + ' m' : '') + '</div>' +
         '<div>ID <b>' + esc(s[9]) + '</b>' + (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">data source</a>' : '') + '</div>' +
         '<div style="color:#777;font-size:11.5px;margin-top:2px;">' + s[0].toFixed(4) + ', ' + s[1].toFixed(4) + '</div>' +
-        '<div style="color:#777;font-size:11px;margin-top:3px;">Open archive of wind measurements, usable to check the forecast models.</div></div>';
+        '<div style="color:#777;font-size:11px;margin-top:3px;">Open wind measurements of a national or regional network, usable to check the forecast models.</div></div>';
     }
     var lines = [];
     if (s[3]) lines.push('ICAO <b>' + esc(s[3]) + '</b> · <a href="https://aviationweather.gov/data/metar/?ids=' + encodeURIComponent(s[3]) +
@@ -332,10 +350,14 @@
           '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
             '<input type="checkbox" id="net-synop" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[2]) + 'WMO synoptic stations (' + (n[2] + n[3]) + ')</label>' +
           '<label style="display:flex;align-items:center;cursor:pointer;min-height:26px;font-size:12.5px;">' +
-            '<input type="checkbox" id="net-nat" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[4]) + 'National networks, open archive (' + n[4] + ')</label>' +
+            '<input type="checkbox" id="net-nat" style="margin-right:6px;width:16px;height:16px;">' + dot(NET_COL[4]) + 'National & regional networks, open data (' + n[4] + ')</label>' +
           '<div style="font-size:11px;color:#666;line-height:1.5;">' + dot(NET_COL[3]) + 'both (' + n[3] + ').' + dot('#9a9a9a') + 'WMO receives no reports. ' +
-            'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + '); national: DWD, Météo-France, KNMI, DMI, ' +
-            'GeoSphere, MeteoSwiss, SMHI, Rijkswaterstaat, NOAA CO-OPS, Pioupiou.</div>';
+            'Sources: NOAA Aviation Weather Center, WMO OSCAR/Surface (' + esc(d.stand) + '); national/regional: ' +
+            esc(Object.keys(NAT).filter(function (k) { return d.stationen.some(function (s) { return s[8] === k; }); })
+              .map(function (k) { return NAT[k][0].split(',')[0].split(' (')[0]; })
+              .filter(function (v, i, a) { return a.indexOf(v) === i; }).join(', ')) + '.</div>';
+        WS_COUNT.net = d.stationen.length;
+        showCount();
         var cbM = document.getElementById('net-metar'), cbS = document.getElementById('net-synop'), cbN = document.getElementById('net-nat');
         var get = function (k) { try { return localStorage.getItem(k) === '1'; } catch (e) { return false; } };
         cbM.checked = get('netMetarOn'); cbS.checked = get('netSynopOn'); cbN.checked = get('netNatOn');

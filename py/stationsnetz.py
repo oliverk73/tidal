@@ -327,7 +327,7 @@ def main(argv):
     n_nat = 0
     if os.path.exists(kat):
         import csv
-        gesehen = set()
+        gesehen, orte = set(), set()
         for z in csv.DictReader(open(kat, encoding='utf-8')):
             try:
                 la, lo = float(z['lat']), float(z['lon'])
@@ -335,6 +335,12 @@ def main(argv):
                 continue
             if (abs(la) < 0.01 and abs(lo) < 0.01) or (z['netz'], z['id']) in gesehen:
                 continue
+            # dasselbe Netz am selben Punkt (<~50 m): nur der erste Eintrag (Kataloge stehen neueste zuerst)
+            punkt = [(z['netz'], round(la * 2000 + dy), round(lo * 2000 * math.cos(math.radians(la)) + dx))
+                     for dy in (-0.5, 0.5) for dx in (-0.5, 0.5)]
+            if any(q in orte for q in punkt):
+                continue
+            orte.update(punkt)
             gesehen.add((z['netz'], z['id']))
             alt = round(float(z['alt'])) if z.get('alt') not in (None, '', 'nan') else None
             liste.append([round(la, 4), round(lo, 4), ' '.join((z['name'] or z['id']).split()), '', '', alt, 4, '',
