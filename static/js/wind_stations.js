@@ -243,6 +243,9 @@
     ispra_rmn: ['ISPRA Rete Mareografica Nazionale (tide gauge with weather sensors)', 'https://www.mareografico.it/',
       'Data: ISPRA, please cite <a href="https://doi.org/10.83182/ispra-rmn" target="_blank" rel="noopener">doi:10.83182/ispra-rmn</a>'],
     puertos: ['Puertos del Estado (PORTUS: port weather station, tide gauge or buoy)', 'https://portus.puertos.es/'],
+    lvgmc: ['LVĢMC, hourly (Latvia)', 'https://videscentrs.lvgmc.lv/karte'],
+    ipma: ['IPMA Portugal, hourly', 'https://www.ipma.pt/en/otempo/obs.superficie/'],
+    vedur: ['Icelandic Met Office (Veðurstofa)', 'https://en.vedur.is/weather/observations/areas/'],
     midas: ['UK Met Office (MIDAS Open archive, no live data)', 'https://data.ceda.ac.uk/badc/ukmo-midas-open/data/uk-mean-wind-obs/dataset-version-202607/{path}',
       'Archive updated yearly (Open Government Licence); current wind: nearby METAR/SYNOP stations'],
     dwd_strasse: ['DWD road weather station (roadside, wind usually reduced)', 'https://opendata.dwd.de/weather/weather_reports/road_weather_stations/'],
@@ -256,7 +259,7 @@
   };
   // networks whose current reading the popup fetches on click, one station at a time (/api/station_live, py/station_live.py)
   var NAT_LIVE = { pioupiou: 1, ndbc: 1, coops: 1, fmi: 1, imgw: 1, lhmt: 1, ee: 1, meteocat: 1, lombardia: 1, suedtirol: 1,
-    meteotrentino: 1, ispra_rmn: 1, venezia: 1, puertos: 1, dwd_poi: 1, dwd_strasse: 1, arpav: 1, arpal: 1, arpae: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
+    meteotrentino: 1, ispra_rmn: 1, venezia: 1, puertos: 1, dwd_poi: 1, dwd_strasse: 1, ipma: 1, vedur: 1, lvgmc: 1, arpav: 1, arpal: 1, arpae: 1, aemet: 1, dwd: 1, dmi: 1, geosphere: 1, meteoschweiz: 1, smhi: 1, frost: 1 };
   function loadNatLive(popupEl, s) {
     var el = popupEl && popupEl.querySelector('.nat-live');
     if (!el) return;

@@ -30,6 +30,9 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   dwd_poi     DWD weather_reports/poi (aktuelle Stundenwerte), Koordinaten aus dem MOSMIX-Stationskatalog
   dwd_strasse DWD-Strassenwetterstationen (BUFR je Region), nur mit Windmessung
   midas       UK Met Office MIDAS Open (CEDA, Token ~/.config/ceda_token), Winddatensatz, nur letzter Jahrgang
+  ipma        IPMA Portugal, offene Beobachtungen (24 h), nur Stationen mit Wind
+  vedur       Vedurstofa Islands, Stationsseiten + xmlweather, nur Stationen mit Wind
+  lvgmc       Lettland LVGMC, weather_monitoring_points (Stationen mit Wind)
   meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
@@ -407,11 +410,68 @@ def midas():
     schreiben('midas', z)
 
 
+IPMA = 'https://api.ipma.pt/open-data/observation/meteorology/stations/'
+
+
+def ipma():
+    """IPMA Portugal (offene Daten): stations.json + observations.json (Stundenwerte der letzten 24 h);
+    nur Stationen, die in dieser Zeit Wind gemeldet haben (-99 = fehlt)."""
+    st = json.load(open(holen(IPMA + 'stations.json', 'ipma_stations.json')))
+    ob = json.load(open(holen(IPMA + 'observations.json', 'ipma_observations.json')))
+    wind = {i for t in ob.values() for i, v in (t or {}).items() if v and (v.get('intensidadeVentoKM') or -99) >= 0}
+    schreiben('ipma', [(str(f['properties']['idEstacao']), f['properties']['localEstacao'], f['geometry']['coordinates'][1],
+                        f['geometry']['coordinates'][0], None) for f in st if str(f['properties']['idEstacao']) in wind])
+
+
+def vedur():
+    """Vedurstofa Islands: Stationsseiten en.vedur.is/weather/stations/?s=<kuerzel> (Nummer, Lage, Hoehe, Betreiber);
+    Laenge steht ohne Vorzeichen, ist West. Nur Stationen, deren xmlweather-Meldung Wind (F) hat."""
+    from concurrent.futures import ThreadPoolExecutor
+    import html as _h
+    liste = requests.get('https://en.vedur.is/weather/stations/', headers=UA, timeout=120).text
+    codes = sorted(set(re.findall(r'\?s=([a-z0-9]+)', liste)))
+
+    def seite(c):
+        try:
+            t = requests.get('https://en.vedur.is/weather/stations/?s=' + c, headers=UA, timeout=60).text
+        except requests.RequestException:
+            return None
+        t = re.sub(r'\s+', ' ', _h.unescape(re.sub(r'<script.*?</script>|<style.*?</style>|<[^>]+>', ' ', t, flags=re.S)))
+        nm = re.search(r' Name (.+?) Type ', t)
+        nr = re.search(r'Station number (\d+)', t)
+        lage = re.search(r'Location [^(]*\((-?[\d.]+), (-?[\d.]+)\)', t)
+        hoehe = re.search(r'Height above sea-level ([\d.]+)', t)
+        if not (nm and nr and lage):
+            return None
+        return (nr.group(1), nm.group(1).strip(), float(lage.group(1)), -abs(float(lage.group(2))),
+                round(float(hoehe.group(1))) if hoehe else None)
+    with ThreadPoolExecutor(4) as ex:
+        st = [x for x in ex.map(seite, codes) if x]
+    # Wind pruefen: xmlweather mit bis zu 50 Nummern je Abruf
+    wind = set()
+    for k in range(0, len(st), 50):
+        ids = ';'.join(x[0] for x in st[k:k + 50])
+        x = requests.get('https://xmlweather.vedur.is/', params=dict(op_w='xml', type='obs', lang='en', view='xml', ids=ids),
+                         headers=UA, timeout=120).text
+        wind |= set(re.findall(r'<station id="(\d+)"[^>]*>(?:(?!</station>).)*?<F>\d', x, re.S))
+    print('  vedur: %d Stationsseiten, %d mit Wind' % (len(st), len(wind)))
+    schreiben('vedur', [x for x in st if x[0] in wind])
+
+
+def lvgmc():
+    """Lettland LVGMC (videscentrs.lvgmc.lv/data/weather_monitoring_points, die Schnittstelle der eigenen Karte;
+    data.gov.lv-Geodienst geo-dpps war am 26.11. nicht erreichbar): nur Stationen mit Windmessung."""
+    d = json.load(open(holen('https://videscentrs.lvgmc.lv/data/weather_monitoring_points', 'lvgmc_points.json')))
+    schreiben('lvgmc', [(x['kods'], x['nosaukums'], float(x['lat']), float(x['lon']), x.get('h')) for x in d
+                        if x.get('videja_veja_atrums') or x.get('veja_brazmas')])
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
              lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino,
              frost=frost, ispra_rmn=ispra_rmn, venezia=venezia, snpa_mare=snpa_mare,
              puertos=puertos, arpav=arpav, arpal=arpal, arpae=arpae,
-             dwd_poi=dwd_poi, dwd_strasse=dwd_strasse, midas=midas)
+             dwd_poi=dwd_poi, dwd_strasse=dwd_strasse, midas=midas,
+             ipma=ipma, vedur=vedur, lvgmc=lvgmc)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):

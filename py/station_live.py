@@ -512,7 +512,43 @@ def dwd_strasse(i):
     return dict(zeit=x['zeit'], kn=_f(x['ff'], MS), boe_kn=_f(x['fx'], MS), richtung=x['dd'])
 
 
-NETZE = dict(dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
+def ipma(i):
+    """observations.json: alle Stationen, Stundenwerte 24 h (UTC); Richtung als Code 1..8 (9 = N, 0 = Stille)."""
+    ob = _ganz('ipma', lambda: _get('https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json').json())
+    for t in sorted(ob, reverse=True):
+        v = (ob[t] or {}).get(i)
+        if v and (v.get('intensidadeVentoKM') or -99) >= 0:
+            c = v.get('idDireccVento')
+            rich = None if c in (None, 0, -99) else (0.0 if c == 9 else (c - 1) * 45.0)
+            return dict(zeit=t + ':00Z' if len(t) == 16 else t, kn=_f(v['intensidadeVentoKM'], KMH), boe_kn=None, richtung=rich)
+    return dict(fehler='no wind in the last 24 h')
+
+
+def vedur(i):
+    x = _get('https://xmlweather.vedur.is/', params=dict(op_w='xml', type='obs', lang='en', view='xml', ids=i)).text
+    g = lambda t: (re.search(r'<%s>([^<]*)</%s>' % (t, t), x) or [None, ''])[1].strip()
+    if not g('F'):
+        return dict(fehler='no wind reading')
+    dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
+    d = g('D')
+    return dict(zeit=_lokal(g('time'), '%Y-%m-%d %H:%M:%S', 0), kn=_f(g('F'), MS), boe_kn=_f(g('FG'), MS),
+                richtung=dirs.index(d) * 22.5 if d in dirs else None)
+
+
+def lvgmc(i):
+    """weather_monitoring_data: alle Stationen, mehrere Tage, Zeit in lettischer Ortszeit (2026.11.26 10:00:00)."""
+    import zoneinfo
+    d = _ganz('lvgmc', lambda: _get('https://videscentrs.lvgmc.lv/data/weather_monitoring_data', timeout=60).json())
+    x = [r for r in d if r.get('station_code') == i and r.get('wind_speed_actual') not in (None, '')]
+    if not x:
+        return dict(fehler='no wind reading')
+    r = max(x, key=lambda r: r['time'])
+    t = datetime.strptime(r['time'], '%Y.%m.%d %H:%M:%S').replace(tzinfo=zoneinfo.ZoneInfo('Europe/Riga'))
+    return dict(zeit=_iso(t), kn=_f(r['wind_speed_actual'], MS), boe_kn=_f(r.get('wind_speed_gust'), MS),
+                richtung=_f(r.get('wind_direction_actual')))
+
+
+NETZE = dict(lvgmc=lvgmc, ipma=ipma, vedur=vedur, dwd_strasse=dwd_strasse, dwd_poi=dwd_poi, arpav=arpav, arpal=arpal, arpae=arpae, puertos=puertos, venezia=venezia, ispra_rmn=ispra_rmn, pioupiou=pioupiou, ndbc=ndbc, coops=coops, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, lombardia=lombardia,
              suedtirol=suedtirol, meteotrentino=meteotrentino, aemet=aemet, dwd=dwd, dmi=dmi,
              geosphere=geosphere, meteoschweiz=meteoschweiz, smhi=smhi, frost=frost)
 
