@@ -19,6 +19,7 @@ Netze (nur Stationen mit Windmessung, soweit das Verzeichnis es sagt):
   socib       Balearen SOCIB THREDDS mooring/weather_station (Bojen + Kuestenstationen), Position aus OPeNDAP
   lombardia   ARPA Lombardia Sensoren "Velocita Vento", aktiv (lokal: quellen/thermik/lomb_sensori.json)
   suedtirol   Landeswetterdienst Suedtirol, Stationen mit Sensor WG
+  meteotrentino  Meteotrentino listaStazioni, alle laufenden Stationen (ohne Sensorangabe)
 """
 import csv
 import glob
@@ -177,8 +178,21 @@ def suedtirol():
     schreiben('suedtirol', z)
 
 
+def meteotrentino():
+    """Alle laufenden Wetterstationen (Oliver 26.11.: die Liste sagt nicht, wer Wind misst -> alle; fine leer)."""
+    r = ET.parse(holen('https://dati.meteotrentino.it/service.asmx/listaStazioni', 'meteotrentino_stazioni.xml')).getroot()
+    ns = {'m': 'http://www.meteotrentino.it/'}
+    z = []
+    for a in r.findall('m:anagrafica', ns):
+        g = lambda t: (a.findtext('m:' + t, default='', namespaces=ns) or '').strip()
+        if g('fine') or not g('latitudine'):
+            continue
+        z.append((g('codice'), g('nome'), float(g('latitudine')), float(g('longitudine')), g('quota')))
+    schreiben('meteotrentino', z)
+
+
 NETZE = dict(ndbc=ndbc, aemet=aemet, fmi=fmi, imgw=imgw, lhmt=lhmt, ee=ee, meteocat=meteocat, socib=socib,
-             lombardia=lombardia, suedtirol=suedtirol)
+             lombardia=lombardia, suedtirol=suedtirol, meteotrentino=meteotrentino)
 
 if __name__ == '__main__':
     for n in (sys.argv[1].split(',') if len(sys.argv) > 1 else NETZE):

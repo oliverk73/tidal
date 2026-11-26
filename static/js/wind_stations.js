@@ -238,7 +238,8 @@
     meteocat: ['Meteocat XEMA, 30-min (Catalonia)', 'https://www.meteo.cat/observacions/xema/dades?codi={id}'],
     socib: ['SOCIB (Balearic Islands)', 'https://apps.socib.es/data-catalog/'],
     lombardia: ['ARPA Lombardia, 10-min', 'https://www.arpalombardia.it/temi-ambientali/meteo-e-clima/form-richiesta-dati/'],
-    suedtirol: ['Landeswetterdienst Südtirol, 10-min', 'https://wetter.provinz.bz.it/']
+    suedtirol: ['Landeswetterdienst Südtirol, 10-min', 'https://wetter.provinz.bz.it/'],
+    meteotrentino: ['Meteotrentino (all weather stations, wind not at every one)', 'https://www.meteotrentino.it/#!/content?menuItemDesktop=111']
   };
   var WDQMS_TXT = { o: 'reports arrive regularly', p: 'reports arrive partly', n: 'no reports received', u: 'reception not assessed by WMO' };
   function netPopup(s) {
