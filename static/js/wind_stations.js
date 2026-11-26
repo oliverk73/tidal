@@ -470,7 +470,8 @@
         '<input type="checkbox" id="pp-toggle" style="margin-right:6px;width:16px;height:16px;">Pioupiou / OpenWindMap <span id="pp-count" style="color:#777;margin-left:4px;"></span></label>' +
       '<div style="font-size:11px;color:#666;line-height:1.5;">Arrow = where the wind blows, colour = mean wind (kn):<br>' + legend +
         '<br><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#a5a5a5;margin:0 3px 0 4px;"></span>no reading in the last hour. ' +
-        'Updates every 2 min. © contributors of the OpenWindMap wind network.</div>';
+        'Updates every 2 min. Wind data © contributors of the ' +
+        '<a href="https://openwindmap.org" target="_blank" rel="noopener">OpenWindMap</a> wind network.</div>';
     body.appendChild(box);
     if (!map.getPane('ppPane')) { map.createPane('ppPane'); map.getPane('ppPane').style.zIndex = 625; }
     var layer = L.layerGroup(), markers = {}, timer = null;
