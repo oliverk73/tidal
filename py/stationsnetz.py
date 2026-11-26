@@ -31,12 +31,15 @@ AUS = os.path.join(ROOT, 'static', 'wind_stations', 'stationsnetz.json')
 UA = {'User-Agent': 'weather-tides/1.0'}
 URL_METAR = 'https://aviationweather.gov/data/cache/stations.cache.json.gz'
 URL_SYNOP = 'https://oscar.wmo.int/surface/rest/api/search/station?stationClass=synopLand'
+URL_AKTIV = 'https://aviationweather.gov/data/cache/metars.cache.csv.gz'   # alle METARs der letzten Stunden
+DUBL = os.path.join(ROOT, 'harmonics', 'help', 'stationsnetz_dubletten.csv')
 WDQMS = {'operational': 'o', 'partlyOperational': 'p', 'silent': 'n'}
 
 
 def laden():
     os.makedirs(Q, exist_ok=True)
-    for url, datei in ((URL_METAR, 'stations.cache.json.gz'), (URL_SYNOP, 'oscar_synop.json')):
+    for url, datei in ((URL_METAR, 'stations.cache.json.gz'), (URL_SYNOP, 'oscar_synop.json'),
+                       (URL_AKTIV, 'metars.cache.csv.gz')):
         r = requests.get(url, headers=UA, timeout=600)
         r.raise_for_status()
         open(os.path.join(Q, datei), 'wb').write(r.content)
@@ -64,7 +67,7 @@ def ortsabgleich(stationen):
     """Flughaefen ohne WMO-Nummer beim AWC (z.B. EDHK) mit der SYNOP-Station am selben Platz verbinden:
     <= 2 km, oder <= 5 km mit gemeinsamem Namenswort; je METAR hoechstens eine SYNOP-Station (die naechste)."""
     alle = [s for k, s in stationen.items() if k[0] == 'm']            # alle METAR-Plaetze, auch schon verbundene
-    metar = [(k, s) for k, s in stationen.items() if k[0] == 'm' and not s[4]]
+    metar = [(k, s) for k, s in stationen.items() if k[0] == 'm' and s[6] == 1]   # noch ohne SYNOP-Partner
     synop = [(k, s) for k, s in stationen.items() if k[0] == 's']
     if not metar or not synop:
         return 0
@@ -98,6 +101,83 @@ def ortsabgleich(stationen):
         m[4], m[6], m[7] = syn[4], 3, syn[7]
         n += 1
     return n
+
+
+RANG = {'o': 0, 'p': 1, 'u': 2, 'n': 3, '': 2}
+
+
+def positionsdubletten(stationen):
+    """Eintraege am selben Punkt (<= 150 m) zusammenfassen (26.11.2026):
+    - mehrere ICAO-Kennungen = umbenannter Flughafen (KPBI->KDJT, FVHA->FVRG): die Kennung, die gerade METARs sendet
+      (metars.cache), sonst die mit SYNOP-Partner, sonst die erste; eine WMO-Nummer wandert zur behaltenen;
+    - reine SYNOP-Stationen daneben (konventionell + automatisch, Brasilien 83xxx/86xxx): die mit dem besten
+      WDQMS-Empfang (o > p > u > n), bei Gleichstand die kleinere Nummer; Partner eines METAR-Platzes ohne SYNOP.
+    Gibt die entfernten Eintraege zurueck."""
+    aktiv = set()
+    pa = os.path.join(Q, 'metars.cache.csv.gz')
+    if os.path.exists(pa):
+        import csv
+        for z in csv.reader(l for l in gzip.open(pa, 'rt', errors='replace') if not l.startswith(('No ', 'errors', 'warnings'))):
+            if len(z) > 1:
+                aktiv.add(z[1])
+    print('METAR gerade aktiv:', len(aktiv))
+    keys = list(stationen)
+    zelle = {}
+    for k in keys:
+        s = stationen[k]
+        zelle.setdefault((round(s[0] * 500), round(s[1] * 500)), []).append(k)
+    eltern = {k: k for k in keys}
+
+    def wurzel(k):
+        while eltern[k] != k:
+            eltern[k] = eltern[eltern[k]]
+            k = eltern[k]
+        return k
+    for (a, b), ks in zelle.items():
+        nachbarn = [k2 for da in (-1, 0, 1) for db in (-1, 0, 1) for k2 in zelle.get((a + da, b + db), [])]
+        for k in ks:
+            s = stationen[k]
+            for k2 in nachbarn:
+                if k2 <= k:
+                    continue
+                t = stationen[k2]
+                dy = (t[0] - s[0]) * 111.2
+                dx = (t[1] - s[1]) * 111.2 * math.cos(math.radians(s[0]))
+                if dx * dx + dy * dy <= 0.15 ** 2:
+                    eltern[wurzel(k2)] = wurzel(k)
+    gruppen = {}
+    for k in keys:
+        gruppen.setdefault(wurzel(k), []).append(k)
+    weg = []
+    for ks in gruppen.values():
+        if len(ks) < 2:
+            continue
+        m = [k for k in ks if k[0] == 'm']
+        sy = [k for k in ks if k[0] == 's']
+        behalten = []
+        if m:
+            an = [k for k in m if k[1] in aktiv]
+            if len(an) > 1:
+                behalten = an                                 # beide senden: zwei Plaetze, nichts entfernen
+            else:
+                kand = an or sorted(m, key=lambda k: (stationen[k][6] != 3, k[1]))[:1]
+                k0 = kand[0]
+                for k in m:
+                    if k != k0 and stationen[k][6] == 3 and stationen[k0][6] == 1:   # SYNOP-Partner uebernehmen
+                        stationen[k0][4], stationen[k0][6], stationen[k0][7] = stationen[k][4], 3, stationen[k][7]
+                behalten = [k0]
+            if sy:
+                sy.sort(key=lambda k: (RANG.get(stationen[k][7], 2), k[1]))
+                ziel = [k for k in behalten if stationen[k][6] == 1]
+                if ziel:
+                    stationen[ziel[0]][4], stationen[ziel[0]][6], stationen[ziel[0]][7] = sy[0][1], 3, stationen[sy[0]][7]
+        else:
+            behalten = [sorted(sy, key=lambda k: (RANG.get(stationen[k][7], 2), k[1]))[0]]
+        for k in ks:
+            if k not in behalten:
+                weg.append((stationen[k], [stationen[b] for b in behalten]))
+                del stationen[k]
+    return weg
 
 
 def main(argv):
@@ -138,6 +218,13 @@ def main(argv):
                                  x.get('elevation'), 2, bew]
     n_ort = ortsabgleich(stationen)
     print('per Position verbunden:', n_ort)
+    weg = positionsdubletten(stationen)
+    with open(DUBL, 'w', encoding='utf-8') as f:
+        f.write('entfernt_name,entfernt_icao,entfernt_wmo,lat,lon,behalten\n')
+        for s, b in weg:
+            f.write('"%s",%s,%s,%s,%s,"%s"\n' % (s[2].replace('"', "'"), s[3], s[4], s[0], s[1],
+                    ' | '.join('%s %s %s' % (x[2].replace('"', "'"), x[3], x[4]) for x in b)))
+    print('am selben Punkt zusammengefasst:', len(weg), '->', os.path.relpath(DUBL, ROOT))
     liste = sorted(stationen.values(), key=lambda s: (s[0], s[1]))
     # Nationale Netze mit freiem Archiv (Kataloge der Spotsuche, py/spotsuche.py -> stationen_alle.csv), Typ 4:
     # [lat, lon, name, '', '', hoehe, 4, '', netz, id]  (z.B. DWD-Sturmwarnnetz Darsser Ort)
@@ -145,11 +232,15 @@ def main(argv):
     n_nat = 0
     if os.path.exists(kat):
         import csv
+        gesehen = set()
         for z in csv.DictReader(open(kat, encoding='utf-8')):
             try:
                 la, lo = float(z['lat']), float(z['lon'])
             except (TypeError, ValueError):
                 continue
+            if (abs(la) < 0.01 and abs(lo) < 0.01) or (z['netz'], z['id']) in gesehen:
+                continue
+            gesehen.add((z['netz'], z['id']))
             alt = round(float(z['alt'])) if z.get('alt') not in (None, '', 'nan') else None
             liste.append([round(la, 4), round(lo, 4), ' '.join((z['name'] or z['id']).split()), '', '', alt, 4, '',
                           z['netz'], z['id']])

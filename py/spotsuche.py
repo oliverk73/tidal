@@ -53,12 +53,18 @@ def kataloge():
         if m:
             z.append(('knmi', m.group(1), m.group(5).strip(), float(m.group(3)), float(m.group(2)), float(m.group(4))))
     k.append(pd.DataFrame(z, columns=['netz', 'id', 'name', 'lat', 'lon', 'alt']))
-    z = []
+    # DMI: ein Eintrag je Standortzeitraum (validFrom/validTo; Hanstholm 4x) -> nur der juengste Zeitraum je Station
+    z, juengst = [], {}
     for f in json.load(open(os.path.join(S, 'dmi_st.json')))['features']:
         p_ = f['properties']
-        if p_.get('status') == 'Active' and 'wind_speed' in (p_.get('parameterId') or []) and f.get('geometry'):
-            lo, la = f['geometry']['coordinates'][:2]
-            z.append(('dmi', p_['stationId'], p_['name'], la, lo, p_.get('stationHeight')))
+        if not f.get('geometry'):
+            continue
+        bis = p_.get('validTo') or '9999'
+        if p_['stationId'] not in juengst or bis > juengst[p_['stationId']][0]:
+            juengst[p_['stationId']] = (bis, p_, f['geometry']['coordinates'])
+    for bis, p_, c in juengst.values():
+        if p_.get('status') == 'Active' and 'wind_speed' in (p_.get('parameterId') or []):
+            z.append(('dmi', p_['stationId'], p_['name'], c[1], c[0], p_.get('stationHeight')))
     k.append(pd.DataFrame(z, columns=['netz', 'id', 'name', 'lat', 'lon', 'alt']))
     z = [('coops', s['id'], s['name'], s['lat'], s['lng'], None)
          for s in json.load(open(os.path.join(S, 'coops_met.json')))['stations']]
@@ -71,18 +77,33 @@ def kataloge():
     k.append(pd.DataFrame({'netz': 'meteoschweiz', 'id': m['station_abbr'], 'name': m['station_name'],
                            'lat': m['station_coordinates_wgs84_lat'], 'lon': m['station_coordinates_wgs84_lon'],
                            'alt': m['station_height_masl']}))
+    # Pioupiou: ohne Position (0,0) raus; mehrere Sensoren am selben Punkt (<~50 m, ersetzter Sensor, Haendlerlager)
+    # -> nur der zuletzt meldende
     pp = json.load(open(os.path.join(ROOT, 'quellen/thermik/pioupiou/live_all.json')))['data']
-    k.append(pd.DataFrame([('pioupiou', str(s['id']), (s['meta'].get('name') or '').strip(), s['location']['latitude'],
-                            s['location']['longitude'], None) for s in pp
-                           if (s.get('location') or {}).get('latitude') is not None
-                           and ((s.get('measurements') or {}).get('date') or '') >= '2026-10'],
-                          columns=['netz', 'id', 'name', 'lat', 'lon', 'alt']))
+    pp = [s for s in pp if (s.get('location') or {}).get('latitude') is not None
+          and (abs(s['location']['latitude']) > 0.01 or abs(s['location']['longitude']) > 0.01)
+          and ((s.get('measurements') or {}).get('date') or '') >= '2026-10']
+    pp.sort(key=lambda s: s['measurements']['date'], reverse=True)
+    belegt, z = set(), []
+    for s in pp:
+        ort = (round(s['location']['latitude'] * 2000), round(s['location']['longitude'] * 1400))
+        if ort in belegt:
+            continue
+        belegt.add(ort)
+        z.append(('pioupiou', str(s['id']), (s['meta'].get('name') or '').strip(), s['location']['latitude'],
+                  s['location']['longitude'], None))
+    k.append(pd.DataFrame(z, columns=['netz', 'id', 'name', 'lat', 'lon', 'alt']))
     # weitere Netze als fertige Kataloge stationen_<netz>.csv (smhi, rws, meteireann, ...; 25.11.2026)
     for p in sorted(glob.glob(os.path.join(S, 'stationen_*.csv'))):
         if os.path.basename(p) in ('stationen_alle.csv', 'stationen_meteofrance.csv'):
             continue
         k.append(pd.read_csv(p, dtype={'id': str}))
-    return pd.concat(k, ignore_index=True)
+    st = pd.concat(k, ignore_index=True)
+    n = len(st)
+    st = st.drop_duplicates(['netz', 'id'], keep='first').reset_index(drop=True)   # gleiche Kennung = eine Station
+    if len(st) < n:
+        print('gleiche Kennung entfernt:', n - len(st))
+    return st
 
 
 def osm_spots():
